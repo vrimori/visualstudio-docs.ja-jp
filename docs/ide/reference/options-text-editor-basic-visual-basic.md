@@ -1,0 +1,76 @@
+---
+title: "[オプション]、[テキスト エディター]、[基本] (Visual Basic) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "VS.ToolsOptionsPages.Visual_Basic.Editor"
+  - "VS.ToolsOptionsPages.Text_Editor.Basic.Editor"
+  - "VS.ToolsOptionsPages.Visual_Basic_Editor.Editor"
+  - "VS.ToolsOptionsPages.Text_Editor.Basic.SimplifiedEditorPage"
+  - "VS.ToolsOptionsPages.Text_Editor.Basic"
+  - "VS.ToolsOptionsPages.Text_Editor.Basic.VB_Specific"
+helpviewer_keywords: 
+  - "[BASIC] ([オプション] ダイアログ ボックス - [テキスト エディター])"
+ms.assetid: 5a8cafca-f7b4-4a2d-92ce-6894a7673d00
+caps.latest.revision: 15
+caps.handback.revision: 15
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+---
+# [オプション]、[テキスト エディター]、[基本] (Visual Basic)
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+**\[オプション\]** \(**\[ツール\]** メニュー\) ダイアログ ボックスの **\[テキスト エディター\]** フォルダーにある **\[Basic\]** フォルダーの **\[VB 固有\]** プロパティ ページでは、次のプロパティを指定します。  
+  
+ **\[End コンストラクトの自動挿入\]**  
+ たとえば、プロシージャ宣言の最初の行として `Sub Main—` を入力し、Enter キーを押すと、対応する `End Sub` 行がテキスト エディターに追加されます。  同様に、[For](/dotnet/visual-basic/language-reference/statements/for-next-statement) ループを追加すると、対応する `Next` ステートメントがテキスト エディターに追加されます。  このオプションをオンにすると、コード エディターで自動的に End 構造が追加されます。  
+  
+ **\[コードの再フォーマット\]**  
+ 必要に応じてコードの書式が再設定されます。  このオプションをオンにすると、コード エディターによって次の処理が行われます。  
+  
+-   コードを正しいタブ位置に揃える。  
+  
+-   キーワード、変数、およびオブジェクトの大文字と小文字の区別を修正する。  
+  
+-   `If...Then` ステートメントの `Then` が欠けていた場合に補う。  
+  
+-   関数呼び出しにかっこを追加する。  
+  
+-   文字列の右引用符が欠けていた場合に補う。  
+  
+-   指数表記の書式を正す。  
+  
+-   日付の書式を正す。  
+  
+ **\[アウトライン モードを有効にする\]**  
+ ファイルをコード エディターで開くときに、ドキュメントをアウトライン モードで表示できます。  詳細については、「[アウトライン](../../ide/outlining.md)」を参照してください。  このオプションをオンにすると、ファイルを開くときにアウトライン表示機能が有効になります。  
+  
+ **\[Interface と MustOverride メンバーの自動挿入\]**  
+ クラスの `Implements` ステートメントまたは `Inherits` ステートメントをコミットすると、実装またはオーバーライドする必要があるメンバーのそれぞれのプロトタイプがテキスト エディターに自動的に挿入されます。  
+  
+ **\[プロシージャ行の区切り文字を表示する\]**  
+ テキスト エディターに、プロシージャのスコープが表示されます。  プロジェクトの .vb ソース ファイルで、次の表に示す場所に線が表示されます。  
+  
+|.vb ソース ファイル内の場所|線が表示される場所の例|  
+|----------------------|-----------------|  
+|ブロック宣言構造の後|-   クラス、構造体、モジュール、インターフェイス、または列挙型の最後<br />-   プロパティ、関数、または sub の後<br />-   プロパティの get 句と set 句の間は対象外|  
+|一連の単一行構造|-   import ステートメントの後、クラス ファイルの型定義の前<br />-   クラスで宣言されている変数の後、プロシージャの前|  
+|単一行宣言|-   Import ステートメント、Inherits ステートメント、変数宣言、イベント宣言、デリゲート宣言、および DLL の Declare ステートメントの後|  
+  
+ **\[エラー修正候補を有効にする\]**  
+ 一般的なエラーの解決方法がテキスト エディターに表示され、適切な修正方法を選択できます。修正方法を選択するとコードに適用されます。  
+  
+ **\[参照とキーワードの強調表示を有効にする\]**  
+ テキスト エディターでは、`If..Then`、`While...End While`、`Try...Catch...Finally` などの句のシンボルのすべてのインスタンス、またはすべてのキーワードを強調表示できます。  強調表示された参照間またはキーワード間を移動するには、Ctrl キーと Shift キーを押しながら下方向キーを押すか、Ctrl キーと Shift キーを押しながら上方向キーを押します。  
+  
+## 参照  
+ [\[全般\] \(\[オプション\] ダイアログ ボックス \- \[環境\]\)](../Topic/General,%20Environment,%20Options%20Dialog%20Box.md)   
+ [\[オプション\]、\[テキスト エディター\]、\[すべての言語\]、\[タブ\]](../../ide/reference/options-text-editor-all-languages-tabs.md)

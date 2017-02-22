@@ -1,0 +1,78 @@
+---
+title: "方法 : 実行中のプロセスにプロファイラーをアタッチする/実行中のプロセスからプロファイラーをデタッチする | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.performance.attach"
+helpviewer_keywords: 
+  - "パフォーマンス ツール、アタッチ (プロセス)"
+  - "プロファイリング ツール、デタッチ (プロセス)"
+  - "プロファイリング ツール、アタッチ (プロセス)"
+  - "パフォーマンス ツール、デタッチ (プロセス)"
+  - "プロファイラー"
+ms.assetid: 56a99c39-e7f6-4f48-ae56-04ab8e022bf7
+caps.latest.revision: 30
+caps.handback.revision: 30
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+---
+# 方法 : 実行中のプロセスにプロファイラーをアタッチする/実行中のプロセスからプロファイラーをデタッチする
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+実行中のプロセスに対してプロファイラーのアタッチまたはデタッチを行うことで、パフォーマンス データのサンプリングや収集を容易にすることができます。  この方法は、アプリケーションの読み込み時間に関するデータの収集を行わない場合や、プロセスが特定の状態に達した後にそのパフォーマンスを監視する場合に、プロセスのプロファイリングを行うために使用します。  
+  
+> [!NOTE]
+>  [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 統合開発環境 \(IDE: Integrated Development Environment\) 内部からプロセスのアタッチおよびデタッチを実行する手順を次に示します。  コマンド ライン ツールの使用法の詳細については、「[コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)」を参照してください。  サービスのプロファイリングの詳細については、「[プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)」を参照してください。  
+  
+ プロファイルに使用できるプロセスは、コンピューターの管理者によって設定されたユーザーのアクセス許可によって異なります。  たとえば、ユーザー アカウントには、次のようなアクセス許可が設定されていることがあります。  
+  
+-   高度なプロファイリング機能 \(管理者が起動用のドライバーとサービスを設定している場合\)  
+  
+-   サンプル プロファイルのみ \(ドメイン ユーザーの場合\)  
+  
+-   全ユーザーに対してプロファイルへのアクセスを拒否  
+  
+ 詳細については、「[プロファイルと Windows Vista のセキュリティ](../profiling/profiling-and-windows-vista-security.md)」および「[VSPerfCmd](../profiling/vsperfcmd.md)」の ADMIN オプションに関する説明を参照してください。  
+  
+### 実行中のプロセスにアタッチするには  
+  
+1.  **\[分析\]** メニューの **\[プロファイラー\]** をポイントし、**\[アタッチ\/デタッチ\]** をクリックします。  
+  
+     または  
+  
+     **パフォーマンス エクスプローラー**で、パフォーマンス セッションを右クリックし、**\[アタッチ\/デタッチ\]** をクリックします。  
+  
+     **\[プロファイラーをプロセスにアタッチします\]** ダイアログ ボックスが表示されます。  
+  
+2.  アタッチするプロセスの名前をクリックします。  
+  
+3.  **\[アタッチ\]** をクリックします。  
+  
+### 実行中のプロセスからデタッチするには  
+  
+1.  **\[分析\]** メニューの **\[プロファイラー\]** をポイントし、**\[アタッチ\/デタッチ\]** をクリックします。  
+  
+     または  
+  
+     **パフォーマンス エクスプローラー**で、パフォーマンス セッションを右クリックし、**\[アタッチ\/デタッチ\]** をクリックします。  
+  
+     **\[プロファイラーをプロセスにアタッチします\]** ダイアログ ボックスが表示されます。  
+  
+2.  デタッチするイメージの名前をクリックします。  
+  
+3.  **\[デタッチ\]** をクリックします。  
+  
+## 参照  
+ [データ収集の制御](../profiling/controlling-data-collection.md)   
+ [パフォーマンス セッションの概要](../profiling/performance-session-overview.md)   
+ [方法 : プロファイリングの開始と終了](../profiling/how-to-start-and-end-performance-data-collection.md)   
+ [プロファイルと Windows Vista のセキュリティ](../profiling/profiling-and-windows-vista-security.md)   
+ [VSPerfCmd](../profiling/vsperfcmd.md)
