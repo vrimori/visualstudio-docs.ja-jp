@@ -1,8 +1,7 @@
 ---
 title: "CodeLens によるコード変更とその他の履歴の検索 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f697d7b4-704e-4cac-b13a-bc57d2ff8318
 caps.latest.revision: 131
-caps.handback.revision: 131
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 131
 ---
 # CodeLens によるコード変更とその他の履歴の検索
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

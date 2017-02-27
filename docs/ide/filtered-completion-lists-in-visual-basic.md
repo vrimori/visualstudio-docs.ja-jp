@@ -1,8 +1,7 @@
 ---
 title: "Visual Basic でのフィルター処理されたコンプリート リスト | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "IntelliSense, フィルター処理"
 ms.assetid: c9e3b223-8ac2-4a2a-b8c2-91786d2a73e2
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Visual Basic でのフィルター処理されたコンプリート リスト
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

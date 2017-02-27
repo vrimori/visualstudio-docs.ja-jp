@@ -1,41 +1,23 @@
 ---
 title: "適切に動作しないマルチスレッド アプリケーションの一般的なパターン | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.cv.threads.tools.gallery
-helpviewer_keywords:
-- Concurrency Visualizer, common patterns for poorly-behaved multithreaded applications
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.cv.threads.tools.gallery"
+helpviewer_keywords: 
+  - "同時実行ビジュアライザー、適切に動作しないマルチスレッド アプリケーションの一般的なパターン"
 ms.assetid: 00d10629-e20f-4d6d-8643-c59a3879812e
 caps.latest.revision: 12
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 930567937eea5afade80fa607d20fbe70c9526a9
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>適切に動作しないマルチスレッド アプリケーションの一般的なパターン
 開発時に同時実行ビジュアライザーを使用すると、マルチスレッド アプリケーションの動作を可視化できます。 このツールには、動作が不適切なマルチスレッド アプリケーションの一般的なパターンのギャラリーが含まれています。 ギャラリーには、ツールで判明する一般的で認識可能な視覚パターンと、各パターンが示す動作、その動作から考えられる結果、その最も一般的な解決策の説明が含まれています。  

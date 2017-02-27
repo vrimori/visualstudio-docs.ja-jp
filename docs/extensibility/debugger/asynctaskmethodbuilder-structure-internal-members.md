@@ -1,8 +1,7 @@
 ---
 title: "AsyncTaskMethodBuilder 構造体の内部メンバー | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "AsyncTaskMethodBuilder 構造体 [.NET Framework のデバッグ エンジン]"
 ms.assetid: f32f5857-7ef8-45fd-8b5a-7f644eb98b11
 caps.latest.revision: 5
-caps.handback.revision: 5
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # AsyncTaskMethodBuilder 構造体の内部メンバー
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

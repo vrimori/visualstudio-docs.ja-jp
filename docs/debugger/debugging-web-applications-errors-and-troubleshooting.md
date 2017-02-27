@@ -1,8 +1,7 @@
 ---
 title: "Web アプリケーションのデバッグ : エラーおよびトラブルシューティング | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "Web サービス, タイムアウト エラー (デバッグ時の)"
 ms.assetid: 63f2742e-2031-48a8-9773-d9b547c62230
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Web アプリケーションのデバッグ : エラーおよびトラブルシューティング
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

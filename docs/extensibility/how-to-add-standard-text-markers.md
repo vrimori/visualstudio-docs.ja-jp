@@ -1,8 +1,7 @@
 ---
 title: "方法: 標準のテキストのマーカーを追加 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] 従来の標準的なテキスト マーカー"
 ms.assetid: a39fca69-0014-474c-933f-51f0e9b9617e
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 方法: 標準のテキストのマーカーを追加
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

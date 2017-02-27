@@ -1,8 +1,7 @@
 ---
 title: "プロジェクト ファイルとソリューション ファイルの種類 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,10 +31,10 @@ helpviewer_keywords:
   - "Visual Studio, ファイルの種類と拡張子"
 ms.assetid: 0ba5007b-465d-4efa-b1e4-f0ee68527649
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # プロジェクト ファイルとソリューション ファイルの種類
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

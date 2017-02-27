@@ -1,8 +1,7 @@
 ---
 title: "While アクティビティ デザイナー | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Statements.While.UI"
 ms.assetid: ea008091-2e4c-4f64-bfa5-afb919552446
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # While アクティビティ デザイナー
 <xref:System.Activities.Statements.While> アクティビティでは、指定した <xref:System.Activities.Statements.Condition%2A> が **true** に評価される場合に、<xref:System.Activities.Statements.While.Body%2A> に含まれるアクティビティを実行します。場合によっては、含まれているアクティビティが実行されない可能性があります。含まれているアクティビティを少なくとも 1 回は実行する必要がある場合は、<xref:System.Activities.Statements.DoWhile> アクティビティを代わりに使用します。  

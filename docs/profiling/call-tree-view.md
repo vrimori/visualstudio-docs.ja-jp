@@ -1,8 +1,7 @@
 ---
 title: "コール ツリー ビュー | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "プロファイル ツール, [呼び出しツリー] ビュー"
 ms.assetid: b2dbc033-bf95-4d10-8e51-f9462979133e
 caps.latest.revision: 34
-caps.handback.revision: 34
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # コール ツリー ビュー
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

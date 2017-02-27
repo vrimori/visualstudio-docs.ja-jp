@@ -1,8 +1,7 @@
 ---
 title: "ブロック時間のプロファイル レポート | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "同時実行ビジュアライザー、ブロック時間のプロファイル レポート"
 ms.assetid: 3bc45af0-3ba6-4fa3-a336-be8e9ae95107
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # ブロック時間のプロファイル レポート
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

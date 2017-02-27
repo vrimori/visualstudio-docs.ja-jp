@@ -1,45 +1,27 @@
 ---
-title: "方法: 現在のセッションを設定する | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- current performance sessions
-- Performance Explorer, selecting sessions
-- profiling tools, setting sessions
-- multiple performance sessions
-- performance sessions, setting multiple
-- performance tools, setting current performance session
-- sessions, setting multiple
+title: "方法: 現在のプロファイリング セッションを設定する | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "現在のパフォーマンス セッション"
+  - "パフォーマンス エクスプローラー、選択 (セッションを)"
+  - "プロファイリング ツール、設定 (セッションを)"
+  - "複数のパフォーマンス セッション"
+  - "パフォーマンス セッション、設定 (複数)"
+  - "パフォーマンス ツール、設定 (現在のパフォーマンス セッションを)"
+  - "セッション、設定 (複数)"
 ms.assetid: a593e551-18ec-46fd-bfd5-8a045165a334
 caps.latest.revision: 16
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f00bcb579d2f3a6d8fd860aed7d41f3d67f164d5
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 16
 ---
 # <a name="how-to-set-the-current-session"></a>方法 : 現在のセッションを設定する
 **パフォーマンス エクスプローラー**で複数のパフォーマンス セッションを開き、表示されているパフォーマンス セッションの&1; つを選択して、現在のセッションとして設定できます。  

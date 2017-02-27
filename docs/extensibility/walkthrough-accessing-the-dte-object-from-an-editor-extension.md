@@ -1,8 +1,7 @@
 ---
 title: "チュートリアル: エディター拡張機能から DTE オブジェクトにアクセスします。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] 新しい - DTE オブジェクトを取得します。"
 ms.assetid: c1f40bab-c6ec-45b0-8333-ea5ceb02a39d
 caps.latest.revision: 22
-caps.handback.revision: 22
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # チュートリアル: エディター拡張機能から DTE オブジェクトにアクセスします。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

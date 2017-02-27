@@ -1,8 +1,7 @@
 ---
 title: "コマンド ラインからのプロファイリング ツールの使用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "コマンド ライン、ツール"
 ms.assetid: 6593fa82-181e-4009-a0ed-02aa24c2c063
 caps.latest.revision: 35
-caps.handback.revision: 35
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # コマンド ラインからのプロファイリング ツールの使用
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

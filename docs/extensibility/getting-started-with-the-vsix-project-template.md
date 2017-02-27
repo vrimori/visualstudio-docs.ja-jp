@@ -1,8 +1,7 @@
 ---
 title: "VSIX プロジェクトのテンプレートの概要 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "Visual Studio SDK には、VSIX プロジェクト テンプレート"
 ms.assetid: 89fac33e-9380-4723-9b45-048a6e16f0ed
 caps.latest.revision: 25
-caps.handback.revision: 25
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # VSIX プロジェクトのテンプレートの概要
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

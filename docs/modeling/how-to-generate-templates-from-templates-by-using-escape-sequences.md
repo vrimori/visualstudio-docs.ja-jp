@@ -1,8 +1,7 @@
 ---
 title: "方法: エスケープ シーケンスを使用してテンプレートからテンプレートを生成する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "テキスト テンプレート, 生成 (テンプレートからテンプレートを)"
 ms.assetid: 4126156a-7cea-48b8-925e-7790806cfe6c
 caps.latest.revision: 35
-caps.handback.revision: 35
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 35
 ---
 # 方法: エスケープ シーケンスを使用してテンプレートからテンプレートを生成する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

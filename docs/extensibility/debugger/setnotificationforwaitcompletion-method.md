@@ -1,8 +1,7 @@
 ---
 title: "SetNotificationForWaitCompletion メソッド | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "SetNotificationForWaitCompletion メソッド、タスク クラス [.NET Framework のデバッグ エンジン]"
 ms.assetid: da149c9a-20f4-4543-a29e-429c8c1d2e19
 caps.latest.revision: 5
-caps.handback.revision: 5
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # SetNotificationForWaitCompletion メソッド
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

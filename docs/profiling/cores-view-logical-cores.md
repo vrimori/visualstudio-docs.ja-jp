@@ -1,8 +1,7 @@
 ---
 title: "コア ビューの論理コア | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "同時実行ビジュアライザー, コア ビューの論理コア"
 ms.assetid: 8a471929-9a26-43e4-adef-d3b40f00f9e3
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # コア ビューの論理コア
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

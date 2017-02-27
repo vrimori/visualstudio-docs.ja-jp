@@ -1,49 +1,31 @@
 ---
 title: "Devenv コマンド ライン スイッチ | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- switches, Devenv
-- builds [Team System], command-line
-- applications [Visual Studio], executing
-- compiling source code, Devenv
-- command-line switches, Devenv
-- command line [Visual Studio], switches
-- Devenv
-- environment, Devenv commands
-- compilers, Devenv commands
-- switches
-- Devenv, syntax and list of switches
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "アプリケーション [Visual Studio], 実行"
+  - "ビルド [Team System], コマンド ライン"
+  - "コマンド ライン [Visual Studio], スイッチ"
+  - "コマンド ライン スイッチ, Devenv"
+  - "コンパイラ, Devenv のコマンド"
+  - "コンパイル (ソース コードを), Devenv"
+  - "Devenv"
+  - "Devenv, 構文とスイッチの一覧"
+  - "環境, Devenv のコマンド"
+  - "スイッチ"
+  - "スイッチ, Devenv"
 ms.assetid: e12bc6ed-74fd-4bea-8d7c-89b99c20bad8
 caps.latest.revision: 33
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e6d73f518f62cefc1fbb791d6c51a6d42a4cfae5
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 29
 ---
 # <a name="devenv-command-line-switches"></a>Devenv コマンド ライン スイッチ
 Devenv を使用すると、コマンド ラインから統合開発環境 (IDE: Integrated Development Environment) のさまざまなオプションを設定したり、プロジェクトをビルド、デバッグ、および配置できます。 これらのスイッチを使用して、スクリプトや .bat ファイル (夜間用のビルド スクリプトなど) から IDE を実行したり、特定の構成で IDE を起動したりします。  

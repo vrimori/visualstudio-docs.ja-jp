@@ -1,8 +1,7 @@
 ---
-title: "従来の言語サービスを実装します。 | Microsoft Docs"
+title: "レガシ言語 Service2 の実装 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "実装する言語サービス [マネージ パッケージ framework]"
 ms.assetid: 5bcafdc5-f922-48f6-a12e-6c8507a79a05
 caps.latest.revision: 26
-caps.handback.revision: 26
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # 従来の言語サービスを実装します。
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

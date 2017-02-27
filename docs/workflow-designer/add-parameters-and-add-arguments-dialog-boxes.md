@@ -1,8 +1,7 @@
 ---
 title: "[パラメーターの追加] ダイアログ ボックスと [引数の追加] ダイアログ ボックス | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,9 +10,9 @@ f1_keywords:
   - "AddParameters.UI"
 ms.assetid: a21fb4fe-134b-40b0-8497-86b842940ca1
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "sdanie"
 manager: "erikre"
+caps.handback.revision: 7
 ---
 # [パラメーターの追加] ダイアログ ボックスと [引数の追加] ダイアログ ボックス
 次の表では、<xref:System.Activities.Statements.InvokeMethod> デザイナーで使用される **\[パラメーターの追加\]** ダイアログ ボックスのユーザー インターフェイス \(UI\) 要素について説明します。  

@@ -1,44 +1,26 @@
 ---
 title: "方法 : インデックスでトピックを検索する | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Index tab [Help Viewer 2.0]
-- Help Viewer 2.0, using the index
-- Help Viewer 2.0, Index tab
-- using the index [Help Viewer 2.0]
-- index filtering [Help Viewer 2.0]
-- Help Viewer 2.0, index filtering
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "インデックス タブ [ヘルプ ビューアー 2.0]"
+  - "ヘルプ ビューアー 2.0、インデックスの使用"
+  - "ヘルプ ビューアー 2.0、インデックス タブ"
+  - "使用 (インデックスを) [ヘルプ ビューアー 2.0]"
+  - "インデックスのフィルター処理 [ヘルプ ビューアー 2.0]"
+  - "ヘルプ ビューアー 2.0、インデックスのフィルター処理"
 ms.assetid: cb071e93-f297-459c-a6fa-8ae0dabc42a4
 caps.latest.revision: 15
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 884530b6c2ebc44f935dd814a39bbf0495764303
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 15
 ---
 # <a name="how-to-find-topics-in-the-index"></a>方法 : インデックスでトピックを検索する
 インデックスには、インストールされているコンテンツのトピックに関連付けられているキーワードの一覧が含まれます。 各トピックには複数のキーワードが関連付けられている場合があり、各キーワードは複数のトピックに関連付けられている場合があります。 このインデックスの使い方は本の索引と同じです。  

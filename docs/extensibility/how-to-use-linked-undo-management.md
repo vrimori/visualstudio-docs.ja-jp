@@ -1,8 +1,7 @@
 ---
 title: "方法: リンクされた Undo 管理を使用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] レガシー - リンク元に戻す管理"
 ms.assetid: af5cc22a-c9cf-45b1-a894-1022d563f3ca
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 方法: リンクされた Undo 管理を使用
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

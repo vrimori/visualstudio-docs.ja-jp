@@ -1,8 +1,7 @@
 ---
 title: "ソース管理プラグインを検索するためのキーとして使用される文字列 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "ソース管理プラグインを検索に使用される文字列"
 ms.assetid: c1e31f76-42a1-4c3d-afb2-664044ef12fd
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # ソース管理プラグインを検索するためのキーとして使用される文字列
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Transition アクティビティ デザイナー | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,9 +10,9 @@ f1_keywords:
   - "System.Activities.Statements.Transition.UI"
 ms.assetid: f6e8b5cc-7fb8-4699-9703-f3c9fc7cc316
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "sdanie"
 manager: "erikre"
+caps.handback.revision: 7
 ---
 # Transition アクティビティ デザイナー
 <xref:System.Activities.Statements.Transition> は、2 つの状態間の遷移を表します。  

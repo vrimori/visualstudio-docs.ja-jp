@@ -1,8 +1,7 @@
 ---
 title: "方法: 製品マニフェストを作成する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "製品ファイル [Windows インストーラー]"
 ms.assetid: 2d316aaa-8bc0-4ce5-90ab-23b3eac0b5dd
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 10
 ---
 # 方法: 製品マニフェストを作成する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

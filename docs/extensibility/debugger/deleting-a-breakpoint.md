@@ -1,8 +1,7 @@
 ---
 title: "ブレークポイントを削除します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "[デバッグの SDK] のデバッグ、ブレークポイントを削除します。"
 ms.assetid: 75a046cc-d20a-4c79-ad2d-1f18426ac5d0
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # ブレークポイントを削除します。
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

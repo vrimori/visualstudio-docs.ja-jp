@@ -1,8 +1,7 @@
 ---
 title: "アクティビティ ビュー (レガシ) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/23/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "ビュー, アクティビティ"
 ms.assetid: 83dc68cd-2cb2-45c2-9a6e-10d82053171a
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # アクティビティ ビュー (レガシ)
 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] が提供するアクティビティの多くには、従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]で使用できるデザイン ビューが複数あります。ワークフローは、これらのアクティビティを使用して作成されます。アクティビティ デザイナーを **\[ツールボックス\]** からデザイン サーフェイスにドラッグした後、そのアクティビティを選択した状態で **\[ワークフロー\]** メニューを使って、または選択したアクティビティを右クリックして、さまざまなデザイン ビューに切り替えることができます。さらに、選択したアクティビティの名前の上にポインタを移動すると、ドロップダウン タブのセットが表示され、これを使ってさまざまなビューに切り替えることができます。  

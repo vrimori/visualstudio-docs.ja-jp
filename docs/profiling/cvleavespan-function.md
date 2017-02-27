@@ -1,8 +1,7 @@
 ---
 title: "CvLeaveSpan 関数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "CvLeaveSpan メソッド"
 ms.assetid: 3bf65fdf-a471-4efd-ac7a-03e701bbae5d
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # CvLeaveSpan 関数
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

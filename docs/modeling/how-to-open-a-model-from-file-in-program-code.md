@@ -1,18 +1,17 @@
 ---
 title: "方法: プログラム コード内のファイルからモデルを開く | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d7d68697-5418-4263-bdb2-48401924ea71
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 8
 ---
 # 方法: プログラム コード内のファイルからモデルを開く
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

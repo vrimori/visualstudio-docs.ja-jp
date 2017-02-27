@@ -1,8 +1,7 @@
 ---
 title: "TransactionScope アクティビティ デザイナー | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Statements.TransactionScope.UI"
 ms.assetid: 8d7ebfc6-7478-4888-b3b0-b14f296096af
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 8
 ---
 # TransactionScope アクティビティ デザイナー
 **TransactionScope** アクティビティ デザイナーは、<xref:System.Activities.Statements.TransactionScope> アクティビティを作成および構成するために使用します。  

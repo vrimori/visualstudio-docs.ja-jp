@@ -1,8 +1,7 @@
 ---
 title: "Enum (Debug Interface Access SDK) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "列挙型シンボル"
 ms.assetid: c777e2e6-88be-435b-b632-8d43f42b0b49
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Enum (Debug Interface Access SDK)
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

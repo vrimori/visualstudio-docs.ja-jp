@@ -1,8 +1,7 @@
 ---
 title: "方法 : 既存のテンプレートを更新する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Visual Studio のテンプレート, 更新 (既存のテンプレートを)"
 ms.assetid: d585e45b-7fe2-45fa-9cf3-7f2bc060f3c4
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # 方法 : 既存のテンプレートを更新する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

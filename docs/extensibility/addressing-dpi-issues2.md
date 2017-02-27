@@ -1,16 +1,16 @@
 ---
-title: "DPI の問題の対応 | Microsoft Docs"
+title: "DPI Issues2 をアドレス指定 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 359184aa-f5b6-4b6c-99fe-104655b3a494
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # DPI の問題の対応
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

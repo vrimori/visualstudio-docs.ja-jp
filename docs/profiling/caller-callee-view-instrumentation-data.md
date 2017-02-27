@@ -1,8 +1,7 @@
 ---
 title: "呼び出し元/呼び出し先ビュー - プロファイラー インストルメンテーション データ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "[呼び出し元/呼び出し先] ビュー"
 ms.assetid: 0908d354-aa5c-4518-8631-e25b8e7649e5
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 呼び出し元/呼び出し先ビュー - プロファイラー インストルメンテーション データ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

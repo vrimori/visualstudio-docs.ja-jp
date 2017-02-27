@@ -1,8 +1,7 @@
 ---
 title: "添付ファイルの起動に基づく | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "デバッグ エンジンは、プログラムへのアタッチ"
 ms.assetid: 362f00ac-1909-4a3a-bacb-c0ceb5549816
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 添付ファイルの起動に基づく
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

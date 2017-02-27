@@ -1,8 +1,7 @@
 ---
 title: "[フォルダーを指定して置換] | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "[フォルダーを指定して置換] タブ、[検索と置換] ウィンドウ"
 ms.assetid: ca361466-53bd-44db-a28a-3a74bc03b028
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # [フォルダーを指定して置換]
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,18 +1,17 @@
 ---
 title: "ワークフロー コンソール アプリケーションを作成する方法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 51a2eea7-921c-49f1-b358-68afc27f1ee9
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 16
 ---
 # ワークフロー コンソール アプリケーションを作成する方法
 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] を利用して、無人または有人のプロセスの実行のためのワークフローを作成できます。[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]は、このようなワークフローを作成するためのデザイン サーフェイスを備えています。[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内からワークフローを作成する場合に使用でき、デザイナーを再ホストする他のアプリケーションに統合することもできます。  

@@ -1,8 +1,7 @@
 ---
 title: "方法 : Web テンプレートを手動で作成する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Web テンプレート [Visual Studio]"
 ms.assetid: 731c4027-a152-48c5-bfc4-93490bf1949f
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 方法 : Web テンプレートを手動で作成する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

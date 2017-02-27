@@ -1,8 +1,7 @@
 ---
 title: "CA1719: パラメーター名はメンバー名と同一にすることはできません | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ParameterNamesShouldNotMatchMemberNames"
 ms.assetid: c6fea690-1659-4ee7-a1c5-125ad6754525
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 18
 ---
 # CA1719: パラメーター名はメンバー名と同一にすることはできません
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

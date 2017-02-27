@@ -1,8 +1,7 @@
 ---
 title: "フォントと色の概要 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "フォントおよびカラー コントロール [Visual Studio SDK] エディター"
 ms.assetid: 2203e4e7-8b7f-44ec-8884-6ff718d4f278
 caps.latest.revision: 22
-caps.handback.revision: 22
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # フォントと色の概要
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

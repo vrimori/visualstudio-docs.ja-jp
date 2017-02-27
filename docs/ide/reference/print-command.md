@@ -1,8 +1,7 @@
 ---
 title: "Print コマンド | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Print メソッド"
 ms.assetid: 0412d381-590a-483f-bab4-6e1cca095645
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Print コマンド
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

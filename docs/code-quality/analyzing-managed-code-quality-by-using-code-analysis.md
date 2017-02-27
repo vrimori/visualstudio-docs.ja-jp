@@ -1,8 +1,7 @@
 ---
 title: "コード分析を使用したマネージ コードの品質の分析 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/12/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "マネージ コード分析"
 ms.assetid: 68510a55-da51-4381-81a5-0feba76b8b4f
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 24
 ---
 # コード分析を使用したマネージ コードの品質の分析
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

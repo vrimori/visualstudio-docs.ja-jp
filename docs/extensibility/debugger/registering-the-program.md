@@ -1,8 +1,7 @@
 ---
 title: "プログラムを登録します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "[デバッグの SDK] をデバッグするには、プログラムの登録"
 ms.assetid: d726a161-7db3-4ef4-b258-9f6a5be68418
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # プログラムを登録します。
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

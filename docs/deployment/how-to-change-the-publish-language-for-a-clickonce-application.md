@@ -1,8 +1,7 @@
 ---
 title: "方法 : ClickOnce アプリケーションの発行言語を変更する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "発行, ClickOnce"
 ms.assetid: ef5024c4-cda1-4970-bc75-32a2a10c92c3
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 19
 ---
 # 方法 : ClickOnce アプリケーションの発行言語を変更する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

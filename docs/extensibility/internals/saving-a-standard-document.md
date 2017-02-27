@@ -1,8 +1,7 @@
 ---
 title: "標準的なドキュメントの保存 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "永続性、標準的なドキュメントを保存します。"
 ms.assetid: d692fedf-b46e-4d60-84bd-578635042235
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 標準的なドキュメントの保存
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

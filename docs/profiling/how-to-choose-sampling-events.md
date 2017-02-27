@@ -1,47 +1,29 @@
 ---
-title: "方法: サンプリング イベントを選択する | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.performance.property.sampling
-helpviewer_keywords:
-- clock cycles sample event
-- sample events, choosing
-- profiling tools, sample events
-- page faults sample event
-- system calls sample event
-- performance counter sample event
-- performance tools, sample events
+title: "方法 : サンプリング イベントを選択する | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.performance.property.sampling"
+helpviewer_keywords: 
+  - "クロック サイクル サンプル イベント"
+  - "サンプル イベント、選択"
+  - "プロファイル ツール、サンプル イベント"
+  - "ページ フォールト サンプル イベント"
+  - "システム コール サンプル イベント"
+  - "パフォーマンス カウンター サンプル イベント"
+  - "パフォーマンス ツール、サンプル イベント"
 ms.assetid: ce7cb734-80ac-4930-a4ef-e24395e1cc07
 caps.latest.revision: 23
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c5c031c5eb857e95af97a92500327088665e364d
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 23
 ---
 # <a name="how-to-choose-sampling-events"></a>方法 : サンプリング イベントを選択する
 既定では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールは、プロファイリングされるプロセスによって使用されるプロセッサ サイクルの数として指定された間隔でパフォーマンス データを収集します。 既定の間隔のサイクル数は 10,000,000 です。これは、1 GHz のコンピューターで約 0.01 秒に相当します。 間隔のサイクル数とサンプル イベントは変更できます。 次のサンプル イベントを使用できます。  

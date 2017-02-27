@@ -1,8 +1,7 @@
 ---
 title: "ProjectItem 要素 (Visual Studio 項目テンプレート) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "ProjectItem 要素 [Visual Studio 項目テンプレート]"
 ms.assetid: 9ed94112-0c38-49df-b728-0dd2d0d1eb47
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # ProjectItem 要素 (Visual Studio 項目テンプレート)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CPU 使用状況グラフ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "CPU 使用状況グラフ (同時実行ビジュアライザー)、CPU 使用状況グラフ"
 ms.assetid: 5332fd38-622d-47a3-874f-8c2fd7a30f95
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # CPU 使用状況グラフ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

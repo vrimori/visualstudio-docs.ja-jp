@@ -1,8 +1,7 @@
 ---
 title: "Assert クラスの使用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "単体テスト、Assert クラス"
 ms.assetid: da1b7a0d-4f1d-4d50-a07e-7b3ff60053f9
 caps.latest.revision: 27
-caps.handback.revision: 27
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 27
 ---
 # Assert クラスの使用
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "方法: メニュー項目を使用して警告を抑制する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "コード分析、警告の抑制"
 ms.assetid: 36bd1850-dcde-4ed0-9bc3-0b83df434362
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 24
 ---
 # 方法: メニュー項目を使用して警告を抑制する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

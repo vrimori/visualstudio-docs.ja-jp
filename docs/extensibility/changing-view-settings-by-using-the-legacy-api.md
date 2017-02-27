@@ -1,8 +1,7 @@
 ---
 title: "レガシ API を使用してビューの設定を変更します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] の従来のビュー設定を変更します。"
 ms.assetid: 12c9b300-0894-4124-96a1-764326176d77
 caps.latest.revision: 18
-caps.handback.revision: 18
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # レガシ API を使用してビューの設定を変更します。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

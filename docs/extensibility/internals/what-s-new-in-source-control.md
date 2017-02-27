@@ -1,8 +1,7 @@
 ---
 title: "ソース管理の新機能します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "ソース管理 [Visual Studio SDK] の新機能"
 ms.assetid: bcf85418-18fb-4824-9dae-d14bf3d56a77
 caps.latest.revision: 27
-caps.handback.revision: 27
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # ソース管理の新機能します。
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

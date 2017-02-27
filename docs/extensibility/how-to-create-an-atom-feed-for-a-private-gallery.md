@@ -1,8 +1,7 @@
 ---
 title: "方法: Atom を作成するプライベート ギャラリーのフィード | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "VSIX 非公開のギャラリー、Atom フィード"
 ms.assetid: 5897f538-9c41-486f-97d9-a1976d20d9fd
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 方法: Atom を作成するプライベート ギャラリーのフィード
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

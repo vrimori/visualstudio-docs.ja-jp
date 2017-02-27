@@ -1,8 +1,7 @@
 ---
 title: "エラー : 対象コンピューターで DNS が正しく構成されていることを確認してください。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ dev_langs:
   - "C++"
 ms.assetid: 2d364caf-73af-4186-bf9b-af186331cbe8
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # エラー : 対象コンピューターで DNS が正しく構成されていることを確認してください。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

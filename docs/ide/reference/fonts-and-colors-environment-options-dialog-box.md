@@ -1,8 +1,7 @@
 ---
 title: "[フォントおよび色] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "プリンター、カスタマイズ"
 ms.assetid: c767d302-51ed-47a8-a527-c07bce2aa485
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # [フォントおよび色] ([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "デバッグ用の SDK ヘルパー | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "メトリック [SDK のデバッグ]"
 ms.assetid: 80a52e93-4a04-4ab2-8adc-a7847c2dc20b
 caps.latest.revision: 28
-caps.handback.revision: 28
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # デバッグ用の SDK ヘルパー
 [!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]

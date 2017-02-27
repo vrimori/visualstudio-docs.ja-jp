@@ -1,46 +1,28 @@
 ---
 title: "ソリューションとプロジェクトの作成 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.openprojectfromweb
-- vs.newproject
-- VS.ToolsOptionsPages.Projects.General
-- SolutionItemsProject
-helpviewer_keywords:
-- solutions [Visual Studio], deleting
-- solutions [Visual Studio], creating
-- projects [Visual Studio], creating
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.openprojectfromweb"
+  - "vs.newproject"
+  - "VS.ToolsOptionsPages.Projects.General"
+  - "SolutionItemsProject"
+helpviewer_keywords: 
+  - "ソリューション [Visual Studio], 削除"
+  - "ソリューション [Visual Studio], 作成"
+  - "プロジェクト [Visual Studio], 作成"
 ms.assetid: 836f8ca0-3fc9-4f4b-9090-45f2e4d2e9c8
 caps.latest.revision: 46
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b36d04886bddba926ab3def55244410b8ff4c61e
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 43
 ---
 # <a name="creating-solutions-and-projects"></a>Creating Solutions and Projects
 プロジェクトは、アプリケーションをビルドするのに必要なものすべての論理的なコンテナーです。 メイン メニューから **[ファイル &#124; 新規作成 &#124; プロジェクト]** の順に選択してプロジェクトを作成すると、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によりプロジェクトを含むソリューションが作成されます。 その後、必要に応じて新規または既存のプロジェクトをソリューションにさらに追加できます。 既存のコード ファイルからプロジェクトを作成することができますし、作業が終った時に削除する一時プロジェクト (.NET のみ) を作成することもできます。  

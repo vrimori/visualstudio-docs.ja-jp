@@ -1,37 +1,19 @@
 ---
-title: "Visual Studio IDE のカスタマイズ | Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/23/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Visual Studio IDE のカスタマイズ | Microsoft Docs"
+ms.custom: ""
+ms.date: "01/23/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: c2fec4ce-3885-4c4c-ace2-14c197e11079
 caps.latest.revision: 3
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 12f4581aec42c18089cd05697a39d6e467c8cdf7
-ms.openlocfilehash: 2e108e93bd11c432ec0af4dc67c780bbda99353b
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 3
 ---
 # <a name="personalize-the-visual-studio-ide"></a>Visual Studio IDE のカスタマイズ
 このセクションではユーザー独自の開発スタイルと要件に最適なサポートを行うための Visual Studio のさまざまなカスタマイズ方法について説明します。 複数のウィンドウ レイアウトを定義して保存し、それらを切り替えることができます。 たとえば、コーディング用のレイアウトとデバッグ用のレイアウトを定義できます。 各言語のコード エディターの色、フォント、および書式設定をカスタマイズできます。 青、暗色または明色の環境の配色テーマを選択できます。または、Visual Studio Code Gallery から Visual Studio テーマ エディターをダウンロードしてインストールし、カスタム テーマを作成することもできます。 その他にも多くのオプションが「[Environment Options Dialog Box](../ide/reference/environment-options-dialog-box.md)」 ([環境オプション] ダイアログ ボックス) で公開されています。  

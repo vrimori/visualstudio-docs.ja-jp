@@ -1,8 +1,7 @@
 ---
 title: "方法: 3-D 地形をモデル化する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f779b1fd-82a9-4a11-8ab7-c1c9caabc883
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 方法: 3-D 地形をモデル化する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

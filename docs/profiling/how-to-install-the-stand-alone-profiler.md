@@ -1,8 +1,7 @@
 ---
 title: "方法 : スタンドアロンのプロファイラーをインストールする | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "プロファイル ツール, スタンドアロンのプロファイラー"
 ms.assetid: cae81c95-83cd-4ab6-8a98-84ef977a2f6d
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # 方法 : スタンドアロンのプロファイラーをインストールする
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

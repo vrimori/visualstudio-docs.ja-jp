@@ -1,18 +1,17 @@
 ---
 title: "方法: ドメイン固有言語デザイナーの拡張 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: fa807f1b-2780-491e-925b-abbfd31b2bfa
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 9
 ---
 # 方法: ドメイン固有言語デザイナーの拡張
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

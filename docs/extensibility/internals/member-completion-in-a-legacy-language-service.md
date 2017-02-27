@@ -1,8 +1,7 @@
 ---
 title: "従来の言語サービスでのメンバーの完了 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "言語サービス [マネージ パッケージ フレームワーク] IntelliSense のメンバーの完了"
 ms.assetid: 500f718d-9028-49a4-8615-ba95cf47fc52
 caps.latest.revision: 21
-caps.handback.revision: 21
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 従来の言語サービスでのメンバーの完了
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

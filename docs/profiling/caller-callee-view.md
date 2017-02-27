@@ -1,8 +1,7 @@
 ---
 title: "[呼び出し元/呼び出し先] ビュー | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "[呼び出し元/呼び出し先] ビュー"
 ms.assetid: d3511bcf-cce0-4cbe-aecb-b94c7c80ad1b
 caps.latest.revision: 32
-caps.handback.revision: 32
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # [呼び出し元/呼び出し先] ビュー
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

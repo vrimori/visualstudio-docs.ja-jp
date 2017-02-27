@@ -1,8 +1,7 @@
 ---
 title: "レガシ API を使用してテキスト ビューにアクセスします。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] レガシー - テキスト ビュー"
 ms.assetid: 8f751f72-c972-4be3-84ee-19c281e02e25
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # レガシ API を使用してテキスト ビューにアクセスします。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

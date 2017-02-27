@@ -1,18 +1,17 @@
 ---
 title: "移行アクティビティ デザイナー | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 7598e869-1da1-4721-b4bf-6cbe402be1a2
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # 移行アクティビティ デザイナー
 Migration アクティビティ デザイナーは、[!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)] を対象にしたワークフローからワークフロー 3.0\/3.5 のアクティビティを呼び出すために使用します。このセクションに含まれているトピックでは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のアクティビティ デザイナーの使用方法についてのガイドラインを示します。  

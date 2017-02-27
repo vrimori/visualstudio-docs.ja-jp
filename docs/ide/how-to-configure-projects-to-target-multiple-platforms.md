@@ -1,8 +1,7 @@
 ---
 title: "方法 : プロジェクトを構成して複数の対象プラットフォームを設定する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "プロジェクト [Visual Studio], 対象 (プラットフォームを)"
 ms.assetid: affa2392-7aed-45ac-9ffa-1d8e0496d590
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 方法 : プロジェクトを構成して複数の対象プラットフォームを設定する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

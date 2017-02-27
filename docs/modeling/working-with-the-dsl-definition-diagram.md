@@ -1,8 +1,7 @@
 ---
 title: "DSL 定義図の使用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "ドメイン固有言語ツール, [Split Tree] (ツリーの分割)"
 ms.assetid: 1a4c7a58-e134-438e-848e-efd98f92bf10
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 21
 ---
 # DSL 定義図の使用
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

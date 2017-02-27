@@ -1,8 +1,7 @@
 ---
 title: "[オプション]、[テキスト エディター]、[C#]、[書式設定] | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "[テキスト エディター] の [オプション] ダイアログ ボックス、書式設定"
 ms.assetid: 5a7bb668-1d0c-4ffe-9508-24592813162e
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # [オプション]、[テキスト エディター]、[C#]、[書式設定]
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

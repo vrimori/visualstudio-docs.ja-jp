@@ -1,8 +1,7 @@
 ---
 title: "[ヘルプ] ([オプション] ダイアログ ボックス - ワークフロー デザイナー) (レガシ) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "テーマ、オプション"
 ms.assetid: 71150631-4674-4568-bce8-570bef3780ad
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 6
 ---
 # [ヘルプ] ([オプション] ダイアログ ボックス - ワークフロー デザイナー) (レガシ)
 このトピックでは、従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]の **\[ヘルプ\]** \(\[オプション\] ダイアログ ボックス \- ワークフロー デザイナー\) の使用方法について説明します。[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]を使用します。  

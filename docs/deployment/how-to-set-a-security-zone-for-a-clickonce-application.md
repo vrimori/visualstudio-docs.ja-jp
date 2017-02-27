@@ -1,8 +1,7 @@
 ---
 title: "方法 : ClickOnce アプリケーションのセキュリティ ゾーンを設定する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "セキュリティ ゾーン、ClickOnce アプリケーション"
 ms.assetid: d3dac454-518a-44d7-a76e-ccb7b9c3a150
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 18
 ---
 # 方法 : ClickOnce アプリケーションのセキュリティ ゾーンを設定する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

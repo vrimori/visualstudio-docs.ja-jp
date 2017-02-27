@@ -1,8 +1,7 @@
 ---
 title: "クイック スタート: HTML および CSS のデバッグ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "DOM Explorer [Windows ストア アプリ]"
 ms.assetid: 6d156cff-36c6-425a-acf8-e1f02d4f7869
 caps.latest.revision: 101
-caps.handback.revision: 101
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 101
 ---
 # クイック スタート: HTML および CSS のデバッグ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

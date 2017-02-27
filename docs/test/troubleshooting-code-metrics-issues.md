@@ -1,8 +1,7 @@
 ---
 title: "コード メトリックに関する問題のトラブルシューティング | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f2fdb995-4888-4246-85dc-7bacadd45968
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "erickson-doug"
 ms.author: "douge"
 manager: "douge"
+caps.handback.revision: 4
 ---
 # コード メトリックに関する問題のトラブルシューティング
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

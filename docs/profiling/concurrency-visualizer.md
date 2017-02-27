@@ -1,8 +1,7 @@
 ---
 title: "同時実行ビジュアライザー | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "同時実行ビジュアライザー, 同時実行ビジュアライザー"
 ms.assetid: ae5879a0-1e1a-455a-ba72-148e57f59289
 caps.latest.revision: 31
-caps.handback.revision: 31
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # 同時実行ビジュアライザー
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

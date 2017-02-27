@@ -1,8 +1,7 @@
 ---
 title: "概要ビュー - プロファイラー インストルメンテーション データ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "概要ビュー"
 ms.assetid: 0a3b3a1f-e22b-4ac8-b46e-71694e9b2cf1
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 概要ビュー - プロファイラー インストルメンテーション データ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

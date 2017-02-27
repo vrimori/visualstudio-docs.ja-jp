@@ -1,8 +1,7 @@
 ---
 title: "生成済みクラスのオーバーライドおよび拡張 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "ドメイン固有言語, 提供 (オーバーライド可能なクラス)"
 ms.assetid: 30baa60d-a8ea-4611-96c1-8fcc3317cf21
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 15
 ---
 # 生成済みクラスのオーバーライドおよび拡張
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

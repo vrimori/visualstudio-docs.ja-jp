@@ -1,8 +1,7 @@
 ---
 title: "方法 : ActiveX コントロールをデバッグする | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "テスト [Visual Studio], テスト コンテナー"
 ms.assetid: bbc02cf7-a7e6-44fe-99af-87a43e1d7251
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # 方法 : ActiveX コントロールをデバッグする
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

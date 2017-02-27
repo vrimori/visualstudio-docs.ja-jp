@@ -1,8 +1,7 @@
 ---
 title: "方法: 検索の実装とメカニズムを置換 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] の従来の検索し、置換"
 ms.assetid: bbd348db-3d19-42eb-99a2-3e808528c0ca
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 方法: 検索の実装とメカニズムを置換
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

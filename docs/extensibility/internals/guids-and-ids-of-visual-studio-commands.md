@@ -1,8 +1,7 @@
 ---
 title: "Guid と、Visual Studio コマンドの Id | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "guid"
 ms.assetid: 2ea4bee2-0259-4675-8e65-2023b312b516
 caps.latest.revision: 6
-caps.handback.revision: 6
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Guid と、Visual Studio コマンドの Id
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

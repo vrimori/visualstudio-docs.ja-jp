@@ -1,8 +1,7 @@
 ---
 title: "命令ポインター (IP) ビュー - プロファイラー競合データ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "命令ポインター ビュー"
 ms.assetid: f5e49c24-d4cf-4f87-977d-37e3223d1196
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 命令ポインター (IP) ビュー - プロファイラー競合データ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

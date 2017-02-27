@@ -1,8 +1,7 @@
 ---
 title: "図の外観のカスタマイズ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "ドメイン固有言語, 図"
 ms.assetid: 259836b0-783c-46a0-b7c7-dc4b2f7b4a81
 caps.latest.revision: 31
-caps.handback.revision: 31
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 31
 ---
 # 図の外観のカスタマイズ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

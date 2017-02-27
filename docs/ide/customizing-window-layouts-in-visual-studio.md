@@ -1,52 +1,34 @@
 ---
 title: "Visual Studio のウィンドウ レイアウトをカスタマイズする | Microsoft Docs"
-ms.custom: 
-ms.date: 01/23/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.windows
-- vs.environment
-helpviewer_keywords:
-- windows [Visual Studio], managing
-- custom window configurations
-- layout [Visual Studio], window management
-- document windows [Visual Studio]
-- interface modes
-- AutoHide windows
-- MDI, window interface modes
-- multiple monitors
-- Tabbed Document mode
-- debug mode
-- custom layouts
+ms.custom: ""
+ms.date: "01/23/2017"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.windows"
+  - "vs.environment"
+helpviewer_keywords: 
+  - "自動的に隠す (ウィンドウを)"
+  - "カスタム レイアウト"
+  - "カスタム ウィンドウ構成"
+  - "デバッグ モード"
+  - "ドキュメント ウィンドウ [Visual Studio]"
+  - "インターフェイス モード"
+  - "レイアウト [Visual Studio], ウィンドウ管理"
+  - "MDI, ウィンドウ インターフェイス モード"
+  - "複数のモニター"
+  - "タブ付きドキュメント モード"
+  - "ウィンドウ [Visual Studio], 管理"
 ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
 caps.latest.revision: 27
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 841c635c00aea5e78396f27098a1e64fbe29a421
-ms.openlocfilehash: b2a09ceddbfcbfb8632f777f55229d186f6e5ae9
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 27
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Visual Studio のウィンドウ レイアウトをカスタマイズする
 Visual Studio では、さまざまな開発ワークフローに最も適したウィンドウのレイアウトを作成するために、ウィンドウの位置、サイズ、および動作をカスタマイズできます。 レイアウトをカスタマイズすると、IDE はそれを記憶します。 たとえば、 **ソリューション エクスプローラー** のドッキング位置を変更した後で Visual Studio を閉じた場合、次回起動時には、別のコンピューターで作業していても、 **ソリューション エクスプローラー** が同じ位置にドッキングされます。 また、カスタム レイアウトに名前を付けて保存した後、1 つのコマンドでレイアウト間を切り替えることもできます。 たとえば、編集用のレイアウトとデバッグ用のレイアウトを作成し、**[ウィンドウ &#124; ウィンドウ レイアウトを適用]** メニュー コマンドを使用してそれらを切り替えることができます。  

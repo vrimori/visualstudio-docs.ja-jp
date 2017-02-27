@@ -1,8 +1,7 @@
 ---
 title: "TASK_STATE_FAULTED フィールド | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "TASK_STATE_FAULTED フィールドに、タスク クラス [.NET Framework のデバッグ エンジン]"
 ms.assetid: ced826ae-09a9-4acf-af00-a2343d396bb8
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # TASK_STATE_FAULTED フィールド
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

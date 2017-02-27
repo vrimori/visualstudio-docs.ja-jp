@@ -1,46 +1,29 @@
 ---
 title: "ローカリゼーション用リソースの階層編成 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- resource files, localized
-- localization [Visual Studio], resources
-- fallback resources
-- international applications [Visual Studio], storing resources
-- satellite assemblies, resource hierarchies
-- globalization [Visual Studio], resources
-- satellite assemblies
-- resources [Visual Studio], fallback system
-- resource files, fallback processes
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "リソース ファイル、ローカライズ済み"
+  - "ローカリゼーション [Visual Studio]、リソース"
+  - "フォールバック リソース"
+  - "国際対応アプリケーション [Visual Studio]、リソースの格納"
+  - "サテライト アセンブリ、リソースの階層構造"
+  - "グローバリゼーション [Visual Studio]、リソース"
+  - "サテライト アセンブリ"
+  - "リソース [Visual Studio]、フォールバック システム"
+  - "リソース ファイル、フォールバック プロセス"
 ms.assetid: dadf8f2c-f74c-44d7-bec0-a1e956d8d38d
 caps.latest.revision: 8
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a8bc841364ce5fd7c2bd9f3e4ff68257bdc35165
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>ローカリゼーション用リソースの階層編成
 Visual Studio では、ローカライズされたリソース (各カルチャに対応した文字列や画像などのデータ) は、UI カルチャの設定に従って個別のファイルに保存され、読み込まれます。 ローカライズされたリソースの読み込みの仕組みを理解するには、リソースが階層状に整理されていると考えるとわかりやすくなります。  

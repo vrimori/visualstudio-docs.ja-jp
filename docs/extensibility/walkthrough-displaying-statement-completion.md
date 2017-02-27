@@ -1,8 +1,7 @@
 ---
 title: "チュートリアル: 候補の表示 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] - 新しいステートメント入力候補"
 ms.assetid: f3152c4e-7673-4047-a079-2326941d1c83
 caps.latest.revision: 36
-caps.handback.revision: 36
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # チュートリアル: 候補の表示
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

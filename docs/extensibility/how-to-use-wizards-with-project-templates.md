@@ -1,8 +1,7 @@
 ---
 title: "方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "ウィザード [Visual Studio], プロジェクト テンプレート"
 ms.assetid: 47ee26cf-67b7-4ff1-8a9d-ab11a725405c
 caps.latest.revision: 23
-caps.handback.revision: 18
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # 方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "ユーザー設定の拡張とオプション | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "Vspackages にある、ユーザーの基本設定"
 ms.assetid: 5bb6277a-8c9d-48c8-9b4e-1cb3052caded
 caps.latest.revision: 22
-caps.handback.revision: 22
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # ユーザー設定の拡張とオプション
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

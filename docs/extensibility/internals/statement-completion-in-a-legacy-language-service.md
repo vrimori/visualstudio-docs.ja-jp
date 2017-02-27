@@ -1,8 +1,7 @@
 ---
 title: "従来の言語サービスでのステートメント入力候補 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "言語サービスでは、ステートメント入力候補"
 ms.assetid: 617439dc-3f0e-4e5f-b346-3e4e7fcf3c1b
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 従来の言語サービスでのステートメント入力候補
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

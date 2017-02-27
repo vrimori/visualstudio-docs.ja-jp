@@ -1,8 +1,7 @@
 ---
 title: "アクティビティ デザイナーの使用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "ワークフロー デザイナー [WFD], アクティビティ デザイナー"
 ms.assetid: 3c2725c3-091b-49ab-81e7-d4c7028d47a2
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 9
 ---
 # アクティビティ デザイナーの使用
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]には、システムによって提供されるさまざまなアクティビティが用意されており、これらを、アクティビティおよびワークフローの構築時に使用できます。このセクションでは、システムによって提供されるアクティビティとその利用可能なデザイナーの分類について説明します。それぞれの分類に属する個々のアクティビティとそのデザイナーに関するトピックでは、アクティビティの機能とその使用方法を説明しています。  

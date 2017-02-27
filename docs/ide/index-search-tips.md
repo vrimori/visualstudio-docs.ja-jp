@@ -1,8 +1,7 @@
 ---
 title: "インデックス検索のヒント | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "インデックス検索のヒント [ヘルプ ビューアー 2.0]"
 ms.assetid: f9ffa8e9-3ece-419d-a465-f9c2c21fd4ba
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # インデックス検索のヒント
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

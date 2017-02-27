@@ -1,8 +1,7 @@
 ---
 title: "方法: 生成されたコードに対するコード分析の警告を抑制する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 3a96434e-d419-43a7-81ba-95cccac835b8
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 5
 ---
 # 方法: 生成されたコードに対するコード分析の警告を抑制する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

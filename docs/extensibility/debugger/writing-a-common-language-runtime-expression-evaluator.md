@@ -1,8 +1,7 @@
 ---
 title: "共通言語ランタイムの式エバリュエーターの書き込み | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "[デバッグ SDK] 式エバリュエーターのデバッグのチュートリアル"
 ms.assetid: bd79d57f-8e0a-4e14-a417-0b1de28fa1b2
 caps.latest.revision: 23
-caps.handback.revision: 23
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # 共通言語ランタイムの式エバリュエーターの書き込み
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
