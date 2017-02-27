@@ -1,8 +1,7 @@
 ---
 title: "[指定行へのジャンプ] | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "[指定行へのジャンプ] ダイアログ ボックス"
 ms.assetid: 529fa251-b7b3-49cf-863c-10e0b82ac7cc
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # [指定行へのジャンプ]
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

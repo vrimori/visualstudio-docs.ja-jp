@@ -1,8 +1,7 @@
 ---
 title: "起動した後、スタートアップ イベントを送信します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "[デバッグ SDK] スタートアップ イベントのデバッグ"
 ms.assetid: 306ea0b4-6d9e-4871-8d8d-a4032d422940
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 起動した後、スタートアップ イベントを送信します。
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

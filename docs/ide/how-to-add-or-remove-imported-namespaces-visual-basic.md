@@ -1,8 +1,7 @@
 ---
 title: "方法 : インポートした名前空間を追加または削除する (Visual Basic) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "削除 (インポートされた名前空間を)"
 ms.assetid: 44cebec3-0ea0-47c2-8406-4edeab6a997e
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 方法 : インポートした名前空間を追加または削除する (Visual Basic)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

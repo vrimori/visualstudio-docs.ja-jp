@@ -1,8 +1,7 @@
 ---
 title: "[クイック起動] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IDE、検索"
 ms.assetid: 4200f297-d065-4723-9a30-d91ff2e26c9d
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # [クイック起動] ([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

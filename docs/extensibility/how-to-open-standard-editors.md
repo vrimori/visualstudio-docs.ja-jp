@@ -1,8 +1,7 @@
 ---
 title: "方法: 標準のエディターを開く | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "プロジェクト [Visual Studio SDK] 標準エディターの起動"
 ms.assetid: d5ce10f9-047a-4b74-aa1d-295128898b89
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 方法: 標準のエディターを開く
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

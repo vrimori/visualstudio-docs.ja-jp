@@ -1,8 +1,7 @@
 ---
 title: "マルチプロセッサ環境でのログ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "MSBuild, マルチ プロセッサ ログ記録"
 ms.assetid: dd4dae65-ed04-4883-b48d-59bcb891c4dc
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # マルチプロセッサ環境でのログ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

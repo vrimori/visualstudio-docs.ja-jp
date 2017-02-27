@@ -1,39 +1,22 @@
 ---
 title: "MSBuild タスク | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- tasks
-- MSBuild, tasks
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "タスク"
+  - "MSBuild タスク"
 ms.assetid: 5d3cc4a7-e5db-4f73-b707-8b6882fddcf8
 caps.latest.revision: 18
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: cde7cf37c372caff4faa9ec88ecc5958112f0c6f
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 18
 ---
 # <a name="msbuild-tasks"></a>MSBuild タスク
 ビルド プラットフォームでは、ビルドの処理中に、いくつかのアクションを実行する権限が必要です。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は*タスク*を使用して、これらのアクションを実行します。 タスクとは、分割不可能なビルド操作を実行するために [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] で使用される実行可能コードの単位です。  

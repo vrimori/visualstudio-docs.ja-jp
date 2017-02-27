@@ -1,8 +1,7 @@
 ---
 title: "[ルール セット エディター] ダイアログ ボックス (レガシ) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "[ルール セット エディター] ダイアログ ボックス"
 ms.assetid: 7cfd5df1-1115-4e5c-9b72-121f39419e83
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 7
 ---
 # [ルール セット エディター] ダイアログ ボックス (レガシ)
 このトピックでは、従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]の **\[ルール セット エディター\]** ダイアログ ボックスの使用方法について説明します。[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]を使用します。  

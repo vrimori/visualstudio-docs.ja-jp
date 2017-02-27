@@ -1,8 +1,7 @@
 ---
 title: "メニュー コマンドを使用して拡張機能の作成 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "visual studio パッケージ"
 ms.assetid: f97104c8-2bcb-45c7-a3c9-85abeda8df98
 caps.latest.revision: 56
-caps.handback.revision: 56
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 56
 ---
 # メニュー コマンドを使用して拡張機能の作成
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

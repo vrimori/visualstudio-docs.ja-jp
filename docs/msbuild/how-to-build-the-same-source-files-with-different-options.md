@@ -1,41 +1,24 @@
 ---
-title: "方法: 同じソース ファイルを異なるオプションでビルドする | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- source files, building with different options
-- MSBuild, properties
-- project properties, modifying
-- Hello World example [Visual Studio]
+title: "方法 : 同じソース ファイルを異なるオプションでビルドする | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "さまざまなオプションでビルドすると、ソース ファイル"
+  - "MSBuild プロパティ"
+  - "プロジェクトのプロパティ] を変更します。"
+  - "Hello World の例 [Visual Studio]"
 ms.assetid: d14f1212-ddd9-434f-b138-f840011b0fb2
 caps.latest.revision: 20
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: 9a7f77460e3e24ec3cef6694ea9515888c061ecc
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 20
 ---
 # <a name="how-to-build-the-same-source-files-with-different-options"></a>方法 : 同じソース ファイルを異なるオプションでビルドする
 プロジェクトをビルドする場合、同じコンポーネントを異なるビルド オプションでコンパイルすることがよくあります。 たとえば、シンボル情報を付ければデバッグ ビルドを作成でき、シンボル情報なしで最適化を有効にすればリリース ビルドを作成できます。 あるいは、x86 や [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)] などのように、特定のプラットフォーム上で実行するようにプロジェクトをビルドできます。 これらのいずれの場合も、ほとんどのビルド オプションは同じままで、ビルド構成を制御するためにいくつかのオプションが変更されるだけです。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、異なるビルド構成を作成するためにプロパティと条件を使用します。  

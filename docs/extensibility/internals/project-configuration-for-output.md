@@ -1,8 +1,7 @@
 ---
 title: "出力のプロジェクト構成 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "プロジェクトの構成、出力"
 ms.assetid: a4517f73-45af-4745-9d7f-9fddf887b636
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 出力のプロジェクト構成
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

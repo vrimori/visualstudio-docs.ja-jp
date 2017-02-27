@@ -1,8 +1,7 @@
 ---
 title: "方法 : エディット コンティニュの中断モード時に編集を適用する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "編集, 中断モード"
 ms.assetid: 1eef7498-6a1f-4fba-8146-510adc6375c9
 caps.latest.revision: 30
-caps.handback.revision: 30
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # 方法 : エディット コンティニュの中断モード時に編集を適用する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

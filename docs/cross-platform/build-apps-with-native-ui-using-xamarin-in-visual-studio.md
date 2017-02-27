@@ -1,37 +1,19 @@
 ---
 title: "Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "tgt-pltfrm-cross-plat"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 30f137e6-595d-4ce7-b8f5-415b07c1caa2
 caps.latest.revision: 31
-author: ghogen
-ms.author: ghogen
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: b9e8ab5432e5c546776a61b364c0886d9f96c096
-
+author: "ghogen"
+ms.author: "ghogen"
+manager: "ghogen"
+caps.handback.revision: 23
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
 「[セットアップとインストール](../cross-platform/setup-and-install.md)」と「[Xamarin 環境を検証する](../cross-platform/verify-your-xamarin-environment.md)」の手順を完了しましたが、このチュートリアルでは、ネイティブ UI レイヤーを備えた基本的な Xamarin アプリ (下図) を作成する方法を示します。 ネイティブ UI を使用すると、共有コードはポータブル クラス ライブラリ (PCL) に存在し、個別のプラットフォーム プロジェクトに UI 定義が含まれます。  

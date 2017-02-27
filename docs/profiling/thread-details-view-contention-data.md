@@ -1,8 +1,7 @@
 ---
 title: "スレッドの詳細ビュー - プロファイラー競合データ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "スレッドの詳細ビュー"
 ms.assetid: 874c3b1c-88d8-479a-bb35-1291d9aa8e67
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # スレッドの詳細ビュー - プロファイラー競合データ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

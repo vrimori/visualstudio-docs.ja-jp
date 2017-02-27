@@ -1,8 +1,7 @@
 ---
 title: "コード マップ アナライザーを使用して潜在的な問題を検索する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "グラフ ドキュメント、分析"
 ms.assetid: 9dd799a7-f7eb-42ff-8612-b19dde7ff4eb
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "alexhomer1"
 ms.author: "ahomer"
 manager: "douge"
+caps.handback.revision: 11
 ---
 # コード マップ アナライザーを使用して潜在的な問題を検索する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

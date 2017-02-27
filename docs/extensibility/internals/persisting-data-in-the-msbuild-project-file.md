@@ -1,8 +1,7 @@
 ---
 title: "MSBuild プロジェクト ファイルでデータを保持します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "プロジェクト ファイル内のデータを永続化します。"
 ms.assetid: 6a920cb7-453d-4ffd-af1c-6f3084bd03f7
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # MSBuild プロジェクト ファイルでデータを保持します。
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

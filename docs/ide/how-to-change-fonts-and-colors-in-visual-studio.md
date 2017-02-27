@@ -1,8 +1,7 @@
 ---
 title: "方法: Visual Studio で使用するフォントと色を変更する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "Visual Studio, 配色テーマ"
 ms.assetid: 60d91ba1-244b-4c43-847f-60b744f1352a
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 方法: Visual Studio で使用するフォントと色を変更する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

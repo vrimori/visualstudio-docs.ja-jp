@@ -1,8 +1,7 @@
 ---
 title: "デバッグの基礎 : [レジスタ] ウィンドウ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "デバッグ [Visual Studio]、[レジスタ] ウィンドウ"
 ms.assetid: ab354047-053e-4f94-8ac1-26e761442b6f
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # デバッグの基礎 : [レジスタ] ウィンドウ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

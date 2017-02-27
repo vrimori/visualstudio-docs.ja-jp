@@ -1,8 +1,7 @@
 ---
 title: "方法: マネージ コードの障害に対する作業項目を作成する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/12/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "コード分析、作業項目の作成"
 ms.assetid: 46ddfd57-af4a-4c1d-bd00-8e6328f321f0
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 16
 ---
 # 方法: マネージ コードの障害に対する作業項目を作成する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

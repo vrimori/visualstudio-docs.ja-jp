@@ -1,8 +1,7 @@
 ---
 title: "ドメイン固有言語をカスタマイズするコードの記述 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "ドメイン固有言語のプログラミング"
 ms.assetid: a4a17f5b-9c97-4575-b2d1-3182c1896b72
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 29
 ---
 # ドメイン固有言語をカスタマイズするコードの記述
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

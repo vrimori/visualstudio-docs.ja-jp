@@ -1,8 +1,7 @@
 ---
 title: "コンパートメント シェイプのプロパティ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "ドメイン固有言語, コンパートメント シェイプ"
 ms.assetid: 9a9e112d-210d-413b-a44f-0e976a4a78bc
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 24
 ---
 # コンパートメント シェイプのプロパティ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

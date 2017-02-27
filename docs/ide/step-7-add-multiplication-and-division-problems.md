@@ -1,37 +1,19 @@
 ---
-title: "手順 7: 乗算問題と除算問題の追加 | Microsoft ドキュメント"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "手順 7: 乗算問題と除算問題の追加 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: e638959e-f6a4-4eb4-b2e9-f63b7855cf8f
 caps.latest.revision: 17
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 54005a458c777d717909fe481405f6e11563d086
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 17
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>手順 7: 乗算問題と除算問題の追加
 このチュートリアルの第&7; 部では、乗算問題と除算問題を追加しますが、まず変更方法について考えてみます。 最初の手順は、値を格納することです。  

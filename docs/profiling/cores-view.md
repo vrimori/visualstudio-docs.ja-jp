@@ -1,8 +1,7 @@
 ---
 title: "コア ビュー | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "同時実行ビジュアライザー、コア ビュー"
 ms.assetid: e47af672-9785-4899-bd45-4d9dda3c396f
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # コア ビュー
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

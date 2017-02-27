@@ -1,8 +1,7 @@
 ---
 title: "方法: ワークフロー プロジェクトに新しい項目を追加する (レガシ) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "ワークフロー, 新しい項目の追加"
 ms.assetid: 130cd83d-942d-437b-bbb5-8088ec0a6d79
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # 方法: ワークフロー プロジェクトに新しい項目を追加する (レガシ)
 [!INCLUDE[vs2010](../modeling/includes/vs2010_md.md)] が備えている従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]は、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象としており、これを使用してワークフロー プロジェクトを作成すると、[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 項目や他の一般的な [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 項目をプロジェクトに追加できます。  

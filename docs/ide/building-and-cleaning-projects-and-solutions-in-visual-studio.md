@@ -1,51 +1,33 @@
 ---
 title: "Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- VS.BuildProjectPicker
-- vs.batchbuild
-helpviewer_keywords:
-- Clean Solution command
-- builds [Visual Studio], managing
-- solution build configurations, starting
-- Build Solution command
-- project build configurations, starting
-- build configurations, starting
-- project build configurations, dependencies
-- Rebuild Solution command
-- solution build configurations, build order
-- builds [Visual Studio], preparing
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "VS.BuildProjectPicker"
+  - "vs.batchbuild"
+helpviewer_keywords: 
+  - "ソリューションのクリーン コマンド"
+  - "ビルド [Visual Studio ALM], 管理"
+  - "ソリューション ビルド構成, 開始"
+  - "ソリューションのリビルド コマンド"
+  - "プロジェクトのビルド構成, 開始"
+  - "ビルド構成, 開始"
+  - "プロジェクトのビルド構成, 依存関係"
+  - "ソリューションのリビルド コマンド"
+  - "ソリューション ビルド構成, ビルドの順序"
+  - "ビルド [Visual Studio], 準備"
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
 caps.latest.revision: 35
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 96fad179fb30f3b5e8fe6ddfd041c8e289dde48a
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 35
 ---
 # <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン
 このトピックの手順を使用して、ソリューション内のプロジェクトまたはプロジェクト項目のすべてまたは一部をビルド、リビルド、またはクリーンを行うことができます。 ステップ バイ ステップ チュートリアルについては、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。  

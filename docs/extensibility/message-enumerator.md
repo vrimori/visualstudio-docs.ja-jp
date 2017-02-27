@@ -1,8 +1,7 @@
 ---
 title: "メッセージの列挙子 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "ソース管理プラグインをメッセージの列挙"
 ms.assetid: 4a4faa0d-d352-40ea-a21d-c09ea286a8e1
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # メッセージの列挙子
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

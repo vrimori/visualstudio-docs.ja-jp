@@ -1,8 +1,7 @@
 ---
 title: "方法 : Visual Basic 開発者設定が適用されたビルド構成を管理する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Visual Studio, ビルド (Visual Basic 設定を使用して)"
 ms.assetid: eaea6e0b-6c61-4869-8d63-d372c745a23c
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 方法 : Visual Basic 開発者設定が適用されたビルド構成を管理する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

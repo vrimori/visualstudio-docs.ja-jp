@@ -1,8 +1,7 @@
 ---
 title: "DslTextTransform コマンド | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "ドメイン固有言語、コマンド"
 ms.assetid: 7d025d0b-6543-4a49-9f6b-8b8cfcad77ee
 caps.latest.revision: 30
-caps.handback.revision: 30
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 30
 ---
 # DslTextTransform コマンド
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

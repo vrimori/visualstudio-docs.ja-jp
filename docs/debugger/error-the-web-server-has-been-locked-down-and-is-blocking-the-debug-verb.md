@@ -1,8 +1,7 @@
 ---
 title: "エラー ： Web サーバーが制限され、デバッグの有効化に必要な DEBUG 動詞をブロックしています。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "デバッガー, Web アプリケーション エラー"
 ms.assetid: 9c8c4812-17db-484d-9c1b-ffd9e3bfef5a
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # エラー ： Web サーバーが制限され、デバッグの有効化に必要な DEBUG 動詞をブロックしています。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

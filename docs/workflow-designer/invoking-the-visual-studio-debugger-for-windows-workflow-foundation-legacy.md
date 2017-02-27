@@ -1,8 +1,7 @@
 ---
 title: "Visual Studio Debugger for Windows Workflow Foundation の起動 (レガシ) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "ワークフロー, デバッガー"
 ms.assetid: d6f58e35-5cce-4ff2-9afc-b2d9d0f819cf
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 6
 ---
 # Visual Studio Debugger for Windows Workflow Foundation の起動 (レガシ)
 このトピックでは、従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]で [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] アプリケーションをデバッグするための [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーの使用方法について説明します。[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]を使用します。  

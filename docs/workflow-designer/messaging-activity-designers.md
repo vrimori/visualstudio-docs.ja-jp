@@ -1,18 +1,17 @@
 ---
 title: "メッセージング アクティビティ デザイナー | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 897e63cf-a42f-4edd-876f-c4ccfffaf6d6
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 7
 ---
 # メッセージング アクティビティ デザイナー
 Messaging アクティビティ デザイナーは、[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] アプリケーション内から [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] メッセージを送受信するメッセージング アクティビティを作成および構成するために使用します。[!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)] には、5 つのメッセージング アクティビティが導入され、[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]には、ワークフロー内でメッセージングを管理できるようにする 2 つの新しいテンプレート デザイナーが用意されています。次の表に示す、このセクションに含まれるトピックでは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のアクティビティ デザイナーおよびテンプレート デザイナーの使用方法についてのガイドラインを示します。  

@@ -1,8 +1,7 @@
 ---
 title: "[出力] ウィンドウを拡張します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "[出力] ウィンドウの [出力] ウィンドウ"
 ms.assetid: b02fa88c-f92a-4ff6-ba5f-2eb4d48a643a
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # [出力] ウィンドウを拡張します。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

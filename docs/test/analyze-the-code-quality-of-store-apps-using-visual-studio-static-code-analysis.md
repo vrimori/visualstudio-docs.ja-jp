@@ -1,8 +1,7 @@
 ---
 title: "Visual Studio 静的コード分析によるストア アプリのコード品質の分析 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 2341013d-a08b-49a7-b6fd-a7b6aaa797e0
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "erickson-doug"
 ms.author: "douge"
 manager: "douge"
+caps.handback.revision: 11
 ---
 # Visual Studio 静的コード分析によるストア アプリのコード品質の分析
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

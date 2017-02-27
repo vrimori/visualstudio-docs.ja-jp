@@ -1,8 +1,7 @@
 ---
 title: "TaskScheduler クラスの内部メンバー | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "デバッグ エンジンは、TaskScheduler クラス [.NET Framework]"
 ms.assetid: 87f1c969-0217-4464-8907-7609c1bf61d3
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # TaskScheduler クラスの内部メンバー
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

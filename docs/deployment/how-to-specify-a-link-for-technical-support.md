@@ -1,8 +1,7 @@
 ---
 title: "方法: テクニカル サポートのリンクを指定する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "Web サイト, 作成 (ClickOnce のサポート用に)"
 ms.assetid: 500aebee-545e-4831-a78b-b8671a008015
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 15
 ---
 # 方法: テクニカル サポートのリンクを指定する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

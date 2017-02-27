@@ -1,8 +1,7 @@
 ---
 title: "表示するスレッド アクティビティがありません (スレッド ビュー) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "同時実行ビジュアライザー, 表示するスレッド アクティビティがありません (スレッド ビュー)"
 ms.assetid: aa5ae9d0-561d-4ef8-b36b-258ce553d50a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 表示するスレッド アクティビティがありません (スレッド ビュー)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

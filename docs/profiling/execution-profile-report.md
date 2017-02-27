@@ -1,41 +1,23 @@
 ---
-title: "実行プロファイル レポート | Microsoft ドキュメント"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.cv.threads.report.execution
-helpviewer_keywords:
-- Concurrency Visualizer, Execution Profile Report
+title: "実行プロファイル レポート | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.cv.threads.report.execution"
+helpviewer_keywords: 
+  - "同時実行ビジュアライザー、実行プロファイル レポート"
 ms.assetid: c8128472-a8ed-46f4-b1c8-a25358d6f2c1
 caps.latest.revision: 9
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 36ecfc56c76d1f5c5bf2ce7188d0520a5e63ade7
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
 # <a name="execution-profile-report"></a>実行プロファイル レポート
 実行プロファイル レポートは、従来のサンプリング プロファイルです。 サンプルは、論理コア上でスレッドが実行されている期間中におよそミリ秒ごとに取得されます。同時実行ビジュアライザーが、累積された一連のサンプル セットを照合して、標準的なコール ツリーをビルドします。 このテーブルのデータは、現在の時間範囲と非表示のスレッドの影響、および適用されるフィルターの影響を受ける場合があります。  

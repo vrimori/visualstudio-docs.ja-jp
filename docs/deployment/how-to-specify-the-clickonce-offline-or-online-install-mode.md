@@ -1,8 +1,7 @@
 ---
 title: "方法: ClickOnce のオフラインまたはオンラインのインストール モードを指定する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "オンライン アプリケーション"
 ms.assetid: 0aee5fc1-e966-4bda-9b8f-d9997aeaa779
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 8
 ---
 # 方法: ClickOnce のオフラインまたはオンラインのインストール モードを指定する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

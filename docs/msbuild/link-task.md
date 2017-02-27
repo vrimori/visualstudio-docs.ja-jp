@@ -1,58 +1,41 @@
 ---
 title: "Link タスク | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- VC.Project.VCLinkerTool.ForceFileOutput
-- VC.Project.VCLinkerTool.LinkStatus
-- VC.Project.VCLinkerTool.CLRUnmanagedCodeCheck
-- VC.Project.VCLinkerTool.SpecifySectionAttributes
-- VC.Project.VCLinkerTool.SupportNobindOfDelayLoadedDLL
-- VC.Project.VCLinkerTool.MinimumRequiredVersion
-- VC.Project.VCLinkerTool.PerUserRedirection
-- VC.Project.VCLinkerTool.CreateHotPatchableImage
-- VC.Project.VCLinkerTool.DataExecutionPrevention
-- VC.Project.VCLinkerTool.TreatLinkerWarningsAsErrors
-- vc.task.link
-- VC.Project.VCLinkerTool.ImageHasSafeExceptionHandlers
-- VC.Project.VCLinkerTool.CLRSupportLastError
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- MSBuild (Visual C++), Link task
-- Link task (MSBuild (Visual C++))
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "VC.Project.VCLinkerTool.ForceFileOutput"
+  - "VC.Project.VCLinkerTool.LinkStatus"
+  - "VC.Project.VCLinkerTool.CLRUnmanagedCodeCheck"
+  - "VC.Project.VCLinkerTool.SpecifySectionAttributes"
+  - "VC.Project.VCLinkerTool.SupportNobindOfDelayLoadedDLL"
+  - "VC.Project.VCLinkerTool.MinimumRequiredVersion"
+  - "VC.Project.VCLinkerTool.PerUserRedirection"
+  - "VC.Project.VCLinkerTool.CreateHotPatchableImage"
+  - "VC.Project.VCLinkerTool.DataExecutionPrevention"
+  - "VC.Project.VCLinkerTool.TreatLinkerWarningsAsErrors"
+  - "vc.task.link"
+  - "VC.Project.VCLinkerTool.ImageHasSafeExceptionHandlers"
+  - "VC.Project.VCLinkerTool.CLRSupportLastError"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+helpviewer_keywords: 
+  - "MSBuild (Visual C) のタスクのリンク"
+  - "Link タスク (MSBuild (Visual C++))"
 ms.assetid: 0a61f168-3113-4fa7-83a3-d9142e2a33f8
 caps.latest.revision: 12
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7efa5c21454ec3cde3e07aa091919703544cc908
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
 # <a name="link-task"></a>Link タスク
 Visual C++ リンカー ツール (link.exe) をラップします。 リンカー ツールは、COFF (Common Object File Format) オブジェクト ファイルとライブラリをリンクし、実行可能ファイル (.exe) やダイナミック リンク ライブラリ (DLL) を生成します。 詳細については、「[リンカー オプション](/visual-cpp/build/reference/linker-options)」を参照してください。  

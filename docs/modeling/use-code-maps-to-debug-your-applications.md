@@ -1,8 +1,7 @@
 ---
 title: "コード マップを使用してアプリケーションをデバッグする | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Visual Studio Ultimate, ビジュアル化 (コードを)"
 ms.assetid: 9fd0c9a2-d351-40c8-be88-0749788264bf
 caps.latest.revision: 49
-caps.handback.revision: 49
 author: "alexhomer1"
 ms.author: "ahomer"
 manager: "douge"
+caps.handback.revision: 49
 ---
 # コード マップを使用してアプリケーションをデバッグする
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

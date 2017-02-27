@@ -1,8 +1,7 @@
 ---
 title: "[プロセス] タブ ([ウィンドウ プロパティ] ダイアログ ボックス) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "[ウィンドウ プロパティ] ダイアログ ボックス、[プロセス] タブ"
 ms.assetid: bb464429-4e7c-4919-98b5-1aaafe89bb5f
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # [プロセス] タブ ([ウィンドウ プロパティ] ダイアログ ボックス)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

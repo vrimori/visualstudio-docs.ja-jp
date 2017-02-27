@@ -1,40 +1,21 @@
 ---
-title: "プロファイリング ツールの新機能 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- profiling
-- what's new
+title: "診断ツールの新機能 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "新機能 [VIsual Studio ALM], 開発者の品質と診断"
 ms.assetid: d4736cc8-8961-4089-be9e-d5190ce8353c
 caps.latest.revision: 42
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 1dae0fddd8f3608089b67f571e152ed5a0f56c61
-ms.openlocfilehash: 888c5c996df6558fc4c409704ad003f9c25a733b
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 40
 ---
 # <a name="whats-new-in-profiling-tools-in-includevsdev15miscincludesvsdev15mdmd"></a>[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] プロファイリング ツールの新機能
 診断ツールに、修正が必要なアプリの問題を識別できる新しい視覚化が追加されました。 診断ツールに ASP.NET アプリのサポートが追加されました。

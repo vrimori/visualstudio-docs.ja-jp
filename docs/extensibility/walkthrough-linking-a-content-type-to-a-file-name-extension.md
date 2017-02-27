@@ -1,8 +1,7 @@
 ---
 title: "チュートリアル: ファイル名拡張子へのコンテンツの種類のリンク | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] ファイル名拡張子に新たなリンクのコンテンツの種類"
 ms.assetid: 21ee64ce-9afe-4b08-94a0-8389cc4dc67c
 caps.latest.revision: 24
-caps.handback.revision: 24
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # チュートリアル: ファイル名拡張子へのコンテンツの種類のリンク
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

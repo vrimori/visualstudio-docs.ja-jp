@@ -1,8 +1,7 @@
 ---
 title: "チュートリアル: テキスト テンプレートを使用したコード生成 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "チュートリアル [テキスト テンプレート]"
 ms.assetid: 24602ade-baca-425e-a6ce-be09a2c7f7e1
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 11
 ---
 # チュートリアル: テキスト テンプレートを使用したコード生成
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

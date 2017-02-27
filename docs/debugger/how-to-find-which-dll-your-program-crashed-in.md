@@ -1,8 +1,7 @@
 ---
 title: "方法 : プログラムのクラッシュが発生している DLL を確認する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "[モジュール] ウィンドウ"
 ms.assetid: ecf62568-8b65-4a41-b8a4-e962ff2dfb71
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 方法 : プログラムのクラッシュが発生している DLL を確認する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

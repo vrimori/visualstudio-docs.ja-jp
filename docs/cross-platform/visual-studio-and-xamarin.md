@@ -1,37 +1,19 @@
 ---
 title: "Visual Studio と Xamarin | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "tgt-pltfrm-cross-plat"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 1da4064f-af69-472c-8f31-98484be5f790
 caps.latest.revision: 10
-author: ghogen
-ms.author: ghogen
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 383da012d69fed903e771d210bedfe67aeb955bd
-
+author: "ghogen"
+ms.author: "ghogen"
+manager: "ghogen"
+caps.handback.revision: 4
 ---
 # <a name="visual-studio-and-xamarin"></a>Visual Studio と Xamarin
 Xamarin はネイティブの iOS、Android、および Windows のアプリを一般的な C#/.NET コード ベースから構築するためのモバイル アプリ開発プラットフォームであり、プラットフォーム間で 75% ～ほぼ 100% のコードの再利用を達成しています。 Xamarin と C# で記述されたアプリは、基礎となるプラットフォーム API にフル アクセスでき、ネイティブ ユーザー インターフェイスを構築する機能を装備しています。プラットフォーム固有のパッケージにコンパイルするので、実行時のパフォーマンスにほとんど影響を与えることがありません。 (注: Xamarin は F# もサポートしていますが、このドキュメントでは C# のみを扱います。 Visual Basic は現時点ではサポートされていません。)  

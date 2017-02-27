@@ -1,8 +1,7 @@
 ---
 title: "[出力] タブ ([メッセージ オプション] ダイアログ ボックス) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "メッセージ オプション、出力"
 ms.assetid: 22dd48c2-6d17-41b1-b84c-9ddeaef68411
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # [出力] タブ ([メッセージ オプション] ダイアログ ボックス)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

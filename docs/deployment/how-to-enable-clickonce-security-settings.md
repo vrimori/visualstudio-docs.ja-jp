@@ -1,8 +1,7 @@
 ---
 title: "方法 : ClickOnce のセキュリティ設定を有効にする | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "セキュリティ設定, ClickOnce 配置"
 ms.assetid: 73cd3e9d-cd72-4ad2-8cae-94d6bb6b01e0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 8
 ---
 # 方法 : ClickOnce のセキュリティ設定を有効にする
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "方法 : 配置の更新用に別の場所を指定する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "配置の更新, 代替位置"
 ms.assetid: 7faacd35-2638-492d-80f6-6b57e5f820de
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 15
 ---
 # 方法 : 配置の更新用に別の場所を指定する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

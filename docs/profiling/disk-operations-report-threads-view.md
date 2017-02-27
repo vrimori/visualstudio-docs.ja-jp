@@ -1,8 +1,7 @@
 ---
 title: "ディスク操作レポート (スレッド ビュー) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "同時実行ビジュアライザー、ファイル操作レポート (スレッド ビュー)"
 ms.assetid: e352f4f3-f654-45eb-96ed-417863487ddc
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # ディスク操作レポート (スレッド ビュー)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Web コントロール ライブラリ (マネージ コード) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "デバッグ (DLL を)"
 ms.assetid: 2413883f-9e88-406d-b874-0ed743b75d40
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # Web コントロール ライブラリ (マネージ コード)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

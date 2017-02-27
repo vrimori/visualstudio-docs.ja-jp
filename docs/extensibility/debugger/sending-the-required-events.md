@@ -1,8 +1,7 @@
 ---
 title: "必要なイベントを送信します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "[デバッグの SDK] をデバッグするには、イベントが必要"
 ms.assetid: 08319157-43fb-44a9-9a63-50b919fe1377
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 必要なイベントを送信します。
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

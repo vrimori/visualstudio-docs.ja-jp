@@ -1,8 +1,7 @@
 ---
 title: "デバッガー イベントの呼び出し | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "[デバッグ SDK] イベントのデバッグ"
 ms.assetid: b3440ac3-80af-40c6-bef4-cbf00fa67885
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # デバッガー イベントの呼び出し
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

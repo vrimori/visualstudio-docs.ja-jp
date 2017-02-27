@@ -1,8 +1,7 @@
 ---
 title: "CA1404: P/Invoke の直後に GetLastError を呼び出します | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CA1404"
 ms.assetid: 52ae9eff-50f9-4b2f-8039-ca7e49fba88e
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 18
 ---
 # CA1404: P/Invoke の直後に GetLastError を呼び出します
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

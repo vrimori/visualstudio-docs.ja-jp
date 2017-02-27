@@ -1,8 +1,7 @@
 ---
 title: "ClickOnce キャッシュの概要 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Windows アプリケーション, ClickOnce 配置"
 ms.assetid: e379921e-9ef1-4326-bbf3-53ba67925526
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 12
 ---
 # ClickOnce キャッシュの概要
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "方法: プロジェクトに固有のエディターを開く | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "プロジェクト [Visual Studio SDK] フォルダーを開く"
 ms.assetid: 83e56d39-c97b-4c6b-86d6-3ffbec97e8d1
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 方法: プロジェクトに固有のエディターを開く
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

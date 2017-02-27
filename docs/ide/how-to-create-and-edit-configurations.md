@@ -1,8 +1,7 @@
 ---
 title: "方法 : 構成を作成および編集する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "ソリューション ビルド構成, 編集"
 ms.assetid: 19be121c-148e-4ece-bbfc-d20b08cfc3f7
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 方法 : 構成を作成および編集する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

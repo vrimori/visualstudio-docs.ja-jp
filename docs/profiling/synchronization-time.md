@@ -1,8 +1,7 @@
 ---
 title: "同期時間 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "同時実行ビジュアライザー, 同期時間"
 ms.assetid: affa04cc-8bba-4848-9301-b19846d3c2cb
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 同期時間
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

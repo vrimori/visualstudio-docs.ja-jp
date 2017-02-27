@@ -1,8 +1,7 @@
 ---
 title: "エディター項目テンプレートを使用して拡張機能の作成 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] - 新しい拡張機能"
 ms.assetid: fa3b993b-ab95-47fa-a38b-b788f3a5b2d8
 caps.latest.revision: 16
-caps.handback.revision: 16
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # エディター項目テンプレートを使用して拡張機能の作成
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

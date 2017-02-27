@@ -1,45 +1,27 @@
 ---
 title: "UI オートメーションを使用してコードをテストする | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.codedUITest
-- vs.codedUITest.recorder
-- vs.codedUITest.testbuilder
-- vs.codedUITest.addAssertions
-- vs.codedUITest.createdialog
-helpviewer_keywords:
-- automated tests, testing UI interface
-- coded UI test
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-devops-test"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.codedUITest"
+  - "vs.codedUITest.recorder"
+  - "vs.codedUITest.testbuilder"
+  - "vs.codedUITest.addAssertions"
+  - "vs.codedUITest.createdialog"
+helpviewer_keywords: 
+  - "自動テスト, テスト (UI インターフェイスを)"
+  - "コード化された UI テスト"
 ms.assetid: ad9e3eaa-ab86-436e-95b8-dc20eb1f8b2a
 caps.latest.revision: 85
-ms.author: mlearned
-manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 753a39940ba32052cff14460f007a8f8a2d191dd
-
+ms.author: "mlearned"
+manager: "douge"
+caps.handback.revision: 83
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI オートメーションを使用してコードをテストする
 ユーザー インターフェイス (UI) を介してアプリケーションを実行する自動テストは、*コード化された UI テスト* (CUIT) と呼ばれます。 これらのテストには、UI コントロールの機能テストが含まれます。 これらのテストで、アプリケーション全体が、ユーザー インターフェイスを含めて正しく機能していることを検証できます。 コード化された UI テストは、Web ページなど、ユーザー インターフェイスに検証やその他のロジックがある場合に特に有用です。 また、既存の手動テストを自動化するために頻繁に使用されます。  

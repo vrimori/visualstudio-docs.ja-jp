@@ -1,8 +1,7 @@
 ---
 title: "ClickOnce 配置ストラテジの選択 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "配置 (アプリケーションを), ClickOnce"
 ms.assetid: 98bcab65-ab8b-4ed1-9adc-fdacf92b8106
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 19
 ---
 # ClickOnce 配置ストラテジの選択
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

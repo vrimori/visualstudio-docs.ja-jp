@@ -1,43 +1,25 @@
 ---
 title: "Visual C# のコード スニペット | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- snippets [C#], default snippets
-- snippets [C#], Code Snippet Inserter
-- Code Snippet Inserter [J#]
-- Code Snippet Inserter [C#]
-- Visual C#, default snippets
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "スニペット [C#]、既定のスニペット"
+  - "スニペット[C#]、コード スニペット挿入機能"
+  - "コード スニペット挿入機能 [J#]"
+  - "コード スニペット挿入機能 [C#]"
+  - "Visual C#、既定のスニペット"
 ms.assetid: dbea3dd6-e650-4190-b874-c9f097d7de6e
 caps.latest.revision: 33
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a4721d8bbd5dd6ec29f555ee8d4848ef3660243f
-ms.openlocfilehash: 0e1c37c0ce85cc44f7d43d895f3b4a4615539e3e
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 33
 ---
 # <a name="visual-c-code-snippets"></a>Visual C# のコード スニペット
 コード スニペットは、あらかじめ用意されているコードのスニペットで、コードにすぐに挿入できます。 たとえば、`for` コード スニペットは空の `for` ループを作成します。 一部のコード スニペットは surround-with コード スニペットであり、コード行を選んでから、選んだコード行を組み込むコード スニペットを選ぶことができます。 たとえば、コード行を選んでから `for` コード スニペットをアクティブにすると、選んだコード行がループ ブロックの中に含まれる `for` ループが作成されます。 コード スニペットを使うと、速く、容易に、信頼性の高いプログラム コードを作成できます。  

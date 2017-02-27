@@ -1,8 +1,7 @@
 ---
 title: "レガシ API を使用してコード ウィンドウをカスタマイズします。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] の従来のコード ウィンドウ"
 ms.assetid: 5328ab2f-55cb-4680-9744-ec79f55acd1b
 caps.latest.revision: 19
-caps.handback.revision: 19
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # レガシ API を使用してコード ウィンドウをカスタマイズします。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

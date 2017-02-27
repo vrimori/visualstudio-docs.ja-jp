@@ -1,8 +1,7 @@
 ---
 title: "従来の言語サービスでのコード スニペットのサポート | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "コード スニペットをサポートする言語サービス [マネージ パッケージ framework]"
 ms.assetid: 7490325b-acee-4c2d-ac56-1cd5db1a1083
 caps.latest.revision: 28
-caps.handback.revision: 28
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # 従来の言語サービスでのコード スニペットのサポート
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

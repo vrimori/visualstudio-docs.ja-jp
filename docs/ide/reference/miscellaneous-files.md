@@ -1,8 +1,7 @@
 ---
 title: "その他のファイル | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "ファイル [Visual Studio]、[その他のファイル] フォルダー"
 ms.assetid: 5b96640b-8efe-48a4-8d0a-1ae3f9587e44
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # その他のファイル
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

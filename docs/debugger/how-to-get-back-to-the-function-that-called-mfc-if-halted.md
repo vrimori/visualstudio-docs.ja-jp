@@ -1,8 +1,7 @@
 ---
 title: "方法 : 停止した場合に MFC を呼び出した関数に戻る | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "プログラム, 中断"
 ms.assetid: d254a5a9-afbd-4923-9d7a-7422d824cabf
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 方法 : 停止した場合に MFC を呼び出した関数に戻る
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

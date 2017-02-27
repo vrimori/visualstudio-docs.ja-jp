@@ -1,8 +1,7 @@
 ---
 title: "ワークフロー デザイナーでのエラー メッセージ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ f1_keywords:
   - "System.Activities.Presentation.View.ErrorView.UI"
 ms.assetid: 4d8bbc2e-34fc-477f-9140-4adfd70c34a0
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # ワークフロー デザイナーでのエラー メッセージ
 ここでは、[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]で作業しているときに生成される可能性のあるエラー メッセージの種類について説明します。  

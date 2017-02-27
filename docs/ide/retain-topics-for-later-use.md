@@ -1,8 +1,7 @@
 ---
 title: "後で使用するためにトピックを保持 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "ヘルプ ビューアー 2.0, お気に入りタブ"
 ms.assetid: f0a4c657-001d-4604-a403-d46f15782724
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 後で使用するためにトピックを保持
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "コード カバレッジ分析のカスタマイズ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f6337c35-acae-4c5f-b5d9-ac5ff687ef18
 caps.latest.revision: 16
-caps.handback.revision: 16
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 16
 ---
 # コード カバレッジ分析のカスタマイズ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

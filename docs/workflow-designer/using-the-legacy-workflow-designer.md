@@ -1,8 +1,7 @@
 ---
 title: "従来のワークフロー デザイナーの使用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "Visual Studio 2005 Extensions for Windows Workflow Foundation, 概要"
 ms.assetid: 7af53077-afd7-465f-9c1d-b387e9d4f216
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 10
 ---
 # 従来のワークフロー デザイナーの使用
 [!INCLUDE[vs2010](../modeling/includes/vs2010_md.md)] が備えている従来の[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]を使用すると、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とすることができます。  

@@ -1,46 +1,29 @@
 ---
 title: "ProjectExtensions 要素 (MSBuild) | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#ProjectExtensions
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- <ProjectExtensions> element [MSBuild]
-- ProjectExtensions element [MSBuild]
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "http://schemas.microsoft.com/developer/msbuild/2003#ProjectExtensions"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+helpviewer_keywords: 
+  - "< ProjectExtensions > 要素 [MSBuild]"
+  - "ProjectExtensions 要素 [MSBuild]"
 ms.assetid: f95f312f-ff92-41eb-9469-ad99e236a307
 caps.latest.revision: 18
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: f219301ec954442b4c9913c254e234a520177169
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 18
 ---
 # <a name="projectextensions-element-msbuild"></a>ProjectExtensions 要素 (MSBuild)
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルに、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 以外の情報を含めることを可能にします。 `ProjectExtensions` 要素内のすべてのものは、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] によって無視されます。  

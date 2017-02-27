@@ -1,8 +1,7 @@
 ---
 title: "ドメイン クラスのプロパティ | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "ドメイン固有言語, ドメイン クラス"
 ms.assetid: a3993995-19e7-4761-a972-b1de89131a1b
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 21
 ---
 # ドメイン クラスのプロパティ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

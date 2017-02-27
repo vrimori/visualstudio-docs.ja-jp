@@ -1,8 +1,7 @@
 ---
 title: "方法: エディターがフォーカスを失ったときにイベントを発生させる | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "従来のエディター [Visual Studio SDK] がフォーカスを失うのイベントを発生させる"
 ms.assetid: 64d40695-6917-468a-8037-a253453ac159
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 方法: エディターがフォーカスを失ったときにイベントを発生させる
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

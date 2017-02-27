@@ -1,18 +1,17 @@
 ---
 title: "アイコンまたはデコレーターの可視性を制御します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 2697fd5d-b936-4b6b-b87b-be64825dc7a4
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 2
 ---
 # アイコンまたはデコレーターの可視性を制御します。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

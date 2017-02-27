@@ -1,37 +1,19 @@
 ---
-title: "ネットワーク使用率 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "ネットワーク使用の分析 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 45fa397d-d7a1-4c4c-9c97-ede6c21643bd
 caps.latest.revision: 7
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a4eb45e8e0548ead5d99c441abcfa7baf3ffde4f
-ms.openlocfilehash: 1e345367473f72c0b83c3bc7e4ede393c1bc56ec
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 5
 ---
 # <a name="network-usage"></a>ネットワーク使用率
 Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http API](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx) を使用して実行されたネットワーク操作についてのデータを収集します。 そのデータを分析すると、アクセスや認証の問題、不適切なキャッシュの使用、表示やダウンロードの低パフォーマンスなどの問題を解決するのに役立ちます。  

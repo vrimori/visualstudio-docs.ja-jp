@@ -1,8 +1,7 @@
 ---
 title: "Icon 要素 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "Icon 要素 (VSCT XML スキーマ)"
 ms.assetid: 73c58fe3-d53c-4f4e-b025-29567c6cbb7c
 caps.latest.revision: 5
-caps.handback.revision: 5
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Icon 要素
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

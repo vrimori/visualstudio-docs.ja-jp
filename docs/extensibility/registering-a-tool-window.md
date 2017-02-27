@@ -1,8 +1,7 @@
 ---
 title: "ツール ウィンドウを登録します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "ツール ウィンドウを登録します。"
 ms.assetid: 8c8c4a24-3da4-497b-9db2-0ddd7cfbfdd2
 caps.latest.revision: 14
-caps.handback.revision: 14
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # ツール ウィンドウを登録します。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

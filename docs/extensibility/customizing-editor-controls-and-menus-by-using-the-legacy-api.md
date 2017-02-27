@@ -1,8 +1,7 @@
 ---
 title: "レガシ API を使用して、エディター コントロールとメニューをカスタマイズします。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] 従来のコントロールとメニュー"
 ms.assetid: 1ce1f55b-6825-4654-a60a-7831af2ab44f
 caps.latest.revision: 17
-caps.handback.revision: 17
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # レガシ API を使用して、エディター コントロールとメニューをカスタマイズします。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

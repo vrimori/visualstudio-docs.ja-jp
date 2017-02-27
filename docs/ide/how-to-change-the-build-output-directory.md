@@ -1,8 +1,7 @@
 ---
 title: "方法 : ビルド出力ディレクトリを変更する | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "出力ディレクトリ, 変更"
 ms.assetid: a8333c89-afb2-4b1d-b2e2-9146da852402
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 方法 : ビルド出力ディレクトリを変更する
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

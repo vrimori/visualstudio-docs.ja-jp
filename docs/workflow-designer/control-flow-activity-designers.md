@@ -1,18 +1,17 @@
 ---
 title: "制御フロー アクティビティ デザイナー | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 7
 ---
 # 制御フロー アクティビティ デザイナー
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]には、システムによって提供されるさまざまなアクティビティが用意されており、これらを、ワークフローの構築時に使用できます。このセクションでは、ワークフロー内のフローの制御を目的とした、システムによって提供されるアクティビティを紹介します。次のトピックでは、これらのアクティビティについて説明し、その使用方法についてのガイドラインを示します。  

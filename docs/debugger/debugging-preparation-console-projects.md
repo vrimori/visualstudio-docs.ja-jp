@@ -1,8 +1,7 @@
 ---
 title: "デバッグの準備 : コンソール プロジェクト | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "デバッグ (コンソール アプリケーションの)"
 ms.assetid: 9641f1d9-2d5a-48b1-8731-6525e8f67892
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # デバッグの準備 : コンソール プロジェクト
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

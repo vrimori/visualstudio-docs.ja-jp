@@ -1,37 +1,19 @@
 ---
 title: "複数のユーザー アカウントを使って作業する | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: b73c865c-74e0-420e-89cc-43524f4aafd0
 caps.latest.revision: 13
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 592cde9dac7ea7b49934200469e85caf1fd58f82
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
 # <a name="work-with-multiple-user-accounts"></a>複数のユーザー アカウントを使って作業する
 複数の Microsoft アカウントや職場または学校のアカウントを所有している場合、そのすべてを Visual Studio に追加すると、個別にサインインしなくても、すべてのアカウントのリソースにアクセスできます。 現在、Azure、Application Insights、Team Foundation Server、Office 365 サービスが、簡素化されたサインイン エクスペリエンスをサポートしています。 今後、他のサービスが使用可能になる可能性があります。

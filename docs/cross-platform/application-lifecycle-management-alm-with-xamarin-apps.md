@@ -1,37 +1,19 @@
 ---
-title: "Xamarin アプリを使用したアプリケーション ライフサイクル管理 (ALM) | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Xamarin アプリでのアプリケーション ライフ サイクル管理 (ALM) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "tgt-pltfrm-cross-plat"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
 caps.latest.revision: 14
-author: ghogen
-ms.author: ghogen
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 37155aa4767b54a8ff057e96a405c8670a66367e
-
+author: "ghogen"
+ms.author: "ghogen"
+manager: "ghogen"
+caps.handback.revision: 14
 ---
 # <a name="application-lifecycle-management-alm-with-xamarin-apps"></a>Xamarin アプリを使用したアプリケーション ライフサイクル管理 (ALM)
 Xamarin では、Android、iOS、および Windows を対象とするクロスプラットフォームのモバイル アプリを、C#、.NET、および Visual Studio を使用して作成することができます。 Xamarin を利用すると、コードの大部分をプラットフォーム間で共有し、プラットフォーム固有にする必要のあるコードをごく一部に抑えることができます。 Xamarin 自体の詳細については、「[Visual Studio と Xamarin](../cross-platform/visual-studio-and-xamarin.md)」を参照してください。  

@@ -1,8 +1,7 @@
 ---
 title: "式エバリュエーターを登録します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "式エバリュエーターを登録します。"
 ms.assetid: 236be234-e05f-4ad8-9200-24ce51768ecf
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 式エバリュエーターを登録します。
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

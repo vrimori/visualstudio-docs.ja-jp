@@ -1,8 +1,7 @@
 ---
 title: "方法: ワークフロー プロジェクトのプロパティを構成する (レガシ) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "ワークフロー プロジェクト, プロパティの構成"
 ms.assetid: 850f5c96-8e5b-4126-bc16-fd2c26e6e656
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # 方法: ワークフロー プロジェクトのプロパティを構成する (レガシ)
 ワークフロー プロジェクトに関連したプロパティを表示または変更するには、次の手順に従います。  

@@ -1,8 +1,7 @@
 ---
 title: "ユーザー インターフェイスの更新 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "UI の更新コマンド"
 ms.assetid: 376e2f56-e7bf-4e62-89f5-3dada84a404b
 caps.latest.revision: 41
-caps.handback.revision: 41
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 41
 ---
 # ユーザー インターフェイスの更新
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

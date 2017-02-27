@@ -1,51 +1,33 @@
 ---
 title: "JavaScript メモリ | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- FSharp
-- VB
-- CSharp
-- C++
-helpviewer_keywords:
-- dominators, memory analyzer (JavaScript)
-- memory leaks (JavaScript)
-- heap memory, JavaScript
-- leaks, memory (JavaScript)
-- snapshots, memory analyzer (JavaScript)
-- JavaScript Memory Analyzer
-- analyzing memory, JavaScript
-- memory analyzer, JavaScript
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "FSharp"
+  - "VB"
+  - "CSharp"
+  - "C++"
+helpviewer_keywords: 
+  - "ドミネーター, メモリ アナライザー (JavaScript)"
+  - "メモリ リーク (JavaScript)"
+  - "ヒープ メモリ, JavaScript"
+  - "リーク, メモリ (JavaScript)"
+  - "スナップショット, メモリ アナライザー (JavaScript)"
+  - "JavaScript メモリ アナライザー"
+  - "メモリ分析, JavaScript"
+  - "メモリ アナライザー, JavaScript"
 ms.assetid: 78f8532b-7b4e-4b50-b8b7-68ca0926dd4e
 caps.latest.revision: 49
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f76e8b2846f0a9dfd37799f6e6f205bee446bbe4
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 46
 ---
 # <a name="javascript-memory"></a>[JavaScript メモリ]
 Visual Studio に用意されている JavaScript メモリ アナライザーは、メモリ使用量を把握し、JavaScript を使用して Windows 用に開発されたストア アプリのメモリ リークを検出するのに役立ちます。 サポートされるアプリには、Windows Phone ストアおよび Windows ストア向けのアプリが含まれます。  

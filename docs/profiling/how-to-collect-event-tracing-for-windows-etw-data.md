@@ -1,43 +1,25 @@
 ---
 title: "方法: ETW (Event Tracing for Windows) データを収集する | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.performance.property.events
-helpviewer_keywords:
-- event trace providers, performance tools
-- profiling tools, event trace providers
-- performance tools, enabling event trace providers
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.performance.property.events"
+helpviewer_keywords: 
+  - "イベント トレース プロバイダー、パフォーマンス ツール"
+  - "プロファイリング ツール、イベント トレース プロバイダー"
+  - "パフォーマンス ツール、有効化 (イベント トレース プロバイダーの)"
 ms.assetid: aa2261fe-d5f5-49fc-a171-d18842e1dc7d
 caps.latest.revision: 26
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e1344d12e9284b3282d077fb828f30e88a946ddc
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 26
 ---
 # <a name="how-to-collect-event-tracing-for-windows-etw-data"></a>方法: ETW (Event Tracing for Windows) データを収集する
 Event Tracing for Windows (ETW) は、プロファイラー ログ カーネルやアプリケーション定義イベントを有効にする、効率的なカーネル レベルのトレース機能です。 イベント プロバイダーから収集したデータは、[VSPerfReport](../profiling/vsperfreport.md) コマンド ライン ツールの /**Summary:ETW** オプションを使用した場合のみ表示されます。 このレポートを使用すると、アプリケーション内でパフォーマンスの問題が発生した場所を特定できます。  

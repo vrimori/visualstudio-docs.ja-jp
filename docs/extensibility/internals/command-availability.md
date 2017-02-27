@@ -1,8 +1,7 @@
 ---
 title: "利用可能なコマンド | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "メニュー項目、可視性コンテキスト"
 ms.assetid: c74e3ccf-d771-48c8-a2f9-df323b166784
 caps.latest.revision: 34
-caps.handback.revision: 34
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # 利用可能なコマンド
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

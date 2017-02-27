@@ -1,35 +1,17 @@
 ---
-title: "Xamarin によるモバイル開発の概要 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Xamarin を使用したモバイル開発について学習します | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: e970d936-1df4-4c0c-96e3-ef6191295882
 caps.latest.revision: 12
-author: ghogen
-ms.author: ghogen
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 53f6b9dbc91369266857ae73a3abe4745cbab7ce
-
+author: "ghogen"
+ms.author: "ghogen"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>Xamarin を使用したモバイル開発について学習します
 このトピックでは、Xamarin を使用したクロス プラットフォーム モバイル アプリ開発を理解するのに役立つ概要の資料を提供します。 Visual Studio および Xamarin をまだインストールしていない場合は、まず [セットアップとインストール](../cross-platform/setup-and-install.md) のプロセスを開始してからこのページに戻り、インストーラーが実行しているあいだにこの資料を確認しましょう。  

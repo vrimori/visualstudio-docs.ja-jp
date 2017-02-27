@@ -1,8 +1,7 @@
 ---
 title: "ソース コントロールのある Vspackage の概要 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "取得の開始、ソース管理パッケージ"
 ms.assetid: 049c68f4-a041-4f24-8575-4837e7f5cf3f
 caps.latest.revision: 22
-caps.handback.revision: 22
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # ソース コントロールのある Vspackage の概要
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

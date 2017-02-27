@@ -1,8 +1,7 @@
 ---
 title: "方法: テキストのマーカーを使用します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "従来のテキストのマーカーを使用してエディター [Visual Studio SDK]"
 ms.assetid: 76eed51c-eecb-4579-823e-13df2f0526b9
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 方法: テキストのマーカーを使用します。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "メニュー項目を動的に追加します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "動的な項目の追加メニュー"
 ms.assetid: d281e9c9-b289-4d64-8d0a-094bac6c333c
 caps.latest.revision: 37
-caps.handback.revision: 37
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # メニュー項目を動的に追加します。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

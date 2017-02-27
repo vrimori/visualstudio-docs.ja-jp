@@ -1,8 +1,7 @@
 ---
 title: "方法 : レジスタ グループの表示と非表示を切り替える | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "[レジスタ] ウィンドウ, 表示/非表示の切り替え (レジスタ グループ)"
 ms.assetid: 6be5dfb4-4cfe-4daf-b538-60405640857d
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # 方法 : レジスタ グループの表示と非表示を切り替える
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

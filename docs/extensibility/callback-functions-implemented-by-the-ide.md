@@ -1,8 +1,7 @@
 ---
 title: "IDE で実装されるコールバック関数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "コールバック関数、ソース管理プラグイン"
 ms.assetid: 4a8833f0-6ac0-4ea7-9400-8275aa991468
 caps.latest.revision: 24
-caps.handback.revision: 24
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # IDE で実装されるコールバック関数
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

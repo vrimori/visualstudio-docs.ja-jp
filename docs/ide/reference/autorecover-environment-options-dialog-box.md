@@ -1,8 +1,7 @@
 ---
 title: "[自動バックアップ] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "ファイル、自動的に保存"
 ms.assetid: 397e5e44-4bbe-4289-94d1-642b466c9111
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # [自動バックアップ] ([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "TerminateWorkflow アクティビティ デザイナー | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Statements.TerminateWorkflow.UI"
 ms.assetid: 08e632ed-0724-4fb4-9df1-f8d443eaf0ac
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 4
 ---
 # TerminateWorkflow アクティビティ デザイナー
 **TerminateWorkflow** アクティビティ デザイナーは、<xref:System.Activities.Statements.TerminateWorkflow> アクティビティを作成および構成するために使用します。  

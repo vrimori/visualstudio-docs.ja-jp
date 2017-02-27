@@ -1,8 +1,7 @@
 ---
 title: "構築するためのプロジェクトの構成 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "ビルドのプロジェクトの構成"
 ms.assetid: 2c83615d-fa4d-4b9f-b315-7a69b3000da0
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 構築するためのプロジェクトの構成
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

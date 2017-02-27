@@ -1,8 +1,7 @@
 ---
 title: "新しいプロジェクトの生成: 実際のところ、第 1 部します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "プロジェクト [Visual Studio] の新しいプロジェクトの生成"
 ms.assetid: 66778698-0258-467d-8b8b-c351744510eb
 caps.latest.revision: 29
-caps.handback.revision: 29
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # 新しいプロジェクトの生成: 実際のところ、第 1 部します。
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "デバッグ エンジンの実装方法を選択します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "デバッグ エンジンは、実装戦略"
 ms.assetid: 90458fdd-2d34-4f10-82dc-6d8f31b66d8b
 caps.latest.revision: 6
-caps.handback.revision: 6
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # デバッグ エンジンの実装方法を選択します。
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "共通言語ランタイムおよび式の評価 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "式の評価、および共通言語ランタイム"
 ms.assetid: b36c1eb5-1aaf-48a6-b287-ee7a273d2b1c
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 共通言語ランタイムおよび式の評価
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

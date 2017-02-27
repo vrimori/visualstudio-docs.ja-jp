@@ -1,8 +1,7 @@
 ---
 title: "チュートリアル: エディター拡張機能とショートカット キーを使用します。 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "エディター [Visual Studio SDK] が新たなキーストロークをコマンドにリンクします。"
 ms.assetid: cf6cc6c6-5a65-4f90-8f14-663decf74672
 caps.latest.revision: 32
-caps.handback.revision: 32
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # チュートリアル: エディター拡張機能とショートカット キーを使用します。
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

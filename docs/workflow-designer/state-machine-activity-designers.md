@@ -1,17 +1,16 @@
 ---
 title: "ステート マシン アクティビティ デザイナー | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 97f0bff5-7e48-4914-8f04-8015a1c6bfae
 caps.latest.revision: 5
-caps.handback.revision: 5
 ms.author: "sdanie"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # ステート マシン アクティビティ デザイナー
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]には、さまざまなアクティビティ デザイナーが用意されており、これらを、ワークフローの構築時に使用できます。このセクションでは、ステート マシン ワークフローの作成と管理を目的とした、システムによって提供されるアクティビティ デザイナーを紹介します。次のトピックでは、これらのデザイナーについて説明し、その使用方法についてのガイドラインを示します。  

@@ -1,8 +1,7 @@
 ---
 title: "ブレークポイントの作成 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "[デバッグの SDK] のデバッグ、ブレークポイントの作成"
 ms.assetid: 6f9f87bb-192e-45e0-9a7a-ffe729e87f7d
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # ブレークポイントの作成
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "TASK_STATE_CANCELED フィールド | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "TASK_STATE_CANCELED フィールドに、タスク クラス [.NET Framework のデバッグ エンジン]"
 ms.assetid: f4f5a96a-8230-493d-9696-8d2716bda261
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # TASK_STATE_CANCELED フィールド
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

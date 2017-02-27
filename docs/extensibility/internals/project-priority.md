@@ -1,8 +1,7 @@
 ---
 title: "プロジェクトの優先順位 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "プロジェクト [Visual Studio SDK] 項目を開く"
 ms.assetid: 9f707592-2fb6-4f75-9269-f6d4700a998e
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # プロジェクトの優先順位
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

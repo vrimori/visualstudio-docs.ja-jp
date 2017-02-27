@@ -1,8 +1,7 @@
 ---
 title: "ショートカット キー (ヘルプ ビューアー) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "ショートカット キー [ヘルプ ビューアー 2.0]"
 ms.assetid: ec14c85d-7efb-441c-a46b-bee34a227e39
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # ショートカット キー (ヘルプ ビューアー)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

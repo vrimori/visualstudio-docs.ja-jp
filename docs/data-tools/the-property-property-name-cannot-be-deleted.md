@@ -1,18 +1,17 @@
 ---
 title: "The property &lt;property name&gt; cannot be deleted | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 55873f74-7834-4ec1-8815-eeeb65618d87
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # The property &lt;property name&gt; cannot be deleted
 プロパティ \<property name\> は、\<class name\> と \<class name\> との間の継承に対する識別子のプロパティとして設定されているため、削除できません。  

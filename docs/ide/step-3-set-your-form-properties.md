@@ -1,8 +1,7 @@
 ---
 title: "手順 3: フォームのプロパティの設定 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 634ef037-1525-48c8-ac7f-abf04be69376
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 手順 3: フォームのプロパティの設定
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

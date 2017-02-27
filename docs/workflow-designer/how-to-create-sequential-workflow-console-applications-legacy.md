@@ -1,8 +1,7 @@
 ---
 title: "方法: シーケンシャル ワークフロー コンソール アプリケーションを作成する (レガシ) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "ワークフロー, コンソール アプリケーション"
 ms.assetid: 9f7be7fa-551f-42c6-a9bb-f5ae8ab83625
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # 方法: シーケンシャル ワークフロー コンソール アプリケーションを作成する (レガシ)
 [!INCLUDE[vs2010](../modeling/includes/vs2010_md.md)] が備えている従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]を使用してシーケンシャル ワークフロー コンソール アプリケーション プロジェクトを作成するには、次の手順を実行します。[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]を使用します。  

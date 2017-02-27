@@ -1,8 +1,7 @@
 ---
 title: "従来のワークフロー プロジェクトの作成 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "ワークフロー, プロジェクトの作成"
 ms.assetid: 572d5c32-59ef-49d8-a24c-e180fe9f7a11
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # 従来のワークフロー プロジェクトの作成
 ここでは、vs2010 が備えている従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]を使用してワークフロー プロジェクトを作成する方法について説明します。従来の[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]は、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とします。次の一覧表に含まれるワークフロー プロジェクト テンプレートの使用法についても示します。  

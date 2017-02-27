@@ -1,18 +1,17 @@
 ---
 title: "ワークフロー デバッガーを呼び出す方法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 34c592af-f4f6-4d02-99f6-63a94698e48b
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 9
 ---
 # ワークフロー デバッガーを呼び出す方法
 ほとんどの場合、他の Visual Studio プログラミング言語で書かれたプログラムをデバッグするときと同じようにして、ワークフローをデバッグすることができます。ワークフロー デバッガーは、次の方法で開始できます。  

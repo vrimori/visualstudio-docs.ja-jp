@@ -1,8 +1,7 @@
 ---
 title: "[国際対応の設定] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "言語、既定値の指定"
 ms.assetid: e3a8815c-6995-4099-8e88-34f91fad55b2
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # [国際対応の設定] ([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

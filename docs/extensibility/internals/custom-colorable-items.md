@@ -1,8 +1,7 @@
 ---
 title: "カスタムの装飾が可能な項目 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "言語サービス、カスタムの装飾が可能な項目"
 ms.assetid: b4d0ddee-c04b-48dc-ba82-f6068570cef0
 caps.latest.revision: 24
-caps.handback.revision: 24
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # カスタムの装飾が可能な項目
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

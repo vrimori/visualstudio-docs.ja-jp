@@ -1,40 +1,22 @@
 ---
-title: "インストルメンテーション メソッドのデータ ビュー | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- profiling tools,instrumentation method views
-- instrumentation profiling method
+title: "プロファイラー インストルメンテーション メソッドのデータ ビュー | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "インストルメンテーション プロファイリング メソッド"
+  - "プロファイル ツール, インストルメンテーション メソッドのビュー"
 ms.assetid: 481f7579-f784-49ef-bb6c-2944e9d6ab42
 caps.latest.revision: 10
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 024d1b40a0eb8fa3a96c38cc07ca0ede268fdd43
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
 # <a name="instrumentation-method-data-views"></a>インストルメンテーション メソッドのデータ ビュー
 ここでは、インストルメンテーション メソッドを使用して生成されたプロファイラー データ ファイルのビューとレポートに関するリファレンス情報を示します。  

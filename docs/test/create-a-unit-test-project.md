@@ -1,36 +1,18 @@
 ---
 title: "単体テスト プロジェクトを作成する | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-devops-test"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: a608bfba-1a43-4a60-b73a-1fe53ef58098
 caps.latest.revision: 8
-ms.author: mlearned
-manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7cd8ed6aea56b5f59abbbf96709af3d42d2857c5
-
+ms.author: "mlearned"
+manager: "douge"
+caps.handback.revision: 8
 ---
 # <a name="create-a-unit-test-project"></a>単体テスト プロジェクトを作成する
 単体テストでは、多くの場合、テスト対象のコードの構造を再現します。 たとえば、製品のコード プロジェクトごとに単体テスト プロジェクトを作成します。 テスト プロジェクトは本稼働コードと同じソリューションに置くことも、別個のソリューションに置くこともできます。 1 つのソリューションに複数の単体テスト プロジェクトを置くこともできます。  

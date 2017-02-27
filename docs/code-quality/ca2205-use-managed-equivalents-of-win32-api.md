@@ -1,8 +1,7 @@
 ---
 title: "CA2205: Win32 API に相当するマネージ API を使用します | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "UseManagedEquivalentsOfWin32Api"
 ms.assetid: 1c65ab59-3e50-4488-a727-3969c7f6cbe4
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 13
 ---
 # CA2205: Win32 API に相当するマネージ API を使用します
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

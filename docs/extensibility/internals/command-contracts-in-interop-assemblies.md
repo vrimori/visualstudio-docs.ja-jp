@@ -1,8 +1,7 @@
 ---
 title: "相互運用機能アセンブリでのコマンドのコントラクト | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "相互運用機能アセンブリは、コマンドをコントラクトします。"
 ms.assetid: 57245708-f539-42dc-8963-2754a48f0189
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 相互運用機能アセンブリでのコマンドのコントラクト
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

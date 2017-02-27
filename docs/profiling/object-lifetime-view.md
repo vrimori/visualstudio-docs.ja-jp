@@ -1,8 +1,7 @@
 ---
 title: "オブジェクトの有効期間ビュー | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "プロファイル ツール, [有効期間] ビュー"
 ms.assetid: d0501fdd-4b3a-4e74-b6ac-51d950a2e15b
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # オブジェクトの有効期間ビュー
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
