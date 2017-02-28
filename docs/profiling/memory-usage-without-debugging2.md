@@ -1,24 +1,43 @@
 ---
-title: "ストア アプリのメモリ使用量の分析 (VB、C#、C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "デバッグなしのメモリ使用量 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: 24238fc0-40b8-4079-8579-698211db9a26
 caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: bdfe341252a7c4340a8c0a624d4394124c3efada
+ms.openlocfilehash: d0d021c01cc97a97aa75eda58a17ccd1c2089520
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="memory-usage-without-debugging"></a>デバッグなしのメモリ使用量
 デバッグなしの**メモリ使用量**ツールを使用して、次のような操作を行えます  
@@ -204,8 +223,3 @@ caps.handback.revision: 9
  [プロファイル ツール](../profiling/profiling-tools.md)
  [C++、C#、および Visual Basic を使った Windows ストア アプリのパフォーマンスのベスト プラクティス](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   
  [Visual Studio で新しいメモリ使用量ツールでメモリの問題を診断する](http://go.microsoft.com/fwlink/p/?LinkId=394706)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
