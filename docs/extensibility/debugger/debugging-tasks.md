@@ -1,0 +1,76 @@
+---
+title: "タスクのデバッグ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- debugging [Debugging SDK], tasks
+ms.assetid: 5d60e9e8-305e-4a48-829f-b9440fc8af7b
+caps.latest.revision: 16
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 08f6d64a86982ad7425a2e89815765ce63dbf28c
+ms.lasthandoff: 02/22/2017
+
+---
+# <a name="debugging-tasks"></a>タスクのデバッグ
+プログラムをデバッグする場合に起動する必要あるしデバッグ エンジン (DE) は、それに関連付ける必要がありますが、そのデは、以前に起動されたプログラムに関連付ける必要があります。 結び付けられると、デは特定のスタートアップ イベントを生成する必要があります。 これに対して、デバッグ パッケージは、IDE で設定されたブレークポイントをバインドしようとします。 プログラムは、バインドされたブレークポイントに達すると停止し、ユーザー入力を待機します。  
+  
+## <a name="in-this-section"></a>このセクションの内容  
+ [セキュリティ上の問題](../../extensibility/debugger/security-issues.md)  
+ プログラムをデバッグするために必要なセキュリティ手順について説明します。  
+  
+ [プログラムの起動](../../extensibility/debugger/launching-a-program.md)  
+ DE では、呼び出すプログラムを起動するオペレーティング システムを指定する方法の手順を説明します。  
+  
+ [プログラムに直接接続](../../extensibility/debugger/attaching-directly-to-a-program.md)  
+ 既に実行されているプロセスでプログラムをデバッグするために使用するプロセスについて説明します。  
+  
+ [起動した後、スタートアップ イベントを送信します。](../../extensibility/debugger/sending-startup-events-after-a-launch.md)  
+ プログラムのメイン エントリ ポイントにし、デバッグの準備が整うまで、DE が、プログラムに結び付けられると発生するイベントを一覧表示します。  
+  
+ [実行の制御](../../extensibility/debugger/control-of-execution.md)  
+ デ通常送信する方法のエントリ ポイント イベント、読み込み完了のイベントまたは状況に応じて、停止イベントについて説明します。  
+  
+ [ブレークポイントのバインディング](../../extensibility/debugger/binding-breakpoints.md)  
+ 方法、ブレークポイントを設定すると、IDE、要求の作成し、プロンプト、ブレークポイントを作成する、デバッグ セッションについて説明します。  
+  
+ [式を評価します。](../../extensibility/debugger/evaluating-expressions.md)  
+ 式の作成方法と、式が評価されるときの動作について説明します。  
+  
+ [視覚化して、データを表示します。](../../extensibility/debugger/visualizing-and-viewing-data.md)  
+ 式エバリュエーター (EE) で型ビジュアライザーとカスタム ビューアーをサポートする方法について説明します。  
+  
+## <a name="related-sections"></a>関連項目  
+ [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)  
+ デバッグ アーキテクチャ、主要な概念をについて説明します。  
+  
+ [デバッガーのコンポーネント](../../extensibility/debugger/debugger-components.md)  
+ DE、EE、およびシンボル ハンドラー (SH) を含む Visual Studio のデバッグ コンポーネントの概要を示します。  
+  
+ [デバッガー コンテキスト](../../extensibility/debugger/debugger-contexts.md)  
+ コード、ドキュメント、および式の評価のコンテキスト内で、DE がどのように同時に動作について説明します。 3 つのコンテキスト、場所、位置、またはそれに関連する評価ごとに説明します。  
+  
+## <a name="see-also"></a>関連項目  
+ [はじめに](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)
