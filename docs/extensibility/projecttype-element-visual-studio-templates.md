@@ -1,0 +1,118 @@
+---
+title: "ProjectType 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/developer/vstemplate/2005#ProjectType
+helpviewer_keywords:
+- ProjectType element [Visual Studio project templates]
+ms.assetid: ccf9d83f-c7f3-49c7-a31f-e1f22bec004c
+caps.latest.revision: 19
+ms.author: gregvanl
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: d23be61b83cd3c62b6ab33a271968f500ad8ff81
+ms.lasthandoff: 02/22/2017
+
+---
+# <a name="projecttype-element-visual-studio-templates"></a>ProjectType 要素 (Visual Studio テンプレート)
+指定したグループ内の下に表示されるように、プロジェクト テンプレートをカテゴリに分類、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
+  
+> [!WARNING]
+>  プロジェクト テンプレートは、Visual Studio 2012 以降の C++ でサポートされています。 これらは、Visual Studio 2010 以前のバージョンの C++ ではサポートされていません。  
+  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<ProjectType >  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+<ProjectType> CSharp/VisualBasic/VC/Web </ProjectType>  
+```  
+  
+## <a name="attributes-and-elements"></a>属性および要素  
+ 以降のセクションでは、属性、子要素、および親要素について説明します。  
+  
+### <a name="attributes"></a>属性  
+ なし。  
+  
+### <a name="child-elements"></a>子要素  
+ なし。  
+  
+### <a name="parent-elements"></a>親要素  
+  
+|要素|説明|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|  
+  
+## <a name="text-value"></a>テキスト値  
+ テキスト値が必要です。  
+  
+ この値で、テンプレートから作成されるプロジェクトの種類を指定します。値には、次のいずれかの値を含める必要があります。  
+  
+-   `CSharp` : テンプレートが [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] のプロジェクトまたはアイテムを作成するよう指定します。  
+  
+-   `VisualBasic` : テンプレートが [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のプロジェクトまたはアイテムを作成するよう指定します。  
+  
+-   `Web` : テンプレートが Web プロジェクトまたは Web アイテムを作成するよう指定します。 場合、`ProjectType`要素は、この値を含むで、プロジェクトまたはアイテムの言語が定義されている、 [ProjectSubType 要素 (Visual Studio テンプレート)](../extensibility/projectsubtype-element-visual-studio-templates.md)します。  
+  
+## <a name="remarks"></a>コメント  
+ `ProjectType` は `TemplateData` に必須の子要素です。  
+  
+ 値、`ProjectType`要素内のテンプレートの場所を指定する、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。 テンプレートなど、`ProjectType`の値`CSharp`下に表示されます、 **Visual c#**内のノード、**新しいプロジェクト** ダイアログ ボックス。  
+  
+ 使用してテンプレートのサブタイプを指定することができます、 [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md)要素。  
+  
+## <a name="example"></a>例  
+ [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。  
+  
+```  
+<VSTemplate Type="Project" Version="3.0.0"  
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
+    <TemplateData>  
+        <Name>My template</Name>  
+        <Description>A basic starter kit</Description>  
+        <Icon>TemplateIcon.ico</Icon>  
+        <ProjectType>CSharp</ProjectType>  
+    </TemplateData>  
+    <TemplateContent>  
+        <Project File="MyStarterKit.csproj">  
+            <ProjectItem>Form1.cs<ProjectItem>  
+            <ProjectItem>Form1.Designer.cs</ProjectItem>  
+            <ProjectItem>Program.cs</ProjectItem>  
+            <ProjectItem>Properties\AssemblyInfo.cs</ProjectItem>  
+            <ProjectItem>Properties\Resources.resx</ProjectItem>  
+            <ProjectItem>Properties\Resources.Designer.cs</ProjectItem>  
+            <ProjectItem>Properties\Settings.settings</ProjectItem>  
+            <ProjectItem>Properties\Settings.Designer.cs</ProjectItem>  
+        </Project>  
+    </TemplateContent>  
+</VSTemplate>  
+```  
+  
+## <a name="see-also"></a>関連項目  
+ [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
+ [プロジェクトおよび項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
+ [ProjectSubType 要素 (Visual Studio テンプレート)](../extensibility/projectsubtype-element-visual-studio-templates.md)
