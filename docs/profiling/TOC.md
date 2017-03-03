@@ -3,6 +3,7 @@
 ## [パフォーマンス プロファイリングのビギナーズ ガイド](beginners-guide-to-performance-profiling.md)
 ## [デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](running-profiling-tools-with-or-without-the-debugger.md)
 ## [メモリ使用量](memory-usage.md)
+### [カスタム ネイティブ ETW ヒープ イベント](custom-native-etw-heap-events.md)
 ### [デバッグなしのメモリ使用量](memory-usage-without-debugging2.md)
 ## [CPU 使用率](cpu-usage.md)
 ### [Windows ユニバーサル アプリでの CPU 使用率の分析](analyze-cpu-usage-in-a-windows-universal-app.md)
@@ -365,8 +366,3 @@
 ##### [CvWriteMessage 関数](cvwritemessage-function.md)
 ### [同時実行ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd)](concurrency-visualizer-command-line-utility-cvcollectioncmd.md)
 ## [ストア アプリでのエネルギー使用の分析](analyze-energy-use-in-store-apps.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
