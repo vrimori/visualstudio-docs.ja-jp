@@ -9,6 +9,7 @@
 ### [インラインの一時変数](refactoring/inline-temporary-variable.md)
 ### [型を一致するファイルに移動します。](refactoring/move-type-to-matching-file.md)
 ### [名前の変更](refactoring/rename.md)
+### [同期の種類とファイル名](refactoring/sync-type-and-file.md)
 ## [コード生成](code-generation-csharp.md)
 ### [クラス/型の生成](code-generation/generate-class-type.md)
 ### [メソッドの生成](code-generation/generate-method.md)
