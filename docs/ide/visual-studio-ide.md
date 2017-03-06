@@ -1,17 +1,36 @@
 ---
-title: "Visual Studio IDE | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/17/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Visual Studio IDE | Microsoft Docs
+ms.custom: 
+ms.date: 01/17/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 772b6cf4-cee5-42d0-bc18-b4eb07e22ff0
 caps.latest.revision: 35
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 32
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
+ms.openlocfilehash: 10db0535b950f1a1525bab89a6df25e4e3f40012
+ms.lasthandoff: 03/03/2017
+
 ---
 # <a name="visual-studio-ide"></a>Visual Studio IDE
 Microsoft Visual Studio 2017 RC は、ソフトウェアを作成するための一連のツールです。このツールを使用して、計画の段階、UI 設計、コーディング、テスト、デバッグ、コードの品質やパフォーマンスの分析、カスタマーへの配置、使用率に関するテレメトリの収集などを実行できます。 これらのツールは、できるだけシームレスに連携するよう設計されており、すべて Visual Studio 統合開発環境 (IDE) を通して公開されています。  
@@ -202,11 +221,6 @@ Visual Studio 2017 RC の新機能については、「[Visual Studio 2017 RC �
  [Visual Studio 2017 RC のインストール](../install/install-visual-studio.md)   
  [コードの編集](https://www.visualstudio.com/features/ide-vs)   
  [Visual Studio 2017 RC の新機能](../ide/whats-new-in-visual-studio.md)   
- [Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)   
+ [Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/port-migrate-and-upgrade-visual-studio-projects.md)   
  [ご意見](../ide/talk-to-us.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
