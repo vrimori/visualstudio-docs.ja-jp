@@ -28,9 +28,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: c5b99a1f1661e412ae097660298942ebb89b15b1
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
+ms.openlocfilehash: 806f5004a4ab3d33d4be86cd4784de989c5fd282
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="upgrade-visual-studio-2010-unit-test-projects"></a>Visual Studio 2010 単体テスト プロジェクトをアップグレードする
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/22/2017
 |テスト エクスプローラーからの TRX ログによる実行結果の共有。||TRX ログは、依然としてコマンド ラインおよびチーム ビルドから取得できます。|  
   
 ## <a name="see-also"></a>関連項目  
- [Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)   
+ [Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/port-migrate-and-upgrade-visual-studio-projects.md)   
  [コードの単体テスト](../test/unit-test-your-code.md)   
  [旧バージョンの Visual Studio からのテストのアップグレード](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)   
  [Visual Studio 2010 からのコード化された UI テストのアップグレード](../test/upgrading-coded-ui-tests-from-visual-studio-2010.md)
