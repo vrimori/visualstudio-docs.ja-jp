@@ -28,9 +28,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 09f14e5b28a506d4f2112f82ee4fd6b0855a8f93
-ms.openlocfilehash: 67e143e1b95a0e4d881d7d6bccae0d7445897aa2
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 4f93b8c1db59dd8d8a407c82002240641be43018
+ms.openlocfilehash: 1f9248442357c4447703ac6d6dac8a27934904e8
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>方法: 機能拡張プロジェクトを Visual Studio 2017 に移行
@@ -76,6 +76,8 @@ NuGet を更新するには、Microsoft.VSSDK.BuildTools を参照します。
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>VSIX 拡張機能マニフェストを変更をします。
 
 Visual Studio のユーザーのインストールの拡張機能を実行するために必要なすべてのアセンブリであることを確認するには、拡張機能マニフェスト ファイルのすべての前提条件となるコンポーネントまたはパッケージを指定します。 ユーザーが、拡張機能をインストールしようとすると、すべての前提条件がインストールされていないかどうか、VSIXInstaller が確認されます。 一部が見つからない場合は、ユーザーは拡張機能のインストール プロセスの一環として必要なコンポーネントをインストールするように求められます。
+
+>**注:**には、少なくともすべての拡張機能は、前提条件として Visual Studio の中核となるエディター コンポーネントを指定する必要があります。
 
 * (通常、source.extension.vsixmanifest と呼ばれます)、拡張機能マニフェスト ファイルを編集します。
 * ように`InstallationTarget`15.0 が含まれています。
@@ -123,7 +125,7 @@ Visual Studio のユーザーのインストールの拡張機能を実行する
 
 ## <a name="if-migrating-from-preview-4-or-preview-5"></a>プレビュー 4 または 5 のプレビューから移行する場合
 
-* 置換`SetupDependencies`と`Prerequisites`の要素を移動して、`Installer`要素。 `Prerequisites`直接内側はこれで、`PackageManifest`要素。
+* 置換`SetupDependencies`と`Prerequisites`の要素を移動して、`Installer`要素。 `Prerequisites`直接の内側は今すぐ、`PackageManifest`要素。
 * [省略可能]削除、`GenerateVsixV3`要素。 (これが 5 のプレビューでのみ必要です。)`GenerateVsixV3`プレビュー 5 を超えるバージョンでの要素は無視されます。
 
 ## <a name="update-debug-settings-for-project"></a>プロジェクトのデバッグ設定を更新します。
@@ -215,3 +217,4 @@ Excel シートに&4; つの列がある:**コンポーネント名**、 **Compo
 
 * デバッガー拡張機能を用意し、プロジェクトが VSDebugEng.dll および VSDebug.dll への参照を確認すると場合、は、[フィルター] ボタンをクリックして、**バイナリ/ファイル名**ヘッダー。  "VSDebugEng.dll"を検索し、[ok] を選択します。  次に [フィルター] ボタンをクリックして、**バイナリ/ファイル名**ヘッダーをもう一度して"VSDebug.dll"を検索します。  「追加現在の選択項目をフィルター処理する」チェック ボックスを選択し、[ok] を選択します。  ここで探す、**コンポーネント名**が最も多くのコンポーネントを検索する拡張機能の種類に関連します。 この例では、ジャスト イン タイムを選択したデバッガーし、vsixmanifest に追加します。
 * デバッガーの要素を持つプロジェクトを取り扱うことがわかっている場合は、どのようなコンポーネントには、デバッガーがその名前が含まれているフィルターの検索ボックスに「デバッガー」を検索できます。
+
