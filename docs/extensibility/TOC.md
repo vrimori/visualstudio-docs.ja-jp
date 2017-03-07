@@ -10,8 +10,6 @@
 ## [ライトウェイト ソリューション ロード](lightweight-solution-load-extension-impact.md)
 ## [よく寄せられる質問](faq-2017.md)
 # [方法: 機能拡張プロジェクトを Visual Studio 2017 に移行する](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
-# [Visual Studio 2015 SDK の新機能](what-s-new-in-the-visual-studio-2015-sdk.md)
-# [方法: 機能拡張プロジェクトを Visual Studio 2015 に移行する](how-to-migrate-extensibility-projects-to-visual-studio-2015.md)
 # [メニューとコマンドの拡張](extending-menus-and-commands.md)
 ## [メニュー コマンドを使用した拡張機能の作成](creating-an-extension-with-a-menu-command.md)
 ## [Visual Studio のメニュー バーへのメニューの追加](adding-a-menu-to-the-visual-studio-menu-bar.md)
