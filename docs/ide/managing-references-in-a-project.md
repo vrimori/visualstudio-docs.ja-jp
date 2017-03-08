@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4b82b8583ec54af9eee383255d20b40674e7c2c1
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
+ms.openlocfilehash: 99a485f2b7ebda9169797db06212ae56dc4d9eb1
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="managing-references-in-a-project"></a>プロジェクト内の参照の管理
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/22/2017
 ### <a name="project-references"></a>プロジェクト参照  
  Windows の 10 を対象とするユニバーサル Windows プラットフォーム (UWP: Universal Windows Platform) プロジェクトでは、ソリューション内の他の UWP プロジェクトへの参照、または [!INCLUDE[win81](../debugger/includes/win81_md.md)] を対象とする Windows ストア プロジェクトまたはバイナリ (ただし、それらのプロジェクトが、Windows 10 で使用されなくなった API を使用していない場合) への参照を作成できます。 詳細については、「 [Windows Runtime 8 から UWP への移行](https://msdn.microsoft.com/en-us/library/windows/apps/dn954974.aspx)」を参照してください。  
 
- [!INCLUDE[win81](../debugger/includes/win81_md.md)] プロジェクトの Windows 10 への再ターゲットを選択した場合は、「[Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)」を参照してください。  
+ [!INCLUDE[win81](../debugger/includes/win81_md.md)] プロジェクトの Windows 10 への再ターゲットを選択した場合は、「[Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/port-migrate-and-upgrade-visual-studio-projects.md)」を参照してください。  
 
 ### <a name="extension-sdk-references"></a>拡張 SDK の参照  
  ユニバーサル Windows プラットフォーム (UWP) を対象とする Visual Basic、C#、C++、JavaScript の各 Windows ストア プロジェクトは、[!INCLUDE[win81](../debugger/includes/win81_md.md)] を対象とする拡張 SDK を参照できます (ただし、Windows 10 で使用されなくなった API をそれらの拡張 SDK が使用していない場合のみ)。 UWP を対象としている Windows ストア プロジェクトから拡張 SDK を参照できるかどうかを確認するには、その拡張 SDK の販売元のサイトを調べてください。  
