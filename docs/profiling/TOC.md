@@ -1,4 +1,4 @@
-# [プロファイリング ツール](index.md)
+# [プロファイリング ツール](profiling-tools.md)
 ## [プロファイリング機能ツアー](profiling-feature-tour.md)
 ## [パフォーマンス プロファイリングのビギナーズ ガイド](beginners-guide-to-performance-profiling.md)
 ## [プロファイリング ツールの新機能](what-s-new-in-profiling-tools.md)
