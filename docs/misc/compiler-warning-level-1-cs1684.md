@@ -1,0 +1,56 @@
+---
+title: "コンパイラの警告 (レベル 1) CS1684 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS1684"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS1684"
+ms.assetid: 620419bf-b6d5-4cda-a549-fcacf2f08920
+caps.latest.revision: 13
+caps.handback.revision: 13
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# コンパイラの警告 (レベル 1) CS1684
+型 'Type Name' への参照では 'Namespace' 内で定義されていることになっていますが、見つかりませんでした  
+  
+ このエラーは、ある名前空間の内部の参照が別の名前空間の内部にあるはずの型を参照するとき、その型が存在しない場合に発生します。 たとえば、mydll.dll では型 `A` が yourdll.dll 内に存在することになっているのに、yourdll.dll 内にはそのような型が存在しない場合に発生します。 このエラーの原因としては、使用している yourdll.dll のバージョンが古すぎて、`A` がまだ定義されていないことが考えられます。  
+  
+ 次の例では CS1684 が生成されます。  
+  
+## 使用例  
+  
+```  
+// CS1684_a.cs // compile with: /target:library /keyfile:CS1684.key public class A { public void Test() {} } public class C2 {}  
+```  
+  
+## 使用例  
+  
+```  
+// CS1684_b.cs // compile with: /target:library /r:cs1684_a.dll // post-build command: del /f CS1684_a.dll using System; public class Ref { public static A GetA() { return new A(); } public static C2 GetC() { return new C2(); } }  
+```  
+  
+## 使用例  
+ ここで最初のアセンブリをリビルドします。クラス C2 の定義は除外され、再コンパイルでは定義されません。  
+  
+```  
+// CS1684_c.cs // compile with: /target:library /keyfile:CS1684.key /out:CS1684_a.dll public class A { public void Test() {} }  
+```  
+  
+## 使用例  
+ このモジュールは、識別子 `Ref` を使用して 2 番目のモジュールを参照します。 しかし、2 番目のモジュールにはクラス `C2` への参照が含まれています。これは、前の手順のコンパイルの結果存在しなくなっているため、CS1684 エラー メッセージがこのモジュールのコンパイルから返されます。  
+  
+```  
+// CS1684_d.cs // compile with: /reference:cs1684_a.dll /reference:cs1684_b.dll // CS1684 expected class Tester { public static void Main() { Ref.GetA().Test(); } }  
+```
