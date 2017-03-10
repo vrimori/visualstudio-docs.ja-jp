@@ -1,5 +1,5 @@
 # [MSBuild](msbuild.md)
-## [MSBuild 12.0 の新機能](what-s-new-in-msbuild-12-0.md)
+## [MSBuild 15.0 の新機能](what-s-new-in-msbuild-15-0.md)
 ## [MSBuild の概念](msbuild-concepts.md)
 ### [MSBuild プロパティ](msbuild-properties.md)
 #### [方法: ビルドで環境変数を使用する](how-to-use-environment-variables-in-a-build.md)
@@ -194,8 +194,3 @@
 ### [特殊文字のエスケープ](special-characters-to-escape.md)
 ## [MSBuild 用語集](msbuild-glossary.md)
 ## [追加の MSBuild リソース](additional-msbuild-resources.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

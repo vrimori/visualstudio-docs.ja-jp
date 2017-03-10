@@ -43,7 +43,7 @@
 ### [[オプション]、[テキスト エディター]、[基本] (Visual Basic)](options-text-editor-basic-visual-basic.md)
 ### [[オプション]、[テキスト エディター]、[C/C++]、[書式設定]](options-text-editor-c-cpp-formatting.md)
 ### [[オプション]、[テキスト エディター]、[C/C++]、[詳細]](options-text-editor-c-cpp-advanced.md)
-### [[オプション]、[テキスト エディター]、[C/C++]、[実験用]](options-text-editor-c-cpp-experimental.md)
+### [[オプション]、[テキスト エディター]、[C/C++]、[試験的]](options-text-editor-c-cpp-experimental.md)
 ### [[オプション]、[テキスト エディター]、[C#]、[書式設定]](options-text-editor-csharp-formatting.md)
 ### [[オプション]、[テキスト エディター]、[C#]、[詳細]](options-text-editor-csharp-advanced.md)
 ### [[オプション]、[テキスト エディター]、[C#]、[IntelliSense]](options-text-editor-csharp-intellisense.md)
@@ -88,6 +88,7 @@
 ### [ツールボックス、[コンポーネント] タブ](toolbox-components-tab.md)
 ### [ツールボックス、[データ] タブ](toolbox-data-tab.md)
 ### [ツールボックス、[HTML] タブ](toolbox-html-tab.md)
+## [XAML デザイナーのオプション ページ](xaml-designer.md)
 # [Devenv コマンド ライン スイッチ](devenv-command-line-switches.md)
 ## [-? (devenv.exe)](q-devenv-exe.md)
 ## [-Build (devenv.exe)](build-devenv-exe.md)
@@ -162,8 +163,3 @@
 ## [Microsoft からのユーザー補助製品およびサービス](accessibility-products-and-services-from-microsoft.md)
 ## [ユーザー補助アプリケーションのデザイン リソース](resources-for-designing-accessible-applications.md)
 ## [プロキシ認証が要求される](proxy-authorization-required.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

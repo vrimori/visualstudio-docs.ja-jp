@@ -199,7 +199,7 @@
 ### [デバッグの準備 : Visual C++ のプロジェクト](debugging-preparation-visual-cpp-project-types.md)
 ### [方法 : 最適化されたコードをデバッグする](how-to-debug-optimized-code.md)
 ### [DebugBreak と __debugbreak](debugbreak-and-debugbreak.md)
-### [C-C++ アサーション](c-cpp-assertions.md)
+### [C/C++ アサーション](c-cpp-assertions.md)
 ### [方法 :インライン アセンブラー コードをデバッグする](how-to-debug-inline-assembly-code.md)
 ### [MFC のデバッグ技術](mfc-debugging-techniques.md)
 ### [CRT のデバッグ技術](crt-debugging-techniques.md)

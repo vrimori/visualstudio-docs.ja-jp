@@ -31,6 +31,8 @@
 #### [ビルド確認テストのコード カバレッジの分析](analyzing-code-coverage-in-build-verification-tests.md)
 #### [トラブルシューティング コード カバレッジ](troubleshooting-code-coverage.md)
 ### [Sharepoint 2010 アプリケーションの単体テストを分離するためのエミュレーターの使用](using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications.md)
+## [Visual Studio 2017 Enterprise Edition でライブ単体テストを使用する](live-unit-testing.md)
+### [ライブ単体テストに関する FAQ](live-unit-testing-faq.md)
 ## [UI オートメーションを使用してコードをテストする](use-ui-automation-to-test-your-code.md)
 ### [チュートリアル: コード化された UI テストの作成、編集、および保守](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 ### [コード化された UI テストを使用した Windows ストア 8.1 アプリのテスト](test-windows-store-8-1-apps-with-coded-ui-tests.md)
@@ -58,7 +60,7 @@
 ##### [Excel 拡張子のサンプル: 要素クラス](sample-excel-extension-element-classes.md)
 ##### [Excel 拡張子のサンプル: ActionFilter クラス](sample-excel-extension-actionfilter-class.md)
 ### [Visual Studio 2010 からのコード化された UI テストのアップグレード](upgrading-coded-ui-tests-from-visual-studio-2010.md)
-## [アプリケーション品質の分析](../code-quality)
+## [アプリケーション品質の分析](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)
 ## [品質管理ツールのトラブルシューティング](troubleshooting-quality-tools.md)
 ### [コード分析に関する問題のトラブルシューティング](troubleshooting-code-analysis-issues.md)
 ### [コード メトリックに関する問題のトラブルシューティング](troubleshooting-code-metrics-issues.md)
@@ -70,8 +72,3 @@
 ### [Visual Studio 静的コード分析によるストア アプリのコード品質の分析](analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)
 #### [Visual Studio 静的コード分析によるストア アプリの Visual Basic および C# のコード品質の分析](analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md)
 #### [Visual Studio 静的コード分析によるストア アプリの C++ コード品質の分析](analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

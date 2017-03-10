@@ -4,7 +4,4 @@
 # [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
 ## [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)
 ## [Visual Studio のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
-
-<!--HONumber=Feb17_HO4-->
-
-
+## [Visual Studio のワークロードとコンポーネント ID](workload-and-component-ids.md)

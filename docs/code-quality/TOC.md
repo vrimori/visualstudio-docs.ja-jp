@@ -273,7 +273,7 @@
 ### [C++ Core ガイドライン チェッカーの使用](using-the-cpp-core-guidelines-checkers.md)
 ### [C/C++ のコード分析の概要](code-analysis-for-c-cpp-overview.md)
 ### [方法: C/C++ プロジェクトのコード分析プロパティを設定する](how-to-set-code-analysis-properties-for-c-cpp-projects.md)
-### [チュートリアル : C/C++ コード分析による障害の検出](walkthrough-analyzing-c-cpp-code-for-defects.md)
+### [チュートリアル: C/C++ コード分析による障害の検出](walkthrough-analyzing-c-cpp-code-for-defects.md)
 #### [デモのサンプル](demo-sample.md)
 ### [SAL 注釈を使って C/C++ のコード障害を減らす方法](using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 #### [SAL について](understanding-sal.md)
@@ -609,8 +609,3 @@
 # [品質管理ツールのトラブルシューティング](troubleshooting-quality-tools.md)
 ## [コード分析に関する問題のトラブルシューティング](troubleshooting-code-analysis-issues.md)
 ## [コード メトリックに関する問題のトラブルシューティング](troubleshooting-code-metrics-issues.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

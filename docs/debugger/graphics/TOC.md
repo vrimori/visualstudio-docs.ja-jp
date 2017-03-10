@@ -12,12 +12,14 @@
 ## [ミップマップ生成バリアント](mip-map-generation-variant.md)
 ## [ハーフ/クォーター テクスチャ ディメンション バリアント](half-quarter-texture-dimensions-variant.md)
 ## [BC テクスチャ圧縮バリアント](bc-texture-compression-variant.md)
-# [グラフィックス イベント一覧](graphics-event-list.md)
-# [グラフィックスの状態](graphics-state.md)
-# [グラフィックス パイプライン ステージ](graphics-pipeline-stages.md)
-# [グラフィックス イベント呼び出し履歴](graphics-event-call-stack.md)
-# [グラフィックス ピクセル履歴](graphics-pixel-history.md)
-# [グラフィックス オブジェクト テーブル](graphics-object-table.md)
+# [イベント一覧](graphics-event-list.md)
+# [状態](graphics-state.md)
+# [パイプライン ステージ](graphics-pipeline-stages.md)
+# [イベント呼び出し履歴](graphics-event-call-stack.md)
+# [ピクセル履歴](graphics-pixel-history.md)
+# [オブジェクト テーブル](graphics-object-table.md)
+# [API とメモリの統計情報](graphics-api-and-memory-statistics.md)
+# [フレームの検証](graphics-frame-validation.md)
 # [HLSL シェーダーのデバッガー](hlsl-shader-debugger.md)
 # [コマンド ライン キャプチャ ツール](command-line-capture-tool.md)
 # [グラフィックス診断例](graphics-diagnostics-examples.md)
@@ -45,8 +47,3 @@
 ## [DONT_SAVE_VSGLOG_TO_TEMP](dont-save-vsglog-to-temp.md)
 ## [VSG_DEFAULT_RUN_FILENAME](vsg-default-run-filename.md)
 ## [VSG_NODEFAULT_INSTANCE](vsg-nodefault-instance.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
