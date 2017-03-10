@@ -1,39 +1,54 @@
 ---
 title: "プロパティと項目の比較 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "msbuild では、msbuild プロパティ"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- msbuild, msbuild properties
 ms.assetid: b9da45ae-d6a6-4399-8628-397deed31486
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# プロパティと項目の比較
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: cf04644c98062ffb2aee5b4b826f8426070c3d60
+ms.lasthandoff: 02/22/2017
 
-MSBuild プロパティと項目はどちらを使用して情報をタスクに渡す、条件を評価およびプロジェクト ファイルを参照する値を格納します。  
+---
+# <a name="comparing-properties-and-items"></a>プロパティと項目の比較
+MSBuild のプロパティと項目は、いずれもタスクに情報を渡し、条件を評価し、プロジェクト ファイルで参照する値を格納しておくために使用されます。  
   
--   プロパティは、名前と値のペアです。 詳細については、次を参照してください。 [MSBuild プロパティ](../msbuild/msbuild-properties.md)します。  
+-   プロパティは名前と値のペアです。 詳細については、「[MSBuild プロパティ](../msbuild/msbuild-properties.md)」を参照してください。  
   
--   項目は、通常のファイルを表すオブジェクトです。 項目のオブジェクトには、メタデータのコレクションを関連付けることができます。 メタデータは、名前と値のペアです。 詳細については、次を参照してください。 [項目](../msbuild/msbuild-items.md)します。  
+-   項目は、一般的にファイルを示すオブジェクトです。 項目オブジェクトには、メタデータ コレクションを関連付けることができます。 メタデータは名前と値のペアです。 詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」をご覧ください。  
   
-## <a name="scalars-and-vectors"></a>スカラーおよびベクトル  
- MSBuild プロパティは 1 つの文字列値を持つ名前/値ペアであるため、多くの場合は *スカラー*します。 MSBuild 項目の種類は項目のリストであるため、多くの場合は *ベクトル*します。 ただし、実際には、プロパティは、複数の値を表すことができ、項目の種類は、0 個または 1 つの項目を持つことができます。  
+## <a name="scalars-and-vectors"></a>スカラーとベクター  
+ MSBuild プロパティは&1; つの文字列値のみを持つ名前と値のペアなので、多くの場合は*スカラー*と説明されます。 MSBuild 項目の種類は項目のリストなので、多くの場合は*ベクター*と説明されます。 ただし実際には、プロパティで複数の値を表すことがあり、項目の種類の項目数が&0; 個または&1; 個の場合があります。  
   
 ### <a name="target-dependency-injection"></a>ターゲットの依存関係の挿入  
- プロパティが複数の値を表す方法を表示するには、ターゲットをビルドするターゲットの一覧に追加するための一般的な使用パターンを検討してください。 このリストは通常、セミコロンで区切って指定した名前とプロパティの値によって表されます。  
+ プロパティが複数の値を表す方法については、ターゲットをターゲットの一覧に追加して一覧を作成する場合の一般的な使用パターンを考えます。 この一覧は、一般的に、プロパティ値とターゲット名をセミコロン (;) で区切って表します。  
   
-```  
+```xml  
 <PropertyGroup>  
     <BuildDependsOn>  
         BeforeBuild;  
@@ -43,9 +58,9 @@ MSBuild プロパティと項目はどちらを使用して情報をタスクに
 </PropertyGroup>  
 ```  
   
-  `BuildDependsOn` プロパティは、通常、ターゲットの引数として使用 `DependsOnTargets` 属性に、効果的に項目リストに変換します。 ターゲットを追加するか、ターゲットの実行順序を変更するのには、このプロパティをオーバーライドすることができます。 次に例を示します。  
+ 通常、`BuildDependsOn` プロパティは、ターゲットの `DependsOnTargets` 属性の引数として使用され、項目一覧に変換されます。 このプロパティを上書きして、ターゲットを追加したり、ターゲットの実行順を変更したりすることができます。 次に例を示します。  
   
-```  
+```xml  
 <PropertyGroup>  
     <BuildDependsOn>  
         $(BuildDependsOn);  
@@ -54,14 +69,14 @@ MSBuild プロパティと項目はどちらを使用して情報をタスクに
 </PropertyGroup>  
 ```  
   
- 対象のリストに CustomBuild ターゲットを追加付与 `BuildDependsOn` 値 `BeforeBuild;CoreBuild;AfterBuild;CustomBuild`です。  
+ CustomBuild ターゲットをターゲット一覧に追加し、`BuildDependsOn` に値 `BeforeBuild;CoreBuild;AfterBuild;CustomBuild` を付与します。  
   
- 以降では、MSBuild 4.0 は、対象の依存関係の注入は推奨されません。 使用して、 `AfterTargets` と `BeforeTargets` 属性の代わりにします。 詳細については、次を参照してください。 [ターゲットのビルド順序](../msbuild/target-build-order.md)します。  
+ MSBuild 4.0 以降、ターゲットの依存関係の挿入は推奨されていません。 代わりに `AfterTargets` 属性と `BeforeTargets` 属性を使用してください。 詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。  
   
-### <a name="conversions-between-strings-and-item-lists"></a>文字列と項目リストの間の変換  
- MSBuild では、項目の種類と、必要に応じて、文字列値間で変換を実行します。 項目のリストを使用して文字列値に変換する方法を表示するには、項目の種類を MSBuild プロパティの値として使用する場合の動作を考慮してください。  
+### <a name="conversions-between-strings-and-item-lists"></a>文字列と項目一覧との変換  
+ MSBuild は、項目の種類と文字列値の変換を必要に応じて実行します。 項目一覧を文字列値にする方法については、MSBuild プロパティの値として項目の種類を使用すると何が起こるかを考えます。  
   
-```  
+```xml  
 <ItemGroup>  
     <OutputDir Include="KeyFiles\;Certificates\" />  
   </ItemGroup>  
@@ -70,46 +85,46 @@ MSBuild プロパティと項目はどちらを使用して情報をタスクに
 </PropertyGroup>  
 ```  
   
- OutputDir が項目の種類、 `Include` 属性の値"KeyFiles\\です。証明書\\"です。 MSBuild は、2 つの項目にこの文字列を解析して: KeyFiles\ と証明書\\します。 MSBuild が変換またはセミコロンで区切られた文字列に項目の種類を「フラット化」OutputDir 項目の種類は OutputDirList プロパティの値として使用するときに"KeyFiles\\です。証明書\\"です。  
+ 項目の種類 OutputDir には、"KeyFiles\\;Certificates\\" という値の `Include` 属性があります。 MSBuild は、この文字列を&2; つの項目 KeyFiles\ と Certificates\\ に解析します。 項目の種類 OutputDir を OutputDirList プロパティの値として使用している場合、MSBuild は、項目の種類をセミコロン区切りの文字列 "KeyFiles\\;Certificates\\" に変換または "平坦化" します。  
   
-## <a name="properties-and-items-in-tasks"></a>プロパティとタスク内の項目  
- プロパティと項目は、入力と出力は、MSBuild タスクとして使用されます。 詳細については、次を参照してください。 [タスク](../msbuild/msbuild-tasks.md)します。  
+## <a name="properties-and-items-in-tasks"></a>タスクのプロパティと項目  
+ プロパティと項目は、MSBuild タスクの入力と出力として使用されます。 詳細については、[タスク](../msbuild/msbuild-tasks.md)に関する記事を参照してください。  
   
- プロパティは、属性として、タスクに渡されます。 タスク内では、MSBuild プロパティは文字列との間、値を変換できるプロパティの型によって表されます。 サポートされているプロパティの種類には、 `bool`, 、`char`, 、`DateTime`, 、`Decimal`, 、`Double`, 、`int`, 、`string`, 、任意の型と <xref:System.Convert.ChangeType%2A> を処理できます。  
+ プロパティは属性としてタスクに渡されます。 タスク内の MSBuild プロパティは、値を文字列との間で変換できるプロパティの種類で表されます。 サポートされるプロパティの種類には、`bool`、`char`、`DateTime`、`Decimal`、`Double`、`int`、`string`、および <xref:System.Convert.ChangeType%2A> が処理できる任意の種類が含まれます。  
   
- 項目がタスクに渡される <xref:Microsoft.Build.Framework.ITaskItem> オブジェクトです。 タスク内で <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> 項目の値を表すと <xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> そのメタデータを取得します。  
+ 項目は <xref:Microsoft.Build.Framework.ITaskItem> オブジェクトとしてタスクに渡されます。 タスク内の <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> は項目の値を表し、<xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> はそのメタデータを取得します。  
   
- 項目の種類の項目の一覧を配列として渡すことが `ITaskItem` オブジェクトです。 以降、.NET Framework 3.5 では、項目を削除できるターゲットの項目のリストからを使用して、 `Remove` 属性です。 項目リストから項目を削除できる、ためには、0 個の項目が項目の種類は可能です。 項目のリストが渡された場合、タスク、タスクのコードはこの可能性を確認する必要があります。  
+ 項目の種類の項目一覧は、`ITaskItem` オブジェクトの配列として渡すことができます。 .NET Framework 3.5 以降、`Remove` 属性を使用してターゲットの項目一覧から項目を削除できるようになりました。 項目は項目一覧から削除できるため、アイテムの種類の項目数が&0; 個になる可能性があります。 項目一覧をタスクに渡す場合、タスクのコードでこの可能性をチェックする必要があります。  
   
 ## <a name="property-and-item-evaluation-order"></a>プロパティと項目の評価順序  
- ビルドの評価フェーズでは、インポートされたファイルは、表示される順序でビルドに組み込まれます。 プロパティと項目は、次の順序で 3 つのパスで定義されます。  
+ ビルドの評価フェーズでは、インポート対象のファイルは出現順にビルドに組み込まれます。 プロパティと項目は、次の順に&3; つのパスで定義されます。  
   
--   プロパティが定義され、表示される順番を変更します。  
+-   プロパティが出現順に定義および修正されます。  
   
--   項目の定義が定義され、表示される順番を変更します。  
+-   項目定義が出現順に定義および修正されます。  
   
--   項目が定義され、表示される順番を変更します。  
+-   項目が出現順に定義および修正されます。  
   
- ビルドの実行フェーズでは、プロパティとターゲット内で定義されている項目共に評価されます単一フェーズで出現する順序で。  
+ ビルドの実行フェーズでは、ターゲット内で定義されるプロパティおよび項目は、出現順に、1 つの段階でまとめて評価されます。  
   
- ただし、すべてのストーリーではありません。 プロパティ、項目の定義、または項目を定義すると、その値が評価されます。 式エバリュエーターでは、値を指定する文字列を展開します。 文字列の展開は、ビルド フェーズに依存します。 さらに詳細なプロパティと項目の評価順序を次に示します。  
+ ただし、これだけでは済みません。 プロパティ、項目定義、または項目を定義するときに、その値も評価されます。 式エバリュエーターで、値を指定する文字列が展開されます。 文字列の展開はビルド フェーズによって変わります。 プロパティと項目の詳細な評価順は次のとおりです。  
   
--   ビルドの評価フェーズでは。  
+-   ビルドの評価フェーズ:  
   
-    -   プロパティが定義され、表示される順番を変更します。 プロパティ関数が実行されます。 フォーム $(PropertyName) 内のプロパティ値は式内で展開します。 プロパティ値は、展開された式に設定されます。  
+    -   プロパティが出現順に定義および修正されます。 プロパティ関数が実行されます。 式内のフォーム $(PropertyName) のプロパティ値が展開されます。 プロパティ値が展開された式に設定されます。  
   
-    -   項目の定義が定義され、表示される順番を変更します。 プロパティ関数は、式の中で既に展開されています。 メタデータの値は、展開された式に設定されます。  
+    -   項目定義が出現順に定義および修正されます。 式内のプロパティ関数は既に展開されています。 メタデータ値が展開された式に設定されます。  
   
-    -   項目の種類が定義されているし、出現する順番を変更します。 フォーム内の値を項目 @(ItemType) は展開します。 項目の変換も展開します。 式の中で、プロパティ関数と値は既に展開されています。 項目のリストとメタデータの値は、展開された式に設定されます。  
+    -   項目の種類が出現順に定義および修正されます。 フォーム @(ItemType) の項目値が展開されます。 項目の変換も展開されます。 式内のプロパティ関数と値は既に展開されています。 項目一覧とメタデータ値が展開された式に設定されます。  
   
--   ビルドの実行フェーズでは。  
+-   ビルドの実行フェーズ:  
   
-    -   プロパティとターゲット内で定義されている項目が表示される順序で共に評価されます。 プロパティ関数は、実行し、プロパティの値は式内で展開します。 項目の値と項目の変換も展開されます。 プロパティ値、項目の種類の値、およびメタデータの値は、展開された式に設定されます。  
+    -   ターゲット内に定義されているプロパティと項目は、出現順にまとめて評価されます。 プロパティ関数が実行され、式内のプロパティ値が展開されます。 項目値と項目の変換も展開されます。 プロパティ値、項目の種類値、およびメタデータ値が、展開された式に設定されます。  
   
-### <a name="subtle-effects-of-the-evaluation-order"></a>評価順序の繊細な効果  
- ビルドの評価段階で、プロパティの評価では、項目の評価が先頭に付きます。 ただし、プロパティには、項目の値に依存するように表示される値をことができます。 次のスクリプトを検討してください。  
+### <a name="subtle-effects-of-the-evaluation-order"></a>評価順のわかりにくい効果  
+ ビルドの評価フェーズでは、プロパティの評価が項目の評価よりも先に実行されます。 それでも、プロパティ値が項目値に依存しているように見えることがあります。 次のスクリプトがあるとします。  
   
-```  
+```xml  
 <ItemGroup>  
     <KeyFile Include="KeyFile.cs">  
         <Version>1.0.0.3</Version>  
@@ -123,21 +138,21 @@ MSBuild プロパティと項目はどちらを使用して情報をタスクに
 </Target>  
 ```  
   
- Message タスクを実行するには、このメッセージが表示されます。  
+ Message タスクを実行すると、次のメッセージが表示されます。  
   
 ```  
 KeyFileVersion: 1.0.0.3  
 ```  
   
- これは、ための値 `KeyFileVersion` 文字列では実際には、 "@(KeyFile->'%(Version)')". 項目と項目の変換、プロパティを最初に定義するとを展開したされないため、 `KeyFileVersion` プロパティには、展開されていない文字列の値が割り当てられました。  
+ これは、`KeyFileVersion` の値が実際には文字列 "@(KeyFile->'%(Version)')" であるためです。 プロパティが最初に定義されたときに項目と項目の変換が展開されなかったため、`KeyFileVersion` プロパティには展開されていない文字列値が割り当てられました。  
   
- ビルドの実行フェーズでは、Message タスクを処理するときに MSBuild 文字列が展開 "@(KeyFile->'%(Version)')" 「1.0.0.3」を生成します。  
+ ビルドの実行フェーズで Message タスクを処理するときに、MSBuild は文字列 "@(KeyFile->'%(Version)')" を展開して "1.0.0.3" を生成します。  
   
- プロパティと項目のグループの順序で逆になった場合でも、同じメッセージが表示されることに注意してください。  
+ プロパティと項目グループの順序が変わった場合でも、同じメッセージが表示されます。  
   
- 2 番目の例として、プロパティと項目のグループがターゲット内に存在する場合の動作について考慮してください。  
+ 2 つ目の例として、プロパティと項目グループがターゲット内にあるときに生じる状況を考えてみましょう。  
   
-```  
+```xml  
 <Target Name="AfterBuild">  
     <PropertyGroup>  
         <KeyFileVersion>@(KeyFile->'%(Version)')</KeyFileVersion>  
@@ -151,17 +166,17 @@ KeyFileVersion: 1.0.0.3
 </Target>  
 ```  
   
- Message タスクでは、このメッセージが表示されます。  
+ Message タスクを実行すると、次のメッセージが表示されます。  
   
 ```  
 KeyFileVersion:   
 ```  
   
- これは、ビルドの実行フェーズでは、ターゲット内で定義されたプロパティと項目のグループが評価されるため、同時に上下します。  `KeyFileVersion` が定義されている `KeyFile` が不明です。 そのため、項目の変換は、空の文字列に展開します。  
+ これは、ビルドの実行フェーズ中に、ターゲット内で定義されているプロパティと項目グループが上から下の順にまとめて評価されるためです。 `KeyFileVersion` の定義時に `KeyFile` は不明です。 そのため、項目の変換によって空の文字列に展開されます。  
   
- この場合、プロパティと項目グループの順序を逆にすると、元のメッセージが復元されます。  
+ この場合、プロパティと項目グループの順序を逆にすることで、元のメッセージが復元されます。  
   
-```  
+```xml  
 <Target Name="AfterBuild">  
     <ItemGroup>  
         <KeyFile Include="KeyFile.cs">  
@@ -175,11 +190,11 @@ KeyFileVersion:
 </Target>  
 ```  
   
- 値 `KeyFileVersion` しない「1.0.0.3」に設定されて "@(KeyFile->'%(Version)')". 、Message タスクには、このメッセージが表示されます。  
+ `KeyFileVersion` の値は "@(KeyFile->'%(Version)')" ではなく "1.0.0.3" に設定されます。 Message タスクを実行すると、次のメッセージが表示されます。  
   
 ```  
 KeyFileVersion: 1.0.0.3  
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [高度な概念](../msbuild/msbuild-advanced-concepts.md)
+ [詳細な概念](../msbuild/msbuild-advanced-concepts.md)

@@ -1,93 +1,108 @@
 ---
 title: "Csc タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/msbuild/2003#Csc"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Csc タスク [MSBuild]"
-  - "MSBuild、Csc タスク"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#Csc
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Csc task [MSBuild]
+- MSBuild, Csc task
 ms.assetid: d8c19b36-f5ca-484b-afa6-8ff3b90e103a
 caps.latest.revision: 26
-caps.handback.revision: 26
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Csc タスク
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: 9057a6bd209d4761c147577888dffa2933bbf4c8
+ms.lasthandoff: 02/22/2017
 
-CSC.exe をラップし、実行可能ファイル (.exe ファイル)、ダイナミック リンク ライブラリ (.dll ファイル)、またはコード モジュール (.netmodule ファイル) を生成します。 CSC.exe の詳細については、次を参照してください。 [c# コンパイラ オプション](/dotnet/csharp/language-reference/compiler-options/index)します。  
+---
+# <a name="csc-task"></a>Csc タスク
+CSC.exe をラップし、実行可能ファイル (.exe ファイル)、ダイナミック リンク ライブラリ (.dll ファイル)、またはコード モジュール (.netmodule ファイル) を生成します。 CSC.exe の詳細については、「[C# コンパイラ オプション](/dotnet/csharp/language-reference/compiler-options/index)」を参照してください。  
   
 ## <a name="parameters"></a>パラメーター  
  `Csc` タスクのパラメーターの説明を次の表に示します。  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|`AdditionalLibPaths`|省略可能な `String[]` 型のパラメーターです。<br /><br /> 参照を検索する追加のディレクトリを指定します。 詳細については、次を参照してください。 [/lib (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/lib-compiler-option)します。|  
-|`AddModules`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリを構成する 1 つ以上のモジュールを指定します。 詳細については、次を参照してください。 [/addmodule (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/addmodule-compiler-option)します。|  
-|`AllowUnsafeBlocks`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 場合 `true`, を使用するコードをコンパイル、 [安全でない](/dotnet/csharp/language-reference/keywords/unsafe) キーワードです。 詳細については、次を参照してください。 [/unsafe (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/unsafe-compiler-option)します。|  
-|`ApplicationConfiguration`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリのバインディング設定を含む、アプリケーション構成ファイルを指定します。|  
-|`BaseAddress`|省略可能な `String` 型のパラメーターです。<br /><br /> DLL を読み込む位置に推奨されるベース アドレスを指定します。 によって、DLL の既定のベース アドレスを設定、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 共通言語ランタイム。 詳細については、次を参照してください。 [/baseaddress (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option)します。|  
-|`CheckForOverflowUnderflow`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 整数データ型の境界をオーバーフローする算術演算、実行時に例外が発生するかどうかを指定します。 詳細については、次を参照してください。 [/checked (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/checked-compiler-option)します。|  
-|`CodePage`|省略可能な `Int32` 型のパラメーターです。<br /><br /> コンパイルですべてのソース コード ファイルに使用するコード ページを指定します。 詳細については、次を参照してください。 [/codepage (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/codepage-compiler-option)します。|  
-|`DebugType`|省略可能な `String` 型のパラメーターです。<br /><br /> デバッグの種類を指定します。 `DebugType` できる `full` または `pdbonly`です。 既定値は `full`, 、実行中のプログラムにアタッチされているデバッガーを有効にします。 指定する `pdbonly` によりソース コードのデバッグと、デバッガーの起動時は、プログラムは実行中のプログラムが、デバッガーに接続されているときに、アセンブラーをのみ表示されます。<br /><br /> このパラメーターは、 `EmitDebugInformation` パラメーター。<br /><br /> 詳細については、次を参照してください。 [/debug (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)します。|  
-|`DefineConstants`|省略可能な `String` 型のパラメーターです。<br /><br /> プリプロセッサ シンボルを定義します。 詳細については、次を参照してください。 [/define (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/define-compiler-option)します。|  
-|`DelaySign`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 場合 `true`, 、完全署名されたアセンブリを作成することを指定します。 場合 `false`, 、アセンブリの公開キーを配置する必要なだけを指定します。<br /><br /> このパラメーターも何も起こりませんいずれかで使用されていない限り、 `KeyFile` または `KeyContainer` パラメーター。<br /><br /> 詳細については、次を参照してください。 [/delaysign (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/delaysign-compiler-option)します。|  
-|`DisabledWarnings`|省略可能な `String` 型のパラメーターです。<br /><br /> 無効にする警告の一覧を指定します。 詳細については、次を参照してください。 [/nowarn (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/nowarn-compiler-option)します。|  
-|`DocumentationFile`|省略可能な `String` 型のパラメーターです。<br /><br /> ドキュメント コメントを XML ファイルに出力します。 詳細については、次を参照してください。 [/doc (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/doc-compiler-option)します。|  
-|`EmitDebugInformation`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 場合 `true`, 、タスクがデバッグ情報を生成し、プログラム データベース (.pdb) ファイルに格納します。 場合 `false`, 、タスクがデバッグ情報を出力しません。 既定値は `false` です。 詳細については、次を参照してください。 [/debug (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)します。|  
-|`ErrorReport`|省略可能な `String` 型のパラメーターです。<br /><br /> C# で内部エラーを Microsoft に報告する便利な方法を提供します。 このパラメーターの値をとります。 `prompt`, 、`send`, 、または `none`です。 パラメーターが設定されている場合は、 `prompt`, 、内部コンパイラ エラーが発生したときに、プロンプトが表示されます。 プロンプトでは、電子的なバグの報告をマイクロソフトに送信することができます。 パラメーターが設定されている場合は、 `send`, 、バグのレポートが自動的に送信されます。 パラメーターが設定されている場合 `none`, 、コンパイラのテキスト出力にのみ、エラーを報告します。 既定値は `none` です。 詳細については、次を参照してください。 [/errorreport (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option)します。|  
-|`FileAlignment`|省略可能な `Int32` 型のパラメーターです。<br /><br /> 出力ファイル内のセクションのサイズを指定します。 詳細については、次を参照してください。 [/filealign (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/filealign-compiler-option)します。|  
-|`GenerateFullPaths`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 場合 `true`, 、コンパイラ出力のファイルへの絶対パスを指定します。 場合 `false`, 、ファイルの名前を指定します。 既定値は `false` です。 詳細については、次を参照してください。 [/fullpaths (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/fullpaths-compiler-option)します。|  
-|`KeyContainer`|省略可能な `String` 型のパラメーターです。<br /><br /> 暗号化キー コンテナーの名前を指定します。 詳細については、次を参照してください。 [/keycontainer (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/keycontainer-compiler-option)します。|  
-|`KeyFile`|省略可能な `String` 型のパラメーターです。<br /><br /> 暗号化キーを格納するファイル名を指定します。 詳細については、次を参照してください。 [/keyfile (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/keyfile-compiler-option)します。|  
-|`LangVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> 使用する言語のバージョンを指定します。 詳細については、次を参照してください。 [/langversion (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/langversion-compiler-option)します。|  
-|`LinkResources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` パラメーター。<br /><br /> リンクの作成、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 出力ファイルにリソースのリソース ファイルは、出力ファイルに保存されません。<br /><br /> このパラメーターに渡された項目は省略可能なメタデータ エントリをという名前を持つこと `LogicalName` と `Access`です。 `LogicalName` 対応する、 `identifier` のパラメーター、 `/linkresource` 切り替えると `Access` に対応する `accessibility-modifier` パラメーター。 詳細については、次を参照してください。 [/linkresource (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/linkresource-compiler-option)します。|  
-|`MainEntryPoint`|省略可能な `String` 型のパラメーターです。<br /><br /> 場所を指定、 `Main` メソッドです。 詳細については、次を参照してください。 [/main (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option)します。|  
-|`ModuleAssemblyName`|省略可能な `String` 型のパラメーターです。<br /><br /> このモジュールの一部となるアセンブリの名前を指定します。|  
-|`NoConfig`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 場合 `true`, 、csc.rsp ファイルを使用してコンパイルしないようにコンパイラに指示します。 詳細については、次を参照してください。 [/noconfig (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/noconfig-compiler-option)します。|  
-|`NoLogo`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 場合 `true`, 、コンパイラの著作権情報の表示を中止します。 詳細については、次を参照してください。 [/nologo (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/nologo-compiler-option)します。|  
-|`NoStandardLib`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 場合 `true`, 、全体の System 名前空間を定義するには、mscorlib.dll のインポートされません。 定義または独自の System 名前空間およびオブジェクトを作成する場合は、このパラメーターを使用します。 詳細については、次を参照してください。 [/nostdlib (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option)します。|  
-|`NoWin32Manifest`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 場合 `true`, 、既定の Win32 マニフェストは含めないでください。|  
-|`Optimize`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 場合 `true`, 、最適化を有効します。 場合 `false`, 、最適化を無効にします。 詳細については、次を参照してください。 [/optimize (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/optimize-compiler-option)します。|  
-|`OutputAssembly`|省略可能な `String` 型の出力パラメーターです。<br /><br /> 出力ファイルの名前を指定します。 詳細については、次を参照してください。 [/out (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option)します。|  
-|`PdbFile`|省略可能な `String` 型のパラメーターです。<br /><br /> デバッグ情報ファイルの名前を指定します。 既定の名前は、.pdb 拡張子を持つ出力ファイルの名前です。|  
-|`Platform`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルのターゲットとするプロセッサ プラットフォームを指定します。 このパラメーターの値をとります。 `x86`, 、`x64`, 、または `anycpu`です。 既定値は `anycpu` です。 詳細については、次を参照してください。 [/platform (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)します。|  
-|`References`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` パラメーター。<br /><br /> パブリック型の情報を指定した項目から現在のプロジェクトにインポートするタスクさせます。 詳細については、次を参照してください。 [/reference (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/reference-compiler-option)します。<br /><br /> 指定できます、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 参照のエイリアスに、 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] メタデータを追加することでファイル `Aliases` を元の「参照」項目。 たとえば、CSC の次のコマンドラインで"LS1"エイリアスを設定します。<br /><br /> `csc /r:LS1=MyCodeLibrary.dll /r:LS2=MyCodeLibrary2.dll *.cs`<br /><br /> 使用します。<br /><br /> `<Reference Include="MyCodeLibrary"> <Aliases>LS1</Aliases> </Reference>`|  
-|`Resources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` パラメーター。<br /><br /> 埋め込む、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 出力ファイルにリソースです。<br /><br /> このパラメーターに渡された項目は省略可能なメタデータ エントリをという名前を持つこと `LogicalName` と `Access`です。 `LogicalName` 対応する、 `identifier` のパラメーター、 `/resource` 切り替えると `Access` に対応する `accessibility-modifier` パラメーター。 詳細については、次を参照してください。 [/resource (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/resource-compiler-option)します。|  
-|`ResponseFiles`|省略可能な `String` 型のパラメーターです。<br /><br /> このタスク用のコマンドを含む応答ファイルを指定します。 詳細については、次を参照してください。 [@ (応答ファイルの指定)](/dotnet/csharp/language-reference/compiler-options/response-file-compiler-option)します。|  
-|`Sources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` パラメーター。<br /><br /> 1 つまたは複数指定 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ソース ファイルです。|  
-|`TargetType`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルのファイル形式を指定します。 このパラメーターの値を持つことができます `library`, 、コード ライブラリを作成する `exe`, 、コンソール アプリケーションを作成する `module`, 、モジュールの場合、作成または `winexe`, 、Windows プログラムを作成します。 既定値は `library` です。 詳細については、次を参照してください。 [/target (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option)します。|  
-|`TreatWarningsAsErrors`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 場合 `true`, 、すべての警告をエラーとして扱います。 詳細については、次を参照してください。 [/warnaserror (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)します。|  
-|`UseHostCompilerIfAvailable`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 使用可能な場合は、インプロセス コンパイラ オブジェクトを使用してタスクを指示します。 のみ使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。|  
-|`Utf8Output`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> Utf-8 エンコーディングを使用してコンパイラ出力を記録します。 詳細については、次を参照してください。 [/utf8output (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/utf8output-compiler-option)します。|  
-|`WarningLevel`|省略可能な `Int32` 型のパラメーターです。<br /><br /> 表示するコンパイラの警告レベルを指定します。 詳細については、次を参照してください。 [/warn (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/warn-compiler-option)します。|  
-|`WarningsAsErrors`|省略可能な `String` 型のパラメーターです。<br /><br /> エラーとして扱う警告の一覧を指定します。 詳細については、次を参照してください。 [/warnaserror (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)します。<br /><br /> このパラメーターは、 `TreatWarningsAsErrors` パラメーター。|  
-|`WarningsNotAsErrors`|省略可能な `String` 型のパラメーターです。<br /><br /> エラーとして扱わない警告の一覧を指定します。 詳細については、次を参照してください。 [/warnaserror (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)します。<br /><br /> このパラメーターは場合、 `TreatWarningsAsErrors` にパラメーターが設定されている `true`します。|  
-|`Win32Icon`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイル エクスプ ローラーで必要な外観のようになると、アセンブリに .ico ファイルを挿入します。 詳細については、次を参照してください。 [/win32icon (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)します。|  
-|`Win32Manifest`|省略可能な `String` 型のパラメーターです。<br /><br /> 含める Win32 マニフェストを指定します。|  
-|`Win32Resource`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルには、Win32 リソース (.res) ファイルを挿入します。 詳細については、次を参照してください。 [/win32res (c# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option)します。|  
+|`AdditionalLibPaths`|省略可能な `String[]` 型のパラメーターです。<br /><br /> 参照を検索する追加のディレクトリを指定します。 詳しくは、「[/lib (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/lib-compiler-option)」をご覧ください。|  
+|`AddModules`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリを構成する&1; つ以上のモジュールを指定します。 詳しくは、「[/addmodule (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/addmodule-compiler-option)」をご覧ください。|  
+|`AllowUnsafeBlocks`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、[unsafe](/dotnet/csharp/language-reference/keywords/unsafe) キーワードを使用するコードをコンパイルします。 詳しくは、「[/unsafe (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/unsafe-compiler-option)」をご覧ください。|  
+|`ApplicationConfiguration`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリ バインド設定を含むアプリケーション構成ファイルを指定します。|  
+|`BaseAddress`|省略可能な `String` 型のパラメーターです。<br /><br /> DLL を読み込む位置に推奨されるベース アドレスを指定します。 DLL の既定のベース アドレスは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 共通言語ランタイムにより設定されます。 詳しくは、「[/baseaddress (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option)」をご覧ください。|  
+|`CheckForOverflowUnderflow`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> データ型の境界をオーバーフローする整数演算で、実行時に例外を発生させるかどうかを指定します。 詳しくは、「[/checked (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/checked-compiler-option)」をご覧ください。|  
+|`CodePage`|省略可能な `Int32` 型のパラメーターです。<br /><br /> コンパイルですべてのソース コード ファイルに使用するコード ページを指定します。 詳しくは、「[/codepage (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/codepage-compiler-option)」をご覧ください。|  
+|`DebugType`|省略可能な `String` 型のパラメーターです。<br /><br /> デバッグの種類を指定します。 `DebugType` には、`full` または `pdbonly` を指定できます。 既定値は `full` です。デバッガーを実行中のプログラムに添付できます。 `pdbonly` を指定すると、プログラムがデバッガーで開始されたとき、ソース コードのデバッグが有効になりますが、実行中のプログラムがデバッガーにアタッチされているときにのみアセンブラーが表示されます。<br /><br /> このパラメーターは `EmitDebugInformation` パラメーターに優先します。<br /><br /> 詳しくは、「[/debug (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)」をご覧ください。|  
+|`DefineConstants`|省略可能な `String` 型のパラメーターです。<br /><br /> プリプロセッサ シンボルを定義します。 詳しくは、「[/define (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/define-compiler-option)」をご覧ください。|  
+|`DelaySign`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、完全署名されたアセンブリを必要とすることが指定されます。 `false` の場合、アセンブリに公開キーを含めることだけを要求するように指定されます。<br /><br /> `KeyFile` または `KeyContainer` パラメーターと併用しない限り、このパラメーターには何の効果もありません。<br /><br /> 詳しくは、「[/delaysign (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/delaysign-compiler-option)」をご覧ください。|  
+|`DisabledWarnings`|省略可能な `String` 型のパラメーターです。<br /><br /> 無効にする警告の一覧を指定します。 詳しくは、「[/nowarn (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/nowarn-compiler-option)」をご覧ください。|  
+|`DocumentationFile`|省略可能な `String` 型のパラメーターです。<br /><br /> ドキュメント コメントを XML ファイルに出力します。 詳しくは、「[/doc (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/doc-compiler-option)」をご覧ください。|  
+|`EmitDebugInformation`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、このタスクはデバッグ情報を生成し、プログラム データベース (.pdb) ファイルにその情報を追加します。 `false` の場合、このタスクはデバッグ情報を生成しません。 既定値は `false` です。 詳しくは、「[/debug (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)」をご覧ください。|  
+|`ErrorReport`|省略可能な `String` 型のパラメーターです。<br /><br /> C# 内部エラーを Microsoft に報告する便利な方法を提供します。 このパラメーターの値には、`prompt`、`send`、または `none` を指定できます。 このパラメーターが `prompt` に設定されている場合、内部コンパイラにエラーが発生すると、プロンプトが表示されます。 このプロンプトで、Microsoft にバグ レポートを電子的に送信できます。 このパラメーターが `send` に設定されている場合、バグ レポートは自動的に送信されます。 このパラメーターが `none` に設定されている場合、コンパイラのテキスト出力でのみエラーが報告されます。 既定値は `none` です。 詳しくは、「[/errorreport (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option)」をご覧ください。|  
+|`FileAlignment`|省略可能な `Int32` 型のパラメーターです。<br /><br /> 出力ファイル内のセクションのサイズを指定します。 詳しくは、「[/filealign (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/filealign-compiler-option)」をご覧ください。|  
+|`GenerateFullPaths`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、コンパイラ出力に含まれるファイルの絶対パスが指定されます。 `false` の場合、ファイルの名前が指定されます。 既定値は `false` です。 詳しくは、「[/fullpaths (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/fullpaths-compiler-option)」をご覧ください。|  
+|`KeyContainer`|省略可能な `String` 型のパラメーターです。<br /><br /> 暗号化キー コンテナーの名前を指定します。 詳しくは、「[/keycontainer (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/keycontainer-compiler-option)」をご覧ください。|  
+|`KeyFile`|省略可能な `String` 型のパラメーターです。<br /><br /> 暗号化キーを格納するファイル名を指定します。 詳しくは、「[/keyfile (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/keyfile-compiler-option)」をご覧ください。|  
+|`LangVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> 使用する言語のバージョンを指定します。 詳しくは、「[/langversion (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/langversion-compiler-option)」をご覧ください。|  
+|`LinkResources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 出力ファイル内で [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] リソースへのリンクを作成します。リソース ファイルは出力ファイル内に置かれません。<br /><br /> このパラメーターに渡される項目には、「`LogicalName`」や「`Access`」という名前のメタデータ エントリを任意で指定できます。 `LogicalName` は `/linkresource` スイッチの `identifier` パラメーターに対応し、`Access` は `accessibility-modifier` パラメーターに対応します。 詳しくは、「[/linkresource (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/linkresource-compiler-option)」をご覧ください。|  
+|`MainEntryPoint`|省略可能な `String` 型のパラメーターです。<br /><br /> `Main` メソッドの場所を指定します。 詳細については、「[/main (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option)」を参照してください。|  
+|`ModuleAssemblyName`|省略可能な `String` 型のパラメーターです。<br /><br /> このモジュールが一部となるアセンブリの名前を指定します。|  
+|`NoConfig`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、csc.rsp ファイルを使用してコンパイルしないようにコンパイラに指示します。 詳しくは、「[/noconfig (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/noconfig-compiler-option)」をご覧ください。|  
+|`NoLogo`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、コンパイラの著作権情報が表示されません。 詳しくは、「[/nologo (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/nologo-compiler-option)」をご覧ください。|  
+|`NoStandardLib`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、System 名前空間の全体を定義する mscorlib.dll がインポートされません。 独自の System 名前空間およびオブジェクトを定義または作成する場合は、このパラメーターを使用します。 詳しくは、「[/nostdlib (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option)」をご覧ください。|  
+|`NoWin32Manifest`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、既定の Win32 マニフェストを含めないでください。|  
+|`Optimize`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、最適化が有効になります。 `false` の場合、最適化が無効になります。 詳しくは、「[/optimize (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/optimize-compiler-option)」をご覧ください。|  
+|`OutputAssembly`|省略可能な `String` 型の出力パラメーターです。<br /><br /> 出力ファイルの名前を指定します。 詳しくは、「[/out (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option)」をご覧ください。|  
+|`PdbFile`|省略可能な `String` 型のパラメーターです。<br /><br /> デバッグ情報ファイルの名前を指定します。 既定の名前は、出力ファイルの名前に .pdb 拡張子が付いたものになります。|  
+|`Platform`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルのターゲットとするプロセッサ プラットフォームを指定します。 このパラメーターの値には、`x86`、`x64`、または `anycpu` を指定できます。 既定値は `anycpu` です。 詳しくは、「[/platform (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)」をご覧ください。|  
+|`References`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 指定したアイテムから現在のプロジェクトにパブリック型の情報をインポートするようにタスクに指示します。 詳しくは、「[/reference (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/reference-compiler-option)」をご覧ください。<br /><br /> メタデータ `Aliases` を元の "参照" アイテムに追加することで、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ファイルに [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 参照エイリアスを指定できます。 たとえば、次の "LS1" コマンド ラインにエイリアス を設定する場合:<br /><br /> `csc /r:LS1=MyCodeLibrary.dll /r:LS2=MyCodeLibrary2.dll *.cs`<br /><br /> 次を使用します。<br /><br /> `<Reference Include="MyCodeLibrary"> <Aliases>LS1</Aliases> </Reference>`|  
+|`Resources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] リソースを出力ファイルに組み込みます。<br /><br /> このパラメーターに渡される項目には、「`LogicalName`」や「`Access`」という名前のメタデータ エントリを任意で指定できます。 `LogicalName` は `/resource` スイッチの `identifier` パラメーターに対応し、`Access` は `accessibility-modifier` パラメーターに対応します。 詳しくは、「[/resource (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/resource-compiler-option)」をご覧ください。|  
+|`ResponseFiles`|省略可能な `String` 型のパラメーターです。<br /><br /> このタスクのコマンドを含む応答ファイルを指定します。 詳しくは、「[@ (応答ファイルの指定)](/dotnet/csharp/language-reference/compiler-options/response-file-compiler-option)」をご覧ください。|  
+|`Sources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 1 つまたは複数の [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ソース ファイルを指定します。|  
+|`TargetType`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルのファイル形式を指定します。 このパラメーターには値として、コード ライブラリを作成する `library`、コンソール アプリケーションを作成する `exe`、モジュールを作成する `module`、Windows プログラムを作成する `winexe` を指定できます。 既定値は `library` です。 詳しくは、「[/target (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option)」をご覧ください。|  
+|`TreatWarningsAsErrors`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、すべての警告をエラーとして扱います。 詳しくは、「[/warnaserror (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)」をご覧ください。|  
+|`UseHostCompilerIfAvailable`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 利用できる場合、インプロセス コンパイラ オブジェクトを使用するようにタスクに指示します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によってのみ使用されます。|  
+|`Utf8Output`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> UTF-8 エンコードを使用してコンパイラ出力をログに記録します。 詳しくは、「[/utf8output (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/utf8output-compiler-option)」をご覧ください。|  
+|`WarningLevel`|省略可能な `Int32` 型のパラメーターです。<br /><br /> コンパイラが表示する警告レベルを指定します。 詳しくは、「[/warn (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/warn-compiler-option)」をご覧ください。|  
+|`WarningsAsErrors`|省略可能な `String` 型のパラメーターです。<br /><br /> エラーとして扱う警告の一覧を指定します。 詳しくは、「[/warnaserror (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)」をご覧ください。<br /><br /> このパラメーターは `TreatWarningsAsErrors` パラメーターに優先します。|  
+|`WarningsNotAsErrors`|省略可能な `String` 型のパラメーターです。<br /><br /> エラーとして扱わない警告の一覧を指定します。 詳しくは、「[/warnaserror (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)」をご覧ください。<br /><br /> このパラメーターは、`TreatWarningsAsErrors` パラメーターが `true` に設定されている場合にのみ役に立ちます。|  
+|`Win32Icon`|省略可能な `String` 型のパラメーターです。<br /><br /> エクスプローラーで出力ファイルを適切に表示する .ico ファイルをアセンブリに挿入します。 詳細については、「[/win32icon (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)」を参照してください。|  
+|`Win32Manifest`|省略可能な `String` 型のパラメーターです。<br /><br /> 追加する Win32 マニフェストを指定します。|  
+|`Win32Resource`|省略可能な `String` 型のパラメーターです。<br /><br /> Win32 リソース (.res) ファイルを出力ファイルに挿入します。 詳しくは、「[/win32res (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option)」をご覧ください。|  
   
 ## <a name="remarks"></a>コメント  
- このタスクがからパラメーターを継承する上記のパラメーターだけでなく、 `Microsoft.Build.Tasks.ManagedCompiler` から継承されるクラス、 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 自体クラスから継承、 <xref:Microsoft.Build.Utilities.ToolTask> クラスです。 これらの追加パラメーターとその説明の一覧は、次を参照してください。 [ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)します。  
+ 上記のパラメーター以外に、このタスクは `Microsoft.Build.Tasks.ManagedCompiler` クラスからパラメーターを継承します。このクラスは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスから継承されます。<xref:Microsoft.Build.Tasks.ToolTaskExtension> クラス自体は <xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、 `Csc` のソース ファイルから実行可能ファイルをコンパイルするタスク、 `Compile` アイテム コレクションです。  
+ 次の例では、`Csc` タスクを使用し、`Compile` アイテム コレクションのソース ファイルから実行可能ファイルをコンパイルしています。  
   
-```  
+```xml  
 <CSC  
     Sources="@(Compile)"  
     OutputAssembly="$(AppName).exe"  
@@ -95,5 +110,5 @@ CSC.exe をラップし、実行可能ファイル (.exe ファイル)、ダイ�
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
+ [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
  [タスク](../msbuild/msbuild-tasks.md)

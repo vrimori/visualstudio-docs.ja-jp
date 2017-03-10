@@ -1,42 +1,57 @@
 ---
-title: "Descendants (XElement Dynamic Property) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Descendants (XElement 動的プロパティ) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9611d00f-23bf-444b-ab0c-f30701bfc13d
 caps.latest.revision: 2
-caps.handback.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Descendants (XElement Dynamic Property)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 9044821c2bfee0dba8ffa91f3d91afd565b8d957
+ms.openlocfilehash: 78a9401593e900969c27dcd223a2510ea2ffd24f
+ms.lasthandoff: 02/22/2017
 
-現在の要素の子孫要素のうち指定された展開名に一致するすべての子孫要素を取得するためのインデクサーを取得します。  
+---
+# <a name="descendants-xelement-dynamic-property"></a>Descendants (XElement 動的プロパティ)
+現在の要素の子孫要素のうち指定された拡張名に一致するすべての子孫要素を取得するためのインデクサーを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 elem.Descendants[{namespaceName}localName]  
 ```  
   
-## プロパティ値\/戻り値  
- `IEnumerable<XElement> Item(String expandedName)` 型のインデクサー。このインデクサーは、指定された子孫要素の展開名を受け取り、<xref:System.Collections.IEnumerable>`<`<xref:System.Xml.Linq.XElement>`>` コレクション内の一致する子要素を返します。  
+## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
+ `IEnumerable<XElement> Item(String expandedName)` 型のインデクサー。 このインデクサーは、指定された子孫要素の展開名を受け取り、<xref:System.Collections.IEnumerable>`<`<xref:System.Xml.Linq.XElement>`>` コレクション内の一致する子要素を返します。  
   
-## 解説  
- このプロパティは、<xref:System.Xml.Linq.XContainer> クラスの <xref:System.Xml.Linq.XContainer.Descendants%28System.Xml.Linq.XName%29?displayProperty=fullName> メソッドに相当します。  
+## <a name="remarks"></a>コメント  
+ このプロパティは、<xref:System.Xml.Linq.XContainer> クラスの <xref:System.Xml.Linq.XContainer.Descendants(System.Xml.Linq.XName)?displayProperty=fullName> メソッドに相当します。  
   
  返されるコレクション内の要素は、XML ソース ドキュメント順になります。  
   
  このプロパティは、遅延実行を使用します。  
   
-## 参照  
- [XElement Class Dynamic Properties](../designers/xelement-class-dynamic-properties.md)   
- [Elements](../designers/elements-xelement-dynamic-property.md)
+## <a name="see-also"></a>関連項目  
+ [XElement クラスの動的プロパティ](../designers/xelement-class-dynamic-properties.md)   
+ [要素](../designers/elements-xelement-dynamic-property.md)

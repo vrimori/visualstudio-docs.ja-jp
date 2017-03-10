@@ -1,55 +1,70 @@
 ---
 title: "MSBuild 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild 項目"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, Items
 ms.assetid: d762eff4-c92a-4b5f-a944-1ca30aa22319
 caps.latest.revision: 35
-caps.handback.revision: 35
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# MSBuild 項目
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
+ms.openlocfilehash: cba81e0eee6a0ce278c65e8952e75b23a6ebf3cc
+ms.lasthandoff: 02/22/2017
 
-MSBuild 項目はビルド システムへの入力され、通常のファイルを表します。 項目は、要素名に基づいて項目の種類にグループ化されます。 項目の種類は項目の名前付きリストであり、タスクのパラメーターとして使用できます。 タスクは項目値を使用して、ビルド処理のステップを実行します。  
+---
+# <a name="msbuild-items"></a>MSBuild 項目
+MSBuild 項目はビルド システムへの入力であり、通常はファイルを表します。 項目は要素名に基づいてアイテムの種類にグループ化されます。 項目の種類は項目の名前付きリストであり、タスクのパラメーターとして使用できます。 タスクは項目値を使用して、ビルド処理のステップを実行します。  
   
- 所属する項目の種類によっては、項目が名前付き、ため、用語"item"と「アイテムの値」ように使用できます。  
+ 項目名はそれぞれが属するアイテムの種類によって指定されるため、「項目」と「項目値」という用語は同義です。  
   
  **このトピックの内容**  
   
--   [プロジェクト ファイル内の項目を作成します。](#BKMK_Creating1)  
+-   [プロジェクト ファイルで項目を作成する](#BKMK_Creating1)  
   
--   [実行時に項目を作成します。](#BKMK_Creating2)  
+-   [実行時に項目を作成する](#BKMK_Creating2)  
   
--   [プロジェクト ファイル内の項目を参照します。](#BKMK_ReferencingItems)  
+-   [プロジェクト ファイルの項目を参照する](#BKMK_ReferencingItems)  
   
--   [項目を指定するワイルドカードを使用します。](#BKMK_Wildcards)  
+-   [ワイルドカードを使用して項目を指定する](#BKMK_Wildcards)  
   
--   [Exclude 属性を使用します。](#BKMK_ExcludeAttribute)  
+-   [Exclude 属性を使用する](#BKMK_ExcludeAttribute)  
   
 -   [項目メタデータ](#BKMK_ItemMetadata)  
   
-    -   [プロジェクト ファイル内のアイテムのメタデータの参照](#BKMK_ReferencingItemMetadata)  
+    -   [プロジェクト ファイルで項目メタデータを参照する](#BKMK_ReferencingItemMetadata)  
   
-    -   [既知のアイテム メタデータ](#BKMK_WellKnownItemMetadata)  
+    -   [既知の項目メタデータ](#BKMK_WellKnownItemMetadata)  
   
-    -   [メタデータを使用して項目の種類を変換します。](#BKMK_Transforming)  
+    -   [メタデータを使用してアイテムの種類を変換する](#BKMK_Transforming)  
   
--   [項目の定義](#BKMK_ItemDefinitions)  
+-   [項目定義](#BKMK_ItemDefinitions)  
   
--   [ターゲットの ItemGroup の項目の属性](#BKMK_AttributesWithinTargets)  
+-   [Target の ItemGroup の項目の属性](#BKMK_AttributesWithinTargets)  
   
-    -   [属性を削除します。](#BKMK_RemoveAttribute)  
+    -   [Remove 属性](#BKMK_RemoveAttribute)  
   
     -   [KeepMetadata 属性](#BKMK_KeepMetadata)  
   
@@ -57,89 +72,89 @@ MSBuild 項目はビルド システムへの入力され、通常のファイ�
   
     -   [KeepDuplicates 属性](#BKMK_KeepDuplicates)  
   
-##  <a name="a-namebkmkcreating1a-creating-items-in-a-project-file"></a><a name="BKMK_Creating1"></a> プロジェクト ファイル内の項目を作成します。  
- プロジェクト ファイル内の項目の子としての要素を宣言、 [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 要素。 子要素の名前は、項目の種類です。  `Include` 要素の属性は、その項目の種類に含まれる項目 (ファイル) を指定します。 たとえば、次の XML がという項目の種類を作成 `Compile`, 、2 つのファイルを含めています。  
+##  <a name="BKMK_Creating1"></a> プロジェクト ファイルに項目を作成する  
+ プロジェクト ファイル内で、[ItemGroup](../msbuild/itemgroup-element-msbuild.md) 要素の子要素として項目を宣言します。 子要素の名前は、アイテムの種類です。 要素の `Include` 属性は、そのアイテムの種類に組み込まれる項目 (ファイル) を指定します。 たとえば、次の XML では、`Compile` という名前のアイテムの種類を作成し、2 つのファイルを含めています。  
   
-```  
+```xml  
 <ItemGroup>  
     <Compile Include = "file1.cs"/>  
     <Compile Include = "file2.cs"/>  
 </ItemGroup>  
 ```  
   
- "File2.cs"項目が項目"file1.cs"; に置き換わりません値のリストにファイル名を追加する代わりに、 `Compile` 項目の種類。 ビルドの評価フェーズ中に、項目の種類から項目を削除することはできません。  
+ 項目 "file2.cs" は項目 "file1.cs" に取って代わるのではなく、このファイル名がアイテムの種類 `Compile` の値のリストに付加されます。 ビルドの評価フェーズでアイテムの種類から項目を削除することはできません。  
   
- 次の XML は、両方のファイルでいずれかを宣言することで同じ項目の種類を作成 `Include` 属性です。 ファイル名が、セミコロンで区切られたことに注意してください。  
+ 次の XML では、両方のファイルを&1; つの `Include` 属性で宣言することで、同じアイテムの種類を作成しています。 ファイル名はセミコロンで区切られます。  
   
-```  
+```xml  
 <ItemGroup>  
     <Compile Include = "file1.cs;file2.cs"/>  
 </ItemGroup>  
 ```  
   
-##  <a name="a-namebkmkcreating2a-creating-items-during-execution"></a><a name="BKMK_Creating2"></a> 実行時に項目を作成します。  
- 外部にある項目 [ターゲット](../msbuild/target-element-msbuild.md) 要素には、ビルドの評価フェーズ中に値が割り当てられます。 その後の実行フェーズの項目を作成または次のように変更します。  
+##  <a name="BKMK_Creating2"></a> 実行時に項目を作成する  
+ [Target](../msbuild/target-element-msbuild.md) 要素の外側にある項目には、ビルドの評価フェーズで値が割り当てられます。 その後の実行フェーズで、次のようにして項目を作成または変更できます。  
   
--   任意のタスクは、項目を生成できます。 項目を出力する、 [タスク](../msbuild/task-element-msbuild.md) 要素が子を持つことは [出力](../msbuild/output-element-msbuild.md) を持つ要素、 `ItemName` 属性です。  
+-   どのタスクも項目を生成できます。 項目を生成するには、[Task](../msbuild/task-element-msbuild.md) 要素の子要素として、`ItemName` 属性を持つ [Output](../msbuild/output-element-msbuild.md) 要素が必要です。  
   
--    [CreateItem](../msbuild/createitem-task.md) タスクは、項目を生成できます。 この使用法は推奨されていません。  
+-   [CreateItem](../msbuild/createitem-task.md) タスクは、項目を生成できます。 この使用法は推奨されていません。  
   
--   .NET Framework 3.5 以降では `Target` 要素を含めることが [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 項目要素の要素を含むことがあります。  
+-   .NET Framework 3.5 以降では、項目要素を格納できる [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 要素を `Target` 要素に含めることができます。  
   
-##  <a name="a-namebkmkreferencingitemsa-referencing-items-in-a-project-file"></a><a name="BKMK_ReferencingItems"></a> プロジェクト ファイル内の項目を参照します。  
- プロジェクト ファイルで項目の種類を参照する構文を使用する @(`ItemType`)。 たとえばを使用して前の例では、項目の種類を参照 `@(Compile)`します。 この構文を使用すると、そのタスクのパラメーターとして、項目の種類を指定することによって、タスクに項目を渡すことができます。 詳細については、次を参照してください。 [方法: ビルドするファイルの選択](../msbuild/how-to-select-the-files-to-build.md)します。  
+##  <a name="BKMK_ReferencingItems"></a> プロジェクト ファイルの項目を参照する  
+ プロジェクト ファイルでアイテムの種類を参照するには、構文 @(`ItemType`) を使用します。 たとえば、前の例に挙げたアイテムの種類を参照するには、`@(Compile)` を使用します。 この構文を使用してアイテムの種類をタスクのパラメーターとして指定すれば、項目をそのタスクに渡すことができます。 詳細については、「[方法: ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)」を参照してください。  
   
- 既定では、展開されているときに、セミコロン (;) で、項目の種類のアイテムが区別されます。 構文を使用する @(*ItemType*, 、'*区切り記号*') に既定以外の区切り記号を指定します。 詳細については、次を参照してください。 [方法: 表示、項目リストをコンマ区切りで](../msbuild/how-to-display-an-item-list-separated-with-commas.md)します。  
+ 既定では、アイテムの種類の項目は、それが展開されるときにセミコロン (;) によって区切られます。 構文 @(*ItemType*, '*separator*') を使用して、既定以外の区切り記号を指定できます。 詳細については、「[方法: 項目リストをコンマ区切りで表示する](../msbuild/how-to-display-an-item-list-separated-with-commas.md)」を参照してください。  
   
-##  <a name="a-namebkmkwildcardsa-using-wildcards-to-specify-items"></a><a name="BKMK_Wildcards"></a> 項目を指定するワイルドカードを使用します。  
- 使用する、* *、 \*, 、およびでしょうか。 ワイルドカードを使用すると、各ファイルを個別に一覧表示ではなく、ビルドの入力としてファイルのグループを指定します。  
+##  <a name="BKMK_Wildcards"></a> ワイルドカードを使用して項目を指定する  
+ **、\*、および ? をワイルドカード文字として使用して、各ファイルを個別にリストする代わりに、ファイルのグループをビルドの入力として指定できます。  
   
--   ですか。 ワイルドカード文字では、単一の文字と一致します。  
+-   ? ワイルドカード文字は単一の文字と一致します。  
   
--   * ワイルドカード文字が 0 個以上の文字と一致します。  
+-   * ワイルドカード文字は&0; 個以上の文字と一致します。  
   
--   * * ワイルドカード文字のシーケンスには、部分的なパスと一致します。  
+-   ** ワイルドカード文字のシーケンスはパスの一部と一致します。  
   
- たとえば、プロジェクト ファイルで次の要素を使用して、プロジェクト ファイルを含むディレクトリで、すべての .cs ファイルを指定できます。  
+ たとえば、プロジェクト ファイルで次の要素を使用して、プロジェクト ファイルが格納されているディレクトリ内のすべての .cs ファイルを指定できます。  
   
-```  
+```xml  
 <CSFile Include="*.cs"/>  
 ```  
   
- 次の要素は、d: ドライブ上のすべての .vb ファイルを選択します。  
+ 次の要素は D: ドライブのすべての .vb ファイルを選択します。  
   
-```  
+```xml  
 <VBFile Include="D:/**/*.vb"/>  
 ```  
   
- ワイルドカード文字の詳細については、次を参照してください。 [方法: ビルドするファイルの選択](../msbuild/how-to-select-the-files-to-build.md)します。  
+ ワイルドカード文字の詳細については、「[方法: ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)」を参照してください。  
   
-##  <a name="a-namebkmkexcludeattributea-using-the-exclude-attribute"></a><a name="BKMK_ExcludeAttribute"></a> Exclude 属性を使用します。  
- 項目の要素を含めることができます、 `Exclude` 属性で、項目の種類から特定の項目 (ファイル) を除外します。  `Exclude` 属性は、通常、ワイルドカード文字と共に使用します。 たとえば、次の XML に追加されて、ディレクトリ内のすべての .cs ファイル CSFile 項目の種類を除く、 `DoNotBuild.cs` ファイルです。  
+##  <a name="BKMK_ExcludeAttribute"></a> Exclude 属性を使用する  
+ 項目の要素には `Exclude` 属性を含めることができます。この属性は、アイテムの種類から特定の項目 (ファイル) を除外します。 `Exclude` 属性は通常、ワイルドカード文字と一緒に使用されます。 たとえば、次の XML は、`DoNotBuild.cs` ファイルを除き、ディレクトリのすべての .cs ファイルをアイテムの種類 CSFile に追加します。  
   
-```  
+```xml  
 <ItemGroup>  
     <CSFile  Include="*.cs"  Exclude="DoNotBuild.cs"/>  
 </ItemGroup>  
 ```  
   
-  `Exclude` 属性によって追加された項目のみに影響を与えます、 `Include` その両方を含む項目要素の属性です。 次の例では、前の項目要素で追加された Form1.cs ファイルを除外はありません。  
+ `Exclude` 属性は、同一の項目要素内にある `Include` 属性によって追加された項目のみに作用します。 次の例では、Form1.cs ファイルは前の項目要素で追加されているため、除外されません。  
   
-```  
+```xml  
 <Compile Include="*.cs" />  
 <Compile Include="*.res" Exclude="Form1.cs">  
 ```  
   
- 詳細については、次を参照してください。 [方法: ビルドから除外するファイル](../msbuild/how-to-exclude-files-from-the-build.md)します。  
+ 詳細については、「[方法: ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)」を参照してください。  
   
-##  <a name="a-namebkmkitemmetadataa-item-metadata"></a><a name="BKMK_ItemMetadata"></a> 項目メタデータ  
- 項目の情報に加えて、メタデータを含めることが、 `Include` と `Exclude` 属性です。 このメタデータは、項目に関するまたはバッチ タスクとコア ターゲットの詳細を必要とするタスクで使用できます。 詳細については、次を参照してください。 [バッチ処理](../msbuild/msbuild-batching.md)します。  
+##  <a name="BKMK_ItemMetadata"></a> 項目メタデータ  
+ 項目には、`Include` および `Exclude` 属性の情報に加えて、メタデータを含めることができます。 このメタデータは、項目に関する詳細情報を必要とするタスクで使用できます。あるいは、タスクとターゲットをバッチ処理するために使用できます。 詳細については、「[MSBuild バッチ](../msbuild/msbuild-batching.md)」を参照してください。  
   
- メタデータは、item 要素の子要素として、プロジェクト ファイルで宣言されているキー/値ペアのコレクションです。 子要素の名前は、メタデータの名前と、子要素の値は、メタデータの値。  
+ メタデータは、項目の要素の子要素としてプロジェクト ファイルで宣言されているキーと値のペアのコレクションです。 子要素の名前はメタデータの名前であり、子要素の値はメタデータの値です。  
   
- メタデータは、それを含む項目要素に関連付けられます。 たとえば、次の XML が追加されて `Culture` メタデータ値を持つ `Fr` "one.cs"と、CSFile の"two.cs"アイテムの両方に項目の種類。  
+ メタデータは、それが含まれる項目要素に関連付けられています。 たとえば、次の XML は、値 `Fr` を持つ `Culture` メタデータを、アイテムの種類 CSFile の "one.cs" と "two.cs" の両方の項目に追加します。  
   
-```  
+```xml  
 <ItemGroup>  
     <CSFile Include="one.cs;two.cs">  
         <Culture>Fr</Culture>  
@@ -147,12 +162,12 @@ MSBuild 項目はビルド システムへの入力され、通常のファイ�
 </ItemGroup>  
 ```  
   
- 項目には 0 以上のメタデータ値を指定できます。 メタデータの値は、いつでも変更できます。 メタデータを空の値に設定すると、効果的にから削除した場合、ビルドします。  
+ 項目には&0; 以上のメタデータ値を指定できます。 メタデータの値は、いつでも変更できます。 メタデータを空の値に設定すると、実質的にはビルドからメタデータが削除されます。  
   
-###  <a name="a-namebkmkreferencingitemmetadataa-referencing-item-metadata-in-a-project-file"></a><a name="BKMK_ReferencingItemMetadata"></a> プロジェクト ファイル内のアイテムのメタデータの参照  
- プロジェクト ファイルで項目のメタデータを参照するには、構文の使用を %(`ItemMetadataName`)。 あいまいさが存在する場合は、項目の種類の名前を使用して参照を修飾することができます。 たとえば、設定できる %(*ItemType.ItemMetaDataName*)。次の例では、メタデータの表示を使用して、メッセージ タスクのバッチします。 バッチ処理のアイテム メタデータを使用する方法の詳細については、次を参照してください。 [タスクのバッチの項目メタデータ](../msbuild/item-metadata-in-task-batching.md)します。  
+###  <a name="BKMK_ReferencingItemMetadata"></a> プロジェクト ファイルで項目メタデータを参照する  
+ プロジェクト ファイルで項目のメタデータを参照するには、%(`ItemMetadataName`) という構文を使用します。 あいまいさが存在する場合は、アイテムの種類の名前を使用して参照を修飾できます。 たとえば、%(*ItemType.ItemMetaDataName*) と指定できます。次の例では、Display メタデータを使用して Message タスクをバッチ処理します。 バッチ処理のために項目のメタデータを使用する方法の詳細については、「[タスクのバッチの項目メタデータ](../msbuild/item-metadata-in-task-batching.md)」を参照してください。  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <ItemGroup>  
         <Stuff Include="One.cs" >  
@@ -168,15 +183,15 @@ MSBuild 項目はビルド システムへの入力され、通常のファイ�
 </Project>  
 ```  
   
-###  <a name="a-namebkmkwellknownitemmetadataa-well-known-item-metadata"></a><a name="BKMK_WellKnownItemMetadata"></a> 既知のアイテム メタデータ  
- 項目が項目の種類に追加されると、その項目には、既知のメタデータが割り当てられます。 たとえば、すべての項目が、既知のメタデータをある `%(Filename)`, 、した項目のファイル名の値を保持します。 詳細については、次を参照してください。 [既知のアイテム メタデータ](../msbuild/msbuild-well-known-item-metadata.md)します。  
+###  <a name="BKMK_WellKnownItemMetadata"></a> 既知の項目メタデータ  
+ アイテムの種類に追加した項目には、既知のメタデータが割り当てられます。 たとえば、すべての項目には既知のメタデータ `%(Filename)` があり、その値は項目のファイル名です。 詳細については、「[既知の項目メタデータ](../msbuild/msbuild-well-known-item-metadata.md)」を参照してください。  
   
-###  <a name="a-namebkmktransforminga-transforming-item-types-by-using-metadata"></a><a name="BKMK_Transforming"></a> メタデータを使用して項目の種類を変換します。  
- メタデータを使用して、新しい項目リストに項目リストを変換できます。 たとえば、項目の種類を変換する `CppFiles` .obj ファイルの対応する一覧に、式を使用しての .cpp ファイルを表す項目を含む `@(CppFiles -> '%(Filename).obj')`します。  
+###  <a name="BKMK_Transforming"></a> メタデータを使用してアイテムの種類を変換する  
+ メタデータを使用して、項目リストを新しい項目リストに変換できます。 たとえば、式 `@(CppFiles -> '%(Filename).obj')` を使用すると、.cpp ファイルを表す項目を持つアイテムの種類 `CppFiles` を、.obj ファイルの対応するリストに変換できます。  
   
- 次のコード作成、 `CultureResource` 項目の種類のすべてのコピーを含む `EmbeddedResource` を持つアイテムを `Culture` メタデータ。  `Culture` メタデータ値が、新しいメタデータの値になります `CultureResource.TargetDirectory`します。  
+ 次のコードでは `CultureResource` というアイテムの種類を作成し、`Culture` メタデータを持つすべての `EmbeddedResource` 項目のコピーをそこに含めます。 `Culture` メタデータの値は、新しいメタデータ `CultureResource.TargetDirectory` の値になります。  
   
-```  
+```xml  
 <Target Name="ProcessCultureResources">  
     <ItemGroup>  
         <CultureResource Include="@(EmbeddedResource)"  
@@ -187,12 +202,12 @@ MSBuild 項目はビルド システムへの入力され、通常のファイ�
 </Target>  
 ```  
   
- 詳細については、次を参照してください。 [変換](../msbuild/msbuild-transforms.md)します。  
+ 詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」を参照してください。  
   
-##  <a name="a-namebkmkitemdefinitionsa-item-definitions"></a><a name="BKMK_ItemDefinitions"></a> 項目の定義  
- 以降、.NET Framework 3.5 では、追加できます既定のメタデータ、項目の種類を使用して、 [ItemDefinitionGroup 要素](../msbuild/itemdefinitiongroup-element-msbuild.md)します。 よく知られているメタデータと同様に、既定のメタデータは、指定した項目の種類のすべての項目に関連付けられます。 既定のメタデータ項目の定義で明示的にオーバーライドできます。 たとえば、次の XML は、 `Compile` アイテム"one.cs"や"three.cs"メタデータ `BuildDay` "Monday"の値を使用します。 このコードは項目"two.cs"のメタデータを得られます `BuildDay` "Tuesday"の値を使用します。  
+##  <a name="BKMK_ItemDefinitions"></a> 項目定義  
+ .NET Framework 3.5 以降、[ItemDefinitionGroup 要素](../msbuild/itemdefinitiongroup-element-msbuild.md)を使用して、既定のメタデータをアイテムの種類に追加できるようになりました。 既知のメタデータと同様に、既定のメタデータも、指定するアイテムの種類に含まれるすべての項目に関連付けられます。 既定のメタデータは、項目定義で明示的にオーバーライドできます。 たとえば、次の XML は `Compile` の項目 "one.cs" および "three.cs" に、"Monday" という値を持つメタデータ `BuildDay` を指定します。 コードは項目 "two.cs" に、値 "Tuesday" を持つメタデータ `BuildDay` を指定します。  
   
-```  
+```xml  
 <ItemDefinitionGroup>  
     <Compile>  
         <BuildDay>Monday</BuildDay>  
@@ -206,17 +221,17 @@ MSBuild 項目はビルド システムへの入力され、通常のファイ�
 </ItemGroup>  
 ```  
   
- 詳細については、次を参照してください。 [項目定義](../msbuild/item-definitions.md)します。  
+ 詳細については、「[項目定義](../msbuild/item-definitions.md)」を参照してください。  
   
-##  <a name="a-namebkmkattributeswithintargetsa-attributes-for-items-in-an-itemgroup-of-a-target"></a><a name="BKMK_AttributesWithinTargets"></a> ターゲットの ItemGroup の項目の属性  
- .NET Framework 3.5 以降では `Target` 要素を含めることが [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 項目要素の要素を含むことがあります。 項目で指定されているときに、このセクションの属性が有効な `ItemGroup` 内にある、 `Target`です。  
+##  <a name="BKMK_AttributesWithinTargets"></a> Target の ItemGroup の項目の属性  
+ .NET Framework 3.5 以降では、項目要素を格納できる [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 要素を `Target` 要素に含めることができます。 このセクションの属性は、`Target` にある `ItemGroup` の項目に指定されている場合に有効です。  
   
-###  <a name="a-namebkmkremoveattributea-remove-attribute"></a><a name="BKMK_RemoveAttribute"></a> 属性を削除します。  
- [項目を `ItemGroup` のターゲットを含めることが、 `Remove` 属性で、項目の種類から特定の項目 (ファイル) を削除します。 この属性は、.NET Framework 3.5 で導入されました。  
+###  <a name="BKMK_RemoveAttribute"></a> Remove 属性  
+ ターゲットの `ItemGroup` の項目には `Remove` 属性を含めることができます。この属性は、アイテムの種類から特定の項目 (ファイル) を削除します。 この属性は、.NET Framework 3.5 で導入されました。  
   
- 次の例では、項目の種類 Compile からすべての .config ファイルを削除します。  
+ 次の例では、アイテムの種類 Compile からすべての .config ファイルを削除します。  
   
-```  
+```xml  
 <Target>  
     <ItemGroup>  
         <Compile Remove="*.config"/>  
@@ -224,12 +239,12 @@ MSBuild 項目はビルド システムへの入力され、通常のファイ�
 </Target>  
 ```  
   
-###  <a name="a-namebkmkkeepmetadataa-keepmetadata-attribute"></a><a name="BKMK_KeepMetadata"></a> KeepMetadata 属性  
- Item 要素を含めることができます、ターゲット内の項目が生成された場合、 `KeepMetadata` 属性です。 この属性を指定すると、その名のセミコロン区切りのリストで指定されているメタデータのみはターゲット アイテムにソース アイテムから転送されます。 この属性を空の値を指定しないと同じです。  `KeepMetadata` 属性は、.NET Framework 4.5 で導入されました。  
+###  <a name="BKMK_KeepMetadata"></a> KeepMetadata 属性  
+ ターゲット内に項目が生成される場合、項目要素に `KeepMetadata` 属性を含めることができます。 この属性が指定される場合、セミコロン区切りの名前リストで指定されているメタデータのみがソース項目からターゲット項目に転送されます。 この属性に空の値を指定することは、値を指定しないことと同じです。 `KeepMetadata` 属性は、.NET Framework 4.5 で導入されました。  
   
- 次の例では、使用する方法、 `KeepMetadata` 属性です。  
+ 次の例は、`KeepMetadata` 属性を使用する方法を示しています。  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"  
 ToolsVersion="4.0">  
   
@@ -266,12 +281,12 @@ Output:
 -->  
 ```  
   
-###  <a name="a-namebkmkremovemetadataa-removemetadata-attribute"></a><a name="BKMK_RemoveMetadata"></a> RemoveMetadata 属性  
- Item 要素を含めることができます、ターゲット内の項目が生成された場合、 `RemoveMetadata` 属性です。 この属性が指定されている場合のすべてのメタデータがソース アイテムから、ターゲット アイテムに転送メタデータ以外の名前、セミコロンで区切られたリストに名前が含まれています。 この属性を空の値を指定しないと同じです。  `RemoveMetadata` 属性は、.NET Framework 4.5 で導入されました。  
+###  <a name="BKMK_RemoveMetadata"></a> RemoveMetadata 属性  
+ ターゲット内に項目が生成される場合、項目要素に `RemoveMetadata` 属性を含めることができます。 この属性が指定される場合、名前がセミコロン区切りの名前リストに含まれているメタデータを除いて、すべてのメタデータがソース項目からターゲット項目に転送されます。 この属性に空の値を指定することは、値を指定しないことと同じです。 `RemoveMetadata` 属性は、.NET Framework 4.5 で導入されました。  
   
- 次の例では、使用する方法、 `RemoveMetadata` 属性です。  
+ 次の例は、`RemoveMetadata` 属性を使用する方法を示しています。  
   
-```  
+```xml  
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   
     <PropertyGroup>  
@@ -315,14 +330,14 @@ Output:
 -->  
 ```  
   
-###  <a name="a-namebkmkkeepduplicatesa-keepduplicates-attribute"></a><a name="BKMK_KeepDuplicates"></a> KeepDuplicates 属性  
- Item 要素を含めることができます、ターゲット内の項目が生成された場合、 `KeepDuplicates` 属性です。 `KeepDuplicates`  `Boolean` 項目が既存のアイテムの完全な複製である場合に、項目がターゲット グループに追加するかどうかを指定する属性です。  
+###  <a name="BKMK_KeepDuplicates"></a> KeepDuplicates 属性  
+ ターゲット内に項目が生成される場合、項目要素に `KeepDuplicates` 属性を含めることができます。 `KeepDuplicates` は、項目が既存の項目の完全な複製である場合に、項目をターゲット グループに追加するかどうかを指定する `Boolean` 属性です。  
   
- 項目が追加されたソースとターゲットのアイテムには、さまざまなメタデータが、同じインクルード値がある、たとえ `KeepDuplicates` に設定されている `false`します。 この属性を空の値を指定しないと同じです。  `KeepDuplicates` 属性は、.NET Framework 4.5 で導入されました。  
+ ソースとターゲットの項目の Include 値が同じでメタデータが異なる場合、`KeepDuplicates` が `false` に設定されていても項目は追加されます。 この属性に空の値を指定することは、値を指定しないことと同じです。 `KeepDuplicates` 属性は、.NET Framework 4.5 で導入されました。  
   
- 次の例では、使用する方法、 `KeepDuplicates` 属性です。  
+ 次の例は、`KeepDuplicates` 属性を使用する方法を示しています。  
   
-```  
+```xml  
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   
     <ItemGroup>  
@@ -356,10 +371,10 @@ Output:
   
 ## <a name="see-also"></a>関連項目  
  [MSBuild の概念](../msbuild/msbuild-concepts.md)  
- [MSBuild](../msbuild/msbuild1.md)   
- [方法: ビルドするファイルの選択](../msbuild/how-to-select-the-files-to-build.md)   
- [方法: ビルドからファイルを除外します。](../msbuild/how-to-exclude-files-from-the-build.md)   
- [方法: 項目リストをコンマ区切りで表示](../msbuild/how-to-display-an-item-list-separated-with-commas.md)   
- [項目の定義](../msbuild/item-definitions.md)   
- [バッチ処理](../msbuild/msbuild-batching.md)   
+ [MSBuild](../msbuild/msbuild.md)   
+ [方法: ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)   
+ [方法: ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)   
+ [方法: 項目リストをコンマ区切りで表示する](../msbuild/how-to-display-an-item-list-separated-with-commas.md)   
+ [項目定義](../msbuild/item-definitions.md)   
+ [バッチ](../msbuild/msbuild-batching.md)   
  [Item 要素 (MSBuild)](../msbuild/item-element-msbuild.md)

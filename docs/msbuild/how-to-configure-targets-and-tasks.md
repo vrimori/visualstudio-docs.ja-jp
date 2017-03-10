@@ -1,48 +1,63 @@
 ---
-title: "方法 : ターゲットとタスクを構成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "方法: ターゲットとタスクを構成する | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 92814100-392a-471d-96fd-e26f637d6cc2
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# 方法 : ターゲットとタスクを構成する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: ac979e7287046164db37848778f648656f7230a6
+ms.lasthandoff: 02/22/2017
 
-MSBuild 選択したタスクを対象とする環境の実行に開発用コンピューターの環境に関係なく設定できます。  たとえば、 32 ビット アーキテクチャを対象とするアプリケーションをビルドするには、 64 ビット コンピューターを使用すると、選択したタスクは 32 ビット プロセスで動作します。  
+---
+# <a name="how-to-configure-targets-and-tasks"></a>方法 : ターゲットとタスクを構成する
+一部の MSBuild タスクは、開発コンピューターの環境に関係なく、それがターゲットとする環境で実行されるように設定できます。 たとえば、64 ビット コンピューターを使用し、32 ビット アーキテクチャをターゲットとするアプリケーションを構築するとき、一部のタスクが 32 ビット プロセスで実行されます。  
   
 > [!NOTE]
->  ビルド タスクが Visual C\# などの .NET 言語では、 Visual Basic、および使用するネイティブ リソースまたはツールを記述したら、適合せずに、対象のコンテキストで実行されます。  
+>  ビルド タスクが Visual C# や Visual Basic のような .NET 言語で記述されており、ネイティブのリソースまたはツールを使用しない場合、調整なしで、あらゆるターゲット コンテンツで実行されます。  
   
-## UsingTask の属性、タスク パラメーター  
- `UsingTask` の次の属性は、特定のビルド処理のタスクのすべての操作に影響します:  
+## <a name="usingtask-attributes-and-task-parameters"></a>UsingTask 属性とタスク パラメーター  
+ 次の `UsingTask` 属性は、特定のビルド プロセスで、あるタスクのすべての操作に影響を与えます。  
   
--   `Runtime` の属性が存在する場合、共通言語ランタイムのバージョンを設定 \(CLR\)し、これらの値のいずれかを実行できます: `CLR2`、 `CLR4`、 `CurrentRuntime`、または `*` （すべてのランタイム （CLR）。  
+-   `Runtime` 属性は、それが存在する場合、共通言語ランタイム (CLR) バージョンを設定し、値として `CLR2`、`CLR4`、`CurrentRuntime`、`*` (任意のランタイム) のいずれかを取得します。  
   
--   `Architecture` の属性が存在する場合、プラットフォームとビットを設定し、これらの値のいずれかを実行できます: `x86`、 `x64`、 `CurrentArchitecture`、または `*` （すべてのアーキテクチャ）。  
+-   `Architecture` 属性は、それが存在する場合、プラットフォームとビット数を設定し、値として `x86`、`x64`、`CurrentArchitecture`、`*` (任意のアーキテクチャ) のいずれかを取得します。  
   
--   `TaskFactory` の属性が存在する場合、タスク インスタンスを設定し、値のみ `TaskHostFactory`作成し、実行するタスク ファクトリを受け取ります。  詳細については、タスク ファクトリが、このドキュメントの後半のセクションを参照してください。  
+-   `TaskFactory` 属性は、それが存在する場合、タスク インスタンスを作成して実行するタスク ファクトリを設定し、値として `TaskHostFactory` のみを取得します。 詳細については、このドキュメントで後述する「タスク ファクトリ」を参照してください。  
   
-```  
+```xml  
 <UsingTask TaskName="SimpleTask"   
    Runtime="CLR2"  
    Architecture="x86"  
    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v3.5.dll" />  
 ```  
   
- 個々のタスクのターゲットのコンテキストを設定するには `MSBuildRuntime` と `MSBuildArchitecture` パラメーターを使用できます。  
+ `MSBuildRuntime` パラメーターと `MSBuildArchitecture` パラメーターを利用し、個々のタスクのターゲット コンテキストを設定することもできます。  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
    <Target Name="MyTarget">  
       <SimpleTask MSBuildRuntime="CLR2" MSBuildArchitecture= "x86"/>  
@@ -50,14 +65,14 @@ MSBuild 選択したタスクを対象とする環境の実行に開発用コン
 </Project>  
 ```  
   
- MSBuild は、タスクを実行する前に、同じターゲットのコンテキストがある一致の `UsingTask` を検索します。  `UsingTask` でない対応するタスクで指定されているが、パラメーターが一致すると見なされます。  タスクでない対応する `UsingTask` で指定したが、パラメーターは、一致すると見なされます。  パラメーター値が `UsingTask` またはタスクで指定されていない場合、値は `*` （パラメーター）に設定されます。  
+ MSBuild はタスクを実行する前に、一致する (ターゲット コンテキストが同じ) `UsingTask` を探します。  `UsingTask` で指定されているが、該当するタスクにないパラメーターは一致すると見なされます。  タスクで指定されているが、該当する `UsingTask` にないパラメーターも一致すると見なされます。 パラメーター値が `UsingTask` にもタスクにも指定されていない場合、値は既定として `*` (任意のパラメーター) になります。  
   
 > [!WARNING]
->  複数の `UsingTask` があり、すべてとの `TaskName`、 `Runtime`と `Architecture` の属性がの場合、は評価される最後の 1 つが他を置き換えます。  
+>  複数の `UsingTask` が存在し、すべてに一致する `TaskName`、`Runtime`、`Architecture` 属性がある場合、最後に評価されたものが他に取って代わります。  
   
- パラメーターはタスクで設定されている場合、これらのパラメーターに一致する試みますまたは、少なくとも検索ように、これらの競合ではありません。 MSBuild はを `UsingTask` 。  複数の `UsingTask` は、同じタスクの対象のコンテキストを指定できます。  たとえば、異なるターゲット環境ごとに異なる実装があるタスクは、この 1 に類似する可能性があります:  
+ パラメーターがタスクに設定されていると、MSBuild は、それらのパラメーターに一致するか、少なくともそれらと競合しない `UsingTask` を探します。  複数の `UsingTask` が同じタスクのターゲット コンテキストを指定できます。  たとえば、異なるターゲット環境のために異なる実行可能ファイルが与えられているタスクは次のようになります。  
   
-```  
+```xml  
 <UsingTask TaskName="MyTool"   
    Runtime="CLR2"  
    Architecture="x86"  
@@ -76,20 +91,20 @@ MSBuild 選択したタスクを対象とする環境の実行に開発用コン
   
 ```  
   
-## タスク ファクトリ  
- これがタスクを実行する前に、現在のソフトウェアのコンテキストで実行するように指定するかどうかを、チェックします。  タスクによって指定されている場合、現在のプロセスで実行する AssemblyTaskFactory に渡し、; それ以外の場合、 MSBuild はターゲットのコンテキストに一致するプロセスのタスクを実行する TaskHostFactory にタスクを渡します。  現在のコンテキストおよび対象のコンテキストが一致した場合でも、 `TaskHostFactory`へ `TaskFactory` を設定することによってプロセス （分離、セキュリティ、またはそのほかの原因の場合）実行するタスクを強制できます。  
+## <a name="task-factories"></a>タスク ファクトリ  
+ MSBuild はタスクを実行する前に、現在のソフトウェア コンテキストで実行するように指定されているかどうかを確認します。  タスクがそのように指定されている場合、MSBuild は AssemblyTaskFactory にタスクを渡します。AssemblyTaskFactory はタスクを現在のプロセスで実行します。現在のプロセスで実行するように指定されていない場合、MSBuild は TaskHostFactory にタスクを渡します。TaskHostFactory は、ターゲット コンテキストに一致するプロセスでタスクを実行します。 現在のコンテキストとターゲット コンテキストが一致する場合でも、`TaskFactory` を `TaskHostFactory` に設定することで、プロセスの外でタスクを実行するように強制できます (隔離、セキュリティ、またはその他の理由から)。  
   
-```  
+```xml  
 <UsingTask TaskName="MisbehavingTask"   
    TaskFactory="TaskHostFactory"  
    AssemblyFile="$(MSBuildToolsPath)\MyTasks.dll">  
 </UsingTask>  
 ```  
   
-## 幻影のタスク パラメーター  
- 他のタスク パラメーターと同様に、 `MSBuildRuntime` と `MSBuildArchitecture` 、ビルド プロパティで設定できます。  
+## <a name="phantom-task-parameters"></a>ファントム タスク パラメーター  
+ 他のタスク パラメーターと同様に、`MSBuildRuntime` と `MSBuildArchitecture` はビルド プロパティから設定できます。  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
    <PropertyGroup>  
       <FrameworkVersion>3.0</FrameworkVersion>  
@@ -98,17 +113,17 @@ MSBuild 選択したタスクを対象とする環境の実行に開発用コン
       <SimpleTask MSBuildRuntime="$(FrameworkVerion)" MSBuildArchitecture= "x86"/>  
    </Target>  
 </Project>  
-```  
+```xml  
   
- 他のタスク パラメーターとは異なり、 `MSBuildRuntime` と `MSBuildArchitecture` は、タスク自体に明確ではありません。  これが実行されるコンテキストを認識するタスクを作成するには、 .NET Framework を呼び出すことによってコンテキストをテストしたり、他のタスク パラメーターでコンテキスト情報を渡すためにビルド プロパティを使用します。  
-  
-> [!NOTE]
->  `UsingTask` の 属性は、ツール セットと環境のプロパティから設定できます。  
-  
- `MSBuildRuntime` と `MSBuildArchitecture` パラメーターは、ターゲット コンテキストを設定するほとんどのスコープの制限も柔軟に示します。  タスクが実行を開始するまで一方、タスク インスタンス自体で設定され、評価されないので評価時、およびビルド時の両方に使用できるプロパティの完全なスコープから値を取得できます。  一方、これらのパラメーターは、特定のターゲット タスクの特定のインスタンスにのみ適用されます。  
+ Unlike other task parameters, `MSBuildRuntime` and `MSBuildArchitecture` are not apparent to the task itself.  To write a task that is aware of the context in which it runs, you must either test the context by calling the .NET Framework, or use build properties to pass the context information through other task parameters.  
   
 > [!NOTE]
->  タスク パラメーターは親ノードのコンテキストではないタスク ホストのコンテキスト内で評価されます。ランタイムであるまたはアーキテクチャ依存は親ノードに一致する値 （プログラム ファイルの場所など）を評価する環境変数。  ただし、同じ環境変数がタスクによって直接読み取られた時点で解放、タスク ホストのコンテキスト内で正しく評価されます。  
+>  `UsingTask` attributes can be set from toolset and environment properties.  
   
-## 参照  
- [ターゲットとタスクの構成](../msbuild/configuring-targets-and-tasks.md)
+ The `MSBuildRuntime` and `MSBuildArchitecture` parameters provide the most flexible way to set the target context, but also the most limited in scope.  On the one hand, because they are set on the task instance itself and are not evaluated until the task is about to run, they can derive their value from the full scope of properties available at both evaluation-time and build-time.  On the other hand, these parameters only apply to a particular instance of a task in a particular target.  
+  
+> [!NOTE]
+>  Task parameters are evaluated in the context of the parent node, not in the context of the task host.Environment variables that are runtime- or architecture- dependent (such as the Program files location) will evaluate to the value that matches the parent node.  However, if the same environment variable is read directly by the task, it will correctly be evaluated in the context of the task host.  
+  
+## See Also  
+ [Configuring Targets and Tasks](../msbuild/configuring-targets-and-tasks.md)

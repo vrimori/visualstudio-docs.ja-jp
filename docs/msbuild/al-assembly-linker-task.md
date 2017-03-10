@@ -1,83 +1,98 @@
 ---
-title: "AL (Assembly Linker) Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/msbuild/2003#AL"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "AL task [MSBuild]"
-  - "MSBuild, AL task"
+title: "AL (アセンブリ リンカー) タスク | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#AL
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- AL task [MSBuild]
+- MSBuild, AL task
 ms.assetid: 2ddefbf2-5662-4d55-99a6-ac383bf44560
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# AL (Assembly Linker) Task
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: f3f7d61bf46f318249dd3b54caee27998d7fd105
+ms.lasthandoff: 02/22/2017
 
-AL タスクは、[!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] と一緒に配布される AL.exe ツールをラップします。  このアセンブリ リンカー ツールは、モジュール ファイルまたはリソース ファイルである 1 つ以上のファイルから、マニフェスト付きでアセンブリを作成するために使用されます。  これらの機能はコンパイラおよび開発環境に既に備わっている場合があるため、必ずしもこのタスクを直接使用する必要はありません。  アセンブリ リンカーが最も役立つのは、開発者が混合言語による開発で生成されるコンポーネント ファイルなどの複数のコンポーネント ファイルから 1 つのアセンブリを作成する必要がある場合です。  このタスクは、各モジュールを 1 つのアセンブリ ファイルに結合するものではありません。作成されたアセンブリを正常に読み込むためには、個々のモジュールを引き続き配布して、配布先で使用できるようにする必要があります。  AL.exe の詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」を参照してください。  
+---
+# <a name="al-assembly-linker-task"></a>AL (アセンブリ リンカー) タスク
+AL タスクは、[!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] と共に配布されるツールである AL.exe をラップします。 アセンブリ リンカー ツールは、モジュールまたはリソース ファイルである&1; つ以上のファイルから、マニフェストを含むアセンブリを作成するために使われます。 これらの機能はコンパイラおよび開発環境で既に提供されていることがあるので、ほとんどの場合、このタスクを直接使う必要はありません。 アセンブリ リンカーは、混合言語の開発から生成されるものなど、複数のコンポーネント ファイルから&1; つのアセンブリを作成する必要がある開発者に適しています。 このタスクでは、複数のモジュールが&1; つのアセンブリ ファイルに結合されることはありません。生成されたアセンブリを正しく読み込むためには、やはり個々のモジュールを配布して使用できるようにする必要があります。 AL.exe について詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」をご覧ください。  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AL` タスクのパラメーターの説明を次の表に示します。  
   
 |パラメーター|説明|  
-|------------|--------|  
-|`AlgorithmID`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリ マニフェストを含むファイルを除き、マルチファイル アセンブリ内の全ファイルをハッシュするためのアルゴリズムを指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/algid` オプションの説明を参照してください。|  
-|`BaseAddress`|省略可能な `String` 型のパラメーターです。<br /><br /> 実行時にユーザーのコンピューターに DLL を読み込む先のアドレスを指定します。  オペレーティング システムにプロセス空間内で DLL を再配置させる代わりに DLL のベース アドレスを指定しておくと、アプリケーションの読み込み速度が速くなります。  このパラメーターは、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の \/base\[address\] オプションに対応します。|  
-|`CompanyName`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Company` フィールドの文字列を指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/comp[any]` オプションの説明を参照してください。|  
-|`Configuration`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Configuration` フィールドの文字列を指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/config[uration]` オプションの説明を参照してください。|  
-|`Copyright`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Copyright` フィールドの文字列を指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/copy[right]` オプションの説明を参照してください。|  
-|`Culture`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリに関連付けるカルチャ文字列を指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/c[ulture]` オプションの説明を参照してください。|  
-|`DelaySign`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 公開キーだけをアセンブリに格納する場合は `true`、アセンブリに完全に署名する場合は `false` にします。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/delay[sign]` オプションの説明を参照してください。|  
-|`Description`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Description` フィールドの文字列を指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/descr[iption]` オプションの説明を参照してください。|  
-|`EmbedResources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 指定されたリソースを、アセンブリ マニフェストを格納するイメージに埋め込みます。  このタスクでは、リソース ファイルの内容をイメージにコピーします。  このパラメーターに渡すアイテムには、`LogicalName` および `Access` と呼ばれるオプションのメタデータを付加することができます。  `LogicalName` メタデータは、リソースの内部 ID を指定するために使用します。  `Access` メタデータを `private` に設定すると、このリソースを他のアセンブリで表示できないようにすることができます。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/embed[resource]` オプションの説明を参照してください。|  
-|`EvidenceFile`|省略可能な `String` 型のパラメーターです。<br /><br /> `Security.Evidence` のリソース名を持つアセンブリに、指定されたファイルを埋め込みます。<br /><br /> 通常のリソースに対して `Security.Evidence` を使用することはできません。  このパラメーターは、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/e[vidence]` オプションに対応します。|  
-|`ExitCode`|省略可能な `Int32` 型の読み取り専用出力パラメーターです。<br /><br /> 実行したコマンドの終了コードを示します。|  
-|`FileVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `File Version` フィールドの文字列を指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/fileversion` オプションの説明を参照してください。|  
-|`Flags`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Flags` フィールドに値を指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/flags` オプションの説明を参照してください。|  
-|`GenerateFullPaths`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> エラー メッセージで報告されるすべてのファイルについて、絶対パスを使用するようタスクに指定します。  このパラメーターは、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/fullpaths` オプションに対応します。|  
-|`KeyContainer`|省略可能な `String` 型のパラメーターです。<br /><br /> キー ペアを保持するコンテナーを指定します。  これにより、公開キーがアセンブリ マニフェストに挿入され、アセンブリに署名 \(厳密な名前が指定\) されます。  次に、タスクは最終的なアセンブリに秘密キーで署名します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/keyn[ame]` オプションの説明を参照してください。|  
-|`KeyFile`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリに署名するためのキー ペアまたは公開キーだけを含むファイルを指定します。  コンパイラは、アセンブリ マニフェストに公開キーを挿入し、最終的なアセンブリに秘密キーで署名します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/keyf[ile]` オプションの説明を参照してください。|  
-|`LinkResources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 指定されたリソース ファイルをアセンブリにリンクします。  リソースはアセンブリの一部になりますが、ファイルはコピーされません。  このパラメーターに渡すアイテムには、`LogicalName`、`Target`、および `Access` と呼ばれるオプションのメタデータを付加することができます。  `LogicalName` メタデータは、リソースの内部 ID を指定するために使用します。  `Target` メタデータは、タスクがファイルをコピーする場所のパスとファイル名を指定できます。その後、この新しいファイルはアセンブリにコンパイルされます。  `Access` メタデータを `private` に設定すると、このリソースを他のアセンブリで表示できないようにすることができます。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/link[resource]` オプションの説明を参照してください。|  
-|`MainEntryPoint`|省略可能な `String` 型のパラメーターです。<br /><br /> モジュールを実行可能ファイルに変換するときにエントリ ポイントとして使用する、メソッドの完全修飾名 \(*class.method*\) を指定します。  このパラメーターは、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/main` オプションに対応します。|  
-|`OutputAssembly`|必須の <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> このタスクで作成されるファイルの名前を指定します。  このパラメーターは、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/out` オプションに対応します。|  
-|`Platform`|省略可能な `String` 型のパラメーターです。<br /><br /> このコードを実行できるプラットフォームを限定します。`x86`、`Itanium`、`x64`、または `anycpu` のいずれかです。  既定値は `anycpu` です。  このパラメーターは、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/platform` オプションに対応します。|  
-|`ProductName`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Product` フィールドに文字列を指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/prod[uct]` オプションの説明を参照してください。|  
-|`ProductVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `ProductVersion` フィールドに文字列を指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/productv[ersion]` オプションの説明を参照してください。|  
-|`ResponseFiles`|省略可能な `String[]` 型のパラメーターです。<br /><br /> アセンブリ リンカーに渡す追加のオプションを含む応答ファイルを指定します。|  
+|---------------|-----------------|  
+|`AlgorithmID`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリ マニフェストを含むファイルを除き、マルチファイル アセンブリ内の全ファイルをハッシュするためのアルゴリズムを指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/algid` オプションのドキュメントをご覧ください。|  
+|`BaseAddress`|省略可能な `String` 型のパラメーターです。<br /><br /> 実行時にユーザーのコンピューターに DLL を読み込む先のアドレスを指定します。 オペレーティング システムにプロセス空間内で DLL を再配置させる代わりに DLL のベース アドレスを指定しておくと、アプリケーションの読み込み速度が速くなります。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」の /base[address] オプションに対応します。|  
+|`CompanyName`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Company` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/comp[any]` オプションのドキュメントをご覧ください。|  
+|`Configuration`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Configuration` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/config[uration]` オプションのドキュメントをご覧ください。|  
+|`Copyright`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Copyright` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/copy[right]` オプションのドキュメントをご覧ください。|  
+|`Culture`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリに関連付けるカルチャ文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/c[ulture]` オプションのドキュメントをご覧ください。|  
+|`DelaySign`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> アセンブリに公開キーのみを置く場合は `true`、アセンブリを完全に署名する場合は `false` です。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/delay[sign]` オプションのドキュメントをご覧ください。|  
+|`Description`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Description` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/descr[iption]` オプションのドキュメントをご覧ください。|  
+|`EmbedResources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> アセンブリ マニフェストを含むイメージに指定したリソースを埋め込みます。 このタスクは、リソース ファイルの内容をイメージにコピーします。 このパラメーターに渡すアイテムには、`LogicalName` および `Access` という名前の省略可能なメタデータを添付することができます。 `LogicalName` メタデータは、リソースの内部識別子を指定するために使われます。  リソースを他のアセンブリから見えないようにするには、`Access` メタデータを `private` に設定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/embed[resource]` オプションのドキュメントをご覧ください。|  
+|`EvidenceFile`|省略可能な `String` 型のパラメーターです。<br /><br /> `Security.Evidence` というリソース名を持つアセンブリに、指定したファイルを埋め込みます。<br /><br /> 通常のリソースに対して `Security.Evidence` を使うことはできません。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」の `/e[vidence]` オプションに対応します。|  
+|`ExitCode`|省略可能な `Int32` 型の読み取り専用出力パラメーターです。<br /><br /> 実行されたコマンドによって提供される終了コードを指定します。|  
+|`FileVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `File Version` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/fileversion` オプションのドキュメントをご覧ください。|  
+|`Flags`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Flags` フィールドに値を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/flags` オプションのドキュメントをご覧ください。|  
+|`GenerateFullPaths`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> エラー メッセージで報告されるすべてのファイルについて絶対パスを使うよう、タスクに指定します。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」の `/fullpaths` オプションに対応します。|  
+|`KeyContainer`|省略可能な `String` 型のパラメーターです。<br /><br /> キー ペアを保持するコンテナーを指定します。 これにより、公開キーがアセンブリ マニフェストに挿入され、アセンブリに署名 (厳密な名前が指定) されます。 次に、タスクは最終的なアセンブリに秘密キーで署名します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/keyn[ame]` オプションのドキュメントをご覧ください。|  
+|`KeyFile`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリに署名するためのキー ペアまたは公開キーだけを含むファイルを指定します。 コンパイラは、アセンブリ マニフェストに公開キーを挿入し、最終的なアセンブリに秘密キーで署名します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/keyf[ile]` オプションのドキュメントをご覧ください。|  
+|`LinkResources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 指定したリソース ファイルをアセンブリにリンクします。 リソースはアセンブリの一部になりますが、ファイルはコピーされません。 このパラメーターに渡すアイテムには、`LogicalName`、`Target`、および `Access` という名前の省略可能なメタデータを添付することができます。 `LogicalName` メタデータは、リソースの内部識別子を指定するために使われます。 `Target` メタデータでは、タスクがファイルをコピーする先のパスとファイル名を指定できます。その後は、この新しいファイルがアセンブリにコンパイルされます。 リソースを他のアセンブリから見えないようにするには、`Access` メタデータを `private` に設定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/link[resource]` オプションのドキュメントをご覧ください。|  
+|`MainEntryPoint`|省略可能な `String` 型のパラメーターです。<br /><br /> モジュールを実行可能ファイルに変換するときに、エントリ ポイントとして使うメソッドの完全修飾名 (*class.method*) を指定します。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」の `/main` オプションに対応します。|  
+|`OutputAssembly`|必須の <xref:Microsoft.Build.Framework.ITaskItem> 型の出力パラメーターです。<br /><br /> このタスクで生成されるファイルの名前を指定します。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」の `/out` オプションに対応します。|  
+|`Platform`|省略可能な `String` 型のパラメーターです。<br /><br /> このコードを実行できるプラットフォームを制限します。`x86`、`Itanium`、`x64`、または `anycpu` のいずれかでなければなりません。 既定値は、`anycpu` です。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」の `/platform` オプションに対応します。|  
+|`ProductName`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Product` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/prod[uct]` オプションのドキュメントをご覧ください。|  
+|`ProductVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `ProductVersion` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/productv[ersion]` オプションのドキュメントをご覧ください。|  
+|`ResponseFiles`|省略可能な `String[]` 型のパラメーターです。<br /><br /> アセンブリ リンカーに渡す追加のオプションが含まれる応答ファイルを指定します。|  
 |`SdkToolsPath`|省略可能な `String` 型のパラメーターです。<br /><br /> resgen.exe などの SDK ツールのパスを指定します。|  
-|`SourceModules`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> アセンブリにコンパイルする 1 つ以上のモジュールです。  モジュールは作成されるアセンブリのマニフェストに一覧表示されますが、アセンブリを読み込むには、モジュールを配布して、配布先で使用できるようにする必要があります。  このパラメーターに渡されるアイテムには、`Target` と呼ばれるメタデータを付加することができます。このメタデータは、タスクがファイルをコピーする場所のパスとファイル名を指定できます。その後、この新しいファイルはアセンブリにコンパイルされます。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」を参照してください。  このパラメーターは、特定のスイッチを指定しないで Al.exe に渡したモジュールの一覧に相当します。|  
-|`TargetType`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルのファイル形式として、`library` \(コード ライブラリ\)、`exe` \(コンソール アプリケーション\)、または `win` \(Windows ベースのアプリケーション\) のいずれかを指定します。  既定値は `library` です。  このパラメーターは、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/t[arget]` オプションに対応します。|  
-|`TemplateFile`|省略可能な `String` 型のパラメーターです。<br /><br /> カルチャ フィールドを除く、すべてのアセンブリ メタデータの継承元であるアセンブリを指定します。  厳密な名前を持つアセンブリを指定する必要があります。<br /><br /> `TemplateFile` パラメーターを指定して作成したアセンブリは、サテライト アセンブリになります。  このパラメーターは、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/template` オプションに対応します。|  
-|`Timeout`|省略可能な `Int32` 型のパラメーターです。<br /><br /> タスク実行を終了するまでの時間をミリ秒単位で指定します。  既定値は `Int.MaxValue` であり、タイムアウト期限がないことを示します。|  
-|`Title`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Title` フィールドに文字列を指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/title` オプションの説明を参照してください。|  
-|`ToolPath`|省略可能な `String` 型のパラメーターです。<br /><br /> このタスクで基になる実行可能ファイル \(Al.exe\) を読み込む場所を指定します。  このパラメーターを指定しないと、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] を実行しているフレームワークのバージョンに対応する SDK インストール パスが使用されます。|  
-|`Trademark`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Trademark` フィールドに文字列を指定します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/trade[mark]` オプションの説明を参照してください。|  
-|`Version`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリのバージョン情報を指定します。  文字列の形式は、*major.minor.build.revision* です。  既定値は 0 です。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/v[ersion]` オプションの説明を参照してください。|  
-|`Win32Icon`|省略可能な `String` 型のパラメーターです。<br /><br /> .ico ファイルをアセンブリに挿入します。  .ico ファイルは出力ファイルにファイル エクスプローラーの目的の外観を与えます。  このパラメーターは、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/win32icon` オプションに対応します。|  
-|`Win32Resource`|省略可能な `String` 型のパラメーターです。<br /><br /> Win32 リソース \(.res ファイル\) を出力ファイルに挿入します。  詳細については、「[Al.exe \(アセンブリ リンカー\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)」の `/win32res` オプションの説明を参照してください。|  
+|`SourceModules`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> アセンブリにコンパイルする&1; つ以上のモジュール。 モジュールは生成されるアセンブリのマニフェストに列記され、アセンブリを読み込むにはモジュールを配布して使用できるようにする必要があります。 このパラメーターに渡すアイテムには、`Target` という名前の追加メタデータを指定できます。このメタデータでは、タスクがファイルをコピーする先のパスとファイル名を指定します。その後は、この新しいファイルがアセンブリにコンパイルされます。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」のドキュメントをご覧ください。 このパラメーターは、特定のスイッチを指定しないで Al.exe に渡されるモジュールのリストに対応します。|  
+|`TargetType`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルのファイル形式として、`library` (コード ライブラリ)、`exe` (コンソール アプリケーション)、または `win` (Windows ベースのアプリケーション) を指定します。 既定値は、`library` です。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」の `/t[arget]` オプションに対応します。|  
+|`TemplateFile`|省略可能な `String` 型のパラメーターです。<br /><br /> カルチャ フィールドを除く、すべてのアセンブリ メタデータの継承元であるアセンブリを指定します。 指定するアセンブリには厳密な名前が必要です。<br /><br /> `TemplateFile` パラメーターを指定して作成したアセンブリは、サテライト アセンブリになります。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」の `/template` オプションに対応します。|  
+|`Timeout`|省略可能な `Int32` 型のパラメーターです。<br /><br /> タスク実行を終了するまでの時間をミリ秒単位で指定します。 既定値は `Int.MaxValue` であり、タイムアウト期限がないことを示します。|  
+|`Title`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Title` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/title` オプションのドキュメントをご覧ください。|  
+|`ToolPath`|省略可能な `String` 型のパラメーターです。<br /><br /> タスクが基になる実行可能ファイル (Al.exe) を読み込む場所を指定します。 このパラメーターを指定しないと、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] を実行しているフレームワークのバージョンに対応する SDK インストール パスがタスクに使用されます。|  
+|`Trademark`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `Trademark` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/trade[mark]` オプションのドキュメントをご覧ください。|  
+|`Version`|省略可能な `String` 型のパラメーターです。<br /><br /> このアセンブリのバージョン情報を指定します。 文字列の形式は、*major.minor.build.revision* です。 既定値は 0 です。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/v[ersion]` オプションのドキュメントをご覧ください。|  
+|`Win32Icon`|省略可能な `String` 型のパラメーターです。<br /><br /> .ico ファイルをアセンブリに挿入します。 この .ico ファイルは、エクスプローラーにおける出力ファイルの視覚的な表現を提供します。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」の `/win32icon` オプションに対応します。|  
+|`Win32Resource`|省略可能な `String` 型のパラメーターです。<br /><br /> Win32 リソース (.res ファイル) を出力ファイルに挿入します。 詳しくは、「[Al.exe (アセンブリ リンカー)](http://msdn.microsoft.com/Library/b5382965-0053-47cf-b92f-862860275a01)」で `/win32res` オプションのドキュメントをご覧ください。|  
   
-## 解説  
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。  これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension Base Class](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ このタスクでは、上記のパラメーター以外に、<xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承し、このクラス自体は <xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
   
-## 使用例  
- 指定されたオプションで、アセンブリを作成する例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、指定したオプションでアセンブリを作成します。  
   
-```  
+```xml  
 <AL  
     EmbedResources="@(EmbeddedResource)"  
     Culture="%(EmbeddedResource.Culture)"  
@@ -94,6 +109,6 @@ AL タスクは、[!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)
 </AL>  
 ```  
   
-## 参照  
- [Task Reference](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [タスク](../msbuild/msbuild-tasks.md)
