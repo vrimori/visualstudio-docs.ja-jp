@@ -13,7 +13,7 @@
 ## [ハーフ/クォーター テクスチャ ディメンション バリアント](half-quarter-texture-dimensions-variant.md)
 ## [BC テクスチャ圧縮バリアント](bc-texture-compression-variant.md)
 # [イベント一覧](graphics-event-list.md)
-# [状態](graphics-state.md)
+# [グラフィックスの状態](graphics-state.md)
 # [パイプライン ステージ](graphics-pipeline-stages.md)
 # [イベント呼び出し履歴](graphics-event-call-stack.md)
 # [ピクセル履歴](graphics-pixel-history.md)

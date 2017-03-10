@@ -1,4 +1,4 @@
-# [Visual Studio IDE](visual-studio-ide.md)
+# [Visual Studio IDE 機能ツアー](visual-studio-ide.md)
 # [Visual Studio 入門](get-started-with-visual-studio.md)
 # [ユーザー アカウントと更新プログラム](user-accounts-and-updates.md)
 ## [Visual Studio へのサインイン](signing-in-to-visual-studio.md)
@@ -111,6 +111,7 @@
 ### [方法 : エディター内のテキストの大文字と小文字を変更する](how-to-change-text-case-in-the-editor.md)
 ### [方法 : エディター モードを管理する](how-to-manage-editor-modes.md)
 ### [方法 : エディター ウィンドウを管理する](how-to-manage-editor-windows.md)
+## [プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する](develop-code-in-visual-studio-without-projects-or-solutions.md)
 ## [移植可能なカスタム エディター設定を作成する](create-portable-custom-editor-options.md)
 ## [方法 : ScrollBar のカスタマイズによるコードの追跡](how-to-track-your-code-by-customizing-the-scrollbar.md)
 ## コードの操作
