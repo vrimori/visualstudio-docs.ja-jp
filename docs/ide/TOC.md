@@ -49,7 +49,7 @@
 #### [手順 8: プレーヤーが勝利したかどうかを確認するメソッドの追加](step-8-add-a-method-to-verify-whether-the-player-won.md)
 #### [手順 9: その他の機能を試す](step-9-try-other-features.md)
 ## [Visual Studio 内の C++ の概要](getting-started-with-cpp-in-visual-studio.md)
-## [Visual Studio 2015 のデバッグの概要](getting-started-with-debugging-in-visual-studio.md)
+## [Visual Studio のデバッグの概要](getting-started-with-debugging-in-visual-studio.md)
 # [Visual Studio 拡張機能の検索と使用](finding-and-using-visual-studio-extensions.md)
 # [Visual Studio のソリューションおよびプロジェクト](solutions-and-projects-in-visual-studio.md)
 ## [ソリューションとプロジェクトの作成](creating-solutions-and-projects.md)
