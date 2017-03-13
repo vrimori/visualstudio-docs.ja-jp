@@ -145,7 +145,7 @@ JavaScript は Visual Studio の第一級の言語です。 Visual Studio IDE �
 
 <p><ul class="panelContent cardsW">
     <li>
-        <a href="https://docs.microsoft.com/scripting/javascript">
+        <a href="https://docs.microsoft.com/scripting/javascript/javascript-language-reference">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
