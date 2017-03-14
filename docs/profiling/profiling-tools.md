@@ -31,9 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5ec205ee98f61b400112a39197e1f2aa9dddbd7d
-ms.openlocfilehash: 2d6ec94f7e68a84a4bb4a606882997fadec49e01
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8f844c2d7d975476bc4c059d211a1d6cb0df64eb
+ms.openlocfilehash: 4c995fb6df6316ce7f84fae7075b81063b54ebf7
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="profiling-tools"></a>プロファイリング ツール
@@ -62,12 +62,12 @@ ms.lasthandoff: 02/22/2017
 ## <a name="gpu-usage"></a>GPU 使用率  
  ![DiagGPUUsage](../profiling/media/diaggpuusage.png "DiagGPUUsage")  
   
- [GPU Usage](../debugger/gpu-usage.md) ツールを利用すれば、Direct3D アプリの高いレベルのハードウェア使用率をより一層理解できます。 このツールはデスクトップ アプリと Windows ユニバーサル アプリで使用できますが、ASP.NET アプリでは使用できません。 **GPU 使用量** ツールは、デバッグ中に **[診断ツール]** ウィンドウから (**[デバッグ]、[診断ツールの表示]**)、またはデバッガーの外部で (**[デバッグ]、[パフォーマンス プロファイラー...]**) 実行できます。  
+ [GPU Usage](../debugger/gpu-usage.md) ツールを利用すれば、Direct3D アプリの高いレベルのハードウェア使用率をより一層理解できます。 このツールはデスクトップ アプリと Windows ユニバーサル アプリで使用できますが、ASP.NET アプリでは使用できません。 **GPU 使用量**ツールは、デバッガーの外部 (**[デバッグ]、[パフォーマンス プロファイラー...]**) で実行できます。  
   
 ## <a name="application-timeline"></a>アプリケーションのタイムライン  
  ![DiagAppTimeline](../profiling/media/diagapptimeline.png "DiagAppTimeline")  
   
- [Application Timeline](../profiling/application-timeline.md) ツールは XAML アプリケーションのリソース消費量の詳細を表示します。XAML アプリケーションのパフォーマンスの向上に役立ちます。 **アプリケーションのタイムライン** はデスクトップ アプリと Windows ユニバーサル アプリで使用できますが、ASP.NET アプリでは使用できません。 **アプリケーションのタイムライン** ツールは **[診断ツール]** ウィンドウから実行できます (**[デバッグ]、[パフォーマンス プロファイラー...]**)。
+ [Application Timeline](../profiling/application-timeline.md) ツールは XAML アプリケーションのリソース消費量の詳細を表示します。XAML アプリケーションのパフォーマンスの向上に役立ちます。 **アプリケーションのタイムライン** はデスクトップ アプリと Windows ユニバーサル アプリで使用できますが、ASP.NET アプリでは使用できません。 **アプリケーションのタイムライン** ツールは、デバッガーの外部 (**[デバッグ]、[パフォーマンス プロファイラー...]**) で実行できます。
   
 ## <a name="perftips"></a>パフォーマンスのヒント  
  ![DiagPerfTips](../profiling/media/diagperftips.png "DiagPerfTips")  
@@ -85,12 +85,12 @@ ms.lasthandoff: 02/22/2017
 ## <a name="javascript-memory"></a>[JavaScript メモリ]  
  ![DiagJSMemory](../profiling/media/diagjsmemory.png "DiagJSMemory")  
   
- [JavaScript Memory](../profiling/javascript-memory.md) ツールでは、コードのパフォーマンス関連の問題を測定したり、評価したり、対象に設定したりできます。具体的には、アプリにおける各関数の開始と終了のタイミング情報を集めます。 このツールは Windows ユニバーサル HTML アプリで使用できます。 **JavaScript 関数タイミング** ツールは **[診断ツール]** ウィンドウから実行できます (**[デバッグ]、[パフォーマンス プロファイラー...]**)。  
+ [JavaScript メモリ](../profiling/javascript-memory.md) ツールを使用すると、アプリ内のメモリ リークおよび非効率的なメモリの使用を見つけられます。 このツールを使用すると、JavaScript ヒープのスナップショットを取得できます。 このツールは Windows ユニバーサル HTML アプリで使用できます。 **JavaScript メモリ** ツールは、デバッガーの外部 (**[デバッグ]、[パフォーマンス プロファイラー...]**) で実行できます。  
   
 ## <a name="html-ui-responsiveness"></a>HTML UI の応答性  
  ![DiagHTMLResp](../profiling/media/diaghtmlresp.png "DiagHTMLResp")  
   
- [HTML UI responsiveness](../profiling/html-ui-responsiveness.md) ツールを利用すれば、アプリにおける、応答がない、読み込み時間が遅い、表示の更新頻度が予想より少ないなどのパフォーマンス問題を分離できます。 このツールは Windows ユニバーサル HTML アプリで使用できます。 **HTML UI の応答性** ツールは **[診断ツール]** ウィンドウから実行できます (**[デバッグ]、[パフォーマンス プロファイラー...]**)。  
+ [HTML UI responsiveness](../profiling/html-ui-responsiveness.md) ツールを利用すれば、アプリにおける、応答がない、読み込み時間が遅い、表示の更新頻度が予想より少ないなどのパフォーマンス問題を分離できます。 このツールは Windows ユニバーサル HTML アプリで使用できます。 **HTML UI の応答性**ツールは、デバッガーの外部 (**[デバッグ]、[パフォーマンス プロファイラー...]**) で実行できます。  
   
 ## <a name="intellitrace"></a>[IntelliTrace]  
  ![DiagIntelliTrace](../profiling/media/diagintellitrace.png "DiagIntelliTrace")  
