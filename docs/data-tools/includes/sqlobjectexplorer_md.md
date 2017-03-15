@@ -1,0 +1,2 @@
+> [!NOTE]
+>  [!INCLUDE[vs_dev12](../../data-tools/includes/vs_dev12_md.md)] では、**SQL Server オブジェクト エクスプローラー**から、または**サーバー エクスプローラー**の **\[データ接続\]** ノードから SQL Server データベースに接続できます。 **SQL Server オブジェクト エクスプローラー**は SQL Server Management Studio と似たビューを提供します。 このエクスプローラーをメニュー バーから開くには、**\[表示\]**、**\[SQL Server オブジェクト エクスプローラー\]** を選択します。 詳細については、「[接続されているデータベース開発](http://go.microsoft.com/fwlink/?LinkId=233646)」を参照してください。

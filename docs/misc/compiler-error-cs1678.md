@@ -1,0 +1,34 @@
+---
+title: "コンパイラ エラー CS1678 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS1678"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS1678"
+ms.assetid: 2be8aa17-81e2-47b0-b239-e41e0c5c0d97
+caps.latest.revision: 6
+caps.handback.revision: 6
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# コンパイラ エラー CS1678
+パラメーター 'number' が型 'type1' として宣言されていますが、'type2' にする必要があります  
+  
+ このエラーは、匿名メソッドのパラメーター型が、そのメソッドのキャスト先となるデリゲートの宣言と異なる場合に生じます。  
+  
+ 次の例では CS1678 が生成されます。  
+  
+```  
+// CS1678 delegate void D(int i); class Errors { static void Main() { D d = delegate(string s) { };   // CS1678 // To resolve, use the following line instead: // D d = delegate(int s) { }; } }  
+```
