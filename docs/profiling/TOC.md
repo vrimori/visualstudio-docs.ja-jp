@@ -1,5 +1,4 @@
-# [プロファイリング ツール](profiling-tools.md)
-## [プロファイリング機能ツアー](profiling-feature-tour.md)
+# [プロファイリング機能ツアー](profiling-feature-tour.md)
 ## [パフォーマンス プロファイリングのビギナーズ ガイド](beginners-guide-to-performance-profiling.md)
 ## [プロファイリング ツールの新機能](what-s-new-in-profiling-tools.md)
 ## 「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](running-profiling-tools-with-or-without-the-debugger.md)
