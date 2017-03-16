@@ -1,37 +1,57 @@
 ---
 title: "Target 要素 (MSBuild) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/msbuild/2003#Target"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Target 要素 [MSBuild]"
-  - "<Target> 要素 [MSBuild]"
+ms.custom: 
+ms.date: 03/13/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#Target
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Target element [MSBuild]
+- <Target> element [MSBuild]
 ms.assetid: 350f6fc2-86b3-45f2-a31e-ece0e6bd4dca
 caps.latest.revision: 34
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 34
----
-# Target 要素 (MSBuild)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
+ms.openlocfilehash: 217f42db123e95557c2425b5678fb1ac9473c162
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] を連続的に実行するための一連のタスクを格納します。  
-  
-## 構文  
-  
+---
+# <a name="target-element-msbuild"></a>Target 要素 (MSBuild)
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] が順次実行するタスクのセットを格納します。  
+
+ \<Project>  
+ \<Target>  
+
+## <a name="syntax"></a>構文  
+
 ```  
 <Target Name="Target Name"  
         Inputs="Inputs"  
@@ -49,59 +69,59 @@ caps.handback.revision: 34
     <OnError... />  
 </Target>  
 ```  
-  
-## 属性および要素  
+
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
-  
-### 属性  
-  
+
+### <a name="attributes"></a>属性  
+
 |属性|説明|  
-|--------|--------|  
+|---------------|-----------------|  
 |`Name`|必須の属性です。<br /><br /> ターゲットの名前。|  
-|`Condition`|省略可能な属性です。<br /><br /> 評価する条件です。  条件が `false` と評価された場合、ターゲットではターゲットの本体は実行されず、`DependsOnTargets` 属性に設定されたいずれのターゲットも実行されません。  条件の詳細については、「[Conditions](../msbuild/msbuild-conditions.md)」を参照してください。|  
-|`Inputs`|省略可能な属性です。<br /><br /> このターゲットの入力を形成するファイル。  複数のファイルをセミコロンで区切って指定します。  ファイルのタイムスタンプが `Outputs` ファイルのタイムスタンプと `Target` が最新であるかどうかを判断する比較されます。  詳細については、「[インクリメンタル ビルド](../msbuild/incremental-builds.md)」、「[方法 : インクリメンタル ビルドを実行する](../msbuild/how-to-build-incrementally.md)」、および「[変換](../msbuild/msbuild-transforms.md)」を参照してください。|  
-|`Outputs`|省略可能な属性です。<br /><br /> このターゲットに出力を形成するファイル。  複数のファイルをセミコロンで区切って指定します。  ファイルのタイムスタンプが `Inputs` ファイルのタイムスタンプと `Target` が最新であるかどうかを判断する比較されます。  詳細については、「[インクリメンタル ビルド](../msbuild/incremental-builds.md)」、「[方法 : インクリメンタル ビルドを実行する](../msbuild/how-to-build-incrementally.md)」、および「[変換](../msbuild/msbuild-transforms.md)」を参照してください。|  
-|`Returns`|省略可能な属性です。<br /><br /> このターゲットを呼び出すタスク \(MSBuild タスクなど\) で使用可能になるアイテムのセットです。  複数のターゲットを指定するときは、セミコロン \(;\) で区切ります。  ファイルのターゲットに `Returns` の属性がない場合、出力の属性はこの場合は、代わりに使用されます。|  
-|`KeepDuplicateOutputs`|省略可能な Boolean 型の属性です。<br /><br /> `true`が、ターゲットのリターンの同じアイテムへの複数の参照記録されます。  既定では、この属性は `false` です。|  
-|`BeforeTargets`|省略可能な属性です。<br /><br /> ターゲット名のセミコロン区切りのリストです。指定した場合は、このターゲットを実行する前に指定されたターゲットであることを示します。  これにより、プロジェクト作成者はこれらを直接変更せずに、既存のターゲットのセットを拡張することができます。  詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。|  
-|`AfterTargets`|省略可能な属性です。<br /><br /> ターゲット名のセミコロン区切りのリストです。  指定した場合は、このターゲットを指定したターゲット実行する必要があることを示します。  これにより、プロジェクト作成者はこれらを直接変更せずに、既存のターゲットのセットを拡張することができます。  詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。|  
-|`DependsOnTargets`|省略可能な属性です。<br /><br /> このターゲットを実行する前、またはトップレベルの依存関係分析を実行する前に、実行する必要のあるターゲットです。  複数のターゲットを指定するときは、セミコロン \(;\) で区切ります。|  
-|`Label`|省略可能な属性です。<br /><br /> システムとユーザーの要素を識別するか、注文できる識別子。|  
-  
-### 子要素  
-  
+|`Condition`|省略可能な属性です。<br /><br /> 評価する条件です。 条件が `false` と評価された場合、ターゲットの本体も、`DependsOnTargets` 属性で設定されたいずれのターゲットも実行されません。 条件の詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。|  
+|`Inputs`|省略可能な属性です。<br /><br /> このターゲットの入力を形成するファイル。 複数のファイルを指定するときは、セミコロン (;) で区切ります。 ファイルのタイムスタンプは、`Outputs` のファイルのタイムスタンプと比較され、`Target` が最新かどうか判断されます。 詳細については、「[インクリメンタル ビルド](../msbuild/incremental-builds.md)」、「[方法: インクリメンタル ビルドを実行する](../msbuild/how-to-build-incrementally.md)」、「[変換](../msbuild/msbuild-transforms.md)」を参照してください。|  
+|`Outputs`|省略可能な属性です。<br /><br /> このターゲットの出力を形成するファイル。 複数のファイルを指定するときは、セミコロン (;) で区切ります。 ファイルのタイムスタンプは、`Inputs` のファイルのタイムスタンプと比較され、`Target` が最新かどうか判断されます。 詳細については、「[インクリメンタル ビルド](../msbuild/incremental-builds.md)」、「[方法: インクリメンタル ビルドを実行する](../msbuild/how-to-build-incrementally.md)」、「[変換](../msbuild/msbuild-transforms.md)」を参照してください。|  
+|`Returns`|省略可能な属性です。<br /><br /> このターゲットを呼び出すタスク (MSBuild タスクなど) で使用可能になる項目のセットです。 複数のターゲットを指定するときは、セミコロン (;) で区切ります。 ファイル内のターゲットに `Returns` 属性がない場合、代わりに Outputs 属性がこの目的で使用されます。|  
+|`KeepDuplicateOutputs`|省略可能な Boolean 属性です。<br /><br /> `true` の場合、ターゲットの Returns の同じ項目への参照が複数記録されます。  既定では、この属性は `false` です。|  
+|`BeforeTargets`|省略可能な属性です。<br /><br /> ターゲット名のセミコロン区切りのリストです。  指定した場合、指定したターゲットの前にこのターゲットが実行されます。 これにより、プロジェクト作成者は、これらを直接変更せずに、既存のターゲット セットを拡張できます。 詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。|  
+|`AfterTargets`|省略可能な属性です。<br /><br /> ターゲット名のセミコロン区切りのリストです。 指定した場合、指定したターゲットの後でこのターゲットが実行されます。 これにより、プロジェクト作成者は、これらを直接変更せずに、既存のターゲット セットを拡張できます。 詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。|  
+|`DependsOnTargets`|省略可能な属性です。<br /><br /> このターゲットを実行する前、またはトップレベルの依存関係分析を実行する前に、実行する必要のあるターゲットです。 複数のターゲットを指定するときは、セミコロン (;) で区切ります。|  
+|`Label`|省略可能な属性です。<br /><br /> システム要素およびユーザー要素を識別するため、または順序付けるための識別子です。|  
+
+### <a name="child-elements"></a>子要素  
+
 |要素|説明|  
-|--------|--------|  
-|[タスク](../msbuild/task-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクのインスタンスを作成し、実行します。  ターゲットには、タスクを 0 個以上指定できます。|  
-|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|一連の `Property` のユーザー定義の要素が含まれます。  .NET Framework 3.5 以降では、`Target` の要素は `PropertyGroup` の要素を含む場合があります。|  
-|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|一連の `Item` のユーザー定義の要素が含まれます。  .NET Framework 3.5 以降では、`Target` の要素は `ItemGroup` の要素を含む場合があります。  詳細については、「[項目](../msbuild/msbuild-items.md)」を参照してください。|  
-|[OnError](../msbuild/onerror-element-msbuild.md)|`ContinueOnError` の属性が失敗したタスクの ErrorAndStop \(または\) の場合 `false`一つ以上のターゲットを実行します。  ターゲットには、`OnError` 要素を 0 個以上指定できます。  `OnError` 要素が存在する場合、これらの要素は `Target` 要素内の最後の要素である必要があります。<br /><br /> `ContinueOnError` の属性については、[Task Element \(MSBuild\)](../msbuild/task-element-msbuild.md)"を参照してください。|  
-  
-### 親要素  
-  
+|-------------|-----------------|  
+|[Task](../msbuild/task-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクのインスタンスを作成し、実行します。 1 つのターゲットに&0; 個以上のタスクを指定できます。|  
+|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|ユーザー定義の `Property` 要素のセットを格納します。 .NET Framework 3.5 以降では、`Target` 要素に `PropertyGroup` 要素を格納できます。|  
+|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|ユーザー定義の `Item` 要素のセットを格納します。 .NET Framework 3.5 以降では、`Target` 要素に `ItemGroup` 要素を格納できます。 詳細については、「[項目](../msbuild/msbuild-items.md)」を参照してください。|  
+|[OnError](../msbuild/onerror-element-msbuild.md)|失敗したタスクの `ContinueOnError` 属性が ErrorAndStop (または `false`) の場合、1 つ以上のターゲットが実行されます。 1 つのターゲットに&0; 個以上の `OnError` 要素を指定できます。 `OnError` 要素がある場合は、`Target` 要素内で最後の要素である必要があります。<br /><br /> `ContinueOnError` 属性の詳細は、「[Task Element (MSBuild) (Task 要素 (MSBuild))](../msbuild/task-element-msbuild.md)」を参照してください。|  
+
+### <a name="parent-elements"></a>親要素  
+
 |要素|説明|  
-|--------|--------|  
-|[プロジェクト](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
-  
-## 解説  
- 実行する最初のターゲットは、実行時に指定します。  各ターゲットは他のターゲットに対する依存関係を持つ場合があります。  たとえば、配置用のターゲットは、コンパイル用のターゲットに依存します。  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] エンジンは、`DependsOnTargets` 属性に表示される順序で、依存関係を左から右に実行します。  詳細については、「[ターゲット](../msbuild/msbuild-targets.md)」を参照してください。  
-  
- あるターゲットに複数のターゲットが依存関係を持つ場合でも、ターゲットは 1 回のビルド中に 1 度だけ実行されます。  
-  
- `Condition` 属性が `false` と評価されたためにターゲットがスキップされた場合でも、そのターゲットがその後ビルドで呼び出され、`Condition` 属性がその時点で `true` と評価された場合は、そのターゲットを実行できます。  
-  
- MSBuild 4 よりも前のバージョンでは、`Target` によって、`Outputs` 属性で指定されていたすべてのアイテムが返されていました。  このために、MSBuild では、後でビルドのタスクによって要求された場合に備えてこれらのアイテムを記録しておく必要がありました。  呼び出し元が必要とする出力を持つターゲットを示す方法がなかったため、呼び出されたすべての `Target` のすべての `Outputs` から全アイテムを蓄積していました。  これにより、大量の出力アイテムがあるビルドでスケーリングの問題が発生していました。  
-  
- ユーザーがプロジェクトの `Target` 要素で `Returns` を指定した場合、`Returns` 属性を持つ `Target` だけがそれらのアイテムを記録します。  
-  
- `Target` には、`Outputs` 属性と `Returns` 属性の両方を含めることができます。  `Outputs` と `Inputs` を組み合わせて使用して、ターゲットが最新かどうかを確認します。  `Returns` がある場合、`Outputs` の値がオーバーライドされ、どのアイテムが呼び出し元に返されるかが判断されます。  `Returns` がない場合、前述の場合を除いて、呼び出し元が `Outputs` を使用できるようになります。  
-  
- MSBuild 4 よりも前のバージョンでは、`Target` の `Outputs` に同じアイテムへの複数の参照が含まれている場合は、常にそれらの重複アイテムが記録されていました。  そのため、大量の出力と多数のプロジェクトの相互依存関係がある非常に大規模なビルドでは、無用な重複アイテムが原因で、大量のメモリが無駄に使用されていました。  `KeepDuplicateOutputs` の属性が `true`に設定した場合、これらの重複するが記録されます。  
-  
-## 使用例  
- 次のコード例は、`Csc` タスクを実行する `Target` 要素を示しています。  
-  
-```  
+|-------------|-----------------|  
+|[Project](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
+
+## <a name="remarks"></a>コメント  
+ 実行する最初のターゲットは実行時に指定されます。 各ターゲットは他のターゲットとの依存関係を持つ場合があります。 たとえば、展開用のターゲットはコンパイル用のターゲットに依存します。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] エンジンは `DependsOnTargets` 属性に出現する順序で、依存関係を左から右に実行します。 詳細については、「[ターゲット](../msbuild/msbuild-targets.md)」を参照してください。  
+
+ あるターゲットに複数のターゲットが依存関係を持つ場合でも、ターゲットは&1; 回のビルド中に&1; 回だけ実行されます。  
+
+ `Condition` 属性が `false` と評価されたためにターゲットがスキップされた場合でも、そのターゲットがその後ビルドで呼び出され、`Condition` 属性がその時点で `true` と評価された場合には、そのターゲットを実行できます。  
+
+ MSBuild 4 より前のバージョンでは、`Target` によって `Outputs` 属性で指定されていたすべての項目を返していました。  このために、MSBuild では、後でビルドのタスクによって要求された場合に備えて、これらの項目を記録しておく必要がありました。 どのターゲットが呼び出し元を必要とする出力を持つかを指定する手段がなかったため、MSBuild は呼び出されたすべての `Target` のすべての `Outputs` からのすべての項目を蓄積していました。 このため、出力項目の多いビルドについては、スケーリングの問題が発生していました。  
+
+ ユーザーがプロジェクト内の任意の `Target` 要素で `Returns` を指定した場合、`Returns` 属性を持つ `Target` だけがその項目を記録します。  
+
+ `Target` には `Outputs` 属性と `Returns` 属性の両方を含めることができます。  `Outputs` と `Inputs` を組み合わせて使用して、ターゲットが最新かどうかを確認します。 `Returns` がある場合、`Outputs` の値がオーバーライドされ、どの項目が呼び出し元に返されるかを判断できます。  `Returns` がない場合、前述のケースを除き、呼び出し元が `Outputs` を使用できるようになります。  
+
+ MSBuild 4 より前のバージョンでは、`Target` の `Outputs` に同じ項目に対する参照が複数ある場合は、常にそれらの重複項目が記録されていました。 出力数が多く、プロジェクトの相互依存関係が多数ある非常に大規模なビルドでは、無用な重複項目が原因で大量のメモリが無駄に使用されていました。 `KeepDuplicateOutputs` 属性が `true` に設定されている場合、この重複が記録されます。  
+
+## <a name="example"></a>例  
+ 次のコード例では、`Csc` タスクを実行する `Target` 要素を示しています。  
+
+```xml  
 <Target Name="Compile" DependsOnTargets="Resources" Returns="$(TargetPath)">  
     <Csc Sources="@(CSFile)"  
           TargetType="library"  
@@ -114,7 +134,8 @@ caps.handback.revision: 34
     </Csc>  
 </Target>  
 ```  
-  
-## 参照  
+
+## <a name="see-also"></a>関連項目  
  [ターゲット](../msbuild/msbuild-targets.md)   
- [Project File Schema Reference](../msbuild/msbuild-project-file-schema-reference.md)
+ [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)
+
