@@ -1,5 +1,4 @@
-# [Visual Studio でのデバッグ](debugging-in-visual-studio.md)
-# [デバッガー機能ツアー](debugger-feature-tour.md)
+# [デバッグ機能ツアー](debugger-feature-tour.md)
 # [Visual Studio のデバッガーの新機能](what-s-new-for-the-debugger-in-visual-studio.md)
 # [デバッガーの基本事項](debugger-basics.md)
 ## [デバッガーの使用開始](getting-started-with-the-debugger.md)
