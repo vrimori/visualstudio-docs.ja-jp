@@ -1,7 +1,7 @@
 ---
 title: "外部ツールの管理 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/23/2017
+ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -76,43 +76,33 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 66e09a22bcedb37f82eb9517a8f9d4affbe3a374
-ms.openlocfilehash: ad9461bb29dba3e8e2ffe242c1f709587729ce22
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: c36d97b83aa0892235c8f196cf6af63520b3547c
+ms.openlocfilehash: a31b90643e3707348595fce02ec37a1c02a97195
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="manage-external-tools"></a>外部ツールの管理
-Visual Studio から、外部ツールを呼び出すことができます。 いくつかの既定ツールは **[ツール]** メニューで使用できますが、他の実行可能ファイルを独自に追加することもできます。  
-  
+Visual Studio から **[ツール]** メニューを使用して外部ツールを呼び出すことができます。 いくつかの既定ツールは **[ツール]** メニューで使用できますが、他の実行可能ファイルを独自に追加することもできます。  
+
 ## <a name="tools-available-on-the-visual-studio-tools-menu"></a>[Visual Studio ツール] メニューで使用できるツール
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の **[ツール]** メニューでは、次のツールを呼び出すことができます。 これらは、名前を指定して **[クイック起動]** ウィンドウから呼び出すこともできます。 たとえば、GuidGen.exe を呼び出すには、「**GUID の作成**」と入力します。  
-  
-1.  GUID の作成: GUID を生成します。  
-  
-2.  エラー検索: 入力された値からエラー メッセージを取得します。 詳細については、「[ERRLOOK リファレンス](/visual-cpp/build/reference/errlook-reference)」を参照してください。  
-  
-3.  ATL/MFC トレース ツール: ATL および ATL のソースに含まれているデバッグ トレース メッセージを表示します。  
-  
-4.  PreEmptive Dotfuscator と PreEmptive Analytics: .NET プログラムをリバース エンジニアリングから保護します。  
-  
-5.  SPY++: プロセス、スレッド、ウィンドウ、およびウィンドウ メッセージをグラフィカル表示します。  
-  
-6.  WCF サービス構成エディター: WCF サービスの構成設定を作成および変更できます。  
-  
-> [!WARNING]
->  表示される外部ツールの一覧は、インストールされている Visual Studio のエディションおよび適用されている設定プロファイルによって異なります。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
-  
+ **[ツール]** メニューには、次のように組み込みコマンドがいくつか表示されます。
+
+*  [Visual Studio 拡張機能を管理する](finding-and-using-visual-studio-extensions.md) **[拡張機能と更新プログラム]**
+*  [コード スニペットを整理する](code-snippets.md#code-snippet-manager) **[コード スニペット マネージャー]**
+*  [Dotfuscator Community Edition (CE)](dotfuscator/index.md) が[インストール](dotfuscator/install.md)されている場合に起動する **[PreEmptive Protection - Dotfuscator]**
+*  [メニューとツールバーをカスタマイズする](how-to-customize-menus-and-toolbars-in-visual-studio) **[カスタマイズ]**
+*  [Visual Studio IDE と他のツールの多様なオプションを設定する](reference/options-dialog-box-visual-studio.md) **[オプション]**
+
 ## <a name="add-new-tools-to-the-tools-menu"></a>[ツール] メニューに新しいツールを追加する 
  **[ツール]** メニューに外部ツールを追加することができます。 **[外部ツール]** ダイアログ ボックスを開き、**[追加]** をクリックして、情報を入力します。 たとえば、次のエントリを指定すると、Visual Studio で現在開いているファイルのディレクトリでエクスプローラーが開きます。  
   
-1.  タイトル: 開いているファイルの場所  
+1.  タイトル: *開いているファイルの場所*
   
-2.  コマンド: explorer.exe  
+2.  コマンド: `explorer.exe`  
   
-3.  引数: /root、"$(ItemDir)"  
+3.  引数: `/root, "$(ItemDir)"`  
   
-## <a name="arguments-for-external-tools"></a>外部ツールの引数  
- 次の引数は、外部ツールを起動するときに割り当てられる、Visual Studio の変数です。 [外部ツール] ダイアログ ボックスを使用して、メモ帳や Spy++ などの外部ツールへのリンクを **[ツール]** メニューでリストできます。  
+ 外部ツールの定義時に使用できる引数の一覧を次に示します。
   
 > [!NOTE]
 >  IDE のステータス バーに、アクティブなコード エディターの挿入位置を示す、Current Line 変数および Current Column 変数が表示されます。 Current Text 変数は、その場所で選択されているテキストまたはコードを返します。  
@@ -135,7 +125,7 @@ Visual Studio から、外部ツールを呼び出すことができます。 �
 |プロジェクト ファイル名|$(ProjFileName)|現在のプロジェクトのファイル名 (ドライブ + パス + ファイル名)。|  
 |ソリューション ディレクトリ|$(SolutionDir)|現在のソリューションのディレクトリ (ドライブ + パス)。|  
 |ソリューション ファイル名|$(SolutionFileName)|現在のソリューションのファイル名 (ドライブ + パス + ファイル名)。|  
-  
+
 ## <a name="see-also"></a>関連項目  
  [C と C++ のビルド ツール](/visual-cpp/build/reference/c-cpp-build-tools)
 
