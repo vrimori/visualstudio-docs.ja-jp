@@ -240,7 +240,7 @@ ms.lasthandoff: 02/22/2017
     > [!TIP]
     >  `Global` オブジェクトに対する相対的な位置を特定することによってオブジェクトを識別できる場合があります。 これを行うには、その識別子のショートカット メニューを開き、 **[ルート ビューで表示]**をクリックします。  
   
-##  <a name="a-namefixingmemorya-fixing-the-memory-issue"></a><a name="FixingMemory"></a> メモリの問題の修正  
+##  <a name="FixingMemory"></a> メモリの問題の修正  
   
 1.  プロファイラーで公開されたデータを使用して、"項目" の ID と共に DOM 要素の削除を担当するコードを確認します。 これは `initialize()` 関数で発生します。  
   
