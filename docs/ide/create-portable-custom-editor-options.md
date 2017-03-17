@@ -1,7 +1,7 @@
 ---
 title: "移植可能なカスタム エディター設定を作成する | Microsoft Docs"
 ms.custom: 
-ms.date: 12/14/2016
+ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -33,8 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 31f433b28b67dc6f3179be87cb5894b5b3f0aa4f
-ms.openlocfilehash: 8c986958f141d3efc2ffe29b4176b43e9960e0e1
+ms.sourcegitcommit: 203e1e27cc892e96b103fc6cb22a73672a8e16af
+ms.openlocfilehash: 70f3c6c7e4356a698aa6c1dd265f6c79c662673e
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="create-portable-custom-editor-settings"></a>移植可能なカスタム エディター設定を作成する
@@ -86,8 +87,15 @@ EditorConfig 設定は、XML を除き、Visual Studio 対応のすべての言�
 > [!NOTE]
 >  .editorconfig ファイルをプロジェクトまたはコードベースに追加しても既存のスタイルが新しいスタイルに変換されることはありません。新しく追加した行にのみ適用されます。 プロジェクトまたはコードベースから .editorconfig ファイルを削除する場合、エディター設定のコード ファイルを再読み込みし、グローバル設定に戻す必要があります。 .editorconfig ファイルに間違いがある場合、Visual Studio の [エラー] ウィンドウに表示されます。
 
+## <a name="support-editorconfig-for-your-language-service"></a>言語サービスの EditorConfig のサポート
 
+ほとんどの場合、Visual Studio 言語サービスを実装するとき、EditorConfig ユニバーサル プロパティをサポートするための追加の作業は必要ありません。 ユーザーがファイルを開くと、コア エディターが .editorconfig ファイルを自動的に検出して読み込み、適切なテキスト バッファーとビュー オプションを設定します。 ただし、一部の言語サービスでは、ユーザーがテキストを編集または書式設定するとき、タブやスペースなどのアイテムにグローバル設定を使用せず、コンテキストに基づいてテキスト ビュー オプションが使用されます。 そのような場合は、EditorConfig ファイルをサポートするように言語サービスを更新する必要があります。
 
-<!--HONumber=Feb17_HO4-->
+次の表は、EditorConfig ファイルをサポートするように言語サービスを更新するために必要な変更をまとめたものです。
 
+| 使用されていないグローバル言語固有オプション | コンテキストに基づくオプションの変更 |
+| :------------- | :------------- |
+| Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.fInsertTabs または Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs | !textBufferOptions.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId) または !textView.Options.GetOptionValue(DefaultOptions.ConvertTabsToSpacesOptionId) |
+| Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uIndentSize または Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs.IndentSize | textBufferOptions.GetOptionValue(DefaultOptions. IndentSizeOptionId) または textView.Options.GetOptionValue(DefaultOptions. IndentSizeOptionId) |
+| Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uTabSize または Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs.TabSize | textBufferOptions.GetOptionValue(DefaultOptions.TabSizeOptionId) または textView.Options.GetOptionValue(DefaultOptions.TabSizeOptionId) |
 
