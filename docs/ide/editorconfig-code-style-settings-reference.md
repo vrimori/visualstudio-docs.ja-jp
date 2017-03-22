@@ -89,9 +89,9 @@ none | このスタイルに準拠していないとき、ユーザーには何�
         - [スロー式](#null_checking_throw_expressions)
         - [条件付き代理呼び出し](#null_checking_conditional_delegate_calls)
 
-## <a name="a-namethisandmethis-and-me-qualificationa"></a><a name="this_and_me">"This." と "Me."修飾</a>
+## <a name="this_and_me">"This." と "Me."修飾</a>
 
-### <a name="a-namethisandmefieldsfieldsa"></a><a name="this_and_me_fields">フィールド</a>
+### <a name="this_and_me_fields">フィールド</a>
 
 |  オプション名 | `dotnet_style_qualification_for_field` |
 | ------------- |:-------------:|
@@ -109,7 +109,7 @@ none | このスタイルに準拠していないとき、ユーザーには何�
 dotnet_style_qualification_for_field = false:suggestion
 ```
 
-### <a name="a-namethisandmepropertiespropertiesa"></a><a name="this_and_me_properties">プロパティ</a>
+### <a name="this_and_me_properties">プロパティ</a>
 
 |  オプション名 | `dotnet_style_qualification_for_property` |
 | ------------- |:-------------:|
@@ -128,7 +128,7 @@ dotnet_style_qualification_for_property = false:suggestion
 ```
 
 
-### <a name="a-namethisandmemethodsmethodsa"></a><a name="this_and_me_methods">メソッド</a>
+### <a name="this_and_me_methods">メソッド</a>
 |  オプション名 | `dotnet_style_qualification_for_method` |
 | ------------- |:-------------:|
 | **該当言語** | C# および Visual Basic
@@ -146,7 +146,7 @@ dotnet_style_qualification_for_property = false:suggestion
 dotnet_style_qualification_for_method = false:suggestion
 ```
 
-### <a name="a-namethisandmeeventseventsa"></a><a name="this_and_me_events">イベント</a>
+### <a name="this_and_me_events">イベント</a>
 |  オプション名 | `dotnet_style_qualification_for_event` |
 | ------------- |:-------------:|
 | **該当言語** | C# および Visual Basic
@@ -164,7 +164,7 @@ dotnet_style_qualification_for_event = false:suggestion
 ```
 
 ## <a name="language_keywords">型参照のための言語キーワードの型名 (int や string など) とフレームワークの型名</a>
-### <a name="a-namelanguagekeywordsvariableslocals-parameters-and-membersa"></a><a name="language_keywords_variables">ローカル、パラメーター、メンバー</a>
+### <a name="language_keywords_variables">ローカル、パラメーター、メンバー</a>
 |  オプション名 | `dotnet_style_predefined_type_for_locals_parameters_members` |
 | ------------- |:-------------:|
 | **該当言語** | C# および Visual Basic
@@ -181,7 +181,7 @@ dotnet_style_qualification_for_event = false:suggestion
 dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 ``` 
 
-### <a name="a-namelanguagekeywordsmemberaccessmember-access-expressionsa"></a><a name="language_keywords_member_access">メンバー アクセス式</a>
+### <a name="language_keywords_member_access">メンバー アクセス式</a>
 |  オプション名 | `dotnet_style_predefined_type_for_member_access` |
 | ------------- |:-------------:|
 | **該当言語** | C# および Visual Basic
@@ -198,8 +198,8 @@ dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 dotnet_style_predefined_type_for_member_access = true:suggestion
 ``` 
 
-## <a name="a-nameexpressionlevelexpression-level-preferencesa"></a><a name="expression_level">式レベル基本設定</a>
-### <a name="a-nameexpressionlevelobjectinitializersobject-initializersa"></a><a name="expression_level_object_initializers">オブジェクト初期化子</a>
+## <a name="expression_level">式レベル基本設定</a>
+### <a name="expression_level_object_initializers">オブジェクト初期化子</a>
 |  オプション名 | `dotnet_style_object_initializer` |
 | ------------- |:-------------:|
 | **該当言語** | C# および Visual Basic
@@ -216,7 +216,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 dotnet_style_object_initializer = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionlevelcollectioninitializerscollection-initializersa"></a><a name="expression_level_collection_initializers">コレクション初期化子</a>
+### <a name="expression_level_collection_initializers">コレクション初期化子</a>
 |  オプション名 | `dotnet_style_collection_initializer` |
 | ------------- |:-------------:|
 | **該当言語** | C# および Visual Basic
@@ -233,7 +233,7 @@ dotnet_style_object_initializer = true:suggestion
 dotnet_style_collection_initializer = true:suggestion
 ```
 
-### <a name="a-nameexpressionleveltuplenamesexplicit-tuple-namesa"></a><a name="expression_level_tuple_names">明示的なタプル名</a>
+### <a name="expression_level_tuple_names">明示的なタプル名</a>
 |  オプション名 | `dotnet_style_explicit_tuple_names` |
 | ------------- |:-------------:|
 | **該当言語** | C# および Visual Basic
@@ -250,7 +250,7 @@ dotnet_style_collection_initializer = true:suggestion
 dotnet_style_explicit_tuple_names = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionlevelnullcheckingcoalescing-expressions-in-null-checkinga"></a><a name="expression_level_null_checking">"null" 検査の結合式</a>
+### <a name="expression_level_null_checking">"null" 検査の結合式</a>
 |  オプション名 | `dotnet_style_coalesce_expression` |
 | ------------- |:-------------:|
 | **該当言語** | C# および Visual Basic
@@ -267,7 +267,7 @@ dotnet_style_explicit_tuple_names = true:suggestion
 dotnet_style_coalesce_expression = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionlevelnullpropogationnull-propagation-in-null-checkinga"></a><a name="expression_level_null_propogation">"null" 検査の Null 値反映</a>
+### <a name="expression_level_null_propogation">"null" 検査の Null 値反映</a>
 |  オプション名 | `dotnet_style_null_propagation` |
 | ------------- |:-------------:|
 | **該当言語** | C# および Visual Basic
@@ -284,9 +284,9 @@ dotnet_style_coalesce_expression = true:suggestion
 dotnet_style_null_propagation = true:suggestion
 ``` 
 
-# <a name="a-namecsharpcodestylecsharp-code-style-settingsa"></a><a name="csharp_codestyle">CSharp コード スタイルの設定</a>
-## <a name="a-namevarvara"></a><a name="var">"var"</a>
-### <a name="a-namevarbuiltinvar-for-built-in-typesa"></a><a name="var_built_in">組み込み型の "var"</a>
+# <a name="csharp_codestyle">CSharp コード スタイルの設定</a>
+## <a name="var">"var"</a>
+### <a name="var_built_in">組み込み型の "var"</a>
 |  オプション名 | `csharp_style_var_for_built_in_types` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -303,7 +303,7 @@ dotnet_style_null_propagation = true:suggestion
 csharp_style_var_for_built_in_types = true:suggestion
 ``` 
 
-### <a name="a-namevarapparentvar-when-type-is-apparenta"></a><a name="var_apparent">型が明らかな場合の "var"</a>
+### <a name="var_apparent">型が明らかな場合の "var"</a>
 |  オプション名 | `csharp_style_var_when_type_is_apparent` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -320,7 +320,7 @@ csharp_style_var_for_built_in_types = true:suggestion
 csharp_style_var_when_type_is_apparent = true:suggestion
 ``` 
 
-### <a name="a-namevarelsewherevar-elsewherea"></a><a name="var_elsewhere">それ以外の場所の "var"</a>
+### <a name="var_elsewhere">それ以外の場所の "var"</a>
 |  オプション名 | `csharp_style_var_elsewhere` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -337,7 +337,7 @@ csharp_style_var_when_type_is_apparent = true:suggestion
 csharp_style_var_elsewhere = true:suggestion
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersmethodsa"></a><a name="expression_bodied_members">メソッド</a>
+### <a name="expression_bodied_members">メソッド</a>
 |  オプション名 | `csharp_style_expression_bodied_methods` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -354,7 +354,7 @@ csharp_style_var_elsewhere = true:suggestion
 csharp_style_expression_bodied_methods = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersconstructorsconstructorsa"></a><a name="expression_bodied_members_constructors">コンストラクター</a>
+### <a name="expression_bodied_members_constructors">コンストラクター</a>
 |  オプション名 | `csharp_style_expression_bodied_constructors` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -371,7 +371,7 @@ csharp_style_expression_bodied_methods = false:none
 csharp_style_expression_bodied_constructors = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersoperatorsoperatorsa"></a><a name="expression_bodied_members_operators">演算子</a>
+### <a name="expression_bodied_members_operators">演算子</a>
 |  オプション名 | `csharp_style_expression_bodied_operators` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -388,7 +388,7 @@ csharp_style_expression_bodied_constructors = false:none
 csharp_style_expression_bodied_operators = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmemberspropertiespropertiesa"></a><a name="expression_bodied_members_properties">プロパティ</a>
+### <a name="expression_bodied_members_properties">プロパティ</a>
 |  オプション名 | `csharp_style_expression_bodied_properties` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -405,7 +405,7 @@ csharp_style_expression_bodied_operators = false:none
 csharp_style_expression_bodied_properties = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersindexersindexersa"></a><a name="expression_bodied_members_indexers">インデクサー</a>
+### <a name="expression_bodied_members_indexers">インデクサー</a>
 |  オプション名 | `csharp_style_expression_bodied_indexers` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -422,7 +422,7 @@ csharp_style_expression_bodied_properties = false:none
 csharp_style_expression_bodied_indexers = false:none
 ``` 
 
-### <a name="a-nameexpressionbodiedmembersaccessorsaccessorsa"></a><a name="expression_bodied_members_accessors">アクセサー</a>
+### <a name="expression_bodied_members_accessors">アクセサー</a>
 |  オプション名 | `csharp_style_expression_bodied_accessors` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -439,8 +439,8 @@ csharp_style_expression_bodied_indexers = false:none
 csharp_style_expression_bodied_accessors = false:none
 ``` 
 
-## <a name="a-namepatternmatchingpattern-matchinga"></a><a name="pattern_matching">パターン マッチング</a>
-### <a name="a-namepatternmatchingiscastis-with-cast-checkinga"></a><a name="pattern_matching_is_cast">"cast" 検査の "is"</a>
+## <a name="pattern_matching">パターン マッチング</a>
+### <a name="pattern_matching_is_cast">"cast" 検査の "is"</a>
 |  オプション名 | `csharp_style_pattern_matching_over_is_with_cast_check` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -457,7 +457,7 @@ csharp_style_expression_bodied_accessors = false:none
 csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 ```
 
-### <a name="a-namepatternmatchingasnullas-with-null-checkinga"></a><a name="pattern_matching_as_null">"null" 検査の "as"</a>
+### <a name="pattern_matching_as_null">"null" 検査の "as"</a>
 |  オプション名 | `csharp_style_pattern_matching_over_as_with_null_check` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -474,14 +474,14 @@ csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 ```
 
-### <a name="a-nameinlinedvariabledeclarationsinlined-variable-declarationsa"></a><a name="inlined_variable_declarations">インライン変数宣言</a>
+### <a name="inlined_variable_declarations">インライン変数宣言</a>
 |  オプション名 | `csharp_style_inlined_variable_declaration` |
 | ------------- |:-------------:|
 | **該当言語** | C#
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | 可能であれば、`out` 変数をインラインで宣言します。 | **C#:** <br>`if (int.TryParse(value out int i) {...}`
+| True | 可能であれば、`out` 変数をインラインで宣言します。 | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
 | False | `out` 変数を明示的に宣言します。| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
 
 #### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
@@ -491,8 +491,8 @@ csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 csharp_style_inlined_variable_declaration = true:suggestion
 ```
 
-## <a name="a-namenullcheckingnull-checking-preferencesa"></a><a name="null_checking">"Null" 検査設定</a>
-### <a name="a-namenullcheckingthrowexpressionsthrow-expressionsa"></a><a name="null_checking_throw_expressions">スロー式</a>
+## <a name="null_checking">"Null" 検査設定</a>
+### <a name="null_checking_throw_expressions">スロー式</a>
 |  オプション名 | `csharp_style_throw_expression` |
 | ------------- |:-------------:|
 | **該当言語** | C#
@@ -509,7 +509,7 @@ csharp_style_inlined_variable_declaration = true:suggestion
 csharp_style_throw_expression = true:suggestion
 ```
 
-### <a name="a-namenullcheckingconditionaldelegatecallsprefer-conditional-delegate-callsa"></a><a name="null_checking_conditional_delegate_calls">条件付き代理呼び出しを使用する</a>
+### <a name="null_checking_conditional_delegate_calls">条件付き代理呼び出しを使用する</a>
 |  オプション名 | `csharp_style_conditional_delegate_call` |
 | ------------- |:-------------:|
 | **該当言語** | C#
