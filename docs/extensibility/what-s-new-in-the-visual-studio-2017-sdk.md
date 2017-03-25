@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 221f4911981deec0330f76a82c0cc8a1b968e56e
-ms.openlocfilehash: 60898d7cace1c10006436a8d98cbd7f7628cf972
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 3da360fc4df5516f5d976f807319c07b49d8c4e8
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="what39s-new-in-the-visual-studio-2017-sdk"></a>Visual Studio 2017 SDK の新機能します。
-
->**注:**このドキュメントは暫定版であり、Visual Studio 2017 RC リリースに基づいています。
 
 Visual Studio SDK では、Visual Studio 2017 の次の新規および更新の機能があります。
 
@@ -52,8 +50,8 @@ Visual Studio 2017 の新しい軽量のインストールをサポートする�
 これらの変更の詳細については、次のトピックを参照してください。
 
 * [2017 の拡張機能への変更](breaking-changes-2017.md)
-* [VSIX v3 で Ngen のサポート](ngen-support.md)
-* [拡張機能フォルダー外にインストールします。](set-install-root.md)
+* [VSIX v3 での Ngen のサポート](ngen-support.md)
+* [拡張機能フォルダー外でのインストール](set-install-root.md)
 * [よく寄せられる質問の Visual Studio 2017 機能拡張](faq-2017.md)
 
 ## <a name="migrating-extensibility-project-to-visual-studio-2017"></a>Visual Studio 2017 への移行の機能拡張プロジェクト

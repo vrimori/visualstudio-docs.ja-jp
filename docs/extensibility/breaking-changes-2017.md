@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 221f4911981deec0330f76a82c0cc8a1b968e56e
-ms.openlocfilehash: 081a569fc7e38fecc8cc1ae5b0f8138ae8f25521
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 2e6e4b3d9d1528d57fe181b3765e1ce3624bebad
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 機能拡張の変更
-
->**注:**このドキュメントは暫定版であり、Visual Studio 2017 RC リリースに基づいています。
 
 Visual Studio 2017 年で提供して、[高速、軽量な Visual Studio のインストール エクスペリエンス](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer)Visual Studio のユーザーのシステムへの影響を削減するためのワークロードとインストールされている機能をより多くの選択肢をユーザーに提供中にします。 これらの機能強化をサポートするためにはお機能拡張モデルに変更を行ったし、Visual Studio 拡張機能にいくつか大きな変更が加えします。 このドキュメントでは、これらの変更、および対処できるの技術的な詳細を説明します。 なお、一部の情報が特定の時点の実装の詳細についてで、後から変更することがあります。
 
@@ -46,7 +44,7 @@ VSIX v3 掲載し、軽量のインストール環境をサポートするため
 VSIX 形式への変更は次のとおりです。
 
 * セットアップの前提条件の宣言。 今すぐインストーラーはを軽量で高速インストールすると、Visual Studio の約束を実現するには、ユーザーに多くの構成オプションを提供します。 その結果、機能と拡張機能により必要なコンポーネントがインストールされていることを確認するには、拡張機能はその依存関係を宣言する必要があります。
-  * RC のリリースで、自動的に取得および拡張機能のインストールの一部として、ユーザーに必要なコンポーネントをインストールするに Visual Studio 2017 インストーラーが提供されます。
+  * Visual Studio 2017 インストーラーは、取得、および拡張機能のインストールの一部として、ユーザーに必要なコンポーネントをインストールする自動的に提供されます。
   * 構築されなかった、新しい VSIX v3 形式を使用して 15.0 を対象とすると、マニフェストでマークされている場合でも、拡張機能をインストールしようとすると、ユーザーは警告も。
 * VSIX 形式の強化された機能です。 実現する、[影響の少ないインストール](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install)サイド バイ サイド インストールをサポートする Visual Studio での不要になったほとんどの構成データをシステム レジストリに保存し、GAC から Visual Studio 固有のアセンブリに移動します。 また引き上げました VSIX 形式と VSIX インストール エンジンの機能ではなく、MSI、EXE を使用して、インストールの種類によって、拡張機能をインストールすることができます。
 
