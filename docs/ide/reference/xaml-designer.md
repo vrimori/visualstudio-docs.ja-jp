@@ -1,7 +1,7 @@
 ---
-title: "[オプション]、[XAML デザイナー] | Microsoft Docs"
+title: "XAML デザイナーのオプション ページ | Microsoft Docs"
 ms.custom: 
-ms.date: 01/17/2017
+ms.date: 03/02/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -30,12 +30,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7c944afe8c89b8a5e30bf1e5937e848e078954ac
-ms.openlocfilehash: f4a4832e5659a46b236cdcf9ff2eecdc3cabf57d
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: d23a47b708754248cd5c3fb8d86510a0c96491fa
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="options-xaml-designer"></a>[オプション]、[XAML デザイナー]
-**[XAML デザイナー]** プロパティ ページを使用して、XAML ドキュメントで要素と属性をどのように書式設定するかを指定します。 **[オプション]** ダイアログ ボックスで、**[ツール]** を選択し、**[オプション]** を選択します。 **[XAML デザイナー]** プロパティ ページにアクセスするには、**[XAML デザイナー]** ノードを選択します。 ドキュメントを開くと、XAML デザイナーの設定が適用されます。 そのため、設定を変更する場合、変更を確認するには、Visual Studio を閉じて、再度開く必要があります。
+# <a name="xaml-designer-options-page"></a>XAML デザイナーのオプション ページ
+**XAML デザイナー** のオプション ページを使用して、XAML ドキュメントでの要素と属性の書式設定方法を指定します。 このページを開くには、**[ツール]** メニューを選択し、**[オプション]** を選択します。 **[XAML デザイナー]** プロパティ ページにアクセスするには、**[XAML デザイナー]** ノードを選択します。 ドキュメントを開くと、XAML デザイナーの設定が適用されます。 そのため、設定を変更する場合、変更を確認するには、Visual Studio を閉じて、再度開く必要があります。
 
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
@@ -118,9 +119,4 @@ ms.openlocfilehash: f4a4832e5659a46b236cdcf9ff2eecdc3cabf57d
  [WPF の XAML](http://msdn.microsoft.com/Library/5d858575-a83b-42df-ad3f-047ed2d6e3c8)   
  [方法 : XAML ビュー設定を変更する](http://msdn.microsoft.com/en-us/aee87c79-ca01-4f84-8fb7-a9e47048ee47)   
  [XAML とコードのチュートリアル](http://msdn.microsoft.com/en-us/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
