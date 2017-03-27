@@ -1,7 +1,7 @@
 ---
-title: Visual Studio IDE | Microsoft Docs
+title: "Visual Studio IDE 機能ツアー | Microsoft Docs"
 ms.custom: 
-ms.date: 01/17/2016
+ms.date: 03/07/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -27,200 +27,220 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
-ms.openlocfilehash: 10db0535b950f1a1525bab89a6df25e4e3f40012
-ms.lasthandoff: 03/03/2017
+ms.sourcegitcommit: b0d84db6a16861fb9554af2a644423f906784748
+ms.openlocfilehash: b2ff9c3505b117469854a24cad8e9b13d8039db8
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="visual-studio-ide"></a>Visual Studio IDE
-Microsoft Visual Studio 2017 RC は、ソフトウェアを作成するための一連のツールです。このツールを使用して、計画の段階、UI 設計、コーディング、テスト、デバッグ、コードの品質やパフォーマンスの分析、カスタマーへの配置、使用率に関するテレメトリの収集などを実行できます。 これらのツールは、できるだけシームレスに連携するよう設計されており、すべて Visual Studio 統合開発環境 (IDE) を通して公開されています。  
+# <a name="visual-studio-ide-feature-tour"></a>Visual Studio IDE 機能ツアー
+このトピックでは、Visual Studio IDE の機能を紹介します。 Visual Studio IDE は、ほぼすべての種類のコードを表示および編集可能で、Android、iOS、Windows、Web、およびクラウド用のアプリをデバッグ、構築、および発行できる、統合開発環境 (IDE) です。 Mac 版と Windows 版が用意されています。 ここでは、Visual Studio で行うことができる作業の一部とインストールおよび使用方法、簡単なプロジェクトの作成方法、コードのデバッグと配置についての指針、各種ツール ウィンドウを紹介します。
 
- Visual Studio を使用すると、さまざまなアプリケーションを作成できます。モバイル クライアント向けの単純なストア アプリやゲームから、企業やデータ センターに提供するような大規模で複雑なシステムなどです。 作成できるもの  
+## <a name="what-can-you-do-with-the-visual-studio-ide"></a>Visual Studio IDE でできること
+Android スマートフォン用のアプリを 作成したり、 C++ を使用して最先端のゲームを 作成したり、それ以上のことも可能です。 Visual Studio には Web サイト、ゲーム、デスクトップ アプリ、モバイル アプリ、Office 用のアプリなどの作成をサポートするテンプレートが用意されています。
 
- - Windows だけでなく、Android と iOS でも動作するアプリおよびゲーム。
+![Visual Studio のプロジェクト](../ide/media/VSIDE_Tour_Projects_List.png)
 
- - ASP.NET、JQuery、AngularJS、その他の一般的なフレームワークをベースとした Web サイトおよび Web サービス。
+また、あらゆる場所で入手できるほぼすべてのコードを開いて操作できます。 GitHub にお好みのプロジェクトがある場合は、 そのリポジトリを複製して Visual Studio で開くだけでコーディングを開始できます。
 
- - さまざまなプラットフォームやデバイス向けのアプリケーション。Azure、Office、Sharepoint、Hololens、Kinect、モノのインターネットなどはほんの一例です。
+### <a name="create-mobile-apps"></a>モバイル アプリの作成
+Visual C# や Xamarin (Visual C++) を使用して異なるプラットフォームのネイティブ モバイル アプリを作成したり、Apache Cordova で JavaScript を使用してハイブリッド アプリを作成したりできます。 Unity、Unreal、DirectX、Cocos 用のモバイル ゲームを作成できます。 Visual Studio には Android エミュレーターが搭載されているため、Android アプリの実行してデバッグできます。
 
- - DirectX を使用するさまざまな Windows デバイス (Xbox など) 向けのゲームおよびグラフィックを集中的に使用するアプリケーション。
+Azure App Services を作成して、モバイル アプリにクラウドの機能を活用できます。 Azure App Services を活用すると、アプリのデータをクラウドに保存したり、ユーザーを安全に認証したり、アプリやビジネスのニーズに合わせてリソースを調整したりできます。 詳しくは、「[モバイル アプリ開発](https://www.visualstudio.com/vs/mobile-app-development/)」をご覧ください。
+
+### <a name="create-cloud-apps-for-azure"></a>Azure 用のクラウド アプリの作成
+Visual Studio には、Microsoft Azure を使用するクラウド ファーストのアプリケーションを簡単に作成できるツールのスイートが用意されています。 これにより、IDE から直接 Microsoft Azure でアプリケーションとサービスを簡単に構成、ビルド、デバッグ、パッケージ化、およびデプロイできます。 接続済みサービスを使用して、アプリに Azure のサービスを活用します。 Azure Tools for .NET を入手するには、Visual Studio をインストールするときに **Azure 開発**ワークロードを選択します。 詳しくは、「[Visual Studio Tools for Azure](https://www.visualstudio.com/vs/azure-tools/)」をご覧ください。
+
+### <a name="create-apps-for-the-web"></a>Web 用のアプリの作成
+現在世界を動かしているのは Web であり、Visual Studio は Web 用のアプリの作成をサポートします。 Web アプリは ASP.NET、Node.js、Python、JavaScript、TypeScript を使用して作成できます。 Visual Studio は、Angular、jQuery、Express などの Web フレームワークを理解します。 ASP.NET Core と .NET Core は、Windows、Mac、Linux の各オペレーティング システムで実行できます。 詳しくは、「[最新の Web ツール](https://www.visualstudio.com/vs/modern-web-tooling/)」をご覧ください。
+
+### <a name="write-code-in-a-world-class-editing-environment"></a>ワールド クラスの編集環境でのコードの記述
+Visual Studio では、構文の色表示、ステートメント入力候補、IntelliSense (選択したコード要素について説明するポップアップ)、コード アウトライン、デバッグ用のブレークポイントの設定などの機能により、コードを簡単かつ迅速に記述できます。
+
+![JavaScript コード例](../ide/media/vside_tour_javascript_example.gif)
+
+詳しくは、「[コード エディターとテキスト エディターでのコードの作成](https://docs.microsoft.com/visualstudio/ide/writing-code-in-the-code-and-text-editor)」をご覧ください。
+
+Visual Studio は、他にも数多くのことを実行するのに役立ちます。 すべての一覧については、「[Visual Studio IDE](https://www.visualstudio.com/vs/)」をご覧ください。
 
 
- 既定では、Visual Studio は C#、C、C++、JavaScript、TypeScript、F#、Visual Basic のサポートを提供します。 Visual Studio は、Xamarin ([Xamarin for Visual Studio](https://www.xamarin.com/visual-studio) を介して)、および Unity ([Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) 拡張機能を介して) や Apache Cordova ([Visual Studio Tools for Apache Cordova](../misc/get-started-with-visual-studio-tools-for-apache-cordova2.md) を介して) などのサードパーティ製アプリケーションと、密接に連携および統合しています。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md) を利用して特殊なタスクを実行するカスタム ツールを作成することで、Visual Studio を独自に拡張できます。
+## <a name="install-the-visual-studio-ide"></a>Visual Studio IDE のインストール
+まず、Visual Studio をダウンロードしてシステムにインストールします。 [Visual Studio 2017](https://www.visualstudio.com/vs/visual-studio-2017/) のページからダウンロードできます。
 
-## <a name="find-out-whats-new"></a>新機能
- Visual Studio を初めて使う場合は、「[Visual Studio 入門](../ide/get-started-with-visual-studio.md)」で基本を学んでください。
-Visual Studio 2017 RC の新機能については、「[Visual Studio 2017 RC の新機能](../ide/whats-new-in-visual-studio.md)」を参照してください。
+Visual Studio はかつてないほど軽量になりました。 新しいモジュラー インストーラーにより、インストールする*ワークロード* (そのプログラミング言語やプラットフォームで必要な機能のグループ) を選択できます。 この方法により、Visual Studio のインストールのフットプリントがかつてないほど小さくなり、インストールと更新に要する時間が短縮されました。
 
-## <a name="set-up-visual-studio"></a>Visual Studio を設定する
- 「[Visual Studio 製品](https://www.visualstudio.com/products/)」で、自分に適した Visual Studio のエディションを見つけることができます。
+![Visual Studio インストーラー](../install/media/vs2017-workloads.png)
 
- Visual Studio 2017 RC は、「[Visual Studio のダウンロード](https://www.visualstudio.com/vs/)」からダウンロードしてインストールできます。 インストール プロセスの詳細については、「[Visual Studio 2017 RC のインストール](https://go.microsoft.com/fwlink/?linkid=833223)」を参照してください。
+Visual Studio 2017 ではインストールのパフォーマンスが強化されたことに加え、数多くの改善により IDE 全体の起動時間とソリューションの読み込み時間が短縮されました。 たとえば、**[ツール]**、**[オプション]**、**[プロジェクトとソリューション]** の下のメイン メニューにある新しいライトウェイト ソリューション ロード機能を選択すると、大規模なソリューションの読み込み時間が短縮されます。 お使いのシステムに Visual Studio をセットアップする方法について詳しくは、「[Visual Studio 2017 のインストール](https://docs.microsoft.com/visualstudio/install/install-visual-studio)」をご覧ください。
+
+## <a name="sign-in"></a>サインイン
+Visual Studio を初めて起動する際には、Microsoft アカウント、仕事用アカウント、または学校用アカウントを使ってサインインすることもできます。 サインインすると、ウィンドウ レイアウトなどの Visual Studio の設定を複数のデバイス間で同期できます。 また、Azure サブスクリプションや Visual Studio Team Services など、必要になる可能性のあるサービスに自動的に接続されます。
+
+
+## <a name="create-a-program"></a>プログラムの作成
+
+あることを学ぶ方法の&1; つは実際に使ってみることです。 簡単なプログラムを新しく作成してみましょう。
+
+1. Visual Studio を開きます。 メニューで、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。 (プロジェクトの既定の値を使用します。)
+
+  ![スクリーンショット](../ide/media/VSIDE_Tour_NewProject1.png)
+
+1. **[新しいプロジェクト]** ダイアログ ボックスには複数のプロジェクト テンプレートが表示されます。 **[Visual C#]** の下の **[Windows ユニバーサル]** カテゴリで **[空白のアプリ (ユニバーサル Windows)]** テンプレートを選択し、**[OK]** ボタンを選択します。
+
+  ![スクリーンショット](../ide/media/VSIDE_Tour_NewProject2.png)
+
+  これにより、Visual C# と XAML をプログラミング言語として使用する新しい空のユニバーサル Windows アプリ プロジェクトが作成されます。 Visual Studio でプロジェクトが設定されるまで少し待ちます。 情報を確認するよう求められた場合、現時点では既定値を使用してください。
+
+1. まもなく、次のスクリーンショットのような画面が表示されます。 プロジェクト ファイルは右側のソリューション エクスプローラーと呼ばれるウィンドウに一覧表示されます。
+
+  ![スクリーンショット](../ide/media/VSIDE_Tour_NewProject3.png)
+
+1. ソリューション エクスプローラーで、MainPage.xaml ファイルの横にある小さな黒い三角形を選択して展開すると、下に MainPage.xaml.cs ファイルが表示されます。 このファイルを選択して開きます (C# コードが含まれます)。
+
+  MainPage.xaml.cs の C# コードが画面の左側のコード エディターに表示されます。 コードの構文は、ステートメントやコメントなど、コードの種類に応じて自動的に色分けされます。 また、コードの縦の小さな点線は互いに一致する括弧を示し、行番号は後でコードの場所を探すのに役立ちます。 小さな四角で囲まれたマイナス記号を選択するとコードが折りたたまれ、折りたたまれている場合は展開できます。 このコードのアウトライン機能を使用すると、必要のないコードを非表示にして画面を整理できます。
+
+  ![](../ide/media/VSIDE_Tour_NewProject3a.png)
+
+  他にもメニューやツール ウィンドウが用意されていますが、今は次に進みましょう。
+
+1. XAML 形式でボタンを追加することで、ユーザーがアプリと対話する手段を提供します。 これを行うには、MainPage.xaml ファイルを開きます。 ビューは分割されています。上のデザイナーは視覚的にコントロールを配置し、下のコード ビューはデザイナーと分離された XAML コードを示します。 後でプログラムを実行すると、デザイナーに表示されている内容がユーザーに表示されるウィンドウ (フォーム) になり、基になる XAML がそのフォームに表示する内容を決定します。
+
+1. 画面の左側で、**[ツールボックス]** タブを選択してツールボックスを開きます。 ツールボックスには、フォームに追加できるビジュアル コントロールが含まれています。 ここでは、ボタン コントロールだけを追加します。
+
+1. **[コモン XAML コントロール]** セクションを展開し、ボタン コントロールをフォームの真ん中辺りにドラッグします。 (正確に配置する必要はありません。)
+
+  ![スクリーンショット](../ide/media/VSIDE_Tour_Toolbox.png)
+
+  完了すると、次のように表示されます。
+
+  ![スクリーンショット](../ide/media/VSIDE_Tour_XAMLButton.png)
+
+  デザイナーにボタンが追加され、基になるコード (ハイライト表示) が自動的にデザイナーの XAML コードに追加されます。
+
+1. XAML コードを少し変更してみましょう。 ボタン コードのテキストの名前を `Button` から `Hello!` に変更します。
+
+  ![スクリーンショット](../ide/media/VSIDE_Tour_XAMLButton2.png)
+
+1. アプリを起動します。 これは、ツールバーの **[スタート]** (![[スタート] ボタン](../ide/media/VSIDE_StartButton.png)) を選択するか、F5 キーを押すか、メニューで **[デバッグ]**、**[デバッグの開始]** を選択することで行います。
+
+  ![スクリーンショット](../ide/media/VSIDE_Tour_RunButton.png)
+
+  アプリでビルド プロセスが開始され、出力ウィンドウに状態のメッセージが表示されます。 まもなく、ボタンが追加されたフォームが表示されます。 これで実行中のアプリができました。
+
+  ![スクリーンショット](../ide/media/VSIDE_Tour_RunProject.png)
+
+  もちろん、今すぐに行う必要はありませんが、後で必要に応じて機能を追加できます。
+
+1. プログラムの実行を終了するには、ツールバーの [終了] (![[終了] ボタン](../ide/media/VSIDE_StopButton.png)) を選択して終了します。
+
+ここまでを振り返ってみましょう。Visual Studio で新しい C# Windows ユニバーサル プロジェクトを作成し、そのコードを表示して、デザイナーにコントロールを追加しました。その後、XAML コードの一部を変更し、プロジェクトを実行しました。 この例のプロセスは簡略化されていますが、Visual Studio IDE で独自のアプリを開発するときに使用する共通部分の一部を示します。 この例についてさらに詳しくは、「["Hello, world" アプリを作成する (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)」をご覧ください。
+
+
+## <a name="debug-test-and-improve-your-code"></a>デバッグとテストによるコードの改善
+いつもすべてが完璧にうまく行くとは限りません。 コードを記述する際には、バグの存在やパフォーマンスを確認するために実際に実行してテストする必要があります。 Visual Studio の最新のデバッグ システムを使うと、ローカル プロジェクト、リモート デバイス、またはエミュレーター (Android デバイス用や Windows Phone デバイス用など) で実行されるコードをデバッグできます。 一度に&1; つのステートメントのコードをステップスルーでき、変数を調べることができます。マルチスレッド アプリケーションをステップスルーでき、指定された条件が true の場合のみヒットするブレークポイントを設定できます。 コードの実行中に変数の値などを監視できます。 すべてコード エディター自体で管理できるため、コードを離れる必要はありません。
+
+![デバッグ](../ide/media/VSIDE_Tour_Debugging.png)
+
+テストについては、Visual Studio には単体テスト、IntelliTest、負荷およびパフォーマンス テストなどが用意されています。 Visual Studio のデバッグ プロセスについて詳しくは、[デバッガーの機能ツアー](https://review.docs.microsoft.com/visualstudio/debugger/debugger-feature-tour?branch=mikejo-tour)に関するページをご覧ください。 テストについて詳しくは、「[テスト ツール](https://www.visualstudio.com/vs/testing-tools/)」をご覧ください。 アプリのパフォーマンスを改善する方法について詳しくは、「[プロファイリング ツール](https://docs.microsoft.com/visualstudio/profiling/profiling-tools)」をご覧ください。
+
+## <a name="deploy-your-finished-application"></a>完成したアプリケーションを配置する  
+アプリケーションをユーザーやお客様に配置する用意ができたら、Visual Studio の配置するためのツールを使用できます。Windows ストア や Sharepoint サイトへの配置、Installshield または Windows インストーラー テクノロジによる配置、いずれにも対応しています。 これはすべて、IDE を使用してアクセスできます。 詳しくは、「[アプリケーション、サービス、およびコンポーネントの配置](../deployment/deploying-applications-services-and-components.md)」をご覧ください。
 
 ## <a name="quick-tour-of-the-ide"></a>IDE のクイック ツアー
- 次の図は、プロジェクトが開かれ、いくつかの重要なツール ウィンドウが表示されている Visual Studio IDE です。
- - [ソリューション エクスプローラー](../ide/solutions-and-projects-in-visual-studio.md)では、コード ファイルを表示してその中を移動できます。
- - [チーム エクスプローラー](https://www.visualstudio.com/en-us/docs/connect/work-team-explorer)では、[Git](https://git-scm.com/) や [Team Foundation バージョン管理 (TFVC)](https://www.visualstudio.com/en-us/docs/tfvc/overview) などのバージョン管理テクノロジを使って、作業項目を追跡し、コードを他のユーザーと共有できます。
- - [クラウド エクスプローラー](https://azure.microsoft.com/en-us/documentation/articles/vs-azure-tools-resources-managing-with-cloud-explorer/)では、仮想マシン、テーブル、SQL データベースなどの Azure リソースを表示および管理することができます。
- - [エディター](../ide/writing-code-in-the-code-and-text-editor.md) ウィンドウでは、ソース コードとデザイナー データを表示および編集することができます。
- - [出力](../ide/reference/output-window.md) ウィンドウには、コンパイル、実行、デバッグ、その他からの出力が表示されます。
+次の図は Visual Studio で開かれたプロジェクトと主なツール ウィンドウを示し、Visual Studio の全体像を視覚的に確認できます。
+ - [ソリューション エクスプローラー](../ide/solutions-and-projects-in-visual-studio.md)では、コード ファイルを表示、移動、および管理できます。
+ - [[エディター]](../ide/writing-code-in-the-code-and-text-editor.md) ウィンドウでは、コードを表示し、ソース コードとデザイナー データを表示および編集することができます。
+ - [[出力]](../ide/reference/output-window.md) ウィンドウには、コンパイル、実行、デバッグなどから出力されるメッセージが表示されます。
+ - [チーム エクスプローラー](https://www.visualstudio.com/docs/connect/work-team-explorer)では、[Git](https://git-scm.com/) や [Team Foundation バージョン管理 (TFVC)](https://www.visualstudio.com/docs/tfvc/overview) などのバージョン管理テクノロジを使って、作業項目を追跡し、コードを他のユーザーと共有できます。
+ - [クラウド エクスプローラー](https://azure.microsoft.com/documentation/articles/vs-azure-tools-resources-managing-with-cloud-explorer/)では、仮想マシン、テーブル、SQL データベースなどの Azure リソースを表示および管理することができます。
 
+![Visual Studio IDE](../ide/media/visualstudioide.png)  
 
- ![Visual Studio IDE](../ide/media/visualstudioide.png "VisualStudioIDE")  
+Visual Studio には他にも一般的な仕事効率化機能が用意されています。  
 
- ### <a name="sign-in"></a>サインイン
-  Visual Studio を初めて起動する際には、まず Microsoft アカウント、仕事用アカウント、または学校用アカウントを使ってサインインできます。 サインインすると、複数のデバイス間でウィンドウのレイアウトなどの設定を最新に保つことができ、必要なサービス (Azure サブスクリプションや Visual Studio Team Services など) に自動的に接続できます。 サブスクリプションに基づくライセンスがある場合は、ライセンスのトークンを最新の状態に保つために、定期的に Visual Studio にサインインする必要があります。 プロダクト キーのライセンスがある場合、サインインする必要はありませんが、サインインすると、Visual Studio Team Services や Azure、Office 365、Salesforce.com のアカウントに接続しやすくなります。 詳しくは、「[Visual Studio へのサインイン](../ide/signing-in-to-visual-studio.md)」をご覧ください。
+- [クイック起動](https://docs.microsoft.com/en-us/visualstudio/ide/reference/quick-launch-environment-options-dialog-box)検索ボックスは、Visual Studio で必要な情報を迅速に見つけるに役立ちます。 探している内容をそのまま入力すると、Visual Studio に候補が表示され、目的の場所に正確に移動できます。 また、クイック起動にはすべてのワークロードまたは個々のコンポーネントに対応する Visual Studio インストーラーを起動するリンクが表示されます。
 
-  Visual Studio Team Services アカウント、Azure アカウント、または MSDN サブスクリプションが複数ある場合、それらをリンクして、単一のサインインですべてのアカウント内のリソースとサービスにアクセスできます。 詳しくは、「[複数のユーザー アカウントを使って作業する](../ide/work-with-multiple-user-accounts.md)」をご覧ください。
-
- ### <a name="stay-up-to-date"></a>最新の状態を維持する
-  タイトル バーの右上隅のフラグ通知アイコンは、Visual Studio の更新プログラムまたはインストールされている関連コンポーネントが入手可能になると、通知します。 この通知を解除するか有効にするかを選択できます。 詳しくは、「[Visual Studio の通知](../ide/visual-studio-notifications.md)」をご覧ください。
-
- ### <a name="find-things-and-get-help"></a>情報を検索してヘルプを表示する
-  次のスクリーンショットで赤く囲って示されている[クイック起動](../ide/reference/quick-launch-environment-options-dialog-box.md)ウィンドウを使うと、キーボード ショートカットまたはメニューの場所がわからないときに、Visual Studio コマンド、ツール、機能などをすぐに見つけることができます。 探しているものを入力すれば、クイック起動がそのリンクを教えてくれます。
-
- !["新しいプロジェクト" のクイック起動結果](../ide/media/Productivity_QuickLaunch.png "Productivity_QuickLaunch")
-
- Visual Studio では、**F1** キーを押して、アクティブ ウィンドウのオンライン ヘルプに移動できます。 また、コード エディターで **F1** キーを押すと、現行のカーソル位置の API またはキーワードについてのヘルプ ページに移動できます。 たとえば、C# ファイルで、`System.String` 宣言の途中か末尾にカーソルを置いて **F1** キーを押すと、[String](assetId:///T:System.String?qualifyHint=False&autoUpgrade=True) のヘルプ ページに移動します。
-
-### <a name="give-feedback"></a>フィードバックを送信する
- Visual Studio では、いつでもフィードバックを簡単に提供できます。 **[クイック起動]** の横にあるタイトル バーのフィードバック アイコンをクリックして、 **[問題の報告]** または **[提案事項の送信]**をクリックします。
-
-![フィードバックを送信する](../ide/media/VSIDE_reportproblem.png)
-
- Visual Studio のプレリリース版にも、 **[この製品を評価する]** オプションが用意されています。 これらのすべてのコメントを拝見し、製品向上のための参考にさせていただきます。 詳しくは、「[ご意見](../ide/talk-to-us.md)」をご覧ください。
-
-### <a name="personalize-the-ide"></a>IDE をカスタマイズする
- 開発スタイルに合わせてウィンドウのレイアウトをカスタマイズできます。 どのウィンドウも、任意の時にドッキング、フローティング、または非表示にすることができます。また、エディターを全画面表示モードで実行することもできます。 特定のコンテキストで必要なウィンドウのみを表示する複数のカスタム ウィンドウ レイアウトを作成して保存できます。 たとえば、表示されるものすべてがコード エディターとなるよう、全画面レイアウトを作成できます。 デバッグ用およびチームでの操作用にさまざまなレイアウトを作成できます。 詳しくは、「[ウィンドウ レイアウトをカスタマイズする](../ide/customizing-window-layouts-in-visual-studio.md)」をご覧ください。
-
- その他にも、Visual Studio をさまざまな方法でカスタマイズできます。複数のコンピューターで作業している場合は、設定をローミングできます。 詳細については、「[IDE をカスタマイズする](../ide/personalizing-the-visual-studio-ide.md)」をご覧ください。
-
- ほとんどすべてにキーボード ショートカットがあります。また、キーボード ショートカットをカスタマイズすることもできます。 新しいショートカットを作成するには、クイック起動に「キーボード」と入力して、[キーボード] ダイアログ ボックスを開きます。 オプションに関する詳細が必要な場合、そのダイアログ ボックスで F1 を押して、ヘルプ ページに移動できます。 詳しくは、「[Visual Studio の既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」をご覧ください。
-
-## <a name="connect-to-visual-studio-team-services-and-team-foundation-server"></a>Visual Studio Team Services と Team Foundation Server に接続する
-  Visual Studio Team Services (VSTS) は、ソフトウェア プロジェクトをホストし、チームでのコラボレーションを有効にするためのクラウド ベースのサービスです。 VSTS は、Git ソース管理システムと Team Foundation ソース管理システムの両方をサポートしています。また、Scrum、CMMI、アジャイル開発方法もサポートしています。 Team Foundation バージョン管理 (TFVC) は、単一の集中サーバー リポジトリを使用して、ファイルを追跡してバージョン管理します。 ローカルの変更は常に集中サーバーにチェックインされます。他の開発者はそこで、最新の変更を取得できます。 Team Foundation Server (TFS) 2015 は、Visual Studio のアプリケーション ライフサイクル管理のハブです。 これにより、開発プロセスに関わるすべてのユーザーが&1; つのソリューションを使用して参加できるようになります。 TFS は、異種混合のチームやプロジェクトを管理するのにも役立ちます。
-
-  Visual Studio Team Services のアカウントまたは Team Foundation Server がネットワーク上にある場合、[チーム エクスプローラー] ウィンドウから接続することができます。 このウィンドウからソース管理にコードをチェックインしたりソース管理からコードをチェックアウトできます。また、作業項目を管理したり、ビルドを開始したり、チームのルームやワークスペースにアクセスできます。 チーム エクスプローラーは、**[クイック起動]**、**[ビュー] > [チーム エクスプローラー]** のメイン メニュー、または **[チーム] > [接続の管理]** から開くことができます。  Visual Studio Team Services について詳しくは、「 [www.visualstudio.com](https://www.visualstudio.com/)」をご覧ください。 Team Foundation Server について詳しくは、「 [Team Foundation Server](https://www.visualstudio.com/products/tfs-overview-vs)」をご覧ください。
-
-  次の図は、VSTS でホストされているソリューションの [チーム エクスプローラー] ウィンドウを示しています。
-
- ![Visual Studio チーム エクスプローラー](../ide/media/vs2017_teamexplorer.png "VS2017_TeamExplorer")  
-
-## <a name="create-solutions-and-projects"></a>ソリューションとプロジェクトを作成する
-  Visual Studio を使用して個々のコード ファイルを使用できますが、より一般的なのは、 *プロジェクト*で処理する方法です。 Visual Studio プロジェクトは、ファイルとリソースのを集めたものです。アプリケーションにするために単一のバイナリ実行可能ファイル (.exe、DLL、appx など) にコンパイルされます。 ASP.NET Web サイト以外では、実行可能ファイルは生成されません。プロジェクトには、HTML、JavaScript ファイル、および画像のみが含まれます。 密接に関連した複数のバイナリまたは Web サイトを作成することが必要になる時があります。そのため、Visual Studio にはソリューションという概念があります。ソリューションには、複数のプロジェクトまたは Web サイトを含めることができます。 プロジェクトを作成する際、実際にはソリューションのプロジェクトを作成していることになります。必要に応じて、後からそのソリューションにプロジェクトを追加することができます。 たとえば、DLL プロジェクトがある場合、DLL を読み込んで使用するソリューションに.exe プロジェクトを追加できます。
-
-  *プロジェクト テンプレート* は、事前設定済みコード ファイルと構成設定のコレクションです。これにより、特定の種類のアプリケーションの作成作業をすばやくセットアップすることができます。 Visual Studio には多くの選択元となるプロジェクト テンプレートが用意されています。既定のテンプレートの中に適切なものがなければ、独自のテンプレートを作成することができます。 テンプレートを使ってプロジェクトを作成した後、そのプロジェクトでの独自のコードの作成を開始できます。提供されているファイルか、追加する新しいファイルに作成できます。 詳しくは、「[ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)」をご覧ください。 次の図は、ASP.NET アプリケーション用に使用できるプロジェクト テンプレートが入った [新しいプロジェクト] ダイアログを示しています。
-
- ![Visual Studio の [新しいプロジェクト] ダイアログ](../ide/media/vs2017_newprojectdialog.png "VS2017_NewProjectDialog")  
-
-## <a name="write-navigate-and-understand-code"></a>コードを作成、移動、理解する  
- おそらく、開発者はほとんどの時間をエディター ウィンドウで費やします。 Visual Studio には、C#、C++、Visual Basic、F#、JavaScript、TypeScript、XML、HTML、CSS の編集機能が組み込まれています。 また、他の多くの言語の編集とコンパイルもサポートしています。
-
- テキスト エディターで **[ファイル]、[開く]、[ファイル]** の順に選んで、個別のファイルを編集できます。 開いているプロジェクトのファイルを編集するには、ソリューション エクスプローラーでファイル名を選んで開きます。 コードは色分け表示されます。クイック起動で「色」と入力すると、配色をカスタマイズできます。 テキスト エディターのタブ付きウィンドウを、一度に多数開くことができます。 各ウィンドウ個別に分割できます。 テキスト エディターを全画面表示モードで実行することもできます。  
-
- ![コード エディターに表示されたコード](../ide/media/codewindow.png "コード エディター")  
-
- テキスト エディターには、生産性の向上に役立つ多くの機能との高度な対話性があります (望む場合)。これによって、より質の高いコードをより早く作成できます。 機能は言語によって異なり、機能をオンまたはオフにするためにそれらを使用する必要はありません (クイック起動で「エディター」を入力)。一般的な生産性向上機能として、次のものがあります。  
+  ![クイック起動検索ボックス](../ide/media/VSIDE_Tour_QuickLaunch.png)
 
 -  [リファクタリング](../ide/refactoring-in-visual-studio.md)。これには、変数の名前をインテリジェントに変更する、選んだコード行を別個の関数に移動する、コードを他の場所に移動する、関数パラメーターを並べ替える、などの操作が含まれます。
 
-  ![リファクタリング](../ide/media/VSIDE_refactor.png)  
+ ![リファクタリング](../ide/media/VSIDE_refactor.png)  
 
 -  **IntelliSense**。コードに関する型情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする、よく使われる機能セットの包括的な用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、別個のヘルプ ウィンドウで型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳しくは、「[Visual C# の IntelliSense](../ide/visual-csharp-intellisense.md)」、「[Visual C++ Intellisense](../ide/visual-cpp-intellisense.md)」、「[JavaScript IntelliSense](../ide/javascript-intellisense.md)」、「[Visual Basic 固有の IntelliSense](../ide/visual-basic-specific-intellisense.md)」をご覧ください。 次の図は、職場でのいくつかの IntelliSense 機能を示しています。  
 
-     ![Visual Studio のメンバー一覧](../ide/media/vs2017_Intellisense.png "vs2017_Intellisense")  
+  ![Visual Studio のメンバーの一覧](../ide/media/vs2017_Intellisense.png)  
 
--  **波線** 。入力と同時にコードのエラーまたは潜在的な問題をアラートします。これにより、コンパイルまたは実行時にエラーが発見されるのを待たずに即時に修正することができます。 破線の上に移動すると、エラーに関する追加情報が表示されます。 電球がエラーの修正方法に関する提案とともに左余白に表示される場合もあります。 詳しくは、「[電球を使ってクイック操作をする](../ide/perform-quick-actions-with-light-bulbs.md)」をご覧ください。  
+-  **波線**は波打った赤の下線で、コード入力時にエラーや潜在的な問題をリアルタイムに警告します。 これにより、コンパイル時や実行時にエラーが検出されるのを待たずに即時に修正できます。 破線の上に移動すると、エラーに関する追加情報が表示されます。 電球がエラーの修正方法に関する提案とともに左余白に表示される場合もあります。 詳しくは、「[電球を使ってクイック操作をする](../ide/perform-quick-actions-with-light-bulbs.md)」をご覧ください。  
 
-  ![波線](../ide/media/vs2017_squiggle.png "VS2017_Squiggles")  
+ ![波線](../ide/media/vs2017_squiggle.png)  
 
--  [ブックマーク](../ide/setting-bookmarks-in-code.md)。アクティブに作業しているファイルの特定の行にすばやく移動することができます。
+-  [[呼び出し階層]](../ide/reference/call-hierarchy.md) ウィンドウはテキスト エディターのコンテキスト メニューで開き、キャレット (挿入ポイント) の下のメソッドを呼び出す、またはそのメソッドによって呼び出されるメソッドを表示することができます。
 
-    ![[ブックマーク] ウィンドウ](../ide/media/VSIDE_bookmarks.png)
+ ![[呼び出し階層] ウィンドウ](../ide/media/VSIDE_call_hierarchy.png)
 
--  [[呼び出し階層]](../ide/reference/call-hierarchy.md) ウィンドウはテキスト エディターのコンテキスト メニューで呼び出して、キャレットの下のメソッドを呼び出す、またはそのメソッドによって呼び出されるメソッドを表示することができます。
+-  [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md)。コードへの参照および変更、リンクされたバグ、作業項目、コード レビュー、単体テストをすべて、エディターを離れずに検索できます。
 
-    ![[呼び出し階層] ウィンドウ](../ide/media/VSIDE_call_hierarchy.png)
+ ![CodeLens](../ide/media/codelensoverview.png)
 
--  **CodeLens**。コードへの参照および変更、リンクされたバグ、作業項目、コード レビュー、単体テストをすべて、エディターを離れずに検索できます。
+-  [ [ピークの定義](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md) ] ウィンドウ。現在のコンテキストから移動せずに、メソッドまたは型の定義インラインが表示されます。  
 
-    ![CodeLens](../ide/media/codelensoverview.png)
-
-  詳しくは、「[コード変更およびその他の履歴の検索](../ide/find-code-changes-and-other-history-with-codelens.md)」をご覧ください。  
-
--  [ **ピークの定義** ] ウィンドウ。現在のコンテキストから移動せずに、メソッドまたは型の定義インラインが表示されます。 このウィンドウは、XAML でも有効です。  
-
-    ![ピークの定義](../ide/media/VSIDE_peek_definition.png)
+ ![ピークの定義](../ide/media/VSIDE_peek_definition.png)
 
 -  [ **定義に移動** ] コンテキスト メニュー オプション。関数またはオブジェクトが定義されている場所に直接移動します。 エディターを右クリックすることで、その他のナビゲーション コマンドも使用できます。
 
-    ![定義へ移動](../ide/media/VSIDE_go_to_definition.png)
+ ![定義へ移動](../ide/media/VSIDE_go_to_definition.png)
 
-- [オブジェクト ブラウザー](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) (関連ツール)。システム上の .NET アセンブリまたは Windows ランタイム アセンブリを調べ、アセンブリにどの型が含まれているか、またそれらの型にどのメソッドとプロパティが含まれているかを確認できます。  
+- [オブジェクト ブラウザー](http://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) (関連ツール)。システム上の .NET アセンブリまたは Windows ランタイム アセンブリを調べ、アセンブリにどの型が含まれているか、またそれらの型にどのメンバー (プロパティ、メソッド、イベント) が含まれているかを確認できます。
 
-     ![System.Timer を示すオブジェクト ブラウザー](../ide/media/objectbrowser.png "ObjectBrowser")  
+  ![System.Timer を示すオブジェクト ブラウザー](../ide/media/objectbrowser.png)  
 
- [編集] メニューと [表示] メニュー上の項目のほとんどは、何らかの方法でコード エディターに関連しています。 エディターについて詳しくは、「[コードの作成](../ide/writing-code-in-the-code-and-text-editor.md)」および「[コードの編集](https://www.visualstudio.com/features/ide-vs)」をご覧ください。  
+## <a name="collaborate-with-others-and-control-your-source-code"></a>他のユーザーとの共同作業とソース コードのコントロール
+GitHub などの任意のプロバイダーがホストしている Git リポジトリにあるソース コードを管理できます。 また、[Visual Studio Team Services (VSTS)](https://www.visualstudio.com/team-services/) を使用して、プロジェクト全体でコードをバグおよび作業項目と共に管理することもできます。
 
-## <a name="compile-and-build-your-code"></a>コードをコンパイルしてビルドする  
- プロジェクトをビルドするということは、ソース コードをコンパイルし、実行可能ファイルの生成に必要な手順すべてを実行することを意味します。 ビルド操作は言語によって異なっており、通常の Web サイトはまったくビルドは行っていません。 プロジェクトの種類に関係なく、**[ビルド]** メニューはこれらのコマンドの標準の場所です。 一度のキー入力でコードをコンパイルして実行するには、F5 キーを押します。 どのコンパイラも、IDE によって完全に構成可能です。 [ビルド] ツールバーでは、プログラムのデバッグ バージョンをビルドするかどうかを指定できます。デバッグ バージョンでは、記号と追加エラー チェックが有効になり、デバッガーでのブレークポイントとシングル ステップ、リリース ビルド (最終的にユーザーに渡すもの) がサポートされます。 他のビルド設定や、他の多くの設定をプロジェクトのプロパティ ページで構成できます。 ソリューション エクスプローラーでプロジェクトのノードのコンテキスト (右クリック) メニューを選び、[プロパティ] コマンドを選びます。 コマンド ラインからビルドを実行することもできます。  
+Visual Studio Team Services は、ソフトウェア プロジェクトをホストし、チームでのコラボレーションを有効にするためのクラウド ベースのサービスです。 VSTS は、Git ソース管理システムと Team Foundation ソース管理システムの両方をサポートしています。また、Scrum、CMMI、アジャイル開発方法もサポートしています。 Team Foundation バージョン管理 (TFVC) は、単一の集中サーバー リポジトリを使用して、ファイルを追跡してバージョン管理します。 ローカルの変更は常に集中サーバーにチェックインされます。他の開発者はそこで、最新の変更を取得できます。
 
- ビルドからの出力 (エラー メッセージや成功メッセージを含む) が [出力] ウィンドウに表示されます。 以下に示す [エラー一覧] には、ビルド エラーに関する詳細情報が表示されます。  
+Team Foundation Server (TFS) は、Visual Studio のアプリケーション ライフサイクル管理のハブです。 これにより、開発プロセスに関わるすべてのユーザーが&1; つのソリューションを使用して参加できるようになります。 TFS は、異種混合のチームやプロジェクトを管理するのにも役立ちます。
 
- ![C&#35; のコンパイラ エラーを示すエラー一覧](../ide/media/VS2017_errorlist.png "VS2017_error_list")  
+Visual Studio Team Services のアカウントまたは Team Foundation Server がネットワーク上にある場合、Visual Studio の [チーム エクスプローラー] ウィンドウから接続することができます。 このウィンドウからソース管理にコードをチェックインしたりソース管理からコードをチェックアウトできます。また、作業項目を管理したり、ビルドを開始したり、チームのルームやワークスペースにアクセスできます。 チーム エクスプローラーは、**[クイック起動]** ボックスから、**[ビュー]、[チーム エクスプローラー]** と選択してメイン メニューから、または **[チーム]、[接続の管理]** と選択して開くことができます。  
 
-## <a name="debug-your-code"></a>コードをデバッグする  
- Visual Studio の最新のデバッガーを使う、ローカル プロジェクトで実行されるコード、リモート デバイスで実行されるコード、エミュレーターで実行されるコード (Android デバイスや Windows Phone デバイスのコードなど) をデバッグできます。 一度に&1; つのステートメントのコードをステップスルーでき、変数を調べることができます。マルチスレッド アプリケーションをステップスルーでき、指定された条件が true の場合のみヒットするブレークポイントを設定できます。 コードの実行中に変数の値を監視できます。 このすべては、コード エディター自体で管理できます。したがって、コードのコンテキストを離れる必要はありません。  
+次の図は、VSTS でホストされているソリューションの [チーム エクスプローラー] ウィンドウを示しています。
 
- ![ブレークポイントの設定の [表示のみ] ウィンドウ](../ide/media/dbg_breakpoints_peekwindow.png "DBG_Breakpoints_PeekWindow")  
+![Visual Studio Team Explorer](../ide/media/vs2017_teamexplorer.png)  
 
- デバッガー自体に複数のウィンドウがあり、それらのウィンドウから、ローカル変数、呼び出し履歴、ランタイム環境のその他の側面を表示および操作できます。 これらのウィンドウは [ **デバッグ** ] メニューにあります。  
-
- [[イミディ エイト ウィンドウ]](../ide/reference/immediate-window.md) では、式に入力し、その結果を即時に表示することができます。
-
-![イミディエイト ウィンドウ](../ide/media/VSIDE_immediate_window.png)
-
- [[IntelliTrace]](../debugger/intellitrace.md) ウィンドウでは、実行中の .NET プログラムの各メソッド呼び出しとその他のイベントを記録します。問題の発生源をすぐに見つけることができます。
-
- 詳しくは、「[Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)」をご覧ください。  
-
-## <a name="test-your-code"></a>コードをテストする  
- Visual Studio には、マネージ コード (.NET) の単体テスト フレームワークとネイティブ C++ の単体テスト フレームワークが含まれています。 単体テストを作成するには、単にテスト プロジェクトをソリューションに追加し、テストを作成し、そのテストを [テスト エクスプローラー] ウィンドウから実行します。 詳しくは、「[コードの単体テストUnit Test Your Code](../test/unit-test-your-code.md)」をご覧ください。  
-
- ![単体テスト エクスプローラー](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
-
-## <a name="analyze-code-quality-and-performance"></a>コードの品質とパフォーマンスを分析する  
- Visual Studio には、静的分析とランタイム分析のための強力なツールが含まれています。 静的分析ツールでは、デザイン、グローバリゼーション、相互運用性、パフォーマンス、セキュリティ、その他のカテゴリでの潜在的なエラーを特定することができます。 パフォーマンス テスト (プロファイリング) では、プログラムの実行方法を測定する必要があります。 これらのツールには、[ **分析** ] メニューからアクセスできます。 詳しくは、「[Visual Studio 診断ツールによる品質の向上](../test/improve-code-quality.md)」をご覧ください。  
-
-## <a name="connect-to-cloud-services-and-databases"></a>クラウド サービスとデータベースに接続する  
- Visual Studio の [Cloud Explorer](https://azure.microsoft.com/en-us/documentation/articles/vs-azure-tools-resources-managing-with-cloud-explorer/) には、ユーザーがログインしている Azure サブスクリプションで管理されているすべてのアカウントに含まれる Azure リソースが表示されます。 Cloud Explorer は、[Azure SDK](https://azure.microsoft.com/en-us/downloads/) をインストールすることで利用できます。
+Visual Studio Team Services について詳しくは、「[Visual Studio Team Services](https://www.visualstudio.com/team-services/)」をご覧ください。 Team Foundation Server について詳しくは、「 [Team Foundation Server](https://www.visualstudio.com/products/tfs-overview-vs)」をご覧ください。
 
 
- ![Cloud Explorer](../ide/media/VSIDE_CloudExplorer.png)
+## <a name="connect-to-services-databases-and-cloud-based-resources"></a>サービス、データベース、クラウドベースのリソースへの接続
+クラウドは現在のオンラインで繋がった世界では必須であり、Visual Studio はそれを活用する方法を提供します。 たとえば、接続済みサービス機能により、お使いのアプリをサービスに接続できます。 お使いのアプリでそのサービスを使用してデータを Azure ストレージなどに保存できます。
 
- [サーバー エクスプローラー](https://msdn.microsoft.com/en-us/library/cd2cz7yy.aspx) も、Azure、Salesforce.com、Office 365、および Web サイト上の SQL Server インスタンスとアセットを参照および管理するために使用できます。
+![接続済みサービス](../ide/media/VSIDE_Tour_Connected_Services.png)
 
- Visual Studio には、 [Microsoft SQL Server Data Tools](https://msdn.microsoft.com/en-us/data/tools.aspx) (SSDT) が含まれています。これを使用して、データベースをビルド、デバッグ、保守、リファクタリングできます。 データベース プロジェクトを操作したり、オンプレミスまたはオフプレミスで接続されたデータベース インスタンスを直接操作したりすることができます。  
+**[接続済みサービス]** ページでサービスを選択すると、接続済みサービス ウィザードが起動します。このウィザードでは、プロジェクトを構成し、必要な NuGet パッケージをダウンロードして、サービスに対してコーディングを開始できます。
 
- Visual Studio の [SQL Server オブジェクト エクスプローラー](https://msdn.microsoft.com/en-us/library/hh231250.aspx)では、SQL Server Management Studio と同様のデータベース オブジェクトのビューを提供します。 SQL Server オブジェクト エクスプローラーを使用すると、軽いデータベース管理と設計作業を実行できます。これには、SQL Server オブジェクト エクスプローラーのコンテキスト メニューの使用によるテーブル データの編集、スキーマの比較、クエリの実行が含まれます。 また、SSDT には、SQL Server 2012 Analysis Services、Reporting Services、Integration Services Business Intelligence (BI) の各ソリューション (以前の Business Intelligence Development Studio) を開発するための特別なプロジェクトの種類とツールも含まれます。  
+[Cloud Explorer](https://azure.microsoft.com/documentation/articles/vs-azure-tools-resources-managing-with-cloud-explorer/) を使用して、Visual Studio 内の Azure ベースのクラウド リソースを表示および管理できます。 Cloud Explorer には、ユーザーがログインしている Azure サブスクリプションで管理されているすべてのアカウントに含まれる Azure リソースが表示されます。 Cloud Explorer は、Visual Studio インストーラーで Azure 開発ワークロードを選択することで入手できます。
 
- ![SQL Server オブジェクト エクスプローラー](../ide/media/vs2015_sqlobjectexplorer.png "vs2015_SQLObjectExplorer")  
+![Cloud Explorer](../ide/media/VSIDE_CloudExplorer.png)
 
-## <a name="deploy-your-finished-application"></a>完成したアプリケーションを配置する  
- アプリケーションをお客様に配置する用意ができたら、Visual Studio の配置するためのツールを使用できます。Windows ストア や Sharepoint サイトへの配置、Installshield または Windows インストーラー テクノロジによる配置、いずれにも対応しています。 これはすべて、IDE を使用してアクセスできます。 詳しくは、「[アプリケーション、サービス、およびコンポーネントの配置](../deployment/deploying-applications-services-and-components.md)」をご覧ください。  
+**サーバー エクスプローラー**は、Azure、Salesforce.com、Office 365、および Web サイト上の SQL Server インスタンスとアセットを参照および管理するのに役立ちます。 サーバー エクスプローラーを開くには、メイン メニューで **[ビュー]**、**[サーバー エクスプローラー]** と選択します。 サーバー エクスプローラーの使用方法について詳しくは、「[Add new connections](https://docs.microsoft.com/visualstudio/data-tools/add-new-connections)」 (新しい接続の追加) をご覧ください。
 
-## <a name="architecture-and-modeling-tools-enterprise-only"></a>アーキテクチャおよびモデリング ツール (Enterprise のみ)  
- Visual Studio アーキテクチャおよびモデリング ツールを使用して、アプリを設計してモデル化することができます。 これらのツールを使用して、コードの構造、動作、関係を視覚化できます。 モデルは、開発プロセスの一部として、アプリケーション ライフサイクル全体で詳細のさまざまなレベルで作成できます。 Team Foundation Server の作業項目と開発計画にモデル要素をリンクすることで、要件、タスク、テスト ケース、バグ、またはモデルに関連するその他の作業を追跡できます。 詳しくは、「[アプリの設計とモデル化](../modeling/analyze-and-model-your-architecture.md)」をご覧ください。  
+[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) は、SQL Server、Azure SQL Database、Azure SQL Data Warehouse 用の強力な開発環境です。 データベースを構築、デバッグ、管理、およびリファクターできます。 データベース プロジェクトを操作したり、オンプレミスまたはオフプレミスで接続されたデータベース インスタンスを直接操作したりすることができます。
 
-## <a name="extend-visual-studio-through-the-visual-studio-sdk"></a>Visual Studio SDK で Visual Studio を拡張する  
- Visual Studio は、拡張可能なプラットフォームです。 Visual Studio の拡張は、IDE と統合するカスタム ツールです。 サード パーティ製の拡張機能を追加したり、独自の拡張機能を作成したりできます。 詳しくは、「[Starting to Develop Visual Studio Extensions](../extensibility/starting-to-develop-visual-studio-extensions.md)」 (Visual Studio 拡張機能の開発を始める) をご覧ください。  
+Visual Studio の **SQL Server オブジェクト エクスプローラー**では、SQL Server Management Studio と同様のデータベース オブジェクトのビューを提供します。 SQL Server オブジェクト エクスプローラーを使用すると、軽いデータベース管理と設計作業を実行できます。これには、SQL Server オブジェクト エクスプローラーのコンテキスト メニューを使用したテーブル データの編集、スキーマの比較、クエリの実行などが含まれます。 詳しくは、「[Manage Objects by Using Object Explorer](https://docs.microsoft.com/sql/ssms/object/manage-objects-by-using-object-explorer)」 (オブジェクト エクスプローラーを使用したオブジェクトの管理) をご覧ください。
 
- 「[Visual Studio User Experience Guidelines](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)」 (Visual Studio ユーザー エクスペリエンス ガイドライン) は、Visual Studio の拡張機能を記述するすべてのユーザーにとって重要な参照です。 これらのプラットフォーム固有のガイドラインには、ダイアログのデザイン、フォント、色、アイコン、コモン コントロール、および新機能が Visual Studio とシームレスに統合できるようにするその他の相互作用のパターンについての情報が含まれています。  
+![SQL Server オブジェクト エクスプローラー](../ide/media/vs2015_sqlobjectexplorer.png)  
 
-## <a name="see-also"></a>関連項目  
- [Visual Studio 2017 RC のインストール](../install/install-visual-studio.md)   
- [コードの編集](https://www.visualstudio.com/features/ide-vs)   
- [Visual Studio 2017 RC の新機能](../ide/whats-new-in-visual-studio.md)   
- [Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/port-migrate-and-upgrade-visual-studio-projects.md)   
- [ご意見](../ide/talk-to-us.md)
+## <a name="extend-visual-studio"></a>Visual Studio を拡張する
+Visual Studio に必要な機能がない場合は、機能を追加できます。 ワークフローとスタイルに基づいて IDE をカスタマイズしたり、Visual Studio にまだ統合されていない外部ツールのサポートを追加したり、既存の機能を変更して生産性の向上を図ることができます。 Visual Studio には、マイクロソフト、マイクロソフトのパートナー、およびコミュニティからのツール、コントロール、およびテンプレートが用意されています。 Visual Studio の拡張について詳しくは、「[Visual Studio IDE を機能拡張する](https://www.visualstudio.com/vs/extend/)」をご覧ください。
+
+## <a name="learn-more-and-find-out-whats-new"></a>詳細と新機能
+Visual Studio を使ったことがない場合は、「[Visual Studio 入門](../ide/get-started-with-visual-studio.md)」基礎を学習するか、[Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033) の Visual Studio のコースを無料で受講できます。Visual Studio 2017 の新機能については、「[Visual Studio 2017 の新機能](../ide/whats-new-in-visual-studio.md)」をご覧ください。
+
+これで Visual Studio IDE のツアーを終わります。 主な機能について便利なヒントを得るのに役立ててください。
+
+## <a name="see-also"></a>関連項目
+* [Visual Studio IDE](https://www.visualstudio.com/vs/)
+* [Visual Studio のダウンロード](https://www.visualstudio.com/downloads/)
+* [Visual Studio ブログ](https://blogs.msdn.microsoft.com/visualstudio/)
+* [Visual Studio フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?category=visualstudio%2Cvsarch%2Cvsdbg%2Cvstest%2Cvstfs%2Cvsdata%2Cvsappdev%2Cvisualbasic%2Cvisualcsharp%2Cvisualc)
+* [Microsoft Virtual Academy](https://mva.microsoft.com/)
+* [Channel 9](https://channel9.msdn.com/)
 

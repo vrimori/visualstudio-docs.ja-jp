@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 2017 で問題を報告する方法 | Microsoft Docs"
 ms.custom: 
-ms.date: 2016-10-05
+ms.date: 03/07/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -13,12 +13,13 @@ ms.author: tglee
 manager: ghogen
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: b81a082de053b11e8dbe05317f69d4bcb603f4de
-ms.openlocfilehash: 5aac18786f3952648eeea4e7d0258a5e59c497c2
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 2220a1c2def8fd831f3adba1f3b02e03efe47fe9
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="how-to-report-a-problem-with-visual-studio-2017-rc"></a>Visual Studio 2017 RC で問題を報告する方法
-Visual Studio で問題が発生した場合、Microsoft に報告していただければ、診断して修正いたします。  **[問題の報告]** ツールを使うと、問題に関する詳しい情報を収集し、ボタンを数回のクリックするだけで問題を Microsoft に送信できます。  
+# <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017 で問題を報告する方法
+Visual Studio で問題が発生した場合、Microsoft に報告していただければ、診断して修正いたします。  **[問題の報告]** ツールを使うと、問題に関する詳しい情報を収集し、ボタンを数回クリックするだけで問題を Microsoft に送信できます。  
 
  Microsoft は、お客様のプライバシーを尊重いたします。 お客様から送信していただいたデータの扱いについて詳しくは、「[Microsoft Visual Studio 製品ファミリのプライバシーに関する声明](https://www.visualstudio.com/en-us/dn948229)」をご覧ください。  
 
@@ -27,13 +28,22 @@ Visual Studio で問題が発生した場合、Microsoft に報告していた�
 
  ![[問題の報告] メニュー項目](../ide/media/report-a-problem-menu-item.png "[問題の報告] メニュー項目")  
 
+## <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
+ まだサインインしていない場合は、問題を報告する前に Visual Studio にサインインします。 ここでは、発生している問題を報告できるだけでなく、その問題、または投稿されている他の問題について投票したりコメントを送信したりすることもできます。
+
+  1. 次のスクリーンショットに示されているように、ツールの左側にある **[サインイン]** をクリックします。
+  2. 画面に表示される手順に従ってサインインします。
+
+  ![サインインして問題を報告](../ide/media/vs2017-report-a-problem-sign-in.png "Sign in to report a problem")
+
+
 ## <a name="search-and-vote-for-similar-problems"></a>類似問題を検索して投票する  
 ###  <a name="search_and_vote"></a>  
 
 1.  問題を検索し、他のユーザーが既に報告しているかどうかを確認します。
 2.  報告済みの場合は、"上向きの矢印に投票" してお知らせください。  
 
-  ![VS15-FeedbackTool-SearchForSimilarReportedProblems](../ide/media/feedbacktool-searchforsimilarreportedproblems.png "類似問題を検索して投票する")
+  ![VS15-FeedbackTool-SearchForSimilarReportedProblems](../ide/media/vs2017-report-a-problem-search-and-vote.png "類似問題を検索して投票する")
 
 
 ## <a name="report-a-new-problem"></a>新しい問題を報告する
@@ -68,9 +78,4 @@ Visual Studio で問題が発生した場合、Microsoft に報告していた�
 
 ## <a name="see-also"></a>関連項目  
  [ご意見](../ide/talk-to-us.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
