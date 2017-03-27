@@ -1,77 +1,98 @@
 ---
-title: "TaskBody Element (MSBuild) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "TaskBody element [MSBuild]"
-  - "<TaskBody> element [MSBuild]"
+title: "TaskBody 要素 (MSBuild) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- TaskBody element [MSBuild]
+- <TaskBody> element [MSBuild]
 ms.assetid: 49d8741b-f1ea-4470-94fd-a1ac27341a6a
 caps.latest.revision: 7
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# TaskBody Element (MSBuild)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
+ms.openlocfilehash: 83e34546141a69cf93fb0cbbf86393b8fa749ef4
+ms.lasthandoff: 03/13/2017
 
-`UsingTask` `TaskFactory` に渡されるデータを格納します。詳細については、「[UsingTask Element \(MSBuild\)](../msbuild/usingtask-element-msbuild.md)」を参照してください。  
-  
-## 構文  
-  
+---
+# <a name="taskbody-element-msbuild"></a>TaskBody 要素 (MSBuild)
+`UsingTask``TaskFactory` に渡されるデータを含みます。 詳細については、「[UsingTask Element (MSBuild)](../msbuild/usingtask-element-msbuild.md)」(UsingTask 要素 (MSBuild)) を参照してください。  
+
+ \<Project>  
+ \<UsingTask>  
+ \<TaskBody>  
+
+## <a name="syntax"></a>構文  
+
 ```  
 <TaskBody Evaluate="true/false" />  
 ```  
-  
-## 属性および要素  
+
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
-  
-### 属性  
-  
-|属性|Description|  
-|--------|-----------------|  
-|`Evaluate`|省略可能な Boolean 型の属性です。<br /><br /> `true` の場合、タスクがインスタンス化されるときに、MSBuild によって、情報が `TaskFactory` に渡される前に、内部要素が評価され、項目とプロパティが展開されます。|  
-  
-### 子要素  
-  
-|要素|Description|  
-|--------|-----------------|  
-|Data|`TaskBody` タグで囲まれたテキストが `TaskFactory` にそのまま送信されます。|  
-  
-### 親要素  
-  
-|要素|Description|  
-|--------|-----------------|  
-|[UsingTask](../msbuild/usingtask-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 内にタスクを登録します。  プロジェクトには 0 個以上の `UsingTask` 要素を設定できます。|  
-  
-## 使用例  
- 次の例は、`TaskBody` 要素を使用し、`Evaluate` 属性を指定する方法を示しています。  
-  
-```  
+
+### <a name="attributes"></a>属性  
+
+|属性|説明|  
+|---------------|-----------------|  
+|`Evaluate`|省略可能な Boolean 属性です。<br /><br /> `true` の場合、MSBuild は内部要素をすべて評価し、タスクがインスタンス化されるときに項目とプロパティを展開してから情報を `TaskFactory` に渡します。|  
+
+### <a name="child-elements"></a>子要素  
+
+|要素|説明|  
+|-------------|-----------------|  
+|データ|`TaskBody` タグ間のテキストは `TaskFactory` にそのまま送信されます。|  
+
+### <a name="parent-elements"></a>親要素  
+
+|要素|説明|  
+|-------------|-----------------|  
+|[UsingTask](../msbuild/usingtask-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] にタスクを登録する方法を提供します。 1 つのプロジェクトに&0; 個以上の `UsingTask` 要素を含めることができます。|  
+
+## <a name="example"></a>例  
+ 次の例では、`Evaluate` 属性で `TaskBody` 要素を使用する方法を示します。  
+
+```xml  
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">  
-       <ParameterGroup>  
-              <Parameter1 ParameterType="System.String" Required="False" Output="False"/>  
-              <Parameter2 ParameterType="System.Int" Required="True" Output="False"/>  
-              ...  
+       <ParameterGroup>  
+              <Parameter1 ParameterType="System.String" Required="False" Output="False"/>  
+              <Parameter2 ParameterType="System.Int" Required="True" Output="False"/>  
+              ...  
 </ParameterGroup>  
-       <TaskBody Evaluate="true">  
-      ... Task factory-specific data ...  
-       </TaskBody>  
+       <TaskBody Evaluate="true">  
+      ... Task factory-specific data ...  
+       </TaskBody>  
 </UsingTask>  
 ```  
-  
-## 参照  
+
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference](../msbuild/msbuild-task-reference.md)   
- [Project File Schema Reference](../msbuild/msbuild-project-file-schema-reference.md)
+ [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+ [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)
+

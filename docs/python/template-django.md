@@ -1,0 +1,81 @@
+---
+title: "Python Tools for Visual Studio の Django Web プロジェクト テンプレート | Microsoft Docs"
+ms.custom: 
+ms.date: 3/7/2017
+ms.prod: visual-studio-dev15
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-python
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: c479be58-13eb-4d77-9a27-c97ddc290963
+caps.latest.revision: 1
+author: kraigb
+ms.author: kraigb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 7f65641fbf15edfe16931badc19602a0fc773bff
+ms.lasthandoff: 03/07/2017
+
+---
+
+# <a name="django-web-project-template"></a>Django Web プロジェクト テンプレート
+
+[Django](https://www.djangoproject.com/) は、高速、安全、スケーラブルな Web 開発用に設計されたハイレベルの Python フレームワークです。 Python Tools for Visual Studio (PTVS) は、Django ベースの Web アプリケーションの構造を設定するためのプロジェクト テンプレートを提供します。 Visual Studio でテンプレートを使用するには、**[ファイル] > [新規] >[プロジェクト]** を選択し、「Django」を検索して、"Django Web プロジェクト" テンプレートを選びます。 作成されるプロジェクトには、定型コードと既定の SQLite データベースが含まれます。 "空の Django Web プロジェクト" テンプレートも似ていますが、これにはデータベースが含まれません。
+
+PTVS は、Django プロジェクトの完全な IntelliSense を提供します。
+
+- テンプレートに渡されるコンテキスト変数:
+
+    ![コンテキスト変数用の IntelliSense](media/template-django-intellisense.png)
+
+- 組み込みとユーザー定義両方のタグ付けとフィルター処理:
+
+    ![タグとフィルターの IntelliSense](media/template-django-intellisense-filter.png)
+
+- 埋め込みの CSS と JavaScript の構文の色分け表示:
+
+    ![CSS Intellisense](media/template-django-intellisense-css.png)
+
+    ![JavaScript IntelliSense](media/template-django-intellisense-js.png)
+
+
+PTVS は Django プロジェクトの完全な[デバッグ サポート](debugging.md)も提供します。 
+
+![ブレークポイント](media/template-django-debugging.png)
+
+## <a name="django-management-console"></a>Django 管理コンソール
+
+Django 管理コンソールには、**[プロジェクト]** メニューのさまざまなコマンドを使用するか、ソリューション エクスプローラーでプロジェクトを右クリックしてアクセスします。
+
+- **[Open Django Shell... (Django シェルを開く...)]**: モデルを操作できるアプリケーション コンテキストでシェルを起動します
+
+    ![コンソール](media/template-django-console-shell.png)
+
+- **[Django Sync DB (Django 同期 DB)]**: `manage.py syncdb` を対話型ウィンドウで実行します。
+
+    ![コンソール](media/template-django-console-sync-db.png)
+
+- **[Collect Static (静的収集)]**: `manage.py collectstatic --noinput` を実行して、`settings.py` の `STATIC_ROOT` で指定されたパスにすべての統計ファイルをコピーします。 [Microsoft Azure に発行](template-web.md#publishing-to-azure-app-service)する場合、統計ファイルは発行操作の一部として収集されます。
+
+    ![コンソール](media/template-django-console-collect-static.png)
+
+- **[検証]**: `settings.py` の `INSTALLED_APPS` で指定されたインストール済みのモデルで検証エラーをレポートする `manage.py validate` を実行します。
+
+    ![コンソール](media/template-django-console-validate.png)
