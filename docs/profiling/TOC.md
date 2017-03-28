@@ -7,6 +7,7 @@
 ### [デバッグなしのメモリ使用量](memory-usage-without-debugging2.md)
 ## [CPU 使用率](cpu-usage.md)
 ### [Windows ユニバーサル アプリでの CPU 使用率の分析](analyze-cpu-usage-in-a-windows-universal-app.md)
+## [GPU 使用率](gpu-usage.md)
 ## [アプリケーションのタイムライン](application-timeline.md)
 ## [パフォーマンスのヒント](perftips.md)
 ## [JavaScript メモリ](javascript-memory.md)
