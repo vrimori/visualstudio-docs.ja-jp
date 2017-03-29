@@ -1,21 +1,39 @@
 ---
 title: "アクセシビリティのヒントとテクニック | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アクセシビリティ [Visual Studio]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- accessibility [Visual Studio]
 ms.assetid: 6b491d88-f79e-4686-8841-857624bdcfda
 caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: c1e4fdf79ac11095501ca8823ff247cb48374824
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="accessibility-tips-and-tricks"></a>アクセシビリティのヒントとテクニック
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] にはアクセシビリティ機能が組み込まれているため、簡単にキーボードで作業したり、スクリーン リーダーやその他の支援技術デバイスを使用したりすることができます。 ここでは、便利なショートカット キーのいくつかの組み合わせのほか、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のアクセシビリティを向上するために最適化する場合の推奨事項についてもいくつか示します。  
@@ -31,7 +49,7 @@ caps.handback.revision: 21
   
 |説明|キーの組み合わせ|  
 |-----------------|---------------------|  
-|ハイ コントラストのオンとオフを切り替えます。|左** Alt + 左 Shift + Print Screen**|  
+|ハイ コントラストのオンとオフを切り替えます。|左**Alt + 左 Shift + Print Screen**|  
 |ダイアログ ボックスのチェック ボックス オプションをオンまたはオフにします。|**Space キー**|  
 |選択されている項目のプロパティを表示します。 たとえば、フォームが選択されている場合はプロパティ ウィンドウにフォーカスが移動し、プロジェクトが選択されている場合は [プロパティ ページ] ダイアログ ボックスが開きます。|**Alt + Enter**|  
 |ダイアログ ボックスに、ドロップダウン リストなどのアクティブ リストの項目が表示されます。|**Alt** + ↓|  
@@ -50,8 +68,3 @@ caps.handback.revision: 21
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio のユーザー補助機能](../../ide/reference/accessibility-features-of-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
