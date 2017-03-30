@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 のオフライン インストーラーを作成する | Microsoft Docs"
 description: "Visual Studio のオフライン インストーラーを作成する方法について説明します。"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 03/21/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
-ms.openlocfilehash: acb47946c29d99cb53b34d67fe8a26f5611307f9
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 563c78a49eb55886b1ddbd4f437951c99c6568e5
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="create-an-offline-installer-for-visual-studio-2017"></a>Visual Studio 2017 のオフライン インストーラーを作成する
@@ -54,6 +54,8 @@ ms.lasthandoff: 03/08/2017
 |Visual Studio Enterprise |**vs_enterprise.exe**|  
 |Visual Studio Professional |**vs_professional.exe**|  
 |Visual Studio コミュニティ |**vs_community.exe**|
+
+その他にサポートされているブートストラップとして、vs_buildtools.exe、vs_feedbackclient.exe、vs_teamexplorer.exe、vs_testagent.exe、vs_testcontroller.exe、および vs_testprofessional.exe が含まれます。
 
 ## <a name="create-an-offline-installation-folder"></a>オフライン インストール フォルダーを作成する
 すべての言語およびすべての機能を持つオフライン インストールを作成するには、次の例のいずれかのコマンドを使用します。
@@ -82,7 +84,7 @@ ms.lasthandoff: 03/08/2017
  - 1 つの言語に対して、すべてのワークロードとコンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --lang en-US```
  - 複数の言語に対して、すべてのワークロードとコンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --lang en-US de-DE ja-JP```
  - すべての言語に対して、1 つのワークロードをダウンロードするには、以下を実行します。 <br> ```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure ```
- - 3 つの言語に対して、2 つのワークロードと&1; つのオプション コンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure Microsoft.VisualStudio.Workload.ManagedDesktop Component.GitHub.VisualStudio --lang en-US de-DE ja-JP ```インストールのカスタマイズに使用できるオプションについて詳しくは、「[コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする](use-command-line-parameters-to-install-visual-studio.md)」をご覧ください。
+ - 3 つの言語に対して、2 つのワークロードと 1 つのオプション コンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure Microsoft.VisualStudio.Workload.ManagedDesktop Component.GitHub.VisualStudio --lang en-US de-DE ja-JP ```インストールのカスタマイズに使用できるオプションについて詳しくは、「[コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする](use-command-line-parameters-to-install-visual-studio.md)」をご覧ください。
 
 
 ### <a name="how-to-update-an-offline-installer"></a>オフライン インストーラーを更新する方法
@@ -90,8 +92,6 @@ ms.lasthandoff: 03/08/2017
 * オフライン インストール フォルダーからインストールした Visual Studio インスタンスを更新するには、Visual Studio インストーラーを実行し、**[更新]** をクリックします。
 * 最新の更新プログラムが含まれるようにオフライン インストール フォルダーを更新するには、もう一度 ```--layout``` コマンドを実行します。 前に使用したのと同じフォルダーをポイントしていることを確認します。これにより、最後に ```--layout``` を実行してから更新されたコンポーネントのみがダウンロードされます。
 
-
-オフライン インストールを更新する場合は、もう一度 `--layout` コマンドを実行します。 前に使用したのと同じフォルダーをポイントしていることを確認します。これにより、最後に `--layout` を実行してから更新されたコンポーネントのみがダウンロードされます。
 
 ### <a name="how-to-troubleshoot-an-offline-installer"></a>オフライン インストーラーをトラブルシューティングする方法
 問題が発生した場合に備え、 次に既知の問題と、便利な回避策をいくつか紹介します。
