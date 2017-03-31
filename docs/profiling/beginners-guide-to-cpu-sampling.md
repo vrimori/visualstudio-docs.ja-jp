@@ -1,7 +1,7 @@
 ---
-title: "CPU サンプリングの初心者向けガイド | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
+title: "Visual Studio での CPU サンプリングのビギナーズ ガイド | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
+ms.date: 03/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,8 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 53907b9b88deca671ee0695385dcbc856a35d309
-ms.openlocfilehash: 072783e138fcc20d80ccbe8ec8b66905778cf67d
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: ddd52c1af0a164235de2e5055896e020dc8715c3
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>CPU サンプリングの初心者向けガイド
@@ -53,7 +54,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 > [!TIP]
 >  Windows 関数を呼び出すコードをプロファイリングする場合は、最新の .pdb ファイルを入手しておく必要があります。 これらのファイルがない場合、レポート ビューに暗号のようなわかりにくい Windows 関数名が一覧表示されます。 必要なファイルがあることを確認する方法の詳細については、「[方法 : Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)」を参照してください。  
   
-##  <a name="a-namestep1a-create-and-run-a-performance-session"></a><a name="Step1"></a> パフォーマンス セッションの作成と実行  
+##  <a name="Step1"></a> パフォーマンス セッションの作成と実行  
  分析対象のデータを取得するには、まずパフォーマンス セッションを作成して、そのセッションを実行する必要があります。 **パフォーマンス ウィザード**を使用すると、その両方を実行できます。  
   
  Windows デスクトップ アプリまたは ASP.NET アプリをプロファイルしていない場合、他のプロファイリング ツールの&1; つを使用する必要があります。 「[プロファイリング ツール](../profiling/profiling-tools.md)」を参照してください。  
@@ -65,7 +66,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
     > [!IMPORTANT]
     >  使用しているコンピューターの管理者でない場合、プロファイラーを使用している間は Visual Studio を管理者として実行する必要があります。 Visual Studio アプリケーションのアイコンを右クリックしてから、**[管理者として実行]** をクリックします。  
   
-2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー]** をクリックします。  
+2.  **[デバッグ]** メニューで、**[プロファイラー]** を選択し、**[パフォーマンス プロファイラー]** を選択します。  
   
 3.  **[パフォーマンス ウィザード]** オプションを選択して、**[開始]** をクリックします。  
   
@@ -79,7 +80,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
   
      アプリケーションの実行が終了すると、Visual Studio のメイン ウィンドウにプロファイリング データの **[概要]** ビューが表示され、**パフォーマンス エクスプローラー**のウィンドウに新しいセッションのアイコンが表示されます。  
   
-##  <a name="a-namestep2a-step-2-analyze-sampling-data"></a><a name="Step2"></a> 手順 2: サンプリング データの分析  
+##  <a name="Step2"></a> 手順 2: サンプリング データの分析  
  パフォーマンス セッションの実行が終了すると、Visual Studio のメイン ウィンドウにプロファイリング レポートの **[概要]** ビューが表示されます。  
   
  ここでは、まず**ホット パス**を調べてから、最も多くの作業を行っている関数の一覧を調べ、最後に **[概要] ビューのタイムライン**を使用して他の関数を個別に調べることをお勧めします。 また、**[エラー一覧]** ウィンドウでプロファイリングに関する推奨事項と警告を確認することもできます。  
@@ -124,7 +125,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
   
     -   警告に関する詳細を表示するには、エラーを右クリックし、**[エラーのヘルプを表示]** をクリックします。  
   
-##  <a name="a-namestep3a-step-3-revise-code-and-rerun-a-session"></a><a name="Step3"></a> 手順 3: コードの修正とセッションの再実行  
+##  <a name="Step3"></a> 手順 3: コードの修正とセッションの再実行  
  1 つ以上の関数を特定して最適化したら、プロファイリングを再実行してデータを比較することにより、変更によってアプリケーションのパフォーマンスにどのような違いが生じたかを確認できます。  
   
 #### <a name="to-revise-code-and-rerun-the-profiler"></a>コードを修正してプロファイラーを再実行するには  
@@ -143,8 +144,3 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)   
  [はじめに](../profiling/getting-started-with-performance-tools.md)   
  [概要](../profiling/overviews-performance-tools.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

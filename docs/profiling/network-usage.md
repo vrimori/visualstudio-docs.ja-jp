@@ -1,21 +1,40 @@
 ---
-title: "ネットワーク使用の分析 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visual Studio で UWP アプリのネットワーク使用量を分析する | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45fa397d-d7a1-4c4c-9c97-ede6c21643bd
 caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 60d05761993a4bd7547d83274e103de1b5c30b34
+ms.lasthandoff: 03/07/2017
+
 ---
-# <a name="network-usage"></a>ネットワーク使用率
+# <a name="analyze-network-usage-in-uwp-apps"></a>UWP アプリのネットワーク使用量を分析する
 Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http API](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx) を使用して実行されたネットワーク操作についてのデータを収集します。 そのデータを分析すると、アクセスや認証の問題、不適切なキャッシュの使用、表示やダウンロードの低パフォーマンスなどの問題を解決するのに役立ちます。  
   
  ネットワーク ツールは、Windows ユニバーサル プラットフォーム アプリのみをサポートしています。 その他のプラットフォームは現時点ではサポートされていません。  
@@ -74,8 +93,3 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
  [デバッガ―を使用して、または使用せずに、プロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
  [Visual Studio ブログ: Visual Studio のネットワーク検査の概要](http://go.microsoft.com/fwlink/?LinkId=535022)   
  [Channel 9 ビデオ: Visual Studio 診断ツール - 新しいネットワーク プロファイラー](http://channel9.msdn.com/Series/ConnectOn-Demand/206)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

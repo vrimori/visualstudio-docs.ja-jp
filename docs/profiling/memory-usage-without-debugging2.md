@@ -1,6 +1,6 @@
 ---
-title: "デバッグなしのメモリ使用量 | Microsoft Docs"
-ms.custom: 
+title: "VS デバッガーなしでメモリ使用量を分析する | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
@@ -34,12 +34,12 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: bdfe341252a7c4340a8c0a624d4394124c3efada
-ms.openlocfilehash: d0d021c01cc97a97aa75eda58a17ccd1c2089520
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 9ff0dfb7330f70bb66597127347c8375f2c4c9ea
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="memory-usage-without-debugging"></a>デバッグなしのメモリ使用量
+# <a name="memory-usage-without-the-debugger"></a>デバッガーなしのメモリ使用量
 デバッグなしの**メモリ使用量**ツールを使用して、次のような操作を行えます  
   
 -   シナリオの開発中に Visual Studio 内でのアプリのメモリ使用量が適切かどうかを監視します。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/22/2017
   
  このトピックでは、メモリ使用量ツールを使って Windows Universal XAML アプリを分析する方法について説明します。 JavaScript と HTML を使用する Windows ユニバーサル アプリでのメモリ使用量を分析する場合、「[メモリ使用量の分析 (JavaScript)](http://msdn.microsoft.com/library/windows/apps/jj819176.aspx)」を参照してください。  
   
-##  <a name="a-namebkmkstartamemoryusagediagnosticsessiona-start-a-memory-usage-diagnostic-session"></a><a name="BKMK_Start_a_Memory_Usage_diagnostic_session"></a> メモリ使用量診断セッションの開始  
+##  <a name="BKMK_Start_a_Memory_Usage_diagnostic_session"></a> メモリ使用量診断セッションの開始  
   
 1.  Visual Studio で、C# のユニバーサル Windows プロジェクトを開きます。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/22/2017
   
      ![メモリ使用量診断セッションの開始](../profiling/media/memuse_start_diagnosticssession.png "MEMUSE_Start_DiagnosticsSession")  
   
-##  <a name="a-namebkmkmonitormemoryusea-monitor-memory-use"></a><a name="BKMK_Monitor_memory_use"></a> メモリ使用量の監視  
+##  <a name="BKMK_Monitor_memory_use"></a> メモリ使用量の監視  
  **[メモリ使用量]** ツールを使って、問題の検出と修正に使える詳しいレポートを生成できますが、現に開発中のシナリオがメモリに及ぼす影響をリアルタイムで調べることもできます。  
   
  診断セッションを開始すると、アプリが起動し、**診断ツール** ウィンドウにアプリのメモリ使用量のタイムライン グラフが表示されます。  
@@ -69,22 +69,22 @@ ms.lasthandoff: 02/22/2017
   
  タイムライン グラフには、アプリ実行中のメモリの変動が表示されます。 グラフの急な上下動は、通常、何らかのコードがデータを収集または作成し、処理が終わったときにデータを破棄していることを示します。 大きな上下動は、最適化できる可能性がある領域を示しています。 より重大な問題は、使われたまま返されないメモリが増えることです。これは、メモリが効率的に使われていないか、メモリ リークが起きていることを示しているからです。  
   
-###  <a name="a-namebkmkcloseamonitoringsessiona-close-a-monitoring-session"></a><a name="BKMK_Close_a_monitoring_session"></a> 監視セッションを閉じる  
+###  <a name="BKMK_Close_a_monitoring_session"></a> 監視セッションを閉じる  
  ![コレクションの停止](../profiling/media/memuse__stopcollection.png "MEMUSE__StopCollection")  
   
  レポートを作成せずに監視セッションを停止する場合は、単に診断ウィンドウを閉じます。 メモリのスナップショットを取ったときにレポートを生成するには、**[停止]** をクリックします。  
   
-##  <a name="a-namebkmktakesnapshotstoanalyzethememorystateofyourappa-take-snapshots-of-the-memory-state-of-your-app"></a><a name="BKMK_Take_snapshots_to_analyze_the_memory_state_of_your_app"></a> アプリのメモリ状態のスナップショットを取る  
+##  <a name="BKMK_Take_snapshots_to_analyze_the_memory_state_of_your_app"></a> アプリのメモリ状態のスナップショットを取る  
  調べる必要があるメモリの問題を見つけた場合は、特定の瞬間にメモリ内のオブジェクトをキャプチャするため、診断セッション中にスナップショットを取ることができます。 アプリではさまざまな型のオブジェクトが大量に使われるため、1 つのシナリオを集中的に分析することをお勧めします。 さらに、メモリの問題が起きる前にアプリのベースライン スナップショットを取り、初めて問題が起きた後でもう&1; 回スナップショットを取り、さらにシナリオを反復できる場合は追加のスナップショットを&1; つ以上取ることをお勧めします。  
   
  スナップショットを収集するには、新しい診断セッションを開始します。 メモリのデータをキャプチャしたいときは **[スナップショットの取得]** をクリックします。 レポートを生成するには、**[停止]** をクリックします。  
   
-##  <a name="a-namebkmkmemoryusageoverviewpagea-memory-usage-overview-page"></a><a name="BKMK_Memory_Usage_overview_page"></a> メモリ使用量の概要ページ  
+##  <a name="BKMK_Memory_Usage_overview_page"></a> メモリ使用量の概要ページ  
  データ コレクションを停止すると、メモリ使用量ツールはアプリを停止し、概要レポートが表示されます。  
   
  ![メモリ使用量の概要ページ](../profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
   
-###  <a name="a-namebkmkmemoryusagesnapshotviewsa-memory-usage-snapshot-views"></a><a name="BKMK_Memory_Usage_snapshot_views"></a> メモリ使用量のスナップショット ビュー  
+###  <a name="BKMK_Memory_Usage_snapshot_views"></a> メモリ使用量のスナップショット ビュー  
  Visual Studio の新しいウィンドウで詳しいレポートを開くには、スナップショット ビューを使います。 スナップショット ビューには次の&2; 種類があります。  
   
 -   [スナップショットの詳細レポート](../profiling/memory-usage-without-debugging2.md#BKMK_Snapshot_details_reports)には、1 つのスナップショットに含まれる型とインスタンスが表示されます。  
@@ -102,42 +102,42 @@ ms.lasthandoff: 02/22/2017
 |![手順 3](../profiling/media/procguid_3.png "ProcGuid_3")|このリンク テキストは、このスナップショットを取った時点のメモリに含まれていたオブジェクトの合計サイズと前のスナップショットの合計サイズとの差を示します。<br /><br /> このリンク テキストは、このスナップショットのメモリサイズが前のサイズより大きい場合は正の数、小さい場合は負の数になります。 **[ベースライン]** というリンク テキストは、このスナップショットが診断セッションの最初のスナップショットであることを示します。**[相違なし]** は、差がゼロであることを示します。<br /><br /> このリンクをクリックすると、スナップショットの相違レポートが各型のインスタンスの合計サイズの差の順に並べ替えて表示されます。|  
 |![手順 4](../profiling/media/procguid_4.png "ProcGuid_4")|このリンク テキストは、このスナップショットに含まれるメモリ オブジェクトの総数と前のスナップショットのオブジェクト数との差を示します。<br /><br /> このリンクをクリックすると、スナップショットの相違レポートが各型のインスタンスの総数の差の順に並べ替えて表示されます。|  
   
-##  <a name="a-namebkmksnapshotreportsa-snapshot-reports"></a><a name="BKMK_Snapshot_reports"></a> スナップショットのレポート  
+##  <a name="BKMK_Snapshot_reports"></a> スナップショットのレポート  
  ![メモリ使用量のスナップショット レポート](../profiling/media/memuse_snapshotreport_all.png "MEMUSE_SnapshotReport_All")  
   
-###  <a name="a-namebkmksnapshotreporttreesa-snapshot-report-trees"></a><a name="BKMK_Snapshot_report_trees"></a> スナップショットのレポート ツリー  
+###  <a name="BKMK_Snapshot_report_trees"></a> スナップショットのレポート ツリー  
   
-####  <a name="a-namebkmkmanagedheapa-managed-heap"></a><a name="BKMK_Managed_Heap"></a> マネージ ヒープ  
+####  <a name="BKMK_Managed_Heap"></a> マネージ ヒープ  
  マネージ ヒープのツリー [[マネージ ヒープ] ツリー (スナップショットの詳細)](../profiling/memory-usage-without-debugging2.md#BKMK_Managed_Heap_tree__Snapshot_details_) と [[マネージ ヒープ] ツリー (スナップショットの相違)](../profiling/memory-usage-without-debugging2.md#BKMK_Managed_Heap_tree__Snapshot_diff_) には、レポートに含まれる型とインスタンスが表示されます。 種類またはインスタンスを選ぶと、選んだ項目の **[ルートのパス]** ツリーと **[参照されたオブジェクト]** ツリーが表示されます。  
   
-####  <a name="a-namebkmkpathstoroota-paths-to-root"></a><a name="BKMK_Paths_to_Root"></a> ルートのパス  
+####  <a name="BKMK_Paths_to_Root"></a> ルートのパス  
  [[ルートのパス] ツリー (スナップショットの詳細)](../profiling/memory-usage-without-debugging2.md#BKMK_Paths_to_Root_tree__Snapshot_details_) と [[ルートのパス] ツリー (スナップショットの相違)](../profiling/memory-usage-without-debugging2.md#BKMK_Paths_to_Root_tree__Snapshot_diff_) には、種類またはインスタンスを参照するオブジェクトのチェーンが表示されます。 .NET Framework のガベージ コレクターは、オブジェクトへの参照がすべて解放された場合にのみ、オブジェクトのメモリをクリーンアップします。  
   
-####  <a name="a-namebkmkreferencedobjectsa-referenced-objects"></a><a name="BKMK_Referenced_Objects"></a> 参照されたオブジェクト  
+####  <a name="BKMK_Referenced_Objects"></a> 参照されたオブジェクト  
  [[参照されたオブジェクト] ツリー (スナップショットの詳細)](../profiling/memory-usage-without-debugging2.md#BKMK_Referenced_Objects_tree__Snapshot_details_) と [[参照されたオブジェクト] ツリー (スナップショットの相違)](../profiling/memory-usage-without-debugging2.md#BKMK_Referenced_Objects_tree__Snapshot_diff_) には、選んだ種類またはインスタンスによって参照されるオブジェクトが表示されます。  
   
-###  <a name="a-namebkmkobjecttypeandinstancefieldsa-object-type-and-instance-fields"></a><a name="BKMK_Object_Type_and_Instance_fields"></a> [オブジェクトの種類] フィールドと [オブジェクト インスタンス] フィールド  
+###  <a name="BKMK_Object_Type_and_Instance_fields"></a> [オブジェクトの種類] フィールドと [オブジェクト インスタンス] フィールド  
  **[オブジェクトの種類]** エントリに子エントリがある場合は、矢印アイコンをクリックして子エントリを表示できます。 **[オブジェクトの種類]** のテキストが青色の場合は、テキストをクリックすればソース コード ファイル内のオブジェクトに移動できます。 ソース ファイルは別のウィンドウで開きます。  
   
  インスタンス名は、メモリ使用量ツールで生成される一意の ID です。  
   
  容易に識別できない種類に気づいた場合や、それがどのようにコードに関わるのかわからない場合は、これはおそらく、.NET Framework、オペレーティング システム、またはコンパイラのオブジェクトであり、オブジェクトの所有権の継承に関わるためにメモリ使用量ツールに表示されているにすぎません。  
   
-###  <a name="a-namebkmkreporttreefiltersa-report-tree-filters"></a><a name="BKMK_Report_tree_filters_"></a> レポート ツリーのフィルター  
+###  <a name="BKMK_Report_tree_filters_"></a> レポート ツリーのフィルター  
  ほとんどのアプリには驚くほど多くの型が含まれていますが、そのほとんどはアプリの開発者にとってあまり重要ではありません。 **メモリ使用量**ツールには&2; つのフィルターが定義されており、**[マネージ ヒープ]** ツリーと **[ルートのパス]** ツリーでこれらの型のほとんどを非表示にできます。 型名でツリーをフィルター処理することもできます。  
   
  ![並べ替えとフィルターのオプション](../profiling/media/memuse_sortandfilter.png "MEMUSE_SortAndFilter")  
   
-####  <a name="a-namebkmkfiltera-filter"></a><a name="BKMK_Filter"></a> フィルター  
+####  <a name="BKMK_Filter"></a> フィルター  
  **[フィルター]** ボックスに文字列を入力して、指定したテキストを含む型だけをツリーに表示するよう制限します。 このフィルターでは、大文字と小文字は区別されず、指定された文字列が型名のどこかに含まれていれば認識されます。  
   
-####  <a name="a-namebkmkcollapsesmallobjectsa-collapse-small-objects"></a><a name="BKMK_Collapse_Small_Objects"></a> 小さいオブジェクトの非表示  
+####  <a name="BKMK_Collapse_Small_Objects"></a> 小さいオブジェクトの非表示  
  このフィルターを適用すると、**[サイズ (バイト)]** がスナップショット メモリの合計サイズの 0.5% を下回る型が **[マネージ ヒープ]** リストで非表示になります。  
   
-####  <a name="a-namebkmkjustmycodea-just-my-code"></a><a name="BKMK_Just_My_Code"></a> マイ コードのみ  
+####  <a name="BKMK_Just_My_Code"></a> マイ コードのみ  
  **[マイ コードのみ]** フィルターを適用すると、外部コードによって生成されたほとんどのインスタンスが非表示になります。 外部の型は、オペレーティング システムまたは Framework コンポーネントによって所有されるか、コンパイラによって生成されます。  
   
-##  <a name="a-namebkmksnapshotdetailsreportsa-snapshot-details-reports"></a><a name="BKMK_Snapshot_details_reports"></a> スナップショットの詳細レポート  
+##  <a name="BKMK_Snapshot_details_reports"></a> スナップショットの詳細レポート  
  診断セッションで得られた&1; つのスナップショットに注目する場合は、スナップショットの詳細レポートを使います。 詳細レポートを開くには、次の画像に示すように、スナップショット ビューに含まれるいずれかのリンクをクリックします。 どちらのリンクからも同じレポートが開きますが、レポート内の **[マネージ ヒープ]** ツリーを最初に表示したときの並べ替え順序だけが異なります。 どちらの場合も、レポートが開いた後で並べ替え順序を変更できます。  
   
  ![スナップショット ビューにあるスナップショット レポートへのリンク](../profiling/media/memuse_snapshotview_snapshotdetailslinks.png "MEMUSE_SnapshotView_SnapshotDetailsLinks")  
@@ -146,7 +146,7 @@ ms.lasthandoff: 02/22/2017
   
 -   **[オブジェクト]** リンクをクリックすると、**[カウント]** 列でレポートが並べ替えられます。  
   
-###  <a name="a-namebkmkmanagedheaptreesnapshotdetailsa-managed-heap-tree-snapshot-details"></a><a name="BKMK_Managed_Heap_tree__Snapshot_details_"></a> [マネージ ヒープ] ツリー (スナップショットの詳細)  
+###  <a name="BKMK_Managed_Heap_tree__Snapshot_details_"></a> [マネージ ヒープ] ツリー (スナップショットの詳細)  
  **[マネージ ヒープ]** ツリーには、メモリ内に保持されているオブジェクトの種類が一覧表示されます。 型名を展開すると、サイズ順に、その型の最大のインスタンス&10; 個が表示されます。 種類またはインスタンスを選ぶと、選んだ項目の **[ルートのパス]** ツリーと **[参照されたオブジェクト]** ツリーが表示されます。  
   
  ![マネージ ヒープ ツリー](../profiling/media/memuse__snapshotdetails_managedheaptree.png "MEMUSE__SnapshotDetails_ManagedHeapTree")  
@@ -158,14 +158,14 @@ ms.lasthandoff: 02/22/2017
 |**サイズ (バイト)**|型の場合は、メモリのスナップショットに含まれるその型の全インスタンスのサイズ (インスタンスに含まれているオブジェクトのサイズは除く)。<br /><br /> インスタンスの場合は、オブジェクトのサイズ (インスタンスに含まれているオブジェクトのサイズは除く)。 インスタンス。|  
 |**包括サイズ (バイト)**|型のインスタンスのサイズまたは単一インスタンスのサイズ (含まれているオブジェクトのサイズを含む)。|  
   
-###  <a name="a-namebkmkpathstoroottreesnapshotdetailsa-paths-to-root-tree-snapshot-details"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_details_"></a> [ルートのパス] ツリー (スナップショットの詳細)  
+###  <a name="BKMK_Paths_to_Root_tree__Snapshot_details_"></a> [ルートのパス] ツリー (スナップショットの詳細)  
  **[ルートのパス] ツリー**には、種類またはインスタンスを参照するオブジェクトのチェーンが表示されます。 .NET Framework のガベージ コレクターは、オブジェクトへの参照がすべて解放された場合にのみ、オブジェクトのメモリをクリーンアップします。  
   
  ![型の [ルートのパス] ツリー](../profiling/media/memuse_snapshotdetails_type_pathstoroottree.png "MEMUSE_SnapshotDetails_Type_PathsToRootTree")  
   
  **[ルートのパス]** ツリーに種類が表示されると、その種類への参照を保持する種類のオブジェクト数が **[参照数]** 列に表示されます。 この列は、インスタンスを分析するときには表示されません。  
   
-###  <a name="a-namebkmkreferencedobjectstreesnapshotdetailsa-referenced-objects-tree-snapshot-details"></a><a name="BKMK_Referenced_Objects_tree__Snapshot_details_"></a> [参照されたオブジェクト] ツリー (スナップショットの詳細)  
+###  <a name="BKMK_Referenced_Objects_tree__Snapshot_details_"></a> [参照されたオブジェクト] ツリー (スナップショットの詳細)  
  **[参照されたオブジェクト]** ツリーには、選んだ種類またはインスタンスによって参照されるオブジェクトが表示されます。  
   
  ![インスタンスの [参照されたオブジェクト] ツリー](../profiling/media/memuse_snapshotdetails_referencedobjects_instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
@@ -176,7 +176,7 @@ ms.lasthandoff: 02/22/2017
 |**サイズ (バイト)**|型の場合は、その型の全インスタンスのサイズ (型に含まれているオブジェクトのサイズは除く)。<br /><br /> インスタンスの場合は、オブジェクトのサイズ (オブジェクトに含まれているオブジェクトのサイズは除く)。|  
 |**包括サイズ (バイト)**|型のインスタンスの合計サイズまたはインスタンスのサイズ (含まれているオブジェクトのサイズを含む)。|  
   
-##  <a name="a-namebkmksnapshotdifferencediffreportsa-snapshot-difference-diff-reports"></a><a name="BKMK_Snapshot_difference__diff__reports"></a> スナップショットの相違 (diff) レポート  
+##  <a name="BKMK_Snapshot_difference__diff__reports"></a> スナップショットの相違 (diff) レポート  
  スナップショットの相違 (diff) レポートには、指定したスナップショットとその直前に取られたスナップショットの変更点が表示されます。 相違レポートを開くには、次の画像に示すように、スナップショット ビューに含まれるいずれかのリンクをクリックします。 どちらのリンクからも同じレポートが開きますが、レポート内の **[マネージ ヒープ]** ツリーを最初に表示したときの並べ替え順序だけが異なります。 レポートが開いた後で並べ替え順序を変更できます。  
   
  ![スナップショット ビューにある差分レポートへのリンク](../profiling/media/memuse_snapshotview_snapshotdifflinks.png "MEMUSE_SnapshotView_SnapshotDiffLinks")  
@@ -185,7 +185,7 @@ ms.lasthandoff: 02/22/2017
   
 -   **[オブジェクト]** リンクをクリックすると、**[カウント]** 列でレポートが並べ替えられます。  
   
-###  <a name="a-namebkmkmanagedheaptreesnapshotdiffa-managed-heap-tree-snapshot-diff"></a><a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a> [マネージ ヒープ] ツリー (スナップショットの相違)  
+###  <a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a> [マネージ ヒープ] ツリー (スナップショットの相違)  
  **[マネージ ヒープ]** ツリーには、メモリ内に保持されているオブジェクトの種類が一覧表示されます。 型名を展開すると、サイズ順に、その型の最大のインスタンス&10; 個が表示されます。 種類またはインスタンスを選ぶと、選んだ項目の **[ルートのパス]** ツリーと **[参照されたオブジェクト]** ツリーが表示されます。  
   
  ![差分レポートにある種類の [マネージ ヒープ] ツリー](../profiling/media/memuse_snapshotdiff_type_heap.png "MEMUSE_SnapshotDiff_Type_Heap")  
@@ -202,12 +202,12 @@ ms.lasthandoff: 02/22/2017
 |**包括サイズ (バイト)**|指定したスナップショットに含まれているオブジェクトのサイズ (オブジェクトに含まれているオブジェクトのサイズを含む)。|  
 |**包括サイズの相違 (バイト)**|型の場合は、指定したスナップショットと前のスナップショットとの、その型の全インスタンスのサイズの差 (オブジェクトに含まれているオブジェクトのサイズを含む)。 インスタンスの場合、このフィールドは空白です。|  
   
-###  <a name="a-namebkmkpathstoroottreesnapshotdiffa-paths-to-root-tree-snapshot-diff"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a> [ルートのパス] ツリー (スナップショットの相違)  
+###  <a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a> [ルートのパス] ツリー (スナップショットの相違)  
  **[ルートのパス] ツリー**には、種類またはインスタンスを参照するオブジェクトのチェーンが表示されます。 .NET Framework のガベージ コレクターは、オブジェクトへの参照がすべて解放された場合にのみ、オブジェクトのメモリをクリーンアップします。  
   
  ![差分ビューのインスタンスの [ルートのパス] ツリー](../profiling/media/memuse_snapshotdiff_pathstoroot_instance_all.png "MEMUSE_SnapshotDiff_PathsToRoot_Instance_All")  
   
-###  <a name="a-namebkmkreferencedobjectstreesnapshotdiffa-referenced-objects-tree-snapshot-diff"></a><a name="BKMK_Referenced_Objects_tree__Snapshot_diff_"></a> [参照されたオブジェクト] ツリー (スナップショットの相違)  
+###  <a name="BKMK_Referenced_Objects_tree__Snapshot_diff_"></a> [参照されたオブジェクト] ツリー (スナップショットの相違)  
  **[参照されたオブジェクト]** ツリーには、主要な種類またはインスタンスによって参照されるオブジェクトが表示されます。  
   
  ![インスタンスの [参照されたオブジェクト] ツリー](../profiling/media/memuse_snapshotdetails_referencedobjects_instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  

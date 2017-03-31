@@ -1,6 +1,6 @@
 ---
-title: "HTML UI の応答性 | Microsoft Docs"
-ms.custom: 
+title: "UWP アプリの HTML UI の応答性を分析する | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
@@ -40,13 +40,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: bdfe341252a7c4340a8c0a624d4394124c3efada
-ms.openlocfilehash: 1d230cb011c93ce48a855e86355d4a6ccdf55a29
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 618aaec3a0ae735560d14bea43cc2b08bd9e5445
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="html-ui-responsiveness"></a>HTML UI の応答性
-このトピックでは、アプリのパフォーマンス問題を UI 応答性プロファイラーを使用して切り分ける方法を説明します。UI 応答性プロファイラーは、Windows ユニバーサル アプリで利用できるパフォーマンス ツールです。  
+# <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>ユニバーサル Windows アプリの HTML UI の応答性を分析する
+このトピックでは、アプリのパフォーマンス問題を UI 応答性プロファイラーを使って切り分ける方法を説明します。UI 応答性プロファイラーは、ユニバーサル Windows アプリで利用できるパフォーマンス ツールです。  
   
  UI 応答性プロファイラーは、これらの症状で一般的に発生する UI 応答性の問題やプラットフォーム側の効果などの問題を分離しやすくしてくれます。  
   

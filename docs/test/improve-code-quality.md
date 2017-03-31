@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7a282fc04c1eb01f0c56b1d76880276fc270686d
-ms.openlocfilehash: df5195e7cc435f6da8ebfee4589d7c6258018993
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 2fa87621ed76fb93a9e92d558be5519d783274c5
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="improve-code-quality"></a>コードの品質向上
@@ -48,6 +48,7 @@ ms.lasthandoff: 03/01/2017
 |||  
 |-|-|  
 |[コードの単体テスト](../test/unit-test-your-code.md)|テスト エクスプローラーを使用すると、開発の手法において単体テストを容易に統合できるようになります。 Microsoft 単体テスト フレームワークまたは複数のサードパーティ フレームワークやオープン ソース フレームワークの&1; つを使用できます。|  
+|[Visual Studio での Live Unit Testing](../test/live-unit-testing.md)|Live Unit Testing は、バックグラウンドで自動的に単体テストを実行し、Visual Studio のコード エディターにコード カバレッジとテスト結果をグラフィカルに表示します。|  
 |[アプリケーション品質の分析](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)|スタティック コード分析ツールは、C++ とマネージ コードにおける設計、使用方法、およびスタイルの問題を検出します。 これらの問題の多くは、標準のテスト環境では再現するのが困難なバグにつながる可能性があります。|  
 |[マネージ コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|コード メトリックスとは、開発者が開発中のコードをより理解できるようにする、ソフトウェアの一連の基準です。 このメトリックスには、関数とクラスの保守容易性指数、関数のサイクロマティック複雑度、クラスの継承の深さ、およびクラス間の結合の度合いが含まれます。|  
   

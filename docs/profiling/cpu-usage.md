@@ -1,6 +1,6 @@
 ---
-title: "CPU 使用率 | Microsoft Docs"
-ms.custom: 
+title: "Visual Studio での CPU 使用率の分析 | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
@@ -29,12 +29,12 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8a3c6e60d0ea85d93281764ec3a3435538b9baa0
-ms.openlocfilehash: d89f4c4bf3d1d4230592896be14dd7d64d90825f
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: bb13868209d29ee88aaca25d37bbe0041f49961b
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="cpu-usage"></a>CPU 使用率
+# <a name="analyze-cpu-usage"></a>CPU 使用率の分析
 アプリのパフォーマンスの問題を調査する必要がある場合、まず CPU の使用状況を理解することから始めることができます。 **CPU 使用率**ツールは、CPU が Visual C++、Visual C#/Visual Basic、JavaScript のコードを実行するとき、どこで時間を費やしているかを示します。 Visual Studio 2015 Update 1 以降、デバッガーを終了することなく CPU 使用率の関数ごとの内訳を確認できます。 デバッグ中に CPU プロファイリングのオンとオフを切り替えたり、ブレークポイントなど、実行が停止しているときに結果を表示できます。  
   
 診断セッションの実行と管理にはいくつかの選択肢があります。 たとえば、 **CPU 使用率** ツールをローカルまたはリモートのコンピューターで、あるいはシミュレーターやエミュレーターで実行できます。 Visual Studio で開いているプロジェクトのパフォーマンスを分析したり、実行中のアプリにアタッチしたり、Windows ストアからインストールされたアプリを開始したりできます。 詳しくは、「[Run Profiling Tools with or without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」(デバッガーを使用して、または使用せずにプロファイリング ツールを実行する) を参照してください。 Windows ストア アプリのパフォーマンス分析に関するチュートリアルについては、「 [ストア アプリにおける CPU 使用率の分析](https://msdn.microsoft.com/en-us/library/windows/apps/dn641982.aspx)」を参照してください。 

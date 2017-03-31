@@ -1,6 +1,6 @@
 ---
-title: "JavaScript メモリ | Microsoft Docs"
-ms.custom: 
+title: "UWP アプリでの JavaScript のメモリ使用量を分析する | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
@@ -43,13 +43,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f76e8b2846f0a9dfd37799f6e6f205bee446bbe4
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: e4be61999c3530698f90ea5381b980223791325f
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="javascript-memory"></a>[JavaScript メモリ]
-Visual Studio に用意されている JavaScript メモリ アナライザーは、メモリ使用量を把握し、JavaScript を使用して Windows 用に開発されたストア アプリのメモリ リークを検出するのに役立ちます。 サポートされるアプリには、Windows Phone ストアおよび Windows ストア向けのアプリが含まれます。  
+# <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP アプリでの JavaScript のメモリ使用量を分析する
+Visual Studio に用意されている JavaScript メモリ アナライザーは、メモリ使用量を把握し、JavaScript を使用して Windows 用に開発されたストア アプリのメモリ リークを検出するのに役立ちます。 サポートされるアプリには、ユニバーサル Windows アプリのアプリが含まれます。
   
  JavaScript メモリ アナライザーは、次の機能を提供します。  
   
@@ -83,7 +83,7 @@ Visual Studio に用意されている JavaScript メモリ アナライザー�
  [ソース コードとメモリ使用量データの関連付け](#JSConsoleCommands)   
  [メモリの問題を識別するためのヒント](#Tips)  
   
-##  <a name="a-nameruna-run-the-javascript-memory-analyzer"></a><a name="Run"></a> JavaScript メモリ アナライザーの実行  
+##  <a name="Run"></a> JavaScript メモリ アナライザーの実行  
  メモリ アナライザーは、動作中の Windows ストア アプリが Visual Studio で開かれているか、[!INCLUDE[win8](../debugger/includes/win8_md.md)] 以降を実行しているコンピューターにインストールされている場合に使用できます。  
   
 #### <a name="to-run-the-memory-analyzer"></a>メモリ アナライザーを実行するには  
@@ -122,7 +122,7 @@ Visual Studio に用意されている JavaScript メモリ アナライザー�
   
 7.  メモリ アナライザーによって収集されたデータを表示するには、 **[ヒープ スナップショットの作成]**をクリックします。 このトピックで後述する「 [View a snapshot summary](#SnapshotSummary) 」を参照してください。  
   
-##  <a name="a-namechecka-check-memory-usage"></a><a name="Check"></a> メモリの使用量の確認  
+##  <a name="Check"></a> メモリの使用量の確認  
  JavaScript メモリ アナライザーのさまざまなビューを使用して、メモリ リークを識別することができます。 アプリでメモリ リークが発生している可能性がある場合には、「 [Isolate a memory leak](#Isolate) 」を参照して、推奨されるワークフローを確認します。  
   
  アプリケーションのメモリ リークを特定するには、次のビューを使用します。  
@@ -141,7 +141,7 @@ Visual Studio に用意されている JavaScript メモリ アナライザー�
   
 -   [スナップショットの相違を表示](#SnapshotDiff)します。 スナップショット間の差分値を示します。 これらのビューは、オブジェクトのサイズや数の違いを示します。  
   
-##  <a name="a-nameisolatea-isolate-a-memory-leak"></a><a name="Isolate"></a> メモリ リークの特定  
+##  <a name="Isolate"></a> メモリ リークの特定  
  以下の手順は、JavaScript メモリ アナライザーをより効果的に使用するために役立つワークフローです。 これらの手順は、アプリケーションでメモリ リークが発生している可能性がある場合に役立ちます。 動作中のアプリのメモリ リークを識別するプロセスを紹介したチュートリアルについては、「[チュートリアル: メモリ リークの検出 (JavaScript)](../profiling/walkthrough-find-a-memory-leak-javascript.md)」をご覧ください。  
   
 1.  Visual Studio でアプリを開きます。  
@@ -207,7 +207,7 @@ Visual Studio に用意されている JavaScript メモリ アナライザー�
   
 14. 残されたオブジェクトのビューにあるオブジェクトが多すぎる場合、メモリ リークが生じている期間をさらに特定して、3 つのスナップショットを再度作成します。 さらにメモリ リークを特定するには、 [Associate source code with memory usage data](#JSConsoleCommands)、 [Associate source code with memory usage data](#JSConsoleCommands)、 and other memory usage data available in the memory analyzer.  
   
-##  <a name="a-namelivememorya-view-live-memory-usage-summary"></a><a name="LiveMemory"></a> 実行中のメモリ使用量の概要の表示  
+##  <a name="LiveMemory"></a> 実行中のメモリ使用量の概要の表示  
  実行中のメモリ使用量の概要ビューは、実行中のアプリおよびすべてのスナップショット概要タイルのコレクションのメモリ使用量グラフを示します。 このビューでは、スナップショットの取得、概要情報の分析、他のビューへの移動など、基本的なタスクを実行できます。 データ収集を停止すると、メモリ グラフは表示されなくなり、[ [View a snapshot summary](#SnapshotSummary) ] ビューのみが表示されます。  
   
  メモリ グラフには、プライベート バイト、ネイティブ メモリ、および JavaScript ヒープを含むアプリのプロセスのメモリのライブ ビューが示されます。 メモリ グラフは、プロセス メモリのスクロール可能なビューです。 次のように表示されます。  
@@ -218,7 +218,7 @@ Visual Studio に用意されている JavaScript メモリ アナライザー�
   
  メモリ グラフに示されるメモリの一部は、JavaScript ランタイムによって割り当てられます。 アプリでこのメモリの使用を制御することはできません。 グラフに表示されるメモリ使用量は、最初のスナップショットを取得したときに増加し、その後は追加のスナップショットを取得するたびに最小限増加します。  
   
-##  <a name="a-namesnapshotsummarya-view-a-snapshot-summary"></a><a name="SnapshotSummary"></a> スナップショットの概要の表示  
+##  <a name="SnapshotSummary"></a> スナップショットの概要の表示  
  アプリのメモリ使用量に関する現在の状態のスナップショットを取得するには、メモリ グラフで **[ヒープ スナップショットの作成]** をクリックします。 スナップショットの概要タイルは、実行中のメモリ使用量の概要 (アプリの実行時) とスナップショットの概要 (アプリの停止時) の両方に表示されます。 このタイルに、JavaScript ヒープに関する情報と、詳細情報へのリンクが示されます。 複数のスナップショットを取得した場合、前のスナップショットのデータと比較した追加情報が提供されます。  
   
 > [!NOTE]
@@ -244,7 +244,7 @@ Visual Studio に用意されている JavaScript メモリ アナライザー�
   
 -   スナップショットの取得時の画面のスクリーンショット。  
   
-##  <a name="a-namesnapshotdetailsa-view-snapshot-details"></a><a name="SnapshotDetails"></a> スナップショットの詳細の表示  
+##  <a name="SnapshotDetails"></a> スナップショットの詳細の表示  
  スナップショットの詳細ビューでは、各スナップショットのメモリの使用に関する詳細情報を表示できます。  
   
  スナップショットの詳細ビューは、スナップショットの概要ビューでリンクをクリックすると表示されます。 たとえば、ヒープ サイズのリンクをクリックすると、スナップショットの詳細が表示され、既定で種類ビューが開きます。  
@@ -279,7 +279,7 @@ Visual Studio に用意されている JavaScript メモリ アナライザー�
   
 -   **カウント**: オブジェクトのインスタンスの数。 この値は、種類ビューにのみ表示されます。  
   
-##  <a name="a-namesnapshotdiffa-view-a-snapshot-diff"></a><a name="SnapshotDiff"></a> スナップショットの相違の表示  
+##  <a name="SnapshotDiff"></a> スナップショットの相違の表示  
  JavaScript メモリ アナライザーでは、スナップショットの相違ビューでスナップショットとその前のスナップショットとを比較できます。  
   
  スナップショットの詳細の相違を表示するには、複数のスナップショットを取得した後で、スナップショットの概要ビューで、異なるヒープ サイズまたは異なるオブジェクトの数のリンクをクリックします。  
@@ -312,22 +312,22 @@ Visual Studio に用意されている JavaScript メモリ アナライザー�
 > [!TIP]
 >  [Isolate a memory leak](#Isolate) 」の手順に従った後、 **[スコープ]** フィルターで残っているオブジェクトを使用して、メモリをリークしているオブジェクトを特定することをお勧めします。  
   
-##  <a name="a-namefoldobjectsa-view-objects-by-dominator"></a><a name="FoldObjects"></a> ドミネーターごとのオブジェクトの表示  
+##  <a name="FoldObjects"></a> ドミネーターごとのオブジェクトの表示  
  [種類] ビューと [ドミネーター ] ビューでは、オブジェクトをドミネーターの中に折りたたんで表示するかどうかを選択できます (これは [ドミネーター] タブの既定の表示です)。 このビューを選択すると、オブジェクトの最上位のビューにドミネーターのみが表示されます。 (非グローバル オブジェクトの下位オブジェクトは、最上位のビューでは非表示になります。)アプリによっては、データのノイズを低減することで、どのオブジェクトがメモリ リークを起こしているかを明確にすることができます。  
   
  ドミネーターごとにオブジェクトの表示を切り替えるには、 **[ドミネーターごとにオブジェクトをおりたたむ]** ボタンを選択します。 ![オブジェクトをドミネーターに折りたたみ](../profiling/media/js_mem_fold_objects.png "JS_Mem_Fold_Objects")  
   
  ドミネーターの詳細については、以下を参照してください。 [スナップショットの詳細の表示](#SnapshotDetails)  
   
-##  <a name="a-namefiltera-filter-data-by-identifier"></a><a name="Filter"></a> 識別子によるデータのフィルター  
+##  <a name="Filter"></a> 識別子によるデータのフィルター  
  ドミネーター ビューと種類ビューでは、特定の識別子を検索してデータをフィルターで除外できます。 識別子を検索するには、右上の **[識別子フィルター]** ボックスに識別子の名前を入力します。 入力を開始すると、入力した文字を含まない識別子がフィルターで除外されます。  
   
  それぞれのビューに独自のフィルターがあるため、別のビューに切り替えるとフィルターは保持されません。  
   
-##  <a name="a-nameshowinrootsviewa-find-an-object-in-the-object-tree"></a><a name="ShowInRootsView"></a> オブジェクト ツリーでのオブジェクトの検索  
+##  <a name="ShowInRootsView"></a> オブジェクト ツリーでのオブジェクトの検索  
  種類ビューとドミネーター ビューでは、特定のオブジェクトと `Global` オブジェクトとの関係を表示できます。 `Global` オブジェクトをルートとしているオブジェクトに対してガベージ コレクションは行われません。 これにより、 `Global` のオブジェクト ツリーを検索することなく、ルート ビューで簡単に既知のオブジェクトを見つけることができます。 これを行うには、ドミネーター ビューまたは種類ビューでオブジェクトのショートカット メニューを開き、 **[ルート ビューで表示]**をクリックします。  
   
-##  <a name="a-namereferencesa-view-shared-object-references"></a><a name="References"></a> 共有されたオブジェクト参照の表示  
+##  <a name="References"></a> 共有されたオブジェクト参照の表示  
  種類ビューとドミネーター ビューの下部ペインには、共有された参照を表示するオブジェクト参照の一覧があります。 上部ペインでオブジェクトを選択すると、そのオブジェクトを指すすべてのオブジェクトがオブジェクト参照の一覧に表示されます。  
   
 > [!NOTE]
@@ -339,15 +339,15 @@ Visual Studio に用意されている JavaScript メモリ アナライザー�
   
  ![オブジェクト参照および表示された ID](../profiling/media/js_mem_shared_refs.png "JS_Mem_Shared_Refs")  
   
-##  <a name="a-namebuiltinvaluesa-show-built-in-objects"></a><a name="BuiltInValues"></a> 組み込みオブジェクトの表示  
+##  <a name="BuiltInValues"></a> 組み込みオブジェクトの表示  
  ドミネーター ビューと種類ビューには、既定では、アプリで作成するオブジェクトのみが表示されます。 これは、不要な情報を除外したり、アプリ関連の問題を特定したりするのに役立ちます。 ただし、JavaScript ランタイムによってアプリ用に生成されたすべてのオブジェクトを表示すると便利な場合もあります。  
   
  これらのオブジェクトを表示するには、ペインの右上隅にある設定リスト ![メモリ アナライザーの [設定] ドロップダウン リスト](../profiling/media/js_mem_settings.png "JS_Mem_Settings") の **[組み込み要素の表示]** をクリックします。  
   
-##  <a name="a-namesavea-save-diagnostic-session-files"></a><a name="Save"></a> 診断セッション ファイルの保存  
+##  <a name="Save"></a> 診断セッション ファイルの保存  
  診断スナップショットの概要とそれに関連する詳細ビューは、.diagsession ファイルとして保存されます。 **ソリューション エクスプローラー** では、前の診断のセッションが診断セッション フォルダーに表示されます。 **ソリューション エクスプローラー**で、前のセッションを開く操作、ファイルの削除、またはファイル名の変更を行うことができます。  
   
-##  <a name="a-namejsconsolecommandsa-associate-source-code-with-memory-usage-data"></a><a name="JSConsoleCommands"></a> ソース コードとメモリ使用量データの関連付け  
+##  <a name="JSConsoleCommands"></a> ソース コードとメモリ使用量データの関連付け  
  メモリの問題があるコードのセクションを特定するには、次の方法に従います。  
   
 -   詳細ビューと差分ビューで DOM 要素のクラス名と ID を探します。  
@@ -388,7 +388,7 @@ if (performance && performance.mark) {
   
  ![プロファイル マークの使用](../profiling/media/js_mem_performance_marks.png "JS_Mem_Performance_Marks")  
   
-##  <a name="a-nametipsa-tips-for-identifying-memory-issues"></a><a name="Tips"></a> メモリの問題を識別するためのヒント  
+##  <a name="Tips"></a> メモリの問題を識別するためのヒント  
   
 -   「[メモリ リークの特定](#Isolate)」で説明するワークフローに従って、差分ビューの **[スナップショット #\<number> から残されたオブジェクト]** フィルターを使用して、メモリ リークの可能性の高い候補を特定します。  
   
