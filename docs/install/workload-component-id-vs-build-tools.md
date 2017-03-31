@@ -1,14 +1,10 @@
 ---
-title:
-- "Visual Studio Build Tools 2017 のワークロード ID とコンポーネント ID | Microsoft Docs"
+title: "Visual Studio Build Tools 2017 のワークロード ID とコンポーネント ID | Microsoft Docs"
 description: "Visual Studio のワークロード ID とコンポーネント ID を使用して Windows ベースのクラシック アプリケーションを構築する"
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:

@@ -1,14 +1,10 @@
 ---
-title:
-- "Visual Studio Test Professional 2017 のワークロードとコンポーネント ID | Microsoft Docs"
+title: "Visual Studio Test Professional 2017 のワークロードとコンポーネント ID | Microsoft Docs"
 description: "Visual Studio のワークロードとコンポーネント ID を使用して、あらゆる側面からテストを行う担当者向けの統合テスト ツールを提供します"
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:

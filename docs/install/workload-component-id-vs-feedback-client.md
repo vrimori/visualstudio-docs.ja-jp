@@ -1,14 +1,10 @@
 ---
-title:
-- "Visual Studio Feedback Client 2017 のワークロードとコンポーネント ID | Microsoft Docs"
+title: "Visual Studio Feedback Client 2017 のワークロードとコンポーネント ID | Microsoft Docs"
 description: "Visual Studio のワークロードとコンポーネント ID を使用して、Visual Studio Team Services または Team Foundation Server に関する充実したフィードバックを提供します"
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:

@@ -1,14 +1,10 @@
 ---
-title:
-- "Visual Studio Test Controller 2017 のワークロードとコンポーネント ID | Microsoft Docs"
+title: "Visual Studio Test Controller 2017 のワークロードとコンポーネント ID | Microsoft Docs"
 description: "Visual Studio のワークロードとコンポーネントを使用して、複数のマシンに自動テストを配布します"
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:

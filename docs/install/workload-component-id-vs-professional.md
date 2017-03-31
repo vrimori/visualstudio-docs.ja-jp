@@ -1,14 +1,10 @@
 ---
-title:
-- "Visual Studio Professional 2017 のワークロードとコンポーネント ID | Microsoft Docs"
+title: "Visual Studio Professional 2017 のワークロードとコンポーネント ID | Microsoft Docs"
 description: "ワークロードとコンポーネント ID は、コマンド ラインを使用して Visual Studio をインストールするか、または VSIX マニフェストで依存関係として指定するために使用します"
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:
