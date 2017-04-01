@@ -1,7 +1,7 @@
 # [Visual Studio 2017 へようこそ](welcome-to-visual-studio.md)
 # [新機能](ide/whats-new-in-visual-studio.md)
 # [インストール](install/TOC.md)
-# [Visual Studio IDE](ide/index.md)
+# [Visual Studio IDE](ide/visual-studio-ide.md)
 # [Visual Basic](/dotnet/articles/visual-basic)
 # [Visual C#](/dotnet/articles/csharp)
 # [Visual C++](/cpp/top/visual-cpp-in-visual-studio)
