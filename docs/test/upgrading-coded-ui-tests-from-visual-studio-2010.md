@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 11232a83-73ea-46bd-bc0c-46f74f6e3a42
 caps.latest.revision: 33
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -85,3 +85,4 @@ ms.lasthandoff: 03/03/2017
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
  [既存の操作の記録からのコード化された UI テストの生成](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)   
  [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+

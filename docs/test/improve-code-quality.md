@@ -13,7 +13,7 @@ helpviewer_keywords:
 - team-based development
 ms.assetid: 73baa961-c21f-43fe-bb92-3f59ae9b5945
 caps.latest.revision: 39
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -70,3 +70,4 @@ ms.lasthandoff: 03/07/2017
   
  [Visual Studio Online または Team Foundation Server を使用した作業の追跡](https://www.visualstudio.com/docs/work/overview)  
  [!INCLUDE[vstsTfsLong](../test/includes/vststfslong_md.md)] を使用すると、プロジェクトの計画を作成し、これらのプロセスでアジャイル プロセス、フォーマル プロセス、またはそのバリエーションを使用しているかどうかを追跡できます。 プロジェクト計画の作成、その計画に対する進行状況の追跡、および必要な調整を行うことにより、リスクを軽減し、意図しない問題の発生を防ぎ、プロジェクトの費用を管理できます。
+

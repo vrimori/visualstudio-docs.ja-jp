@@ -1,20 +1,39 @@
 ---
 title: "コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-10-04"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コード化された UI テスト"
+ms.custom: 
+ms.date: 2015-10-04
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- coded UI tests
 ms.assetid: 544742b5-4ec1-4d51-b941-72b2f6ff17bc
 caps.latest.revision: 106
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 104
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: b4ca42eedec0f6fe2daaa70b04ab9fdaf37865fc
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム
 Visual Studio Enterprise のコード化された UI テストがサポートされる構成とプラットフォームを、次の表に示します。 この構成は、[!INCLUDE[MTRlong](../test/includes/mtrlong_md.md)]を使用して作成される操作の記録にも適用されます。  
@@ -70,8 +89,4 @@ Visual Studio Enterprise のコード化された UI テストがサポートさ
 ## <a name="see-also"></a>関連項目  
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
  [既存の操作の記録からのコード化された UI テストの生成](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

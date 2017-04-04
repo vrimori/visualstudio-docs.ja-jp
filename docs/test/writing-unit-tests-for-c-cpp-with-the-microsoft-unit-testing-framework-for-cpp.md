@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4f4b5f10-7314-4725-8c6e-e72f52eff918
 caps.latest.revision: 14
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -416,3 +416,4 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   
  [チュートリアル: ダイナミック リンク ライブラリの作成と使用 (C++)](http://msdn.microsoft.com/Library/3ae94848-44e7-4955-bbad-7d40f493e941)   
  [インポートとエクスポート](/visual-cpp/build/importing-and-exporting)
+

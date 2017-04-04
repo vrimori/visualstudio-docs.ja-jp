@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f1502b51-d6db-4894-9fbf-4a5723e4bb1a
 caps.latest.revision: 8
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -64,3 +64,4 @@ ms.lasthandoff: 03/03/2017
  [コードの単体テスト](../test/unit-test-your-code.md)   
  [旧バージョンの Visual Studio からのテストのアップグレード](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)   
  [Visual Studio 2010 からのコード化された UI テストのアップグレード](../test/upgrading-coded-ui-tests-from-visual-studio-2010.md)
+

@@ -15,7 +15,7 @@ helpviewer_keywords:
 - unit tests, running
 ms.assetid: dd3e8a6a-b366-433e-a409-b9a9b89da89a
 caps.latest.revision: 21
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -166,3 +166,4 @@ Visual Studio には、[!INCLUDE[win8_appname_long](../debugger/includes/win8_ap
 ## <a name="see-also"></a>関連項目  
  [Visual Studio でのストア アプリのテスト](../test/testing-store-apps-with-visual-studio.md)   
  [Team Foundation ビルドを使用した Windows ストア アプリのビルドとテスト](http://msdn.microsoft.com/Library/d0ca17bb-deae-4f3d-a18d-1a99bebceaa9)
+

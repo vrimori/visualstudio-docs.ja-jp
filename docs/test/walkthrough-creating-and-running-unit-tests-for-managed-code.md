@@ -16,7 +16,7 @@ helpviewer_keywords:
 - unit tests, authoring
 ms.assetid: 2b018b18-b412-4e0e-b0ee-b580a2f3ba9c
 caps.latest.revision: 83
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -434,3 +434,4 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 ```  
   
  この最後のセクションでは、テスト コード向上の作業を実行したことにより、より堅牢でわかりやすいテスト メソッドになりました。 さらに重要なこととして、分析の追加によってテスト対象のプロジェクトのコードを改善することもできます。
+
