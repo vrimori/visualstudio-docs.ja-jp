@@ -1,19 +1,38 @@
 ---
 title: "Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tgt-pltfrm-cross-plat"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tgt-pltfrm-cross-plat
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 30f137e6-595d-4ce7-b8f5-415b07c1caa2
 caps.latest.revision: 31
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 23
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
+ms.openlocfilehash: b9e8ab5432e5c546776a61b364c0886d9f96c096
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
 「[セットアップとインストール](../cross-platform/setup-and-install.md)」と「[Xamarin 環境を検証する](../cross-platform/verify-your-xamarin-environment.md)」の手順を完了しましたが、このチュートリアルでは、ネイティブ UI レイヤーを備えた基本的な Xamarin アプリ (下図) を作成する方法を示します。 ネイティブ UI を使用すると、共有コードはポータブル クラス ライブラリ (PCL) に存在し、個別のプラットフォーム プロジェクトに UI 定義が含まれます。  
@@ -52,8 +71,8 @@ caps.handback.revision: 23
 >      -   [Hello, Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)  
 >     -   [Hello, Xamarin.Forms マルチスクリーン](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)  
   
-##  <a name="a-namesolutiona-set-up-your-solution"></a><a name="solution"></a>ソリューションの設定  
- 次の手順では、ネイティブ UI を使用した、共有コードの PCL と&2; つの追加された NuGet パッケージを含む Xamarin ソリューションを作成します。  
+##  <a name="solution"></a>ソリューションの設定  
+ 次の手順では、ネイティブ UI を使用した、共有コードの PCL と 2 つの追加された NuGet パッケージを含む Xamarin ソリューションを作成します。  
   
 1.  Visual Studio では、新しい **[空のアプリ (ネイティブ ポータブル)]** ソリューションを作成し、名前を **WeatherApp** とします。 このテンプレートは、検索フィールドに「**ネイティブ ポータブル**」と入力することによって、最も簡単に見つけることができます。  
   
@@ -91,7 +110,7 @@ caps.handback.revision: 23
   
 5.  ソリューションをビルドし、ビルド エラーがないことを確認します。  
   
-##  <a name="a-namedataservicea-write-shared-data-service-code"></a><a name="dataservice"></a>共有データ サービス コードの記述  
+##  <a name="dataservice"></a>共有データ サービス コードの記述  
  **WeatherApp (ポータブル)** プロジェクトは、すべてのプラットフォームで共有されているポータブル クラス ライブラリ (PCL) 用のコードを記述する場所です。 PCL は、iOS、Android、Windows Phone 用のプロジェクトでビルドされたアプリ パッケージに自動的に含まれます。  
   
  次の手順では、PCL にコードを追加して、気象サービスからのデータにアクセスし、データを格納します。  
@@ -220,7 +239,7 @@ caps.handback.revision: 23
   
 10. **WeatherApp** PCL プロジェクトをビルドし、コードが正しいことを確認します。  
   
-##  <a name="a-nameandroida-design-ui-for-android"></a><a name="Android"></a> Android 用 UI の設計  
+##  <a name="Android"></a> Android 用 UI の設計  
  次に、ユーザー インターフェイスを設計して共有コードに接続してから、アプリを実行します。  
   
 ### <a name="design-the-look-and-feel-of-your-app"></a>アプリの外観を設計する  
@@ -523,7 +542,7 @@ caps.handback.revision: 23
 > [!TIP]
 >  このプロジェクトの完全なソース コードは [GitHub の mobile-samples リポジトリ](https://github.com/xamarin/mobile-samples/tree/master/Weather)にあります。  
   
-##  <a name="a-namewindowsa-design-ui-for-windows-phone"></a><a name="Windows"></a>Windows Phone 用 UI の設計  
+##  <a name="Windows"></a>Windows Phone 用 UI の設計  
  次に、Windows Phone 用のユーザー インターフェイスを設計して共有コードに接続してから、アプリを実行します。  
   
 ### <a name="design-the-look-and-feel-of-your-app"></a>アプリの外観を設計する  
@@ -629,7 +648,7 @@ caps.handback.revision: 23
 > [!TIP]
 >  このプロジェクトの完全なソース コードは [GitHub の mobile-samples リポジトリ](https://github.com/xamarin/mobile-samples/tree/master/Weather)にあります。  
   
-##  <a name="a-namenexta-next-steps"></a><a name="next"></a>次のステップ  
+##  <a name="next"></a>次のステップ  
  **iOS 用 UI をソリューションに追加する**  
   
  iOS 用のネイティブ UI を追加することで、このサンプルを拡張します。 そのためには、Xcode と Xamarin がインストールされているローカル ネットワーク上の Mac に接続する必要があります。 接続すると、Visual Studio で直接 iOS デザイナーを使用することができます。 完成したアプリを確認するには、[GitHub の mobile-samples リポジトリ](https://github.com/xamarin/mobile-samples/tree/master/Weather)を参照してください。  
@@ -644,8 +663,3 @@ caps.handback.revision: 23
  [Xamarin の開発者向けサイト](http://developer.xamarin.com/)   
  [Windows デベロッパー センター](https://dev.windows.com/en-us)   
  [Swift および C# のクイック リファレンス ポスター](http://aka.ms/scposter)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
