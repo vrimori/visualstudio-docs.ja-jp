@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 のアンインストール | Microsoft Docs"
 description: "Visual Studio をアンインストールする方法について、ステップ バイ ステップで説明します。"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 03/27/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -32,9 +32,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: b2926232b920fc06c5c14a36d736e6fd73f87f1f
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9e635a28d3338bcf518a0aec69c476280eedf6e2
+ms.openlocfilehash: 3a4dda7736409ce60d6f1a1aa42b820978d63074
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -47,6 +47,9 @@ ms.lasthandoff: 03/07/2017
 
      ![Visual Studio インストーラー](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
 
+     >[!NOTE]
+     一部のコンピューターでは、Visual Studio インストーラーが **Microsoft Visual Studio インストーラー**として **"M"** の項に表示される場合があります。
+
 2.  クリックしてインストーラーを起動し、![詳細アイコン](media/vs2017uninstall-UninstallIcon.png "オプション アイコンを選択") アイコンをクリックして、**[アンインストール]** をクリックします。  
 
      ![Visual Studio 2017 の変更 (変更、起動、修復、またはアンインストール)](media/vs2017-uninstall.PNG "Visual Studio 2017 の修復またはアンインストール")  
@@ -55,7 +58,7 @@ ms.lasthandoff: 03/07/2017
 
      ![Visual Studio 2017 の変更 (製品のアンインストール)](media/vs2017-uninstall-confirm.PNG "Visual Studio 2017 のアンインストールを確定")  
 
-Visual Studio 2017 を再インストールする場合は、もう一度 Visual Studio インストーラーを起動して、選択画面から **[インストール]** をクリックします。
+Visual Studio 2017 を再インストールする場合は、もう一度 Visual Studio インストーラーを起動し、選択画面で **[インストール]** を選びます。
 
 ## <a name="see-also"></a>関連項目  
 * [Visual Studio のインストール](install-visual-studio.md)
