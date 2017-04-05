@@ -73,7 +73,7 @@ ms.lasthandoff: 03/13/2017
 
 |要素|説明|  
 |-------------|-----------------|  
-|[UsingTask](../msbuild/usingtask-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] にタスクを登録する方法を提供します。 1 つのプロジェクトに&0; 個以上の `UsingTask` 要素を含めることができます。|  
+|[UsingTask](../msbuild/usingtask-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] にタスクを登録する方法を提供します。 1 つのプロジェクトに 0 個以上の `UsingTask` 要素を含めることができます。|  
 
 ## <a name="example"></a>例  
  次の例では、`Evaluate` 属性で `TaskBody` 要素を使用する方法を示します。  
