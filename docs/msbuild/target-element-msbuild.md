@@ -92,10 +92,10 @@ ms.lasthandoff: 03/13/2017
 
 |要素|説明|  
 |-------------|-----------------|  
-|[Task](../msbuild/task-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクのインスタンスを作成し、実行します。 1 つのターゲットに&0; 個以上のタスクを指定できます。|  
+|[Task](../msbuild/task-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクのインスタンスを作成し、実行します。 1 つのターゲットに 0 個以上のタスクを指定できます。|  
 |[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|ユーザー定義の `Property` 要素のセットを格納します。 .NET Framework 3.5 以降では、`Target` 要素に `PropertyGroup` 要素を格納できます。|  
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|ユーザー定義の `Item` 要素のセットを格納します。 .NET Framework 3.5 以降では、`Target` 要素に `ItemGroup` 要素を格納できます。 詳細については、「[項目](../msbuild/msbuild-items.md)」を参照してください。|  
-|[OnError](../msbuild/onerror-element-msbuild.md)|失敗したタスクの `ContinueOnError` 属性が ErrorAndStop (または `false`) の場合、1 つ以上のターゲットが実行されます。 1 つのターゲットに&0; 個以上の `OnError` 要素を指定できます。 `OnError` 要素がある場合は、`Target` 要素内で最後の要素である必要があります。<br /><br /> `ContinueOnError` 属性の詳細は、「[Task Element (MSBuild) (Task 要素 (MSBuild))](../msbuild/task-element-msbuild.md)」を参照してください。|  
+|[OnError](../msbuild/onerror-element-msbuild.md)|失敗したタスクの `ContinueOnError` 属性が ErrorAndStop (または `false`) の場合、1 つ以上のターゲットが実行されます。 1 つのターゲットに 0 個以上の `OnError` 要素を指定できます。 `OnError` 要素がある場合は、`Target` 要素内で最後の要素である必要があります。<br /><br /> `ContinueOnError` 属性の詳細は、「[Task Element (MSBuild) (Task 要素 (MSBuild))](../msbuild/task-element-msbuild.md)」を参照してください。|  
 
 ### <a name="parent-elements"></a>親要素  
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="remarks"></a>コメント  
  実行する最初のターゲットは実行時に指定されます。 各ターゲットは他のターゲットとの依存関係を持つ場合があります。 たとえば、展開用のターゲットはコンパイル用のターゲットに依存します。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] エンジンは `DependsOnTargets` 属性に出現する順序で、依存関係を左から右に実行します。 詳細については、「[ターゲット](../msbuild/msbuild-targets.md)」を参照してください。  
 
- あるターゲットに複数のターゲットが依存関係を持つ場合でも、ターゲットは&1; 回のビルド中に&1; 回だけ実行されます。  
+ あるターゲットに複数のターゲットが依存関係を持つ場合でも、ターゲットは 1 回のビルド中に 1 回だけ実行されます。  
 
  `Condition` 属性が `false` と評価されたためにターゲットがスキップされた場合でも、そのターゲットがその後ビルドで呼び出され、`Condition` 属性がその時点で `true` と評価された場合には、そのターゲットを実行できます。  
 
