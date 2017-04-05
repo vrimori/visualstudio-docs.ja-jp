@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: b0d84db6a16861fb9554af2a644423f906784748
-ms.openlocfilehash: 3ca6c45cd1f61dc4a4419ab01794e24c0c19d44a
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: b5d72a83092c2b97b30b7a8af539a0b1aca50418
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -67,7 +67,7 @@ Python Tools for Visual Studio (PTVS) は、実行中のプロセスへのアタ
 
 デバッグの基本的なワークフローには、ブレークポイントの設定、コードのステップ実行、値の検査、例外の処理が含まれます。これらについては、後続のセクションで説明します。 Visual Studio のデバッガーについて詳しくは、「[Debugging in Visual Studio (Visual Studio でのデバッグ)](../debugger/debugging-in-visual-studio.md)」を参照してください。
 
-デバッグ セッションを開始するには、**[デバッグ] > [デバッグの開始]** コマンド、ツールバーの **[開始]** ボタン、または F5 キーを使用します。 これにより、プロジェクトのアクティブな環境と、プロジェクトのプロパティで指定されているコマンドライン引数や検索パスを使用して、プロジェクトのスタートアップ ファイル (ソリューション エクスプローラーで太字で表示) が起動します (「[プロジェクトのデバッグ オプション](#project-debugging-options)」を参照してください)。
+デバッグ セッションを開始するには、**[デバッグ] > [デバッグの開始]** コマンド、ツールバーの **[開始]** ボタン、または F5 キーを使用します。 これにより、プロジェクトのアクティブな環境と、プロジェクトのプロパティで指定されているコマンドライン引数や検索パスを使用して、プロジェクトのスタートアップ ファイル (ソリューション エクスプローラーで太字で表示) が起動します (「[プロジェクトのデバッグ オプション](#project-debugging-options)」を参照してください)。 ただし、何らかの理由でスタートアップ ファイルが設定されていない場合は、Python の出力ウィンドウが一瞬表示されてから消えます。 その場合は、適切なファイルを右クリックして、**[スタートアップ ファイルとして設定]** を選びます。
 
 > [!Note]
 > デバッガーは常に、プロジェクトのアクティブな Python 環境で起動します。 環境を変更するには、「[Python Environments (Python 環境)](python-environments.md)」の説明に従って、別の環境をアクティブにします。
@@ -181,7 +181,7 @@ HTML、XML、JSON のビジュアライザーは別のポップアップ ウィ�
 <a name="the-debug-interactive-window"</a>
 ## <a name="immediate-and-interactive-windows"></a>イミディエイト ウィンドウと対話型ウィンドウ
 
-デバッグ セッション中に使用できる対話型ウィンドウは&2; つあります。標準の Visual Studio イミディエイト ウィンドウと、Python Debug Interactive ウィンドウです。
+デバッグ セッション中に使用できる対話型ウィンドウは 2 つあります。標準の Visual Studio イミディエイト ウィンドウと、Python Debug Interactive ウィンドウです。
 
 イミディエイト ウィンドウ (**[デバッグ] > [ウィンドウ] > [イミディエイト]**) は、Python 式を即座に評価したり、実行中のプログラム内の変数を検査したり割り当てたりする際に使用します。 詳細については、[イミディ エイト ウィンドウ](../ide/reference/immediate-window.md)に関する一般的なトピックを参照してください。
 
@@ -194,7 +194,7 @@ Debug Interactive ウィンドウは、[標準の REPL コマンド](interactive
 | コマンド | 引数 | 説明 |
 | --- | --- | --- |
 | `$continue`、`$cont`、`$c` | 現在のステートメントからプログラムの実行を開始します。 |
-| `$down`, `$d` | スタック トレースで現在のフレームを&1; つ下のレベルに移動します。 |
+| `$down`, `$d` | スタック トレースで現在のフレームを 1 つ下のレベルに移動します。 |
 | `$frame` | | 現在のフレーム ID を表示します。
 | `$frame` | フレーム ID | 現在のフレームを指定のフレーム ID に切り替えます。
 | `$load` | ファイルからコマンドを読み込み、完了するまで実行します。 |
@@ -207,11 +207,11 @@ Debug Interactive ウィンドウは、[標準の REPL コマンド](interactive
 | `$thread` | | 現在のスレッド ID を表示します。 |
 | `$thread` | スレッド ID | 現在のスレッドを指定のスレッド ID に切り替えます。 |
 | `$threads` | | 現在デバッグ中のスレッドの一覧を表示します。 |
-| `$up`, `$u` | | スタック トレースで現在のフレームを&1; つ上のレベルに移動します。 |
+| `$up`, `$u` | | スタック トレースで現在のフレームを 1 つ上のレベルに移動します。 |
 | `$where`、`$w`、`$bt` | 現在のスレッドのフレームを一覧表示します。 |
 
 標準のデバッガー ウィンドウのプロセス、スレッド、呼び出し履歴などは、Debug Interactive ウィンドウとは同期されないことに注意してください。 つまり、Debug Interactive ウィンドウでアクティブなプロセス、スレッド、フレームを変更しても、他のデバッガー ウィンドウに影響はありません。同様に、他のデバッガー ウィンドウでアクティブなプロセス、スレッド、フレームを変更しても、Debug Interactive ウィンドウには影響しません。
 
-Debug Interactive ウィンドウには独自のオプションがあり、**[ツール] > [オプション] > [Python Tools] > [Debug Interactive Window]** からアクセスできます。 Python 環境ごとに個別のインスタンスを持つ通常の Python Interactive ウィンドウとは異なり、Debug Interactive ウィンドウのインスタンスは&1; つだけで、デバッグ中のプロセスには常に Python インタープリターが使用されます。
+Debug Interactive ウィンドウには独自のオプションがあり、**[ツール] > [オプション] > [Python Tools] > [Debug Interactive Window]** からアクセスできます。 Python 環境ごとに個別のインスタンスを持つ通常の Python Interactive ウィンドウとは異なり、Debug Interactive ウィンドウのインスタンスは 1 つだけで、デバッグ中のプロセスには常に Python インタープリターが使用されます。
 
 ![Python Interactive ウィンドウのオプション](media/debugging-interactive-options.png)

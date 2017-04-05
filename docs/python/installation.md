@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: dbedb933ce3cabf000e7487fcf03133db3a326b4
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: e0a51155a42fb51244114da86a292381a7a28a21
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -52,13 +52,13 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. [Visual Studio 2017 Preview](https://www.visualstudio.com/vs/preview) をインストールします。 これは、現在、Visual Studio 2017 用の Python ワークロードをインストールするための唯一の手段です。
+1. ["Visual Studio 2017 Preview" を https://www.visualstudio.com/vs/preview から](https://www.visualstudio.com/vs/preview)インストールします。 **注:** この Preview チャネルは Visual Studio 2017 のリリース バージョンとは*異なり*、Python サポートなど、将来の Visual Studio 2017 更新プログラム用に開発中の機能が含まれます。
 
 1. プレビュー インストーラーで、**[Web & Cloud (Web と クラウド)]、[Python 開発]** ワークロードの順に選択します。
 
     ![Visual Studio インストーラーの [Python 開発] ワークロード](media/installation-python-workload.png)
 
-1. インストーラーの右側で、インストールに含める Python インタープリターとその他の関連ツールを選択します。
+1. インストーラーの右側で、インストールに含める Python インタープリターとその他の関連ツールを選択します。 たとえば、Python の C++ 拡張機能を開発する場合は、**[Python ネイティブ開発ツール]** オプションを含めます。
 
     ![Visual Studio インストーラーの [Python 開発] のオプション](media/installation-python-options.png)
 
