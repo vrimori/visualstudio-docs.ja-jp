@@ -1,71 +1,88 @@
 ---
 title: "方法: データ ドリブン単体テストを作成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.test.testresults.unittest.datadriven"
-  - "vs.test.testresults.unittest.datadriven.failure"
-helpviewer_keywords: 
-  - "単体テスト、実行"
-  - "単体テスト、データドリブン"
-  - "データ ドリブン単体テスト"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.test.testresults.unittest.datadriven
+- vs.test.testresults.unittest.datadriven.failure
+helpviewer_keywords:
+- unit tests, running
+- unit tests, data-driven
+- data-driven unit tests
 ms.assetid: a0322bc5-02c8-4f9f-af43-100a60b1bd28
 caps.latest.revision: 33
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 33
----
-# 方法: データ ドリブン単体テストを作成する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: 2eaf4aa44fdc1bec56bb513af54ea7db72dcf3db
+ms.lasthandoff: 04/04/2017
 
-マネージ コード用の Microsoft の単体テスト フレームワークを使用して、テスト メソッドで使用されるデータ ソースから値を取得するための単体テスト メソッドを設定できます。  メソッドは単一のメソッドを使用して、さまざまな入力をテストしやすくするデータ ソース内の各行に対して繰り返し実行します。  
+---
+# <a name="how-to-create-a-data-driven-unit-test"></a>方法: データ ドリブン単体テストを作成する
+マネージ コード用の Microsoft の単体テスト フレームワークを使用して、データ ソースからテスト メソッドで使用される値を取得するための単体テスト メソッドを設定できます。 メソッドはデータ ソース内の各行に対して連続して実行されるため、単一のメソッドを使用してさまざまな入力を簡単にテストできます。  
   
- このトピックは次のセクションで構成されています。  
+ このトピックは、次のセクションで構成されています。  
   
 -   [テスト対象のメソッド](../test/how-to-create-a-data-driven-unit-test.md#BKMK_The_method_under_test)  
   
 -   [データ ソースの作成](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Creating_a_data_source)  
   
--   [クラスに TestContext テストを追加できます。](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Adding_a_TestContext_to_the_test_class)  
+-   [テスト クラスへの TestContext の追加](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Adding_a_TestContext_to_the_test_class)  
   
--   [テスト メソッドを作成できます。](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Writing_the_test_method)  
+-   [テスト メソッドの記述](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Writing_the_test_method)  
   
     -   [DataSourceAttribute の指定](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Specifying_the_DataSourceAttribute)  
   
-    -   [データにアクセスする TestContext.DataRow を使用する](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Using_TestContext_DataRow_to_access_the_data)  
+    -   [データにアクセスするための TestContext.DataRow の使用](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Using_TestContext_DataRow_to_access_the_data)  
   
--   [テスト結果の表示および実行](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Running_the_test_and_viewing_results)  
+-   [テストの実行と結果の表示](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Running_the_test_and_viewing_results)  
   
- データ ドリブン単体テストを作成するには、次の手順が T:  
+ データ ドリブン単体テストの作成には、次の手順が含まれます。  
   
-1.  テスト メソッドで使用される値を含むデータ ソースを作成します。  データ ソースは、テストを実行するコンピューターに登録されている型にすることができます。  
+1.  テスト メソッドで使用する値を含むデータ ソースを作成します。 データ ソースは、テストを実行するコンピューターに登録されている任意の型にすることができます。  
   
-2.  テスト クラスに <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> プライベートなフィールドと `TestContext` のパブリックなプロパティを追加します。  
+2.  テスト クラスにプライベート <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> フィールドとパブリック `TestContext` プロパティを追加します。  
   
 3.  単体テスト メソッドを作成し、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 属性を追加します。  
   
-4.  テストで使用する値を取得するために <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> のインデクサーのプロパティを使用します。  
+4.  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> インデクサー プロパティを使用して、テストで使用する値を取得します。  
   
-##  <a name="BKMK_The_method_under_test"></a> テスト対象のメソッド  
- たとえば、最初に作成したと仮定しましょう:  
+##  <a name="BKMK_The_method_under_test"></a>テスト対象のメソッド  
+ たとえば、次を作成したとします。  
   
-1.  アカウントの種類のトランザクションを受け取って処理するソリューションは `MyBank` と呼ばれます。  
+1.  さまざまな種類の勘定のトランザクションを受け入れて処理する `MyBank` というソリューション。  
   
-2.  アカウントのトランザクションを管理する `MyBank` のプロジェクトは `BankDb` と呼ばれます。  
+2.  勘定のトランザクションを管理する `BankDb` という `MyBank` 内のプロジェクト。  
   
-3.  クラスには、トランザクションが Bank に便利なことを保証するために、数値演算関数を実行 `DbBank` のプロジェクトの `Maths` と呼ばれます。  
+3.  トランザクションが必ず銀行にとって有利になるように数値演算関数を実行する `DbBank` プロジェクト内の `Maths` というクラス。  
   
-4.  単体テスト プロジェクトが `BankDb` コンポーネントの動作をテストするに `BankDbTests` と呼ばれます。  
+4.  `BankDb` コンポーネントの動作をテストする `BankDbTests` という単体テスト プロジェクト。  
   
-5.  単体テスト クラスは `Maths` クラスの動作を検証するために `MathsTests` と呼ばれます。  
+5.  `Maths` クラスの動作を確認する `MathsTests` という単体テスト クラス。  
   
- これは、ループを使用して 2 個の整数を加算する `Maths` のメソッドをテストする:  
+ ループを使用して 2 つの整数を追加する `Maths` のメソッドをテストします。  
   
 ```  
 public int AddIntegers(int first, int second)  
@@ -80,16 +97,16 @@ public int AddIntegers(int first, int second)
 ```  
   
 ##  <a name="BKMK_Creating_a_data_source"></a> データ ソースの作成  
- `AddIntegers` のメソッドをテストするために、ユーザーが返されるはずの合計パラメーターには、および値の範囲を指定するデータ ソースを作成します。  この例では、SQL Compact データベースの名前が `MathsData` と `AddIntegersData` という名前の次の項目の名前と値を含むテーブルを作成します。  
+ `AddIntegers` メソッドをテストするには、パラメーターの値の範囲と返される必要のある合計を指定するデータ ソースを作成します。 この例では、`MathsData` という名前の Sql Compact データベースと、次の列の名前と値を含む `AddIntegersData` という名前のテーブルを作成します  
   
 |FirstNumber|SecondNumber|Sum|  
 |-----------------|------------------|---------|  
 |0|1|1|  
 |1|1|2|  
-|2|\-3|\-1|  
+|2|-3|-1|  
   
-##  <a name="BKMK_Adding_a_TestContext_to_the_test_class"></a> クラスに TestContext テストを追加できます。  
- 単体テスト フレームワークは、データ ドリブン テストのデータ ソースの情報を格納する `TestContext` オブジェクトを作成します。  フレームワークは `TestContext` のプロパティの値として、次に作成し、このオブジェクトを設定します。  
+##  <a name="BKMK_Adding_a_TestContext_to_the_test_class"></a> テスト クラスへの TestContext の追加  
+ 単体テスト フレームワークは、データ ドリブン テストのデータ ソース情報を格納する `TestContext` オブジェクトを作成します。 次に、フレームワークは作成する `TestContext` プロパティの値としてこのオブジェクトを設定します。  
   
 ```  
   
@@ -102,10 +119,10 @@ public TestContext TestContext
   
 ```  
   
- テスト メソッドでは、`TestContext`の `DataRow` のインデクサーのプロパティを通じてデータにアクセスします。  
+ テスト メソッドでは、`TestContext` の `DataRow` インデクサー プロパティを使用してデータにアクセスします。  
   
-##  <a name="BKMK_Writing_the_test_method"></a> テスト メソッドを作成できます。  
- `AddIntegers` のテスト メソッドはきわめて単純です。  データ ソース内の各行には、パラメーターとして **FirstNumber** と **SecondNumber** の列の値を持つ `AddIntegers` を呼び出し、**合計** の列の値に対して戻り値を確認する:  
+##  <a name="BKMK_Writing_the_test_method"></a> テスト メソッドの記述  
+ `AddIntegers` のテスト メソッドは非常に単純です。 データ ソース内の各行に対して、パラメーターとして **FirstNumber** 列値と **SecondNumber** 列値を持つ `AddIntegers` を呼び出して、**Sum** 列値に対して戻り値を確認します。  
   
 ```  
   
@@ -128,32 +145,32 @@ public void AddIntegers_FromDataSourceTest()
   
 ```  
   
- `Assert` のメソッドは、イテレーションの `x` と `y` 値を表示するメッセージが含まれていることに注意してください。  既定で、アサートされた値、`expected` と `actual`は失敗したテストの詳細は、既に含まれています。  
+ `Assert` メソッドには、失敗したイテレーションの `x` と `y` の値を表示するメッセージが含まれることに注意してください。 既定では、アサートされた値である `expected` と `actual` が失敗したテストの詳細に既に含まれています。  
   
 ###  <a name="BKMK_Specifying_the_DataSourceAttribute"></a> DataSourceAttribute の指定  
- `DataSource` 属性を使用すると、データ ソースの接続文字列とテスト メソッドで使用するテーブルの名前を指定します。  接続文字列の正確な内容は、使用するデータ ソースの種類によって異なります。  この例では、SqlServerCe のデータベースを使用しています。  
+ `DataSource` 属性は、データ ソースの接続文字列とテスト メソッドで使用するテーブル名を指定します。 接続文字列の正確な情報は、使用しているデータ ソースの種類によって異なります。 この例では、SqlServerCe データベースを使用しました。  
   
 ```  
 [DataSource(@"Provider=Microsoft.SqlServerCe.Client.4.0;Data Source=C:\Data\MathsData.sdf", "AddIntegersData")]  
 ```  
   
- DataSource 属性に 3 個のコンストラクターがあります。  
+ DataSource 属性には 3 つのコンストラクターがあります。  
   
 ```  
 [DataSource(dataSourceSettingName)]  
 ```  
   
- 1 個のパラメーターのコンストラクターはソリューションの app.config ファイルに保存されている接続情報を使用します。  *dataSourceSettingsName* に接続情報を指定する構成ファイルの XML 要素の名前です。  
+ 1 つのパラメーターを持つコンストラクターは、ソリューションの app.config ファイルに格納されている接続情報を使用します。 *dataSourceSettingsName* は、接続情報を指定する構成ファイル内の Xml 要素の名前です。  
   
- app.config ファイル割り当てを使用して他のデータ ソースの場所を変更する単体テスト自体に変更します。  app.config ファイルを作成および使用する方法の詳細については、「[チュートリアル : データ ソースを定義するための構成ファイルの使用](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)」を参照してください。  
+ app.config ファイルを使用すると、単体テスト自体に変更を加えずに、データ ソースの場所を変更できます。 app.config ファイルの作成と使用方法については、「[チュートリアル : データ ソースを定義するための構成ファイルの使用](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)」を参照してください  
   
 ```  
 [DataSource(connectionString, tableName)]  
 ```  
   
- 2 個のパラメーターの `DataSource` のコンストラクターは、データ ソースの接続文字列とテスト メソッドのデータを含むテーブルの名前を指定します。  
+ 2 つのパラメーターを持つ `DataSource` コンストラクターは、データ ソースの接続文字列とテスト メソッドのデータを含むテーブルの名前を指定します。  
   
- 接続文字列は、データ ソースの種類によって決まりますが、データ プロバイダーの不変名を指定する provider 要素を含める必要があります。  
+ 接続文字列は、データ ソースの種類によって異なりますが、データ プロバイダーの不変名を指定する Provider 要素を含んでいる必要があります。  
   
 ```  
 [DataSource(  
@@ -164,29 +181,30 @@ public void AddIntegers_FromDataSourceTest()
     )]  
 ```  
   
-###  <a name="BKMK_Using_TestContext_DataRow_to_access_the_data"></a> データにアクセスする TestContext.DataRow を使用する  
- `AddIntegersData` のデータにアクセスするには `TestContext.DataRow` のインデクサーを Table に配置して、使用します。  `DataRow` は <xref:System.Data.DataRow> オブジェクトであり、そのインデックスまたは項目の名前によって列の値を取得します。  値をオブジェクトとして返すため、適切な型に変換する必要があります:  
+###  <a name="BKMK_Using_TestContext_DataRow_to_access_the_data"></a> データにアクセスするための TestContext.DataRow の使用  
+ `AddIntegersData` テーブル内のデータにアクセスするには、`TestContext.DataRow` インデクサーを使用します。 `DataRow` は、<xref:System.Data.DataRow> オブジェクトであるため、インデックスまたは列の名前で列の値を取得します。 値はオブジェクトとして返されるため、適切な型に変換する必要があります。  
   
 ```  
 int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);  
   
 ```  
   
-##  <a name="BKMK_Running_the_test_and_viewing_results"></a> テスト結果の表示および実行  
- テスト メソッドの作成が終了したら、テスト プロジェクトをビルドします。  テスト メソッドは **\[テストを実行しない\(N\)\]** グループのテスト エクスプローラー ウィンドウに表示されます。  実行して作成し、テスト、テスト エクスプローラーが表示 **\[失敗したテスト\]** グループの結果、**\[成功したテスト数\]** と **\[テストを実行しない\(N\)\]** を再実行します。  テストを実行するに **\[すべて実行\]** をクリックしますできます。また、テストのサブセットを実行するように選択するために **\[実行...\]** をクリックします。  
+##  <a name="BKMK_Running_the_test_and_viewing_results"></a>テストの実行と結果の表示  
+ テスト メソッドの記述が完了したら、テスト プロジェクトを構築します。 **[テストを実行しない]** グループのテスト エクスプローラー ウィンドウに、テスト メソッドが表示されます。 テストを実行して、記述し、再実行すると、テスト エクスプローラーに **[失敗したテスト]**、**[成功したテスト]**、および **[テストを実行しない]** のグループの結果が表示されます。 **[すべて実行]** を選択してテストをすべて実行することも、**[実行...]** を選択して実行するテストのサブセットを選択することもできます。  
   
- エクスプローラーの上部のテスト結果のバーはテストの実行中にアニメーション化されます。  テストの実行の終了時に、バーはテストに失敗したすべてのテストが赤渡そうと緑です。  テスト実行の概要はテスト エクスプローラー ウィンドウの下部にある詳細ペインに表示されます。  テストを選択すると、そのテストの詳細が下部のペインに表示されます。  
+ テストの実行中は、エクスプローラーの上部にあるテスト結果バーがアニメーションで表示されます。 テストの実行の終了時に、すべてのテストが成功した場合はバーが緑色になり、いずれかのテストが失敗した場合は赤色になります。 テスト エクスプローラー ウィンドウの下部の詳細ウィンドウに、テストの実行の概要が表示されます。 テストを選択すると、そのテストの詳細が下部のペインに表示されます。  
   
- この例の `AddIntegers_FromDataSourceTest` のメソッドを実行すると、結果のバーは赤に回転してから、データ ソースの繰り返されたメソッドのいずれかが失敗した場合は、テスト メソッドは **\[失敗したテスト\]** A データ ドリブン テストに失敗して移動します。  テスト エクスプローラー ウィンドウで、データ ドリブン テストを選択すると、詳細ペインにはデータ行のインデックスによって識別されるイテレーションの結果が表示されます。  この例では、`AddIntegers` アルゴリズムが負の値を正しく処理しないようです。  
+ この例の `AddIntegers_FromDataSourceTest` メソッドを実行すると、結果バーが赤に変わり、テスト メソッドは **[失敗したテスト]** に移動されます。データ ソースからの反復されたメソッドのいずれかが失敗した場合は、データ ドリブン テストは失敗します。 テスト エクスプローラー ウィンドウで、失敗したデータ ドリブン テストを選択すると、詳細ウィンドウにはデータ行インデックスによって識別される各イテレーションの結果が表示されます。 この例では、`AddIntegers` アルゴリズムが負の値を正しく処理していないことがわかります。  
   
- テスト対象のメソッドとテスト再実行修正すると、結果は緑のバーの回転、テスト メソッドは **\[テスト成功\]** のグループに移動されます。  
+ テスト対象のメソッドを修正して、テストを再実行すると、結果バーが緑に変わり、テスト メソッドは **[成功したテスト]** グループに移動されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute?displayProperty=fullName>   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext?displayProperty=fullName>   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A?displayProperty=fullName>   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert?displayProperty=fullName>   
- [How to: Create and Run a Unit Test](http://msdn.microsoft.com/ja-jp/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48)   
+ [方法: 単体テストを作成して実行する](http://msdn.microsoft.com/en-us/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48)   
  [コードの単体テスト](../test/unit-test-your-code.md)   
  [テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)   
  [マネージ コード用の Microsoft 単体テスト フレームワークを使用した .NET Framework 用単体テストの記述](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)
+

@@ -30,15 +30,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: 2db52ef9381f74896969e693467166aaecb8db55
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 8cc8cb349901c7a2b0c94875d29e602c33baa5bf
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成
 .NET Framework を対象とするプログラミング言語は、MSBuild プロジェクト ファイルを使用してアプリケーションのビルド プロセスを記述および制御します。 Visual Studio を使用して MSBuild プロジェクト ファイルを作成すると、適切な XML が自動的に追加されますが、 その XML がどのように構成されているかや、それに変更を加えてビルドを制御するにはどうすればよいかを知っておくことも有用です。  
   
- C++ プロジェクトのプロジェクト ファイルを作成する方法の詳細については、「[MSBuild (Visual C++)](/visual-cpp/build/msbuild-visual-cpp)」をご覧ください。  
+ C++ プロジェクトのプロジェクト ファイルを作成する方法の詳細については、「[MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp)」をご覧ください。  
   
  このチュートリアルでは、テキスト エディターのみを使用して、基本的なプロジェクト ファイルをインクリメント方式で作成する方法について説明します。 このチュートリアルの手順を以下に示します。  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 02/22/2017
   
 #### <a name="to-create-a-minimal-msbuild-project-file"></a>最低限の内容のみを含む MSBuild プロジェクト ファイルを作成するには  
   
-1.  テキスト エディターで、既存のテキストを次の&2; つの行に置き換えます。  
+1.  テキスト エディターで、既存のテキストを次の 2 つの行に置き換えます。  
   
     ```xml  
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -163,7 +163,7 @@ ms.lasthandoff: 02/22/2017
 </Project>  
 ```  
   
- Build ターゲットのタスクは順番に実行されます。 ここでは、Visual C# コンパイラの `Csc` タスクが唯一のタスクです。 このタスクは、コンパイルするソース ファイルのリストを受け取ります。これは、`Compile` 項目の値によって渡されます。 `Compile` 項目は、Helloworld.cs という&1; つのソース ファイルのみを参照しています。  
+ Build ターゲットのタスクは順番に実行されます。 ここでは、Visual C# コンパイラの `Csc` タスクが唯一のタスクです。 このタスクは、コンパイルするソース ファイルのリストを受け取ります。これは、`Compile` 項目の値によって渡されます。 `Compile` 項目は、Helloworld.cs という 1 つのソース ファイルのみを参照しています。  
   
 > [!NOTE]
 >  項目要素でワイルドカード文字のアスタリスク (*) を使用して、拡張子 .cs を持つすべてのファイルを参照することもできます。次に例を示します。  
@@ -286,7 +286,7 @@ ms.lasthandoff: 02/22/2017
      "**Hello, world!**"  というメッセージが表示されます。  
   
 ## <a name="adding-build-targets"></a>ビルド ターゲットを追加する  
- 次に、次の&2; つのターゲットをプロジェクト ファイルに追加します。  
+ 次に、次の 2 つのターゲットをプロジェクト ファイルに追加します。  
   
 -   古いファイルを削除する Clean ターゲット  
   
@@ -296,7 +296,7 @@ ms.lasthandoff: 02/22/2017
   
 #### <a name="to-add-build-targets"></a>ビルド ターゲットを追加するには  
   
-1.  プロジェクト ファイルで、Build ターゲットの直後に次の&2; つのターゲットを追加します。  
+1.  プロジェクト ファイルで、Build ターゲットの直後に次の 2 つのターゲットを追加します。  
   
     ```xml  
     <Target Name="Clean" >  
@@ -372,7 +372,7 @@ ms.lasthandoff: 02/22/2017
   
 7.  「**msbuild**」と入力します。  
   
-     プロジェクト ファイルが指定されていませんが、現在のフォルダーにはプロジェクト ファイルが&1; つしかないため、helloworld.csproj ファイルがビルドされます。 その結果、\Bin\ フォルダーに MSBuildSample アプリケーションが作成されます。  
+     プロジェクト ファイルが指定されていませんが、現在のフォルダーにはプロジェクト ファイルが 1 つしかないため、helloworld.csproj ファイルがビルドされます。 その結果、\Bin\ フォルダーに MSBuildSample アプリケーションが作成されます。  
   
      「**dir Bin**」と入力して、\Bin\ フォルダーに MSBuildSample アプリケーションが含まれていることを確認します。  
   

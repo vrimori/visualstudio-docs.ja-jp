@@ -31,9 +31,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: d014b703c491603c86fcd6a89c1dc17f35b0deae
-ms.openlocfilehash: 99850b840fbda9f7e7674d926822ff461e69da17
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 79d77230e46bade8e89d4503dbf95b1f1831e464
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="msbuild"></a>MSBuild
@@ -41,11 +41,11 @@ ms.lasthandoff: 02/22/2017
   
  Visual Studio は、マネージ プロジェクトの読み込みとビルドを行う MSBuild をホストしています。 Visual Studio のプロジェクト ファイル (.csproj、vbproj、vcxproj など) には、IDE を使用してプロジェクトをビルドするときに実行される MSBuild XML コードが含まれています。 Visual Studio プロジェクトには、一般的な開発作業を行う必要なすべての設定とビルド プロセスがインポートされますが、Visual Studio 内のエディターや任意の XML エディターを使用してそれらを拡張または変更することもできます。  
   
- C++ に対する MSBuild の詳細については、「[MSBuild (Visual C++)](/visual-cpp/build/msbuild-visual-cpp)」をご覧ください。  
+ C++ に対する MSBuild の詳細については、「[MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp)」をご覧ください。  
   
  次の例では、Visual Studio IDE の代わりに、MSBuild コマンド ラインでビルドを実行する状況について説明します。  
   
--   Visual Studio&2013; がインストールされていません。  
+-   Visual Studio 2013 がインストールされていません。  
   
 -   MSBuild の 64 ビット バージョンを使用することを希望しています。 通常は MSBuild のこのバージョンは不要ですが、このバージョンを使用すると、MSBuild はより多くのメモリにアクセスできます。  
   
@@ -210,7 +210,7 @@ MSBuild.exe MyProj.proj /property:Configuration=Debug
 |-----------|-----------------|  
 |[チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)|テキスト エディターのみを使用して、基本的なプロジェクト ファイルをインクリメント方式で作成する方法について説明します。|  
 |[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)|MSBuild のビルド ブロックについて説明し、Visual Studio IDE を閉じずに MSBuild プロジェクトを記述、操作、およびデバッグする方法について説明します。|  
-|[MSBuild の概念](../msbuild/msbuild-concepts.md)|MSBuild の&4; つのビルド ブロックであるプロパティ、項目、ターゲット、およびタスクについて説明します。|  
+|[MSBuild の概念](../msbuild/msbuild-concepts.md)|MSBuild の 4 つのビルド ブロックであるプロパティ、項目、ターゲット、およびタスクについて説明します。|  
 |[項目](../msbuild/msbuild-items.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ファイル形式の一般的な概念と、各構成要素の組み合わせ方について説明します。|  
 |[MSBuild プロパティ](../msbuild/msbuild-properties.md)|プロパティとプロパティ コレクションについて説明します。 プロパティはビルドを設定するためのキーと値のペアです。|  
 |[ターゲット](../msbuild/msbuild-targets.md)|タスクを特定の順序でグループ化し、コマンド ラインからビルド処理のセクションを呼び出すことができるようにする方法について説明します。|  

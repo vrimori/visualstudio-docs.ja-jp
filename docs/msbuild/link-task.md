@@ -1,44 +1,62 @@
 ---
 title: "Link タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ForceFileOutput"
-  - "VC.Project.VCLinkerTool.LinkStatus"
-  - "VC.Project.VCLinkerTool.CLRUnmanagedCodeCheck"
-  - "VC.Project.VCLinkerTool.SpecifySectionAttributes"
-  - "VC.Project.VCLinkerTool.SupportNobindOfDelayLoadedDLL"
-  - "VC.Project.VCLinkerTool.MinimumRequiredVersion"
-  - "VC.Project.VCLinkerTool.PerUserRedirection"
-  - "VC.Project.VCLinkerTool.CreateHotPatchableImage"
-  - "VC.Project.VCLinkerTool.DataExecutionPrevention"
-  - "VC.Project.VCLinkerTool.TreatLinkerWarningsAsErrors"
-  - "vc.task.link"
-  - "VC.Project.VCLinkerTool.ImageHasSafeExceptionHandlers"
-  - "VC.Project.VCLinkerTool.CLRSupportLastError"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild (Visual C) のタスクのリンク"
-  - "Link タスク (MSBuild (Visual C++))"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.ForceFileOutput
+- VC.Project.VCLinkerTool.LinkStatus
+- VC.Project.VCLinkerTool.CLRUnmanagedCodeCheck
+- VC.Project.VCLinkerTool.SpecifySectionAttributes
+- VC.Project.VCLinkerTool.SupportNobindOfDelayLoadedDLL
+- VC.Project.VCLinkerTool.MinimumRequiredVersion
+- VC.Project.VCLinkerTool.PerUserRedirection
+- VC.Project.VCLinkerTool.CreateHotPatchableImage
+- VC.Project.VCLinkerTool.DataExecutionPrevention
+- VC.Project.VCLinkerTool.TreatLinkerWarningsAsErrors
+- vc.task.link
+- VC.Project.VCLinkerTool.ImageHasSafeExceptionHandlers
+- VC.Project.VCLinkerTool.CLRSupportLastError
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MSBuild (Visual C++), Link task
+- Link task (MSBuild (Visual C++))
 ms.assetid: 0a61f168-3113-4fa7-83a3-d9142e2a33f8
 caps.latest.revision: 12
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 12
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: a062b0a929ce812f19bcc6c89594b8f3b2e93b6f
+ms.lasthandoff: 04/05/2017
+
 ---
 # <a name="link-task"></a>Link タスク
-Visual C++ リンカー ツール (link.exe) をラップします。 リンカー ツールは、COFF (Common Object File Format) オブジェクト ファイルとライブラリをリンクし、実行可能ファイル (.exe) やダイナミック リンク ライブラリ (DLL) を生成します。 詳細については、「[リンカー オプション](/visual-cpp/build/reference/linker-options)」を参照してください。  
+Visual C++ リンカー ツール (link.exe) をラップします。 リンカー ツールは、COFF (Common Object File Format) オブジェクト ファイルとライブラリをリンクし、実行可能ファイル (.exe) やダイナミック リンク ライブラリ (DLL) を生成します。 詳細については、「[リンカー オプション](/cpp/build/reference/linker-options)」を参照してください。  
   
 ## <a name="parameters"></a>パラメーター  
  **Link** タスクのパラメーターの説明を次の表に示します。 タスク パラメーターの大部分とパラメーターのいくつかのセットは、コマンド ライン オプションに対応します。  
@@ -49,7 +67,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      コマンドに追加する入力ファイルのリストを指定します。  
   
-     詳細については、「[LINK 入力ファイル](/visual-cpp/build/reference/link-input-files)」を参照してください。  
+     詳細については、「[LINK 入力ファイル](/cpp/build/reference/link-input-files)」を参照してください。  
   
 -   **AdditionalLibraryDirectories**  
   
@@ -57,7 +75,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      環境ライブラリ パスをオーバーライドします。 ディレクトリ名を指定します。  
   
-     詳細については、「[/LIBPATH (追加ライブラリのパス)](/visual-cpp/build/reference/libpath-additional-libpath)」を参照してください。  
+     詳細については、「[/LIBPATH (追加ライブラリのパス)](/cpp/build/reference/libpath-additional-libpath)」を参照してください。  
   
 -   **AdditionalManifestDependencies**  
   
@@ -65,7 +83,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      マニフェスト ファイルの `dependency` セクションに置かれる属性を指定します。  
   
-     詳細については、「[/MANIFESTDEPENDENCY (マニフェストの依存関係を指定する)](/visual-cpp/build/reference/manifestdependency-specify-manifest-dependencies)」を参照してください。 [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイト上の「パブリッシャー構成ファイル」も参照してください。  
+     詳細については、「[/MANIFESTDEPENDENCY (マニフェストの依存関係を指定する)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies)」を参照してください。 [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイト上の「パブリッシャー構成ファイル」も参照してください。  
   
 -   **AdditionalOptions**  
   
@@ -73,7 +91,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      コマンド ラインで指定するリンカー オプションのリストです。 たとえば、**"***/option1 /option2 /option#*" のような形式です。 他の **Link** タスク パラメーターでは表されないリンカー オプションを指定する場合は、このパラメーターを使用します。  
   
-     詳細については、「[リンカー オプション](/visual-cpp/build/reference/linker-options)」を参照してください。  
+     詳細については、「[リンカー オプション](/cpp/build/reference/linker-options)」を参照してください。  
   
 -   **AddModuleNamesToAssembly**  
   
@@ -81,7 +99,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      アセンブリのモジュール参照を追加します。  
   
-     詳細については、「[/ASSEMBLYMODULE (MSIL モジュールのアセンブリへの追加)](/visual-cpp/build/reference/assemblymodule-add-a-msil-module-to-the-assembly)」を参照してください。  
+     詳細については、「[/ASSEMBLYMODULE (MSIL モジュールのアセンブリへの追加)](/cpp/build/reference/assemblymodule-add-a-msil-module-to-the-assembly)」を参照してください。  
   
 -   **AllowIsolation**  
   
@@ -89,7 +107,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合、オペレーティング システムはマニフェストの検索と読み込みを行います。 `false` の場合は、あたかもマニフェストがないかのように DLL を読み込むことを示します。  
   
-     詳細については、「[/ALLOWISOLATION (マニフェスト検索)](/visual-cpp/build/reference/allowisolation-manifest-lookup)」を参照してください。  
+     詳細については、「[/ALLOWISOLATION (マニフェスト検索)](/cpp/build/reference/allowisolation-manifest-lookup)」を参照してください。  
   
 -   **AssemblyDebug**  
   
@@ -97,7 +115,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、**DebuggableAttribute** 属性をデバッグ情報追跡と一緒に出力し、JIT 最適化を無効にします。 `false` の場合は、**DebuggableAttribute** 属性を出力しますが、デバッグ情報追跡を無効にし、JIT 最適化を有効にします。  
   
-     詳細については、「[/ASSEMBLYDEBUG (DebuggableAttribute の追加)](/visual-cpp/build/reference/assemblydebug-add-debuggableattribute)」を参照してください。  
+     詳細については、「[/ASSEMBLYDEBUG (DebuggableAttribute の追加)](/cpp/build/reference/assemblydebug-add-debuggableattribute)」を参照してください。  
   
 -   **AssemblyLinkResource**  
   
@@ -105,7 +123,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      出力ファイル内で .NET Framework リソースへのリンクを作成します。リソース ファイルは出力ファイル内に置かれません。 リソースの名前を指定します。  
   
-     詳細については、「[/ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク)](/visual-cpp/build/reference/assemblylinkresource-link-to-dotnet-framework-resource)」を参照してください。  
+     詳細については、「[/ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク)](/cpp/build/reference/assemblylinkresource-link-to-dotnet-framework-resource)」を参照してください。  
   
 -   **AttributeFileTracking**  
   
@@ -119,7 +137,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      ビルド対象のプログラムまたは DLL のベース アドレスを設定します。 `{address[,size] | @filename,key}` を指定します。  
   
-     詳細については、「[/BASE (ベース アドレス)](/visual-cpp/build/reference/base-base-address)」を参照してください。  
+     詳細については、「[/BASE (ベース アドレス)](/cpp/build/reference/base-base-address)」を参照してください。  
   
 -   **BuildingInIDE**  
   
@@ -145,7 +163,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **ForceSafeILImage** - **/CLRIMAGETYPE:SAFE**  
   
-     詳細については、「[/CLRIMAGETYPE (CLR イメージのタイプの指定)](/visual-cpp/build/reference/clrimagetype-specify-type-of-clr-image)」を参照してください。  
+     詳細については、「[/CLRIMAGETYPE (CLR イメージのタイプの指定)](/cpp/build/reference/clrimagetype-specify-type-of-clr-image)」を参照してください。  
   
 -   **CLRSupportLastError**  
   
@@ -161,7 +179,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **SystemDlls** - **/CLRSupportLastError:SYSTEMDLL**  
   
-     詳細については、「[/CLRSUPPORTLASTERROR (PInvoke 呼び出しの最終エラー コードの保持)](/visual-cpp/build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls)」を参照してください。  
+     詳細については、「[/CLRSUPPORTLASTERROR (PInvoke 呼び出しの最終エラー コードの保持)](/cpp/build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls)」を参照してください。  
   
 -   **CLRThreadAttribute**  
   
@@ -177,7 +195,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **STAThreadingAttribute** - **/CLRTHREADATTRIBUTE:STA**  
   
-     詳細については、「[/CLRTHREADATTRIBUTE (CLR スレッド属性の設定)](/visual-cpp/build/reference/clrthreadattribute-set-clr-thread-attribute)」を参照してください。  
+     詳細については、「[/CLRTHREADATTRIBUTE (CLR スレッド属性の設定)](/cpp/build/reference/clrthreadattribute-set-clr-thread-attribute)」を参照してください。  
   
 -   **CLRUnmanagedCodeCheck**  
   
@@ -185,7 +203,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      マネージ コードからネイティブ DLL への、リンカーによって生成された P/Invoke 呼び出しに対して、**SuppressUnmanagedCodeSecurityAttribute** を適用するかどうかを指定します。  
   
-     詳細については、「[/CLRUNMANAGEDCODECHECK (SupressUnmanagedCodeSecurityAttribute の追加)](/visual-cpp/build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute)」を参照してください。  
+     詳細については、「[/CLRUNMANAGEDCODECHECK (SupressUnmanagedCodeSecurityAttribute の追加)](/cpp/build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute)」を参照してください。  
   
 -   **CreateHotPatchableImage**  
   
@@ -203,7 +221,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **ItaniumImage** - **/FUNCTIONPADMIN:16**  
   
-     詳細については、「[/FUNCTIONPADMIN (ホットパッチ可能なイメージの作成)](/visual-cpp/build/reference/functionpadmin-create-hotpatchable-image)」を参照してください。  
+     詳細については、「[/FUNCTIONPADMIN (ホットパッチ可能なイメージの作成)](/cpp/build/reference/functionpadmin-create-hotpatchable-image)」を参照してください。  
   
 -   **DataExecutionPrevention**  
   
@@ -211,7 +229,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、実行可能ファイルで Windows データ実行防止機能との互換性がテストされたことを示します。  
   
-     詳細については、「[/NXCOMPAT (データ実行防止との互換性)](/visual-cpp/build/reference/nxcompat-compatible-with-data-execution-prevention)」を参照してください。  
+     詳細については、「[/NXCOMPAT (データ実行防止との互換性)](/cpp/build/reference/nxcompat-compatible-with-data-execution-prevention)」を参照してください。  
   
 -   **DelayLoadDLLs**  
   
@@ -219,7 +237,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      このパラメーターにより、DLL の*遅延読み込み*が行われます。 遅延読み込みする DLL の名前を指定します。  
   
-     詳細については、「[/DELAYLOAD (遅延読み込みのインポート)](/visual-cpp/build/reference/delayload-delay-load-import)」を参照してください。  
+     詳細については、「[/DELAYLOAD (遅延読み込みのインポート)](/cpp/build/reference/delayload-delay-load-import)」を参照してください。  
   
 -   **DelaySign**  
   
@@ -227,7 +245,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、アセンブリに部分署名します。 既定では、値は `false` です。  
   
-     詳細については、「[/DELAYSIGN (アセンブリの部分署名)](/visual-cpp/build/reference/delaysign-partially-sign-an-assembly)」を参照してください。  
+     詳細については、「[/DELAYSIGN (アセンブリの部分署名)](/cpp/build/reference/delaysign-partially-sign-an-assembly)」を参照してください。  
   
 -   **Driver**  
   
@@ -245,7 +263,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **WDM** - **/DRIVER:WDM**  
   
-     詳細については、「[/DRIVER (Windows NT カーネル モード ドライバー)](/visual-cpp/build/reference/driver-windows-nt-kernel-mode-driver)」を参照してください。  
+     詳細については、「[/DRIVER (Windows NT カーネル モード ドライバー)](/cpp/build/reference/driver-windows-nt-kernel-mode-driver)」を参照してください。  
   
 -   **EmbedManagedResourceFile**  
   
@@ -253,7 +271,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      リソース ファイルをアセンブリに埋め込みます。 必要なリソース ファイル名を指定します。 必要に応じて、論理名 (リソースの読み込みに使用される) および **PRIVATE** オプション (リソース ファイルがプライベートであることをアセンブリ マニフェストで示す) を指定します。  
   
-     詳細については、「[/ASSEMBLYRESOURCE (マネージ リソースの埋め込み)](/visual-cpp/build/reference/assemblyresource-embed-a-managed-resource)」を参照してください。  
+     詳細については、「[/ASSEMBLYRESOURCE (マネージ リソースの埋め込み)](/cpp/build/reference/assemblyresource-embed-a-managed-resource)」を参照してください。  
   
 -   **EnableCOMDATFolding**  
   
@@ -261,7 +279,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、同一の COMDAT が折りたたまれ (圧縮され) ます。  
   
-     詳細については、「[/OPT (最適化)](/visual-cpp/build/reference/opt-optimizations)」の `ICF[= iterations]` 引数を参照してください。  
+     詳細については、「[/OPT (最適化)](/cpp/build/reference/opt-optimizations)」の `ICF[= iterations]` 引数を参照してください。  
   
 -   **EnableUAC**  
   
@@ -269,7 +287,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、ユーザー アカウント制御 (UAC) 情報をプログラム マニフェストに組み込むことを指定します。  
   
-     詳細については、「[/MANIFESTUAC (UAC 情報をマニフェストに組み込む)](/visual-cpp/build/reference/manifestuac-embeds-uac-information-in-manifest)」を参照してください。  
+     詳細については、「[/MANIFESTUAC (UAC 情報をマニフェストに組み込む)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest)」を参照してください。  
   
 -   **EntryPointSymbol**  
   
@@ -277,7 +295,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      .exe ファイルまたは DLL の開始アドレスとしてエントリ ポイント関数を指定します。 パラメーター値として関数名を指定します。  
   
-     詳細については、「[/ENTRY (エントリ ポイント シンボル)](/visual-cpp/build/reference/entry-entry-point-symbol)」を参照してください。  
+     詳細については、「[/ENTRY (エントリ ポイント シンボル)](/cpp/build/reference/entry-entry-point-symbol)」を参照してください。  
   
 -   **FixedBaseAddress**  
   
@@ -285,7 +303,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、指定のベース アドレスだけに読み込まれるプログラムまたは DLL を作成します。  
   
-     詳細については、「[/FIXED (固定ベース アドレス)](/visual-cpp/build/reference/fixed-fixed-base-address)」を参照してください。  
+     詳細については、「[/FIXED (固定ベース アドレス)](/cpp/build/reference/fixed-fixed-base-address)」を参照してください。  
   
 -   **ForceFileOutput**  
   
@@ -301,7 +319,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **UndefinedSymbolOnly** - **/FORCE:UNRESOLVED**  
   
-     詳細については、「[/FORCE (ファイルを強制的に出力)](/visual-cpp/build/reference/force-force-file-output)」を参照してください。  
+     詳細については、「[/FORCE (ファイルを強制的に出力)](/cpp/build/reference/force-force-file-output)」を参照してください。  
   
 -   **ForceSymbolReferences**  
   
@@ -309,7 +327,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      このパラメーターは、指定されたシンボルをシンボル テーブルに追加するようリンカーを設定します。  
   
-     詳細については、「[/INCLUDE (シンボル参照の強制)](/visual-cpp/build/reference/include-force-symbol-references)」を参照してください。  
+     詳細については、「[/INCLUDE (シンボル参照の強制)](/cpp/build/reference/include-force-symbol-references)」を参照してください。  
   
 -   **FunctionOrder**  
   
@@ -317,7 +335,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      このパラメーターは、指定されたパッケージ化関数 (COMDAT) をあらかじめ決められた順序でイメージに入れることによって、プログラムを最適化します。  
   
-     詳細については、「[/ORDER (関数の順序)](/visual-cpp/build/reference/order-put-functions-in-order)」を参照してください。  
+     詳細については、「[/ORDER (関数の順序)](/cpp/build/reference/order-put-functions-in-order)」を参照してください。  
   
 -   **GenerateDebugInformation**  
   
@@ -325,7 +343,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、.exe ファイルまたは DLL のデバッグ情報を生成します。  
   
-     詳細については、「[/DEBUG (デバッグ情報の生成)](/visual-cpp/build/reference/debug-generate-debug-info)」を参照してください。  
+     詳細については、「[/DEBUG (デバッグ情報の生成)](/cpp/build/reference/debug-generate-debug-info)」を参照してください。  
   
 -   **GenerateManifest**  
   
@@ -333,7 +351,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、side-by-side マニフェスト ファイルを作成します。  
   
-     詳細については、「[/MANIFEST (side-by-side アセンブリ マニフェストを作成する)](/visual-cpp/build/reference/manifest-create-side-by-side-assembly-manifest)」を参照してください。  
+     詳細については、「[/MANIFEST (side-by-side アセンブリ マニフェストを作成する)](/cpp/build/reference/manifest-create-side-by-side-assembly-manifest)」を参照してください。  
   
 -   **GenerateMapFile**  
   
@@ -341,7 +359,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、*マップ ファイル*を作成します。 マップ ファイルのファイル名拡張子は、.map です。  
   
-     詳細については、「[/MAP (マップ ファイルの生成)](/visual-cpp/build/reference/map-generate-mapfile)」を参照してください。  
+     詳細については、「[/MAP (マップ ファイルの生成)](/cpp/build/reference/map-generate-mapfile)」を参照してください。  
   
 -   **HeapCommitSize**  
   
@@ -349,7 +367,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      一度に割り当てるヒープの物理メモリ量を指定します。  
   
-     詳細については、「[/HEAP (ヒープ サイズの設定)](/visual-cpp/build/reference/heap-set-heap-size)」の `commit` 引数を参照してください。 **HeapReserveSize** パラメーターも参照してください。  
+     詳細については、「[/HEAP (ヒープ サイズの設定)](/cpp/build/reference/heap-set-heap-size)」の `commit` 引数を参照してください。 **HeapReserveSize** パラメーターも参照してください。  
   
 -   **HeapReserveSize**  
   
@@ -357,15 +375,15 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      仮想メモリ内のヒープ割り当ての合計を指定します。  
   
-     詳細については、「[/HEAP (ヒープ サイズの設定)](/visual-cpp/build/reference/heap-set-heap-size)」の `reserve` 引数を参照してください。 この表にある **HeapCommitSize** パラメーターも参照してください。  
+     詳細については、「[/HEAP (ヒープ サイズの設定)](/cpp/build/reference/heap-set-heap-size)」の `reserve` 引数を参照してください。 この表にある **HeapCommitSize** パラメーターも参照してください。  
   
 -   **IgnoreAllDefaultLibraries**  
   
      省略可能な**ブール値**のパラメーターです。  
   
-     `true` の場合は、外部参照の解決時に検索するライブラリ リストから&1; つ以上の既定のライブラリを削除するようリンカーを設定します。  
+     `true` の場合は、外部参照の解決時に検索するライブラリ リストから 1 つ以上の既定のライブラリを削除するようリンカーを設定します。  
   
-     詳細については、「[/NODEFAULTLIB (ライブラリを無視する)](/visual-cpp/build/reference/nodefaultlib-ignore-libraries)」を参照してください。  
+     詳細については、「[/NODEFAULTLIB (ライブラリを無視する)](/cpp/build/reference/nodefaultlib-ignore-libraries)」を参照してください。  
   
 -   **IgnoreEmbeddedIDL**  
   
@@ -373,7 +391,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、ソース コード内の IDL 属性を .idl ファイルに処理しないことを指定します。  
   
-     詳細については、「[/IGNOREIDL (属性を MIDL に挿入しない)](/visual-cpp/build/reference/ignoreidl-don-t-process-attributes-into-midl)」を参照してください。  
+     詳細については、「[/IGNOREIDL (属性を MIDL に挿入しない)](/cpp/build/reference/ignoreidl-don-t-process-attributes-into-midl)」を参照してください。  
   
 -   **IgnoreImportLibrary**  
   
@@ -387,9 +405,9 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **String[]** 型のパラメーターです。  
   
-     無視する既定のライブラリの名前を&1; つ以上指定します。 複数のライブラリはセミコロンで区切ります。  
+     無視する既定のライブラリの名前を 1 つ以上指定します。 複数のライブラリはセミコロンで区切ります。  
   
-     詳細については、「[/NODEFAULTLIB (ライブラリを無視する)](/visual-cpp/build/reference/nodefaultlib-ignore-libraries)」を参照してください。  
+     詳細については、「[/NODEFAULTLIB (ライブラリを無視する)](/cpp/build/reference/nodefaultlib-ignore-libraries)」を参照してください。  
   
 -   **ImageHasSafeExceptionHandlers**  
   
@@ -397,13 +415,13 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合、リンカーは、イメージの安全な例外ハンドラーのテーブルも生成できる場合のみ、イメージを生成します。  
   
-     詳細については、「[/SAFESEH (安全な例外ハンドラーがあるイメージ)](/visual-cpp/build/reference/safeseh-image-has-safe-exception-handlers)」を参照してください。  
+     詳細については、「[/SAFESEH (安全な例外ハンドラーがあるイメージ)](/cpp/build/reference/safeseh-image-has-safe-exception-handlers)」を参照してください。  
   
 -   **ImportLibrary**  
   
      既定のライブラリ名と置き換わるユーザー指定のインポート ライブラリの名前です。  
   
-     詳細については、「[/IMPLIB (インポート ライブラリ名の設定)](/visual-cpp/build/reference/implib-name-import-library)」を参照してください。  
+     詳細については、「[/IMPLIB (インポート ライブラリ名の設定)](/cpp/build/reference/implib-name-import-library)」を参照してください。  
   
 -   **KeyContainer**  
   
@@ -411,7 +429,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      署名付きアセンブリのキーを含むコンテナーです。  
   
-     詳細については、「[/KEYCONTAINER (アセンブリに署名するためのキー コンテナーの指定)](/visual-cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly)」を参照してください。 この表にある **KeyFile** パラメーターも参照してください。  
+     詳細については、「[/KEYCONTAINER (アセンブリに署名するためのキー コンテナーの指定)](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly)」を参照してください。 この表にある **KeyFile** パラメーターも参照してください。  
   
 -   **KeyFile**  
   
@@ -419,7 +437,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      署名付きアセンブリのキーを含むファイルを指定します。  
   
-     詳細については、「[/KEYFILE (アセンブリに署名するためのキーまたはキー ペアの指定)](/visual-cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly)」を参照してください。 **KeyContainer** パラメーターも参照してください。  
+     詳細については、「[/KEYFILE (アセンブリに署名するためのキーまたはキー ペアの指定)](/cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly)」を参照してください。 **KeyContainer** パラメーターも参照してください。  
   
 -   **LargeAddressAware**  
   
@@ -427,7 +445,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合、アプリケーションは 2 ギガバイトを超えるアドレスを処理できます。  
   
-     詳細については、「[/LARGEADDRESSAWARE (大きいアドレスの処理)](/visual-cpp/build/reference/largeaddressaware-handle-large-addresses)」を参照してください。  
+     詳細については、「[/LARGEADDRESSAWARE (大きいアドレスの処理)](/cpp/build/reference/largeaddressaware-handle-large-addresses)」を参照してください。  
   
 -   **LinkDLL**  
   
@@ -435,7 +453,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、メイン出力ファイルとして DLL をビルドします。  
   
-     詳細については、「[/DLL (DLL のビルド)](/visual-cpp/build/reference/dll-build-a-dll)」を参照してください。  
+     詳細については、「[/DLL (DLL のビルド)](/cpp/build/reference/dll-build-a-dll)」を参照してください。  
   
 -   **LinkErrorReporting**  
   
@@ -453,7 +471,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **SendErrorReport** - **/ERRORREPORT:SEND**  
   
-     詳細については、「[/ERRORREPORT (内部リンカー エラーの報告)](/visual-cpp/build/reference/errorreport-report-internal-linker-errors)」を参照してください。  
+     詳細については、「[/ERRORREPORT (内部リンカー エラーの報告)](/cpp/build/reference/errorreport-report-internal-linker-errors)」を参照してください。  
   
 -   **LinkIncremental**  
   
@@ -461,7 +479,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、インクリメンタル リンクを有効にします。  
   
-     詳細については、「[/INCREMENTAL (インクリメンタル リンクを行う)](/visual-cpp/build/reference/incremental-link-incrementally)」を参照してください。  
+     詳細については、「[/INCREMENTAL (インクリメンタル リンクを行う)](/cpp/build/reference/incremental-link-incrementally)」を参照してください。  
   
 -   **LinkLibraryDependencies**  
   
@@ -477,7 +495,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、リンクの何パーセントが完了したかを示す進行状況のインジケーターをリンカーが表示することを指定します。  
   
-     詳細については、「[/LTCG (リンク時のコード生成)](/visual-cpp/build/reference/ltcg-link-time-code-generation)」の `STATUS` 引数を参照してください。  
+     詳細については、「[/LTCG (リンク時のコード生成)](/cpp/build/reference/ltcg-link-time-code-generation)」の `STATUS` 引数を参照してください。  
   
 -   **LinkTimeCodeGeneration**  
   
@@ -499,7 +517,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
          \- **/LTCG:PGUpdate**  
   
-     詳細については、「[/LTCG (リンク時のコード生成)](/visual-cpp/build/reference/ltcg-link-time-code-generation)」を参照してください。  
+     詳細については、「[/LTCG (リンク時のコード生成)](/cpp/build/reference/ltcg-link-time-code-generation)」を参照してください。  
   
 -   **ManifestFile**  
   
@@ -507,7 +525,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      既定のマニフェスト ファイル名を、指定されたファイル名に変更します。  
   
-     詳細については、「[/MANIFESTFILE (マニフェスト ファイルに名前を付ける)](/visual-cpp/build/reference/manifestfile-name-manifest-file)」を参照してください。  
+     詳細については、「[/MANIFESTFILE (マニフェスト ファイルに名前を付ける)](/cpp/build/reference/manifestfile-name-manifest-file)」を参照してください。  
   
 -   **MapExports**  
   
@@ -515,7 +533,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、エクスポートされた関数をマップ ファイルに含めるようリンカーを設定します。  
   
-     詳細については、「[/MAPINFO (マップ ファイルに含める情報)](/visual-cpp/build/reference/mapinfo-include-information-in-mapfile)」の `EXPORTS` 引数を参照してください。  
+     詳細については、「[/MAPINFO (マップ ファイルに含める情報)](/cpp/build/reference/mapinfo-include-information-in-mapfile)」の `EXPORTS` 引数を参照してください。  
   
 -   **MapFileName**  
   
@@ -529,7 +547,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      .idl ファイルのファイル名とファイル名拡張子を指定します。  
   
-     詳細については、「[/IDLOUT (MIDL 出力ファイルの指定)](/visual-cpp/build/reference/idlout-name-midl-output-files)」を参照してください。  
+     詳細については、「[/IDLOUT (MIDL 出力ファイルの指定)](/cpp/build/reference/idlout-name-midl-output-files)」を参照してください。  
   
 -   **MergeSections**  
   
@@ -537,7 +555,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      イメージ内のセクションを結合します。 `from-section=to-section` を指定します。  
   
-     詳細については、「[/MERGE (セクションの結合)](/visual-cpp/build/reference/merge-combine-sections)」を参照してください。  
+     詳細については、「[/MERGE (セクションの結合)](/cpp/build/reference/merge-combine-sections)」を参照してください。  
   
 -   **MidlCommandFile**  
   
@@ -545,7 +563,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      MIDL コマンド ライン オプションを含むファイルの名前を指定します。  
   
-     詳細については、「[/MIDL (MIDL コマンド ライン オプションの指定)](/visual-cpp/build/reference/midl-specify-midl-command-line-options)」を参照してください。  
+     詳細については、「[/MIDL (MIDL コマンド ライン オプションの指定)](/cpp/build/reference/midl-specify-midl-command-line-options)」を参照してください。  
   
 -   **MinimumRequiredVersion**  
   
@@ -557,9 +575,9 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **String** 型のパラメーターです。  
   
-     [モジュール定義ファイル](/visual-cpp/build/reference/module-definition-dot-def-files)の名前を指定します。  
+     [モジュール定義ファイル](/cpp/build/reference/module-definition-dot-def-files)の名前を指定します。  
   
-     詳細については、「[/DEF (モジュール定義ファイルの指定)](/visual-cpp/build/reference/def-specify-module-definition-file)」を参照してください。  
+     詳細については、「[/DEF (モジュール定義ファイルの指定)](/cpp/build/reference/def-specify-module-definition-file)」を参照してください。  
   
 -   **MSDOSStubFileName**  
   
@@ -567,7 +585,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      指定された MS-DOS スタブ プログラムを Win32 プログラムにアタッチします。  
   
-     詳細については、「[/STUB (MS-DOS スタブ ファイル名)](/visual-cpp/build/reference/stub-ms-dos-stub-file-name)」を参照してください。  
+     詳細については、「[/STUB (MS-DOS スタブ ファイル名)](/cpp/build/reference/stub-ms-dos-stub-file-name)」を参照してください。  
   
 -   **NoEntryPoint**  
   
@@ -575,7 +593,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、リソースのみの DLL を指定します。  
   
-     詳細については、「[/NOENTRY (エントリ ポイントなし)](/visual-cpp/build/reference/noentry-no-entry-point)」を参照してください。  
+     詳細については、「[/NOENTRY (エントリ ポイントなし)](/cpp/build/reference/noentry-no-entry-point)」を参照してください。  
   
 -   **ObjectFiles**  
   
@@ -589,7 +607,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、参照されることのない関数および/またはデータを削除します。  
   
-     詳細については、「[/OPT (最適化)](/visual-cpp/build/reference/opt-optimizations)」の `REF` 引数を参照してください。  
+     詳細については、「[/OPT (最適化)](/cpp/build/reference/opt-optimizations)」の `REF` 引数を参照してください。  
   
 -   **OutputFile**  
   
@@ -597,7 +615,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      リンカーによって作成されるプログラムの既定の名前と場所をオーバーライドします。  
   
-     詳細については、「[/OUT (出力ファイル名)](/visual-cpp/build/reference/out-output-file-name)」を参照してください。  
+     詳細については、「[/OUT (出力ファイル名)](/cpp/build/reference/out-output-file-name)」を参照してください。  
   
 -   **PerUserRedirection**  
   
@@ -617,7 +635,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、リンクされたイメージをバインドしないことを Bind.exe に指示します。  
   
-     詳細については、「[/ALLOWBIND (DLL をバインドしない)](/visual-cpp/build/reference/allowbind-prevent-dll-binding)」を参照してください。  
+     詳細については、「[/ALLOWBIND (DLL をバインドしない)](/cpp/build/reference/allowbind-prevent-dll-binding)」を参照してください。  
   
 -   **Profile**  
   
@@ -625,7 +643,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、**パフォーマンス ツール** プロファイラーで使用できる出力ファイルを生成します。  
   
-     詳細については、「[/PROFILE (パフォーマンス ツール プロファイラー)](/visual-cpp/build/reference/profile-performance-tools-profiler)」を参照してください。  
+     詳細については、「[/PROFILE (パフォーマンス ツール プロファイラー)](/cpp/build/reference/profile-performance-tools-profiler)」を参照してください。  
   
 -   **ProfileGuidedDatabase**  
   
@@ -633,7 +651,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      実行プログラムに関する情報を保持するために使用される .pgd ファイルの名前を指定します。  
   
-     詳細については、「[/PGD (ガイド付き最適化のプロファイル用のデータベースの指定)](/visual-cpp/build/reference/pgd-specify-database-for-profile-guided-optimizations)」を参照してください。  
+     詳細については、「[/PGD (ガイド付き最適化のプロファイル用のデータベースの指定)](/cpp/build/reference/pgd-specify-database-for-profile-guided-optimizations)」を参照してください。  
   
 -   **ProgramDatabaseFile**  
   
@@ -641,7 +659,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      リンカーが作成するプログラム データベース (PDB) の名前を指定します。  
   
-     詳細については、「[/PDB (プログラム データベースの使用)](/visual-cpp/build/reference/pdb-use-program-database)」を参照してください。  
+     詳細については、「[/PDB (プログラム データベースの使用)](/cpp/build/reference/pdb-use-program-database)」を参照してください。  
   
 -   **RandomizedBaseAddress**  
   
@@ -649,7 +667,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、Windows の ASLR (*Address Space Layout Randomization*) 機能を使用してロード時にランダムに再ベースできる実行可能イメージを生成します。  
   
-     詳細については、「[/DYNAMICBASE (ASLR (Address Space Layout Randomization) の使用)](/visual-cpp/build/reference/dynamicbase-use-address-space-layout-randomization)」を参照してください。  
+     詳細については、「[/DYNAMICBASE (ASLR (Address Space Layout Randomization) の使用)](/cpp/build/reference/dynamicbase-use-address-space-layout-randomization)」を参照してください。  
   
 -   **RegisterOutput**  
   
@@ -663,7 +681,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      プログラムのリニア アドレス空間内の各セクションの配置を指定します。 パラメーター値はバイト数単位で、2 の累乗です。  
   
-     詳細については、「[/ALIGN (セクションの配置)](/visual-cpp/build/reference/align-section-alignment)」を参照してください。  
+     詳細については、「[/ALIGN (セクションの配置)](/cpp/build/reference/align-section-alignment)」を参照してください。  
   
 -   **SetChecksum**  
   
@@ -671,7 +689,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、.exe ファイルのヘッダー内にチェックサムを設定します。  
   
-     詳細については、「[/RELEASE (チェックサムの設定)](/visual-cpp/build/reference/release-set-the-checksum)」を参照してください。  
+     詳細については、「[/RELEASE (チェックサムの設定)](/cpp/build/reference/release-set-the-checksum)」を参照してください。  
   
 -   **ShowProgress**  
   
@@ -695,7 +713,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **LinkVerboseCLR** - **/VERBOSE:CLR**  
   
-     詳細については、「[/VERBOSE (進行状況メッセージの出力)](/visual-cpp/build/reference/verbose-print-progress-messages)」を参照してください。  
+     詳細については、「[/VERBOSE (進行状況メッセージの出力)](/cpp/build/reference/verbose-print-progress-messages)」を参照してください。  
   
 -   **Sources**  
   
@@ -709,7 +727,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      セクションの属性を指定します。 これは、セクションの .obj ファイルがコンパイルされるときに設定された属性をオーバーライドします。  
   
-     詳細については、「[/SECTION (セクション属性の指定)](/visual-cpp/build/reference/section-specify-section-attributes)」を参照してください。  
+     詳細については、「[/SECTION (セクション属性の指定)](/cpp/build/reference/section-specify-section-attributes)」を参照してください。  
   
 -   **StackCommitSize**  
   
@@ -717,7 +735,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      追加のメモリが割り当てられるときに各割り当ての物理メモリ量を指定します。  
   
-     詳細については、「[/STACK (スタック割り当て)](/visual-cpp/build/reference/stack-stack-allocations)」の `commit` 引数を参照してください。  
+     詳細については、「[/STACK (スタック割り当て)](/cpp/build/reference/stack-stack-allocations)」の `commit` 引数を参照してください。  
   
 -   **StackReserveSize**  
   
@@ -725,7 +743,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      仮想メモリ内のスタック割り当て合計サイズを指定します。  
   
-     詳細については、「[/STACK (スタック割り当て)](/visual-cpp/build/reference/stack-stack-allocations)」の `reserve` 引数を参照してください。  
+     詳細については、「[/STACK (スタック割り当て)](/cpp/build/reference/stack-stack-allocations)」の `reserve` 引数を参照してください。  
   
 -   **StripPrivateSymbols**  
   
@@ -733,7 +751,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      顧客に配布したくないシンボルが省略されたもう一つのプログラム データベース (PDB) ファイルを作成します。 もう一つの PDB ファイルの名前を指定します。  
   
-     詳細については、「[/PDBSTRIPPED (プライベート シンボルの除去)](/visual-cpp/build/reference/pdbstripped-strip-private-symbols)」を参照してください。  
+     詳細については、「[/PDBSTRIPPED (プライベート シンボルの除去)](/cpp/build/reference/pdbstripped-strip-private-symbols)」を参照してください。  
   
 -   **SubSystem**  
   
@@ -763,7 +781,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **POSIX** - **/SUBSYSTEM:POSIX**  
   
-     詳細については、「[/SUBSYSTEM (サブシステムの指定)](/visual-cpp/build/reference/subsystem-specify-subsystem)」を参照してください。  
+     詳細については、「[/SUBSYSTEM (サブシステムの指定)](/cpp/build/reference/subsystem-specify-subsystem)」を参照してください。  
   
 -   **SupportNobindOfDelayLoadedDLL**  
   
@@ -771,7 +789,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、バインドできるインポート アドレス テーブル (IAT) を最終イメージに含めないようリンカーを設定します。  
   
-     詳細については、「[/DELAY (遅延読み込みのインポート設定)](/visual-cpp/build/reference/delay-delay-load-import-settings)」の `NOBIND` 引数を参照してください。  
+     詳細については、「[/DELAY (遅延読み込みのインポート設定)](/cpp/build/reference/delay-delay-load-import-settings)」の `NOBIND` 引数を参照してください。  
   
 -   **SupportUnloadOfDelayLoadedDLL**  
   
@@ -779,7 +797,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、DLL の明示的なアンロードをサポートするよう遅延読み込みヘルパー関数を設定します。  
   
-     詳細については、「[/DELAY (遅延読み込みのインポート設定)](/visual-cpp/build/reference/delay-delay-load-import-settings)」の `UNLOAD` 引数を参照してください。  
+     詳細については、「[/DELAY (遅延読み込みのインポート設定)](/cpp/build/reference/delay-delay-load-import-settings)」の `UNLOAD` 引数を参照してください。  
   
 -   **SuppressStartupBanner**  
   
@@ -787,7 +805,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合、タスクの開始時に著作権およびバージョン番号のメッセージが表示されないようにします。  
   
-     詳細については、「[/NOLOGO (著作権情報の非表示) (リンカー)](/visual-cpp/build/reference/nologo-suppress-startup-banner-linker)」を参照してください。  
+     詳細については、「[/NOLOGO (著作権情報の非表示) (リンカー)](/cpp/build/reference/nologo-suppress-startup-banner-linker)」を参照してください。  
   
 -   **SwapRunFromCD**  
   
@@ -795,7 +813,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、まずスワップ ファイルにリンカー出力をコピーして、そこからイメージを実行するようオペレーティング システムを設定します。  
   
-     詳細については、「[/SWAPRUN (リンカー出力をスワップ ファイルに読み込む)](/visual-cpp/build/reference/swaprun-load-linker-output-to-swap-file)」の `CD` 引数を参照してください。 **SwapRunFromNET** パラメーターも参照してください。  
+     詳細については、「[/SWAPRUN (リンカー出力をスワップ ファイルに読み込む)](/cpp/build/reference/swaprun-load-linker-output-to-swap-file)」の `CD` 引数を参照してください。 **SwapRunFromNET** パラメーターも参照してください。  
   
 -   **SwapRunFromNET**  
   
@@ -803,7 +821,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、まずスワップ ファイルにリンカー出力をコピーして、そこからイメージを実行するようオペレーティング システムを設定します。  
   
-     詳細については、「[/SWAPRUN (リンカー出力をスワップ ファイルに読み込む)](/visual-cpp/build/reference/swaprun-load-linker-output-to-swap-file)」の `NET` 引数を参照してください。 この表にある **SwapRunFromCD** パラメーターも参照してください。  
+     詳細については、「[/SWAPRUN (リンカー出力をスワップ ファイルに読み込む)](/cpp/build/reference/swaprun-load-linker-output-to-swap-file)」の `NET` 引数を参照してください。 この表にある **SwapRunFromCD** パラメーターも参照してください。  
   
 -   **TargetMachine**  
   
@@ -837,7 +855,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **MachineX86** - **/MACHINE:X86**  
   
-     詳細については、「[/MACHINE (ターゲット プラットフォームの指定)](/visual-cpp/build/reference/machine-specify-target-platform)」を参照してください。  
+     詳細については、「[/MACHINE (ターゲット プラットフォームの指定)](/cpp/build/reference/machine-specify-target-platform)」を参照してください。  
   
 -   **TerminalServerAware**  
   
@@ -845,7 +863,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、プログラム イメージのオプション ヘッダー内の IMAGE_OPTIONAL_HEADER DllCharacteristics フィールドにフラグを設定します。 このフラグが設定されると、ターミナル サーバーはアプリケーションに特定の変更を加えなくなります。  
   
-     詳細については、「[/TSAWARE (ターミナル サーバーに対応したアプリケーションの作成)](/visual-cpp/build/reference/tsaware-create-terminal-server-aware-application)」を参照してください。  
+     詳細については、「[/TSAWARE (ターミナル サーバーに対応したアプリケーションの作成)](/cpp/build/reference/tsaware-create-terminal-server-aware-application)」を参照してください。  
   
 -   **TrackerLogDirectory**  
   
@@ -859,7 +877,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合、リンカーが警告を生成したら出力ファイルは生成されません。  
   
-     詳細については、「[/WX (リンカー警告をエラーとして扱う)](/visual-cpp/build/reference/wx-treat-linker-warnings-as-errors)」を参照してください。  
+     詳細については、「[/WX (リンカー警告をエラーとして扱う)](/cpp/build/reference/wx-treat-linker-warnings-as-errors)」を参照してください。  
   
 -   **TurnOffAssemblyGeneration**  
   
@@ -867,7 +885,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合は、現在の出力ファイルのイメージを .NET Framework アセンブリなしで作成します。  
   
-     詳細については、「[/NOASSEMBLY (MSIL モジュールの作成)](/visual-cpp/build/reference/noassembly-create-a-msil-module)」を参照してください。  
+     詳細については、「[/NOASSEMBLY (MSIL モジュールの作成)](/cpp/build/reference/noassembly-create-a-msil-module)」を参照してください。  
   
 -   **TypeLibraryFile**  
   
@@ -875,7 +893,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      .tlb ファイルのファイル名とファイル名拡張子を指定します。 ファイル名、またはパスとファイル名を指定します。  
   
-     詳細については、「[/TLBOUT (.TLB ファイル名の指定)](/visual-cpp/build/reference/tlbout-name-dot-tlb-file)」を参照してください。  
+     詳細については、「[/TLBOUT (.TLB ファイル名の指定)](/cpp/build/reference/tlbout-name-dot-tlb-file)」を参照してください。  
   
 -   **TypeLibraryResourceID**  
   
@@ -883,7 +901,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      リンカーによって作成されたタイプ ライブラリのユーザー指定値を指定します。 1 から 65535 までの範囲の値を指定します。  
   
-     詳細については、「[/TLBID (TypeLib のリソース ID の指定)](/visual-cpp/build/reference/tlbid-specify-resource-id-for-typelib)」を参照してください。  
+     詳細については、「[/TLBID (TypeLib のリソース ID の指定)](/cpp/build/reference/tlbid-specify-resource-id-for-typelib)」を参照してください。  
   
 -   **UACExecutionLevel**  
   
@@ -899,7 +917,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **RequireAdministrator** - `level='requireAdministrator'`  
   
-     詳細については、「[/MANIFESTUAC (UAC 情報をマニフェストに組み込む)](/visual-cpp/build/reference/manifestuac-embeds-uac-information-in-manifest)」の `level` 引数を参照してください。  
+     詳細については、「[/MANIFESTUAC (UAC 情報をマニフェストに組み込む)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest)」の `level` 引数を参照してください。  
   
 -   **UACUIAccess**  
   
@@ -907,7 +925,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      `true` の場合、アプリケーションはユーザー インターフェイスの保護レベルをバイパスし、デスクトップ上のアクセス許可がより高位のウィンドウに入力を配置します。それ以外の場合は `false` です。  
   
-     詳細については、「[/MANIFESTUAC (UAC 情報をマニフェストに組み込む)](/visual-cpp/build/reference/manifestuac-embeds-uac-information-in-manifest)」の `uiAccess` 引数を参照してください。  
+     詳細については、「[/MANIFESTUAC (UAC 情報をマニフェストに組み込む)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest)」の `uiAccess` 引数を参照してください。  
   
 -   **UseLibraryDependencyInputs**  
   
@@ -921,12 +939,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      .exe または .dll ファイルのヘッダーにバージョン番号を入れます。 "`major[.minor]`" を指定します。 `major` および `minor` 引数には、0 から 65535 までの範囲の 10 進数を指定します。  
   
-     詳細については、「[/VERSION (バージョン情報)](/visual-cpp/build/reference/version-version-information)」を参照してください。  
+     詳細については、「[/VERSION (バージョン情報)](/cpp/build/reference/version-version-information)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
