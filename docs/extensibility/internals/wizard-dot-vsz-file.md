@@ -1,5 +1,5 @@
 ---
-title: "ウィザード (します。Vsz) ファイル |Microsoft ドキュメント"
+title: "ウィザード (です。Vsz) ファイル |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,17 +31,17 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f1dc3ff7964ea5290ffe926ef75773a7210b6449
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 3b1ee351d5fbe66a5d74c07c0a7e5a60661d7fcb
+ms.lasthandoff: 04/05/2017
 
 ---
-# <a name="wizard-vsz-file"></a>ウィザード (します。Vsz) ファイル
+# <a name="wizard-vsz-file"></a>ウィザード (です。Vsz) ファイル
 統合開発環境 (IDE) では、.vsz ファイルを使用して、ウィザードを起動します。 これらの .vsz ファイルには、IDE を使用して呼び出すウィザードを決定する情報と、ウィザードに渡すには、どのような情報が含まれます。  
   
- .Vsz ファイルは、セクションが存在しません、.ini 形式のテキスト ファイルのバージョンです。 IDE に認識される情報は、ファイルの先頭に格納されます。 IDE を呼び出すウィザードとは、.vsz ファイルが IDE に渡されるパラメーターの間のリンクを提供します。 ファイルの残りの部分では、ウィザードに固有と、しを IDE で収集する、特定のウィザードに渡されるパラメーターを説明します。  
+ .Vsz ファイルは、セクションがない .ini 形式のテキスト ファイルのバージョンです。 IDE に既知の情報は、ファイルの先頭に格納されます。 これは、ウィザード、IDE を呼び出すと、IDE に渡される .vsz ファイル内にあるパラメーターの間のリンクを提供します。 ファイルの残りの部分では、ウィザードに固有であるとを IDE で収集するのには、特定のウィザードに渡されるパラメーターを提供します。  
   
- 次の例では、.vsz ファイルの内容を示します。  
+ .Vsz ファイルの内容を次の例に示します。  
   
 ```  
 VSWizard 8.0  
@@ -54,15 +54,15 @@ Param="WIZARDUI = FALSE"
   
 |パーツ|説明|  
 |----------|-----------------|  
-|VSWizard|ファイルの最初のパラメーターは、テンプレート ファイル形式のバージョン番号です。 このバージョン番号は 6.0、7.0、7.1、または 8.0 をする必要があります。 その他の番号を開始できませんエラーの原因と、形式が無効です。|  
-|ウィザード|このフィールドには、OLE の ProgID ウィザード、または IDE で一緒ウィザードの CLSID の GUID の文字列形式が含まれています。|  
-|Param|これらの部分は省略できます。 必要なだけ追加できます。|  
+|VSWizard|ファイルの最初のパラメーターは、テンプレート ファイル形式のバージョン番号です。 このバージョン番号には、6.0、7.0、7.1、8.0 またはを指定する必要があります。 その他の番号を開始できませんエラーの原因と、形式が無効です。|  
+|ウィザード|このフィールドには、OLE の ProgID ウィザード、または IDE によって一緒、ウィザードの CLSID の GUID の文字列表現が含まれています。|  
+|Param|これらの部分は省略できます。 必要な追加できます。|  
   
- パラメーターには、ウィザードに追加のカスタム パラメーターを渡す .vsz ファイルが有効にします。 それぞれの値は、variant の配列内の文字列要素としてウィザードに渡されます。 詳細については、次を参照してください。[カスタム パラメーター](../../extensibility/internals/custom-parameters.md)します。 カスタム ウィザードの開発に .vsz ファイルを使用する方法については、次を参照してください。[します。Vsz ファイル (プロジェクト コントロール)](/visual-cpp/ide/dot-vsz-file-project-control)  
+ パラメーターには、ウィザードに追加のカスタム パラメーターを渡す .vsz ファイルが有効にします。 各値は、variant の配列内の文字列要素として、ウィザードに渡されます。 詳細については、次を参照してください。[カスタム パラメーター](../../extensibility/internals/custom-parameters.md)です。 カスタム ウィザードの開発に .vsz ファイルを使用する方法については、次を参照してください。[です。Vsz ファイル (プロジェクト コントロール)](/cpp/ide/dot-vsz-file-project-control)  
   
- .Vsz ファイルには、既定のロケール ID を追加するには、指定`FALLBACK_LCID`= xxxx、ここで xxxx はロケール ID では、英語の場合は 1033 などです。 ときに`FALLBACK_LCID`パラメーターが定義されている、現在の ID が見つからない場合、ウィザードは指定されたフォールバック ロケール ID を使用しています。  
+ .Vsz ファイルに既定のロケール ID を追加するには、指定`FALLBACK_LCID`xxxx、ここで xxxx は、ロケール ID を英語の場合は 1033 などを = です。 ときに`FALLBACK_LCID`パラメーターが定義されている場合、ウィザードは、現在の ID が見つからない場合に、フォールバック ロケールの指定された ID を使用します。  
   
 ## <a name="see-also"></a>関連項目  
  [カスタム パラメーター](../../extensibility/internals/custom-parameters.md)   
  [ウィザード](../../extensibility/internals/wizards.md)   
- [テンプレートのディレクトリの説明 (します。Vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)
+ [テンプレート ディレクトリの説明 (.Vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)

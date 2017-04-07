@@ -1,5 +1,5 @@
 ---
-title: "IDebugProgramEngines2 |Microsoft ドキュメント"
+title: IDebugProgramEngines2 |Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7e9573c4c039a335fc65776483760d06067d94ff
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: b1feaad2478a39799dfc9239cef288553120bd6d
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugprogramengines2"></a>IDebugProgramEngines2
-このインターフェイスは、いるすべての使用可能なデバッグ エンジン (DE) このプログラムをデバッグすることを指定するプログラムのノードで使用されます。  
+このインターフェイスは、すべて使用可能なデバッグ エンジン (DE) このプログラムをデバッグできるを指定するプログラムのノードで使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,22 +45,22 @@ ms.lasthandoff: 02/22/2017
 IDebugProgramEngines2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>実装についてのメモ  
- 実装する同一のオブジェクトにこのインターフェイスを実装、DE やカスタム ポート サプライヤー [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)特定のプログラムに使用する特定の DE の確立をサポートするためにします。  
+## <a name="notes-for-implementers"></a>Notes for Implementers  
+ 実装する同一のオブジェクトにこのインターフェイスを実装、DE やカスタム ポートのサプライヤー [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)特定プログラムを使用する特定の DE の確立をサポートするためにします。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- 呼び出す[QueryInterface](/visual-cpp/atl/queryinterface)上、`IDebugProgramNode2`をこのインターフェイスを取得するインターフェイスです。  
+ 呼び出す[QueryInterface](/cpp/atl/queryinterface)上、`IDebugProgramNode2`インターフェイスをこのインターフェイスを取得します。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
- 次の表は、のメソッドを示しています。`IDebugProgramEngines2`します。  
+ 次の表は、メソッドの`IDebugProgramEngines2`します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnumPossibleEngines](../../../extensibility/debugger/reference/idebugprogramengines2-enumpossibleengines.md)|このプログラムをデバッグできるすべての DEs を示します。|  
+|[EnumPossibleEngines](../../../extensibility/debugger/reference/idebugprogramengines2-enumpossibleengines.md)|このプログラムをデバッグできるすべての可能な DEs を示します。|  
 |[SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)|このプログラムのデバッグに使用する DE を選択します。|  
   
 ## <a name="remarks"></a>コメント  
- 呼び出して、その選択が、[プログラム] ノードに登録されて、DE がユーザーによって選択されると、 [SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)します。 選択されたエンジンが、エンジンによって返される[GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md)します。  
+ 呼び出すことで、[プログラム] ノードとその選択を登録、DE、ユーザーが選択されると、 [SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)です。 選択されているエンジンが、エンジンによって返される[GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md)です。  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  

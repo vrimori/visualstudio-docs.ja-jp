@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7cf087725f8cfcb8ba53da739706ededcddb61c4
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: a91b491aeb234a20dc601950c5ff8a436b1be90a
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugcontainerfield"></a>IDebugContainerField
@@ -46,20 +46,20 @@ IDebugContainerField : IDebugField
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- シンボル プロバイダーを実装する同一のオブジェクトにこのインターフェイスを実装する、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスです。 このインターフェイスは、また、コンテナーを表すすべてのインターフェイスの基本クラスです。  
+ シンボル プロバイダーを実装する同一のオブジェクトにこのインターフェイスを実装する、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスです。 このインターフェイスは、すべてのインターフェイスのコンテナーを表す基本クラスではもです。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- 多くのインターフェイスの多くのメソッドは、このインターフェイスを返します。 使用してより専門的なインターフェイスがこのインターフェイスから取得できるこれはすべてのコンテナーの基本クラスであるため、 [QueryInterface](/visual-cpp/atl/queryinterface)します。 このようなインターフェイスには、 [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)、 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)、および[IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md)します。  
+ 多くのインターフェイスの多くのメソッドは、このインターフェイスを返します。 使用してより専門的なインターフェイスがこのインターフェイスから取得できるこれはすべてのコンテナーの基本クラスであるため、 [QueryInterface](/cpp/atl/queryinterface)です。 このようなインターフェイスに含まれる[IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)、 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)、および[IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md)です。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
- 上のメソッドだけでなく、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイス、このインターフェイスは、次のメソッドを実装します。  
+ メソッドだけでなく、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイス、このインターフェイスは、次のメソッドを実装します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
 |[EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)|コンテナーのフィールドの列挙子を作成します。|  
   
 ## <a name="remarks"></a>コメント  
- 配列 (変数のコンテナー)、(メソッドおよび変数のコンテナー) のクラスおよびメソッド (パラメーターおよびローカル変数のコンテナー) は、コンテナーのすべての例を示します。  
+ 配列 (コンテナーの変数)、(メソッドと変数のコンテナー) のクラスおよびメソッド (パラメーターおよびローカル変数のコンテナー) は、コンテナーのすべての例を示します。  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: sh.h  
@@ -69,5 +69,5 @@ IDebugContainerField : IDebugField
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
- [シンボルのプロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
+ [シンボル プロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

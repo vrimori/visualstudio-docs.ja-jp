@@ -1,62 +1,78 @@
 ---
-title: "IDebugOutputStringEvent2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugOutputStringEvent2"
-helpviewer_keywords: 
-  - "IDebugOutputStringEvent2 インターフェイス"
+title: "IDebugOutputStringEvent2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugOutputStringEvent2
+helpviewer_keywords:
+- IDebugOutputStringEvent2 interface
 ms.assetid: 86596fd1-cecc-4813-8add-dc3d70068f9b
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugOutputStringEvent2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 42a3b630a501a379d38a53f942c0aceb494d94d7
+ms.lasthandoff: 04/05/2017
 
-このインターフェイスはデバッグ セッションのマネージャー \(SDM\) にデバッグ エンジン \(DE\) で文字列を出力するに送信されます。  
+---
+# <a name="idebugoutputstringevent2"></a>IDebugOutputStringEvent2
+このインターフェイスは、文字列を出力する、デバッグ エンジン (DE) によって、セッションのデバッグ マネージャー (SDM) に送信されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugOutputStringEvent2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- DE implements IDE の ENT0ENT \[出力\] ウィンドウに文字列を送信する。このインターフェイス  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) のインターフェイスはインターフェイスと同じオブジェクトで実行する必要があります。  SDM は `IDebugEvent2` のインターフェイスへのアクセスに [QueryInterface](/visual-cpp/atl/queryinterface) を使用します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ 文字列を送信するには、このインターフェイスを実装する、DE、**出力**IDE のウィンドウ。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイスです。  
   
-## 呼び出し元のメモ  
- DE ENT0ENT は\[出力\] ウィンドウに文字列を送信するにはこのイベント オブジェクトを作成し送信します。  イベントはSDM によって提供される [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) のコールバック関数を使用してデバッグ対象のプログラムにアタッチされたときに送信されます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ デを作成し、このイベント オブジェクトに文字列を送信する送信、**出力**ウィンドウです。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)は、デバッグ中のプログラムに関連付けられている場合、SDM によって指定されたコールバック関数。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugOutputStringEvent2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugOutputStringEvent2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetString](../Topic/IDebugOutputStringEvent2::GetString.md)|表示するメッセージを取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetString](../../../extensibility/debugger/reference/idebugoutputstringevent2-getstring.md)|表示可能なメッセージを取得します。|  
   
-## 解説  
- たとえばアンマネージ コードに出力された文字列はWin32 の関数に送信 `OutputDebugString` デバッグするプログラム文字列を作成できます。  この文字列は de\-DE によって傍受されSDM に `IDebugOutputStringEvent2` のイベントとして送信されます。  
+## <a name="remarks"></a>コメント  
+ たとえば、アンマネージ コードで出力する文字列開始できるはデバッグ中のプログラムは、Win32 に文字列を送信すると`OutputDebugString`関数。 この文字列は、DE によってインターセプトありとして SDM に送られる、`IDebugOutputStringEvent2`イベント。  
   
- ユーザーの応答が必要なメッセージを送信するために [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md) を使用します。  
+ 使用して[IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)ユーザーからの応答を必要とするメッセージを送信します。  
   
- 応答を必要としないエラー メッセージを送信するために [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md) を使用します。  
+ 使用して[IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)応答が不要なエラー メッセージを送信します。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)   
  [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   

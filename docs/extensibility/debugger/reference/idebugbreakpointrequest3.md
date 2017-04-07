@@ -1,57 +1,73 @@
 ---
-title: "IDebugBreakpointRequest3 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBreakpointRequest3"
-helpviewer_keywords: 
-  - "IDebugBreakpointRequest3"
+title: "IDebugBreakpointRequest3 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugBreakpointRequest3
+helpviewer_keywords:
+- IDebugBreakpointRequest3
 ms.assetid: 8a042beb-b319-48e3-b3c8-9c8336ab371b
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugBreakpointRequest3
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 61307781f8d386e7011422c0df815d80113b95cd
+ms.lasthandoff: 04/05/2017
 
-このインターフェイスはブレークポイントの型を作成しバインドするために必要な情報を表します。  これは [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) の拡張です。  
+---
+# <a name="idebugbreakpointrequest3"></a>IDebugBreakpointRequest3
+このインターフェイスは、作成し、任意の種類のブレークポイントをバインドするための情報を表します。 拡張では[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugBreakpointRequest3 : IDebugBreakpointRequest2  
 ```  
   
-## 実装についてのメモ  
- デバッグ セッションのマネージャーは \(SDM\)このインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ セッションのデバッグ マネージャー (SDM) は、通常、このインターフェイスを実装します。  
   
-## 呼び出し元のメモ  
- デバッグ エンジンは[CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)\(DE\) に IDebugBreakpointRequest2 インターフェイスが受信する呼び出しの [QueryInterface](/visual-cpp/atl/queryinterface) を呼び出してこのインターフェイスへのアクセス。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ デバッグ エンジン (DE) 呼び出すことによってこのインターフェイスにアクセスする[QueryInterface](/cpp/atl/queryinterface)への呼び出しで受け取った IDebugBreakpointRequest2 インターフェイスで[CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)です。  
   
-## Vtable の順序でメソッド  
- [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) から継承するメソッドに加え、`IDebugBreakpointRequest3` インターフェイスは次のメソッドを公開します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 継承されたメソッドだけでなく[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)、`IDebugBreakpointRequest3`インターフェイスは、次のメソッドを公開します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)|このブレークポイントの要求を記述したブレークポイントの要求された情報を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)|このブレークポイントの要求を表すブレークポイント要求情報を取得します。|  
   
-## 解説  
- このインターフェイスは [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) の構造を通じて de\-DE に追加情報を提供するために使用されます。  この詳細についてはde\-DE の販売元の ID \(GUID の形式\)トレース ポイント名ブレークポイントの制約の名前が含まれます。  
+## <a name="remarks"></a>コメント  
+ このインターフェイスを使用して、を通じて DE を追加情報を提供、 [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)構造体。 この追加情報には、DE のベンダー ID (GUID の形式) で、トレース ポイントの名前およびブレークポイント制約の名前が含まれています。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)   
- [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)
+ [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)

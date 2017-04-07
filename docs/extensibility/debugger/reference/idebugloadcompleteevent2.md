@@ -1,51 +1,67 @@
 ---
-title: "IDebugLoadCompleteEvent2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugLoadCompleteEvent2"
-helpviewer_keywords: 
-  - "IDebugLoadCompleteEvent2"
+title: "IDebugLoadCompleteEvent2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugLoadCompleteEvent2
+helpviewer_keywords:
+- IDebugLoadCompleteEvent2
 ms.assetid: 37eb7360-28e9-4273-862a-4c17f22af690
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugLoadCompleteEvent2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: f4b159c7d1ede5f71b8a55bf3057a8d2d03a0dd3
+ms.lasthandoff: 04/05/2017
 
-このインターフェイスはデバッグ セッションのマネージャー \(SDM\) にデバッグ エンジン \(DE\) によってプログラムが読み込まれるとコードが実行される前に送信されます。  
+---
+# <a name="idebugloadcompleteevent2"></a>IDebugLoadCompleteEvent2
+このインターフェイスは、プログラムが読み込まれるときに、すべてのコードが実行される前に、セッションのデバッグ マネージャー (SDM) にデバッグ エンジン (DE) によって送信されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugLoadCompleteEvent2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- DE implements プログラムが正常に読み込まれたことを報告します。このインターフェイス  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) のインターフェイスはインターフェイスと同じオブジェクトで実行する必要があります。  SDM は `IDebugEvent2` のインターフェイスへのアクセスに [QueryInterface](/visual-cpp/atl/queryinterface) を使用します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デでは、プログラムが正常に読み込まれたことを報告するには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイスです。  
   
-## 呼び出し元のメモ  
- DE はプログラムが正常に読み込まれたことを報告するためこのイベント オブジェクトを作成し送信します。  イベントはSDM によって提供される [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) のコールバック関数を使用してデバッグ対象のプログラムにアタッチしたときに送信されます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ デを作成し、プログラムが正常に読み込まれたことを報告するには、このイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)は、デバッグ中のプログラムに添付するときに、SDM によって指定されたコールバック関数。  
   
-## 解説  
- このイベントは停止のイベントではイベント属性の `EVENT_STOPPING` フラグが設定されている必要があります。  
+## <a name="remarks"></a>コメント  
+ このイベントは stopping イベントで、必要があります、`EVENT_STOPPING`フラグは、イベント属性で設定します。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

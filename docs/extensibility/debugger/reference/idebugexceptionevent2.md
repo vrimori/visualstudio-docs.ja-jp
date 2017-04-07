@@ -1,61 +1,77 @@
 ---
-title: "IDebugExceptionEvent2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExceptionEvent2"
-helpviewer_keywords: 
-  - "IDebugExceptionEvent2 インターフェイス"
+title: "IDebugExceptionEvent2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugExceptionEvent2
+helpviewer_keywords:
+- IDebugExceptionEvent2 interface
 ms.assetid: 53d32e59-a84b-4710-833e-c5ab08100516
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugExceptionEvent2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: c9817ca386846833ab022c5dbca3d3807bd38ef6
+ms.lasthandoff: 04/05/2017
 
-デバッグ エンジンは \(DE\)デバッグ セッションのマネージャー \(SDM\) に例外が現在実行されているプログラムでスローされたときにこのインターフェイスを送信します。  
+---
+# <a name="idebugexceptionevent2"></a>IDebugExceptionEvent2
+デバッグ エンジン (DE) は、現在実行されているプログラムでは、例外がスローされたときに、セッションのデバッグ マネージャー (SDM) をこのインターフェイスを送信します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugExceptionEvent2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- DE implements デバッグ対象のプログラムに例外が発生したことを報告します。このインターフェイス  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) のインターフェイスはインターフェイスと同じオブジェクトで実行する必要があります。  SDM は `IDebugEvent2` のインターフェイスへのアクセスに [QueryInterface](/visual-cpp/atl/queryinterface) を使用します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デでは、デバッグ中のプログラムで例外が発生したことをレポートには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイスです。  
   
-## 呼び出し元のメモ  
- DE は例外を報告するためこのイベント オブジェクトを作成し送信します。  イベントはSDM によって提供される [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) のコールバック関数を使用してデバッグ対象のプログラムにアタッチしたときに送信されます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ デを作成し、例外を報告するには、このイベント オブジェクトを送信します。 使用して、イベントを送信、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)は、デバッグ中のプログラムに添付するときに、SDM によって指定されたコールバック関数。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugExceptionEvent2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugExceptionEvent2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetException](../Topic/IDebugExceptionEvent2::GetException.md)|このイベントが発生した例外に関する詳細情報を取得します。|  
-|[GetExceptionDescription](../../../extensibility/debugger/reference/idebugexceptionevent2-getexceptiondescription.md)|このイベントを発生させたスローされた例外についてユーザーにわかりやすい説明を取得します。|  
-|[CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)|実行を再開するとデバッグの \(DE\) デバッグ対象のプログラムにこの例外を渡す際のオプション エンジンをサポートするかどうかを指定します。|  
-|[PassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md)|実行を再開したときまたは例外が破棄例外をデバッグ中のプログラムに渡す必要があるかどうかを指定します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)|このイベントを発生させた例外に関する詳細情報を取得します。|  
+|[GetExceptionDescription](../../../extensibility/debugger/reference/idebugexceptionevent2-getexceptiondescription.md)|このイベントを発生させたスローされる例外の人間が判読できる説明を取得します。|  
+|[CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)|デバッグ エンジン (DE) が実行を再開したときにデバッグするプログラムにこの例外を渡すことのオプションをサポートしているかどうかを判断します。|  
+|[PassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md)|例外を破棄する必要がある場合または実行が再開したときにデバッグするプログラムを例外を渡す必要があるかどうかを指定します。|  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 解説  
- イベントを送信する前にこの例外が [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) イベントへの前の呼び出しによって初回またはセカンド チャンス例外ので指定されていないかde\-DE を検証します。  初回例外であることを指定する `IDebugExceptionEvent2` のイベントは SDM に送信されます。  そうでない場合はde\-DE はアプリケーションによって例外が処理されます。  例外ハンドラーが指定されていない場合は例外がセカンド チャンス例外として指定すると`IDebugExceptionEvent2` のイベントは SDM に送信されます。  はde\-DE はプログラムの実行を再開してオペレーティング システムまたはランタイムは例外を処理します。  
+## <a name="remarks"></a>コメント  
+ イベントを送信する前に、DE が確認するまでかどうかはこの例外イベントで指定された初回またはセカンド チャンス例外を前回呼び出した[SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)です。 最初の例外に指定されている場合、`IDebugExceptionEvent2`イベントは、SDM に送信します。 それ以外の場合は、DE にアプリケーション例外を処理する機会が得られます。 例外ハンドラーが指定されていない場合、例外は次の例外として指定されている場合、`IDebugExceptionEvent2`イベントは、SDM に送信します。 それ以外の場合、DE、プログラムの実行を再開して、オペレーティング システムまたはランタイムが例外を処理します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   

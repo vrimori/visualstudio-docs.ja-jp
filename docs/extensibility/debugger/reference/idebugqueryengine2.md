@@ -1,58 +1,74 @@
 ---
-title: "IDebugQueryEngine2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugQueryEngine2"
-helpviewer_keywords: 
-  - "IDebugQueryEngine2 インターフェイス"
+title: "IDebugQueryEngine2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugQueryEngine2
+helpviewer_keywords:
+- IDebugQueryEngine2 interface
 ms.assetid: 8f0e1838-a818-4459-9138-a3dceb7408de
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugQueryEngine2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: cdf774a97ef3b1d0bfeec0be8482d2c116806885
+ms.lasthandoff: 04/05/2017
 
-このインターフェイスはデバッグ セッションの管理に \(SDM\) デバッグ エンジンを表すインターフェイスを取得できるように \(DE\) なります。  
+---
+# <a name="idebugqueryengine2"></a>IDebugQueryEngine2
+このインターフェイスにより、デバッグ マネージャー (SDM) をデバッグ エンジン (DE) を表すインターフェイスを取得するセッションです。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugQueryEngine2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- DE implements します [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) のインターフェイス自体へのアクセスを許可するように共通の interfaces de\-DE \([IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) と [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) など\)このインターフェイスを実装するオブジェクト。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ DE、最も一般的な DE インターフェイスを実装するオブジェクトに対してこのインターフェイスを実装する (など[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)、 [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)、および[IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)) へのアクセスを許可するために、 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) DE 自体のインターフェイスです。  
   
-## 呼び出し元のメモ  
- このインターフェイスを取得する一般的なインターフェイスの呼び出し [QueryInterface](/visual-cpp/atl/queryinterface) します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 呼び出す[QueryInterface](/cpp/atl/queryinterface)をこのインターフェイスを取得する代表的な DE インターフェイスにします。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugQueryEngine2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugQueryEngine2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetEngineInterface](../Topic/IDebugQueryEngine2::GetEngineInterface.md)|カスタムのデバッグ エンジン \(DE\) インターフェイスを取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetEngineInterface](../../../extensibility/debugger/reference/idebugqueryengine2-getengineinterface.md)|カスタム デバッグ エンジン (DE) インターフェイスを取得します。|  
   
-## 解説  
- このインターフェイスはオブジェクトで実装で関数によって [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) のインターフェイス サポートする手順を因果関係する命令に実行します ; つまりデバッガーが関数にステップ インする場合実行する次の関数はスタックの前の関数別のスレッドのすべての関数ではない場合があります。  「因果関係の定義については」[Visual Studio デバッガーの用語集](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md) を参照してください。  
+## <a name="remarks"></a>コメント  
+ 通常、このインターフェイスを実装するオブジェクトで実装、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)因果関係の順序が指定の関数をステップ実行をサポートするためにインターフェイス; は、デバッガーは、関数からステップ実行、ときに次の関数を実行できない可能性がありますスタックで前の関数が別のスレッドで関数全体です。 「因果関係の作成」の定義では、次を参照してください。、 [Visual Studio デバッガーの用語集](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)です。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
