@@ -97,6 +97,7 @@
 ## [IIS コンピューター上の ASP.NET のリモート デバッグ](remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)
 ## [C# Project プロジェクトのリモート デバッグ](remote-debugging-csharp.md)
 ## [C++ Project プロジェクトのリモート デバッグ](remote-debugging-cpp.md)
+## [Azure での ASP.NET のリモート デバッグ](remote-debugging-azure.md)
 ## [Windows ファイアウォールをリモート デバッグ用に構成する](configure-the-windows-firewall-for-remote-debugging.md)
 ## [リモート デバッガーのポートの割り当て](remote-debugger-port-assignments.md)
 ## [リモート デバッグ エラーとトラブルシューティング](remote-debugging-errors-and-troubleshooting.md)
