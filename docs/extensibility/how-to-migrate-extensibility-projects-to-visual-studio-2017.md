@@ -28,18 +28,16 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4f93b8c1db59dd8d8a407c82002240641be43018
-ms.openlocfilehash: 1f9248442357c4447703ac6d6dac8a27934904e8
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: efd17a3317302fedcb9bd42aded7a38adee2f75f
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>方法: 機能拡張プロジェクトを Visual Studio 2017 に移行
 
->**注:**このドキュメントは暫定版であり、Visual Studio 2017 RC リリースに基づいています。
-
 このドキュメントでは、Visual Studio 2017 に機能拡張プロジェクトをアップグレードする方法について説明します。 プロジェクト ファイルを更新する方法を説明するだけでなく、新しいバージョン 3 VSIX マニフェスト形式 (VSIX v3) に拡張機能マニフェストのバージョン 2 (VSIX v2) からアップグレードする方法も説明します。
 
-## <a name="install-visual-studio-2017-rc-with-required-workloads"></a>必要なワークロードで Visual Studio 2017 RC をインストールします。
+## <a name="install-visual-studio-2017-with-required-workloads"></a>Visual Studio 2017 の作業負荷の必要なインストールします。
 
 環境に、次のワークロードを確認します。
 
@@ -59,19 +57,16 @@ ms.lasthandoff: 03/01/2017
 
 >**注:**ソリューションが Microsoft.VSSDK.BuildTools NuGet パッケージを参照していない場合は、この手順をスキップすることができます。
 
-新しい VSIX v3 で拡張機能を構築するために (バージョン 3) の形式で、ソリューションは新しい VSSDK ビルド ツールを使用してビルドする必要があります。 これは Visual Studio の 2017 RC でインストールされますが、NuGet 経由で以前のバージョンへの参照を VSIX v2 の拡張機能を保持することがあります。 その場合は、ソリューションの Microsoft.VSSDK.BuildTools NuGet パッケージの更新を手動でインストールする必要があります。 RC のリリース時に、このパッケージを「プレリリース」状態になります。
+新しい VSIX v3 で拡張機能を構築するために (バージョン 3) の形式で、ソリューションは新しい VSSDK ビルド ツールを使用してビルドする必要があります。 これは Visual Studio 2017 年でインストールされますが、NuGet 経由で以前のバージョンへの参照を VSIX v2 の拡張機能を保持することがあります。 その場合は、ソリューションの Microsoft.VSSDK.BuildTools NuGet パッケージの更新を手動でインストールする必要があります。
 
 NuGet を更新するには、Microsoft.VSSDK.BuildTools を参照します。
 
 * ソリューションを右クリックし、選択**ソリューションの NuGet パッケージを管理しています.**
 * 移動し、**更新** タブをクリックします。
-* チェック ボックスをオン**プレリリースを含める**します。
 * Microsoft.VSSDK.BuildTools (最新バージョン) を選択します。
 * キーを押して**更新**します。
 
 ![VSSDK ビルド ツール](media/vssdk-build-tools.png)
-
->**注:**スクリーン ショット、BuildTools の別のバージョンを示しています。 RC 版を選択してください。
 
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>VSIX 拡張機能マニフェストを変更をします。
 
@@ -125,7 +120,7 @@ Visual Studio のユーザーのインストールの拡張機能を実行する
 
 ## <a name="if-migrating-from-preview-4-or-preview-5"></a>プレビュー 4 または 5 のプレビューから移行する場合
 
-* 置換`SetupDependencies`と`Prerequisites`の要素を移動して、`Installer`要素。 `Prerequisites`直接の内側は今すぐ、`PackageManifest`要素。
+* 置換`SetupDependencies`と`Prerequisites`の要素を移動して、`Installer`要素。 `Prerequisites`直接内側はこれで、`PackageManifest`要素。
 * [省略可能]削除、`GenerateVsixV3`要素。 (これが 5 のプレビューでのみ必要です。)`GenerateVsixV3`プレビュー 5 を超えるバージョンでの要素は無視されます。
 
 ## <a name="update-debug-settings-for-project"></a>プロジェクトのデバッグ設定を更新します。
@@ -161,16 +156,16 @@ VSIX は、正常にインストールされますマシンにインストール
 
 拡張機能をインストールしようとします。
 
-* Visual Studio 2017 RC に
+* Visual Studio 2017 上
 
 ![VSIX インストーラーは Visual Studio 2017](media/vsixinstaller-vs-2017.png)
 
 * 省略可能: Visual Studio の以前のバージョンを確認します。
   * 下位互換性を証明します。
-  * Visual Studio 2012、Visual Studio 2013、Visual Studio 2015 の動作する必要があります。
+  * Visual Studio 2012、Visual Studio 2013、Visual Studio 2015 動作する必要があります。
 * 省略可能: VSIX インストーラーのバージョン チェックがバージョンの選択肢を提供することを確認します。
   * (インストールされている) 場合は、Visual Studio の以前のバージョンに含まれています。
-  * Visual Studio 2017 RC が含まれます。
+  * Visual Studio 2017 が含まれます。
 
 Visual Studio が開かれた最近場合は、次のようなダイアログ ボックスを表示する可能性があります。
 
@@ -182,7 +177,7 @@ Visual Studio が開かれた最近場合は、次のようなダイアログ �
 
 ## <a name="check-when-missing-the-required-prerequisites"></a>必要な前提条件が欠けている場合にチェック
 
-* 拡張機能をインストール、コンピューターに Visual Studio 2017 rc ことはない CONTAIN (上記) の前提条件で定義されているすべてのコンポーネントしようとしてください。
+* 拡張機能をインストール、コンピューター上で Visual Studio 2017 ことはない CONTAIN (上記) の前提条件で定義されているすべてのコンポーネントしようとしてください。
 * インストールが不足しているコンポーネント/秒を識別して、それらが、VSIXInstaller の前提条件として一覧表示を確認してください。
 * 注: 昇格が必要に前提条件を拡張機能と共にインストールされている必要があります。
 
@@ -196,7 +191,7 @@ Visual Studio が開かれた最近場合は、次のようなダイアログ �
 
 拡張機能の種類 | 表示名 |    ID
 --- | --- | ---
-エディター | Visual Studio コア エディター    | Microsoft.VisualStudio.CoreEditor
+エディター | Visual Studio コア エディター    | Microsoft.VisualStudio.Component.CoreEditor
 Roslyn | C# および Visual Basic | Microsoft.VisualStudio.Component.Roslyn.LanguageServices
 WPF | マネージ デスクトップ ワークロード コア | Microsoft.VisualStudio.Component.ManagedDesktop.Core
 デバッガー | ジャストイン タイム デバッガー | Microsoft.VisualStudio.Component.Debugger.JustInTime

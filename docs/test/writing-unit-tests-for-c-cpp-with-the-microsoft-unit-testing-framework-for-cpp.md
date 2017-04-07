@@ -1,5 +1,5 @@
 ---
-title: "C++ 用の Microsoft 単体テスト フレームワークを使用した C++ 用単体テストの記述 | Microsoft Docs"
+title: "C++ 用の Microsoft 単体テスト フレームワークを使用した C/C++ 用単体テストの記述 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4f4b5f10-7314-4725-8c6e-e72f52eff918
 caps.latest.revision: 14
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -28,8 +28,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: dd88409bb0774342e0a9f50178e1204cabf72e46
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 84549f28f33933eacbf44742b5be129df8ab780e
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="writing-unit-tests-for-cc-with-the-microsoft-unit-testing-framework-for-c"></a>C++ 用の Microsoft 単体テスト フレームワークを使用した C++ 用単体テストの記述
@@ -47,7 +48,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
   
     -   `#include` DLL の外部アクセス可能な関数の宣言を含む `.h` ファイル。  
   
-         `.h` ファイルには、`_declspec(dllimport)` でマークされた関数の宣言が含まれる必要があります。 代わりに、DEF ファイルを使用してメソッドをエクスポートすることができます。 詳細については、「[インポートとエクスポート](/visual-cpp/build/importing-and-exporting)」を参照してください。  
+         `.h` ファイルには、`_declspec(dllimport)` でマークされた関数の宣言が含まれる必要があります。 代わりに、DEF ファイルを使用してメソッドをエクスポートすることができます。 詳細については、「[インポートとエクスポート](/cpp/build/importing-and-exporting)」を参照してください。  
   
          単体テストでは、テスト対象の DLL からエクスポートされた関数のみにアクセスできます。  
   
@@ -98,7 +99,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
   
         3.  テストのショートカット メニューで、 **[選択したテストのデバッグ]** をクリックして、デバッガーでテストを実行します。  
   
-##  <a name="a-namewalkthrougha-walkthrough-developing-an-unmanaged-dll-with-test-explorer"></a><a name="walkthrough"></a> チュートリアル: テスト エクスプローラーによるアンマネージ DLL の開発  
+##  <a name="walkthrough"></a> チュートリアル: テスト エクスプローラーによるアンマネージ DLL の開発  
  このチュートリアルを、自分の DLL の開発に適応させることができます。 基本的な手順は次のとおりです。  
   
 1.  [ネイティブのテスト プロジェクトを作成する](#unitTestProject)。 テストは、開発中の DLL とは別のプロジェクト内に作成されます。  
@@ -117,7 +118,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
   
 8.  [外部リソースから単位を分離する](https://msdn.microsoft.com/library/hh549174.aspx)。 一般に、DLL は、他の DLL、データベース、またはリモートのサブシステムなど、開発中のシステムの他のコンポーネントに依存しています。 各単位をその依存関係から分離してテストすると役立ちます。 外部コンポーネントは、テストの実行を遅くする可能性があります。 開発中、他のコンポーネントが不完全であることもあり得ます。  
   
-###  <a name="a-nameunittestprojecta-create-a-native-unit-test-project"></a><a name="unitTestProject"></a> ネイティブ単体テスト プロジェクトを作成する  
+###  <a name="unitTestProject"></a> ネイティブ単体テスト プロジェクトを作成する  
   
 1.  **[ファイル]** メニューで、 **[新規]**、 **[プロジェクト]**をクリックします。  
   
@@ -166,7 +167,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
   
          ![1 つのテストが成功したことを示す単体テスト エクスプローラー](../test/media/utecpp04.png "UteCpp04")  
   
-###  <a name="a-namecreatedllprojecta-create-an-unmanaged-dll-project"></a><a name="createDllProject"></a> アンマネージ DLL プロジェクトを作成する  
+###  <a name="createDllProject"></a> アンマネージ DLL プロジェクトを作成する  
   
 1.  **Win32 プロジェクト** テンプレートを使用して **Visual C++** プロジェクトを作成します。  
   
@@ -184,7 +185,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
   
      ![API マクロを使用した新しい DLL コード プロジェクトと .h ファイル](../test/media/utecpp07.png "UteCpp07")  
   
-     宣言子 `__declspec(dllexport)` は、クラスのパブリック メンバーと保護されるメンバーが DLL の外部で表示できるようにします。 詳細については、「 [Using dllimport and dllexport in C++ Classes](/visual-cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes)」を参照してください。  
+     宣言子 `__declspec(dllexport)` は、クラスのパブリック メンバーと保護されるメンバーが DLL の外部で表示できるようにします。 詳細については、「 [Using dllimport and dllexport in C++ Classes](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes)」を参照してください。  
   
 4.  プリンシパル .cpp ファイルでは、最小限の本体を関数に追加します。  
   
@@ -196,7 +197,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
     }  
     ```  
   
-###  <a name="a-namecoupleprojectsa-couple-the-test-project-to-the-dll-project"></a><a name="coupleProjects"></a> DLL プロジェクトにテスト プロジェクトを結合する  
+###  <a name="coupleProjects"></a> DLL プロジェクトにテスト プロジェクトを結合する  
   
 1.  DLL プロジェクトをテスト プロジェクトのプロジェクト参照に追加します。  
   
@@ -246,7 +247,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
   
  テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。  
   
-###  <a name="a-nameiteratea-iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a> テストを繰り返し増やして成功させる  
+###  <a name="iterate"></a> テストを繰り返し増やして成功させる  
   
 1.  新しいテストを追加します。  
   
@@ -265,7 +266,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
     > [!TIP]
     >  合格したテスト内容を変更しないことをお勧めします。 代わりに、新しいテストを追加し、テストが合格するようにコードを更新してから別のテストを追加する、という過程を繰り返します。  
     >   
-    >  ユーザーが要件を変更したら、正しくなくなったテストを無効にします。 新しいテストを作成し、一度に&1; つずつ、同じ増分方式で処理するようにします。  
+    >  ユーザーが要件を変更したら、正しくなくなったテストを無効にします。 新しいテストを作成し、一度に 1 つずつ、同じ増分方式で処理するようにします。  
   
 2.  ソリューションをビルドし、テスト エクスプ ローラーで **[すべて実行]**を選択します。  
   
@@ -302,9 +303,9 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
      ![単体テスト エクスプローラー &#45 範囲テスト成功](../test/media/utecpp12.png "UteCpp12")  
   
     > [!TIP]
-    >  一度に&1; つのテストを追加してコードを開発します。 各反復処理の後にすべてのテストが合格することを確認します。  
+    >  一度に 1 つのテストを追加してコードを開発します。 各反復処理の後にすべてのテストが合格することを確認します。  
   
-###  <a name="a-namedebuga-debug-a-failing-test"></a><a name="debug"></a> 失敗したテストをデバッグする  
+###  <a name="debug"></a> 失敗したテストをデバッグする  
   
 1.  別のテストを追加します。  
   
@@ -379,7 +380,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
 > [!TIP]
 >  個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。  
   
-###  <a name="a-namerefactora-refactor-the-code-without-changing-tests"></a><a name="refactor"></a> テストを変更せずにコードをリファクタリングする  
+###  <a name="refactor"></a> テストを変更せずにコードをリファクタリングする  
   
 1.  SquareRoot 関数の中心的な計算を簡素化します。  
   
@@ -414,9 +415,5 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
  [マネージ/アンマネージ コードの相互運用性の概要](http://msdn.microsoft.com/library/ms973872.aspx)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   
  [チュートリアル: ダイナミック リンク ライブラリの作成と使用 (C++)](http://msdn.microsoft.com/Library/3ae94848-44e7-4955-bbad-7d40f493e941)   
- [インポートとエクスポート](/visual-cpp/build/importing-and-exporting)
-
-
-<!--HONumber=Feb17_HO4-->
-
+ [インポートとエクスポート](/cpp/build/importing-and-exporting)
 

@@ -1,27 +1,46 @@
 ---
 title: "UI オートメーションを使用してコードをテストする | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.codedUITest"
-  - "vs.codedUITest.recorder"
-  - "vs.codedUITest.testbuilder"
-  - "vs.codedUITest.addAssertions"
-  - "vs.codedUITest.createdialog"
-helpviewer_keywords: 
-  - "自動テスト, テスト (UI インターフェイスを)"
-  - "コード化された UI テスト"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.codedUITest
+- vs.codedUITest.recorder
+- vs.codedUITest.testbuilder
+- vs.codedUITest.addAssertions
+- vs.codedUITest.createdialog
+helpviewer_keywords:
+- automated tests, testing UI interface
+- coded UI test
 ms.assetid: ad9e3eaa-ab86-436e-95b8-dc20eb1f8b2a
 caps.latest.revision: 85
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 83
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
+ms.openlocfilehash: 753a39940ba32052cff14460f007a8f8a2d191dd
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI オートメーションを使用してコードをテストする
 ユーザー インターフェイス (UI) を介してアプリケーションを実行する自動テストは、*コード化された UI テスト* (CUIT) と呼ばれます。 これらのテストには、UI コントロールの機能テストが含まれます。 これらのテストで、アプリケーション全体が、ユーザー インターフェイスを含めて正しく機能していることを検証できます。 コード化された UI テストは、Web ページなど、ユーザー インターフェイスに検証やその他のロジックがある場合に特に有用です。 また、既存の手動テストを自動化するために頻繁に使用されます。  
@@ -62,13 +81,13 @@ caps.handback.revision: 83
   
 -   [次の内容](#VerifyCodeUsingCUITWhatsNext)  
   
-##  <a name="a-nameverifyingcodeusingcuitcreatea-creating-coded-ui-tests"></a><a name="VerifyingCodeUsingCUITCreate"></a>コード化された UI テストを作成する  
+##  <a name="VerifyingCodeUsingCUITCreate"></a>コード化された UI テストを作成する  
   
 1.  **コード化された UI テストを作成します。**  
   
      コード化された UI テストは、コード化された UI テスト プロジェクトに含まれている必要があります。 コード化された UI テスト プロジェクトをまだ作成していない場合は、プロジェクトを作成します。 ソリューションのショートカット メニューの **[ソリューション エクスプローラー]** で、**[追加]**、**[新しいプロジェクト]** を選択し、**[Visual Basic]** または **[Visual C#]** を選択します。 次に、**[テスト]**、**[コード化された UI テスト]** を選択します。  
   
-    -   ***[コード化された UI テスト]** プロジェクト テンプレートが表示されません。*  
+    -   ***[コード化された UI テスト]**プロジェクト テンプレートが表示されません。*  
   
          コード化された UI テストをサポートしないバージョンの Visual Studio を使用している可能性があります。 コード化された UI テストを作成するには、Visual Studio Enterprise を使用する必要があります。  
   
@@ -153,7 +172,7 @@ caps.handback.revision: 83
   
  さらに詳細な使用例については、「[チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」をご覧ください。 このチュートリアルでは、簡単な Windows Presentation Foundation (WPF) アプリケーションを作成して、コード化された UI テストの作成、編集、および保守を行う方法について説明します。 また、さまざまなタイミングの問題やコントロールのリファクタリングによって機能が損なわれたテストを修正するための解決策を示します。  
   
-###  <a name="a-namestartinga-starting-and-stopping-the-application-under-test"></a><a name="starting"></a> テスト対象のアプリケーションを開始および停止する  
+###  <a name="starting"></a> テスト対象のアプリケーションを開始および停止する  
  *テストごとに、アプリケーション、ブラウザー、またはデータベースを個別に起動および停止したくありません。どうすれば回避できますか?*  
   
 -   ![Prerequsite](../test/media/prereq.png "Prereq") テスト対象のアプリケーションの起動操作を記録しない場合は、**[記録する]** アイコンを選択する前にアプリケーションを起動する必要があります。  
@@ -164,7 +183,7 @@ caps.handback.revision: 83
   
 -   ![Prerequsite](../test/media/prereq.png "Prereq") [TestCleanup] 属性で識別されるテスト クリーンアップ メソッドを追加できます。このメソッドは、各テスト メソッドの終了時にコードを実行します。 たとえば、アプリケーションを終了するメソッドは、TestCleanup メソッドから呼び出すことができます。  
   
-###  <a name="a-nameverifyingcodeusingcuitgenerateassertionsa-validating-the-properties-of-ui-controls"></a><a name="VerifyingCodeUsingCUITGenerateAssertions"></a> UI コントロールのプロパティを検証する  
+###  <a name="VerifyingCodeUsingCUITGenerateAssertions"></a> UI コントロールのプロパティを検証する  
  **コード化された UI テスト ビルダー**を使用すると、テストの <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> にユーザー インターフェイス (UI) を追加したり、UI コントロールのアサーションを使用する検証メソッドのコードを生成できます。  
   
  UI コントロールのアサーションを生成するには、コード化された UI テスト ビルダーの**アサーションの追加**ツールを選択し、正しいかどうかを検証するテスト対象アプリケーションのコントロールにドラッグします。 ボックスがコントロールを囲んだら、マウス ボタンを離します。 コントロール クラス コードがすぐに `UIMap.Designer.cs` ファイルに作成されます。  
@@ -285,7 +304,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
 ```  
   
-##  <a name="a-nameverifyingcodecuitmodifya-customizing-your-coded-ui-test"></a><a name="VerifyingCodeCUITModify"></a> コード化された UI テストをカスタマイズする  
+##  <a name="VerifyingCodeCUITModify"></a> コード化された UI テストをカスタマイズする  
  コード化された UI テストの作成後、Visual Studio で次のいずれかのツールを使用してテストを編集できます。  
   
 -   **コード化された UI テスト ビルダー:** コード化された UI テスト ビルダーを使用して、テストにコントロールや検証を追加します。 このトピックの「[コントロールを追加し、プロパティを検証する](#VerifyingCodeUsingCUITGenerateAssertions)」セクションをご覧ください。  
@@ -312,7 +331,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
         -   [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)  
   
-###  <a name="a-namegeneratedcodea-the-generated-code"></a><a name="generatedCode"></a> 生成されたコード  
+###  <a name="generatedCode"></a> 生成されたコード  
  **[コードの生成]** を選択すると、いくつかのコードが作成されます。  
   
 -   **テスト メソッド内の行。**  
@@ -380,7 +399,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
  生成されるコードの詳細については、「[コード化された UI テストの構造](../test/anatomy-of-a-coded-ui-test.md)」をご覧ください。  
   
-###  <a name="a-nameactionsa-coding-ui-control-actions-and-properties"></a><a name="actions"></a> UI コントロールの操作とプロパティのコーディング  
+###  <a name="actions"></a> UI コントロールの操作とプロパティのコーディング  
  コード化された UI テストで UI テストのコントロールを使用する場合、コントロールは操作とプロパティの&2; つに分類されます。  
   
 -   最初の部分は、UI テストのコントロールで実行できる操作で構成されます。 たとえば、コード化された UI テストでは、UI テストのコントロールでのマウス クリックをシミュレートしたり、UI テストのコントロールに影響を与えるキーボードでのキー入力をシミュレートしたりすることができます。  
@@ -436,10 +455,10 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
      `SetProperty(myWinCheckBox.PropertyNames.Checked, true);`  
   
-###  <a name="a-namedebugginga-debugging"></a><a name="debugging"></a> デバッグ  
+###  <a name="debugging"></a> デバッグ  
  コード化された UI テスト ログを使用して、コード化された UI テストを分析できます。 コード化された UI テスト ログは、コード化された UI テストの実行に関する重要な情報にフィルターを適用して記録します。 ログは、問題をすばやくデバッグできるような形式で記録されます。 詳細については、「[コード化された UI テスト ログを使用したコード化された UI テストの分析](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)」をご覧ください。  
   
-##  <a name="a-nameverifycodeusingcuitwhatsnexta-whats-next"></a><a name="VerifyCodeUsingCUITWhatsNext"></a> 次の内容  
+##  <a name="VerifyCodeUsingCUITWhatsNext"></a> 次の内容  
  **コード化された UI テストの実行の追加オプション:** このトピックで既に説明したように、コード化された UI テストを Visual Studio から直接実行できます。 また、[!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] または [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] から自動化された UI テストを実行できます。 コード化された UI テストを自動化すると、テストは他の自動テストとは異なって実行時にデスクトップと対話する必要があります。  
   
 -   [方法: Microsoft Visual Studio からテストを実行する](http://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)  
@@ -491,8 +510,4 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
  [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
  [Visual Studio 2010 からのコード化された UI テストのアップグレード](../test/upgrading-coded-ui-tests-from-visual-studio-2010.md)   
  [既存の操作の記録からのコード化された UI テストの生成](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

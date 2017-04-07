@@ -1,19 +1,37 @@
 ---
 title: "Visual Studio の生産性に関するヒント | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ccc5e543-7dcf-465c-97dd-e133e869800c
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 26
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
+ms.openlocfilehash: 5b845b8be2d60e1a32cc570fd59ae94f2063c116
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio の生産性に関するヒント
 これらのヒントに従うことによって、Visual Studio でのコードの作成、移動、デバッグをさらに高速かつ効率的にできます。 一般的なキーボード ショートカットの詳細については、「[ヒントとテクニック](../ide/tips-and-tricks-for-visual-studio.md)」を参照してください。 詳細な一覧については、「[キーボード ショートカットの識別とカスタマイズ](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)」および「[既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。  
@@ -32,7 +50,7 @@ caps.handback.revision: 26
   
  [ファイル、ツール バー、およびウィンドウの管理](../ide/productivity-tips-for-visual-studio.md#BKMK_Managing)  
   
-##  <a name="a-namebkmkaccessa-accessing-visual-studio-tools"></a><a name="BKMK_Access"></a> Visual Studio Tools にアクセスする  
+##  <a name="BKMK_Access"></a> Visual Studio Tools にアクセスする  
  スタート画面またはタスクバーに固定すると、開発者コマンド プロンプトまたは別のツールに簡単にアクセスできます。  
   
 1.  スタート画面で、「`Visual Studio Tools`」と入力し、Enter キーを押します。  
@@ -57,7 +75,7 @@ caps.handback.revision: 26
   
 3.  **[スタート画面にピン留め]** または **[タスクバーにピン留め]** を選択します。  
   
-##  <a name="a-namebkmkwritinga-writing-code"></a><a name="BKMK_Writing"></a> コードの作成  
+##  <a name="BKMK_Writing"></a> コードの作成  
  コードをすばやく記述するには、次の機能を使用します。  
   
 -   **サンプル アプリケーションを使用する**。 MSDN コード ギャラリーからサンプル アプリケーションをダウンロードしてインストールすると、アプリケーションの開発時間を短縮できます。 また、その分野のサンプル パックをダウンロードして調べることで、特定のテクノロジやプログラミング概念を学習することもできます。  
@@ -72,7 +90,7 @@ caps.handback.revision: 26
   
      スニペットを挿入するには、メニュー バーで **[編集]**、**[IntelliSense]**、**[スニペットの挿入]** の順に選択するか、ファイルのショートカット メニューを開き、**[スニペットの挿入]** を選択します。 詳細については、「[Code Snippets](../ide/code-snippets.md)」を参照してください。  
   
--   **コード エラーをインラインで修正する**。 スマート タグは、コード行の下に青いボックスまたは赤いボックスとして表示されます。 ボックスの&1; つをポイントするか、コード行にカーソルを置き、Ctrl キーを押しながらピリオド (.) キーを押すと、スマート タグのオプションを 表示できます。  
+-   **コード エラーをインラインで修正する**。 スマート タグは、コード行の下に青いボックスまたは赤いボックスとして表示されます。 ボックスの 1 つをポイントするか、コード行にカーソルを置き、Ctrl キーを押しながらピリオド (.) キーを押すと、スマート タグのオプションを 表示できます。  
   
      青いボックスでは、コードのエラーを修正するための推奨方法が表示されます。  
   
@@ -90,7 +108,7 @@ caps.handback.revision: 26
   
      ポップアップ ウィンドウで定義を開くには、要素を強調表示して Alt + F12 キーを押すか、要素のショートカット メニューを開いて **[定義をここに表示]** をクリックします。 定義を別のコード ウィンドウで開くには、コード要素のショートカット メニューを開き、**[定義へ移動]** をクリックします。  
   
-##  <a name="a-namebkmknavigatinga-navigating-within-your-code"></a><a name="BKMK_Navigating"></a> コード内での移動  
+##  <a name="BKMK_Navigating"></a> コード内での移動  
  さまざまな方法を使用して、コード内の特定の場所をすばやく探して移動できます。  
   
 -   **コード行にブックマークを設定する**。 ブックマークを使用すると、ファイル内の特定のコード行にすばやく移動できます。  
@@ -103,7 +121,7 @@ caps.handback.revision: 26
   
 -   **コードの構造全体を参照する**。 **ソリューション エクスプローラー**では、プロジェクト内のクラスとその型およびメンバーを検索および参照できます。 また、シンボルの検索、メソッドの呼び出し階層の表示、シンボル参照の検索などのタスクを実行することもできます。 **ソリューション エクスプローラー**でコード要素を選択すると、関連ファイルが **[プレビュー]** タブに表示され、ファイル内でカーソルがその要素に移動します。 詳細については、「[コードの構造の表示](../ide/viewing-the-structure-of-code.md)」を参照してください。  
   
-##  <a name="a-namebkmkfindinga-finding-items-faster"></a><a name="BKMK_Finding"></a> 項目の検索の高速化  
+##  <a name="BKMK_Finding"></a> 項目の検索の高速化  
  ツール ウィンドウの内容をフィルター処理して、現在のタスクに関連する情報のみを表示するだけでなく、IDE 全体でコマンド、ファイル、およびオプションを検索することもできます。  
   
 -   **ツール ウィンドウの内容をフィルター処理する**。 **[ツールボックス]**、**[プロパティ]** ウィンドウ、**ソリューション エクスプローラー**など、さまざまなツール ウィンドウの内容を検索し、指定した文字が名前に含まれる項目のみを表示できます。  
@@ -118,7 +136,7 @@ caps.handback.revision: 26
   
      **クイック起動**には、**[新しいプロジェクト]** ダイアログ ボックス、**[新しい項目の追加]** ダイアログ ボックス、**[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページなどへのリンクが表示されます。 また、クイック起動の結果には、プロジェクト ファイルおよびツール ウィンドウも含まれます。  
   
-##  <a name="a-namebkmkdebugginga-debugging-code"></a><a name="BKMK_Debugging"></a> コードのデバッグ  
+##  <a name="BKMK_Debugging"></a> コードのデバッグ  
  デバッグには時間がかかる場合がありますが、次のヒントはその処理時間を短縮するのに役立ちます。  
   
 -   **さまざまなブラウザーで同じページ、アプリケーション、またはサイトをテストする**。 コードをデバッグする際に、**[ブラウザーの選択]** ダイアログ ボックスを開かなくても、[Page Inspector (Visual Studio)](http://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209) など、インストールされている Web ブラウザーを簡単に切り替えることができます。 **[標準]** ツール バーの **[デバッグ開始]** ボタンの横にある **[デバッグ ターゲット]** ボックスを使用すると、ページをデバッグまたは表示する際に使用しているブラウザーを即座に確認できます。  
@@ -141,7 +159,7 @@ caps.handback.revision: 26
   
      その他のコマンドの詳細については、[Visual Studio コマンドのエイリアス](../ide/reference/visual-studio-command-aliases.md)に関するページを参照してください。  
   
-##  <a name="a-namebkmkmanaginga-managing-files-toolbars-and-windows"></a><a name="BKMK_Managing"> ファイル、ツール バー、およびウィンドウの管理</a>  
+##  <a name="BKMK_Managing"></a> ファイル、ツール バー、およびウィンドウの管理  
  アプリケーションを開発する際には、ほとんどの場合、複数のコード ファイルを操作し、さまざまなツール ウィンドウを行き来しながら作業します。 次のヒントに従うと、作業効率を上げることができます。  
   
 -   **よく使用するファイルをエディターに表示したままにする**。 ファイルをタブの左側に固定すると、エディターで開いているファイルの数に関係なく、ファイルを表示したままにできます。  
@@ -150,7 +168,7 @@ caps.handback.revision: 26
   
 -   **ドキュメントやウィンドウを他のモニターに移動する**。 アプリケーションを開発する際にマルチモニターを使用する場合は、エディターで開いているファイルを別のモニターに移動すると、アプリケーションの特定の部分の作業がより簡単になります。 デバッガー ウィンドウなどのツール ウィンドウを別のモニターに移動することや、タブによりドキュメントとツール ウィンドウをまとめてドッキングして、「ラフティング」を作成することもできます。 詳細については、「[方法: ウィンドウを整列およびドッキングする](../misc/how-to-arrange-and-dock-windows.md)」を参照してください。  
   
-     また、**ソリューション エクスプローラー**のインスタンスをもう&1; つ作成し、それを別のモニターに移動すると、ファイルをより簡単に管理できます。 **ソリューション エクスプローラー**のインスタンスをもう&1; つ作成するには、**ソリューション エクスプローラー**のショートカット メニューを開き、**[新しいソリューション エクスプローラー ビュー]** を選択します。  
+     また、**ソリューション エクスプローラー**のインスタンスをもう 1 つ作成し、それを別のモニターに移動すると、ファイルをより簡単に管理できます。 **ソリューション エクスプローラー**のインスタンスをもう 1 つ作成するには、**ソリューション エクスプローラー**のショートカット メニューを開き、**[新しいソリューション エクスプローラー ビュー]** を選択します。  
   
 -   **Visual Studio に表示されるフォントをカスタマイズする**。 IDE のテキストに使用されるフォント フェイス、サイズ、および色を変更できます。 たとえば、エディター内の特定のコード要素の色や、ツール ウィンドウまたは IDE 全体のフォント フェイスをカスタマイズできます。 詳細については、「[方法: Visual Studio で使用するフォントと色を変更する](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)」および「[方法 : エディターで使用するフォントのフォント フェイス、サイズ、色を変更する](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)」を参照してください。  
   
@@ -159,8 +177,3 @@ caps.handback.revision: 26
  [方法: メニューおよびツール バーをカスタマイズする](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)   
  [チュートリアル : 簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)   
  [アクセシビリティのヒントとテクニック](../ide/reference/accessibility-tips-and-tricks.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

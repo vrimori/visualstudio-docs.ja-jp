@@ -1,25 +1,44 @@
 ---
-title: "ご意見 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/10/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "製品サポート [Visual Studio]"
-  - "ヘルプ [Visual Studio]、製品サポート"
+title: "ご意見 | Microsoft ドキュメント"
+ms.custom: 
+ms.date: 03/07/2017
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- product support [Visual Studio]
+- Help [Visual Studio], product support
 ms.assetid: e0846d4d-2ce1-48e3-b219-674ff070bf4e
-author: "TerryGLee"
-ms.author: "tglee"
-manager: "ghogen"
-caps.handback.revision: 31
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: d580064a03291aad49134674bd42413ae05e3e72
+ms.lasthandoff: 03/07/2017
+
 ---
 # <a name="talk-to-us"></a>Talk to Us
 製品およびドキュメントをより良いものにするために、皆様のご意見をお寄せください。 いつも個別に回答できるとは限りませんが、お寄せいただいたフィードバックは、適切な担当者または担当チームに届けられます。  
 
 ## <a name="i-want-to-report-a-problem-with-visual-studio"></a>Visual Studio に関する問題を報告する方法  
- クラッシュ、パフォーマンスの低下、予期しない動作など、Visual Studio の使用で問題が発生している場合は、**[問題の報告]** ツールを使用して、Microsoft に問題をご連絡ください。 **[クイック起動]** の横にあるフィードバック アイコンをクリックするか、メイン メニューの **[ヘルプ &#124; フィードバックの送信 &#124; 問題の報告]** をクリックします。 詳細については、「[How to Report a Problem with Visual Studio 2017 RC](how-to-report-a-problem-with-visual-studio-2017.md)」 (Visual Studio 2017 RC に関する問題を報告する方法) を参照してください。  
+ クラッシュ、パフォーマンスの低下、予期しない動作など、Visual Studio の使用で問題が発生している場合は、**[問題の報告]** ツールを使用して、Microsoft に問題をご連絡ください。 **[クイック起動]** の横にあるフィードバック アイコンをクリックするか、メイン メニューの **[ヘルプ &#124; フィードバックの送信 &#124; 問題の報告]** をクリックします。 詳しくは、「[Visual Studio 2017 で問題を報告する方法](how-to-report-a-problem-with-visual-studio-2017.md)」をご覧ください。  
 
 ## <a name="i-want-to-make-a-suggestion-about-visual-studio-features"></a>Visual Studio の機能に関するご提案  
  改善できる点がありましたら、ぜひご連絡ください! **[提案事項の送信]** を選択して、Visual Studio チームに機能または変更を提案します。 提案事項は自動的に [UserVoice](https://visualstudio.uservoice.com) に投稿され、それに対して他のユーザーが投票できるようになります。  
@@ -28,7 +47,7 @@ caps.handback.revision: 31
  Visual Studio のプレリリース版には、 **[この製品を評価する]** メニュー項目があり、実行しているビルドの品質に関するフィードバックを送信できます。 これは製品のリリース版には表示されません。  
 
 ## <a name="i-want-to-contact-microsoft-support"></a>Microsoft サポートに問い合わせる  
-Visual Studio のサポート オプションについては、[サポートの概要](http://www.visualstudio.com/support/support-overview-vs)に関するページを参照してください。
+Visual Studio のサポート オプションについては、[サポートの概要](https://www.visualstudio.com/vs/support/)に関するページを参照してください。
 
 その他の Microsoft 製品とサービスについては、オンラインヘルプの「[Microsoft サポート](http://go.microsoft.com/fwlink/?LinkID=99019)」を参照してください。
 
@@ -49,9 +68,4 @@ Microsoft サポート サービスは、当時最新だった価格、条項、
 
 ## <a name="see-also"></a>関連項目  
  [Visual Studio に関する問題を報告する方法](how-to-report-a-problem-with-visual-studio-2017.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

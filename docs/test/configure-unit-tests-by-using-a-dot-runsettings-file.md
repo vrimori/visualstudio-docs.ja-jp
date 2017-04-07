@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f7e9e4a2-5d01-4f78-b408-5be3892bd162
 caps.latest.revision: 25
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -30,6 +30,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: 04c981d458912aaf3802e727369893759faab3a5
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>.runsettings ファイルを使用して単体テストを構成する
@@ -58,7 +59,7 @@ Visual Studio の単体テストは、*.runsettings ファイルを使用して�
   
  ![実行設定ファイルの有効化](../test/media/runsettings-1.png "RunSettings-1")  
   
-##  <a name="a-nameexamplea-copy-this-example-runsettings-file"></a><a name="example"></a> このサンプル .runsettings ファイルをコピーする  
+##  <a name="example"></a> このサンプル .runsettings ファイルをコピーする  
  一般的な *.runsettings ファイルを示します。 すべての値には既定値があるため、ファイルの各要素は省略可能です。  
   
 ```xml  
@@ -180,8 +181,4 @@ Visual Studio の単体テストは、*.runsettings ファイルを使用して�
 ## <a name="see-also"></a>関連項目  
  [コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)   
  [Visual Studio のテストにおけるテスト設定の指定](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

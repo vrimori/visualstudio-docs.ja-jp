@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e273f31cb1f43ff79fd9a4ade37d112351dea9b5
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 19ce2d4cc1ff92240529f35f42845778ded49fdf
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="migrate-64-bit-debugger-com-class-registration"></a>64 ビット デバッガー COM クラスの登録を移行します。
-
->**注:**このドキュメントは暫定版であり、Visual Studio 2017 RC リリースに基づいています。
 
 (Regasm、regsvr32 を使用して、レジストリへの直接書き込み、)、HKEY_CLASSES_ROOT に COM クラスを登録し、msvsmon.exe (リモート デバッガー) に読み込まれるデバッガー拡張機能には、HKEY_CLASSES_ROOT を記述せずに msvsmon には、この登録を提供することはようになりました。 これは、従来の .NET デバッガー式エバリュエーターまたは msvsmon.exe プロセスで読み込むように構成されているデバッグ エンジンに影響します。
 

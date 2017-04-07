@@ -4,6 +4,7 @@
 ### [Azure SDK for Python](azure-sdk-for-python.md)
 ## [Python の概要](getting-started.md)
 ### [Azure への発行](publishing-to-azure.md)
+### [Python 向け C++ 拡張機能の作成](cpp-and-python.md)
 ## [Python プロジェクト](python-projects.md)
 ### [Web プロジェクト テンプレート](template-web.md)
 ### [Django Web プロジェクト テンプレート](template-django.md)

@@ -1,25 +1,44 @@
 ---
 title: "Visual C# のコード スニペット | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "スニペット [C#]、既定のスニペット"
-  - "スニペット[C#]、コード スニペット挿入機能"
-  - "コード スニペット挿入機能 [J#]"
-  - "コード スニペット挿入機能 [C#]"
-  - "Visual C#、既定のスニペット"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snippets [C#], default snippets
+- snippets [C#], Code Snippet Inserter
+- Code Snippet Inserter [J#]
+- Code Snippet Inserter [C#]
+- Visual C#, default snippets
 ms.assetid: dbea3dd6-e650-4190-b874-c9f097d7de6e
 caps.latest.revision: 33
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 33
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 01c13c4e0c9107f07580fb1701f81eac74a5022f
+ms.lasthandoff: 03/22/2017
+
 ---
 # <a name="visual-c-code-snippets"></a>Visual C# のコード スニペット
 コード スニペットは、あらかじめ用意されているコードのスニペットで、コードにすぐに挿入できます。 たとえば、`for` コード スニペットは空の `for` ループを作成します。 一部のコード スニペットは surround-with コード スニペットであり、コード行を選んでから、選んだコード行を組み込むコード スニペットを選ぶことができます。 たとえば、コード行を選んでから `for` コード スニペットをアクティブにすると、選んだコード行がループ ブロックの中に含まれる `for` ループが作成されます。 コード スニペットを使うと、速く、容易に、信頼性の高いプログラム コードを作成できます。  
@@ -59,7 +78,7 @@ caps.handback.revision: 33
 |mbox|<xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> の呼び出しを作成します。 場合によっては、System.Windows.Forms.dll への参照を追加する必要があります。|メソッド、インデクサー、プロパティ アクセサー、またはイベント アクセサーの内部。|  
 |namespace|[namespace](/dotnet/csharp/language-reference/keywords/namespace) 宣言を作成します。|名前空間 (グローバル名前空間を含む) の内部。|  
 |prop|[自動実装プロパティ](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)の宣言を作成します。|クラスまたは構造体の内部。|  
-ropfull|get および set アクセサーを持つプロパティの宣言を作成します。|クラスまたは構造体の内部。|  
+propfull|get および set アクセサーを持つプロパティの宣言を作成します。|クラスまたは構造体の内部。|  
 |propg|プライベートな "set" アクセサーを持つ読み取り専用の[自動実装プロパティ](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)を作成します。|クラスまたは構造体の内部。|  
 |sim|[static](/dotnet/csharp/language-reference/keywords/static) [int](/dotnet/csharp/language-reference/keywords/int) の Main メソッドの宣言を作成します。|クラスまたは構造体の内部。|  
 |struct|[struct](/dotnet/csharp/language-reference/keywords/struct) 宣言を作成します。|名前空間 (グローバル名前空間を含む)、クラス、または構造体の内部。|  
@@ -79,8 +98,4 @@ ropfull|get および set アクセサーを持つプロパティの宣言を作
  [テンプレート パラメーター](../ide/template-parameters.md)   
  [方法 : surround-with コード スニペットを使用する](../ide/how-to-use-surround-with-code-snippets.md)   
  
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -2,7 +2,6 @@
 # [Visual Studio グラフィックス診断の概要](overview-of-visual-studio-graphics-diagnostics.md)
 # [Visual Studio グラフィックス診断の使用を開始する](getting-started-with-visual-studio-graphics-diagnostics.md)
 # [グラフィックス情報をキャプチャする](capturing-graphics-information.md)
-# [GPU 使用率](gpu-usage.md)
 # [グラフィックス ログ ドキュメント](graphics-log-document.md)
 # [グラフィックス フレーム分析](graphics-frame-analysis.md)
 ## [1x1 ビューポイント サイズ バリアント](1x1-viewport-size-variant.md)

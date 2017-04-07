@@ -27,16 +27,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: b259c5d02a452bfaa3bd59f2096b43ee1c1c5942
-ms.openlocfilehash: 352de7f71f8a6c16439061c9815219e5f2b3840a
+ms.sourcegitcommit: 3b812629bf0f655f39c35a56eb1b3ca9113303a6
+ms.openlocfilehash: 8bf6d49b21d128d15f5312fb230d4a8e7a8195af
+ms.lasthandoff: 03/01/2017
 
 ---
 
 # <a name="go-to"></a>[移動]
 キーボードとマウスを使って、Visual Studio IDE 内のコード間を簡単に移動する方法が多数あります。
 
+<!-- VERSIONLESS -->
 ## <a name="go-to-all"></a>すべてにジャンプ
-コード内を移動して、探している特定のものを検索できます。  特定の行、型、シンボル、ファイル、その他を、簡単なインターフェイスで検索できます。
+この機能は Visual Studio 2017 以降に備わっています。  コード内を移動して、探している特定の部分を検索できます。  特定の行、型、シンボル、ファイル、その他をシンプルな統一されたインターフェイスで検索できます。
 
 ### <a name="how-to-use"></a>使い方
 * **キーボード**
@@ -81,6 +83,7 @@ t      | ![型アイコン](media/gotoall_typeicon.png)     | Ctrl +&1;、Ctrl +
 プレビュー タブを使用する | 選んだ項目を IDE の [プレビュー] タブにすぐに表示します
 詳細の表示    | プロジェクト、ファイル、行、およびドキュメントのコメントから取得した概要情報をウィンドウに表示します
 ウィンドウを中央に   | このウィンドウを右上ではなく IDE の中央に移動します
+<!-- END VERSIONLESS -->
 
 ## <a name="go-to-definition"></a>[定義へ移動]
 型のソースに移動し、結果を新しいタブで開きます。
@@ -125,8 +128,3 @@ Visual Studio のナビゲーション機能を使うと、スタックを前後
 **Ctrl + Shift + -**    | スタックを前方に移動します
 
 **[表示] > [後ろに移動する]** および **[表示] > [前に移動する]** メニュー項目を使うこともできます。
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -1,27 +1,46 @@
 ---
 title: "同時実行ビジュアライザー マーカー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.markersui"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.cv.markersui
 ms.assetid: c4692d17-6cd2-4ad1-8590-d7275c771c70
 caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: dcabdd5ca1381ec15e66637a35044c456411c8c7
+ms.lasthandoff: 04/05/2017
+
 ---
 # <a name="concurrency-visualizer-markers"></a>同時実行ビジュアライザー マーカー
 同時実行ビジュアライザーのマーカーはアプリ内のイベントを表すアイコンです。  通常、アプリはこれらのイベントを生成して、アプリケーションでのフェーズまたは出現回数を指定します。  アプリ、またはアプリで使用するライブラリとランタイムでイベントを生成することができます。  
   
 ## <a name="kinds-of-markers"></a>マーカーの種類  
- 同時実行ビジュアライザーでは、アプリケーション イベントを表す&3; 種類のマーカー (フラグ、メッセージ、スパン) が使用されます。  
+ 同時実行ビジュアライザーでは、アプリケーション イベントを表す 3 種類のマーカー (フラグ、メッセージ、スパン) が使用されます。  
   
 1.  アプリの特定の時点を示す場合は、*フラグ*を使用します。  たとえば、変数値が特定のしきい値に達したことや、例外がスローされたことを表す場合はフラグを使用できます。  
   
@@ -49,11 +68,11 @@ caps.handback.revision: 12
   
 -   [Parallel LINQ (PLINQ)](http://msdn.microsoft.com/Library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)  
   
--   [同時実行ランタイム](/visual-cpp/parallel/concrt/concurrency-runtime)  
+-   [同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)  
   
 -   [シナリオ マーカーのサポート](http://msdn.microsoft.com/en-us/e3b55bc2-b451-4214-ae00-0c7f5a5baec8)  
   
--   [C++ AMP (C++ Accelerated Massive Parallelism)](/visual-cpp/parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism)  
+-   [C++ AMP (C++ Accelerated Massive Parallelism)](/cpp/parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism)  
   
  [[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスの [マーカー] タブを使用して、同時実行ビジュアライザーでさまざまなソースからのマーカーを表示するかどうかを制御できます。また、重要度とカテゴリに基づいて、マーカーをフィルター処理することができます。  
   
@@ -65,8 +84,3 @@ caps.handback.revision: 12
  [メッセージ マーカー](../profiling/message-markers.md)   
  [スパン マーカー](../profiling/span-markers.md)   
  [マーカーとしての EventSource イベントの視覚化](../profiling/visualizing-eventsource-events-as-markers.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

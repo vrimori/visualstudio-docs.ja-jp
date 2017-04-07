@@ -153,7 +153,7 @@
 ## [ToggleBreakpoint コマンド](toggle-breakpoint-command.md)
 ## [Watch コマンド](watch-command.md)
 # [Visual Studio の XML ツール](../../xml-tools/xml-tools-in-visual-studio.md)
-# [MSBuild](../../msbuild/msbuild1.md)
+# [MSBuild](../../msbuild/msbuild.md)
 # [障碍があるユーザーのための機能](accessibility-for-people-with-disabilities.md)
 ## [Visual Studio のユーザー補助機能](accessibility-features-of-visual-studio.md)
 ### [方法: IDE アクセシビリティ オプションを設定する](how-to-set-ide-accessibility-options.md)

@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio 2017 RC へようこそ | Microsoft Docs"
+title: "Visual Studio 2017 へようこそ | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 03/02/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -10,7 +10,7 @@ f1_keywords:
 - msdnstart
 helpviewer_keywords:
 - Visual Studio
-- Visual Studio 2017 RC
+- Visual Studio 2017
 ms.assetid: ba237712-f8c4-4d13-854b-ab4a16afa309
 caps.latest.revision: 125
 author: kempb
@@ -32,27 +32,25 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 10e877cbba18807926ad032e9cc1b94f08f0c843
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 7ec312bf7c85759fef700f0746c0981f263d46e2
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="welcome-to-visual-studio-2017-rc"></a>Visual Studio 2017 RC へようこそ
-Visual Studio へようこそ。 デバイスまたはデスクトップで機能する Web およびクラウド向けの優れたアプリを作成するのに必要なものがすべて揃っています。 iOS、Android、Windows 用のコードを&1; つの統合開発環境 (IDE) で記述してください。 便利な IntelliSense、簡単なコード ナビゲーション、高速なビルド、すばやい配置をご利用ください。 Visual Studio なら生産性が向上し、単独での作業も、より大きなチームの一員としての作業も容易になります。  
+# <a name="welcome-to-visual-studio-2017"></a>Visual Studio 2017 へようこそ
+デバイスまたはデスクトップで機能する Web およびクラウド向けの優れたアプリを作成するのに必要なものがすべて揃っています。 iOS、Android、Linux、Windows、その他用のコードを&1; つの統合開発環境 (IDE) で記述してください。 便利な対話型コード ヘルプ (*IntelliSense*)、簡単なコード ナビゲーションとデバッグ、高速なビルド、すばやいデプロイをご利用ください。 Visual Studio なら生産性が向上し、単独での作業も、より大きなチームの一員としての作業も容易になります。  
 
 > [!NOTE]
->  [Visual Studio 2017 RC](https://go.microsoft.com/fwlink/?linkid=834799) のリリース ノートについては、こちらをクリックしてください。    
+>  [Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=834799) のリリース ノートについては、こちらをクリックしてください。    
 
- [Visual Studio Community](http://go.microsoft.com/fwlink/?LinkId=517106) を無料でダウンロードし、コーディングをすぐに開始してください。 クロス プラットフォーム開発を行う場合は、オプションのパッケージをインストールします。 ([Visual Studio の他のエディション](http://www.visualstudio.com)にはさらに多くの機能があります。)  
+ [Visual Studio Community](http://go.microsoft.com/fwlink/?LinkId=517106) を無料でダウンロードし、コーディングをすぐに開始してください。 クロス プラットフォーム開発を行う場合は、オプションのパッケージをインストールします。 さらに多くの機能が必要な場合は、[Visual Studio の他のエディション](http://www.visualstudio.com)をご確認ください。
 
- Visual Studio 2017 RC は、「[Visual Studio のダウンロード](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)」からダウンロードしてインストールできます。 インストール プロセスの詳細については、「[Installing Visual Studio 2017 RC (Visual Studio 2017 RC のインストール)](https://go.microsoft.com/fwlink/?linkid=833223)」をご覧ください。 すぐに作業に取りかかり、新しいプロジェクトを作成、またはコード ファイルを開いて、コードの記述を開始してください。 作成するアプリの種類を選択します。 あるいは、Visual Studio IDE の[ツアーを見て](https://go.microsoft.com/fwlink/?linkid=833058)、ツールの理解を深めてください。  
+ Visual Studio 2017 は、「[Visual Studio のダウンロード](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)」からダウンロードしてインストールできます。 インストール プロセスについて詳しくは、「[Visual Studio 2017 RC のインストール](https://go.microsoft.com/fwlink/?linkid=833223)」をご覧ください。 すぐに作業に取りかかり、新しいプロジェクトを作成、またはコード ファイルを開いて、コードの記述を開始してください。 作成するアプリの種類を選択します。 あるいは、Visual Studio IDE の[ツアーを見て](https://go.microsoft.com/fwlink/?linkid=833058)、ツールの理解を深めてください。
 
- 忘れずに [コード ギャラリー](https://code.msdn.microsoft.com/) を調べ、アプリをすばやく作成するのに役立つサンプルを見つけてください。 [チャネル 9](https://channel9.msdn.com/VisualStudio) で Visual Studio に関する多くのビデオをご覧ください。
+ 忘れずに [コード ギャラリー](https://code.msdn.microsoft.com/) を調べ、アプリをすばやく作成するのに役立つサンプルを見つけてください。 「[Channel 9](https://channel9.msdn.com/VisualStudio)」と「[Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!jobf=Developer&lang=1033)」で使用可能な多くの無料の Visual Studio ビデオをご確認ください。
 
-## <a name="build-apps-and-games-for-android-ios-and-windows"></a>Android、iOS、Windows 用アプリとゲームを作成する  
- Visual Studio を使用して、Android、iOS、および Windows デバイス用のアプリを作成できます。 詳細については、[クロス プラットフォーム モバイル開発](cross-platform/cross-platform-mobile-development-in-visual-studio.md)に関する記事をご覧ください。  
-
- ユニバーサル Windows アプリ (UWP) の詳細については、「 [ユニバーサル Windows アプリ](https://dev.windows.com/en-us/windows-apps)」を参照してください。  
+## <a name="build-cross-platform-apps-and-games"></a>クロス プラットフォーム アプリとゲームをビルドする  
+ Visual Studio を使用して、Android、iOS、Linux、Windows、その他のデバイス用のアプリとゲームを作成できます。 詳細については、[クロス プラットフォーム モバイル開発](cross-platform/cross-platform-mobile-development-in-visual-studio.md)に関する記事をご覧ください。  ユニバーサル Windows アプリでは、複数のプラットフォームでコードを活用できます。 詳しくは、[ユニバーサル Windows アプリ](https://dev.windows.com/en-us/windows-apps)に関するページをご覧ください。
 
  アプリ要件に基づいて必要なツールと使用する言語を選択します。  
 
@@ -68,14 +66,16 @@ Visual Studio へようこそ。 デバイスまたはデスクトップで機�
 
 DirectX、Unity、Unreal、Cocos などのゲーム開発ツールとともに [Visual Studio を使用してゲームを作成します](https://www.visualstudio.com/vs/game-development/)。
 
-## <a name="connect-your-apps-to-services"></a>アプリをサービスに接続する  
- 追加の設定なしで以下のサービスに接続できます (各サービスのアカウントを持っていることを前提とします)。  
+## <a name="connect-your-apps-to-cloud-services"></a>アプリをクラウド サービスに接続する  
+ Azure などのオンライン アカウント サービスがある場合は、接続済みサービスを使用してそれらにすぐに接続できます。
 
 - [Azure Mobile Services](http://azure.microsoft.com/documentation/services/mobile-services/)  
 
 - [Azure Storage](http://azure.microsoft.com/documentation/services/storage/)  
 
-[Azure 開発ツール](https://azure.microsoft.com/en-us/tools/)をインストールして、IDE からクラウド対応アプリを直接作成し、Azure サービスに接続できます。
+Visual Studio をインストールするときに、必要に応じて **Azure Development** ワークロードをインストールして Azure SDK for .NETを入手します。 これらのツールを使用すると、Azure サービスへの接続だけでなく、IDE から直接クラウド対応のアプリとリソースを作成し、管理できます。
+
+- [HockeyApp](https://www.visualstudio.com/hockey-app/) では、ベータ版の配信、ライブ クラッシュ レポートの収集、実際のユーザーからのフィードバックの取得を行うことができます。
 
 さらに、クラウドに格納されているデータに接続するために、Office 365 REST API を独自のアプリに統合できます。 詳細については、 [これらのサンプル](https://github.com/OfficeDev/?utf8=%E2%9C%93&query=o365)を参照してください。
 
@@ -107,7 +107,7 @@ Visual Studio の新機能について説明します。
 
 |||  
 |-|-|  
-|[Visual Studio 2017 RC の新機能](ide/whats-new-in-visual-studio.md)|[Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
+|[Visual Studio 2017 の新機能](ide/whats-new-in-visual-studio.md)|[Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
 |[Visual C# の新機能](/dotnet/articles/csharp/csharp-7)|
 
 

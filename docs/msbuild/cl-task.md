@@ -1,35 +1,53 @@
 ---
 title: "CL タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.UseUnicodeForAssemblerListing"
-  - "vc.task.cl"
-  - "VC.Project.VCCLCompilerTool.TreatSpecificWarningsAsErrors"
-  - "VC.Project.VCCLCompilerTool.CreateHotpatchableImage"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild (Visual C) CL タスク"
-  - "CL タスク (MSBuild (Visual C++))"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.UseUnicodeForAssemblerListing
+- vc.task.cl
+- VC.Project.VCCLCompilerTool.TreatSpecificWarningsAsErrors
+- VC.Project.VCCLCompilerTool.CreateHotpatchableImage
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MSBuild (Visual C++), CL task
+- CL task (MSBuild (Visual C++))
 ms.assetid: 651ba971-b755-4f03-a549-4816beb3cc0d
 caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 18
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: bde2b08fb3cc1b183d224ab3282e44f21a094403
+ms.lasthandoff: 04/05/2017
+
 ---
 # <a name="cl-task"></a>CL タスク
-Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパイラは、実行可能ファイル (.exe)、ダイナミック リンク ライブラリ (.dll) ファイル、またはコード モジュール (.netmodule) ファイルを生成します。 詳細については、「[コンパイラ オプション](/visual-cpp/build/reference/compiler-options)」を参照してください。  
+Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパイラは、実行可能ファイル (.exe)、ダイナミック リンク ライブラリ (.dll) ファイル、またはコード モジュール (.netmodule) ファイルを生成します。 詳細については、「[コンパイラ オプション](/cpp/build/reference/compiler-options)」を参照してください。  
   
 ## <a name="parameters"></a>パラメーター  
  **CL** タスクのパラメーターの説明を次の表に示します。 タスク パラメーターの大部分とパラメーターのいくつかのセットは、コマンド ライン オプションに対応します。  
@@ -40,7 +58,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      インクルード ファイルを検索するディレクトリのリストにディレクトリを追加します。  
   
-     詳細については、「[/I (追加インクルード ディレクトリ)](/visual-cpp/build/reference/i-additional-include-directories)」を参照してください。  
+     詳細については、「[/I (追加インクルード ディレクトリ)](/cpp/build/reference/i-additional-include-directories)」を参照してください。  
   
 -   **AdditionalOptions**  
   
@@ -48,13 +66,13 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      コマンド ライン オプションのリスト。 "/*option1* /*option2* /*option#*" のようになります。 他のタスク パラメーターでは表されないコマンド ライン オプションを指定する場合は、このパラメーターを使用します。  
   
-     詳細については、「[コンパイラ オプション](/visual-cpp/build/reference/compiler-options)」を参照してください。  
+     詳細については、「[コンパイラ オプション](/cpp/build/reference/compiler-options)」を参照してください。  
   
 -   **AdditionalUsingDirectories**省略可能な String[] 型のパラメーター。  
   
      **#using** ディレクティブに渡されたファイル参照を解決するために、コンパイラによって検索されるディレクトリを指定します。  
   
-     詳細については、「[/AI (メタデータ ディレクトリの指定)](/visual-cpp/build/reference/ai-specify-metadata-directories)」を参照してください。  
+     詳細については、「[/AI (メタデータ ディレクトリの指定)](/cpp/build/reference/ai-specify-metadata-directories)」を参照してください。  
   
 -   **AlwaysAppend**  
   
@@ -66,7 +84,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      アセンブリ コードを含むリスティング ファイルを作成します。  
   
-     詳細については、「[/FA、/Fa (リスティング ファイル)](/visual-cpp/build/reference/fa-fa-listing-file)」の **/Fa** オプションに関する記述を参照してください。  
+     詳細については、「[/FA、/Fa (リスティング ファイル)](/cpp/build/reference/fa-fa-listing-file)」の **/Fa** オプションに関する記述を参照してください。  
   
 -   **AssemblerOutput**  
   
@@ -86,13 +104,13 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **All** - **/FAcs**  
   
-     詳細については、「[/FA、/Fa (リスティング ファイル)](/visual-cpp/build/reference/fa-fa-listing-file)」の **/FA**、**/FAc**、**/FAs**、および **/FAcs** の各オプションに関する記述を参照してください。  
+     詳細については、「[/FA、/Fa (リスティング ファイル)](/cpp/build/reference/fa-fa-listing-file)」の **/FA**、**/FAc**、**/FAs**、および **/FAcs** の各オプションに関する記述を参照してください。  
   
 -   **BasicRuntimeChecks**  
   
      省略可能な String 型のパラメーター。  
   
-     [runtime_checks](/visual-cpp/preprocessor/runtime-checks) プラグマと組み合わせて使用し、ランタイム エラー チェック機能を有効および無効にします。  
+     [runtime_checks](/cpp/preprocessor/runtime-checks) プラグマと組み合わせて使用し、ランタイム エラー チェック機能を有効および無効にします。  
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
@@ -104,7 +122,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **EnableFastChecks** -                          **/RTC1**  
   
-     詳細については、「[/RTC (ランタイム エラー チェック)](/visual-cpp/build/reference/rtc-run-time-error-checks)」を参照してください。  
+     詳細については、「[/RTC (ランタイム エラー チェック)](/cpp/build/reference/rtc-run-time-error-checks)」を参照してください。  
   
 -   **BrowseInformation**  
   
@@ -112,7 +130,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、ブラウザー情報ファイルが作成されます。  
   
-     詳細については、「[/FR、/Fr (.sbr ファイルの作成)](/visual-cpp/build/reference/fr-fr-create-dot-sbr-file)」の **/FR** オプションに関する記述を参照してください。  
+     詳細については、「[/FR、/Fr (.sbr ファイルの作成)](/cpp/build/reference/fr-fr-create-dot-sbr-file)」の **/FR** オプションに関する記述を参照してください。  
   
 -   **BrowseInformationFile**  
   
@@ -120,7 +138,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      ブラウザー情報ファイルのファイル名を指定します。  
   
-     詳細については、この表の **BrowseInformation** パラメーターを参照してください。また、「[/FR、/Fr (.sbr ファイルの作成)](/visual-cpp/build/reference/fr-fr-create-dot-sbr-file)」も参照してください。  
+     詳細については、この表の **BrowseInformation** パラメーターを参照してください。また、「[/FR、/Fr (.sbr ファイルの作成)](/cpp/build/reference/fr-fr-create-dot-sbr-file)」も参照してください。  
   
 -   **BufferSecurityCheck**  
   
@@ -128,7 +146,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、リターン アドレス (バッファー サイズの制限を適用しないコードを利用するための一般的な方法) を上書きするいくつかのバッファー オーバーランが検出されます。  
   
-     詳細については、「[/GS (バッファーのセキュリティ チェック)](/visual-cpp/build/reference/gs-buffer-security-check)」を参照してください。  
+     詳細については、「[/GS (バッファーのセキュリティ チェック)](/cpp/build/reference/gs-buffer-security-check)」を参照してください。  
   
 -   **BuildingInIDE**  
   
@@ -150,7 +168,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **StdCall** -                          **/Gz**  
   
-     詳細については、「[/Gd、/Gr、/Gv、/Gz (呼び出し規則)](/visual-cpp/build/reference/gd-gr-gv-gz-calling-convention)」を参照してください。  
+     詳細については、「[/Gd、/Gr、/Gv、/Gz (呼び出し規則)](/cpp/build/reference/gd-gr-gv-gz-calling-convention)」を参照してください。  
   
 -   **CompileAs**  
   
@@ -166,7 +184,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **CompileAsCpp** - **/TP**  
   
-     詳細については、「[/Tc、/Tp、/TC、/TP (ソース ファイル タイプの指定)](/visual-cpp/build/reference/tc-tp-tc-tp-specify-source-file-type)」を参照してください。  
+     詳細については、「[/Tc、/Tp、/TC、/TP (ソース ファイル タイプの指定)](/cpp/build/reference/tc-tp-tc-tp-specify-source-file-type)」を参照してください。  
   
 -   **CompileAsManaged**  
   
@@ -186,15 +204,15 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **OldSyntax** - **/clr:oldSyntax**  
   
-     詳細については、「[/clr (共通言語ランタイムのコンパイル)](/visual-cpp/build/reference/clr-common-language-runtime-compilation)」を参照してください。  
+     詳細については、「[/clr (共通言語ランタイムのコンパイル)](/cpp/build/reference/clr-common-language-runtime-compilation)」を参照してください。  
   
 -   **CreateHotpatchableImage**  
   
      省略可能な Boolean 型のパラメーター。  
   
-     `true` の場合は、*ホット パッチ*用のイメージを準備するようにコンパイラに指示します。 このパラメーターを使用することで、各関数の最初の命令が確実にホットパッチに必要な&2; バイトになります。  
+     `true` の場合は、*ホット パッチ*用のイメージを準備するようにコンパイラに指示します。 このパラメーターを使用することで、各関数の最初の命令が確実にホットパッチに必要な 2 バイトになります。  
   
-     詳細については、「[/hotpatch (ホットパッチ可能なイメージの作成)](/visual-cpp/build/reference/hotpatch-create-hotpatchable-image)」を参照してください。  
+     詳細については、「[/hotpatch (ホットパッチ可能なイメージの作成)](/cpp/build/reference/hotpatch-create-hotpatchable-image)」を参照してください。  
   
 -   **DebugInformationFormat**  
   
@@ -210,7 +228,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **EditAndContinue** - **/ZI**  
   
-     詳細については、「[/Z7、/Zi、/ZI (デバッグ情報の形式)](/visual-cpp/build/reference/z7-zi-zi-debug-information-format)」を参照してください。  
+     詳細については、「[/Z7、/Zi、/ZI (デバッグ情報の形式)](/cpp/build/reference/z7-zi-zi-debug-information-format)」を参照してください。  
   
 -   **DisableLanguageExtensions**  
   
@@ -218,7 +236,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      **true** の場合は、ANSI C や ANSI C++ と互換性のない言語コンストラクトに対してエラーを出力するようコンパイラに指示します。  
   
-     詳細については、「[/Za、/Ze (言語拡張機能の無効化)](/visual-cpp/build/reference/za-ze-disable-language-extensions)」の **/Za** オプションに関する記述を参照してください。  
+     詳細については、「[/Za、/Ze (言語拡張機能の無効化)](/cpp/build/reference/za-ze-disable-language-extensions)」の **/Za** オプションに関する記述を参照してください。  
   
 -   **DisableSpecificWarnings**  
   
@@ -226,7 +244,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      セミコロン区切りリストで指定されている警告番号を無効にします。  
   
-     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/visual-cpp/build/reference/compiler-option-warning-level)」の `/wd` オプションに関する記述を参照してください。  
+     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/cpp/build/reference/compiler-option-warning-level)」の `/wd` オプションに関する記述を参照してください。  
   
 -   **EnableEnhancedInstructionSet**  
   
@@ -240,7 +258,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **StreamingSIMDExtensions2** - **/arch:SSE2**  
   
-     詳細については、「[/arch (x86)](/visual-cpp/build/reference/arch-x86)」を参照してください。  
+     詳細については、「[/arch (x86)](/cpp/build/reference/arch-x86)」を参照してください。  
   
 -   **EnableFiberSafeOptimizations**  
   
@@ -248,7 +266,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、静的スレッド ローカル ストレージを使用して割り当てられたデータ (つまり、`__declspec(thread)` を使用して割り当てられたデータ) に対して、ファイバー保護をサポートします。  
   
-     詳細については、「[/GT (スレッド ローカル ストレージを使用したファイバー保護のサポート)](/visual-cpp/build/reference/gt-support-fiber-safe-thread-local-storage)」を参照してください。  
+     詳細については、「[/GT (スレッド ローカル ストレージを使用したファイバー保護のサポート)](/cpp/build/reference/gt-support-fiber-safe-thread-local-storage)」を参照してください。  
   
 -   **EnablePREfast**  
   
@@ -256,7 +274,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、コード分析が有効になります。  
   
-     詳細については、「[/analyze (コード分析)](/visual-cpp/build/reference/analyze-code-analysis)」を参照してください。  
+     詳細については、「[/analyze (コード分析)](/cpp/build/reference/analyze-code-analysis)」を参照してください。  
   
 -   **ErrorReporting**  
   
@@ -274,7 +292,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **Send** - **/errorReport:send**  
   
-     詳細については、「[/errorReport (内部コンパイラ エラーの報告)](/visual-cpp/build/reference/errorreport-report-internal-compiler-errors)」を参照してください。  
+     詳細については、「[/errorReport (内部コンパイラ エラーの報告)](/cpp/build/reference/errorreport-report-internal-compiler-errors)」を参照してください。  
   
 -   **ExceptionHandling**  
   
@@ -292,7 +310,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **SyncCThrow** - **/EHs**  
   
-     詳細については、「[/EH (例外処理モデル)](/visual-cpp/build/reference/eh-exception-handling-model)」を参照してください。  
+     詳細については、「[/EH (例外処理モデル)](/cpp/build/reference/eh-exception-handling-model)」を参照してください。  
   
 -   **ExpandAttributedSource**  
   
@@ -300,7 +318,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、ソース ファイルに拡張された属性を挿入したリスティング ファイルが作成されます。  
   
-     詳細については、「[/Fx (挿入されたコードのマージ)](/visual-cpp/build/reference/fx-merge-injected-code)」を参照してください。  
+     詳細については、「[/Fx (挿入されたコードのマージ)](/cpp/build/reference/fx-merge-injected-code)」を参照してください。  
   
 -   **FavorSizeOrSpeed**  
   
@@ -316,7 +334,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **Speed** - **/Ot**  
   
-     詳細については、「[/Os、/Ot (実行可能ファイルのサイズの優先、実行速度の優先)](/visual-cpp/build/reference/os-ot-favor-small-code-favor-fast-code)」を参照してください。  
+     詳細については、「[/Os、/Ot (実行可能ファイルのサイズの優先、実行速度の優先)](/cpp/build/reference/os-ot-favor-small-code-favor-fast-code)」を参照してください。  
   
 -   **FloatingPointExceptions**  
   
@@ -324,7 +342,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、信頼性の高い浮動小数点例外モデルが有効になります。 例外は発生直後にスローされます。  
   
-     詳細については、「[/fp (浮動小数点の動作の指定)](/visual-cpp/build/reference/fp-specify-floating-point-behavior)」の /**fp:except** オプションに関する記述を参照してください。  
+     詳細については、「[/fp (浮動小数点の動作の指定)](/cpp/build/reference/fp-specify-floating-point-behavior)」の /**fp:except** オプションに関する記述を参照してください。  
   
 -   **FloatingPointModel**  
   
@@ -340,13 +358,13 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **Fast** - **/fp:fast**  
   
-     詳細については、「[/fp (浮動小数点の動作の指定)](/visual-cpp/build/reference/fp-specify-floating-point-behavior)」を参照してください。  
+     詳細については、「[/fp (浮動小数点の動作の指定)](/cpp/build/reference/fp-specify-floating-point-behavior)」を参照してください。  
   
 -   **ForceConformanceInForLoopScope**  
   
      省略可能な Boolean 型のパラメーター。  
   
-     `true` の場合は、Microsoft の拡張機能 ([/Ze](/visual-cpp/build/reference/za-ze-disable-language-extensions)) を使用する [for](/visual-cpp/cpp/for-statement-cpp) ループの標準 C++ 動作が実装されます。  
+     `true` の場合は、Microsoft の拡張機能 ([/Ze](/cpp/build/reference/za-ze-disable-language-extensions)) を使用する [for](/cpp/cpp/for-statement-cpp) ループの標準 C++ 動作が実装されます。  
   
      詳細については、「[/Zc:forScope (for ループのスコープの強制準拠)](http://msdn.microsoft.com/Library/3031f02d-3b14-4ad0-869e-22b0110c3aed)」を参照してください。  
   
@@ -354,17 +372,17 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      省略可能な `String[]` 型のパラメーターです。  
   
-     プリプロセッサで、指定された&1; つ以上のヘッダー ファイルが処理されます。  
+     プリプロセッサで、指定された 1 つ以上のヘッダー ファイルが処理されます。  
   
-     詳細については、「[/FI (強制インクルード ファイルの名前の指定)](/visual-cpp/build/reference/fi-name-forced-include-file)」を参照してください。  
+     詳細については、「[/FI (強制インクルード ファイルの名前の指定)](/cpp/build/reference/fi-name-forced-include-file)」を参照してください。  
   
 -   **ForcedUsingFiles**  
   
      省略可能な **String[]** 型のパラメーターです。  
   
-     プリプロセッサで、指定された&1; つ以上の **#using** ファイルが処理されます。  
+     プリプロセッサで、指定された 1 つ以上の **#using** ファイルが処理されます。  
   
-     詳細については、「[/FU (強制 #using ファイルの名前の指定)](/visual-cpp/build/reference/fu-name-forced-hash-using-file)」を参照してください。  
+     詳細については、「[/FU (強制 #using ファイルの名前の指定)](/cpp/build/reference/fu-name-forced-hash-using-file)」を参照してください。  
   
 -   **FunctionLevelLinking**  
   
@@ -372,7 +390,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、コンパイラで、パッケージ化された関数の形式 (COMDATs) で個別の関数をパッケージ化できるようにします。  
   
-     詳細については、「[/Gy (関数レベルのリンクの有効化)](/visual-cpp/build/reference/gy-enable-function-level-linking)」を参照してください。  
+     詳細については、「[/Gy (関数レベルのリンクの有効化)](/cpp/build/reference/gy-enable-function-level-linking)」を参照してください。  
   
 -   **GenerateXMLDocumentationFiles**  
   
@@ -380,7 +398,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、コンパイラでソース コード ファイルのドキュメント コメントが処理され、ドキュメント コメントを含むソース コード ファイルごとに .xdc ファイルが作成されます。  
   
-     詳細については、「[/doc (ドキュメント コメントの処理) (C/C++)](/visual-cpp/build/reference/doc-process-documentation-comments-c-cpp)」を参照してください。 この表の **XMLDocumentationFileName** パラメーターも参照してください。  
+     詳細については、「[/doc (ドキュメント コメントの処理) (C/C++)](/cpp/build/reference/doc-process-documentation-comments-c-cpp)」を参照してください。 この表の **XMLDocumentationFileName** パラメーターも参照してください。  
   
 -   **IgnoreStandardIncludePath**  
   
@@ -388,7 +406,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、コンパイラが、PATH および INCLUDE 環境変数で指定されているディレクトリ内のインクルード ファイルを検索しないようにします。  
   
-     詳細については、「[/X (標準インクルード パスの無視)](/visual-cpp/build/reference/x-ignore-standard-include-paths)」を参照してください。  
+     詳細については、「[/X (標準インクルード パスの無視)](/cpp/build/reference/x-ignore-standard-include-paths)」を参照してください。  
   
 -   **InlineFunctionExpansion**  
   
@@ -406,7 +424,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **AnySuitable** - **/Ob2**  
   
-     詳細については、「[/Ob (関数のインライン展開)](/visual-cpp/build/reference/ob-inline-function-expansion)」を参照してください。  
+     詳細については、「[/Ob (関数のインライン展開)](/cpp/build/reference/ob-inline-function-expansion)」を参照してください。  
   
 -   **IntrinsicFunctions**  
   
@@ -414,7 +432,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、一部の関数呼び出しが組み込み関数に置き換えられます。それ以外の場合は、特殊な形式の関数が使用されます。これは、アプリケーションの実行時間を短縮するのに役立ちます。  
   
-     詳細については、「[/Oi (組み込み関数の生成)](/visual-cpp/build/reference/oi-generate-intrinsic-functions)」を参照してください。  
+     詳細については、「[/Oi (組み込み関数の生成)](/cpp/build/reference/oi-generate-intrinsic-functions)」を参照してください。  
   
 -   **MinimalRebuild**  
   
@@ -422,7 +440,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、最小リビルドが有効になります。これにより、(ヘッダー (.h) ファイルに格納されている) 変更された C++ クラス定義を含む C++ ソース ファイルを再コンパイルする必要があるかどうかが決定されます。  
   
-     詳細については、「[/Gm (簡易リビルドの有効化)](/visual-cpp/build/reference/gm-enable-minimal-rebuild)」を参照してください。  
+     詳細については、「[/Gm (簡易リビルドの有効化)](/cpp/build/reference/gm-enable-minimal-rebuild)」を参照してください。  
   
 -   **MultiProcessorCompilation**  
   
@@ -430,7 +448,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、複数のプロセッサを使用してコンパイルします。 このパラメーターでは、コンピューター上の有効なプロセッサごとにプロセスが作成されます。  
   
-     詳細については、「[/MP (複数のプロセスを使用したビルド)](/visual-cpp/build/reference/mp-build-with-multiple-processes)」を参照してください。 この表にある **ProcessorNumber** パラメーターも参照してください。  
+     詳細については、「[/MP (複数のプロセスを使用したビルド)](/cpp/build/reference/mp-build-with-multiple-processes)」を参照してください。 この表にある **ProcessorNumber** パラメーターも参照してください。  
   
 -   **ObjectFileName**  
   
@@ -438,7 +456,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      既定値の代わりに使用する、オブジェクト (.obj) ファイルの名前またはディレクトリを指定します。  
   
-     詳細については、「[/Fo (オブジェクト ファイルの名前の指定)](/visual-cpp/build/reference/fo-object-file-name)」を参照してください。  
+     詳細については、「[/Fo (オブジェクト ファイルの名前の指定)](/cpp/build/reference/fo-object-file-name)」を参照してください。  
   
 -   **ObjectFiles**  
   
@@ -452,7 +470,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、オブジェクト (.obj) ファイルの既定の C ランタイム ライブラリ名が省略されます。 既定では、コンパイラでライブラリ名が .obj ファイルにプッシュされ、リンカーに適切なライブラリが示されます。  
   
-     詳細については、「[/Zl (既定のライブラリ名の省略)](/visual-cpp/build/reference/zl-omit-default-library-name)」を参照してください。  
+     詳細については、「[/Zl (既定のライブラリ名の省略)](/cpp/build/reference/zl-omit-default-library-name)」を参照してください。  
   
 -   **OmitFramePointers**  
   
@@ -460,7 +478,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、呼び出し履歴にフレーム ポインターが作成されなくなります。  
   
-     詳細については、「[/Oy (フレーム ポインターの省略)](/visual-cpp/build/reference/oy-frame-pointer-omission)」を参照してください。  
+     詳細については、「[/Oy (フレーム ポインターの省略)](/cpp/build/reference/oy-frame-pointer-omission)」を参照してください。  
   
 -   **OpenMPSupport**  
   
@@ -468,7 +486,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、コンパイラで OpenMP 句とディレクティブが処理されます。  
   
-     詳細については、「[/openmp (OpenMP 2.0 サポートの有効化)](/visual-cpp/build/reference/openmp-enable-openmp-2-0-support)」を参照してください。  
+     詳細については、「[/openmp (OpenMP 2.0 サポートの有効化)](/cpp/build/reference/openmp-enable-openmp-2-0-support)」を参照してください。  
   
 -   **Optimization**  
   
@@ -486,7 +504,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **Full** - **/Ox**  
   
-     詳細については、「[/O オプション (コードの最適化)](/visual-cpp/build/reference/o-options-optimize-code)」を参照してください。  
+     詳細については、「[/O オプション (コードの最適化)](/cpp/build/reference/o-options-optimize-code)」を参照してください。  
   
 -   **PrecompiledHeader**  
   
@@ -502,7 +520,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **Use** - **/Yu**  
   
-     詳細については、「[/Yc (プリコンパイル済みヘッダー ファイルの作成)](/visual-cpp/build/reference/yc-create-precompiled-header-file)」と「[/Yu (プリコンパイル済みヘッダー ファイルの使用)](/visual-cpp/build/reference/yu-use-precompiled-header-file)」を参照してください。 この表にある **PrecompiledHeaderFile** および **PrecompiledHeaderOutputFile** パラメーターも参照してください。  
+     詳細については、「[/Yc (プリコンパイル済みヘッダー ファイルの作成)](/cpp/build/reference/yc-create-precompiled-header-file)」と「[/Yu (プリコンパイル済みヘッダー ファイルの使用)](/cpp/build/reference/yu-use-precompiled-header-file)」を参照してください。 この表にある **PrecompiledHeaderFile** および **PrecompiledHeaderOutputFile** パラメーターも参照してください。  
   
 -   **PrecompiledHeaderFile**  
   
@@ -510,7 +528,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      作成または使用するプリコンパイル済みヘッダー ファイルの名前を指定します。  
   
-     詳細については、「[/Yc (プリコンパイル済みヘッダー ファイルの作成)](/visual-cpp/build/reference/yc-create-precompiled-header-file)」と「[/Yu (プリコンパイル済みヘッダー ファイルの使用)](/visual-cpp/build/reference/yu-use-precompiled-header-file)」を参照してください。  
+     詳細については、「[/Yc (プリコンパイル済みヘッダー ファイルの作成)](/cpp/build/reference/yc-create-precompiled-header-file)」と「[/Yu (プリコンパイル済みヘッダー ファイルの使用)](/cpp/build/reference/yu-use-precompiled-header-file)」を参照してください。  
   
 -   **PrecompiledHeaderOutputFile**  
   
@@ -518,7 +536,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      既定のパス名を使用する代わりにプリコンパイル済みヘッダーのパス名を指定します。  
   
-     詳細については、「[/Fp (.pch ファイルの名前の指定)](/visual-cpp/build/reference/fp-name-dot-pch-file)」を参照してください。  
+     詳細については、「[/Fp (.pch ファイルの名前の指定)](/cpp/build/reference/fp-name-dot-pch-file)」を参照してください。  
   
 -   **PreprocessKeepComments**  
   
@@ -526,7 +544,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、プリプロセス時にコメントが保持されます。  
   
-     詳細については、「[/C (プリプロセス時のコメントの保持)](/visual-cpp/build/reference/c-preserve-comments-during-preprocessing)」を参照してください。  
+     詳細については、「[/C (プリプロセス時のコメントの保持)](/cpp/build/reference/c-preserve-comments-during-preprocessing)」を参照してください。  
   
 -   **PreprocessorDefinitions**  
   
@@ -534,7 +552,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      ソース ファイルの前処理シンボルを定義します。  
   
-     詳細については、「[/D (プリプロセッサの定義)](/visual-cpp/build/reference/d-preprocessor-definitions)」を参照してください。  
+     詳細については、「[/D (プリプロセッサの定義)](/cpp/build/reference/d-preprocessor-definitions)」を参照してください。  
   
 -   **PreprocessOutput**  
   
@@ -548,7 +566,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      **PreprocessToFile** パラメーターで前処理済みの出力を書き込む出力ファイルの名前を指定します。  
   
-     詳細については、「[/Fi (出力ファイル名のプリプロセス)](/visual-cpp/build/reference/fi-preprocess-output-file-name)」を参照してください。  
+     詳細については、「[/Fi (出力ファイル名のプリプロセス)](/cpp/build/reference/fi-preprocess-output-file-name)」を参照してください。  
   
 -   **PreprocessSuppressLineNumbers**  
   
@@ -556,7 +574,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、C および C++ ソース ファイルが前処理され、前処理されたファイルが標準出力デバイスにコピーされます。  
   
-     詳細については、「[/EP (#line ディレクティブを挿入しない stdout へのプリプロセス)](/visual-cpp/build/reference/ep-preprocess-to-stdout-without-hash-line-directives)」を参照してください。  
+     詳細については、「[/EP (#line ディレクティブを挿入しない stdout へのプリプロセス)](/cpp/build/reference/ep-preprocess-to-stdout-without-hash-line-directives)」を参照してください。  
   
 -   **PreprocessToFile**  
   
@@ -564,7 +582,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、C および C++ ソース ファイルが前処理され、前処理済みの出力がファイルに書き込まれます。  
   
-     詳細については、「[/P (プリプロセス出力のファイルへの書き込み)](/visual-cpp/build/reference/p-preprocess-to-a-file)」を参照してください。  
+     詳細については、「[/P (プリプロセス出力のファイルへの書き込み)](/cpp/build/reference/p-preprocess-to-a-file)」を参照してください。  
   
 -   **ProcessorNumber**  
   
@@ -578,7 +596,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      プログラム データベース (PDB) ファイルの名前を指定します。  
   
-     詳細については、「[/Fd (プログラム データベース ファイル名)](/visual-cpp/build/reference/fd-program-database-file-name)」を参照してください。  
+     詳細については、「[/Fd (プログラム データベース ファイル名)](/cpp/build/reference/fd-program-database-file-name)」を参照してください。  
   
 -   **RuntimeLibrary**  
   
@@ -596,7 +614,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **MultiThreadedDebugDLL** - **/MDd**  
   
-     詳細については、「[/MD、/MT、/LD (ランタイム ライブラリの使用)](/visual-cpp/build/reference/md-mt-ld-use-run-time-library)」を参照してください。  
+     詳細については、「[/MD、/MT、/LD (ランタイム ライブラリの使用)](/cpp/build/reference/md-mt-ld-use-run-time-library)」を参照してください。  
   
 -   **RuntimeTypeInfo**  
   
@@ -604,7 +622,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、実行時に C++ のオブジェクト型をチェックするコードが追加されます (ランタイム型情報)。  
   
-     詳細については、「[/GR (ランタイム型情報の有効化)](/visual-cpp/build/reference/gr-enable-run-time-type-information)」を参照してください。  
+     詳細については、「[/GR (ランタイム型情報の有効化)](/cpp/build/reference/gr-enable-run-time-type-information)」を参照してください。  
   
 -   **ShowIncludes**  
   
@@ -612,7 +630,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、コンパイラでインクルード ファイルの一覧が出力されます。  
   
-     詳細については、「[/showIncludes (インクルード ファイル一覧)](/visual-cpp/build/reference/showincludes-list-include-files)」を参照してください。  
+     詳細については、「[/showIncludes (インクルード ファイル一覧)](/cpp/build/reference/showincludes-list-include-files)」を参照してください。  
   
 -   **SmallerTypeCheck**  
   
@@ -620,7 +638,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、値がより小さいデータ型に割り当てられ、データ損失が発生したときに、ランタイム エラーが報告されます。  
   
-     詳細については、「[/RTC (ランタイム エラー チェック)](/visual-cpp/build/reference/rtc-run-time-error-checks)」の **/RTCc** オプションに関する記述を参照してください。  
+     詳細については、「[/RTC (ランタイム エラー チェック)](/cpp/build/reference/rtc-run-time-error-checks)」の **/RTCc** オプションに関する記述を参照してください。  
   
 -   **Sources**  
   
@@ -632,9 +650,9 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      省略可能な `Boolean` 型のパラメーターです。  
   
-     `true` の場合、コンパイラで、プログラム イメージに同一文字列の&1; つのコピーを作成できます。  
+     `true` の場合、コンパイラで、プログラム イメージに同一文字列の 1 つのコピーを作成できます。  
   
-     詳細については、「[/GF (同一文字列の削除)](/visual-cpp/build/reference/gf-eliminate-duplicate-strings)」を参照してください。  
+     詳細については、「[/GF (同一文字列の削除)](/cpp/build/reference/gf-eliminate-duplicate-strings)」を参照してください。  
   
 -   **StructMemberAlignment**  
   
@@ -656,7 +674,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **16Bytes** - **/Zp16**  
   
-     詳細については、「[/Zp (構造体メンバーの配置)](/visual-cpp/build/reference/zp-struct-member-alignment)」を参照してください。  
+     詳細については、「[/Zp (構造体メンバーの配置)](/cpp/build/reference/zp-struct-member-alignment)」を参照してください。  
   
 -   **SuppressStartupBanner**  
   
@@ -664,7 +682,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、タスクの開始時に著作権およびバージョン番号のメッセージが表示されないようにします。  
   
-     詳細については、「[/nologo (著作権情報の非表示) (C/C++)](/visual-cpp/build/reference/nologo-suppress-startup-banner-c-cpp)」を参照してください。  
+     詳細については、「[/nologo (著作権情報の非表示) (C/C++)](/cpp/build/reference/nologo-suppress-startup-banner-c-cpp)」を参照してください。  
   
 -   **TrackerLogDirectory**  
   
@@ -680,7 +698,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      指定したコンパイラ警告の一覧をエラーとして扱います。  
   
-     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/visual-cpp/build/reference/compiler-option-warning-level)」の **/we**`n` オプションに関する記述を参照してください。  
+     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/cpp/build/reference/compiler-option-warning-level)」の **/we**`n` オプションに関する記述を参照してください。  
   
 -   **TreatWarningAsError**  
   
@@ -688,7 +706,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、コンパイラが生成する警告がすべてエラーとして扱われます。  
   
-     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/visual-cpp/build/reference/compiler-option-warning-level)」の **/WX** オプションに関する記述を参照してください。  
+     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/cpp/build/reference/compiler-option-warning-level)」の **/WX** オプションに関する記述を参照してください。  
   
 -   **TreatWChar_tAsBuiltInType**  
   
@@ -704,15 +722,15 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、コンパイラで定義されている Microsoft 固有のシンボルの定義が解除されます。  
   
-     詳細については、「[/U、/u (定義済みマクロ シンボルの未定義化)](/visual-cpp/build/reference/u-u-undefine-symbols)」の **/u** オプションに関する記述を参照してください。  
+     詳細については、「[/U、/u (定義済みマクロ シンボルの未定義化)](/cpp/build/reference/u-u-undefine-symbols)」の **/u** オプションに関する記述を参照してください。  
   
 -   **UndefinePreprocessorDefinitions**  
   
      省略可能な `String[]` 型のパラメーターです。  
   
-     定義を解除する&1; つ以上のプリプロセッサ シンボルの一覧を指定します。  
+     定義を解除する 1 つ以上のプリプロセッサ シンボルの一覧を指定します。  
   
-     詳細については、「[/U、/u (定義済みマクロ シンボルの未定義化)](/visual-cpp/build/reference/u-u-undefine-symbols)」の **/U** オプションに関する記述を参照してください。  
+     詳細については、「[/U、/u (定義済みマクロ シンボルの未定義化)](/cpp/build/reference/u-u-undefine-symbols)」の **/U** オプションに関する記述を参照してください。  
   
 -   **UseFullPaths**  
   
@@ -720,7 +738,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、診断時にコンパイラに渡されるソース コード ファイルの完全パスが表示されます。  
   
-     詳細については、「[/FC (診断時のソース コード ファイルの完全パス)](/visual-cpp/build/reference/fc-full-path-of-source-code-file-in-diagnostics)」を参照してください。  
+     詳細については、「[/FC (診断時のソース コード ファイルの完全パス)](/cpp/build/reference/fc-full-path-of-source-code-file-in-diagnostics)」を参照してください。  
   
 -   **UseUnicodeForAssemblerListing**  
   
@@ -728,7 +746,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、出力ファイルが UTF-8 形式で作成されます。  
   
-     詳細については、「[/FA、/Fa (リスティング ファイル)](/visual-cpp/build/reference/fa-fa-listing-file)」の **/FAu** オプションに関する記述を参照してください。  
+     詳細については、「[/FA、/Fa (リスティング ファイル)](/cpp/build/reference/fa-fa-listing-file)」の **/FAu** オプションに関する記述を参照してください。  
   
 -   **WarningLevel**  
   
@@ -750,7 +768,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **EnableAllWarnings** - **/Wall**  
   
-     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/visual-cpp/build/reference/compiler-option-warning-level)」の **/W***n* オプションに関する記述を参照してください。  
+     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/cpp/build/reference/compiler-option-warning-level)」の **/W***n* オプションに関する記述を参照してください。  
   
 -   **WholeProgramOptimization**  
   
@@ -758,7 +776,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、プログラム全体の最適化が有効になります。  
   
-     詳細については、「[/GL (プログラム全体の最適化)](/visual-cpp/build/reference/gl-whole-program-optimization)」を参照してください。  
+     詳細については、「[/GL (プログラム全体の最適化)](/cpp/build/reference/gl-whole-program-optimization)」を参照してください。  
   
 -   **XMLDocumentationFileName**  
   
@@ -766,7 +784,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      生成される XML ドキュメント ファイルの名前を指定します。 このパラメーターには、ファイルまたはディレクトリ名を指定できます。  
   
-     詳細については、「[/doc (ドキュメント コメントの処理) (C/C++)](/visual-cpp/build/reference/doc-process-documentation-comments-c-cpp)」の `name` 引数に関する記述を参照してください。 この表の **GenerateXMLDocumentationFiles** パラメーターも参照してください。  
+     詳細については、「[/doc (ドキュメント コメントの処理) (C/C++)](/cpp/build/reference/doc-process-documentation-comments-c-cpp)」の `name` 引数に関する記述を参照してください。 この表の **GenerateXMLDocumentationFiles** パラメーターも参照してください。  
   
 -   **MinimalRebuildFromTracking**  
   
@@ -802,8 +820,3 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
 ## <a name="see-also"></a>関連項目  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

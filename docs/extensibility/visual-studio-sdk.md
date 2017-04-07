@@ -33,9 +33,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 477f57bbca9c49e7d7d13155fc1f6e55ee4667a8
-ms.openlocfilehash: efc5a2722757229057a91f5e3a6c2ad3681f5a89
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: b3cd444e48893057a057c39c515e51ff8b509b34
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
@@ -58,10 +58,10 @@ Visual Studio SDK を使用すると、Visual Studio の機能を拡張したり
  詳細については、これらの機能に関するはずの前に Visual Studio 拡張機能を作成してない場合[Visual Studio 拡張機能の開発を開始して](../extensibility/starting-to-develop-visual-studio-extensions.md)します。  
   
 ## <a name="installing-the-visual-studio-sdk"></a>Visual Studio SDK をインストールします。  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio SDK は、Visual Studio のセットアップで省略可能な機能です。 後で、VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
   
-## <a name="whats-new-in-the-visual-studio-2015-sdk"></a>Visual Studio 2015 SDK の新機能します。  
- Visual Studio SDK は、電球メニュー コマンド、ツール ウィンドウおよびエディターの拡張機能の VSIX パッケージを使用して作成するための新しいプロジェクト項目など、一部の新機能です。 詳細については、次を参照してください。 [what ' s New in Visual Studio 2015 SDK](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md)します。  
+## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>Visual Studio 2017 SDK の新機能します。  
+ Visual Studio SDK は、ライトウェイト ソリューションの読み込みと VSIX v3 形式との互換性に影響する、拡張機能を更新する必要がある変更のサポートなどのいくつかの新機能です。 詳細については、次を参照してください。 [Visual Studio 2017 SDK の新](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)します。  
   
 ## <a name="visual-studio-user-experience-guidelines"></a>Visual Studio ユーザー エクスペリエンス ガイドライン  
  拡張機能の UI を設計するために役立つヒントを取得[Visual Studio のユーザー エクスペリエンス ガイドライン](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)します。  
@@ -92,7 +92,7 @@ Visual Studio SDK を使用すると、Visual Studio の機能を拡張したり
   
 ## <a name="see-also"></a>関連項目  
  [メニュー コマンドを使用して拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)   
- [方法: Visual Studio 2015 への機能拡張プロジェクトの移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md)   
+ [方法: 機能拡張プロジェクトを Visual Studio 2017 に移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)   
  [FAQ: アドインを VSPackage 拡張機能に変換します。](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
  [マネージ コード内の複数のスレッドを管理します。](../extensibility/managing-multiple-threads-in-managed-code.md)   
  [拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)   

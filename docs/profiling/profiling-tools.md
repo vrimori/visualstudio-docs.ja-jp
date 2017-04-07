@@ -1,5 +1,5 @@
 ---
-title: "プロファイリング ツール | Microsoft Docs"
+title: "Visual Studio のプロファイリング ツール | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8f844c2d7d975476bc4c059d211a1d6cb0df64eb
-ms.openlocfilehash: 4c995fb6df6316ce7f84fae7075b81063b54ebf7
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 0d129b4820944f5717c63243cb8550bc4fed3385
+ms.openlocfilehash: 380b65540d8f5c6ea6d8a8adf1f3c5575f5dd9dc
+ms.lasthandoff: 03/20/2017
 
 ---
 # <a name="profiling-tools"></a>プロファイリング ツール
@@ -103,15 +103,16 @@ ms.lasthandoff: 02/28/2017
 ## <a name="which-tool-should-i-use"></a>使用するツール  
  次の表では、Visual Studio のさまざまなツールとそれらを使用できる各種プロジェクトをまとめています。  
   
-|パフォーマンス ツール|Windows デスクトップ|Windows ユニバーサル/ストア|ASP.NET|  
+|パフォーマンス ツール|Windows デスクトップ|Windows ユニバーサル/ストア|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
 |[メモリ使用量](../profiling/memory-usage.md)|可|可|可|  
 |[CPU 使用率](../profiling/cpu-usage.md)|可|可|可|  
 |[GPU 使用率](../debugger/gpu-usage.md)|可|可|no|  
 |[アプリケーションのタイムライン](../profiling/application-timeline.md)|可|可|no|  
-|[パフォーマンスのヒント](../profiling/perftips.md)|可|XAML の場合は可、HTML の場合は不可|no|  
-|[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|可|no|可|  
-|[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise のみ|.NET Enterprise のみ|.NET Enterprise のみ|  
+|[パフォーマンスのヒント](../profiling/perftips.md)|可|XAML の場合は可、HTML の場合は不可|可|  
+|[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|可|no|可 (ASP.NET Core の場合は no)|  
+|[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise のみ|.NET Enterprise のみ|.NET Enterprise のみ|
+|[ネットワーク使用率](../profiling/network-usage.md)|no|可|no| 
 |[HTML UI の応答性](../profiling/html-ui-responsiveness.md)|no|HTML の場合は可、XAML の場合は不可|no|  
 |[JavaScript メモリ](../profiling/javascript-memory.md)|no|HTML の場合は可、XAML の場合は不可|no|  
   

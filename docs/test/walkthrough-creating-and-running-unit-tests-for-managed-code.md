@@ -1,24 +1,43 @@
 ---
 title: "チュートリアル: マネージ コードに対する単体テストの作成と実行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "単体テスト、チュートリアル"
-  - "単体テスト、作成"
-  - "単体テスト、生成"
-  - "単体テスト、実行"
-  - "単体テスト、編集"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unit tests, walkthrough
+- unit tests, creating
+- unit tests, generating
+- unit tests, running
+- unit tests, authoring
 ms.assetid: 2b018b18-b412-4e0e-b0ee-b580a2f3ba9c
 caps.latest.revision: 83
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 83
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
+ms.openlocfilehash: a00b80092a44190d626b93b0ecc5689bafd1a4e3
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>チュートリアル: マネージ コードに対する単体テストの作成と実行
 このチュートリアルでは、マネージ コード用の Microsoft 単体テスト フレームワークと Visual Studio テスト エクスプローラーを使用して一連の単体テストを作成、実行、およびカスタマイズする手順について説明します。 開発中の C# プロジェクトで作業を開始し、そのコードを実行するテストを作成し、テストを実行し、結果を調べます。 次に、プロジェクト コードを変更し、テストを再実行します。  
@@ -53,7 +72,7 @@ caps.handback.revision: 83
   
 -   Bank プロジェクト。 「[単体テストを作成するサンプル プロジェクト](../test/sample-project-for-creating-unit-tests.md)」をご覧ください。  
   
-##  <a name="a-namebkmkpreparethewalkthrougha-prepare-the-walkthrough"></a><a name="BKMK_Prepare_the_walkthrough"></a> チュートリアルを準備する  
+##  <a name="BKMK_Prepare_the_walkthrough"></a> チュートリアルを準備する  
   
 1.  Visual Studio を開きます。  
   
@@ -104,7 +123,7 @@ public void Debit(double amount)
   
 ```  
   
-##  <a name="a-namebkmkcreateaunittestprojecta-create-a-unit-test-project"></a><a name="BKMK_Create_a_unit_test_project"></a> 単体テスト プロジェクトを作成する  
+##  <a name="BKMK_Create_a_unit_test_project"></a> 単体テスト プロジェクトを作成する  
  **必要条件**: 「[チュートリアルを準備する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)」の手順に従います。  
   
 #### <a name="to-create-a-unit-test-project"></a>単体テスト プロジェクトを作成するには  
@@ -125,7 +144,7 @@ public void Debit(double amount)
   
 6.  [参照マネージャー] ダイアログ ボックスで、 **[ソリューション]** を展開し、 **[Bank]** チェックボックスをオンにします。  
   
-##  <a name="a-namebkmkcreatethetestclassa-create-the-test-class"></a><a name="BKMK_Create_the_test_class"></a> テスト クラスを作成する  
+##  <a name="BKMK_Create_the_test_class"></a> テスト クラスを作成する  
  `BankAccount` クラスを検証するためのテスト クラスが必要です。 プロジェクト テンプレートによって生成された UnitTest1.cs を使用できますが、ファイルとクラスにはよりわかりやすい名前を付ける必要があります。 ソリューション エクスプローラーでファイルの名前変更機能を使用すると、この処理を&1; つの手順で実行できます。  
   
  **クラス ファイルの名前を変更する**  
@@ -160,7 +179,7 @@ namespace BankTests
 using BankAccountNS;  
 ```  
   
-###  <a name="a-namebkmktestclassrequirementsa-test-class-requirements"></a><a name="BKMK_Test_class_requirements"></a> テスト クラスの要件  
+###  <a name="BKMK_Test_class_requirements"></a> テスト クラスの要件  
  テスト クラスの最小要件は次のとおりです。  
   
 -   マネージ コード用の Microsoft 単体テスト フレームワークでは、テスト エクスプローラーで実行する単体テスト メソッドを含むすべてのクラスについて、 `[TestClass]` 属性が必要です。  
@@ -169,7 +188,7 @@ using BankAccountNS;
   
  単体テスト プロジェクトで `[TestClass]` 属性がない別のクラスを使用することができます。また、テスト クラスで `[TestMethod]` 属性がない別のメソッドを使用することもできます。 こうした別のクラスやメソッドをテスト メソッドで使用できます。  
   
-##  <a name="a-namebkmkcreatethefirsttestmethoda-create-the-first-test-method"></a><a name="BKMK_Create_the_first_test_method"></a> 最初のテスト メソッドを作成する  
+##  <a name="BKMK_Create_the_first_test_method"></a> 最初のテスト メソッドを作成する  
  この手順では、 `Debit` クラスの `BankAccount` メソッドの動作を検証する単体テスト メソッドを記述します。 メソッドは上に一覧表示されています。  
   
  テスト対象のメソッドを分析したところ、チェックする必要のある動作が&3; つ以上あると判断されます。  
@@ -210,7 +229,7 @@ using BankAccountNS;
   
  このメソッドはやや単純です。 期首残高を含む新しい `BankAccount` オブジェクトを設定し、有効な金額を引き出します。 マネージ コード用の Microsoft 単体テスト フレームワークの <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> メソッドを使用して、期末残高が想定どおりであることを確認します。  
   
-###  <a name="a-namebkmktestmethodrequirementsa-test-method-requirements"></a><a name="BKMK_Test_method_requirements"></a> テスト メソッドの要件  
+###  <a name="BKMK_Test_method_requirements"></a> テスト メソッドの要件  
  テスト メソッドは次の条件を満たしている必要があります。  
   
 -   メソッドは `[TestMethod]` 属性で装飾される必要があります。  
@@ -219,7 +238,7 @@ using BankAccountNS;
   
 -   メソッドはパラメーターを含むことができません。  
   
-##  <a name="a-namebkmkbuildandrunthetesta-build-and-run-the-test"></a><a name="BKMK_Build_and_run_the_test"></a> テストをビルドして実行する  
+##  <a name="BKMK_Build_and_run_the_test"></a> テストをビルドして実行する  
   
 #### <a name="to-build-and-run-the-test"></a>テストをビルドして実行するには  
   
@@ -231,10 +250,10 @@ using BankAccountNS;
   
 3.  この場合は、テストが失敗します。 このテスト メソッドは、 **[失敗したテスト]**に移動します。 が表示されます。 エクスプローラーでテスト メソッドを選択すると、ウィンドウの下部に詳細が表示されます。  
   
-##  <a name="a-namebkmkfixyourcodeandrerunyourtestsa-fix-your-code-and-rerun-your-tests"></a><a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> コードを修正してテストを再実行する  
+##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> コードを修正してテストを再実行する  
  **テスト結果を分析する**  
   
- テスト結果には失敗を示すメッセージが含まれています。 `AreEquals` メソッドについて、メッセージには、想定された事項 (**Expected\<*XXX*>** パラメーター) および実際に受け取られた事項 (**Actual\<*YYY*>** パラメーター) が示されます。 ここでは、残高が期首残高よりも減少していることを想定していましたが、逆に、引き出し額の分が増加していました。  
+ テスト結果には失敗を示すメッセージが含まれています。 `AreEquals` メソッドについて、メッセージには、想定された事項 (**Expected\<*XXX*>**パラメーター) および実際に受け取られた事項 (**Actual\<*YYY*>** パラメーター) が示されます。 ここでは、残高が期首残高よりも減少していることを想定していましたが、逆に、引き出し額の分が増加していました。  
   
  Debit コードの再検査では、単体テストでバグを検出できたことが示されます。 引き出し額は、減算する必要があるときに口座残高に追加されます。  
   
@@ -256,7 +275,7 @@ m_balance -= amount;
   
  テスト エクスプローラーで、 **[すべて実行]** をクリックしてテストを再実行します。 赤色/緑色のステータス バーは緑色になり、テストは **[成功したテスト]** グループに移動します。  
   
-##  <a name="a-namebkmkuseunitteststoimproveyourcodea-use-unit-tests-to-improve-your-code"></a><a name="BKMK_Use_unit_tests_to_improve_your_code"></a>単体テストを使用してコードを改良する  
+##  <a name="BKMK_Use_unit_tests_to_improve_your_code"></a>単体テストを使用してコードを改良する  
  このセクションでは、分析の反復処理、単体テストの進展、およびリファクタリングが、実稼働のコードの堅牢性と有効性を高めるうえでどのように役立つかを説明します。  
   
  **問題を分析する**  
@@ -415,8 +434,4 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 ```  
   
  この最後のセクションでは、テスト コード向上の作業を実行したことにより、より堅牢でわかりやすいテスト メソッドになりました。 さらに重要なこととして、分析の追加によってテスト対象のプロジェクトのコードを改善することもできます。
-
-
-<!--HONumber=Feb17_HO4-->
-
 

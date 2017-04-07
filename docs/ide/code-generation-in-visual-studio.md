@@ -1,4 +1,5 @@
 ---
+redirect_url: /visualstudio/ide/refactoring-code-generation-quick-actions
 title: "Visual Studio でのコード生成 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2016
@@ -30,6 +31,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: 4d3dde251368507690faa54f94138872b16b9b44
 ms.openlocfilehash: 8676fd2957a713e101b65623e38e06299191bce6
+ms.lasthandoff: 02/22/2017
 
 ---
 
@@ -52,8 +54,3 @@ Visual Studio では自動的に一部のソース コードが生成される�
 [Visual Studio IDE](../ide/visual-studio-ide.md)   
 [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)  
 [変更のプレビュー](preview-changes.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

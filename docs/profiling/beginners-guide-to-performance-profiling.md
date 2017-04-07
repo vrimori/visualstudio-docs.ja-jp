@@ -1,25 +1,44 @@
 ---
-title: "パフォーマンス プロファイリングのビギナーズ ガイド | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "vs.performance.wizard.intropage"
-helpviewer_keywords: 
-  - "パフォーマンス ツール, ウィザード"
-  - "パフォーマンス ウィザード"
-  - "プロファイリング ツール, クイック スタート"
+title: "Visual Studio でのパフォーマンス プロファイリングのビギナーズ ガイド | Microsoft Docs"
+ms.custom: H1Hack27Feb2017
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- vs.performance.wizard.intropage
+helpviewer_keywords:
+- Profiling Tools, quick start
+- Diagnostics Tools, CPU Usage
+- CPU Usage
+- Diagnostics Tools
 ms.assetid: da2fbf8a-2d41-4654-a509-dd238532d25a
 caps.latest.revision: 45
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 43
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: fe329cd5395db3afae1c3f3e98bb6e480323e21f
+ms.lasthandoff: 03/07/2017
+
 ---
 # <a name="beginners-guide-to-performance-profiling"></a>パフォーマンス プロファイリングのビギナーズ ガイド
 Visual Studio プロファイリング ツールを使用して、アプリケーションでパフォーマンスの問題を分析することができます。 このガイドでは、診断ツールの [**CPU 使用率**] タブを使用し、アプリのパフォーマンス データを取得する方法について説明します。 診断ツールは Visual Studio の .NET 開発 (ASP.NET を含む) とネイティブ/C++ 開発で利用できます。
@@ -30,7 +49,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 
 このトピックでは、通常のデバッグ ワークフローで CPU 使用率を分析する方法について説明します。 デバッガーをアタッチせずに、あるいは実行中のアプリをターゲットにすることで CPU 使用率を分析することもできます。詳細については、「[Run profiling tools without debugging](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」 (デバッグなしでプロファイリング ツールを実行する) を参照してください。
   
-##  <a name="a-namebkmkquickstartcollectdiagnosticdataa-step-1-collect-profiling-data"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 手順 1: プロファイリング データを収集する 
+##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 手順 1: プロファイリング データを収集する 
   
 1.  Visual Studio でデバッグするプロジェクトを開き、CPU 使用率を調べるポイントでアプリのブレークポイントを設定します。
 
@@ -81,7 +100,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 
      この時点で、データの分析を開始できます。
 
-## <a name="a-namestep2a-step-2-analyze-cpu-usage-data"></a><a name="Step2"></a> 手順 2: CPU 使用率データの分析
+## <a name="Step2"></a> 手順 2: CPU 使用率データの分析
 
 データの分析では、最初に CPU 使用率で関数の一覧を調べて最も多くの作業を行っている関数を特定し、それから個々の作業を詳しく調べることをお勧めします。
 
@@ -128,7 +147,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 
 - **モジュール** 関数が含まれるモジュールの名前です。あるいは、[外部コード] ノード内の関数が含まれるモジュールの数です。
 
-## <a name="a-namebkmkexternalcodeaview-external-code"></a><a name="BKMK_External_Code"></a>外部コードの表示
+## <a name="BKMK_External_Code"></a>外部コードの表示
 
 外部コードとは、作成したコードによって実行されるシステムおよびフレームワーク コンポーネント内の関数です。 外部コードには、アプリの開始と停止、UI の描画、スレッドの制御、およびアプリへの他の低レベル サービスの提供を行う関数が含まれます。 外部コードを確認することはほとんどないため、CPU 使用率ツールはユーザー メソッドの外部関数を&1; つの **[外部コード]** ノードにまとめます。
   
@@ -147,8 +166,3 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
  [[メモリ使用量](../profiling/memory-usage.md)
  [CPU 使用率](../profiling/cpu-usage.md)
  [プロファイリング ツール](../profiling/profiling-tools.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

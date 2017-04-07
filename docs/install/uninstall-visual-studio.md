@@ -1,8 +1,8 @@
 ---
-title: "Visual Studio 2017 RC のアンインストール | Microsoft Docs"
+title: "Visual Studio 2017 のアンインストール | Microsoft Docs"
 description: "Visual Studio をアンインストールする方法について、ステップ バイ ステップで説明します。"
 ms.custom: 
-ms.date: 11/18/2016
+ms.date: 03/27/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -10,8 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- uninstalling
-- uninstalling visual studio
 - uninstall
 - uninstall Visual Studio
 ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
@@ -34,8 +32,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5e1ab0284a11fb9ecf30694d22b8bb5dc7a52a6d
-ms.openlocfilehash: b6d48bb2236a3291adea3ac849f52537707ad518
+ms.sourcegitcommit: 9e635a28d3338bcf518a0aec69c476280eedf6e2
+ms.openlocfilehash: 3a4dda7736409ce60d6f1a1aa42b820978d63074
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -44,29 +43,24 @@ ms.openlocfilehash: b6d48bb2236a3291adea3ac849f52537707ad518
 
 1.  コンピューター上で Visual Studio インストーラーを見つけます。  
 
-     たとえば、Windows 10 Anniversary Update を実行しているコンピューター上では、**[スタート]** をクリックし、**Microsoft Visual Studio インストーラー**としてリスト表示される **M** の文字までスクロールします。  
+     たとえば、Windows 10 Anniversary Update を実行しているコンピューター上では、**[スタート]** を選択し、**Visual Studio インストーラー**としてリスト表示される **V** の文字までスクロールします。  
 
-     ![00-ModifyingDev15Prev5-FindTheVisualStudioInstaller](../install/media/00-modifyingdev15prev5-findthevisualstudioinstaller.png)
+     ![Visual Studio インストーラー](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
 
-2.  クリックしてインストーラーを起動し、![詳細アイコン](media/vs2017uninstall-UninstallIcon.png)をクリックし、**[アンインストール]** をクリックします。  
+     >[!NOTE]
+     一部のコンピューターでは、Visual Studio インストーラーが **Microsoft Visual Studio インストーラー**として **"M"** の項に表示される場合があります。
 
-     ![Visual Studio 2017 RC の変更 (起動または変更)](media/vs2017uninstall-ChooseUninstallFromInstaller.png "Visual Studio 2017 RC の修復またはアンインストール")  
+2.  クリックしてインストーラーを起動し、![詳細アイコン](media/vs2017uninstall-UninstallIcon.png "オプション アイコンを選択") アイコンをクリックして、**[アンインストール]** をクリックします。  
+
+     ![Visual Studio 2017 の変更 (変更、起動、修復、またはアンインストール)](media/vs2017-uninstall.PNG "Visual Studio 2017 の修復またはアンインストール")  
 
 3.  **[OK]** をクリックして選択を確定します。
 
-     ![Visual Studio 2017 RC の変更 (起動または変更)](media/vs2017uninstall-UninstallConfirm.png "Visual Studio 2017 RC のアンインストールを確定")  
+     ![Visual Studio 2017 の変更 (製品のアンインストール)](media/vs2017-uninstall-confirm.PNG "Visual Studio 2017 のアンインストールを確定")  
 
-後で考えが変わり、Visual Studio 2017 RC を再インストールしたい場合は、もう一度 Visual Studio インストーラーを起動して、選択画面から **[インストール]** をクリックします。
-
-> [!IMPORTANT]
-> Visual Studio 2017 RC は一般に運用環境での使用がサポートされていますが、インストール UI で "プレビュー" とマークされているワークロードやコンポーネントは運用環境での使用がサポートされていません。
+Visual Studio 2017 を再インストールする場合は、もう一度 Visual Studio インストーラーを起動し、選択画面で **[インストール]** を選びます。
 
 ## <a name="see-also"></a>関連項目  
 * [Visual Studio のインストール](install-visual-studio.md)
-* [Visual Studio 2017 RC で問題を報告する方法](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
+* [Visual Studio 2017 で問題を報告する方法](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

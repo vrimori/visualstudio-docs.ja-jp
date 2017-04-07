@@ -4,9 +4,9 @@ hide_bc: true
 title: "Visual Studio ドキュメント"
 description: "Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。"
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 2a782993b8e2787c99c384c6df9c72316fe11521
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
+ms.openlocfilehash: 5a8448dff45473fa40892fb07604759a9d015021
+ms.lasthandoff: 03/31/2017
 
 ---
 <div id="main" class="v2">
@@ -287,7 +287,7 @@ ms.lasthandoff: 03/07/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>.NET 向けのモバイル開発</h3>
+                                                    <h3>.NET によるモバイル開発</h3>
                                                     <p>iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、Xamarin を使って構築します。</p>
                                                 </div>
                                             </div>
@@ -570,8 +570,26 @@ ms.lasthandoff: 03/07/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>拡張</h3>
-                                                    <p>開発エクスペリエンスを向上させる独自の機能を Visual Studio IDE に追加します。
-                                                    </p>
+                                                    <p>開発エクスペリエンスを向上させる独自の機能を Visual Studio IDE に追加します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/visualstudio/data-tools/accessing-data-in-visual-studio">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img data-scaleimage="./images/vs_features-9.svg" src="./images/vs_features-9.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>データ</h3>
+                                                    <p>ローカル コンピューター、ローカル エリア ネットワーク、あるいはパブリック クラウド、プライベート クラウド、またはハイブリッド クラウドにおいて、任意の形式や任意の場所で、任意のデータベース製品またはサービスを、仮想的にデータに接続させるアプリケーションを作成します。</p>
                                                 </div>
                                             </div>
                                         </div>

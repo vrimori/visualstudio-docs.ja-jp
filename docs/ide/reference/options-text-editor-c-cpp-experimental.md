@@ -31,43 +31,29 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a1edc88394193474b273968d8435e8df06415044
-ms.openlocfilehash: a3fcafe5c191987668dc6e0dce8835d748742ed7
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: 780c643c25f0d43ec0564e43bc50d2f36f1aee79
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="options-text-editor-cc-experimental"></a>[オプション]、[テキスト エディター]、[C/C++]、[実験用]
-これらのオプションを変更することによって、C または C++ でプログラミングを行うときに、IntelliSense に関連する動作と参照データベースを変更できます。  
+これらのオプションを変更することによって、C または C++ でプログラミングを行うときに、IntelliSense に関連する動作と参照データベースを変更できます。 これらの機能は完全に実験用であり、Visual Studio の将来のリリースでは変更または削除される可能性があります。  
   
  このページを表示するには、左ウィンドウの **[オプション]** ダイアログ ボックスで、 **[テキスト エディター]**、 **[C/C++]**を順に展開して、 **[実験用]**を選びます。  
-  
- これらの機能は、Visual Studio 2015 更新プログラム 1 RC のインストールで入手できます。  
+
+ これらの機能は、Visual Studio 2017 のインストールで使用できます。  
   
 > [!NOTE]
 >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
-## <a name="browsingnavigation"></a>参照/ナビゲーション  
- **新しいデータベース エンジンの有効化**  
- これにより、データベースへのデータ追加が自動的にスピードアップし、 **[定義へ移動]** や **[すべての参照の検索]**など、すべてのデータベース操作が (精度を落とすことなく) 速くなります。 (変更を適用するにはソリューションを閉じてもう一度開くだけです。Visual Studio を再起動する必要はありません。)  
-  
-## <a name="intellisense"></a>IntelliSense  
- **メンバー リストをドットから矢印へ**  
- メンバー リストに該当する場合に、ドット ('.') を矢印 ('->') に置換します。  
-  
-## <a name="refactoring"></a>リファクタリング  
- **Extract 関数の有効化**  
- 選んだコードを抽出して独自の関数にし、コードを新しい関数への呼び出しに置き換えます。 この機能にアクセスするには、選んだコードを右クリックして **[クイック アクション]**を選ぶか、単に Ctrl キーを押しながらドット キーを押すだけです (Ctrl+.、既定のショートカット)。  
-  
- **署名の変更を有効化**  
- 関数のパラメーターを、追加、並べ替え、削除して、その変更をすべての呼び出しサイトに反映します。 この機能にアクセスするには、関数の任意の使用法を右クリックして **[クイック アクション]**を選ぶか、Ctrl キーを押しながらドット キーを押すだけです (Ctrl+.、既定のショートカット)。  
-  
-## <a name="text-editor"></a>[テキスト エディター]  
- **スコープの展開を有効にする**  
- 有効にすると、テキスト エディターに '{' を入力すれば選んだテキストが中かっこで囲まれます。  
-  
- **優先順位の展開を有効にする**  
- 有効にすると、テキスト エディターに '(' を入力すれば選んだテキストがかっこで囲まれます。  
-  
- Visual Studio ギャラリーのその他のテキスト エディター機能については、 [ここ](http://go.microsoft.com/fwlink/?LinkId=692016)の一覧をご覧ください。 例として、 [C++ Quick Fixes](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)があります。これは、次をサポートします。  
+## <a name="enable-predictive-intellisense"></a>予測 IntelliSense を有効にする
+予測 IntelliSense は、コンテキストに関連のある結果のみが表示されるように、IntelliSense ドロップダウン リストに表示される結果の数を制限します。 たとえば、「<code>int x =</code>」と入力して IntelliSense ドロップダウン リストを呼び出すと、整数または整数を返す関数のみが表示されます。 予測 IntelliSense は既定ではオフになっています。
+
+## <a name="enable-faster-project-load"></a>プロジェクトの高速読み込みを有効にする
+このオプションは、"ライトウェイト ソリューション ロード" と呼ばれる機能を有効にします。 ライトウェイト ソリューション ロードを有効にすると、Visual Studio は実際に必要になるまでプロジェクトを完全には読み込みません。 コードベース内の移動、コードの編集、プロジェクトのビルドなど、多くの一般的な作業では、プロジェクトを読み込む必要はありません。 このオプションを有効にすると、プロジェクトが読み込まれるのを待つ必要がなく、このような一般的作業をより迅速に開始できます。  
+
+## <a name="additional-features-in-the-visual-studio-gallery"></a>Visual Studio ギャラリーで追加された機能
+Visual Studio ギャラリーのその他のテキスト エディター機能については、[こちら](http://go.microsoft.com/fwlink/?LinkId=692016)の一覧をご覧ください。 例として、 [C++ Quick Fixes](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)があります。これは、次をサポートします。  
   
 -   **不足している #include の追加** -コード内の不明なシンボルについて関連する #include を提案します  
   
@@ -82,9 +68,4 @@ ms.openlocfilehash: a3fcafe5c191987668dc6e0dce8835d748742ed7
 ## <a name="see-also"></a>関連項目  
  [言語固有のエディター オプションの設定](../../ide/reference/setting-language-specific-editor-options.md)   
  [C++ でのリファクタリング (VC のブログ)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
