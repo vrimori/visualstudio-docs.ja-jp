@@ -1,33 +1,52 @@
 ---
 title: "Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.BuildProjectPicker"
-  - "vs.batchbuild"
-helpviewer_keywords: 
-  - "ソリューションのクリーン コマンド"
-  - "ビルド [Visual Studio ALM], 管理"
-  - "ソリューション ビルド構成, 開始"
-  - "ソリューションのリビルド コマンド"
-  - "プロジェクトのビルド構成, 開始"
-  - "ビルド構成, 開始"
-  - "プロジェクトのビルド構成, 依存関係"
-  - "ソリューションのリビルド コマンド"
-  - "ソリューション ビルド構成, ビルドの順序"
-  - "ビルド [Visual Studio], 準備"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.BuildProjectPicker
+- vs.batchbuild
+helpviewer_keywords:
+- Clean Solution command
+- builds [Visual Studio], managing
+- solution build configurations, starting
+- Build Solution command
+- project build configurations, starting
+- build configurations, starting
+- project build configurations, dependencies
+- Rebuild Solution command
+- solution build configurations, build order
+- builds [Visual Studio], preparing
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
 caps.latest.revision: 35
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 35
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: ce6f346f77217e61d93879118610934422cdc642
+ms.lasthandoff: 04/05/2017
+
 ---
 # <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン
 このトピックの手順を使用して、ソリューション内のプロジェクトまたはプロジェクト項目のすべてまたは一部をビルド、リビルド、またはクリーンを行うことができます。 ステップ バイ ステップ チュートリアルについては、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。  
@@ -112,11 +131,6 @@ caps.handback.revision: 35
  [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)   
  [ビルド構成について](../ide/understanding-build-configurations.md)   
  [デバッグ プロジェクト構成およびリリース プロジェクト構成](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)   
- [C/C++ ビルドのリファレンス](/visual-cpp/build/reference/c-cpp-building-reference)   
+ [C/C++ ビルドのリファレンス](/cpp/build/reference/c-cpp-building-reference)   
  [Devenv コマンド ライン スイッチ](../ide/reference/devenv-command-line-switches.md)   
  [ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

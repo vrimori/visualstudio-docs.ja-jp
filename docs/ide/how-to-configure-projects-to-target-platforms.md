@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 773a59069649a82ea50f1a854b23a860d27ed777
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: c9ab9bf094a57baf4a309e3064cfcea9180dfebc
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="how-to-configure-projects-to-target-platforms"></a>方法 : プロジェクトを構成して対象プラットフォームを設定する
@@ -76,7 +76,7 @@ ms.lasthandoff: 02/22/2017
   
 -   [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクトについては、「[[ビルド] ウィンドウ (プロジェクト デザイナー) (C#)](../ide/reference/build-page-project-designer-csharp.md)」をご覧ください。  
   
--   [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクトについては、「[/clr (共通言語ランタイムのコンパイル)](/visual-cpp/build/reference/clr-common-language-runtime-compilation)」をご覧ください。  
+-   [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクトについては、「[/clr (共通言語ランタイムのコンパイル)](/cpp/build/reference/clr-common-language-runtime-compilation)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目  
  [ビルド プラットフォームについて](../ide/understanding-build-platforms.md)   

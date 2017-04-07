@@ -1,31 +1,50 @@
 ---
 title: "Devenv コマンド ライン スイッチ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アプリケーション [Visual Studio], 実行"
-  - "ビルド [Team System], コマンド ライン"
-  - "コマンド ライン [Visual Studio], スイッチ"
-  - "コマンド ライン スイッチ, Devenv"
-  - "コンパイラ, Devenv のコマンド"
-  - "コンパイル (ソース コードを), Devenv"
-  - "Devenv"
-  - "Devenv, 構文とスイッチの一覧"
-  - "環境, Devenv のコマンド"
-  - "スイッチ"
-  - "スイッチ, Devenv"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- switches, Devenv
+- builds [Team System], command-line
+- applications [Visual Studio], executing
+- compiling source code, Devenv
+- command-line switches, Devenv
+- command line [Visual Studio], switches
+- Devenv
+- environment, Devenv commands
+- compilers, Devenv commands
+- switches
+- Devenv, syntax and list of switches
 ms.assetid: e12bc6ed-74fd-4bea-8d7c-89b99c20bad8
 caps.latest.revision: 33
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 5666566315e94f109c5ca214dcf5b2a539911203
+ms.lasthandoff: 04/05/2017
+
 ---
 # <a name="devenv-command-line-switches"></a>Devenv コマンド ライン スイッチ
 Devenv を使用すると、コマンド ラインから統合開発環境 (IDE: Integrated Development Environment) のさまざまなオプションを設定したり、プロジェクトをビルド、デバッグ、および配置できます。 これらのスイッチを使用して、スクリプトや .bat ファイル (夜間用のビルド スクリプトなど) から IDE を実行したり、特定の構成で IDE を起動したりします。  
@@ -54,11 +73,11 @@ Devenv を使用すると、コマンド ラインから統合開発環境 (IDE:
 -   ソリューション ファイル名の代わりにプロジェクト ファイル名を入力すると、`devenv` コマンドは、プロジェクト フォルダーの親フォルダーで同じ名前が付いているソリューション ファイルを検索します。 たとえば、`devenv /build myproject1.vbproj` というコマンドは、親フォルダーで "myproject1.sln" という名前のついたソリューション ファイルを検索します。  
   
     > [!NOTE]
-    >  このプロジェクトを参照するソリューション ファイルは、親フォルダーの中に&1; つだけ置かれている必要があります。 親フォルダーにこのプロジェクトを参照するソリューション ファイルがない場合、また親フォルダーにこのソリューション ファイルが&2; つ以上ある場合は、一時ソリューション ファイルが作成されます。一時ソリューション ファイルは、プロジェクトにちなんだ名前となり、プロジェクトを参照します。  
+    >  このプロジェクトを参照するソリューション ファイルは、親フォルダーの中に 1 つだけ置かれている必要があります。 親フォルダーにこのプロジェクトを参照するソリューション ファイルがない場合、また親フォルダーにこのソリューション ファイルが 2 つ以上ある場合は、一時ソリューション ファイルが作成されます。一時ソリューション ファイルは、プロジェクトにちなんだ名前となり、プロジェクトを参照します。  
   
 -   ファイル パスやファイル名にスペースが含まれる場合は、二重引用符 ("") で囲む必要があります。 たとえば、"c:\project a\\" と指定します。  
   
--   1 行に複数のスイッチや引数を入力する場合は、空白文字&1; つで区切ります。 たとえば、**devenv /log output.txt** というコマンドは、IDE を開き、そのセッションのすべてのログ情報を output.txt に出力します。  
+-   1 行に複数のスイッチや引数を入力する場合は、空白文字 1 つで区切ります。 たとえば、**devenv /log output.txt** というコマンドは、IDE を開き、そのセッションのすべてのログ情報を output.txt に出力します。  
   
 -   `devenv` コマンドではパターン一致構文を使用できません。  
   
@@ -73,7 +92,7 @@ Devenv を使用すると、コマンド ラインから統合開発環境 (IDE:
 |[/Log (devenv.exe)](../../ide/reference/log-devenv-exe.md)|[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を起動し、ログ ファイルにすべてのアクティビティを記録します。|  
 |[/Run (devenv.exe)](../../ide/reference/run-devenv-exe.md) または `/r`|指定したソリューションをコンパイルして実行します。|  
 |[/Runexit (devenv.exe)](../../ide/reference/runexit-devenv-exe.md)|指定したソリューションをコンパイルして実行します。ソリューションの実行時には IDE を最小化し、ソリューションの実行終了後に IDE を終了します。|  
-|[/UseEnv (devenv.exe)](../../ide/reference/useenv-devenv-exe.md)|IDE で [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] のコンパイルをする場合に、**[オプション]** ダイアログ ボックスの **[プロジェクト]** オプションの [VC++ ディレクトリ] セクションで指定した設定ではなく、PATH、INCLUDE、および LIB の各環境変数を使用します。 詳細については、「[コマンド ライン ビルドのパスと環境変数を設定する](/visual-cpp/build/setting-the-path-and-environment-variables-for-command-line-builds)」を参照してください。|  
+|[/UseEnv (devenv.exe)](../../ide/reference/useenv-devenv-exe.md)|IDE で [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] のコンパイルをする場合に、**[オプション]** ダイアログ ボックスの **[プロジェクト]** オプションの [VC++ ディレクトリ] セクションで指定した設定ではなく、PATH、INCLUDE、および LIB の各環境変数を使用します。 詳細については、「[コマンド ライン ビルドのパスと環境変数を設定する](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds)」を参照してください。|  
 |[/Edit (devenv.exe)](../../ide/reference/edit-devenv-exe.md)|指定したファイルを、このアプリケーションの実行中のインスタンスで開きます。 実行中のインスタンスがない場合は、簡略化されたウィンドウ レイアウトで新しいインスタンスを起動します。|  
 |[/ResetAddin (devenv.exe)](../../ide/reference/resetaddin-devenv-exe.md)|指定されたアドインを読み込まずに Visual Studio IDE のインスタンスを起動します。|  
 |[/SafeMode (devenv.exe)](../../ide/reference/safemode-devenv-exe.md)|[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] をセーフ モードで起動し、既定の環境とサービス、および出荷バージョンのサードパーティ パッケージだけを読み込みます。|  
@@ -100,8 +119,3 @@ Devenv を使用すると、コマンド ラインから統合開発環境 (IDE:
   
 ## <a name="see-also"></a>関連項目  
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

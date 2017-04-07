@@ -32,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 6de96c79f998cc53fe4230e902fc927b72745d3f
-ms.openlocfilehash: 79391c494271c55a677dc5071139d27c473a6e88
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 89ce216f1273678adf9b97ff789c7d48f3130d77
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Configuring Warnings in Visual Basic
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/22/2017
  プロジェクトをカスタマイズして、アプリケーションに関係のない警告はオフにし、他の警告はエラーにすることができます。 このページでは、個々の警告を有効または無効にする方法について説明します。  
   
 ## <a name="turning-warnings-off-and-on"></a>警告のオフとオンの切り替え  
- 警告を構成するには&2; つの異なる方法があります。**プロジェクト デザイナー**を使う方法と、**/warnaserror** および **/nowarn** コンパイラ オプションを使う方法です。  
+ 警告を構成するには 2 つの異なる方法があります。**プロジェクト デザイナー**を使う方法と、**/warnaserror** および **/nowarn** コンパイラ オプションを使う方法です。  
   
  **[プロジェクト デザイナー]** ページの **[コンパイル]** タブで、警告を有効または無効にできます。 **[すべての警告を表示しない]** チェック ボックスをオンにすると、すべての警告が無効になります。**[すべての警告をエラーとして扱う]** をオンにすると、すべての警告がエラーとして処理されます。 一部の個別警告は、表示されるテーブルで必要に応じてエラーまたは警告として切り替えることができます。  
   
@@ -140,4 +140,4 @@ ms.lasthandoff: 02/22/2017
  [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn)   
  [/warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror)   
  [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)   
- [既定で無効になっているコンパイラ警告](/visual-cpp/preprocessor/compiler-warnings-that-are-off-by-default)
+ [既定で無効になっているコンパイラ警告](/cpp/preprocessor/compiler-warnings-that-are-off-by-default)

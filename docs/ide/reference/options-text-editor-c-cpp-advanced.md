@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: ba9c9b60de651eecc92ea10ba44579a7dadc36df
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 9c9e9e8c63d69e797a28ce4f8b1ac0adcf074b77
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="options-text-editor-cc-advanced"></a>[オプション]、[テキスト エディター]、[C/C++]、[詳細]
@@ -139,7 +139,7 @@ ms.lasthandoff: 03/27/2017
  **変換単位の最大キャッシュ**  
  IntelliSense 要求で同時に維持されるアクティブな変換単位の最大数です。 有効な値は 2 ～ 15 です。 この数値は、(Visual Studio の特定のインスタンスに対して) 実行される VCPkgSrv.exe プロセスの最大数に直接関連しています。 既定値は 2 ですが、使用可能なメモリがある場合は、この値を大きくすると、IntelliSense でパフォーマンスがわずかに向上する可能性があります。  
   
- 変換単位の詳細については、「[変換フェーズ](/visual-cpp/preprocessor/phases-of-translation)」を参照してください。  
+ 変換単位の詳細については、「[変換フェーズ](/cpp/preprocessor/phases-of-translation)」を参照してください。  
 
  **メンバー リストをドットから矢印へ**  
  メンバー リストに該当する場合に、ドット ('.') を矢印 ('->') に置換します。

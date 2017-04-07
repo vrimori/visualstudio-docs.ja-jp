@@ -36,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 118223d1a5c07188b8f8d8c7b6990792dcd94ff5
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 989bc338e0cb8c49a2342d998e1e09e8f6b0eb9f
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="output-window"></a>[出力] ウィンドウ
@@ -76,7 +76,7 @@ ms.lasthandoff: 02/22/2017
   
  また、実行時に診断メッセージを [**出力**] ペインに書き出すことのできる、独自のアプリケーションをプログラムすることも可能です。 これを行うには、.NET Framework クラス ライブラリの <xref:System.Diagnostics> 名前空間の <xref:System.Diagnostics.Debug> クラスまたは <xref:System.Diagnostics.Trace> クラスのメンバーを使用します。 <xref:System.Diagnostics.Debug> クラスのメンバーは、ソリューションまたはプロジェクトのデバッグ構成をビルドするときの出力結果を表示します。<xref:System.Diagnostics.Trace> クラスのメンバーは、デバッグ構成またはリリース構成のどちらかをビルドするときの出力結果を表示します。 詳細については、「[出力ウィンドウの診断メッセージ](../../debugger/diagnostic-messages-in-the-output-window.md)」を参照してください。  
   
- [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] では、警告とエラー メッセージ、およびその合計数を**出力**ペインで表示できる、カスタム ビルド ステップおよびビルド イベントを作成できます。 出力結果の任意の行で F1 キーを押すと、適切なヘルプ トピックが表示されます。 詳細については、「[カスタム ビルド ステップまたはビルド イベントの出力の書式設定](/visual-cpp/ide/formatting-the-output-of-a-custom-build-step-or-build-event)」を参照してください。  
+ [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] では、警告とエラー メッセージ、およびその合計数を**出力**ペインで表示できる、カスタム ビルド ステップおよびビルド イベントを作成できます。 出力結果の任意の行で F1 キーを押すと、適切なヘルプ トピックが表示されます。 詳細については、「[カスタム ビルド ステップまたはビルド イベントの出力の書式設定](/cpp/ide/formatting-the-output-of-a-custom-build-step-or-build-event)」を参照してください。  
   
 ## <a name="scrolling-behavior"></a>スクロール動作  
  [出力] ウィンドウで自動スクロールを使用していて、マウスや方向キーを使用して移動すると、自動スクロールが停止します。 自動スクロールを再開するには、Ctrl キーを押しながら End キーを押します。  
