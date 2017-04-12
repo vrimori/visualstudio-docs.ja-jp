@@ -1,5 +1,6 @@
 # [JavaScript 言語リファレンス](javascript-language-reference.md)
 # [JavaScript の新機能](what-s-new-in-javascript.md)
+# [Visual Studio 2017 の JavaScript](javascript-in-vs-2017.md)
 # [JavaScript の基礎](javascript-fundamentals.md)
 ## [JavaScript コードの記述](writing-javascript-code.md)
 ## [変数](variables-javascript.md)
