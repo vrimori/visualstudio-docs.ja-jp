@@ -1,7 +1,7 @@
 # [プロファイリング機能ツアー](profiling-feature-tour.md)
 ## [パフォーマンス プロファイリングのビギナーズ ガイド](beginners-guide-to-performance-profiling.md)
 ## [プロファイリング ツールの新機能](what-s-new-in-profiling-tools.md)
-## 「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](running-profiling-tools-with-or-without-the-debugger.md)
+## [デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](running-profiling-tools-with-or-without-the-debugger.md)
 ## [メモリ使用量](memory-usage.md)
 ### [カスタム ネイティブ ETW ヒープ イベント](custom-native-etw-heap-events.md)
 ### [デバッグなしのメモリ使用量](memory-usage-without-debugging2.md)
