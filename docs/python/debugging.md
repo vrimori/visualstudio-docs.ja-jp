@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: b5d72a83092c2b97b30b7a8af539a0b1aca50418
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
+ms.openlocfilehash: 1d26ca1a464e2ec15c0d5d338a46b6fb1e7e1d65
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -105,7 +105,7 @@ Python Tools for Visual Studio (PTVS) は、実行中のプロセスへのアタ
 
 ### <a name="inspecting-and-modifying-values"></a>値の検査と変更
 
-デバッガーで停止中に、変数の値を検査して変更することができます。 ウォッチ ウィンドウを使用して、個々の変数やカスタム式を監視することもできます (詳しくは[変数の検査](../debugger/getting-started-with-the-debugger.md#BKMK_Inspect_Variables)に関する記事を参照してください)。
+デバッガーで停止中に、変数の値を検査して変更することができます。 ウォッチ ウィンドウを使用して、個々の変数やカスタム式を監視することもできます (詳しくは[変数の検査](../debugger/getting-started-with-the-debugger.md#inspect-variables-with-the-autos-and-locals-windows)に関する記事を参照してください)。
 
 データヒントを使用して値を表示するには、エディター内で変数の上にマウスを合わせます。 値をクリックして変更することができます。
 

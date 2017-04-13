@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio の Python 対話型 REPL | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: f31d92f193af3fb32f61030ca52e444ae2baa60b
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: ca444dbe9fea25b205ae2060d462f23957368496
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -60,19 +60,19 @@ Python 対話型ウィンドウの概要については、「[Getting Started wi
 
 環境用の対話型ウィンドウを開くにはいくつかの方法があります。
 
-(第&1; の方法) [Python Environments (Python 環境)] ウィンドウに切り替え (**[表示] > [その他のウィンドウ] > [Python Environments (Python 環境)]**、または Ctrl + K、Ctrl + `)、**[Open Interactive Window (対話型ウィンドウを開く)]** コマンドまたは選んだ環境のボタンを選びます。
+(第 1 の方法) [Python Environments (Python 環境)] ウィンドウに切り替え (**[表示] > [その他のウィンドウ] > [Python Environments (Python 環境)]**、または Ctrl + K、Ctrl + `)、**[Open Interactive Window (対話型ウィンドウを開く)]** コマンドまたは選んだ環境のボタンを選びます。
 
 ![Python 環境ウィンドウの対話型ウィンドウへのリンク](media/interactive-window-opening.png)
 
-(第&2; の方法) **[表示] > [その他のウィンドウ]** には、各環境の**対話型**コマンドがあります。通常は、メニューの下端近くに表示されます。
+(第 2 の方法) **[表示] > [その他のウィンドウ]** には、各環境の**対話型**コマンドがあります。通常は、メニューの下端近くに表示されます。
 
 ![[表示] > [その他のウィンドウ] の対話型ウィンドウ メニュー項目](media/interactive-window-menu.png)
 
-(第&3; の方法) プロジェクトのスタートアップ ファイルで対話型ウィンドウを開くことができます。または、スタンドアロン ファイルの場合は、**[デバッグ] > [Execute [Project | File] in Python Interactive (Python Interactive で [プロジェクト | ファイル] を実行する)]** メニュー コマンドを選びます (Shift + Alt + F5)。
+(第 3 の方法) プロジェクトのスタートアップ ファイルで対話型ウィンドウを開くことができます。または、スタンドアロン ファイルの場合は、**[デバッグ] > [Execute [Project | File] in Python Interactive (Python Interactive で [プロジェクト | ファイル] を実行する)]** メニュー コマンドを選びます (Shift + Alt + F5)。
 
 ![[Execute Project in Python Interactive (Python Interactive でプロジェクトを実行する)] メニュー](media/interactive-execute-project.png)
 
-(第&4; の方法) ファイルでコードを選び、後で説明する [Interactive にコードを送信するコマンド](#send-code-to-interactive)を使います。
+(第 4 の方法) ファイルでコードを選び、後で説明する [Interactive にコードを送信するコマンド](#send-code-to-interactive-command)を使います。
 
 ## <a name="interactive-window-options"></a>対話型ウィンドウのオプション
 
@@ -86,11 +86,11 @@ Python 対話型ウィンドウの概要については、「[Getting Started wi
 
 ## <a name="using-the-interactive-window"></a>対話型ウィンドウの使用
 
-対話型ウィンドウを開いた後は、`>>>` プロンプトで&1; 行ずつコードの入力を開始できます。 対話型ウィンドウは、入力と同時に各行を実行します。これには、モジュールのインポートや、変数の定義などが含まれます。 次の図の最初の&2; 行にこのことが示されています。
+対話型ウィンドウを開いた後は、`>>>` プロンプトで 1 行ずつコードの入力を開始できます。 対話型ウィンドウは、入力と同時に各行を実行します。これには、モジュールのインポートや、変数の定義などが含まれます。 次の図の最初の 2 行にこのことが示されています。
 
 ![Python 対話型ウィンドウ](media/interactive-window.png)
 
-例外はステートメントがコロンで終わる場合で、上の `for` ステートメントと同様に、対話型ウィンドウはコード ブロックを正しく実行するには追加のコード行が必要であることを認識しています。 この場合、行プロンプトが `...` に変わり、ブロックの追加行を入力する必要があることを示します (上の図の&4; 番目と&5; 番目の行を参照)。 空白行で Enter キーを押すと、対話型ウィンドウはブロックを終了し、インタープリターでブロックを実行します。
+例外はステートメントがコロンで終わる場合で、上の `for` ステートメントと同様に、対話型ウィンドウはコード ブロックを正しく実行するには追加のコード行が必要であることを認識しています。 この場合、行プロンプトが `...` に変わり、ブロックの追加行を入力する必要があることを示します (上の図の 4 番目と 5 番目の行を参照)。 空白行で Enter キーを押すと、対話型ウィンドウはブロックを終了し、インタープリターでブロックを実行します。
 
 > [!Tip]
 > 対話型ウィンドウは、囲むスコープに属しているステートメントを自動的にインデントすることにより、Python の通常のコマンドライン REPL エクスペリエンスを向上させます。 対話型ウィンドウの履歴 (上方向キーで再呼び出しされます) は複数行の項目も提供しますが、コマンドライン REPL は単一行しか提供しません。
