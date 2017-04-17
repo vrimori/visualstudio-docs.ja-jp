@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 のオフライン インストーラーを作成する | Microsoft Docs"
 description: "Visual Studio のオフライン インストーラーを作成する方法について説明します。"
 ms.custom: 
-ms.date: 03/21/2017
+ms.date: 04/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
-ms.openlocfilehash: 563c78a49eb55886b1ddbd4f437951c99c6568e5
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: 4e33dc3ebb32569b547aa9bcb6db9a15dbe4fc21
+ms.openlocfilehash: fda1a4fbfebd856312174fe24ff161b0e9d04bb9
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="create-an-offline-installer-for-visual-studio-2017"></a>Visual Studio 2017 のオフライン インストーラーを作成する
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/22/2017
 - Visual Studio Professional の場合、以下を実行します。 <br> ```vs_professional.exe --layout c:\vs2017offline```
 - Visual Studio コミュニティの場合、以下を実行します。 <br> ```vs_community.exe --layout c:\vs2017offline```
 
-その他の例については、このページの「[オフライン インストーラーをカスタマイズする方法](#how-to-customize-your-offline- installer)」を参照してください。
+その他の例については、このページの「[オフライン インストーラーをカスタマイズする方法](#how-to-customize-your-offline-installer)」を参照してください。
 
 ## <a name="install-from-the-offline-installation-folder"></a>オフライン インストール フォルダーからのインストール
 オフライン インストールを今すぐ実行するか、後で実行するかを選択できます。 ただし、この場合、次の手順に従います。
@@ -98,6 +98,7 @@ ms.lasthandoff: 03/22/2017
 
 | 問題       | アイテム                   | ソリューション |
 | ----------- | ---------------------- | -------- |
+| "セットアップは完了したが、警告が発生した" という Visual Studio インストーラーのエラー メッセージが表示され、Windows エミュレーターをインストールできない。 | Windows 10 エミュレーター | Visual Studio のオフライン インストール フォルダーを開いてサブフォルダー "Win10_Emulator_10.0.15063,version=10.0.15063.12,chip=x64" に移動し、EmulatorSetup.exe を実行して Windows エミュレーターをインストールします。 |
 | 一部のコンポーネントとパッケージをインストールできないという警告メッセージが表示される。  | Android SDK セットアップ (API レベル) | Android SDK (API レベル) パッケージを含める場合、オフライン インストーラーの作成時にインターネットに接続している必要があります。 制限付きネットワークを使用している場合は、次の URL へのアクセスを許可する必要があります。 <br><br> - http://dl.google.com:443 <br> - http://dl-ssl.google.com:443 <br>  - https://dl-ssl.google.com/android/repository/*<br><br>プロキシ設定で考えられる問題を解決する方法の詳細については、ブログ投稿の「[Visual Studio install failures (Android SDK Setup) behind a Proxy](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/)」 (プロキシ経由で Visual Studio をインストールできない (Android SDK セットアップ)) を参照してください。  |  
 | ユーザーにファイルへのアクセス権がない。 | アクセス許可 (ACL) | オフライン インストールを共有する*前*に、他のユーザーに読み取りアクセス権を付与するように、必ずアクセス許可 (ACL) を調整してください。 |
 | 新しいワークロード、コンポーネント、または言語をインストールできない。  | `--layout`  | 部分レイアウトからインストールし、以前のレイアウトで使用できないワークロード、コンポーネント、または言語を選択した場合、インターネットにアクセスできることを確認してください。 |

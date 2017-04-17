@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 のインストール | Microsoft Docs"
 description: "Visual Studio をインストールする方法について、ステップ バイ ステップで説明します。"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 04/03/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -37,9 +37,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8c4e45eadd81c54a372885ce89ccced1256d3b3d
-ms.openlocfilehash: 5552f67ae880e3b7ec832d6d035382e2abcca116
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
+ms.openlocfilehash: 47688935cec36db174c3a0c424b1705ae47c6118
+ms.lasthandoff: 04/03/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/09/2017
 3.  インストールの進行状況を示すいくつかのステータス画面が表示されます。 インストールが終了したら、次は、必要な機能セット (ワークロード) を選択します。
 
 ## <a name="install-workloads"></a>ワークロードのインストール  
- これで、ワークロードを使用して、インストールをカスタマイズできます。 必要なワークロードを&1; つ以上選択します。各ワークロードには、好みのプログラミング言語またはプラットフォームに必要な機能が含まれています。  
+ これで、ワークロードを使用して、インストールをカスタマイズできます。 必要なワークロードを 1 つ以上選択します。各ワークロードには、好みのプログラミング言語またはプラットフォームに必要な機能が含まれています。  
 
  取得方法は次のとおりです。  
 
@@ -102,6 +102,8 @@ ms.lasthandoff: 03/09/2017
 
 既定では、インストーラー プログラムが、最初の実行時にオペレーティング システムの言語の照合を試みます。 インストーラーはこの設定を記憶します。 コマンド ラインからインストーラーを実行することで、この設定を変更できます。 たとえば、`vs_installer.exe --locale en-US` コマンドを実行して、インストーラーを英語で実行するように指定することができます。 この設定は、次回インストーラーを実行したときにも保持されています。 インストーラーでは、zh-CN、zh-TW、cs-CZ、en-US、fr-FR、de-DE、it-IT、ja-JP、ko-KR、pl-PL、pt-BR、ru-RU、es-ES、tr-TR という言語トークンがサポートされます。
 
+## <a name="get-support"></a>サポートを受ける
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、サポート技術情報の記事「[Visual Studio 2017 で発生するインストールおよびアップグレード エラーのトラブルシューティング](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures)」にあるトラブルシューティングのヒントを参照してください。
 
 ## <a name="see-also"></a>関連項目  
 * [Visual Studio 2017 の変更](modify-visual-studio.md)

@@ -27,9 +27,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: b0d84db6a16861fb9554af2a644423f906784748
-ms.openlocfilehash: b2ff9c3505b117469854a24cad8e9b13d8039db8
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
+ms.openlocfilehash: c8276097c53ea49d223c43ada5511ab5d5f38036
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="visual-studio-ide-feature-tour"></a>Visual Studio IDE 機能ツアー
@@ -68,7 +68,7 @@ Visual Studio は、他にも数多くのことを実行するのに役立ちま
 
 Visual Studio はかつてないほど軽量になりました。 新しいモジュラー インストーラーにより、インストールする*ワークロード* (そのプログラミング言語やプラットフォームで必要な機能のグループ) を選択できます。 この方法により、Visual Studio のインストールのフットプリントがかつてないほど小さくなり、インストールと更新に要する時間が短縮されました。
 
-![Visual Studio インストーラー](../install/media/vs2017-workloads.png)
+![Visual Studio インストーラー](../ide/media/vside_tour_install_dialog.png)
 
 Visual Studio 2017 ではインストールのパフォーマンスが強化されたことに加え、数多くの改善により IDE 全体の起動時間とソリューションの読み込み時間が短縮されました。 たとえば、**[ツール]**、**[オプション]**、**[プロジェクトとソリューション]** の下のメイン メニューにある新しいライトウェイト ソリューション ロード機能を選択すると、大規模なソリューションの読み込み時間が短縮されます。 お使いのシステムに Visual Studio をセットアップする方法について詳しくは、「[Visual Studio 2017 のインストール](https://docs.microsoft.com/visualstudio/install/install-visual-studio)」をご覧ください。
 
@@ -78,11 +78,13 @@ Visual Studio を初めて起動する際には、Microsoft アカウント、�
 
 ## <a name="create-a-program"></a>プログラムの作成
 
-あることを学ぶ方法の&1; つは実際に使ってみることです。 簡単なプログラムを新しく作成してみましょう。
+あることを学ぶ方法の 1 つは実際に使ってみることです。 簡単なプログラムを新しく作成してみましょう。
 
 1. Visual Studio を開きます。 メニューで、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。 (プロジェクトの既定の値を使用します。)
 
   ![スクリーンショット](../ide/media/VSIDE_Tour_NewProject1.png)
+
+  別の方法として、スタート ページを使用して新しいプロジェクトを作成できます。 詳細については、「[Harness the Power of the Redesigned Start Page (blog)](https://blogs.msdn.microsoft.com/visualstudio/2016/11/29/harness-the-power-of-the-redesigned-start-page/)」(再設計されたスタート ページの機能を最大限に活用する (ブログ)) を参照してください。
 
 1. **[新しいプロジェクト]** ダイアログ ボックスには複数のプロジェクト テンプレートが表示されます。 **[Visual C#]** の下の **[Windows ユニバーサル]** カテゴリで **[空白のアプリ (ユニバーサル Windows)]** テンプレートを選択し、**[OK]** ボタンを選択します。
 
@@ -136,7 +138,7 @@ Visual Studio を初めて起動する際には、Microsoft アカウント、�
 
 
 ## <a name="debug-test-and-improve-your-code"></a>デバッグとテストによるコードの改善
-いつもすべてが完璧にうまく行くとは限りません。 コードを記述する際には、バグの存在やパフォーマンスを確認するために実際に実行してテストする必要があります。 Visual Studio の最新のデバッグ システムを使うと、ローカル プロジェクト、リモート デバイス、またはエミュレーター (Android デバイス用や Windows Phone デバイス用など) で実行されるコードをデバッグできます。 一度に&1; つのステートメントのコードをステップスルーでき、変数を調べることができます。マルチスレッド アプリケーションをステップスルーでき、指定された条件が true の場合のみヒットするブレークポイントを設定できます。 コードの実行中に変数の値などを監視できます。 すべてコード エディター自体で管理できるため、コードを離れる必要はありません。
+いつもすべてが完璧にうまく行くとは限りません。 コードを記述する際には、バグの存在やパフォーマンスを確認するために実際に実行してテストする必要があります。 Visual Studio の最新のデバッグ システムを使うと、ローカル プロジェクト、リモート デバイス、またはエミュレーター (Android デバイス用や Windows Phone デバイス用など) で実行されるコードをデバッグできます。 一度に 1 つのステートメントのコードをステップスルーでき、変数を調べることができます。マルチスレッド アプリケーションをステップスルーでき、指定された条件が true の場合のみヒットするブレークポイントを設定できます。 コードの実行中に変数の値などを監視できます。 すべてコード エディター自体で管理できるため、コードを離れる必要はありません。
 
 ![デバッグ](../ide/media/VSIDE_Tour_Debugging.png)
 
@@ -193,15 +195,14 @@ Visual Studio には他にも一般的な仕事効率化機能が用意されて
 
   ![System.Timer を示すオブジェクト ブラウザー](../ide/media/objectbrowser.png)  
 
-## <a name="collaborate-with-others-and-control-your-source-code"></a>他のユーザーとの共同作業とソース コードのコントロール
-GitHub などの任意のプロバイダーがホストしている Git リポジトリにあるソース コードを管理できます。 また、[Visual Studio Team Services (VSTS)](https://www.visualstudio.com/team-services/) を使用して、プロジェクト全体でコードをバグおよび作業項目と共に管理することもできます。
+## <a name="manage-your-source-code-and-collaborate-with-others"></a>ソース コードの管理および他のユーザーとの共同作業
+GitHub などの任意のプロバイダーがホストしている Git リポジトリにあるソース コードを管理できます。 また、[Visual Studio Team Services (VSTS)](https://www.visualstudio.com/team-services/) を使用して、プロジェクト全体でコードをバグおよび作業項目と共に管理することもできます。 Visual Studio でチーム エクスプローラーを使用して Git リポジトリを管理する方法の詳細については、「[Get Started with Git and Team Services](https://www.visualstudio.com/en-us/docs/git/gitquickstart-vs2017)」(Git およびチーム サービスの概要) を参照してください。  Visual Studio には、その他の組み込みのソース管理機能もあります。 それらの機能について詳しくは、ブログ「[New Git Features in Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudioalm/2017/03/06/new-git-features-in-visual-studio-2017/)」(Visual Studio 2017 の新しい Git 機能) をご覧ください。
 
 Visual Studio Team Services は、ソフトウェア プロジェクトをホストし、チームでのコラボレーションを有効にするためのクラウド ベースのサービスです。 VSTS は、Git ソース管理システムと Team Foundation ソース管理システムの両方をサポートしています。また、Scrum、CMMI、アジャイル開発方法もサポートしています。 Team Foundation バージョン管理 (TFVC) は、単一の集中サーバー リポジトリを使用して、ファイルを追跡してバージョン管理します。 ローカルの変更は常に集中サーバーにチェックインされます。他の開発者はそこで、最新の変更を取得できます。
 
-Team Foundation Server (TFS) は、Visual Studio のアプリケーション ライフサイクル管理のハブです。 これにより、開発プロセスに関わるすべてのユーザーが&1; つのソリューションを使用して参加できるようになります。 TFS は、異種混合のチームやプロジェクトを管理するのにも役立ちます。
+Team Foundation Server (TFS) は、Visual Studio のアプリケーション ライフサイクル管理のハブです。 これにより、開発プロセスに関わるすべてのユーザーが 1 つのソリューションを使用して参加できるようになります。 TFS は、異種混合のチームやプロジェクトを管理するのにも役立ちます。
 
-Visual Studio Team Services のアカウントまたは Team Foundation Server がネットワーク上にある場合、Visual Studio の [チーム エクスプローラー] ウィンドウから接続することができます。 このウィンドウからソース管理にコードをチェックインしたりソース管理からコードをチェックアウトできます。また、作業項目を管理したり、ビルドを開始したり、チームのルームやワークスペースにアクセスできます。 チーム エクスプローラーは、**[クイック起動]** ボックスから、**[ビュー]、[チーム エクスプローラー]** と選択してメイン メニューから、または **[チーム]、[接続の管理]** と選択して開くことができます。  
-
+Visual Studio Team Services のアカウントまたは Team Foundation Server がネットワーク上にある場合、Visual Studio の [チーム エクスプローラー] ウィンドウから接続することができます。 このウィンドウからソース管理にコードをチェックインしたりソース管理からコードをチェックアウトできます。また、作業項目を管理したり、ビルドを開始したり、チームのルームやワークスペースにアクセスできます。 チーム エクスプローラーは、**[クイック起動]** ボックスから、**[ビュー]、[チーム エクスプローラー]** と選択してメイン メニューから、または **[チーム]、[接続の管理]** と選択して開くことができます。
 次の図は、VSTS でホストされているソリューションの [チーム エクスプローラー] ウィンドウを示しています。
 
 ![Visual Studio Team Explorer](../ide/media/vs2017_teamexplorer.png)  
@@ -232,7 +233,8 @@ Visual Studio の **SQL Server オブジェクト エクスプローラー**で�
 Visual Studio に必要な機能がない場合は、機能を追加できます。 ワークフローとスタイルに基づいて IDE をカスタマイズしたり、Visual Studio にまだ統合されていない外部ツールのサポートを追加したり、既存の機能を変更して生産性の向上を図ることができます。 Visual Studio には、マイクロソフト、マイクロソフトのパートナー、およびコミュニティからのツール、コントロール、およびテンプレートが用意されています。 Visual Studio の拡張について詳しくは、「[Visual Studio IDE を機能拡張する](https://www.visualstudio.com/vs/extend/)」をご覧ください。
 
 ## <a name="learn-more-and-find-out-whats-new"></a>詳細と新機能
-Visual Studio を使ったことがない場合は、「[Visual Studio 入門](../ide/get-started-with-visual-studio.md)」基礎を学習するか、[Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033) の Visual Studio のコースを無料で受講できます。Visual Studio 2017 の新機能については、「[Visual Studio 2017 の新機能](../ide/whats-new-in-visual-studio.md)」をご覧ください。
+Visual Studio を使ったことがない場合は、最初に「[Visual Studio 入門](../ide/get-started-with-visual-studio.md)」で基礎を学習するか、[Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033) の Visual Studio のコースを無料で受講することができます。
+Visual Studio 2017 の新機能については、「[Visual Studio 2017 の新機能](../ide/whats-new-in-visual-studio.md)」をご覧ください。
 
 これで Visual Studio IDE のツアーを終わります。 主な機能について便利なヒントを得るのに役立ててください。
 
