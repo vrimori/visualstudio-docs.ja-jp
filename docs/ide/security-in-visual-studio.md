@@ -31,9 +31,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7a282fc04c1eb01f0c56b1d76880276fc270686d
-ms.openlocfilehash: 96136c7223f3d5f78fff9bfe3106d48cab4dd44a
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 57f7d51786d2636eb865eb81bb3468e79c6f19f9
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="security-in-visual-studio"></a>Visual Studio におけるセキュリティ
@@ -45,7 +45,7 @@ ms.lasthandoff: 03/01/2017
  [セキュリティ](http://msdn.microsoft.com/Library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)  
  .NET Framework のコード アクセス セキュリティ、ロール ベース セキュリティ、セキュリティ ポリシー、およびセキュリティ ツールについて説明します。  
   
- [コードを守るためにすべての開発者が知る必要のある、セキュリティに関するヒント上位&10; 項目](http://go.microsoft.com/fwlink/?LinkId=72877)  
+ [コードを守るためにすべての開発者が知る必要のある、セキュリティに関するヒント上位 10 項目](http://go.microsoft.com/fwlink/?LinkId=72877)  
  データまたはシステムに対する攻撃を防ぐために注意しなければならない問題について説明します。  
   
 ## <a name="coding-for-security"></a>セキュリティに配慮したコーディング  
@@ -54,7 +54,7 @@ ms.lasthandoff: 03/01/2017
  [安全なコーディングのガイドライン](http://msdn.microsoft.com/Library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)  
  セキュリティ問題に対処するためのコンポーネント分類ガイドラインを示します。  
   
- [セキュリティ推奨事項](/visual-cpp/top/security-best-practices-for-cpp)  
+ [セキュリティ推奨事項](/cpp/top/security-best-practices-for-cpp)  
  バッファー オーバーランと、Microsoft Visual C++ のセキュリティ チェック機能の詳細について説明します。この機能は、コンパイル時に /GS フラグを指定することによって利用できます。
 
 ## <a name="building-for-security"></a>セキュリティに配慮したビルド  

@@ -1,58 +1,74 @@
 ---
-title: "IDebugEvent2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEvent2"
-helpviewer_keywords: 
-  - "IDebugEvent2 インターフェイス"
+title: "IDebugEvent2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEvent2
+helpviewer_keywords:
+- IDebugEvent2 interface
 ms.assetid: de3d714d-96fb-4e12-b66b-a75391472153
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugEvent2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: cf76a596a42b166a7e19686ecbae5fe4ddd41ea4
+ms.lasthandoff: 04/05/2017
 
-このインターフェイスがブレークポイントで停止などの重要なデバッグ情報およびデバッグ メッセージなどの重要情報の両方を伝達するために使用されます。  
+---
+# <a name="idebugevent2"></a>IDebugEvent2
+このインターフェイスは、ブレークポイントで停止するなどの重要なデバッグ情報とデバッグ メッセージなどの重大でない情報の両方の通信に使用されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugEvent2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- デバッグ エンジン \(DE\) とカスタム ポートの業者は他のすべてのイベント インターフェイスと同じオブジェクトこのインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デバッグ エンジン (DE) とカスタム ポート サプライヤーは、その他のすべてのイベント インターフェイスと同じオブジェクトでこのインターフェイスを実装します。  
   
-## 呼び出し元のメモ  
- 適切なイベント インターフェイスを取得するに [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) または [イベント](../../../extensibility/debugger/reference/idebugportevents2-event.md) に提供インターフェイス ID \(IID\) の引数を \(SDM\) 使用して `IDebugEvent2` インターフェイスのデバッグ セッションのマネージャーの呼び出し [QueryInterface](/visual-cpp/atl/queryinterface)。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ インターフェイスに指定された ID (IID) 引数を使用して[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)または[イベント](../../../extensibility/debugger/reference/idebugportevents2-event.md)、セッション デバッグ マネージャー (SDM) を呼び出す[QueryInterface](/cpp/atl/queryinterface)上、`IDebugEvent2`を適切なイベント インターフェイスを取得するインターフェイスです。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugEvent2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugEvent2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
+|メソッド|説明|  
+|------------|-----------------|  
 |[GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md)|このデバッグ イベントの属性を取得します。|  
   
-## 解説  
- 特定のイベントのインターフェイスは[IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) などの IDebugEvent2 インターフェイスから同じ型の別のインターフェイスが `IDebugEvent2` としてオブジェクトとして取得しませんが代わりに実行されます。  
+## <a name="remarks"></a>コメント  
+ 特定のイベント インターフェイスなど[IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)IDebugEvent2 インターフェイスから派生していませんが、上と同じオブジェクトを別のインターフェイスとして実装される代わりに、`IDebugEvent2`です。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [イベント](../../../extensibility/debugger/reference/idebugportevents2-event.md)   
  [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

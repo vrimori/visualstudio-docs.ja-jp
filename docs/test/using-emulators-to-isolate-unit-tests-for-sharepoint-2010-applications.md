@@ -1,28 +1,44 @@
 ---
-title: "Sharepoint 2010 アプリケーションの単体テストを分離するためのエミュレーターの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SharePoint 2010 アプリケーションの単体テストを分離するためのエミュレーターの使用 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b681164c-c87a-4bd7-be48-ed77e1578471
 caps.latest.revision: 15
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 15
----
-# Sharepoint 2010 アプリケーションの単体テストを分離するためのエミュレーターの使用
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: f5f8df6f6f8348bcd146b5baa4cf748331d4473b
+ms.lasthandoff: 04/04/2017
 
-Microsoft.SharePoint.Emulators パッケージには、Microsoft SharePoint 2010 アプリケーションの分離単体テストの作成に役立つ一連のライブラリが用意されています。  エミュレーターは、[Microsoft Fakes](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) 分離フレームワークで [shim](../test/isolating-code-under-test-with-microsoft-fakes.md) を使用して、SharePoint API の最も一般的なオブジェクトおよびメソッドを模倣する、軽量なメモリ内オブジェクトを作成します。  SharePoint メソッドがエミュレートされていない場合、またはエミュレーターの既定の動作を変更する場合は、Fakes shim を作成して必要な結果を提供できます。  
+---
+# <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>Sharepoint 2010 アプリケーションの単体テストを分離するためのエミュレーターの使用
+Microsoft.SharePoint.Emulators パッケージには、Microsoft SharePoint 2010 アプリケーションの分離単体テストの作成に役立つ一連のライブラリが用意されています。 エミュレーターは、[Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) 分離フレームワークで [shim](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) を使用して、SharePoint API の最も一般的なオブジェクトおよびメソッドを模倣する、軽量なメモリ内オブジェクトを作成します。 SharePoint メソッドがエミュレートされていない場合、またはエミュレーターの既定の動作を変更する場合は、Fakes shim を作成して必要な結果を提供できます。  
   
- 既存のテスト メソッドとクラスは、エミュレーターのコンテキストで実行されるように容易に変換できます。  この機能を使用すると、二重用途のテストを作成できます。  二重用途のテストは、実際の SharePoint API に対する統合テストと、エミュレーターを使用する分離単体テストを切り替えることができます。  
+ 既存のテスト メソッドとクラスは、エミュレーターのコンテキストで実行されるように容易に変換できます。 この機能を使用すると、二重用途のテストを作成できます。 二重用途のテストは、実際の SharePoint API に対する統合テストと、エミュレーターを使用する分離単体テストを切り替えることができます。  
   
 ##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
- [必要条件](#BKMK_Requirements)  
+ [Requirements](#BKMK_Requirements)  
   
  [AppointmentsWebPart の例](#BKMK_The_AppointmentsWebPart_example)  
   
@@ -44,9 +60,9 @@ Microsoft.SharePoint.Emulators パッケージには、Microsoft SharePoint 2010
   
  [エミュレートされた SharePoint の型](#BKMK_Emulated_SharePoint_types)  
   
-##  <a name="BKMK_Requirements"></a> 必要条件  
+##  <a name="BKMK_Requirements"></a> 要件  
   
--   Microsoft SharePoint 2010 \(SharePoint 2010 Server または SharePoint 2010 Foundation\)  
+-   Microsoft SharePoint 2010 (SharePoint 2010 Server または SharePoint 2010 Foundation)  
   
 -   Microsoft Visual Studio Enterprise  
   
@@ -57,7 +73,7 @@ Microsoft.SharePoint.Emulators パッケージには、Microsoft SharePoint 2010
 ##  <a name="BKMK_The_AppointmentsWebPart_example"></a> AppointmentsWebPart の例  
  AppointmentsWebPart を使用すると、予定の SharePoint リストを表示および管理できます。  
   
- ![予定 Web パーツ](../test/media/ut_emulators_appointmentswebpart.png "UT\_EMULATORS\_AppointmentsWebPart")  
+ ![予定 Web パーツ](../test/media/ut_emulators_appointmentswebpart.png "UT_EMULATORS_AppointmentsWebPart")  
   
  この例では、Web パーツの 2 つのメソッドをテストします。  
   
@@ -68,7 +84,7 @@ Microsoft.SharePoint.Emulators パッケージには、Microsoft SharePoint 2010
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Converting_an_existing_test"></a> 既存のテストを変換する  
- SharePoint コンポーネントの一般的なメソッド テストでは、テスト メソッドにより、一時的なサイトが SharePoint Foundation に作成され、テスト対象のコードが必要とする SharePoint コンポーネントが追加されます。  その後、コンポーネントのインスタンスが作成および実行されます。  このサイトは、テストの終了時に破棄されます。  
+ SharePoint コンポーネントの一般的なメソッド テストでは、テスト メソッドにより、一時的なサイトが SharePoint Foundation に作成され、テスト対象のコードが必要とする SharePoint コンポーネントが追加されます。 その後、コンポーネントのインスタンスが作成および実行されます。 このサイトは、テストの終了時に破棄されます。  
   
  テスト対象のコードの `ScheduleAppointment` メソッドは、ほとんどの場合、そのコンポーネントに対して記述された最初のメソッドの 1 つです。  
   
@@ -131,9 +147,9 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 }  
 ```  
   
- このテスト メソッドは、`ScheduleAppointment` メソッドによって新しいエントリが一覧に適切に追加されたかどうかを検証しますが、コードの特定の動作のテストというよりも、どちらかというと Web パーツの統合テストです。  このテストは、SharePoint および SharePoint API に対する外部依存関係によって、`ScheduleAppointment` メソッドのユーザー コード以外の理由で失敗することがあります。  また、SharePoint サイトの作成および破棄のオーバーヘッドによりテストが遅くなりすぎて、コード プロセスの一部として実行できなくなることもあります。  すべてのテスト メソッドに対してサイトの設定と破棄を実行しても、効率的な開発者単体テストの作成に関する問題を悪化させるだけです。  
+ このテスト メソッドは、`ScheduleAppointment` メソッドによって新しいエントリが一覧に適切に追加されたかどうかを検証しますが、コードの特定の動作のテストというよりも、どちらかというと Web パーツの統合テストです。 このテストは、SharePoint および SharePoint API に対する外部依存関係によって、`ScheduleAppointment` メソッドのユーザー コード以外の理由で失敗することがあります。 また、SharePoint サイトの作成および破棄のオーバーヘッドによりテストが遅くなりすぎて、コード プロセスの一部として実行できなくなることもあります。 すべてのテスト メソッドに対してサイトの設定と破棄を実行しても、効率的な開発者単体テストの作成に関する問題を悪化させるだけです。  
   
- Microsoft SharePoint エミュレーターは、よく使用する SharePoint API の動作を模倣する一連のオブジェクトとメソッド "doubles" を提供します。  エミュレートされたメソッドは SharePoint API の軽量な実装で、SharePoint を実行する必要がありません。  Microsoft Fakes を使用して、SharePoint API への呼び出しを、SharePoint エミュレーターのメソッド doubles に迂回させることで、テストを分離して、必要なコードをテストしているかどうかを確認します。  エミュレートされていない SharePoint のメソッドを呼び出すと、Fake を使用して必要な動作を直接作成できます。  
+ Microsoft SharePoint エミュレーターは、よく使用する SharePoint API の動作を模倣する一連のオブジェクトとメソッド "doubles" を提供します。 エミュレートされたメソッドは SharePoint API の軽量な実装で、SharePoint を実行する必要がありません。 Microsoft Fakes を使用して、SharePoint API への呼び出しを、SharePoint エミュレーターのメソッド doubles に迂回させることで、テストを分離して、必要なコードをテストしているかどうかを確認します。 エミュレートされていない SharePoint のメソッドを呼び出すと、Fake を使用して必要な動作を直接作成できます。  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
@@ -142,18 +158,18 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
   
 1.  ソリューション エクスプローラーでテスト プロジェクトを選択します。  
   
-2.  ショートカット メニューの **\[NuGet パッケージの管理\]** を選択します。  
+2.  ショートカット メニューの **[NuGet パッケージの管理...]** を選択します。  
   
-3.  **\[オンライン\]** カテゴリで `Microsoft.SharePoint.Emulators` を検索し、**\[インストール\]** を選択します。  
+3.  `Microsoft.SharePoint.Emulators` の **[オンライン]** カテゴリを検索し、**[インストール]** を選択します。  
   
- ![SharePoint エミュレーター NuGet パッケージ](../test/media/ut_emulators_nuget.png "UT\_EMULATORS\_Nuget")  
+ ![SharePoint エミュレーター NuGet パッケージ](../test/media/ut_emulators_nuget.png "UT_EMULATORS_Nuget")  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ###  <a name="BKMK__Running_a_test_method_in_the_emulation_context"></a> エミュレーションを使用してテスト メソッドを実行する  
- パッケージをインストールすると、必要なライブラリへの参照がプロジェクトに追加されます。  既存のテスト クラスでエミュレーターを使いやすくするには、名前空間 `Microsoft.SharePoint.Emulators` と `Microsoft.QualityTools.Testing.Emulators` を追加します。  
+ パッケージをインストールすると、必要なライブラリへの参照がプロジェクトに追加されます。 既存のテスト クラスでエミュレーターを使いやすくするには、名前空間 `Microsoft.SharePoint.Emulators` と `Microsoft.QualityTools.Testing.Emulators` を追加します。  
   
- テスト メソッドでエミュレーションを有効にするには、`using` オブジェクトを作成する `SharePointEmulationScope` ステートメントでメソッド本体をラップします。  例:  
+ テスト メソッドでエミュレーションを有効にするには、`using` オブジェクトを作成する `SharePointEmulationScope` ステートメントでメソッド本体をラップします。 例:  
   
 ```c#  
   
@@ -183,14 +199,14 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
   
 ```  
   
- テスト メソッドが実行されると、エミュレーター ランタイムは、Microsoft Fake を呼び出してコードを SharePoint メソッドに動的に挿入し、これらのメソッドへの呼び出しを、Microsoft.SharePoint.Fakes.dll で宣言されているデリゲートに迂回させます。  Microsoft.SharePoint.Emulators.dll は、エミュレートされたメソッドのデリゲートを実装し、SharePoint の実際の動作を正確に模倣します。  テスト メソッドまたはテスト対象のコンポーネントが SharePoint メソッドを呼び出した結果として生じる動作は、エミュレーションの動作です。  
+ テスト メソッドが実行されると、エミュレーター ランタイムは、Microsoft Fake を呼び出してコードを SharePoint メソッドに動的に挿入し、これらのメソッドへの呼び出しを、Microsoft.SharePoint.Fakes.dll で宣言されているデリゲートに迂回させます。 Microsoft.SharePoint.Emulators.dll は、エミュレートされたメソッドのデリゲートを実装し、SharePoint の実際の動作を正確に模倣します。 テスト メソッドまたはテスト対象のコンポーネントが SharePoint メソッドを呼び出した結果として生じる動作は、エミュレーションの動作です。  
   
- ![エミュレーターの実行フロー](../test/media/ut_emulators_flowchart.png "UT\_EMULATORS\_FlowChart")  
+ ![エミュレーターの実行フロー](../test/media/ut_emulators_flowchart.png "UT_EMULATORS_FlowChart")  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Creating_dual_use_classes_and_methods"></a> 二重用途のクラスおよびメソッドを作成する  
- 実際の SharePoint API に対する統合テストと、エミュレーターを使用する分離単体テストの両方に使用できるメソッドを作成するには、オーバーロードされたコンストラクター `SharePointEmulationScope(EmulationMode)` を使用して、テスト メソッド コードをラップします。  `EmulationMode` 列挙型の 2 つの値は、スコープがエミュレーターを使用するかどうか  \(`EmulationMode.Enabled`\)、またはスコープが SharePoint API を使用するかどうか \(`EmulationMode.Passthrough`\) を指定します。  
+ 実際の SharePoint API に対する統合テストと、エミュレーターを使用する分離単体テストの両方に使用できるメソッドを作成するには、オーバーロードされたコンストラクター `SharePointEmulationScope(EmulationMode)` を使用して、テスト メソッド コードをラップします。 `EmulationMode` 列挙型の 2 つの値は、スコープがエミュレーターを使用するかどうか  (`EmulationMode.Enabled`)、またはスコープが SharePoint API を使用するかどうか (`EmulationMode.Passthrough`) を指定します。  
   
  たとえば、次のコードは、前回のテストを二重用途に変更する方法を示しています。  
   
@@ -229,13 +245,13 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 ##  <a name="BKMK_Using_TestInitialize_and_TestCleanup_attributes_to_create_a_dual_use_test_class"></a> TestInitialize 属性と TestCleanup 属性を使用して二重用途のテスト クラスを作成する  
  `SharePointEmulationScope` を使用してクラスのすべてのテスト、またはほとんどのテストを実行すると、クラス レベルの手法を利用して、エミュレーション モードを設定できます。  
   
--   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute> および <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute> を使用して属性設定されているテスト クラス メソッドが、スコープを作成および破棄できます。  
+-   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute> と <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute> という属性を備えているテスト クラス メソッドはスコープを作成し、破棄できます。  
   
 -   クラス レベルで `EmulationMode` を設定すると、`EmulationMode.Enabled` および `EmulationMode.Passthrough` の間のモード変更を自動化できます。  
   
- `[TestInitialize]` を使用して属性設定されているクラス メソッドが、各テスト メソッドの開始時に実行され、`[TestCleanup]` を使用して属性設定されているメソッドが、各テスト メソッドの終了時に実行されます。  クラス レベルで `SharePointEmulationScope` オブジェクトのプライベート フィールドを宣言し、`TestInitialize` 属性付きメソッドで初期化して、`TestCleanup` 属性付きメソッドでオブジェクトを破棄できます。  
+ `[TestInitialize]` を使用して属性設定されているクラス メソッドが、各テスト メソッドの開始時に実行され、`[TestCleanup]` を使用して属性設定されているメソッドが、各テスト メソッドの終了時に実行されます。 クラス レベルで `SharePointEmulationScope` オブジェクトのプライベート フィールドを宣言し、`TestInitialize` 属性付きメソッドで初期化して、`TestCleanup` 属性付きメソッドでオブジェクトを破棄できます。  
   
- 任意のメソッドを選択して使用し、`EmulationMode`の選択を自動化できます。  1 つは、プリプロセッサ ディレクティブを使用してシンボルの存在をチェックする方法です。  たとえば、エミュレーターを使用してクラスでテスト メソッドを実行するために、テスト プロジェクト ファイルまたはビルド コマンド ラインで `USE_EMULATION` などのシンボルを定義できます。  シンボルを定義すると、クラス レベルの `EmulationMode` 定数が宣言され、`Enabled` に設定されます。  それ以外の場合、定数は `Passthrough` に設定されます。  
+ 任意のメソッドを選択して使用し、`EmulationMode`の選択を自動化できます。 1 つは、プリプロセッサ ディレクティブを使用してシンボルの存在をチェックする方法です。 たとえば、エミュレーターを使用してクラスでテスト メソッドを実行するために、テスト プロジェクト ファイルまたはビルド コマンド ラインで `USE_EMULATION` などのシンボルを定義できます。 シンボルを定義すると、クラス レベルの `EmulationMode` 定数が宣言され、`Enabled` に設定されます。 それ以外の場合、定数は `Passthrough` に設定されます。  
   
  次のテスト クラスの例は、プリプロセッサ ディレクティブ、`TestInitialize` 属性付きメソッド、および `TestCleanup` 属性付きメソッドを使用して、エミュレーション モードを設定する方法を示しています。  
   
@@ -253,13 +269,13 @@ namspace MySPAppTests
         private SharePointEmulationScope emulationScope;  
   
         // preprocessor directives determine the value of emulatorMode  
-        #if USE_EMULATION private const EmulationMode emulatorMode = EmulationMode.Enabled; #else private const EmulationMode emulatorMode = EmulationMode.Passthrough; #endif  
+        #if USE_EMULATIONprivate const EmulationMode emulatorMode = EmulationMode.Enabled;#elseprivate const EmulationMode emulatorMode = EmulationMode.Passthrough;#endif  
   
         // InitializeTest sets the emulation scope at the beginning of each test method  
-        [TestInitialize] public void InitializeTest() { this.emulationScope = new SharePointEmulationScope(emulatorMode); }  
+        [TestInitialize]public void InitializeTest(){this.emulationScope = new SharePointEmulationScope(emulatorMode);}  
   
         // CleanupTest disposes the emulation scope at the end of each test method  
-        [TestCleanup] public void CleanupTest() { this.emulationScope.Dispose(); }  
+        [TestCleanup]public void CleanupTest(){this.emulationScope.Dispose();}  
   
         [TestMethod]  
         public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()  
@@ -294,27 +310,27 @@ namspace MySPAppTests
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Handling_non_emulated_SharePoint_methods"></a> エミュレートされていない SharePoint メソッドを処理する  
- すべての SharePoint 型がエミュレートされるわけではありません。また、エミュレートされた型のすべてのメソッドがエミュレートされるわけでもありません。  テスト対象のコードが、エミュレートされていない SharePoint メソッドを呼び出すと、そのメソッドによって `NotSupportedException` 例外がスローされます。  例外が発生したら、SharePoint メソッドの Fakes shim を追加します。  
+ すべての SharePoint 型がエミュレートされるわけではありません。また、エミュレートされた型のすべてのメソッドがエミュレートされるわけでもありません。 テスト対象のコードが、エミュレートされていない SharePoint メソッドを呼び出すと、そのメソッドによって `NotSupportedException` 例外がスローされます。 例外が発生したら、SharePoint メソッドの Fakes shim を追加します。  
   
  **SharePoint Fakes の準備**  
   
  Microsoft Fakes shim を明示的に呼び出すには:  
   
-1.  エミュレートされていない SharePoint クラスに shim を使用する場合は、Microsoft.SharePoint.fakes ファイルを編集し、shim が使用されたクラスの一覧にそのクラスを追加します。  「[Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則](../test/code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md)」の[スタブおよび shim のコード生成の構成](http://msdn.microsoft.com/library/hh708916.aspx#bkmk_configuring_code_generation_of_stubs)に関するセクションを参照してください。  
+1.  エミュレートされていない SharePoint クラスに shim を使用する場合は、Microsoft.SharePoint.fakes ファイルを編集し、shim が使用されたクラスの一覧にそのクラスを追加します。 「[Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則](../test/code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md)」の [stub と shim のコード生成の構成](http://msdn.microsoft.com/library/hh708916.aspx#bkmk_configuring_code_generation_of_stubs)に関するセクションを参照してください。  
   
-     ![ソリューション エクスプローラーの Fakes フォルダー](../test/media/ut_emulators_fakesfilefolder.png "UT\_EMULATORS\_FakesFileFolder")  
+     ![ソリューション エクスプローラーの Fakes フォルダー](../test/media/ut_emulators_fakesfilefolder.png "UT_EMULATORS_FakesFileFolder")  
   
-2.  Microsoft SharePoint エミュレーター パッケージのインストール後、Microsoft.SharePoint.Fakes ファイルを編集した場合、少なくとも 1 回はテスト プロジェクトをリビルドします。  プロジェクトをビルドすると、ディスク上のプロジェクト ルート フォルダーに **FakesAssembly** フォルダーが作成され、設定されます。  
+2.  Microsoft SharePoint エミュレーター パッケージのインストール後、Microsoft.SharePoint.Fakes ファイルを編集した場合、少なくとも 1 回はテスト プロジェクトをリビルドします。 プロジェクトをビルドすると、ディスク上のプロジェクト ルート フォルダーに **FakesAssembly** フォルダーが作成され、設定されます。  
   
-     ![FakesAssembly フォルダー](../test/media/ut_emulators_fakesassemblyfolder.png "UT\_EMULATORS\_FakesAssemblyFolder")  
+     ![FakesAssembly フォルダー](../test/media/ut_emulators_fakesassemblyfolder.png "UT_EMULATORS_FakesAssemblyFolder")  
   
-3.  **Microsoft.SharePoint.14.0.0.0.Fakes.dll** フォルダーにある **FakesAssembly** アセンブリへの参照を追加します。  
+3.  **FakesAssembly** フォルダーにある **Microsoft.SharePoint.14.0.0.0.Fakes.dll** アセンブリに参照を追加します。  
   
-4.  \(省略可能\) 名前空間ディレクティブを、使用する `Microsoft.QualityTools.Testing.Fakes`、`Microsoft.SharePoint.Fakes`、および `Microsoft.SharePoint.Fakes` の入れ子になった名前空間のテスト クラスに追加します。  
+4.  (省略可能) 名前空間ディレクティブを、使用する `Microsoft.QualityTools.Testing.Fakes`、`Microsoft.SharePoint.Fakes`、および `Microsoft.SharePoint.Fakes` の入れ子になった名前空間のテスト クラスに追加します。  
   
  **SharePoint メソッドの shim デリゲートの実装**  
   
- この例のプロジェクトでは、`GetAppointmentsForToday` メソッドは [SPList.GetItems\(SPQuery\)](http://msdn.microsoft.com/library/ms457534.aspx) SharePoint API メソッドを呼び出しています。  
+ この例のプロジェクトでは、`GetAppointmentsForToday` メソッドは [SPList.GetItems (SPQuery)](http://msdn.microsoft.com/library/ms457534.aspx) SharePoint API メソッドを呼び出しています。  
   
 ```c#  
 // method under test  
@@ -322,7 +338,7 @@ public string GetAppointmentsForToday(string listName, SPWeb web)
 {  
     SPList list = web.Lists[listName];  
     DateTime today = DateTime.Now;  
-    var listQuery = new SPQuery { Query = String.Format( "<Where><Eq><FieldRef Name='Date'/>" + "<Value Type='Text'>{0}</Value>" + "</Eq></Where>", today.ToString("D")) };  
+    var listQuery = new SPQuery{Query = String.Format("<Where><Eq><FieldRef Name='Date'/>" +"<Value Type='Text'>{0}</Value>" +"</Eq></Where>", today.ToString("D"))};  
     var result = new System.Text.StringBuilder();  
     foreach (SPListItem item in list.GetItems(listQuery))  
     {  
@@ -334,12 +350,12 @@ public string GetAppointmentsForToday(string listName, SPWeb web)
   
 ```  
   
- オーバーロードされた `SPList.GetItems(SPQuery)` メソッドの `GetItems` バージョンはエミュレートされません。  したがって、`GetAppointmentsForToday` では、`SharePoint.Emulation.Scope` の既存のテストをラップできません。  機能するテストを作成するには、テスト対象の結果を返す Fakes デリゲート `ShimSPList.GetItemsSPQuery` の実装を記述する必要があります。  
+ オーバーロードされた `SPList.GetItems(SPQuery)` メソッドの `GetItems` バージョンはエミュレートされません。 したがって、`GetAppointmentsForToday` では、`SharePoint.Emulation.Scope` の既存のテストをラップできません。 機能するテストを作成するには、テスト対象の結果を返す Fakes デリゲート `ShimSPList.GetItemsSPQuery` の実装を記述する必要があります。  
   
- Fakes デリゲートを実装する既存のテスト メソッド `GetAppointmentsForTodayReturnsOnlyTodaysAppointments` を次のように変更します。  必要な変更については、コメントで説明が示されています。  
+ Fakes デリゲートを実装する既存のテスト メソッド `GetAppointmentsForTodayReturnsOnlyTodaysAppointments` を次のように変更します。 必要な変更については、コメントで説明が示されています。  
   
 > [!IMPORTANT]
->  テストが `ShimNotSupported` コンテキストで実行されると、Fake shim を明示的に作成するテスト メソッドにより `EmulationMode.Passthrough` 例外がスローされます。  この問題を回避するには、変数を使用して `EmulationMode` 値を設定し、値をテストする `if` ステートメントで Fakes コードをラップします。  
+>  テストが `ShimNotSupported` コンテキストで実行されると、Fake shim を明示的に作成するテスト メソッドにより `EmulationMode.Passthrough` 例外がスローされます。 この問題を回避するには、変数を使用して `EmulationMode` 値を設定し、値をテストする `if` ステートメントで Fakes コードをラップします。  
   
 ```c#  
 // class level field to set emulation mode  
@@ -364,7 +380,7 @@ public void GetAppointmentsForTodayReturnsOnlyTodaysAppointments()
             "francis@contoso.com", "42", date.AddDays(1).ToString("D") });  
   
         // use Fakes shims only if emulation is enabled  
-        if (emulatorMode == EmulationMode.Enabled) { var sList = new ShimSPList(list); sList.GetItemsSPQuery = (query) => { var shim = new ShimSPListItemCollection(); shim.Bind(new[] { list.Items[0] }); return shim.Instance; } }  
+        if (emulatorMode == EmulationMode.Enabled){var sList = new ShimSPList(list);sList.GetItemsSPQuery = (query) =>{var shim = new ShimSPListItemCollection();shim.Bind(new[] { list.Items[0] });return shim.Instance;}}  
   
         // Act  
         string result = webPart.GetAppointmentsForToday(list.Title, site.RootWeb);  
@@ -380,24 +396,24 @@ public void GetAppointmentsForTodayReturnsOnlyTodaysAppointments()
   
 ```  
   
- このメソッドでは、最初に、エミュレーションが有効になっていることをテストします。  有効になっている場合は、`SPList` リストに対して Fakes shim オブジェクトを作成してから、メソッドを作成して、その `GetItemsSPQuery` デリゲートに割り当てます。  デリゲートは Fake `Bind` メソッドを使用して、呼び出し元に返される `ShimSPListItemCollection` に正しいリスト項目を追加します。  
+ このメソッドでは、最初に、エミュレーションが有効になっていることをテストします。 有効になっている場合は、`SPList` リストに対して Fakes shim オブジェクトを作成してから、メソッドを作成して、その `GetItemsSPQuery` デリゲートに割り当てます。 デリゲートは Fake `Bind` メソッドを使用して、呼び出し元に返される `ShimSPListItemCollection` に正しいリスト項目を追加します。  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Writing_emulation_tests_from_scratch__and_a_summary"></a> 新しいエミュレーション テストの作成と概要  
- 前のセクションで説明したエミュレーション テストおよび二重用途のテストを作成する手法では、既存のテストを変換することを前提としていますが、テストをゼロから記述する手法も使用できます。  次の一覧にこの手法の概要を示します。  
+ 前のセクションで説明したエミュレーション テストおよび二重用途のテストを作成する手法では、既存のテストを変換することを前提としていますが、テストをゼロから記述する手法も使用できます。 次の一覧にこの手法の概要を示します。  
   
 -   テスト プロジェクトでエミュレーターを使用するには、Microsoft.SharePoint.Emulators NuGet パッケージをプロジェクトに追加します。  
   
--   テスト メソッドでエミュレーターを使用するには、メソッドの先頭で `SharePointEmulationScope` オブジェクトを作成します。  サポートされる SharePoint API はすべて、スコープが破棄されるまでエミュレートされます。  
+-   テスト メソッドでエミュレーターを使用するには、メソッドの先頭で `SharePointEmulationScope` オブジェクトを作成します。 サポートされる SharePoint API はすべて、スコープが破棄されるまでエミュレートされます。  
   
--   実際の SharePoint API に記述しているように、テスト コードを記述します。  エミュレーションのコンテキストによって、SharePoint メソッドへの呼び出しはそのメソッドのエミュレーターに自動的に迂回します。  
+-   実際の SharePoint API に記述しているように、テスト コードを記述します。 エミュレーションのコンテキストによって、SharePoint メソッドへの呼び出しはそのメソッドのエミュレーターに自動的に迂回します。  
   
--   すべての SharePoint オブジェクトがエミュレートされるわけではありません。また、エミュレートされたオブジェクトのすべてのメソッドがエミュレートされるわけでもありません。  エミュレートされていないオブジェクトまたはメソッドを使用すると、`NotSupportedException` 例外がスローされます。  この場合は、そのメソッドに対して Fake shim デリゲートを明示的に作成し、必要な動作を返します。  
+-   すべての SharePoint オブジェクトがエミュレートされるわけではありません。また、エミュレートされたオブジェクトのすべてのメソッドがエミュレートされるわけでもありません。 エミュレートされていないオブジェクトまたはメソッドを使用すると、`NotSupportedException` 例外がスローされます。 この場合は、そのメソッドに対して Fake shim デリゲートを明示的に作成し、必要な動作を返します。  
   
--   二重用途のテストを作成するには、`SharePointEmulationScope(EmulationMode)` コンストラクターを使用して、エミュレーション スコープ オブジェクトを作成します。  `EmulationMode` 値では、SharePoint 呼び出しが実際の SharePoint サイトに対してエミュレートまたは実行されているかどうかを指定します。  
+-   二重用途のテストを作成するには、`SharePointEmulationScope(EmulationMode)` コンストラクターを使用して、エミュレーション スコープ オブジェクトを作成します。 `EmulationMode` 値では、SharePoint 呼び出しが実際の SharePoint サイトに対してエミュレートまたは実行されているかどうかを指定します。  
   
--   テスト クラスのテスト メソッドのほとんどまたはすべてがエミュレーションのコンテキストで実行される場合は、クラス レベルの `TestInitialize` 属性付きメソッドを使用して `SharePointEmulationScope` オブジェクトを作成し、クラス レベルのフィールドを使用してエミュレーション モードを設定できます。  これは、エミュレーション モードの変更を自動化するときに役立ちます。  その後、`TestCleanup` 属性付きメソッドを使用して、スコープ オブジェクトを破棄します。  
+-   テスト クラスのテスト メソッドのほとんどまたはすべてがエミュレーションのコンテキストで実行される場合は、クラス レベルの `TestInitialize` 属性付きメソッドを使用して `SharePointEmulationScope` オブジェクトを作成し、クラス レベルのフィールドを使用してエミュレーション モードを設定できます。 これは、エミュレーション モードの変更を自動化するときに役立ちます。 その後、`TestCleanup` 属性付きメソッドを使用して、スコープ オブジェクトを破棄します。  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
@@ -586,8 +602,9 @@ namspace MySPAppTests
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コードの単体テスト](../test/unit-test-your-code.md)   
  [コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md)   
  [SharePoint 2010 および 2013 アプリケーションの Web パフォーマンス テストおよびロード テスト](/devops-test-docs/test/web-performance-and-load-testing-sharepoint-2010-and-2013-applications)   
- [Developing SharePoint Solutions](/office-dev/office-dev/developing-sharepoint-solutions)
+ [SharePoint ソリューションの開発](/office-dev/office-dev/developing-sharepoint-solutions)
+

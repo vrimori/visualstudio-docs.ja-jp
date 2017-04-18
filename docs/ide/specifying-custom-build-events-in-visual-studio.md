@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a9f75e48f1fa8834a4232d234a54ca32c0a43e38
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: fd5955068a899199969c970434ff14401a654d35
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="specifying-custom-build-events-in-visual-studio"></a>Visual Studio でのカスタム ビルド イベントの指定
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/22/2017
   
 -   Visual C# および F# -- [方法: ビルド イベントの指定 (C#)](../ide/how-to-specify-build-events-csharp.md)  
   
--   Visual C++ -- [ビルド イベントの指定](/visual-cpp/ide/specifying-build-events)  
+-   Visual C++ -- [ビルド イベントの指定](/cpp/ide/specifying-build-events)  
   
 ## <a name="syntax"></a>構文  
  ビルド イベントは、DOS コマンドと同じ構文に従いますが、マクロを使用すると、ビルド イベントをより簡単に作成することができます。 使用可能なマクロの一覧については、「[[ビルド前に実行するコマンド ライン] / [ビルド後に実行するコマンド ライン] ダイアログ ボックス](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)」を参照してください。  

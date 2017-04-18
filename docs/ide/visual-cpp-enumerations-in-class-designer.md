@@ -31,8 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9f7b45efa01eb245cc4c933126578bbf9aa52f81
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 168e14b8f7e913a2dc4656f01f8cc5cc8ff80284
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-enumerations-in-class-designer"></a>クラス デザイナーの Visual C++ 列挙体
@@ -58,13 +59,8 @@ enum class CardSuit {
   
  クラス ダイアグラムにおける C++ 列挙体の図形の形状と動作は構造体の図形に似ていますが、ラベルが **[Enum]** または **[Enum class]** である点と、青ではなくピンクである点、および左と上の余白に色つきの枠がある点が異なります。 列挙体の図形も構造体の図形も、角が直角になっています。  
   
- `enum` 型の使用法の詳細については、「[列挙型](/visual-cpp/cpp/enumerations-cpp)」を参照してください。  
+ `enum` 型の使用法の詳細については、「[列挙型](/cpp/cpp/enumerations-cpp)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual C++ コードの使用 (クラス デザイナー)](../ide/working-with-visual-cpp-code-class-designer.md)   
- [列挙型](/visual-cpp/cpp/enumerations-cpp)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
+ [列挙型](/cpp/cpp/enumerations-cpp)

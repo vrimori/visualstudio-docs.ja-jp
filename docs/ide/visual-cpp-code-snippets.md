@@ -29,8 +29,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 202d6bda9bab5f21e3ee5243d254c63c67b0f066
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: b4d0801f9e3924fd801f30b750d0f5dbfca634fd
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ コード スニペット
@@ -124,7 +125,7 @@ private:
 ```  
   
 ## <a name="for-vs-foreach-vs-forr-vs-rfor"></a>for と foreach と forr と rfor  
- さまざまな種類の for ループを提供する&4; つのスニペットがあります。  
+ さまざまな種類の for ループを提供する 4 つのスニペットがあります。  
   
  **for** スニペットは、条件がオブジェクトの長さ (`size_t`) に基づく `for` ループを提供します。  
   
@@ -153,7 +154,7 @@ for (int i = length - 1; i >= 0; i--)
 }  
 ```  
   
- **rfor** スニペットは、[範囲に基づく](/visual-cpp/cpp/range-based-for-statement-cpp) for ループ (リンク) を提供します。  
+ **rfor** スニペットは、[範囲に基づく](/cpp/cpp/range-based-for-statement-cpp) for ループ (リンク) を提供します。  
   
 ```cpp  
 for (auto& i : v)  
@@ -189,8 +190,3 @@ class SomeClass {
 {  
   
 ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-

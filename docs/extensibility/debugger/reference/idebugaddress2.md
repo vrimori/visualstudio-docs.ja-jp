@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 005911465f7ba78a3a6dcdf8249a96443cd12355
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: e36f2863680dea79451e57d06bd749b52fbed933
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugaddress2"></a>IDebugAddress2
-このインターフェイスは、このインターフェイスで表されるアドレスを持つオブジェクトを所有するプロセスの ID へのアクセスを提供します。  
+このインターフェイスは、このインターフェイスによって表されるアドレスを持つオブジェクトを所有するプロセスの ID へのアクセスを提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,14 +49,14 @@ IDebugAddress2 : IDebugAddress
  シンボル プロバイダーを実装する同一のオブジェクトにこのインターフェイスを実装する、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイスです。 このインターフェイスは、このアドレスに関連付けられているオブジェクトを所有するプロセスの ID へのアクセスを提供します。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- 使用[QueryInterface](/visual-cpp/atl/queryinterface)からこのインターフェイスを取得する、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイスです。  
+ 使用して[QueryInterface](/cpp/atl/queryinterface)からこのインターフェイスを取得、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイスです。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
- 継承されたメソッドだけでなく、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイス、このインターフェイスは、次のメソッドを実装します。  
+ 継承したメソッドに加えて、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイス、このインターフェイスは、次のメソッドを実装します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetProcessID](../../../extensibility/debugger/reference/idebugaddress2-getprocessid.md)|このインターフェイスによって表されるオブジェクトを所有しているプロセスの ID を取得します。|  
+|[GetProcessID](../../../extensibility/debugger/reference/idebugaddress2-getprocessid.md)|このインターフェイスによって表されるオブジェクトを所有するプロセスの ID を取得します。|  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: sh.h  
@@ -66,5 +66,5 @@ IDebugAddress2 : IDebugAddress
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>関連項目  
- [シンボルのプロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
+ [シンボル プロバイダー インターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)

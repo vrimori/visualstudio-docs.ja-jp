@@ -1,61 +1,77 @@
 ---
-title: "IDebugExpressionEvaluationCompleteEvent2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExpressionEvaluationCompleteEvent2"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluationCompleteEvent2"
+title: "IDebugExpressionEvaluationCompleteEvent2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugExpressionEvaluationCompleteEvent2
+helpviewer_keywords:
+- IDebugExpressionEvaluationCompleteEvent2
 ms.assetid: d538fc19-55bf-4231-9595-eb01e84fd1d8
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugExpressionEvaluationCompleteEvent2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 67f767a04b91e4d5fc1139c3dc7eb519f440b2c7
+ms.lasthandoff: 04/05/2017
 
-このインターフェイスはデバッグ セッションのマネージャー \(SDM\) にデバッグ エンジン \(DE\) によって非同期式の評価が完了したときに送信されます。  
+---
+# <a name="idebugexpressionevaluationcompleteevent2"></a>IDebugExpressionEvaluationCompleteEvent2
+このインターフェイスは、非同期の式の評価が完了すると、セッションのデバッグ マネージャー (SDM) にデバッグ エンジン (DE) によって送信されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugExpressionEvaluationCompleteEvent2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- DE implements は [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 呼び出しによって式の評価の完了を報告する場合はこのインターフェイス呼び出されます。  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) のインターフェイスはインターフェイスと同じオブジェクトで実行する必要があります。  SDM は `IDebugEvent2` のインターフェイスへのアクセスに [QueryInterface](/visual-cpp/atl/queryinterface) を使用します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ レポートへの呼び出しによって開始された式の評価が完了するには、このインターフェイスを実装する、DE [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)です。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイスです。  
   
-## 呼び出し元のメモ  
- DE は式の評価の完了を報告するにはこのイベント オブジェクトを作成し送信します。  イベントはSDM によって提供される [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) のコールバック関数を使用してデバッグ対象のプログラムにアタッチしたときに送信されます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ デを作成し、式の評価の完了を報告するには、このイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)は、デバッグ中のプログラムに添付するときに、SDM によって指定されたコールバック関数。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugExpressionEvaluationCompleteEvent2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugExpressionEvaluationCompleteEvent2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
+|メソッド|説明|  
+|------------|-----------------|  
 |[GetExpression](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getexpression.md)|元の式を取得します。|  
 |[GetResult](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md)|式の評価の結果を取得します。|  
   
-## 解説  
- DE評価が成功したかどうかこのイベントを送信する必要があります。  
+## <a name="remarks"></a>コメント  
+ 評価が成功したかどうか、デはこのイベントを送信する必要があります。  
   
- 評価が成功しないと`DEBUG_PROPINFO_VALUE` と `DEBUG_PROPINFO_ATTRIB` のフラグ値が失敗した場合\) [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) によって返される [DEBUG\_PROPERTY\_INFO](../../../extensibility/debugger/reference/debug-property-info.md) の構成体には使用できません。[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) のオブジェクトは de\-DE によって作成および `IDebugExpressionEvaluationCompleteEvent2` のイベントに返されます。  
+ 評価が、失敗した場合、`DEBUG_PROPINFO_VALUE`と`DEBUG_PROPINFO_ATTRIB`フラグは設定されません、 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)によって返される構造[GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) (、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)オブジェクトが、DE によって作成されで返される、`IDebugExpressionEvaluationCompleteEvent2`イベント評価に失敗した場合)。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   
  [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)   

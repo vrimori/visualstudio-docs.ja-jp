@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 8c478c49ee429e0c5d96dc60f035fcb460b902c8
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
+ms.openlocfilehash: 890e181643d2cc5d4861d64ffd9052e0400126d0
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="managing-references-in-a-project"></a>プロジェクト内の参照の管理
@@ -70,9 +70,9 @@ ms.lasthandoff: 03/07/2017
 ## <a name="windows-store-app-references"></a>Windows ストア アプリケーションの参照  
 
 ### <a name="project-references"></a>プロジェクト参照  
- Windows の 10 を対象とするユニバーサル Windows プラットフォーム (UWP: Universal Windows Platform) プロジェクトでは、ソリューション内の他の UWP プロジェクトへの参照、または [!INCLUDE[win81](../debugger/includes/win81_md.md)] を対象とする Windows ストア プロジェクトまたはバイナリ (ただし、それらのプロジェクトが、Windows 10 で使用されなくなった API を使用していない場合) への参照を作成できます。 詳細については、「 [Windows Runtime 8 から UWP への移行](https://msdn.microsoft.com/en-us/library/windows/apps/dn954974.aspx)」を参照してください。  
+ Windows の 10 を対象とするユニバーサル Windows プラットフォーム (UWP: Universal Windows Platform) プロジェクトでは、ソリューション内の他の UWP プロジェクトへの参照、または [!INCLUDE[win81](../debugger/includes/win81_md.md)] を対象とする Windows ストア プロジェクトまたはバイナリ (ただし、それらのプロジェクトが、Windows 10 で使用されなくなった API を使用していない場合) への参照を作成できます。 詳細については、「 [Windows Runtime 8 から UWP への移行](https://docs.microsoft.com/en-us/windows/uwp/porting/w8x-to-uwp-root)」を参照してください。  
 
- [!INCLUDE[win81](../debugger/includes/win81_md.md)] プロジェクトの Windows 10 への再ターゲットを選択した場合は、「[Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/port-migrate-and-upgrade-visual-studio-projects.md)」を参照してください。  
+ [!INCLUDE[win81](../debugger/includes/win81_md.md)] プロジェクトの Windows 10 への再ターゲットを選択した場合は、「[Visual Studio プロジェクトのポート、移行、アップグレード](../porting/port-migrate-and-upgrade-visual-studio-projects.md)」を参照してください。  
 
 ### <a name="extension-sdk-references"></a>拡張 SDK の参照  
  ユニバーサル Windows プラットフォーム (UWP) を対象とする Visual Basic、C#、C++、JavaScript の各 Windows ストア プロジェクトは、[!INCLUDE[win81](../debugger/includes/win81_md.md)] を対象とする拡張 SDK を参照できます (ただし、Windows 10 で使用されなくなった API をそれらの拡張 SDK が使用していない場合のみ)。 UWP を対象としている Windows ストア プロジェクトから拡張 SDK を参照できるかどうかを確認するには、その拡張 SDK の販売元のサイトを調べてください。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 03/07/2017
 2.  サポートされていない拡張 SDK の販売元のサイトにアクセスして、プロジェクトのターゲット プラットフォームのバージョンと互換性のある依存関係を持つ拡張 SDK のバージョンをインストールします。  
 
     > [!NOTE]
-    >  ある拡張 SDK が他の拡張 SDK に依存しているかどうかを調べる&1; つの方法は、Visual Studio を再起動し、新しい C# Windows ストア プロジェクトを作成することです。そのプロジェクトを右クリックし、 **[参照の追加]**をクリックして、 **[Windows]** タブに移動します。次に **[Extensions] (拡張機能)** サブタブで拡張 SDK を選択し、 **[参照マネージャー]**の右ペインを確認します。 依存関係がある場合は、そのウィンドウに表示されます。  
+    >  ある拡張 SDK が他の拡張 SDK に依存しているかどうかを調べる 1 つの方法は、Visual Studio を再起動し、新しい C# Windows ストア プロジェクトを作成することです。そのプロジェクトを右クリックし、 **[参照の追加]**をクリックして、 **[Windows]** タブに移動します。次に **[Extensions] \(拡張機能)** サブタブで拡張 SDK を選択し、 **[参照マネージャー]**の右ペインを確認します。 依存関係がある場合は、そのウィンドウに表示されます。  
 
     > [!IMPORTANT]
     >  プロジェクトが Windows 10 を対象としており、前の手順でインストールした拡張 SDK が Microsoft Visual C++ ランタイム パッケージに依存している場合は、Windows 10 と互換性のある Microsoft Visual C++ ランタイム パッケージのバージョンは v14.0 になります。このバージョンは Visual Studio と共にインストールされます。  
@@ -95,7 +95,7 @@ ms.lasthandoff: 03/07/2017
 
 5.  エラーの原因となったプロジェクト内の **[参照]** ノードを右クリックして **[参照の追加]**を選択します。  
 
-6.  **[Windows]** タブをクリックし、 **[Extensions] (拡張機能)** サブタブをクリックしてから、古い拡張 SDK に対応するチェック ボックスをオフにし、新しい拡張 SDK に対応するチェック ボックスをオンにします。 **[OK]**をクリックします。  
+6.  **[Windows]** タブをクリックし、 **[Extensions] \(拡張機能)** サブタブをクリックしてから、古い拡張 SDK に対応するチェック ボックスをオフにし、新しい拡張 SDK に対応するチェック ボックスをオンにします。 **[OK]**をクリックします。  
 
 ## <a name="adding-a-reference-at-design-time"></a>デザイン時の参照の追加  
  プロジェクトでアセンブリを参照すると、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は次の場所でアセンブリを検索します。  
@@ -124,7 +124,7 @@ ms.lasthandoff: 03/07/2017
 ## <a name="project-to-project-references"></a>プロジェクト間参照  
  プロジェクト間参照とは、アセンブリを格納するプロジェクトへの参照です。これは **[プロジェクト]** タブを使用して作成します。 Visual Studio は、プロジェクトへのパスが指定されると、アセンブリを見つけることができます。  
 
- アセンブリを生成するプロジェクトがある場合は、ファイル参照 (下記参照) を使用せず、プロジェクトを参照してください。 プロジェクト間参照の利点は、ビルド システム内のプロジェクト間に依存関係が作成されることです。 参照元のプロジェクトの前回のビルド以降に依存プロジェクトが変更されていると、依存プロジェクトのビルドが行われます。 ファイル参照ではビルド依存関係が作成されないため、依存プロジェクトをビルドせずに参照元のプロジェクトをビルドできます。したがって、参照が古くなる可能性があります。 つまり、プロジェクトから、同じプロジェクトの以前にビルドされたバージョンが参照される場合があります。その結果、bin ディレクトリ内に&1; つの DLL の複数のバージョンが求められる場合がありますが、これを実現するのは不可能です。 この矛盾が生じた場合は、"警告: プロジェクト 'project' の依存関係 'file' は、参照 'file' を上書きするため、実行ディレクトリにコピーできません" などのメッセージが表示されます。 詳細については、「[壊れた参照のトラブルシューティング](../ide/troubleshooting-broken-references.md)」および「[方法: プロジェクトの依存関係を作成および削除する](../ide/how-to-create-and-remove-project-dependencies.md)」を参照してください。  
+ アセンブリを生成するプロジェクトがある場合は、ファイル参照 (下記参照) を使用せず、プロジェクトを参照してください。 プロジェクト間参照の利点は、ビルド システム内のプロジェクト間に依存関係が作成されることです。 参照元のプロジェクトの前回のビルド以降に依存プロジェクトが変更されていると、依存プロジェクトのビルドが行われます。 ファイル参照ではビルド依存関係が作成されないため、依存プロジェクトをビルドせずに参照元のプロジェクトをビルドできます。したがって、参照が古くなる可能性があります。 つまり、プロジェクトから、同じプロジェクトの以前にビルドされたバージョンが参照される場合があります。その結果、bin ディレクトリ内に 1 つの DLL の複数のバージョンが求められる場合がありますが、これを実現するのは不可能です。 この矛盾が生じた場合は、"警告: プロジェクト 'project' の依存関係 'file' は、参照 'file' を上書きするため、実行ディレクトリにコピーできません" などのメッセージが表示されます。 詳細については、「[壊れた参照のトラブルシューティング](../ide/troubleshooting-broken-references.md)」および「[方法: プロジェクトの依存関係を作成および削除する](../ide/how-to-create-and-remove-project-dependencies.md)」を参照してください。  
 
 > [!NOTE]
 >  あるプロジェクトが対象とする .NET Framework のバージョンが Version 4.5 であり、他のプロジェクトが対象とする .NET Framework が Version 2、3.0、3.5、または 4.0 である場合は、プロジェクト間参照ではなくファイル参照が作成されます。  

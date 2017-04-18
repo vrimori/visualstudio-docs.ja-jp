@@ -1,58 +1,74 @@
 ---
-title: "IDebugModuleLoadEvent2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugModuleLoadEvent2"
-helpviewer_keywords: 
-  - "IDebugModuleLoadEvent2 インターフェイス"
+title: "IDebugModuleLoadEvent2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugModuleLoadEvent2
+helpviewer_keywords:
+- IDebugModuleLoadEvent2 interface
 ms.assetid: 7d26fb23-5d49-4ba7-b7c5-3aed4d7be81e
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugModuleLoadEvent2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 5ed22167ab056492108bb69452117764716957be
+ms.lasthandoff: 04/05/2017
 
-このインターフェイスはデバッグ セッションのマネージャー \(SDM\) にデバッグ エンジン \(DE\) によってモジュールの読み込みまたはアンロードされるときに送信されます。  
+---
+# <a name="idebugmoduleloadevent2"></a>IDebugModuleLoadEvent2
+このインターフェイスは、モジュールがロードまたはアンロードされるときに、セッション デバッグ マネージャー (SDM) に、デバッグ エンジン (DE) によって送信されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugModuleLoadEvent2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- DE implements モジュールの読み込みまたはアンロードされたことを報告します。このインターフェイス  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) のインターフェイスはインターフェイスと同じオブジェクトで実行する必要があります。  SDM は `IDebugEvent2` のインターフェイスへのアクセスに [QueryInterface](/visual-cpp/atl/queryinterface) を使用します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デでは、モジュールがロードまたはアンロードされたことをレポートには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイスです。  
   
-## 呼び出し元のメモ  
- DE を作成し送信モジュールを報告する場合はこのイベント オブジェクト読み込むかまたはアンロード下されました。  イベントはSDM によって提供される [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) のコールバック関数を使用してデバッグ対象のプログラムにアタッチされたときに送信されます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ デは、作成し、モジュールがロードまたはアンロードされたレポートにこのイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)は、デバッグ中のプログラムに関連付けられている場合、SDM によって指定されたコールバック関数。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugModuleLoadEvent2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugModuleLoadEvent2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetModule](../../../extensibility/debugger/reference/idebugmoduleloadevent2-getmodule.md)|読み込まれたかまたはアンロードするモジュールを取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetModule](../../../extensibility/debugger/reference/idebugmoduleloadevent2-getmodule.md)|されているモジュールを取得ロードまたはアンロードします。|  
   
-## 解説  
- Visual Studio には\[出力\] ウィンドウに最新 ENT0ENT を保持するためにこのイベントを使用します。  
+## <a name="remarks"></a>コメント  
+ Visual Studio では、このイベントを使用して、**モジュール**ウィンドウを最新の状態。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

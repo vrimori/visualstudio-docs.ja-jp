@@ -1,241 +1,257 @@
 ---
-title: "FIELD_KIND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FIELD_KIND"
-helpviewer_keywords: 
-  - "FIELD_KIND 列挙型"
+title: "FIELD_KIND |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- FIELD_KIND
+helpviewer_keywords:
+- FIELD_KIND enumeration
 ms.assetid: fd522b9c-52e2-42fa-939d-343347d5c3b1
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# FIELD_KIND
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: f92dc8a17024e9189255156e1e23dabb1ab5ba62
+ms.lasthandoff: 04/05/2017
 
-[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクトに含まれるフィールドの種類を指定します。  
+---
+# <a name="fieldkind"></a>FIELD_KIND
+含まれるフィールドの種類を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp#  
-enum enum_FIELD_KIND {   
-   FIELD_KIND_NONE       = 0x00000000,  
+enum enum_FIELD_KIND {   
+   FIELD_KIND_NONE       = 0x00000000,  
   
-   // Type of field  
-   FIELD_KIND_TYPE       = 0x00000001,  
-   FIELD_KIND_SYMBOL     = 0x00000002,  
+   // Type of field  
+   FIELD_KIND_TYPE       = 0x00000001,  
+   FIELD_KIND_SYMBOL     = 0x00000002,  
   
-   // Storage type of the field  
-   FIELD_TYPE_PRIMITIVE  = 0x00000010,  
-   FIELD_TYPE_STRUCT     = 0x00000020,  
-   FIELD_TYPE_CLASS      = 0x00000040,  
-   FIELD_TYPE_INTERFACE  = 0x00000080,  
-   FIELD_TYPE_UNION      = 0x00000100,  
-   FIELD_TYPE_ARRAY      = 0x00000200,  
-   FIELD_TYPE_METHOD     = 0x00000400,  
-   FIELD_TYPE_BLOCK      = 0x00000800,  
-   FIELD_TYPE_POINTER    = 0x00001000,  
-   FIELD_TYPE_ENUM       = 0x00002000,  
-   FIELD_TYPE_LABEL      = 0x00004000,  
-   FIELD_TYPE_TYPEDEF    = 0x00008000,  
-   FIELD_TYPE_BITFIELD   = 0x00010000,  
-   FIELD_TYPE_NAMESPACE  = 0x00020000,  
-   FIELD_TYPE_MODULE     = 0x00040000,  
-   FIELD_TYPE_DYNAMIC    = 0x00080000,  
-   FIELD_TYPE_PROP       = 0x00100000,  
-   FIELD_TYPE_INNERCLASS = 0x00200000,  
-   FIELD_TYPE_REFERENCE  = 0x00400000,  
-   FIELD_TYPE_EXTENDED   = 0x00800000,  
+   // Storage type of the field  
+   FIELD_TYPE_PRIMITIVE  = 0x00000010,  
+   FIELD_TYPE_STRUCT     = 0x00000020,  
+   FIELD_TYPE_CLASS      = 0x00000040,  
+   FIELD_TYPE_INTERFACE  = 0x00000080,  
+   FIELD_TYPE_UNION      = 0x00000100,  
+   FIELD_TYPE_ARRAY      = 0x00000200,  
+   FIELD_TYPE_METHOD     = 0x00000400,  
+   FIELD_TYPE_BLOCK      = 0x00000800,  
+   FIELD_TYPE_POINTER    = 0x00001000,  
+   FIELD_TYPE_ENUM       = 0x00002000,  
+   FIELD_TYPE_LABEL      = 0x00004000,  
+   FIELD_TYPE_TYPEDEF    = 0x00008000,  
+   FIELD_TYPE_BITFIELD   = 0x00010000,  
+   FIELD_TYPE_NAMESPACE  = 0x00020000,  
+   FIELD_TYPE_MODULE     = 0x00040000,  
+   FIELD_TYPE_DYNAMIC    = 0x00080000,  
+   FIELD_TYPE_PROP       = 0x00100000,  
+   FIELD_TYPE_INNERCLASS = 0x00200000,  
+   FIELD_TYPE_REFERENCE  = 0x00400000,  
+   FIELD_TYPE_EXTENDED   = 0x00800000,  
   
-   // Specific information about symbols  
-   FIELD_SYM_MEMBER      = 0x01000000,  
-   FIELD_SYM_LOCAL       = 0x02000000,  
-   FIELD_SYM_PARAM       = 0x04000000,  
-   FIELD_SYM_THIS        = 0x08000000,  
-   FIELD_SYM_GLOBAL      = 0x10000000,  
-   FIELD_SYM_PROP_GETTER = 0x20000000,  
-   FIELD_SYM_PROP_SETTER = 0x40000000,  
-   FIELD_SYM_EXTENDED    = 0x80000000,  
+   // Specific information about symbols  
+   FIELD_SYM_MEMBER      = 0x01000000,  
+   FIELD_SYM_LOCAL       = 0x02000000,  
+   FIELD_SYM_PARAM       = 0x04000000,  
+   FIELD_SYM_THIS        = 0x08000000,  
+   FIELD_SYM_GLOBAL      = 0x10000000,  
+   FIELD_SYM_PROP_GETTER = 0x20000000,  
+   FIELD_SYM_PROP_SETTER = 0x40000000,  
+   FIELD_SYM_EXTENDED    = 0x80000000,  
   
-   FIELD_KIND_MASK       = 0x0000000f,  
-   FIELD_TYPE_MASK       = 0x00fffff0,  
-   FIELD_SYM_MASK        = 0xff000000,  
+   FIELD_KIND_MASK       = 0x0000000f,  
+   FIELD_TYPE_MASK       = 0x00fffff0,  
+   FIELD_SYM_MASK        = 0xff000000,  
   
-   FIELD_KIND_ALL        = 0xffffffff  
+   FIELD_KIND_ALL        = 0xffffffff  
 };  
 typedef DWORD FIELD_KIND;  
 ```  
   
 ```c#  
 public enum enum_FIELD_KIND {  
-   FIELD_KIND_NONE       = 0x00000000,  
+   FIELD_KIND_NONE       = 0x00000000,  
   
-   // Type of field  
-   FIELD_KIND_TYPE       = 0x00000001,  
-   FIELD_KIND_SYMBOL     = 0x00000002,  
+   // Type of field  
+   FIELD_KIND_TYPE       = 0x00000001,  
+   FIELD_KIND_SYMBOL     = 0x00000002,  
   
-   // Storage type of the field  
-   FIELD_TYPE_PRIMITIVE  = 0x00000010,  
-   FIELD_TYPE_STRUCT     = 0x00000020,  
-   FIELD_TYPE_CLASS      = 0x00000040,  
-   FIELD_TYPE_INTERFACE  = 0x00000080,  
-   FIELD_TYPE_UNION      = 0x00000100,  
-   FIELD_TYPE_ARRAY      = 0x00000200,  
-   FIELD_TYPE_METHOD     = 0x00000400,  
-   FIELD_TYPE_BLOCK      = 0x00000800,  
-   FIELD_TYPE_POINTER    = 0x00001000,  
-   FIELD_TYPE_ENUM       = 0x00002000,  
-   FIELD_TYPE_LABEL      = 0x00004000,  
-   FIELD_TYPE_TYPEDEF    = 0x00008000,  
-   FIELD_TYPE_BITFIELD   = 0x00010000,  
-   FIELD_TYPE_NAMESPACE  = 0x00020000,  
-   FIELD_TYPE_MODULE     = 0x00040000,  
-   FIELD_TYPE_DYNAMIC    = 0x00080000,  
-   FIELD_TYPE_PROP       = 0x00100000,  
-   FIELD_TYPE_INNERCLASS = 0x00200000,  
-   FIELD_TYPE_REFERENCE  = 0x00400000,  
-   FIELD_TYPE_EXTENDED   = 0x00800000,  
+   // Storage type of the field  
+   FIELD_TYPE_PRIMITIVE  = 0x00000010,  
+   FIELD_TYPE_STRUCT     = 0x00000020,  
+   FIELD_TYPE_CLASS      = 0x00000040,  
+   FIELD_TYPE_INTERFACE  = 0x00000080,  
+   FIELD_TYPE_UNION      = 0x00000100,  
+   FIELD_TYPE_ARRAY      = 0x00000200,  
+   FIELD_TYPE_METHOD     = 0x00000400,  
+   FIELD_TYPE_BLOCK      = 0x00000800,  
+   FIELD_TYPE_POINTER    = 0x00001000,  
+   FIELD_TYPE_ENUM       = 0x00002000,  
+   FIELD_TYPE_LABEL      = 0x00004000,  
+   FIELD_TYPE_TYPEDEF    = 0x00008000,  
+   FIELD_TYPE_BITFIELD   = 0x00010000,  
+   FIELD_TYPE_NAMESPACE  = 0x00020000,  
+   FIELD_TYPE_MODULE     = 0x00040000,  
+   FIELD_TYPE_DYNAMIC    = 0x00080000,  
+   FIELD_TYPE_PROP       = 0x00100000,  
+   FIELD_TYPE_INNERCLASS = 0x00200000,  
+   FIELD_TYPE_REFERENCE  = 0x00400000,  
+   FIELD_TYPE_EXTENDED   = 0x00800000,  
   
-   // Specific information about symbols  
-   FIELD_SYM_MEMBER      = 0x01000000,  
-   FIELD_SYM_LOCAL       = 0x02000000,  
-   FIELD_SYM_PARAM       = 0x04000000,  
-   FIELD_SYM_THIS        = 0x08000000,  
-   FIELD_SYM_GLOBAL      = 0x10000000,  
-   FIELD_SYM_PROP_GETTER = 0x20000000,  
-   FIELD_SYM_PROP_SETTER = 0x40000000,  
-   FIELD_SYM_EXTENDED    = 0x80000000,  
+   // Specific information about symbols  
+   FIELD_SYM_MEMBER      = 0x01000000,  
+   FIELD_SYM_LOCAL       = 0x02000000,  
+   FIELD_SYM_PARAM       = 0x04000000,  
+   FIELD_SYM_THIS        = 0x08000000,  
+   FIELD_SYM_GLOBAL      = 0x10000000,  
+   FIELD_SYM_PROP_GETTER = 0x20000000,  
+   FIELD_SYM_PROP_SETTER = 0x40000000,  
+   FIELD_SYM_EXTENDED    = 0x80000000,  
   
-   FIELD_KIND_MASK       = 0x0000000f,  
-   FIELD_TYPE_MASK       = 0x00fffff0,  
-   FIELD_SYM_MASK        = 0xff000000,  
+   FIELD_KIND_MASK       = 0x0000000f,  
+   FIELD_TYPE_MASK       = 0x00fffff0,  
+   FIELD_SYM_MASK        = 0xff000000,  
   
-   FIELD_KIND_ALL        = 0xffffffff  
+   FIELD_KIND_ALL        = 0xffffffff  
 };  
 ```  
   
-## メンバー  
- FIELD\_KIND\_TYPE  
- フィールドが型だけであることを示します。  
+## <a name="members"></a>メンバー  
+ FIELD_KIND_TYPE  
+ フィールドが、型のみであることを示します。  
   
- FIELD\_KIND\_SYMBOL  
- フィールドがシンボル型と名前であるそのほかの情報ことを示します。  
+ FIELD_KIND_SYMBOL  
+ フィールドは、型、名、およびその他の情報を持つ、シンボルであることを示します。  
   
- FIELD\_TYPE\_PRIMITIVE  
- フィールドがプリミティブ型であることを示します。  
+ FIELD_TYPE_PRIMITIVE  
+ フィールドは、プリミティブ データ型であることを示します。  
   
- FIELD\_TYPE\_STRUCT  
- フィールドが構造体であることを示します。  
+ FIELD_TYPE_STRUCT  
+ フィールドは構造体であることを示します。  
   
- FIELD\_TYPE\_CLASS  
- フィールドはクラスであることを示します。  
+ FIELD_TYPE_CLASS  
+ フィールドがクラスであることを示します。  
   
- FIELD\_TYPE\_INTERFACE  
+ FIELD_TYPE_INTERFACE  
  フィールドがインターフェイスであることを示します。  
   
- FIELD\_TYPE\_UNION  
+ FIELD_TYPE_UNION  
  フィールドが共用体であることを示します。  
   
- FIELD\_TYPE\_ARRAY  
- フィールドが配列型であることを示します。  
+ FIELD_TYPE_ARRAY  
+ フィールドが配列であることを示します。  
   
- FIELD\_TYPE\_METHOD  
- フィールドはメソッドであることを示します。  
+ FIELD_TYPE_METHOD  
+ フィールドがメソッドであることを示します。  
   
- FIELD\_TYPE\_BLOCK  
- フィールドはブロックであることを示します。  
+ FIELD_TYPE_BLOCK  
+ フィールドが、ブロックであることを示します。  
   
- FIELD\_TYPE\_POINTER  
+ FIELD_TYPE_POINTER  
  フィールドがポインターであることを示します。  
   
- FIELD\_TYPE\_ENUM  
+ FIELD_TYPE_ENUM  
  フィールドが列挙型であることを示します。  
   
- FIELD\_TYPE\_LABEL  
- フィールド ラベルがであることを示します。  
+ FIELD_TYPE_LABEL  
+ フィールドがラベルであることを示します。  
   
- FIELD\_TYPE\_TYPEDEF  
- フィールドが型定義であることを示します。  
+ FIELD_TYPE_TYPEDEF  
+ フィールドが typedef であることを示します。  
   
- FIELD\_TYPE\_BITFIELD  
- ビット フィールドがであることを示します。  
+ FIELD_TYPE_BITFIELD  
+ フィールドがビット フィールドであることを示します。  
   
- FIELD\_TYPE\_NAMESPACE  
- フィールドが名前空間であることを示します。  
+ FIELD_TYPE_NAMESPACE  
+ フィールドが、名前空間であることを示します。  
   
- FIELD\_TYPE\_MODULE  
+ FIELD_TYPE_MODULE  
  フィールドがモジュールであることを示します。  
   
- FIELD\_TYPE\_DYNAMIC  
- フィールドは動的であることを示します。  
+ FIELD_TYPE_DYNAMIC  
+ フィールドが動的であることを示します。  
   
- FIELD\_TYPE\_PROP  
- フィールド プロパティがであることを示します。  
+ FIELD_TYPE_PROP  
+ フィールド、プロパティであることを示します。  
   
- FIELD\_TYPE\_INNERCLASS  
- フィールドがの内部クラスであることを示します。  
+ FIELD_TYPE_INNERCLASS  
+ フィールドは、内部クラスであることを示します。  
   
- FIELD\_TYPE\_REFERENCE  
+ FIELD_TYPE_REFERENCE  
  フィールドが参照であることを示します。  
   
- FIELD\_TYPE\_EXTENDED  
+ FIELD_TYPE_EXTENDED  
  将来使用するために予約されています。  
   
- FIELD\_SYM\_MEMBER  
- フィールドをメンバーであることを示します。  
+ FIELD_SYM_MEMBER  
+ フィールドがメンバーであることを示します。  
   
- FIELD\_SYM\_LOCAL  
+ FIELD_SYM_LOCAL  
  フィールドがローカルであることを示します。  
   
- FIELD\_SYM\_PARAMETER  
- フィールドがパラメーターであることを示します。  
+ FIELD_SYM_PARAMETER  
+ フィールドが、パラメーターであることを示します。  
   
- FIELD\_SYM\_THIS  
- フィールドに 「」ポインターであることを示します。  
+ FIELD_SYM_THIS  
+ フィールドが"this"ポインターであることを示します。  
   
- FIELD\_SYM\_GLOBAL  
- フィールドはグローバルであることを示します。  
+ FIELD_SYM_GLOBAL  
+ フィールドがグローバルであることを示します。  
   
- FIELD\_SYM\_PROP\_GETTER  
- フィールドのプロパティを取得する方法を示します。  
+ FIELD_SYM_PROP_GETTER  
+ フィールドがプロパティを取得することを示します。  
   
- FIELD\_SYM\_PROP\_SETTER  
+ FIELD_SYM_PROP_SETTER  
  フィールドがプロパティを設定することを示します。  
   
- FIELD\_SYM\_EXTENDED  
+ FIELD_SYM_EXTENDED  
  将来使用するために予約されています。  
   
- FIELD\_KIND\_MASK  
+ FIELD_KIND_MASK  
  フィールドの種類のマスクを示します。  
   
- FIELD\_TYPE\_MASK  
+ FIELD_TYPE_MASK  
  フィールドの種類のマスクを示します。  
   
- FIELD\_SYM\_MASK  
+ FIELD_SYM_MASK  
  シンボル情報のマスクを示します。  
   
-## 解説  
- 呼び出しから [GetKind](../Topic/IDebugField::GetKind.md) のメソッドに終了しました。  
+## <a name="remarks"></a>コメント  
+ 呼び出しから返される、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)メソッドです。  
   
- フィールドの種類に応じて[QueryInterface](/visual-cpp/atl/queryinterface) はインターフェイスの詳細に特定のフォームの [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のインターフェイスで呼び出すことができます。  たとえば[GetKind](../Topic/IDebugField::GetKind.md)`FIELD_TYPE_METHOD` がを返す場合次に I`DebugField` を [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) のインターフェイスを取得するに `QueryInterface` 呼び出すことができます。  
+ フィールドの種類に応じて[QueryInterface](/cpp/atl/queryinterface)で呼び出すことができます、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスの複数の特定のフォームのインターフェイスです。 たとえば場合、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)を返します`FIELD_TYPE_METHOD`、し、呼び出すことができます`QueryInterface`i`DebugField`を取得する、 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)インターフェイスです。  
   
-## 必要条件  
- ヘッダー : sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [FIELD\_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)   
- [GetKind](../Topic/IDebugField::GetKind.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)   
+ [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

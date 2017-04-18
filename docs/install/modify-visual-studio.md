@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 の変更 | Microsoft Docs"
 description: "Visual Studio を変更する方法について、ステップ バイ ステップで説明します。"
 ms.custom: H1Hack27Feb2017
-ms.date: 03/27/2017
+ms.date: 04/03/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 9e635a28d3338bcf518a0aec69c476280eedf6e2
-ms.openlocfilehash: 183f5761e0b3159412d1da6bb4f30d716a4c41db
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
+ms.openlocfilehash: d1da76eee8295865740720e8575e7258b3719e7e
+ms.lasthandoff: 04/03/2017
 
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>ワークロードやコンポーネントを追加または削除することで Visual Studio 2017 を変更する
@@ -72,6 +72,8 @@ ms.lasthandoff: 03/27/2017
 
 便利なワークロード機能を使用せずに Visual Studio のインストールをカスタマイズする場合は、Visual Studio インストーラーで **[個々のコンポーネント]** オプションを選択し、必要なものを選択して、画面の指示に従います。  
 
+## <a name="get-support"></a>サポートを受ける
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、サポート技術情報の記事「[Visual Studio 2017 で発生するインストールおよびアップグレード エラーのトラブルシューティング](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures)」にあるトラブルシューティングのヒントを参照してください。
 
 ## <a name="see-also"></a>関連項目  
 * [Visual Studio 2017 のインストール](https://go.microsoft.com/fwlink/?linkid=833223)

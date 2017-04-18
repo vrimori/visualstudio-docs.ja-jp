@@ -38,7 +38,6 @@ ms.lasthandoff: 02/22/2017
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[シェーダー デザイナー](../designers/shader-designer.md)|
-          [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] シェーダー デザイナーを使用してシェーダーを操作する方法について説明します。|  
+|[シェーダー デザイナー](../designers/shader-designer.md)|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] シェーダー デザイナーを使用してシェーダーを操作する方法について説明します。|  
 |[シェーダー デザイナー ノード](../designers/shader-designer-nodes.md)|グラフィックス効果を得るためのシェーダー デザイナー ノードについて説明します。|  
 |[シェーダー デザイナーの例](../designers/shader-designer-examples.md)|シェーダー デザイナーを利用して一般的なグラフィックス効果を得る方法を示すトピックのリンクを提供します。|

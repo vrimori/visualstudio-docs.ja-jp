@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9222dbe5752fe5d511ca8e4ca947294e561d7761
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: fa8e3915d2098f59af506b353e4c95a96d3f757e
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugprocesscreateevent2"></a>IDebugProcessCreateEvent2
@@ -46,10 +46,10 @@ IDebugProcessCreateEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- デバッグ エンジン (DE) やカスタム ポート サプライヤーは、プロセスが作成されたことを報告するには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)インターフェイスは、このインターフェイスと同じオブジェクトに実装する必要があります。 SDM を使用して[QueryInterface](/visual-cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイスです。  
+ デバッグ エンジン (DE) やカスタム ポート サプライヤーは、プロセスが作成されたことを報告するには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイスです。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- デか、サプライヤーでカスタム ポートを作成し、プロセスの作成を報告するには、このイベント オブジェクトを送信します。 デを使用してこのイベントを送信する、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)デバッグ中のプログラムに関連付けられている場合に、SDM によって提供されるコールバック関数。 カスタム ポート仕入先を使用してこのイベントを送信する、 [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md)インターフェイスです。  
+ デか、サプライヤーでカスタム ポートを作成し、プロセスの作成を報告するには、このイベント オブジェクトを送信します。 デを使用してこのイベントを送信する、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)は、デバッグ中のプログラムに関連付けられている場合、SDM によって指定されたコールバック関数。 カスタム ポート業者を使用してこのイベントを送信する、 [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md)インターフェイスです。  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  

@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 2017 の新機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/08/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8c4e45eadd81c54a372885ce89ccced1256d3b3d
-ms.openlocfilehash: 14a06f4344989052b0a020570dc87d9697ba95d0
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: ddc84f3b92d8e0febaea3d23b415bd6e703cc530
+ms.openlocfilehash: e04b972187b7b7ec225b48cc9b8904d804399ff8
+ms.lasthandoff: 04/07/2017
 
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
@@ -119,9 +119,24 @@ Visual Studio は依存関係検証ダイアグラム (別名レイヤー ダイ
 
 #### <a name="live-unit-testing"></a>ライブ単体テスト
 
-Visual Studio Enterprise 2017 では、ライブ単体テストを実行することで、コーディング中にエディターで単体テストの結果とコード カバレッジをライブで確認できます。 これは .NET Framework の C# プロジェクトと Visual Basic プロジェクトで機能し、MSTest、xUnit、および NUnit の&3; つのテスト フレームワークをサポートします。
+Visual Studio Enterprise 2017 では、ライブ単体テストを実行することで、コーディング中にエディターで単体テストの結果とコード カバレッジをライブで確認できます。 これは .NET Framework の C# プロジェクトと Visual Basic プロジェクトで機能し、MSTest、xUnit、および NUnit の 3 つのテスト フレームワークをサポートします。
 
 ![ライブ単体テスト](../ide/media/lut-codewindow.png "Visual Studio の Enterprise エディションの新しいライブ単体テスト機能の例")
+
+詳しくは、ブログの投稿「[Live Unit Testing in Visual Studio 2017 Enterprise](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/)」(Visual Studio 2017 Enterprise でのライブ単体テスト) をご覧ください。
+
+### <a name="devops"></a>DevOps
+#### <a name="redgate-data-tools"></a>Redgate Data Tools:
+DevOps 機能を SQL Server データベース開発に拡張するために、Visual Studio 2017 の次のエディションで Redgate Data Tools が利用できるようになりました。
+
+Visual Studio 2017 Enterprise に付属:
+- [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs) は、移行スクリプトの開発、ソース管理によるデータベースの変更管理、アプリケーション変更と並行した SQL Server データベース変更の配置の安全な自動化に役立ちます。
+- [Redgate SQL Prompt Core](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs) を利用すると、インテリジェントなコード入力候補機能により、SQL を短時間で正確に記述できます。 SQL Prompt は、データベース、システム オブジェクト、キーワードをオートコンプリートし、入力と同時に列の入力候補を提案します。 列の名前やエイリアスを覚える必要がないため、結果として、間違いが少なく、読みやすいコードが完成します。
+
+Visual Studio 2017 のすべてのエディションに付属:
+- [Redgate SQL Search](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs) では、複数のデータベースから SQL のフラグメントやオブジェクトをすばやく見つけることができ、生産性が向上します。
+
+詳しくは、ブログの投稿「[Visual Studio 2017 Redgate Data Tools](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/)」をご覧ください。
 
 ### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE の拡張機能
 #### <a name="interact-with-git"></a>Git との連携

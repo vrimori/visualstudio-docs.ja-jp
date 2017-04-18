@@ -29,9 +29,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d0032971225d25b054cd66ee500800de4bcd7b97
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 36773f1a6be04f83978e34d5b4407dbcde42da06
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugprogramnamechangedevent2"></a>IDebugProgramNameChangedEvent2
@@ -44,10 +44,10 @@ IDebugProgramNameChangedEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- デでは、プログラムの名前が変更されたレポートには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)インターフェイスは、このインターフェイスと同じオブジェクトに実装する必要があります。 SDM を使用して[QueryInterface](/visual-cpp/atl/queryinterface)にアクセスする、 **IDebugEvent2**インターフェイスです。  
+ デでは、プログラムの名前が変更されたことを報告するには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、 **IDebugEvent2**インターフェイスです。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- デを作成し、プログラム名の変更を報告するには、このイベント オブジェクトを送信します。 デを使用してこのイベントを送信する、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)コールバック関数をデバッグするプログラムを接続して時に、SDM を提供します。 イベントを使用してこのインターフェイスは、カスタム ポート サプライヤーに送信します。  
+ デを作成し、プログラム名の変更を報告するには、このイベント オブジェクトを送信します。 デを使用してこのイベントを送信する、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)は、デバッグ中のプログラムに添付するときに、SDM によって指定されたコールバック関数。 カスタム ポート サプライヤーは、このイベントを使用して、インターフェイスを送信します。  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: Msdbg.h  

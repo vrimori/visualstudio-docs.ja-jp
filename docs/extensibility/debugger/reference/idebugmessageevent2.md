@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 0f033c5793dc3b89a1f2bd74a2bc4857730fb746
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: dfbe6b139a823fa13e9ce58284026c163cc07ffa
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugmessageevent2"></a>IDebugMessageEvent2
@@ -46,27 +46,27 @@ IDebugMessageEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- デでは、ユーザーからの応答を必要とする Visual Studio にメッセージを送信するには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)インターフェイスは、このインターフェイスと同じオブジェクトに実装する必要があります。 SDM を使用して[QueryInterface](/visual-cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイスです。  
+ デでは、ユーザーからの応答を必要とする Visual Studio にメッセージを送信するには、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このインターフェイスと同じオブジェクトのインターフェイスを実装する必要があります。 SDM を使用して[QueryInterface](/cpp/atl/queryinterface)にアクセスする、`IDebugEvent2`インターフェイスです。  
   
- このインターフェイスの実装での Visual Studio の呼び出しを伝える必要があります[SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md)デにします。 たとえば、DE のメッセージの処理、スレッドに投稿されたメッセージとそのためもこのインターフェイスを実装するオブジェクトでした、DE への参照を保持に渡された応答を使用して、DE にコールバック`IDebugMessageEvent2::SetResponse`します。  
+ このインターフェイスの実装での Visual Studio の呼び出しを通信する必要があります[SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md)デにします。 たとえば、DE のメッセージのスレッドの処理に投稿されたメッセージでこれ行うやこのインターフェイスを実装するオブジェクトでした、DE への参照を保持にコールバックする、DE に渡される応答に`IDebugMessageEvent2::SetResponse`です。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- デを作成し、応答を要求するユーザーにメッセージを表示するには、このイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)デバッグ中のプログラムに関連付けられている場合に、SDM によって提供されるコールバック関数。  
+ デを作成し、応答を要求するユーザーにメッセージを表示するには、このイベント オブジェクトを送信します。 使用して、イベントが送信される、 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)は、デバッグ中のプログラムに関連付けられている場合、SDM によって指定されたコールバック関数。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
- 次の表は、のメソッドを示しています。`IDebugMessageEvent2`します。  
+ 次の表は、メソッドの`IDebugMessageEvent2`します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
 |[GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md)|表示されるメッセージを取得します。|  
-|[SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md)|メッセージ ボックス、発生した場合、応答を設定します。|  
+|[SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md)|メッセージ ボックスから存在する場合、応答を設定します。|  
   
 ## <a name="remarks"></a>コメント  
- 特定のメッセージのユーザーから特定の応答が必要な場合、デはこのインターフェイスを使用します。 など、DE では、リモートでプログラムにアタッチしようした後、「アクセス拒否」メッセージを取得、DE、この特定はメッセージを送信 Visual Studio で、`IDebugMessageEvent2`イベント メッセージ ボックスのスタイルと`MB_RETRYCANCEL`です。 これにより、ユーザーが再試行するか、またはアタッチ操作をキャンセルできます。  
+ 特定のメッセージのユーザーから特定の応答が必要な場合、デはこのインターフェイスを使用します。 など、DE では、リモートでプログラムにアタッチしようとすると、後、「アクセス拒否」メッセージを取得、デ メッセージを送信この特定の Visual Studio に、`IDebugMessageEvent2`イベント、メッセージ ボックス スタイル`MB_RETRYCANCEL`です。 これにより、ユーザーが再試行するか、アタッチ操作をキャンセルできます。  
   
- デでは、このメッセージの Win32 関数の規則に従って処理する方法を指定`MessageBox`(を参照してください[AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8)詳細)。  
+ デでは、このメッセージの Win32 関数の規則に従うによって処理される方法を指定します`MessageBox`(を参照してください[AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8)詳細)。  
   
- 使用して、 [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)をユーザーからの応答を必要としない Visual Studio にメッセージを送信するインターフェイスです。  
+ 使用して、 [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)インターフェイス ユーザーからの応答を必要としない Visual Studio にメッセージを送信します。  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
