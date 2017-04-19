@@ -31,15 +31,15 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 780c643c25f0d43ec0564e43bc50d2f36f1aee79
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 889d538b732b360b475788ec6d67b47920703c73
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="options-text-editor-cc-experimental"></a>[オプション]、[テキスト エディター]、[C/C++]、[実験用]
-これらのオプションを変更することによって、C または C++ でプログラミングを行うときに、IntelliSense に関連する動作と参照データベースを変更できます。 これらの機能は完全に実験用であり、Visual Studio の将来のリリースでは変更または削除される可能性があります。  
+これらのオプションを変更することによって、C または C++ でプログラミングを行うときに、IntelliSense に関連する動作と参照データベースを変更できます。 これらの機能は完全に実験用であり、Visual Studio の将来のリリースでは変更または削除される可能性があります。 このトピックでは、Visual Studio 2017 のオプションについて説明します。 Visual Studio 2015 の詳細については、「[[オプション]、[テキスト エディター]、[C/C++]、[実験用]](https://msdn.microsoft.com/library/mt591979.aspx)」を参照してください。 
   
- このページを表示するには、左ウィンドウの **[オプション]** ダイアログ ボックスで、 **[テキスト エディター]**、 **[C/C++]**を順に展開して、 **[実験用]**を選びます。  
+ このプロパティ ページにアクセスするには、**Control + Q** キーを押し、`Quick Launch` をアクティブ化してから「実験用」と入力します。 クイック起動では、最初の数文字に一致するページが検索されます。 **[ツール] - [オプション]** を選択して **[テキスト エディター]** を展開し、**[C/C++]**、**[実験用]** の順に選択してアクセスすることもできます。  
 
  これらの機能は、Visual Studio 2017 のインストールで使用できます。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/27/2017
 予測 IntelliSense は、コンテキストに関連のある結果のみが表示されるように、IntelliSense ドロップダウン リストに表示される結果の数を制限します。 たとえば、「<code>int x =</code>」と入力して IntelliSense ドロップダウン リストを呼び出すと、整数または整数を返す関数のみが表示されます。 予測 IntelliSense は既定ではオフになっています。
 
 ## <a name="enable-faster-project-load"></a>プロジェクトの高速読み込みを有効にする
-このオプションは、"ライトウェイト ソリューション ロード" と呼ばれる機能を有効にします。 ライトウェイト ソリューション ロードを有効にすると、Visual Studio は実際に必要になるまでプロジェクトを完全には読み込みません。 コードベース内の移動、コードの編集、プロジェクトのビルドなど、多くの一般的な作業では、プロジェクトを読み込む必要はありません。 このオプションを有効にすると、プロジェクトが読み込まれるのを待つ必要がなく、このような一般的作業をより迅速に開始できます。  
+このオプションでは、Visual Studio がプロジェクト データをキャッシュすることで、次にプロジェクトを開いたときにプロジェクト ファイルから再計算せずにキャッシュされたデータを読み込めるようになります。 キャッシュされたデータを使用すると、プロジェクトの読み込み時間を大幅に短縮できます。  
 
 ## <a name="additional-features-in-the-visual-studio-gallery"></a>Visual Studio ギャラリーで追加された機能
 Visual Studio ギャラリーのその他のテキスト エディター機能については、[こちら](http://go.microsoft.com/fwlink/?LinkId=692016)の一覧をご覧ください。 例として、 [C++ Quick Fixes](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)があります。これは、次をサポートします。  

@@ -45,35 +45,30 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: d07820eda0d76163d99d7752789750eaf56182fd
-ms.openlocfilehash: 1f8372fe201d6b23ee2c65e0f6d6a2fa28976654
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 35ad2826fb25557d05be3548351aabd27e005cba
+ms.lasthandoff: 04/10/2017
 
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] では、すぐに使用できる強力な JavaScript 編集エクスペリエンスが提供されます。 TypeScript ベースの言語サービスを活用して、Visual Studio で高度な IntelliSense が提供されます。また、最新の JavaScript 機能がサポートされ、定義へ移動、リファクタリングなどの生産性向上機能が改善されています。
 
 > [!NOTE]
->  [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の JavaScript 言語サービスでは、言語サービス ("salsa") の新しいエンジンが使用されます。 このトピックでも詳しく説明しますが、この[ブログ投稿](https://blogs.msdn.microsoft.com/visualstudio/2016/04/08/previewing-salsa-javascript-language-service-visual-studio-15/)も参照してください。 新しい編集機能はほとんど VS コードにも適用されます。 詳細については、[VS コードのドキュメント](https://code.visualstudio.com/docs/languages/javascript)を参照してください。
+>  [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の JavaScript 言語サービスでは、言語サービス ("salsa") の新しいエンジンが使用されます。 このトピックでも詳しく説明しますが、この[ブログ投稿](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/more-productive-javascript-in-visual-studio-2017-rc)も参照してください。 新しい編集機能はほとんど VS コードにも適用されます。 詳細については、[VS コードのドキュメント](https://code.visualstudio.com/docs/languages/javascript)を参照してください。
 
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] の一般的な IntelliSense の機能の詳細については、「[IntelliSense の使用方法](../ide/using-intellisense.md)」を参照してください。 
 
 ## <a name="whats-new-in-the-javascript-language-service-in-includevsdev15miscincludesvsdev15mdmd"></a>[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の JavaScript 言語サービスの新機能
 
-- 高度な IntelliSense
-
-    [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の JavaScript IntelliSense では、パラメーターおよびメンバー リストにさらに多くの情報が表示されるようになります。
+[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の JavaScript IntelliSense では、パラメーターおよびメンバー リストにさらに多くの情報が表示されるようになります。
 この新しい情報は TypeScript 言語サービスで提供されます。この言語サービスでは、コードをよりよく理解するためにバックグラウンドで静的分析が使用されます。
 TypeScript では、この情報を作成するためにいくつかのソースを使用します。
-    - [型推論に基づく IntelliSense](#TypeInference)
-    - [JSDoc に基づく IntelliSense](#JsDoc)
-    - [TypeScript 宣言ファイルに基づく IntelliSense](#TSDeclFiles)
-
+- [型推論に基づく IntelliSense](#TypeInference)
+- [JSDoc に基づく IntelliSense](#JsDoc)
+- [TypeScript 宣言ファイルに基づく IntelliSense](#TSDeclFiles)
 - [型定義の自動取得](#Auto)
-- [ES6 以降のサポート](#ES6)
-- [JSX 構文のサポート](#JSX)
 
-## <a name="TypeInference"></a>型推論に基づく IntelliSense
+### <a name="TypeInference"></a>型推論に基づく IntelliSense
 JavaScript では、ほとんどの場合、明示的な型情報を利用できません。 幸い、周囲のコード コンテキストから型を推測するのは実に簡単です。
 このプロセスを型推論と呼びます。
 
@@ -107,7 +102,7 @@ exports.Foo = Foo;
 // Note that assigning a value to "module.exports" is also supported.
 ```
 
-## <a name="JsDoc"></a> JSDoc に基づく IntelliSense
+### <a name="JsDoc"></a> JSDoc に基づく IntelliSense
 
 型推論で必要な (またはドキュメントを補足するための) 型情報が提供されない場合、型情報は JSDoc 注釈で明示的に指定されることがあります。  たとえば、部分的に宣言されたオブジェクトに特定の型を指定する場合、次のように `@type` タグを使用できます。
 
@@ -133,7 +128,7 @@ function Foo(param1) {
  
 現在サポートされている JsDoc 注釈については、[このドキュメント](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript)を参照してください。
 
-## <a name="TsDeclFiles"></a> TypeScript 宣言ファイルに基づく IntelliSense
+### <a name="TsDeclFiles"></a> TypeScript 宣言ファイルに基づく IntelliSense
 
 現在、JavaScript と TypeScript は同じ言語サービスに基づいているため、より多くの方法で対話することができます。 たとえば、JavaScript IntelliSense は、`.d.ts` ファイルで宣言された値に提供することができ ([詳細については、こちらを参照してください](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Writing%20Definition%20Files.md))、TypeScript で宣言されているインターフェイスやクラスなどの型は、JsDoc コメントの型として使用できます。 
 
@@ -143,7 +138,7 @@ _**JavaScript で使用されている TypeScript 宣言**_
 
 <img src="https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/decl1.png" height="400" width="640"/>
 
-## <a name="Auto"></a> 型定義の自動取得
+### <a name="Auto"></a> 型定義の自動取得
 TypeScript の世界では、最も一般的な JavaScript ライブラリに `.d.ts` ファイルで記述された API が含まれ、その定義で最も一般的なレポジトリは [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) にあります。
 
 既定では、Salsa 言語サービスは使用されている JavaScript ライブラリを検出し、高度な IntelliSense を提供するためにライブラリを記述する、対応する `.d.ts` ファイルを自動的にダウンロードして参照しようとします。 ファイルは、`%LOCALAPPDATA%\Microsoft\TypeScript` のユーザー フォルダーの下にあるキャッシュにダウンロードされます。 
@@ -155,96 +150,5 @@ TypeScript の世界では、最も一般的な JavaScript ライブラリに `.
 
 自動取得を使用しない場合は、以下に示すとおり、構成ファイルを追加して無効にします。 プロジェクト内で直接使用する場合も定義ファイルを手動で配置できます。
 
-## <a name="ES6"></a> ES6 以降のサポート
 
-ES6 (ECMAScript 2015) は、JavaScript の次のバージョンです。 クラス、アロー関数、`let`/`const` などの新しい構文を言語に導入します。 この新しい構文はすべて Visual Studio でサポートされます。
-
-TypeScript で提供される主要なフィーチャーの&1; つは、ES6 機能を使用して、コードを出力できることです。このコードは、新しい機能をまだ理解していない JavaScript ランタイムで実行できます。 これは、一般に "トランスパイラ" として知られています。 JavaScript では同じ言語サービスを使用するため、ES6 以降から ES5 へのトランスパイラも利用できます。
-
-これを設定するには、構成オプションについてある程度理解する必要があります。  TypeScript は `tsconfig.json` ファイルを使用して構成します。 このようなファイルがない場合は、一部の既定値が使用されます。 互換性の理由から、JavaScript ファイル (および必要に応じて `.d.ts` ファイル) のみが存在する場合、これらの既定値は異なります。 JavaScript ファイルをコンパイルするには、`tsconfig.json` ファイルを追加する必要があり、これらの既定値の一部を明示的に設定する必要があります。
-
-tsconfig ファイルに必要な設定について、以下に簡単に説明します。
-
- - `allowJs`: この値は、JavaScript ファイルが認識されるように `true` に設定する必要があります。
-TypeScript は JavaScript にコンパイルするため、これは既定で `false` になります。これは、コンパイラでコンパイルされたファイルがインクルードされないようにするために必要です。
- - `outDir`: これは、出力された JavaScript ファイルが検出されず、プロジェクトに追加されるように、プロジェクトに含まれない場所に設定する必要があります (下記 `exclude` を参照)。
- - `module`: モジュールを使用する場合、この設定で、出力コードで使用する必要があるモジュール形式 (たとえば、Node、または Browserify などのバンドラーの場合は `commonjs`) をコンパイラに指示します。
- - `exclude`: この設定は、プロジェクトに含めないフォルダーを示しています。 
- 出力場所と、`node_modules` や `temp` などのプロジェクト以外のフォルダーをこの設定に追加する必要があります。
- - `enableAutoDiscovery`: この設定は、前述のとおり、定義ファイルの自動検出とダウンロードを可能にします。
- - `compileOnSave`: この設定で、Visual Studio にソース ファイルが保存されるたびに再コンパイルする必要があるかどうかをコンパイラに指示します。
-
-`./out` フォルダーで JavaScript ファイルを CommonJS モジュールに変換する場合、以下のような設定を `tsconfig.json` ファイルに含めることができます。
-
-```json
-{
-  "compilerOptions": {
-    "module": "commonjs",
-    "allowJs": true,
-    "outDir": "out"
-  },
-  "exclude": [
-    "node_modules",
-    "wwwroot",
-    "out"
-  ],
-  "compileOnSave": true,
-  "typingOptions": {
-    "enableAutoDiscovery": true
-  }
-}
-```
-
-上記のように設定した状態で、ECMAScript 2015 言語機能をいくつか含むソース ファイル (`./app.js`) が存在する場合は次のようになります。
-
-```js
-import {Subscription} from 'rxjs/Subscription';
-
-class Foo {
-    sayHi(name) {
-        return `Hi ${name}, welcome to Salsa!`;
-    }
-}
-
-export let sqr = x => x * x;
-export default Subscription;
-```
-
-この場合、ファイルは次のような ECMAScript 5 (既定) を対象とする `./out/app.js` に出力されます。
-
-```js
-"use strict";
-var Subscription_1 = require('rxjs/Subscription');
-var Foo = (function () {
-    function Foo() {
-    }
-    Foo.prototype.sayHi = function (name) {
-        return "Hi " + name + ", welcome to Salsa!";
-    };
-    return Foo;
-}());
-exports.sqr = function (x) { return x * x; };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = Subscription_1.Subscription;
-//# sourceMappingURL=app.js.map
-```
-
-## <a name="JSX"></a> JSX 構文のサポート
-
-Visual Studio 2017 の JavaScript では、JSX 構文の豊富なサポートが提供されます。 JSX は、JavaScript ファイル内で HTML タグを許可する構文セットです。 
-
-次の図は `comps.tsx` TypeScript ファイルに定義されている React コンポーネントを示しています。`app.jsx` ファイルから使用されるこのコンポーネントには、JSX 式に入力し、文書化するために IntelliSense が備わっています。
-この具体例にはたまたま TypeScript コードも含まれていますが、TypeScript は必要ありません。
-<img src="https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/react.png" height="500" width="640"/>
-
-> [!NOTE]
-> JSX 構文を React 呼び出しに変換するには、設定 `"jsx": "react"` を、上記のとおり、`tsconfig.json` ファイルの `compilerOptions` に追加する必要があります。
-
-ビルド時に './out/app.js' で作成された JavaScript ファイルには次のようなコードが含まれます。
-
-```js
-"use strict";
-var comps_1 = require('./comps');
-var x = React.createElement(comps_1.RepoDisplay, {description: "test"});
-```
 
