@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 03/07/2017
+ms.date: 04/06/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -32,9 +32,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 9e635a28d3338bcf518a0aec69c476280eedf6e2
-ms.openlocfilehash: 06ed56b985123bf0af56377d271d5d33f6c37d0e
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 75653527b2724658af33b3046cd077858c8a7d1b
+ms.lasthandoff: 04/06/2017
 
 ---
 
@@ -58,21 +58,22 @@ ms.lasthandoff: 03/27/2017
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-コンポーネント ID | 名前 | 依存関係の種類
---- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test Agent のコア機能 | 必須
+コンポーネント ID | 名前 | バージョン | 依存関係の種類
+--- | --- | --- | ---
+Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test Agent のコア機能 | 15.0.26208.0 | 必須
 ## <a name="unaffiliated-components"></a>関連付けられていないコンポーネント
 
 以下のコンポーネントはどのワークロードにも含まれていませんが、個別のコンポーネントとして選択できます。
 
-コンポーネント ID | 名前
---- | ---
-適用なし | 適用なし
+コンポーネント ID | 名前 | バージョン
+--- | --- | ---
+適用なし | 該当なし | 適用なし
 
 ## <a name="see-also"></a>関連項目
 
 * [Visual Studio のワークロードとコンポーネント ID](workload-and-component-ids.md)
 * [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
 * [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)
+  * [コマンド ライン パラメーターの例](command-line-parameter-examples.md)
 * [Visual Studio のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
 

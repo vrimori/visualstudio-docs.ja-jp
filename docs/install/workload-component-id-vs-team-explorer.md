@@ -1,6 +1,6 @@
 ---
-title: "Visual Studio Feedback Client 2017 のワークロードとコンポーネント ID | Microsoft Docs"
-description: "Visual Studio のワークロードとコンポーネント ID を使用して、Visual Studio Team Services または Team Foundation Server に関する充実したフィードバックを提供します"
+title: "Visual Studio Team Explorer 2017 のワークロードとコンポーネント ID | Microsoft Docs"
+description: "Visual Studio のワークロードとコンポーネント ID を使用して、あらゆる側面からテストを行う担当者向けの統合テスト ツールを提供します"
 keywords: 
 author: TerryGLee
 ms.author: tglee
@@ -15,7 +15,7 @@ ms.prod: visual-studio-dev15
 ms.service: 
 ms.technology:
 - vs-ide-install
-ms.assetid: 7392a100-100c-458c-9394-828695109015
+ms.assetid: c6ef9a3b-d13d-49b4-9faa-51fa06b21e1f
 translation.priority.ht:
 - de-de
 - es-es
@@ -32,13 +32,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: 6b981d8ec1594da3db8fa1384ddeeee9da519837
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: 293d694cfff4c375b342d8322483c84fbbeb446c
+ms.openlocfilehash: 7a4538f04e18630da5adeb8189716a5ac34f3c47
+ms.lasthandoff: 04/07/2017
 
 ---
 
-# <a name="visual-studio-feedback-client-2017-component-directory"></a>Visual Studio Feedback Client 2017 のコンポーネント ディレクトリ
+# <a name="visual-studio-team-explorer-2017-component-directory"></a>Visual Studio Team Explorer 2017 のコンポーネント ディレクトリ
 
 このページの表では、コマンド ラインを使用して Visual Studio をインストールするために使用できる ID の一覧を示します。 Visual Studio の更新プログラムがリリースされる際には、さらにコンポーネントが追加される予定です。
 
@@ -50,18 +50,17 @@ ms.lasthandoff: 04/06/2017
 
 これらの ID の使用方法の詳細については、「[Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)」(コマンドライン パラメーターを使用して Visual Studio 2017 をインストールする) をご覧ください。 他の製品のワークロードとコンポーネント ID の一覧については、「[Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md)」(Visual Studio 2017 のワークロードとコンポーネント ID) をご覧ください。
 
-## <a name="feedback-client"></a>Feedback Client
+## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2017"></a>Visual Studio のコア エディター (Visual Studio Team Explorer 2017 に付属)
 
-**ID:** Microsoft.VisualStudio.Workload.FeedbackClient
+**ID:** Microsoft.VisualStudio.Workload.CoreEditor
 
-**説明:** 利害関係者は Feedback Client を使用して、Visual Studio Team Services または Team Foundation Server に関する充実したフィードバックを提供できます。
+**説明:** 構文認識コード編集機能、ソース コード管理、作業項目管理などの Visual Studio の基本的なシェル エクスペリエンス。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
 コンポーネント ID | 名前 | バージョン | 依存関係の種類
 --- | --- | --- | ---
-Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.0.26208.0 | 必須
-
+Microsoft.VisualStudio.Component.CoreEditor | Visual Studio のコア エディター | 15.0.26208.0 | 必須
 ## <a name="unaffiliated-components"></a>関連付けられていないコンポーネント
 
 以下のコンポーネントはどのワークロードにも含まれていませんが、個別のコンポーネントとして選択できます。
