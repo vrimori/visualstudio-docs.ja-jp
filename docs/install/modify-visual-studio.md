@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 の変更 | Microsoft Docs"
 description: "Visual Studio を変更する方法について、ステップ バイ ステップで説明します。"
 ms.custom: H1Hack27Feb2017
-ms.date: 04/03/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
-ms.openlocfilehash: d1da76eee8295865740720e8575e7258b3719e7e
-ms.lasthandoff: 04/03/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: dc52353b476d38b7c069aa4acd95ceaa260717c4
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>ワークロードやコンポーネントを追加または削除することで Visual Studio 2017 を変更する
@@ -77,6 +77,7 @@ ms.lasthandoff: 04/03/2017
 
 ## <a name="see-also"></a>関連項目  
 * [Visual Studio 2017 のインストール](https://go.microsoft.com/fwlink/?linkid=833223)
+* [Visual Studio の更新](update-visual-studio.md)
 * [Visual Studio 2017 のアンインストール](uninstall-visual-studio.md)
 * [Visual Studio 2017 で問題を報告する方法](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 
