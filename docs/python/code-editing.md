@@ -1,7 +1,7 @@
 ---
-title: "Python Tools for Visual Studio でのコードの編集 | Microsoft Docs"
+title: "Visual Studio での Python コードの編集 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,15 +29,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 79d7c18b672119b745258feee0f646dff96c1922
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 0f2ecd6ca52a04e8813610c0f406251ef4604354
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="editing-python-code"></a>Python コードの編集
 
-開発者は、コードの編集に多くの時間を費やします。そこで Python Tools for Visual Studio (PTVS) は、IntelliSense による構文の強調表示、オート コンプリート、シグネチャ ヘルプ、メソッド オーバーライド、検索とナビゲーションなど、開発者の生産性向上に役立つさまざまな機能を提供します。 
+開発者は、コードの編集に多くの時間を費やします。そこで Visual Studio では Python のサポートとして、IntelliSense による構文の強調表示、オート コンプリート、シグネチャ ヘルプ、メソッド オーバーライド、検索とナビゲーションなど、開発者の生産性向上に役立つさまざまな機能を提供します。 
 
 このトピックの内容
 
@@ -45,9 +45,9 @@ ms.lasthandoff: 03/07/2017
 - [コード スニペット](#code-snippets)
 - [コードのナビゲーション](#navigating-your-code)
 
-Visual Studio でのコードの編集に関する全般的な説明については、「[コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)」をご覧ください。 また、コードの特定のセクションに注意を集中するのに役立つ [Visual Studio のアウトライン機能](../ide/outlining.md)についての記事もご覧ください。 PTVS は、各モジュールで定義されているクラスとそれらのクラスで定義されている関数を調べるための、Visual Studio オブジェクト ブラウザーの使用をサポートしています (**[表示] > [その他のウィンドウ] > [オブジェクト ブラウザー]** を選択するか、Ctrl + W、J キーを押します)。 
+Visual Studio でのコードの編集に関する全般的な説明については、「[コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)」をご覧ください。 また、コードの特定のセクションに注意を集中するのに役立つ [Visual Studio のアウトライン機能](../ide/outlining.md)についての記事もご覧ください。 Python のサポートには、Visual Studio オブジェクト ブラウザーの使用が含まれています (**[表示] > [その他のウィンドウ] > [オブジェクト ブラウザー]** を選択するか、Ctrl + W、J キーを押します)。各モジュールで定義されているクラスとそれらのクラスで定義されている関数を調べることができます。 
 
-Python コードの編集の概要については、「[Getting Started with PTVS, Part 3: Editing](https://youtu.be/uZGZNEyyeKs?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)」(PTVS の概要、パート 3: 編集) (youtube.com、3 分 48秒) をご覧ください。
+Python コードの編集の概要については、「[Getting Started with Python in Visual Studio, Part 3: Editing](https://youtu.be/uZGZNEyyeKs?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)」(Visual Studio での Python の概要、パート 3: 編集) (youtube.com、3 分 48 秒) をご覧ください。
 
 > [!VIDEO https://www.youtube.com/embed/uZGZNEyyeKs]
 
@@ -136,12 +136,12 @@ IntelliSense により、[入力候補](#completions)、[シグネチャ ヘル�
 独自のスニペットの作成方法については、「[チュートリアル: コード スニペットを作成する](https://docs.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet)」をご覧ください。
 [コード スニペットを作成](https://msdn.microsoft.com/en-us/library/ms165394.aspx)してインポートすることにより、コード スニペットをカスタマイズできます。 
 
-便利なコード スニペットを作成したので共有したいとお考えの場合は、ぜひ gist に投稿して[マイクロソフトまでお知らせください](https://github.com/Microsoft/PTVS/issues)。 PTVS の将来のリリースに含めさせていただく可能性があります。
+便利なコード スニペットを作成したので共有したいとお考えの場合は、ぜひ gist に投稿して[マイクロソフトまでお知らせください](https://github.com/Microsoft/PTVS/issues)。 Visual Studio の将来のリリースに含めさせていただく可能性があります。
 
 
 ## <a name="navigating-your-code"></a>コードのナビゲーション
 
-PTVS には、ソース コードが提供されているライブラリ、[ナビゲーション バー](#navigation-bar)、[[定義へ移動]](#go-to-definition)、[[移動]](#navigate-to)、[[すべての参照の検索]](#find-all-references)、[オブジェクト ブラウザー](#object-browser)など、コード内のナビゲーションを迅速にするためのさまざまな手段が用意されています。
+Visual Studio の Python のサポートとして、ソース コードが提供されているライブラリ、[ナビゲーション バー](#navigation-bar)、[[定義へ移動]](#go-to-definition)、[[移動]](#navigate-to)、[[すべての参照の検索]](#find-all-references) など、コード内のナビゲーションを迅速にするためのさまざまな手段が用意されています。 また、Visual Studio の[オブジェクト ブラウザー](../ide/viewing-the-structure-of-code.md#BKMK_ObjectBrowser)も使用できます。
 
 ### <a name="navigation-bar"></a>[ナビゲーション バー]
 

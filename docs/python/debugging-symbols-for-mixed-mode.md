@@ -1,7 +1,7 @@
 ---
-title: "Python Tools for Visual Studio の混合モードのデバッグ用のシンボル | Microsoft Docs"
+title: "Visual Studio での混合モード Python/C++ デバッグのシンボル | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/4/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,41 +29,60 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 9f7ba91262875344ded1e09277883abff292f359
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
+ms.openlocfilehash: b8bf362f506255c09468934f01a7beeef3a632dd
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="installing-debugging-symbols-for-python-interpreters"></a>Python インタープリターのデバッグ シンボルのインストール
 
-完全なデバッグ エクスペリエンスを提供するため、Python Tools for Visual Studio (PTVS) の[混合モードのデバッグ](debugging-mixed-mode.md)では、使用する Python インタープリター内の多数の内部データ構造を解析する必要があります。 これには、インタープリター自体のデバッグ シンボルが必要です。 たとえば、python27.dll に対応するシンボル ファイルは python27.pdb です。
+完全なデバッグ エクスペリエンスを提供するため、Visual Studio の[混合モードの Python デバッガー](debugging-mixed-mode.md)では、使用する Python インタープリター内の多数の内部データ構造を解析する必要があります。 これには、インタープリター自体のデバッグ シンボルが必要です。 たとえば、python27.dll の場合、対応するシンボル ファイルは python27.pdb です。python36.dll の場合、シンボル ファイルは python36.pdb です。 また、各バージョンのインタープリターは、多様なモジュールに合わせてシンボル ファイルを用意しています。
 
-PTVS は、シンボルが必要であることを検出すると、シンボル ファイルを含むフォルダーを指示するかファイルのダウンロードを求めるメッセージを表示します。
+Visual Studio 2017 の "Python 3" および "Anaconda 3" インタープリターの場合、それぞれのシンボルが自動的にインストールされ、Visual Studio で自動的に検出されます。 Visual Studio 2015 以前の場合、または他のインタープリターを使用している場合は、シンボルを別にダウンロードし、Visual Studio の **[デバッグ] > [シンボル]** タブの **[ツール] > [オプション]** でシンボルの場所を設定する必要があります。 これらの手順については、以下のセクションで詳しく説明します。
 
-![混合モードのデバッグ時のシンボルのプロンプト](media/mixed-mode-debugging-symbols-required.png) 
+Visual Studio でシンボルが必要なとき、通常は混合モードのデバッグ セッションを開始したときに、プロンプトが表示されることがあります。 この場合、ダイアログで 2 つの選択肢が示されます。
 
-シンボル ファイルは、この後の説明に従って、[公式ディストリビューション](#official-distribution)または [Enthought Canopy](#enthought-canopy) からダウンロードすることができます。 ActiveState Python などのサードパーティの Python ディストリビューションを使用している場合は、そのディストリビューションの作成者に連絡して、シンボルの提供を依頼する必要があります  (ただし、WinPython には、標準の Python インタープリターが変更なしで組み込まれているため、対応するバージョン番号用の公式ディストリビューションのシンボルを使用できます)。
+- **[シンボル設定ダイアログを開く]** を選択すると、**[オプション]** ダイアログが開き、**[デバッグ] > [シンボル]** タブが表示されます。
+- **[インタープリター用のシンボルをダウンロード]** を選択すると、この現在のドキュメント ページが開きます。この場合は、**[ツール] > [オプション]** を選択し、**[デバッグ] > [シンボル]** タブに移動して続行します。
 
-インタープリターの .pdb ファイルを入手したら、次の手順に従って PTVS がそれらを認識するように設定して、デバッグ セッションの開始時に自動的に読み込まれるようにします。
+    ![混合モード デバッガーのシンボルのプロンプト](media/mixed-mode-debugging-symbols-required.png)
 
-1. **[ツール] メニューの [オプション]** コマンドを選択し、**[デバッグ]、[シンボル]** の順に選択します。
+## <a name="downloading-symbols"></a>シンボルをダウンロードしています
 
-![混合モードのデバッグでのシンボルのオプション](media/mixed-mode-debugging-symbols.png)
+- Python 3.5 以前: Python インストーラーでデバッグ シンボルを取得します。 **[カスタム インストール]** を選択し、**[次へ]** を選択します。**[詳細設定]** 画面で、**[Download debugging symbols]** (デバッグ シンボルのダウンロード) と **[Download debug binaries]** (デバッグ バイナリのダウンロード) を選択します。
 
-1. ツールバーの [追加] ボタン (上の図で [!] アイコンの右隣、複数のボタンの左端にあるボタン) を選択し、.pdb を格納するフォルダーに移動し、**[OK]** をクリックします。
+    ![デバッグ シンボルを含む Python 3.x インストーラー](media/mixed-mode-debugging-symbols-installer35.png)
 
+    シンボル ファイル (`.pdb`) はルート インストール フォルダーに保存されます (個々のモジュールのシンボル ファイルも `DLLs` フォルダーにあります)。 そのため、シンボル ファイルは Visual Studio で自動的に検出されます。追加の手順は必要ありません。
 
-## <a name="official-distribution"></a>公式ディストリビューション
+- Python 3.4.x 以前: シンボルは、以下のように[公式のディストリビューション](#official-distributions)または [Enthought Canopy](#enthought-canopy) から、ダウンロード可能な .zip ファイルとして入手できます。 ダウンロード後は、Python フォルダー内の `Symbols` などのローカル フォルダーにファイルを展開して続行します。
 
-Python 3.5 以降では、インストーラーを使用してデバッグ シンボルを含めることができます。(新しくインストールするか、既存のインストールを変更します)。 **[Custom installation (カスタム インストール)]** を選択し、**[Next (次へ)]** を選択します。**[Advanced Options (高度なオプション)]** 画面で、[Download debugging symbols (デバッグ シンボルのダウンロード)]**と**[Download debug binaries** (デバッグ バイナリのダウンロード)] を選択します。
+    > [!Important]
+    > Python のマイナー ビルド間や 32 ビット ビルドと 64 ビルド間でもシンボルは異なるため、バージョンを完全に一致させることをお勧めします。 使用するインタープリターを確認するには、ソリューション エクスプローラーでプロジェクトの **[Python 環境]** *ノード*を展開し、環境名をメモします。 次に **[Python 環境]** *ウィンドウ*に切り替え、インストール場所をメモします。 次にコマンド ウィンドウでその場所を開き、`python.exe` を起動します。正確なバージョンと 32 ビットか 64 ビットかが表示されます。
 
-![デバッグ シンボルを含む Python 3.x インストーラー](media/mixed-mode-debugging-symbols-installer35.png)
+- ActiveState Python などのサードパーティの Python ディストリビューションを使用している場合は、そのディストリビューションの作成者に連絡して、シンボルの提供を依頼する必要があります。 WinPython には、標準の Python インタープリターが変更なしで組み込まれているため、対応するバージョン番号用の公式ディストリビューションのシンボルを使用できます。
 
-Python 3.4.x 以前では、シンボルはダウンロード可能な .zip ファイルとして入手できます。 ファイルをダウンロードしてフォルダーに抽出した後、前のセクションの指示に従って、それらを PTVS に登録してください。
+## <a name="pointing-visual-studio-to-the-symbols"></a>Visual Studio にシンボルの場所を設定する
+
+シンボルを別にダウンロードした場合は、以下の手順に従って、Visual Studio にシンボルを認識させます。 Python 3.5 以降のインストーラーでシンボルをインストールした場合、Visual Studio で自動的に検出されます。
+
+1. **[ツール] > [オプション]** メニューを選択し、**[デバッグ] > [シンボル]** を選択します。
+    
+1. ツールバーの [追加] ボタン (下図の線で囲まれたボタン) を選択し、ダウンロードしたシンボルを展開したフォルダー (下図のように、`c:\python34\Symbols` など、`python.pdb` がある場所) を入力し、**[OK]** を選択します。 
+
+    ![混合モードのデバッグでのシンボルのオプション](media/mixed-mode-debugging-symbols.png)
+
+1. Visual Studio のデバッグ セッション中に、Python インタープリターのソース ファイルの場所を入力するように求められることもあります。 ソース ファイルを ([python.org/downloads](https://www.python.org/downloads) などから) ダウンロードした場合は、その場所を設定することもできます。
+
+> [!Note]
+> ダイアログに表示されているシンボルのキャッシュ機能は、オンライン ソースから取得したシンボルのローカル キャッシュを作成するときに使用します。 Python インタープリターのシンボルの場合、既にローカルにダウンロードされているので、これらの機能は必要ありません。 いずれの場合も、詳細については、「[Specify Symbols and Source Files in the Visual Studio Debugger](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」(Visual Studio デバッガーでシンボルとソース ファイルを指定する) を参照してください。
+
+## <a name="official-distributions"></a>公式ディストリビューション
 
 | Python のバージョン | ダウンロード | 
 | --- | --- | 
+| 3.5 以降 | Python インストーラーでシンボルをインストールします。 | 
 | 3.4.4 | [32 ビット](https://www.python.org/ftp/python/3.4.4/python-3.4.4-pdb.zip) - [64 ビット](https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64-pdb.zip) |
 | 3.4.3 | [32 ビット](https://www.python.org/ftp/python/3.4.3/python-3.4.3-pdb.zip) - [64 ビット](https://www.python.org/ftp/python/3.4.3/python-3.4.3.amd64-pdb.zip) |
 | 3.4.2 | [32 ビット](https://www.python.org/ftp/python/3.4.2/python-3.4.2-pdb.zip) - [64 ビット](https://www.python.org/ftp/python/3.4.2/python-3.4.2.amd64-pdb.zip) |

@@ -1,7 +1,7 @@
 ---
 title: "Python 用 Azure クラウド サービス プロジェクト テンプレート | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,15 +29,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 10ea76d474d96ba4b5aa95584fd1893abe05d991
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 5dd1c40c925327c9494e3a334cdf348692a4981d
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="azure-cloud-service-projects-for-python"></a>Python 用 Azure クラウド サービス プロジェクト
 
-Python Tools for Visual Studio (PTVS) は、Python を使用して Azure Cloud Services の作成に使用できるテンプレートを提供します。
+Visual Studio は、Python を使用して Azure Cloud Services の作成に使用できるテンプレートを提供しています。
 
 [クラウド サービス](http://go.microsoft.com/fwlink/?LinkId=306052)は、任意の数の *worker ロール*と *Web ロール*から構成され、それぞれが概念的に独立したタスクを実行しますが、規模拡張の必要に応じて仮想マシン間で個別にレプリケートできます。 Web ロールでは、フロントエンド Web アプリケーションのホスティングが提供されます。 Python が接続されている場合、WSGI をサポートする任意の Web フレームワークを使用して、このようなアプリケーションを作成できます ([Web プロジェクト テンプレート](template-web.md)でサポート)。 worker ロールは、ユーザーと直接対話しない長時間実行されるプロセスを意図しています。 通常、これらは `pip install`&nbsp;[`azure`](http://pypi.org/project/azure) でインストールできる[データ](http://go.microsoft.com/fwlink/?LinkId=401571) ライブラリと[アプリ サービス](http://go.microsoft.com/fwlink/?LinkId=401572) ライブラリを利用します。
 
@@ -50,15 +50,15 @@ Python Tools for Visual Studio (PTVS) は、Python を使用して Azure Cloud S
 
     ![Python 用 Azure クラウド プロジェクト テンプレート](media/template-azure-cloud-project.png)
 
-1. 含める&1; つ以上のロールを選びます。 クラウド プロジェクトは、異なる言語で記述されたロールを結合できるため、アプリケーションの各部分を最も適した言語で簡単に記述できます。 このダイアログの完了後に新しいロールをプロジェクトに追加するには、ソリューション エクスプローラーで **[ロール]** を右クリックし、**[追加]** の下で項目の&1; つを選びます。
+1. 含める 1 つ以上のロールを選びます。 クラウド プロジェクトは、異なる言語で記述されたロールを結合できるため、アプリケーションの各部分を最も適した言語で簡単に記述できます。 このダイアログの完了後に新しいロールをプロジェクトに追加するには、ソリューション エクスプローラーで **[ロール]** を右クリックし、**[追加]** の下で項目の 1 つを選びます。
 
     ![Azure クラウド プロジェクト テンプレートでのロールの追加](media/template-azure-cloud-service-project-wizard.png)
 
-1. 個々のロール プロジェクトが作成されるときに、Django、Bottle、Flask フレームワークなどの追加の Python パッケージの&1; つを使用するロールを選んだ場合は、これらをインストールするように求めるプロンプトが表示されることがあります。
+1. 個々のロール プロジェクトが作成されるときに、Django、Bottle、Flask フレームワークなどの追加の Python パッケージの 1 つを使用するロールを選んだ場合は、これらをインストールするように求めるプロンプトが表示されることがあります。
 
 1. プロジェクトに新しいロールを追加すると、構成手順がいくつか表示されます。 これらは通常必要ありませんが、プロジェクトの将来のカスタマイズに役立つ場合があります。 同時に複数のロールを追加する場合は、最後のロールについての説明のみ開いたままになります。 ただし、他のロールの手順とトラブルシューティングのヒントは、ロールの ルートまたは `bin` フォルダーにあるそれぞれの `readme.mht` ファイルで参照できます。
 
-1. プロジェクトの `bin` フォルダーには、Python のインストール、プロジェクトの [requirements.txt](#requirementstxt) ファイル、必要な場合に IIS の設定など、リモート仮想マシンの構成に使用する&1; つまたは&2; つの PowerShell スクリプトも含まれています。 デプロイでの必要に応じてこれらのファイルを編集できますが、最も一般的なオプションは他の方法で管理できます (下の「[ロールのデプロイを構成する](#configuring-role-deployment)」をご覧ください)。 これらのファイルが使用可能でない場合はレガシ構成スクリプトが代わりに使用されるため、これらのファイルの削除はお勧めしません。
+1. プロジェクトの `bin` フォルダーには、Python のインストール、プロジェクトの [requirements.txt](#dependencies) ファイル、必要な場合に IIS の設定など、リモート仮想マシンの構成に使用する 1 つまたは 2 つの PowerShell スクリプトも含まれています。 デプロイでの必要に応じてこれらのファイルを編集できますが、最も一般的なオプションは他の方法で管理できます (下の「[ロールのデプロイを構成する](#configuring-role-deployment)」をご覧ください)。 これらのファイルが使用可能でない場合はレガシ構成スクリプトが代わりに使用されるため、これらのファイルの削除はお勧めしません。
 
     ![worker ロールのサポート ファイル](media/template-azure-cloud-service-worker-role-support-files.png)
 
@@ -94,7 +94,7 @@ Python Tools for Visual Studio (PTVS) は、Python を使用して Azure Cloud S
 
 **発行**ウィザードを開くには、ソリューション エクスプローラーでロール プロジェクトを選び、メイン メニューから **[ビルド] > [発行]** を選択するか、プロジェクトを右クリックして **[発行]** を選択します。
 
-発行プロセスには&2; つのフェーズが含まれます。 まず、Visual Studio で、クラウド サービスのすべてのロールを含む&1; つのパッケージを作成します。 このパッケージは Azure にデプロイされるもので、ロールごとに&1; 台以上の仮想マシンを初期化し、ソースをデプロイします。
+発行プロセスには 2 つのフェーズが含まれます。 まず、Visual Studio で、クラウド サービスのすべてのロールを含む 1 つのパッケージを作成します。 このパッケージは Azure にデプロイされるもので、ロールごとに 1 台以上の仮想マシンを初期化し、ソースをデプロイします。
 
 各仮想マシンがアクティブになると、`ConfigureCloudService.ps1` スクリプトを実行し、すべての従属物をインストールします。 既定では、このスクリプトは Python の最新バージョンを [nuget](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22) からインストールし、`requirements.txt` ファイルで指定されたパッケージをインストールします。 
 

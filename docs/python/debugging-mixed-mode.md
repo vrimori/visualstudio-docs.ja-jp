@@ -1,7 +1,7 @@
 ---
-title: "Python Tools for Visual Studio での混合モードのデバッグ | Microsoft Docs"
+title: "Visual Studio での Python の混合モードのデバッグ | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: ddbac5b8ed52e6ed7afae7e7b04dc2fa15f7a0c2
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: bdc621831893f907beba7ec5ad503fe4d96c0042
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -70,7 +70,7 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
 
 - [結合された呼び出し履歴](#combined-call-stack)
 - [Python とネイティブ コード間のステップ実行](#stepping-between-python-and-native-code)
-- [ネイティブ コード内の PyObject 値の表示](#pyobject-values-in-native-code)
+- [ネイティブ コード内の PyObject 値の表示](#pyobject-values-view-in-native-code)
 - [Python コード内のネイティブ値の表示](#native-values-view-in-python-code)
 
 ### <a name="combined-call-stack"></a>結合された呼び出し履歴
@@ -153,7 +153,7 @@ static int FobObject_init(FobObject* self, PyObject* args, PyObject* kwds) {
 - サポートされていない機能: 条件付きブレークポイント、デバッグの対話型ウィンドウ、およびプラットフォーム間のリモート デバッグ。
 - イミディエイト ウィンドウ: 使用できますが、その機能はサブセットに制限され、ここに記載されている制限もすべて適用されます。
 - サポートされている Python のバージョン: CPython 2.7 と 3.3+ のみ。
-- Visual Studio Shell: Visual Studio Shell で PTVS を使用する場合 (たとえば、統合インストーラーを使用してインストールした場合)、Visual Studio では C++ プロジェクトを開くこができません。また、C++ ファイルの編集エクスペリエンスは、基本的なテキスト エディターでの編集と同じになります。 ただし、C/C++ のデバッグと混合モードでのデバッグは Shell で完全にサポートされ、ソース コード、ネイティブ コードのステップ イン、およびデバッガー ウィンドウでの C++ 式の評価を実行できます。
+- Visual Studio Shell: Visual Studio Shell で Python を使用する場合 (たとえば、統合インストーラーを使用してインストールした場合)、Visual Studio では C++ プロジェクトを開くことができません。また、C++ ファイルの編集方法は、基本的なテキスト エディターでの編集と同様です。 ただし、C/C++ のデバッグと混合モードでのデバッグは Shell で完全にサポートされ、ソース コード、ネイティブ コードのステップ イン、およびデバッガー ウィンドウでの C++ 式の評価を実行できます。
 - オブジェクトの表示と展開: デバッガー ツールの [ローカル] ウィンドウと [ウォッチ] ウィンドウに Python オブジェクトを表示するとき、混合モードのデバッガーでは、オブジェクトの構造のみが表示されます。 プロパティの自動評価や計算される属性の表示は行われませｎ。 コレクションでは、組み込みコレクション型 (`tuple`、`list`、`dict`、`set`) の要素のみを表示します。 カスタム コレクション型は、組み込みコレクション型から継承される場合を除き、コレクションとして視覚化されません。
 - 式の評価: 下記を参照してください。
 
