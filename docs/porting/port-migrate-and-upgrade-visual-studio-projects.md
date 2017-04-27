@@ -39,9 +39,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5951e9c6b61e1cb868d792a5aee9389235cfef30
-ms.openlocfilehash: 533294abad4df8e0c782bbf5d0f98d93e661f406
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 7c10c85c6bb6a300a117cd4a08cf80280cb431db
+ms.openlocfilehash: 16458816633f954da30b8ca78ff6f6ae0f2fced5
+ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="port-migrate-and-upgrade-visual-studio-projects"></a>Visual Studio プロジェクトのポート、移行、アップグレード
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/10/2017
 | プロジェクトの種類 | サポート |
 | --- | --- |
 | .NET Core プロジェクト (.xproj) | Visual Studio 2015 で作成したプロジェクトでは、.xproj プロジェクト ファイルが含まれるプレビュー ツールが使用されていました。 Visual Studio 2017 で .xproj ファイルを開くと、ファイルを .csproj 形式に移行するように求められます (.xproj ファイルのバックアップが作成されます)。 .NET Core プロジェクトのこの .csproj 形式は、VS2015 以前のバージョンではサポートされていません。  .xproj 形式は .csproj に移行しなければ Visual Studio 2017 で利用できません。 詳しくは、「[.NET Core プロジェクトから .csproj 形式への移行](https://docs.microsoft.com/dotnet/articles/core/migration/#visual-studio-2017)」をご覧ください。|
-| ASP.NET Web アプリケーションと ASP.NET Core Web アプリケーション (Application Insights が有効) | Visual Studio のユーザーごとのリソース情報がユーザー インスタンス別にレジストリに保存されます。 これは、プロジェクトを開いていない状態で Azure Application Insights データを検索するときに利用されます。 Visual Studio 2015 では、Visual Studio 2017 とは異なるレジストリの場所が使用され、競合しません。<br/><br/>ユーザーが ASP.NET Web アプリケーションまたは ASP.NET Core Web アプリケーションを作成すると、リソースは .suo ファイルに保存されます。 ユーザーは Visual Studio 2015 や 2017 でプロジェクトを開くことができます。両方のバージョンで使用されているプロジェクトとソリューションが Visual Studio でサポートされている限り、両方でリソース情報が使用されます。 ユーザーは製品ごとに&1; 回認証する必要があります。 たとえば、Visual Studio 2015 で作成されたプロジェクトを Visual Studio 2017 で開く場合、Visual Studio 2017 で認証が要求されます。 |
+| ASP.NET Web アプリケーションと ASP.NET Core Web アプリケーション (Application Insights が有効) | Visual Studio のユーザーごとのリソース情報がユーザー インスタンス別にレジストリに保存されます。 これは、プロジェクトを開いていない状態で Azure Application Insights データを検索するときに利用されます。 Visual Studio 2015 では、Visual Studio 2017 とは異なるレジストリの場所が使用され、競合しません。<br/><br/>ユーザーが ASP.NET Web アプリケーションまたは ASP.NET Core Web アプリケーションを作成すると、リソースは .suo ファイルに保存されます。 ユーザーは Visual Studio 2015 や 2017 でプロジェクトを開くことができます。両方のバージョンで使用されているプロジェクトとソリューションが Visual Studio でサポートされている限り、両方でリソース情報が使用されます。 ユーザーは製品ごとに 1 回認証する必要があります。 たとえば、Visual Studio 2015 で作成されたプロジェクトを Visual Studio 2017 で開く場合、Visual Studio 2017 で認証が要求されます。 |
 | C#/Visual Basic Webform または Windows フォーム | プロジェクトを Visual Studio 2017 と Visual Studio 2015 で開くことができます。 |
 | データベース単体テスト プロジェクト (.csproj、.vbproj)    | 古いデータ単体テスト プロジェクトは Visual Studio 2017 で読み込まれますが、依存関係は GAC に保存されているものが使用されます。 単体テスト プロジェクトをアップグレードし、最新の依存関係を使用するには、ソリューション エクスプローラーでプロジェクトを右クリックし、**[SQL Server 単体テスト プロジェクトに変換する]** を選択します。 |
 | F# | Visual Studio 2017 では、Visual Studio 2013 と 2015 で作成したプロジェクトを開くことができます。 ただし、これらのプロジェクトで Visual Studio 2017 機能を有効にするには、プロジェクトのプロパティを開き、ターゲットの fsharp.core を F# 4.1 に変更します。 |
@@ -76,6 +76,7 @@ ms.lasthandoff: 03/10/2017
 | SharePoint 2010 | SharePoint ソリューション プロジェクトを Visual Studio 2017 で開くと、SharePoint 2013 または SharePoint 2016 にアップグレードされます。 アップグレードのためには、".NET デスクトップ開発" ワークロードを Visual Studio 2017 にインストールする必要があります。<br/><br/>SharePoint プロジェクトのアップグレード方法について詳しくは、「[SharePoint 2013 へのアップグレード](https://technet.microsoft.com/en-us/library/cc303420.aspx)」、「[SharePoint Server 2013 でワークフローを更新する](https://technet.microsoft.com/en-us/library/dn133867.aspx)」、および「[データベース接続アップグレード用の SharePoint Server 2016 ファームを作成する](https://technet.microsoft.com/en-us/library/cc263026(v=office.16).aspx)」をご覧ください。 |
 | SharePoint 2016 | Office Developer Tools Preview 2 で作成された SharePoint アドイン プロジェクトを Visual Studio 2017 で開くことはできません。 これを回避するには、`.csproj` または `.vbproj` ファイルで、`MinimumVisualStudioVersion` を 12.0 に、`MinimumOfficeToolsVersion` を 12.2 に更新する必要があります。 |
 | Silverlight | Silverlight プロジェクトは Visual Studio 2017 ではサポートされていません。 Silverlight アプリケーションを維持するには、引き続き Visual Studio 2015 を使用してください。 |
+| SQL Server Reporting Services、SQL Server Analysis Services (SSDT、SSAS、MSAS、SSDT) | これらのプロジェクトの種類は、Visual Studio ギャラリーの 2 つの拡張機能、[Microsoft Analysis Services Modeling Projects](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) と [Microsoft Report Projects for Visual Studio](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio) でサポートされています。 |
 | Visual C++ | Visual Studio 2015 で作成したソリューションやプロジェクトを Visual Studio 2017 でそのまま利用できますが、それより古いバージョンの Visual Studio で作成されたプロジェクトの場合、プロジェクトのアップグレードが要求されたり、Visual Studio 2017 で構築するためにそのバージョンより新しいツールセットにターゲットを変更することが要求されたりすることがあります。 詳細については、「[方法: Visual C++ プロジェクトを Visual Studio 2015 にアップグレードする](https://msdn.microsoft.com/en-us/library/hh690665.aspx)」と「[Visual C++ 移植とアップグレードのガイド](https://msdn.microsoft.com/en-us/library/dn986839.aspx)」を参照してください。 |
 | Visual Studio 拡張性/VSIX | MinimumVersion 14.0 以前のプロジェクトは、MinimumVersion 15.0 を宣言するように更新されます。この宣言により、前のバージョンの Visual Studio でプロジェクトを開けなくなります。 前のバージョンでプロジェクトを開くには、MinimumVersion を `$(VisualStudioVersion)` に設定します。 「[How to: Migrate Extensibility Projects to Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)」 (方法: 機能拡張プロジェクトの Visual Studio 2017 への移行) も参照してください。 |
 | Visual Studio Lab Management | Microsoft Test Manager または Visual Studio 2010 SP1 以降を利用し、これらのバージョンで差制された環境を開くことができます。 ただし、Visual Studio 2010 SP1 の場合、環境を作成するには、使用している Microsoft Test Manager のバージョンが Team Foundation Server のバージョンと一致する必要があります。 |

@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: f1148cb9e4d50241580190f274d6a4c2e3979b80
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
+ms.openlocfilehash: 878bd0baaa0e08a31274645213b222bf6faeb412
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -62,7 +62,7 @@ Python は、プログラムの設計時にシナリオを検証するために�
       unittest.main()
   ```
 
-1. 必要に応じてファイルを保存し、**[テキスト] > [Windows] > [Text Explorer (テキスト エクスプローラー)]** メニュー コマンドでテスト エクスプローラーを開きます。
+1. 必要に応じてファイルを保存し、**[テスト] > [Windows] > [テスト エクスプローラー]** メニュー コマンドでテスト エクスプローラーを開きます。
 
 1. テスト エクスプローラーは、テストするプロジェクトを検索し、それらを次のように表示します。 テストをダブルクリックすると、そのソース ファイルが開きます。
 

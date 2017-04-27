@@ -2,7 +2,7 @@
 title: "Visual Studio 2017 のインストール | Microsoft Docs"
 description: "Visual Studio をインストールする方法について、ステップ バイ ステップで説明します。"
 ms.custom: 
-ms.date: 04/03/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -37,9 +37,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
-ms.openlocfilehash: 47688935cec36db174c3a0c424b1705ae47c6118
-ms.lasthandoff: 04/03/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 059dd2068c5aa0d55f94f293d8430a1f401354ba
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
@@ -76,7 +76,7 @@ ms.lasthandoff: 04/03/2017
 
 1.  **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。  
 
-  ![Visual Studio 2017 セットアップ ダイアログ](media/vs2017-workloads.PNG "Visual Studio 2017 のインストール")
+  ![Visual Studio 2017 セットアップ ダイアログ](media/vs2017-workloads.PNG "Visual Studio ワークロードのインストール")
 
      たとえば、.NET デスクトップ開発ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。  
 
@@ -90,7 +90,7 @@ ms.lasthandoff: 04/03/2017
 
 便利なワークロード機能を使用せずに Visual Studio のインストールをカスタマイズする場合は、Visual Studio インストーラーで **[個々のコンポーネント]** オプションをクリックし、必要なものを選択して、画面の指示に従います。
 
-  ![Visual Studio 2017 - 個々のコンポーネントのインストール](media/vs2017-workloads.PNG "Visual Studio の個々のコンポーネントのインストール")
+  ![Visual Studio 2017 - 個々のコンポーネントのインストール](media/vs2017-components.PNG "Visual Studio の個々のコンポーネントのインストール")
 
 ## <a name="install-language-packs"></a>言語パックのインストール
 
@@ -107,7 +107,10 @@ ms.lasthandoff: 04/03/2017
 
 ## <a name="see-also"></a>関連項目  
 * [Visual Studio 2017 の変更](modify-visual-studio.md)
+* [Visual Studio の更新](update-visual-studio.md)
 * [Visual Studio 2017 のアンインストール](uninstall-visual-studio.md)
 * [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
+* [Visual Studio 2017 のオフライン インストーラーを作成する](create-an-offline-installation-of-visual-studio.md)
+* [コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする](use-command-line-parameters-to-install-visual-studio.md) 
 * [Visual Studio 2017 で問題を報告する方法](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

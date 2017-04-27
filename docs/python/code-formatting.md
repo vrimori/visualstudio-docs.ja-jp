@@ -1,7 +1,7 @@
 ---
-title: "Python Tools for Visual Studio でのコードの書式設定 | Microsoft Docs"
+title: "Visual Studio での Python コードの書式設定 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,26 +29,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: c1d7a19438b796c5666daecef33052e43d1f720f
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: b9e1c2b6be671adb99a13e4a0eb4357fbba477b2
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="formatting-python-code"></a>Python コードの書式設定
 
-Python Tools for Visual Studio (PTVS) バージョン 2.0 以降のコードの書式設定を使用すると、事前に構成した書式設定オプションに従ってコードをすばやく再フォーマットできます。
+Visual Studio を使用すると、事前に構成した書式設定オプションに合わせて、コードの書式をすばやく設定できます。
 
 - 選択範囲の書式を設定するには、**[編集] > [詳細設定] > [選択範囲のフォーマット]** を選択するか、Ctrl + E、F キーを押します。
 - ファイル全体の書式を設定するには、**[編集] > [詳細設定] > [ドキュメントのフォーマット]** を選択するか、Ctrl + E、D キーを押します。
 
-オプションは **[ツール] > [オプション] > [テキスト エディター] > [Python] > [書式設定]** とそのサブタブで設定しますが、既定値は [PEP 8 スタイル ガイド](http://www.python.org/dev/peps/pep-0008/)のスーパーセットに従って設定されます。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。以下のセクションで、他の&3; つのサブページについて説明します。
+オプションは **[ツール] > [オプション] > [テキスト エディター] > [Python] > [書式設定]** とそのサブタブで設定しますが、既定値は [PEP 8 スタイル ガイド](http://www.python.org/dev/peps/pep-0008/)のスーパーセットに従って設定されます。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。以下のセクションで、他の 3 つのサブページについて説明します。
 
-PTVS の **[編集] > [詳細設定]** には、[[Fill Comment Paragraph (コメント段落をページ幅に合わせる)]](#fill-comment-paragraph) という便利なコマンドも追加されています。これについても後で説明します。
+Visual Studio の Python のサポートで、**[編集] > [詳細設定]** には、[[コメントを段落幅に合わせる]](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
 
 ## <a name="spacing"></a>スペース
 
-**[スペース]** では、さまざまな言語コンストラクトの前後のスペースを挿入するか削除するかを指定します。 各オプションで指定できる値は次の&3; つです。
+**[スペース]** では、さまざまな言語コンストラクトの前後のスペースを挿入するか削除するかを指定します。 各オプションで指定できる値は次の 3 つです。
 
 - オン: スペースを挿入します。
 - オフ: スペースを削除します。
@@ -109,7 +109,7 @@ PTVS の **[編集] > [詳細設定]** には、[[Fill Comment Paragraph (コメ
 
 ## <a name="wrapping"></a>折り返し
 
-**[折り返し]** では、**[Maximum comment width (コメントの最大幅)]** (既定値は 80) を設定できます。**[Wrap comments that are too wide (幅が広すぎるコメントを折り返す)]** オプションを設定した場合、その幅を超えるコメントは自動的に再フォーマットされます。
+**[折り返し]** では、**[コメントの最大幅]** (既定値は 80) を設定できます。**[長すぎるコメントを折り返します]** オプションを設定した場合、その幅を超えるコメントは自動的に再フォーマットされます。
 
 ```python
 # Wrapped to 40 columns
@@ -126,7 +126,7 @@ PTVS の **[編集] > [詳細設定]** には、[[Fill Comment Paragraph (コメ
 
 ## <a name="fill-comment-paragraph-command"></a>[Fill Comment Paragraph(コメント段落をページ幅に合わせる)] コマンド
 
-**[編集] > [詳細設定] > [Fill Comment Paragraph (コメント段落をページ幅に合わせる)]** (Ctrl + E、Ctrl + P) を設定すると、コメント テキストがリフローおよび書式設定され、複数の短い行を&1; 行にまとめたり長すぎる行を複数の行に分けたりできます。
+**[編集] > [詳細設定] > [Fill Comment Paragraph (コメント段落をページ幅に合わせる)]** (Ctrl + E、Ctrl + P) を設定すると、コメント テキストがリフローおよび書式設定され、複数の短い行を 1 行にまとめたり長すぎる行を複数の行に分けたりできます。
 
 例:
 

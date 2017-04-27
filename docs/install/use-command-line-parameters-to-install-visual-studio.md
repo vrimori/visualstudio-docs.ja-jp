@@ -1,7 +1,7 @@
 ---
 title: "コマンド ライン パラメーターを使用して Visual Studio をインストールする | Microsoft Docs"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -32,16 +32,16 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 2a6555eb9c0a88b1533428cf2aa932b3fc4960ec
-ms.openlocfilehash: e8ddcebccc5a8a949c75a33de6732d42134e6445
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 09c6971e21e48d250e3a9869860459fd8cbbb50f
+ms.lasthandoff: 04/10/2017
 
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
-コマンド プロンプトから Visual Studio 2017 をインストールする場合、さまざまなコマンド ライン パラメーターを使用してインストールを管理またはカスタマイズすることができます。 コマンド ラインから次のことができます。
-- 特定のオプションをあらかじめ選択してインストールする。 
+コマンド プロンプトから Visual Studio 2017 をインストールする場合、さまざまなコマンド ライン パラメーターを使用してインストールを管理またはカスタマイズすることができます。 コマンド ラインから、次の操作を行うことができます。
+- 特定のオプションをあらかじめ選択してインストールする。
 - インストール プロセスを自動化する。
-- 後で使用できるようにインストール ファイルのキャッシュ (レイアウト) を作成する。 
+- 後で使用できるようにインストール ファイルのキャッシュ (レイアウト) を作成する。
 
 コマンド ライン オプションは、セットアップ ブートストラップという、ダウンロード プロセスを開始する約 1 MB の小さなファイルと組み合わせて使用されます。 ブートストラップは、Visual Studio サイトからダウンロードしたときに起動される最初の実行可能ファイルです。 次のリンクから、インストールする製品エディションに応じた最新リリースのブートストラップを直接取得できます。
 
@@ -54,11 +54,12 @@ ms.lasthandoff: 03/30/2017
 
 >  構文: `vs_enterprise.exe [command] <options>...`
 
-(`vs_enterprise.exe` は、インストールする製品エディションに適宜置き換えてください)
+(`vs_enterprise.exe` は、インストールする製品エディションに適宜置き換えてください。 例については、[コマンド ライン パラメーターの例](command-line-parameter-examples.md)のページを参照してください。)
+
 
 | **コマンド** | **説明** |
-| ----------------------- | --------------- | 
-| (空白) | 製品をインストールします。 | 
+| ----------------------- | --------------- |
+| (空白) | 製品をインストールします。 |
 | ```modify``` | インストールされている製品を変更します。 |
 | ```update``` | インストールされている製品を更新します。 |
 | ```repair``` | インストールされている製品を修復します。 |
@@ -108,7 +109,6 @@ Visual Studio 製品ごとに並べられているワークロード ID とコ�
 | de-DE | ドイツ語 |
 | en-US | 英語 |
 | es-ES | スペイン語 |
-| cs-CZ | チェコ語 |
 | fr-FR | フランス語 |
 | it-IT | イタリア語 |
 | ja-JP | 日本語 |
@@ -123,17 +123,19 @@ Visual Studio 製品ごとに並べられているワークロード ID とコ�
 
 ## <a name="error-codes"></a>エラー コード
 操作の結果に応じて、`%ERRORLEVEL%` 環境変数は、次のいずれかの値に設定されます。
+
 | **値** | **結果** |
 | --------- | ---------- |
 | 0 | 操作は正常に終了しました |
 | 3010 | 操作は正常に完了しましたが、インストールした製品を使用する前に再起動が必要です |
 | その他 | 失敗の状態が発生しました。詳細については、ログを参照してください |
 
-操作ごとにインストールの進行状況を示す複数のログ ファイルが `%TEMP%` ディレクトリに生成されます。 フォルダーを日付で並べ替え、`dd_bootstrapper`、`dd_client`、`dd_setup` で始まるファイルを探します (それぞれブートストラップ、インストーラー アプリ、セットアップ エンジンを表します)。 
+操作ごとにインストールの進行状況を示す複数のログ ファイルが `%TEMP%` ディレクトリに生成されます。 フォルダーを日付で並べ替え、`dd_bootstrapper`、`dd_client`、`dd_setup` で始まるファイルを探します (それぞれブートストラップ、インストーラー アプリ、セットアップ エンジンを表します)。
 
 ## <a name="see-also"></a>関連項目
 
- * [Visual Studio のインストール](install-visual-studio.md)
+ * [Visual Studio 2017 のインストール](install-visual-studio.md)
  * [Visual Studio 2017 のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
- * [Visual Studio で問題を報告する](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+ * [Visual Studio 2017 のインストールに使用するコマンド ライン パラメーターの例](command-line-parameter-examples.md)
+ * [Visual Studio 2017 で問題を報告する](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

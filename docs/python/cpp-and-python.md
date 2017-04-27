@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
-ms.openlocfilehash: 730207e42f42c0cd5d1b78dc558e58267343d186
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 002c77b27f7283ecd28d7ec5470b0ed44b2bb7a4
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -45,7 +45,7 @@ Python インタープリターの機能を拡張するため、およびオペ�
 
 このトピックでは、双曲正接を計算する CPython 用の C++ 拡張モジュールを作成し、Python コードからそれを呼び出す手順について説明します。 パフォーマンスの違いを実際に見るため、最初に Python でルーチンを作成してテストします。
 
-ここでは、[Python のドキュメント](https://docs.python.org/e/c-api/)で説明されている CPython の標準拡張機能のためのアプローチを使います。 この方法と他の方法の比較については、このトピックの最後にある「[別の方法](#alternative-approaches)」で説明します。
+ここでは、[Python のドキュメント](https://docs.python.org/3/c-api/)で説明されている CPython の標準拡張機能のためのアプローチを使います。 この方法と他の方法の比較については、このトピックの最後にある「[別の方法](#alternative-approaches)」で説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -231,7 +231,7 @@ Python で DLL を使えるようにするには 2 つの方法があります�
 
 1. Visual Studio 2017 を使っている場合は、Visual Studio インストーラーを実行して **[変更]** を選び、**[個別のコンポーネント] > [コンパイラ、ビルド ツール、およびランタイム] > [Visual C++ 2015.3 v140 ツールセット]** を選びます。 これは、Python (for Windows) 自体が Visual Studio 2015 (バージョン 14.0) でビルドされ、ここで説明する方法で拡張機能をビルドするときはこれらのツールが使えることが想定されるためです。
 
-1. `setup.py` という名前のファイルを C++ プロジェクトに作成します。それには、プロジェクトを右クリックして **[追加] > [新しい項目...]* を選び、"Python" を検索して**Python ファイル**を選び、名前を setup.py にして、**[OK]** を選びます。 ファイルがエディターに表示されたら、そこに次のコードを貼り付けます。
+1. `setup.py` という名前のファイルを C++ プロジェクトに作成します。それには、プロジェクトを右クリックして **[追加] > [新しい項目...]* を選び、"Python" を検索して **Python ファイル**を選び、名前を setup.py にして、**[OK]** を選びます。 ファイルがエディターに表示されたら、そこに次のコードを貼り付けます。
 
     ```python
     from distutils.core import setup, Extension, DEBUG
@@ -284,7 +284,7 @@ Visual Studio での Python のサポートには、[Python と C++ のコード
 
 | 方法 | 時期 | 代表的ユーザー | 長所 | 短所 |
 | --- | --- | --- | --- | --- |
-| CPython 用の C/C++ 拡張モジュール | 1991 | 標準ライブラリ | [広範なドキュメントとチュートリアル](https://docs.python.org/e/c-api/)。 総合的な制御。 | コンパイル、移植性、参照の管理。 C についての深い知識。 |
+| CPython 用の C/C++ 拡張モジュール | 1991 | 標準ライブラリ | [広範なドキュメントとチュートリアル](https://docs.python.org/3/c-api/)。 総合的な制御。 | コンパイル、移植性、参照の管理。 C についての深い知識。 |
 | SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 多くの言語のバインドを一度に生成。 | Python が唯一のターゲットである場合、過剰なオーバーヘッド。 |
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | コンパイルがなく、広く利用可能。 | C 構造体のアクセスや変更が煩雑で、エラーを起こしやすい。 |
 | Cython | 2007 | [gevent](http://www.gevent.org/)、[kivy](https://kivy.org/) | Python に似ている。 非常に完成されている。 高パフォーマンス。 | コンパイル、新しい構文、ツールチェーン。 |
