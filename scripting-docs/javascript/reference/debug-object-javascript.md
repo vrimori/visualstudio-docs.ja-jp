@@ -37,7 +37,7 @@ Debug.function
 ## 解説  
  Debug オブジェクトをインスタンス化することはありません。 そのすべてのプロパティおよびメソッドには、`function` を呼び出してアクセスできます。  
   
- Internet Explorer と [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリのデバッグ方法は異なります。[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリでは、`write` オブジェクトの `writeln` 関数と `Debug` 関数で、実行時に Visual Studio の**出力**ウィンドウに文字列を表示します。[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリのデバッグについて詳しくは、「[Visual Studio でのアプリのデバッグ](../Topic/Debug%20Store%20apps%20in%20Visual%20Studio.md)」をご覧ください。  
+ Internet Explorer と [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリのデバッグ方法は異なります。[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリでは、`write` オブジェクトの `writeln` 関数と `Debug` 関数で、実行時に Visual Studio の**出力**ウィンドウに文字列を表示します。[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリのデバッグについて詳しくは、「[Visual Studio でのアプリのデバッグ](~/debugger/debug-store-apps-in-visual-studio.md)」をご覧ください。  
   
  Internet Explorer スクリプトをデバッグするには、スクリプト デバッガーをインストールし、スクリプトをデバッグ モードで実行する必要があります。 Internet Explorer 8 以降のバージョンには [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] のデバッガーが含まれます。 以前のバージョンの Internet Explorer を使用している場合は、「[方法 : Internet Explorer でスクリプトのデバッグを有効にして起動する](http://go.microsoft.com/fwlink/?LinkId=133801)」をご覧ください。  
   

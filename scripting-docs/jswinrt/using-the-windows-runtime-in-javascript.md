@@ -30,7 +30,7 @@ JavaScript を使用して [!INCLUDE[win8_appname_long](../javascript/includes/w
  リファレンス ドキュメントについては、「[Windows Runtime reference](http://msdn.microsoft.com/ja-jp/8fe97dbf-8cd4-435f-b481-9e83d0519f9e)」を参照してください。  コード例は、JavaScript だけでなく、C\+\+、C\#、および Visual Basic でも利用できます。  
   
 ## C\+\+、C\#、または Visual Basic での Windows ランタイム コンポーネントの作成  
- JavaScript で使用できる Windows ランタイム コンポーネントを作成する方法とガイドラインについては、「[Windows ランタイム コンポーネントの作成](../Topic/Creating%20Windows%20Runtime%20Components.md)」を参照してください。  
+ JavaScript で使用できる Windows ランタイム コンポーネントを作成する方法とガイドラインについては、「[Windows ランタイム コンポーネントの作成](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133)」を参照してください。  
   
 ## Windows ランタイム機能の表記規則  
  JavaScript での Windows ランタイム機能の表記規則は、他の言語での表記規則とは少し異なります。  

@@ -43,7 +43,7 @@ caps.handback.revision: 28
   
 -   [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] API については、[Windows ランタイムおよび JavaScript 用 Windows ライブラリの API リファレンス](http://go.microsoft.com/fwlink/p/?LinkID=250938)を参照してください。  
   
- Visual Studio の JavaScript エディターでは IntelliSense をサポートしています。  詳細については、「[JavaScript IntelliSense](../Topic/JavaScript%20IntelliSense.md)」を参照してください。  
+ Visual Studio の JavaScript エディターでは IntelliSense をサポートしています。  詳細については、「[JavaScript IntelliSense](~/ide/javascript-intellisense.md)」を参照してください。  
   
 ## このセクションの内容  
  [バージョン情報](../../javascript/reference/javascript-version-information.md)  

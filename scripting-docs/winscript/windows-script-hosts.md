@@ -37,4 +37,4 @@ Microsoft Windows のスクリプトのホストを実行すると、安全に�
  これらの制限がない場合 [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) のフリー スレッド インターフェイス、およびフリー スレッド オブジェクト モデルを実装するために選択するホストには適用されません。  このようなホストは無制限に、すべてのスレッドからの [IActiveScript](../winscript/reference/iactivescript.md) のインターフェイスを使用できます。  
   
 ## 参照  
- [\<PAVE OVER\> Microsoft Windows スクリプト インターフェイス \- 概要](../Topic/%3CPAVE%20OVER%3E%20Microsoft%20Windows%20Script%20Interfaces%20-%20Introduction.md)
+ [\<PAVE OVER\> Microsoft Windows スクリプト インターフェイス \- 概要](http://msdn.microsoft.com/library/3d10169f-2984-49ef-90c6-dd89c97f1dd6)

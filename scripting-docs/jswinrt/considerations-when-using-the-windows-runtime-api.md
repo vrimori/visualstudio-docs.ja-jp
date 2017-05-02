@@ -22,7 +22,7 @@ caps.handback.revision: 8
 JavaScript で Windows ランタイム API のほぼすべての要素をしようできます。  ただし、Windows ランタイム要素の JavaScript 表現には、考慮が必要な面があります。  
   
 > [!IMPORTANT]
->  C\+\+、C\#、または Visual Basic での Windows ランタイム コンポーネントの作成について、および JavaScript での利用については、「[Windows ランタイム コンポーネントの作成](../Topic/Creating%20Windows%20Runtime%20Components.md)」を参照してください。  
+>  C\+\+、C\#、または Visual Basic での Windows ランタイム コンポーネントの作成について、および JavaScript での利用については、「[Windows ランタイム コンポーネントの作成](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133)」を参照してください。  
   
 ## Windows ランタイム型の JavaScript 表現の特殊なケース  
   
