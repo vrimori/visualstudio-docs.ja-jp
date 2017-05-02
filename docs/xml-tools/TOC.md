@@ -60,8 +60,3 @@
 ### [XSLT の既定のテンプレート](xslt-default-templates.md)
 ### [デバッガー ユーザー インターフェイス (XSLT)](debugger-user-interface-xslt.md)
 ### [XSLT プロファイラー](xslt-profiler.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

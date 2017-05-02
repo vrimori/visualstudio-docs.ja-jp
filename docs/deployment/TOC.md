@@ -104,8 +104,3 @@
 #### [<Strings> 要素 (ブートストラップ)](strings-element-bootstrapper.md)
 #### [<Schedules> 要素 (ブートストラップ)](schedules-element-bootstrapper.md)
 ## [InstallShield Limited Edition](installshield-limited-edition.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
