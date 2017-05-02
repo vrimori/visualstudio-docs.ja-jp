@@ -1,0 +1,1 @@
+Internet Explorer 9 標準モード、Internet Explorer 10 標準モード、Internet Explorer 11 標準モード、および Windows ストア アプリ
