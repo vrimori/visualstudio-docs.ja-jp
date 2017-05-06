@@ -1,5 +1,5 @@
 ---
-title: "方法: Visio 図面の図形をプログラムによってコピーして貼り付ける | Microsoft Docs"
+title: "方法: Visio 図面の図形をプログラムによってコピーして貼り付ける"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: VSTO アドイン プロジェクトでの単純データ バインディング | Microsoft Docs"
+title: "チュートリアル: VSTO アドイン プロジェクトでの単純データ バインディング"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

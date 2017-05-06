@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによってドキュメント内の範囲を拡張する | Microsoft Docs"
+title: "方法: プログラムによってドキュメント内の範囲を拡張する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

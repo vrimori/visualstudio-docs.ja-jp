@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによってブック内の範囲にスタイルを適用する | Microsoft Docs"
+title: "方法: プログラムによってブック内の範囲にスタイルを適用する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "エンティティ間の関連付けの作成 | Microsoft Docs"
+title: "エンティティ間の関連付けの作成"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

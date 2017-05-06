@@ -1,5 +1,5 @@
 ---
-title: "Excel ワークシート上での Windows フォーム コントロールの使用 | Microsoft Docs"
+title: "Excel ワークシート上での Windows フォーム コントロールの使用"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

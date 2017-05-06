@@ -1,5 +1,5 @@
 ---
-title: "Word 用のドキュメント レベルのカスタマイズのプログラミングについて | Microsoft Docs"
+title: "Word 用のドキュメント レベルのカスタマイズのプログラミングについて"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

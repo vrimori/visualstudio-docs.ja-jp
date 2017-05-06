@@ -1,5 +1,5 @@
 ---
-title: "機能拡張インターフェイスによる UI 機能のカスタマイズ | Microsoft Docs"
+title: "機能拡張インターフェイスによる UI 機能のカスタマイズ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

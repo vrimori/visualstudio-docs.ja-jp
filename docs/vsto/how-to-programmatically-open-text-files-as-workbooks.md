@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによってテキスト ファイルをブックとして開く | Microsoft Docs"
+title: "方法: プログラムによってテキスト ファイルをブックとして開く"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

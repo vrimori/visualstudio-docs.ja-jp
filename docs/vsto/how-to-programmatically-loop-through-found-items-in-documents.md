@@ -1,5 +1,5 @@
 ---
-title: "方法: 文書で見つかった項目をプログラムによってループする | Microsoft Docs"
+title: "方法: 文書で見つかった項目をプログラムによってループする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

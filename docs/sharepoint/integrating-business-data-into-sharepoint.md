@@ -1,5 +1,5 @@
 ---
-title: "SharePoint へのビジネス データの統合 | Microsoft Docs"
+title: "SharePoint へのビジネス データの統合"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

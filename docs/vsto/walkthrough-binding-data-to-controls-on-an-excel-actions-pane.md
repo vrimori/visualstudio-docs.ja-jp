@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : Excel のアクション ペインのコントロールへのデータ連結 | Microsoft Docs"
+title: "チュートリアル : Excel のアクション ペインのコントロールへのデータ連結"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

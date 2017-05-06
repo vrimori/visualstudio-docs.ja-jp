@@ -1,5 +1,5 @@
 ---
-title: "Office ドキュメントのコントロール | Microsoft Docs"
+title: "Office ドキュメントのコントロール"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

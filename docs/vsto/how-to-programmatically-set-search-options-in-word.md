@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって Word の検索オプションを設定する | Microsoft Docs"
+title: "方法: プログラムによって Word の検索オプションを設定する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

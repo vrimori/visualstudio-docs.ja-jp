@@ -1,5 +1,5 @@
 ---
-title: "VSTO アドインにおける実行時の Word 文書と Excel ブックの拡張 | Microsoft Docs"
+title: "VSTO アドインにおける実行時の Word 文書と Excel ブックの拡張"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって文書内のテキストに書式を設定する | Microsoft Docs"
+title: "方法: プログラムによって文書内のテキストに書式を設定する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

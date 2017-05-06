@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによってカスタムの予定表を作成する | Microsoft Docs"
+title: "方法: プログラムによってカスタムの予定表を作成する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

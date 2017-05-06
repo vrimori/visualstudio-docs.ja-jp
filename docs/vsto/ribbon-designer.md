@@ -1,5 +1,5 @@
 ---
-title: "リボン デザイナー | Microsoft Docs"
+title: "リボン デザイナー"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

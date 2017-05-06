@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio を使用して Office 用 VSTO アドインを作成する | Microsoft Docs"
+title: "Visual Studio を使用して Office 用 VSTO アドインを作成する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

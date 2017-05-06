@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : 初めての Word 用ドキュメント レベルのカスタマイズの作成 | Microsoft Docs"
+title: "チュートリアル : 初めての Word 用ドキュメント レベルのカスタマイズの作成"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

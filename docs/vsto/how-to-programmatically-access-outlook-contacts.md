@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって Outlook の連絡先にアクセスする | Microsoft Docs"
+title: "方法: プログラムによって Outlook の連絡先にアクセスする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

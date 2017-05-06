@@ -1,5 +1,5 @@
 ---
-title: "既存の SharePoint サイトからのアイテムのインポート | Microsoft Docs"
+title: "既存の SharePoint サイトからのアイテムのインポート"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

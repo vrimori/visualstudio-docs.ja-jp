@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: SharePoint の OData を表示する Silverlight Web パーツの作成 | Microsoft Docs"
+title: "チュートリアル: SharePoint の OData を表示する Silverlight Web パーツの作成"
 ms.custom: ""
 ms.date: "02/22/2017"
 ms.prod: "visual-studio-dev14"

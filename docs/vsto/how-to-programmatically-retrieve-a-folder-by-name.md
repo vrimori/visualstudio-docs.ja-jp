@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって名前を指定してフォルダーを取得する | Microsoft Docs"
+title: "方法: プログラムによって名前を指定してフォルダーを取得する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

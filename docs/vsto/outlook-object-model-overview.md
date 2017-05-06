@@ -1,5 +1,5 @@
 ---
-title: "Outlook オブジェクト モデルの概要 | Microsoft Docs"
+title: "Outlook オブジェクト モデルの概要"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

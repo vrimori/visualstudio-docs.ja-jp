@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : Outlook でデザインしたフォーム領域のインポート | Microsoft Docs"
+title: "チュートリアル : Outlook でデザインしたフォーム領域のインポート"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

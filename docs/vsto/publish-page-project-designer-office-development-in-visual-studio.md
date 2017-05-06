@@ -1,5 +1,5 @@
 ---
-title: "プロジェクト デザイナーの [発行] ページ (Visual Studio での Office 開発) | Microsoft Docs"
+title: "プロジェクト デザイナーの [発行] ページ (Visual Studio での Office 開発)"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

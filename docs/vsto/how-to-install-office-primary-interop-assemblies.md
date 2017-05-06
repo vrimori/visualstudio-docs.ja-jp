@@ -1,5 +1,5 @@
 ---
-title: "方法 : Office のプライマリ相互運用機能アセンブリをインストールする | Microsoft Docs"
+title: "方法 : Office のプライマリ相互運用機能アセンブリをインストールする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

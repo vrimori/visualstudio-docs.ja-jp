@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって Web ページを Outlook のフォルダーに関連付ける | Microsoft Docs"
+title: "方法: プログラムによって Web ページを Outlook のフォルダーに関連付ける"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

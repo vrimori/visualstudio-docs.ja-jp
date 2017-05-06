@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューションに固有のセキュリティに関する考慮事項 | Microsoft Docs"
+title: "Office ソリューションに固有のセキュリティに関する考慮事項"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

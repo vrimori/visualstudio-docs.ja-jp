@@ -1,5 +1,5 @@
 ---
-title: "Word を使用したチュートリアル | Microsoft Docs"
+title: "Word を使用したチュートリアル"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: フィーチャーのイベント レシーバーの追加 | Microsoft Docs"
+title: "チュートリアル: フィーチャーのイベント レシーバーの追加"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

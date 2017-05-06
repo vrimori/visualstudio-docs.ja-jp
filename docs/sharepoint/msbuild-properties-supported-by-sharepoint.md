@@ -1,5 +1,5 @@
 ---
-title: "SharePoint でサポートされている MSBuild プロパティ | Microsoft Docs"
+title: "SharePoint でサポートされている MSBuild プロパティ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

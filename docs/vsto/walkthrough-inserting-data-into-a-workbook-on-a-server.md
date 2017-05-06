@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : サーバー上のブックへのデータの挿入 | Microsoft Docs"
+title: "チュートリアル : サーバー上のブックへのデータの挿入"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

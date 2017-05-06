@@ -1,5 +1,5 @@
 ---
-title: "サンドボックス ソリューションの考慮事項 | Microsoft Docs"
+title: "サンドボックス ソリューションの考慮事項"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

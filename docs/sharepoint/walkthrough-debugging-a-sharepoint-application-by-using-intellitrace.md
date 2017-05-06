@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: IntelliTrace を使用した SharePoint アプリケーションのデバッグ | Microsoft Docs"
+title: "チュートリアル: IntelliTrace を使用した SharePoint アプリケーションのデバッグ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

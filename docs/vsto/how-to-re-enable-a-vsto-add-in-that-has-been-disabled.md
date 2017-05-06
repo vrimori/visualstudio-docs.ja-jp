@@ -1,5 +1,5 @@
 ---
-title: "方法: 無効にされた VSTO アドインを再度有効にする | Microsoft Docs"
+title: "方法: 無効にされた VSTO アドインを再度有効にする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

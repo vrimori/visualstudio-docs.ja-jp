@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: デザイナーを使用した SharePoint の Web パーツの作成 | Microsoft Docs"
+title: "チュートリアル: デザイナーを使用した SharePoint の Web パーツの作成"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "InfoPath のリボンのカスタマイズ | Microsoft Docs"
+title: "InfoPath のリボンのカスタマイズ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

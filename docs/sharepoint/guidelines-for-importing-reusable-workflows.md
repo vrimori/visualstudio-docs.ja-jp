@@ -1,5 +1,5 @@
 ---
-title: "再利用可能なワークフローをインポートするためのガイドライン | Microsoft Docs"
+title: "再利用可能なワークフローをインポートするためのガイドライン"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

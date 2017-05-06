@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: ワークフローへのアプリケーション ページの追加 | Microsoft Docs"
+title: "チュートリアル: ワークフローへのアプリケーション ページの追加"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

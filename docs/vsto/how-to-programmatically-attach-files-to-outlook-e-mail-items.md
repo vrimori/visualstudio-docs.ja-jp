@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって Outlook の電子メール アイテムにファイルを添付する | Microsoft Docs"
+title: "方法: プログラムによって Outlook の電子メール アイテムにファイルを添付する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

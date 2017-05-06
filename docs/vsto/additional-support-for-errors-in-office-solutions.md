@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューションのエラーについての追加サポート | Microsoft Docs"
+title: "Office ソリューションのエラーについての追加サポート"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

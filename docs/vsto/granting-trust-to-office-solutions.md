@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューションへの信頼の付与 | Microsoft Docs"
+title: "Office ソリューションへの信頼の付与"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

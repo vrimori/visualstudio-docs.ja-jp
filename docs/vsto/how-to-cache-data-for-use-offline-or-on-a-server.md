@@ -1,5 +1,5 @@
 ---
-title: "方法 : オフラインで使用するデータまたはサーバー上で使用するデータをキャッシュする | Microsoft Docs"
+title: "方法 : オフラインで使用するデータまたはサーバー上で使用するデータをキャッシュする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

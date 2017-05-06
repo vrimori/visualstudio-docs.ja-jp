@@ -1,5 +1,5 @@
 ---
-title: "方法 : パスワードで保護されたドキュメント内のデータをキャッシュする | Microsoft Docs"
+title: "方法 : パスワードで保護されたドキュメント内のデータをキャッシュする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

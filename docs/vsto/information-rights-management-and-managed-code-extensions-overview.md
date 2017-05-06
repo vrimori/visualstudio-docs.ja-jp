@@ -1,5 +1,5 @@
 ---
-title: "Information Rights Management とマネージ コード拡張機能の概要 | Microsoft Docs"
+title: "Information Rights Management とマネージ コード拡張機能の概要"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

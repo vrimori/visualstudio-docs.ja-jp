@@ -1,5 +1,5 @@
 ---
-title: "方法: SharePoint ソリューション パッケージをカスタマイズする | Microsoft Docs"
+title: "方法: SharePoint ソリューション パッケージをカスタマイズする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

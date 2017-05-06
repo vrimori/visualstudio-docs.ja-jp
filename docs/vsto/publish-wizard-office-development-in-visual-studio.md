@@ -1,5 +1,5 @@
 ---
-title: "発行ウィザード (Visual Studio での Office 開発) | Microsoft Docs"
+title: "発行ウィザード (Visual Studio での Office 開発)"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって Word 文書の範囲をリセットする | Microsoft Docs"
+title: "方法: プログラムによって Word 文書の範囲をリセットする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

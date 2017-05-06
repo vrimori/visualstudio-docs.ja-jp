@@ -1,5 +1,5 @@
 ---
-title: "置き換え可能パラメーター | Microsoft Docs"
+title: "置き換え可能パラメーター"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

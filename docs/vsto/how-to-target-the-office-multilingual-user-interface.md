@@ -1,5 +1,5 @@
 ---
-title: "方法 : Office Multilingual User Interface を使用する | Microsoft Docs"
+title: "方法 : Office Multilingual User Interface を使用する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

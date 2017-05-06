@@ -1,5 +1,5 @@
 ---
-title: "方法 : Visual C# プロジェクトのコードを VBA に公開する | Microsoft Docs"
+title: "方法 : Visual C# プロジェクトのコードを VBA に公開する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 内での Office 機能の使用 | Microsoft Docs"
+title: "Visual Studio 内での Office 機能の使用"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

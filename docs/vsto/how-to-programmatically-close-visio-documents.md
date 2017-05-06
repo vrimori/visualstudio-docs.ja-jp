@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって Visio 図面を閉じる | Microsoft Docs"
+title: "方法: プログラムによって Visio 図面を閉じる"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

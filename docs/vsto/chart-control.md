@@ -1,5 +1,5 @@
 ---
-title: "Chart コントロール | Microsoft Docs"
+title: "Chart コントロール"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

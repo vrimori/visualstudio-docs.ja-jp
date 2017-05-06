@@ -1,5 +1,5 @@
 ---
-title: "方法: Visual Studio Tools for Office の再頒布可能なランタイムをインストールする | Microsoft Docs"
+title: "方法: Visual Studio Tools for Office の再頒布可能なランタイムをインストールする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

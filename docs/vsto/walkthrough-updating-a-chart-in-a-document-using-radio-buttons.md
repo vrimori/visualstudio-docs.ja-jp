@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : オプション ボタンを使用してドキュメントのグラフを更新する方法 | Microsoft Docs"
+title: "チュートリアル : オプション ボタンを使用してドキュメントのグラフを更新する方法"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

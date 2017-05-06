@@ -1,5 +1,5 @@
 ---
-title: "Office プロジェクトのユーザー補助機能 | Microsoft Docs"
+title: "Office プロジェクトのユーザー補助機能"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

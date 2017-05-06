@@ -1,5 +1,5 @@
 ---
-title: "Office プログラミングの共通タスク | Microsoft Docs"
+title: "Office プログラミングの共通タスク"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

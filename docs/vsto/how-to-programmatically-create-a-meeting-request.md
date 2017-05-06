@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって会議出席依頼を作成する | Microsoft Docs"
+title: "方法: プログラムによって会議出席依頼を作成する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

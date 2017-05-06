@@ -1,5 +1,5 @@
 ---
-title: "方法: SharePoint の配置コマンドを設定する | Microsoft Docs"
+title: "方法: SharePoint の配置コマンドを設定する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

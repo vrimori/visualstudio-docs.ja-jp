@@ -1,5 +1,5 @@
 ---
-title: "範囲の使用 | Microsoft Docs"
+title: "範囲の使用"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

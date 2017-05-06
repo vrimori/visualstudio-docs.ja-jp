@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューション用アプリケーション マニフェスト | Microsoft Docs"
+title: "Office ソリューション用アプリケーション マニフェスト"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

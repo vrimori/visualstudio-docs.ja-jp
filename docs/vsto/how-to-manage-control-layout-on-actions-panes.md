@@ -1,5 +1,5 @@
 ---
-title: "方法 : アクション ペイン上のコントロールのレイアウトを管理する | Microsoft Docs"
+title: "方法 : アクション ペイン上のコントロールのレイアウトを管理する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

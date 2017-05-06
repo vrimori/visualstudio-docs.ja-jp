@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって印刷プレビューで文書を表示する | Microsoft Docs"
+title: "方法: プログラムによって印刷プレビューで文書を表示する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

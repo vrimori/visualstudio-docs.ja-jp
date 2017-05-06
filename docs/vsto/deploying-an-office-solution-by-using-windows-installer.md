@@ -1,5 +1,5 @@
 ---
-title: "Windows インストーラーを使用した Office ソリューションの配置 | Microsoft Docs"
+title: "Windows インストーラーを使用した Office ソリューションの配置"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

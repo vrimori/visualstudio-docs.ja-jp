@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio の Office ソリューションのアーキテクチャ | Microsoft Docs"
+title: "Visual Studio の Office ソリューションのアーキテクチャ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

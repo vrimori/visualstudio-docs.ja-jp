@@ -1,5 +1,5 @@
 ---
-title: "Office Project のデバッグ | Microsoft Docs"
+title: "Office Project のデバッグ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

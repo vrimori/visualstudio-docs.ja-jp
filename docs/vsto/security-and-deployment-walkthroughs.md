@@ -1,5 +1,5 @@
 ---
-title: "セキュリティおよび配置に関するチュートリアル | Microsoft Docs"
+title: "セキュリティおよび配置に関するチュートリアル"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

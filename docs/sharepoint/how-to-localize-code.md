@@ -1,5 +1,5 @@
 ---
-title: "方法: コードをローカライズする | Microsoft Docs"
+title: "方法: コードをローカライズする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

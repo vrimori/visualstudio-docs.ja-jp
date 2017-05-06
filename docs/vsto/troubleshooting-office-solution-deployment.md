@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューション配置のトラブルシューティング | Microsoft Docs"
+title: "Office ソリューション配置のトラブルシューティング"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

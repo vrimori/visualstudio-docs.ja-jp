@@ -1,5 +1,5 @@
 ---
-title: "方法 : ワークシート内でデータベースのレコードをスクロールする | Microsoft Docs"
+title: "方法 : ワークシート内でデータベースのレコードをスクロールする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

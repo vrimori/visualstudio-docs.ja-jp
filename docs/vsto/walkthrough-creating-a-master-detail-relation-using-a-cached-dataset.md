@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : キャッシュされたデータセットを使用したマスター/詳細関係の作成 | Microsoft Docs"
+title: "チュートリアル : キャッシュされたデータセットを使用したマスター/詳細関係の作成"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "方法: BDC 機能にカスタム アセンブリを含める | Microsoft Docs"
+title: "方法: BDC 機能にカスタム アセンブリを含める"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

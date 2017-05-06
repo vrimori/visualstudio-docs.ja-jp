@@ -1,5 +1,5 @@
 ---
-title: "方法: 最近使用したブック ファイルをプログラムによって一覧表示する | Microsoft Docs"
+title: "方法: 最近使用したブック ファイルをプログラムによって一覧表示する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

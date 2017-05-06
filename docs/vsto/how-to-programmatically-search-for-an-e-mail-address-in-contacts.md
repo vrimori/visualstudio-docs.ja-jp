@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって連絡先から電子メール アドレスを検索する | Microsoft Docs"
+title: "方法: プログラムによって連絡先から電子メール アドレスを検索する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

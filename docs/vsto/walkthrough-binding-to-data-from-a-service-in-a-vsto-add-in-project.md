@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : VSTO アドイン プロジェクトでサービスのデータをバインドする | Microsoft Docs"
+title: "チュートリアル : VSTO アドイン プロジェクトでサービスのデータをバインドする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

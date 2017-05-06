@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによってワークシートを非表示にする | Microsoft Docs"
+title: "方法: プログラムによってワークシートを非表示にする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

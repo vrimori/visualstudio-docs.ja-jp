@@ -1,5 +1,5 @@
 ---
-title: "方法: リモート サーバー上で SharePoint ソリューションを配置、発行、およびアップグレードする | Microsoft Docs"
+title: "方法: リモート サーバー上で SharePoint ソリューションを配置、発行、およびアップグレードする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

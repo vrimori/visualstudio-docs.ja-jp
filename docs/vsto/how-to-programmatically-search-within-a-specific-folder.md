@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって特定のフォルダー内を検索する | Microsoft Docs"
+title: "方法: プログラムによって特定のフォルダー内を検索する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

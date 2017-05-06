@@ -1,5 +1,5 @@
 ---
-title: "Outlook ソリューション | Microsoft Docs"
+title: "Outlook ソリューション"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

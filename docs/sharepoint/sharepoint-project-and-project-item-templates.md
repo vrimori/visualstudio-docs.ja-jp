@@ -1,5 +1,5 @@
 ---
-title: "SharePoint プロジェクトとプロジェクト項目テンプレート | Microsoft Docs"
+title: "SharePoint プロジェクトとプロジェクト項目テンプレート"
 ms.custom: ""
 ms.date: "02/22/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "[プロジェクトのアップグレード] ([オプション] ダイアログ ボックス) | Microsoft Docs"
+title: "[プロジェクトのアップグレード] ([オプション] ダイアログ ボックス)"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

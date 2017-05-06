@@ -1,5 +1,5 @@
 ---
-title: "方法: 範囲を作成するときにプログラムによって段落記号を除外する | Microsoft Docs"
+title: "方法: 範囲を作成するときにプログラムによって段落記号を除外する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

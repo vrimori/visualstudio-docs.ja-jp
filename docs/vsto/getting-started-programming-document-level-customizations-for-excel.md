@@ -1,5 +1,5 @@
 ---
-title: "Excel のドキュメント レベルのカスタマイズのプログラミングの概要 | Microsoft Docs"
+title: "Excel のドキュメント レベルのカスタマイズのプログラミングの概要"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

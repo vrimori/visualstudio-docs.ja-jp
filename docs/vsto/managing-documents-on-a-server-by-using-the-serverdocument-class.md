@@ -1,5 +1,5 @@
 ---
-title: "ServerDocument クラスによるサーバー上のドキュメントの管理 | Microsoft Docs"
+title: "ServerDocument クラスによるサーバー上のドキュメントの管理"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

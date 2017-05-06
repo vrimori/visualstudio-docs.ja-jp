@@ -1,5 +1,5 @@
 ---
-title: "ホスト項目およびホスト コントロールのプログラム上の制限事項 | Microsoft Docs"
+title: "ホスト項目およびホスト コントロールのプログラム上の制限事項"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

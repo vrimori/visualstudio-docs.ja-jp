@@ -1,5 +1,5 @@
 ---
-title: "方法 : リボンのカスタマイズの概要 | Microsoft Docs"
+title: "方法 : リボンのカスタマイズの概要"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

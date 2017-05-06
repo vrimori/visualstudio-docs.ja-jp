@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示する | Microsoft Docs"
+title: "チュートリアル : Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

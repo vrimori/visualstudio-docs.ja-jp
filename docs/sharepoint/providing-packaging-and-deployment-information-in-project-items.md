@@ -1,5 +1,5 @@
 ---
-title: "プロジェクト項目でのパッケージ化と配置の情報の提供 | Microsoft Docs"
+title: "プロジェクト項目でのパッケージ化と配置の情報の提供"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

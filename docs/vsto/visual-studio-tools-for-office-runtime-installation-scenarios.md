@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio Tools for Office ランタイムのインストール シナリオ | Microsoft Docs"
+title: "Visual Studio Tools for Office ランタイムのインストール シナリオ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

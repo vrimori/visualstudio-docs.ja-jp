@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : CheckBox コントロールを使用したワークシート書式の変更 | Microsoft Docs"
+title: "チュートリアル : CheckBox コントロールを使用したワークシート書式の変更"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

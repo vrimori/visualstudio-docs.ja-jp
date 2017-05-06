@@ -1,5 +1,5 @@
 ---
-title: "VSTO アドインのプログラミングについて | Microsoft Docs"
+title: "VSTO アドインのプログラミングについて"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

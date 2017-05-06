@@ -1,5 +1,5 @@
 ---
-title: "方法: ワークシートのコメントをプログラムによって追加および削除する | Microsoft Docs"
+title: "方法: ワークシートのコメントをプログラムによって追加および削除する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "方法: SharePoint 接続を追加または削除する | Microsoft Docs"
+title: "方法: SharePoint 接続を追加または削除する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

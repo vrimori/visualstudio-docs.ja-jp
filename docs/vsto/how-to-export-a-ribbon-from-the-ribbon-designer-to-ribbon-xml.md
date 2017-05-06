@@ -1,5 +1,5 @@
 ---
-title: "方法 : リボンをリボン デザイナーからリボン XML にエクスポートする | Microsoft Docs"
+title: "方法 : リボンをリボン デザイナーからリボン XML にエクスポートする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

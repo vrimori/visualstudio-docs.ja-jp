@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって電子メール メッセージを受信したときにアクションを実行する | Microsoft Docs"
+title: "方法: プログラムによって電子メール メッセージを受信したときにアクションを実行する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

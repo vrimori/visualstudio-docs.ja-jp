@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューションにおけるアプリケーション マニフェストと配置マニフェスト | Microsoft Docs"
+title: "Office ソリューションにおけるアプリケーション マニフェストと配置マニフェスト"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

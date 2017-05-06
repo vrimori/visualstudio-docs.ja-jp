@@ -1,5 +1,5 @@
 ---
-title: "方法 : ドキュメント プロパティの読み込みと書き込みを行う | Microsoft Docs"
+title: "方法 : ドキュメント プロパティの読み込みと書き込みを行う"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

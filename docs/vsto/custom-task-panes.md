@@ -1,5 +1,5 @@
 ---
-title: "カスタム作業ウィンドウ | Microsoft Docs"
+title: "カスタム作業ウィンドウ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

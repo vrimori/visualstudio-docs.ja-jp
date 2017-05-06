@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムを使用してワークシートでスペル チェックを行う | Microsoft Docs"
+title: "方法: プログラムを使用してワークシートでスペル チェックを行う"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

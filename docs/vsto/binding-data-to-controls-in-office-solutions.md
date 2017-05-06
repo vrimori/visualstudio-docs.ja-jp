@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューションでのコントロールへのデータのバインド | Microsoft Docs"
+title: "Office ソリューションでのコントロールへのデータのバインド"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

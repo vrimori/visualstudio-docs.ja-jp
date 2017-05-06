@@ -1,5 +1,5 @@
 ---
-title: "方法: コントロールを安全なコントロールとしてマークする | Microsoft Docs"
+title: "方法: コントロールを安全なコントロールとしてマークする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

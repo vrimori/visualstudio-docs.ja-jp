@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: 基本サイト定義プロジェクトの作成 | Microsoft Docs"
+title: "チュートリアル: 基本サイト定義プロジェクトの作成"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

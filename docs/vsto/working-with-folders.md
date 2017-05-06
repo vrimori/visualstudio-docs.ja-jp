@@ -1,5 +1,5 @@
 ---
-title: "フォルダーの操作 | Microsoft Docs"
+title: "フォルダーの操作"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによってワークシートの保護を解除する | Microsoft Docs"
+title: "方法: プログラムによってワークシートの保護を解除する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

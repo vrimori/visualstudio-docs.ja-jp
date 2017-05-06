@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューションのイベント ログ | Microsoft Docs"
+title: "Office ソリューションのイベント ログ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

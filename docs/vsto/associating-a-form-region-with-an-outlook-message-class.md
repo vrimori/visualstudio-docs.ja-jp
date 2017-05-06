@@ -1,5 +1,5 @@
 ---
-title: "フォーム領域の Outlook メッセージ クラスへの関連付け | Microsoft Docs"
+title: "フォーム領域の Outlook メッセージ クラスへの関連付け"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

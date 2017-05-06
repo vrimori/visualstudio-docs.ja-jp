@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって Outlook の電子メール アイテムから添付ファイルを保存する | Microsoft Docs"
+title: "方法: プログラムによって Outlook の電子メール アイテムから添付ファイルを保存する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

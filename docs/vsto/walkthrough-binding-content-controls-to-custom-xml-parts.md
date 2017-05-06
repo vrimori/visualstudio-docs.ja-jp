@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : カスタム XML 部分へのコンテンツ コントロールのバインド | Microsoft Docs"
+title: "チュートリアル : カスタム XML 部分へのコンテンツ コントロールのバインド"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

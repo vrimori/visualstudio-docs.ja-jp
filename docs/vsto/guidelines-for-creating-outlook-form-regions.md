@@ -1,5 +1,5 @@
 ---
-title: "Outlook フォーム領域の作成に関するガイドライン | Microsoft Docs"
+title: "Outlook フォーム領域の作成に関するガイドライン"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

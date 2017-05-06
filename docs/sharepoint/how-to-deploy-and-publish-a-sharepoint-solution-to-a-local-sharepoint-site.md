@@ -1,5 +1,5 @@
 ---
-title: "方法: SharePoint ソリューションをローカルの SharePoint サイトに配置および発行する | Microsoft Docs"
+title: "方法: SharePoint ソリューションをローカルの SharePoint サイトに配置および発行する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

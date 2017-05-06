@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : ボタンを使用して文書内のテキスト ボックスにテキストを表示する方法 | Microsoft Docs"
+title: "チュートリアル : ボタンを使用して文書内のテキスト ボックスにテキストを表示する方法"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: SharePoint Designer の再利用可能なワークフローの Visual Studio へのインポート | Microsoft Docs"
+title: "チュートリアル: SharePoint Designer の再利用可能なワークフローの Visual Studio へのインポート"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

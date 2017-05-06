@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューションのチュートリアルにおけるデータ | Microsoft Docs"
+title: "Office ソリューションのチュートリアルにおけるデータ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "方法: フィーチャーをローカライズする | Microsoft Docs"
+title: "方法: フィーチャーをローカライズする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

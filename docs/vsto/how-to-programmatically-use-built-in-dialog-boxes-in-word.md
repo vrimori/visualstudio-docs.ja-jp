@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって Word の組み込みダイアログ ボックスを使用する | Microsoft Docs"
+title: "方法: プログラムによって Word の組み込みダイアログ ボックスを使用する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

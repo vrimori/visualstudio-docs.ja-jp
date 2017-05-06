@@ -1,5 +1,5 @@
 ---
-title: "ドキュメント レベルのカスタマイズにおける XML スキーマとデータ | Microsoft Docs"
+title: "ドキュメント レベルのカスタマイズにおける XML スキーマとデータ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

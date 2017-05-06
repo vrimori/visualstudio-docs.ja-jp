@@ -1,5 +1,5 @@
 ---
-title: "SharePoint ソリューションの開発 | Microsoft Docs"
+title: "SharePoint ソリューションの開発"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

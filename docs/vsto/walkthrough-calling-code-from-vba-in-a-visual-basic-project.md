@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : VBA から Visual Basic プロジェクトのコードを呼び出す | Microsoft Docs"
+title: "チュートリアル : VBA から Visual Basic プロジェクトのコードを呼び出す"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

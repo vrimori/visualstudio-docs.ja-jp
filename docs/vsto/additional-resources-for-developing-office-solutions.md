@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューション開発用のその他のリソース | Microsoft Docs"
+title: "Office ソリューション開発用のその他のリソース"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

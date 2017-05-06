@@ -1,5 +1,5 @@
 ---
-title: "VBA ソリューションと Visual Studio の Office ソリューションの比較 | Microsoft Docs"
+title: "VBA ソリューションと Visual Studio の Office ソリューションの比較"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

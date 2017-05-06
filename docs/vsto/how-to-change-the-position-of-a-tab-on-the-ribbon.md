@@ -1,5 +1,5 @@
 ---
-title: "方法: リボンのタブの位置を変更する | Microsoft Docs"
+title: "方法: リボンのタブの位置を変更する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

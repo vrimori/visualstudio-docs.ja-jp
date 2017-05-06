@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : カスタム作業ウィンドウとリボン ボタンの同期 | Microsoft Docs"
+title: "チュートリアル : カスタム作業ウィンドウとリボン ボタンの同期"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

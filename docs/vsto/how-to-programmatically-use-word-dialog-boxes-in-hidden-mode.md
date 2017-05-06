@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって Word のダイアログ ボックスを非表示モードで使用する | Microsoft Docs"
+title: "方法: プログラムによって Word のダイアログ ボックスを非表示モードで使用する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

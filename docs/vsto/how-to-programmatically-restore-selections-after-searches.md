@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって検索後に選択範囲を復元する | Microsoft Docs"
+title: "方法: プログラムによって検索後に選択範囲を復元する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "ホスト項目とホスト コントロールの概要 | Microsoft Docs"
+title: "ホスト項目とホスト コントロールの概要"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

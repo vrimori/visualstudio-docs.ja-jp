@@ -1,5 +1,5 @@
 ---
-title: "方法 : プライマリ相互運用機能アセンブリを利用して Office アプリケーションを使用する | Microsoft Docs"
+title: "方法 : プライマリ相互運用機能アセンブリを利用して Office アプリケーションを使用する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

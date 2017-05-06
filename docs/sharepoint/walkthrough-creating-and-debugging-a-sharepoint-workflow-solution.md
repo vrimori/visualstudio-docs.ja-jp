@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : SharePoint ワークフロー ソリューションの作成とデバッグ | Microsoft Docs"
+title: "チュートリアル : SharePoint ワークフロー ソリューションの作成とデバッグ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

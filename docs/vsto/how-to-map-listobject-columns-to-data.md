@@ -1,5 +1,5 @@
 ---
-title: "方法 : データに ListObject 列を割り当てる | Microsoft Docs"
+title: "方法 : データに ListObject 列を割り当てる"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

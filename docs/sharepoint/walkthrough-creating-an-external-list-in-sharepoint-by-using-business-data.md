@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: ビジネス データを使用した SharePoint での外部リストの作成 | Microsoft Docs"
+title: "チュートリアル: ビジネス データを使用した SharePoint での外部リストの作成"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

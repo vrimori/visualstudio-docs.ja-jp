@@ -1,5 +1,5 @@
 ---
-title: "SharePoint ソリューションのパッケージ化と配置 | Microsoft Docs"
+title: "SharePoint ソリューションのパッケージ化と配置"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

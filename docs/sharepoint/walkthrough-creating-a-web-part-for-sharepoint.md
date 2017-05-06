@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: SharePoint の Web パーツを作成する | Microsoft Docs"
+title: "チュートリアル: SharePoint の Web パーツを作成する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

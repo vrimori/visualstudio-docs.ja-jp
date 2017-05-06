@@ -1,5 +1,5 @@
 ---
-title: "エラー メッセージ (Visual Studio の Office 開発) | Microsoft Docs"
+title: "エラー メッセージ (Visual Studio の Office 開発)"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

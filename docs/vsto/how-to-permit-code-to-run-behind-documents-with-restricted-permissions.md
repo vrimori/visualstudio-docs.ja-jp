@@ -1,5 +1,5 @@
 ---
-title: "方法 : アクセス許可が制限されたドキュメントでの分離コードの実行を許可する | Microsoft Docs"
+title: "方法 : アクセス許可が制限されたドキュメントでの分離コードの実行を許可する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

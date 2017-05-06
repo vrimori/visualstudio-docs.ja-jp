@@ -1,5 +1,5 @@
 ---
-title: "URL ピッカー ダイアログ ボックス (Visual Studio での SharePoint 開発) | Microsoft Docs"
+title: "URL ピッカー ダイアログ ボックス (Visual Studio での SharePoint 開発)"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

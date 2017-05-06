@@ -1,5 +1,5 @@
 ---
-title: "Office プロジェクト内のオブジェクトへのグローバル アクセス | Microsoft Docs"
+title: "Office プロジェクト内のオブジェクトへのグローバル アクセス"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

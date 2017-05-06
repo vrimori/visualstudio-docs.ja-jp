@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューションにおけるローカル データベース使用の概要 | Microsoft Docs"
+title: "Office ソリューションにおけるローカル データベース使用の概要"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

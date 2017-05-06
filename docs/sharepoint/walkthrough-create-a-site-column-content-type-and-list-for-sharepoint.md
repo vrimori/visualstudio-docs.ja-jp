@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: SharePoint のサイト列、コンテンツ タイプ、およびリストの作成 | Microsoft Docs"
+title: "チュートリアル: SharePoint のサイト列、コンテンツ タイプ、およびリストの作成"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

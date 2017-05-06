@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューションの遅延バインディング | Microsoft Docs"
+title: "Office ソリューションの遅延バインディング"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

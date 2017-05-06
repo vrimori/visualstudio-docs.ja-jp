@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : Word の操作ウィンドウ上のコントロールへのデータ バインド | Microsoft Docs"
+title: "チュートリアル : Word の操作ウィンドウ上のコントロールへのデータ バインド"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

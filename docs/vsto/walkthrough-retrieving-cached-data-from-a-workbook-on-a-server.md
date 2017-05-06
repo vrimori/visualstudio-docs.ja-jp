@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル : サーバー上のブックからのキャッシュされたデータの取得 | Microsoft Docs"
+title: "チュートリアル : サーバー上のブックからのキャッシュされたデータの取得"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

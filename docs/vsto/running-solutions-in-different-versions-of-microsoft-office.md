@@ -1,5 +1,5 @@
 ---
-title: "異なるバージョンの Microsoft Office でのソリューションの実行 | Microsoft Docs"
+title: "異なるバージョンの Microsoft Office でのソリューションの実行"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

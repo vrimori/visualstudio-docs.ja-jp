@@ -1,5 +1,5 @@
 ---
-title: "方法 : ListObject コントロールに新規行が追加された場合にデータを検証する | Microsoft Docs"
+title: "方法 : ListObject コントロールに新規行が追加された場合にデータを検証する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

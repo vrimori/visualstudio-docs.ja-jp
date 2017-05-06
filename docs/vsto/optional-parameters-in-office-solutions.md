@@ -1,5 +1,5 @@
 ---
-title: "Office ソリューションの省略可能なパラメーター | Microsoft Docs"
+title: "Office ソリューションの省略可能なパラメーター"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

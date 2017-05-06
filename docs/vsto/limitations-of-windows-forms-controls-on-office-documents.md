@@ -1,5 +1,5 @@
 ---
-title: "Office ドキュメントでの Windows フォーム コントロールの制限事項 | Microsoft Docs"
+title: "Office ドキュメントでの Windows フォーム コントロールの制限事項"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "方法 : Outlook にフォーム領域が表示されないようにする | Microsoft Docs"
+title: "方法 : Outlook にフォーム領域が表示されないようにする"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

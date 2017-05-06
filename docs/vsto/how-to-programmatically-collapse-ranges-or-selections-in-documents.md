@@ -1,5 +1,5 @@
 ---
-title: "方法: プログラムによって文書内の範囲または選択範囲を縮小する | Microsoft Docs"
+title: "方法: プログラムによって文書内の範囲または選択範囲を縮小する"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

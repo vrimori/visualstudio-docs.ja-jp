@@ -1,5 +1,5 @@
 ---
-title: "実行時の Office ドキュメントへのコントロールの追加 | Microsoft Docs"
+title: "実行時の Office ドキュメントへのコントロールの追加"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

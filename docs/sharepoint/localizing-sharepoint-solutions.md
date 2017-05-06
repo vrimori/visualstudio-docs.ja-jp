@@ -1,5 +1,5 @@
 ---
-title: "SharePoint ソリューションのローカライズ | Microsoft Docs"
+title: "SharePoint ソリューションのローカライズ"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"
