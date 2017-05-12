@@ -1,5 +1,5 @@
 ---
-title: "[VC++ プロジェクトの設定] ([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション]) | Microsoft Docs"
+title: "[VC++ プロジェクトの設定][オプション] ダイアログ ボックス - [プロジェクトおよびソリューション] | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,10 +41,10 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
 ms.openlocfilehash: fbe834e4e8178a129f68cec1c4a78ffea3c9fd7c
-ms.lasthandoff: 04/05/2017
+ms.lasthandoff: 04/25/2017
 
 ---
-# <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>[VC++ プロジェクトの設定] ([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション])
+# <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>[VC++ プロジェクトの設定][オプション] ダイアログ ボックス - [プロジェクトおよびソリューション]
 このダイアログ ボックスを使用すると、ビルドのログおよびサポートするファイルの種類に関連する [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] プロジェクトの設定を定義できます。  
   
 ### <a name="to-access-this-dialog-box"></a>このダイアログ ボックスを表示するには  

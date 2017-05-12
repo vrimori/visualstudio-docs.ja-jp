@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 04/06/2017
+ms.date: 05/10/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -31,9 +31,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
 ms.openlocfilehash: 6b981d8ec1594da3db8fa1384ddeeee9da519837
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/06/2017
 
 ---
@@ -61,7 +62,6 @@ ms.lasthandoff: 04/06/2017
 コンポーネント ID | 名前 | バージョン | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.0.26208.0 | 必須
-
 ## <a name="unaffiliated-components"></a>関連付けられていないコンポーネント
 
 以下のコンポーネントはどのワークロードにも含まれていませんが、個別のコンポーネントとして選択できます。
@@ -69,7 +69,6 @@ Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback C
 コンポーネント ID | 名前 | バージョン
 --- | --- | ---
 適用なし | 該当なし | 適用なし
-
 
 ## <a name="see-also"></a>関連項目
 

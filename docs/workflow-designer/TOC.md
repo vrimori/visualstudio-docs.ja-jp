@@ -129,8 +129,3 @@
 ##### [[ルール セットの選択] ダイアログ ボックス (レガシ)](select-rule-set-dialog-box-legacy.md)
 ##### [[テーマの構成] ダイアログ ボックス (レガシ)](theme-configuration-dialog-box-legacy.md)
 ##### [[ヘルプ] ([オプション] ダイアログ ボックス - ワークフロー デザイナー) (レガシ)](themes-workflow-designer-options-dialog-box-legacy.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

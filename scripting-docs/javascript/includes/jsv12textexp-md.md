@@ -1,0 +1,1 @@
+試験段階の JavaScript 機能が有効になっている \(about:flags\) Microsoft Edge

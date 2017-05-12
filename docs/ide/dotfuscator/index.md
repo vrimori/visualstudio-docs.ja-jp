@@ -1,6 +1,6 @@
 ---
 title: Dotfuscator Community Edition (CE) | Microsoft Docs
-ms.date: 2017-02-08
+ms.date: 2017-05-10
 ms.prod: visual-studio-dev15
 ms.devlang: dotnet
 ms.technology:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 507ff049dae50698d86e1536ed21ab982da1af85
 ms.openlocfilehash: a4dd4e0f9a8f6c89452bc20e05139dfa5d062e0f
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -43,6 +44,8 @@ ms.lasthandoff: 02/22/2017
 
 *PreEmptive Protection – Dotfuscator* は、安全なソフトウェア開発ライフサイクルに容易に適合する、包括的な .NET アプリケーションの保護機能を提供します。 この機能により、デスクトップ、モバイル、サーバー、組み込みのアプリケーションを強化および保護し、余分なものを取り除くことで、企業秘密やその他の知的財産 (IP) を守り、違法コピーや偽造を減らし、改ざんと権限のないデバッグを防止できます。
 Dotfuscator はコンパイル済みのアセンブリで動作し、追加のプログラミングやソース コードへのアクセスは不要です。
+
+![](media/header.svg)
 
 ## <a name="why-protection-matters"></a>保護が必要な理由
 
@@ -121,3 +124,4 @@ Visual Studio から Dotfuscator CE の使用を開始するには、**クイッ
 [features]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/analytics_features.html
 
 [full]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/index.html
+

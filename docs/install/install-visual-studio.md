@@ -36,18 +36,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
 ms.openlocfilehash: 059dd2068c5aa0d55f94f293d8430a1f401354ba
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
-ここでは、Visual Studio の新しいインストール方法について説明します。 最新バージョンでは、必要な機能のみをより簡単に選択してインストールできるようになりました。Visual Studio の最小フットプリントが縮小されたことにより、従来よりもさらにすばやくインストールでき、システムへの影響が小さくなります。  
+ここでは、Visual Studio の新しいインストール方法について説明します。 最新バージョンでは、必要な機能のみをより簡単に選択してインストールできるようになりました。Visual Studio の最小フットプリントが縮小されたことにより、従来よりもさらにすばやくインストールでき、システムへの影響が小さくなります。
 
  他の新機能については、 [リリース ノート](https://www.visualstudio.com/news/releasenotes/vs15-relnotes)を参照してください。 また、新しくなったインストール エクスペリエンスの詳細については、[Visual Studio インストーラーの処理速度と効率性の向上](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer/)および[影響の少ない Visual Studio インストールの詳細](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install/)に関するブログ投稿を参照してください。  
 
- インストールの準備ができたら、 各ステップを順に実行していきます。 では、始めましょう。  
+ インストールの準備ができたら、 各ステップを順に実行していきます。 では、始めましょう。
 
 ## <a name="install-the-installer"></a>インストーラーのインストール  
  Visual Studio 2017 をダウンロードして、ブートストラップ ファイルを取得します。このファイルを実行すると、新しいライトウェイト インストーラーがインストールされます。 この新しいインストーラーには、インストールのカスタマイズに必要なすべてのものが含まれています。  
