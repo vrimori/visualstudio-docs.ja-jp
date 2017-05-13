@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 08aabdfe0e268f93ef7723076375b7f65b15ccf3
 ms.openlocfilehash: b7cb109d11669f411b5ca3bdf3c4c32a63ac53a1
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -103,11 +104,11 @@ ms.lasthandoff: 02/22/2017
  Add Item to Order などのユース ケースをテストするため、テスト メソッドに次のようなコードが含まれていることがあります。  
   
 ```  
-Order order = … ; // set up an order  
+Order order = ... ; // set up an order  
 // Store prior state:  
 int countBefore = order.MenuItems.Count;   
 // Perform use case:  
-MenuItem chosenItem = …; // choose an item  
+MenuItem chosenItem = ...; // choose an item  
 AddItemToOrder (chosenItem, order);   
 // Verify part of postcondition:  
 int countAfter = order.MenuItems.Count;  
@@ -148,7 +149,7 @@ Assert (countAfter == countBefore = 1);
   
  テストの観点から見た場合、要求モデルは簡略化されたテストと見なすことができます。 そのため、プロジェクト中は常に、テストとモデル間の関係を維持することが重要です。  
   
-##  <a name="a-nameattachinga-attaching-test-cases-to-model-elements"></a><a name="Attaching"></a>モデル要素へのテスト_ケースをアタッチします。  
+##  <a name="Attaching"></a>モデル要素へのテスト_ケースをアタッチします。  
  プロジェクトで [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] を使用している場合、テストをモデル内の要素にリンクすることができます。 これにより、要求内の変更によって影響を受けるテストを迅速に見つけることができ、要求が実現される範囲を追跡しやすくなります。  
   
  すべての種類の要素に、テストをリンクできます。 次にいくつかの例を示します。  
