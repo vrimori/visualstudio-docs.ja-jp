@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: 0f2ecd6ca52a04e8813610c0f406251ef4604354
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: b71d44150662c97f355c9b0c14a7888baf6c0683
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="editing-python-code"></a>Python コードの編集
 
-開発者は、コードの編集に多くの時間を費やします。そこで Visual Studio では Python のサポートとして、IntelliSense による構文の強調表示、オート コンプリート、シグネチャ ヘルプ、メソッド オーバーライド、検索とナビゲーションなど、開発者の生産性向上に役立つさまざまな機能を提供します。 
+開発者は、コードの編集に多くの時間を費やします。そこで [Visual Studio では Python のサポート](installation.md)として、IntelliSense による構文の強調表示、オート コンプリート、シグネチャ ヘルプ、メソッド オーバーライド、検索とナビゲーションなど、開発者の生産性向上に役立つさまざまな機能を提供します。 
 
 このトピックの内容
 

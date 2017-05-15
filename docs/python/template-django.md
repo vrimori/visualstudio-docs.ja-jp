@@ -1,7 +1,7 @@
 ---
-title: "Python Tools for Visual Studio の Django Web プロジェクト テンプレート | Microsoft Docs"
+title: "Visual Studio での Python 用 Django Web プロジェクト テンプレート | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 7f65641fbf15edfe16931badc19602a0fc773bff
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 4a5db2deb3633e8305dbf83cbe6ba8c0e3344c72
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="django-web-project-template"></a>Django Web プロジェクト テンプレート
 
-[Django](https://www.djangoproject.com/) は、高速、安全、スケーラブルな Web 開発用に設計されたハイレベルの Python フレームワークです。 Python Tools for Visual Studio (PTVS) は、Django ベースの Web アプリケーションの構造を設定するためのプロジェクト テンプレートを提供します。 Visual Studio でテンプレートを使用するには、**[ファイル] > [新規] >[プロジェクト]** を選択し、「Django」を検索して、"Django Web プロジェクト" テンプレートを選びます。 作成されるプロジェクトには、定型コードと既定の SQLite データベースが含まれます。 "空の Django Web プロジェクト" テンプレートも似ていますが、これにはデータベースが含まれません。
+[Django](https://www.djangoproject.com/) は、高速、安全、スケーラブルな Web 開発用に設計されたハイレベルの Python フレームワークです。 Visual Studio の Python サポートには、Django ベースの Web アプリケーションの構造を設定するためのプロジェクト テンプレートが用意されています。 Visual Studio でテンプレートを使用するには、**[ファイル] > [新規] >[プロジェクト]** を選択し、「Django」を検索して、"Django Web プロジェクト" テンプレートを選びます。 作成されるプロジェクトには、定型コードと既定の SQLite データベースが含まれます。 "空の Django Web プロジェクト" テンプレートも似ていますが、これにはデータベースが含まれません。
 
-PTVS は、Django プロジェクトの完全な IntelliSense を提供します。
+Visual Studio は、Django プロジェクトの完全な IntelliSense を提供します。
 
 - テンプレートに渡されるコンテキスト変数:
 
@@ -56,7 +57,7 @@ PTVS は、Django プロジェクトの完全な IntelliSense を提供します
     ![JavaScript IntelliSense](media/template-django-intellisense-js.png)
 
 
-PTVS は Django プロジェクトの完全な[デバッグ サポート](debugging.md)も提供します。 
+また、Visual Studio は Django プロジェクトの完全な[デバッグ サポート](debugging.md)も提供します。 
 
 ![ブレークポイント](media/template-django-debugging.png)
 

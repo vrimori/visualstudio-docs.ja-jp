@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio での Python のインストール | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,14 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: e0a51155a42fb51244114da86a292381a7a28a21
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 9cdd87d81f0b0f4748a25c7bb87fb840e246854c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
-# <a name="installing-python-support-for-visual-studio"></a>Visual Studio 用の Python サポートのインストール
+# <a name="installing-python-support-in-visual-studio"></a>Visual Studio での Python サポートのインストール
 
 Visual Studio 用の Python サポートをインストールするには、使用している Visual Studio のバージョンと一致するセクションの手順を実行します。
 
@@ -52,11 +53,14 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. ["Visual Studio 2017 Preview" を https://www.visualstudio.com/vs/preview から](https://www.visualstudio.com/vs/preview)インストールします。 **注:** この Preview チャネルは Visual Studio 2017 のリリース バージョンとは*異なり*、Python サポートなど、将来の Visual Studio 2017 更新プログラム用に開発中の機能が含まれます。
+1. [https://www.visualstudio.com/vs/](https://www.visualstudio.com/vs/) から Visual Studio 2017 をインストールします。
 
-1. プレビュー インストーラーで、**[Web & Cloud (Web と クラウド)]、[Python 開発]** ワークロードの順に選択します。
+1. Visual Studio インストーラーで、**[Web & Cloud (Web とクラウド)]、[Python 開発]** ワークロードの順に選択します。
 
     ![Visual Studio インストーラーの [Python 開発] ワークロード](media/installation-python-workload.png)
+
+    > [!Note]
+    > Python は、**[データ サイエンスと分析のアプリケーション]** ワークロードにも含まれています。
 
 1. インストーラーの右側で、インストールに含める Python インタープリターとその他の関連ツールを選択します。 たとえば、Python の C++ 拡張機能を開発する場合は、**[Python ネイティブ開発ツール]** オプションを含めます。
 
@@ -88,7 +92,7 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
 
 既定では、Python サポートは、コンピューター上のすべてのユーザーに対してインストールされます。
 
-Visual Studio 2017 では、Python ワークロードは、`%ProgramFiles(x86)%\Microsoft Visual Studio\Preview\<VS_edition>Common7\IDE\Extensions\Microsoft\Python` にインストールされます。&lt;VS_edition&gt; は、Community、Professional、または Enterprise です。
+Visual Studio 2017 では、Python ワークロードは、`%ProgramFiles(x86)%\Microsoft Visual Studio\2017\<VS_edition>Common7\IDE\Extensions\Microsoft\Python` にインストールされます。&lt;VS_edition&gt; は、Community、Professional、または Enterprise です。
 
 Visual Studio 2015 以前のインストール パスを次に示します。
 

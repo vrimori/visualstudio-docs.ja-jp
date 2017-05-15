@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: eb3abd0f37e52f2b1db3793a5471b74a5e0c37ff
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 3190be68fbba464a84a7a25b2d829979944bdb1f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -100,7 +101,7 @@ Visual Studio には、新規に、または既存のコードから、Python �
 | IronPython Silverlight Web Page (IronPython Silverlight Web ページ) | Silverlight を使ってブラウザーで実行する IronPython プロジェクトです。 アプリケーションの Python コードは、スクリプトとして Web ページに含まれます。 定型のスクリプト タグは、Silverlight の内部で実行する IronPython を初期化する JavaScript コードを生成し、それによって Python コードは DOM と対話できます。 |
 | IronPython Windows Forms Application (IronPython Windows フォーム アプリケーション) | IronPython と、Windows フォームを含むコードを使って作成された UI を使うプロジェクト構造。 アプリケーションはコンソールを表示しないで実行します。 |
 | Background Application (IoT) (バックグラウンド アプリケーション (IoT)) | デバイス上でバックグラウンド サービスとして実行する Python プロジェクトの配置をサポートします。 詳しくは、[Windows IoT デベロッパー センター](https://dev.windows.com/en-us/iot)をご覧ください。 |
-| Python 拡張機能モジュール | このテンプレートは、Visual Studio 2017 Preview の Python ワークロードで **Python ネイティブ開発ツール**をインストールしてある場合、Visual C++ の下に表示されます (「[インストール](installation.md)」を参照)。 「[Python 向け C++ 拡張機能の作成](cpp-and-python.md)」で説明されているものに似た、C++ 拡張 DLL のコア構造を提供します。 |
+| Python 拡張機能モジュール | このテンプレートは、Visual Studio 2017 の Python ワークロードで **Python ネイティブ開発ツール**をインストールしてある場合、Visual C++ の下に表示されます (「[インストール](installation.md)」を参照)。 「[Python 向け C++ 拡張機能の作成](cpp-and-python.md)」で説明されているものに似た、C++ 拡張 DLL のコア構造を提供します。 |
 
 <a name="create-project-from-existing-files"</a>
 ### <a name="creating-a-project-from-existing-files"></a>既存ファイルからのプロジェクトの作成

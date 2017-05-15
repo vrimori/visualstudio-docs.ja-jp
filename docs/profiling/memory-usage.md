@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio でメモリ使用量を分析する | Microsoft Docs"
 ms.custom: H1Hack27Feb2017
-ms.date: 11/04/2016
+ms.date: 04/25/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 697b8f5517ad9a953a04f920be39c9ef2cfa2558
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 137f6faa156d188afb99cafb2b1e9dbababdeb4f
+ms.openlocfilehash: a7de37fd82f94fdcef6f839884ea30c5c77061e5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="analyze-memory-usage"></a>メモリ使用量の分析
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/05/2017
   
  **メモリ使用量** ツールでメモリのスナップショットをいつでも収集できますが、Visual Studio デバッガーを使用すると、パフォーマンスの問題を調査中にアプリケーションの実行方法を制御することができます。 ブレークポイントの設定、ステップ実行、すべて中断、その他のデバッガー アクションは、パフォーマンスの調査を最も関連性の高いコード パスに集中させるのに役立ちます。 アプリの実行中にこれらのアクションを実行することで、目的としていないコードからのノイズを除去することができ、問題の診断にかかる時間を大幅に短縮できます。  
   
- さらに、デバッガーの外部のメモリ ツールも使用できます。 「[ストア アプリのメモリ使用量の分析](../profiling/memory-usage-without-debugging2.md)」を参照してください。  
+ さらに、デバッガーの外部のメモリ ツールも使用できます。 「 [Memory Usage without Debugging](../profiling/memory-usage-without-debugging2.md)」を参照してください。  
   
 > [!NOTE]
 >  **カスタム アロケーター サポート** ネイティブ メモリ プロファイラーは、実行時に生成された割り当て [ETW](https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803\(v=vs.85\).aspx) イベント データを収集して機能します。  CRT および Windows SDK のアロケーターには、割り当てデータをキャプチャできるように、ソース レベルで注釈が付けられています。  独自のアロケーターを作成する場合、新しく割り当てられたヒープ メモリへのポインターを返すすべての関数は、[__declspec](/cpp/cpp/declspec)(アロケーター) で修飾できます。myMalloc での例を次に示します。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/05/2017
     ![スナップショットを取得する](../profiling/media/dbgdiag_mem_mixedtoolbar_takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot") 
      
      > [!TIP]
-     >  -   メモリ比較のベースラインを作成するには、デバッグ セッションの開始時に、スナップショットを取得することを検討します。  
+     >  メモリ比較のベースラインを作成するには、デバッグ セッションの開始時に、スナップショットを取得することを検討します。  
 
 6.  最初のブレークポイントにヒットするシナリオを実行します。
 
@@ -113,17 +114,15 @@ ms.lasthandoff: 04/05/2017
 -   **[ヒープ サイズ (相違)]** 列には、.NET ヒープおよびネイティブ ヒープのバイト数が表示されます。 
 
 複数のスナップショットを取得した場合、概要テーブルのセルには、行のスナップショットと前のスナップショットの間の値の変化が含まれます。  
-  
-![メモリの概要テーブル セル](../profiling/media/dbgdiag_mem_summarytablecell.png "DBGDIAG_MEM_SummaryTableCell")  
 
 メモリ使用量を分析するには、リンクを 1 つクリックして、メモリ使用量の詳細なレポートを開きます。  
 
 -   現在のスナップショットと前のスナップショットの相違点の詳細を表示するには、矢印の左にある変更リンクを選択します (![メモリ使用量増加](../profiling/media/prof-tour-mem-usage-up-arrow.png "メモリ使用量増加"))。 赤い矢印はメモリ使用量が増加したことを示し、緑の矢印は減少したことを示しています。
 
     > [!TIP]
-    >  より迅速にメモリの問題を識別するために、Diff レポートは、総数が最も増加したオブジェクト型の順 (**[オブジェクト (相違)]** 列の変更リンク) や、総ヒープ サイズが最も増加したオブジェクト型の順 (**[ヒープ サイズ (相違)]** 変更リンク) に並べ替えられています。
+    >  より迅速にメモリの問題を識別するために、Diff レポートは、総数が最も増加したオブジェクト型の順 (**[オブジェクト (相違)]** 列の変更リンクをクリック) や、総ヒープ サイズが最も増加したオブジェクト型の順 (**[ヒープ サイズ (相違)]** 変更リンクをクリック) に並べ替えられています。
 
--   選択したスナップショットのみの詳細を表示するには、変更リンクではないリンクを選択します。 
+-   選択したスナップショットのみの詳細を表示するには、変更リンクではないリンクをクリックします。 
   
  レポートが新しいウィンドウに表示されます。   
   

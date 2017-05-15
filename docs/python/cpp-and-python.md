@@ -28,14 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: 002c77b27f7283ecd28d7ec5470b0ed44b2bb7a4
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: f8a0bef07667e5f876473c966ed3d14a1b84dd0b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
-# <a name="creating-a-c-extension-for-python"></a>Python 向け C++ 拡張機能の作成
+# <a name="creating-a-c-extension-for-python"></a>Python 用 C++ 拡張機能の作成
 
 Python インタープリターの機能を拡張するため、およびオペレーティング システムの低レベル機能にアクセスするためには、C++ (または C) で記述されたモジュールがよく使われます。 モジュールの主要な種類は次の 3 つです。
 
@@ -47,13 +48,16 @@ Python インタープリターの機能を拡張するため、およびオペ�
 
 ここでは、[Python のドキュメント](https://docs.python.org/3/c-api/)で説明されている CPython の標準拡張機能のためのアプローチを使います。 この方法と他の方法の比較については、このトピックの最後にある「[別の方法](#alternative-approaches)」で説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 
-このチュートリアルは Visual Studio 2017 Preview 向けに書かれており、既定のオプション (既定のインタープリターとして Python 3.6 など) の **C++ によるデスクトップ開発**ワークロードと **Python 開発**ワークロードを使います。 **Python 開発**ワークロードでは、**[Python ネイティブ開発ツール]** のチェック ボックスもオンにし、それによりこのトピックで説明するほとんどのオプションが設定されます (このオプションには、C++ のワークロードも自動的に含まれます)。
+このチュートリアルは Visual Studio 2017 向けに書かれており、既定のオプション (既定のインタープリターとして Python 3.6 など) の **C++ によるデスクトップ開発**ワークロードと **Python 開発**ワークロードを使います。 **Python 開発**ワークロードでは、**[Python ネイティブ開発ツール]** のチェック ボックスもオンにし、それによりこのトピックで説明するほとんどのオプションが設定されます (このオプションには、C++ のワークロードも自動的に含まれます)。 
 
 ![[Python ネイティブ開発ツール] オプションの選択](media/cpp-install-native.png)
 
 他のバージョンの Visual Studio の使用など、詳しくは「[Visual Studio 用の Python サポートのインストール](installation.md)」をご覧ください。 Python を別にインストールする場合は、インストーラーで **[詳細オプション]** の **[Download debugging symbols (デバッグ シンボルのダウンロード)]** と **[Download debug binaries (デバッグ バイナリのダウンロード)]** を必ず選んでください。 このようにすると、デバッグ ビルドを行う場合に、必要なデバッグ ライブラリを確実に使用できます。
+
+> [!Note]
+> Python は、**データ サイエンスと分析のアプリケーション** ワークロードからも使用できます。これには、既定で Anaconda 3 64-bit (最新バージョンの CPython も含む)、および **Python ネイティブ開発ツール**が含まれます。
 
 ## <a name="create-the-python-application"></a>Python アプリケーションを作成する
 
@@ -265,7 +269,7 @@ Python で DLL を使えるようにするには 2 つの方法があります�
 
 ## <a name="debug-the-c-code"></a>C++ コードをデバッグする
 
-Visual Studio での Python のサポートには、[Python と C++ のコードをまとめてデバッグする](debugging-mixed-mode.md)機能が用意されています。 これを使ってみるには次のようにします。
+[Visual Studio での Python のサポート](installation.md)には、[Python と C++ のコードをまとめてデバッグ](debugging-mixed-mode.md)する機能が用意されています。 これを使ってみるには次のようにします。
 
 1. ソリューション エクスプローラーで Python プロジェクトを右クリックして、**[プロパティ]** の **[デバッグ]** タブを選び、**[デバッグ] > [ネイティブ コードのデバッグを有効にする]** オプションをオンにします。
 

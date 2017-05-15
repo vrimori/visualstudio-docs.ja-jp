@@ -1,7 +1,7 @@
 ---
-title: "Python Tools for Visual Studio の Web プロジェクト テンプレート | Microsoft Docs"
+title: "Visual Studio での Python 用 Web プロジェクト テンプレート | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 2375c0c3b1a692d03d8790e400e3fea606355831
-ms.lasthandoff: 03/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 20edb7a53adf400fba94556e659b4215a0060c1b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="python-web-project-templates"></a>Python Web プロジェクト テンプレート
 
-Python Tools for Visual Studio (PTVS) には、Bottle、Django、Flask などのフレームワークで Web プロジェクトを開発するためのサポートが含まれています。 これには、さまざまなフレームワークを処理するように構成できるプロジェクト テンプレートとデバッグ ランチャーが含まれます。 ただし、PTVS には、フレームワーク自体は含まれず、プロジェクトを右クリックして **[Python] > [Install/upgrade framework... (フレームワークのインストール/アップグレード...)]** を選択して別途インストールする必要があります。
+Visual Studio の Python サポートには、Bottle、Django、Flask などのフレームワークで Web プロジェクトを開発するためのサポートが含まれています。 これには、さまざまなフレームワークを処理するように構成できるプロジェクト テンプレートとデバッグ ランチャーが含まれます。 ただし、Visual Studio には、フレームワーク自体は含まれず、プロジェクトを右クリックして **[Python] > [Install/upgrade framework... (フレームワークのインストール/アップグレード...)]** を選択して別途インストールする必要があります。
 
 各テンプレート (**[ファイル] > [新規] > [プロジェクト]** からアクセス) は、ランダムに選ばれたローカル ポートで Web サーバーを起動し、デバッグ時に既定のブラウザーを開き、[Microsoft Azure](http://www.azure.com) に直接発行できるようにします。 Bottle、Flask、Django 用のテンプレートが用意されており、Pyramid など他のフレームワークには汎用の "Web プロジェクト" テンプレートを使用できます。
 
@@ -59,7 +60,7 @@ Python Web プロジェクトの概要については、「[Getting Started with
 
 ## <a name="debugging"></a>デバッグ
 
-Web プロジェクトのデバッグが開始されると、PTVS は Web サーバーをローカルで起動し、そのアドレスとポートを既定のブラウザーで開きます。 追加のオプションを指定するには、プロジェクトを右クリックし、**[プロパティ]** を選択し、**[Web ランチャー]** タブを選択します。
+Web プロジェクトのデバッグが開始されると、Visual Studio は Web サーバーをローカルで起動し、そのアドレスとポートを既定のブラウザーで開きます。 追加のオプションを指定するには、プロジェクトを右クリックし、**[プロパティ]** を選択し、**[Web ランチャー]** タブを選択します。
 
   ![一般的な Web テンプレートの Web ランチャーのプロパティ](media/template-web-launcher-properties.png)
 
@@ -67,11 +68,11 @@ Web プロジェクトのデバッグが開始されると、PTVS は Web サー
 
 - **[検索パス]**、**[スクリプトの引数]**、**[Interpreter Arguments (インタープリター引数)]**、**[Interpreter Path (インタープリター パス)]**: これらは[通常のデバッグ](debugging.md)の場合と同じです
 - **[起動 URL]**: ブラウザーで開かれる URL を指定します。 既定値は `localhost` です。
-- **[ポート番号]**: URL に何も指定されなかった場合に使用するポート (PTVS によって既定で自動的に選択されます)。 これにより、ローカル デバッグ サーバーがリッスンするポートを構成するためにテンプレートで使用される `SERVER_PORT` 環境変数の既定値を上書きできます。
+- **[ポート番号]**: URL に何も指定されなかった場合に使用するポート (Visual Studio によって既定で自動的に選択されます)。 これにより、ローカル デバッグ サーバーがリッスンするポートを構成するためにテンプレートで使用される `SERVER_PORT` 環境変数の既定値を上書きできます。
 
 **[Run Server Command (サーバー コマンドの実行)]** と **[Debug Server Command (サーバー コマンドのデバッグ)]** グループ (後者はイメージに表示されている内容の下にあります) のプロパティによって、Web サーバーの起動方法が決定されます。 多くのフレームワークでは、現在のプロジェクトの外部のスクリプトを使用する必要があるため、スクリプトをここで構成でき、スタートアップ モジュールの名前をパラメーターとして渡すことができます。
 
-- **[コマンド]**: Python スクリプト (`*.py` ファイル)、モジュール名 (`python.exe -m module_name` など)、または&1; 行のコード (`python.exe -c "code"` など) にすることができます。 ドロップダウンの値は、これらの種類のどれが対象であるかを示します。
+- **[コマンド]**: Python スクリプト (`*.py` ファイル)、モジュール名 (`python.exe -m module_name` など)、または 1 行のコード (`python.exe -c "code"` など) にすることができます。 ドロップダウンの値は、これらの種類のどれが対象であるかを示します。
 - **[引数]**: これらは、コマンド ラインでコマンドに続いて渡されます。
 - **[環境]**: 環境変数を指定する `NAME=VALUE` ペアの改行区切りリスト。 これらは、ポート番号や検索パスなど、環境を変更できるすべてのプロパティの後に設定されるため、これらの値を上書きできます。
 
@@ -94,7 +95,7 @@ Bottle Web プロジェクト テンプレートには、必要な構成を実�
     - **[コマンド]**: `bottle` (モジュール)
     - **[引数]** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
-デバッグに PTVS を使用する場合、`--reload` オプションはお勧めしません。
+デバッグに Visual Studio を使用する場合、`--reload` オプションはお勧めしません。
 
 ### <a name="sample-pyramid-configuration"></a>サンプルの Pyramid 構成
 
@@ -112,7 +113,7 @@ Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使�
     - [引数]: `Development.ini`
 
 > [!Tip]
-> Pyramid アプリは通常はソース ツリーの最上部より&1; ディレクトリ レベル深いため、プロジェクトの **[作業ディレクトリ]** プロパティを構成することが必要な場合があります。
+> Pyramid アプリは通常はソース ツリーの最上部より 1 ディレクトリ レベル深いため、プロジェクトの **[作業ディレクトリ]** プロパティを構成することが必要な場合があります。
 
 
 ### <a name="other-configurations"></a>その他の構成
@@ -121,7 +122,7 @@ Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使�
 
 ## <a name="publishing-to-azure-app-service"></a>Azure App Service への発行
 
-Azure App Service に発行する主な方法は&2; つあります。 まず、ソース管理からのデプロイは、[Azure ドキュメント](http://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/)で説明しているように、他の言語と同じ方法で使用できます。 Visual Studio から直接発行するには、プロジェクトを右クリックして **[発行]** を選択します。
+Azure App Service に発行する主な方法は 2 つあります。 まず、ソース管理からのデプロイは、[Azure ドキュメント](http://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/)で説明しているように、他の言語と同じ方法で使用できます。 Visual Studio から直接発行するには、プロジェクトを右クリックして **[発行]** を選択します。
 
 ![プロジェクトのコンテキスト メニューの [発行] コマンド](media/template-web-publish-command.png)
 

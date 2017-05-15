@@ -28,16 +28,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 5455d9a16004fef1aec02fbaf856f336c67dfb05
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4c744284c198a645440494ee79ee0e722904fda5
+ms.openlocfilehash: b6fd9ebbd931604b12c772f4e2514c86f5c9dd70
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/04/2017
 
 ---
-# <a name="analyze-resource-consumption-and-ui-thread-acitivity-xaml"></a>リソース消費量と UI スレッド アクティビティを分析します (XAML)
+# <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>リソース消費量と UI スレッド アクティビティを分析する (XAML)
 **アプリケーション タイムライン** プロファイラーを使用すると、XAML アプリケーションにおけるアプリケーションの相互作用に関連するパフォーマンスの問題を検出および修復できます。 このツールは、アプリケーションのリソースの消費量の詳細ビューを提供することで、XAML アプリケーションのパフォーマンスの向上に役立ちます。 アプリケーションが UI フレームの準備 (レイアウトとレンダリング) やネットワークとディスクの要求の処理を実行することで、およびアプリケーションの起動、ページの読み込み、ウィンドウのサイズ変更などのシナリオにおいて使用した時間を分析することができます。  
   
- **アプリケーション タイムライン**は、**[デバッグ]、[パフォーマンス プロファイラー]** コマンドから開始できるツールの&1; つです。  
+ **アプリケーション タイムライン**は、**[デバッグ]、[パフォーマンス プロファイラー]** コマンドから開始できるツールの 1 つです。  
   
  このツールは、Visual Studio 2013 の診断ツールセットの一部であった **[XAML UI の応答性]** ツールから置き換わるものです。  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 03/07/2017
 ###  <a name="BKMK_Visual_throughput_FPS_graph"></a> ビジュアル スループット (FPS) グラフ  
  ![ビジュアル スループット グラフ](../profiling/media/timeline_visualthroughput.png "TIMELINE_VisualThroughput")  
   
- **[ビジュアル スループット (FPS)]** の折れ線グラフは、アプリの UI スレッドとコンポジション スレッドの&1; 秒あたりのフレーム数 (FPS) を示します。  
+ **[ビジュアル スループット (FPS)]** の折れ線グラフは、アプリの UI スレッドとコンポジション スレッドの 1 秒あたりのフレーム数 (FPS) を示します。  
   
 ###  <a name="BKMK_Timeline_details_"></a> タイムラインの詳細  
  [詳細] ビューは、レポートの分析にほとんどの時間を費やす場所です。 UI フレームワーク サブシステムまたは CPU を消費したシステム コンポーネントによってカテゴリ化されるアプリケーションの CPU 使用率の詳細なビューを表示します。  
@@ -119,7 +120,7 @@ ms.lasthandoff: 03/07/2017
 |**レイアウト**|大規模なアプリケーションでは、多数の要素が画面に同時に表示される可能性があります。 これにより、UI のフレーム レートが低下し、これに対応してアプリケーションの応答性も低下します。 レイアウト イベントでは、各要素 (つまり、Arrange、Measure、ApplyTemplate、ArrangeOverride、および ArrangeOverride に費やした時間) をレイアウトするコストを正確に判断するだけでなく、レイアウト パスの一部を成すビジュアル ツリーを作成します。 この視覚表現を使用すると、簡略化が必要な論理ツリーを判断したり、レイアウト パスを最適化するために他の遅延メカニズムを評価したりすることができます。|  
 |**レンダリング**|XAML 要素を画面に描画するために費やされた時間。|  
 |**入出力**|ローカル ディスクから、または [Microsoft Windows Internet (WinINet)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa385331.aspx)API を使用してアクセスするネットワーク リソースから、データを取得するために費やされた時間。|  
-|**アプリケーション コード**|解析やレイアウトに関連しないアプリケーション (ユーザー) コードを実行するために費やされた時間。|  
+|**App Code**|解析やレイアウトに関連しないアプリケーション (ユーザー) コードを実行するために費やされた時間。|  
 |**Xaml その他**|XAML ランタイム コードの実行に費やされた時間。|  
   
 > [!TIP]

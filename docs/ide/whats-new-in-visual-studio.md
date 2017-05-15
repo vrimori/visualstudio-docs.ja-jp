@@ -30,17 +30,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ddc84f3b92d8e0febaea3d23b415bd6e703cc530
-ms.openlocfilehash: e04b972187b7b7ec225b48cc9b8904d804399ff8
-ms.lasthandoff: 04/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: edc126208bb401c8dba9a6be722cbd0dbda21caf
+ms.openlocfilehash: 720048b861bfb208489a62340efca28ae88d1951
+ms.contentlocale: ja-jp
+ms.lasthandoff: 04/22/2017
 
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 すべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性を実現します。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回の新しいリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
 
 > [!NOTE]
-> Visual Studio 2017 の新機能の一覧については、「[リリース ノート](https://www.visualstudio.com/news/vs2015-vs)」をご覧ください。
+> Visual Studio 2017 の新機能の一覧については、「[リリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)」をご覧ください。
 
 変更を行った基本的な概要は、次のとおりです。
 

@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio の UX Essentials |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 04/26/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -26,175 +26,160 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7f10e2cefc0986a2457cc61945a60acfd1a4ef78
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9524ecc3cadef58821fba857de8e82e59eea9b43
+ms.openlocfilehash: 19db4e41ef35ddbec4f43823d4bf66bb148a854f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/04/2017
 
 ---
-# <a name="ux-essentials-for-visual-studio"></a>Visual Studio のユーザー エクスペリエンスの要点
+# <a name="ux-essentials-for-visual-studio"></a>Visual Studio の UX Essentials
 ## <a name="best-practices"></a>ベスト プラクティス  
   
 ### <a name="1-be-consistent-within-the-visual-studio-environment"></a>1.Visual Studio 環境内で一貫しています。  
   
--   シェル内で既存の相互作用のパターンに従います。  
+-   次の既存の[相互作用のパターン](interaction-patterns-for-visual-studio.md)シェル内で。  
   
--   シェルのビジュアル言語と職人気質の要件と一致する機能を設計します。  
+-   シェルのビジュアルな言語と一致するように機能を設計および[職人気質要件](evaluation-tools-for-visual-studio.md)です。  
   
 -   存在する場合は、共有のコマンドとコントロールを使用します。  
   
--   Visual Studio 階層と、どのコンテキストを確立し、そのドライブの UI を理解します。  
+-   Visual Studio の階層とコンテキストを確立し、UI のドライブ、方法を理解します。  
   
 ### <a name="2-use-the-environment-service-for-fonts-and-colors"></a>2.フォントと色の環境のサービスを使用します。  
   
--   UI は、カスタマイズ オプション ダイアログ ボックスで フォントおよび色 ページで公開される場合を除き、現在の環境フォント設定を尊重必要があります。  
+-   UI は、現在を考慮する必要があります[環境フォント](fonts-and-formatting-for-visual-studio.md)カスタマイズのオプション ダイアログ ボックスに、[フォントおよび色] ページでは、公開される場合を除きを設定します。  
   
--   UI 要素には、共有環境トークンまたは機能固有のトークンを使用して、VSColor サービスを使用する必要があります。  
+-   UI 要素を使用する必要があります、 [VSColor サービス](colors-and-styling-for-visual-studio.md)環境のトークンや機能に固有のトークンを使用して共有します。  
   
 ### <a name="3-make-all-imagery-consistent-with-the-new-vs-style"></a>3.新しい VS スタイルで一貫性のあるすべての画像を確認します。  
   
--   アイコン、グリフ、およびその他のグラフィックスの Visual Studio のデザインの原則に従います。  
+-   アイコン、記号、およびその他のグラフィックスの Visual Studio デザインの原則に従います。  
   
 -   グラフィック要素のテキストを配置しないでください。  
   
-### <a name="4-design-from-a-user-centric-perspective"></a>4.ユーザー中心の観点から設計します。  
+### <a name="4-design-from-a-user-centric-perspective"></a>4.ユーザー中心の観点からデザインします。  
   
 -   内の個々 の機能の前にタスク フローを作成します。  
   
--   ユーザーを理解しておくし、その知識を spec ファイルで明示的にします。  
+-   ユーザーと理解しておくし、仕様にその知識を明示します。  
   
--   UI を確認するときは、詳細情報と同様に包括的なエクスペリエンスを評価します。  
+-   UI を表示するときに、完全なエクスペリエンスだけでなく、詳細情報を評価します。  
   
--   機能していて、ロケール、または言語に関係なく魅力的なままになるように UI を設計します。  
+-   機能していて、ロケールや言語に関係なく魅力的なままになるように、UI を設計します。  
   
 ## <a name="screen-resolution"></a>画面の解像度  
   
-### <a name="minimum-resolution"></a>解像度の最小  
- Visual Studio Dev14 の最低限の解像度は、1280 x 1024 です。 つまり、ある*可能な*最適なユーザー エクスペリエンスができない場合がありますが、この解像度では、Visual Studio を使用しています。 すべての側面が 1280 × 1024 より低い解像度では使用される保証はありません。  
+### <a name="minimum-resolution"></a>最小解像度  
+ - Visual Studio Dev14 解像度の最小**1280 x 720**です。 つまり、ある*考えられる*ユーザー エクスペリエンスが最適化ができない可能性がありますが、この解像度では、Visual Studio を使用します。 すべての側面が 1280 x 720 より低い解像度で使用できるようになるという保証はありません。  
   
- 最初のダイアログのサイズでは、この最小解像度を使用して 96 dpi 内で IDE のフレーム内に収まるようために高さ 1000 ピクセルを超えることはできません。  
+ - Visual Studio のターゲットの解決**1366 x 768**です。 これは、ことをお約束する最も低い解像度、*良い*ユーザー エクスペリエンスです。
+
+ - 最初のダイアログの高さにする必要があります**700 ピクセルより小さい**96 dpi で IDE フレームの最小単位に収まるように、します。
   
 ### <a name="high-density-displays"></a>高密度が表示されます。  
- Visual Studio での UI は、すべての DPI スケール変換があらかじめ Windows でサポートされる要素で正常に動作する必要があります: 150%、200%、250% です。  
+ Visual Studio では、UI は、スケール係数すぐ Windows でサポートされるすべての DPI で正常に動作する必要があります: 150%、200%、250% です。  
   
 ## <a name="anti-patterns"></a>アンチ パターン  
- Visual Studio には、次のガイドラインとベスト プラクティスは、UI の多くの例が含まれています。 一貫性を維持するために、開発者は、多くの場合、製品 UI の設計パターンが構築しているようなから借用します。 これは、こと私たちのドライブのユーザーとの対話と視覚的なデザインの一貫性を利用するは場合によってはまず優先順位付けの参加を解除またはスケジュールの制約のためのガイドラインに準拠しないいくつかの詳細を含む機能の有効なアプローチです。 このような場合は、させませんチームがこれらの「アンチ パターン」の&1; つをコピーする Visual Studio 環境内で不適切か、矛盾した UI を大幅に増えているためです。  
+ Visual Studio には、当社のガイドラインとベスト プラクティスに従う UI の多くの例が含まれています。 一貫性を保つために、開発者は、多くの場合、製品 UI のデザイン パターンがビルド中に似ています借用します。 これは、us ドライブのユーザーとの対話とビジュアル デ ザインの一貫性を利用するには、おは場合によっては状態で出荷するスケジュールの制約のためのガイドラインを満たしているしないでください。 または優先順位付けの参加を解除するいくつかの詳細と機能を有効なアプローチです。 このような場合は、必要のないチームはこれらの「アンチ パターン」のいずれかのコピーを Visual Studio 環境内で不適切なや一貫性のない UI が急増するためです。  
   
-### <a name="required-fieldssettings-shown-in-error-state-by-default"></a>既定では、エラー状態に示すように必要なフィールド/設定  
+### <a name="required-fieldssettings-shown-in-error-state-by-default"></a>既定ではエラー状態に表示される必須のフィールド/設定  
   
 #### <a name="feature-team-goals"></a>機能チームのゴール  
   
 -   構成する必要がある要素を追加したことをユーザーに警告します。  
   
--   入力を必要とする領域に、ユーザーの注意を促します。  
+-   入力を必要とする領域に、ユーザーの注目を描画します。  
   
 #### <a name="anti-pattern-solution"></a>ソリューションのアンチ パターン  
- ユーザーがアクションを開始するとすぐに、タスクが完了する前に、すぐに構成を必要とする領域の横にある重要な分岐点のアイコンを配置します。  
+ ユーザーがアクションを開始するとすぐに、タスクが完了する前に、構成が必要な領域の横にある重大な停止アイコンをすぐに配置します。  
   
 #### <a name="example-manifest-designer-declarations"></a>例: マニフェスト デザイナーの宣言  
  一覧に宣言を追加すると、すぐには、ユーザーが必要なプロパティを設定するまで引き続き発生するエラー状態で配置します。  
   
- ここで、通知に使用されるアイコンには、"x"が含まれているため、その他の問題があるの横にアイコンを使用できないので、一般的なを削除します。 その結果、UI がより不恰好コントロール削除 ボタンを使用します。  
+ ここではその他の問題、通知に使用されるアイコンが含まれているため、"&times;"アイコン、ため、その横にある共通の削除 アイコンを使用することはできません。 その結果、UI より扱いコントロール削除 ボタンを使用します。  
   
- ![マニフェスト デザイナー エラー宣言のアンチ パターン](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti パターン")  
-  
- **既定では、エラー状態で UI を配置することは、Visual Studio のアンチ パターンです。**  
+ ![既定では、エラー状態に UI を配置することは、Visual Studio のアンチ パターンです。](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-pattern")<br />既定では、エラー状態に UI を配置することは、Visual Studio のアンチ パターンです。
   
 #### <a name="alternatives"></a>代替手段  
- この問題は、もっと良い方法もあります。  
+ この問題をより良いソリューションになります。  
   
--   ユーザーが警告なしの宣言を追加できるようにし、次に、すぐに移動して、項目のプロパティを設定します。  
+-   警告なしの宣言を追加するユーザーを許可して、すぐに移動して、項目のプロパティを設定します。  
   
--   警告アイコン (ゴールド三角形) を追加する場合またはフォーカスが移動、項目からなど、一覧に別の宣言を追加するデザイナー内でタブを変更しようとします。  
+-   警告アイコン (ゴールドの三角形) を追加するときにフォーカスが移動、項目からなど、一覧に別の宣言を追加するか、デザイナー内のタブを変更しようとします。  
   
--   ユーザーは、すべての宣言のプロパティを設定する前にタブを変更しようとすると、アプリケーションがビルドされないことを説明するダイアログをポップアップ表示 (または、どのような影響)、警告が解決されるまでです。 ユーザーがダイアログ ボックスを閉じるし、タブか、アイコン (重大または警告 をクリック) が追加宣言 タブにされます。  
+-   ユーザーのすべての宣言でプロパティを設定する前にタブを変更しようとすると、pop、アプリケーションがビルドされませんを説明するダイアログ ボックス (または、どのような影響)、警告が解決されるまでです。 場合は、ユーザーがダイアログを閉じるし、タブか、アイコン (重大または警告、必要に応じて) はタブに追加宣言します。  
   
-### <a name="forcing-the-user-to-read-text-before-dismissing-ui"></a>UI を破棄する前にテキストを読み取るユーザーの強制  
+### <a name="multiple-clicks-to-dismiss-ui"></a>複数回のクリックを UI を閉じます  
   
 #### <a name="feature-team-goals"></a>機能チームのゴール  
- 説明テキストを表示せずに、UI を閉じますにユーザーを禁止します。  
+ ユーザーが最初に説明テキストを表示せずに、UI を閉じますを許可しません。  
   
 #### <a name="anti-pattern"></a>アンチ パターン  
- X の一般的なパターンを担う VS UI 内でのさまざまな場所にリンクされたビデオを挿入するチームは、ユーザー エクスペリエンスで指定されたボタンとツールヒントの説明を閉じて、代わりに、ドロップダウン リストと「を表示しないもう一度」リンクを実装します。  
-  
- ![説明テキストのアンチ パターン-正しくない](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")  
-  
- **正しくない: Visual Studio 内でのアンチ パターンを UI を破棄する前に説明文を読み取るユーザーの強制です。**  
+ VS UI 内でのさまざまな場所にビデオへのリンクを挿入するチームの一般的なパターンに対してという合意に、"&times;"リンク「を表示しない再度」および閉じるボタンとツールヒントの説明とは、ユーザー エクスペリエンス、によって指定され、ドロップダウン リストを実装します。  
+
+#### <a name="example-video-links-in-team-explorer"></a>例: チーム エクスプ ローラーでリンクされたビデオ
+Visual Studio 内でのアンチ パターンは、UI を消去する前に説明文を読み取るユーザーを強制します。 正しくデザインされた、ビデオへのリンクをクリックしてのホバー時追加情報を含むツールヒントを表示する必要があります、"&times;"さらに操作することがなく、メッセージを破棄する必要があります。
+
+
+ ![説明テキストをアンチ &#45; パターン &#45;正しくありません。](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />ビデオの正しくないリンク パターン
   
 #### <a name="result"></a>結果  
- 閉じるボタン (1 回のクリック) 単純なのではなく、ユーザーを強制して、2 回のクリックを使用して、単にビデオのリンクが表示されるすべての場所に UI を閉じます。  
+ 閉じるボタン (1 回のクリック) 単純なのではなくを 2 回のクリックを使用して、単にビデオへのリンクが表示されるすべての場所に UI を消去する求められます。  
   
 #### <a name="alternatives"></a>代替手段  
- この状況に正しく設計は Internet Explorer、Office、および Visual Studio に共通のパターンに準拠する: ホバー時、ユーザーは、tooltip の説明を確認し、1 回のクリックは、UI を非表示にします。  
+ このような状況に対応する正しい設計に Internet Explorer、Office、および Visual Studio に共通のパターンに従うになります: ホバー時、ユーザーはツールヒントの説明を確認し、1 回のクリックは、UI を非表示にします。  
   
- ![説明テキストのアンチ パターン-正しい](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti パターン修正")  
+ ![説明テキストをアンチ &#45; パターン &#45;そうです](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti-pattern-correct")<br />ビデオの適切なリンクのパターン
   
- **正しい: ビデオへのリンクが、ホバー時の追加情報を含むツールヒントを表示、設計どおりにし、[X] をクリックするとさらに対話することがなく、メッセージを消去します。**  
+### <a name="using-command-bars-for-settings"></a>コマンド バーを使用して、設定  
+ **図 A**このアンチ パターンを表します。 コマンドは、単に適用されるコマンド ボタンの下に設定します。 このスケッチの場合は、デバッグの開始だけでなくコマンド — などのブラウザーで、デバッグなしで、ステップ イン ビュー-選択した設定を尊重します。  
+
+  ![図 a: コマンド バーのアンチ パターン](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-pattern-FigureA")<br />図 a: コマンド バーのアンチ パターン
   
-### <a name="using-command-bars-for-settings"></a>コマンド バー設定を使用します。  
- ![コマンド バーのアンチ パターン-図 A](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti パターン-FigureA")  
-  
- **図 a: コマンド バーのアンチ パターン**  
-  
- **図 A**このアンチ パターンを表します。 コマンドは、単に適用されるコマンド ボタンの下に設定します。 このスケッチでは、[デバッグ開始] 以外のコマンドは、ブラウザー、デバッグなしで開始、およびステップ インでビューなど-は、選択した設定を尊重します。  
-  
- ![コマンド バーのアンチ パターン-図 B](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti パターン-FigureB")  
-  
- **図 b: 優れたですが、まだコマンド バーのアンチ パターン**  
-  
- ように、わずかに良いそれでもの望ましくないが、ツールバーでこの種類の設定を配置する**図 B**します。分割ボタンは、小さい領域おり、改善をドロップダウン リストではそのため、両方の設計を使用しているツールバーがありません。 実際にコマンドを昇格します。  
-  
- ![コマンド バーのアンチ パターン-図 C](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti パターン-FigureC")  
-  
- **Visual Studio のコマンド バーのパターンの図 c: の正しい使用します。**  
-  
- **図 C**設定は、一連のコマンドに関連付けられます。 設定されているグローバルの設定はなく、お&4; つのコマンドの間で切り替えるだけです。 これは、ツールバーのコマンドで許容される場合だけです。  
-  
+ 示すように、少し良いそれでもの望ましくないが、ツールバーでこの種類の設定を配置する**図 B**です。分割ボタンは、小さい領域、改善をドロップダウン リストではそのため、両方の設計まだを使用しているツールバーを実際にコマンドではないを昇格させます。  
+ 
+ ![図 b: 向上ですが、まだコマンド バーのアンチ パターン](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-pattern-FigureB")<br />図 b: 向上ですが、まだコマンド バーのアンチ パターン
+ 
+  示すように適切なアプローチで**図 C**設定が一連のコマンドに関連付けられています。 設定されているグローバル設定はなく、同様、4 つのコマンドを切り替えおしています。 これは、ツールバーのコマンドが許容である場合だけです。 
+
+ ![Visual Studio のコマンド バーのパターンの図 c: の正しい使用します。](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-pattern-FigureC")<br />Visual Studio のコマンド バーのパターンの図 c: の正しい使用します。
+   
 ### <a name="control-anti-patterns"></a>コントロールのアンチ パターン  
- いくつかアンチ パターンは、単に不適切な使用またはコントロールまたはコントロールのグループのプレゼンテーションです。  
+ いくつかのアンチ パターンは、単に不適切な使用法またはコントロールまたはコントロールのグループのプレゼンテーションです。  
   
-#### <a name="underlining-used-as-a-group-label-not-a-hyperlink"></a>ハイパーリンクではないグループのラベルとして使用される基礎となります。  
+#### <a name="underlining-used-as-a-group-label-not-a-hyperlink"></a>ハイパーリンクではない、グループ ラベルとして使用する下線  
  のみのハイパーリンクのテキストに下線を使用してください。  
   
- **正しくありません。**  
+ **正しくありません。**    
+ ![ハイパーリンクではありません下線付きのテキストは、Visual Studio のアンチ パターンです。](../../extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102-g_GroupLabelIncorrect")<br />ハイパーリンクではありません下線付きのテキストは、Visual Studio のアンチ パターンです。
   
- ![下線付きの文字グループのラベルになるアンチ パターン](../../extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102 g_GroupLabelIncorrect")  
-  
- **ハイパーリンクではありません下線付きのテキストは、Visual Studio のアンチ パターンです。**  
-  
- **よし：**  
-  
- ![下線付きの文字グループのラベル (正しい) になるアンチ パターン](../../extensibility/ux-guidelines/media/0102-h_grouplabelcorrect.png "0102 h_GroupLabelCorrect")  
-  
- **スタイルが正しく、非ハイパーリンク テキスト修飾環境のフォントで表示します。**  
+ **よし：**   
+ ![スタイルを正しく、非ハイパーリンク テキスト非装飾環境のフォントで表示します。](../../extensibility/ux-guidelines/media/0102-h_grouplabelcorrect.png "0102-h_GroupLabelCorrect")<br />スタイルを正しく、非ハイパーリンク テキスト非装飾環境のフォントで表示します。
   
 #### <a name="clicking-on-a-check-box-results-in-a-pop-up-dialog"></a>ポップアップ ダイアログでチェック ボックスの結果をクリックすると  
- Windows Azure アプリケーションの発行 ウィザードでの"すべての役割のリモート デスクトップを有効にする チェック ボックスをクリックすると、すぐに、ポップアップ ダイアログで、Visual Studio のアンチ パターンが表示されます。 さらに、チェック ボックス フィールドを満たせないでチェック ボックスを選択した後は別の相互作用のアンチ パターンです。  
+ 「Windows Azure アプリケーションの公開」ウィザードの"すべてロールのリモート デスクトップを有効にする チェック ボックスをクリックするすぐにポップアップ ダイアログで、Visual Studio のアンチ パターンが表示されます。 さらに、チェック ボックスのフィールドがいっぱいにならないチェック ボックスが選択されている後に別の相互作用のアンチ パターン。  
   
- ![チェック ボックス ポップアップのアンチ パターン](../../extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102 i_CheckboxPopup")  
-  
- **Visual Studio のアンチ パターンは、チェック ボックスをクリックすると後に、ダイアログ ボックスが表示することです。**  
+ ![Visual Studio のアンチ パターンは、チェック ボックスをクリックすると後にダイアログ ボックスをことをします。](../../extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102-i_CheckboxPopup")<br />Visual Studio のアンチ パターンは、チェック ボックスをクリックすると後にダイアログ ボックスをことをします。
   
 ### <a name="hyperlink-anti-patterns"></a>ハイパーリンクのアンチ パターン  
- 次の例には、2 つのアンチ パターンが含まれています。  
+ 次の例には、次の 2 つのアンチ パターンが含まれています。  
   
-1.  ホバー時の赤にフォア グラウンドでは、フォント サービスから、適切な共有色が使用されていないことを意味します。  
+1.  ホバー時の赤にすると、フォア グラウンドでは、フォント サービスから、適切な共有色が使用されていないことを意味します。  
   
-2.  「詳細」は、概念的なトピックへのリンクの適切なテキストではありません。 ユーザーの目的については、任意の影響を理解していないです。  
+2.  「詳細」は、概念に関するトピックへのリンクの適切なテキストではありません。 ユーザーの目標は、詳細は、任意の影響を理解していないです。  
   
- ![ハイパーリンクのアンチ パターン](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102 j_HyperlinkIncorrect")  
+ ![色のサービスを無視し、「詳細」のハイパーリンクを使用して Visual Studio のアンチ パターンは、します。](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />色のサービスを無視し、「詳細」のハイパーリンクを使用して Visual Studio のアンチ パターンは、します。  
   
- **色のサービスを無視し、「詳細」のハイパーリンクを使用して、Visual Studio のアンチ パターンです。**  
-  
- **ソリューションの向上:**ユーザーは、リンクをクリックして確認すると問題が発生します。  
+ **ソリューションのより強力な:**リンクをクリックして、ユーザーを求めるは質問が発生します。  
   
 -   Windows Azure サービスのしくみ  
   
--   Windows Azure モバイル サービス プロジェクトを必要がある場合は?  
+-   Windows Azure モバイル サービス プロジェクトを必要がある場合ですか。  
   
-#### <a name="using-click-here-for-links"></a>「クリックして」のリンクを使用します。  
- ハイパーリンクは、自己記述型にする必要があります。 アンチ パターン「ここをクリックして」を使用するか、いずれかのようなバリエーションをお勧めします。  
+#### <a name="using-click-here-for-links"></a>「ここをクリックして」へのリンクを使用します。  
+ ハイパーリンクは、自己記述型にする必要があります。 「ここをクリックして」を使用するアンチ パターンまたはそのような違いをお勧めします。  
   
- **不良:** 「ここをクリックして新しいプロジェクトを作成する方法についてです」。  
+ **不適切な:** 「ここをクリックして新しいプロジェクトを作成する方法についてはします」。
   
- **Good:** 「どのように教えて新しいプロジェクト」
+ **Good:** 「どのようにプロジェクトは作成、新しいですか?」

@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio での Python の混合モードのデバッグ | Microsoft Docs"
 ms.custom: 
-ms.date: 4/10/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,22 +28,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: bdc621831893f907beba7ec5ad503fe4d96c0042
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 919227fb624f4b6dc51e13ccadea8e2682b9816f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="debugging-python-and-c-together"></a>Python と C++ の同時デバッグ
 
-ほとんどの標準的 Python デバッガーは、Python コードのみのデバッグをサポートします。 ただし、実際には、高パフォーマンスやプラットフォーム API の直接呼び出しが必要なところで Python と、C または C++ が併用されています (例については、「[Python 向け C++ 拡張機能の作成](cpp-and-python.md)」をご覧ください)。 Visual Studio (Python Tools for Visual Studio 2.0 以降を使う場合) では、Python とネイティブ C/C++ のデバッグを統合して同時に実行する混合モードのデバッグが提供されています。このモードでは、結合された呼び出し履歴、Python とネイティブ コード間でのステップ実行機能、両方の種類のコード内のブレークポイント、Python のオブジェクト表現をネイティブ フレームに表示する機能 (逆も可能) が提供されます。
+ほとんどの標準的 Python デバッガーは、Python コードのみのデバッグをサポートします。 ただし、実際には、高パフォーマンスやプラットフォーム API の直接呼び出しが必要なところで Python と、C または C++ が併用されています (例については、「[Python 向け C++ 拡張機能の作成](cpp-and-python.md)」をご覧ください)。 Visual Studio には、Python とネイティブ C/C++ のデバッグを統合して同時に実行する混合モードのデバッグ機能があります。このモードでは、結合された呼び出し履歴、Python とネイティブ コード間でのステップ実行機能、両方の種類のコード内のブレークポイント、Python のオブジェクト表現をネイティブ フレームに表示する機能 (逆も可能) が提供されます。
 
 ![混合モードのデバッグ](media/mixed-mode-debugging.png) 
 
 Visual Studio でのネイティブ C モジュールのビルド、テスト、およびデバッグの概要については「[Deep Dive: Creating Native Modules (詳細情報: ネイティブ モジュールの作成)](https://youtu.be/D9RlT06a1EI)」(youtube.com、9 分 9 秒) をご覧ください。
 
 > [!VIDEO https://www.youtube.com/embed/D9RlT06a1EI]
+
+> [!Note]
+> 混合モードのデバッグは、Python Tools for Visual Studio 1.x では使用できません。
 
 ## <a name="enabling-mixed-mode-debugging"></a>混合モードのデバッグの有効化
 
@@ -154,7 +158,7 @@ static int FobObject_init(FobObject* self, PyObject* args, PyObject* kwds) {
 - イミディエイト ウィンドウ: 使用できますが、その機能はサブセットに制限され、ここに記載されている制限もすべて適用されます。
 - サポートされている Python のバージョン: CPython 2.7 と 3.3+ のみ。
 - Visual Studio Shell: Visual Studio Shell で Python を使用する場合 (たとえば、統合インストーラーを使用してインストールした場合)、Visual Studio では C++ プロジェクトを開くことができません。また、C++ ファイルの編集方法は、基本的なテキスト エディターでの編集と同様です。 ただし、C/C++ のデバッグと混合モードでのデバッグは Shell で完全にサポートされ、ソース コード、ネイティブ コードのステップ イン、およびデバッガー ウィンドウでの C++ 式の評価を実行できます。
-- オブジェクトの表示と展開: デバッガー ツールの [ローカル] ウィンドウと [ウォッチ] ウィンドウに Python オブジェクトを表示するとき、混合モードのデバッガーでは、オブジェクトの構造のみが表示されます。 プロパティの自動評価や計算される属性の表示は行われませｎ。 コレクションでは、組み込みコレクション型 (`tuple`、`list`、`dict`、`set`) の要素のみを表示します。 カスタム コレクション型は、組み込みコレクション型から継承される場合を除き、コレクションとして視覚化されません。
+- オブジェクトの表示と展開: デバッガー ツールの [ローカル] ウィンドウと [ウォッチ] ウィンドウに Python オブジェクトを表示するとき、混合モードのデバッガーでは、オブジェクトの構造のみが表示されます。 プロパティの自動評価や計算される属性の表示は行われません。 コレクションでは、組み込みコレクション型 (`tuple`、`list`、`dict`、`set`) の要素のみを表示します。 カスタム コレクション型は、組み込みコレクション型から継承される場合を除き、コレクションとして視覚化されません。
 - 式の評価: 下記を参照してください。
 
 ### <a name="expression-evaluation"></a>式の評価
