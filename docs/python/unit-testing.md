@@ -1,7 +1,7 @@
 ---
-title: "Python Tools for Visual Studio の単体テスト | Microsoft Docs"
+title: "Visual Studio の Python 用単体テスト | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: 878bd0baaa0e08a31274645213b222bf6faeb412
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 2597583912c7694495617c53839f41aa13cda871
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -39,13 +40,13 @@ ms.lasthandoff: 04/10/2017
 
 単体テストは、アプリケーションの他のコード単位 (通常は分離された関数、クラスなど) をテストするコードの断片です。 アプリケーションがそのすべての単体テストに合格すると、少なくとも低レベルの機能が正しいことを信頼できます。
 
-Python は、プログラムの設計時にシナリオを検証するために単体テストを幅広く使用します。 Python Tools for Visual Studio(PTVS) には、別々に実行することを必要としない、開発プロセスのコンテキスト内での単体テストの検出、実行、デバッグのサポートが含まれています。
+Python は、プログラムの設計時にシナリオを検証するために単体テストを幅広く使用します。 Visual Studio の Python サポートには、別々に実行することを必要としない、開発プロセスのコンテキスト内での単体テストの検出、実行、デバッグのサポートが含まれています。
 
 このトピックでは、Python での Visual Studio の単体テスト機能の概要を説明します。 一般的な単体テストについて詳しくは、「[コードの単体テスト](../test/unit-test-your-code.md)」をご覧ください。
 
 ## <a name="discovering-and-viewing-tests"></a>テストの検出と表示
 
-規則により、PTVS はテストをその名前が "test" で始まるメソッドとして識別します。 これを参照するには、次の操作を行います。
+規則により、Visual Studio はテストをその名前が "test" で始まるメソッドとして識別します。 これを参照するには、次の操作を行います。
 
 1. Visual Studio に読み込まれた [Python プロジェクト](python-projects.md)を開き、プロジェクトを右クリックして **[追加] > [新しい項目...]** を選択し、**[Python Unit Test (Python 単体テスト)]** に続けて **[追加]** を選択します。
 
@@ -98,13 +99,13 @@ Python は、プログラムの設計時にシナリオを検証するために�
 
 ## <a name="debugging-tests"></a>テストのデバッグ
 
-単体テストはコードの断片であるため、他のコードと同様にバグが発生することがあり、ブレークポイントを設定して変数を確認し、コードをステップ実行できるデバッガーでの実行が必要になることがあります。 PTVS には診断ツールも用意されています
+単体テストはコードの断片であるため、他のコードと同様にバグが発生することがあり、ブレークポイントを設定して変数を確認し、コードをステップ実行できるデバッガーでの実行が必要になることがあります。 Visual Studio には診断ツールも用意されています
 
 デバッグを開始するには、コードに最初のブレークポイントを設定し、テスト エクスプローラーでテスト (または選択範囲) を右クリックし、**[選択したテストのデバッグ]** を選択します。 アプリケーション コードの場合と同様に、Visual Studio が Python デバッガーを起動します。
 
 ![テストのデバッグ](media/unit-test-debugging.png)
 
-PTVS のバージョンに応じて、**[選択されたテストのコード カバレッジの分析]** コマンドと **[テストのプロファイル]** コマンドを使用することもできます ([機能のマトリックス](python-in-visual-studio.md#features-matrix)のページをご覧ください)。
+Visual Studio のバージョンに応じて、**[選択されたテストのコード カバレッジの分析]** コマンドと **[テストのプロファイル]** コマンドを使用することもできます ([機能のマトリックス](python-in-visual-studio.md#features-matrix)のページをご覧ください)。
 
 ### <a name="known-issues"></a>既知の問題
 

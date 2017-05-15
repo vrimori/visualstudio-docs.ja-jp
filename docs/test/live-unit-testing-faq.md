@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 03abb5a6508a6c93c6770bd9373381c9173b7103
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c9df048a49580f3526b48e29041ef3758722ed27
+ms.openlocfilehash: 08677472bc13d58d9ab0b42b856955f8434089e4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/03/2017
 
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing についてよく寄せられる質問
@@ -229,6 +230,8 @@ Live Unit Testing は、ソース ファイルが変更されたことを検出�
 - **[ツール]**、**[オプション]**、**[Live Unit Testing]** の順に移動し、ログ オプションを **[詳細]** に変更します。 こうすると、より詳細なログが出力ウィンドウに表示されます。 
 
 - `LiveUnitTesting_BuildLog` ユーザー環境変数に、MSBuild ログのキャプチャに使うファイルの名前を設定します。 このようにすると、Live Unit Testing のビルドからの詳細な MSBuild ログ メッセージを、そのファイルから取得できます。
+
+- `LiveUnitTesting_TestPlatformLog` ユーザー環境変数を `1` に設定して、テスト プラットフォームのログをキャプチャします。 このようにすると、Live Unit Testing の実行からの詳細なテスト プラットフォームのログ メッセージを `[Solution Root]\.vs\[Solution Name]\log\[VisualStudio Process ID]` から取得できます。
 
 - `VS_UTE_DIAGNOSTICS` という名前のユーザー レベル環境変数を作成し、1 (または任意の値) に設定して、Visual Studio を再起動します。 Visual Studio の **[出力 – テスト]** タブに多くのログが表示されるようになります。 
  

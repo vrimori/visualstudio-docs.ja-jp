@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: b9e1c2b6be671adb99a13e4a0eb4357fbba477b2
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: a14bc7e8c9194fff3a1bec2739c9e9c2480e905b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -44,7 +45,7 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 オプションは **[ツール] > [オプション] > [テキスト エディター] > [Python] > [書式設定]** とそのサブタブで設定しますが、既定値は [PEP 8 スタイル ガイド](http://www.python.org/dev/peps/pep-0008/)のスーパーセットに従って設定されます。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。以下のセクションで、他の 3 つのサブページについて説明します。
 
-Visual Studio の Python のサポートで、**[編集] > [詳細設定]** には、[[コメントを段落幅に合わせる]](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
+[Visual Studio の Python のサポート](installation.md)で、**[編集] > [詳細設定]** には、[[コメントを段落幅に合わせる]](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
 
 ## <a name="spacing"></a>スペース
 

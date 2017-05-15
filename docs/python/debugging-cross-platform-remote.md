@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: df4d74d9fe884f3aff1998f4b0b38dbff6d1359f
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: fa3d69cbb34a61a327d0b4c27430ff04b670a568
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -85,7 +86,7 @@ Azure VM のファイアウォール ルールの作成方法については、�
  
 1. `pip3 install ptvsd` を使用して環境に `ptvsd` パッケージをインストールします。 (注: トラブルシューティングが必要な場合に備えて、インストールされている ptvsd のバージョンを記録しておくことをお勧めします。[ptvsd 一覧](https://pypi.python.org/pypi/ptvsd)にも使用できるバージョンが記載されています)。
 
-1. 下のコードを他のコードよりも前の、`guessing-game.py`のできるだけ早い段階で追加して、リモート デバッグを有効にします。 (厳密な要件ではありませんが、`enable_attach` 関数を呼び出す前に起動されたバッググラウンド スレッドをデバッグすることはできません。)
+1. 下のコードを他のコードよりも前の、`guessing-game.py`のできるだけ早い段階で追加して、リモート デバッグを有効にします。 (厳密な要件ではありませんが、`enable_attach` 関数を呼び出す前に起動されたバックグラウンド スレッドをデバッグすることはできません。)
 
    ```python
    import ptvsd
@@ -111,7 +112,10 @@ Azure VM のファイアウォール ルールの作成方法については、�
 
 1. 表示される **[プロセスにアタッチ]** ダイアログで、**[接続の種類]** を **[Python remote (ptvsd)]** (Python リモート (ptvsd)) に設定します (旧バージョンの Visual Studio では、**トランスポート**と **Python remote debugging** (Python リモート デバッグ) という名称でした)。
 
-1. **[Connection Target]**(接続のターゲット) フィールド (旧バージョンでは **[修飾子]**) に「`tcp://<secret>@<ip_address>:5678`」と入力します。`<secret>` は Python コードで渡される文字列 `enable_attach` です。`<ip_address>` はリモート コンピューターの IP アドレスです (明示的なアドレスまたは myvm.cloudapp.net のような名前を指定できます)。`:5678` はリモート デバッグ ポート番号です。 
+1. **[Connection Target]**(接続のターゲット) フィールド (旧バージョンでは **[修飾子]**) に「`tcp://<secret>@<ip_address>:5678`」と入力します。`<secret>` は Python コードで渡される文字列 `enable_attach` です。`<ip_address>` はリモート コンピューターの IP アドレスです (明示的なアドレスまたは myvm.cloudapp.net のような名前を指定できます)。`:5678` はリモート デバッグ ポート番号です。
+
+    > [!Warning]
+    > パブリック インターネット経由で接続している場合は、代わりに `tcps` を使用し、以下の「[デバッガー接続の SSL によるセキュリティ保護](#securing-the-debugger-connection-with-ssl)」の指示に従ってください。
 
 1. Enter キーを押すと、そのコンピューターで使用できる ptvsd プロセスの一覧が生成されます。
 
@@ -194,5 +198,5 @@ ptvsd のリモート デバッグ サーバーへの接続は、既定で、シ
     ![SSL 証明書のホスト名の警告](media/remote-debugging-ssl-warning2.png)
 
 > [!Warning]
-> 現在、これらの警告を無視すると、Visual Studio 2017 Preview はハングします。 すべての問題を修正してから、接続を試行してください。
+> 現在、これらの警告を無視すると、Visual Studio 2017 はハングします。 すべての問題を修正してから、接続を試行してください。
 
