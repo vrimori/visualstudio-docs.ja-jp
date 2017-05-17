@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 管理者ガイド | Microsoft Docs"
 ms.custom: 
-ms.date: 04/06/2017
+ms.date: 05/06/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -32,50 +32,49 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: aebd3abc671f997773fc7c557627ca23b9bf82bd
-ms.lasthandoff: 04/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: b5b496e0de0a12c9f52c944ef9e768c82d9be783
+ms.openlocfilehash: c88a932beac964117ac2fd6ffe171bf4256ac706
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/08/2017
 
 ---
-# <a name="visual-studio-administrator-guide-for-visual-studio-2017"></a>Visual Studio 2017 の管理者ガイド
+# <a name="visual-studio-2017-administrator-guide"></a>Visual Studio 2017 管理者ガイド
 
- Visual Studio をネットワークに配置するには、インストール対象となる各コンピューターが[最小インストール要件](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs)を満たしている必要があります。
+エンタープライズ環境では、エンドユーザーにネットワーク共有またはシステム管理ソフトウェアからインストールを配置することが、システム管理者にとって一般的です。 エンタープライズ展開をサポートするために、Visual Studio セットアップ エンジンを設計しました。これは、インストールの既定値を事前に構成し、インストール プロセス中にプロダクト キーを展開し、ロールアウトが成功した後に製品の更新プログラムを管理するために、システム管理者がネットワーク インストールの場所を作成できるようにします。 この管理者ガイドでは、共通のネットワーク環境でエンタープライズ展開を行うためのシナリオ ベースのガイダンスを示します。
 
- System Center などのソフトウェアから配置するか、バッチ ファイルから配置するかにかかわらず、一般的に次の手順に従って進めます。
+## <a name="steps-for-deploying-visual-studio-2017-in-an-enterprise-environment"></a>エンタープライズ環境で Visual Studio 2017 を配置するための手順
 
-1. ネットワークの場所に [Visual Studio 製品レイアウトをキャッシュ](create-an-offline-installation-of-visual-studio.md)します。
+Visual Studio 2017 をクライアント ワークステーションに配置するには、インストール対象となる各コンピューターが[最小インストール要件](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs)を満たしている必要があります。 System Center などのソフトウェアから配置するか、バッチ ファイルから配置するかにかかわらず、一般的に次の手順に従って進めます。
+
+1. ネットワークの場所に [Visual Studio 製品ファイルを含むネットワーク共有を作成](create-a-network-installation-of-visual-studio.md)します。
 
 2. インストールする[ワークロードとコンポーネントを選択](workload-and-component-ids.md)します。
 
-3. インストールを制御するために選択した項目とその他のコマンド ライン パラメーターを使用して、[インストール スクリプトを作成](use-command-line-parameters-to-install-visual-studio.md)します。
+3. 既定のインストール オプションを含む[応答ファイルを作成](automated-installation-with-response-file.md)します。 または、インストールを制御するためにコマンド ライン パラメーターを使用して、[インストール スクリプトを作成](use-command-line-parameters-to-install-visual-studio.md)します。
 
 4. 必要に応じて、インストール スクリプトの一部として[ボリューム ライセンスのプロダクト キーを適用](automatically-apply-product-keys-when-deploying-visual-studio.md)し、ユーザーがソフトウェアを個別にアクティブにする必要がないようにします。
 
-5. 任意の配置技術を使用して、前の手順で生成したスクリプトをターゲットの開発者ワークステーションで実行します。
+5. ネットワーク レイアウトを更新して、[エンドユーザーに製品の更新プログラムを配信するタイミングを制御](controlling-updates-to-visual-studio-deployments.md)します。
 
-6. 手順 1 で使用したコマンドを定期的に実行して更新されたコンポーネントを追加し、Visual Studio の最新の更新プログラムを適用してネットワークの場所を更新します。
+6. 必要に応じて、レジストリ キーを設定し、[クライアント ワークステーション上にキャッシュされる内容を制御](set-defaults-for-enterprise-deployments.md)します。
+
+7. 任意の配置テクノロジを使用して、前の手順で生成したスクリプトをターゲットの開発者ワークステーションで実行します。
+
+8. 手順 1 で使用したコマンドを定期的に実行して更新されたコンポーネントを追加し、Visual Studio の[最新の更新プログラムを適用してネットワークの場所を更新](update-a-network-installation-of-visual-studio.md)します。
 
 > [!IMPORTANT]
->  ネットワーク共有からのインストールは、出所のソースの場所を記憶します。 これは、クライアント マシンの修復に、クライアントのインストール元のネットワーク共有に戻る必要があることを意味します。 ネットワークの場所は、Visual Studio 2017 クライアントが組織で実行されると予想される有効期間に合わせて配置されるよう慎重に選択してください。
+> ネットワーク共有からのインストールは、出所のソースの場所を記憶します。 これは、クライアント マシンの修復に、クライアントのインストール元のネットワーク共有に戻る必要があることを意味します。 ネットワークの場所は、Visual Studio 2017 クライアントが組織で実行されると予想される有効期間に合わせて配置されるよう慎重に選択してください。
 
 ## <a name="tools"></a>ツール
+クライアント マシンに[インストールされている Visual Studio インスタンスを検出して管理する](tools-for-managing-visual-studio-instances.md)ために役立つ複数のツールが用意されています。
 
- クライアント コンピューターにインストールされている Visual Studio インスタンスを検出して管理するために役立つ複数のツールが用意されています。
-
-* [VSWhere](https://github.com/microsoft/vswhere): Visual Studio のインストール済みインスタンスから主要な Visual Studio ツールの場所を見つけるために役立つ、C++ の実行可能ファイルです。
-* [VSSetup.PowerShell](https://github.com/microsoft/vssetup.powershell): セットアップ構成 API を使用して Visual Studio のインストール済みインスタンスを識別する PowerShell スクリプトです。
-* [VS-Setup-Samples](https://github.com/microsoft/vs-setup-samples): セットアップ構成 API を使用して既存のインストールを照会する方法を示す C# と C++ のサンプルです。
-
-さらに、[セットアップ構成 API](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.setup.configuration.aspx) は、Visual Studio インスタンスを問い合わせるために独自のユーティリティを構築する開発者向けのインターフェイスを提供します。
-
->[!TIP]
->Visual Studio 2017 のインストールの詳細については、[Heath Stewart のブログ記事](https://blogs.msdn.microsoft.com/heaths/tag/vs2017/)を参照してください。
-
+> [!TIP]
+> 管理者のガイドのドキュメントに加えて、Visual Studio 2017 セットアップの情報が、「[Heath Stewart のブログ](https://blogs.msdn.microsoft.com/heaths/tag/vs2017/)」に豊富に含まれています。
 
 ## <a name="see-also"></a>関連項目
 * [Visual Studio 2017 のインストール](install-visual-studio.md)
-* [Visual Studio 2017 のオフライン インストーラーを作成する](create-an-offline-installation-of-visual-studio.md)
+* [オフライン環境での Visual Studio のインストール](install-visual-studio-in-offline-environment.md)
 * [コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする](use-command-line-parameters-to-install-visual-studio.md)
   * [コマンド ライン パラメーターの例](command-line-parameter-examples.md)
 * [Visual Studio 2017 で問題を報告する](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
