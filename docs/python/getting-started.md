@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio での Python の概要 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/1/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -27,16 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 2659c1a3b1adfc3f462971205460942c5fe5171f
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 8001036077b8b14af80fabceafad5d3aff9b25f4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="getting-started-with-python-in-visual-studio"></a>Visual Studio での Python の概要
 
-Visual Studio と Python ワークロード (Visual Studio 2017 の場合) または Python Tools for Visual Studio (Visual Studio 2015 以前の場合) をインストールしたら、さっそく Python での開発を体験してみましょう。
+Visual Studio と Python ワークロード (Visual Studio 2017 の場合) または Python Tools for Visual Studio (Visual Studio 2015 以前の場合) をインストールしたら、さっそく Python での開発を体験してみましょう。 (必要に応じて「[インストール](installation.md)」を参照してください。)
 
 このチュートリアルでは、新しい空の Python アプリケーションを作成し、使用する Python 環境を選択します。次に、コードをいくつか記述して IntelliSense の動作を確認します。 その後、対話型 REPL ウィンドウを少しの間使用してさらにコードを作成し、プログラムを完成させたら、プログラム自体とデバッガーの両方で実行します。
 
@@ -271,4 +272,5 @@ Visual Studio は、プロジェクト管理、豊富な編集機能、対話型
 - Visual Studio では、リモート サーバー上のアプリケーションのデバッグも可能です。詳しくは、「[クロスプラットフォーム リモート デバッグ](debugging-cross-platform-remote.md)」と「[Azure リモート デバッグ](debugging-azure-remote.md)」を参照してください。
 - [Visual Studio プロファイリング](profiling.md)を使用して、Python コードのパフォーマンスを評価できます。
 - 「[Unit Testing (単体テスト)](unit-testing.md)」で説明したように、Python で記述された単体テストは、Visual Studio テスト エクスプローラーと直接統合されます。
+- [Microsoft Virtual Academy の無料 Python コース](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 

@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio での Python |Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/2/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 06f5b9d2223ccb9cbbbff8f2960d89c8efbf05b2
-ms.openlocfilehash: 83a676c5f2f838b6920c5fafbe78dc9b49fbb4cb
-ms.lasthandoff: 04/12/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: c46c8b7a0d9ea1509dcda2ef711562b3cf95b259
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/12/2017
 
 Python は、信頼性と柔軟性に優れ、簡単に学ぶことができ、すべてのオペレーティング システムで自由に使える一般的なプログラミング言語であり、強力な開発者コミュニティと多くの無料ライブラリによってサポートされています。 Python は、Web アプリケーション、Web サービス、デスクトップ アプリ、スクリプト、科学技術計算などのすべての開発方法をサポートし、多くの大学、科学者、一般の開発者、プロの開発者によって同様に使われています。 この言語について詳しくは、[python.org](https://www.python.org) および「[Python for Beginners](https://www.python.org/about/gettingstarted/)」(初心者向けの Python) をご覧ください。
 
-Visual Studio では、Python ワークロードによる Python 言語の[オープンソース](https://github.com/Microsoft/ptvs) サポート (Visual Studio 2017) および無料の Python Tools for Visual Studio 拡張機能 (Visual Studio 2015 以降) が提供されています。 
+Visual Studio では、Python の開発およびデータ サイエンス ワークロードによる Python 言語の[オープンソース](https://github.com/Microsoft/ptvs) サポート (Visual Studio 2017) および無料の Python Tools for Visual Studio 拡張機能 (Visual Studio 2015 以降) が提供されています。 
 
 [インストール手順](installation.md)の説明に従って Python ワークロードをセットアップした後、以下のリンクを使って Python 関連の機能と Visual Studio 自体の機能について詳しく学習してください。
 
@@ -75,7 +76,7 @@ A:  一般的に、Python はインタープリター言語であり、Visual St
 
 [インストール ガイド](installation.md)の説明に従って、以下のエディションの Visual Studio に Python のサポートをインストールできます。
 
-- [Visual Studio 2017 Preview](https://www.visualstudio.com/vs/preview)
+- [Visual Studio 2017 (全エディション)](https://www.visualstudio.com/vs/)
 - [Visual Studio 2015 (全エディション)] (https://www.visualstudio.com/en-us/downloads/visual-studio-2015-downloads-vs)
 - [Visual Studio 2013 Community Edition] (https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)
 - [Visual Studio 2013 Express for Web Update 2 以降](https://www.microsoft.com/en-us/download/details.aspx?id=44912)
@@ -202,4 +203,5 @@ Visual Studio のバージョンおよびエディション別のサポートさ
 
 - [PyKinect を使った Python での Kinect ゲームの作成](https://github.com/Microsoft/PTVS/wiki/PyKinect) (GitHub wiki)
 - [IIS と Python の間の WFastCGI ブリッジ](https://pypi.python.org/pypi/wfastcgi) (python.org)
+- - [Microsoft Virtual Academy の無料 Python コース](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 
