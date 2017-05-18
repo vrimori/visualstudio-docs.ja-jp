@@ -30,17 +30,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d30482dd7f179b38babf0bdaab9cd0e38389541e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c9df048a49580f3526b48e29041ef3758722ed27
+ms.openlocfilehash: 142df9fbf327ee8ebc39c3558ef1632a1bd23ae7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/03/2017
 
 ---
 # <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio プロファイラー API リファレンス (ネイティブ)
 Visual Studio プロファイラー API を使用すると、収集データの量をプログラムで制御したり、タイムスタンプとプロファイルの両方のマークをプロファイル時に挿入したりできます。 ネイティブ API を使用するには、VSPerf.h ヘッダー ファイルをインクルードし、VSPerf.lib をプロジェクトに追加する必要があります。  
   
 > [!NOTE]
->  既定では、VSPerf.h と VSPerf.lib は \<ドライブ>:\Program Files\Microsoft Visual Studio 9\Team Tools\Performance Tools\PerfSDK ディレクトリにあります。  
+>  既定では、VSPerf.h と VSPerf.lib は PerfSDK という名前のフォルダーにあります。 たとえば、\<ドライブ>:\Program Files\Microsoft Visual Studio 14.0\Team Tools\Performance Tools\PerfSDK ディレクトリなどです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [CommentMarkAtProfile](../profiling/commentmarkatprofile.md)  
@@ -64,3 +65,4 @@ Visual Studio プロファイラー API を使用すると、収集データの�
 ## <a name="see-also"></a>関連項目  
  [プロファイリング ツールの API](../profiling/profiling-tools-apis.md)   
  [チュートリアル : プロファイラー API の使用](../profiling/walkthrough-using-profiler-apis.md)
+

@@ -1,7 +1,7 @@
 ---
 title: "クイック アクション | Microsoft Docs"
 ms.custom: 
-ms.date: 03/10/2017
+ms.date: 05/08/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.devlang: csharp
 ms.assetid: e173fb7d-c5bd-4568-ba0f-aa61913b3244
-author: BrianPeek
-ms.author: brpeek
+author: kempb
+ms.author: kempb
 manager: ghogen
 dev_langs:
 - CSharp
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
-ms.openlocfilehash: 226e51ace56d51945cc380aaaf3450ae7dacf8e4
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2831d252fbc9601e62c372ac3df7704e1dc65f2a
+ms.openlocfilehash: e59204427c8d7d1706ca6c85261733efdcbc440e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="quick-actions"></a>クイック アクション
@@ -105,7 +106,7 @@ switch(myEnum)
     case MyEnum.Item3:
         break;
     default:
-        break;    
+        break;
 }
 ```
 
@@ -313,7 +314,7 @@ Debug.WriteLine("Hello")
 ```
 
 ### <a name="convert-to-interpolated-string"></a>挿入文字列に変換する
-[挿入文字列](/dotnet/articles/csharp/language-reference/keywords/interpolated-strings)は、埋め込み変数を含む文字列を表現する簡単な方法であり、**[String.Format](https://msdn.microsoft.com/library/system.string.format(v=vs.110).aspx)** メソッドに似ています。  このクイック アクションは、文字列が連結されている場合、または **String.Format** が使われている場合を認識し、それを挿入文字列に変更します。
+[挿入文字列](/dotnet/articles/csharp/language-reference/keywords/interpolated-strings)は、埋め込み変数を含む文字列を表現する簡単な方法であり、**[String.Format](https://msdn.microsoft.com/library/system.string.format.aspx)** メソッドに似ています。  このクイック アクションは、文字列が連結されている場合、または **String.Format** が使われている場合を認識し、それを挿入文字列に変更します。
 
 ```CSharp
 // Before
@@ -339,5 +340,95 @@ Dim num as Integer = 3
 Dim s As String = $"My string with {num} in the middle"
 ```
 
+### <a name="remove-merge-conflict-markers"></a>マージ競合マーカーを削除する
+このクイック アクションを使用すると、"変更を取り入れる" ことで競合するコードおよびマーカーが削除され、マージ競合を解決することができます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
+
+![リファクタリング - マージ競合を解決する](../ide/media/vside-refactoring-merge-conflicts.png)
+
+### <a name="add-null-checks-for-parameters"></a>パラメーターの null チェックを追加する
+このクイック アクションでは、パラメーターが null であるかどうかを示すチェックをコードに追加できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
+
+![リファクタリング - null チェックを追加する](../ide/media/vside-refactoring-nullcheck.png)
+
+### <a name="constructor-generator-improvements"></a>コンストラクターのジェネレーターの機能強化
+このクイック アクションにより、コンストラクターを作成するときに、生成するプロパティまたはフィールドを選択したり、空の本文からコンストラクターを生成したりできるようになります。 呼び出しサイトから既存のコンストラクターにパラメーターを追加する場合にも使用できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
+
+![リファクタリング - コンストラクターを生成する](../ide/media/vside-refactoring-constructors.png)
+
+### <a name="remove-unused-variables"></a>未使用の変数を削除する
+このクイック アクションでは、宣言されているがコードで一度も使用されていない変数を削除することができます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
+
+![リファクタリング - 未使用の変数](../ide/media/vside-refactoring-unusedvars.png)
+
+### <a name="generate-overrides"></a>オーバーライドを生成する
+このクイック アクションでは、クラスまたは構造体で空白の行からオーバーライドを作成することができます。 **[Pick Members (メンバーの選択)]** ダイアログ ボックスで、オーバーライドするメンバーを選択できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
+
+![リファクタリング - オーバーライド](../ide/media/vside-refactoring-overrides.png)
+
+![リファクタリング - ダイアログ ボックスをオーバーライドする](../ide/media/vside-refactoring-overrides-dialog.png)
+
+### <a name="change-base-for-numeric-literals"></a>数値リテラルの基本を変更する
+このクイック アクションでは、数値リテラルの基本数値システムを別のものに変換できます。 たとえば、数値を 16 進数からバイナリ形式に変更できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
+
+![リファクタリング - 基本を変更する](../ide/media/vside-refactoring-changebase1.png)
+
+![リファクタリング - 基本を変更する](../ide/media/vside-refactoring-changebase2.png)
+
+### <a name="insert-digit-separators-into-literals"></a>リテラルに桁区切り記号を挿入する
+このクイック アクションでは、区切り文字をリテラル値に追加することができます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
+
+![リファクタリング - 桁区切り記号を変更する](../ide/media/vside-refactoring-separators.png)
+
+### <a name="convert-if-construct-to-switch"></a>**if** コンストラクトを **switch** に変換する
+このクイック アクションでは、**if-then-else** コンストラクトを **switch** コンストラクトに変換することができます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
+
+```CSharp
+// Before
+if (obj is string s)
+{
+  Console.WriteLine("obj is a string: " + s);  
+}
+
+else if (obj is int i && i > 10)
+{
+  Console.WriteLine("obj is an int greater than 10");
+}
+
+// Convert to switch
+
+// After
+switch (obj)
+{
+  case string s:
+    Console.WriteLine("Obj is a string: " + s);
+    break;
+  case int i when i > 10:
+    Console.WriteLine("obj is an int greater than 10");
+    break;
+}
+```
+
+```VB
+' Before
+If TypeOf obj Is String s Then
+    Console.WriteLine("obj is a string: " + s)
+Else If TypeOf obj Is Integer i And i > 10 Then
+    Console.WriteLine("obj is an int greater than 10")
+End If
+
+' Convert to switch
+
+' After
+Select Case obj
+  Case String s
+    Console.WriteLine("Obj is a string: " + s)
+    Exit Sub
+  Case Integer i when i > 10
+    Console.WriteLine("obj is an int greater than 10")
+    Exit Sub
+End Select
+```
+
 # <a name="see-also"></a>関連項目
 * [コード スタイルとクイック アクション](code-styles-and-quick-actions.md)
+

@@ -1,7 +1,7 @@
 ---
-title: "Python Tools for Visual Studio でのデバッグ | Microsoft Docs"
+title: "Visual Studio での Python のデバッグ | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: 1d26ca1a464e2ec15c0d5d338a46b6fb1e7e1d65
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: e15edc1f2739cad0960619aa6cb4b089589eebd8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="debugging-your-python-code"></a>Python コードのデバッグ
 
-Python Tools for Visual Studio (PTVS) は、実行中のプロセスへのアタッチ、ウォッチ ウィンドウやイミディエイト ウィンドウでの式の評価、ローカル変数の調査、ブレークポイントの設定、ステートメントのステップ イン/ステップ アウト/ステップ オーバー、次のステートメントの設定など、Python 向けの総合的なデバッグ機能を提供します。 
+Visual Studio は、実行中のプロセスへのアタッチ、ウォッチ ウィンドウやイミディエイト ウィンドウでの式の評価、ローカル変数の調査、ブレークポイントの設定、ステートメントのステップ イン/ステップ アウト/ステップ オーバー、次のステートメントの設定など、Python 向けの総合的なデバッグ機能を提供します。 
 
 デバッグの概要については、動画「[Getting Started with PTVS, Part 4: Debugging (PTVS の概要パート 4: デバッグ)](https://youtu.be/bO7wpzgy74A?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)」(youtube.com、3 分 30 秒) をご覧ください。
 
@@ -58,7 +59,7 @@ Python Tools for Visual Studio (PTVS) は、実行中のプロセスへのアタ
 
 <a name="debugging-without-a-project"</a>
 > [!Tip]
-> PTVS は、プロジェクトを使用しないデバッグをサポートしています。 Visual Studio のエディターで開いたスタンドアロンの Python ファイルを右クリックし、**[デバッグの開始]** を選択すると、PTVS がグローバルな既定の環境 (「[Python Environments (Python 環境)](python-environments.md)」を参照) を使用して、引数なしでスクリプトを起動します。 ただし、それ以降は、フル機能のデバッグ サポートが提供されます。
+> Visual Studio の Python は、プロジェクトを使用しないデバッグをサポートしています。 スタンドアロンの Python ファイルを開き、エディター内で右クリックして、**[デバッグの開始]** を選択すると、Visual Studio がグローバルな既定の環境 (「[Python Environments (Python 環境)](python-environments.md)」を参照) を使用して、引数なしでスクリプトを起動します。 ただし、それ以降は、フル機能のデバッグ サポートが提供されます。
 >
 > 環境と引数を管理するには、コード用にプロジェクトを作成する必要があります。 プロジェクトは、[既存の Python コードから](python-projects.md#creating-a-project-from-existing-files)簡単に作成できます。
 
@@ -121,7 +122,7 @@ Python Tools for Visual Studio (PTVS) は、実行中のプロセスへのアタ
 
 自動変数ウィンドウとローカル ウィンドウの使用方法について詳しくは、「[Inspecting Variables in the Autos and Locals Windows (自動変数ウィンドウおよびローカル ウィンドウでの変数の検査)](../debugger/autos-and-locals-windows.md)」を参照してください。
 
-ウォッチ ウィンドウ (**[デバッグ] > [ウィンドウ] > [ウォッチ 1 ～ 4]**) では、任意の Python 式を入力して結果を表示できます。 式は、ステップごとに再評価されます。
+ウォッチ ウィンドウ (**[デバッグ] > [ウィンドウ] > [ウォッチ 1 ～ 4]** ) では、任意の Python 式を入力して結果を表示できます。 式は、ステップごとに再評価されます。
 
 ![デバッガーのウォッチ ウィンドウ](media/debugging-watch-window.png)
 

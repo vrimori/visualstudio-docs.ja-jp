@@ -1,0 +1,143 @@
+---
+title: "Visual Studio のネットワーク ベース インストールを作成する | Microsoft Docs"
+description: "{{プレースホルダー}}"
+ms.date: 05/05/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- '{{PLACEHOLDER}}'
+- '{{PLACEHOLDER}}'
+ms.assetid: 4CABFD20-962E-482C-8A76-E4012052F701
+author: timsneath
+ms.author: tims
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: c8c48a92ba4ba75e87d947364919688032842265
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
+
+---
+
+# <a name="create-a-network-installation-of-visual-studio-2017"></a>Visual Studio 2017 のネットワーク インストールを作成する
+
+一般的に、企業の管理者はクライアント ワークステーションに展開するためのネットワーク インストール ポイントを作成します。 Microsoft はすべての製品更新と共に初回インストールを 1 つのフォルダーにキャッシュするように Visual Studio 2017 を設計しました (_レイアウトの作成_と呼ばれることもあります)。それにより、最新のサービスに更新していない場合でも、クライアント ワークステーションは、同じネットワークの場所を利用してインストールを管理できます。
+
+> [!NOTE]
+> 複数のエディションの Visual Studio を企業内で利用している場合 (たとえば、Visual Studio Professional と Visual Studio Enteprise の両方)、エディションごとに個別のネットワーク インストール共有を作成する必要があります。
+
+## <a name="download-the-visual-studio-bootstrapper"></a>Visual Studio ブートストラップをダウンロードする
+必要な Visual Studio のエディションを**ダウンロード**します。 必ず **[保存]** をクリックし、**[フォルダーを開く]** をクリックします。
+
+セットアップ実行可能ファイル&mdash;具体的にはブートストラップ ファイル&mdash;は、次のいずれかになります。
+
+|エディション | ダウンロード|
+|-------------|-----------------------|
+|Visual Studio Enterprise | [**vs_enterprise.exe**](https://aka.ms/vs/15/release/vs_enterprise.exe) |
+|Visual Studio Professional | [**vs_professional.exe**](https://aka.ms/vs/15/release/vs_professional.exe) |
+|Visual Studio コミュニティ | [**vs_community.exe**](https://aka.ms/vs/15/release/vs_community.exe) |
+
+その他にサポートされているブートストラップとして、[vs_buildtools.exe](https://aka.ms/vs/15/release/vs_buildtools.exe)、[vs_feedbackclient.exe](https://aka.ms/vs/15/release/vs_feedbackclient.exe)、[vs_teamexplorer.exe](https://aka.ms/vs/15/release/vs_teamexplorer.exe)、[vs_testagent.exe](https://aka.ms/vs/15/release/vs_testagent.exe)、[vs_testcontroller.exe](https://aka.ms/vs/15/release/vs_testcontroller.exe)、[vs_testprofessional.exe](https://aka.ms/vs/15/release/vs_testprofessional.exe) が含まれます。
+
+## <a name="create-an-offline-installation-folder"></a>オフライン インストール フォルダーを作成する
+すべての言語およびすべての機能を持つオフライン インストールを作成するには、次の例のいずれかのコマンドを使用します。
+
+(コマンドをダウンロード ディレクトリから実行していることを確認してください。 通常は、Windows 10 を実行するコンピューター上の `C:\Users\<username>\Downloads` です。)
+
+- Visual Studio Enterprise の場合、以下を実行します。
+  ```
+  vs_enterprise.exe --layout c:\vs2017offline
+  ```
+- Visual Studio Professional の場合、以下を実行します。
+  ```
+  vs_professional.exe --layout c:\vs2017offline
+  ```
+- Visual Studio コミュニティの場合、以下を実行します。
+  ```
+  vs_community.exe --layout c:\vs2017offline
+  ```
+
+## <a name="modify-the-responsejson-file"></a>response.json file を変更する
+response.json を変更し、セットアップの実行時に使用される既定値を設定できます。  たとえば、特定のワークロード セットが自動的に選択されるように `response.json` ファイルを構成できます。
+詳細については、「[Automate Visual Studio installation with a response file](automated-installation-with-response-file.md)」 (応答ファイルで Visual Studio インストールを自動化する) を参照してください。
+
+## <a name="copy-the-layout-to-a-network-share"></a>ネットワーク共有にレイアウトをコピーする
+
+他のコンピューターから実行できるようにネットワーク共有でレイアウトをホストします。
+* 例:<br>
+```xcopy /e c:\vs2017offline \\server\products\VS2017```
+    
+## <a name="customizing-the-network-layout"></a>ネットワーク レイアウトをカスタマイズする
+ネットワーク レイアウトはいくつかの方法でカスタマイズできます。 [言語ロケール](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)、[ワークロード、コンポーネント、推奨の依存関係または任意の依存関係](workload-and-component-ids.md)からなる特定のセットのみを含む部分的レイアウトを作成できます。 これは、一部のワークロードだけをクライアント ワークステーションに展開することがわかっている場合に便利です。 レイアウトをカスタマイズするための一般的コマンド ライン パラメーター:
+
+ - ```--add``` は[ワークロードまたはコンポーネント ID](workload-and-component-ids.md) を指定します。  `--add` を使用すると、`--add` で指定されたワークロードとコンポーネントだけがダウンロードされます。  `--add` を使用しない場合、すべてのワークロードとコンポーネントがダウンロードされます。
+ - ```--includeRecommended``` は指定したワークロード ID のすべての推奨コンポーネントを含めます。
+ - ```--includeOptional``` は指定したワークロード ID のすべての推奨コンポーネントと任意コンポーネントを含めます。
+ - ```--lang``` は[言語ロケール](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)を指定します。
+ 
+次に、レイアウトを部分的にカスタマイズする例をいくつか紹介します。
+
+ - 1 つの言語に対して、すべてのワークロードとコンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --lang en-US```
+ - 複数の言語に対して、すべてのワークロードとコンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --lang en-US de-DE ja-JP```
+ - すべての言語に対して、1 つのワークロードをダウンロードするには、以下を実行します。 <br> ```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --includeRecommended```
+ - 3 つの言語に対して、2 つのワークロードと 1 つのオプション コンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended --lang en-US de-DE ja-JP ```
+ - 2 つのワークロードとその推奨コンポーネントのすべてをダウンロードするには、次を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended ```
+ - 2 つのワークロードとそのすべての推奨コンポーネントと任意コンポーネントをダウンロードするには、次を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeOptional ```
+
+
+## <a name="deploying-from-a-network-installation"></a>ネットワーク インストールから展開する
+管理者はインストール スクリプトの一部として Visual Studio をクライアント ワークステーションに展開することがあります。 あるいは、管理者権限を持つユーザーは共有から直接セットアップを実行し、自分のコンピューターに Visual Studio をインストールできます。
+
+- ユーザーは次を実行してインストールできます。 <br>```\\server\products\VS2017\vs_enterprise.exe```
+- 管理者は次を実行し、無人モードでインストールできます。 <br>```\\server\products\VS2017\vs_enterprise.exe --quiet --wait --norestart```
+
+> [!TIP]
+> バッチ ファイルの一部として実行するとき、`--wait` オプションを利用すると、`vs_enterprise.exe` プロセスはインストールの完了を待ち、それから終了コードを返します。 これは、企業の管理者が完了したインストールでさらにアクションを実行するときに役立ちます (たとえば、[インストールの完了後、製品キーを適用します](automatically-apply-product-keys-when-deploying-visual-studio.md))。 インストールが完了するまで待ってから、そのインストールからのリターン コードを処理する必要があるような状況です。  `--wait` を使用しない場合、vs_enterprise.exe プロセスはインストールが終了する前に終了し、インストール操作の状態を表す正確な終了コードを返しません。
+
+### <a name="error-codes"></a>エラー コード
+`--wait` パラメーターを使用した場合、操作の結果に応じて、`%ERRORLEVEL%` 環境変数は次のいずれかの値に設定されます。
+
+  | **値** | **結果** |
+  | --------- | ---------- |
+  | 0 | 操作は正常に終了しました |
+  | 3010 | 操作は正常に完了しましたが、インストールした製品を使用する前に再起動が必要です |
+  | その他 | 失敗の状態が発生しました。詳細については、ログを参照してください |
+
+## <a name="updating-a-network-install-layout"></a>ネットワーク インストール レイアウトを更新する
+製品の更新プログラムが利用できるようになったら、[ネットワーク インストール レイアウトを更新し](update-a-network-installation-of-visual-studio.md)、更新されたパッケージを組み込むことが推奨されます。
+
+## <a name="how-to-create-a-layout-for-a-previous-visual-studio-2017-release"></a>以前の Visual Studio 2017 リリースのレイアウトを作成する方法
+**注**: http://www.visualstudio.com で入手可能な VS 2017 ブートストラップは、それを実行したときに利用できる最新の VS 2017 リリースをダウンロードし、インストールします。 VS ブートストラップを今日ダウンロードし、今日から 6 か月後に実行すると、6 か月後に利用できる VS 2017 リリースがインストールされます。 レイアウトを作成する場合、そのレイアウトから VS をインストールすると、レイアウトに存在する特定のバージョンの VS がインストールされます。 新しいバージョンがオンラインに存在するとしても、レイアウトに存在するバージョンの VS が取得されます。
+
+旧バージョンの Visual Studio 2017 のレイアウトを作成する場合、https://my.visualstudio.com に進み、サポートされるバージョンの Visual Studio 2017 ブートストラップの "固定" バージョンをダウンロードできます。その旧バージョンのネットワーク インストール レイアウトを作成できます。 
+
+### <a name="how-to-get-support-for-your-offline-installer"></a>オフライン インストーラーのサポートを受ける方法
+オフライン インストールに問題が発生した場合は、マイクロソフトにお知らせください。 問題報告の最善の方法として、[[問題を報告する]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールを使用できます。 このツールでは、テレメトリとログを送信できます。これを、マイクロソフトは問題の診断と解決に役立てます。
+
+他にも利用可能なサポート オプションがあります。 これらの一覧については、[[ご意見]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ページをご覧ください。
+
+## <a name="see-also"></a>関連項目
+* [Visual Studio のインストール](install-visual-studio.md)
+* [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
+* [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)
+* [Visual Studio のワークロードとコンポーネント ID](workload-and-component-ids.md)
+

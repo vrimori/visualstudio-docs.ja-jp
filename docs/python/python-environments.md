@@ -1,7 +1,7 @@
 ---
-title: "Python Tools for Visual Studio での Python 環境 | Microsoft Docs"
+title: "Visual Studio での Python 環境 |Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: 1f8f68e36f94aaf253d304edaa2360333b261be3
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 9140ca7549eefc3ac221f3ca0aa54fde482c8623
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="python-environments"></a>Python 環境
 
-Python コードは常に、インタープリター、ライブラリ (通常は Python 標準ライブラリ)、およびインストールされているパッケージのセットで構成される、特定の Python "*環境*" で実行します。 これら全体により、有効な言語の構造と構文、アクセスできるオペレーティング システム機能、使うことができるパッケージが決まります。
+Visual Studio の Python は、複数の Python 環境の管理を容易にし、異なるプロジェクトで環境を簡単に切り替えられるようにします。 
 
-Visual Studio の Python ワークロードは、複数の Python 環境の管理を容易にし、異なるプロジェクトで環境を簡単に切り替えられるようにします。 環境には環境のライブラリ用の IntelliSense データベースも含まれ、Visual studio エディターで `import` のようなステートメントを入力すると、使用可能なライブラリおよびそのライブラリ内のモジュールの一覧が自動的に表示されます。
+注: Visual Studio の Python を初めて使う場合は、以下のトピックでこのトピックの基礎になっている情報を参照してください。
+
+    - [Visual Studio での Python の使用](python-in-visual-studio.md)
+    - [Visual Studio での Python サポートのインストール](installation.md)
+
+Python コードを常に実行する Python "*環境*" は、インタープリター、ライブラリ (通常は Python 標準ライブラリ)、およびインストールされているパッケージのセットで構成されています。 これら全体により、有効な言語の構造と構文、アクセスできるオペレーティング システム機能、使うことができるパッケージが決まります。
+
+Visual Studio では、環境には環境のライブラリ用の IntelliSense データベースも含まれ、Visual studio エディターで `import` のようなステートメントを入力すると、使用可能なライブラリおよびそのライブラリ内のモジュールの一覧が自動的に表示されます。
 
 多くの場合、開発者は 1 つのグローバル Python 環境のみを使いますが、他のユーザーは複数のグローバル環境、プロジェクト固有の環境、そしておそらくはこのトピックで説明するような仮想環境も、管理する必要があります。
 
@@ -57,7 +65,7 @@ Visual Studio の Python ワークロードは、複数の Python 環境の管�
 
 ## <a name="selecting-and-installing-python-interpreters"></a>Python インタープリターの選択とインストール
 
-Visual Studio 2017 Preview を除き、Python のサポートに Python インタープリターは付属しないので、コードを実行するには次のいずれかをインストールする必要があります。 一般に、Visual Studio は新しくインストールされたインタープリターを自動的に検出し、それ用に環境を設定します。 そうならない場合は、後の[既存インタープリター用の環境の作成](#creating-an-environment-for-an-existing-interpreter)に関する説明をご覧ください。
+Visual Studio 2017 を除き、Python のサポートに Python インタープリターは付属しないので、コードを実行するには次のいずれかをインストールする必要があります。 一般に、Visual Studio は新しくインストールされたインタープリターを自動的に検出し、それ用に環境を設定します。 そうならない場合は、後の[既存インタープリター用の環境の作成](#creating-an-environment-for-an-existing-interpreter)に関する説明をご覧ください。
 
 | インタープリター | 説明 | 
 | --- | --- | 
@@ -82,7 +90,7 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 ![[Python Environments (Python 環境)] ウィンドウ](media/environments-default-view.png)
 
-上の例では、Python 3.4 (32 ビット CPython) と IronPython の 32 および 64 ビット バージョンがインストールされています。 太字で表示される既定の環境は Python 3.4 であり、すべての新しいプロジェクトに使われます。 環境が何も表示されない場合は、Python Tools for Visual Studio はインストールされていますが、Python インタープリターはインストールされていないことを意味します (前の「[Python インタープリターの選択とインストール](#selecting-and-installing-python-interpreters)」を参照)。
+上の例は、Python 3.4 (32 ビット CPython) と共に IronPython 2.7 の 32 および 64 ビット バージョンがインストールされることを示しています。 この場合、太字で表示される既定の環境は Python 3.4 であり、すべての新しいプロジェクトに使われます。 環境が何も表示されない場合は、Visual Studio 2015 以降に Python Tools for Visual Studio はインストールされていますが、Python インタープリターはインストールされていないことを意味します (前の「[Python インタープリターの選択とインストール](#selecting-and-installing-python-interpreters)」を参照)。 
 
 > [!Tip]
 > 上記のように、"*[Python Environments (Python 環境)]*" ウィンドウの幅が狭いときは、環境が上部に一覧表示され、さまざまなタブは下部に表示されます。 ただし、ウィンドウを十分に広げた方が作業しやすくなります。
