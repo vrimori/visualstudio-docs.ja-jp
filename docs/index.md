@@ -3,10 +3,11 @@ layout: HubPage
 hide_bc: true
 title: "Visual Studio ドキュメント"
 description: "Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。"
-translationtype: Human Translation
-ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
-ms.openlocfilehash: 5a8448dff45473fa40892fb07604759a9d015021
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2831d252fbc9601e62c372ac3df7704e1dc65f2a
+ms.openlocfilehash: a8f12e3418da5ec6fe778d3a7eaed610c120a859
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/10/2017
 
 ---
 <div id="main" class="v2">
@@ -201,7 +202,7 @@ ms.lasthandoff: 03/31/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Python (プレビュー)</h3>
+                                                    <h3>Python</h3>
                                                     <p>Django や Flask を含め、使い慣れたフレームワークを使って Python アプリを対話式に開発します。</p>
                                                 </div>
                                             </div>
@@ -247,6 +248,25 @@ ms.lasthandoff: 03/31/2017
                                     </div>
                                 </a>
                             </li>                            
+                            <li>        
+                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">        
+                                  <div class="cardSize">        
+                                    <div class="cardPadding">        
+                                      <div class="card">        
+                                        <div class="cardImageOuter">        
+                                          <div class="cardImage bgdAccent1 cardScaleImage">        
+                                            <img data-scaleimage="./images/vs_web-6.svg" src="./images/vs_web-6.svg" alt="" />        
+                                        </div>        
+                                        </div>        
+                                          <div class="cardText">        
+                                            <h3>データ サイエンスと分析のアプリケーション</h3>        
+                                            <p>Python、R、F# など、データ サイエンス アプリケーションを作成するための言語とツール。</p>        
+                                        </div>        
+                                      </div>        
+                                    </div>        
+                                  </div>        
+                                </a>        
+                            </li>
                             <li>
                                 <a href="https://go.microsoft.com/fwlink/?linkid=833075">
                                     <div class="cardSize">
@@ -287,7 +307,7 @@ ms.lasthandoff: 03/31/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>.NET によるモバイル開発</h3>
+                                                    <h3>.NET 向けのモバイル開発</h3>
                                                     <p>iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、Xamarin を使って構築します。</p>
                                                 </div>
                                             </div>
@@ -589,7 +609,7 @@ ms.lasthandoff: 03/31/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>データ</h3>
-                                                    <p>ローカル コンピューター、ローカル エリア ネットワーク、あるいはパブリック クラウド、プライベート クラウド、またはハイブリッド クラウドにおいて、任意の形式や任意の場所で、任意のデータベース製品またはサービスを、仮想的にデータに接続させるアプリケーションを作成します。</p>
+                                                    <p>任意のデータベースまたはサービス、および任意の場所 (ローカルまたはクラウド) に接続するデータ アプリを作成します。 </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -731,7 +751,7 @@ ms.lasthandoff: 03/31/2017
                                             </div>
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833068">
-                                                    <h3>Python (プレビュー)</h3>
+                                                    <h3>Python</h3>
                                                     <p>RAD (Rapid Application Development) のためにしばしば使われる、動的でオブジェクト指向の高水準プログラミング言語。</p>
                                                 </a>
                                             </div>
