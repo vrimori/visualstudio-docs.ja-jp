@@ -42,8 +42,8 @@ Visual Studio の Python は、複数の Python 環境の管理を容易にし�
 
 注: Visual Studio の Python を初めて使う場合は、以下のトピックでこのトピックの基礎になっている情報を参照してください。
 
-    - [Visual Studio での Python の使用](python-in-visual-studio.md)
-    - [Visual Studio での Python サポートのインストール](installation.md)
+- [Visual Studio での Python の使用](python-in-visual-studio.md)
+- [Visual Studio での Python サポートのインストール](installation.md)
 
 Python コードを常に実行する Python "*環境*" は、インタープリター、ライブラリ (通常は Python 標準ライブラリ)、およびインストールされているパッケージのセットで構成されています。 これら全体により、有効な言語の構造と構文、アクセスできるオペレーティング システム機能、使うことができるパッケージが決まります。
 
