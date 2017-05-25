@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 444f6bf46c3eac65a2771655616fd67d8ed83b32
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>コード化された UI テストのベスト プラクティス
@@ -70,7 +71,7 @@ ms.lasthandoff: 04/04/2017
   
  コード化された UI テストは、ユーザー インターフェイス内の多くの変更に自動的に適応します。 たとえば、UI 要素の位置や色が変更された場合、通常はコード化された UI テストにより適切な要素が検索されます。  
   
- テストの実行中、UI コントロールはテスト フレームワークによって検索されます。その際、**コード化された UI テスト ビルダー**によって `UIMap.Designer.cs` ファイルに作成された定義の各コントロール クラスに適用される、一連の検索プロパティが使用されます。 検索プロパティには、コントロールの識別に使用できるプロパティ名とプロパティ値を表す名前と値のペアが含まれます (コントロールの <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A>、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A>、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> プロパティなど)。 検索プロパティが変更されない場合、コード化された UI テストにより UI 内のコントロールが正常に検索されます。 検索プロパティが変更された場合、コード化された UI テストでは、UI 内のコントロールとウィンドウを検索するためのヒューリスティックを適用する高度な一致検出アルゴリズムを使用できます。 UI が変更されている場合は、以前識別された要素が確実に検出されるように、その要素の検索プロパティを変更できます。  
+ テストの実行中、UI コントロールはテスト フレームワークによって検索されます。その際、**コード化された UI テスト ビルダー**によって `UIMap.Designer.cs` ファイルに作成された定義の各コントロール クラスに適用される、一連の検索プロパティが使用されます。 検索プロパティには、コントロールの識別に使用できるプロパティ名とプロパティ値の名前と値のペアが含まれます (コントロールの <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A> プロパティ、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> プロパティ、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> プロパティなど)。 検索プロパティが変更されない場合、コード化された UI テストにより UI 内のコントロールが正常に検索されます。 検索プロパティが変更された場合、コード化された UI テストでは、UI 内のコントロールとウィンドウを検索するためのヒューリスティックを適用する高度な一致検出アルゴリズムを使用できます。 UI が変更されている場合は、以前識別された要素が確実に検出されるように、その要素の検索プロパティを変更できます。  
   
 ## <a name="what-to-do-if-your-user-interface-changes"></a>ユーザー インターフェイスが変更された場合の作業  
  開発中にユーザー インターフェイスが変更されることはよくあります。 このような変更の影響を軽減する方法を次に示します。  
