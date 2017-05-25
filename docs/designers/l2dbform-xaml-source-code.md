@@ -28,9 +28,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: b62eac5ab4b057e26ed4a0a34551655984449cf1
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 02/22/2017
   
  `<ObjectDataProvider>` タグ (11 ～ 25 行目) では、`LoadedBooks` という <xref:System.Windows.Data.ObjectDataProvider> を宣言しています。これはソースとして <xref:System.Xml.Linq.XElement> を使用します。 この <xref:System.Xml.Linq.XElement> は、埋め込みの XML ドキュメント (`CDATA` 要素) を解析して初期化されます。 組み込み XML ドキュメントの宣言時および解析時に、空白が保持されることに注意してください。 これは、生の XML の表示に使用されている <xref:System.Windows.Controls.TextBlock> コントロールに、XML の書式を設定する機能がないためです。  
   
- 最後に、`BookTemplate` という <xref:System.Windows.DataTemplate> が 28 ～ 34 行目で宣言されます。 このテンプレートは、[Book List] UI セクションにエントリを表示するために使用されます。 **** ここでは、データ バインドおよび LINQ to XML の動的プロパティを使用し、次の代入を通じて書籍の ID と名前を取得します。  
+ 最後に、`BookTemplate` という <xref:System.Windows.DataTemplate> が 28 ～ 34 行目で宣言されます。 このテンプレートは、[**Book List**] UI セクションにエントリを表示するために使用されます。 ここでは、データ バインドおよび LINQ to XML の動的プロパティを使用し、次の代入を通じて書籍の ID と名前を取得します。  
   
 ```  
 Text="{Binding Path=Attribute[id].Value}"Text="{Binding Path=Value}"  
@@ -90,13 +91,13 @@ ItemTemplate ="{StaticResource BookTemplate}"
 DataContext="{Binding ElementName=lbBooks, Path=SelectedItem}"  
 ```  
   
- 次に、双方向データ バインドを使用して、書籍要素の現在の値がこのパネルの&2; つのテキスト ボックスに表示され、そこで更新されるようにしています。 動的プロパティへのデータ バインドは、 `BookTemplate` データ テンプレートで使用されているデータ バインドと似ています。  
+ 次に、双方向データ バインドを使用して、書籍要素の現在の値がこのパネルの 2 つのテキスト ボックスに表示され、そこで更新されるようにしています。 動的プロパティへのデータ バインドは、 `BookTemplate` データ テンプレートで使用されているデータ バインドと似ています。  
   
 ```  
 Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"  
 ```  
   
- 最後の UI セクション [Add New Book] では、XAML コード内でデータ バインドが使用されていません。代わりに、データ バインドに類似したコードが L2DBForm.xaml.cs ファイルのイベント処理コードに記述されています。 ****  
+ 最後の UI セクション [**Add New Book**] では、XAML コード内でデータ バインドが使用されていません。代わりに、データ バインドに類似したコードが L2DBForm.xaml.cs ファイルのイベント処理コードに記述されています。  
   
 ## <a name="example"></a>例  
   
