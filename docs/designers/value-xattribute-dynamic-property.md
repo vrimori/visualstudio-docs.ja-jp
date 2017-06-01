@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: c013001a52e5b894bcbcdaf9a40309505b39140c
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="value-xattribute-dynamic-property"></a>Value (XAttribute 動的プロパティ)
@@ -46,16 +47,16 @@ attrib.Value
 ```  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- この属性の値を含む <xref:System.String>。  
+ この属性の値を表す <xref:System.String> です。  
   
 ## <a name="exceptions"></a>例外  
   
-|例外の種類|条件|  
+|例外の種類|状態|  
 |--------------------|---------------|  
 |<xref:System.ArgumentNullException>|設定時に `value` が `null` である場合に発生します。|  
   
 ## <a name="remarks"></a>コメント  
- このプロパティは <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> クラスの <xref:System.Xml.Linq.XAttribute.Value%2A> プロパティに相当します。ただし、この動的プロパティは変更通知もサポートします。  
+ このプロパティは、<xref:System.Xml.Linq.XAttribute.Value%2A> クラスの <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> プロパティに相当します。ただし、この動的プロパティは変更通知もサポートします。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>   

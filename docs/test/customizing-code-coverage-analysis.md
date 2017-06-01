@@ -26,9 +26,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 5778e6b7c4a93c2d03ff00fcaaaf5a25807b0a00
+ms.contentlocale: ja-jp
 ms.lasthandoff: 04/04/2017
 
 ---
@@ -217,7 +218,7 @@ ms.lasthandoff: 04/04/2017
   
 3.  [**プロセス**] ページで [**自動テスト**]、[**テスト ソース**]、[**実行設定**] の順に展開します。 **.runsettings** ファイルを選択します。  
   
-    -   *しかし、**[テスト ソース]** の代わりに **[テスト アセンブリ]** が表示されます。**[実行設定]** フィールドを設定しようとすると、.testsettings ファイルしか選択できません。*  
+    -   *しかし、 **[テスト ソース]** の代わりに **[テスト アセンブリ]** が表示されます。**[実行設定]** フィールドを設定しようとすると、.testsettings ファイルしか選択できません。*  
   
          **[自動テスト]** の下の **[テスト アセンブリ]** を選択し、行の末尾の **[...]** ボタンを選択します。 **[テストの実行の追加と編集]** ダイアログ ボックスで、**[テスト ランナー]** を **[Visual Studio テスト ランナー]** に設定します。  
   

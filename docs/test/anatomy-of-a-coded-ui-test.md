@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: bf50213627703ac18257e3f0ec44c20cc7bb2cc9
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="anatomy-of-a-coded-ui-test"></a>コード化された UI テストの構造
@@ -73,10 +74,10 @@ using Mouse = Microsoft.VisualStudio.TestTools.UITesting.Mouse;
 using MouseButtons = System.Windows.Forms.MouseButtons;  
 ```  
   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls> 名前空間は、Windows ユーザー インターフェイス (UI) 用に含まれています。 Web ページ UI 用の名前空間は <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>、Foundation UI 用の名前空間は <xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls> です。  
+ <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls> 名前空間は、Windows ユーザー インターフェイス (UI) 用に含まれています。 Web ページ UI 用の名前空間は <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>、Windows Presentation Foundation UI 用の名前空間は <xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls> です。  
   
 ####  <a name="UIMapClass"></a>UIMap クラス  
- ファイルの次のセクションは <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> クラスです。  
+ ファイルの次のセクションは、<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> クラスです。  
   
 ```  
 [GeneratedCode("Coded UITest Builder", "10.0.21221.0")]  
@@ -207,7 +208,7 @@ public class AddItemsParams
 #### <a name="uimap-class"></a>UIMap クラス  
  ここでは、<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> クラスの機能を拡張するためのカスタム コードを作成できます。 このファイルで作成するコードは、テストが変更されるたびに **[コード化された UI テスト ビルダー]** によって再生成されることはありません。  
   
- <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> のすべての部分から、<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> クラスの他のすべての部分のメソッドやプロパティを使用できます。  
+ <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> クラスのすべての部分から、<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> の他のすべての部分のメソッドやプロパティを使用できます。  
   
 ###  <a name="CodedUITestCS"></a>CodedUITest1.cs  
  このファイルは **[コード化された UI テスト ビルダー]** によって生成されますが、テストが変更されるたびに再作成されることはありません。したがって、このファイルではコードを変更できます。 ファイルの名前は、テストに対して作成時に指定した名前から生成されます。  
@@ -273,7 +274,7 @@ public void MyTestCleanup()
 }  
 ```  
   
- `MyTestInitialize()` メソッドには、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute> が適用されています。これにより、テスト フレームワークは、他のテスト メソッドより前にこのメソッドを呼び出します。 同様に、`MyTestCleanup()` メソッドには、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute> が適用されています。これにより、テスト フレームワークは、他のすべてのテスト メソッドが呼び出された後にこのメソッドを呼び出します。 これらのメソッドの使用は任意です。 このテストでは、`CodedUITest1Method1()` からではなく、`UIMap.LaunchCalculator()` メソッドは `MyTestInitialize()` から、`UIMap.CloseCalculator()` メソッドは `MyTestCleanup()` から、それぞれ呼び出すことができます。  
+ `MyTestInitialize()` メソッドには、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute> が適用されています。これにより、テスト フレームワークは、他のテスト メソッドより前にこのメソッドを呼び出します。 同様に、`MyTestCleanup()` メソッドには、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute> が適用されいます。これにより、テスト フレームワークは、他のすべてのテスト メソッドが呼び出された後にこのメソッドを呼び出します。 これらのメソッドの使用は任意です。 このテストでは、`CodedUITest1Method1()` からではなく、`UIMap.LaunchCalculator()` メソッドは `MyTestInitialize()` から、`UIMap.CloseCalculator()` メソッドは `MyTestCleanup()` から、それぞれ呼び出すことができます。  
   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute> を使用して、このクラスにさらにメソッドを追加した場合、テスト フレームワークは各メソッドをテストの一部として呼び出します。  
   

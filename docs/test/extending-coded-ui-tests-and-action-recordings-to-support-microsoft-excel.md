@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 612a2a800227d3a0bd1b416160058c44ba3e2cd8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 2ad95e87681907117eb9a3329716a3dd590bd6b8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>コード化された UI テストと操作の記録を拡張して Microsoft Exce をサポート
@@ -45,7 +46,7 @@ ms.lasthandoff: 02/22/2017
 アーキテクチャの概要  
   
 ## <a name="download-the-sample"></a>サンプルのダウンロード  
- サンプルは、`CodedUIExtensibilitySample.sln` ソリューションの次の&4; つのプロジェクトで構成されています。  
+ サンプルは、`CodedUIExtensibilitySample.sln` ソリューションの次の 4 つのプロジェクトで構成されています。  
   
 -   CodedUIextensibilitySample  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 02/22/2017
   
  "`%CommonProgramFiles(x86)%\Microsoft Shared\VSTT\<version number>\UITestExtensionPackages\*.*`"。ここで、バージョン番号は 11.0、12.0 など、Visual Studio のバージョンに基づいたものとなります。  
   
- `ExcelUICommunicationHelper` の DLL ファイルおよび PDB ファイルは、`"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”` にコピーされます。  
+ `ExcelUICommunicationHelper` の DLL ファイルおよび PDB ファイルは、`"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies"` にコピーされます。  
   
  コピーの正確なパスの調整が必要になる場合がありますが、追加のインストールを行う必要はありません。 64 ビット コンピューターでは、32 ビット Visual Studio Enterprise コマンド プロンプトを使用して、`CopyDrop.bat` ファイルを実行します。  
   

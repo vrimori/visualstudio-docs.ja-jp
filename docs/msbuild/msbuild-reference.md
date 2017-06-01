@@ -1,26 +1,45 @@
 ---
 title: "MSBuild リファレンス | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild リファレンス"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MSBuild, reference
 ms.assetid: 093395e1-70da-4f74-b34d-046c5e2b32e8
 caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 22
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f6c59188abc8cbb9909c12438bc58fa9301d8af9
+ms.openlocfilehash: 25d55f075a3586356cc291e2811520a9bbafadf0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
+
 ---
 # <a name="msbuild-reference"></a>MSBuild リファレンス
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のビルド システムです。 次のリンクは、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] リファレンス情報を示すトピックへのリンクです。  
@@ -92,8 +111,3 @@ caps.handback.revision: 22
   
  <xref:Microsoft.Build.Utilities>  
  Utilities 名前空間のリファレンスです
-
-
-<!--HONumber=Feb17_HO4-->
-
-
