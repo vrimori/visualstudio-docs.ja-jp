@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: 7ebf1dfaa3753f1a1908b0327e8ed938115f1f13
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -61,7 +62,7 @@ ms.lasthandoff: 02/22/2017
 2.  **[新しいプロジェクト]** ダイアログ ボックスの上部にある一覧で、プロジェクトの対象とする .NET Framework のバージョンを選択します。  
   
     > [!NOTE]
-    >  通常、.NET Framework の&1; 種類のバージョンのみが、Visual Studio と共にインストールされます。 別のバージョンを対象とする場合は、そのバージョンがインストールされていることを最初に確認する必要があります。 「[Visual Studio のマルチ ターゲットの概要](../ide/visual-studio-multi-targeting-overview.md)」を参照してください。  
+    >  通常、.NET Framework の 1 種類のバージョンのみが、Visual Studio と共にインストールされます。 別のバージョンを対象とする場合は、そのバージョンがインストールされていることを最初に確認する必要があります。 「[Visual Studio のマルチ ターゲットの概要](../ide/visual-studio-multi-targeting-overview.md)」を参照してください。  
   
 3.  インストール済みテンプレートのリストで、作成しようとするプロジェクトの種類を選択し、プロジェクトに名前を付けて **[OK]** をクリックします。  
   

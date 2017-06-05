@@ -38,9 +38,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 753b4abd76b56ff46406b3a2f5ab5b8fb008c526
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -192,7 +193,7 @@ ms.lasthandoff: 02/22/2017
   
      プロファイラーの情報が Visual Studio の新しいタブに表示されます。 CPU 使用状況とビジュアル スループット (FPS) のデータを見ると、次のような傾向があることがすぐにわかります。  
   
-    -   CPU 使用状況は約 3 秒後 (**[Waiting for values] (値の待機)** ボタンをクリックしたとき) に大幅に増加し、それ以降は明確なイベント パターン (スクリプト イベント、スタイリング イベント、レンダリング イベントの一貫した組み合わせ) を示します。  
+    -   CPU 使用状況は約 3 秒後 (**[Waiting for values]\(値の待機)** ボタンをクリックしたとき) に大幅に増加し、それ以降は明確なイベント パターン (スクリプト イベント、スタイリング イベント、レンダリング イベントの一貫した組み合わせ) を示します。  
   
     -   ビジュアル スループットは影響を受けておらず、FPS は全体を通じて 60 のままです (つまり、フレームのドロップはありません)。  
   
