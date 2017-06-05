@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: 9057a6bd209d4761c147577888dffa2933bbf4c8
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -52,7 +53,7 @@ CSC.exe をラップし、実行可能ファイル (.exe ファイル)、ダイ�
 |パラメーター|説明|  
 |---------------|-----------------|  
 |`AdditionalLibPaths`|省略可能な `String[]` 型のパラメーターです。<br /><br /> 参照を検索する追加のディレクトリを指定します。 詳しくは、「[/lib (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/lib-compiler-option)」をご覧ください。|  
-|`AddModules`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリを構成する&1; つ以上のモジュールを指定します。 詳しくは、「[/addmodule (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/addmodule-compiler-option)」をご覧ください。|  
+|`AddModules`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリを構成する 1 つ以上のモジュールを指定します。 詳しくは、「[/addmodule (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/addmodule-compiler-option)」をご覧ください。|  
 |`AllowUnsafeBlocks`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、[unsafe](/dotnet/csharp/language-reference/keywords/unsafe) キーワードを使用するコードをコンパイルします。 詳しくは、「[/unsafe (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/unsafe-compiler-option)」をご覧ください。|  
 |`ApplicationConfiguration`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリ バインド設定を含むアプリケーション構成ファイルを指定します。|  
 |`BaseAddress`|省略可能な `String` 型のパラメーターです。<br /><br /> DLL を読み込む位置に推奨されるベース アドレスを指定します。 DLL の既定のベース アドレスは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 共通言語ランタイムにより設定されます。 詳しくは、「[/baseaddress (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option)」をご覧ください。|  
@@ -97,7 +98,7 @@ CSC.exe をラップし、実行可能ファイル (.exe ファイル)、ダイ�
 |`Win32Resource`|省略可能な `String` 型のパラメーターです。<br /><br /> Win32 リソース (.res) ファイルを出力ファイルに挿入します。 詳しくは、「[/win32res (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option)」をご覧ください。|  
   
 ## <a name="remarks"></a>コメント  
- 上記のパラメーター以外に、このタスクは `Microsoft.Build.Tasks.ManagedCompiler` クラスからパラメーターを継承します。このクラスは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスから継承されます。<xref:Microsoft.Build.Tasks.ToolTaskExtension> クラス自体は <xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは `Microsoft.Build.Tasks.ManagedCompiler` クラスからパラメーターを継承します。このクラスは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスから継承されます。クラス自体は <xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`Csc` タスクを使用し、`Compile` アイテム コレクションのソース ファイルから実行可能ファイルをコンパイルしています。  
