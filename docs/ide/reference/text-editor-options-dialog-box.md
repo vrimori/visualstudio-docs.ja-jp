@@ -1,5 +1,5 @@
 ---
-title: "[テキスト エディター] ([オプション] ダイアログ ボックス) | Microsoft Docs"
+title: "[テキスト エディター]([オプション] ダイアログ ボックス) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,13 +39,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 7d7257c2c82cb07edef81d52ea6f7364835fe81d
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="text-editor-options-dialog-box"></a>[テキスト エディター] ([オプション] ダイアログ ボックス)
+# <a name="text-editor-options-dialog-box"></a>[テキスト エディター]\([オプション] ダイアログ ボックス)
 [**オプション**] ダイアログ ボックスのエディター オプションには、エディターの表示と動作をカスタマイズするための方法が用意されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
