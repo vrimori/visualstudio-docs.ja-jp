@@ -1,7 +1,7 @@
 ---
 title: "プロファイリング機能ツアー | Microsoft Docs"
-ms.custom: 
-ms.date: 02/03/2016
+ms.custom: H1HackMay2017
+ms.date: 05/18/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -30,13 +30,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 2beee9df6c4897d1fa7d55502a7ed277a1eb6046
-ms.openlocfilehash: 4a64d7385009b6d502fc20acfbead4b49323fa4f
-ms.lasthandoff: 03/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
+ms.openlocfilehash: a219a09f96b34a434a3bf1103e560104c294eb96
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="profiling-feature-tour"></a>プロファイリング機能ツアー
+# <a name="feature-tour-of-profiling-in-visual-studio"></a>Visual Studio のプロファイリング機能ツアー
 
 Visual Studio にはさまざまなプロファイリング ツールがあります。各種アプリの多様な問題を診断できます。
 
@@ -58,7 +59,7 @@ Visual Studio にはさまざまなプロファイリング ツールがあり�
 
 ![診断ツールの CPU 使用率を有効にする](../profiling/media/prof-tour-enable-cpu-profiling.png "Diagnostic Tools Enable CPU Usage")
 
-このツールを最も効果的に使用するには、コードにブレークポイントを&2; つ設定します。関数の始めと終わりに&1; つずつ設定するか、分析するコードの領域に設定します。 2 つ目のブレークポイントで止まったとき、プロファイリング データを調べます。
+このツールを最も効果的に使用するには、コードにブレークポイントを 2 つ設定します。関数の始めと終わりに 1 つずつ設定するか、分析するコードの領域に設定します。 2 つ目のブレークポイントで止まったとき、プロファイリング データを調べます。
 
 **CPU 使用率**ビューには、関数が実行時間順に一覧表示されます。実行時間が最も長い関数が一番上に表示されます。 パフォーマンス上のボトルネックが発生している関数を見つけるのに役立ちます。
 
@@ -72,11 +73,11 @@ Visual Studio にはさまざまなプロファイリング ツールがあり�
 
 診断ツール ウィンドウでは、アプリのメモリ使用量を測定することもできます。 たとえば、ヒープのオブジェクトの数とサイズと数を確認できます。 メモリの分析方法の詳細については、「[メモリ使用量](../profiling/memory-usage.md)」を参照してください。
 
-メモリ使用量を分析するには、デバッグ中に少なくとも&1; 枚のメモリ スナップショットを取得する必要があります。 多くの場合、メモリを分析する最良の方法は&2; 枚のスナップショットを取得することです。疑われるメモリ問題の発生直前に&1; 枚、発生直後に&1; 枚取得します。 それから、2 枚のスナップショットの違いを表示し、厳密に何が変化しているのか確認します。
+メモリ使用量を分析するには、デバッグ中に少なくとも 1 枚のメモリ スナップショットを取得する必要があります。 多くの場合、メモリを分析する最良の方法は 2 枚のスナップショットを取得することです。疑われるメモリ問題の発生直前に 1 枚、発生直後に 1 枚取得します。 それから、2 枚のスナップショットの違いを表示し、厳密に何が変化しているのか確認します。
 
 ![診断ツールでスナップショットを取得する](../profiling/media/prof-tour-take-snapshots.gif "Diagnostic Tools Take Snapshots")
 
-矢印リンクの&1; つを選択すると、ヒープの差分ビューが与えられます (赤い上向き矢印![メモリ使用量増加](../profiling/media/prof-tour-mem-usage-up-arrow.png "メモリ使用量増加")は、オブジェクト数の増加 (左) とヒープ サイズの増加 (右) を示します)。 右のリンクをクリックすると、差異ヒープ ビューが表示されます。ヒープ サイズが多い順でオブジェクトが表示されます。 メモリ問題の厳密な場所の発見に役立ちます。 たとえば、次の図では、`ClassHandlersStore` オブジェクトで使用されているバイトが 2 枚目のスナップショットで 3,492 バイト増えています。
+矢印リンクの 1 つを選択すると、ヒープの差分ビューが与えられます (赤い上向き矢印![メモリ使用量増加](../profiling/media/prof-tour-mem-usage-up-arrow.png "メモリ使用量増加")は、オブジェクト数の増加 (左) とヒープ サイズの増加 (右) を示します)。 右のリンクをクリックすると、差異ヒープ ビューが表示されます。ヒープ サイズが多い順でオブジェクトが表示されます。 メモリ問題の厳密な場所の発見に役立ちます。 たとえば、次の図では、`ClassHandlersStore` オブジェクトで使用されているバイトが 2 枚目のスナップショットで 3,492 バイト増えています。
 
 ![診断ツールのヒープ差分ビュー](../profiling/media/prof-tour-mem-usage-diff-heap.png "Diagnostic Tools Heap Diff view")
 
@@ -176,7 +177,7 @@ CPU 使用量ツールやメモリ使用量ツールに現在入っていない�
 |[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|可|no|可 (ASP.NET Core の場合は no)|  
 |[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise のみ|.NET Enterprise のみ|.NET Enterprise のみ|
 |[ネットワーク使用率](../profiling/network-usage.md)|no|可|no| 
-|[HTML UI の応答性](../profiling/html-ui-responsiveness.md)|no|HTML の場合は可、XAML の場合は不可|no|  
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|HTML の場合は可、XAML の場合は不可|no|  
 |[JavaScript メモリ](../profiling/javascript-memory.md)|no|HTML の場合は可、XAML の場合は不可|no|  
 
 ## <a name="see-also"></a>関連項目  

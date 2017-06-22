@@ -29,23 +29,31 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 4ed8637dada5293a2d326568c2f0f15924f9b953
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c1c9f7dc62fab9de6bc32c80138c3fadbb036200
+ms.openlocfilehash: 79f4da148658c950957636fd050b5e83947f04b7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="generate-unit-tests-for-your-code-with-intellitest"></a>IntelliTest でのコードの単体テストの生成
 IntelliTest はテスト データおよび単体テストのスイートを生成するために .NET コードを確認します。 コードにある各ステートメントについて、そのステートメントを実行するテスト入力が生成されます。 コード内の各条件付き分岐について、ケース分析が実行されます。 たとえば、ステートメント、アサーション、および例外をスローするすべての操作が分析されます。 この分析は、各メソッドのパラメーター化された単体テストのためにテスト データを生成し、高いコード カバレッジを持つ単体テストを作成するために使用されます。  
   
  IntelliTest を実行すると、どのテストが失敗しているかを簡単に把握し、必要なコードを追加して修正できます。 回帰スイートを提供するために、生成されたどのテストをテスト プロジェクトに保存するかを選択できます。 コードを変更する際に、IntelliTest を再実行して、生成されたテストとコードの変更を同期させます。  
+
+## <a name="availability-and-extensions"></a>可用性と拡張機能
+
+**[IntelliTest の作成]** および **[IntelliTest の実行]** メニュー コマンドは次のとおりです。
+
+* Visual Studio 2015 以降の Enterprise Edition でのみ使うことができます。
+
+* .NET Framework を対象とする C# コードのみをサポートします。
+
+* [拡張可能](#extend-framework)であり、MSTest、MSTest V2、NUnit、xUnit 形式でのテストの発行をサポートします。
   
- IntelliTest は C# でのみ使用可能です。x64 構成はサポートしてません。  
+* x64 の構成はサポートしません。  
   
-## <a name="get-started-with-intellitest"></a>IntelliTest の概要  
- Visual Studio Enterprise が必要です。  
-  
-### <a name="explore-use-intellitest-to-explore-your-code-and-generate-unit-tests"></a>探索: IntelliTest を使用してコードを確認し、単体テストを生成する  
+## <a name="explore-use-intellitest-to-explore-your-code-and-generate-unit-tests"></a>探索: IntelliTest を使用してコードを確認し、単体テストを生成する  
  単体テストを生成するには、パブリック型でなければなりません。 そうでない場合は、 [単体テストを作成](#NoRun) してから生成する必要があります。  
   
 1.  Visual Studio でソリューションを開きます。 次に、テストするメソッドが含まれるクラス ファイルを開きます。  
@@ -64,7 +72,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
   
      合格したテストについて、結果列に報告されている結果が、コードに対する予想と一致していることを確認します。 テストが失敗した場合は、必要に応じてコードを修正します。 IntelliTest を再実行して、修正を検証します。  
   
-### <a name="persist-save-the-unit-tests-as-a-regression-suite"></a>持続: 単体テストを回帰スイートとして保存  
+## <a name="persist-save-the-unit-tests-as-a-regression-suite"></a>持続: 単体テストを回帰スイートとして保存  
   
 1.  パラメーター化された単体テストでテスト プロジェクトに保存するデータの行を選択します。  
   
@@ -78,7 +86,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
   
      メソッド コードが変更された場合、IntelliTest を再実行して単体テストを変更と同期させます。  
   
-### <a name="assist-use-intellitest-to-focus-code-exploration"></a>支援: IntelliTest を使用してコードの探索に重点を置く  
+## <a name="assist-use-intellitest-to-focus-code-exploration"></a>支援: IntelliTest を使用してコードの探索に重点を置く  
   
 1.  コードが複雑な場合、IntelliTest は、コードの探索に重点を置いて支援します。 たとえば、パラメーターとしてインターフェイスを持つメソッドがあり、複数のクラスがそのインターフェイスを実装している場合であれば、IntelliTest はそれらのクラスを発見して警告を報告します。  
   
@@ -98,16 +106,19 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
   
      ![IntelliTest を再実行してテスト データを生成する](../test/media/pexwarningsfixed.png "PEXWarningsFixed")  
   
-### <a name="specify-use-intellitest-to-validate-correctness-properties-that-you-specify-in-code"></a>指定: コードで指定した正確性プロパティを検証するために IntelliTest を使用する  
- 生成された単体テストで検証する入力と出力の一般的な関係を指定します。 この指定は、テスト メソッドのようになりますが、汎用的に定量化されたメソッドにカプセル化されます。 これは、パラメーター化された単体テスト メソッドであり、IntelliTest で生成されるすべての可能な入力値に対して任意のアサーションを保持する必要があります。  
+## <a name="specify-use-intellitest-to-validate-correctness-properties-that-you-specify-in-code"></a>指定: コードで指定した正確性プロパティを検証するために IntelliTest を使用する  
+
+生成された単体テストで検証する入力と出力の一般的な関係を指定します。 この指定は、テスト メソッドのようになりますが、汎用的に定量化されたメソッドにカプセル化されます。 これは、パラメーター化された単体テスト メソッドであり、IntelliTest で生成されるすべての可能な入力値に対して任意のアサーションを保持する必要があります。  
   
 ##  <a name="QandALink"></a> Q & A  
   
 ### <a name="q-can-you-use-intellitest-for-unmanaged-code"></a>Q: アンマネージ コードに IntelliTest を使用できますか。  
- **A:** いいえ。IntelliTest はマネージ コードでのみ動作します。  
+
+**A:** いいえ。IntelliTest はマネージ コードでのみ動作します。  
   
 ### <a name="q-when-does-a-generated-test-pass-or-fail"></a>Q: 生成されたテストはどのような場合に合格または失敗しますか。  
- **A:** 他の単体テストと同様に、例外が発生しなければ合格します。 アサーションが失敗した場合、またはテスト対象のコードがハンドルされない例外をスローした場合には失敗します。  
+
+**A:** 他の単体テストと同様に、例外が発生しなければ合格します。 アサーションが失敗した場合、またはテスト対象のコードがハンドルされない例外をスローした場合には失敗します。  
   
  特定の例外がスローされても合格するテストがある場合、テスト メソッド、テスト クラス、またはアセンブリ レベルの要件に基づいて、次のいずれかの属性を設定できます。  
   
@@ -120,35 +131,49 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 -   **PexAllowedExceptionFromAssemblyAttribute**  
   
 ### <a name="q-can-i-add-assumptions-to-the-parameterized-unit-test"></a>Q: パラメーター化された単体テストに前提事項を追加できますか。  
- **A:** はい。前提事項は、特定のメソッドの単体テストに、どのテスト データが必要ないかを指定するために使用します。 前提事項を追加するには、<xref:Microsoft.Pex.Framework.PexAssume> クラスを使用します。 たとえば、長さの変数が NULL ではないという前提事項は次のように追加します。  
+
+**A:** はい。前提事項は、特定のメソッドの単体テストに、どのテスト データが必要ないかを指定するために使用します。 <xref:Microsoft.Pex.Framework.PexAssume> クラスを使用して前提事項を追加します。 たとえば、長さの変数が NULL ではないという前提事項は次のように追加します。  
   
  `PexAssume.IsNotNull(lengths);`  
   
  前提事項を追加して IntelliTest を再実行した場合、関係ないテスト データは取り除かれます。  
   
 ### <a name="q-can-i-add-assertions-to-the-parameterized-unit-test"></a>Q: パラメーター化された単体テストにアサーションを追加できますか。  
- **A:** はい。IntelliTest のプロセスは、単体テストを実行するときにステートメント内のアサートの対象が正しいことを確認します。 テスト フレームワークに付属する <xref:Microsoft.Pex.Framework.PexAssert> クラスまたはアサーション API を使用してアサーションを追加します。 たとえば、2 つの変数が等しいというアサーションを追加できます。  
+
+**A:** はい。IntelliTest のプロセスは、単体テストを実行するときにステートメント内のアサートの対象が正しいことを確認します。 テスト フレームワークに付属する <xref:Microsoft.Pex.Framework.PexAssert> クラスまたはアサーション API を使用してアサーションを追加します。 たとえば、2 つの変数が等しいというアサーションを追加できます。  
   
  `PexAssert.AreEqual(a, b);`  
   
  アサーションを追加して IntelliTest を再実行すると、アサーションが有効であることを確認し、有効でない場合はテストに失敗します。  
   
 ###  <a name="NoRun"></a> Q: IntelliTest を最初に実行しなくてもパラメーター化された単体テストを生成することはできますか。  
- **A:** はい。それには、クラスまたはメソッドを右クリックして **[IntelliTest の作成]**を選択します。  
+
+**A:** はい。それには、クラスまたはメソッドを右クリックして **[IntelliTest の作成]**を選択します。  
   
  ![エディターを右クリックし、[IntelliTest の作成] を選択する](../test/media/pexcreateintellitest.png "PEXCreateIntelliTest")  
   
  テスト生成時の既定の形式を受け入れるか、プロジェクトまたはテストの名前付け方法を変更します。 新しいテスト プロジェクトを作成するか、既存のプロジェクトにテストを保存することができます。  
   
  ![MSTest の既定値を使用して IntelliTest を作成する](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
-  
+
+<a name="extend-framework"></a>  
 ### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>Q: IntelliTest で他の単体テスト フレームワークを使用することはできますか。  
- **A:** はい。以下の手順に従って、[他のフレームワークを検索してインストール](../test/install-third-party-unit-test-frameworks.md)してください。 その後、Visual Studio を再起動し、ソリューションを再度開いてクラスまたはメソッドを右クリックし、 **[IntelliTest の作成]**を選択します。 インストールしたフレームワークを選択します。  
+
+**A:** はい。以下の手順に従って、 [他のフレームワークを検索してインストール](../test/install-third-party-unit-test-frameworks.md)してください。
+テスト フレームワークの拡張機能は Visual Studio Marketplace でも手に入ります。
+
+* [テスト ジェネレーター用 NUnit 拡張機能](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension)
+* [テスト ジェネレーター用 xUnit.net 拡張機能](https://marketplace.visualstudio.com/items?itemName=BradWilson.xUnitnetTestExtensions)
+
+
+その後、Visual Studio を再起動し、ソリューションを再度開いてクラスまたはメソッドを右クリックし、 **[IntelliTest の作成]**を選択します。 インストールしたフレームワークを選択します。  
   
- ![IntelliTest の他の単体テスト フレームワークを選択する](../test/media/pexcreateintellitestextensions.png "PEXCreateIntelliTestExtensions")  
+![IntelliTest の他の単体テスト フレームワークを選択する](../test/media/pexcreateintellitestextensions.png "PEXCreateIntelliTestExtensions")  
   
- これで、IntelliTest を実行すると、個々の単体テストが対応する g.cs ファイル内に生成されます。  
+これで、IntelliTest を実行すると、個々の単体テストが対応する g.cs ファイル内に生成されます。  
+
   
 ### <a name="q-can-i-learn-more-about-how-the-tests-are-generated"></a>Q: テストの生成方法に関してさらに調べることができますか。  
- **A:** はい。概要については、この [ブログ投稿](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/05/intellitest-one-test-to-rule-them-all.aspx)を読んでください。
+
+**A:** はい。概要については、この [ブログ投稿](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/05/intellitest-one-test-to-rule-them-all.aspx)を読んでください。
 

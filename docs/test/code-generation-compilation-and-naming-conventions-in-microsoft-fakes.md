@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 2aff9b2c34bf8897adc7edee3a1205317258fc0f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 5acc74abd56b128bf9df708ab7c0f3451c6eb270
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則
@@ -40,15 +41,32 @@ ms.lasthandoff: 02/22/2017
 -   Visual Studio Enterprise  
   
 ##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
- [コードの生成とコンパイル](#BKMK_Code_generation_and_compilation)  
   
--   [スタブのコード生成を構成する](#BKMK_Configuring_code_generation_of_stubs) • [型のフィルター処理](#BKMK_Type_filtering) • [具象クラスと仮想メソッドをスタブする](#BKMK_Stubbing_concrete_classes_and_virtual_methods) • [内部型](#BKMK_Internal_types) • [ビルド時間を最適化する](#BKMK_Optimizing_build_times) • [アセンブリ名の競合を回避する](#BKMK_Avoiding_assembly_name_clashing)  
+-   [コードの生成とコンパイル](#BKMK_Code_generation_and_compilation)  
   
- [Fakes 名前付け規則](#BKMK_Fakes_naming_conventions)  
+-   [スタブのコード生成を構成する](#BKMK_Configuring_code_generation_of_stubs)
   
--   [Shim 型とスタブ型の名前付け規則](#BKMK_Shim_type_and_stub_type_naming_conventions) • [Shim デリゲート プロパティまたはスタブ デリゲート フィールドの名前付け規則](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions) • [パラメーターの型の名前付け規則](#BKMK_Parameter_type_naming_conventions) • [再帰的な規則](#BKMK_Recursive_rules)  
+-   [型のフィルター処理](#BKMK_Type_filtering)
   
- [外部リソース](#BKMK_External_resources)  
+-   [具象クラスと仮想メソッドをスタブする](#BKMK_Stubbing_concrete_classes_and_virtual_methods)
+  
+-   [内部型](#BKMK_Internal_types)
+  
+-   [ビルド時間を最適化する](#BKMK_Optimizing_build_times)
+  
+-   [アセンブリ名の競合を回避する](#BKMK_Avoiding_assembly_name_clashing)  
+  
+-   [Fakes 名前付け規則](#BKMK_Fakes_naming_conventions)  
+  
+-   [Shim 型とスタブ型の名前付け規則](#BKMK_Shim_type_and_stub_type_naming_conventions)
+  
+-   [Shim デリゲート プロパティまたはスタブ デリゲート フィールドの名前付け規則](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions)
+  
+-   [パラメーターの型の名前付け規則](#BKMK_Parameter_type_naming_conventions)
+  
+-   [再帰的な規則](#BKMK_Recursive_rules)  
+  
+-   [外部リソース](#BKMK_External_resources)  
   
 -   [ガイダンス](#BKMK_Guidance)  
   
@@ -167,7 +185,7 @@ ms.lasthandoff: 02/22/2017
   
 ```  
   
- shim が適用されたアセンブリ コード内の Fakes アセンブリの InternalVisibleTo 属性の&2; 番目のパラメーターとして、代替 **.snk** ファイルの公開キーを使う必要があります。  
+ shim が適用されたアセンブリ コード内の Fakes アセンブリの InternalVisibleTo 属性の 2 番目のパラメーターとして、代替 **.snk** ファイルの公開キーを使う必要があります。  
   
 ```c#  
 // FileSystem\AssemblyInfo.cs  
@@ -199,7 +217,7 @@ ms.lasthandoff: 02/22/2017
     -   Fakes を作成したアセンブリごとに、プロジェクトの Fakes.Prebuild\FakesAssemblies フォルダーの対応する DLL ファイルへの参照を追加します。  
   
 ###  <a name="BKMK_Avoiding_assembly_name_clashing"></a> アセンブリ名の競合を回避する  
- チーム ビルド環境では、すべてのビルド出力が&1; つのディレクトリにマージされます。 複数のプロジェクトが Fakes を使用している場合は、異なるバージョンの Fakes アセンブリが互いにオーバーライドすることがあります。 たとえば、.NET Framework 2.0 からの TestProject1 による mscorlib.dll の Fakes 処理と .NET Framework 4 の TestProject2 による mscorlib.dll の Fakes 処理は、いずれも mscorlib.Fakes.dll Fakes アセンブリを生成します。  
+ チーム ビルド環境では、すべてのビルド出力が 1 つのディレクトリにマージされます。 複数のプロジェクトが Fakes を使用している場合は、異なるバージョンの Fakes アセンブリが互いにオーバーライドすることがあります。 たとえば、.NET Framework 2.0 からの TestProject1 による mscorlib.dll の Fakes 処理と .NET Framework 4 の TestProject2 による mscorlib.dll の Fakes 処理は、いずれも mscorlib.Fakes.dll Fakes アセンブリを生成します。  
   
  この問題を回避するには、.fakes ファイルを追加するとき、Fakes 処理で非プロジェクト参照用にバージョンで修飾された Fakes アセンブリ名を自動的に作成する必要があります。 バージョンで修飾された Fakes アセンブリ名の場合は、Fakes アセンブリ名を作成するときにバージョン番号が埋め込まれます。  
   
@@ -250,7 +268,7 @@ attribute of the Assembly element in the .fakes:
   
 -   メソッド名が明示的なインターフェイスの実装の場合、ドットは削除されます。  
   
--   メソッドがジェネリックの場合、`Of`*n* が追加されます。ここで、*n* はジェネリック メソッドの引数の数です。  
+-   メソッドがジェネリックの場合、`Of`*n* が追加されます。*n* はジェネリック メソッドの引数の数です。  
   
  プロパティの get/set アクセス操作子などの**特殊なメソッド名**は、次の表に示すように処理されます。  
   
@@ -258,7 +276,7 @@ attribute of the Assembly element in the .fakes:
 |-------------------|-------------|--------------------------|  
 |**コンストラクター**|`.ctor`|`Constructor`|  
 |静的**コンストラクター**|`.cctor`|`StaticConstructor`|  
-|"_" で区切られた&2; つの部分で構成されるメソッド名を持つ**アクセサー** (プロパティの get アクセス操作子など)|*kind_name* (一般的なケース。ただし ECMA で強制されていない)|*NameKind*。両方のパーツが大文字になり、前後が逆になっています|  
+|"_" で区切られた 2 つの部分で構成されるメソッド名を持つ**アクセサー** (プロパティの get アクセス操作子など)|*kind_name* (一般的なケース。ただし ECMA で強制されていない)|*NameKind*。両方のパーツが大文字になり、前後が逆になっています|  
 ||プロパティの get アクセス操作子 `Prop`|`PropGet`|  
 ||プロパティの set アクセス操作子 `Prop`|`PropSet`|  
 ||イベントを追加する操作子|`Add`|  
@@ -285,7 +303,7 @@ attribute of the Assembly element in the .fakes:
 |**配列型** `T[]`|`TArray`|  
 |**多次元配列**型 `T[ , , ]`|`T3`|  
 |**ポインター**型 `T*`|`TPtr`|  
-|**ジェネリック型** `T<R1, …>`|`TOfR1`|  
+|**ジェネリック型** `T<R1, ...>`|`TOfR1`|  
 |型 `C<TType>` の**ジェネリック型引数** `!i`|`Ti`|  
 |メソッド `M<MMethod>` の**ジェネリック メソッド引数** `!!i`|`Mi`|  
 |**入れ子にされた型** `N.T`|`N` が追加され、その後に `T`|  
@@ -300,7 +318,7 @@ attribute of the Assembly element in the .fakes:
 ##  <a name="BKMK_External_resources"></a> 外部リソース  
   
 ###  <a name="BKMK_Guidance"></a> ガイダンス  
- [Visual Studio 2012 を使用した絶え間のない配信のためのテスト – 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
 ## <a name="see-also"></a>関連項目  
  [Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)

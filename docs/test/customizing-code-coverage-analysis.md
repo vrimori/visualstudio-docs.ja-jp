@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 5778e6b7c4a93c2d03ff00fcaaaf5a25807b0a00
+ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
+ms.openlocfilehash: 01dc224a571144744028e98153df1c525c461156
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="customizing-code-coverage-analysis"></a>コード カバレッジ分析のカスタマイズ
@@ -155,17 +155,17 @@ ms.lasthandoff: 04/04/2017
 ### <a name="other-ways-to-include-or-exclude-elements"></a>要素を包含または除外するための別の方法  
  例については、[このトピックの末尾のサンプル](#sample)を参照してください。  
   
--   `ModulePath` – アセンブリ ファイル パスで指定されたアセンブリ。  
+-   `ModulePath` - アセンブリ ファイル パスで指定されたアセンブリ。  
   
--   `CompanyName` – 会社名属性でアセンブリと一致します。  
+-   `CompanyName` - 会社名属性でアセンブリと一致します。  
   
--   `PublicKeyToken` – 公開キー トークンで、署名付きアセンブリと一致します。 たとえば、すべての Visual Studio コンポーネントおよび拡張機能と一致させるには、`<PublicKeyToken>^B03F5F7F11D50A3A$</PublicKeyToken>` を使用します。  
+-   `PublicKeyToken` - 公開キー トークンで、署名付きアセンブリと一致します。 たとえば、すべての Visual Studio コンポーネントおよび拡張機能と一致させるには、`<PublicKeyToken>^B03F5F7F11D50A3A$</PublicKeyToken>` を使用します。  
   
--   `Source` – 要素が定義されているソース ファイルのパス名で要素と一致します。  
+-   `Source` - 要素が定義されているソース ファイルのパス名で要素と一致します。  
   
--   `Attribute` – 特定の属性のアタッチ先の要素と一致します。 属性の完全名を指定し、名前の末尾に "Attribute" を含めます。  
+-   `Attribute` - 特定の属性のアタッチ先の要素と一致します。 属性の完全名を指定し、名前の末尾に "Attribute" を含めます。  
   
--   `Function` – 完全修飾名でプロシージャ、関数、またはメソッドに一致します。  
+-   `Function` - 完全修飾名でプロシージャ、関数、またはメソッドに一致します。  
   
  **関数名の一致**  
   
@@ -285,7 +285,7 @@ Included items must then not match any entries in the exclude list to remain inc
             <!-- Match attributes on any code element: -->  
             <Attributes>  
               <Exclude>  
-                <!—Don't forget "Attribute" at the end of the name -->  
+                <!-- Don't forget "Attribute" at the end of the name -->  
                 <Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>  
                 <Attribute>^System\.Diagnostics\.DebuggerNonUserCodeAttribute$</Attribute>  
                 <Attribute>^System\.Runtime\.CompilerServices.CompilerGeneratedAttribute$</Attribute>  

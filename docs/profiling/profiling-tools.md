@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 0d129b4820944f5717c63243cb8550bc4fed3385
-ms.openlocfilehash: 380b65540d8f5c6ea6d8a8adf1f3c5575f5dd9dc
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 09c33f3cc331af03659922e178e4089f177132de
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="profiling-tools"></a>プロファイリング ツール
@@ -98,7 +99,7 @@ ms.lasthandoff: 03/20/2017
  [IntelliTrace](../debugger/intellitrace.md) では、特定のイベントを記録したり、デバッガー イベントや関数呼び出しの間に **[ローカル]** ウィンドウでデータを調べたり、再現が難しいエラーをデバッグしたりできます。  IntelliTrace は主にデバッグ ツールですが、パフォーマンス調査に利用できる情報も提供します。 このツールはデスクトップ、Windows ユニバーサル、ASP.NET C# アプリで使用できますが、Visual Studio Enterprise 専用です。 IntelliTrace にはデバッグ中に **[診断ツール]** ウィンドウからアクセスできます (**[デバッグ]、[Windows]、[診断ツールの表示]**)。  
   
 ## <a name="profiling-in-production"></a>実稼働のプロファイリング  
- 実稼働プロファイリングの推奨方法は、[vsperf.exe を利用し、コマンド ライン](../profiling/using-the-profiling-tools-from-the-command-line.md) からプロファイリングし、CPU プロファイルを集めることです。 Azure App Service のリモート プロファイリング サポートの場合、 [サーバー エクスプローラーまたは Kudu ポータル](https://azure.microsoft.com/en-us/blog/remote-profiling-support-in-azure-app-service/)からプロファイルできます。  
+ 実稼働プロファイリングの推奨方法は、 [vsperf.exe を利用し、コマンド ライン](../profiling/using-the-profiling-tools-from-the-command-line.md) からプロファイリングし、CPU プロファイルを集めることです。 Azure App Service のリモート プロファイリング サポートの場合、 [サーバー エクスプローラーまたは Kudu ポータル](https://azure.microsoft.com/en-us/blog/remote-profiling-support-in-azure-app-service/)からプロファイルできます。  
   
 ## <a name="which-tool-should-i-use"></a>使用するツール  
  次の表では、Visual Studio のさまざまなツールとそれらを使用できる各種プロジェクトをまとめています。  
@@ -113,7 +114,7 @@ ms.lasthandoff: 03/20/2017
 |[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|可|no|可 (ASP.NET Core の場合は no)|  
 |[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise のみ|.NET Enterprise のみ|.NET Enterprise のみ|
 |[ネットワーク使用率](../profiling/network-usage.md)|no|可|no| 
-|[HTML UI の応答性](../profiling/html-ui-responsiveness.md)|no|HTML の場合は可、XAML の場合は不可|no|  
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|HTML の場合は可、XAML の場合は不可|no|  
 |[JavaScript メモリ](../profiling/javascript-memory.md)|no|HTML の場合は可、XAML の場合は不可|no|  
   
 ## <a name="see-also"></a>関連項目  

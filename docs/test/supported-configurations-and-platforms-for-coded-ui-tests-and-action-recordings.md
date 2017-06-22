@@ -29,19 +29,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b4ca42eedec0f6fe2daaa70b04ab9fdaf37865fc
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: cbc542a413b63b4da4a4d8699c06b313ff32f86c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム
-Visual Studio Enterprise のコード化された UI テストがサポートされる構成とプラットフォームを、次の表に示します。 この構成は、[!INCLUDE[MTRlong](../test/includes/mtrlong_md.md)]を使用して作成される操作の記録にも適用されます。  
+Visual Studio Enterprise のコード化された UI テストがサポートされる構成とプラットフォームを、次の表に示します。 この構成は、 [!INCLUDE[MTRlong](../test/includes/mtrlong_md.md)]を使用して作成される操作の記録にも適用されます。  
   
 > [!NOTE]
 >  コード化された UI テスト プロセスには、テスト対象のアプリケーションと同じ特権が必要です。  
   
- **Requirements**  
+ **要件**  
   
 -   Visual Studio Enterprise  
   
@@ -50,7 +51,7 @@ Visual Studio Enterprise のコード化された UI テストがサポートさ
 |構成|サポート状況|  
 |-------------------|---------------|  
 |オペレーティング システム|[!INCLUDE[win7](../debugger/includes/win7_md.md)]<br /><br /> [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)]<br /><br /> [!INCLUDE[win8](../debugger/includes/win8_md.md)]<br /><br /> Windows 10|  
-|32 ビットと 64 ビットのサポート|32 ビットの [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を実行している 32 ビットの Windows では、32 ビット アプリケーションをテストできます。<br /><br /> 32 ビットの [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を実行している 64 ビットの Windows では、UI 同期を行う 32 ビットの WOW アプリケーションをテストできます。<br /><br /> 32 ビットの [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]を実行している 64 ビットの Windows では、UI 同期を行わない 64 ビットの Windows フォーム アプリケーションおよび WPF アプリケーションをテストできます。|  
+|32 ビットと 64 ビットのサポート|32 ビットの [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を実行している 32 ビットの Windows では、32 ビット アプリケーションをテストできます。<br /><br /> 32 ビットの [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を実行している 64 ビットの Windows では、UI 同期を行う 32 ビットの WOW アプリケーションをテストできます。<br /><br /> 32 ビットの [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を実行している 64 ビットの Windows では、UI 同期を行わない 64 ビットの Windows フォーム アプリケーションおよび WPF アプリケーションをテストできます。|  
 |アーキテクチャ|x86 および x64 **注:** Internet Explorer は、[!INCLUDE[win8](../debugger/includes/win8_md.md)] 以降のバージョンで実行される場合を除き、64 ビット モードではサポートされていません。|  
 |.NET|.NET 2.0、3.0、3.5、4、および 4.5。 **注:** [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] および Visual Studio が動作するには、いずれも .NET 4 が必要です。 ただし、一覧のバージョンの .NET を使用して開発されたアプリケーションはサポートされます。|  
   

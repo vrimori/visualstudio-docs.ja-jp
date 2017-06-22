@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 86e3e1625cffabf3b64edd0da7307db7773adf4c
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 90d4fec70dd131289f37d35f896d87c6e0843e83
 ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/22/2017
 >      アンマネージ (ネイティブ) コードを操作している場合は、デバッグ ビルドを使用します。  
 > -   各アセンブリのシンボル (.pdb) ファイルが生成されていることを確認します。  
 >   
->  期待した結果が得られない場合は、「[トラブルシューティング コード カバレッジ](../test/troubleshooting-code-coverage.md)」を参照してください。 」を参照してください。 コードを更新した後は、コード カバレッジを忘れずに再度実行します。 コードの変更後やテストの実行後に、カバレッジ結果とコードの色分けは自動的には更新されません。  
+>  期待した結果が得られない場合は、「[トラブルシューティング コード カバレッジ](../test/troubleshooting-code-coverage.md) 」を参照してください。 コードを更新した後は、コード カバレッジを忘れずに再度実行します。 コードの変更後やテストの実行後に、カバレッジ結果とコードの色分けは自動的には更新されません。  
   
 ## <a name="reporting-in-blocks-or-lines"></a>ブロック単位または行単位で報告する  
  コード カバレッジは、*ブロック*単位でカウントされます。 ブロックは、エントリ ポイントと終了ポイントを 1 つだけ持つ、コードの部分です。  プログラムの制御フローがテストの実行中にブロックを通過すると、そのブロックはカバー済みとしてカウントされます。 ブロックが使用された回数は、結果には影響しません。  
@@ -272,7 +272,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
   
      複数のテスト ソース定義がある場合は、各定義に対してこの手順を繰り返します。  
   
-    -   *ただし、[* *実行設定の種類**] というフィールドはありません。*  
+    -   *ただし、**[実行設定の種類]** というフィールドはありません。*  
   
          [**自動テスト**] の下の [**テスト アセンブリ**] を選択し、行の末尾の省略記号 (**[...]**) ボタンを選択します。 [**テストの実行の追加と編集**] ダイアログ ボックスで、[**テスト ランナー**] の下の [**Visual Studio テスト ランナー**] を選択します。  
   
@@ -297,7 +297,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 ## <a name="external-resources"></a>外部リソース  
   
 ### <a name="guidance"></a>ガイダンス  
- [Visual Studio 2012 を使用した絶え間のない配信のためのテスト – 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
 ## <a name="see-also"></a>関連項目  
  [コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)   

@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 60d05761993a4bd7547d83274e103de1b5c30b34
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 44110390bcddc67d86dcfcc81c2d5961e346ccf7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP アプリのネットワーク使用量を分析する
@@ -40,7 +41,7 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
  ネットワーク ツールは、Windows ユニバーサル プラットフォーム アプリのみをサポートしています。 その他のプラットフォームは現時点ではサポートされていません。  
   
 > [!NOTE]
->  ネットワーク ツールの詳細については、[Visual Studio の概要](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studio-s-network-tool.aspx)に関する記事をご覧ください。  
+>  ネットワーク ツールの詳細については、[Visual Studio のネットワーク ツールの概要](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studio-s-network-tool.aspx)に関する記事をご覧ください。  
   
 ## <a name="collecting-network-tool-data"></a>ネットワーク ツール データの収集  
  **ネットワーク** ツールを実行するには、Visual Studio コンピューター上で開かれた状態の Visual Studio プロジェクトが必要です。  
@@ -90,6 +91,6 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
 3.  ([本文] タブ内の) [応答の整形出力] ボタンは、コンテンツをさらに読みやすくして、JSON、XML、HTML、CSS、JavaScript、および TypeScript の応答のペイロードを解析できるようにします。  
   
 ## <a name="see-also"></a>関連項目  
- [デバッガ―を使用して、または使用せずに、プロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
+ [デバッガーを使用して、または使用せずに、プロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
  [Visual Studio ブログ: Visual Studio のネットワーク検査の概要](http://go.microsoft.com/fwlink/?LinkId=535022)   
  [Channel 9 ビデオ: Visual Studio 診断ツール - 新しいネットワーク プロファイラー](http://channel9.msdn.com/Series/ConnectOn-Demand/206)

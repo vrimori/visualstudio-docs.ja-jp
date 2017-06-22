@@ -1,112 +1,129 @@
 ---
 title: "方法: ビルドするファイルを選択する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Include 属性 [MSBuild]"
-  - "MSBuild, インクルード (ファイルを)"
-  - "MSBuild, ワイルドカード"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, wildcards
+- MSBuild, including files
+- Include attribute [MSBuild]
 ms.assetid: f5ff182f-7b3a-46fb-9335-37df54cfb8eb
 caps.latest.revision: 14
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 方法: ビルドするファイルを選択する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0b8cbf0091de41b082b066c12ed28709ade7d1ea
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
-複数のファイルから成るプロジェクトをビルドするとき、プロジェクト ファイルで個々のファイルを指定する以外に、ワイルドカードを使用して 1 つのディレクトリまたは入れ子になった複数のディレクトリのファイルをすべてインクルードできます。  
+---
+# <a name="how-to-select-the-files-to-build"></a>方法: ビルドするファイルを選択する
+複数のファイルを含むプロジェクトをビルドするときに、各ファイルを個別にプロジェクト ファイルにリストしたり、ワイルドカードを使用して、1 つのディレクトリまたは入れ子になった一連のディレクトリ内のすべてのファイルを含めたりすることができます。  
   
-## 入力の指定  
- ビルドの入力ファイルは項目によって表されます。  項目の詳細については、「[項目](../msbuild/msbuild-items.md)」を参照してください。  
+## <a name="specifying-inputs"></a>入力を指定する  
+ 項目は、ビルドの入力を表します。 項目の詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」をご覧ください。  
   
- ビルド対象のファイルをインクルードするには、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のプロジェクト ファイルで、これらのファイルを項目のリストに追加する必要があります。  複数のファイルを項目のリストに追加するには、ファイルを個別にインクルードするか、ワイルドカードを使用して複数のファイルを一度にインクルードします。  
+ ビルドのファイルを含めるには、それらのファイルが [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイル内の項目リストに含まれている必要があります。 複数のファイルを項目リストに追加するには、ファイルを個別に含めるか、ワイルドカードを使用して一度に複数のファイルを含めます。  
   
-#### 項目を個別に宣言するには  
+#### <a name="to-declare-items-individually"></a>項目を個別に宣言するには  
   
--   `Include` 属性を次のように使用します。  
+-   次のような `Include` 属性を使用します。  
   
      `<CSFile Include="form1.cs"/>`  
   
-     または  
+     - または  
   
      `<VBFile Include="form1.vb"/>`  
   
     > [!NOTE]
-    >  項目のコレクションの項目がプロジェクト ファイルと同じディレクトリに存在する場合は、項目の完全パスまたは相対パスを指定します。  たとえば、`Include="..\..\form2.cs"` となります。  
+    >  項目コレクション内の項目がプロジェクト ファイルと同じディレクトリにない場合は、その項目への完全パスまたは相対パスを指定する必要があります。 たとえば、`Include="..\..\form2.cs"` のように指定します。  
   
-#### 複数の項目を宣言するには  
+#### <a name="to-declare-multiple-items"></a>複数の項目を宣言するには  
   
--   `Include` 属性を次のように使用します。  
+-   次のような `Include` 属性を使用します。  
   
      `<CSFile Include="form1.cs;form2.cs"/>`  
   
-     または  
+     - または  
   
      `<VBFile Include="form1.vb;form2.vb"/>`  
   
-## 入力ファイルをワイルドカードで指定する  
- ワイルドカードを使用して、サブディレクトリからビルドの入力対象となるすべてのファイルまたは特定のファイルのみを再帰的にインクルードすることもできます。  ワイルドカードの詳細については、「[項目](../msbuild/msbuild-items.md)」を参照してください。  
+## <a name="specifying-inputs-with-wildcards"></a>ワイルドカードを使用して入力を指定する  
+ ワイルドカードを使用して、すべてのファイルまたはサブディレクトリから特定のファイルのみを再帰的に含めることができます。 ワイルドカードの詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」をご覧ください。  
   
- ここでは、プロジェクト ファイルが Project ディレクトリに置かれているプロジェクトを例にとってみます。グラフィックス ファイルが次のディレクトリおよびサブディレクトリに置かれています。  
+ 次の例は、次のディレクトリとサブディレクトリ内のグラフィック ファイルを含むプロジェクトに基づいており、プロジェクト ファイルは Project ディレクトリに配置されています。  
   
- Project\\Images\\BestJpgs  
+ Project\Images\BestJpgs  
   
- Project\\Images\\ImgJpgs  
+ Project\Images\ImgJpgs  
   
- Project\\Images\\ImgJpgs\\Img1  
+ Project\Images\ImgJpgs\Img1  
   
-#### Images ディレクトリとサブディレクトリに存在するすべての .jpg ファイルをインクルードするには  
+#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>Images ディレクトリとサブディレクトリ内のすべての .jpg ファイルを含めるには  
   
 -   次の `Include` 属性を使用します。  
   
      `Include="Images\**\*.jpg"`  
   
-#### "img" で始まるすべての .jpg ファイルをインクルードするには  
+#### <a name="to-include-all-jpg-files-starting-with-img"></a>"img" で始まるすべての .jpg ファイルを含めるには  
   
 -   次の `Include` 属性を使用します。  
   
      `Include="Images\**\img*.jpg"`  
   
-#### "jpgs" で終わるディレクトリ内のすべてのファイルをインクルードするには  
+#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>ディレクトリ内の "jpg" で終わる名前を持つすべてのファイルを含めるには  
   
 -   次のいずれかの `Include` 属性を使用します。  
   
      `Include="Images\**\*jpgs\*.*"`  
   
-     または  
+     - または  
   
      `Include="Images\**\*jpgs\*"`  
   
-## 項目をタスクに渡す  
- プロジェクト ファイルでは、タスクに @\(\) 表記を使用することにより、ビルドの入力対象として項目のリスト全体を指定できます。  この表記は、すべてのファイルを個別に指定した場合でも、ワイルドカードを使った場合でも使用できます。  
+## <a name="passing-items-to-a-task"></a>項目をタスクに渡す  
+ プロジェクト ファイルでは、タスクで @() の表記を使用して、項目リスト全体をビルドの入力として指定できます。 この表記を使用して、すべてのファイルを個別にリストすることも、ワイルドカードを使用することもできます。  
   
-#### すべての Visual C\# ファイルまたはすべての Visual Basic ファイルを入力として使用するには  
+#### <a name="to-use-all-visual-c-or-visual-basic-files-as-inputs"></a>すべての Visual C# ファイルまたは Visual Basic ファイルを入力として使用するには  
   
--   `Include` 属性を次のように使用します。  
+-   次のような `Include` 属性を使用します。  
   
      `<CSC Sources="@(CSFile)">...</CSC>`  
   
-     または  
+     - または  
   
      `<VBC Sources="@(VBFile)">...</VBC>`  
   
 > [!NOTE]
->  ビルドの入力ファイルを複数指定する場合、ワイルドカードは項目に対して使用する必要があります。[Csc](../msbuild/csc-task.md) や [Vbc](../msbuild/vbc-task.md) など、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクの `Sources` 属性を使用して入力ファイルを指定することはできません。  プロジェクト ファイルでは、次の例のような使い方はできません。  
+>  ワイルドカードと項目を使用して、ビルドの入力を指定する必要があります。[Csc](../msbuild/csc-task.md) や [Vbc](../msbuild/vbc-task.md) などの [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクでは、`Sources` 属性を使用して入力を指定することはできません。 次の例はプロジェクト ファイルでは無効です。  
 >   
 >  `<CSC Sources="*.cs">...</CSC>`  
   
-## 使用例  
- すべての入力ファイルを個別にインクルードするプロジェクトを次のコード例に示します。  
+## <a name="example"></a>例  
+ 次のコード例では、すべての入力ファイルを個別に含むプロジェクトを示します。  
   
-```  
+```xml  
 <Project DefaultTargets="Compile"  
     xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >  
     <PropertyGroup>  
@@ -137,10 +154,10 @@ caps.handback.revision: 14
 </Project>  
 ```  
   
-## 使用例  
- ワイルドカードを使用してすべての .cs ファイルをインクルードするコード例を次に示します。  
+## <a name="example"></a>例  
+ 次のコード例では、ワイルドカードを使用してすべての .cs ファイルを含めます。  
   
-```  
+```xml  
 <Project DefaultTargets="Compile"  
     xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >  
   
@@ -171,6 +188,6 @@ caps.handback.revision: 14
 </Project>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [方法: ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)   
  [項目](../msbuild/msbuild-items.md)

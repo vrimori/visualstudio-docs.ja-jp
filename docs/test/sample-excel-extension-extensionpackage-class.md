@@ -27,14 +27,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 20e3ac96d5b12002b11a9e93b413c48738f57153
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="sample-excel-extension-extensionpackage-class"></a>Excel 拡張子のサンプル: ExtensionPackage クラス
-このクラスによって UITestExtensionPackage クラスを拡張し、[!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] ワークシートをテストするコード化された UI テストのエントリ ポイントを提供します。  
+このクラスは <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage> クラスを拡張し、[!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] ワークシートをテストするコード化された UI テストのエントリ ポイントになります。  
   
 ## <a name="assembly-attribute"></a>アセンブリ属性  
  ファイルは、アセンブリを UI テスト拡張として識別するアセンブリ属性で始まります。  
@@ -52,9 +53,9 @@ ms.lasthandoff: 04/04/2017
  このクラスには、コード化された UI テスト フレームワークが拡張とアセンブリを識別および説明するために使用する値を提供するプロパティがあります。 詳細については、コードのコメントをご覧ください。  
   
 ## <a name="getservice-method"></a>GetService メソッド  
- GetService メソッドは、各オブジェクトの基底クラスによって識別され、コード化された UI テスト フレームワークがテクノロジ マネージャー、プロパティ プロバイダー、およびアクション フィルターにアクセスするために使用する単一エントリ ポイントです。  
+ <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A> メソッドは、各オブジェクトの基底クラスによって識別され、コード化された UI テスト フレームワークがテクノロジ マネージャー、プロパティ プロバイダー、およびアクション フィルターにアクセスするために使用する単一エントリ ポイントです。  
   
 ## <a name="see-also"></a>関連項目  
- UITestExtensionPackage   
+ <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>   
  [コード化された UI テストと操作の記録を拡張して Microsoft Excel をサポート](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
 

@@ -1,19 +1,39 @@
 ---
-title: "Designing XAML in Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visual Studio で XAML をデザインする | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 288e2415-9fcf-408e-bc35-9848315e14fd
 caps.latest.revision: 4
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 4
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e832941dd00fa81bea1566f17504fe7e27c41a48
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="designing-xaml-in-visual-studio"></a>Visual Studio で XAML をデザインする
 Visual Studio と Blend for Visual Studio の両方に、XAML ベースの Windows デスクトップ、Web、 [Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/jj683071.aspx)、および [Windows ストア](http://msdn.microsoft.com/library/windows/apps/jj129478.aspx) アプリ向けの、魅力的なユーザー インターフェイスとリッチ メディア体験を構築するためのビジュアルなツールが用意されています。 一般的なデザイン ウィンドウ と ツール ウィンドウ、および XAML エディターのセットはどちらにも共通のものですが、Blend for Visual Studio にはアニメーションやビヘイビアーなどのより高度なタスク向けに追加のデザイン ツールが用意されています。  
@@ -32,17 +52,17 @@ Visual Studio と Blend for Visual Studio の両方に、XAML ベースの Windo
   
 -   **XAML IntelliSense:** どちらの IDE も、ステートメント入力候補、コードへのコメント追加や書式設定などの一般的なエディター操作のサポート、およびリソース、バインディング、コードへのナビゲーションなど、IntelliSense に期待する一般的な機能すべてをサポートします。  
   
--   **基本的なデバッグ機能:** Blend では、実行中のアプリをデバッグするブレークポイントをコードに設定するなどの、新たなデバッグが可能です。 Visual Studio とデバッグ機能の一貫性を保つため、Blend for Visual Studio には Visual Studio の大半のデバッグ ウィンドウとツールバーが含まれています。 診断やコード分析などの高度なデバッグ機能は、Visual Studio でのみ使用できます。 「[Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)」をご覧ください。  
+-   **基本的なデバッグ機能:** Blend では、実行中のアプリをデバッグするブレークポイントをコードに設定するなどの、新たなデバッグが可能です。 Visual Studio とデバッグ機能の一貫性を保つため、Blend for Visual Studio には Visual Studio の大半のデバッグ ウィンドウとツールバーが含まれています。 診断やコード分析などの高度なデバッグ機能は、Visual Studio でのみ使用できます。 「 [Debugging in Visual Studio](../debugger/debugging-in-visual-studio.md)」を参照してください。  
   
 -   **ファイルの再読み込み操作:** XAML ファイルは、Blend for Visual Studio または Visual Studio のどちらでも編集でき、切り替え時に編集したファイルを自動的に再読み込みさせることができます。 ワークフローの中断を最小限に抑えるため、[ファイルの再読み込み] ダイアログでファイルの再読み込みの基本設定を設定できます。  
   
      ![ファイルの再読み込み操作](../designers/media/blendfilereload.png "BlendFileReload")  
   
--   **レイアウトの同期と設定:** カスタム レイアウトを使用して、ツール ウィンドウのレイアウト変更を保存および適用できます。 同じ Microsoft アカウントでサインインすると、Visual Studio は Visual Studio と Blend for Visual Studio 双方の変更や基本設定をコンピューター間で同期します。 「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+-   **レイアウトの同期と設定:** カスタム レイアウトを使用して、ツール ウィンドウのレイアウト変更を保存および適用できます。 同じ Microsoft アカウントでサインインすると、Visual Studio は Visual Studio と Blend for Visual Studio 双方の変更や基本設定をコンピューター間で同期します。 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)を参照してください。  
   
 -   **共通のソリューション エクスプ ローラー:** ソリューション エクスプ ローラーによって、プロジェクトやファイルが整理して表示されるだけでなく、プロジェクトやファイルに関連付けられているコマンドに素早くアクセスできます。 ソリューション エクスプ ローラーを使用すると、大規模なエンタープライズ プロジェクトでの作業が容易になります。 「[ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)」をご覧ください。  
   
--   **チーム エクスプ ローラー:** チーム エクスプ ローラーを使用すると、プロジェクトを GIT または TFS リポジトリを使用して管理でき、チームのコラボレーションが容易になります。 「[チーム エクスプローラーでの作業](http://msdn.microsoft.com/Library/fd7a5cf7-7916-4fa0-b5e6-5a83cf377a02)」をご覧ください。  
+-   **チーム エクスプ ローラー:** チーム エクスプ ローラーを使用すると、プロジェクトを GIT または TFS リポジトリを使用して管理でき、チームのコラボレーションが容易になります。 [チーム エクスプローラーでの作業](http://msdn.microsoft.com/Library/fd7a5cf7-7916-4fa0-b5e6-5a83cf377a02)を参照してください。  
   
 -   **NuGet:** Visual Studio と Blend for Visual Studio の両方で NuGet パッケージを管理できます。 NuGet は、パッケージのインストールと、ソリューションからの削除を簡略化する .NET Framework 用のパッケージ マネージャーです。  
   
@@ -59,8 +79,3 @@ Visual Studio と Blend for Visual Studio の両方に、XAML ベースの Windo
 |**UI をデータに接続する**|SQL Server データベース、WCF や Web サービス、オブジェクト、または SharePoint リストなどのリソースからデータ ソースを作成し、データ ソースを UI コントロールにバインドします。<br /><br /> デザイン時のデータは、対話型のデザイン エクスペリエンスのため手動で作成する必要があります。|プロトタイプの作成とテスト用のサンプル データは簡単に作成できます。 準備ができたら、ライブ データに切り替えます。<br /><br /> Blend for Visual Studio のデータ生成機能は並外れており (その場で迅速かつ簡単に、名前、番号、URL、写真の追加が可能)、多くの時間を節約できます。<br /><br /> ライブ データの場合は、UI コントロールを XML ファイルまたは任意の CLR データ ソースにバインドできます。|[データの表示](../designers/display-data-in-blend.md)|  
   
  高度な XAML デザインの詳細については、次の項目を参照してください。 [Blend for Visual Studio を使用して UI を作成する](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

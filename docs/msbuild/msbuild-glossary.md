@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: d014b703c491603c86fcd6a89c1dc17f35b0deae
-ms.openlocfilehash: 4e0a5eca9b1d7da650c9e612076bda80b4eeda24
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: f680d18660c15e96c87d868cc45cc3a66e8fc553
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="msbuild-glossary"></a>MSBuild 用語集
@@ -41,7 +43,7 @@ Microsoft Build Engine (MSBuild) とそのコンポーネントについて説�
  サードパーティ ベンダーがサポートする各バージョンのフレームワークのパスを格納するレジストリの場所。デザイン時に、この場所で参照アセンブリを検索して解決できます。  
   
  バッチ処理  
- バッチ処理とは、項目メタデータに基づいて項目を異なるカテゴリ (*バッチ*) に分割し、バッチごとにターゲットまたはタスクを&1; 回実行することを意味します。 バッチ処理は、for ループ コンストラクトと同等の MSBuild 機能です。 詳細については、「[MSBuild バッチ](../msbuild/msbuild-batching.md)」を参照してください。  
+ バッチ処理とは、項目メタデータに基づいて項目を異なるカテゴリ (*バッチ*) に分割し、バッチごとにターゲットまたはタスクを 1 回実行することを意味します。 バッチ処理は、for ループ コンストラクトと同等の MSBuild 機能です。 詳細については、「[MSBuild バッチ](../msbuild/msbuild-batching.md)」を参照してください。  
   
  ビルド スコープ  
  ビルド スコープは、プロジェクトや複数プロジェクトのビルドで作成される子プロジェクトから参照できる可能性がある MSBuild オブジェクト (グローバル プロパティなど) を示します。  
@@ -65,7 +67,7 @@ Microsoft Build Engine (MSBuild) とそのコンポーネントについて説�
  評価は、プロジェクト ビルドの最初のフェーズです。 すべてのプロパティおよび項目は、プロジェクトに表示される順に評価されます。 インポートされたプロジェクトは、プロジェクト内で検出されると評価されます。 ターゲットとタスクは実行フェーズまで実行されず、ターゲットとタスクによって宣言または生成されるプロパティまたは項目は評価時には無視されます。  
   
  実行フェーズ  
- 実行は、プロジェクト ビルドの&2; 番目のフェーズです。 選択されたターゲットがビルドされ、タスクが実行されます。 プロパティと項目をそれらの評価値と比較して作成または変更できます。  
+ 実行は、プロジェクト ビルドの 2 番目のフェーズです。 選択されたターゲットがビルドされ、タスクが実行されます。 プロパティと項目をそれらの評価値と比較して作成または変更できます。  
   
  関数、プロパティ  
  「*プロパティ関数*」を参照してください。  
@@ -187,8 +189,3 @@ Microsoft Build Engine (MSBuild) とそのコンポーネントについて説�
   
 ## <a name="see-also"></a>関連項目  
  [Msbuild](../msbuild/msbuild.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

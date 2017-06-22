@@ -13,9 +13,11 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2cfcc962e41d67995f1e1e04b787a49edfbbfbf6
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8d0cc37019b04d6f734d6bd604c0ddd948b6dc9f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>デバッガーを使用して、または使用せずにプロファイリング ツールを実行する
@@ -38,7 +40,7 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
   
      デバッグ ビルドには、リリース ビルドにはある最適化がありません。たとえば、関数呼び出しと定数のインライン化、不使用のコード パスの除去、変数の保存などは、デバッガーが使用できない方法で行われます。 デバッガー自体によって、パフォーマンス時間が変わります。デバッガーによって必要な特定の操作 (例外の解釈やモジュール読み込みのイベントなど) が実行されるためです。 したがって、デバッガー統合ツールでのパフォーマンスの数値には、数十ミリ秒の誤差が生じます。 デバッガーを使用しないリリース構成のツールによるパフォーマンス数値の方が、精度が高くなります。  
   
-##  <a name="a-namebkmkquickstartcollectdiagnosticdataa-collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> デバッグ中にプロファイリング データを収集する  
+##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> デバッグ中にプロファイリング データを収集する  
  次のセクションでは、ローカル デバッグについて説明します。 後のセクションでは、デバイスでのデバッグやリモート デバッグについて確認できます。  
   
 1.  デバッグするプロジェクトを開いてから、 **[デバッグ] / [デバッグの開始]** の順にクリックします (またはツールバーの **[開始]** をクリックするか、 **F5**キーを押します)。  
@@ -59,7 +61,7 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
   
  Visual Studio 2015 Update 1 では、 **[診断ツール]** ウィンドウを使用すると、興味のあるイベントに簡単に注目できます。   イベント名にカテゴリ プレフィックス (**ジェスチャ**、**プログラム出力**、**ブレークポイント**、**ファイル**など) が付随して表示されるようになったため、迅速に一覧をスキャンして特定のカテゴリを検索したり、必要のないカテゴリを飛ばしたりできます。  
   
- ウィンドウには検索ボックスがあり、イベント一覧で特定の文字列を検索できます。 たとえば、次の図は、文字列 "install" の検索の結果、一致する&4; つのイベントが見つかったことを示しています。  
+ ウィンドウには検索ボックスがあり、イベント一覧で特定の文字列を検索できます。 たとえば、次の図は、文字列 "install" の検索の結果、一致する 4 つのイベントが見つかったことを示しています。  
   
  ![DiagnosticsEventSearch](../profiling/media/diagnosticseventsearch.png "DiagnosticsEventSearch")  
   
@@ -76,7 +78,7 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
   
 2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー...]** をクリックします。(ショートカット キー: Alt + F2)。  
   
-3.  診断の起動ページで、セッションで実行する&1; つ以上のツールを選択します。 プロジェクトの種類、オペレーティング システム、およびプログラミング言語に適用されるツールのみが表示されます。 ある診断ツールを選択すると、同じ診断セッションで実行できないツールの選択肢が無効になります。 C# Windows ユニバーサル アプリでの選択例を次に示します。  
+3.  診断の起動ページで、セッションで実行する 1 つ以上のツールを選択します。 プロジェクトの種類、オペレーティング システム、およびプログラミング言語に適用されるツールのみが表示されます。 ある診断ツールを選択すると、同じ診断セッションで実行できないツールの選択肢が無効になります。 C# Windows ユニバーサル アプリでの選択例を次に示します。  
   
      ![診断ツールの選択](../profiling/media/diag_selecttool.png "DIAG_SelectTool")  
   
@@ -103,7 +105,7 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
 |-|-|  
 |![手順 1](../profiling/media/procguid_1.png "ProcGuid_1")|タイムラインは、プロファイル セッションの長さ、アプリケーションのアクティブ化ライフサイクル イベント、ユーザー マークを示します。|  
 |![手順 2](../profiling/media/procguid_2.png "ProcGuid_2")|青いバーをドラッグしてタイムラインの領域を選択することにより、レポートをタイムラインの一部だけに制限できます。|  
-|![手順 3](../profiling/media/procguid_3.png "ProcGuid_3")|ツールには&1; つ以上のマスター グラフが表示されます。 診断セッションが複数のツールによって作成される場合には、すべてのマスター グラフが表示されます。|  
+|![手順 3](../profiling/media/procguid_3.png "ProcGuid_3")|ツールには 1 つ以上のマスター グラフが表示されます。 診断セッションが複数のツールによって作成される場合には、すべてのマスター グラフが表示されます。|  
 |![手順 4](../profiling/media/procguid_4.png "ProcGuid_4")|個々のグラフを展開および折りたたむことができます。|  
 |![手順 5](../profiling/media/procguid_6.png "ProcGuid_6")|データに複数のツールからの情報が含まれる場合、ツールの詳細情報が収集されてタブに表示されます。|  
 |![手順 6](../profiling/media/procguid_6a.png "ProcGuid_6a")|ツールには、1 つ以上の詳細ビューが含まれることがあります。 ビューはタイムラインの選択された領域でフィルター処理されます。|  
@@ -140,8 +142,3 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
  [Visual Studio 2015 の診断ツール [デバッガー] ウィンドウ](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015.aspx)  
   
  [IntelliTrace in Visual Studio Enterprise 2015 (Visual Studio Enterprise2015 の IntelliTrace)](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/intellitrace-in-visual-studio-ultimate-2015.aspx)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

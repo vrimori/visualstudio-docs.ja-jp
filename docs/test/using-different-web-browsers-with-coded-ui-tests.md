@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: ab5c909dd61334920bcdd38ce19e6dcc34b09cbb
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 28ce78165492b6f74cdd85ba79eae26e4d68d32c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>コード化された UI テストでのさまざまな Web ブラウザーの使用
@@ -154,9 +155,9 @@ ms.lasthandoff: 04/04/2017
  [クロス ブラウザー テストのエラーのトラブルシューティング](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)  
   
 ### <a name="guidance"></a>ガイダンス  
- [Visual Studio 2012 を使用した絶え間のない配信のためのテスト – 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
- [Visual Studio 2012 を使用した絶え間のない配信のためのテスト – 第 5 章: システム テストの自動化](http://go.microsoft.com/fwlink/?LinkID=255196)  
+ [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 5 章: システム テストの自動化](http://go.microsoft.com/fwlink/?LinkID=255196)  
   
 ### <a name="faq"></a>FAQ  
  [Coded UI Tests FAQ - 1 (コード化された UI テストの FAQ - 1)](http://go.microsoft.com/fwlink/?LinkID=230576)  

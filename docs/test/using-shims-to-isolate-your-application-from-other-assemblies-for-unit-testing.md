@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 6dfb5758833d9ecda1a6ac378eb3f5069cc80561
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 1d64aafdb107e0398c25f6efed7203524c111f18
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>shim を使用して単体テストでアプリケーションを他のアセンブリから分離する
@@ -539,7 +540,7 @@ ShimFile.WriteAllTextStringString = (fileName, content) => {
 ShimsDelegates.Action<string, string> shim = null;  
 shim = (fileName, content) => {  
   try {  
-    Console.WriteLine("enter”);  
+    Console.WriteLine("enter");  
     // remove shim in order to call original method  
     ShimFile.WriteAllTextStringString = null;  
     File.WriteAllText(fileName, content);  
@@ -562,7 +563,7 @@ ShimFile.WriteAllTextStringString = shim;
 ## <a name="external-resources"></a>外部リソース  
   
 ### <a name="guidance"></a>ガイダンス  
- [Visual Studio 2012 を使用した絶え間のない配信のためのテスト – 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
 ## <a name="see-also"></a>関連項目  
  [Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)   

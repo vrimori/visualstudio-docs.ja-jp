@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: c9df048a49580f3526b48e29041ef3758722ed27
-ms.openlocfilehash: 08677472bc13d58d9ab0b42b856955f8434089e4
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e59263c352084107d9849ab656b8b7d034337c53
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing についてよく寄せられる質問
@@ -89,7 +89,7 @@ ms.lasthandoff: 05/03/2017
 
 ## <a name="error-messages-with-ltoutputpathgt-or-ltoutdirgt"></a>&lt;OutputPath&gt; または &lt;OutDir&gt; に関するエラー メッセージ
 
-**Live Unit Testing がソリューションのビルドを試みると、次のようなエラー メッセージが表示されるのはなぜですか? "...appears to unconditionally set `<OutputPath>` or `<OutDir>`.Live Unit Testing will not execute tests from the output assembly"? (... が <OutputPath> または <OutDir> を無条件に設定したようです。Live Unit Testing は出力アセンブリからテストを実行しません)**
+**Live Unit Testing がソリューションのビルドを試みると、次のようなエラー メッセージが表示されるのはなぜですか? "...appears to unconditionally set `<OutputPath>` or `<OutDir>`.Live Unit Testing will not execute tests from the output assembly" (... が <OutputPath> または <OutDir> を無条件に設定したようです。Live Unit Testing は出力アセンブリからテストを実行しません)**
 
 **回答:**
 
@@ -233,7 +233,7 @@ Live Unit Testing は、ソース ファイルが変更されたことを検出�
 
 - `LiveUnitTesting_TestPlatformLog` ユーザー環境変数を `1` に設定して、テスト プラットフォームのログをキャプチャします。 このようにすると、Live Unit Testing の実行からの詳細なテスト プラットフォームのログ メッセージを `[Solution Root]\.vs\[Solution Name]\log\[VisualStudio Process ID]` から取得できます。
 
-- `VS_UTE_DIAGNOSTICS` という名前のユーザー レベル環境変数を作成し、1 (または任意の値) に設定して、Visual Studio を再起動します。 Visual Studio の **[出力 – テスト]** タブに多くのログが表示されるようになります。 
+- `VS_UTE_DIAGNOSTICS` という名前のユーザー レベル環境変数を作成し、1 (または任意の値) に設定して、Visual Studio を再起動します。 Visual Studio の **[出力 - テスト]** タブに多くのログが表示されるようになります。 
  
 ## <a name="see-also"></a>関連項目
 

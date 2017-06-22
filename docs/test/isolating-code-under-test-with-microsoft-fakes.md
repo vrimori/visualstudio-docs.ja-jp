@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: acc2f3de7000e438829486b23b9652cb8d34db26
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3941968fa0e2e6205c94076f555c8366f009d4c0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="isolating-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes を使用したテストでのコードの分離
@@ -245,7 +246,7 @@ Microsoft Fakes では、アプリケーションの別の部分を*スタブ*�
     End Class  
     ```  
   
-     Shim クラスの名前は、元の型名の先頭に `Fakes.Shim` を付けることで構成されます。 パラメーター名がメソッド名に追加されます。 (System.Fakes へのアセンブリ参照を追加する必要はありません)。  
+     Shim クラスの名前は、元の型名の先頭に `Fakes.Shim` を付けることで構成されます。 パラメーター名がメソッド名に追加されます  (System.Fakes へのアセンブリ参照を追加する必要はありません)。  
   
  前の例では、静的メソッドに shim を使用しています。 インスタンス メソッドに shim を使用する場合は、型名とメソッド名の間に `AllInstances` を記述します。  
   
@@ -253,7 +254,7 @@ Microsoft Fakes では、アプリケーションの別の部分を*スタブ*�
 System.IO.Fakes.ShimFile.AllInstances.ReadToEnd = ...  
 ```  
   
- 参照する 'System.IO.Fakes' アセンブリがありません。 名前空間は、shim の作成プロセスによって生成されます。 ただし、通常どおり、"using" または "Import" を使用できます。  
+ 参照する 'System.IO.Fakes' アセンブリがありません。 名前空間は、shim の作成プロセスによって生成されます。 ただし、通常どおり、'using' または 'Import' を使用できます。  
   
  また、特定のインスタンス、コンストラクター、およびプロパティに shim を作成することもできます。 詳細については、「[shim を使用して単体テストでアプリケーションを他のアセンブリから分離する](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)」を参照してください。  
   

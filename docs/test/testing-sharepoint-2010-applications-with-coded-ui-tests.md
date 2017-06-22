@@ -27,21 +27,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b55b2ffdc3c5bd0ec0fb1b1b556a8f343aab1844
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7ab8ce7199fec306a0f50344619200266a2261b8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト
 コード化された UI テストを SharePoint アプリケーションに含めると、UI コントロールを含むアプリケーション全体が正しく機能していることを検証できます。 コード化された UI テストでは、ユーザー インターフェイスの値とロジックも検証できます。  
   
- **Requirements**  
+ **必要条件**  
   
 -   Visual Studio Enterprise  
   
 ## <a name="what-else-should-i-know-about-coded-ui-tests"></a>コード化された UI テストについて把握しておくべきこと  
- コード化された UI テストを使用する利点の詳細については、「[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)」と「[Visual Studio 2012 を使用した継続的配信のためのテスト – 第 5 章: システム テストの自動化](http://go.microsoft.com/fwlink/?LinkID=255196)」を参照してください。  
+ コード化された UI テストを使用する利点の詳細については、「[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)」と「[Visual Studio 2012 を使用した継続的配信のためのテスト - 第 5 章: システム テストの自動化](http://go.microsoft.com/fwlink/?LinkID=255196)」を参照してください。  
   
  **注**  
   
@@ -50,12 +51,12 @@ ms.lasthandoff: 02/22/2017
 -   ![必須コンポーネント](../test/media/prereq.png "必須コンポーネント") SharePoint アプリケーションでは、Visio および PowerPoint 2010 コントロールはサポートされていません。  
   
 ## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>SharePoint アプリのコード化された UI テストを作成する  
- SharePoint 2010 アプリケーションでの[コード化された UI テストの作成](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)方法は、他の種類のアプリケーションでのテストの作成方法と同じです。 記録と再生は、Web 編集インターフェイス上のすべてのコントロールでサポートされています。 カテゴリと Web パーツを選択するためのインターフェイスは、すべてが標準 Web コントロールです。  
+ SharePoint 2010 アプリケーションでの[コード化された UI テストの作成](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) 方法は、他の種類のアプリケーションでのテストの作成方法と同じです。 記録と再生は、Web 編集インターフェイス上のすべてのコントロールでサポートされています。 カテゴリと Web パーツを選択するためのインターフェイスは、すべてが標準 Web コントロールです。  
   
  ![SharePoint Web パーツ](../test/media/cuit_sharepoint.png "CUIT_SharePoint")  
   
 > [!NOTE]
->  操作を記録している場合は、コードを生成する前に操作を検証します。 マウス ホバーにはいくつかの動作が関連付けられているため、既定で有効になっています。 コード化された UI テストから冗長なホバーを削除するようにしてください。 そのためには、テスト用のコードを編集するか、[コード化された UI テスト エディター](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)を使用します。  
+>  操作を記録している場合は、コードを生成する前に操作を検証します。 マウス ホバーにはいくつかの動作が関連付けられているため、既定で有効になっています。 コード化された UI テストから冗長なホバーを削除するようにしてください。 そのためには、テスト用のコードを編集するか、 [コード化された UI テスト エディター](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)を使用します。  
   
 ## <a name="including-testing-of-office-2010-controls-within-your-sharepoint-app"></a>SharePoint アプリ内に Office 2010 コントロールのテストを含める  
  SharePoint アプリでいくつかの Office 2010 Web パーツの自動化を有効にするには、コードを少し変更する必要があります。  
@@ -154,7 +155,7 @@ uiGridKeyboardInputEdit.Text=value;
  [コード化された UI テストのコンテンツ インデックス](http://blogs.msdn.com/b/mathew_aniyan/archive/2010/02/11/content-index-for-coded-ui-test.aspx)  
   
 ### <a name="guidance"></a>ガイダンス  
- [Visual Studio 2012 を使用した絶え間のない配信のためのテスト – 第 5 章: システム テストの自動化](http://go.microsoft.com/fwlink/?LinkID=255196)  
+ [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 5 章: システム テストの自動化](http://go.microsoft.com/fwlink/?LinkID=255196)  
   
 ### <a name="forum"></a>フォーラム  
  [Visual Studio ALM + Team Foundation Server のブログ](http://go.microsoft.com/fwlink/?LinkID=254496)  

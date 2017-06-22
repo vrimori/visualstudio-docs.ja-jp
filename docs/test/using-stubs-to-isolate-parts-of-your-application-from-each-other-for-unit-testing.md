@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: a4c6024c6e35e8e88ce04b607a784e4adfa87d61
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: d9588eff64ef29c757b6d4224c17975e6ee9d0ee
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>スタブを使用して単体テストでアプリケーションの各部分を相互に分離する
@@ -475,7 +476,7 @@ public void TestGetValue()
 // unit test code  
 var stub = new Fakes.MyClass();  
 stub.CallBase = false;  
-// No delegate set – default delegate:  
+// No delegate set - default delegate:  
 Assert.AreEqual(0, stub.DoVirtual(1));  
   
 stub.CallBase = true;  
@@ -517,7 +518,7 @@ StubBehaviors.Current =
 ## <a name="external-resources"></a>外部リソース  
   
 ### <a name="guidance"></a>ガイダンス  
- [Visual Studio 2012 を使用した絶え間のない配信のためのテスト – 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
 ## <a name="see-also"></a>関連項目  
  [Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)

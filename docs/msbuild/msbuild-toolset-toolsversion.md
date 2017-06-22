@@ -1,62 +1,79 @@
 ---
 title: "MSBuild ツールセット (ToolsVersion) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, マルチ ターゲット"
-  - "MSBuild, 対象にする (特定の .NET Framework を)"
-  - "マルチ ターゲット [MSBuild]"
-  - "対象にする (特定の .NET Framework を) [MSBuild]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, multitargeting
+- targeting a specific .NET framework [MSBuild]
+- MSBuild, targeting a specific .NET framework
+- multitargeting [MSBuild]
 ms.assetid: 40040ee7-4620-4043-a6d8-ccba921421d1
 caps.latest.revision: 30
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# MSBuild ツールセット (ToolsVersion)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 17fd26b26e25c31772adf4b8629852256317968c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
-MSBuild は、タスク、ターゲット、およびツールのツールセットを使用して、アプリケーションをビルドします。  通常、MSBuild ツールセットには、microsoft.common.tasks ファイル、microsoft.common.targets ファイル、および csc.exe や vbc.exe などのコンパイラが含まれています。  ほとんどのツールセットは、複数のバージョンの .NET Framework や複数のシステム プラットフォームを対象としてアプリケーションをコンパイルするために使用できます。  ただし、MSBuild 2.0 ツールセットは .NET Framework 2.0 のみを対象として使用できます。  
+---
+# <a name="msbuild-toolset-toolsversion"></a>MSBuild ツールセット (ToolsVersion)
+MSBuild は、タスク、ターゲット、およびツールのツールセットを使用して、アプリケーションをビルドします。 通常、MSBuild ツールセットには、microsoft.common.tasks ファイル、microsoft.common.targets ファイル、および csc.exe や vbc.exe などのコンパイラが含まれています。 ほとんどのツールセットは、複数のバージョンの .NET Framework や複数のシステム プラットフォームを対象としてアプリケーションをコンパイルするために使用できます。 ただし、MSBuild 2.0 ツールセットは .NET Framework 2.0 のみを対象として使用できます。  
   
-## ToolsVersion 属性  
- プロジェクト ファイルにある [Project](../msbuild/project-element-msbuild.md) 要素の `ToolsVersion` 属性でツールセットを指定します。  次の例では、MSBuild 12.0 ツールセットを使用してプロジェクトをビルドすることを指定します。  
+## <a name="toolsversion-attribute"></a>ToolsVersion 属性  
+ プロジェクト ファイルにある [Project](../msbuild/project-element-msbuild.md) 要素の `ToolsVersion` 属性でツールセットを指定します。 次の例では、MSBuild 12.0 ツールセットを使用してプロジェクトをビルドすることを指定します。  
   
-```  
+```xml  
 <Project ToolsVersion="12.0" ... </Project>  
 ```  
   
-## ToolsVersion 属性の動作  
- Visual Studio でプロジェクトを作成するとき、または既存のプロジェクトをアップグレードするとき、`ToolsVersion` という名前の属性が自動的にプロジェクト ファイルに追加され、その値には、Visual Studio のエディションに付属している MSBuild のバージョンに対応した値が設定されます。  詳細については、「[対象となる特定の .NET Framework バージョンの指定](../ide/targeting-a-specific-dotnet-framework-version.md)」を参照してください。  
+## <a name="how-the-toolsversion-attribute-works"></a>ToolsVersion 属性の動作  
+ Visual Studio でプロジェクトを作成するとき、または既存のプロジェクトをアップグレードするときに、`ToolsVersion` という名前の属性が自動的にプロジェクト ファイルに含まれ、その値は、Visual Studio エディションに付属している MSBuild のバージョンに対応します。 詳細については、「[対象となる特定の .NET Framework のバージョンの指定](../ide/targeting-a-specific-dotnet-framework-version.md)」を参照してください。  
   
- `ToolsVersion` の値をプロジェクト ファイルで定義すると、MSBuild ではその値に基づいて、プロジェクトで使用できるツールセットのプロパティの値を判別します。  ツールセットのプロパティの 1 つに `$(MSBuildToolsPath)` があります。このプロパティは、.NET Framework ツールのパスを指定します。  このツールセットのプロパティ \(または `$(MSBuildBinPath)`\) は、唯一の必須のプロパティです。  
+ `ToolsVersion` の値をプロジェクト ファイルで定義すると、MSBuild ではその値に基づいて、プロジェクトで使用できるツールセットのプロパティの値を判別します。 ツールセットのプロパティの 1 つに `$(MSBuildToolsPath)` があります。このプロパティは、.NET Framework ツールのパスを指定します。 このツールセットのプロパティ (または `$(MSBuildBinPath)`) は、唯一の必須のプロパティです。  
   
- Visual Studio 2013 以降、MSBuild ツールセットのバージョンは Visual Studio のバージョン番号と同じになりました。  プロジェクト ファイルで指定されたツールセットのバージョンにかかわりなく、MSBuild は Visual Studio 内とコマンド ラインでこのツールセットを既定として使用します。  この動作は、\/ToolsVersion フラグを使用してオーバーライドできます。  詳細については、「[ToolsVersion 設定をオーバーライドする](../msbuild/overriding-toolsversion-settings.md)」を参照してください。  
+ Visual Studio 2013 以降、MSBuild ツールセットのバージョンは Visual Studio のバージョン番号と同じになりました。 プロジェクト ファイルで指定されたツールセットのバージョンにかかわりなく、MSBuild は Visual Studio 内とコマンド ラインでこのツールセットを既定として使用します。  この動作は、/ToolsVersion フラグを使用してオーバーライドできます。 詳細については、「[ToolsVersion 設定をオーバーライドする](../msbuild/overriding-toolsversion-settings.md)」を参照してください。  
   
  次の例では、MSBuild は `MSBuildToolsPath` 予約済みプロパティを使用して Microsoft.CSharp.targets ファイルを検索します。  
   
-```  
+```xml  
 <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />  
 ```  
   
- `MSBuildToolsPath` の値を変更するには、カスタム ツールセットを定義します。  詳細については、「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」を参照してください。  
+ `MSBuildToolsPath` の値を変更するには、カスタム ツールセットを定義します。 詳細については、「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」を参照してください。  
   
- ソリューションをコマンド ラインでビルドするとき、msbuild.exe に対して `ToolsVersion` を指定すると、すべてのプロジェクトとそのプロジェクト間の依存関係がその `ToolsVersion` に基づいてビルドされます。ソリューション内の各プロジェクトで固有の `ToolsVersion` が指定されていても、その値は無視されます。  プロジェクトごとに `ToolsVersion` の値を定義するには、「[ToolsVersion 設定のオーバーライド](../msbuild/overriding-toolsversion-settings.md)」を参照してください。  
+ ソリューションをコマンド ラインでビルドするとき、msbuild.exe に対して `ToolsVersion` を指定すると、すべてのプロジェクトとそのプロジェクト間の依存関係がその `ToolsVersion` に基づいてビルドされます。ソリューション内の各プロジェクトで固有の `ToolsVersion` が指定されていても、その値は無視されます。 プロジェクトごとに `ToolsVersion` 値を定義する場合は、「[ToolsVersion 設定のオーバーライド](../msbuild/overriding-toolsversion-settings.md)」を参照してください。  
   
- `ToolsVersion` 属性はプロジェクトの移行でも使用されます。  たとえば、Visual Studio 2010 で Visual Studio 2008 プロジェクトを開く場合、プロジェクト ファイルは ToolsVersion\="4.0" を含むように更新されます。  次に、そのプロジェクトを Visual Studio 2008 で開こうとすると、アップグレードされた `ToolsVersion` は認識されず、プロジェクトは属性が 3.5 に設定された場合と同様にビルドされます。  
+ `ToolsVersion` 属性はプロジェクトの移行でも使用されます。 たとえば、Visual Studio 2010 で Visual Studio 2008 プロジェクトを開く場合、プロジェクト ファイルは ToolsVersion="4.0" を含むように更新されます。 次に、そのプロジェクトを Visual Studio 2008 で開こうとすると、アップグレードされた `ToolsVersion` は認識されないため、プロジェクトは属性が 3.5 に設定された場合と同様にビルドされます。  
   
- Visual Studio 2010 と Visual Studio 2012 は、4.0 の ToolsVersion を使用します。  Visual Studio 2013 は、12.0 の ToolsVersion を使用します。  多くの場合、3 つのうちどのバージョンの Visual Studio でもプロジェクトを開くことができます。変更する必要はありません。  Visual Studio は常に正しいツールセットを使用しますが、使用されているバージョンがプロジェクト ファイルのバージョンと一致しない場合は、そのことが通知されます。  ほとんどの場合、ツールセットには互換性があるため、この警告は問題にはなりません。  
+ Visual Studio 2010 と Visual Studio 2012 は、4.0 の ToolsVersion を使用します。 Visual Studio 2013 は、12.0 の ToolsVersion を使用します。 多くの場合、3 つのうちどのバージョンの Visual Studio でもプロジェクトを開くことができます。変更する必要はありません。 Visual Studio は常に正しいツールセットを使用しますが、使用されているバージョンがプロジェクト ファイルのバージョンと一致しない場合は、そのことが通知されます。 ほとんどの場合、ツールセットには互換性があるため、この警告は問題にはなりません。  
   
- このトピックの後半で説明するサブツールセットを使用すると、MSBuild では、ビルドが実行されるコンテキストに基づいて、使用するツールのセットを自動的に切り替えることができます。  たとえば、プロジェクト ファイルを明示的に変更しなくても、MSBuild では、Visual Studio 2010 での実行時に Visual Studio 2010 での実行時よりも新しいツールのセットを使用できるようになります。  詳細については、「[カスタム プロジェクトでのバージョンの認識](../misc/making-custom-projects-version-aware.md)」を参照してください。  
+ このトピックの後半で説明するサブツールセットを使用すると、MSBuild では、ビルドが実行されるコンテキストに基づいて、使用するツールのセットを自動的に切り替えることができます。 たとえば、プロジェクト ファイルを明示的に変更しなくても、MSBuild では、Visual Studio 2010 での実行時に Visual Studio 2010 での実行時よりも新しいツールのセットを使用できるようになります。 詳細については、「[カスタム プロジェクトでのバージョンの認識](../misc/making-custom-projects-version-aware.md)」を参照してください。  
   
-## ツールセットの実装  
- ツールセットを実装するには、ツールセットを構成するさまざまなツール、ターゲット、およびタスクのパスを選択します。  MSBuild で定義されるツールセットに含まれるツールは、次のソースから取得されます。  
+## <a name="toolset-implementation"></a>ツールセットの実装  
+ ツールセットを実装するには、ツールセットを構成するさまざまなツール、ターゲット、およびタスクのパスを選択します。 MSBuild で定義されるツールセットに含まれるツールは、次のソースから取得されます。  
   
 -   .NET Framework フォルダー  
   
@@ -70,17 +87,17 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
   
 -   <xref:Microsoft.Build.Utilities.ToolLocationHelper> メソッドの使用  
   
- ツールセットのプロパティは、ツールのパスを指定します。  MSBuild はプロジェクト ファイル内にある `ToolsVersion` 属性の値を使用して、対応するレジストリ キーを検索します。その後で、レジストリ キーの情報を使用して、ツールセットのプロパティを設定します。  たとえば、`ToolsVersion` の値が `12.0` である場合、MSBuild は、レジストリ キー \(HKLM\\Software\\Microsoft\\MSBuild\\ToolsVersions\\12.0\) に従ってツールセットのプロパティを設定します。  
+ ツールセットのプロパティは、ツールのパスを指定します。 MSBuild はプロジェクト ファイル内にある `ToolsVersion` 属性の値を使用して、対応するレジストリ キーを検索します。その後で、レジストリ キーの情報を使用して、ツールセットのプロパティを設定します。 たとえば、`ToolsVersion` の値が `12.0` である場合、MSBuild は、レジストリ キー (HKLM\Software\Microsoft\MSBuild\ToolsVersions\12.0) に従ってツールセットのプロパティを設定します。  
   
  ツールセットのプロパティを次に示します。  
   
 -   `MSBuildToolsPath`: MSBuild のバイナリのパスを指定します。  
   
--   `SDK40ToolsPath` は、MSBuild 4.x \(4.0 または 4.5\) に必要な追加のマネージ ツールのパスを指定します。  
+-   `SDK40ToolsPath` は、MSBuild 4.x (4.0 または 4.5) に必要な追加のマネージ ツールのパスを指定します。  
   
 -   `SDK35ToolsPath`: MSBuild 3.5 に必要な追加のマネージ ツールのパスを指定します。  
   
- また、<xref:Microsoft.Build.Utilities.ToolLocationHelper> クラスのメソッドを呼び出すことによって、ツールセットをプログラムで確認することもできます。  このクラスには、次のメソッドが含まれています。  
+ また、<xref:Microsoft.Build.Utilities.ToolLocationHelper> クラスのメソッドを呼び出すことによって、ツールセットをプログラムで確認することもできます。 このクラスには、次のメソッドが含まれています。  
   
 -   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFramework%2A>: .NET Framework フォルダーのパスを返します。  
   
@@ -92,13 +109,13 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
   
 -   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToBuildTools%2A> は、ビルド ツールのパスを返します。  
   
-### サブツールセット  
- このトピックで既に説明したように、MSBuild ではレジストリ キーを使用して、基本ツールのパスを指定します。  キーにサブキーがある場合、MSBuild ではそのサブキーを使用して、追加のツールを含むサブツールセットのパスを指定します。  この場合、ツールセットは両方のキーで定義されたプロパティ定義を組み合わせることによって定義されます。  
+### <a name="sub-toolsets"></a>サブツールセット  
+ このトピックで既に説明したように、MSBuild ではレジストリ キーを使用して、基本ツールのパスを指定します。 キーにサブキーがある場合、MSBuild ではそのサブキーを使用して、追加のツールを含むサブツールセットのパスを指定します。 この場合、ツールセットは両方のキーで定義されたプロパティ定義を組み合わせることによって定義されます。  
   
 > [!NOTE]
 >  ツールセットのプロパティ名が競合する場合、サブキーのパスに対して定義された値が、ルート キーのパスに対して定義された値よりも優先されます。  
   
- サブツールセットは、`VisualStudioVersion` ビルド プロパティがある場合にアクティブになります。  このプロパティは、次の値のいずれか 1 つを使用できます。  
+ サブツールセットは、`VisualStudioVersion` ビルド プロパティがある場合にアクティブになります。 このプロパティは、次の値のいずれか 1 つを使用できます。  
   
 -   "10.0": .NET Framework 4 のサブツールセットを指定します。  
   
@@ -106,14 +123,14 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
   
 -   "12.0": .NET Framework 4.5.1 のサブツールセットを指定します。  
   
- サブツールセット 10.0 および 11.0 は ToolsVersion 4.0 と一緒に使用する必要があります。  それ以降のバージョンでは、サブツールセットのバージョンとToolsVersion は一致しています。  
+ サブツールセット 10.0 および 11.0 は ToolsVersion 4.0 と一緒に使用する必要があります。 それ以降のバージョンでは、サブツールセットのバージョンとToolsVersion は一致しています。  
   
- ビルド中に、MSBuild は `VisualStudioVersion` プロパティの既定値を自動的に決定し、設定します \(このプロパティがまだ定義されていない場合\)。  
+ ビルド中に、MSBuild は `VisualStudioVersion` プロパティの既定値を自動的に決定し、設定します (このプロパティがまだ定義されていない場合)。  
   
- MSBuild には、`VisualStudioVersion` 列挙値をパラメーターとして追加する `ToolLocationHelper` メソッド用のオーバーロード機能が用意されています。  
+ MSBuild には、`ToolLocationHelper` 列挙値をパラメーターとして追加する `VisualStudioVersion` メソッド用のオーバーロード機能が用意されています。  
   
  サブツールセットは .NET Framework 4.5 で導入されました。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)   
  [マルチ ターゲット](../msbuild/msbuild-multitargeting-overview.md)

@@ -1,24 +1,44 @@
 ---
 title: "Visual Studio と Xamarin | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tgt-pltfrm-cross-plat"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tgt-pltfrm-cross-plat
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1da4064f-af69-472c-8f31-98484be5f790
 caps.latest.revision: 10
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 78da5ca77ee2d6a8bd933907edbe5f921af4e2bc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="visual-studio-and-xamarin"></a>Visual Studio と Xamarin
 Xamarin はネイティブの iOS、Android、および Windows のアプリを一般的な C#/.NET コード ベースから構築するためのモバイル アプリ開発プラットフォームであり、プラットフォーム間で 75% ～ほぼ 100% のコードの再利用を達成しています。 Xamarin と C# で記述されたアプリは、基礎となるプラットフォーム API にフル アクセスでき、ネイティブ ユーザー インターフェイスを構築する機能を装備しています。プラットフォーム固有のパッケージにコンパイルするので、実行時のパフォーマンスにほとんど影響を与えることがありません。 (注: Xamarin は F# もサポートしていますが、このドキュメントでは C# のみを扱います。 Visual Basic は現時点ではサポートされていません。)  
   
- さらに良いことに、C#、.NET、および Visual Studio に慣れている開発者は、Android、iOS、および Windows デバイスでのリモート デバッグなど、モバイル アプリを Xamarin で開発する場合、Objective-C または Java のようなネイティブのコーディング言語を習得しなくても、同じ機能と生産性を享受できます。 これは驚くことではありません。NASCAR、Aviva や MixRadio のような、素晴らしい ユーザー インターフェイスを持つ高性能なアプリの多くは、Xamarin を使用して作成されているからです。  
+ さらに良いことに、C#、.NET、および Visual Studio に慣れている開発者は、Android、iOS、および Windows デバイスでのリモート デバッグなど、モバイル アプリを Xamarin で開発する場合、Objective-C または Java のようなネイティブのコーディング言語を習得しなくても、同じ機能と生産性を享受できます。 これは驚くことではありません。NASCAR、Aviva や MixRadio のような、素晴らしいユーザー インターフェイスを持つ高性能なアプリの多くは、Xamarin を使用して作成されているからです。  
   
  このドキュメントでは、以下の項目を通して **Xamarin を使用した Visual Studio** のすべての機能を評価することができます。  
   
@@ -37,8 +57,3 @@ Xamarin はネイティブの iOS、Android、および Windows のアプリを�
   
 > [!NOTE]
 >  HTML および CSS ベースでのクロスプラットフォーム開発ソリューションをお探しの場合は、「[Cross-Platform Development in Visual Studio](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#HTML)」(Visual Studio でのクロスプラットフォーム開発) に説明されている Visual Studio Tools for Apache Cordova をご確認ください。
-
-
-<!--HONumber=Feb17_HO4-->
-
-

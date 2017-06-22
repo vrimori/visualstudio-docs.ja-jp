@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 91b3f224d92b9ace5df34cc74c8d7616b8458d6c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 1a47ab6e11e4c67713961078f125bb7abca23bb9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="unit-test-your-code"></a>コードの単体テスト
@@ -47,7 +48,7 @@ ms.lasthandoff: 02/22/2017
   
 3.  **C++ 用の Microsoft 単体テスト フレームワーク。** C++ 用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、ネイティブ コードをテストするためのフレームワークを提供します。  
   
-4.  **コード カバレッジ ツール。** テスト エクスプローラーで、単体テストが&1; つのコマンドから実行する製品コードの量を確認できます。  
+4.  **コード カバレッジ ツール。** テスト エクスプローラーで、単体テストが 1 つのコマンドから実行する製品コードの量を確認できます。  
   
 5.  **Microsoft Fakes 分離フレームワーク。** Microsoft Fakes 分離フレームワークによって、テスト対象コード内の依存関係を作成する実稼働コードおよびシステム コード向けの代替クラスおよび代替メソッドを作成できます。 関数の Fake デリゲートを実装して、依存関係オブジェクトの動作と出力を制御します。  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 02/22/2017
  [Visual Studio の単体テスト](http://go.microsoft.com/fwlink/?LinkId=224477)  
   
 ### <a name="guidance"></a>ガイダンス  
- [Visual Studio 2012 を使用した絶え間のない配信のためのテスト – 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
 ### <a name="reference"></a>参照  
  [単体テストのコンテンツ インデックス](http://go.microsoft.com/fwlink/?LinkID=254719)  

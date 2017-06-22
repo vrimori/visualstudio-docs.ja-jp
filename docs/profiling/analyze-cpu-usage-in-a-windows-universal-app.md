@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: c0fa199f2ccbdc7b4e60b4295645ccf83792d435
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8e829f0c69a777dcdcda75aa9305b9202748f23e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-cpu-usage-in-a-universal-windows-app-uwp"></a>ユニバーサル Windows アプリ (UWP) での CPU 使用率を分析します
@@ -73,7 +74,7 @@ ms.lasthandoff: 03/07/2017
   
      ![CpuUsage 診断セッションの開始](../profiling/media/cpu_use_wt_perfdiaghub.png "CPU_USE_WT_PerfDiagHub")  
   
-4.  アプリが起動したら、[ **最大数を取得**] をクリックします。 出力の表示後に約&1; 秒待ってから、[ **非同期の最大数の取得**] を選択します。 ボタンのクリック間隔を空けると、診断レポートにおいてボタン クリックのルーチンを分離しやすくなります。  
+4.  アプリが起動したら、[ **最大数を取得**] をクリックします。 出力の表示後に約 1 秒待ってから、[ **非同期の最大数の取得**] を選択します。 ボタンのクリック間隔を空けると、診断レポートにおいてボタン クリックのルーチンを分離しやすくなります。  
   
 5.  2 番目の出力行が表示された後、パフォーマンスと診断ハブで **[コレクションの停止]** をクリックします。  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 03/07/2017
   
  ![GetMaxNumberAsyncButton_Click のレポート選択](../profiling/media/cpu_use_wt_getmaxnumberasync_selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
   
- このメソッドは `GetMaxNumberButton_Click` よりも&1; 秒早く完了しますが、コール ツリー エントリの意味はそれほど明確ではありません。  
+ このメソッドは `GetMaxNumberButton_Click` よりも 1 秒早く完了しますが、コール ツリー エントリの意味はそれほど明確ではありません。  
   
 ###  <a name="BKMK_The_CPU_Usage_call_tree"></a> CPU 使用率コール ツリー  
  コール ツリー情報を理解するには、 `GetMaxNumberButton_Click` セグメントを再度選択し、コール ツリーの詳細を確認します。  
@@ -117,13 +118,13 @@ ms.lasthandoff: 03/07/2017
 |![手順 4](../profiling/media/procguid_4.png "ProcGuid_4")|メソッドの子ノードには、親メソッドの呼び出しのみのデータが含まれます。 [ **外部コードの表示** ] がオフのとき、アプリ メソッドには **[外部コード]** ノードが含まれる場合もあります。|  
   
 ####  <a name="BKMK_External_Code"></a> 外部コード  
- 外部コードは、作成したコードによって実行されるシステムおよびフレームワーク コンポーネント内の関数で構成されます。 外部コードには、アプリの開始と停止、UI の描画、スレッドの制御、およびアプリへの他の低レベル サービスの提供を行う関数が含まれます。 外部コードを確認することはほとんどないため、CPU 使用率コール ツリーはユーザー メソッドの外部関数を&1; つの **[外部コード]** ノードにまとめます。  
+ 外部コードは、作成したコードによって実行されるシステムおよびフレームワーク コンポーネント内の関数で構成されます。 外部コードには、アプリの開始と停止、UI の描画、スレッドの制御、およびアプリへの他の低レベル サービスの提供を行う関数が含まれます。 外部コードを確認することはほとんどないため、CPU 使用率コール ツリーはユーザー メソッドの外部関数を 1 つの **[外部コード]** ノードにまとめます。  
   
  外部コードのコール パスを表示する場合、 **[フィルター ビュー]** リストから **[外部コードの表示]** をクリックし、 **[適用]**をクリックします。  
   
  ![[フィルター表示]、[外部コードの表示] の順に選択](../profiling/media/cpu_use_wt_filterview.png "CPU_USE_WT_FilterView")  
   
- 多くの外部コードの呼び出しチェーンは複雑な入れ子になっているため、関数名列の幅は、一部の大型コンピューター モニターを除いてディスプレイの幅に収まりきらない可能性があります。 その場合、関数名は **[…]**と表示されます。  
+ 多くの外部コードの呼び出しチェーンは複雑な入れ子になっているため、関数名列の幅は、一部の大型コンピューター モニターを除いてディスプレイの幅に収まりきらない可能性があります。 その場合、関数名は **[...]** と表示されます。  
   
  ![コール ツリーの入れ子式の外部コード](../profiling/media/cpu_use_wt_showexternalcodetoowide.png "CPU_USE_WT_ShowExternalCodeTooWide")  
   
@@ -148,13 +149,13 @@ ms.lasthandoff: 03/07/2017
   
  ![GetMaxNumberAsyncButton&#95;Click のレポート選択](../profiling/media/cpu_use_wt_getmaxnumberasync_selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
   
- **[外部コード]** の下にある最初の&2; つのノードは、ステート マシン クラスのコンパイラ生成メソッドです。 3 つ目は、元のメソッドへの呼び出しです。 生成されたメソッドを展開すると詳細が表示されます。  
+ **[外部コード]** の下にある最初の 2 つのノードは、ステート マシン クラスのコンパイラ生成メソッドです。 3 つ目は、元のメソッドへの呼び出しです。 生成されたメソッドを展開すると詳細が表示されます。  
   
  ![展開された GetMaxNumberAsyncButton&#95;Click コール ツリー](../profiling/media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "CPU_USE_WT_GetMaxNumberAsync_ExpandedCallTree")  
   
 -   `MainPage::GetMaxNumberAsyncButton_Click` の機能は非常にわずかで、タスクの値のリストを管理し、結果の最大値を計算し、出力を表示するに過ぎません。  
   
--   `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` は、`GetNumberAsync` の呼び出しをラップする 48 個のタスクをスケジュールして起動するために必要なアクティビティを表示します。  
+-   `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext` は、 `GetNumberAsync`の呼び出しをラップする 48 個のタスクをスケジュールして起動するために必要なアクティビティを表示します。  
   
 -   `MainPage::<GetNumberAsync>b__b` は `GetNumber` を呼び出すタスクのアクティビティを表示します。  
   
@@ -165,7 +166,7 @@ ms.lasthandoff: 03/07/2017
   
 -   ユーザーは多くの場合、アプリの実際のパフォーマンスは気にしていませんが、アプリの見かけ上のパフォーマンスや応答性は気にします。 XAML UI 応答性ツールは、見かけ上の応答性に影響するアクティビティの詳細を UI スレッドに表示します。  
   
-     診断とパフォーマンス ハブで新しいセッションを作成し、XAML UI 応答性ツールと CPU 使用率ツールの両方を追加します。 コレクション シナリオを実行します。 ここまで読み進めることができた場合、レポートには既にわかっていること以外の情報はないでしょう。しかし、2 つのメソッドの **UI スレッド使用状況**のタイムライン グラフの違いは歴然としています。 複雑な実世界のアプリでは、ツールを組み合わせて使用することは非常に役立ちます。  
+     診断とパフォーマンス ハブで新しいセッションを作成し、XAML UI 応答性ツールと CPU 使用率ツールの両方を追加します。 コレクション シナリオを実行します。 ここまで読み進めることができた場合、レポートには既にわかっていること以外の情報はないでしょう。しかし、2 つのメソッドの **[UI スレッド使用状況]** タイムライン グラフの違いは歴然としています。 複雑な実世界のアプリでは、ツールを組み合わせて使用することは非常に役立ちます。  
   
 ##  <a name="BKMK_MainPage_xaml"></a> MainPage.xaml  
   

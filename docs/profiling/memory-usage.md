@@ -29,14 +29,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 137f6faa156d188afb99cafb2b1e9dbababdeb4f
-ms.openlocfilehash: a7de37fd82f94fdcef6f839884ea30c5c77061e5
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b2308ef41ea8068c153d286f58dcf8ac4c581ddd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-memory-usage"></a>メモリ使用量の分析
-デバッガーに統合された **メモリ使用量** 診断ツールを使用したデバッグ中に、メモリ リークおよび非効率的なメモリを見つけます。 メモリ使用量ツールを使用すると、マネージ メモリ ヒープ、およびネイティブ メモリ ヒープの 1 つまたは複数の *スナップショット* を取得できます。 .NET アプリ、ネイティブ アプリ、または混在モード (.NET とネイティブ) アプリのスナップショットを収集できます。  
+デバッガーに統合された**メモリ使用量**診断ツールを使用したデバッグ中に、メモリ リークおよび非効率的なメモリを見つけます。 メモリ使用量ツールを使用すると、マネージ メモリ ヒープ、およびネイティブ メモリ ヒープの 1 つまたは複数の *スナップショット* を取得できます。 .NET アプリ、ネイティブ アプリ、または混在モード (.NET とネイティブ) アプリのスナップショットを収集できます。  
   
 -   単一のスナップショットを分析することにより、オブジェクト型のメモリ使用に対する相対的な影響を理解し、アプリ内でメモリが効率的に使用されていないコードを検出することができます。  
   

@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 04c981d458912aaf3802e727369893759faab3a5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 1600207e0c504f4b4dcbf620e92bcc06e14ec035
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>.runsettings ファイルを使用して単体テストを構成する
@@ -41,7 +42,7 @@ Visual Studio の単体テストは、*.runsettings ファイルを使用して�
 > [!NOTE]
 >  **.runsettings と .testsettings**  
 >   
->  テストを構成するファイルには、次の&2; 種類があります。 *.runsettings は、単体テストに使用されます。 \*.testsettings は、[ラボ環境テスト](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)、Web パフォーマンスおよびロード テストに使用されます。また、一部の種類の診断データ アダプター (Intellitrace など) およびイベント ログ アダプターをカスタマイズする場合にも使用されます。  
+>  テストを構成するファイルには、次の 2 種類があります。 *.runsettings は、単体テストに使用されます。 \*.testsettings は、[ラボ環境テスト](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)、Web パフォーマンスおよびロード テストに使用されます。また、一部の種類の診断データ アダプター (Intellitrace など) およびイベント ログ アダプターをカスタマイズする場合にも使用されます。  
 >   
 >  2010 以前のエディションの Visual Studio では、単体テストをカスタマイズするためにも *.testsettings ファイルが使用されていました。 これは現在でも可能ですが、\*.runsettings ファイルで同等の構成を使用する場合より、テストの実行速度が遅くなります。  
   
@@ -145,7 +146,7 @@ Visual Studio の単体テストは、*.runsettings ファイルを使用して�
 |`TargetFrameworkVersion`|Framework40|Framework35、Framework40、Framework45<br /><br /> テストを検出して実行するために、どのバージョンの単体テスト フレームワークを使用するかを指定します。 これは、単体テスト プロジェクトのビルド プロパティで指定した .NET プラットフォームのバージョンと異なっていてもかまいません。|  
 |`TargetPlatform`|x86|x86、x64|  
 |`TreatTestAdapterErrorsAsWarnings`|false|false、true|  
-|`TestAdaptersPaths`||TestAdapter が配置されているディレクトリの&1; つまたは複数のパス|  
+|`TestAdaptersPaths`||TestAdapter が配置されているディレクトリの 1 つまたは複数のパス|  
 |`MaxCpuCount`|1|単体テストを実行するときに、コンピューターで使用可能なコアを使ってテストを並列実行する程度を制御します。  テストの実行エンジンは、使用可能な各コア上の別個のプロセスとして起動し、アセンブリ、DLL、または関連する成果物など、実行するテストが入ったコンテナーを各コアに与えます。  テスト コンテナーはスケジューリングの単位です。  各コンテナーでは、テストはテスト フレームワークに従って実行されます。  コンテナーが多くある場合、あるコンテナー内のテストの実行を終了したプロセスには、次の使用可能なコンテナーが与えられます。<br /><br /> MaxCpuCount には次の値を指定することができます。<br /><br /> n。ここで n は、1 以上、コアの数以下です。最大 n 個のプロセスが起動します<br /><br /> n。ここで n = その他の値です。起動するプロセスの数は、コンピューター上の利用可能なコア数以下になります|  
   
 ### <a name="diagnostic-data-adapters-data-collectors"></a>診断データ アダプター (データ コレクター)  

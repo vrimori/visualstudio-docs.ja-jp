@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 75dc59de6446e4de3f1fa0522150eabcf800b24b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b7ef6829b8fca9f08b9c1fc526c975dad54f24d2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>チュートリアル: コード化された UI テストの作成、編集、および保守
@@ -160,7 +161,7 @@ ms.lasthandoff: 02/22/2017
   
      ダイアログ ボックスのオプションの詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)」を参照してください。  
   
-8.  [UIMap – コード化された UI テスト ビルダー] で **[記録の開始]** を選択します。  
+8.  [UIMap - コード化された UI テスト ビルダー] で **[記録の開始]** を選択します。  
   
      ![記録の開始](../test/media/cuit_builder_record.png "CUIT_Builder_Record")  
   
@@ -187,7 +188,7 @@ ms.lasthandoff: 02/22/2017
   
 14. [メソッド名] に「**SimpleAppTest**」と入力し、**[追加と生成]** を選択します。 数秒でコード化された UI テストが表示され、ソリューションに追加されます。  
   
-15. [UIMap – コード化された UI テスト ビルダー] を閉じます。  
+15. [UIMap - コード化された UI テスト ビルダー] を閉じます。  
   
      コード エディターに CodedUITest1.cs ファイルが表示されます。  
   
@@ -232,7 +233,7 @@ ms.lasthandoff: 02/22/2017
   
 8.  Microsoft Visual Studio のダイアログ ボックスが表示されます。 警告で、メソッドが UIMap.uitest ファイルから UIMap.cs ファイルへ移動すること、およびコード化された UI テスト エディターを使用してメソッドを編集できなくなることが表示されます。 **[はい]**をクリックします。  
   
-     テスト メソッドが UIMap.uitest ファイルから削除され、[UI Actions] (UI 操作) ペインに表示されなくなります。 移動したテスト ファイルを編集するには、ソリューション エクスプローラーから UIMap.cs ファイルを開きます。  
+     テスト メソッドが UIMap.uitest ファイルから削除され、[UI Actions]\(UI 操作) ペインに表示されなくなります。 移動したテスト ファイルを編集するには、ソリューション エクスプローラーから UIMap.cs ファイルを開きます。  
   
 9. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ツール バーの **[保存]** を選択します。  
   
@@ -312,11 +313,11 @@ ms.lasthandoff: 02/22/2017
   
 1.  CodedUITest1.cs ファイルで、**CodedUITestMethod1()** メソッドを右クリックし、**[コード化された UI テストのコードの生成]** を選択して、**[コード化された UI テスト ビルダーの使用]** を選択します。  
   
-     [UIMap – コード化された UI テスト ビルダー] が表示されます。  
+     [UIMap - コード化された UI テスト ビルダー] が表示されます。  
   
 2.  前半で作成したデスクトップ ショートカットを使用して、作成済みの SimpleWPFApp アプリケーションを実行します。  
   
-3.  [UIMap – コード化された UI テスト ビルダー] で、十字ツールを SimpleWPFApp の **[開始]** ボタンまでドラッグします。  
+3.  [UIMap - コード化された UI テスト ビルダー] で、十字ツールを SimpleWPFApp の **[開始]** ボタンまでドラッグします。  
   
      **[開始]** ボタンが青いボックスで囲まれます。コード化された UI テスト ビルダーによって、選択したコントロールのデータが数秒で処理され、コントロールのプロパティが表示されます。 **AutomationUId** の名前が **buttonA** になっていることに注意してください。  
   
@@ -334,9 +335,9 @@ ms.lasthandoff: 02/22/2017
   
 8.  SimpleWPFApp.exe を閉じます。  
   
-9. [UIMap – コード化された UI テスト ビルダー] を閉じます。  
+9. [UIMap - コード化された UI テスト ビルダー] を閉じます。  
   
-     [UIMap – コード化された UI テスト ビルダー] によって、数秒で UI コントロール マップの変更が処理されます。  
+     [UIMap - コード化された UI テスト ビルダー] によって、数秒で UI コントロール マップの変更が処理されます。  
   
 10. ソリューション エクスプローラーで、UIMap.Designer.cs ファイルを開きます。  
   
@@ -396,7 +397,7 @@ ms.lasthandoff: 02/22/2017
 ### <a name="faq"></a>FAQ  
  [Coded UI Tests FAQ - 1 (コード化された UI テストの FAQ - 1)](http://go.microsoft.com/fwlink/?LinkID=230576)  
   
- [Coded UI Tests FAQ -&2; (コード化された UI テストの FAQ -&2;)](http://go.microsoft.com/fwlink/?LinkID=230578)  
+ [Coded UI Tests FAQ - 2 (コード化された UI テストの FAQ - 2)](http://go.microsoft.com/fwlink/?LinkID=230578)  
   
 ### <a name="forum"></a>フォーラム  
  [Visual Studio の UI オートメーションのテスト (CodedUI を含む)](http://go.microsoft.com/fwlink/?LinkID=224497)  

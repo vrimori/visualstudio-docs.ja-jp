@@ -26,23 +26,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: edb6c75d35f89df363a07eb24ba31e203bc6672e
-ms.openlocfilehash: 30261d8b75029bac15c9ab881d9f43c1a717d8cd
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b699132bf1a31d3ef9dc3ba5af3f99c22890c632
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 
 # <a name="live-unit-testing-with-visual-studio-2017"></a>Visual Studio 2017 での Live Unit Testing
 
-Live Unit Testing は、アプリケーションの開発中に、影響を受けた単体テストをバックグラウンドで自動的に実行して、結果とコード カバレッジを Visual Studio IDE にリアルタイムで表示します。 コードを変更すると、Live Unit Testing は、既存のテストへの変更の影響と、新しいコードが&1; つ以上の既存のテストによってカバーされているかどうかに関するフィードバックを提供します。 それにより、バグ修正や新機能の追加を行ったら単体テストを作成する必要があることを思い出させます。
+Live Unit Testing は、アプリケーションの開発中に、影響を受けた単体テストをバックグラウンドで自動的に実行して、結果とコード カバレッジを Visual Studio IDE にリアルタイムで表示します。 コードを変更すると、Live Unit Testing は、既存のテストへの変更の影響と、新しいコードが 1 つ以上の既存のテストによってカバーされているかどうかに関するフィードバックを提供します。 それにより、バグ修正や新機能の追加を行ったら単体テストを作成する必要があることを思い出させます。
 
 > [!NOTE]
 > Live Unit Testing は、Visual Studio 2017 の Enterprise Edition で .NET Framework を対象とする C# および Visual Basic プロジェクトに使うことができます。 現在、.NET Core では利用できません。
 
 ## <a name="supported-test-frameworks"></a>サポートされるテスト フレームワーク
 
-Live Unit Testing は、次の表に示されている&3; つの一般的な単体テスト フレームワークで動作します。 アダプターやフレームワークのサポートされる最小バージョンも表に示されています。 単体テスト フレームワークはすべて NuGet.org から入手できます。
+Live Unit Testing は、次の表に示されている 3 つの一般的な単体テスト フレームワークで動作します。 アダプターやフレームワークのサポートされる最小バージョンも表に示されています。 単体テスト フレームワークはすべて NuGet.org から入手できます。
  
 <table> 
 <tr>
@@ -91,7 +92,7 @@ Live Unit Testing からファイルに詳細な MSBuild ログ メッセージ�
 
 ## <a name="starting-pausing-and-stopping-live-unit-testing"></a>Live Unit Testing の開始、一時停止、停止
 
-Live Unit Testing を有効にするには、Visual Studio の最上位メニューから **[テスト]**、**[Live Unit Testing]**、**[開始]** の順に選びます。 Live Unit Testing を有効にすると、**[Live Unit Testing]** メニューのオプションが、**[開始]** の&1; 項目から、**[一時停止]**、**[停止]**、**[再起動]** に変わります。
+Live Unit Testing を有効にするには、Visual Studio の最上位メニューから **[テスト]**、**[Live Unit Testing]**、**[開始]** の順に選びます。 Live Unit Testing を有効にすると、**[Live Unit Testing]** メニューのオプションが、**[開始]** の 1 項目から、**[一時停止]**、**[停止]**、**[再起動]** に変わります。
 
 いつでも、Live Unit Testing を一時停止または完全に停止できます。 たとえば、リファクタリングの途中で、しばらくテストが中断されることがわかっている場合に、これを行うことがあります。 3 つのメニュー オプションは次のとおりです。
 

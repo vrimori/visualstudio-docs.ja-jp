@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: b9e8ab5432e5c546776a61b364c0886d9f96c096
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 48b5010ae161b2ce6ad22513afbca4a8e5fe82d3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
@@ -76,7 +77,7 @@ ms.lasthandoff: 02/22/2017
   
 1.  Visual Studio では、新しい **[空のアプリ (ネイティブ ポータブル)]** ソリューションを作成し、名前を **WeatherApp** とします。 このテンプレートは、検索フィールドに「**ネイティブ ポータブル**」と入力することによって、最も簡単に見つけることができます。  
   
-     これがない場合は、Xamarin をインストールするか、Visual Studio 2015 の機能を有効にする必要があります。「[セットアップとインストール](../cross-platform/setup-and-install.md)」をご覧ください。  
+     これがない場合は、Xamarin をインストールするか、Visual Studio 2015 の機能を有効にする必要があります。「[セットアップとインストール](../cross-platform/setup-and-install.md)」を参照してください。  
   
 2.  ソリューションを作成するために [OK] をクリックすると、いくつかの個別のプロジェクトが表示されます。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 02/22/2017
   
      各ネイティブ プロジェクト内では、対応するプラットフォームのネイティブ デザイナーにアクセスでき、プラットフォーム固有の画面を実装できます。  
   
-3.  気象データ サービスから取得した情報を処理するのに使用する **Newtonsoft.Json** と NuGet パッケージを PCL プロジェクトに追加します:  
+3.  気象データ サービスから取得した情報を処理するのに使用する **Newtonsoft.Json** と NuGet パッケージを PCL プロジェクトに追加します。  
   
     -   ソリューション エクスプローラーで **[ソリューション 'WeatherApp']** を右クリックし、**[ソリューションの NuGet パッケージの管理]** を選択します。  
   
@@ -110,14 +111,14 @@ ms.lasthandoff: 02/22/2017
   
 5.  ソリューションをビルドし、ビルド エラーがないことを確認します。  
   
-##  <a name="dataservice"></a>共有データ サービス コードの記述  
+##  <a name="dataservice"></a> 共有データ サービス コードの記述  
  **WeatherApp (ポータブル)** プロジェクトは、すべてのプラットフォームで共有されているポータブル クラス ライブラリ (PCL) 用のコードを記述する場所です。 PCL は、iOS、Android、Windows Phone 用のプロジェクトでビルドされたアプリ パッケージに自動的に含まれます。  
   
  次の手順では、PCL にコードを追加して、気象サービスからのデータにアクセスし、データを格納します。  
   
 1.  このサンプルを実行するには、まず [http://openweathermap.org/appid](http://openweathermap.org/appid)で無料 API キーを申し込む必要があります。  
   
-2.  **WeatherApp** プロジェクトを右クリックし、**[追加]、[クラス]** の順にクリックします。 **[新しい項目の追加]** ダイアログで、ファイルに **Weather.cs**という名前を指定します。 このクラスは、気象データ サービスからのデータを保存するときに使用します。  
+2.  **WeatherApp** プロジェクトを右クリックし、**[追加]、[クラス...]** の順に選択します。 **[新しい項目の追加]** ダイアログで、ファイルに **Weather.cs**という名前を指定します。 このクラスは、気象データ サービスからのデータを保存するときに使用します。  
   
 3.  **Weather.cs** の内容全体を次のコードで置き換えます。  
   
@@ -181,7 +182,7 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-6.  3 番目のクラスを、 **Core** という名前の PCL に追加します。ここには、郵便番号を使用してクエリ文字列を生成し、気象データ サービスを呼び出した後に、 **Weather** クラスのインスタンスを取り込むロジックなどの共有ビジネス ロジックを配置します。  
+6.  3 番目のクラスを、**Core** という名前の PCL に追加します。ここには、郵便番号を使用してクエリ文字列を生成し、気象データ サービスを呼び出した後に、**Weather** クラスのインスタンスを取り込むロジックなどの共有ビジネス ロジックを配置します。  
   
 7.  **Core.cs** の内容を次のコードで置き換えます。  
   
@@ -298,8 +299,8 @@ ms.lasthandoff: 02/22/2017
   
     |プロパティ|値|  
     |--------------|-----------|  
-    |**text**|**Zip Code**|  
-    |**id**|`@+id/ZipCodeLabel`|  
+    |**テキスト**|**[郵便番号]**|  
+    |**ID**|`@+id/ZipCodeLabel`|  
     |**layout_marginLeft**|`10dp`|  
     |**layout_marginTop**|`5dp`|  
   
@@ -320,7 +321,7 @@ ms.lasthandoff: 02/22/2017
   
     |プロパティ|値|  
     |--------------|-----------|  
-    |**id**|`@+id/zipCodeEntry`|  
+    |**ID**|`@+id/zipCodeEntry`|  
     |**layout_marginLeft**|`10dp`|  
     |**layout_marginBottom**|`10dp`|  
     |**width**|`165dp`|  
@@ -343,8 +344,8 @@ ms.lasthandoff: 02/22/2017
   
     |プロパティ|値|  
     |--------------|-----------|  
-    |**id**|`@+id/weatherBtn`|  
-    |**text**|**Get Weather**|  
+    |**ID**|`@+id/weatherBtn`|  
+    |**テキスト**|**Get Weather**|  
     |**layout_marginLeft**|`20dp`|  
     |**layout_alignBottom**|`@id/zipCodeEntry`|  
     |**width**|`165dp`|  

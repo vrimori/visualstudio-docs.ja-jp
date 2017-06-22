@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: c77c8698a4536bc21b86260bb557fe79f03385cc
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 5f32c2bc9f289a69a5ef9e7acfc1a973017fec0f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>コード化された UI テスト ログを使用したコード化された UI テストの分析
@@ -80,7 +81,7 @@ ms.lasthandoff: 02/22/2017
     -   <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.LoggerOverrideState%2A> = HtmlLoggerState.AllActionSnapshot;  
   
 ### <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>手順 2: コード化された UI テストを実行してログを表示する  
- **QTAgent32.exe.config** ファイルに変更を加えてコード化された UI テストを実行すると、テスト エクスプローラーの結果に、出力リンクが表示されます。 トレース レベルが “verbose” に設定されていると、ログ ファイルはテストが失敗した場合だけでなく、テストが成功した場合にも生成されます。  
+ **QTAgent32.exe.config** ファイルに変更を加えてコード化された UI テストを実行すると、テスト エクスプローラーの結果に、出力リンクが表示されます。 トレース レベルが "verbose" に設定されていると、ログ ファイルはテストが失敗した場合だけでなく、テストが成功した場合にも生成されます。  
   
 1.  [**テスト**] メニューの [**ウィンドウ**] を選択し、[**テスト エクスプローラー**] を選択します。  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="q--a"></a>Q & A  
   
 ### <a name="q-what-happened-to-the-enablehtmllogger-key"></a>Q: EnableHtmlLogger キーはどうなったのですか?  
- 以前のバージョンの Visual Studio では、コード化された UI テストで HTML ロガーを有効にするための構成設定が他に&2; つありました。  
+ 以前のバージョンの Visual Studio では、コード化された UI テストで HTML ロガーを有効にするための構成設定が他に 2 つありました。  
   
 ```  
   

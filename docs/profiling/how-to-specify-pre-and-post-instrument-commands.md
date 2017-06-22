@@ -1,30 +1,50 @@
 ---
-title: "方法 : インストルメント前のコマンドおよびインストルメント後のコマンドを指定する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.property.instrument"
-helpviewer_keywords: 
-  - "プロファイリング ツール、インストルメント前のイベント"
-  - "イベント [Visual Studio]、インストルメント前の"
-  - "インストルメント前のイベント、パフォーマンス ツール"
+title: "方法: インストルメント化前のコマンドおよびインストルメント化後のコマンドを指定する | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.property.instrument
+helpviewer_keywords:
+- profiling tools, pre-instrument events
+- events [Visual Studio], pre-instrument
+- pre-instrument events, performance tools
 ms.assetid: 6a8d5340-1d1b-4d81-88dd-8e1f435eb828
 caps.latest.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 28
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: afbc73dbeda9d8201d1ed0cfccdf80025fc82306
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>方法 : インストルメント前のコマンドおよびインストルメント後のコマンドを指定する
 パフォーマンス セッションのバイナリがインストルメント化される前か後に実行されるコマンドを指定できます。 コマンド ラインから発行できるコマンドはすべて、インストルメント化前のイベントまたはインストルメント化後のイベントとして指定できます。 たとえば、バイナリのインストルメント化後に実行されるバッチ ファイルで、厳密な名前キーを持つアセンブリの再署名を自動化するコマンドを指定できます。  
   
- プロファイル実行におけるインストルメント化されたすべてのバイナリ、または個々のバイナリに対してコマンドを指定できます。 ただし、インストルメンテーション プロセスの前に実行するよう指定できるインストルメント化前のコマンドは&1; つだけであり、インストルメンテーション プロセスの後に実行するよう指定できるインストルメント化後のコマンドも&1; つだけです。 すべてのバイナリと個々のバイナリの両方に対してコマンドを指定することはできません。 すべてのバイナリに対してコマンドを指定すると、そのコマンドはセッションの各バイナリのインストルメンテーションの前または後に実行されます。  
+ プロファイル実行におけるインストルメント化されたすべてのバイナリ、または個々のバイナリに対してコマンドを指定できます。 ただし、インストルメンテーション プロセスの前に実行するよう指定できるインストルメント化前のコマンドは 1 つだけであり、インストルメンテーション プロセスの後に実行するよう指定できるインストルメント化後のコマンドも 1 つだけです。 すべてのバイナリと個々のバイナリの両方に対してコマンドを指定することはできません。 すべてのバイナリに対してコマンドを指定すると、そのコマンドはセッションの各バイナリのインストルメンテーションの前または後に実行されます。  
   
  **Requirements**  
   
@@ -61,7 +81,7 @@ caps.handback.revision: 28
 3.  **[インストルメント化前のイベント]** の **[コマンド ライン]** テキスト ボックスにコマンドを入力します。  
   
     > [!NOTE]
-    >  **[コマンド ライン]** ボックスの横にある省略記号ボタン **(…)** をクリックし、適切な .exe、.cmd、または .bat ファイルを参照して選択できます。  
+    >  **[コマンド ライン]** ボックスの横にある省略記号ボタン **(...)** をクリックし、適切な .exe、.cmd、または .bat ファイルを参照して選択できます。  
   
 4.  **[OK]** をクリックします。  
   
@@ -80,7 +100,7 @@ caps.handback.revision: 28
 3.  **[インストルメント化後のイベント]** の **[コマンド ライン]** テキスト ボックスにコマンドを入力します。  
   
     > [!NOTE]
-    >  **[コマンド ライン]** ボックスの横にある省略記号ボタン **(…)** をクリックし、適切な .exe、.cmd、または .bat ファイルを参照して選択できます。  
+    >  **[コマンド ライン]** ボックスの横にある省略記号ボタン **(...)** をクリックし、適切な .exe、.cmd、または .bat ファイルを参照して選択できます。  
   
 4.  **[OK]** をクリックします。  
   
@@ -88,8 +108,3 @@ caps.handback.revision: 28
   
 ## <a name="see-also"></a>関連項目  
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
