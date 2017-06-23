@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 203e1e27cc892e96b103fc6cb22a73672a8e16af
 ms.openlocfilehash: f351952a256679ec2d6c9dc2daa5288ca7214ad0
+ms.contentlocale: ja-jp
 ms.lasthandoff: 03/01/2017
 
 ---
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/01/2017
  MSBuild タスクを使用しなくても、システム時刻の読み取り、文字列の比較、正規表現の照合、その他の処理をビルド スクリプト内で実行できます。 MSBuild は、文字列を数値に、数値を文字列に変換しようと試みます。また、必要に応じて他の変換も実行します。  
 
 ## <a name="property-function-syntax"></a>プロパティ関数の構文  
- 次に&3; 種類のプロパティ関数を示します。各関数には異なる構文があります。  
+ 次に 3 種類のプロパティ関数を示します。各関数には異なる構文があります。  
 
 -   文字列 (インスタンス) プロパティ関数  
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 03/01/2017
 -   MSBuild プロパティ関数  
 
 ### <a name="string-property-functions"></a>文字列プロパティ関数  
- ビルド プロパティの値はすべて文字列値です。 文字列 (インスタンス) メソッドを使用してプロパティ値を操作できます。 たとえば、次のコードを使用して、完全パスを表すビルド プロパティからドライブ名 (最初の&3; 文字) を抽出できます。  
+ ビルド プロパティの値はすべて文字列値です。 文字列 (インスタンス) メソッドを使用してプロパティ値を操作できます。 たとえば、次のコードを使用して、完全パスを表すビルド プロパティからドライブ名 (最初の 3 文字) を抽出できます。  
 
  `$(ProjectOutputFolder.Substring(0,3))`  
 
@@ -171,7 +172,7 @@ ms.lasthandoff: 03/01/2017
 
  `$([MSBuild]::Method(Parameters))`  
 
- たとえば、数値を持つ&2; つのプロパティを合計するには、次のコードを使用します。  
+ たとえば、数値を持つ 2 つのプロパティを合計するには、次のコードを使用します。  
 
  `$([MSBuild]::Add($(NumberOne), $(NumberTwo))`  
 
@@ -191,9 +192,9 @@ ms.lasthandoff: 03/01/2017
 |long Modulo(long a, long b)|2 個の長整数を剰余します。|  
 |string Escape(string unescaped)|MSBuild のエスケープ ルールに従って文字列をエスケープします。|  
 |string Unescape(string escaped)|MSBuild のエスケープ ルールに従って文字列をエスケープ解除します。|  
-|int BitwiseOr(int first, int second)|1 番目と&2; 番目 (first &#124; second) でビットごとの `OR` を実行します。|  
-|int BitwiseAnd(int first, int second)|1 番目と&2; 番目 (first & second) でビットごとの `AND` を実行します。|  
-|int BitwiseXor(int first, int second)|1 番目と&2; 番目 (first ^ second) でビットごとの `XOR` を実行します。|  
+|int BitwiseOr(int first, int second)|1 番目と 2 番目 (first &#124; second) でビットごとの `OR` を実行します。|  
+|int BitwiseAnd(int first, int second)|1 番目と 2 番目 (first & second) でビットごとの `AND` を実行します。|  
+|int BitwiseXor(int first, int second)|1 番目と 2 番目 (first ^ second) でビットごとの `XOR` を実行します。|  
 |int BitwiseNot(int first)|ビットごとの `NOT` (~first) を実行します。|  
 
 ##  <a name="nested-property-functions"></a>入れ子になったプロパティ関数  
@@ -250,7 +251,7 @@ $([MSBuild]::GetPathOfFileAbove(dir.props)
 ```  
 
 ##  <a name="msbuild-getregistryvalue"></a>MSBuild の GetRegistryValue  
- MSBuild の `GetRegistryValue` プロパティ関数は、レジストリ キーの値を返します。 この関数は、キー名と値の名前という&2; つの引数を取り、レジストリの値を返します。 値の名前を指定しない場合は、既定値が返されます。  
+ MSBuild の `GetRegistryValue` プロパティ関数は、レジストリ キーの値を返します。 この関数は、キー名と値の名前という 2 つの引数を取り、レジストリの値を返します。 値の名前を指定しない場合は、既定値が返されます。  
 
  この関数を使用する方法を次の例に示します。  
 
@@ -262,7 +263,7 @@ $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(Samp
 ```  
 
 ##  <a name="msbuild-getregistryvaluefromview"></a>MSBuild の GetRegistryValueFromView  
- MSBuild の `GetRegistryValueFromView` プロパティ関数は、レジストリ キー、値、および&1; つ以上の順序づけられたレジストリ ビューを含むシステム レジストリ データを取得します。 キーと値は見つかるまで各レジストリ ビューで順番に検索されます。  
+ MSBuild の `GetRegistryValueFromView` プロパティ関数は、レジストリ キー、値、および 1 つ以上の順序づけられたレジストリ ビューを含むシステム レジストリ データを取得します。 キーと値は見つかるまで各レジストリ ビューで順番に検索されます。  
 
  このプロパティ関数の構文を次に示します。  
 
@@ -287,7 +288,7 @@ $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(Samp
  は、最初に 64 ビットのレジストリ ビュー、次に 32 ビットのレジストリ ビューを参照して、ReferenceAssemblies キーの SLRuntimeInstallPath データを取得します。  
 
 ##  <a name="msbuild-makerelative"></a>MSBuild の MakeRelative  
- MSBuild の `MakeRelative` プロパティ関数は、最初のパスに対する&2; 番目のパスの相対パスを返します。 各パスはファイルまたはフォルダです。  
+ MSBuild の `MakeRelative` プロパティ関数は、最初のパスに対する 2 番目のパスの相対パスを返します。 各パスはファイルまたはフォルダです。  
 
  このプロパティ関数には次の構文があります。  
 
@@ -316,7 +317,7 @@ Output:
 ```  
 
 ##  <a name="msbuild-valueordefault"></a>MSBuild の ValueOrDefault  
- MSBuild の `ValueOrDefault` プロパティ関数は、null または空でない限り、最初の引数を返します。 最初の引数が null または空の場合、関数は&2; 番目の引数を返します。  
+ MSBuild の `ValueOrDefault` プロパティ関数は、null または空でない限り、最初の引数を返します。 最初の引数が null または空の場合、関数は 2 番目の引数を返します。  
 
  この関数を使用する方法を次の例に示します。  
 
