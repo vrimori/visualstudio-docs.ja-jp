@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 63aad78bdc7df685ca3a73ec16a9cbc87b78151f
 ms.openlocfilehash: 349cf26923ebee02162b6a113b39393aea01c58f
-ms.lasthandoff: 03/06/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>チュートリアル: 使用法から生成機能のテスト ファーストのサポート
@@ -68,7 +69,7 @@ ms.lasthandoff: 03/06/2017
 2.  クラス `UnitTest1` の宣言を検索して、この名前を `AutomobileTest`に変更します。 C# では、 `UnitTest1()` コンストラクターが存在する場合は、その名前を `AutomobileTest()`に変更します。  
   
     > [!NOTE]
-    >  現在、IntelliSense では、IntelliSense のステートメント入力候補に対して、 *完了モード* と *提案モード*の&2; つの方法を提供しています。 まだ定義していないクラスやメンバーを使用する場合は、提案モードを使用します。 [IntelliSense] ウィンドウが開いているときに、Ctrl キーと Alt キーを押しながら Space キーを押すと完了モードと提案モードを切り替えることができます。 詳しくは、「[IntelliSense の使用](../ide/using-intellisense.md)」をご覧ください。 提案モードは、次の手順で「 `Automobile` 」と入力する際に役立ちます。  
+    >  現在、IntelliSense では、IntelliSense のステートメント入力候補に対して、 *完了モード* と *提案モード*の 2 つの方法を提供しています。 まだ定義していないクラスやメンバーを使用する場合は、提案モードを使用します。 [IntelliSense] ウィンドウが開いているときに、Ctrl キーと Alt キーを押しながら Space キーを押すと完了モードと提案モードを切り替えることができます。 詳しくは、「[IntelliSense の使用](../ide/using-intellisense.md)」をご覧ください。 提案モードは、次の手順で「 `Automobile` 」と入力する際に役立ちます。  
   
 3.  `TestMethod1()` メソッドを検索して、この名前を `DefaultAutomobileIsInitializedCorrectly()`に変更します。 次の図に示すように、このメソッド内に、 `Automobile`というクラスの新しいインスタンスを作成します。 コンパイル時のエラーを示す波下線が表示され、型名の下にスマート タグが表示されます。 スマート タグの正確な場所は、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] または [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] のどちらを使っているかにより異なります。  
   
@@ -99,14 +100,14 @@ Visual C#
   
 ### <a name="to-generate-a-property-stub"></a>プロパティ スタブを生成するには  
   
-1.  `Automobile` クラスに `Model` と `TopSpeed`という&2; つのパブリック プロパティがあることを示す製品仕様があるとします。 これらのプロパティは、既定のコンストラクターによって、 `"Not specified"` と `-1` の既定値で初期化されている必要があります。 次の単体テストでは、既定のコンストラクターが適切な既定値にプロパティを設定することを検証します。  
+1.  `Automobile` クラスに `Model` と `TopSpeed`という 2 つのパブリック プロパティがあることを示す製品仕様があるとします。 これらのプロパティは、既定のコンストラクターによって、 `"Not specified"` と `-1` の既定値で初期化されている必要があります。 次の単体テストでは、既定のコンストラクターが適切な既定値にプロパティを設定することを検証します。  
   
      `DefaultAutomobileIsInitializedCorrectly`に次のコード行を追加します。  
   
      [!code-cs[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]
      [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]  
   
-     コードは `Automobile`の&2; つの未定義プロパティを参照するため、スマート タグが表示されます。 `Model` のスマート タグをクリックし、 **[プロパティ スタブの生成]**をクリックします。 `TopSpeed` プロパティのプロパティ スタブも生成します。  
+     コードは `Automobile`の 2 つの未定義プロパティを参照するため、スマート タグが表示されます。 `Model` のスマート タグをクリックし、 **[プロパティ スタブの生成]**をクリックします。 `TopSpeed` プロパティのプロパティ スタブも生成します。  
   
      `Automobile` クラスでは、新しいプロパティの型はコンテキストから正しく推定されます。  
   
