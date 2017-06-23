@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 0baf22ca488f4500fb3f4e845a0957b6225dd327
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Command Aliases
@@ -97,7 +98,7 @@ ms.lasthandoff: 02/22/2017
 |[ローカル] ウィンドウ|Locals|Debug.Locals|  
 |[LogCommandWindowOutput コマンド](../../ide/reference/log-command-window-output-command.md)|ログ|Tools.LogCommandWindowOutput|  
 |[コマンド ウィンドウ マーク モード]|mark|Tools.CommandWindowMarkMode|  
-|[メモリ&1;] ウィンドウ|Memory Memory1|Debug.Memory1|  
+|[メモリ 1] ウィンドウ|Memory Memory1|Debug.Memory1|  
 |[メモリ 2] ウィンドウ|Memory2|Debug.Memory2|  
 |[メモリ 3] ウィンドウ|Memory3|Debug.Memory3|  
 |[メモリ 4] ウィンドウ|Memory4|Debug.Memory4|  
