@@ -1,26 +1,46 @@
 ---
-title: "手順 7: 乗算問題と除算問題の追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "手順 7: 乗算問題と除算問題の追加 | Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e638959e-f6a4-4eb4-b2e9-f63b7855cf8f
 caps.latest.revision: 17
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 54005a458c777d717909fe481405f6e11563d086
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
+
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>手順 7: 乗算問題と除算問題の追加
-このチュートリアルの第&7; 部では、乗算問題と除算問題を追加しますが、まず変更方法について考えてみます。 最初の手順は、値を格納することです。  
+このチュートリアルの第 7 部では、乗算問題と除算問題を追加しますが、まず変更方法について考えてみます。 最初の手順は、値を格納することです。  
   
 ### <a name="to-add-multiplication-and-division-problems"></a>乗算問題と除算問題を追加するには  
   
-1.  さらに&4; つの整数変数をフォームに追加します。  
+1.  さらに 4 つの整数変数をフォームに追加します。  
   
      [!code-vb[VbExpressTutorial3Step7#15](../ide/codesnippet/VisualBasic/step-7-add-multiplication-and-division-problems_1.vb)]
      [!code-cs[VbExpressTutorial3Step7#15](../ide/codesnippet/CSharp/step-7-add-multiplication-and-division-problems_1.cs)]  
@@ -44,7 +64,7 @@ caps.handback.revision: 17
   
 5.  プログラムを保存し、実行します。  
   
-     次の図に示すように、クイズの受け手はクイズを完了するためには&4; つの問題に答える必要があります。  
+     次の図に示すように、クイズの受け手はクイズを完了するためには 4 つの問題に答える必要があります。  
   
      ![4 つの問題がある計算クイズ](../ide/media/express_finishedquiz.png "Express_FinishedQuiz")  
 4 つの問題がある計算クイズ  
@@ -54,8 +74,3 @@ caps.handback.revision: 17
 -   チュートリアルの次の手順に進むには、「[手順 8: クイズのカスタマイズ](../ide/step-8-customize-the-quiz.md)」を参照してください。  
   
 -   チュートリアルの前の手順に戻るには、「[手順 6: 減算問題の追加](../ide/step-6-add-a-subtraction-problem.md)」を参照してください。
-
-
-<!--HONumber=Feb17_HO4-->
-
-
