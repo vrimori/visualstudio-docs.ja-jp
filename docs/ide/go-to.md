@@ -26,9 +26,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3b812629bf0f655f39c35a56eb1b3ca9113303a6
 ms.openlocfilehash: 8bf6d49b21d128d15f5312fb230d4a8e7a8195af
+ms.contentlocale: ja-jp
 ms.lasthandoff: 03/01/2017
 
 ---
@@ -61,10 +62,10 @@ ms.lasthandoff: 03/01/2017
 
 プレフィックス | アイコン | ショートカット | 説明
 :----: | ---- | -------- | ---
-#      | ![シンボル アイコン](media/gotoall_symbolicon.png) | Ctrl +&1;、Ctrl + S | 一致するシンボルを検索します
-f      | ![ファイル アイコン](media/gotoall_fileicon.png)     | Ctrl +&1;、Ctrl + F | 一致するファイル名を検索します
-m      | ![メンバー アイコン](media/gotoall_membericon.png) | Ctrl +&1;、Ctrl + M | 一致するメンバーを検索します
-t      | ![型アイコン](media/gotoall_typeicon.png)     | Ctrl +&1;、Ctrl + T | 一致する型を検索します
+#      | ![シンボル アイコン](media/gotoall_symbolicon.png) | Ctrl + 1、Ctrl + S | 一致するシンボルを検索します
+f      | ![ファイル アイコン](media/gotoall_fileicon.png)     | Ctrl + 1、Ctrl + F | 一致するファイル名を検索します
+m      | ![メンバー アイコン](media/gotoall_membericon.png) | Ctrl + 1、Ctrl + M | 一致するメンバーを検索します
+t      | ![型アイコン](media/gotoall_typeicon.png)     | Ctrl + 1、Ctrl + T | 一致する型を検索します
 :      | ![行アイコン](media/gotoall_lineicon.png)     | Ctrl+G         | 入力した行番号にジャンプします
 
 ### <a name="search-locations"></a>検索場所
