@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 2d8309ead037097b8205245feabdb67c68d0d6b2
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -40,7 +41,7 @@ ms.lasthandoff: 02/22/2017
 MSBuild では、複数のプロセッサまたはマルチコア プロセッサを搭載したシステムを使用できます。 プロセッサごとに個別のビルド プロセスが作成されます。 たとえば、4 つのプロセッサを搭載したシステムでは、4 つのビルド プロセスが作成されます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、これらのビルドを同時に処理できるため、全体的なビルド時間が短縮されます。 ただし、並行ビルドでは、ビルド処理が行われる方法がいくつかの点で通常とは異なります。 このトピックでは、それらの相違点について説明します。  
   
 ## <a name="project-to-project-references"></a>プロジェクト間参照  
- [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] が並行ビルドによってプロジェクトをビルドしているときにプロジェクト間 (P2P) 参照を検出した場合は、その参照を&1; 回のみビルドします。 2 つのプロジェクトに同じ P2P 参照がある場合、その参照はプロジェクトごとに再ビルドされません。 ビルド エンジンが同じ P2P 参照をそれに依存する両方のプロジェクトに返します。 それ以降にセッション内で同じターゲットが要求された場合は、同じ P2P 参照が返されます。  
+ [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] が並行ビルドによってプロジェクトをビルドしているときにプロジェクト間 (P2P) 参照を検出した場合は、その参照を 1 回のみビルドします。 2 つのプロジェクトに同じ P2P 参照がある場合、その参照はプロジェクトごとに再ビルドされません。 ビルド エンジンが同じ P2P 参照をそれに依存する両方のプロジェクトに返します。 それ以降にセッション内で同じターゲットが要求された場合は、同じ P2P 参照が返されます。  
   
 ## <a name="cycle-detection"></a>サイクルの検出  
  サイクルの検出は [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0 の場合と同じように機能します。ただし、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には現在、サイクルの検出を別の時点またはビルド時に報告する機能が追加されています。  
@@ -54,7 +55,7 @@ MSBuild では、複数のプロセッサまたはマルチコア プロセッ�
 ## <a name="multi-process-execution"></a>マルチプロセス実行  
  ビルドに関連するほとんどの操作では、パス関連のエラーを回避するために、ビルド プロセスの全体をとおして現在のディレクトリが変わらないことが必要です。 そのため、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、スレッドごとにディレクトリが作成される可能性があるため、複数のスレッドでプロジェクトを実行することはできません。  
   
- この問題を回避し、マルチプロセッサによるビルドを可能にするために、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では "プロセス分離" が使用されます。 プロセス分離によって、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は最大 `n` のプロセスを作成できます。`n` はシステムで利用可能なプロセッサの数です。 たとえば、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] が&2; つのプロセッサを搭載したシステムでソリューションをビルドする場合は、2 つのビルド プロセスのみ作成されます。 これらのプロセスは、ソリューションに含まれるすべてのプロジェクトのビルドに再利用されます。  
+ この問題を回避し、マルチプロセッサによるビルドを可能にするために、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では "プロセス分離" が使用されます。 プロセス分離によって、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は最大 `n` のプロセスを作成できます。`n` はシステムで利用可能なプロセッサの数です。 たとえば、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] が 2 つのプロセッサを搭載したシステムでソリューションをビルドする場合は、2 つのビルド プロセスのみ作成されます。 これらのプロセスは、ソリューションに含まれるすべてのプロジェクトのビルドに再利用されます。  
   
 ## <a name="see-also"></a>関連項目  
  [MSBuild での複数のプロジェクトの並行ビルド](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)   

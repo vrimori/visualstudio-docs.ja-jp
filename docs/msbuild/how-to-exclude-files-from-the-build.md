@@ -1,26 +1,45 @@
 ---
 title: "方法: ビルドからファイルを除外する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild では、ワイルドカード"
-  - "MSBuild では、ファイルの除外"
-  - "ワイルドカードを MSBuild"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, wildcards
+- MSBuild, excluding files
+- wildcards, MSBuild
 ms.assetid: 1be36e45-01da-451c-972d-f9fc0e7d663c
 caps.latest.revision: 16
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 16
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
+ms.openlocfilehash: 09a5ecabf88a9f15bcd84bd83ffac5730680adae
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="how-to-exclude-files-from-the-build"></a>方法: ビルドからファイルを除外する
-プロジェクト ファイルでは、ワイルドカードを使用して、1 つのディレクトリ内のすべてのファイル、または入れ子にされたディレクトリのセットをビルドの入力として使用することができます。 しかし、ディレクトリ内の&1; つのファイル、または入れ子にされたディレクトリのセット内の&1; つのディレクトリをビルドの入力に含めたくない場合もあります。 そのファイルまたはディレクトリは、入力の一覧から明示的に除外できます。 また、特定の条件のもとでのみ含めることを望むファイルがプロジェクトに存在することもあります。 ファイルをビルドに含める条件を明示的に宣言できます。  
+プロジェクト ファイルでは、ワイルドカードを使用して、1 つのディレクトリ内のすべてのファイル、または入れ子にされたディレクトリのセットをビルドの入力として使用することができます。 しかし、ディレクトリ内の 1 つのファイル、または入れ子にされたディレクトリのセット内の 1 つのディレクトリをビルドの入力に含めたくない場合もあります。 そのファイルまたはディレクトリは、入力の一覧から明示的に除外できます。 また、特定の条件のもとでのみ含めることを望むファイルがプロジェクトに存在することもあります。 ファイルをビルドに含める条件を明示的に宣言できます。  
   
 ## <a name="excluding-a-file-or-directory-from-the-inputs-for-a-build"></a>ビルドの入力からファイルまたはディレクトリを除外する  
  項目リストは、ビルドの入力ファイルです。 `Include` 属性を使用して、含める項目を個別にまたはグループとして宣言します。 例:  
@@ -32,7 +51,7 @@ caps.handback.revision: 16
 <JPGFile Include="Images\**\*.jpg"/>  
 ```  
   
- ビルドの入力として&1; つのディレクトリのすべてのファイルまたは入れ子にされたディレクトリのセットを含めるためにワイルドカードを使用した場合に、ディレクトリ内の&1; つ以上のファイル、または入れ子にされたディレクトリのセット内の&1; つのディレクトリを含めたくないと思う可能性があります。 項目リストから項目を除外するには、`Exclude` 属性を使用します。  
+ ビルドの入力として 1 つのディレクトリのすべてのファイルまたは入れ子にされたディレクトリのセットを含めるためにワイルドカードを使用した場合に、ディレクトリ内の 1 つ以上のファイル、または入れ子にされたディレクトリのセット内の 1 つのディレクトリを含めたくないと思う可能性があります。 項目リストから項目を除外するには、`Exclude` 属性を使用します。  
   
 #### <a name="to-include-all-cs-or-vb-files-except-form2"></a>Form2 を除くすべての .cs ファイルまたは .vb ファイルを含める場合  
   
@@ -126,8 +145,3 @@ caps.handback.revision: 16
  [項目](../msbuild/msbuild-items.md)   
  [MSBuild](../msbuild/msbuild.md)
  [方法: ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -27,9 +27,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 531cfe2ee8f1eaef507dc9d0addf1157201d8d58
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -203,7 +204,7 @@ BEGIN_TEST_METHOD_ATTRIBUTE(testMethodName)
 END_TEST_METHOD_ATTRIBUTE()  
 ```  
   
- テスト メソッド *testClassName* に、`TEST_METHOD_ATTRIBUTE` の&1; つ以上のマクロで定義された属性を追加します。  
+ テスト メソッド *testClassName* に、`TEST_METHOD_ATTRIBUTE` の 1 つ以上のマクロで定義された属性を追加します。  
   
  `TEST_METHOD_ATTRIBUTE` マクロは名前 *attributeName* と値 *attributeValue* を持つ属性を定義します。  
   
@@ -216,7 +217,7 @@ BEGIN_TEST_CLASS_ATTRIBUTE(testClassName)
 END_TEST_CLASS_ATTRIBUTE()  
 ```  
   
- テスト クラス *testClassName* に、`TEST_CLASS_ATTRIBUTE` の&1; つ以上のマクロで定義された属性を追加します。  
+ テスト クラス *testClassName* に、`TEST_CLASS_ATTRIBUTE` の 1 つ以上のマクロで定義された属性を追加します。  
   
  `TEST_CLASS_ATTRIBUTE` マクロは名前 *attributeName* と値 *attributeValue* を持つ属性を定義します。  
   
@@ -229,7 +230,7 @@ BEGIN_TEST_MODULE_ATTRIBUTE(testModuleName)
 END_TEST_MODULE_ATTRIBUTE()  
 ```  
   
- テスト モジュール *testModuleName* に、`TEST_MODULE_ATTRIBUTE` の&1; つ以上のマクロで定義された属性を追加します。  
+ テスト モジュール *testModuleName* に、`TEST_MODULE_ATTRIBUTE` の 1 つ以上のマクロで定義された属性を追加します。  
   
  `TEST_MODULE_ATTRIBUTE` マクロは名前 *attributeName* と値 *attributeValue* を持つ属性を定義します。  
   

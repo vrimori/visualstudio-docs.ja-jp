@@ -1,24 +1,44 @@
 ---
-title: "プロファイリング ツールの CPU カウンターと Windows カウンター | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.property.counters"
-helpviewer_keywords: 
-  - "プロファイリング ツールの Windows カウンター"
-  - "プロファイリング ツールの CPU カウンター"
+title: "CPU カウンターと Windows カウンター | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.property.counters
+helpviewer_keywords:
+- Windows counters in Profiling Tools
+- CPU counters in Profiling Tools
 ms.assetid: d2c45c6a-f975-45ab-b8a5-4768ddd518fb
 caps.latest.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 26
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 51d524bafd6e5014c1542b05d9fd3a908eca41df
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="cpu-and-windows-counters"></a>CPU カウンターと Windows カウンター
 Visual Studio プロファイラーでは、オペレーティング システムによって生成されたパフォーマンス データ (Windows カウンター) とプロセッサ ユニットによって生成されたパフォーマンス データ (CPU カウンター) を収集することができます。  
@@ -34,7 +54,7 @@ Visual Studio プロファイラーでは、オペレーティング システ�
  Windows カウンターは、オペレーティング システムまたはアプリケーション、サービス、ドライバーのパフォーマンスに関する情報を提供する Windows 診断インフラストラクチャの一部です。 Windows カウンターは、現在のコンピューターの構成に依存しており、他のコンピューターでは使用できない場合があります。 Windows パフォーマンス カウンターは、プロファイル マークとしてプロファイル データ ファイルに収集され、ビューおよびレポートのフィルター処理に使用できます。  
   
 ## <a name="cpu-counters"></a>CPU カウンター  
- CPU カウンターは、ハードウェア関連のイベントの数を格納するコンピューターの CPU の機能です。  インストルメンテーション プロファイル メソッドを使用して CPU カウンター データを収集したデータは、関数およびモジュールのデータの後に追加されます。 インストルメンテーション メソッドを使用して複数の CPU カウンターを収集できます。 サンプリング メソッドを使用するときは、サンプリングされるイベントとして使用する&1; つのカウンターを選択します。  
+ CPU カウンターは、ハードウェア関連のイベントの数を格納するコンピューターの CPU の機能です。  インストルメンテーション プロファイル メソッドを使用して CPU カウンター データを収集したデータは、関数およびモジュールのデータの後に追加されます。 インストルメンテーション メソッドを使用して複数の CPU カウンターを収集できます。 サンプリング メソッドを使用するときは、サンプリングされるイベントとして使用する 1 つのカウンターを選択します。  
   
  パフォーマンス カウンターは CPU 固有です。 CPU のモデルとバージョンが異なると、同じパフォーマンス カウンターを有効にする場合でも構成設定が大幅に異なることがあります。 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] プロファイラーのポータブル イベントは、特定のプロセッサからよく使われる一部のパフォーマンス カウンターを分離し、汎用のパフォーマンス イベントを収集またはサンプリングできるようにします。  
   
@@ -74,8 +94,8 @@ Visual Studio プロファイラーでは、オペレーティング システ�
   
 |イベント名|イベントの説明|  
 |----------------|-----------------------|  
-|L2 Cache Read Misses|第&2; レベルのキャッシュ読み取りミスの数を示します。|  
-|L2 Cache Read References|第&2; レベルのキャッシュ読み取り参照の数を示します。 読み込みミスおよび RFO (read for ownership) のミスとヒットを含みます。|  
+|L2 Cache Read Misses|第 2 レベルのキャッシュ読み取りミスの数を示します。|  
+|L2 Cache Read References|第 2 レベルのキャッシュ読み取り参照の数を示します。 読み込みミスおよび RFO (read for ownership) のミスとヒットを含みます。|  
   
 ## <a name="viewing-available-counters"></a>使用可能なカウンターの表示  
  Visual Studio IDE またはコマンド プロンプト ウィンドウで、使用可能な CPU カウンターを一覧表示できます。  
@@ -131,8 +151,3 @@ Visual Studio プロファイラーでは、オペレーティング システ�
  [方法 : サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)   
  [方法 : CPU カウンター データを収集する](../profiling/how-to-collect-cpu-counter-data.md)   
  [方法: Windows カウンター データを収集する](../profiling/how-to-collect-windows-counter-data.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

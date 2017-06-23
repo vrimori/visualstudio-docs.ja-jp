@@ -35,16 +35,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: aee6226654157592fdacf841ec344892902334c1
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="special-characters-to-escape"></a>エスケープする特殊文字
 特殊文字は、使用するコンテキストで特別な意味を持つ場合にのみ、エスケープする必要があります。 たとえば、アスタリスク (*) は、項目定義の "Include" 属性と "Exclude" 属性、または <xref:Microsoft.Build.Tasks.CreateItem> の呼び出しでのみ、特殊文字となります。 その他のすべての場合において、アスタリスクはリテラルのアスタリスクとして扱われます。 プロジェクト ファイルではアスタリスクをエスケープする必要はありませんが、そのようにしても問題はありません。  
   
- 特殊文字の代わりに % *xx* という表記を使用します。ここで、*xx* は ASCII 文字の&16; 進値を表します。 たとえば、アスタリスク (*) をリテラル文字として使用するには、値 `%2A` を使用します。  
+ 特殊文字の代わりに % *xx* という表記を使用します。ここで、*xx* は ASCII 文字の 16 進値を表します。 たとえば、アスタリスク (*) をリテラル文字として使用するには、値 `%2A` を使用します。  
   
  エスケープする特殊文字の完全な一覧は次のとおりです。  
   

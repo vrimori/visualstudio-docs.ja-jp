@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: bdb5906338c03bee32c3dc62e42000491dfeb704
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -71,8 +72,8 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 |**Summary:**[*types*]|1 つ以上の種類のレポートを作成します。<br /><br /> -   `All` - すべての種類のレポートが生成されます。<br />-   `CallerCallee` - 関数間の親子関係。<br />-   `Function` - 呼び出された関数。<br />-   `CallTree` - 呼び出された関数の階層。<br />-   `Counter` - すべてのマークと Windows パフォーマンス カウンター値。<br />-   `Ip` - プロファイルされた命令。<br />-   `Life` - (割り当てデータが収集されたときに使用可能な) 割り当てられたオブジェクトの有効期間。<br />-   `Line` - ソース コード行のプロファイル データ。<br />-   `Header` - レポートにファイル ヘッダー情報が含まれます。<br />-   `Mark` - すべてのマーク。<br />-   `Module` - プロファイルされたモジュール。<br />-   `Process` - プロファイルされたプロセス。<br />-   `Thread` - プロファイルされたスレッド。<br />-   `Type` - 割り当てられた型。<br />-   `Contention` - リソースの競合。<br />-   `RuleWarnings` - パフォーマンス規則の問題<br />-   `ETW` - プロファイル実行で収集されたすべての Windows イベント トレーシング (ETW) イベント。 .etl データ ファイルは、その元の場所か、.vsp または .vsps ファイルを含むディレクトリにある必要があります。|  
 |**Xml**|レポートを XML 形式で出力します。|  
 |**CallTrace**|関数の開始と終了、ETW イベント、およびマークのリストを作成します。|  
-|**ClearPackedSymbols**|プロファイラー データ ファイルから以前に埋め込まれたシンボルを削除します。 PackSymbols を&2; 回目に実行する前にこのコマンドを実行します。|  
-|**SymbolPath:** `path`|プロファイラー データ ファイルのシンボルを含む&1; つ以上の検索パスまたはシンボル サーバーを指定します。|  
+|**ClearPackedSymbols**|プロファイラー データ ファイルから以前に埋め込まれたシンボルを削除します。 PackSymbols を 2 回目に実行する前にこのコマンドを実行します。|  
+|**SymbolPath:** `path`|プロファイラー データ ファイルのシンボルを含む 1 つ以上の検索パスまたはシンボル サーバーを指定します。|  
 |**DebugSymPath**|シンボルが検索された場所、およびシンボルが見つかったかどうかを示します。 このオプションは、シンボル解決の問題を解決するのに便利です。|  
 |**PackSymbols**|シンボルをプロファイル データ (.vsp) ファイルに保存して、シンボル (.pdb) ファイルが分析に不要になるようにします。|  
 |**Output:** *path*&#124;*filename*|生成されたレポート ファイルの代替の場所を指定します。 既定では、レポートは現在のディレクトリに作成されます。|  
@@ -87,7 +88,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
   
 |オプション|説明|  
 |-------------|-----------------|  
-|**JustMyCode**[**:**[`caller`][,`callee`]]|ユーザー アプリケーションの関数呼び出しのみを表示し、システム呼び出しは非表示にします。<br /><br /> -   パラメーターなし - すべてのシステム関数を非表示にします。<br />-   `caller` - アプリケーション関数を呼び出すシステム関数の&1; つのレベルを表示します。<br />-   `callee` - ユーザー アプリケーション関数で呼び出されるシステム関数の&1; つのレベルを表示します。|  
+|**JustMyCode**[**:**[`caller`][,`callee`]]|ユーザー アプリケーションの関数呼び出しのみを表示し、システム呼び出しは非表示にします。<br /><br /> -   パラメーターなし - すべてのシステム関数を非表示にします。<br />-   `caller` - アプリケーション関数を呼び出すシステム関数の 1 つのレベルを表示します。<br />-   `callee` - ユーザー アプリケーション関数で呼び出されるシステム関数の 1 つのレベルを表示します。|  
 |**StartTime:**[*value*]|ミリ秒単位の時間 (value) よりも後に収集されたデータのみを表示します。|  
 |**EndTime:**[*value*]|ミリ秒単位の時間 (value) よりも前に収集されたデータのみを表示します。|  
 |**FilterFile:** `VSPFFile`|Visual Studio の [パフォーマンス レポート] ウィンドウから生成されたフィルター ファイルの場所を指定します。|  
@@ -105,7 +106,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 |**Diff:**[*value*]|このしきい値を下回ると、2 つの値の相違は無視されます。 また、値がこのしきい値を下回る新しいデータは表示されません。|  
 |**DiffTable:**[*tablename*]|このテーブルを使用して、ファイルを比較します。 既定では関数テーブルが使用されます。|  
 |**DiffColumn:**[*columnname*]|この列を使用して、値を比較します。 既定では排他サンプルのパーセント列が使用されます。|  
-|**QueryDiffTables**|指定された&2; つのレポート ファイルに関する有効なテーブルおよび列をリストします。|  
+|**QueryDiffTables**|指定された 2 つのレポート ファイルに関する有効なテーブルおよび列をリストします。|  
   
 ## <a name="see-also"></a>関連項目  
  [パフォーマンス レポートのビュー](../profiling/performance-report-views.md)

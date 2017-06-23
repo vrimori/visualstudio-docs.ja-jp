@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
 ms.openlocfilehash: ecfd08a410983561f3c1e761eb25302b6d9281c4
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -88,7 +89,7 @@ MSBuild は Microsoft および Visual Studio のビルド プラットフォー
   
 -   タスクとは、作業の最小単位であり、ビルドの "原子" のようなものです。 タスクは独立した実行可能コンポーネントで、入力と出力を持つ場合もあります。 現在このプロジェクト ファイルで参照または定義されているタスクはありません。 後ほど、このプロジェクト ファイルにタスクを追加します。 詳細については、「[MSBuild タスク](../msbuild/msbuild-tasks.md)」をご覧ください。  
   
--   ターゲットとは、一連のタスクに名前を付けたものです。 このプロジェクト ファイルには、末尾に BeforeBuild と AfterBuild という&2; つのターゲットがあります。これらは現在、HTML コメントに囲まれています。  
+-   ターゲットとは、一連のタスクに名前を付けたものです。 このプロジェクト ファイルには、末尾に BeforeBuild と AfterBuild という 2 つのターゲットがあります。これらは現在、HTML コメントに囲まれています。  
   
     ```xml  
     <Target Name="BeforeBuild">  
@@ -139,9 +140,9 @@ MSBuild は Microsoft および Visual Studio のビルド プラットフォー
   
 3.  プロジェクト ファイルを保存します。  
   
- Message タスクは、MSBuild に含まれている数多くのタスクの&1; つです。 使用可能なすべてのタスクと使用法については、「[タスク リファレンス](../msbuild/msbuild-task-reference.md)」をご覧ください。  
+ Message タスクは、MSBuild に含まれている数多くのタスクの 1 つです。 使用可能なすべてのタスクと使用法については、「[タスク リファレンス](../msbuild/msbuild-task-reference.md)」をご覧ください。  
   
- Message タスクは、Text 属性の文字列値を入力として受け取り、それを出力デバイスに表示します。 HelloWorld ターゲットでは、Message タスクが&2; 回実行されます。1 回目の実行で "Hello" と表示され、2 回目の実行で "World" と表示されます。  
+ Message タスクは、Text 属性の文字列値を入力として受け取り、それを出力デバイスに表示します。 HelloWorld ターゲットでは、Message タスクが 2 回実行されます。1 回目の実行で "Hello" と表示され、2 回目の実行で "World" と表示されます。  
   
 ## <a name="building-the-target"></a>ターゲットのビルド  
  **Visual Studio コマンド プロンプト**から MSBuild を実行して、上で定義した HelloWorld ターゲットをビルドします。 ターゲットを選択するには、コマンド ライン スイッチの /target または /t を使用します。  
@@ -161,7 +162,7 @@ MSBuild は Microsoft および Visual Studio のビルド プラットフォー
     msbuild buildapp.csproj /t:HelloWorld  
     ```  
   
-4.  **コマンド ウィンドウ**で出力を確認します。 "Hello" と "World" の&2; つの行が表示されます。  
+4.  **コマンド ウィンドウ**で出力を確認します。 "Hello" と "World" の 2 つの行が表示されます。  
   
     ```  
     Hello  
@@ -234,7 +235,7 @@ $(PropertyName)
     msbuild buildapp.csproj /t:HelloWorld  
     ```  
   
-4.  出力を調べます。 次の&2; つの行が表示されます (.NET Framework のバージョンが異なる場合もあります)。  
+4.  出力を調べます。 次の 2 つの行が表示されます (.NET Framework のバージョンが異なる場合もあります)。  
   
     ```  
     Configuration is Debug  
@@ -256,7 +257,7 @@ $(PropertyName)
  Condition 属性は MSBuild のほぼすべての要素に設定できます。 Condition 属性の使用の詳細については、「[MSBuild Conditions (MSBuild の条件)](../msbuild/msbuild-conditions.md)」をご覧ください。  
   
 ### <a name="reserved-properties"></a>予約済みのプロパティ  
- MSBuild では、プロジェクト ファイルに関する情報や MSBuild のバイナリに関する情報を保持するために、いくつかのプロパティ名が予約されています。 たとえば、MSBuildToolsPath も予約済みのプロパティの&1; つです。 予約済みのプロパティは、他のプロパティと同じように $ 表記で参照できます。 詳細については、「[方法 : プロジェクト ファイルの名前または場所を参照する](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)」および「[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)」をご覧ください。  
+ MSBuild では、プロジェクト ファイルに関する情報や MSBuild のバイナリに関する情報を保持するために、いくつかのプロパティ名が予約されています。 たとえば、MSBuildToolsPath も予約済みのプロパティの 1 つです。 予約済みのプロパティは、他のプロパティと同じように $ 表記で参照できます。 詳細については、「[方法 : プロジェクト ファイルの名前または場所を参照する](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)」および「[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)」をご覧ください。  
   
 ### <a name="environment-variables"></a>環境変数  
  プロジェクト ファイルで環境変数を参照する場合も、ビルド プロパティを参照するときと同じ方法を使用します。 たとえば、プロジェクト ファイルで PATH 環境変数を使用するには、$(Path) と記述します。 プロジェクト ファイルに、環境変数と同じ名前のプロパティが定義されている場合、環境変数の値はプロジェクト内のプロパティによってオーバーライドされます。 環境変数の使用方法の詳細については、「[方法 : ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」をご覧ください。  
@@ -281,7 +282,7 @@ $(PropertyName)
  Configuration プロパティが作成されて、値が "Release" に設定されます。  
   
 ## <a name="special-characters"></a>特殊文字  
- MSBuild プロジェクト ファイルでは、特定の文字が特殊な意味を持ちます。 そのような文字の例として、セミコロン (;) およびアスタリスク (*) があります。 これらの特殊文字をプロジェクト ファイル内でリテラルとして使用するには、構文 %xx でそれらの文字を指定する必要があります。xx は文字の ASCII&16; 進値を表します。  
+ MSBuild プロジェクト ファイルでは、特定の文字が特殊な意味を持ちます。 そのような文字の例として、セミコロン (;) およびアスタリスク (*) があります。 これらの特殊文字をプロジェクト ファイル内でリテラルとして使用するには、構文 %xx でそれらの文字を指定する必要があります。xx は文字の ASCII 16 進値を表します。  
   
  Message タスクに変更を加えて、特殊文字を使用して Configuration プロパティの値を読みやすくします。  
   
@@ -321,9 +322,9 @@ $(PropertyName)
 </ItemGroup>  
 ```  
   
- ここでは、2 つの項目を含む項目グループを定義しています。 項目の種類 Compile には、"Program.cs" と "Properties\AssemblyInfo.cs" の&2; つの値があります。  
+ ここでは、2 つの項目を含む項目グループを定義しています。 項目の種類 Compile には、"Program.cs" と "Properties\AssemblyInfo.cs" の 2 つの値があります。  
   
- 次のコードでは、両方のファイルをセミコロンで区切って&1; つの Include 属性で宣言することで、同じ項目の種類を作成しています。  
+ 次のコードでは、両方のファイルをセミコロンで区切って 1 つの Include 属性で宣言することで、同じ項目の種類を作成しています。  
   
 ```xml  
 <ItemGroup>  
@@ -371,15 +372,15 @@ $(PropertyName)
   
  項目の種類の値は、既定ではセミコロンで区切られます。  
   
- 項目の種類の区切り記号を変更するには、次の構文を使用します。ここで、ItemType は項目の種類、Separator は&1; 文字以上の区切り記号です。  
+ 項目の種類の区切り記号を変更するには、次の構文を使用します。ここで、ItemType は項目の種類、Separator は 1 文字以上の区切り記号です。  
   
 ```  
 @(ItemType, Separator)  
 ```  
   
- Message タスクに変更を加えて、復帰と改行 (%0A%0D) を使用して Compile 項目を&1; 行に&1; つずつ表示します。  
+ Message タスクに変更を加えて、復帰と改行 (%0A%0D) を使用して Compile 項目を 1 行に 1 つずつ表示します。  
   
-#### <a name="to-display-item-type-values-one-per-line"></a>項目の種類の値を&1; 行に&1; つずつ表示するには  
+#### <a name="to-display-item-type-values-one-per-line"></a>項目の種類の値を 1 行に 1 つずつ表示するには  
   
 1.  コード エディターで、Message タスクを次の行に置き換えます。  
   
@@ -411,7 +412,7 @@ $(PropertyName)
 <Photos Include="images\*.jpeg" />  
 ```  
   
- この例では、images フォルダーにある拡張子が ".jpeg" のすべてのファイルが項目の種類 Photos に追加されます。もう&1; つ例を見てましょう。  
+ この例では、images フォルダーにある拡張子が ".jpeg" のすべてのファイルが項目の種類 Photos に追加されます。もう 1 つ例を見てましょう。  
   
 ```xml  
 <Photos Include="images\**.jpeg" />  
@@ -482,7 +483,7 @@ $(PropertyName)
 ## <a name="item-metadata"></a>アイテム メタデータ  
  項目には、Include および Exclude 属性から収集した情報に加えて、メタデータが含まれます。 このメタデータは、項目の値だけでなく項目に関する詳細情報を必要とするタスクで使用できます。  
   
- アイテム メタデータは、そのメタデータ名を名前に持つ要素を、項目の子として作成することにより、プロジェクト ファイルで宣言します。 項目には&0; 以上のメタデータ値を指定できます。 たとえば、次の CSFile 項目には、値 "Fr" の Culture メタデータがあります。  
+ アイテム メタデータは、そのメタデータ名を名前に持つ要素を、項目の子として作成することにより、プロジェクト ファイルで宣言します。 項目には 0 以上のメタデータ値を指定できます。 たとえば、次の CSFile 項目には、値 "Fr" の Culture メタデータがあります。  
   
 ```xml  
 <ItemGroup>  
@@ -523,7 +524,7 @@ $(PropertyName)
     Compile.DependentUpon: Settings.settings  
     ```  
   
- "Compile.DependentUpon" というフレーズが何回か出現しています。 ターゲット内でメタデータを使用する際にこの構文を使用すると、"バッチ処理" が行われます。 バッチ処理では、ターゲット内のタスクが各メタデータ値について&1; 回だけ実行されます。 これは、一般的なプログラミング構造の "for ループ" に相当します。 詳細については、「[MSBuild バッチ](../msbuild/msbuild-batching.md)」をご覧ください。  
+ "Compile.DependentUpon" というフレーズが何回か出現しています。 ターゲット内でメタデータを使用する際にこの構文を使用すると、"バッチ処理" が行われます。 バッチ処理では、ターゲット内のタスクが各メタデータ値について 1 回だけ実行されます。 これは、一般的なプログラミング構造の "for ループ" に相当します。 詳細については、「[MSBuild バッチ](../msbuild/msbuild-batching.md)」をご覧ください。  
   
 ### <a name="well-known-metadata"></a>既知のメタデータ  
  項目リストに追加した項目には、既知のメタデータが割り当てられます。 たとえば、項目のファイル名を返す %(Filename) などです。 すべての既知のメタデータの一覧については、「[Well-known Item Metadata (既知の項目メタデータ)](../msbuild/msbuild-well-known-item-metadata.md)」をご覧ください。  
@@ -591,7 +592,7 @@ $(PropertyName)
  この構文で表されるメタデータではバッチ処理は行われないことに注意してください。  
   
 ## <a name="whats-next"></a>次の内容  
- 簡単なプロジェクト ファイルを&1; ステップずつ作成する方法については、「[チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)」をご覧ください。  
+ 簡単なプロジェクト ファイルを 1 ステップずつ作成する方法については、「[チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 [MSBuild の概要](../msbuild/msbuild.md)  

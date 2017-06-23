@@ -1,23 +1,43 @@
 ---
 title: "パフォーマンス セッションのプロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロファイル ツール、プロパティ"
-  - "プロパティ ページ、プロファイル ツール"
-  - "パフォーマンス ツール、パフォーマンス セッションのプロパティ"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Profiling Tools,properties
+- property pages,Profiling Tools
+- performance tools, performance session properties
 ms.assetid: c3a86913-172b-488f-a31a-cea01a71b2ea
 caps.latest.revision: 16
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 16
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 9e2c533f31c0fd0e73e990a747491ffd1d6cb267
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="performance-session-properties"></a>パフォーマンス セッションのプロパティ
 **パフォーマンス セッション**により、アプリケーションのプロファイリング方法を決定する設定を構成できます。 また、プロファイル セッションに関するレポートが生成されて格納されます。  
@@ -49,7 +69,7 @@ caps.handback.revision: 16
  詳細については、「[方法: 開始するバイナリを指定する](../profiling/how-to-specify-the-binary-to-start.md)」を参照してください。  
   
 ## <a name="sampling"></a>サンプリング  
- この設定では、プロファイリング メソッドとしてサンプリングを使用するときのサンプル イベントとサンプリング間隔を選択できます。 サンプル イベントは、指定した間隔でプロファイリング データを収集するために使用します。 たとえば、サンプル イベントとしてクロック サイクルを選択し、サンプリング間隔を 10,000,000 に設定した場合、プロファイリング データは 1,000 万クロック サイクルごとに収集されます。 次の&4; 種類のサンプル イベントを使用できます。  
+ この設定では、プロファイリング メソッドとしてサンプリングを使用するときのサンプル イベントとサンプリング間隔を選択できます。 サンプル イベントは、指定した間隔でプロファイリング データを収集するために使用します。 たとえば、サンプル イベントとしてクロック サイクルを選択し、サンプリング間隔を 10,000,000 に設定した場合、プロファイリング データは 1,000 万クロック サイクルごとに収集されます。 次の 4 種類のサンプル イベントを使用できます。  
   
 -   クロック サイクル - CPU バインドの問題  
   
@@ -100,7 +120,7 @@ caps.handback.revision: 16
  詳細については、「[方法: Windows カウンター データを収集する](../profiling/how-to-collect-windows-counter-data.md)」を参照してください。  
   
 ## <a name="advanced"></a>詳細設定  
- この設定では、[VSInstr](../profiling/vsinstr.md) コマンド ライン プロファイリング ツールの&1; つ以上のオプションを指定して、インストルメンテーション プロセスにオプションを追加できます。 また、アプリケーションが複数バージョンの共通ランタイムを使用している場合に、プロファイリングする共通ランタイムのバージョンを指定できます。  
+ この設定では、[VSInstr](../profiling/vsinstr.md) コマンド ライン プロファイリング ツールの 1 つ以上のオプションを指定して、インストルメンテーション プロセスにオプションを追加できます。 また、アプリケーションが複数バージョンの共通ランタイムを使用している場合に、プロファイリングする共通ランタイムのバージョンを指定できます。  
   
  詳細については次を参照してください:  
   
@@ -112,8 +132,3 @@ caps.handback.revision: 16
  [概要](../profiling/overviews-performance-tools.md)   
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
  [データ収集の制御](../profiling/controlling-data-collection.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

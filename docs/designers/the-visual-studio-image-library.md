@@ -36,9 +36,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9c25532605613b34ded15a4bd6a533e589b7fce2
 ms.openlocfilehash: 3add401b2d9590893ae1a90af7d5f1d9c9360b63
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -47,7 +48,7 @@ Visual Studio Image Library には、Microsoft Visual Studio、Microsoft Windows
   
  [Visual Studio Image Library をダウンロードする](http://go.microsoft.com/fwlink/p/?LinkId=275090)  
   
- Image Library は、共通の要素、アクション、注釈、アイコン、およびオブジェクトの&5; つのカテゴリに分かれています。 共通の要素およびアイコンについては、PDF 形式のリリース ノート ファイルが含まれています。 リリース ノート ファイルには、アプリケーションでこれらのイメージを適切に使用する方法に関する情報が含まれています。  
+ Image Library は、共通の要素、アクション、注釈、アイコン、およびオブジェクトの 5 つのカテゴリに分かれています。 共通の要素およびアイコンについては、PDF 形式のリリース ノート ファイルが含まれています。 リリース ノート ファイルには、アプリケーションでこれらのイメージを適切に使用する方法に関する情報が含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio のインストール](../install/install-visual-studio.md)   

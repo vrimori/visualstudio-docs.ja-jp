@@ -1,37 +1,56 @@
 ---
 title: "MIDL タスク | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCMidlTool.ServerStubFile"
-  - "VC.Project.VCMidlTool.ApplicationConfigurationMode"
-  - "VC.Project.VCMidlTool.GenerateServerFiles"
-  - "VC.Project.VCMidlTool.ClientStubFile"
-  - "VC.Project.VCMidlTool.LocaleID"
-  - "VC.Project.VCMidlTool.GenerateClientFiles"
-  - "VC.Project.VCMidlTool.SuppressCompilerWarnings"
-  - "VC.Project.VCMidlTool.TypeLibFormat"
-  - "vc.task.midl"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild (Visual C)、MIDL タスク"
-  - "MIDL タスク (MSBuild (Visual C++))"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCMidlTool.ServerStubFile
+- VC.Project.VCMidlTool.ApplicationConfigurationMode
+- VC.Project.VCMidlTool.GenerateServerFiles
+- VC.Project.VCMidlTool.ClientStubFile
+- VC.Project.VCMidlTool.LocaleID
+- VC.Project.VCMidlTool.GenerateClientFiles
+- VC.Project.VCMidlTool.SuppressCompilerWarnings
+- VC.Project.VCMidlTool.TypeLibFormat
+- vc.task.midl
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MSBuild (Visual C++), MIDL task
+- MIDL task (MSBuild (Visual C++))
 ms.assetid: 727efa8c-3336-40b8-8bef-ae6cbd77a422
 caps.latest.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: b3d922c4aee9136a35e1a2c9669f7cf3380d7609
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="midl-task"></a>MIDL タスク
 Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Definition Language) コンパイラ ツール (midl.exe) をラップします。 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」を参照してください。  
@@ -375,7 +394,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      省略可能な **String[]** 型のパラメーターです。  
   
-     `#undefine` ディレクティブによるかのように名前を C プリプロセッサに渡すことにより、名前の以前の定義をすべて削除します。 以前に定義された&1; つ以上の名前を指定します。  
+     `#undefine` ディレクティブによるかのように名前を C プリプロセッサに渡すことにより、名前の以前の定義をすべて削除します。 以前に定義された 1 つ以上の名前を指定します。  
   
      詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」の **/U** オプションを参照してください。 この表の **PreprocessorDefinitions** パラメーターも参照してください。  
   
@@ -419,8 +438,3 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
 ## <a name="see-also"></a>関連項目  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

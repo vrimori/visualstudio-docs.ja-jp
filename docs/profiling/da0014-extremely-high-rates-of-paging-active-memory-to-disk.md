@@ -1,24 +1,44 @@
 ---
-title: "DA0014: ディスクへのアクティブなメモリのページングが非常に高率で発生しています | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.rules.DAMemoryBound"
-  - "vs.performance.DA0014"
-  - "vs.performance.14"
-  - "vs.performance.rules.DA0014"
+title: "DA0014: ディスクへのアクティブなメモリのページングが非常に高率で発生しています。 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.rules.DAMemoryBound
+- vs.performance.DA0014
+- vs.performance.14
+- vs.performance.rules.DA0014
 ms.assetid: a7fa3749-9191-437a-9331-9d917181e62f
 caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 140ee7f9c56b909fd7ff636f81bc880c951f0dbf
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="da0014-extremely-high-rates-of-paging-active-memory-to-disk"></a>DA0014: ディスクへのアクティブなメモリのページングが非常に高率で発生しています
 |||  
@@ -37,7 +57,7 @@ caps.handback.revision: 11
 ## <a name="rule-description"></a>規則の説明  
  ディスクに対する過剰なページングは、物理メモリの不足が原因で発生する場合があります。 ページング ファイルが存在する物理ディスクの大部分がページング操作によって使用される場合、同じディスクのその他のアプリケーションのディスク操作の処理速度が遅くなる可能性があります。  
   
- 通常、ページのディスクへの読み書きは一括で実行されます。 たとえば、1 秒あたりの出力ページ数は&1; 秒あたりの書き込みページ数よりも大幅に大きくなることが一般的です。 これは、1 秒あたりの出力ページ数には、システム ファイルのキャッシュで変更されたデータ ページも含まれるためです。 ただし、どのプロセスがどういった理由で高いページング率の直接的な原因になっているのかを特定するのは、必ずしも容易ではありません。  
+ 通常、ページのディスクへの読み書きは一括で実行されます。 たとえば、1 秒あたりの出力ページ数は 1 秒あたりの書き込みページ数よりも大幅に大きくなることが一般的です。 これは、1 秒あたりの出力ページ数には、システム ファイルのキャッシュで変更されたデータ ページも含まれるためです。 ただし、どのプロセスがどういった理由で高いページング率の直接的な原因になっているのかを特定するのは、必ずしも容易ではありません。  
   
 > [!NOTE]
 >  この規則は、アクティブなメモリのページングが非常に高率に達した場合に適用されます。 ページングが高いレベルで発生しているが、非常に高くはない場合、代わりに、情報規則「[DA0017: ディスクへのアクティブなメモリのページングが高率で発生しています。](../profiling/da0017-high-rates-of-paging-active-memory-to-disk.md)」が発生します。  
@@ -48,8 +68,3 @@ caps.handback.revision: 11
  ロード テスト シナリオで ASP.NET アプリケーション用のプロファイル データを収集している場合は、追加の物理メモリ (または RAM) が構成されているコンピューターでもう一度ロード テストを実行してください。  
   
  アルゴリズムを修正し、String.Concat や String.Substring などのメモリ消費量の多い API の使用を控えることにより、メモリの割り当てを減らすことを検討してください。
-
-
-<!--HONumber=Feb17_HO4-->
-
-
