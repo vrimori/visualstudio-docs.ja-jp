@@ -34,14 +34,16 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/13/2017
 
 ---
-# <a name="overview-of-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity の概要
+# Visual Studio Tools for Unity の概要
+<a id="overview-of-visual-studio-tools-for-unity" class="xliff"></a>
 このセクションでは、Visual Studio Tools for Unity から提供される機能の概要と、Unity を使用する開発の生産性を向上させる方法について説明します。  
   
  Visual Studio tools Unity (*VSTU*) を利用すると、Visual Studio を使用して C# でゲームとエディター スクリプトを記述した後、強力なデバッガーを使用してエラーを検出して修正できます。 VSTU の最新リリースでは、Unity の ShaderLab シェーダー言語の構文の色分け、デバッガーの視覚化機能の向上、および、MonoBehavior ウィザードによるコード生成の機能強化などが行われました。 また、VSTU により、Unity のプロジェクト ファイル、コンソール メッセージ、およびゲームを開始する機能が Visual Studio に統合されるため、コードの記述中に Unity エディターとの間で切り替える手間を少なくできます。  
   
  これらの機能に関する詳細を、このあと説明します。  
   
-## <a name="integration-with-unity"></a>Unity との統合  
+## Unity との統合
+<a id="integration-with-unity" class="xliff"></a>  
  Unity エディターと Visual Studio を常に切り替えながら作業しなければならないとすると、Visual Studio Tools for Unity は生産性向上ツールであるとは言えません。 そのような理由から、Visual Studio Tools for Unity では、Visual Studio を離れずに簡単に作業できるようになっています。  
   
 -   **Unity プロジェクト エクスプローラー**を使用すると、Unity エディターに表示されるのと同じ階層構造で Visual Studio から Unity プロジェクト全体を見ることができます。  
@@ -50,7 +52,8 @@ ms.lasthandoff: 05/13/2017
   
 -   Visual Studio からゲームのデバッグを開始できます。Unity に切り替える必要はなく、F5 キーを押すだけです。  
   
-## <a name="superior-debugging"></a>優れたデバッグ機能  
+## 優れたデバッグ機能
+<a id="superior-debugging" class="xliff"></a>  
  スタンドアロンで実行されているか Unity エディターで実行されているかに関係なく、Visual Studio の強力なデバッガーを Unity ゲームに接続して、C# スクリプトと DLL をデバッグできます。 Visual Studio によって提供されるすべてのデバッグ機能を使用できます。  
   
 -   ブレークポイント (条件付きブレークポイントを含む)。  
@@ -63,7 +66,8 @@ ms.lasthandoff: 05/13/2017
   
  さらに、ネットワーク上の別のコンピューターで実行されている Unity ゲームであっても、デバッグできます。  
   
-## <a name="productivity"></a>生産性  
+## 生産性
+<a id="productivity" class="xliff"></a>  
  C# コードの記述とリファクタリングについての Visual Studio の確立された生産性に加えて、Visual Studio Tools for Unity は Unity 開発者のために追加の生産性機能を提供します。  
   
 -   Unity の ShaderLab 言語の構文が色分け表示されるため、バグになる前にシェーダーで間違いを見つけるために役立ちます。 これは、ShaderLab ファイルを Visual Studio で開くだけで機能します。  
@@ -76,12 +80,14 @@ ms.lasthandoff: 05/13/2017
   
 -   これらの機能すべてと、その他の機能は、キーボード ショートカットでアクセスできます。  
   
-## <a name="visual-studio-tools-for-unity-api"></a>Visual Studio Tools for Unity の API  
+## Visual Studio Tools for Unity の API
+<a id="visual-studio-tools-for-unity-api" class="xliff"></a>  
  提供されている API を使用して、Visual Studio Tools for Unity の動作のカスタマイズや拡張を行えます。  
   
 -   Visual Studio Tools for Unity では、Unity コンソールを Visual Studio にストリーミングできるよう、Unity にログ コールバックを登録します。 情報を記録するエディター スクリプトがあれば、同じコールバックにそれらのスクリプトをプラグインして、Visual Studio にメッセージを送信できます。 詳細については、ログのコールバックの例を参照してください。  
   
 -   Visual Studio Tools for Unity がプロジェクト ファイルを生成する方法を変更するには、Unity のスタイル コールバック ProjectFileGeneration を使用します。 詳細については、プロジェクト ファイル生成の例を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## 関連項目
+<a id="see-also" class="xliff"></a>  
  [Unity ホームページ](http://unity3d.com)
