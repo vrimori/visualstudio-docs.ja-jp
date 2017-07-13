@@ -32,16 +32,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 6b0b95bfd2112383229c6a36ee7b9c6cdab827eb
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 83faa2ad32073c4133295953afa6259e88eee2d5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="how-to-save-and-open-files-with-encoding"></a>方法 : エンコーディングを使用してファイルを保存および開く
+# 方法 : エンコーディングを使用してファイルを保存および開く
+<a id="how-to-save-and-open-files-with-encoding" class="xliff"></a>
 双方向言語をサポートするために、特定の文字エンコーディングを使用してファイルを保存できます。 また、Visual Studio でファイルが正しく開かれるように、ファイルを開くときにもエンコーディングを指定できます。  
   
-### <a name="to-save-a-file-with-encoding"></a>エンコーディングを使用してファイルを保存するには  
+### エンコーディングを使用してファイルを保存するには
+<a id="to-save-a-file-with-encoding" class="xliff"></a>  
   
 1.  **[ファイル]** メニューの **[名前を付けてファイルを保存]** を選び、**[保存]** の横のドロップダウン ボタンをクリックします。  
   
@@ -55,7 +58,8 @@ ms.lasthandoff: 02/22/2017
   
      特定の方法でエンコードされていることがわかっているファイルを使用する場合は、ファイルを開くときに、そのエンコーディングを使用するように指定できます。 その方法は、ファイルがプロジェクトの一部であるかどうかによって異なります。  
   
-### <a name="to-open-an-encoded-file-that-is-part-of-a-project"></a>プロジェクトの一部であるエンコードされたファイルを開くには  
+### プロジェクトの一部であるエンコードされたファイルを開くには
+<a id="to-open-an-encoded-file-that-is-part-of-a-project" class="xliff"></a>  
   
 1.  **ソリューション エクスプローラー**でファイルを右クリックし、**[ファイルを開くアプリケーションの選択]** を選びます。  
   
@@ -65,7 +69,8 @@ ms.lasthandoff: 02/22/2017
   
 3.  **[エンコード]** ダイアログ ボックスで、エディターで使うエンコーディングを選びます。  
   
-### <a name="to-open-an-encoded-file-that-is-not-part-of-a-project"></a>プロジェクトの一部ではないエンコードされたファイルを開くには  
+### プロジェクトの一部ではないエンコードされたファイルを開くには
+<a id="to-open-an-encoded-file-that-is-not-part-of-a-project" class="xliff"></a>  
   
 1.  **[ファイル]** メニューの **[開く]** をポイントし、**[ファイル]** または **[Web のファイル]** を選んで、開くファイルを選びます。  
   
@@ -73,6 +78,7 @@ ms.lasthandoff: 02/22/2017
   
 3.  前の手順の 2. と 3. を実行します。  
   
-## <a name="see-also"></a>関連項目  
- [エンコード方式および Windows フォームのグローバリゼーション](http://msdn.microsoft.com/Library/22e8965d-a712-42b3-8167-3ee346bd70f9)   
+## 関連項目
+<a id="see-also" class="xliff"></a>  
+ [エンコード方式および Windows フォームのグローバリゼーション](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)   
  [アプリケーションのグローバライズとローカライズ](../ide/globalizing-and-localizing-applications.md)

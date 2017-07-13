@@ -36,18 +36,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: b88c533d613d531a7dcc24e0610e2fb2a7a3d880
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
+ms.openlocfilehash: 5a8237e5c437878b22bd3c67a3a4ba2cdc3fa126
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="prerequisites-dialog-box"></a>Prerequisites Dialog Box
+# Prerequisites Dialog Box
+<a id="prerequisites-dialog-box" class="xliff"></a>
 このダイアログ ボックスでは、必須コンポーネントとしてインストールするコンポーネント、そのインストール方法、およびパッケージのインストール順序を指定します。  
   
  このダイアログ ボックスを表示するには、**ソリューション エクスプローラー**でプロジェクト ノードを選択し、[**プロジェクト**] メニューの [**プロパティ**] をクリックします。 **プロジェクト デザイナー** が表示されたら、 **[発行]** タブをクリックします。 [**発行**] ページで、[**必須コンポーネント**] をクリックします。 セットアップ プロジェクトで、[**プロジェクト**] メニューの [**プロパティ**] をクリックします。 [**プロパティ ページ**] ダイアログ ボックスが表示されたら、[**必須コンポーネント**] をクリックします。  
   
-## <a name="uielement-list"></a>UIElement の一覧  
+## UIElement の一覧
+<a id="uielement-list" class="xliff"></a>  
   
 |要素|説明|  
 |-------------|-----------------|  
@@ -58,15 +61,16 @@ ms.lasthandoff: 04/05/2017
 |**アプリケーションと同じ場所から必須コンポーネントをダウンロードする**|アプリケーションと同じ場所から必須コンポーネントをインストールするように指定します。 これにより、すべての必須パッケージが発行場所にコピーされます。 このオプションを使用するには、必須パッケージが開発用コンピューターに存在する必要があります。|  
 |**次の場所から必須コンポーネントをダウンロード**|選択した場所から必須コンポーネントをインストールするように指定します。 場所は、[**参照**] ボタンを使って指定できます。|  
   
-## <a name="prerequisites-information"></a>必須コンポーネント情報  
+## 必須コンポーネント情報
+<a id="prerequisites-information" class="xliff"></a>  
  [**必須コンポーネント**] ダイアログ ボックスに表示される必須コンポーネントは、後に示す一覧とは異なる場合があります。 **[必須コンポーネント] ダイアログ ボックス**にリストされている必須コンポーネントのパッケージは、ダイアログ ボックスを初めて開いたときに自動的に設定されます。 その後、プロジェクトのターゲット フレームワークを変更した場合は、新しいターゲット フレームワークに合わせて必須パッケージを手動で選択する必要があります。  
   
 |要素|説明|  
 |-------------|-----------------|  
 |**.NET Framework 3.5 SP1**|このパッケージは、次のコンポーネントをインストールします。<br /><br /> -  .NET Framework バージョン 2.0、3.0、および 3.5。<br />-   32 ビット (x86) オペレーティング システムおよび 64 ビット (x64) オペレーティング システム上の .NET Framework のすべてのバージョンに対するサポート。<br />-   パッケージと共にインストールされる各 .NET Framework バージョン用の Language Pack。<br />-   .NET Framework 2.0 および 3.0 用の Service Pack。<br /><br /> .NET Framework 3.0 は Windows Vista に含まれており、.NET Framework 3.5 は [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に含まれています。 .NET Framework 3.5 は、32 ビット オペレーティング システム用にコンパイルされる、ターゲット フレームワークが **.NET Framework 3.5** に設定された、すべての Visual Basic プロジェクトおよび Visual C# プロジェクト、および、64 ビット オペレーティング システム用にコンパイルされる Visual Basic プロジェクトおよび Visual C# プロジェクトに必要です。 IA64 はサポートされません。Visual Basic プロジェクトおよび Visual C# プロジェクトは、既定ではどの CPU アーキテクチャにも対応するようにコンパイルされます。 詳細については、「[Visual Studio のマルチ ターゲットの概要](../../ide/visual-studio-multi-targeting-overview.md)」、「[Redistributing the .NET Framework](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287)」 (.NET Framework の再配布)、および「[64 ビット アプリケーションの配置のための必要条件](../../deployment/deploying-prerequisites-for-64-bit-applications.md)」を参照してください。<br /><br /> この項目は既定で選択されます。|  
-|**.NET Framework 3.5 SP1 Client Profile**|.NET Framework Client Profile は、クライアント アプリケーションを対象とする完全な .NET Framework 3.5 SP1 のサブセットです。 WPF (Windows Presentation Foundation)、Windows フォーム、WCF (Windows Communication Foundation)、および ClickOnce の機能の簡素化されたサブセットを提供します。 このサブセットを使用すると、.NET Framework Client Profile を対象とする WPF、Windows フォーム、WCF、およびコンソール アプリケーションの迅速な配置シナリオが可能になります。 詳細については、「[.NET Framework Client Profile](http://msdn.microsoft.com/Library/f0219919-1f02-4588-8704-327a62fd91f1)」を参照してください。|  
+|**.NET Framework 3.5 SP1 Client Profile**|.NET Framework Client Profile は、クライアント アプリケーションを対象とする完全な .NET Framework 3.5 SP1 のサブセットです。 WPF (Windows Presentation Foundation)、Windows フォーム、WCF (Windows Communication Foundation)、および ClickOnce の機能の簡素化されたサブセットを提供します。 このサブセットを使用すると、.NET Framework Client Profile を対象とする WPF、Windows フォーム、WCF、およびコンソール アプリケーションの迅速な配置シナリオが可能になります。 詳細については、「[.NET Framework Client Profile](/dotnet/framework/deployment/client-profile)」を参照してください。|  
 |**Microsoft .NET Framework 4 (x86 および x64)**|このパッケージは、.NET Framework 4 (x86 プラットフォームおよび x64 プラットフォーム用) をインストールします。<br /><br /> 詳細については、「[Visual Studio のマルチ ターゲットの概要](../../ide/visual-studio-multi-targeting-overview.md)」、「[Redistributing the .NET Framework](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287)」 (.NET Framework の再配布)、および「[64 ビット アプリケーションの配置のための必要条件](../../deployment/deploying-prerequisites-for-64-bit-applications.md)」を参照してください。<br /><br /> この項目は既定で選択されます。|  
-|**Microsoft .NET Framework 4 Client Profile (x86 および x64)**|.NET Framework 4 Client Profile は、クライアント アプリケーションを対象とする完全な .NET Framework 4 のサブセットです。 WPF (Windows Presentation Foundation)、Windows フォーム、WCF (Windows Communication Foundation)、および ClickOnce の機能の簡素化されたサブセットを提供します。 このサブセットを使用すると、.NET Framework 4 Client Profile を対象とする WPF、Windows フォーム、およびコンソール アプリケーションの迅速な配置シナリオが可能になります。 詳細については、「[.NET Framework Client Profile](http://msdn.microsoft.com/Library/f0219919-1f02-4588-8704-327a62fd91f1)」を参照してください。|  
+|**Microsoft .NET Framework 4 Client Profile (x86 および x64)**|.NET Framework 4 Client Profile は、クライアント アプリケーションを対象とする完全な .NET Framework 4 のサブセットです。 WPF (Windows Presentation Foundation)、Windows フォーム、WCF (Windows Communication Foundation)、および ClickOnce の機能の簡素化されたサブセットを提供します。 このサブセットを使用すると、.NET Framework 4 Client Profile を対象とする WPF、Windows フォーム、およびコンソール アプリケーションの迅速な配置シナリオが可能になります。 詳細については、「[.NET Framework Client Profile](/dotnet/framework/deployment/client-profile)」を参照してください。|  
 |**Microsoft Office 2007 プライマリ相互運用機能アセンブリ**|Microsoft Office 2007 製品のプライマリ相互運用機能アセンブリをインストールします。 プライマリ相互運用機能アセンブリにより、Microsoft Office アプリケーションの COM ベースのオブジェクト モデルとマネージ コードとの相互運用を実行できるようになります。 詳細については、「[Office プライマリ相互運用機能アセンブリ](/office-dev/office-dev/office-primary-interop-assemblies)」を参照してください。|  
 |**Microsoft Visual Basic PowerPacks Version 10.0**|Power Packs は、Visual Basic アプリケーションの開発を支援するアドイン、コントロール、コンポーネント、およびツールです。 このバージョンには、Windows フォームのコンテンツを印刷できるようにする <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> コンポーネントと、Visual Basic 6.0 プリンター コードを変更しないで実行できるようにする Printer Compatibility Library が含まれています。|  
 |**Microsoft Visual F# Runtime for .NET 2.0**|関数型プログラミング、および従来のオブジェクト指向プログラミングと命令型 (手続き型) プログラミングをサポートする、Visual F# ランタイム ライブラリ (x86 オペレーティング システムおよび x64 オペレーティング システム用) をインストールします。 アプリケーションまたはそのコンポーネントを Visual F# と .NET Framework 2.0、.NET Framework 3.0、または .NET Framework 3.5 で作成する場合、このパッケージをインストールする必要があります。<br /><br /> (詳細については、「[F# 言語リファレンス](http://msdn.microsoft.com/Library/16b706f8-b5f2-4ff7-b2c1-64df33cd6adf)」を参照してください)。|  
@@ -81,7 +85,8 @@ ms.lasthandoff: 04/05/2017
 |**Windows インストーラー 3.1**|Microsoft Windows インストーラー再頒布パッケージ Version 3.1 をインストールし、Windows インストーラー セットアップ プロジェクトをインストールできるようにします。 このパッケージは、Windows Server 2003 SP1 以降にプレインストールされています。<br /><br /> この項目は既定で選択されます。|  
 |**Windows インストーラー 4.5**|Microsoft Windows インストーラー再頒布パッケージ Version 4.5 をインストールし、Windows インストーラー セットアップ プロジェクトをインストールできるようにします。|  
   
-## <a name="see-also"></a>関連項目  
+## 関連項目
+<a id="see-also" class="xliff"></a>  
  [[発行] ページ (プロジェクト デザイナー)](../../ide/reference/publish-page-project-designer.md)   
  [アプリケーション配置の必要条件](../../deployment/application-deployment-prerequisites.md)   
  [.NET Framework の再配布](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287)   

@@ -42,17 +42,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 50f1d083b54ecc8418cac66086b40de8e3c69b73
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: e2852ef4eb48247a97fe513efc7cdecb89ec619a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="web-browser-environment-options-dialog-box"></a>[Web ブラウザー] ([オプション] ダイアログ ボックス - [環境])
+# [Web ブラウザー]\([オプション] ダイアログ ボックス - [環境])
+<a id="web-browser-environment-options-dialog-box" class="xliff"></a>
 内部 Web ブラウザーと Internet Explorer のオプションを設定します。 このダイアログ ボックスにアクセスするには、**[ツール]** メニューの **[オプション]** をクリックし、**[環境]** フォルダーを展開して **[Web ブラウザー]** を選択します。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
 > [!IMPORTANT]
 >  Web の特定のファイルまたはコンポーネントを開いて、コンピューター上のコードを実行できます。  
@@ -78,7 +80,8 @@ ms.lasthandoff: 02/22/2017
 > [!NOTE]
 >  [ブラウザーの選択] ダイアログ ボックスで、別の外部 Web ブラウザーを使用して Visual Studio 内部 Web ブラウザー (Internet Explorer のいずれかのバージョン) を置き換えます。  
   
-## <a name="see-also"></a>関連項目  
+## 関連項目
+<a id="see-also" class="xliff"></a>  
  [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)   
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)   
  [HTML デザイナー](http://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)

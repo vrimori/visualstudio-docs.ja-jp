@@ -31,17 +31,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 7ebf1dfaa3753f1a1908b0327e8ed938115f1f13
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: eea7cb983f264fb58a4b1131f84f3ec1cb196be5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="how-to-target-a-version-of-the-net-framework"></a>方法: .NET Framework のバージョンをターゲットにする
+# 方法: .NET Framework のバージョンをターゲットにする
+<a id="how-to-target-a-version-of-the-net-framework" class="xliff"></a>
 このドキュメントでは、プロジェクトを作成するときに特定のバージョンの .NET Framework を対象とする方法と、既存の Visual Basic、Visual C#、または Visual F# プロジェクトの中で対象のバージョンを変更する方法を説明します。  
   
 > [!IMPORTANT]
->  C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](http://msdn.microsoft.com/Library/031b1d54-e6e1-4da7-9868-3e75a87d9ffe)」を参照してください。  
+>  C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -55,7 +56,8 @@ ms.lasthandoff: 02/22/2017
 > [!NOTE]
 >  Visual Studio の Express Edition では、このトピックの「[ターゲット バージョンの変更](../ide/how-to-target-a-version-of-the-dotnet-framework.md#bkmk_existing)」で説明されているように、プロジェクトを作成した後でターゲットを変更できます。  
   
-#### <a name="to-target-a-version-when-you-create-a-project"></a>プロジェクト作成時にバージョンを対象として設定するには  
+#### プロジェクト作成時にバージョンを対象として設定するには
+<a id="to-target-a-version-when-you-create-a-project" class="xliff"></a>  
   
 1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
   
@@ -71,14 +73,15 @@ ms.lasthandoff: 02/22/2017
 ##  <a name="bkmk_existing"></a> ターゲット バージョンの変更  
  次の手順で、Visual Basic、Visual C#、または Visual F# プロジェクトの対象とする .NET Framework バージョンを変更できます。  
   
-#### <a name="to-change-the-targeted-version"></a>対象とするバージョンを変更するには  
+#### 対象とするバージョンを変更するには
+<a id="to-change-the-targeted-version" class="xliff"></a>  
   
 1.  **ソリューション エクスプローラー**で、変更するプロジェクトのショートカット メニューを開き、**[プロパティ]** を選択します。  
   
      ![Visual Studio のソリューション エクスプローラーのプロパティ](../ide/media/vs_slnexplorer_properties.png "vs_slnExplorer_Properties")  
   
     > [!IMPORTANT]
-    >  C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](http://msdn.microsoft.com/Library/031b1d54-e6e1-4da7-9868-3e75a87d9ffe)」を参照してください。  
+    >  C++ プロジェクトのターゲット バージョンを変更する方法については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)」を参照してください。  
   
 2.  プロパティ ウィンドウの左側の列で、**[アプリケーション]** タブを選択します。  
   
@@ -96,11 +99,12 @@ ms.lasthandoff: 02/22/2017
     > [!NOTE]
     >  対象とするバージョンとは別の .NET Framework のバージョンへの参照がコードに含まれている場合、コードをコンパイルまたは実行するとエラー メッセージが表示されることがあります。 これらのエラーを解決するには、参照を変更する必要があります。 「[.NET Framework を対象とするエラーのトラブルシューティング](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## 関連項目
+<a id="see-also" class="xliff"></a>  
  [Visual Studio のマルチ ターゲットの概要](../ide/visual-studio-multi-targeting-overview.md)   
  [ASP.NET Web プロジェクト用の .NET Framework Multi-Targeting](http://msdn.microsoft.com/Library/8b8145a9-62f6-4fc4-8a83-47b0487cbe76)   
  [.NET Framework を対象とするエラーのトラブルシューティング](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)   
  [[アプリケーション] ページ (プロジェクト デザイナー) (C#)](../ide/reference/application-page-project-designer-csharp.md)   
  [[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)   
  [プロジェクトの構成](http://msdn.microsoft.com/Library/a1489abb-6294-4f8f-b71f-2cb126393526)   
- [方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](http://msdn.microsoft.com/Library/031b1d54-e6e1-4da7-9868-3e75a87d9ffe)
+ [方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)

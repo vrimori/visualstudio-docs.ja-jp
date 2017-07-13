@@ -31,21 +31,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 0d8671ed0cad330a83482a84198ef397a3c4ad08
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: e77d5d86e16dd360759c8e289ad545efaa6a4870
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="globalizing-applications"></a>アプリケーションのグローバル化
+# アプリケーションのグローバル化
+<a id="globalizing-applications" class="xliff"></a>
 グローバリゼーションは、複数のロケールで機能するソフトウェア製品をデザインおよび開発するプロセスです。 このセクションの内容は、Windows フォームと Web フォームの両方のページに当てはまります。  
   
-## <a name="in-this-section"></a>このセクションの内容  
+## このセクションの内容
+<a id="in-this-section" class="xliff"></a>  
  [グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス](../ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md)  
  カルチャの設定に従って日付、時刻、数値、通貨、その他の情報の書式を設定するクラスについて説明します。  
   
-## <a name="related-sections"></a>関連項目  
- [Windows フォームのグローバル化](http://msdn.microsoft.com/Library/72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5)  
+## 関連項目
+<a id="related-sections" class="xliff"></a>  
+ [Windows フォームのグローバル化](/dotnet/framework/winforms/advanced/globalizing-windows-forms)  
  Windows フォームのグローバリゼーションに関するヘルプ ページへのリンクを提供します。  
   
  [グローバライズとローカライズ](http://msdn.microsoft.com/Library/8ef3838e-9d05-4236-9dd0-ceecff9df80d)  

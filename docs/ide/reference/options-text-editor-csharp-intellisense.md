@@ -37,21 +37,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 029f33f42611ed1c6671c6d3080dbff5b02e3870
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: b34b280b3558003c5c3ad92515d773bc7d45fdda
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="options-text-editor-c-intellisense"></a>[オプション]、[テキスト エディター]、[C#]、[IntelliSense]
+# [オプション]、[テキスト エディター]、[C#]、[IntelliSense]
+<a id="options-text-editor-c-intellisense" class="xliff"></a>
 Visual C# での IntelliSense の動作設定を変更するには、[**IntelliSense**] プロパティ ページを使用します。 [**IntelliSense**] プロパティ ページにアクセスするには、[**ツール**] メニューの [**オプション**] をクリックして、[**テキスト エディター**] フォルダーで [**C#**] をクリックし、[**IntelliSense**] をクリックします。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
  **[IntelliSense]** プロパティ ページには、以下のプロパティがあります。  
   
-## <a name="completion-lists"></a>入力候補一覧  
+## 入力候補一覧
+<a id="completion-lists" class="xliff"></a>  
  **文字が入力された後に入力候補一覧を表示する**  
  このオプションを選択すると、入力を開始したときに IntelliSense によって入力候補一覧が自動的に表示されます。 このオプションを選択しない場合でも、IntelliSense の入力候補は [**IntelliSense**] メニューから、または CTRL キーを押しながら SPACE キーを押して使用できます。  
   
@@ -61,7 +64,8 @@ Visual C# での IntelliSense の動作設定を変更するには、[**IntelliS
  **入力候補一覧にコード スニペットを配置する**  
  このオプションを選択すると、IntelliSense によって C# コード スニペットのエイリアスが入力候補一覧に追加されます。 コード スニペットのエイリアスがキーワードと同じ場合 ([class](/dotnet/csharp/language-reference/keywords/class) など)、キーワードは、ショートカットで置き換えられます。 詳細については、「[Visual C# のコード スニペット](../../ide/visual-csharp-code-snippets.md)」を参照してください。  
   
-## <a name="selection-in-completion-lists"></a>入力候補一覧からの選択  
+## 入力候補一覧からの選択
+<a id="selection-in-completion-lists" class="xliff"></a>  
  **次の文字の入力によって確定する**  
  入力すると、入力候補一覧内の選択した項目に対して IntelliSense のオート コンプリートを実行するすべての文字を指定します。  
   
@@ -81,11 +85,13 @@ Visual C# での IntelliSense の動作設定を変更するには、[**IntelliS
   
  `else|` (カーソルの位置)  
   
-## <a name="intellisense-member-selection"></a>IntelliSense メンバーの選択  
+## IntelliSense メンバーの選択
+<a id="intellisense-member-selection" class="xliff"></a>  
  **最近使用されたメンバーをあらかじめ選択する**  
- このオプションを選択すると、統合開発環境 (IDE) での現在のセッション中に、オブジェクト名の自動補完のために、ポップアップ メンバーの一覧ボックスで最近選択したメンバーが IntelliSense によってあらかじめ選択されます。 最近使用したメンバーの履歴は、IDE の各セッションの間に消去されます。 詳細については、「[最近使用されたメンバーに対する IntelliSense](../../misc/intellisense-for-most-recently-used-members.md)」を参照してください。  
+ このオプションを選択すると、統合開発環境 (IDE) での現在のセッション中に、オブジェクト名の自動補完のために、ポップアップ メンバーの一覧ボックスで最近選択したメンバーが IntelliSense によってあらかじめ選択されます。 最近使用したメンバーの履歴は、IDE の各セッションの間に消去されます。 詳細については、「[最近使用されたメンバーに対する IntelliSense](../../ide/visual-csharp-intellisense.md#most-recently-used-members)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## 関連項目
+<a id="see-also" class="xliff"></a>  
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)   
  [XML ドキュメント コメント](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)   
  [IntelliSense の使用](../../ide/using-intellisense.md)
