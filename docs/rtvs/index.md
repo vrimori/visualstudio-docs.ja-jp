@@ -1,42 +1,30 @@
 ---
 title: R Tools for Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 5/1/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: hero-article
 ms.assetid: 11324501-ceb6-47a2-ae13-e9e992d3603e
 caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: e166fceac0f29b5ee0880d2542eedddc066fa9f1
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: 80a10c710aac8413bd59b53bb61de7a982c09952
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 
-# <a name="working-with-r-in-visual-studio"></a>Visual Studio での R の使用
+# Visual Studio での R の使用
+<a id="working-with-r-in-visual-studio" class="xliff"></a>
 
 R は、高い拡張性を備えた、統計コンピューティングおよびグラフィックス用の言語であり環境です。 R は GNU General Public License に基づき無料配布されており、コミュニティの強力なサポートを受けることができます。また、数学記号と式を含むプロットを出版品質で生成できる機能で知られています。 R の詳細については、[r-project.org](https://www.r-project.org/about.html) と「[An Introduction to R (R の概要)](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)」をご覧ください。
 
@@ -47,12 +35,12 @@ Visual Studio で R を使用するには、次の手順を実行します。
 - [R Tools をインストールします](installation.md)。
 - [作業の開始](getting-started-with-r.md)ガイド、および[サンプル](getting-started-samples.md)や[ヘルプ情報の入手方法](getting-started-help.md)に関するトピックをご覧ください。
 
-その後、以下のリンクから、R 関連の機能と Visual Studio 自体の一般的な機能の詳細を確認してください。
+次に、以下のリンクから、R 関連の機能と Visual Studio 自体の一般的な機能の詳細を確認してください。
 
 | 機能 | 説明 | Visual Studio の一般的なドキュメント | 
 | --- | --- | --- |
 | [Visual Studio のプロジェクト システム](projects.md) | 関連ファイルを使いやすい構造で整理および管理し、R コード、R ドキュメント、R Markdown、SQL クエリ、ストアド プロシージャなどのアイテムに関する便利なテンプレートを活用できます。 [パッケージ マネージャー](package-manager.md)や [SQL Server integration](sql-server.md) も使用できます。  | [Visual Studio のソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md) |
-| [ワークスペース](workspaces.md) | RTVS は、ローカル ワークスペースとリモート ワークスペースへバインド可能です。これにより、ローカルで小規模なデータ セットを使用して R コードを開発してから、クラウドベースのより強力なコンピューター上で大規模なデータ セットを使用して簡単にコードを実行し、同僚と共同作業を行うことができます。 | 適用なし |
+| [ワークスペース](workspaces.md) | RTVS は、ローカル ワークスペースとリモート ワークスペースへバインド可能です。これにより、ローカルで小規模なデータ セットを使用して R コードを開発してから、クラウドベースのより強力なコンピューター上で大規模なデータ セットを使用して簡単にコードを実行することができます。 | 適用なし |
 | [R Tools オプション](options.md) | RTVS のさまざまな側面を制御します。 | [[オプション] ダイアログ ボックス](../ide/reference/options-dialog-box-visual-studio.md) |
 | [豊富な編集、IntelliSense、コード スニペット](code-editing.md) | 構文の色分け、すべてのコードとライブラリ間での [IntelliSense](code-intellisense.md)、コードのフォーマット、シグネチャ ヘルプ、定義への移動、すべての参照の検索、[コード スニペット](code-snippets.md)などが含まれます。 | [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md) |
 | [R Markdown](rmarkdown.md) | R Markdown ドキュメントを使用すると、マークダウン コード ブロック内の統合された R コードを用いてデータの結果を共有できます。 | 適用なし |
@@ -65,7 +53,8 @@ Visual Studio で R を使用するには、次の手順を実行します。
 
 > [!VIDEO https://www.youtube.com/embed/RcSDEfMgUvU]
 
-## <a name="frequently-asked-questions"></a>よく寄せられる質問
+## よく寄せられる質問
+<a id="frequently-asked-questions" class="xliff"></a>
 
 **Q.RTVS は Visual Studio Express Edition で動作しますか?**
 
@@ -91,7 +80,7 @@ A:  もちろん、できます。 以下に R を使用するユーザーに人
 
 **Q.RTVS を Visual Studio 内にインストールするのですから、R を C# や C++ などの Microsoft 言語と合わせて簡単に使用できますか?**
 
-A:  いいえ。 RTVS は R コードの開発ツールであり、R の標準的なネイティブ インタープリターを使用します。 現時点では、R と他の言語との相互運用はサポートされていません。
+A:  いいえ。 RTVS は R コードの開発ツールであり、R の標準的なネイティブ インタープリターを使用します。 R と他の言語との相互運用はサポートされていません。
 
 **Q.RStudio に用意されている機能 X がありません。**
 
@@ -99,19 +88,19 @@ A:  RStudio は完成度の高いすばらしい R 用の IDE であり、長年
 
 **Q.RTVS は OS X または Linux で動作しますか?**
 
-A:  いいえ。RTVS は Visual Studio で動作するように設計されているため、Windows 限定の実装になります。 ただし、Microsoft では、とても人気の高い Microsoft のクロスプラットフォーム エディターである [Visual Studio Code](https://code.visualstudio.com/) をベースにした新しいツール セットの構築について検討を行っています。
+A:  いいえ。RTVS は Visual Studio で動作するように設計されているため、Windows 限定の実装になります。 ただし、Microsoft では、人気の高い Microsoft のクロスプラットフォーム エディターである [Visual Studio Code](https://code.visualstudio.com/) をベースにした新しいツール セットの構築について検討しています。
 
 **Q.RTVS に貢献できますか?**
 
-A:  もちろん、できます。 ソース コードは [Github](https://github.com/microsoft/RTVS) で公開されています。 トラッカーを発行して、すでに存在するファイルに対するバグ情報とコメントをお寄せください。
+A:  もちろん、できます。 ソース コードは [Github](https://github.com/microsoft/RTVS) で公開されています。 問題の追跡ツールを使用して、すでに存在するファイルに対するバグ情報とコメントをお寄せください。
 
-このドキュメントに対する貢献も歓迎しています。ページの右上の **[編集]** を選択してください。 また、ページの最下部から、ドキュメントに対するコメントもお寄せください。
+このドキュメントに対する投稿も歓迎しています。&mdash;ページの右上の **[編集]** を選択してください。 また、ページの最下部から、ドキュメントに対するコメントもお寄せください。
 
 **Q.RTVS ではソース管理システムを利用できますか?**
 
 A:  はい。Visual Studio に統合されている任意のソース管理システムを使用できます。
 
-**Q.Windows または Visual Studio で英語 (米国) ロケールを使用していません。RTVS は動作しますか?**
+**Q.RTVS は英語以外のロケールで機能しますか?**
 
 A:  RTVS の 1.0 リリースは英語版のみです。 1.1 リリースでは、Visual Studio と同じ言語セットにローカライズされる予定です。 それまでは、[Visual Studio 2015 用の英語の言語パック](https://www.microsoft.com/download/details.aspx?id=48157)を使用するか、Visual Studio 2017 でインストーラーを実行し、**[言語パック]** タブで [英語] を選択してください。
 
@@ -131,13 +120,14 @@ A:  Github に、`.gitignore` の推奨ファイルのマスター リポジト�
 
 **Q.ネットワーク共有上で Visual Studio プロジェクトを保存できますか?**
 
-A:  いいえ。Visual Studio ではできません。
+A:  いいえ。Visual Studio では、ネットワーク共有からのプロジェクトの読み込みをサポートしていません。
 
-## <a name="send-us-your-feedback"></a>フィードバックをお寄せください。
+## フィードバックをお寄せください。
+<a id="send-us-your-feedback" class="xliff"></a>
 
 1. **Github の問題**: RTVS チームへ問い合わせる場合は、[GitHub 上で問題を報告する](https://github.com/Microsoft/RTVS/issues)か、**[R Tools] > [フィードバック]** メニューを使用して行ってください。
 
-1. **気に入った機能の報告や問題点、改善点の報告**: **[R Tools] > [フィードバック]** メニューから、フィードバックの送信と、問題の診断に役立つ RTVS ログ ファイルの添付を素早く行えます (ログは、個別に送信できるように `%temp%/RTVSlogs.zip` に書き込まれています)。**[ヘルプ] > [フィードバック] > [設定]** メニュー コマンドから、またはインストール中に [Visual Studio telemetry] (Visual Studio テレメトリ) をオフにした場合は、ログ機能が無効になることに注意してください。
+1. **気に入った機能の報告や問題点、改善点の報告**: **[R Tools] > [フィードバック]** メニューから、フィードバックの送信と、問題の診断に役立つ RTVS ログ ファイルの添付を素早く行えます (ログは、個別に送信できるように `%temp%/RTVSlogs.zip` に書き込まれています)。**[ヘルプ] > [フィードバック] > [設定]** メニュー コマンドから、またはインストール中に [Visual Studio telemetry]\(Visual Studio テレメトリ\) をオフにした場合は、ログ機能が無効になります。
 
 1. **電子メール**: チーム (*rtvsuserfeedback (at) microsoft.com*) 宛にフィードバックを直接送信できます。
 
