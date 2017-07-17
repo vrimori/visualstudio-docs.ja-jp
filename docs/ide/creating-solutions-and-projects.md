@@ -22,21 +22,6 @@ caps.latest.revision: 46
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
 ms.openlocfilehash: 9a4b04dc59c409a5c68ad1fb376abb33b3859ff6
@@ -44,8 +29,10 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/24/2017
 
 ---
+
 # ソリューションとプロジェクトを作成する
 <a id="create-solutions-and-projects" class="xliff"></a>
+
 プロジェクトは、アプリケーションをビルドするのに必要なものすべての論理的なコンテナーです。 メイン メニューから **[ファイル]**、**[新規作成]**、**[プロジェクト]** を選択してプロジェクトを作成するとき、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はプロジェクトを含むソリューションを作成します。 その後、必要に応じて新規または既存のプロジェクトをソリューションにさらに追加できます。 既存のコード ファイルからプロジェクトを作成することができますし、作業が終った時に削除する一時プロジェクト (.NET のみ) を作成することもできます。
 
 > [!NOTE]
