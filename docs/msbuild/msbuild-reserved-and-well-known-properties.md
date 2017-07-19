@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
 ms.openlocfilehash: f1f9931e6e7c8dda4cb74f407901f41467c690cc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>MSBuild の予約済みおよび既知のプロパティ
@@ -77,5 +77,4 @@ ms.lasthandoff: 05/11/2017
 |`MSBuildToolsVersion`|プロジェクトのビルドに使用する [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ツールセットのバージョン。<br /><br /> メモ：[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ツールセットは、アプリケーションのビルドで使用するタスク、ターゲット、およびツールで構成されます。 ツールには、csc.exe や vbc.exe などのコンパイラが含まれます。 詳細については、「[MSBuild ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」と「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」をご覧ください。|予約されています。|  
   
 ## <a name="see-also"></a>関連項目  
- [MSBuild リファレンス](../msbuild/msbuild-reference.md)
- [MSBuild プロパティ](../msbuild/msbuild-properties.md)
+ [MSBuild リファレンス](../msbuild/msbuild-reference.md) [MSBuild プロパティ](../msbuild/msbuild-properties.md)
