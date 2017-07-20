@@ -28,11 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 855dbb26932fbd1f5594c2b8714eac873d6f0408
-ms.openlocfilehash: cc55f091d91e98d82a9b4f2b51d2ff4da1936a9b
+ms.translationtype: HT
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 6b8097dca52bbc0ef867938841713df0c9018718
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/19/2017
 
 ---
 # <a name="introduction-to-wpf"></a>WPF の概要
@@ -45,7 +45,7 @@ Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユ
  この概要は初めての方を対象としており、WPF の主要な機能と概念を説明します。  
   
 ##  <a name="Programming_with_WPF"></a> WPF によるプログラミング  
- WPF は、ほとんどの部分が <xref:System.Windows> 名前空間にある .NET Framework 型のサブセットとして存在します。 ASP.NET や Windows フォームのようなマネージ テクノロジを使用して .NET Framework で以前にアプリケーションを構築したことがあるユーザーは、基本的な WPF のプログラミングの経験には慣れているはずです。クラスのインスタンス化、プロパティの設定、メソッドの呼び出し、イベントの処理など、すべての操作は C# または Visual Basic などの使い慣れた .NET プログラミング言語を使用して行うことができます。  
+ WPF は、ほとんどの部分が <xref:System.Windows> 名前空間に格納されている .NET Framework 型のサブセットとして存在します。 ASP.NET や Windows フォームのようなマネージ テクノロジを使用して .NET Framework で以前にアプリケーションを構築したことがあるユーザーは、基本的な WPF のプログラミングの経験には慣れているはずです。クラスのインスタンス化、プロパティの設定、メソッドの呼び出し、イベントの処理など、すべての操作は C# または Visual Basic などの使い慣れた .NET プログラミング言語を使用して行うことができます。  
   
  WPF には、プロパティとイベントを拡張する追加のプログラミング構成要素である、 [依存関係プロパティ](https://msdn.microsoft.com/en-us/library/ms752914\(v=vs.100\).aspx) と [ルーティング イベント](https://msdn.microsoft.com/en-us/library/ms742806\(v=vs.100\).aspx)が含まれています。  
   
@@ -77,7 +77,7 @@ Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユ
 </Window>  
 ```  
   
- 具体的には、この XAML は `Window` エレメントと `Button` エレメントを使用して、ウィンドウとボタンをそれぞれ定義しています。 各エレメントは属性で構成されます。たとえば `Window` エレメントの `Title` 属性はウィンドウのタイトルバーのテキストを指定します。 マークアップで定義されている要素と属性は、実行時に WPF により、WPF クラスのインスタンスに変換されます。 たとえば、`Window` エレメントは、<xref:System.Windows.Window.Title%2A> プロパティが `Title` 属性の値である <xref:System.Windows.Window> クラスのインスタンスに変換されます。  
+ 具体的には、この XAML は `Window` エレメントと `Button` エレメントを使用して、ウィンドウとボタンをそれぞれ定義しています。 各エレメントは属性で構成されます。たとえば `Window` エレメントの `Title` 属性はウィンドウのタイトルバーのテキストを指定します。 マークアップで定義されている要素と属性は、実行時に WPF により、WPF クラスのインスタンスに変換されます。 たとえば、 `Window` エレメントは、 <xref:System.Windows.Window> プロパティが <xref:System.Windows.Window.Title%2A> 属性の値である `Title` クラスのインスタンスに変換されます。  
   
  次の図は、前記の例の XAML で定義されたユーザー インターフェイス (UI) を示しています。  
   
@@ -154,7 +154,7 @@ End Namespace
   
 ```  
   
- この例では、<xref:System.Windows.Window> クラスから派生したクラスを分離コードが実装しています。 マークアップを分離コード クラスと関連付けるために `x:Class` 属性が使用されます。 分離コード クラスのコンストラクターから `InitializeComponent` が呼び出されて、マークアップで定義された UI を分離コード クラスとマージします。 (`InitializeComponent` は、アプリケーションがビルドされるときに生成されます。手動で実装する必要がないのは、このためです。)`x:Class` と `InitializeComponent` を組み合わせることにより、実装が作成されるときはいつでも必ず正しく初期化されることが保証されます。 分離コード クラスはボタンの <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントのイベント ハンドラーも実装します。 ボタンがクリックされると、イベント ハンドラーは <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> メソッドを呼び出して、メッセージ ボックスを表示します。  
+ この例では、 <xref:System.Windows.Window> クラスから派生したクラスを分離コードが実装しています。 マークアップを分離コード クラスと関連付けるために `x:Class` 属性が使用されます。 分離コード クラスのコンストラクターから `InitializeComponent` が呼び出されて、マークアップで定義された UI を分離コード クラスとマージします。 (`InitializeComponent` は、アプリケーションがビルドされるときに生成されます。手動で実装する必要がないのは、このためです。)`x:Class` と `InitializeComponent` を組み合わせることにより、実装が作成されるときはいつでも必ず正しく初期化されることが保証されます。 分離コード クラスはボタンの <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントのイベント ハンドラーも実装します。 ボタンがクリックされると、イベント ハンドラーは <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> メソッドを呼び出して、メッセージ ボックスを表示します。  
   
  次の図は、ボタンがクリックされたときの結果を示しています。  
   
@@ -163,36 +163,36 @@ End Namespace
 ##  <a name="Controls"></a> コントロール  
  アプリケーション モデルにより提供されるユーザー エクスペリエンスは、構築済みのコントロールです。 WPF において、「コントロール」とはウィンドウまたはページによりホストされ、ユーザー インターフェイスを持ち、何らかの動作を実装する WPF クラスのカテゴリに適用される総称です。  
   
- 詳しくは、「 [コントロール](http://msdn.microsoft.com/Library/3f255a8a-35a8-4712-9065-472ff7d75599)」をご覧ください。  
+ 詳しくは、「 [コントロール](/dotnet/framework/wpf/controls/index)」をご覧ください。  
   
 ### <a name="wpf-controls-by-function"></a>WPF コントロールの機能別一覧  
  組み込まれた WPF コントロールを次に挙げます。  
   
--   **ボタン**: <xref:System.Windows.Controls.Button> および <xref:System.Windows.Controls.Primitives.RepeatButton>。  
+-   **ボタン類**: <xref:System.Windows.Controls.Button> および <xref:System.Windows.Controls.Primitives.RepeatButton>。  
   
--   **データの表示**: <xref:System.Windows.Controls.DataGrid>、<xref:System.Windows.Controls.ListView>、<xref:System.Windows.Controls.TreeView>。  
+-   **データの表示**: <xref:System.Windows.Controls.DataGrid>、 <xref:System.Windows.Controls.ListView>、 <xref:System.Windows.Controls.TreeView>。  
   
 -   **日付表示と選択**: <xref:System.Windows.Controls.Calendar> および <xref:System.Windows.Controls.DatePicker>。  
   
--   **ダイアログ ボックス**: <xref:Microsoft.Win32.OpenFileDialog>、<xref:System.Windows.Controls.PrintDialog>、<xref:Microsoft.Win32.SaveFileDialog>。  
+-   **ダイアログ ボックス**: <xref:Microsoft.Win32.OpenFileDialog>、 <xref:System.Windows.Controls.PrintDialog>、 <xref:Microsoft.Win32.SaveFileDialog>。  
   
 -   **デジタル インク**: <xref:System.Windows.Controls.InkCanvas> および <xref:System.Windows.Controls.InkPresenter>。  
   
--   **ドキュメント**: <xref:System.Windows.Controls.DocumentViewer>、<xref:System.Windows.Controls.FlowDocumentPageViewer>、<xref:System.Windows.Controls.FlowDocumentReader>、<xref:System.Windows.Controls.FlowDocumentScrollViewer>、<xref:System.Windows.Controls.StickyNoteControl>。  
+-   **ドキュメント**: <xref:System.Windows.Controls.DocumentViewer>、 <xref:System.Windows.Controls.FlowDocumentPageViewer>、 <xref:System.Windows.Controls.FlowDocumentReader>、 <xref:System.Windows.Controls.FlowDocumentScrollViewer>、 <xref:System.Windows.Controls.StickyNoteControl>。  
   
--   **入力**: <xref:System.Windows.Controls.TextBox>、<xref:System.Windows.Controls.RichTextBox>、<xref:System.Windows.Controls.PasswordBox>。  
+-   **入力**: <xref:System.Windows.Controls.TextBox>、 <xref:System.Windows.Controls.RichTextBox>、 <xref:System.Windows.Controls.PasswordBox>。  
   
--   **レイアウト**: <xref:System.Windows.Controls.Border>、<xref:System.Windows.Controls.Primitives.BulletDecorator>、<xref:System.Windows.Controls.Canvas>、<xref:System.Windows.Controls.DockPanel>、<xref:System.Windows.Controls.Expander>、<xref:System.Windows.Controls.Grid>、<xref:System.Windows.Controls.GridView>、<xref:System.Windows.Controls.GridSplitter>、<xref:System.Windows.Controls.GroupBox>、<xref:System.Windows.Controls.Panel>、<xref:System.Windows.Controls.Primitives.ResizeGrip>、<xref:System.Windows.Controls.Separator>、<xref:System.Windows.Controls.Primitives.ScrollBar>、<xref:System.Windows.Controls.ScrollViewer>、<xref:System.Windows.Controls.StackPanel>、<xref:System.Windows.Controls.Primitives.Thumb>、<xref:System.Windows.Controls.Viewbox>、<xref:System.Windows.Controls.VirtualizingStackPanel>、<xref:System.Windows.Window>、<xref:System.Windows.Controls.WrapPanel>。  
+-   **レイアウト**: <xref:System.Windows.Controls.Border>、 <xref:System.Windows.Controls.Primitives.BulletDecorator>、 <xref:System.Windows.Controls.Canvas>、 <xref:System.Windows.Controls.DockPanel>、 <xref:System.Windows.Controls.Expander>、 <xref:System.Windows.Controls.Grid>、 <xref:System.Windows.Controls.GridView>、 <xref:System.Windows.Controls.GridSplitter>、 <xref:System.Windows.Controls.GroupBox>、 <xref:System.Windows.Controls.Panel>、 <xref:System.Windows.Controls.Primitives.ResizeGrip>、 <xref:System.Windows.Controls.Separator>、 <xref:System.Windows.Controls.Primitives.ScrollBar>、 <xref:System.Windows.Controls.ScrollViewer>、 <xref:System.Windows.Controls.StackPanel>、 <xref:System.Windows.Controls.Primitives.Thumb>、 <xref:System.Windows.Controls.Viewbox>、 <xref:System.Windows.Controls.VirtualizingStackPanel>、 <xref:System.Windows.Window>、 <xref:System.Windows.Controls.WrapPanel>。  
   
--   **メディア**: <xref:System.Windows.Controls.Image>、<xref:System.Windows.Controls.MediaElement>、<xref:System.Windows.Controls.SoundPlayerAction>。  
+-   **メディア**: <xref:System.Windows.Controls.Image>、 <xref:System.Windows.Controls.MediaElement>、 <xref:System.Windows.Controls.SoundPlayerAction>。  
   
--   **メニュー**: <xref:System.Windows.Controls.ContextMenu>、<xref:System.Windows.Controls.Menu>、<xref:System.Windows.Controls.ToolBar>。  
+-   **メニュー類**: <xref:System.Windows.Controls.ContextMenu>、 <xref:System.Windows.Controls.Menu>、 <xref:System.Windows.Controls.ToolBar>。  
   
--   **ナビゲーション**: <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Documents.Hyperlink>、<xref:System.Windows.Controls.Page>、<xref:System.Windows.Navigation.NavigationWindow>、<xref:System.Windows.Controls.TabControl>。  
+-   **ナビゲーション**: <xref:System.Windows.Controls.Frame>、 <xref:System.Windows.Documents.Hyperlink>、 <xref:System.Windows.Controls.Page>、 <xref:System.Windows.Navigation.NavigationWindow>、 <xref:System.Windows.Controls.TabControl>。  
   
--   **選択**: <xref:System.Windows.Controls.CheckBox>、<xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.RadioButton>、<xref:System.Windows.Controls.Slider>。  
+-   **選択**: <xref:System.Windows.Controls.CheckBox>、 <xref:System.Windows.Controls.ComboBox>、 <xref:System.Windows.Controls.ListBox>、 <xref:System.Windows.Controls.RadioButton>、 <xref:System.Windows.Controls.Slider>。  
   
--   **ユーザー情報**: <xref:System.Windows.Controls.AccessText>、<xref:System.Windows.Controls.Label>、<xref:System.Windows.Controls.Primitives.Popup>、<xref:System.Windows.Controls.ProgressBar>、<xref:System.Windows.Controls.Primitives.StatusBar>、<xref:System.Windows.Controls.TextBlock>、<xref:System.Windows.Controls.ToolTip>。  
+-   **ユーザー情報**: <xref:System.Windows.Controls.AccessText>、 <xref:System.Windows.Controls.Label>、 <xref:System.Windows.Controls.Primitives.Popup>、 <xref:System.Windows.Controls.ProgressBar>、 <xref:System.Windows.Controls.Primitives.StatusBar>、 <xref:System.Windows.Controls.TextBlock>、 <xref:System.Windows.Controls.ToolTip>。  
   
 ##  <a name="Input_And_Commanding"></a> 入力とコマンド実行  
  コントロールはほとんどの場合、ユーザー入力の検出と応答に使用されます。 [WPF 入力システム](https://msdn.microsoft.com/en-us/library/ms754010\(v=vs.100\).aspx) では直接イベントとルーティング イベントの両方を使用して、テキスト入力、フォーカス管理、マウス位置指定をサポートしています。  
@@ -222,7 +222,7 @@ End Namespace
   
  [!code-xml[IntroToWPFSnippets#LayoutMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_1.xaml)]  
   
- <xref:System.Windows.Controls.DockPanel> により、子 <xref:System.Windows.Controls.TextBox> コントロールはどのように配置するかを伝えることができます。 このために、<xref:System.Windows.Controls.DockPanel> は <xref:System.Windows.Controls.DockPanel.Dock%2A> プロパティを実装しています。このプロパティが子コントロールに公開されて、それぞれのコントロールがドック スタイルを指定できるようになります。  
+ <xref:System.Windows.Controls.DockPanel> により、子 <xref:System.Windows.Controls.TextBox> コントロールはどのように配置するかを伝えることができます。 このために、 <xref:System.Windows.Controls.DockPanel> は <xref:System.Windows.Controls.DockPanel.Dock%2A> プロパティを実装しています。このプロパティが子コントロールに公開されて、それぞれのコントロールがドック スタイルを指定できるようになります。  
   
 > [!NOTE]
 >  子コントロールが使うために、親コントロールにより実装されるプロパティは、 [添付プロパティ](https://msdn.microsoft.com/en-us/library/ms749011\(v=vs.100\).aspx)と呼ばれる WPF 構成要素です。  
@@ -254,7 +254,7 @@ End Namespace
   
  [!code-vb[SimpleDataBindingSnippets#DataBindingCODEBEHIND](../designers/codesnippet/VisualBasic/introduction-to-wpf_6.vb)] [!code-cs[SimpleDataBindingSnippets#DataBindingCODEBEHIND](../designers/codesnippet/CSharp/introduction-to-wpf_6.cs)]  
   
- この例で、 `Person` クラスは、分離コードでインスタンス化され、 `DataBindingWindow`のデータ コンテキストとして設定されます。 マークアップでは、<xref:System.Windows.Controls.TextBox> の <xref:System.Windows.Controls.TextBox.Text%2A> プロパティが、`Person.Name` プロパティにバインドされます ("`{Binding ... }`" XAML 構文を使用)。 この XAML は WPF に対して、ウィンドウの <xref:System.Windows.FrameworkElement.DataContext%2A> プロパティに格納されている `Person` オブジェクトに、<xref:System.Windows.Controls.TextBox> コントロールをバインドするよう、指示します。  
+ この例で、 `Person` クラスは、分離コードでインスタンス化され、 `DataBindingWindow`のデータ コンテキストとして設定されます。 マークアップでは、 <xref:System.Windows.Controls.TextBox.Text%2A> の <xref:System.Windows.Controls.TextBox> プロパティが、 `Person.Name` プロパティにバインドされます ("`{Binding ... }`" XAML 構文を使用)。 この XAML は WPF に対して、ウィンドウの <xref:System.Windows.Controls.TextBox> プロパティに格納されている `Person` オブジェクトに、 <xref:System.Windows.FrameworkElement.DataContext%2A> コントロールをバインドするよう、指示します。  
   
  WPF データ バインディング エンジンは、検証、並べ替え、フィルター処理、グループ化などのその他のサポートを提供します。 さらにデータ バインディングでは、標準の WPF コントロールによって表示されたユーザー インターフェイスが適切ではない場合に、バインドされたデータを操作するためのカスタム ユーザー インターフェイスをデータ テンプレートで作成することをサポートしています。  
   
@@ -368,7 +368,7 @@ End Namespace
  このため、WPF には独自のユーザー エクスペリエンスを作成するためのさまざまなメカニズムが用意されています。コントロール、トリガー、コントロールとデータのテンプレート、スタイル、ユーザー インターフェイスのリソース、テーマとスキン用の豊富なコンテンツ モデルがあります。  
   
 ### <a name="content-model"></a>コンテンツ モデル  
- 大半の WPF コントロールの主な目的はコンテンツを表示することです。 WPF では、コントロールのコンテンツを構成するアイテムの種類と数を、コントロールの *コンテンツ モデル*と呼びます。 一部のコントロールには、1 つのアイテムと種類のコンテンツを含めることができます。たとえば、<xref:System.Windows.Controls.TextBox> のコンテンツは <xref:System.Windows.Controls.TextBox.Text%2A> プロパティに割り当てられている文字列値です。 次の例では <xref:System.Windows.Controls.TextBox> のコンテンツを設定します。  
+ 大半の WPF コントロールの主な目的はコンテンツを表示することです。 WPF では、コントロールのコンテンツを構成するアイテムの種類と数を、コントロールの *コンテンツ モデル*と呼びます。 一部のコントロールには、1 つのアイテムと種類のコンテンツを含めることができます。たとえば、 <xref:System.Windows.Controls.TextBox> のコンテンツは <xref:System.Windows.Controls.TextBox.Text%2A> プロパティに割り当てられている文字列値です。 次の例では <xref:System.Windows.Controls.TextBox> のコンテンツを設定します。  
   
  [!code-xml[IntroToWPFSnippets#TextBoxContentMARKUP1](../designers/codesnippet/Xaml/introduction-to-wpf_10.xaml)]  
 [!code-xml[IntroToWPFSnippets#TextBoxContentMARKUP2](../designers/codesnippet/Xaml/introduction-to-wpf_11.xaml)]  
@@ -394,9 +394,9 @@ End Namespace
  XAML マークアップの主な目的はアプリケーションの外観を実装することですが、XAML を使用してアプリケーションの動作の一部の機能を実装することもできます。 その一例として、ユーザーの操作に基づいて、アプリケーションの外観を変更するトリガーの使用があります。 詳しくは、「 [スタイルとテンプレート](https://msdn.microsoft.com/en-us/library/ms745683\(v=vs.100\).aspx)」をご覧ください。  
   
 ### <a name="control-templates"></a>コントロール テンプレート  
- WPF コントロールの既定のユーザー インターフェイスは、通常、他のコントロールと図形で構成されます。 たとえば、<xref:System.Windows.Controls.Button> は <xref:Microsoft.Windows.Themes.ButtonChrome> コントロールと <xref:System.Windows.Controls.ContentPresenter> コントロールの両方で構成されます。 <xref:Microsoft.Windows.Themes.ButtonChrome> は標準的なボタンの外観を提供するのに対し、<xref:System.Windows.Controls.ContentPresenter> は <xref:System.Windows.Controls.ContentControl.Content%2A> プロパティで指定したボタンのコンテンツを表示します。  
+ WPF コントロールの既定のユーザー インターフェイスは、通常、他のコントロールと図形で構成されます。 たとえば、 <xref:System.Windows.Controls.Button> は <xref:Microsoft.Windows.Themes.ButtonChrome> コントロールと <xref:System.Windows.Controls.ContentPresenter> コントロールの両方で構成されます。 <xref:Microsoft.Windows.Themes.ButtonChrome> は標準的なボタンの外観を提供するのに対し、 <xref:System.Windows.Controls.ContentPresenter> は <xref:System.Windows.Controls.ContentControl.Content%2A> プロパティで指定したボタンのコンテンツを表示します。  
   
- コントロールの既定の外観が、アプリケーションの全体的な外観と調和しない場合もあります。 そのような場合は、<xref:System.Windows.Controls.ControlTemplate> を使用すれば、コンテンツと動作を変更することなく、コントロールのユーザー インターフェイスの外観を変更できます。  
+ コントロールの既定の外観が、アプリケーションの全体的な外観と調和しない場合もあります。 そのような場合は、 <xref:System.Windows.Controls.ControlTemplate> を使用すれば、コンテンツと動作を変更することなく、コントロールのユーザー インターフェイスの外観を変更できます。  
   
  たとえば、次の例は <xref:System.Windows.Controls.ControlTemplate> を使用して <xref:System.Windows.Controls.Button> の外観を変更する方法を示しています。  
   
@@ -404,7 +404,7 @@ End Namespace
   
  [!code-cs[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](../designers/codesnippet/CSharp/introduction-to-wpf_17.cs)] [!code-vb[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](../designers/codesnippet/VisualBasic/introduction-to-wpf_17.vb)]  
   
- この例では、既定のボタン ユーザー インターフェイスが、濃い青の枠線を持ち、<xref:System.Windows.Media.RadialGradientBrush> で塗りつぶされた <xref:System.Windows.Shapes.Ellipse> に置き換えられています。 <xref:System.Windows.Controls.ContentPresenter> コントロールは <xref:System.Windows.Controls.Button> のコンテンツである "Click Me!" を表示します。 <xref:System.Windows.Controls.Button> がクリックされると、<xref:System.Windows.Controls.Button> コントロールの既定の動作の一部として <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントが発生します。 結果を次の例に示します。  
+ この例では、既定のボタン ユーザー インターフェイスが、濃い青の枠線を持ち、<xref:System.Windows.Media.RadialGradientBrush> で塗りつぶされた <xref:System.Windows.Shapes.Ellipse> に置き換えられています。 <xref:System.Windows.Controls.ContentPresenter> コントロールは <xref:System.Windows.Controls.Button>のコンテンツである "Click Me!" を表示します。 <xref:System.Windows.Controls.Button> がクリックされると、 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> コントロールの既定の動作の一部として <xref:System.Windows.Controls.Button> イベントが発生します。 結果を次の例に示します。  
   
  ![省略記号ボタンと 2 番目のウィンドウ](../designers/media/wpfintrofigure2.png "WPFIntroFigure2")  
   
@@ -413,7 +413,7 @@ End Namespace
   
  ![既定の外観を使用したリスト ボックス](../designers/media/wpfintrofigure18.png "WPFIntroFigure18")  
   
- 既定の外観は <xref:System.Windows.Controls.ListBox> に期待されるものです。 ただし、各タスクの既定の外観にはタスク名しか含まれていません。 タスク名、説明、優先度の既定の外観を表示するには、<xref:System.Windows.Controls.ListBox> コントロールのバインドされたリスト項目の既定の外観を、<xref:System.Windows.DataTemplate> を使用して変更する必要があります。 次の XAML はこのような <xref:System.Windows.DataTemplate> を定義しています。これが、<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 属性を使用して各タスクに適用されます。  
+ 既定の外観は <xref:System.Windows.Controls.ListBox> に期待されるものです。 ただし、各タスクの既定の外観にはタスク名しか含まれていません。 タスク名、説明、優先度の既定の外観を表示するには、 <xref:System.Windows.Controls.ListBox> コントロールのバインドされたリスト項目の既定の外観を、 <xref:System.Windows.DataTemplate>を使用して変更する必要があります。 次の XAML はこのような <xref:System.Windows.DataTemplate> を定義しています。これが、<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 属性を使用して各タスクに適用されます。  
   
  [!code-xml[IntroToWPFSnippets#DataTemplateMARKUP1](../designers/codesnippet/Xaml/introduction-to-wpf_18.xaml)]  
 [!code-xml[IntroToWPFSnippets#DataTemplateMARKUP2](../designers/codesnippet/Xaml/introduction-to-wpf_19.xaml)]  
@@ -451,13 +451,13 @@ End Namespace
 [!code-xml[IntroToWPFSnippets#ResourceWindowMARKUP2](../designers/codesnippet/Xaml/introduction-to-wpf_27.xaml)]  
 [!code-xml[IntroToWPFSnippets#ResourceWindowMARKUP3](../designers/codesnippet/Xaml/introduction-to-wpf_28.xaml)]  
   
- この例では `Window.Resources` プロパティ要素を使用して、背景色リソースを実装しています。 このリソースは <xref:System.Windows.Window> のすべての子に使用できます。 次のように、リソースのスコープは多様です。この一覧では、解決される順序で各スコープが並べられています。  
+ この例では `Window.Resources` プロパティ要素を使用して、背景色リソースを実装しています。 このリソースは <xref:System.Windows.Window>のすべての子に使用できます。 次のように、リソースのスコープは多様です。この一覧では、解決される順序で各スコープが並べられています。  
   
 1.  個々のコントロール (継承された <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName> プロパティを使用)。  
   
 2.  <xref:System.Windows.Window> または <xref:System.Windows.Controls.Page> (これも、継承された <xref:System.Windows.FrameworkElement.Resources%2A?displayProperty=fullName> プロパティを使用)。  
   
-3.  <xref:System.Windows.Application> (<xref:System.Windows.Application.Resources%2A?displayProperty=fullName> プロパティを使用)。  
+3.  <xref:System.Windows.Application> ( <xref:System.Windows.Application.Resources%2A?displayProperty=fullName> プロパティを使用)。  
   
  このようなスコープの多様さのおかげで、リソースを柔軟に定義して共有できるようになります。  
   
@@ -488,7 +488,7 @@ End Namespace
   
 -   **コントロール モデル** カスタム コントロールは <xref:System.Windows.Controls.Control> から派生し、大半の WPF コントロール同様、テンプレートを使用して、動作を外観から分離する実装を構築するために使用されます。 <xref:System.Windows.Controls.Control> から派生することにより、ユーザー コントロールよりも自由度の高いカスタム ユーザー インターフェイスを作成できますが、これにはより多くの労力が必要です。  
   
--   **フレームワーク要素モデル** カスタム コントロールは、カスタム レンダリング ロジック (テンプレートではなく) によって外観が定義されるときに、<xref:System.Windows.FrameworkElement> から派生します。  
+-   **フレームワーク要素モデル** カスタム コントロールは、カスタム レンダリング ロジック (テンプレートではなく) によって外観が定義されるときに、 <xref:System.Windows.FrameworkElement> から派生します。  
   
  次の例に <xref:System.Windows.Controls.UserControl> から派生するカスタムの数値のアップダウン コントロールを示します。  
   
