@@ -1,23 +1,43 @@
 ---
-title: "プロファイル ツール レポートの概要 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロファイル ツール、パフォーマンス レポートの概要"
-  - "パフォーマンス、レポート"
-  - "パフォーマンス レポート、パフォーマンス レポートの概要"
+title: "パフォーマンス レポートの概要 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- profiling tools, about performance rerports
+- performance, reports
+- performance reports, about performance reports
 ms.assetid: 7324c24c-fd09-479b-b2ad-e0c3b613e040
 caps.latest.revision: 45
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 45
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 8544c8bd6248964beeedc8c55976d7ba903f8335
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="performance-report-overview"></a>パフォーマンス レポートの概要
 Visual Studio Team System Development Edition の統合開発環境 (IDE) の **[パフォーマンス レポート]** ウィンドウでパフォーマンス セッションのプロファイリング データを表示できます。 プロファイリング データは .vsp ファイルと .vsps ファイルに保存されます。 レポート ビュー ウィンドウでは、アプリケーションのパフォーマンス上の問題を表示して分析できます。  
@@ -38,7 +58,7 @@ Visual Studio Team System Development Edition の統合開発環境 (IDE) の **
  既定では、[概要] ビューにプロファイリング データが表示されます。 このビューが、パフォーマンス上の問題に関する調査を行う際の開始点となります。 [概要] ビューの各行から、さらに詳しいビューに移動するには、関数名またはモジュール名を右クリックします。 詳細については、「[概要ビュー](../profiling/summary-view.md)」を参照してください。  
   
 ### <a name="callercallee-view"></a>[呼び出し元/呼び出し先] ビュー  
- [呼び出し元/呼び出し先] ビューには個々の関数のコール ツリーが表示されます。 このビューは&3; つの部分に分かれています。  
+ [呼び出し元/呼び出し先] ビューには個々の関数のコール ツリーが表示されます。 このビューは 3 つの部分に分かれています。  
   
 -   対象の関数がビューの中央部に表示されます。  
   
@@ -96,8 +116,3 @@ Visual Studio Team System Development Edition の統合開発環境 (IDE) の **
 ## <a name="see-also"></a>関連項目  
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)   
  [パフォーマンス レポートのビュー](../profiling/performance-report-views.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

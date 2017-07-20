@@ -32,13 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: efaec77b5d3a2fb52859ff08fe31aa6f35e4263b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="visual-c-typedefs-in-class-designer"></a>クラス デザイナーにおける Visual C++ の typedef
-typedef ステートメントは、名前とその基になる型との間に間接参照のレイヤーを&1; つ以上作成します。 クラス デザイナーでは、キーワード `typedef` などで宣言される C++ の typedef 型をサポートしています。  
+typedef ステートメントは、名前とその基になる型との間に間接参照のレイヤーを 1 つ以上作成します。 クラス デザイナーでは、キーワード `typedef` などで宣言される C++ の typedef 型をサポートしています。  
   
 ```  
 typedef class coord  
@@ -217,8 +219,3 @@ class A {
 ## <a name="see-also"></a>関連項目  
  [Visual C++ コードの使用 (クラス デザイナー)](../ide/working-with-visual-cpp-code-class-designer.md)   
  [(NOTINBUILD) typedef 指定子](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

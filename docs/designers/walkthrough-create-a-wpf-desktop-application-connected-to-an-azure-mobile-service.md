@@ -28,19 +28,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: df243cc90a27f971c4e57eb6f9f6a251513d8fb2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7716a0e9249c67760ae7b31160dcae89b77b9ca7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成
 Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル サービスを利用してデータの格納および提供を行う、最新式のデスクトップ アプリケーションをすばやく作成することができます。  
   
-##  <a name="a-namerequirementsa-prerequisites"></a><a name="Requirements"></a>前提条件  
+##  <a name="Requirements"></a> 必要条件  
  このチュートリアルを完了させるための要件は次のとおりです。  
   
--   Visual Studio 2015 - WPF 開発をサポートする任意のバージョン。  
+-   Visual Studio 2015 - WPF 開発をサポートするあらゆるバージョン。  
   
 -   アクティブな Microsoft Azure アカウント。  
   
@@ -79,16 +80,16 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
      必要な参照が **ソリューション エクスプローラー**に追加されます。  
   
     > [!NOTE]
-    >  ライセンス条項に同意しない場合は、 **[同意しない]** ボタンをクリックします。 同意しない場合、このチュートリアルの残りの部分を完了させることはできません。  
+    >  ライセンス条項に同意しない場合は、**[同意しない]** ボタンをクリックします。 同意しない場合、このチュートリアルの残りの部分を完了させることはできません。  
   
 ## <a name="create-the-user-interface"></a>ユーザー インターフェイスを作成する  
- 次の手順では、アプリケーションのユーザー インターフェイスを作成します。 まず、標準の横並びの&2; つのウィンドウのレイアウトを表示する再利用可能なユーザー コントロールを作成します。 ユーザー コントロールをアプリケーションのメイン ウィンドウに追加し、データを入力および表示するためのコントロールを追加してから、モバイル サービスのバックエンドとの相互作用を定義するコードを記述します。  
+ 次の手順では、アプリケーションのユーザー インターフェイスを作成します。 まず、標準の横並びの 2 つのウィンドウのレイアウトを表示する再利用可能なユーザー コントロールを作成します。 ユーザー コントロールをアプリケーションのメイン ウィンドウに追加し、データを入力および表示するためのコントロールを追加してから、モバイル サービスのバックエンドとの相互作用を定義するコードを記述します。  
   
 #### <a name="to-add-a-user-control"></a>ユーザー コントロールを追加するには  
   
 1.  **ソリューション エクスプローラー**で、 **[WPFQuickStart]** ノードのショートカット メニューを開き、 **[追加]**、 **[新しいフォルダー]**の順に選択します。  
   
-2.  フォルダーに「`Common`」という名前を付けます。  
+2.  フォルダーに「 `Common`で行うことができます。  
   
 3.  **[Common]** フォルダーのショートカット メニューを開き、 **[追加]**、 **[ユーザー コントロール]**の順に選択します。  
   
@@ -222,17 +223,17 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
   
 1.  **ソリューション エクスプローラー**で、 **[MainWindow.xaml]** ファイルを開きます。  
   
-2.  **重要**。 この手順は、C# の場合のみです。 Visual Basic を使用する場合は、次の手順に進んでください。 デザイナーの下ウィンドウで、 `xmlns:local=”clr-namespace:WPFQuickStart”` という行を見つけてから、それを次の XAML コードに置き換えます。  
+2.  **重要**。 この手順は、C# の場合のみです。 Visual Basic を使用する場合は、次の手順に進んでください。 デザイナーの下ウィンドウで、 `xmlns:local="clr-namespace:WPFQuickStart"` という行を見つけてから、それを次の XAML コードに置き換えます。  
   
     ```xaml  
-    xmlns:local=”clr-namespace:WPFQuickStart.Common”  
+    xmlns:local="clr-namespace:WPFQuickStart.Common"  
     ```  
   
 3.  **[プロパティ]** ウィンドウで、 **Common** カテゴリ ノードを展開し **[Title]** プロパティを選択してから、「 `WPF Todo List` 」と入力して **Enter** キーを押します。  
   
      [XAML] ウィンドウの **[Title]** 要素がこの新しい値と一致していることに注目してください。 XAML のプロパティは、[XAML] ウィンドウまたは **[プロパティ]** ウィンドウのいずれかで変更でき、それらの変更は同期されます。  
   
-4.  [XAML] ウィンドウで **[高さ]** 要素の値を `768` に設定し、**[幅]** プロパティの値を `1280` に設定します。  
+4.  [XAML] ウィンドウで **[Height]** 要素の値を `768`に設定し、 **[Width]** プロパティの値を `1280`で行うことができます。  
   
      これらの要素は、 **[プロパティ]** ウィンドウの **[レイアウト]** カテゴリにある **[Height]** プロパティと **[Width]** プロパティに対応します。  
   
@@ -502,7 +503,7 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
   
      これにより、このサービスの URL が *https://wpfquickstart01.azure-mobile.net/*に設定されます。  
   
-4.  **[データベース]** 一覧で、データベース オプションを選択します。 このアプリケーションは、おそらく頻繁には使用されないアプリケーションであるため、 **[無料の 20 MB の SQL データベースを作成する]** オプション、またはサブスクリプションに関連付けられている無料のデータベースを選択できます。  
+4.  **[データベース]** 一覧で、データベース オプションを選択します。 このアプリケーションは、おそらく頻繁には使用されないアプリケーションであるため、**[無料の 20 MB の SQL データベースを作成する]** オプション、またはサブスクリプションに関連付けられている無料のデータベースを選択できます。  
   
 5.  **[リージョン]** 一覧で、モバイル サービスをデプロイするデータ センターを選択してから、 **[次へ]** (右矢印) ボタンをクリックします。  
   

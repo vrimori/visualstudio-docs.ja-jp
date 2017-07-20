@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 8d08dc2578390db8dedd535cfb27261ea71d73cc
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 67f42e3a79d30254d3f5942b3fc9938957d5ff99
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="unit-test-basics"></a>単体テストの基本
@@ -131,7 +132,7 @@ public void Withdraw(double amount)
   
  通常、単体テスト プロジェクトは 1 つのコード プロジェクトの構造を反映します。 MyBank の例で、2 つの単体テスト プロジェクト `AccountsTests` および `BankDbTests` を `MyBanks` ソリューションに追加します。 テスト プロジェクトの名前は任意ですが、標準の名前付け規則を採用することをお勧めします。  
   
- **単体テスト プロジェクトをソリューションに追加するには:**  
+ **単体テスト プロジェクトをソリューションに追加するには**  
   
 1.  **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします (キーボード: Ctrl + Shift + N)。  
   
@@ -152,11 +153,11 @@ public void Withdraw(double amount)
   
     3.  [参照マネージャー] ダイアログ ボックスで、 **[ソリューション]** ノードを開き、 **[プロジェクト]**を選択します。 コード プロジェクトの名前を選択し、ダイアログ ボックスを閉じます。  
   
- 各単体テスト プロジェクトには、コード プロジェクト内のクラス名を反映したクラスが含まれています。 この例では、`AccountsTests` プロジェクトに次のクラスが含まれています。  
+ 各単体テスト プロジェクトには、コード プロジェクト内のクラス名を反映したクラスが含まれています。 この例では、 `AccountsTests` プロジェクトに次のクラスが含まれています。  
   
--   `AccountInfoTests` クラスには、`AccountInfo` プロジェクトの `BankAccount` クラス用の単体テスト メソッドが含まれています。  
+-   `AccountInfoTests` クラスには、 `AccountInfo` プロジェクトの `BankAccount` クラス用の単体テスト メソッドが含まれています。  
   
--   `CheckingAccountTests` クラスには、`CheckingAccount` クラス用の単体テスト メソッドが含まれています。  
+-   `CheckingAccountTests` クラスには、 `CheckingAccount` クラス用の単体テスト メソッドが含まれています。  
   
 ##  <a name="BKMK_Writing_your_tests"></a> テストを作成する  
  使用する単体テスト フレームワークと Visual Studio IntelliSense に従って、コード プロジェクトの単体テスト用コードを記述していきます。 ほとんどのフレームワークでは、テスト エクスプローラーで実行するには、単体テスト メソッドを識別する特定の属性を追加する必要があります。 フレームワークには、テスト メソッドが成功したか失敗したかを示す手段も用意されています。通常は、Assert ステートメントまたはメソッドの属性を使用します。 他の属性は、各テスト メソッドの前でクラスの初期化時に実行される省略可能な設定メソッド、および各テスト メソッドの後でクラスが破棄される前に実行される終了処理メソッドを識別します。  
@@ -298,9 +299,9 @@ public void My_Test ()
 > [!NOTE]
 >  ここに示すプロシージャは、マネージ コード用の Microsoft 単体テスト フレームワークを使用して記述したテスト メソッドにのみ適用できます。 別のフレームワークを使用している場合は、同等の機能についてフレームワークのドキュメントを参照してください。  
   
- たとえば、`CheckingAccount` という名前の `AddIntegerHelper` クラスに不要なメソッドを追加するとします。 `AddIntegerHelper` は 2 つの整数を追加します。  
+ たとえば、 `CheckingAccount` という名前の `AddIntegerHelper`クラスに不要なメソッドを追加するとします。 `AddIntegerHelper` は 2 つの整数を追加します。  
   
- `AddIntegerHelper` メソッドのデータ ドリブン テストを作成するには、最初に `AccountsTest.accdb` という名前の Access データベースと `AddIntegerHelperData` という名前のテーブルを作成します。 `AddIntegerHelperData` テーブルは、追加の 1 番目と 2 番目のオペランドを指定する列、および予期される結果を指定する列を定義します。 多数の行に適切な値を入力します。  
+ `AddIntegerHelper` メソッドのデータ ドリブン テストを作成するには、最初に `AccountsTest.accdb` という名前の Access データベースと `AddIntegerHelperData`という名前のテーブルを作成します。 `AddIntegerHelperData` テーブルは、追加の 1 番目と 2 番目のオペランドを指定する列、および予期される結果を指定する列を定義します。 多数の行に適切な値を入力します。  
   
 ```c#  
   
@@ -351,11 +352,11 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
   
  いずれの方法でも、依存関係メソッドへの呼び出しの生成されたデリゲートを使用して、テスト メソッド内の動作を指定します。  
   
- 詳細については、「[Microsoft Fakes で単体テスト メソッドを分離する](../test/isolating-code-under-test-with-microsoft-fakes.md)」を参照してください。  
+ 詳細については、「 [Microsoft Fakes で単体テスト メソッドを分離する](../test/isolating-code-under-test-with-microsoft-fakes.md)」を参照してください。  
   
  **Q: 他の単体テスト フレームワークを使用して単体テストを作成することはできますか。**  
   
- **A:** はい。以下の手順に従って、[他のフレームワークを検索してインストール](../test/install-third-party-unit-test-frameworks.md)してください。 Visual Studio を再起動した後、単体テストを作成するためのソリューションをもう一度開き、インストールしたフレームワークを選びます。  
+ **A:** はい。以下の手順に従って、 [他のフレームワークを検索してインストール](../test/install-third-party-unit-test-frameworks.md)してください。 Visual Studio を再起動した後、単体テストを作成するためのソリューションをもう一度開き、インストールしたフレームワークを選びます。  
   
  ![インストールされているその他の単体テスト フレームワークを選択する](../test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
   

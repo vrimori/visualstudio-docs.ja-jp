@@ -1,23 +1,43 @@
 ---
-title: "方法: Web ページ内の JavaScript (ECMA) コードをプロファイリングする | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "JavaScript のパフォーマンス プロファイル"
-  - "プロファイリング ツール、JavaScript"
-  - "Web サイトのパフォーマンス プロファイル"
+title: "方法: Web ページ内の JavaScript コードをプロファイリングする | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- JavaScript performance profiling
+- Profiling Tools,JavaScript
+- web site performance profiling
 ms.assetid: 37d02aad-ca4d-4eb0-bf66-ca3ecef31fbe
 caps.latest.revision: 27
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 27
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6c394dfcf1c0df0cb7d006592b3dc386da328876
+ms.openlocfilehash: 40c90059930b16e081d7d46a24c1b93bdc34f98a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="how-to-profile-javascript-code-in-web-pages"></a>方法: Web ページ内の JavaScript コードをプロファイリングする
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールは、インストルメンテーション プロファイリング メソッドを使用して、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーション、任意の Web ページ、または JavaScript アプリケーションで実行する JavaScript コードのパフォーマンス データを収集できます。  
@@ -47,11 +67,11 @@ caps.handback.revision: 27
   
 3.  パフォーマンス ウィザードの最初のページで、 **インストルメンテーション** プロファイリング メソッドを指定して、 **[次へ]**をクリックします。  
   
-4.  ウィザードの&2; 番目のページで、ターゲットの一覧で現在のプロジェクトが選ばれていることを確認し、 **[次へ]**をクリックします。  
+4.  ウィザードの 2 番目のページで、ターゲットの一覧で現在のプロジェクトが選ばれていることを確認し、 **[次へ]**をクリックします。  
   
-5.  ウィザードの&3; 番目のページで、 **[プロファイル JavaScript]** チェック ボックスを選び、 **[次へ]**をクリックします。  
+5.  ウィザードの 3 番目のページで、 **[プロファイル JavaScript]** チェック ボックスを選び、 **[次へ]**をクリックします。  
   
-6.  ウィザードの&4; 番目のページで、 **[完了]** をクリックして、ブラウザーで Web アプリケーションを開始します。  
+6.  ウィザードの 4 番目のページで、 **[完了]** をクリックして、ブラウザーで Web アプリケーションを開始します。  
   
 7.  プロファイリングする機能を実行します。  
   
@@ -65,21 +85,16 @@ caps.handback.revision: 27
   
 3.  パフォーマンス ウィザードの最初のページで、 **インストルメンテーション** プロファイリング メソッドを指定して、 **[次へ]**をクリックします。  
   
-4.  ウィザードの&2; 番目のページで、An ASP.NET、または JavaScript のアプリケーションをクリックし、 **[次へ]**をクリックします。  
+4.  ウィザードの 2 番目のページで、An ASP.NET、または JavaScript のアプリケーションをクリックし、 **[次へ]**をクリックします。  
   
-5.  ウィザードの&3; 番目のページ:  
+5.  ウィザードの 3 番目のページ:  
   
     1.  **[アプリケーションを実行する URL またはパス]** ボックスのページの URL を入力します。  
   
     2.  **[プロファイル JavaScript]** チェック ボックスを選び、 **[次へ]**をクリックします。  
   
-6.  ウィザードの&4; 番目のページで、 **[完了]** をクリックし、ブラウザーで Web ページを開始します。  
+6.  ウィザードの 4 番目のページで、 **[完了]** をクリックし、ブラウザーで Web ページを開始します。  
   
 7.  プロファイリングする機能を実行します。  
   
 8.  プロファイル セッションを終了するには、ブラウザーを閉じます。
-
-
-<!--HONumber=Feb17_HO4-->
-
-

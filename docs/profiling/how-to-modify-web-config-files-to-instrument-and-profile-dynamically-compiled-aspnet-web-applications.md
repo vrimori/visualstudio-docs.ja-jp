@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 247913d77f9d698f27d7bc1983802314dda021e3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>方法: Web.config ファイルを変更して、動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化およびプロファイルする
@@ -47,7 +49,7 @@ ms.openlocfilehash: 247913d77f9d698f27d7bc1983802314dda021e3
   
 -   ターゲット アセンブリに対するプロファイラーの処理後のコンパイル手順を指定する **configuration/system.web/compilation** 要素。  
   
--   プロファイリング ツールの場所を識別する&2; つの **add** 要素が **configuration/appSettings** セクションに追加されます。  
+-   プロファイリング ツールの場所を識別する 2 つの **add** 要素が **configuration/appSettings** セクションに追加されます。  
   
  アプリケーションの構成を復元するために使用できるように、変更前の web.config ファイルのコピーを作成することをお勧めします。  
   
@@ -55,11 +57,11 @@ ms.openlocfilehash: 247913d77f9d698f27d7bc1983802314dda021e3
   
 1.  必要に応じて、**configuration** 要素の子要素として **runtime** 要素を追加します。追加しない場合は次の手順に進みます。  
   
-     **runtime** 要素には、属性はありません。 **configuration** 要素には、**runtime** 子要素を&1; つだけ含めることができます。  
+     **runtime** 要素には、属性はありません。 **configuration** 要素には、**runtime** 子要素を 1 つだけ含めることができます。  
   
 2.  必要に応じて、**runtime** 要素の子要素として **assemblyBinding** 要素を追加します。追加しない場合は次の手順に進みます。  
   
-     **runtime** 要素には、**assemblyBinding** 要素を&1; つだけ含めることができます。  
+     **runtime** 要素には、**assemblyBinding** 要素を 1 つだけ含めることができます。  
   
 3.  **assemblyBinding** 要素に、次の属性名と値を追加します。  
   
@@ -115,11 +117,11 @@ ms.openlocfilehash: 247913d77f9d698f27d7bc1983802314dda021e3
   
 1.  必要に応じて、**configuration** 要素の子要素として **system.web** 要素を追加します。追加しない場合は次の手順に進みます。  
   
-     **system.web** 要素には属性はありません。 **configuration** 要素には、**system.web** 子要素を&1; つだけ含めることができます。  
+     **system.web** 要素には属性はありません。 **configuration** 要素には、**system.web** 子要素を 1 つだけ含めることができます。  
   
 2.  必要に応じて、**system.web** 要素の子要素として **compilation** 要素を追加します。追加しない場合は次の手順に進みます。  
   
-     **system.web** 要素には、**compilation** 子要素を&1; つだけ含めることができます。  
+     **system.web** 要素には、**compilation** 子要素を 1 つだけ含めることができます。  
   
 3.  **compilation** 要素に既存の属性があればすべて削除し、次の属性名と値を追加します。  
   
@@ -147,7 +149,7 @@ ms.openlocfilehash: 247913d77f9d698f27d7bc1983802314dda021e3
   
 1.  必要に応じて、**configuration** 要素の子要素として **appSettings** 要素を追加します。追加しない場合は次の手順に進みます。  
   
-     **appSettings** 要素には属性はありません。 **configuration** 要素には、**appSettings** 子要素を&1; つだけ含めることができます。  
+     **appSettings** 要素には属性はありません。 **configuration** 要素には、**appSettings** 子要素を 1 つだけ含めることができます。  
   
 2.  **add** 要素を **appSettings** 要素の子として追加します。  
   
@@ -239,8 +241,3 @@ ms.openlocfilehash: 247913d77f9d698f27d7bc1983802314dda021e3
 ## <a name="see-also"></a>関連項目  
  [方法: 動的にコンパイルされた ASP.NET アプリケーションをインストルメントし、詳細なタイミング データを収集する](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line.md)   
  [方法: 動的にコンパイルされた ASP.NET アプリケーションをインストルメントし、メモリ データを収集する](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

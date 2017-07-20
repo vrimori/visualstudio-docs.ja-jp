@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 48f6019ef12e2637917a0b70fbc4eaf3e0eb6f20
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -61,7 +62,7 @@ ms.lasthandoff: 02/22/2017
  <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスから派生したタスクにいくつかのパラメーターを追加します。  
   
  [AL (アセンブリ リンカー) タスク](../msbuild/al-assembly-linker-task.md)  
- モジュールまたはリソース ファイルのいずれかである&1; つ以上のファイルから、マニフェストを持つアセンブリを作成します。  
+ モジュールまたはリソース ファイルのいずれかである 1 つ以上のファイルから、マニフェストを持つアセンブリを作成します。  
   
  [AspNetCompiler タスク](../msbuild/aspnetcompiler-task.md)  
  ASP.NET アプリケーションをプリコンパイルするためのユーティリティである aspnet_compiler.exe をラップします。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 02/22/2017
  プロジェクト ファイル内のターゲットを呼び出します。  
   
  [CombinePath タスク](../msbuild/combinepath-task.md)  
- 指定されたパスを&1; つのパスに結合します。  
+ 指定されたパスを 1 つのパスに結合します。  
   
  [ConvertToAbsolutePath タスク](../msbuild/converttoabsolutepath-task.md)  
  相対パス (参照) を絶対パスに変換します。  

@@ -30,21 +30,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bfe3001ddefaba1220174fecbf8e484fe4987efd
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: d284309b0243f8d551d06c53d50d5df5de8f3f3c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>Install Visual C++ for Cross-Platform Mobile Development
-[Visual C++ for Cross-Platform Mobile Development](http://go.microsoft.com/fwlink/p/?LinkId=536383) は、Visual Studio 2015 付属のインストール可能なコンポーネントです。 クロス プラットフォームの Visual Studio テンプレートが含まれており、クロス プラットフォーム ツールおよび SDK をインストールしてすぐに開始できるようにします。それらを自分で検索、ダウンロード、構成する必要はありません。 これらのツールを Visual Studio で使用することで、クロス プラットフォーム プロジェクトを簡単に作成、編集、デバッグ、テストできます。 このトピックでは、Visual Studio を使用してクロス プラットフォーム アプリを開発するために必要なツールとサード パーティのソフトウェアをインストールする方法について説明します。 コンポーネントの概要については、「[Visual C++ クロスプラットフォーム モバイル](http://go.microsoft.com/fwlink/p/?LinkId=536387)」をご覧ください  
+[Visual C++ for Cross-Platform Mobile Development](http://go.microsoft.com/fwlink/p/?LinkId=536383) は、Visual Studio 2015 付属のインストール可能なコンポーネントです。 クロス プラットフォームの Visual Studio テンプレートが含まれており、クロス プラットフォーム ツールおよび SDK をインストールしてすぐに開始できるようにします。それらを自分で検索、ダウンロード、構成する必要はありません。 これらのツールを Visual Studio で使用することで、クロス プラットフォーム プロジェクトを簡単に作成、編集、デバッグ、テストできます。 このトピックでは、Visual Studio を使用してクロス プラットフォーム アプリを開発するために必要なツールとサード パーティのソフトウェアをインストールする方法について説明します。 コンポーネントの概要については、「 [Visual C++ クロスプラットフォーム モバイル](http://go.microsoft.com/fwlink/p/?LinkId=536387)」をご覧ください。  
   
  [要件](#Requirements)   
  [ツールの取得](#GetTheTools)   
  [ツールのインストール](#InstallTheTools)   
- [iOS 用ツールのインストール](#InstallForiOS)   
+ [Install tools for iOS](#InstallForiOS)   
  [手動による依存関係のインストールまたは更新](#ThirdParty)  
   
-##  <a name="a-namerequirementsa-requirements"></a><a name="Requirements"></a> 要件  
+##  <a name="Requirements"></a> 要件  
   
 -   インストール要件については、「 [Visual Studio 2015 のシステム要件](https://www.visualstudio.com/visual-studio-2015-system-requirements-vs)」をご覧ください。  
   
@@ -59,10 +61,10 @@ ms.openlocfilehash: bfe3001ddefaba1220174fecbf8e484fe4987efd
   
 -   iOS 用のコードをビルドするには、Apple ID、iOS Developer Program アカウント、[Xcode 6](http://go.microsoft.com/fwlink/p/?LinkId=536387) 以降を OS X Mavericks 以降のバージョンで実行できる Mac コンピューターが必要です。 簡単なインストール手順については、「 [Install tools for iOS](#InstallForiOS)」をご覧ください。  
   
-##  <a name="a-namegetthetoolsa-get-the-tools"></a><a name="GetTheTools"></a> ツールの取得  
+##  <a name="GetTheTools"></a> ツールの取得  
  Visual C++ for Cross-Platform Mobile Development は、Visual Studio の Community、Professional、Enterprise エディションに付属しているインストール可能なコンポーネントです。 Visual Studio を入手するには、「[Visual Studio 2015 のダウンロード](http://go.microsoft.com/fwlink/p/?linkid=517106)」のページにアクセスして、Visual Studio 2015 with Update 2 以降をインストールしてください。  
   
-##  <a name="a-nameinstallthetoolsa-install-the-tools"></a><a name="InstallTheTools"></a> ツールのインストール  
+##  <a name="InstallTheTools"></a> ツールのインストール  
  Visual Studio 2015 のインストーラーには、Visual C++ for Cross-Platform Mobile Development をインストールするオプションが含まれています。 このオプションを選択すると、必要な C++ 言語ツール、Visual Studio 用のテンプレートとコンポーネント、Android のビルドとデバッグに必要な GCC および Clang ツールセット、iOS 開発用の Mac と通信するためのコンポーネントがインストールされます。 また、iOS および Android アプリの開発をサポートするために必要なサードパーティ製のツールとソフトウェア開発キットもすべてインストールされます。 これらのサードパーティ製ツールのほとんどは、Android プラットフォームのサポートに必要なオープン ソースのソフトウェアです。  
   
 -   Android Native Development Kit (NDK) は、Android プラットフォームを対象にした C++ コードをビルドする場合に必要になります。  
@@ -99,11 +101,11 @@ ms.openlocfilehash: bfe3001ddefaba1220174fecbf8e484fe4987efd
   
 5.  Visual Studio を開きます。 Visual Studio を実行するのが初めての場合は、構成してサインインするまでに時間がかかることがあります。 Visual Studio の準備が完了したら、 **[ツール]** メニューで **[拡張機能と更新プログラム]**、 **[更新プログラム]**の順に選びます。 Visual C++ for Cross-Platform Mobile Development または Microsoft Visual Studio Emulator for Android 用の利用可能な Visual Studio の更新プログラムがある場合は、それらをインストールします。  
   
-##  <a name="a-nameinstallforiosa-install-tools-for-ios"></a><a name="InstallForiOS"></a> iOS 用ツールのインストール  
- Visual C++ for Cross-Platform Mobile Development を使用して、iOS コードを編集およびデバッグし、iOS シミュレーターまたは iOS デバイスに配置することができます。ただし、ライセンスの制限により、コードのビルドはリモートの Mac 上で行わなければなりません。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェントをセットアップして構成する必要があります。 インストール方法、前提条件、構成オプションについて詳しくは、「[iOS を使用してビルドするためのツールのインストールおよび構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」をご覧ください。 iOS 用にビルドするのでない場合は、この手順を省略できます。  
+##  <a name="InstallForiOS"></a> Install tools for iOS  
+ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コードを編集およびデバッグし、iOS シミュレーターまたは iOS デバイスに配置することができます。ただし、ライセンスの制限により、コードのビルドはリモートの Mac 上で行わなければなりません。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェントをセットアップして構成する必要があります。 インストール方法、前提条件、構成オプションについて詳しくは、「 [Install And Configure Tools to Build using iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」をご覧ください。 iOS 用にビルドするのでない場合は、この手順を省略できます。  
   
-##  <a name="a-namethirdpartya-install-or-update-dependencies-manually"></a><a name="ThirdParty"></a> 手動による依存関係のインストールまたは更新  
- Visual C++ のモバイル開発オプションをインストールする際に、サードパーティの&1; つ以上の依存関係を Visual Studio インストーラーでインストールしないことにした場合、それらの依存関係は、後で「 [Install the tools](#InstallTheTools)」の手順に従ってインストールできます。 また、Visual Studio とは別にインストールまたは更新することもできます。  
+##  <a name="ThirdParty"></a> 手動による依存関係のインストールまたは更新  
+ Visual C++ のモバイル開発オプションをインストールする際に、サードパーティの 1 つ以上の依存関係を Visual Studio インストーラーでインストールしないことにした場合、それらの依存関係は、後で「 [Install the tools](#InstallTheTools)」の手順に従ってインストールできます。 また、Visual Studio とは別にインストールまたは更新することもできます。  
   
 > [!CAUTION]
 >  Java 以外の依存関係は、任意の順序でインストールできます。 JDK は、Android SDK をインストールする前にインストールして構成する必要があります。  
@@ -150,9 +152,4 @@ ms.openlocfilehash: bfe3001ddefaba1220174fecbf8e484fe4987efd
   
 ## <a name="see-also"></a>関連項目  
  [iOS を使用してビルドするためのツールのインストールおよび構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)   
- [Visual C++ Cross-Platform Mobile](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
+ [Visual C++ クロスプラットフォーム モバイル](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)

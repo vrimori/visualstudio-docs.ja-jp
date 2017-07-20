@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: cf04644c98062ffb2aee5b4b826f8426070c3d60
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -43,7 +44,7 @@ MSBuild のプロパティと項目は、いずれもタスクに情報を渡し
 -   項目は、一般的にファイルを示すオブジェクトです。 項目オブジェクトには、メタデータ コレクションを関連付けることができます。 メタデータは名前と値のペアです。 詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」をご覧ください。  
   
 ## <a name="scalars-and-vectors"></a>スカラーとベクター  
- MSBuild プロパティは&1; つの文字列値のみを持つ名前と値のペアなので、多くの場合は*スカラー*と説明されます。 MSBuild 項目の種類は項目のリストなので、多くの場合は*ベクター*と説明されます。 ただし実際には、プロパティで複数の値を表すことがあり、項目の種類の項目数が&0; 個または&1; 個の場合があります。  
+ MSBuild プロパティは 1 つの文字列値のみを持つ名前と値のペアなので、多くの場合は*スカラー*と説明されます。 MSBuild 項目の種類は項目のリストなので、多くの場合は*ベクター*と説明されます。 ただし実際には、プロパティで複数の値を表すことがあり、項目の種類の項目数が 0 個または 1 個の場合があります。  
   
 ### <a name="target-dependency-injection"></a>ターゲットの依存関係の挿入  
  プロパティが複数の値を表す方法については、ターゲットをターゲットの一覧に追加して一覧を作成する場合の一般的な使用パターンを考えます。 この一覧は、一般的に、プロパティ値とターゲット名をセミコロン (;) で区切って表します。  
@@ -85,7 +86,7 @@ MSBuild のプロパティと項目は、いずれもタスクに情報を渡し
 </PropertyGroup>  
 ```  
   
- 項目の種類 OutputDir には、"KeyFiles\\;Certificates\\" という値の `Include` 属性があります。 MSBuild は、この文字列を&2; つの項目 KeyFiles\ と Certificates\\ に解析します。 項目の種類 OutputDir を OutputDirList プロパティの値として使用している場合、MSBuild は、項目の種類をセミコロン区切りの文字列 "KeyFiles\\;Certificates\\" に変換または "平坦化" します。  
+ 項目の種類 OutputDir には、"KeyFiles\\;Certificates\\" という値の `Include` 属性があります。 MSBuild は、この文字列を 2 つの項目 KeyFiles\ と Certificates\\ に解析します。 項目の種類 OutputDir を OutputDirList プロパティの値として使用している場合、MSBuild は、項目の種類をセミコロン区切りの文字列 "KeyFiles\\;Certificates\\" に変換または "平坦化" します。  
   
 ## <a name="properties-and-items-in-tasks"></a>タスクのプロパティと項目  
  プロパティと項目は、MSBuild タスクの入力と出力として使用されます。 詳細については、[タスク](../msbuild/msbuild-tasks.md)に関する記事を参照してください。  
@@ -94,10 +95,10 @@ MSBuild のプロパティと項目は、いずれもタスクに情報を渡し
   
  項目は <xref:Microsoft.Build.Framework.ITaskItem> オブジェクトとしてタスクに渡されます。 タスク内の <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> は項目の値を表し、<xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> はそのメタデータを取得します。  
   
- 項目の種類の項目一覧は、`ITaskItem` オブジェクトの配列として渡すことができます。 .NET Framework 3.5 以降、`Remove` 属性を使用してターゲットの項目一覧から項目を削除できるようになりました。 項目は項目一覧から削除できるため、アイテムの種類の項目数が&0; 個になる可能性があります。 項目一覧をタスクに渡す場合、タスクのコードでこの可能性をチェックする必要があります。  
+ 項目の種類の項目一覧は、`ITaskItem` オブジェクトの配列として渡すことができます。 .NET Framework 3.5 以降、`Remove` 属性を使用してターゲットの項目一覧から項目を削除できるようになりました。 項目は項目一覧から削除できるため、アイテムの種類の項目数が 0 個になる可能性があります。 項目一覧をタスクに渡す場合、タスクのコードでこの可能性をチェックする必要があります。  
   
 ## <a name="property-and-item-evaluation-order"></a>プロパティと項目の評価順序  
- ビルドの評価フェーズでは、インポート対象のファイルは出現順にビルドに組み込まれます。 プロパティと項目は、次の順に&3; つのパスで定義されます。  
+ ビルドの評価フェーズでは、インポート対象のファイルは出現順にビルドに組み込まれます。 プロパティと項目は、次の順に 3 つのパスで定義されます。  
   
 -   プロパティが出現順に定義および修正されます。  
   

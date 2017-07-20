@@ -1,22 +1,42 @@
 ---
 title: "Unity アプリを使用したアプリケーション ライフサイクル管理 (ALM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tgt-pltfrm-cross-plat"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tgt-pltfrm-cross-plat
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2dc61e63-9ba2-4c16-b1ad-f46249e576b6
 caps.latest.revision: 12
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 12
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7e95cec543216f13de06d2c2b86bc08040d1a7fb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>Unity アプリを使用したアプリケーション ライフサイクル管理 (ALM)
-最新のプラットフォーム向けのアプリ開発には、コードを記述するだけでなく、それ以外の多くのアクティビティが関係します。 これらのアクティビティは、アプリの完全なライフサイクルの中で DevOps (開発 + 運用) 期間になされるものあり、たとえば、作業のアジャイルな計画と追跡、コードの設計と実装、ソース コード リポジトリの管理、ビルドの実行、継続的に実行されるインテグレーションと展開の管理、テスト (単体テストと UI テストを含む)、開発環境と運用環境の両方におけるさまざまな形式の診断の実行、遠隔測定と分析によるアプリのパフォーマンスとユーザー動作のリアルタイムな監視などがあります。  
+最新のプラットフォーム向けのアプリ開発には、コードを記述するだけでなく、それ以外の多くのアクティビティが関係します。 これらのアクティビティは、アプリの完全なライフサイクルの中で DevOps (開発 + 運用) 期間になされるものあり、たとえば、作業のアジャイルな計画と追跡、コードの設計と実装、ソース コード リポジトリの管理、ビルドの実行、継続的に実行されるインテグレーションと展開の管理、テスト (単体テストと UI テストを含む)、開発環境と運用環境の両方におけるさまざまな形式の診断の実行、製品利用統計情報と分析によるアプリのパフォーマンスとユーザー動作のリアルタイムな監視などがあります。  
   
  Visual Studio、Visual Studio Team Services、および Team Foundation Server は、さまざまな DevOps 機能 (アプリケーション ライフサイクル管理 (ALM) とも呼ばれる) を提供しています。 これらの多くは、特にスクリプト言語として C# を使用している場合の Unity で作成したゲームや没入感のあるグラフィカル アプリなど、プラットフォーム間のプロジェクトに適用されます。 ただし、Unity は、独自の開発環境とランタイム エンジンがあるため、多くの ALM 機能が Visual Studio でビルドされた他の種類のプロジェクトのようには適用されません。  
   
@@ -63,7 +83,7 @@ caps.handback.revision: 12
   
  Unity を使ったバージョン管理に関する注意事項:  
   
-1.  Unity は、既定では非表示の&1; つの非透過のライブラリでのゲーム資産に関するメタデータを追跡します。 ファイルとメタデータの同期を保つするには、メタデータを表示してより管理しやすいチャンク単位で格納する必要があります。 詳細については、「[Using External Version Control Systems with Unity](http://docs.unity3d.com/Manual/ExternalVersionControlSystemSupport.html)」 (Unity で外部のバージョン管理システムを使用する) (Unity ドキュメント) を参照してください。  
+1.  Unity は、既定では非表示の 1 つの非透過のライブラリでのゲーム資産に関するメタデータを追跡します。 ファイルとメタデータの同期を保つするには、メタデータを表示してより管理しやすいチャンク単位で格納する必要があります。 詳細については、「[Using External Version Control Systems with Unity](http://docs.unity3d.com/Manual/ExternalVersionControlSystemSupport.html)」 (Unity で外部のバージョン管理システムを使用する) (Unity ドキュメント) を参照してください。  
   
 2.  上記のリンクで説明するように、Unity プロジェクトのすべてのファイルとフォルダーがソース管理に適しているわけではありません。 Assets フォルダーと ProjectSettings フォルダーを追加する必要がありますが、Library フォルダーと Temp フォルダーは追加しないでください。 ソース管理にならない生成されたファイルの追加のリストについては、StackOverflow の「[Unity3D ソース管理に Git を使用する方法](http://stackoverflow.com/questions/18225126/how-to-use-git-for-unity3d-source-control)」を参照してください。 多くの開発者が、このテーマについて個別にブログに書いています。  
   
@@ -118,8 +138,3 @@ caps.handback.revision: 12
 |特性|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  
 |クラッシュ分析、製品利用統計情報、およびベータ版の配布|はい|HockeyApp は、主にベータ分布を処理し、クラッシュ レポートを取得するために役立ちます。<br /><br /> C# スクリプトからの製品利用統計情報の場合、Unity によって使用される .NET のバージョンで実行されるときは、分析用のフレームワークを使用することができます。 ただし、ゲームのスクリプト内でのみ分析でき、Unity エンジン内で詳細に分析することはできません。 現時点では、Application Insights のプラグインはありませんが、[Unity Analytics](https://www.assetstore.unity3d.com/en/#!/content/28120) や [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity) などの他の分析ソリューションのプラグインが使用できます。 Unity プロジェクトの特性を理解する Unity Analytics のようなサービスは、汎用的なフレームワークもより効果的な分析を提供します。|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

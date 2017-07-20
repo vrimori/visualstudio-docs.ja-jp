@@ -27,14 +27,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 07e37b1a1d7b02992bb4da69bd158878095dd789
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="sample-excel-extension-technologymanager-class"></a>Excel 拡張子のサンプル: TechnologyManager クラス
-このクラスは <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager> クラスを拡張し、[!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 拡張機能のコア サービスを提供します。 基底クラスには多くのメソッドがありますが、このサンプルではそのサブセットのみを使用します。  
+このクラスは <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager> クラスを拡張します。また、[!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 拡張機能用のコア サービスを提供する役割があります。 基底クラスには多くのメソッドがありますが、このサンプルではそのサブセットのみを使用します。  
   
  一部のメソッドは単にプロパティ値を返します。 多くのメソッドは、コード化された UI テスト エンジンに組み込まれている既定のアルゴリズムを開発者が上書きできるように用意されています。 これらのメソッドは、<xref:System.NotSupportedException> をスローするか、`null` を返して、既定のアルゴリズムを使用するようフレームワークに指示します。  
   
@@ -43,13 +44,13 @@ ms.lasthandoff: 04/04/2017
  可能であれば、テクノロジ マネージャー コードは `Communicator` クラスによって開かれた .NET リモート処理チャネルを使用し、Excel プロセスで実行されているアドインから情報を抽出します。  
   
 ## <a name="com-visibility"></a>COM の参照範囲  
- このクラスと、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> クラスを拡張した各要素クラスのすべてに <xref:System.Runtime.InteropServices.ComVisibleAttribute> があり、COM からそのクラスを参照できるように、値が `true` になっています。  
+ このクラスと、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> クラスを拡張する各要素クラスにはいずれも値が `true` の <xref:System.Runtime.InteropServices.ComVisibleAttribute> があるため、COM からクラスを参照できます。  
   
 ## <a name="technologyname-property"></a>TechnologyName プロパティ  
- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.TechnologyName%2A?displayProperty=fullName> プロパティのこの上書きは、拡張の他のすべてのコンポーネントの基になるテクノロジを識別する、一意で意味のある名前を提供する必要があります。 この拡張機能では、値は "Excel" です。  
+ <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.TechnologyName%2A?displayProperty=fullName> プロパティのこのオーバーライドでは、拡張機能の他のコンポーネントについて基礎となるテクノロジを識別できる一意でわかりやすい名前を指定する必要があります。 この拡張機能では、値は "Excel" です。  
   
 ## <a name="getcontrolsupportlevel-method"></a>GetControlSupportLevel メソッド  
- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetControlSupportLevel%2A?displayProperty=fullName> メソッドのこの上書きは、指定されたハンドルによって表されるコントロールに対してテクノロジ マネージャーが提供できるサポート レベルを示す数値を返します。 戻り値が大きくなるほど、コントロールに対するテクノロジ マネージャーのサポート レベルは高くなります。 この場合、メソッドはコントロールが含まれているウィンドウを確認し、それが Excel ワークシートであれば、最も高い値を返します。それ以外の場合はゼロが返され、サポートされないことを表します。  
+ <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.GetControlSupportLevel%2A?displayProperty=fullName> メソッドのこのオーバーライドは、指定されたハンドルで表されているコントロールにテクノロジ マネージャーが提供できるサポートのレベルを示す数値を返します。 戻り値が大きくなるほど、コントロールに対するテクノロジ マネージャーのサポート レベルは高くなります。 この場合、メソッドはコントロールが含まれているウィンドウを確認し、それが Excel ワークシートであれば、最も高い値を返します。それ以外の場合はゼロが返され、サポートされないことを表します。  
   
 ## <a name="methods-to-get-an-element"></a>要素を取得するメソッド  
  テクノロジに固有の要素を取得するために、コード化された UI テスト フレームワークによって使用される、いくつかの重要なメソッドがあります。要素を取得するには、ハンドル、画面上のポイント、または別のテクノロジの要素を指定します。 これらのメソッドのコードは、自己記述的です。 基本メソッドは次のとおりです。  
@@ -65,10 +66,10 @@ ms.lasthandoff: 04/04/2017
 -   <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.ConvertToThisTechnology%2A?displayProperty=fullName>  
   
 ## <a name="parsequeryid-method"></a>ParseQueryId メソッド  
- コード化された UI テストの作成時に、ユーザーはテストの一部またはすべてのコントロールのプロパティ値を指定できます。 これらのプロパティ値は、テスト フレームワークによって、検索プロパティ (テスト中に特定の UI コントロールを見つけるために使用される、名前と値の組) を作成するために使用されます。 すべての検索プロパティが全体で、テクノロジの各要素の <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A?displayProperty=fullName> プロパティの値を表しており、これにすべてのコントロールが含まれます。 テストの実行中にコントロールを数回検索しなければならない場合があるため、このメソッドはテクノロジ マネージャーによる特定のコントロールの検索プロパティの解析を最適化できるようにします。 またこのメソッドは、フレームワークがそのコントロールを後で検索するときに使用できるクッキーも返します。 このメソッドの実装では、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName> メソッドを使用して検索プロパティを解析します。  
+ コード化された UI テストの作成時に、ユーザーはテストの一部またはすべてのコントロールのプロパティ値を指定できます。 これらのプロパティ値は、テスト フレームワークによって、検索プロパティ (テスト中に特定の UI コントロールを見つけるために使用される、名前と値の組) を作成するために使用されます。 すべての検索プロパティは、各コントロールを含め、テクノロジ内の各要素の <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A?displayProperty=fullName> プロパティの値を表しています。 テストの実行中にコントロールを数回検索しなければならない場合があるため、このメソッドはテクノロジ マネージャーによる特定のコントロールの検索プロパティの解析を最適化できるようにします。 またこのメソッドは、フレームワークがそのコントロールを後で検索するときに使用できるクッキーも返します。 メソッドのこの実装では、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName> メソッドを使用して検索プロパティを解析します。  
   
 ## <a name="matchelement-method"></a>MatchElement メソッド  
- テクノロジ マネージャーでコントロールの検索を行う場合、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.Search%2A?displayProperty=fullName> メソッドは、可能な一致の配列を返すように実装するか、<xref:System.NotSupportedException> をスローしてフレームワークが独自の検索アルゴリズムを使用するように実装することができます。 どちらの場合も、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.MatchElement%2A> メソッドを実装する必要があり、その実装でも <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName> メソッドが使用されます。  
+ テクノロジ マネージャーでコントロール検索を実行するには、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.Search%2A?displayProperty=fullName> メソッドを実装して、一致する候補の配列を返すか、<xref:System.NotSupportedException> をスローすることができます。この場合、フレームワークが独自の検索アルゴリズムを使用していることがわかります。 いずれの方法でも、この実装が <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.AndCondition.Match%2A?displayProperty=fullName> メソッドを使用する場所に <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager.MatchElement%2A> メソッドを実装する必要があります。  
   
 ## <a name="navigation-methods"></a>ナビゲーション メソッド  
  これらのメソッドは、指定された要素の親、子、兄弟などを UI 階層から取得します。 コードは単純で、わかりやすいコメントが付けられています。  

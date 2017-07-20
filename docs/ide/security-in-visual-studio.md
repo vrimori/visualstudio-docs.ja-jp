@@ -30,34 +30,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 57f7d51786d2636eb865eb81bb3468e79c6f19f9
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 7314921a9416184c4bd63312bd5a82cef4102ddd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="security-in-visual-studio"></a>Visual Studio におけるセキュリティ
+# Visual Studio におけるセキュリティ
+<a id="security-in-visual-studio" class="xliff"></a>
 セキュリティについては、設計から配置まで、アプリケーション開発のあらゆる段階で考慮する必要があります。 まず、Visual Studio をできるだけ安全に実行します。 「[ユーザー アクセス許可と Visual Studio](../ide/user-permissions-and-visual-studio.md)」を参照してください。  
   
  安全なアプリケーションを効果的に開発するためには、セキュリティの概念と、開発対象となるプラットフォームのセキュリティ機能について、基本事項を理解しておく必要があります。 さらに、安全なコーディング技法を身に付ける必要もあります。  
   
-## <a name="understanding-security"></a>セキュリティについて  
- [セキュリティ](http://msdn.microsoft.com/Library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)  
+## セキュリティについて
+<a id="understanding-security" class="xliff"></a>  
+ [セキュリティ](/dotnet/standard/security/index)  
  .NET Framework のコード アクセス セキュリティ、ロール ベース セキュリティ、セキュリティ ポリシー、およびセキュリティ ツールについて説明します。  
   
  [コードを守るためにすべての開発者が知る必要のある、セキュリティに関するヒント上位 10 項目](http://go.microsoft.com/fwlink/?LinkId=72877)  
  データまたはシステムに対する攻撃を防ぐために注意しなければならない問題について説明します。  
   
-## <a name="coding-for-security"></a>セキュリティに配慮したコーディング  
+## セキュリティに配慮したコーディング
+<a id="coding-for-security" class="xliff"></a>  
  セキュリティ脆弱性の原因となるコーディング エラーのほとんどは、ユーザー入力に対する根拠のない仮定や、開発対象のプラットフォームに対する不十分な知識に起因しています。  
   
- [安全なコーディングのガイドライン](http://msdn.microsoft.com/Library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)  
+ [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)  
  セキュリティ問題に対処するためのコンポーネント分類ガイドラインを示します。  
   
  [セキュリティ推奨事項](/cpp/top/security-best-practices-for-cpp)  
  バッファー オーバーランと、Microsoft Visual C++ のセキュリティ チェック機能の詳細について説明します。この機能は、コンパイル時に /GS フラグを指定することによって利用できます。
 
-## <a name="building-for-security"></a>セキュリティに配慮したビルド  
+## セキュリティに配慮したビルド
+<a id="building-for-security" class="xliff"></a>  
  セキュリティはビルド プロセスでも重要な考慮事項です。  いくつかの追加手順で、展開するアプリのセキュリティを改善し、不正なリバース エンジニアリング、なりすましなどの攻撃を防ぐことができます。
 
  [Dotfuscator Community Edition (CE)](dotfuscator/index.md)  

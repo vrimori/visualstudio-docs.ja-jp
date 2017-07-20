@@ -31,9 +31,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
 ms.openlocfilehash: 15f7678c7d0cba1afaa71e0443efc756880d99cc
+ms.contentlocale: ja-jp
 ms.lasthandoff: 03/07/2017
 
 ---
@@ -45,7 +46,7 @@ Visual Studio は高性能のアプリ開発ツールです。 [Visual Studio](h
 Visual Studio には、一連のツール ウィンドウ、メニュー、ツール バーがあります。これらはまとめて IDE (Integrated Development Environment/統合開発環境) と呼ばれています。 Visual Studio IDE は、開発作業を支援します。 頻繁に利用する IDE アイテムには次のようなものがあります。
 
 ### <a name="code-editor"></a>コード エディター
-これは Visual Studio で最も頻繁に使用されるツール ウィンドウの&1; つです。このエディターで、コードを記述し、表示し、コード内を移動します。
+これは Visual Studio で最も頻繁に使用されるツール ウィンドウの 1 つです。このエディターで、コードを記述し、表示し、コード内を移動します。
 
 ![コード エディター](../ide/media/VSIDE_CodeWindow.png)
 

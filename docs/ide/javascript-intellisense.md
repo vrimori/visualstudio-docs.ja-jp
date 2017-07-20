@@ -44,13 +44,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: 35ad2826fb25557d05be3548351aabd27e005cba
-ms.lasthandoff: 04/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 359e1eb5df8f19774d352ace631802367b6dd8c9
+ms.openlocfilehash: 759ffc281b8c673f5987afc6512b225434b69dec
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/11/2017
 
 ---
-# <a name="javascript-intellisense"></a>JavaScript IntelliSense
+# JavaScript IntelliSense
+<a id="javascript-intellisense" class="xliff"></a>
 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] では、すぐに使用できる強力な JavaScript 編集エクスペリエンスが提供されます。 TypeScript ベースの言語サービスを活用して、Visual Studio で高度な IntelliSense が提供されます。また、最新の JavaScript 機能がサポートされ、定義へ移動、リファクタリングなどの生産性向上機能が改善されています。
 
 > [!NOTE]
@@ -58,7 +60,8 @@ ms.lasthandoff: 04/10/2017
 
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] の一般的な IntelliSense の機能の詳細については、「[IntelliSense の使用方法](../ide/using-intellisense.md)」を参照してください。 
 
-## <a name="whats-new-in-the-javascript-language-service-in-includevsdev15miscincludesvsdev15mdmd"></a>[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の JavaScript 言語サービスの新機能
+## [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の JavaScript 言語サービスの新機能
+<a id="whats-new-in-the-javascript-language-service-in-includevsdev15miscincludesvsdev15mdmd" class="xliff"></a>
 
 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] の JavaScript IntelliSense では、パラメーターおよびメンバー リストにさらに多くの情報が表示されるようになります。
 この新しい情報は TypeScript 言語サービスで提供されます。この言語サービスでは、コードをよりよく理解するためにバックグラウンドで静的分析が使用されます。
@@ -130,7 +133,7 @@ function Foo(param1) {
 
 ### <a name="TsDeclFiles"></a> TypeScript 宣言ファイルに基づく IntelliSense
 
-現在、JavaScript と TypeScript は同じ言語サービスに基づいているため、より多くの方法で対話することができます。 たとえば、JavaScript IntelliSense は、`.d.ts` ファイルで宣言された値に提供することができ ([詳細については、こちらを参照してください](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Writing%20Definition%20Files.md))、TypeScript で宣言されているインターフェイスやクラスなどの型は、JsDoc コメントの型として使用できます。 
+現在、JavaScript と TypeScript は同じ言語サービスに基づいているため、より多くの方法で対話することができます。 たとえば、JavaScript IntelliSense は、`.d.ts` ファイルで宣言された値に提供することができ ([詳細については、こちらを参照してください](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html))、TypeScript で宣言されているインターフェイスやクラスなどの型は、JsDoc コメントの型として使用できます。 
 
 (インターフェイス経由で) このような型情報を、(JsDoc タグを使用して) 同じプロジェクトの JavaScript ファイルに提供する TypeScript 定義ファイルの簡単な例を以下に示します。
 

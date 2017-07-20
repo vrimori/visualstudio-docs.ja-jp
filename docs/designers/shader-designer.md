@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ff6e473c6e5b2d7a24a4e906d2f592742e3c2d14
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: af7472d5152babe2088ae3cc49caaf718a539878
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="shader-designer"></a>シェーダー デザイナー
@@ -144,7 +145,7 @@ ms.lasthandoff: 02/22/2017
   
 |パラメーター|プロパティ|  
 |---------------|----------------|  
-|**テクスチャ 1** – **テクスチャ 8**|**アクセス**:                             このプロパティをモデル エディターから設定できるようにする場合は **Public**、それ以外の場合は **Private** です。<br /><br /> **ファイル名**: このテクスチャ レジスタに関連付けられているテクスチャ ファイルの完全パスです。|  
+|**テクスチャ 1** - **テクスチャ 8**|**アクセス**:                             このプロパティをモデル エディターから設定できるようにする場合は **Public**、それ以外の場合は **Private** です。<br /><br /> **ファイル名**: このテクスチャ レジスタに関連付けられているテクスチャ ファイルの完全パスです。|  
 |**素材: アンビエント**|**アクセス**:                             このプロパティをモデル エディターから設定できるようにする場合は **Public**、それ以外の場合は **Private** です。<br /><br /> **値**: 間接光 (環境光) による、現在のピクセルの拡散色。|  
 |**素材: 拡散**|**アクセス**: このプロパティをモデル エディターから設定できるようにする場合は **Public**、それ以外の場合は **Private** です。<br /><br /> **値**: 現在のピクセルによる直接光の拡散を示す色。|  
 |**素材: 放射**|**アクセス**:                              このプロパティをモデル エディターから設定できるようにする場合は **Public**、それ以外の場合は **Private** です。<br /><br /> **値**: オブジェクト自体から放射される光による、現在のピクセルの色の効果。|  

@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 84549f28f33933eacbf44742b5be129df8ab780e
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 203cc6111870cbf3342fd84c5931a0dadc2bdde0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="writing-unit-tests-for-cc-with-the-microsoft-unit-testing-framework-for-c"></a>C++ 用の Microsoft 単体テスト フレームワークを使用した C++ 用単体テストの記述
@@ -46,7 +47,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
   
 2.  DLL をテスト プロジェクトにアクセスできるようにします。  
   
-    -   `#include` DLL の外部アクセス可能な関数の宣言を含む `.h` ファイル。  
+    -   DLL の外部アクセス可能な関数の宣言を含む `.h` ファイルを `#include` します。  
   
          `.h` ファイルには、`_declspec(dllimport)` でマークされた関数の宣言が含まれる必要があります。 代わりに、DEF ファイルを使用してメソッドをエクスポートすることができます。 詳細については、「[インポートとエクスポート](/cpp/build/importing-and-exporting)」を参照してください。  
   

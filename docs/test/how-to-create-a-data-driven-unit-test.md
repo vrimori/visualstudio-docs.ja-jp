@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 2eaf4aa44fdc1bec56bb513af54ea7db72dcf3db
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>方法: データ ドリブン単体テストを作成する
@@ -63,9 +64,9 @@ ms.lasthandoff: 04/04/2017
   
 1.  テスト メソッドで使用する値を含むデータ ソースを作成します。 データ ソースは、テストを実行するコンピューターに登録されている任意の型にすることができます。  
   
-2.  テスト クラスにプライベート <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> フィールドとパブリック `TestContext` プロパティを追加します。  
+2.  プライベート <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> フィールドとパブリック `TestContext` プロパティをテスト クラスに追加します。  
   
-3.  単体テスト メソッドを作成し、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 属性を追加します。  
+3.  単体テスト メソッドを作成し、それを <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 属性に追加します。  
   
 4.  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> インデクサー プロパティを使用して、テストで使用する値を取得します。  
   

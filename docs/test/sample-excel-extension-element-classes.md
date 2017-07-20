@@ -27,22 +27,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 396960f31c60318833b8171a4e17595db6ff9fca
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="sample-excel-extension-element-classes"></a>Excel 拡張子のサンプル: 要素クラス
-拡張機能は <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> から派生する、[!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 内の Worksheet コントロールと Cell コントロールを表すクラスを使用します。  
+この拡張機能は、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> から派生し、[!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 内の Worksheet コントロールと Cell コントロールを表すクラスを使用します。  
   
  この拡張機能の基本要素は `ExcelElement` です。 `ExcelWorksheetElement` クラスおよび `ExcelCellElement` クラスは、この要素を継承します。  
   
 ## <a name="element-and-elementinformation-classes"></a>Element クラスと ElementInformation クラス  
- `Element` は Excel 拡張機能のすべてのユーザー インターフェイス要素の基底クラスであり、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> クラスを継承しています。 `ElementInformation` はサンプルの要素情報クラスの基底クラスであり、メンバーを持ちません。  
+ `Element` は、Excel 拡張機能のすべてのユーザー インターフェイス要素の基底クラスです。<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> クラスから継承されます。 `ElementInformation` はサンプルの要素情報クラスの基底クラスであり、メンバーを持ちません。  
   
 #### <a name="simple-properties-and-methods"></a>単純なプロパティとメソッド  
- これらのメンバーは、`Name` プロパティの値や `ClassName` プロパティの値などの単純な値を返し、コードも明快で読みやすいものです。 一部の値は、`Utility` クラスを使用して返されます。これについては、後で説明します。 その他は、このサンプル拡張機能には関連しないので、`null` を返します。 他のメンバーよりもさらに興味深いのが、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> プロパティと <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.CacheProperties%2A> メソッドという 2 つのメンバーです。  
+ これらのメンバーは、`Name` プロパティの値や `ClassName` プロパティの値などの単純な値を返し、コードも明快で読みやすいものです。 一部の値は、`Utility` クラスを使用して返されます。これについては、後で説明します。 その他は、このサンプル拡張機能には関連しないので、`null` を返します。 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> プロパティという <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.CacheProperties%2A> メソッドの 2 つは他のメンバーよりも興味深いメンバーです。  
   
 #### <a name="queryid-property"></a>QueryId プロパティ  
  このプロパティは、再生中にコントロールを一意に識別する、プロパティ名と値のペアから成る条件を返します。 開発者は、各派生コントロール クラスのこのプロパティを上書きし、フレームワークが UI 内のコントロールを見つけるために使用できる <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement> オブジェクトを返すようにする必要があります。  
@@ -51,14 +52,14 @@ ms.lasthandoff: 04/04/2017
  このメソッドは、記録処理中にテスト フレームワークによって呼び出され、重要なプロパティのスナップショットを保存するよう要素に指示します。 そうすることで、実際の UI コントロールが画面上に存在しなくなった場合でも、プロパティが使用可能な状態で維持されます。  
   
 ## <a name="worksheetelement-and-worksheetinformation-classes"></a>WorksheetElement クラスと WorksheetInformation クラス  
- `WorksheetElement` クラスはテスト フレームワーク内の Excel ワークシートを表し、`Element` 基底クラスを継承します。 Excel ワークシート オブジェクトの固有の情報を提供するために、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ClassName%2A>、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ControlTypeName%2A>、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.Name%2A> という 3 つのプロパティが無視されます。  
+ `WorksheetElement` クラスはテスト フレームワーク内の Excel ワークシートを表し、`Element` 基底クラスを継承します。 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ClassName%2A>、<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ControlTypeName%2A>、および <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.Name%2A> の 3 つのプロパティはオーバーライドされ、Excel ワークシート オブジェクトに関する特定の情報が提供されます。  
   
- COM からも参照できるように、<xref:System.Runtime.InteropServices.ComVisibleAttribute> もこのクラスに適用されます。  
+ また、<xref:System.Runtime.InteropServices.ComVisibleAttribute> もこのクラスに適用され、COM から参照できるようになります。  
   
  `WorksheetInformation` クラスは Excel ワークシートに関する情報を表します。 `SheetName` プロパティという 1 つのメンバーしかありませんが、このサンプルの場合はそれで十分です。  
   
 ## <a name="cellelement-and-cellinformation-classes"></a>CellElement クラスと CellInformation クラス  
- `CellElement` クラスは Excel のセルを表し、`Element` 基底クラスを継承します。 無視されるメンバーは <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> プロパティのみです。このプロパティは、`RowIndex` および `ColumnIndex` プロパティを使用してセルを特定する <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement> を返します。  
+ `CellElement` クラスは Excel のセルを表し、`Element` 基底クラスを継承します。 唯一のオーバーライドされるメンバーは <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> です。これは、セルを識別する `RowIndex` および `ColumnIndex` プロパティを使用する <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement> を返します。  
   
 ## <a name="utilities-and-excelutilities-classes"></a>Utilities クラスと ExcelUtilities クラス  
  内部 `ExcelUtilities` クラスには、テクノロジ名などの定数値や、指定されたウィンドウ ハンドルが Excel ワークシートを表すかどうかを判断するメソッドなどが用意されています。  

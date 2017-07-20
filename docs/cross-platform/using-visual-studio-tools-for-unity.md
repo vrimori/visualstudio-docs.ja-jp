@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 65bcf9081699a793ddc1876fec266c8b3ed9ba90
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 28bbc6d742a072f1305b0daed7720816492083fd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="using-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity を使用する
@@ -47,7 +48,7 @@ ms.lasthandoff: 02/22/2017
 -   Visual Studio で、情報を必要とする Unity API を選択するか、その上にカーソルを置き、**Ctrl + Alt + M、Ctrl + H** キーの順に押します。  
   
 ### <a name="unity-monobehavior-scripting-wizard"></a>Unity MonoBehavior のスクリプト作成ウィザード  
- Unity では、ほとんどのスクリプトを、MonoBehavior クラスを継承し、そのメソッドの一部をオーバーライドすることにより実装します。 MonoBehavior ウィザードを使用すると、オーバーロード元にする MonoBehavior メソッドの空の定義を素早く作成できます。 このウィザードを使用して、使用可能なメソッドの一覧からオーバーロードする&1; つ以上のメソッドを指定し、それをコードのどの場所に挿入するかを選択し、使用方法についてのコメントを含めるかどうかを決定できます。  
+ Unity では、ほとんどのスクリプトを、MonoBehavior クラスを継承し、そのメソッドの一部をオーバーライドすることにより実装します。 MonoBehavior ウィザードを使用すると、オーバーロード元にする MonoBehavior メソッドの空の定義を素早く作成できます。 このウィザードを使用して、使用可能なメソッドの一覧からオーバーロードする 1 つ以上のメソッドを指定し、それをコードのどの場所に挿入するかを選択し、使用方法についてのコメントを含めるかどうかを決定できます。  
   
  ![Monobehavior ウィザード ダイアログ。](../cross-platform/media/vstu_monobehavior_wizard_full.png "vstu_monobehavior_wizard_full")  
   
@@ -74,13 +75,13 @@ ms.lasthandoff: 02/22/2017
   
 ###### <a name="to-create-an-empty-monobehavior-method-definition-by-using-the-quick-monobehavior-wizard"></a>クイック MonoBehavior ウィザードを使用して空の MonoBehavior メソッド定義を作成するには  
   
-1.  Visual Studio で、メソッドの挿入位置にカーソルを合わせてから、**Ctrl + Shift + Q** キーを押してクイック MonoBehavior ウィザードを起動します。 もう&1; つの MonoBehavior ウィザードとは違って、このウィザードでは新しいメソッドがいつもカーソル位置に挿入されるので、使用時にカーソルを目的の位置に置く必要があります。  
+1.  Visual Studio で、メソッドの挿入位置にカーソルを合わせてから、**Ctrl + Shift + Q** キーを押してクイック MonoBehavior ウィザードを起動します。 もう 1 つの MonoBehavior ウィザードとは違って、このウィザードでは新しいメソッドがいつもカーソル位置に挿入されるので、使用時にカーソルを目的の位置に置く必要があります。  
   
 2.  **[スクリプト メソッドの作成]** ウィンドウの右上隅に表示されているフレームワークのバージョンが、使用しているバージョンと一致していることを確認します。 一致していない場合は、ドロップダウンの値を、使用するバージョンに変更します。  
   
 3.  オーバーロードするメソッドを見つけます。 それには、スクリプト メソッドの作成ウィンドウでテキスト ボックスにメソッド名を入力します。 入力し始めた文字に名前が一致するメソッドの一覧が表示されます。  
   
-4.  オーバーロードするメソッドを選択します。 必要なメソッドが一覧に表示されている場合は、マウスまたは方向キーを使用してメソッドを選択し、**Enter** キーを押します。 一覧に表示されているメソッドが&1; つだけの場合は、**Enter** キーを押すだけです。 メソッドがコードに挿入されます。  
+4.  オーバーロードするメソッドを選択します。 必要なメソッドが一覧に表示されている場合は、マウスまたは方向キーを使用してメソッドを選択し、**Enter** キーを押します。 一覧に表示されているメソッドが 1 つだけの場合は、**Enter** キーを押すだけです。 メソッドがコードに挿入されます。  
   
 ### <a name="unity-project-explorer"></a>Unity プロジェクト エクスプローラー  
  Unity プロジェクト エクスプローラーを使用すると、Visual Studio から Unity プロジェクト内を移動できます。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 02/22/2017
   
      ![Unity プロジェクト エクスプローラー ウィンドウを表示します。](../cross-platform/media/vstu_view_unity_project_explorer.png "vstu_view_unity_project_explorer")  
   
- Unity プロジェクト エクスプローラーには、Unity プロジェクトのすべてのファイルとディレクトリが Unity エディターと同じ方法で表示されます。この表示は、ソリューション エクスプローラーで Unity のスクリプトを移動する場合とは異なります。ソリューション エクスプローラーにはスクリプト ファイルのみが含まれており、Visual Studio Tools for Unity によって生成されたプロジェクトおよびソリューションとして整理されて表示されます。 大規模なプロジェクトの場合には特に、Unity プロジェクト エクスプローラーを使用したほうが、変更するスクリプトを簡単に見つけることができます。また、他の種類のファイル (たとえば、テキスト ベースの構成ファイル) を Visual Studio 内で変更する場合も、Visual Studio ソリューション内のプロジェクトの&1; つにそれらのファイルを追加せずに変更できるので、操作が簡単です。  
+ Unity プロジェクト エクスプローラーには、Unity プロジェクトのすべてのファイルとディレクトリが Unity エディターと同じ方法で表示されます。この表示は、ソリューション エクスプローラーで Unity のスクリプトを移動する場合とは異なります。ソリューション エクスプローラーにはスクリプト ファイルのみが含まれており、Visual Studio Tools for Unity によって生成されたプロジェクトおよびソリューションとして整理されて表示されます。 大規模なプロジェクトの場合には特に、Unity プロジェクト エクスプローラーを使用したほうが、変更するスクリプトを簡単に見つけることができます。また、他の種類のファイル (たとえば、テキスト ベースの構成ファイル) を Visual Studio 内で変更する場合も、Visual Studio ソリューション内のプロジェクトの 1 つにそれらのファイルを追加せずに変更できるので、操作が簡単です。  
   
 ### <a name="unity-error-list"></a>Unity のエラー一覧  
  Visual Studio が Unity のインスタンスに接続されている場合、Visual Studio 内で Unity コンソールからのメッセージを表示できます。 これには、Unity からのエラーと警告が含まれます。 Visual Studio の **[エラー一覧]** ウィンドウでは、Unity からのエラー メッセージが **[エラー]** タブ、警告メッセージが **[警告]** タブ、その他のメッセージ (Unity API の Debug.Log を使用して送信されたメッセージなど) が **[メッセージ]** タブに表示されます。  
@@ -187,13 +188,13 @@ Unity のこのインスタンスが Unity エディターの一部として実�
   
      ![既存の DLL プロジェクトをソリューションに追加します。](../cross-platform/media/vstu_debugging_dll_add_existing.png "vstu_debugging_dll_add_existing")  
   
-     どちらの場合も Visual Studio Tools for Unity によってプロジェクト参照が保持されるため、プロジェクト ファイルとソリューション ファイルを再生成する必要がある場合でも、これらの手順は&1; 回実行するだけ済みます。  
+     どちらの場合も Visual Studio Tools for Unity によってプロジェクト参照が保持されるため、プロジェクト ファイルとソリューション ファイルを再生成する必要がある場合でも、これらの手順は 1 回実行するだけ済みます。  
   
 2.  DLL プロジェクトで、適切な Unity フレームワーク プロファイルを参照します。 Visual Studio では、DLL プロジェクトのプロパティで、**[対象のフレームワーク]** プロパティを、使用している Unity フレームワークのバージョンに設定します。 これは、Unity フル、Micro、または Web 基底クラス ライブラリなど、プロジェクトが対象とする API 互換性と一致する Unity 基底クラス ライブラリです。 この設定により、他のフレームワークまたは互換性レベルに存在するが、使用している Unity フレームワークのバージョンには存在しないフレームワーク メソッドを DLL が呼び出すことを防止できます。  
   
      ![Unity フレームワークに、DLL のターゲット フレームワークを設定します。](../cross-platform/media/vstu_debugging_dll_target_framework.png "vstu_debugging_dll_target_framework")  
   
-3.  DLL は、Unity プロジェクトのアセット フォルダーにコピーします。 Unity では、アセットとは、Unity のアプリと一緒にパッケージ化され、実行時に読み込めるように配置されるファイルのことです。 DLL は実行時にリンクされるので、DLL はアセットとして配置する必要があります。 アセットとして配置するには、Unity エディターは DLL を Unity プロジェクトの Assets フォルダー内に置く必要があります。 これを実行するには、次の&2; つの方法があります。  
+3.  DLL は、Unity プロジェクトのアセット フォルダーにコピーします。 Unity では、アセットとは、Unity のアプリと一緒にパッケージ化され、実行時に読み込めるように配置されるファイルのことです。 DLL は実行時にリンクされるので、DLL はアセットとして配置する必要があります。 アセットとして配置するには、Unity エディターは DLL を Unity プロジェクトの Assets フォルダー内に置く必要があります。 これを実行するには、次の 2 つの方法があります。  
   
     -   DLL プロジェクトのビルド設定を変更して、出力 DLL ファイルと PDB ファイルを出力フォルダーから Unity プロジェクトの **Assets** フォルダーにコピーするビルド後タスクを組み込みます。  
   

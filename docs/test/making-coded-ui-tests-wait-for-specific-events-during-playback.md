@@ -26,14 +26,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 060dc127a1cc08dcf28a59feaa774b0094e42d56
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3be7ff30658fc7e0de4cf04cab71fdae44b1b15e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>再生中に特定のイベントを待機するようにコード化された UIT テストを設定
-コード化された UI テストの再生では、テストに対して指示することで、ウィンドウの表示やプログレス バーの非表示などの特定のイベントが発生するまで待機することができます。 これを実行するには、次の表で説明されているように、該当する UITestControl.WaitForControlXXX() メソッドを使用します。 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A> メソッドを使用して、コントロールが有効になるまで待機するコード化された UI テストの例については、「[Walkthrough: Creating, Editing and Maintaining a Coded UI Test](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md) (チュートリアル: コード化された UI テストの作成、編集、および保守)」をご覧ください。  
+コード化された UI テストの再生では、テストに対して指示することで、ウィンドウの表示やプログレス バーの非表示などの特定のイベントが発生するまで待機することができます。 これを実行するには、次の表で説明されているように、該当する UITestControl.WaitForControlXXX() メソッドを使用します。 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A> メソッドで有効化されるコントロールを待機するコード化された UI テストの例については、「[チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」を参照してください。  
   
  **Requirements**  
   
@@ -109,13 +110,13 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
   
  待機が成功すれば true を返し、失敗すれば false を返します。  
   
- 待機操作の暗黙的なタイムアウトは <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyTimeout%2A> プロパティで指定されます。 このプロパティの既定値は 60000 ミリ秒 (1 分) です。  
+ 待機操作の暗黙的なタイムアウトは、<xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyTimeout%2A> プロパティによって指定されます。 このプロパティの既定値は 60000 ミリ秒 (1 分) です。  
   
  メソッドには、ミリ秒単位の明示的なタイムアウトを取得するためのオーバーロードがあります。 ただし、待機操作の結果、コントロールが暗黙的に検索されたり、アプリケーションがビジー状態であったりすると、実際の待機時間が指定されたタイムアウトよりも長くなる可能性があります。  
   
  上で説明した機能は強力で柔軟性があり、ほとんどの条件を満たすと考えられます。 しかし、これらのメソッドでもニーズが満たされず、コード内で <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A> または <xref:System.Threading.Thread.Sleep%2A> をコード化する必要がある場合は、Thread.Sleep() API の代わりに Playback.Wait() を使用することをお勧めします。 これには次の理由があります。  
   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A> プロパティを使用して、スリープ状態の期間を変更することができます。 既定ではこの変数は 1 ですが、値を増減させてコード全体で待機時間を変更することができます。 たとえば、低速なネットワークで特別にテストを実行する場合や、その他のパフォーマンスが低下している状況で、特定の位置で (または構成ファイル内で) この変数を 1.5 に変更すると、あらゆる位置の待機時間を 50% 余分に追加できます。  
+ <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A> プロパティを使用してスリープの継続時間を変更できます。 既定ではこの変数は 1 ですが、値を増減させてコード全体で待機時間を変更することができます。 たとえば、低速なネットワークで特別にテストを実行する場合や、その他のパフォーマンスが低下している状況で、特定の位置で (または構成ファイル内で) この変数を 1.5 に変更すると、あらゆる位置の待機時間を 50% 余分に追加できます。  
   
  Playback.Wait() は、ユーザー取り消し/ブレーク操作の確認中に for ループ内の小さなチャンクで Thread.Sleep() を呼び出します (上記の計算後)。 つまり、Playback.Wait() を使用すると、スリープにならなかったり、例外が発生しても、待機が完了する前に再生を取り消すことができます。  
   
@@ -124,7 +125,7 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
   
  **ガイダンス**  
   
- 追加のガイダンスについては、「[Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Visual Studio 2012 を使用した絶え間のない配信のためのテスト – 第 5 章: システム テストの自動化)」をご覧ください。  
+ 追加情報については、「[Visual Studio 2012 を使用した継続的配信のためのテスト - 第 5 章: システム テストの自動化](http://go.microsoft.com/fwlink/?LinkID=255196)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   

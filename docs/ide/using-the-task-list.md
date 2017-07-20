@@ -35,9 +35,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 01e8f3cc1bbcc2bc4b2fc94df1dad7d248b67290
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -69,9 +70,9 @@ ms.lasthandoff: 02/22/2017
   
 #### <a name="to-change-the-sort-order-of-the-list"></a>一覧の並べ替え順序を変更するには  
   
--   任意の列のヘッダーをクリックします。 検索結果をさらに絞り込むには、Shift キーを押しながら&2; 番目の列ヘッダーをクリックします。  
+-   任意の列のヘッダーをクリックします。 検索結果をさらに絞り込むには、Shift キーを押しながら 2 番目の列ヘッダーをクリックします。  
   
-     または、ショートカット メニューで、 **[並べ替え]**をクリックして、ヘッダーを選択します。 検索結果をさらに絞り込むには、Shift キーを押しながら&2; 番目のヘッダーをクリックします。  
+     または、ショートカット メニューで、 **[並べ替え]**をクリックして、ヘッダーを選択します。 検索結果をさらに絞り込むには、Shift キーを押しながら 2 番目のヘッダーをクリックします。  
   
 #### <a name="to-show-or-hide-columns"></a>列の表示/非表示を切り替えるには  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 02/22/2017
  ユーザー タスク データに引き続きアクセスして更新する場合は、プロジェクトを Visual Studio 2013 で開き、好きなプロジェクト管理ツール (Team Foundation Server など) にユーザー タスクの内容をコピーする必要があります。  
   
 ##  <a name="tokensComments"></a> トークンとコメント  
- **[タスク一覧]** ウィンドウには、コメント マーカーが手前にあるコードのコメント、および定義済みのトークンも表示されます。 たとえば、次の C# コメントには&3; つの個別の部分があります。  
+ **[タスク一覧]** ウィンドウには、コメント マーカーが手前にあるコードのコメント、および定義済みのトークンも表示されます。 たとえば、次の C# コメントには 3 つの個別の部分があります。  
   
 -   コメント マーカー (`//`)  
   

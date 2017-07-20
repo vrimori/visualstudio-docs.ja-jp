@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: b211beb5f5e09daf0628e33e417e9aad97d0d7e2
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -45,9 +46,9 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
   
 -   1 つの入力パラメーターを持つが出力パラメーターを持たないタスク。  
   
--   2 つの入力パラメーターと、MSBuild プロパティを返す&1; つの出力パラメーターを持つタスク。  
+-   2 つの入力パラメーターと、MSBuild プロパティを返す 1 つの出力パラメーターを持つタスク。  
   
--   2 つの入力パラメーターと、MSBuild 項目を返す&1; つの出力パラメーターを持つタスク。  
+-   2 つの入力パラメーターと、MSBuild 項目を返す 1 つの出力パラメーターを持つタスク。  
   
  タスクを作成して実行するには、Visual Studio と **Visual Studio コマンド プロンプト ウィンドウ**を使用して次の操作を実行します。  
   
@@ -101,7 +102,7 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
   
 3.  プロジェクト ファイルを保存します。  
   
- このコードによって、パラメーター、参照、`Using` ステートメントがない Hello という名前のインライン タスクが作成されます。 この Hello タスクには、既定のログ デバイス (通常はコンソール ウィンドウ) に Hello メッセージを表示する&1; 行のコードのみが含まれています。  
+ このコードによって、パラメーター、参照、`Using` ステートメントがない Hello という名前のインライン タスクが作成されます。 この Hello タスクには、既定のログ デバイス (通常はコンソール ウィンドウ) に Hello メッセージを表示する 1 行のコードのみが含まれています。  
   
 ### <a name="running-the-hello-task"></a>Hello タスクの実行  
  **コマンド プロンプト ウィンドウ**を使用して MSBuild を実行し、Hello タスクを構築して、そのタスクを呼び出す TestBuild ターゲットを処理します。  
@@ -152,7 +153,7 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
   
      `Greetings!`  
   
- このコードによって、必須の入力パラメーター Text を&1; つだけ持つ Echo という名前のインライン タスクが定義されます。 既定では、パラメーターの型は System.String です。 Text パラメーターの値は、TestBuild ターゲットによって Echo タスクが呼び出されたときに設定されます。  
+ このコードによって、必須の入力パラメーター Text を 1 つだけ持つ Echo という名前のインライン タスクが定義されます。 既定では、パラメーターの型は System.String です。 Text パラメーターの値は、TestBuild ターゲットによって Echo タスクが呼び出されたときに設定されます。  
   
 ## <a name="defining-the-adder-task"></a>Adder タスクの定義  
  2 つの整数パラメーターを追加して、その合計を MSBuild プロパティとして生成するインライン タスクを作成します。  
@@ -188,7 +189,7 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
   
      `The sum is 9`  
   
- このコードによって、Adder という名前のインライン タスクが定義されます。このタスクには、2 つの必須の整数入力パラメーター A と B、および&1; つの整数出力パラメーター C があります。Adder タスクによって&2; つの入力パラメーターが追加され、出力パラメーターで合計が返されます。 合計は MSBuild プロパティ `Sum` として生成されます。 入力パラメーターの値は、TestBuild ターゲットによって Adder タスクが呼び出されたときに設定されます。  
+ このコードによって、Adder という名前のインライン タスクが定義されます。このタスクには、2 つの必須の整数入力パラメーター A と B、および 1 つの整数出力パラメーター C があります。Adder タスクによって 2 つの入力パラメーターが追加され、出力パラメーターで合計が返されます。 合計は MSBuild プロパティ `Sum` として生成されます。 入力パラメーターの値は、TestBuild ターゲットによって Adder タスクが呼び出されたときに設定されます。  
   
 ## <a name="defining-the-regx-task"></a>RegX タスクの定義  
  項目グループおよび正規表現を受け取って、正規表現と一致するファイルの内容を含むすべての項目の一覧を返すインライン タスクを作成します。  
@@ -245,7 +246,7 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
   
      `Matched files: Form1.cs;Form1.Designer.cs;Properties\Settings.Designer.cs`  
   
- このコードによって、次の&3; つのパラメーターを持つ RegX という名前のインライン タスクが定義されます。  
+ このコードによって、次の 3 つのパラメーターを持つ RegX という名前のインライン タスクが定義されます。  
   
 -   `Expression`: 照合する正規表現を示す値を持つ必須の文字列入力パラメーター。 この例では、正規表現は "public" または "protected" という語と一致します。  
   

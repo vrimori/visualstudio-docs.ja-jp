@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
 ms.openlocfilehash: 6153ab5924f66d13e2c0664ed652f8eee6f91e4c
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -61,7 +62,7 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
 </Project>  
 ```  
   
- この例の `UsingTask` 要素には、タスクとそれをコンパイルするインライン タスク ファクトリを記述した&3; つの属性が含まれています。  
+ この例の `UsingTask` 要素には、タスクとそれをコンパイルするインライン タスク ファクトリを記述した 3 つの属性が含まれています。  
   
 -   `TaskName` 属性は、タスクの名前を指定します。この例では `DoNothing` と指定しています。  
   
@@ -150,7 +151,7 @@ Log.LogError("Hello, world!");
 </ParameterGroup>  
 ```  
   
- パラメーターには、以下の&1; つ以上の属性を含めることができます。  
+ パラメーターには、以下の 1 つ以上の属性を含めることができます。  
   
 -   `Required` は省略可能な属性で、既定値は `false` です。 `true` の場合、そのパラメーターは必須で、タスクを呼び出す前に値を指定する必要があります。  
   
@@ -168,7 +169,7 @@ Log.LogError("Hello, world!");
 </ParameterGroup>  
 ```  
   
- この例では、以下の&3; つのパラメーターを定義しています。  
+ この例では、以下の 3 つのパラメーターを定義しています。  
   
 -   `Expression` は、System.String 型の必須の入力パラメーターです。  
   

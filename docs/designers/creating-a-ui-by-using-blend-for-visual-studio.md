@@ -1,21 +1,40 @@
 ---
 title: "Blend for Visual Studio を使用して UI を作成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Blend.Start.Dev12"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Blend.Start.Dev12
 ms.assetid: efd12263-cc2d-4081-a2bb-9a2cc17c442c
 caps.latest.revision: 31
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: f880816f383712f87624467c9ed3b45a1c2ccb8c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Blend for Visual Studio を使用して UI を作成する
 Blend for Visual Studio は、XAML ベースの Windows デスクトップ アプリ、Web アプリ、[Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/jj683071.aspx) アプリ、[Windows Store](http://msdn.microsoft.com/library/windows/apps/jj129478.aspx) アプリの設計を支援します。 Visual Studio と同じ基本的な XAML デザイン環境を提供しているほか、アニメーションやビヘイビアーなどの高度なタスクを視覚的にデザインする機能が追加されています。  
@@ -37,7 +56,7 @@ Blend for Visual Studio は、XAML ベースの Windows デスクトップ ア�
   
 -   [[プロパティ] パネルのツアー](#Properties)  
   
-##  <a name="a-nametoolsa-tour-of-the-tools-panel"></a><a name="Tools"></a> [ツール] パネルのツアー  
+##  <a name="Tools"></a> [ツール] パネルのツアー  
  Blend for Visual Studio の **[ツール]** パネルは、アプリケーションのオブジェクトの作成と変更に使用します。 パネルにあるツールを選択してアートボード上でマウスを動かすと、オブジェクトを描画できます。  
   
  ![[ツール] パネル](../designers/media/blend5toolspanel.png "Blend5Toolspanel")  
@@ -53,7 +72,7 @@ Blend for Visual Studio は、XAML ベースの Windows デスクトップ ア�
   
  **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [ツール バー](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4)  
   
-##  <a name="a-nameassetsa-tour-of-the-assets-panel"></a><a name="Assets"></a> [アセット] パネルのツアー  
+##  <a name="Assets"></a> [アセット] パネルのツアー  
  **[アセット]** パネルには、すべてのコントロールが用意されています (Visual Studio の **[ツールボックス]** に似ています)。 また、コントロールのほかに、スタイル、メディア、ビヘイビアー、効果など、アートボードに追加できるすべてのものが **[アセット]** パネルに用意されています。  
   
  ![[アセット] パネル](../designers/media/blend5_assets_panel.png "Blend5_Assets_panel")  
@@ -66,7 +85,7 @@ Blend for Visual Studio は、XAML ベースの Windows デスクトップ ア�
 |![](../designers/media/b1_4.png "B1_4")|**スタイル** リソース ディクショナリに含まれるすべてのスタイルを表示します。|  
 |![](../designers/media/b1_5.png "B1_5")|**説明** 選択したカテゴリまたはサブカテゴリの説明が表示されます。|  
   
-##  <a name="a-nameobjectsa-tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a> [オブジェクトとタイムライン] パネルのツアー  
+##  <a name="Objects"></a> [オブジェクトとタイムライン] パネルのツアー  
  このパネルを使用すると、アートボード上のオブジェクトを整理して、必要な場合はアニメーション化できます。  
   
  ![アニメーション モードの [オブジェクトとタイムライン] パネル](../designers/media/b5_object_timeline_animation.png "b5_object_timeline_animation")  
@@ -90,7 +109,7 @@ Blend for Visual Studio は、XAML ベースの Windows デスクトップ ア�
 |![](../designers/media/b1_15.png "B1_15")|**タイムラインのズーム** タイムラインのズーム解像度を設定します。 ズーム インでは、アニメーションを詳細に編集できます。ズーム アウトすると、長い再生時間にわたる動作の概要が表示されます。 ズーム インしても、目的の位置にキーフレームを設定できない場合は、スナップ精度が十分高く設定されていることを確認してください。|  
 |![吹き出し 16](../designers/media/b5_label_16.png "b5_label_16")|**タイムライン構成領域** タイムラインを表示するとともに、キーフレームをドラッグするかショートカット メニューを使用してキーフレームを移動します。|  
   
-##  <a name="a-namepropertiesa-tour-of-the-properties-panel"></a><a name="Properties"></a> [プロパティ] パネルのツアー  
+##  <a name="Properties"></a> [プロパティ] パネルのツアー  
  オブジェクトのプロパティを表示して変更するには、このパネルを使用します。 また、アートボード上で直接設定することもできます。 この場合、プロパティの変更が **[プロパティ]** パネルに反映されます。  
   
  ![[プロパティ] パネル](../designers/media/blend5_properties_panel.png "Blend5_properties_panel")  
@@ -113,7 +132,7 @@ Blend for Visual Studio は、XAML ベースの Windows デスクトップ ア�
 |![](../designers/media/b1_12.png "B1_12")|**RGB 色空間** **[R]**、**[G]**、または **[B]** (赤、緑、青) の各数値エディターの値を調整して色を変更します。|  
 |![](../designers/media/b1_13.png "B1_13")|**アルファ チャネル** **[A]** の横にある数値エディターを使用してアルファ値を変更します。|  
 |![](../designers/media/d839d12c-07a1-4127-a830-4a8e7069f4fe.png "d839d12c-07a1-4127-a830-4a8e7069f4fe")|**色をリソースに変換** 選択した色を色リソースに変換します。 色リソースは、[色リソース] タブをクリックした場合に使用できます。|  
-|![](../designers/media/b1_15.png "B1_15")|**16 進数値** 表示されている色を表す&16; 進数値が表示されます。|  
+|![](../designers/media/b1_15.png "B1_15")|**16 進数値** 表示されている色を表す 16 進数値が表示されます。|  
 |![吹き出し 16](../designers/media/b5_label_16.png "b5_label_16")|**グラデーション スライダー** グラデーション ブラシが選択されている場合にのみ表示されます。|  
 |![](../designers/media/d50027a1-6824-4ad8-8b4e-558b0756dcf8.png "d50027a1-6824-4ad8-8b4e-558b0756dcf8")|**詳細設定プロパティの表示** 使用頻度が低いプロパティのカテゴリを表示します。|  
   
@@ -124,8 +143,3 @@ Blend for Visual Studio は、XAML ベースの Windows デスクトップ ア�
  [オブジェクトのアニメーション化](../designers/animate-objects-in-xaml-designer.md)   
  [図形とパスの描画](../designers/draw-shapes-and-paths.md)   
  [Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

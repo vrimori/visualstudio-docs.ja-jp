@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 078576d6e1988bf1cefbb09646ea44f61085f5cf
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
+ms.openlocfilehash: f1f9931e6e7c8dda4cb74f407901f41467c690cc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>MSBuild の予約済みおよび既知のプロパティ
@@ -64,6 +65,7 @@ ms.lasthandoff: 02/22/2017
 |`MSBuildProjectFile`|ファイル名の拡張子を含むプロジェクト ファイルの完全なファイル名。MyApp.proj のようになります。|予約されています。|  
 |`MSBuildProjectFullPath`|ファイル名の拡張子を含む、プロジェクト ファイルの絶対パスと完全なファイル名。C:\MyCompany\MyProduct\MyApp.proj のようになります。|予約されています。|  
 |`MSBuildProjectName`|ファイル名の拡張子のないプロジェクト ファイルの名前。MyApp のようになります。|予約されています。|  
+|`MSBuildRuntimeType`|現在実行しているランタイムの型。 MSBuild 15 で導入。 値が未定義の可能性があります (MSBuild 15 より前の場合)。`Full` はデスクトップの .NET Framework で MSBuild が実行されていることを示し、`Core` は .NET Core で MSBuild が実行されていることを示し、`Mono` は Mono で MSBuild が実行されていることを示します。|予約されています。|  
 |`MSBuildStartupDirectory`|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] が呼び出されるフォルダーの絶対パス。 このプロパティを使用すると、プロジェクト ツリーの特定の場所にすべての内容をビルドできます。各ディレクトリに dirs.proj ファイルを作成する必要はありません。 次の例に示すように、c:\traversal.proj という名前の 1 つのプロジェクトだけが作成されます。<br /><br /> `<Project ...>     <ItemGroup>         <ProjectFiles              Include="$            (MSBuildStartupDirectory)            **\*.csproj"/>     </ItemGroup>     <Target Name="build">         <MSBuild             Projects="@(ProjectFiles)"/>     </Target> </Project>`<br /><br /> ツリー上の任意の場所でビルドするには、次のように入力します。<br /><br /> `msbuild c:\traversal.proj`<br /><br /> このプロパティに最後の円記号を含めないでください。|予約されています。|  
 |`MSBuildThisFile`|`MSBuildThisFileFullPath` のファイル名とファイル拡張子の部分。|予約されています。|  
 |`MSBuildThisFileDirectory`|`MSBuildThisFileFullPath` のディレクトリの部分。<br /><br /> パスに最後の円記号を含めます。|予約されています。|  
@@ -75,5 +77,4 @@ ms.lasthandoff: 02/22/2017
 |`MSBuildToolsVersion`|プロジェクトのビルドに使用する [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ツールセットのバージョン。<br /><br /> メモ：[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ツールセットは、アプリケーションのビルドで使用するタスク、ターゲット、およびツールで構成されます。 ツールには、csc.exe や vbc.exe などのコンパイラが含まれます。 詳細については、「[MSBuild ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」と「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」をご覧ください。|予約されています。|  
   
 ## <a name="see-also"></a>関連項目  
- [MSBuild リファレンス](../msbuild/msbuild-reference.md)
- [MSBuild プロパティ](../msbuild/msbuild-properties.md)
+ [MSBuild リファレンス](../msbuild/msbuild-reference.md) [MSBuild プロパティ](../msbuild/msbuild-properties.md)

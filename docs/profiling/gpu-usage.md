@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 1613943840c79028e3c60db0f54a73243eb3948c
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: a2958c20bbfbd9f4f3d03946dbe230326894b1c1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="gpu-usage"></a>GPU 使用率
@@ -68,7 +69,7 @@ Visual Studio のパフォーマンスおよび診断ハブに含まれる GPU �
   
  フレーム時間、フレーム レート、および GPU 使用率が、リアルタイムの概要情報として表示されます。 これらの情報はそれぞれ個別にグラフ化されますが、共通のタイム スケールを使用しているため、それらの情報を簡単に関連付けることができます。  
   
- **[フレーム時間 (ミリ秒)]** と **[1 秒あたりのフレーム数 (FPS)]** グラフには、1 秒あたり 60 フレームと 30 フレームの目標パフォーマンスを表す 2 本の赤い水平線が表示されます。 **[フレーム時間]** グラフでは、アプリが目標パフォーマンスを超えているときはグラフが線の下にあり、下回っているときはグラフが線の上にあります。 [1 秒あたりのフレーム数] グラフでは、その逆です。アプリが目標パフォーマンスを上回っている時はグラフが線の上にあり、下回っている時はグラフが線の下にあります。 これらのグラフは、主として、アプリのパフォーマンスに関する概要情報を取得し、調査する必要のあるスローダウン (フレーム レートの急激な低下や、GPU 使用率のスパイクなど) を識別するために使用します。  
+ **[フレーム時間 (ミリ秒)]** と **[1 秒あたりのフレーム数 (FPS)]** グラフには、1 秒あたり 60 フレームと 30 フレームの目標パフォーマンスを表す 2 本の赤い水平線が表示されます。 **[フレーム時間]** グラフでは、アプリが目標パフォーマンスを超えているときはグラフが線の下にあり、下回っているときはグラフが線の上にあります。 [1 秒あたりのフレーム数] グラフでは、その逆です。アプリが目標パフォーマンスを上回っているときはグラフが線の上にあり、下回っているときはグラフが線の下にあります。 これらのグラフは、主として、アプリのパフォーマンスに関する概要情報を取得し、調査する必要のあるスローダウン (フレーム レートの急激な低下や、GPU 使用率のスパイクなど) を識別するために使用します。  
   
  GPU 使用率ツールの下でアプリを実行中には、GPU で実行されたグラフィックス イベントに関する詳細情報も診断セッションによって収集されます。 この情報は、アプリでのハードウェアの使用状況のより詳細なレポートを生成するために使用されます。 収集した情報からこのレポートを生成するまでには少し時間がかかるため、診断セッションが情報の収集を完了してからのみ使用可能です。  
   
@@ -157,8 +158,8 @@ Visual Studio 2017 以降では、診断セッションの右下にある **[Gpu
   
 |ベンダー|GPU の説明|必要なドライバー バージョン|  
 |------------|---------------------|-----------------------------|  
-|Intel®|第 4 世代 Intel® Core プロセッサ (Haswell)<br /><br /> -   Intel® HD グラフィックス (GT1)<br />-   Intel® HD グラフィックス 4200 (GT2)<br />-   Intel® HD グラフィックス 4400 (GT2)<br />-   Intel® HD グラフィックス 4600 (GT2)<br />-   Intel® HD グラフィックス P4600 (GT2)<br />-   Intel® HD グラフィックス P4700 (GT2)<br />-   Intel® HD グラフィックス 5000 (GT3)<br />-   Intel® Iris™ グラフィックス 5100 (GT3)<br />-   Intel® Iris™ Pro グラフィックス 5200 (GT3e)|-- (最新のドライバーを使用)|  
-|AMD®|AMD Radeon™ HD 7000 シリーズの大部分 (AMD Radeon™ HD 7350 ～ 7670 を除く)<br /><br /> グラフィックス コア ネクスト (GCN) アーキテクチャを搭載した AMD Radeon™ GPU、AMD FirePro™ GPU、および AMD FirePro GPU アクセラレータ<br /><br /> グラフィックス コア ネクスト (GCN) アーキテクチャを搭載した AMD® E シリーズおよび AMD A シリーズの Accelerated Processing Unit (APU) (Kaveri、Kabini、Temash、Beema、Mullins)|14.7 RC3 以上|  
+|Intel®|第 4 世代 Intel® Core プロセッサ ('Haswell')<br /><br /> -   Intel® HD グラフィックス (GT1)<br />-   Intel® HD グラフィックス 4200 (GT2)<br />-   Intel® HD グラフィックス 4400 (GT2)<br />-   Intel® HD グラフィックス 4600 (GT2)<br />-   Intel® HD グラフィックス P4600 (GT2)<br />-   Intel® HD グラフィックス P4700 (GT2)<br />-   Intel® HD グラフィックス 5000 (GT3)<br />-   Intel® Iris™ グラフィックス 5100 (GT3)<br />-   Intel® Iris™ Pro グラフィックス 5200 (GT3e)|-- (最新のドライバーを使用)|  
+|AMD®|AMD Radeon™ HD 7000 シリーズの大部分 (AMD Radeon™ HD 7350 ～ 7670 を除く)<br /><br /> グラフィックス コア ネクスト (GCN) アーキテクチャを搭載した AMD Radeon™ GPU、AMD FirePro™ GPU、および AMD FirePro GPU アクセラレータ<br /><br /> グラフィックス コア ネクスト (GCN) アーキテクチャを搭載した AMD® E シリーズおよび AMD A シリーズの Accelerated Processing Unit (APU) ('Kaveri'、'Kabini'、'Temash'、'Beema'、'Mullins')|14.7 RC3 以上|  
 |NVIDIA®|NVIDIA® GeForce 400 シリーズ以降の大部分<br /><br /> Fermi™、Kepler™、または Maxwell™ アーキテクチャを搭載した NVIDIA® GeForce® GPU、NVIDIA Quadro® GPU、および NVIDIA® Tesla™ GPU アクセラレータ|343.37 以上|  
   
  NVIDIA SLI® および AMD Crossfire™ などのマルチ GPU 構成は、現時点ではサポートされていません。 NVIDIA® Optimus™ および AMD Enduro™ などのハイブリッド グラフィック設定はサポートされています。  

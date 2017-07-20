@@ -28,9 +28,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: 0a5c51b66cb7e5a88b9432c74432947ab94ae316
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -134,7 +135,7 @@ ms.lasthandoff: 02/22/2017
  MainWindow.xaml のタイトル バーに Greetings と表示されます。  
   
 ### <a name="design-the-user-interface-ui"></a>ユーザー インターフェイス (UI) のデザイン  
- このアプリケーションに&3; 種類のコントロール (TextBlock コントロール、2 つの RadioButton コントロール、および Button コントロール) を追加します。  
+ このアプリケーションに 3 種類のコントロール (TextBlock コントロール、2 つの RadioButton コントロール、および Button コントロール) を追加します。  
   
 ##### <a name="to-add-a-textblock-control"></a>TextBlock コントロールを追加するには  
   
@@ -180,7 +181,7 @@ ms.lasthandoff: 02/22/2017
   
      図 8: Greetings ウィンドウの RadioButton  
   
-     ![テキストブロックと&2; つのオプション ボタンのあるグリーティング フォーム](../ide/media/exploreide-greetingswithradiobuttons.png "ExploreIDE-Greetingswithradiobuttons")  
+     ![テキストブロックと 2 つのオプション ボタンのあるグリーティング フォーム](../ide/media/exploreide-greetingswithradiobuttons.png "ExploreIDE-Greetingswithradiobuttons")  
   
 3.  左側の RadioButton コントロールの **[プロパティ]** ウィンドウで、 **[Name]** プロパティ ( **[プロパティ]** ウィンドウの一番上のプロパティ) を `RadioButton1`に変更します。  フォーム上で Radiobutton を選択し、背景のグリッドを選択していないことを確認します。 [プロパティ] ウィンドウの [Name] フィールドの下の [Type] フィールドに Radiobutton が表示されるはずです。  
   
@@ -211,7 +212,7 @@ ms.lasthandoff: 02/22/2017
  ![コントロール ラベルのあるグリーティング フォーム](../ide/media/exploreide-greetingswithconrollabels.png "ExploreIDE-Greetingswithconrollabels")  
   
 ### <a name="add-code-to-the-display-button"></a>Display ボタンのコードの追加  
- このアプリケーションを実行すると、ユーザーがオプション ボタンを選択した後で **[Display]** ボタンを選択したときに、メッセージ ボックスが表示されます。 1 つのメッセージ ボックスには "Hello" と表示され、もう&1; つメッセージ ボックスには "Goodbye" と表示されます。 この動作を作成するために、Greetings.xaml.vb または Greetings.xaml.cs の Button_Click イベントにコードを追加します。  
+ このアプリケーションを実行すると、ユーザーがオプション ボタンを選択した後で **[Display]** ボタンを選択したときに、メッセージ ボックスが表示されます。 1 つのメッセージ ボックスには "Hello" と表示され、もう 1 つメッセージ ボックスには "Goodbye" と表示されます。 この動作を作成するために、Greetings.xaml.vb または Greetings.xaml.cs の Button_Click イベントにコードを追加します。  
   
 ##### <a name="add-code-to-display-message-boxes"></a>メッセージ ボックスを表示するコードの追加  
   

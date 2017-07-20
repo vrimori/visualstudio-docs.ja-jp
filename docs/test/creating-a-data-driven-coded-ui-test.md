@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9885f3cff76b9c5e1d053550be80c4b68cf9de1b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 2c4cb515c4442b3c48c42f47f9116e9ff536a5f4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="creating-a-data-driven-coded-ui-test"></a>データ ドリブンのコード化された UI テストの作成
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/22/2017
 -   Visual Studio Enterprise  
   
 ## <a name="create-a-data-driven-coded-ui-test"></a>データ ドリブンのコード化された UI テストの作成  
- このサンプルでは、Windows 電卓アプリケーション上で実行されるコード化された UI テストを作成します。 2 つの数値を加算し、アサーションを使用して合計が正しいことを検証します。 次に、アサーションおよび&2; つの数値のパラメーター値をデータ ドリブンになるようにコーディングし、コンマ区切り値 (.csv) ファイルに保存します。  
+ このサンプルでは、Windows 電卓アプリケーション上で実行されるコード化された UI テストを作成します。 2 つの数値を加算し、アサーションを使用して合計が正しいことを検証します。 次に、アサーションおよび 2 つの数値のパラメーター値をデータ ドリブンになるようにコーディングし、コンマ区切り値 (.csv) ファイルに保存します。  
   
 #### <a name="step-1---create-a-coded-ui-test"></a>ステップ 1 - コード化された UI テストを作成する  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 02/22/2017
   
      データ セットを作成したので、次にデータをテストにバインドしてみます。  
   
-#### <a name="step-3--add-data-source-binding"></a>ステップ 3 - データ ソース バインドを追加する  
+#### <a name="step-3---add-data-source-binding"></a>ステップ 3 - データ ソース バインドを追加する  
   
 1.  データ ソースをバインドするには、テスト メソッドのすぐ上にある既存の `DataSource` 属性内に `[TestMethod]` 属性を追加します。  
   
@@ -159,11 +160,11 @@ ms.lasthandoff: 02/22/2017
   
 2.  テストを実行します。  
   
-     テストは、3 つのイテレーションを実行することに注意してください。 これは、バインドされたデータ ソースに&3; 行のデータが含まれているためです。 ただし、テストでは定数パラメーター値が引き続き使用され、毎回 3 の合計に 1 + 2 が加算されます。  
+     テストは、3 つのイテレーションを実行することに注意してください。 これは、バインドされたデータ ソースに 3 行のデータが含まれているためです。 ただし、テストでは定数パラメーター値が引き続き使用され、毎回 3 の合計に 1 + 2 が加算されます。  
   
      次に、データ ソース ファイル内の値を使用するようにテストを構成します。  
   
-#### <a name="step-4--use-the-data-in-the-coded-ui-test"></a>ステップ 4 - コード化された UI テストでデータを使用する  
+#### <a name="step-4---use-the-data-in-the-coded-ui-test"></a>ステップ 4 - コード化された UI テストでデータを使用する  
   
 1.  CodedUITest.cs ファイルの先頭に `using Microsoft.VisualStudio.TestTools.UITesting.WinControls` を追加します。  
   
@@ -212,7 +213,7 @@ ms.lasthandoff: 02/22/2017
   
 3.  ソリューションを保存します。  
   
-#### <a name="step-5--run-the-data-driven-test"></a>ステップ 5 - データ ドリブン テストを実行する  
+#### <a name="step-5---run-the-data-driven-test"></a>ステップ 5 - データ ドリブン テストを実行する  
   
 1.  テストを再実行して、テストがデータ ドリブンになったことを確認します。  
   
@@ -220,7 +221,7 @@ ms.lasthandoff: 02/22/2017
   
  **ガイダンス**  
   
- 詳細については、「[Testing for Continuous Delivery with Visual Studio 2012 – Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188)」 (Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト) および「[Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196)」 (Visual Studio 2012 を使用した継続的配信のためのテスト - 第 5 章: システム テストの自動化) を参照してください。  
+ 詳細については、「[Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)」および「[Visual Studio 2012 を使用した継続的配信のためのテスト - 第 5 章: システム テストの自動化](http://go.microsoft.com/fwlink/?LinkID=255196)」 を参照してください。  
   
 ## <a name="q--a"></a>Q & A  
   

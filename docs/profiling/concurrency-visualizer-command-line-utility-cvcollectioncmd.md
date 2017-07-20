@@ -1,21 +1,41 @@
 ---
 title: "同時実行ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.performance.cvcollectioncmd"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.cv.performance.cvcollectioncmd
 ms.assetid: 476601be-1608-4014-af15-5aba6ccbed1c
 caps.latest.revision: 21
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 21
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: da79533a7a40b6e1b79c66f023beba2c1162bd08
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>同時実行ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd)
 同時実行ビジュアライザーのコマンド ライン ユーティリティ (CVCollectionCmd.exe) を使用して、コマンド ラインからトレースを収集することで、Visual Studio 用の同時実行ビジュアライザーでトレースを表示できます。 これらのツールは、Visual Studio がインストールされていないコンピューターで使用できます。  
@@ -40,11 +60,11 @@ caps.handback.revision: 21
   
 |オプション|説明|パラメーター|戻り値|  
 |------------|-----------------|----------------|-------------------|  
-|クエリ|コレクションを開始できるかどうかを返します。|なし|コレクションを開始できる場合は&0;。<br /><br /> コレクションが既に実行中の場合は&1;。<br /><br /> コレクションは実行中ではないが、必要な [ETW](http://msdn.microsoft.com/Library/ac99a063-e2d2-40cc-b659-d23c2f783f92) セッションの&1; つ以上が既に有効になっている場合は&2;。|  
-|Launch|同時実行ビジュアライザーで、指定されたプロセスを実行します。|実行可能ファイルのパス。|実行が成功した場合は&0;。<br /><br /> ターゲット アプリケーションを開始できなかったために実行が失敗した場合は&1;。<br /><br /> CVCollectionCmd に、指定された出力ディレクトリへの書き込みアクセス許可がないために実行が失敗した場合は&13;。|  
-|Attach|システム全体でのトレースのコレクションを開始します。プロセスが指定されている場合は、そのプロセスにアタッチします。|なし。|アタッチが成功した場合は&0;。<br /><br /> 指定されたプロセスが無効であるか、指定があいまいなためにアタッチが失敗した場合は&1;。<br /><br /> CVCollectionCmd に、指定された出力ディレクトリへの書き込みアクセス許可がないためにアタッチが失敗した場合は&13;。|  
-|Detach|コレクションを停止します。|なし。|デタッチが成功した場合は&0;。<br /><br /> コレクションが現在実行されていないためにデタッチが失敗した場合は&1;。<br /><br /> コレクションを停止できなかったためにデタッチが失敗した場合は&2;。|  
-|解析|指定されたトレースを分析します。|CVTrace ファイルの完全パス。|分析が成功した場合は&0;。<br /><br /> システム全体のトレースが指定されている一方、ターゲット プロセスが指定されていないために分析を開始できない場合は&1;。<br /><br /> システム全体のトレースではない一方、プロセスが指定されているために分析を開始できない場合は&2;。<br /><br /> 指定されたプロセスが無効なために分析が失敗した場合は&3;。<br /><br /> 指定された CVTrace ファイルが無効なために分析が失敗した場合は&4;。|  
+|クエリ|コレクションを開始できるかどうかを返します。|なし|コレクションを開始できる場合は 0。<br /><br /> コレクションが既に実行中の場合は 1。<br /><br /> コレクションは実行中でないが、必要な [ETW](http://msdn.microsoft.com/Library/ac99a063-e2d2-40cc-b659-d23c2f783f92) セッションの 1 つ以上が既に有効になっている場合は 2。|  
+|Launch|同時実行ビジュアライザーで、指定されたプロセスを実行します。|実行可能ファイルのパス。|実行が成功した場合は 0。<br /><br /> ターゲット アプリケーションを開始できなかったために実行が失敗した場合は 1。<br /><br /> CVCollectionCmd に、指定された出力ディレクトリへの書き込みアクセス許可がないために実行が失敗した場合は 13。|  
+|Attach|システム全体でのトレースのコレクションを開始します。プロセスが指定されている場合は、そのプロセスにアタッチします。|なし。|アタッチが成功した場合は 0。<br /><br /> 指定されたプロセスが無効であるか、指定があいまいなためにアタッチが失敗した場合は 1。<br /><br /> CVCollectionCmd に、指定された出力ディレクトリへの書き込みアクセス許可がないためにアタッチが失敗した場合は 13。|  
+|Detach|コレクションを停止します。|なし。|デタッチが成功した場合は 0。<br /><br /> コレクションが現在実行されていないためにデタッチが失敗した場合は 1。<br /><br /> コレクションを停止できなかったためにデタッチが失敗した場合は 2。|  
+|解析|指定されたトレースを分析します。|CVTrace ファイルの完全パス。|分析が成功した場合は 0。<br /><br /> システム全体のトレースが指定されている一方、ターゲット プロセスが指定されていないために分析を開始できない場合は 1。<br /><br /> システム全体のトレースではない一方、プロセスが指定されているために分析を開始できない場合は 2。<br /><br /> 指定されたプロセスが無効なために分析が失敗した場合は 3。<br /><br /> 指定された CVTrace ファイルが無効なために分析が失敗した場合は 4。|  
 |LaunchArgs|ターゲット実行可能ファイルの引数を指定します。 このオプションは、Launch コマンドにのみ適用されます。|アプリケーションへのコマンド ライン引数。|なし。|  
 |OutDir|トレース ファイルを保存するディレクトリを指定します。 Launch コマンドと Attach コマンドに適用されます。|ディレクトリ パスまたは相対パス。|なし。|  
 |プロセス|Attach コマンドの実行時にアタッチするプロセス、または Analyze コマンドの実行時にトレースで分析するプロセスを指定します。 Attach コマンドと Analyze コマンドに適用されます。|PID またはプロセスの名前。|なし。|  
@@ -54,7 +74,7 @@ caps.handback.revision: 21
  CVCollectionCmd を使用してトレースを収集する際に、コレクション設定をカスタマイズする必要がある場合には、構成ファイルを使用してコレクション設定を指定します。  
   
 > [!NOTE]
->  Visual Studio を使用してトレースを収集する場合は、構成ファイルを直接変更しないでください。  代わりに、[[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスを使用して設定を変更します。  
+>  Visual Studio を使用してトレースを収集する場合は、構成ファイルを直接変更しないでください。  代わりに、 [[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスを使用して設定を変更します。  
   
  コレクション設定を変更するには、CVCollectionCmd ユーティリティを実行するコンピューター上に構成ファイルを作成します。 新しい構成ファイルを作成することも、Visual Studio がインストールされているコンピューター上の構成ファイルをコピーして、そのコピーを変更することもできます。 構成ファイルの名前は `UserConfig.xml` で、保管先は **[Local AppData]** フォルダーです。 ユーティリティを実行するときに、Launch、Attach、または Analyze コマンドと共に Config オプションを使用します。  Config オプションに関連付けられているパラメータに、構成ファイルのパスを指定します。  
   
@@ -86,7 +106,7 @@ caps.handback.revision: 21
 |KernelBufferSettings|カーネル バッファー設定パラメーターのリストを指定します。|以下の要素が含まれている必要があります。<br /><br /> -   BufferFlushTimer<br />-   BufferSize<br />-   MinimumBuffers<br />-   MaximumBuffers|  
 |BufferFlushTimer|ETW バッファーのフラッシュ タイマーを指定します。|正の整数。|  
 |BufferSize|イベント トレース セッション バッファーに割り当てられるメモリーの量 (KB 単位)。|0 ～ 1024 の数値。|  
-|MinimumBuffers|イベント トレース セッションのバッファー プールに割り当てられるバッファーの最小数。|論理コア数の&2; 倍以上の正の整数。|  
+|MinimumBuffers|イベント トレース セッションのバッファー プールに割り当てられるバッファーの最小数。|論理コア数の 2 倍以上の正の整数。|  
 |MaximumBuffers|イベント トレース セッションのバッファー プールに割り当てられるバッファーの最大数。|MinimumBuffers の値以上の数値。|  
 |JustMyCode|[マイ コードのみ] ディレクトリのリストを指定します。|0 個以上の MyCodeDirectory 要素のリスト。|  
 |MyCodeDirectory|コードを格納するディレクトリを指定します。|絶対パス。|  
@@ -150,8 +170,3 @@ caps.handback.revision: 21
 </LocalConfig>  
   
 ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -1,131 +1,149 @@
 ---
 title: "同時実行ビジュアライザー SDK | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.sdk.about"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.cv.sdk.about
 ms.assetid: 4b22cdf9-59b1-4c88-a6d8-1644a4a11e08
 caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 同時実行ビジュアライザー SDK
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0d5c4895cb77388e45442dccdbfdd98884e81c18
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
-同時実行ビジュアライザーの追加情報を表示するために、同時実行ビジュアライザー SDK を使用して、ソース・コードをインストルメントできます。  フェーズと追加コードやデータのイベントを関連付けることができます。  これらの追加の視覚化、*マーカー*と呼ばれます。入門編のチュートリアルでは、参照してください [同時実行ビジュアライザー SDK の概要](http://go.microsoft.com/fwlink/?LinkId=235405)。  
+---
+# <a name="concurrency-visualizer-sdk"></a>同時実行ビジュアライザー SDK
+同時実行ビジュアライザー SDK を使用してソース コードをインストルメント化し、同時実行ビジュアライザーに追加情報を表示することができます。 コードでフェーズとイベントに追加データを関連付けることができます。 このような追加の視覚化機能のことを*マーカー*と呼びます。  入門用のチュートリアルについては、「[Introducing the Concurrency Visualizer SDK](http://go.microsoft.com/fwlink/?LinkId=235405)」 (同時実行ビジュアライザー SDK の概要) を参照してください。  
   
-## プロパティ  
- フラグは、範囲とメッセージにそれぞれ 2 とおりのプロパティがあります: カテゴリと重要度です。  [詳細設定](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスで、表示するマーカーのセットをフィルター処理するためにこれらのプロパティを使用できます。  また、これらのプロパティは、マーカーのビジュアル表現に影響します。  重要度を表すには、たとえば、フラグのサイズが使用されます。  さらにカテゴリを示すために、色が使用されます。  
+## <a name="properties"></a>プロパティ  
+ フラグ、スパン、およびメッセージにはそれぞれ、カテゴリおよび重要度という 2 つのプロパティがあります。 [[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスで、これらのプロパティを使用して、表示されるマーカーのセットをフィルター処理することができます。 また、これらのプロパティはマーカーの視覚表示に影響します。 たとえば、フラグのサイズを使用して重要度を表します。 また、色を使用してカテゴリを示します。  
   
-## 基本的な使用法  
- 同時実行ビジュアライザーは、マーカーを生成するために使用できる既定のプロバイダーを公開します。  プロバイダーは、同時実行ビジュアライザーとともに登録され、マーカーを UI に表示されるように何も行う必要はありません。  
+## <a name="basic-usage"></a>基本的な使用方法  
+ 同時実行ビジュアライザーは、マーカーの生成に使用できる既定のプロバイダーを示します。 プロバイダーは同時実行ビジュアライザーと共に既に登録されており、UI にマーカーを表示するためにユーザー側で行う必要がある操作はありません。  
   
-### C\# および Visual Basic  
- C\# では、Visual Basic などのマネージ コードが <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers>を呼び出すことにより、既定のプロバイダーを使用します。  これはマーカーを生成するための 4 種類の関数を公開します: <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteFlag%2A>、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.EnterSpan%2A>、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteMessage%2A>と <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteAlert%2A>。  プロパティに既定を使用するか、これらの関数に対する複数のオーバーロード\) です。最も単純なオーバーロードはイベントの説明を指定する文字列パラメーターを受け取ります。  説明は同時実行ビジュアライザー レポートに表示されます。  
+### <a name="c-and-visual-basic"></a>C# および Visual Basic  
+ C#、Visual Basic、および他のマネージ コードでは、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers> を呼び出して既定のプロバイダーを使います。 マーカー生成用の 4 つの関数、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteFlag%2A>、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.EnterSpan%2A>、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteMessage%2A>、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteAlert%2A> が公開されます。 プロパティで既定を使用するかどうかに応じて、これらの関数には複数のオーバーロードがあります。  最も単純なオーバーロードは、イベントの説明を指定する文字列パラメーターのみを受け取ります。 説明は同時実行ビジュアライザーのレポートに表示されます。  
   
-##### C\# または Visual Basic で SDK のサポートを追加するには、  
+##### <a name="to-add-sdk-support-to-a-c-or-visual-basic-project"></a>C# または Visual Basic のプロジェクトに SDK のサポートを追加するには  
   
-1.  メニュー バーで、**\[同時実行ビジュアライザー\]**、**\[プロジェクトへの SDK の追加\]\[解析\]** をクリックします。  
+1.  メニュー バーで、**[分析]**、**[同時実行ビジュアライザー]**、**[プロジェクトへの SDK の追加]** の順に選択します。  
   
-2.  、SDK にアクセスし、**\[選択したプロジェクトに SDK を追加\]** をクリックするプロジェクトを選択します。  
+2.  SDK にアクセスするプロジェクトを選択し、**[選択したプロジェクトに SDK を追加]** ボタンを選択します。  
   
-3.  コードに Imports ステートメントまたは using ステートメントを追加します。  
+3.  imports ステートメントまたは using ステートメントをコードに追加します。  
   
-    ```c#  
+    ```CSharp  
     using Microsoft.ConcurrencyVisualizer.Instrumentation;  
     ```  
   
-    ```vb  
+    ```VB  
     Imports Microsoft.ConcurrencyVisualizer.Instrumentation  
     ```  
   
-### C\+\+  
- C\+\+ では、[marker\_series クラス](../profiling/marker-series-class.md) オブジェクトを作成し、関数を呼び出すために使用します。`marker_series` クラスは、マーカー [marker\_series::write\_flag メソッド](../profiling/marker-series-write-flag-method.md)、[marker\_series::write\_message メソッド](../profiling/marker-series-write-message-method.md)と [marker\_series::write\_alert メソッド](../profiling/marker-series-write-alert-method.md)を生成するための 3 種類の機能を公開します。  
+### <a name="c"></a>C++  
+ C++ では、[marker_series クラス](../profiling/marker-series-class.md) オブジェクトを作成し、それを使用して関数を呼び出します。  `marker_series` クラスは、マーカーを生成するための 3 つの関数 ([marker_series::write_flag メソッド](../profiling/marker-series-write-flag-method.md)、[marker_series::write_message メソッド](../profiling/marker-series-write-message-method.md)、および [marker_series::write_alert メソッド](../profiling/marker-series-write-alert-method.md)) を示します。  
   
-##### C \+\+.または C に SDK のサポートを追加するには、  
+##### <a name="to-add-sdk-support-to-a-c-or-c-project"></a>C++ または C のプロジェクトに SDK のサポートを追加するには  
   
-1.  メニュー バーで、**\[同時実行ビジュアライザー\]**、**\[プロジェクトへの SDK の追加\]\[解析\]** をクリックします。  
+1.  メニュー バーで、**[分析]**、**[同時実行ビジュアライザー]**、**[プロジェクトへの SDK の追加]** の順に選択します。  
   
-2.  、SDK にアクセスし、**\[選択したプロジェクトに SDK を追加\]** をクリックするプロジェクトを選択します。  
+2.  SDK にアクセスするプロジェクトを選択し、**[選択したプロジェクトに SDK を追加]** ボタンを選択します。  
   
-3.  C\+\+ では、`cvmarkersobj.h`を含めます。  C では、`cvmarkers.h`を含めます。  
+3.  C++ の場合は、`cvmarkersobj.h` を含めます。 C の場合は、`cvmarkers.h` を含めます。  
   
-4.  コードにステートメントを追加します。  
+4.  using ステートメントをコードに追加します。  
   
     ```  
     using namespace Concurrency::diagnostic;  
     ```  
   
-5.  `marker_series` オブジェクトを作成し、`span` のコンストラクターに渡します。  
+5.  `marker_series` オブジェクトを作成し、それを `span` コンストラクターに渡します。  
   
-    ```cpp  
+    ```C++  
   
     marker_series mySeries;  
     span s(mySeries, _T("Span description"));  
   
     ```  
   
-## カスタムの使用  
- 高度なシナリオでは、同時実行ビジュアライザー SDK には、他のコントロールを公開します。2 種類の主要な機能は、より高度なシナリオに関連付けられています。: マーカーのプロバイダーおよびマーカーのシリーズ。  マーカーのプロバイダーは、ETW のプロバイダーです \(それぞれに異なる GUID が含まれます。  マーカーのシリーズは 1 個のプロバイダーによって生成されるイベントのシリアル チャネルです。  マーカーのプロバイダーによって生成されるイベントを整理することもできます。  
+## <a name="custom-usage"></a>カスタムの使用方法  
+ 高度なシナリオの場合、同時実行ビジュアライザー SDK はより詳細に制御します。  より高度なシナリオには、2 つの主な概念 (マーカー プロバイダーとマーカー シリーズ) が関連付けられています。 マーカー プロバイダーはさまざまな ETW プロバイダー (それぞれ異なる GUID を持つ) です。 マーカー シリーズは、1 つのプロバイダーによって生成されるイベントのシリアル チャネルです。 マーカー プロバイダーによって生成されるイベントを整理する場合に使用できます。  
   
-#### C\# または Visual Basic で新しいマーカーのプロバイダーを使用するには、  
+#### <a name="to-use-a-new-marker-provider-in-a-c-or-visual-basic-project"></a>C# または Visual Basic プロジェクトで新しいマーカー プロバイダーを使用するには  
   
-1.  <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerWriter> オブジェクトを作成します。コンストラクターは、GUID を取得します。  
+1.  <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerWriter> オブジェクトを作成します。  コンストラクターは GUID を受け取ります。  
   
-2.  プロバイダーを登録するには、同時実行ビジュアライザーを [詳細設定](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスを開きます。**\[マーカー\]** タブを選択し、**\[新しいプロバイダーの追加\]** ボタンをクリックします。  [詳細設定](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスで、プロバイダーのプロバイダーと説明を作成するために使用される GUID を入力します。  
+2.  プロバイダーを登録するには、同時実行ビジュアライザーの [[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスを開きます。  **[マーカー]** タブを選択してから、**[新しいプロバイダーを追加します]** ボタンを選択します。 [[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスで、プロバイダーの作成に使用された GUID と、プロバイダーの説明を入力します。  
   
-#### C \+\+.または C で新しいマーカーのプロバイダーを使用するには、  
+#### <a name="to-use-a-new-marker-provider-in-a-c-or-c-project"></a>C# または C プロジェクトで新しいマーカー プロバイダーを使用するには  
   
-1.  PCV\_PROVIDER を初期化するために `CvInitProvider` 関数を使用します。コンストラクターは GUID\* と PCV\_PROVIDER\* を受け取ります。  
+1.  `CvInitProvider` 関数を使用して、PCV_PROVIDER を初期化します。  コンストラクターは GUID* と PCV_PROVIDER\* を受け取ります。  
   
-2.  プロバイダーを登録するには、[詳細設定](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスを開きます。**\[マーカー\]** タブを選択し、**\[新しいプロバイダーの追加\]** ボタンをクリックします。  このダイアログ ボックスでは、プロバイダーのプロバイダーと説明を作成するために使用される GUID を入力します。  
+2.  プロバイダーを登録するには、[[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスを開きます。  **[マーカー]** タブを選択してから、**[新しいプロバイダーを追加します]** ボタンを選択します。 ダイアログ ボックスに、プロバイダーの作成に使用された GUID と、プロバイダーの説明を入力します。  
   
-#### C\# または Visual Basic のマーカーのシリーズを使用するには、  
+#### <a name="to-use-a-marker-series-in-a-c-or-visual-basic-project"></a>C# または Visual Basic プロジェクトでマーカー シリーズを使用するには  
   
-1.  新しい <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries>を使用するには、最初に <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerWriter> オブジェクトを使用して作成し、新しいシリーズのマーカー イベントを直接生成します。  
+1.  新しい <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries> を使うには、最初に <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerWriter> オブジェクトを使って作成した後、新しいシリーズから直接マーカー イベントを生成します。  
   
-    ```c#  
-    MarkerSeries series1 = myMarkerWriter.CreateMarkerSeries(″Series 1″);  
-    series1.WriteFlag(″My flag″);  
+    ```CSharp  
+    MarkerSeries series1 = myMarkerWriter.CreateMarkerSeries("Series 1");  
+    series1.WriteFlag("My flag");  
     ```  
   
-    ```vb  
-    Dim series1 As New myMarkerWriter.CreateMarkerSeries(″Series 1″)  
-    series1.WriteFlag(″My flag″)  
+    ```VB  
+    Dim series1 As New myMarkerWriter.CreateMarkerSeries("Series 1")  
+    series1.WriteFlag("My flag")  
     ```  
   
-#### C\+\+ プロジェクトで.マーカーのシリーズを使用するには、  
+#### <a name="to-use-a-marker-series-in-a-c-project"></a>C++ プロジェクトでマーカー シリーズを使用するには  
   
-1.  `marker_series` オブジェクトを作成します。この新しい一連のイベントを生成します。  
+1.  `marker_series` オブジェクトを作成します。  この新しいシリーズからイベントを生成することができます。  
   
     ```scr  
     marker_series series;  
     series.write_flag(_T("Hello world!"));  
     ```  
   
-#### C\+\+.でマーカーのシリーズを使用するには、  
+#### <a name="to-use-a-marker-series-in-a-c-project"></a>C プロジェクトでマーカー シリーズを使用するには  
   
-1.  PCV\_MARKERSERIES の作成に `CvCreateMarkerSeries` 関数を使用します。  
+1.  `CvCreateMarkerSeries` 関数を使用して、PCV_MARKERSERIES を作成します。  
   
-    ```cpp  
+    ```C++  
     PCV_MARKERSERIES series;  
     CvCreatemarkerSeries(myProvider, _T("My Series"), &series);  
     CvWriteFlag(series, _T("Writing a flag"));  
     ```  
   
-## 関連トピック  
+## <a name="related-topics"></a>関連トピック  
   
 |タイトル|説明|  
-|----------|--------|  
-|[C\+\+ ライブラリ リファレンス](../profiling/cpp-library-reference.md)|C\+\+ の同時実行ビジュアライザー API について説明します。|  
-|[C ライブラリ リファレンス](../profiling/c-library-reference.md)|C.の同時実行ビジュアライザー API について説明します。|  
+|-----------|-----------------|  
+|[C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)|C++ の同時実行ビジュアライザー API について説明します。|  
+|[C ライブラリ リファレンス](../profiling/c-library-reference.md)|C の同時実行ビジュアライザー API について説明します。|  
 |<xref:Microsoft.ConcurrencyVisualizer.Instrumentation>|マネージ コードの同時実行ビジュアライザー API について説明します。|  
-|[同時実行ビジュアライザー](../profiling/concurrency-visualizer.md)|同時実行方式を使用して生成され、スレッド実行データを含むプロファイル データ ファイルのビューとレポートに関するリファレンス情報。|
+|[同時実行ビジュアライザー](../profiling/concurrency-visualizer.md)|同時実行メソッドを使用して生成され、スレッド実行データを含む、プロファイル データ ファイルのビューとレポートに関するリファレンス情報。|

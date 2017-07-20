@@ -27,21 +27,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: cfa8cfb699ae20e1ae5e563545959b16802540ea
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="wpf-data-binding-with-linq-to-xml"></a>LINQ to XML による WPF のデータ バインディング
-ここでは、Windows Presentation Foundation (WPF) アプリケーションでのデータ バインディングのデータ ソースとして LINQ to XML を使用する方法について説明します。 このシナリオは、<xref:System.Xml.Linq.XAttribute?displayProperty=fullName> と <xref:System.Xml.Linq.XElement?displayProperty=fullName> の特殊な*動的プロパティ*に依存します。 ここでは、これらの動的プロパティについても説明します。  
+ここでは、Windows Presentation Foundation (WPF) アプリケーションでのデータ バインディングのデータ ソースとして LINQ to XML を使用する方法について説明します。 このシナリオは、<xref:System.Xml.Linq.XAttribute?displayProperty=fullName> および <xref:System.Xml.Linq.XElement?displayProperty=fullName> の特殊な "*動的プロパティ*" に依存しています。 ここでは、これらの動的プロパティについても説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|説明|  
 |-----------|-----------------|  
 |[LINQ to XML による WPF のデータ バインディングの概要](../designers/wpf-data-binding-with-linq-to-xml-overview.md)|<xref:System.Xml.Linq> 名前空間に用意されている動的データ バインド機能を紹介し、WPF のユーザー インターフェイス コンポーネントでこれらの機能をデータ ソースとして使用する方法について説明します。|  
-|[LINQ to XML の動的プロパティ](../designers/linq-to-xml-dynamic-properties.md)|<xref:System.Xml.Linq.XAttribute> クラスと <xref:System.Xml.Linq.XElement> クラスにより公開される動的プロパティに関する参照情報を提供します。|  
+|[LINQ to XML の動的プロパティ](../designers/linq-to-xml-dynamic-properties.md)|<xref:System.Xml.Linq.XAttribute> クラスおよび <xref:System.Xml.Linq.XElement> クラスによって公開される動的プロパティの参照情報について説明します。|  
 |[LINQ to XML を使用した WPF のデータ バインディングの例](../designers/wpf-data-binding-using-linq-to-xml-example.md)|XML データ ソースにユーザー インターフェイス コンポーネントをバインドする WPF の例について説明します。|  
   
 ## <a name="reference"></a>参照  

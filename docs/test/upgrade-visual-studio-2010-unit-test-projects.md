@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
-ms.openlocfilehash: 806f5004a4ab3d33d4be86cd4784de989c5fd282
-ms.lasthandoff: 03/03/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: d6550f2aa1aab249eda569ff84ddf4dcf488aa18
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="upgrade-visual-studio-2010-unit-test-projects"></a>Visual Studio 2010 単体テスト プロジェクトをアップグレードする
@@ -47,7 +48,7 @@ ms.lasthandoff: 03/03/2017
 > [!NOTE]
 >  コマンド ラインから vstest.console.exe を使用して新しい単体テストを実行できます。 vstest.console.exe 使用の詳細については、「[VSTest.Console.exe のコマンド ライン オプション](/devops-test-docs/test/vstest-console-exe-command-line-options)」を参照するか、ヘルプ スイッチ **vstest.console.exe /?** を使用してコマンドを実行してください。 MStest.exe を使用して既存の単体テストの実行を継続できます。 詳細については、「[MSTest を使用したコマンド ラインからの自動テストの実行](/devops-test-docs/test/run-automated-tests-from-the-command-line-using-mstest)」および「[MSTest.exe のコマンド ライン オプション](/devops-test-docs/test/mstest-exe-command-line-options)」を参照してください。  
   
- もう&1; つの重要な変更は、新しいテスト エクスプローラーです。 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] では、Visual Studio の以前のバージョンで使い慣れていたかもしれない、テスト ビュー ウィンドウのような、いくつかのテスト用ウィンドウが使用されなくなっています。 テスト エクスプローラーは、ソフトウェア開発作業に単体テストを導入した開発者や開発チームをよりよくサポートするように設計されています。 詳細については、「[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)」を参照してください。  
+ もう 1 つの重要な変更は、新しいテスト エクスプローラーです。 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] では、Visual Studio の以前のバージョンで使い慣れていたかもしれない、テスト ビュー ウィンドウのような、いくつかのテスト用ウィンドウが使用されなくなっています。 テスト エクスプローラーは、ソフトウェア開発作業に単体テストを導入した開発者や開発チームをよりよくサポートするように設計されています。 詳細については、「[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)」を参照してください。  
   
 ## <a name="compatibility-issues-between-visual-studio-2010-sp1-and-visual-studio-2012"></a>Visual Studio 2010 SP1 と Visual Studio 2012 の互換性の問題  
  Visual Studio 2010 SP1 と [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] の間で単体テストを移行する場合に、知っておくべきいくつかの問題があります。  

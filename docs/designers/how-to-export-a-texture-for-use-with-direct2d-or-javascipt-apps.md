@@ -13,10 +13,11 @@ caps.latest.revision: 11
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fa78fa1e06619cd784831a47644e0092e6a9a0ab
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 77f610f9bf40cbd1ff840832203a78ccbaa3eeb2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps"></a>方法: Direct2D または Javascipt アプリで使用するためのテクスチャをエクスポートする
@@ -51,7 +52,7 @@ ms.lasthandoff: 02/22/2017
   
 #### <a name="to-create-a-texture-thats-compatible-with-direct2d-rendering-conventions"></a>Direct2D のレンダリング規則に準拠したテクスチャを作成するには  
   
-1.  基本的なテクスチャを作成します。 既存のイメージを読み込むか、「[方法: 基本テクスチャを作成する](../designers/how-to-create-a-basic-texture.md)」の手順に従って新しいイメージを作成します。 DDS 形式でブロック圧縮をサポートするには、100x100、128x128、256x192 など、サイズの幅と高さが 4 の倍数であるテクスチャを指定します。 MIPMAP はサポートされていないため、テクスチャは正方形である必要がなく、サイズも&2; の累乗である必要はありません。  
+1.  基本的なテクスチャを作成します。 既存のイメージを読み込むか、「[方法: 基本テクスチャを作成する](../designers/how-to-create-a-basic-texture.md)」の手順に従って新しいイメージを作成します。 DDS 形式でブロック圧縮をサポートするには、100x100、128x128、256x192 など、サイズの幅と高さが 4 の倍数であるテクスチャを指定します。 MIPMAP はサポートされていないため、テクスチャは正方形である必要がなく、サイズも 2 の累乗である必要はありません。  
   
 2.  イメージ コンテンツ パイプラインによって処理されるようにテクスチャ ファイルを構成します。 **ソリューション エクスプローラー**で、先ほど作成したテクスチャ ファイルのショートカット メニューを開き、**[プロパティ]** をクリックします。 **[構成プロパティ]** の **[全般]** ページで、**[項目の種類]** を **[Image Content Pipeline]** (イメージ コンテンツ パイプライン) に設定します。 **[コンテンツ]** が **[はい]** に、**[ビルドから除外]** が **[いいえ]** に設定されていることを確認し、**[適用]** ボタンをクリックします。 **[イメージ コンテンツ パイプライン]** の構成プロパティ ページが表示されます。  
   

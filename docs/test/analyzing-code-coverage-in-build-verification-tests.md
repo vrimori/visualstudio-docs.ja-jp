@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: bfdef1bffe6939631bb50e11d902f500c1d599ce
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 351ec5b60e84ed1633c26751173a4b7e4af663dd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyzing-code-coverage-in-build-verification-tests"></a>ビルド確認テストのコード カバレッジの分析
@@ -44,7 +45,7 @@ Microsoft Visual Studio のコード カバレッジ分析は、コードの中�
   
      複数のテスト ソース定義がある場合は、各定義に対してこの手順を繰り返します。  
   
-    -   *ただし、[**実行設定の種類**] というフィールドはありません。*  
+    -   *ただし、**[実行設定の種類]** というフィールドはありません。*  
   
          [**自動テスト**] の下の [**テスト アセンブリ**] を選択し、行の末尾の省略記号 (**[...]**) ボタンを選択します。 [**テストの実行の追加と編集**] ダイアログ ボックスで、[**テスト ランナー**] の下の [**Visual Studio テスト ランナー**] を選択します。  
   

@@ -34,25 +34,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 80ce7de7e89844d8c9cb1052499b2d873e04965e
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 41cca3051eaf1bfdc90f6616900699b8996033b0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="options-text-editor-cc-formatting"></a>[オプション]、[テキスト エディター]、[C/C++]、[書式設定]
+# [オプション]、[テキスト エディター]、[C/C++]、[書式設定]
+<a id="options-text-editor-cc-formatting" class="xliff"></a>
 このページでは、C または C++ でプログラムを記述する際のコード エディターの既定の動作を変更できます。  
   
  このページを表示するには、左ペインの [**オプション**] ダイアログ ボックスで、[**テキスト エディター**] フォルダー、[**C/C++**] を順に展開して、[**書式設定**] をクリックします。  
   
 > [!NOTE]
->  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="cc-options"></a>[C/C++ オプション]  
+## [C/C++ オプション]
+<a id="cc-options" class="xliff"></a>  
  [**自動クイック ヒントのツールヒントを有効にする**]  
  IntelliSense のクイック ヒント機能を有効または無効にします。  
   
-## <a name="inactive-code"></a>[アクティブでないコード]  
+## [アクティブでないコード]
+<a id="inactive-code" class="xliff"></a>  
  [**アクティブでないブロックの表示**]  
  `#ifdef` 宣言によって無効化されているコードが、識別しやすいように異なる色で表示されます。  
   
@@ -62,21 +66,24 @@ ms.lasthandoff: 04/05/2017
  [**アクティブでないコードの不透明度**]  
  アクティブでないコード ブロックの不透明度の割合をカスタマイズできます。  
   
-## <a name="indentation"></a>[インデント幅]  
+## [インデント幅]
+<a id="indentation" class="xliff"></a>  
  [**中かっこのインデント**]  
  関数、`for` ループなどのコード ブロックの開始後に Enter キーを押したときの中かっこの配置を構成できます。 中かっこは、コード ブロックの最初の文字位置に合わせて、またはインデント位置に合わせて配置されます。  
   
  [**自動インデントを有効にするタブ**]  
  Tab キーを押したときに現在のコード行で発生する動作を構成できます。 行がインデントされるか、またはタブが挿入されます。  
   
-## <a name="miscellaneous"></a>その他  
+## その他
+<a id="miscellaneous" class="xliff"></a>  
  [**[タスク一覧] ウィンドウにコメントが列挙されます**]  
  開いているソース ファイルのコメント内に事前設定された語がないか、エディターでスキャンできます。 見つかったキーワードのエントリが [**タスク一覧**] ウィンドウに作成されます。  
   
  [**一致するトークンの強調表示**]  
  カーソルが中かっこの横に置かれたときに、その中かっこで囲まれているコードの内容を確認しやすいように、対応する中かっこが強調表示されます。  
   
-## <a name="outlining"></a>アウトライン  
+## アウトライン
+<a id="outlining" class="xliff"></a>  
  [**ファイルが開かれたときにアウトライン モードを実行する**]  
  ファイルをテキスト エディターで開くときに、アウトライン表示機能を有効にできます。 詳細については、「[アウトライン](../../ide/outlining.md)」を参照してください。 このチェック ボックスをオンにすると、ファイルを開いたときにアウトライン表示機能が有効になります。  
   
@@ -92,6 +99,7 @@ ms.lasthandoff: 04/05/2017
   
 -   [while ステートメント (C++)](/cpp/cpp/while-statement-cpp)  
   
-## <a name="see-also"></a>関連項目  
+## 関連項目
+<a id="see-also" class="xliff"></a>  
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)   
  [IntelliSense の使用](../../ide/using-intellisense.md)

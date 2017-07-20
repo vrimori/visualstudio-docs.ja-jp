@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: b1efeec49da120d438ac14d89c2f5e40321326ab
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -61,7 +62,7 @@ ms.lasthandoff: 02/22/2017
  **入力 (ボタン)**  
  ![HTML Web ページ ボタン](../../ide/reference/media/vxbutton.gif "vxButton")  
   
- `type="button"` の `input` 要素を挿入します。 表示されるテキストを変更するには、`name` プロパティを編集します。 既定では、`id="Button1"` は最初のボタンに挿入され、`id="Button2"` は&2; 番目のボタンという具合に挿入されます。  
+ `type="button"` の `input` 要素を挿入します。 表示されるテキストを変更するには、`name` プロパティを編集します。 既定では、`id="Button1"` は最初のボタンに挿入され、`id="Button2"` は 2 番目のボタンという具合に挿入されます。  
   
  **入力 (ボタン)** をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 02/22/2017
  **入力 (リセット)**  
  ![HTMLpageResetButton スクリーンショット](../../ide/reference/media/vxreset.gif "vxReset")  
   
- `type="reset"` の `input` 要素を挿入します。 表示されるテキストを変更するには、`name` プロパティを編集します。 既定では、`id="Reset1"` は最初のリセット ボタンに挿入され、`id="Reset2"` は&2; 番目のリセット ボタンという具合に挿入されます。  
+ `type="reset"` の `input` 要素を挿入します。 表示されるテキストを変更するには、`name` プロパティを編集します。 既定では、`id="Reset1"` は最初のリセット ボタンに挿入され、`id="Reset2"` は 2 番目のリセット ボタンという具合に挿入されます。  
   
  **入力 (リセット)** をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 02/22/2017
  **入力 (送信)**  
  ![HTMLpageToolbarSubmitButton スクリーンショット](../../ide/reference/media/vxsubmit.gif "vxSubmit")  
   
- `type="submit"` の `input` 要素を挿入します。 表示されるテキストを変更するには、`name` プロパティを編集します。 既定では、`id="Submit1"` は最初の送信ボタンに挿入され、`id="Submit2"` は&2; 番目の送信ボタンという具合に挿入されます。  
+ `type="submit"` の `input` 要素を挿入します。 表示されるテキストを変更するには、`name` プロパティを編集します。 既定では、`id="Submit1"` は最初の送信ボタンに挿入され、`id="Submit2"` は 2 番目の送信ボタンという具合に挿入されます。  
   
  **入力 (送信)** をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 02/22/2017
  **入力 (テキスト)**  
  ![HTMLpageToolbarTextField スクリーンショット](../../ide/reference/media/vxtextfield.gif "vxTextfield")  
   
- ドキュメントに `type="text"` の `input` 要素を挿入します。 表示される既定のテキストを変更するには、`value` 属性を編集します。 既定では、`id="Text1"` は最初のテキスト フィールドに挿入され、`id="Text2"` は&2; 番目のテキスト フィールドという具合に挿入されます。  
+ ドキュメントに `type="text"` の `input` 要素を挿入します。 表示される既定のテキストを変更するには、`value` 属性を編集します。 既定では、`id="Text1"` は最初のテキスト フィールドに挿入され、`id="Text2"` は 2 番目のテキスト フィールドという具合に挿入されます。  
   
  **入力 (テキスト)** をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 02/22/2017
  **入力 (ファイル)**  
  ![HTML ページ ファイル フィールド](../../ide/reference/media/vxfilefield.gif "vxFilefield")  
   
- ドキュメントに `type="file"` の `input` 要素を挿入します。 既定では、`id="File1"` は最初のファイル フィールドに挿入され、`id="File2"` は&2; 番目のファイル フィールドという具合に挿入されます。  
+ ドキュメントに `type="file"` の `input` 要素を挿入します。 既定では、`id="File1"` は最初のファイル フィールドに挿入され、`id="File2"` は 2 番目のファイル フィールドという具合に挿入されます。  
   
  **入力 (ファイル)** をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。  
   
@@ -132,7 +133,7 @@ ms.lasthandoff: 02/22/2017
  **入力 (パスワード)**  
  ![Visual Studio パスワード ファイル](../../ide/reference/media/vxpassword.gif "vxPassword")  
   
- `type="password"` の `input` 要素を挿入します。 既定では、`id="Password1"` は最初のパスワード フィールドに挿入され、`id="Password2"` は&2; 番目のパスワード フィールドという具合に挿入されます。  
+ `type="password"` の `input` 要素を挿入します。 既定では、`id="Password1"` は最初のパスワード フィールドに挿入され、`id="Password2"` は 2 番目のパスワード フィールドという具合に挿入されます。  
   
  **入力 (パスワード)** をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 02/22/2017
  **入力 (チェック ボックス)**  
  ![HTML Web ページ ツールボックス チェック ボックス オプション](../../ide/reference/media/vxcheckbox.gif "vxCheckbox")  
   
- `type="checkbox"` の `input` 要素を挿入します。 表示されるテキストを変更するには、`name` プロパティを編集します。 既定では、`id="Checkbox1"` は最初のチェック ボックスに挿入され、`id="Checkbox2"` は&2; 番目のチェック ボックスという具合に挿入されます。  
+ `type="checkbox"` の `input` 要素を挿入します。 表示されるテキストを変更するには、`name` プロパティを編集します。 既定では、`id="Checkbox1"` は最初のチェック ボックスに挿入され、`id="Checkbox2"` は 2 番目のチェック ボックスという具合に挿入されます。  
   
  **入力 (チェック ボックス)** をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。  
   
@@ -161,7 +162,7 @@ ms.lasthandoff: 02/22/2017
  **入力 (ラジオ)**  
  ![VisualStudioHTMLpageRadioButton スクリーンショット](../../ide/reference/media/vxradio.gif "vxRadio")  
   
- `type="radio"` の `input` 要素を挿入します。 表示されるテキストを変更するには、`name` プロパティを編集します。 既定では、`id="Radio1"` は最初のラジオ ボタンに挿入され、`id="Radio2"` は&2; 番目のラジオ ボタンという具合に挿入されます。  
+ `type="radio"` の `input` 要素を挿入します。 表示されるテキストを変更するには、`name` プロパティを編集します。 既定では、`id="Radio1"` は最初のラジオ ボタンに挿入され、`id="Radio2"` は 2 番目のラジオ ボタンという具合に挿入されます。  
   
  **入力 (ラジオ)** をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。  
   
@@ -174,7 +175,7 @@ ms.lasthandoff: 02/22/2017
  **入力 (非表示)**  
  ![HTML ページ非表示項目](../../ide/reference/media/vxhidden.gif "vxhidden")  
   
- `type="hidden"` の `input` 要素を挿入します。 既定では、`id="Hidden1"` は最初の非表示フィールドに挿入され、`id="Hidden2"` は&2; 番目の非表示フィールドという具合に挿入されます。  
+ `type="hidden"` の `input` 要素を挿入します。 既定では、`id="Hidden1"` は最初の非表示フィールドに挿入され、`id="Hidden2"` は 2 番目の非表示フィールドという具合に挿入されます。  
   
  **入力 (非表示)** をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。  
   
@@ -229,7 +230,7 @@ ms.lasthandoff: 02/22/2017
  **選択**  
  ![HTML ページ ツールボックス ドロップダウン](../../ide/reference/media/vxdropdown.gif "vxDropdown")  
   
- `select` 要素のドロップダウン リスト (`size` 属性なし) を挿入します。 既定では、`id="select1"` は最初のリスト ボックスに挿入され、`id="select2"` は&2; 番目のリスト ボックスという具合に挿入されます。  
+ `select` 要素のドロップダウン リスト (`size` 属性なし) を挿入します。 既定では、`id="select1"` は最初のリスト ボックスに挿入され、`id="select2"` は 2 番目のリスト ボックスという具合に挿入されます。  
   
  **選択**をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。  
   

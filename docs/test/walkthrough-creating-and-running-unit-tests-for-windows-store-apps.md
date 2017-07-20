@@ -32,23 +32,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 8ce2ccc55a53d03b72f0d1d81c206b2b9a980eed
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 11ae1d653bc34ccb9c8fd8834d134b7212bc4f9a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-windows-store-apps"></a>チュートリアル: Windows ストア アプリに対する単体テストの作成と実行
-Visual Studio には、[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] マネージ アプリの単体テストのサポートと、Visual C#、Visual Basic、および Visual C++ 用の単体テスト ライブラリ テンプレートが含まれています。  
+Visual Studio には、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] マネージ アプリの単体テストのサポートと、Visual C#、Visual Basic、および Visual C++ 用の単体テスト ライブラリ テンプレートが含まれています。  
   
 > [!TIP]
->  [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリの開発の詳細については、「[Windows ストア アプリ開発の開始](http://go.microsoft.com/fwlink/?LinkID=241410)」を参照してください。  
+>  [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリの開発の詳細については、「 [Windows ストア アプリ開発の開始](http://go.microsoft.com/fwlink/?LinkID=241410)」を参照してください。  
   
  Visual Studio は、次の単体テスト機能を備えています。  
   
 -   [単体テスト プロジェクトの作成](#CreateAndRunUnitTestWin8Tailored_Create)  
   
--   [単体テスト プロジェクトのマニフェストの編集](#CreateAndRunUnitTestWin8Tailored_Manifest)  
+-   [単体テスト プロジェクトのマニフェストを編集します。](#CreateAndRunUnitTestWin8Tailored_Manifest)  
   
 -   [単体テストのコーディング](#CreateAndRunUnitTestWin8Tailored_Code)  
   
@@ -72,7 +73,7 @@ Visual Studio には、[!INCLUDE[win8_appname_long](../debugger/includes/win8_ap
     > [!NOTE]
     >  Visual Studio には、Visual C#、Visual Basic、および Visual C++ 用の単体テスト ライブラリ テンプレートがあります。  
   
-3.  (省略可能) **[名前]** テキストボックスに、[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]の単体テスト プロジェクトで使用する名前を入力します。  
+3.  (省略可能) **[名前]** テキストボックスで、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]の単体テスト プロジェクトで使用する名前を入力します。  
   
 4.  (省略可能) **[位置]** テキストボックスにデータを入力するか、 **[参照]** ボタンを選択することにより、プロジェクトを作成する場所のパスを変更します。  
   
@@ -91,7 +92,7 @@ Visual Studio には、[!INCLUDE[win8_appname_long](../debugger/includes/win8_ap
   
 #### <a name="to-edit-the-unit-test-projects-windows-store-application-manifest-file"></a>単体テスト プロジェクトの Windows ストア アプリ マニフェスト ファイルを編集するには  
   
-1.  ソリューション エクスプローラーで、新しい [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]の単体テスト プロジェクト内の Package.appxmanifest ファイルを右クリックし、**[開く]** を選択します。  
+1.  ソリューション エクスプローラーで、新しい [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 単体テスト プロジェクト内の Package.appxmanifest ファイルを右クリックし、 **[開く]**を選択します。  
   
      マニフェスト デザイナーが編集のために表示されます。  
   
@@ -100,7 +101,7 @@ Visual Studio には、[!INCLUDE[win8_appname_long](../debugger/includes/win8_ap
 3.  **[機能]**リストで、単体テストを必要とする機能とコードを選択します。 たとえば、単体テストが必要で、テストするコードにインターネットにアクセスする機能が必要な場合は、 **[インターネット]** チェック ボックスをオンにします。  
   
     > [!NOTE]
-    >  選択する機能には、[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] の単体テストが正しく機能するために必要な機能だけが含まれる必要があります。 機能は、テスト中の [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリケーションの一部ではない機能を含む必要はなく、一般に、テスト対象の [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリケーションに指定された機能のサブセットです。  
+    >  選択する機能には、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] の単体テストが正しく機能するために必要な機能だけが含まれる必要があります。 機能は、テスト中の [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリケーションの一部ではない機能を含む必要はなく、一般に、テスト対象の [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリケーションに指定された機能のサブセットです。  
   
      マニフェスト デザイナーの詳細については、「[マニフェスト デザイナーを使用した Windows 8.1 アプリ パッケージの構成](http://msdn.microsoft.com/Library/24c58b7f-9c6d-41c3-b385-c1e8497d5b2d)」を参照してください。  
   
@@ -142,7 +143,7 @@ Visual Studio には、[!INCLUDE[win8_appname_long](../debugger/includes/win8_ap
      ![単体テスト エクスプローラー &#45; 単体テストの実行](../test/media/unit_test_win8_unittestexplorer_contextmenurun.png "Unit_Test_Win8_UnitTestExplorer_ContextMenuRun")  
   
     > [!TIP]
-    >  エクスプローラーに一覧表示された&1; つ以上の単体テストを選択し、 **[選択したテストの実行]**を右クリックして選択します。  
+    >  エクスプローラーに一覧表示された 1 つ以上の単体テストを選択し、 **[選択したテストの実行]**を右クリックして選択します。  
     >   
     >  また、 **[選択されたテストをデバッグ]**、 **[テストを開く]**をクリックし、 **[プロパティ]** オプションを使用できます。  
     >   
@@ -161,7 +162,7 @@ Visual Studio には、[!INCLUDE[win8_appname_long](../debugger/includes/win8_ap
  [Visual Studio の単体テスト](http://go.microsoft.com/fwlink/?LinkId=224477)  
   
 ### <a name="msdn-library"></a>MSDN ライブラリ  
- [MSDN ライブラリ – 既存コードの単体テストの作成と実行 (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkID=223683)  
+ [MSDN ライブラリ - 既存コードの単体テストの作成と実行 (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkID=223683)  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio でのストア アプリのテスト](../test/testing-store-apps-with-visual-studio.md)   

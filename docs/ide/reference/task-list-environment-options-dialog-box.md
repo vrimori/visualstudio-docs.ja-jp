@@ -1,78 +1,95 @@
 ---
 title: "[タスク一覧] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Environment.Task_List"
-  - "VS.ToolsOptionsPag.Environment.Task_List"
-  - "VS.ToolsOptionsPages.Environment.TaskList"
-  - "VS.Environment.Task List"
-helpviewer_keywords: 
-  - "[トークン リスト]"
-  - "トークン"
-  - "アイコン、タスク一覧の"
-  - "タスク一覧、環境のカスタマイズ"
-  - "[オプション] ダイアログ ボックス、タスク一覧の環境"
-  - "感嘆符"
-  - "コメント、タスク一覧のコメント タスク"
-  - "トークン、タスク一覧"
-  - "タスク一覧、コメント タスク"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Environment.Task_List
+- VS.ToolsOptionsPag.Environment.Task_List
+- VS.ToolsOptionsPages.Environment.TaskList
+- VS.Environment.Task List
+helpviewer_keywords:
+- Token List
+- tokens
+- icons, in Task List
+- Task List, customizing environment
+- Options dialog box, Task List environment
+- exclamation points
+- comments, comment tasks in Task List
+- tokens, and the Task List
+- Task List, comment tasks
 ms.assetid: 88327e04-fa3e-48db-995b-ad89e0dc4ed2
 caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# [タスク一覧] ([オプション] ダイアログ ボックス - [環境])
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 63aad78bdc7df685ca3a73ec16a9cbc87b78151f
+ms.openlocfilehash: ce863d4e0c4a9fc142be26c587b7f6e53f5ef154
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/14/2017
 
-この \[オプション\] ページでは、**タスク一覧**のアラームを生成するコメント トークンを追加、削除、変更できます。  これらの設定を表示するには、**\[ツール\]** メニューの **\[オプション\]** を選択し、**\[環境\]** フォルダーを展開して **\[タスク一覧\]** を選択します。  
+---
+# <a name="task-list-environment-options-dialog-box"></a>[タスク一覧] ([オプション] ダイアログ ボックス - [環境])
+この [オプション] ページでは、**タスク一覧**のアラームを生成するコメント トークンを追加、削除、変更できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** を選択し、**[環境]** フォルダーを展開して **[タスク一覧]** を選択します。  
   
-## タスク一覧オプション  
+## <a name="task-list-options"></a>タスク一覧オプション  
  タスクの削除を確認  
- 選択した場合、**タスク一覧**からユーザー タスクを削除するたびにメッセージ ボックスが表示され、削除してもよいかどうかを確認できます。  既定では、このオプションはオンになっています。  
+ 選択した場合、**タスク一覧**からユーザー タスクを削除するたびにメッセージ ボックスが表示され、削除してもよいかどうかを確認できます。 既定では、このオプションはオンです。  
   
 > [!NOTE]
 >  タスク コメントを削除するには、コメントを探すリンクを使用し、その後コードからコメントを削除します。  
   
  ファイル名のみ表示  
- 選択した場合、**タスク一覧**の **\[ファイル\]** 列には編集対象のファイルの名前だけが表示され、完全なパスは表示されません。  
+ 選択した場合、**タスク一覧**の **[ファイル]** 列には編集対象のファイルの名前だけが表示され、完全なパスは表示されません。  
   
-## トークン  
- **\[トークン リスト\]** に登録されたトークンで始まるコメントをコード内に挿入すると、ファイルを編集用に開くたびにそのコメントが新しいエントリとして**タスク一覧**に表示されます。  この**タスク一覧**エントリをクリックすることによって、コード内のコメント行に直接ジャンプできます。  詳細については、「[タスク一覧の使用](../../ide/using-the-task-list.md)」を参照してください。  
+## <a name="tokens"></a>トークン  
+ **[トークン リスト]** に登録されたトークンで始まるコメントをコード内に挿入すると、ファイルを編集用に開くたびにそのコメントが新しいエントリとして**タスク一覧**に表示されます。 この**タスク一覧**エントリをクリックすることによって、コード内のコメント行に直接ジャンプできます。 詳細については、「[タスク一覧の使用](../../ide/using-the-task-list.md)」を参照してください。  
   
- \[トークン リスト\]  
- トークンの一覧が表示され、カスタム トークンを追加または削除できます。  Visual C\# および Visual C\+\+ ではコメント トークンの大文字と小文字が区別されますが、Visual Basic では区別されません。  
+ [トークン リスト]  
+ トークンの一覧が表示され、カスタム トークンを追加または削除できます。 Visual C# および Visual C++ ではコメント トークンの大文字と小文字が区別されますが、Visual Basic では区別されません。  
   
 > [!NOTE]
->  **\[トークン リスト\]** に表示されたとおりにトークンを入力しないと、**タスク一覧**にコメント タスクが表示されません。  
+>  **[トークン リスト]** に表示されたとおりにトークンを入力しないと、**タスク一覧**にコメント タスクが表示されません。  
   
  優先度  
- 選択されたトークンを使用するタスクの優先順位を設定します。  このトークンで始まるタスク コメントには、指定された優先順位が**タスク一覧**で自動的に割り当てられます。  
+ 選択されたトークンを使用するタスクの優先順位を設定します。 このトークンで始まるタスク コメントには、指定された優先順位が**タスク一覧**で自動的に割り当てられます。  
   
  名前  
- トークンの文字列を入力します。  入力すると、**\[追加\]** ボタンをクリックできるようになります。  **\[追加\]** をクリックすると、この文字列が **\[トークン リスト\]** に追加され、この名前で始まるコメントが**タスク一覧**に表示されます。  
+ トークンの文字列を入力します。 入力すると、**[追加]** ボタンをクリックできるようになります。 **[追加]** をクリックすると、この文字列が **[トークン リスト]** に追加され、この名前で始まるコメントが**タスク一覧**に表示されます。  
   
  追加  
- 新しい**名前**を入力すると有効になります。  クリックすると、**\[名前\]** フィールドと **\[優先順位\]** フィールドに入力された値を使用して、新しいトークン文字列が追加されます。  
+ 新しい**名前**を入力すると有効になります。 クリックすると、**[名前]** フィールドと **[優先順位]** フィールドに入力された値を使用して、新しいトークン文字列が追加されます。  
   
- 削除する  
- クリックすると、**\[トークン リスト\]** で選択したトークンが削除されます。  既定のコメント トークンは削除できません。  
+ 削除  
+ クリックすると、**[トークン リスト]** で選択したトークンが削除されます。 既定のコメント トークンは削除できません。  
   
  変更  
- クリックすると、**\[名前\]** フィールドと **\[優先順位\]** フィールドに入力された値を使用して、既存のトークンが変更されます。  
+ クリックすると、**[名前]** フィールドと **[優先順位]** フィールドに入力された値を使用して、既存のトークンが変更されます。  
   
 > [!NOTE]
 >  既定のコメント トークンの名前変更や削除はできませんが、優先順位は変更できます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [タスク一覧の使用](../../ide/using-the-task-list.md)   
  [コードへのブックマークの設定](../../ide/setting-bookmarks-in-code.md)   
- [\[環境\] \(\[オプション\] ダイアログ ボックス\)](../Topic/Environment%20Options%20Dialog%20Box.md)
+ [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)

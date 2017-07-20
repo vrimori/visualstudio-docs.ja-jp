@@ -28,13 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 4d3dde251368507690faa54f94138872b16b9b44
-ms.openlocfilehash: cce6943062bd05c5141cd6edb54fb29cae608e2b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
+ms.openlocfilehash: 952414b5e6e683242a2e71bcba9c37471a6219bc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
 
 ---
-# <a name="refactoring-in-visual-studio"></a>Visual Studio でのリファクタリング
+# Visual Studio でのリファクタリング
+<a id="refactoring-in-visual-studio" class="xliff"></a>
 リファクタリングとは、コードの動作を変更することなく、簡単にコードを維持、理解、拡張するためのプロセスです。 一般的な*リファクタリング*の一部には、次のものがあります。  
   
 1.  長い関数を短く分割する  
@@ -47,19 +49,24 @@ ms.lasthandoff: 02/22/2017
   
  リファクタリングのロジックは言語の構文に密接に結び付けられているため、Visual Studio の各言語サービスには、それぞれ独自のリファクタリング機能があります。 詳細については、次のページを参照してください。  
   
-### <a name="refactoring-in-c"></a>リファクタリング [C]# #
+### リファクタリング [C#]
+<a id="refactoring-in-c" class="xliff"></a> #
  [リファクタリング (C#)](../csharp-ide/refactoring-csharp.md)  
   
-### <a name="refactoring-in-visual-basic"></a>Visual Studio でのリファクタリング  
+### Visual Studio でのリファクタリング
+<a id="refactoring-in-visual-basic" class="xliff"></a>  
  [リファクタリング (Visual Basic)](../vb-ide/refactoring-vb.md)  
   
-### <a name="refactoring-in-c"></a>リファクタリング [C++]  
+### リファクタリング [C++]
+<a id="refactoring-in-c" class="xliff"></a>  
  [コードの作成とリファクタリング (C++)](/cpp/ide/writing-and-refactoring-code-cpp)  
   
-### <a name="refactoring-in-f"></a>リファクタリング [F]# #
+### リファクタリング [F#]
+<a id="refactoring-in-f" class="xliff"></a> #
  F# のリファクタリングのサポートは、サード パーティ製の Visual Studio 拡張機能の [Visual f# Power Tool](https://visualstudiogallery.msdn.microsoft.com/136b942e-9f2c-4c0b-8bac-86d774189cff) で提供されます。  
   
-## <a name="see-also"></a>関連項目  
+## 関連項目
+<a id="see-also" class="xliff"></a>  
  [Visual Studio IDE](../ide/visual-studio-ide.md)   
  [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)  
  [変更のプレビュー](../ide/preview-changes.md)

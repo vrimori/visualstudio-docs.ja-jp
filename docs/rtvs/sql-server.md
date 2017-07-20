@@ -1,0 +1,176 @@
+---
+title: "SQL Server と R Tools for Visual Studio の統合 | Microsoft Docs"
+ms.custom: 
+ms.date: 4/28/2017
+ms.prod: visual-studio-dev15
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-r
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 919dfc34-234a-489e-91bf-74a4cefae26c
+caps.latest.revision: 1
+author: kraigb
+ms.author: kraigb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
+ms.openlocfilehash: 44ae1fd825997ff5eab1448ebd86f88a130172a1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/12/2017
+
+---
+
+
+# <a name="working-with-sql-server-and-r"></a>SQL Server と R の使用
+
+R Tools for Visual Studio (RTVS) は、 SQL Server に対する Visual Studio の優れたサポートを活用して、SQL データベースを使用するデータ サイエンティストの作業を容易にするツールです。SQL クエリを作成して実行することや、ストアド プロシージャを使用することができます。
+
+> [!Note]
+> SQL と R を一緒に使用するためには、SQL Server Tools がインストールされている必要があります。
+> - Visual Studio 2017: Visual Studio のインストーラーを実行し、データの保存と処理のワークロードを選択して、SQL Server Data Tools を追加します。
+> - Visual Studio 2015: 「[Download SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)」 (SQL Server Data Tools のダウンロード) にある手順に従ってください。
+
+SQL Server と R の概要については、次のビデオ (3 分 3 秒) をご覧ください。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n4AYr0QIwdQ" frameborder="0" allowfullscreen></iframe>
+
+## <a name="creating-and-running-sql-queries"></a>SQL クエリの作成と実行
+
+RTVS では R プロジェクトへの SQL クエリの追加がサポートされており、求める結果が得られるまで、別のコンテキストで SQL クエリの反復開発を行うことができます。
+
+SQL クエリ ファイルを追加するには、ソリューション エクスプローラーでプロジェクトを右クリックし、**[追加] > [新しい項目]** を選択して、ファイルの種類として **[SQL クエリ]** を選択します。
+
+![SQL クエリ項目をプロジェクトに追加](media/sql-add-item.png)
+
+これにより、Visual Studio の Transact-SQL エディターでファイルが開き、SQL 用のフル機能 IntelliSense とクエリ実行機能を使用できます。 ただし、これらの機能が動作するためには、エディターのツール バーにある接続ボタンを使用してデータベースに接続する必要があります。または、単にクエリを実行することでも接続できます (Ctrl + Shift + E キーでも選択項目を操作できます)。 どちらの方法でも、次のような接続ダイアログが表示されます。
+
+![SQL 接続ダイアログ ボックス](media/sql-connection-dialog.png)
+
+接続できたら、クエリを実行して結果を確認できます。
+
+![SQL ウィンドウのクエリ結果](media/sql-query-results.png)
+
+Transact-SQL エディターは他のさまざまな機能をサポートしており、たとえばクエリやクエリ デバッガーの実行プランを表示することなどができます。Transact-SQL エディターで使用できるその他多くの機能があります。 詳細については、「[Transact-SQL エディターを使用したスクリプトの編集と実行](https://msdn.microsoft.com/library/hh272706.aspx)」を参照してください。
+
+## <a name="working-with-sql-server-stored-procedures"></a>SQL Server ストアド プロシージャの使用
+
+[SQL Server R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services) (SQL Server 2016 以降) では、T-SQL ストアド プロシージャから R コードを埋め込んで実行できます。 つまり、R コードを SQL Server コンピューターで実行し、SQL クエリから返されたデータを操作して、SQL 結果セットを生成できます。結果セットは、さらに SQL で処理するか、クライアントに返すことができます。
+
+以下のセクションで説明するように、RTVS は、1 つの SQL ステートメント内で SQL と R コードを組み合わせるという面倒でエラーが発生しやすいプロセスを単純化します。
+
+- [データベース接続の追加](#add-a-database-connection)
+- [SQL ストアド プロシージャの作成とテスト](#write-and-test-a-sql-stored-procedure)
+- [SQL ストアド プロシージャの公開](#publish-a-sql-stored-procedure)
+
+次のビデオ (6 分 9 秒) でも、これらの機能の概要について説明しています。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dFKIT2OitWQ" frameborder="0" allowfullscreen></iframe>
+
+### <a name="add-a-database-connection"></a>データベース接続の追加
+
+1. **[R Tools] > [データ] > [データベース接続の追加]** を選択して **[接続プロパティ]** ダイアログ ボックスを表示し、データ ソース (この場合は SQL Server) の名前、認証モード、データベースの名前を指定します。 ダイアログ ボックスを閉じる前に **[テスト接続]** を選択して入力を確認できます。
+ 
+    ![SQL 接続ダイアログ ボックス](media/sql-connection-string-dialog.png)
+
+1. 有効な接続で **[OK]** を選択すると、Visual Studio で新しい `settings.R` ファイル内に `dbConnection` という有効な接続が生成されます。 このファイルが RTVS で自動的にソースとして実行され、R スクリプトから接続をすぐに使用できるようになります。
+
+![SQL 設定の R ファイル](media/sql-settings-dot-r.png)
+
+### <a name="write-and-test-a-sql-stored-procedure"></a>SQL ストアド プロシージャの作成とテスト
+
+新しい SQL ストアド プロシージャを追加するには、プロジェクトを右クリックして **[追加] > [新しい項目]** を選択し、テンプレートの一覧から **[R を使用した SQL ストアド プロシージャ]** を選択して、ファイルに名前 (この例では `StoredProcedure.R`) を付けた後、**[OK]** を選択します。
+ 
+RTVS ではストアド プロシージャとして 3 種類のファイルが作成されます。R コードの `.R` ファイル、SQL コードの `.Query.sql` ファイル、2 つを組み合わせた `.Template.sql` ファイルの 3 つです。 後の 2 つはソリューション エクスプローラーで `.R` ファイルの子として表示されます。
+
+![R と SQL ストアド プロシージャが表示されたソリューション エクスプローラーの展開ビュー](media/sql-solution-explorer-expanded.png)
+
+`StoredProcedure.R` (この例の場合) に R コードを記述します。 既定の内容は次のとおりです。
+
+```R
+# @InputDataSet: input data frame, result of SQL query execution
+# @OutputDataSet: data frame to pass back to SQL
+
+# Test code
+# library(RODBC)
+# channel <- odbcDriverConnect(dbConnection)
+# InputDataSet <- sqlQuery(channel, )
+# odbcClose(channel)
+
+OutputDataSet <- InputDataSet
+```
+
+簡単に言うと、このコードは `InputDataSet` という R データフレームを受け取り、その結果を `OutputDataSet` で返します。テンプレート コードは入力を出力にコピーするだけです。
+
+> [!Note]
+> これらのデータフレームの名前は、`sp_execute_external_script` システム ストアド プロシージャ呼び出しの `@input_data_1_name` パラメーターと `@output_data_1_name` パラメーターによって制御されます。 この呼び出し規則の詳細と使用例については、「[sp_execute_external_script (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)」を参照してください。
+
+コメント内に生成されたもう 1 つのコードは、短いテスト スクリプトです。[RODBC パッケージ](https://cran.r-project.org/web/packages/RODBC/index.html)を使用して SQL ステートメントを SQL Server に送信し、実行した後、結果セットを R データフレームとして取得します。 このテスト コードをコメント解除し、SQL Server から返された結果セットに作用する R コードを対話形式で記述できます。
+
+`InputDataSet` のデータを生成する SQL クエリの作成とテストは、`StoredProcedure.Query.sql` で行います。 これは `.sql` ファイルであるため、すべての Transact-SQL エディター機能を使用できます。
+
+SQL コードに問題がないことを確認したら、そのコードを `StoredProcedure.R` の R コードと簡単に統合できます。`.R` ファイルを開いているエディターに `.sql` ファイルをドラッグするだけです。 以下の画像は、`StoredProcedure.Query.sql` を、`sqlQuery(channel, )`のコンマの後ろの位置にドラッグしたところです。
+
+![R 文字列変数への SQL ファイルの読み込み](media/sql-reference-sql-file-from-r.png)
+
+このように、この簡単なステップによって R コードが自動的に生成されて `.sql` ファイルが開きます。このファイルの内容を文字列に読み込み、その文字列を RODBC パッケージに渡して SQL Sever に送信します。
+
+このファイルが開いている状態で、`InputDataSet` データフレームを必要に応じて処理する R コードを対話形式で記述できます。 エディター内で R コードを選択し、Ctrl + Enter キーを押すだけで、そのコードを[対話型ウィンドウ](interactive-repl.md)に送信できます。
+
+`StoredProcedure.Template.sql` の内容は、最終的に、SQL ストアド プロシージャを生成するためのテンプレートになります。
+
+```sql
+CREATE PROCEDURE [StoredProcedure]
+AS
+BEGIN
+EXEC sp_execute_external_script @language = N'R'
+    , @script = N'_RCODE_'
+    , @input_data_1 = N'_INPUT_QUERY_'
+--- Edit this line to handle the output data frame.
+    WITH RESULT SETS (([MYNEWCOLUMN] NVARCHAR(max)));
+END;
+```
+
+- `_RCODE_` プレースホルダーは、`StoredProcedure.R` の内容によって置き換えられます。
+- `_INPUT_QUERY_` プレースホルダーは、`StoredProcedure.Query.sql` の内容によって置き換えられます。
+- ストアド プロシージャから返された結果セットのスキーマを記述するために、`WITH RESULT SETS` 句を編集する必要があります。 `OutputDataSet` データフレームから、ストアド プロシージャの呼び出し元に返す列を明示的に特定します。 
+
+たとえば、次のようなクエリがあるとします。
+
+```sql
+SELECT TOP 100 medallion, hack_license FROM nyctaxi_sample
+```
+
+この場合は、次のような `WITH RESULT SETS` 句を使用して、戻り値のデータ型を指定します。
+
+```sql
+WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
+```
+
+### <a name="publish-a-sql-stored-procedure"></a>SQL ストアド プロシージャの公開
+
+1. **[R Tools] > [データ] > [Publish With Options]**\(オプションを使用してパブリッシュ\) メニュー コマンドを選択します。
+1. 表示されるダイアログ ボックスで、**[パブリッシュ先]** を **[データベース]** に変更し、ターゲットを指定して、**[パブリッシュ]** を選択します。RTVS でストアド プロシージャがビルドされ、パブリッシュされます。
+
+    ![ストアド プロシージャの公開ダイアログ ボックス](media/sql-publish-with-options.png)
+
+1. プロジェクト内のすべてのストアド プロシージャを公開する方法として、**[R Tools] > [データ] > [Publish Stored Procedures]**\(ストアド プロシージャの公開\) コマンドを使用することもできます。このコマンドは、ソリューション エクスプローラーでプロジェクトを右クリックして選択することもできます。
+
+> [!Tip]
+> Visual Studio で SQL Server オブジェクト エクスプローラーを開いている場合は、パブリッシュされたストアド プロシージャをデータベースの **[プログラミング] > [ストアド プロシージャ]** フォルダーでも確認できます。 また、オブジェクト エクスプローラーから実行することもできます。そのためには、右クリックして **[プロシージャの実行]** を選択するか、`.sql` クエリ ウィンドウから対話形式でプロシージャを呼び出します。
+

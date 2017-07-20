@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 7ec312bf7c85759fef700f0746c0981f263d46e2
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 362a756e434f93eb39776c76382d059cc2744cae
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="welcome-to-visual-studio-2017"></a>Visual Studio 2017 へようこそ
@@ -90,7 +91,7 @@ Visual Studio をインストールするときに、必要に応じて **Azure 
  [Visual Studio Team Services](https://www.visualstudio.com/team-services/) を使用してコードをクラウドに格納すると、ローカル サーバーのメンテナンスが不要になります。 オンプレミスのサーバーを使用する場合は、[Team Foundation Server](https://www.visualstudio.com/tfs/) を使用します。 コード プロジェクトを作成するたびに、そのプロジェクトをバージョン管理に追加するオプションが表示されます。 ニーズに最適なバージョン管理システムを調べるには、「[Choosing the right version control for your project (プロジェクトに最適なバージョン管理を選択する)](https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc)」をご覧ください。  
 
 ### <a name="build-your-app"></a>アプリのビルド  
- [アプリをローカルでビルドし](ide/compiling-and-building-in-visual-studio.md)、それが正常に機能することを確認します。 [デバッグ ツール](debugger/debugging-in-visual-studio.md)を使用して、アプリの問題を修正します。 あるいは、共有ビルド サーバーまたはクラウドにプロジェクトをビルドすることもできます。 チームの開発者がバージョン管理にチェックインしたコードをビルドするよう、ビルド プロセスを自動化します。 たとえば、1 つまたは複数のプロジェクトを夜間にビルドすることも、コードのチェックインごとにビルドすることもできます。 詳細については、「[Continuous integration on any platform (あらゆるプラットフォームでの継続的インテグレーション)](https://www.visualstudio.com/en-us/docs/build/overview)」をご覧ください。
+ [アプリをローカルでビルドし、](ide/compiling-and-building-in-visual-studio.md) それが正常に機能することを確認します。 [デバッグ ツールを使用して](debugger/debugging-in-visual-studio.md) 、アプリの問題を修正します。 あるいは、共有ビルド サーバーまたはクラウドにプロジェクトをビルドすることもできます。 チームの開発者がバージョン管理にチェックインしたコードをビルドするよう、ビルド プロセスを自動化します。 たとえば、1 つまたは複数のプロジェクトを夜間にビルドすることも、コードのチェックインごとにビルドすることもできます。 詳細については、「[Continuous integration on any platform (あらゆるプラットフォームでの継続的インテグレーション)](https://www.visualstudio.com/en-us/docs/build/overview)」をご覧ください。
 
 ### <a name="test-and-improve-your-app"></a>アプリをテストして品質を向上  
 [単体テストを作成し](test/unit-test-your-code.md)、アプリの品質を向上させます。 このテストはチェックインするたびに、ビルドの一部として実行できます。  
@@ -100,7 +101,7 @@ Visual Studio をインストールするときに、必要に応じて **Azure 
 メモリの利用状況、CPU の利用状況、その他のアプリケーション レベルの問題を診断します。 詳細については、「[Profiling tools (プロファイリング ツール)](profiling/profiling-tools.md)」をご覧ください。
 
 ### <a name="deliver-your-teams-code-faster"></a>チームのコードの迅速な配信  
- チームのメンバーの間の障壁を取り除き、共同作業を向上させます。 さらに、実稼働に至る開発の各ステージへのアプリのリリースを自動化します。 実行中にはアプリのパフォーマンスと可用性を監視します。 顧客がアプリを実際にどのように使用しているかに関するリアルタイム使用状況データを収集します。 詳細については、「[DevOps とアプリケーション ライフサイクル管理](https://www.visualstudio.com/en-us/docs/vsts-tfs-overview)」をご覧ください。  
+ チームのメンバーの間の障壁を取り除き、共同作業を向上させます。 さらに、実稼働に至る開発の各ステージへのアプリのリリースを自動化します。 実行中にはアプリのパフォーマンスと可用性を監視します。 顧客がアプリを実際にどのように使用しているかに関するリアルタイム使用状況データを収集します。 詳細については、「 [DevOps とアプリケーション ライフサイクル管理](https://www.visualstudio.com/en-us/docs/vsts-tfs-overview) 」を参照してください。  
 
 ## <a name="whats-new"></a>新機能  
 Visual Studio の新機能について説明します。
@@ -114,7 +115,7 @@ Visual Studio の新機能について説明します。
 ## <a name="extend-visual-studio"></a>Visual Studio を拡張する  
 独自の Visual Studio 拡張機能を追加して、コーディングの際によく使用するツールまたはスクリプトを含めます。 カスタム メニュー項目とツール ウィンドウを作成し、独自のツールを Visual Studio IDE に統合することができます。 Visual Studio エディターを拡張してコードの分析と修正を行うことも、新しいプロジェクトの種類を追加して必要なものだけを含めることもできます。  
 
-Visual Studio 機能拡張ツール (VS SDK) の最新バージョンを検索するには、「[Visual Studio SDK](extensibility/visual-studio-sdk.md)」をご覧ください。  
+Visual Studio 機能拡張ツール (VS SDK) の最新バージョンを検索するには、「 [Visual Studio SDK](extensibility/visual-studio-sdk.md)」を参照してください。  
 
 .NET コンパイラ プラットフォーム (Roslyn) を使用して、独自のコード アナライザーとコード ジェネレーターを記述することができます。 必要なものはすべて [Roslyn](https://github.com/dotnet/Roslyn)に揃っています。  
 

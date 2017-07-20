@@ -126,8 +126,6 @@ Visual Studio 統合開発環境 (IDE) で、ほぼ任意のコード言語を�
         </div>
         </a>
     </li>
-</ul>
-<ul class="panelContent cardsFTitle">    
     <li>
         <a href="https://mva.microsoft.com/product-training/visual-studio-courses">
         <div class="cardSize">

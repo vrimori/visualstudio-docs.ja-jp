@@ -44,7 +44,7 @@ ms.lasthandoff: 03/03/2017
 # <a name="convert-dialog-box"></a>[変換] ダイアログ ボックス
 **[変換]** ダイアログ ボックスでは、古いプロジェクトから新しいプロジェクトを作成するための変換ツールを選択できます。たとえば、Visual Basic 6 プロジェクトから [!INCLUDE[vbprvblong](../../ide/reference/includes/vbprvblong_md.md)] プロジェクトを作成するような場合です。 また、CodePlex の Web サイトで入手できる [Visual Studio Project Converter](http://go.microsoft.com/fwlink/?LinkID=246465)を使用して、旧バージョンの Visual Studio で作成したプロジェクトをアップグレードすることもできます。  
   
- [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]。  
+ [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
   
 ## <a name="opening-the-convert-dialog-box"></a>[変換] ダイアログ ボックスを開く  
   

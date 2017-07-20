@@ -50,7 +50,7 @@ Visual Studio の配置を自動化するために使用されるスクリプト
  以下は Visual Studio 2017 Enterprise にライセンスを適用するサンプル コマンド ラインです。MPC は 08860 で、製品キーは `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE` です。既定の場所にインストールするものと想定しています。
 
  ```cmd
- C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\StorePID.exe AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 08860
+ "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\StorePID.exe" AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 08860
  ```
 
  次の表に、Visual Studio の各エディションの MPC コードを一覧します。
