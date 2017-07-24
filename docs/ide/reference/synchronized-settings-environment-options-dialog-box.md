@@ -36,7 +36,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 07/14/2017
 
 ---
-# <a name="synchronized-settings-environment-options-dialog-box"></a>[同期された設定]\([オプション] ダイアログ ボックス - [環境])
+# <a name="synchronized-settings-environment-options-dialog-box"></a>[同期された設定] ([オプション] ダイアログ ボックス - [環境])
 このページを使用して、複数のコンピューター間で設定を同期 (ローミング) するかどうかを指定します。 詳細については、「[同期された設定](../../ide/synchronized-settings-in-visual-studio.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
