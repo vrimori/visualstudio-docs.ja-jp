@@ -36,7 +36,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 07/14/2017
 
 ---
-# <a name="extensions-and-updates-environment-options-dialog-box"></a>[拡張機能と更新プログラム]\([オプション] ダイアログ ボックス - [環境])
+# <a name="extensions-and-updates-environment-options-dialog-box"></a>[拡張機能と更新プログラム] ([オプション] ダイアログ ボックス - [環境])
 このページを使用して、Visual Studio での更新プログラムの実行方法に関するオプションと、拡張機能の更新および検出方法に関するオプションを設定します。  
   
 ### <a name="automatically-check-for-updates"></a>更新プログラムを自動的にチェックする  
