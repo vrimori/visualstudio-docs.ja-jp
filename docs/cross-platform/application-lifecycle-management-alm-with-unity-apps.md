@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7e95cec543216f13de06d2c2b86bc08040d1a7fb
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: de365cf073ed234ece1d9af56232a29b7ef8eec4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>Unity アプリを使用したアプリケーション ライフサイクル管理 (ALM)
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/13/2017
 |-------------|--------------------------|-------------------------|  
 |[Team Foundation バージョン管理](http://msdn.microsoft.com/Library/1d629052-c65d-4c5d-81eb-eaa4413fe285) または Visual Studio Team Services を使用|はい|Unity プロジェクトは、単に他のプロジェクトのように、バージョン管理システムに配置することができる複数のファイルですが、この表の下に記載したいくつかの特別な考慮事項があります。|  
 |[Team Services で Git を使用した作業の開始](http://msdn.microsoft.com/Library/32f46ecd-1b03-4ef0-a9c4-8a120da2b03f)|はい|表の下の注を参照してください。|  
-|[コードの分析/コードの品質向上 (参照、変更提案など)](http://msdn.microsoft.com/Library/73baa961-c21f-43fe-bb92-3f59ae9b5945)|はい||  
+|[コードの品質向上](/visualstudio/test/improve-code-quality)|はい||  
 |[コード変更およびその他の履歴の検索](../ide/find-code-changes-and-other-history-with-codelens.md)|はい||  
 |[コード マップを使用してアプリケーションをデバッグする](../modeling/use-code-maps-to-debug-your-applications.md)|はい||  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 05/13/2017
 |[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)|いいえ|コード化された UI テストは、アプリの UI で読み取り可能なコントロールに依存します。Unity アプリケーションは本質的にはグラフィカルであるため、コンテンツはコード化された UI テストのツールで読み取ることはありません。|  
   
 ## <a name="improve-code-quality"></a>コード品質の向上  
- 参照リンク: **[コードの品質の向上](http://msdn.microsoft.com/Library/73baa961-c21f-43fe-bb92-3f59ae9b5945)**  
+ 参照リンク: **[コードの品質の向上](/visualstudio/test/improve-code-quality)**  
   
 |特性|Unity でサポートされているかどうか|その他のコメント|  
 |-------------|--------------------------|-------------------------|  

@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: da79533a7a40b6e1b79c66f023beba2c1162bd08
+ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
+ms.openlocfilehash: f219ae7937ea3810b58faa34f6320a627ede99ae
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>同時実行ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd)
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/13/2017
   
 |オプション|説明|パラメーター|戻り値|  
 |------------|-----------------|----------------|-------------------|  
-|クエリ|コレクションを開始できるかどうかを返します。|なし|コレクションを開始できる場合は 0。<br /><br /> コレクションが既に実行中の場合は 1。<br /><br /> コレクションは実行中でないが、必要な [ETW](http://msdn.microsoft.com/Library/ac99a063-e2d2-40cc-b659-d23c2f783f92) セッションの 1 つ以上が既に有効になっている場合は 2。|  
+|クエリ|コレクションを開始できるかどうかを返します。|なし|コレクションを開始できる場合は 0。<br /><br /> コレクションが既に実行中の場合は 1。<br /><br /> コレクションは実行中でないが、必要な [ETW](/dotnet/framework/wcf/samples/etw-tracing) セッションの 1 つ以上が既に有効になっている場合は 2。|  
 |Launch|同時実行ビジュアライザーで、指定されたプロセスを実行します。|実行可能ファイルのパス。|実行が成功した場合は 0。<br /><br /> ターゲット アプリケーションを開始できなかったために実行が失敗した場合は 1。<br /><br /> CVCollectionCmd に、指定された出力ディレクトリへの書き込みアクセス許可がないために実行が失敗した場合は 13。|  
 |Attach|システム全体でのトレースのコレクションを開始します。プロセスが指定されている場合は、そのプロセスにアタッチします。|なし。|アタッチが成功した場合は 0。<br /><br /> 指定されたプロセスが無効であるか、指定があいまいなためにアタッチが失敗した場合は 1。<br /><br /> CVCollectionCmd に、指定された出力ディレクトリへの書き込みアクセス許可がないためにアタッチが失敗した場合は 13。|  
 |Detach|コレクションを停止します。|なし。|デタッチが成功した場合は 0。<br /><br /> コレクションが現在実行されていないためにデタッチが失敗した場合は 1。<br /><br /> コレクションを停止できなかったためにデタッチが失敗した場合は 2。|  
@@ -170,3 +170,4 @@ ms.lasthandoff: 05/13/2017
 </LocalConfig>  
   
 ```
+

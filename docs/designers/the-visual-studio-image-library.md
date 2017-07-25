@@ -37,10 +37,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9c25532605613b34ded15a4bd6a533e589b7fce2
-ms.openlocfilehash: 3add401b2d9590893ae1a90af7d5f1d9c9360b63
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 2e7d4630739110dfb2c912b4f8538d6c73762f02
 ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="the-visual-studio-image-library"></a>Visual Studio Image Library
@@ -52,4 +52,4 @@ Visual Studio Image Library には、Microsoft Visual Studio、Microsoft Windows
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio のインストール](../install/install-visual-studio.md)   
- [イメージ、ビットマップ、メタファイル](http://msdn.microsoft.com/Library/7152b45b-a55c-49bc-8c78-ae002a844f71)
+ [イメージ、ビットマップ、メタファイル](/dotnet/framework/winforms/advanced/images-bitmaps-and-metafiles)

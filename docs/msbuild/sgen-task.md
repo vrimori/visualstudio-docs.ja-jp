@@ -37,14 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: e4ba336071a8b9e311ffe67330677cb25ff92751
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: d027716980368a7c812ebda6fac6884c9481af12
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="sgen-task"></a>SGen タスク
-指定されたアセンブリの種類に対応する XML シリアル化アセンブリを作成します。 このタスクは、XML シリアライザー ジェネレーター ツール (Sgen.exe) をラップするタスクです。 詳細については、「[XML シリアライザー ジェネレーター ツール (Sgen.exe)](http://msdn.microsoft.com/Library/cc1d1f1c-fb26-4be9-885a-3fe84c81cec6)」を参照してください。  
+指定されたアセンブリの種類に対応する XML シリアル化アセンブリを作成します。 このタスクは、XML シリアライザー ジェネレーター ツール (Sgen.exe) をラップするタスクです。 詳細については、「[XML シリアライザー ジェネレーター ツール (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe)」を参照してください。  
   
 ## <a name="parameters"></a>パラメーター  
  `SGen` タスクのパラメーターの説明を次の表に示します。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 02/22/2017
 |`UseProxyTypes`|必須の `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、SGen タスクでは XML Web サービス プロキシ型に対してのみシリアル化コードを生成します。|  
   
 ## <a name="remarks"></a>コメント  
- このタスクでは、上記のパラメーター以外に、<xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承し、このクラス自体は <xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   

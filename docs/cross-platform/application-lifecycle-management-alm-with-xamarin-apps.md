@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 1464a7e654c68828e132e2d6973c9e558ebe23a5
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: e5ed1f9b6771b489218d2c6118454f1070535b6d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="application-lifecycle-management-alm-with-xamarin-apps"></a>Xamarin アプリを使用したアプリケーション ライフサイクル管理 (ALM)
@@ -81,7 +81,7 @@ Xamarin では、Android、iOS、および Windows を対象とするクロス�
 |-------------|----------------------------|-------------------------|  
 |[Team Foundation バージョン管理](http://msdn.microsoft.com/Library/1d629052-c65d-4c5d-81eb-eaa4413fe285) または Visual Studio Team Services を使用|はい||  
 |[Team Services で Git を使用した作業の開始](http://msdn.microsoft.com/Library/32f46ecd-1b03-4ef0-a9c4-8a120da2b03f)|はい||  
-|[コードの分析/コードの品質向上 (参照、変更提案など)](http://msdn.microsoft.com/Library/73baa961-c21f-43fe-bb92-3f59ae9b5945)|はい||  
+|[コードの品質向上](/visualstudio/test/improve-code-quality)|はい||  
 |[コード変更およびその他の履歴の検索](../ide/find-code-changes-and-other-history-with-codelens.md)|はい|ただし、実行時まで実装が解決しない、プラットフォームに固有の境界をまたぐ場合を除きます。|  
 |[コード マップを使用してアプリケーションをデバッグする](../modeling/use-code-maps-to-debug-your-applications.md)|はい||  
   
@@ -109,7 +109,7 @@ Xamarin では、Android、iOS、および Windows を対象とするクロス�
 |[UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)|Windows のみ|Visual Studio の UI テスト レコーダーは Windows のみです。 すべてのプラットフォームについては、[Xamarin Test Recorder](https://www.xamarin.com/test-cloud/recorder) を参照してください。|  
   
 ## <a name="improve-code-quality"></a>コード品質の向上  
- 参照リンク: **[コードの品質の向上](http://msdn.microsoft.com/Library/73baa961-c21f-43fe-bb92-3f59ae9b5945)**  
+ 参照リンク: **[コードの品質の向上](/visualstudio/test/improve-code-quality)**  
   
 |特性|Xamarin でサポートされているかどうか|その他のコメント|  
 |-------------|----------------------------|-------------------------|  
