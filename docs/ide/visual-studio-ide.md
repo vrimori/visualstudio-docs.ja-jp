@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio IDE 機能ツアー | Microsoft Docs"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 06/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -26,10 +26,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
-ms.openlocfilehash: c8276097c53ea49d223c43ada5511ab5d5f38036
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: 8d2c20b32201b3df85e5150828565eee84d66375
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="visual-studio-ide-feature-tour"></a>Visual Studio IDE 機能ツアー
@@ -142,10 +143,10 @@ Visual Studio を初めて起動する際には、Microsoft アカウント、�
 
 ![デバッグ](../ide/media/VSIDE_Tour_Debugging.png)
 
-テストについては、Visual Studio には単体テスト、IntelliTest、負荷およびパフォーマンス テストなどが用意されています。 Visual Studio のデバッグ プロセスについて詳しくは、[デバッガーの機能ツアー](https://review.docs.microsoft.com/visualstudio/debugger/debugger-feature-tour?branch=mikejo-tour)に関するページをご覧ください。 テストについて詳しくは、「[テスト ツール](https://www.visualstudio.com/vs/testing-tools/)」をご覧ください。 アプリのパフォーマンスを改善する方法について詳しくは、「[プロファイリング ツール](https://docs.microsoft.com/visualstudio/profiling/profiling-tools)」をご覧ください。
+テストについては、Visual Studio には単体テスト、IntelliTest、負荷およびパフォーマンス テストなどが用意されています。 Visual Studio のデバッグ プロセスについて詳しくは、[デバッガーの機能ツアー](../debugger/debugger-feature-tour.md)に関するページをご覧ください。 テストについて詳しくは、「[テスト ツール](https://www.visualstudio.com/vs/testing-tools/)」をご覧ください。 アプリのパフォーマンスを改善する方法の詳細については、[「プロファイリング機能ツアー」](../profiling/profiling-feature-tour.md) をご覧ください。
 
 ## <a name="deploy-your-finished-application"></a>完成したアプリケーションを配置する  
-アプリケーションをユーザーやお客様に配置する用意ができたら、Visual Studio の配置するためのツールを使用できます。Windows ストア や Sharepoint サイトへの配置、Installshield または Windows インストーラー テクノロジによる配置、いずれにも対応しています。 これはすべて、IDE を使用してアクセスできます。 詳しくは、「[アプリケーション、サービス、およびコンポーネントの配置](../deployment/deploying-applications-services-and-components.md)」をご覧ください。
+アプリケーションをユーザーやお客様に配置する用意ができたら、Visual Studio の配置するためのツールを使用できます。Windows ストアや SharePoint サイトへの配置、InstallShield または Windows インストーラー テクノロジによる配置、いずれにも対応しています。 これはすべて、IDE を使用してアクセスできます。 詳しくは、「[アプリケーション、サービス、およびコンポーネントの配置](../deployment/deploying-applications-services-and-components.md)」をご覧ください。
 
 ## <a name="quick-tour-of-the-ide"></a>IDE のクイック ツアー
 次の図は Visual Studio で開かれたプロジェクトと主なツール ウィンドウを示し、Visual Studio の全体像を視覚的に確認できます。
@@ -167,11 +168,11 @@ Visual Studio には他にも一般的な仕事効率化機能が用意されて
 
  ![リファクタリング](../ide/media/VSIDE_refactor.png)  
 
--  **IntelliSense**。コードに関する型情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする、よく使われる機能セットの包括的な用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、別個のヘルプ ウィンドウで型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳しくは、「[Visual C# の IntelliSense](../ide/visual-csharp-intellisense.md)」、「[Visual C++ Intellisense](../ide/visual-cpp-intellisense.md)」、「[JavaScript IntelliSense](../ide/javascript-intellisense.md)」、「[Visual Basic 固有の IntelliSense](../ide/visual-basic-specific-intellisense.md)」をご覧ください。 次の図は、職場でのいくつかの IntelliSense 機能を示しています。  
+-  **IntelliSense** 。コードに関する型情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする、よく使われる機能セットの包括的な用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、別個のヘルプ ウィンドウで型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳しくは、「 [Visual C# IntelliSense](../ide/visual-csharp-intellisense.md), [Visual C++ Intellisense](../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../ide/javascript-intellisense.md), [Visual Basic-Specific IntelliSense](../ide/visual-basic-specific-intellisense.md)」をご覧ください。 次の図は、職場でのいくつかの IntelliSense 機能を示しています。  
 
   ![Visual Studio のメンバーの一覧](../ide/media/vs2017_Intellisense.png)  
 
--  **波線**は波打った赤の下線で、コード入力時にエラーや潜在的な問題をリアルタイムに警告します。 これにより、コンパイル時や実行時にエラーが検出されるのを待たずに即時に修正できます。 破線の上に移動すると、エラーに関する追加情報が表示されます。 電球がエラーの修正方法に関する提案とともに左余白に表示される場合もあります。 詳しくは、「[電球を使ってクイック操作をする](../ide/perform-quick-actions-with-light-bulbs.md)」をご覧ください。  
+-  **波線**は波打った赤の下線で、コード入力時にエラーや潜在的な問題をリアルタイムに警告します。 これにより、コンパイル時や実行時にエラーが検出されるのを待たずに即時に修正できます。 破線の上に移動すると、エラーに関する追加情報が表示されます。 電球がエラーの修正方法に関する提案とともに左余白に表示される場合もあります。 詳細については、「 [Perform quick actions with light bulbs](../ide/perform-quick-actions-with-light-bulbs.md)」を参照してください。  
 
  ![波線](../ide/media/vs2017_squiggle.png)  
 
@@ -233,7 +234,7 @@ Visual Studio の **SQL Server オブジェクト エクスプローラー**で�
 Visual Studio に必要な機能がない場合は、機能を追加できます。 ワークフローとスタイルに基づいて IDE をカスタマイズしたり、Visual Studio にまだ統合されていない外部ツールのサポートを追加したり、既存の機能を変更して生産性の向上を図ることができます。 Visual Studio には、マイクロソフト、マイクロソフトのパートナー、およびコミュニティからのツール、コントロール、およびテンプレートが用意されています。 Visual Studio の拡張について詳しくは、「[Visual Studio IDE を機能拡張する](https://www.visualstudio.com/vs/extend/)」をご覧ください。
 
 ## <a name="learn-more-and-find-out-whats-new"></a>詳細と新機能
-Visual Studio を使ったことがない場合は、最初に「[Visual Studio 入門](../ide/get-started-with-visual-studio.md)」で基礎を学習するか、[Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033) の Visual Studio のコースを無料で受講することができます。
+Visual Studio を使ったことがない場合は、最初に [「Visual Studio 入門」](../ide/get-started-with-visual-studio.md) で基礎を学習するか、[Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033) の Visual Studio のコースを無料で受講することができます。
 Visual Studio 2017 の新機能については、「[Visual Studio 2017 の新機能](../ide/whats-new-in-visual-studio.md)」をご覧ください。
 
 これで Visual Studio IDE のツアーを終わります。 主な機能について便利なヒントを得るのに役立ててください。
