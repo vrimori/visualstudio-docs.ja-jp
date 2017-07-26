@@ -38,14 +38,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 6d7266c35746fa4413ffd4ce058b1acbe9229af2
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 541b728d006f85fc550c5ddad2a7cd74190c244a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="using-regular-expressions-in-visual-studio"></a>Visual Studio での正規表現の使用
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、テキストの検索と置換をするときに、.NET Framework の正規表現を使用します。 .NET の正規表現の詳細については、「[.NET Framework の正規表現](http://msdn.microsoft.com/Library/521b3f6d-f869-42e1-93e5-158c54a6895d)」を参照してください。  
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、テキストの検索と置換をするときに、.NET Framework の正規表現を使用します。 .NET の正規表現の詳細については、「[.NET Framework の正規表現](/dotnet/standard/base-types/regular-expressions)」を参照してください。  
   
  Visual Studio 2012 より前、Visual Studio は [検索と置換] ウィンドウでカスタムの正規表現構文を使用していました。 より一般的に使用されているカスタム正規表現のシンボルの一部を .NET のバージョンに変換する方法については、「[Visual Studio での正規表現の使用](https://msdn.microsoft.com/en-us/library/2k3te2cs\(v=vs.110\).aspx)」を参照してください。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/22/2017
 >  Windows オペレーティング システムでは、ほとんどの行は、"\r\n" (キャリッジ リターンと、それに続く新しい行) で終わります。 これらの文字は表示されませんが、エディターの中に存在し、.NET の正規表現のサービスに渡されます。  
   
 > [!TIP]
->  置換パターンでよく使用される正規表現の詳細については、「[置換](http://msdn.microsoft.com/Library/d1f52431-1c7d-4dc6-8792-6b988256892e)」を参照してください。 番号付きのキャプチャ グループを使用する場合の構文は、番号付きグループを指定する `$1` と、該当のグループを指定する `(x)` です。 たとえば、グループ化正規表現 `(\d)([a-z])` を使用すると、"**1a 3c 2b 4d**" という文字列の中で、4 つの一致が見つかります。 置換文字列 `z$1` を使用すると、この文字列は "**z1 z2 z3 z4**" に変換されます。  
+>  置換パターンでよく使用される正規表現の詳細については、「[置換](/dotnet/standard/base-types/substitutions-in-regular-expressions)」を参照してください。 番号付きのキャプチャ グループを使用する場合の構文は、番号付きグループを指定する `$1` と、該当のグループを指定する `(x)` です。 たとえば、グループ化正規表現 `(\d)([a-z])` を使用すると、"**1a 3c 2b 4d**" という文字列の中で、4 つの一致が見つかります。 置換文字列 `z$1` を使用すると、この文字列は "**z1 z2 z3 z4**" に変換されます。  
   
 ## <a name="regular-expressions-in-visual-studio"></a>Visual Studio での正規表現  
  次にいくつかの例を示します。  

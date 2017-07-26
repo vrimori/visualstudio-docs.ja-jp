@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a267468b7b23dd0d2ed6c43df6c63c78d862ddbb
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 3a1ae20e3aca94339621546ac69bbfffd3a75ab3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="toolbox-components-tab"></a>ツールボックス、[コンポーネント] タブ
@@ -68,19 +69,19 @@ ms.lasthandoff: 02/22/2017
  キューからメッセージを読み取る、メッセージをキューに書き込む、トランザクションの処理、およびキュー管理タスクの実行など、メッセージ キューとやり取りするために使用できる <xref:System.Messaging.MessageQueue> コンポーネント インスタンスを作成します。 詳細については、「[Using Messaging Components](http://msdn.microsoft.com/en-us/922dbac7-26f0-4e39-b666-ccfc184793d7)」 (メッセージング コンポーネントの使用) を参照してください。  
   
  **PerformanceCounter**  
- 新しいカテゴリとインスタンスの作成、カウンターから値を読み取る、カウンター データに対して計算を実行するなど、Windows パフォーマンス カウンターとのやり取りに使用することができる <xref:System.Diagnostics.PerformanceCounter> コンポーネント インスタンスを作成します。 詳細については、「[Monitoring Performance Thresholds](http://msdn.microsoft.com/en-us/b8b44a55-31d0-4b45-9517-8c1b1e4fdc91)」(パフォーマンスのしきい値の監視) をご覧ください。  
+ 新しいカテゴリとインスタンスの作成、カウンターから値を読み取る、カウンター データに対して計算を実行するなど、Windows パフォーマンス カウンターとのやり取りに使用できる <xref:System.Diagnostics.PerformanceCounter> コンポーネント インスタンスを作成します。 詳細については、「[Monitoring Performance Thresholds](http://msdn.microsoft.com/en-us/b8b44a55-31d0-4b45-9517-8c1b1e4fdc91)」(パフォーマンスのしきい値の監視) をご覧ください。  
   
  **Process**  
- システム上のプロセスに関連付けられているデータを停止、開始、および操作できる <xref:System.Diagnostics.Process>コンポーネント インスタンスを作成します。 詳細については、「[Monitoring and Managing Windows Processes](http://msdn.microsoft.com/en-us/a86bd4c1-b92c-49a0-8f32-61d67837b45e)」 (Windows プロセスの監視と管理) を参照してください。  
+ システム上のプロセスに関連付けられているデータを停止、開始、および操作できる <xref:System.Diagnostics.Process> コンポーネント インスタンスを作成します。 詳細については、「[Monitoring and Managing Windows Processes](http://msdn.microsoft.com/en-us/a86bd4c1-b92c-49a0-8f32-61d67837b45e)」 (Windows プロセスの監視と管理) を参照してください。  
   
  **SerialPort**  
  同期 I/O とイベント ドリブン I/O のフレームワーク、ピンの状態とブレーク状態へのアクセス、およびシリアル ドライバーのプロパティへのアクセスを提供する `System.IO.Ports.SerialPort` コンポーネント インスタンスを作成します。  
   
  **ServiceController**  
- サービスの開始と停止やこれらのサービスへのコマンドの送信など、既存のサービスの操作に使用することができる <xref:System.ServiceProcess.ServiceController> コンポーネント インスタンスを作成します。 詳細については、「[Monitoring Windows Services](http://msdn.microsoft.com/en-us/4542ee3f-e052-4cb9-8726-58e9420de222)」 (Windows サービスの監視) を参照してください。  
+ サービスの開始と停止やこれらのサービスへのコマンドの送信など、既存のサービスの操作に使用できる <xref:System.ServiceProcess.ServiceController> コンポーネント インスタンスを作成します。 詳細については、「[Monitoring Windows Services](http://msdn.microsoft.com/en-us/4542ee3f-e052-4cb9-8726-58e9420de222)」 (Windows サービスの監視) を参照してください。  
   
  **タイマー**  
- 時間ベースの機能を Windows ベースのアプリケーションに追加するために使用することができる <xref:System.Windows.Forms.Timer> コンポーネント インスタンスを作成します。 詳細については、「[Timer コンポーネント](http://msdn.microsoft.com/Library/6700e534-6382-43d5-98ed-14205435fff7)」を参照してください。  
+ 時間ベースの機能を Windows ベースのアプリケーションに追加するために使用できる <xref:System.Windows.Forms.Timer> コンポーネント インスタンスを作成します。 詳細については、「[Timer コンポーネント](/dotnet/framework/winforms/controls/timer-component-windows-forms)」を参照してください。  
   
 > [!NOTE]
 >  **ツールボックス**に追加できるシステム ベースの <xref:System.Timers.Timer> もあります。この <xref:System.Timers.Timer> は、サーバー アプリケーション用に最適化され、Windows フォーム <xref:System.Windows.Forms.Timer> は Windows フォームで使用するのに最も適しています。  

@@ -1,19 +1,39 @@
 ---
 title: "Visual Studio のロックを解除する方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/23/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 01/23/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffb580a1-8b5d-48f5-b811-87f8036f50ea
 caps.latest.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 4a1e79dbceb4c0cfd02dab4b3132190e44ac3273
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="how-to-unlock-visual-studio"></a>Visual Studio のロックを解除する方法
 Visual Studio は最大で 30 日間無料で評価できます。 IDE にサインインすると、評価期間を 90 日間延長できます。 Visual Studio の使用を続けるには、次の方法で IDE のロックを解除します。  
@@ -66,13 +86,8 @@ Visual Studio は最大で 30 日間無料で評価できます。 IDE にサイ
   
 1.  サブスクリプションを更新します。 使用中のライセンスの詳細については、[ファイル] > [アカウントの設定] ダイアログで右側にあるライセンス情報を参照してください。  
   
-2.  別のアカウントに関連付けられている別のサブスクリプションを持っている場合は、[ファイル] > [アカウントの設定] ダイアログの左側にある [すべてのアカウント] 一覧にそのアカウントを追加するために、[アカウントの追加] リンクをクリックしてください。  
+2.  別のアカウントに関連付けられている別のサブスクリプションを持っている場合は、[ファイル] > [アカウントの設定] ダイアログの左側にある [すべてのアカウント] 一覧にそのアカウントを追加するために、[アカウントの追加...] リンクをクリックしてください。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio へのサインイン](../ide/signing-in-to-visual-studio.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -1,19 +1,39 @@
 ---
-title: "Visual Studio へのサインイン | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/23/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visual Studio にサインイン | Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/23/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 caps.latest.revision: 30
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 28
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8b1f56944190c60795d5bbd726388309caca7070
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
 Visual Studio の開発環境をカスタマイズし、最適化するには、IDE にサインインして個人アカウントを設定します。  
@@ -23,7 +43,7 @@ Visual Studio の開発環境をカスタマイズし、最適化するには、
 
 -   無料のソフトウェア、トレーニング、サポートなど、Visual Studio Dev Essentials プログラムにおける**さまざまな特典にアクセスできます** 。 詳細については、「 [Visual Studio Dev Essentials](http://aka.ms/vsdevhelp) 」をご覧ください。  
 
--   **Visual Studio の設定を同期する** – どのデバイス上の Visual Studio にサインインしても、ユーザーがカスタマイズした設定 (キー バインド、ウィンドウのレイアウト、配色テーマなど) がすぐに適用されます。 「[Visual Studio での同期された設定](../ide/synchronized-settings-in-visual-studio.md)」をご覧ください。  
+-   **Visual Studio の設定を同期する** – どのデバイス上の Visual Studio にサインインしても、ユーザーがカスタマイズした設定 (キー バインド、ウィンドウのレイアウト、配色テーマなど) がすぐに適用されます。 「 [Visual Studio での同期された設定](../ide/synchronized-settings-in-visual-studio.md)」をご覧ください。  
 
 -   **Visual Studio Express エディションのロックを完全に解除する** – 任意のエディションの Visual Studio Express を、30 日の評価期間にとらわれることなく使用できます。  
 
@@ -31,7 +51,7 @@ Visual Studio の開発環境をカスタマイズし、最適化するには、
 
 -   **Visual Studio の評価期間を拡張する** – 30 日の評価期間にとらわれることなく、Visual Studio Professional または Visual Studio Enterprise を 90 日間延長して使用できます。  
 
--   **MSDN または VSO サブスクリプションに関連付けられたアカウントを使用すると、Visual Studio のロックが解除**されます。 「[Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)」を参照してください。  
+-   **MSDN または VSO サブスクリプションに関連付けられたアカウントを使用すると、Visual Studio のロックが解除**されます。 「 [Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)」を参照してください。  
 
 -   IDE で、**Azure や Visual Studio Team Services などのサービスに自動的に接続** され、同じアカウントの資格情報を再度要求されることはなくなります。  
 
@@ -58,9 +78,4 @@ Visual Studio の開発環境をカスタマイズし、最適化するには、
 4.  目的の設定を変更します。  
 
 5.  完了したら、 **[変更の保存]** をクリックします。
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

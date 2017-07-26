@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2ce4f6545e3497b829234a6f21983a406059d3e0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 99f7756369fe4848fc5641009e95bbba23c95227
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="visual-c-intellisense"></a>Visual C# の IntelliSense
@@ -53,7 +54,7 @@ Visual C# の IntelliSense は、エディターでコーディングする際�
   
 -   [拡張メソッド](#ExtensionMethods)  
   
- C# でのコンプリート リストは非常に高機能でもあるため、コンテキストに基づいて、無関係なトークンを除外したり、トークンを事前に選択したりします。 詳細については、「[C# でフィルター処理されたコンプリート リスト](../misc/filtered-completion-lists-in-csharp.md)」および「[C# で事前に選択されたコンプリート リスト項目](../misc/pre-selected-completion-list-items-in-csharp.md)」を参照してください。  
+ C# でのコンプリート リストは非常に高機能でもあるため、コンテキストに基づいて、無関係なトークンを除外したり、トークンを事前に選択したりします。 詳細については、[フィルター処理されたコンプリート リスト](#filtered-completion-lists)に関するページを参照してください。  
   
 ###  <a name="CodeSnippets"></a> コンプリート リストのコード スニペット  
  Visual C# のコンプリート リストには、コード スニペットが含まれており、事前に定義されたコードの本体をプログラムに簡単に挿入できます。 コード スニペットは、スニペットの [Shortcut 要素 (IntelliSense コード スニペット)](http://msdn.microsoft.com/en-us/052cc97a-5c70-42f8-b398-4c3adf670cfa) としてコンプリート リストに表示されます。  既定で Visual C# で利用できるコード スニペットの詳細については、「[Visual C# のコード スニペット](../ide/visual-csharp-code-snippets.md)」を参照してください。  
@@ -69,7 +70,7 @@ Visual C# の IntelliSense は、エディターでコーディングする際�
   
  拡張メソッドでは、インスタンス メソッドとは異なるアイコンが使用されます。 表示されるアイコンの一覧については、「[[クラス ビュー] ウィンドウとオブジェクト ブラウザーのアイコン](../ide/class-view-and-object-browser-icons.md)」を参照してください。 同じ名前のインスタンス メソッドと拡張メソッドが両方ともスコープ内にある場合、コンプリート リストには拡張メソッドのアイコンが表示されます。  
   
-### <a name="filtered-completion-lists"></a>フィルター処理されたコンプリート リスト  
+### <a name="filtered-completion-lists"></a> フィルター処理されたコンプリート リスト  
  IntelliSense では、フィルターを使用して、不要なメンバーをコンプリート リストから削除します。  
   
  Visual C# では、次の項目用に表示されるコンプリート リストをフィルター処理します。  
@@ -85,6 +86,8 @@ Visual C# の IntelliSense は、エディターでコーディングする際�
 -   **オブジェクト初期化子**: 初期化できるメンバーだけがコンプリート リストに表示されます。  
   
 -   **新しいキーワード**: 「`new`」と入力し、Space キーを押すと、コンプリート リストが表示されます。 コードの状況に応じて、リストの項目が自動的に選択されます。  たとえば、メソッドの宣言用と return ステートメント用の項目がコンプリート リストで自動的に選択されます。  
+  
+-   **enum キーワード**: 列挙型 (Enum) の割り当ての等号 (=) の次に Space キーを押すと、コンプリート リストが表示されます。 コードの状況に応じて、リストの項目が自動的に選択されます。  たとえば、キーワード return の入力後や、宣言の作成時に、コンプリート リストで項目が自動的に選択されます。  
   
 -   **as 演算子と is 演算子**: `as` または `is` のキーワードを入力してから Space キーを押すと、フィルター処理されたコンプリート リストが自動的に表示されます。  
   
@@ -125,6 +128,8 @@ Visual C# の IntelliSense は、エディターでコーディングする際�
  IntelliSense には、コード エディターでの作業中、抽象基本クラスのメンバーを自動的に実装するためのオプションが用意されています。  通常、抽象基本クラスのメンバーを実装するには、派生クラスで抽象基本クラスのメソッドごとに新しいメソッド定義を作成する必要があります。 IntelliSense を使用した場合、クラス宣言で抽象基本クラスの名前を入力すると、スマート タグが表示されます。  このスマート タグで、基本クラスのメソッドを自動的に実装するためのオプションを選択できます。  
   
  抽象基本クラスの実装機能によって生成されるメソッド スタブは、MethodStub.snippet ファイルで定義されたコード スニペットがベースになります。 コード スニペットは変更できます。 詳細については、「[チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」を参照してください。  
+  
+<a name="generate-from-usage></a>  
   
 ### <a name="generate-from-usage"></a>使用法から生成  
  **[使用法から生成]** 機能では、クラスとメンバーを定義する前にそれらを使用することができます。 使用されますが、まだ定義されていないクラス、コンストラクター、メソッド、プロパティ、フィールド、または列挙型に対してスタブを生成することができます。 コード内の現在の場所を離れずに、新しい型とメンバーを生成することができます。 これにより、ワークフローの中断を最小限にします。  
@@ -169,8 +174,6 @@ Visual C# の IntelliSense は、エディターでコーディングする際�
   
 > [!NOTE]
 >  **[ビュー]** メニュー (Ctrl + -) の **[戻る]** コマンドを使用して、イベント フックアップ ステートメントに戻ります。  
-  
- 次のタスクは、IntelliSense が `button1_Click` という名前のイベント ハンドラーを、`button1.Click` という名前のイベント フィールドに自動的にフックアップする方法について示しています。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio IDE](../ide/visual-studio-ide.md)

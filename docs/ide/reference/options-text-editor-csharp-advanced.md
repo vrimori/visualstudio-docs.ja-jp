@@ -38,17 +38,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d0d1bb04347f3b4ce4578a15acf8f9118a6ba02d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 61a061b6a58b18451fc53c8d53f77889cc1ea253
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="options-text-editor-c-advanced"></a>[オプション]、[テキスト エディター]、[C#]、[詳細]
 このダイアログ ボックスを使用して、Visual C# のエディターの書式設定、コードのリファクタリング、および XML ドキュメントのコメントの設定を変更します。 このダイアログ ボックスを表示するには、[**ツール**] メニューの [**オプション**] をクリックし、[**テキスト エディター**] フォルダー、[**C#**] を順に展開し、[**詳細設定**] をクリックします。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
 ## <a name="outlining"></a>アウトライン  
  ファイルが開かれたときにアウトライン モードを実行する  
@@ -91,7 +92,7 @@ ms.lasthandoff: 02/22/2017
   
 ## <a name="organize-usings"></a>using の整理  
  using を並べ替える際に、'System' ディレクティブを先頭に配置する  
- 選択すると、`System` using ディレクティブが他の using ディレクティブより前に表示されます。 詳細については、「[using の並べ替え](../../misc/sort-usings.md)」を参照してください。  
+ 選択すると、`System` using ディレクティブが他の using ディレクティブより前に表示されます。 詳細については、[Visual C# IntelliSense](../../ide/visual-csharp-intellisense.md#automatic-code-generation) の「using の整理」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [XML ドキュメント コメント](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)   

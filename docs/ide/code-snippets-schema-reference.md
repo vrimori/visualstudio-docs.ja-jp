@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4d03ab21333e269d10ef9a013a11665ed3fbba92
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 18627c9f14e82bef85ff433eea14d99653f78e68
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="code-snippets-schema-reference"></a>コード スニペット スキーマ リファレンス
@@ -95,7 +96,7 @@ IntelliSense コード スニペットとは、[!INCLUDE[vsprvs](../code-quality
 ##  <a name="code"></a> Code 要素  
  短いコード ブロックのコンテナーを提供します。  
   
- `Code` 要素のテキストでは、`$end$` および `$selected$` という&2; つの予約語を使用できます。 `$end$` は、コード スニペットの挿入後のカーソル位置を指定します。 `$selected$` は、ドキュメントで選択されているテキストを表し、スニペットが呼び出されたときに置き換えられます。 たとえば、次のコードを含むスニペットがあるとします。  
+ `Code` 要素のテキストでは、`$end$` および `$selected$` という 2 つの予約語を使用できます。 `$end$` は、コード スニペットの挿入後のカーソル位置を指定します。 `$selected$` は、ドキュメントで選択されているテキストを表し、スニペットが呼び出されたときに置き換えられます。 たとえば、次のコードを含むスニペットがあるとします。  
   
 ```xml  
 $selected$ is a great color.  
@@ -178,8 +179,8 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[Header 要素](../ide/code-snippets-schema-reference.md#header)|必須の要素です。 コード スニペットに関する全般的な情報が格納されます。 コード スニペットで使用できる `Header` 要素は&1; つだけです。|  
-|[Snippet 要素](../ide/code-snippets-schema-reference.md#snippet)|必須の要素です。 Visual Studio によって挿入されるコードが格納されます。 コード スニペットで使用できる `Snippet` 要素は&1; つだけです。|  
+|[Header 要素](../ide/code-snippets-schema-reference.md#header)|必須の要素です。 コード スニペットに関する全般的な情報が格納されます。 コード スニペットで使用できる `Header` 要素は 1 つだけです。|  
+|[Snippet 要素](../ide/code-snippets-schema-reference.md#snippet)|必須の要素です。 Visual Studio によって挿入されるコードが格納されます。 コード スニペットで使用できる `Snippet` 要素は 1 つだけです。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  
@@ -197,7 +198,7 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[CodeSnippet 要素](../ide/code-snippets-schema-reference.md#codesnippet)|省略可能な要素です。 すべてのコード スニペット データを下位に持つ親要素です。 `CodeSnippet` 要素に&0; 個以上の `CodeSnippets` 要素があります。|  
+|[CodeSnippet 要素](../ide/code-snippets-schema-reference.md#codesnippet)|省略可能な要素です。 すべてのコード スニペット データを下位に持つ親要素です。 `CodeSnippet` 要素に 0 個以上の `CodeSnippets` 要素があります。|  
   
 ##  <a name="declarations"></a> Declarations 要素  
  編集できるコード スニペットの部分を構成するリテラルとオブジェクトを指定します。  
@@ -212,8 +213,8 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[Literal 要素](../ide/code-snippets-schema-reference.md#literal)|省略可能な要素です。 編集できるコード スニペットのリテラルを定義します。 `Literal` 要素に&0; 個以上の `Declarations` 要素があります。|  
-|[Object 要素](../ide/code-snippets-schema-reference.md#object)|省略可能な要素です。 編集できるコード スニペットのオブジェクトを定義します。 `Object` 要素に&0; 個以上の `Declarations` 要素があります。|  
+|[Literal 要素](../ide/code-snippets-schema-reference.md#literal)|省略可能な要素です。 編集できるコード スニペットのリテラルを定義します。 `Literal` 要素に 0 個以上の `Declarations` 要素があります。|  
+|[Object 要素](../ide/code-snippets-schema-reference.md#object)|省略可能な要素です。 編集できるコード スニペットのオブジェクトを定義します。 `Object` 要素に 0 個以上の `Declarations` 要素があります。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  
@@ -288,13 +289,13 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[Author 要素](../ide/code-snippets-schema-reference.md#author)|省略可能な要素です。 コード スニペットを作成した個人または会社の名前です。 `Author` 要素には&0; 個または&1; 個の `Header` 要素があります。|  
-|[Description 要素](../ide/code-snippets-schema-reference.md#description)|省略可能な要素です。 コード スニペットの説明です。 `Description` 要素には&0; 個または&1; 個の `Header` 要素があります。|  
-|[HelpUrl 要素](../ide/code-snippets-schema-reference.md#helpurl)|省略可能な要素です。 コード スニペットに関する詳細な情報が記載された URL です。 Header 要素には&0; 個または&1; 個の `HelpURL` 要素があります。 **注:** Visual Studio では `HelpUrl` 要素を使いません。 この要素は IntelliSense コード スニペット XML スキーマの一部であり、この要素を含むコード スニペットはすべて問題なく検証されますが、要素の値が使われることはありません。|  
-|[Keywords 要素](../ide/code-snippets-schema-reference.md#keywords)|省略可能な要素です。 複数の `Keyword` 要素をグループ化します。 `Keywords` 要素には&0; 個または&1; 個の `Header` 要素があります。|  
-|[Shortcut 要素](../ide/code-snippets-schema-reference.md#shortcut)|省略可能な要素です。 スニペットの挿入に使用するショートカット テキストを指定します。 `Shortcut` 要素には&0; 個または&1; 個の `Header` 要素があります。|  
-|[SnippetTypes 要素](../ide/code-snippets-schema-reference.md#snippettypes)|省略可能な要素です。 複数の `SnippetType` 要素をグループ化します。 `SnippetTypes` 要素には&0; 個または&1; 個の `Header` 要素があります。 `SnippetTypes` 要素が存在しない場合、コード スニペットは常に有効となります。|  
-|[Title 要素](../ide/code-snippets-schema-reference.md#title)|必須の要素です。 コード スニペットの表示名です。 `Title` 要素で使用できる `Header` 要素は&1; つだけです。|  
+|[Author 要素](../ide/code-snippets-schema-reference.md#author)|省略可能な要素です。 コード スニペットを作成した個人または会社の名前です。 `Author` 要素には 0 個または 1 個の `Header` 要素があります。|  
+|[Description 要素](../ide/code-snippets-schema-reference.md#description)|省略可能な要素です。 コード スニペットの説明です。 `Description` 要素には 0 個または 1 個の `Header` 要素があります。|  
+|[HelpUrl 要素](../ide/code-snippets-schema-reference.md#helpurl)|省略可能な要素です。 コード スニペットに関する詳細な情報が記載された URL です。 Header 要素には 0 個または 1 個の `HelpURL` 要素があります。 **注:** Visual Studio では `HelpUrl` 要素を使いません。 この要素は IntelliSense コード スニペット XML スキーマの一部であり、この要素を含むコード スニペットはすべて問題なく検証されますが、要素の値が使われることはありません。|  
+|[Keywords 要素](../ide/code-snippets-schema-reference.md#keywords)|省略可能な要素です。 複数の `Keyword` 要素をグループ化します。 `Keywords` 要素には 0 個または 1 個の `Header` 要素があります。|  
+|[Shortcut 要素](../ide/code-snippets-schema-reference.md#shortcut)|省略可能な要素です。 スニペットの挿入に使用するショートカット テキストを指定します。 `Shortcut` 要素には 0 個または 1 個の `Header` 要素があります。|  
+|[SnippetTypes 要素](../ide/code-snippets-schema-reference.md#snippettypes)|省略可能な要素です。 複数の `SnippetType` 要素をグループ化します。 `SnippetTypes` 要素には 0 個または 1 個の `Header` 要素があります。 `SnippetTypes` 要素が存在しない場合、コード スニペットは常に有効となります。|  
+|[Title 要素](../ide/code-snippets-schema-reference.md#title)|必須の要素です。 コード スニペットの表示名です。 `Title` 要素で使用できる `Header` 要素は 1 つだけです。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  
@@ -351,7 +352,7 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[名前空間要素](../ide/code-snippets-schema-reference.md#namespace)|必須の要素です。 コード スニペットで使用される名前空間を指定します。 `Namespace` 要素で使用できる `Import` 要素は&1; つだけです。|  
+|[名前空間要素](../ide/code-snippets-schema-reference.md#namespace)|必須の要素です。 コード スニペットで使用される名前空間を指定します。 `Namespace` 要素で使用できる `Import` 要素は 1 つだけです。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  
@@ -371,7 +372,7 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[Import 要素](../ide/code-snippets-schema-reference.md#import)|省略可能な要素です。 コード スニペットでインポートする必要のある名前空間が格納されます。 `Imports` 要素には&0; 個以上の **Import** 要素があります。|  
+|[Import 要素](../ide/code-snippets-schema-reference.md#import)|省略可能な要素です。 コード スニペットでインポートする必要のある名前空間が格納されます。 `Imports` 要素には 0 個以上の **Import** 要素があります。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  
@@ -404,7 +405,7 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[Keyword 要素](../ide/code-snippets-schema-reference.md#keyword)|省略可能な要素です。 コード スニペットの複数のキーワードが格納されます。 `Keyword` 要素に&0; 個以上の `Keywords` 要素があります。|  
+|[Keyword 要素](../ide/code-snippets-schema-reference.md#keyword)|省略可能な要素です。 コード スニペットの複数のキーワードが格納されます。 `Keyword` 要素に 0 個以上の `Keywords` 要素があります。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  
@@ -430,10 +431,10 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[Default 要素](../ide/code-snippets-schema-reference.md#default)|必須の要素です。 コード スニペットを挿入した場合に、既定で使用されるリテラルの値を指定します。 `Default` 要素で使用できる `Literal` 要素は&1; つだけです。|  
-|[Function 要素](../ide/code-snippets-schema-reference.md#function)|省略可能な要素です。 リテラルが Visual Studio でフォーカスを受け取ったときに実行される関数を指定します。 `Function` 要素には&0; 個または&1; 個の `Literal` 要素があります。|  
-|[ID 要素](../ide/code-snippets-schema-reference.md#id)|必須の要素です。 リテラルの一意の識別子を指定します。 `ID` 要素で使用できる `Literal` 要素は&1; つだけです。|  
-|[ToolTip 要素](../ide/code-snippets-schema-reference.md#tooltip)|省略可能な要素です。 リテラルに予想される値と使用法に関する説明文です。 `Literal` 要素には&0; 個または&1; 個の **Tooltip** 要素があります。|  
+|[Default 要素](../ide/code-snippets-schema-reference.md#default)|必須の要素です。 コード スニペットを挿入した場合に、既定で使用されるリテラルの値を指定します。 `Default` 要素で使用できる `Literal` 要素は 1 つだけです。|  
+|[Function 要素](../ide/code-snippets-schema-reference.md#function)|省略可能な要素です。 リテラルが Visual Studio でフォーカスを受け取ったときに実行される関数を指定します。 `Function` 要素には 0 個または 1 個の `Literal` 要素があります。|  
+|[ID 要素](../ide/code-snippets-schema-reference.md#id)|必須の要素です。 リテラルの一意の識別子を指定します。 `ID` 要素で使用できる `Literal` 要素は 1 つだけです。|  
+|[ToolTip 要素](../ide/code-snippets-schema-reference.md#tooltip)|省略可能な要素です。 リテラルに予想される値と使用法に関する説明文です。 `Literal` 要素には 0 個または 1 個の **Tooltip** 要素があります。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  
@@ -476,11 +477,11 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[Default 要素](../ide/code-snippets-schema-reference.md#default)|必須の要素です。 コード スニペットを挿入した場合に、既定で使用されるリテラルの値を指定します。 `Default` 要素で使用できる `Literal` 要素は&1; つだけです。|  
-|[Function 要素](../ide/code-snippets-schema-reference.md#function)|省略可能な要素です。 リテラルが Visual Studio でフォーカスを受け取ったときに実行される関数を指定します。 `Function` 要素には&0; 個または&1; 個の `Literal` 要素があります。|  
-|[ID 要素](../ide/code-snippets-schema-reference.md#id)|必須の要素です。 リテラルの一意の識別子を指定します。 `ID` 要素で使用できる `Literal` 要素は&1; つだけです。|  
-|[ToolTip 要素](../ide/code-snippets-schema-reference.md#tooltip)|省略可能な要素です。 リテラルに予想される値と使用法に関する説明文です。 `Literal` 要素には&0; 個または&1; 個の **Tooltip** 要素があります。|  
-|[Type 要素](../ide/code-snippets-schema-reference.md#type)|必須の要素です。 オブジェクトの種類を指定します。 `Type` 要素で使用できる `Object` 要素は&1; つだけです。|  
+|[Default 要素](../ide/code-snippets-schema-reference.md#default)|必須の要素です。 コード スニペットを挿入した場合に、既定で使用されるリテラルの値を指定します。 `Default` 要素で使用できる `Literal` 要素は 1 つだけです。|  
+|[Function 要素](../ide/code-snippets-schema-reference.md#function)|省略可能な要素です。 リテラルが Visual Studio でフォーカスを受け取ったときに実行される関数を指定します。 `Function` 要素には 0 個または 1 個の `Literal` 要素があります。|  
+|[ID 要素](../ide/code-snippets-schema-reference.md#id)|必須の要素です。 リテラルの一意の識別子を指定します。 `ID` 要素で使用できる `Literal` 要素は 1 つだけです。|  
+|[ToolTip 要素](../ide/code-snippets-schema-reference.md#tooltip)|省略可能な要素です。 リテラルに予想される値と使用法に関する説明文です。 `Literal` 要素には 0 個または 1 個の **Tooltip** 要素があります。|  
+|[Type 要素](../ide/code-snippets-schema-reference.md#type)|必須の要素です。 オブジェクトの種類を指定します。 `Type` 要素で使用できる `Object` 要素は 1 つだけです。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  
@@ -501,8 +502,8 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[Assembly 要素](../ide/code-snippets-schema-reference.md#assembly)|必須の要素です。 コード スニペットによって参照されるアセンプリの名前が格納されます。 `Assembly` 要素で使用できる `Reference` 要素は&1; つだけです。|  
-|[Url 要素](../ide/code-snippets-schema-reference.md#url)|省略可能な要素です。 参照アセンブリに関する詳細な情報の入手先 URL が格納されます。 `Url` 要素には&0; 個または&1; 個の `Reference` 要素があります。|  
+|[Assembly 要素](../ide/code-snippets-schema-reference.md#assembly)|必須の要素です。 コード スニペットによって参照されるアセンプリの名前が格納されます。 `Assembly` 要素で使用できる `Reference` 要素は 1 つだけです。|  
+|[Url 要素](../ide/code-snippets-schema-reference.md#url)|省略可能な要素です。 参照アセンブリに関する詳細な情報の入手先 URL が格納されます。 `Url` 要素には 0 個または 1 個の `Reference` 要素があります。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  
@@ -522,7 +523,7 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[Reference 要素](../ide/code-snippets-schema-reference.md#reference)|省略可能な要素です。 コード スニペットで参照する必要のあるアセンブリについての情報が格納されます。 `Reference` 要素に&0; 個以上の `References` 要素があります。|  
+|[Reference 要素](../ide/code-snippets-schema-reference.md#reference)|省略可能な要素です。 コード スニペットで参照する必要のあるアセンブリについての情報が格納されます。 `Reference` 要素に 0 個以上の `References` 要素があります。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  
@@ -532,7 +533,7 @@ is a great color. I love Blue.
  スニペットの挿入に使用するショートカット テキストを指定します。 `Shortcut` 要素のテキスト値には、英数字、ハイフン (-)、およびアンダースコア (_) のみを含めることができます。  
   
 > [!CAUTION]
->  _ と – の文字は C++ スニペットのショートカットではサポートされていません。  
+>  _ と - の文字は C++ スニペットのショートカットではサポートされていません。  
   
 ```xml  
 <Shortcut>  
@@ -561,10 +562,10 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[Code 要素](../ide/code-snippets-schema-reference.md#code)|必須の要素です。 ドキュメント ファイルに挿入するコードを指定します。 `Code` 要素で使用できる `Snippet` 要素は&1; つだけです。|  
-|[Declarations 要素](../ide/code-snippets-schema-reference.md#declarations)|省略可能な要素です。 編集できるコード スニペットの部分を構成するリテラルとオブジェクトを指定します。 `Declarations` 要素には&0; 個または&1; 個の `Snippet` 要素があります。|  
-|[Imports 要素](../ide/code-snippets-schema-reference.md#imports)|省略可能な要素です。 複数の `Import` 要素をグループ化します。 `Imports` 要素には&0; 個または&1; 個の `Snippet` 要素があります。|  
-||省略可能な要素です。 複数の `Reference` 要素をグループ化します。 `References` 要素には&0; 個または&1; 個の `Snippet` 要素があります。|  
+|[Code 要素](../ide/code-snippets-schema-reference.md#code)|必須の要素です。 ドキュメント ファイルに挿入するコードを指定します。 `Code` 要素で使用できる `Snippet` 要素は 1 つだけです。|  
+|[Declarations 要素](../ide/code-snippets-schema-reference.md#declarations)|省略可能な要素です。 編集できるコード スニペットの部分を構成するリテラルとオブジェクトを指定します。 `Declarations` 要素には 0 個または 1 個の `Snippet` 要素があります。|  
+|[Imports 要素](../ide/code-snippets-schema-reference.md#imports)|省略可能な要素です。 複数の `Import` 要素をグループ化します。 `Imports` 要素には 0 個または 1 個の `Snippet` 要素があります。|  
+||省略可能な要素です。 複数の `Reference` 要素をグループ化します。 `References` 要素には 0 個または 1 個の `Snippet` 要素があります。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  
@@ -603,7 +604,7 @@ is a great color. I love Blue.
   
 |子要素|説明|  
 |-------------------|-----------------|  
-|[SnippetType 要素](../ide/code-snippets-schema-reference.md#snippettype)|省略可能な要素です。 Visual Studio がコード スニペットをコードに挿入するときの動作を指定します。 `SnippetType` 要素に&0; 個以上の `SnippetTypes` 要素があります。|  
+|[SnippetType 要素](../ide/code-snippets-schema-reference.md#snippettype)|省略可能な要素です。 Visual Studio がコード スニペットをコードに挿入するときの動作を指定します。 `SnippetType` 要素に 0 個以上の `SnippetTypes` 要素があります。|  
   
 |Parent 要素|説明|  
 |--------------------|-----------------|  

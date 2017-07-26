@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 054126ddbdc9f0144983a1ef21fa43875699cbee
-ms.openlocfilehash: 973c12a010579e5c461f2a23bf18d93c58d32554
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 96a1fa1ef10a02ea85940dd8a0745f1c1d10c326
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 05/13/2017
 
 ---
 
@@ -86,7 +86,7 @@ Microsoft.Net.Component.4.5.2.TargetingPack | .NET Framework 4.5.2 Targeting Pac
 Microsoft.Net.Component.4.5.TargetingPack | .NET Framework 4.5 Targeting Pack | 15.0.26208.0 | 推奨
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 Targeting Pack | 15.0.26208.0 | 推奨
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 Targeting Pack | 15.0.26208.0 | 推奨
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 開発ツール | 15.0.26208.0 | 推奨
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 開発ツール | 15.0.26208.0 | 推奨
 Microsoft.VisualStudio.Component.AppInsights.Tools | Developer Analytics Tools | 15.0.26323.1 | 推奨
 Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure Authoring Tools | 15.0.26419.1 | 推奨
 Microsoft.VisualStudio.Component.Azure.Compute.Emulator | Azure コンピューティング エミュレーター | 15.0.26419.1 | 推奨
@@ -152,7 +152,7 @@ Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 Targeting Pac
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 Targeting Pack | 15.0.26208.0 | 推奨
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 Targeting Pack | 15.0.26208.0 | 推奨
 Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 開発ツール | 15.0.26208.0 | 推奨
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 開発ツール | 15.0.26208.0 | 推奨
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 開発ツール | 15.0.26208.0 | 推奨
 Microsoft.VisualStudio.Component.AppInsights.Tools | Developer Analytics Tools | 15.0.26323.1 | 推奨
 Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure Authoring Tools | 15.0.26419.1 | 推奨
 Microsoft.VisualStudio.Component.Azure.ClientLibs | .NET 用 Azure ライブラリ | 15.0.26208.0 | 推奨
@@ -260,7 +260,7 @@ Microsoft.Net.Component.4.5.2.TargetingPack | .NET Framework 4.5.2 Targeting Pac
 Microsoft.Net.Component.4.5.TargetingPack | .NET Framework 4.5 Targeting Pack | 15.0.26208.0 | 推奨
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 Targeting Pack | 15.0.26208.0 | 推奨
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 Targeting Pack | 15.0.26208.0 | 推奨
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 開発ツール | 15.0.26208.0 | 推奨
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 開発ツール | 15.0.26208.0 | 推奨
 Microsoft.VisualStudio.Component.CoreEditor | Visual Studio のコア エディター | 15.0.26208.0 | 推奨
 Microsoft.VisualStudio.Component.DiagnosticTools | プロファイリング ツール | 15.0.26208.0 | 推奨
 Microsoft.VisualStudio.Component.EntityFramework | Entity Framework 6 Tools | 15.0.26208.0 | 推奨
@@ -401,7 +401,7 @@ Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 Targeting Pac
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 Targeting Pack | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 Targeting Pack | 15.0.26208.0 | Optional
 Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 開発ツール | 15.0.26208.0 | Optional
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 開発ツール | 15.0.26208.0 | Optional
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 開発ツール | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Roslyn.Compiler | C# および Visual Basic Roslyn コンパイラ | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# および Visual Basic | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.Windows10SDK.10240 | Windows 10 SDK (10.0.10240.0) | 15.0.26208.0 | Optional
@@ -579,7 +579,7 @@ Microsoft.VisualStudio.Component.WebDeploy | Web 配置 | 15.0.26208.0 | 必須
 Microsoft.Net.Component.4.5.1.TargetingPack | .NET Framework 4.5.1 Targeting Pack | 15.0.26208.0 | 推奨
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 Targeting Pack | 15.0.26208.0 | 推奨
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 Targeting Pack | 15.0.26208.0 | 推奨
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 開発ツール | 15.0.26208.0 | 推奨
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 開発ツール | 15.0.26208.0 | 推奨
 Microsoft.VisualStudio.Component.CloudExplorer | Cloud Explorer | 15.0.26208.0 | 推奨
 Microsoft.VisualStudio.Component.CoreEditor | Visual Studio のコア エディター | 15.0.26208.0 | 推奨
 Microsoft.VisualStudio.Component.DiagnosticTools | プロファイリング ツール | 15.0.26208.0 | 推奨
@@ -721,7 +721,7 @@ Microsoft.Net.Component.4.6.1.TargetingPack | .NET Framework 4.6.1 Targeting Pac
 Microsoft.Net.Component.4.6.TargetingPack | .NET Framework 4.6 Targeting Pack | 15.0.26208.0 | Optional
 Microsoft.Net.Component.4.TargetingPack | .NET Framework 4 Targeting Pack | 15.0.26208.0 | Optional
 Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | .NET Framework 4.6.1 開発ツール | 15.0.26208.0 | Optional
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 – 4.6 開発ツール | 15.0.26208.0 | Optional
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | .NET Framework 4 - 4.6 開発ツール | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.AppInsights.Tools | Developer Analytics Tools | 15.0.26323.1 | 省略可能
 Microsoft.VisualStudio.Component.Azure.AuthoringTools | Azure Authoring Tools | 15.0.26419.1 | 省略可能
 Microsoft.VisualStudio.Component.Azure.ClientLibs | .NET 用 Azure ライブラリ | 15.0.26208.0 | 省略可能

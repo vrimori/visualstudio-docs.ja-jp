@@ -28,10 +28,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0f5730af2e61bb1bd342e607db7c1244ad7d0008
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 996ec0a9fa601517993cb6049a114796c36489fe
 ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="step-6-add-a-timer"></a>手順 6: タイマーの追加
@@ -51,8 +51,7 @@ ms.lasthandoff: 02/22/2017
   
 3.  Windows フォーム デザイナーでタイマー コントロール アイコンを選択して Enter キーを押すか、タイマーをダブルクリックして、空の **Tick** イベント ハンドラーを追加します。 次のコードを既存のコードと置き換えるか、手動でイベント ハンドラーに入力します。  
   
-     [!code-cs[VbExpressTutorial4Step6#7](../ide/codesnippet/CSharp/step-6-add-a-timer_1.cs)]
-     [!code-vb[VbExpressTutorial4Step6#7](../ide/codesnippet/VisualBasic/step-6-add-a-timer_1.vb)]  
+     [!code-cs[VbExpressTutorial4Step6#7](../ide/codesnippet/CSharp/step-6-add-a-timer_1.cs)]  [!code-vb[VbExpressTutorial4Step6#7](../ide/codesnippet/VisualBasic/step-6-add-a-timer_1.vb)]  
   
      Tick イベント ハンドラーは、3 つのことを実行します。まず、`Stop()` メソッドを呼び出してタイマーを停止します。 次に、2 つの参照変数 `firstClicked` および `secondClicked` を使用して、プレーヤーがクリックした 2 つのラベルを再び非表示にします。 最後に、`firstClicked` 参照変数と `secondClicked` 参照変数を `null` (Visual C# の場合) または `Nothing` (Visual Basic の場合) にリセットします。 この手順は、プログラム自体がリセットされるしくみであるため重要です。 この時点では、`Label` コントロールが追跡されておらず、プレーヤーはラベルを再びクリックできる状態になっています。  
   
@@ -61,8 +60,7 @@ ms.lasthandoff: 02/22/2017
   
 4.  新しいタイマーの動作を確認するには、コード エディターに移動し、`label_Click()` イベント ハンドラー メソッドの上部と下部に次のコードを追加します  (`if` ステートメントを、上部に 1 つ追加し、下部に 3 つ追加することになります。メソッドの他の部分は同じです)。  
   
-     [!code-cs[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]
-     [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]  
+     [!code-cs[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]  [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]  
   
      メソッドの上部のコードは、**Enabled** プロパティの値をチェックして、タイマーが開始されているかどうかをチェックします。 これにより、プレーヤーが 1 つ目と 2 つ目の `Label` コントロールをクリックした場合はタイマーが開始され、3 つ目のラベルをクリックした場合は何も実行されません。  
   

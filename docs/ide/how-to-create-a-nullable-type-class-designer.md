@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 5b55bd1c7b6be5c8fabafded8cd3a658ec9602d8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 001e8d8c1a6371d76b1a52826da16d471f07c1ba
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="how-to-create-a-nullable-type-class-designer"></a>方法: Null 許容型を作成する (クラス デザイナー)
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/22/2017
   
  *null 許容型*は、その型の一般的な値の範囲だけでなく null 値も受け付けるように拡張した値型です。 たとえば、`Int32` の null 許容型 (Nullable\<Int32> とも書きます) には、-2147483648 から 2147483647 の任意の値または null 値を代入できます。 Nullable\<bool> には、値 `True`、`False`、または null (値がまったくない) を割り当てることができます。  
   
- null 許容型は、<xref:System.Nullable%601> 構造体のインスタンスです。 null 許容型の各インスタンスには、2 つのパブリック読み取り専用プロパティ `HasValue` と `Value` があります。  
+ Null 許容型は、<xref:System.Nullable%601> 構造体のインスタンスです。 null 許容型の各インスタンスには、2 つのパブリック読み取り専用プロパティ `HasValue` と `Value` があります。  
   
 -   `HasValue` は `bool` 型であり、変数に定義済みの値が含まれるかどうかを示します。 `True` は、変数に null 以外の値が含まれていることを意味します。 `if (x.HasValue)` や `if (y != null)` などのステートメントを使って、定義済みの値をテストできます。  
   
@@ -87,5 +88,5 @@ ms.lasthandoff: 02/22/2017
  <xref:System.Nullable%601>   
  [Null 許容型](/dotnet/csharp/programming-guide/nullable-types/index)   
  [Null 許容型の使用](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types)   
- [方法: Null 許容型を識別する](http://msdn.microsoft.com/Library/d4b67ee2-66e8-40c1-ae9d-545d32c71387)   
+ [方法: Null 許容型を識別する](/dotnet/csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type)   
  [null 許容値型](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types)

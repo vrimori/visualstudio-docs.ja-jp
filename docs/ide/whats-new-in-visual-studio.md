@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: edc126208bb401c8dba9a6be722cbd0dbda21caf
-ms.openlocfilehash: 720048b861bfb208489a62340efca28ae88d1951
+ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
+ms.openlocfilehash: 28c6a166a423b3341ae32676830861eaa78cb40d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/22/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
@@ -159,7 +159,7 @@ Visual Studio でプロジェクトを操作する際に、コードを迅速に
 
  ![[すべてにジャンプ] の機能強化](../ide/media/vs2017ide-navigation-go-to.png "強化された [すべてにジャンプ] 機能")
 
-* **すべての参照の検索 (Shift+F12)** &ndash; 構文の色づけにより、[すべての参照の検索] の結果をプロジェクト、定義、パスの組み合わせでグループ化できます。 また、結果を「ロック」して元の結果を失うことなく別の参照を検索できます。
+* **すべての参照の検索 (Shift+F12)** &ndash; 構文の色づけにより、[すべての参照の検索] の結果をプロジェクト、定義、パスの組み合わせでグループ化できます。 また、結果を "ロック" して元の結果を失うことなく別の参照を検索できます。
 
  ![新しい [すべての参照の検索] ツール](../ide/media/vs2017ide-find-all-references.png "新しい [すべての参照の検索] ツールの例")
 
@@ -203,7 +203,7 @@ Visual Studio を向上させることができる提案がある場合、また
 
 ## <a name="see-also"></a>関連項目  
 * [Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
-* [C# の新機能](https://docs.microsoft.com/en-us/dotnet/articles/csharp/csharp-7)  
+* [C# の新機能](https://docs.microsoft.com/en-us/dotnet/csharp/csharp-7)  
 * [Team Foundation Server の新機能](https://www.visualstudio.com/en-us/docs/whats-new)
 * [Visual Studio のリリース ノート](https://www.visualstudio.com/news/vs2015-vs)
 

@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9b29250916c91c98176585bbdb8c5a4018dbd6c7
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: 3524c21503d0432d509c607ea157f3fe675b443d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="how-to-create-item-templates"></a>方法 : 項目テンプレートを作成する
@@ -43,7 +44,7 @@ ms.lasthandoff: 02/22/2017
 
  ウィザードはさまざまな作業を実行して基本テンプレートを作成しますが、多くの場合、テンプレートをエクスポートした後で .vstemplate ファイルを手動で変更する必要があります。 たとえば、[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリ プロジェクトの **[新しい項目の追加]** ダイアログに項目を表示する場合、追加の手順をいくつか実行する必要があります。 このトピックの [2 つ目の手順](../ide/how-to-create-item-templates.md#modify_template)では、このタスクの実行方法を説明します。  
 
- Office、Database、Web など、特定のプロジェクト サブタイプにのみテンプレートが表示されるように指定するには、[このセクション](../ide/how-to-create-multi-file-item-templates.md#enable_templates)をご覧ください。  
+ Office、Database、Web など、特定のプロジェクト サブタイプにのみテンプレートが表示されるように指定するには、[このセクション](#enable_templates)をご覧ください。  
 
  場合によっては、項目テンプレートをゼロから手動で作成する必要があります。 [3 つ目の手順](../ide/how-to-create-item-templates.md#create_template)では、この方法について説明します。  
 
@@ -80,11 +81,13 @@ ms.lasthandoff: 02/22/2017
 
 3.  Visual Studio で .vstemplate ファイルを開きます。  
 
-4.  Windows 8.1 ストア用の C# プロジェクトの場合は、.vstemplate ファイルで `<TemplateData>` の開始タグと終了タグの中に XML、`<TemplateGroupID>WinRT-Managed</TemplateGroupID>` を追加します。  
+4.  ユニバーサル Windows C# プロジェクトの場合は、.vstemplate ファイルで開始 `<TemplateData>` タグの中に XML、`<TemplateID>Microsoft.CSharp.Class</TemplateID>` を追加します。 
 
-     Windows 8.1 ストア用の C++ プロジェクトでは、値として `WinRT-Native-6.3` を使用します。 Windows 10 およびその他の種類のプロジェクトの場合については、「[TemplateGroupID 要素 (Visual Studio テンプレート)](../extensibility/templategroupid-element-visual-studio-templates.md)」をご覧ください。  
+    Windows 8.1 ストア用の C# プロジェクトの場合は、.vstemplate ファイルで `<TemplateData>` の開始タグと終了タグの中に XML、`<TemplateGroupID>WinRT-Managed</TemplateGroupID>` を追加します。  
 
-     次の例は、XML 行 `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` が追加された後の .vstemplate ファイルの内容全体を示しています。 この例は、C# プロジェクトに固有です。 <ProjectTpe> 要素と \<[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)> 要素を変更して、他の言語とプロジェクトの種類を指定することができます。  
+    Windows 8.1 ストア用の C++ プロジェクトでは、値として `WinRT-Native-6.3` を使用します。 Windows 10 およびその他の種類のプロジェクトの場合については、「[TemplateGroupID 要素 (Visual Studio テンプレート)](../extensibility/templategroupid-element-visual-studio-templates.md)」をご覧ください。  
+
+    次の例は、XML 行 `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` が追加された後の .vstemplate ファイルの内容全体を示しています。 この例は、C# プロジェクトに固有です。 <ProjectTpe> 要素と \<[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)> 要素を変更して、他の言語とプロジェクトの種類を指定することができます。  
 
     ```xml  
     <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">  
@@ -116,8 +119,9 @@ ms.lasthandoff: 02/22/2017
  これで、**[新しい項目の追加]** ダイアログ ボックスを使って、このテンプレートに基づく項目を [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] プロジェクトに追加できます。  
 
  パラメーター名の詳細については、「[テンプレート パラメーター](../ide/template-parameters.md)」をご覧ください。  
-
-### <a name="to-enable-templates-for-specific-project-sub-types"></a>特定のプロジェクト サブタイプ用のテンプレートを有効にするには  
+  
+ 
+### <a name="enable_templates"></a> 特定のプロジェクト サブタイプ用のテンプレートを有効にするには  
 
 1.  開発環境では、特定のプロジェクトに対して、[項目の追加] ダイアログ ボックスからプロジェクト項目を使用可能にすることができます。 この手順を使用して、Windows プロジェクト、Web プロジェクト、Office プロジェクト、データベース プロジェクトでカスタム項目を使用可能にすることができます。  
 

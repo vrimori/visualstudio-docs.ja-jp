@@ -19,9 +19,11 @@ caps.latest.revision: 13
 author: kempb
 ms.author: kempb
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1901f0dde22fb44ecf3d1b549505590125999700
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 65cb324c1a7ed91ad5209da7826a1899657a414f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>Visual Studio エディターでの他の言語のサポートの追加
@@ -80,14 +82,9 @@ Visual Studio エディターでさまざまなコンピューター言語の読
   
  Windows では、%userprofile% はパス (c:\Users\\*\<ユーザー名>*) に解決されます。 システム上に拡張機能フォルダーが存在しない場合は、作成する必要があります。 フォルダーが既に存在する場合は、表示されません。  
   
- TextMate 文法の作成方法の詳細については、「[TextMate – Introduction to Language Grammars: How to add source code syntax highlighting embedded in HTML](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/)」 (TextMate - 言語の文法の概要: HTML に埋め込みのソース コード構文の強調表示を追加する方法) と「[Notes on how to create a Language Grammar and Custom Theme for a Textmate Bundle](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle)」 (Textmate バンドルの言語の文法とカスタム テーマを作成する方法に関する注意事項) を参照してください。  
+ TextMate 文法の作成方法の詳細については、「[TextMate - Introduction to Language Grammars: How to add source code syntax highlighting embedded in HTML](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/)」 (TextMate - 言語の文法の概要: HTML に埋め込みのソース コード構文の強調表示を追加する方法) と「[Notes on how to create a Language Grammar and Custom Theme for a Textmate Bundle](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle)」 (Textmate バンドルの言語の文法とカスタム テーマを作成する方法に関する注意事項) を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio 2013 の移動機能の強化](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/10/22/visual-studio-2013-navigate-to-improvements/)   
  [チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)   
  [チュートリアル: 入力候補の表示](../extensibility/walkthrough-displaying-statement-completion.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

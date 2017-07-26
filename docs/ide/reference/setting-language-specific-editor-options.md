@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: fb24d1c3e48b1125e025b89fe25cfb362ced11be
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: ab506c0d3bdf9a03ee2212d6e4767d8443c604e5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="setting-language-specific-editor-options"></a>言語固有のフォルダー オプションの設定
@@ -72,5 +73,5 @@ ms.lasthandoff: 02/22/2017
  [エディターのカスタマイズ](../../ide/customizing-the-editor.md)  
  エディターのさまざまな設定可能な特徴について説明しているトピックへのリンクを提供します。  
   
- [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+ [Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)  
  設定、キー バインド、およびその他の統合開発環境 (IDE: Integrated Development Environment) の機能をカスタマイズする方法を説明しているトピックへのリンクを提供します。

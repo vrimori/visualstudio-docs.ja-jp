@@ -1,6 +1,6 @@
 ---
 title: "インストールの問題のトラブルシューティング | Microsoft Docs"
-description: "{{プレースホルダー}}"
+description: "ときには、問題が発生してしまうことがあります。 Visual Studio のインストールまたはアップグレードが失敗した場合、このページが役に立ちます。"
 ms.date: 04/14/2017
 ms.reviewer: 
 ms.suite: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: d8125873ab5a92d9af26c556cb2f953a606c28d9
+ms.sourcegitcommit: d9de84bed187c62962a76424aabdc5f355dff4dc
+ms.openlocfilehash: e6c301a7b784c5966d4f7216e67067ef6ce3ed70
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 05/15/2017
 
 ---
-# <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-failures"></a>Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング
+# <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-issues"></a>Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング
 
 ## <a name="symptoms"></a>現象
 Microsoft Visual Studio 2017 をインストールまたは更新しようとすると、操作が失敗する。
@@ -58,7 +58,7 @@ Visual Studio インストーラーのブートストラップは、Visual Studi
 2. Visual Studio インストーラーのディレクトリを削除します。 通常、ディレクトリは、C:\Program Files (x86)\Microsoft Visual Studio\Installer にあります。
 3. Visual Studio インストーラーのブートストラップを実行します。 [ダウンロード] フォルダーのブートストラップのファイル名には ```vs_[Visual Studio edition]__*.exe``` のパターンが使用されている場合があります。 アプリケーションが見つからない場合は、「[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/)」ページに移動し、Visual Studio のお使いのエディションの **[ダウンロード]** をクリックすると、ブートストラップをダウンロードできます。 この実行可能ファイルを実行して、インストールのメタデータをリセットします。
 4. Visual Studio のインストールまたは更新を再度試します。 インストーラーのエラーが続く場合は、この次の手順 4 に進んでください。
-<br/>**注:** この手順では Visual Studio インストーラー ファイルが再インストールされ、インストールのメタデータがリセットされます。 
+<br/>**注:** この手順では Visual Studio インストーラー ファイルが再インストールされ、インストールのメタデータがリセットされます。
 
 ### <a name="step-4---report-a-problem"></a>手順 4 - 問題を報告する
 ファイルの破損など、一部の状況では、問題をケースごとに調べなければならない場合があります。
@@ -92,6 +92,4 @@ Visual Studio インストーラーのブートストラップは、Visual Studi
 | ----------- | ---------------------- | -------- |
 | ユーザーにファイルへのアクセス権がない。 | アクセス許可 (ACL) | オフライン インストールを共有する*前*に、他のユーザーに読み取りアクセス権を付与するように、必ずアクセス許可 (ACL) を調整してください。 |
 | 新しいワークロード、コンポーネント、または言語をインストールできない。  | `--layout`  | 部分レイアウトからインストールし、以前のレイアウトで使用できないワークロード、コンポーネント、または言語を選択した場合、インターネットにアクセスできることを確認してください。 |
-
-
 

@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 4669932307d37593154e337265288919a1042f37
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: e4abacb0286de16c148076572e73043daed4d567
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="signing-page-project-designer"></a>[署名] ページ (プロジェクト デザイナー)
@@ -83,7 +84,7 @@ ms.lasthandoff: 02/22/2017
  [**アセンブリの署名**] チェック ボックス  
  アセンブリに署名し、厳密な名前のキー ファイルを作成するには、このチェック ボックスをオンにします。 **プロジェクト デザイナー**を使用してアセンブリに署名する詳細については、「[方法: アセンブリに署名する (Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564)」を参照してください。  
   
- このオプションは、[!INCLUDE[winsdklong](../../deployment/includes/winsdklong_md.md)] で提供される Al.exe ツールを使用して、アセンブリに署名します。 Al.exe の詳細については、「[方法 : 厳密な名前でアセンブリに署名する](http://msdn.microsoft.com/Library/2c30799a-a826-46b4-a25d-c584027a6c67)」を参照してください。  
+ このオプションは、[!INCLUDE[winsdklong](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name) で提供される Al.exe ツールを使用します。  
   
  [**厳密な名前のキー ファイルを選択してください**] 一覧  
  アセンブリに署名するために使用する新規または既存の厳密な名前のキー ファイルを指定できます。 [**\<参照...>**] を選択して、既存のキー ファイルを選択します。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 02/22/2017
  [**遅延署名のみ**] チェック ボックス  
  遅延署名を有効にするには、このチェック ボックスを選択します。  
   
- 遅延署名されたプロジェクトは実行されず、デバッグできないことに注意してください。 ただし、[Sn.exe (厳密名ツール)](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6) と `-Vr` オプションを使用すると、開発時に検証をスキップできます。  
+ 遅延署名されたプロジェクトは実行されず、デバッグできないことに注意してください。 ただし、[Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool) と `-Vr` オプションを使用すると、開発時に検証をスキップできます。  
   
 > [!NOTE]
 >  アセンブリに署名するときに、秘密キーへのアクセス権がない場合があります。 たとえば、組織には、開発者が日常的にアクセスしない厳重に保護されたキーのペアがある場合があります。 公開キーは使用可能ですが、秘密キーへのアクセスは少数のユーザーに限定されます。 このような場合は、*遅延*または*部分署名*を使用して公開キーを提供し、アセンブリが引き渡されるまで、秘密キーの追加を遅らせることができます。  
@@ -109,5 +110,5 @@ ms.lasthandoff: 02/22/2017
  [マネージ アプリケーションの厳密な名前の署名](http://msdn.microsoft.com/en-us/5fef3490-c519-4363-94fd-8b1ad260dab5)   
  [方法 : アプリケーション マニフェストおよび配置マニフェストに署名する](../../ide/how-to-sign-application-and-deployment-manifests.md)   
  [方法: アセンブリに署名する (Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564)   
- [方法 : 厳密な名前でアセンブリに署名する](http://msdn.microsoft.com/Library/2c30799a-a826-46b4-a25d-c584027a6c67)   
+ [方法 : 厳密な名前でアセンブリに署名する](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)   
  [厳密な名前付きアセンブリ](http://msdn.microsoft.com/Library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)

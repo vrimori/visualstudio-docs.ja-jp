@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 0a5c51b66cb7e5a88b9432c74432947ab94ae316
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: c82f07f9514e20fbb365d61a375a7b473f17e1a1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="walkthrough-create-a-simple-application-with-visual-c-or-visual-basic"></a>チュートリアル : Visual C# または Visual Basic による簡単なアプリケーションの作成
@@ -47,14 +47,14 @@ ms.lasthandoff: 02/22/2017
  [アプリケーションのデバッグとテスト](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md#BKMK_DebugTest)  
   
 > [!NOTE]
->  このチュートリアルでは、Visual Studio Professional の WPF アプリケーション テンプレートに基づいて、チュートリアル用のプロジェクトを作成します。 このテンプレートは Visual Studio Express for Windows Desktop には用意されていますが、Visual Studio Express for Windows と Visual Studio Express for Web には用意されていません。 Visual Studio Express for Windows の使用方法の概要については、デベロッパー センターの「 [Windows ストア アプリの開発](http://msdn.microsoft.com/windows/apps/br229519)」を参照してください。 Visual Studio Express for Web の使用方法の概要については、「 [Get Started with ASP.NET](http://www.asp.net/get-started)」 (ASP.NET の概要) を参照してください。 さらに、使用する Visual Studio のエディションと設定によって、ユーザー インターフェイスの一部の要素の名前や場所は異なります。 「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  このチュートリアルでは、Visual Studio Professional の WPF アプリケーション テンプレートに基づいて、チュートリアル用のプロジェクトを作成します。 このテンプレートは Visual Studio Express for Windows Desktop には用意されていますが、Visual Studio Express for Windows と Visual Studio Express for Web には用意されていません。 Visual Studio Express for Windows の使用方法の概要については、デベロッパー センターの「 [Windows ストア アプリの開発](http://msdn.microsoft.com/windows/apps/br229519)」を参照してください。 Visual Studio Express for Web の使用方法の概要については、「 [Get Started with ASP.NET](http://www.asp.net/get-started)」 (ASP.NET の概要) を参照してください。 さらに、使用する Visual Studio のエディションと設定によって、ユーザー インターフェイスの一部の要素の名前や場所は異なります。 「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
 ##  <a name="BKMK_ConfigureIDE"></a> IDE の構成  
  Visual Studio を初めて起動すると、Visual Studio から、Microsoft サービス アカウント (MSA) でサインイン ( [Visual Studio にサインイン](http://blogs.msdn.com/b/visualstudio/archive/2013/06/28/welcome-sign-in-to-visual-studio.aspx)) するように求められます。 サインインは必須ではなく、後で実行することもできます。  
   
  Visual Studio が起動すると、次に IDE に定義済みの一連のカスタマイズを適用する設定の組み合わせを選択する必要があります。 各設定の組み合わせは、アプリケーションを簡単に開発できるように設計されています。  
   
- このチュートリアルは、 **[全般的な開発設定]**を適用したと想定しています。この場合、最小限のカスタマイズが IDE に適用されます。 すでに C# か Visual Basic を選択済みの場合は (両方とも適切な選択です)、設定を変更する必要はありません。  設定を変更する場合は、 **設定のインポートとエクスポート ウィザード**を使用できます。 「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+ このチュートリアルは、 **[全般的な開発設定]**を適用したと想定しています。この場合、最小限のカスタマイズが IDE に適用されます。 既に C# か Visual Basic を選択済みの場合は (両方とも適切な選択です)、設定を変更する必要はありません。  設定を変更する場合は、 **設定のインポートとエクスポート ウィザード**を使用できます。 「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
  Visual Studio を開くと、ツール ウィンドウ、メニューとツール バー、およびメイン ウィンドウ領域を確認できます。 ツール ウィンドウは、アプリケーション ウィンドウの左側および右側にドッキングされており、上部には **クイック起動**、メニュー バー、および標準ツール バーがあります。 アプリケーション ウィンドウの中央には、 **スタート ページ**が表示されます。 ソリューションかプロジェクトが読み込まれると、 **[スタート ページ]** がある領域にエディターとデザイナーが表示されます。 アプリケーションを開発する場合は、ほとんどの時間をこの中央の領域での作業に費やします。  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/22/2017
   
 #### <a name="to-change-the-color-theme-of-the-ide"></a>IDE の配色テーマを変更するには  
   
-1.  上部の **[オプション]** メニューを選択してから **[オプション]** 項目を選択し、 **[オプション] …** ダイアログ ボックスを開きます。  
+1.  上部の **[ツール]** メニューを選択してから **[オプション]** 項目を選択し、**[オプション]** ダイアログ ボックスを開きます。  
   
      ![[ツール] メニューの [オプション] コマンド](../ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 02/22/2017
   
  ![ダーク テーマを適用した IDE](../ide/media/exploreide-darkthemeide.png "ExploreIDE-DarkThemeIDE")  
   
- このチュートリアルの残りの画像で使用する配色テーマは淡色テーマです。 IDE のカスタマイズの詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+ このチュートリアルの残りの画像で使用する配色テーマは淡色テーマです。 IDE のカスタマイズの詳細については、[「Visual Studio IDE のカスタマイズ」](../ide/personalizing-the-visual-studio-ide.md) を参照してください。  
   
 ##  <a name="BKMK_CreateApp"></a> 簡単なアプリケーションの作成  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 02/22/2017
   
 ##### <a name="to-create-the-wpf-project"></a>WPF プロジェクトを作成するには  
   
-1.  新しいプロジェクトを作成します。 メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順に選択します。  
+1.  新しいプロジェクトを作成します。 メニュー バーで **[ファイル]**、**[新規]**、**[プロジェクト]** の順にクリックします。  
   
      ![メニュー バーで、[ファイル]、[新規作成]、[プロジェクト] の順に選択します。](../ide/media/exploreide-filenewproject.png "ExploreIDE-FileNewProject")  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 02/22/2017
   
      ![Visual C&#35; WPF プロジェクトの作成、HelloWPFApp](../ide/media/exploreide-newprojectcsharp.png "ExploreIDE-NewProjectcsharp")  
   
- Visual Studio は HelloWPFApp というプロジェクトとソリューションを作成し、 **ソリューション エクスプローラー** は各種ファイルを表示します。 WPF デザイナーは、MainWindow.xaml のデザイン ビューと XAML ビューを分割ビューに表示します。 分割線をスライドして、それぞれのビューの表示範囲を増減できます。  ビジュアル ビューか XAML ビューの一方のみを表示することも選択できます。 (詳細については、「[Windows フォーム開発者向け WPF デザイナー](http://msdn.microsoft.com/en-us/47ad0909-e89b-4996-b4ac-874d929f94ca)」を参照してください)。 次の項目が **ソリューション エクスプローラー**に表示されます。  
+ Visual Studio は HelloWPFApp というプロジェクトとソリューションを作成し、 **ソリューション エクスプローラー** は各種ファイルを表示します。 WPF デザイナーは、MainWindow.xaml のデザイン ビューと XAML ビューを分割ビューに表示します。 分割線をスライドして、それぞれのビューの表示範囲を増減できます。  ビジュアル ビューか XAML ビューの一方のみを表示することも選択できます。 (詳細については、「 [Windows フォーム開発者向け WPF デザイナー](http://msdn.microsoft.com/en-us/47ad0909-e89b-4996-b4ac-874d929f94ca)」を参照してください)。 次の項目が **ソリューション エクスプローラー**に表示されます。  
   
  図 5: プロジェクト項目  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 02/22/2017
   
 ##### <a name="to-change-the-name-of-mainwindowxaml"></a>MainWindow.xaml の名前を変更するには  
   
-1.  次の手順では、MainWindow にもっと具体的な名前を付けます。 **ソリューション エクスプローラー**で、MainWindow.xaml を選択します。 **[プロパティ]** ウィンドウが表示されているはずですが、表示されない場合は、 **[表示]** メニューをクリックし、 **[プロパティ ウィンドウ]** 項目をクリックします。 **[File Name]** プロパティを `Greetings.xaml`に変更します。  
+1.  次の手順では、MainWindow にもっと具体的な名前を付けます。 **ソリューション エクスプローラー**で、MainWindow.xaml を選択します。 **[プロパティ]** ウィンドウが表示されているはずですが、表示されない場合は、**[表示]** メニューをクリックし、**[プロパティ ウィンドウ]** 項目をクリックします。 **[File Name]** プロパティを `Greetings.xaml`に変更します。  
   
      ![ファイル名が強調表示されたプロパティ ウィンドウ](../ide/media/exploreide-filenameinpropertieswindow.png "ExploreIDE-FilenameinPropertiesWindow")  
   
@@ -161,13 +161,13 @@ ms.lasthandoff: 02/22/2017
   
 ##### <a name="to-customize-the-text-in-the-text-block"></a>テキスト ブロックのテキストをカスタマイズするには  
   
-1.  XAML ビューで、TextBlock のマークアップを探し、Text 属性を `Text=”Select a message option and then choose the Display button.”` に変更します。  
+1.  XAML ビューで、TextBlock のマークアップを探し、Text 属性を `Text="Select a message option and then choose the Display button."` に変更します。  
   
 2.  デザイン ビューで TextBlock が拡張されない場合は、テキストがすべて表示されるように (端のグラブ ハンドルを使って) TextBlock コントロールを拡大します。  
   
 3.  Ctrl-s を押すか **[ファイル]** メニュー項目を使って、変更を保存します。  
   
- 次に、2 つの [RadioButton](http://msdn.microsoft.com/Library/6c9ba847-eab7-4bba-9c74-6b56ef72067b) コントロールをフォームに追加します。  
+ 次に、2 つの [RadioButton](/dotnet/framework/wpf/controls/radiobutton) コントロールをフォームに追加します。  
   
 ##### <a name="to-add-radio-buttons"></a>オプション ボタンを追加するには  
   
@@ -195,13 +195,13 @@ ms.lasthandoff: 02/22/2017
   
 2.  RadioButton2 を選択しながら右マウス ボタンを押して RadioButton2 のショートカット メニューを開き、 **[テキストの編集]**を選択し、「 `Goodbye`」と入力します。  
   
- 最後に追加する UI 要素は、[Button](http://msdn.microsoft.com/Library/a9d8f5a5-c98c-463e-808a-5a4e63173098) コントロールです。  
+ 最後に追加する UI 要素は、[Button](/dotnet/framework/wpf/controls/button) コントロールです。  
   
 ##### <a name="to-add-the-button-control"></a>Button コントロールを追加するには  
   
 1.  **[ツールボックス]**で、 **Button** コントロールを探し、Button を選択してデザイン ビュー内のフォームにドラッグし、デザイン サーフェイスの RadioButton コントロールの下に追加します。  
   
-2.  IXAML ビューで、Button コントロールの **[Content]** の値を `Content=”Button”` から `Content=”Display”`に変更し、変更を保存します (Ctrl-s または **[ファイル]** メニューを使用)。  
+2.  IXAML ビューで、Button コントロールの **[Content]** の値を `Content="Button"` から `Content="Display"`に変更し、変更を保存します (Ctrl-s または **[ファイル]** メニューを使用)。  
   
      マークアップは、次の例のようになります。`<Button Content="Display" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="215,204,0,0"/>`  
   
@@ -265,7 +265,7 @@ ms.lasthandoff: 02/22/2017
 3.  アプリケーションを保存します。  
   
 ##  <a name="BKMK_DebugTest"></a> アプリケーションのデバッグとテスト  
- 次に、アプリケーションをデバッグしてエラーを探し、両方のメッセージ ボックスが正しく表示されることをテストします。 以下の指示にデバッガーをビルドして起動する方法が示されていますが、詳細については、後で「[WPF アプリケーション (WPF) のビルド](http://msdn.microsoft.com/Library/a58696fd-bdad-4b55-9759-136dfdf8b91c)」および「[Debugging WPF](../debugger/debugging-wpf.md)」(WPF のデバッグ) を参照することもできます。  
+ 次に、アプリケーションをデバッグしてエラーを探し、両方のメッセージ ボックスが正しく表示されることをテストします。 以下の指示にデバッガーをビルドして起動する方法が示されていますが、詳細については、後で「[WPF アプリケーション (WPF) のビルド](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)」および「[Debugging WPF](../debugger/debugging-wpf.md)」(WPF のデバッグ) を参照することもできます。  
   
 ### <a name="find-and-fix-errors"></a>エラーの検出と修正  
  この手順では、前にメイン ウィンドウの XAML ファイルの名前を変更することで引き起こしたエラーを見つけます。  
@@ -346,9 +346,9 @@ ms.lasthandoff: 02/22/2017
   
      ![[ビルド] メニューの [ソリューションのビルド] コマンド](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
   
- このチュートリアルは完了しました。 ビルドした .exe は、ソリューションとプロジェクトのディレクトリ (…\HelloWPFApp\HelloWPFApp\bin\Release\\) の下にあります。 その他の例については、「[Visual Studio Samples](../ide/visual-studio-samples.md)」を参照してください。  
+ このチュートリアルは完了しました。 ビルドした .exe は、ソリューションとプロジェクトのディレクトリ (...\HelloWPFApp\HelloWPFApp\bin\Release\\) の下にあります。 その他の例については、「[Visual Studio Samples](../ide/visual-studio-samples.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [Visual Studio 2015 の新機能](../ide/what-s-new-in-visual-studio-2015.md)   
+ [Visual Studio 2017 の新機能 ](../ide/whats-new-in-visual-studio.md)   
  [Visual Studio を使用した開発の開始](../ide/get-started-developing-with-visual-studio.md)   
  [生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)

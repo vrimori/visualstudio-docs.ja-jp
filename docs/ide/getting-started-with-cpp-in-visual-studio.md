@@ -28,9 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: c0966f42efc54452d0f7cd11e19c6f82f7686474
-ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 65b94b58da1e06febb1c189ddff85f792fef1737
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="getting-started-with-c-in-visual-studio"></a>Visual Studio 内の C++ の概要
@@ -38,7 +40,7 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
   
  このトピックは、次のセクションで構成されています。  
   
- [Visual Studio にサインイン](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_Configure)  
+ [Visual Studio へのサインイン](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_Configure)  
   
  [簡単なアプリケーションの作成](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_CreateApp)  
   
@@ -48,16 +50,16 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
   
  [アプリのリリース バージョンのビルド](../ide/getting-started-with-cpp-in-visual-studio.md#BKMK_BuildRelease)  
   
-##  <a name="a-namebkmkconfigurea-sign-in-to-visual-studio"></a><a name="BKMK_Configure"></a> Visual Studio にサインイン  
- Visual Studio を初めて起動する際には、Live や Outlook などの Microsoft アカウントを使ってサインインする機会があります。 サインインすると、設定をすべてのデバイス間で同期できます。 詳細については、「[Signing in to Visual Studio](../ide/signing-in-to-visual-studio.md)」を参照してください。  
+##  <a name="BKMK_Configure"></a> Visual Studio へのサインイン  
+ Visual Studio を初めて起動する際には、Live や Outlook などの Microsoft アカウントを使ってサインインする機会があります。 サインインすると、設定をすべてのデバイス間で同期できます。 詳細については、「 [Signing in to Visual Studio](../ide/signing-in-to-visual-studio.md)」を参照してください。  
   
  図 1: Visual Studio IDE  
   
  ![Visual C++ 設定が適用された IDE](../ide/media/c--ide_defaultenvironmentlayout.png "C++IDE_DefaultEnvironmentLayout")  
   
- Visual Studio を開くと、IDE の&3; つの基本的なパーツを確認できます。ツール ウィンドウ、メニューとツール バー、およびメイン ウィンドウ領域です。 ツール ウィンドウは、アプリ ウィンドウの左側および右側にドッキングされており、上部には **[クイック起動]**、メニュー バー、および標準ツール バーがあります。 アプリケーション ウィンドウの中央には、 **[スタート ページ]**が表示されます。 ソリューションまたはプロジェクトを開くと、この領域にはエディターとデザイナーが表示されます。 アプリケーションを開発する場合は、ほとんどの時間をこの中央の領域での作業に費やします。  
+ Visual Studio を開くと、IDE の 3 つの基本的なパーツを確認できます。ツール ウィンドウ、メニューとツール バー、およびメイン ウィンドウ領域です。 ツール ウィンドウは、アプリ ウィンドウの左側および右側にドッキングされており、上部には **[クイック起動]**、メニュー バー、および標準ツール バーがあります。 アプリケーション ウィンドウの中央には、 **[スタート ページ]**が表示されます。 ソリューションまたはプロジェクトを開くと、この領域にはエディターとデザイナーが表示されます。 アプリケーションを開発する場合は、ほとんどの時間をこの中央の領域での作業に費やします。  
   
-##  <a name="a-namebkmkcreateappa-create-a-simple-application"></a><a name="BKMK_CreateApp"></a> 簡単なアプリケーションの作成  
+##  <a name="BKMK_CreateApp"></a> 簡単なアプリケーションの作成  
  Visual Studio でアプリを作成するには、最初にプロジェクトおよびソリューションを作成します。 この例では、Windows コンソール アプリケーションを作成します。  
   
 #### <a name="to-create-a-console-app"></a>コンソール アプリを作成するには  
@@ -81,7 +83,7 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
   
  ![ソリューション エクスプローラーでのソリューションのファイル](../ide/media/c--ide_solutioncontents.png "C++IDE_SolutionContents")  
   
-##  <a name="a-namebkmkaddcodea-add-code-to-the-application"></a><a name="BKMK_AddCode"></a> アプリケーションへのコードの追加  
+##  <a name="BKMK_AddCode"></a> アプリケーションへのコードの追加  
  次に、コンソール ウィンドウに "Hello" と表示するコードを追加します。  
   
 #### <a name="to-display-hello-in-the-console-window"></a>コンソール ウィンドウに "Hello" と表示するには  
@@ -107,7 +109,7 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
     using namespace std;  
     ```  
   
-     コードを入力したときにボックスが表示され、入力した文字に対応する候補が提示されたはずです。 このボックスは、C++ の IntelliSense の一部で、コーディングの一連のヒントを提供します。それには、クラスやインターフェイスのメンバーの一覧と、パラメーター情報が含まれます。 定義済みのコード ブロックであるコード スニペットを使用することもできます。 詳細については、「[IntelliSense の使用](../ide/using-intellisense.md)」および「[コード スニペット](../ide/code-snippets.md)」を参照してください。  
+     コードを入力したときにボックスが表示され、入力した文字に対応する候補が提示されたはずです。 このボックスは、C++ の IntelliSense の一部で、コーディングの一連のヒントを提供します。それには、クラスやインターフェイスのメンバーの一覧と、パラメーター情報が含まれます。 定義済みのコード ブロックであるコード スニペットを使用することもできます。 詳細については、 [Using IntelliSense](../ide/using-intellisense.md) および [Code Snippets](../ide/code-snippets.md)を参照してください。  
   
      エラーを修正すると、 `cout` の下の赤い波線が消えます。  
   
@@ -115,7 +117,7 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
   
      ![cout のエラーを修復するコード](../ide/media/c--ide_coutfix.png "C++IDE_CoutFix")  
   
-##  <a name="a-namebkmkdebugtesta-debug-and-test-the-application"></a><a name="BKMK_DebugTest"></a> アプリケーションのデバッグとテスト  
+##  <a name="BKMK_DebugTest"></a> アプリケーションのデバッグとテスト  
  GreetingsConsoleApp をデバッグして、コンソール ウィンドウに "Hello" という語が表示されるかどうかを確認できます。  
   
 #### <a name="to-debug-the-application"></a>アプリケーションをデバッグするには  
@@ -144,7 +146,7 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
   
  詳細については、[コンソール プロジェクト](../debugger/debugging-preparation-console-projects.md)に関する記事を参照してください。  
   
-##  <a name="a-namebkmkbuildreleasea-build-a-release-version-of-the-app"></a><a name="BKMK_BuildRelease"></a> アプリのリリース バージョンのビルド  
+##  <a name="BKMK_BuildRelease"></a> アプリのリリース バージョンのビルド  
  すべてが機能することを確認したら、アプリケーションのリリース ビルドを準備できます。  
   
 #### <a name="to-clean-the-solution-files-and-build-a-release-version"></a>ソリューション ファイルをクリーンアップし、リリース バージョンをビルドするには  
@@ -169,8 +171,3 @@ ms.openlocfilehash: 079c15ffcc9b51fc1f4630051c561f9f8ff7fb87
  [Visual Studio の生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)   
  [Visual Studio Samples](../ide/visual-studio-samples.md)   
  [Get Started Developing with Visual Studio](../ide/get-started-developing-with-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

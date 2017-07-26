@@ -1,36 +1,55 @@
 ---
 title: "グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "グローバリゼーション [Windows フォーム]、クラス"
-  - "Web アプリケーション [.NET Framework]、グローバリゼーション"
-  - "カルチャ、カルチャ固有のクラス"
-  - "数、国際対応"
-  - "ローカリゼーション [Windows フォーム]、クラス"
-  - "グローバリゼーション [Visual Studio]、カルチャ固有のクラス"
-  - "Windows フォーム、ローカリゼーション"
-  - "国際対応アプリケーション [Visual Studio]、データ形式"
-  - "時間 [Visual Studio]、国際対応"
-  - "日付 [Visual Studio]、国際対応"
-  - "カルチャ"
-  - "各種言語の文字"
-  - "通貨書式"
-  - "ASP.NET、グローバリゼーション"
-  - "クラス [Visual Studio]、カルチャ固有"
-  - "ローカリゼーション [Visual Studio]、カルチャ固有のクラス"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- globalization [Windows Forms], classes
+- Web applications [.NET Framework], globalization
+- culture, culture-specific classes
+- numbers, international
+- localization [Windows Forms], classes
+- globalization [Visual Studio], culture-specific classes
+- Windows Forms, localization
+- international applications [Visual Studio], data formats
+- time [Visual Studio], international
+- dates [Visual Studio], international
+- culture
+- international characters
+- currency formats
+- ASP.NET, globalization
+- classes [Visual Studio], culture-specific
+- localization [Visual Studio], culture-specific classes
 ms.assetid: 0d06a0a4-f887-4f7c-bde7-1d543c06f803
 caps.latest.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 10
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
+ms.openlocfilehash: 3fb3b66548077a2f92289f1a2f02cc8ae77544cc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/19/2017
+
 ---
 # <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス
 各カルチャには、日付、時間、数、通貨などの情報を表示するさまざまな規約があります。 <xref:System.Globalization> 名前空間には、<xref:System.Globalization.DateTimeFormatInfo>、**Calendar**、<xref:System.Globalization.NumberFormatInfo> など、カルチャ固有の値の表示方法を変更するために使用できるクラスが含まれています。  
@@ -75,8 +94,3 @@ Console.WriteLine(myInt.ToString("C", Thread.CurrentThread.CurrentCulture));
  <xref:System.Console.WriteLine%2A?displayProperty=fullName>   
  <xref:System.String.Format%2A?displayProperty=fullName>   
  [アプリケーションのグローバライズとローカライズ](../ide/globalizing-and-localizing-applications.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

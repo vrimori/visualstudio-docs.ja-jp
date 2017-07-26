@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: efcb84a2cc8b681f3509e397776f86bf7c832a74
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8700d4814494aafb6558f354d5904ed647c1f5a7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-distribute-code-snippets"></a>方法: コード スニペットを配布する
@@ -43,7 +44,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="setting-up-the-extension"></a>拡張機能を設定する  
  この手順では、「[チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」で作成したのと同じ Hello World コード スニペットを使います。 .snippet のテキストは用意されているため、前の手順に戻ってコード スニペットを作成する必要はありません。  
 
-1.  **TestSnippet** という新しい VSIX プロジェクトを作成します  (**[ファイル] > [新規作成] > [プロジェクト] > [Visual C#] (または [Visual Basic]) > [拡張]**)。  
+1.  **TestSnippet** という新しい VSIX プロジェクトを作成します  (**[ファイル] > [新規作成] > [プロジェクト] > [Visual C#]\(または [Visual Basic]) > [拡張]**)。  
 
 2.  **TestSnippet** プロジェクトで新しい XML ファイルを追加し、**VBCodeSnippet.snippet** という名前を付けます。 内容を次のコードに置き換えます。  
 
@@ -103,15 +104,15 @@ ms.lasthandoff: 02/22/2017
 
 ### <a name="testing-the-snippet"></a>スニペットのテスト  
 
-1.  これで、コード スニペットが Visual Studio の実験用インスタンスで動作することを確認できるようになりました。 実験用インスタンスとは、コードの記述に使用する Visual Studio とは異なる、Visual Studio のもう&1; つのコピーです。 これを使用することにより、開発環境に影響を与えずに、拡張機能を処理することができます。  
+1.  これで、コード スニペットが Visual Studio の実験用インスタンスで動作することを確認できるようになりました。 実験用インスタンスとは、コードの記述に使用する Visual Studio とは異なる、Visual Studio のもう 1 つのコピーです。 これを使用することにより、開発環境に影響を与えずに、拡張機能を処理することができます。  
 
-2.  プロジェクトをビルドし、デバッグを開始します。 Visual Studio の&2; 番目のインスタンスが表示されます。  
+2.  プロジェクトをビルドし、デバッグを開始します。 Visual Studio の 2 番目のインスタンスが表示されます。  
 
-3.  実験用インスタンスで、**[ツール] > [コード スニペット マネージャー]** に移動し、**[言語]** を **[基本]** に設定します。 フォルダーの&1; つとして HelloWorldVB が表示されるはずです。そのフォルダーを展開すると HelloWorldVB スニペットを表示できます。  
+3.  実験用インスタンスで、**[ツール] > [コード スニペット マネージャー]** に移動し、**[言語]** を **[基本]** に設定します。 フォルダーの 1 つとして HelloWorldVB が表示されるはずです。そのフォルダーを展開すると HelloWorldVB スニペットを表示できます。  
 
 4.  スニペットをテストします。 実験用インスタンスで、Visual Basic プロジェクトを開き、コード ファイルのいずれかを開きます。 コードの任意の場所にカーソルを置いて右クリックし、コンテキスト メニューで **[スニペットの挿入]** を選びます。  
 
-5.  フォルダーの&1; つとして HelloWorldVB が表示されるはずです。 これをダブルクリックします。 **[スニペットの挿入: HellowWorldVB >]** ポップアップが表示されます。ここに **[HelloWorldVB]** ドロップダウン リストが表示されます。 [HelloWorldVB] ドロップダウン リストをクリックします。 次の行がファイルに追加されます。  
+5.  フォルダーの 1 つとして HelloWorldVB が表示されるはずです。 これをダブルクリックします。 **[スニペットの挿入: HellowWorldVB >]** ポップアップが表示されます。ここに **[HelloWorldVB]** ドロップダウン リストが表示されます。 [HelloWorldVB] ドロップダウン リストをクリックします。 次の行がファイルに追加されます。  
 
     ```vb  
     Console.WriteLine("Hello, World!")  
