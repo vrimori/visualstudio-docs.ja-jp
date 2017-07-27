@@ -23,8 +23,7 @@ ms.lasthandoff: 07/12/2017
 
 ---
 
-# Visual Studio での R の使用
-<a id="working-with-r-in-visual-studio" class="xliff"></a>
+# <a name="working-with-r-in-visual-studio"></a>Visual Studio での R の使用
 
 R は、高い拡張性を備えた、統計コンピューティングおよびグラフィックス用の言語であり環境です。 R は GNU General Public License に基づき無料配布されており、コミュニティの強力なサポートを受けることができます。また、数学記号と式を含むプロットを出版品質で生成できる機能で知られています。 R の詳細については、[r-project.org](https://www.r-project.org/about.html) と「[An Introduction to R (R の概要)](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)」をご覧ください。
 
@@ -53,8 +52,7 @@ Visual Studio で R を使用するには、次の手順を実行します。
 
 > [!VIDEO https://www.youtube.com/embed/RcSDEfMgUvU]
 
-## よく寄せられる質問
-<a id="frequently-asked-questions" class="xliff"></a>
+## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
 **Q.RTVS は Visual Studio Express Edition で動作しますか?**
 
@@ -122,8 +120,7 @@ A:  Github に、`.gitignore` の推奨ファイルのマスター リポジト�
 
 A:  いいえ。Visual Studio では、ネットワーク共有からのプロジェクトの読み込みをサポートしていません。
 
-## フィードバックをお寄せください。
-<a id="send-us-your-feedback" class="xliff"></a>
+## <a name="send-us-your-feedback"></a>フィードバックをお寄せください。
 
 1. **Github の問題**: RTVS チームへ問い合わせる場合は、[GitHub 上で問題を報告する](https://github.com/Microsoft/RTVS/issues)か、**[R Tools] > [フィードバック]** メニューを使用して行ってください。
 
