@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio でのコンパイルとビルド | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 7/14/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,61 +16,48 @@ caps.latest.revision: 28
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e372d9d6d935ff40054b8ba3f7684bf5ea9c458
-ms.openlocfilehash: aa3d791afc574200157104145617ff6ad6139b68
+ms.translationtype: HT
+ms.sourcegitcommit: dc7a0c10390de67b56a83d2824224bed24125db0
+ms.openlocfilehash: 744e1c5a3861a1fbc486a03f158c602fddc4877c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/17/2017
 
 ---
+
 # <a name="compiling-and-building-in-visual-studio"></a>Visual Studio でのコンパイルとビルド
-開発サイクル中、何度も Visual Studio を使用して、アプリケーションをビルドし、アセンブリや実行可能プログラムを作成できます。 コードを何度もビルドすることによって、無効な構文、キーワードのスペルミス、型の不一致などのコンパイル時エラーを早い段階で特定できます。 また、コードのデバッグ バージョンを何度もビルドして実行することにより、ロジック エラーやセマンティック エラーなどの実行時エラーを検出して修正できます。  
-  
- プロジェクトまたはソリューションの開発を完了し、十分にデバッグしたら、そのプロジェクトまたはソリューションのコンポーネントをリリース ビルドでコンパイルできます。 既定では、リリース ビルドはデバッグ バージョンよりサイズが小さく実行が高速になるように設計および最適化されます。 詳細については、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。  
-  
-## <a name="choosing-a-build-method"></a>ビルド方法の選択  
- アプリケーションは、IDE の既定のビルド オプション、コマンド プロンプト、または Team Foundation ビルドを使用してビルドできます。 これらの各オプションでは基になるテクノロジとして MSBuild が使用されており、それぞれの方法には次の表に示すような利点があります。  
-  
-|ビルド方法|利点|詳細情報|  
-|------------------|--------------|--------------------------|  
-|IDE の使用|-   ビルドをより簡単に作成し、すぐに実行できます。<br />-   C++ および C# のプロジェクトについては、マルチプロセッサ ビルドを実行できます。<br />-   ビルド システムの一部をカスタマイズできます。|[Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)|  
-|MSBuild コマンド ラインの実行|-   Visual Studio をインストールせずにプロジェクトをビルドできます。<br />-   すべての種類のプロジェクトについて、マルチ プロセッサ ビルドを実行できます。<br />-   ビルド システムのほとんどの部分をカスタマイズできます。|[MSBuild](../msbuild/msbuild.md)|  
-|Team Foundation ビルドの使用|-   ビルド プロセスを自動化できます。 たとえば、1 つまたは複数のプロジェクトを夜間にビルドすることも、コードのチェックインごとにビルドすることもできます。 また、開発用コンピューターではなく、共有ビルド サーバーでプロジェクトをビルドできます。<br />-   ビルドするコード、実行するテスト、およびその他のオプションを簡単に指定できます。<br />-   ビルド ワークフローを変更し、必要に応じてビルド アクティビティを作成することで、大幅にカスタマイズされたタスクを実行できます。|[アプリケーションのビルド](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)|  
-  
-## <a name="building-from-the-ide"></a>IDE でのビルド  
- プロジェクトを作成すると、既定のビルド構成が定義され、ビルドのコンテキストを用意するために、既定のソリューション ビルド構成が割り当てられます。 ソリューション構成によって、ソリューション内のプロジェクトをビルドおよび配置する方法が定義されます。 プロジェクト構成とは、プラットフォームおよびビルドの種類 (リリース Win32 など) に固有の一連のプロジェクト プロパティです。 これらの既定の構成を編集して、独自の構成を作成することもできます。 詳細については、「[プロジェクトおよびソリューションのプロパティの管理](managing-project-and-solution-properties.md)」を参照してください。  
-  
- IDE 内で、次の追加タスクを実行することもできます。  
-  
--   [ビルド出力ディレクトリを変更する](../ide/how-to-change-the-build-output-directory.md)。  
-  
--   [正しくビルドするために、別のプロジェクトからの出力に依存するプロジェクトを特定する](../ide/how-to-create-and-remove-project-dependencies.md)。  
-  
--   [ビルド ログまたはビルドの出力ウィンドウに含まれる情報の量を変更する](../ide/how-to-view-save-and-configure-build-log-files.md)。  
-  
--   [Visual C#、Visual C++、または Visual Basic で特定のコンパイラの警告を非表示にする](../ide/how-to-suppress-compiler-warnings.md)。  
-  
--   [ビルドに対してカスタムのコンパイル前アクションまたはコンパイル後アクションを指定する](../ide/specifying-custom-build-events-in-visual-studio.md)。  
-  
--   並行ビルドを使用してビルド パフォーマンスを改善する。 詳細については、「[複数のプロジェクトの並行ビルド](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)」またはブログ投稿「[Tuning C++ build parallelism](http://blogs.msdn.com/b/msbuild/archive/2010/03/08/tuning-c-build-parallelism-in-vs2010.aspx)」 (C++ での並列ビルドの調整) を参照してください。  
+
+ビルドを実行してソース コードからアセンブリと実行可能アプリケーションを作成することは、開発サイクルのどの時点でも行うことができます。 基本的に、ビルド プロセスはどのプロジェクト タイプでも (Windows、ASP.NET、モバイル アプリなど)、よく似ています。 同様に、どのプログラミング言語でも (C#、Visual Basic、C++、F# など) ビルド プロセスはよく似ています。 
+
+コードを何度もビルドすることによって、構文の誤り、キーワードのスペルミス、型の不一致などのコンパイル時エラーをすばやく特定できます。 また、ロジック エラーやセマンティック エラーなどの実行時エラーについても、コードのデバッグ バージョンのビルドと実行を繰り返すことによってすばやく検出して修正できます。  
+
+ビルドに成功することは、実質的には検証です。つまり、アプリケーションのソース コードの構文が正しいことと、ライブラリやアセンブリなどのコンポーネントへの静的参照がすべて解決済みであることが確認されます。 この結果としてアプリケーション実行可能ファイルが生成されるので、次にこれをテストします。[デバッグ環境](../debugger/index.md)で正しく機能することを確認するとともに、手動と自動のさまざまなテストを通して[コードの品質を検証](../test/improve-code-quality.md)します。 アプリケーションのテストが完了したら、リリース バージョンをコンパイルしてユーザーにリリースします。 このプロセスの入門資料については、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。  
+
+Visual Studio 製品ファミリの中では、アプリケーションのビルドに使用できる方法として Visual Studio IDE、MSBuild コマンドライン ツール、Visual Studio Team Services 上の Team Foundation ビルドの 3 つがあります。
+ 
+| ビルド方法 | 利点 | 
+| --- |--- | --- |  
+| IDE |- ビルドを即座に作成してデバッガーでテストできます。<br />- マルチプロセッサ ビルドを実行します (C++ や C# のプロジェクトの場合)。<br />- ビルド システムのさまざまな面をカスタマイズできます。 |
+| MSBuild コマンドライン| - Visual Studio をインストールせずにプロジェクトをビルドできます。<br />- すべてのプロジェクト タイプでマルチ プロセッサ ビルドを実行できます。<br />- ビルド システムのほとんどの部分をカスタマイズできます。|
+| Team Foundation ビルド | - ビルド プロセスを継続的インテグレーション/継続的配信パイプラインの一部として自動化できます。<br />- 自動テストをすべてのビルドに適用します。<br />- クラウド ベースのリソースをほぼ無制限にビルド プロセスに使用できます。<br />- ビルド ワークフローの変更やビルド アクティビティの作成が可能です。実行するタスクを大幅にカスタマイズできます。|  
+
+このセクションでは、IDE ベースのビルド プロセスを詳しく解説します。 他の方法の詳細については、「[MSBuild](../msbuild/msbuild.md)」と「[Continuous integration and deployment](https://www.visualstudio.com/docs/build/overview)」 (継続的なインテグレーションと配置) を参照してください。
+
+## <a name="overview-of-building-from-the-ide"></a>IDE でのビルドの概要  
+
+Visual Studio でプロジェクトを作成すると、そのプロジェクトとプロジェクトが属するソリューションのための、既定のビルド構成が作成されます。  この構成は、ソリューションとプロジェクトをどのようにビルドして配置するかを定義するものです。 このうち、プロジェクト構成はターゲット プラットフォーム (たとえば Windows または Linux) とビルドの種類 (たとえばデバッグまたはリリース) ごとに固有です。 これらの構成は自由に編集でき、必要に応じて独自の構成を作成することもできます。
+
+IDE の中でのビルド方法の入門資料については、「[チュートリアル: アプリケーションをビルドする](walkthrough-building-an-application.md)」を参照してください。  
+
+次に、「[Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](building-and-cleaning-projects-and-solutions-in-visual-studio)」を参照して、このプロセスに関してどのようなカスタマイズが可能かを把握してください。 カスタマイズの例としては、[出力ディレクトリの変更](how-to-change-the-build-output-directory.md)、[カスタム ビルド イベントの指定](specifying-custom-build-events-in-visual-studio.md)、[プロジェクト依存関係の管理](how-to-create-and-remove-project-dependencies.md)、[ビルド ログ ファイルの管理](how-to-view-save-and-configure-build-log-files.md)、[コンパイラ警告の抑制](how-to-suppress-compiler-warnings.md)などがあります。
+
+その他に、次のようなタスクに関する情報も参照してください。
+- [ビルド構成について](understanding-build-configurations.md)
+- [ビルド プラットフォームについて](understanding-build-platforms.md)
+- [プロジェクトおよびソリューションのプロパティの管理](managing-project-and-solution-properties.md)  
+- ビルド イベントの指定 ([C#](how-to-specify-build-events-csharp.md)、[Visual Basic](how-to-specify-build-events-visual-basic.md)) 
+- [ビルド オプションの設定](reference/options-dialog-box-projects-and-solutions-build-and-run.md)
+- [複数プロジェクトの並行ビルド](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)  
   
 ## <a name="see-also"></a>関連項目  
- [チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)   
- [ビルド構成について](../ide/understanding-build-configurations.md)   
- [ビルド プラットフォームについて](../ide/understanding-build-platforms.md)   
- [Web サイト プロジェクトのビルド (コンパイル)](http://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)   
- [方法 : プロジェクトの依存関係を作成および削除する](../ide/how-to-create-and-remove-project-dependencies.md)
+
+- [Web サイト プロジェクトのビルド (コンパイル)](http://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)   
