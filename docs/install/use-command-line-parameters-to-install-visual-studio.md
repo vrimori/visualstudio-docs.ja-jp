@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b5b496e0de0a12c9f52c944ef9e768c82d9be783
-ms.openlocfilehash: 429d55b3d0050eb0743d4abf39c202ad1b8383b1
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 90e19f6e693733162065754b441fb213fd0bd9f8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/08/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
@@ -71,8 +71,8 @@ ms.lasthandoff: 05/08/2017
 | `--installPath <dir>` | 操作するインスタンスのインストール ディレクトリです。 インストール コマンドの場合、これは**省略可能**で、インスタンスがインストールされる場所になります。 その他のコマンドでは、これは**必須**で、以前にインストール済みのインスタンスがインストールされた場所です。 |
 | `--addProductLang <language-locale>` | **省略可能**: インストールまたは変更操作時に、製品にインストールされる UI 言語パックを決定します。 コマンド ラインに複数回指定して複数の言語パックを追加できます。 指定しない場合、インストールではコンピューターのロケールが使用されます。 詳しくは、このページの「[言語ロケールの一覧](#list-of-language-locales)」セクションをご覧ください。|
 | `--removeProductLang <language-locale>` | **省略可能**: インストールまたは変更操作時に、製品から削除される UI 言語パックを決定します。 コマンド ラインに複数回指定して複数の言語パックを追加できます。 詳しくは、このページの「[言語ロケールの一覧](#list-of-language-locales)」セクションをご覧ください。|
-| `--add <one or more workload or component IDs>` | **省略可能**: 1 つ以上のワークロード ID またはコンポーネント ID を追加します。 成果物の必須のコンポーネントはインストールされますが、推奨されるコンポーネントまたは省略可能なコンポーネントはインストールされません。 `--includeRecommended` や `--includeOptional` を使用して、他のコンポーネントをグローバルに制御できます。 詳細に制御するために、ID に `;includeRecommended` または `;includeOptional` を追加できます (例: `--add Workload1;includeRecommended` または `--add Workload2;includeRecommended;includeOptional`)。 詳しくは、[ワークロード ID とコンポーネント ID](workload-and-component-ids.md) に関するページをご覧ください。|
-| `--remove <one or more workload or component IDs>` | **省略可能**: 1 つ以上のワークロード ID またはコンポーネント ID を削除します。 詳しくは、[ワークロード ID とコンポーネント ID](workload-and-component-ids.md) に関するページをご覧ください。|
+| `--add <workload or component ID>` | **省略可能**: 追加するワークロードまたはコンポーネントの ID です。 成果物の必須のコンポーネントはインストールされますが、推奨されるコンポーネントまたは省略可能なコンポーネントはインストールされません。 `--includeRecommended` や `--includeOptional` を使用して、他のコンポーネントをグローバルに制御できます。 詳細に制御するために、ID に `;includeRecommended` または `;includeOptional` を追加できます (例: `--add Workload1;includeRecommended` または `--add Workload2;includeRecommended;includeOptional`)。 詳しくは、[ワークロード ID とコンポーネント ID](workload-and-component-ids.md) に関するページをご覧ください。 必要に応じて、このオプションを繰り返すことができます。|
+| `--remove <workload or component ID>` | **省略可能**: 削除するワークロードまたはコンポーネントの ID です。 詳しくは、[ワークロード ID とコンポーネント ID](workload-and-component-ids.md) に関するページをご覧ください。 必要に応じて、このオプションを繰り返すことができます。|
 | `--in <path>` | **省略可能**: 応答ファイルへの URI またはパスです。  |
 | `--all` | **省略可能**: 製品のすべてのワークロードおよびコンポーネントをインストールするかどうかを指定します。 |
 | `--allWorkloads` | **省略可能**: すべてのワークロードとその必須コンポーネントをインストールし、推奨されるコンポーネントと省略可能なコンポーネントはインストールしません。 |

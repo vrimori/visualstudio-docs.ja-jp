@@ -38,10 +38,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 75cd4dbc1f2d0179a4077ac296dde40503321853
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: f815437704c341bac44878e82bb409934f461dae
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="generatedeploymentmanifest-task"></a>GenerateDeploymentManifest タスク
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/13/2017
 |`Description`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションの説明を指定します。|  
 |`DisallowUrlActivation`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> URL 経由で開かれたときに、アプリケーションを自動的に実行するかどうかを指定します。 このパラメーターを `true` にすると、アプリケーションの実行は [スタート] メニューからのみ行えるようになります。 このパラメーターの既定値は、`false` です。 この値は、`Install` パラメーターが `true` である場合のみ適用されます。|  
 |`EntryPoint`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 生成されるマニフェスト アセンブリのエントリ ポイントを指定します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェストの場合には、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストを指定します。<br /><br /> [!INCLUDE[vsprvslong](../code-quality/includes/vsprvslong_md.md)] では、[GenerateApplicationManifest タスク](../msbuild/generateapplicationmanifest-task.md)でアプリケーション マニフェストを生成するためには、`EntryPoint` が必要でした  (アセンブリ マニフェストまたはネイティブ マニフェストの場合、`EntryPoint` は不要)。この要件を満たしていないと "MSB3185: "MSB3185: マニフェストに EntryPoint が指定されていません。" というビルド エラーが発生します。<br /><br /> [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、`EntryPoint` タスク パラメーターが指定されていなくても、このエラーは発生しません。 代わりに、たとえば \<customHostSpecified> タグが \<entryPoint> タグの子として挿入されます。<br /><br /> `<entryPoint xmlns="urn:schemas-`<br /><br /> `microsoft-com:asm.v2">`<br /><br /> `<co.v1:customHostSpecified />`<br /><br /> `</entryPoint>`<br /><br /> 次の手順を使用して、アプリケーション マニフェストに DLL 依存関係を追加できます。<br /><br /> 1.<xref:Microsoft.Build.Tasks.ResolveAssemblyReference> への呼び出しでアセンブリの参照を解決します。<br />2.前のタスクの出力とアセンブリ自体を <xref:Microsoft.Build.Tasks.ResolveManifestFiles> に渡します。<br />3.`Dependencies` パラメーターを使用して <xref:Microsoft.Build.Tasks.GenerateApplicationManifest> に依存関係を渡します。|  
-|`ErrorReportUrl`|省略可能な [String](assetId:///String?qualifyHint=False&autoUpgrade=True) 型のパラメーターです。<br /><br /> ClickOnce のインストール時にダイアログ ボックスに表示される Web ページの URL を指定します。|  
+|`ErrorReportUrl`|省略可能な <xref:System.String?displayProperty=fullName> 型のパラメーターです。<br /><br /> ClickOnce のインストール時にダイアログ ボックスに表示される Web ページの URL を指定します。|  
 |`InputManifest`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> マニフェスト ジェネレーターのベースとして使用する、入力 XML ドキュメントを指定します。 これによって、カスタム マニフェスト定義など、構造化されたデータが出力マニフェストに反映されます。 XML ドキュメントのルート要素は、asmv1 名前空間内のアセンブリ ノードである必要があります。|  
 |`Install`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> アプリケーションがインストールされているアプリケーションであるか、オンライン専用アプリケーションであるかを指定します。 このパラメーターを `true` にすると、アプリケーションはユーザーの [スタート] メニューにインストールされ、[プログラムの追加と削除] ダイアログ ボックスから削除できるようになります。 このパラメーターを `false` にすると、アプリケーションは Web ページからオンラインで使用するためのものになります。 このパラメーターの既定値は、`true` です。|  
 |`MapFileExtensions`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> .deploy ファイル名拡張子の割り当てを使用するかどうかを指定します。 このパラメーターを `true` にすると、各プログラム ファイルは、.deploy のファイル名拡張子で発行されます。 このオプションを使用すると、ブロックを解除して [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション配置を有効にする必要があるファイル名拡張子の数を制限できるので、Web サーバーのセキュリティに役立ちます。 このパラメーターの既定値は、`false` です。|  

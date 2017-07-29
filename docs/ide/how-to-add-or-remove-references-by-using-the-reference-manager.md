@@ -1,7 +1,7 @@
 ---
 title: "方法: 参照マネージャーを使用して参照を追加または削除する | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -42,10 +42,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1e73cc14de8a94b2e2ce631834e36b6bc30fa7a6
+ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
+ms.openlocfilehash: b2141a16d27725c54b3407e92151e0ed7afd745e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>方法: 参照マネージャーを使用して参照を追加または削除する
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/22/2017
 -   最近使用したサブグループを参照します。  
 
 ## <a name="assemblies-tab"></a>[アセンブリ] タブ  
- **[アセンブリ]** タブには、参照に使うことができるすべての .NET Framework アセンブリが一覧表示されます。 グローバル アセンブリ キャッシュ (GAC) 内のアセンブリは実行時環境の一部であるため、**[アセンブリ]** タブでは GAC からのアセンブリはどれもリスト表示されません。 GAC に登録されているアセンブリへの参照を含むアプリケーションを配置またはコピーした場合は、[ローカル コピー] の設定とはかかわりなく、そのアセンブリがアプリケーションと共に配置またはコピーされることはありません。 詳しくは、「[プロジェクトの参照](http://go.microsoft.com/fwlink/?LinkId=238512)」をご覧ください。  
+ **[アセンブリ]** タブには、参照に使うことができるすべての .NET Framework アセンブリが一覧表示されます。 グローバル アセンブリ キャッシュ (GAC) 内のアセンブリは実行時環境の一部であるため、**[アセンブリ]** タブでは GAC からのアセンブリはどれもリスト表示されません。 GAC に登録されているアセンブリへの参照を含むアプリケーションを配置またはコピーした場合は、[ローカル コピー] の設定とはかかわりなく、そのアセンブリがアプリケーションと共に配置またはコピーされることはありません。 詳細については、「[プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)」を参照してください。  
 
  EnvDTE 名前空間 (EnvDTE、EnvDTE80、EnvDTE90、EnvDTE90a、または EnvDTE100) に手動で参照を追加するときは、[プロパティ] ウィンドウで参照の [相互運用型の埋め込み] プロパティを False に設定します。 このプロパティを True に設定すると、埋め込むことができない EnvDTE プロパティが原因でビルドの問題が発生する可能性があります。  
 
@@ -232,6 +232,5 @@ ms.lasthandoff: 02/22/2017
  **[参照マネージャー]** ダイアログ ボックス内の検索バーは、現在フォーカスが置かれているタブを対象として動作します。 たとえば、**[ソリューション]** タブにフォーカスがあるときにユーザーが検索バーに「System」と入力した場合は、"System" という文字列を含むプロジェクト名がソリューションを形成している状況以外では、検索結果が返されません。  
 
 ## <a name="see-also"></a>関連項目  
- [NIB 方法: [参照の追加] ダイアログ ボックスを使用して参照を追加または削除する](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
  [プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)
 

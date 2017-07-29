@@ -1,8 +1,8 @@
 ---
 title: "Visual Studio のオフライン インストールを作成する | Microsoft Docs"
-description: "バージョンを選択し、Visual Studio のオフライン インストールを作成する方法について説明します。"
+description: "Visual Studio のオフライン インストールを作成する方法について説明します。"
 ms.custom: 
-ms.date: 03/27/2017
+ms.date: 07/21/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,33 +18,17 @@ ms.assetid: f8625d5e-f6ea-4db0-83c0-619b77fab3cf
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
-ms.openlocfilehash: 305402c28998de265549715356c93840f3f2f09e
-ms.lasthandoff: 03/07/2017
+ms.translationtype: HT
+ms.sourcegitcommit: e93ef65e6c1dd498825954bcf81ca63a00146d7f
+ms.openlocfilehash: 03983d29fa8269ca1742f165855a15a80eca01c8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/24/2017
 
 ---
-# <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio のオフライン インストールを作成する
+# <a name="create-an-offline-installation-of-visual-studio-2017"></a>Visual Studio 2017 のオフライン インストールを作成する
 
-Visual Studio のオフライン インストール レイアウトを作成し、インターネットに接続されていないコンピューターに製品をインストールする必要がある場合、Microsoft はユーザーに正しい順序を紹介することができます。
+Visual Studio 2017 をオフラインでインストールする方法をお探しでしたら、Microsoft がお手伝いします。
 
-関心のある Visual Studio のバージョンを選択し、次のページのいずれかで詳細を確認します。
-
-* **Visual Studio 2015** の場合は、MSDN の [Visual Studio 2015 のオフライン インストールの作成](https://msdn.microsoft.com/library/mt706497.aspx)に関するページを参照してください。
-* **Visual Studio 2017** の場合は、docs.microsoft.com の [Visual Studio 2017 のオフライン インストールの作成](../install/create-an-offline-installation-of-visual-studio.md)に関するページを参照してください。
+* Visual Studio 2017 のインスタンスを 1 つインストールするが、インターネット接続が利用できないか、信頼性が低い場合、「[低帯域幅または信頼性の低いネットワーク環境に Visual Studio 2017 をインストールする](../install/install-vs-inconsistent-quality-network.md)」ページをご覧ください。  
+* 企業の IT 管理者が、インターネットに対してファイアウォールを施したクライアント ワークステーションのネットワークに Visual Studio 2017 を大規模展開する場合、「[Visual Studio 2017 のネットワーク インストールを作成する](../install/create-a-network-installation-of-visual-studio.md)」ページと「[オフライン環境での Visual Studio のインストールに関する特別な考慮事項](../install/install-visual-studio-in-offline-environment.md)」ページを参照してください。
 

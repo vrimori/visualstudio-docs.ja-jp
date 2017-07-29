@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 332ef0d4534d8f607a1b5d92038855ebd247657f
-ms.lasthandoff: 04/05/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 359e1eb5df8f19774d352ace631802367b6dd8c9
+ms.openlocfilehash: 481153e7f3d609c56f313ff5ee9f3f1b511dc5ef
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="managing-project-and-solution-properties"></a>プロジェクトおよびソリューションのプロパティの管理
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/05/2017
   
  ![プロジェクトのコンテキスト メニュー](../ide/media/vs2015_proj_prop_menu.gif "vs2015_proj_prop_menu")  
   
- .NET プロジェクトでは、プロジェクト ツリー自体にもプロパティ ノードがあります。  
+ .NET プロジェクトでは、プロジェクト ツリー自体にプロパティ ノードが含まれる場合もあります。  
   
  ![ソリューション エクスプローラー ツリーの [プロパティ] ノード](../ide/media/vs2015_props_se.png "VS2015_Props_SE")  
   
@@ -48,8 +49,8 @@ ms.lasthandoff: 04/05/2017
 ## <a name="project-properties"></a>プロジェクトのプロパティ  
  プロジェクトのプロパティはグループごとに編成され、各グループには専用のプロパティ ページがあります。各ページは、さまざまな言語およびプロジェクトの種類に応じて異なることがあります。  
   
-### <a name="c-and-visual-basic-projects"></a>C# プロジェクトおよび Visual Basic プロジェクト  
- C# プロジェクトおよび Visual Basic プロジェクトでは、プロパティは**プロジェクト デザイナー**で公開されます。 C# の WPF プロジェクトの [ビルド] プロパティ ページを次の図に示します。  
+### <a name="c-visual-basic-and-f-projects"></a>C# プロジェクト、Visual Basic プロジェクト、F# プロジェクト  
+ C# プロジェクト、Visual Basic プロジェクト、F# プロジェクトでは、プロパティは**プロジェクト デザイナー**で公開されます。 C# の WPF プロジェクトの [ビルド] プロパティ ページを次の図に示します。  
   
  ![Visual Studio プロジェクト デザイナー](../ide/media/vs2015_proppage_build.png "VS2015_PropPage_Build")  
   
@@ -67,3 +68,4 @@ ms.lasthandoff: 04/05/2017
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio のソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
+

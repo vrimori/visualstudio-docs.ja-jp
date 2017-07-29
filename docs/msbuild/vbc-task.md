@@ -38,10 +38,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 699ad120c95500e04d238270b8ac282ad0a8d288
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: d376d2f99ccfddb2d96797fa2db0e1ef3872f34b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="vbc-task"></a>Vbc タスク
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/13/2017
 |`Imports`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 指定した項目コレクションから名前空間をインポートします。 このパラメーターは、vbc.exe コンパイラの [/imports](/dotnet/visual-basic/reference/command-line-compiler/imports) スイッチに相当します。|  
 |`KeyContainer`|省略可能な `String` 型のパラメーターです。<br /><br /> 暗号化キー コンテナーの名前を指定します。 このパラメーターは、vbc.exe コンパイラの [/keycontainer](/dotnet/visual-basic/reference/command-line-compiler/keycontainer) スイッチに相当します。|  
 |`KeyFile`|省略可能な `String` 型のパラメーターです。<br /><br /> 暗号化キーを格納するファイル名を指定します。 詳細については、「[/keyfile](/dotnet/visual-basic/reference/command-line-compiler/keyfile)」を参照してください。|  
-|`LangVersion`|省略可能な [String](assetId:///String?qualifyHint=False&autoUpgrade=True) 型のパラメーターです。<br /><br /> 言語バージョンとして "9" か "10" を指定します。|  
+|`LangVersion`|省略可能な <xref:System.String?displayProperty=fullName> 型のパラメーターです。<br /><br /> 言語バージョンとして "9" か "10" を指定します。|  
 |`LinkResources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 出力ファイル内で .NET Framework リソースへのリンクを作成します。リソース ファイルは出力ファイル内に置かれません。 このパラメーターは、vbc.exe コンパイラの [/linkresource](/dotnet/visual-basic/reference/command-line-compiler/linkresource) スイッチに相当します。|  
 |`MainEntryPoint`|省略可能な `String` 型のパラメーターです。<br /><br /> `Sub Main` プロシージャを格納するクラスまたはモジュールを指定します。 このパラメーターは、vbc.exe コンパイラの [/main](/dotnet/visual-basic/reference/command-line-compiler/main) スイッチに相当します。|  
 |`ModuleAssemblyName`|省略可能な `String` 型のパラメーターです。<br /><br /> このモジュールが一部となるアセンブリを指定します。|  

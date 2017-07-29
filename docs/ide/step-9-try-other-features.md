@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9044821c2bfee0dba8ffa91f3d91afd565b8d957
-ms.openlocfilehash: 9d5e8a86d71cf1f6aa47853b862a4668dea05633
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b0ef009dae267ca566a41bad3d6f0a9ef81cb02b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="step-9-try-other-features"></a>手順 9: その他の機能を試す
@@ -48,9 +49,9 @@ ms.lasthandoff: 02/22/2017
 -   プレーヤーが勝利するまでにかかる時間の長さを追跡するゲーム タイマーを追加します。  
   
     > [!TIP]
-    >  そのためには、フォーム上の TableLayoutPanel の上に経過時間を表示するためのラベルを追加し、その時間を追跡するための別のタイマーを追加します。 プレーヤーがゲームを開始するとタイマーを開始し、最後の&2; つのアイコンが一致した後にタイマーを停止するコードを使用します。  
+    >  そのためには、フォーム上の TableLayoutPanel の上に経過時間を表示するためのラベルを追加し、その時間を追跡するための別のタイマーを追加します。 プレーヤーがゲームを開始するとタイマーを開始し、最後の 2 つのアイコンが一致した後にタイマーを停止するコードを使用します。  
   
--   プレーヤーが一致を見つけたときのサウンド、プレーヤーが一致しない&2; つのアイコンを表示したときの別のサウンド、およびプログラムでアイコンが再度非表示になるときの&3; つ目のサウンドを追加します。  
+-   プレーヤーが一致を見つけたときのサウンド、プレーヤーが一致しない 2 つのアイコンを表示したときの別のサウンド、およびプログラムでアイコンが再度非表示になるときの 3 つ目のサウンドを追加します。  
   
     > [!TIP]
     >  サウンドを再生するには、System.Media 名前空間を使用できます。 詳細については、「[Windows フォーム アプリでサウンドを再生する (C# .NET)](http://youtu.be/qOh4ooHg1UU)」または「[Visual Basic でオーディオを再生する](http://youtu.be/-4oPDeQrtMs)」を参照してください。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 02/22/2017
     > [!TIP]
     >  TableLayoutPanel に行や列を追加する以上のことを行う必要があります。作成するアイコンの数を検討する必要もあります。  
   
--   プレーヤーが、選択が遅すぎて一定時間内に&2; つ目のアイコンをクリックしなかった場合に、1 つ目のアイコンを非表示にするようにして、ゲームをよりやりがいのあるものにします。  
+-   プレーヤーが、選択が遅すぎて一定時間内に 2 つ目のアイコンをクリックしなかった場合に、1 つ目のアイコンを非表示にするようにして、ゲームをよりやりがいのあるものにします。  
   
 ### <a name="to-continue-or-review"></a>続行または確認するには  
   

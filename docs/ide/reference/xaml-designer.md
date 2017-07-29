@@ -29,17 +29,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: d23a47b708754248cd5c3fb8d86510a0c96491fa
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: bda254d18dc391f3c10e3544ee09fd09171d0938
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="xaml-designer-options-page"></a>XAML デザイナーのオプション ページ
 **XAML デザイナー** のオプション ページを使用して、XAML ドキュメントでの要素と属性の書式設定方法を指定します。 このページを開くには、**[ツール]** メニューを選択し、**[オプション]** を選択します。 **[XAML デザイナー]** プロパティ ページにアクセスするには、**[XAML デザイナー]** ノードを選択します。 ドキュメントを開くと、XAML デザイナーの設定が適用されます。 そのため、設定を変更する場合、変更を確認するには、Visual Studio を閉じて、再度開く必要があります。
 
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
 
 ## <a name="enable-xaml-designer"></a>XAML デザイナーの有効化
 選択すると、この設定では XAML デザイナーを有効にします。 XAML デザイナーでは、XAML ドキュメントを編集するためのビジュアルの作業領域が提供されます。 リソースの IntelliSense およびデータ バインドなどの Visual Studio の特定の機能を使用するには、XAML デザイナーを有効にする必要があります。
@@ -116,7 +117,7 @@ ms.lasthandoff: 03/07/2017
 |**しきい値のズーム**|**[効果の適用]** チェック ボックスがオンにされているときに、効果を適用するズームのパーセンテージを指定します。 ズームがこの設定を超えた場合、効果は XAML デザイナーで適用されなくなります。|  
 
 ## <a name="see-also"></a>関連項目  
- [WPF の XAML](http://msdn.microsoft.com/Library/5d858575-a83b-42df-ad3f-047ed2d6e3c8)   
+ [WPF の XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)   
  [方法 : XAML ビュー設定を変更する](http://msdn.microsoft.com/en-us/aee87c79-ca01-4f84-8fb7-a9e47048ee47)   
  [XAML とコードのチュートリアル](http://msdn.microsoft.com/en-us/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)
 

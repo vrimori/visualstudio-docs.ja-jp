@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 438567598a70b945f00346154e6da4c78c861d36
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b016ce5c67f1aa7242d7af3f3fb1142b61145f63
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="install-and-manage-local-content"></a>ローカル コンテンツのインストールと管理
@@ -67,7 +68,7 @@ Microsoft ヘルプ ビューアーを使用すると、ソフトウェア開発
   
     -   .msha ファイルのパスまたはサービス エンドポイントの URL を入力します。  
   
-    -   参照ボタン (**[…]**) を選択して .msha ファイルに移動します。  
+    -   参照 **[…]** ボタンを選択して .msha ファイルに移動します。  
   
     -   一覧で、最後に使用されたエントリを選択します。  
   

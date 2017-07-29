@@ -1,5 +1,5 @@
 ---
-title: "[マイ コードのみ] (スレッド ビュー) | Microsoft Docs"
+title: "[マイ コードのみ]\\(スレッド ビュー) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

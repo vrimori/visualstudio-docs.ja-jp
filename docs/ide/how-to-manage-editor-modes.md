@@ -1,70 +1,87 @@
 ---
 title: "方法 : エディター モードを管理する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コード エディター, モード"
-  - "コード エディター, ビューと表示のオプション"
-  - "フォントとサイズ"
-  - "全画面表示モード"
-  - "行番号"
-  - "行番号, 表示"
-  - "ビュー, 変更 (モードを)"
-  - "ビュー, 作成 (新しいウィンドウを)"
-  - "ビュー, 行番号"
-  - "ビュー, アウトライン"
-  - "ビュー, 分割"
-  - "ビュー, 仮想空間"
-  - "ビュー, ワード ラップ"
-  - "仮想空間モード"
-  - "ワード ラップ"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- word wrap
+- views, virtual space
+- line numbers, displaying
+- virtual space mode
+- line numbers
+- Code Editor, view and display options
+- full screen mode
+- Code Editor, modes
+- views, splitting
+- views, word wrapping
+- fonts and size
+- views, creating new windows
+- views, line numbers
+- views, changing mode
+- views, outlining
 ms.assetid: 1fb48027-d870-439f-8b72-4a0321390748
 caps.latest.revision: 20
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# 方法 : エディター モードを管理する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 71566f11a069d266ded2aebe02bbf388cf00730e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/24/2017
 
-Visual Studio のコード エディターには、さまざまな表示モードを適用できます。  
+---
+# <a name="how-to-manage-editor-modes"></a>方法 : エディター モードを管理する
+Visual Studio のコード エディターは、さまざまな表示モードで表示できます。  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。  設定を変更するには、**\[ツール\]** メニューの **\[設定のインポートとエクスポート\]** をクリックします。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## \[全画面表示\] モードの有効化  
- **全画面表示**モードを有効にすると、すべてのツール ウィンドウを非表示にしてドキュメント ウィンドウだけを表示するように選択できます。  
+## <a name="enabling-full-screen-mode"></a>全画面表示モードを有効にする  
+ **全画面表示**モードを有効にすると、すべてのツール ウィンドウを非表示にして、ドキュメント ウィンドウだけを表示することができます。  
   
-#### \[全画面表示\] モードを有効にするには  
+#### <a name="to-enable-full-screen-mode"></a>全画面表示モードを有効にするには  
   
--   **全画面表示**モードを切り替えるには、Alt \+ Shift \+ Enter キーを押します。  
+-   **全画面表示**モードを開始または終了するには、Alt + Shift + Enter キーを押します。  
   
      または  
   
--   **コマンド** ウィンドウでコマンド `View.Fullscreen` を実行します。  
+-   **[コマンド]** ウィンドウで `View.Fullscreen` コマンドを実行します。  
   
-## 仮想空間モードの有効化  
- **仮想空間**モードでは、各コード行の末尾に空白が挿入されます。  このオプションを選択することにより、コードの横に記述するコメントの位置を一定に保つことができます。  
+## <a name="enabling-virtual-space-mode"></a>仮想空白モードを有効にする  
+ **仮想空白**モードでは、各コード行の末尾に空白が挿入されます。 コードの横に一貫してコメントを入れる場合は、このチェック ボックスをオンにします。  
   
-#### 仮想空間モードを有効にするには  
+#### <a name="to-enable-virtual-space-mode"></a>仮想空白モードを有効にするには  
   
-1.  **\[ツール\]** メニューの **\[オプション\]** をクリックします。  
+1.  **[ツール]** メニューの **[オプション]** を選択します。  
   
-2.  **\[テキスト エディター\]** フォルダーを展開し、**\[すべての言語\]** を選択してオプションをグローバルに設定するか、特定の言語フォルダーを選択します。  たとえば、行番号を Visual Basic でのみ有効にするには、\[テキスト エディター\] の \[基本\] を選択します。  
+2.  **[テキスト エディター]** フォルダーを展開し、**[すべての言語]** を選択してこのオプションをグローバルに設定するか、または特定の言語フォルダーを選択します  (たとえば、Visual Basic でのみ行番号を表示するには、[テキスト エディター] で [Basic] を選択します)。  
   
-3.  **\[全般\]** のオプションを選択し、**\[設定\]** の **\[仮想空間を使用\]** を選択します。  
+3.  **[全般]** オプションを選択し、**[設定]** で **[仮想空白文字を使用]** を選択します。  
   
     > [!NOTE]
-    >  **列選択**モードでは、**仮想空間**が有効になります。  **仮想空間**モードが有効になっていない場合、カーソル位置が行末から次の行の先頭文字に直接移動します。  
+    >  **列の選択**モードで**仮想空白文字**が有効になります。 **仮想空白**モードを有効にしないと、挿入ポイントは行の末尾から次の行の先頭文字に直接移動します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [エディターのカスタマイズ](../ide/customizing-the-editor.md)   
- [方法 : ウィンドウを整列およびドッキングする](../misc/how-to-arrange-and-dock-windows.md)   
- [\[フォントおよび色\] \(\[オプション\] ダイアログ ボックス \- \[環境\]\)](../Topic/Fonts%20and%20Colors,%20Environment,%20Options%20Dialog%20Box.md)
+ [Visual Studio のウィンドウ レイアウトをカスタマイズする](../ide/customizing-window-layouts-in-visual-studio.md)   
+ [[フォントおよび色] ([オプション] ダイアログ ボックス - [環境])](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)

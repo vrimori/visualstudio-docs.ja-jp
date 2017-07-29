@@ -32,14 +32,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 63aad78bdc7df685ca3a73ec16a9cbc87b78151f
-ms.openlocfilehash: 349cf26923ebee02162b6a113b39393aea01c58f
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: b5c18e7d208879498c1923403ec1bd213adffb5a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>チュートリアル: 使用法から生成機能のテスト ファーストのサポート
-このトピックでは、テスト ファースト開発をサポートする[使用法から生成](../misc/generate-from-usage.md)機能の使用方法について説明します。  
+このトピックでは、テスト ファースト開発をサポートする[使用法から生成](../ide/visual-csharp-intellisense.md#generate-from-usage)機能の使用方法について説明します。  
   
  *テスト ファースト開発* は、最初に製品仕様に基づいて単体テストを記述してから、テストが成功するために必要なソース コードを記述するソフトウェア設計の方法です。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、新しい型とメンバーを定義する前に、テスト ケースで最初にこれらを参照するときにソース コードに生成することで、テスト ファースト開発をサポートします。  
   
@@ -104,8 +104,7 @@ Visual C#
   
      `DefaultAutomobileIsInitializedCorrectly`に次のコード行を追加します。  
   
-     [!code-cs[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]
-     [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]  
+     [!code-cs[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]  [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]  
   
      コードは `Automobile`の 2 つの未定義プロパティを参照するため、スマート タグが表示されます。 `Model` のスマート タグをクリックし、 **[プロパティ スタブの生成]**をクリックします。 `TopSpeed` プロパティのプロパティ スタブも生成します。  
   
@@ -136,8 +135,7 @@ Visual C#
   
 1.  このテスト メソッドでは、指定した値を持つように `Model` および `TopSpeed` プロパティを初期化するコンストラクター スタブが生成されます。 後でコードを追加してテストを完成させます。 次の追加のテスト メソッドを `AutomobileTest` クラスに追加します。  
   
-     [!code-cs[VbTDDWalkthrough#2](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.cs)]
-     [!code-vb[VbTDDWalkthrough#2](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.vb)]  
+     [!code-cs[VbTDDWalkthrough#2](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.cs)]  [!code-vb[VbTDDWalkthrough#2](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.vb)]  
   
 2.  新しいクラス コンストラクターの下にあるスマート タグをクリックし、 **[コンストラクター スタブを生成する]**をクリックします。 `Automobile` クラス ファイルで、新しいコンストラクターがコンストラクター呼び出しで使用されているローカル変数の名前を調べ、 `Automobile` クラスで同じ名前のプロパティを見つけ、 `Model` および `TopSpeed` プロパティに引数値を格納するためのコードをコンストラクター本体に指定に指定したことがわかります ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] では、新しいコンストラクターの `_model` および `_topSpeed` フィールドは、`Model` および `TopSpeed` プロパティに対して暗黙的に定義されるバッキング フィールドです)。  
   
@@ -147,15 +145,13 @@ Visual C#
   
 1.  仕様で、 `Automobile` および `Model` プロパティが既定値以外に設定されている場合は、新しい `TopSpeed` を実行状態にできることが示されているとします。 次の行を `AutomobileWithModelNameCanStart` メソッドに追加します。  
   
-     [!code-cs[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]
-     [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]  
+     [!code-cs[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]  [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]  
   
 2.  `myAuto.Start` メソッド呼び出しのスマート タグをクリックし、 **[メソッド スタブの生成]**をクリックします。  
   
 3.  `IsRunning` プロパティのスマート タグをクリックし、 **[プロパティ スタブの生成]**をクリックします。 `Automobile` クラスには、次のコードが含まれています。  
   
-     [!code-cs[VbTDDWalkthrough#4](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.cs)]
-     [!code-vb[VbTDDWalkthrough#4](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.vb)]  
+     [!code-cs[VbTDDWalkthrough#4](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.cs)]  [!code-vb[VbTDDWalkthrough#4](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_4.vb)]  
   
 ### <a name="to-run-the-tests"></a>テストを実行するには  
   
@@ -174,13 +170,11 @@ Visual C#
   
 1.  次のコードを既定のコンストラクターに追加して、 `Model`、 `TopSpeed` および `IsRunning` のプロパティがすべて `"Not specified"`、 `-1`および `True` (`true`) の適切な既定値に初期化されるようにします。  
   
-     [!code-cs[VbTDDWalkthrough#5](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.cs)]
-     [!code-vb[VbTDDWalkthrough#5](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.vb)]  
+     [!code-cs[VbTDDWalkthrough#5](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.cs)]  [!code-vb[VbTDDWalkthrough#5](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.vb)]  
   
 2.  `Start` メソッドが呼び出されたときに、 `IsRunning` または `Model` プロパティが既定値以外に設定されている場合にのみ `TopSpeed` フラグを true に設定する必要があります。 メソッド本体から `NotImplementedException` を削除して次のコードを追加します。  
   
-     [!code-cs[VbTDDWalkthrough#6](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.cs)]
-     [!code-vb[VbTDDWalkthrough#6](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.vb)]  
+     [!code-cs[VbTDDWalkthrough#6](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.cs)]  [!code-vb[VbTDDWalkthrough#6](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.vb)]  
   
 ### <a name="to-run-the-tests-again"></a>テストをもう一度実行するには  
   
@@ -190,7 +184,7 @@ Visual C#
 [テスト結果] ウィンドウ  
   
 ## <a name="see-also"></a>関連項目  
- [使用法から生成](../misc/generate-from-usage.md)   
+ [使用法から生成](../ide/visual-csharp-intellisense.md#generate-from-usage)   
  [コードの作成](../ide/writing-code-in-the-code-and-text-editor.md)   
  [IntelliSense の使用](../ide/using-intellisense.md)   
  [コードの単体テスト](../test/unit-test-your-code.md)

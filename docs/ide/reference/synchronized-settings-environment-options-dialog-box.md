@@ -1,5 +1,5 @@
 ---
-title: "[同期された設定] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs"
+title: "[同期された設定]\\([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

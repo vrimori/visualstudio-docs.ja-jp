@@ -1,53 +1,71 @@
 ---
 title: "検索式の高度な検索演算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ヘルプ ビューアー 2.0, 検索 (コードを)"
-  - "ヘルプ ビューアー 2.0, 検索 (コードをプログラミング言語別に)"
-  - "ヘルプ ビューアー 2.0, 検索 (キーワードの)"
-  - "ヘルプ ビューアー 2.0, 検索 (タイトルを)"
-  - "検索 (コードを) [ヘルプ ビューアー 2.0]"
-  - "検索 (タイトルを) [ヘルプ ビューアー 2.0]"
+ms.custom: 
+ms.date: 06/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Help Viewer 2.0, searching for keywords
+- Help Viewer 2.0, searching code
+- Help Viewer 2.0, searching code by programming language
+- Help Viewer 2.0, searching titles
+- searching code [Help Viewer 2.0]
+- searching titles [Help Viewer 2.0]
 ms.assetid: 0cdc1746-8481-45ec-9c53-d0d89cdcbd5e
 caps.latest.revision: 9
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 検索式の高度な検索演算子
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 07ff2413503209d6ade252ac89dbfbe2589e7e85
+ms.openlocfilehash: 7ad9c78134c337445a3e9180ad27234b7bcb07cc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/02/2017
 
-高度な検索演算子を使用すると、簡単な検索式からより複雑な検索式を作成することによって、コンテンツの検索を絞り込むことができます。  次の表に示すように、これらの演算子はクエリが実行されるコンテキストを制限します。  
-  
+---
+# <a name="advanced-search-operators-in-search-expressions"></a>検索式の高度な検索演算子
+ヘルプ ビューアーで高度な検索演算子を使用すると、より単純な検索式からより複雑な検索式を作成し、コンテンツの検索を絞り込むことができます。 次の表にあるとおり、演算子はクエリが実行されるコンテキストを制限します。  
+
 > [!WARNING]
->  検索エンジンで認識されるように、高度な検索演算子は末尾にコロンを付け、コロンの前に間のスペースを入れずに入力する必要があります。  
-  
-|検索内容|使用|例|結果|  
-|----------|--------|-------|--------|  
-|トピックのタイトルに含まれる用語|title:|title:binaryreader|タイトルに「binaryreader」を含むトピック。|  
-|コード例に含まれる用語|code:|code:readdouble|コード例に「readdouble」含むトピック。|  
-|特定のプログラミング言語の例に含まれる用語|code:vb:|code:vb:string|Visual Basic の例に「string」を含むトピック。|  
-|特定のインデックスのキーワードに関連付けられたトピック|keyword:|keyword:readbyte|インデックスのキーワード「readbyte」に関連付けられたトピック。|  
-  
- code: 演算子を使用すると、複数のプログラミング言語に関するコンテンツを検索できますが、特定のプログラミング言語でマークされたコンテンツの結果のみが返されます。  次の表は、この演算子がサポートするプログラミング言語の一覧を示しています。  
-  
-|プログラミング言語|使用|  
-|---------------|--------|  
+>  高度な検索演算子を入力するときは、検索エンジンに認識させるために最後にコロンを付け、コロンの前にはスペースを入れません。  
+
+|検索対象|用途|例|結果|  
+|-------------------|---------|-------------|------------|  
+|トピックのタイトルの言葉|title:|title:binaryreader|タイトルに "binaryreader" が含まれるトピック。|  
+|コード サンプルの言葉|code:|code:readdouble|コード サンプルに "readdouble" が含まれるトピック。|  
+|特定のプログラミング言語のサンプルの言葉|code:vb:|code:vb:string|Visual Basic サンプルに "string" が含まれるトピック。|  
+|特定のインデックス キーワードに関連付けられているトピック。|keyword:|keyword:readbyte|"readbyte" というインデックス キーワードに関連付けられているトピック。|  
+
+ code: 演算子を利用して任意のいくつかのプログラミング言語に関するコンテンツを検索できますが、特定のプログラミング言語でマークアップされているコンテンツのみ、結果が返されます。 次の表は、この演算子が対応しているプログラミング言語を一覧にまとめたものです。  
+
+|プログラミング言語|用途|  
+|--------------------------|---------|  
 |Visual Basic|code:vb<br /><br /> または<br /><br /> code:visualbasic|  
-|C\#|code:c\#<br /><br /> または<br /><br /> code:csharp|  
-|C\+\+|code:cpp<br /><br /> または<br /><br /> code:C\+\+<br /><br /> または<br /><br /> code:cplusplus|  
-|F\#|code:f\#<br /><br /> または<br /><br /> code:fsharp|  
+|C#|code:c#<br /><br /> または<br /><br /> code:csharp|  
+|C++|code:cpp<br /><br /> または<br /><br /> code:c++<br /><br /> または<br /><br /> code:cplusplus|  
+|F#|code:f#<br /><br /> または<br /><br /> code:fsharp|  
 |JavaScript|code:javascript<br /><br /> または<br /><br /> code:js|  
 |XAML|code:xaml|  
-  
-## 参照  
+
+## <a name="see-also"></a>関連項目  
  [検索式の論理演算子](../ide/logical-operators-in-search-expressions.md)   
  [フルテキスト検索のヒント](../ide/full-text-search-tips.md)
+
