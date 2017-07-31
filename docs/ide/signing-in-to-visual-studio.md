@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio にサインイン | Microsoft ドキュメント"
 ms.custom: 
-ms.date: 01/23/2016
+ms.date: 7/20/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -13,26 +13,11 @@ caps.latest.revision: 30
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 8b1f56944190c60795d5bbd726388309caca7070
+ms.translationtype: HT
+ms.sourcegitcommit: c3521e1de25854db012cb91bbe09d9463ecb42c7
+ms.openlocfilehash: e329cd4df5ea0dd1e369207bca75e063936bc88f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/21/2017
 
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
@@ -51,31 +36,28 @@ Visual Studio の開発環境をカスタマイズし、最適化するには、
 
 -   **Visual Studio の評価期間を拡張する** – 30 日の評価期間にとらわれることなく、Visual Studio Professional または Visual Studio Enterprise を 90 日間延長して使用できます。  
 
--   **MSDN または VSO サブスクリプションに関連付けられたアカウントを使用すると、Visual Studio のロックが解除**されます。 「 [Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)」を参照してください。  
+-   **MSDN または Visual Studio Team Services サブスクリプションに関連付けられたアカウントを使用すると、Visual Studio のロックが解除**されます。 「 [Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)」を参照してください。  
 
 -   IDE で、**Azure や Visual Studio Team Services などのサービスに自動的に接続** され、同じアカウントの資格情報を再度要求されることはなくなります。  
 
 ## <a name="how-to-sign-in-to-visual-studio"></a>Visual Studio にサインインする方法  
  Visual Studio を初めて起動すると、サインインして基本登録情報を入力するように求められます。 Microsoft アカウント、またはユーザーを最も的確に表す職場や学校のアカウントを選択してください。 これらのアカウントがない場合は、Microsoft アカウントを無料で作成できます。 「 [Microsoft アカウントへのサインアップ方法](http://windows.microsoft.com/en-us/windows-live/sign-up-create-account-how)」をご覧ください。  
 
- 次に、Visual Studio で使用する UI 設定や配色テーマを選択します。 これらの設定は Visual Studio に保存され、サインインしたすべての Visual Studio 環境間で同期されます。 同期される設定の一覧については、「[Visual Studio での同期された設定](../ide/synchronized-settings-in-visual-studio.md)」を参照してください。 Visual Studio の **[ツール &#124; オプション]** メニューを開けば、これらの設定は後で変更できます。  
+ 次に、Visual Studio で使用する UI 設定や配色テーマを選択します。 これらの設定は Visual Studio に保存され、サインインしたすべての Visual Studio 環境間で同期されます。 同期される設定の一覧については、「[Visual Studio での同期された設定](../ide/synchronized-settings-in-visual-studio.md)」を参照してください。 Visual Studio の **[ツール] > [オプション]** メニューを開けば、これらの設定は後で変更できます。  
 
  設定が終わったら、Visual Studio が起動し、サインインして、作業を開始できるようになります。 ログインしているかどうかを確認するには、Visual Studio 環境の右上隅に表示されているプロファイル名を探します。  
 
- ![現在ログインしているユーザー](../ide/media/vs2015_username.png "VS2017_UserName")  
+ ![VS2017 に現在ログインしているユーザー](../ide/media/vs2017_username.png)
 
  サインアウトしない限り、Visual Studio を起動すると自動的にサインインすることになり、同期された設定への変更が自動的に適用されます。 サインアウトするには、Visual Studio 環境の自分のプロファイル名の横にある下矢印をクリックし、 **[アカウント設定]** をクリックして、 **[サインアウト]** リンクをクリックします。 再度サインインするには、Visual Studio 環境の右上隅の **[サインイン]** をクリックします。  
 
 ## <a name="to-change-your-profile-information"></a>ユーザーのプロファイル情報を変更するには  
- **[ファイル &#124; アカウント設定]** で、Visual Studio プロファイルおよびライセンスに関する情報を表示し、更新できます。 自分のアカウント名、アバター画像、電子メール アドレスなどのプロファイル情報を編集するには  
+ 
+1.  **[ファイル] > [アカウント設定]** に進み、**[Visual Studio プロファイルの管理]** リンクを選択します。  
 
-1.  **[ファイル &#124; アカウント設定]** に移動します。  
+1.  ブラウザーで、上部にある自分のアカウント名を選択し、**[Visual Studio プロファイル]** を選択します。  
 
-2.  **[アカウント設定]** ダイアログ ボックスで、 **[Visual Studio プロファイルの管理]** リンクをクリックします。  
+1.  **[プロファイルの編集]** を選択し、必要な設定を変更します。  
 
-3.  ブラウザーの **[情報]** ページで、 **[情報の編集]** ボタンをクリックします。  
-
-4.  目的の設定を変更します。  
-
-5.  完了したら、 **[変更の保存]** をクリックします。
+1.  終了したら、**[変更を保存]** を選択します。
 
