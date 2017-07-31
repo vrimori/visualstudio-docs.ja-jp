@@ -1,5 +1,5 @@
 ---
-title: "[マイ コードのみ]\\(スレッド ビュー) | Microsoft Docs"
+title: "[マイ コードのみ] (スレッド ビュー) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,7 +38,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 07/14/2017
 
 ---
-# <a name="just-my-code-threads-view"></a>[マイ コードのみ] (スレッド ビュー)
+# <a name="just-my-code-threads-view"></a>[マイ コードのみ]\(スレッド ビュー)
 このオプションを選択すると、呼び出し履歴がフィルター処理され、自分のコードに加え、呼び出された関数が 1 レベルだけ表示されます。  
   
  このオプションを有効にすると、呼び出し履歴が大幅に簡素化され、特定の問題の診断が簡単になります。  

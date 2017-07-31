@@ -49,7 +49,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 07/14/2017
 
 ---
-# <a name="task-list-environment-options-dialog-box"></a>[タスク一覧] ([オプション] ダイアログ ボックス - [環境])
+# <a name="task-list-environment-options-dialog-box"></a>[タスク一覧] \([オプション] ダイアログ ボックス - [環境])
 この [オプション] ページでは、**タスク一覧**のアラームを生成するコメント トークンを追加、削除、変更できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** を選択し、**[環境]** フォルダーを展開して **[タスク一覧]** を選択します。  
   
 ## <a name="task-list-options"></a>タスク一覧オプション  
