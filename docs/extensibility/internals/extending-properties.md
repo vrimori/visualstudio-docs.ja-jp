@@ -39,7 +39,7 @@ ms.lasthandoff: 02/22/2017
   
  **プロパティ** ウィンドウをキーボードで、f4 キーを押すかを選択すると開くことが**プロパティ ウィンドウ**上、**ビュー**を表示および選択したオブジェクトの構成に依存しない、デザイン時のプロパティおよびイベントの編集 メニューを使用します。 ソリューションやプロジェクトに関連付けられている構成に依存するプロパティに表示される[プロパティ ページ](../../extensibility/internals/property-pages.md)します。 詳細については、次を参照してください。 [NIB: プロジェクトのプロパティの](http://msdn.microsoft.com/en-us/fb126574-24ad-4c96-9b2b-6e1f3879ba50)、[構成オプションを管理する](../../extensibility/internals/managing-configuration-options.md)、および[プロジェクトにおける NIB: 項目の管理](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)します。  
   
- ![プロパティ ウィンドウの概要](~/docs/extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
+ ![プロパティ ウィンドウの概要](~/extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
 [プロパティ] ウィンドウ  
   
  このセクションの個々 の領域に関連する詳細な情報を提供する、**プロパティ**ウィンドウを実装する必要がありますインターフェイス ドメインおよびウィンドウの設定への呼び出しです。  

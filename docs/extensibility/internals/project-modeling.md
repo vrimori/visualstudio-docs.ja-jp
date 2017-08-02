@@ -49,7 +49,7 @@ Projects
   
  プロジェクト オートメーションは次の図のパスが表示されます。  
   
- ![Visual Studio プロジェクト オブジェクト](~/docs/extensibility/internals/media/projectobjects.gif "ProjectObjects")  
+ ![Visual Studio プロジェクト オブジェクト](~/extensibility/internals/media/projectobjects.gif "ProjectObjects")  
 プロジェクト オートメーション  
   
  `Project` のオブジェクトを実装していない場合環境はプロジェクトの名前のみを含む `Project` の一般的なオブジェクトを返します。  

@@ -41,7 +41,7 @@ ms.lasthandoff: 05/13/2017
   
 1.  Windows フォーム デザイナーのツール ボックスから、[**タイマー**]\([**コンポーネント**] カテゴリ内) を選択して Enter キーを押すか、タイマーをダブルクリックして、タイマー コントロールをフォームに追加します。 次の図に示しているように、タイマーのアイコンが [**Timer1**] という名前で、フォームの下の領域に表示されます。  
   
-     ![タイマー](~/docs/ide/media/express_timer.png "Express_Timer")  
+     ![タイマー](~/ide/media/express_timer.png "Express_Timer")  
 タイマー  
   
     > [!NOTE]

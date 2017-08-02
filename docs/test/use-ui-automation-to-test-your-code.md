@@ -48,7 +48,7 @@ ms.lasthandoff: 05/26/2017
   
  次の図に示すように、一般的な開発環境では、最初はアプリケーションをビルドし (F5 キー)、いくつかの UI コントロールをクリックして正しく動作していることを確認するだけです。 次に、アプリケーションを手動でテストし続けなくてもよいように、コード化されたテストを作成しようとするでしょう。 アプリケーションでテストする特定の機能に応じて、機能テストまたは統合テストのコードを記述できます。テストには、UI レベルでのテストが含まれている場合も含まれていない場合もあります。 一部のビジネス ロジックに直接アクセスするだけの場合は、単体テストのコードを記述することができます。 ただし、特定の状況下では、アプリケーションのさまざまな UI コントロールのテストを含める方が有益な場合があります。 コード化された UI テストでは、最初の (F5 キー) シナリオを自動化でき、コード チャーンがアプリケーションの機能に影響を与えないことを検証できます。  
   
- ![アプリケーション開発中のテスト](~/docs/test/media/cuit_overview.png "CUIT_Overview")  
+ ![アプリケーション開発中のテスト](~/test/media/cuit_overview.png "CUIT_Overview")  
   
  コード化された UI テストの作成は簡単です。 CUIT テスト ビルダーをバックグラウンドで実行中に、テストを手動で実行します。 特定のフィールドに表示する値を指定することもできます。 CUIT テスト ビルダーは操作を記録し、それらの記録からコードを生成します。 テストの作成後、特殊なエディターでテストを編集して、操作のシーケンスを変更することができます。  
   
@@ -96,15 +96,15 @@ ms.lasthandoff: 05/26/2017
   
      コード化された UI プロジェクトを作成した場合は、最初の CUIT ファイルが自動的に追加されます。 別のテスト ファイルを追加するには、コード化された UI テスト プロジェクトのショートカット メニューを開き、**[追加]** をポイントし、**[コード化された UI テスト]** を選択します。  
   
-     ![ コード化された UI テストを作成します](~/docs/test/media/codedui_create.png "CodedUI_Create")  
+     ![ コード化された UI テストを作成します](~/test/media/codedui_create.png "CodedUI_Create")  
   
      **[コード化された UI テストのコードの生成]** ダイアログ ボックスで、**[操作の記録、UI マップの編集、またはアサーションの追加]** を選択します。  
   
-     ![操作の記録を選択します](~/docs/test/media/codedui_codegendialogb.png "CodedUI_CodeGenDialogB")  
+     ![操作の記録を選択します](~/test/media/codedui_codegendialogb.png "CodedUI_CodeGenDialogB")  
   
      コード化された UI テスト ビルダーが表示され、Visual Studio は最小化されます。  
   
-     ![コード化された UI テスト ビルダー](~/docs/test/media/codedui_testbuilder.png "CodedUI_TestBuilder")  
+     ![コード化された UI テスト ビルダー](~/test/media/codedui_testbuilder.png "CodedUI_TestBuilder")  
   
 3.  **操作のシーケンスを記録します**。  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 05/26/2017
   
      アサーション ウィンドウを閉じ、**[コードの生成]** を選択します。  
   
-     ![要素を対象としたコード化された UI テスト](~/docs/test/media/codedui_1.png "CodedUI_1")  
+     ![要素を対象としたコード化された UI テスト](~/test/media/codedui_1.png "CodedUI_1")  
   
     > [!TIP]
     >  操作の記録と値の検証の間で交互に切り替えます。 操作または検証の各シーケンスの最後にコードを生成します。 必要に応じて、後で新しい操作と検証を挿入できます。  
@@ -161,7 +161,7 @@ ms.lasthandoff: 05/26/2017
   
      UIMap.uitest を開きます。 このファイルはコード化された UI テスト エディターで開かれます。ここで、記録した操作のシーケンスやアサーションを編集できます。  
   
-     ![コード化された UI テスト エディター](~/docs/test/media/cuit_editor_edit.png "CUIT_Editor_edit")  
+     ![コード化された UI テスト エディター](~/test/media/cuit_editor_edit.png "CUIT_Editor_edit")  
   
      詳細については、「[コード化された UI テスト エディターを使用したコード化された UI テストの編集](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)」をご覧ください。  
   
@@ -176,26 +176,26 @@ ms.lasthandoff: 05/26/2017
 ###  <a name="starting"></a> テスト対象のアプリケーションを開始および停止する  
  *テストごとに、アプリケーション、ブラウザー、またはデータベースを個別に起動および停止したくありません。どうすれば回避できますか?*  
   
--   ![Prerequsite](~/docs/test/media/prereq.png "Prereq") テスト対象のアプリケーションの起動操作を記録しない場合は、**[記録する]** アイコンを選択する前にアプリケーションを起動する必要があります。  
+-   ![Prerequsite](~/test/media/prereq.png "Prereq") テスト対象のアプリケーションの起動操作を記録しない場合は、**[記録する]** アイコンを選択する前にアプリケーションを起動する必要があります。  
   
--   ![Prerequsite](~/docs/test/media/prereq.png "Prereq") テストの終了時に、テストを実行するプロセスが終了します。 テストでアプリケーションを起動した場合、アプリケーションは通常は閉じます。  終了時にテストがアプリケーションを閉じないようにするには、ソリューションに .runsettings ファイルを追加し、`KeepExecutorAliveAfterLegacyRun` オプションを使用する必要があります。 詳細については、「[.runsettings ファイルを使用して単体テストを構成する](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)」をご覧ください。  
+-   ![Prerequsite](~/test/media/prereq.png "Prereq") テストの終了時に、テストを実行するプロセスが終了します。 テストでアプリケーションを起動した場合、アプリケーションは通常は閉じます。  終了時にテストがアプリケーションを閉じないようにするには、ソリューションに .runsettings ファイルを追加し、`KeepExecutorAliveAfterLegacyRun` オプションを使用する必要があります。 詳細については、「[.runsettings ファイルを使用して単体テストを構成する](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)」をご覧ください。  
   
--   ![Prerequsite](~/docs/test/media/prereq.png "Prereq") [TestInitialize] 属性で識別されるテスト初期化メソッドを追加できます。このメソッドは、各テスト メソッドの開始時にコードを実行します。 たとえば、TestInitialize メソッドからアプリケーションを起動することができます。  
+-   ![Prerequsite](~/test/media/prereq.png "Prereq") [TestInitialize] 属性で識別されるテスト初期化メソッドを追加できます。このメソッドは、各テスト メソッドの開始時にコードを実行します。 たとえば、TestInitialize メソッドからアプリケーションを起動することができます。  
   
--   ![Prerequsite](~/docs/test/media/prereq.png "Prereq") [TestCleanup] 属性で識別されるテスト クリーンアップ メソッドを追加できます。このメソッドは、各テスト メソッドの終了時にコードを実行します。 たとえば、アプリケーションを終了するメソッドは、TestCleanup メソッドから呼び出すことができます。  
+-   ![Prerequsite](~/test/media/prereq.png "Prereq") [TestCleanup] 属性で識別されるテスト クリーンアップ メソッドを追加できます。このメソッドは、各テスト メソッドの終了時にコードを実行します。 たとえば、アプリケーションを終了するメソッドは、TestCleanup メソッドから呼び出すことができます。  
   
 ###  <a name="VerifyingCodeUsingCUITGenerateAssertions"></a> UI コントロールのプロパティを検証する  
  **コード化された UI テスト ビルダー**を使用すると、テストの <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> にユーザー インターフェイス (UI) を追加したり、UI コントロールのアサーションを使用する検証メソッドのコードを生成したりできます。  
   
  UI コントロールのアサーションを生成するには、コード化された UI テスト ビルダーの**アサーションの追加**ツールを選択し、正しいかどうかを検証するテスト対象アプリケーションのコントロールにドラッグします。 ボックスがコントロールを囲んだら、マウス ボタンを離します。 コントロール クラス コードがすぐに `UIMap.Designer.cs` ファイルに作成されます。  
   
- ![要素を対象としたコード化された UI テスト](~/docs/test/media/codedui_1.png "CodedUI_1")  
+ ![要素を対象としたコード化された UI テスト](~/test/media/codedui_1.png "CodedUI_1")  
   
  これで、このコントロールのプロパティが **[アサーションの追加]** ダイアログ ボックスに表示されます。  
   
  特定のコントロールに移動するには、矢印 **(<<)** を選択して **[UI コントロール マップ]** のビューを展開する方法もあります。 親、兄弟、子の各コントロールを見つけるには、マップのどこかをクリックし、方向キーを使用してツリー内を移動します。  
   
- ![コード化された UI テストのプロパティ](~/docs/test/media/codedui_2.png "CodedUI_2")  
+ ![コード化された UI テストのプロパティ](~/test/media/codedui_2.png "CodedUI_2")  
   
 -   *アプリケーションでコントロールを選択してもプロパティが表示されません。または UI コントロール マップにコントロールが表示されません。*  
   
@@ -203,7 +203,7 @@ ms.lasthandoff: 05/26/2017
   
  次に、検証する UI コントロールのプロパティのショートカット メニューで、**[アサーションの追加]** をポイントします。 **[アサーションの追加]** ダイアログ ボックスで、アサーションの **[比較子]** (<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> など) を選択し、**[比較対象値]** にアサーションの値を入力します。  
   
- ![コード化された UI テストのアサーション](~/docs/test/media/codedui_3.png "CodedUI_3")  
+ ![コード化された UI テストのアサーション](~/test/media/codedui_3.png "CodedUI_3")  
   
  テスト用のアサーションをすべて追加したら、**[OK]** を選択します。  
   
@@ -224,7 +224,7 @@ ms.lasthandoff: 05/26/2017
   
 -   UI マップ (UIMap.uitest) に `AssertForAddTwoNumbers` という名前のメソッドを追加します。 このファイルはコード化された UI テスト エディターで開かれ、そこでアサーションを編集できます。  
   
-     ![コード化された UI テスト エディターを使用したアサートの編集](~/docs/test/media/cuit_editor_assert.png "CUIT_Editor_assert")  
+     ![コード化された UI テスト エディターを使用したアサートの編集](~/test/media/cuit_editor_assert.png "CUIT_Editor_assert")  
   
      詳細については、「[コード化された UI テスト エディターを使用したコード化された UI テストの編集](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)」をご覧ください。  
   
@@ -242,7 +242,7 @@ ms.lasthandoff: 05/26/2017
   
  [コントロールを追加し、プロパティを検証する](#VerifyingCodeUsingCUITGenerateAssertions)とき、キーボードが必要になる場合もあります。 たとえば、コンテキスト メニュー コントロールを使用するコード化された UI テストを記録するとき、コード化された UI テスト ビルダーの [アサーションの追加] ツールで選択しようとすると、コントロールのメニュー項目の一覧がフォーカスを失い、非表示になります。 これを次の図に示します。Internet Explorer で、[アサーションの追加] ツールでコンテキスト メニューを選択しようとすると、メニューはフォーカスを失い、非表示になります。  
   
- ![CodedUITest&#95;SelectControlKeyboard](~/docs/test/media/codeduitest_selectcontrolkeyboard.png "CodedUITest_SelectControlKeyboard")  
+ ![CodedUITest&#95;SelectControlKeyboard](~/test/media/codeduitest_selectcontrolkeyboard.png "CodedUITest_SelectControlKeyboard")  
   
  キーボードを使用して UI コントロールを選択するには、マウスをコントロールの上に置きます。 次に、**Ctrl** キーと **I** キーを同時に押します。 キーを離します。 コントロールは、コード化された UT のテスト ビルダーによって記録されます。  
   
@@ -256,7 +256,7 @@ ms.lasthandoff: 05/26/2017
   
  コード化された UI テストを実行するとき、コントロール上にマウスを置きます。 そして、キーボードの Ctrl キーを押しながら、Shift キーと R キーを押したままにします。 キーを離します。 コード化された UT のテスト ビルダーによって、マウス ホバー イベントが記録されます。  
   
- ![CodedUI&#95;Hover](~/docs/test/media/codedui_hover.png "CodedUI_Hover")  
+ ![CodedUI&#95;Hover](~/test/media/codedui_hover.png "CodedUI_Hover")  
   
  テスト メソッドを生成すると、次の例のようなコードが UIMap.Desinger.cs ファイルに追加されます。  
   

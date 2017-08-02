@@ -84,11 +84,11 @@ ms.lasthandoff: 05/13/2017
   
 1.  Windows ストア アプリの新しいコード化された UI テスト プロジェクトを作成します。  
   
-     ![新しいコード化された UI テスト プロジェクト &#40;Windows ストア アプリ&#41;](~/docs/test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
+     ![新しいコード化された UI テスト プロジェクト &#40;Windows ストア アプリ&#41;](~/test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
   
 2.  十字線ツールを使用して UI マップを編集することを選択します。  
   
-     ![[UI マップの編集またはアサーションの追加] を選択する](~/docs/test/media/cuit_windowsstoreapp_createproject_gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")  
+     ![[UI マップの編集またはアサーションの追加] を選択する](~/test/media/cuit_windowsstoreapp_createproject_gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")  
   
 3.  コード化された UI テスト ビルダーで十字線ツールを使用してアプリ タイルを選択し、 **[AutomationId]** を右クリックして、 **[値をクリップボードにコピー]**を選択します。 クリップボード内の値は、テスト用のアプリを起動する操作を記述するために後で使用されます。  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/13/2017
   
 9. アサーションのコードを追加および生成します。  
   
-     ![Textbox アサーションのコードを生成する](~/docs/test/media/cuit_windowsstoreapp_textbox_generate_assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")  
+     ![Textbox アサーションのコードを生成する](~/test/media/cuit_windowsstoreapp_textbox_generate_assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")  
   
 10. **Visual C#**  
   

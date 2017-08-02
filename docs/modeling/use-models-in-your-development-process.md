@@ -142,7 +142,7 @@ Visual Studio では、システム、アプリケーション、またはコン
   
 |**カテゴリ**|**リンク**|  
 |------------------|---------------|  
-|**ビデオ**|![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo") [MSDN How Do I ビデオ: 作成と使用して UML モデルと図 (Visual Studio 2010 Ultimate) する方法](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo") [Channel 9: Visual Studio 2010 での UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo")[シリーズ MSDN How Do I: UML ツールと機能拡張 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|  
+|**ビデオ**|![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") [MSDN How Do I ビデオ: 作成と使用して UML モデルと図 (Visual Studio 2010 Ultimate) する方法](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") [Channel 9: Visual Studio 2010 での UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo")[シリーズ MSDN How Do I: UML ツールと機能拡張 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|  
 |**フォーラム**|-   [Visual Studio の視覚化 >/documents/report1.rdl」のモデリング ツール](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio の視覚化 >/reportbuilder/reportbuilder_3_0_0_0.application Modeling SDK (DSL ツール)](http://go.microsoft.com/fwlink/?LinkId=184721)|  
 |**ブログ**|[Visual Studio ALM と Team Foundation Server ブログ](http://go.microsoft.com/fwlink/?LinkID=201340)|  
 |**技術文書およびジャーナル**|[MSDN アーキテクチャ センター](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio アーキテクチャ ツーリング ガイダンス](../modeling/visual-studio-architecture-tooling-guidance.md)|  

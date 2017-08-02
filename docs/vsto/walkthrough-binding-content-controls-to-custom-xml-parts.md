@@ -89,15 +89,15 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  **\[開発\]** タブが表示されていない場合は、最初にこれを表示する必要があります。  詳細については、「[方法 :タブをリボンに表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
   
-6.  **\[コントロール\]** グループの **\[テキスト\]** ボタン ![PlainTextContentControl](~/docs/vsto/media/plaintextcontrol.gif "PlainTextContentControl") を選択し、最初のセルに <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> を追加します。  
+6.  **\[コントロール\]** グループの **\[テキスト\]** ボタン ![PlainTextContentControl](~/vsto/media/plaintextcontrol.gif "PlainTextContentControl") を選択し、最初のセルに <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> を追加します。  
   
 7.  2 つ目の列の 2 つ目の行 \(**\[Hire Date\]** の隣\) を選択します。  
   
-8.  **\[コントロール\]** グループの **\[日付の選択\]** ボタン ![DatePickerContentControl](~/docs/vsto/media/datepicker.gif "DatePickerContentControl") を選択し、2 つ目のセルに <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> を追加します。  
+8.  **\[コントロール\]** グループの **\[日付の選択\]** ボタン ![DatePickerContentControl](~/vsto/media/datepicker.gif "DatePickerContentControl") を選択し、2 つ目のセルに <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> を追加します。  
   
 9. 2 つ目の列の 3 つ目の行 \(**\[Title\]** の隣\) を選択します。  
   
-10. **\[コントロール\]** グループの **\[ドロップダウン リスト\]** ボタン ![DropDownListContentControl](~/docs/vsto/media/dropdownlist.gif "DropDownListContentControl") を選択し、最後のセルに <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> を追加します。  
+10. **\[コントロール\]** グループの **\[ドロップダウン リスト\]** ボタン ![DropDownListContentControl](~/vsto/media/dropdownlist.gif "DropDownListContentControl") を選択し、最後のセルに <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> を追加します。  
   
  これで、このプロジェクトのユーザー インターフェイスが完成しました。  ここでこのプロジェクトを実行すると、最初の行にテキストを入力し、2 つ目の行で日付を選択できます。  次の手順では、表示するデータを XML ファイル内の文書に添付します。  
   

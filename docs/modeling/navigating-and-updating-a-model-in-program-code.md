@@ -70,11 +70,11 @@ ms.lasthandoff: 02/22/2017
 ##  <a name="a-nameexamplea-an-example-dsl-definition"></a><a name="example"></a>DSL 定義の例  
  これは、このトピックの例として DslDefinition.dsl の主要部分です。  
   
- ![DSL 定義ダイアグラム - ファミリ ツリー モデル](~/docs/modeling/media/familyt_person.png "FamilyT_Person")  
+ ![DSL 定義ダイアグラム - ファミリ ツリー モデル](~/modeling/media/familyt_person.png "FamilyT_Person")  
   
  このモデルでは、この DSL のインスタンスを示します。  
   
- ![Tudor ファミリ ツリー モデル](~/docs/modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
+ ![Tudor ファミリ ツリー モデル](~/modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
   
 ### <a name="references-and-namespaces"></a>参照と名前空間  
  このトピックのコードを実行するを参照する必要があります。  
@@ -365,7 +365,7 @@ using (Transaction t = targetDiagram.Store.
  DSL、人や音楽などの概念を表す、ドメイン モデル要素は別の図に表示されるものを表す図形要素からです。 ドメイン モデルの要素は、重要なプロパティと概念の間のリレーションシップを格納します。 図形要素は、サイズ、位置、ダイアグラムで、オブジェクトのビューの色とその構成部分のレイアウトを格納します。  
   
 ### <a name="presentation-elements"></a>プレゼンテーション要素  
- ![基本図形および要素型のクラス図](~/docs/modeling/media/dslshapesandelements.png "DSLshapesAndElements")  
+ ![基本図形および要素型のクラス図](~/modeling/media/dslshapesandelements.png "DSLshapesAndElements")  
   
  DSL 定義では、指定した各要素は、次の標準的なクラスのいずれかから派生したクラスを作成します。  
   

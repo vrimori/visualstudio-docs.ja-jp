@@ -23,7 +23,7 @@ manager: "douge"
 ## 拡張のアーキテクチャ  
  次の図は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 機能拡張のアーキテクチャを示します。  ソフトウェア アプリケーションの概念がないことに注意してください。  代わりにVSPackage というアプリケーションの機能を提供するソフトウェア コンポーネントをホストします。  この機能はサービスとして IDE で共有されます。  VSPackage ではサービスはVSPackage などのそのほかの使用。  標準 IDE はIDE のウィンドウ操作機能にアクセスするためのそのほかの範囲を<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> などの提供します。  
   
- ![環境アーキテクチャ グラフィック](~/docs/extensibility/internals/media/environment.gif "environment")  
+ ![環境アーキテクチャ グラフィック](~/extensibility/internals/media/environment.gif "environment")  
 Visual Studio の汎用ビュー アーキテクチャ  
   
  VSPackage とサービス間のリレーションシップを双方向であることを確認します。  VSPackage で使用できるサービスを提供しましたが他 <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService> インターフェイスを使用して独自のサービスを提供できます。  このサービス ベースのアーキテクチャはサービスに関連するタスクを実行するインターフェイスのグループである Microsoft ActiveX デザイナーの実装から育ちました。  厳密な COM の視点から特定のサービスのすべてのインターフェイスは単一の COM クラスに実装する必要があります。  

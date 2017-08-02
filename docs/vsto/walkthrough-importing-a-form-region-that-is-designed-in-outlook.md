@@ -47,7 +47,7 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、「[方法: Visual Studio 2008 を使用して Outlook フォーム領域を作成する](http://go.microsoft.com/fwlink/?LinkID=130305)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、「[方法: Visual Studio 2008 を使用して Outlook フォーム領域を作成する](http://go.microsoft.com/fwlink/?LinkID=130305)」を参照してください。  
   
 ## Outlook でのフォーム領域デザイナーを使用したフォーム領域のデザイン  
  この手順では、Outlook でフォーム領域をデザインします。 次に、そのフォーム領域を [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] にインポートできるように見つけやすい場所に保存します。  

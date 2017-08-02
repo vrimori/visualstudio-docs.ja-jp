@@ -101,7 +101,7 @@ Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして�
   
  RAM と Windows の要件を確認するには、コントロール パネルで [システムとセキュリティ] を選択し、[システム] を選択します。  
   
- ![システム要件を確認する](~/docs/cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")  
+ ![システム要件を確認する](~/cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")  
   
 ##  <a name="Network"></a> ネットワーク要件  
  ネットワークは次の条件を満たしている必要があります。  
@@ -147,7 +147,7 @@ Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして�
 > [!IMPORTANT]
 >  グループに参加した場合は、変更を有効にするためにログオフするか、再起動します。  
   
- ![ Hyper&#45;V Administrators セキュリティ グループに参加する](~/docs/cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")  
+ ![ Hyper&#45;V Administrators セキュリティ グループに参加する](~/cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")  
   
  手動で自分をグループに追加するには、[ローカル ユーザーとグループ] スナップインを開きます。 詳細については、「 [ユーザー アカウントをグループに追加する](http://windows.microsoft.com/en-us/windows/add-user-account-to-group#1TC=windows-7)」を参照してください。 (この Windows 7 トピックは、Windows 8 にも適用できます)。  
   

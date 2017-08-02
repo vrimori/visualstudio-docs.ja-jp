@@ -42,7 +42,7 @@ ms.lasthandoff: 04/05/2017
 ## <a name="extensibility-architecture"></a>拡張可能アーキテクチャ  
  次の図は、Visual Studio の拡張可能アーキテクチャを示します。 Vspackage では、サービスとして、IDE 全体で共有されるアプリケーションの機能を提供します。 標準的な IDE では、サービスの広範な範囲など<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>、IDE の windowing 機能へのアクセスを提供します</xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>。  
   
- ![環境アーキテクチャ グラフィック](~/docs/extensibility/internals/media/environment.gif "environment")  
+ ![環境アーキテクチャ グラフィック](~/extensibility/internals/media/environment.gif "environment")  
 Visual Studio アーキテクチャの汎用化されたビュー  
   
 ## <a name="vspackages"></a>VSPackages  
@@ -75,7 +75,7 @@ Visual Studio アーキテクチャの汎用化されたビュー
   
  Visual Studio は、いくつかのツール ウィンドウを含むは、次の図を検討してください。  
   
- ![スクリーン ショット](~/docs/extensibility/internals/media/t1gui.png "T1gui")  
+ ![スクリーン ショット](~/extensibility/internals/media/t1gui.png "T1gui")  
   
  ツール ウィンドウの一部は、1 つのペインがソリューション エクスプ ローラー ツール ウィンドウを表示し、他のツール ウィンドウを非表示にタブをクリックして使用可能になりますにまとめてドッキングされます。 図は、他の 2 つのツール ウィンドウを示しています、**エラー一覧**と**出力**ウィンドウで、1 つのペインにまとめてドッキングします。  
   

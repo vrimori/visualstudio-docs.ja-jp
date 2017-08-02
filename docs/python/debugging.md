@@ -77,7 +77,7 @@ Visual Studio は、実行中のプロセスへのアタッチ、ウォッチ �
 
 ブレークポイントを設定すると、マークしたポイントでコードの実行が停止するので、プログラムの状態を確認することができます。 ブレークポイントを設定するには、コード エディターの左端の余白をクリックするか、コード行を右クリックして **[ブレークポイント] > [ブレークポイントの挿入]** を選択します。 ブレークポイントが設定された行には赤い点が表示されます。
 
-![Visual Studio でのブレークポイント](~/docs/python/media/debugging-breakpoints.png)
+![Visual Studio でのブレークポイント](~/python/media/debugging-breakpoints.png)
 
 赤い点をクリックするか、コード行を右クリックして **[ブレークポイント] > [ブレークポイントの削除]** を選択すると、ブレークポイントが削除されます。 **[ブレークポイント] > [ブレークポイントの無効化]** コマンドを使用して、ブレークポイントを削除せずに無効にすることもできます。
 
@@ -88,7 +88,7 @@ Visual Studio は、実行中のプロセスへのアタッチ、ウォッチ �
 
 条件を設定するときに、**[アクション]** も設定することができます。出力ウィンドウに表示するメッセージを作成し、必要に応じて自動で実行を継続できます。 これにより、ログ コードを直接アプリケーションに導入しなくても、*トレースポイント* が作成されます。
 
-![ブレークポイントでのトレースポイントの作成](~/docs/python/media/debugging-tracepoint.png)
+![ブレークポイントでのトレースポイントの作成](~/python/media/debugging-tracepoint.png)
 
 ### <a name="stepping-through-code"></a>コードのステップ実行
 
@@ -110,27 +110,27 @@ Visual Studio は、実行中のプロセスへのアタッチ、ウォッチ �
 
 データヒントを使用して値を表示するには、エディター内で変数の上にマウスを合わせます。 値をクリックして変更することができます。
 
-![デバッガーのデータヒント](~/docs/python/media/debugging-quick-tips.png)
+![デバッガーのデータヒント](~/python/media/debugging-quick-tips.png)
 
 自動変数ウィンドウ (**[デバッグ] > [ウィンドウ] > [自動変数]**) には、現在のステートメントに近い変数と式が表示されます。 値を編集するには、値列をダブルクリックするか、値列を選択して F2 キーを押します。
 
-![デバッガーの自動変数ウィンドウ](~/docs/python/media/debugging-autos-window.png)
+![デバッガーの自動変数ウィンドウ](~/python/media/debugging-autos-window.png)
 
 ローカル ウィンドウ (**[デバッグ] > [ウィンドウ] > [ローカル]**) には、現在のスコープ内のすべての変数が表示されます。この値も編集できます。
 
-![デバッガーのローカル ウィンドウ](~/docs/python/media/debugging-locals-window.png)
+![デバッガーのローカル ウィンドウ](~/python/media/debugging-locals-window.png)
 
 自動変数ウィンドウとローカル ウィンドウの使用方法について詳しくは、「[Inspecting Variables in the Autos and Locals Windows (自動変数ウィンドウおよびローカル ウィンドウでの変数の検査)](../debugger/autos-and-locals-windows.md)」を参照してください。
 
 ウォッチ ウィンドウ (**[デバッグ] > [ウィンドウ] > [ウォッチ 1 ～ 4]** ) では、任意の Python 式を入力して結果を表示できます。 式は、ステップごとに再評価されます。
 
-![デバッガーのウォッチ ウィンドウ](~/docs/python/media/debugging-watch-window.png)
+![デバッガーのウォッチ ウィンドウ](~/python/media/debugging-watch-window.png)
 
 ウォッチ ウィンドウの使用方法について詳しくは、「[Setting a Watch on Variables using the Watch and QuickWatch Windows (ウォッチ ウィンドウとクイック ウォッチ ウィンドウを使用して変数のウォッチ ポイントを設定する)](../debugger/watch-and-quickwatch-windows.md)」を参照してください。
 
 文字列値 (ここでは、`str`、`unicode`、`bytes` および `bytearray` はすべて文字列と見なします) を検査する際、値の右側に虫眼鏡のアイコンが表示されます。 このアイコンをクリックすると、ポップアップ ダイアログに引用符なしの文字列値が表示されます。テキストは改行およびスクロールされるので、長い文字列の場合に便利です。 さらに、このアイコンのドロップダウン矢印をクリックすると、プレーン テキスト、HTML、XML、または JSON のビジュアライザーを選択できます。
 
-![文字列のビジュアライザー](~/docs/python/media/debugging-string-visualizers.png)
+![文字列のビジュアライザー](~/python/media/debugging-string-visualizers.png)
 
 HTML、XML、JSON のビジュアライザーは別のポップアップ ウィンドウに表示されます。構文が強調表示され、ツリー ビューで表示されます。
 
@@ -138,13 +138,13 @@ HTML、XML、JSON のビジュアライザーは別のポップアップ ウィ�
 
 プログラムのデバッグ中にエラーが発生し、そのエラーの例外ハンドラーがない場合、デバッガーは例外の発生ポイントで中断します。
 
-![例外のポップアップ](~/docs/python/media/debugging-exception-popup.png)
+![例外のポップアップ](~/python/media/debugging-exception-popup.png)
 
 ここで、呼び出し履歴を含めたプログラムの状態を検査することができます。 ただし、コードのステップ実行を試みると、例外は、処理されるかプログラムが終了するまでスローされ続けます。
 
 **[デバッグ] > [ウィンドウ] > [例外設定]** メニュー コマンドを選択すると、ウィンドウが開き、**[Python Exceptions (Python 例外)]** を展開することができます。
 
-![例外ウィンドウ](~/docs/python/media/debugging-exception-settings.png)
+![例外ウィンドウ](~/python/media/debugging-exception-settings.png)
 
 各例外のチェックボックスは、その例外が発生したときに "*常に*" デバッガーを中断するかどうかを制御します。 特定の例外で中断する頻度を増やすには、該当するチェックボックスをオンにします。
 
@@ -156,7 +156,7 @@ HTML、XML、JSON のビジュアライザーは別のポップアップ ウィ�
 
 既定では、デバッガーは標準的な Python ランチャーを使用してプログラムを起動します。コマンドライン引数も、特別なパスや条件も使用しません。 この設定はプロジェクトのデバッグ プロパティで変更することができます。デバッグ プロパティにアクセスするには、ソリューション エクスプローラーでプロジェクトを右クリックし、**[プロパティ]** を選択して、**[デバッグ]** タブを選択します。
 
-![プロジェクトのデバッグ プロパティ](~/docs/python/media/debugging-project-properties.png)
+![プロジェクトのデバッグ プロパティ](~/python/media/debugging-project-properties.png)
 
 ### <a name="launch-mode-options"></a>起動モードのオプション
 
@@ -188,7 +188,7 @@ HTML、XML、JSON のビジュアライザーは別のポップアップ ウィ�
 
 Python Debug Interactive ウィンドウ (**[デバッグ] > [ウィンドウ] > [Python Debug Interactive]**) は、より豊富な機能を備えています。コードの記述と実行を含め、[対話型 REPL](interactive-repl.md) のすべてのデバッグ機能を利用できます。 Debug Interactive ウィンドウは、標準的な Python ランチャーを使用して、デバッガー内で開始しているすべてのプロセスに自動的に接続します (**[デバッグ] > [プロセスにアタッチする]* でアタッチされたプロセスも含みます)。 ただし、C/C++ の混合モード デバッグを使用している場合、Debug Interactive ウィンドウは使用できません。
 
-![Python Debug Interactive ウィンドウ](~/docs/python/media/debugging-interactive.png)
+![Python Debug Interactive ウィンドウ](~/python/media/debugging-interactive.png)
 
 Debug Interactive ウィンドウは、[標準の REPL コマンド](interactive-repl.md#meta-commands)に加えて、特別なメタコマンドをサポートしています。
 
@@ -215,4 +215,4 @@ Debug Interactive ウィンドウは、[標準の REPL コマンド](interactive
 
 Debug Interactive ウィンドウには独自のオプションがあり、**[ツール] > [オプション] > [Python Tools] > [Debug Interactive Window]** からアクセスできます。 Python 環境ごとに個別のインスタンスを持つ通常の Python Interactive ウィンドウとは異なり、Debug Interactive ウィンドウのインスタンスは 1 つだけで、デバッグ中のプロセスには常に Python インタープリターが使用されます。
 
-![Python Interactive ウィンドウのオプション](~/docs/python/media/debugging-interactive-options.png)
+![Python Interactive ウィンドウのオプション](~/python/media/debugging-interactive-options.png)

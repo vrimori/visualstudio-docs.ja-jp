@@ -31,7 +31,7 @@ caps.handback.revision: 11
   
  ユーザーが選択すると、 **複数選択** 項目の構成のドロップダウン リストで、環境には利用可能な構成の一覧を提供するダイアログ ボックスが表示されます。  
   
- ![複数の構成](~/docs/extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs")  
+ ![複数の構成](~/extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs")  
 複数の構成  
   
  このダイアログ ボックス内で、ユーザーは、1 つまたは複数の構成を選択できます。 選択すると、プロパティ ページ\] ダイアログ ボックスに表示されるプロパティの値は、選択した構成の値の積集合を反映します。  
@@ -40,7 +40,7 @@ caps.handback.revision: 11
   
  プロジェクトの依存関係とビルド順序は、ソリューション構成に依存しません。 すべてソリューション内のプロジェクトの 1 つの依存関係ツリーを設定できますだけは、です。 ソリューションまたはプロジェクトを右クリックし、いずれかを選択すると、 **プロジェクトの依存関係** または **プロジェクトのビルド順序** オプションが開き、 **プロジェクトの依存関係** \] ダイアログ ボックス。 開くことができます、 **プロジェクト** メニュー。  
   
- ![プロジェクトの依存関係](~/docs/extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")  
+ ![プロジェクトの依存関係](~/extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")  
 プロジェクトの依存関係  
   
  プロジェクトの依存関係は、プロジェクトのビルド順序を決定します。 ダイアログ ボックスで、\[ビルドの順序\] タブを使用すると、正確な順序で、ソリューション内のプロジェクトがビルド、およびビルドの順序を変更するのに依存関係\] タブを使用してを表示できます。  

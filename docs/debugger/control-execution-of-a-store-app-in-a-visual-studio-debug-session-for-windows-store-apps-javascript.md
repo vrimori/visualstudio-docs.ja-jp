@@ -85,7 +85,7 @@ manager: "ghogen"
   
 1.  **ブレークポイントを設定します。** `app.start()` の呼び出しの直後にあるステートメント `callTrack = "module function";` にブレークポイントを設定します。 ソース コード エディターの網掛けされた余白で行を選びます \(キーボード: 行にカーソルを置き、**F9** キーを押します\)。  
   
-     ![example1 でのブレークポイントの設定](~/docs/debugger/media/dbg_jsnav_example1_breakpoint.png "DBG\_JSNAV\_example1\_breakpoint")  
+     ![example1 でのブレークポイントの設定](~/debugger/media/dbg_jsnav_example1_breakpoint.png "DBG\_JSNAV\_example1\_breakpoint")  
   
      ブレークポイント アイコンが余白に表示されます。  
   
@@ -93,13 +93,13 @@ manager: "ghogen"
   
      アプリの実行が開始され、ブレークポイントを設定したステートメントの直前で実行が中断します。 余白の現在行アイコンによって場所が示され、現在のステートメントが強調表示されます。  
   
-     ![ブレークポイントまで実行](~/docs/debugger/media/dbg_jsnav_example1_run_to_breakpoint.png "DBG\_JSNAV\_example1\_run\_to\_breakpoint")  
+     ![ブレークポイントまで実行](~/debugger/media/dbg_jsnav_example1_run_to_breakpoint.png "DBG\_JSNAV\_example1\_run\_to\_breakpoint")  
   
      アプリの実行を制御できるようになり、プログラムのステートメントをステップ実行しながらプログラムの状態を確認できます。  
   
 3.  **関数にステップ インします。 \[デバッグ\]** メニューの **\[ステップ イン\]** を選びます \(キーボード: **F11**\)。  
   
-     ![コード行へのステップ イン](~/docs/debugger/media/dbg_jsnav_example1_step_into.png "DBG\_JSNAV\_example1\_step\_into")  
+     ![コード行へのステップ イン](~/debugger/media/dbg_jsnav_example1_step_into.png "DBG\_JSNAV\_example1\_step\_into")  
   
      デバッガーが次の行である `example1` 関数の呼び出しに移動します。**\[ステップ イン\]** を再び選択します。 デバッガーが `example1` 関数の最初のコード行に移動します。 強調表示された行はまだ実行されていませんが、関数は呼び出し履歴に読み込まれ、ローカル変数のメモリが割り当てられています。  
   
@@ -113,7 +113,7 @@ manager: "ghogen"
   
 5.  **データのヒントで変数の値を表示します。**終了ポイントに到達するまで、`example1` のステートメントのステップ インを続けます。 デバッガーにより、関数の終了の中かっこが強調表示されます。 変数名の上にマウス ポインターを置くと、変数の名前と値がデータのヒントに表示されます。  
   
-     ![データヒントの変数値の表示](~/docs/debugger/media/dbg_jsnav_data_tip.png "DBG\_JSNAV\_data\_tip")  
+     ![データヒントの変数値の表示](~/debugger/media/dbg_jsnav_data_tip.png "DBG\_JSNAV\_data\_tip")  
   
 6.  **callTrack 変数のウォッチ式を追加します。**このクイック スタートでは、例の中で呼び出された関数の表示に `callTrack` 変数を使用しています。 変数の値を見やすくするため、ウォッチ ウィンドウに追加します。 エディターで変数名を選び、ショートカット メニューの **\[ウォッチ式の追加\]** を選びます。  
   
@@ -132,14 +132,14 @@ manager: "ghogen"
   
  関数のステップ オーバーでもステップ アウトでも、関数は実行されます。  
   
- ![メソッドのステップ イン、ステップ オーバー、およびステップ アウト](~/docs/debugger/media/dbg_basics_stepintooverout.png "DBG\_Basics\_StepIntoOverOut")  
+ ![メソッドのステップ イン、ステップ オーバー、およびステップ アウト](~/debugger/media/dbg_basics_stepintooverout.png "DBG\_Basics\_StepIntoOverOut")  
   
 ###  <a name="BKMK_Example_2"></a> 例 2  
  この例では、関数のステップイン、ステップ オーバー、およびステップ アウトを実行します。  
   
 1.  **モジュール関数内の example2 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function"` の後の行を `example2();` に置き換えます。  
   
-     ![example2 関数の呼び出し](~/docs/debugger/media/dbg_jsnav_example2.png "DBG\_JSNAV\_example2")  
+     ![example2 関数の呼び出し](~/debugger/media/dbg_jsnav_example2.png "DBG\_JSNAV\_example2")  
   
 2.  **ブレークポイントまで実行します。 \[デバッグ\]** メニューの **\[デバッグの開始\]** をクリックして、デバッグ セッションを開始します \(キーボード: F5 キー\)。 デバッガーの実行がブレークポイントで中断します。  
   
@@ -147,7 +147,7 @@ manager: "ghogen"
   
 4.  **example2 と example2\_a にステップ インします。 F11** キーを押して `example2` 関数にステップインします。`var x = example2_a();` 行に到達するまで `example2` のステートメントのステップ インを続けます。 再びこの行にステップ インして、`example2_a` のエントリ ポイントに移動します。`example2` に戻るまで `example2_a` の各ステートメントのステップ インを続けます。  
   
-     ![関数のステップ オーバー](~/docs/debugger/media/dbg_jsnav_example2_a.png "DBG\_JSNAV\_example2\_a")  
+     ![関数のステップ オーバー](~/debugger/media/dbg_jsnav_example2_a.png "DBG\_JSNAV\_example2\_a")  
   
 5.  **関数をステップ オーバーします。** `example2` の次の行 `var y = example2_a();` は基本的に前の行と同じであることに注意してください。 この行は安全にステップ オーバーできます。**F10** キーを押して、`example2` の再開から `example2_a` のこの 2 回目の呼び出しまで移動します。`callTrack` 文字列で `example2_a` 関数が 2 回実行されたことが示されている点にご注意ください。  
   
@@ -167,7 +167,7 @@ manager: "ghogen"
   
 1.  **モジュール関数内の example3 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function";` の後の行を行 `example3();` に置き換えます。  
   
-     ![example3 の呼び出し](~/docs/debugger/media/dbg_jsnav_example3.png "DBG\_JSNAV\_example3")  
+     ![example3 の呼び出し](~/debugger/media/dbg_jsnav_example3.png "DBG\_JSNAV\_example3")  
   
 2.  **ブレークポイントまで実行します。 \[デバッグ\]** メニューの **\[デバッグの開始\]** を選択して、デバッグ セッションを開始します \(キーボード: **F5** キー\)。`module` 関数内のブレークポイントでデバッガーの実行が中断します。  
   
@@ -177,7 +177,7 @@ manager: "ghogen"
   
      **\[条件\]** チェック ボックスをオンにして、テキスト ボックスに「`i == 500;`」と入力します。**\[true の場合\]** オプションを選択し、**\[OK\]** をクリックします。 ブレークポイントでは、`for` ループの 500 回目の繰り返しでの値を確認できます。 条件付きブレークポイント アイコンは白い十字が目印です。  
   
-     ![条件付きブレークポイント アイコン](~/docs/debugger/media/dbg_jsnav_breakpoint_condition_icon.png "DBG\_JSNAV\_Breakpoint\_Condition\_icon")  
+     ![条件付きブレークポイント アイコン](~/debugger/media/dbg_jsnav_breakpoint_condition_icon.png "DBG\_JSNAV\_Breakpoint\_Condition\_icon")  
   
 5.  **ブレークポイントまで実行します。 \[デバッグ\]** メニューの **\[続行\]** を選択します \(キーボード: **F5**\)。`i` で一時停止し、`i` の現在の値が 500 であることを確認します。 変数 `s` が 1 行に表示され、データ ヒント ウィンドウよりかなり長いことにもご注意ください。  
   
@@ -185,7 +185,7 @@ manager: "ghogen"
   
      テキスト ビジュアライザー ウィンドウが表示され、文字列の値が複数行の文字列として示されます。  
   
-     ![テキスト ビジュアライザーのデバッグ](~/docs/debugger/media/dbg_jsnav_text_visualizer.png "DBG\_JSNAV\_Text\_Visualizer")  
+     ![テキスト ビジュアライザーのデバッグ](~/debugger/media/dbg_jsnav_text_visualizer.png "DBG\_JSNAV\_Text\_Visualizer")  
   
 7.  **カーソル位置まで実行します。** `callTrack += "->example3";` 行を選択し、ショートカット メニューの **\[カーソル行の前まで実行\]** を選択します \(キーボード: **Ctrl\+F10**\)。 デバッガーは、ループの繰り返しを完了して、カーソルの行で実行を中断します。  
   
@@ -211,7 +211,7 @@ manager: "ghogen"
   
 1.  **配列オブジェクトをモジュール関数に追加します。** `module` 関数を編集し、`var callTrack = "module function"` の後の行を `var myArray = new Array(1, 2, 3);` に置き換えます。  
   
-     ![myArray 定義](~/docs/debugger/media/dbg_jsnav_myarray.png "DBG\_JSNAV\_myArray")  
+     ![myArray 定義](~/debugger/media/dbg_jsnav_myarray.png "DBG\_JSNAV\_myArray")  
   
 2.  **ブレークポイントまで実行します。 \[デバッグ\]** メニューの **\[デバッグの開始\]** を選択して、デバッグ セッションを開始します \(キーボード: **F5** キー\)。 デバッガーの実行がブレークポイントで中断します。 この行までステップ インします。  
   
@@ -248,7 +248,7 @@ manager: "ghogen"
   
 1.  **モジュール関数内の example4 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function"` の後の行を `example4()` に置き換えます。  
   
-     ![example4 の呼び出し](~/docs/debugger/media/dbg_jsnav_example4.png "DBG\_JSNAV\_example4")  
+     ![example4 の呼び出し](~/debugger/media/dbg_jsnav_example4.png "DBG\_JSNAV\_example4")  
   
 2.  **ブレークポイントまで実行します。 \[デバッグ\]** メニューの **\[デバッグの開始\]** を選択して、デバッグ セッションを開始します \(キーボード: **F5** キー\)。 デバッガーの実行がブレークポイントで中断します。  
   
@@ -258,7 +258,7 @@ manager: "ghogen"
   
 5.  **example4 にステップ インし、ローカル変数とスコープ変数を調べます。** `example4` 関数にステップ インします \(キーボード: **F11**\)。`example4` は `module` 関数で定義されるため、`module` 関数が親スコープになります。`example4` は `module` 関数内の任意の関数を呼び出し、その変数にアクセスできます。 \[ローカル\] ウィンドウで **\[Scope\]** ノードを展開し、`module` 関数と同じ変数が含まれることをご確認ください。  
   
-     ![example4 メソッドのスコープ](~/docs/debugger/media/dbg_jsnav_locals_example4_scope.png "DBG\_JSNAV\_Locals\_example4\_scope")  
+     ![example4 メソッドのスコープ](~/debugger/media/dbg_jsnav_locals_example4_scope.png "DBG\_JSNAV\_Locals\_example4\_scope")  
   
 6.  **example4\_a にステップ インし、ローカル変数とスコープ変数を調べます。**続けて `example4` にステップ インし、`example4_a` の呼び出しにステップ インします。 ローカル変数が `example4_a` のものになり、**\[スコープ\]** ノードには引き続き `module` 関数の変数が保持されていることに注意してください。`example4` の変数はアクティブですが、`example4_a` では到達できず、スコープ チェーンの一部ではなくなっています。  
   
@@ -284,7 +284,7 @@ manager: "ghogen"
   
 1.  **モジュール関数内の example5 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function";` の後の行を行 `example5();` に置き換えます。  
   
-     ![example5 の呼び出し](~/docs/debugger/media/dbg_jsnav_example5.png "DBG\_JSNAV\_example5")  
+     ![example5 の呼び出し](~/debugger/media/dbg_jsnav_example5.png "DBG\_JSNAV\_example5")  
   
 2.  **ブレークポイントまで実行します。 \[デバッグ\]** メニューの **\[デバッグの開始\]** を選択して、デバッグ セッションを開始します \(キーボード: **F5** キー\)。 モジュール関数内のブレークポイントでデバッガーの実行が中断します。  
   
@@ -296,7 +296,7 @@ manager: "ghogen"
   
 4.  **関数にステップインして example5\_d 関数に到達します。 \[デバッグ\]** メニューの **\[ステップ イン\]** を選択し \(キーボード:**F11**\)、example5\_d 関数のエントリ ポイントに達するまで呼び出しパスの呼び出しを実行します。 ある関数で別の関数が呼び出されるたびに、呼び出す関数の行番号が保存され、呼び出される関数がスタックの先頭に表示されることに注意してください。 呼び出す関数の行番号は、呼び出す関数の実行が中断しているポイントです。 黄色の矢印は、現在実行中の関数を示します。  
   
-     ![&#91;呼び出し履歴&#93; ウィンドウ](~/docs/debugger/media/dbg_jsnav_callstack_windows.png "DBG\_JSNAV\_CallStack\_windows")  
+     ![&#91;呼び出し履歴&#93; ウィンドウ](~/debugger/media/dbg_jsnav_callstack_windows.png "DBG\_JSNAV\_CallStack\_windows")  
   
 5.  **\[呼び出し履歴\] ウィンドウを使用して example5\_a のコードに移動し、ブレークポイントを設定します。 \[呼び出し履歴\]** ウィンドウで、`example5_a` リスト項目を選択し、ショートカット メニューの \[ソースに移動\] を選択します。 コード エディターで、関数の return 行にカーソルが設定されます。 この行にブレークポイントを設定します。 現在実行中の行は変更されないことに注意してください。 エディターのカーソルだけが移動します。  
   

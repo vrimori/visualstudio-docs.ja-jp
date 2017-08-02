@@ -38,7 +38,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="project-configuration-object"></a>プロジェクト構成オブジェクト
 プロジェクトの構成オブジェクトは、UI に構成情報の表示を管理します。  
   
- ![Visual Studio プロジェクトの構成](~/docs/extensibility/internals/media/vsprojectcfg.gif "vsProjectCfg")  
+ ![Visual Studio プロジェクトの構成](~/extensibility/internals/media/vsprojectcfg.gif "vsProjectCfg")  
 プロジェクト構成のプロパティ ページ  
   
  プロジェクトの構成プロバイダーは、プロジェクト構成を管理します。 環境であり、プロジェクトの構成に関する情報を取得し、プロジェクトの構成プロバイダー オブジェクトにアタッチされているインターフェイスの呼び出しにアクセスするために他のパッケージ。  

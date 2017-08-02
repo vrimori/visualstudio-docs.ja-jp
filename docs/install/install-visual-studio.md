@@ -75,7 +75,7 @@ Visual Studio 2017 をダウンロードして、ブートストラップ ファ
 
 2.  Microsoft の[ライセンス条項](https://www.visualstudio.com/license-terms/)と[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=824704)の確認を求められます。 **[続行]**をクリックします。  
 
-   ![ライセンス条項とプライバシーに関する声明](~/docs/install/media/vs2017-privacy-and-license-terms.PNG "Microsoft のライセンス条項とプライバシーに関する声明")  
+   ![ライセンス条項とプライバシーに関する声明](~/install/media/vs2017-privacy-and-license-terms.PNG "Microsoft のライセンス条項とプライバシーに関する声明")  
 
 インストールの進行状況を示すいくつかのステータス画面が表示されます。 インストールが終了したら、次は、必要な機能セット (ワークロード) を選択します。
 
@@ -86,7 +86,7 @@ Visual Studio 2017 をダウンロードして、ブートストラップ ファ
 
 1.  **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。  
 
-  ![Visual Studio 2017 セットアップ ダイアログ](~/docs/install/media/vs2017-workloads.PNG "Visual Studio ワークロードのインストール")
+  ![Visual Studio 2017 セットアップ ダイアログ](~/install/media/vs2017-workloads.PNG "Visual Studio ワークロードのインストール")
 
      たとえば、.NET デスクトップ開発ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。  
 
@@ -100,13 +100,13 @@ Visual Studio 2017 をダウンロードして、ブートストラップ ファ
 
 便利なワークロード機能を使わずに Visual Studio のインストールをカスタマイズする場合は、Visual Studio インストーラーで **[個々のコンポーネント]** オプションをクリックし、必要なものを選択して、画面の指示に従います。
 
-  ![Visual Studio 2017 - 個々のコンポーネントのインストール](~/docs/install/media/vs2017-components.PNG "Visual Studio の個々のコンポーネントのインストール")
+  ![Visual Studio 2017 - 個々のコンポーネントのインストール](~/install/media/vs2017-components.PNG "Visual Studio の個々のコンポーネントのインストール")
 
 ## <a name="install-language-packs"></a>言語パックのインストール
 
 選択した言語で Visual Studio 2017 をインストールするには、Visual Studio インストーラーで **[言語パック]** オプションをクリックし、画面の指示に従います。
 
-  ![Visual Studio 2017 - 言語パックのインストール](~/docs/install/media/vs2017-languages.PNG "Visual Studio の言語パックのインストール")
+  ![Visual Studio 2017 - 言語パックのインストール](~/install/media/vs2017-languages.PNG "Visual Studio の言語パックのインストール")
 
 ### <a name="change-the-installer-language"></a>インストーラーの言語の変更
 

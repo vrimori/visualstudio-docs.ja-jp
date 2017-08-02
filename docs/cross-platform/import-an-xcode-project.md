@@ -31,11 +31,11 @@ Microsoft Visual C++ for Cross-Platform Mobile Development には、XCode プロ
   
 1.  **[ファイル]** メニューで、**[新規作成]**、**[インポート]**、**[XCode からインポートする]** の順に選択します。 これにより、**[XCode からインポート]** ウィザードが開始されてダイアログが表示されます。  
   
-     ![インポートする XCode ターゲット プロジェクトを選択](~/docs/cross-platform/media/cppmdd_u2_importxcode_choose.PNG "CPPMDD_U2_ImportXCode_Choose")  
+     ![インポートする XCode ターゲット プロジェクトを選択](~/cross-platform/media/cppmdd_u2_importxcode_choose.PNG "CPPMDD_U2_ImportXCode_Choose")  
   
 2.  **[プロジェクトを選択]** ウィンドウで、[参照] ボタンを選択して XCode の .pbxproj ファイルを選びます。 **[XCode プロジェクト ファイルの選択]** ダイアログでプロジェクト ファイルに移動し、**[開く]** を選択します。  
   
-     ![[XCode プロジェクト ファイルの選択] ダイアログでプロジェクト ファイルを選択](~/docs/cross-platform/media/cppmdd_u2_importxcode_browse.PNG "CPPMDD_U2_ImportXCode_Browse")  
+     ![[XCode プロジェクト ファイルの選択] ダイアログでプロジェクト ファイルを選択](~/cross-platform/media/cppmdd_u2_importxcode_browse.PNG "CPPMDD_U2_ImportXCode_Browse")  
   
      [XCode からインポート] ウィザードで、**[次へ]** を選択します。  
   

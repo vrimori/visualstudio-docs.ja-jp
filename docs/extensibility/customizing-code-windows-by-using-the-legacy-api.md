@@ -25,7 +25,7 @@ caps.handback.revision: 19
   
  コード ウィンドウが、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> テキスト ビューとオブジェクトの表示要素を持つオブジェクト。 言語サービスがアタッチできるエディターの中核となる、インスタンス化中に、コード ウィンドウを作成するとき、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> コード ウィンドウに次の図に示すとは。  
   
- ![CodeWindow グラフィック](~/docs/extensibility/media/vscodewindow.gif "vscodewindow")  
+ ![CodeWindow グラフィック](~/extensibility/media/vscodewindow.gif "vscodewindow")  
 コード ウィンドウ  
   
  言語サービスは、コード ウィンドウ マネージャーを実装し、ドロップダウン バーなどの表示要素の管理を行います。 コード ウィンドウの呼び出し、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A> メソッドのコード ウィンドウの初期化中にします。 この呼び出しが行われたときに言語サービスは、ドロップダウン バーまたはボタン バーを追加できます \(<xref:Microsoft.VisualStudio.TextManager.Interop.IVsButtonBarClient>\) コード ウィンドウにします。  

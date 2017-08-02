@@ -37,7 +37,7 @@ caps.handback.revision: 53
   
 -   [実行時の VSTO アドインでのコントロールの追加](#runtimeaddin)  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: 実行時にドキュメントにコントロールを追加する](http://go.microsoft.com/fwlink/?LinkId=132782)」をご覧ください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: 実行時にドキュメントにコントロールを追加する](http://go.microsoft.com/fwlink/?LinkId=132782)」をご覧ください。  
   
 ##  <a name="designtime"></a> デザイン時のコントロールの追加  
  デザイン時にドキュメント レベルのプロジェクトの文書に Windows フォーム コントロールを追加する方法はいくつかあります。  

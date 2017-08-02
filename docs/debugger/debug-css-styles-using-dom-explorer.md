@@ -29,7 +29,7 @@ caps.handback.revision: 44
 # DOM Explorer を使用した CSS スタイルのデバッグ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows と Windows Phone に適用されます](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows と Windows Phone に適用されます](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Windows ストア アプリ、Windows Phone ストア アプリ、Visual Studio Tools for Apache Cordova を使用して作成されたアプリのデバッグ中に、選んだ DOM 要素と子要素に対する CSS 規則を表示および変更できます。  
   
@@ -47,7 +47,7 @@ caps.handback.revision: 44
 -   **\[変更\]** タブ \(Windows ストア アプリおよび Windows Phone ストア アプリのみ\) では、デバッグ セッション中に変更した CSS スタイルを識別して追跡できます。  
   
 > [!TIP]
->  **\[スタイル\]** タブと **\[計算済み\]** タブで行った変更は永続的ではありません。 それらは、デバッグを停止したときに失われます。 デバッガーを停止して再起動することなくソース コードの変更とページの再読み込みを行うには、**\[デバッグ\]** ツール バーの ![&#91;Windows アプリケーションの更新&#93; ボタン](~/docs/debugger/media/js_refresh.png "JS\_Refresh") ボタン \(**\[Windows アプリケーションの更新\]**\) を使用してアプリを更新します \(Windows ストア アプリおよび Windows Phone ストア アプリのみ\)。 詳細については、「[アプリの更新 \(JavaScript\)](../debugger/refresh-an-app-javascript.md)」を参照してください。  
+>  **\[スタイル\]** タブと **\[計算済み\]** タブで行った変更は永続的ではありません。 それらは、デバッグを停止したときに失われます。 デバッガーを停止して再起動することなくソース コードの変更とページの再読み込みを行うには、**\[デバッグ\]** ツール バーの ![&#91;Windows アプリケーションの更新&#93; ボタン](~/debugger/media/js_refresh.png "JS\_Refresh") ボタン \(**\[Windows アプリケーションの更新\]**\) を使用してアプリを更新します \(Windows ストア アプリおよび Windows Phone ストア アプリのみ\)。 詳細については、「[アプリの更新 \(JavaScript\)](../debugger/refresh-an-app-javascript.md)」を参照してください。  
   
 ## CSS 規則の修正例  
  この例では、CSS 規則を検査し、スタイルの問題をデバッグする方法を示します。 この例では、[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 分割アプリケーション テンプレートのグループ タイトルの表示に使用されるフォントの色を変更するとします。  
@@ -122,13 +122,13 @@ caps.handback.revision: 44
   
 9. `color` スタイルの最初のチェック ボックスをオフにします。これは `.itemspage .itemslist .item .item-overlay .item-title` セレクター用です。 シミュレーターで、アイテムのタイトルの色がすべて意図したとおりにオレンジ色に変わることが確認できます。CSS で変更したセレクター、`.itemspage .itemslist .item` はもうオーバーライドされていません \(つまり、もうテキストに取り消し線が付いていません\)。 チェック ボックスをオフにした後の **\[計算済み\]** タブを次に示します。  
   
-     ![CSS スタイル更新後の &#91;計算済み&#93; タブ](~/docs/debugger/media/js_css_styles_fixed.png "JS\_CSS\_Styles\_Fixed")  
+     ![CSS スタイル更新後の &#91;計算済み&#93; タブ](~/debugger/media/js_css_styles_fixed.png "JS\_CSS\_Styles\_Fixed")  
   
 10. **\[変更\]** タブをクリックします。  
   
      デバッグ セッション中に変更したスタイルを識別して追跡するには、**\[変更\]** タブを使用します。 次の図は、**\[変更\]** タブのオーバーライドされた `.itemspage .itemslist .item .item-overlay .item-title` セレクターを示しています。  
   
-     ![DOM Explorer の &#91;変更&#93; タブ](~/docs/debugger/media/js_css_styles_changes.png "JS\_CSS\_Styles\_Changes")  
+     ![DOM Explorer の &#91;変更&#93; タブ](~/debugger/media/js_css_styles_changes.png "JS\_CSS\_Styles\_Changes")  
   
 11. **\[スタイル\]** タブで、CSS スタイルの値を手動で変更することもできます。結果はすぐに確認できます。  
   
@@ -140,7 +140,7 @@ caps.handback.revision: 44
   
 15. キーボードを使用してこの値を変更します。`rgb(255, 255, 0, 0.87)` に変更し、Enter キーを押します。 シミュレーターに表示されている項目のタイトルの色がすべて黄色に変更されます。  
   
-16. ソースの CSS ファイルに変更を加えるには、**\[スタイル\]** タブの **\[items.css\]** リンクをクリックします。 これにより items.css が開き、アプリケーション コードの `color` スタイルの値を変更できます。 デバッガーを停止して再起動することなくアプリを更新するには、**\[デバッグ\]** ツール バーの ![&#91;Windows アプリケーションの更新&#93; ボタン](~/docs/debugger/media/js_refresh.png "JS\_Refresh") \(**\[Windows アプリケーションの更新\]**\) ボタンをクリックします。  
+16. ソースの CSS ファイルに変更を加えるには、**\[スタイル\]** タブの **\[items.css\]** リンクをクリックします。 これにより items.css が開き、アプリケーション コードの `color` スタイルの値を変更できます。 デバッガーを停止して再起動することなくアプリを更新するには、**\[デバッグ\]** ツール バーの ![&#91;Windows アプリケーションの更新&#93; ボタン](~/debugger/media/js_refresh.png "JS\_Refresh") \(**\[Windows アプリケーションの更新\]**\) ボタンをクリックします。  
   
 ## 参照  
  [クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)   

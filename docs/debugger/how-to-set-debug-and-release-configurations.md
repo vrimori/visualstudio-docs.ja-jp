@@ -60,7 +60,7 @@ Visual Studio プロジェクトでは、ご使用のプログラムに対応す
   
 2.  ツールバーの場合は、**\[ソリューション構成\]** リスト ボックスから **\[デバッグ\]** または **\[リリース\]** をクリックします。  
   
-     ![ツール バーのビルド構成](~/docs/debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
+     ![ツール バーのビルド構成](~/debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
   
      このツールバーは、Express Edition では使用できません。  構成を選択するために **\[ソリューションのビルド\] \(F6\)** と **\[デバッグの開始\] \(F5\)** のメニュー項目を使用できます。  
   

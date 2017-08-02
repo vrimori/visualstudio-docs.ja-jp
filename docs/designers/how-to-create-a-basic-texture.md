@@ -35,7 +35,7 @@ caps.handback.revision: 15
   
  次の手順は、"bullseye" ターゲットを表すテクスチャを作成する方法を示します。終了したら、テクスチャは次の絵のようになります。 テクスチャの透明度がわかりやすくなるために、イメージ エディターは、緑色の格子模様のパターンを使用して透明度を表示するように構成されています。  
   
- ![透明度が緑で表示された "Bullseye" ターゲット](~/docs/designers/media/digit-bullseye-texture-in-editor.png "Digit-Bullseye-Texture-In-Editor")  
+ ![透明度が緑で表示された "Bullseye" ターゲット](~/designers/media/digit-bullseye-texture-in-editor.png "Digit-Bullseye-Texture-In-Editor")  
   
  開始する前に、**[プロパティ]** ウィンドウが表示されていることを確認します。 作業中に、**[プロパティ]** ウィンドウを使用して、イメージのサイズを設定し、ツールのプロパティを変更し、色を指定します。  
   
@@ -83,7 +83,7 @@ caps.handback.revision: 15
   
  "bullseye" ターゲットのテクスチャが完成しました。 表示される最終的なイメージと透明度を次に示します。  
   
- !["bullseye" ターゲットのテクスチャ全体](~/docs/designers/media/gfx_image_demo_bullseye.png "gfx_image_demo_bullseye")  
+ !["bullseye" ターゲットのテクスチャ全体](~/designers/media/gfx_image_demo_bullseye.png "gfx_image_demo_bullseye")  
   
  次の手順では、このテクスチャの MIP レベルを生成できます。 詳細については、「[方法: MIP レベルを作成および変更する](../designers/how-to-create-and-modify-mip-levels.md)」を参照してください。  
   

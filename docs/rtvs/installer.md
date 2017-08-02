@@ -40,7 +40,7 @@ ms.lasthandoff: 05/12/2017
 
 R Tools for Visual Studio (RTVS) をインストールいただきありがとうございます。 ご利用になり、下の「[リソース](#resources)」のリンクを使用して、ご意見をお寄せ下さい。
 
-![RTVS のスクリーンショット](~/docs/rtvs/media/installer-screenshot.png)
+![RTVS のスクリーンショット](~/rtvs/media/installer-screenshot.png)
 
 ## <a name="resources"></a>リソース
 

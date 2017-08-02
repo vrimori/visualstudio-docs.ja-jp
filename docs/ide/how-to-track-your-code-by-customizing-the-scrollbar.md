@@ -32,11 +32,11 @@ caps.handback.revision: 5
   
      次の図は、文字列を検索した後のスクロール バーです。  文字列のすべてのインスタンスが表示されています。  
   
-     ![文字列の検索後のスクロール バー。](~/docs/ide/media/enhancedscrollbarsearch.png "EnhancedScrollbarSearch")  
+     ![文字列の検索後のスクロール バー。](~/ide/media/enhancedscrollbarsearch.png "EnhancedScrollbarSearch")  
   
      次の図は、文字列のすべてのインスタンスを置き換えた後のスクロール バーです。  この操作で問題が発生したことがわかります。  
   
-     ![文字列の置換でエラーが発生した後のスクロール バー](~/docs/ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")  
+     ![文字列の置換でエラーが発生した後のスクロール バー](~/ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")  
   
 ### スクロール バーの表示モードを設定するには  
   
@@ -46,10 +46,10 @@ caps.handback.revision: 5
   
      マップ モードが有効で、幅が \[中\] に設定されているときの検索例を示します。  
   
-     ![マップ モードのスクロール バー](~/docs/ide/media/enhancedscrollbar.png "EnhancedScrollbar")  
+     ![マップ モードのスクロール バー](~/ide/media/enhancedscrollbar.png "EnhancedScrollbar")  
   
 2.  マップ モードで、スクロール バーの上下にポインターを移動したときのコードのプレビューを有効にするには、**\[プレビュー ツール ヒントの表示\]** オプションを選択します。  次のように表示されます。  
   
-     ![ツールヒント付きのスクロール バー](~/docs/ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")  
+     ![ツールヒント付きのスクロール バー](~/ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")  
   
      マップ モードのスクロール動作とプレビュー ツール ヒントはそのままで、ソース コードの概要を表示しない場合は、**\[ソースの概要\]** を **\[オフ\]** に設定できます。

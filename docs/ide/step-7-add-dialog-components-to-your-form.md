@@ -22,7 +22,7 @@ caps.handback.revision: 15
   
  コンポーネントは、いくつかの点でコントロールに似ています。  コンポーネントはツールボックスを使用してフォームに追加し、そのプロパティの設定には **\[プロパティ\]** ウィンドウを使用します。  ただし、コントロールとは異なり、コンポーネントをフォームに追加しても、ユーザーに表示される項目がフォームに追加されるわけではありません。  代わりに、コードで発生させることができる特定の動作が提供されます。  ここで追加するのは、**\[ファイルを開く\]** ダイアログ ボックスを開くコンポーネントです。  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo") このトピックのビデオ版については、「[Tutorial 1: Create a Picture Viewer in Visual Basic \- Video 3 \(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 \- ビデオ 3\)](http://go.microsoft.com/fwlink/?LinkId=205213)」または「[Tutorial 1: Create a Picture Viewer in C\# \- Video 3 \(チュートリアル 1: C\# によるピクチャ ビューアーの作成 \- ビデオ 3\)](http://go.microsoft.com/fwlink/?LinkId=205202)」を参照してください。  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。  ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") このトピックのビデオ版については、「[Tutorial 1: Create a Picture Viewer in Visual Basic \- Video 3 \(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 \- ビデオ 3\)](http://go.microsoft.com/fwlink/?LinkId=205213)」または「[Tutorial 1: Create a Picture Viewer in C\# \- Video 3 \(チュートリアル 1: C\# によるピクチャ ビューアーの作成 \- ビデオ 3\)](http://go.microsoft.com/fwlink/?LinkId=205202)」を参照してください。  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。  ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
 ### フォームにダイアログ コンポーネントを追加するには  
   

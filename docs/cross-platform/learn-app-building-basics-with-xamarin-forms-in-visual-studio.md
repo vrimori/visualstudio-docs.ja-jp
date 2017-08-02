@@ -91,7 +91,7 @@ ms.lasthandoff: 05/13/2017
   
     -   **[更新]**をクリックします。  
   
-         ![Xamarin.Forms NuGet パッケージの更新](~/docs/cross-platform/media/crossplat-xamarin-formsguide-4.png "CrossPlat Xamarin FormsGuide 4")  
+         ![Xamarin.Forms NuGet パッケージの更新](~/cross-platform/media/crossplat-xamarin-formsguide-4.png "CrossPlat Xamarin FormsGuide 4")  
   
 4.  気象データ サービスから取得した情報を処理するのに使用する **Newtonsoft.Json** と NuGet パッケージを PCL プロジェクトに追加します。  
   

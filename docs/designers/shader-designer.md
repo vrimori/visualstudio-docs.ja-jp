@@ -79,7 +79,7 @@ ms.lasthandoff: 05/13/2017
   
  **[シェーダー デザイナー モード]** ツール バーを以下に示します。  
   
- ![シェーダー デザイナーのモーダル ツールバー。](~/docs/designers/media/digit-dsd-modal-toolbar.png "Digit-DSD-Modal-Toolbar")  
+ ![シェーダー デザイナーのモーダル ツールバー。](~/designers/media/digit-dsd-modal-toolbar.png "Digit-DSD-Modal-Toolbar")  
   
  次の表では、**[シェーダー デザイナー モード]** ツール バーの各項目について、左から右へ表示される順序で説明します。  
   

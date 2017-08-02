@@ -301,7 +301,7 @@ UI に色のセットを制限するこれを適用するときに*"normal"の�
   
 青のテーマで、エディターの画面の例:  
   
-![青のテーマでのエディター](~/docs/extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />青のテーマでのエディター
+![青のテーマでのエディター](~/extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />青のテーマでのエディター
   
 ![ハイコントラスト #1 テーマでのエディター](../../extensibility/ux-guidelines/media/030303-d_editorhc1.png "030303-d_EditorHC1")<br />ハイコントラスト #1 テーマでのエディター
   
@@ -725,11 +725,11 @@ Visual Studio ホスト トリガー プラグイン テーマが変更された
   
 **テーマの色。**  
   
-![配色テーマの変更](~/docs/extensibility/ux-guidelines/media/0305-a_colortheme.png "0305-a_ColorTheme")<br />配色テーマの変更  
+![配色テーマの変更](~/extensibility/ux-guidelines/media/0305-a_colortheme.png "0305-a_ColorTheme")<br />配色テーマの変更  
   
 **環境テーマ。**  
   
-![環境テーマの変更](~/docs/extensibility/ux-guidelines/media/0305-b_environmenttheme.png "0305-b_EnvironmentTheme")<br />環境テーマの変更  
+![環境テーマの変更](~/extensibility/ux-guidelines/media/0305-b_environmenttheme.png "0305-b_EnvironmentTheme")<br />環境テーマの変更  
   
 **オペレーティング システムのテーマ**(ハイ コントラストとの間の変更) の場合のみ。  
   

@@ -144,7 +144,7 @@ typedef struct _CrtMemBlockHeader
  新規オブジェクト \(0xCD\)  
  新規オブジェクトには、メモリの割り当て時に 0xCD が格納されます。  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_Types_of_blocks_on_the_debug_heap"></a> デバッグ ヒープ上のメモリ ブロックの型  
  デバッグ ヒープ上のすべてのメモリ ブロックには、5 つの割り当て型のうちのいずれかの型が割り当てられます。  型によって、メモリ リークの検出やメモリ状態をレポートするときの追跡方法やレポート方法が異なります。  メモリ ブロックの型を指定するには、[\_malloc\_dbg](/visual-cpp/c-runtime-library/reference/malloc-dbg) などのデバッグ ヒープ割り当て関数を直接呼び出してメモリ ブロックを割り当てます。  デバッグ ヒープ上のメモリ ブロックの 5 つの型を次に示します。これらの型は、**\_CrtMemBlockHeader** 構造体の **nBlockUse** メンバーに設定されます。  
@@ -178,7 +178,7 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
 #define _BLOCK_SUBTYPE(block)       (block >> 16 & 0xFFFF)  
 ```  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_Check_for_heap_integrity_and_memory_leaks"></a> ヒープの整合性とメモリ リークを調べる  
  デバッグ ヒープ用の機能の多くは、コードの中からアクセスする必要があります。  次のセクションでは、これらの機能のいくつかについて、使用方法を説明します。  
@@ -199,7 +199,7 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
 |**\_CRTDBG\_CHECK\_CRT\_DF**|Off|**\_CRT\_BLOCK** 型のブロックをメモリ リークの検出とメモリ状態の比較の対象に含めます。  このビットがオフの場合、ランタイム ライブラリによって内部的に使用されるメモリは、これらの処理対象には含まれません。|  
 |**\_CRTDBG\_LEAK\_CHECK\_DF**|Off|プログラムの終了時に、**\_CrtDumpMemoryLeaks** を呼び出してメモリ リークをチェックします。  アプリケーションが割り当てたメモリを解放できていない場合は、エラー レポートが生成されます。|  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_Configure_the_debug_heap"></a> デバッグ ヒープを構成する  
  `malloc`、`free`、`calloc`、`realloc`、`new`、`delete` などのヒープ関数の呼び出しは、すべてデバッグ ヒープで動作するデバッグ バージョンのヒープ関数に置き換えられます。  メモリ ブロックが解放されると、デバッグ ヒープは割り当て領域の前後に確保されたバッファーが完全かどうかを自動的にチェックし、それらのバッファーが上書きされていた場合はエラーを出力します。  
@@ -234,7 +234,7 @@ tmpFlag &= ~_CRTDBG_CHECK_CRT_DF;
 _CrtSetDbgFlag( tmpFlag );  
 ```  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_new__delete__and__CLIENT_BLOCKs_in_the_C___debug_heap"></a> C\+\+ デバッグ ヒープ内の new、delete、\_CLIENT\_BLOCK  
  C ランタイム ライブラリのデバッグ バージョンには、C\+\+ の `new` 演算子と `delete` 演算子のデバッグ バージョンが含まれています。  `_CLIENT_BLOCK` 型を割り当てる場合は、次の例に示すように、`new` 演算子のデバッグ バージョンを直接呼び出すか、デバッグ モードで `new` 演算子を置き換えるマクロを作成する必要があります。  
@@ -272,7 +272,7 @@ int main( )   {
   
  デバッグ バージョンの `delete` 演算子は、すべてのブロック型に対して使用できるため、リリース バージョンのコンパイル時にプログラムを変更する必要はありません。  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_Heap_State_Reporting_Functions"></a> ヒープの状態をレポートする関数  
  **\_CrtMemState**  
@@ -309,7 +309,7 @@ typedef struct _CrtMemState
 |[\_CrtMemDumpAllObjectsSince](/visual-cpp/c-runtime-library/reference/crtmemdumpallobjectssince)|指定されたスナップショットの取得以降、またはプログラムの実行開始以降に割り当てられたすべてのオブジェクトに関する情報をダンプします。  アプリケーション側で提供するフック関数が **\_CrtSetDumpClient** を使用して組み込まれている場合は、**\_CLIENT\_BLOCK** ブロックをダンプするたびに、そのフック関数を呼び出します。|  
 |[\_CrtDumpMemoryLeaks](/visual-cpp/c-runtime-library/reference/crtdumpmemoryleaks)|プログラムの実行開始以降にメモリ リークが発生したかどうかを調べます。メモリ リークが発生している場合は、割り当てられている全オブジェクトをダンプします。  アプリケーション側で提供するフック関数が **\_CrtSetDumpClient** を使用して組み込まれている場合は、**\_CrtDumpMemoryLeaks** が **\_CLIENT\_BLOCK** ブロックをダンプするたびに、そのフック関数を呼び出します。|  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_Track_Heap_Allocation_Requests"></a> ヒープ割り当て要求を追跡する  
  アサート マクロやレポート マクロの場合は、それらが実行されたソース ファイル名や行番号を特定することが、問題の原因となっている場所を突き止めるためにたいへん役に立ちますが、これはヒープ割り当て関数には当てはまりません。  マクロはアプリケーションの論理ツリー内で適切な位置に挿入されますが、ヒープの割り当ては、さまざまな時点でさまざまな場所から呼び出される特殊なルーチンの中に埋もれていることが多いためです。  通常は、不正なヒープ割り当てがコードのどの行で発生しているかではなく、その行で行われる膨大なヒープ割り当てのうち、どの割り当てが、どのような理由で不正になるかということが問題となります。  
@@ -364,7 +364,7 @@ int addNewRecord(struct RecStruct *prevRecord,
   
  これで、`addNewRecord` が呼び出された場所のソース ファイル名と行番号が、デバッグ ヒープ上に割り当てられた各ブロックに格納されるため、このブロックを調べれば、これらの情報を出力できます。  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ## 参照  
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

@@ -50,7 +50,7 @@ ms.lasthandoff: 05/13/2017
   
      次の図に、`Print()` という名前のメソッドの **[定義をここに表示]** ウィンドウを示します。  
   
-     ![[定義をここに表示] ウィンドウ](~/docs/ide/media/peekwindow.png "PeekWindow")  
+     ![[定義をここに表示] ウィンドウ](~/ide/media/peekwindow.png "PeekWindow")  
   
      定義ウィンドウは、元のファイルの `printer.Print("Hello World!")` 行の下に表示されます。 このウィンドウにより、元のファイル内のどのコードも隠れて見えなくなることはありません。 `printer.Print("Hello World!")` 呼び出しに続く行は定義ウィンドウの下に表示されます。  
   
@@ -64,13 +64,13 @@ ms.lasthandoff: 05/13/2017
   
 -   既に **[定義をここに表示]** ウィンドウを開いている場合、そのウィンドウ内のコードで **[定義をここに表示]** を再度呼び出すことができます。 もう 1 つの定義ウィンドウが開きます。 定義ウィンドウ タブの横に一連の階層リンクの点が表示されます。これらの点を使用して定義ウィンドウ間を移動できます。 各点のツールヒントには、それぞれの点が表す定義ファイルの名前とパスが表示されます。  
   
-     ![[定義をここに表示] ウィンドウ内の [定義をここに表示] ウィンドウ](~/docs/ide/media/peekwithinpeek.png "PeekWithinPeek")  
+     ![[定義をここに表示] ウィンドウ内の [定義をここに表示] ウィンドウ](~/ide/media/peekwithinpeek.png "PeekWithinPeek")  
   
 #### <a name="to-use-peek-definition-with-multiple-results"></a>複数の結果で [定義をここに表示] を使用するには  
   
 -   複数の定義 (部分クラスなど) があるコードで **[定義をここに表示]** を使うと、結果の一覧がコード定義ビューの右側に表示されます。 一覧内の結果を選択してその定義を表示できます。  
   
-     ![複数の結果がある [定義をここに表示] ウィンドウ](~/docs/ide/media/peekmultiple.png "PeekMultiple")  
+     ![複数の結果がある [定義をここに表示] ウィンドウ](~/ide/media/peekmultiple.png "PeekMultiple")  
   
 #### <a name="to-edit-inside-the-peek-definition-window"></a>[定義をここに表示] ウィンドウ内で編集するには  
   

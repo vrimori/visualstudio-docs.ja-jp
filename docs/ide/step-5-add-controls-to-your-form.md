@@ -38,7 +38,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="step-5-add-controls-to-your-form"></a>手順 5: フォームへのコントロールの追加
 この手順では、`PictureBox` コントロールや `CheckBox` コントロールなどのコントロールをフォームに追加します。 また、ボタンも追加します。  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 2](http://go.microsoft.com/fwlink/?LinkId=205211)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 2](http://go.microsoft.com/fwlink/?LinkId=205200)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 2](http://go.microsoft.com/fwlink/?LinkId=205211)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 2](http://go.microsoft.com/fwlink/?LinkId=205200)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
 ### <a name="to-add-controls-to-your-form"></a>フォームにコントロールを追加するには  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/22/2017
   
 4.  新しい PictureBox コントロールを選択し、新しい PictureBox コントロール上の黒い三角形を選択して、次の図に示すように、タスク一覧を表示します。  
   
-     ![PictureBox タスク](~/docs/ide/media/express_pictureboxtasks.png "Express_PictureBoxTasks")  
+     ![PictureBox タスク](~/ide/media/express_pictureboxtasks.png "Express_PictureBoxTasks")  
 PictureBox タスク  
   
     > [!NOTE]
@@ -65,7 +65,7 @@ PictureBox タスク
   
 7.  フォームで TableLayoutPanel を選択し、フォームに **CheckBox** コントロールを追加します。 ツールボックスの **CheckBox** 項目をダブルクリックすると、新しい CheckBox コントロールがテーブル内の次の空いているセルに追加されます。 PictureBox が TableLayoutPanel の最初の 2 つのセルを使用しているため、CheckBox コントロールは左下のセルに追加されます。 **Text** プロパティを選択し、次の図に示すように、「**Stretch**」と入力します。  
   
-     ![Stretch プロパティのある TextBox コントロール](~/docs/ide/media/express_pictureviewercheckbox.png "Express_PictureViewerCheckbox")  
+     ![Stretch プロパティのある TextBox コントロール](~/ide/media/express_pictureviewercheckbox.png "Express_PictureViewerCheckbox")  
 Stretch プロパティのある TextBox コントロール  
   
 8.  フォームの TableLayoutPanel を選択し、ツールボックスの **[コンテナー]** グループ (TableLayoutPanel コントロールを取得したグループ) に移動し、**FlowLayoutPanel** 項目をダブルクリックして、新しいコントロールを PictureBox の最後のセル (右下) に追加します。 その後、TableLayoutPanel の FlowLayoutPanel をドッキングします (FlowLayoutPanel の黒い三角形のタスク一覧の **[親コンテナーにドッキングする]** をクリックするか、または FlowLayoutPanel の **Dock** プロパティを **Fill** に設定します)。  
@@ -91,7 +91,7 @@ Stretch プロパティのある TextBox コントロール
   
 5.  **[閉じる]** ボタンをクリックして選択します。 Ctrl キーを押しながら他の 3 つのボタンをクリックして、すべてのボタンを選択します。 すべてのボタンが選択された状態で、**[プロパティ]** ウィンドウに移動し、**AutoSize** プロパティが表示されるまで上にスクロールします。 このプロパティを使用すると、テキスト全体が収まるようにボタンのサイズが自動的に変更されます。 このプロパティを **true** に設定します。 これで、ボタンのサイズと順序が適切に設定されました  (4 つすべてのボタンを選択していれば、4 つすべての **AutoSize** プロパティを同時に変更することができます)。4 つのボタンは次の図のようになります。  
   
-     ![4 つのボタンがある Picture Viewer](~/docs/ide/media/express_autosize.png "Express_AutoSize")  
+     ![4 つのボタンがある Picture Viewer](~/ide/media/express_autosize.png "Express_AutoSize")  
 4 つのボタンがある Picture Viewer  
   
 6.  ここで、プログラムをもう一度実行して、フォームの新しいレイアウトを確認します。 ボタンおよびチェック ボックスをクリックしてもまだ何も実行されません。この後の手順で機能を設定していきます。  

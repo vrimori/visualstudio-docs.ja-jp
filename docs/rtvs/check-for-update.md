@@ -44,7 +44,7 @@ Tools for Visual Studio (RTVS) の最新のバージョンは、**1.0.30321.1407
 
 Visual Studio の **[ヘルプ] > [バージョン情報]** で **[R Tools for Visual Studio]** エントリまで下にスクロールして、バージョンを確認できます。
 
-![Visual Studio で RTVS のバージョンを調べる (VS2017)](~/docs/rtvs/media/current-version.png)
+![Visual Studio で RTVS のバージョンを調べる (VS2017)](~/rtvs/media/current-version.png)
 
 Visual Studio と Windows の要件については、「[Installation](installation.md)」(インストール) をご覧ください。
 

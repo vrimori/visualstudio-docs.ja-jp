@@ -147,7 +147,7 @@ Visual Studio には、 [!INCLUDE[win8_appname_long](../debugger/includes/win8_a
     >   
     >  また、 **[選択されたテストをデバッグ]**、 **[テストを開く]**をクリックし、 **[プロパティ]** オプションを使用できます。  
     >   
-    >  ![単体テスト エクスプローラー &#45; 単体テストのコンテキスト メニュー](~/docs/test/media/unit_test_win8_unittestexplorer_contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")  
+    >  ![単体テスト エクスプローラー &#45; 単体テストのコンテキスト メニュー](~/test/media/unit_test_win8_unittestexplorer_contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")  
   
      単体テストが実行されます。 完了すると、テスト エクスプローラーは、テストの状態、経過時間、およびソースへのリンクを表示します。  
   

@@ -34,7 +34,7 @@ Visual Studio で問題が発生した場合、Microsoft に報告していた�
   1. 次のスクリーンショットに示されているように、ツールの左側にある **[サインイン]** をクリックします。
   2. 画面に表示される手順に従ってサインインします。
 
-  ![サインインして問題を報告](~/docs/ide/media/vs2017-report-a-problem-sign-in.png "Sign in to report a problem")
+  ![サインインして問題を報告](~/ide/media/vs2017-report-a-problem-sign-in.png "Sign in to report a problem")
 
 
 ## <a name="search-and-vote-for-similar-problems"></a>類似問題を検索して投票する  
@@ -43,7 +43,7 @@ Visual Studio で問題が発生した場合、Microsoft に報告していた�
 1.  問題を検索し、他のユーザーが既に報告しているかどうかを確認します。
 2.  報告済みの場合は、"上向きの矢印に投票" してお知らせください。  
 
-  ![VS15-FeedbackTool-SearchForSimilarReportedProblems](~/docs/ide/media/vs2017-report-a-problem-search-and-vote.png "類似問題を検索して投票する")
+  ![VS15-FeedbackTool-SearchForSimilarReportedProblems](~/ide/media/vs2017-report-a-problem-search-and-vote.png "類似問題を検索して投票する")
 
 
 ## <a name="report-a-new-problem"></a>新しい問題を報告する

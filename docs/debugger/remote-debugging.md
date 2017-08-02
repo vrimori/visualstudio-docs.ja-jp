@@ -92,7 +92,7 @@ manager: "ghogen"
   
 6.  構成が完了すると、リモート デバッガーのウィンドウが表示されます。  
   
-     ![リモート デバッガーのウィンドウ](~/docs/debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")  
+     ![リモート デバッガーのウィンドウ](~/debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")  
   
  リモート デバッガーを停止するには、このウィンドウで **\[ファイル\] \/ \[終了\]** をクリックします。 リモート デバッガーを再起動するには、**\[スタート\]** メニュー、またはコマンド ラインから次のコマンドを実行します。  
   
@@ -170,7 +170,7 @@ manager: "ghogen"
   
 7.  **\[デバッグ\]** 構成の **\[配置\]** チェック ボックスをオンにします。  
   
-     ![RemoteDebugCplusDeploy](~/docs/debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
+     ![RemoteDebugCplusDeploy](~/debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
   
 8.  デバッグを開始します \(**\[デバッグ\] \/ \[デバッグの開始\]**、または **F5** キー\)。  
   

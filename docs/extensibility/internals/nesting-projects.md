@@ -31,7 +31,7 @@ VS パッケージを使用するエンタープライズ アプリケーショ�
  C\# Example.Nested プロジェクト サンプルに入れ子になったプロジェクトの例が表示されます。  
   
 ## 入れ子になったプロジェクトの使用例  
- ![入れ子のプロジェクト ソリューション](~/docs/extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects")  
+ ![入れ子のプロジェクト ソリューション](~/extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects")  
 入れ子になったプロジェクトの使用例  
   
 ## 参照  

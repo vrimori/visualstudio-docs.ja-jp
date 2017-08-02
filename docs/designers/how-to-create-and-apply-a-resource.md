@@ -50,7 +50,7 @@ XAML デザイナーで、要素のスタイルとテンプレートは "リソ�
   
      選択したオブジェクトに適したダイログ ボックスが表示されます。 ブラシからリソースを作成するときには、次のダイアログ ボックスが表示されます。  
   
-     ![[リソースの作成] ダイアログ ボックス](~/docs/designers/media/xaml_create_resource.png "xaml_create_resource")  
+     ![[リソースの作成] ダイアログ ボックス](~/designers/media/xaml_create_resource.png "xaml_create_resource")  
   
 3.  **[名前 (キー)]** ボックスに、キー名を入力します。 これは、他の要素からリソースを参照するときに使用できる名前です。  
   

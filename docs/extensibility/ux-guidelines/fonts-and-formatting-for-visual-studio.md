@@ -300,11 +300,11 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ### <a name="testing-the-environment-font"></a>環境フォントのテスト  
  UI が環境フォントを使用して、サイズの設定を尊重を開きます**ツール > オプション > 環境 > フォントおよび色**「環境フォント」を選択し、"設定の表示:"ドロップ ダウン メニュー。  
   
- ![フォントおよび色の設定、ツールで&gt;オプション ダイアログ ボックス](~/docs/extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />フォントおよび色の設定、ツールで&gt;オプション ダイアログ ボックス
+ ![フォントおよび色の設定、ツールで&gt;オプション ダイアログ ボックス](~/extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />フォントおよび色の設定、ツールで&gt;オプション ダイアログ ボックス
   
  フォント サイズを既定値とは非常に異なるものに設定します。 明白な UI が更新されないが、("Times New Roman") などのセリフ フォントを選択し、非常に大きいサイズを設定します。 次に、環境を考慮することを確認するように UI をテストします。 ライセンス ダイアログを使用する例を次に示します。  
   
- ![環境フォントを考慮せず UI テキストの例](~/docs/extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />環境フォントを考慮せず UI テキストの例
+ ![環境フォントを考慮せず UI テキストの例](~/extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />環境フォントを考慮せず UI テキストの例
   
  この場合、「製品情報」、「ユーザー情報」が、このフォントを考慮しはありません。 場合によっては、明示的な設計の選択肢可能性がありますが、赤線仕様の一部として、明示的なフォントが指定されていない場合、バグであることができます。  
   
@@ -443,7 +443,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 |||  
 |-|-|  
-|**使用法:**<br /><br /> のドキュメント内セクションの見出しと共に UI<br />-レポート<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:** 14 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![155% 環境フォントの見出しの例](~/docs/extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|  
+|**使用法:**<br /><br /> のドキュメント内セクションの見出しと共に UI<br />-レポート<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:** 14 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![155% 環境フォントの見出しの例](~/extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|  
   
 #### <a name="133-environment-font"></a>133% 環境フォント  
   

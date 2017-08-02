@@ -27,7 +27,7 @@ caps.handback.revision: 53
 # 方法 : ドキュメント プロパティの読み込みと書き込みを行う
   ドキュメント プロパティをドキュメントと共に保存できます。 Office アプリケーションには、作成者、タイトル、件名など、多数の組み込みプロパティが用意されています。 このトピックでは、Microsoft Office Excel および Microsoft Office Word でドキュメント プロパティを設定する方法について説明します。  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: Microsoft Word のカスタム ドキュメント プロパティにアクセスして操作する](http://go.microsoft.com/fwlink/?LinkId=136772)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: Microsoft Word のカスタム ドキュメント プロパティにアクセスして操作する](http://go.microsoft.com/fwlink/?LinkId=136772)」を参照してください。  
   
  [!INCLUDE[appliesto_docprops](../vsto/includes/appliesto-docprops-md.md)]  
   

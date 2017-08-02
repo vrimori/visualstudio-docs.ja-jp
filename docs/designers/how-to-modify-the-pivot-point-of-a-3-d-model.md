@@ -46,7 +46,7 @@ caps.handback.revision: 14
   
  変更したピボット ポイントを持つモデルがあります:  
   
- ![変更されたピボット ポイントを持つ家のモデル](~/docs/designers/media/digit-modified-model.png "Digit\-Modified\-Model")  
+ ![変更されたピボット ポイントを持つ家のモデル](~/designers/media/digit-modified-model.png "Digit\-Modified\-Model")  
   
 ## 参照  
  [方法: 基本 3\-D モデルを作成する](../Topic/How%20to:%20Create%20a%20Basic%203-D%20Model.md)   

@@ -93,7 +93,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      Visual Studio Emulator for Android で、既定のアプリは次のようになります。  
   
-     ![アプリを実行するエミュレーター](~/docs/cross-platform/media/cppmdd_emulator_running_app.PNG "CppMDD_Emulator_Running_App")  
+     ![アプリを実行するエミュレーター](~/cross-platform/media/cppmdd_emulator_running_app.PNG "CppMDD_Emulator_Running_App")  
   
      Visual Studio によってエミュレーターが起動されます。コードを読み込んで配置するのに数秒かかります。 アプリが開始されると、ブレークポイントの設定や、デバッガーを使用したステップ実行、ローカルの確認、値のウォッチができるようになります。  
   

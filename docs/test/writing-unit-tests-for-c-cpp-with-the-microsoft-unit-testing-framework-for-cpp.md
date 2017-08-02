@@ -133,7 +133,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
   
 2.  新しいプロジェクトで、 **unittest1.cpp**を検査します。  
   
-     ![TEST&#95;CLASS と TEST&#95;METHOD が表示されたテスト プロジェクト](~/docs/test/media/utecpp2.png "UteCpp2")  
+     ![TEST&#95;CLASS と TEST&#95;METHOD が表示されたテスト プロジェクト](~/test/media/utecpp2.png "UteCpp2")  
   
      以下の点に注意してください。  
   
@@ -166,7 +166,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
   
          **[合格したテスト]**の下にテストが表示されます。  
   
-         ![1 つのテストが成功したことを示す単体テスト エクスプローラー](~/docs/test/media/utecpp04.png "UteCpp04")  
+         ![1 つのテストが成功したことを示す単体テスト エクスプローラー](~/test/media/utecpp04.png "UteCpp04")  
   
 ###  <a name="createDllProject"></a> アンマネージ DLL プロジェクトを作成する  
   
@@ -180,11 +180,11 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
   
      **[シンボルのエクスポート]** オプションは、エクスポートされたメソッドの宣言に使用できる便利なマクロを生成します。  
   
-     ![[DLL] と [シンボルのエクスポート] が設定された C&#43;&#43; プロジェクト ウィザード](~/docs/test/media/utecpp06.png "UteCpp06")  
+     ![[DLL] と [シンボルのエクスポート] が設定された C&#43;&#43; プロジェクト ウィザード](~/test/media/utecpp06.png "UteCpp06")  
   
 3.  プリンシパル .h ファイルでエクスポートされた関数を宣言します。  
   
-     ![API マクロを使用した新しい DLL コード プロジェクトと .h ファイル](~/docs/test/media/utecpp07.png "UteCpp07")  
+     ![API マクロを使用した新しい DLL コード プロジェクトと .h ファイル](~/test/media/utecpp07.png "UteCpp07")  
   
      宣言子 `__declspec(dllexport)` は、クラスのパブリック メンバーと保護されるメンバーが DLL の外部で表示できるようにします。 詳細については、「 [Using dllimport and dllexport in C++ Classes](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes)」を参照してください。  
   
@@ -244,7 +244,7 @@ Visual Studio では、C++ で記述されたアンマネージ コードの単�
   
 5.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
   
-     ![単体テスト エクスプローラー &#45 基本テスト成功](~/docs/test/media/utecpp10.png "UteCpp10")  
+     ![単体テスト エクスプローラー &#45 基本テスト成功](~/test/media/utecpp10.png "UteCpp10")  
   
  テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。  
   

@@ -115,7 +115,7 @@ caps.handback.revision: 5
   
 5.  "プロパティ 'Mame' が 'http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml' namespace にありません。" をダブルクリックします。"Mame" の "M" は "N" でなければなりません。"M" を "N" で置き換えます。これで、XAML が解析でき、アプリがデザイン サーフェスに表示されます。  
   
-     ![Blend for Visual Studio 内での XAML のデバッグ](~/docs/debugger/media/blend_debugartboard_xaml.png "blend\_debugArtboard\_XAML")  
+     ![Blend for Visual Studio 内での XAML のデバッグ](~/debugger/media/blend_debugartboard_xaml.png "blend\_debugArtboard\_XAML")  
   
      Ctrl \+ Shift \+ B キーを押してプロジェクトをビルドし、残っているエラーがないことを確認します。  
   

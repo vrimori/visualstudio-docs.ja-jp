@@ -56,11 +56,11 @@ manager: "ghogen"
 ##  <a name="BKMK_Overview"></a> ソース コードで関数のブレークポイントを設定する  
  ソース コードに関数のブレークポイントを設定するには、ソース コード ファイルの左側の余白をクリックするか、コード行をポイントし、F9 キーを押します。 ブレークポイントの印として左側の余白に赤い点が表示され、コードの行にも色が設定されます。  
   
- ![ブレークポイントの設定](~/docs/debugger/media/basicbreakpoint.png "BasicBreakpoint")  
+ ![ブレークポイントの設定](~/debugger/media/basicbreakpoint.png "BasicBreakpoint")  
   
  デバッガーでこのコードを実行してブレークポイントに達すると、ブレークポイントの行のコードが実行される前に、実行は停止されます。 ソース コードの行は黄色で表示されます。  
   
- ![実行が停止されているブレークポイント](~/docs/debugger/media/breakpointexecution.png "BreakpointExecution")  
+ ![実行が停止されているブレークポイント](~/debugger/media/breakpointexecution.png "BreakpointExecution")  
   
  この時点で、`testInt` の値は 1 のままです。  
   
@@ -134,7 +134,7 @@ manager: "ghogen"
 ##  <a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a> ブレークポイントを管理する  
  **\[ブレークポイント\]** ウィンドウ \(**\[デバッグ\] \/ \[ウィンドウ\] \/ \[ブレークポイント\]** または **CTRL \+ ALT \+ B** キー\) では、ソリューションに設定したすべてのブレークポイントを確認できます。  
   
- ![&#91;ブレークポイント&#93; ウィンドウ](~/docs/debugger/media/breakpointswindow.png "BreakpointsWindow")  
+ ![&#91;ブレークポイント&#93; ウィンドウ](~/debugger/media/breakpointswindow.png "BreakpointsWindow")  
   
  **\[ブレークポイント\]** ウィンドウでは、すべてのブレークポイントを一元的に管理できるます。ブレークポイントが重要な大規模なソリューションや複雑なデバッグ シナリオで、このウィンドウは特に役立ちます。 一連のブレークポイントの状態と位置を保存または共有する必要がある場合、**\[ブレークポイント\]** ウィンドウからのみ、ブレークポイントをエクスポートおよびインポートできます。  
   

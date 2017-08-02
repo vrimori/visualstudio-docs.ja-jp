@@ -28,7 +28,7 @@ caps.handback.revision: 17
   
  **Find\/Command** ボックスでは、最近入力した 20 個のアイテムが記憶され、ドロップダウン リストに表示されます。  方向キーを選択すると、一覧を参照できます。  
   
- ![&#91;検索&#93; ボックス](~/docs/ide/media/findcommandbox.png "FindCommandBox")  
+ ![&#91;検索&#93; ボックス](~/ide/media/findcommandbox.png "FindCommandBox")  
 \[検索\] ボックス  
   
 ## テキストの検索  

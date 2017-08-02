@@ -37,7 +37,7 @@ caps.handback.revision: 30
   
  次の図はVisual Studio デバッガーで次の要素との関係を示します。  
   
- ![コンポーネント デバッグの概要](~/docs/extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")  
+ ![コンポーネント デバッグの概要](~/extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")  
   
 ## このセクションの内容  
  [パッケージをデバッグします。](../../extensibility/debugger/debug-package.md)  

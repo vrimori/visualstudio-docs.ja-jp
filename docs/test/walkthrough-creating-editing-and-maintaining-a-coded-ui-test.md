@@ -71,7 +71,7 @@ ms.lasthandoff: 05/13/2017
   
 12. Checkbox コントロールを選択します。 [プロパティ] ウィンドウで、**[名前]** プロパティの値を \<No Name> から checkBox1 に変更し、**[IsEnabled]** プロパティをクリアします。  
   
-     ![簡単な WPF アプリケーション](~/docs/test/media/codedui_wpfapp.png "CodedUI_WPFApp")  
+     ![簡単な WPF アプリケーション](~/test/media/codedui_wpfapp.png "CodedUI_WPFApp")  
   
 13. ボタン コントロールをダブルクリックしてクリック イベント ハンドラーを追加します。  
   
@@ -163,11 +163,11 @@ ms.lasthandoff: 05/13/2017
   
 8.  [UIMap - コード化された UI テスト ビルダー] で **[記録の開始]** を選択します。  
   
-     ![記録の開始](~/docs/test/media/cuit_builder_record.png "CUIT_Builder_Record")  
+     ![記録の開始](~/test/media/cuit_builder_record.png "CUIT_Builder_Record")  
   
      受信メールを処理する場合など、必要に応じて記録を一時停止できます。  
   
-     ![レコーディングの一時停止](~/docs/test/media/cuit_.png "CUIT_")  
+     ![レコーディングの一時停止](~/test/media/cuit_.png "CUIT_")  
   
     > [!WARNING]
     >  デスクトップ上で実行されるすべてのアクションが記録されます。 機密データが記録される可能性のあるアクションを実行する場合には、記録を一時停止します。  
@@ -385,11 +385,11 @@ ms.lasthandoff: 05/13/2017
 ## <a name="external-resources"></a>外部リソース  
   
 ### <a name="videos"></a>ビデオ  
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](http://go.microsoft.com/fwlink/?LinkID=230574)  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](http://go.microsoft.com/fwlink/?LinkID=230574)  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](http://go.microsoft.com/fwlink/?LinkID=230575)  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](http://go.microsoft.com/fwlink/?LinkID=230575)  
   
 ### <a name="hands-on-lab"></a>ハンズ オン ラボ  
  [MSDN 仮想ラボ: Visual Studio 2010 でのコード化された UI テストの作成の概要](http://go.microsoft.com/fwlink/?LinkID=22508)  

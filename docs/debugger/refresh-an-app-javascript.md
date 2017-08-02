@@ -28,7 +28,7 @@ caps.handback.revision: 20
 # アプリの更新 (JavaScript)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows と Windows Phone に適用されます](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows と Windows Phone に適用されます](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  デバッグ中にコードを変更し、**\[デバッグ\]** ツール バーの **\[Windows アプリケーションの更新\]** を選択することで、JavaScript を使用するストア アプリを更新できます。  このボタンを選択すると、デバッガーを停止したり再起動したりせずにアプリが再度読み込まれます。  更新機能によって、HTML、CSS、および JavaScript コードを変更し、その結果をすばやく確認できます。  この機能は、Windows ストア アプリと Windows Phone ストア アプリの両方でサポートされています。  
   
@@ -77,7 +77,7 @@ caps.handback.revision: 20
     Hello!  
     ```  
   
-7.  **\[Windows アプリケーションの更新\]** ボタン \(![&#91;Windows アプリケーションの更新&#93; ボタン](~/docs/debugger/media/js_refresh.png "JS\_Refresh")\) をクリックします   \(または F4 キーを押します\)。  
+7.  **\[Windows アプリケーションの更新\]** ボタン \(![&#91;Windows アプリケーションの更新&#93; ボタン](~/debugger/media/js_refresh.png "JS\_Refresh")\) をクリックします   \(または F4 キーを押します\)。  
   
 8.  アプリに切り替えます。  デバッガーを再起動せずにアプリが再度読み込まれ、新しいページ タイトルが表示されます。  
   

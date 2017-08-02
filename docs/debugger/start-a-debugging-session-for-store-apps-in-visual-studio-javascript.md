@@ -26,7 +26,7 @@ caps.handback.revision: 24
 # Visual Studio でのストア アプリのデバッグ セッションの開始 (JavaScript)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows と Windows Phone に適用されます](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows と Windows Phone に適用されます](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  このトピックでは、JavaScript と HTML5 で記述された Windows ストア アプリのデバッグ セッションを開始する方法について説明します。1 回のキー入力でデバッグを開始できます。または、特定のシナリオのデバッグ セッションを構成してから、アプリの起動方法を選択できます。  
   
@@ -67,7 +67,7 @@ caps.handback.revision: 24
 -   [デバッガーをアタッチします。](#BKMK_Attach_the_debugger)  
   
 ##  <a name="BKMK_The_easy_way_to_start_debugging"></a> デバッグを開始する簡単な方法  
- ![Windows のみに適用されます](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows のみに適用されます](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
 1.  Visual Studio でアプリ ソリューションを開きます。  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 24
   
 3.  F5 キーを押します。  
   
- ![Windows Phone のみに適用されます](~/docs/debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Windows Phone のみに適用されます](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Visual Studio によってアプリがビルドされ、アタッチされたデバッガーが起動します。実行は、ブレークポイントに達するか、実行が手動で中断されるか、ハンドルされない例外が発生するか、アプリが終了するまで続行されます。詳細については、「[クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)」を参照してください。  
   
@@ -97,7 +97,7 @@ caps.handback.revision: 24
 ###  <a name="BKMK_Choose_the_deployment_target"></a> 配置ターゲットを選択する  
  Visual Studio コンピューター、ローカル コンピューター上の Visual Studio シミュレーター、またはリモート コンピューター上にアプリを配置してデバッグできます。プロジェクトの **\[デバッグ\]** プロパティ ページにある **\[起動するデバッガー\]** ボックスの一覧からターゲットを選択します。  
   
- ![Windows のみに適用されます](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows のみに適用されます](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Windows ストア アプリの場合、**\[ターゲット デバイス\]** ボックスの一覧から次のオプションのいずれかを選択します。  
   
@@ -113,12 +113,12 @@ caps.handback.revision: 24
   
 -   **\[コンピューター名\]** ボックスの下向き矢印をクリックし、**\[検索...\]** を選択します。**\[リモート デバッガー接続の選択\]** ダイアログ ボックスでリモート コンピューターを選択します。  
   
-     ![Select Remote Debugger Connection &#40;リモート デバッガーの接続の選択&#41;](~/docs/debugger/media/vsrun_pro_selectremotedebuggerdlg.png "VSRUN\_PRO\_SelectRemoteDebuggerDlg")  
+     ![Select Remote Debugger Connection &#40;リモート デバッガーの接続の選択&#41;](~/debugger/media/vsrun_pro_selectremotedebuggerdlg.png "VSRUN\_PRO\_SelectRemoteDebuggerDlg")  
   
     > [!NOTE]
     >  \[リモート デバッガー接続の選択\] ダイアログ ボックスには、ローカル サブネット上にあるコンピューターとイーサネット ケーブルによって Visual Studio コンピューターに直接接続されているコンピューターが表示されます。別のコンピューターを指定するには、**\[コンピューター名\]** ボックスに名前を入力します。  
   
- ![Windows Phone のみに適用されます](~/docs/debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Windows Phone のみに適用されます](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Windows ストア Phone アプリの場合、**\[ターゲット デバイス\]** ボックスの一覧から **\[デバイス\]** またはいずれかのエミュレーターを選択します。  
   
@@ -145,7 +145,7 @@ caps.handback.revision: 24
 -   アプリをすぐに起動するには、**\[はい\]** を選択します。  
   
 ###  <a name="BKMK__Optional__Disable_network_loopbacks"></a> \(省略可能\) ネットワーク ループバックを無効にする  
- ![Windows のみに適用されます](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows のみに適用されます](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  セキュリティ上の理由から、標準的な方法でインストールされた Windows ストア アプリは、インストール先のデバイスに対してネットワーク呼び出しを行うことはできません。既定では、Visual Studio による配置では、配置されたアプリに対するこの規則の適用は免除されます。この免除によって、1 台のコンピューター上で通信プロシージャをテストできます。Windows ストアにアプリを送信する前に、この免除なしでアプリをテストする必要があります。  
   

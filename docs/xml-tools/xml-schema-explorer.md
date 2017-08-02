@@ -59,7 +59,7 @@ XML スキーマ エクスプローラーは Microsoft Visual Studio および X
   
  ツリー構造の例を次に示します。  
   
- ![XML スキーマ エクスプローラー](~/docs/xml-tools/media/xmlschemaexplorer.gif "XMLSchemaExplorer")  
+ ![XML スキーマ エクスプローラー](~/xml-tools/media/xmlschemaexplorer.gif "XMLSchemaExplorer")  
   
 ## 選択とアクティブ化  
  ノードを強調表示して選択するには、スキーマ エクスプローラーでそのノードをクリックします。  

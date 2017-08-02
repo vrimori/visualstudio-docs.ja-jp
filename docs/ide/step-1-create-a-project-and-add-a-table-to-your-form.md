@@ -102,7 +102,7 @@ ms.lasthandoff: 05/13/2017
   
      これで、フォームがレイアウトされました。 結果は次の図のようになります。  
   
-     ![絵合わせゲームの初期フォーム](~/docs/ide/media/express_tut4step1.png "Express_Tut4Step1")  
+     ![絵合わせゲームの初期フォーム](~/ide/media/express_tut4step1.png "Express_Tut4Step1")  
 絵合わせゲームの初期フォーム  
   
 ### <a name="to-continue-or-review"></a>続行または確認するには  

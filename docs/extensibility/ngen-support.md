@@ -45,7 +45,7 @@ Visual Studio 2017 と新しい VSIX v3 (バージョン 3) 拡張機能マニ�
 
 アセンブリが"ngen"で、VSIX を「インスタンスごとのコンピューターごとの」インストールする必要があります。 これは、extension.vsixmanifest の各デザイナーで"all users"チェック ボックスをオンに有効にすることができます。
 
-![すべてのユーザーを確認します。](~/docs/extensibility/media/check-all-users.png)
+![すべてのユーザーを確認します。](~/extensibility/media/check-all-users.png)
 
 ## <a name="how-to-enable-ngen"></a>Ngen を有効にする方法
 
@@ -60,7 +60,7 @@ Visual Studio 2017 と新しい VSIX v3 (バージョン 3) 拡張機能マニ�
 
 この記事では、**プロパティ**ウィンドウの動作。
 
-![プロパティで ngen](~/docs/extensibility/media/ngen-in-properties.png)
+![プロパティで ngen](~/extensibility/media/ngen-in-properties.png)
 
 これにより、プロジェクト参照を VSIX プロジェクトの .csproj ファイル内にメタデータが追加されます。
 

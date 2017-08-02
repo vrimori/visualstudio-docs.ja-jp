@@ -21,7 +21,7 @@ caps.handback.revision: 13
 
 次のモデルはソース管理の実装例を表します。  モデルで実行する必要があると照会する必要のある環境のサービスに会議のインターフェイス。  すべてのサービスと同様に実際にはサービスを通じて取得されたインターフェイスのメソッドを呼び出します。  クラス名はソース管理をどのように実行されるかを容易に識別されます。  
   
- ![SCC&#95;TUP の例](~/docs/extensibility/internals/media/scc_tup.gif "SCC\_TUP")  
+ ![SCC&#95;TUP の例](~/extensibility/internals/media/scc_tup.gif "SCC\_TUP")  
 ソース管理プロジェクトの例  
   
 ## インターフェイス  

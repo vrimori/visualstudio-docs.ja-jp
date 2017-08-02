@@ -21,7 +21,7 @@ caps.handback.revision: 16
 
 単純埋め込むとエディターでドキュメントのビュー オブジェクトは浮き出た \(つまり子に実装されます\) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] または <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> のインターフェイスはウィンドウでコマンドを処理すると有効になります。  簡体字エディターを埋め込むとアクティブなコントロールをホストできません。  単純埋め込みのエディターを作成するために使用されるオブジェクトを次の図に示します。  
   
- ![簡略化された埋め込みエディター グラフィック](~/docs/extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
+ ![簡略化された埋め込みエディター グラフィック](~/extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
 単純埋め込みのエディター  
   
 > [!NOTE]

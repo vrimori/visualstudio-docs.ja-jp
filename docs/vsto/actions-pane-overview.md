@@ -34,7 +34,7 @@ caps.handback.revision: 100
 > [!NOTE]  
 >  カスタム作業ウィンドウは、操作ウィンドウとは異なります。  カスタム作業ウィンドウは、特定のドキュメントではなく、アプリケーションに関連付けられます。  カスタム作業ウィンドウは、一部の Microsoft Office アプリケーション向けの VSTO アドインで作成できます。  詳細については、「[カスタム作業ウィンドウ](../vsto/custom-task-panes.md)」を参照してください。  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: Excel 操作ウィンドウ内での WPF コントロールの使用](http://go.microsoft.com/fwlink/?LinkId=132763)」をご覧ください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: Excel 操作ウィンドウ内での WPF コントロールの使用](http://go.microsoft.com/fwlink/?LinkId=132763)」をご覧ください。  
   
 ## 操作ウィンドウの表示  
  操作ウィンドウは、<xref:Microsoft.Office.Tools.ActionsPane> クラスによって表されます。  ドキュメント レベルのプロジェクトを作成するとき、`ThisWorkbook` クラス \(Excel の場合\) または `ThisDocument` クラス \(Word の場合\) の `ActionsPane` フィールドをプロジェクトで使用することで、このクラスのインスタンスをコードで使用できます。  操作ウィンドウを表示するには、`ActionsPane` フィールドの <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> プロパティに Windows フォーム コントロールを追加します。  `actions` という名前のコントロールを操作ウィンドウに追加するコード例を次に示します。  

@@ -23,7 +23,7 @@ caps.handback.revision: 43
 # リモート コンピューターでの Windows ストア アプリの実行
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows のみに適用されます](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+![Windows のみに適用されます](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Visual Studio リモート ツール アプリケーションを使用すると、Visual Studio を実行中のコンピューターから、他のデバイスで実行中の Windows ストア アプリを実行、デバッグ、プロファイリング、およびテストできます。 リモート デバイスでの実行は、Visual Studio コンピューターが Windows ストア アプリ固有の機能 \(タッチ、位置情報、物理的な方向など\) をサポートしていない場合に特に有効です。 このトピックでは、リモート セッションを構成および開始する手順について説明します。  
   
@@ -147,7 +147,7 @@ caps.handback.revision: 43
 ##  <a name="BKMK_ConnectVS"></a> リモート デバッグ用の Visual Studio プロジェクトの構成  
  プロジェクトのプロパティに、接続するリモート デバイスを指定します。 手順はプログラミング言語によって異なります。 リモート デバイスのネットワーク名を入力するか、\[リモート デバッガー接続の選択\] ダイアログ ボックスで選択できます。  
   
- ![&#91;Select Remote Debugger Connection&#93; &#40;リモート デバッガーの接続の選択&#41; ダイアログ ボックス](~/docs/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
+ ![&#91;Select Remote Debugger Connection&#93; &#40;リモート デバッガーの接続の選択&#41; ダイアログ ボックス](~/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
   
  ダイアログ ボックスには、Visual Studio コンピューターのローカル サブネット上にあるデバイスで、リモート デバッガーを実行中のデバイスだけが表示されます。  
   
@@ -166,7 +166,7 @@ caps.handback.revision: 43
 4.  リモート デバイスのネットワーク名を **\[リモート コンピューター\]** ボックスに入力するか、**\[検索\]** を選び、**\[リモート デバッガー接続の選択\]** ダイアログ ボックスでデバイスを選択します。  
   
 ###  <a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a> JavaScript プロジェクトと C\+\+ プロジェクト用のリモート デバイスの選択  
- ![リモート デバッグ用の C&#43;&#43; プロジェクト プロパティ](~/docs/debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
+ ![リモート デバッグ用の C&#43;&#43; プロジェクト プロパティ](~/debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
   
 1.  ソリューション エクスプローラーでプロジェクト名を選択し、ショートカット メニューの **\[プロパティ\]** をクリックします。  
   

@@ -37,7 +37,7 @@ ms.lasthandoff: 05/13/2017
 # <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>手順 4: TableLayoutPanel コントロールを使用したフォームのレイアウトの設定
 この手順では、フォームに `TableLayoutPanel` コントロールを追加します。 TableLayoutPanel は、後で追加するフォームのコントロールを適切にアラインするために役立ちます。  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 2](http://go.microsoft.com/fwlink/?LinkId=205211)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 2](http://go.microsoft.com/fwlink/?LinkId=205200)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 2](http://go.microsoft.com/fwlink/?LinkId=205211)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 2](http://go.microsoft.com/fwlink/?LinkId=205200)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
 ### <a name="to-lay-out-your-form-with-a-tablelayoutpanel-control"></a>TableLayoutPanel コントロールを使用してフォームのレイアウトを設定するには  
   
@@ -58,7 +58,7 @@ TableLayoutPanel コントロール
   
      ツールボックスは、タブをクリックするとフォームの前面に展開され、ツールボックスの外部の任意の場所をクリックすると閉じます。 これは、IDE の自動非表示機能です。 ウィンドウの右上隅にあるプッシュピン アイコンをクリックすると、すべてのウィンドウについてこの機能のオンとオフを切り替えることができます。このアイコンをクリックするたびに、自動非表示になるか位置が固定されるかが切り替わります。 プッシュピン アイコンは次のように表示されます。  
   
-     ![プッシュピン アイコン](~/docs/ide/media/express_pushpintoolbox.png "Express_PushpinToolbox")  
+     ![プッシュピン アイコン](~/ide/media/express_pushpintoolbox.png "Express_PushpinToolbox")  
 プッシュピン アイコン  
   
 4.  **TableLayoutPanel** をクリックして選択します。 どのコントロールが選択されているかを確認するには、次の図のような、**[プロパティ]** ウィンドウの上部にあるドロップダウン リストを確認します。  
@@ -82,14 +82,14 @@ TableLayoutPanel コントロールを示す [プロパティ] ウィンドウ
   
 8.  現在、TableLayoutPanel には 2 つの行と 2 つの列がありますが、いずれもサイズは同じになっています。 上の行と右の列のサイズがそれぞれ他方よりもかなり大きくなるように変更する必要があります。 Windows フォーム デザイナーで、TableLayoutPanel を選択します。 右上隅に、次のような小さな黒い三角形のボタンが表示されます。  
   
-     ![三角形のボタン](~/docs/ide/media/express_iconblacktriangle.gif "Express_IconBlackTriangle")  
+     ![三角形のボタン](~/ide/media/express_iconblacktriangle.gif "Express_IconBlackTriangle")  
 三角形のボタン  
   
      このボタンは、コントロールのプロパティを自動的に設定するのに役立つタスクがあることを示しています。  
   
 9. 三角形をクリックします。次の図に示すように、コントロールのタスク一覧が表示されます。  
   
-     ![TableLayoutPanel タスク](~/docs/ide/media/express_tablepanel.png "Express_TablePanel")  
+     ![TableLayoutPanel タスク](~/ide/media/express_tablepanel.png "Express_TablePanel")  
 TableLayoutPanel タスク  
   
 10. **[行および列の編集]** タスクをクリックして、**[列と行のスタイル]** ウィンドウを表示します。 **[Column1]** をクリックし、サイズを 15% に設定します。設定するには、**[パーセント]** ボタンが選択されていることを確認し、**[パーセント]** ボックスに「`15`」と入力します。 (これは、この後の別のチュートリアルで使用する `NumericUpDown` コントロールです)。**[Column2]** をクリックし、85% に設定します。 クリックするとウィンドウが閉じるため、まだ **[OK]** はクリックしないでください (クリックした場合は、タスク一覧を使用して再度開くことができます)。  

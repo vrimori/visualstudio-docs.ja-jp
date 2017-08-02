@@ -59,7 +59,7 @@ ms.lasthandoff: 02/22/2017
   
 1.  使用したソリューションを作成、**ドメイン固有言語**テンプレートで、[**その他のプロジェクトの種類/機能拡張**で、**新しいプロジェクト**] ダイアログ ボックス。  
   
-     ![DSL ダイアログの作成](~/docs/modeling/media/create_dsldialog.png "Create_DSLDialog")  
+     ![DSL ダイアログの作成](~/modeling/media/create_dsldialog.png "Create_DSLDialog")  
   
      クリックすると、 **OK**、**ドメイン固有言語ウィザード**開きテンプレート DSL ソリューションの一覧が表示されます。  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 02/22/2017
   
  作成して、ソリューションを実行する場合、**最小言語**、テストを行い、テンプレート[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]は次の例のようになります。  
   
- ![](~/docs/modeling/media/dsl_min.png "DSL_min")  
+ ![](~/modeling/media/dsl_min.png "DSL_min")  
   
  ツールを試してみます。 要素を作成して接続します。  
   
@@ -300,7 +300,7 @@ ms.lasthandoff: 02/22/2017
   
     4.  各デコレータ名の横にチェック マークが表示されていることを確認します。  
   
-     ![図形のマップと DSL 詳細ウィンドウ](~/docs/modeling/media/dsldetailswindow.png "DslDetailsWindow")  
+     ![図形のマップと DSL 詳細ウィンドウ](~/modeling/media/dsldetailswindow.png "DslDetailsWindow")  
   
 7.  **ドメイン クラスの要素を作成するためのツールボックス項目を確認します。**  
   
@@ -364,7 +364,7 @@ ms.lasthandoff: 02/22/2017
   
  **リレーションシップの重複により、プロパティを設定**場合は、同じモデルの要素のペアの間、同じクラスの&1; つ以上のリンクが存在できます。 たとえば、Teacher が同一 Student に複数の Subject を指導できるように設定できます。  
   
- ![図形コネクタ用のマップ](~/docs/modeling/media/music_connector.png "Music_Connector")  
+ ![図形コネクタ用のマップ](~/modeling/media/music_connector.png "Music_Connector")  
   
  詳細については、次を参照してください。[ドメイン リレーションシップのプロパティ](../modeling/properties-of-domain-relationships.md)と[ドメイン ロールのプロパティ](../modeling/properties-of-domain-roles.md)します。  
   
@@ -432,7 +432,7 @@ ms.lasthandoff: 02/22/2017
   
  DSL 定義でこれを実現する最も簡単な方法は、コンテナーのドメイン クラスを&１; つ定義し、各リストを表すドメイン クラスを&1; つずつ定義する方法です。 コンテナー クラスはコンパートメント シェイプにマップされます。  
   
- ![図形マップ](~/docs/modeling/media/music_mapcomp.png "Music_MapComp")  
+ ![図形マップ](~/modeling/media/music_mapcomp.png "Music_MapComp")  
   
  詳細については、次を参照してください。[コンパートメント シェイプのプロパティ](../modeling/properties-of-compartment-shapes.md)します。  
   
@@ -523,7 +523,7 @@ ms.lasthandoff: 02/22/2017
   
 7.  言語エクスプローラーを開きます。 リスト項目ノードが含まれているコンテナー ノードが表示されることを確認します。  
   
- ![DSL のエクスプ ローラーを生成した](~/docs/modeling/media/music_explorer.png "Music_Explorer")  
+ ![DSL のエクスプ ローラーを生成した](~/modeling/media/music_explorer.png "Music_Explorer")  
   
  コンパートメント シェイプを初めてテストした後に、シェイプのプロパティをいくつか調整し、拡張機能を追加したい場合があります。 詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語を拡張する](../modeling/customizing-and-extending-a-domain-specific-language.md)です。  
   

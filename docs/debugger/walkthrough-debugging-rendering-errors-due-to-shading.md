@@ -34,7 +34,7 @@ manager: "ghogen"
   
  このシナリオでは、最近、アプリにオブジェクトとそれを変換する新しい頂点シェーダーとピクセル シェーダーを追加して、オブジェクトに独自の外観を設定したものとします。 テスト中にアプリを実行すると、オブジェクトは黒一色で表示されます。 グラフィックス診断を使うと、問題点をグラフィックス ログにキャプチャし、アプリのデバッグを実行できます。 問題は、アプリケーションでは次のように見えます。  
   
- ![オブジェクトは間違った色でレンダリングされています。](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_problem.png "gfx\_diag\_demo\_render\_error\_shader\_problem")  
+ ![オブジェクトは間違った色でレンダリングされています。](~/debugger/graphics/media/gfx_diag_demo_render_error_shader_problem.png "gfx\_diag\_demo\_render\_error\_shader\_problem")  
   
 ## 調査  
  グラフィックス診断ツールを使うと、グラフィックス ログのドキュメントを読み込んで、テスト中にキャプチャされたフレームを調査できます。  
@@ -45,7 +45,7 @@ manager: "ghogen"
   
 2.  **\[フレーム一覧\]** で、オブジェクトが正しく表示されていないフレームを選びます。 レンダー ターゲットが更新され、選択したフレームが反映されます。 このシナリオでは、グラフィックのログのドキュメント ウィンドウは次のようになります。  
   
-     ![Visual Studio のグラフィックス ログ ドキュメント。](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_1.png "gfx\_diag\_demo\_render\_error\_shader\_step\_1")  
+     ![Visual Studio のグラフィックス ログ ドキュメント。](~/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_1.png "gfx\_diag\_demo\_render\_error\_shader\_step\_1")  
   
  問題を示しているフレームを選んだら、**\[グラフィックス ピクセル履歴\]** ウィンドウを使用してそのフレームを診断できます。**\[グラフィックス ピクセル履歴\]** ウィンドウに、特定のピクセルに影響を与えていた可能性があるプリミティブとそのシェーダーと、それらがレンダー ターゲットにどのような影響を与えていたかが、時系列順に表示されます。  
   
@@ -59,7 +59,7 @@ manager: "ghogen"
   
      **\[グラフィックス ピクセル履歴\]** ウィンドウが更新され、選んだピクセルが反映されます。 このシナリオでは、**\[グラフィックス ピクセル履歴\]** ウィンドウは次のように表示されます。  
   
-     ![ピクセル履歴には 1 つの DrawIndexed イベントが表示されます。](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_3.png "gfx\_diag\_demo\_render\_error\_shader\_step\_3")  
+     ![ピクセル履歴には 1 つの DrawIndexed イベントが表示されます。](~/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_3.png "gfx\_diag\_demo\_render\_error\_shader\_step\_3")  
   
      ピクセル シェーダーの結果は完全に不透明な黒 \(0, 0, 0, 1\) で表示されること、また、**\[出力マージャー\]** によってこれと **\[前\]** のピクセルの色が結合されるため、**\[結果\]** も完全に不透明な黒で表示されることにご注意ください。  
   
@@ -73,7 +73,7 @@ manager: "ghogen"
   
 3.  `input.color` にポインターを置きます。 値が完全に不透明な黒 \(0、0、0、1\) であることにご注意ください。  
   
-     !["input" の "color" メンバーは黒です。](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_5.png "gfx\_diag\_demo\_render\_error\_shader\_step\_5")  
+     !["input" の "color" メンバーは黒です。](~/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_5.png "gfx\_diag\_demo\_render\_error\_shader\_step\_5")  
   
      このシナリオでは、ピクセル シェーダーが操作するための色情報を頂点シェーダーが適切に指定していないことが原因で、正しい色が使用されない可能性があることが調査によってわかりました。  
   
@@ -87,7 +87,7 @@ manager: "ghogen"
   
 3.  色のメンバーが入力構造からコピーされないことを確認します。`output` 構造が返される直前に `output.color` の値が完全に不透明な黒に設定されているため、`output` の値が前の行で正しく初期化されていないことを確認することをお勧めします。`output.color` の値を観察しながら、`output.color` を黒に設定する行に達するまで頂点シェーダー コードをステップスルーします。 黒に設定されるまで `output.color` の値は初期化されないことにご注意ください。 これにより、`output.color` を黒に設定するコードの行を削除するのではなく、修正する必要があることが確認できます。  
   
-     !["output.color" の値は黒です。](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_7.png "gfx\_diag\_demo\_render\_error\_shader\_step\_7")  
+     !["output.color" の値は黒です。](~/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_7.png "gfx\_diag\_demo\_render\_error\_shader\_step\_7")  
   
  レンダリングの問題の原因が、頂点シェーダーがピクセル シェーダーに適切な色の値を指定していないことであることを確認したら、この情報を使用して問題を解決できます。 このシナリオでは、頂点シェーダーの次のコードを変更することで問題を解決できます。  
   
@@ -103,8 +103,8 @@ output.color = input.color;
   
  このコードは、オブジェクトの頂点から頂点色を修正なしで渡します。より複雑な頂点シェーダーでは、渡す前に色が修正される場合があります。 修正された頂点シェーダー コードは次のようになります。  
   
- ![修正された頂点シェーダー コード。](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_8.png "gfx\_diag\_demo\_render\_error\_shader\_step\_8")  
+ ![修正された頂点シェーダー コード。](~/debugger/graphics/media/gfx_diag_demo_render_error_shader_step_8.png "gfx\_diag\_demo\_render\_error\_shader\_step\_8")  
   
  コードを修正したら、それをリビルドし、もう一度アプリを実行してレンダリングの問題が解決されたことを確認します。  
   
- ![オブジェクトは正しい色でレンダリングされています。](~/docs/debugger/graphics/media/gfx_diag_demo_render_error_shader_resolution.png "gfx\_diag\_demo\_render\_error\_shader\_resolution")
+ ![オブジェクトは正しい色でレンダリングされています。](~/debugger/graphics/media/gfx_diag_demo_render_error_shader_resolution.png "gfx\_diag\_demo\_render\_error\_shader\_resolution")

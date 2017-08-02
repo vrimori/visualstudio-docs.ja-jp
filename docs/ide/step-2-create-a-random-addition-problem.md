@@ -59,7 +59,7 @@ caps.handback.revision: 27
   
      コードで randomizer の後にドット \(.\) を入力すると、IntelliSense ウィンドウが開き、呼び出すことができる `Random` オブジェクトのすべてのメソッドが表示されることに注意してください。  たとえば、IntelliSense は `Next()` メソッドを次のように一覧表示します。  
   
-     ![次のメソッド](~/docs/ide/media/express_randomwhite.png "Express\_RandomWhite")  
+     ![次のメソッド](~/ide/media/express_randomwhite.png "Express\_RandomWhite")  
 Next メソッド  
   
      オブジェクトの後にドットを入力すると、IntelliSense はプロパティ、メソッド、イベントなどのオブジェクトのメンバーの一覧を表示します。  

@@ -22,7 +22,7 @@ caps.handback.revision: 9
 
 同時実行ビジュアライザーでは、トレースの時間間隔の選択に使用率ナビゲーターを使用できます。  同時実行ビジュアライザーは、ターゲット プロセスによる CPU コアの使用状況を時間の経過とともに表示されます。  これで、CPU 使用率のパターンを調査しやすく、他のビューの使用率データとデータの比較を実行できます。  使用率ナビゲーターは同時実行ビジュアライザーのすべてのビューの上部に表示されます。  次の図は、CPU 使用量ナビゲーターを示します。  
   
- ![選択されたタイムフレームを示す使用状況ナビゲーター](~/docs/profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator")  
+ ![選択されたタイムフレームを示す使用状況ナビゲーター](~/profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator")  
 使用率ナビゲーター、指定したタイム フレーム  
   
  図では、指定した間隔は、Thumb と呼ばれる赤い四角形によって定義されます。  

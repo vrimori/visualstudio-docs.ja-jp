@@ -35,7 +35,7 @@ caps.handback.revision: 18
   
  次の図は標準的なプロジェクト構成を実現する主要インターフェイスサービスおよびオブジェクトを示します。  基になるオブジェクトなどのプログラミングの定型を作成するにはアプリケーションのヘルパー HierUtil7 を使用できます。  アプリケーション HierUtil7 ヘルパーに関する詳細については[Not in Build: Using HierUtil7 Project Classes to Implement a Project Type \(C\+\+\)](http://msdn.microsoft.com/ja-jp/a5c16a09-94a2-46ef-87b5-35b815e2f346) を参照してください。  
   
- ![Visual Studio プロジェクト モデル グラフィック](~/docs/extensibility/internals/media/vsprojectmodel.gif "vsProjectModel")  
+ ![Visual Studio プロジェクト モデル グラフィック](~/extensibility/internals/media/vsprojectmodel.gif "vsProjectModel")  
 プロジェクト モデル  
   
  ダイアグラムに含まれないこの図でそのほかの省略可能なインターフェイスについての詳細が記載されているインターフェイスおよびサービス [プロジェクト モデルのコア コンポーネント](../../extensibility/internals/project-model-core-components.md) を参照してください。  

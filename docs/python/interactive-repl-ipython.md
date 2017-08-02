@@ -58,17 +58,17 @@ Visual Studio の IPython モードの対話型ウィンドウは、対話型の
 
 1. すべてが正しく構成されている場合は、次のような出力が表示されます。
 
-    ![IPython 構成の出力 ](~/docs/python/media/ipython-repl-01.png)
+    ![IPython 構成の出力 ](~/python/media/ipython-repl-01.png)
 
 1. Visual Studio を開き、Python 環境ウィンドウに切り替え (**[表示]、[その他のウィンドウ]、[Python 環境]** の順に選択)、自分の Python 環境を選択します。
 1. **[pip]** タブを見て、`IPython` と `matplotlib` が表示されていることを確認します。 表示されていない場合は、それらをここでインストールします。
 1. **[概要]** タブを選択し、**[Configure interactive options (対話オプションの構成)]** を選択します。**[対話モード]** を [IPython] に設定し、**[OK]** を選択します。
 
-    ![対話モードを IPython に設定](~/docs/python/media/ipython-repl-02.png)
+    ![対話モードを IPython に設定](~/python/media/ipython-repl-02.png)
 
 1. **[対話型ウィンドウを開く]** を選択して、PyLab で対話型ウィンドウを IPython モードで表示します。 対話モードを変更したばかりの場合は、ウィンドウのリセットが必要なことがあります。
 
-    ![Python モードの対話型ウィンドウ](~/docs/python/media/ipython-repl-03.png)
+    ![Python モードの対話型ウィンドウ](~/python/media/ipython-repl-03.png)
 
 1. 次のコードを入力します。
 
@@ -80,7 +80,7 @@ Visual Studio の IPython モードの対話型ウィンドウは、対話型の
 
 1. 最後の行を入力した後、インライン グラフが表示されます (必要であれば、右下隅をドラッグしてサイズを変更できます)。
 
-    ![対話型ウィンドウのインライン グラフ](~/docs/python/media/ipython-repl-04.png)
+    ![対話型ウィンドウのインライン グラフ](~/python/media/ipython-repl-04.png)
 
 1. REPL で入力する代わりに、エディターでコードを記述し、コードを選択して右クリックし、**[Interactive に送信]** コマンド (Ctrl + E キー、E) を選択できます。 次のコードをエディターに貼り付け、Ctrl + A で選択し、対話型ウィンドウに送信してみてください  (Visual Studio によってコードが対話型ウィンドウに送信されるとき、途中のグラフやグラフの一部が生成されることを避けるため、コードは&1; つの単位として送信されます)。
 
@@ -105,15 +105,15 @@ Visual Studio の IPython モードの対話型ウィンドウは、対話型の
     plt.show()
     ```
 
-    ![エディターから対話型ウィンドウへのコードの送信](~/docs/python/media/ipython-repl-05.png)
+    ![エディターから対話型ウィンドウへのコードの送信](~/python/media/ipython-repl-05.png)
 
 1. 対話型ウィンドウ以外にグラフを表示するには、**[デバッグ] の [デバッグなしで開始]** コマンドを使用してコードを実行します。
     
 1. IPython には、システム シェルのエスケープ、変数の代入、出力のキャプチャなどの便利な機能が多数あります。詳細については、IPython のリファレンス ガイドを参照してください。
 
-    ![システム シェルのエスケープ](~/docs/python/media/ipython-repl-06.png)
+    ![システム シェルのエスケープ](~/python/media/ipython-repl-06.png)
 
 1. IPython は "Notebook" モードで使用することもできます。この場合は、任意の OS で任意のブラウザーをキャンバスとして使用できます。 バック エンドの IPython エンジンは、コンピューター上のローカル エンジンでも、リモート エンジンでもかまいません。 Azure では、[Windows または Linux VM での IPython の実行](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-jupyter-notebook)をサポートしています。 さらに、Azure でのサービスとしての無料の Jupyter Notebooks について、「[Azure Notebooks Preview](https://notebooks.azure.com)」を参照してください。
 
-    ![IPython の Notebook モード](~/docs/python/media/ipython-repl-07.png)
+    ![IPython の Notebook モード](~/python/media/ipython-repl-07.png)
 

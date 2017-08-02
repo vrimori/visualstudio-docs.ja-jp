@@ -37,7 +37,7 @@ caps.handback.revision: 17
   
  ここでは、モデルは次のようになります。:  
   
- ![地形モデルを表示する 3D シーン](~/docs/designers/media/digit-terrain-model.png "Digit\-Terrain\-Model")  
+ ![地形モデルを表示する 3D シーン](~/designers/media/digit-terrain-model.png "Digit\-Terrain\-Model")  
   
  開始する前に、**\[プロパティ\]** ウィンドウと **\[ツールボックス\]** が表示されていることを確認します。  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 17
   
  地形モデルは完了します。  適用されるフォン灰色表示ことが最終的なモデルは、もう一度次に示します:  
   
- ![地形モデルを表示する 3D シーン](~/docs/designers/media/digit-terrain-model.png "Digit\-Terrain\-Model")  
+ ![地形モデルを表示する 3D シーン](~/designers/media/digit-terrain-model.png "Digit\-Terrain\-Model")  
   
  この地形モデルを使用して、「[方法: ジオメトリベースのグラデーション シェーダーを作成する](../designers/how-to-create-a-geometry-based-gradient-shader.md)」で説明するグラデーション シェーダーの効果を確認できます。  
   

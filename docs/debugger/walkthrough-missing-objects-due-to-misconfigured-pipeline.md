@@ -36,7 +36,7 @@ manager: "ghogen"
   
  このシナリオでは、テストのためにアプリケーションを実行すると、背景は期待どおりにレンダリングされますが、オブジェクトの 1 つが表示されません。 グラフィックス診断を使うと、問題点をグラフィックス ログにキャプチャし、アプリのデバッグを実行できます。 問題は、アプリケーションでは次のように見えます。  
   
- ![オブジェクトを表示できません](~/docs/debugger/graphics/media/gfx_diag_demo_misconfigured_pipeline_problem.png "gfx\_diag\_demo\_misconfigured\_pipeline\_problem")  
+ ![オブジェクトを表示できません](~/debugger/graphics/media/gfx_diag_demo_misconfigured_pipeline_problem.png "gfx\_diag\_demo\_misconfigured\_pipeline\_problem")  
   
 ## 調査  
  グラフィックス診断ツールを使うと、グラフィックス ログのドキュメントを読み込んで、テスト中にキャプチャされたフレームを調査できます。  
@@ -100,7 +100,7 @@ manager: "ghogen"
   
  問題を修正するには、`ID3D11DeviceContext::PSSetShader` API 呼び出しの最初のパラメーターを使って正しいピクセル シェーダーを割り当てます。  
   
- ![修正された C&#43;&#43; ソース コード](~/docs/debugger/graphics/media/gfx_diag_demo_misconfigured_pipeline_step_6.png "gfx\_diag\_demo\_misconfigured\_pipeline\_step\_6")  
+ ![修正された C&#43;&#43; ソース コード](~/debugger/graphics/media/gfx_diag_demo_misconfigured_pipeline_step_6.png "gfx\_diag\_demo\_misconfigured\_pipeline\_step\_6")  
   
  コードを修正したら、アプリをリビルドし、アプリをもう一度実行してレンダリングの問題が解決されたことを確認します。  
   

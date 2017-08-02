@@ -55,7 +55,7 @@ manager: "ghogen"
   
  ダンプが主に使用されるのは、開発者がアクセスできないコンピューター上で発生する問題をデバッグする場合です。  たとえば、顧客のクラッシュやハングアップの状況を自分のコンピューターで再現できないときは、顧客のコンピューターからのダンプ ファイルを使用できます。  ダンプはテスターによっても作成されてクラッシュまたはハングアップ データの保存に使用されるため、テスト コンピューターを使用してより多くのテストを行えるようになります。  Visual Studio デバッガーでは、マネージまたはネイティブ コードのダンプ ファイルを保存できます。  デバッガーでは、Visual Studio によって作成されたダンプ ファイルも、他のプログラムによって作成されて*ミニダンプ*形式で保存されたダンプ ファイルも読み込むことができます。  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_Dump_files__with_or_without_heaps"></a> ヒープ情報あり\/なしのダンプ ファイル  
  ヒープ情報あり\/なしのダンプ ファイルを作成できます。  
@@ -64,7 +64,7 @@ manager: "ghogen"
   
 -   **ヒープ情報なしのダンプ ファイル**は、ヒープ情報ありのダンプよりも、サイズがはるかに小さくなります。  ただし、デバッガーはアプリのバイナリを読み込んでシンボル情報を見つける必要があります。  バイナリはダンプの作成時に使用されたバイナリと完全に一致する必要があります。  ヒープ情報なしのダンプ ファイルには、スタック変数の値のみ保存されます。  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_Requirements_and_limitations"></a> 要件と制限  
   
@@ -82,7 +82,7 @@ manager: "ghogen"
   
 -   Visual Studio の [SOS.dll \(SOS デバッガー拡張\)](../Topic/SOS.dll%20\(SOS%20Debugging%20Extension\).md) でデバッグするには、Windows ドライバー キット \(WDK\) の一部である Windows 対応のデバッグ ツールをインストールする必要があります。  「[Windows 8.1: キットとツールのダウンロード](http://msdn.microsoft.com/library/windows/hardware/bg127147.aspx)」を参照してください。  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_Create_a_dump_file"></a> ダンプ ファイルを作成する  
  Visual Studio でダンプ ファイルを作成するには:  
@@ -93,7 +93,7 @@ manager: "ghogen"
   
  Windows ミニダンプ形式をサポートするプログラムでもダンプ ファイルを作成できます。  たとえば、[Windows Sysinternals](http://technet.microsoft.com/sysinternals/default) の **Procdump** コマンド ライン ユーティリティでは、トリガーまたは必要に応じてプロセスのクラッシュ ダンプ ファイルを作成できます。  その他のツールの使用したダンプ ファイルの作成の詳細については、このトピックの「[要件と制限](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations)」を参照してください。  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_Open_a_dump_file"></a> ダンプ ファイルを開く  
   
@@ -136,7 +136,7 @@ manager: "ghogen"
   
  Visual Studio でダンプ内のモジュールをデバッグするために必要なファイルが見つからない場合は、該当するページ \(**\[バイナリが見つかりません\]**、**\[シンボルが見つかりません\]**、または **\[ソースが見つかりません\]**\) が表示されます。  これらのページでは、問題の原因に関する詳細な情報が表示され、ファイルの正しい場所を特定するために役立つアクション リンクも表示されます。  「[シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」を参照してください。  
   
- ![ページのトップへ](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ## 参照  
  [Just\-In\-Time デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)   

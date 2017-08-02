@@ -99,7 +99,7 @@ ms.lasthandoff: 05/04/2017
   
  ここではその他の問題、通知に使用されるアイコンが含まれているため、"&times;"アイコン、ため、その横にある共通の削除 アイコンを使用することはできません。 その結果、UI より扱いコントロール削除 ボタンを使用します。  
   
- ![既定では、エラー状態に UI を配置することは、Visual Studio のアンチ パターンです。](~/docs/extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-pattern")<br />既定では、エラー状態に UI を配置することは、Visual Studio のアンチ パターンです。
+ ![既定では、エラー状態に UI を配置することは、Visual Studio のアンチ パターンです。](~/extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-pattern")<br />既定では、エラー状態に UI を配置することは、Visual Studio のアンチ パターンです。
   
 #### <a name="alternatives"></a>代替手段  
  この問題をより良いソリューションになります。  
@@ -122,7 +122,7 @@ ms.lasthandoff: 05/04/2017
 Visual Studio 内でのアンチ パターンは、UI を消去する前に説明文を読み取るユーザーを強制します。 正しくデザインされた、ビデオへのリンクをクリックしてのホバー時追加情報を含むツールヒントを表示する必要があります、"&times;"さらに操作することがなく、メッセージを破棄する必要があります。
 
 
- ![説明テキストをアンチ &#45; パターン &#45;正しくありません。](~/docs/extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />ビデオの正しくないリンク パターン
+ ![説明テキストをアンチ &#45; パターン &#45;正しくありません。](~/extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />ビデオの正しくないリンク パターン
   
 #### <a name="result"></a>結果  
  閉じるボタン (1 回のクリック) 単純なのではなくを 2 回のクリックを使用して、単にビデオへのリンクが表示されるすべての場所に UI を消去する求められます。  
@@ -130,20 +130,20 @@ Visual Studio 内でのアンチ パターンは、UI を消去する前に説�
 #### <a name="alternatives"></a>代替手段  
  このような状況に対応する正しい設計に Internet Explorer、Office、および Visual Studio に共通のパターンに従うになります: ホバー時、ユーザーはツールヒントの説明を確認し、1 回のクリックは、UI を非表示にします。  
   
- ![説明テキストをアンチ &#45; パターン &#45;そうです](~/docs/extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti-pattern-correct")<br />ビデオの適切なリンクのパターン
+ ![説明テキストをアンチ &#45; パターン &#45;そうです](~/extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti-pattern-correct")<br />ビデオの適切なリンクのパターン
   
 ### <a name="using-command-bars-for-settings"></a>コマンド バーを使用して、設定  
  **図 A**このアンチ パターンを表します。 コマンドは、単に適用されるコマンド ボタンの下に設定します。 このスケッチの場合は、デバッグの開始だけでなくコマンド — などのブラウザーで、デバッグなしで、ステップ イン ビュー-選択した設定を尊重します。  
 
-  ![図 a: コマンド バーのアンチ パターン](~/docs/extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-pattern-FigureA")<br />図 a: コマンド バーのアンチ パターン
+  ![図 a: コマンド バーのアンチ パターン](~/extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-pattern-FigureA")<br />図 a: コマンド バーのアンチ パターン
   
  示すように、少し良いそれでもの望ましくないが、ツールバーでこの種類の設定を配置する**図 B**です。分割ボタンは、小さい領域、改善をドロップダウン リストではそのため、両方の設計まだを使用しているツールバーを実際にコマンドではないを昇格させます。  
  
- ![図 b: 向上ですが、まだコマンド バーのアンチ パターン](~/docs/extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-pattern-FigureB")<br />図 b: 向上ですが、まだコマンド バーのアンチ パターン
+ ![図 b: 向上ですが、まだコマンド バーのアンチ パターン](~/extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-pattern-FigureB")<br />図 b: 向上ですが、まだコマンド バーのアンチ パターン
  
   示すように適切なアプローチで**図 C**設定が一連のコマンドに関連付けられています。 設定されているグローバル設定はなく、同様、4 つのコマンドを切り替えおしています。 これは、ツールバーのコマンドが許容である場合だけです。 
 
- ![Visual Studio のコマンド バーのパターンの図 c: の正しい使用します。](~/docs/extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-pattern-FigureC")<br />Visual Studio のコマンド バーのパターンの図 c: の正しい使用します。
+ ![Visual Studio のコマンド バーのパターンの図 c: の正しい使用します。](~/extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-pattern-FigureC")<br />Visual Studio のコマンド バーのパターンの図 c: の正しい使用します。
    
 ### <a name="control-anti-patterns"></a>コントロールのアンチ パターン  
  いくつかのアンチ パターンは、単に不適切な使用法またはコントロールまたはコントロールのグループのプレゼンテーションです。  
@@ -152,15 +152,15 @@ Visual Studio 内でのアンチ パターンは、UI を消去する前に説�
  のみのハイパーリンクのテキストに下線を使用してください。  
   
  **正しくありません。**    
- ![ハイパーリンクではありません下線付きのテキストは、Visual Studio のアンチ パターンです。](~/docs/extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102-g_GroupLabelIncorrect")<br />ハイパーリンクではありません下線付きのテキストは、Visual Studio のアンチ パターンです。
+ ![ハイパーリンクではありません下線付きのテキストは、Visual Studio のアンチ パターンです。](~/extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102-g_GroupLabelIncorrect")<br />ハイパーリンクではありません下線付きのテキストは、Visual Studio のアンチ パターンです。
   
  **よし：**   
- ![スタイルを正しく、非ハイパーリンク テキスト非装飾環境のフォントで表示します。](~/docs/extensibility/ux-guidelines/media/0102-h_grouplabelcorrect.png "0102-h_GroupLabelCorrect")<br />スタイルを正しく、非ハイパーリンク テキスト非装飾環境のフォントで表示します。
+ ![スタイルを正しく、非ハイパーリンク テキスト非装飾環境のフォントで表示します。](~/extensibility/ux-guidelines/media/0102-h_grouplabelcorrect.png "0102-h_GroupLabelCorrect")<br />スタイルを正しく、非ハイパーリンク テキスト非装飾環境のフォントで表示します。
   
 #### <a name="clicking-on-a-check-box-results-in-a-pop-up-dialog"></a>ポップアップ ダイアログでチェック ボックスの結果をクリックすると  
  「Windows Azure アプリケーションの公開」ウィザードの"すべてロールのリモート デスクトップを有効にする チェック ボックスをクリックするすぐにポップアップ ダイアログで、Visual Studio のアンチ パターンが表示されます。 さらに、チェック ボックスのフィールドがいっぱいにならないチェック ボックスが選択されている後に別の相互作用のアンチ パターン。  
   
- ![Visual Studio のアンチ パターンは、チェック ボックスをクリックすると後にダイアログ ボックスをことをします。](~/docs/extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102-i_CheckboxPopup")<br />Visual Studio のアンチ パターンは、チェック ボックスをクリックすると後にダイアログ ボックスをことをします。
+ ![Visual Studio のアンチ パターンは、チェック ボックスをクリックすると後にダイアログ ボックスをことをします。](~/extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102-i_CheckboxPopup")<br />Visual Studio のアンチ パターンは、チェック ボックスをクリックすると後にダイアログ ボックスをことをします。
   
 ### <a name="hyperlink-anti-patterns"></a>ハイパーリンクのアンチ パターン  
  次の例には、次の 2 つのアンチ パターンが含まれています。  
@@ -169,7 +169,7 @@ Visual Studio 内でのアンチ パターンは、UI を消去する前に説�
   
 2.  「詳細」は、概念に関するトピックへのリンクの適切なテキストではありません。 ユーザーの目標は、詳細は、任意の影響を理解していないです。  
   
- ![色のサービスを無視し、「詳細」のハイパーリンクを使用して Visual Studio のアンチ パターンは、します。](~/docs/extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />色のサービスを無視し、「詳細」のハイパーリンクを使用して Visual Studio のアンチ パターンは、します。  
+ ![色のサービスを無視し、「詳細」のハイパーリンクを使用して Visual Studio のアンチ パターンは、します。](~/extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />色のサービスを無視し、「詳細」のハイパーリンクを使用して Visual Studio のアンチ パターンは、します。  
   
  **ソリューションのより強力な:**リンクをクリックして、ユーザーを求めるは質問が発生します。  
   

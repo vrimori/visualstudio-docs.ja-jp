@@ -76,7 +76,7 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 
 Live Unit Testing を構成するには、Visual Studio の最上位メニューから **[ツール]** の **[オプション]** を選び、**[オプション]** ダイアログの左側のウィンドウで **[Live Unit Testing]** を選びます。 次の図は、ダイアログで設定できる Live Unit Testing の構成オプションです。
 
-  ![イメージ](~/docs/test/media/lut-options.png)
+  ![イメージ](~/test/media/lut-options.png)
 
 次のオプションを構成できます。
 
@@ -105,21 +105,21 @@ Live Unit Testing を有効にするには、Visual Studio の最上位メニュ
 
 Live Unit Testing を有効にすると、Visual Studio エディターの各コード行が更新されて、記述しているコードが単体テストによってカバーされているかどうか、およびコードをカバーしているテストが合格かどうかが示されます。  次の図では、テストに合格したコード行と不合格のコード行、およびテストでカバーされていないコード行が示されています。 緑の "✓" で示される行は、合格したテストによってのみカバーされています。赤い "🞩" で示される行は、1 つ以上のテストで不合格になっています。青い "" によって示される行は、どのテストでもカバーされていません。
 
-  ![イメージ](~/docs/ide/media/lut-codewindow.png)
+  ![イメージ](~/ide/media/lut-codewindow.png)
 
 Live Unit Testing のカバレッジの視覚化は、コード エディターでコードを変更するとすぐに更新されます。 次の図のように、編集を処理している間は、合格、不合格、非カバーのシンボルの下に丸いタイマーのイメージを追加することで、データが最新ではないことが示されます。
 
-  ![イメージ](~/docs/test/media/lut-codeupdating.png)
+  ![イメージ](~/test/media/lut-codeupdating.png)
  
 ## <a name="getting-information-on-successful-or-failed-tests"></a>テストの合格または不合格に関する情報の取得
 
 コード ウィンドウの合格または不合格のシンボルをカーソルでポイントすると、その行にヒットしているテストの数を確認できます。 シンボルをクリックすると、個々のテストの状態を確認できます (次の図を参照)。
  
-  ![イメージ](~/docs/test/media/lut-failedinfo.png) 
+  ![イメージ](~/test/media/lut-failedinfo.png) 
 
 ツール ヒントで不合格になったテストをポイントすると、次の図に示すように、不合格に関する追加情報が表示されます。 ツール ヒントで不合格なテストをクリックすると、追加情報に直接移動できます。
 
-  ![イメージ](~/docs/test/media/lut-failedmsg.png) 
+  ![イメージ](~/test/media/lut-failedmsg.png) 
 
 ## <a name="diagnosing-and-correcting-test-failures"></a>不合格になったテストの診断と修正
 

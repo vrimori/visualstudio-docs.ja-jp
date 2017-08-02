@@ -124,7 +124,7 @@ ms.lasthandoff: 05/13/2017
   
 -   デバッガーを起動します。  
   
-     ![[デバッグ] メニューの [デバッグの開始] コマンド](~/docs/ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
+     ![[デバッグ] メニューの [デバッグの開始] コマンド](~/ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
   
      デバッガーが起動し、コードが実行されます。 コンソール ウィンドウ (コマンド プロンプトのように見える別のウィンドウ) が数秒間表示されますが、デバッガーが実行を停止するとすぐに閉じます。 テキストを表示するには、ブレークポイントを設定してプログラムの実行を停止する必要があります。  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 05/13/2017
   
 2.  GreetingsConsoleApp のビルド構成を **[デバッグ]** から **[リリース]**に変更します。  
   
-     ![アプリケーションのリリース バージョンのビルド](~/docs/ide/media/c--ide_changingbuildtorelease.png "C++IDE_ChangingBuildtoRelease")  
+     ![アプリケーションのリリース バージョンのビルド](~/ide/media/c--ide_changingbuildtorelease.png "C++IDE_ChangingBuildtoRelease")  
   
 3.  ソリューションをビルドします。  
   

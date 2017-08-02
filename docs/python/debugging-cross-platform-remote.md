@@ -119,7 +119,7 @@ Azure VM のファイアウォール ルールの作成方法については、�
 
 1. Enter キーを押すと、そのコンピューターで使用できる ptvsd プロセスの一覧が生成されます。
 
-    ![接続のターゲットの入力とプロセスの一覧表示](~/docs/python/media/remote-debugging-qualifier.png)
+    ![接続のターゲットの入力とプロセスの一覧表示](~/python/media/remote-debugging-qualifier.png)
 
     この一覧の生成後にリモート コンピューターで別のプログラムを起動する場合は、**[更新]** ボタンを選択します。
 
@@ -127,7 +127,7 @@ Azure VM のファイアウォール ルールの作成方法については、�
 
 1. Visual Studio はデバッグ モードに切り替わり、スクリプトは引き続きリモート コンピューターで実行され、通常の[デバッグ](debugging.md)機能もすべて使用できます。 たとえば、`if guess < number:` 行のブレークポイントを設定し、リモート コンピューターに切り替え、別の推測を入力します。 その後、ローカル コンピューターの Visual Studio はそのブレークポイントで停止し、ローカル変数などが表示されます。
 
-    ![ブレークポイントにヒットした状態](~/docs/python/media/remote-debugging-breakpoint-hit.png)
+    ![ブレークポイントにヒットした状態](~/python/media/remote-debugging-breakpoint-hit.png)
 
 1. デバッグを停止すると、Visual Studio はプログラムからデタッチされますが、リモート コンピューターでは実行が継続されます。 また、ptvsd もデバッガーのアタッチを引き続きリッスンするので、いつでもプロセスに再アタッチできます。
 
@@ -183,7 +183,7 @@ ptvsd のリモート デバッグ サーバーへの接続は、既定で、シ
 
 1. 前述の手順で Visual Studio のアタッチ プロセスを繰り返します。今回は、**[Connection Target]**(接続のターゲット) (または **[修飾子]**) として `tcps://` を使用します。
 
-    ![SSL を使用するリモート デバッグ トランスポートの選択](~/docs/python/media/remote-debugging-qualifier-ssl.png)
+    ![SSL を使用するリモート デバッグ トランスポートの選択](~/python/media/remote-debugging-qualifier-ssl.png)
 
 ### <a name="warnings"></a>警告
 
@@ -191,11 +191,11 @@ ptvsd のリモート デバッグ サーバーへの接続は、既定で、シ
 
 1. 以下の "リモート証明書は信頼されていません" という警告が表示される場合は、[信頼されたルート CA] に証明書が適切に追加されていないことを示します。 追加手順を確認して、もう一度試してください。
 
-    ![SSL 証明書の信頼の警告](~/docs/python/media/remote-debugging-ssl-warning.png)
+    ![SSL 証明書の信頼の警告](~/python/media/remote-debugging-ssl-warning.png)
 
 1. 以下の "リモート証明書名がホスト名と一致しません" という警告が表示される場合は、証明書の作成時に **[共通名]** として正しいホスト名または IP アドレスを指定していないことを示します。
 
-    ![SSL 証明書のホスト名の警告](~/docs/python/media/remote-debugging-ssl-warning2.png)
+    ![SSL 証明書のホスト名の警告](~/python/media/remote-debugging-ssl-warning2.png)
 
 > [!Warning]
 > 現在、これらの警告を無視すると、Visual Studio 2017 はハングします。 すべての問題を修正してから、接続を試行してください。

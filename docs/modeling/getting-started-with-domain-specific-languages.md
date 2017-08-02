@@ -45,7 +45,7 @@ ms.lasthandoff: 02/22/2017
   
  DSL を設計するときに、Visual Studio Integration Extension (VSIX) パッケージの一部として配布できます。 ユーザーの操作で DSL [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]:  
   
- ![ファミリ ツリー ダイアグラム、ツールボックス、およびエクスプ ローラー](~/docs/modeling/media/familyt_instance.png "FamilyT_Instance")  
+ ![ファミリ ツリー ダイアグラム、ツールボックス、およびエクスプ ローラー](~/modeling/media/familyt_instance.png "FamilyT_Instance")  
   
  表記法は、DSL の一部のみです。 と共に、表記法では、VSIX パッケージには、ユーザーが編集し、そのモデルから情報を生成するために適用可能なツールが含まれています。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/22/2017
   
 3.  クリックして**ドメイン固有言語デザイナー**します。  
   
-     ![DSL ダイアログの作成](~/docs/modeling/media/create_dsldialog.png "Create_DSLDialog")  
+     ![DSL ダイアログの作成](~/modeling/media/create_dsldialog.png "Create_DSLDialog")  
   
 4.  **名**ボックスに、入力**FamilyTree**します。 **[OK]** をクリックします。  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 02/22/2017
   
  実験用[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]は次の例のようになります。  
   
- ![](~/docs/modeling/media/dsl_min.png "DSL_min")  
+ ![](~/modeling/media/dsl_min.png "DSL_min")  
   
 ### <a name="the-content-of-a-model"></a>モデルのコンテンツ  
  DSL のインスタンスであるファイルの内容と呼ばれる、*モデル*します。 モデルに含まれる*モデル**要素*と*リンク*要素の間です。 DSL 定義は、モデル要素の種類を指定し、リンクがモデル内に存在します。 たとえば、最小言語テンプレートから作成された、DSL では&1; 種類のモデル要素およびリンクの&1; つの種類。  
@@ -213,7 +213,7 @@ ms.lasthandoff: 02/22/2017
   
 1.  DslDefinition ダイアグラムで名前を変更**ExampleModel**に**FamilyTreeModel**、 **ExampleElement**に**人**、**ターゲット**に**親**、および**ソース**に**子**します。 変更するには、各ラベルをクリックすることができます。  
   
-     ![DSL 定義ダイアグラム - ファミリ ツリー モデル](~/docs/modeling/media/familyt_person.png "FamilyT_Person")  
+     ![DSL 定義ダイアグラム - ファミリ ツリー モデル](~/modeling/media/familyt_person.png "FamilyT_Person")  
   
 2.  要素とコネクタ ツールの名前を変更します。  
   
@@ -288,7 +288,7 @@ ms.lasthandoff: 02/22/2017
   
 6.  .Tt ファイルでは、各ユーザーのプロパティを取得するコードを追加できます。  
   
- ![ファミリ ツリー ダイアグラム、ツールボックス、およびエクスプ ローラー](~/docs/modeling/media/familyt_instance.png "FamilyT_Instance")  
+ ![ファミリ ツリー ダイアグラム、ツールボックス、およびエクスプ ローラー](~/modeling/media/familyt_instance.png "FamilyT_Instance")  
   
 ### <a name="define-new-classes"></a>新しいクラスを定義します。  
  モデルには、ドメイン クラスとリレーションシップを追加できます。 たとえば、町、および個人が町で生活ことを表す新しいリレーションシップを表す新しいクラスを作成できます。  

@@ -48,15 +48,15 @@ R Tools for Visual Studio (RTVS) パッケージ マネージャーは R パッ�
 
 - **[使用可能]** では、インストールするパッケージを閲覧できます。 パッケージが既にインストールされている場合、右の **[インストール]** ボタンが **[アンインストール]** に変わります。
 
-    ![R Tools for Visual Studio パッケージ マネージャーの利用可能なパッケージのタブ](~/docs/rtvs/media/package-manager-available.png)
+    ![R Tools for Visual Studio パッケージ マネージャーの利用可能なパッケージのタブ](~/rtvs/media/package-manager-available.png)
 
 - **[インストール済み]** には、インストールされ、読み込まれたパッケージがすべて表示されます。 パッケージの横にある緑の丸印は、それが R セッションに読み込まれていることを示します。 左側の一覧にある赤い X 印アイコンまたは右側の **[アンインストール]** ボタンでパッケージをアンインストールできます。 インストール済みパッケージの右にある青い上向き矢印をクリックすると、新しいバージョンが存在する場合、パッケージが更新されます。
 
-    ![R Tools for Visual Studio パッケージ マネージャーのインストール済みパッケージのタブ](~/docs/rtvs/media/package-manager-installed.png)
+    ![R Tools for Visual Studio パッケージ マネージャーのインストール済みパッケージのタブ](~/rtvs/media/package-manager-installed.png)
 
 - **[読み込み]** には、R セッションに読み込まれているパッケージのみが表示されます。そのため、すべてのパッケージに緑の丸印が付きます。 ここでパッケージをアンインストールしたり、更新したりすることもできます。
 
-    ![R Tools for Visual Studio パッケージ マネージャーの読み込み済みパッケージのタブ](~/docs/rtvs/media/package-manager-loaded.png)
+    ![R Tools for Visual Studio パッケージ マネージャーの読み込み済みパッケージのタブ](~/rtvs/media/package-manager-loaded.png)
 
 ## <a name="package-locations"></a>パッケージの場所
 

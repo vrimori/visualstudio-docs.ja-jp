@@ -48,7 +48,7 @@ manager: "ghogen"
   
 #### グラフィックス情報をキャプチャするには  
   
--   グラフィックス診断ツール バーで、**\[キャプチャ\]** ボタンをクリックします。![グラフィックス キャプチャ ボタン アイコン](~/docs/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
+-   グラフィックス診断ツール バーで、**\[キャプチャ\]** ボタンをクリックします。![グラフィックス キャプチャ ボタン アイコン](~/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
   
      または  
   

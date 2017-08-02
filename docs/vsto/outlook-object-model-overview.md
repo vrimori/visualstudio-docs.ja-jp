@@ -34,7 +34,7 @@ caps.handback.revision: 58
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[Outlook を使用したカスタム タスク レポートの作成方法](http://go.microsoft.com/fwlink/?LinkID=130315)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[Outlook を使用したカスタム タスク レポートの作成方法](http://go.microsoft.com/fwlink/?LinkID=130315)」を参照してください。  
   
 ## Outlook プロジェクト内のオブジェクトへのアクセス  
  Outlook では、多くのオブジェクトが操作対象になります。 オブジェクト モデルを効果的に使用するには、次の最上位レベルのオブジェクトについて理解する必要があります。  

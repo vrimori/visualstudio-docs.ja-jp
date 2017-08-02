@@ -31,7 +31,7 @@ caps.handback.revision: 3
   
 2.  [XML スキーマ エクスプローラー](../xml-tools/xml-schema-explorer.md)のツール バーの検索テキスト ボックスに「purchaseOrder」と入力して検索ボタンをクリックします。  
   
-     ![XML スキーマ エクスプローラー キーワード検索](~/docs/xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
+     ![XML スキーマ エクスプローラー キーワード検索](~/xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
   
      検索結果が XML スキーマ エクスプローラーで強調表示され、垂直スクロール バーのチックでマークされます。  
   

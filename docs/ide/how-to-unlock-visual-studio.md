@@ -50,7 +50,7 @@ Visual Studio は最大で 30 日間無料で評価できます。 IDE にサイ
 ### <a name="update-stale-licenses"></a>古いライセンスを更新する  
  Visual Studio でライセンスが古くなっていることを示す次のようなメッセージが表示されることがあります: "ライセンスが古くなったため、更新する必要があります。"
   
- ![Visual Studio の古いライセンスに関するメッセージ](~/docs/ide/media/vs2017_stale-license.png)  
+ ![Visual Studio の古いライセンスに関するメッセージ](~/ide/media/vs2017_stale-license.png)  
   
  このメッセージは、使用しているサブスクリプションはまだ有効だが、サブスクリプションを最新の状態に維持するために Visual Studio が使用するライセンス トークンが更新されなかったため、次のいずれかの理由でライセンス トークンが古くなったことを示します。  
   

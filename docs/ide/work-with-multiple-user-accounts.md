@@ -51,11 +51,11 @@ ms.lasthandoff: 02/22/2017
 ### <a name="access-your-azure-account-in-server-explorer"></a>サーバー エクスプローラーで Azure アカウントにアクセス  
  **Ctrl + Alt + S** を押して **サーバー エクスプローラー**を開きます。 Azure アイコンを選択して展開すると、Visual Studio にログインするときに使用した ID に関連付けられた Azure アカウントで利用可能なリソースが表示されます。 次のような内容が表示されます (自分のリソースを表示する場合を除く)。
 
- ![サーバー エクスプローラーでの Azure Tools ノードの展開表示](~/docs/ide/media/vs2015_serverexplorer.png "VS2015_ServerExplorer")  
+ ![サーバー エクスプローラーでの Azure Tools ノードの展開表示](~/ide/media/vs2015_serverexplorer.png "VS2015_ServerExplorer")  
 
  特定のデバイスで初めて Visual Studio を使用するときは、IDE へのサインインに使用した ID で登録されているサブスクリプションだけがダイアログに表示されます。 **サーバー エクスプローラー** で Azure ノードを右クリックして **[サブスクリプションの管理とフィルター]** を選択し、アカウントの選択コントロールからアカウントを追加することにより、他のアカウントのリソースに直接アクセスできます。 その後は、必要に応じて、下矢印をクリックしてアカウントの一覧から選択することにより、別のアカウントを選択できます。 アカウントを選択した後は、そのアカウントからサーバー エクスプローラーに表示するサブスクリプションを選択できます。  
 
- ![[Azure サブスクリプションの管理] ダイアログ](~/docs/ide/media/vs2015_manage_subs.png "vs2015_manage_subs")  
+ ![[Azure サブスクリプションの管理] ダイアログ](~/ide/media/vs2015_manage_subs.png "vs2015_manage_subs")  
 
  次にサーバー エクスプローラーを開いたときは、そのサブスクリプションのリソースが表示されます。  
 
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/22/2017
 ###  <a name="access_azure"></a>Web プロジェクトで Azure Active Directory にアクセス  
  Azure AD では、ASP.NET MVC の Web アプリケーションでのエンド ユーザー シングル サインオンや、Web API サービスでの AD 認証をサポートしています。 ドメイン認証は個々のユーザー アカウント認証とは異なります。Active Directory ドメインにアクセスできるユーザーは、既存の Azure AD アカウントを使用して、Web アプリケーションに接続できます。 Office 365 アプリでは、ドメイン認証も使用できます。 これを実際に見るには、Web アプリケーションを作成します (**[ファイル]、[新しいプロジェクト]、[C#]、[クラウド]、[ASP.NET Web アプリケーション]**)。 新しい ASP.NET プロジェクトのダイアログで、[ **認証の変更**] を選択します。 認証ウィザードが表示され、アプリケーションで使用する認証の種類を選択できます。  
 
- ![ASP.NET の認証の変更ダイアログ](~/docs/ide/media/vs2015_change_authentication.png "VS2015_change_authentication")  
+ ![ASP.NET の認証の変更ダイアログ](~/ide/media/vs2015_change_authentication.png "VS2015_change_authentication")  
 
  ASP.NET での異なる種類の認証について詳しくは、「[Creating ASP.NET Web Projects in Visual Studio 2013](http://www.asp.net/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth)」 (Visual Studio 2013 での ASP.NET Web プロジェクトの作成) をご覧ください (認証に関する情報は Visual Studio の現在のバージョンにも引き続き該当します)。  
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="add-a-second-user-account-to-visual-studio"></a>Visual Studio に 2 つ目にユーザー アカウントを追加  
  Visual Studio の上隅にあるユーザー名の横の矢印をクリックします。 その後、 **[アカウントの設定]** メニュー項目を選択します。 **[アカウント マネージャー]** ダイアログが表示され、サインインしたアカウントが表示されます。 ダイアログの下隅にある **[アカウントの追加]** リンクを選択して、新しい Microsoft アカウントまたは新しい仕事や学校のアカウントを追加します。  
 
- ![Visual Studio のアカウント ピッカー](~/docs/ide/media/vs2015_acct_picker.png "VS2015_acct_picker")  
+ ![Visual Studio のアカウント ピッカー](~/ide/media/vs2015_acct_picker.png "VS2015_acct_picker")  
 
  プロンプトに応じて新しいアカウントの資格情報を入力します。 次の図は、ユーザーが自分の Contoso.com の仕事用アカウントを追加した後のアカウント マネージャーを示しています。  
 

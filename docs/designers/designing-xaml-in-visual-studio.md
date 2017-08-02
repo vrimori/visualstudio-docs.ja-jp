@@ -48,7 +48,7 @@ Visual Studio と Blend for Visual Studio の両方に、XAML ベースの Windo
   
 -   **一貫性のあるユーザー インターフェイス:** アプリケーションを使い慣れた Visual Studio ユーザー インターフェイス環境で設計できるため、IDE 間の切り替えが快適になり、生産性も向上します。 Blend for Visual Studio では、コンテンツとユーザー インターフェイスの間のコントラストを上げることにより設計中のコンテンツに注意を集中するのに役立つ Visual Studio ダーク テーマを使用します。 「[XAML デザイナーを使用した UI の作成](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)」をご覧ください。  
   
-     ![Blend for Visual Studio の IDE](~/docs/designers/media/blendide.png "BlendIDE")  
+     ![Blend for Visual Studio の IDE](~/designers/media/blendide.png "BlendIDE")  
   
 -   **XAML IntelliSense:** どちらの IDE も、ステートメント入力候補、コードへのコメント追加や書式設定などの一般的なエディター操作のサポート、およびリソース、バインディング、コードへのナビゲーションなど、IntelliSense に期待する一般的な機能すべてをサポートします。  
   
@@ -56,7 +56,7 @@ Visual Studio と Blend for Visual Studio の両方に、XAML ベースの Windo
   
 -   **ファイルの再読み込み操作:** XAML ファイルは、Blend for Visual Studio または Visual Studio のどちらでも編集でき、切り替え時に編集したファイルを自動的に再読み込みさせることができます。 ワークフローの中断を最小限に抑えるため、[ファイルの再読み込み] ダイアログでファイルの再読み込みの基本設定を設定できます。  
   
-     ![ファイルの再読み込み操作](~/docs/designers/media/blendfilereload.png "BlendFileReload")  
+     ![ファイルの再読み込み操作](~/designers/media/blendfilereload.png "BlendFileReload")  
   
 -   **レイアウトの同期と設定:** カスタム レイアウトを使用して、ツール ウィンドウのレイアウト変更を保存および適用できます。 同じ Microsoft アカウントでサインインすると、Visual Studio は Visual Studio と Blend for Visual Studio 双方の変更や基本設定をコンピューター間で同期します。 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)を参照してください。  
   

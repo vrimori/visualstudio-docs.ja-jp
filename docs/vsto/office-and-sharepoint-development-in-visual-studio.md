@@ -96,7 +96,7 @@ caps.handback.revision: 87
   
  VSTO アドインで提供できる機能の例を次に示します。 この VSTO アドインは、PowerPoint にリボン コントロール、カスタム作業ウィンドウ、およびダイアログ ボックスを追加します。  
   
- ![PowerPoint アドイン ソリューション](~/docs/vsto/media/powerpointaddin.png "PowerPoint アドイン ソリューション")  
+ ![PowerPoint アドイン ソリューション](~/vsto/media/powerpointaddin.png "PowerPoint アドイン ソリューション")  
   
  **詳細を表示**  
   

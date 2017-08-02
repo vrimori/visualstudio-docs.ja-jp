@@ -88,16 +88,16 @@ Visual Studio のツール ウィンドウには、(自動的に隠す機能) �
   
 -   **タブ付きドキュメント**ツール ウィンドウをドキュメント内でもドッキングできます。 これより広い領域が許容枠の端にドッキングする必要があるオブジェクト ブラウザーのように、大規模なツール ウィンドウに役立ちます。  
   
-![Visual Studio でツール ウィンドウの状態](~/docs/extensibility/ux-guidelines/media/0702-01_toolwindowstates.png "0702-01_ToolWindowStates")<br />Visual Studio でのツール ウィンドウの状態
+![Visual Studio でツール ウィンドウの状態](~/extensibility/ux-guidelines/media/0702-01_toolwindowstates.png "0702-01_ToolWindowStates")<br />Visual Studio でのツール ウィンドウの状態
   
 #### <a name="single-instance-and-multi-instance"></a>単一インスタンスおよび複数インスタンス  
 ツール ウィンドウは、単一インスタンスまたは複数のインスタンスです。 いくつかの単一インスタンスのツール ウィンドウは、複数インスタンスのツール ウィンドウがない場合があります間アクティブなドキュメント ウィンドウに関連付けられた考えられます。 マルチ インスタンス ツールの windows に応答、**ウィンドウ&gt;新しいウィンドウ**コマンドで、ウィンドウの新しいインスタンスを作成します。 次の図は、ウィンドウのインスタンスがアクティブなときに、新規ウィンドウ を有効にするツール ウィンドウを示しています。  
   
-![ツール ウィンドウのウィンドウのインスタンスがアクティブなときに、' 新規ウィンドウ ' を有効にします。](~/docs/extensibility/ux-guidelines/media/0702-02_toolwindowenablingcommand.png "0702-02_ToolWindowEnablingCommand")<br />ツール ウィンドウのウィンドウのインスタンスがアクティブなときに、' 新規ウィンドウ ' を有効にします。  
+![ツール ウィンドウのウィンドウのインスタンスがアクティブなときに、' 新規ウィンドウ ' を有効にします。](~/extensibility/ux-guidelines/media/0702-02_toolwindowenablingcommand.png "0702-02_ToolWindowEnablingCommand")<br />ツール ウィンドウのウィンドウのインスタンスがアクティブなときに、' 新規ウィンドウ ' を有効にします。  
   
 単一インスタンスのツール ウィンドウを非表示または表示され、ツール ウィンドウの複数インスタンスで終了したりできるよう非表示にできます。 タブにリンクされた、フローティング、またはマルチ ドキュメント インターフェイス (MDI) 子ウィンドウ (ドキュメント ウィンドウに類似) として設定されて、すべてのツール ウィンドウをドッキングされることができます。 すべてのツール ウィンドウは、[ウィンドウ] メニューの適切なウィンドウ管理コマンドに応答する必要があります。  
   
-![Visual Studio のウィンドウ メニューにウィンドウ管理コマンド](~/docs/extensibility/ux-guidelines/media/0702-03_windowmanagementcontrols.png "0702-03_WindowManagementControls")<br />Visual Studio のウィンドウ メニューにウィンドウ管理コマンド
+![Visual Studio のウィンドウ メニューにウィンドウ管理コマンド](~/extensibility/ux-guidelines/media/0702-03_windowmanagementcontrols.png "0702-03_WindowManagementControls")<br />Visual Studio のウィンドウ メニューにウィンドウ管理コマンド
   
 #### <a name="document-specific-tool-windows"></a>ドキュメントに固有のツール ウィンドウ  
 ドキュメントの特定の種類に基づいて変更するのには、一部のツール ウィンドウは設計されています。 これらのウィンドウは、IDE で作業中のドキュメント ウィンドウに適用可能な機能を反映するために継続的に更新します。  
@@ -330,7 +330,7 @@ Specialty「署名」ダイアログは、テーマが適用された可能性�
 ####  <a name="BKMK_SimpleDialogs"></a>単純なダイアログ ボックス  
 単純なダイアログは、1 つのモーダル ウィンドウ内のコントロールのプレゼンテーションです。 このプレゼンテーションには、フィールドの選択などの複雑なコントロール パターンのバリエーションが含まれます。 単純なダイアログは、標準の一般的なレイアウトだけでなく、複雑なコントロールのグループ化に必要な特定のレイアウトに従います。
   
-![> 作成厳密な名前キーは、Visual Studio での単純なダイアログの例を示します。](~/docs/extensibility/ux-guidelines/media/0704-01_createstrongnamekey.png "0704-01_CreateStrongNameKey")<br />作成する厳密な名前キーは、Visual Studio での単純なダイアログの例を示します。
+![> 作成厳密な名前キーは、Visual Studio での単純なダイアログの例を示します。](~/extensibility/ux-guidelines/media/0704-01_createstrongnamekey.png "0704-01_CreateStrongNameKey")<br />作成する厳密な名前キーは、Visual Studio での単純なダイアログの例を示します。
   
 ####  <a name="BKMK_LayeredDialogs"></a>階層化ダイアログ  
 複数層のダイアログ ボックスには、タブ、ダッシュ ボード、および埋め込みのツリーが含まれます。 1 つの UI で提供されるコントロールの複数のグループがある場合は、不動産を最大限に使用されます。 ユーザーが任意の時点で表示するグループ化を選択できるように、グループに配置されます。  
@@ -339,7 +339,7 @@ Specialty「署名」ダイアログは、テーマが適用された可能性�
   
 **ツール&gt;オプション**ダイアログが埋め込まれたツリーを使用して階層化 ダイアログ ボックスの例を示します。  
   
-![ツール > オプションは、Visual Studio での階層ダイアログの例を示します。](~/docs/extensibility/ux-guidelines/media/0704-02_toolsoptions.png "0704-02_ToolsOptions")<br />ツール > オプションは、Visual Studio での階層ダイアログの例を示します。
+![ツール > オプションは、Visual Studio での階層ダイアログの例を示します。](~/extensibility/ux-guidelines/media/0704-02_toolsoptions.png "0704-02_ToolsOptions")<br />ツール > オプションは、Visual Studio での階層ダイアログの例を示します。
   
 ####  <a name="BKMK_Wizards"></a>ウィザード  
 ウィザードは、タスクを完了するまでに、ユーザーの手順の論理シーケンス全体をリダイレクトするため便利です。 シーケンシャルなパネルは、一連の選択肢が提供され、ユーザーは、次に進む前に、各ステップを続行する必要があります。 後のための十分な既定値は、使用可能な**完了**ボタンが有効にします。  
@@ -395,12 +395,12 @@ Visual Studio で同じことを実現する既存のコントロール構成と
   
 -   タイトル バーのヘルプ ボタンは廃止されました。 新しいダイアログ ボックスにそれらを追加しないでください。 存在する場合は概念的には、タスクに関連するヘルプ トピックを開始します。  
   
- ![Visual Studio のダイアログ ボックスのタイトル バーのガイドラインの仕様](~/docs/extensibility/ux-guidelines/media/0704-03_titlebarspecs.png "0704-03_TitleBarSpecs")<br />Visual Studio のダイアログ ボックスのタイトル バーのガイドラインの仕様
+ ![Visual Studio のダイアログ ボックスのタイトル バーのガイドラインの仕様](~/extensibility/ux-guidelines/media/0704-03_titlebarspecs.png "0704-03_TitleBarSpecs")<br />Visual Studio のダイアログ ボックスのタイトル バーのガイドラインの仕様
   
 #### <a name="control-buttons"></a>コントロールのボタン  
 一般に、 **OK**、**キャンセル**、および**ヘルプ**ボタンは、ダイアログ ボックスの右下隅の水平方向に整列する必要があります。 代替垂直スタックには、ダイアログ コントロールのボタンを備えた visual 混乱であれば、ダイアログの下部にあるその他のいくつかのボタンがある場合は許可されています。  
   
-![Visual Studio のダイアログ ボックスでコントロールのボタンの許容可能な構成](~/docs/extensibility/ux-guidelines/media/0704-04_controlbuttonconfig.png "0704-04_ControlButtonConfig")<br />Visual Studio のダイアログ ボックスでコントロールのボタンの許容可能な構成
+![Visual Studio のダイアログ ボックスでコントロールのボタンの許容可能な構成](~/extensibility/ux-guidelines/media/0704-04_controlbuttonconfig.png "0704-04_ControlButtonConfig")<br />Visual Studio のダイアログ ボックスでコントロールのボタンの許容可能な構成
   
 ダイアログ ボックスでは、既定のコントロール ボタンを含める必要があります。 既定値として使用する最適なコマンドを確認するのには、(優先度順に表示されます)、次のオプションから選択します。  
   
@@ -446,7 +446,7 @@ Forefront に特定の UI 要素を移動しより高度な動作とダイアロ
   
 代わりに、UI をより一般的な機能を別の場所をリファクタリングとは、単にダッシュ ボードではなく、単一のコレクションで使用可能なすべての機能を提供します。  
   
-![Outlook で追加の UI を公開するための廊下の概念](~/docs/extensibility/ux-guidelines/media/0704-08_hallway.png "0704-08_Hallway")<br />Outlook で追加の UI を公開するための廊下の概念
+![Outlook で追加の UI を公開するための廊下の概念](~/extensibility/ux-guidelines/media/0704-08_hallway.png "0704-08_Hallway")<br />Outlook で追加の UI を公開するための廊下の概念
   
 ##### <a name="adaptive-ui"></a>アダプティブ UI  
 使用状況に基づいて、UI の表示と非表示、または自己報告のユーザー エクスペリエンスが必要な UI を表示するのには他の部分を非表示の別の方法を示します。 これは、UI を非表示かを決めるためのアルゴリズムは複雑になることができ、ルールは、一部のケースのセットの間違ったが必ず、Visual Studio で、推奨されません。  
@@ -509,10 +509,10 @@ Visual Studio のインスタンス (たとえば、devenv.exe を別のイン�
   
 | マウス ポインター | コマンド | 説明 |  
 | :---: | --- | --- |  
-| ![マウスの [ドロップしない] アイコン](~/docs/extensibility/ux-guidelines/media/0706-01_mousenodrop.png "0706 01_MouseNoDrop") | ドロップしません。 | 指定した場所に項目を削除できません。 |  
-| ![マウスの [コピー] アイコン](~/docs/extensibility/ux-guidelines/media/0706-02_mousecopy.png "0706 02_MouseCopy") | コピー | 項目は、ターゲットの場所にコピーされます。 |  
-| ![マウス"move"アイコン](~/docs/extensibility/ux-guidelines/media/0706-03_mousemove.png "0706 03_MouseMove") | 移動 | 項目は、ターゲットの場所に移動されます。 |  
-| ![マウスの 参照の追加"アイコン](~/docs/extensibility/ux-guidelines/media/0706-04_mouseaddref.png "0706 04_MouseAddRef") | 参照の追加 | 選択された項目への参照は、ターゲットの場所に追加されます。 |
+| ![マウスの [ドロップしない] アイコン](~/extensibility/ux-guidelines/media/0706-01_mousenodrop.png "0706 01_MouseNoDrop") | ドロップしません。 | 指定した場所に項目を削除できません。 |  
+| ![マウスの [コピー] アイコン](~/extensibility/ux-guidelines/media/0706-02_mousecopy.png "0706 02_MouseCopy") | コピー | 項目は、ターゲットの場所にコピーされます。 |  
+| ![マウス"move"アイコン](~/extensibility/ux-guidelines/media/0706-03_mousemove.png "0706 03_MouseMove") | 移動 | 項目は、ターゲットの場所に移動されます。 |  
+| ![マウスの 参照の追加"アイコン](~/extensibility/ux-guidelines/media/0706-04_mouseaddref.png "0706 04_MouseAddRef") | 参照の追加 | 選択された項目への参照は、ターゲットの場所に追加されます。 |
 
 #### <a name="reference-based-projects"></a>プロジェクトの参照に基づく  
  次の表は、参照されるベースの移行先のプロジェクトの押されたソース項目と修飾子キーの特性に基づき実行する必要があります (切り取り/コピー/貼り付けます) だけでなくドラッグ アンド ドロップ操作をまとめたものです。  

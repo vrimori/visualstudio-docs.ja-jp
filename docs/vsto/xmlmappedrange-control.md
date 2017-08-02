@@ -28,7 +28,7 @@ caps.handback.revision: 39
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Use XML Mapping in Excel? \(操作方法: Excel で XML マッピングを使用する\)](http://go.microsoft.com/fwlink/?LinkID=130288)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Use XML Mapping in Excel? \(操作方法: Excel で XML マッピングを使用する\)](http://go.microsoft.com/fwlink/?LinkID=130288)」を参照してください。  
   
 ## コントロールへのデータのバインド  
  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> コントロールは、1 つのデータ フィールドへのバインディング \(単純データ バインディング\) をサポートします。  <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールは、複合データ バインディングをサポートし、セルに繰り返しスキーマ要素が割り当てられると自動的に作成されます。  詳細については、「[ListObject コントロール](../vsto/listobject-control.md)」を参照してください。  

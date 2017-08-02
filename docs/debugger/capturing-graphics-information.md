@@ -38,7 +38,7 @@ Visual Studio Graphics Analyzer を使用してレンダリングに関する問
   
 #### フレームをキャプチャするには  
   
--   Visual Studio の **\[グラフィックス\]** ツール バーで、**\[フレームのキャプチャ\]** ボタン![グラフィックス キャプチャ ボタン アイコン](~/docs/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")をクリックします。  
+-   Visual Studio の **\[グラフィックス\]** ツール バーで、**\[フレームのキャプチャ\]** ボタン![グラフィックス キャプチャ ボタン アイコン](~/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")をクリックします。  
   
 -   キーボードで、PrintScreen キーを押します。  
   

@@ -40,7 +40,7 @@ ms.lasthandoff: 05/26/2017
 # クイック アクション
 <a id="quick-actions" class="xliff"></a>
 
-[クイック アクション](refactoring-code-generation-quick-actions.md#quick-actions)を使うと、コードのリファクタリング、生成、その他の変更を、1 つの操作で簡単に行うことができます。  多くのクイック アクションは C# または Visual Basic の一方だけに適用されますが、C# と Visual Basic 両方のプロジェクトに適用されるクイック アクションもいくつかあります。  これらのアクションは、電球アイコン ![小さい電球アイコン](~/docs/ide/media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") を使うか、または適切なコード行にカーソルを置いて **Ctrl + .** キーを押すと 適用できます。
+[クイック アクション](refactoring-code-generation-quick-actions.md#quick-actions)を使うと、コードのリファクタリング、生成、その他の変更を、1 つの操作で簡単に行うことができます。  多くのクイック アクションは C# または Visual Basic の一方だけに適用されますが、C# と Visual Basic 両方のプロジェクトに適用されるクイック アクションもいくつかあります。  これらのアクションは、電球アイコン ![小さい電球アイコン](~/ide/media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") を使うか、または適切なコード行にカーソルを置いて **Ctrl + .** キーを押すと 適用できます。
 
 赤い波線が表示され、Visual Studio が問題の修正候補を提供できる場合に、電球アイコンが表示されます。 たとえば、赤い波線で示されるエラーがある場合、そのエラーの修正が可能な場合に電球マークが表示されます。 いずれの言語でも、サードパーティは、たとえば SDK の一部として、カスタマイズした診断や提案を表示できます。Visual Studio はそれらの規則に基づいて電球マークを表示します。  
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/26/2017
 
 2. 行の任意の場所で **Ctrl キーを押しながら . キー**を押すと、 電球マークの表示を呼び出して修正候補のリストを直接表示できます。  
 
-   ![電球でのマウス ホバー](~/docs/ide/media/vs2015_lightbulb_hover.png "VS2017_LightBulb_Hover")  
+   ![電球でのマウス ホバー](~/ide/media/vs2015_lightbulb_hover.png "VS2017_LightBulb_Hover")  
 
 ### 修正候補を表示するには
 <a id="to-see-potential-fixes" class="xliff"></a>  
@@ -357,47 +357,47 @@ Dim s As String = $"My string with {num} in the middle"
 <a id="remove-merge-conflict-markers" class="xliff"></a>
 このクイック アクションを使用すると、"変更を取り入れる" ことで競合するコードおよびマーカーが削除され、マージ競合を解決することができます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - マージ競合を解決する](~/docs/ide/media/vside-refactoring-merge-conflicts.png)
+![リファクタリング - マージ競合を解決する](~/ide/media/vside-refactoring-merge-conflicts.png)
 
 ### パラメーターの null チェックを追加する
 <a id="add-null-checks-for-parameters" class="xliff"></a>
 このクイック アクションでは、パラメーターが null であるかどうかを示すチェックをコードに追加できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - null チェックを追加する](~/docs/ide/media/vside-refactoring-nullcheck.png)
+![リファクタリング - null チェックを追加する](~/ide/media/vside-refactoring-nullcheck.png)
 
 ### コンストラクターのジェネレーターの機能強化
 <a id="constructor-generator-improvements" class="xliff"></a>
 このクイック アクションにより、コンストラクターを作成するときに、生成するプロパティまたはフィールドを選択したり、空の本文からコンストラクターを生成したりできるようになります。 呼び出しサイトから既存のコンストラクターにパラメーターを追加する場合にも使用できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - コンストラクターを生成する](~/docs/ide/media/vside-refactoring-constructors.png)
+![リファクタリング - コンストラクターを生成する](~/ide/media/vside-refactoring-constructors.png)
 
 ### 未使用の変数を削除する
 <a id="remove-unused-variables" class="xliff"></a>
 このクイック アクションでは、宣言されているがコードで一度も使用されていない変数を削除することができます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - 未使用の変数](~/docs/ide/media/vside-refactoring-unusedvars.png)
+![リファクタリング - 未使用の変数](~/ide/media/vside-refactoring-unusedvars.png)
 
 ### オーバーライドを生成する
 <a id="generate-overrides" class="xliff"></a>
 このクイック アクションでは、クラスまたは構造体で空白の行からオーバーライドを作成することができます。 **[Pick Members (メンバーの選択)]** ダイアログ ボックスで、オーバーライドするメンバーを選択できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - オーバーライド](~/docs/ide/media/vside-refactoring-overrides.png)
+![リファクタリング - オーバーライド](~/ide/media/vside-refactoring-overrides.png)
 
-![リファクタリング - ダイアログ ボックスをオーバーライドする](~/docs/ide/media/vside-refactoring-overrides-dialog.png)
+![リファクタリング - ダイアログ ボックスをオーバーライドする](~/ide/media/vside-refactoring-overrides-dialog.png)
 
 ### 数値リテラルの基本を変更する
 <a id="change-base-for-numeric-literals" class="xliff"></a>
 このクイック アクションでは、数値リテラルの基本数値システムを別のものに変換できます。 たとえば、数値を 16 進数からバイナリ形式に変更できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - 基本を変更する](~/docs/ide/media/vside-refactoring-changebase1.png)
+![リファクタリング - 基本を変更する](~/ide/media/vside-refactoring-changebase1.png)
 
-![リファクタリング - 基本を変更する](~/docs/ide/media/vside-refactoring-changebase2.png)
+![リファクタリング - 基本を変更する](~/ide/media/vside-refactoring-changebase2.png)
 
 ### リテラルに桁区切り記号を挿入する
 <a id="insert-digit-separators-into-literals" class="xliff"></a>
 このクイック アクションでは、区切り文字をリテラル値に追加することができます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - 桁区切り記号を変更する](~/docs/ide/media/vside-refactoring-separators.png)
+![リファクタリング - 桁区切り記号を変更する](~/ide/media/vside-refactoring-separators.png)
 
 ### **if** コンストラクトを **switch** に変換する
 <a id="convert-if-construct-to-switch" class="xliff"></a>

@@ -29,7 +29,7 @@ caps.handback.revision: 7
 # クイックスタート: コンソールを使用した JavaScript のデバッグ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows と Windows Phone に適用されます](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows と Windows Phone に適用されます](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  JavaScript コンソール ウィンドウを使用して、JavaScript を使用してビルドされたストア アプリと対話したりデバッグすることができます。 これらの機能は、[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリ、Windows Phone ストア アプリ、Visual Studio Tools for Apache Cordova を使用して作成したアプリでサポートされています。 コンソール コマンドのリファレンスの詳細については、「[JavaScript コンソール コマンド](../debugger/javascript-console-commands.md)」を参照してください。  
   
@@ -161,7 +161,7 @@ caps.handback.revision: 7
   
      実行が `updateImages()` 関数に達するとアプリは中断モードになり、プログラム実行の現在行が黄色で強調表示されます。  
   
-     ![JavaScript コンソールでの中断モードの使用](~/docs/debugger/media/js_breakmode.png "JS\_BreakMode")  
+     ![JavaScript コンソールでの中断モードの使用](~/debugger/media/js_breakmode.png "JS\_BreakMode")  
   
      現在のデバッグ セッションを終了することなく、変数の値を変更してプログラムの状態にすぐに反映できます。  
   
@@ -199,7 +199,7 @@ caps.handback.revision: 7
   
  次の図は、JavaScript コンソール ウィンドウのターゲット リストを示します。  
   
- ![JavaScript コンソール ウィンドウでのターゲット選択](~/docs/debugger/media/js_console_target.png "JS\_Console\_Target")  
+ ![JavaScript コンソール ウィンドウでのターゲット選択](~/debugger/media/js_console_target.png "JS\_Console\_Target")  
   
  `cd` コマンドを使用して実行コンテキストを切り替えることもできますが、別の実行コンテキストの名前を知っている必要があります。また、使用する参照がスコープ内になければなりません。**\[ターゲット\]** リストを使用すると、別の実行コンテキストに簡単にアクセスできます。  
   

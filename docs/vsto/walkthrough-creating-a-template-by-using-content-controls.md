@@ -87,19 +87,19 @@ caps.handback.revision: 42
     > [!NOTE]  
     >  **\[開発\]** タブが表示されていない場合は、最初にこれを表示する必要があります。  詳細については、「[方法 :タブをリボンに表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
   
-6.  **\[コントロール\]** グループの **\[テキスト\]** ボタン ![PlainTextContentControl](~/docs/vsto/media/plaintextcontrol.gif "PlainTextContentControl") をクリックし、最初のセルに <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> を追加します。  
+6.  **\[コントロール\]** グループの **\[テキスト\]** ボタン ![PlainTextContentControl](~/vsto/media/plaintextcontrol.gif "PlainTextContentControl") をクリックし、最初のセルに <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> を追加します。  
   
 7.  2 番目の列の 2 番目のセル \(**\[Hire Date\]** の横\) をクリックします。  
   
-8.  **\[コントロール\]** グループの **\[日付の選択\]** ボタン ![DatePickerContentControl](~/docs/vsto/media/datepicker.gif "DatePickerContentControl") をクリックし、2 番目のセルに <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> を追加します。  
+8.  **\[コントロール\]** グループの **\[日付の選択\]** ボタン ![DatePickerContentControl](~/vsto/media/datepicker.gif "DatePickerContentControl") をクリックし、2 番目のセルに <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> を追加します。  
   
 9. 2 番目の列の 3 番目のセル \(**\[タイトル\]** の横\) をクリックします。  
   
-10. **\[コントロール\]** グループの **\[コンボ ボックス\]** ボタン ![ComboBoxContentControl](~/docs/vsto/media/combobox.gif "ComboBoxContentControl") をクリックし、3 番目のセルに <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> を追加します。  
+10. **\[コントロール\]** グループの **\[コンボ ボックス\]** ボタン ![ComboBoxContentControl](~/vsto/media/combobox.gif "ComboBoxContentControl") をクリックし、3 番目のセルに <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> を追加します。  
   
 11. 2 番目の列の最後のセル \(**\[画像\]** の横\) をクリックします。  
   
-12. **\[コントロール\]** グループで、**\[画像コンテンツ コントロール\]** ボタン ![PictureContentControl](~/docs/vsto/media/pictcontentcontrol.gif "PictureContentControl") をクリックして、最後のセルに <xref:Microsoft.Office.Tools.Word.PictureContentControl> を追加します。  
+12. **\[コントロール\]** グループで、**\[画像コンテンツ コントロール\]** ボタン ![PictureContentControl](~/vsto/media/pictcontentcontrol.gif "PictureContentControl") をクリックして、最後のセルに <xref:Microsoft.Office.Tools.Word.PictureContentControl> を追加します。  
   
 ## 顧客フィードバック表を作成する  
  ユーザーが顧客のフィードバック情報を入力できる 3 種類のコンテンツ コントロールが含まれる表を作成します。  
@@ -124,15 +124,15 @@ caps.handback.revision: 42
   
 6.  リボンの **\[開発\]** タブをクリックします。  
   
-7.  **\[コントロール\]** グループの **\[テキスト\]** ボタン ![PlainTextContentControl](~/docs/vsto/media/plaintextcontrol.gif "PlainTextContentControl") をクリックし、最初のセルに <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> を追加します。  
+7.  **\[コントロール\]** グループの **\[テキスト\]** ボタン ![PlainTextContentControl](~/vsto/media/plaintextcontrol.gif "PlainTextContentControl") をクリックし、最初のセルに <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> を追加します。  
   
 8.  2 番目の列の 2 番目のセル \(**\[満足度評価\]** の横\) をクリックします。  
   
-9. **\[コントロール\]** グループの **\[ドロップダウン リスト\]** ボタン ![DropDownListContentControl](~/docs/vsto/media/dropdownlist.gif "DropDownListContentControl") をクリックして、2 番目のセルに <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> を追加します。  
+9. **\[コントロール\]** グループの **\[ドロップダウン リスト\]** ボタン ![DropDownListContentControl](~/vsto/media/dropdownlist.gif "DropDownListContentControl") をクリックして、2 番目のセルに <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> を追加します。  
   
 10. 2 番目の列の最後のセル \(**\[コメント\]** の横\) をクリックします。  
   
-11. **\[コントロール\]** グループの **\[リッチ テキスト\]** ボタン ![RichTextContentControl](~/docs/vsto/media/richtextcontrol.gif "RichTextContentControl") をクリックして、最後のセルに <xref:Microsoft.Office.Tools.Word.RichTextContentControl> を追加します。  
+11. **\[コントロール\]** グループの **\[リッチ テキスト\]** ボタン ![RichTextContentControl](~/vsto/media/richtextcontrol.gif "RichTextContentControl") をクリックして、最後のセルに <xref:Microsoft.Office.Tools.Word.RichTextContentControl> を追加します。  
   
 ## プログラムにより、コンボ ボックスとドロップ ダウン リストのデータを読み込む  
  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] の **\[プロパティ\]** ウィンドウを使用して、デザイン時にコンテンツ コントロールを初期化することができます。  また、実行時に初期化することも可能で、これにより、コンテンツ コントロールを動的に初期の状態に設定できます。  このチュートリアルでは、これらのオブジェクトの動作を確認できるように、実行時に <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> および <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> にエントリのデータを読み込むコードを使用します。  

@@ -20,7 +20,7 @@ caps.handback.revision: 18
 
 次に、**\[プロパティ\]** ウィンドウを使用してフォームの外観を変更します。  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo") このトピックのビデオ版については、「[Tutorial 1: Create a Picture Viewer in Visual Basic \- Video 1 \(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 \- ビデオ 1\)](http://go.microsoft.com/fwlink/?LinkId=205209)」または「[Tutorial 1: Create a Picture Viewer in C\# \- Video 1 \(チュートリアル 1: C\# によるピクチャ ビューアーの作成 \- ビデオ 1\)](http://go.microsoft.com/fwlink/?LinkId=205199)」を参照してください。  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。  ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") このトピックのビデオ版については、「[Tutorial 1: Create a Picture Viewer in Visual Basic \- Video 1 \(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 \- ビデオ 1\)](http://go.microsoft.com/fwlink/?LinkId=205209)」または「[Tutorial 1: Create a Picture Viewer in C\# \- Video 1 \(チュートリアル 1: C\# によるピクチャ ビューアーの作成 \- ビデオ 1\)](http://go.microsoft.com/fwlink/?LinkId=205199)」を参照してください。  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。  ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
 ### フォームのプロパティを設定するには  
   
@@ -41,7 +41,7 @@ caps.handback.revision: 18
   
 4.  Windows フォーム デザイナーに戻ります。  フォームの右下のドラッグ ハンドル \(次の図の右下にある小さな白い四角形\) をクリックします。  
   
-     ![ドラッグ ハンドル](~/docs/ide/media/express_bottomrt_drag.png "Express\_BottomRT\_Drag")  
+     ![ドラッグ ハンドル](~/ide/media/express_bottomrt_drag.png "Express\_BottomRT\_Drag")  
 ドラッグ ハンドル  
   
      このハンドルをドラッグしてフォームのサイズを変更します。ここでは、幅を広げ、高さを少し高くします。  

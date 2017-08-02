@@ -31,7 +31,7 @@ caps.handback.revision: 26
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: Excel で SharePoint リストに接続されている一覧を作成する](http://go.microsoft.com/fwlink/?LinkID=130263)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: Excel で SharePoint リストに接続されている一覧を作成する](http://go.microsoft.com/fwlink/?LinkID=130263)」を参照してください。  
   
 ### ListObject コントロールにデータをバインドするには  
   

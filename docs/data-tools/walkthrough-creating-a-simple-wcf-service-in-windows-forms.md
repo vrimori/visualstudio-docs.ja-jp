@@ -37,7 +37,7 @@ manager: "ghogen"
     > [!NOTE]
     >  これにより、テストしてアクセスすることが可能な機能するサービスが作成されます。  次の 2 つの手順は、別のデータ型を使用するように既定の方法を変更する方法を示しています。  実際のアプリケーションで、独自の関数をサービスに追加することもできます。  
   
-3.  ![IService1 ファイル](~/docs/data-tools/media/wcf2.png "wcf2")  
+3.  ![IService1 ファイル](~/data-tools/media/wcf2.png "wcf2")  
   
      **ソリューション エクスプローラー**で、IService1.vb または IService1.cs をダブルクリックし、次の行を探します。  
   
@@ -120,7 +120,7 @@ manager: "ghogen"
   
 5.  **F5** キーを押してプロジェクトを実行します。  いくつかのテキストを入力し、ボタンをクリックします。  ラベルに「You entered:」と入力したテキストが表示されます。  
   
-     ![結果を表示するフォーム](~/docs/data-tools/media/wcf10.png "wcf10")  
+     ![結果を表示するフォーム](~/data-tools/media/wcf10.png "wcf10")  
   
 ## 参照  
  [ASMX サービスと WCF サービスを利用するサンプル](http://msdn.microsoft.com/ja-jp/788ddf2c-2ac1-416b-8789-2fbb1e29b8fe)

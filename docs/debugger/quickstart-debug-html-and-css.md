@@ -30,7 +30,7 @@ caps.handback.revision: 101
 # クイック スタート: HTML および CSS のデバッグ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows と Windows Phone に適用されます](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows と Windows Phone に適用されます](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Visual Studio では、JavaScript アプリに総合的なデバッグ機能が用意されており、Internet Explorer および Visual Studio の開発者には使い慣れた機能が含まれています。 これらの機能は、[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]、Windows Phone ストア アプリ、Visual Studio Tools for Apache Cordova を使用して作成されたアプリでサポートされます。  
   
@@ -108,7 +108,7 @@ caps.handback.revision: 101
   
      このアプリを Phone エミュレーター \(シミュレーターと同様の外観になります\) で実行すると、次の図に示すようになります。 ただし、アプリをこの状態にするには、まず、多数のバグを修正する必要があります。  
   
-     ![予想される結果を表示する FlipView アプリ](~/docs/debugger/media/js_dom_appfixed.png "JS\_DOM\_AppFixed")  
+     ![予想される結果を表示する FlipView アプリ](~/debugger/media/js_dom_appfixed.png "JS\_DOM\_AppFixed")  
   
 7.  **\[デバッグ\]** ツール バーの **\[デバッグの開始\]** ボタンの横にあるドロップダウン リストの **\[シミュレーター\]** または **\[Emulator 8.1 WVGA 4 inch 512MB\] \(エミュレーター 8.1 WVGA 4 インチ 512 MB\)** をクリックします。  
   
@@ -193,7 +193,7 @@ caps.handback.revision: 101
   
 2.  default.html を開き、`"fView"` DIV 要素の高さと幅を 100% に変更して、ソース コードを変更します。  
   
-3.  \[デバッグ\] ツール バーの **\[Windows アプリケーションの更新\]** ボタンをクリックします \(または、F4 キーを押します\)。 このボタンは次のように表示されます。![&#91;Windows アプリケーションの更新&#93; ボタン](~/docs/debugger/media/js_refresh.png "JS\_Refresh")  
+3.  \[デバッグ\] ツール バーの **\[Windows アプリケーションの更新\]** ボタンをクリックします \(または、F4 キーを押します\)。 このボタンは次のように表示されます。![&#91;Windows アプリケーションの更新&#93; ボタン](~/debugger/media/js_refresh.png "JS\_Refresh")  
   
      アプリのページが再読み込みされ、シミュレーターまたは Phone エミュレーターが前面に戻ります。  
   
@@ -216,7 +216,7 @@ caps.handback.revision: 101
   
  **\[要素の選択\]** をクリックする前に、**\[Display web page highlights\] \(Web ページの強調表示を表示\)** を切り替えて実行しているアプリの要素を強調表示するかどうかを指定できます。 次の図は、このボタンを示しています。 強調表示は、既定で表示されます。  
   
- ![Web ページ ハイライト ボタンの表示](~/docs/debugger/media/js_dom_display_highlights_button.png "JS\_DOM\_Display\_Highlights\_Button")  
+ ![Web ページ ハイライト ボタンの表示](~/debugger/media/js_dom_display_highlights_button.png "JS\_DOM\_Display\_Highlights\_Button")  
   
  強調表示する要素を選択する場合、シミュレーターでマウス ポインターを置く要素が強調表示されます。 強調表示された要素の色は、DOM Explorer の **\[レイアウト\]** タブに表示されるボックス モデルと一致します。  
   

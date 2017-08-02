@@ -31,7 +31,7 @@ caps.handback.revision: 47
   
  次の例は、デザイナーを使用してドキュメント レベルのプロジェクトにデータ バインド コントロールを追加する方法を示しています。  実行時に VSTO アドイン プロジェクトにデータ バインド コントロールを追加する方法の例については、「[チュートリアル: VSTO アドイン プロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)」を参照してください。  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[Visual Studio Tools for the Office System \(3.0\) を使用した Word 2007 コンテンツ コントロールへのデータのバインディング](http://go.microsoft.com/fwlink/?LinkId=136785)」をご覧ください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[Visual Studio Tools for the Office System \(3.0\) を使用した Word 2007 コンテンツ コントロールへのデータのバインディング](http://go.microsoft.com/fwlink/?LinkId=136785)」をご覧ください。  
   
 ## デザイン時にドキュメントにコントロールを追加する  
   

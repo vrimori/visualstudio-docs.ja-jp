@@ -23,7 +23,7 @@ caps.handback.revision: 13
 # HTML、CSS、および JavaScript サンプル コードのデバッグ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows と Windows Phone に適用されます](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows と Windows Phone に適用されます](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  このトピックのコードは、以下のサンプル ファイルです。[クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md).  クイック スタートの設計上のエラーは、このバージョンのコードで修正されています。  
   

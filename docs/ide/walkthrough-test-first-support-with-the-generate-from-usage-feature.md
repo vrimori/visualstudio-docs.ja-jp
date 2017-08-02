@@ -73,10 +73,10 @@ ms.lasthandoff: 05/24/2017
   
 3.  `TestMethod1()` メソッドを検索して、この名前を `DefaultAutomobileIsInitializedCorrectly()`に変更します。 次の図に示すように、このメソッド内に、 `Automobile`というクラスの新しいインスタンスを作成します。 コンパイル時のエラーを示す波下線が表示され、型名の下にスマート タグが表示されます。 スマート タグの正確な場所は、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] または [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] のどちらを使っているかにより異なります。  
   
-     ![スマート タグの下線 (Visual Basic)](~/docs/ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
+     ![スマート タグの下線 (Visual Basic)](~/ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
 Visual Basic  
   
-     ![スマート タグの下線 (C&#35;)](~/docs/ide/media/genclass_underline.png "GenClass_Underline")  
+     ![スマート タグの下線 (C&#35;)](~/ide/media/genclass_underline.png "GenClass_Underline")  
 Visual C#  
   
 4.  スマート タグの上にマウス ポインターを置くと、 `Automobile` という名前の型がまだ定義されていないことを示すエラー メッセージが表示されます。 スマート タグをクリックするか、Ctrl キーを押しながら . キー (Ctrl + ピリオド) を押して、次の図に示す [使用法から生成] ショートカット メニューを開きます。  
@@ -112,10 +112,10 @@ Visual C#
   
      スマート タグのショートカット メニューを次の図に示します。  
   
-     ![プロパティ生成のコンテキスト メニュー (Visual Basic)](~/docs/ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
+     ![プロパティ生成のコンテキスト メニュー (Visual Basic)](~/ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
 Visual Basic  
   
-     ![プロパティ生成のコンテキスト メニュー (C&#35;)](~/docs/ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
+     ![プロパティ生成のコンテキスト メニュー (C&#35;)](~/ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
 Visual C#  
   
 ### <a name="to-locate-the-source-code"></a>ソース コードを検索するには  
@@ -161,7 +161,7 @@ Visual C#
   
      次の図に **[テスト結果]** ウィンドウを示します。  
   
-     ![失敗したテストの結果](~/docs/ide/media/testsfailed.png "TestsFailed")  
+     ![失敗したテストの結果](~/ide/media/testsfailed.png "TestsFailed")  
 [テスト結果] ウィンドウ  
   
 2.  **[テスト結果]** ウィンドウで、各テスト結果の行をダブルクリックして、各テストのエラーの発生場所に移動します。  

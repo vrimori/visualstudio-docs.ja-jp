@@ -78,7 +78,7 @@ caps.handback.revision: 52
   
 3.  **\[プロパティ\]** ウィンドウで **\(DataBindings\)** プロパティを展開します。  
   
-4.  **\(Advanced\)** プロパティの横にある省略記号ボタン \(![VisualStudioEllipsesButton スクリーンショット](~/docs/vsto/media/vbellipsesbutton.png "VisualStudioEllipsesButton スクリーンショット")\) をクリックします。  
+4.  **\(Advanced\)** プロパティの横にある省略記号ボタン \(![VisualStudioEllipsesButton スクリーンショット](~/vsto/media/vbellipsesbutton.png "VisualStudioEllipsesButton スクリーンショット")\) をクリックします。  
   
 5.  **\[フォーマットと詳細バインド\]** ダイアログ ボックスで、**\[データ ソース更新モード\]** ドロップダウン リストをクリックし、次の値のいずれかを選びます。  
   

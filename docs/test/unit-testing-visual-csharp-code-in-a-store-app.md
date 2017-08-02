@@ -131,7 +131,7 @@ ms.lasthandoff: 04/04/2017
   
      テスト プロジェクトがビルドされ、実行されます。 テスト エクスプローラーのウィンドウが表示され、テストが **[成功したテスト]** に表示されます。 ウィンドウの下部の [概要] ウィンドウに、選択したテストに関する詳細情報が表示されます。  
   
-     ![テスト エクスプ ローラー](~/docs/test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
+     ![テスト エクスプ ローラー](~/test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
   
 ##  <a name="BKMK_Add_the_Rooter_class_to_the_Maths_project"></a> Maths プロジェクトに Rooter クラスを追加します。  
   
@@ -200,7 +200,7 @@ ms.lasthandoff: 04/04/2017
   
 5.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
   
-     ![基本テスト成功](~/docs/test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
+     ![基本テスト成功](~/test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
   
  テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。  
   

@@ -99,7 +99,7 @@ ms.lasthandoff: 05/30/2017
   
      また、[ **クイック起動** ] ボックスに「 **新しいプロジェクト** 」と入力しても、同じことができます。  
   
-     ![クイック起動ボックスで新しいプロジェクトを指定](~/docs/ide/media/exploreide-quicklaunchnewprojectsmall.png "ExploreIDE-QuickLaunchNewProjectsmall")  
+     ![クイック起動ボックスで新しいプロジェクトを指定](~/ide/media/exploreide-quicklaunchnewprojectsmall.png "ExploreIDE-QuickLaunchNewProjectsmall")  
   
 2.  たとえば、左側のペインで **[インストール済み]**、 **[テンプレート]**、 **[Visual C#]**、 **[Windows]**の順に選択してから、中央のペインで [WPF アプリケーション] を選択して、Visual Basic か Visual C# の WPF アプリケーション テンプレートを選択します。  下部の [新しいプロジェクト] ダイアログで、プロジェクトに HelloWPFApp という名前を付けます。  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 05/30/2017
   
  図 5: プロジェクト項目  
   
- ![HelloWPFApp ファイルを読み込んだソリューション エクスプローラー](~/docs/ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
+ ![HelloWPFApp ファイルを読み込んだソリューション エクスプローラー](~/ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
   
  プロジェクトは、作成後にカスタマイズできます。 **[プロパティ]** ウィンドウ ( **[表示]** メニュー上) を使って、プロジェクト項目、コントロール、およびアプリケーション内のその他の項目に関するオプションを表示して変更できます。 プロジェクトのプロパティおよびプロパティ ページを使用すると、プロジェクトおよびソリューションのオプションを表示および変更できます。  
   
@@ -121,7 +121,7 @@ ms.lasthandoff: 05/30/2017
   
 1.  次の手順では、MainWindow にもっと具体的な名前を付けます。 **ソリューション エクスプローラー**で、MainWindow.xaml を選択します。 **[プロパティ]** ウィンドウが表示されているはずですが、表示されない場合は、**[表示]** メニューをクリックし、**[プロパティ ウィンドウ]** 項目をクリックします。 **[File Name]** プロパティを `Greetings.xaml`に変更します。  
   
-     ![ファイル名が強調表示されたプロパティ ウィンドウ](~/docs/ide/media/exploreide-filenameinpropertieswindow.png "ExploreIDE-FilenameinPropertiesWindow")  
+     ![ファイル名が強調表示されたプロパティ ウィンドウ](~/ide/media/exploreide-filenameinpropertieswindow.png "ExploreIDE-FilenameinPropertiesWindow")  
   
      ファイルの名前が Greetings.xaml になったことが**ソリューション エクスプローラー** に示され、MainWindow.xaml ノードを展開する (ノードにフォーカスを設定し、右矢印キーを押す) と、MainWindow.xaml.vb または MainWindow.xaml.cs の名前が Greetings.xaml.vb または Greetings.xaml.cs になったことが示されます。 このコード ファイルは、.xaml ファイル ノードの下に入れ子になっており、相互に非常に密接に関連していることが示されます。  
   
@@ -274,7 +274,7 @@ ms.lasthandoff: 05/30/2017
   
 1.  **[デバッグ]**、 **[デバッグの開始]**の順に選択して、デバッガーを起動します。  
   
-     ![[デバッグ] メニューの [デバッグの開始] コマンド](~/docs/ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
+     ![[デバッグ] メニューの [デバッグの開始] コマンド](~/ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
   
      ダイアログ ボックスが表示され、IOException が発生し、リソース 'mainwindow.xaml' を見つけることができないことが示されます。  
   
@@ -340,7 +340,7 @@ ms.lasthandoff: 05/30/2017
   
 2.  ツールバー上のドロップダウン コントロール (現時点で [デバッグ] になっている) を使って、HelloWPFApp のビルド構成を **[デバッグ]** から **[リリース]** に変更します。  
   
-     ![[解放] を選択した標準ツール バー](~/docs/ide/media/exploreide-releaseversion.png "ExploreIDE-ReleaseVersion")  
+     ![[解放] を選択した標準ツール バー](~/ide/media/exploreide-releaseversion.png "ExploreIDE-ReleaseVersion")  
   
 3.  **[ビルド]**を選択し、 **[ソリューションのビルド]** を選択するか F6 キーを押して、ソリューションをビルドします。  
   

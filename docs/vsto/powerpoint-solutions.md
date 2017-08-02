@@ -33,7 +33,7 @@ caps.handback.revision: 41
   
  [!INCLUDE[appliesto_pptallapp](../vsto/includes/appliesto-pptallapp-md.md)]  
   
- ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、「[操作方法: Microsoft PowerPoint 用のアドインを作成する](http://go.microsoft.com/fwlink/?LinkId=132767)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、「[操作方法: Microsoft PowerPoint 用のアドインを作成する](http://go.microsoft.com/fwlink/?LinkId=132767)」を参照してください。  
   
 ## PowerPoint のオブジェクト モデルを使用した PowerPoint の自動化  
  PowerPoint オブジェクト モデルでは、PowerPoint の自動化に使用できる型が多数公開されています。 それらの型によって、次のような一般的なタスクを実行するコードを作成できます。  

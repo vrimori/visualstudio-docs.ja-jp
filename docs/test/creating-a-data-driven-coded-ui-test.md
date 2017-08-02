@@ -53,7 +53,7 @@ ms.lasthandoff: 05/13/2017
   
 2.  アクションを記録することを選択します。  
   
-     ![アクション記録を選択する](~/docs/test/media/cuit_datadriven_generatecodedialog.png "CUIT_dataDriven_GenerateCodeDialog")  
+     ![アクション記録を選択する](~/test/media/cuit_datadriven_generatecodedialog.png "CUIT_dataDriven_GenerateCodeDialog")  
   
 3.  電卓アプリを開き、テストの記録を開始します。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/13/2017
   
 4.  1 と 2 を加算し、レコーダーを一時停止し、テスト メソッドを生成します。 後で、このユーザー入力の値をデータ ファイルからの値に置換することになります。  
   
-     ![テスト メソッドを生成する](~/docs/test/media/cuit_datadriven_cuitbuildergencode.png "CUIT_dataDriven_CUITBuilderGenCode")  
+     ![テスト メソッドを生成する](~/test/media/cuit_datadriven_cuitbuildergencode.png "CUIT_dataDriven_CUITBuilderGenCode")  
   
      テスト ビルダーを閉じます。 メソッドがテストに追加されます。  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/13/2017
   
 8.  アサーションを構成した後、ビルダーからコードを再生成します。 これにより、検証用の新しいメソッドが作成されます。  
   
-     ![アサーション メソッドを生成する](~/docs/test/media/cuit_datadriven_assertiongencode.png "CUIT_dataDriven_AssertionGenCode")  
+     ![アサーション メソッドを生成する](~/test/media/cuit_datadriven_assertiongencode.png "CUIT_dataDriven_AssertionGenCode")  
   
      `ValidateSum` メソッドは、`AddNumbers` メソッドの結果を検証するため、コード ブロックの末尾に移動します。  
   

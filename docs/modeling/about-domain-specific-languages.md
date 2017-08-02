@@ -38,7 +38,7 @@ C\# ではUML などの汎用言語とは異なり特定の問題 \(DSL\) 空間
   
  次の図はグラフィカルな的に小さい DSL モデルを示しています :  
   
- ![Tudor ファミリ ツリー モデル](~/docs/modeling/media/tudor_familytreemodel.png "Tudor\_FamilyTreeModel")  
+ ![Tudor ファミリ ツリー モデル](~/modeling/media/tudor_familytreemodel.png "Tudor\_FamilyTreeModel")  
   
 ## DSL を実行できる操作は  
  DSL の一般的な用途はプログラム コードやそのほかの成果物を生成します。  DSL を定義するとDSL モデルを読み込みテキスト ファイルを生成する  *テキスト テンプレートを*  定義できます。  

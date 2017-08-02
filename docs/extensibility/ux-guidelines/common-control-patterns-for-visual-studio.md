@@ -104,7 +104,7 @@ ms.lasthandoff: 05/04/2017
 #### <a name="layout"></a>レイアウト  
 コンボ ボックスとドロップダウン リストは、任意のパスと同様に、長いフィールドの長さと一致することや、順番に表示されます、ウィンドウの幅に合わせていないは、コンテンツに合わせてサイズ必要があります。  
   
-![: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。](~/docs/extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707-03_IncorrectDropDownLayout")<br />: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。
+![: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。](~/extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707-03_IncorrectDropDownLayout")<br />: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。
   
 ![正しい: ドロップダウン リストにサイズが調整の翻訳の増加を許可するが、不必要に長時間かかる場合。](../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707-04_CorrectDropDownLayout")<br />正しい: ドロップダウン リストにサイズが調整の翻訳の増加を許可するが、不必要に長時間かかる場合。 
   
@@ -160,11 +160,11 @@ ms.lasthandoff: 05/04/2017
 
 静的なテキストは、ときに、独自の抑制なし ダイアログ ボックスでグループ化の競合が起こらないを指定できます。 ボックスの余分な行が本当に必要なかどうかを決定します。 例は、次に示すように、グループ行によって作成されたセクションの下のディレクトリ パスの表示を示します。  
 
-![テキスト コントロールに静的なテキストの情報](~/docs/extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />テキスト コントロールに静的なテキストの情報
+![テキスト コントロールに静的なテキストの情報](~/extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />テキスト コントロールに静的なテキストの情報
 
 その他のグループ化された領域が存在し、読みやすさ、役立つ情報の包含するダイアログ ボックスでセクションが非表示または表示することができ、(ように、 **[プロパティ] ウィンドウ**説明ペイン) または類似の UI と一致する、静的なテキスト ボックス内に配置する場合します。 このグループ ボックスの 1 つの規則をする必要があり、色付きの`ButtonShadow`:
 
-![[プロパティ] ウィンドウで静的なテキスト](~/docs/extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />[プロパティ] ウィンドウで静的なテキスト
+![[プロパティ] ウィンドウで静的なテキスト](~/extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />[プロパティ] ウィンドウで静的なテキスト
 
 ### <a name="read-only-text-box"></a>読み取り専用のテキスト ボックス
 
@@ -172,7 +172,7 @@ ms.lasthandoff: 05/04/2017
 
 テキスト ボックスがアクティブになることができます (編集)、ユーザーがチェック/オフにする チェック ボックスまたはラジオ ボタンを選択する/選択解除するなど、関連付けられたコントロールを変更します。 たとえば、**ツール&gt;オプション**以下に示すページ、**ホーム ページ**テキスト ボックスがアクティブになったときに、**デフォルトを使用** チェック ボックスがオフになってです。
 
-![読み取り専用テキスト ボックスで、アクティブと非アクティブの状態を表示](~/docs/extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />読み取り専用テキスト ボックスで、アクティブと非アクティブの状態を表示
+![読み取り専用テキスト ボックスで、アクティブと非アクティブの状態を表示](~/extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />読み取り専用テキスト ボックスで、アクティブと非アクティブの状態を表示
 
 ### <a name="using-text-in-dialogs"></a>ダイアログ ボックスでテキストを使用します。
 
@@ -219,7 +219,7 @@ ms.lasthandoff: 05/04/2017
 
 -   透かしを中央揃えまたは左揃えことができます。 配置の意思決定を行うときに、標準的なデザイン規則を適用します。 バック グラウンドでは、レベルのウォーターマークを選択することはできません。
 
-![ウォーターマーク テキストの例](~/docs/extensibility/ux-guidelines/media/WatermarkTextExample.gif)<br />ウォーターマーク テキストの例
+![ウォーターマーク テキストの例](~/extensibility/ux-guidelines/media/WatermarkTextExample.gif)<br />ウォーターマーク テキストの例
 
 ### <a name="context-specific-dynamic-text"></a>コンテキスト固有の (動的) テキスト
 
@@ -319,12 +319,12 @@ Visual Studio でのほとんどのボタンは、ユーティリティのダイ
 | 関数 | ボタン |  
 | --- | --- |  
 | 追加 | ![グラフィカルな「追加」ボタン](../../extensibility/ux-guidelines/media/070703-08_buttonadd.png "070703 08_ButtonAdd") |
-| 削除 | ![グラフィカルな [削除] ボタン](~/docs/extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
+| 削除 | ![グラフィカルな [削除] ボタン](~/extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
 | すべて追加 | ![グラフィカルな すべて追加"ボタン](../../extensibility/ux-guidelines/media/070703-10_buttonaddall.png "070703 10_ButtonAddAll") |
 | すべて削除 | ![グラフィカルな [すべて削除] ボタン](../../extensibility/ux-guidelines/media/070703-11_buttonremoveall.png "070703 11_ButtonRemoveAll") |
 | 上へ | ![グラフィカルな 上へ移動"ボタン](../../extensibility/ux-guidelines/media/070703-12_buttonmoveup.png "070703 12_ButtonMoveUp") |
-| 下へ移動 | ![グラフィカルな 下へ移動"ボタン](~/docs/extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
-| 削除 | ![グラフィカルな"Delete"ボタン](~/docs/extensibility/ux-guidelines/media/070703-14_buttondelete.png "070703 14_ButtonDelete") |
+| 下へ移動 | ![グラフィカルな 下へ移動"ボタン](~/extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
+| 削除 | ![グラフィカルな"Delete"ボタン](~/extensibility/ux-guidelines/media/070703-14_buttondelete.png "070703 14_ButtonDelete") |
   
 ##### <a name="sizing-and-spacing"></a>サイズ変更と間隔  
 グラフィカルなボタンは、同じの短いバージョンのサイズ変更、 **[参照...]**ボタン (26 x 23 ピクセル単位)。  
@@ -371,7 +371,7 @@ Visual Studio でのほとんどのボタンは、ユーティリティのダイ
 #### <a name="scroll-bars"></a>スクロール バー  
 コンテンツがツリー ビュー コントロール内に収まる場合、スクロール バーを非表示常にする必要があります。 隠しファイル、または半透明スクロール可能なウィンドウで、ツリー ビューを含むウィンドウにフォーカスがあるときに表示されるまたはツリーのホバー時にそれ自体を表示がスクロール バーもかまわない。  
   
-![内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平方向のスクロール バーが表示されます。](~/docs/extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705-4_Scrollbars")<br />内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平方向のスクロール バーが表示されます。
+![内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平方向のスクロール バーが表示されます。](~/extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705-4_Scrollbars")<br />内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平方向のスクロール バーが表示されます。
   
 ###  <a name="BKMK_TreeViewInteractions"></a>ツリー ビューの相互作用  
   

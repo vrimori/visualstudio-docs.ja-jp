@@ -132,7 +132,7 @@ Office プロジェクトの出力を含めるように、**OfficeAddInSetup** �
 2. メニュー バーの **[表示]**、**[開く]** の順にクリックします。  
   
 3. **[Project Assistant]** ページの下部で、次の図に示す **[Application Files]** をクリックします。  
-    ![[アプリケーション ファイル] ボタン。](~/docs/vsto/media/installshield-applicationfiles.png "[アプリケーション ファイル] ボタン。")  
+    ![[アプリケーション ファイル] ボタン。](~/vsto/media/installshield-applicationfiles.png "[アプリケーション ファイル] ボタン。")  
   
 4. **[Application Files]** ページで、**[Add Project Outputs]** をクリックします。  
   
@@ -267,7 +267,7 @@ Office プロジェクトの出力を含めるように、**OfficeAddInSetup** �
     メニュー バーの **[表示]**、**[開く]** の順にクリックします。  
   
 2. **[Project Assistant]** ページの下部で、次の図に示す **[Application Registry]** をクリックします。  
-    ![[アプリケーション レジストリ] ボタン。](~/docs/vsto/media/installshield-applicationregistry.gif "[アプリケーション レジストリ] ボタン。")  
+    ![[アプリケーション レジストリ] ボタン。](~/vsto/media/installshield-applicationregistry.gif "[アプリケーション レジストリ] ボタン。")  
   
     **[Application Registry]** ページが表示されます。  
   
@@ -385,7 +385,7 @@ Office プロジェクトの出力を含めるように、**OfficeAddInSetup** �
 2. メニュー バーの **[表示]**、**[開く]** の順にクリックします。  
   
 3. **[Project Assistant]** ページの下部で、次の図に示す **[Application Files]** をクリックします。  
-    ![[アプリケーション ファイル] ボタン。](~/docs/vsto/media/installshield-applicationfiles.png "[アプリケーション ファイル] ボタン。")  
+    ![[アプリケーション ファイル] ボタン。](~/vsto/media/installshield-applicationfiles.png "[アプリケーション ファイル] ボタン。")  
   
 4. **[Application Files]** ページで、**[Add Project Outputs]** をクリックします。  
     **[Visual Studio Output Selector]** ダイアログ ボックスが表示されます。  

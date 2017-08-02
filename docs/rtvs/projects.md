@@ -49,11 +49,11 @@ R プロジェクト (`.rxproj` ファイル) には、プロジェクトに関�
 1. **[ファイル]、[新規]、[プロジェクト]** の順に選択します。(Ctrl+Shift+N)
 1. **[テンプレート]、[R]** で "R Project" を選択し、プロジェクトに名前と場所を指定し、**[OK]** を選択します。
 
-    ![Visual Studio 内の R (VS2017 の RTVS) の [新しいプロジェクト] ダイアログ ボックス](~/docs/rtvs/media/getting-started-01-new-project.png)
+    ![Visual Studio 内の R (VS2017 の RTVS) の [新しいプロジェクト] ダイアログ ボックス](~/rtvs/media/getting-started-01-new-project.png)
 
 エディターに空の `script.R` ファイルが開き、プロジェクトが作成されます。 また、**ソリューション エクスプローラー**では、プロジェクト内に他の 2 つのファイルが表示されます。
 
-![テンプレートから作成される R プロジェクトの内容](~/docs/rtvs/media/projects-template-results.png)
+![テンプレートから作成される R プロジェクトの内容](~/rtvs/media/projects-template-results.png)
 
 `.Rhistory` では、[[R インタラクティブ]](interactive-repl.md) ウィンドウに入力したすべてのコマンドが記録されます。 **[R Tools]、[ウィンドウ]、[履歴]** コマンドの順に選択して専用の履歴ウィンドウを開くことができます。このウィンドウには、履歴の内容を消去できるツールバー ボタンとコンテキスト メニュー項目があります。
 
@@ -133,7 +133,7 @@ Visual Studio ソリューションには、1 つの論理的な場所に関連�
 
 以下の例では、R と Azure Machine Learning を使用して構築したモデルを含む R プロジェクト、Python/scikit-learn プロジェクト、演算処理が集中するモジュールを含む C++ プロジェクト、データ管理用の SQL プロジェクト、結果を公開する Web サイト用の Python/Bottle プロジェクトがソリューションに含まれています。
 
-![ソリューション内の複数の関連するプロジェクトが表示された Visual Studio ソリューション エクスプローラー](~/docs/rtvs/media/projects-polyglot.png)
+![ソリューション内の複数の関連するプロジェクトが表示された Visual Studio ソリューション エクスプローラー](~/rtvs/media/projects-polyglot.png)
 
 太字のプロジェクトはソリューションの "スタートアップ" プロジェクトです。これを変更するには、別のプロジェクトを右クリックし、**[スタートアップ プロジェクトに設定]** を選択します。
 
