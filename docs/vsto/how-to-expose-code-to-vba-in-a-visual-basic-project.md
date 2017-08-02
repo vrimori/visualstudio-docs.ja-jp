@@ -38,7 +38,7 @@ caps.handback.revision: 46
   
 -   [ホスト項目クラスにはないコードを公開する](#NonHostItem)  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Call VSTO Code from VBA? \(操作方法: VBA から VSTO コードを呼び出す\)](http://go.microsoft.com/fwlink/?LinkId=136757)」を参照してください。  
+ ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Call VSTO Code from VBA? \(操作方法: VBA から VSTO コードを呼び出す\)](http://go.microsoft.com/fwlink/?LinkId=136757)」を参照してください。  
   
 ##  <a name="HostItemCode"></a> ホスト項目クラスにあるコードを公開する  
  ホスト項目クラスにある Visual Basic コードを VBA コードで呼び出すことができるようにするには、ホスト項目の **EnableVbaCallers** プロパティを **True** に設定します。  

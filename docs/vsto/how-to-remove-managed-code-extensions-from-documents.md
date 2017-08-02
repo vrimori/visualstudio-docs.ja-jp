@@ -29,7 +29,7 @@ caps.handback.revision: 29
   
  カスタマイズ アセンブリを削除するには、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] によって提供されるいずれかの RemoveCustomization メソッドを使用します。  使用するメソッドは、実行時にカスタマイズを削除する \(Word 文書または Excel ブックが開いているときにカスタマイズでコードを実行する\) か、閉じられたドキュメントまたは Microsoft Office がインストールされていないサーバー上にあるドキュメントからカスタマイズを削除するかによって異なります。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Attach or Detach a VSTO Assembly from a Word Document? \(操作方法: Word 文書から VSTO アセンブリをアタッチまたはデタッチする\)](http://go.microsoft.com/fwlink/?LinkId=136782)」を参照してください。  
+ ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Attach or Detach a VSTO Assembly from a Word Document? \(操作方法: Word 文書から VSTO アセンブリをアタッチまたはデタッチする\)](http://go.microsoft.com/fwlink/?LinkId=136782)」を参照してください。  
   
 ### 実行時にカスタマイズ アセンブリを削除するには  
   

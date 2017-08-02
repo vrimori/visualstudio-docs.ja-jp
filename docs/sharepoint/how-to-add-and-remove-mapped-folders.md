@@ -65,7 +65,7 @@ caps.handback.revision: 22
   
 1.  前の手順で作成したプロジェクトには、マップされたフォルダーをクリックします。  
   
-2.  **\[プロパティ\]** ウィンドウで、**Deployment location** のプロパティの省略記号ボタン \(![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.png "ASP.NET モバイル デザイナー楕円")\) をクリックします。  
+2.  **\[プロパティ\]** ウィンドウで、**Deployment location** のプロパティの省略記号ボタン \(![ASP.NET モバイル デザイナー楕円](~/docs/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")\) をクリックします。  
   
 3.  **\[SharePoint のマップされたフォルダーの追加\]** ダイアログ ボックスで、マップされたフォルダーを対応付けるフォルダーを参照します。  
   

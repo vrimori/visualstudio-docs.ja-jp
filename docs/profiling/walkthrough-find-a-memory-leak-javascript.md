@@ -43,7 +43,7 @@ ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="walkthrough-find-a-memory-leak-javascript"></a>チュートリアル: メモリ リークの検出 (JavaScript)
-![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+![Windows と Windows Phone に適用](~/docs/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
  このチュートリアルでは、JavaScript メモリ アナライザーを使用し、単純なメモリの問題を特定して修復するプロセスについて説明します。 JavaScript メモリ アナライザーは、Visual Studio で、JavaScript を使用して Windows 用に開発された Windows ストア アプリに対して使用できます。 このシナリオでは、作成されるのと同じペースで破棄されるはずの DOM 要素がメモリに保持されてしまうアプリを作成します。  
   
@@ -228,7 +228,7 @@ ms.lasthandoff: 02/22/2017
   
 15. 次に示すように、オブジェクト ツリーの最上位にある HTMLDivElement オブジェクトを開きます。  
   
-     ![ヒープ上のオブジェクト数に関する差分ビュー](../profiling/media/js_mem_app_typesdiff.png "JS_Mem_App_TypesDiff")  
+     ![ヒープ上のオブジェクト数に関する差分ビュー](~/docs/profiling/media/js_mem_app_typesdiff.png "JS_Mem_App_TypesDiff")  
   
      このビューには、次のような、メモリ リークに関する有用な情報が表示されます。  
   

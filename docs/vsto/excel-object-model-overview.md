@@ -47,7 +47,7 @@ caps.handback.revision: 65
   
  ここでは、Excel オブジェクト モデルの概念について簡単に説明します。  リソースについては、「[Excel オブジェクト モデル ドキュメントの使用](#ExcelOMDocumentation)」を参照して、全体の Excel オブジェクト モデルの詳細を入手してください。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連するビデオ デモについては、「[Excel 2007 アドインでイベント ハンドラーを使用する方法](http://go.microsoft.com/fwlink/?LinkID=130291)」および「[Excel で図形を使用してバブル チャートを作成する方法](http://go.microsoft.com/fwlink/?LinkID=130313)」を参照してください。  
+ ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[Excel 2007 アドインでイベント ハンドラーを使用する方法](http://go.microsoft.com/fwlink/?LinkID=130291)」および「[Excel で図形を使用してバブル チャートを作成する方法](http://go.microsoft.com/fwlink/?LinkID=130313)」を参照してください。  
   
 ## Excel プロジェクト内のオブジェクトへのアクセス  
  Excel で新しい VSTO アドイン プロジェクトを作成すると、Visual Studio によって ThisAddIn.vb または ThisAddIn.cs というコード ファイルが自動的に作成されます。   `Me.Application` または `this.Application` を使用して、アプリケーション オブジェクトにアクセスすることができます。  

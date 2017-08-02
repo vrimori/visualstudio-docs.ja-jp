@@ -58,7 +58,7 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
   
  レポート ウィンドウは次のように表示されます。  
   
- ![[ネットワーク] ウィンドウ](../profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
+ ![[ネットワーク] ウィンドウ](~/docs/profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
   
 ## <a name="analyzing-data"></a>データを分析する  
  アプリの実行中、またはアプリが閉じられた後でも、[概要] ビューに表示されたいずれかのネットワーク操作を選択すると、キャプチャされた HTTP トラフィックを分析できます。  

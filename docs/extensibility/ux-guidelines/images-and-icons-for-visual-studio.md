@@ -80,21 +80,21 @@ ms.lasthandoff: 05/04/2017
 |||  
 |-|-|  
 |**シンボリック画像の正しい使用方法**|**シンボリック画像の不適切な使用**|  
-|![正しい [スマート タグ] アイコン](../../extensibility/ux-guidelines/media/0404-01_smarttagcorrect.png "0404 01_SmartTagCorrect")|![スマート タグ アイコンの正しくない](../../extensibility/ux-guidelines/media/0404-02_smarttagincorrect.png "0404 02_SmartTagIncorrect")|  
+|![正しい [スマート タグ] アイコン](~/docs/extensibility/ux-guidelines/media/0404-01_smarttagcorrect.png "0404 01_SmartTagCorrect")|![スマート タグ アイコンの正しくない](~/docs/extensibility/ux-guidelines/media/0404-02_smarttagincorrect.png "0404 02_SmartTagIncorrect")|  
   
  標準、容易に認識できる UI 要素がうまくアイコンも用インスタンスが生じます。 ウィンドウは、このような 1 つの例を追加します。  
   
 |||  
 |-|-|  
 |**アイコンの正しい UI 要素**|**アイコンの正しくない UI 要素**|  
-|![正しい [ウィンドウの追加] アイコン](../../extensibility/ux-guidelines/media/0404-03_addwindowcorrect.png "0404 03_AddWindowCorrect")|![不適切なウィンドウの追加 アイコン](../../extensibility/ux-guidelines/media/0404-04_addwindowincorrect.png "0404 04_AddWindowIncorrect")|  
+|![正しい [ウィンドウの追加] アイコン](~/docs/extensibility/ux-guidelines/media/0404-03_addwindowcorrect.png "0404 03_AddWindowCorrect")|![不適切なウィンドウの追加 アイコン](~/docs/extensibility/ux-guidelines/media/0404-04_addwindowincorrect.png "0404 04_AddWindowIncorrect")|  
   
  アイコンの意味に不可欠である場合を除き、基本要素として、ドキュメントを使用しないでください。 ドキュメントなし (下記参照)、意味の文書に追加の要素は、更新でドキュメントの要素は意味を通信するために必要な一方、失われます。  
   
 |||  
 |-|-|  
 |**ドキュメント アイコンの正しい使用方法**|**ドキュメント アイコンの不適切な使用**|  
-|![正しい [ドキュメント] アイコン](../../extensibility/ux-guidelines/media/0404-05_documenticoncorrect.png "0404 05_DocumentIconCorrect")|![正しくないドキュメント アイコン](../../extensibility/ux-guidelines/media/0404-06_documenticonincorrect.png "0404 06_DocumentIconIncorrect")|  
+|![正しい [ドキュメント] アイコン](~/docs/extensibility/ux-guidelines/media/0404-05_documenticoncorrect.png "0404 05_DocumentIconCorrect")|![正しくないドキュメント アイコン](~/docs/extensibility/ux-guidelines/media/0404-06_documenticonincorrect.png "0404 06_DocumentIconIncorrect")|  
   
  「表示」の概念は、最適な内容が表示されているなどと同様に、すべてのファイルを表示する例を示すアイコンで表示する必要があります。 レンズ比喩を使用してを"view"など、必要なリソース ビューの例を使用する場合の概念を示す可能性があります。  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/04/2017
 |||  
 |-|-|  
 |**正しい ツリー ビュー アイコン**|**正しくない ツリー ビュー アイコン**|  
-|![正しい [ツリー ビュー] アイコン (&) #40";"1"&"#41;] (../../extensibility/ux-guidelines/media/0404-11_treeviewcorrect1.png "0404 11_TreeViewCorrect1") ![ツリー ビュー アイコン (&) #40";"2"&"#41 です修正]。(../../extensibility/ux-guidelines/media/0404-12_treeviewcorrect2.png "0404 12_TreeViewCorrect2")|![正しくない [ツリー ビュー] アイコン (&) #40";"1"&"#41;] (../../extensibility/ux-guidelines/media/0404-13_treeviewincorrect1.png "0404 13_TreeViewIncorrect1") ![正しくないツリー ビュー アイコン (&) #40 です 2 &#41;] 。(../../extensibility/ux-guidelines/media/0404-14_treeviewincorrect2.png "0404 14_TreeViewIncorrect2")|  
+|![正しい [ツリー ビュー] アイコン (&) #40";"1"&"#41;] (~/docs/extensibility/ux-guidelines/media/0404-11_treeviewcorrect1.png "0404 11_TreeViewCorrect1") ![ツリー ビュー アイコン (&) #40";"2"&"#41 です修正]。(../../extensibility/ux-guidelines/media/0404-12_treeviewcorrect2.png "0404 12_TreeViewCorrect2")|![正しくない [ツリー ビュー] アイコン (&) #40";"1"&"#41;] (~/docs/extensibility/ux-guidelines/media/0404-13_treeviewincorrect1.png "0404 13_TreeViewIncorrect1") ![正しくないツリー ビュー アイコン (&) #40 です 2 &#41;] 。(../../extensibility/ux-guidelines/media/0404-14_treeviewincorrect2.png "0404 14_TreeViewIncorrect2")|  
   
 ### <a name="style-details"></a>スタイルの詳細  
   
@@ -128,11 +128,11 @@ ms.lasthandoff: 05/04/2017
   
  ![Visual Studio でのスタンドアロン通知](../../extensibility/ux-guidelines/media/0404-16_standalonenotificationicons.png "0404-16_StandaloneNotificationIcons")<br />スタンドアロンの通知アイコン
   
- ![タスクの完了 アイコン](../../extensibility/ux-guidelines/media/0404-17_taskcomplete.png "0404-17_TaskComplete")<br />タスクの完了 アイコン
+ ![タスクの完了 アイコン](~/docs/extensibility/ux-guidelines/media/0404-17_taskcomplete.png "0404-17_TaskComplete")<br />タスクの完了 アイコン
   
  プロジェクト アイコンは、通常、複数のサイズを含む .ico ファイルです。 ほとんどの 16 x 16 のアイコンでは、同じ要素が存在します。 32 x 32 のバージョンでは、詳細については、該当する場合、プロジェクトの種類を含むがあります。  
   
- ![Visual Studio でプロジェクト アイコン](../../extensibility/ux-guidelines/media/0404-18_iconprojectthreesizes.png "0404-18_IconProjectThreeSizes")<br />16 x 16、32 x 32 の VB Windows コントロール ライブラリ プロジェクト アイコン 
+ ![Visual Studio でプロジェクト アイコン](~/docs/extensibility/ux-guidelines/media/0404-18_iconprojectthreesizes.png "0404-18_IconProjectThreeSizes")<br />16 x 16、32 x 32 の VB Windows コントロール ライブラリ プロジェクト アイコン 
   
  ピクセル フレーム内のアイコンを中心にします。 可能でない場合、アイコン、ページのトップへ、またはフレームの右に揃えます。  
   
@@ -154,14 +154,14 @@ ms.lasthandoff: 05/04/2017
 |||  
 |-|-|  
 |**適切なサイズのパリティ**|**サイズが正しくパリティ**|  
-|![アイコンのサイズとパリティ修正](../../extensibility/ux-guidelines/media/0404-24_sizeparitycorrect.png "0404 24_SizeParityCorrect")|![正しくないアイコンのサイズとパリティ](../../extensibility/ux-guidelines/media/0404-25_sizeparityincorrect.png "0404 25_SizeParityIncorrect")|  
+|![アイコンのサイズとパリティ修正](~/docs/extensibility/ux-guidelines/media/0404-24_sizeparitycorrect.png "0404 24_SizeParityCorrect")|![正しくないアイコンのサイズとパリティ](../../extensibility/ux-guidelines/media/0404-25_sizeparityincorrect.png "0404 25_SizeParityIncorrect")|  
   
  一貫性のある行とビジュアルの重みを使用します。 その他のアイコンをサイド バイ サイドの比較を使用して構築するアイコンの比較を評価します。 使用して、全体の 16 x 16 フレームが 15 x 15、または小さい方を使用しないでください。 負の値に正 (濃い光) 比率を 50/50 にする必要があります。  
   
 |||  
 |-|-|  
 |**正しい負の値が正数比**|**正しくない負の値に正の値の比率**|  
-|![視覚的なウェイトのアイコン (&) #40 です。 1 &#41; を修正します。](../../extensibility/ux-guidelines/media/0404-26_visualweightcorrect1.png "0404-26_VisualWeightCorrect1")<br /><br /> ![視覚的なウェイトのアイコン (&) #40 です。 2 &#41; を修正します。](../../extensibility/ux-guidelines/media/0404-27_visualweightcorrect2.png "0404-27_VisualWeightCorrect2")<br /><br /> ![視覚的なウェイトのアイコン (&) #40 です。 3 &#41; を修正します。](../../extensibility/ux-guidelines/media/0404-28_visualweightcorrect3.png "0404-28_VisualWeightCorrect3")|![アイコンの正しくない視覚的なウェイト](../../extensibility/ux-guidelines/media/0404-29_visualweightincorrect.png "0404 29_VisualWeightIncorrect")|  
+|![視覚的なウェイトのアイコン (&) #40 です。 1 &#41; を修正します。](../../extensibility/ux-guidelines/media/0404-26_visualweightcorrect1.png "0404-26_VisualWeightCorrect1")<br /><br /> ![視覚的なウェイトのアイコン (&) #40 です。 2 &#41; を修正します。](~/docs/extensibility/ux-guidelines/media/0404-27_visualweightcorrect2.png "0404-27_VisualWeightCorrect2")<br /><br /> ![視覚的なウェイトのアイコン (&) #40 です。 3 &#41; を修正します。](../../extensibility/ux-guidelines/media/0404-28_visualweightcorrect3.png "0404-28_VisualWeightCorrect3")|![アイコンの正しくない視覚的なウェイト](../../extensibility/ux-guidelines/media/0404-29_visualweightincorrect.png "0404 29_VisualWeightIncorrect")|  
   
  シンプルで同等の図形と補色角度を使用すると、要素の整合性を損なうことがなく、要素を構築できます。 可能な場合は、45 度または 90 度の角度を使用します。  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 05/04/2017
 |||  
 |-|-|  
 |**アウトラインの正しい使用方法**|**アウトラインの不適切な使用**|  
-|![アウトラインを修正](../../extensibility/ux-guidelines/media/0404-36_outlinescorrect.png "0404 36_OutlinesCorrect")|![正しくないアウトライン](../../extensibility/ux-guidelines/media/0404-37_outlinesincorrect.png "0404 37_OutlinesIncorrect")|  
+|![アウトラインを修正](~/docs/extensibility/ux-guidelines/media/0404-36_outlinescorrect.png "0404 36_OutlinesCorrect")|![正しくないアウトライン](../../extensibility/ux-guidelines/media/0404-37_outlinesincorrect.png "0404 37_OutlinesIncorrect")|  
   
 #### <a name="icon-types"></a>アイコンの種類  
  **シェルおよびコマンド バー**個のうち 3 つ次の要素で構成されているアイコン: 基数が 1 つ、修飾子を 1 つ、1 つのアクション、または 1 つの状態。  
@@ -199,7 +199,7 @@ ms.lasthandoff: 05/04/2017
   
  **ツール ウィンドウ コマンド バー**個のうち 3 つ次の要素で構成されているアイコン: 基数が 1 つ、修飾子を 1 つ、1 つのアクション、または 1 つの状態。  
   
- ![ツール ウィンドウ コマンド バーのアイコンの例](../../extensibility/ux-guidelines/media/0404-39_toolwindowcommandbaricons.png "0404-39_ToolWindowCommandBarIcons")<br />ツール ウィンドウ コマンド バーのアイコンの例
+ ![ツール ウィンドウ コマンド バーのアイコンの例](~/docs/extensibility/ux-guidelines/media/0404-39_toolwindowcommandbaricons.png "0404-39_ToolWindowCommandBarIcons")<br />ツール ウィンドウ コマンド バーのアイコンの例
   
  **ツリー ビューの曖昧性解消子**個のうち 3 つ次の要素で構成されているアイコン: 基数が 1 つ、修飾子を 1 つ、1 つのアクション、または 1 つの状態。  
   
@@ -290,7 +290,7 @@ ms.lasthandoff: 05/04/2017
 |-----------|----------|---------------------------|------------|-------------|  
 |バック グラウンド/ダークグレー|VS BG|424242 / 66,66,66|![見本 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![基本パレットの例](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405 02_BasePaletteExample")|  
 |フォア グラウンド/低負荷|VS FG|F0EFF1 240,239,241/|![見本f0eff1](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||  
-|アウトライン|VS アウト|F6F6F6 246,246,246/|![見本f6f6f6](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")||  
+|アウトライン|VS アウト|F6F6F6 246,246,246/|![見本f6f6f6](~/docs/extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")||  
   
  基本の色に加えて、各アイコンは拡張パレットから 1 つの追加の配色を含めることです。  
   
@@ -301,7 +301,7 @@ ms.lasthandoff: 05/04/2017
   
 |使用方法|名前|値 (すべてのテーマ)|見本|  
 |-----------|----------|--------------------------|------------|  
-|正|VS 操作緑|388A34 56,138,52/|![見本 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
+|正|VS 操作緑|388A34 56,138,52/|![見本 388A34](~/docs/extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
 |負|VS アクション赤|A1260D 161,38,13/|![見本 A1260D](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|  
 |ニュートラル|VS 操作青|00539 C/0,83,156|![見本 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
 |/新規作成|VS 操作オレンジ色|C27D1A 194,156,26/|![見本c27d1a](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
@@ -311,32 +311,32 @@ ms.lasthandoff: 05/04/2017
   
 |||||  
 |-|-|-|-|  
-|![実行アイコン](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />実行|![[クエリ] アイコンを実行します。](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405-04_ExecuteQuery")<br />クエリを実行します。|![すべての手順のアイコンを再生します。](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405-05_PlayAllSteps")<br />すべてのステップを再生します。|![コントロール アイコンを追加します。](../../extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405-06_AddControl")<br />コントロールの追加|  
+|![実行アイコン](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />実行|![[クエリ] アイコンを実行します。](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405-04_ExecuteQuery")<br />クエリを実行します。|![すべての手順のアイコンを再生します。](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405-05_PlayAllSteps")<br />すべてのステップを再生します。|![コントロール アイコンを追加します。](~/docs/extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405-06_AddControl")<br />コントロールの追加|  
   
  赤の場合は負の値の操作の修飾子「の削除、」「停止」と同じようにため「キャンセル」と「閉じる」。  
   
 |||||  
 |-|-|-|-|  
-|![削除のリレーションシップ アイコン](../../extensibility/ux-guidelines/media/0405-07_deleterelationship.png "0405-07_DeleteRelationship")<br />リレーションシップを削除します。|![[列] アイコンを削除します。](../../extensibility/ux-guidelines/media/0405-08_deletecolumn.png "0405-08_DeleteColumn")<br />列の削除|![[クエリ] アイコンを停止します。](../../extensibility/ux-guidelines/media/0405-09_stopquery.png "0405-09_StopQuery")<br />クエリの停止|![接続 [オフライン] アイコン](../../extensibility/ux-guidelines/media/0405-10_connectionoffline.png "0405-10_ConnectionOffline")<br />オフラインの接続|  
+|![削除のリレーションシップ アイコン](~/docs/extensibility/ux-guidelines/media/0405-07_deleterelationship.png "0405-07_DeleteRelationship")<br />リレーションシップを削除します。|![[列] アイコンを削除します。](~/docs/extensibility/ux-guidelines/media/0405-08_deletecolumn.png "0405-08_DeleteColumn")<br />列の削除|![[クエリ] アイコンを停止します。](../../extensibility/ux-guidelines/media/0405-09_stopquery.png "0405-09_StopQuery")<br />クエリの停止|![接続 [オフライン] アイコン](~/docs/extensibility/ux-guidelines/media/0405-10_connectionoffline.png "0405-10_ConnectionOffline")<br />オフラインの接続|  
   
  青は修飾子を最もよく「開くには、」「次に、」"Previous、"と同じように、矢印として表されます「インポート」、「エクスポート」ニュートラルのアクションに適用します。  
   
 |||||  
 |-|-|-|-|  
-|![フィールドのアイコン](../../extensibility/ux-guidelines/media/0405-11_gotofield.png "0405-11_GoToField")<br />フィールドに移動します。|![チェック &#45; をバッチ処理アイコン](../../extensibility/ux-guidelines/media/0405-12_batchedcheckin.png "0405-12_BatchedCheckIn")<br />バッチ処理されたチェックイン|![[アドレス エディター] アイコン](../../extensibility/ux-guidelines/media/0405-13_addresseditor.png "0405-13_AddressEditor")<br />アドレス エディター|![[関連付けエディター] アイコン](../../extensibility/ux-guidelines/media/0405-14_associationeditor.png "0405-14_AssociationEditor")<br />関連付けエディター|  
+|![フィールドのアイコン](~/docs/extensibility/ux-guidelines/media/0405-11_gotofield.png "0405-11_GoToField")<br />フィールドに移動します。|![チェック &#45; をバッチ処理アイコン](../../extensibility/ux-guidelines/media/0405-12_batchedcheckin.png "0405-12_BatchedCheckIn")<br />バッチ処理されたチェックイン|![[アドレス エディター] アイコン](~/docs/extensibility/ux-guidelines/media/0405-13_addresseditor.png "0405-13_AddressEditor")<br />アドレス エディター|![[関連付けエディター] アイコン](~/docs/extensibility/ux-guidelines/media/0405-14_associationeditor.png "0405-14_AssociationEditor")<br />関連付けエディター|  
   
  濃い gold は「新規」修飾子は、主に使用されます。  
   
 |||||  
 |-|-|-|-|  
-|![新しいプロジェクト アイコン](../../extensibility/ux-guidelines/media/0405-15_newproject.png "0405-15_NewProject")<br />新しいプロジェクト|![[新しいグラフ] アイコンを作成します。](../../extensibility/ux-guidelines/media/0405-16_createnewgraph.png "0405-16_CreateNewGraph")<br />新しいグラフを作成します。|![新しい単体テスト アイコン](../../extensibility/ux-guidelines/media/0405-17_newunittest.png "0405-17_NewUnitTest")<br />新しい単体テスト|![新しいリスト アイテム アイコン](../../extensibility/ux-guidelines/media/0405-18_newlistitem.png "0405-18_NewListItem")<br />新しいリスト アイテム|  
+|![新しいプロジェクト アイコン](~/docs/extensibility/ux-guidelines/media/0405-15_newproject.png "0405-15_NewProject")<br />新しいプロジェクト|![[新しいグラフ] アイコンを作成します。](../../extensibility/ux-guidelines/media/0405-16_createnewgraph.png "0405-16_CreateNewGraph")<br />新しいグラフを作成します。|![新しい単体テスト アイコン](~/docs/extensibility/ux-guidelines/media/0405-17_newunittest.png "0405-17_NewUnitTest")<br />新しい単体テスト|![新しいリスト アイテム アイコン](../../extensibility/ux-guidelines/media/0405-18_newlistitem.png "0405-18_NewListItem")<br />新しいリスト アイテム|  
   
 #### <a name="special-cases"></a>特殊なケース  
  特殊な場合は、色分けされたアクション修飾子可能性があります単独で使用スタンドアロン アイコンとしてします。 アイコンに使用される色は、アイコンが関連付けられているアクションを反映します。 この使用も含め、アイコンの小さなサブセットに制限されています。  
   
 ||||||  
 |-|-|-|-|-|  
-|![実行アイコン](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />実行|![[停止] アイコン](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")<br />停止|![[削除] アイコン](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")<br />削除|![[保存] アイコン](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")<br />Save|![戻る アイコンを移動します。](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")<br />戻る|  
+|![実行アイコン](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />実行|![[停止] アイコン](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")<br />停止|![[削除] アイコン](~/docs/extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")<br />削除|![[保存] アイコン](~/docs/extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")<br />Save|![戻る アイコンを移動します。](~/docs/extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")<br />戻る|  
   
 ### <a name="code-hierarchy-palette"></a>コード階層パレット  
   
@@ -353,20 +353,20 @@ ms.lasthandoff: 05/04/2017
 |-----------|----------|--------------------------|------------|  
 |ASP では、HTML、WPF|ASP HTML WPF 青|0095D 7 0,149,215/|![見本 0095d7](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|  
 |C++|CPP 紫|9B4F96 155,79,150/|![見本 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
-|C#|CS 緑 (VS アクション緑)|388A34 56,138,52/|![見本 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
-|CSS|CSS 赤|BD1E2D 189,30,45/|![見本bd1e2d](../../extensibility/ux-guidelines/media/0405_bd1e2d.png "0405_BD1E2D")|  
+|C#|CS 緑 (VS アクション緑)|388A34 56,138,52/|![見本 388A34](~/docs/extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
+|CSS|CSS 赤|BD1E2D 189,30,45/|![見本bd1e2d](~/docs/extensibility/ux-guidelines/media/0405_bd1e2d.png "0405_BD1E2D")|  
 |F#|FS 紫|672878 / 103,40,120|![見本 672878](../../extensibility/ux-guidelines/media/0405_672878.png "0405_672878")|  
 |JavaScript|JS オレンジ色|F 16421 241,100,33/|![見本 f 16421](../../extensibility/ux-guidelines/media/0405_f16421.png "0405_F16421")|  
 |VB|VB 青 (VS アクション青)|00539 C/0,83,156|![見本 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
-|TypeScript|TS オレンジ色|E04C06 224,76,6/|![見本e04c06](../../extensibility/ux-guidelines/media/0405_e04c06.png "0405_E04C06")|  
-|Python|PY 緑|879636 / 135,150,54|![見本 879636](../../extensibility/ux-guidelines/media/0405_879636.png "0405_879636")|  
+|TypeScript|TS オレンジ色|E04C06 224,76,6/|![見本e04c06](~/docs/extensibility/ux-guidelines/media/0405_e04c06.png "0405_E04C06")|  
+|Python|PY 緑|879636 / 135,150,54|![見本 879636](~/docs/extensibility/ux-guidelines/media/0405_879636.png "0405_879636")|  
   
 ##### <a name="examples-of-icons-with-language-modifiers"></a>Language 修飾子のアイコンの例  
   
 |||||||  
 |-|-|-|-|-|-|  
-|![Visual Basic アイコン](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")<br />VB|![C & #35 です。アイコン](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")<br />C#|![C &#43; #43 です。アイコン](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")<br />C++|![F & #35 です。アイコン](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")<br />F#|![JavaScript アイコン](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")<br />JavaScript|![Python アイコン](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")<br />Python|  
-|![HTML アイコン](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![[WPF] アイコン](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![ASP アイコン](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![CSS アイコン](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![TypeScript アイコン](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript||  
+|![Visual Basic アイコン](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")<br />VB|![C & #35 です。アイコン](~/docs/extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")<br />C#|![C &#43; #43 です。アイコン](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")<br />C++|![F & #35 です。アイコン](~/docs/extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")<br />F#|![JavaScript アイコン](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")<br />JavaScript|![Python アイコン](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")<br />Python|  
+|![HTML アイコン](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![[WPF] アイコン](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![ASP アイコン](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![CSS アイコン](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![TypeScript アイコン](~/docs/extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript||  
   
 #### <a name="intellisense"></a>IntelliSense  
  IntelliSense アイコンは、排他的なカラー パレットを使用します。 これらの色は、IntelliSense のポップアップ リスト内の別の項目の間で簡単に見分けるやすくために使用されます。  
@@ -376,33 +376,33 @@ ms.lasthandoff: 05/04/2017
 |イベント クラス|VS 操作オレンジ色|C27D1A 194,125,26/|![見本c27d1a](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
 |拡張メソッド、メソッド、モジュール、デリゲート|VS 操作紫|652 D 90/101,45,144|![見本 652d90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|  
 |インターフェイスのフィールド、列挙型項目、マクロ、構造体、共用体の値の型、演算子、|VS 操作青|00539 C/0,83,156|![見本 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
-|オブジェクト|VS 操作緑|388A34 56,138,52/|![見本 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
+|オブジェクト|VS 操作緑|388A34 56,138,52/|![見本 388A34](~/docs/extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
 |定数、例外、列挙型項目、マップ、マップ項目、Namespace、テンプレート、種類の定義|バック グラウンド (VS BG)|424242 / 66,66,66|![見本 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|  
   
 ##### <a name="examples-of-intellisense-icons"></a>IntelliSense アイコンの例  
   
 ||||||  
 |-|-|-|-|-|  
-|![IntelliSense クラスのアイコン](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405-36_IntelliSenseClass")<br />クラス|![IntelliSense プライベート イベントのアイコン](../../extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405-37_IntelliSensePrivateEvent")<br />プライベート イベント|![IntelliSense デリゲートのアイコン](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405-38_IntelliSenseDelegate")<br />Delegate|![IntelliSense メソッド フレンドのアイコン](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405-39_IntelliSenseMethodFriend")<br />メソッドのフレンド|![フィールド アイコン](../../extensibility/ux-guidelines/media/0405-40_field.png "0405-40_Field")<br />フィールド|  
-|![IntelliSense の保護された列挙型項目 アイコン](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405-41_IntelliSenseProtectedEnumItem")<br />保護された列挙型項目|![IntelliSense オブジェクトのアイコン](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405-42_IntelliSenseObject")<br />オブジェクト|![IntelliSense テンプレートのアイコン](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405-43_IntelliSenseTemplate")<br />テンプレート|![IntelliSense の例外のショートカット アイコン](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405-44_IntelliSenseExceptionShortcut")<br />例外のショートカット||  
+|![IntelliSense クラスのアイコン](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405-36_IntelliSenseClass")<br />クラス|![IntelliSense プライベート イベントのアイコン](~/docs/extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405-37_IntelliSensePrivateEvent")<br />プライベート イベント|![IntelliSense デリゲートのアイコン](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405-38_IntelliSenseDelegate")<br />Delegate|![IntelliSense メソッド フレンドのアイコン](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405-39_IntelliSenseMethodFriend")<br />メソッドのフレンド|![フィールド アイコン](../../extensibility/ux-guidelines/media/0405-40_field.png "0405-40_Field")<br />フィールド|  
+|![IntelliSense の保護された列挙型項目 アイコン](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405-41_IntelliSenseProtectedEnumItem")<br />保護された列挙型項目|![IntelliSense オブジェクトのアイコン](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405-42_IntelliSenseObject")<br />オブジェクト|![IntelliSense テンプレートのアイコン](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405-43_IntelliSenseTemplate")<br />テンプレート|![IntelliSense の例外のショートカット アイコン](~/docs/extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405-44_IntelliSenseExceptionShortcut")<br />例外のショートカット||  
   
 ### <a name="notifications"></a>通知  
  Visual Studio での通知は、ステータスを示すために使用されます。 通知パレットは、次の 4 つの色と黒と白の前景の塗りつぶしのオプションを使用して、次の状態レベルでの通知を定義します。  
   
 |使用方法|名前|値 (すべてのテーマ)|見本|  
 |-----------|----------|--------------------------|------------|  
-|状態: ニュートラル|通知の青 (VS 青)|1BA1E2 27,161,226/|![見本 1BA1E2](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|  
+|状態: ニュートラル|通知の青 (VS 青)|1BA1E2 27,161,226/|![見本 1BA1E2](~/docs/extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|  
 |状態: 正の値|通知の緑 (VS 緑)|339933 / 51,153,51|![見本 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|  
 |状態: 負の値|通知の赤 (VS 赤)|E 51400 229,20,0/|![見本 e 51400](../../extensibility/ux-guidelines/media/0405_e51400.png "0405_E51400")|  
-|状態: 警告|通知黄色 (VS オレンジ色)|FFCC00 255,204,0/|![見本 FFCC00](../../extensibility/ux-guidelines/media/0405_ffcc00.png "0405_FFCC00")|  
-|前景の塗りつぶし|通知黒 (黒)|000000 / 0,0,0|![見本 & #35 です 000000](../../extensibility/ux-guidelines/media/0405_000000.png "0405_000000。")|  
+|状態: 警告|通知黄色 (VS オレンジ色)|FFCC00 255,204,0/|![見本 FFCC00](~/docs/extensibility/ux-guidelines/media/0405_ffcc00.png "0405_FFCC00")|  
+|前景の塗りつぶし|通知黒 (黒)|000000 / 0,0,0|![見本 & #35 です 000000](~/docs/extensibility/ux-guidelines/media/0405_000000.png "0405_000000。")|  
 |前景の塗りつぶし|通知の空白 (空白)|FFFFFF 255,255,255/|![見本 FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
   
 #### <a name="examples-of-notification-icons"></a>通知アイコンの例  
   
 |||||  
 |-|-|-|-|  
-|![警告アイコン](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")<br />警告|![警告アイコン](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")<br />警告|![[完了] アイコン](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")<br />完了しました|![[停止] アイコン](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")<br />停止|  
+|![警告アイコン](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")<br />警告|![警告アイコン](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")<br />警告|![[完了] アイコン](~/docs/extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")<br />完了しました|![[停止] アイコン](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")<br />停止|  
   
 ### <a name="visual-studio-online"></a>Visual Studio Online  
  一般に、Visual Studio Online の機能で構成ブラウザーでホストします。 色は、さまざまな環境で異なりますが、スタイルは変わりません。  
@@ -419,10 +419,10 @@ ms.lasthandoff: 05/04/2017
 |F12|無効|F12 LtGrey_Disabled|ABABAC 171,171,172/|![見本 ABABAC](../../extensibility/ux-guidelines/media/0405_ababac.png "0405_ABABAC")|  
 |F12|ホバー時の背景|Bg のマウス ポインターを移動します。|D9EBF7 217,235,247/|![見本d9ebf7](../../extensibility/ux-guidelines/media/0405_d9ebf7.png "0405_D9EBF7")|  
 |F12|押されているバック グラウンド|押された bg|B2D7F0 178,215,240/|![見本b2d7f0](../../extensibility/ux-guidelines/media/0405_b2d7f0.png "0405_B2D7F0")|  
-|F12|アウトライン|VS アウト|F6F6F6 246,246,246/|![見本f6f6f6](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")|  
-|F12|情報|情報|00BCF2 0,188,242/|![見本 00BCF2](../../extensibility/ux-guidelines/media/0405_00bcf2.png "0405_00BCF2")|  
+|F12|アウトライン|VS アウト|F6F6F6 246,246,246/|![見本f6f6f6](~/docs/extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")|  
+|F12|情報|情報|00BCF2 0,188,242/|![見本 00BCF2](~/docs/extensibility/ux-guidelines/media/0405_00bcf2.png "0405_00BCF2")|  
 |F12|警告|警告|F 28300 242,131,0/|![見本 f 28300](../../extensibility/ux-guidelines/media/0405_f28300.png "0405_F28300")|  
-|F12|エラー/負の値|Error_Negative|E 81123 232,17,35/|![見本 e 81123](../../extensibility/ux-guidelines/media/0405_e81123.png "0405_E81123")|  
+|F12|エラー/負の値|Error_Negative|E 81123 232,17,35/|![見本 e 81123](~/docs/extensibility/ux-guidelines/media/0405_e81123.png "0405_E81123")|  
 |F12|開始/正の値|Start_Positive|009E49 0,158,73/|![見本 009E49](../../extensibility/ux-guidelines/media/0405_009e49.png "0405_009E49")|  
 |F12|中断の種類|中断の種類|9B4F96 155,79,150/|![見本 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
 |F12|イベントのマーク|イベントのマーク|A51F00 165,31,0/|![見本 A51F00](../../extensibility/ux-guidelines/media/0405_a51f00.png "0405_A51F00")|  
@@ -432,11 +432,11 @@ ms.lasthandoff: 05/04/2017
   
 |TFS オンライン||||  
 |----------------|-|-|-|  
-|![TFS オンライン チームのアイコン](../../extensibility/ux-guidelines/media/0405-49_tfsonlineteam.png "0405-49_TFSOnlineTeam")<br />オンラインのチーム|![TFS 情報アイコン](../../extensibility/ux-guidelines/media/0405-50_tfsinformation.png "0405-50_TFSInformation")<br />情報|![TFS 履歴アイコン](../../extensibility/ux-guidelines/media/0405-51_tfshistory.png "0405-51_TFSHistory")<br />履歴|![TFS 分岐アイコン](../../extensibility/ux-guidelines/media/0405-52_tfsbranch.png "0405-52_TFSBranch")<br />分岐|  
+|![TFS オンライン チームのアイコン](../../extensibility/ux-guidelines/media/0405-49_tfsonlineteam.png "0405-49_TFSOnlineTeam")<br />オンラインのチーム|![TFS 情報アイコン](~/docs/extensibility/ux-guidelines/media/0405-50_tfsinformation.png "0405-50_TFSInformation")<br />情報|![TFS 履歴アイコン](~/docs/extensibility/ux-guidelines/media/0405-51_tfshistory.png "0405-51_TFSHistory")<br />履歴|![TFS 分岐アイコン](../../extensibility/ux-guidelines/media/0405-52_tfsbranch.png "0405-52_TFSBranch")<br />分岐|  
   
 |Napa||||  
 |----------|-|-|-|  
-|![Napa コンテンツ アイコン](../../extensibility/ux-guidelines/media/0405-53_napacontent.png "0405-53_NapaContent")<br />Content|![Napa office メール アイコン](../../extensibility/ux-guidelines/media/0405-54_napaofficemail.png "0405-54_NapaOfficeMail")<br />Office メール|![Napa SharePoint アイコン](../../extensibility/ux-guidelines/media/0405-55_napasharepoint.png "0405-55_NapaSharePoint")<br />SharePoint|![Napa タスク ペイン アイコン](../../extensibility/ux-guidelines/media/0405-56_napataskpane.png "0405-56_NapaTaskPane")<br />作業ウィンドウ|  
+|![Napa コンテンツ アイコン](../../extensibility/ux-guidelines/media/0405-53_napacontent.png "0405-53_NapaContent")<br />Content|![Napa office メール アイコン](~/docs/extensibility/ux-guidelines/media/0405-54_napaofficemail.png "0405-54_NapaOfficeMail")<br />Office メール|![Napa SharePoint アイコン](../../extensibility/ux-guidelines/media/0405-55_napasharepoint.png "0405-55_NapaSharePoint")<br />SharePoint|![Napa タスク ペイン アイコン](~/docs/extensibility/ux-guidelines/media/0405-56_napataskpane.png "0405-56_NapaTaskPane")<br />作業ウィンドウ|  
   
 |モナコ||||  
 |------------|-|-|-|  

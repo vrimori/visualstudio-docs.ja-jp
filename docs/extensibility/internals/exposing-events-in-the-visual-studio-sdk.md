@@ -61,7 +61,7 @@ caps.handback.revision: 16
   
  オートメーションのコンシューマーによって要求されると、イベント オブジェクトのいずれか、イベント、VSPackage をサポートするメソッドを持つルート オブジェクトを作成します。 環境を適切な呼び出します `get_` このオブジェクトのメソッドです。 たとえば場合、 `DTE.Events.AutomationProjectsEvents` が呼び出される、 `get_AutomationProjectsEvents` ルート オブジェクトのメソッドが呼び出されます。  
   
- ![Visual Studio プロジェクト イベント](../../extensibility/internals/media/projectevents.png "ProjectEvents")  
+ ![Visual Studio プロジェクト イベント](~/docs/extensibility/internals/media/projectevents.gif "ProjectEvents")  
 イベントのオートメーション モデル  
   
  クラス `CProjectEventsContainer` BscProjectsEvents のソース オブジェクトを表す、 `CProjectItemsEventsContainer` BscProjectItemsEvents のソース オブジェクトを表します。  

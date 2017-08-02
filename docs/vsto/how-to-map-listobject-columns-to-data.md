@@ -27,7 +27,7 @@ caps.handback.revision: 35
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: Excel で SharePoint リストに接続されている一覧を作成する](http://go.microsoft.com/fwlink/?LinkID=130263)」をご覧ください。  
+ ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: Excel で SharePoint リストに接続されている一覧を作成する](http://go.microsoft.com/fwlink/?LinkID=130263)」をご覧ください。  
   
 ## 列のマッピング  
   

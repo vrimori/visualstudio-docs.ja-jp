@@ -33,7 +33,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
   
  Visual Studio 2015 のセットアップ エクスペリエンスはコンポーネント化されており、必要な部分のみをインストールするだけで済みます。 これにより、.NET または Web の開発に関連する多くの一般的なシナリオをより短い時間でインストールできます。 クロス プラットフォーム モバイル開発などの他の種類の開発を行う場合、または C\+\+ や F\# で作業する場合は、\[**カスタム**\] インストールを選択した後、必要なコンポーネントとオプションのサードパーティ製 SDK を選択してください。 カスタム コンポーネントはいずれも、後でインストールすることもできます。 たとえば、基本インストールを選択した後、新しい C\+\+ プロジェクトを作成しようとすると、C\+\+ 開発ツールをダウンロードするように求められます。  
   
- ![Visual Studio 2015 のセットアップ ダイアログ](../ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
+ ![Visual Studio 2015 のセットアップ ダイアログ](~/docs/ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
   
 ## 複数のアカウント間のサインイン  
  Visual Studio 2015 では、サインインの仕組みがすっきりとしたものに更新されており、Visual Studio のアカウントが複数ある場合でもオンライン リソースへのアクセスが大幅に簡素化されるように設計されています。 Visual Studio にサインインすると、Visual Studio 2015 およびコンピューター上の Blend のすべてのインスタンスに自動的にサインインします。 サインインすると、自動的に設定のローミングが開始されます。 Visual Studio 2015 では、複数の機能で 1 つのアカウントを共通に使うことができるため、トークンが良好なものである限り、**チーム エクスプローラー**から Visual Studio Team Services のアカウントにアクセスしたり、サーバー エクスプローラー内の自分の Microsoft Azure サブスクリプションからさまざまなリソースや Web サイトにアクセスしたりすることが可能です。 また、Application Insights のプロジェクトの \[新しいプロジェクト\] ダイアログに自分の Azure リソースが表示されます。さらに、新しい **\[接続済みサービスの追加\]** ダイアログには、Azure Mobile、Azure Storage、[Microsoft Office 365](http://msdn.microsoft.com/office/aa905340.aspx)、および [Saleforce.com developer](https://developer.salesforce.com/) のアカウントが表示されます。  
@@ -64,7 +64,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 ### 任意の Windows 10 デバイス用のユニバーサル Windows アプリ  
  ユニバーサル Windows プラットフォームと 1 つの Windows コアを使用することで、電話やデスクトップなどの Windows 10 デバイスで同じアプリを実行できます。 これらのユニバーサル Windows アプリは、Visual Studio 2015 とユニバーサル Windows アプリ開発ツールを使用して作成します。  
   
- ![ユニバーサル Windows プラットフォーム](../cross-platform/media/uwp_coreextensions.png "UWP\_CoreExtensions")  
+ ![ユニバーサル Windows プラットフォーム](~/docs/cross-platform/media/uwp_coreextensions.png "UWP\_CoreExtensions")  
   
  アプリを Windows 10 Phone、Windows 10 デスクトップ、または Xbox で実行します。 同じアプリケーション パッケージが使用されています。 Windows 10 の単一の統一されたコアの導入により、1 つのアプリケーション パッケージをすべてのプラットフォームで実行できます。 いくつかのプラットフォームには、プラットフォーム固有の動作を利用するためにアプリに追加できる拡張 SDK があります。 たとえば、モバイル用の拡張 SDK を使用すれば、Windows Phone で \[戻る\] ボタンを処理できます。 プロジェクトで拡張 SDK を参照する場合、単純にランタイム チェックを追加して、プラットフォームでその SDK を使用できるかどうかをテストします。 このようにして、それぞれのプラットフォームで同じアプリケーション パッケージを使用できます。  
   
@@ -95,7 +95,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 ## \[デバイスのプレビュー\] メニュー バー  
  ユニバーサル Windows プラットフォーム プロジェクトでは、\[デバイスのプレビュー\] メニュー バーを使用して、XAML ベースの UI がさまざまな画面サイズでどのように表示されるかを確認できます。  
   
- ![&#91;デバイスのプレビュー&#93; メニュー](../ide/media/vs2015_device_preview.png "vs2015\_device\_preview")  
+ ![&#91;デバイスのプレビュー&#93; メニュー](~/docs/ide/media/vs2015_device_preview.png "vs2015\_device\_preview")  
   
 ## Visual Studio グラフィックス診断  
  Visual Studio 2013 では、Visual Studio グラフィックス診断に、フレーム分析、Windows Phone のサポート、シェーダーの編集と適用、コマンド ライン キャプチャ ツールなど、多くの新機能が追加されています。 DirectX12 アプリのデバッグのサポートも追加されています。 詳しくは、「[Visual Studio グラフィックス診断](../debugger/visual-studio-graphics-diagnostics.md)」をご覧ください。  
@@ -113,7 +113,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
   
  新しいサービスは継続的に追加されます。それらのサービスは、ウィザードで \[新しいサービス リンクの検索\] をクリックして検索できます。  
   
- ![&#91;接続済みサービスの追加&#93; ダイアログ](../ide/media/vs2015_addconnectedservicedialog.png "VS2015\_AddConnectedServiceDialog")  
+ ![&#91;接続済みサービスの追加&#93; ダイアログ](~/docs/ide/media/vs2015_addconnectedservicedialog.png "VS2015\_AddConnectedServiceDialog")  
   
 ## UI の設計  
  XAML ユーザー インターフェイスを設計するための Blend の機能が大幅に強化されました。 Blend が完全に再設計されたことにより、より直感的な UI が提供され、IntelliSense などの XAML 編集機能が強化され、Visual Studio との統合性が向上しました。 詳細については、「[Designing XAML in Visual Studio and Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md)」を参照してください。  
@@ -168,7 +168,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 ### 高解像度のイメージとタッチ サポート  
  Visual Studio IDE では、高密度ディスプレイ \(メニュー、コンテキスト メニュー、ツール ウィンドウのコマンド バーなどのエリアやソリューション エクスプローラー内のいくつかのプロジェクト\) での高解像度のイメージが実現しました。 また、Visual Studio のコード エディター ウィンドウのタッチ スクリーンでは、タッチしてホールド、ピンチ、タップなどの動作を使って、ズーム、スクロール、テキストの選択、およびコンテキスト メニューの呼び出しができるようになりました。  
   
- ![エディターでのタッチ サポート](../ide/media/vs2015_touchsupport.png "VS2015\_TouchSupport")  
+ ![エディターでのタッチ サポート](~/docs/ide/media/vs2015_touchsupport.png "VS2015\_TouchSupport")  
   
 ### カスタム レイアウト  
  ストアを作成し、カスタム ウィンドウ レイアウトをローミングできます。 たとえば、お気に入りのレイアウトを 1 つデスクトップ コンピューターで使用するために定義し、異なるレイアウトをノート PC や画面の小さいデバイスで使用するために定義できます。 または、UI プロジェクト用にレイアウトを 1 つ選択し、データベース プロジェクト用に別のレイアウトを選択できます。 ショートカット キーを使用してすばやくレイアウトを切り替えられます。 これらのレイアウトは、サインイン中であれば Visual Studio のすべてのインスタンスで使用できます。 詳細については、「[カスタム ウィンドウ レイアウトを作成する](../misc/create-custom-window-layouts.md)」を参照してください。  
@@ -189,7 +189,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
   
 -   コードを変更したユーザーを示すグラフを表示する。 これは、チームでの変更のパターンを見つけて影響を評価するために役立ちます。  
   
-     ![CodeLens: コードの変更履歴をグラフで表示](../ide/media/codelens.png "CodeLens")  
+     ![CodeLens: コードの変更履歴をグラフで表示](~/docs/ide/media/codelens.png "CodeLens")  
   
 -   コードの最終変更日時を簡単に分かるようにする。  
   
@@ -204,7 +204,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
   
  このリリースでは、コマンドが選択、編集、管理の単位でセクションにグループ化され、グループの内容のレイアウトが変更されて、コード要素のショートカット メニューとリンクがずっと使いやすくなりました。 また、テスト プロジェクトが他のプロジェクトとは異なるスタイルで表示されること、およびマップの要素のアイコンがさらに適切なバージョンに更新されたことにも注意してください。  
   
- ![選択された項目を新しいコード マップに表示する](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
+ ![選択された項目を新しいコード マップに表示する](~/docs/ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
   
  その他の改良点は次のとおりです。  
   

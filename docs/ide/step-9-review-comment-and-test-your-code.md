@@ -44,7 +44,7 @@ caps.handback.revision: 29
   
      ステートメントは、プログラムに処理を実行させる指示にあたります。  Visual C\# の場合、ステートメントは必ずセミコロンで終わります。  Visual Basic の場合は、行の末尾がステートメントの末尾になります  \(Visual Basic ではセミコロンは必要ありません\)。 上記のステートメントでは、ユーザーが **OpenFileDialog** コンポーネントで選択したファイルを読み込むように `PictureBox` コントロールに指示しています。  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.png "PlayVideo") このトピックのビデオ版については、「[Tutorial 1: Create a Picture Viewer in Visual Basic \- Video 5 \(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 \- ビデオ 5\)](http://go.microsoft.com/fwlink/?LinkId=205216)」または「[Tutorial 1: Create a Picture Viewer in C\# \- Video 5 \(チュートリアル 1: C\# によるピクチャ ビューアーの作成 \- ビデオ 5\)](http://go.microsoft.com/fwlink/?LinkId=205206)」を参照してください。  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。  ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+ ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo") このトピックのビデオ版については、「[Tutorial 1: Create a Picture Viewer in Visual Basic \- Video 5 \(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 \- ビデオ 5\)](http://go.microsoft.com/fwlink/?LinkId=205216)」または「[Tutorial 1: Create a Picture Viewer in C\# \- Video 5 \(チュートリアル 1: C\# によるピクチャ ビューアーの作成 \- ビデオ 5\)](http://go.microsoft.com/fwlink/?LinkId=205206)」を参照してください。  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。  ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
 ### コメントを追加するには  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 29
   
 2.  プログラムを実行する前に、ツール バーの **\[すべてを保存\]** \(次の図を参照\) をクリックしてプログラムを保存します。  
   
-     ![&#91;すべてを保存&#93; ツール バー ボタン](../ide/media/express_iconsaveall.png "Express\_IconSaveAll")  
+     ![&#91;すべてを保存&#93; ツール バー ボタン](~/docs/ide/media/express_iconsaveall.png "Express\_IconSaveAll")  
 \[すべてを保存\] ボタン  
   
      または、メニュー バーで、**\[ファイル\]**、**\[すべてを保存\]** の順にクリックしてプログラムを保存します。  早めに、かつ頻繁に保存することをお勧めします。  

@@ -52,11 +52,11 @@ ms.lasthandoff: 05/12/2017
 
 - `1-Getting Started with R.R` には、パッケージの使用、データの読み込みと分析、およびプロットなど、多くの R の基本が含まれています。
 
-    !["1-Getting Started with R.R" サンプルの出力例](media/samples-getting-started-output.png)
+    !["1-Getting Started with R.R" サンプルの出力例](~/docs/rtvs/media/samples-getting-started-output.png)
 
 - `2-Introduction to ggplot2.R` では、視覚に訴えるプロットとシンプルな構文で知られる ggplot2 グラフィック パッケージを紹介します。 この例では、フィジーの地震データを視覚化しています。
 
-    !["2-Introduction to ggplot2.R" サンプルの出力例](media/samples-ggplot-output.png)
+    !["2-Introduction to ggplot2.R" サンプルの出力例](~/docs/rtvs/media/samples-ggplot-output.png)
 
 
 ## <a name="microsoft-r-server-and-machine-learning"></a>Microsoft R Server と Machine Learning
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/12/2017
 
 - `Benchmarks` では、複数のコンピューティング集中型ベンチマークを実行して、高速な並行線形代数計算に Microsoft R Open と Intel 数値演算ライブラリ (MKL) を使用して可能になるパフォーマンスを示します。 シミュレートされたデータは、特定のマトリックスに関連する計算に対して、1 つのスレッドと 2 つのスレッドを使用して比較しています。   
 
-    ![ベンチマーク プロットの例](media/samples-mro-benchmark-plot.png)
+    ![ベンチマーク プロットの例](~/docs/rtvs/media/samples-mro-benchmark-plot.png)
 
 - `Bike_Rental_Estimation_with_MRS` では、Microsoft R Server を使用して、履歴データセットに基づくレンタルサイクルの需要予測モデルを作成します。 
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/12/2017
     - `Import Data from URL to xdf.R` では、URL によって特定されたデータ ファイルを xdf として Microsoft R Server に読み込む方法を示します  (MRS が必要です)。
     - `Using ggplot2.R` は、`A First Look at R/2-Introduction to ggplot2.R` サンプルの拡張機能です。このスクリプトでは、対話型の 3D プロットなど、ggplot2 の機能の詳細なツアーを示します。
 
-        ![ggplot2.R を使用した出力例](media/samples-3d-interactive.png)
+        ![ggplot2.R を使用した出力例](~/docs/rtvs/media/samples-3d-interactive.png)
 
 - `Datasets` には、他のサンプルによって使用される `.csv` ファイルが 3 つ含まれています。
 - `Flight_Delays_Prediction_with_R` と `Flight_Delays_Prediction_with_MRS` では、R、Machine Learning、過去の定時運行データおよび気象データを使用して、航空便の遅延を予測する方法を示します。 
@@ -100,11 +100,11 @@ ms.lasthandoff: 05/12/2017
 
 次の比較では、MKL を使用する MRS と MRO が、MKL を使用しない R と MRO より特定のマトリックス計算に関連する計算性能で特に優れていることを示しています。 シミュレートされたデータは、この計算で使用されます。
 
-![MKL を使用する MRS と MRO と MKL を使用しない R と MRO の比較](media/samples-speed-comparison.png)
+![MKL を使用する MRS と MRO と MKL を使用しない R と MRO の比較](~/docs/rtvs/media/samples-speed-comparison.png)
 
 MRO および MRS を使用した R の技術的な比較については、[Lixun Zhang の詳細なディスカッション](http://htmlpreview.github.io/?https://github.com/lixzhang/R-MRO-MRS/blob/master/Introduction_to_MRO_and_MRS.html)に関するページを参照してください。
 
 次の図は、予定された旅客機の到着が 15 分以上遅延になるかどうかを予測する、ロジスティック回帰モデルのビルドに使用された経過時間を秒単位で比較しています。 CRAN R で使われた経過時間は、行が少し増えると大幅に増加しますが、MRS では約 2 倍のみ増加しています。 このベンチマークの詳細については、`Benchmarks/rxGlm_benchmark.R` の例を確認してください。
 
-![rxGlm のベンチマーク](media/samples-rxGLM-benchmark.png)
+![rxGlm のベンチマーク](~/docs/rtvs/media/samples-rxGLM-benchmark.png)
 

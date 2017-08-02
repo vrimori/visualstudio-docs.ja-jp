@@ -134,7 +134,7 @@ namespace Simple
   
  結果として得られる Windows アプリケーションのフォルダー構造は、次のようになります。  
   
- ![SimpleSolution](../../extensibility/internals/media/simplesolution.png "SimpleSolution")  
+ ![SimpleSolution](~/docs/extensibility/internals/media/simplesolution.png "SimpleSolution")  
   
  最初で唯一\<プロジェクト > テンプレート読み取りタグ。  
   

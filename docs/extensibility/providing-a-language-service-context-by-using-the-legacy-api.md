@@ -59,7 +59,7 @@ ms.lasthandoff: 02/22/2017
   
  次の図を実装する言語サービスのコンテキストを指定する方法を示しています`IVsLanguageContextProvider`します。  
   
- ![LangServiceImplementation2 グラフィック](../extensibility/media/vslanguageservice2.gif "vsLanguageService2")  
+ ![LangServiceImplementation2 グラフィック](~/docs/extensibility/media/vslanguageservice2.gif "vsLanguageService2")  
 言語サービスのコンテキスト  
   
  ダイアグラムでわかるように、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]中核となるテキスト エディターが付属しているコンテキスト バッグです。 このコンテキスト バッグが&3; つの個別のサブコンテキスト バッグを指す: 言語サービス、既定のエディターとテキストのマーカー。 言語サービスとテキストのマーカーのサブコンテキスト バッグを含む属性とキーワード言語サービスの場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>インターフェイスを実装すると、およびテキスト マーカー場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>インターフェイスを実装します</xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider></xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>。 これらのインターフェイスのいずれかを実装しない場合、エディターは、キーワードの既定のエディターのサブコンテキスト バッグ内のカーソル位置のコンテキストを提供し、します。  

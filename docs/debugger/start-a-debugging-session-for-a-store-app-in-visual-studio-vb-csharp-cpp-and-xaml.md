@@ -44,7 +44,7 @@ manager: "ghogen"
 # Visual Studio でのストア アプリのデバッグ セッションの開始 (VB、C#、C++、および XAML)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows と Windows Phone に適用されます](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows と Windows Phone に適用されます](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  このトピックでは、XAML および Visual C\+\+、Visual C\#、または Visual Basic で記述されたストア アプリのデバッグ セッションを開始する方法について説明します。 アプリのデバッグには、デバッグ セッションの構成と、アプリの起動方法の選択の両方が関係します。  
   
@@ -104,11 +104,11 @@ manager: "ghogen"
   
     -   Visual C\# アプリと Visual Basic アプリの場合は、**\[デバッグ\]** をクリックします。  
   
-         ![C&#35; &#47; VB プロジェクトのデバッグ プロパティ ページ](../debugger/media/dbg_csvb_debugpropertypage.png "DBG\_CsVb\_DebugPropertyPage")  
+         ![C&#35; &#47; VB プロジェクトのデバッグ プロパティ ページ](~/docs/debugger/media/dbg_csvb_debugpropertypage.png "DBG\_CsVb\_DebugPropertyPage")  
   
     -   Visual C\+\+ アプリの場合は、**\[構成プロパティ\]** ノードを展開し、**\[デバッグ\]** をクリックします。  
   
-         ![プロパティ ページをデバッグする C&#43;&#43; Windows ストア アプリ](../debugger/media/dbg_cpp_debugpropertypage.png "DBG\_CPP\_DebugPropertyPage")  
+         ![プロパティ ページをデバッグする C&#43;&#43; Windows ストア アプリ](~/docs/debugger/media/dbg_cpp_debugpropertypage.png "DBG\_CPP\_DebugPropertyPage")  
   
 ###  <a name="BKMK_Choose_the_build_configuration_options"></a> ビルド構成オプションを選択する  
   
@@ -117,7 +117,7 @@ manager: "ghogen"
 2.  **\[プラットフォーム\]** ボックスの一覧で、ビルドするターゲット プラットフォームを選択します。 ほとんどの場合、**\[Any CPU\]** \(Visual C\+\+ では **\[すべてのプラットフォーム\]**\) が最も適しています。  
   
 ###  <a name="BKMK_Choose_the_deployment_target"></a> 配置ターゲットを選択する  
- ![Windows のみに適用されます](../debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows のみに適用されます](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Visual Studio コンピューター、ローカル コンピューター上の Visual Studio シミュレーター、またはリモート デバイス上に Windows ストア アプリを配置してデバッグできます。  
   
@@ -149,12 +149,12 @@ manager: "ghogen"
   
     -   C\+\+ アプリの場合は、**\[コンピューター名\]** ボックスの下向き矢印をクリックし、**\[\<検索...\>\]** をクリックします。  
   
-     ![&#91;Select Remote Debugger Connection&#93; &#40;リモート デバッガーの接続の選択&#41; ダイアログ ボックス](../debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
+     ![&#91;Select Remote Debugger Connection&#93; &#40;リモート デバッガーの接続の選択&#41; ダイアログ ボックス](~/docs/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
   
     > [!NOTE]
     >  **\[リモート デバッガー接続の選択\]** ダイアログ ボックスには、ローカル サブネット上にあるコンピューターとイーサネット ケーブルによって Visual Studio コンピューターに直接接続されているコンピューターが表示されます。 別のコンピューターを指定するには、**\[コンピューター名\]** ボックスに名前を入力します。  
   
- ![Windows Phone のみに適用されます](../debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Windows Phone のみに適用されます](~/docs/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Windows Phone ストア アプリはデバイスまたは Visual Studio Phone エミュレーターの 1 つに配置できます。**\[ターゲット デバイス\]** ボックスの一覧からデバイスまたはエミュレーターを選択します。  
   
@@ -177,7 +177,7 @@ manager: "ghogen"
 |**混合 \(マネージとネイティブ\)**|アプリのネイティブ C\/C\+\+ コードとマネージ コードをデバッグします。 JavaScript コードは無視されます。|  
 |**GPU のみ**|GPU \(Graphics Processing Unit\) で実行されるネイティブ C\+\+ コードをデバッグします。|  
   
- ![Windows Phone のみに適用されます](../debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Windows Phone のみに適用されます](~/docs/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Windows ストア Phone アプリについては、**\[バックグラウンド タスク プロセス\]** の一覧でバックグラウンド プロセスに使用するデバッガーを選択することもできます。  
   
@@ -191,7 +191,7 @@ manager: "ghogen"
 -   Visual C\+\+ アプリの場合は、**\[デバッグ\]** プロパティ ページの **\[アプリケーションの起動\]** ボックスの一覧の **\[はい\]** をクリックします。  
   
 ###  <a name="BKMK__Optional__Disable_network_loopbacks"></a> \(省略可能\) ネットワーク ループバックを無効にする  
- ![Windows のみに適用されます](../debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows のみに適用されます](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  セキュリティ上の理由から、標準的な方法でインストールされた Windows ストア アプリは、インストール先のデバイスに対してネットワーク呼び出しを行うことはできません。 既定では、Visual Studio による配置では、配置されたアプリに対するこの規則の適用は免除されます。 この免除によって、1 台のコンピューター上で通信プロシージャをテストできます。 Windows ストアにアプリを送信する前に、この免除なしでアプリをテストする必要があります。  
   
@@ -205,7 +205,7 @@ manager: "ghogen"
  Visual C\# または Visual Basic アプリケーションのインストールと初期化に関する問題を診断するには、デバッグの開始時に元のインストールを再作成するように **\[デバッグ\]**  プロパティ ページの **\[Uninstall and then reinstall my package\]** \(パッケージをアンインストールしてから再インストールする\) をクリックします。 このオプションは、Visual C\+\+ プロジェクトでは使用できません。  
   
 ###  <a name="BKMK__Optional__Disable_authentication_requirement_to_start_the_remote_debugger"></a> \(省略可能\) リモート デバッガーを起動するための認証要件を無効にする  
- ![Windows のみに適用されます](../debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Windows のみに適用されます](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  既定では、リモート デバッガーを実行するために資格情報を指定する必要があります。  
   

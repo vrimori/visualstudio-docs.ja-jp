@@ -29,7 +29,7 @@ caps.handback.revision: 10
 ## 拡張機能と Visual Studio での更新プログラムへのプライベート ギャラリーの追加  
  非公開のギャラリーが利用できる場合に追加できる **拡張機能と更新プログラム** Visual Studio でします。  
   
- ![拡張機能マネージャーの追加ダイアログ](../extensibility/media/em_adddialog.png "EM\_AddDialog")  
+ ![拡張機能マネージャーの追加ダイアログ](~/docs/extensibility/media/em_adddialog.png "EM\_AddDialog")  
   
 #### 拡張機能と更新プログラムにプライベート ギャラリーを追加するには  
   
@@ -67,7 +67,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 ## プライベート ギャラリーから拡張機能をインストールします。  
  検索してプライベート ギャラリーに Visual Studio 拡張機能をインストール **拡張機能と更新プログラム**します。 次の手順は、という名前のプライベート ギャラリーを使用して `My Gallery`します。  
   
- ![プライベート ギャラリーをインストールする拡張機能マネージャー](../extensibility/media/em_.png "EM\_")  
+ ![プライベート ギャラリーをインストールする拡張機能マネージャー](~/docs/extensibility/media/em_.png "EM\_")  
   
 #### 検索してプライベート ギャラリーから拡張機能をインストールするには  
   
@@ -80,7 +80,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 ## プライベート ギャラリーから拡張機能を更新  
  プライベート ギャラリーには、新しいバージョンの Visual Studio 拡張機能が追加された、インストールされている拡張機能を更新できます。 次の手順は、という名前のプライベート ギャラリーを使用して `My Repository`します。  
   
- ![拡張機能マネージャーのプライベート ギャラリーの更新](../extensibility/media/em_update.png "EM\_Update")  
+ ![拡張機能マネージャーのプライベート ギャラリーの更新](~/docs/extensibility/media/em_update.png "EM\_Update")  
   
 #### 非公開のギャラリーからインストールされている拡張機能を更新するには  
   

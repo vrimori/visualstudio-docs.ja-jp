@@ -275,15 +275,15 @@ caps.handback.revision: 37
   
 6.  **\[プロパティ\]** ウィンドウで、**CorrelationToken** プロパティの *taskToken* のプロパティ値を入力します。  
   
-7.  名の横にある正符号をクリックして **CorrelationToken** のプロパティ \(![TreeView 正符号](../sharepoint/media/plus.png "TreeView 正符号")\) を展開します。  
+7.  名の横にある正符号をクリックして **CorrelationToken** のプロパティ \(![TreeView 正符号](~/docs/sharepoint/media/plus.gif "TreeView 正符号")\) を展開します。  
   
 8.  **OwnerActivityName** subs プロパティのドロップダウン矢印をクリックし、*Workflow1* 値を設定します。  
   
-9. **TaskId** のプロパティを選択し、**\[プロパティのバインド\]** ダイアログ ボックスを表示するには、省略記号 \(![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.png "ASP.NET モバイル デザイナー楕円")\) ボタンをクリックします。  
+9. **TaskId** のプロパティを選択し、**\[プロパティのバインド\]** ダイアログ ボックスを表示するには、省略記号 \(![ASP.NET モバイル デザイナー楕円](~/docs/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")\) ボタンをクリックします。  
   
 10. **\[新しいメンバーへのバインド\]** タブを選択し、**\[フィールドの作成\]** のオプション ボタンを選択し、**\[OK\]** ボタンをクリックします。  
   
-11. **TaskProperties** のプロパティを選択し、**\[プロパティのバインド\]** ダイアログ ボックスを表示するには、省略記号 \(![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.png "ASP.NET モバイル デザイナー楕円")\) ボタンをクリックします。  
+11. **TaskProperties** のプロパティを選択し、**\[プロパティのバインド\]** ダイアログ ボックスを表示するには、省略記号 \(![ASP.NET モバイル デザイナー楕円](~/docs/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")\) ボタンをクリックします。  
   
 12. **\[新しいメンバーへのバインド\]** タブを選択し、**\[フィールドの作成\]** のオプション ボタンを選択し、**\[OK\]** ボタンをクリックします。  
   
@@ -363,7 +363,7 @@ caps.handback.revision: 37
   
 5.  **\[プロパティ\]** ウィンドウで、**\[条件\]** のプロパティのドロップダウン矢印をクリックし、*Code Condition* 値を設定します。  
   
-6.  **\[条件\]** のプロパティをプラス記号の選択 \(![TreeView 正符号](../sharepoint/media/plus.png "TreeView 正符号")\) によってその横の展開し、*checkApprovalNeeded*に値を設定します。  
+6.  **\[条件\]** のプロパティをプラス記号の選択 \(![TreeView 正符号](~/docs/sharepoint/media/plus.gif "TreeView 正符号")\) によってその横の展開し、*checkApprovalNeeded*に値を設定します。  
   
 7.  ワークフロー デザイナーで、**\[logToHistoryListActivity1\]** アクティビティのショートカット メニューを開き、`MethodInvoking` イベントに対する空のメソッドを生成する **\[ハンドラーの生成\]** をクリックします。  
   

@@ -84,18 +84,18 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 1. **[表示] > [その他のウィンドウ] > [Python Environments (Python 環境)]** メニュー コマンドを選びます。
 1. ソリューション エクスプローラーでプロジェクトの **[Python Environments (Python 環境)]** を右クリックし、**[View All Python Environments (すべての Python 環境の表示)]** を選びます。
 
-    ![ソリューション エクスプローラーの [View All Python Environments (すべての Python 環境の表示)] コマンド](media/environments-view-all.png)
+    ![ソリューション エクスプローラーの [View All Python Environments (すべての Python 環境の表示)] コマンド](~/docs/python/media/environments-view-all.png)
     
 いずれの場合も、[Python Environments (Python 環境)] ウィンドウはソリューション エクスプローラーの兄弟タブとして表示されます。
 
-![[Python Environments (Python 環境)] ウィンドウ](media/environments-default-view.png)
+![[Python Environments (Python 環境)] ウィンドウ](~/docs/python/media/environments-default-view.png)
 
 上の例は、Python 3.4 (32 ビット CPython) と共に IronPython 2.7 の 32 および 64 ビット バージョンがインストールされることを示しています。 この場合、太字で表示される既定の環境は Python 3.4 であり、すべての新しいプロジェクトに使われます。 環境が何も表示されない場合は、Visual Studio 2015 以降に Python Tools for Visual Studio はインストールされていますが、Python インタープリターはインストールされていないことを意味します (前の「[Python インタープリターの選択とインストール](#selecting-and-installing-python-interpreters)」を参照)。 
 
 > [!Tip]
 > 上記のように、"*[Python Environments (Python 環境)]*" ウィンドウの幅が狭いときは、環境が上部に一覧表示され、さまざまなタブは下部に表示されます。 ただし、ウィンドウを十分に広げた方が作業しやすくなります。
 >
-> ![[Python Environments (Python 環境)] ウィンドウを広げた表示](media/environments-expanded-view.png)
+> ![[Python Environments (Python 環境)] ウィンドウを広げた表示](~/docs/python/media/environments-expanded-view.png)
 
 > [!Note]
 > Visual Studio はシステム サイト パッケージのオプションを尊重しますが、Visual Studio 内からそれを変更する方法は用意されていません。
@@ -106,7 +106,7 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 1. [Python Environments (Python 環境)] ウィンドウで **[+ Custom... (+ カスタム...)]** を選びます。新しい環境が作成されて、[**[Configure (構成)]** タブ](#configure-tab)が開きます (後で説明します)。
 
-    ![新しいカスタム環境の既定のビュー](media/environments-custom-1.png)
+    ![新しいカスタム環境の既定のビュー](~/docs/python/media/environments-custom-1.png)
 
 1. **[Description (説明)]** フィールドに環境の名前を入力します。
 1. **[Prefix path (プレフィックスのパス)]** フィールドでは、インタープリターのパスを入力するか参照します。
@@ -118,7 +118,7 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 環境の基本的な情報とコマンドが表示されます。既定としての設定、その環境での [対話型 (REPL) ウィンドウ](interactive-repl.md)のオープン、対話型ウィンドウを構成するためのダイアログへの移動 (**[ツール] > [オプション]** メニュー コマンドで **[Python Tools] > [インタラクティブな Windows]** を選び、環境の名前を選ぶのと同じです) などが含まれます。
 
-![[Python Environments (Python 環境)] の [Overview (概要)] タブ](media/environments-overview-tab.png)
+![[Python Environments (Python 環境)] の [Overview (概要)] タブ](~/docs/python/media/environments-overview-tab.png)
 
 > [!Note]
 > アクティブな環境を変更すると、IntelliSense データベースが読み込まれる間、Visual Studio がしばらく応答しなくなる場合があります。 多くのパッケージがある環境では、長時間応答しなくなる可能性があります。
@@ -127,7 +127,7 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 次の表で説明するような詳細が表示されます。 このタブが存在しない場合は、Visual Studio がすべての詳細情報を自動的に管理していることを意味します。
 
-![[Python Environments (Python 環境)] の [Configure (構成)] タブ](media/environments-configure-tab.png)
+![[Python Environments (Python 環境)] の [Configure (構成)] タブ](~/docs/python/media/environments-configure-tab.png)
 
 | フィールド | 説明 |
 | --- | --- |
@@ -144,13 +144,13 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 環境にインストールされているパッケージを管理し、ユーザーが新しいパッケージ (すべての依存関係を含みます) を検索してインストールできるようにします。 検索では現在インストールされているパッケージがフィルター処理され、[PyPI](https://pypi.python.org) も検索されます。 検索ボックスに、`pip install` コマンドと `--user` や `--no-deps` などのフラグを直接入力することもできます。
 
-![[Python Environments (Python 環境)] の [pip] タブ](media/environments-pip-tab.png)
+![[Python Environments (Python 環境)] の [pip] タブ](~/docs/python/media/environments-pip-tab.png)
 
 ### <a name="intellisense-tab"></a>[IntelliSense] タブ
 
 IntelliSense 入力候補データベースの現在の状態を示します。
 
-![[Python Environments (Python 環境)] の [IntelliSense] タブ](media/environments-intellisense-tab.png)
+![[Python Environments (Python 環境)] の [IntelliSense] タブ](~/docs/python/media/environments-intellisense-tab.png)
 
 データベースには環境内のすべてのライブラリのメタデータが含まれ、IntelliSense の速度が向上しメモリ使用量が減ります。 Visual Studio は新しい環境を検出すると (またはユーザーが追加すると)、ライブラリのソース ファイルを分析することで、データベースのコンパイルを自動的に開始します。 インストールされている内容により、この処理には 1 分から 1 時間以上かかることがあります (たとえば、Anaconda には多くのライブラリが付属しており、データベースのコンパイルに少し時間がかかります)。完了すると、詳細な IntelliSense が提供され、新しいライブラリをインストールするまでデータベースを再度更新する (**[Refresh DB (DB の更新)]** ボタンで) 必要はありません。
 
@@ -174,11 +174,11 @@ Visual Studio は、すべての新規プロジェクトの実行、デバッグ
 
 **[Python Environments (Python 環境)]** を右クリックして **[Add/Remove Python Environments... (Python 環境の追加/削除...)]** を選ぶことで、任意のグローバル環境をプロジェクト環境として追加できます。 表示される一覧で、プロジェクトで使用可能な環境を選択または選択解除できます。
 
-![[Add/Remove Python Environments (Python 環境の追加/削除)] ダイアログ](media/environments-add-remove.png)
+![[Add/Remove Python Environments (Python 環境の追加/削除)] ダイアログ](~/docs/python/media/environments-add-remove.png)
 
 ソリューション エクスプローラーでは、環境を展開して、インストールされているパッケージ (環境をアクティブにすると、コードでインポートして使用できるもの) を表示することもできます。
 
-![ソリューション エクスプローラーでの環境の Python パッケージ](media/environments-installed-packages.png)
+![ソリューション エクスプローラーでの環境の Python パッケージ](~/docs/python/media/environments-installed-packages.png)
 
 新しいパッケージをインストールするには、環境を右クリックし、**[Install Python Package... (Python パッケージのインストール...)]** を選んで、目的のパッケージの名前を入力します。 パッケージ (および依存関係) は [Python Package Index (PyPI)](https://pypi.python.org/pypi) からダウンロードされます。ここでパッケージを検索することもできます。 Visual Studio のステータス バーと出力ウィンドウには、インストールに関する情報が表示されます。 パッケージをアンインストールするには、パッケージを右クリックして **[Remove (削除)]** を選びます。
 
@@ -199,7 +199,7 @@ Visual Studio は、すべての新規プロジェクトの実行、デバッグ
 
 1. ソリューション エクスプローラーで **[Python Environments (Python 環境)]** を右クリックし、**[Add Virtual Environment... (仮想環境の追加...)]** を選びます。次のダイアログが表示されます。
 
-    ![仮想環境の作成](media/environments-add-virtual-1.png)
+    ![仮想環境の作成](~/docs/python/media/environments-add-virtual-1.png)
 
 1. 名前を指定してプロジェクトのパスに仮想環境を作成するか、または完全なパスを指定して他の場所に作成します  (他のツールとの最大限の互換性を確保するには、名前ではアルファベットと数字のみを使います)。
 
@@ -207,7 +207,7 @@ Visual Studio は、すべての新規プロジェクトの実行、デバッグ
 
     指定したパスが既存の仮想環境の場合は、基本インタープリターが検出されて、[Create (作成)] ボタンは **[Add (追加)]** に変わります。
 
-    ![既存の仮想環境の追加](media/environments-add-virtual-2.png)
+    ![既存の仮想環境の追加](~/docs/python/media/environments-add-virtual-2.png)
 
 ソリューション エクスプローラーで **[Python Environments (Python 環境)]** を右クリックし、**[Add Existing Virtual Environment... (既存の仮想環境の追加...)]** を選ぶことで、既存の仮想環境を追加することもできます。 Visual Studio は、環境の `lib` ディレクトリにある `orig-prefix.txt` ファイルを使って、基本インタープリターを自動的に検出します。
 
@@ -223,11 +223,11 @@ Visual Studio は、すべての新規プロジェクトの実行、デバッグ
 
 - `requirements.txt` を含むプロジェクトを読み込み、そのファイルに列記されているすべてのパッケージをインストールする場合は、プロジェクトを右クリックして、**[Install from requirements.txt (requirements.txt からインストールする)]** を選びます。
 
-    ![requirements.txt からインストールする](media/environments-requirements-txt-install.png)
+    ![requirements.txt からインストールする](~/docs/python/media/environments-requirements-txt-install.png)
 
 - 必要なすべてのパッケージをプロジェクトにインストールするときに、ソリューション エクスプローラーでプロジェクトを右クリックして **[Generate requirements.txt (requirements.txt を生成する)]** を選ぶことで、必要なファイルを作成できます。 ファイルが既に存在する場合、更新方法の指定を求められます。
 
-    ![requirements.txt の更新オプション](media/environments-requirements-txt-replace.png)
+    ![requirements.txt の更新オプション](~/docs/python/media/environments-requirements-txt-replace.png)
 
     - **[Replace entire file (ファイル全体を置き換える)]** は、存在するすべてのアイテム、コメント、オプションを削除します。
     - **[Refresh existing entries (既存のエントリを更新する)]** は、パッケージの要件を検出し、現在インストールされているバージョンと一致するようにバージョン指定子を更新します。
@@ -237,7 +237,7 @@ Visual Studio は、すべての新規プロジェクトの実行、デバッグ
 
 新しい仮想環境を追加するとき、` requirements.txt` ファイルが存在する場合は、**[Add Virtual Environment (仮想環境の追加)]** ダイアログにパッケージを自動的にインストールするオプションが表示されるので、別のコンピューターに簡単に環境を再作成できます。
 
-![requirements.txt で仮想環境を作成する](media/environments-requirements-txt.png)
+![requirements.txt で仮想環境を作成する](~/docs/python/media/environments-requirements-txt.png)
 
 pip でインストールできないパッケージが `requirements.txt` ファイルに出現する場合は、インストール全体が失敗します。 その場合は、ファイルを手動で編集してこのパッケージを除外するか、[pip のオプション](http://pip.readthedocs.org/en/latest/reference/pip_install.html#requirements-file-format)を使ってパッケージのインストール可能なバージョンを参照するようにします。 たとえば、[`pip wheel`](http://pip.readthedocs.org/en/latest/reference/pip_wheel.html) を使って依存関係をコンパイルし、`--find-links <path>` オプションを `requirements.txt` に追加することができます。
 

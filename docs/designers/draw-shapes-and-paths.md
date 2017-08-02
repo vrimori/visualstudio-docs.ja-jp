@@ -57,7 +57,7 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 ##  <a name="Shape"></a> 図形の描画  
  図形は **[アセット]** パネルにあります。  
   
- ![[アセット] パネルの [図形] カテゴリ](../designers/media/b4_shapes_assetspanel.png "b4_Shapes_AssetsPanel")  
+ ![[アセット] パネルの [図形] カテゴリ](~/docs/designers/media/b4_shapes_assetspanel.png "b4_Shapes_AssetsPanel")  
   
  目的の図形をアートボードにドラッグします。 次に、図形にあるハンドルを使用して、図形の拡大縮小、回転、移動、または傾斜を行います。  
   
@@ -68,7 +68,7 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
   
  パスの描画には直線、ペン、または鉛筆を使用します。 これらのツールは **[ツール]** パネルにあります。  
   
- ![](../designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png "717956a8-b6a5-4e37-8af3-70bcfc78c82a") ![](../designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png "8fbbbb21-be83-4cf6-903b-3a49f00c9860")  
+ ![](~/docs/designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png "717956a8-b6a5-4e37-8af3-70bcfc78c82a") ![](~/docs/designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png "8fbbbb21-be83-4cf6-903b-3a49f00c9860")  
   
 ### <a name="draw-a-straight-line"></a>直線の描画  
  **[ペン]** ツール ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")または **[直線]** ツール ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397-5283-48be-8396-3449be7b6fbf")を使用します。  
@@ -116,12 +116,12 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 ##  <a name="Convert"></a> 図形のパスへの変換  
  パスを変更するのと同じ方法で図形を変更するには、図形をパスに変換します。  
   
- **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [パスの作業: 図形をパスに変換する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147)。  
+ **短いビデオを見る:** ![インストール済みフィーチャーの構成](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [パスの作業: 図形をパスに変換する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147)。  
   
 ##  <a name="Combine"></a> パスの結合  
  パスと図形を結合して 1 つのパスにすることができます。  
   
- ![](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png "2df17a5d-a338-4ef4-96c5-dae51cc1ca8a")  
+ ![](~/docs/designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png "2df17a5d-a338-4ef4-96c5-dae51cc1ca8a")  
   
 |||||  
 |-|-|-|-|  
@@ -129,7 +129,7 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 |![](../designers/media/b1_2.png "B1_2")|合算|![](../designers/media/b1_5.png "B1_5")|重複部分を除外|  
 |![](../designers/media/b1_3.png "B1_3")|除算|![](../designers/media/b1_6.png "B1_6")|減算|  
   
- **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [パスの作業: パスを結合する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195)。  
+ **短いビデオを見る:** ![インストール済みフィーチャーの構成](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [パスの作業: パスを結合する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195)。  
   
 ##  <a name="Compound"></a> 複合パスの作成  
  複合パスを作成するときは、パスの交差している部分が減算されます。複合後のパスのビジュアル プロパティは、最背面にあったパスと同じになります。  
@@ -138,14 +138,14 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
   
  ![](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png "2157a8aa-d9a7-4de4-8de5-b10d28f08a84")  
   
- **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [パスの作業: 複合パスを作成する](https://www.youtube.com/watch?v=Io5bC0-nH6Q)。  
+ **短いビデオを見る:** ![インストール済みフィーチャーの構成](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [パスの作業: 複合パスを作成する](https://www.youtube.com/watch?v=Io5bC0-nH6Q)。  
   
 ##  <a name="Clipping"></a> クリッピング パスの作成  
  クリッピング パスは、別のオブジェクトに適用するパスまたは図形です。クリッピング パスの外側のオブジェクトがマスクされて非表示になります。  
   
  ![](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png "22471e98-a841-4f39-a3ef-36090cf5a625")  
   
- **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [パスの作業: クリッピング パスを作成する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232)。  
+ **短いビデオを見る:** ![インストール済みフィーチャーの構成](~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [パスの作業: クリッピング パスを作成する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232)。  
   
 ## <a name="see-also"></a>関連項目  
  [Blend for Visual Studio を使用して UI を作成する](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

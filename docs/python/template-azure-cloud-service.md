@@ -48,11 +48,11 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
 1. クラウド サービス テンプレートを使用するために必要な [Azure .NET SDK for Visual Studio](https://www.visualstudio.com/vs/azure-tools/) をインストールします。
 1. Visual Studio で、**[ファイル] > [新規] > [プロジェクト...]** を選択し、"Azure Python" を検索して **[Azure クラウド サービス]** を一覧から選びます。
 
-    ![Python 用 Azure クラウド プロジェクト テンプレート](media/template-azure-cloud-project.png)
+    ![Python 用 Azure クラウド プロジェクト テンプレート](~/docs/python/media/template-azure-cloud-project.png)
 
 1. 含める 1 つ以上のロールを選びます。 クラウド プロジェクトは、異なる言語で記述されたロールを結合できるため、アプリケーションの各部分を最も適した言語で簡単に記述できます。 このダイアログの完了後に新しいロールをプロジェクトに追加するには、ソリューション エクスプローラーで **[ロール]** を右クリックし、**[追加]** の下で項目の 1 つを選びます。
 
-    ![Azure クラウド プロジェクト テンプレートでのロールの追加](media/template-azure-cloud-service-project-wizard.png)
+    ![Azure クラウド プロジェクト テンプレートでのロールの追加](~/docs/python/media/template-azure-cloud-service-project-wizard.png)
 
 1. 個々のロール プロジェクトが作成されるときに、Django、Bottle、Flask フレームワークなどの追加の Python パッケージの 1 つを使用するロールを選んだ場合は、これらをインストールするように求めるプロンプトが表示されることがあります。
 
@@ -60,7 +60,7 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
 
 1. プロジェクトの `bin` フォルダーには、Python のインストール、プロジェクトの [requirements.txt](#dependencies) ファイル、必要な場合に IIS の設定など、リモート仮想マシンの構成に使用する 1 つまたは 2 つの PowerShell スクリプトも含まれています。 デプロイでの必要に応じてこれらのファイルを編集できますが、最も一般的なオプションは他の方法で管理できます (下の「[ロールのデプロイを構成する](#configuring-role-deployment)」をご覧ください)。 これらのファイルが使用可能でない場合はレガシ構成スクリプトが代わりに使用されるため、これらのファイルの削除はお勧めしません。
 
-    ![worker ロールのサポート ファイル](media/template-azure-cloud-service-worker-role-support-files.png)
+    ![worker ロールのサポート ファイル](~/docs/python/media/template-azure-cloud-service-worker-role-support-files.png)
 
     これらの構成スクリプトを新しいプロジェクトに追加するには、プロジェクトを右クリックし、**[追加] > [新しい項目...]** を選択し、**[Web Role Support Files (Web ロールのサポート ファイル)]** または **[Worker Role Support Files (worker ロールのサポート ファイル)]** のいずれかを選択します。
    

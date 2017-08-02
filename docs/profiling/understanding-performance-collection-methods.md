@@ -120,7 +120,7 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
 ##  <a name="tier_interaction"></a> 階層の相互作用  
  階層の相互作用のプロファイリングでは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ページまたはその他のアプリケーションと [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] データベースとの間で行われた同期的な [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] 呼び出しに関する情報が、プロファイリング データ ファイルに追加されます。  データには、呼び出しの回数と時間、および最長時間と最短時間が含まれます。  階層の相互作用データは、サンプリング、インストルメンテーション、.NET メモリ、または同時実行の各方式で収集されたプロファイリング データに追加できます。  
   
- ![階層相互作用プロファイリング データ](../profiling/media/tierinteraction_profilingtools.png "TierInteraction\_ProfilingTools")  
+ ![階層相互作用プロファイリング データ](~/docs/profiling/media/tierinteraction_profilingtools.png "TierInteraction\_ProfilingTools")  
 プロファイリング ツールによって収集される階層の相互作用データ  
   
  [階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)  

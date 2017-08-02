@@ -82,7 +82,7 @@ Visual Studio の XAML デザイナーは、XAML ベースの Windows ストア�
   
  デザイン ビューでは、画面の左下に次のように表示される追加のアートボード コマンドを使用できます。  
   
- ![デザイン ビュー コマンド](../designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
+ ![デザイン ビュー コマンド](~/docs/designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
   
  このツール バーでは、次のコマンドを使用できます。  
   

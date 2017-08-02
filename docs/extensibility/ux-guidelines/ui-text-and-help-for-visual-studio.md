@@ -65,7 +65,7 @@ caps.handback.revision: 2
   
  **Visual Studio での補足のテキスト**  
   
- ![Supplemental text in Visual Studio](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601\-c\_SupplementalText2")  
+ ![Supplemental text in Visual Studio](~/docs/extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601\-c\_SupplementalText2")  
   
  **Visual Studio での補足のテキスト**  
   
@@ -108,7 +108,7 @@ caps.handback.revision: 2
   
 -   ダイアログ ボックスを起動するときに、省略記号の水準を維持します。 タスクには、その他の UI が必要な場合は、省略記号ボタンを移動するための省略記号なし。  
   
-     ![Help link in Visual Studio](../../extensibility/ux-guidelines/media/0601-e_helplink.png "0601\-e\_HelpLink")  
+     ![Help link in Visual Studio](~/docs/extensibility/ux-guidelines/media/0601-e_helplink.png "0601\-e\_HelpLink")  
   
      **省略記号 \(...\) ヘルプでは、リンクは、その他の UI が必要なタスクを示します。**  
   
@@ -260,7 +260,7 @@ caps.handback.revision: 2
   
 |良い|正しくありません|  
 |--------|--------------|  
-|"、ダイヤルする番号がサービスにはありません。 ください番号を確認し、もう一度ダイヤルまたは 0 をオペレーターにダイヤルします。"|-   "エラー \(449\): 数が正しくありません"<br />-   「このハンドルされない例外エラーを示し、操作が正常に完了する。」<br /><br /> ![Bad error message in Visual Studio](../../extensibility/ux-guidelines/media/0602-a_errordialog.png "0602\-a\_ErrorDialog")|  
+|"、ダイヤルする番号がサービスにはありません。 ください番号を確認し、もう一度ダイヤルまたは 0 をオペレーターにダイヤルします。"|-   "エラー \(449\): 数が正しくありません"<br />-   「このハンドルされない例外エラーを示し、操作が正常に完了する。」<br /><br /> ![Bad error message in Visual Studio](~/docs/extensibility/ux-guidelines/media/0602-a_errordialog.png "0602\-a\_ErrorDialog")|  
   
 ## ヘルプへのアクセス  
   

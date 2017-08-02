@@ -48,7 +48,7 @@ caps.handback.revision: 36
 ## <a name="defining-an-element-merge-directive"></a>要素マージ ディレクティブを定義します。  
  ドメイン クラス、ドメイン リレーションシップ、図形、コネクタ、図へ要素マージ ディレクティブを追加することができます。 追加したり、受信側のドメイン クラスの下の DSL エクスプ ローラーで確認できます。 受信側のクラスは、モデルでは、新規またはコピーした要素をマージするのには、既に要素のドメイン クラス。  
   
- ![DSL & #45 です。EMD &#95; の詳細](../modeling/media/dsl-emd_details.png "DSL-EMD_Details")  
+ ![DSL & #45 です。EMD &#95; の詳細](~/docs/modeling/media/dsl-emd_details.png "DSL-EMD_Details")  
   
   **クラスのインデックス作成** 受信側のクラスのメンバーに結合できる要素のドメイン クラスです。 設定していない場合も、インデックス作成クラスのサブクラスのインスタンスをマージによってこの EMD が **サブクラスに適用されます** を False にします。  
   

@@ -49,13 +49,13 @@ ms.lasthandoff: 03/07/2017
 
 これらのディレクトリへのインストールをサポートするために、VSIX を「インスタンスごとのコンピューターごとの」インストールする必要があります。 これは、extension.vsixmanifest の各デザイナーで"all users"チェック ボックスをオンに有効にすることができます。
 
-![すべてのユーザーを確認します。](media/check-all-users.png)
+![すべてのユーザーを確認します。](~/docs/extensibility/media/check-all-users.png)
 
 ## <a name="how-to-set-the-installroot"></a>として「installroot」を設定する方法
 
 インストール ディレクトリを設定するには、使用することができます、**プロパティ**Visual Studio のウィンドウです。 たとえば、設定、`InstallRoot`上の場所のいずれかへの参照をプロジェクトのプロパティ。
 
-![ルートのプロパティをインストールします。](media/install-root-properties.png)
+![ルートのプロパティをインストールします。](~/docs/extensibility/media/install-root-properties.png)
 
 これは、いくつかのメタデータが、対応する追加されます`ProjectReference`VSIX プロジェクトの .csproj ファイル内のプロパティ。
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 03/07/2017
 
 下にあるサブパスをインストールするようにかどうか、 `InstallRoot`、できるように設定して、`VsixSubPath`プロパティと同様に、`InstallRoot`プロパティです。 たとえば、プロジェクト参照の出力をインストールしたい ' [installdir]\MSBuild\MyCompany\MySDK\1.0' です。 それが可能に簡単にプロパティ デザイナーを使用します。
 
-![セットのサブパス](media/set-subpath.png)
+![セットのサブパス](~/docs/extensibility/media/set-subpath.png)
 
 対応する .csproj 変更は、次のようになります。
 

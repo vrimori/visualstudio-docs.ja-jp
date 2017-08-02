@@ -91,7 +91,7 @@ caps.handback.revision: 36
   
  **\[モデル エディター\]** ツール バーを次に示します。  
   
- ![モデル ビューアー ツール バー](../designers/media/digit-mre-toolbar.png "Digit\-MRE\-Toolbar")  
+ ![モデル ビューアー ツール バー](~/docs/designers/media/digit-mre-toolbar.png "Digit\-MRE\-Toolbar")  
   
  次の表は、**\[モデル エディター\]** ツール バーに、上から下へ順に表示される項目を示します。  
   

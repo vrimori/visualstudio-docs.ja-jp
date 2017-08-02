@@ -105,22 +105,22 @@ Visual Studio では、さまざまな開発ワークフローに最も適した
 
  次の図は、ドキュメント ウィンドウのガイド用のひし形を示しています。ドキュメント ウィンドウは、編集フレーム内にのみドッキングできます。  
 
- ![ドキュメント ウィンドウのガイドのひし形](../ide/media/documentwindowguidediamonds.png "Documentwindowguidediamonds")  
+ ![ドキュメント ウィンドウのガイドのひし形](~/docs/ide/media/documentwindowguidediamonds.png "Documentwindowguidediamonds")  
 
  ツール ウィンドウは、IDE の枠の 1 辺または編集フレーム内に固定できます。 ツール ウィンドウを別の位置にドラッグすると、ウィンドウの再ドッキングが容易になるように、ガイド用のひし形が表示されます。  
 
  ツール ウィンドウのガイド用のひし形  
 
- ![ツール ウィンドウのガイドのひし形](../ide/media/vs10guidediamond.png "VS10GuideDiamond")  
+ ![ツール ウィンドウのガイドのひし形](~/docs/ide/media/vs10guidediamond.png "VS10GuideDiamond")  
 
  次の図は、青の網掛け部分で示されている、新しい場所にドッキングされているソリューション エクスプ ローラーを示しています。  
 
- ![ソリューション エクスプローラーを新しい位置にドッキング](../ide/media/vs2015_dock_diamond.png "VS2017_Dock_diamond")  
+ ![ソリューション エクスプローラーを新しい位置にドッキング](~/docs/ide/media/vs2015_dock_diamond.png "VS2017_Dock_diamond")  
 
 ### <a name="close-and-auto-hide-tool-windows"></a>ツール ウィンドウを閉じる/自動的に隠す  
  タイトル バーの右上にある [X] をクリックして、ツール ウィンドウを閉じることができます。ウィンドウを再び開くには、キーボード ショートカットかメニュー コマンドを使用します。 ツール ウィンドウでは自動非表示という機能をサポートしています。これは、別のウィンドウを使用すると現在のウィンドウが非表示になるものです。 ウィンドウが自動非表示になっている場合は、IDE の端にあるタブにウィンドウの名前が表示されます。 非表示のウィンドウをもう一度使用する場合は、タブをポイントすると、そのウィンドウが元の状態で表示されます。  
 
- ![自動的に隠す](../ide/media/vs2015_auto_hide.png "vs2017_auto_hide")  
+ ![自動的に隠す](~/docs/ide/media/vs2015_auto_hide.png "vs2017_auto_hide")  
 
 > [!NOTE]
 >  [自動的に隠す] の操作対象が、個々のツール ウィンドウなのか、ドッキングされているウィンドウ グループなのかを設定するには、 **[オプション]** ダイアログ ボックスの **[[自動的に隠す] ボタンをアクティブなツール ウィンドウにのみ実行する]** をオンまたはオフにします。 詳細については、「 [General, Environment, Options Dialog Box](../ide/reference/general-environment-options-dialog-box.md)」を参照してください。  
@@ -186,7 +186,7 @@ Visual Studio では、さまざまな開発ワークフローに最も適した
 
 1.  **[ウィンドウ]、[ウィンドウ レイアウトの管理]** の順に選択し、カスタム レイアウトの削除、名前変更、または順序変更を行えます。 レイアウトを移動すると、キー バインドがリスト内の新しい位置を反映するように自動調整されます。 バインディングは変更できないため、同時に保存できるレイアウトは最大 10 個です。  
 
-     ![ウィンドウ レイアウトの管理](../ide/media/managewindowlayouts.png "ManageWindowLayouts")  
+     ![ウィンドウ レイアウトの管理](~/docs/ide/media/managewindowlayouts.png "ManageWindowLayouts")  
 
      どのキーボード ショートカットがどのレイアウトに割り当てられているかを確認するには、**[ウィンドウ]、[ウィンドウ レイアウトの適用]** を選択します。  
 

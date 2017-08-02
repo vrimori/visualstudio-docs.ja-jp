@@ -58,7 +58,7 @@ IntelliSense とは、メンバーの一覧、パラメーター ヒント、ク
   
  太字のパラメーターは、入力した関数で次に必要なパラメーターを表しています。  オーバーロードされた関数の場合、↑キーと↓キーを使用して、オーバーロードごとに異なるパラメーター情報を表示できます。  
   
- ![パラメーター ヒント](../ide/media/vs2015_param_info.png "VS2015\_param\_Info")  
+ ![パラメーター ヒント](~/docs/ide/media/vs2015_param_info.png "VS2015\_param\_Info")  
   
  関数やパラメーターに XML ドキュメント コメントによる注釈を付けると、そのコメントがパラメーター ヒントとして表示されます。  詳細については、「[XML コード コメントの追加](../ide/supplying-xml-code-comments.md)」を参照してください。  
   
@@ -67,11 +67,11 @@ IntelliSense とは、メンバーの一覧、パラメーター ヒント、ク
 ## クイック ヒント  
  クイック ヒントでは、コード内の識別子の宣言全体が表示されます。  
   
- ![Visual Studio のクイック ヒント](../ide/media/vs2015_quick_info.png "VS2015\_Quick\_info")  
+ ![Visual Studio のクイック ヒント](~/docs/ide/media/vs2015_quick_info.png "VS2015\_Quick\_info")  
   
  **\[メンバーの一覧\]** ボックスからメンバーを選択した場合も、クイック ヒントが表示されます。  
   
- ![C&#35; コード ファイル内のパラメーター ヒント](../ide/media/vs2015_paraminfo.png "VS2015\_ParamInfo")  
+ ![C&#35; コード ファイル内のパラメーター ヒント](~/docs/ide/media/vs2015_paraminfo.png "VS2015\_ParamInfo")  
   
  クイック ヒントを手動で起動するには、**\[編集\]、\[IntelliSense\]、\[クイック ヒント\]** の順にクリックするか、Ctrl キーを押しながら I キーを押すか、エディターのツール バーで **\[クイック ヒント\]** をクリックします。  
   

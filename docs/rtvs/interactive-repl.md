@@ -67,7 +67,7 @@ REPL での以前の入力と出力はすべて読み取り専用となり、変
 
 つまり、ステートメントの入力を開始し、Enter キーを押すと、RTVS はステートメントを続行する必要があるタイミングを認識し、左の適切なインデントで + プロンプトを使用して複数行モードを入力します。 また、RTVS は次のようにかっこ、角かっこ、および中かっこも入力します。
 
-![対話型ウィンドウの複数行のステートメント エントリ](media/repl-multiline-entry.png)
+![対話型ウィンドウの複数行のステートメント エントリ](~/docs/rtvs/media/repl-multiline-entry.png)
 
 この複数行モードで Enter キーを押した場合にコード ブロックが実行されるのは、ブロックの末尾にある場合のみです。それ以外の場合は、改行が挿入されます。 ただし、任意の位置で Ctrl + Enter キーを押せば、そのコード ブロックをすぐに実行できます。
 
@@ -75,23 +75,23 @@ REPL での以前の入力と出力はすべて読み取り専用となり、変
 
 対話型ウィンドウとそのツール バーを以下に示します。
 
-![対話型ウィンドウとツール バー](media/repl-window.png)
+![対話型ウィンドウとツール バー](~/docs/rtvs/media/repl-window.png)
 
 ツール バー コマンドは次のとおりです。そのほとんどに対応するキーボードがあり、**[R Tools]、[セッション]** および **[R Tools]、[作業ディレクトリ]** メニュー (または前述のとおり) でも使用可能です。
 
 | ボタン | コマンド | キーの組み合わせ | 説明 | 
 | --- | --- | --- | --- |
-| ![[リセット] ボタン](media/repl-toolbar-01-reset.png) | リセット | Ctrl + Shift + F10 | すべての変数と履歴を消去し、対話型ウィンドウ セッションをリセットします。 |
-| ![[クリア] ボタン](media/repl-toolbar-02-clear.png) | Clear | Ctrl + L | 対話型ウィンドウに表示されている出力を消去します。セッション変数や履歴には影響しません。 |
-| ![[履歴] ボタン](media/repl-toolbar-03-history.png) | 過去の履歴コマンド<br/>次の履歴コマンド | ↑、↓<br/>Alt + ↑、Alt + ↓ | 複数行コード ブロックの特定の動作で、履歴をスクロールします。 「[履歴](#history)」を参照してください。 |
-| ![[ワークスペースの読み込み] ボタン](media/repl-toolbar-04-load-workspace.png) | ワークスペースの読み込み | 適用なし | 以前に保存したワークスペースを読み込みます (「[ワークスペースとセッション](#workspaces-and-sessions)」を参照)。 |
-| ![[作業状態の保存] ボタン](media/repl-toolbar-05-save-workspace-as.png)| 作業状態の保存 | 適用なし | セッションの現在の状態をワークスペースとして、保存します (「[ワークスペースとセッション](#workspaces-and-sessions)」を参照)。 |
-| ![[R スクリプトのソース化] ボタン](media/repl-toolbar-06-source-r-script.png) | R スクリプトのソース化 | Ctrl + Shift + S | Visual Studio エディターで現在アクティブな R スクリプトを使用して `source` を呼び出します。これにより、コードが実行されます。  このボタンは、R ファイルが Visual Studio エディターで開いている場合にのみ表示されます。 | 
-| ![[エコーによる R スクリプトのソース化] ボタン](media/repl-toolbar-07-source-r-script-with-echo.png) | エコーによる R スクリプトのソース化 | Ctrl + Shift + Enter | [R スクリプトのソース化] と同じですが、対話型ウィンドウにはスクリプトのコンテンツが表示されます。 | 
-| ![[R の割り込み] ボタン](media/repl-toolbar-08-interrupt-r.png)| R の割り込み | Esc | 上記のスクリーン ショットの `while` ループなど、対話型ウィンドウで実行中のコードを停止します。 |
-| ![[デバッガーのアタッチ] ボタン](media/repl-toolbar-09b-attach-debugger.png)| デバッガーのアタッチ | 適用なし | **[デバッグ]、[R インタラクティブ型に接続]** コマンドを使用することもできます。 | 
-| ![[作業ディレクトリをソース ファイルの場所に設定] ボタン](media/repl-toolbar-10-set-working-directory-source.png)| 作業ディレクトリをソース ファイルの場所に設定 | Ctrl + Shift + E | 対話型ウィンドウに最後に読み込まれたソース ファイルに作業ディレクトリを設定します (`source` を使用)。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
-| ![[作業ディレクトリをプロジェクトの場所に設定] ボタン](media/repl-toolbar-11-set-working-directory-to-project.png) | 作業ディレクトリをプロジェクトの場所に設定 | Ctrl+Shift+P | Visual Studio に現在読み込まれているプロジェクトのルートに作業ディレクトリを設定します。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
+| ![[リセット] ボタン](~/docs/rtvs/media/repl-toolbar-01-reset.png) | リセット | Ctrl + Shift + F10 | すべての変数と履歴を消去し、対話型ウィンドウ セッションをリセットします。 |
+| ![[クリア] ボタン](~/docs/rtvs/media/repl-toolbar-02-clear.png) | Clear | Ctrl + L | 対話型ウィンドウに表示されている出力を消去します。セッション変数や履歴には影響しません。 |
+| ![[履歴] ボタン](~/docs/rtvs/media/repl-toolbar-03-history.png) | 過去の履歴コマンド<br/>次の履歴コマンド | ↑、↓<br/>Alt + ↑、Alt + ↓ | 複数行コード ブロックの特定の動作で、履歴をスクロールします。 「[履歴](#history)」を参照してください。 |
+| ![[ワークスペースの読み込み] ボタン](~/docs/rtvs/media/repl-toolbar-04-load-workspace.png) | ワークスペースの読み込み | 適用なし | 以前に保存したワークスペースを読み込みます (「[ワークスペースとセッション](#workspaces-and-sessions)」を参照)。 |
+| ![[作業状態の保存] ボタン](~/docs/rtvs/media/repl-toolbar-05-save-workspace-as.png)| 作業状態の保存 | 適用なし | セッションの現在の状態をワークスペースとして、保存します (「[ワークスペースとセッション](#workspaces-and-sessions)」を参照)。 |
+| ![[R スクリプトのソース化] ボタン](~/docs/rtvs/media/repl-toolbar-06-source-r-script.png) | R スクリプトのソース化 | Ctrl + Shift + S | Visual Studio エディターで現在アクティブな R スクリプトを使用して `source` を呼び出します。これにより、コードが実行されます。  このボタンは、R ファイルが Visual Studio エディターで開いている場合にのみ表示されます。 | 
+| ![[エコーによる R スクリプトのソース化] ボタン](~/docs/rtvs/media/repl-toolbar-07-source-r-script-with-echo.png) | エコーによる R スクリプトのソース化 | Ctrl + Shift + Enter | [R スクリプトのソース化] と同じですが、対話型ウィンドウにはスクリプトのコンテンツが表示されます。 | 
+| ![[R の割り込み] ボタン](~/docs/rtvs/media/repl-toolbar-08-interrupt-r.png)| R の割り込み | Esc | 上記のスクリーン ショットの `while` ループなど、対話型ウィンドウで実行中のコードを停止します。 |
+| ![[デバッガーのアタッチ] ボタン](~/docs/rtvs/media/repl-toolbar-09b-attach-debugger.png)| デバッガーのアタッチ | 適用なし | **[デバッグ]、[R インタラクティブ型に接続]** コマンドを使用することもできます。 | 
+| ![[作業ディレクトリをソース ファイルの場所に設定] ボタン](~/docs/rtvs/media/repl-toolbar-10-set-working-directory-source.png)| 作業ディレクトリをソース ファイルの場所に設定 | Ctrl + Shift + E | 対話型ウィンドウに最後に読み込まれたソース ファイルに作業ディレクトリを設定します (`source` を使用)。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
+| ![[作業ディレクトリをプロジェクトの場所に設定] ボタン](~/docs/rtvs/media/repl-toolbar-11-set-working-directory-to-project.png) | 作業ディレクトリをプロジェクトの場所に設定 | Ctrl+Shift+P | Visual Studio に現在読み込まれているプロジェクトのルートに作業ディレクトリを設定します。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
 | (テキスト フィールド) | 作業ディレクトリの選択 | 適用なし | 作業ディレクトリの直接入力フィールド。 「[作業ディレクトリ](#working-directory)」を参照してください。 |
 
 

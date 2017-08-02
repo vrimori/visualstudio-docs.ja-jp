@@ -34,7 +34,7 @@ caps.handback.revision: 10
   
  グループには、キーの出力へのショートカットを意味のあるポイントをパッケージ化できるようにすることもできます。 グループのサイズに関する前提条件は行われませんは、任意のグループが特定の構成で空にすることがあります。 構成では、各グループのサイズ \(出力の数\) は、同じ構成の別のグループのサイズと異なる設定できます。 別の構成で同じグループのサイズと異なることができます。  
   
- ![出力グループ グラフィック](../../extensibility/internals/media/vsoutputgroups.png "vsOutputGroups")  
+ ![出力グループ グラフィック](~/docs/extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups")  
 出力グループ  
   
  主な用途、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg> インターフェイスは、構築、展開し管理オブジェクトをデバッグおよびプロジェクトに許可するグループの出力に自由にアクセスできるようにします。 このインターフェイスの使用方法の詳細については、次を参照してください。 [プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)します。  

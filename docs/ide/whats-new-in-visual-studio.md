@@ -61,7 +61,7 @@ ms.lasthandoff: 05/26/2017
 
  Visual Studio をインストールするときに確認できる最も重要な変更は、新しいセットアップ エクスペリエンスです。 **[ワークロード]** タブには、共通のフレームワーク、言語、プラットフォーム別にグループ化されたインストール オプションが表示されます。 .NET デスクトップ開発から Windows、Linux、iOS での C++ アプリケーション開発まで、すべてを網羅します。   
 
- ![Visual Studio 2017 のセットアップ ダイアログ](../install/media/vs2017-workloads.PNG "Visual Studio 2017 のセットアップ画面")
+ ![Visual Studio 2017 のセットアップ ダイアログ](~/docs/install/media/vs2017-workloads.PNG "Visual Studio 2017 のセットアップ画面")
 
 必要なワークロードを選択し、必要に応じてそれらを変更します。
 
@@ -75,12 +75,12 @@ Visual Studio の新しいパフォーマンス センターは、IDE の起動�
 ### <a name="decrease-solution-load-time"></a>ソリューションの読み込み時間の短縮
 ソリューションに多数のプロジェクトが含まれていても、一度にすべてのファイルやプロジェクトを操作する必要があるとは限りません。 ここでは、Visual Studio がすべてのプロジェクトを読み込むのを待たずに、編集やデバッグを行えるようになりました。 マネージ プロジェクトでこれを試すには、[ツール]、[オプション]、[プロジェクトおよびソリューション] の順に選択して、**[Lightweight Solution load]** (ライトウェイト ソリューション ロード) をオンにします。
 
-  ![Visual Studio 2017 の [オプション] ダイアログ ボックス](../ide/media/vs2017ide-LightweightSolutionLoad.PNG "Visual Studio 2017 - [オプション] ダイアログ ボックス - ライトウェイト ソリューション ロード")
+  ![Visual Studio 2017 の [オプション] ダイアログ ボックス](~/docs/ide/media/vs2017ide-LightweightSolutionLoad.PNG "Visual Studio 2017 - [オプション] ダイアログ ボックス - ライトウェイト ソリューション ロード")
 
 ### <a name="faster-on-demand-loading-of-extensions"></a>拡張機能のオンデマンド読み込みの高速化
 Visual Studio では、独自およびサードパーティの拡張機能が IDE の起動時ではなく必要に応じて読み込まれるように取り組みを進めています。 どの拡張機能が起動、ソリューションの読み込み、および入力パフォーマンスに影響があるかについて関心をお持ちですか? この情報については、[ヘルプ]、[Visual Studio のパフォーマンスの管理] の順に選択して確認することができます。
 
-  ![Visual Studio 2017 の [オプション] ダイアログ ボックス](../ide/media/vs2017ide-manage-vs-perf.png "Visual Studio 2017 の [ヘルプ] ダイアログ ボックス - パフォーマンス管理")
+  ![Visual Studio 2017 の [オプション] ダイアログ ボックス](~/docs/ide/media/vs2017ide-manage-vs-perf.png "Visual Studio 2017 の [ヘルプ] ダイアログ ボックス - パフォーマンス管理")
 
 ## <a name="productivity-improvements"></a>生産性の向上
 
@@ -94,18 +94,18 @@ Visual Studio にサインインすると、お気に入りの拡張機能を使
 
 Visual Studio の拡張機能の一覧を表示するには、[ツール]、[拡張機能と更新プログラム] の順にクリックし、[拡張機能マネージャーのローミング] をクリックします。
 
-![Visual Studio 2017 - [拡張機能と更新プログラム] ダイアログ](../ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - Tools > Extensions and Updates dialog")
+![Visual Studio 2017 - [拡張機能と更新プログラム] ダイアログ](~/docs/ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - Tools > Extensions and Updates dialog")
 
 [拡張機能マネージャーのローミング] では、インストールするすべての拡張機能を追跡しますが、どの拡張機能をローミング リストに追加するかを選択することができます。
 
-![Visual Studio 2017 - [拡張機能と更新プログラム] ダイアログ](../ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 - Roaming Extension Manager")
+![Visual Studio 2017 - [拡張機能と更新プログラム] ダイアログ](~/docs/ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 - Roaming Extension Manager")
 
 [拡張機能マネージャーのローミング] を使用する場合、リストに次の 3 つの種類のアイコンが表示されます。
-* ![ローミング済みアイコン](../ide/media/vs2017ide-roamedicon.png "ローミング済みアイコン") "***ローミング済み***": ローミング リストにあり、このコンピューターにはインストールされていない拡張機能を示します。
+* ![ローミング済みアイコン](~/docs/ide/media/vs2017ide-roamedicon.png "ローミング済みアイコン") "***ローミング済み***": ローミング リストにあり、このコンピューターにはインストールされていない拡張機能を示します。
   (これらの拡張機能は、**[ダウンロード]** ボタンでインストールできます。)
-* ![ローミングおよびインストール済みアイコン](../ide/media/vs2017ide-roamedinstalledicon.png "ローミングおよびインストール済みアイコン") "***ローミングおよびインストール済み***": ローミング リストにあり、お使いの開発環境にインストールされているすべての拡張機能を示します。
+* ![ローミングおよびインストール済みアイコン](~/docs/ide/media/vs2017ide-roamedinstalledicon.png "ローミングおよびインストール済みアイコン") "***ローミングおよびインストール済み***": ローミング リストにあり、お使いの開発環境にインストールされているすべての拡張機能を示します。
   (ローミングしない場合は、**[ローミングの停止]** ボタンで削除することができます。)
-* ![インストール済みアイコン](../ide/media/vs2017ide-installedicon.png "インストール済みアイコン") "***インストール済み***": この環境にインストールされ、ローミング リストにはないすべての拡張機能を示します。
+* ![インストール済みアイコン](~/docs/ide/media/vs2017ide-installedicon.png "インストール済みアイコン") "***インストール済み***": この環境にインストールされ、ローミング リストにはないすべての拡張機能を示します。
   (**[ローミングの開始]** ボタンを使用して、拡張機能をローミング リストに追加できます。)
 
 サインイン中にダウンロードした拡張機能は、**ローミングおよびインストール済み**としてリストに追加され、ローミング リストに表示されます。これにより、どのコンピューターからでもアクセスできるようになります。
@@ -116,13 +116,13 @@ Visual Studio は依存関係検証ダイアグラム (別名レイヤー ダイ
 
 エラーは [エラー一覧] に表示され、テキスト エディターでは波線でこの違反の正確な場所が示されます。 これにより、不要な依存関係を導入する可能性を低減できます。
 
-![ライブ アーキテクチャの検証](../ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "Live Architecture Dependency validation")
+![ライブ アーキテクチャの検証](~/docs/ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "Live Architecture Dependency validation")
 
 #### <a name="live-unit-testing"></a>ライブ単体テスト
 
 Visual Studio Enterprise 2017 では、ライブ単体テストを実行することで、コーディング中にエディターで単体テストの結果とコード カバレッジをライブで確認できます。 これは .NET Framework の C# プロジェクトと Visual Basic プロジェクトで機能し、MSTest、xUnit、および NUnit の 3 つのテスト フレームワークをサポートします。
 
-![ライブ単体テスト](../ide/media/lut-codewindow.png "Visual Studio の Enterprise エディションの新しいライブ単体テスト機能の例")
+![ライブ単体テスト](~/docs/ide/media/lut-codewindow.png "Visual Studio の Enterprise エディションの新しいライブ単体テスト機能の例")
 
 詳しくは、ブログの投稿「[Live Unit Testing in Visual Studio 2017 Enterprise](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/)」(Visual Studio 2017 Enterprise でのライブ単体テスト) をご覧ください。
 
@@ -143,12 +143,12 @@ Visual Studio 2017 のすべてのエディションに付属:
 #### <a name="interact-with-git"></a>Git との連携
 Visual Studio でプロジェクトを操作する際に、コードを迅速にセットアップしてコミットし、Git サービスにコードを公開できます。 また、IDE の右下隅のボタンからメニュー クリックを使用して、Git リポジトリを管理することもできます。
 
-![Visual Studio 2017 と Git ダイアログのやり取り](../ide/media/vsIDE-GitInteraction.png "Visual Studio IDE の Git ツール")
+![Visual Studio 2017 と Git ダイアログのやり取り](~/docs/ide/media/vsIDE-GitInteraction.png "Visual Studio IDE の Git ツール")
 
 #### <a name="view-and-navigate-code-with-structure-visualizer"></a>構造ビジュアライザーを使用したコードの表示と移動
 構造ビジュアライザーは、構造のガイド線 (別名 インデント ガイド) をコードに描きます。 これらを使用することで、スクロールすることなく現在作業しているコード ブロックを視覚化して検出できます。 行にカーソルを置くとツールチップが表示され、そのブロックの開始地点とその親を確認できます。 TextMate 文法を介してサポートされるすべての言語のほか、C#、Visual Basic、XAML で使用できます。
 
-![Visual Studio 2017 の構造ビジュアライザー](../ide/media/vsIDE-StructureVisualizer.png "Visual Studio の構造体ビジュアライザー")
+![Visual Studio 2017 の構造ビジュアライザー](~/docs/ide/media/vsIDE-StructureVisualizer.png "Visual Studio の構造体ビジュアライザー")
 
 #### <a name="experience-improved-navigation-controls"></a>エクスペリエンスが改善されたナビゲーション コントロール:
 より確実に混乱なく A から B に移動できるようにナビゲーション エクスペリエンスを更新しました。
@@ -157,11 +157,11 @@ Visual Studio でプロジェクトを操作する際に、コードを迅速に
 
 * **すべてにジャンプ** (Ctrl + T または Ctrl + ,) &ndash; 任意のファイル/型/メンバー/シンボル宣言に直接移動します。 結果の一覧をフィルターしたり、クエリ構文 (例: ファイルは “f searchTerm”、型は “t searchTerm” など) を使用したりできます。
 
- ![[すべてにジャンプ] の機能強化](../ide/media/vs2017ide-navigation-go-to.png "強化された [すべてにジャンプ] 機能")
+ ![[すべてにジャンプ] の機能強化](~/docs/ide/media/vs2017ide-navigation-go-to.png "強化された [すべてにジャンプ] 機能")
 
 * **すべての参照の検索 (Shift+F12)** &ndash; 構文の色づけにより、[すべての参照の検索] の結果をプロジェクト、定義、パスの組み合わせでグループ化できます。 また、結果を "ロック" して元の結果を失うことなく別の参照を検索できます。
 
- ![新しい [すべての参照の検索] ツール](../ide/media/vs2017ide-find-all-references.png "新しい [すべての参照の検索] ツールの例")
+ ![新しい [すべての参照の検索] ツール](~/docs/ide/media/vs2017ide-find-all-references.png "新しい [すべての参照の検索] ツールの例")
 
 * **インデント ガイド** &ndash; 灰色の縦の点線がコード内のランドマークとしての役割を果たし、ビューのフレーム内のコンテキストを提供します。 これらはおすすめの Productivity Power Tools で認識できます。
 
@@ -180,13 +180,13 @@ Visual Studio には、C++ Core ガイドラインの配信、C++11 および C+
 
 デバッグ中に必要な行に止まるためにブレークポイントを設定することなく、簡単に前方にスキップできるようになりました。 デバッガーが停止した場合は、カーソルを合わせているコード行の横に表示されるアイコンをクリックします。 次にコード パスでその地点に到達すると、その行でコードが実行されて停止します。
 
-![Visual Studio 2017 のデバッグ - クリックで実行](../ide/media/vs2017ide-RunToClick.png "Visual Studio 2017 のデバッグと診断のクリックで実行")
+![Visual Studio 2017 のデバッグ - クリックで実行](~/docs/ide/media/vs2017ide-RunToClick.png "Visual Studio 2017 のデバッグと診断のクリックで実行")
 
 #### <a name="the-new-exception-helper"></a>新しい例外ヘルパー
 
 新しい例外ヘルパーを使用すると、例外情報を一目で確認できます。 情報はコンパクトな形式で表示され、内部の例外に簡単にアクセスできます。 NullReferenceException を診断するときに、例外ヘルパー内の null をすばやく確認できます。
 
-![新しい例外ヘルパー ダイアログ](../ide/media/vs2017ide-ExceptionHelper.png "新しい例外ヘルパー ダイアログ")
+![新しい例外ヘルパー ダイアログ](~/docs/ide/media/vs2017ide-ExceptionHelper.png "新しい例外ヘルパー ダイアログ")
 
 詳細については、「[Using the New Exception Helper in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/)」 (Visual Studio で新しい例外ヘルパーを使用する) のブログの投稿を参照してください。
 

@@ -65,7 +65,7 @@ ms.lasthandoff: 02/22/2017
   
  次の図は、ソリューションとプロジェクト構成をサポートするインターフェイスを実装する方法を示しています。  
   
- ![構成インターフェイス グラフィック](../../extensibility/internals/media/vsconfiginterfaces.gif "vsConfigInterfaces")  
+ ![構成インターフェイス グラフィック](~/docs/extensibility/internals/media/vsconfiginterfaces.gif "vsConfigInterfaces")  
 構成インターフェイス  
   
  前の図に関連するいくつかの注意:  

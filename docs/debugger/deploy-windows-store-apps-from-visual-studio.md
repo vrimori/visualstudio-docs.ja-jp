@@ -23,7 +23,7 @@ caps.handback.revision: 14
 # Visual Studio からの Windows ストア アプリの配置
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows のみに適用されます](../debugger/media/windows_only_content.png "windows\_only\_content")  
+![Windows のみに適用されます](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Visual Studio の配置機能では、Visual Studio を使ってターゲット デバイスに作成した Windows ストア アプリをビルドおよび登録します。 アプリの厳密な登録方法は、ターゲット デバイスがローカルかリモートかによって違います。  
   
@@ -80,13 +80,13 @@ caps.handback.revision: 14
   
 4.  リモート デバイスの名前または IP アドレスを入力するか、**\[リモート デバッガー接続の選択\]** ダイアログ ボックスからデバイスを選択します。  
   
-     ![&#91;Select Remote Debugger Connection&#93; &#40;リモート デバッガーの接続の選択&#41; ダイアログ ボックス](../debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
+     ![&#91;Select Remote Debugger Connection&#93; &#40;リモート デバッガーの接続の選択&#41; ダイアログ ボックス](~/docs/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
   
      **\[リモート デバッガー接続の選択\]** ダイアログ ボックスは、ローカル ネットワークのサブネットにあるデバイスと、Visual Studio コンピューターにイーサネット ケーブルで直接接続されているデバイスを表示します。  
   
  **JavaScript または Visual C\+\+ のプロジェクト ページにあるリモート デバイスを指定**  
   
- ![リモート デバッグ用の C&#43;&#43; プロジェクト プロパティ](../debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
+ ![リモート デバッグ用の C&#43;&#43; プロジェクト プロパティ](~/docs/debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
   
 1.  **\[起動するデバッガー\]** ボックスの一覧の **\[リモート デバッガー\]** をクリックします。  
   

@@ -24,7 +24,7 @@ caps.handback.revision: 12
 ## ドロップ ダウン バーのインターフェイス  
  [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] ではドロップダウン バーは次の図に示すように [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] の項目と [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] 項目のメンバー関数のリストが含まれます。  
   
- ![ドロップダウン バー](../extensibility/media/vsdropdown_bar.gif "vsDropdown\_bar")  
+ ![ドロップダウン バー](~/docs/extensibility/media/vsdropdown_bar.gif "vsDropdown\_bar")  
 ドロップ ダウン バー  
   
  ドロップダウン バーを実行すると主要な重要度 4 のインターフェイスがあります :  

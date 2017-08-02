@@ -95,7 +95,7 @@ ms.lasthandoff: 02/22/2017
   
  **[イメージ エディターのモード]** ツール バーを次に示します。  
   
- ![イメージ エディターのモーダル ツール バー。](../designers/media/digit-tre-modal-toolbar.png "Digit-TRE-Modal-Toolbar")  
+ ![イメージ エディターのモーダル ツール バー。](~/docs/designers/media/digit-tre-modal-toolbar.png "Digit-TRE-Modal-Toolbar")  
   
  次の表は、**[イメージ エディターのモード]** ツール バーに、左から右へ順に表示される項目を示します。  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 02/22/2017
   
  **[イメージ エディター]** ツール バーを次に示します。  
   
- ![イメージ エディターのツール バー](../designers/media/digit-tre-toolbar.png "Digit-TRE-Toolbar")  
+ ![イメージ エディターのツール バー](~/docs/designers/media/digit-tre-toolbar.png "Digit-TRE-Toolbar")  
   
  次の表では、**[イメージ エディター]** ツール バーに、上から下へ順に表示される項目について説明します。  
   

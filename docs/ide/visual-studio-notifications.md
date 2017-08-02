@@ -44,7 +44,7 @@ Visual Studio には、次のようにさまざまなイベントを警告する
   
  通知を常に無視することを選択した場合、Visual Studio によって表示されなくなります。 [[通知]、[環境]、[オプション]](../ide/reference/notifications-environment-options-dialog-box.md) ダイアログ ボックスで、無視される通知のリストをリセットできます。  
   
- ![Visual Studio の通知アイコン](../ide/media/vs2015_notificationicon.png "vs2015_NotificationIcon")  
+ ![Visual Studio の通知アイコン](~/docs/ide/media/vs2015_notificationicon.png "vs2015_NotificationIcon")  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio IDE](../ide/visual-studio-ide.md)

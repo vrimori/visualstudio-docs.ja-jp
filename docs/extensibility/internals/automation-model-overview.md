@@ -41,7 +41,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="objects-in-the-automation-model"></a>オートメーション モデル内のオブジェクト  
  オートメーション モデルは、関連の一般的な環境の主要な側面を制御するオブジェクトのグループで構成されます。 オートメーション モデルを構成するオブジェクトの広範なセットを示す図を次に示します。  
   
- ![Visual Studio オートメーション オブジェクト チャート](../../extensibility/internals/media/vsvisualstudioautomationobjectchart.gif "vsVisualStudioAutomationObjectChart")  
+ ![Visual Studio オートメーション オブジェクト チャート](~/docs/extensibility/internals/media/vsvisualstudioautomationobjectchart.gif "vsVisualStudioAutomationObjectChart")  
 Visual Studio オートメーション オブジェクト  
   
  詳細については、次を参照してください。 [Visual Studio 環境の拡張](http://msdn.microsoft.com/Library/4173a963-7ac7-4966-9bb7-e28a9d9f6792)します。  

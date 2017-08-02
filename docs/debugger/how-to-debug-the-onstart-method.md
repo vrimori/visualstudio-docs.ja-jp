@@ -51,7 +51,7 @@ Windows サービスをデバッグするには、サービスを起動し、デ
   
 4.  \[Just\-In\-Time デバッガー\] ウィンドウで、デバッグに使う Visual Studio のバージョンを選びます。  
   
-     ![JustInTimeDebugger](../debugger/media/justintimedebugger.png "JustInTimeDebugger")  
+     ![JustInTimeDebugger](~/docs/debugger/media/justintimedebugger.png "JustInTimeDebugger")  
   
 5.  Visual Studio の新しいインスタンスが開始し、`Debugger.Launch()` メソッドで実行が停止します。  
   

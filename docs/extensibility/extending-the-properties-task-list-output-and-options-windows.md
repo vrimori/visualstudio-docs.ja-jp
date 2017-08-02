@@ -64,7 +64,7 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
   
 3.  ドラッグ、 ** テキスト ボックス**、**ボタン**、および**ListBox**をキャンバスにします。 テキスト ボックスとボタンが同じレベルには、リスト ボックスには、次の図に示すように、それらの下のウィンドウの残りの要素を配置します。  
   
-     ![ツール ウィンドウを終了](../extensibility/media/t5-toolwindow.png "T5 ツール ウィンドウ")  
+     ![ツール ウィンドウを終了](~/docs/extensibility/media/t5-toolwindow.png "T5 ツール ウィンドウ")  
   
 4.  XAML ウィンドウで、ボタンを見つけて、コンテンツのプロパティを設定**追加**します。 Button コントロールにボタンのイベント ハンドラーを追加することで再接続、`Click="button1_Click"`属性です。 キャンバスのブロックは、次のようになります。  
   
@@ -152,7 +152,7 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
   
      ユーザーが、[オプション] ページを開いたときは、次の図ようになります。  
   
-     ![オプション ページ](../extensibility/media/t5optionspage.gif "T5OptionsPage")  
+     ![オプション ページ](~/docs/extensibility/media/t5optionspage.gif "T5OptionsPage")  
   
      カテゴリに注意してください**ToDo**とサブカテゴリ**全般**します。  
   
@@ -165,7 +165,7 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
   
      データで利用できるようにする、**プロパティ**ウィンドウで、次の&2; つの特別な属性を持つパブリック プロパティにデータを変換する`Description`と`Category`です。 `Description`下部に表示されるテキスト、**プロパティ**ウィンドウです。 `Category`ときに、プロパティが表示される場所を決定する、**プロパティ**でウィンドウが表示されます、**項目別**ビューです。 次の図に、**プロパティ**期間が**項目別**ビュー、**名**プロパティに、 **ToDo フィールド**カテゴリを選択するとの説明、**名前**プロパティは、ウィンドウの下部に表示されます。  
   
-     ![[プロパティ] ウィンドウ](../extensibility/media/t5properties.png "T5Properties")  
+     ![[プロパティ] ウィンドウ](~/docs/extensibility/media/t5properties.png "T5Properties")  
   
 2.  次の追加ステートメントを TodoItem.cs ファイルを使用します。  
   

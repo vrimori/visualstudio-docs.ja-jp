@@ -84,11 +84,11 @@ static void Main(string[] args) { int a, b, c; a = 1; b = 2; c = 0; for (int i =
   
  たとえば、前のセクションに記載したコードでは、次のようにして 3 つの値の平均を取得できます。  
   
- ![WatchExpression](../debugger/media/watchexpression.png "WatchExpression")  
+ ![WatchExpression](~/docs/debugger/media/watchexpression.png "WatchExpression")  
   
  一般に、**ウォッチ** ウィンドウで式を評価する場合の規則は、コーディング言語で式を評価する場合の規則と同じです。 式に構文エラーがある場合は、コード エディターで表示されるものと同じコンパイラ エラーを受け取るはずです。 次に例を示します。  
   
- ![WatchExpressionError](../debugger/media/watchexpressionerror.png "WatchExpressionError")  
+ ![WatchExpressionError](~/docs/debugger/media/watchexpressionerror.png "WatchExpressionError")  
   
 ##  <a name="bkmk_refreshWatch"></a> 古いウォッチ値の更新  
  特定の状況では、**ウォッチ** ウィンドウで式を評価しているときに、更新アイコン \(2 本の矢印の円、または 2 本の波線の円\) が表示されることがあります。  たとえば、プロパティの評価 \(**\[ツール\]\/\[オプション\]\/\[デバッグ\]\/\[プロパティの評価とその他の暗黙的な関数の呼び出しを常に有効にする\]**\) がオフになっていて、次のコードがある場合です。  

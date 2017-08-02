@@ -58,7 +58,7 @@ caps.handback.revision: 64
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連のビデオ デモについては、「[Visual Studio Tools for the Office System \(3.0\) を使用した Word 2007 コンテンツ コントロールへのデータのバインディング](http://go.microsoft.com/fwlink/?LinkId=136785)」を参照してください。  
+ ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[Visual Studio Tools for the Office System \(3.0\) を使用した Word 2007 コンテンツ コントロールへのデータのバインディング](http://go.microsoft.com/fwlink/?LinkId=136785)」を参照してください。  
   
 ## コンテンツ コントロールの概要  
  コンテンツ コントロールは、ユーザー入力用および表示用に最適化された UI を備えています。  文書に追加したコンテンツ コントロールは、境界線、タイトル、およびユーザーへの説明を示す一時的なテキストで識別されます。  コントロールの境界線とタイトルは、文書を印刷したときには表示されません。  

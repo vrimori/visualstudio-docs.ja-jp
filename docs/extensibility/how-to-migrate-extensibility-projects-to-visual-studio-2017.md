@@ -66,7 +66,7 @@ NuGet を更新するには、Microsoft.VSSDK.BuildTools を参照します。
 * Microsoft.VSSDK.BuildTools (最新バージョン) を選択します。
 * キーを押して**更新**します。
 
-![VSSDK ビルド ツール](media/vssdk-build-tools.png)
+![VSSDK ビルド ツール](~/docs/extensibility/media/vssdk-build-tools.png)
 
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>VSIX 拡張機能マニフェストを変更をします。
 
@@ -103,18 +103,18 @@ Visual Studio のユーザーのインストールの拡張機能を実行する
 * [デザイン] source.extension.vsixmanifest ファイルを開きます。
 * 選択**の前提条件** タブをクリックし、キーを押して**新規** ボタンをクリックします。
 
-  ![VSIX マニフェスト デザイナー](media/vsix-manifest-designer.png)
+  ![VSIX マニフェスト デザイナー](~/docs/extensibility/media/vsix-manifest-designer.png)
 
 * **追加新しい前提条件となる**ウィンドウが開きます。
 
-  ![vsix の前提条件を追加します。](media/add-vsix-prerequisite.png)
+  ![vsix の前提条件を追加します。](~/docs/extensibility/media/add-vsix-prerequisite.png)
 
 * ドロップダウンをクリックして**名前**し、必要な前提条件を選択します。
 * 必要な場合は、バージョンを更新します。
 
   >注: バージョン フィールドが、範囲の最大またがりメモリ割り当て (ただしを除く) で、現在インストールされているコンポーネントのバージョンでは、あらかじめ設定されているとするコンポーネントの次のメジャー バージョン。
 
-  ![roslyn の前提条件を追加します。](media/add-roslyn-prerequisite.png)
+  ![roslyn の前提条件を追加します。](~/docs/extensibility/media/add-roslyn-prerequisite.png)
 
 * Press **OK**.
 
@@ -133,7 +133,7 @@ Visual Studio の実験用インスタンスで拡張機能をデバッグする
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe
 ```
 
-![外部プログラムを開始します。](media/start-external-program.png)
+![外部プログラムを開始します。](~/docs/extensibility/media/start-external-program.png)
 
 >**注:**デバッグの開始アクションは一般に格納します。 csproj.user ファイルです。 このファイルは、.gitignore ファイルに含まれる通常し、そのため、通常で保存されていないソース管理にコミットする場合は、他のプロジェクト ファイル。 そのため、ソース管理から新しいソリューションを取得した場合、可能性の高いプロジェクトには 開始動作の設定値はありませんが。 Visual Studio 2017 年 1 で作成された新しい VSIX プロジェクトがある、。 現在の Visual Studio インストール ディレクトリを指す既定の設定で作成した csproj.user ファイルです。 しかし VSIX v2 の拡張機能を移行する場合は通常を。 csproj.user ファイルは、Visual Studio の以前のバージョンのインストール ディレクトリへの参照を含まれます。 値の設定**デバッグ** > **[開始動作]**拡張機能をデバッグしようとするときに起動する適切な Visual Studio の実験用インスタンスを許可します。
 
@@ -158,7 +158,7 @@ VSIX は、正常にインストールされますマシンにインストール
 
 * Visual Studio 2017 上
 
-![VSIX インストーラーは Visual Studio 2017](media/vsixinstaller-vs-2017.png)
+![VSIX インストーラーは Visual Studio 2017](~/docs/extensibility/media/vsixinstaller-vs-2017.png)
 
 * 省略可能: Visual Studio の以前のバージョンを確認します。
   * 下位互換性を証明します。
@@ -169,7 +169,7 @@ VSIX は、正常にインストールされますマシンにインストール
 
 Visual Studio が開かれた最近場合は、次のようなダイアログ ボックスを表示する可能性があります。
 
-![vs のプロセスを実行します。](media/vs-running-processes.png)
+![vs のプロセスを実行します。](~/docs/extensibility/media/vs-running-processes.png)
 
 プロセスのシャット ダウンを待機するか、手動でタスクを終了します。 表示されている名前などのかっこに示されている PID プロセスが表示されます。
 
@@ -181,7 +181,7 @@ Visual Studio が開かれた最近場合は、次のようなダイアログ �
 * インストールが不足しているコンポーネント/秒を識別して、それらが、VSIXInstaller の前提条件として一覧表示を確認してください。
 * 注: 昇格が必要に前提条件を拡張機能と共にインストールされている必要があります。
 
-![vsixinstaller 前提条件がないです。](media/vsixinstaller-missing-prerequisite.png)
+![vsixinstaller 前提条件がないです。](~/docs/extensibility/media/vsixinstaller-missing-prerequisite.png)
 
 ## <a name="deciding-on-components"></a>コンポーネントを決定します。
 

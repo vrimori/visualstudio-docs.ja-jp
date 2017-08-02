@@ -67,11 +67,11 @@ Python は、プログラムの設計時にシナリオを検証するために�
 
 1. テスト エクスプローラーは、テストするプロジェクトを検索し、それらを次のように表示します。 テストをダブルクリックすると、そのソース ファイルが開きます。
 
-    ![既定の test_A を表示しているテスト エクスプローラー](media/unit-test-A.png)
+    ![既定の test_A を表示しているテスト エクスプローラー](~/docs/python/media/unit-test-A.png)
 
 1. 他のテストをプロジェクトに追加すると、ツール バーのグループ化メニューを使用してテスト エクスプローラーのビューを整理できます。
 
-    ![テスト エクスプローラーのグループ化ツール バー メニュー](media/unit-test-group-menu.png)
+    ![テスト エクスプローラーのグループ化ツール バー メニュー](~/docs/python/media/unit-test-group-menu.png)
 
 1. 検索フィールドにテキストを入力してテストを名前でフィルター処理することもできます。
 
@@ -89,13 +89,13 @@ Python は、プログラムの設計時にシナリオを検証するために�
 
 - 合格したテストには、緑のチェックマークとテストの実行にかかった時間が表示されます。
 
-    ![test_A の合格状態](media/unit-test-A-pass.png)
+    ![test_A の合格状態](~/docs/python/media/unit-test-A-pass.png)
 
 - 失敗したテストには、コンソール出力とテストの実行からの `unittest` 出力を示す **[出力]** リンクとともに赤い × 印が表示されます。
 
-    ![test_A の失敗状態](media/unit-test-A-fail.png)
+    ![test_A の失敗状態](~/docs/python/media/unit-test-A-fail.png)
 
-    ![test_A の失敗とその理由](media/unit-test-A-fail-reason.png)
+    ![test_A の失敗とその理由](~/docs/python/media/unit-test-A-fail-reason.png)
 
 ## <a name="debugging-tests"></a>テストのデバッグ
 
@@ -103,7 +103,7 @@ Python は、プログラムの設計時にシナリオを検証するために�
 
 デバッグを開始するには、コードに最初のブレークポイントを設定し、テスト エクスプローラーでテスト (または選択範囲) を右クリックし、**[選択したテストのデバッグ]** を選択します。 アプリケーション コードの場合と同様に、Visual Studio が Python デバッガーを起動します。
 
-![テストのデバッグ](media/unit-test-debugging.png)
+![テストのデバッグ](~/docs/python/media/unit-test-debugging.png)
 
 Visual Studio のバージョンに応じて、**[選択されたテストのコード カバレッジの分析]** コマンドと **[テストのプロファイル]** コマンドを使用することもできます ([機能のマトリックス](python-in-visual-studio.md#features-matrix)のページをご覧ください)。
 

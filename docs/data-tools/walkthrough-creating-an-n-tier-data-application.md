@@ -49,7 +49,7 @@ manager: "ghogen"
   
 -   データ テーブルにデータを読み込むコードを記述する。  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.png "PlayVideo") このトピックのビデオ版については、「[ビデオ デモ: n 層データ アプリケーションの作成](http://go.microsoft.com/fwlink/?LinkId=115188)」を参照してください。  
+ ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "PlayVideo") このトピックのビデオ版については、「[ビデオ デモ: n 層データ アプリケーションの作成](http://go.microsoft.com/fwlink/?LinkId=115188)」を参照してください。  
   
 ## 必須コンポーネント  
  このチュートリアルを完了するには、次の条件が必要です。  

@@ -27,7 +27,7 @@ XML スキーマ エクスプローラーでは、次の方法でスキーマ �
 ## キーワード検索  
  キーワード検索を実行するには、XML スキーマ エクスプローラーのツール バーにある **\[スキーマ セットの検索\]** テキスト ボックスに部分文字列を入力します。  
   
- ![XML スキーマ エクスプローラー キーワード検索](../xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
+ ![XML スキーマ エクスプローラー キーワード検索](~/docs/xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
   
  XML スキーマ エクスプローラーは、次のようにスキーマ セットを検索します。  
   

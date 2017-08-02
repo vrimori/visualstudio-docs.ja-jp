@@ -20,7 +20,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="creating-a-windows-forms-based-domain-specific-language"></a>Windows フォームに基づくドメイン固有言語の作成
 Windows フォームを使用すると、DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの状態を表示します。 このトピックは、DSL への Windows フォームのバインドを使用して、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK。  
   
- ![DSL-Wpf-2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+ ![DSL-Wpf-2](~/docs/modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
 Windows フォームの UI とモデル エクスプ ローラーを示す DSL インスタンス。  
   
 ## <a name="creating-a-windows-forms-dsl"></a>Windows フォーム DSL を作成します。  
@@ -71,7 +71,7 @@ Windows フォームの UI とモデル エクスプ ローラーを示す DSL �
 ## <a name="updating-the-dsl-definition"></a>DSL 定義の更新  
  DSL 定義は、このチュートリアルでは使用します。  
   
- ![DSL-Wpf-1](../modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
+ ![DSL-Wpf-1](~/docs/modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
   
 #### <a name="to-update-the-dsl-definition"></a>DSL 定義を更新するには  
   
@@ -130,7 +130,7 @@ Windows フォームの UI とモデル エクスプ ローラーを示す DSL �
   
      プロパティと、モデル クラスの関係は、データ ソース ウィンドウに表示されます。  
   
-     ![DslWpf&3;](../modeling/media/dslwpf-3.png "DslWpf&3;")  
+     ![DslWpf&3;](~/docs/modeling/media/dslwpf-3.png "DslWpf&3;")  
   
 #### <a name="to-connect-your-model-to-a-form"></a>フォームに、モデルを接続するには  
   
@@ -175,7 +175,7 @@ Windows フォームの UI とモデル エクスプ ローラーを示す DSL �
   
 -   これにより、ユーザーは、行を選択するときに [プロパティ] ウィンドウが表示されるデータ グリッドの行ではなく、対応するモデル要素のプロパティ。  
   
- ![DslWpf4](../modeling/media/dslwpf4.png "DslWpf4")  
+ ![DslWpf4](~/docs/modeling/media/dslwpf4.png "DslWpf4")  
 データ ソースおよびビュー間のリンクのスキーマです。  
   
 #### <a name="to-complete-the-bindings-to-the-dsl"></a>DSL へのバインドを完了するには  
@@ -305,7 +305,7 @@ Windows フォームの UI とモデル エクスプ ローラーを示す DSL �
   
      データ グリッド ビュー内の要素の名前を編集することができます。 そこからも削除できます。  
   
- ![DSL Wpf&2;](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+ ![DSL Wpf&2;](~/docs/modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
   
 ### <a name="about-the-code-to-add-an-element"></a>要素を追加するコードについて  
  新しい要素のボタン、次の代替のコードはやや簡単です。  

@@ -59,14 +59,14 @@ Visual Studio の **エネルギー消費** プロファイラーは、常時ま
   
 -   *エネルギー* は、バッテリの電力容量のような能力または潜在力として、または一定の時間内に消費された総電力量として、電力の総量を表します。 エネルギーの単位はワット時です。これは、1 ワットの電力を 1 時間にわたって常時加えた場合の電力量です。 **[Energy Summary]\(エネルギー使用の概要)**では、単位はミリワット時間 **(mW-h)**で表示されます。  
   
- ![エネルギー キャパシティ、使用電力、総使用エネルギー](../profiling/media/energyprof_capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
+ ![エネルギー キャパシティ、使用電力、総使用エネルギー](~/docs/profiling/media/energyprof_capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
   
  たとえば、タブレットの完全に充電されたバッテリには、一定量のエネルギーが蓄えられています。 エネルギーは、ネットワーク経由での通信、値の計算、グラフィックスの表示などのタスクを実行するために使用され、バッテリの電力が消費される速度もさまざまです。 一定の期間内に消費された総電力も、エネルギーで測定されます。  
   
 ##  <a name="BKMK_Identify_scenarios_with_user_marks"></a> ユーザー マークによるシナリオの識別  
  また、タイムライン ルーラーの領域を識別できるようにプロファイル データに *ユーザー マーク* を追加できます。  
   
- ![タイムラインでのユーザー マーク](../profiling/media/profilers_usermarktimeline.png "PROFILERS_UserMarkTimeline")  
+ ![タイムラインでのユーザー マーク](~/docs/profiling/media/profilers_usermarktimeline.png "PROFILERS_UserMarkTimeline")  
   
  マークは、タイムライン上でメソッドが実行された時点に、オレンジ色の三角形として表示されます。 マークの上にマウス ポインターを置くと、メッセージと時刻がツールヒントとして表示されます。 複数のユーザー マークが近接している場合、マークはマージされてツールヒントのデータはまとめられます。 タイムラインの表示を拡大すると、マークを分離できます。  
   
@@ -117,7 +117,7 @@ if (performance && performance.mark) {
   
 4.  プロファイリングを停止するには、Visual Studio に戻り (Alt + Tab)、診断ハブのページの **[コレクションの停止]** をクリックします。  
   
-     ![データ収集の停止](../profiling/media/xamlprof_stopcollection.png "XAMLProf_StopCollection")  
+     ![データ収集の停止](~/docs/profiling/media/xamlprof_stopcollection.png "XAMLProf_StopCollection")  
   
      Visual Studio が、収集したデータを分析し、結果を表示します。  
   
@@ -141,12 +141,12 @@ if (performance && performance.mark) {
   
 |||  
 |-|-|  
-|![手順 1](../profiling/media/procguid_1.png "ProcGuid_1")|レポート ファイルの名前は、Report*YYYYMMDD-HHMM*.diagsession という形式になります。 レポートを保存する場合は、名前を変更できます。|  
-|![手順 2](../profiling/media/procguid_2.png "ProcGuid_2")|タイムラインは、プロファイル セッションの長さ、アプリケーションのアクティブ化ライフサイクル イベント、ユーザー マークを示します。|  
-|![手順 3](../profiling/media/procguid_3.png "ProcGuid_3")|青いバーをドラッグしてタイムラインの領域を選択することにより、レポートをタイムラインの一部だけに制限できます。|  
-|![手順 4](../profiling/media/procguid_4.png "ProcGuid_4")|**[消費電力]** グラフは、プロファイル セッション中にデバイス リソースによって引き起こされる電源出力の変化を系列別に表示する折れ線グラフです。 エネルギー消費量プロファイラーは、CPU、ネットワーク アクティビティ、および画面表示によって使用された電力を追跡します。|  
-|![手順 5](../profiling/media/procguid_6.png "ProcGuid_6")|**[リソース (オン/オフ)]**  グラフは、ネットワークのエネルギー コストの詳細を示します。 **[ネットワーク]** バーは、ネットワーク接続が開かれていた時間を表します。 **[データ転送]** 子バーは、アプリがネットワーク経由でデータを受信または送信していた時間です。|  
-|![手順 6](../profiling/media/procguid_6a.png "ProcGuid_6a")|**[エネルギー使用の概要]** は、選択されたタイムラインで CPU、ネットワーク アクティビティ、および画面表示によって使用された総エネルギーの割合を示します。|  
+|![手順 1](~/docs/profiling/media/procguid_1.png "ProcGuid_1")|レポート ファイルの名前は、Report*YYYYMMDD-HHMM*.diagsession という形式になります。 レポートを保存する場合は、名前を変更できます。|  
+|![手順 2](~/docs/profiling/media/procguid_2.png "ProcGuid_2")|タイムラインは、プロファイル セッションの長さ、アプリケーションのアクティブ化ライフサイクル イベント、ユーザー マークを示します。|  
+|![手順 3](~/docs/profiling/media/procguid_3.png "ProcGuid_3")|青いバーをドラッグしてタイムラインの領域を選択することにより、レポートをタイムラインの一部だけに制限できます。|  
+|![手順 4](~/docs/profiling/media/procguid_4.png "ProcGuid_4")|**[消費電力]** グラフは、プロファイル セッション中にデバイス リソースによって引き起こされる電源出力の変化を系列別に表示する折れ線グラフです。 エネルギー消費量プロファイラーは、CPU、ネットワーク アクティビティ、および画面表示によって使用された電力を追跡します。|  
+|![手順 5](~/docs/profiling/media/procguid_6.png "ProcGuid_6")|**[リソース (オン/オフ)]**  グラフは、ネットワークのエネルギー コストの詳細を示します。 **[ネットワーク]** バーは、ネットワーク接続が開かれていた時間を表します。 **[データ転送]** 子バーは、アプリがネットワーク経由でデータを受信または送信していた時間です。|  
+|![手順 6](~/docs/profiling/media/procguid_6a.png "ProcGuid_6a")|**[エネルギー使用の概要]** は、選択されたタイムラインで CPU、ネットワーク アクティビティ、および画面表示によって使用された総エネルギーの割合を示します。|  
   
  **エネルギー プロファイル データを分析するには**  
   

@@ -237,7 +237,7 @@ public void My_Test ()
 ##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> テスト エクスプローラーでテストを実行する  
  テスト プロジェクトをビルドすると、テストはテスト エクスプローラーに表示されます。 テスト エクスプローラーが表示されない場合は、Visual Studio メニューの **[テスト]** をクリックし、 **[Windows]**、 **[テスト エクスプローラー]**の順に選択します。  
   
- ![単体テスト エクスプローラー](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![単体テスト エクスプローラー](~/docs/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  テストを実行して、記述し、再実行すると、テスト エクスプローラーの既定のビューに **[失敗したテスト]**、 **[成功したテスト]**、 **[スキップされたテスト]** 、および **[テストを実行しない]**グループの結果が表示されます。 グループの見出しを選択して、そのグループ内のすべてのテストを表示するビューを開くことができます。  
   
@@ -259,7 +259,7 @@ public void My_Test ()
   
 |||  
 |-|-|  
-|![ビルド後に実行](../test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|各ローカル ビルドの後で単体テストを実行するには、標準のメニューの **[テスト]** を選択し、テスト エクスプローラーのツール バーの **[ビルド後にテストを実行]** を選択します。|  
+|![ビルド後に実行](~/docs/test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|各ローカル ビルドの後で単体テストを実行するには、標準のメニューの **[テスト]** を選択し、テスト エクスプローラーのツール バーの **[ビルド後にテストを実行]** を選択します。|  
   
 ###  <a name="BKMK_Filtering_and_grouping_the_test_list"></a> テスト リストのフィルター処理とグループ化を実行する  
  多数のテストがある場合は、テスト エクスプローラーの検索ボックスに入力し、指定した文字列によって一覧をフィルター処理できます。 フィルターの一覧から選択することで、フィルター イベントをさらに制限できます。  
@@ -268,7 +268,7 @@ public void My_Test ()
   
 |||  
 |-|-|  
-|![テスト エクスプローラー グループ ボタン](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|カテゴリ別にテストをグループ化するには、 **[グループ化]** をクリックします。|  
+|![テスト エクスプローラー グループ ボタン](~/docs/test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|カテゴリ別にテストをグループ化するには、 **[グループ化]** をクリックします。|  
   
  詳細については、「[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)」を参照してください。  
   
@@ -290,7 +290,7 @@ public void My_Test ()
   
  **A:** IntelliSense を使用して、プロジェクト コードにクラスとメソッドを生成します。 テスト メソッドに、生成するクラスまたはメソッドを呼び出すステートメントを記述し、その呼び出しの下で IntelliSense メニューを開きます。 新しいクラスのコンストラクターへの呼び出しの場合は、メニューから **[新しい型の生成]** を選択し、ウィザードに従ってコード プロジェクトにクラスを挿入します。 メソッドへの呼び出しの場合は、IntelliSense メニューから **[Generate new method (新しいメソッドの生成)]** を選択します。  
   
- ![[メソッド スタブの生成] の Intellisense メニュー](../test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")  
+ ![[メソッド スタブの生成] の Intellisense メニュー](~/docs/test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")  
   
  **Q: テストを実行する入力値として複数のデータ セットを使用する単体テストを作成できますか。**  
   
@@ -358,7 +358,7 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
   
  **A:** はい。以下の手順に従って、 [他のフレームワークを検索してインストール](../test/install-third-party-unit-test-frameworks.md)してください。 Visual Studio を再起動した後、単体テストを作成するためのソリューションをもう一度開き、インストールしたフレームワークを選びます。  
   
- ![インストールされているその他の単体テスト フレームワークを選択する](../test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
+ ![インストールされているその他の単体テスト フレームワークを選択する](~/docs/test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
   
  選んだフレームワークを使用して、単体テスト スタブが作成されます。
 

@@ -102,7 +102,7 @@ manager: "ghogen"
   
 4.  **F5** キーを押して、アプリをデバッグ モードにします。 デバッグ モードであることを示すために、**\[デバッグの場所\]** ツール バーの **\[プロセス\]** の一覧にアプリのパッケージ名が表示されます。  
   
-     ![バックグラウンド タスクのプロセス リスト](../debugger/media/dbg_backgroundtask_processlist.png "DBG\_BackgroundTask\_ProcessList")  
+     ![バックグラウンド タスクのプロセス リスト](~/docs/debugger/media/dbg_backgroundtask_processlist.png "DBG\_BackgroundTask\_ProcessList")  
   
 5.  **\[デバッグの場所\]** ツール バーのイベントの一覧から、開始するバックグラウンド タスクを選択します。  
   

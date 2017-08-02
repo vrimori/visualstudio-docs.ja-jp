@@ -115,7 +115,7 @@ ms.lasthandoff: 05/13/2017
   
      タイマーはカウント ダウンを開始します。 残り時間がなくなると、クイズが終了し、答えが表示されます。 次の図は実行中のクイズを示します。  
   
-     ![実行中の計算クイズ](../ide/media/express_addcountdown.png "Express_AddCountdown")  
+     ![実行中の計算クイズ](~/docs/ide/media/express_addcountdown.png "Express_AddCountdown")  
 実行中の計算クイズ  
   
 ### <a name="to-continue-or-review"></a>続行または確認するには  

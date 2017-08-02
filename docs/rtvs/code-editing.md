@@ -57,15 +57,15 @@ R Tools for Visual Studio (RTVS) により、Visual Studio の編集エクスペ
 
 文字列、コメント、キーワードなど、コードのさまざまな部分に色を付けるだけでなく、RTVS ではコメント内のリンクも強調表示されて有効になります。
 
-![R コードの構文の色分け](media/editing-syntax-colors.png)
+![R コードの構文の色分け](~/docs/rtvs/media/editing-syntax-colors.png)
 
 フォントおよび特定の強調表示色をカスタマイズするには、**[ツール] > [オプション]** コマンドを選び、**[環境] > [フォントおよび色]** に移動して、**[表示項目:]** ボックスで R 関連の項目の設定を変更します。
 
-![R コードのフォントおよび色のオプション](media/editing-syntax-colors-options.png)
+![R コードのフォントおよび色のオプション](~/docs/rtvs/media/editing-syntax-colors-options.png)
 
 Visual Studio のエディターでは、構文エラーに下線も表示されます。
 
-![R コードの構文エラーの強調表示](media/editing-syntax-error.png)
+![R コードの構文エラーの強調表示](~/docs/rtvs/media/editing-syntax-error.png)
 
 この動作を変更するには、[エディター オプション](#editor-options)で **[詳細設定] > [構文チェック]** をご覧ください。
 
@@ -73,11 +73,11 @@ Visual Studio のエディターでは、構文エラーに下線も表示され
 
 コードを入力すると、RTVS は [IntelliSense](code-intellisense.md) ページでの記述に従ってオート コンプリートを行います。 また、かっこの補完などのオート フォーマットを実行します。 
 
-![インライン書式設定を示すアニメーション](media/editing-inline-formatting.gif)
+![インライン書式設定を示すアニメーション](~/docs/rtvs/media/editing-inline-formatting.gif)
 
 多くのパラメーターがある関数呼び出しを入力するときは、普通、コードが読みやすいようにパラメーターを一列に表示したくなります。 RTVS はユーザーがパラメーターに設定したインデントを記憶し、それ以降の行にそのインデントを自動的に適用します。
 
-![自動インデントのアニメーション](media/editing-auto-indentation.gif)
+![自動インデントのアニメーション](~/docs/rtvs/media/editing-auto-indentation.gif)
 
 この動作を変更するには、[エディター オプション](#editor-options)の **[タブ]** グループをご覧ください。
 
@@ -85,7 +85,7 @@ Visual Studio のエディターでは、構文エラーに下線も表示され
 
 独自の領域を作成するには、`---` で終わるコメントで該当するコードを囲みます。 コードの左の小さな +/- コントロールを使うと、領域を開いたり閉じたりすることができます。
 
-![コメントでの折りたたみ可能な領域の作成](media/editing-collapsible-regions.gif)
+![コメントでの折りたたみ可能な領域の作成](~/docs/rtvs/media/editing-collapsible-regions.gif)
  
 既定では、Tab キーを押すとスペースが挿入されます。 「[[オプション]、[テキスト エディター]、[すべての言語]](../ide/reference/options-text-editor-all-languages.md)」で説明されているようにこの動作も変更できます。
 
@@ -99,7 +99,7 @@ Visual Studio のエディターでは、構文エラーに下線も表示され
 
 右クリック メニューまたは Alt + F12 キーで開く **[定義をここに表示]** は、関数呼び出しの下に関数のソース コードが含まれる読み取り専用のスクロール可能な領域を挿入します。
 
-![[定義をここに表示] のアニメーション](media/editing-peek-definition.gif)
+![[定義をここに表示] のアニメーション](~/docs/rtvs/media/editing-peek-definition.gif)
 
 ## <a name="sending-code-to-the-interactive-window"></a>対話型ウィンドウへのコードの送信
 
@@ -131,7 +131,7 @@ f <- function(a) { return(a + 1) }
 
 RTVS には、関数のパラメーター名を使って [Roxygen](http://roxygen.org/) コメントを生成するためのショートカットがあります。 関数定義の前の空白行に「`###`」と入力するだけです。
 
-![Roxygen コメント挿入のアニメーション](media/editing-roxygen-comments.gif)
+![Roxygen コメント挿入のアニメーション](~/docs/rtvs/media/editing-roxygen-comments.gif)
 
 ## <a name="editor-options"></a>エディター オプション
 

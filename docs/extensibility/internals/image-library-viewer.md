@@ -199,7 +199,7 @@ Visual Studio イメージ ライブラリ ビューアー ツールは、読み
   
  各イメージ ソースの表示される情報テーマが適用されたことができるかどうかの背景を表示の種類が含まれていますまたはハイコントラストは有効なサイズをサポートしているまたはかどうかのサイズに依存しない、おりネイティブ アセンブリから提供されたイメージのかどうか。  
   
- ![イメージ ライブラリ ビューアーにテーマを設定可能](../../extensibility/internals/media/image-library-viewer-can-theme.png "Image Library Viewer Can Theme")  
+ ![イメージ ライブラリ ビューアーにテーマを設定可能](~/docs/extensibility/internals/media/image-library-viewer-can-theme.png "Image Library Viewer Can Theme")  
   
  イメージ マニフェストを検証する場合は、マニフェスト、およびイメージの実際の場所に DLL を配置することをお勧めします。 相対パスが正しく動作していることができます、イメージ ライブラリを検索して、マニフェストとイメージ DLL を読み込むことと、これが確認されます。  
   

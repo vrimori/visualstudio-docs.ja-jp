@@ -44,7 +44,7 @@ caps.handback.revision: 101
   
 -   [Windows フォーム コントロールをドキュメントに追加する](#WindowsForms)。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: 実行時にドキュメントにコントロールを追加する](http://go.microsoft.com/fwlink/?LinkId=132782)」をご覧ください。  
+ ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: 実行時にドキュメントにコントロールを追加する](http://go.microsoft.com/fwlink/?LinkId=132782)」をご覧ください。  
   
 ##  <a name="ControlsCollection"></a> コントロール コレクションを使用して実行時にコントロールを管理する  
  実行時にコントロールを追加、取得、または削除するには、<xref:Microsoft.Office.Tools.Excel.ControlCollection> オブジェクトと <xref:Microsoft.Office.Tools.Word.ControlCollection> オブジェクトのヘルパー メソッドを使用します。  

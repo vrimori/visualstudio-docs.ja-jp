@@ -46,7 +46,7 @@ ms.lasthandoff: 05/13/2017
   
 2.  ソリューション エクスプローラーで、MainPage.xaml を開きます。 ツールボックスから、ボタン コントロールとテキスト ボックス コントロールをデザイン サーフェイスにドラッグします。  
   
-     ![MainPage.xaml へコントロールを追加する](../test/media/cuit_phone_app_addcontrols.png "CUIT_Phone_App_AddControls")  
+     ![MainPage.xaml へコントロールを追加する](~/docs/test/media/cuit_phone_app_addcontrols.png "CUIT_Phone_App_AddControls")  
   
 3.  [プロパティ] ウィンドウで、このボタン コントロールに名前を付けます。  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 05/13/2017
   
 2.  十字線ツールを使用して UI マップを編集することを選択します。  
   
-     ![十字線ツールを使用してコード化された UI テストを生成する] (../test/media/cuit_phone_howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")  
+     ![十字線ツールを使用してコード化された UI テストを生成する] (~/docs/test/media/cuit_phone_howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")  
   
 3.  十字線ツールを使用してアプリを選択してから、アプリの **[AutomationId]** プロパティの値をコピーします。この値は後で、テストでアプリを起動するために使用します。  
   

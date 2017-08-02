@@ -44,22 +44,22 @@ Visual Studio は、Django プロジェクトの完全な IntelliSense を提供
 
 - テンプレートに渡されるコンテキスト変数:
 
-    ![コンテキスト変数用の IntelliSense](media/template-django-intellisense.png)
+    ![コンテキスト変数用の IntelliSense](~/docs/python/media/template-django-intellisense.png)
 
 - 組み込みとユーザー定義両方のタグ付けとフィルター処理:
 
-    ![タグとフィルターの IntelliSense](media/template-django-intellisense-filter.png)
+    ![タグとフィルターの IntelliSense](~/docs/python/media/template-django-intellisense-filter.png)
 
 - 埋め込みの CSS と JavaScript の構文の色分け表示:
 
-    ![CSS Intellisense](media/template-django-intellisense-css.png)
+    ![CSS Intellisense](~/docs/python/media/template-django-intellisense-css.png)
 
-    ![JavaScript IntelliSense](media/template-django-intellisense-js.png)
+    ![JavaScript IntelliSense](~/docs/python/media/template-django-intellisense-js.png)
 
 
 また、Visual Studio は Django プロジェクトの完全な[デバッグ サポート](debugging.md)も提供します。 
 
-![ブレークポイント](media/template-django-debugging.png)
+![ブレークポイント](~/docs/python/media/template-django-debugging.png)
 
 ## <a name="django-management-console"></a>Django 管理コンソール
 
@@ -67,16 +67,16 @@ Django 管理コンソールには、**[プロジェクト]** メニューのさ
 
 - **[Open Django Shell... (Django シェルを開く...)]**: モデルを操作できるアプリケーション コンテキストでシェルを起動します
 
-    ![コンソール](media/template-django-console-shell.png)
+    ![コンソール](~/docs/python/media/template-django-console-shell.png)
 
 - **[Django Sync DB (Django 同期 DB)]**: `manage.py syncdb` を対話型ウィンドウで実行します。
 
-    ![コンソール](media/template-django-console-sync-db.png)
+    ![コンソール](~/docs/python/media/template-django-console-sync-db.png)
 
 - **[Collect Static (静的収集)]**: `manage.py collectstatic --noinput` を実行して、`settings.py` の `STATIC_ROOT` で指定されたパスにすべての統計ファイルをコピーします。 [Microsoft Azure に発行](template-web.md#publishing-to-azure-app-service)する場合、統計ファイルは発行操作の一部として収集されます。
 
-    ![コンソール](media/template-django-console-collect-static.png)
+    ![コンソール](~/docs/python/media/template-django-console-collect-static.png)
 
 - **[検証]**: `settings.py` の `INSTALLED_APPS` で指定されたインストール済みのモデルで検証エラーをレポートする `manage.py validate` を実行します。
 
-    ![コンソール](media/template-django-console-validate.png)
+    ![コンソール](~/docs/python/media/template-django-console-validate.png)

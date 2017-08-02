@@ -102,7 +102,7 @@ A:  はい。Visual Studio に統合されている任意のソース管理シ�
 
 A:  RTVS の 1.0 リリースは英語版のみです。 1.1 リリースでは、Visual Studio と同じ言語セットにローカライズされる予定です。 それまでは、[Visual Studio 2015 用の英語の言語パック](https://www.microsoft.com/download/details.aspx?id=48157)を使用するか、Visual Studio 2017 でインストーラーを実行し、**[言語パック]** タブで [英語] を選択してください。
 
-![Visual Studio 2017 の各国対応設定](media/FAQ-international-settings.png)
+![Visual Studio 2017 の各国対応設定](~/docs/rtvs/media/FAQ-international-settings.png)
 
 **Q.RTVS で R の 32 ビット エディションを使用できますか?**
 

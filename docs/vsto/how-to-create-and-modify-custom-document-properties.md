@@ -32,7 +32,7 @@ caps.handback.revision: 46
   
  次の例は、Excel のドキュメント レベルのカスタマイズでカスタム プロパティを追加し、値を割り当てる方法を示します。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: Microsoft Word のカスタム ドキュメント プロパティにアクセスして操作する](http://go.microsoft.com/fwlink/?LinkId=136772)」を参照してください。  
+ ![ビデオへのリンク](~/docs/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: Microsoft Word のカスタム ドキュメント プロパティにアクセスして操作する](http://go.microsoft.com/fwlink/?LinkId=136772)」を参照してください。  
   
 ## 使用例  
  [!code-csharp[Trin_VstcoreProgramming#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgramming/CS/ThisWorkbook.cs#6)]

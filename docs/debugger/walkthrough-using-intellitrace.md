@@ -54,7 +54,7 @@ IntelliTrace を使用して、特定のイベントまたはイベントのカ�
   
      次のスクリーン ショットは Visual Studio 2015 Update 1 のものです。  
   
-     ![IntelliTrace&#45;Update1](../debugger/media/intellitrace-update1.png "IntelliTrace\-Update1")  
+     ![IntelliTrace&#45;Update1](~/docs/debugger/media/intellitrace-update1.png "IntelliTrace\-Update1")  
   
 7.  イベント選択して詳細を展開します。  
   
@@ -68,7 +68,7 @@ IntelliTrace を使用して、特定のイベントまたはイベントのカ�
   
      次のスクリーン ショットは Visual Studio 2015 Update 1 のものです。  
   
-     ![HistoricalDebugging&#45;Update1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging\-Update1")  
+     ![HistoricalDebugging&#45;Update1](~/docs/debugger/media/historicaldebugging-update1.png "HistoricalDebugging\-Update1")  
   
 8.  バグが見つからない場合は、バグが発生するまでの間に発生した他のイベントを確認します。 また、IntelliTrace で呼び出し情報を記録することで、関数呼び出しをステップ実行することもできます。  
   

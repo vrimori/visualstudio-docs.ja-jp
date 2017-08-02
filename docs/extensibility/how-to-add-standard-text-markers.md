@@ -39,7 +39,7 @@ caps.handback.revision: 10
   
      たとえばコンテキスト メニューのブレークポイント固有のコマンドは次のスクリーン ショットに表示されるように  **ブレークポイントの作成**  によって **\*\*\* Remove Breakpoint \*\*\*** が含まれます。  
   
-     ![マーカー コンテキスト メニュー](../extensibility/media/vsmarkercontextmenu.png "vsMarkercontextmenu")  
+     ![マーカー コンテキスト メニュー](~/docs/extensibility/media/vsmarkercontextmenu.gif "vsMarkercontextmenu")  
   
 2.  パス カスタム コマンドの名前を指定するテキスト。  たとえば**\*\*\* Remove Breakpoint \*\*\*** は環境が既に項目を指定しないカスタム コマンドである場合があります。  コマンドを使用できるようにするまたはオンとオフを切り替えますサポートされているかどうかを渡します。  環境が正しい方法のカスタム コンテキスト メニューのコマンドを表示するためにこの情報を使用します。  
   

@@ -100,7 +100,7 @@ ms.lasthandoff: 05/13/2017
   
      この操作によって表示されるテストの出力に、操作ログへのリンクが含まれています。  
   
-     ![コード化された UI テストからの結果と出力リンク](../test/media/cuit_htmlactionlog2.png "CUIT_HTMLActionLog2")  
+     ![コード化された UI テストからの結果と出力リンク](~/docs/test/media/cuit_htmlactionlog2.png "CUIT_HTMLActionLog2")  
   
 5.  UITestActionLog.html リンクを選択します。  
   

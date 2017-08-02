@@ -40,11 +40,11 @@ Visual Studio では、ローカライズされたリソース (各カルチャ�
   
  リソースを保存する最も良い方法は、できる限り汎用化することです。 つまり、可能であれば、具体的なカルチャではなくニュートラル カルチャのリソース ファイル内にローカライズされた文字列や画像を保存するということです。 たとえば、ベルギー系フランス語 ("fr-BE") カルチャのリソースがあり、そのすぐ上のリソースが英語のフォールバック リソースであるシステムのアプリケーションがあるとします。このアプリケーションを、別のユーザーがカナダ系フランス語のカルチャで構成されたシステムで開くと、問題が発生する可能性があります。 システムは "fr-CA" のサテライト アセンブリを検索しますが見つからないため、フランス語のリソースではなく、フォールバック リソース (この場合は英語) が含まれるメイン アセンブリを読み込みます。 次の図に、こうした好ましくないシナリオを示します。  
   
- ![特定のリソースのみ](../ide/media/vbspecificresourcesonly.gif "vbSpecificResourcesOnly")  
+ ![特定のリソースのみ](~/docs/ide/media/vbspecificresourcesonly.gif "vbSpecificResourcesOnly")  
   
  推奨方法に従って "fr" カルチャのニュートラル リソース ファイル内にできる限り多くのリソースを配置した場合、カナダ系フランス語ユーザーに "fr-BE" カルチャ用のリソースは表示されませんが、文字列はフランス語で表示されます。 次の状況は、この推奨シナリオを示しています。  
   
- ![NeutralSpecificResources のグラフィック](../ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")  
+ ![NeutralSpecificResources のグラフィック](~/docs/ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")  
   
 ## <a name="see-also"></a>関連項目  
  [ローカリゼーションのニュートラル リソース言語](../ide/neutral-resources-languages-for-localization.md)   

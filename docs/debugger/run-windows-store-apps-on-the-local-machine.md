@@ -23,7 +23,7 @@ caps.handback.revision: 15
 # ローカル コンピューターでの Windows ストア アプリの実行
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows のみに適用されます](../debugger/media/windows_only_content.png "windows\_only\_content")  
+![Windows のみに適用されます](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Windows ストア アプリのパフォーマンス分析のデバッグ、テスト、実行を行う場合、Visual Studio をホストする同じコンピューター上でアプリを実行することができます。  デバイスのディスプレイがタッチ対応である場合は、アプリの全機能を実施できますが、そうでない場合の操作はマウスとキーボードに限定されます。  
   
@@ -47,7 +47,7 @@ caps.handback.revision: 15
   
 -   C\# と Visual Basic のプロジェクトから、**\[デバッグ\]** をクリックして、次に **\[ターゲット デバイス\]** ドロップダウン リストから **\[ローカル コンピューター\]** を選択します。  
   
-     ![C&#35; および Visual Basic プロジェクト プロパティ ページ](../debugger/media/vsrun_cs_vb_projprop_local.png "VSRUN\_CS\_VB\_ProjProp\_Local")  
+     ![C&#35; および Visual Basic プロジェクト プロパティ ページ](~/docs/debugger/media/vsrun_cs_vb_projprop_local.png "VSRUN\_CS\_VB\_ProjProp\_Local")  
   
 -   C\+\+ と JavaScript のプロジェクトから、**\[構成プロパティ\]** ノードを展開して **\[デバッグ\]** をクリックし、次に **\[起動するデバッガー\]** リストから **\[ローカル デバッガー\]** を選択します。  
   

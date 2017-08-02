@@ -51,12 +51,12 @@ caps.handback.revision: 25
   
      複数の方法で、このチュートリアルで前に randomizer と名付けた、`Random` クラスの `Next()` メソッドを呼び出すことができます。  複数の方法で呼び出すことができるメソッドをオーバーロード メソッドと呼び、IntelliSense を使用して確認することができます。  `Next()` メソッドについての IntelliSense ウィンドウのツールヒントをもう一度見てください。  
   
-     ![IntelliSense ウィンドウのツールヒント](../ide/media/express_overloads.png "Express\_Overloads")  
+     ![IntelliSense ウィンドウのツールヒント](~/docs/ide/media/express_overloads.png "Express\_Overloads")  
 IntelliSense ウィンドウのツールヒント  
   
      ツールヒントには **"\(\+ 2 オーバーロード\)"** と表示され、これは他の 2 つの方法で `Next()` メソッドを呼び出せることを意味します。  オーバーロードには、異なる数または型の引数が含まれていて、互いに動作が若干異なります。  たとえば、オーバーロードの 1 つは整数と文字列を受け取ることがありますが、メソッドは単一の整数引数を受け取ることがあります。  目的に基づいて適切なオーバーロードを選択します。  `StartTheQuiz()` メソッドにコードを追加すると、`randomizer.Next(` を入力するとすぐに、詳細情報が IntelliSense ウィンドウに表示されます。  上矢印キーおよび下矢印キーを押すと、次の図に示すように、別のオーバーロードに切り替わります。  
   
-     ![IntelliSense 内での Next&#40;&#41; メソッドのオーバーライド](../ide/media/express_nextoverload.png "Express\_NextOverload")  
+     ![IntelliSense 内での Next&#40;&#41; メソッドのオーバーライド](~/docs/ide/media/express_nextoverload.png "Express\_NextOverload")  
 IntelliSense での Next\(\) メソッドのオーバーロード  
   
      この場合、最小値と最大値を指定できるため、最後のオーバーロードを選択する必要があります。  

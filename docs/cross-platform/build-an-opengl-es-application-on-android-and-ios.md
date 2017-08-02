@@ -109,7 +109,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      Visual Studio によってエミュレーターが起動されます。コードを読み込んで配置するのに数秒かかります。 以下に、Visual Studio Emulator for Android でのアプリの外観を示します。  
   
-     ![Android エミュレーターで実行されているアプリ](../cross-platform/media/cppmdd_opengles_andemulator.png "CPPMDD_OpenGLES_AndEmulator")  
+     ![Android エミュレーターで実行されているアプリ](~/docs/cross-platform/media/cppmdd_opengles_andemulator.png "CPPMDD_OpenGLES_AndEmulator")  
   
      アプリが開始されると、ブレークポイントの設定や、デバッガーを使用したステップ実行、ローカルの確認、値のウォッチができるようになります。  
   
@@ -150,7 +150,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      アプリが開始されたら、ブレークポイントを設定し、Visual Studio デバッガーを使用してローカルを確認したり、呼び出し履歴を確認したり、値を観察したりできます。  
   
-     ![iOS アプリケーションのブレークポイントにあるデバッガー](../cross-platform/media/cppmdd_opengles_iosdebug.png "CPPMDD_OpenGLES_iOSDebug")  
+     ![iOS アプリケーションのブレークポイントにあるデバッガー](~/docs/cross-platform/media/cppmdd_opengles_iosdebug.png "CPPMDD_OpenGLES_iOSDebug")  
   
 5.  Shift キーを押しながら F5 キーを押してデバッグを停止します。  
   

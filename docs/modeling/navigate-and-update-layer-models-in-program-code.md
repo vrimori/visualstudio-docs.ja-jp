@@ -63,14 +63,14 @@ using (ILinkedUndoTransaction t =
 ## <a name="dependency-links"></a>依存関係リンク  
  依存関係リンクはオブジェクトによって表されます。 どちらの方向にもナビゲートできます。  
   
- ![ILayerDependencyLink は&2; つの Ilayer を接続します。] (../modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
+ ![ILayerDependencyLink は&2; つの Ilayer を接続します。] (~/docs/modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
   
  依存関係リンクを作成するには、`source.CreateDependencyLink(target)` を呼び出します。  
   
 ## <a name="comments"></a>コメント  
  コメントは、レイヤーまたはレイヤー モデルの中に含めることができ、任意のレイヤー要素にリンクすることもできます。  
   
- ![任意のレイヤー要素にコメントを添付できます。] (../modeling/media/layerapi_comments.png "LayerApi_Comments")  
+ ![任意のレイヤー要素にコメントを添付できます。] (~/docs/modeling/media/layerapi_comments.png "LayerApi_Comments")  
   
  コメントは任意の数の要素 (ゼロ個も可能) にリンクすることができます。  
   
@@ -136,7 +136,7 @@ public void ... (...)
     if (element != null) ... }}  
 ```  
   
- ![各 ILayerElement は IShape で表示されます。] (../modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
+ ![各 ILayerElement は IShape で表示されます。] (~/docs/modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
   
  <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape><xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>は UML モデルの表示にも使用します</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>。</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> 詳細については、次を参照してください。 [UML モデルを図に表示](../modeling/display-a-uml-model-on-diagrams.md)します。  
   

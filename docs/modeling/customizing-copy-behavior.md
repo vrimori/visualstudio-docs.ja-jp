@@ -29,7 +29,7 @@ caps.handback.revision: 16
   
  この規則はコピーした要素およびリンクに再帰的に適用されます。  
   
- ![コピーされ貼り付けられた要素](../modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")  
+ ![コピーされ貼り付けられた要素](~/docs/modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")  
   
  コピーした要素およびリンクはシリアル化され、<xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> \(EGP\) に格納されて、クリップボードに配置されます。  
   
@@ -237,7 +237,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 > [!TIP]
 >  プログラム コードを使用したモデルのカスタマイズの詳細については、「[プログラム コードにおけるモデル内の移動およびモデルの更新](../modeling/navigating-and-updating-a-model-in-program-code.md)」を参照してください。  
   
- ![コピー操作のシーケンス図](../modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")  
+ ![コピー操作のシーケンス図](~/docs/modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")  
   
  ![貼り付け操作のシーケンス図](../modeling/media/dslpasteseqdiagram.png "dslPasteSeqDiagram")  
   

@@ -128,7 +128,7 @@ caps.handback.revision: 58
   
      次の図に、Outlook VSTO アドインに対応する発行フォルダーの構造を示します。  
   
-     ![発行フォルダーの構造](../vsto/media/publishfolderstructure.png "発行フォルダーの構造")  
+     ![発行フォルダーの構造](~/docs/vsto/media/publishfolderstructure.png "発行フォルダーの構造")  
   
     > [!NOTE]  
     >  ClickOnce はアセンブリに .deploy 拡張子を追加します。その結果、セキュリティで保護されたインターネット インフォメーション サービス \(IIS\) がインストールされている場合でも、安全ではない拡張子が原因でこのファイルがブロックされることはありません。  ユーザーがソリューションをインストールする時点で、ClickOnce は .deploy 拡張子を削除します。  
@@ -451,7 +451,7 @@ caps.handback.revision: 58
   
      次の図に、この例に対応する発行フォルダーの構造を示します。  
   
-     ![発行フォルダーの構造](../vsto/media/publishfolderstructure.png "発行フォルダーの構造")  
+     ![発行フォルダーの構造](~/docs/vsto/media/publishfolderstructure.png "発行フォルダーの構造")  
   
      アプリケーションまたはカスタマイズされたドキュメントをユーザーが次回開くときに、配置マニフェストの変更が検出されます。  Office ソリューションの以前のバージョンは、ClickOnce キャッシュから実行されます。  
   

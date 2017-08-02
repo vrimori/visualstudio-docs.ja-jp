@@ -38,7 +38,7 @@ caps.handback.revision: 26
   
  次の図はライブラリ マネージャーと Visual Studio のオブジェクト間の要求やデータ交換プロセスのキー要素のサンプルが含まれています。  図のインターフェイスはマネージ コード アプリケーションの一部です。  
   
- ![ライブラリとオブジェクト マネージャー間のデータ フロー](../../extensibility/internals/media/callbrowserdiagram.gif "CallBrowserDiagram")  
+ ![ライブラリとオブジェクト マネージャー間のデータ フロー](~/docs/extensibility/internals/media/callbrowserdiagram.gif "CallBrowserDiagram")  
   
  Visual Studio にシンボルのリストを指定するにはマネージャーに <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> のメソッドを呼び出してVisual Studio のオブジェクト マネージャーを使用してライブラリを登録する必要があります。します。  ライブラリを登録した後Visual Studio のオブジェクト マネージャーはライブラリ機能に関する特定の情報を要求します。  たとえば<xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetLibFlags2%2A> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetSupportedCategoryFields2%2A> のメソッドを呼び出してライブラリ フラグとサポートされるカテゴリを要求します。  ある時点でツールの 1 つがこのライブラリからデータを要求するとそのオブジェクト マネージャーは <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetList2%2A> のメソッドを呼び出してシンボルのトップレベルのリストを要求します。  これに対してシンボルのリストを開発しVisual Studio のオブジェクト マネージャーに <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> のインターフェイスを通じて公開します。  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のオブジェクト マネージャーは項目がリストに <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetItemCount%2A> のメソッドを呼び出すことによって決まります。  次のすべての要求はリスト内の指定されたアイテムに関連し各要求の項目のインデックス番号を指定します。  Visual Studio のオブジェクト   マネージャーは <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetCategoryField2%2A> のメソッドを呼び出して項目の種類ユーザー補助およびそのほかのプロパティ情報の収集を移動します。  
   

@@ -56,7 +56,7 @@ manager: "ghogen"
   
      次の図は、**\[データ ソース\]** ウィンドウのデータセットに表示された、**Customers** テーブルに関連する **Orders** テーブルを示しています。  
   
-     ![関係を示すデータ ソース ウィンドウ](../data-tools/media/datasources2.gif "DataSources2")  
+     ![関係を示すデータ ソース ウィンドウ](~/docs/data-tools/media/datasources2.gif "DataSources2")  
   
 ## 参照  
  [Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)   

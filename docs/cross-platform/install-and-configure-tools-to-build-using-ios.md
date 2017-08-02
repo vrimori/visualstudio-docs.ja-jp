@@ -127,7 +127,7 @@ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コード
   
  エージェントを初めて起動するとき、また、新しいクライアント証明書を作成するときは必ず、そのエージェントを Visual Studio に構成するために必要な情報 (ホスト名、ポート、PIN など) が提供されます。  
   
- ![vcremote を使用してセキュリティで保護された PIN を生成します](../cross-platform/media/cppmdd_vcremote_generateclientcert.png "CPPMDD_vcremote_generateClientCert")  
+ ![vcremote を使用してセキュリティで保護された PIN を生成します](~/docs/cross-platform/media/cppmdd_vcremote_generateclientcert.png "CPPMDD_vcremote_generateClientCert")  
   
  ホスト名を使用して Visual Studio にリモート エージェントを構成する場合は、Windows からホスト名を使用して Mac を ping し、到達可能であることを確認してください。 そうでない場合は、代わりに IP アドレスを使用する必要があります。  
   
@@ -177,7 +177,7 @@ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コード
   
 7.  **[ペアリングする]** を選択してペアリングを有効にします。  
   
-     ![iOS のビルドにおける vcremote 接続を構成します](../cross-platform/media/cppmdd_options_ios.PNG "CPPMDD_Options_iOS")  
+     ![iOS のビルドにおける vcremote 接続を構成します](~/docs/cross-platform/media/cppmdd_options_ios.PNG "CPPMDD_Options_iOS")  
   
      ペアリングは、ホスト名またはポートを変更するまで維持されます。 **[オプション]** ダイアログ ボックスでホスト名またはポートを変更した場合にその変更を元に戻すには、 **[元に戻す]** ボタンを選択して前のペアリングに戻します。  
   

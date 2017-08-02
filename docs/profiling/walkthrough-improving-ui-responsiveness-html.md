@@ -201,13 +201,13 @@ ms.lasthandoff: 02/22/2017
   
 7.  CPU 使用状況グラフの中程の部分を 1 ～ 2 秒選択します (クリックしてドラッグするか、Tab キーと方向キーを使用します)。 次の図は、選択を行った後の CPU 使用状況グラフを示しています。 共有されていない領域は選択範囲です。  
   
-     ![CPU 使用状況グラフ](../profiling/media/js_htmlviz_app_cpu.png "JS_HTMLViz_App_CPU")  
+     ![CPU 使用状況グラフ](~/docs/profiling/media/js_htmlviz_app_cpu.png "JS_HTMLViz_App_CPU")  
   
 8.  **[拡大]** を選択します。  
   
      グラフが変更されて、選択した期間の詳細が表示されます。 次の図は、拡大した後の CPU 使用状況グラフを示しています。 (特定のデータは変化することがありますが、一般的なパターンは明らかです。)  
   
-     ![拡大表示したビュー](../profiling/media/js_htmlviz_app_zoom.png "JS_HTMLViz_App_Zoom")  
+     ![拡大表示したビュー](~/docs/profiling/media/js_htmlviz_app_zoom.png "JS_HTMLViz_App_Zoom")  
   
      下部のペインの [タイムラインの詳細] に、選択した期間の詳細の例が表示されます。  
   

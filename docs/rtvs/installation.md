@@ -63,7 +63,7 @@ Visual Studio Test Professional や SQL Server Management Studio などの他の
 1. Visual Studio インストーラーを実行します。
 2. [**データ サイエンスと分析のアプリケーション**] ワークロードを選択します。
 
-    ![VS2017 の [データ サイエンスと分析のアプリケーション] ワークロード](media/installation-data-science-workload.png)
+    ![VS2017 の [データ サイエンスと分析のアプリケーション] ワークロード](~/docs/rtvs/media/installation-data-science-workload.png)
 
 3. 同じワークロード名で、右側にその他のオプションを設定します。 既定では、このワークロードには F# と Python のサポートが含まれていることに注意してください。 R の場合、少なくとも [**R 言語サポート**]、[**R 開発ツールのランタイム サポート**]、および [**Microsoft R クライアント**] を選択する必要があります。
 

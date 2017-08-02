@@ -42,13 +42,13 @@ Visual Studio の Python サポートには、Bottle、Django、Flask などの�
 
 各テンプレート (**[ファイル] > [新規] > [プロジェクト]** からアクセス) は、ランダムに選ばれたローカル ポートで Web サーバーを起動し、デバッグ時に既定のブラウザーを開き、[Microsoft Azure](http://www.azure.com) に直接発行できるようにします。 Bottle、Flask、Django 用のテンプレートが用意されており、Pyramid など他のフレームワークには汎用の "Web プロジェクト" テンプレートを使用できます。
 
-![新しい Web プロジェクト テンプレート](media/template-web-new-project.png)
+![新しい Web プロジェクト テンプレート](~/docs/python/media/template-web-new-project.png)
 
 Bottle、Flask、Django の各テンプレートには、いくつかのページと静的ファイルがあるスターター サイトが含まれます。 このコードは、サーバーをローカルに実行およびデバッグするため (一部の設定は環境から取得する必要があります)、また Microsoft Azure にデプロイするため ([WSGI アプリ](http://www.python.org/dev/peps/pep-3333/) オブジェクトを提供する必要があります) に十分です。
 
 フレームワーク固有のテンプレートからプロジェクトを作成する場合、pip を使用して必要なパッケージをインストールするためのダイアログが表示されます。 Web プロジェクトの[仮想環境](python-environments.md#virtual-environments)を使用して、Web サイトのパブリッシュ時に正しい依存関係が含まれるようにすることもお勧めします。
 
-![プロジェクト テンプレートに必要なパッケージをインストールするダイアログ](media/template-web-requirements-txt-wizard.png)
+![プロジェクト テンプレートに必要なパッケージをインストールするダイアログ](~/docs/python/media/template-web-requirements-txt-wizard.png)
 
 Microsoft Azure App Service にデプロイする場合は、Python のバージョンとして[サイト拡張機能](https://aka.ms/PythonOnAppService)を選び、パッケージを手動でインストールする必要があります。 また、Azure App Service は、Visual Studio からデプロイされるときに `requirements.txt` ファイルからパッケージを自動的にインストール**しない**ため、[aka.ms/PythonOnAppService](https://aka.ms/PythonOnAppService) の構成の詳細に従ってください。
 
@@ -62,7 +62,7 @@ Python Web プロジェクトの概要については、「[Getting Started with
 
 Web プロジェクトのデバッグが開始されると、Visual Studio は Web サーバーをローカルで起動し、そのアドレスとポートを既定のブラウザーで開きます。 追加のオプションを指定するには、プロジェクトを右クリックし、**[プロパティ]** を選択し、**[Web ランチャー]** タブを選択します。
 
-  ![一般的な Web テンプレートの Web ランチャーのプロパティ](media/template-web-launcher-properties.png)
+  ![一般的な Web テンプレートの Web ランチャーのプロパティ](~/docs/python/media/template-web-launcher-properties.png)
 
 **[デバッグ]** グループで、次の操作を実行します。
 
@@ -124,7 +124,7 @@ Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使�
 
 Azure App Service に発行する主な方法は 2 つあります。 まず、ソース管理からのデプロイは、[Azure ドキュメント](http://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/)で説明しているように、他の言語と同じ方法で使用できます。 Visual Studio から直接発行するには、プロジェクトを右クリックして **[発行]** を選択します。
 
-![プロジェクトのコンテキスト メニューの [発行] コマンド](media/template-web-publish-command.png)
+![プロジェクトのコンテキスト メニューの [発行] コマンド](~/docs/python/media/template-web-publish-command.png)
 
 コマンドを選択した後、ウィザードの指示に従って Web サイトを作成するか発行の設定をインポートし、変更したファイルのプレビューを表示して、リモート サーバーに発行します。
 
@@ -134,7 +134,7 @@ App Service に Python をインストールするには、[サイト拡張機�
 
 サイト拡張機能は、[Azure Portal](https://portal.azure.com/) で App Service の **[開発ツール] > [拡張機能]** ブレードを使用し、**[追加]** を選択し、一覧をスクロールして Python 用の拡張機能を見つけることでデプロイできます。
 
-![Azure Portal へのサイト拡張機能の追加](media/template-web-site-extensions.png)
+![Azure Portal へのサイト拡張機能の追加](~/docs/python/media/template-web-site-extensions.png)
 
 JSON デプロイ テンプレートを使用している場合は、サイトのリソースとしてサイト拡張機能を指定できます。
 
@@ -173,7 +173,7 @@ c:\Python27\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt
 
 Azure App Service にデプロイされた場合、サイトは Microsoft IIS の背後で実行されます。 サイトを IIS と連携できるようにするには、少なくとも `web.config` ファイルを追加する必要があります。 いくつかの一般的なデプロイ ターゲットに対して利用可能なテンプレートがあります。これは、プロジェクトを右クリックし、[**追加] > [新しい項目...] を選択することで使用可能で(下のダイアログを参照)、これらは他で使用するために簡単に変更できます。 使用可能な構成設定について詳しくは、「[IIS Configuration Reference](https://www.iis.net/configreference)」(IIS 構成リファレンス) をご覧ください。
 
-![Azure 項目テンプレート](media/template-web-azure-items.png)
+![Azure 項目テンプレート](~/docs/python/media/template-web-azure-items.png)
 
 使用可能な項目を以下に示します。
 
@@ -186,9 +186,9 @@ Azure App Service にデプロイされた場合、サイトは Microsoft IIS �
 
 デバッグ `web.config` テンプレートをプロジェクトに追加し、Python リモート デバッグを使用する計画がある場合は、"デバッグ" 構成でサイトを発行する必要があります。 この設定は、現在アクティブなソリューション構成とは別であり、常に既定で "リリース" になります。 これを変更するには、**[設定]** タブを開き、発行ウィザードの **[構成]** コンボ ボックスを使用します (作成と Azure Web Apps へのデプロイについて詳しくは、[Azure ドキュメント](https://azure.microsoft.com/develop/python/)をご覧ください)。
 
-![発行構成の変更](media/template-web-publish-config.png)
+![発行構成の変更](~/docs/python/media/template-web-publish-config.png)
 
 **[Microsoft Azure クラウド サービス プロジェクトに変換]** コマンド (下図) は、クラウド サービス プロジェクトをソリューションに追加します。 このプロジェクトには、使用する仮想マシンとサービスのデプロイ設定と構成が含まれています。 クラウド プロジェクトで **[発行]** コマンドを使用して、クラウド サービスにデプロイする必要があります。Python プロジェクトの **[発行]** コマンドでは、引き続き Web サイトにデプロイされます。 詳しくは、[Azure クラウド サービス プロジェクト](template-azure-cloud-service.md)に関する記事をご覧ください。
 
-![[Microsoft Azure クラウド サービス プロジェクトに変換]コマンド](media/template-web-convert-menu.png)
+![[Microsoft Azure クラウド サービス プロジェクトに変換]コマンド](~/docs/python/media/template-web-convert-menu.png)
 

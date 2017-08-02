@@ -36,7 +36,7 @@ ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="analyze-c-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>Visual Studio 静的コード分析によるストア アプリの C++ コード品質の分析
-![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+![Windows と Windows Phone に適用](~/docs/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
  Visual Studio express edition のコード分析ツールは、コードを調べてプログラミング上の一般的な問題や違反がないことを確認します。 コード分析の警告はコンパイラのエラーや警告とは異なります。コード分析は、有効であってもコードの作成者やコードを利用する他のユーザーにとって問題になる可能性がある特定のコード パターンを検索するからです。 また、コード分析では、テストでは検出できないコードの欠陥を見つけることができます。 開発プロセス中に定期的にコード分析ツールを実行することで、高品質なアプリを完成させることができます。  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/04/2017
   
  警告を展開すると、警告の原因となったコード行が Visual Studio のコード エディターで強調表示されます。  
   
- ![強調表示されたソース コード](../test/media/ca_cpp_sourceline.png "CA_CPP_SourceLine")  
+ ![強調表示されたソース コード](~/docs/test/media/ca_cpp_sourceline.png "CA_CPP_SourceLine")  
   
  問題を理解した後は、コード内で解決できます。 その後、コード分析に戻り、[コード分析] ウィンドウに警告が表示されなくなったことと、修正によって新たな警告が発生していないことを確認します。  
   

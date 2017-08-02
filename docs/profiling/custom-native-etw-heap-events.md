@@ -67,7 +67,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 
 カスタム ヒープの追跡がない、[メモリ使用量](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)ツールからのスナップショットには、8192 バイトの割り当てが 1 つだけ表示され、プールにより行われたカスタム割り当ては何も表示されません。
 
-![Windows ヒープ割り当て](media/heap-example-windows-heap.png)
+![Windows ヒープ割り当て](~/docs/profiling/media/heap-example-windows-heap.png)
 
 次の手順を実行することで、この同じツールを使用し、カスタム ヒープのメモリ使用量を追跡できます。
 
@@ -158,17 +158,17 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 ## <a name="tracking-memory-usage"></a>メモリ使用量を追跡記録する
 呼び出しが所定の場所にあるので、Visual Studio の標準**メモリ使用量**ツールを利用し、カスタム ヒープ使用量を追跡できます。  このツールの使用方法については、[メモリ使用量](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)に関する文書を参照してください。 スナップショットによるヒープ プロファイリングを有効にしてください。有効にしない場合、カスタム ヒープ使用量が表示されません。 
 
-![ヒープ プロファイリングを有効にする](media/heap-enable-heap.png)
+![ヒープ プロファイリングを有効にする](~/docs/profiling/media/heap-enable-heap.png)
 
 カスタム ヒープ追跡を表示するには、**[スナップショット]** ウィンドウの右上隅にある **[ヒープ]** ドロップダウンを利用し、*NT ヒープ*から先に名前を付けた独自のヒープに変更します。
 
-![ヒープ選択](media/heap-example-custom-heap.png)
+![ヒープ選択](~/docs/profiling/media/heap-example-custom-heap.png)
 
 `MemoryPool` が `VSHeapTracker::CHeapTracker` オブジェクトを作成し、独自の `allocate` メソッドが `AllocateEvent` メソッドを呼び出す上記のコード サンプルで、そのカスタム割り当ての結果が表示されます。3 つのインスタンスで合計 24 バイトです。種類はすべて `Foo` です。
 
 既定の *NT ヒープ*は前と同じに見えますが、`CHeapTracker` オブジェクトが追加されています。
 
-![NT ヒープとトラッカー](media/heap-example-windows-heap.png)
+![NT ヒープとトラッカー](~/docs/profiling/media/heap-example-windows-heap.png)
 
 標準 Windows ヒープと同様に、このツールを利用してスナップショットを比較し、カスタム ヒープのリークや破損を探すこともできます。詳しくは、[メモリ使用量](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)に関する文書を参照してください。
 

@@ -143,7 +143,7 @@ Visual Studio のダイアログ ボックスの大半は [ユーティリティ
   
  **テーマが適用されたダイアログの図の 08.01 h:**  
   
- ![Themed dialog dimensions](../../extensibility/ux-guidelines/media/0801-i_themeddialogdimensions.png "0801\-i\_ThemedDialogDimensions")  
+ ![Themed dialog dimensions](~/docs/extensibility/ux-guidelines/media/0801-i_themeddialogdimensions.png "0801\-i\_ThemedDialogDimensions")  
   
  **図の 08.01 i: テーマが適用されたダイアログ – ディメンション**  
   
@@ -151,7 +151,7 @@ Visual Studio のダイアログ ボックスの大半は [ユーティリティ
   
  **図の 08.01 j: テーマが適用されたダイアログ ボックス フォント**  
   
- ![Themed dialog colors](../../extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801\-k\_ThemedDialogColors")  
+ ![Themed dialog colors](~/docs/extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801\-k\_ThemedDialogColors")  
   
  **図の 08.01 k: テーマが適用されたダイアログ ボックスの色**  
   

@@ -52,7 +52,7 @@ R Tools for Visual Studio (RTVS) をインストールすると ([インスト�
 1. **[ファイル]、[新規]、[プロジェクト]** の順に選択します。(Ctrl+Shift+N)
 1. **[テンプレート]、[R]** で "R Project" を選択し、プロジェクトに名前と場所を指定し、**[OK]** を選択します。
 
-   ![Visual Studio 内の R (VS2017 の RTVS) の [新しいプロジェクト] ダイアログ ボックス](media/getting-started-01-new-project.png)
+   ![Visual Studio 内の R (VS2017 の RTVS) の [新しいプロジェクト] ダイアログ ボックス](~/docs/rtvs/media/getting-started-01-new-project.png)
 
 1. プロジェクトを作成すると、次の内容が表示されます。
 
@@ -67,29 +67,29 @@ R Tools for Visual Studio (RTVS) をインストールすると ([インスト�
 
 1. 「`3 + 4`」と入力して Enter キーを押し、結果を表示して、対話型ウィンドウが動作していることをテストします。
 
-    ![Visual Studio 2017 (VS2017) の R 対話型ウィンドウ](media/getting-started-02-interactive1.png)
+    ![Visual Studio 2017 (VS2017) の R 対話型ウィンドウ](~/docs/rtvs/media/getting-started-02-interactive1.png)
 
 1. 少し複雑な「`ds <- c(1.5, 6.7, 8.9) * 1:12`」を入力してから、「`ds`」を入力して結果を表示します。
 
-    ![その他の Visual Studio の R 対話型の例](media/getting-started-03-interactive2.png)
+    ![その他の Visual Studio の R 対話型の例](~/docs/rtvs/media/getting-started-03-interactive2.png)
 
 1. 「`mean(ds)`」を入力しますが、「`m`」や「`me`」と入力すると、すぐに Visual Studio IntelliSense で次のようにオート コンプリート オプションが提供されることに気付きます。 リストから目的のオート コンプリートを選択したら、Tab キーを押して挿入します。方向キーやマウスで選択を変更することができます。
 
-    ![コードの入力時に表示される IntelliSense](media/getting-started-04-intellisense1.png)
+    ![コードの入力時に表示される IntelliSense](~/docs/rtvs/media/getting-started-04-intellisense1.png)
 
 1. `mean` が完成したら、先頭のかっこ「`(`」を入力すると、IntelliSense で関数に対するインライン ヘルプが示されることを確認できます。
 
-    ![IntelliSense が示す関数のヘルプ](media/getting-started-05-intellisense2.png)
+    ![IntelliSense が示す関数のヘルプ](~/docs/rtvs/media/getting-started-05-intellisense2.png)
 
 1. 行 `mean(ds)` を完成させ、Enter キーを押すと、結果が表示されます (`[1] 39.51667`)。
 
 1. 対話型ウィンドウは、ヘルプと統合されているため、たとえば、「`?mean`」と入力すると、Visual Studio の **[R ヘルプ]** ウィンドウにその関数のヘルプが表示されます。 この機能の詳細については、「[R Tools for Visual Studio のヘルプ](getting-started-help.md)」を参照してください。
 
-    ![Visual Studio の [R ヘルプ] ウィンドウ](media/getting-started-06-help.png)
+    ![Visual Studio の [R ヘルプ] ウィンドウ](~/docs/rtvs/media/getting-started-06-help.png)
 
 1. 一部のコマンド (`plot(1:100)` など) では、出力が対話型ウィンドウに直接表示できない場合、Visual Studio 内に新しいウィンドウが開かれます。
 
-    ![Visual Studio でのプロットの表示](media/getting-started-07-plot-window.png)
+    ![Visual Studio でのプロットの表示](~/docs/rtvs/media/getting-started-07-plot-window.png)
 
 対話型ウィンドウでは、履歴の確認、ワークスペースの読み込みと保存、デバッガーへのアタッチ、およびショートカットのコピー/貼り付け操作でソース コード ファイルとの対話を行うこともできます。 詳細については、「[Working with the R Interactive Window](interactive-repl.md)」 (対話型ウィンドウでの作業) を参照してください。
 
@@ -113,7 +113,7 @@ R Tools for Visual Studio (RTVS) をインストールすると ([インスト�
 
 1. 結果をすばやく表示するには、すべてのコードを選択し (Ctrl + A キー)、Ctrl + Enter キーを押すか、右クリックして、**[対話型で実行]** を選択します。 この操作を行うと、直接入力したかのように、選択したすべてのコードが対話型ウィンドウに入力され、結果がプロット ウィドウに表示されます。
 
-    ![Visual Studio でのプロットの表示](media/getting-started-08-plot1.png)
+    ![Visual Studio でのプロットの表示](~/docs/rtvs/media/getting-started-08-plot1.png)
 
 1. 1 行の場合は、いつでも Ctrl + Enter キーを押すだけで、対話型ウィンドウで行を実行できます。
 
@@ -132,7 +132,7 @@ R Tools for Visual Studio (RTVS) をインストールすると ([インスト�
 
 1. もう一度 Ctrl + A キーと Ctrl + Enter キーを押し、コードを再実行して以下を生成します。
 
-    ![Visual Studio での更新されたデュアル プロット](media/getting-started-09-plot2.png)
+    ![Visual Studio での更新されたデュアル プロット](~/docs/rtvs/media/getting-started-09-plot2.png)
 
 1. 問題は、最初のプロットで垂直スケールが決定されるため、2 つ目のプロット (`lines` を含む) が収まらないことです。 これを修正するには、`plot` 呼び出しに `ylim` パラメーターを設定する必要がありますが、垂直方向の最大値を計算するには、適切にコードを追加する必要があります。 `plot` を呼び出す前に `samp.means` を使用するように、コードを再配置する必要があるため、対話型ウィンドウで 1 行ずつ実行するのは少し不便です。 コード ファイルで、簡単に適切な編集を行うことができます。
 
@@ -154,7 +154,7 @@ R Tools for Visual Studio (RTVS) をインストールすると ([インスト�
 
 1. もう一度 Ctrl + A キーと Ctrl + Enter キーを押すと、結果が表示されます。
 
-    ![適切にスケーリングされた Visual Studio の最新のデュアル プロット](media/getting-started-10-plot3.png)
+    ![適切にスケーリングされた Visual Studio の最新のデュアル プロット](~/docs/rtvs/media/getting-started-10-plot3.png)
 
 エディターで操作できる内容は他にもあります。 詳細については、「[コードの編集](code-editing.md)」、「[IntelliSense](code-intellisense.md)」、および「[コード スニペット](code-snippets.md)」を参照してください。
 
@@ -166,23 +166,23 @@ Visual Studio の主な強みの 1 つは、デバッグ UI です。 RTVS は�
 
 1. 前のセクションで作成された `script.R` ファイルを使用して、行にブレークポイントを設定します。行にキャレットを配置して F9 キーを押すか、**[デバッグ] > [ブレークポイントの設定/解除]** メニューを選択すると、この行は `pop <-` で開始されます。 左側の余白をクリックすると、1 つのステップでこの操作を行うことができます。この行には、赤いブレークポイントのドットが表示されます。
 
-    ![エディターでのブレークポイントの設定](media/getting-started-11-debug1.png)
+    ![エディターでのブレークポイントの設定](~/docs/rtvs/media/getting-started-11-debug1.png)
 
 1. ツール バーの **[Source startup file]\(ソース スタートアップ ファイル\)** ボタンを選択するか、**[デバッグ] > [Source startup file]\(ソース スタートアップ ファイル\)** メニュー アイテムを選択するか、F5 キーを押すかのいずれかを行って、`script.R` のコードでデバッガーを起動します。 この操作を行うと、Visual Studio がデバッグ モードに入り、コードの実行が開始されます。 ただし、ブレークポイントを設定した行で停止します。
 
-    ![Visual Studio デバッガーのブレークポイントでの停止](media/getting-started-12-debug2.png)
+    ![Visual Studio デバッガーのブレークポイントでの停止](~/docs/rtvs/media/getting-started-12-debug2.png)
 
 1. デバッグ中に、Visual Studio では、1 行ずつコードをステップ実行する機能が提供されます。これには、関数のステップ実行、ステップ オーバー、または呼び出しコンテキストにステップ アウトを行う機能を含まれます。 これらの機能は、他の機能と共に **[デバッグ]** メニューに表示されます (エディターのコンテキスト メニューを右クリックして、[デバッグ] ツール バーを選択)。
 
-    ![Visual Studio のデバッグ ツール バー](media/getting-started-13-debug3.png)
+    ![Visual Studio のデバッグ ツール バー](~/docs/rtvs/media/getting-started-13-debug3.png)
 
 1. ブレークポイントで停止すると、変数の値を調べることができます。 Visual Studio で **[自動変数]** ウィンドウを検索して、**[ローカル]** という名前の下部のタブを選択します。 **[ローカル]** ウィンドウには、プログラムの現在の位置でローカル変数が表示されます。 前に設定したブレークポイントで停止した場合、`pop` 変数がまだ定義されていないことがわかります。 **[デバッグ] > [ステップ オーバー]** (F10) を使用すると、ポップアップ表示に値が表示されます。
 
-    ![Visual Studio の [ローカル] ウィンドウ](media/getting-started-14-debug4.png)
+    ![Visual Studio の [ローカル] ウィンドウ](~/docs/rtvs/media/getting-started-14-debug4.png)
 
 1. さまざまなスコープ (グローバル スコープとパッケージ スコープを含む) で変数を調べるには、次のように [[変数エクスプローラー]](variable-explorer.md) を使用します。 また、変数エクスプローラーでも、並べ替え可能な列を含む表形式ビューに切り替え、CSV ファイルにデータをエクスポートする機能が提供されます。
 
-    ![変数エクスプローラーの展開ビュー](media/variable-explorer-expanded-results.png)
+    ![変数エクスプローラーの展開ビュー](~/docs/rtvs/media/variable-explorer-expanded-results.png)
 
 1. 引き続き 1 行ずつプログラムをステップ実行したり、**[続行]** (F5) を選択して完了 (次のブレークポイント) まで実行したりすることができます。
 

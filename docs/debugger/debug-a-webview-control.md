@@ -23,7 +23,7 @@ caps.handback.revision: 10
 # WebView コントロールのデバッグ
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows と Windows Phone に適用されます](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Windows と Windows Phone に適用されます](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Windows Runtime アプリで `WebView` コントロールを検査しデバッグするには、アプリの開始時にスクリプト デバッガーをアタッチするよう Visual Studio を設定できます。  Visual Studio 2013 Update 2 から、デバッガーを使用して `WebView` コントロールと 2 つの方法で対話できます。  
   
@@ -78,7 +78,7 @@ caps.handback.revision: 10
   
 5.  コンソール ウィンドウで、Web ページ、または **\[ターゲット\]** リストの `WebView` コントロールに表示される `iFrame` を選択します。  
   
-     ![JavaScript コンソール ウィンドウでのターゲット選択](../debugger/media/js_console_target.png "JS\_Console\_Target")  
+     ![JavaScript コンソール ウィンドウでのターゲット選択](~/docs/debugger/media/js_console_target.png "JS\_Console\_Target")  
   
     > [!NOTE]
     >  コンソールを使って、1 度に 1 つの `WebView`、`iFrame`、共有コントラクト、または Web ワーカーとやり取りできます。  各要素では、Web プラットフォーム ホストの個別のインスタンスが必要となります \(WWAHost.exe\)。  一度に 1 つのホストとやり取りできます。  

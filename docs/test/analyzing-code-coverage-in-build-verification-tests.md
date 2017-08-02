@@ -49,7 +49,7 @@ Microsoft Visual Studio のコード カバレッジ分析は、コードの中�
   
          [**自動テスト**] の下の [**テスト アセンブリ**] を選択し、行の末尾の省略記号 (**[...]**) ボタンを選択します。 [**テストの実行の追加と編集**] ダイアログ ボックスで、[**テスト ランナー**] の下の [**Visual Studio テスト ランナー**] を選択します。  
   
- ![コード カバレッジのビルド定義の設定](../test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")  
+ ![コード カバレッジのビルド定義の設定](~/docs/test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")  
   
  ビルドの実行後、コード カバレッジの結果がビルドの概要に表示されます。  
   
