@@ -78,7 +78,7 @@ ImageList_Create(VsUI::DpiHelper::LogicalToDeviceUnitsX(16),VsUI::DpiHelper::Log
   
  次の表では、スケール係数を使用して対応する DPI のイメージのスケーリング方法の例を示します。 緑色でイメージを表す \(100 ~ 200 %dpi のスケール\) Visual Studio 2013 の時点でベスト プラクティス。  
   
- ![DPI 問題 &#40;スケーリング&#41;](../extensibility/media/dpi-issues-scaling.png "DPI Issues Scaling")  
+ ![DPI 問題 &#40;スケーリング&#41;](~/extensibility/media/dpi-issues-scaling.png "DPI Issues Scaling")  
   
 ## レイアウトの問題  
  絶対位置 \(具体的には、ピクセル単位\) を使用せずに、拡大\/縮小、UI には相互に関連したは、ポイントを保持することで、主に、一般的なレイアウトに問題を回避できます。 例:  

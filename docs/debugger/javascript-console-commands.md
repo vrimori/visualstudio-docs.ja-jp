@@ -28,7 +28,7 @@ manager: "ghogen"
 # JavaScript Console commands
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows と Windows Phone に適用されます](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+![Windows と Windows Phone に適用されます](~/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
  Visual Studio では、JavaScript コンソール ウィンドウでコマンドを使用して、メッセージを送信したり他のタスクを実行したりすることができます。 そのウィンドウの使用方法を示す例については、次を参照してください。 [クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)します。 このトピックの情報は、Windows ストア アプリ、Windows Phone ストア アプリ、および Visual Studio Tools for Apache Cordova を使用して作成されたアプリに適用されます。 Cordova アプリでサポートされているコンソール コマンドについては、「 [Debug Your App](../Topic/Debug%20Your%20App%20Built%20with%20Visual%20Studio%20Tools%20for%20Apache%20Cordova.md)」を参照してください。 Internet Explorer F12 ツールのコンソールの使用については、 [このトピック](http://msdn.microsoft.com/library/ie/dn255006.aspx)を参照してください。  
   

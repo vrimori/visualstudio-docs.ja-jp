@@ -57,14 +57,14 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
 
 1. Visual Studio インストーラーで、**[Web & Cloud (Web とクラウド)]、[Python 開発]** ワークロードの順に選択します。
 
-    ![Visual Studio インストーラーの [Python 開発] ワークロード](media/installation-python-workload.png)
+    ![Visual Studio インストーラーの [Python 開発] ワークロード](~/python/media/installation-python-workload.png)
 
     > [!Note]
     > Python は、**[データ サイエンスと分析のアプリケーション]** ワークロードにも含まれています。
 
 1. インストーラーの右側で、インストールに含める Python インタープリターとその他の関連ツールを選択します。 たとえば、Python の C++ 拡張機能を開発する場合は、**[Python ネイティブ開発ツール]** オプションを含めます。
 
-    ![Visual Studio インストーラーの [Python 開発] のオプション](media/installation-python-options.png)
+    ![Visual Studio インストーラーの [Python 開発] のオプション](~/python/media/installation-python-options.png)
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 
@@ -74,7 +74,7 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
 
 1. **[プログラミング言語] の [Python Tools for Visual Studio]** を選択し、**[次へ]** を選択します。
 
-    ![Visual Studio 2015 インストーラーの PTVS オプション](media/installation-vs2015.png)    
+    ![Visual Studio 2015 インストーラーの PTVS オプション](~/python/media/installation-vs2015.png)    
 
 1. Visual Studio のセットアップが完了したら、[任意の Python インタープリターをインストールします](python-environments.md#selecting-and-installing-python-interpreters)。
 

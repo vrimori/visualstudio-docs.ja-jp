@@ -60,7 +60,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
   
 2.  コード内のメソッドを右クリックして **[IntelliTest の実行]** を選択し、メソッドにあるすべてのコード パスに対する単体テストを生成します。  
   
-     ![メソッドを右クリックして単体テストを生成](../test/media/runpex.png "RunPEX")  
+     ![メソッドを右クリックして単体テストを生成](~/test/media/runpex.png "RunPEX")  
   
      IntelliTest は、異なる入力でコードを何度も実行します。 それぞれの実行は、表の入力テスト データおよび結果出力または例外で示されます。  
   
@@ -92,7 +92,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
   
      警告を表示してその後の行動を決めます。  
   
-     ![警告を表示](../test/media/pexviewwarning.png "PEXViewWarning")  
+     ![警告を表示](~/test/media/pexviewwarning.png "PEXViewWarning")  
   
 2.  コードを調査して何をテストするか理解した後、警告を修正して、インターフェイスをテストするためにどのクラスを使用するかを選択できます。  
   
@@ -154,7 +154,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
   
  テスト生成時の既定の形式を受け入れるか、プロジェクトまたはテストの名前付け方法を変更します。 新しいテスト プロジェクトを作成するか、既存のプロジェクトにテストを保存することができます。  
   
- ![MSTest の既定値を使用して IntelliTest を作成する](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
+ ![MSTest の既定値を使用して IntelliTest を作成する](~/test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
 
 <a name="extend-framework"></a>  
 ### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>Q: IntelliTest で他の単体テスト フレームワークを使用することはできますか。  

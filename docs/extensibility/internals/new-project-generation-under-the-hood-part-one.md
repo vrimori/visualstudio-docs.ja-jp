@@ -37,7 +37,7 @@ caps.handback.revision: 29
 ## \[新しいプロジェクト\] ダイアログ ボックス  
  すべてを開始する新しいプロジェクトのプロジェクトの種類を選択します。 クリックして始めましょう **新しいプロジェクト** 上、 **ファイル** メニュー。**新しいプロジェクト** \] ダイアログ ボックスが表示されたら、次のように見える。  
   
- ![&#91;新しいプロジェクト&#93; ダイアログ ボックス](../../extensibility/internals/media/newproject.png "NewProject")  
+ ![&#91;新しいプロジェクト&#93; ダイアログ ボックス](~/extensibility/internals/media/newproject.gif "NewProject")  
   
  詳しく見てをいきましょう。**プロジェクトの種類** ツリーが作成できるさまざまなプロジェクトの種類を一覧表示します。 ようにプロジェクトの種類を選択すると **Visual c\# Windows**, 、開始するためのアプリケーション テンプレートの一覧が表示されます。**Visual Studio にインストールされたテンプレート** Visual Studio がインストールされており、コンピューターのユーザーが使用できます。 追加できる新しいテンプレートの作成や、収集を **マイ テンプレート** だけが使用するとします。  
   
@@ -107,11 +107,11 @@ devenv /installvstemplates
   
  C\# 開発者向けの設定を使用して Visual Studio の **プロジェクトの種類** ツリーに次のようになります。  
   
- ![プロジェクトの種類](../../extensibility/internals/media/projecttypes.png "ProjectTypes")  
+ ![プロジェクトの種類](~/extensibility/internals/media/projecttypes.png "ProjectTypes")  
   
  対応する ProjectTemplates フォルダーは、次のようになります。  
   
- ![プロジェクト テンプレート](../../extensibility/internals/media/projecttemplates.png "ProjectTemplates")  
+ ![プロジェクト テンプレート](~/extensibility/internals/media/projecttemplates.png "ProjectTemplates")  
   
  ときに、 **新しいプロジェクト** \] ダイアログ ボックスが開き、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ProjectTemplates フォルダーを走査し、その構造に再作成、 **プロジェクトの種類** ツリーにいくつかの変更。  
   
@@ -209,7 +209,7 @@ devenv /installvstemplates
   
 1.  開いている、 **新しいプロジェクト** \] ダイアログ ボックスに展開し、 **Visual c\#** プロジェクト ノード。  
   
- ![MyProjectNode](../../extensibility/internals/media/myprojectnode.png "MyProjectNode")  
+ ![MyProjectNode](~/extensibility/internals/media/myprojectnode.png "MyProjectNode")  
   
  **MyProjectNode** Visual c\# の Windows ノードのすぐ下に子ノードとして表示されます。  
   

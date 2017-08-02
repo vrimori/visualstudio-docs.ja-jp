@@ -74,7 +74,7 @@ ms.lasthandoff: 05/24/2017
   
  **IDE Navigator** は、Windows アプリケーションのスイッチャーのように動作します。 メニューからは利用できず、ショートカット キーを使用してのみアクセスできます。 2 つのコマンドのいずれかを使って **IDE Navigator** にアクセスし (下記参照)、表示したい順番でファイルを切り替えることができます。  
   
- ![Visual Studio IDE Navigator](../ide/media/vs2015_ide_navigator.png "VS2015_IDE_Navigator")  
+ ![Visual Studio IDE Navigator](~/ide/media/vs2015_ide_navigator.png "VS2015_IDE_Navigator")  
   
  `Window.PreviousDocumentWindowNav` では最後にアクセスしたファイルに移動することができ、`Window.NextDocumentWindowNav` では逆の順序で移動することができます。 [全般的な開発設定] では、Ctrl + Shift + Tab キーが `Window.PreviousDocumentWindowNav` に、Ctrl + Tab キーが `Window.NextDocumentWindowNav` に割り当てられてています。  
   

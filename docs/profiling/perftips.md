@@ -23,7 +23,7 @@ Visual Studio デバッガーの *PerfTips* 、および統合デバッガー **
 ## <a name="perftips"></a>パフォーマンスのヒント  
  デバッガーがブレークポイントで実行を停止するか、ステップ実行を停止した場合、エディター ウィンドウに、ヒントとして前のブレークポイントからその中断までの経過時間が表示されます。 詳細については、「 [PerfTips: Performance Information at-a-glance while Debugging with Visual Studio](http://blogs.msdn.com/b/visualstudioalm/archive/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio.aspx)」を参照してください。  
   
- ![PerfTip](../profiling/media/dbgdiag_perf_perftip.png "DBGDIAG_PERF_PerfTip")  
+ ![PerfTip](~/profiling/media/dbgdiag_perf_perftip.png "DBGDIAG_PERF_PerfTip")  
   
 ## <a name="diagnostics-tools-window"></a>[診断ツール] ウィンドウ  
  ブレークポイントおよび関連付けられているタイミング データは、[診断ツール] ウィンドウに記録されます。  

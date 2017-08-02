@@ -53,7 +53,7 @@ Visual Studio を使用すると、ソフトウェアがユーザーの要件と
   
 |**カテゴリ**|**リンク**|  
 |------------------|---------------|  
-|**ビデオ**|![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [Channel 9: Doug 7: コードの理解と Visual Studio 2010 のシステムの設計](http://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [Channel 9: 依存関係図を使用してアプリケーションの設計](http://go.microsoft.com/fwlink/?LinkID=201117)<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [MSDN How Do I Series: 依存関係図を使用してコードを検証する方法](http://go.microsoft.com/fwlink/?LinkID=214405)|  
+|**ビデオ**|![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") [Channel 9: Doug 7: コードの理解と Visual Studio 2010 のシステムの設計](http://go.microsoft.com/fwlink/?LinkId=216100)<br /><br /> ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") [Channel 9: 依存関係図を使用してアプリケーションの設計](http://go.microsoft.com/fwlink/?LinkID=201117)<br /><br /> ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") [MSDN How Do I Series: 依存関係図を使用してコードを検証する方法](http://go.microsoft.com/fwlink/?LinkID=214405)|  
 |**フォーラム**|-   [Visual Studio の視覚化 >/documents/report1.rdl」のモデリング ツール](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio の視覚化 >/reportbuilder/reportbuilder_3_0_0_0.application Modeling SDK (DSL ツール)](http://go.microsoft.com/fwlink/?LinkId=184721)|  
 |**ブログ**|-   [Visual Studio ALM と Team Foundation Server ブログ](http://go.microsoft.com/fwlink/?LinkID=201340)|  
 |**技術文書およびジャーナル**|[MSDN アーキテクチャ センター](http://go.microsoft.com/fwlink/?LinkId=201343)|  

@@ -59,7 +59,7 @@ ms.lasthandoff: 04/04/2017
 ###  <a name="UsingHTML5ControlsCodedUITestsAudio"></a> オーディオ コントロール  
  **オーディオ コントロール:** HTML5 オーディオ コントロールに対するアクションが正しく記録され再生されます。  
   
- ![HTML5 オーディオ コントロール](../test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")  
+ ![HTML5 オーディオ コントロール](~/test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")  
   
 |操作|記録中|生成されたコード|  
 |------------|---------------|--------------------|  
@@ -102,7 +102,7 @@ string Volume
 ###  <a name="UsingHTML5ControlsCodedUITestsVideo"></a> ビデオ コントロール  
  **ビデオ コントロール:** HTML5 ビデオ コントロールに対するアクションが正しく記録され再生されます。  
   
- ![HTML5 ビデオ コントロール](../test/media/codedui_html5_video.png "CodedUI_HTML5_Video")  
+ ![HTML5 ビデオ コントロール](~/test/media/codedui_html5_video.png "CodedUI_HTML5_Video")  
   
 |操作|記録中|生成されたコード|  
 |------------|---------------|--------------------|  
@@ -132,7 +132,7 @@ string VideoWidth
 ###  <a name="UsingHTML5ControlsCodedUITestsSlider"></a> スライダー  
  **スライダー コントロール:** HTML5 スライダー コントロールに対するアクションが正しく記録され再生されます。  
   
- ![HTML5 スライダー コントロール](../test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")  
+ ![HTML5 スライダー コントロール](~/test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")  
   
 |操作|記録中|生成されたコード|  
 |------------|---------------|--------------------|  
@@ -152,7 +152,7 @@ string ValueAsNumber
 ###  <a name="UsingHTML5ControlsCodedUITestsProgressbar"></a> ProgressBar  
  **ProgreesBar コントロール:** ProgressBar は、非対話型コントロールです。 このコントロールの `Value` プロパティと `Max` プロパティでアサーションを追加できます。  
   
- ![HTML5 ProgressBar コントロール](../test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
+ ![HTML5 ProgressBar コントロール](~/test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
   
 ## <a name="see-also"></a>関連項目  
  [HTML 要素](http://go.microsoft.com/fwlink/?LinkID=232441)   

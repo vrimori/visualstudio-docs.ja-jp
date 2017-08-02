@@ -35,7 +35,7 @@ caps.handback.revision: 25
 ## ドキュメント データが開いているかどうかを判断します  
  ドキュメントのデータが既に開かれている \(IDE\) かどうかを次の図に示すように統合開発環境のヘルプ トラックの連続したドキュメントのテーブル \(RDT\)。  
   
- ![DocDataView グラフィック](../extensibility/media/docdataview.png "Docdataview")  
+ ![DocDataView グラフィック](~/extensibility/media/docdataview.gif "Docdataview")  
 複数のビュー  
   
  既定ではドキュメントのビュービュー \(オブジェクト\) は独自のウィンドウ フレーム \(\)<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> に含まれています。  ドキュメント データが既に説明したように複数のビューで表示できます。  これを実現するにはそのドキュメントが既にエディターで開いているかどうかを調べます。RDT を確認します。  エディターを作成するにはIDE を <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> を呼び出すとき `punkDocDataExisting` のパラメーターで返される以外の値はドキュメントが既に別のエディターで開かれていることを示します。  詳細についてはRDT がどのように機能するか[実行中のドキュメント テーブル](../extensibility/internals/running-document-table.md) を参照してください。  

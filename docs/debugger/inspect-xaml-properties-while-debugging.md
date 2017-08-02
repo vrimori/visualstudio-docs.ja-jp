@@ -79,11 +79,11 @@ private void button_Click(object sender, RoutedEventArgs e)
   
  ウィンドウが表示されたら、**\[項目の追加\]** ボタンを数回クリックします。  次のように表示されます。  
   
- ![アプリのメイン ウィンドウ](../debugger/media/livevisualtree-app.png "LiveVIsualTree\-App")  
+ ![アプリのメイン ウィンドウ](~/debugger/media/livevisualtree-app.png "LiveVIsualTree\-App")  
   
  次に **Live Visual Tree** ウィンドウを開きます \(**\[デバッグ\] \/ \[Windows\] \/ \[Live Visual Tree\]**、または IDE の左側で探します\)。  このウィンドウをドッキング位置からドラッグして離し、**\[Live Properties\]** ウィンドウと横並びになるようにします。  **\[Live Visual Tree\]** ウィンドウで、**\[ContentPresenter\]** ノードを展開します。  これにはボタンとリスト ボックスのノードが含まれます。  リスト ボックスを展開し \(その後 **ScrollContentPresenter** と **ItemsPresenter** を展開して\)、リスト ボックスの項目を検索します。  ウィンドウは、次のようになります。  
   
- ![ライブ ビジュアル ツリーの ListBoxItems](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree\-ListBoxItems")  
+ ![ライブ ビジュアル ツリーの ListBoxItems](~/debugger/media/livevisualtree-listboxitems.png "LiveVisualTree\-ListBoxItems")  
   
  アプリケーション ウィンドウに戻り、さらにいくつかの項目を追加します。  **\[Live Visual Tree\]** に、リスト ボックス項目がさらに表示されます。  
   
@@ -95,7 +95,7 @@ private void button_Click(object sender, RoutedEventArgs e)
   
  **実行中のアプリケーションでレイアウトの装飾を表示する**。  選択を有効にするためのボタンのすぐ右にあるボタンを選択すると、このモードを有効にすることができます。  **レイアウトの装飾の表示**がオンのときは、アプリケーション ウィンドウには選択されたオブジェクトの境界に沿って水平と垂直の線が表示され、何に揃えて配置されているかが確認できます。さらに、余白を示すための四角形も表示されます。  たとえば、**\[選択範囲を有効にする\]** と **\[レイアウト表示 \(Display layout\)\]** の両方をオンにして、アプリケーションの **\[項目の追加\]** テキスト ブロックを選択します。  **Live Visual Tree** にテキスト ブロック ノードが表示され、**Live Property Viewer** にテキスト ブロック プロパティが表示されます。さらに、テキスト ブロックの境界に垂直な線と水平な線が示されます。  
   
- ![DisplayLayout の  LivePropertyViewer](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer\-DisplayLayout")  
+ ![DisplayLayout の  LivePropertyViewer](~/debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer\-DisplayLayout")  
   
  **選択のプレビュー**。  このモードを有効にするには、Visual Tree ツールバーで左端から 3 番目のボタンを選択します。  このモードは、アプリケーションのソース コードにアクセスできる場合に、要素が宣言されている XAML を示します。  **\[選択範囲を有効にする\]** と **\[選択のプレビュー \(Preview Selection\)\]** を選択してから、テスト アプリケーションのボタンを選択します。  MainWindow.xaml ファイルが Visual Studio で開き、ボタンが定義されている行にカーソルが置かれます。  
   

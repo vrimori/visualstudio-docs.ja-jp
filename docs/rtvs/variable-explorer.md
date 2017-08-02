@@ -49,11 +49,11 @@ n <- c(1,2,3,5,8,13)
  
 変数エクスプローラー ウィンドウには次のように表示されます。
 
-![Visual Studio の変数エクスプローラー ウィンドウ](media/variable-explorer-window.png)
+![Visual Studio の変数エクスプローラー ウィンドウ](~/rtvs/media/variable-explorer-window.png)
 
 より複雑な R データ フレームが定義されているセッションでは、データに移動できます。 たとえば、`cars <- mtcars` の実行後、変数エクスプローラーでさまざまなノードを展開して、データセット内を移動することができます。
  
-![変数エクスプローラーの展開ビュー](media/variable-explorer-expanded-results.png)
+![変数エクスプローラーの展開ビュー](~/rtvs/media/variable-explorer-expanded-results.png)
  
 変数を削除するには、右クリックして **[削除]** を選択するか、変数を選択して Del キーを押します。
 
@@ -63,29 +63,29 @@ n <- c(1,2,3,5,8,13)
 
 多くの場合データは表形式であるため、複合データ型を個別のテーブルとして表示できます。そのためには、虫眼鏡アイコンを選択するか、右クリックして **[詳細の表示]** を選択します。 
 
-![変数エクスプローラー](media/variable-explorer-table-view.png)
+![変数エクスプローラー](~/rtvs/media/variable-explorer-table-view.png)
 
 列見出しをクリックすると、その列を基準にデータが並べ替えられます (クリックするたびに昇順と降順が切り替わります)。 Shift キーを押しながら他の列をクリックすると、それらの列が並べ替えの対象として追加されます。 Shift キーを押さずに 1 つの列をクリックすると、単一の列を基準にした並べ替えに戻ります。
 
 列見出しをクリックする順序によって、並べ替えの実行順序が決まります。 たとえば、Shift キーを押しながら **cyl** 列をクリックし、次に Shift キーを押したまま **mpg** 列を 2 回クリックすると、リストはシリンダー数の昇順に並べ替えられた後、燃費の降順に並べ替えられます。
 
-![2 つの列を基準にしたデータの並べ替えを示すテーブル ビュー。](media/variable-explorer-table-view-sorting.png)
+![2 つの列を基準にしたデータの並べ替えを示すテーブル ビュー。](~/rtvs/media/variable-explorer-table-view-sorting.png)
 
 変数エクスプローラーとテーブル ビューは、別の Visual Studio ウィンドウに表示されるため、作業しやすい配置になるように並べて表示できます。 一般的な操作手順については、「[Visual Studio のウィンドウ レイアウトをカスタマイズする](../ide/customizing-window-layouts-in-visual-studio.md)」を参照してください。
 
 ## <a name="open-in-excel-or-other-csv-capable-application"></a>Excel (またはその他の CSV に対応したアプリケーション) で開く
 
-さらに処理や分析を行うには、多くの場合、セッションの変数を CSV にエクスポートすると便利です。エクスポートは、変数エクスプローラーの各ノードの横にある小さい Excel のアイコン (![Excel エクスポート アイコン](media/variable-explorer-excel-icon.png)) を使用するか、項目を右クリックして **[CSV アプリで開く]**を選択します。 このアイコンを選択すると、`%userprofile%\Documents\RTVS_CSV_Exports` フォルダーの新規 CSV ファイルにデータが書き込まれ、そのファイルが起動されて、`.csv` の拡張子に関連付けられているアプリケーションで開きます。
+さらに処理や分析を行うには、多くの場合、セッションの変数を CSV にエクスポートすると便利です。エクスポートは、変数エクスプローラーの各ノードの横にある小さい Excel のアイコン (![Excel エクスポート アイコン](~/rtvs/media/variable-explorer-excel-icon.png)) を使用するか、項目を右クリックして **[CSV アプリで開く]**を選択します。 このアイコンを選択すると、`%userprofile%\Documents\RTVS_CSV_Exports` フォルダーの新規 CSV ファイルにデータが書き込まれ、そのファイルが起動されて、`.csv` の拡張子に関連付けられているアプリケーションで開きます。
 
 ## <a name="scopes"></a>スコープ
 
 既定では、変数エクスプローラーはグローバル スコープで開かれます。 ウィンドウ上部のドロップダウンからパッケージを選択することで、パッケージ スコープに切り替えることができます。
 
-![パッケージ スコープが表示された変数エクスプローラー](media/variable-explorer-package-scopes.png)
+![パッケージ スコープが表示された変数エクスプローラー](~/rtvs/media/variable-explorer-package-scopes.png)
 
 また、デバッガーのブレークポイントで停止したとき、関数スコープに切り替えることもできます (変数エクスプローラーがデバッグ中のコードの関数スコープに自動的に切り替わることはありません)。
 
-![デバッグ中のデータ フレームが表示された変数エクスプローラー](media/variable-explorer-as-locals-window.png)
+![デバッグ中のデータ フレームが表示された変数エクスプローラー](~/rtvs/media/variable-explorer-as-locals-window.png)
 
 デバッガーでコードをステップ実行するときには、変数エクスプローラーが自動的に関数スコープに切り替わり、関数のローカル変数などが表示されます。
 
@@ -96,5 +96,5 @@ n <- c(1,2,3,5,8,13)
 
 インポートする CSV ファイルを指定すると、R Tools for Visual Studio の **[データセットのインポート]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、データ ファイルの解析方法 (つまり、フィールド区切り記号は何か、引用符をどう扱うかなど) を制御するオプションを指定し、インポートしたデータ フレームのプレビューと元のデータ ファイルのプレビューを表示できます。
 
-![[データセットのインポート] ダイアログ ボックス](media/variable-explorer-import-dataset-dialog.png)
+![[データセットのインポート] ダイアログ ボックス](~/rtvs/media/variable-explorer-import-dataset-dialog.png)
 

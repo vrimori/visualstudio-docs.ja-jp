@@ -98,7 +98,7 @@ ms.lasthandoff: 05/24/2017
   
 |マージン オン|マージン オフ|  
 |-------------------------|--------------------------|  
-|![HTMLpageSelectionMarginOn スクリーンショット](../../ide/reference/media/vxselmaron.gif "vxSelmaron")|![HTMLpageSelectionMarginOff スクリーンショット](../../ide/reference/media/vxselmaroff.gif "vxSelmaroff")|  
+|![HTMLpageSelectionMarginOn スクリーンショット](~/ide/reference/media/vxselmaron.gif "vxSelmaron")|![HTMLpageSelectionMarginOff スクリーンショット](~/ide/reference/media/vxselmaroff.gif "vxSelmaroff")|  
   
  インジケーター マージン  
  選択すると、エディターのテキスト領域の左端の外に縦の余白が表示されます。 この余白をクリックすると、アイコンとテキストに関連付けられているヒントが表示されます。 たとえば、インジケーター マージンにブレークポイントやタスク一覧のショートカットが表示されます。 インジケーター マージンの情報は印刷されません。  

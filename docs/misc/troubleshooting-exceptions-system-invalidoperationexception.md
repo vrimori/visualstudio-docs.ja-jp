@@ -80,7 +80,7 @@ private async void ThreadsExampleBtn_Click(object sender, RoutedEventArgs e) { T
 private async void ThreadsExampleBtn_Click(object sender, EventArgs e) { TextBox1.Text = String.Empty; var tbLinesList = new List<string>() {"Simulating work on UI thread."}; TextBox1.Lines = tbLinesList.ToArray(); DoSomeWork(20, tbLinesList); tbLinesList.Add("Simulating work on non-UI thread."); TextBox1.Lines = tbLinesList.ToArray(); await Task.Run(() => DoSomeWork(1000, tbLinesList)); tbLinesList.Add("ThreadsExampleBtn_Click completes."); TextBox1.Lines = tbLinesList.ToArray(); } private void DoSomeWork(int msOfWork, List<string> tbLinesList) { // simulate work var endTime = DateTime.Now.AddMilliseconds(msOfWork); while (DateTime.Now < endTime) { }; { // spin }; // report completion var msg = String.Format("Some work completed in {0} ms on UI thread. \n", msOfWork); tbLinesList.Add(msg); TextBox1.Lines = tbLinesList.ToArray(); }  
 ```  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [UI 以外のスレッドで実行されているメソッドによって UI が更新される](#BKMK_A_method_running_on_a_non_UI_thread_updates_the_UI)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [UI 以外のスレッドで実行されているメソッドによって UI が更新される](#BKMK_A_method_running_on_a_non_UI_thread_updates_the_UI)  
   
 ###  <a name="BKMK_Avoiding_InvalidOperationExceptions_on_non_UI_threads"></a> UI 以外のスレッドにおける InvalidOperationExceptions の回避  
  Windows UI フレームワークでは、UI 要素のメンバーへの呼び出しが UI スレッドで実行されているかどうかを確認するメソッドと、UI スレッドでの呼び出しをスケジュールするその他のメソッドを含む、*ディスパッチャー* パターンが実装されます。  
@@ -110,7 +110,7 @@ private void DoSomeWork(int msOfWork, List<string> tbLinesList) { // simulate wo
 private void DoSomeWork(int msOfWork) { // simulate work var endTime = DateTime.Now.AddMilliseconds(msOfWork); while (DateTime.Now < endTime) { // spin }; // report completion var msgFormat = "Some work completed in {0} ms on {1}UI thread.\n"; var msg = String.Empty; if (TextBox1.Dispatcher.HasThreadAccess) { msg = String.Format(msgFormat, msOfWork, String.Empty); TextBox1.Text += msg; } else { msg = String.Format(msgFormat, msOfWork, "non-"); TextBox1.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal,()=> {TextBox1.Text += msg;}); } }  
 ```  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [UI 以外のスレッドで実行されているメソッドによって UI が更新される](#BKMK_A_method_running_on_a_non_UI_thread_updates_the_UI)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [UI 以外のスレッドで実行されているメソッドによって UI が更新される](#BKMK_A_method_running_on_a_non_UI_thread_updates_the_UI)  
   
 ##  <a name="BKMK_A_statement_in_a_foreach_For_Each_in_Visual_Basic_block_changes_the_collection_it_is_iterating"></a> foreach \(Visual Basic では For Each\) ブロック内のステートメントによって、反復処理中のコレクションが変更される  
  [foreach での InvalidOperationException の発生](#BKMK_Causing_an_InvalidOperationException_with_foreach)  **&#124;**  [ループ内での InvalidOperationExceptions の回避](#BKMK_Avoiding_InvalidOperationExceptions_in_loops)  
@@ -125,7 +125,7 @@ private void DoSomeWork(int msOfWork) { // simulate work var endTime = DateTime.
 -   追加情報: コレクションは変更されています。列挙操作は実行されない場合があります。  
   
 <CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [foreach (Visual Basic では For Each) ブロック内のステートメントによって、反復処理中のコレクションが変更される](#BKMK_A_statement_in_a_foreach_For_Each_in_Visual_Basic_block_changes_the_collection_it_is_iterating)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [foreach (Visual Basic では For Each) ブロック内のステートメントによって、反復処理中のコレクションが変更される](#BKMK_A_statement_in_a_foreach_For_Each_in_Visual_Basic_block_changes_the_collection_it_is_iterating)  
   
 ###  <a name="BKMK_Avoiding_InvalidOperationExceptions_in_loops"></a> ループ内での InvalidOperationExceptions の回避  
   
@@ -136,7 +136,7 @@ private void DoSomeWork(int msOfWork) { // simulate work var endTime = DateTime.
  コレクションの反復処理中に、リストに対して要素を追加または削除する必要がある場合は、[for](/dotnet/csharp/language-reference/keywords/for) \(Visual Basic では [For](/dotnet/visual-basic/language-reference/statements/for-next-statement)\) ループを使用します。  
   
 <CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [foreach (Visual Basic では For Each) ブロック内のステートメントによって、反復処理中のコレクションが変更される](#BKMK_A_statement_in_a_foreach_For_Each_in_Visual_Basic_block_changes_the_collection_it_is_iterating)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [foreach (Visual Basic では For Each) ブロック内のステートメントによって、反復処理中のコレクションが変更される](#BKMK_A_statement_in_a_foreach_For_Each_in_Visual_Basic_block_changes_the_collection_it_is_iterating)  
   
 ##  <a name="BKMK_A_Nullable_T_that_is_null_is_cast_to_T"></a> null の Nullable \<T\> が T にキャストされる  
  [無効なキャストを原因とする InvalidOperationException の発生](#BKMK_Causing_an_InvalidOperationException_with_an_invalid_cast)  **&#124;**  [無効なキャストを原因とする InvalidOperationException の回避](#BKMK_Avoiding_InvalidOperationException_from_a_bad_cast)  
@@ -155,7 +155,7 @@ private void MapQueryResults() { var dbQueryResults = new int?[] { 1, 2, null, 4
   
 ```  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [null の Nullable &lt;T&gt; が T にキャストされる](#BKMK_A_Nullable_T_that_is_null_is_cast_to_T)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [null の Nullable &lt;T&gt; が T にキャストされる](#BKMK_A_Nullable_T_that_is_null_is_cast_to_T)  
   
 ###  <a name="BKMK_Avoiding_InvalidOperationException_from_a_bad_cast"></a> 無効なキャストを原因とする InvalidOperationException の回避  
  <xref:System.InvalidOperationException> を回避する方法は、次のとおりです。  
@@ -179,7 +179,7 @@ private void MapQueryResults() { var dbQueryResults = new int?[] { 1, 2, null, 4
   
 ```  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [null の Nullable &lt;T&gt; が T にキャストされる](#BKMK_A_Nullable_T_that_is_null_is_cast_to_T)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [null の Nullable &lt;T&gt; が T にキャストされる](#BKMK_A_Nullable_T_that_is_null_is_cast_to_T)  
   
 ##  <a name="BKMK_A_System_Linq_Enumerable_method_is_called_on_an_empty_collection"></a> System.Linq.Enumerable メソッドが空のコレクションに対して呼び出される  
  <xref:System.Linq.Enumerable> メソッド <xref:System.Linq.Enumerable.Aggregate%2A>、<xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.Last%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Min%2A>、<xref:System.Linq.Enumerable.First%2A>、<xref:System.Linq.Enumerable.Single%2A>、および <xref:System.Linq.Enumerable.SingleOrDefault%2A> は、シーケンスに対して操作を実行し、1 つの結果を返します。  
@@ -219,7 +219,7 @@ private void FindAverageOfNumbersGreaterThan4() { var dbQueryResults = new[] { 1
   
 ```  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [System.Linq.Enumerable メソッドが空のコレクションに対して呼び出される](#BKMK_A_System_Linq_Enumerable_method_is_called_on_an_empty_collection)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [System.Linq.Enumerable メソッドが空のコレクションに対して呼び出される](#BKMK_A_System_Linq_Enumerable_method_is_called_on_an_empty_collection)  
   
 ###  <a name="BKMK_First_and_FirstOrDefault_methods"></a> First および FirstOrDefault メソッド  
  <xref:System.Linq.Enumerable.First%2A> はシーケンス内の最初の項目を返し、シーケンスが空の場合は <xref:System.InvalidOperationException> をスローします。<xref:System.Linq.Enumerable.FirstOrDefault%2A> の代わりに <xref:System.Linq.Enumerable.First%2A> メソッドを呼び出して、例外をスローする代わりに、指定した値または既定値を返すことができます。  
@@ -254,7 +254,7 @@ private void FindANumbersGreaterThan4() { var dbQueryResults = new[] { 1, 2, 3, 
   
 ```  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [System.Linq.Enumerable メソッドが空のコレクションに対して呼び出される](#BKMK_A_System_Linq_Enumerable_method_is_called_on_an_empty_collection)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [System.Linq.Enumerable メソッドが空のコレクションに対して呼び出される](#BKMK_A_System_Linq_Enumerable_method_is_called_on_an_empty_collection)  
   
 ###  <a name="BKMK_Single_and_SingleOrDefault_methods"></a> Single および SingleOrDefault メソッド  
  <xref:System.Linq.Enumerable.Single%2A?displayProperty=fullName> メソッドは、シーケンスの唯一の要素、または指定されたテストの条件を満たす、シーケンスの 1 つの要素を返します。  
@@ -313,7 +313,7 @@ private void FindTheOnlyNumberGreaterThan2() { var dbQueryResults = new[] { (obj
   
 ```  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [System.Linq.Enumerable メソッドが空のコレクションに対して呼び出される](#BKMK_A_System_Linq_Enumerable_method_is_called_on_an_empty_collection)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article) ![In this section](../misc/media/pcs_backtotopmid.png "PCS\_BackToTopMid") [System.Linq.Enumerable メソッドが空のコレクションに対して呼び出される](#BKMK_A_System_Linq_Enumerable_method_is_called_on_an_empty_collection)  
   
 ##  <a name="BKMK_Related_articles"></a> 関連記事  
  [例外のデザイン ガイドライン \(.NET Framework デザイン ガイドライン\)](http://msdn.microsoft.com/library/ms229014)  
@@ -346,4 +346,4 @@ private void FindTheOnlyNumberGreaterThan2() { var dbQueryResults = new[] { (obj
   
  [ネットワーク アプリにおける例外の処理 \(XAML\) \(Windows\)](http://msdn.microsoft.com/library/Dn263240)  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article)
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [この記事の内容](#BKMK_In_this_article)

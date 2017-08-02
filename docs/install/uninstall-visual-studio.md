@@ -46,18 +46,18 @@ ms.lasthandoff: 05/13/2017
 
      たとえば、Windows 10 Anniversary Update を実行しているコンピューター上では、**[スタート]** を選択し、**Visual Studio インストーラー**としてリスト表示される **V** の文字までスクロールします。  
 
-     ![Visual Studio インストーラー](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
+     ![Visual Studio インストーラー](~/install/media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
 
      >[!NOTE]
      一部のコンピューターでは、Visual Studio インストーラーが **Microsoft Visual Studio インストーラー**として **"M"** の項に表示される場合があります。
 
-2.  クリックしてインストーラーを起動し、![詳細アイコン](media/vs2017uninstall-UninstallIcon.png "オプション アイコンを選択") アイコンをクリックして、**[アンインストール]** をクリックします。  
+2.  クリックしてインストーラーを起動し、![詳細アイコン](~/install/media/vs2017uninstall-UninstallIcon.png "オプション アイコンを選択") アイコンをクリックして、**[アンインストール]** をクリックします。  
 
-     ![Visual Studio 2017 の変更 (変更、起動、修復、またはアンインストール)](media/vs2017-uninstall.PNG "Visual Studio 2017 の修復またはアンインストール")  
+     ![Visual Studio 2017 の変更 (変更、起動、修復、またはアンインストール)](~/install/media/vs2017-uninstall.PNG "Visual Studio 2017 の修復またはアンインストール")  
 
 3.  **[OK]** をクリックして選択を確定します。
 
-     ![Visual Studio 2017 の変更 (製品のアンインストール)](media/vs2017-uninstall-confirm.PNG "Visual Studio 2017 のアンインストールを確定")  
+     ![Visual Studio 2017 の変更 (製品のアンインストール)](~/install/media/vs2017-uninstall-confirm.PNG "Visual Studio 2017 のアンインストールを確定")  
 
 Visual Studio 2017 を再インストールする場合は、もう一度 Visual Studio インストーラーを起動し、選択画面で **[インストール]** を選びます。
 

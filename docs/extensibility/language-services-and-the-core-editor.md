@@ -47,7 +47,7 @@ Visual Studio でのエディターは、言語サービスに頻繁に関連付
   
  基本的な言語サービスは、次の図に示されています。  
   
- ![言語サービス モデル グラフィック](../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
+ ![言語サービス モデル グラフィック](~/extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
 コア エディターと言語のサービス オブジェクト  
   
  コア エディター ドキュメントのデータ オブジェクトし、呼ばれ、バッファーにテキストで表される、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>オブジェクト</xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>。 ドキュメント ビューのオブジェクトし、呼ばれ、テキスト ビューによって表される、<xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>オブジェクト</xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>。 これら&2; つのオブジェクトは連携してコア エディターの統一されたビューを提供する言語サービスを使用します。 テキスト バッファーと、ドキュメント ウィンドウにテキスト ビューに表示からの情報には、コード ウィンドウが呼び出されます。 コード ウィンドウのドキュメントは、コード ウィンドウ マネージャーによって管理されます。  

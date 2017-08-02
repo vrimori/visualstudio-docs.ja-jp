@@ -32,7 +32,7 @@ manager: "douge"
 ## 使用されるオブジェクトとインターフェイス  
  次の図に、インプレース アクティブ化の作成に使用されるオブジェクトを示します。  
   
- ![埋め込み先編集の有効化エディター](../misc/media/vsinplaceactivationeditor.png "vsInPlaceActivationEditor")  
+ ![埋め込み先編集の有効化エディター](~/extensibility/media/vsinplaceactivationeditor.gif "vsInPlaceActivationEditor")  
 インプレース アクティブ化エディター  
   
 > [!NOTE]

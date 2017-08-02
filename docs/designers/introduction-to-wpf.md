@@ -38,7 +38,7 @@ ms.lasthandoff: 07/19/2017
 # <a name="introduction-to-wpf"></a>WPF の概要
 Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユーザー エクスペリエンスを持つ Windows 用のデスクトップ クライアント アプリケーションを作成できます。  
   
- ![Contoso Healthcare UI のサンプル](../designers/media/wpfintrofigure24.png "WPFIntroFigure24")  
+ ![Contoso Healthcare UI のサンプル](~/designers/media/wpfintrofigure24.png "WPFIntroFigure24")  
   
  WPF の中核を成すのは、解像度に依存しない、ベクター ベースのレンダリング エンジンであり、これは最新のグラフィックス ハードウェアを活用できるように構築されています。 この中核を拡張するため、WPF では、Extensible Application Markup Language (XAML)、コントロール、データ バインディング、レイアウト、2-D および 3-D グラフィックス、アニメーション、スタイル、テンプレート、ドキュメント、メディア、テキスト、タイポグラフィなどの、アプリケーション開発機能の包括的なセットを使用します。 WPF は .NET Framework に含まれるので、.NET Framework クラス ライブラリの他の要素を組み込んだアプリケーションを構築できます。  
   
@@ -81,7 +81,7 @@ Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユ
   
  次の図は、前記の例の XAML で定義されたユーザー インターフェイス (UI) を示しています。  
   
- ![ボタンを含むウィンドウ](../designers/media/wpfintrofigure10.png "WPFIntroFigure10")  
+ ![ボタンを含むウィンドウ](~/designers/media/wpfintrofigure10.png "WPFIntroFigure10")  
   
  XAML は XML ベースなので、XAML を使用して作成する UI は [要素ツリー](https://msdn.microsoft.com/en-us/library/ms753391\(v=vs.100\).aspx)と呼ばれるネストされた要素の階層で組み立てられます。 要素ツリーは UI を作成し、管理するための論理的かつ直感的な方法を提供します。  
   
@@ -158,7 +158,7 @@ End Namespace
   
  次の図は、ボタンがクリックされたときの結果を示しています。  
   
- ![MessageBox](../designers/media/wpfintrofigure25.png "WPFIntroFigure25")  
+ ![MessageBox](~/designers/media/wpfintrofigure25.png "WPFIntroFigure25")  
   
 ##  <a name="Controls"></a> コントロール  
  アプリケーション モデルにより提供されるユーザー エクスペリエンスは、構築済みのコントロールです。 WPF において、「コントロール」とはウィンドウまたはページによりホストされ、ユーザー インターフェイスを持ち、何らかの動作を実装する WPF クラスのカテゴリに適用される総称です。  
@@ -229,7 +229,7 @@ End Namespace
   
  次の図に、前の例の XAML マークアップの結果を示します。  
   
- ![DockPanel ページ](../designers/media/wpfintrofigure11.png "WPFIntroFigure11")  
+ ![DockPanel ページ](~/designers/media/wpfintrofigure11.png "WPFIntroFigure11")  
   
 ##  <a name="Data_Binding"></a> データ バインディング  
  ほとんどのアプリケーションは、データの表示と編集の手段をユーザーに提供するために作成されます。 WPF アプリケーションの場合、データ格納とアクセスの機能は、SQL Server や ADO .NET などのテクノロジにより、すでに提供されています。 データがアクセスされ、アプリケーションの管理対象オブジェクトに読み込まれると、WPF アプリケーションの処理が開始します。 基本的に、これには 2 つの処理が伴います。  
@@ -276,7 +276,7 @@ End Namespace
 ### <a name="2-d-shapes"></a>2-D 図形  
  WPF には、次の図に示す四角形や楕円のような、一般的なベクター描画による 2-D 図形のライブラリが用意されています。  
   
- ![楕円と四角形](../designers/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
+ ![楕円と四角形](~/designers/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
  図形の興味深い機能は、単に表示するだけのものではないところです。図形はコントロールに期待される多くの機能 (キーボード入力とマウス入力を含む) を実装します。 次の例は、<xref:System.Windows.Shapes.Ellipse> の <xref:System.Windows.UIElement.MouseUp> イベント処理を示しています。  
   
@@ -287,7 +287,7 @@ End Namespace
   
  次の図では、前のコードによって生成される内容を示しています。  
   
- !["you clicked the ellipse&#33;" というテキストを含むウィンドウ](../designers/media/wpfintrofigure12.png "WPFIntroFigure12")  
+ !["you clicked the ellipse&#33;" というテキストを含むウィンドウ](~/designers/media/wpfintrofigure12.png "WPFIntroFigure12")  
   
  詳しくは、「 [WPF での図形と基本描画の概要](https://msdn.microsoft.com/en-us/library/ms747393\(v=vs.100\).aspx)」をご覧ください。  
   
@@ -298,28 +298,28 @@ End Namespace
   
  <xref:System.Windows.Media.Geometry> オブジェクトは、クリップ、ヒット テスト、2-D グラフィック データのレンダリングに使用できます。  
   
- ![パスのさまざまな使用方法](../designers/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
+ ![パスのさまざまな使用方法](~/designers/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
   
  詳しくは、「 [ジオメトリの概要](https://msdn.microsoft.com/en-us/library/ms751808\(v=vs.100\).aspx)」をご覧ください。  
   
 ### <a name="2-d-effects"></a>2-D 効果  
  WPF の 2-D 機能のサブセットには、グラデーション、ビットマップ、描画、ビデオによる塗りつぶし、回転、拡大縮小、傾斜などの視覚効果が含まれています。 これらはすべてブラシによって実現します。次の図に、例をいくつか示します。  
   
- ![さまざまなブラシの図](../designers/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
+ ![さまざまなブラシの図](~/designers/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
  詳しくは、「 [WPF のブラシの概要](https://msdn.microsoft.com/en-us/library/aa970904\(v=vs.100\).aspx)」をご覧ください。  
   
 ### <a name="3-d-rendering"></a>3-D レンダリング  
  WPF には 2-D グラフィックスと統合し、より魅力的で興味深いユーザー インターフェイスを作成できる 3-D レンダリング機能も含まれています。 たとえば、次の図では 3-D 図形上にレンダリングされる 2-D イメージを示しています。  
   
- ![Visual3D サンプルのスクリーンショット](../designers/media/wpfintrofigure13.png "WPFIntroFigure13")  
+ ![Visual3D サンプルのスクリーンショット](~/designers/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
  詳しくは、「 [3-D グラフィックスの概要](https://msdn.microsoft.com/en-us/library/ms747437\(v=vs.100\).aspx)」をご覧ください。  
   
 ##  <a name="Animation"></a> アニメーション  
  WPF のアニメーション サポートを使用すると、コントロールを拡大、振動、スピン、フェードさせることができ、魅力的なページ遷移などを作成できです。 カスタム クラスも含めて、ほとんどの WPF クラスをアニメーション表示できます。 次の図に、実行中の単純なアニメーションを示します。  
   
- ![アニメーション キューブのイメージ](../designers/media/wpfintrofigure7.png "WPFIntroFigure7")  
+ ![アニメーション キューブのイメージ](~/designers/media/wpfintrofigure7.png "WPFIntroFigure7")  
   
  詳しくは、「 [アニメーションの概要](https://msdn.microsoft.com/en-us/library/ms752312\(v=vs.100\).aspx)」をご覧ください。  
   
@@ -329,7 +329,7 @@ End Namespace
 ### <a name="images"></a>イメージ  
  イメージは、ほとんどのアプリケーションに共通していますが、WPF にはイメージを使用するための、いくつかの方法が用意されています。 次の図に、サムネイル イメージが含まれているリスト ボックスがある、ユーザー インターフェイスを示します。 サムネイルを選ぶと、そのイメージがフル サイズで表示されます。  
   
- ![サムネイル イメージとフルサイズ イメージ](../designers/media/wpfintrofigure8.PNG "WPFIntroFigure8")  
+ ![サムネイル イメージとフルサイズ イメージ](~/designers/media/wpfintrofigure8.PNG "WPFIntroFigure8")  
   
  詳しくは、「 [イメージングの概要](https://msdn.microsoft.com/en-us/library/ms748873\(v=vs.100\).aspx)」をご覧ください。  
   
@@ -340,7 +340,7 @@ End Namespace
   
  次の図のウィンドウは、動作中の <xref:System.Windows.Controls.MediaElement> コントロールを示しています。  
   
- ![オーディオおよびビデオを含む MediaElement コントロール](../designers/media/wpfintrofigure1.png "WPFIntroFigure1")  
+ ![オーディオおよびビデオを含む MediaElement コントロール](~/designers/media/wpfintrofigure1.png "WPFIntroFigure1")  
   
  詳しくは、「 [WPF のグラフィックス、アニメーション、およびメディアの概要](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)」をご覧ください。  
   
@@ -359,7 +359,7 @@ End Namespace
   
  テキストとグラフィックスの統合のデモとして、次の図に文字の装飾の適用を示します。  
   
- ![さまざまなテキスト装飾を含むテキスト](../designers/media/wpfintrofigure23.png "WPFIntroFigure23")  
+ ![さまざまなテキスト装飾を含むテキスト](~/designers/media/wpfintrofigure23.png "WPFIntroFigure23")  
   
  詳しくは、「 [Windows Presentation Foundation のタイポグラフィ](https://msdn.microsoft.com/en-us/library/ms742190\(v=vs.100\).aspx)」をご覧ください。  
   
@@ -379,7 +379,7 @@ End Namespace
   
  次の図に、結果を示します。  
   
- ![テキストを含む TextBox コントロール](../designers/media/wpfintrofigure21.png "WPFIntroFigure21")  
+ ![テキストを含む TextBox コントロール](~/designers/media/wpfintrofigure21.png "WPFIntroFigure21")  
   
  しかし、さまざまな種類の複数のアイテムのコンテンツを含めることができるコントロールもあります。<xref:System.Windows.Controls.ContentControl.Content%2A> プロパティで指定された <xref:System.Windows.Controls.Button> のコンテンツには、レイアウト コントロール、テキスト、画像、図形などのさまざまなアイテムを含めることができます。 次の例に、<xref:System.Windows.Controls.DockPanel>、<xref:System.Windows.Controls.Label>、<xref:System.Windows.Controls.Border>、<xref:System.Windows.Controls.MediaElement> を含むコンテンツを備えた <xref:System.Windows.Controls.Button> を示します。  
   
@@ -389,7 +389,7 @@ End Namespace
   
  次の図はこのボタンのコンテンツを示しています。  
   
- ![複数の種類の内容を含むボタン](../designers/media/wpfintrofigure22.png "WPFIntroFigure22")  
+ ![複数の種類の内容を含むボタン](~/designers/media/wpfintrofigure22.png "WPFIntroFigure22")  
   
  さまざまなコントロールでサポートされているコンテンツの種類について詳しくは、「 [WPF コンテンツ モデル](https://msdn.microsoft.com/en-us/library/bb613548\(v=vs.100\).aspx)」をご覧ください。  
   
@@ -410,12 +410,12 @@ End Namespace
   
  この例では、既定のボタン ユーザー インターフェイスが、濃い青の枠線を持ち、<xref:System.Windows.Media.RadialGradientBrush> で塗りつぶされた <xref:System.Windows.Shapes.Ellipse> に置き換えられています。 <xref:System.Windows.Controls.ContentPresenter> コントロールは <xref:System.Windows.Controls.Button>のコンテンツである "Click Me!" を表示します。 <xref:System.Windows.Controls.Button> がクリックされると、 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> コントロールの既定の動作の一部として <xref:System.Windows.Controls.Button> イベントが発生します。 結果を次の例に示します。  
   
- ![省略記号ボタンと 2 番目のウィンドウ](../designers/media/wpfintrofigure2.png "WPFIntroFigure2")  
+ ![省略記号ボタンと 2 番目のウィンドウ](~/designers/media/wpfintrofigure2.png "WPFIntroFigure2")  
   
 ### <a name="data-templates"></a>データ テンプレート  
  コントロール テンプレートを使用すると、コントロールの外観を指定できますが、データ テンプレートではコントロールのコンテンツの外観を指定できます。 データ テンプレートはたいてい、バインドされたデータの表示方法を多様化するために使用されます。 次の図では、`Task` オブジェクトのコレクションにバインドされた <xref:System.Windows.Controls.ListBox> の既定の外観を示しています。各タスクは名前、説明、優先順位を持ちます。  
   
- ![既定の外観を使用したリスト ボックス](../designers/media/wpfintrofigure18.png "WPFIntroFigure18")  
+ ![既定の外観を使用したリスト ボックス](~/designers/media/wpfintrofigure18.png "WPFIntroFigure18")  
   
  既定の外観は <xref:System.Windows.Controls.ListBox> に期待されるものです。 ただし、各タスクの既定の外観にはタスク名しか含まれていません。 タスク名、説明、優先度の既定の外観を表示するには、 <xref:System.Windows.Controls.ListBox> コントロールのバインドされたリスト項目の既定の外観を、 <xref:System.Windows.DataTemplate>を使用して変更する必要があります。 次の XAML はこのような <xref:System.Windows.DataTemplate> を定義しています。これが、<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 属性を使用して各タスクに適用されます。  
   
@@ -426,7 +426,7 @@ End Namespace
   
  次の図にこのコードの効果を示します。  
   
- ![データ テンプレートを使用するリスト ボックス](../designers/media/wpfintrofigure19.png "WPFIntroFigure19")  
+ ![データ テンプレートを使用するリスト ボックス](~/designers/media/wpfintrofigure19.png "WPFIntroFigure19")  
   
  <xref:System.Windows.Controls.ListBox> の動作と全体的な外観は保持されていることにご注意ください。リスト ボックスにより表示されるコンテンツの外観のみが変更されています。  
   
@@ -442,7 +442,7 @@ End Namespace
   
  このスタイルでは、すべての <xref:System.Windows.Controls.Button> コントロールを対象としているため、次の図に示すように、スタイルがウィンドウのすべてのボタンに自動的に適用されます。  
   
- ![2 つのオレンジ色のボタン](../designers/media/wpfintrofigure20.png "WPFIntroFigure20")  
+ ![2 つのオレンジ色のボタン](~/designers/media/wpfintrofigure20.png "WPFIntroFigure20")  
   
  詳しくは、「 [スタイルとテンプレート](https://msdn.microsoft.com/en-us/library/ms745683\(v=vs.100\).aspx)」をご覧ください。  
   
@@ -507,7 +507,7 @@ End Namespace
   
  次の図に <xref:System.Windows.Window> でホストされる `NumericUpDown` コントロールを示します。  
   
- ![カスタム UserControl](../designers/media/wpfintrofigure3.png "WPFIntroFigure3")  
+ ![カスタム UserControl](~/designers/media/wpfintrofigure3.png "WPFIntroFigure3")  
   
  カスタム コントロールについて詳しくは、「 [コントロールの作成の概要](https://msdn.microsoft.com/en-us/library/ms745025\(v=vs.100\).aspx)」をご覧ください。  
   

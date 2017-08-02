@@ -103,7 +103,7 @@ Visual C\+\+ for Cross\-Platform Mobile Development を使用すると、Android
   
      Visual Studio Emulator for Android で、既定のアプリが次のように表示されます。  
   
-     ![アプリを実行するエミュレーター](../cross-platform/media/cppmdd_emulator_running_app.png "CppMDD\_Emulator\_Running\_App")  
+     ![アプリを実行するエミュレーター](~/cross-platform/media/cppmdd_emulator_running_app.PNG "CppMDD\_Emulator\_Running\_App")  
   
     > [!TIP]
     >  Visual Studio によってエミュレーターが起動されます。コードを読み込んで配置するのに数秒かかります。  アプリが開始されると、ブレークポイントの設定や、デバッガーを使用したステップ実行、ローカルの確認、値のウォッチができるようになります。  

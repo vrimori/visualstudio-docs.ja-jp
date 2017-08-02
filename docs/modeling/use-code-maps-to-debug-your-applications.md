@@ -42,12 +42,12 @@ caps.handback.revision: 49
   
  したがって、`Undo` メソッドを検索して調査を開始します。  `PaintCanvas` クラスでこれが見つかります。  
   
- ![コード マップ &#45; コードの検索](../modeling/media/codemapstoryboardpaint1.png "CodeMapStoryboardPaint1")  
+ ![コード マップ &#45; コードの検索](~/modeling/media/codemapstoryboardpaint1.png "CodeMapStoryboardPaint1")  
   
 ## コードのマップを開始する  
  ここで、`undo` メソッドとその関係のマップを開始します。  コード エディターで、`undo` メソッドとその参照するフィールドを、新しいコード マップに追加します。  新しいマップを作成するときは、コードにインデックスを付けるのに時間がかかる場合があります。  インデックスを付けることで、後の操作をより速く実行できるようになります。  
   
- ![コード マップ &#45; メソッドおよび関連するフィールドの表示](../modeling/media/codemapstoryboardpaint3.png "CodeMapStoryboardPaint3")  
+ ![コード マップ &#45; メソッドおよび関連するフィールドの表示](~/modeling/media/codemapstoryboardpaint3.png "CodeMapStoryboardPaint3")  
   
 > [!TIP]
 >  緑色の強調表示は、マップに追加された最後の項目を示します。  緑色の矢印は、コード内でのカーソルの位置を示します。  項目間の矢印は、さまざまな関係を表します。  マップの項目に関する詳細情報は、項目の上にマウスを移動してツールヒントを調べることで確認できます。  
@@ -69,7 +69,7 @@ caps.handback.revision: 49
   
  ![コード マップ &#45; すべての参照の検索](../modeling/media/codemapstoryboardpaint6.png "CodeMapStoryboardPaint6")  
   
- ![コード エディターからコード マップを開く](../modeling/media/codemapstoryboardpaint6a.png "CodeMapStoryboardPaint6A")  
+ ![コード エディターからコード マップを開く](~/modeling/media/codemapstoryboardpaint6a.PNG "CodeMapStoryboardPaint6A")  
   
 > [!NOTE]
 >  Windows Phone や Windows ストアなどの複数のアプリで共有されるプロジェクトから項目を追加すると、それらの項目は常に、現在アクティブなアプリ プロジェクトと共にマップに表示されます。  そのため、コンテキストを別のアプリ プロジェクトに変更すると、マップ上のコンテキストも、共有プロジェクトから新たに追加した項目に変更されます。  マップ上の項目に実行する操作は、同じコンテキストを共有する項目にのみ適用されます。  

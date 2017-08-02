@@ -75,7 +75,7 @@ Visual Studio では、プロジェクトは、開発者は、ソース コー�
   
 3.  独自のアイコンを確認します。 このアイコンに表示されます、 **新しいプロジェクト** チュートリアルの後半でダイアログ ボックス。  
   
-     ![単純なプロジェクト アイコン](../extensibility/media/simpleprojicon.png "SimpleProjIcon")  
+     ![単純なプロジェクト アイコン](~/extensibility/media/simpleprojicon.png "SimpleProjIcon")  
   
 4.  アイコンを保存し、アイコン エディターを閉じます。  
   
@@ -471,7 +471,7 @@ Visual Studio では、プロジェクトは、開発者は、ソース コー�
   
 2.  **プロパティ** windows では、16 x 16 ピクセルにビットマップを削減します。 独自のビットマップを確認します。  
   
-     ![単純なプロジェクト Comm](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
+     ![単純なプロジェクト Comm](~/extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
   
 3.  **プロパティ** ウィンドウで、変更、 **ビルド アクション** にビットマップの **埋め込まれたリソース**します。  
   
@@ -546,7 +546,7 @@ Visual Studio では、プロジェクトは、開発者は、ソース コー�
   
 2.  新しく作成されたプロジェクトで、SimpleProjectNode.bmp がプロジェクト ノードのアイコンとして使用されることに注意してください。  
   
-     ![単純なプロジェクト New Project ノード](../extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
+     ![単純なプロジェクト New Project ノード](~/extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
   
 3.  コード エディターで、Program.cs を開きます。 次のコードのようなソース コードが表示されます。  
   
@@ -649,6 +649,6 @@ Visual Studio では、プロジェクトは、開発者は、ソース コー�
   
 6.  プロジェクトのデバッグを開始します。 新しいプロジェクトはコンパイル、実行、および「VSX こんにちは\!\!\!」と表示 コンソール ウィンドウ。  
   
-     ![単純なプロジェクト コマンド](../extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
+     ![単純なプロジェクト コマンド](~/extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
   
  おめでとうございます\!  マネージ プロジェクトは、基本的なシステムを実装しました。

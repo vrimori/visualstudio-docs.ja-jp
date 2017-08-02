@@ -86,7 +86,7 @@ ms.lasthandoff: 02/22/2017
   
  スレッド ビューの例を次に示します。  
   
- ![スレッド ビュー](../profiling/media/threadsviewnarrowing.png "ThreadsViewNarrowing")  
+ ![スレッド ビュー](~/profiling/media/threadsviewnarrowing.png "ThreadsViewNarrowing")  
 スレッド ビュー  
   
  最初にスレッドは、メイン アプリケーション スレッドが先頭になるように、作成された順に並べられます。 ビューの左上隅にある並べ替えオプションを使用すると、別の条件 (たとえば、実行作業の多い順) でスレッドを並べ替えることができます。  

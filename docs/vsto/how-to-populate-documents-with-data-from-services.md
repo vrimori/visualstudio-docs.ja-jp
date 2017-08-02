@@ -30,7 +30,7 @@ caps.handback.revision: 39
   
  次の例は、デザイン時にドキュメントにデータ バインド コントロールを追加する方法を示しています。 実行時に VSTO アドインでデータ バインド コントロールを追加する方法の例については、「[チュートリアル : VSTO アドイン プロジェクトでサービスのデータをバインドする](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md)」を参照してください。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連するビデオ デモについては、「[方法: Microsoft Excel から Web サービスと対話する](http://go.microsoft.com/fwlink/?LinkID=130284)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[方法: Microsoft Excel から Web サービスと対話する](http://go.microsoft.com/fwlink/?LinkID=130284)」を参照してください。  
   
 ### Web サービスからドキュメント レベルのプロジェクトにデータを読み込むには  
   

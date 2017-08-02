@@ -29,7 +29,7 @@ JavaScript IntelliSense の機能拡張機能は、サードパーティのラ�
   
  JavaScript の言語サービスがプロジェクトに追加される JavaScript のサードパーティ製ライブラリでは、IntelliSense の機能を提供します。  ほとんどのライブラリは、ステートメント入力候補は言語サービスによって自動的に提供されます。  次の図は、ステートメント入力候補の例を示します:  
   
- ![ステートメント入力候補の例](../ide/media/js_intellisense_completion.png "js\_intellisense\_completion")  
+ ![ステートメント入力候補の例](~/ide/media/js_intellisense_completion.png "js\_intellisense\_completion")  
   
  ライブラリが、標準の JavaScript のコメントのタグに変数、関数、およびオブジェクトの説明 \(\/\/\) と、コンプリート リストの要素の右に表示される場合や、関数呼び出しの左かっこを入力するポップアップ ボックスの説明情報を提供する IntelliSense の機能拡張機能から自動的に、既定で利用できます。  ポップアップ ボックスのコメントは、メンバーの説明が表示されます。  次の例では、コンプリート リストのポップアップ ボックスを示しています。  
   
@@ -315,7 +315,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 5.  appCode.js に次のコードを入力します。  入力すると、IntelliSense、クイック ヒントとして、拡張機能の標準コメントが表示されます。  
   
-     ![intellisense.annotate の使用を示す例](../ide/media/js_intellisense_annotations.png "js\_intellisense\_annotations")  
+     ![intellisense.annotate の使用を示す例](~/ide/media/js_intellisense_annotations.png "js\_intellisense\_annotations")  
   
 ###  <a name="Logging"></a> \[出力\]ウィンドウにメッセージを送信できます。  
  次の手順では、出力ウィンドウにメッセージを送信する方法を示します。  IntelliSense の拡張機能をデバッグできるようにメッセージを送信できます。  
@@ -488,7 +488,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 4.  appCode.js に次のコードを入力します。  入力しますが、名前空間のアイコンが "{}" 変更したことを、C で、使用するように表示されます。  
   
-     ![グリフのプロパティの使用を示す例](../ide/media/js_intellisense_glyph_namespace.png "js\_intellisense\_glyph\_namespace")  
+     ![グリフのプロパティの使用を示す例](~/ide/media/js_intellisense_glyph_namespace.png "js\_intellisense\_glyph\_namespace")  
   
 5.  appCode.js に次のコードを入力します。  入力しますが、Enum1 メンバーについては新しい列挙型のアイコンと SomeClass1 メンバーの新しいクラスのアイコンが表示されます。  
   
@@ -530,7 +530,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 3.  appCode.js に次のコードを入力します。  識別子の一覧は、IntelliSense ではなく `throttled` 関数が結果を返さないことをラップされた関数が呼び出されない、つまりためです。  
   
-     ![IntelliSense の結果をオーバーライドする例](../ide/media/js_intellisense_override.png "js\_intellisense\_override")  
+     ![IntelliSense の結果をオーバーライドする例](~/ide/media/js_intellisense_override.png "js\_intellisense\_override")  
   
 4.  exampleLib.intellisense.js に次のコードを追加します。  これは、IntelliSense がラップされた関数に対して表示されるようにデザイン時動作を、期待ように変更します。  
   
@@ -543,7 +543,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 5.  appCode.js では、同じコードによって結果をテストする前に入力した。  今度は、IntelliSense は目的の情報を提供します。  
   
-     ![IntelliSense の結果をオーバーライドする例](../ide/media/js_intellisense_override_fixed.png "js\_intellisense\_override\_fixed")  
+     ![IntelliSense の結果をオーバーライドする例](~/ide/media/js_intellisense_override_fixed.png "js\_intellisense\_override\_fixed")  
   
 ## 参照  
  [JavaScript IntelliSense](../ide/javascript-intellisense.md)   

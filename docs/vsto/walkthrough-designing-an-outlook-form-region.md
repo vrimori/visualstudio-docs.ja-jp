@@ -48,7 +48,7 @@ caps.handback.revision: 40
   
 -   [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] または [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") このトピックのビデオ版については、「[ビデオ デモ: Outlook フォーム領域をデザインする](http://go.microsoft.com/fwlink/?LinkID=140824)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") このトピックのビデオ版については、「[ビデオ デモ: Outlook フォーム領域をデザインする](http://go.microsoft.com/fwlink/?LinkID=140824)」を参照してください。  
   
 ## 新しい Outlook VSTO アドイン プロジェクトの作成  
  まず、基本的な VSTO アドイン プロジェクトを作成します。  

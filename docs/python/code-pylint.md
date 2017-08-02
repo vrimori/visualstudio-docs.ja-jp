@@ -41,13 +41,13 @@ Visual Studio for Python プロジェクトには [PyLint](https://www.pylint.or
 
 使用するには、ソリューション エクスプローラーで Python プロジェクトを右クリックし、**[Python] > [Run PyLint (PyLint の実行)]** を選択するだけです。
 
-![Python プロジェクトのコンテキスト メニューに表示された PyLint コマンド](media/code-pylint-command.png)
+![Python プロジェクトのコンテキスト メニューに表示された PyLint コマンド](~/python/media/code-pylint-command.png)
 
 必要な場合は、コマンド プロンプトを使用してアクティブ環境に PyLint をインストールします。
 
 PyLint の警告とエラーが [エラー一覧] ウィンドウに表示されます。
 
-![PyLint のエラー一覧](media/code-pylint-error-list.png)
+![PyLint のエラー一覧](~/python/media/code-pylint-error-list.png)
 
 エラーをダブルクリックすると、問題が発生したソース コードに直接移動できます。
 

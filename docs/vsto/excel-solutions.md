@@ -74,7 +74,7 @@ caps.handback.revision: 30
   
  VSTO アドインが機能するしくみの概要については、「[VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)」を参照してください。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: Excel のアドインで PowerPoint を自動化する](http://go.microsoft.com/fwlink/?LinkID=130300)」をご覧ください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[操作方法: Excel のアドインで PowerPoint を自動化する](http://go.microsoft.com/fwlink/?LinkID=130300)」をご覧ください。  
   
 ### Excel アドインのプログラミング モデル  
  Excel VSTO アドイン プロジェクトを作成すると、`ThisAddIn` と呼ばれる、ソリューションの基礎となるクラスが Visual Studio によって生成されます。 このクラスは、コードを記述するための開始点となり、Excel のオブジェクト モデルを VSTO アドインに公開します。  

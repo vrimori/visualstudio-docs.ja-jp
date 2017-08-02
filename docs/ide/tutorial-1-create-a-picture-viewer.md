@@ -58,7 +58,7 @@ ms.lasthandoff: 05/24/2017
   
  サンプルの完全バージョンをダウンロードするには、「[Complete Picture Viewer tutorial sample](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8)」 (画像ビューアーのチュートリアルの完全なサンプル) を参照してください。  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[How Do I: Create a Picture Viewer in Visual Basic?](http://go.microsoft.com/fwlink/?LinkId=205207)」(操作方法: Visual Basic によるピクチャ ビューアーの作成) または「[How Do I: Create a Picture Viewer in C#?](http://go.microsoft.com/fwlink/?LinkId=205198)」(操作方法: C# によるピクチャ ビューアーの作成) を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[How Do I: Create a Picture Viewer in Visual Basic?](http://go.microsoft.com/fwlink/?LinkId=205207)」(操作方法: Visual Basic によるピクチャ ビューアーの作成) または「[How Do I: Create a Picture Viewer in C#?](http://go.microsoft.com/fwlink/?LinkId=205198)」(操作方法: C# によるピクチャ ビューアーの作成) を参照してください。  
   
 > [!NOTE]
 >  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。 このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。  

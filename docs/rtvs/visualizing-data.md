@@ -41,7 +41,7 @@ ms.lasthandoff: 05/12/2017
 
 データ サイエンティストのワークフローにおいて、プロットは重要な部分を担います。 R Tools for Visual Studio (RTVS) では、あらゆるプロット行為は 1 つまたは複数のプロット ウィンドウを中心に行われます。プロット ウィンドウはこの重要な行為の生産性を上げるように設計されています。
 
-![ヒーローのイメージをプロットする](media/plotting-hero-image.png)
+![ヒーローのイメージをプロットする](~/rtvs/media/plotting-hero-image.png)
 
 このトピックの内容
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/12/2017
 
 プロット ウィンドウには一連のプロットが入ります。各プロットは `plot` コマンドで生成されます。 たとえば、`plot(1:100)` を使用すると、プロット ウィンドウがない場合に新しく作成されます。
 
-![1 ～ 100 の線形プロット](media/plotting-1-to-100.png)
+![1 ～ 100 の線形プロット](~/rtvs/media/plotting-1-to-100.png)
 
 技術的には、R `plot` コマンドがその出力を R グラフィックス デバイスにレンダリングし、プロット ウィンドウが R グラフィックス デバイスのコンテンツをレンダリングします。そのため、各プロット ウィンドウにデバイス番号が与えられます。
 
@@ -76,16 +76,16 @@ ms.lasthandoff: 05/12/2017
 
 | ボタン | コマンド | 説明 | 
 | --- | --- | --- |
-| ![新しいプロット ウィンドウ ボタン](media/plotting-toolbar-01-new-plot-window.png) | 新しいプロット ウィンドウ | 個別のプロット ウィンドウとその履歴を作成します。 「[複数のプロット ウィンドウ](#multiple-plot-windows)」を参照してください。 |
-| ![プロット ウィンドウをアクティブにするボタン](media/plotting-toolbar-02-activate-plot-window.png) | プロット ウィンドウをアクティブにする | 後続の `plot` ウィンドウが現在のプロット ウィンドウにレンダリングされるように、現在のプロット ウィンドウをアクティブ ウィンドウとして設定します。 「[複数のプロット ウィンドウ](#multiple-plot-windows)」を参照してください。 「[複数のプロット ウィンドウ](#multiple-plot-windows)」を参照してください。 |
-| ![プロット履歴ウィンドウ ボタン](media/plotting-toolbar-03-plot-history.png) | プロット履歴ウィンドウ | 履歴にあるすべてのプロットをサムネイルとして表示した状態でウィンドウを開きます。 「[プロット履歴](#plot-history)」を参照してください。 |
-| ![プロット履歴ボタン](media/plotting-toolbar-04-plot-history-arrows.png) | 前/次のプロット |  履歴の前のプロット/次のプロットに移動します。 Ctrl + Alt + F11 (前) と Ctrl + Alt + F12 (次) でも移動できます。 「[プロット履歴](#plot-history)」を参照してください。 |
-| ![イメージとして保存ボタン](media/plotting-toolbar-05-save-as-image.png)| イメージとして保存 | ファイル名の入力を求め、現在のプロット (ウィンドウ コンテンツ、ウィンドウ サイズ) をイメージ ファイルに保存します。 利用できる形式は `.png`、`.jpg`、`.bmp`、`.tif` です。 |
-| ![PDF として保存ボタン](media/plotting-toolbar-06-save-as-pdf.png)| PDF として保存 | 現在のウィンドウ サイズで現在のプロットを PDF ファイルに保存します。 PDF が拡大または縮小されると、プロットは再レンダリングされます。 |
-| ![ビットマップとしてコピー ボタン](media/plotting-toolbar-07-copy-as-bitmap.png)| ビットマップとしてコピー | 現在のウィンドウ サイズでプロットをラスター ビットマップとしてクリップボードにコピーします。 | 
-| ![メタファイルとしてコピー ボタン](media/plotting-toolbar-08-copy-as-metafile.png)| メタファイルとしてコピー | プロットを [Windows メタファイル](https://en.wikipedia.org/wiki/Windows_Metafile) としてクリップボードにコピーします (Wikipedia)。 | 
-| ![プロットの削除ボタン](media/plotting-toolbar-09-remove-plot.png)| プロットの削除 | 履歴から現在のプロットを削除します。 |
-| ![すべてのプロットをクリア ボタン](media/plotting-toolbar-10-clear-all-plots.png) | すべてのプロットをクリア | 履歴からプロットをすべて削除します (確認が求められます)。 |
+| ![新しいプロット ウィンドウ ボタン](~/rtvs/media/plotting-toolbar-01-new-plot-window.png) | 新しいプロット ウィンドウ | 個別のプロット ウィンドウとその履歴を作成します。 「[複数のプロット ウィンドウ](#multiple-plot-windows)」を参照してください。 |
+| ![プロット ウィンドウをアクティブにするボタン](~/rtvs/media/plotting-toolbar-02-activate-plot-window.png) | プロット ウィンドウをアクティブにする | 後続の `plot` ウィンドウが現在のプロット ウィンドウにレンダリングされるように、現在のプロット ウィンドウをアクティブ ウィンドウとして設定します。 「[複数のプロット ウィンドウ](#multiple-plot-windows)」を参照してください。 「[複数のプロット ウィンドウ](#multiple-plot-windows)」を参照してください。 |
+| ![プロット履歴ウィンドウ ボタン](~/rtvs/media/plotting-toolbar-03-plot-history.png) | プロット履歴ウィンドウ | 履歴にあるすべてのプロットをサムネイルとして表示した状態でウィンドウを開きます。 「[プロット履歴](#plot-history)」を参照してください。 |
+| ![プロット履歴ボタン](~/rtvs/media/plotting-toolbar-04-plot-history-arrows.png) | 前/次のプロット |  履歴の前のプロット/次のプロットに移動します。 Ctrl + Alt + F11 (前) と Ctrl + Alt + F12 (次) でも移動できます。 「[プロット履歴](#plot-history)」を参照してください。 |
+| ![イメージとして保存ボタン](~/rtvs/media/plotting-toolbar-05-save-as-image.png)| イメージとして保存 | ファイル名の入力を求め、現在のプロット (ウィンドウ コンテンツ、ウィンドウ サイズ) をイメージ ファイルに保存します。 利用できる形式は `.png`、`.jpg`、`.bmp`、`.tif` です。 |
+| ![PDF として保存ボタン](~/rtvs/media/plotting-toolbar-06-save-as-pdf.png)| PDF として保存 | 現在のウィンドウ サイズで現在のプロットを PDF ファイルに保存します。 PDF が拡大または縮小されると、プロットは再レンダリングされます。 |
+| ![ビットマップとしてコピー ボタン](~/rtvs/media/plotting-toolbar-07-copy-as-bitmap.png)| ビットマップとしてコピー | 現在のウィンドウ サイズでプロットをラスター ビットマップとしてクリップボードにコピーします。 | 
+| ![メタファイルとしてコピー ボタン](~/rtvs/media/plotting-toolbar-08-copy-as-metafile.png)| メタファイルとしてコピー | プロットを [Windows メタファイル](https://en.wikipedia.org/wiki/Windows_Metafile) としてクリップボードにコピーします (Wikipedia)。 | 
+| ![プロットの削除ボタン](~/rtvs/media/plotting-toolbar-09-remove-plot.png)| プロットの削除 | 履歴から現在のプロットを削除します。 |
+| ![すべてのプロットをクリア ボタン](~/rtvs/media/plotting-toolbar-10-clear-all-plots.png) | すべてのプロットをクリア | 履歴からプロットをすべて削除します (確認が求められます)。 |
 
 ## <a name="multiple-plot-windows"></a>複数のプロット ウィンドウ
 
@@ -104,7 +104,7 @@ ms.lasthandoff: 05/12/2017
 プロットのコレクション全体を表示するには、ツールバーのボタンか、**[R Tools]、[プロット]、[プロット履歴ウィンドウ]** を使用してプロット履歴ウィンドウを開きます。
 そのウィンドウに表示されていたプロットのサムネイルが一覧表示されます。プロット ウィンドウ (またはデバイス) 別に分類されます。 ツールバーのズーム ボタンを使用すると、サムネイルのサイズが変更されます。
 
-![プロット履歴ウィンドウ](media/plotting-plot-history-window.png)
+![プロット履歴ウィンドウ](~/rtvs/media/plotting-plot-history-window.png)
 
 プロットを関連ウィンドウで開くには、そのプロットをダブルクリックして選択し、**[プロットの表示]** ツールバー ボタンを選択するか、右クリックして **[プロットの表示]** を選択します。 個々のプロットを選択し、右クリック コンテキストか **[編集]** メニューからコピー、切り取り、削除することもできます。
 

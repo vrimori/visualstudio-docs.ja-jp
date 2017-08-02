@@ -40,7 +40,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="source-control-integration"></a>ソース管理の統合  
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース管理の統合オプションの&2; つの種類をサポートしています。 すべてのバージョンの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、統合することも、ソース管理プラグイン API に基づいて以前 (MSSCCI API として)、Visual Studio のソース コントロールのユーザー インターフェイス (UI) を使用しているときに、基本的なソース管理機能を提供するプラグイン。 ソース管理、VSPackage がこれに対して、新しい、詳細な統合を提供[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]高レベルの先進的な機能とそのソース制御モデルでの自律性を確認要求するソース管理の統合に適したパスです。  
   
- ![コントロールの概要をソース](../../extensibility/internals/media/sourcectnrloverview.gif "SourceCtnrlOverview")  
+ ![コントロールの概要をソース](~/extensibility/internals/media/sourcectnrloverview.gif "SourceCtnrlOverview")  
   
 ## <a name="source-control-plug-in"></a>ソース管理プラグイン  
  Visual Studio のすべてのバージョンでは、統合パスとしてソース管理プラグインの API 仕様バージョン 1.2 をサポートします。 ソース管理プラグイン実行者が」の説明に従って、ソース管理の統合と登録のソース管理プラグインの API 関数を実装する DLL を書き込みます[ソース管理プラグインを作成する](../../extensibility/internals/creating-a-source-control-plug-in.md)です。 この方法で統合開発環境 (IDE) を使用して、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]チェックイン、チェック アウト、ツール/オプションのプロパティ ページ、ツールバー、およびソース コントロールのグリフのなどのダイアログ ボックスの UI です。 ソース コントロールのプラグイン API への厳密な準拠では、Visual Studio と問題のない、ユーザー エクスペリエンスに簡単に統合が保証されます。 つまり、ソース管理プラグインは、ほとんどの関数と API の詳細なコールバックを実装する必要があります。  

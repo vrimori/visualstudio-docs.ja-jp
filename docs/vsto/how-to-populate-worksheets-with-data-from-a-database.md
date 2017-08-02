@@ -30,7 +30,7 @@ caps.handback.revision: 38
   
  次の例は、デザイナーを使用してドキュメント レベルのプロジェクトにデータ バインド コントロールを追加する方法を示しています。  実行時にアプリケーション レベルのプロジェクトにデータ バインド コントロールを追加する方法の例については、「[チュートリアル : VSTO アドイン プロジェクトでの複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)」を参照してください。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Transfer Data Into an Excel Worksheet? \(操作方法: Excel ワークシートにデータを転送する\)](http://go.microsoft.com/fwlink/?LinkID=130277)」および「[How Do I: Consume Database Data in Excel? \(Excel でデータベースのデータを使用する\)](http://go.microsoft.com/fwlink/?LinkID=130287)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Transfer Data Into an Excel Worksheet? \(操作方法: Excel ワークシートにデータを転送する\)](http://go.microsoft.com/fwlink/?LinkID=130277)」および「[How Do I: Consume Database Data in Excel? \(Excel でデータベースのデータを使用する\)](http://go.microsoft.com/fwlink/?LinkID=130287)」を参照してください。  
   
 ## デザイン時のワークシートへのデータ バインド コントロールの追加  
   

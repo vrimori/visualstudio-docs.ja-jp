@@ -45,7 +45,7 @@ ms.lasthandoff: 05/12/2017
  
 設定には **[R Tools]、[オプション]** メニューの順に選択してアクセスできます。あるいは、**[ツール]、[オプション]** の順に選択し、**[R Tools]** までスクロールしてください。
  
-  ![R Tools のオプション ダイアログ](media/options-dialog.png)
+  ![R Tools のオプション ダイアログ](~/rtvs/media/options-dialog.png)
 
 次のセクションでは、このページで利用できるさまざまなオプションについて説明します。
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/12/2017
 
 **[R Tools] には、[データ サイエンスの設定]** という特別なメニュー項目もあります。データ サイエンティストのニーズに合わせて最適に作られたレイアウトで Visual Studio IDE が構成されます。 具体的には、このオプションで [[インタラクティブ]](interactive-repl.md)、[[変数エクスプローラー]](variable-explorer.md)、[[ワークスペース]](workspaces.md) というウィンドウが開きます。
 
-![Visual Studio のデータ サイエンティスト ウィンドウ レイアウト](media/installation-data-scientist-layout-result.png)
+![Visual Studio のデータ サイエンティスト ウィンドウ レイアウト](~/rtvs/media/installation-data-scientist-layout-result.png)
 
 > [!Important]      
 > 後で他の Visual Studio 設定に戻るには、最初に **[ツール]、[設定のインポートとエクスポート]** コマンドを使用します。**[選択された環境設定をエクスポート]** を選択し、ファイル名を指定します。 これらの設定を復元するには、同じコマンドを使用し、**[選択された環境設定をインポート]** を選択します。 データ サイエンティスト レイアウトを変更し、後でそれに戻る場合、同じコマンドを使用することもできます (**[データ サイエンスの設定]** コマンドを直接使用するのではなく)。

@@ -33,7 +33,7 @@ caps.handback.revision: 3
 ## ツール バー  
  XML スキーマ デザイナーのツール バーからスタート ビュー、[コンテンツ モデル ビュー](../xml-tools/content-model-view.md)、および[グラフ ビュー](../xml-tools/graph-view.md)の間を移動することができます。  
   
- ![XML スキーマ デザイナーのツール バー](../xml-tools/media/xsdstartviewtoolbar.gif "XSDStartViewToolbar")  
+ ![XML スキーマ デザイナーのツール バー](~/xml-tools/media/xsdstartviewtoolbar.gif "XSDStartViewToolbar")  
   
  スタート ビューがアクティブな場合に、XSD デザイナーのツール バーに次のボタンが表示されます。  
   

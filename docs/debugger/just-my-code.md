@@ -49,7 +49,7 @@ manager: "ghogen"
 > [!NOTE]
 >  **\[外部コードの表示\]** の設定は、現在のユーザーのプロファイラーに保存されます。  この設定は、ユーザーによって開かれたすべての言語のすべてのプロジェクトに適用されます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK__NET_Framework_Just_My_Code"></a> .NET Framework での "マイ コードのみ"  
  [ユーザー コードと非ユーザー コード](#BKMK_NET_User_and_non_user_code) **&#124;** [ステップ実行の動作](#BKMK_NET_Stepping_behavior) **&#124;** [ブレークポイントの動作](#BKMK_NET_Breakpoint_behavior) **&#124;** [例外の動作](#BKMK_NET_Exception_behavior)  
@@ -71,24 +71,24 @@ manager: "ghogen"
   
  他のすべてのコードはユーザー コードであると見なされます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
   
 ###  <a name="BKMK_NET_Stepping_behavior"></a> ステップ実行の動作  
  非ユーザー コードに **\[ステップ イン\]** \(キーボード ショートカット: F11\) すると、デバッガーはそのコードを次のユーザー ステートメントにステップ オーバーします。  **\[ステップ アウト\]** \(キーボード: Shift \+ F11\) すると、デバッガーはユーザー コードの次の行に進みます。  ユーザー コードが出現しない場合は、アプリケーションが終了するか、ブレークポイントにヒットするか、または例外が発生するまで実行が続けられます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
   
 ###  <a name="BKMK_NET_Breakpoint_behavior"></a> ブレークポイントの動作  
  "マイ コードのみ" が有効な場合は、**\[すべて中断\]** をクリックし \(キーボード: Ctrl \+ Alt \+ Break\)、表示するユーザー コードがない位置で実行を停止できます。  停止すると、\[No Source\] \(ソースがありません\) ウィンドウが表示されます。  次に \[ステップ\] をクリックすると、デバッガーによってユーザー コードの次の行に進められます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
   
 ###  <a name="BKMK_NET_Exception_behavior"></a> 例外の動作  
  ハンドルされない例外が非ユーザー コードで発生した場合、デバッガーはユーザー コードの例外が発生した行で停止します。  
   
  初回例外がその例外に対して有効になっている場合、ユーザー コード行は緑で強調表示されます。  呼び出し履歴に、**\[外部コード\]** というラベルの注釈付きフレームが表示されます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
   
 ##  <a name="BKMK_C___Just_My_Code"></a> C\+\+ での "マイ コードのみ"  
  [ユーザー コードと非ユーザー コード](#BKMK_CPP_User_and_non_user_code) **&#124;** [ステップ実行の動作](#BKMK_CPP_Stepping_behavior) **&#124;** [例外の動作](#BKMK_CPP_Exception_behavior) **&#124;** [ステップ実行の動作のカスタマイズ](#BKMK_CPP_Customize_stepping_behavior) **&#124;** [呼び出し履歴の動作のカスタマイズ](#BKMK_CPP_Customize_call_stack_behavior)  
@@ -112,19 +112,19 @@ manager: "ghogen"
   
  `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` に独自の `.natstepfilter` および `.natjmc` を作成して、ステップ実行と呼び出し履歴ウィンドウの動作をカスタマイズすることができます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Stepping_behavior"></a> ステップ実行の動作  
  ユーザー コードから非ユーザー コードに **\[ステップ イン\]** \(キーボード ショートカット: F11\) すると、デバッガーはそのコードをユーザー コードの次の行にステップ オーバーします。  **\[ステップ アウト\]** \(キーボード: Shift \+ F11\) すると、デバッガーはユーザー コードの次の行に進みます。  ユーザー コードが出現しない場合は、アプリケーションが終了するか、ブレークポイントにヒットするか、または例外が発生するまで実行が続けられます。  
   
  デバッガーが非ユーザー コードで実行を中断した場合 \(たとえば、\[すべて中断\] が非ユーザー コードで停止した場合\)、その非ユーザー コードでステップ実行が続けられます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Exception_behavior"></a> 例外の動作  
  デバッガーの実行中に例外が発生すると、デバッガーはユーザー コードを実行中か非ユーザー コードを実行中かに関係なくその例外で停止します。  **\[例外\]** ダイアログ ボックスの **\[ユーザーにハンドルされていないとき\]** オプションは無視されます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Customize_stepping_behavior"></a> ステップ実行の動作のカスタマイズ  
  `*.natstepfilter`  ファイルに関数を非ユーザー コードとして記述することで、それらの関数をステップ オーバーすることを指定できます。  
@@ -158,7 +158,7 @@ manager: "ghogen"
 |`Module`|省略可能です。  関数を含むモジュールへの完全パスを指定する ECMA\-262 書式の正規表現。  一致では、大文字と小文字を区別しません。|  
 |`Action`|必須。  大文字と小文字が区別される以下のいずれかの値です。<br /><br /> -   `NoStepInto`  – 一致した関数をステップ オーバーすることをデバッガーに指示します。<br />-   `StepInto`  – 一致した関数にステップ インし、一致した関数のその他の `NoStepInto` をオーバーライドすることをデバッガーに指示します。|  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Customize_call_stack_behavior"></a> 呼び出し履歴の動作のカスタマイズ  
  モジュール、ソース ファイル、および関数を `*.natjmc` ファイルで指定することで、呼び出し履歴でそれらを非ユーザー コードとして扱うことを指定できます。  
@@ -210,7 +210,7 @@ manager: "ghogen"
 |`Module`|省略可能です。  関数を含むモジュールの名前または完全パス。  この属性を使用して、同じ名前の関数のあいまいさを解消することができます。|  
 |`ExceptionImplementation`|`true`  に設定すると、この関数ではなく、例外をスローした関数が呼び出し履歴に表示されます。|  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
   
 ##  <a name="BKMK_JavaScript_Just_My_Code"></a> JavaScript での "マイ コードのみ"  
  [ユーザー コードと非ユーザー コード](#BKMK_JS_User_and_non_user_code) **&#124;** [ステップ実行の動作](#BKMK_JS_Stepping_behavior) **&#124;** [ブレークポイントの動作](#BKMK_JS_Breakpoint_behavior) **&#124;** [例外の動作](#BKMK_JS_Exception_behavior) **&#124;** ["マイ コードのみ" のカスタマイズ](#BKMK_JS_Customize_Just_My_Code)  
@@ -242,7 +242,7 @@ manager: "ghogen"
   
  他のすべてのコードは、**MyCode** として分類されます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Stepping_behavior"></a> ステップ実行の動作  
   
@@ -254,7 +254,7 @@ manager: "ghogen"
   
 -   **\[ステップ アウト\]** \(キーボード: Shift \+ F11\) を実行すると、ユーザー コードの次の行で停止します。  ユーザー コードが出現しない場合は、アプリケーションが終了するか、ブレークポイントにヒットするか、または例外が発生するまで実行が続けられます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Breakpoint_behavior"></a> ブレークポイントの動作  
   
@@ -266,7 +266,7 @@ manager: "ghogen"
   
     -   **UnrelatedCode** コードに出現した場合、デバッガーは停止しません。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Exception_behavior"></a> 例外の動作  
  ハンドルされていない例外が、  
@@ -281,7 +281,7 @@ manager: "ghogen"
   
 -   例外が処理されない場合、デバッガーは中断します。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Customize_Just_My_Code"></a> "マイ コードのみ" のカスタマイズ  
  単一の Visual Studio プロジェクトのユーザー コードと非ユーザー コードを分類するには、プロジェクトのルート フォルダーに `mycode.json` という名前の .json ファイルを追加します。  
@@ -352,4 +352,4 @@ manager: "ghogen"
   
  URL またはファイルの文字列には、0 個以上の文字に一致する `*` 文字を 1 つ以上含めることができます。  `*` は、正規表現 `.*` と同等です。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)

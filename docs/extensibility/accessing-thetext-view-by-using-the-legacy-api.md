@@ -24,7 +24,7 @@ caps.handback.revision: 15
 ## テキスト ビュー オブジェクト  
  各ビューは独自のテキスト バッファーに関連付けられビューはバッファーのデータ ウィンドウです。  次の図は <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> によって表されるテキスト ビュー オブジェクトの重要なインターフェイスを示しています。  
   
- ![Visual Studio テキスト ビュー オブジェクト](../extensibility/media/vstextview.png "vstextview")  
+ ![Visual Studio テキスト ビュー オブジェクト](~/extensibility/media/vstextview.gif "vstextview")  
 テキスト ビュー オブジェクト  
   
  ビューはバッファー内のテキストの表示方法です。  これはビューに表示される内容はバッファー内のテキストの正確に反映されないようにワード ラップアウトライン機能などの機能が含まれます。  

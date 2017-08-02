@@ -53,7 +53,7 @@ ms.lasthandoff: 05/19/2017
   
 3.  [**プロパティ**] ウィンドウのツール バーにある [**イベント**] をクリックして、[**プロパティ**] ウィンドウに [**イベント**] ページを表示します。 **Click** イベントまで下へスクロールし、次の図に示すように、ボックスに「**label_Click**」と入力します。  
   
-     ![Click イベントが表示された [プロパティ] ウィンドウ](../ide/media/express_labelclick.png "Express_labelClick")  
+     ![Click イベントが表示された [プロパティ] ウィンドウ](~/ide/media/express_labelclick.png "Express_labelClick")  
 Click イベントが表示された [プロパティ] ウィンドウ  
   
 4.  Enter キーを押します。 IDE により、`label_Click()` という名前の Click イベント ハンドラーがコードに追加され、フォーム上の各ラベルにフックされます。  

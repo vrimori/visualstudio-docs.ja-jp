@@ -26,7 +26,7 @@ XML スキーマ デザイナーは、XML エディターと統合されてい�
   
  次のスクリーン ショットは、XML スキーマが表示されている XML スキーマ エクスプローラーを示しています。XML スキーマ エクスプローラーでは、スキーマ セットがツリー ビューに表示されます。XML エディターには、XML スキーマ エクスプローラーで現在アクティブになっているノードのテキスト ビューが表示されます。  
   
- ![XSDDesignerWithXMLEditor](../xml-tools/media/xsddesignerwithxmleditor.gif "XSDDesignerWithXMLEditor")  
+ ![XSDDesignerWithXMLEditor](~/xml-tools/media/xsddesignerwithxmleditor.gif "XSDDesignerWithXMLEditor")  
   
  場合によっては、XML エディターとグラフィカルなデザイナーのコードを並べて表示すると便利です。2 つのファイルを同時に表示するには、XML エディター内を右クリックし、**\[デザイナーの表示\]** をクリックします。Visual Studio Windows メニューで、**\[水平 \(または垂直\) タブ グループの新規作成\]** を選択します。  
   

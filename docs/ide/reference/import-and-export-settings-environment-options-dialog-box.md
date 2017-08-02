@@ -36,7 +36,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="import-and-export-settings-environment-options-dialog-box"></a>[設定のインポートとエクスポート] ([オプション] ダイアログ ボックス - [環境])
+# <a name="import-and-export-settings-environment-options-dialog-box"></a>[設定のインポートとエクスポート] \([オプション] ダイアログ ボックス - [環境])
 このページを使用して、ユーザー設定ファイルの保存先とチーム設定ファイルを使用するかどうかを指定します。 設定について詳しくは、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目  

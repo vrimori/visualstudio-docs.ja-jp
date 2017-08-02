@@ -67,11 +67,11 @@ Azure サブスクリプションなしで Azure App Service に一時的なサ�
 
 1. 外部パッケージのインストールを求めるメッセージが表示されたら、**[Install into a virtual environment (仮想環境にインストールする)]** を選びます。 ダイアログの下部にある **[Show required packages (必要なパッケージを表示する)]** コントロールに注意してください。これを使うと、インストールされるパッケージが表示されます。
 
-  ![必要なパッケージのインストール](media/tutorials-common-external-packages.png)
+  ![必要なパッケージのインストール](~/python/media/tutorials-common-external-packages.png)
 
 1. 仮想環境の優先ベース インタープリターを選び (たとえば、**Python 2.7** や **Python 3.4**)、**[作成]** をクリックします。
 
-  ![プロジェクトを作成するときの仮想環境の追加](media/tutorials-common-add-virtual-environment.png)
+  ![プロジェクトを作成するときの仮想環境の追加](~/python/media/tutorials-common-add-virtual-environment.png)
 
 1. プロジェクトが作成されたら、**[デバッグ] > [デバッグ開始]** を選ぶか、F5 キーを押して、ローカルにテストします。 既定では、アプリケーションはメモリ内リポジトリを使うので、構成は必要ありません。 Web サーバーが停止すると、すべてのデータが失われます。
 
@@ -85,7 +85,7 @@ Azure サブスクリプションなしで Azure App Service に一時的なサ�
 
 1. **[発行]** ダイアログで、**[Microsoft Azure App Service]** を選びます。
 
-  ![Azure 発行手順 1](media/tutorials-common-publish-1.png)
+  ![Azure 発行手順 1](~/python/media/tutorials-common-publish-1.png)
 
 1. ターゲットを選びます。
 
@@ -94,7 +94,7 @@ Azure サブスクリプションなしで Azure App Service に一時的なサ�
 
 1. App Service の詳細が、**[発行]** ダイアログの **[接続]** タブに表示されます (下図参照)。
 
-  ![Azure 発行手順 2](media/tutorials-common-publish-2.png)
+  ![Azure 発行手順 2](~/python/media/tutorials-common-publish-2.png)
 
 1. 必要に応じて、**[次へ >]** を選んで追加設定を確認します。 [Azure で Python コードをリモート デバッグする](debugging-azure-remote.md)場合は、**[構成]** を **[デバッグ]** に設定する必要があります。
 1. **[発行]** を選びます。 アプリケーションが Azure に配置されると、そのサイトで既定のブラウザーが開きます。 

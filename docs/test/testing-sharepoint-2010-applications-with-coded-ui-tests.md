@@ -46,14 +46,14 @@ ms.lasthandoff: 05/13/2017
   
  **注**  
   
--   ![必須コンポーネント](../test/media/prereq.png "必須コンポーネント") SharePoint アプリケーションのコード化された UI テストは、SharePoint 2010 でのみサポートされます。  
+-   ![必須コンポーネント](~/test/media/prereq.png "必須コンポーネント") SharePoint アプリケーションのコード化された UI テストは、SharePoint 2010 でのみサポートされます。  
   
--   ![必須コンポーネント](../test/media/prereq.png "必須コンポーネント") SharePoint アプリケーションでは、Visio および PowerPoint 2010 コントロールはサポートされていません。  
+-   ![必須コンポーネント](~/test/media/prereq.png "必須コンポーネント") SharePoint アプリケーションでは、Visio および PowerPoint 2010 コントロールはサポートされていません。  
   
 ## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>SharePoint アプリのコード化された UI テストを作成する  
  SharePoint 2010 アプリケーションでの[コード化された UI テストの作成](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) 方法は、他の種類のアプリケーションでのテストの作成方法と同じです。 記録と再生は、Web 編集インターフェイス上のすべてのコントロールでサポートされています。 カテゴリと Web パーツを選択するためのインターフェイスは、すべてが標準 Web コントロールです。  
   
- ![SharePoint Web パーツ](../test/media/cuit_sharepoint.png "CUIT_SharePoint")  
+ ![SharePoint Web パーツ](~/test/media/cuit_sharepoint.png "CUIT_SharePoint")  
   
 > [!NOTE]
 >  操作を記録している場合は、コードを生成する前に操作を検証します。 マウス ホバーにはいくつかの動作が関連付けられているため、既定で有効になっています。 コード化された UI テストから冗長なホバーを削除するようにしてください。 そのためには、テスト用のコードを編集するか、 [コード化された UI テスト エディター](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)を使用します。  

@@ -139,7 +139,7 @@ caps.handback.revision: 51
   
 -   [Word、InfoPath、および PowerPoint](#WordAndInfoPath)  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: Word の VSTO アドインで作業ウィンドウを管理する](http://go.microsoft.com/fwlink/?LinkId=136781)」をご覧ください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: Word の VSTO アドインで作業ウィンドウを管理する](http://go.microsoft.com/fwlink/?LinkId=136781)」をご覧ください。  
   
 ##  <a name="Outlook"></a> Outlook  
  Outlook 用のカスタム作業ウィンドウを作成するときには、カスタム作業ウィンドウが特定のエクスプ ローラーまたはインスペクター ウィンドウに関連付けられます。  エクスプローラーは、フォルダーの内容を表示するウィンドウであり、インスペクターは電子メール メッセージやタスクなどの項目を表示するウィンドウです。  

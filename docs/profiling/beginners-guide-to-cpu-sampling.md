@@ -90,7 +90,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
   
  図中の番号は、前に示した各手順に対応しています。  
   
- ![サンプリングの概要レポート ビュー](../profiling/media/summary_sampling.png "Summary_Sampling")  
+ ![サンプリングの概要レポート ビュー](~/profiling/media/summary_sampling.png "Summary_Sampling")  
   
 #### <a name="to-analyze-sampling-data"></a>サンプリング データを分析するには  
   

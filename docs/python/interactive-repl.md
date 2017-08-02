@@ -39,7 +39,7 @@ ms.lasthandoff: 04/10/2017
 
 Visual Studio において各 Python 環境に用意されている対話型の read-evaluate-print loop (REPL) ウィンドウを使うと、コマンド ラインの `python.exe` で実行する REPL が向上します。 対話型ウィンドウ (**[表示] > [その他のウィンドウ] > [&lt;環境&gt; インタラクティブ]** メニュー コマンドで開きます) を使うと、任意の Python コードを入力してすぐに結果を確認できるので、API の学習や実験が容易になり、動作するコードを対話形式で開発してプロジェクトに組み込むことができます。
 
-![Python 対話型ウィンドウ](media/interactive-window.png)
+![Python 対話型ウィンドウ](~/python/media/interactive-window.png)
 
 Visual Studio では、複数の Python REPL モードから選ぶことができます。
 
@@ -62,15 +62,15 @@ Python 対話型ウィンドウの概要については、「[Getting Started wi
 
 (第 1 の方法) [Python Environments (Python 環境)] ウィンドウに切り替え (**[表示] > [その他のウィンドウ] > [Python Environments (Python 環境)]**、または Ctrl + K、Ctrl + `)、**[Open Interactive Window (対話型ウィンドウを開く)]** コマンドまたは選んだ環境のボタンを選びます。
 
-![Python 環境ウィンドウの対話型ウィンドウへのリンク](media/interactive-window-opening.png)
+![Python 環境ウィンドウの対話型ウィンドウへのリンク](~/python/media/interactive-window-opening.png)
 
 (第 2 の方法) **[表示] > [その他のウィンドウ]** には、各環境の**対話型**コマンドがあります。通常は、メニューの下端近くに表示されます。
 
-![[表示] > [その他のウィンドウ] の対話型ウィンドウ メニュー項目](media/interactive-window-menu.png)
+![[表示] > [その他のウィンドウ] の対話型ウィンドウ メニュー項目](~/python/media/interactive-window-menu.png)
 
 (第 3 の方法) プロジェクトのスタートアップ ファイルで対話型ウィンドウを開くことができます。または、スタンドアロン ファイルの場合は、**[デバッグ] > [Execute [Project | File] in Python Interactive (Python Interactive で [プロジェクト | ファイル] を実行する)]** メニュー コマンドを選びます (Shift + Alt + F5)。
 
-![[Execute Project in Python Interactive (Python Interactive でプロジェクトを実行する)] メニュー](media/interactive-execute-project.png)
+![[Execute Project in Python Interactive (Python Interactive でプロジェクトを実行する)] メニュー](~/python/media/interactive-execute-project.png)
 
 (第 4 の方法) ファイルでコードを選び、後で説明する [Interactive にコードを送信するコマンド](#send-code-to-interactive-command)を使います。
 
@@ -88,7 +88,7 @@ Python 対話型ウィンドウの概要については、「[Getting Started wi
 
 対話型ウィンドウを開いた後は、`>>>` プロンプトで 1 行ずつコードの入力を開始できます。 対話型ウィンドウは、入力と同時に各行を実行します。これには、モジュールのインポートや、変数の定義などが含まれます。 次の図の最初の 2 行にこのことが示されています。
 
-![Python 対話型ウィンドウ](media/interactive-window.png)
+![Python 対話型ウィンドウ](~/python/media/interactive-window.png)
 
 例外はステートメントがコロンで終わる場合で、上の `for` ステートメントと同様に、対話型ウィンドウはコード ブロックを正しく実行するには追加のコード行が必要であることを認識しています。 この場合、行プロンプトが `...` に変わり、ブロックの追加行を入力する必要があることを示します (上の図の 4 番目と 5 番目の行を参照)。 空白行で Enter キーを押すと、対話型ウィンドウはブロックを終了し、インタープリターでブロックを実行します。
 
@@ -116,20 +116,20 @@ Python 対話型ウィンドウの概要については、「[Getting Started wi
 
 既定では、プロジェクトの対話型ウィンドウのスコープは、コマンド プロンプトから実行した場合のように、プロジェクトのスタートアップ ファイルです。 スタンドアロン ファイルの場合は、そのファイルがスコープになります。 ただし、対話型ウィンドウの上部にあるドロップダウン メニューを使って、REPL セッション中にいつでもスコープを変更できます。
 
-![対話型ウィンドウのスコープ](media/interactive-scopes.png)
+![対話型ウィンドウのスコープ](~/python/media/interactive-scopes.png)
 
 「`import os`」と入力するなどしてモジュールをインポートすると、そのモジュール内の他のスコープに切り替えるためのオプションがドロップダウン リストに表示されます。 また、新しいスコープを示すメッセージも対話型ウィンドウに表示され、セッション中にどのようにして特定の状態になったかを監視できます。
 
 スコープで「`dir()`」と入力すると、関数名、クラス、変数など、そのスコープで有効な識別子が表示されます。 たとえば、`$mod importlib` に続けて `dir()` を使うと、次にように表示されます。
 
-![importlib スコープ内の対話型ウィンドウ](media/interactive-importlib-scope.png)
+![importlib スコープ内の対話型ウィンドウ](~/python/media/interactive-importlib-scope.png)
 
 <a name="sending-code-to-interactive"</a>
 ## <a name="send-code-to-interactive-command"></a>対話型コマンドにコードを送信する
 
 対話型ウィンドウ内で直接作業するだけでなく、エディターで、コードを選び、右クリックして、**[Interactive に送信]** を選ぶことができます。
 
-![[Interactive に送信] メニュー コマンド](media/interactive-send-to.png)
+![[Interactive に送信] メニュー コマンド](~/python/media/interactive-send-to.png)
 
 これは、開発しながらコードをテストするなど、反復的なまたは革新的なコードの開発に役立ちます。 たとえば、対話型ウィンドウにコードの一部を送信し、その出力を表示した後、上方向キーを押してコードをもう一度表示し、変更してから、Ctrl + Enter キーを押して簡単にテストすることができます  (入力の最後に Enter キーを押すと入力内容が実行されますが、入力の途中で Enter キーを押すと改行が挿入されます)。目的のコードができたら、簡単にプロジェクト ファイルにコピーして戻すことができます。
 

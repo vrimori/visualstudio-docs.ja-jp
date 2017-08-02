@@ -36,7 +36,7 @@ Microsoft Visual C++ for Mobile Development コンポーネントには、PC と
 ### <a name="open-in-xcode"></a>XCode で開く  
  Visual Studio から XCode でプロジェクトを開くには、**[リモート コンピューター]** サブメニューで、**[XCode で開く]** を選択して、ペアになっているリモート コンピューターで、選択したプロジェクトを開きます。 vcremote サーバーを使用すると、XCode をお使いの Mac で開いて、プロジェクトのコピーを含む Mac で作成した一時ディレクトリに移動できます。 Visual Studio では、プロジェクトで使用した一時ディレクトリを表示するダイアログが表示されます。 リモート コンピューターで実行されるアクションも Visual Studio の**出力**ウィンドウに表示されます。 これを表示するため、**出力**ウィンドウの上部にある**[出力元の表示]** ドロップダウンで **[Visual C++ リモート コンピューター]** を選択する必要がある場合があります。  
   
- ![出力ウィンドウには、リモート コンピューターのアクションが表示されます。](../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
+ ![出力ウィンドウには、リモート コンピューターのアクションが表示されます。](~/cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
   
  Mac では、コードとリソース、ストーリーボード、アクションの編集に XCode のすべてのツールを使用できます。 Visual Studio では、iOS Application プロジェクトに "XCode で開かれました" という注釈が付けられ、リモート コンピューターで変更が加えられた可能性があることを示します。 編集が完了したら、[リモートからのプル] コマンドか [リモートからの増分プル] コマンドを使用して、Visual Studio プロジェクトに変更を適用します。  
   

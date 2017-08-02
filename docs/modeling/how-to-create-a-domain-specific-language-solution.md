@@ -60,7 +60,7 @@ ms.lasthandoff: 02/22/2017
         > [!NOTE]
         >  可能であれば、入力した名前は、コードが生成される可能性がありますので、有効な Visual c# の識別子をする必要があります。  
   
-     ![DSL ダイアログの作成](../modeling/media/create_dsldialog.png "Create_DSLDialog")  
+     ![DSL ダイアログの作成](~/modeling/media/create_dsldialog.png "Create_DSLDialog")  
   
 2.  DSL テンプレートを選択します。  
   

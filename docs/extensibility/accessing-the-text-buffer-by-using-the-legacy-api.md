@@ -24,7 +24,7 @@ caps.handback.revision: 15
 ## 1 および 2 次元の座標系  
  1 次元座標の位置に 147 などのバッファーの最初の文字から文字の位置に基づいています。  バッファーの 1 次元場所にアクセスするために <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream> のインターフェイスを使用します。  次元の座標系は行インデックスとの組み合わせに基づいています。  たとえば435 の文字は43 行目の行の最初の文字の右側にある 5 文字です。  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> のインターフェイスを使用してバッファーの次元の場所にアクセスする。  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> と <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream> のインターフェイスはテキスト バッファーの <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> オブジェクト \(\) によって実装され相互に `QueryInterface` を使用してアクセスできます。  次の図はこれらのキーとそのほかのインターフェイスを <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> 示します。  
   
- ![テキスト バッファー オブジェクト](../extensibility/media/vstextbuffer.png "vsTextBuffer")  
+ ![テキスト バッファー オブジェクト](~/extensibility/media/vstextbuffer.gif "vsTextBuffer")  
 テキスト バッファーのオブジェクト  
   
  どちらの座標系はテキスト バッファーで動作が次元の座標を使用することを最適化します。  1 次元座標系パフォーマンスのオーバーヘッドを作成できます。  したがって次元の座標系を使用します。  

@@ -51,7 +51,7 @@ EditorConfig ファイルの設定を利用すれば、使用するエディタ�
 ## <a name="override-editorconfig-settings"></a>EditorConfig 設定を上書きする
 ファイル階層のフォルダーに .editorconfig ファイルを追加すると、その設定がその階層レベルとその下のレベルのあらゆる該当ファイルに適用されます。 特定のプロジェクトまたはコードベースの EditorConfig 設定を上書きし、最上位の .editorconfig ファイルとは異なる (優先する) 値を使用するには、変更するレベルに .editorconfig ファイルを追加します。
 
-![EditorConfig 階層](../ide/media/vside_editorconfig_hierarchy.png)
+![EditorConfig 階層](~/ide/media/vside_editorconfig_hierarchy.png)
 
 新しい .editorconfig ファイル設定は、そのファイルが置かれているレベルとすべての下位ファイルに適用されます。
 
@@ -70,19 +70,19 @@ EditorConfig 設定は、XML を除き、Visual Studio 対応のすべての言�
 ## <a name="example"></a>例
 これは C# コード スニペットのインデント状態を示すサンプルです。.editorconfig ファイルをプロジェクトに追加する前と追加した後を確認できます。 Visual Studio テキスト エディターの **[オプション]** ダイアログ ボックスにある **[タブ]** 設定は、コード内で TAB キーを押したときに空白文字を入力するように設定されています。
 
-![テキスト エディター タブの設定](../ide/media/vside_editorconfig_tabsetting.png)
+![テキスト エディター タブの設定](~/ide/media/vside_editorconfig_tabsetting.png)
 
 設定どおり、次の行で TAB キーを押すと、4 つ分の空白文字が追加されてインデントが行われます。
 
-![EditorConfig を使用する前のコード](../ide/media/vside_editorconfig_before.png)
+![EditorConfig を使用する前のコード](~/ide/media/vside_editorconfig_before.png)
 
 .editorconfig という名前の新しいファイルをプロジェクトに追加します。 (`[*.cs]` 設定は、この変更がこのプロジェクトの .cs ファイルにのみ適用されることを意味します。)
 
-![プロジェクトへの .editorconfig ファイルの追加](../ide/media/vside_editorconfig_addconfig.png)
+![プロジェクトへの .editorconfig ファイルの追加](~/ide/media/vside_editorconfig_addconfig.png)
 
 これで、TAB キーを押すと、スペースの代わりにタブ文字が入力されます。
 
-![TAB で Tab 文字が追加されます](../ide/media/vside_editorconfig_tab.png)
+![TAB で Tab 文字が追加されます](~/ide/media/vside_editorconfig_tab.png)
 
 > [!NOTE]
 >  .editorconfig ファイルをプロジェクトまたはコードベースに追加しても既存のスタイルが新しいスタイルに変換されることはありません。新しく追加した行にのみ適用されます。 プロジェクトまたはコードベースから .editorconfig ファイルを削除する場合、エディター設定のコード ファイルを再読み込みし、グローバル設定に戻す必要があります。 .editorconfig ファイルに間違いがある場合、Visual Studio の [エラー] ウィンドウに表示されます。

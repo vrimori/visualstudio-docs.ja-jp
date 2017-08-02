@@ -65,7 +65,7 @@ manager: "ghogen"
   
      ![&#91;ツール&#93; &#45; &#91;オプション&#93; &#45; &#91;デバッグ&#93; &#45; &#91;シンボル&#93; ページ](../debugger/media/dbg_tools_options_symbols.png "DBG\_Tools\_Options\_Symbols")  
   
-2.  フォルダー ![ツール&#47;オプション&#47;デバッグ&#47;シンボル フォルダーのアイコン](../debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") アイコンをクリックします。 編集可能なテキストが **\[シンボル ファイル \(.pdb\) の場所\]** ボックスに表示されます。  
+2.  フォルダー ![ツール&#47;オプション&#47;デバッグ&#47;シンボル フォルダーのアイコン](~/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") アイコンをクリックします。 編集可能なテキストが **\[シンボル ファイル \(.pdb\) の場所\]** ボックスに表示されます。  
   
 3.  シンボル サーバーまたはシンボルの場所の URL またはディレクトリ パスを入力します。 ステートメント入力候補により、正しい形式を確認できます。  
   
@@ -147,7 +147,7 @@ manager: "ghogen"
   
 -   ソースまたはシンボル ファイルが見つからないときに逆アセンブルが常に表示されるようにするには、**\[\[オプション\] ダイアログ ボックス\]** リンクをクリックし、**\[アドレス レベルのデバッグを有効にする\]** と **\[ソースがない場合は逆アセンブリの表示\]** の両方をオンにします。  
   
-     ![オプション&#47;デバッグ&#47;一般的な逆アセンブル オプション](../debugger/media/dbg_options_general_disassembly_checkbox.png "DBG\_Options\_General\_disassembly\_checkbox")  
+     ![オプション&#47;デバッグ&#47;一般的な逆アセンブル オプション](~/debugger/media/dbg_options_general_disassembly_checkbox.png "DBG\_Options\_General\_disassembly\_checkbox")  
   
  **ショートカット メニューからシンボル オプションを変更する**  
   
@@ -214,7 +214,7 @@ manager: "ghogen"
   
 2.  **\[共通プロパティ\]** ノードの下の **\[デバッグ ソース ファイル\]** をクリックします。  
   
-3.  フォルダー ![ツール&#47;オプション&#47;デバッグ&#47;シンボル フォルダーのアイコン](../debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") アイコンをクリックします。 編集可能なテキストが **\[ソース コードを含んでいるディレクトリ\]** ボックスの一覧に表示されます。  
+3.  フォルダー ![ツール&#47;オプション&#47;デバッグ&#47;シンボル フォルダーのアイコン](~/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") アイコンをクリックします。 編集可能なテキストが **\[ソース コードを含んでいるディレクトリ\]** ボックスの一覧に表示されます。  
   
 4.  検索するパスを追加します。  
   
@@ -238,7 +238,7 @@ manager: "ghogen"
   
 4.  **\[ソース サーバー サポートを有効にする\]** チェック ボックスをオンにします。  
   
-     ![&#91;ソース サーバー サポートを有効にする&#93; オプション](../debugger/media/dbg_options_general_enablesrcsrvr_checkbox.png "DBG\_Options\_General\_EnableSrcSrvr\_checkbox")  
+     ![&#91;ソース サーバー サポートを有効にする&#93; オプション](~/debugger/media/dbg_options_general_enablesrcsrvr_checkbox.png "DBG\_Options\_General\_EnableSrcSrvr\_checkbox")  
   
 5.  \(省略可能\) 必要な子オプションを選択します。  
   

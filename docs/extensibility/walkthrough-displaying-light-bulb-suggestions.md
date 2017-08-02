@@ -45,11 +45,11 @@ ms.lasthandoff: 02/22/2017
   
  Light bulb は次のようになります。 赤の波線は、Visual Basic または Visual c# のプロジェクトで無効である場合に変数の名前で表示されます。 無効な識別子にマウス カーソルの近く、電球マークが表示されます。  
   
- ![電球](../extensibility/media/lightbulb.png "電球")  
+ ![電球](~/extensibility/media/lightbulb.png "電球")  
   
  電球で下向きの矢印をクリックすると、選択したアクションのプレビューと、推奨されるアクションのセットが表示されますがします。 この場合、アクションを実行した場合、コードに加えられる変更を示します。  
   
- ![電球のプレビュー](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
+ ![電球のプレビュー](~/extensibility/media/lightbulbpreview.png "LightBulbPreview")  
   
  電球を使用すると、推奨される操作を提供します。 たとえば、開く中かっこが新しい行に移動するか、前の行の末尾に移動するアクションを指定できます。 次のチュートリアルでは、現在のワードに表示される電球を作成する方法と、アクションを推奨される&2; つが:**大文字に変換**と**小文字に変換**します。  
   
@@ -371,12 +371,12 @@ ms.lasthandoff: 02/22/2017
   
 3.  テキスト ファイルを作成し、いくつかのテキストを入力します。 テキストの左側に電球が表示されます。  
   
-     ![電球のテスト](../extensibility/media/testlightbulb.png "TestLIghtBulb")  
+     ![電球のテスト](~/extensibility/media/testlightbulb.png "TestLIghtBulb")  
   
 4.  電球をポイントします。 下向きの矢印が表示されます。  
   
 5.  電球をクリックすると&2; つの推奨する必要がありますと共に表示されます、選択したアクションのプレビュー。  
   
-     ![拡大電球のテスト](../extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")  
+     ![拡大電球のテスト](~/extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")  
   
 6.  最初の操作をクリックすると、現在の単語内のすべてのテキストが大文字に変換されます。 2 つ目の操作をクリックすると、すべてのテキストが小文字に変換されます。

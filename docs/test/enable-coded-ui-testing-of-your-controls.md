@@ -46,7 +46,7 @@ ms.lasthandoff: 05/13/2017
   
 4.  [操作フィルターの実装によって目的に応じた操作をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#intentawareactions)  
   
- ![CUIT&#95;Full](../test/media/cuit_full.png "CUIT_Full")  
+ ![CUIT&#95;Full](~/test/media/cuit_full.png "CUIT_Full")  
   
 ##  <a name="recordandplayback"></a>アクセシビリティの実装によって記録と再生およびプロパティの検証をサポートする  
  コード化された UI テスト ビルダーは、記録時に出現したコントロールに関する情報をキャプチャし、そのセッションを再生するコードを生成します。 コントロールがユーザー補助をサポートしていない場合、コード化された UI テスト ビルダーは画面座標を使用して操作 (マウス クリックなど) をキャプチャします。 テストの再生時、生成されたコードは同じ画面座標にそれらのマウス クリックを表示します。 テストの再生時にコントロールが画面上の別の場所に表示される場合、生成されたコードはコントロールに対するその操作の実行に失敗します。 テストが異なる画面構成や異なる環境で再生される場合、または UI レイアウトが変更された後に再生される場合、これは失敗する可能性があります。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/13/2017
 ### <a name="to-support-record-and-playback-property-validation-and-navigation-for-a-windows-forms-control"></a>Windows フォーム コントロールの記録と再生、プロパティの検証、およびナビゲーションをサポートするには  
  次のプロシージャに概要を示し、<xref:System.Windows.Forms.AccessibleObject> で詳しく説明しているように、コントロールのユーザー補助を実装します。  
   
- ![CUIT&#95;Accessible](../test/media/cuit_accessible.png "CUIT_Accessible")  
+ ![CUIT&#95;Accessible](~/test/media/cuit_accessible.png "CUIT_Accessible")  
   
 1.  <xref:System.Windows.Forms.Control.ControlAccessibleObject> から派生するクラスを実装し、クラスのオブジェクトを返すように <xref:System.Windows.Forms.Control.AccessibilityObject%2A> プロパティをオーバーライドします。  
   
@@ -99,10 +99,10 @@ ms.lasthandoff: 05/13/2017
 ##  <a name="customproprties"></a>プロパティ プロバイダーの実装によってカスタム プロパティの検証をサポートする  
  記録と再生およびプロパティの検証の基本的なサポートを実装したら、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> プラグインを実装して、コントロールのカスタム プロパティをコード化された UI テストから使用できるようにすることができます。 たとえば、次のプロシージャでは、コード化された UI テストがグラフ コントロールの CurveLegend 子コントロールの State プロパティにアクセスできるようにするプロパティ プロバイダーを作成します。  
   
- ![CUIT&#95;CustomProps](../test/media/cuit_customprops.png "CUIT_CustomProps")  
+ ![CUIT&#95;CustomProps](~/test/media/cuit_customprops.png "CUIT_CustomProps")  
   
 ### <a name="to-support-custom-property-validation"></a>カスタム プロパティの検証をサポートするには  
- ![CUIT&#95;Props](../test/media/cuit_props.png "CUIT_Props")  
+ ![CUIT&#95;Props](~/test/media/cuit_props.png "CUIT_Props")  
   
 1.  曲線の凡例のアクセス可能なオブジェクトの <xref:System.Windows.Forms.AccessibleObject.Description%2A> プロパティを、説明文字列の豊富なプロパティ値を渡すようにオーバーライドします。主要な説明とは (複数のプロパティを実装している場合はそれぞれを) セミコロン (;) で区切ります。  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 05/13/2017
   
 <CodeContentPlaceHolder>11</CodeContentPlaceHolder>  
 ### <a name="to-add-a-specialized-class-to-access-your-control"></a>特殊なクラスを追加してコントロールにアクセスするには  
- ![CUIT&#95;CodeGen](../test/media/cuit_codegen.png "CUIT_CodeGen")  
+ ![CUIT&#95;CodeGen](~/test/media/cuit_codegen.png "CUIT_CodeGen")  
   
 1.  <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinControl> から派生したクラスを実装し、コンストラクターの検索プロパティのコレクションにコントロールの型を追加します。  
   
@@ -195,7 +195,7 @@ ms.lasthandoff: 05/13/2017
  Visual Studio はテストを記録するとき、各マウス イベントとキーボード イベントをキャプチャします。 ただし、一連のマウス イベントとキーボード イベントで操作の目的が失われる場合があります。 たとえば、コントロールがオートコンプリートをサポートしている場合は、テストを別の環境で再生すると、同じマウス イベントとキーボード イベントのセットで別の値になることがあります。 一連のキーボード イベントとマウス イベントを単一の操作に置き換える操作フィルター プラグインを追加できます。 こうすることで、結果として値を選択することになる一連のマウス イベントとキーボード イベントを、値を設定する単一の操作に置き換えることができます。 これによって、コード化された UI テストは環境の違いによるオートコンプリートの結果の違いから保護されます。  
   
 ### <a name="to-support-intent-aware-actions"></a>目的に応じた操作をサポートするには  
- ![CUIT&#95;Actions](../test/media/cuit_actions.png "CUIT_Actions")  
+ ![CUIT&#95;Actions](~/test/media/cuit_actions.png "CUIT_Actions")  
   
 1.  <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter> から派生した操作フィルター クラスを実装して、<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.ApplyTimeout%2A>、<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Category%2A>、<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Enabled%2A>、<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.FilterType%2A>、<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Group%2A>、および <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Name%2A> プロパティをオーバーライドします。  
   

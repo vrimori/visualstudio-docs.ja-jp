@@ -307,7 +307,7 @@ ms.lasthandoff: 02/22/2017
   
  開発者はこのマップを調べるために、PaymentProcessing クラスを展開してそのメンバーを選択します。これにより、影響を受ける可能性がある領域が表示されます。  
   
- ![PaymentProcessing の依存関係の内部メソッド](../modeling/media/depgraph_expandeddn.png "DepGraph_ExpandedDN")  
+ ![PaymentProcessing の依存関係の内部メソッド](~/modeling/media/depgraph_expandeddn.png "DepGraph_ExpandedDN")  
   
  **PaymentProcessing クラスとその依存関係の内部メソッド**  
   
@@ -362,7 +362,7 @@ ms.lasthandoff: 02/22/2017
   
  Lucerne は、Process Payment ユース ケースに参加するエンティティを記述し、それについて議論するために、次のようなクラス図を描画しました。  
   
- ![Process Payment のエンティティ クラス ダイアグラムで](../modeling/media/uml_payentities.png "UML_PayEntities")  
+ ![Process Payment のエンティティ クラス ダイアグラムで](~/modeling/media/uml_payentities.png "UML_PayEntities")  
   
  **Process Payment のエンティティ クラス図**  
   

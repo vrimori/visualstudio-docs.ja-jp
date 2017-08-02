@@ -20,7 +20,7 @@ caps.handback.revision: 22
 
 ピクチャ ビューアーを作成する場合、最初の手順は、Windows フォーム アプリケーション プロジェクトを作成することです。  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.png "PlayVideo") このトピックのビデオ版については、「[Tutorial 1: Create a Picture Viewer in Visual Basic \- Video 1 \(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 \- ビデオ 1\)](http://go.microsoft.com/fwlink/?LinkId=205209)」または「[Tutorial 1: Create a Picture Viewer in C\# \- Video 1 \(チュートリアル 1: C\# によるピクチャ ビューアーの作成 \- ビデオ 1\)](http://go.microsoft.com/fwlink/?LinkId=205199)」を参照してください。  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。  ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") このトピックのビデオ版については、「[Tutorial 1: Create a Picture Viewer in Visual Basic \- Video 1 \(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 \- ビデオ 1\)](http://go.microsoft.com/fwlink/?LinkId=205209)」または「[Tutorial 1: Create a Picture Viewer in C\# \- Video 1 \(チュートリアル 1: C\# によるピクチャ ビューアーの作成 \- ビデオ 1\)](http://go.microsoft.com/fwlink/?LinkId=205199)」を参照してください。  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。  ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
 ### Windows フォーム アプリケーション プロジェクトを作成するには  
   
@@ -40,7 +40,7 @@ caps.handback.revision: 22
     > [!NOTE]
     >  ウィンドウ レイアウトは、この図とは多少異なる場合があります。  実際のウィンドウ レイアウトは、Visual Studio のバージョン、使用しているプログラミング言語、その他の要素によって異なります。  ただし、3 つのウィンドウがすべて表示されることを確認する必要があります。  
   
-     ![IDE ウィンドウ](../ide/media/express_ideoverview_visio.png "Express\_IDEOverview\_Visio")  
+     ![IDE ウィンドウ](~/ide/media/express_ideoverview_visio.png "Express\_IDEOverview\_Visio")  
 IDE ウィンドウ  
   
      インターフェイスには、3 つのウィンドウ \(メイン ウィンドウ、**ソリューション エクスプローラー**、**\[プロパティ\]** ウィンドウ\) があります。  
@@ -62,7 +62,7 @@ IDE ウィンドウ
   
      または、次の図に示すツール バーの **\[すべて保存\]** ボタンを選択します。  
   
-     ![&#91;すべてを保存&#93; ツール バー ボタン](../ide/media/express_iconsaveall.png "Express\_IconSaveAll")  
+     ![&#91;すべてを保存&#93; ツール バー ボタン](~/ide/media/express_iconsaveall.png "Express\_IconSaveAll")  
 ツール バーの \[すべてを保存\] ボタン  
   
      Visual Studio によって自動的にフォルダー名およびプロジェクト名が指定され、projects フォルダーにプロジェクトが保存されます。  

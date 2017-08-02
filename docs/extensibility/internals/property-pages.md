@@ -32,7 +32,7 @@ caps.handback.revision: 12
   
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] で使用できる  **プロジェクト**  の ENT1ENT \[出力\] ダイアログ ボックスの 2 個の一般的な種類があります。  1 番目のではVisual Basic プロジェクトの場合プロパティ ページは次のスクリーン ショットに示すようにフィールドの形式を使用して表示されます。  2 番目のではこのセクションで後述\) でもプロパティ ページがプロパティ ウィンドウに表示される場合と同様にプロパティ グリッドをホストします。  
   
- ![Visual Basic プロパティ ページ](../../extensibility/internals/media/vsvbproppages.png "vsVBPropPages")  
+ ![Visual Basic プロパティ ページ](~/extensibility/internals/media/vsvbproppages.gif "vsVBPropPages")  
 フィールド形式およびツリー構造を使用したプロジェクトの \[プロパティ ページ\] ダイアログ ボックス  
   
  プロパティ ページ\] ダイアログ ボックスのツリー構造が <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> を使ってビルドされます。  <xref:Microsoft.VisualStudio.OLE.Interop.ISpecifyPropertyPages> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsPropertyPage> のインターフェイスによって渡されるレベル名に基づいて環境を作成します。  
@@ -57,7 +57,7 @@ caps.handback.revision: 12
   
  サンプルに表示されるプロパティ ページの 2 番目の型は次のスクリーン ショットに示すようにプロパティ グリッドでフォームのホスト。  
   
- ![VC プロパティ ページ](../../extensibility/internals/media/vsvcproppages.gif "vsVCPropPages")  
+ ![VC プロパティ ページ](~/extensibility/internals/media/vsvcproppages.gif "vsVCPropPages")  
 プロパティ グリッドでプロパティ ページ\] ダイアログ ボックス  
   
  インターフェイス`IVSMDPropertyBrowser` （`IVSMDPropertyBrowser``IVSMDPropertyGrid`vsmanaged.h で宣言されている）ダイアログ ボックスまたはウィンドウ内のプロパティ グリッドを作成し設定に使用されます。  

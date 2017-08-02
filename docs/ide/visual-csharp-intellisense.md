@@ -108,11 +108,11 @@ Visual C# の IntelliSense は、エディターでコーディングする際�
   
  using の追加操作を実行するには、解決できない型参照にカーソルを置きます。  たとえば、コンソール アプリケーションを作成し、`Main` メソッド本体に `XmlTextReader` を追加すると、解決できない型参照と見なされ、`XmlTextReader` の右端の文字の下にスマート タグが表示されます。  
   
- ![スマート タグ イメージを使用して追加](../ide/media/addusesmart.gif "AddUseSmart")  
+ ![スマート タグ イメージを使用して追加](~/ide/media/addusesmart.gif "AddUseSmart")  
   
  using を追加する機能は、**[IntelliSense]** メニューまたはコンテキスト メニューの **[競合の解決]** サブメニューから選択して呼び出します。また、スマート タグから呼び出すこともできます。 スマート タグは、バインドされていない型の上または横にカーソルが置かれた場合にのみ表示されます。  
   
- ![拡張スマート タグ イメージを使用して追加](../ide/media/addusesmartexp.gif "AddUseSmartExp")  
+ ![拡張スマート タグ イメージを使用して追加](~/ide/media/addusesmartexp.gif "AddUseSmartExp")  
   
 ### <a name="organize-usings"></a>using の整理  
  **[using の整理]** オプションは、ソース コードの動作を変更することなく、`using` と `extern` の宣言を並べ替えおよび削除します。 時間の経過に伴い、不要で整理されていない `using` ディレクティブのために、ソース ファイルが肥大化して読みにくくなる場合があります。 **[using の整理]** オプションは、使用されない `using` ディレクティブを削除してソース コードをコンパクトにし、並べ替えて読みやすくします。  
@@ -161,11 +161,11 @@ Visual C# の IntelliSense は、エディターでコーディングする際�
   
  .cs ファイルのイベント フィールドの後に `+=` 演算子を入力すると、IntelliSense では Tab キーを押すオプションの使用が求められます。 これで、イベントを処理するメソッドを示すデリゲートの新しいインスタンスを挿入します。  
   
- ![オート フック ボタン](../ide/media/vxautohookup.gif "vxAutoHookUp")  
+ ![オート フック ボタン](~/ide/media/vxautohookup.gif "vxAutoHookUp")  
   
  Tab キーを押すと、IntelliSense は自動的にステートメントを完了し、コード エディターに選択されたテキストとしてイベント ハンドラーの参照を表示します。 自動イベント フックアップを完了するには、IntelliSense はイベント ハンドラーの空のスタブを作成するために、もう一度 Tab キーを押すように要求します。  
   
- ![イベント ハンドラーの作成](../ide/media/vxgenerateeventhandler.gif "vxGenerateEventHandler")  
+ ![イベント ハンドラーの作成](~/ide/media/vxgenerateeventhandler.gif "vxGenerateEventHandler")  
   
 > [!NOTE]
 >  IntelliSense によって作成された新しいデリゲートが既存のイベント ハンドラーを参照する場合、IntelliSense はヒントのこの情報と通信します。 その後、この参照を変更できます。テキストはコード エディターで既に選択されています。 それ以外の場合、自動イベント フックアップはこの時点で完了します。  

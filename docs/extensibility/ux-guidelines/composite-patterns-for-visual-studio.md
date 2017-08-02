@@ -398,10 +398,10 @@ caps.handback.revision: 8
 |-----------|----------------|--------------------|  
 |**選択されていません。**|Shared|![既定のボタンの状態](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713-10_DefaultState")||  
 |**プライマリ選択**|サイズ変更可能枠|![サイズ変更ハンドルを使ったプライマリ選択](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713-11_PrimaryResize")|![使ったプライマリ選択ハンドルと #40 のサイズを変更、拡大 & #41 です。](../../extensibility/ux-guidelines/media/0713-12_primaryresizezoom.png "0713-12_PrimaryResizeZoom")|  
-|**プライマリ選択**|サイズを変更しません。|![サイズ変更ハンドルを使わないプライマリ選択](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713-13_PrimaryNoResize")|![プライマリ選択せず #40 (&) のハンドルのサイズを変更する; 拡大 & #41 です。](../../extensibility/ux-guidelines/media/0713-14_primarynoresizezoom.png "0713-14_PrimaryNoResizeZoom")|  
+|**プライマリ選択**|サイズを変更しません。|![サイズ変更ハンドルを使わないプライマリ選択](~/extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713-13_PrimaryNoResize")|![プライマリ選択せず #40 (&) のハンドルのサイズを変更する; 拡大 & #41 です。](../../extensibility/ux-guidelines/media/0713-14_primarynoresizezoom.png "0713-14_PrimaryNoResizeZoom")|  
 |**プライマリ選択**|更新しない|![ロックされたプライマリ選択](../../extensibility/ux-guidelines/media/0713-15_primarylocked.png "0713-15_PrimaryLocked")|![ロックされたプライマリ選択 (&) #40; 拡大 & #41 です。](../../extensibility/ux-guidelines/media/0713-16_primarylockedzoom.png "0713-16_PrimaryLockedZoom")|  
-|**セカンダリ選択**|サイズ変更可能枠|![サイズ変更ハンドルを使ったセカンダリ選択](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713-17_SecondaryResize")|![使ったセカンダリ選択ハンドルと #40 のサイズを変更、拡大 & #41 です。](../../extensibility/ux-guidelines/media/0713-18_secondaryresizezoom.png "0713-18_SecondaryResizeZoom")|  
-|**セカンダリ選択**|サイズを変更しません。|![サイズ変更ハンドルを使わないセカンダリ選択](../../extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713-19_SecondaryNoResize")|![サイズ変更 &#40; ことがなくセカンダリ選択拡大 & #41 です。](../../extensibility/ux-guidelines/media/0713-20_secondarynoresizezoom.png "0713-20_SecondaryNoResizeZoom")|  
+|**セカンダリ選択**|サイズ変更可能枠|![サイズ変更ハンドルを使ったセカンダリ選択](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713-17_SecondaryResize")|![使ったセカンダリ選択ハンドルと #40 のサイズを変更、拡大 & #41 です。](~/extensibility/ux-guidelines/media/0713-18_secondaryresizezoom.png "0713-18_SecondaryResizeZoom")|  
+|**セカンダリ選択**|サイズを変更しません。|![サイズ変更ハンドルを使わないセカンダリ選択](~/extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713-19_SecondaryNoResize")|![サイズ変更 &#40; ことがなくセカンダリ選択拡大 & #41 です。](~/extensibility/ux-guidelines/media/0713-20_secondarynoresizezoom.png "0713-20_SecondaryNoResizeZoom")|  
 |**セカンダリ選択**|更新しない|![ロックされたセカンダリ選択](../../extensibility/ux-guidelines/media/0713-21_secondarylocked.png "0713-21_SecondaryLocked")|![ロックされたセカンダリ選択 (&) #40; 拡大 & #41 です。](../../extensibility/ux-guidelines/media/0713-22_secondarylockedzoom.png "0713-22_SecondaryLockedZoom")|  
 |**UI がアクティブ**|Shared|![UI のアクティブな状態](../../extensibility/ux-guidelines/media/0713-23_uiactive.png "0713-23_UIActive")|![UI のアクティブな状態と #40; 拡大 & #41 です。](../../extensibility/ux-guidelines/media/0713-24_uiactivezoom.png "0713-24_UIActiveZoom")|  
   
@@ -410,7 +410,7 @@ caps.handback.revision: 8
 #### <a name="tree-view"></a>ツリー ビュー  
  ツリー ビューでの選択には、単純なハイライトが表示されます。 ユーザーは、ノード名やノードのアイコンをクリックすると、ノードが選択されます。 ノードの左側に三角形のグリフを拡張またはコントラクトのツリー コントロールが、例外が 1 つのユーザーの選択には影響しません。 そのノードの子を選択しているときは、親ノードを折りたたみ、時に、選択を親に移動します。  
   
- ![Visual Studio での一般的なツリー ビュー](../../extensibility/ux-guidelines/media/0713-25_treeview.png "0713-25_TreeView")  
+ ![Visual Studio での一般的なツリー ビュー](~/extensibility/ux-guidelines/media/0713-25_treeview.png "0713-25_TreeView")  
   
  **Visual Studio での一般的なツリー ビュー**  
   

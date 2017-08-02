@@ -25,7 +25,7 @@ caps.handback.revision: 22
 ## Colorizer モデル  
  言語サービスはエディターによって使用される <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> のインターフェイスを実装します。  この実装では次の図に示すように言語サービスの各オブジェクトです。  
   
- ![SVC Colorizer グラフィック](../../extensibility/internals/media/figlgsvccolorizer.png "FigLgSvcColorizer")  
+ ![SVC Colorizer グラフィック](~/extensibility/internals/media/figlgsvccolorizer.gif "FigLgSvcColorizer")  
 単純なモデル colorizer  
   
 > [!NOTE]

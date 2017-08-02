@@ -66,7 +66,7 @@ ms.lasthandoff: 05/13/2017
   
  診断セッションを開始すると、アプリが起動し、**診断ツール** ウィンドウにアプリのメモリ使用量のタイムライン グラフが表示されます。  
   
- ![メモリ使用量の概要ページ](../profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
+ ![メモリ使用量の概要ページ](~/profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
   
  タイムライン グラフには、アプリ実行中のメモリの変動が表示されます。 グラフの急な上下動は、通常、何らかのコードがデータを収集または作成し、処理が終わったときにデータを破棄していることを示します。 大きな上下動は、最適化できる可能性がある領域を示しています。 より重大な問題は、使われたまま返されないメモリが増えることです。これは、メモリが効率的に使われていないか、メモリ リークが起きていることを示しているからです。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 05/13/2017
 ##  <a name="BKMK_Memory_Usage_overview_page"></a> メモリ使用量の概要ページ  
  データ コレクションを停止すると、メモリ使用量ツールはアプリを停止し、概要レポートが表示されます。  
   
- ![メモリ使用量の概要ページ](../profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
+ ![メモリ使用量の概要ページ](~/profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
   
 ###  <a name="BKMK_Memory_Usage_snapshot_views"></a> メモリ使用量のスナップショット ビュー  
  Visual Studio の新しいウィンドウで詳しいレポートを開くには、スナップショット ビューを使います。 スナップショット ビューには次の 2 種類があります。  
@@ -98,10 +98,10 @@ ms.lasthandoff: 05/13/2017
   
 |||  
 |-|-|  
-|![手順 1](../profiling/media/procguid_1.png "ProcGuid_1")|このリンク テキストは、スナップショット取得時のメモリ内の合計バイト数を示します。<br /><br /> このリンクをクリックすると、スナップショットの詳細レポートが各型のインスタンスの合計サイズ順に並べ替えて表示されます。|  
-|![手順 2](../profiling/media/procguid_2.png "ProcGuid_2")|このリンク テキストは、スナップショット取得時にメモリに含まれていたオブジェクトの総数を示します。<br /><br /> このリンクをクリックすると、スナップショットの詳細レポートが各型のインスタンス数の順に並べ替えて表示されます。|  
-|![手順 3](../profiling/media/procguid_3.png "ProcGuid_3")|このリンク テキストは、このスナップショットを取った時点のメモリに含まれていたオブジェクトの合計サイズと前のスナップショットの合計サイズとの差を示します。<br /><br /> このリンク テキストは、このスナップショットのメモリサイズが前のサイズより大きい場合は正の数、小さい場合は負の数になります。 **[ベースライン]** というリンク テキストは、このスナップショットが診断セッションの最初のスナップショットであることを示します。**[相違なし]** は、差がゼロであることを示します。<br /><br /> このリンクをクリックすると、スナップショットの相違レポートが各型のインスタンスの合計サイズの差の順に並べ替えて表示されます。|  
-|![手順 4](../profiling/media/procguid_4.png "ProcGuid_4")|このリンク テキストは、このスナップショットに含まれるメモリ オブジェクトの総数と前のスナップショットのオブジェクト数との差を示します。<br /><br /> このリンクをクリックすると、スナップショットの相違レポートが各型のインスタンスの総数の差の順に並べ替えて表示されます。|  
+|![手順 1](~/profiling/media/procguid_1.png "ProcGuid_1")|このリンク テキストは、スナップショット取得時のメモリ内の合計バイト数を示します。<br /><br /> このリンクをクリックすると、スナップショットの詳細レポートが各型のインスタンスの合計サイズ順に並べ替えて表示されます。|  
+|![手順 2](~/profiling/media/procguid_2.png "ProcGuid_2")|このリンク テキストは、スナップショット取得時にメモリに含まれていたオブジェクトの総数を示します。<br /><br /> このリンクをクリックすると、スナップショットの詳細レポートが各型のインスタンス数の順に並べ替えて表示されます。|  
+|![手順 3](~/profiling/media/procguid_3.png "ProcGuid_3")|このリンク テキストは、このスナップショットを取った時点のメモリに含まれていたオブジェクトの合計サイズと前のスナップショットの合計サイズとの差を示します。<br /><br /> このリンク テキストは、このスナップショットのメモリサイズが前のサイズより大きい場合は正の数、小さい場合は負の数になります。 **[ベースライン]** というリンク テキストは、このスナップショットが診断セッションの最初のスナップショットであることを示します。**[相違なし]** は、差がゼロであることを示します。<br /><br /> このリンクをクリックすると、スナップショットの相違レポートが各型のインスタンスの合計サイズの差の順に並べ替えて表示されます。|  
+|![手順 4](~/profiling/media/procguid_4.png "ProcGuid_4")|このリンク テキストは、このスナップショットに含まれるメモリ オブジェクトの総数と前のスナップショットのオブジェクト数との差を示します。<br /><br /> このリンクをクリックすると、スナップショットの相違レポートが各型のインスタンスの総数の差の順に並べ替えて表示されます。|  
   
 ##  <a name="BKMK_Snapshot_reports"></a> スナップショットのレポート  
  ![メモリ使用量のスナップショット レポート](../profiling/media/memuse_snapshotreport_all.png "MEMUSE_SnapshotReport_All")  
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/13/2017
 ##  <a name="BKMK_Snapshot_details_reports"></a> スナップショットの詳細レポート  
  診断セッションで得られた 1 つのスナップショットに注目する場合は、スナップショットの詳細レポートを使います。 詳細レポートを開くには、次の画像に示すように、スナップショット ビューに含まれるいずれかのリンクをクリックします。 どちらのリンクからも同じレポートが開きますが、レポート内の **[マネージ ヒープ]** ツリーを最初に表示したときの並べ替え順序だけが異なります。 どちらの場合も、レポートが開いた後で並べ替え順序を変更できます。  
   
- ![スナップショット ビューにあるスナップショット レポートへのリンク](../profiling/media/memuse_snapshotview_snapshotdetailslinks.png "MEMUSE_SnapshotView_SnapshotDetailsLinks")  
+ ![スナップショット ビューにあるスナップショット レポートへのリンク](~/profiling/media/memuse_snapshotview_snapshotdetailslinks.png "MEMUSE_SnapshotView_SnapshotDetailsLinks")  
   
 -   **[MB]** リンクをクリックすると、**[包括サイズ (バイト)]** 列でレポートが並べ替えられます。  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 05/13/2017
 ###  <a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a> [マネージ ヒープ] ツリー (スナップショットの相違)  
  **[マネージ ヒープ]** ツリーには、メモリ内に保持されているオブジェクトの種類が一覧表示されます。 型名を展開すると、サイズ順に、その型の最大のインスタンス 10 個が表示されます。 種類またはインスタンスを選ぶと、選んだ項目の **[ルートのパス]** ツリーと **[参照されたオブジェクト]** ツリーが表示されます。  
   
- ![差分レポートにある種類の [マネージ ヒープ] ツリー](../profiling/media/memuse_snapshotdiff_type_heap.png "MEMUSE_SnapshotDiff_Type_Heap")  
+ ![差分レポートにある種類の [マネージ ヒープ] ツリー](~/profiling/media/memuse_snapshotdiff_type_heap.png "MEMUSE_SnapshotDiff_Type_Heap")  
   
  この画像で、**[カウント]**、**[サイズ (バイト)]**、**[包括サイズ (バイト)]** の各列が非表示になっている点にご注意ください。  
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 05/13/2017
 ###  <a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a> [ルートのパス] ツリー (スナップショットの相違)  
  **[ルートのパス] ツリー**には、種類またはインスタンスを参照するオブジェクトのチェーンが表示されます。 .NET Framework のガベージ コレクターは、オブジェクトへの参照がすべて解放された場合にのみ、オブジェクトのメモリをクリーンアップします。  
   
- ![差分ビューのインスタンスの [ルートのパス] ツリー](../profiling/media/memuse_snapshotdiff_pathstoroot_instance_all.png "MEMUSE_SnapshotDiff_PathsToRoot_Instance_All")  
+ ![差分ビューのインスタンスの [ルートのパス] ツリー](~/profiling/media/memuse_snapshotdiff_pathstoroot_instance_all.png "MEMUSE_SnapshotDiff_PathsToRoot_Instance_All")  
   
 ###  <a name="BKMK_Referenced_Objects_tree__Snapshot_diff_"></a> [参照されたオブジェクト] ツリー (スナップショットの相違)  
  **[参照されたオブジェクト]** ツリーには、主要な種類またはインスタンスによって参照されるオブジェクトが表示されます。  

@@ -227,11 +227,11 @@ ms.lasthandoff: 05/13/2017
   
     2.  vEthernet (Internal Ethernet Port Windows Phone Emulator Internal Switch) アダプターの場合は、コンテキスト メニューから **[プロパティ]** を選択します。  
   
-         ![Hyper&#45;V で使用される仮想アダプター](../cross-platform/media/android_emu_virtual_adapter.png "Android_Emu_Virtual_Adapter")  
+         ![Hyper&#45;V で使用される仮想アダプター](~/cross-platform/media/android_emu_virtual_adapter.png "Android_Emu_Virtual_Adapter")  
   
          ここでアダプター プロパティが表示されます。  
   
-         ![仮想アダプターのプロパティ](../cross-platform/media/android_emu_virtual_adapter_properties.png "Android_Emu_Virtual_Adapter_Properties")  
+         ![仮想アダプターのプロパティ](~/cross-platform/media/android_emu_virtual_adapter_properties.png "Android_Emu_Virtual_Adapter_Properties")  
   
     3.  このアダプターの場合、 **[この接続は次の項目を使用します]** で選択する必要があるのは以下の項目のみです。  
   
@@ -259,7 +259,7 @@ ms.lasthandoff: 05/13/2017
   
     -   Hyper V を開き、仮想スイッチ マネージャーに移動します。 「Windows Phone Emulator Internal Switch」という名前の仮想スイッチを作成し、その接続の種類を **内部ネットワーク**に設定します。  
   
-         ![仮想スイッチ マネージャー](../cross-platform/media/android_emu_virtual_switch_manager.png "Android_Emu_Virtual_Switch_Manager")  
+         ![仮想スイッチ マネージャー](~/cross-platform/media/android_emu_virtual_switch_manager.png "Android_Emu_Virtual_Switch_Manager")  
   
      ここでエミュレーターを起動します。 エミュレーターが作動します。  
   

@@ -23,7 +23,7 @@ caps.handback.revision: 12
 
 環境 **Save** ハンドル**Save As** と **Save All** コマンド。  ユーザーが \[ENT0ENT\] をクリックすると **名前を付けて保存** ENT4ENT \[入力\] メニューの **\*\*\* or Save All \*\*\*** はすべて保存によってソリューションを閉じます次のプロセスに発生します。  
   
- ![カスタマー エディター保存](../../extensibility/internals/media/private.gif "Private")  
+ ![カスタマー エディター保存](~/extensibility/internals/media/private.gif "Private")  
 \[名前を付けて保存保存しカスタム エディターのイベントを処理するすべてのコマンドを保存します。  
   
  このプロセスは次の手順で詳しく説明します :  

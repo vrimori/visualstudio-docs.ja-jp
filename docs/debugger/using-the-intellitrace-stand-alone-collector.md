@@ -146,7 +146,7 @@ manager: "ghogen"
   
 1.  アプリのサーバーで、PowerShell が有効になっていることを確認します。 Windows Server のほとんどのバージョンでは、**サーバー マネージャー**管理ツールを使用してこの機能を追加できます。  
   
-     ![サーバー マネージャーを使用した PowerShell の追加](../debugger/media/intellitrace_servermanager_addpowershell.png "INTELLITRACE\_ServerManager\_AddPowerShell")  
+     ![サーバー マネージャーを使用した PowerShell の追加](~/debugger/media/intellitrace_servermanager_addpowershell.png "INTELLITRACE\_ServerManager\_AddPowerShell")  
   
 2.  IntelliTrace PowerShell コマンドレットをインストールします。  
   

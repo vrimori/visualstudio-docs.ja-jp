@@ -35,7 +35,7 @@ caps.handback.revision: 12
 ### 中央ログ モデル  
  中央ログ モデルでは、MSBuild.exe の 1 つのインスタンスが "中央ノード" となり、中央ノードの子インスタンス \("セカンダリ ノード"\) が中央ノードにアタッチされ、それによってビルド タスクの実行が可能になります。  
   
- ![中心ロガー モデル](../msbuild/media/centralnode.png "CentralNode")  
+ ![中心ロガー モデル](~/msbuild/media/centralnode.png "CentralNode")  
   
  中央ノードにアタッチされる各種の logger を "中央 logger" といいます。いずれの logger でも一度に 1 つのインスタンスのみ中央ノードにアタッチできます。  
   
@@ -55,7 +55,7 @@ public interface INodeLogger: ILogger
 ### 分散ログ モデル  
  中央ログ モデルでは、一度に多数のプロジェクトをビルドする場合など、大量の受信メッセージ トラフィックが発生し、中央ノードが過負荷となることがあります。  その結果、システム リソースの負荷増大やビルド パフォーマンスの低下を招くことがあります。  この問題を軽減するために、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は分散ログ モデルをサポートしています。  
   
- ![分散ログ モデル](../msbuild/media/distnode.png "DistNode")  
+ ![分散ログ モデル](~/msbuild/media/distnode.png "DistNode")  
   
  分散ログ モデルは、転送 logger の作成を可能にすることにより、中央ログ モデルを拡張したものです。  
   

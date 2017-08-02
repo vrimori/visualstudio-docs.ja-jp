@@ -40,7 +40,7 @@ ms.lasthandoff: 05/23/2017
 
 ほとんどの標準的 Python デバッガーは、Python コードのみのデバッグをサポートします。 ただし、実際には、高パフォーマンスやプラットフォーム API の直接呼び出しが必要なところで Python と、C または C++ が併用されています (例については、「[Python 向け C++ 拡張機能の作成](cpp-and-python.md)」をご覧ください)。 Python プロジェクトが読み込まれるとき、Visual Studio には、Python とネイティブ C/C++ のデバッグを統合して同時に実行する混合モードのデバッグ機能があります。このモードでは、結合された呼び出し履歴、Python とネイティブ コード間でのステップ実行機能、両方の種類のコード内のブレークポイント、Python のオブジェクト表現をネイティブ フレームに表示する機能 (逆も可能) が提供されます。
 
-![混合モードのデバッグ](media/mixed-mode-debugging.png) 
+![混合モードのデバッグ](~/python/media/mixed-mode-debugging.png) 
 
 Visual Studio でのネイティブ C モジュールのビルド、テスト、およびデバッグの概要については「[Deep Dive: Creating Native Modules (詳細情報: ネイティブ モジュールの作成)](https://youtu.be/D9RlT06a1EI)」(youtube.com、9 分 9 秒) をご覧ください。
 
@@ -53,14 +53,14 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
 
 1. ソリューション エクスプローラーでプロジェクトを右クリックし、**[プロパティ]** を選択し、**[デバッグ]** タブを選択します。**[ネイティブ コードのデバッグを有効にする]** オプションをオンにします。 これで、すべてのデバッグ セッションで、混合モードが有効になります。
 
-    ![ネイティブ コードのデバッグの有効化](media/mixed-mode-debugging-enable-native.png)
+    ![ネイティブ コードのデバッグの有効化](~/python/media/mixed-mode-debugging-enable-native.png)
 
     > [!Tip]    
     > ネイティブ コードのデバッグを有効にすると、プログラムが通常の [続行するには、任意のキーを押してください] で一時停止せずに完了した場合に、Python の出力ウィンドウがすぐに消えることがあります。 強制的に一時停止するには、ネイティブ コードのデバッグを有効にするときに、**[デバッグ]** タブの **[実行] > [インタープリターの引数]** フィールドに、`-i` オプションを追加します。 このようにすると、Python インタープリターはコード終了後に対話モードになり、この時点でユーザーが Ctrl + Z キー、Enter キーの順に押して終了するのを待機します。
 
 1. 混合モードのデバッガーを既存のプロセスにアタッチ (**[デバッグ] メニューの [プロセスにアタッチ] を選択**) したら、**[選択]** ボタンをクリックして **[コードの種類の選択]** ダイアログを開きます。**[次のコードの種類をデバッグする]** オプションをオンにし、一覧の **[ネイティブ]** と **[Python]** の両方を選択します。
 
-    ![コードの種類 ([ネイティブ] と [Python]) の選択](media/mixed-mode-debugging-code-type.png)
+    ![コードの種類 ([ネイティブ] と [Python]) の選択](~/python/media/mixed-mode-debugging-code-type.png)
 
     コードの種類の設定は永続的であるため、後で別のプロセスにアタッチするときに混合モードのデバッグを無効にする場合は、これらの手順を繰り返して Python コードの種類の選択を解除する必要があります。
 
@@ -75,7 +75,7 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
 >
 > この場合は、デバッグなしで C++ プロジェクトを開始し (**[デバッグ] > [デバッグなしで開始]** または Ctrl + F5 キー)、その後で **[デバッグ] > [プロセスにアタッチ...]** を使います。 表示されるダイアログで適切なプロセスを選んだ後、**[選択...]** ボタンを使って **[コードの種類の選択]** ダイアログを開き、次に示すように Python を選びます。 **[OK]** を選んでダイアログを閉じた後、**[アタッチ]** を選んでデバッガーを起動します。 デバッガーをアタッチする前にデバッグ対象の Python が呼び出されないように、適切な一時停止または遅延を C++ アプリに組み込むことが必要になる場合があることに注意してください。
 >
-> ![デバッガーをアタッチするときにデバッグの種類として Python を選ぶ](media/mixed-mode-debugging-attach-type.png)
+> ![デバッガーをアタッチするときにデバッグの種類として Python を選ぶ](~/python/media/mixed-mode-debugging-attach-type.png)
 
 ## <a name="mixed-mode-specific-features"></a>混合モード固有の機能
 
@@ -88,7 +88,7 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
 
 [呼び出し履歴] ウィンドウには、ネイティブと Python のスタック フレームの両方が、2 つの間の遷移情報を挟んで交互に表示されます。
 
-![結合された呼び出し履歴](media/mixed-mode-debugging-call-stack.png)
+![結合された呼び出し履歴](~/python/media/mixed-mode-debugging-call-stack.png)
 
 > [!Note]
 > **[ツール]、[オプション]、[デバッグ]、[全般] の順に選択し、[マイ コードのみを有効にする]** オプションをオンにした場合、遷移情報は "[外部コード]" として表示され、遷移の方向は示されません。
@@ -103,11 +103,11 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
 
 ネイティブ (C または C++) フレームがアクティブのときは、そのローカル変数がデバッガーの [ローカル] ウィンドウに表示されます。 ネイティブの Python 拡張モジュールでは、これらの多くは `PyObject` 型 (`_object` の typedef) であり、いくつかがその他の基本的な Python 型です (下の一覧を参照してください)。 混合モードのデバッグでは、これらの値は、[Python view (Python ビュー)] というラベルが付いた追加の子ノードに表示されます。 このノードを展開すると、変数の Python 表現が表示されます。これは、同じオブジェクトを参照しているローカル変数が Python フレームに存在している場合に表示されるものと同じです。 このノードの子は編集可能です。
 
-![Python ビュー](media/mixed-mode-debugging-python-view.png)
+![Python ビュー](~/python/media/mixed-mode-debugging-python-view.png)
 
 この機能を無効にするには、[ローカル] ウィンドウ内を右クリックし、**[Python]、[Show Python View Nodes (Python ビュー ノードの表示)]** メニュー オプションを切り替えます。
 
-![Python ビューの有効化](media/mixed-mode-debugging-enable-python-view.png)
+![Python ビューの有効化](~/python/media/mixed-mode-debugging-enable-python-view.png)
 
 "[Python View (Python ビュー)]" ノードを表示する C の型 (ビューが有効な場合):
 
@@ -137,11 +137,11 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
 
 前のセクションに似ていますが、Python フレームがアクティブのときに、ネイティブ値を [ローカル] ウィンドウに表示する "[C++ View (C++ ビュー)]" を有効にできます。 この機能は既定では有効になっていないため、[ローカル] ウィンドウ内を右クリックし、**[Python] メニューの [Show C++ View Nodes ([C++ ビュー] ノードの表示)]** オプションをオンにすることで有効にします。
 
-![C++ ビューの有効化](media/mixed-mode-debugging-enable-cpp-view.png)
+![C++ ビューの有効化](~/python/media/mixed-mode-debugging-enable-cpp-view.png)
 
 "[C++ View (C++ ビュー)]" ノードは、値の基になる C/C++ 構造体の表現を提供します (これはネイティブ フレームに表示されるものと同じです)。 たとえば、Python の長整数型の `_longobject` インスタンス (その `PyLongObject` は typedef です) が表示され、カスタム作成されたネイティブ クラスの型の推測が試行されます。 このノードの子は編集可能です。
 
-![C++ ビュー](media/mixed-mode-debugging-cpp-view.png)
+![C++ ビュー](~/python/media/mixed-mode-debugging-cpp-view.png)
 
 オブジェクトの子フィールドが `PyObject` 型であるか、サポートされているその他の型のいずれかである場合は、"[Python View (Python ビュー)]" ノードが表示され (有効な場合)、リンクが Python に直接公開されていないオブジェクト グラフに移動することができます。
 

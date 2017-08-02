@@ -66,7 +66,7 @@ ms.lasthandoff: 02/22/2017
   
 -   **[表示]** メニューで、**[タスク一覧]** をクリックします (キーボード: Ctrl + \\、T)。  
   
-     ![[タスク一覧] ウィンドウ](../ide/media/vs2015_task_list.png "vs2015_task_list")  
+     ![[タスク一覧] ウィンドウ](~/ide/media/vs2015_task_list.png "vs2015_task_list")  
   
 #### <a name="to-change-the-sort-order-of-the-list"></a>一覧の並べ替え順序を変更するには  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 02/22/2017
   
      [[タスク一覧] ([オプション] ダイアログ ボックス - [環境])](../ide/reference/task-list-environment-options-dialog-box.md) が表示されます。  
   
-     ![Visual Studio タスク一覧](../ide/media/vs2015_task_list_options.png "vs2015_task_list_options")  
+     ![Visual Studio タスク一覧](~/ide/media/vs2015_task_list_options.png "vs2015_task_list_options")  
   
 3.  **[トークン]** カテゴリの **[名前]** テキスト ボックスに、トークン名を入力します (例: バグ)。  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 02/22/2017
 ##  <a name="shortcuts"></a> ショートカット  
  *ショートカット* は、 **[タスク一覧]**で追跡されるコード内のブックマークで、標準のブックマークとはアイコンが異なります。 コード内の対応する位置に移動するには、 **[タスク一覧]** にあるショートカットをダブルクリックします。  
   
- ![Visual Studio タスク一覧へのショートカット アイコン](../ide/media/vs2015_task_list_bookmark.png "vs2015_task_list_bookmark")  
+ ![Visual Studio タスク一覧へのショートカット アイコン](~/ide/media/vs2015_task_list_bookmark.png "vs2015_task_list_bookmark")  
   
 #### <a name="to-create-a-shortcut"></a>ショートカットを作成するには  
   

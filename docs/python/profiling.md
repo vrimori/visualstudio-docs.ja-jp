@@ -42,11 +42,11 @@ CPython ベースのインタープリターを使っている場合、Visual St
 
 **[分析] > [Launch Python Profiling (Python プロファイリングの開始)]** メニュー コマンドでプロファイリングを開始すると、構成ダイアログが開きます。
 
-![プロファイリング構成ダイアログ](media/profiling-start.png)
+![プロファイリング構成ダイアログ](~/python/media/profiling-start.png)
 
 **[OK]** を選ぶと、プロファイラーが実行されてパフォーマンス レポートが表示され、アプリケーションで時間がどのように消費されたかを調べることができます。
 
-![プロファイリング パフォーマンス レポート](media/profiling-results.png)
+![プロファイリング パフォーマンス レポート](~/python/media/profiling-results.png)
 
 概要については、次をご覧ください。
 

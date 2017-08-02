@@ -52,7 +52,7 @@ caps.handback.revision: 32
   
  次の図は複数レベルのプロジェクトのサブタイプの集計のグラフィカル的な表現を示します。  
   
- ![Visual Studio マルチレベル projectflavor グラフィック](../../extensibility/internals/media/vs_multilevelprojectflavor.gif "VS\_MultilevelProjectFlavor")  
+ ![Visual Studio マルチレベル projectflavor グラフィック](~/extensibility/internals/media/vs_multilevelprojectflavor.gif "VS\_MultilevelProjectFlavor")  
 複数レベルのプロジェクトのサブタイプ  
   
  複数レベルのプロジェクトのサブタイプの集合で 3 レベルプロジェクトのサブタイプで集計する基本プロジェクトから高度なプロジェクトのサブタイプすると集計する構成されます。  図は[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] プロジェクトのサブタイプ アーキテクチャの一部がサポートするインターフェイスの一部について説明します。  
@@ -62,7 +62,7 @@ caps.handback.revision: 32
   
  次の図はオートメーション エクステンダーの実装にプロジェクト構成されたオブジェクトを参照しますが基本プロジェクト システムを拡張するにはプロジェクトのサブタイプに使用するついて説明します。  
   
- ![VS プロジェクト フレーバー オート エクステンダー グラフィック](../../extensibility/internals/media/vs_projectflavorautoextender.png "VS\_ProjectFlavorAutoExtender")  
+ ![VS プロジェクト フレーバー オート エクステンダー グラフィック](~/extensibility/internals/media/vs_projectflavorautoextender.gif "VS\_ProjectFlavorAutoExtender")  
 プロジェクトのサブタイプのオートメーション エクステンダー。  
   
  プロジェクトのサブタイプはオートメーション オブジェクト モデルを拡張することにより基本プロジェクト システムを拡張できます。  これらがとして DTE オートメーション オブジェクトの部分定義されプロジェクトのオブジェクト`ProjectItem` のオブジェクトと `Configuration` のオブジェクトを拡張するために使用されます。  詳細については、「[ベースのプロジェクトのオブジェクト モデルの拡張](../../extensibility/internals/extending-the-object-model-of-the-base-project.md)」を参照してください。  

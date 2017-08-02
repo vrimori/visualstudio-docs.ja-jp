@@ -43,7 +43,7 @@ ms.lasthandoff: 05/13/2017
   
  IDE には、コードの記述に役立つ IntelliSense と呼ばれる強力なツールが備わっています。 コードを入力する際に単語の一部を入力すると、入力に合わせてボックスが開き、入力候補が提示されます。 このツールは、ユーザーの次の操作を予測し、ユーザーが一覧から選択した最後の項目に自動的にジャンプします。 ユーザーは、上方向キーまたは下方向キーを使用して一覧内を移動したり、文字の入力を続けて選択肢を絞り込んだりすることができます。 目的の選択肢が見つかったら、Tab キーを押して選択します。 入力候補が不要な場合は無視してもかまいません。  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205215)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205203)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205215)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 4](http://go.microsoft.com/fwlink/?LinkId=205203)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
 ### <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>[Show a picture] ボタンのイベント ハンドラーのコードを記述するには  
   
@@ -56,7 +56,7 @@ Visual C# コードの IntelliSense
   
 3.  **IntelliSense** ウィンドウで、**if** という単語が強調表示されます  (強調表示されない場合は、小文字で「`f`」と入力すると強調表示されます)。**IntelliSense** ウィンドウの横にある小さな *[ツールヒント]* ボックスに "**if ステートメントに対するコード スニペット**" と表示されます。 (Visual Basic の場合も、メッセージは若干異なりますが、ツールヒントにスニペットであることが示されます)。そのスニペットを使用するには、Tab キーを押して "**if**" をコードに挿入します。 次にもう一度 Tab キーを押して **if** スニペットを使用します。 (別の場所をクリックして **[IntelliSense]** ウィンドウが非表示になった場合は、BackSpace キーで **i** を削除してから再度入力すると、もう一度 **[IntelliSense]** ウィンドウが開きます)。  
   
-     ![Visual C# のコード](../ide/media/express_highlighttrue.png "Express_HighlightTrue")  
+     ![Visual C# のコード](~/ide/media/express_highlighttrue.png "Express_HighlightTrue")  
 Visual C# のコード  
   
 4.  次に、IntelliSense を使用して、**[ファイルを開く]** ダイアログ ボックスを開くためのコードを入力します。 ユーザーが **[OK]** をクリックすると、ユーザーが選択したファイルが PictureBox に読み込まれます。 コードを入力する手順を次に示します。手順は多くなっていますが、少ないキーストロークで完了できます。  
@@ -72,13 +72,13 @@ Visual C# のコード
         > [!NOTE]
         >  **IntelliSense** ウィンドウには、プロパティとメソッドの両方が表示されます。 表示される内容を判断するには、**[IntelliSense]** ウィンドウの各項目の左側のアイコンを参照してください。 各メソッドの横にはブロックの画像が表示され、各プロパティの横にはレンチ (スパナ) の画像が表示されます。 また、各イベントの横には稲妻のアイコンが表示されます。 これらの画像は次のとおりです。  
   
-         ![[メソッド] アイコン](../ide/media/express_iconmethod.png "Express_IconMethod")  
+         ![[メソッド] アイコン](~/ide/media/express_iconmethod.png "Express_IconMethod")  
 [メソッド] アイコン  
   
-         ![プロパティ アイコン](../ide/media/express_iconproperty.png "Express_IconProperty")  
+         ![プロパティ アイコン](~/ide/media/express_iconproperty.png "Express_IconProperty")  
 プロパティ アイコン  
   
-         ![[イベント] アイコン](../ide/media/express_iconevent.png "Express_IconEvent")  
+         ![[イベント] アイコン](~/ide/media/express_iconevent.png "Express_IconEvent")  
 [イベント] アイコン  
   
     4.  「`ShowDialog`」の入力を開始します (IntelliSense では大文字と小文字の区別は重要ではありません)。 **[ファイルを開く]** ダイアログ ボックスを表示するメソッドは `ShowDialog()` です。 ウィンドウで "**ShowDialog**" が強調表示されたら、Tab キーを押します。 また、"ShowDialog" を強調表示し、F1 キーを押して、それに関するヘルプを表示することもできます。  

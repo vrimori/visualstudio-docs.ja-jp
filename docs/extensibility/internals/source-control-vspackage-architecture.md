@@ -40,7 +40,7 @@ caps.handback.revision: 25
   
  ソース管理パッケージがアクティブなパッケージの一方とソース管理のスタブがパッケージと [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] パッケージのソース管理インターフェイスを使用して直接通信します。  パッケージにはソース管理のソース管理の UI をホストするために使用します。  
   
- ![ソース管理アーキテクチャ グラフィック](../../extensibility/internals/media/vsipsccarch.png "VSIPSCCArch")  
+ ![ソース管理アーキテクチャ グラフィック](~/extensibility/internals/media/vsipsccarch.gif "VSIPSCCArch")  
   
  ソース管理のパッケージは[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は統合のソース・コード管理や API を提供しません。  ソース管理プラグインが短い一連のコールバックおよびコールバック関数を実装する必要がある [ソース管理プラグインの作成](../../extensibility/internals/creating-a-source-control-plug-in.md) に記載されている方法と比較してみてください。  
   

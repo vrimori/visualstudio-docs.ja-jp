@@ -42,7 +42,7 @@ ms.lasthandoff: 05/13/2017
   
  このセクションでは、Excel ワークシートのテストの記録と再生を行うことができるコード化された UI テストの拡張機能について説明します。 拡張機能の各部分については、それぞれの拡張機能を作成する開発者向けに、このセクションとコード コメントで説明します。  
   
- ![UI テストのアーキテクチャ](../test/media/ui_testarch.png "UI_TestArch")  
+ ![UI テストのアーキテクチャ](~/test/media/ui_testarch.png "UI_TestArch")  
 アーキテクチャの概要  
   
 ## <a name="download-the-sample"></a>サンプルのダウンロード  

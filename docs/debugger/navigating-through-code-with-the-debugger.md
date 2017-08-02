@@ -77,7 +77,7 @@ manager: "ghogen"
   
      コードに単純なブレークポイントを設定するには、Visual Studio エディターでソース ファイルを開きます。 中断するコード行にカーソルを置き、コンテキスト メニューで **\[ブレークポイント\]**、**\[ブレークポイントの挿入\]** の順にクリックします \(キーボード: **F9**\)。 その行が実行される直前でデバッガーは実行を中断します。  
   
-     ![ブレークポイントの設定](../debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
+     ![ブレークポイントの設定](~/debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
   
      Visual Studio でのブレークポイントには、条件付きブレークポイントやトレースポイントなど、さまざまな追加の機能が用意されています。 「[ブレークポイントの使用](../debugger/using-breakpoints.md)」を参照してください。  
   
@@ -116,12 +116,12 @@ manager: "ghogen"
   
  関数がオーバーロードされるか、複数の名前空間にある場合は、**\[ブレークポイントの選択\]** ダイアログ ボックスで目的の関数を選択できます。  
   
- ![&#91;ブレークポイントの選択&#93; ダイアログ ボックス](../debugger/media/dbg_execution_overloadedbreakpoints.png "DBG\_Execution\_OverloadedBreakpoints")  
+ ![&#91;ブレークポイントの選択&#93; ダイアログ ボックス](~/debugger/media/dbg_execution_overloadedbreakpoints.png "DBG\_Execution\_OverloadedBreakpoints")  
   
 ##  <a name="BKMK_Set_the_next_statement_to_execute"></a> 次に実行されるステートメントを設定する  
  デバッガーを中断した後、実行ポイントを移動して、コードの次に実行されるステートメントを設定できます。 ソース ウィンドウまたは \[逆アセンブル\] ウィンドウのマージンに表示される黄色の矢印は、次に実行されるステートメントの位置を示します。 この矢印を移動すると、コードの一部をスキップしたり、前に実行した行に戻ったりできます。 既知のバグを含むコードのセクションをスキップするなどの場合に利用できます。  
   
- ![Example2](../debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
+ ![Example2](~/debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
   
  次に実行されるステートメントを設定するには、次のいずれかの手順を使用します。  
   

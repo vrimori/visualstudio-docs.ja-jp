@@ -56,7 +56,7 @@ JavaScript の変数の宣言を入力明示的に許可されていません。
   
  **補完オプションを識別することはできません、オブジェクト**  
   
- ![識別子の JavaScript IntelliSense](../ide/media/js_intellisense_identifiers.png "js\_intellisense\_identifiers")  
+ ![識別子の JavaScript IntelliSense](~/ide/media/js_intellisense_identifiers.png "js\_intellisense\_identifiers")  
   
  XML ドキュメントのコメントや JavaScript の IntelliSense 拡張機能を使用して、オブジェクトの候補の一覧をオーバーライドできます。  それ以外の場合利用できることがあるとこれらの機能を使用するから型情報と IntelliSense のより詳細な情報入手できます。  詳細については、「[JavaScript IntelliSense の拡張](../ide/extending-javascript-intellisense.md)」および「[方法: JavaScript XML ドキュメントのコメントを作成する](../ide/create-xml-documentation-comments-for-javascript-intellisense.md)」を参照してください。  
   

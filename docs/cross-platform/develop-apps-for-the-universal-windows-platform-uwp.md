@@ -38,7 +38,7 @@ ms.lasthandoff: 05/13/2017
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発
 ユニバーサル Windows プラットフォームと 1 つの Windows コアを使用することで、電話やデスクトップなどの Windows 10 デバイスで同じアプリを実行できます。 これらのユニバーサル Windows アプリは、Visual Studio 2015 とユニバーサル Windows アプリ開発ツールを使用して作成します。  
   
- ![ユニバーサル Windows プラットフォーム](../cross-platform/media/uwp_coreextensions.png "UWP_CoreExtensions")  
+ ![ユニバーサル Windows プラットフォーム](~/cross-platform/media/uwp_coreextensions.png "UWP_CoreExtensions")  
   
  アプリを Windows 10 Phone、Windows 10 デスクトップ、または Xbox で実行します。 同じアプリ パッケージが使用されています。 Windows 10 の単一の統一されたコアの導入により、1 つのアプリケーション パッケージをすべてのプラットフォームで実行できます。 いくつかのプラットフォームには、プラットフォーム固有の動作を利用するためにアプリに追加できる拡張 SDK があります。 たとえば、モバイル用の拡張 SDK を使用すれば、Windows Phone で [戻る] ボタンを処理できます。 プロジェクトで拡張 SDK を参照する場合、単純にランタイム チェックを追加して、プラットフォームでその SDK を使用できるかどうかをテストします。 このようにして、それぞれのプラットフォームで同じアプリ パッケージを使用できます。  
   

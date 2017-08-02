@@ -23,7 +23,7 @@ caps.handback.revision: 8
 
 環境ハンドルは保存名前を付けて保存すべてのコマンドを保存します。  ユーザーが \[ENT4ENT\] を選択すると\[ENT8ENT\] メニューの  **名前を付けて保存** または  **すべて保存**  は **すべて保存**  によってソリューションを閉じます次のプロセスに発生します。  
   
- ![標準エディター](../../extensibility/internals/media/public.png "Public")  
+ ![標準エディター](~/extensibility/internals/media/public.gif "Public")  
 \[名前を付けて保存し標準エディターで保存するすべてのコマンドを保存します。  
   
  このプロセスは次の手順で詳しく説明します :  

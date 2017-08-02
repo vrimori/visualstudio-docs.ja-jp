@@ -32,7 +32,7 @@ Visual Studio エディターでさまざまなコンピューター言語の読
 ## <a name="syntax-colorization-statement-completion-and-navigate-to-support"></a>構文の色づけ、ステートメント入力候補、および移動のサポート  
  構文の色づけ、ステートメント入力候補、および移動などの Visual Studio エディターの機能を使用することで、コードの読み取り、作成、編集がより簡単になります。 次のスクリーン ショットは、Visual Studio での Perl スクリプトの編集例を示しています。 構文は自動的に色づけされます。 たとえば、コードの注釈は緑、コードは黒、パスは赤、ステートメントは青に色づけされます。 Visual Studio エディターでは、サポートされる言語に自動的に構文の色づけが適用されます。 さらに、既知の言語キーワードまたはオブジェクトの入力を始めると、ステートメント入力候補に使用可能なステートメントとオブジェクトの一覧が表示されます。 ステートメント入力候補を使用すれば、コードをよりすばやく簡単に作成することができます。  
   
- ![Perl スクリプトの構文の色づけ](../ide/media/vside_perledit.png "VSIDE_PerlEdit")  
+ ![Perl スクリプトの構文の色づけ](~/ide/media/vside_perledit.png "VSIDE_PerlEdit")  
   
  現在、Visual Studio では、[TextMate 文法](https://manual.macromates.com/en/language_grammars)を使用する以下の言語に対する構文の色づけおよび基本的なステートメント入力候補がサポートされます。 表に好みの言語がない場合でもご安心ください。言語は追加することができます。  
   

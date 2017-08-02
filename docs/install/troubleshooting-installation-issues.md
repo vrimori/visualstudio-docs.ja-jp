@@ -65,9 +65,9 @@ Visual Studio インストーラーのブートストラップは、Visual Studi
 
 1. [Microsoft Visual Studio および .NET Framework のログ収集ツール](https://www.microsoft.com/en-us/download/details.aspx?id=12493)をダウンロードして、実行します。 このツールは、Visual Studio、.NET Framework、SQL Server のインストールで入手できるセットアップ ログを収集し、コンパイルします。
 2. Visual Studio インストーラーを開き、**[問題の報告]** をクリックして、Visual Studio フィードバック ツールを開きます。
-![[フィードバックの送信] ボタンからフィードバック ツールを開くことができます](media/report-a-problem.png)
+![[フィードバックの送信] ボタンからフィードバック ツールを開くことができます](~/install/media/report-a-problem.png)
 3. 問題のレポートにタイトルを付け、関連する詳細を入力します。 **[次へ]** をクリックして **[添付ファイル]** セクションに移動し、生成されたログ ファイルを添付します (通常、ファイルは %TEMP%\vslogs.zip にあります)。
-![[新しい問題を報告する] ボタンを選択し、手順に従います](media/problem-report-details.png)
+![[新しい問題を報告する] ボタンを選択し、手順に従います](~/install/media/problem-report-details.png)
 4. **[次へ]** をクリックして問題レポートを確認し、**[送信]** をクリックします。
 
 ### <a name="step-5---run-installcleanupexe-to-clean-up-installation-files"></a>手順 5 - InstallCleanup.exe を実行してインストール ファイルをクリーンアップする

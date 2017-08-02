@@ -56,15 +56,15 @@ RTVS では R プロジェクトへの SQL クエリの追加がサポートさ�
 
 SQL クエリ ファイルを追加するには、ソリューション エクスプローラーでプロジェクトを右クリックし、**[追加] > [新しい項目]** を選択して、ファイルの種類として **[SQL クエリ]** を選択します。
 
-![SQL クエリ項目をプロジェクトに追加](media/sql-add-item.png)
+![SQL クエリ項目をプロジェクトに追加](~/rtvs/media/sql-add-item.png)
 
 これにより、Visual Studio の Transact-SQL エディターでファイルが開き、SQL 用のフル機能 IntelliSense とクエリ実行機能を使用できます。 ただし、これらの機能が動作するためには、エディターのツール バーにある接続ボタンを使用してデータベースに接続する必要があります。または、単にクエリを実行することでも接続できます (Ctrl + Shift + E キーでも選択項目を操作できます)。 どちらの方法でも、次のような接続ダイアログが表示されます。
 
-![SQL 接続ダイアログ ボックス](media/sql-connection-dialog.png)
+![SQL 接続ダイアログ ボックス](~/rtvs/media/sql-connection-dialog.png)
 
 接続できたら、クエリを実行して結果を確認できます。
 
-![SQL ウィンドウのクエリ結果](media/sql-query-results.png)
+![SQL ウィンドウのクエリ結果](~/rtvs/media/sql-query-results.png)
 
 Transact-SQL エディターは他のさまざまな機能をサポートしており、たとえばクエリやクエリ デバッガーの実行プランを表示することなどができます。Transact-SQL エディターで使用できるその他多くの機能があります。 詳細については、「[Transact-SQL エディターを使用したスクリプトの編集と実行](https://msdn.microsoft.com/library/hh272706.aspx)」を参照してください。
 
@@ -86,11 +86,11 @@ Transact-SQL エディターは他のさまざまな機能をサポートして�
 
 1. **[R Tools] > [データ] > [データベース接続の追加]** を選択して **[接続プロパティ]** ダイアログ ボックスを表示し、データ ソース (この場合は SQL Server) の名前、認証モード、データベースの名前を指定します。 ダイアログ ボックスを閉じる前に **[テスト接続]** を選択して入力を確認できます。
  
-    ![SQL 接続ダイアログ ボックス](media/sql-connection-string-dialog.png)
+    ![SQL 接続ダイアログ ボックス](~/rtvs/media/sql-connection-string-dialog.png)
 
 1. 有効な接続で **[OK]** を選択すると、Visual Studio で新しい `settings.R` ファイル内に `dbConnection` という有効な接続が生成されます。 このファイルが RTVS で自動的にソースとして実行され、R スクリプトから接続をすぐに使用できるようになります。
 
-![SQL 設定の R ファイル](media/sql-settings-dot-r.png)
+![SQL 設定の R ファイル](~/rtvs/media/sql-settings-dot-r.png)
 
 ### <a name="write-and-test-a-sql-stored-procedure"></a>SQL ストアド プロシージャの作成とテスト
 
@@ -98,7 +98,7 @@ Transact-SQL エディターは他のさまざまな機能をサポートして�
  
 RTVS ではストアド プロシージャとして 3 種類のファイルが作成されます。R コードの `.R` ファイル、SQL コードの `.Query.sql` ファイル、2 つを組み合わせた `.Template.sql` ファイルの 3 つです。 後の 2 つはソリューション エクスプローラーで `.R` ファイルの子として表示されます。
 
-![R と SQL ストアド プロシージャが表示されたソリューション エクスプローラーの展開ビュー](media/sql-solution-explorer-expanded.png)
+![R と SQL ストアド プロシージャが表示されたソリューション エクスプローラーの展開ビュー](~/rtvs/media/sql-solution-explorer-expanded.png)
 
 `StoredProcedure.R` (この例の場合) に R コードを記述します。 既定の内容は次のとおりです。
 
@@ -126,7 +126,7 @@ OutputDataSet <- InputDataSet
 
 SQL コードに問題がないことを確認したら、そのコードを `StoredProcedure.R` の R コードと簡単に統合できます。`.R` ファイルを開いているエディターに `.sql` ファイルをドラッグするだけです。 以下の画像は、`StoredProcedure.Query.sql` を、`sqlQuery(channel, )`のコンマの後ろの位置にドラッグしたところです。
 
-![R 文字列変数への SQL ファイルの読み込み](media/sql-reference-sql-file-from-r.png)
+![R 文字列変数への SQL ファイルの読み込み](~/rtvs/media/sql-reference-sql-file-from-r.png)
 
 このように、この簡単なステップによって R コードが自動的に生成されて `.sql` ファイルが開きます。このファイルの内容を文字列に読み込み、その文字列を RODBC パッケージに渡して SQL Sever に送信します。
 
@@ -167,7 +167,7 @@ WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 1. **[R Tools] > [データ] > [Publish With Options]**\(オプションを使用してパブリッシュ\) メニュー コマンドを選択します。
 1. 表示されるダイアログ ボックスで、**[パブリッシュ先]** を **[データベース]** に変更し、ターゲットを指定して、**[パブリッシュ]** を選択します。RTVS でストアド プロシージャがビルドされ、パブリッシュされます。
 
-    ![ストアド プロシージャの公開ダイアログ ボックス](media/sql-publish-with-options.png)
+    ![ストアド プロシージャの公開ダイアログ ボックス](~/rtvs/media/sql-publish-with-options.png)
 
 1. プロジェクト内のすべてのストアド プロシージャを公開する方法として、**[R Tools] > [データ] > [Publish Stored Procedures]**\(ストアド プロシージャの公開\) コマンドを使用することもできます。このコマンドは、ソリューション エクスプローラーでプロジェクトを右クリックして選択することもできます。
 

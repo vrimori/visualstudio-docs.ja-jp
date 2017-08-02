@@ -44,7 +44,7 @@ Visual Studio マネージ メモリ アナライザーを使用して、.NET Fr
   
  各アプリケーションについて、GC では、アプリケーションから参照されるオブジェクトを追跡する参照ツリーが管理されます。  *参照ツリー*には、ルートのセットがあります。これにはグローバル オブジェクトおよび静的オブジェクト、関連付けられたスレッドのスタック、動的にインスタンス化されたオブジェクトが含まれます。  オブジェクトへの参照を持つ 1 つ以上の親オブジェクトがある場合、そのオブジェクトではルートが作成されます。  GC は、アプリケーション内の他のオブジェクトまたは変数から参照されていない場合にのみ、そのオブジェクトのメモリを再利用できます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_Identify_a_memory_issue_in_an_app"></a> アプリ内でのメモリに関する問題の特定  
  メモリに関する問題の最も可視的な兆候は、アプリのパフォーマンスです \(特に、時間の経過に伴ってパフォーマンスが低下する場合\)。  特定のアプリの実行中に他のアプリのパフォーマンスが低下した場合も、メモリの問題を示している可能性があります。  メモリの問題が疑われる場合は、タスク マネージャーや [Windows パフォーマンス モニター](http://technet.microsoft.com/library/cc749249.aspx)などのツールを使用して、調査を進めます。  たとえば、考えられるメモリ リークの原因として、説明が付かないような合計メモリ サイズの増加がないか確認します。  
@@ -73,7 +73,7 @@ Visual Studio マネージ メモリ アナライザーを使用して、.NET Fr
   
  アプリでのメモリ使用量の増加を分析するには、アプリの単一インスタンスから 2 つのダンプ ファイルを収集します。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ##  <a name="BKMK_Analyze_memory_use"></a> メモリ使用量の分析  
  [オブジェクト一覧のフィルター処理](#BKMK_Filter_the_list_of_objects) **&#124;** [単一スナップショットからのメモリ データの分析](#BKMK_Analyze_memory_data_in_from_a_single_snapshot) **&#124;** [2 つのメモリ スナップショットの比較](#BKMK_Compare_two_memory_snapshots)  
@@ -88,7 +88,7 @@ Visual Studio マネージ メモリ アナライザーを使用して、.NET Fr
   
  メモリ アナライザーによるデバッグ セッションが開始し、ファイルの分析が行われ、\[ヒープの表示\] ページに結果が表示されます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ###  <a name="BKMK_Filter_the_list_of_objects"></a> オブジェクト一覧のフィルター処理  
  メモリ アナライザーの既定では、メモリ スナップショット内のオブジェクト一覧がフィルター処理されます。これにより、ユーザー コードの型とインスタンスのみを対象とし、合計ヒープ サイズのパーセンテージで表したしきい値を超える合計包括サイズの型のみが表示されます。  **\[表示設定\]** の一覧で、これらのオプションを変更することもできます。  
@@ -100,14 +100,14 @@ Visual Studio マネージ メモリ アナライザーを使用して、.NET Fr
   
  また **\[検索\]** ボックスに文字列を入力することによって、型の一覧をフィルター処理することもできます。  一覧には、この文字列が名前に含まれる型のみが表示されます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ###  <a name="BKMK_Analyze_memory_data_in_from_a_single_snapshot"></a> 単一スナップショットからのメモリ データの分析  
  Visual Studio による新しいデバッグ セッションが開始し、ファイルの分析が行われ、\[ヒープの表示\] ページにメモリ データが表示されます。  
   
  ![オブジェクト型リスト](../misc/media/dbg_mma_objecttypelist.png "DBG\_MMA\_ObjectTypeList")  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 #### オブジェクトの型テーブル  
  最上部のテーブルには、メモリ内に保持されているオブジェクトの型が一覧表示されます。  
@@ -118,7 +118,7 @@ Visual Studio マネージ メモリ アナライザーを使用して、.NET Fr
   
 -   **\[包括サイズ \(バイト\)\]** には、参照先オブジェクトのサイズも含まれます。  
   
- **\[オブジェクトの型\]** 列のインスタンス アイコン \(![&#91;オブジェクト型&#93; 列の &#91;インスタンス&#93; アイコン](../misc/media/dbg_mma_instancesicon.png "DBG\_MMA\_InstancesIcon")\) を選択すると、その型のインスタンスのリストを表示できます。  
+ **\[オブジェクトの型\]** 列のインスタンス アイコン \(![&#91;オブジェクト型&#93; 列の &#91;インスタンス&#93; アイコン](~/profiling/media/dbg_mma_instancesicon.png "DBG\_MMA\_InstancesIcon")\) を選択すると、その型のインスタンスのリストを表示できます。  
   
 #### インスタンス テーブル  
  ![インスタンス テーブル](../misc/media/dbg_mma_instancestable.png "DBG\_MMA\_InstancesTable")  
@@ -181,7 +181,7 @@ Visual Studio マネージ メモリ アナライザーを使用して、.NET Fr
   
  **\[ルートのパス\]** テーブルにも **\[参照数の相違\]** 列が追加されます。  
   
- ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+ ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
   
 ## 参照  
  [VS ALM TFS Blog: Using Visual Studio 2013 to Diagnose .NET Memory Issues in Production \(VS ALM TFS ブログ: Visual Studio 2013 を使用した、実稼働での .NET メモリ問題の診断\)](http://blogs.msdn.com/b/visualstudioalm/archive/2013/06/20/using-visual-studio-2013-to-diagnose-net-memory-issues-in-production.aspx)   

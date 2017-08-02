@@ -46,13 +46,13 @@ Visual Studio でシンボルが必要なとき、通常は混合モードのデ
 - **[シンボル設定ダイアログを開く]** を選択すると、**[オプション]** ダイアログが開き、**[デバッグ] > [シンボル]** タブが表示されます。
 - **[インタープリター用のシンボルをダウンロード]** を選択すると、この現在のドキュメント ページが開きます。この場合は、**[ツール] > [オプション]** を選択し、**[デバッグ] > [シンボル]** タブに移動して続行します。
 
-    ![混合モード デバッガーのシンボルのプロンプト](media/mixed-mode-debugging-symbols-required.png)
+    ![混合モード デバッガーのシンボルのプロンプト](~/python/media/mixed-mode-debugging-symbols-required.png)
 
 ## <a name="downloading-symbols"></a>シンボルをダウンロードしています
 
 - Python 3.5 以前: Python インストーラーでデバッグ シンボルを取得します。 **[カスタム インストール]** を選択し、**[次へ]** を選択します。**[詳細設定]** 画面で、**[Download debugging symbols]** (デバッグ シンボルのダウンロード) と **[Download debug binaries]** (デバッグ バイナリのダウンロード) を選択します。
 
-    ![デバッグ シンボルを含む Python 3.x インストーラー](media/mixed-mode-debugging-symbols-installer35.png)
+    ![デバッグ シンボルを含む Python 3.x インストーラー](~/python/media/mixed-mode-debugging-symbols-installer35.png)
 
     シンボル ファイル (`.pdb`) はルート インストール フォルダーに保存されます (個々のモジュールのシンボル ファイルも `DLLs` フォルダーにあります)。 そのため、シンボル ファイルは Visual Studio で自動的に検出されます。追加の手順は必要ありません。
 
@@ -71,7 +71,7 @@ Visual Studio でシンボルが必要なとき、通常は混合モードのデ
     
 1. ツールバーの [追加] ボタン (下図の線で囲まれたボタン) を選択し、ダウンロードしたシンボルを展開したフォルダー (下図のように、`c:\python34\Symbols` など、`python.pdb` がある場所) を入力し、**[OK]** を選択します。 
 
-    ![混合モードのデバッグでのシンボルのオプション](media/mixed-mode-debugging-symbols.png)
+    ![混合モードのデバッグでのシンボルのオプション](~/python/media/mixed-mode-debugging-symbols.png)
 
 1. Visual Studio のデバッグ セッション中に、Python インタープリターのソース ファイルの場所を入力するように求められることもあります。 ソース ファイルを ([python.org/downloads](https://www.python.org/downloads) などから) ダウンロードした場合は、その場所を設定することもできます。
 

@@ -257,7 +257,7 @@ ms.lasthandoff: 05/13/2017
   
      次の図は、ナビゲーション ウィンドウ ボタンが配置されたアプリケーションを示しています。  
   
-     ![ExpenseIt のサンプルのスクリーン ショット](../designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
+     ![ExpenseIt のサンプルのスクリーン ショット](~/designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
   
 6.  アプリケーションを閉じてデザイン モードに戻ります。  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 05/13/2017
   
 3.  アプリケーションをビルドして実行します。 次の図は、この手順によって XAML で作成されるコントロールの実行時の外観を示しています。  
   
-     ![ExpenseIt のサンプルのスクリーン ショット](../designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
+     ![ExpenseIt のサンプルのスクリーン ショット](~/designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
   
 4.  アプリケーションを閉じてデザイン モードに戻ります。  
   
@@ -480,7 +480,7 @@ ms.lasthandoff: 05/13/2017
   
 6.  この時点でアプリケーションをビルドして実行すると、次の図のようになります。  
   
-     ![ExpenseIt のサンプルのスクリーン ショット](../designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
+     ![ExpenseIt のサンプルのスクリーン ショット](~/designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
   
 #### <a name="to-add-code-to-the-button"></a>コードをボタンに追加するには  
   

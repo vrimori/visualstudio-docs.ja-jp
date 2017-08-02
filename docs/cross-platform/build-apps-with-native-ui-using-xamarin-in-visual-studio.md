@@ -38,7 +38,7 @@ ms.lasthandoff: 05/13/2017
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
 「[セットアップとインストール](../cross-platform/setup-and-install.md)」と「[Xamarin 環境を検証する](../cross-platform/verify-your-xamarin-environment.md)」の手順を完了しましたが、このチュートリアルでは、ネイティブ UI レイヤーを備えた基本的な Xamarin アプリ (下図) を作成する方法を示します。 ネイティブ UI を使用すると、共有コードはポータブル クラス ライブラリ (PCL) に存在し、個別のプラットフォーム プロジェクトに UI 定義が含まれます。  
   
- ![Android と Windows Phone 用 Xamarin アプリ](../cross-platform/media/cross-plat-xamarin-build-1.png "Cross-Plat Xamarin Build 1")  
+ ![Android と Windows Phone 用 Xamarin アプリ](~/cross-platform/media/cross-plat-xamarin-build-1.png "Cross-Plat Xamarin Build 1")  
   
  作成するには次の作業を行います。  
   
@@ -468,7 +468,7 @@ ms.lasthandoff: 05/13/2017
   
 13. ファイルを保存し、**[デザイン]** ビューに切り替えます。 次のような UI が表示されます。  
   
-     ![Android アプリ用 UI](../cross-platform/media/xamarin_androidui.png "Xamarin_AndroidUI")  
+     ![Android アプリ用 UI](~/cross-platform/media/xamarin_androidui.png "Xamarin_AndroidUI")  
   
 14. **MainActivity.cs** を開き、前の手順で削除した既定のボタンを参照している行を *OnCreate* メソッドから削除します。 完了したコードは次のようになります。  
   
@@ -597,13 +597,13 @@ ms.lasthandoff: 05/13/2017
   
  デザイン ビユーでは、UI は次のように表示されます。  
   
- ![Windows Phone アプリの UI](../cross-platform/media/xamarin_winphone_finalui.png "Xamarin_WinPhone_FinalUI")  
+ ![Windows Phone アプリの UI](~/cross-platform/media/xamarin_winphone_finalui.png "Xamarin_WinPhone_FinalUI")  
   
 ### <a name="consume-your-shared-code"></a>共有コードを使用する  
   
 1.  デザイナーで、 **[Get Weather]** ボタンをクリックします。  
   
-2.  **[プロパティ]** ウィンドウで、イベント ハンドラー ボタン (![Visual Studio イベント ハンドラー アイコン](../cross-platform/media/blend_vs_eventhandlers_icon.png "blend_VS_EventHandlers_icon")) を選択します。  
+2.  **[プロパティ]** ウィンドウで、イベント ハンドラー ボタン (![Visual Studio イベント ハンドラー アイコン](~/cross-platform/media/blend_vs_eventhandlers_icon.png "blend_VS_EventHandlers_icon")) を選択します。  
   
      このアイコンは **[プロパティ]** ウィンドウの上隅に表示されます。  
   

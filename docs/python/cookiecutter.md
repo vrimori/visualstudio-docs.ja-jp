@@ -44,7 +44,7 @@ Cookiecutter には、Python 3.3 以降 (32 または 64 ビット) または An
 
 インストールしたら、**[表示] > [Cookicutter Explorer (Cookiecutter エクスプローラー)]** を選択して Cookiecutter のウィンドウを開きます。
 
-![Cookiecutter のメイン ウィンドウ](media/cookiecutter-overview.png)
+![Cookiecutter のメイン ウィンドウ](~/python/media/cookiecutter-overview.png)
 
 ## <a name="cookiecutter-workflow"></a>Cookiecutter のワークフロー
 
@@ -76,7 +76,7 @@ Cookiecutter のホーム ページにはテンプレートの一覧が次のグ
 
 テンプレートがローカルにインストールされると、Cookiecutter のオプション ページが表示され、Cookiecutter のファイルを生成する場所やその他のオプションを指定できます。
 
-![Cookiecutter のオプション ページ](media/cookiecutter-template-options.png)
+![Cookiecutter のオプション ページ](~/python/media/cookiecutter-template-options.png)
 
 各 Cookiecutter テンプレートでは、独自のオプションのセットを定義し、各オプションの既定値 (各エントリ フィールドで推奨テキストとして表示される値) を指定します。 既定値はコード スニペットの場合もあります。これは主に、他のオプションを使用する動的な値である場合です。 
 
@@ -90,13 +90,13 @@ Cookiecutter のホーム ページにはテンプレートの一覧が次のグ
 
 ファイルが正常に作成されると、ファイルを**ソリューション エクスプローラー**で開くためのオプションが Cookiecutter に表示されます。
 
-![ソリューション エクスプローラーのコマンドが表示された Cookiecutter](media/cookiecutter-files-created.png)
+![ソリューション エクスプローラーのコマンドが表示された Cookiecutter](~/python/media/cookiecutter-files-created.png)
 
 ## <a name="cookiecutter-options"></a>Cookiecutter のオプション
 
 Cookiecutter のオプションは、**[ツール] > [オプション] > [Cookiecutter]** から表示できます。
 
-![Cookiecutter のオプション](media/cookiecutter-tools-options.png)
+![Cookiecutter のオプション](~/python/media/cookiecutter-tools-options.png)
 
 | オプション | 説明 |
 | --- | --- |

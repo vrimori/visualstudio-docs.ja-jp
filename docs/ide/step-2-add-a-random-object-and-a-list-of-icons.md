@@ -35,7 +35,7 @@ caps.handback.revision: 22
   
 3.  `List` オブジェクトを追加するときに、表示される **IntelliSense** ウィンドウに注目します。  次に示しているのは Visual C\# の例ですが、Visual Basic でリストを追加するときも同様のテキストが表示されます。  
   
-     ![Click イベントが表示された &#91;プロパティ&#93; ウィンドウ](../ide/media/express_listintellisense.png "Express\_ListIntellisense")  
+     ![Click イベントが表示された &#91;プロパティ&#93; ウィンドウ](~/ide/media/express_listintellisense.png "Express\_ListIntellisense")  
 IntelliSense ウィンドウ  
   
     > [!NOTE]

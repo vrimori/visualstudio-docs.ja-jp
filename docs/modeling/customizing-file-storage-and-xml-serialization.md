@@ -51,11 +51,11 @@ caps.handback.revision: 17
 ## <a name="the-default-serialization-scheme"></a>既定のシリアル化スキーム  
  このトピックの例を作成するには、次の DSL 定義が使用されました。  
   
- ![DSL 定義図と #45 です。ファミリ ツリー モデル](../modeling/media/familyt_person.png "FamilyT_Person")  
+ ![DSL 定義図と #45 です。ファミリ ツリー モデル](~/modeling/media/familyt_person.png "FamilyT_Person")  
   
  この DSL は、画面の外観を次のあるモデルの作成に使用されました。  
   
- ![ファミリ ツリー ダイアグラム、ツールボックス、およびエクスプローラー](../modeling/media/familyt_instance.png "FamilyT_Instance")  
+ ![ファミリ ツリー ダイアグラム、ツールボックス、およびエクスプローラー](~/modeling/media/familyt_instance.png "FamilyT_Instance")  
   
  このモデルが保存され、再び XML テキスト エディターで開きます。  
   

@@ -55,7 +55,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="map-dependencies-across-your-solutions"></a>ソリューション間の依存関係をマップする
 コード内の依存関係を理解するには、コード マップを作成して視覚化します。 このことは、ファイルとコード行全体を読むことなく、コードの相関を確認するのに役立ちます。  
   
- ![複数のソリューション間の依存関係を表示](../modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
+ ![複数のソリューション間の依存関係を表示](~/modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
   
  **ビデオ**:  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 02/22/2017
   
 2.  マップする必要のあるプロジェクト、アセンブリ参照、フォルダー、ファイル、型、またはメンバーをすべて選択します。  
   
-3.  **ソリューション エクスプ ローラー**ツールバーで、選択**コード マップに表示**![グラフから選択したノード](../modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton")します。 または、ショートカット メニューを開き、 **[コード マップに表示]**をクリックします。 クラス ビューまたはオブジェクト ブラウザーから新規または既存のコード マップに項目をドラッグすることもできます。  
+3.  **ソリューション エクスプ ローラー**ツールバーで、選択**コード マップに表示**![グラフから選択したノード](~/modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton")します。 または、ショートカット メニューを開き、 **[コード マップに表示]**をクリックします。 クラス ビューまたはオブジェクト ブラウザーから新規または既存のコード マップに項目をドラッグすることもできます。  
   
 4.  [特定の依存関係の表示](#SeeSpecificSource) で、コード マップを使用して、ソリューション内の特定の依存関係を表示する方法を理解します。  
   
@@ -135,23 +135,23 @@ ms.lasthandoff: 02/22/2017
   
 1.  **[アーキテクチャ]** メニューで、 **[ソリューションのコード マップを生成]**をクリックします。  
   
-     ![コード マップ生成コマンド](../modeling/media/codemapsarchitecturemenu.png "CodeMapsArchitectureMenu")  
+     ![コード マップ生成コマンド](~/modeling/media/codemapsarchitecturemenu.png "CodeMapsArchitectureMenu")  
   
      最上位レベル アセンブリとそれらのアセンブリ間の集約されたリンクを示すマップが作成されます。 集約リンクを広げると、表される依存関係が多くなります。  
   
 2.  コード マップ ツールバーの **[凡例]** ボタンを使用して、プロジェクトの種類のアイコン (テスト プロジェクト、Web プロジェクト、Phone プロジェクトなど)、コード項目 (クラス、メソッド、プロパティなど)、および関係の種類 (継承元、実装、呼び出しなど) のリストを表示または非表示にします。  
   
-     ![アセンブリの最上位レベルの依存関係グラフ](../modeling/media/dependencygraph_toplevelassemblies.png "DependencyGraph_TopLevelAssemblies")  
+     ![アセンブリの最上位レベルの依存関係グラフ](~/modeling/media/dependencygraph_toplevelassemblies.png "DependencyGraph_TopLevelAssemblies")  
   
      このソリューション例には、ソリューション フォルダー (**[テスト]** と **[コンポーネント]**)、テスト プロジェクト、Web プロジェクト、およびアセンブリが含まれています。 既定では、コンテインメイト リレーションシップはすべて、展開および折りたたみができる *グループ*として表示されます。 **[外部]** グループには、プラットフォームの依存関係など、ソリューションの外部のものがすべて含まれます。 外部アセンブリには、使用中の項目のみが表示されます。 既定では、視認性を高めるため、システムの基本型はマップに表示されません。  
   
 3.  マップをドリル ダウンするには、プロジェクトおよびアセンブリを表すグループを展開します。 **CTRL キーを押しながら A キー** を押してすべてのノードを選択し、ショートカット メニューから **[グループ]**、 **[展開]** の順に選択すると、すべてを展開できます。  
   
-     ![コード マップ内のすべてのグループを展開する](../modeling/media/codemapsexpandallgroups.png "CodeMapsExpandAllGroups")  
+     ![コード マップ内のすべてのグループを展開する](~/modeling/media/codemapsexpandallgroups.png "CodeMapsExpandAllGroups")  
   
 4.  ただし、これは大規模なソリューションには不向きな場合があります。 実際、複雑なソリューションでは、メモリ制限のためにすべてのグループを展開できない場合があります。 代わりに、個々のノードを展開して内部を表示します。 マウス ポインターをノード上に移動し、シェブロン (下矢印) が表示されたらクリックします。  
   
-     ![コード マップ内のノードを展開する](../modeling/media/dependencygraph_containment.png "DependencyGraph_Containment")  
+     ![コード マップ内のノードを展開する](~/modeling/media/dependencygraph_containment.png "DependencyGraph_Containment")  
   
      または、キーボードを使用して項目を選択し、プラス キー (**+**) を押します。 さらに深いレベルのコードを確認するには、名前空間、型、およびメンバーに対して同じ操作を行います。  
   
@@ -160,13 +160,13 @@ ms.lasthandoff: 02/22/2017
   
 5.  マップを簡略化し個々の部分に注目するには、コード マップ ツールバーで **[フィルター]** を選択し、必要なノードおよびリンクの種類だけを選択します。 たとえば、すべてのソリューション フォルダーとアセンブリのコンテナーを非表示にできます。  
   
-     ![コンテナーをフィルター処理で、マップを簡略化](../modeling/media/codemapsfilterfoldersassemblies.png "CodeMapsFilterFoldersAssemblies")  
+     ![コンテナーをフィルター処理で、マップを簡略化](~/modeling/media/codemapsfilterfoldersassemblies.png "CodeMapsFilterFoldersAssemblies")  
   
      個々のグループおよび項目をマップで非表示にしたりマップから削除したりして、マップを簡略化できます。この操作は、基のソリューション コードには影響を与えません。  
   
 6.  項目間のリレーションシップを表示するには、マップでそれらを選択します。 リンクの色は、 **[凡例]** ウィンドウの表示に対応しており、リレーションシップの種類を表しています。  
   
-     ![複数のソリューション間の依存関係を表示](../modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
+     ![複数のソリューション間の依存関係を表示](~/modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
   
      この例で、紫色のリンクは呼び出し、点線のリンクは参照、および薄青色のリンクはフィールド アクセスを表しています。 緑色のリンクは継承を表す場合もありますが、複数のリレーションシップ (または *カテゴリ* ) の種類を表す *集約リンク*の可能性もあります。  
   
@@ -175,25 +175,25 @@ ms.lasthandoff: 02/22/2017
   
 7.  項目またはリンクに関する詳細情報を確認するには、ポインターをその項目の上に移動してツールヒントを表示します。 これにより、コード要素またはリンクが表すカテゴリの詳細が表示されます。  
   
-     ![リレーションシップのカテゴリを表示する](../modeling/media/codemapsshowlinkcatgories.png "CodeMapsShowLinkCatgories")  
+     ![リレーションシップのカテゴリを表示する](~/modeling/media/codemapsshowlinkcatgories.png "CodeMapsShowLinkCatgories")  
   
 8.  集約リンクによって表される項目と依存関係を調べるには、最初にリンクを選択して、そのショートカット メニューを開きます。 **[寄与するリンクの表示]** または **[新しいコード マップ上の寄与するリンクの表示]**をクリックします。 これにより、リンクの両端のグループが展開され、リンクに関係する項目と依存関係のみが表示されます。  
   
 9. マップの特定の部分に注目するために、必要のない項目を継続的に削除することができます。 たとえば、クラス ビューとメンバー ビューを詳細表示するには、 **[フィルター]** ウィンドウですべての名前空間ノードをフィルター処理するだけです。  
   
-     ![クラスとメンバーのレベルまでドリル](../modeling/media/dependencygraph_expandedselectedgroups_2012.png "DependencyGraph_ExpandedSelectedGroups_2012")  
+     ![クラスとメンバーのレベルまでドリル](~/modeling/media/dependencygraph_expandedselectedgroups_2012.png "DependencyGraph_ExpandedSelectedGroups_2012")  
   
 10. 複雑なソリューション マップで必要な項目に注目するもう&1; つの方法は、既存のマップから、選択した項目を含む新しいマップを生成することです。 **Ctrl** キーを押しながら注目する項目を選択し、ショートカット メニューを開き、 **[選択項目から新しいグラフを作成]**をクリックします。  
   
-     ![新しいコード マップ上の選択された項目の表示](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
+     ![新しいコード マップ上の選択された項目の表示](~/ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
   
 11. 含んでいるコンテキストは、新しいマップに引き継がれます。 **[フィルター]** ウィンドウを使用して、ソリューション フォルダーや表示する必要のない他のすべてのコンテナーを非表示にします。  
   
-     ![ビューを簡略化するコンテナーをフィルター処理](../modeling/media/codemapsexpandnewgroups.png "CodeMapsExpandNewGroups")  
+     ![ビューを簡略化するコンテナーをフィルター処理](~/modeling/media/codemapsexpandnewgroups.png "CodeMapsExpandNewGroups")  
   
 12. グループを展開し、リレーションシップを表示するマップ内の項目を選択します。  
   
-     ![リレーションシップを表示する項目の選択](../modeling/media/codemapsviewnewrelationships.png "CodeMapsViewNewRelationships")  
+     ![リレーションシップを表示する項目の選択](~/modeling/media/codemapsviewnewrelationships.png "CodeMapsViewNewRelationships")  
   
  参照:  
   
@@ -215,19 +215,19 @@ ms.lasthandoff: 02/22/2017
 ##  <a name="a-nameseespecificsourcea-see-specific-dependencies"></a><a name="SeeSpecificSource"></a>特定の依存関係を参照してください。  
  たとえば、保留中の変更があるいくつかのファイルでコード レビューを行うとします。 これらの変更の依存関係を表示するため、これらのファイルからコード マップを作成できます。  
   
- ![コード マップ上の特定の依存関係を表示する](../modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
+ ![コード マップ上の特定の依存関係を表示する](~/modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
   
 ### <a name="see-specific-dependencies-in-your-solution"></a>ソリューション内の特定の依存関係の表示  
   
 1.  **ソリューション エクスプローラー**を開きます。 関心のあるプロジェクト、アセンブリ参照、フォルダー、ファイル、型、およびメンバーを選択します。 型またはメンバーの依存関係を持つ項目を探すには、 **ソリューション エクスプローラー**から型またはメンバーのショートカット メニューを開きます。 依存関係の種類を選択し、結果をクリックします。  
   
-2.  項目とそのメンバーをマップします。 **ソリューション エクスプ ローラー**ツールバーをクリックして**コード マップに表示**![グラフから選択したノード](../modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton")します。  
+2.  項目とそのメンバーをマップします。 **ソリューション エクスプ ローラー**ツールバーをクリックして**コード マップに表示**![グラフから選択したノード](~/modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton")します。  
   
-     ![マップする項目を選択](../modeling/media/codemapsselectinsolutionexplorer.png "CodeMapsSelectInSolutionExplorer")  
+     ![マップする項目を選択](~/modeling/media/codemapsselectinsolutionexplorer.png "CodeMapsSelectInSolutionExplorer")  
   
 3.  アセンブリ内の選択した項目がマップに表示されます。  
   
-     ![マップでグループとして表示されている項目を選択した](../modeling/media/codemapsshowitemsfromsolnexplorer.png "CodeMapsShowItemsFromSolnExplorer")  
+     ![マップでグループとして表示されている項目を選択した](~/modeling/media/codemapsshowitemsfromsolnexplorer.png "CodeMapsShowItemsFromSolnExplorer")  
   
      ソリューション エクスプローラー、クラス ビュー、またはオブジェクト ブラウザーから、項目を空のコード マップまたは既存のコード マップにドラッグすることもできます。 空のマップを作成するには、「 [空のコード マップを作成する](#GetStarted)」を参照してください。 項目の親階層を含めるには、 **Ctrl** キーを押したまま項目をドラッグするか、コード マップ ツールバーで **[親を含める]** ボタンを使用して既定のアクションを指定します。  
   
@@ -236,15 +236,15 @@ ms.lasthandoff: 02/22/2017
   
 4.  項目を確認するには、その項目を展開します。 マウス ポインターを項目の上に移動し、シェブロン (下矢印) アイコンが表示されたらクリックします。  
   
-     ![コード マップ内のノードを展開する](../modeling/media/dependencygraph_containment.png "DependencyGraph_Containment")  
+     ![コード マップ内のノードを展開する](~/modeling/media/dependencygraph_containment.png "DependencyGraph_Containment")  
   
      すべての項目を展開するには、 **CTRL キーを押しながら A キー**を押してそれらを選択し、マップのショートカット メニューを開いて、 **[グループ]**、 **[展開]**の順にクリックします。 ただし、すべてのグループを展開すると使用に適さないマップになったりメモリの問題が発生したりする場合、このオプションは使用できません。  
   
 5.  確認したい項目を、必要に応じてクラスやメンバーのレベルまで展開します。  
   
-     ![グループ クラスとメンバーのレベルを展開する](../modeling/media/codemapsexpandtoclassandmember.png "CodeMapsExpandToClassAndMember")  
+     ![グループ クラスとメンバーのレベルを展開する](~/modeling/media/codemapsexpandtoclassandmember.png "CodeMapsExpandToClassAndMember")  
   
-     マップ上のコードには表示されないメンバーを表示する をクリックして、**子の再フェッチ**アイコン![子の再フェッチ アイコン](../modeling/media/dependencygraph_deletednodesicon.png "DependencyGraph_DeletedNodesIcon")グループの左上隅にあります。  
+     マップ上のコードには表示されないメンバーを表示する をクリックして、**子の再フェッチ**アイコン![子の再フェッチ アイコン](~/modeling/media/dependencygraph_deletednodesicon.png "DependencyGraph_DeletedNodesIcon")グループの左上隅にあります。  
   
 6.  マップ上の項目に関連する項目をさらに表示するには、1 つを選択し、コード マップ ツールバーで **[関連表示]** を選択して、マップに追加する関連項目の種類を選択します。 あるいは、1 つまたは複数の項目を選択し、ショートカット メニューを開き、マップに追加する関連項目の種類の **[表示...]** オプションを選択します。 例:  
   
@@ -287,15 +287,15 @@ ms.lasthandoff: 02/22/2017
     |**型を含んでいる表示します。**|親の型を追加します。|  
     |**含んでいる型、Namespace、およびアセンブリを表示します。**|親コンテナーの階層を追加します。|  
   
-     ![このメンバーによって呼び出されるメソッドを表示する](../modeling/media/codemapsshowrelatedmethods.png "CodeMapsShowRelatedMethods")  
+     ![このメンバーによって呼び出されるメソッドを表示する](~/modeling/media/codemapsshowrelatedmethods.png "CodeMapsShowRelatedMethods")  
   
 7.  マップには、リレーションシップが表示されます。 この例では、 `Find` メソッドによって呼び出されるメソッド、およびそれらのメソッドの場所 (ソリューション内あるいは外部) です。  
   
-     ![コード マップ上の特定の依存関係を表示する](../modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
+     ![コード マップ上の特定の依存関係を表示する](~/modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
   
 8.  マップを簡略化し個々の部分に注目するには、コード マップ ツールバーで **[フィルター]** を選択し、必要なノードおよびリンクの種類だけを選択します。 たとえば、ソリューション フォルダー、アセンブリ、および名前空間の表示をオフにします。  
   
-     ![フィルター ペインの表示を簡略化を使用して](../modeling/media/almcodemapfilterpane.png "ALMCodeMapFilterPane")  
+     ![フィルター ペインの表示を簡略化を使用して](~/modeling/media/almcodemapfilterpane.png "ALMCodeMapFilterPane")  
   
 ##  <a name="a-nameseesourceheadera-see-dependencies-between-c-and-c-source-files-and-header-files"></a><a name="SeeSourceHeader"></a>C および C++ のソース ファイルとヘッダー ファイル間の依存関係を参照してください。  
  C++ プロジェクトのより完全なマップを作成する場合は、そのプロジェクトに対してブラウザー情報のコンパイラ オプション (**/FR**) を設定します。 設定されていない場合は、メッセージが表示され、このオプションを設定することが求められます。 **[OK]**を選択した場合、このオプションは現在のマップに対してのみ設定されます。 以後のすべてのマップについて、メッセージを非表示にするように選択できます。 このメッセージを非表示にしても、再び表示されるようにできます。 次のレジストリ キーを `0` に設定するか、削除します。  
@@ -306,11 +306,11 @@ ms.lasthandoff: 02/22/2017
   
 -   ソリューションのすべてのソース ファイルとヘッダー ファイル間の依存関係を表示するには、 **[アーキテクチャ]** メニューで、 **[インクルード ファイルのグラフを生成]**をクリックします。  
   
-     ![ネイティブ コードの依存関係グラフ](../modeling/media/dependencygraphgeneral_nativecode.png "DependencyGraphGeneral_NativeCode")  
+     ![ネイティブ コードの依存関係グラフ](~/modeling/media/dependencygraphgeneral_nativecode.png "DependencyGraphGeneral_NativeCode")  
   
 -   現在開いているファイルと関連するソース ファイルおよびヘッダー ファイルとの間の依存関係を表示するには、そのソース ファイルまたはヘッダー ファイルを開きます。 ファイル内の任意の場所でファイル ショートカット メニューを開きます。 **[インクルード ファイルのグラフを生成]**をクリックします。  
   
-     ![.H ファイルの第&1; レベルの依存関係グラフ](../modeling/media/dependencygraph_native_firstlevel.png "DependencyGraph_Native_FirstLevel")  
+     ![.H ファイルの第&1; レベルの依存関係グラフ](~/modeling/media/dependencygraph_native_firstlevel.png "DependencyGraph_Native_FirstLevel")  
   
 ###  <a name="a-nametroubleshootinga-troubleshoot-maps-for-c-and-c-code"></a><a name="Troubleshooting"></a>C および C++ コードのマップをトラブルシューティングします。  
  これらの項目は C および C++ コードではサポートされていません。  
@@ -345,7 +345,7 @@ ms.lasthandoff: 02/22/2017
   
 -   コード マップ ファイルを直接編集し、不要なノードとリンクを削除する。 マップを変更しても、基のコードには影響しません。 参照してください[DGML ファイルを編集してカスタマイズ コード マップを](../modeling/customize-code-maps-by-editing-the-dgml-files.md)します。  
   
- ![ビルドのスキップし、親を含めるボタン](../modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")  
+ ![ビルドのスキップし、親を含めるボタン](~/modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")  
   
  Visual Studio は 1 GB のメモリで実行できますが、Visual Studio でコード インデックスを作成してマップを生成する際の待ち時間が長くならないように、メモリを 2 GB 以上搭載したコンピューターを使用することをお勧めします。  
   
@@ -362,7 +362,7 @@ ms.lasthandoff: 02/22/2017
   
  マップのツールバーで、特定のプロジェクトの一部として、マップを保存する**共有**、**移動** \< *CodeMapName*>**に .dgml**、マップを保存するプロジェクトを選択します。  
   
- ![別のプロジェクトにマップを移動](../modeling/media/codemapsmovemapmenu.png "CodeMapsMoveMapMenu")  
+ ![別のプロジェクトにマップを移動](~/modeling/media/codemapsmovemapmenu.png "CodeMapsMoveMapMenu")  
   
  Visual Studio では、マップは .dgml ファイル形式で保存され、他の Visual Studio Enterprise および Visual Studio Professional ユーザーと共有できます。  
   

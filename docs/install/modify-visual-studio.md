@@ -52,18 +52,18 @@ ms.lasthandoff: 05/13/2017
 
      たとえば、Windows 10 Anniversary Update を実行しているコンピューター上では、**[スタート]** を選択し、**Visual Studio インストーラー**としてリスト表示される **V** の文字までスクロールします。  
 
-     ![Visual Studio インストーラー](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
+     ![Visual Studio インストーラー](~/install/media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
 
      >[!NOTE]
      一部のコンピューターでは、Visual Studio インストーラーが **Microsoft Visual Studio インストーラー**として **"M"** の項に表示される場合があります。
 
 2.  インストーラーをクリックまたはタップして起動し、**[変更]** を選択します。  
 
-     ![Visual Studio の起動または変更](media/vs2017-modify.PNG "Visual Studio 2017 の変更")  
+     ![Visual Studio の起動または変更](~/install/media/vs2017-modify.PNG "Visual Studio 2017 の変更")  
 
 3.  **[ワークロード]** 画面で、インストールまたはアンインストールするワークロードを選択または選択解除します。  
 
-    ![Visual Studio 2017 のセットアップ ダイアログ](media/vs2017-modify-workloads.PNG "Visual Studio 2017 でのワークロードの選択")
+    ![Visual Studio 2017 のセットアップ ダイアログ](~/install/media/vs2017-modify-workloads.PNG "Visual Studio 2017 でのワークロードの選択")
 
 4. もう一度 **[変更]** をクリックまたはタップします。  
 

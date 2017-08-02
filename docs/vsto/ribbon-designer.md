@@ -51,7 +51,7 @@ caps.handback.revision: 78
 > [!NOTE]  
 >  リボン デザイナーでは行うことのできないタスクがあります。  該当するタスクと、それらのタスクを実現する方法の詳細については、「[リボンの概要](../vsto/ribbon-overview.md)」を参照してください。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Use the Ribbon Designer to Customize the Ribbon in Outlook? \(操作方法: リボン デザイナーを使用して Outlook のリボンをカスタマイズする\)](http://go.microsoft.com/fwlink/?LinkID=130312)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Use the Ribbon Designer to Customize the Ribbon in Outlook? \(操作方法: リボン デザイナーを使用して Outlook のリボンをカスタマイズする\)](http://go.microsoft.com/fwlink/?LinkID=130312)」を参照してください。  
   
 ## プロジェクトへのリボン \(ビジュアル デザイナー\) 項目の追加  
  リボン デザイナーを使用するには、プロジェクトに新しい**リボン \(ビジュアル デザイナー\)** 項目を追加します。  詳細については、「[方法 : リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)」を参照してください。  
@@ -109,7 +109,7 @@ caps.handback.revision: 78
   
 -   **タブ コレクション エディター**を開き、**\[追加\]** をクリックします。  
   
-     **タブ コレクション エディター**を開くには、**\[プロパティ\]** ウィンドウで **\[タブ\]** プロパティを選択し、省略記号ボタン ![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.png "ASP.NET モバイル デザイナー楕円") をクリックします。  
+     **タブ コレクション エディター**を開くには、**\[プロパティ\]** ウィンドウで **\[タブ\]** プロパティを選択し、省略記号ボタン ![ASP.NET モバイル デザイナー楕円](~/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円") をクリックします。  
   
  タブを追加すると、グループを追加してコントロールを含めることができます。  
   

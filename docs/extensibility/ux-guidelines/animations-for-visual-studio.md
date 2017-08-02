@@ -328,7 +328,7 @@ UI 要素が 1 つのコンテキストから別のサイズを変更したと�
 #### <a name="x-y-position-change"></a>X と Y 位置の変更  
 このパターンでは、UI 要素は、X または Y の位置またはその両方を変更します。  
   
-![X と Y 位置変更アニメーション](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />X と Y 位置変更アニメーション  
+![X と Y 位置変更アニメーション](~/extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />X と Y 位置変更アニメーション  
   
 ##### <a name="correct-usage"></a>正しい使用法  
 UI 要素が 1 つのコンテキストから別の位置を変更したときに、アニメーションの遷移とします。  
@@ -351,7 +351,7 @@ UI 要素が 1 つのコンテキストから別の位置を変更したとき�
 #### <a name="rotate"></a>回転  
 このパターンで UI 要素を回転します。  
   
-![UI 要素の回転アニメーション](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />UI 要素の回転アニメーション  
+![UI 要素の回転アニメーション](~/extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />UI 要素の回転アニメーション  
   
 ##### <a name="correct-usage"></a>正しい使用法  
 不確定な回転の進行状況インジケーターに対してのみ。  

@@ -140,7 +140,7 @@ public partial class ParentsHaveChildren
   
  例は次のドメイン モデルに適用されます。 ParentsHaveChildren リレーションシップは Child および Parent という名前のロールを含みます。  
   
- ![DSL 定義図と #45 です。ファミリ ツリー モデル](../modeling/media/familyt_person.png "FamilyT_Person")  
+ ![DSL 定義図と #45 です。ファミリ ツリー モデル](~/modeling/media/familyt_person.png "FamilyT_Person")  
   
 ## <a name="validation-categories"></a>検証カテゴリ  
   <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> 検証メソッドを実行するときに指定する属性、します。  

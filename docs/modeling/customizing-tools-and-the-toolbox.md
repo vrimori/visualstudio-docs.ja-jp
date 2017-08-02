@@ -201,17 +201,17 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
  **入れ子になったコンポーネントから OutPort へ取り込む接続**  
   
- ![接続ビルダー](../modeling/media/connectionbuilder_3.png "ConnectionBuilder_3")  
+ ![接続ビルダー](~/modeling/media/connectionbuilder_3.png "ConnectionBuilder_3")  
   
  したがって、入れ子になったコンポーネントから OutPort への接続が可能であることを指定するのが適切です。 設定するこのような接続を指定する**カスタム受け入れを使用**上、 **InPort**ソース ロールと型、および**OutPort**ターゲット ロールとしての型、 **DSL 詳細**ウィンドウの次の図に示すように。  
   
  **DSL エクスプ ローラーにおけるリンク接続ディレクティブ**  
   
- ![接続ビルダー イメージ](../modeling/media/connectionbuilder_4a.png "ConnectionBuilder_4a")  
+ ![接続ビルダー イメージ](~/modeling/media/connectionbuilder_4a.png "ConnectionBuilder_4a")  
   
  **DSL 詳細ウィンドウにおけるリンク接続ディレクティブ**  
   
- ![](../modeling/media/connectionbuilder_4b.png "ConnectionBuilder_4b")  
+ ![](~/modeling/media/connectionbuilder_4b.png "ConnectionBuilder_4b")  
   
  次に、ConnectionBuilder クラスにメソッドを入力する必要があります。  
   

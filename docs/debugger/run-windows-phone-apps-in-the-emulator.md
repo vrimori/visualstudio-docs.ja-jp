@@ -24,7 +24,7 @@ manager: "ghogen"
 # エミュレーターにおける Windows Phone アプリの実行
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Windows Phone のみに適用されます](../debugger/media/phone_only_content.png "phone\_only\_content")  
+![Windows Phone のみに適用されます](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Windows Phone エミュレーターは、Windows Phone をシミュレートするデスクトップ アプリケーションです。このエミュレーターは、物理デバイスがなくても、コンピューター上に Windows Phone アプリのデバッグとテストが可能な仮想化環境を提供します。一般的なタッチと回転イベントのシミュレーションや、エミュレートしたい物理的な画面サイズと解像度の選択が可能です。位置、ネットワーク、通知、センサー、加速度計、およびオプションの SD カードなど、一般的に使用される多数の機能をテストすることもできます。  
   
@@ -78,7 +78,7 @@ manager: "ghogen"
   
 2.  **\[標準**\] ツールバーで、エミュレーター オプションの 1 つを選択します。  
   
-     ![Windows Phone エミュレータのイメージのリスト](../cross-platform/media/wp_emulator_list.png "WP\_Emulator\_list")  
+     ![Windows Phone エミュレータのイメージのリスト](~/debugger/media/wp_emulator_list.png "WP\_Emulator\_list")  
   
 3.  アプリを配置して実行してデバッグするには、\[**デバッグ**\] メニューで \[**デバッグの開始**\] をクリックするか、F5 キーを押します。  
   
@@ -132,9 +132,9 @@ manager: "ghogen"
   
 |ツールバー ボタン|構成オプション|  
 |---------------|-------------|  
-|![Windows Phone の &#91;エミュレータ&#93; ツールバーの入力オプション](../debugger/media/wp_emulator_.png "WP\_Emulator\_")|**シングル ポイント入力またはマルチ ポイント入力の構成**<br /><br /> マルチ ポイント入力を有効にしている場合には、画面にタッチせずに右クリックで 2 つのタッチ ポイントを移動することができます。それから、左クリックで両方のタッチ ポイントを同時に移動することができます。|  
-|![Windows Phone の &#91;エミュレータ&#93; ツールバーの向き](../debugger/media/wp_emulator_rotation.png "WP\_Emulator\_rotation")|**エミュレーターの方向の構成**<br /><br /> Windows Phone エミュレーターの向きを、縦、横 \- 左、横 \- 右のどれか 1 つに変更することができます。方向を変更する際にエミュレーターのサイズは変わりません。<br /><br /> 方向を変更するには、\[**左に回転**\] ボタンか \[**右に回転**\] ボタンをクリックします。|  
-|![Windows Phone の &#91;エミュレータ&#93; ツールバーのサイズ オプション](../debugger/media/wp_emulator_size.png "WP\_Emulator\_size")|**エミュレーターのサイズの構成**<br /><br /> ホスト コンピューター画面上のエミュレーターのサイズを変更することができます。エミュレーターのドット\/インチ \(DPI\) はズーム値とは関係なく、ホスト モニターの DPI に基づきます。<br /><br /> -   エミュレーターを画面を合わせるには、\[**画面に合わせる**\] ボタンをクリックします。<br />-   ズーム設定を変更するには、\[**ズーム**\] ボタンをクリックします。**\[ズーム\]** ダイアログ ボックスが開きます。\[**ズーム**\] ダイアログ ボックスで、ズーム値を 33 ～ 100 の範囲で入力します。|  
+|![Windows Phone の &#91;エミュレータ&#93; ツールバーの入力オプション](~/debugger/media/wp_emulator_.png "WP\_Emulator\_")|**シングル ポイント入力またはマルチ ポイント入力の構成**<br /><br /> マルチ ポイント入力を有効にしている場合には、画面にタッチせずに右クリックで 2 つのタッチ ポイントを移動することができます。それから、左クリックで両方のタッチ ポイントを同時に移動することができます。|  
+|![Windows Phone の &#91;エミュレータ&#93; ツールバーの向き](~/debugger/media/wp_emulator_rotation.png "WP\_Emulator\_rotation")|**エミュレーターの方向の構成**<br /><br /> Windows Phone エミュレーターの向きを、縦、横 \- 左、横 \- 右のどれか 1 つに変更することができます。方向を変更する際にエミュレーターのサイズは変わりません。<br /><br /> 方向を変更するには、\[**左に回転**\] ボタンか \[**右に回転**\] ボタンをクリックします。|  
+|![Windows Phone の &#91;エミュレータ&#93; ツールバーのサイズ オプション](~/debugger/media/wp_emulator_size.png "WP\_Emulator\_size")|**エミュレーターのサイズの構成**<br /><br /> ホスト コンピューター画面上のエミュレーターのサイズを変更することができます。エミュレーターのドット\/インチ \(DPI\) はズーム値とは関係なく、ホスト モニターの DPI に基づきます。<br /><br /> -   エミュレーターを画面を合わせるには、\[**画面に合わせる**\] ボタンをクリックします。<br />-   ズーム設定を変更するには、\[**ズーム**\] ボタンをクリックします。**\[ズーム\]** ダイアログ ボックスが開きます。\[**ズーム**\] ダイアログ ボックスで、ズーム値を 33 ～ 100 の範囲で入力します。|  
   
 ##  <a name="BKMK_buttons"></a> エミュレーターのシミュレートされたハードウェア ボタンを使用  
  エミュレーター画面の右側にあるシミュレートされたハードウェア ボタンを使用することで、スマート フォンのハードウェア ボタンの使用をシミュレートします。  
@@ -153,7 +153,7 @@ manager: "ghogen"
   
 3.  右側の画像は、\[**Volume Up**\] ボタンをタップして音量を大きくしたあとのエミュレーターの画面表示です。  
   
- ![Windows Phone エミュレータのボタン](../debugger/media/wp_emulator_buttons.png "WP\_Emulator\_buttons")  
+ ![Windows Phone エミュレータのボタン](~/debugger/media/wp_emulator_buttons.png "WP\_Emulator\_buttons")  
   
 ##  <a name="BKMK_tasks_kbd"></a> エミュレーターでコンピューターのキーボードを使用する  
  エミュレーターは、開発用コンピューターのハードウェア キーボードの Windows Phone キーボードへのマッピングをサポートしています。キーの動作は、Windows Phone デバイスと同じです。  
@@ -218,12 +218,12 @@ manager: "ghogen"
   
  常に、元のエミュレーターの画像が\[**チェックポイント**\] リストの最初の項目として表示されます。これは、変更したり削除したりできません。しかし、別のスナップショットを既定のエミュレーターの画像として選択することはできます。  
   
- ![Windows Phone エミュレータの &#91;チェックポイント&#93; タブ](../debugger/media/wp_emulator_checkpoints.png "WP\_Emulator\_checkpoints")  
+ ![Windows Phone エミュレータの &#91;チェックポイント&#93; タブ](~/debugger/media/wp_emulator_checkpoints.png "WP\_Emulator\_checkpoints")  
   
 ##  <a name="BKMK_tasks_shot"></a> エミュレーターのスクリーンショットのキャプチャ  
  その他のツール ウィンドウにあるスクリーンショット ツールを使用して、Windows Phone アプリのスクリーンショットを作成することができます。このツールは、実行中のエミュレーターの解像度に一致する PNG ファイルを作成します。  
   
- ![Windows Phone エミュレータのスクリーンショット](../debugger/media/wp_emulator_screenshots.png "WP\_Emulator\_screenshots")  
+ ![Windows Phone エミュレータのスクリーンショット](~/debugger/media/wp_emulator_screenshots.png "WP\_Emulator\_screenshots")  
   
 #### エミュレーターに組み込まれたスクリーンショット ツールを使用してアプリのスクリーンショットを作成するには  
   

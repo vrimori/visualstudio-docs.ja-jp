@@ -32,7 +32,7 @@ caps.handback.revision: 20
   
  次の概念的な描画は基本的な言語サービスのモデルを示します。  
   
- ![言語サービス モデル グラフィック](../../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
+ ![言語サービス モデル グラフィック](~/extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
 基本的な言語サービスのモデル  
   
  ドキュメント ウィンドウはエディターこの場合 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のコア エディター  *ドキュメント*  の  *ビューを*  ホストします。  ドキュメントのビューとテキスト バッファーがエディターによって所有されます。  これらのオブジェクトは *コード ウィンドウと*  呼ばれる特殊なドキュメント ウィンドウを使用 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を使用します。  コード ウィンドウはIDE によって作成および管理される <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> のオブジェクトに含まれています。  

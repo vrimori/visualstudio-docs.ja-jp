@@ -117,17 +117,17 @@ ms.lasthandoff: 05/13/2017
  *その他に知っておく必要があること*  
  **注**  
   
--   ![前提条件](../test/media/prereq.png "Prereq") Apple Safari Web ブラウザーはサポートされていません。  
+-   ![前提条件](~/test/media/prereq.png "Prereq") Apple Safari Web ブラウザーはサポートされていません。  
   
--   ![前提条件](../test/media/prereq.png "Prereq") Web ブラウザーを起動する操作は、コード化された UI テストの一部である必要があります。  
+-   ![前提条件](~/test/media/prereq.png "Prereq") Web ブラウザーを起動する操作は、コード化された UI テストの一部である必要があります。  
   
      既に Web ブラウザーが開かれていて、そこで手順を実行すると、Internet Explorer を使用していない場合は再生が失敗します。 そのため、コード化された UI テストの一部として Web ブラウザーの起動を含めることをお勧めします。  
   
--   ![前提条件](../test/media/prereq.png "Prereq") 最大化、最小化、復元など、ブラウザー固有の UI 操作の自動化はサポートされていません。  
+-   ![前提条件](~/test/media/prereq.png "Prereq") 最大化、最小化、復元など、ブラウザー固有の UI 操作の自動化はサポートされていません。  
   
  **ヒント**  
   
--   ![ヒント](../test/media/tip.png "Tip") コード化された UI のログにスクリーン ショットを含めるように、出力を構成できます。 そのためには、QTAgent32.exe.config ファイルの一部の構成設定を設定する必要があります。 既定では、このファイルは次の場所にインストールされます。  
+-   ![ヒント](~/test/media/tip.png "Tip") コード化された UI のログにスクリーン ショットを含めるように、出力を構成できます。 そのためには、QTAgent32.exe.config ファイルの一部の構成設定を設定する必要があります。 既定では、このファイルは次の場所にインストールされます。  
   
      **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**  
   

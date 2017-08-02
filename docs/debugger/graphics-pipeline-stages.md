@@ -124,7 +124,7 @@ manager: "ghogen"
   
  頂点シェーダー ステージの結果を表示するには、頂点シェーダーによって変換された後で、頂点シェーダー ステージ サムネイルを選択して、フルサイズのラスタライズされたメッシュのワイヤー フレームを表示します。  
   
- ![頂点シェーダー ステージの結果プレビュー](../debugger/media/gfx_diag_vertex_shader_preview.png "gfx\_diag\_vertex\_shader\_preview")  
+ ![頂点シェーダー ステージの結果プレビュー](~/debugger/graphics/media/gfx_diag_vertex_shader_preview.png "gfx\_diag\_vertex\_shader\_preview")  
   
 ## 参照  
  [チュートリアル: 頂点の網かけによるオブジェクトの不足](../debugger/walkthrough-missing-objects-due-to-vertex-shading.md)   

@@ -41,7 +41,7 @@ ms.lasthandoff: 02/22/2017
 
 ユーザーがこの影響を理解するために、低速の拡張機能のユーザーに通知する Visual Studio での新機能を追加します。 Visual Studio では、ソリューションの読み込みまたは起動のいずれかの速度が低下は、新しい拡張機能を検出すると、新しい「Visual Studio のパフォーマンスの管理」 ダイアログ ボックスを示す IDE で通知がユーザーに表示されます。 このダイアログ ボックスは、以前に検出された拡張機能を参照する [ヘルプ] メニューからも常にアクセスできます。
 
-![Visual Studio のパフォーマンスを管理します。](media/manage-performance.png)
+![Visual Studio のパフォーマンスを管理します。](~/extensibility/media/manage-performance.png)
 
 このドキュメントでは、拡張機能への影響を計算する方法と、それが分析される方法ローカルで拡張機能が拡張機能に影響を与えるパフォーマンスとして表示されるかどうかを記述することで拡張機能の開発者を支援を目的としています。
 
@@ -143,7 +143,7 @@ private void DoMoreWork()
 
 インストールされている拡張機能を使って Visual Studio 環境をセットアップすると、PerfView を開き、"を収集 メニューから収集する ダイアログを開く起動時のトレースを記録できます。
 
-![perfview 収集メニュー](media/perfview-collect-menu.png)
+![perfview 収集メニュー](~/extensibility/media/perfview-collect-menu.png)
 
 既定のオプションでは、呼び出し履歴の CPU 消費量が、ブロック時間もでは、以降も有効にしてください"スレッド Time"スタック。 設定の準備がいったん [コレクションの開始] をクリックし、記録が開始されると、Visual Studio を起動できます。
 
@@ -155,7 +155,7 @@ private void DoMoreWork()
 
 この例の目的で、主に重要である「にスタックのスレッド」ビュー「高度なグループ」で見つけることができます。 このビューには、CPU 時間とディスク IO または待機ハンドルのように、ブロック時の両方を含むメソッドによって、スレッドで費やされた時間の合計が表示されます。
 
- ![スレッドの時刻のスタック](media/perfview-thread-time-stacks.png)
+ ![スレッドの時刻のスタック](~/extensibility/media/perfview-thread-time-stacks.png)
 
  「にスタックのスレッド」ビューを開くときに、分析を開始する"devenv"プロセスを選択してください。
 
@@ -170,11 +170,11 @@ PerfView より詳細な分析のための独自のヘルプ] メニューの [�
 
 1. System.IO クラスを使用して IO: これらのフレームの包括的なコストはトレースに非常に高価ではないかもしれませんは、潜在的な原因である問題のファイル IO の速度はコンピューターごとに異なりますので。
 
-  ![システムの io フレーム](media/perfview-system-io-frames.png)
+  ![システムの io フレーム](~/extensibility/media/perfview-system-io-frames.png)
 
 2. その他の非同期操作を待機している呼び出しをブロックします。 包括時間はここでは、非同期操作の完了時にメイン スレッドがブロックされている時間を表します。
 
-  ![ブロッキング呼び出しフレーム](media/perfview-blocking-call-frames.png)
+  ![ブロッキング呼び出しフレーム](~/extensibility/media/perfview-blocking-call-frames.png)
 
 「画像の読み込みスタック」がある影響を判断する役に立つトレースに他のビューのいずれかです。 「にスタックのスレッド」ビューに適用されると、同じフィルターを適用し、自動読み込まれたパッケージによって実行されるコードがあるため読み込むすべてのアセンブリを検索できます。
 

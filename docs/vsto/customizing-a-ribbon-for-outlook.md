@@ -28,7 +28,7 @@ caps.handback.revision: 41
 # Outlook のリボンのカスタマイズ
   Microsoft Office Outlook でリボンをカスタマイズする場合、アプリケーションのどこにカスタム リボンを表示するかを検討する必要があります。  Outlook によりメイン アプリケーション ユーザー インターフェイス \(UI\) にリボンが表示されます。また、ユーザーが電子メール メッセージの作成など、特定のタスクを実行すると、ウィンドウが開いてリボンが表示されます。  これらのアプリケーション ウィンドウをインスペクターと呼びます。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: リボン デザイナーを使用して Outlook のリボンをカスタマイズする](http://go.microsoft.com/fwlink/?LinkID=130312)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: リボン デザイナーを使用して Outlook のリボンをカスタマイズする](http://go.microsoft.com/fwlink/?LinkID=130312)」を参照してください。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   

@@ -39,7 +39,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="create-dependency-diagrams-from-your-code"></a>コードから依存関係図を作成します。
 ソフトウェア システムのおおまかな論理アーキテクチャを視覚化するには、作成、*依存関係ダイアグラム*Visual Studio でします。 コードがこのような設計と一致していることを確認するには、依存関係図を使用してコードを検証します。 Visual c# .NET および Visual Basic .NET プロジェクトの依存関係図を作成できます。 この機能をサポートする Visual Studio のバージョンを参照してください[アーキテクチャとモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)  
   
- ![依存関係図を作成する](../modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")  
+ ![依存関係図を作成する](~/modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")  
   
  依存関係ダイアグラムでは、Visual Studio のソリューション項目と呼ばれる論理的、抽象的なグループに編成できます。*レイヤー*します。 レイヤーを使用して、これらの成果物が実行する主要タスク、またはシステムの主要コンポーネントを示すことができます。 各レイヤーには、より詳細なタスクを示す別のレイヤーを含めることができます。 意図的または既存を指定することも*の依存関係*層の間です。 矢印で表されるこれらの依存関係は、どのレイヤーが、他のレイヤーが表す機能を使用できるか、または現在使用しているかを示します。 コードのアーキテクチャ コントロールを保持するには、目的の依存関係を図で示し、図と照らし合わせてコードを検証します。  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/22/2017
 
 7. これは、現在のアプリケーション アーキテクチャを示します。 対象を決定するアーキテクチャと依存関係のダイアグラムを適宜変更します。
 
-![コード マップから生成された依存関係図](media/dependency-validation-01.png)
+![コード マップから生成された依存関係図](~/modeling/media/dependency-validation-01.png)
   
 ##  <a name="a-namecreatelayersa-create-layers-from-artifacts"></a><a name="CreateLayers"></a>成果物からレイヤーを作成します。  
  レイヤーは、プロジェクト、コード ファイル、名前空間、クラス、メソッドなど、Visual Studio ソリューションの項目から生成できます。 これにより、レイヤーと項目の間のリンクが自動的に作成され、レイヤー検証プロセスに含まれます。  

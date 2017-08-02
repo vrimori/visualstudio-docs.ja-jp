@@ -70,7 +70,7 @@ RTVS を使用するには、リモート サーバーとのすべての通信�
 
 この理由から、自己署名証明書を使用してサーバーに接続しようとすると、RTVS からは常に次の警告が発行されます。
 
-![自己署名証明書の警告ダイアログ](media/workspaces-remote-self-signed-certificate-warning.png)
+![自己署名証明書の警告ダイアログ](~/rtvs/media/workspaces-remote-self-signed-certificate-warning.png)
 
 自己署名証明書を発行するには:
 
@@ -93,7 +93,7 @@ RTVS を使用するには、リモート サーバーとのすべての通信�
 
 リモート コンピューターに証明書をインストールするには、コマンド プロンプトから `certlm.msc` (証明書マネージャー) を実行します。 **[個人]** フォルダーを右クリックし、**[すべてのタスク]、[インポート]** コマンドの順に選択します。
 
-![証明書のインポート コマンド](media/workspaces-remote-certificate-import.png)
+![証明書のインポート コマンド](~/rtvs/media/workspaces-remote-certificate-import.png)
 
 
 ### <a name="granting-permissions-to-read-the-ssl-certificates-private-key"></a>SSL 証明書の秘密キーを読み取るアクセス許可の付与
@@ -105,7 +105,7 @@ RTVS を使用するには、リモート サーバーとのすべての通信�
 1. 証明書を右クリックし、[すべてのタスク] の [秘密キーの管理] コマンドを選択します。
 1. 表示されるダイアログで **[追加]** を選択し、アカウント名として「`NETWORK SERVICE`」と入力します。
 
-    ![[秘密キーの管理] ダイアログ、NETWORK_SERVICE の追加](media/workspaces-remote-manage-private-key-dialog.png)
+    ![[秘密キーの管理] ダイアログ、NETWORK_SERVICE の追加](~/rtvs/media/workspaces-remote-manage-private-key-dialog.png)
 
 1. **[OK]** を 2 回選択してダイアログを閉じて変更を確定します。
 

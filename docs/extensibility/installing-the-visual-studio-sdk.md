@@ -44,7 +44,7 @@ Visual Studio SDK は、Visual Studio のセットアップで省略可能な機
 ## <a name="installing-the-visual-studio-sdk-from-a-solution"></a>ソリューションから Visual Studio SDK をインストールします。  
  最初に、VSSDK をインストールすることがなく、拡張機能プロジェクトとソリューションを開く場合は、ソリューション エクスプ ローラーの上の強調表示された情報バーに促されます。 次のようになります。  
   
- ![SolutionExplorerInstall](../extensibility/media/solutionexplorerinstall.png "SolutionExplorerInstall")  
+ ![SolutionExplorerInstall](~/extensibility/media/solutionexplorerinstall.png "SolutionExplorerInstall")  
   
 ## <a name="installing-the-visual-studio-sdk-from-the-command-line"></a>コマンドラインから Visual Studio SDK をインストールします。  
 任意の Visual Studio のワークロードやコンポーネントと同様に、コマンドラインから項目をインストールすることもできます。 参照してください[コマンド ライン パラメーターを使用して、Visual Studio のインストールを](../install/use-command-line-parameters-to-install-visual-studio.md)適切なコマンド ライン スイッチとワークロードまたはコンポーネントの識別子を確認する方法の詳細。

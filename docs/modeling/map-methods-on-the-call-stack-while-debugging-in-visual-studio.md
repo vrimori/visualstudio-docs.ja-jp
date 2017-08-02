@@ -75,7 +75,7 @@ ms.lasthandoff: 02/22/2017
   
 2.  後でアプリが中断モードになるか、関数にステップ イン、**コード マップ**します。 (Keyboard: **Ctrl** + **Shift** + **`**)  
   
-     ![呼び出し履歴のマッピングを開始するコード マップを選択して](../debugger/media/debuggermap_choosecodemap.png "DebuggerMap_ChooseCodeMap")  
+     ![呼び出し履歴のマッピングを開始するコード マップを選択して](~/debugger/media/debuggermap_choosecodemap.png "DebuggerMap_ChooseCodeMap")  
   
      現在の呼び出し履歴は新しいコード マップ上にオレンジ色で表示されます。  
   
@@ -136,11 +136,11 @@ ms.lasthandoff: 02/22/2017
   
      既定では、ユーザー自身のコードだけがマップに表示されます。 外部コードを表示するを有効にすること、**呼び出し履歴**ウィンドウ。  
   
-     ![呼び出し履歴 ウィンドウを使用して外部のコードを表示](../debugger/media/debuggermap_callstackmenu.png "DebuggerMap_CallStackMenu")  
+     ![呼び出し履歴 ウィンドウを使用して外部のコードを表示](~/debugger/media/debuggermap_callstackmenu.png "DebuggerMap_CallStackMenu")  
   
      オンまたはオフ**マイ コードのみを有効にする**デバッグ オプションを Visual Studio で。  
   
-     ![[オプション] ダイアログを使用して外部コードの表示](../debugger/media/debuggermap_debugoptions.png "DebuggerMap_DebugOptions")  
+     ![[オプション] ダイアログを使用して外部コードの表示](~/debugger/media/debuggermap_debugoptions.png "DebuggerMap_DebugOptions")  
   
 -   **コードが影響マップを変更しますか。**  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 02/22/2017
   
 -   **マップに新しい呼び出し履歴を自動的に追加されないを停止する方法は?**  
   
-     選択![ ボタン - コードで呼び出し履歴を表示するマップを自動的に](../debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")マップのツールバー。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl** + **shift キーを押し** + **`**します。  
+     選択![ ボタン - コードで呼び出し履歴を表示するマップを自動的に](~/debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")マップのツールバー。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl** + **shift キーを押し** + **`**します。  
   
      マップでは引き続き、デバッグ中にマップ上の既存の呼び出し履歴が強調表示されます。  
   

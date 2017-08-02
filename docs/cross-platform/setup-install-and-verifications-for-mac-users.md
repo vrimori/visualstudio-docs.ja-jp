@@ -65,13 +65,13 @@ ms.lasthandoff: 05/13/2017
 
 2.  インストーラー内で **[起動]** の_横にある_ **[その他の選択項目]** (横線 3 本のアイコン) ボタンをクリックし、**[変更]** を選択します。  
   
-     ![Visual Studio のインストールで [変更] オプションを選択する](../cross-platform/media/cross-plat-xamarin-setup-1a.png "クロスプラットフォームの Xamarin セットアップ 1")  
+     ![Visual Studio のインストールで [変更] オプションを選択する](~/cross-platform/media/cross-plat-xamarin-setup-1a.png "クロスプラットフォームの Xamarin セットアップ 1")  
   
 3.  次のチェック ボックスを選択します。
 
     1.  **[Mobile & Gaming (モバイルとゲーム)] > [.NET によるモバイル開発]**。 これにより、[共通のツールとソフトウェア開発キット] の下のさまざまな Android ツールも自動的に選択されます。 このオプションでは、既存の Xamarin インストールも更新されるはずです。  
   
-         ![[Gaming and Mobile Development (ゲームとモバイル開発)] の [モバイル開発] オプションを選択する](../cross-platform/media/cross-plat-xamarin-setup-2a.png "クロスプラットフォーム Xamarin セットアップ 2")  
+         ![[Gaming and Mobile Development (ゲームとモバイル開発)] の [モバイル開発] オプションを選択する](~/cross-platform/media/cross-plat-xamarin-setup-2a.png "クロスプラットフォーム Xamarin セットアップ 2")  
   
     2. (省略可能) **[Windows] > [ユニバーサル Windows プラットフォーム開発]**。 これには、ダウンロードに時間がかかるエミュレーター イメージをインストールするためのオプションが含まれています。いつでも Visual Studio インストーラーに戻って後で追加できます。  
 
@@ -130,8 +130,8 @@ ms.lasthandoff: 05/13/2017
 
     2.  次に示すように、Visual Studio のビルド ドロップダウン リストで **iPhoneSimulator** のターゲットを選びます。 シミュレーターが表示されていない場合は、Mac で Xcode を起動し、**[Xcode] > [ユーザー設定]** の順に選び、**[ダウンロード]** をクリックします。 **[コンポーネント]** の下に、ダウンロード可能なシミュレーターのバージョンが表示されます。 デバッグに関する詳しい説明については、Xamarin の「[デバッグ](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator)」ページ (xamarin.com) を参照してください。
 
-         ![iPhoneSimulator ビルド ターゲットを選択しています](../cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verify 5")
+         ![iPhoneSimulator ビルド ターゲットを選択しています](~/cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verify 5")
 
     3.  次に示すように、Visual Studio のデバッグ ドロップダウン リストで iPhone のターゲットを選び、F5 キーを押してデバッガーを開始します。 これによって、Mac 上のシミュレーターが起動し、Visual Studio でのデバッグ中にアプリを操作できるようになります。
 
-         ![iPhone デバッグ ターゲットを選択しています](../cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin Verify 6")
+         ![iPhone デバッグ ターゲットを選択しています](~/cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin Verify 6")

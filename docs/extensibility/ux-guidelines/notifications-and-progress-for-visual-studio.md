@@ -75,7 +75,7 @@ ms.lasthandoff: 02/22/2017
 ####  <a name="a-namebkmkmodalerrormessagedialogsa-modal-error-message-dialogs"></a><a name="BKMK_ModalErrorMessageDialogs"></a>モーダル エラー メッセージ ダイアログ ボックス  
  モーダル エラー メッセージ ダイアログ ボックスを使用して、ユーザーの確認またはアクションを必要とするエラー メッセージを表示できます。  
   
- ![モーダル エラー メッセージ](../../extensibility/ux-guidelines/media/0901-01_modalerrormessage.png "0901&01;_ModalErrorMessage")  
+ ![モーダル エラー メッセージ](~/extensibility/ux-guidelines/media/0901-01_modalerrormessage.png "0901&01;_ModalErrorMessage")  
   
  **データベースへの無効な接続文字列のユーザーに警告モーダル エラー メッセージ ダイアログ ボックス**  
   
@@ -88,14 +88,14 @@ ms.lasthandoff: 02/22/2017
   
  ステータス バーは IDE がデバッグ モードであるときなどのさまざまな IDE 状態変更を通信することで、視覚的な効果と関数型の値を追加も色分け表示します。  
   
- ![IDE ステータス バーの色の変更](../../extensibility/ux-guidelines/media/0901-02_idestatusbar.png "0901&02;_IDEStatusBar")  
+ ![IDE ステータス バーの色の変更](~/extensibility/ux-guidelines/media/0901-02_idestatusbar.png "0901&02;_IDEStatusBar")  
   
  **IDE ステータス バーの色**  
   
 ####  <a name="a-namebkmkembeddedinfobara-embedded-infobar"></a><a name="BKMK_EmbeddedInfobar"></a>埋め込まれた情報バー  
  状態または条件のユーザーに通知するツール ウィンドウまたはドキュメント ウィンドウの上部にある情報バーを使用できます。 コマンドは、ユーザーが簡単に対処する方法を得られるようにも提供できます。 情報バーは、標準のシェル コントロールです。 機能し、IDE で一貫性のない他のユーザーが表示されますが、独自に作成しないでください。 参照してください[情報の表示](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars)の実装の詳細と使用のガイダンスです。  
   
- ![情報バーが埋め込まれている](../../extensibility/ux-guidelines/media/0901-03_embeddedinfobar.png "0901&03;_EmbeddedInfobar")  
+ ![情報バーが埋め込まれている](~/extensibility/ux-guidelines/media/0901-03_embeddedinfobar.png "0901&03;_EmbeddedInfobar")  
   
  **デバッグ履歴モードで、IDE があり、エディターと標準的なデバッグ モードでは、同じ方法で応答があるユーザーに警告に、情報バーは、ドキュメント ウィンドウに埋め込まれます。**  
   
@@ -114,21 +114,21 @@ ms.lasthandoff: 02/22/2017
   
  通知ウィンドウは、現在の拡張ではありません。  
   
- ![Visual Studio の通知ウィンドウ](../../extensibility/ux-guidelines/media/0901-06_vsnotificationswindow.png "0901&06;_VSNotificationsWindow")  
+ ![Visual Studio の通知ウィンドウ](~/extensibility/ux-guidelines/media/0901-06_vsnotificationswindow.png "0901&06;_VSNotificationsWindow")  
   
  **Visual Studio の通知ツール ウィンドウ**  
   
 ####  <a name="a-namebkmkerrorlista-error-list"></a><a name="BKMK_ErrorList"></a>エラー一覧  
  エラーの一覧で通知を示すエラーや警告のコンパイル中に発生やビルド プロセス、およびその特定のコード エラーをコード内を移動することができます。  
   
- ![エラー一覧](../../extensibility/ux-guidelines/media/0901-08_errorlist.png "0901&08;_ErrorList")  
+ ![エラー一覧](~/extensibility/ux-guidelines/media/0901-08_errorlist.png "0901&08;_ErrorList")  
   
  **Visual Studio でのエラー一覧**  
   
 ####  <a name="a-namebkmkembeddedstatusbarsa-embedded-status-bars"></a><a name="BKMK_EmbeddedStatusBars"></a>埋め込まれたステータス バー  
  IDE のステータス バー動的であるため、アクティブなドキュメント ウィンドウと、ユーザーのコンテキストやシステムの応答の更新情報を設定、クライアント領域のコンテキストで情報の継続的な表示を維持または長期的な非同期プロセスの状態を与えるにくくなっています。 たとえば、IDE のステータス バーは複数の実行やすぐに対応可能な項目の選択のテストの実行結果の通知を適切なではありません。 ユーザーが、選択を行うか、プロセスを開始するドキュメントまたはツール ウィンドウのコンテキストでこのようなステータス情報を保持する重要です。  
   
- ![埋め込まれたステータス バー](../../extensibility/ux-guidelines/media/0901-09_embeddedstatusbar.png "0901&09;_EmbeddedStatusBar")  
+ ![埋め込まれたステータス バー](~/extensibility/ux-guidelines/media/0901-09_embeddedstatusbar.png "0901&09;_EmbeddedStatusBar")  
   
  **Visual Studio で埋め込みステータス バー**  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 02/22/2017
 ####  <a name="a-namebkmknotificationbubblesa-notification-bubbles"></a><a name="BKMK_NotificationBubbles"></a>通知バブル  
  通知バブルは、エディターとデザイナー内で情報または Windows 通知領域の一部として指定できます。 ユーザーは、重要でない通知向けの特典は、後で解決できる問題としてこれらのバブルを認識します。 バブルでは、大文字と小文字は重要な情報、ユーザーがすぐに解決する必要がありますが適していません。 次の Visual Studio で通知バブルを使用する場合、[通知バブルの Windows デスクトップ ガイダンス](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742472\(v=vs.85\).aspx)します。  
   
- ![通知バブル](../../extensibility/ux-guidelines/media/0901-07_notificationbubbles.png "0901&07;_NotificationBubbles")  
+ ![通知バブル](~/extensibility/ux-guidelines/media/0901-07_notificationbubbles.png "0901&07;_NotificationBubbles")  
   
  **Visual Studio の使用 Windows 通知領域に通知バブル**  
   
@@ -191,14 +191,14 @@ ms.lasthandoff: 02/22/2017
 #### <a name="progress-bars"></a>進行状況バー  
   
 ##### <a name="indeterminate"></a>不確定  
- ![不確定な進行状況バー](../../extensibility/ux-guidelines/media/0901-04_indeterminate.png "0901&04;_Indeterminate")  
+ ![不確定な進行状況バー](~/extensibility/ux-guidelines/media/0901-04_indeterminate.png "0901&04;_Indeterminate")  
   
  **不確定な進行状況バー**  
   
  プロセスを特定できないや操作の全体的な進行状況を「中間」にことです。 不確定な進行状況バーを使用して、操作を非制限時間を必要とする、または不明な数のオブジェクトにアクセスします。 何が起こっているかに付属するのに説明文を使用します。 タイムアウトを使用して、時間ベースの操作に境界を与えます。 不確定な進行状況バーは、アニメーションを使用して、進行状況が出されているは、その他の情報を提供しないことを示します。 精度だけでの考えられる不足にのみ基づいて不確定な進行状況バーを選択しないでください。  
   
 ##### <a name="determinate"></a>不確定であります。  
- ![確定した進行状況バー](../../extensibility/ux-guidelines/media/0901-05_determinate.png "0901&05;_Determinate")  
+ ![確定した進行状況バー](~/extensibility/ux-guidelines/media/0901-05_determinate.png "0901&05;_Determinate")  
   
  **確定した進行状況バー**  
   
@@ -217,12 +217,12 @@ ms.lasthandoff: 02/22/2017
 #### <a name="other-progress-indicators"></a>その他の進行状況インジケーター  
   
 ##### <a name="ants-animated-horizontal-dots"></a>Ants (水平方向のドットをアニメーション化された)  
- ![進行状況 ant](../../extensibility/ux-guidelines/media/0903-01_ants.png "0903&01;_Ants")  
+ ![進行状況 ant](~/extensibility/ux-guidelines/media/0903-01_ants.png "0903&01;_Ants")  
   
  「アリ、」水平方向のアニメーションのドットは不確定なラウンドト リップ サーバー プロセスの視覚的な参照を提供します。  
   
 ##### <a name="spinner-progress-ring"></a>スピン ボックス (進行状況リング)  
- ![進行状況スピナー](../../extensibility/ux-guidelines/media/0903-02_spinner.png "0903&02;_Spinner")  
+ ![進行状況スピナー](~/extensibility/ux-guidelines/media/0903-02_spinner.png "0903&02;_Spinner")  
   
  スピン ボックス (別名「の進行状況リング」) は、コンテキストの UI に関連して、主に使用される、不確定な進行状況インジケーターです。 テキスト カテゴリ ヘッダー、メッセージ、またはコントロールなどの関連するコンテンツの近くに、スピン ボックスを表示します。  
   
@@ -234,69 +234,69 @@ ms.lasthandoff: 02/22/2017
 ##### <a name="status-bar"></a>ステータス バー  
  ステータス バーには、ユーザーの作業を中断することがなく、メッセージと有用な情報をユーザーに表示するための場所に、アプリケーションが与えられます。 進行状況の状態は、通常、ウィンドウの下部に表示される、進行状況バー インジケーターと組み合わせて、進行状況の測定に関するメッセージを含むツール ヒントのウィンドウをなります。  
   
- ![進行状況バー付きのステータス バー](../../extensibility/ux-guidelines/media/0903-03_statusbarprogressbar.png "0903&03;_StatusBarProgressBar")  
+ ![進行状況バー付きのステータス バー](~/extensibility/ux-guidelines/media/0903-03_statusbarprogressbar.png "0903&03;_StatusBarProgressBar")  
   
  **進行状況バー付きのステータス バー**  
   
- ![メッセージング付きのステータス バー](../../extensibility/ux-guidelines/media/0903-04_statusbarmessage.png "0903&04;_StatusBarMessage")  
+ ![メッセージング付きのステータス バー](~/extensibility/ux-guidelines/media/0903-04_statusbarmessage.png "0903&04;_StatusBarMessage")  
   
  **説明テキスト付きのステータス バー**  
   
 ##### <a name="infobar"></a>情報バー  
  同様、ステータス バーにある情報バーに提供します。 コンテキストの通知やメッセージングこれ不確定な進行状況インジケーターなど、進行状況バーまたはスピン ボタンとも組み合わせることができます。 情報バーは細かいレベルの進行状況または確定した進行状況を示す値を提供しません。 参照してください[情報の表示](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars)します。  
   
- ![進行状況バーとメッセージング付きの情報バー](../../extensibility/ux-guidelines/media/0903-05_infobar.png "0903&05;_InfoBar")  
+ ![進行状況バーとメッセージング付きの情報バー](~/extensibility/ux-guidelines/media/0903-05_infobar.png "0903&05;_InfoBar")  
   
  **進行状況バーと説明テキストを含むページ**  
   
- ![ウィンドウ内の情報バー](../../extensibility/ux-guidelines/media/0903-06_infobarinwindow.png "0903&06;_InfoBarInWindow")  
+ ![ウィンドウ内の情報バー](~/extensibility/ux-guidelines/media/0903-06_infobarinwindow.png "0903&06;_InfoBarInWindow")  
   
  **コード分析 ウィンドウ内の情報バー**  
   
 ##### <a name="inline"></a>インライン  
  ローダーの種類の進行状況のいずれかでは、インラインの進行状況を示す値を表現できます。 進行状況インジケーターは、メッセージングと組み合わせて使用通常が、これは必須ではありません。  
   
- ![インラインの進行状況スピナー](../../extensibility/ux-guidelines/media/0903-07_inlinespinner.png "0903&07;_InlineSpinner")  
+ ![インラインの進行状況スピナー](~/extensibility/ux-guidelines/media/0903-07_inlinespinner.png "0903&07;_InlineSpinner")  
   
  **スピン ボタンの説明テキストと組み合わせる**  
   
- ![インラインの積み上げ進行状況バー](../../extensibility/ux-guidelines/media/0903-08_inlinestackedprogress.png "0903&08;_InlineStackedProgress")  
+ ![インラインの積み上げ進行状況バー](~/extensibility/ux-guidelines/media/0903-08_inlinestackedprogress.png "0903&08;_InlineStackedProgress")  
   
  **確定した積み上げ進行状況バー**  
   
- ![インラインの進行状況メッセージング](../../extensibility/ux-guidelines/media/0903-09_inlinetext.png "0903&09;_InlineText")  
+ ![インラインの進行状況メッセージング](~/extensibility/ux-guidelines/media/0903-09_inlinetext.png "0903&09;_InlineText")  
   
  **サーバー エクスプ ローラーのインライン テキスト: を更新する.**  
   
 ##### <a name="tool-windows"></a>ツール ウィンドウ  
  グローバルで進行状況を示す値は、ツールバーのすぐ下に配置されている不確定な進行状況バーで表されます。  
   
- ![グローバルで不確定な進行状況バー](../../extensibility/ux-guidelines/media/0903-23_globalindeterminate.png "0903&23;_GlobalIndeterminate")  
+ ![グローバルで不確定な進行状況バー](~/extensibility/ux-guidelines/media/0903-23_globalindeterminate.png "0903&23;_GlobalIndeterminate")  
   
  **チーム エクスプ ローラーのグローバルで不確定な進行状況バー**  
   
 ##### <a name="dialogs"></a>ダイアログ  
  ダイアログ ボックスには、進行状況ローダー型のいずれかを含めることができます。 進行状況インジケーターでくメッセージングとペアになってだけでなく表すを細分化されたおよびサブ プロセスに進行状況を示す値の複数のレベルと組み合わせます。  
   
- ![複数の種類の進行状況インジケーターを含むダイアログ](../../extensibility/ux-guidelines/media/0903-11_dialog.png "0903&11;_Dialog")  
+ ![複数の種類の進行状況インジケーターを含むダイアログ](~/extensibility/ux-guidelines/media/0903-11_dialog.png "0903&11;_Dialog")  
   
  **同時実行プロセスと、複数の種類の進行状況インジケーターの visual Studio ダイアログ**  
   
- ![進行状況ローダーとメッセージング付きのダイアログ](../../extensibility/ux-guidelines/media/0903-12_dialog2.png "0903&12;_Dialog2")  
+ ![進行状況ローダーとメッセージング付きのダイアログ](~/extensibility/ux-guidelines/media/0903-12_dialog2.png "0903&12;_Dialog2")  
   
  **進行状況ローダーとメッセージング インライン コマンドの実行を含む visual Studio のダイアログ**  
   
 ##### <a name="document-well"></a>適切に文書化します。  
  でも、ドキュメントは、コントロールと組み合わせて複数の種類の進行状況ローダーを表示できます。  
   
- ![進行状況もドキュメントのメッセージング](../../extensibility/ux-guidelines/media/0903-13_documentwell.png "0903&13;_DocumentWell")  
+ ![進行状況もドキュメントのメッセージング](~/extensibility/ux-guidelines/media/0903-13_documentwell.png "0903&13;_DocumentWell")  
   
  **ツールバーの下の不確定な進行状況バー**  
   
 ##### <a name="output-window"></a>[出力] ウィンドウ  
  [出力] ウィンドウでは、プロセスの進行とインライン テキスト メッセージングを使用して継続的な処理の進行状況の処理に適しています。 出力ウィンドウの進行状況レポートとステータス バーを使用する必要があります。  
   
- ![[出力] ウィンドウでのメッセージングの進行状況](../../extensibility/ux-guidelines/media/0903-14_outputwindow.png "0903&14;_OutputWindow")  
+ ![[出力] ウィンドウでのメッセージングの進行状況](~/extensibility/ux-guidelines/media/0903-14_outputwindow.png "0903&14;_OutputWindow")  
   
  **継続的なプロセスの状態と出力ウィンドウとメッセージを待機**  
   
@@ -305,7 +305,7 @@ ms.lasthandoff: 02/22/2017
 ### <a name="overview"></a>概要  
  情報の表示が注目を集めるのポイントに近いインジケーターをユーザーに付与し、視覚的な外観と操作の一貫性を確保する、共有の情報バー コントロールを使用します。  
   
- ![情報バー](../../extensibility/ux-guidelines/media/0904-01_infobar.png "0904&01;_Infobar")  
+ ![情報バー](~/extensibility/ux-guidelines/media/0904-01_infobar.png "0904&01;_Infobar")  
   
  **Visual Studio で情報の表示**  
   
@@ -377,7 +377,7 @@ public InfoBarModel(string text, IEnumerable<IVsInfoBarActionItem> actionItems, 
   
  次に、ハイパーリンク、動作設定ボタン、アイコンとテキストが、InfoBarModel を作成する例を示します。  
   
- ![ハイパーリンクを含むページ](../../extensibility/ux-guidelines/media/0904-02_infobarhyperlink.png "0904&02;_InfobarHyperlink")  
+ ![ハイパーリンクを含むページ](~/extensibility/ux-guidelines/media/0904-02_infobarhyperlink.png "0904&02;_InfobarHyperlink")  
   
 ```  
 var infoBar = new InfoBarModel(  
@@ -495,31 +495,31 @@ public interface IVsInfoBarUIEvents
 ### <a name="field-validation"></a>フィールドの検証  
  フォームとフィールドの検証は、3 つのコンポーネントで構成されています: コントロール、アイコン、およびツールヒント。 いくつかの種類のコントロールは、これを使用すること、テキスト ボックスを例として使用されます。  
   
- ![検証 (空白) をフィールド](../../extensibility/ux-guidelines/media/0905-01_fieldvalidation.png "0905&01;_FieldValidation")  
+ ![検証 (空白) をフィールド](~/extensibility/ux-guidelines/media/0905-01_fieldvalidation.png "0905&01;_FieldValidation")  
   
  フィールドが必要な場合があります透かしテキストを示す**\<必要 >**フィールド背景は、光と黄色 (VSColor: `Environment.ControlEditRequiredBackground`) し、フォア グラウンドがグレー表示にする必要があります (VSColor: `Environment.ControlEditRequiredHintText`)。  
   
- ![「必須」のラベルを持つ検証をフィールド](../../extensibility/ux-guidelines/media/0905-02_fieldvalidationrequired.png "0905&02;_FieldValidationRequired")  
+ ![「必須」のラベルを持つ検証をフィールド](~/extensibility/ux-guidelines/media/0905-02_fieldvalidationrequired.png "0905&02;_FieldValidationRequired")  
   
  プログラムでは、コントロールのフォントがの状態を判断する*に入力された無効なコンテンツ*[別のコントロールにフォーカスを移動するときまたはユーザーが [OK] のコミット] ボタンのクリックした場合またはユーザーが文書またはフォームを保存するとします。  
   
  無効なコンテンツの状態が確認された場合、コントロールの内側、またはその横にアイコンが表示されます。 アイコンまたはコントロールのいずれかのホバー時のエラーを説明するツールヒントが表示されます。 さらに、無効な状態を作成しているコントロールの周囲に 1 ピクセルの境界線を表示します。  
   
- ![検証のレイアウトの仕様をフィールド](../../extensibility/ux-guidelines/media/0905-03_layoutspecs.png "0905&03;_LayoutSpecs")  
+ ![検証のレイアウトの仕様をフィールド](~/extensibility/ux-guidelines/media/0905-03_layoutspecs.png "0905&03;_LayoutSpecs")  
   
  **フィールドの検証のレイアウトの仕様**  
   
 #### <a name="acceptable-variations-for-icon-location"></a>アイコンの場所で使用可能なバリエーション  
  検証エラーを把握できるようにユーザーが必要な数多くの一意なケースもあります。 コントロールの種類と、UI の構成では、考慮すると、状況に合わせて適切なアイコンの配置を選択します。  
   
- ![アイコンの場所の場所の適切な](../../extensibility/ux-guidelines/media/0905-04_iconlocation.png "0905&04;_IconLocation")  
+ ![アイコンの場所の場所の適切な](~/extensibility/ux-guidelines/media/0905-04_iconlocation.png "0905&04;_IconLocation")  
   
  **許容可能なバリエーションのフィールドの検証 アイコンの場所**  
   
 #### <a name="validation-requiring-a-round-trip-to-a-server-or-network-connection"></a>サーバーまたはネットワーク接続へのラウンド トリップを必要とする検証  
  場合によっては、サーバーへのラウンド トリップは、コンテンツを検証するために必要なし、を検証、ユーザーの進行状況とエラーの状態を表示することがあります。 次の図には、このケース テーブルと推奨される UI の例を示します。  
   
- ![サーバーへのラウンド トリップに関連する検証](../../extensibility/ux-guidelines/media/0905-05_roundtrip.png "0905&05;_RoundTrip")  
+ ![サーバーへのラウンド トリップに関連する検証](~/extensibility/ux-guidelines/media/0905-05_roundtrip.png "0905&05;_RoundTrip")  
   
  **サーバーへのラウンド トリップに関連する検証**  
   
@@ -528,13 +528,13 @@ public interface IVsInfoBarUIEvents
 #### <a name="in-place-warning-text"></a>インプレース警告テキスト  
  エラーの状態で、コントロールの近くに、エラー メッセージを配置に使用できる空きスペースがある場合は、これは、単独でツールヒントを使用することをお勧めです。  
   
- ![インプレース警告](../../extensibility/ux-guidelines/media/0905-06_inplacewarning.png "0905&06;_InPlaceWarning")  
+ ![インプレース警告](~/extensibility/ux-guidelines/media/0905-06_inplacewarning.png "0905&06;_InPlaceWarning")  
   
  **インプレース警告テキスト**  
   
 #### <a name="watermarks"></a>透かし  
  あります、コントロール全体またはウィンドウがエラー状態です。 このような状況では、エラーを示すウォーターマークを使用します。  
   
- ![透かし](../../extensibility/ux-guidelines/media/0905-07_watermark.png "0905&07;_Watermark")  
+ ![透かし](~/extensibility/ux-guidelines/media/0905-07_watermark.png "0905&07;_Watermark")  
   
  **透かしのフィールドの検証**

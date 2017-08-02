@@ -40,11 +40,11 @@ Visual Studio を使用して Access データベース \(.mdf ファイルま�
   
 2.  **\[表示\]** メニューで、**\[その他のウィンドウ\]** \> **\[データ ソース\]** をクリックします。  
   
-     ![&#91;表示&#93;、&#91;その他のウィンドウ&#93;、&#91;データ ソース&#93;](../data-tools/media/viewdatasources.png "ViewDataSources")  
+     ![&#91;表示&#93;、&#91;その他のウィンドウ&#93;、&#91;データ ソース&#93;](~/data-tools/media/viewdatasources.png "ViewDataSources")  
   
 3.  **\[データ ソース\]** ウィンドウで、**\[新しいデータ ソースの追加\]** をクリックします。  
   
-     ![&#91;新しいデータ ソースの追加&#93;](../data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
+     ![&#91;新しいデータ ソースの追加&#93;](~/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
   
 4.  **\[データソースの種類を選択\]** ページで **\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
   
@@ -87,11 +87,11 @@ Visual Studio を使用して Access データベース \(.mdf ファイルま�
   
 2.  **\[表示\]** メニューで、**\[その他のウィンドウ\]** \> **\[データ ソース\]** をクリックします。  
   
-     ![&#91;表示&#93;、&#91;その他のウィンドウ&#93;、&#91;データ ソース&#93;](../data-tools/media/viewdatasources.png "ViewDataSources")  
+     ![&#91;表示&#93;、&#91;その他のウィンドウ&#93;、&#91;データ ソース&#93;](~/data-tools/media/viewdatasources.png "ViewDataSources")  
   
 3.  **\[データ ソース\]** ウィンドウで、**\[新しいデータ ソースの追加\]** をクリックします。  
   
-     ![&#91;新しいデータ ソースの追加&#93;](../data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
+     ![&#91;新しいデータ ソースの追加&#93;](~/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
   
 4.  **\[データソースの種類を選択\]** ページで **\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
   

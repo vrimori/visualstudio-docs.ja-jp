@@ -42,9 +42,9 @@ Windows ストア アプリ用の Visual Studio シミュレーターは、Windo
 ##  <a name="BKMK_Choose_an_interaction_mode"></a> 対話モードを選択する  
  次の対話モードを選択できます。  
   
--   ![マウス モード ボタン](../debugger/media/simulator_mousemodebtn.png "SIMULATOR\_MouseModeBtn") マウス モード: 対話モードをマウス ジェスチャに設定します。 マウス ジェスチャには、クリック、ダブルクリック、およびドラッグがあります。  
+-   ![マウス モード ボタン](~/debugger/media/simulator_mousemodebtn.png "SIMULATOR\_MouseModeBtn") マウス モード: 対話モードをマウス ジェスチャに設定します。 マウス ジェスチャには、クリック、ダブルクリック、およびドラッグがあります。  
   
--   ![タッチ エミュレーションを開始ボタン](../debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR\_StartTouchEmulationBtn") タッチ エミュレーションを開始: 対話モードを 1 本の指によるタッチ ジェスチャに設定します。 1 本指のイベントには、タップ、ドラッグ、およびスワイプがあります。  
+-   ![タッチ エミュレーションを開始ボタン](~/debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR\_StartTouchEmulationBtn") タッチ エミュレーションを開始: 対話モードを 1 本の指によるタッチ ジェスチャに設定します。 1 本指のイベントには、タップ、ドラッグ、およびスワイプがあります。  
   
      ![Simulator one finger target](../debugger/media/simulator_onefinger.png "SIMULATOR\_OneFinger") シングル ターゲット アイコンは、シミュレーター内のイベントの位置を示します。 ポインターを配置するには、マウスを使用します。  
   
@@ -53,7 +53,7 @@ Windows ストア アプリ用の Visual Studio シミュレーターは、Windo
 ## ピンチとズーム  
  対話モードを、2 本の指によるピンチ ジェスチャとズーム ジェスチャに設定します。  
   
--   ![Siimulator two finger target](../debugger/media/simulator_twofinger.png "SIMULATOR\_TwoFinger")  
+-   ![Siimulator two finger target](~/debugger/media/simulator_twofinger.png "SIMULATOR\_TwoFinger")  
   
      ダブル ターゲット アイコンは、デバイス画面上の 2 本の指の位置を示します。  
   
@@ -108,7 +108,7 @@ Windows ストア アプリ用の Visual Studio シミュレーターは、Windo
   
 -   スクリーンショットの配置場所を設定するには、**\[スクリーンショットの設定\]** ボタンをクリックし、ショートカット メニューから場所を選択します。  
   
-     ![スクリーンショットの設定のコンテキスト メニュー](../debugger/media/simulator_screenshotsettingscntxmnu.png "SIMULATOR\_ScreenShotSettingsCntxMnu")  
+     ![スクリーンショットの設定のコンテキスト メニュー](~/debugger/media/simulator_screenshotsettingscntxmnu.png "SIMULATOR\_ScreenShotSettingsCntxMnu")  
   
 ##  <a name="BKMK_Simulate_network_connection_properties"></a> ネットワーク接続のプロパティをシミュレートする  
  アプリケーションのユーザーがネットワーク接続コストやデータ プランの状態の変化を認識し、アプリケーションがその情報を使用して、ローミングや指定されたデータ転送の制限の超過による追加コストの発生を避けることにより、アプリケーションのユーザーが従量制課金接続のコストを管理できるようにします。[Windows.Networking.Connectivity](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.aspx) API を使用すると、[NetworkStatusChanged](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) および署名を行うイベント [TriggerType](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.systemtrigger.triggertype.aspx) に応答できます。 「[従量制課金接続のコスト制約を管理する方法 \(HTML\)](http://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)」をご覧ください。  

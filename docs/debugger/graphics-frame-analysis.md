@@ -98,7 +98,7 @@ Visual Studio Graphics Analyzer のグラフィックス フレーム分析を�
 #### 統計的な有意性  
  最も高い関連性を持つレンダリング バリエーションを目立たせるために、フレーム分析は、各レンダリング バリアントの統計的な有意性を決定し、重要なものを太字で示します。  パフォーマンスが向上しているものは緑で、パフォーマンスが低下しているものは赤で示されます。  統計的に重要な意味を持たない結果は、通常の書体で示されます。  
   
- ![描画呼び出しバリアントの統計的関係](../debugger/media/pix_frame_analysis_summary_stats.png "pix\_frame\_analysis\_summary\_stats")  
+ ![描画呼び出しバリアントの統計的関係](~/debugger/graphics/media/pix_frame_analysis_summary_stats.png "pix\_frame\_analysis\_summary\_stats")  
   
  統計的な関連性を決定するために、フレーム分析は [Student's t\-test](http://www.wikipedia.org/wiki/Student%27s_t-test) を使用します。  
   

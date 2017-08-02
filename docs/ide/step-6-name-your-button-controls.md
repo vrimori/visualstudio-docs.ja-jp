@@ -43,7 +43,7 @@ PictureBox はフォームで 1 つだけ使用しています。 このコン�
   
  ボタンはフォームに 4 つあり、 **button1**、 **button2**、 **button3**、および **button4**という名前が付けられています。 現在の名前を見ただけでは、どれが **[Close]** ボタンでどれが **[Show a picture]** ボタンなのかわかりません。 そのため、ボタン コントロールにもっとわかりやすい名前を付けると便利です。  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 3](http://go.microsoft.com/fwlink/?LinkId=205213)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 3](http://go.microsoft.com/fwlink/?LinkId=205202)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 3](http://go.microsoft.com/fwlink/?LinkId=205213)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 3](http://go.microsoft.com/fwlink/?LinkId=205202)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
 ### <a name="to-name-your-button-controls"></a>ボタン コントロールの名前を設定するには  
   
@@ -59,7 +59,7 @@ closeButton という名前が表示された [プロパティ] ウィンドウ
   
 3.  フォームで **[Show a picture]** ボタンをダブルクリックします。 代わりに、フォームの **[Show a picture]** ボタンをクリックして、Enter キーを押すこともできます。 これを行うと、IDE では **[Form1.cs]** (Visual Basic を使用している場合は**[Form1.vb]** ) というメイン ウィンドウで追加のタブが開きます。 このタブは、次の図に示すように、フォームの背後にあるコード ファイルを示します。  
   
-     ![Visual C&#35; コードが表示された [Form1.cs] タブ](../ide/media/express_showbuttoncode.png "Express_ShowButtonCode")  
+     ![Visual C&#35; コードが表示された [Form1.cs] タブ](~/ide/media/express_showbuttoncode.png "Express_ShowButtonCode")  
 Visual C# コードが表示された [Form1.cs] タブ  
   
 4.  コードの次の部分にフォーカスを設定します。 (Visual Basic を使用していてコードの Visual Basic バージョンを表示するには、次の **[VB]** タブをクリックします)。  

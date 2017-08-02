@@ -36,7 +36,7 @@ caps.handback.revision: 69
   
  Windows フォーム コントロールとホスト コントロールはいずれも Windows フォームのデータ バインディング モデルを使用します。このモデルでは、データセットやデータ テーブルなどのデータ ソースに対して*単純データ バインディング*と*複合データ バインディング*の両方がサポートされます。 Windows フォームでのデータ バインディング モデルについて詳しくは、「[データ連結と Windows フォーム](../Topic/Data%20Binding%20and%20Windows%20Forms.md)」をご覧ください。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: Excel でデータベースのデータを使用する](http://go.microsoft.com/fwlink/?LinkID=130287)」をご覧ください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: Excel でデータベースのデータを使用する](http://go.microsoft.com/fwlink/?LinkID=130287)」をご覧ください。  
   
 ## 単純データ バインディング  
  単純データ バインディングは、コントロール プロパティが、データ テーブル内の値など、単一のデータ要素にバインドされる場合に存在します。 たとえば、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールは、データセット内のフィールドにバインドできる <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> プロパティを持ちます。 データセット内のフィールドが変更されると、名前付き範囲内の値も変更されます。<xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールを除くすべてのホスト コントロールが、単純データ バインディングをサポートしています。<xref:Microsoft.Office.Tools.Word.XMLNodes> コントロールはコレクションであるため、データ バインディングをサポートしません。  

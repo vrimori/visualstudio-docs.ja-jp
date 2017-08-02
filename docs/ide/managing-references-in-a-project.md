@@ -53,7 +53,7 @@ ms.lasthandoff: 03/31/2017
 
  参照を追加するには、ソリューション エクスプローラーで参照ノードを右クリックして **[参照の追加]**を選択します。 詳細については、「[方法: 参照マネージャーを使用して参照を追加または削除する](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)」を参照してください。  
 
- ![Visual C&#43;&#43; での参照の追加](../ide/media/vs2015_cpp_add_reference.png "vs2015_cpp_add_reference")  
+ ![Visual C&#43;&#43; での参照の追加](~/ide/media/vs2015_cpp_add_reference.png "vs2015_cpp_add_reference")  
 
  参照は、次の種類のコンポーネント/サービスに対して行うことができます。  
 

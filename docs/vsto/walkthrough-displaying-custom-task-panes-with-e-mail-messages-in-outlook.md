@@ -59,7 +59,7 @@ caps.handback.revision: 58
   
 -   Microsoft [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] または Microsoft Outlook 2010。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: Outlook で作業ウィンドウを使用する](http://go.microsoft.com/fwlink/?LinkID=130309)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: Outlook で作業ウィンドウを使用する](http://go.microsoft.com/fwlink/?LinkID=130309)」を参照してください。  
   
 ## プロジェクトの作成  
  カスタム作業ウィンドウは、VSTO アドインに実装されています。 まず、Outlook の VSTO アドイン プロジェクトを作成します。  

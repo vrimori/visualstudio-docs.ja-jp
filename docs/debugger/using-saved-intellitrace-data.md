@@ -120,7 +120,7 @@ IntelliTrace ログ \(.iTrace\) ファイルからデバッグを開始すると
   
      アプリケーション コードにメソッドが含まれる場合、Visual Studio はそのメソッドに移動します。  
   
-     ![パフォーマンス イベントからアプリケーション コードに移動する](../debugger/media/ffr_itsummarypageperformancegotocode.png "FFR\_ITSummaryPagePerformanceGoToCode")  
+     ![パフォーマンス イベントからアプリケーション コードに移動する](~/debugger/media/ffr_itsummarypageperformancegotocode.png "FFR\_ITSummaryPagePerformanceGoToCode")  
   
      これで、他の記録された値、つまり呼び出し履歴を確認したり、コードをステップ実行したりできます。また、**IntelliTrace** ウィンドウを使用して、パフォーマンス イベントの発生時に呼び出された[その他のメソッド間を "時間内に" 前後に移動することもできます](../debugger/intellitrace.md)。  
   

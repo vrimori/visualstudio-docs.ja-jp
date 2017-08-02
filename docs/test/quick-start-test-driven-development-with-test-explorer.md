@@ -46,7 +46,7 @@ ms.lasthandoff: 05/13/2017
 -   必要な情報をすべて、1 つのウィンドウで確認できます。  
   
 ## <a name="using-test-explorer"></a>テスト エクスプローラーの使用  
- ![[すべて実行] ボタンを示す単体テスト エクスプローラー](../test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
+ ![[すべて実行] ボタンを示す単体テスト エクスプローラー](~/test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
   
 #### <a name="to-run-unit-tests-by-using-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行するには  
   

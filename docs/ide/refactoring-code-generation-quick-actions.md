@@ -51,7 +51,7 @@ Visual Studio では自動的に一部のソース コードが生成される�
 
 <a name="#quick-actions"></a>
 ## <a name="quick-actions"></a>クイック アクション
-クイック アクションを使うと、コードのリファクタリング、生成、その他の変更を、1 つの操作で簡単に行うことができます。  これらのアクションは、電球アイコン ![小さい電球アイコン](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") を使うか、または適切なコード行にカーソルを置いて **Ctrl + .** キーを押すと 適用できます。
+クイック アクションを使うと、コードのリファクタリング、生成、その他の変更を、1 つの操作で簡単に行うことができます。  これらのアクションは、電球アイコン ![小さい電球アイコン](~/ide/media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") を使うか、または適切なコード行にカーソルを置いて **Ctrl + .** キーを押すと 適用できます。
 
 * [クイック アクション](quick-actions.md)
 * [コード スタイルとクイック アクション](code-styles-and-quick-actions.md)

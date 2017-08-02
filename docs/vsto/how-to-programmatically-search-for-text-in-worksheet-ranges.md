@@ -33,7 +33,7 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> メソッドによる検索は、検索処理が検索範囲の末尾に達すると、検索範囲の先頭に戻ります。  コードでは、検索処理が無限ループにならないようにする必要があります。  サンプル プロシージャでは、その方法の 1 つとして、<xref:Microsoft.Office.Interop.Excel.Range.Address%2A> プロパティを使用する方法を示します。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Use the Find Method in an Excel Add\-in? \(操作方法: Excel アドインで Find メソッドを使用する\)](http://go.microsoft.com/fwlink/?LinkID=130294)」を参照してください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Use the Find Method in an Excel Add\-in? \(操作方法: Excel アドインで Find メソッドを使用する\)](http://go.microsoft.com/fwlink/?LinkID=130294)」を参照してください。  
   
 ### ワークシートの範囲内のテキストを検索するには  
   

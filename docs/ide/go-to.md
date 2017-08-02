@@ -49,35 +49,35 @@ ms.lasthandoff: 03/01/2017
 
 既定では IDE の右上に小さなウィンドウが表示されます。
 
-![すべてにジャンプ](media/gotoall.png)
+![すべてにジャンプ](~/ide/media/gotoall.png)
 
 ここからは、複数の移動方法があります。
 * プレフィックスを付けずにテキストを入力し、テキスト ボックスの下で選んだ[フィルター アイコン](#filtered-searches)を使って検索します。
 * [プレフィックス](#filtered-searches)の後にテキストを入力して検索します。
 * 疑問符 (?) を入力して詳しいヘルプ情報を表示します。
-  ![[すべてにジャンプ] のヘルプ](media/gotoall_help.png)
+  ![[すべてにジャンプ] のヘルプ](~/ide/media/gotoall_help.png)
 
 ### <a name="filtered-searches"></a>フィルター処理された検索
 検索を特定の種類に絞り込むには、入力するときにプレフィックスを使うか、[検索] ウィンドウの下に表示される以下のアイコンを使います。
 
 プレフィックス | アイコン | ショートカット | 説明
 :----: | ---- | -------- | ---
-#      | ![シンボル アイコン](media/gotoall_symbolicon.png) | Ctrl + 1、Ctrl + S | 一致するシンボルを検索します
-f      | ![ファイル アイコン](media/gotoall_fileicon.png)     | Ctrl + 1、Ctrl + F | 一致するファイル名を検索します
-m      | ![メンバー アイコン](media/gotoall_membericon.png) | Ctrl + 1、Ctrl + M | 一致するメンバーを検索します
-t      | ![型アイコン](media/gotoall_typeicon.png)     | Ctrl + 1、Ctrl + T | 一致する型を検索します
-:      | ![行アイコン](media/gotoall_lineicon.png)     | Ctrl+G         | 入力した行番号にジャンプします
+#      | ![シンボル アイコン](~/ide/media/gotoall_symbolicon.png) | Ctrl + 1、Ctrl + S | 一致するシンボルを検索します
+f      | ![ファイル アイコン](~/ide/media/gotoall_fileicon.png)     | Ctrl + 1、Ctrl + F | 一致するファイル名を検索します
+m      | ![メンバー アイコン](~/ide/media/gotoall_membericon.png) | Ctrl + 1、Ctrl + M | 一致するメンバーを検索します
+t      | ![型アイコン](~/ide/media/gotoall_typeicon.png)     | Ctrl + 1、Ctrl + T | 一致する型を検索します
+:      | ![行アイコン](~/ide/media/gotoall_lineicon.png)     | Ctrl+G         | 入力した行番号にジャンプします
 
 ### <a name="search-locations"></a>検索場所
 特定の場所に検索を絞り込むには、2 つのドキュメント アイコンを使います。
 
 アイコン | 説明
 ---- | ---
-![現在のドキュメント](media/gotoall_currentdocument.png) | 現在のドキュメントだけを検索します
-![外部ドキュメント](media/gotoall_external.png) | プロジェクト/ソリューションに含まれるドキュメントだけでなく外部のドキュメントも検索します
+![現在のドキュメント](~/ide/media/gotoall_currentdocument.png) | 現在のドキュメントだけを検索します
+![外部ドキュメント](~/ide/media/gotoall_external.png) | プロジェクト/ソリューションに含まれるドキュメントだけでなく外部のドキュメントも検索します
 
 ### <a name="settings"></a>設定
-右下にある歯車アイコン ![歯車アイコン](media/gotoall_gear.png) をクリックして、この機能の動作を変更することができます。
+右下にある歯車アイコン ![歯車アイコン](~/ide/media/gotoall_gear.png) をクリックして、この機能の動作を変更することができます。
 
 設定 | 説明
 ------- | ---

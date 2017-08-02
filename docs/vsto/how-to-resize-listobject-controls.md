@@ -39,7 +39,7 @@ caps.handback.revision: 46
   
  <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールについて詳しくは、「[ListObject コントロール](../vsto/listobject-control.md)」をご覧ください。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.png "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: 実行時にデータ バインド リスト オブジェクトに列を追加する](http://go.microsoft.com/fwlink/?LinkID=130318)」をご覧ください。  
+ ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[操作方法: 実行時にデータ バインド リスト オブジェクトに列を追加する](http://go.microsoft.com/fwlink/?LinkID=130318)」をご覧ください。  
   
 ##  <a name="designtime"></a> デザイン時に ListObject コントロールのサイズを変更する  
  リストのサイズを変更するには、サイズ変更ハンドルのいずれかをクリックしてドラッグでき、また **\[リストのサイズ変更\]** ダイアログ ボックスでそのサイズを再定義することもできます。  

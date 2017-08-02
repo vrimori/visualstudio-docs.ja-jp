@@ -63,7 +63,7 @@ ms.lasthandoff: 05/19/2017
   
 2.  **Enter** イベントをクリックし、「`answer_Enter`」と入力して、Enter キーを押します。  
   
-     ![[プロパティ] ダイアログ ボックス](../ide/media/express_answerenter.png "Express_AnswerEnter")  
+     ![[プロパティ] ダイアログ ボックス](~/ide/media/express_answerenter.png "Express_AnswerEnter")  
 [プロパティ] ダイアログ ボックス  
   
      sum NumericUpDown コントロールの Enter イベント ハンドラーを追加し、そのハンドラーに **answer_Enter** という名前を付けます。  

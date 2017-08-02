@@ -115,7 +115,7 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
   
      この XAML コードによって、番号、タイトル、および説明の各フィールドのプレース ホルダーの付いた再利用可能なレイアウトが作成されます。 これらのプレースホルダーは、実行時に次の図に示すテキストに置き換えることができます。  
   
-     ![QuickStartTask ユーザー コントロール](../designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
+     ![QuickStartTask ユーザー コントロール](~/designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
   
 6.  **ソリューション エクスプローラー**で、 **[QuickStartTask.xaml]** ノードを展開して **[QuickStartTask.xaml.cs]** ファイルまたは **[QuickStartTask.xaml.vb]** ファイルを開きます。  
   
@@ -302,7 +302,7 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
   
      この時点で、デザインは次の図のようになっているはずです。  
   
-     ![デザイナーの MainWindow](../designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
+     ![デザイナーの MainWindow](~/designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
   
     > [!NOTE]
     >  **[エラー一覧]** を開いている場合、次のいくつかの手順の実行中にエラーが表示される可能性があります。 心配には及びません。これらのエラーは、残りの手順を完了すれば表示されなくなります。  
@@ -572,7 +572,7 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
   
      次の図に示すように、2 つのエントリが **[Query and Update Data]** (データのクエリおよび更新) リストに追加されることに注意してください。  
   
-     ![TODO 項目が一覧に追加されます。](../designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
+     ![TODO 項目が一覧に追加されます。](~/designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
   
 4.  一覧の **[Do something else]** エントリのチェックボックスをオンにします。  
   
