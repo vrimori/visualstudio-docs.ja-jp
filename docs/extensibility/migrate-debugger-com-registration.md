@@ -27,9 +27,10 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
 ms.openlocfilehash: 19ce2d4cc1ff92240529f35f42845778ded49fdf
+ms.contentlocale: ja-jp
 ms.lasthandoff: 03/07/2017
 
 ---
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/07/2017
 
 この手法を使用するには、msvsmon (InstallDir:\Common7\IDE\Remote Debugger\x64) の横にある *.msvsmon comclass-def.json ファイルを追加します。
 
-いずれかの管理、登録する msvsmon-def comclass ファイルの例と&1; つのネイティブ クラスを次に示します。
+いずれかの管理、登録する msvsmon-def comclass ファイルの例と 1 つのネイティブ クラスを次に示します。
 
 ファイル名: MyCompany.MyExample.msvsmon comclass def.json
 
