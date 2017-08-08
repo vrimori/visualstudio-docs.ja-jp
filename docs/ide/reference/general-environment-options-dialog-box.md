@@ -1,5 +1,5 @@
 ---
-title: "[全般] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs"
+title: "[全般]([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -52,7 +52,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="general-environment-options-dialog-box"></a>[全般] ([オプション] ダイアログ ボックス - [環境])
+# <a name="general-environment-options-dialog-box"></a>[全般]\([オプション] ダイアログ ボックス - [環境])
 このページを使用して、統合開発環境 (IDE: Integrated Development Environment) のオプションのうち特に配色テーマ、ステータス バーの設定、およびファイル拡張子の関連付けを変更します。 **[オプション]** ダイアログ ボックスを表示するには、**[ツール]** メニューを開いて、**[オプション]** をクリックし、**[環境]** フォルダーを開き、**[全般]** ページをクリックします。 このページが一覧に表示されない場合は、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** チェック ボックスをオンにします。  
   
 > [!NOTE]
