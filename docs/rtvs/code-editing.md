@@ -1,12 +1,13 @@
 ---
 title: "R Tools for Visual Studio でのコードの編集 | Microsoft Docs"
 ms.custom: 
-ms.date: 4/28/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a198ccc3-5506-48e7-b3b2-9399661b80d5
@@ -14,25 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: e8b42484d471d4deac0eabcd4c55e09297d0873f
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: 261cced8583b751d74701a8903a10a4584928940
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 
@@ -57,15 +44,15 @@ R Tools for Visual Studio (RTVS) により、Visual Studio の編集エクスペ
 
 文字列、コメント、キーワードなど、コードのさまざまな部分に色を付けるだけでなく、RTVS ではコメント内のリンクも強調表示されて有効になります。
 
-![R コードの構文の色分け](~/rtvs/media/editing-syntax-colors.png)
+![R コードの構文の色分け](media/editing-syntax-colors.png)
 
 フォントおよび特定の強調表示色をカスタマイズするには、**[ツール] > [オプション]** コマンドを選び、**[環境] > [フォントおよび色]** に移動して、**[表示項目:]** ボックスで R 関連の項目の設定を変更します。
 
-![R コードのフォントおよび色のオプション](~/rtvs/media/editing-syntax-colors-options.png)
+![R コードのフォントおよび色のオプション](media/editing-syntax-colors-options.png)
 
 Visual Studio のエディターでは、構文エラーに下線も表示されます。
 
-![R コードの構文エラーの強調表示](~/rtvs/media/editing-syntax-error.png)
+![R コードの構文エラーの強調表示](media/editing-syntax-error.png)
 
 この動作を変更するには、[エディター オプション](#editor-options)で **[詳細設定] > [構文チェック]** をご覧ください。
 
@@ -73,11 +60,11 @@ Visual Studio のエディターでは、構文エラーに下線も表示され
 
 コードを入力すると、RTVS は [IntelliSense](code-intellisense.md) ページでの記述に従ってオート コンプリートを行います。 また、かっこの補完などのオート フォーマットを実行します。 
 
-![インライン書式設定を示すアニメーション](~/rtvs/media/editing-inline-formatting.gif)
+![インライン書式設定を示すアニメーション](media/editing-inline-formatting.gif)
 
 多くのパラメーターがある関数呼び出しを入力するときは、普通、コードが読みやすいようにパラメーターを一列に表示したくなります。 RTVS はユーザーがパラメーターに設定したインデントを記憶し、それ以降の行にそのインデントを自動的に適用します。
 
-![自動インデントのアニメーション](~/rtvs/media/editing-auto-indentation.gif)
+![自動インデントのアニメーション](media/editing-auto-indentation.gif)
 
 この動作を変更するには、[エディター オプション](#editor-options)の **[タブ]** グループをご覧ください。
 
@@ -85,25 +72,25 @@ Visual Studio のエディターでは、構文エラーに下線も表示され
 
 独自の領域を作成するには、`---` で終わるコメントで該当するコードを囲みます。 コードの左の小さな +/- コントロールを使うと、領域を開いたり閉じたりすることができます。
 
-![コメントでの折りたたみ可能な領域の作成](~/rtvs/media/editing-collapsible-regions.gif)
+![コメントでの折りたたみ可能な領域の作成](media/editing-collapsible-regions.gif)
  
 既定では、Tab キーを押すとスペースが挿入されます。 「[[オプション]、[テキスト エディター]、[すべての言語]](../ide/reference/options-text-editor-all-languages.md)」で説明されているようにこの動作も変更できます。
 
 ## <a name="code-navigation"></a>コードのナビゲーション
 
-コード ナビゲーションを使用すると、R プログラムとそのライブラリのソース コードにすばやくアクセスできます。 これらのナビゲーション機能を使うと、目的のコードに手動で移動する必要がなく、作業を中断しなくて済みます。
+コード ナビゲーションを使用すると、R プログラムとそのライブラリのソース コードにすばやくアクセスできます。 これらの機能を使用すると、コードを手動で検索する必要がなくなり、作業を継続することができます。
 
 **[定義に移動]** は、関数定義にすばやくジャンプしたり、ライブラリ関数のソース コードをインライン ミニエディターにポップアップ表示したりします。 目的の関数を右クリックして **[定義に移動]** を選ぶか、関数をポイントして F12 キーを押します。
 
-関数のソース コードを含む新しいエディター ウィンドウが開き、関数定義の先頭にカーソルが配置されます。
+このコマンドは、関数のソース コードを含む新しいエディター ウィンドウを開きます。 関数定義の先頭にカーソルの位置が移動するので便利です。
 
 右クリック メニューまたは Alt + F12 キーで開く **[定義をここに表示]** は、関数呼び出しの下に関数のソース コードが含まれる読み取り専用のスクロール可能な領域を挿入します。
 
-![[定義をここに表示] のアニメーション](~/rtvs/media/editing-peek-definition.gif)
+![[定義をここに表示] のアニメーション](media/editing-peek-definition.gif)
 
 ## <a name="sending-code-to-the-interactive-window"></a>対話型ウィンドウへのコードの送信
 
-多くの開発者は、エディターでコードを記述し、コードを[対話型ウィンドウ](interactive-repl.md)に送信してすぐにテストするのを好みます (REPL (読み取り、評価、出力、ループ) とも呼ばれます)。 R エディターでこれを行うには、現在のコード行で Ctrl + Enter キーを押します。カーソルは次の行に移動します。 Ctrl + Enter キーを押すと、エディターからコードを効率よくステップ実行できます。
+多くの開発者は、エディターでコードを記述し、コードを[対話型ウィンドウ](interactive-repl.md)に送信してすぐにテストするのを好みます (REPL (読み取り、評価、出力、ループ) とも呼ばれます)。 R エディターで Ctrl + Enter キーを押すと、現在のコード行が対話型のウィンドウに送信され、カーソルが次の行に移動します。 Ctrl + Enter キーを押すと、エディターからコードを効率よくステップ実行できます。
 
 コードを選択して Ctrl + Enter キーを押し、その選択範囲全体を適用することもできます。 または、選択範囲を右クリックして **[対話形式で実行]** を選びます。
 
@@ -125,13 +112,13 @@ f <- function(a) { return(a + 1) }
 
 自動書式設定は取り消すことができる独立した操作です。 たとえば、エディターにコードを貼り付け、エディターが書式を適用した後、**[編集] > [元に戻す]** を選ぶか Ctrl + Z キーを押すと、1 回目で書式設定が取り消され、2 回目で貼り付け自体が元に戻ります。
  
-書式設定オプション (書式設定をオフにすることを含む) は、**[テキスト エディター] > [R] > [詳細設定]** タブの **[ツール] > [オプション]** で設定します。ここには、**[R Tools] > [エディター オプション...]** コマンドを使うか、エディターで右クリックして **[書式設定オプション...]** を選ぶことで、直接移動できます。 詳しくは、後の「[エディター オプション](#editor-options)」をご覧ください。
+書式をオフにするなどの書式オプションは、**[テキスト エディター] > [R] > [詳細設定]** タブの **[ツール] > [オプション]** で設定されます。 **[R ツール] > [エディターのオプション]** コマンドを使用するか、エディターで右クリックし、**[書式オプション]**  を選択して、このページに直接移動することができます。 詳細については、「[エディター オプション](#editor-options)」セクションを参照してください。
  
 ## <a name="inserting-roxygen-comments"></a>Roxygen コメントの挿入
 
 RTVS には、関数のパラメーター名を使って [Roxygen](http://roxygen.org/) コメントを生成するためのショートカットがあります。 関数定義の前の空白行に「`###`」と入力するだけです。
 
-![Roxygen コメント挿入のアニメーション](~/rtvs/media/editing-roxygen-comments.gif)
+![Roxygen コメント挿入のアニメーション](media/editing-roxygen-comments.gif)
 
 ## <a name="editor-options"></a>エディター オプション
 

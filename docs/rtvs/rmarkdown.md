@@ -1,12 +1,13 @@
 ---
 title: "R Tools for Visual Studio での R Markdown | Microsoft Docs"
 ms.custom: 
-ms.date: 4/28/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3ac955b2-b6e1-4d32-b1a4-2882c93311fc
@@ -14,38 +15,24 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: 972abfcfda570d66b1b15b25b16e68157fc73b81
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: b29ae0240a29616edcdf2ae0dced7a9fca0f9584
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 
 # <a name="creating-r-markdown-documents"></a>R Markdown ドキュメントの作成
 
-R Markdown ([rmarkdown.rstudio.com](https://rmarkdown.rstudio.com/) を参照してください) は、R の分析を、高品質のドキュメント、レポート、プレゼンテーション、およびダッシュボードに変換するドキュメント形式です。
+[R Markdown](https://rmarkdown.rstudio.com/) は、R の分析を、高品質のドキュメント、レポート、プレゼンテーション、およびダッシュボードに変換するドキュメント形式です。
 
-R Tools for Visual Studio には、R Markdown 項目テンプレート、エディターのサポート (エディター内の R コード用の IntelliSense など)、ファイル生成機能があります。
+R Tools for Visual Studio (RTVS) には、R Markdown 項目テンプレート、エディターのサポート (エディター内の R コード用の IntelliSense など)、ファイル生成機能があります。
 
 R Markdown を使用するには:
 
 1. Visual Studio を閉じます。
-1. (1 回のみ) [pandoc.org](http://pandoc.org/installing.html) の pandoc をインストールします。
+1. (1 回のみ) [pandoc.org](http://pandoc.org/installing.html) の `pandoc` をインストールします。
 1. Visual Studio を再起動すると、pandoc のインストールが選択されます。
 1. `knitr` および `rmarkdown` パッケージをインストールします。インストールは、[インタラクティブ ウィンドウ](interactive-repl.md)から実行できます。
 

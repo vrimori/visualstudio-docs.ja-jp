@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio プロジェクトのポート、移行、アップグレード | Microsoft Docs"
 ms.custom: 
-ms.date: 04/28/2017
+ms.date: 7/14/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -23,48 +23,40 @@ ms.assetid: bee759bd-6ff5-4c2e-913a-ea7d3c906c29
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bd2199e68bf23a191efe624da311dd11217028a8
-ms.openlocfilehash: 77042a35175aa13d27ed31d1562198e800e065ae
+ms.translationtype: HT
+ms.sourcegitcommit: dc7a0c10390de67b56a83d2824224bed24125db0
+ms.openlocfilehash: 922bec8857910ae4fa1497137eb2e3d70ee133c7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/17/2017
 
 ---
+
 # <a name="port-migrate-and-upgrade-visual-studio-projects"></a>Visual Studio プロジェクトのポート、移行、アップグレード
 
-通常、新しいバージョンの Visual Studio はいずれも、以前の種類のプロジェクト、ファイル、その他のアセットに対応しています。 それらのオブジェクトはこれまでと同様に操作できます。新しい機能を利用していない場合でも、Visual Studio 2015、Visual Studio 2013、Visual Studio 2012 など、以前のバージョンとの下位互換性が維持されています。 (どの機能がどのバージョンに固有の機能であるかについては、[リリース ノート](https://www.visualstudio.com/vs/release-notes/)を参照してください。)ただし、今後変更される場合もあります。 新しいバージョンの Visual Studio では、特定の種類のサポートが終了しています。あるいは、下位互換性がないので、移行や更新が要求されます。 このトピックでは、Visual Studio 2017 で影響を受ける種類のプロジェクトについて説明します。 Visual Studio 2017 でサポートされている種類の一覧は「[対象プラットフォームと互換性](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs)」というトピックにあります。
+通常、新しいバージョンの Visual Studio はいずれも、以前の種類のプロジェクト、ファイル、その他のアセットに対応しています。 それらのオブジェクトはこれまでと同様に操作できます。新しい機能を利用していない場合でも、Visual Studio 2015、Visual Studio 2013、Visual Studio 2012 など、以前のバージョンとの下位互換性が維持されています。 (どの機能がどのバージョンに固有の機能であるかについては、[リリース ノート](https://www.visualstudio.com/vs/release-notes/)を参照してください。)
 
-> [!Note]
-> 特定の種類のプロジェクトを開くとき、Visual Studio インストーラーで適切なワークロードを追加する必要があります。
+ただし、今後変更される場合もあります。 新しいバージョンの Visual Studio では、特定の種類のサポートが終了しています。あるいは、下位互換性がないので、移行や更新が要求されます。 移行に関する問題の現在の状況については、[Visual Studio Developer Community のサイト](https://developercommunity.visualstudio.com)を参照してください。
 
+> [!Important]
+> 現在、このトピックでは、Visual Studio 2017 の移行を伴うプロジェクトのみの詳細を提供しています。 サポート対象のプロジェクトで、移行に関する問題のない種類 (「[Visual Studio 2017 の対象プラットフォームと互換性](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs)」でその一覧を確認できます) は含まれていません。 一部の種類のプロジェクトは Visual Studio 2017 ではまったくサポートされないため、移行することができません。
+
+> [!Important]
+> 特定の種類のプロジェクトを開くとき、Visual Studio インストーラーで適切なワークロードを追加する必要があります。 ワークロードがインストールされていない場合、Visual Studio は不明な、または互換性のないプロジェクトの種類を報告します。 その場合、インストール オプションを確認して、やり直してください。 Visual Studio 2017 でサポートされているプロジェクトの詳細について、「[Visual Studio 2017 の対象プラットフォームと互換性](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs)」をもう一度参照してください。
 
 ## <a name="projects"></a>プロジェクト
 
-次の一覧は、Visual Studio 2017 より前のバージョンで作成されたプロジェクトに対する Visual Studio 2017 でのサポートをまとめたものです。 表示されるはずのプロジェクトまたはファイルの種類が見つからない場合、[このトピックの Visual Studio 2015 バージョン](https://msdn.microsoft.com/library/hh266747.aspx)を調べ、下のコメントにメモしてください。
+次の一覧は、Visual Studio 2017 より前のバージョンで作成されたプロジェクトに対する Visual Studio 2017 でのサポートをまとめたものです。
+
+表示されるはずのプロジェクトまたはファイルの種類が見つからない場合、[このトピックの Visual Studio 2015 バージョン](https://msdn.microsoft.com/library/hh266747.aspx)を調べ、下のコメントにメモしてください。
 
 | プロジェクトの種類 | サポート |
 | --- | --- |
-| .NET Core プロジェクト (.xproj) | Visual Studio 2015 で作成したプロジェクトでは、.xproj プロジェクト ファイルが含まれるプレビュー ツールが使用されていました。 Visual Studio 2017 で .xproj ファイルを開くと、ファイルを .csproj 形式に移行するように求められます (.xproj ファイルのバックアップが作成されます)。 .NET Core プロジェクトのこの .csproj 形式は、VS2015 以前のバージョンではサポートされていません。  .xproj 形式は .csproj に移行しなければ Visual Studio 2017 で利用できません。 詳しくは、「[.NET Core プロジェクトから .csproj 形式への移行](https://docs.microsoft.com/dotnet/articles/core/migration/#visual-studio-2017)」をご覧ください。|
+| .NET Core プロジェクト (.xproj) | Visual Studio 2015 で作成したプロジェクトでは、.xproj プロジェクト ファイルが含まれるプレビュー ツールが使用されていました。 Visual Studio 2017 で .xproj ファイルを開くと、ファイルを .csproj 形式に移行するように求められます (.xproj ファイルのバックアップが作成されます)。 .NET Core プロジェクトのこの .csproj 形式は、VS2015 以前のバージョンではサポートされていません。  .xproj 形式は .csproj に移行しなければ Visual Studio 2017 で利用できません。 詳しくは、「[.NET Core プロジェクトから .csproj 形式への移行](https://docs.microsoft.com/dotnet/core/migration/#visual-studio-2017)」をご覧ください。|
 | ASP.NET Web アプリケーションと ASP.NET Core Web アプリケーション (Application Insights が有効) | Visual Studio のユーザーごとのリソース情報がユーザー インスタンス別にレジストリに保存されます。 これは、プロジェクトを開いていない状態で Azure Application Insights データを検索するときに利用されます。 Visual Studio 2015 では、Visual Studio 2017 とは異なるレジストリの場所が使用され、競合しません。<br/><br/>ユーザーが ASP.NET Web アプリケーションまたは ASP.NET Core Web アプリケーションを作成すると、リソースは .suo ファイルに保存されます。 ユーザーは Visual Studio 2015 や 2017 でプロジェクトを開くことができます。両方のバージョンで使用されているプロジェクトとソリューションが Visual Studio でサポートされている限り、両方でリソース情報が使用されます。 ユーザーは製品ごとに 1 回認証する必要があります。 たとえば、Visual Studio 2015 で作成されたプロジェクトを Visual Studio 2017 で開く場合、Visual Studio 2017 で認証が要求されます。 |
 | C#/Visual Basic Webform または Windows フォーム | プロジェクトを Visual Studio 2017 と Visual Studio 2015 で開くことができます。 |
 | データベース単体テスト プロジェクト (.csproj、.vbproj)    | 古いデータ単体テスト プロジェクトは Visual Studio 2017 で読み込まれますが、依存関係は GAC に保存されているものが使用されます。 単体テスト プロジェクトをアップグレードし、最新の依存関係を使用するには、ソリューション エクスプローラーでプロジェクトを右クリックし、**[SQL Server 単体テスト プロジェクトに変換する]** を選択します。 |
 | F# | Visual Studio 2017 では、Visual Studio 2013 と 2015 で作成したプロジェクトを開くことができます。 ただし、これらのプロジェクトで Visual Studio 2017 機能を有効にするには、プロジェクトのプロパティを開き、ターゲットの fsharp.core を F# 4.1 に変更します。 .NET ワークロードの場合、Visual Studio インストーラーの **[F# 言語サポート]** オプションは既定では選択されないことにもご注意ください。ワークロードにこのオプションを選択するか、**[開発作業]** の **[個別のコンポーネント]** から選択する方法で追加する必要があります。 |
-| InstallShield<br/>MSI のセットアップ | Visual Studio 2010 で作成されたインストーラー プロジェクトは、[Visual Studio Installer Projects Extension](https://marketplace.visualstudio.com/items?itemName=UnniRavindranathan-MSFT.MicrosoftVisualStudio2013InstallerProjects) を使って以降のバージョンで開くことができます。[InstallShield Limited Edition](https://blogs.msdn.microsoft.com/visualstudio/2013/08/15/whats-new-in-visual-studio-2013-and-installshield-limited-edition/) を使ってそのようなプロジェクトを維持することもできます。 |
+| InstallShield<br/>MSI のセットアップ | Visual Studio 2010 で作成されたインストーラー プロジェクトは、[Visual Studio Installer Projects の拡張機能](https://marketplace.visualstudio.com/items?itemName=UnniRavindranathan-MSFT.MicrosoftVisualStudio2013InstallerProjects)を使って以降のバージョンで開くことができます。 「[WiX Toolset Visual Studio 2017 Extension](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)」も参照してください。 InstallShield Limited Edition は、Visual Studio に付属しなくなりました。 Visual Studio 2017 で利用可能かどうかについては、[Flexera Software](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio) にご確認ください。 |
 | LightSwitch | LightSwitch は Visual Studio 2017 ではサポートされていません。 Visual Studio 2012 以前のバージョンで作成されたプロジェクトを Visual Studio 2013 または Visual Studio 2015 で開くとアップグレードされ、以後、Visual Studio 2013 または Visual Studio 2015 のみで開けるようになります。 |
 | Microsoft Azure Tools for Visual Studio | これらの種類のプロジェクトを開くには、最初に [Azure SDK for .NET](http://azure.microsoft.com/downloads/)をインストールした後、プロジェクトを開きます。 必要に応じて、プロジェクトが更新されます。 |
 | モデル ビュー コントローラー フレームワーク (ASP.NET MVC) | MVC バージョンと Visual Studio のサポート:<ul><li>Visual Studio 2010 SP1 は MVC 2 と MVC 3 をサポートしています。MVC 4 サポートは [ASP.NET 4 MVC 4 for Visual Studio 2010 SP1 をダウンロード](https://www.microsoft.com/download/details.aspx?id=30683)すると追加されます。</li><li>Visual Studio 2012 は MVC 3 と MVC 4 のみをサポートしています。</li><li>Visual Studio 2013 は MVC 4 と MVC 5 のみをサポートしています。</li><li>Visual Studio 2017 と Visual Studio 2015 は MVC 4 (既存のオブジェクトを開くことはできますが、新規作成はできません) と MVC 5 をサポートしています。</li></ul><br/><br/>MVC バージョンをアップグレードする:<ul><li>MVC 2 から MCV 3 に自動的にアップグレードする方法については、「 [ASP.NET MVC 3 Application Upgrader (ASP.NET MVC 3 アプリケーション アップグレード プログラム)](http://go.microsoft.com/fwlink/?LinkID=238178)」を参照してください。</li><li>MVC 2 から MVC 3 に手動でアップグレードする方法については、「 [Upgrading an ASP.NET MVC 2 Project to ASP.NET MVC 3 Tools Update (ASP.NET MVC 2 プロジェクトから ASP.NET MVC 3 Tools Update へのアップグレード)](http://go.microsoft.com/fwlink/?linkid=238178)」を参照してください。</li><li>MVC 3 から MVC 4 に手動でアップグレードする方法については、「 [Upgrading an ASP.NET MVC 3 Project to ASP.NET MVC 4 (ASP.NET MVC 3 プロジェクトから ASP.NET MVC 4 へのアップグレード)](http://www.asp.net/whitepapers/mvc4-release-notes)」を参照してください。 .NET Framework 3.5 SP1 を対象とするプロジェクトの場合は、.NET Framework 4 を使用するようにプロジェクトの対象を変更する必要があります。</li><li>MVC 4 から MVC 5 に手動でアップグレードする方法については、「[How to Upgrade an ASP.NET MVC 4 and Web API Project to ASP.NET MVC 5 and Web API 2](https://www.asp.net/mvc/overview/releases/how-to-upgrade-an-aspnet-mvc-4-and-web-api-project-to-aspnet-mvc-5-and-web-api-2) (ASP.NET MVC 4 と Web API プロジェクトを ASP.NET MVC 5 と Web API 2 にアップグレードする方法)」を参照してください。</li></ul> |

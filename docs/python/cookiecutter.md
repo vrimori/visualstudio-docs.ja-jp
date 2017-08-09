@@ -1,12 +1,13 @@
 ---
 title: "Visual Studio の Python 用 CookieCutter 拡張機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 5/8/2017
+ms.date: 7/12/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 783da5fd-726c-4716-994e-aa04d6b75896
@@ -14,25 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: 44aa74104cbb27de62fe739dbdd8f269fbf42c53
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 6db7e2efc54414dcb72899ab3238a9b7a0390921
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -40,11 +27,11 @@ ms.lasthandoff: 05/09/2017
 
 [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) は、テンプレートの検出、テンプレート オプションの入力、プロジェクトとファイルの作成を行うためのグラフィカル ユーザー インターフェイスを提供します。 Cookiecutter は Visual Studio 2017 に付属しており、Visual Studio の以前のバージョンにも個別にインストールできます。
 
-Cookiecutter には、Python 3.3 以降 (32 または 64 ビット) または Anaconda 3 4.2 以降 (32 または 64 ビット) が必要です。 適切な Python インタープリターを使用できない場合、警告が Visual Studio に表示されます。 Visual Studio の実行中に Python インタープリターをインストールした場合は、Cookiecutter ツールバーの [ホーム] ボタンをクリックすると新しくインストールしたインタープリターが検出されます。
+Cookiecutter には、Python 3.3 以降 (32 ビットまたは 64 ビット) または Anaconda 3 4.2 以降 (32 ビットまたは 64 ビット) が必要です。 適切な Python インタープリターを使用できない場合、警告が Visual Studio に表示されます。 Visual Studio の実行中に Python インタープリターをインストールした場合は、Cookiecutter ツールバーの [ホーム] ボタンをクリックすると新しくインストールしたインタープリターが検出されます。
 
-インストールしたら、**[表示] > [Cookicutter Explorer (Cookiecutter エクスプローラー)]** を選択して Cookiecutter のウィンドウを開きます。
+インストールしたら、**[表示] > [Cookiecutter Explorer]** を選択して Cookiecutter のウィンドウを開きます。
 
-![Cookiecutter のメイン ウィンドウ](~/python/media/cookiecutter-overview.png)
+![Cookiecutter のメイン ウィンドウ](media/cookiecutter-overview.png)
 
 ## <a name="cookiecutter-workflow"></a>Cookiecutter のワークフロー
 
@@ -76,27 +63,27 @@ Cookiecutter のホーム ページにはテンプレートの一覧が次のグ
 
 テンプレートがローカルにインストールされると、Cookiecutter のオプション ページが表示され、Cookiecutter のファイルを生成する場所やその他のオプションを指定できます。
 
-![Cookiecutter のオプション ページ](~/python/media/cookiecutter-template-options.png)
+![Cookiecutter のオプション ページ](media/cookiecutter-template-options.png)
 
 各 Cookiecutter テンプレートでは、独自のオプションのセットを定義し、各オプションの既定値 (各エントリ フィールドで推奨テキストとして表示される値) を指定します。 既定値はコード スニペットの場合もあります。これは主に、他のオプションを使用する動的な値である場合です。 
 
-各オプションの既定値はユーザー構成ファイルを使用してカスタマイズできます。 Cookiecutter 拡張機能はユーザー構成ファイルを検出すると、テンプレートの既定値をユーザー構成ファイルの既定値で上書きします。 これについては、Cookiecutter ドキュメントの [User Config](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html) に関するセクションで説明しています。
+各オプションの既定値はユーザー構成ファイルを使用してカスタマイズできます。 Cookiecutter 拡張機能はユーザー構成ファイルを検出すると、テンプレートの既定値をユーザー構成ファイルの既定値で上書きします。 この動作については、Cookiecutter ドキュメントの [User Config](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html) に関するセクションで説明しています。
 
 テンプレートでコード生成後に特定の Visual Studio タスクを実行するように指定した場合は、**[Run additional tasks on completion (完了時に追加タスクを実行)]** オプションが表示されます。このオプションで、それらのタスクを実行しないように選択することもできます。 最も一般的なタスクの使用方法としては、Web ブラウザーを開く、エディターでファイルを開く、依存関係をインストールするなどがあります。
 
 ### <a name="create"></a>作成
 
-オプションの設定が完了したら、**[作成]** を選択してコードを生成します。 出力フォルダーが空でない場合は、警告が表示されます。 テンプレートの出力に慣れていてファイルを上書きしても問題ない場合は、警告を無視してかまいません。 それ以外の場合は、**[キャンセル]** を選択し、空のフォルダーを指定して、作成したファイルを空でない出力フォルダーに手動でコピーします。
+オプションを設定したら、**[作成]** を選択してコードを生成します (出力フォルダーが空ではない場合は警告が表示されます)。 テンプレートの出力に慣れていてファイルを上書きしても問題ない場合は、警告を無視してかまいません。 それ以外の場合は、**[キャンセル]** を選択し、空のフォルダーを指定して、作成したファイルを空でない出力フォルダーに手動でコピーします。
 
 ファイルが正常に作成されると、ファイルを**ソリューション エクスプローラー**で開くためのオプションが Cookiecutter に表示されます。
 
-![ソリューション エクスプローラーのコマンドが表示された Cookiecutter](~/python/media/cookiecutter-files-created.png)
+![ソリューション エクスプローラーのコマンドが表示された Cookiecutter](media/cookiecutter-files-created.png)
 
 ## <a name="cookiecutter-options"></a>Cookiecutter のオプション
 
 Cookiecutter のオプションは、**[ツール] > [オプション] > [Cookiecutter]** から表示できます。
 
-![Cookiecutter のオプション](~/python/media/cookiecutter-tools-options.png)
+![Cookiecutter のオプション](media/cookiecutter-tools-options.png)
 
 | オプション | 説明 |
 | --- | --- |
@@ -112,12 +99,12 @@ Cookiecutter テンプレートの作成の基本については、[Cookiecutter
 - 文字列: 変数名のラベル、値を入力するためのテキスト ボックス、既定値を表示するウォーターマーク。 テキスト ボックスのツールヒントには既定値が表示されます。
 - リスト: 変数名のラベル、値を選択するためのコンボ ボックス。 コンボ ボックスのツールヒントには既定値が表示されます。
 
-この動作は、Visual Studio に固有の (Cookiecutter CLI では無視される) `cookiecutter.json` ファイルで追加のメタデータを指定することによって改善できます。 すべてのプロパティは省略可能です。
+このレンダリングは、Visual Studio に固有の (Cookiecutter CLI では無視される) `cookiecutter.json` ファイルで追加のメタデータを指定することによって改善できます。 すべてのプロパティは省略可能です。
 
 | プロパティ | 説明 |
 | --- | --- |
 | group1 | エディターの上部に、変数名の代わりに変数に対して表示される内容を指定します。 |
-| 説明 | 編集コントロールに、変数の既定値の代わりに説明として表示されるツールヒントを指定します。 |
+| 説明 | 編集コントロールに、変数の既定値の代わりに表示されるツールヒントを指定します。 |
 | URL | ラベルをハイパーリンクに変更し、URL を示したツールヒントとともに表示します。 ハイパーリンクをクリックすると、ユーザーの既定のブラウザーでその URL が開きます。 |
 | [セレクター] | 変数のエディターをカスタマイズできます。 現在、次のセレクターがサポートされています。<ul><li>`string`: 標準のテキスト ボックス (文字列の既定値)。</li><li>`list`: 標準のコンボ ボックス (リストの既定値)。</li><li>`yesno`: `y` と `n` のいずれかを選択するコンボ ボックス (文字列用)。</li><li>`odbcConnection`: データベース接続ダイアログを起動する "..." ボタンのあるテキスト ボックス。</li></ul> |
 
@@ -206,13 +193,13 @@ Cookiecutter には、ファイルの生成後に任意の Python コードを�
 
 引数は他の Cookiecutter 変数を参照できます。 上の例では、生成されたファイルへの絶対パスを作成するために内部の `_output_folder_path` 変数が使用されています。
 
-`Python.InstallProjectRequirements` コマンドは、既存のプロジェクトにファイルを追加する場合にのみ機能します。 これはソリューション エクスプローラーの Python プロジェクトによって処理されますが、ソリューション エクスプローラーのフォルダー ビューの表示中はメッセージを受け取るプロジェクトがないためです。 これは制限事項であり、将来のリリースで解消される可能性があります (フォルダー ビューのサポート全般の改善)。
+`Python.InstallProjectRequirements` コマンドは、既存のプロジェクトにファイルを追加する場合にのみ機能します。 ソリューション エクスプローラーの Python プロジェクトによって処理されますが、ソリューション エクスプローラーのフォルダー ビューの表示中はメッセージを受け取るプロジェクトがないため、この制限が存在します。 今後のリリースでこの制限が解消され、フォルダー ビューのサポート全般が改善される可能性があります。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
 ### <a name="error-loading-template"></a>テンプレートの読み込みエラー
 
-一部のテンプレートの `cookiecutter.json` 内で、ブール型などの無効なデータ型が使用されている場合があります。 これはテンプレートの作成者に報告する必要があります。 テンプレート情報ウィンドウにある **[問題]** リンクをクリックしてください。
+一部のテンプレートの `cookiecutter.json` 内で、ブール型などの無効なデータ型が使用されている場合があります。 このような場合は、[テンプレート情報] ウィンドウの **[問題]** リンクを選択してテンプレート作成者に報告してください。
 
 ### <a name="hook-script-failed"></a>フック スクリプトの失敗
 
@@ -220,7 +207,7 @@ Cookiecutter には、ファイルの生成後に任意の Python コードを�
 
 ### <a name="hook-script-not-supported-on-windows"></a>Windows でサポートされていないフック スクリプト
 
-事後スクリプトが `.sh` の場合、ご使用の Windows コンピューター上のアプリケーションへの関連付けができない場合があります。 互換性のあるアプリケーションを Windows ストアで見つけるように求める Windows ダイアログがポップ アップ表示される可能性があります。
+事後スクリプトが `.sh` の場合、ご使用の Windows コンピューター上のアプリケーションへの関連付けができない場合があります。 互換性のあるアプリケーションを Windows ストアで見つけるように求める Windows ダイアログが表示される可能性があります。
 
 ### <a name="templates-with-known-issues"></a>既知の問題があるテンプレート
 
@@ -237,7 +224,7 @@ Cookiecutter には、ファイルの生成後に任意の Python コードを�
 実行エラー
 
 - **iknite/cookiecutter-ansible-role** (事後フック スクリプトにコンソール入力が必要)
-- **benregn/cookiecutter-django-ansible** (jinja エラー)
+- **benregn/cookiecutter-django-ansible** (Jinja エラー)
 
 バッシュの使用 (致命的ではない)
 

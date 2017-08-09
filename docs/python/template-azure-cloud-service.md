@@ -1,12 +1,13 @@
 ---
 title: "Python 用 Azure クラウド サービス プロジェクト テンプレート | Microsoft Docs"
 ms.custom: 
-ms.date: 4/10/2017
+ms.date: 7/13/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a2ce82ee-8c73-419a-bbd2-4c3513fd394d
@@ -14,24 +15,11 @@ caps.latest.revision: 11
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: 5dd1c40c925327c9494e3a334cdf348692a4981d
-ms.lasthandoff: 04/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: b90240dbb25e45827cbe8cd728dfcff23b1a8884
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -48,21 +36,21 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
 1. クラウド サービス テンプレートを使用するために必要な [Azure .NET SDK for Visual Studio](https://www.visualstudio.com/vs/azure-tools/) をインストールします。
 1. Visual Studio で、**[ファイル] > [新規] > [プロジェクト...]** を選択し、"Azure Python" を検索して **[Azure クラウド サービス]** を一覧から選びます。
 
-    ![Python 用 Azure クラウド プロジェクト テンプレート](~/python/media/template-azure-cloud-project.png)
+    ![Python 用 Azure クラウド プロジェクト テンプレート](media/template-azure-cloud-project.png)
 
 1. 含める 1 つ以上のロールを選びます。 クラウド プロジェクトは、異なる言語で記述されたロールを結合できるため、アプリケーションの各部分を最も適した言語で簡単に記述できます。 このダイアログの完了後に新しいロールをプロジェクトに追加するには、ソリューション エクスプローラーで **[ロール]** を右クリックし、**[追加]** の下で項目の 1 つを選びます。
 
-    ![Azure クラウド プロジェクト テンプレートでのロールの追加](~/python/media/template-azure-cloud-service-project-wizard.png)
+    ![Azure クラウド プロジェクト テンプレートでのロールの追加](media/template-azure-cloud-service-project-wizard.png)
 
 1. 個々のロール プロジェクトが作成されるときに、Django、Bottle、Flask フレームワークなどの追加の Python パッケージの 1 つを使用するロールを選んだ場合は、これらをインストールするように求めるプロンプトが表示されることがあります。
 
-1. プロジェクトに新しいロールを追加すると、構成手順がいくつか表示されます。 これらは通常必要ありませんが、プロジェクトの将来のカスタマイズに役立つ場合があります。 同時に複数のロールを追加する場合は、最後のロールについての説明のみ開いたままになります。 ただし、他のロールの手順とトラブルシューティングのヒントは、ロールの ルートまたは `bin` フォルダーにあるそれぞれの `readme.mht` ファイルで参照できます。
+1. プロジェクトに新しいロールを追加すると、構成手順がいくつか表示されます。 構成の変更は通常必要ありませんが、プロジェクトの将来のカスタマイズに役立つ場合があります。 同時に複数のロールを追加する場合は、最後のロールについての説明のみ開いたままになります。 ただし、他のロールの手順とトラブルシューティングのヒントは、ロールの ルートまたは `bin` フォルダーにあるそれぞれの `readme.mht` ファイルで参照できます。
 
 1. プロジェクトの `bin` フォルダーには、Python のインストール、プロジェクトの [requirements.txt](#dependencies) ファイル、必要な場合に IIS の設定など、リモート仮想マシンの構成に使用する 1 つまたは 2 つの PowerShell スクリプトも含まれています。 デプロイでの必要に応じてこれらのファイルを編集できますが、最も一般的なオプションは他の方法で管理できます (下の「[ロールのデプロイを構成する](#configuring-role-deployment)」をご覧ください)。 これらのファイルが使用可能でない場合はレガシ構成スクリプトが代わりに使用されるため、これらのファイルの削除はお勧めしません。
 
-    ![worker ロールのサポート ファイル](~/python/media/template-azure-cloud-service-worker-role-support-files.png)
+    ![worker ロールのサポート ファイル](media/template-azure-cloud-service-worker-role-support-files.png)
 
-    これらの構成スクリプトを新しいプロジェクトに追加するには、プロジェクトを右クリックし、**[追加] > [新しい項目...]** を選択し、**[Web Role Support Files (Web ロールのサポート ファイル)]** または **[Worker Role Support Files (worker ロールのサポート ファイル)]** のいずれかを選択します。
+    これらの構成スクリプトを新しいプロジェクトに追加するには、プロジェクトを右クリックし、**[追加] > [新しい項目...]** を選び、**[Web ロール サポート ファイル]** または **[worker ロール サポート ファイル]** のいずれかを選びます。
    
 
 ## <a name="configuring-role-deployment"></a>ロールのデプロイを構成する
@@ -96,18 +84,18 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
 
 発行プロセスには 2 つのフェーズが含まれます。 まず、Visual Studio で、クラウド サービスのすべてのロールを含む 1 つのパッケージを作成します。 このパッケージは Azure にデプロイされるもので、ロールごとに 1 台以上の仮想マシンを初期化し、ソースをデプロイします。
 
-各仮想マシンがアクティブになると、`ConfigureCloudService.ps1` スクリプトを実行し、すべての従属物をインストールします。 既定では、このスクリプトは Python の最新バージョンを [nuget](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22) からインストールし、`requirements.txt` ファイルで指定されたパッケージをインストールします。 
+各仮想マシンがアクティブになると、`ConfigureCloudService.ps1` スクリプトを実行し、すべての従属物をインストールします。 既定では、このスクリプトは Python の最新バージョンを [NuGet](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22) からインストールし、`requirements.txt` ファイルで指定されたパッケージをインストールします。 
 
 最後に、worker ロールは Python スクリプトの実行を開始する `LaunchWorker.ps1` を実行します。Web ロールは IIS を初期化し、Web 要求の処理を開始します。
 
 
 ## <a name="dependencies"></a>依存関係
 
-クラウド サービスでは、`ConfigureCloudService.ps1` スクリプトは `pip` を使用して Python の従属物のセットをインストールします。 これらは、`requirements.txt` という名前のファイルで指定する必要があります (`ConfigureCloudService.ps1` を変更することでカスタマイズできます)。 ファイルは初期化の一部として `pip install -r requirements.txt` で実行されます。
+クラウド サービスでは、`ConfigureCloudService.ps1` スクリプトは `pip` を使用して Python の従属物のセットをインストールします。 依存関係は、`requirements.txt` という名前のファイルで指定する必要があります (`ConfigureCloudService.ps1` を変更することでカスタマイズできます)。 ファイルは初期化の一部として `pip install -r requirements.txt` で実行されます。
 
 クラウド サービス インスタンスには C コンパイラが含まれていないため、C の拡張子を持つすべてのライブラリはコンパイル済みのバイナリを提供する必要があります。
 
-pip とその従属物に加えて `requirements.txt` 内のパッケージが自動的にダウンロードされ、課金対象の帯域幅の使用としてカウントされる可能性があります。 `requirements.txt` ファイルの管理について詳しくは、「[Managing required packages](python-environments.md#managing-required-packages)」(必要なパッケージを管理する) をご覧ください。
+pip とその従属物に加えて `requirements.txt` 内のパッケージが自動的にダウンロードされ、課金対象の帯域幅の使用としてカウントされる可能性があります。 `requirements.txt` ファイルの管理について詳しくは、「[必要なパッケージの管理](python-environments.md#managing-required-packages)」をご覧ください。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
@@ -121,5 +109,5 @@ pip とその従属物に加えて `requirements.txt` 内のパッケージが�
 - Python プロジェクトに、すべての従属物 (またはホイール ファイルのコレクション) を一覧する `requirements.txt` ファイルが含まれること。
 - クラウド サービスでリモート デスクトップを有効にし、ログ ファイルを調査します。
 - `ConfigureCloudService.ps1` と `LaunchWorker.ps1` のログがリモート マシン上の `C:\Resources\Directory\%RoleId%.DiagnosticStore\LogFiles` フォルダーに格納されていること。
-- Web ロールが `web.config` に構成されているパス (`WSGI_LOG` appSetting のパス) に追加のログを書き込めること。 Rost 標準 IIS または FastCGI ロギングも動作すること。
+- Web ロールが `web.config` に構成されているパス (`WSGI_LOG` appSetting のパス) に追加のログを書き込めること。 ほとんどの標準的な IIS または FastCGI ロギングも動作すること。
 - 現在、`LaunchWorker.ps1.log` ファイルは Python の worker ロールによって表示される出力またはエラーを表示する唯一の方法です。

@@ -26,11 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: e59263c352084107d9849ab656b8b7d034337c53
+ms.translationtype: HT
+ms.sourcegitcommit: 359e1eb5df8f19774d352ace631802367b6dd8c9
+ms.openlocfilehash: 2a58b84403189d824494af85bc732a1b8cf3d0b6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing についてよく寄せられる質問
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/13/2017
 
 **回答:**
 
-現在、Live Unit Testing は .NET Core では動作しません。 将来的にこのサポートを追加するための作業を行っています。 
+はい。 Live Unit Testing は、.NET Core および .NET Framework で動作します。 .NET Core のサポートは、Visual Studio 2017 バージョン 15.3 プレビューで最近追加されました。 
 
 ## <a name="why-doesnt-live-unit-testing-work-when-i-turn-it-on"></a>Live Unit Testing を有効にしても動作しないのはなぜですか? 
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/13/2017
 
 - ソリューションのプロジェクトによって参照されている NuGet パッケージが復元されていない、Live Unit Testing は動作しません。 Live Unit Testing を有効にする前に、ソリューションの明示的なビルドを行うか、またはソリューションで NuGet パッケージを復元することにより、この問題は解決するはずです。 
 
-- MSTest ベースのテストをプロジェクトで使っている場合、`Microsoft.VisualStudio.QualityTools.UnitTestFramework` への参照を削除し、最新の MSTest NuGet パッケージ `MSTest.TestAdapter` (1.1.4-preview 以降のバージョンが必要) および `MSTest.TestFramework` (1.0.5-preview 以降のバージョンが必要) への参照を追加してあることを確認します。 詳しくは、「[Visual Studio 2017 での Live Unit Testing](live-unit-testing.md#supported-test-frameworks)」トピックの「サポートされるテスト フレームワーク」セクションをご覧ください。
+- MSTest ベースのテストをプロジェクトで使っている場合、`Microsoft.VisualStudio.QualityTools.UnitTestFramework` への参照を削除し、最新の MSTest NuGet パッケージ `MSTest.TestAdapter` (1.1.11 以降のバージョンが必要) および `MSTest.TestFramework` (1.1.11 以降のバージョンが必要) への参照を追加してあることを確認します。 詳しくは、「[Visual Studio 2017 での Live Unit Testing](live-unit-testing.md#supported-test-frameworks)」トピックの「サポートされるテスト フレームワーク」セクションをご覧ください。
  
 - ソリューションの少なくとも 1 つのプロジェクトに、NuGet の参照、または xUnit、NUnit、MSTest のいずれかのテスト フレームワークへの直接参照が存在する必要があります。 このプロジェクトは、対応する Visual Studio テスト アダプター NuGet パッケージを参照する必要もあります。 Visual Studio テスト アダプターは、`.runsettings` ファイルから参照することもできます。 `.runsettings` ファイルには、次のようなエントリが必要です。 
 
@@ -239,3 +239,4 @@ Live Unit Testing は、ソース ファイルが変更されたことを検出�
 
 [ライブ単体テスト](live-unit-testing.md)
  
+

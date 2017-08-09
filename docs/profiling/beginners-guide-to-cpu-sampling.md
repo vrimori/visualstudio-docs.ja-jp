@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: ddd52c1af0a164235de2e5055896e020dc8715c3
+ms.translationtype: HT
+ms.sourcegitcommit: 5c28e68b89f6583dc35a91b275693c11e0259dfd
+ms.openlocfilehash: 251b00c479c3853ba4fc00521f3e4cac74a93d27
 ms.contentlocale: ja-jp
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 07/13/2017
 
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>CPU サンプリングの初心者向けガイド
@@ -90,7 +90,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
   
  図中の番号は、前に示した各手順に対応しています。  
   
- ![サンプリングの概要レポート ビュー](~/profiling/media/summary_sampling.png "Summary_Sampling")  
+ ![サンプリングの概要レポート ビュー](../profiling/media/summary_sampling.png "Summary_Sampling")  
   
 #### <a name="to-analyze-sampling-data"></a>サンプリング データを分析するには  
   
@@ -139,9 +139,9 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
   
 4.  セッションを再実行すると、そのセッションに対応する別のデータ ファイルが、**パフォーマンス エクスプローラー**の **[レポート]** フォルダーに追加されます。 前のプロファイリング データと新しいプロファイリング データの両方を選択して右クリックし、**[パフォーマンス レポートの比較]** をクリックします。  
   
-     新しいレポート ウィンドウが開き、比較の結果が表示されます。 比較ビューの使用方法の詳細については、「[方法: パフォーマンス データ ファイルを比較する](../profiling/how-to-compare-performance-data-files.md)」を参照してください。  
+     新しいレポート ウィンドウが開き、比較の結果が表示されます。 比較ビューの使用方法の詳細については、「[方法: パフォーマンス データ ファイルを比較する](../profiling/how-to-compare-performance-data-files.md)」を参照してください。
   
 ## <a name="see-also"></a>関連項目  
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)   
  [はじめに](../profiling/getting-started-with-performance-tools.md)   
- [概要](../profiling/overviews-performance-tools.md)
+ [概要](../profiling/overviews-performance-tools.md) [Visual Studio のプロファイル](../profiling/index.md) [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b2308ef41ea8068c153d286f58dcf8ac4c581ddd
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: eefa071731dd6cd6a681edd78c22d345e6b0f799
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="analyze-memory-usage"></a>メモリ使用量の分析
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/13/2017
  さらに、デバッガーの外部のメモリ ツールも使用できます。 「 [Memory Usage without Debugging](../profiling/memory-usage-without-debugging2.md)」を参照してください。  
   
 > [!NOTE]
->  **カスタム アロケーター サポート** ネイティブ メモリ プロファイラーは、実行時に生成された割り当て [ETW](https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803\(v=vs.85\).aspx) イベント データを収集して機能します。  CRT および Windows SDK のアロケーターには、割り当てデータをキャプチャできるように、ソース レベルで注釈が付けられています。  独自のアロケーターを作成する場合、新しく割り当てられたヒープ メモリへのポインターを返すすべての関数は、[__declspec](/cpp/cpp/declspec)(アロケーター) で修飾できます。myMalloc での例を次に示します。  
+>  **カスタム アロケーター サポート** ネイティブ メモリ プロファイラーは、実行時に生成された割り当て [ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) イベント データを収集して機能します。  CRT および Windows SDK のアロケーターには、割り当てデータをキャプチャできるように、ソース レベルで注釈が付けられています。  独自のアロケーターを作成する場合、新しく割り当てられたヒープ メモリへのポインターを返すすべての関数は、[__declspec](/cpp/cpp/declspec)(アロケーター) で修飾できます。myMalloc での例を次に示します。  
 >   
 >  `__declspec(allocator) void* myMalloc(size_t size)` 
 
@@ -70,24 +70,24 @@ ms.lasthandoff: 05/13/2017
 
 4.  ツールバーにある **[ツールの選択]** の設定で、**[メモリ使用量]** を選択します。
 
-     ![診断ツールを表示する](~/profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
+     ![診断ツールを表示する](../profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
 
 5.  **[デバッグ]、[デバッグの開始]** の順にクリックします (あるいは、ツール バーの **[開始]** をクリックするか、**F5** を押します)。
 
      アプリケーションが読み込みを完了すると、診断ツールの概要ビューが表示されます。
 
-     ![診断ツールの概要タブ](~/profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
+     ![診断ツールの概要タブ](../profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
 
      > [!NOTE]
      >  メモリ データの収集はネイティブ アプリや混在モードのアプリのパフォーマンスに影響する可能性があるため、既定でメモリのスナップショットは無効になっています。 ネイティブ アプリや混在モードのアプリのスナップショットを有効にするには、デバッグ セッションを開始します (ショートカット キー: **F5**)。 **[診断ツール]** ウィンドウが表示されたら、[メモリ使用量] タブを選択して、**[ヒープのプロファイル]** を選択します。  
      >   
-     >  ![スナップショットを有効にする](~/profiling/media/dbgdiag_mem_mixedtoolbar_enablesnapshot.png "DBGDIAG_MEM_MixedToolbar_EnableSnapshot")  
+     >  ![スナップショットを有効にする](../profiling/media/dbgdiag_mem_mixedtoolbar_enablesnapshot.png "DBGDIAG_MEM_MixedToolbar_EnableSnapshot")  
      >   
      >  デバッグを停止 (ショートカット キー: **Shift + F5**) してから再開します。  
 
 6.  デバッグ セッションの開始時にスナップショットを取得するには、**[メモリ使用量]** 概要ツールバーで **[スナップショットの取得]** を選択します。 (ここにもブレークポイントを設定すると役に立つ場合があります。)
 
-    ![スナップショットを取得する](~/profiling/media/dbgdiag_mem_mixedtoolbar_takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot") 
+    ![スナップショットを取得する](../profiling/media/dbgdiag_mem_mixedtoolbar_takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot") 
      
      > [!TIP]
      >  メモリ比較のベースラインを作成するには、デバッグ セッションの開始時に、スナップショットを取得することを検討します。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 05/13/2017
 ## <a name="analyze-memory-usage-data"></a>メモリ使用量データの分析
 メモリ使用量の概要テーブルの行には、デバッグ セッション中に取得したスナップショットが一覧表示され、より詳細なビューへのリンクが提供されています。
 
-![メモリの概要テーブル](~/profiling/media/dbgdiag_mem_summarytable.png "DBGDIAG_MEM_SummaryTable")
+![メモリの概要テーブル](../profiling/media/dbgdiag_mem_summarytable.png "DBGDIAG_MEM_SummaryTable")
 
  列の名前は、プロジェクトのプロパティで選択したデバッグ モード (.NET、ネイティブ、または混合 (.NET とネイティブの両方)) によって決まります。  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/13/2017
 
 メモリ使用量を分析するには、リンクを 1 つクリックして、メモリ使用量の詳細なレポートを開きます。  
 
--   現在のスナップショットと前のスナップショットの相違点の詳細を表示するには、矢印の左にある変更リンクを選択します (![メモリ使用量増加](~/profiling/media/prof-tour-mem-usage-up-arrow.png "メモリ使用量増加"))。 赤い矢印はメモリ使用量が増加したことを示し、緑の矢印は減少したことを示しています。
+-   現在のスナップショットと前のスナップショットの相違点の詳細を表示するには、矢印の左にある変更リンクを選択します (![メモリ使用量増加](../profiling/media/prof-tour-mem-usage-up-arrow.png "メモリ使用量増加"))。 赤い矢印はメモリ使用量が増加したことを示し、緑の矢印は減少したことを示しています。
 
     > [!TIP]
     >  より迅速にメモリの問題を識別するために、Diff レポートは、総数が最も増加したオブジェクト型の順 (**[オブジェクト (相違)]** 列の変更リンクをクリック) や、総ヒープ サイズが最も増加したオブジェクト型の順 (**[ヒープ サイズ (相違)]** 変更リンクをクリック) に並べ替えられています。
@@ -137,9 +137,9 @@ ms.lasthandoff: 05/13/2017
   
  **[参照される型]** ツリーには、上のウィンドウで選択されている型に保持されている参照が表示されます。  
   
- ![マネージ参照型のレポート ビュー](~/profiling/media/dbgdiag_mem_managedtypesreport_referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")  
+ ![マネージ参照型のレポート ビュー](../profiling/media/dbgdiag_mem_managedtypesreport_referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")  
   
- 上のウィンドウで選択した型のインスタンスを表示するには、![[インスタンス] アイコン](~/profiling/media/dbgdiag_mem_instanceicon.png "DBGDIAG_MEM_InstanceIcon") アイコンを選択します。  
+ 上のウィンドウで選択した型のインスタンスを表示するには、![[インスタンス] アイコン](../profiling/media/dbgdiag_mem_instanceicon.png "DBGDIAG_MEM_InstanceIcon") アイコンを選択します。  
   
  ![インスタンス ビュー](../profiling/media/dbgdiag_mem_managedtypesreport_instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 05/13/2017
   
  **[型ビュー]** には、スナップショットの型の数およびサイズが表示されます。  
   
--   選択した型のインスタンス アイコン (![[オブジェクト型] 列の [インスタンス] アイコン](~/profiling/media/dbg_mma_instancesicon.png "DBG_MMA_InstancesIcon")) を選択し、スナップショットの選択した型のオブジェクトに関する情報を表示します。  
+-   選択した型のインスタンス アイコン (![[オブジェクト型] 列の [インスタンス] アイコン](../profiling/media/dbg_mma_instancesicon.png "DBG_MMA_InstancesIcon")) を選択し、スナップショットの選択した型のオブジェクトに関する情報を表示します。  
   
      **[インスタンス]** ビューには、選択した型の各インスタンスが表示されます。 インスタンスを選択すると呼び出し履歴が表示され、その結果、 **[割り当て呼び出し履歴]** ウィンドウにそのインスタンスが作成されます。  
   
@@ -166,15 +166,15 @@ ms.lasthandoff: 05/13/2017
   
 -   **[診断ツール]** ウィンドウの **[メモリ使用量]** タブで、概要テーブルのセルにある変更リンクを選択します。  
   
-     ![変更 &#40;差分&#41; レポートの選択](~/profiling/media/dbgdiag_mem_choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
+     ![変更 &#40;差分&#41; レポートの選択](../profiling/media/dbgdiag_mem_choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
   
 -   マネージ レポート、もしくはネイティブ レポートの **[比較対象]** 一覧でスナップショットを選択します。  
   
-     ![比較対象の一覧からスナップショットを選択](~/profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
+     ![比較対象の一覧からスナップショットを選択](../profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
   
  変更レポートを実行すると、基本のスナップショット値と比較のスナップショットの差分を表示する列 ( **(Diff)**のマークが付けられる) が、基本レポートに追加されます。 ネイティブ型の差分レポート ビューは次のようになります。  
   
- ![ネイティブ型の差分ビュー](~/profiling/media/dbgdiag_mem_native_typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
+ ![ネイティブ型の差分ビュー](../profiling/media/dbgdiag_mem_native_typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
   
 ## <a name="blogs-and-videos"></a>ブログとビデオ  
  [Visual Studio 2015 の診断ツール [デバッガー] ウィンドウ](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015.aspx)  
@@ -184,3 +184,6 @@ ms.lasthandoff: 05/13/2017
  [Visual C++ ブログ: VS2015 プレビューでのネイティブ メモリ診断](http://blogs.msdn.com/b/vcblog/archive/2014/11/21/native-memory-diagnostics-in-vs2015-preview.aspx)  
   
  [Visual C++ ブログ: Visual Studio 2015 CTP のネイティブ メモリ診断ツール](http://blogs.msdn.com/b/vcblog/archive/2014/06/04/native-memory-diagnostic-tools-for-visual-studio-14-ctp1.aspx)
+
+## <a name="see-also"></a>関連項目
+ [Visual Studio のプロファイル](../profiling/index.md) [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

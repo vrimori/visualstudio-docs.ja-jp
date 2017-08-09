@@ -13,26 +13,11 @@ caps.latest.revision: 7
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7716a0e9249c67760ae7b31160dcae89b77b9ca7
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: b42e50dcfc4820b750c04085f1e881ee25f786f9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成
@@ -41,7 +26,7 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
 ##  <a name="Requirements"></a> 必要条件  
  このチュートリアルを完了させるための要件は次のとおりです。  
   
--   Visual Studio 2015 - WPF 開発をサポートするあらゆるバージョン。  
+-   Visual Studio 2017 または WPF 開発をサポートする任意のバージョン。  
   
 -   アクティブな Microsoft Azure アカウント。  
   
@@ -115,7 +100,7 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
   
      この XAML コードによって、番号、タイトル、および説明の各フィールドのプレース ホルダーの付いた再利用可能なレイアウトが作成されます。 これらのプレースホルダーは、実行時に次の図に示すテキストに置き換えることができます。  
   
-     ![QuickStartTask ユーザー コントロール](~/designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
+     ![QuickStartTask ユーザー コントロール](../designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
   
 6.  **ソリューション エクスプローラー**で、 **[QuickStartTask.xaml]** ノードを展開して **[QuickStartTask.xaml.cs]** ファイルまたは **[QuickStartTask.xaml.vb]** ファイルを開きます。  
   
@@ -302,7 +287,7 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
   
      この時点で、デザインは次の図のようになっているはずです。  
   
-     ![デザイナーの MainWindow](~/designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
+     ![デザイナーの MainWindow](../designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
   
     > [!NOTE]
     >  **[エラー一覧]** を開いている場合、次のいくつかの手順の実行中にエラーが表示される可能性があります。 心配には及びません。これらのエラーは、残りの手順を完了すれば表示されなくなります。  
@@ -572,7 +557,7 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
   
      次の図に示すように、2 つのエントリが **[Query and Update Data]** (データのクエリおよび更新) リストに追加されることに注意してください。  
   
-     ![TODO 項目が一覧に追加されます。](~/designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
+     ![TODO 項目が一覧に追加されます。](../designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
   
 4.  一覧の **[Do something else]** エントリのチェックボックスをオンにします。  
   
@@ -581,8 +566,8 @@ Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル �
 ## <a name="next-steps"></a>次の手順  
  Azure バックエンドを利用した、かなりシンプルな例の WPF デスクトップ アプリケーションの作成が完了しました。 もちろん、実際のアプリケーションははるかに複雑になる可能性がありますが、同じ基本的な概念が当てはまります。 「 [.NET Framework での WPF](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)」を参照してください。  
   
- ユーザー インターフェイスは、色、図形、グラフィックス、さらにアニメーションなどを追加することによって、視覚的により訴えかけるものにできます。 [Visual Studio および Blend for Visual Studio での XAML デザインに関する記事](../designers/designing-xaml-in-visual-studio.md)を参照してください。  
-  
+ ユーザー インターフェイスは、色、図形、グラフィックス、さらにアニメーションなどを追加することによって、視覚的により訴えかけるものにできます。 「[Visual Studio での XAML デザイナーを使用した UI の作成](creating-a-ui-by-using-xaml-designer-in-visual-studio.md)」および「[Blend for Visual Studio を使用して UI を作成する](creating-a-ui-by-using-blend-for-visual-studio.md)」をご覧ください。 ツールの比較については、「[Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)」をご覧ください。  
+
  Azure Mobile Services を使用して、既存の SQL データベースや他のデータ ソースに接続することができます。 「 [Mobile Services のドキュメント](http://azure.microsoft.com/en-us/services/app-service/mobile/)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
