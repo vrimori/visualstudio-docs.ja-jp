@@ -37,14 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 88f783331de62539614ea6d175039ccb5bf1b767
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: 029b5627cf8f7213dfe3bab233db01fe27aa6c49
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="generateresource-task"></a>GenerateResource タスク
-.txt ファイルおよび .resx (XML ベースのリソース形式) ファイルと共通言語ランタイムの .resources バイナリ ファイルとの間の変換を行います。.resources ファイルは、ランタイム バイナリ実行可能ファイルに埋め込んだり、サテライト アセンブリにコンパイルしたりできます。 このタスクは通常、.txt ファイルまたは .resx ファイルを .resource ファイルに変換するために使用します。 `GenerateResource` タスクの機能は [resgen.exe](http://msdn.microsoft.com/Library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) の機能に似ています。  
+.txt ファイルおよび .resx (XML ベースのリソース形式) ファイルと共通言語ランタイムの .resources バイナリ ファイルとの間の変換を行います。.resources ファイルは、ランタイム バイナリ実行可能ファイルに埋め込んだり、サテライト アセンブリにコンパイルしたりできます。 このタスクは通常、.txt ファイルまたは .resx ファイルを .resource ファイルに変換するために使用します。 `GenerateResource` タスクの機能は [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) の機能に似ています。  
   
 ## <a name="parameters"></a>パラメーター  
  `GenerateResource` タスクのパラメーターの説明を次の表に示します。  
@@ -71,17 +72,17 @@ ms.lasthandoff: 02/22/2017
 |`StronglyTypedNamespace`|省略可能な `String` 型のパラメーターです。<br /><br /> 生成される厳密な型のリソースのクラス ソースで使用する名前空間を指定します。 このパラメーターを指定しなかった場合には、厳密な型のリソースはすべてグローバル名前空間のリソースになります。|  
 |`TLogReadFiles`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の読み取り専用パラメーターです。<br /><br /> 読み取り追跡ログを表す項目の配列を取得します。|  
 |`TLogWriteFiles`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の読み取り専用パラメーターです。<br /><br /> 書き込み追跡ログを表す項目の配列を取得します。|  
-|`ToolArchitecture`|省略可能な [String](assetId:///String?qualifyHint=False&autoUpgrade=True) 型のパラメーターです。<br /><br /> Tracker.exe を使用して ResGen.exe を実行する必要があるかどうかを判断するために使用されます。<br /><br /> <xref:Microsoft.Build.Utilities.ExecutableType> 列挙体のメンバーが解析できる必要があります。 `String.Empty` の場合は、ヒューリスティックを使用して既定のアーキテクチャを判断します。 Microsoft.Build.Utilities.ExecutableType 列挙体のメンバーが解析できる必要があります。|  
-|`TrackerFrameworkPath`|省略可能な assetId:///String?qualifyHint=False&autoUpgrade=True 型のパラメーターです。<br /><br /> FileTracker.dll が含まれる適切な .NET Framework の場所のパスを指定します。<br /><br /> 設定した場合は、渡される FileTracker.dll のビットが、使用される ResGen.exe のビットと一致していることをユーザーが確認する必要があります。 設定しない場合は、タスクによって現在の .NET Framework のバージョンに基づいて適切な場所が判断されます。|  
-|`TrackerLogDirectory`|省略可能な assetId:///String?qualifyHint=False&autoUpgrade=True 型のパラメーターです。<br /><br /> このタスクの実行による追跡ログが配置される中間ディレクトリを指定します。|  
-|`TrackerSdkPath`|省略可能な assetId:///String?qualifyHint=False&autoUpgrade=True 型のパラメーターです。<br /><br /> Tracker.exe が含まれる適切な Windows SDK の場所のパスを指定します。<br /><br /> 設定した場合は、渡される Tracker.exe のビットが、使用される ResGen.exe のビットと一致していることをユーザーが確認する必要があります。 設定しない場合は、タスクによって現在の Windows SDK に基づいて適切な場所が判断されます。|  
-|`TrackFileAccess`|省略可能な [Boolean](assetId:///Boolean?qualifyHint=False&autoUpgrade=True) 型のパラメーターです。<br /><br /> true の場合、入力ファイルのディレクトリを使用して相対ファイル パスが解決されます。|  
+|`ToolArchitecture`|省略可能な <xref:System.String?displayProperty=fullName> 型のパラメーターです。<br /><br /> Tracker.exe を使用して ResGen.exe を実行する必要があるかどうかを判断するために使用されます。<br /><br /> <xref:Microsoft.Build.Utilities.ExecutableType> 列挙体のメンバーが解析できる必要があります。 `String.Empty` の場合は、ヒューリスティックを使用して既定のアーキテクチャを判断します。 Microsoft.Build.Utilities.ExecutableType 列挙体のメンバーが解析できる必要があります。|  
+|`TrackerFrameworkPath`|省略可能な `String` 型のパラメーターです。<br /><br /> FileTracker.dll が含まれる適切な .NET Framework の場所のパスを指定します。<br /><br /> 設定した場合は、渡される FileTracker.dll のビットが、使用される ResGen.exe のビットと一致していることをユーザーが確認する必要があります。 設定しない場合は、タスクによって現在の .NET Framework のバージョンに基づいて適切な場所が判断されます。|  
+|`TrackerLogDirectory`|省略可能な `String` 型のパラメーターです。<br /><br /> このタスクの実行による追跡ログが配置される中間ディレクトリを指定します。|  
+|`TrackerSdkPath`|省略可能な `String` 型のパラメーターです。<br /><br /> Tracker.exe が含まれる適切な Windows SDK の場所のパスを指定します。<br /><br /> 設定した場合は、渡される Tracker.exe のビットが、使用される ResGen.exe のビットと一致していることをユーザーが確認する必要があります。 設定しない場合は、タスクによって現在の Windows SDK に基づいて適切な場所が判断されます。|  
+|`TrackFileAccess`|省略可能な <xref:System.Boolean> 型のパラメーターです。<br /><br /> true の場合、入力ファイルのディレクトリを使用して相対ファイル パスが解決されます。|  
 |`UseSourcePath`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合は、入力ファイルのディレクトリを使用して相対ファイル パスを解決することを指定します。|  
   
 ## <a name="remarks"></a>コメント  
  .resx ファイルには、他のリソース ファイルへのリンクを含めることができるため、.resx ファイルと .resource ファイルのタイムスタンプを比較するだけでは、出力が最新であるかどうかを確認できません。 `GenerateResource` タスクを使用すると、.resx ファイル内のリンクをたどり、リンク先のファイルのタイムスタンプも確認できます。 したがって、`GenerateResource` タスクを持つターゲットについては、`Inputs` 属性と `Outputs` 属性の使用は基本的に避けてください。実行する必要のあるターゲットがスキップされてしまう可能性があります。  
   
- このタスクでは、上記のパラメーター以外に、<xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承し、このクラス自体は <xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加パラメーター一覧とそれらの説明については、「[TaskExtension Base Class (TaskExtension 基底クラス)](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、 <xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
  MSBuild 4.0 を使用して .NET 3.5 プロジェクトをターゲットにしている場合、x86 リソースでビルドが失敗することがあります。 この問題を回避するために、ターゲットを AnyCPU アセンブリとしてビルドできます。  
   

@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1a51a8dbf28be35febf4a0954a997e542ffd0f09
-ms.openlocfilehash: a05e0509ec092f810e0990fbc838707d126595e1
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: d705cd8146a0ccb43be54e2d825387699e157379
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>方法: 同時実行ビジュアライザー マーカー SDK を使用する
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/19/2017
   
 4.  メニュー バーで、**[分析]**、**[同時実行ビジュアライザー]**、**[現在のプロジェクトで開始]** の順に選択して、アプリを実行し、同時実行ビジュアライザーを表示します。 次の図は、同時実行ビジュアライザーに表示されている 3 つのスパンと 3 つのマーカーを示します。  
   
-     ![3 つのマーカーと警告がある同時実行ビジュアライザー](~/profiling/media/cvmarkersnative.png "CvMarkersNative")  
+     ![3 つのマーカーと警告がある同時実行ビジュアライザー](../profiling/media/cvmarkersnative.png "CvMarkersNative")  
   
 5.  マーカー系列の文字列名を指定した `marker_series` のコンストラクターを呼び出して追加のカスタム マーカー系列を作成するコードを追加します。  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 05/19/2017
     using Microsoft.ConcurrencyVisualizer.Instrumentation;  
     ```  
   
-3.  既定のマーカー系列に 3 つのスパンを作成して各スパンにフラグ、メッセージ、警告を 1 つずつ記述するためのコードを追加します。 <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Span> オブジェクトを作成するには、[EnterSpan](assetId:///EnterSpan?qualifyHint=False&autoUpgrade=True) メソッドを呼び出します。 既定の系列に書き込むには、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers> クラスの静的な write メソッドを使用します。  
+3.  既定のマーカー系列に 3 つのスパンを作成して各スパンにフラグ、メッセージ、警告を 1 つずつ記述するためのコードを追加します。 <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Span> オブジェクトを作成するには、`EnterSpan` メソッドを呼び出します。 既定の系列に書き込むには、<xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers> クラスの静的な write メソッドを使用します。  
   
     ```VB  
   

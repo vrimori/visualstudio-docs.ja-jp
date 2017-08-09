@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 2a80b4c0ec826a43e768fc4f017c30536bb7c36a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 2f36e0635b2cc3bcb3b17f8e3ce26ebc28b9c243
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication タスク
@@ -95,5 +96,5 @@ ms.lasthandoff: 02/22/2017
  [Task Reference (タスク リファレンス)](../msbuild/wpf-msbuild-task-reference.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
- [WPF アプリケーション (WPF) のビルド](http://msdn.microsoft.com/Library/a58696fd-bdad-4b55-9759-136dfdf8b91c)   
- [WPF XAML ブラウザー アプリケーションの概要](http://msdn.microsoft.com/Library/3a7a86a8-75d5-4898-96b9-73da151e5e16)
+ [WPF アプリケーション (WPF) のビルド](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)   
+ [WPF XAML ブラウザー アプリケーションの概要](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)

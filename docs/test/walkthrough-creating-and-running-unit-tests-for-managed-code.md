@@ -34,10 +34,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a00b80092a44190d626b93b0ecc5689bafd1a4e3
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: 8b60481a9895e818773273cecbf89212f557d620
 ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>チュートリアル: マネージ コードに対する単体テストの作成と実行
@@ -85,7 +85,7 @@ ms.lasthandoff: 02/22/2017
   
 4.  アプリケーションの種類の一覧の **[クラス ライブラリ]**をクリックします。  
   
-5.  **[名前]** ボックスに `Bank` と入力して、**[OK]** をクリックします。  
+5.  In the **[名前]** ボックスに「 `Bank` をポイントし、 **[OK]**」をご覧ください。  
   
     > [!NOTE]
     >  "Bank" という名前が既に使用されている場合は、別のプロジェクト名を選択します。  
@@ -125,7 +125,7 @@ public void Debit(double amount)
 ```  
   
 ##  <a name="BKMK_Create_a_unit_test_project"></a> 単体テスト プロジェクトを作成する  
- **必要条件**: 「[チュートリアルを準備する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)」の手順に従います。  
+ **必要条件**: 「 [Prepare the walkthrough](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)」の手順に従います。  
   
 #### <a name="to-create-a-unit-test-project"></a>単体テスト プロジェクトを作成するには  
   
@@ -194,7 +194,7 @@ using BankAccountNS;
   
  テスト対象のメソッドを分析したところ、チェックする必要のある動作が 3 つ以上あると判断されます。  
   
-1.  引き落とし金額が残高を上回る場合、このメソッドは [ArgumentOutOfRangeException](assetId:///ArgumentOutOfRangeException?qualifyHint=False&autoUpgrade=True) をスローします。  
+1.  引き落とし金額が残高を上回る場合、このメソッドは <xref:System.ArgumentOutOfRangeException> をスローします。  
   
 2.  また、引き落とし金額が 0 未満の場合も、このメソッドは `ArgumentOutOfRangeException` をスローします。  
   
@@ -254,7 +254,7 @@ using BankAccountNS;
 ##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> コードを修正してテストを再実行する  
  **テスト結果を分析する**  
   
- テスト結果には失敗を示すメッセージが含まれています。 `AreEquals` メソッドについて、メッセージには、想定された事項 (**Expected\<*XXX*> **パラメーター) および実際に受け取られた事項 (**Actual\<*YYY*>** パラメーター) が示されます。 ここでは、残高が期首残高よりも減少していることを想定していましたが、逆に、引き出し額の分が増加していました。  
+ テスト結果には失敗を示すメッセージが含まれています。 `AreEquals` メソッドについて、メッセージには、想定された事項 (**Expected\<*XXX*> **パラメーター) および実際に受け取られた事項 (**Actual\<**>** パラメーター) が示されます。 ここでは、残高が期首残高よりも減少していることを想定していましたが、逆に、引き出し額の分が増加していました。  
   
  Debit コードの再検査では、単体テストでバグを検出できたことが示されます。 引き出し額は、減算する必要があるときに口座残高に追加されます。  
   
@@ -276,7 +276,7 @@ m_balance -= amount;
   
  テスト エクスプローラーで、 **[すべて実行]** をクリックしてテストを再実行します。 赤色/緑色のステータス バーは緑色になり、テストは **[成功したテスト]** グループに移動します。  
   
-##  <a name="BKMK_Use_unit_tests_to_improve_your_code"></a>単体テストを使用してコードを改良する  
+##  <a name="BKMK_Use_unit_tests_to_improve_your_code"></a> 単体テストを使用してコードを改良する  
  このセクションでは、分析の反復処理、単体テストの進展、およびリファクタリングが、実稼働のコードの堅牢性と有効性を高めるうえでどのように役立つかを説明します。  
   
  **問題を分析する**  
@@ -318,7 +318,7 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
   
 3.  `debitAmount` を、残高を上回る数値に設定します。  
   
- **テストを実行する**  
+ **テストを実行**  
   
  `debitAmount` を異なる値にして 2 つのメソッドを実行すると、テストで残りのケースが適切に処理されることが示されます。 3 つのすべてのテストを実行すると、元の分析のすべてのケースが正しく処理されることを確認できます。  
   

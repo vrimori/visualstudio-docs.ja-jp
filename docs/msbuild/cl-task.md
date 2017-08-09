@@ -40,10 +40,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: bde2b08fb3cc1b183d224ab3282e44f21a094403
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 0e6777ed52cb1695c90ae42d7795de57f9c62169
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="cl-task"></a>CL タスク
@@ -366,7 +367,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合は、Microsoft の拡張機能 ([/Ze](/cpp/build/reference/za-ze-disable-language-extensions)) を使用する [for](/cpp/cpp/for-statement-cpp) ループの標準 C++ 動作が実装されます。  
   
-     詳細については、「[/Zc:forScope (for ループのスコープの強制準拠)](http://msdn.microsoft.com/Library/3031f02d-3b14-4ad0-869e-22b0110c3aed)」を参照してください。  
+     詳細については、「[/Zc:forScope (for ループのスコープの強制準拠)](/cpp/build/reference/zc-forscope-force-conformance-in-for-loop-scope)」を参照してください。  
   
 -   **ForcedIncludeFiles**  
   
@@ -714,7 +715,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、`wchar_t` 型はネイティブ型として扱われます。  
   
-     「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](http://msdn.microsoft.com/Library/b0de5a84-da72-4e5a-9a4e-541099f939e0)」を参照してください。  
+     「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](/cpp/build/reference/zc-wchar-t-wchar-t-is-native-type)」を参照してください。  
   
 -   **UndefineAllPreprocessorDefinitions**  
   
@@ -768,7 +769,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **EnableAllWarnings** - **/Wall**  
   
-     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/cpp/build/reference/compiler-option-warning-level)」の **/W***n* オプションに関する記述を参照してください。  
+     詳しくは、「[/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warning Level)](/cpp/build/reference/compiler-option-warning-level)」(/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告レベル)) の **/W***n* オプションをご覧ください。  
   
 -   **WholeProgramOptimization**  
   

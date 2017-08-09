@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 203e1e27cc892e96b103fc6cb22a73672a8e16af
-ms.openlocfilehash: f351952a256679ec2d6c9dc2daa5288ca7214ad0
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: c52ed7c7e6de33d10d2a653a1072766aa9fb8023
 ms.contentlocale: ja-jp
-ms.lasthandoff: 03/01/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="property-functions"></a>プロパティ関数
@@ -99,6 +99,10 @@ ms.lasthandoff: 03/01/2017
 -   System.IO.Path  
 
 -   System.Math  
+
+-   System.Runtime.InteropServices.OSPlatform
+
+-   System.Runtime.InteropServices.RuntimeInformation
 
 -   System.UInt16  
 
@@ -196,13 +200,22 @@ ms.lasthandoff: 03/01/2017
 |int BitwiseAnd(int first, int second)|1 番目と 2 番目 (first & second) でビットごとの `AND` を実行します。|  
 |int BitwiseXor(int first, int second)|1 番目と 2 番目 (first ^ second) でビットごとの `XOR` を実行します。|  
 |int BitwiseNot(int first)|ビットごとの `NOT` (~first) を実行します。|  
+|bool IsOsPlatform(string platformString)|現在の OS プラットフォームが `platformString` かどうかを指定します。 `platformString` は `OSPlatform` のメンバーである必要があります。|
+|bool IsOSUnixLike|現在の OS が Unix システムの場合は true です。|
+|string NormalizePath(params string[] path)|指定されたパスの正規化された完全なパスを取得し、現在のオペレーティング システムの適切なディレクトリ区切り文字が含まれていることを確認します。|
+|string NormalizeDirectory(params string[] path)|指定されたディレクトリの正規化された完全なパスを取得し、現在のオペレーティング システムの適切なディレクトリ区切り文字が含まれていて、末尾にスラッシュがあることを確認します。|
+|string EnsureTrailingSlash(string path)|指定されたパスの末尾にスラッシュがない場合は、追加します。 パスが空の文字列の場合は変更されません。|
+|string GetPathOfFileAbove(string file, string startingDirectory)|現在のビルド ファイルの場所に基づいて、または `startingDirectory` に基づいて (指定されている場合)、ファイルを検索します。|
+|GetDirectoryNameOfFileAbove(string startingDirectory, string fileName)|指定されたディレクトリまたはそのディレクトリの上のディレクトリ構造内の場所でファイルを見つけます。|
+|string MakeRelative(string basePath, string path)|`path` を `basePath` に対して相対的にします。 `basePath` は絶対ディレクトリである必要があります。 `path` を相対にできない場合、verbatim が返されます。 `Uri.MakeRelativeUri` と似ています。|
+|string ValueOrDefault(string conditionValue, string defaultValue)|パラメーター 'conditionValue' が空の場合にのみ、パラメーター 'defaultValue' に文字列を返します。それ以外の場合は、値 conditionValue を返します。|
 
 ##  <a name="nested-property-functions"></a>入れ子になったプロパティ関数  
  次の例が示すように、プロパティ関数を組み合わせてより複雑な関数を形成します。  
 
  `$([MSBuild]::BitwiseAnd(32, $([System.IO.File]::GetAttributes(tempFile))))`  
 
- この例では、`tempFile` というパスにより与えられたファイルの <xref:System.IO.FileAttributes>`Archive` ビット (32 または 0) の値が返されます。 列挙データ値はプロパティ関数内で名前によって表示できないことに注意してください。 代わりに数値 (32) を使用する必要があります。  
+ この例では、<xref:System.IO.FileAttributes> というパスにより与えられたファイルの `Archive``tempFile` ビット (32 または 0) の値が返されます。 列挙データ値はプロパティ関数内で名前によって表示できないことに注意してください。 代わりに数値 (32) を使用する必要があります。  
 
  入れ子になったプロパティ関数では、メタデータも表示される可能性があります。 詳細については、「[MSBuild バッチ](../msbuild/msbuild-batching.md)」をご覧ください。  
 

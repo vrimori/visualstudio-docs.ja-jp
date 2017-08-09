@@ -37,10 +37,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 47596188b7e415840ee45a97aff2076bd4d887bd
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: e55b81428aa7d54d8383955c67e206df919bb1d1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild コマンド ライン リファレンス
@@ -69,7 +69,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |/noautoresponse|/noautorsp|MSBuild.rsp ファイルが自動的に取り込まれないようにします。|  
 |/nodeReuse:`value`|/nr:`value`|MSBuild ノードの再利用を有効または無効にします。 次の値を指定できます。<br /><br /> -   **True**。 ビルドが完了した後もノードは維持され、後続のビルドでノードが再利用されます (既定値)。<br />-   **False**。 ビルドの完了後、ノードは維持されません。<br /><br /> ノードは実行中のプロジェクトに対応します。 **/maxcpucount** スイッチを含めた場合、複数のノードを同時に実行できます。|  
 |/nologo||著作権情報を表示しません。|  
-|/preprocess[:`filepath`]|/pp[:`filepath`]|ビルド中にインポートされるすべてのファイルをインライン展開することで、単一の集約されたプロジェクト ファイルを作成します。ファイルの境界にはマークが挿入されます。 このスイッチを使用して、インポートされるファイル、ファイルのインポート元、およびビルドに関連するファイルを簡単に特定できます。 このスイッチを使用した場合、プロジェクトはビルドされません。<br /><br /> `filepath` を指定した場合、集約されたプロジェクト ファイルがファイルに出力されます。 それ以外の場合は、出力がコンソール ウィンドウに表示されます。<br /><br /> `Import` 要素を使用してプロジェクト ファイルを他のプロジェクト ファイルに挿入する方法については、「[Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)」と「[方法: 複数のプロジェクト ファイルで同じターゲットを使用する](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)」を参照してください。|  
+|<a name="preprocess"></a> /preprocess[:`filepath`]|/pp[:`filepath`]|ビルド中にインポートされるすべてのファイルをインライン展開することで、単一の集約されたプロジェクト ファイルを作成します。ファイルの境界にはマークが挿入されます。 このスイッチを使用して、インポートされるファイル、ファイルのインポート元、およびビルドに関連するファイルを簡単に特定できます。 このスイッチを使用した場合、プロジェクトはビルドされません。<br /><br /> `filepath` を指定した場合、集約されたプロジェクト ファイルがファイルに出力されます。 それ以外の場合は、出力がコンソール ウィンドウに表示されます。<br /><br /> `Import` 要素を使用してプロジェクト ファイルを他のプロジェクト ファイルに挿入する方法については、「[Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)」と「[方法: 複数のプロジェクト ファイルで同じターゲットを使用する](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)」を参照してください。|  
 |/property:`name`=`value`|/p:`name`=`value`|指定したプロジェクト レベルのプロパティを設定またはオーバーライドします。`name` はプロパティ名、`value` はプロパティ値です。 各プロパティを個別に指定するか、次の例に示すようにセミコロンまたはコンマを使用して複数のプロパティを区切ります。<br /><br /> `/property:WarningLevel=2;OutDir=bin\Debug`|  
 |/target:`targets`|/t: `targets`|プロジェクト内で指定されたターゲットをビルドします。 各ターゲットを個別に指定するか、次の例に示すようにセミコロンまたはコンマを使用して複数のターゲットを区切ります。<br /><br /> `/target:Resources;Compile`<br /><br /> このスイッチを使用してターゲットを指定すると、これらのターゲットが実行され、プロジェクト ファイルの `DefaultTargets` 属性に指定されたターゲットは実行されません。 詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」と「[方法: 最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)」を参照してください。<br /><br /> ターゲットとは、タスクのグループを表します。 詳細については、[ターゲット](../msbuild/msbuild-targets.md)に関する記事を参照してください。|  
 |/toolsversion:`version`|/tv:`version`|次の例に示すように、プロジェクトのビルドに使用するツールセットのバージョンを指定します: `/toolsversion:3.5`。<br /><br /> このスイッチを使用すると、プロジェクトをビルドし、「[Project 要素 (MSBuild)](../msbuild/project-element-msbuild.md)」で指定したバージョンとは異なるバージョンを指定できます。 詳細については、「[ToolsVersion 設定をオーバーライドする](../msbuild/overriding-toolsversion-settings.md)」を参照してください。<br /><br /> MSBuild 4.5 では、`version` の値として 2.0、3.5、4.0 を指定できます。 4.0 を指定した場合、`VisualStudioVersion` ビルド プロパティでは、使用するサブツールセットを指定します。 詳細については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」の「サブツールセット」のセクションを参照してください。<br /><br /> ツールセットは、アプリケーションのビルドで使用するタスク、ターゲット、およびツールで構成されます。 ツールには、csc.exe や vbc.exe などのコンパイラが含まれます。 ツールセットの詳細については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」、「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」、および「[マルチ ターゲットの概要](../msbuild/msbuild-multitargeting-overview.md)」を参照してください。 **注:**  ツールセットのバージョンは、ターゲット フレームワークのバージョン (ビルドするプロジェクトの実行対象となる .NET Framework のバージョン) と同じではありません。 詳細については、「[ターゲット フレームワークおよびターゲット プラットフォーム](../msbuild/msbuild-target-framework-and-target-platform.md)」を参照してください。|  
@@ -107,3 +107,4 @@ msbuild SlnFolders.sln /t:NotInSolutionfolder:Rebuild;NewFolder\InSolutionFolder
 ## <a name="see-also"></a>関連項目  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [Common MSBuild Project Properties (MSBuild プロジェクトの共通プロパティ)](../msbuild/common-msbuild-project-properties.md)
+

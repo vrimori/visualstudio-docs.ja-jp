@@ -1,54 +1,71 @@
 ---
-title: "WPF MSBuild Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "build support [WPF]"
-  - "MSBuild [WPF]"
+title: "WPF MSBuild リファレンス | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- build support [WPF]
+- MSBuild [WPF]
 ms.assetid: 94b12890-365d-479a-b239-71109fbcb462
 caps.latest.revision: 4
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# WPF MSBuild Reference
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 126bcc37899efcc373f2bd92c054a02d6e4aca6b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/24/2017
 
-Windows Presentation Foundation \(WPF\) は、追加ビルド サポートによって Microsoft Build Engine \(MSBuild\) を拡張します。このセクションでは、その内容について説明します。  
+---
+# <a name="wpf-msbuild-reference"></a>WPF MSBuild のリファレンス
+Windows Presentation Foundation (WPF) は、このセクションで説明するように、追加のビルドのサポートによって Microsoft ビルド エンジン (MSBuild) を拡張します。  
   
-## このセクションの内容  
- [.Targets Files](../msbuild/wpf-dot-targets-files.md)  
- WPF .Targets ファイルについて説明します。  
+## <a name="in-this-section"></a>このセクションの内容  
+ [.Targets Files (.Targets ファイル)](../msbuild/wpf-dot-targets-files.md)  
+ WPF .targets ファイルについて説明します。  
   
- [Task Reference](../msbuild/wpf-msbuild-task-reference.md)  
- 利用可能な WPF ビルド タスクの一覧を表示します。  
+ [Task Reference (タスク リファレンス)](../msbuild/wpf-msbuild-task-reference.md)  
+ 使用可能な WPF ビルド タスクの一覧を示します。  
   
  <xref:Microsoft.Build.Tasks>  
- ビルド タスク アセンブリです。  
+ ビルド タスク アセンブリ。  
   
  <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper>  
- ビルド タスク配置ブートストラップ アセンブリです。  
+ ビルド タスク配置ブートス トラップ アセンブリ。  
   
  <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities>  
- ビルド タスク配置マニフェスト ユーティリティ アセンブリです。  
+ ビルド タスク配置マニフェスト ユーティリティ アセンブリ。  
   
  <xref:Microsoft.Build.Tasks.Hosting>  
- ビルド タスク ホスト アセンブリです。  
+ ビルド タスク ホスト アセンブリ。  
   
  <xref:Microsoft.Build.Tasks.Windows>  
- ビルド タスク ウィンドウ アセンブリです。  
+ ビルド タスク Windows アセンブリ。  
   
-## 参照  
- [MSBuild](http://msdn.microsoft.com/ja-jp/7c49aba1-ee6c-47d8-9de1-6f29a906e20b)
+## <a name="see-also"></a>関連項目  
+ [MSBuild](../msbuild/msbuild.md)

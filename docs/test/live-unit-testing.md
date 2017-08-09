@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b699132bf1a31d3ef9dc3ba5af3f99c22890c632
+ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
+ms.openlocfilehash: 0a939044b9806236cf55333c30bce24ae0fdb28a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 
@@ -39,10 +39,9 @@ ms.lasthandoff: 05/13/2017
 Live Unit Testing は、アプリケーションの開発中に、影響を受けた単体テストをバックグラウンドで自動的に実行して、結果とコード カバレッジを Visual Studio IDE にリアルタイムで表示します。 コードを変更すると、Live Unit Testing は、既存のテストへの変更の影響と、新しいコードが 1 つ以上の既存のテストによってカバーされているかどうかに関するフィードバックを提供します。 それにより、バグ修正や新機能の追加を行ったら単体テストを作成する必要があることを思い出させます。
 
 > [!NOTE]
-> Live Unit Testing は、Visual Studio 2017 の Enterprise Edition で .NET Framework を対象とする C# および Visual Basic プロジェクトに使うことができます。 現在、.NET Core では利用できません。
+> Live Unit Testing は、Visual Studio 2017 の Enterprise Edition で .NET Core または .NET Framework を対象とする C# および Visual Basic プロジェクトに使うことができます。
 
 ## <a name="supported-test-frameworks"></a>サポートされるテスト フレームワーク
-
 Live Unit Testing は、次の表に示されている 3 つの一般的な単体テスト フレームワークで動作します。 アダプターやフレームワークのサポートされる最小バージョンも表に示されています。 単体テスト フレームワークはすべて NuGet.org から入手できます。
  
 <table> 
@@ -63,8 +62,8 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 </tr>
 <tr>
    <td>MSTest</td>
-   <td>MSTest.TestAdapter 1.1.4-preview</td>
-   <td>MSTest.TestFramework 1.0.5-preview</td>
+   <td>MSTest.TestAdapter 1.1.11</td>
+   <td>MSTest.TestFramework 1.1.11</td>
 </tr>
 </table>
 
@@ -72,11 +71,11 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 
 場合によっては、Live Unit Testing を動作させるため、ソリューションのプロジェクトによって参照されている NuGet パッケージの明示的な復元が必要になります。 そのためには、Living Unit Testing を有効にする前に、ソリューションの明示的なビルドを行うか (Visual Studio の最上位メニューから **[ビルド]** の **[ソリューションのリビルド]** を選択)、またはソリューションのパッケージを復元します (ソリューションを右クリックして **[NuGet パッケージの復元]** を選択)。 
 
-#    <a name="configuring-live-unit-testing"></a>Live Unit Testing の構成
+#   <a name="configuring-live-unit-testing"></a>Live Unit Testing の構成
 
 Live Unit Testing を構成するには、Visual Studio の最上位メニューから **[ツール]** の **[オプション]** を選び、**[オプション]** ダイアログの左側のウィンドウで **[Live Unit Testing]** を選びます。 次の図は、ダイアログで設定できる Live Unit Testing の構成オプションです。
 
-  ![イメージ](~/test/media/lut-options.png)
+  ![イメージ](./media/lut-options.png)
 
 次のオプションを構成できます。
 
@@ -101,25 +100,25 @@ Live Unit Testing を有効にするには、Visual Studio の最上位メニュ
 - **[停止]** は、Live Unit Testing を完全に停止します。 Live Unit Testing は収集したすべてのデータを破棄します。
 - **[再起動]** は、**[Live Unit Testing]** メニューで **[停止]** を選んでから **[開始]** を選ぶのと同じです。
 
-##    <a name="viewing-coverage-visualization-in-the-editor-as-you-type"></a>入力しながらエディターにカバレッジの視覚化を表示する
+##  <a name="viewing-coverage-visualization-in-the-editor-as-you-type"></a>入力しながらエディターにカバレッジの視覚化を表示する
 
 Live Unit Testing を有効にすると、Visual Studio エディターの各コード行が更新されて、記述しているコードが単体テストによってカバーされているかどうか、およびコードをカバーしているテストが合格かどうかが示されます。  次の図では、テストに合格したコード行と不合格のコード行、およびテストでカバーされていないコード行が示されています。 緑の "✓" で示される行は、合格したテストによってのみカバーされています。赤い "🞩" で示される行は、1 つ以上のテストで不合格になっています。青い "" によって示される行は、どのテストでもカバーされていません。
 
-  ![イメージ](~/ide/media/lut-codewindow.png)
+  ![イメージ](./media/lut-codewindow.png)
 
 Live Unit Testing のカバレッジの視覚化は、コード エディターでコードを変更するとすぐに更新されます。 次の図のように、編集を処理している間は、合格、不合格、非カバーのシンボルの下に丸いタイマーのイメージを追加することで、データが最新ではないことが示されます。
 
-  ![イメージ](~/test/media/lut-codeupdating.png)
+  ![イメージ](./media/lut-codeupdating.png)
  
 ## <a name="getting-information-on-successful-or-failed-tests"></a>テストの合格または不合格に関する情報の取得
 
 コード ウィンドウの合格または不合格のシンボルをカーソルでポイントすると、その行にヒットしているテストの数を確認できます。 シンボルをクリックすると、個々のテストの状態を確認できます (次の図を参照)。
  
-  ![イメージ](~/test/media/lut-failedinfo.png) 
+  ![イメージ](./media/lut-failedinfo.png) 
 
 ツール ヒントで不合格になったテストをポイントすると、次の図に示すように、不合格に関する追加情報が表示されます。 ツール ヒントで不合格なテストをクリックすると、追加情報に直接移動できます。
 
-  ![イメージ](~/test/media/lut-failedmsg.png) 
+  ![イメージ](./media/lut-failedmsg.png) 
 
 ## <a name="diagnosing-and-correcting-test-failures"></a>不合格になったテストの診断と修正
 
@@ -143,8 +142,8 @@ Live Unit Testing のカバレッジの視覚化は、コード エディター�
 
 たとえば、数百のテスト プロジェクトを含むソリューションがある場合、Live Unit Testing に参加する対象のテスト プロジェクト セットを選ぶことができます。 単体テストで個別のプロジェクトを選ぶには、Live Unit Testing を開始した後で次のようにします。
 
-1.    ソリューション全体を除外するには、ソリューション エクスプローラーでソリューションを右クリックし、**[Live Tests (ライブ テスト)]** の **[除外する]** を選びます。
-2.    個別のテスト プロジェクトをテストに含めるには、各テスト プロジェクトを右クリックし、**[Live Tests (ライブ テスト)]** の **[含める]** を選びます。
+1.  ソリューション全体を除外するには、ソリューション エクスプローラーでソリューションを右クリックし、**[Live Tests (ライブ テスト)]** の **[除外する]** を選びます。
+2.  個別のテスト プロジェクトをテストに含めるには、各テスト プロジェクトを右クリックし、**[Live Tests (ライブ テスト)]** の **[含める]** を選びます。
  
 個々のテスト メソッドを追加または除外するには、コード エディター ウィンドウを使います。 コード エディター ウィンドウでテスト メソッドのシグネチャを右クリックし、**[Live Tests (ライブ テスト)]** の **[含める]** または **[Live Tests (ライブ テスト)]** の **[除外する]** を選びます。 
 

@@ -1,27 +1,47 @@
 ---
-title: "Windows 8 および Windows Server 2012 アプリケーションのプロファイリング | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール | Microsoft Docs"
+ms.custom: 
+ms.date: 06/19/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a704215d-d252-4087-921b-ac81ebe2a9c9
 caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: baf12bba10dfba15f10d75fd1f7a4cdc4000e441
+ms.openlocfilehash: a5d885f8604bdb52907adae4f231b41e0881017f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 06/21/2017
+
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール
-Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio パフォーマンス ツールがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 Windows ストア アプリにも新しい収集手法が必要です。 このトピックでは、Windows 8 および Windows Server 2012 のプラットフォームでのパフォーマンス ツールの変更点について説明します。  
+Windows 8 および Windows Server 2012 から強化されたセキュリティ機能によって、Visual Studio パフォーマンス ツールがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 Windows ストア アプリにも新しい収集手法が必要です。 このトピックでは、Windows 8 および Windows Server 2012 プラットフォームからのパフォーマンス ツールの変更点について説明します。
   
 > [!NOTE]
->  その他のサポートされている Windows バージョン (Windows 7、Windows Server 2008 R2) でのパフォーマンス ツールに変更点はありません。  
+>  その他のサポートされている Windows バージョン (Windows 7、Windows Server 2008 R2) でのパフォーマンス ツールに変更点はありません。
   
-##  <a name="a-namebkmkinthistopica-in-this-topic"></a><a name="BKMK_In_this_topic"></a> このトピックの内容  
+##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
  [Visual Studio IDE から Windows ストア アプリ上のデータを収集する](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
   
  [Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE から収集する](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  
@@ -32,7 +52,7 @@ Windows 8 および Windows Server 2012 の強化されたセキュリティ機�
   
  [階層の相互作用 (TIP) データを収集する](#BKMK_Collecting_tier_interaction__TIP__data)  
   
-##  <a name="a-namebkmkprofilingwindowsstoreappsfromthevisualstudioidea-collecting-data-on-windows-store-apps-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a>Visual Studio IDE から Windows ストア アプリ上のデータを収集する  
+##  <a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a>Visual Studio IDE から Windows ストア アプリ上のデータを収集する  
  JavaScript および HTML 5 で記述された Windows ストア アプリのプロファイリングを行う場合は、JavaScript コードのインストルメンテーション データを収集します。 Visual C++、Visual C#、または Visual Basic で記述された Windows ストア アプリまたはコンポーネントのプロファイリングを行う場合は、ネイティブ コードおよびマネージ コードのサンプリング データを収集します。 ローカル コンピューターまたはリモート コンピューター上のアプリをプロファイリングすることもできます。  
   
  Windows ストア アプリのプロファイリングを行う場合、次のプロファイル機能およびオプションはサポートされていません。  
@@ -69,19 +89,19 @@ Windows 8 および Windows Server 2012 の強化されたセキュリティ機�
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-##  <a name="a-namebkmkprofilingappsrunningonthewindows8desktoporonwindowsserver2012fromthevisualstudioidea-collecting-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a> Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE から収集する  
+##  <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a> Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE から収集する  
  インストルメンテーション メソッドを使用したプロファイリングについては、Windows 8 での変更点はありません。  
   
  サンプリング メソッドを使用した階層相互作用プロファイリング (TIP) は、サポートされていません。  
   
-###  <a name="a-namebkmkprofilingappsrunningonthewindows8desktoporonwindowsserver2012byusingsamplingfromthevisualstudioidea-collecting-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-by-using-sampling-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_by_using_sampling_from_the_Visual_Studio_IDE"></a> Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE からサンプリングを使用して収集する  
- サンプリング メソッドを使用して Windows 8 デスクトップ アプリケーションまたは Windows Server 2012 アプリケーションのプロファイリングを行う場合、次のプロファイル機能およびオプションはサポートされていません。  
+###  <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_by_using_sampling_from_the_Visual_Studio_IDE"></a> Windows 8 デスクトップまたは Windows Server 2012 で実行中のアプリ上のデータを Visual Studio IDE からサンプリングを使用して収集する  
+ サンプリング メソッドを使用して Windows 8 デスクトップ アプリケーションまたは Windows Server 2012 アプリケーションのプロファイリングを行う場合、次のプロファイル機能およびオプションはサポートされていません。
   
--   階層相互作用プロファイリング (TIP)。 インストルメンテーションを使用した TIP データの収集はサポートされます。  
+-   階層相互作用プロファイリング (TIP)。 インストルメンテーションを使用した TIP データの収集はサポートされます。
   
 -   サンプリング イベントや時間間隔の設定、追加のパフォーマンス カウンター データの収集などのサンプリング オプション。  
   
-##  <a name="a-namebkmkprofilingfromthecommandlinea-profiling-from-the-command-line"></a><a name="BKMK_Profiling_from_the_command_line"></a> コマンド ラインからのプロファイリング  
+##  <a name="BKMK_Profiling_from_the_command_line"></a> コマンド ラインからのプロファイリング  
  Visual Studio がインストールされていないデバイスを含めて、Windows 8 デバイスおよび Windows Server 2012 デバイスでプロファイル データを収集するには、次の 2 つのコマンド ライン ツールを使用します。  
   
 |ツール名|説明|  
@@ -102,18 +122,18 @@ Windows 8 および Windows Server 2012 の強化されたセキュリティ機�
   
  コマンド ラインから Windows 8 アプリケーションおよび Windows Server 2012 アプリケーションのプロファイリングを行う場合、次のプロファイル機能およびオプションはサポートされていません。  
   
--   [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) でサンプリング モードを使用して、Windows 8 と Windows Server 2012 の Web アプリからデータを収集します。  
+-   [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md)でサンプリング モードを使用して、Windows 8 と Windows Server 2012 の Web アプリからデータを収集します。  
   
 -   VsPerfCmd.exe を使用したサンプリング データの収集。  
   
 -   サンプリング イベントや時間間隔の設定、追加のパフォーマンス カウンター データの収集などのサンプリング オプション。  
   
-##  <a name="a-namebkmkcollectingtierinteractiontipdataa-collecting-tier-interaction-tip-data"></a><a name="BKMK_Collecting_tier_interaction__TIP__data"></a> 階層の相互作用 (TIP) データを収集する  
+##  <a name="BKMK_Collecting_tier_interaction__TIP__data"></a> 階層の相互作用 (TIP) データを収集する  
  階層相互作用プロファイリングにより、ADO.NET サービスを通じてデータベースと通信する多階層アプリケーションの関数の実行時間に関する追加情報が提供されます。 データは同期の関数呼び出しについてのみ収集されます。  
   
  **Visual Studio のエディション**  
   
- 階層相互作用プロファイル データは、[!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、[!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、または [!INCLUDE[vs_pro_current_short](../profiling/includes/vs_pro_current_short_md.md)] を使用して収集できます。 ただし、階層相互作用プロファイル データを表示できるのは、[!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] および [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] のみです。  
+ 階層相互作用プロファイル データは、 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]、 [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]、または [!INCLUDE[vs_pro_current_short](../profiling/includes/vs_pro_current_short_md.md)]を使用して収集できます。 ただし、階層相互作用プロファイル データを表示できるのは、 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] および [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]のみです。  
   
  **Windows 8 と Windows Server 2012**  
   
@@ -135,14 +155,9 @@ Windows 8 および Windows Server 2012 の強化されたセキュリティ機�
   
  **TIP レポート**  
   
- 階層相互作用データは、[!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] または [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] IDE でのみ表示できます。 [VSPerfReport](../profiling/vsperfreport.md) の使用による、ファイル ベースの階層相互作用レポートは利用できません。  
+ 階層相互作用データは、 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] または [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] IDE でのみ表示できます。 [VSPerfReport](../profiling/vsperfreport.md) の使用による、ファイル ベースの階層相互作用レポートは利用できません。  
   
 ## <a name="see-also"></a>関連項目  
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)   
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
  [コマンドラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

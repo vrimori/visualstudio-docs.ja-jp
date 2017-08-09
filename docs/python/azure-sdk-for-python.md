@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: c64d1abc2266b7e2edbb2c81a46c53c39eb9a85a
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 89de0d11791dbf13b9d4fcfcea8168b443d2777b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 
@@ -45,7 +45,7 @@ Azure ドキュメントの「[Python と SDK のインストール](https://azu
 
 「[Python デベロッパー センター](http://azure.microsoft.com/develop/python/)」にも、次のようなさまざまなチュートリアルを含む有用なリソースが数多く用意されています。
 
-  - [Django](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-python-how-to-use-topics-subscriptions)、[Flask](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-flask-app)、[Bottle](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-bottle-app) を使用した Web アプリの作成
+  - [Django](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-django-app)、[Flask](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-flask-app)、[Bottle](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-bottle-app) を使用した Web アプリの作成
   - [Python から Azure BLOB ストレージを使用する方法](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
   - [Python から Table ストレージを使用する方法](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-table-storage)
   - [Python から Queue ストレージを使用する方法](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-queue-storage)
@@ -66,3 +66,4 @@ Azure ドキュメントの「[Python と SDK のインストール](https://azu
 SDK の Git リポジトリは [https://github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python) にあります。
 
 SDK の使用方法についての問題や質問がある場合は、[リポジトリに問題を登録してください](https://github.com/Azure/azure-sdk-for-python/issues)。
+
