@@ -38,11 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: e4abacb0286de16c148076572e73043daed4d567
+ms.translationtype: HT
+ms.sourcegitcommit: a3c0f4d3bde8bb03d3766383eba01665e58458be
+ms.openlocfilehash: 4ec9e4acb1cd859ca96498db42c1cab4473c4c83
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="signing-page-project-designer"></a>[署名] ページ (プロジェクト デザイナー)
@@ -82,7 +82,7 @@ ms.lasthandoff: 05/30/2017
   
 ## <a name="assembly-signing"></a>アセンブリの署名  
  [**アセンブリの署名**] チェック ボックス  
- アセンブリに署名し、厳密な名前のキー ファイルを作成するには、このチェック ボックスをオンにします。 **プロジェクト デザイナー**を使用してアセンブリに署名する詳細については、「[方法: アセンブリに署名する (Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564)」を参照してください。  
+ アセンブリに署名し、厳密な名前のキー ファイルを作成するには、このチェック ボックスをオンにします。 **プロジェクト デザイナー**を使用してアセンブリに署名する詳細については、「[方法: アセンブリに署名する (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)」を参照してください。  
   
  このオプションは、[!INCLUDE[winsdklong](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name) で提供される Al.exe ツールを使用します。  
   
@@ -109,6 +109,6 @@ ms.lasthandoff: 05/30/2017
  [アセンブリおよびマニフェストへの署名の管理](../../ide/managing-assembly-and-manifest-signing.md)   
  [マネージ アプリケーションの厳密な名前の署名](http://msdn.microsoft.com/en-us/5fef3490-c519-4363-94fd-8b1ad260dab5)   
  [方法 : アプリケーション マニフェストおよび配置マニフェストに署名する](../../ide/how-to-sign-application-and-deployment-manifests.md)   
- [方法: アセンブリに署名する (Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564)   
+ [方法: アセンブリに署名する (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)   
  [方法 : 厳密な名前でアセンブリに署名する](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)   
- [厳密な名前付きアセンブリ](http://msdn.microsoft.com/Library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)
+ [厳密な名前付きアセンブリ](/dotnet/framework/app-domains/strong-named-assemblies)   

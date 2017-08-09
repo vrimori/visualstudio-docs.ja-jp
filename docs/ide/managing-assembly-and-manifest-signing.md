@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: b42679476f9e1da034011eb7e9b81250c0c81a1e
+ms.translationtype: HT
+ms.sourcegitcommit: a3c0f4d3bde8bb03d3766383eba01665e58458be
+ms.openlocfilehash: 6a28915840af1b22dffe704ac931a57f25ca6879
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>アセンブリおよびマニフェストへの署名の管理
@@ -80,12 +80,12 @@ ms.lasthandoff: 05/30/2017
 > [!WARNING]
 >  キー ファイルは常にパスワードで保護して、第三者が使用できないようにする必要があります。 プロバイダーまたは証明書ストアを使用して、キーを保護することもできます。  
   
- また、既に作成したキーを指定することもできます。 キーの作成の詳細については、「[方法 : 公開キーと秘密キーのキー ペアを作成する](http://msdn.microsoft.com/Library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)」を参照してください。  
+ また、既に作成したキーを指定することもできます。 キーの作成の詳細については、「[方法 : 公開キーと秘密キーのキー ペアを作成する](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)」を参照してください。  
   
  公開キーのみにアクセスできる場合は、遅延署名を使用して、キーの割り当てを遅延させることができます。 **[遅延署名のみ]** チェック ボックスをオンにすると、遅延署名が有効になります。 遅延署名されたプロジェクトは実行されず、デバッグすることもできません。 ただし、[Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool) で `-Vr` オプションを指定すると、開発時に検証をスキップできます。  
   
  マニフェストへの署名については、「[方法: アプリケーション マニフェストおよび配置マニフェストに署名する](../ide/how-to-sign-application-and-deployment-manifests.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [厳密な名前付きアセンブリ](http://msdn.microsoft.com/Library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)   
+ [厳密な名前付きアセンブリ](/dotnet/framework/app-domains/strong-named-assemblies)   
  [厳密名アセンブリ (アセンブリ署名) (C++/CLI)](/cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli)
