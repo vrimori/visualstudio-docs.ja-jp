@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 05/10/2017
+ms.date: 08/09/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -62,6 +62,7 @@ ms.lasthandoff: 05/13/2017
 コンポーネント ID | 名前 | バージョン | 依存関係の種類
 --- | --- | --- | ---
 Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Test Controller のコア機能 | 15.0.26208.0 | 必須
+
 ## <a name="unaffiliated-components"></a>関連付けられていないコンポーネント
 
 以下のコンポーネントはどのワークロードにも含まれていませんが、個別のコンポーネントとして選択できます。
