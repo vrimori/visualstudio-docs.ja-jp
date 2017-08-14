@@ -148,7 +148,7 @@ Python インタープリターの機能を拡張するため、およびオペ�
         return (1 + pow(e, (-2 * x))) / (2 * pow(e, -x));
     }
 
-    double tanh(x) {
+    double tanh(double x) {
         return sinh(x) / cosh(x);
     }
     ```
@@ -163,7 +163,7 @@ C++ の DLL を Python の拡張機能にするには、Python の型と対話�
 1. C++ ファイルの先頭に `Python.h` を含めます。
 
     ```cpp
-    include <Python.h>
+    #include <Python.h>
     ```
 
 1. Python の型を受け付けて戻すように、`tanh` メソッドを変更します。
