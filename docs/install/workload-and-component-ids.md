@@ -32,16 +32,16 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
-ms.openlocfilehash: 3fc2e9c086d6cdd71577fccd33652cfc14a3ee6e
+ms.translationtype: HT
+ms.sourcegitcommit: c3fea7195cd41a48654ea4356ef67627ddcc25dc
+ms.openlocfilehash: 2c288a22c46a21b998bcc5aecf3c0a20f46e06c0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
 # <a name="visual-studio-2017-workload-and-component-ids"></a>Visual Studio 2017 のワークロード ID とコンポーネント ID
-次のページでは、コマンドラインを使用して Visual Studio をインストールまたは VSIX マニフェストで依存関係として指定するために必要なワークロード ID とコンポーネント ID の一覧を示します。
+コマンド ラインを使用して Visual Studio をインストールする場合や、VSIX マニフェストで依存関係として指定する場合に必要となる使用可能なワークロードとコンポーネント ID を表示するには、以下のエディション名をクリックします。
 
 | **エディション** | **ID** | **説明** |
 | ----------- | ------ | --------------- |

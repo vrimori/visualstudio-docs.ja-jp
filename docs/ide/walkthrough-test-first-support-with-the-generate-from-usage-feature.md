@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: b5c18e7d208879498c1923403ec1bd213adffb5a
+ms.translationtype: HT
+ms.sourcegitcommit: f0576ce6dd78fe1328bcea3ab9a27507ddc0f2c0
+ms.openlocfilehash: 4811dda912f20272733a4d878fc8c607eb2573fc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/24/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 # <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>チュートリアル: 使用法から生成機能のテスト ファーストのサポート
@@ -60,7 +60,21 @@ ms.lasthandoff: 05/24/2017
      ![[新しいテスト プロジェクト] ダイアログ](../ide/media/newproject_test.png "NewProject_Test")  
 [新しいプロジェクト] ダイアログ ボックス  
   
-4.  **[OK]** をクリックして、 **[新しいプロジェクト]** ダイアログ ボックスを閉じます。 これで、テストの記述を開始できるようになりました  
+4.  **[OK]** をクリックして、 **[新しいプロジェクト]** ダイアログ ボックスを閉じます。
+
+5.  クラス プロジェクトの **ソリューション エクスプローラー**で、**[参照]** エントリを右クリックし、**[参照の追加]** をクリックします。
+
+6.  **[参照マネージャー]** ダイアログ ボックスで、**[プロジェクト]** を選択してから単体テスト プロジェクトを選択します。
+
+7.  **[OK]** をクリックして **[参照マネージャー]** ダイアログ ボックスを閉じます。
+
+8.  **Class1** ファイルで、既存の **using** ステートメントの最後のすぐ後に、次のようにテスト プロジェクトの **using** ステートメントを追加します。
+
+    * Visual Basic では、`Using UnitTestProject1` を追加します。
+    
+    * C# では、`using UnitTestProject1;` を追加します。
+    
+9.  ソリューションを保存します。 これで、テストの記述を開始できるようになりました。  
   
 ### <a name="to-generate-a-new-class-from-a-unit-test"></a>単体テストから新しいクラスを生成するには  
   
@@ -73,10 +87,10 @@ ms.lasthandoff: 05/24/2017
   
 3.  `TestMethod1()` メソッドを検索して、この名前を `DefaultAutomobileIsInitializedCorrectly()`に変更します。 次の図に示すように、このメソッド内に、 `Automobile`というクラスの新しいインスタンスを作成します。 コンパイル時のエラーを示す波下線が表示され、型名の下にスマート タグが表示されます。 スマート タグの正確な場所は、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] または [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] のどちらを使っているかにより異なります。  
   
-     ![スマート タグの下線 (Visual Basic)](~/ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
+     ![スマート タグの下線 (Visual Basic)](../ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
 Visual Basic  
   
-     ![スマート タグの下線 (C&#35;)](~/ide/media/genclass_underline.png "GenClass_Underline")  
+     ![スマート タグの下線 (C&#35;)](../ide/media/genclass_underline.png "GenClass_Underline")  
 Visual C#  
   
 4.  スマート タグの上にマウス ポインターを置くと、 `Automobile` という名前の型がまだ定義されていないことを示すエラー メッセージが表示されます。 スマート タグをクリックするか、Ctrl キーを押しながら . キー (Ctrl + ピリオド) を押して、次の図に示す [使用法から生成] ショートカット メニューを開きます。  
@@ -112,10 +126,10 @@ Visual C#
   
      スマート タグのショートカット メニューを次の図に示します。  
   
-     ![プロパティ生成のコンテキスト メニュー (Visual Basic)](~/ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
+     ![プロパティ生成のコンテキスト メニュー (Visual Basic)](../ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
 Visual Basic  
   
-     ![プロパティ生成のコンテキスト メニュー (C&#35;)](~/ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
+     ![プロパティ生成のコンテキスト メニュー (C&#35;)](../ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
 Visual C#  
   
 ### <a name="to-locate-the-source-code"></a>ソース コードを検索するには  
@@ -161,7 +175,7 @@ Visual C#
   
      次の図に **[テスト結果]** ウィンドウを示します。  
   
-     ![失敗したテストの結果](~/ide/media/testsfailed.png "TestsFailed")  
+     ![失敗したテストの結果](../ide/media/testsfailed.png "TestsFailed")  
 [テスト結果] ウィンドウ  
   
 2.  **[テスト結果]** ウィンドウで、各テスト結果の行をダブルクリックして、各テストのエラーの発生場所に移動します。  

@@ -16,26 +16,11 @@ ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b430c85c7ef2979a9052685529cace6879432b96
+ms.translationtype: HT
+ms.sourcegitcommit: b01caada54c08bb7f9c9baabfe9ece486e087794
+ms.openlocfilehash: 190a5e183757a5f02eeeb4aca7fc1c2e7f1beb1c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 
@@ -46,20 +31,20 @@ ms.lasthandoff: 05/13/2017
 
      たとえば、Windows 10 Anniversary Update を実行しているコンピューター上では、**[スタート]** を選択し、**Visual Studio インストーラー**としてリスト表示される **V** の文字までスクロールします。  
 
-     ![Visual Studio インストーラー](~/install/media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
+     ![Visual Studio インストーラー](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
 
      >[!NOTE]
-     一部のコンピューターでは、Visual Studio インストーラーが **Microsoft Visual Studio インストーラー**として **"M"** の項に表示される場合があります。
+     一部のコンピューターでは、Visual Studio インストーラーが **Microsoft Visual Studio インストーラー**として **"M"** の項に表示される場合があります。<br/><br/> Visual Studio インストーラーは `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe` にもあります。
 
-2.  クリックしてインストーラーを起動し、![詳細アイコン](~/install/media/vs2017uninstall-UninstallIcon.png "オプション アイコンを選択") アイコンをクリックして、**[アンインストール]** をクリックします。  
+2.  クリックしてインストーラーを起動し、![詳細アイコン](media/vs2017uninstall-UninstallIcon.png "オプション アイコンを選択") アイコンをクリックして、**[アンインストール]** をクリックします。  
 
-     ![Visual Studio 2017 の変更 (変更、起動、修復、またはアンインストール)](~/install/media/vs2017-uninstall.PNG "Visual Studio 2017 の修復またはアンインストール")  
+     ![Visual Studio 2017 の変更 (変更、起動、修復、またはアンインストール)](media/vs2017-uninstall.PNG "Visual Studio 2017 の修復またはアンインストール")  
 
 3.  **[OK]** をクリックして選択を確定します。
 
-     ![Visual Studio 2017 の変更 (製品のアンインストール)](~/install/media/vs2017-uninstall-confirm.PNG "Visual Studio 2017 のアンインストールを確定")  
+     ![Visual Studio 2017 の変更 (製品のアンインストール)](media/vs2017-uninstall-confirm.PNG "Visual Studio 2017 のアンインストールを確定")  
 
-Visual Studio 2017 を再インストールする場合は、もう一度 Visual Studio インストーラーを起動し、選択画面で **[インストール]** を選びます。
+後で気が変わり、Visual Studio 2017 を再インストールする場合は、もう一度 Visual Studio インストーラーを起動し、選択画面で **[インストール]** を選びます。
 
 ## <a name="see-also"></a>関連項目  
 * [Visual Studio のインストール](install-visual-studio.md)

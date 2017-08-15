@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: 3524c21503d0432d509c607ea157f3fe675b443d
+ms.translationtype: HT
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 60732a1fbe7379b43d2856a62d5cd459165dd9a3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="how-to-create-item-templates"></a>方法 : 項目テンプレートを作成する
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/31/2017
 
 3.  コード ファイルを変更して、パラメーター置換を行う場所を示します。 詳しくは、「[方法 : テンプレート内のパラメーターを置き換える](../ide/how-to-substitute-parameters-in-a-template.md)」をご覧ください。  
 
-4.  **[ファイル]** メニューの **[テンプレートのエクスポート]** をクリックします。  
+4.  **[プロジェクト]** メニューの **[テンプレートのエクスポート]** をクリックします。  
 
 5.  **[項目テンプレート]** をクリックし、項目を含むプロジェクトを選んで、**[次へ]** をクリックします。  
 
@@ -166,7 +166,7 @@ ms.lasthandoff: 05/31/2017
 
 2.  プロジェクト項目を変更して、テンプレートとして保存できる状態にします。  
 
-3.  必要に応じて、コード ファイルを変更し、パラメーター置換を行う場所を示します。 パラメーター置換の詳細については、「方法 : テンプレート内のパラメーターを置き換える」を参照してください。  
+3.  必要に応じて、コード ファイルを変更し、パラメーター置換を行う場所を示します。 パラメーター置換の詳細については、「[方法: テンプレート内のパラメーターを置き換える](../ide/how-to-substitute-parameters-in-a-template.md)」を参照してください。
 
 4.  XML ファイルを作成し、.vstemplate のファイル名拡張子を使用して、新しい項目テンプレートと同じディレクトリに保存します。  
 

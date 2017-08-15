@@ -15,59 +15,45 @@ ms.assetid: 556EDD3F-E365-43EE-B3DD-03AA4353F75B
 author: timsneath
 ms.author: tims
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d9de84bed187c62962a76424aabdc5f355dff4dc
-ms.openlocfilehash: e6c301a7b784c5966d4f7216e67067ef6ce3ed70
+ms.translationtype: HT
+ms.sourcegitcommit: 89f86a5935ad283ef5c0e29ea2db0ae22cf603a8
+ms.openlocfilehash: 0fd361edd5bc5056f09c64aa4499a10a50656546
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 # <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-issues"></a>Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング
 
 ## <a name="symptoms"></a>現象
-Microsoft Visual Studio 2017 をインストールまたは更新しようとすると、操作が失敗する。
+Visual Studio 2017 をインストールまたは更新しようとすると、操作が失敗する。
 
 ## <a name="workaround"></a>回避策
 この問題を回避するには、次の手順を実行します。
 
 ### <a name="step-1---check-whether-this-problem-is-a-known-issue"></a>手順 1 - この問題が既知の問題であるかどうかを確認する
-Visual Studio インストーラーには、Microsoft が修正に取り組んでいる問題がいくつかあります。 問題の回避策があるかどうか、[リリース ノートの既知の問題に関するセクション](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#KIinstall)で確認してください。
+Visual Studio インストーラーには、Microsoft が修正に取り組んでいる問題がいくつかあります。 問題の回避策があるかどうか、[リリース ノートの既知の問題に関するセクション](https://www.visualstudio.com/news/releasenotes/vs2017-knownissues)で確認してください。
 
 ### <a name="step-2---check-with-the-developer-community"></a>手順 2 - 開発者コミュニティを確認する
-[Visual Studio の開発者コミュニティ](https://developercommunity.visualstudio.com/spaces/8/index.html) でエラー メッセージを検索してください。 コミュニティの他のメンバーが、問題の解決策を文書化している可能性があります。
+[Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/spaces/8/index.html)でエラー メッセージを検索します。 コミュニティの他のメンバーが、問題の解決策を文書化している可能性があります。
 
 ### <a name="step-3---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems"></a>手順 3 - Visual Studio インストーラーのディレクトリを削除してアップグレードの問題を修正する
-Visual Studio インストーラーのブートストラップは、Visual Studio インストーラーの残りをインストールする最小限の軽量な実行可能ファイルです。 Visual Studio インストーラー ファイルを削除して、ブートストラップを再実行すると、いくつかの更新エラーを解決できる場合があります。 この操作を行うには、次の手順に従います。
+Visual Studio インストーラーのブートストラップは、Visual Studio インストーラーの残りをインストールする最小限の軽量な実行可能ファイルです。 Visual Studio インストーラー ファイルを削除して、ブートストラップを再実行すると、いくつかの更新エラーを解決できる場合があります。
+
+**注:** 次のアクションを実行すると、Visual Studio インストーラー ファイルが再インストールされ、インストール メタデータがリセットされます。
 
 1. Visual Studio インストーラーを閉じます。
 2. Visual Studio インストーラーのディレクトリを削除します。 通常、ディレクトリは、C:\Program Files (x86)\Microsoft Visual Studio\Installer にあります。
-3. Visual Studio インストーラーのブートストラップを実行します。 [ダウンロード] フォルダーのブートストラップのファイル名には ```vs_[Visual Studio edition]__*.exe``` のパターンが使用されている場合があります。 アプリケーションが見つからない場合は、「[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/)」ページに移動し、Visual Studio のお使いのエディションの **[ダウンロード]** をクリックすると、ブートストラップをダウンロードできます。 この実行可能ファイルを実行して、インストールのメタデータをリセットします。
-4. Visual Studio のインストールまたは更新を再度試します。 インストーラーのエラーが続く場合は、この次の手順 4 に進んでください。
-<br/>**注:** この手順では Visual Studio インストーラー ファイルが再インストールされ、インストールのメタデータがリセットされます。
+3. Visual Studio インストーラーのブートストラップを実行します。 [ダウンロード] フォルダーのブートストラップのファイル名には ```vs_[Visual Studio edition]__*.exe``` のパターンが使用されている場合があります。 アプリケーションが見つからない場合は、「[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/)」ページに移動し、Visual Studio のお使いのエディションの **[ダウンロード]** をクリックして、ブートストラップをダウンロードできます。 実行可能ファイルを実行して、インストール メタデータをリセットします。
+4. Visual Studio のインストールまたは更新を再度試します。 インストーラーのエラーが続く場合は、次の手順に進みます。
 
 ### <a name="step-4---report-a-problem"></a>手順 4 - 問題を報告する
 ファイルの破損など、一部の状況では、問題をケースごとに調べなければならない場合があります。
 
-1. [Microsoft Visual Studio および .NET Framework のログ収集ツール](https://www.microsoft.com/en-us/download/details.aspx?id=12493)をダウンロードして、実行します。 このツールは、Visual Studio、.NET Framework、SQL Server のインストールで入手できるセットアップ ログを収集し、コンパイルします。
+1. [Microsoft Visual Studio および .NET Framework のログ収集ツール](https://aka.ms/vscollect)をダウンロードして、実行します。 このツールは、Visual Studio、.NET Framework、SQL Server のインストールで入手できるセットアップ ログを収集し、コンパイルします。
 2. Visual Studio インストーラーを開き、**[問題の報告]** をクリックして、Visual Studio フィードバック ツールを開きます。
-![[フィードバックの送信] ボタンからフィードバック ツールを開くことができます](~/install/media/report-a-problem.png)
+![[フィードバックの送信] ボタンからフィードバック ツールを開くことができます](media/report-a-problem.png)
 3. 問題のレポートにタイトルを付け、関連する詳細を入力します。 **[次へ]** をクリックして **[添付ファイル]** セクションに移動し、生成されたログ ファイルを添付します (通常、ファイルは %TEMP%\vslogs.zip にあります)。
-![[新しい問題を報告する] ボタンを選択し、手順に従います](~/install/media/problem-report-details.png)
+![[新しい問題を報告する] ボタンを選択し、手順に従います](media/problem-report-details.png)
 4. **[次へ]** をクリックして問題レポートを確認し、**[送信]** をクリックします。
 
 ### <a name="step-5---run-installcleanupexe-to-clean-up-installation-files"></a>手順 5 - InstallCleanup.exe を実行してインストール ファイルをクリーンアップする
