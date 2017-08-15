@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 3037d92e9de377ab4b306a5a0e164e29fa6659e7
-ms.openlocfilehash: 600cd62e7843274b52da5ac7200b5168311cab07
+ms.sourcegitcommit: 223750aef8d997c6ae017f49ea0a9522bdba72bc
+ms.openlocfilehash: c5687a3971d4b670e73e55294e6dfd0c7c3f91d0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 
@@ -99,12 +99,15 @@ none/silent | このスタイルに準拠していないとき、ユーザーに
     - ["Null" 検査設定](#null_checking)
         - [スロー式](#null_checking_throw_expressions)
         - [条件付き代理呼び出し](#null_checking_conditional_delegate_calls)
+    - [コード ブロック基本設定](#code_block)
+        - [かっこを優先する](#prefer_braces)
 
 ## <a name="this_and_me">"This." と "Me."修飾</a>
 ### <a name="this_and_me_fields">フィールド (IDE0003/IDE0009)</a>
-|  オプション名 | `dotnet_style_qualification_for_field` |
-| ------------- |:-------------:|
-| **該当言語** | C# および Visual Basic
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|  `dotnet_style_qualification_for_field` | C# および Visual Basic | false:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -119,10 +122,10 @@ dotnet_style_qualification_for_field = false:suggestion
 ```
 
 ### <a name="this_and_me_properties">プロパティ (IDE0003/IDE0009)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`dotnet_style_qualification_for_property`| C# および Visual Basic | false:なし | Visual Studio 2017 RTW |
 
-|  オプション名 | `dotnet_style_qualification_for_property` |
-| ------------- |:-------------:|
-| **該当言語** | C# および Visual Basic
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -137,9 +140,10 @@ dotnet_style_qualification_for_property = false:suggestion
 ```
 
 ### <a name="this_and_me_methods">メソッド (IDE0003/IDE0009)</a>
-|  オプション名 | `dotnet_style_qualification_for_method` |
-| ------------- |:-------------:|
-| **該当言語** | C# および Visual Basic
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`dotnet_style_qualification_for_method`| C# および Visual Basic | false:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -155,9 +159,10 @@ dotnet_style_qualification_for_method = false:suggestion
 ```
 
 ### <a name="this_and_me_events">イベント (IDE0003/IDE0009)</a>
-|  オプション名 | `dotnet_style_qualification_for_event` |
-| ------------- |:-------------:|
-| **該当言語** | C# および Visual Basic
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`dotnet_style_qualification_for_event`| C# および Visual Basic | false:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -173,9 +178,10 @@ dotnet_style_qualification_for_event = false:suggestion
 
 ## <a name="language_keywords">型参照のための言語キーワードの型名 (int や string など) とフレームワークの型名</a>
 ### <a name="language_keywords_variables"> ローカル、パラメーター、メンバー (IDE0012/IDE0014)</a>
-|  オプション名 | `dotnet_style_predefined_type_for_locals_parameters_members` |
-| ------------- |:-------------:|
-| **該当言語** | C# および Visual Basic
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`dotnet_style_predefined_type_for_locals_parameters_members`| C# および Visual Basic | true:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -190,9 +196,10 @@ dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 ``` 
 
 ### <a name="language_keywords_member_access">メンバー アクセス式 (IDE0013/IDE0015)</a>
-|  オプション名 | `dotnet_style_predefined_type_for_member_access` |
-| ------------- |:-------------:|
-| **該当言語** | C# および Visual Basic
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`dotnet_style_predefined_type_for_member_access`| C# および Visual Basic | true:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -208,9 +215,10 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 
 ## <a name="expression_level">式レベル基本設定</a>
 ### <a name="expression_level_object_initializers">オブジェクト初期化子 (IDE0017)</a>
-|  オプション名 | `dotnet_style_object_initializer` |
-| ------------- |:-------------:|
-| **該当言語** | C# および Visual Basic
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`dotnet_style_object_initializer`| C# および Visual Basic | true:提案 | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -225,9 +233,10 @@ dotnet_style_object_initializer = true:suggestion
 ``` 
 
 ### <a name="expression_level_collection_initializers">コレクション初期化子 (IDE0028)</a>
-|  オプション名 | `dotnet_style_collection_initializer` |
-| ------------- |:-------------:|
-| **該当言語** | C# および Visual Basic
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`dotnet_style_collection_initializer`| C# および Visual Basic | true:提案 | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -242,9 +251,10 @@ dotnet_style_collection_initializer = true:suggestion
 ```
 
 ### <a name="expression_level_tuple_names">明示的なタプル名 (IDE0033)</a>
-|  オプション名 | `dotnet_style_explicit_tuple_names` |
-| ------------- |:-------------:|
-| **該当言語** | C# 7.0+ および Visual Basic 15+
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`dotnet_style_explicit_tuple_names`| C# 7.0+ および Visual Basic 15+ | true:提案 | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -259,9 +269,10 @@ dotnet_style_explicit_tuple_names = true:suggestion
 ``` 
 
 ### <a name="expression_level_null_checking">"null" 検査の結合式 (IDE0029)</a>
-|  オプション名 | `dotnet_style_coalesce_expression` |
-| ------------- |:-------------:|
-| **該当言語** | C# および Visual Basic
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`dotnet_style_coalesce_expression`| C# および Visual Basic | true:提案 | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -276,9 +287,10 @@ dotnet_style_coalesce_expression = true:suggestion
 ``` 
 
 ### <a name="expression_level_null_propogation">"null" 検査の null 値反映 (IDE0031)</a>
-|  オプション名 | `dotnet_style_null_propagation` |
-| ------------- |:-------------:|
-| **該当言語** | C# および Visual Basic
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`dotnet_style_null_propagation`| C# 6.0+ および Visual Basic 14+ | true:提案 | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -295,9 +307,10 @@ dotnet_style_null_propagation = true:suggestion
 # <a name="csharp_codestyle">CSharp コード スタイルの設定</a>
 ## <a name="var">"var" と明示型</a>
 ### <a name="var_built_in">組み込み型の "var" (IDE0007、IDE0008)</a>
-|  オプション名 | `csharp_style_var_for_built_in_types` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_var_for_built_in_types`| C# | true:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -312,9 +325,10 @@ csharp_style_var_for_built_in_types = true:suggestion
 ``` 
 
 ### <a name="var_apparent">型が明らかな場合の "var" (IDE0007、IDE0008)</a>
-|  オプション名 | `csharp_style_var_when_type_is_apparent` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_var_when_type_is_apparent`| C# | true:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -329,9 +343,10 @@ csharp_style_var_when_type_is_apparent = true:suggestion
 ``` 
 
 ### <a name="var_elsewhere">それ以外の場所の "var" (IDE0007、IDE0008) </a>
-|  オプション名 | `csharp_style_var_elsewhere` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_var_elsewhere`| C# | true:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -347,9 +362,10 @@ csharp_style_var_elsewhere = true:suggestion
 
 ##<a name="expression_bodied_members">式形式のメンバー</a>
 ### <a name="expression_bodied_members_methods">メソッド (IDE0022)</a>
-|  オプション名 | `csharp_style_expression_bodied_methods` |
-| ------------- |:-------------:|
-| **該当言語** | C# 6.0+
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_expression_bodied_methods`| C# 6.0+ | false:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -364,9 +380,10 @@ csharp_style_expression_bodied_methods = false:none
 ``` 
 
 ### <a name="expression_bodied_members_constructors">コンストラクター (IDE0021)</a>
-|  オプション名 | `csharp_style_expression_bodied_constructors` |
-| ------------- |:-------------:|
-| **該当言語** | C# 6.0+
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_expression_bodied_constructors`| C# 7.0+ | false:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -381,9 +398,10 @@ csharp_style_expression_bodied_constructors = false:none
 ``` 
 
 ### <a name="expression_bodied_members_operators">演算子 (IDE0023、IDE0024)</a>
-|  オプション名 | `csharp_style_expression_bodied_operators` |
-| ------------- |:-------------:|
-| **該当言語** | C# 6.0+
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_expression_bodied_operators` | C# 7.0+ | false:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -398,9 +416,10 @@ csharp_style_expression_bodied_operators = false:none
 ``` 
 
 ### <a name="expression_bodied_members_properties">プロパティ (IDE0025)</a>
-|  オプション名 | `csharp_style_expression_bodied_properties` |
-| ------------- |:-------------:|
-| **該当言語** | C# 7.0+
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_expression_bodied_properties` | C# 7.0+ | true:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -411,13 +430,14 @@ csharp_style_expression_bodied_operators = false:none
 ```
 # CSharp code style settings:
 [*.cs]
-csharp_style_expression_bodied_properties = false:none
+csharp_style_expression_bodied_properties = true:none
 ``` 
 
 ### <a name="expression_bodied_members_indexers">インデクサー (IDE0026)</a>
-|  オプション名 | `csharp_style_expression_bodied_indexers` |
-| ------------- |:-------------:|
-| **該当言語** | C# 7.0+
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_expression_bodied_indexers` | C# 7.0+ | true:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -432,9 +452,10 @@ csharp_style_expression_bodied_indexers = false:none
 ``` 
 
 ### <a name="expression_bodied_members_accessors">アクセサー (IDE0027)</a>
-|  オプション名 | `csharp_style_expression_bodied_accessors` |
-| ------------- |:-------------:|
-| **該当言語** | C# 7.0+
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_expression_bodied_accessors` | C# 7.0+ | true:なし | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -450,9 +471,10 @@ csharp_style_expression_bodied_accessors = false:none
 
 ## <a name="pattern_matching">パターン マッチング</a>
 ### <a name="pattern_matching_is_cast">"cast" 検査の "is" (IDE0020)</a>
-|  オプション名 | `csharp_style_pattern_matching_over_is_with_cast_check` |
-| ------------- |:-------------:|
-| **該当言語** | C# 7.0+
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_pattern_matching_over_is_with_cast_check` | C# 7.0+ | true:提案 | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -467,9 +489,10 @@ csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 ```
 
 ### <a name="pattern_matching_as_null">"null" 検査の "as" (IDE0019)</a>
-|  オプション名 | `csharp_style_pattern_matching_over_as_with_null_check` |
-| ------------- |:-------------:|
-| **該当言語** | C# 7.0+
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_pattern_matching_over_as_with_null_check` | C# 7.0+ | true:提案 | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -484,9 +507,10 @@ csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 ```
 
 ### <a name="inlined_variable_declarations">インライン変数宣言 (IDE0018)</a>
-|  オプション名 | `csharp_style_inlined_variable_declaration` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_inlined_variable_declaration` | C# 7.0+ | true:提案 | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -501,9 +525,10 @@ csharp_style_inlined_variable_declaration = true:suggestion
 ```
 ## <a name="expression_level_csharp">式レベル基本設定</a>
 ### <a name="expression_level_default">`default` 式の簡略化 (IDE0034) </a>
-|  オプション名 | `csharp_prefer_simple_default_expression` |
-| ------------- |:-------------:|
-| **該当言語** | C# 7.1+ および Visual Basic
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_prefer_simple_default_expression` | C# 7.1+ | true:提案 | Visual Studio 2017 v. 15.3 |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -512,16 +537,17 @@ csharp_style_inlined_variable_declaration = true:suggestion
 
 #### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
-# CSharp and VisualBasic code style settings:
+# CSharp code style settings:
 [*.cs]
 csharp_prefer_simple_default_expression = true:suggestion
 ``` 
 
 ## <a name="null_checking">"Null" 検査設定</a>
 ### <a name="null_checking_throw_expressions">スロー式 (IDE0016)</a>
-|  オプション名 | `csharp_style_throw_expression` |
-| ------------- |:-------------:|
-| **該当言語** | C# 7.0+
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_throw_expression`  | C# 7.0+ | true:提案 | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -536,9 +562,10 @@ csharp_style_throw_expression = true:suggestion
 ```
 
 ### <a name="null_checking_conditional_delegate_calls">条件付き代理呼び出しを使用する (IDE0041)</a>
-|  オプション名 | `csharp_style_conditional_delegate_call` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_style_conditional_delegate_call`  | C# 6.0+ | true:提案 | Visual Studio 2017 RTW |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -550,6 +577,25 @@ csharp_style_throw_expression = true:suggestion
 # CSharp code style settings:
 [*.cs]
 csharp_style_conditional_delegate_call = false:suggestion
+```
+
+## <a name="code_block">"コード ブロック基本設定</a>
+### <a name="prefer_braces">かっこを優先する (IDE0011)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_prefer_braces`  | C#  | true:なし | Visual Studio 2017 v. 15.3 |
+
+
+| 値 | 説明 | 適用済み 
+| ------------- |:-------------|:-------------|
+| True | かっこを優先する | **C#:** <br>`if (test) { this.Display(); }`
+| False | 可能な場合は、かっこを使用しない | **C#:** <br>`if (test) this.Display();`
+
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
+```
+# CSharp code style settings:
+[*.cs]
+csharp_prefer_braces = true:none
 ```
 
 # <a name="formatting"> 書式規則 </a>
@@ -575,6 +621,7 @@ csharp_style_conditional_delegate_call = false:suggestion
         - [クエリ式の句のメンバーの前の改行](#newline_before_query)
     - [インデント オプション](#indent)
         - [`switch` ケース コンテンツにインデントを付ける](#indent_switch)
+        - [インデント`switch`ラベル](#indent_switch_labels)
         - [ラベルの位置付け](#label)
     - [スペース オプション](#spacing)
         - [キャストの後のスペース](#space_after_cast)
@@ -588,9 +635,10 @@ csharp_style_conditional_delegate_call = false:suggestion
 
 ## <a name="usings">using の整理</a>
 ### <a name="usings_sort_system_first">最初にシステム ディレクティブを並べ替える</a>
-|  オプション名 | `dotnet_sort_system_directives_first` |
-| ------------- |:-------------:|
-| **該当言語** | C# および Visual Basic
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`dotnet_sort_system_directives_first`  |  C# および Visual Basic | true | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
@@ -607,9 +655,10 @@ dotnet_sort_system_directives_first = true
 # <a name="csharp_formatting">C# 書式設定</a>
 ## <a name="newline">改行オプション</a>
 ### <a name="newline_before_brace"> 左中かっこ (`{`) の前の改行</a>
-|  オプション名 | `csharp_new_line_before_open_brace` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_new_line_before_open_brace`  |  C#  | true | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 
 | ------------- |:-------------|
@@ -646,9 +695,10 @@ csharp_new_line_before_open_brace = methods, properties, control_blocks, types
 ``` 
 
 ### <a name="newline_before_else"> `else` の前の改行</a>
-|  オプション名 | `csharp_new_line_before_else` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_new_line_before_else` |  C#  | true | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 
 | ------------- |:-------------|
@@ -683,9 +733,10 @@ csharp_new_line_before_else = true
 ``` 
 
 ### <a name="newline_before_catch"> `catch` の前の改行</a>
-|  オプション名 | `csharp_new_line_before_catch` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+| `csharp_new_line_before_catch`|  C#  | true | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 
 | ------------- |:-------------|
@@ -720,9 +771,10 @@ csharp_new_line_before_catch = true
 ``` 
 
 ### <a name="newline_before_finally"> `finally` の前の改行</a>
-|  オプション名 | `csharp_new_line_before_catch` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+| `csharp_new_line_before_finally`|  C#  | true | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 
 | ------------- |:-------------|
@@ -762,9 +814,10 @@ csharp_new_line_before_finally = true
 ``` 
 
 ### <a name="newline_before_object"> オブジェクト初期化子のメンバーの前の改行</a>
-|  オプション名 | `csharp_new_line_before_members_in_object_initializers` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+| `csharp_new_line_before_members_in_object_initializers`|  C#  | true | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 
 | ------------- |:-------------|
@@ -797,9 +850,10 @@ csharp_new_line_before_members_in_object_initializers = true
 ``` 
 
 ### <a name="newline_before_anonymous"> 匿名型のメンバーの前の改行</a>
-|  オプション名 | `csharp_new_line_before_members_in_anonymous_types` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+| `csharp_new_line_before_members_in_anonymous_types` |  C#  | true | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 
 | ------------- |:-------------|
@@ -832,9 +886,10 @@ csharp_new_line_before_members_in_anonymous_types = true
 ``` 
 
 ### <a name="newline_before_query"> クエリ式の句のメンバーの前の改行</a>
-|  オプション名 | `csharp_new_line_within_query_expression_clauses` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_new_line_within_query_expression_clauses`  |  C#  | true | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 
 | ------------- |:-------------|
@@ -864,9 +919,9 @@ csharp_new_line_within_query_expression_clauses = true
 
 ## <a name="indent">インデント オプション</a>
 ### <a name="indent_switch"> `switch` ケース コンテンツにインデントを付ける </a>
-|  オプション名 | `csharp_indent_case_contents` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+| `csharp_indent_case_contents`  |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 | 値 | 説明 
 | ------------- |:-------------|
@@ -911,10 +966,59 @@ switch(c) {
 csharp_indent_case_contents = true
 ``` 
 
+### <a name="indent_switch_labels">インデント`switch`ラベル</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+| `csharp_indent_switch_labels`  |  C#  | true | Visual Studio 2017 v. 15.3  |
+
+| 値 | 説明 
+| ------------- |:-------------|
+| True | インデント`switch`ラベル  |
+| False | インデントされません`switch`ラベル |
+
+#### <a name="applied"></a>以下のように適用されます。
+```csharp
+// csharp_indent_switch_labels = true
+switch(c) {
+    case Color.Red:
+        Console.WriteLine("The color is red");
+        break;
+    case Color.Blue:
+        Console.WriteLine("The color is blue");
+        break;
+    default:
+        Console.WriteLine("The color is unknown.");
+        break;
+}
+```
+
+```csharp
+// csharp_indent_switch_labels = false
+switch(c) {
+case Color.Red:
+    Console.WriteLine("The color is red");
+    break;
+case Color.Blue:
+    Console.WriteLine("The color is blue");
+    break;
+default:
+    Console.WriteLine("The color is unknown.");
+    break;
+}
+```
+
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
+```
+# CSharp formatting settings:
+[*.cs]
+csharp_indent_switch_labels = true
+``` 
+
 ### <a name="label">ラベルの位置付け</a>
-|  オプション名 | `csharp_indent_labels` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|`csharp_indent_labels`  |  C#  | one_less | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 
 | ------------- |:-------------|
@@ -956,9 +1060,10 @@ csharp_indent_labels = one_less
 
 ## <a name="spacing">スペース オプション</a>
 ### <a name="space_after_cast"> キャストの後のスペース</a>
-|  オプション名 | `csharp_space_after_cast` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+| `csharp_space_after_cast` |  C#  | false | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 | 適用済み |
 | ------------- |:-------------|:-------------|
@@ -973,9 +1078,10 @@ csharp_space_after_cast = true
 ``` 
 
 ### <a name="space_control_flow"> 制御フロー ステートメント内のキーワードの後のスペース </a>
-|  オプション名 | `csharp_space_after_keywords_in_control_flow_statements` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+| `csharp_space_after_keywords_in_control_flow_statements` |  C#  | true | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 | 適用済み |
 | ------------- |:-------------|:-------------|
@@ -990,9 +1096,10 @@ csharp_space_after_keywords_in_control_flow_statements = true
 ``` 
 
 ### <a name="space_parameter_list"> メソッド宣言引数リストのかっこの間のスペース </a>
-|  オプション名 | `csharp_space_between_method_declaration_parameter_list_parentheses` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+| `csharp_space_between_method_declaration_parameter_list_parentheses` |  C#  | false | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 | 適用済み |
 | ------------- |:-------------|:-------------|
@@ -1007,9 +1114,10 @@ csharp_space_between_method_declaration_parameter_list_parentheses = true
 ```
 
 ### <a name="space_method_call"> メソッド呼び出し引数リストのかっこ内のスペース</a>
-|  オプション名 | `csharp_space_between_method_call_parameter_list_parentheses` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|  `csharp_space_between_method_call_parameter_list_parentheses` |  C#  | false | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 | 適用済み |
 | ------------- |:-------------|:-------------|
@@ -1024,9 +1132,10 @@ csharp_space_between_method_call_parameter_list_parentheses = control_flow_state
 ```  
 
 ### <a name="space_other"> その他のオプションのかっこ内のスペース </a>
-|  オプション名 | `csharp_space_between_parentheses` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|  `csharp_space_between_parentheses`  |  C#  | false | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 | 適用済み |
 | ------------- |:-------------|:-------------|
@@ -1043,9 +1152,10 @@ csharp_space_between_parentheses = control_flow_statements, type_casts
 
 ## <a name="wrapping">折り返しオプション</a>
 ### <a name="wrapping_statement">1 行に複数のステートメントとメンバー宣言を表示する</a>
-|  オプション名 | `csharp_preserve_single_line_statements` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|  `csharp_preserve_single_line_statements`   |  C#  | true | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 |
 | ------------- |:-------------|
@@ -1072,9 +1182,10 @@ csharp_preserve_single_line_statements = true
 ``` 
 
 ### <a name="wrapping_block">ブロックを単一行に配置する</a>
-|  オプション名 | `csharp_preserve_single_line_blocks` |
-| ------------- |:-------------:|
-| **該当言語** | C#
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
+| ----------- | -------------------- | ----------------------| ----------------  |
+|   `csharp_preserve_single_line_blocks`    |  C#  | true | Visual Studio 2017 v. 15.3  |
+
 
 | 値 | 説明 |
 | ------------- |:-------------|
@@ -1129,7 +1240,7 @@ styleTitle:<br>
 
  `none` および `silent` は同義であり、ユーザーには何も表示されないことを意味します。 この規則を無効化する効果があります。
 
- `suggestion` は、IDE のエラー一覧でユーザーに以下が表示されることを意味します。 重要度が `suggetion` の場合、名前付け規則は実行されますが、ビルドは中断されません。
+ `suggestion` は、IDE のエラー一覧でユーザーに以下が表示されることを意味します。 重要度が `suggestion` の場合、名前付け規則は実行されますが、ビルドは中断されません。
 
 重要度 | 効果
 ------------ | -------------
@@ -1160,16 +1271,6 @@ none/silent | このスタイルに準拠していないとき、ユーザーに
 | `event` | | |
 | `delegate` | | |
 
-#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
-```
-# CSharp formatting settings:
-[*.cs]
-dotnet_naming_rule.async_methods_end_in_async.symbols = any_async_methods
-
-dotnet_naming_symbols.any_async_methods.applicable_kinds = method
-dotnet_naming_symbols.any_async_methods.applicable_accessibilities = *
-dotnet_naming_symbols.any_async_methods.required_modifiers = async
-``` 
 
 ### <a name="style-specification"></a>スタイル指定
 シンボルに適用する名前付けスタイルを指定します。
@@ -1189,15 +1290,6 @@ dotnet_naming_symbols.any_async_methods.required_modifiers = async
 | 単語の区切り記号 | 識別子の単語の間に必要な区切り記号。 |
 | [大文字/小文字の設定] |`pascal_case`, `camel_case`, `first_word_upper`, `all_upper`, `all_lower` | 
 
-#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
-```
-# CSharp formatting settings:
-[*.cs]
-dotnet_naming_rule.async_methods_end_in_async.style = end_in_async
-
-dotnet_naming_style.end_in_async.required_suffix = Async
-dotnet_naming_style.end_in_async.capitalization = pascal_case
-``` 
 
 ### <a name="example-naming-convention"></a>名前付け規則の例
 ```
