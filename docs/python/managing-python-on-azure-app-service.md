@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 5b509a46dd3dbee3a45ab2eac57242636beee17b
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 56fccdd5e103cf29c8ea4a93ab80de7187275642
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 
@@ -176,7 +176,7 @@ Azure Portal から Kudu コンソールを使用する代わりに、`https://y
 }
 ```
 
-コマンドと認証の詳細については、[Kudu のドキュメント](https://github.com/projectkudu/kudu/wiki/REST-API)を参照してください。 Azure CLI から [`az webapp deployment list-publishing-profiles command`](https://docs.microsoft.com/cli/azure/webapp/deployment#list-publishing-profiles) を使用して資格情報を表示することもできます。 Kudu コマンドを投稿するためのヘルパー ライブラリは、GitHub (https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42) でも入手できます。
+コマンドと認証の詳細については、[Kudu のドキュメント](https://github.com/projectkudu/kudu/wiki/REST-API)を参照してください。 Azure CLI から [`az webapp deployment list-publishing-profiles command`](https://docs.microsoft.com/cli/azure/webapp/deployment#list-publishing-profiles) を使用して資格情報を表示することもできます。 Kudu コマンドをポストするためのヘルパー ライブラリは [GitHub で入手](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)することもできます。
 
 
 ### <a name="copying-libraries-into-app-source-code"></a>アプリのソース コードにライブラリをコピーする
@@ -188,3 +188,4 @@ Azure Portal から Kudu コンソールを使用する代わりに、`https://y
 ### <a name="avoiding-virtual-environments"></a>仮想環境を回避する
 
 仮想環境でローカルに作業することは、サイトで必要な依存関係を完全に理解するのに役立ちますが、App Service で仮想環境を使用することはお勧めできません。 代わりに、ライブラリをメインの Python フォルダーにインストールし、アプリを使ってそれらをデプロイして、依存関係の競合を回避します。
+

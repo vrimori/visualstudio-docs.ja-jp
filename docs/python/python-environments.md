@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio での Python 環境 |Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 7/25/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: f73c0c7c40d1edd18cccb1ba69424c4e34472c33
+ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
+ms.openlocfilehash: fa8a7616fe88f024ab299e5d115b66f8656e7cb3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 
@@ -52,7 +52,7 @@ Visual Studio では、環境には環境のライブラリ用の IntelliSense �
 
 ## <a name="selecting-and-installing-python-interpreters"></a>Python インタープリターの選択とインストール
 
-Visual Studio 2017 を除き、Python のサポートに Python インタープリターは付属しないので、コードを実行するには次のいずれかをインストールする必要があります。 一般に、Visual Studio は新しくインストールされたインタープリターを自動的に検出し、それ用に環境を設定します。 そうならない場合は、後の[既存インタープリター用の環境の作成](#creating-an-environment-for-an-existing-interpreter)に関する説明をご覧ください。
+Visual Studio 2017 を除き、Python のサポートに Python インタープリターは付属しないので、コードを実行するには次のいずれかをインストールする必要があります。 一般に、Visual Studio は新しくインストールされたインタープリターを自動的に検出し、それぞれの環境をセットアップします。 インストール済みの環境が検出されない場合は、「[既存インタープリター用の環境の作成](#creating-an-environment-for-an-existing-interpreter)」を参照してください。
 
 | インタープリター | 説明 | 
 | --- | --- | 
@@ -89,7 +89,7 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 ### <a name="creating-an-environment-for-an-existing-interpreter"></a>既存インタープリター用の環境の作成
 
-通常、Visual Studio はレジストリをチェックしてインストールされている Python インタープリターを特定しますが、インタープリターが標準以外の方法でインストールされている場合は、特定できないことがあります。 そのような場合は、次のようにして Visual Studio にインタープリターを直接指定できます。
+Visual Studio では通常、(「[PEP 514 - Python registration in the Windows registry](https://www.python.org/dev/peps/pep-0514/)」 (PEP 514 - Windows レジストリでの Python の登録) に従って) レジストリをチェックして、インストールされている Python インタープリターを見つけます。 ただし、インタープリターが標準以外の方法でインストールされている場合は、Visual Studio で見つけられないことがあります。 そのような場合は、次のようにして Visual Studio にインタープリターを直接指定できます。
 
 1. [Python Environments (Python 環境)] ウィンドウで **[+ Custom... (+ カスタム...)]** を選びます。新しい環境が作成されて、[**[Configure (構成)]** タブ](#configure-tab)が開きます (後で説明します)。
 
@@ -99,7 +99,15 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 1. **[Prefix path (プレフィックスのパス)]** フィールドでは、インタープリターのパスを入力するか参照します。
 1. **[Auto Detect (自動検出)]** を選んで Visual Studio に残りのフィールドを設定させるか、または手動で設定します。
 1. **[Apply (適用)]** を選んで環境を保存します。
-1. 環境を削除する場合は、**[Configure (構成)]** タブの **[Remove (削除)]** コマンドを選びます。
+1. 環境を削除する場合は、**[Configure (構成)]** タブの **[Remove (削除)]** コマンドを選びます。 自動検出された環境ではこのオプションは提供されません。 詳細については、次のセクションを参照してください。
+
+### <a name="moving-an-existing-interpreter"></a>既存のインタープリターの移動
+
+既存のインタープリターをファイル システム上の新しい場所に移動する場合、Visual Studio は変更を自動的に検出しません。 環境ウィンドウでリストを更新するには、手動の手順が必要になります。
+
+- そのインタープリターの環境を最初に作成した場合は、新しい場所を指すようにその環境を編集します。
+
+- 環境が最初に自動検出された場合、Visual Studio で調べるレジストリ エントリを作成した別のインストーラー プログラムでコンピューターにインストールされています。 この場合は、まず、Python インタープリターを元の場所に復元します。 次に、インストーラーを使用してアンインストールします。これで、レジストリ エントリがクリアされます。 次に、目的の場所にインタープリターを再インストールします。 Visual Studio を再起動すると、新しい場所が自動検出されます。 このプロセスによって、確実にインストーラーの他の副作用が正しく適用されます。
 
 ### <a name="overview-tab"></a>[Overview (概要)] タブ
 

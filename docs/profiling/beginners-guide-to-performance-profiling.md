@@ -35,10 +35,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 5c28e68b89f6583dc35a91b275693c11e0259dfd
-ms.openlocfilehash: 6e4094925eec3e4a8768219180e75fa9d1f1fa03
+ms.sourcegitcommit: 14c21f67beb92d3b13a5c54c755ccb846d116a9c
+ms.openlocfilehash: aaa19a3a818c3fa3196d79959ee30c5eae4c1b5f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="beginners-guide-to-performance-profiling"></a>パフォーマンス プロファイリングのビギナーズ ガイド
@@ -48,7 +48,9 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 
 診断ハブでは、診断セッションの実行と管理のために他の多くのオプションを提供しています。 **CPU 使用率**では必要なデータを得ることができない場合、[他のプロファイリング ツール](../profiling/Profiling-Tools.md)が別の種類の情報を提供します。その情報が役に立つ可能性があります。 多くの場合、アプリケーションのパフォーマンス上の問題は CPU 以外の何かが原因になります。メモリ、UI のレンダリング、ネットワークの要求時間などです。 診断ハブには、この種のデータを記録し、分析するためのオプションが他にもいろいろあります。
 
-CPU 使用率の分析方法とメモリ使用率の分析方法を説明する[診断ツールの使用方法に関するビデオを見る](#video)こともできます。
+|         |         |
+|---------|---------|
+| ![ビデオを見る](../install/media/video-icon.png "WatchVideo") | CPU 使用率の分析方法とメモリ使用率の分析方法については、診断ツールの使用に関する[こちらのビデオ](#video)をご覧ください。 |
 
 このトピックでは、通常のデバッグ ワークフローで CPU 使用率を分析する方法について説明します。 デバッガーをアタッチせずに、あるいは実行中のアプリをターゲットにすることで CPU 使用率を分析することもできます。詳細については、「[Run profiling tools without debugging](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」 (デバッグなしでプロファイリング ツールを実行する) を参照してください。
   
