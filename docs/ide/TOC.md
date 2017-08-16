@@ -13,6 +13,7 @@
 ## [Visual Studio の外部ツール](managing-external-tools.md)
 ## [Visual Studio での同期された設定](synchronized-settings-in-visual-studio.md)
 # [Visual Studio の起動時間の最適化](optimize-visual-studio-startup-time.md)
+# [Visual Studio のパフォーマンスのヒントとテクニック](visual-studio-performance-tips-and-tricks.md)
 # [方法: Visual Studio IDE 内で移動する](how-to-move-around-in-the-visual-studio-ide.md)
 # [Visual Studio を使用した開発の開始](get-started-developing-with-visual-studio.md)
 ## [Visual C# と Visual Basic の概要](getting-started-with-visual-csharp-and-visual-basic.md)
