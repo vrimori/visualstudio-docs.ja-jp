@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: cd841938f160420934941a5166184f79aca82be7
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: 4b22d434b99bdd2648408b9191c5f050589883ae
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 
@@ -40,7 +40,7 @@ PyLint の警告とエラーが [エラー一覧] ウィンドウに表示され
 エラーをダブルクリックすると、問題が発生したソース コードに直接移動できます。
 
 > [!Tip]
-> PyLint のすべての出力メッセージの詳細な一覧については、[PyLint の機能のリファレンス](https://pylint.readthedocs.io/en/latest/reference_guide/features.html)に関するページをご覧ください。
+> PyLint のすべての出力メッセージの詳細な一覧については、[PyLint の機能のリファレンス](https://pylint.readthedocs.io/en/latest/technical_reference/features.html)に関するページをご覧ください。
 
 ## <a name="setting-pylint-command-line-options"></a>PyLint コマンド ライン オプションの設定
 
@@ -59,3 +59,4 @@ PyLint ドキュメントの[コマンド ライン オプション](https://pyl
 1. ファイルを編集のために開くと、操作できる各種の設定が表示されます。 警告を無効にするには、`[MESSAGES CONTROL]` セクションを探し、そのセクションの `disable` 設定を見つけます。 特定のメッセージからなる長い文字列が表示されます。ここに目的の警告を追加できます。 この例では、`,missing-docstring` (区切りコンマを含む) を追加します。
 
 1. `.pylintrc` ファイルを保存し、PyLint をもう一度実行して、警告が表示されなくなったことを確認します。
+
