@@ -1,32 +1,37 @@
 ---
-title: "プロトタイプとプロトタイプ継承 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "プロトタイプ [JavaScript]"
-  - "プロトタイプ継承 [JavaScript]"
+title: "プロトタイプおよびプロトタイプの継承 | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- prototype [JavaScript]
+- prototype inheritance [JavaScript]
 ms.assetid: 1e1d0631-2a9f-4011-b9fe-fa338e1ef34c
 caps.latest.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 6
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 3fb5627d2cc92c36e9dcf34f4b94796b6620321f
+ms.openlocfilehash: ade60bcbbfad166bae18b650daa6906f9983d4cd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/11/2017
+
 ---
-# プロトタイプとプロトタイプ継承
-JavaScript では、`prototype` は関数のプロパティ、およびコンストラクター関数によって作成されるオブジェクトのプロパティです。  関数のプロトタイプはオブジェクトです。  主に、関数がコンストラクターとして使用される場合に使用されます。  
+# <a name="prototypes-and-prototype-inheritance"></a>プロトタイプおよびプロトタイプの継承
+JavaScript では、`prototype` は関数のプロパティ、およびコンストラクター関数によって作成されるオブジェクトのプロパティです。 関数のプロトタイプはオブジェクトです。 主に、関数がコンストラクターとして使用される場合に使用されます。  
   
-```javascript  
+```JavaScript  
 function Vehicle(wheels, engine) {  
     this.wheels = wheels;  
     this.engine = engine;  
@@ -35,10 +40,10 @@ function Vehicle(wheels, engine) {
   
  前の例では、`Vehicle` 関数のプロトタイプは、`Vehicle` コンストラクターでインスタンス化されたオブジェクトのプロトタイプです。  
   
-## プロトタイプを使用したプロパティとメソッドの追加  
- `prototype` プロパティを使用すると、オブジェクト \(既に作成されているものも含む\) にプロパティおよびメソッドを追加できます。  
+## <a name="using-prototypes-to-add-properties-and-methods"></a>プロトタイプを使用したプロパティとメソッドの追加  
+ `prototype` プロパティを使用すると、オブジェクト (既に作成されているものも含む) にプロパティおよびメソッドを追加できます。  
   
-```javascript  
+```JavaScript  
 var testVehicle = new Vehicle(2, false);  
 Vehicle.prototype.color = "red";  
 var testColor = testVehicle.color;  
@@ -46,9 +51,9 @@ var testColor = testVehicle.color;
   
  `testColor` の値は "red" です。  
   
- 定義済みオブジェクトにもプロパティおよびメソッドを追加できます。  たとえば、`String` プロトタイプ オブジェクトの `Trim` メソッドを定義できます。スクリプトのすべての文字列でメソッドが継承されます。  
+ 定義済みオブジェクトにもプロパティおよびメソッドを追加できます。 たとえば、`Trim` プロトタイプ オブジェクトの `String` メソッドを定義できます。スクリプトのすべての文字列でメソッドが継承されます。  
   
-```javascript  
+```JavaScript  
 String.prototype.trim = function()  
 {  
     // Replace leading and trailing spaces with the empty string  
@@ -63,24 +68,25 @@ s = s.trim();
 window.alert(s + " (" + s.length + ")");  
 ```  
   
-### プロトタイプを使用して Object.create でオブジェクトから別のオブジェクトを派生する  
- `prototype` オブジェクトを使用して、あるオブジェクトから別のオブジェクトを派生させることができます。  たとえば、[Object.create](../../javascript/reference/object-create-function-javascript.md) 関数を使用して、前に定義した `Vehicle` オブジェクトのプロトタイプ \(および必要な新しいプロパティ\) を使用する新しいオブジェクト `Bicycle` を派生させることができます。  
+### <a name="using-prototypes-to-derive-one-object-from-another-with-objectcreate"></a>プロトタイプを使用して Object.create でオブジェクトから別のオブジェクトを派生する  
+
+プロトタイプ `Object` を使用して、あるオブジェクトから別のオブジェクトを派生させることができます。 たとえば、[Object.create](../../javascript/reference/object-create-function-javascript.md) 関数を使用して、前に定義した `Vehicle` オブジェクトのプロトタイプ (および必要な新しいプロパティ) を使用する新しいオブジェクト `Bicycle` を派生させることができます。  
   
-```javascript  
-var Bicycle = Object.create(Object.getPrototypeOf(Vehicle), {  
+```JavaScript  
+var bicycle = Object.create(Object.getPrototypeOf(Vehicle), {  
     "pedals" :{value: true}  
 });  
   
 ```  
   
- `Bicycle` オブジェクトにはプロパティ `wheels`、`engine`、`color`、および `pedals` があり、そのプロトタイプは `Vehicle.prototype` です。  JavaScript エンジンは `Bicycle` の `pedals` プロパティを検索し、さらにプロトタイプ チェーンを検索して `Vehicle` の `wheels`、`engine`、および `color` の各プロパティを探します。  
+ `bicycle` オブジェクトにはプロパティ `wheels`、`engine`、`color`、および `pedals` があり、そのプロトタイプは `Vehicle.prototype` です。 JavaScript エンジンは `pedals` の `bicycle` プロパティを検索し、さらにプロトタイプ チェーンを検索して `wheels` の `engine`、`color`、および `Vehicle` の各プロパティを探します。  
   
-### オブジェクトのプロトタイプの変更  
- Internet Explorer 11 では、[\_\_proto](../../javascript/reference/proto-property-object-javascript.md) プロパティを使用して、オブジェクトまたは関数の内部プロトタイプを新しいプロトタイプに置き換えることができます。  このプロパティを使用した場合、プロトタイプ チェーン内の他のプロパティおよびメソッドと共に、新しいプロトタイプのプロパティおよびメソッドが継承されます。  
+### <a name="changing-an-objects-prototype"></a>オブジェクトのプロトタイプの変更  
+ Internet Explorer 11 では、[__proto\_\_](../../javascript/reference/proto-property-object-javascript.md) プロパティを使用して、オブジェクトまたは関数の内部プロトタイプを新しいプロトタイプに置き換えることができます。 このプロパティを使用した場合、プロトタイプ チェーン内の他のプロパティおよびメソッドと共に、新しいプロトタイプのプロパティおよびメソッドが継承されます。  
   
- 次の例は、オブジェクトのプロトタイプを変更する方法を示しています。  この例では、プロトタイプを変更するとオブジェクトの継承されたプロパティがどのように変化するかを示します。  
+ 次の例は、オブジェクトのプロトタイプを変更する方法を示しています。 この例では、プロトタイプを変更するとオブジェクトの継承されたプロパティがどのように変化するかを示します。  
   
-```javascript  
+```JavaScript  
 function Friend() {  
     this.demeanor = "happy";  
 }  
@@ -108,3 +114,4 @@ if (console && console.log) {
     console.log(player.ally === "Tom");             // Returns true  
 }  
 ```
+
