@@ -1,52 +1,57 @@
 ---
-title: "Windows ランタイム API を使用する場合の考慮事項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "JavaScript, Windows ランタイム API"
+title: "Windows ランタイム API を使用する際の考慮事項 | Microsoft Docs"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- JavaScript, Windows Runtime API
 ms.assetid: 2f56d70c-c80d-4876-8e6a-8ae031d31c22
 caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: 693b3dac9def5533417638c3ec1c0de8db1d5fe3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/11/2017
+
 ---
-# Windows ランタイム API を使用する場合の考慮事項
-JavaScript で Windows ランタイム API のほぼすべての要素をしようできます。  ただし、Windows ランタイム要素の JavaScript 表現には、考慮が必要な面があります。  
+# <a name="considerations-when-using-the-windows-runtime-api"></a>Windows ランタイム API を使用する際の考慮事項
+JavaScript では Windows ランタイム API のほぼすべての要素を使用することができます。 ただし、Windows ランタイム要素の JavaScript 表現には、覚えておかなければならない側面がいくつかあります。  
   
 > [!IMPORTANT]
->  C\+\+、C\#、または Visual Basic での Windows ランタイム コンポーネントの作成について、および JavaScript での利用については、「[Windows ランタイム コンポーネントの作成](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133)」を参照してください。  
+>  C++、C#、または Visual Basic での Windows ランタイム コンポーネントの作成と JavaScript での使用方法については、「[C++ で Windows ランタイム コンポーネントを作成する](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)」および「[C++ および Visual Basic での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)」を参照してください。  
   
-## Windows ランタイム型の JavaScript 表現の特殊なケース  
+## <a name="special-cases-in-the-javascript-representation-of-windows-runtime-types"></a>Windows ランタイム型の JavaScript 表現の特殊なケース  
   
--   文字列: 初期化されていない文字列は "undefined" 文字列として Windows ランタイム メソッドに渡され、`null` に設定された文字列は "null" 文字列として渡されます \(これは `null` または `undefined` の値が文字列に強制される場合は常に当てはまります\)。Windows ランタイム メソッドに文字列を渡す前に、空の文字列 \(""\) として初期化する必要があります。  
+-   文字列: 初期化されていない文字列が文字列 "undefined" として Windows ランタイム メソッドに渡され、`null` に設定された文字列が文字列 "null" として渡されます。 (これは、`null` または `undefined` の値が文字列に強制されている場合、常に該当します。)文字列を Windows ランタイム メソッドに渡す前に、文字列を空の文字列 ("") として初期化する必要があります。  
   
--   インターフェイス: JavaScript で Windows ランタイム インターフェイスを実装することはできません。  
+-   インターフェイス: JavaScript では Windows ランタイム インターフェイスを実装できません。  
   
--   配列: Windows ランタイム配列のサイズは変更できないので、JavaScript で配列のサイズを変更するメソッドは Windows ランタイム配列では機能しません。  
+-   配列: Windows ランタイムの配列のサイズを変更できないため、JavaScript で配列のサイズを変更するメソッドが Windows ランタイムの配列で機能しません。  
   
--   配列: Windows ランタイム メソッドに JavaScript の配列の値を渡すと、配列がコピーされます。  Windows ランタイム メソッドは、配列またはそのメンバーを変更したり、それを JavaScript アプリに返したりすることはできません。  ただし、コピーされていない型指定された配列 \([Int32Array オブジェクト](../javascript/reference/int32array-object.md) など\) は使用できます。  
+-   配列: Windows ランタイム メソッドに JavaScript の配列の値を渡すと、配列がコピーされます。 Windows ランタイム メソッドは、配列またはそのメンバーを変更して JavaScript アプリに戻すことはできません。 ただし、コピーされない、型指定された配列 (たとえば、[Int32Array オブジェクト](../javascript/reference/int32array-object.md)) は使用できます。  
   
--   構造体: Windows ランタイム構造体は JavaScript 内のオブジェクトです。  Windows ランタイム メソッドに Windows ランタイム構造体を渡す場合は、`new` キーワードを持つ構造体をインスタンス化しないでください。  その代わりに、オブジェクトを作成し、関連するメンバーとその値を追加します。  メンバー名は Camel 形式 \(`SomeStruct.firstMember`\) でなければなりません。  
+-   構造体: Windows ランタイムの構造体は JavaScript のオブジェクトです。 Windows ランタイムの構造体を Windows ランタイム メソッドに渡す場合、`new` キーワードで構造体を初期化しないでください。 代わりに、オブジェクトを作成して、関連するメンバーとその値を追加します。 メンバーの名前はキャメル ケース (`SomeStruct.firstMember`) にする必要があります。  
   
--   オブジェクト: JavaScript オブジェクトは、マネージ コード オブジェクト \(`System.Object`\) と同じではありません。  `System.Object` を必要とする Windows ランタイム メソッドに JavaScript オブジェクトを渡すことはできません。  
+-   オブジェクト: JavaScript オブジェクトはマネージ コード オブジェクト (`System.Object`) と同じではありません。 `System.Object` を必要とする Windows ランタイム メソッドに JavaScript オブジェクトを渡すことはできません。  
   
--   オブジェクト ID: ほとんどの場合、Windows ランタイムと JavaScript の間でやり取りされるオブジェクトは変更されません。  JavaScript エンジンは既知のオブジェクトのマップを保持します。  オブジェクトが Windows ランタイムから返されると、そのオブジェクトがマップと照合され、そのオブジェクトが存在しない場合は、新しいオブジェクトが作成されます。  Windows ランタイム メソッドによって返されるインターフェイスを表すオブジェクトについても、同様の手順が取られます。  2 種類の例外があります。  
+-   オブジェクト ID: ほとんどの場合、Windows ランタイムと JavaScript の間で受け渡しが行われるオブジェクトは変更されません。 JavaScript エンジンは、既知のオブジェクトのマップを保持します。 Windows ランタイムから戻されたオブジェクトはマップと照合され、マップに存在しない場合には新しいオブジェクトが作成されます。 Windows ランタイム メソッドによって戻されるインターフェイスを表すオブジェクトでも同じ手順が実行されます。 次の 2 つの例外があります。  
   
-    -   Windows ランタイム呼び出しから返されて新しい \(expando\) プロパティが追加されたオブジェクトは、Windows ランタイムに返されるときに新しいプロパティを保持できません。  ただし、JavaScript アプリに返される場合は、既存のオブジェクトに一致するので、返されるオブジェクトは expando プロパティを持ちます。  
+    -   Windows ランタイムの呼び出しから戻されたオブジェクトには新しい (expando) プロパティが追加されますが、これらの新しいプロパティは、Windows ランタイムに戻されたときに保持されません。 ただし、JavaScript アプリに戻された場合、オブジェクトが既存のオブジェクトと一致するため、戻されたオブジェクトに expando プロパティが含まれます。  
   
-    -   Windows ランタイムの構造体とデリゲートは、以前に使用した構造体またはデリゲートと同じものとして識別することはできません。  構造体またはデリゲートが返されるたびに、新しい参照を取得します。  
+    -   Windows ランタイムの構造体とデリゲートは、以前に使用された構造体やデリゲートと同一であると識別できません。 構造体やデリゲートが戻されるたびに、新しい参照が取得されます。  
   
--   名前の競合: 複数の Windows ランタイム インターフェイスには、同じ名前のメンバーがある場合があります。  これらが単一の JavaScript オブジェクト内で組み合わされる場合 \(ランタイム クラスまたはインターフェイスの表現である場合もある\)、メンバーは完全修飾名で表されます。  `Class["MemberName"](parameter)` という構文を使用して、これらのメンバーを呼び出すことができます。  
+-   名前の競合: 複数の Windows ランタイム インターフェイスに同じ名前のメンバーが含まれる可能性があります。 単一の JavaScript オブジェクト (ランタイム クラスまたはインターフェイスの表現である場合があります) と組み合わされると、メンバーは完全修飾名で表現されます。 これらのメンバーは `Class["MemberName"](parameter)` の構文を使用して呼び出すことができます。  
   
-     次のコードでは、2 つのインターフェイスに描画メソッドがあり、ランタイム クラスは両方のインターフェイスを実装します。  
+     次のコードでは、2 つのインターフェイスに Draw メソッドが含まれ、ランタイム クラスは両方のインターフェイスを実装します。  
   
     ```cpp#  
     namespace CollisionExample {  
@@ -65,15 +70,15 @@ JavaScript で Windows ランタイム API のほぼすべての要素をしよ�
     }  
     ```  
   
-     ここで、JavaScript で上記のコードを呼び出します。  
+     JavaScript で上記のコードを呼び出す方法を示します。  
   
-    ```javascript  
+    ```JavaScript  
     var example = new ExampleObject();  
     example["CollisionExample.InterfaceA.draw"](12);  
     example["CollisionExample.InterfaceB.draw"]("hello");  
     ```  
   
--   `Out` パラメーター: Windows ランタイム メソッドに複数の `out` パラメーターがある場合、JavaScript では、メソッドは戻り値として JavaScript オブジェクトを持ち、オブジェクトは `out` パラメーターに対応するプロパティを持ちます。  たとえば、C\+\+ で次の Windows ランタイム シグネチャを検討します。  
+-   `Out` パラメーター: Windows ランタイム メソッドに複数の `out` パラメーターがある場合、JavaScript ではメソッドの戻り値として JavaScript オブジェクトが含まれ、そのオブジェクトには `out` パラメーターに対応するプロパティが含まれます。 たとえば、C++ で次の Windows ランタイム シグネチャについて考えてみます。  
   
     ```cpp#  
     void ExampleMethod(  
@@ -82,22 +87,22 @@ JavaScript で Windows ランタイム API のほぼすべての要素をしよ�
     )  
     ```  
   
-     このシグネチャの JavaScript バージョンは次のとおりです。  
+     このシグネチャの JavaScript のバージョンは次のようになります。  
   
-    ```javascript  
+    ```JavaScript  
     var returnValue = exampleMethod();  
   
     ```  
   
-     この例では、`returnValue` は、`first` と `second` の 2 つのフィールドを持つ JavaScript オブジェクトです。  
+     この例では、`returnValue` は `first` と `second` の 2 つのフィールドを持つ JavaScript オブジェクトです。  
   
--   静的メンバー: Windows ランタイムは静的メンバーとインスタンス メンバーの両方を定義します。  JavaScript では、静的メンバーは、Windows ランタイム クラスまたはインターフェイスに関連付けられたオブジェクトに追加されます。  
+-   静的メンバー: Windows ランタイムは、静的メンバーとインスタンス メンバーの両方を定義します。 JavaScript では、Windows ランタイム クラスまたはインターフェイスに関連するオブジェクトに静的メンバーが追加されます。  
   
-    ```javascript  
+    ```JavaScript  
     // Static method.   
     var accel = Windows.Devices.Sensors.Accelerometer.getDefault();   
     // Instance method.   
     var reading = accel.getCurrentReading();            
     ```  
   
- Windows ランタイムの基本型の JavaScript 表現の詳細については、「[Windows ランタイム型の JavaScript 表現](../jswinrt/javascript-representation-of-windows-runtime-types.md)」を参照してください。
+ Windows ランタイムの基本型の JavaScript 表現の詳細については、「[JavaScript Representation of Windows Runtime Types](../jswinrt/javascript-representation-of-windows-runtime-types.md)」(Windows ランタイム型の JavaScript 表現) を参照してください。

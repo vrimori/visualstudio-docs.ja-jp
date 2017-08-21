@@ -1,46 +1,51 @@
 ---
 title: "オブジェクトの作成 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "コンストラクター関数"
-  - "コンストラクター, インクルード (プロパティとメソッドを)"
-  - "作成 (オブジェクトを)"
-  - "作成 (オブジェクトを), オブジェクトの作成の概要"
-  - "作成 (オブジェクトを), コンストラクター関数"
-  - "作成 (オブジェクトを), プロトタイプ"
-  - "カスタム オブジェクト"
-  - "カスタム オブジェクト, 作成"
-  - "function コンストラクター"
-  - "初期化 (オブジェクトを), コンストラクターの使用"
-  - "オブジェクト, 作成 [JavaScript]"
-  - "prototype オブジェクト"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- constructors, including properties and methods
+- function constructor
+- creating objects, constructor functions
+- constructor functions
+- prototype objects
+- creating objects
+- custom objects, creating
+- creating objects, about creating objects
+- objects, creating [JavaScript]
+- creating objects, prototypes
+- custom objects
+- initializing objects, using constructors
 ms.assetid: 58d1baa5-4fe8-4a56-a926-5b11765df704
 caps.latest.revision: 19
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 19
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 359e1eb5df8f19774d352ace631802367b6dd8c9
+ms.openlocfilehash: 0ba7962179cc2f0fcb972caee692edabee368c7d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/11/2017
+
 ---
-# オブジェクトの作成 (JavaScript)
-いくつかの方法により、JavaScript で独自のオブジェクトを作成できます。  [Object オブジェクト](../javascript/reference/object-object-javascript.md)を直接インスタンス化 して、独自のプロパティとメソッドを追加できます。  または、オブジェクト リテラル表記を使用してオブジェクトを定義できます。  さらに、コンストラクター関数を使用してオブジェクトを定義することもできます。  コンス トラクター関数の使用方法について詳しくは、「[コンストラクターを使用した型の定義](../javascript/advanced/using-constructors-to-define-types.md)」を参照してください。  
+# <a name="creating-objects-javascript"></a>オブジェクトの作成 (JavaScript)
+いくつかの方法により、JavaScript で独自のオブジェクトを作成できます。 [Object オブジェクト](../javascript/reference/object-object-javascript.md)を直接インスタンス化して、独自のプロパティとメソッドを追加できます。 または、オブジェクト リテラル表記を使用してオブジェクトを定義できます。 さらに、コンストラクター関数を使用してオブジェクトを定義することもできます。 コンストラクター関数の使用方法について詳しくは、「[Using Constructors to Define Types](../javascript/advanced/using-constructors-to-define-types.md)」(コンストラクターを使用して型を定義する) を参照してください。  
   
-## 例  
- 次のコードは、オブジェクトのインスタンスを作成していくつかのプロパティを追加する方法を示しています。  このケースでは、`pasta` オブジェクトだけに `grain`、`width`、および `shape` プロパティがあります。  
+## <a name="example"></a>例  
+ 次のコードは、オブジェクトのインスタンスを作成していくつかのプロパティを追加する方法を示しています。 このケースでは、`pasta` オブジェクトだけに `grain`、`width`、および `shape` プロパティがあります。  
   
-```javascript  
-var pasta = new Object();  
+```JavaScript  
+const pasta = new Object();  
 pasta.grain = "wheat";  
 pasta.width = 0.5;  
 pasta.shape = "round";  
@@ -57,11 +62,11 @@ document.write(pasta.getShape());
   
 ```  
   
-## オブジェクト リテラル  
- オブジェクトの 1 つのインスタンスだけを作成するときには、オブジェクト リテラル表記を使用することもできます。  次のコードは、オブジェクト リテラル表記を使用してオブジェクト インスタンスを作成する方法を示しています。  
+## <a name="object-literals"></a>オブジェクト リテラル  
+ オブジェクトの 1 つのインスタンスだけを作成するときには、オブジェクト リテラル表記を使用することもできます。 次のコードは、オブジェクト リテラル表記を使用してオブジェクト インスタンスを作成する方法を示しています。  
   
-```javascript  
-var pasta = {  
+```JavaScript  
+const pasta = {  
     grain: "wheat",  
     width: 0.5,  
     shape: "round"  
@@ -75,18 +80,18 @@ var pasta = {
   
  [!INCLUDE[jsv12text](../javascript/includes/jsv12text-md.md)] では、略式の構文を使用してオブジェクト リテラルを作成できます。  
   
-```javascript  
-var key = 'a';  
-var value = 5;  
+```JavaScript  
+const key = 'a';  
+const value = 5;  
   
 // Older version  
-var obj1 = {  
+const obj1 = {  
     key: key,  
     value: value  
 };  
   
 // Edge mode  
-var obj2 = {key, value};  
+const obj2 = {key, value};  
   
 console.log(obj2);  
   
@@ -96,26 +101,26 @@ console.log(obj2);
   
  以下の例では、略式の構文を使用してオブジェクト リテラルにメソッドを定義する方法を示します。  
   
-```javascript  
+```JavaScript  
 // Older versions  
-var obj = {  
+const obj = {  
     method1: function() {},  
     method2: function() {}  
 };  
   
 // Edge mode  
-var obj = {  
+const obj = {  
     method1() {},  
     method2() {}  
 };  
 ```  
   
- [!INCLUDE[jsv12text](../javascript/includes/jsv12text-md.md)] では、オブジェクト リテラルにプロパティ名を動的に設定することもできます。  次のコード例では、set 構文を動的に使用して、オブジェクトのプロパティ名を作成します。  
+ [!INCLUDE[jsv12text](../javascript/includes/jsv12text-md.md)] では、オブジェクト リテラルにプロパティ名を動的に設定することもできます。 次のコード例では、set 構文を動的に使用して、オブジェクトのプロパティ名を作成します。  
   
-```javascript  
-var propName = "prop_42";  
+```JavaScript  
+const propName = "prop_42";  
   
-var obj = {  
+const obj = {  
     value: 0,  
     set [propName](v) {  
         this.value = v;  
@@ -135,10 +140,10 @@ console.log(obj.value);
   
  次のコード例では、get 構文を動的に使用して、オブジェクトのプロパティ名を作成します。  
   
-```javascript  
-var propName = "prop_42";  
+```JavaScript  
+const propName = "prop_42";  
   
-var obj = {  
+const obj = {  
     get [propName]() {  
         return 777;  
     }  
@@ -150,10 +155,11 @@ console.log(obj.prop_42);
 // 777  
 ```  
   
- 次のコード例では、、[矢印関数の構文](../javascript/functions-javascript.md)を使用して 42 をプロパティ名に追加することにより、計算済みプロパティを作成します。  
+ 次のコード例では、[矢印関数の構文](../javascript/functions-javascript.md)を使用して 42 をプロパティ名に追加することにより、計算済みプロパティを作成します。  
   
-```javascript  
-var obj = {  
+```JavaScript  
+const obj = {  
     [ 'prop_' + (() => 42)() ]: 42  
 };  
 ```
+
