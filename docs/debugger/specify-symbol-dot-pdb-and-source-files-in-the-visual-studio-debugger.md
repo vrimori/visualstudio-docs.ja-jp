@@ -1,248 +1,275 @@
 ---
-title: "シンボル (.pdb) ファイル、ソース ファイル、およびバイナリ ファイルの検索 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Debugger.Native"
-  - "VS.ToolsOptionsPages.Debugger.Symbols"
-  - "vs.debug.options.Native"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ソース コード"
-  - ".dbg ファイル"
-  - "ソース コード、管理"
-  - "シンボル、管理"
-  - ".pdb ファイル"
-  - "dbg ファイル"
-  - "pdb ファイル"
-  - "debugger"
+title: Specify symbol (.pdb) and source files in the debugger | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 04/05/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Debugger.Native
+- VS.ToolsOptionsPages.Debugger.Symbols
+- vs.debug.options.Native
+- vs.debug.nosymbols
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- source code
+- .dbg files
+- source code, managing
+- symbols, managing
+- .pdb files
+- dbg files
+- pdb files
+- debugger
 ms.assetid: 1105e169-5272-4e7c-b3e7-cda1b7798a6b
 caps.latest.revision: 31
-caps.handback.revision: 31
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# シンボル (.pdb) ファイル、ソース ファイル、およびバイナリ ファイルの検索
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 8355e43e6c8e6142aedbe5dfb325196b01a7a681
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-プログラム データベース \(.pdb\) ファイルは、シンボル ファイルとも呼ばれ、クラス、メソッド、およびその他のコードのソース ファイルで作成した識別子を、プロジェクトのコンパイルされた実行可能ファイルで使用される識別子に対応付けます。 また .pdb ファイルは、ソース コード内のステートメントを実行可能ファイル内の実行命令に対応付けます。 デバッガーはこの情報を使用して 2 つの重要な情報を決定します。1 つは、Visual Studio IDE に表示されるソース ファイルと行番号です。もう 1 つは、設定されたブレークポイントによって実行可能ファイル内で停止する位置です。 また、シンボル ファイルにはソース ファイルの元の場所、および必要に応じてソース ファイルを取得できるソース サーバーの場所が格納されています。  
+---
+# <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>Specify symbol (.pdb) and source files in the Visual Studio debugger
+A program database (.pdb) file, also called a symbol file, maps the identifiers that you create in source code for classes, methods, and other code to the identifiers that are used in the compiled executables of your project. The .pdb file also maps the statements in the source code to the execution instructions in the executables. The debugger uses this information to determine two key pieces of information:
+
+* Name of the source file and line number to be displayed in the Visual Studio IDE
+* Location in the executable to stop at when you set a breakpoint
+
+A symbol file also contains the original location of the source files, and optionally, the location of a source server where the source files can be retrieved from.
   
- Visual Studio IDE でプロジェクトをデバッグするとき、デバッガーにはコードの .pdb とソース ファイルの既定の場所が通知されます。 プロジェクト ソース コードの外部コード \(プロジェクトから呼び出す Windows やサード パーティのコードなど\) をデバッグする場合、.pdb の場所 \(必要に応じて外部コードのソース ファイル\) を指定する必要があります。また、それらのファイルは実行可能ファイルのビルドに正確に対応付けられる必要があります。  
+> [!TIP]
+> If you want to debug code outside your project source code, such as Windows code or third-party code your project calls, you have to specify the location of the .pdb (and optionally, the source files of the external code) and those files need to exactly match the build of the executables.  
+ 
+##  <a name="BKMK_Find_symbol___pdb__files"></a> Where does the debugger search for symbol files? 
   
- Visual Studio 2012 より前では、リモート デバイスでマネージ コードをデバッグしたとき、リモート コンピューターにシンボル ファイルを置く必要がありました。 このリリースでは、そのような作業が不要になりました。 すべてのシンボル ファイルはローカル コンピューター上に配置するか、**\[ツール\]、\[オプション\]、\[デバッグ\]、\[シンボル\]** ページで指定した場所に配置する必要があります。  
+1.  The location that is specified inside the DLL or the executable file.  
   
-##  <a name="BKMK_Find_symbol___pdb__files"></a> デバッガーが .pdb ファイルを検索する場所  
+     (By default, if you have built a DLL or an executable file on your computer, the linker places the full path and file name of the associated .pdb file inside the DLL or the executable file. The debugger first checks to see if the symbol file exists in the location that is specified inside the DLL or the executable file. This is helpful, because you always have symbols available for code that you have compiled on your computer.)  
   
-1.  DLL または実行可能ファイル内で指定されている場所。  
+2.  .pdb files that are present in the same folder as the DLL or executable file.
+
+3. Any locations [specified in the debugger options](#BKMK_Specify_symbol_locations_and_loading_behavior) for symbol files. 
   
-     \(DLL または実行可能ファイルをコンピューター上でビルドした場合、既定では、リンカーは DLL または実行可能ファイル内で対応付けられた .pdb ファイルの完全なパスとファイル名を特定します。 デバッガーはまず、DLL または実行可能ファイル内で指定された場所にシンボル ファイルが存在するかどうかをチェックします。 これが便利なのは、コンピューター上でコンパイルしたコードでシンボルが常に使用できるためです。\)  
+    * Any local symbol cache folders.  
   
-2.  DLL または実行可能ファイルと同じフォルダー内に存在する可能性がある .pdb ファイル。  
+    * Any network, internet, or local symbol servers and locations that are specified, such as the Microsoft symbol server (if enabled). 
+
+> [!NOTE]
+> Before Visual Studio 2012, when you debugged managed code on a remote device you needed to put the symbol files on the remote machine. Starting with Visual Studio 2012, all symbol files must be located on the local machine or in a location [specified in the debugger options](#BKMK_Specify_symbol_locations_and_loading_behavior).  
   
-3.  任意のローカル シンボル キャッシュ フォルダー。  
+##  <a name="BKMK_Why_do_symbol_files_need_to_exactly_match_the_executable_files_"></a> Why do symbol files need to exactly match the executable files?  
+The debugger will load only a .pdb file for an executable file that exactly matches the .pdb file that was created when the executable was built (that is, the .pdb must be the original or a copy of the original .pdb file). Because the compiler is optimized for compilation speed in addition to its main task of creating correct and efficient code, the actual layout of an executable can change even if the code itself has not changed. For more information see [Why does Visual Studio require debugger symbol files to exactly match the binary files that they were built with?](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)
   
-4.  任意のネットワーク、インターネット、またはローカル シンボル サーバー、さらに指定された場所 \(有効になっている場合は Microsoft シンボル サーバーなど\)。  
+##  <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a> Configure where the debugger looks for symbol files and symbol loading behavior
+ When you debug a project in the Visual Studio IDE, the debugger automatically loads symbol files that are located in the project directory. You can specify alternative search paths and symbol servers for Microsoft, Windows, or third-party components in **Tools > Options > Debugging > Symbols**. You can also specify specific modules that you want the debugger to automatically load symbols for. And you can then change these settings manually while you are actively debugging.  
   
-###  <a name="BKMK_Why_do_symbol_files_need_to_exactly_match_the_executable_files_"></a> シンボル ファイルを実行可能ファイルに正確に対応付ける必要がある理由  
- デバッガーは、実行可能ファイルがビルドされたときに作成された .pdb ファイルと正確に一致する実行可能ファイルの .pdb ファイルのみ読み込みます \(つまり .pdb ファイルはオリジナルまたはオリジナルのコピーであることが必要\)。 コンパイラがコンパイル速度だけでなく、正確で効率的なコードを作成する主要なタスクに対しても最適化されるため、コード自体が変更されていない場合でも、実行可能ファイルの実際のレイアウトが変更されることがあります。 詳細については、「[Why does Visual Studio require debugger symbol files to exactly match the binary files that they were built with?](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)」 \(Visual Studio においてデバッガー シンボル ファイルがビルド時のバイナリ ファイルと正確に一致することが求められる理由\) を参照してください。  
+1.  In Visual Studio, open the **Tools > Options > Debugging > Symbols** page.  
   
-###  <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a> シンボルの場所と読み込み動作を指定する  
- VS IDE でプロジェクトをデバッグするとき、デバッガーは、プロジェクト ディレクトリに格納されているシンボル ファイルを自動的に読み込みます。**\[ツール\]、\[オプション\]、\[デバッグ\]、\[シンボル\]** で、Microsoft、Windows、またはサード パーティのコンポーネント用に別の検索パスとシンボル サーバーを指定できます。デバッガーがシンボルを自動的に読み込む特定のモジュールを指定することもできます。 これらの設定はデバッグ中に手動でも変更できます。  
+     ![Tools &#45; Options &#45; Debugging &#45; Symbols page](../debugger/media/dbg_tools_options_symbols.gif "DBG_Tools_Options_Symbols")  
   
-1.  Visual Studio で **\[ツール\]、\[オプション\]、\[デバッグ\]、\[シンボル\] ページ**の順に選択し、ページを開きます。  
+2.  Choose the folder ![Tools&#47; Options&#47; Debugging&#47;Symbols  folder icon](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon") icon. Editable text appears in the **Symbol file (.pdb) locations** box.  
   
-     ![&#91;ツール&#93; &#45; &#91;オプション&#93; &#45; &#91;デバッグ&#93; &#45; &#91;シンボル&#93; ページ](../debugger/media/dbg_tools_options_symbols.png "DBG\_Tools\_Options\_Symbols")  
+3.  Type the URL or directory path of the symbol server or symbol location. Statement completion helps you find the correct format.
+
+    You can use **Ctrl + Up** and **Ctrl + Down** to change the loading order for symbol locations. Press **F2** to edit a URL or directory path.
   
-2.  フォルダー ![ツール&#47;オプション&#47;デバッグ&#47;シンボル フォルダーのアイコン](~/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") アイコンをクリックします。 編集可能なテキストが **\[シンボル ファイル \(.pdb\) の場所\]** ボックスに表示されます。  
-  
-3.  シンボル サーバーまたはシンボルの場所の URL またはディレクトリ パスを入力します。 ステートメント入力候補により、正しい形式を確認できます。  
-  
-4.  シンボルの読み込みパフォーマンスを向上させるには、シンボル サーバーによってシンボルをコピー可能なローカル ディレクトリのパスを **\[このディレクトリにシンボルをキャッシュ\]** に入力します。  
+4.  To improve symbol loading performance type the path a local directory where symbols can be copied by symbol servers in the **Cache symbols in this directory** box a local directory that symbols can be copied to.  
   
     > [!NOTE]
-    >  Windows フォルダーなどの保護されたフォルダー \(C:\\Windows フォルダーまたはそのいずれかのサブフォルダーなど\) にシンボル キャッシュを配置しないでください。 読み取り\/書き込みフォルダーを使用してください。  
+    >  Do not place your symbol cache in a protected folder (such as the C:\Windows folder or one of its subfolders). Use a read-write folder instead.  
   
- **シンボルの読み込み動作を指定する**  
+### <a name="specify-symbol-loading-behavior"></a>Specify symbol loading behavior 
   
- デバッグの開始時に **\[シンボル ファイル \(.pdb\) の場所\]** ボックスに指定された場所から自動的に読み込まれるファイルを指定できます。 プロジェクト ディレクトリ内のシンボル ファイルは常に読み込まれます。  
+You can specify the files that you want to be loaded automatically from **Symbol file (.pdb) locations** box locations when you start debugging. Symbol files in the project directory are always loaded.  
   
-1.  **\[除外されていないすべてのモジュール\]** を選択すると、**\[除外されるモジュールの指定\]** リンクをクリックして指定したモジュール以外のすべてのモジュールのすべてのシンボルが読み込まれます。  
+1.  Choose **All modules, unless excluded** to load all the symbols for all modules except those that you specify when you choose the **Specify excluded modules** link.  
   
-2.  **\[指定したモジュールのみ\]** オプションを選択して **\[モジュールの指定\]** をクリックすると、シンボル ファイルが自動的に読み込まれるモジュールを指定できます。 その他のモジュールのシンボル ファイルは無視されます。  
+2.  Choose the **Only specified modules** option and then choose **Specify modules** to list the modules that you symbol files that you want loaded automatically. The symbol files for other modules are ignored.  
   
- **その他のシンボル オプションを指定する**  
+### <a name="specify-additional-symbol-options"></a>Specify additional symbol options 
   
- **\[ツール\]、\[オプション\]、\[デバッグ\]、\[シンボル\]** ページでは、次のオプションも設定できます。  
+You can also set the following options on the **Tools > Options > Debugging > General** page:  
   
- **\[起動時にシンボルが見つからないとき警告 \(ネイティブのみ\)\]**  
+**Load DLL exports (native only)**  
   
- オンにすると、プログラムをデバッグするときにそのプログラムのシンボル情報がない場合は、警告を示すダイアログ ボックスが表示されます。  
+When selected, loads DLL export tables. Symbolic information from DLL export tables can be useful if you are working with Windows messages, Windows procedures (WindowProcs), COM objects, or marshaling, or any DLL for which you do not have symbols. Reading DLL export information involves some overhead. Therefore, this capability is turned off by default.  
   
- **\[DLL エクスポートを読み込む\]**  
+To see what symbols are available in the export table of a DLL, use `dumpbin /exports`. Symbols are available for any 32-bit system DLL. By reading the `dumpbin /exports` output, you can see the exact function name, including non-alphanumeric characters. This is useful for setting a breakpoint on a function. Function names from DLL export tables might appear truncated elsewhere in the debugger. The calls are listed in the calling order, with the current function (the most deeply nested) at the top. For more information, see [dumpbin /exports](/cpp/build/reference/dash-exports).  
   
- オンにすると、DLL エクスポート テーブルを読み込みます。 DLL エクスポート テーブルのシンボル情報は、対応するシンボルのない Windows メッセージ、Windows プロシージャ \(WindowProc\)、COM オブジェクト、マーシャリング、または DLL を操作する場合に役立ちます。 DLL エクスポート情報を読み取ると、オーバーヘッドがある程度発生します。 そのため、既定ではこの機能はオフになっています。  
+###  <a name="BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine"></a> Use symbol servers to find symbol files not on your local machine  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] can download debugging symbol files from symbol servers that implement the symsrv protocol. [Visual Studio Team Foundation Server](http://msdn.microsoft.com/Library/bd6977ca-e30a-491a-a153-671d81222ce6) and the [Debugging Tools for Windows](http://msdn.microsoft.com/library/windows/hardware/ff551063\(v=VS.85\).aspx) are two tools that can implement symbol servers. You specify the symbol servers to use in the VS **Options** dialog box.  
   
- DLL のエクスポート テーブル内で使用できるシンボルを調べるには、`dumpbin /exports` を使用します。 シンボルは、任意の 32 ビット システムの DLL に使用できます。`dumpbin /exports` の出力を参照すると、英数字以外の文字を含む、正確な関数名を確認できます。 この情報は、関数にブレークポイントを設定するときに使用します。 DLL エクスポート テーブルの関数名は、デバッガーの他の場所で表示されるときは、切り捨てられることがあります。 関数は呼び出し順に表示され、現在の関数 \(入れ子の一番内側\) が先頭に表示されます。 詳細については、「[dumpbin \/exports](/visual-cpp/build/reference/dash-exports)」を参照してください。  
+ Symbol servers that you might use include:  
   
-###  <a name="BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine"></a> シンボル サーバーを使用してローカル コンピューター上にないシンボル ファイルを検索する  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、symsrv プロトコルを実装するシンボル サーバーからデバッグ シンボル ファイルをダウンロードできます。[Visual Studio Team Foundation Server](../Topic/Index%20and%20publish%20symbol%20data.md) と [Debugging Tools for Windows](http://msdn.microsoft.com/library/windows/hardware/ff551063\(v=VS.85\).aspx) は、シンボル サーバーを実装できる 2 つのツールです。 使用するシンボル サーバーは VS の **\[オプション\]** ダイアログ ボックスで指定します。  
+ **Microsoft public symbol servers**  
   
- 以下のシンボル サーバーを使用できます。  
+ To debug a crash that occurs during a call to a system DLL or to a third-party library, you will often need system .pdb files, which contain symbols for Windows DLLs, EXEs, and device drivers. You can obtain these symbols from the Microsoft public sysmbol servers. The Microsoft public symbol servers provide symbols for Windows operating systems, in addition to MDAC, IIS, ISA, and the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
- **Microsoft パブリック シンボル サーバー**  
+ To use the Microsoft symbol servers, choose **Options and Settings** on the **Debug** menu and then choose **Symbols**. Select **Microsoft Symbol Servers**.  
   
- システム DLL やサードパーティのライブラリの呼び出し中に発生するクラッシュをデバッグするには、多くの場合、Windows DLL、EXE、およびデバイス ドライバー用のシンボルが格納されているシステム .pdb ファイルが必要です。 これらのシンボルは Microsoft パブリック シンボル サーバーから取得できます。 Microsoft パブリック シンボル サーバーは、MDAC、IIS、ISA、および [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のほか、Windows オペレーティング システムのシンボルを提供します。  
+ **Symbol servers on an internal network or on your local machine**  
   
- Microsoft シンボル サーバーを使用するには、**\[デバッグ\]** メニューの **\[オプションと設定\]** をクリックし、**\[シンボル\]** をクリックします。**\[Microsoft シンボル サーバー\]** を選択します。  
+ Your team or company can create symbol servers for your own products and as a cache for symbols from external sources. You might have a symbol server on your own machine. You can enter the location of the symbol servers as a URL or as a path on the **Debugging**/**Symbols** page of the VS **Option Dialog**.  
   
- **内部ネットワーク上またはローカル コンピューター上のシンボル サーバー**  
+ **Third-party symbol servers**  
   
- チームや会社で独自の製品用にシンボル サーバーを作成して、外部ソースのシンボルのキャッシュとして使用できます。 自分のコンピューター上にシンボル サーバーを作成することもできます。 VS の **\[オプション\]** ダイアログ ボックスの **\[デバッグ\]**\/**\[シンボル\]** ページで URL またはパスとしてシンボル サーバーの場所を入力できます。  
-  
- **サード パーティのシンボル サーバー**  
-  
- Windows アプリケーションおよびライブラリのサード パーティ プロバイダーがインターネット上のシンボル サーバーへのアクセスを用意していることがあります。 これらのシンボル サーバーの URL を **\[デバッグ\]**\/**\[シンボル\]** ページで入力することもできます。  
+ Third-party providers of Windows applications and libraries can provide access to symbol server on the internet. You also enter the URL of these symbol servers on the **Debugging**/**Symbols** page,  
   
 > [!NOTE]
->  Microsoft パブリック シンボル サーバー以外のシンボル サーバーを使用する場合は、シンボル サーバーとそのパスが信頼できることを確認してください。 シンボル ファイルには任意の実行可能コードを含めることができるため、このファイルによりセキュリティ上の脅威にさらされる可能性があります。  
+>  If you use a symbol server other than the Microsoft public symbol servers, make sure that the symbol server and its path are trustworthy. Because symbol files can contain arbitrary executable code, you can become exposed to security threats.  
   
-###  <a name="BKMK_Find_and_load_symbols_while_debugging"></a> デバッグ中にシンボルを検索して読み込む  
- デバッガーが中断モードになっているときはいつでも、デバッガー オプションによって以前に除外されたモジュールのシンボル、またはコンパイラによって見つからなかったモジュールのシンボルを読み込むことができます。 シンボルは \[呼び出し履歴\]、\[モジュール\]、\[ローカル\]、\[自動変数\]、\[ウォッチ\] のウィンドウのショートカット メニューから読み込むことができます。 シンボルやソース ファイルが使用できないコードでデバッガーが実行を中断した場合、ドキュメント ウィンドウが表示されます。 このウィンドウで、不足しているファイルに関する情報を検索し、それらのファイルを特定して読み込むための操作を実行できます。  
+###  <a name="BKMK_Find_and_load_symbols_while_debugging"></a> Find and load symbols while debugging  
+ At any time that the debugger is in break mode, you can load symbols for a module that was previously excluded by debugger options or that the compiler could not find. You can load symbols from the shortcut menus of the Call Stack, Modules, Locals, Autos, and all Watch windows. If the debugger breaks in code that does not have symbol or source files available, a document window appears. Here you can find information about the missing files and take actions to locate and load them.
   
- **\[シンボルが読み込まれていません\] ドキュメント ページでシンボルを検索する**  
+ **Find symbols with the No Symbols Loaded document pages**  
   
- シンボルを使用できないコードでデバッガーが実行を中断するようにするには、多くの方法があります。  
+ There are a number of ways for the debugger to break into code that does not have symbols available:  
   
-1.  コードにステップ インする。  
+1.  Stepping into code.  
   
-2.  ブレークポイントまたは例外でコードを中断する。  
+2.  Breaking into code from a breakpoint or exception.  
   
-3.  別のスレッドに切り替える。  
+3.  Switching to a different thread.  
   
-4.  \[呼び出し履歴\] ウィンドウのスタック フレームをダブルクリックして、スタック フレームを変更する。  
+4.  Changing the stack frame by double-clicking a frame in the Call Stack window.  
   
- これらのイベントのいずれかが発生すると、デバッガーによって **\[シンボルが読み込まれていません\]** ページが表示されて、このページから必要なシンボルを検索して読み込むことができます。  
+ When one of these events occurs, the debugger displays the **No Symbols Loaded** page to help you find and load the necessary symbols.  
   
- ![&#91;シンボルが読み込まれていません&#93; ページ](../debugger/media/dbg_nosymbolsloaded.png "DBG\_NoSymbolsLoaded")  
+ ![No Symbols Loaded page](../debugger/media/dbg_nosymbolsloaded.png "DBG_NoSymbolsLoaded")  
   
--   検索パスを変更するには、選択されていないパスを選択するか、**\[新規作成\]** を選択して新しいパスを入力します。**\[読み込み\]** をクリックしてパスを再び検索し、見つかった場合はシンボル ファイルが読み込まれます。  
+-   To change the search paths, choose an unselected path or choose **New** and enter a new path. Choose **Load** to search the paths again and load the symbol file if it is found.  
   
--   シンボル オプションをすべてオーバーライドして検索パスを再び試すには、**\[***executable\-name* を参照して探す**...\]** を選択します。 シンボル ファイルが見つかった場合は読み込まれるか、ファイル エクスプローラーが表示されて手動でシンボル ファイルを選択できます。  
+-   Choose **Browse and find***executable-name***...** to override any symbol options and retry the search paths. The symbol file is loaded if it is found, or a File Explorer is displayed for you to manually select the symbol file.  
   
--   **\[シンボルの設定の変更\]** を選択すると、VS の \[オプション\] ダイアログ ボックスの **\[デバッグ\]**\/**\[シンボル\]** ページが表示されます。  
+-   Choose **Change Symbol Settings ...** to display the **Debugging** > **Symbols** page of the VS Options dialog.  
   
--   **\[逆アセンブルの表示\]** を選択すると、逆アセンブルが新しいウィンドウに一度に表示されます。  
+-   Choose **view disassembly** to show the disassembly in a new window one time.  
   
--   ソースまたはシンボル ファイルが見つからないときに逆アセンブルが常に表示されるようにするには、**\[\[オプション\] ダイアログ ボックス\]** リンクをクリックし、**\[アドレス レベルのデバッグを有効にする\]** と **\[ソースがない場合は逆アセンブリの表示\]** の両方をオンにします。  
+-   To always show the disassembly when the source or symbol files are not found, choose the **Options dialog** link, and select both **Enable address level debugging** and **Show disassembly if source not available**.  
   
-     ![オプション&#47;デバッグ&#47;一般的な逆アセンブル オプション](~/debugger/media/dbg_options_general_disassembly_checkbox.png "DBG\_Options\_General\_disassembly\_checkbox")  
+     ![Options &#47; Debugging  &#47; General disassembly options](../debugger/media/dbg_options_general_disassembly_checkbox.png "DBG_Options_General_disassembly_checkbox")  
   
- **ショートカット メニューからシンボル オプションを変更する**  
+ **Change symbol options from the shortcut menu**  
   
- 中断モードになっている状態で、\[呼び出し履歴\]、\[モジュール\]、\[ローカル\]、\[自動変数\]、\[ウォッチ\] のウィンドウに表示されている項目のシンボルを検索して読み込むことができます。 ウィンドウで項目を選択し、ショートカット メニューを開いて、次のいずれかのオプションを選択します。  
+ While you are in break mode, you can find and load symbols for items that are displayed in the Call Stack, Modules, Locals, Autos, and all Watch windows. Select an item in the window, open the shortcut menu, and choose one of the following options:  
   
-|オプション|説明|  
-|-----------|--------|  
-|**シンボルの読み込み**|**\[オプション\]** ダイアログ ボックスの **\[デバッグ\]**\/**\[シンボル\]** ページで指定した場所からシンボルを読み込もうとします。 シンボル ファイルが見つからない場合は、ファイル エクスプローラーが起動され、検索する新しい場所を指定できるようになります。|  
-|**シンボルの読み込み情報**|読み込まれたシンボル ファイルの場所、またはデバッガーがファイルを見つけることができない場合は検索した場所を示す情報が表示されます。|  
-|**シンボルの設定...**|VS の **\[オプション\]** ダイアログ ボックスの **\[デバッグ\]**\/**\[シンボル\]** ページが開きます。|  
-|**常に自動的に読み込む**|デバッガーによって自動的に読み込まれるファイルの一覧にシンボル ファイルを追加します。|  
+|Option|Description|  
+|------------|-----------------|  
+|**Load Symbols**|Attempts to load symbols from locations specified on the **Debugging**/**Symbols** page of the **Options** dialog box. If the symbol file cannot be found, File Explorer is launched so that you can specify a new location to search.|  
+|**Symbol Load Information**|Presents information showing the location of a loaded symbol file, or the locations that were searched if the debugger cannot find the file.|  
+|**Symbol Settings...**|Opens the **Debugging**/**Symbols** page of the VS **Options** dialog box.|  
+|**Always Load Automatically**|Adds the symbol file to the list of files that are automatically loaded by the debugger.|  
   
-###  <a name="BKMK_Set_compiler_options_for_symbol_files"></a> シンボル ファイルのコンパイラ オプションを設定する  
- VS IDE からプロジェクトをビルドし、標準の **\[デバッグ\]** ビルド構成を使用すると、C\+\+ およびマネージ コンパイラによってコードの適切なシンボル ファイルが作成されます。 コマンド ラインでコンパイラ オプションを設定しても、シンボル ファイルを作成できます。  
+###  <a name="BKMK_Set_compiler_options_for_symbol_files"></a> Set compiler options for symbol files  
+ When you build your project from the VS IDE and use the standard **Debug** build configuration, the C++ and managed compilers create the appropriate symbols files for your code. You can also set compiler options on the command line to create the symbol files.  
   
- **C\+\+ のオプション**  
+ **C++ options**  
   
- プログラム データベース \(.pdb\) ファイルは、デバッグとプロジェクト状態情報を保持します。この情報により、プログラムのデバッグ構成のインクリメンタル リンクが可能になります。[\/ZI または \/Zi](/visual-cpp/build/reference/z7-zi-zi-debug-information-format) \(C\/C\+\+ 用\) を使用して構築すると、.pdb ファイルが作成されます。  
+ A program database (.pdb) file holds debugging and project state information that allows incremental linking of a Debug configuration of your program. A .pdb file is created when you build with [/ZI or /Zi](/cpp/build/reference/z7-zi-zi-debug-information-format) (for C/C++).  
   
- [!INCLUDE[vcprvc](../debugger/includes/vcprvc_md.md)] では、コンパイラにより作成される .pdb ファイルを [\/Fd](/visual-cpp/build/reference/fd-program-database-file-name) オプションで指定します。[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でウィザードを使ってプロジェクトを作成する場合は、**\/Fd** オプションが *project*.pdb という名前の .pdb ファイルを作成するように設定されます。  
+ In [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)], the [/Fd](/cpp/build/reference/fd-program-database-file-name) option names the .pdb file created by the compiler. When you create a project in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] using wizards, the **/Fd** option is set to create a .pdb file named *project*.pdb.  
   
- メイクファイルを使って C\/C\+\+ アプリケーションをビルドするときに、**\/ZI** または **\/Zi** を指定して **\/Fd** を指定しない場合は、次の 2 つの .pdb ファイルが作成されます。  
+ If you build your C/C++ application using a makefile, and you specify **/ZI** or **/Zi** without **/Fd**, you end up with two .pdb files:  
   
--   VC*x*.pdb。*x* は Visual C\+\+ のバージョン \(VC11.pdb など\) を表します。 このファイルには、個別の OBJ ファイルのあらゆるデバッグ情報が格納されます。このファイルは、プロジェクトのメイクファイルと同じディレクトリに配置されます。  
+-   VC*x*.pdb, where *x* represents the version of Visual C++, for example VC11.pdb. This file stores all debugging information for the individual OBJ files and resides in the same directory as the project makefile.  
   
--   project.pdb。このファイルには、.exe ファイルのあらゆるデバッグ情報が格納されます。 C\/C\+\+ の場合は、\\debug サブディレクトリに配置されます。  
+-   project.pdb   This file stores all debug information for the.exe file. For C/C++, it resides in the \debug subdirectory.  
   
- OBJ ファイルが作成されるたびに、C\/C\+\+ コンパイラはデバッグ情報を VC*x*.pdb に挿入します。 挿入される情報には、型情報が含まれますが、関数定義などのシンボル情報は含まれません。 このため、ソース ファイルごとに \<windows.h\> などの共通ヘッダー ファイルをインクルードしているとしても、共通ヘッダー ファイルの typedef は一度格納されるだけで、OBJ ファイルごとに格納されるわけではありません。  
+ Each time it creates an OBJ file, the C/C++ compiler merges debug information into VC*x*.pdb. The inserted information includes type information but does not include symbol information such as function definitions. So even if every source file includes common header files such as \<windows.h>, the typedefs from those headers are stored only once, rather than being in every OBJ file.  
   
- リンカーは project.pdb を作成します。このファイルには、プロジェクトの EXE ファイルのデバッグ情報が格納されます。 project.pdb ファイルには、VC*x*.pdb に含まれる型情報だけでなく、関数プロトタイプをはじめとするあらゆるデバッグ情報が格納されます。 どちらの .pdb ファイルもインクリメンタル更新が可能です。 またリンカーも、作成する .exe ファイルや .dll ファイルに .pdb ファイルへのパスを埋め込みます。  
+ The linker creates project.pdb, which contains debug information for the project's EXE file. The project.pdb file contains full debug information, including function prototypes, not just the type information found in VC*x*.pdb. Both .pdb files allow incremental updates. The linker also embeds the path to the .pdb file in the .exe or .dll file that it creates.  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーでは、EXE ファイルまたは DLL ファイルの .pdb ファイルへのパスを使用して、project.pdb ファイルを検索します。 指定された場所に .pdb ファイルが見つからないか、\(プロジェクトが別のコンピューターに移動されたなど\) パスが無効である場合は、EXE ファイルが格納されているパスを検索します。このパスは、**\[オプション\]** ダイアログ ボックス \(**\[デバッグ\]** フォルダー\/**\[シンボル\]** ノード\) で指定されたシンボル パスです。 デバッガーはデバッグ対象の実行可能ファイルに対応付けられている .pdb ファイルのみ読み込みます。 デバッガーで .pdb ファイルが見つからない場合、**\[シンボル検索\]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、シンボルを検索したり、検索パスに新しい場所を追加したりできます。  
+ The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] debugger uses the path to the .pdb file in the EXE or DLL file to find the project.pdb file. If the debugger cannot find the .pdb file at that location or if the path is invalid (for example, if the project was moved to another computer), the debugger searches the path containing the EXE, the symbol paths specified in the **Options** dialog box (**Debugging** folder, **Symbols** node). The debugger will not load a .pdb file that does not match the executable being debugged. If the debugger cannot find a .pdb file, a **Find Symbols** dialog box appears, which allows you to search for symbols or to add additional locations to the search path.  
   
- **.NET Framework のオプション**  
+ **.NET Framework options**  
   
- プログラム データベース \(.pdb\) ファイルは、デバッグとプロジェクト状態情報を保持します。この情報により、プログラムのデバッグ構成のインクリメンタル リンクが可能になります。 .pdb ファイルは、**\/debug** でビルドすると作成されます。**\/debug:full** または **\/debug:pdbonly** でアプリケーションをビルドできます。**\/debug:full** でビルドすると、デバッグできるコードが生成されます。**\/debug:pdbonly** でビルドすると .pdb ファイルは生成されますが、JIT コンパイラにデバッグ情報が使用できることを示す `DebuggableAttribute` は生成されません。 デバッグが必要ないリリース ビルドで .pdb ファイルを生成する場合は **\/debug:pdbonly** を使用します。 詳細については、「[\/debug \(Emit Debugging Information\)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)」または「[\/debug](/dotnet/visual-basic/reference/command-line-compiler/debug)」を参照してください。  
+ A program database (.pdb) file holds debugging and project state information that allows incremental linking of a debug configuration of your program. A .pdb file is created when you build with **/debug**. You can build applications with **/debug:full** or **/debug:pdbonly**. Building with **/debug:full** generates debuggable code. Building with **/debug:pdbonly** generates .pdb files but does not generate the `DebuggableAttribute` that tells the JIT compiler that debug information is available. Use **/debug:pdbonly** if you want to generate .pdb files for a release build that you do not want to be debuggable. For more information, see [/debug (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option) or [/debug (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/debug).  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーでは、EXE ファイルまたは DLL ファイルの .pdb ファイルへのパスを使用して、project.pdb ファイルを検索します。 その場所に .pdb ファイルが見つからない場合、またはパスが無効な場合は、EXE ファイルが格納されているパスを検索した後に、**\[オプション\]** ダイアログ ボックスで指定されたシンボル パスを検索します。 通常、このパスは **シンボル** ノードの **デバッグ** フォルダーです。 デバッガーはデバッグ対象の実行可能ファイルに対応付けられている .pdb ファイルのみ読み込みます。 デバッガーで .pdb ファイルが見つからない場合、**\[シンボル検索\]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、シンボルを検索したり、検索パスに新しい場所を追加したりできます。  
+ The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] debugger uses the path to the .pdb file in the EXE or DLL file to find the project.pdb file. If the debugger cannot find the .pdb file at that location, or if the path is invalid, the debugger searches the path containing the EXE, and then the symbol paths specified in the **Options** dialog box. This path is generally the **Debugging** folder in the **Symbols** node. The debugger will not load a .pdb file that does not match the executable file being debugged. If the debugger cannot find a .pdb file, a **Find Symbols** dialog box appears, which allows you to search for symbols or to add additional locations to the search path.  
   
- **Web アプリケーション**  
+ **Web applications**  
   
- アプリケーションの構成ファイル \(Web.config\) をデバッグ モードに設定する必要があります。 デバッグ モードの ASP.NET では、動的に生成されたファイル用のシンボルが生成され、デバッガーの ASP.NET アプリケーションへのアタッチが可能になります。 VS では、プロジェクトを Web プロジェクト テンプレートから作成した場合は、デバッグ開始時にこの処理が自動的に実行されます。  
+ The configuration file of your application (Web.config) must be set to debug mode. Debug mode causes ASP.NET to generate symbols for dynamically generated files and enables the debugger to attach to the ASP.NET application. Visual Studio sets this automatically when you start to debug, if you created your project from the Web projects template.  
   
-##  <a name="BKMK_Find_source_files"></a> ソース ファイルを検索する  
+##  <a name="BKMK_Find_source_files"></a> Find source files  
   
-###  <a name="BKMK_Where_the_debugger_searches_for_source_files"></a> デバッガーがソース ファイルを検索する場所  
- デバッガーは次の場所でソース ファイルを検索します。  
+###  <a name="BKMK_Where_the_debugger_searches_for_source_files"></a> Where the debugger searches for source files  
+ The debugger looks for source files in the following locations:  
   
-1.  デバッガーを起動した Visual Studio インスタンスの IDE で開いているファイル。  
+1.  Files that are open in the IDE of the Visual Studio instance that launched the debugger.  
   
-2.  Visual Studio インスタンスで開いているソリューション内のファイル。  
+2.  Files in the solution that is open in the Visual Studio instance.  
   
-3.  ソリューションのプロパティの **\[共通プロパティ\]**\/**\[デバッグ ソース ファイル\]** ページで指定したディレクトリ。**ソリューション エクスプローラー**で、ソリューション ノードを選択し、右クリックし、**\[プロパティ\]** を選択します。 \)  
+3.  Directories that are specified in the **Common Properties**/**Debug Source Files** page in the properties of the solution. (In the **Solution Explorer**, select the solution node, right-click, and select **Properties**. )  
   
-4.  モジュールの .pdb のソース情報。 場合によって、モジュールがビルドされたソース ファイルの場所またはソース サーバーへのコマンドです。  
+4.  The source information of the .pdb of the module. This can be the location of the source file when the module was built, or it can be a command to a source server.  
   
-###  <a name="BKMK_Find_and_load_source_files_with_the_No_Source___No_Symbols_Loaded_pages"></a> \[ソースが読み込まれていません\] または \[シンボルが読み込まれていません\] ページでソース ファイルを検索して読み込む  
- ソース ファイルを使用できない場所でデバッガーが実行を中断した場合、**\[ソースが読み込まれていません\]** または **\[シンボルが読み込まれていません\]** ページが表示されます。**\[シンボルが読み込まれていません\]** が表示されたときは、デバッガーは実行可能ファイルのシンボル \(.pdb\) ファイルを見つけることができず、その検索を完了できません。 \[シンボルが読み込まれていません\] には、ファイルを検索するオプションが表示されています。 いずれかのオプションを実行した後、.pdb が見つかり、デバッガーがシンボル ファイル内の情報を使用してソース ファイルを取得できた場合は、ソースが表示されます。 それ以外の場合、**\[ソースが読み込まれていません\]** ページが表示され、問題が説明されます。 このページには、問題解決のための操作を実行できるオプションのリンクが表示されています。  
+###  <a name="BKMK_Find_and_load_source_files_with_the_No_Source___No_Symbols_Loaded_pages"></a> Find and load source files with the No Source/No Symbols Loaded pages  
+ When the debugger breaks execution at a location where the source file is not available, it will display the **No Source Loaded** or **No Symbols Loaded** pages that can help you find the source file. The **No Symbols Loaded** appears when the debugger cannot find a symbol (.pdb) file for the executable file to complete its search. The No Symbols page provides options to search for the file. If the .pdb is found of after you execute one of the options and the debugger can retrieve the source file using the information in the symbols file, the source is displayed. Otherwise, a **No Source Loaded** page appears that describes the issue. The page displays option links that can perform actions that might resolve the issue.  
   
-###  <a name="BKMK_Add_source_file_search_paths_to_a_solution"></a> ソース ファイルの検索パスをソリューションに追加する  
- ソース ファイルを検索するネットワークまたはローカルのディレクトリを指定できます。  
+###  <a name="BKMK_Add_source_file_search_paths_to_a_solution"></a> Add source file search paths to a solution  
+ You can specify a network or local directories to search for source files.  
   
-1.  ソリューション エクスプローラーでソリューションを選択し、ショートカット メニューの **\[プロパティ\]** をクリックします。  
+1.  Select the solution in Solution Explorer and then choose **Properties** from the shortcut menu.  
   
-2.  **\[共通プロパティ\]** ノードの下の **\[デバッグ ソース ファイル\]** をクリックします。  
+2.  Under the **Common Properties** node, choose **Debug Source Files**.  
   
-3.  フォルダー ![ツール&#47;オプション&#47;デバッグ&#47;シンボル フォルダーのアイコン](~/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") アイコンをクリックします。 編集可能なテキストが **\[ソース コードを含んでいるディレクトリ\]** ボックスの一覧に表示されます。  
+3.  Click the folder ![Tools&#47; Options&#47; Debugging&#47;Symbols  folder icon](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon") icon. Editable text appears in the **Directories containing source code** list.  
   
-4.  検索するパスを追加します。  
+4.  Add the path that you want to search.  
   
- 指定したディレクトリのみ検索されることに注意してください。 検索するすべてのサブディレクトリのエントリを追加する必要があります。  
+ Note that only the specified directory is searched. You must add entries for any subdirectories that you want to search.  
   
-###  <a name="BKMK_Use_source_servers"></a> ソース サーバーを使用する  
- ローカル コンピューターにソース コードがない場合、または .pdb ファイルがソース コードと一致しない場合、ソース サーバーを使用して、アプリケーションのデバッグに役立てることができます。 ソース サーバーは、ファイルの要求を受け取り、実際のファイルを返します。 ソース サーバーは、srcsrv.dll という名前の DLL ファイルを使用して実行されます。 ソース サーバーでは、ソース コードのレポジトリへのポインターを含むアプリケーションの .pdb ファイルだけでなく、レポジトリからソース コードを取得するときに使用するコマンドも読み取ります。 アプリケーションの .pdb ファイルから実行できるコマンドは、制限できます。この場合、srcsrv.ini というファイルに許可するコマンドを列挙し、srcsrv.dll および devenv.exe と同じディレクトリに配置します。  
+###  <a name="BKMK_Use_source_servers"></a> Use source servers  
+ When there is no source code on the local machine or the .pdb file does not match the source code, you can use Source Server to help debug an application. Source Server takes requests for files and returns the actual files. Source Server runs by means of a DLL file named srcsrv.dll. Source Server reads the application's .pdb file, which contains pointers to the source code repository, as well as commands used to retrieve source code from the repository. You can limit what commands are allowed to be executed from the application's .pdb file by listing the allowed commands inside a file named srcsrv.ini, which must be placed in the same directory as srcsrv.dll and devenv.exe.  
   
 > [!IMPORTANT]
->  アプリケーションの .pdb ファイルには任意のコマンドを埋め込むことができるため、srcsrv.ini ファイルには実行するコマンドのみ配置するようにします。 srcsvr.ini ファイルにないコマンドを実行しようとすると、確認のダイアログ ボックスが表示されます。 詳細については、「[セキュリティ警告 : デバッガーは信頼されないコマンドを実行する必要があります](../debugger/security-warning-debugger-must-execute-untrusted-command.md)」を参照してください。 コマンド パラメーターでは何も検証されないため、コマンドを信頼するときは注意してください。 たとえば、cmd.exe を信頼した場合、悪意のあるユーザーが危険な動作を実行するようにコマンドにパラメーターを指定する可能性があります。  
+>  Arbitrary commands can be embedded in the application's .pdb file, so make sure you put only the ones you want to execute in the srcsrv.ini file. Any attempt to execute a command not in the srcsvr.ini file will cause a confirmation dialog box to appear. For more information, see [Security Warning: Debugger Must Execute Untrusted Command](../debugger/security-warning-debugger-must-execute-untrusted-command.md). No validation is done on command parameters, so be careful with trusted commands. For example, if you trusted cmd.exe, a malicious user might specify parameters that would make the command dangerous.  
   
- **ソース サーバーの使用を有効にするには**  
+ **To enable the use of a Source Server**  
   
-1.  前のセクションで説明したセキュリティ手法で、コンパイルを完了します。  
+1.  Ensure that you have complied with the security measures described in the previous section.  
   
-2.  **\[ツール\]** メニューの **\[オプション\]** をクリックします。  
+2.  On the **Tools** menu, choose **Options**.  
   
-     **\[オプション\]** ダイアログ ボックスが表示されます。  
+     The **Options** dialog box appears.  
   
-3.  **\[デバッグ\]** ノードで、**\[全般\]** を選択します。  
+3.  In the **Debugging** node, choose **General**.  
   
-4.  **\[ソース サーバー サポートを有効にする\]** チェック ボックスをオンにします。  
+4.  Select the **Enable source server support** check box.  
   
-     ![&#91;ソース サーバー サポートを有効にする&#93; オプション](~/debugger/media/dbg_options_general_enablesrcsrvr_checkbox.png "DBG\_Options\_General\_EnableSrcSrvr\_checkbox")  
+     ![Enable source server options](../debugger/media/dbg_options_general_enablesrcsrvr_checkbox.png "DBG_Options_General_EnableSrcSrvr_checkbox")  
   
-5.  \(省略可能\) 必要な子オプションを選択します。  
+5.  (Optional) Choose the child options that you want.  
   
-     **\[部分信頼アセンブリのソース サーバーを許可する \(マネージのみ\)\]** と **\[信頼されていないソース サーバー コマンドを常に確認なしで実行する\]** のいずれを選択した場合も、前述のセキュリティ リスクが高くなる可能性があることに注意してください。  
+     Note that both **Allow source server for partial trust assemblies (Managed only)** and **Always run untrusted source server commands without prompting** can increase the security risks discussed above.  
   
-## 参照  
- [Visual Studio 2012 および 2013 における .NET のリモート シンボル ローディングの変更](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)
+## <a name="see-also"></a>See Also  
+[Understanding Symbol Files and Visual Studio Symbol Settings](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/)
+
+[.NET Remote Symbol Loading Changes in Visual Studio 2012 and 2013](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)

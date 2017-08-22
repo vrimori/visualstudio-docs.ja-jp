@@ -1,144 +1,161 @@
 ---
-title: "方法: Code Center Premium ソースをデバッグする | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Code Center Premium"
-  - "デバッグ [Visual Studio], Code Center Premium"
+title: 'How to: Debug with Code Center Premium Source | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- Code Center Premium
+- debugging [Visual Studio], Code Center Premium
 ms.assetid: 18b4769d-b007-4428-9dae-9e72c283ff0d
 caps.latest.revision: 23
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# 方法: Code Center Premium ソースをデバッグする
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 9d9c246234bc86cefb9e0a24f97f4c3d692d3942
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] デバッガーでは、Microsoft MSDN Code Center Premium のセキュリティ保護された共有ソースをデバッグできます。  
+---
+# <a name="how-to-debug-with-code-center-premium-source"></a>How to: Debug with Code Center Premium Source
+With the [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] debugger, you can debug secure shared source from Microsoft MSDN Code Center Premium.  
   
- このトピックでは、Visual Studio で Code Center Premium ソース コードを設定し、デバッグする方法について説明します。  
+ This topic explains how to set up and debug Code Center Premium source code in Visual Studio.  
   
-### Code Center Premium を使用したデバッグを準備するには  
+### <a name="to-prepare-for-debugging-with-code-center-premium"></a>To prepare for debugging with Code Center Premium  
   
-1.  スマートカード リーダーを接続し、シェアード ソース イニシアティブから取得したカードを挿入します。  
+1.  Connect your SmartCard reader and insert the card you obtained from the Shared Source Initiative.  
   
-2.  Visual Studio を起動します。  
+2.  Launch Visual Studio.  
   
-3.  **\[ツール\]** メニューの **\[オプション\]** をクリックします。  
+3.  On the **Tools** menu, click **Options**.  
   
-4.  **\[オプション\]** ダイアログ ボックスで、**\[デバッグ\]** ノードを展開し、**\[全般\]** をクリックします。  
+4.  In the **Options** dialog box, open the **Debugging** node and click **General**.  
   
-5.  **\['マイ コードのみ' 設定を有効にする\]** チェック ボックスをオフにします。  
+5.  Clear the **Enable Just My Code (Managed Only)** check box.  
   
-6.  **\[ソース サーバー サポートを有効にする\]** を選択します。  
+6.  Select **Enable Enable Source Server Support**.  
   
-7.  **\[元のバージョンと完全に一致するソース ファイルを必要とする\]** をオフにします。  
+7.  Clear **Require source files to exactly match the original version**.  
   
-8.  **\[デバッグ\]** ノードの下にある **\[シンボル\]** をクリックします。  
+8.  Under the **Debugging** node, click **Symbols**.  
   
-9. **\[シンボル ファイル \(.pdb\) の場所\]** ボックスで、**\[Microsoft シンボル サーバー\]** チェック ボックスをオフにし、次の場所を追加します。  
+9. In the **Symbol File (.pdb) Locations** box, clear the **Microsoft Server Symbols** check box and add the following locations:  
   
      `https://codepremium.msdn.microsoft.com/symbols`  
   
      `src=https://codepremium.msdn.microsoft.com/source/Visual%20Studio%202010/SP1/`  
   
     > [!NOTE]
-    >  パスの末尾にスラッシュ **\/** を含めてください。  
+    >  Be sure to include the trailing slash**/** at the end of the path.  
   
-     これらの場所を一覧の最上部に移動して、これらのシンボルが最初に読み込まれるようにします。  
+     Move these locations to the top of the list to ensure that these symbols are loaded first.  
   
     > [!NOTE]
-    >  これらの Code Center Premium の場所が最初に読み込まれる場所になるように、これらが一覧の最初に配置されている必要があります。  Visual Studio 2010 では、どのサーバーも **Microsoft シンボル サーバー** エントリの上には移動できません。そのため、チェック ボックスをオフにする必要があります。  
+    >  These Code Center Premium locations must be listed first so that they are the first locations that are loaded. In Visual Studio 2010, you cannot move any servers above the **Microsoft Symbol Servers** entry, which is why you must clear the check box.  
     >   
-    >  デバッグ セッション中に Microsoft シンボルからシンボルを読み込むには、次の手順に従います。  
+    >  To load symbols from the Microsoft symbols during a debug session, do this:  
     >   
-    >  1.  **\[デバッグ\]** メニューの **\[ウィンドウ\]** をポイントし、**\[モジュール\]** をクリックします。  
-    > 2.  シンボルの対象となるモジュールを選択し、ショートカット メニューを開きます。  **\[シンボルの読み込み元\]** を選択し、**\[Microsoft シンボル サーバー\]** をクリックします。  
+    >  1.  On the **Debug** menu, choose **Windows** and then choose **Modules**.  
+    > 2.  Select the module that you want symbols for, and then open the shortcut menu. Choose **Load Symbols From** and then choose **Microsoft Symbol Servers**.  
   
-10. **\[このディレクトリにシンボルをキャッシュ\]** ボックスに、Code Center Premium がシンボルをキャッシュできる場所を入力します。たとえば、「`C:\symbols`」と入力します。  シンボルをキャッシュすることにより、デバッグ中のパフォーマンスが大幅に向上します。  
+10. In the **Cache symbols from symbol servers in this directory** box, enter a location such as `C:\symbols` where Code Center Premium can cache the symbols. Caching symbols can significantly improve performance during debugging.  
   
-     この手順を実行した後、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でのソース コードのデバッグに問題が発生する場合は、以前にキャッシュされて古くなったシンボル ファイルがキャッシュの場所にないかどうかを確認してください。  古いシンボル ファイルは削除してください。  
+     If you experience difficulty debugging source code with [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] after you complete this procedure, check your cache location for previously cached and outdated symbol files. Remove the outdated symbol files.  
   
-11. **\[OK\]** をクリックします。  
+11. Click **OK**.  
   
-12. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を再起動して、設定が保持されていることを確認します。  
+12. Restart [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] to ensure that settings are persisted.  
   
-### \[プロセスにアタッチ\] を使用してソース コードをデバッグするには  
+### <a name="to-debug-your-source-code-using-attach-to-process"></a>To debug your source code using Attach to Process  
   
-1.  スマートカード リーダーを接続し、シェアード ソース イニシアティブから取得したカードを挿入します。  
+1.  Connect your SmartCard reader and insert the card you obtained from the Shared Source Initiative.  
   
-2.  Visual Studio を起動します。  
+2.  Launch Visual Studio.  
   
-3.  Visual Studio プロジェクトを開きます。  
+3.  Open your Visual Studio project.  
   
-4.  **\[ツール\]** メニューの **\[プロセスにアタッチ\]** をクリックします。  
+4.  On the **Tools** menu, click **Attach to Process**.  
   
-5.  **\[プロセスにアタッチ\]** ダイアログ ボックスで、**\[選択\]** をクリックします。  
+5.  In the **Attach to Process** dialog box, click **Select**.  
   
-6.  **\[コードの種類の選択\]** ダイアログ ボックスで、**\[次のコードの種類をデバッグする\]** をクリックし、**\[ネイティブ\]**、**\[マネージ\]**、および **\[マネージ \(v4.0\)\]** を選択します。  
+6.  In the **Select Code Type** dialog box, under **Detect these code types**, select **Native**, **Managed**, and **Managed(v4.0)**.  
   
-7.  **\[OK\]** をクリックして **\[コードの種類の選択\]** ダイアログ ボックスを閉じます。  
+7.  Click **OK** to dismiss the **Select Code Type** dialog box.  
   
-8.  **\[選択可能なプロセス\]** ボックスで、デバッグするプロセスを選択します。  
+8.  In the **Available Processes** box, select the process you want to debug.  
   
-9. **\[アタッチ\]** をクリックします。  
+9. Click **Attach**.  
   
-10. 証明書を確認するメッセージが表示されたら、**\[OK\]** をクリックします。  暗証番号 \(PIN\) を入力します。  Code Center Premium の使用条件を承諾します \(要求された場合\)。  
+10. When you are prompted to confirm your certificate, click **OK**. Then enter your PIN. Accept the terms of use for Code Center Premium, if you are prompted,.  
   
-     ネットワーク速度によっては、シンボルのダウンロードに時間がかかる場合があります。  すべてのシンボルが正常にダウンロードされると、ステータス バーにその旨が表示されます。  
+     Downloading symbols can take lots of time, depending on the network speed. The status bar will indicate when all symbols have been downloaded successfully.  
   
-11. ソリューションのすべてのマネージ プロジェクトに対して、アタッチ手順を繰り返します。  
+11. Repeat the attach steps for all managed projects in your Solution.  
   
-### 既存のソリューションのソース コードをデバッグするには  
+### <a name="to-debug-source-code-from-an-existing-solution"></a>To debug source code from an existing solution  
   
-1.  **ソリューション エクスプローラー**でソリューションのショートカット メニューを開き、**\[プロパティ\]** を選択します。  
+1.  In **Solution Explorer**, open the shortcut menu for the solution and then choose **Properties**.  
   
-2.  \[ソリューション プロパティ ページ\] ダイアログ ボックスで、**\[共通プロパティ\]** ノードの **\[デバッグ ソース ファイル\]** を選択します。  
+2.  In the Solution Property Pages dialog box, choose **Debug Source Files** in the **Common Properties** node.  
   
-3.  次の場所を **\[Directories containing source files\] \(ソース ファイルを含んでいるディレクトリ\)** の一覧に追加します。  
+3.  Add the following location to the **Directories containing source files** list:  
   
      `https://codepremium.msdn.microsoft.com/source/Visual%20Studio%202010/SP1/`  
   
     > [!NOTE]
-    >  パスの末尾にスラッシュ **\/** を含めてください。  
+    >  Be sure to include the trailing slash**/** at the end of the path.  
   
-4.  ソリューション内のマネージ プロジェクトごとに、次の操作を行います。  
+4.  For each managed project in your solution, do the following  
   
-    1.  ソリューション エクスプローラーで、プロジェクトのショートカット メニューを開き、**\[プロパティ\]** を選択します。  
+    1.  In Solution Explorer, open the shortcut menu for the project and then choose **Properties**.  
   
-    2.  **\[デバッグ\]** を選択し、**\[アンマネージ コード デバッグを有効にする\]** を選択します。  
+    2.  Select **Debug** and then choose **Enable unmanaged code debugging**.  
   
-### Code Center Premium ソースを使用したソリューションをデバッグするには  
+### <a name="to-debug-your-solution-with-code-center-premium-source"></a>To debug your solution with Code Center Premium source  
   
-1.  `Package` クラスで、パッケージ コンストラクターにブレークポイントを設定します。  
+1.  In your `Package` class, set a breakpoint on the package constructor.  
   
-2.  \[`デバッグ`\] メニューの **\[デバッグ開始\]** をクリックします。  
+2.  In the `Debug` menu, click **Start Debugging**.  
   
-3.  パッケージ コンストラクターのブレークポイントに到達したら、**\[呼び出し履歴\]** ウィンドウに移動します。シンボルを読み込むアセンブリのスタック フレームを右クリックし、**\[シンボルの読み込み\]** をクリックします。  
+3.  When you hit the breakpoint in the package constructor, go to the **Call Stack** window and right-click the stack frame of the assembly you want to load symbols from, then click **Load Symbols**.  
   
-     ソースを読み込むには、呼び出しフレームをダブルクリックします。  
+     Double-click the call frame to load the source.  
   
-### Code Center Premium のソース コードを参照するには  
+### <a name="to-browse-source-code-on-code-center-premium"></a>To browse source code on Code Center Premium  
   
-1.  スマートカード リーダーを接続し、シェアード ソース イニシアティブから取得したカードを挿入します。  
+1.  Connect your SmartCard reader and insert the card you obtained from the Shared Source Initiative.  
   
-2.  Internet Explorer を起動し、URL として「`https://codepremium.msdn.microsoft.com`」と入力します。  
+2.  Launch Internet Explorer enter the following URL: `https://codepremium.msdn.microsoft.com`  
   
-3.  必要なソースを探します。  
+3.  Browse to find the source you want.  
   
-## 参照  
- [デバッグの設定と準備](../debugger/debugger-settings-and-preparation.md)   
- [デバッガーのセキュリティ](../debugger/debugger-security.md)   
+## <a name="see-also"></a>See Also  
+ [Debugger Settings and Preparation](../debugger/debugger-settings-and-preparation.md)   
+ [Debugger Security](../debugger/debugger-security.md)   
  [Code Center Premium](http://www.microsoft.com/resources/sharedsource/ccp.mspx)

@@ -1,71 +1,92 @@
 ---
-title: "C# の書式指定子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "CSharp"
-helpviewer_keywords: 
-  - "デバッガー, 認識された書式指定子"
-  - "式 [C#], 書式指定 (値を)"
-  - "書式指定子, デバッガー"
-  - "[クイック ウォッチ] ダイアログ ボックス, 書式指定子 (C#)"
-  - "[クイック ウォッチ] ダイアログ ボックス, 使用 (書式指定子を)"
-  - "指定子"
-  - "指定子, ウォッチ変数の形式"
-  - "シンボル, ウォッチ変数の形式の指定"
-  - "変数 [デバッガー], ウォッチ変数のシンボル"
-  - "ウォッチ変数のシンボル"
-  - "[ウォッチ] ウィンドウ, 書式指定子 (C#)"
+title: Format specifiers in the debugger (C#) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- expressions [C#], formatting values
+- variables [debugger], watch variable symbols
+- symbols, watch variable formatting
+- QuickWatch dialog box, using format specifiers
+- specifiers, watch variable format
+- QuickWatch dialog box, format specifiers in C#
+- specifiers
+- watch variable symbols
+- Watch window, format specifiers in C#
+- format specifiers, debugger
+- debugger, format specifiers recognized by
 ms.assetid: 345c8589-5f36-4d34-a58c-e56271687dd6
 caps.latest.revision: 29
-caps.handback.revision: 29
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# C# の書式指定子
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 969a1ccc042ba453fed1f7f774b23a5c8ba971a4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-書式指定子を使用して、**ウォッチ** ウィンドウに値を表示する書式を変更できます。 また、**\[イミディエイト\]** ウィンドウ、**\[コマンド\]** ウィンドウ、およびソースのウィンドウでも、書式指定子を使用できます。 これらのウィンドウで式の上にカーソルを合わせると、結果が \[データヒント\] に表示されます。 \[データヒント\] には、\[データヒント\] 表示の書式指定子が反映されます。  
+---
+# <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Format specifiers in C# in the Visual Studio debugger
+You can change the format in which a value is displayed in the **Watch** window using format specifiers. You can also use format specifiers in the **Immediate** window, the **Command** window, and even in source windows. If you pause on an expression in those windows, the result will appear in a DataTip. DataTips will reflect the format specifier in the DataTip display.  
   
- 書式指定子を使用するには、式に続いてコンマを入力します。 コンマの後に、適切な指定子を追加します。  
+ To use a format specifier, type the expression followed by a comma. After the comma, add the appropriate specifier.  
   
-## 書式指定子の使用  
- 次のようなコードがあるとします。  
+## <a name="using-format-specifiers"></a>Using Format Specifiers  
+ If you have the following code:  
   
+```CSharp  
+{  
+        int my_var1 = 0x0065;  
+        int my_var2 = 0x0066;  
+        int my_var3 = 0x0067;  
+}  
 ```  
-{ int my_var1 = 0x0065; int my_var2 = 0x0066; int my_var3 = 0x0067; }  
-```  
   
- `my_var1` 変数をウォッチ ウィンドウに追加し \(デバッグ中に **\[デバッグ\]\/\[ウィンドウ\]\/\[ウォッチ\]\/、\[ウォッチ 1\]**\)、表示を 16 進数に設定します \(**ウォッチ** ウィンドウで変数を右クリックし、**\[16 進数で表示\]** を選択\)。 これで、**ウォッチ** ウィンドウに値 "0x0065" が表示されます。 この値を 16 進数の整数ではなく 10 進数の整数で表示するには、\[名前\] 列で変数名の後に 10 進数の書式指定子 **, d** を追加します。 \[値\] 列には、10 進数の値 "101" が表示されるようになりました。  
+ Add the `my_var1` variable to the Watch window (while debugging, **Debug > Windows > Watch > Watch 1**) and set the display to hexadecimal (in the **Watch** window, right-click the variable and select **Hexadecimal Display**). Now the **Watch** window shows that it contains the value 0x0065. To see this value expressed as a decimal integer instead of a hexadecimal integer, in the Name column, after the variable name, add the decimal format specifier: **, d**. The Value column now displays the decimal value 101  
   
  ![WatchFormatCSharp](../debugger/media/watchformatcsharp.png "WatchFormatCSharp")  
   
-## 書式指定子  
- デバッガーで認識される C\# の書式指定子を次の表に示します。  
+## <a name="format-specifiers"></a>Format Specifiers  
+ The following table shows the C# format specifiers recognized by the debugger.  
   
-|指定子|形式|元の \[ウォッチ\] の値|表示|  
-|---------|--------|--------------------|--------|  
-|ac|式を強制的に評価します。 これは、プロパティの暗黙の評価および暗黙の関数呼び出しがオフの場合に便利です。 「[副作用と式](../Topic/Side%20Effects%20and%20Expressions.md)」を参照してください。|メッセージ "暗黙的な関数の評価はユーザーによってオフにされました"|\<value\>|  
-|d|10 進整数|0x0065|101|  
-|dynamic|動的ビューを使用して、指定されたオブジェクトを表示します。|動的ビューを含む、オブジェクトのすべてのメンバーを表示します。|動的ビューのみが表示されます。|  
-|h|16 進整数|61541|0x0000F065|  
-|nq|引用符なしの文字列。|"My String"|My String|  
-|hidden|パブリック メンバーとパブリックでないメンバーをすべて表示します。|パブリック メンバーを表示します。|すべてのメンバーを表示します。|  
-|raw|未処理の項目ノードで表示されるように項目を表示します。 プロキシ オブジェクトのみで有効です。|Dictionary\<T\>|Dictionary\<T\> の列ビュー|  
-|results|IEnumerable または IEnumerable\<T\> を実装する型の変数と共に使用します。通常はクエリ式の結果です。 クエリ結果を含むメンバーのみを表示します。|すべてのメンバーを表示します。|クエリの条件に一致するメンバーを表示します。|  
+|Specifier|Format|Original Watch Value|Displays|  
+|---------------|------------|--------------------------|--------------|  
+|ac|Force evaluation of an expression. This can be useful when implicit evaluation of properties and implicit function calls is turned off.|Message "Implicit function evaluation is turned off by the user"|\<value>|  
+|d|decimal integer|0x0065|101|  
+|dynamic|Displays the specified object using a Dynamic View|Displays all the members of the object, including the Dynamic View|Displays only the Dynamic View|  
+|h|hexadecimal integer|61541|0x0000F065|  
+|nq|string with no quotes|"My String"|My String|  
+|hidden|Displays all public and non-public members|Displays public members|Displays all members|  
+|raw|Displays item as it appears in the raw item node. Valid on proxy objects only.|Dictionary\<T>|Raw View of Dictionary\<T>|  
+|results|Used with a variable of a type that implements IEnumerable or IEnumerable\<T>, usually the result of a query expression. Displays only the members that contain the query result.|Displays all the members.|Displays the members the meet the conditions of the query.|  
   
-## 参照  
- [ウォッチ ウィンドウと \[クイック ウォッチ\] ウィンドウ](../Topic/Watch%20and%20QuickWatch%20Windows.md)   
- [ウィンドウ](../Topic/Variable%20Windows.md)
+## <a name="see-also"></a>See Also  
+ [Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md)   
+ [Autos and Locals Windows](../debugger/autos-and-locals-windows.md)
+

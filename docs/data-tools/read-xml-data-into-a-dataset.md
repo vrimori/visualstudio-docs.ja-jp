@@ -1,76 +1,95 @@
 ---
-title: "チュートリアル : データセットへの XML データの読み込み | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Visual Studio], 読み取り (XML ファイルから)"
-  - "データ アクセス [Visual Studio], XML データ"
-  - "データセット [Visual Basic], 読み取り (XML データの)"
-  - "読み取り (データを), XML ファイル"
-  - "読み取り (ファイルを), XML"
-  - "読み取り (XML の)"
-  - "XML [Visual Studio], 読み取り"
-  - "XML ドキュメント, 読み取り"
+title: Read XML data into a dataset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
+helpviewer_keywords:
+- reading XML
+- data access [Visual Studio], XML data
+- reading files, XML
+- data [Visual Studio], reading from XML files
+- reading data, XML files
+- XML [Visual Studio], reading
+- XML documents, reading
+- datasets [Visual Basic], reading XML data
 ms.assetid: fae72958-0893-47d6-b3dd-9d42418418e4
 caps.latest.revision: 18
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 09ace7a25c3dc68ef9c2d27269308573dced409c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
+
 ---
-# チュートリアル : データセットへの XML データの読み込み
-ADO.NET には、XML データを使用するための簡単な方法が用意されています。  このチュートリアルでは、XML データをデータセットに読み込む Windows アプリケーションを作成します。  読み込まれたデータセットは <xref:System.Windows.Forms.DataGridView> に表示されます。  最後に、XML ファイルの内容に基づいた XML スキーマがテキスト ボックスに表示されます。  
+# <a name="read-xml-data-into-a-dataset"></a>Read XML data into a dataset
+ADO.NET provides simple methods for working with XML data. In this walkthrough, you  create a Windows application that  loads XML data into a dataset. The dataset is then displayed in a <xref:System.Windows.Forms.DataGridView> control. Finally, an XML schema based on the contents of the XML file is displayed in a text box.  
   
- このチュートリアルは、主に次の 5 つの手順で構成されています。  
+ This walkthrough consists of five main steps:  
   
-1.  新しいプロジェクトを作成します。  
+1.  Creating a new project  
   
-2.  データセットに読み込む XML ファイルを作成します。  
+2.  Creating an XML file to be read into the dataset  
   
-3.  ユーザー インターフェイスを作成します。  
+3.  Creating the user interface  
   
-4.  データセットを作成し、XML ファイルを読み込んで <xref:System.Windows.Forms.DataGridView> コントロールに表示します。  
+4.  Creating the dataset, reading the XML file, and displaying it in a <xref:System.Windows.Forms.DataGridView> control  
   
-5.  XML ファイルに基づく XML スキーマを <xref:System.Windows.Forms.TextBox> コントロールに表示するためのコードを追加します。  
+5.  Adding code to display the XML schema based on the XML file in a <xref:System.Windows.Forms.TextBox> control  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。  設定を変更するには、**\[ツール\]** メニューの **\[設定のインポートとエクスポート\]** をクリックします。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or the edition you're using. To change your settings, on the **Tools** menu, select **Import and Export Settings**. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 新しいプロジェクトの作成  
- この手順では、このチュートリアルを含める Visual Basic プロジェクトまたは Visual C\# プロジェクトを作成します。  
+## <a name="create-a-new-project"></a>Create a new project  
+ In this step, you  create a Visual Basic or Visual C# project that  contains this walkthrough.  
   
-#### 新しい Windows プロジェクトを作成するには  
+#### <a name="to-create-the-new-windows-project"></a>To create the new Windows project  
   
-1.  **\[ファイル\]** メニューで新しいプロジェクトを作成します。  
+1.  On the **File** menu, create a new project.  
   
-2.  プロジェクトに「`ReadingXML`」という名前を付けます。  
+2.  Name the project `ReadingXML`.  
   
-3.  **\[Windows アプリケーション\]** をクリックし、**\[OK\]** をクリックします。  詳細については、「[クライアント アプリケーション](../Topic/Developing%20Client%20Applications%20with%20the%20.NET%20Framework.md)」を参照してください。  
+3.  Select **Windows Application**, and then select**OK**. For more information, see [Client Applications](/dotnet/framework/develop-client-apps).  
   
-     **ReadingXML** プロジェクトが作成されてソリューション エクスプローラーに追加されます。  
+     The **ReadingXML** project is created and added to **Solution Explorer**.  
   
-## データセットに読み込む XML ファイルの作成  
- このチュートリアルでは、データセットへの XML データの読み込みについて重点的に説明するため、XML ファイルの内容を説明します。  
+## <a name="generate-the-xml-file-to-be-read-into-the-dataset"></a>Generate the XML file to be read into the dataset  
+ Because this walkthrough focuses on reading XML data into a dataset, the contents of an XML file is provided.  
   
-#### データセットに読み込む XML ファイルを作成するには  
+#### <a name="to-create-the-xml-file-that-will-be-read-into-the-dataset"></a>To create the XML file that will be read into the dataset  
   
-1.  **\[プロジェクト\]** メニューの **\[新しい項目の追加\]** をクリックします。  
+1.  On the **Project** menu, select **Add New Item**.  
   
-2.  **\[XML ファイル\]** をクリックし、ファイルに「`authors.xml`」という名前を付けて、**\[追加\]** をクリックします。  
+2.  Select **XML File**, name the file `authors.xml`, and then select **Add**.  
   
-     XML ファイルがデザイナーに読み込まれ、編集できるようになります。  
+     The XML file loads into the designer and is ready for edit.  
   
-3.  エディターで XML 宣言の下に次のコードを貼り付けます。  
+3.  Paste the following code into the editor below the XML declaration:  
   
     ```xml  
     <Authors_Table>  
@@ -132,117 +151,113 @@ ADO.NET には、XML データを使用するための簡単な方法が用意�
     </Authors_Table>  
     ```  
   
-4.  **\[ファイル\]** メニューの **\[authors.xml の保存\]** をポイントします。  
+4.  On the **File** menu, select **Save authors.xml**.  
   
-## ユーザー インターフェイスの作成  
- このアプリケーションのユーザー インターフェイスは、次のコントロールで構成されています。  
+## <a name="create-the-user-interface"></a>Create the user interface  
+ The user interface for this application consists of the following:  
   
--   XML ファイルの内容をデータとして表示する <xref:System.Windows.Forms.DataGridView> コントロール  
+-   A <xref:System.Windows.Forms.DataGridView> control that displays the contents of the XML file as data.  
   
--   XML ファイルの XML スキーマを表示する <xref:System.Windows.Forms.TextBox> コントロール  
+-   A <xref:System.Windows.Forms.TextBox> control that displays the XML schema for the XML file.  
   
--   2 つの <xref:System.Windows.Forms.Button> コントロール  
+-   Two <xref:System.Windows.Forms.Button> controls.  
   
-    -   1 つのボタンは XML ファイルをデータセットに読み込んで <xref:System.Windows.Forms.DataGridView> コントロールに表示します。  
+    -   One button reads the XML file into the dataset and displays it in the <xref:System.Windows.Forms.DataGridView> control.  
   
-    -   もう 1 つのボタンは、データセットからスキーマを抽出し、<xref:System.IO.StringWriter> を使用して <xref:System.Windows.Forms.TextBox> コントロールに表示します。  
+    -   A second button extracts the schema from the dataset, and through a <xref:System.IO.StringWriter> displays it in the <xref:System.Windows.Forms.TextBox> control.  
   
-#### フォームにコントロールを追加するには  
+#### <a name="to-add-controls-to-the-form"></a>To add controls to the form  
   
-1.  デザイン ビューで `Form1` を開きます。  
+1.  Open `Form1` in design view.  
   
-2.  **ツールボックス**からフォームに次のコントロールをドラッグします。  
+2.  From the **Toolbox**, drag the following controls onto the form:  
   
-    -   1 つの <xref:System.Windows.Forms.DataGridView> コントロール  
+    -   One <xref:System.Windows.Forms.DataGridView> control  
   
-    -   1 つの <xref:System.Windows.Forms.TextBox> コントロール  
+    -   One <xref:System.Windows.Forms.TextBox> control  
   
-    -   2 つの <xref:System.Windows.Forms.Button> コントロール  
+    -   Two <xref:System.Windows.Forms.Button> controls  
   
-3.  次のプロパティを設定します。  
+3.  Set the following properties:  
   
-    |Control|プロパティ|設定|  
-    |-------------|-----------|--------|  
+    |Control|Property|Setting|  
+    |-------------|--------------|-------------|  
     |`TextBox1`|**Multiline**|`true`|  
-    ||**ScrollBars**|**\[垂直方向\]**|  
-    |`Button1`|**名前**|`ReadXmlButton`|  
-    ||**テキスト**|`Read XML`|  
-    |`Button2`|**名前**|`ShowSchemaButton`|  
-    ||**テキスト**|`Show Schema`|  
+    ||**ScrollBars**|**Vertical**|  
+    |`Button1`|**Name**|`ReadXmlButton`|  
+    ||**Text**|`Read XML`|  
+    |`Button2`|**Name**|`ShowSchemaButton`|  
+    ||**Text**|`Show Schema`|  
   
-## XML データを受け取るデータセットの作成  
- 次に、`authors` という名前の新しいデータセットを作成します。  データセットの詳細については、「[Visual Studio でのデータセットの操作](../data-tools/dataset-tools-in-visual-studio.md)」を参照してください。  
+## <a name="create-the-dataset-thatreceives-the-xml-data"></a>Create the dataset thatreceives the XML data  
+ In this step, you create a new dataset named `authors`. For more information about datasets, see [Dataset tools in Visual Studio](../data-tools/dataset-tools-in-visual-studio.md).  
   
-#### XML データを受け取るデータセットを新規作成するには  
+#### <a name="to-create-a-new-dataset-that--receives-the-xml-data"></a>To create a new dataset that  receives the XML data  
   
-1.  **ソリューション エクスプローラー**で **Form1** のソース ファイルを選択し、**ソリューション エクスプローラー**の **\[デザイナーの表示\]** をクリックします。  
+1.  In **Solution Explorer**, select the source file for **Form1**, and then select the **View Designer** button on the **Solution Explorer** toolbar.  
   
-2.  [ツールボックス、\[データ\] タブ](../Topic/Toolbox,%20Data%20Tab.md)から **Form1** に**データセット**をドラッグします。  
+2.  From the [Toolbox, Data Tab](../ide/reference/toolbox-data-tab.md), drag a **DataSet** onto **Form1**.  
   
-3.  \[ENT3ENT\] ダイアログ ボックスの \[ENT1ENT\] を選択し次に \[ENT4ENT\] をクリックします。  
+3.  In the **Add Dataset** dialog box, select **Untyped dataset**, and then select **OK**.  
   
-     **DataSet1** がコンポーネント トレイに追加されます。  
+     **DataSet1** is added to the component tray.  
   
-4.  **\[プロパティ\]** ウィンドウで、**Name** プロパティおよび <xref:System.Data.DataSet.DataSetName%2A> プロパティを `AuthorsDataSet` に設定します。  
+4.  In the **Properties** window, set the **Name** and <xref:System.Data.DataSet.DataSetName%2A> properties for`AuthorsDataSet`.  
   
-## XML をデータセットに読み込むイベント ハンドラーの作成  
- **\[Read XML\]** ボタンを使うと、XML ファイルがデータセットに読み込まれ、ファイルをデータセットにバインドする <xref:System.Windows.Forms.DataGridView> コントロールのプロパティが設定されます。  
+## <a name="create-the-event-handler-to-read-the-xml-file-into-the-dataset"></a>Create the event handler to read the XML file into the dataset  
+ The **Read XML** button reads the XML file into the dataset. It then sets properties on the <xref:System.Windows.Forms.DataGridView> control that bind it to the dataset.  
   
-#### ReadXmlButton\_Click イベント ハンドラーにコードを追加するには  
+#### <a name="to-add-code-to-the-readxmlbuttonclick-event-handler"></a>To add code to the ReadXmlButton_Click event handler  
   
-1.  **ソリューション エクスプローラー**の **\[Form1\]** をクリックし、**ソリューション エクスプローラー** ツール バーの **\[デザイナーの表示\]** をクリックします。  
+1.  In **Solution Explorer**, select **Form1**,  and then select the **View Designer** button on the **Solution Explorer** toolbar.  
   
-2.  **\[Read XML\]** をダブルクリックします。  
+2.  Select the **Read XML** button.  
   
-     **コード エディター**が開き、`ReadXmlButton_Click` イベント ハンドラーが表示されます。  
+     The **Code Editor** opens at the `ReadXmlButton_Click` event handler.  
   
-3.  `ReadXmlButton_Click` イベント ハンドラー内に次のコードを入力します。  
+3.  Type the following code into the `ReadXmlButton_Click` event handler:  
   
-     [!code-cs[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_1.cs)]
-     [!code-vb[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_1.vb)]  
+     [!code-cs[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_1.cs)]  [!code-vb[VbRaddataFillingAndExecuting#2](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_1.vb)]  
   
-4.  `ReadXMLButton_Click` イベント ハンドラーのコードで、`filepath =` の設定を正しいパスに変更します。  
+4.  In the `ReadXMLButton_Click` event handler code, change the `filepath =` entry to the correct path.  
   
-## テキスト ボックスにスキーマを表示するイベント ハンドラーの作成  
- **\[Show Schema\]** をクリックすると、<xref:System.IO.StringWriter> オブジェクトが作成されます。このオブジェクトは、スキーマを格納しており、<xref:System.Windows.Forms.TextBox> に表示されます。  
+## <a name="create-the-event-handler-to-display-the-schema-in-the-textbox"></a>Create the event handler to display the schema in the textbox  
+ The **Show Schema** button creates a <xref:System.IO.StringWriter> object that's filled with the schema and is displayed in the <xref:System.Windows.Forms.TextBox>control.  
   
-#### ShowSchemaButton\_Click イベント ハンドラーにコードを追加するには  
+#### <a name="to-add-code-to-the-showschemabuttonclick-event-handler"></a>To add code to the ShowSchemaButton_Click event handler  
   
-1.  **ソリューション エクスプローラー**で **Form1** を選択し、**\[デザイナーの表示\]** をクリックします。  
+1.  In **Solution Explorer**, select **Form1**, and then select the **View Designer** button.  
   
-2.  **\[Show Schema\]** をダブルクリックします。  
+2.  Select the **Show Schema** button.  
   
-     **コード エディター**が開き、`ShowSchemaButton_Click` イベント ハンドラーが表示されます。  
+     The **Code Editor** opens at the `ShowSchemaButton_Click` event handler.  
   
-3.  `ShowSchemaButton_Click` イベント ハンドラー内に次のコードを入力します。  
+3.  Type the following code into the `ShowSchemaButton_Click` event handler.  
   
-     [!code-cs[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_2.cs)]
-     [!code-vb[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_2.vb)]  
+     [!code-cs[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/CSharp/read-xml-data-into-a-dataset_2.cs)]  [!code-vb[VbRaddataFillingAndExecuting#3](../data-tools/codesnippet/VisualBasic/read-xml-data-into-a-dataset_2.vb)]  
   
-## テスト  
- フォームをテストして、期待どおりに動作することを確認します。  
+## <a name="test-the-form"></a>Test the form  
+ You can now test the form to make sure it behaves as expected.  
   
-#### フォームをテストするには  
+#### <a name="to-test-the-form"></a>To test the form  
   
-1.  F5 キーを押してアプリケーションを実行します。  
+1.  Select **F5** to run the application.  
   
-2.  **\[Read XML\]** をクリックします。  
+2.  Select the **Read XML** button.  
   
-     XML ファイルの内容が DataGridView に表示されます。  
+     The DataGridView displays the contents of the XML file.  
   
-3.  **\[Show Schema\]** をクリックします。  
+3.  Select the **Show Schema** button.  
   
-     XML ファイルの XML スキーマがテキスト ボックスに表示されます。  
+     The text box displays the XML schema for the XML file.  
   
-## 次の手順  
- このチュートリアルでは、データセットに XML ファイルを読み込む方法の基本と、XML ファイルの内容に基づくスキーマの作成方法の基本を示します。  次に行う作業は以下のとおりです。  
+## <a name="next-steps"></a>Next Steps  
+ This walkthrough teaches you the basics of reading an XML file into a dataset, as well as creating a schema based on the contents of the XML file. Here are some tasks that you might do next:  
   
--   データセットのデータを編集し、XML としてデータセットに書き込みます。  詳細については、「<xref:System.Data.DataSet.WriteXml%2A>」を参照してください。  
+-   Edit the data in the dataset and write it back out as XML. For more information, see <xref:System.Data.DataSet.WriteXml%2A>.  
   
--   データセットのデータを編集し、データベースに書き込みます。  詳細については、「[データの保存](../data-tools/saving-data.md)」を参照してください。  
+-   Edit the data in the dataset and write it out to a database. For more information, see [Saving Data](../data-tools/saving-data.md).  
   
-## 参照  
- [データに関するチュートリアル](../Topic/Data%20Walkthroughs.md)   
- [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)   
- [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [Visual Studio の XML ツール](../xml-tools/xml-tools-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Accessing data in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)       
+ [XML Tools in Visual Studio](../xml-tools/xml-tools-in-visual-studio.md)

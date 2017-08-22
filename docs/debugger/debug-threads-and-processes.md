@@ -1,65 +1,87 @@
 ---
-title: "スレッドとプロセスの操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "デバッグ [Visual Studio], スレッド"
-  - "デバッグ (スレッドを)"
-  - "マルチプロセス デバッグ"
-  - "プロセス, デバッグ"
-  - "スレッド処理 [Visual Studio], デバッグ"
+title: Tools to debug threads and processes | Microsoft Docs
+ms.custom: 
+ms.date: 04/21/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- multiprocess debugging
+- threading [Visual Studio], debugging
+- processes, debugging
+- debugging threads
+- debugging [Visual Studio], threads
 ms.assetid: 9f0c8505-b6b2-452b-adfd-076db14d8115
-caps.latest.revision: 15
-caps.handback.revision: 14
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# スレッドとプロセスの操作
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+caps.latest.revision: 14
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 394fcc0339f4ce2bef4aca64efc5bc8bcf1e3e00
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-*スレッド*と*プロセス*は、コンピューター科学における関連概念です。  いずれも特定の順序で実行する必要がある命令のシーケンスを表します。  ただし、別個のスレッドやプロセスの命令は並列実行できます。  
+---
+# <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Tools to debug threads and processes in Visual Studio
+*Threads* and *processes* are related concepts in computer science. Both represent sequences of instructions that must execute in a specific order. Instructions in separate threads or processes, however, can execute in parallel.  
   
- プロセスは、オペレーティング システム内に存在するものであり、ユーザーがプログラムやアプリケーションとして認識するものに相当します。  一方、スレッドはプロセス内に存在します。  このため、スレッドは、*軽量プロセス*と呼ばれることもあります。  各プロセスは、1 つ以上のスレッドで構成されます。  
+ Processes exist in the operating system and correspond to what users see as programs or applications. A thread, on the other hand, exists within a process. For this reason, threads are sometimes referred to as *light-weight processes*. Each process consists of one or more threads.  
   
- 複数のプロセスが存在すると、コンピューターは、同時に複数のタスクを実行できます。  複数のスレッドが存在すると、プロセスで作業を分割して並列実行できます。  マルチプロセッサを搭載したコンピューターでは、プロセスやスレッドを各プロセッサに振り分けて実行できます。  これにより、真の並列処理が実現されます。  
+ The existence of multiple processes enables a computer to perform more than one task at a time. The existence of multiple threads enables a process to separate work to be performed in parallel. On a computer with multiprocessors, processes or threads can run on different processors. This enables true parallel processing.  
   
- 完全な並列処理は、常に実現できるとは限りません。  スレッドの同期が必要になることがあります。  スレッドは、別のスレッドが結果を生成するまで待機したり、別のスレッドが使用しているリソースに排他的にアクセスしたりすることが必要な場合があります。  同期に関する問題は、マルチスレッド アプリケーションで発生するバグの一般的な原因です。  また、スレッドは、決して利用可能にならないリソースを待機することがあります。  その結果、*デッドロック*と呼ばれる状態が生じることがあります。  
+ Perfect parallel processing is not always possible. Threads sometimes must be synchronized. One thread may have to wait for a result from another thread, or one thread may need exclusive access to a resource that another thread is using. Synchronization problems are a common cause of bugs in multithreaded applications. Sometimes threads may end up waiting for a resource that never becomes available. This results in a condition called *deadlock*.  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーは、強力で使いやすい、スレッドとプロセスのデバッグ用ツールを提供します。  
+ The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] debugger provides powerful but easy-to-use tools for debugging threads and processes.  
   
-## Visual Studio のスレッドおよびプロセスのデバッグ用ツール  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でのプロセスのデバッグで使用する主要なツールは、**\[プロセスにアタッチ\]** ダイアログ ボックス、**\[プロセス\]** ウィンドウ、および **\[デバッグの場所\]** ツール バーです。  スレッドのデバッグで使用する主なツールは、**\[スレッド\]** ウィンドウ、ソース ウィンドウのスレッド マーカー、および **\[デバッグの場所\]** ツール バーです。  
+## <a name="tools-and-features"></a>Tools and features
+The tools you need to use in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] depend on what type of code you are trying to debug:
+
+- For processes, the primary tools are the **Attach to Process** dialog box, the **Processes** window, and the **Debug Location** toolbar.
+
+- For threads, the primary tools for debugging threads are the **Threads** window, thread markers in source windows, **Parallel Stacks** window, **Parallel Watch** window, and the **Debug Location** toolbar.  
   
- マルチスレッド アプリケーションのデバッグで使用する主なツールは、**\[並列スタック\]**、**\[並列タスク\]**、**\[並列ウォッチ\]**、**\[GPU スレッド\]** のウィンドウです。  
+- For code that uses the <xref:System.Threading.Tasks.Task> in the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl), the [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime/) (native code), the primary tools for debugging multithreaded applications are the **Parallel Stacks** window, the **Parallel Watch** window, and the **Tasks** window (the **Tasks** window also supports the JavaScript promise object).
+
+- For debugging threads on the GPU, the primary tool is the **GPU Threads** windows.  
   
- 各ツールで提供される情報と実行できる操作を次の表に示します。  
+ The following table shows the information available and the actions you can perform in each of these places:  
   
-|ユーザー インターフェイス|提供される情報|実行できる操作|  
-|-------------------|-------------|-------------|  
-|**\[プロセスにアタッチ\]** ダイアログ ボックス|アタッチが可能なプロセス<br /><br /> -   プロセス名 \(.exe\)<br />-   プロセス ID 番号<br />-   メニュー バーのタイトル<br />-   種類 \(\[マネージ v4.0\]、\[マネージ \(v2.0、v1.1、v1.0\)\]、\[x86\]、\[x64\]、\[IA64\]\)<br />-   ユーザー名 \(アカウント名\)<br />-   セッション番号|アタッチ先のプロセスの選択。<br /><br /> リモート コンピューターの選択。<br /><br /> リモート コンピューターに接続するためのトランスポートの種類の変更。|  
-|**\[プロセス\]** ウィンドウ|アタッチされたプロセス<br /><br /> -   プロセス名<br />-   プロセス ID 番号<br />-   .exe を処理するパス<br />-   メニュー バーのタイトル<br />-   状態 \(中断、  実行中\)<br />-   デバッグ \(ネイティブ、マネージなど\)<br />-   トラスポートの種類 \(既定、認証なしのネイティブ\)<br />-   トラスポートの修飾子 \(リモート コンピューター\)|ツールでの操作 :<br /><br /> -   アタッチ<br />-   デタッチ<br />-   終了<br /><br /> ショートカット メニューでの操作 :<br /><br /> -   アタッチ<br />-   デタッチ<br />-   デバッグ停止時のデタッチ<br />-   終了|  
-|**\[スレッド\]** ウィンドウ|現在のプロセス内のスレッド<br /><br /> -   スレッド ID<br />-   マネージ ID<br />-   カテゴリ \(メイン スレッド、インターフェイス スレッド、リモート プロシージャ コール ハンドラー、またはワーカー スレッド\)<br />-   スレッド名<br />-   スレッドが作成された場所<br />-   優先順位<br />-   関係マスク<br />-   中断回数<br />-   プロセス名<br />-   フラグ インジケーター<br />-   中断中のインジケーター|ツールでの操作 :<br /><br /> -   \[検索\]<br />-   呼び出し履歴の検索<br />-   マイ コードのみにフラグを設定<br />-   カスタム モジュール選択にフラグを設定<br />-   グループ化<br />-   列<br />-   呼び出し履歴の展開\/折りたたみ<br />-   グループの展開\/折りたたみ<br />-   スレッドの凍結\/凍結解除<br /><br /> ショートカット メニューでの操作 :<br /><br /> -   ソースのスレッドを表示<br />-   スレッドに切り替え<br />-   実行中のスレッドの凍結<br />-   凍結されたスレッドの凍結解除<br />-   注目するスレッドへのフラグの設定<br />-   スレッドのフラグの解除<br />-   スレッド名の変更<br />-   スレッドの表示と非表示<br /><br /> その他の操作 :<br /><br /> -   スレッドの呼び出し履歴のデータヒントでの表示|  
-|ソース ウィンドウ|左端余白のスレッド インジケーターは、スレッドが 1 つか複数かを示します \(既定ではオフで、**\[スレッド\]** ウィンドウのショートカット メニューを使用してオンにすることができます\)。|ショートカット メニューでの操作 :<br /><br /> -   スレッドに切り替え<br />-   注目するスレッドへのフラグの設定<br />-   スレッドのフラグの解除|  
-|**\[デバッグの場所\]** ツール バー|-   現在のプロセス<br />-   アプリケーションの縮小版を表示する<br />-   アプリケーションを一時停止する<br />-   アプリケーションを再開する<br />-   アプリケーションを一時停止およびシャットダウンする<br />-   現在のスレッド<br />-   現在のスレッドのフラグ状態を切り替える<br />-   フラグが設定されたスレッドのみの表示<br />-   現在のプロセスのみ表示する<br />-   現在のスタック フレーム|-   別のプロセスへの切り替え<br />-   アプリケーションを一時停止、再開、またはシャットダウンする<br />-   現在のプロセス内の別なスレッドへの切り替え<br />-   現在のスレッド内の別なスタック フレームへの切り替え<br />-   現在のスレッドに対するフラグの設定または設定解除<br />-   フラグが設定されたスレッドのみの表示<br />-   現在のプロセスのみ表示する|  
-|**\[並列スタック\]** ウィンドウ|-   1 つのウィンドウにおける複数のスレッドの呼び出し履歴<br />-   各スレッドのアクティブなスタック フレーム<br />-   メソッドの呼び出し元と呼び出し先|-   指定したスレッドをフィルターで除外<br />-   \[並列タスク\] ビューへの切り替え<br />-   スレッドに対するフラグの設定または設定解除<br />-   ズーム|  
-|**\[並列タスク\]** ウィンドウ|-   タスク ID、タスクの状態 \(スケジュール済み、実行中、待機中、デッドロック\)、タスクに割り当てられているスレッドなど、<xref:System.Threading.Tasks.Task> オブジェクトに関する情報の表示<br />-   呼び出し履歴での現在の位置<br />-   作成時にタスクに渡されたデリゲート|-   現在のタスクへの切り替え<br />-   タスクに対するフラグの設定または設定解除<br />-   タスクの凍結または凍結解除|  
-|**\[並列ウォッチ\]** ウィンドウ|-   フラグ列。特に注意する必要のあるスレッドをマークできます。<br />-   フレーム列。矢印は、選択したフレームを示します。<br />-   構成可能な列。コンピューター、プロセス、タイル、タスク、スレッドを表示できます。|-   スレッドに対するフラグの設定または設定解除<br />-   フラグが設定されたスレッドのみ表示する<br />-   フレームを切り替える<br />-   列を並べ替える<br />-   スレッドをグループ化する<br />-   スレッドを凍結\/凍結解除する<br />-   \[並列ウォッチ\] ウィンドウ内のデータをエクスポートする|  
-|**GPU スレッド** ウィンドウ|-   フラグ列。特に注意する必要のあるスレッドをマークできます。<br />-   アクティブ スレッド列。黄色の矢印は、アクティブ スレッドであることを示します。  矢印は、実行がデバッガーに割り込んだスレッドを示します。<br />-   **\[スレッド数\]** 列。同じ位置のスレッドの数を表示します。<br />-   **\[行\]** 列。スレッドの各グループがあるコード行を表示します。<br />-   **\[アドレス\]** 列。スレッドの各グループがある命令アドレスを表示します。<br />-   **\[場所\]** 列。アドレスのコード内の位置です。<br />-   **\[ステータス\]** 列。スレッドがアクティブであるかブロックされているかどうかを示します。<br />-   **\[タイル\]** 列。行内のスレッドのタイル インデックスを示します。|-   別のアクティブなスレッドに変更する<br />-   特定のタイルとスレッドを表示する<br />-   列の表示と非表示を切り替える<br />-   列で並べ替える<br />-   スレッドをグループ化する<br />-   スレッドを凍結\/凍結解除する<br />-   スレッドに対するフラグの設定または設定解除<br />-   フラグが設定されたスレッドのみ表示する|  
+|User Interface|Information Available|Actions You Can Perform|  
+|--------------------|---------------------------|-----------------------------|  
+|**Attach to Process** dialog box|Available Processes you can attach to:<br /><br /> -   Process name (.exe)<br />-   Process ID number<br />-   Menubar Title<br />-   Type (Managed v4.0; Managed v2.0, v1.1, v1.0; x86; x64; IA64)<br />-   User Name (account name)<br />-   Session number|Select a process to attach to<br /><br /> Select a remote computer<br /><br /> Change transport type for connecting to remote computers|  
+|**Processes** window|Attached Processes:<br /><br /> -   Process Name<br />-   Process ID number<br />-   Path to process .exe<br />-   Menubar Title<br />-   State (Break. Running)<br />-   Debugging (Native, Managed, and so on.)<br />-   Transport type (default, native with no authentication)<br />-   Transport Qualifier (remote computer)|Tools:<br /><br /> -   Attach<br />-   Detach<br />-   Terminate<br /><br /> Shortcut menu:<br /><br /> -   Attach<br />-   Detach<br />-   Detach when debugging stopped<br />-   Terminate|  
+|**Threads** window|Threads in current process:<br /><br /> -   Thread ID<br />-   Managed ID<br />-   Category (main thread, interface thread, remote procedure call handler, or worker thread)<br />-   Thread Name<br />-   Location where thread is created<br />-   Priority<br />-   Affinity Mask<br />-   Suspended Count<br />-   Process Name<br />-   Flag Indicator<br />-   Suspended indicator|Tools:<br /><br /> -   Search<br />-   Search Call Stack<br />-   Flag Just My Code<br />-   Flag Custom Module Selection<br />-   Group by<br />-   Columns<br />-   Expand/Collapse callstacks<br />-   Expand/Collapse groups<br />-   Freeze/Thaw Threads<br /><br /> Shortcut menu:<br /><br /> -   Show threads in source<br />-   Switch to a thread<br />-   Freeze a running thread<br />-   Thaw a frozen thread<br />-   Flag a thread for additional study<br />-   Unflag a thread<br />-   Rename a thread<br />-   Show and hide threads<br /><br /> Other actions:<br /><br /> -   View the call stack for a thread in a DataTip|  
+|Source window|Thread indicators in left gutter indicate single or multiple threads (off by default, turned on by using shortcut menu in **Threads** window)|Shortcut menu:<br /><br /> -   Switch to a thread<br />-   Flag a thread for additional study<br />-   Unflag a thread|  
+|**Debug Location** toolbar|-   Current process<br />-   Suspend the application<br />-   Resume the application<br />-   Suspend and shut down the application<br />-   Current thread<br />-   Toggle current thread flag state<br />-   Show only flagged threads<br />-   Show only current process<br />-   Current stack frame|-   Switch to another process<br />-   Suspend, resume, or shut down the application<br />-   Switch to another thread in current process<br />-   Switch to another stack frame in current thread<br />-   Flag or unflag current threads<br />-   Show only flagged threads<br />-   Show only the current process|  
+|**Parallel Stacks** window|-   Call stacks for multiple threads in one window.<br />-   Active stack frame for each thread.<br />-   Callers and callees for any method.|-   Filter out specified threads<br />-   Switch to Tasks view<br />-   Flag or unflag a thread<br />-   Zoom|   
+|**Parallel Watch** window|-   The flag column, in which you can mark a thread that you want to pay special attention to.<br />-   The frame column, in which an arrow indicates the selected frame.<br />-   A configurable column that can display the machine, process, tile, task, and thread.|-   Flag or unflag a thread<br />-   Display only flagged threads<br />-   Switch frames<br />-   Sort a column<br />-   Group threads<br />-   Freeze or thaw threads<br />-   export the data in the Parallel Watch window| 
+|**Tasks** window|-   View information about <xref:System.Threading.Tasks.Task> objects including task ID, task status (scheduled, running, waiting, deadlocked), and which thread is assigned to the task.<br />-   Current location in call stack.<br />-   Delegate passed to the task at creation time|-   Switch to current task<br />-   Flag or unflag a task<br />-   Freeze or thaw a task|  
+|**GPU Threads** window|-   The flag column, in which you can mark a thread that you want to pay special attention to.<br />-   The current thread column, in which a yellow arrow indicates the current thread.<br />-   The **Thread Count** column, which displays the number of threads at the same location.<br />-   The **Line** column, which displays the line of code where each group of threads is located.<br />-   The **Address** column, which displays the instruction address where each group of threads is located.<br />-   The **Location** column, which is the location in the code of the address.<br />-   The **Status** column, which shows whether the thread is active or blocked.<br />-   The **Tile** column, which shows the tile index for the threads in the row.|-   Change to a different thread<br />-   Display a particular tile and thread<br />-   Display or hide a column<br />-   Sort by a column<br />-   Group threads<br />-   Freeze or thaw threads<br />-   Flag or unflag a thread<br />-   Display only flagged threads|  
   
-## 参照  
- [実行中のプロセスへのアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
- [マルチスレッド アプリケーションのデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [GPU コードのデバッグ](../debugger/debugging-gpu-code.md)
+## <a name="see-also"></a>See Also  
+ [Attach to Running Processes](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
+ [Debug Multithreaded Applications](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [Debugging GPU Code](../debugger/debugging-gpu-code.md)

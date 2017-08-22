@@ -1,89 +1,107 @@
 ---
-title: "WebView コントロールのデバッグ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Debug a WebView control (Windows Store) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: 7d105907-8b39-4d07-8762-5c5ed74c7f21
 caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# WebView コントロールのデバッグ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: d4c6acdbe6ad8b6d9aeda8247c0d529da28d91ca
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-![Windows と Windows Phone に適用されます](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+---
+# <a name="debug-a-webview-control-in-a-windows-store-app"></a>Debug a WebView control in a Windows Store App
+![Applies to Windows and Windows Phone](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- Windows Runtime アプリで `WebView` コントロールを検査しデバッグするには、アプリの開始時にスクリプト デバッガーをアタッチするよう Visual Studio を設定できます。  Visual Studio 2013 Update 2 から、デバッガーを使用して `WebView` コントロールと 2 つの方法で対話できます。  
+ To inspect and debug `WebView` controls in a Windows Runtime app, you can configure Visual Studio to attach the script debugger when you start your app. Starting with Visual Studio 2013 Update 2, you have two ways to interact with `WebView` controls using the debugger:  
   
--   `WebView` インスタンスで [DOM Explorer](../debugger/quickstart-debug-html-and-css.md) を開き、DOM 要素を検査し、CSS スタイルの問題を調査し、スタイルに対する動的な変更をテストします。  
+-   Open the [DOM Explorer](../debugger/quickstart-debug-html-and-css.md) for a `WebView` instance, and inspect DOM elements, investigate CSS style issues, and test dynamically rendered changes to styles.  
   
--   [JavaScript コンソール](../debugger/javascript-console-commands.md) ウィンドウのターゲットとして、Web ページまたは `WebView` インスタンスで表示される `iFrame` を選択した後、コンソール コマンドを使用して Web ページとやり取りします。  コンソールは、現在のスクリプト実行コンテキストへのアクセスを提供します。  
+-   Select the webpage or `iFrame` displayed in the `WebView` instance as a target in the [JavaScript Console](../debugger/javascript-console-commands.md) window, and then interact with the webpage using console commands. The console provides access to the current script execution context.  
   
-### デバッガーのアタッチ \(C\#、Visual Basic、C\+\+\)  
+### <a name="attach-the-debugger-c-visual-basic-c"></a>Attach the debugger (C#, Visual Basic, C++)  
   
-1.  Visual Studio で、Windows Runtime アプリに `WebView` コントロールを追加します。  
+1.  In Visual Studio, add a `WebView` control to your Windows Runtime app.  
   
-2.  ソリューション エクスプローラーで、プロジェクトのショートカット メニューから **\[プロパティ\]** を選択して、プロジェクトのプロパティを開きます。  
+2.  In Solution Explorer, open the properties for the project by choosing **Properties** from the shortcut menu for the project.  
   
-3.  **\[デバッグ\]** をクリックします。  **\[アプリケーション プロセス\]** ボックスの一覧の **\[スクリプト\]** をクリックします。  
+3.  Choose **Debug**. In the **Application process** list, choose **Script**.  
   
-     ![スクリプト デバッガのアタッチ](../debugger/media/js_dom_webview_script_debugger.png "JS\_DOM\_WebView\_Script\_Debugger")  
+     ![Attach the script debugger](../debugger/media/js_dom_webview_script_debugger.png "JS_DOM_WebView_Script_Debugger")  
   
-4.  \(オプション\) Visual Studio の非 Express バージョンの場合、**\[ツール\]**、**\[オプション\]**、**\[デバッグ\]**、**\[Just\-In\-Time\]** をクリックして、スクリプトの JIT デバッグを無効にします。  
-  
-    > [!NOTE]
-    >  JIT デバッグを無効にすると、一部の Web ページで生じる未処理の例外のダイアログ ボックスを非表示にできます。  Visual Studio Express では、JIT デバッグは常に無効となっています。  
-  
-5.  F5 キーを押してデバッグを開始します。  
-  
-### DOM Explorer を使って WebView コントロールを検査およびデバッグします。  
-  
-1.  \(C\#、Visual Basic、C\+\+\) スクリプト デバッガーをアプリにアタッチします。  手順については最初のセクションを参照してください。  
-  
-2.  まだ行っていない場合はアプリに `WebView` コントロールを追加して、F5 を押すとデバッグが開始します。  
-  
-3.  `Webview` コントロールが含まれるページに移動します。  
-  
-4.  **\[デバッグ」**、**\[ウィンドウ\]**、**\[DOM Explorer\]** をクリックして `WebView` コントロールの DOM Explorer ウィンドウを開き、検査する `WebView` の URL をクリックします。  
-  
-     ![DOM Explorer を開く](../debugger/media/js_dom_webview.png "JS\_DOM\_WebView")  
-  
-     `WebView` に関連付けられた DOM Explorer が Visual Studio の新しいタブとして表示されます。  
-  
-5.  [DOM Explorer を使用した CSS スタイルのデバッグ](../debugger/debug-css-styles-using-dom-explorer.md) で説明されているように、ライブ DOM 要素と CSS スタイルを表示および変更します。  
-  
-### JavaScript コンソール ウィンドウを使って WebView コントロールを検査およびデバッグします。  
-  
-1.  \(C\#、Visual Basic、C\+\+\) スクリプト デバッガーをアプリにアタッチします。  手順については最初のセクションを参照してください。  
-  
-2.  まだ行っていない場合はアプリに `WebView` コントロールを追加して、F5 を押すとデバッグが開始します。  
-  
-3.  **\[デバッグ\]**、**\[Windows\]**、**\[JavaScript コンソール\]** をクリックして、`WebView` コントロールの JavaScript コンソール ウィンドウを開きます。  
-  
-     JavaScript コンソール ウィンドウが開きます。  
-  
-4.  `Webview` コントロールが含まれるページに移動します。  
-  
-5.  コンソール ウィンドウで、Web ページ、または **\[ターゲット\]** リストの `WebView` コントロールに表示される `iFrame` を選択します。  
-  
-     ![JavaScript コンソール ウィンドウでのターゲット選択](~/debugger/media/js_console_target.png "JS\_Console\_Target")  
+4.  (Optional) For non-Express versions of Visual Studio, disable just-in-time (JIT) debugging by choosing **Tools > Options > Debugging > Just-In-Time**, and then disabling JIT debugging for Script.  
   
     > [!NOTE]
-    >  コンソールを使って、1 度に 1 つの `WebView`、`iFrame`、共有コントラクト、または Web ワーカーとやり取りできます。  各要素では、Web プラットフォーム ホストの個別のインスタンスが必要となります \(WWAHost.exe\)。  一度に 1 つのホストとやり取りできます。  
+    >  By disabling JIT debugging, you can hide dialog boxes for unhandled exceptions that occur on some webpages. In Visual Studio Express, JIT debugging is always disabled.  
   
-6.  [クイックスタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)と[JavaScript コンソール コマンド](../debugger/javascript-console-commands.md)で説明されているように、アプリの変数を表示および変更するか、コンソール コマンドを使用します。  
+5.  Press F5 to start debugging.  
   
-## 参照  
- [クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)
+### <a name="use-the-dom-explorer-to-inspect-and-debug-a-webview-control"></a>Use the DOM Explorer to inspect and debug a WebView control  
+  
+1.  (C#, Visual Basic, C++) Attach the script debugger to your app. See the first section for instructions.  
+  
+2.  If you haven't already, add a `WebView` control to your app and press F5 to start debugging.  
+  
+3.  Navigate to the page containing the `Webview` control(s).  
+  
+4.  Open the DOM Explorer window for the `WebView` control by choosing **Debug**, **Windows**, **DOM Explorer**, and then choose the URL of the `WebView` that you want to inspect.  
+  
+     ![Opening the DOM Explorer](../debugger/media/js_dom_webview.png "JS_DOM_WebView")  
+  
+     The DOM Explorer associated with the `WebView` appears as a new tab in Visual Studio.  
+  
+5.  View and modify live DOM elements and CSS styles as described in [Debug CSS styles using DOM Explorer](../debugger/debug-css-styles-using-dom-explorer.md).  
+  
+### <a name="use-the-javascript-console-window-to-inspect-and-debug-a-webview-control"></a>Use the JavaScript Console window to inspect and debug a WebView control  
+  
+1.  (C#, Visual Basic, C++) Attach the script debugger to your app. See the first section for instructions.  
+  
+2.  If you haven't already, add a `WebView` control to your app and press F5 to start debugging.  
+  
+3.  Open the JavaScript Console window for the `WebView` control by choosing **Debug**, **Windows**, **JavaScript Console**.  
+  
+     The JavaScript Console window appears.  
+  
+4.  Navigate to the page containing the `Webview` control(s).  
+  
+5.  In the Console window, select the webpage or an `iFrame` displayed by the `WebView` control in the **Target** list.  
+  
+     ![Target selection in the JavaScript console window](../debugger/media/js_console_target.png "JS_Console_Target")  
+  
+    > [!NOTE]
+    >  Using the console, you can interact with a single `WebView`, `iFrame`, share contract, or web worker at a time. Each element requires a separate instance of the web platform host (WWAHost.exe). You can interact with one host at a time.  
+  
+6.  View and modify variables in your app or use console commands, as described in [QuickStart: Debug JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md) and [JavaScript Console commands](../debugger/javascript-console-commands.md).  
+  
+## <a name="see-also"></a>See Also  
+ [Quickstart: Debug HTML and CSS](../debugger/quickstart-debug-html-and-css.md)

@@ -1,81 +1,103 @@
 ---
-title: "エディット コンティニュ (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "C/C++, エディット コンティニュ"
-  - "デバッグ [C++], エディット コンティニュ"
-  - "エディット コンティニュ [C++]"
+title: Edit and Continue (Visual C++) | Microsoft Docs
+ms.custom: 
+ms.date: 05/31/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- Edit and Continue [C++]
+- debugging [C++], Edit and Continue
+- C/C++, Edit and Continue
 ms.assetid: 1815251e-a877-433e-9e5e-69bd9ba254c7
 caps.latest.revision: 25
-caps.handback.revision: 25
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# エディット コンティニュ (Visual C++)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: d5d795da17e8446bc86417dc302e1df4935a92f4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-Visual C\+\+ プロジェクトでエディット コンティニュを使用できます。エディット コンティニュの制限事項については、「[サポートされているコードの変更と制限事項 \(C\+\+\)](../debugger/supported-code-changes-cpp.md)」をご覧ください。  
+---
+# <a name="edit-and-continue-visual-c"></a>Edit and Continue (Visual C++)
+You can use Edit and Continue in Visual C++ projects. See [Supported Code Changes (C++)](../debugger/supported-code-changes-cpp.md) for information about the limitations of Edit and Continue.
   
- Visual Studio 2015 Update 1 以降、**\/ZI** コンパイラ スイッチと **\/bigobj** スイッチがサポートされるようになったので、Windows ストア C\+\+ アプリと DirectX アプリでエディット コンティニュを使用できます。**\/FASTLINK** スイッチでコンパイルされたバイナリでエディット コンティニュを使用することもできます。  
+For more information about Visual Studio 2015 Update 3 improvements, see [C++ Edit and Continue in Visual Studio 2015 Update 3](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/).  
   
- Update 1 のその他の機能強化としては、ファイルがエディット コンティニュをサポートしていない場合にキャンセルできる待機のダイアログと通知が新たに含まれるようになりました。Update 1 の機能強化について詳しくは、「[Visual Studio 2015 Update 1 における C\+\+ エディット コンティニュの機能強化](http://blogs.msdn.com/b/vcblog/archive/2015/11/30/improvements-for-c-edit-and-continue-in-visual-studio-2015-update-1.aspx)」をご覧ください。  
+ The [/Zo (Enhance Optimized Debugging)](/cpp/build/reference/zo-enhance-optimized-debugging) compiler option that was introduced in Visual Studio 2013 Update 3 adds additional information to .pdb (symbol) files for binaries compiled without the [/Od (Disable (Debug))](http://msdn.microsoft.com/library/aafb762y.aspx) option.  
   
-Visual Studio 2013 Update 3 で導入された [\/Zo \(最適化されたデバッグ機能の強化\)](/visual-cpp/build/reference/zo-enhance-optimized-debugging) コンパイラ オプションによって、[\/Od \(無効 \(デバッグ\)\)](http://msdn.microsoft.com/library/aafb762y.aspx) オプションを使用しないで、コンパイルされたバイナリの .pdb \(シンボル\) ファイルにさらに情報が追加されます。  
+ **/Zo** disables Edit and Continue. See [How to: Debug Optimized Code](../debugger/how-to-debug-optimized-code.md).  
   
-**\/Zo** は、エディット コンティニュを無効にします。「[方法 : 最適化されたコードをデバッグする](../debugger/how-to-debug-optimized-code.md)」をご覧ください。  
+##  <a name="BKMK_Enable_or_disable_automatic_invocation_of_Edit_and_Continue"></a> Enable or disable Edit and Continue  
+ You may want to  disable the automatic invocation of Edit and Continue if you are making edits to the code that you do not want applied during the current debugging session. You can also re-enable automatic Edit and Continue.
+
+> [!IMPORTANT]
+> For required build settings and other information about feature compatibility, see [C++ Edit and Continue in Visual Studio 2015 Update 3](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/.
   
-## <a name="BKMK_Enable_or_disable_automatic_invocation_of_Edit_and_Continue"></a>エディット コンティニュを有効または無効にする  
-現在のデバッグ セッション中に適用しないコードの編集を行う場合は、エディット コンティニュの自動起動を無効にすることもできます。 自動エディット コンティニュをもう一度有効にすることもできます。  
+1.  If you are in a debugging session, stop debugging (**Shift + F5**).
+
+2. On the **Tools** menu, choose **Options**.
   
-1.  **\[ツール\]** メニューの **\[オプション\]** をクリックします。  
+3.  In the **Options** dialog box, select **Debugging > General**.
+
+4.  To enable, select **Enable Edit and Continue**. To disable, clear the checkbox.
   
-2.  **\[オプション\]** ダイアログ ボックスで、**\[デバッグ\/全般\]** を選びます。  
+5.  In the **Edit and Continue** group, select or clear the **Enable Native Edit and Continue** check box.  
   
-3.  **\[エディット コンティニュ\]** グループで、**\[ネイティブのエディット コンティニュを有効にする\]** チェック ボックスをオンまたはオフにします。  
+ Altering this setting affects all projects you work on. You do not need to rebuild your application after changing this setting. If you build your application from the command line or from a makefile, but you debug in the Visual Studio environment, you can still use Edit and Continue if you set the **/ZI** option.  
   
-この設定を変更すると、作業するすべてのプロジェクトに影響します。 この設定の変更後にアプリケーションをリビルドする必要はありません。 この設定は、デバッグ中でも変更できます。 アプリケーションをコマンド ラインまたはメイクファイルでビルドし、Visual Studio 環境でデバッグする場合も、**\/ZI** オプションを設定するとエディット コンティニュを使用できます。  
+##  <a name="BKMK_How_to_apply_code_changes_explicitly"></a> How to apply code changes explicitly  
+ In Visual C++, Edit and Continue can apply code changes in two ways. Code changes can be applied implicitly, when you choose an execution command, or explicitly, using the **Apply Code Changes** command.  
   
-## <a name="BKMK_How_to_apply_code_changes_explicitly"></a>コード変更を明示的に適用する方法  
-Visual C\+\+ では、エディット コンティニュは 2 つの方法でコード変更を適用できます。 実行コマンドを選択した場合、コード変更は暗黙的に適用できます。**\[コード変更を適用\]** を使用した場合は明示的に適用できます。  
+ When you apply code changes explicitly, your program remains in break mode - no execution occurs.  
   
-コード変更を明示的に適用する場合、プログラムは中断モードのままとなり実行されません。  
+-   To apply code changes explicitly, on the **Debug** menu, choose **Apply Code Changes**.  
   
--   コードの変更を明示的に適用するには、\[**デバッグ**\] メニューで \[**コード変更を適用**\] を選択します。  
+##  <a name="BKMK_How_to_stop_code_changes"></a> How to stop code changes  
+ While Edit and Continue is in the process of applying code changes, you can stop the operation.  
   
-## <a name="BKMK_How_to_stop_code_changes"></a>コード変更を停止する方法  
-エディット コンティニュがコード変更を適用するプロセスを実行している間、その操作は中断できます。  
+ To stop applying code changes:  
   
-コードの変更内容の適用を停止するには  
+-   On the **Debug** menu, choose **Stop Applying Code Changes**.  
   
--   **\[デバッグ\]** メニューの **\[コード変更の適用を停止\]** をクリックします。  
+ This menu item is visible only when code changes are being applied.  
   
-このメニュー項目は、コード変更の適用中にのみ表示されます。  
+ If you choose this option, none of the code changes are committed.  
   
-このオプションを選択すると、コードの変更内容は一切コミットされません。  
+##  <a name="BKMK_How_to_reset_the_point_of_execution"></a> How to reset the point of execution  
+ Some code changes can cause the point of execution to move to a new location when Edit and Continue applies the changes. Edit and Continue places the point of execution as accurately as possible, but the results may not be correct in all cases.  
   
-## <a name="BKMK_How_to_reset_the_point_of_execution"></a>実行ポイントをリセットする方法  
-コードを変更してエディット コンティニュでその変更内容を適用すると、実行ポイントが新しい位置に移動する場合があります。 \[エディット コンティニュ\] では、実行ポイントができるだけ正確に位置付けられますが、結果が常に正しいとは限りません。  
+ In Visual C++, a dialog box informs you when the point of execution changes. You should verify that the location is correct before you continue debugging. If it is not correct, use the **Set Next Statement** command. For more information, see [Set the next statement to execute](http://msdn.microsoft.com/library/y740d9d3.aspx#BKMK_Set_the_next_statement_to_execute).  
   
-Visual C\+\+ では、実行ポイントが変わると、それを示すダイアログ ボックスが表示されます。 デバッグを継続する前に、位置が正しいかどうかを確認する必要があります。 位置が正しくない場合は、**\[次のステートメントの設定\]** を使用します。 詳しくは、「[次に実行されるステートメントを設定する](http://msdn.microsoft.com/library/y740d9d3.aspx#BKMK_Set_the_next_statement_to_execute)」をご覧ください。  
+##  <a name="BKMK_How_to_work_with_stale_code"></a> How to work with stale code  
+ In some cases, Edit and Continue cannot apply code changes to the executable immediately, but might be able to apply the code changes later if you continue debugging. This happens if you edit a function that calls the current function or if you add more than 64 bytes of new variables to a function on the call stack  
   
-## <a name="BKMK_How_to_work_with_stale_code"></a>古いコードを操作する方法  
-場合により、エディット コンティニュがコード変更を直ちに適用して実行可能にできないことがありますが、デバッグを続行すると、後でコード変更が適用できるようになる場合もあります。 これは、現在の関数を呼び出す関数を編集した場合や、呼び出し履歴上の関数に 64 バイトを超える新しい変数を追加した場合に発生します。  
+ In such cases, the debugger continues executing the original code until the changes can be applied. The stale code appears as a temporary source file window in a separate source window, with a title such as `enc25.tmp`. The edited source continues to appear in the original source window. If you try to edit the stale code, a warning message appears.  
   
-このような場合、変更が適用されるまで、デバッガーは元のコードを続けて実行します。 古いコードは、一時的なソース ファイル ウィンドウとして、`enc25.tmp` などのタイトルで別のソース ウィンドウに表示されます。 編集されたソース コードは、元のソース ウィンドウに表示されます。 古いコードを編集しようとすると、警告メッセージが表示されます。  
-  
-## 参照  
-[サポートされているコードの変更と制限事項 \(C\+\+\)](../debugger/supported-code-changes-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Supported Code Changes (C++)](../debugger/supported-code-changes-cpp.md)

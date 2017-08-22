@@ -1,56 +1,73 @@
 ---
-title: "リモート コンピューターにアクセスしようとしたときに、DCOM エラーが発生しました。アクセスが拒否されました。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.remote.dcom_access_denied"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "DCOM, アクセス エラー"
-  - "リモート DCOM アクセス拒否エラー"
-  - "リモート デバッグ, DCOM エラー"
+title: A DCOM error occurred trying to contact the remote computer. Access is denied. | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.remote.dcom_access_denied
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- remote debugging, DCOM error
+- remote DCOM access denied error
+- DCOM, access errors
 ms.assetid: 9d7dfc1b-9fe0-4f54-9c50-9c0e0f8358c5
 caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# リモート コンピューターにアクセスしようとしたときに、DCOM エラーが発生しました。アクセスが拒否されました。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: cc8adff7c0c5d7e1595f59c6571a5670c9f7163f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-リモート デバッグでは、DCOM を使用して次のような状況でローカル コンピューターとリモート コンピューターとの間で通信します。  
+---
+# <a name="a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied"></a>A DCOM error occurred trying to contact the remote computer. Access is denied.
+Remote debugging uses DCOM to communicate between the local and remote computers in the following situations:  
   
--   **\[ツール\]\/\[オプション\]\/\[デバッグ\]** ページで、デバッガーが **\[ネイティブ互換モード\]** に設定されるか、または **\[マネージ互換モード\]** がオンに設定されている場合。  
+-   The debugger is set to **Native Compatibility Mode** or **Managed Compatibility Mode** is checked in the **Tools > Options > Debugging** page  
   
--   マネージ C\+\+ \(C \+ \+\/CLI\) コードをデバッグする場合。  
+-   You are debugging managed C++ (C++/CLI) code.  
   
--   Visual Studio 2013 で、**\[ツール\]\/\[オプション\]\/\[デバッグ\]** ページの **\[ネイティブのエディット コンティニュを有効にする\]** がオンになっている場合。  
+-   In Visual Studio 2013, when **Enable native Edit and Continue** is checked in the **Tools > Options > Debugging** page  
   
--   一部のサード パーティのデバッグ シナリオ  
+-   Some third party debugging scenarios  
   
- このエラーが発生するのは、Visual Studio のプロセスが DCOM 経由でリモート デバッガープロセスに対して自己認証できない \(入力した資格情報が不十分と見なされた\) 場合です。 次のいずれかの回避策で問題を解決できることがあります。  
+ This error occurs when the Visual Studio process cannot authenticate itself (or the supplied credentials were deemed insufficient) to the remote debugger process over DCOM. One or more of the following workarounds might resolve the issue:  
   
--   **\[ネイティブ互換モード\]** と **\[マネージ互換モード\]** をオフにします。  
+-   Turn off  **Native Compatibility Mode** and **Managed Compatibility Mode**.  
   
--   Visual Studio 2013 で、**\[ネイティブのエディット コンティニュを有効にする\]** をオフにします。  
+-   In Visual Studio 2013, turn off **Enable native Edit and Continue**.  
   
--   両方のコンピューターを再起動する。  
+-   Reboot both computers.  
   
--   リモート デバッグで資格情報の入力が必要な場合は、資格情報の保存のチェック ボックスをオンにする。  
+-   If remote debugging requires entering credentials, check the option to save the credentials.  
   
-## 参照  
- [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   
- [リモート デバッグ](../debugger/remote-debugging.md)
+## <a name="see-also"></a>See Also  
+ [Remote Debugging Errors and Troubleshooting](../debugger/remote-debugging-errors-and-troubleshooting.md)   
+ [Remote Debugging](../debugger/remote-debugging.md)

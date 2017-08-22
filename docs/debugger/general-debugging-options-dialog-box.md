@@ -1,185 +1,221 @@
 ---
-title: "[全般] ([オプション] ダイアログ ボックス - [デバッグ]) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.options.General"
-  - "VS.ToolsOptionsPages.Debugger.General"
-  - "VS.ToolsOptionsPages.Debugger.ENC"
-  - "vs.debug.options.ENC"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "[オプション] ダイアログ ボックス、デバッグ"
+title: General, Debugging, Options Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 05/23/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.options.General
+- VS.ToolsOptionsPages.Debugger.General
+- VS.ToolsOptionsPages.Debugger.ENC
+- vs.debug.options.ENC
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- Options dialog box, debugging
 ms.assetid: b33aee0b-43c3-4c26-8ed4-bc673f491503
 caps.latest.revision: 46
-caps.handback.revision: 43
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# [全般] ([オプション] ダイアログ ボックス - [デバッグ])
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 643d1892815822b6616d379d07909731c6100ba4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-**\[ツール\]、\[オプション\]、\[デバッグ\]、\[全般\]** のページで、以下のオプションを設定できます。  
+---
+# <a name="general-debugging-options-dialog-box"></a>General, Debugging, Options Dialog Box
+The **Tools > Options > Debugging > General** page lets you set the following options:  
   
- **すべてのブレークポイントを削除する前に確認する**  
- **\[すべてのブレークポイントの削除\]** を実行する前に確認を要求します。  
+**Ask before deleting all breakpoints**  
+Requires confirmation before completing the **Delete All Breakpoints** command.  
   
- **\[1 つのプロセスがブレークするとき、他のプロセスもブレークする\]**  
- 中断が生じると、デバッガーがアタッチされているすべてのプロセスを同時に中断します。  
+**Break all processes when one process breaks**  
+Simultaneously breaks all processes to which the debugger is attached, when a break occurs.  
   
- **\[例外が AppDomain またはマネージ\/ネイティブの境界を越える場合にブレークする\]**  
- マネージ コードのデバッグまたは混合モードのデバッグでは、次のような条件が満たされた場合、共通言語ランタイムにより、アプリケーション ドメインの境界、またはマネージ コードとネイティブ コードの境界を越える例外がキャッチされます。  
+**Break when exceptions cross AppDomain or managed/native boundaries**  
+In managed or mixed-mode debugging, the common language runtime can catch exceptions that cross application domain boundaries or managed/native boundaries when the following conditions are true:  
   
- 1\) ネイティブ コードが、COM 相互運用機能を使用してマネージ コードを呼び出し、呼び出されたマネージ コードが例外をスローした場合。 「[Introduction to COM Interop](/dotnet/visual-basic/programming-guide/com-interop/introduction-to-com-interop)」を参照してください。  
+1\) When native code calls managed code by using COM Interop and the managed code throws an exception. See [Introduction to COM Interop](/dotnet/articles/visual-basic/programming-guide/com-interop/introduction-to-com-interop).  
   
- 2\) アプリケーション ドメイン 1 で実行中のマネージ コードがアプリケーション ドメイン 2 のマネージ コードを呼び出し、アプリケーション ドメイン 2 のコードが例外をスローした場合。 「[アプリケーション ドメインを使用したプログラミング](http://msdn.microsoft.com/ja-jp/bd36055b-56bd-43eb-b4d8-820c37172131)」をご覧ください。  
+2\) When managed code running in application domain 1 calls managed code in application domain 2, and the code in application domain 2 throws an exception. See [Programming with Application Domains](/dotnet/articles/framework/app-domains/index).  
+
+3\) When code calls a function by using reflection, and the function throws an exception. See [Reflection](/dotnet/framework/reflection-and-codedom/reflection).  
   
- 3\) コードがリフレクションを使用して関数を呼び出し、呼び出された関数が例外をスローした場合。 「[リフレクション](../Topic/Reflection%20in%20the%20.NET%20Framework.md)」を参照してください。  
+In condition 2 and 3, the exception is sometimes caught by managed code in `mscorlib` instead of the common language runtime. This option does not affect breaking on exceptions caught by `mscorlib`.  
   
- 2\) および 3\) の場合、スローされる例外は、共通言語ランタイムではなく、`mscorlib` のマネージ コードによりキャッチされることがあります。 このオプションを選択しても、`mscorlib` でキャッチされる例外の処理は中断されません。  
+**Enable address-level debugging**  
+ Enables advanced features for debugging at the address level (the **Disassembly** window, the **Registers** window, and address breakpoints).  
   
- **アドレスレベルのデバッグを有効にする**  
- アドレス レベルでデバッグを行うための高度な機能 \( **\[逆アセンブル\]** ウィンドウ、**\[レジスタ\]** ウィンドウ、およびアドレス ブレークポイント\) を有効にします。  
+- **Show disassembly if source is not available**  
+    Automatically shows the **Disassembly** window when you try to debug code for which source is unavailable.  
   
- **ソースがない場合に逆アセンブリを表示する**  
- ソースを利用できないコードをデバッグしようとするときに、**\[逆アセンブル\]** ウィンドウが自動的に表示されます。  
+**Enable breakpoint filters**  
+Enables you to set filters on breakpoints so that they will affect only specific processes, threads, or computers.  
+ 
+**Use the new Exception Helper**  
+Enables the Exception Helper (Visual Studio 2017) that replaces the exception assistant.
   
- **ブレークポイントのフィルターを有効にする**  
- 特定のプロセス、スレッド、またはコンピューターだけにフィルターが影響するように、ブレークポイントのフィルターの設定を有効にします。  
+> [!NOTE]
+> For managed code, this option was previously called **Enable the exception assistant** . 
   
- **例外処理アシスタントを有効にする**  
- マネージ コード専用です。 マネージ例外は \[例外処理アシスタント\] ダイアログ ボックスを開きます。  「[Exception Assistant](../Topic/Exception%20Assistant.md)」を参照してください。  
+**Enable Just My Code**  
+The debugger displays and steps into user code ("My Code") only, ignoring system code and other code that is optimized or that does not have debugging symbols.
+
+- **Warn if no user code on launch (Managed only)**  
+    When debugging starts with Just My Code enabled, this option warns you if there is no user code ("My Code"). 
+
+**Enable .NET Framework source stepping**  
+Allows the debugger to step into .NET Framework source. Enabling this option automatically disables Just My Code .NET Framework symbols will be downloaded to a cache location. You can change the cache location in the **Options** dialog box, **Debugging** category, **Symbols** page.  
   
- **ハンドルされていない例外で呼び出し履歴をアンワインドする**  
- **\[呼び出し履歴\]** ウィンドウで、未処理の例外が発生した前の時点に呼び出し履歴をロールバックします。  
+**Step over properties and operators (Managed only)**  
+Prevents the debugger from stepping into properties and operators in managed code.  
   
- **マイ コードのみを有効にする**  
- デバッガーはユーザー コード \("マイ コード"\) だけを表示してステップ インします。システム コード、その他の最適化されたコード、デバッグ シンボルを持たないコードは無視されます。  
+**Enable property evaluation and other implicit function calls**  
+Turns on automatic evaluation of properties and implicit function calls in variables windows and the **QuickWatch** dialog box.  
   
- **非ユーザー オブジェクトのすべてのメンバーを変数ウィンドウに表示する \(Visual Basic のみ\)**  
- 非ユーザー コード \("マイ コード" 以外のコード\) に含まれるオブジェクトの非パブリック メンバーの表示をオンにします。  
+- **Call string conversion function on objects in variables windows (C# and JavaScript only)**  
+    Executes an implicit string conversion call when evaluating objects in variables windows. Therefore, that result is displayed as a string instead of the type name. Only applies while debugging in C# code. This setting may be overridden by the DebuggerDisplay attribute (see [Using the DebuggerDisplay Attribute](../debugger/using-the-debuggerdisplay-attribute.md)).  
   
- **起動時にユーザー コードが見つからないとき警告**  
- \[マイ コードのみ\] を有効にしてデバッグを開始したとき、ユーザー コード \("マイ コード"\) が存在しない場合に警告を行います。  
-  
- **.NET Framework ソースのステッピングを有効にする**  
- デバッグ時に .NET Framework ソース コードにステップ インできます。 このオプションを有効にすると、\[マイ コードのみ\] が自動的に無効になります。.NET Framework シンボルは、キャッシュの場所へダウンロードされます。 キャッシュの場所は、**\[オプション\]** ダイアログ ボックス \(**\[デバッグ\]** カテゴリの **\[シンボル\]** ページ\) で変更できます。  
-  
- **\[プロパティおよび演算子をステップ オーバーする \(マネージのみ\)\]**  
- デバッグ時にマネージ コード内のプロパティおよび演算子にステップ インしません。  
-  
- **プロパティの評価とその他の暗黙的な関数の呼び出しを常に有効にする**  
- 変数ウィンドウと **\[クイック ウォッチ\]** ダイアログ ボックスで、プロパティの自動評価と暗黙的な関数の呼び出しを有効にします。  
-  
- **\[変数ウィンドウのオブジェクトに対して文字列変換関数を呼び出す \(C\# および JavaScript のみ\)\]**  
- 変数ウィンドウでオブジェクトを評価するときに文字列変換呼び出しを暗黙的に実行します。 したがって、結果は型名ではなく、文字列として表示されます。 C\# コードのデバッグ時にのみ適用されます。 この設定は、DebuggerDisplay 属性によってオーバーライドされる場合があります \(「[DebuggerDisplay 属性を使用します](../debugger/using-the-debuggerdisplay-attribute.md)」をご覧ください\)。  
-  
- **ソース サーバー サポートを有効にする**  
- SRCSRV \(`srcsrv.dll`\) プロトコルを実装するソース サーバーからソース ファイルを取得するように Visual Studio デバッガーに指示します。 このプロトコルを実装する 2 つのソース サーバーは Team Foundation Server と Debugging Tools for Windows です。 SrcSrv のセットアップの詳細については、Debugging Tools for Windows のドキュメントを参照してください。 さらに、「[シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」をご覧ください。  
+**Enable source server support**  
+Tells the Visual Studio debugger to get source files from source servers that implement the SrcSrv (`srcsrv.dll`) protocol. Team Foundation Server and the Debugging Tools for Windows are two source servers that implement the protocol. For more information about SrcSrv setup, see the [SrcSrv](hhttps://msdn.microsoft.com/en-us/library/windows/hardware/ff558791(v=vs.85).aspx) documentation. In addition, see [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
 > [!IMPORTANT]
->  .pdb ファイルを読み取ることでそのファイル内の任意のコードを実行できるため、サーバーが信頼されていることを確認してください。  
+>  Because reading .pdb files can execute arbitrary code in the files, make sure that you trust the server.  
   
- **ソース サーバー診断メッセージを出力ウィンドウに表示する**  
- ソース サーバーのサポートが有効な場合に、診断表示をオンにします。  
+- **Print source server diagnostic messages to the Output window**  
+    When source server support is enabled, this setting turns on diagnostic display.  
   
- **\[部分信頼アセンブリのソース サーバーを許可する \(マネージのみ\)\]**  
- ソース サーバーのサポートが有効になっているとき、この設定により、部分信頼アセンブリのソースを取得しないという既定の動作がオーバーライドされます。  
+- **Allow source server for partial trust assemblies (Managed only)**  
+    When source server support is enabled, this setting overrides the default behavior of not retrieving sources for partial trust assemblies.  
+
+- **Enable source link support**  
+    Tells the Visual Studio debugger to download source files for .pdb files that contain Source Link information. For more information about Source Link, see the [Source Link Specification](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/source_link.md).
+
+    > [!IMPORTANT]
+    >  Because Source Link will download files using http or https, make sure you trust the .pdb file.  
   
- **\[ブレークポイントおよび現在のステートメントのソース行全体を強調表示する\]**  
- デバッガーでブレークポイントまたは現在のステートメントを強調表示するときに、行全体を強調表示します。  
+**Highlight entire line for breakpoints and current statement (C++ only)**  
+When the debugger highlights a breakpoint or current statement, it highlights the entire line.  
   
- **元のバージョンと完全に一致するソース ファイルを必要とする**  
- デバッグ中の実行可能ファイルをビルドしたときに使用したソース コードのバージョンが、ソース ファイルと一致するかどうかを検査するようにデバッガーに指示します。 バージョンが一致しない場合、一致するソースを検索するように指示するメッセージが表示されます。 一致するソースが見つからないときは、デバッグ時にソース コードが表示されません。  
+**Require source files to exactly match the original version**  
+Tells the debugger to verify that a source file matches the version of the source code used to build the executable you are debugging. If the version does not match, you'll be prompted to find a matching source. If a matching source is not found, the source code will not be displayed during debugging. 
   
- **\[出力ウィンドウの文字をすべてイミディエイト ウィンドウにリダイレクトする\]**  
- 通常は**出力**ウィンドウに出力されるデバッガー メッセージをすべて**イミディエイト** ウィンドウに送信します。  
+**Redirect all Output window text to the Immediate window**  
+Sends all debugger messages that would ordinarily appear in the **Output** window to the **Immediate** window instead.  
   
- **オブジェクトの生の構造体を変数ウィンドウに表示する**  
- すべてのオブジェクトの構造体ビューのカスタマイズをオフにします。 ビューのカスタマイズについて詳しくは、「[カスタム データ型の表示](../debugger/create-custom-views-of-dot-managed-objects.md)」をご覧ください。  
+**Show raw structure of objects in variables windows**  
+Turns off all object structure view customizations. For more information about view customizations, see [Create custom views of .managed objects](../debugger/create-custom-views-of-dot-managed-objects.md).  
   
- **\[モジュールの読み込み中に JIT 最適化を抑制する \(マネージのみ\)\]**  
- デバッガーをアタッチするとき、モジュールの読み込み中 \(および JIT のコンパイル中\) にマネージ コードの JIT 最適化を無効にします。 最適化を無効にした場合、一部の問題のデバッグは簡単になりますが、パフォーマンスは低下します。 \[マイ コードのみ\] を使用しているときに JIT 最適化を抑制すると、非ユーザー コードがユーザー コード \("マイ コード"\) として表示される可能性があります。  
+**Suppress JIT optimization on module load (Managed only)**  
+Disables the JIT optimization of managed code when a module is loaded and JIT is compiled while the debugger is attached. Disabling optimization may make it easier to debug some problems, although at the expense of performance. If you are using Just My Code, suppressing JIT optimization can cause non-user code to appear as user code ("My Code").
+
+**Enable JavaScript debugging for ASP.NET (Chrome and IE)** Enables the script debugger for ASP.NET apps. On first use in Chrome, you may need to sign into the browser on first use to enable Chrome extensions that you have installed. Disable this option to revert to legacy behavior.    
+
+**Load dll exports**  
+Loads dll export tables. Symbol information from dll export tables can be useful if you are working with Windows messages, Windows procedures (WindowProcs), COM objects, or marshaling, or any dll for which you do not have symbols. Reading dll export information involves some overhead. Therefore, this capability is turned off by default.  
   
- **\[起動時にシンボルが見つからないとき警告 \(ネイティブのみ\)\]**  
- デバッガーにシンボル情報がないプログラムをデバッグすると、警告ダイアログ ボックスが表示されます。  
+To see what symbols are available in the export table of a dll, use `dumpbin /exports`. Symbols are available for any 32-bit system dll. By reading the `dumpbin /exports` output, you can see the exact function name, including non-alphanumeric characters. This is useful for setting a breakpoint on a function. Function names from dll export tables might appear truncated elsewhere in the debugger. The calls are listed in the calling order, with the current function (the most deeply nested) at the top. For more information, see [dumpbin /exports](/cpp/build/reference/dash-exports).  
   
- **起動時、スクリプト デバッグが無効な場合は警告する**  
- デバッガーの起動時にスクリプト デバッグが無効である場合は、警告ダイアログ ボックスが表示されます。  
+**Show parallel stacks diagram bottom-up**  
+Controls the direction in which stacks are displayed in the **Parallel Stacks** window.  
   
- **DLL エクスポートを読み込む**  
- DLL エクスポート テーブルを読み込みます。 DLL エクスポート テーブルのシンボル情報は、対応するシンボルのない Windows メッセージ、Windows プロシージャ \(WindowProc\)、COM オブジェクト、マーシャリング、DLL を操作する場合に役立ちます。 DLL エクスポート情報を読み取ると、オーバーヘッドがある程度発生します。 そのため、既定ではこの機能はオフになっています。  
+**Ignore GPU memory access exceptions if the data written didn't change the value**  
+Ignores race conditions that were detected during debugging if the data didn't change. For more information, see [Debugging GPU Code](../debugger/debugging-gpu-code.md).  
   
- DLL のエクスポート テーブル内で使用できるシンボルを確認するには、`dumpbin /exports` を使います。 シンボルは、すべての 32 ビット システムの DLL に使うことができます。`dumpbin /exports` の出力を参照すると、英数字以外の文字を含む、正確な関数名を確認できます。 この情報は、関数にブレークポイントを設定するときに使用します。 DLL エクスポート テーブルの関数名は、デバッガーの他の場所で表示されるとき、切り捨てられることがあります。 関数は呼び出し順に表示され、現在の関数 \(入れ子の一番内側\) が先頭に表示されます。 詳細については、「[dumpbin \/exports](/visual-cpp/build/reference/dash-exports)」を参照してください。  
+**Use Managed Compatibility Mode**  
+Replaces the default debugging engine with a legacy version to enable these scenarios:  
   
- **並列スタックの図を上下逆に表示**  
- スタックを **\[並列スタック\]** ウィンドウに表示する方向を制御します。  
+- You are using a .NET Framework language other than C#, VB, or F# that provides its own Expression Evaluator (this includes C++/CLI).  
   
- **\[書き込まれたデータで値が変更されなかった場合は GPU メモリ アクセス例外を無視する\]**  
- データが変更されなかった場合、デバッグ中に検出された競合状態を無視します。 詳細については、「[GPU コードのデバッグ](../debugger/debugging-gpu-code.md)」を参照してください。  
+- You want to enable Edit and Continue for C++ projects while mixed mode debugging.  
   
- **マネージ互換モードの使用**  
- 既定のデバッグ エンジンをレガシ バージョンと置き換えて、次のシナリオを有効にします。  
+Note that choosing Managed Compatibility mode disables some features that are implemented only in the default debugging engine. 
+
+**Use the legacy C# and VB expression evaluators**  
+The debugger will use the Visual Studio 2013 C#/VB expression evaluators instead of the Visual Studio 2015 Roslyn-based expression evaluators.    
   
--   独自の式エバリュエーターを提供する C\#、VB、または F\# 以外の .NET Framework 言語を使用しています \(これは C\+\+\/CLI を含みます\)。  
+**Warn when using custom debugger visualizers against potentially unsafe processes (Managed only)**  
+Visual Studio warns you when you are using a custom debugger visualizer that is running code in the debuggee process, because it could be running unsafe code.  
   
--   混合モード デバッグ時に、C\+\+ プロジェクトのエディット コンティニュを有効にします。  
+**Enable Windows debug heap allocator (Native only)**  
+Enables the windows debug heap to improve heap diagnostics. Enabling this option will impact debugging performance.  
   
- マネージ互換モードを選択すると、既定のデバッグ エンジンにのみ実装されている一部の機能は無効になります。  
+**Enable UI Debugging Tools for XAML**  
+The Live Visual Tree and the Live Property Explore windows will appear when you start debugging (F5) a supported project type. For more information, see [Inspect XAML properties while debugging](../debugger/inspect-xaml-properties-while-debugging.md).  
   
- **ネイティブ互換モードの使用**  
- このオプションを選択すると、デバッガーは、新しいネイティブ デバッガーの代わりに Visual Studio 2010 のネイティブ デバッガーを使用します。  
+- **Preview selected elements in Live Visual Tree**  
+    The XAML element whose context is selected is also selected in the **Live Visual Tree** window.  
   
- 新しいデバッグ エンジンは .NET C\+\+ 式の評価をサポートしていないため、.NET C\+\+ コードをデバッグするときにはこのオプションを使用する必要があります。 ただし、ネイティブ互換モードを有効にすると、現在のデバッガーの実装に依存している多くの機能が無効になります。 たとえば、レガシ エンジンには、`std::string` などの Visual Studio 2015 プロジェクトの組み込み型のビジュアライザーの多くがありません。   このような場合、デバッグ機能を最適にご利用いただくためには、Visual Studio 2013 プロジェクトをお使いください。  
+- **Show runtime tools in application**  
+    Shows the **Live Visual Tree** commands in a toolbar on the main window of the XAML application that is being debugged. This option was introduced in Visual Studio 2015 Update 2. 
+
+- **Enable XAML Edit and Continue** Allows you to use Edit and Continue feature for XAML code. 
   
- **従来の C\# および VB の式エバリュエーターを使用する**  
- デバッガーは、Visual Studio 2015 の Roslyn ベースの式エバリュエーターの代わりに、Visual Studio 2013 の C\#\/VB の式エバリュエーターを使います。  
+**Enable Diagnostic Tools while debugging**  
+The **Diagnostic Tools** window appears while you are debugging.
   
- **アンセーフ コードの可能性があるコードに対してカスタムのデバッガー ビジュアライザーを使う際に警告する**  
- Visual Studio は、デバッグ対象プロセスでコードを実行中のカスタム デバッガー ビジュアライザーを使っているときに、アンセーフ コードを実行している可能性がある場合、警告します。  
+**Show elapsed time PerfTip while debugging**  
+The code window displays the elapsed time of a given method call when you are debugging.  
   
- **Windows デバッグ ヒープ アロケーター を有効にする \(ネイティブのみ\)**  
- ヒープ診断を向上させるために Windows デバッグ ヒープを有効にします。 このオプションを有効にすると、デバッグ パフォーマンスに影響を与えます。  
+**Enable Edit and Continue**  
+You can use the Edit and Continue functionality while debugging .  
   
- **XAML の UI デバッグ ツールを有効にします**  
- サポートされるプロジェクト タイプのデバッグを開始すると \(F5\)、ライブ ビジュアル ツリーとライブ プロパティ エクスプローラーのウィンドウが表示されます。 詳細については、「[デバッグ中に XAML のプロパティを調べます。](../debugger/inspect-xaml-properties-while-debugging.md)」を参照してください。  
+- **Enable Native Edit and Continue**  
+    You can use the Edit and Continue functionality while debugging native C++ code. For more information, see [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md).  
   
- **Live Visual Tree で選択された要素をプレビューする**  
- コンテキストが選択されている XAML 要素は、ライブ ビジュアル ツリー ウィンドウでも選択されています。  
+- **Apply changes on continue (Native only)**  
+    Visual Studio automatically compiles and applies any outstanding code changes you have made when continuing the process from a break state. If not selected, you can choose to apply changes using the "Apply Code Changes" item under the Debug menu.  
   
- **デバッグ中に診断ツールを有効にします**  
- デバッグ中に \[診断ツール\] ウィンドウが表示されます。 詳細については、「[デバッガーに統合された診断](../Topic/Debugger-integrated%20profiling.md)」を参照してください。  
+- **Warn about stale code (Native only)**  
+    Get warnings about stale code.    
+
+**Show run to click button in editor while debugging** When this option is selected, the [Run to Click](debugger-feature-tour.md#run-to-a-point-in-your-code-quickly-using-the-mouse) button will be shown while debugging.
+
+## <a name="options-supported-in-older-versions-of-visual-studio"></a>Options supported in older versions of Visual Studio
+
+If you are using an older version of Visual Studio, some additional options might be present.
+
+**Enable the exception assistant**  
+For managed code, enabled the exception assistant. In Visual Studio 2017, the Exception Helper replaced the exception assistant.
+
+**Unwind the call stack on unhandled exceptions**  
+Causes the **Call Stack** window to roll back the call stack to the point before the unhandled exception occurred. 
+
+**Warn if no symbols on launch (native only)**  
+Displays a warning dialog box when you try to debug a program for which the debugger has no symbol information. 
+
+**Warn if script debugging is disabled on launch**  
+Displays a warning dialog box when the debugger is launched with script debugging disabled.
+
+**Use Native Compatibility Mode**  
+When this option is selected, the debugger uses the Visual Studio 2010 native debugger instead of the new native debugger.  
   
- **デバッグ中に経過時間の PerfTip を表示する**  
- デバッグ中に、特定のメソッド呼び出しの経過時間がコード ウィンドウに表示されます。  
+You should use this option when you are debugging .NET C++ code, because the new debugging engine does not support evaluating .NET C++ expressions. However, enabling Native Compatibility Mode disables many features that depend on the current debugger implementation to operate. For example, the legacy engine lacks many visualizers for built-in types like `std::string` in Visual Studio 2015 projects.   Please use Visual Studio 2013 projects for the optimal debugging experience in these cases.
   
- **エディット コンティニュを有効にする**  
- デバッグ中にエディット コンティニュ機能を使用できます。  
-  
- **ネイティブのエディット コンティニュを有効にする**  
- ネイティブ C\+\+ コードのデバッグ中にエディット コンティニュ機能を使用できます。 詳細については、「[エディット コンティニュ \(Visual C\+\+\)](../debugger/edit-and-continue-visual-cpp.md)」を参照してください。  
-  
- **コンティニュに変更を適用する \(ネイティブのみ\)**  
- Visual Studio は、ブレーク状態からプロセスを続行するとき、未処理のコード変更を自動的にコンパイルして適用します。 選択されていない場合は、\[デバッグ\] メニューの下にある \[コード変更を適用\] の項目を使って変更を適用することができます。  
-  
- **古いコードの警告を表示する \(ネイティブのみ\)**  
- 古いコードに関する警告を取得します。  
-  
- **プリコンパイルを許可する \(ネイティブのみ\)**  
- プリコンパイルが許可されます。  
-  
-## 参照  
- [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Debugging in Visual Studio](../debugger/index.md) [Debugger Feature Tour](../debugger/debugger-feature-tour.md)

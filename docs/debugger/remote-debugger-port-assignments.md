@@ -1,61 +1,81 @@
 ---
-title: "リモート デバッガーのポートの割り当て | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Remote Debugger Port Assignments | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 05/18/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 238bb4ec-bb00-4c2b-986e-18ac278f3959
 caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# リモート デバッガーのポートの割り当て
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 1208ccaea240a05795659348e55c5497c75b195d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-Visual Studio リモート デバッガーは、アプリケーションまたはバック グラウンド サービスとして実行できます。 アプリケーションとして実行される際には、次のように既定で割り当てられているポートを使用します。  
-  
+---
+# <a name="remote-debugger-port-assignments"></a>Remote Debugger Port Assignments
+The Visual Studio Remote Debugger can run as an application or as a background service. When it runs as an application, it uses a port that is assigned by default as follows:  
+
+-   Visual Studio 2017: 4022
+
 -   Visual Studio 2015: 4020  
   
 -   Visual Studio 2013: 4018  
   
 -   Visual Studio 2012: 4016  
   
- つまり、リモート デバッガーに割り当てられるポート番号はリリースごとに 2 つずつ増えます。 別の任意のポート番号を設定することができます。 ポート番号の設定方法は、後のセクションで説明します。  
+ In other words, the number of the port assigned to the remote debugger is incremented by 2 for each release. You can set a different port number of you like. We will explain how to set port numbers in a later section.  
   
-## 32 ビット オペレーティング システムのリモート デバッガーのポート  
- TCP 4020 \(Visual Studio 2015 の場合\) がメイン ポートであり、すべてのシナリオにこれが必要です。 これは、コマンド ラインまたはリモート デバッガー ウィンドウのいずれかから構成できます。  
+## <a name="the-remote-debugger-port-on-32-bit-operating-systems"></a>The Remote Debugger Port on 32-bit Operating Systems  
+ TCP 4022 (in Visual Studio 2017) is the main port, and is required for all scenarios. You can configure this from either the command line or the remote debugger window.  
   
- リモート デバッガー ウィンドウでは、**\[ツール\] \/ \[オプション\]** の順にクリックし、TCP\/IP ポート番号を設定します。  
+ In the remote debugger window, click **Tools > Options**, and set the TCP/IP port number.  
   
- コマンド ラインでは、**\/port** スイッチを使用して **msvsmon \/port \<ポート番号\>** と入力して、リモート デバッガーを開始します。  
+ On the command line, start the remote debugger with the **/port** switch: **msvsmon /port \<port number>**.  
   
- リモート デバッグのヘルプに、リモート デバッガーのすべてのコマンド ライン スイッチが記載されています \(リモート デバッガー ウィンドウで **F1** キーを押すか、または **\[ヘルプ\] \/ \[使い方\]** の順にクリックします\)。  
+ You can find all the remote debugger command line switches in the remote debugging help (press **F1** or click **Help > Usage** in the remote debugger window).  
   
-## 64 ビット オペレーティング システムのリモート デバッガーのポート  
- 64 ビット バージョンのリモート デバッガーを開始すると、既定でポート 4020 が使用されます。  32 ビット プロセスをデバッグする場合は、64 ビット バージョンのリモート デバッガーにより、ポート 4021 で 32 ビット バージョンのリモート デバッガーが開始されます。 32 ビットのリモート デバッガーを実行する場合は、4020 が使用され、4021 は使用されません。  
+## <a name="the-remote-debugger-port-on-64-bit-operating-systems"></a>The Remote Debugger Port on 64-bit Operating Systems  
+ When the 64-bit version of the remote debugger is started, it uses the 4022 port by default.  If you debug a 32-bit process, the 64-bit version of the remote debugger starts a 32-bit version of the remote debugger on port 4023. If you run the 32-bit remote debugger, it uses 4022, and 4023 is not used.  
   
- このポートは、次のように入力して、コマンド ラインから構成できます。**Msvsmon \/wow64port \<ポート番号\>**  
+ This port is configurable from the command line: **Msvsmon /wow64port \<port number>**.  
   
-## 検出ポート  
- 実行中のリモート デバッガーのインスタンスをネットワークで検出するには \(たとえば、**\[プロセスにアタッチ\]** ダイアログの **\[検索\]** ダイアログ\)、UDP 3702 が使用されます。 これが使用されるのは、リモート デバッガーを実行しているコンピューターを検出する場合だけです。つまり、対象コンピューターのコンピューター名または IP アドレスが他の方法でわかれば省略できます。 これは検出用の標準ポートなので、ポート番号を構成することはできません。  
+## <a name="the-discovery-port"></a>The Discovery Port  
+ UDP 3702 is used for finding running instances of the remote debugger on the network (for example, the **Find** dialog in the **Attach to Process** dialog). It is used only for discovering a machine running the remote debugger, so it is  optional if you have some other way of knowing the machine name or IP address of the target computer. This is a standard port for discovery, so the port number cannot be configured.  
   
- 検出を有効にしない場合は、コマンド ラインから検出を無効にして msvsmon を開始できます。次のように入力します。**Msvsmon \/nodiscovery**  
+ If you do not want to enable discovery, you can start msvsmon from the command line with discovery disabled:  **Msvsmon /nodiscovery**.  
   
-## Azure でのリモート デバッガーのポート  
- Azure のリモート デバッガーでは次のポートが使用されます。 クラウド サービス上のポートは、個々の VM 上のポートにマップされます。 すべてのポートは TCP です。  
+## <a name="remote-debugger-ports-on-azure"></a>Remote Debugger Ports on Azure  
+ The following ports are used by the remote debugger on Azure. The ports on the cloud service are mapped to the ports on the individual VM. All ports are TCP.  
   
 ||||  
 |-|-|-|  
-|**接続**|**クラウド サービス上のポート**|**VM 上のポート**|  
+|**Connection**|**Port on Cloud Service**|**Port on VM**|  
 |Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector|30400|30398|  
 |Microsoft.WindowsAzure.Plugins.RemoteDebugger.Forwarder|31400|31398|  
 |Microsoft.WindowsAzure.Plugins.RemoteDebugger.FileUpload|32400|32398|  
   
-## 参照  
- [リモート デバッグ](../debugger/remote-debugging.md)
+## <a name="see-also"></a>See Also  
+ [Remote Debugging](../debugger/remote-debugging.md)

@@ -1,144 +1,134 @@
 ---
-title: "ダンプ ファイルを使用したアプリのクラッシュとハングのデバッグ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.crashdump"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "クラッシュ ダンプ"
-  - "ダンプ ファイル"
-  - "ダンプ"
-  - "ダンプ, ダンプの概要"
+title: Use Dump Files | Microsoft Docs
+ms.custom: H1HackMay2017
+ms.date: 03/08/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.crashdump
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- dumps, about dumps
+- crash dumps
+- dump files
+- dumps
 ms.assetid: b71be6dc-57e0-4730-99d2-b540a0863e49
 caps.latest.revision: 53
-caps.handback.revision: 53
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# ダンプ ファイルを使用したアプリのクラッシュとハングのデバッグ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 16bde940901ea4e807b0975412082449c0df96f0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-ヒープ情報あり\/なしのダンプ ファイル、ダンプ ファイルを作成する、ダンプ ファイルを開く、ダンプ ファイルのバイナリ、PDB、ソース ファイルを検索する  
+---
+# <a name="use-dump-files-with-visual-studio"></a>Use Dump Files with Visual Studio
+Dump files with or without heaps; create a dump file; open a dump file; find the binaries, pdb's, and source file for a dump file.
   
-##  <a name="BKMK_Contents"></a> 内容  
- [ダンプ ファイルとは](#BKMK_What_is_a_dump_file_)  
+##  <a name="BKMK_What_is_a_dump_file_"></a> What is a dump file?  
+ A *dump file* is a snapshot of an app at the point in time the dump is taken. It shows what process was executing and what modules were loaded. If the dump was saved with heap information, the dump file contains a snapshot of what was in the app's memory at that point in time. Opening a dump file with a heap in Visual Studio is like stopping at a breakpoint in a debug session. Although you cannot continue execution, you can examine the stacks, threads, and variable values of the app at the time the dump occurred.  
   
- [ヒープ情報あり/なしのダンプ ファイル](#BKMK_Dump_files__with_or_without_heaps)  
+ Dumps are primarily used for debugging issues that occur on machines that the developer doesn't have access to. For example, you can use a dump file from a customer's machine when you can't reproduce the customer's crash or hang on your machine. Dumps are also created by testers to save crash or hang data so that the test machine can be used for more testing. The Visual Studio debugger can save dump files for managed or native code. The debugger can load dump files that were created by Visual Studio or by other programs that save files in the *minidump* format.  
   
- [要件と制限](#BKMK_Requirements_and_limitations)  
+##  <a name="BKMK_Dump_files__with_or_without_heaps"></a> Dump files, with or without heaps  
+ You can create dump files with or without heap information.  
   
- [ダンプ ファイルを作成する](#BKMK_Create_a_dump_file)  
+-   **Dump files with heaps** contain a snapshot of the app's memory. This includes the values of variables at the time the dump was created. If you load a dump file that was saved with a heap, Visual Studio can load the symbols even if the application binary is not found. Visual Studio also saves the binaries of loaded native modules in the dump file, which can make debugging much easier.  
   
- [ダンプ ファイルを開く](#BKMK_Open_a_dump_file)  
+-   **Dump files without heaps** are much smaller than dumps with heap information. However, the debugger has to load the app binaries to find the symbol information. The binaries must be an exact match of the binaries that were used when the dump was created. Only the values of stack variables are saved in dump files without heap data.  
   
- [バイナリ、シンボル (.pdb) ファイル、ソース ファイルを検索する](#BKMK_Find_binaries__symbol___pdb__files__and_source_files)  
+##  <a name="BKMK_Requirements_and_limitations"></a> Requirements and limitations  
   
-##  <a name="BKMK_What_is_a_dump_file_"></a> ダンプ ファイルとは  
- *ダンプ ファイル*は、ダンプの作成時におけるアプリのスナップショットです。  ダンプ ファイルには、実行されたプロセスと読み込まれたモジュールが示されます。  ダンプがヒープ情報と共に保存された場合、ダンプ ファイルにはその時点におけるアプリのメモリの内容のスナップショットも含まれています。  Visual Studio でヒープ情報ありのダンプ ファイルを開くのは、デバッグ セッションのブレークポイントで実行を中断するようなものです。  実行を続行することはできませんが、ダンプの作成時におけるアプリのスタック、スレッド、変数値を調べることができます。  
+-   Debugging dump files of optimized code can be confusing. For example, compiler inlining of functions can result in unexpected call stacks and other optimizations might change the lifetime of variables.  
   
- ダンプが主に使用されるのは、開発者がアクセスできないコンピューター上で発生する問題をデバッグする場合です。  たとえば、顧客のクラッシュやハングアップの状況を自分のコンピューターで再現できないときは、顧客のコンピューターからのダンプ ファイルを使用できます。  ダンプはテスターによっても作成されてクラッシュまたはハングアップ データの保存に使用されるため、テスト コンピューターを使用してより多くのテストを行えるようになります。  Visual Studio デバッガーでは、マネージまたはネイティブ コードのダンプ ファイルを保存できます。  デバッガーでは、Visual Studio によって作成されたダンプ ファイルも、他のプログラムによって作成されて*ミニダンプ*形式で保存されたダンプ ファイルも読み込むことができます。  
+-   Dump files from 64-bit machines must be debugged on an instance of Visual Studio that is running on a 64-bit computer.  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+-   In versions of Visual Studio before VS 2013, dumps of 32-bit apps that were run on 64-bit machines that were collected by some tools (such as Task Manager and 64-bit WinDbg) could not be opened in Visual Studio. This limitation has been removed in VS 2013.  
   
-##  <a name="BKMK_Dump_files__with_or_without_heaps"></a> ヒープ情報あり\/なしのダンプ ファイル  
- ヒープ情報あり\/なしのダンプ ファイルを作成できます。  
+-   Visual Studio can debug dump files of native apps from ARM devices. Visual Studio can also debug apps dump files of managed apps from ARM devices, but only in the native debugger.  
   
--   **ヒープ情報ありのダンプ ファイル**には、アプリのメモリのスナップショットが含まれています。  ダンプの作成時における変数値も含まれています。  ヒープ情報と共に保存されたダンプ ファイルを読み込む場合、Visual Studio はアプリケーション バイナリが見つからなくてもシンボルを読み込むことができます。  また、Visual Studio は、読み込まれたネイティブ モジュールのバイナリをダンプ ファイルに保存するため、デバッグが大幅に簡単になります。  
+-   To debug [kernel-mode](http://msdn.microsoft.com/library/windows/hardware/ff551880.aspx) dump files in Visual Studio 2013, download the [Windows 8.1 Version of Debugging Tools for Windows](http://msdn.microsoft.com/windows/hardware/gg463009). See [Kernel Debugging in Visual Studio](http://msdn.microsoft.com/library/windows/hardware/jj149675.aspx).  
   
--   **ヒープ情報なしのダンプ ファイル**は、ヒープ情報ありのダンプよりも、サイズがはるかに小さくなります。  ただし、デバッガーはアプリのバイナリを読み込んでシンボル情報を見つける必要があります。  バイナリはダンプの作成時に使用されたバイナリと完全に一致する必要があります。  ヒープ情報なしのダンプ ファイルには、スタック変数の値のみ保存されます。  
+-   Visual Studio can't debug dump files saved in the older dump format known as a [full user-mode dump](http://msdn.microsoft.com/library/windows/hardware/ff545506.aspx). Note that a full user-mode dump is not the same a dump with heap.  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+-   To debug with the [SOS.dll (SOS Debugging Extension)](/dotnet/framework/tools/sos-dll-sos-debugging-extension) in Visual Studio, you must install the Debugging Tools for Windows that is part of the Windows Driver Kit (WDK). See [Windows 8.1 Preview: Download kits, bits, and tools](http://msdn.microsoft.com/library/windows/hardware/bg127147.aspx).  
   
-##  <a name="BKMK_Requirements_and_limitations"></a> 要件と制限  
+##  <a name="BKMK_Create_a_dump_file"></a> Create a dump file  
+ To create a dump file with Visual Studio:  
   
--   最適化されたコードのダンプ ファイルをデバッグすると、混乱が生じることがあります。  たとえば、コンパイラによる関数のインライン展開により、予期しない呼び出し履歴になっていたり、その他の最適化により、変数の有効期間が変更されていたりします。  
+-   While you are debugging a process in Visual Studio, you can save a dump file when the debugger has stopped at an exception or at a breakpoint. Choose **Debug**, then **Save Dump As**, then **Debug**. In the **Save Dump As** dialog box, in the **Save as type** list, you can select **Minidump** or **Minidump with Heap** (the default).  
   
--   64 ビット コンピューターからのダンプ ファイルは、64 ビット コンピューター上で実行される Visual Studio のインスタンス上でデバッグする必要があります。  
+-   With [Just-In-Time Debugging](../debugger/just-in-time-debugging-in-visual-studio.md) enabled, you can attach the debugger to a crashed process that is running outside the debugger, and then save a dump file. See [Attach to Running Processes](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)  
   
--   VS 2013 より前の Visual Studio のバージョンでは、一部のツール \(タスク マネージャーや 64 ビット WinDbg など\) によって収集された 64 ビット コンピューター上で実行する 32 ビット アプリケーションのダンプは Visual Studio で開くことができませんでした。  VS 2013 ではこの制限はありません。  
+ You can also create dump files with any program that supports the Windows minidump format. For example, the **Procdump** command-line utility from [Windows Sysinternals](http://technet.microsoft.com/sysinternals/default) can create process crash dump files based on triggers or on-demand. See [Requirements and limitations](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations) in this topic for additional information about using other tools to create dump files. 
   
--   Visual Studio では、ARM デバイスからのネイティブ アプリのダンプ ファイルをデバッグできます。  また、ARM デバイスからのマネージ アプリのダンプ ファイルもデバッグできますが、これはネイティブ デバッガーでのみ可能です。  
+##  <a name="BKMK_Open_a_dump_file"></a> Open a dump file  
   
--   [カーネル モード](http://msdn.microsoft.com/library/windows/hardware/ff551880.aspx) ダンプ ファイルを Visual Studio 2013 でデバッグするには、[Windows 8.1 バージョンの Windows 対応デバッグ ツール](http://msdn.microsoft.com/windows/hardware/gg463009)をダウンロードします。  「[Visual Studio でのカーネル デバッグ](http://msdn.microsoft.com/library/windows/hardware/jj149675.aspx)」を参照してください。  
+1.  In Visual Studio, choose **File**, **Open**, **File**.  
   
--   Visual Studio では、[フル ユーザー モード ダンプ](http://msdn.microsoft.com/library/windows/hardware/ff545506.aspx)という以前のダンプ形式で保存されたダンプ ファイルをデバッグすることはできません。  フル ユーザー モード ダンプがヒープ情報ありのダンプとは異なることに注意してください。  
+2.  In the **Open File** dialog box, locate and select the dump file. It will usually have a .dmp extension. Then choose **OK**.  
   
--   Visual Studio の [SOS.dll \(SOS デバッガー拡張\)](../Topic/SOS.dll%20\(SOS%20Debugging%20Extension\).md) でデバッグするには、Windows ドライバー キット \(WDK\) の一部である Windows 対応のデバッグ ツールをインストールする必要があります。  「[Windows 8.1: キットとツールのダウンロード](http://msdn.microsoft.com/library/windows/hardware/bg127147.aspx)」を参照してください。  
+3.  The **Dump File Summary** window appears. In this window, you can view debugging summary information for the dump file, set the symbol path, start debugging, and copy the summary information to the clipboard.  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+     ![Minidump summary page](../debugger/media/dbg_dump_summarypage.png "DBG_DUMP_SummaryPage")  
   
-##  <a name="BKMK_Create_a_dump_file"></a> ダンプ ファイルを作成する  
- Visual Studio でダンプ ファイルを作成するには:  
+4.  To start debugging, go to the **Actions** section, and choose either **Debug with Managed Only**, **Debug with Native Only** or **Debug with Mixed**.  
   
--   Visual Studio でのプロセスのデバッグ中、デバッガーが例外またはブレークポイントで停止するときに、ダンプ ファイルを保存できます。  **\[名前を付けてダンプを保存\]**、**\[デバッグ\]** の順にクリックします。  **\[名前を付けてダンプを保存\]** ダイアログ ボックスの **\[ファイルの種類\]** ボックスの一覧で、**\[ミニ ダンプ\]** または **\[ヒープ付きミニダンプ\]** \(既定\) を選択できます。  
+##  <a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> Find binaries, symbol (.pdb) files, and source files  
+ To use the full features of Visual Studio to debug a dump file, you need access to:  
   
--   [Just\-In\-Time デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md) を有効にすると、デバッガーの外部で実行中のクラッシュしたプロセスにデバッガーをアタッチし、ダンプ ファイルを保存できます。  「[実行中のプロセスへのアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)」を参照してください  
+-   The .exe file for which the dump was taken and other binaries (DLLs, etc.) that were used in the dump process.  
   
- Windows ミニダンプ形式をサポートするプログラムでもダンプ ファイルを作成できます。  たとえば、[Windows Sysinternals](http://technet.microsoft.com/sysinternals/default) の **Procdump** コマンド ライン ユーティリティでは、トリガーまたは必要に応じてプロセスのクラッシュ ダンプ ファイルを作成できます。  その他のツールの使用したダンプ ファイルの作成の詳細については、このトピックの「[要件と制限](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations)」を参照してください。  
+     If you are debugging a dump with heap data, Visual Studio can cope with missing binaries for some modules, but it must have binaries for enough modules to generate valid call stacks. Visual Studio includes the native modules in a dump file with heap.  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+-   Symbol (.pdb) files for the .exe and other binaries.  
   
-##  <a name="BKMK_Open_a_dump_file"></a> ダンプ ファイルを開く  
+-   Source files for the modules that you are interested in.  
   
-1.  Visual Studio で **\[ファイル\]**、**\[開く\]**、**\[ファイル\]** の順にクリックします。  
+     The executable and the .pdb files must match exactly the version and build of the files used when the dump was created.  
   
-2.  **\[ファイルを開く\]** ダイアログ ボックスで、ダンプ ファイルを探して選択します。  通常は拡張子 .dmp が付いています。  次に、**\[OK\]** をクリックします。  
+     You can debug using the disassembly of the modules if you can't find the source files,  
   
-3.  **\[ダンプ ファイルの概要\]** ウィンドウが表示されます。  このウィンドウでは、ダンプ ファイルのデバッグに関する概要情報を確認し、シンボル パスを設定したりデバッグを開始したりすることができます。概要情報をクリップボードにコピーすることもできます。  
+ **Default search paths for executable files**  
   
-     ![ミニダンプ概要ページ](../debugger/media/dbg_dump_summarypage.png "DBG\_DUMP\_SummaryPage")  
+ Visual Studio automatically searches these locations for executable files that aren't included in the dump file:  
   
-4.  デバッグを開始するには、**\[アクション\]** セクションに移動し、**\[ネイティブのみでデバッグ\]** または **\[混合でデバッグ\]** を選択します。  
+1.  The directory that contains the dump file.  
   
-##  <a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> バイナリ、シンボル \(.pdb\) ファイル、ソース ファイルを検索する  
- Visual Studio でダンプ ファイルのデバッグ機能をすべて使用するには、次のファイルにアクセスできる必要があります。  
+2.  The path of the module that is specified in the dump file. This is the module path on the machine where the dump was collected.  
   
--   ダンプの作成に使用した .exe ファイルと、ダンプ プロセスで使用したその他のファイルおよびバイナリ \(DLL など\)。  
+3.  The symbol paths specified in the **Debugging**, **Options**, **Symbols** page of the Visual Studio **Tools**, **Options** dialog box. You can add more locations to search on this page.  
   
-     ヒープ情報ありのダンプをデバッグする場合、Visual Studio は、一部のモジュールにバイナリ ファイルが欠落している状況にも対処できますが、有効な呼び出し履歴を生成できる十分なモジュールのバイナリがあることが必要です。  Visual Studio は、ネイティブ モジュールのバイナリをヒープ情報ありのダンプ ファイルに保存します。  
+ **Using the No Binary > Symbol > Source pages**  
   
--   .exe およびその他のバイナリのシンボル \(.pdb\) ファイル。  
+ If Visual Studio can't find the files needed to debug a module in the dump, it displays an appropriate page (**No Binary Found**, **No Symbols Found**, or **No Source Found**). These pages provide detailed information about the cause of the issue and provide action links that can help you identify the correct location of the files. See [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
--   目的のモジュールのソース ファイル。  
-  
-     実行可能ファイルと .pdb ファイルは、ダンプの作成時に使用したものと、バージョンおよびビルドが正確に一致している必要があります。  
-  
-     ソース ファイルを見つけることができない場合は、モジュールの逆アセンブルを使用してデバッグできます。  
-  
- **実行可能ファイルの既定の検索パス**  
-  
- Visual Studio では、ダンプ ファイルに含まれていない実行可能ファイルが次の場所で自動的に検索されます。  
-  
-1.  ダンプ ファイルが格納されているディレクトリ。  
-  
-2.  ダンプ ファイルで指定されたモジュールのパス。  これは、ダンプが収集されたコンピューター上のモジュール パスです。  
-  
-3.  Visual Studio の **\[ツール\]**\/**\[オプション\]** ダイアログ ボックスの **\[デバッグ\]**\/**\[オプション\]**\/**\[シンボル\]** ページで指定されたシンボル パス。  検索する複数の場所をこのページで追加できます。  
-  
- **\[バイナリが見つかりません\]、\[シンボルが見つかりません\]、\[ソースが見つかりません\] のページの使用**  
-  
- Visual Studio でダンプ内のモジュールをデバッグするために必要なファイルが見つからない場合は、該当するページ \(**\[バイナリが見つかりません\]**、**\[シンボルが見つかりません\]**、または **\[ソースが見つかりません\]**\) が表示されます。  これらのページでは、問題の原因に関する詳細な情報が表示され、ファイルの正しい場所を特定するために役立つアクション リンクも表示されます。  「[シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」を参照してください。  
-  
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
-  
-## 参照  
- [Just\-In\-Time デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)   
- [シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
- [IntelliTrace の使用](../debugger/intellitrace.md)
+## <a name="see-also"></a>See Also  
+ [Just-In-Time Debugging](../debugger/just-in-time-debugging-in-visual-studio.md)   
+ [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+ [IntelliTrace](../debugger/intellitrace.md)

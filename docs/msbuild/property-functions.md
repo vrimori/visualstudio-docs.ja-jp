@@ -1,5 +1,5 @@
 ---
-title: "プロパティ関数 | Microsoft Docs"
+title: Property Functions | Microsoft Docs
 ms.custom: 
 ms.date: 02/21/2017
 ms.reviewer: 
@@ -29,50 +29,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: c52ed7c7e6de33d10d2a653a1072766aa9fb8023
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 03b4eba806256f0bc6a37c6639a3a9cc44abd3ae
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/22/2017
 
 ---
-# <a name="property-functions"></a>プロパティ関数
-.NET Framework のバージョン 4 と 4.5 では、プロパティ関数を使用して MSBuild スクリプトを評価できます。 プロパティ関数は、プロパティが表示される場所ならどこでも使用できます。 タスクとは異なり、プロパティ関数はターゲットの外側でも使用でき、ターゲットが実行される前に評価されます。  
+# <a name="property-functions"></a>Property Functions
+In the .NET Framework versions 4 and 4.5, property functions can be used to evaluate MSBuild scripts. Property functions can be used wherever properties appear. Unlike tasks, property functions can be used outside of targets, and are evaluated before any target runs.  
 
- MSBuild タスクを使用しなくても、システム時刻の読み取り、文字列の比較、正規表現の照合、その他の処理をビルド スクリプト内で実行できます。 MSBuild は、文字列を数値に、数値を文字列に変換しようと試みます。また、必要に応じて他の変換も実行します。  
+ Without using MSBuild tasks, you can read the system time, compare strings, match regular expressions, and perform other actions in your build script. MSBuild will try to convert string to number and number to string, and make other conversions as required.  
 
-## <a name="property-function-syntax"></a>プロパティ関数の構文  
- 次に 3 種類のプロパティ関数を示します。各関数には異なる構文があります。  
+## <a name="property-function-syntax"></a>Property Function Syntax  
+ These are three kinds of property functions; each function has a different syntax:  
 
--   文字列 (インスタンス) プロパティ関数  
+-   String (instance) property functions  
 
--   静的プロパティ関数  
+-   Static property functions  
 
--   MSBuild プロパティ関数  
+-   MSBuild property functions  
 
-### <a name="string-property-functions"></a>文字列プロパティ関数  
- ビルド プロパティの値はすべて文字列値です。 文字列 (インスタンス) メソッドを使用してプロパティ値を操作できます。 たとえば、次のコードを使用して、完全パスを表すビルド プロパティからドライブ名 (最初の 3 文字) を抽出できます。  
+### <a name="string-property-functions"></a>String Property Functions  
+ All build property values are just string values. You can use string (instance) methods to operate on any property value. For example, you can extract the drive name (the first three characters) from a build property that represents a full path by using this code:  
 
  `$(ProjectOutputFolder.Substring(0,3))`  
 
-### <a name="static-property-functions"></a>静的プロパティ関数  
- ビルド スクリプトで、各種システム クラスの静的プロパティおよびメソッドにアクセスできます。 静的プロパティの値を取得するには、次の構文を使用します。ここで、*Class* はシステム クラスの名前、*Property* はプロパティの名前です。  
+### <a name="static-property-functions"></a>Static Property Functions  
+ In your build script, you can access the static properties and methods of many system classes. To get the value of a static property, use the following syntax, where *Class* is the name of the system class and *Property* is the name of the property.  
 
  `$([Class]::Property)`  
 
- たとえば、次のコードを使用して、ビルド プロパティを現在の日付と時刻に設定します。  
+ For example, you can use the following code to set a build property to the current date and time.  
 
  `<Today>$([System.DateTime]::Now)</Today>`  
 
- 静的メソッドを呼び出すには、次の構文を使用します。ここで、*Class* はシステム クラスの名前、*Method* はメソッドの名前、*(Parameters)* はメソッドのパラメーター リストです。  
+ To call a static method, use the following syntax, where *Class* is the name of the system class, *Method* is the name of the method, and *(Parameters)* is the parameter list for the method:  
 
  `$([Class]::Method(Parameters))`  
 
- たとえば、ビルド プロパティを新しい GUID に設定するには、次のスクリプトを使用できます。  
+ For example, to set a build property to a new GUID, you can use this script:  
 
  `<NewGuid>$([System.Guid]::NewGuid())</NewGuid>`  
 
- 静的プロパティ関数では、次のシステム クラスの任意の静的メソッドやプロパティを使用できます。  
+ In static property functions, you can use any static method or property of these system classes:  
 
 -   System.Byte  
 
@@ -124,7 +124,7 @@ ms.lasthandoff: 05/31/2017
 
 -   Microsoft.Build.Utilities.ToolLocationHelper  
 
- さらに、次の静的メソッドおよびプロパティを使用できます。  
+ In addition, you can use the following static methods and properties:  
 
 -   System.Environment::CommandLine  
 
@@ -160,113 +160,113 @@ ms.lasthandoff: 05/31/2017
 
 -   System.IO.File::ReadAllText  
 
-### <a name="calling-instance-methods-on-static-properties"></a>静的プロパティ上でインスタンス メソッドを呼び出す  
- オブジェクト インスタンスを返す静的プロパティにアクセスすると、そのオブジェクトのインスタンス メソッドを呼び出すことができます。 インスタンス メソッドを呼び出すには、次の構文を使用します。ここで、*Class* はシステム クラスの名前、*Property* はプロパティの名前、*Method* はメソッドの名前、*(Parameters)* はメソッドのパラメーター リストです。  
+### <a name="calling-instance-methods-on-static-properties"></a>Calling Instance Methods on Static Properties  
+ If you access a static property that returns an object instance, you can invoke the instance methods of that object. To invoke an instance method, use the following syntax, where *Class* is the name of the system class, *Property* is the name of the property, *Method* is the name of the method, and *(Parameters)* is the parameter list for the method:  
 
  `$([Class]::Property.Method(Parameters))`  
 
- クラスの名前は、名前空間を使用して完全修飾する必要があります。  
+ The name of the class must be fully qualified with the namespace.  
 
- たとえば、次のコードを使用して、ビルド プロパティを現在の日付 (今日) に設定します。  
+ For example, you can use the following code to set a build property to the current date today.  
 
  `<Today>$([System.DateTime]::Now.ToString("yyyy.MM.dd"))</Today>`  
 
-### <a name="msbuild-property-functions"></a>MSBuild プロパティ関数  
- ビルド内のいくつかの静的メソッドにアクセスすると、算術、ビットごとの論理、およびエスケープ文字のサポートが提供されます。 次の構文を使用して、これらのメソッドにアクセスします。ここで、*Method* はメソッドの名前、*Parameters* はメソッドのパラメーター リストです。  
+### <a name="msbuild-property-functions"></a>MSBuild Property Functions  
+ Several static methods in your build can be accessed to provide arithmetic, bitwise logical, and escape character support. You access these methods by using the following syntax, where *Method* is the name of the method and *Parameters* is the parameter list for the method.  
 
  `$([MSBuild]::Method(Parameters))`  
 
- たとえば、数値を持つ 2 つのプロパティを合計するには、次のコードを使用します。  
+ For example, to add together two properties that have numeric values, use the following code.  
 
  `$([MSBuild]::Add($(NumberOne), $(NumberTwo))`  
 
- 次に MSBuild プロパティ関数の一覧を示します。  
+ Here is a list of MSBuild property functions:  
 
-|関数シグネチャ|説明|  
+|Function Signature|Description|  
 |------------------------|-----------------|  
-|double Add(double a, double b)|2 個の倍精度浮動小数点数を加算します。|  
-|long Add(long a, long b)|2 個の長整数を加算します。|  
-|double Subtract(double a, double b)|2 個の倍精度浮動小数点数を減算します。|  
-|long Subtract(long a, long b)|2 個の長整数を減算します。|  
-|double Multiply(double a, double b)|2 個の倍精度浮動小数点数を乗算します。|  
-|long Multiply(long a, long b)|2 個の長整数を乗算します。|  
-|double Divide(double a, double b)|2 個の倍精度浮動小数点数を除算します。|  
-|long Divide(long a, long b)|2 個の長整数を除算します。|  
-|double Modulo(double a, double b)|2 個の倍精度浮動小数点数を剰余します。|  
-|long Modulo(long a, long b)|2 個の長整数を剰余します。|  
-|string Escape(string unescaped)|MSBuild のエスケープ ルールに従って文字列をエスケープします。|  
-|string Unescape(string escaped)|MSBuild のエスケープ ルールに従って文字列をエスケープ解除します。|  
-|int BitwiseOr(int first, int second)|1 番目と 2 番目 (first &#124; second) でビットごとの `OR` を実行します。|  
-|int BitwiseAnd(int first, int second)|1 番目と 2 番目 (first & second) でビットごとの `AND` を実行します。|  
-|int BitwiseXor(int first, int second)|1 番目と 2 番目 (first ^ second) でビットごとの `XOR` を実行します。|  
-|int BitwiseNot(int first)|ビットごとの `NOT` (~first) を実行します。|  
-|bool IsOsPlatform(string platformString)|現在の OS プラットフォームが `platformString` かどうかを指定します。 `platformString` は `OSPlatform` のメンバーである必要があります。|
-|bool IsOSUnixLike|現在の OS が Unix システムの場合は true です。|
-|string NormalizePath(params string[] path)|指定されたパスの正規化された完全なパスを取得し、現在のオペレーティング システムの適切なディレクトリ区切り文字が含まれていることを確認します。|
-|string NormalizeDirectory(params string[] path)|指定されたディレクトリの正規化された完全なパスを取得し、現在のオペレーティング システムの適切なディレクトリ区切り文字が含まれていて、末尾にスラッシュがあることを確認します。|
-|string EnsureTrailingSlash(string path)|指定されたパスの末尾にスラッシュがない場合は、追加します。 パスが空の文字列の場合は変更されません。|
-|string GetPathOfFileAbove(string file, string startingDirectory)|現在のビルド ファイルの場所に基づいて、または `startingDirectory` に基づいて (指定されている場合)、ファイルを検索します。|
-|GetDirectoryNameOfFileAbove(string startingDirectory, string fileName)|指定されたディレクトリまたはそのディレクトリの上のディレクトリ構造内の場所でファイルを見つけます。|
-|string MakeRelative(string basePath, string path)|`path` を `basePath` に対して相対的にします。 `basePath` は絶対ディレクトリである必要があります。 `path` を相対にできない場合、verbatim が返されます。 `Uri.MakeRelativeUri` と似ています。|
-|string ValueOrDefault(string conditionValue, string defaultValue)|パラメーター 'conditionValue' が空の場合にのみ、パラメーター 'defaultValue' に文字列を返します。それ以外の場合は、値 conditionValue を返します。|
+|double Add(double a, double b)|Add two doubles.|  
+|long Add(long a, long b)|Add two longs.|  
+|double Subtract(double a, double b)|Subtract two doubles.|  
+|long Subtract(long a, long b)|Subtract two longs.|  
+|double Multiply(double a, double b)|Multiply two doubles.|  
+|long Multiply(long a, long b)|Multiply two longs.|  
+|double Divide(double a, double b)|Divide two doubles.|  
+|long Divide(long a, long b)|Divide two longs.|  
+|double Modulo(double a, double b)|Modulo two doubles.|  
+|long Modulo(long a, long b)|Modulo two longs.|  
+|string Escape(string unescaped)|Escape the string according to MSBuild escaping rules.|  
+|string Unescape(string escaped)|Unescape the string according to MSBuild escaping rules.|  
+|int BitwiseOr(int first, int second)|Perform a bitwise `OR` on the first and second (first &#124; second).|  
+|int BitwiseAnd(int first, int second)|Perform a bitwise `AND` on the first and second (first & second).|  
+|int BitwiseXor(int first, int second)|Perform a bitwise `XOR` on the first and second (first ^ second).|  
+|int BitwiseNot(int first)|Perform a bitwise `NOT` (~first).|  
+|bool IsOsPlatform(string platformString)|Specify whether the current OS platform is `platformString`. `platformString` must be a member of <xref:System.Runtime.InteropServices.OSPlatform>.|
+|bool IsOSUnixLike|True if current OS is a Unix system.|
+|string NormalizePath(params string[] path)|Gets the canonicalized full path of the provided path and ensures it contains the correct directory separator characters for the current operating system.|
+|string NormalizeDirectory(params string[] path)|Gets the canonicalized full path of the provided directory and ensures it contains the correct directory separator characters for the current operating system while ensuring it has a trailing slash.|
+|string EnsureTrailingSlash(string path)|If the given path doesn't have a trailing slash then add one. If the path is an empty string, does not modify it.|
+|string GetPathOfFileAbove(string file, string startingDirectory)|Searches for a file based on the current build file's location, or based on `startingDirectory`, if specified.|
+|GetDirectoryNameOfFileAbove(string startingDirectory, string fileName)|Locate a file in either the directory specified or a location in the directory structure above that directory.|
+|string MakeRelative(string basePath, string path)|Makes `path` relative to `basePath`. `basePath` must be an absolute directory. If `path` cannot be made relative, it is returned verbatim. Similar to `Uri.MakeRelativeUri`.|
+|string ValueOrDefault(string conditionValue, string defaultValue)|Return the string in parameter 'defaultValue' only if parameter 'conditionValue' is empty, else, return the value conditionValue.|
 
-##  <a name="nested-property-functions"></a>入れ子になったプロパティ関数  
- 次の例が示すように、プロパティ関数を組み合わせてより複雑な関数を形成します。  
+##  <a name="nested-property-functions"></a>Nested Property Functions  
+ You can combine property functions to form more complex functions, as the following example shows.  
 
  `$([MSBuild]::BitwiseAnd(32, $([System.IO.File]::GetAttributes(tempFile))))`  
 
- この例では、<xref:System.IO.FileAttributes> というパスにより与えられたファイルの `Archive``tempFile` ビット (32 または 0) の値が返されます。 列挙データ値はプロパティ関数内で名前によって表示できないことに注意してください。 代わりに数値 (32) を使用する必要があります。  
+ This example returns the value of the <xref:System.IO.FileAttributes>`Archive` bit (32 or 0) of the file given by the path `tempFile`. Notice that enumerated data values cannot appear by name within property functions. The numeric value (32) must be used instead.  
 
- 入れ子になったプロパティ関数では、メタデータも表示される可能性があります。 詳細については、「[MSBuild バッチ](../msbuild/msbuild-batching.md)」をご覧ください。  
+ Metadata may also appear in nested property functions. For more information, see [Batching](../msbuild/msbuild-batching.md).  
 
-##  <a name="msbuild-doestaskhostexist"></a>MSBuild の DoesTaskHostExist  
- MSBuild の `DoesTaskHostExist` プロパティ関数は、指定したランタイムとアーキテクチャ値に対してタスク ホストが現在インストールされているかどうかを返します。  
+##  <a name="msbuild-doestaskhostexist"></a>MSBuild DoesTaskHostExist  
+ The `DoesTaskHostExist` property function in MSBuild returns whether a task host is currently installed for the specified runtime and architecture values.  
 
- このプロパティ関数には次の構文があります。  
+ This property function has the following syntax:  
 
 ```  
 $[MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture)  
 ```  
 
 ##  <a name="msbuild-ensuretrailingslash"></a>MSBuild EnsureTrailingSlash  
- MSBuild の `EnsureTrailingSlash` プロパティ関数は、末尾のスラッシュがないときにそれを追加します。  
+ The `EnsureTrailingSlash` property function in MSBuild adds a trailing slash if one doesn't already exist.  
 
- このプロパティ関数には次の構文があります。  
+ This property function has the following syntax:  
 
 ```  
 $([MSBuild]::EnsureTrailingSlash('$(PathProperty)')  
 ```  
 
-##  <a name="msbuild-getdirectorynameoffileabove"></a>MSBuild の GetDirectoryNameOfFileAbove  
- MSBuild の `GetDirectoryNameOfFileAbove` プロパティ関数は、パスの現在のディレクトリの上にあるディレクトリ内でファイルを探します。  
+##  <a name="msbuild-getdirectorynameoffileabove"></a>MSBuild GetDirectoryNameOfFileAbove  
+ The MSBuild `GetDirectoryNameOfFileAbove` property function looks for a file in the directories above the current directory in the path.  
 
- このプロパティ関数には次の構文があります。  
+ This property function has the following syntax:  
 
 ```  
 $[MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile)  
 ```  
 
- 次のコードはこの構文の例です。  
+ The following code is an example of this syntax.  
 
 ```xml  
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))\EnlistmentInfo.props" Condition=" '$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))' != '' " />  
 ```  
 
 ##  <a name="msbuild-getpathoffileabove"></a>MSBuild GetPathOfFileAbove  
- MSBuild の `GetPathOfFileAbove` プロパティ関数は、直前のファイルのパスを返します。 呼び出しと同じ機能です
+ The `GetPathOfFileAbove` property function in MSBuild returns the path of the file immediately preceding this one. It is functionally equivalent to calling
 
  ```<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />```
 
- このプロパティ関数には次の構文があります。  
+ This property function has the following syntax:  
 
 ```  
 $([MSBuild]::GetPathOfFileAbove(dir.props)  
 ```  
 
-##  <a name="msbuild-getregistryvalue"></a>MSBuild の GetRegistryValue  
- MSBuild の `GetRegistryValue` プロパティ関数は、レジストリ キーの値を返します。 この関数は、キー名と値の名前という 2 つの引数を取り、レジストリの値を返します。 値の名前を指定しない場合は、既定値が返されます。  
+##  <a name="msbuild-getregistryvalue"></a>MSBuild GetRegistryValue  
+ The MSBuild `GetRegistryValue` property function returns the value of a registry key. This function takes two arguments, the key name and the value name, and returns the value from the registry. If you don't specify a value name, the default value is returned.  
 
- この関数を使用する方法を次の例に示します。  
+ The following examples show how this function is used:  
 
 ```  
 $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, ``))                                  // default value  
@@ -275,41 +275,41 @@ $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(Samp
 
 ```  
 
-##  <a name="msbuild-getregistryvaluefromview"></a>MSBuild の GetRegistryValueFromView  
- MSBuild の `GetRegistryValueFromView` プロパティ関数は、レジストリ キー、値、および 1 つ以上の順序づけられたレジストリ ビューを含むシステム レジストリ データを取得します。 キーと値は見つかるまで各レジストリ ビューで順番に検索されます。  
+##  <a name="msbuild-getregistryvaluefromview"></a>MSBuild GetRegistryValueFromView  
+ The MSBuild `GetRegistryValueFromView` property function gets system registry data given the registry key, value, and one or more ordered registry views. The key and value are searched in each registry view in order until they are found.  
 
- このプロパティ関数の構文を次に示します。  
+ The syntax for this property function is:  
 
  [MSBuild\]::GetRegistryValueFromView(string keyName, string valueName, object defaultValue, params object[] views)  
 
- Windows 64 ビット オペレーティング システムは、HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node というレジストリ キーを保持しています。このキーは、32 ビット アプリケーションに対して HKEY_LOCAL_MACHINE\SOFTWARE というレジストリ ビューを提供します。  
+ The Windows 64-bit operating system maintains a HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node registry key that presents a HKEY_LOCAL_MACHINE\SOFTWARE registry view for 32-bit applications.  
 
- 既定では、WOW64 で実行されている 32 ビット アプリケーションは 32 ビットのレジストリ ビューにアクセスし、64 ビット アプリケーションは 64 ビットのレジストリ ビューにアクセスします。  
+ By default, a 32-bit application running on WOW64 accesses the 32-bit registry view and a 64-bit application accesses the 64-bit registry view.  
 
- 次のレジストリ ビューが使用できます。  
+ The following registry views are available:  
 
-|レジストリ ビュー|定義|  
+|Registry View|Definition|  
 |-------------------|----------------|  
-|RegistryView.Registry32|32 ビット アプリケーションのレジストリ ビュー。|  
-|RegistryView.Registry64|64 ビット アプリケーションのレジストリ ビュー。|  
-|RegistryView.Default|アプリケーションが実行されているプロセスに対応するレジストリ ビュー。|  
+|RegistryView.Registry32|The 32-bit application registry view.|  
+|RegistryView.Registry64|The 64-bit application registry view.|  
+|RegistryView.Default|The registry view that matches the process that the application is running on.|  
 
- 次に例を示します。  
+ The following is an example.  
 
  `$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Silverlight\v3.0\ReferenceAssemblies', 'SLRuntimeInstallPath', null, RegistryView.Registry64, RegistryView.Registry32))`  
 
- は、最初に 64 ビットのレジストリ ビュー、次に 32 ビットのレジストリ ビューを参照して、ReferenceAssemblies キーの SLRuntimeInstallPath データを取得します。  
+ gets the SLRuntimeInstallPath data of the ReferenceAssemblies key, looking first in the 64-bit registry view and then in the 32-bit registry view.  
 
-##  <a name="msbuild-makerelative"></a>MSBuild の MakeRelative  
- MSBuild の `MakeRelative` プロパティ関数は、最初のパスに対する 2 番目のパスの相対パスを返します。 各パスはファイルまたはフォルダです。  
+##  <a name="msbuild-makerelative"></a>MSBuild MakeRelative  
+ The MSBuild `MakeRelative` property function returns the relative path of the second path relative to first path. Each path can be a file or folder.  
 
- このプロパティ関数には次の構文があります。  
+ This property function has the following syntax:  
 
 ```  
 $[MSBuild]::MakeRelative($(FileOrFolderPath1), $(FileOrFolderPath2))  
 ```  
 
- 次のコードはこの構文の例です。  
+ The following code is an example of this syntax.  
 
 ```xml  
 <PropertyGroup>  
@@ -329,10 +329,10 @@ Output:
 -->  
 ```  
 
-##  <a name="msbuild-valueordefault"></a>MSBuild の ValueOrDefault  
- MSBuild の `ValueOrDefault` プロパティ関数は、null または空でない限り、最初の引数を返します。 最初の引数が null または空の場合、関数は 2 番目の引数を返します。  
+##  <a name="msbuild-valueordefault"></a>MSBuild ValueOrDefault  
+ The MSBuild `ValueOrDefault` property function returns the first argument, unless it's null or empty. If the first argument is null or empty, the function returns the second argument.  
 
- この関数を使用する方法を次の例に示します。  
+ The following example shows how this function is used.  
 
 ```xml  
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -355,7 +355,7 @@ Output:
 -->  
 ```
 
-## <a name="see-also"></a>関連項目
-[MSBuild プロパティ](../msbuild/msbuild-properties.md)   
-[MSBuild の概要](../msbuild/msbuild.md)
+## <a name="see-also"></a>See Also
+[MSBuild Properties](../msbuild/msbuild-properties.md)   
+[MSBuild Overview](../msbuild/msbuild.md)
 

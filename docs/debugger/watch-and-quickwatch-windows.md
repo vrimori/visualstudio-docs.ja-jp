@@ -1,187 +1,269 @@
 ---
-title: "ウォッチ ウィンドウと [クイック ウォッチ] ウィンドウ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.watch"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "デバッグ [Visual Studio]、ウォッチ ウィンドウ"
-  - "式 [デバッガー]、評価"
-  - "変数 [デバッガー]、評価"
-  - "式の評価"
-  - "登録、評価"
-  - "デバッグ [Visual Studio]、式の評価"
+title: Set a Watch on Variables in Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 04/04/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.watch
+helpviewer_keywords:
+- debugging [Visual Studio], Watch window
+- expressions [debugger], evaluating
+- variables [debugger], evaluating
+- expression evaluation
+- registers, evaluating
+- debugging [Visual Studio], expression evaluation
 ms.assetid: d5c18377-2a0e-4819-a645-407e24ccc58c
 caps.latest.revision: 45
-caps.handback.revision: 44
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# ウォッチ ウィンドウと [クイック ウォッチ] ウィンドウ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: c443f4aa25ff4fcc672be11fc3d4ee296a196e2b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-**\[ウォッチ\]** \(**\[デバッグ\]\/\[ウィンドウ\]\/\[ウォッチ\]\/\[ウォッチ \(1、2、3、4\)\]**\) および **\[クイック ウォッチ\]** \(**\[デバッグ\]\/\[クイック ウォッチ\]**\) ウィンドウを使用すると、デバッグ中に変数と式を監視できます。 この 2 つのウィンドウの違いは、**ウォッチ** ウィンドウでは複数の変数を表示できますが、**\[クイック ウォッチ\]** ウィンドウでは一度に 1 つの変数しか表示できないことです。  
+---
+# <a name="set-a-watch-on-variables-using-the-watch-and-quickwatch-windows-in-visual-studio"></a>Set a Watch on Variables using the Watch and QuickWatch Windows in Visual Studio
+While you are debugging, you can use the **Watch** (**Debug > Windows > Watch > Watch (1, 2, 3, 4)**) and **QuickWatch** (right-click on variable / **Debug > QuickWatch**) windows to watch variables and expressions.  The difference is that the **Watch** window can display several variables, while the **QuickWatch** window displays a single variable at a time.
+
+The windows are only available during a debugging session. 
   
-## \[クイック ウォッチ\] での 1 つの変数の観察  
- **\[クイック ウォッチ\]** ウィンドウでは、1 つの変数を観察できます。 たとえば、次のようなコードがあるとします。  
+## <a name="observing-a-single-variable-with-quickwatch"></a>Observing a single variable with QuickWatch  
+ You can use the **QuickWatch** window to observe a single variable. For example, if you have the following code:  
   
-```c#  
-static void Main(string[] args) { int a, b; a = 1; b = 2; for (int i = 0; i < 10; i++) { a = a + b; } }  
+```CSharp
+static void Main(string[] args)  
+{  
+    int a, b;  
+    a = 1;  
+    b = 2;  
+    for (int i = 0; i < 10; i++)  
+    {  
+        a = a + b;  
+    }   
+}  
 ```  
   
- \[クイック ウォッチ\] ウィンドウで変数を観察するには、以下のようにします。  
+ You can observe the a variable in the QuickWatch window as follows:  
   
-1.  `a = a + b;` の行にブレークポイントを設定します。  
+1.  Set a breakpoint on the `a = a + b;` line.  
   
-2.  デバッグを開始します。 ブレークポイントで実行が停止します。  
+2.  Start debugging. Execution stops at the breakpoint.  
   
-3.  **\[クイック ウォッチ\]** ウィンドウを開きます \(a を右クリックして **\[デバッグ\]\/\[クイック ウォッチ\]** を選択するか、**Shift \+ F9** キーを押します\)。ウィンドウが開いたら、**\[式\]** ウィンドウに変数を追加して、**\[再評価\]** をクリックします。**\[値\]** ウィンドウに、値が 2 の変数 a が表示されるはずです。  
+3.  Open the **QuickWatch** window (right-click on a, then choose **QuickWatch**, or **SHIFT+F9**).
+
+    You should see the a variable in the **Values** window, with a value of 1.
+
+    ![QuickWatch Expression](../debugger/media/watchexpression.png "QuickWatchExpression")  
+
+    If you want to evaluate an expression using the variable, add an expression such as `a + b` to the **Expression** window and click **Reevaluate**. 
   
-4.  **\[クイック ウォッチ\]** ウィンドウはモーダル ダイアログ ウィンドウであるため、このウィンドウが開いている限り、デバッグを続行することはできません。 変数を**ウォッチ** ウィンドウに追加するには、**\[ウォッチ式の追加\]** をクリックします。  
+4.  Add the variable to the **Watch** window from **QuickWatch** by clicking **Add Watch**. 
+
+    > [!NOTE]
+    > The **QuickWatch** window is a modal dialog window, so you can't continue debugging as long as it is open.  
   
-5.  **\[クイック ウォッチ\]** ウィンドウを閉じます。 これで、**ウォッチ** ウィンドウで値を観察しながら、デバッグを続行できます。  
+5.  Close the **QuickWatch** window. Now you can continue debugging while you observe the value in the **Watch** window.  
   
-## ウォッチ ウィンドウでの複数の変数の観察  
- **ウォッチ** ウィンドウでは、複数の変数を観察できます。 たとえば、次のようなコードがあるとします。  
+## <a name="observing-variables-with-the-watch-window"></a>Observing variables with the Watch window  
+ You can observe multiple variables with the **Watch** window. For example, if you have the following code:  
   
-```c#  
-static void Main(string[] args) { int a, b, c; a = 1; b = 2; c = 0; for (int i = 0; i < 10; i++) { a++; b *= 2; c = a + b; } }  
-  
-```  
-  
- 次のように、ウォッチ ウィンドウに 3 つの変数の値を追加します。  
-  
-1.  `c = a + b;` の行にブレークポイントを設定します。  
-  
-2.  デバッグを開始します \(**F5**\)。 ブレークポイントで実行が停止します。  
-  
-3.  ウォッチ ウィンドウを開きます \(**\[デバッグ\]\/\[ウィンドウ\]\/\[ウォッチ\]\/\[ウォッチ 1\]**、または **Ctrl \+ Alt \+ W、1**\)。  
-  
-4.  最初の行に `a` 変数を追加し、2 番目の行に `b` 変数、3 番目の行に `c` 変数を追加します。  
-  
-5.  デバッグを続行します。  
-  
- `for` ループの反復処理に伴って、表示される変数の値が変わっていくはずです。  
-  
- ネイティブ コードでプログラミングしている場合、変数名や変数名を含む式のコンテキストを修飾することが必要になる場合があります。 コンテキストとは、変数が配置される、関数、ソース ファイル、およびモジュールです。 この場合、コンテキスト演算子の構文を使用できます。 詳細については、「式 \(C\+\+\)」を参照してください。  
-  
-## ウォッチ ウィンドウでの式の観察  
- 今度は、代わりに式を使用してみましょう。 デバッガーによって認識される有効な式であれば、どの式でも追加できます。  
-  
- たとえば、前のセクションに記載したコードでは、次のようにして 3 つの値の平均を取得できます。  
-  
- ![WatchExpression](~/debugger/media/watchexpression.png "WatchExpression")  
-  
- 一般に、**ウォッチ** ウィンドウで式を評価する場合の規則は、コーディング言語で式を評価する場合の規則と同じです。 式に構文エラーがある場合は、コード エディターで表示されるものと同じコンパイラ エラーを受け取るはずです。 次に例を示します。  
-  
- ![WatchExpressionError](~/debugger/media/watchexpressionerror.png "WatchExpressionError")  
-  
-##  <a name="bkmk_refreshWatch"></a> 古いウォッチ値の更新  
- 特定の状況では、**ウォッチ** ウィンドウで式を評価しているときに、更新アイコン \(2 本の矢印の円、または 2 本の波線の円\) が表示されることがあります。  たとえば、プロパティの評価 \(**\[ツール\]\/\[オプション\]\/\[デバッグ\]\/\[プロパティの評価とその他の暗黙的な関数の呼び出しを常に有効にする\]**\) がオフになっていて、次のコードがある場合です。  
-  
-```c#  
-static void Main(string[] args) { List<string> list = new List<string>(); list.Add("hello"); list.Add("goodbye"); }  
+```C++  
+int main()
+{
+    int a, b, c;
+    a = 1;
+    b = 2;
+    c = 0;
+
+    for (int i = 0; i < 10; i++)
+    {
+        a++;
+        b *= 2;
+        c = a + b;
+    }
+
+    return 0;
+}
   
 ```  
   
- このリストの `Count` プロパティにウォッチを設定すると、次のようなものが表示されます。  
+ Add the values of the three variables to the Watch window as follows:  
+  
+1.  Set a breakpoint on the `c = a + b;` line.  
+  
+2.  Start debugging (**F5**). Execution stops at the breakpoint.  
+  
+3.  Open the Watch window (**Debug > Windows > Watch > Watch 1**, or **CTRL+ALT+W, 1**).  
+  
+4.  Add the `a` variable to the first row, the `b` variable to the second row, and the `c` variable to the third row.
+
+    You can add variables by clicking an empty row and typing the variable name.
+  
+5.  Continue debugging (press **F11** to advance the debugger).  
+  
+ You should see the variable values changing as you iterate through the `for` loop.  
+  
+ If you are programming in native code, you may sometimes need to qualify the context of a variable name or an expression containing a variable name. The context is the function, source file, and module where a variable is located. If you have to do this, you can use the context operator syntax. For more information, see [Context Operator (C++)](../debugger/context-operator-cpp.md).  
+  
+## <a name="observing-expressions-with-the-watch-window"></a>Observing expressions with the Watch window  
+ Now let's try using an expression instead. You can add any valid expression recognized by the debugger.  
+  
+ For example, if you have the code listed in the preceding section, you can get the average of the three values like this:  
+  
+ ![Watch Expression](../debugger/media/watchexpression.png "WatchExpression")  
+  
+ In general, the rules for evaluating expressions in the **Watch** window are the same as the rules for evaluating expressions in your coding language. If your expression has a syntax error, you can expect the same compiler error that you would see in the code editor. Here's an example:  
+  
+ ![Watch Expression Error](../debugger/media/watchexpressionerror.png "WatchExpressionError")  
+  
+##  <a name="bkmk_refreshWatch"></a> Refreshing Watch values that are out of date  
+ In certain circumstances you might see a refresh icon (a circular arrow) when an expression is evaluated in the **Watch** window.  For example, if you have property evaluation turned off (**Tools > Options > Debugging > Enable property evaluation and other implicit function calls**), and you have the following code:  
+  
+```CSharp  
+static void Main(string[] args)  
+{  
+    List<string> list = new List<string>();  
+    list.Add("hello");  
+    list.Add("goodbye");  
+}  
+  
+```  
+  
+ If you set a watch on the `Count` property of the list, you should see something like the following:  
   
  ![RefreshWatch](../debugger/media/refreshwatch.png "RefreshWatch")  
   
- これは、エラーまたは古い値を示します。 通常はこのアイコンをクリックして値を更新できますが、状況によっては、値を更新したくない場合があるはずです。 まず、値が評価されなかった理由を知る必要があります。  
+ This indicates an error or a value that is out of date. You can generally refresh the value by clicking on the icon, but in some cases you might prefer not to refresh it. First you need to know why the value was not evaluated.  
   
- このアイコンをポイントすると、式が評価されなかった理由がツールヒントに表示されます。 弧を描く矢印が表示された場合、式が評価されなかった理由は次のいずれかです。  
+ If you point to the icon, a tooltip provides information about why the expression was not evaluated.  If the circling arrows appear, the expression was not evaluated for one of the following reasons:  
   
--   •	式の評価中にエラーが発生しました。 たとえば、タイムアウトが発生した場合や、変数がスコープ外になった場合などです。  
+-   An error occurred as the expression was being evaluated. For example, a time-out might have occurred, or a variable might have been out of scope.  
   
--   •	式に、アプリケーションに副作用を発生させる関数呼び出しが含まれています \([副作用と式](#bkmk_sideEffects) を参照\)。  
+-   The expression contains a function call which could trigger a side effect in the application (see [Side Effects and Expressions](#bkmk_sideEffects)).  
   
--   デバッガーによるプロパティの自動評価と暗黙的な関数呼び出し \(**\[ツール\]\/\[オプション\]\/\[デバッグ\]\/\[プロパティの評価とその他の暗黙的な関数の呼び出しを常に有効にする\]**\) がオフにされているため、式を自動的に評価できません。  
+-   Automatic evaluation of properties and implicit functions calls by the debugger is turned off (**Tools > Options > Debugging > Enable property evaluation and other implicit function calls**), and then the expression cannot be automatically evaluated.  
   
- 値を更新するには、更新アイコンをクリックするか、Space キーを押します。 デバッガーで、式の再評価が試行されます。 プロパティの自動評価と暗黙的な副作用が無効になっていたために更新アイコンが表示された場合は、式を評価できるようになります。  
+ To refresh the value, click the refresh icon or press the spacebar. The debugger will try to reevaluate the expression. If the refresh icon appeared because automatic evaluation of properties and implicit side effects was turned off, the expression can be evaluated.  
   
- スレッドを表す 2 本の波線を含む円のアイコンが表示された場合、式が評価されなかった理由は、スレッドの間に依存関係があるためです。 つまり、コードを評価するには、アプリケーションの他のスレッドを一時的に実行することが必要になります。 中断モードの場合、通常、アプリケーションのすべてのスレッドは停止されます。 他のスレッドを一時的に実行できるようにすると、プログラムの状態に予測できない影響を及ぼすことがあり、ブレークポイントやスレッドに対する例外のスローなどのイベントがデバッガーで無視される可能性があります。  
+ If you see an icon that is a circle with two wavy lines that resemble threads, the expression was not evaluated because of a potential cross-thread dependency. In other words, evaluating the code requires other threads in your application to run temporarily. When you are in break mode, all threads in your application are typically stopped. Allowing other threads to run temporarily can have unexpected effects on the state of your program and causes the debugger to ignore events such as breakpoints and exceptions thrown on those threads.  
   
-##  <a name="bkmk_sideEffects"></a> 副作用と式  
- 式を評価すると、変数の値が変わる場合や、プログラムの状態に影響が及ぶ場合があります。 たとえば、次の式を評価すると、`var1` の値が変わります。  
+##  <a name="bkmk_sideEffects"></a> Side Effects and Expressions  
+ Evaluating some expressions can change the value of a variable or otherwise affect the state of your program. For example, evaluating the following expression changes the value of `var1`:  
   
 ```  
 var1 = var2  
 ```  
   
- これを[副作用](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))と呼びます。 副作用によってプログラムの動作方法が変わると、デバッグがさらに困難になります。  
+ This is called  a [side effect](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)). Side effects can make debugging more difficult by changing the way your program operates.  
   
- 副作用をもたらすことが既知となっている式は、最初に入力したときに 1 回だけ評価されます。 以降の評価は無効になります。 値の横に表示される更新アイコンをクリックして、手動でこの動作をオーバーライドできます。  
+ An expression that is known to have side effects is  evaluated only once, when you first enter it. Subsequent evaluations are disabled. You can manually override this behavior by clicking the update icon that appears next to the value.  
   
- すべての副作用を回避する 1 つの方法は、関数の自動評価 \(**\[ツール\]\/\[オプション\]\/\[デバッグ\]\/\[プロパティの評価とその他の暗黙的な関数の呼び出しを常に有効にする\]**\) をオフにすることです。  
+ One way to avoid all side effects is to turn off automatic function evaluation (**Tools > Options > Debugging > Enable property evaluation and other implicit function calls**).  
   
- プロパティの評価または暗黙的な関数呼び出しがオフに設定されている場合でも、**ac** 書式修飾子を使用して、強制的に評価できます \(C\# の場合のみ\)。 「[C\# の書式指定子](../debugger/format-specifiers-in-csharp.md)」を参照してください。  
+ When evaluation of properties or implicit function calls is turned off, you can force evaluation by using the **ac** format modifier (for C# only). See [Format Specifiers in C#](../debugger/format-specifiers-in-csharp.md).  
   
-## ウォッチ ウィンドウでのオブジェクト ID の使用 \(C\# および Visual Basic\)  
- 特定のオブジェクトの動作を観察しなければならないことがあります。その一例は、ローカル変数がスコープ外になった後、その変数が参照するオブジェクトを追跡する必要がある場合です。 C\# と Visual Basic では、参照型の特定のインスタンスのオブジェクト ID を作成し、それらの ID をウォッチ ウィンドウやブレークポイントの条件で使用できます。 オブジェクト ID は、共通言語ランタイム \(CLR\) のデバッグ サービスで生成されて、オブジェクトに関連付けられます。  
+## <a name="bkmk_objectIds"></a> Using Object IDs in the Watch window (C# and Visual Basic)  
+ There are times when you want to observe the behavior of a specific object; for example, you might want to track an object referred to by a local variable after that variable has gone out of scope. In C# and Visual Basic, you can create object IDs for specific instances of reference types and use them in the Watch window and in breakpoint conditions. The object ID is generated by the common language runtime (CLR) debugging services and associated with the object.  
   
 > [!NOTE]
->  オブジェクト ID による参照は弱参照であり、これによって、オブジェクトがガベージ コレクションの対象から外れることはありません。 オブジェクト ID は、現在のデバッグ セッションでのみ有効です。  
+>  Object IDs create weak references, and do not prevent the object from being garbage collected. They are valid only for the current debugging session.  
   
- 次のコードでは、あるメソッドがローカル変数を使用して `Person` を作成しますが、別のメソッドでの `Person` の名前を調べる必要があります。  
+ In the following code one method creates a `Person` using a local variable, but you want to find out what the `Person`'s name is in a different method:  
   
-```c#  
-class Person { public Person(string name) { Name = name; } public string Name { get; set; } } public class Program { List<Person> _people = new List<Person>(); public static void Main(string[] args) { MakePerson(); DoSomething(); } private static void MakePerson() { var p = new Person("Bob"); _people.Add(p); } private static void DoSomething() { // more processing Console.WriteLine("done"); } }  
+```CSharp  
+class Person  
+{  
+    public Person(string name)  
+    {  
+        Name = name;  
+    }  
+    public string Name { get; set; }  
+}  
+  
+public class Program  
+{  
+    List<Person> _people = new List<Person>();  
+    public static void Main(string[] args)  
+    {  
+        MakePerson();  
+        DoSomething();  
+    }  
+  
+    private static void MakePerson()  
+    {  
+        var p = new Person("Bob");  
+        _people.Add(p);  
+    }  
+  
+    private static void DoSomething()  
+    {  
+        // more processing  
+         Console.WriteLine("done");  
+    }  
+}  
   
 ```  
   
- **ウォッチ** ウィンドウでその `Person` オブジェクトへの参照を追加するには、次のようにします。  
+ You can add a reference to that `Person` object in the **Watch** window as follows:  
   
-1.  コードで、オブジェクトが作成されてからしばらく経った時点にブレークポイントを設定します。  
+1.  Set a breakpoint in the code some time after the object has been created.  
   
-2.  デバッグを開始し、ブレークポイントで実行が停止したら、**\[ローカル\]** ウィンドウで対象の変数を見つけて右クリックし、**\[オブジェクト ID の作成\]** を選択します。  
+2.  Start debugging, and when execution stops in the breakpoint, find the variable in the **Locals** window, right-click it, and select **Make Object ID**.  
   
-3.  **\[ローカル\]** ウィンドウに、**$** が付いた番号が表示されるはずです。 これが、オブジェクト ID です。  
+3.  You should see a **$** plus a number in the **Locals** window. This is the object ID.  
   
-4.  このオブジェクト ID をウォッチ ウィンドウに追加します。  
+4.  Add the object ID to the Watch window.  
   
-5.  オブジェクトの動作を観察する場所にブレークポイントを設定します。  上記のコードで、その場所に該当するのは `DoSomething()` メソッドです。  
+5.  Set a breakpoint where you want to observe the object's behavior.  In the code above, that would be in the `DoSomething()` method.  
   
-6.  デバッグを続行します。`DoSomething()` メソッドで実行が停止すると、**ウォッチ** ウィンドウに `Person` オブジェクトが表示されます。  
+6.  Continue debugging, and when execution stops in the `DoSomething()` method, the **Watch** window displays the `Person` object.  
   
 > [!NOTE]
->  オブジェクトのプロパティ \(上記の例では `Person.Name` など\) を確認する必要がある場合、プロパティの評価を有効にしておく必要があります。  
+>  If you want to see the object's properties, such as `Person.Name` in the example above, you must have enabled property evaluation .  
   
-## ウォッチ ウィンドウでのレジスタの使用 \(C\+\+ のみ\)  
- ネイティブ コードをデバッグしている場合、変数名と同様に、 **$\<register name\>** または **@\<register name\>** を使用してレジスタ名も追加できます。  詳細については、「[擬似変数](../debugger/pseudovariables.md)」を参照してください。  
+## <a name="using-registers-in-the-watch-window-c-only"></a>Using registers in the Watch window (C++ only)  
+ If you are debugging native code, you can add register names as well as variable names using **$\<register name>** or **@\<register name>**.  For more information, see [Pseudovariables](../debugger/pseudovariables.md).  
   
-## 動的ビューとウォッチ ウィンドウ  
- 一部のスクリプト言語 \(JavaScript や Python など\) は動的型付けまたは[ダック タイピング](https://en.wikipedia.org/wiki/Duck_typing)を使用しています。また、.NET 言語 \(バージョン 4.0 以降\) は、表示できないランタイム プロパティやメソッドを持つために通常のデバッグ ウィンドウでは観察が困難なオブジェクトをサポートしています。  
+## <a name="dynamicview-and-the-watch-window"></a>DynamicView and the Watch window  
+ Some scripting languages (e.g. JavaScript or Python) use dynamic or [duck typing](https://en.wikipedia.org/wiki/Duck_typing), and .NET languages (in version 4.0 and later) support objects that are difficult to observe using the normal debugging windows, because they may have runtime properties and methods that cannot be displayed.  
   
- [IDynamicMetaObjectProvider インターフェイス](../Topic/IDynamicMetaObjectProvider%20Interface.md) を実装する型から作成されたオブジェクトをウォッチ ウィンドウで表示すると、デバッガーによって特殊な**動的ビュー** ノードが **\[自動変数\]** 表示に追加されます。 このノードには動的オブジェクトの動的メンバーが表示されますが、そのメンバーの値を編集することはできません。  
+ When the Watch window displays a or an object created from a type that implements the [IDynamicMetaObjectProvider Interface](http://msdn.microsoft.com/Library/e887a72d-ebe2-4253-a7e8-3d8d05154647), the debugger adds a special **Dynamic View**  node to the **Autos** display. This node shows the dynamic members of the dynamic object but does not allow editing of the member values.  
   
- **動的ビュー**の任意の子を右クリックして **\[ウォッチ式の追加\]** を選択すると、デバッガーはオブジェクトを動的オブジェクトにキャストする新しいウォッチ変数を挿入します。 つまり、**オブジェクト名**が **\(\(動的\) オブジェクト\).名前**になります。  
+ If you right-click any child of a **Dynamic View** and choose **Add Watch**, the debugger inserts a new watch variable that casts an object to a dynamic object. In other words, **object Name** becomes (**(dynamic)object).Name**.  
   
- **動的ビュー**のメンバーを評価すると、副作用が発生する場合があります。 副作用の詳細については、「[副作用と式](#bkmk_sideEffects)」を参照してください。 C\# の場合、コード行の新しいステップに移行したときに、**動的ビュー**に表示される値をデバッガーが自動的に再評価することはありません。 Visual Basic の場合、**動的ビュー**を通じて追加された式は自動的に最新の情報に更新されます。  
+ Evaluating the members of a **Dynamic View** can have side effects. For an explanation of what side effects are, see [Side Effects and Expressions](#bkmk_sideEffects). For C#, the debugger does not automatically reevaluate the values shown in the **Dynamic View** when you step to a new line of code. For Visual Basic, expressions added through the **Dynamic View** are automatically refreshed.  
   
- 動的ビューの値を更新する方法については、「[古いウォッチ値の更新](#bkmk_refreshWatch)」を参照してください。  
+ For instructions about how to refresh the Dynamic View values, see [Refreshing Watch values that are out of date](#bkmk_refreshWatch).  
   
- あるオブジェクトに対してのみ**動的ビュー**を表示するには、次のように **dynamic** 書式指定子を使用します。  
+ If you want to display only the **Dynamic View** for an object, you can use the **dynamic** format specifier:  
   
--   C\#: **ObjectName, dynamic**  
+-   C#: **ObjectName, dynamic**  
   
 -   Visual Basic:: **$dynamic, ObjectName**  
   
- **動的ビュー**は、COM オブジェクトのデバッグ機能も強化します。 デバッガーは **System.\_\_ComObject** にラップされた COM オブジェクトを検出すると、そのオブジェクトの**動的ビュー** ノードを追加します。  
+ The **Dynamic View** also enhances the debugging experience for COM objects. When the debugger encounters a COM object wrapped in **System.__ComObject**, it adds a **Dynamic View** node for the object.  
   
-## 参照  
- [デバッガー ウィンドウ](../debugger/debugger-windows.md)
+## <a name="see-also"></a>See Also  
+ [Debugger Windows](../debugger/debugger-windows.md)

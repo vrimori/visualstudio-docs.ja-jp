@@ -1,188 +1,197 @@
 ---
-title: "チュートリアル: 単純データ バインドをサポートする Windows フォーム ユーザー コントロールの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "カスタム コントロール [Visual Studio], [データ ソース] ウィンドウ"
-  - "[データ ソース] ウィンドウ, コントロール"
+title: Create a user control that supports simple data binding | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
+helpviewer_keywords:
+- custom controls [Visual Studio], Data Sources Window
+- Data Sources Window, controls
 ms.assetid: b1488366-6dfb-454e-9751-f42fd3f3ddfb
 caps.latest.revision: 14
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 6c2f7a425bf816705142a4af81c44e824c401b34
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
+
 ---
-# チュートリアル: 単純データ バインドをサポートする Windows フォーム ユーザー コントロールの作成
-Windows アプリケーションのフォームにデータを表示する場合は、**\[ツールボックス\]** から既存のコントロールを選択するか、またはアプリケーションが標準コントロールでは提供できない機能を必要とする場合は、カスタム コントロールを記述できます。  このチュートリアルでは、<xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装するコントロールを作成する方法を示します。  <xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装するコントロールには、データにバインドできるプロパティを 1 つ含めることができます。  このようなコントロールは、<xref:System.Windows.Forms.TextBox> や <xref:System.Windows.Forms.CheckBox> に似ています。  
+# <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>Create a Windows Forms user control that supports simple data binding
+When displaying data on forms in Windows applications, you can choose existing controls from the **Toolbox**, or you can author custom controls if your application requires functionality that is not available in the standard controls. This walkthrough shows how to create a control that implements the <xref:System.ComponentModel.DefaultBindingPropertyAttribute>. Controls that implement the <xref:System.ComponentModel.DefaultBindingPropertyAttribute> can contain one property that can be bound to data. Such controls are similar to a <xref:System.Windows.Forms.TextBox> or <xref:System.Windows.Forms.CheckBox>.  
   
- コントロールの作成の詳細については、「[デザイン時の Windows フォーム コントロールの開発](../Topic/Developing%20Windows%20Forms%20Controls%20at%20Design%20Time.md)」を参照してください。  
+ For more information on control authoring, see [Developing Windows Forms Controls at Design Time](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).  
   
- データ バインディングのシナリオで使用するためのコントロールを作成するときは、次のいずれかのデータ バインド属性を実装する必要があります。  
+ When authoring controls for use in data-binding scenarios, you should implement one of the following data-binding attributes:  
   
-|データ バインド属性の使用|  
-|-------------------|  
-|単一のデータ列またはプロパティを表示する <xref:System.Windows.Forms.TextBox> のような <xref:System.ComponentModel.DefaultBindingPropertyAttribute> を簡単なコントロールに実装します。  このチュートリアルでは、このプロセスについて説明します。|  
-|データの一覧またはテーブルを表示する <xref:System.Windows.Forms.DataGridView> のような <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> をコントロールに実装します。  詳細については、「[チュートリアル: 複合データ バインドをサポートする Windows フォーム ユーザー コントロールの作成](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md)」を参照してください。|  
-|データの一覧またはテーブルを表示しますが、単一の列またはプロパティを表示する必要もある <xref:System.Windows.Forms.ComboBox> のような <xref:System.ComponentModel.LookupBindingPropertiesAttribute> をコントロールに実装します。  詳細については、「[チュートリアル: 検索データ バインドをサポートする Windows フォーム ユーザー コントロールの作成](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md)」を参照してください。|  
+|Data-binding attribute usage|  
+|-----------------------------------|  
+|Implement the <xref:System.ComponentModel.DefaultBindingPropertyAttribute> on simple controls, like a <xref:System.Windows.Forms.TextBox>, that display a single column (or property) of data. (This process is described in this walkthrough page.)|  
+|Implement the <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> on controls, like a <xref:System.Windows.Forms.DataGridView>, that display lists (or tables) of data. For more information, see [Create a Windows Forms user control that supports complex data binding](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).|  
+|Implement the <xref:System.ComponentModel.LookupBindingPropertiesAttribute> on controls, like a <xref:System.Windows.Forms.ComboBox>, that display lists (or tables) of data but also need to present a single column or property. For more information, see [Create a Windows Forms user control that supports lookup data binding](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).|  
   
- このチュートリアルでは、テーブルの単一の列のデータを表示する簡単なコントロールを作成します。  この例では、Northwind サンプル データベースの `Customers` テーブルの `Phone` 列を使用します。  この簡単なユーザー コントロールは、<xref:System.Windows.Forms.MaskedTextBox> を使用し、電話番号にマスクを設定して、顧客の電話番号を標準の電話番号形式で表示します。  
+ This walkthrough creates a simple control that displays data from a single column in a table. This example uses the `Phone` column of the `Customers` table from the Northwind sample database. The simple user control will display customers' phone numbers in a standard phone-number format, by using a <xref:System.Windows.Forms.MaskedTextBox> and setting the mask to a phone number.  
   
- このチュートリアルでは、次の作業を行う方法について説明します。  
+ During this walkthrough, you will learn how to:  
   
--   新しい **Windows アプリケーション**を作成します。  
+-   Create a new **Windows Application**.  
   
--   新しい**ユーザー コントロール**をプロジェクトに追加します。  
+-   Add a new **User Control** to your project.  
   
--   ユーザー コントロールをビジュアルに設計します。  
+-   Visually design the user control.  
   
--   `DefaultBindingProperty` 属性を実装します。  
+-   Implement the `DefaultBindingProperty` attribute.  
   
--   [データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)を使用して、データセットを作成します。  
+-   Create a dataset with the **Data Source Configuration** wizard.  
   
--   **\[データ ソース\]** ウィンドウで **\[Phone\]** 列が新しいコントロールを使用するように設定します。  
+-   Set the **Phone** column in the **Data Sources** window to use the new control.  
   
--   フォームを作成して、新しいコントロールにデータを表示します。  
+-   Create a form to display data in the new control.  
   
-## 必須コンポーネント  
- このチュートリアルを完了するための要件は次のとおりです。  
+## <a name="prerequisites"></a>Prerequisites  
+ In order to complete this walkthrough, you will need:  
   
--   Northwind サンプル データベースにアクセスします。  詳細については、「[方法 : サンプル データベースをインストールする](../data-tools/how-to-install-sample-databases.md)」を参照してください。  
+-   Access to the Northwind sample database. For more information, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
   
-## Windows アプリケーションの作成  
- 最初に **Windows アプリケーション**を作成します。  
+## <a name="create-a-windows-application"></a>Create a Windows Application  
+ The first step is to create a **Windows Application**.  
   
-#### 新しい Windows プロジェクトを作成するには  
+#### <a name="to-create-the-new-windows-project"></a>To create the new Windows project  
   
-1.  Visual Studio の **\[ファイル\]** メニューの **\[新しいプロジェクト\]** をクリックします。  
+1.  In Visual Studio, from the **File** menu, create a new **Project**.  
   
-2.  プロジェクトに **SimpleControlWalkthrough** という名前を付けます。  
+2.  Name the project **SimpleControlWalkthrough**.  
   
-3.  **\[Windows アプリケーション\]** をクリックし、**\[OK\]** をクリックします。  詳細については、「[クライアント アプリケーション](../Topic/Developing%20Client%20Applications%20with%20the%20.NET%20Framework.md)」を参照してください。  
+3.  Select **Windows Application** and click **OK**. For more information, see [Client Applications](/dotnet/framework/develop-client-apps).  
   
-     **SimpleControlWalkthrough** プロジェクトが作成されて**ソリューション エクスプローラー**に追加されます。  
+     The **SimpleControlWalkthrough** project is created, and added to **Solution Explorer**.  
   
-## プロジェクトへのユーザー コントロールの追加  
- このチュートリアルでは**ユーザー コントロール**からデータ バインディング可能な簡単なコントロールを作成するので、**ユーザー コントロール**の項目を **SimpleControlWalkthrough** プロジェクトに追加します。  
+## <a name="add-a-user-control-to-the-project"></a>Add a user control to the project  
+ This walkthrough creates a simple data-bindable control from a **User Control**, so add a **User Control** item to the **SimpleControlWalkthrough** project.  
   
-#### プロジェクトにユーザー コントロールを追加するには  
+#### <a name="to-add-a-user-control-to-the-project"></a>To add a user control to the project  
   
-1.  **\[プロジェクト\]** メニューの **\[ユーザー コントロールの追加\]** を選択します。  
+1.  From the **Project** menu, choose **Add User Control**.  
   
-2.  \[ファイル名\] 領域に「`PhoneNumberBox`」と入力し、**\[追加\]** をクリックします。  
+2.  Type `PhoneNumberBox` in the Name area, and click **Add**.  
   
-     **PhoneNumberBox** コントロールが **ソリューション エクスプローラー**に追加され、デザイナーが開きます。  
+     The **PhoneNumberBox** control is added to **Solution Explorer**, and opens in the designer.  
   
-## PhoneNumberBox コントロールの設計  
- このチュートリアルでは、既存の <xref:System.Windows.Forms.MaskedTextBox> を展開して `PhoneNumberBox` コントロールを作成します。  
+## <a name="design-the-phonenumberbox-control"></a>Design the PhoneNumberBox control  
+ This walkthrough expands upon the existing <xref:System.Windows.Forms.MaskedTextBox> to create the `PhoneNumberBox` control.  
   
-#### PhoneNumberBox コントロールを設計するには  
+#### <a name="to-design-the-phonenumberbox-control"></a>To design the PhoneNumberBox control  
   
-1.  **ツールボックス**からユーザー コントロールのデザイン サーフェイスに <xref:System.Windows.Forms.MaskedTextBox> をドラッグします。  
+1.  Drag a <xref:System.Windows.Forms.MaskedTextBox> from the **Toolbox** onto the user control's design surface.  
   
-2.  ドラッグした <xref:System.Windows.Forms.MaskedTextBox> のスマート タグを選択し、**\[マスクの設定\]** を選択します。  
+2.  Select the smart tag on the <xref:System.Windows.Forms.MaskedTextBox> you just dragged, and choose **Set Mask**.  
   
-3.  **\[定型入力\]**ダイアログ ボックスで **\[電話番号\]** を選択し、**\[OK\]** をクリックしてマスクを設定します。  
+3.  Select **Phone number** in the **Input Mask** dialog box, and click **OK** to set the mask.  
   
-## 必要なデータ バインディング属性の追加  
- データ バインディングをサポートする簡単なコントロールに対しては <xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装します。  
+## <a name="add-the-required-data-binding-attribute"></a>Add the required data-binding attribute  
+ For simple controls that support databinding, implement the <xref:System.ComponentModel.DefaultBindingPropertyAttribute>.  
   
-#### DefaultBindingProperty 属性を実装するには  
+#### <a name="to-implement-the-defaultbindingproperty-attribute"></a>To implement the DefaultBindingProperty attribute  
   
-1.  `PhoneNumberBox` コントロールをコード ビューに切り替えます。  **\[表示\]** メニューの **\[コード\]** をクリックします。  
+1.  Switch the `PhoneNumberBox` control to code view. (On the **View** menu, choose **Code**.)  
   
-2.  `PhoneNumberBox` のコードを次のコードで置き換えます。  
+2.  Replace the code in the `PhoneNumberBox` with the following:  
   
-     [!code-cs[VbRaddataDisplaying#3](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.cs)]
-     [!code-vb[VbRaddataDisplaying#3](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.vb)]  
+     [!code-cs[VbRaddataDisplaying#3](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.cs)]  [!code-vb[VbRaddataDisplaying#3](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-simple-data-binding_1.vb)]  
   
-3.  **\[ビルド\]** メニューの **\[ソリューションのビルド\]** をクリックします。  
+3.  From the **Build** menu, choose **Build Solution**.  
   
-## データベースからのデータ ソースの作成  
- この手順では、**データ ソース構成ウィザード**を使用して、Northwind サンプル データベースの `Customers` テーブルに基づいてデータ ソースを作成します。  接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。  Northwind サンプル データベースのセットアップの詳細については、「[方法 : サンプル データベースをインストールする](../data-tools/how-to-install-sample-databases.md)」を参照してください。  
+## <a name="create-a-data-source-from-your-database"></a>Create a data source from your database  
+ This step uses the **Data Source Configuration**wizard to create a data source based on the `Customers` table in the Northwind sample database. You must have access to the Northwind sample database to create the connection. For information on setting up the Northwind sample database, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
   
-#### データ ソースを作成するには  
+#### <a name="to-create-the-data-source"></a>To create the data source  
   
-1.  **\[データ\]** メニューの **\[データ ソースの表示\]** をクリックします。  
+1.  On the **Data** menu, click **Show Data Sources**.  
   
-2.  **\[データ ソース\]** ウィンドウで、**\[新しいデータ ソースの追加\]** をクリックして**データ ソース構成ウィザード**を起動します。  
+2.  In the **Data Sources** window, select **Add New Data Source** to start the **Data Source Configuration** wizard.  
   
-3.  **\[データソースの種類を選択\]** ページで、**\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
+3.  On the **Choose a Data Source Type** page, select **Database**, and then click **Next**.  
   
-4.  **\[データ接続の選択\]** ページで、次のいずれかの操作を行います。  
+4.  On the **Choose your Data Connection** page, do one of the following:  
   
-    -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
+    -   If a data connection to the Northwind sample database is available in the drop-down list, select it.  
   
-         Or  
+    -   Select **New Connection** to launch the **Add/Modify Connection** dialog box.  
   
-    -   **\[新しい接続\]** を選択して **\[接続の追加\] または \[接続の変更\]** ダイアログ ボックスを表示します。  
+5.  If your database requires a password, select the option to include sensitive data, and then click **Next**.  
   
-5.  データベースにパスワードが必要な場合は、該当するオプションを選択して重要情報を含め、**\[次へ\]** をクリックします。  
+6.  On the **Save connection string to the Application Configuration file** page, click **Next**.  
   
-6.  **\[アプリケーション構成ファイルに接続文字列を保存\]** ページで、**\[次へ\]** をクリックします。  
+7.  On the **Choose your Database Objects** page, expand the **Tables** node.  
   
-7.  **\[データベース オブジェクトの選択\]** ページの **\[テーブル\]** ノードを展開します。  
+8.  Select the `Customers` table, and then click **Finish**.  
   
-8.  `Customers` テーブルを選択し、**\[完了\]** をクリックします。  
+     The **NorthwindDataSet** is added to your project, and the `Customers` table appears in the **Data Sources** window.  
   
-     プロジェクトに **NorthwindDataSet** が追加され、**\[データ ソース\]** ウィンドウに `Customers` テーブルが表示されます。  
+## <a name="set-the-phone-column-to-use-the-phonenumberbox-control"></a>Set the phone column to use the PhoneNumberBox control  
+ Within the **Data Sources** window, you can set the control to be created prior to dragging items onto your form.  
   
-## PhoneNumberBox コントロールを使用するように \[Phone\] 列を設定する  
- **\[データ ソース\]** ウィンドウでは、フォームにコントロールをドラッグする前に作成するコントロールを設定できます。  
+#### <a name="to-set-the-phone-column-to-bind-to-the-phonenumberbox-control"></a>To set the phone column to bind to the PhoneNumberBox control  
   
-#### \[Phone\] 列を PhoneNumberBox コントロールにバインドするように設定するには  
+1.  Open **Form1** in the designer.  
   
-1.  デザイナーで **Form1** を開きます。  
+2.  Expand the **Customers** node in the **Data Sources** window.  
   
-2.  **\[データ ソース\]** ウィンドウの **\[Customers\]** ノードを展開します。  
+3.  Click the drop-down arrow on the **Customers** node, and choose **Details** from the control list.  
   
-3.  **\[Customers\]** ノードのドロップダウン矢印をクリックし、コントロール リストの **\[Details\]** を選択します。  
+4.  Click the drop-down arrow on the **Phone** column, and choose **Customize**.  
   
-4.  **\[Phone\]** 列のドロップダウン矢印をクリックし、**\[Customize\]** をクリックします。  
+5.  Select the **PhoneNumberBox** from the list of **Associated Controls** in the **Data UI Customization Options** dialog box.  
   
-5.  **\[データ UI カスタマイズ オプション\]** ダイアログ ボックスの **\[関連付けられたコントロール\]** の一覧の **\[PhoneNumberBox\]** を選択します。  
+6.  Click the drop-down arrow on the **Phone** column, and choose **PhoneNumberBox**.  
   
-6.  **\[Phone\]** 列のドロップダウン矢印をクリックし、**\[PhoneNumberBox\]** をクリックします。  
+## <a name="add-controls-to-the-form"></a>Add controls to the form  
+ You can create the data-bound controls by dragging items from the **Data Sources** window onto the form.  
   
-## フォームへのコントロールの追加  
- **\[データ ソース\]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。  
+#### <a name="to-create-data-bound-controls-on-the-form"></a>To create data-bound controls on the form  
   
-#### フォームにデータ バインド コントロールを作成するには  
+-   Drag the main **Customers** node from the **Data Sources** window onto the form, and verify that the `PhoneNumberBox` control is used to display the data in the `Phone` column.  
   
--   **\[データ ソース\]** ウィンドウからフォームにメインの **\[Customers\]** ノードをドラッグし、`PhoneNumberBox` コントロールを使用して `Phone` 列にデータが表示されていることを確認します。  
+     Data-bound controls with descriptive labels appear on the form, along with a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.  
   
-     説明のラベルが付いたデータ バインド コントロールとレコード間を移動するためのツール ストリップ \(<xref:System.Windows.Forms.BindingNavigator>\) がフォームに表示されます。  [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、[CustomersTableAdapter](../data-tools/tableadapter-overview.md)、<xref:System.Windows.Forms.BindingSource>、および <xref:System.Windows.Forms.BindingNavigator> がコンポーネント トレイに表示されます。  
+## <a name="run-the-application"></a>Run the application  
   
-## アプリケーションの実行  
+#### <a name="to-run-the-application"></a>To run the application  
   
-#### アプリケーションを実行するには  
+-   Press F5 to run the application.  
   
--   F5 キーを押してアプリケーションを実行します。  
+## <a name="next-steps"></a>Next Steps  
+ Depending on your application requirements, there are several steps you may want to perform after creating a control that supports data binding. Some typical next steps include:  
   
-## 次の手順  
- アプリケーションの要件に応じて、データ バインディングをサポートするコントロールの作成後に、追加の操作を実行できます。  次の手順として、一般的には、次のようなことを実行します。  
+-   Placing your custom controls in a control library so you can reuse them in other applications.  
   
--   他のアプリケーションで再利用できるように、コントロール ライブラリにカスタム コントロールを配置します。  
+-   Creating controls that support more complex data-binding scenarios. For more information, see [Create a Windows Forms user control that supports complex data binding](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md) and [Create a Windows Forms user control that supports lookup data binding](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).  
   
--   より複雑なデータ バインディングのシナリオをサポートするコントロールを作成します。  詳細については、「[チュートリアル: 複合データ バインドをサポートする Windows フォーム ユーザー コントロールの作成](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md)」および「[チュートリアル: 検索データ バインドをサポートする Windows フォーム ユーザー コントロールの作成](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md)」を参照してください。  
-  
-## 参照  
- [\[データ ソース\] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../Topic/Set%20the%20control%20to%20be%20created%20when%20dragging%20from%20the%20Data%20Sources%20window.md)   
- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visual Studio のデータ アプリケーションの概要](../data-tools/overview-of-data-applications-in-visual-studio.md)   
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
- [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [アプリケーションへのデータのフェッチ](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
- [データの検証](../Topic/Validating%20Data.md)   
- [データの保存](../data-tools/saving-data.md)
+## <a name="see-also"></a>See Also  
+ [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+ [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)
+

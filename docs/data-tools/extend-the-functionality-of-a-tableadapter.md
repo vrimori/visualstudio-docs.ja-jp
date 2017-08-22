@@ -1,64 +1,70 @@
 ---
-title: "方法 : TableAdapter の機能を拡張する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Visual Studio], 拡張 (TableAdapters を) "
-  - "データ [Visual Studio], TableAdapter"
-  - "TableAdapter, 追加 (機能を)"
+title: Extend the functionality of a TableAdapter | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
+helpviewer_keywords:
+- data [Visual Studio], TableAdapters
+- data [Visual Studio], extending TableAdapters
+- TableAdapters, adding functionality
 ms.assetid: 418249c8-c7f3-47ef-a94c-744cb6fe6aaf
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: a72bc2d1c887cc15905c100e62c4ca007bfcad47
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
+
 ---
-# 方法 : TableAdapter の機能を拡張する
-TableAdapter の機能は、TableAdapter の部分クラス ファイルにコードを追加することによって拡張できます。  
+# <a name="extend-the-functionality-of-a-tableadapter"></a>Extend the functionality of a TableAdapter
+You can extend the functionality of a TableAdapter by adding code to the TableAdapter's partial class file.  
   
- **データセット デザイナー**で TableAdapter が変更されるか、または TableAdapter の構成を変更するウィザードの実行中に何らかの変更が行われると、TableAdapter を定義するコードが再生成されます。  TableAdapter の再生成中にコードが削除されるのを防ぐには、TableAdapter の部分クラス ファイルにコードを追加します。  
+ The code that defines a TableAdapter is regenerated when any changes are made to the TableAdapter in the **Dataset Designer**, or when a wizard  modifies the configuration of a TableAdapter. To prevent your code from being deleted during the regeneration of a TableAdapter, add code to the TableAdapter's partial class file.  
   
- 部分クラスによって、特定のクラスのコードを複数の物理ファイルに分割できます。  詳細については、「[Partial](/dotnet/visual-basic/language-reference/modifiers/partial)」または「[partial \(型\)](/dotnet/csharp/language-reference/keywords/partial-type)」を参照してください。  
+ Partial classes allow code for a specific class to be divided among multiple physical files. For more information, see [Partial](/dotnet/visual-basic/language-reference/modifiers/partial) or [partial (Type)](/dotnet/csharp/language-reference/keywords/partial-type).  
   
-## コード内の TableAdapter の場所の特定  
- TableAdapter はデータセット デザイナーでデザインされますが、生成される TableAdapter のクラスは、<xref:System.Data.DataSet> の入れ子にされたクラスとして生成されるわけではありません。  TableAdapter は、TableAdapter に関連付けられたデータセットの名前に基づいた名前空間にあります。  たとえば、アプリケーションに `HRDataSet` というデータセットがある場合、TableAdapter は `HRDataSetTableAdapters` という名前空間にあります。  名前付け規則は *DatasetName* \+ `TableAdapters` というパターンになります。  
+## <a name="locate-tableadapters-in-code"></a>Locate TableAdapters in code  
+ While TableAdapters are designed with the **Dataset Designer**, the TableAdapter classes that are generated are not  nested classes of <xref:System.Data.DataSet>. TableAdapters are located in a namespace based on the name of the TableAdapter's associated dataset. For example, if your application contains a dataset named `HRDataSet`, the TableAdapters would be located in the `HRDataSetTableAdapters` namespace. (The naming convention follows this pattern: *DatasetName* + `TableAdapters`).  
   
- 次の例では、`NorthwindDataSet` を含むプロジェクトに `CustomersTableAdapter` という TableAdapter があると仮定しています。  
+ The following example assumes a TableAdapter named `CustomersTableAdapter`is in a project with `NorthwindDataSet`.  
   
-#### TableAdapter の部分クラスを作成するには  
+#### <a name="to-create-a-partial-class-for-a-tableadapter"></a>To create a partial class for a TableAdapter  
   
-1.  **\[プロジェクト\]** メニューの **\[クラスの追加\]** をクリックして、新規クラスをプロジェクトに追加します。  
+1.  Add a new class to your project by going to the **Project** menu and selecting **Add Class**.  
   
-2.  クラスに `CustomersTableAdapterExtended` という名前を付けます。  
+2.  Name the class `CustomersTableAdapterExtended`.  
   
-3.  **\[追加\]** をクリックします。  
+3.  Select **Add**.  
   
-4.  プロジェクトの適切な名前空間と部分クラスの名前でコードを置き換えます。  次に例を示します。  
+4.  Replace the code with the correct namespace and partial class name for your project as follows:  
   
-     [!CODE [VbRaddataTableAdapters#2](../CodeSnippet/VS_Snippets_VBCSharp/VbRaddataTableAdapters#2)]  
+     [!code-cs[VbRaddataTableAdapters#2](../data-tools/codesnippet/CSharp/extend-the-functionality-of-a-tableadapter_1.cs)]  [!code-vb[VbRaddataTableAdapters#2](../data-tools/codesnippet/VisualBasic/extend-the-functionality-of-a-tableadapter_1.vb)]  
   
-## 参照  
- [TableAdapter の概要](../data-tools/tableadapter-overview.md)   
- [方法 : TableAdapter を作成する](../data-tools/create-and-configure-tableadapters.md)   
- [方法 : TableAdapter クエリを作成する](../data-tools/how-to-create-tableadapter-queries.md)   
- [方法 : データセットの機能を拡張する](../Topic/How%20to:%20Extend%20the%20Functionality%20of%20a%20Dataset.md)   
- [データに関するチュートリアル](../Topic/Data%20Walkthroughs.md)   
- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visual Studio のデータ アプリケーションの概要](../data-tools/overview-of-data-applications-in-visual-studio.md)   
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
- [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [アプリケーションへのデータのフェッチ](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
- [データの検証](../Topic/Validating%20Data.md)   
- [データの保存](../data-tools/saving-data.md)
+## <a name="see-also"></a>See Also  
+ [Fill datasets by using TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md)

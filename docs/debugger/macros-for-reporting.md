@@ -1,46 +1,62 @@
 ---
-title: "レポート用マクロの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.macros"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "_RPTFn マクロ"
-  - "_RPTn マクロ"
-  - "CRT, レポート マクロ"
-  - "デバッグ [CRT], レポート マクロ"
-  - "マクロ, CRT レポート マクロ"
-  - "マクロ, デバッグ"
+title: Macros for Reporting | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.macros
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- macros, CRT reporting macros
+- macros, debugging with
+- _RPTFn macro
+- CRT, reporting macros
+- debugging [CRT], reporting macros
+- _RPTn macro
 ms.assetid: f2085314-a3a8-4caf-a5a4-2af9ad5aad05
 caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# レポート用マクロの使用
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: edb8feb8c8389936cc6e5b9f4da997d063eb5d47
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-CRTDBG.H で定義されている **\_RPTn** マクロと **\_RPTFn** マクロで、デバッグ用の `printf` ステートメントを置き換えることができます。  これらのマクロは、**\_DEBUG** が定義されていないリリース ビルドでは自動的に消滅するため、**\#ifdef** で囲む必要はありません。  
+---
+# <a name="macros-for-reporting"></a>Macros for Reporting
+You can use the **_RPTn**, and **_RPTFn** macros, defined in CRTDBG.H, to replace the use of `printf` statements for debugging. These macros automatically disappear in your release build when **_DEBUG** is not defined, so there is no need to enclose them in **#ifdef**s.  
   
-|マクロ|説明|  
-|---------|--------|  
-|**\_RPT0**、**\_RPT1**、**\_RPT2**、**\_RPT3**、**\_RPT4**|メッセージ文字列と、0 から 4 個の引数を出力します。  \_RPT1 から **\_RPT4** の場合、メッセージ文字列は、引数に対して printf と同じスタイルの書式指定文字列として機能します。|  
-|**\_RPTF0**、**\_RPTF1**、**、\_RPTF2**、**\_RPTF4**|**\_RPTn** と同様ですが、これらのマクロが記述されているファイル名と行番号も出力します。|  
+|Macro|Description|  
+|-----------|-----------------|  
+|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|Outputs a message string and zero to four arguments. For _RPT1 through **_RPT4**, the message string serves as a printf-style formatting string for the arguments.|  
+|**_RPTF0**, **_RPTF1**, **,_RPTF2**, **_RPTF4**|Same as **_RPTn**, but these macros also output the file name and line number where the macro is located.|  
   
- 次に例を示します。  
+ Consider the following example:  
   
 ```  
 #ifdef _DEBUG  
@@ -51,13 +67,13 @@ CRTDBG.H で定義されている **\_RPTn** マクロと **\_RPTFn** マクロ�
 #endif  
 ```  
   
- このコードは、`someVar` の値と `otherVar` の値を **stdout** に出力します。  次のように `_RPTF2` を呼び出すと、これらの値と一緒にファイル名と行番号も出力できます。  
+ This code outputs the values of `someVar` and `otherVar` to **stdout**. You can use the following call to `_RPTF2` to report these same values and, additionally, the file name and line number:  
   
 ```  
 if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d, otherVar= %d\n", someVar, otherVar );  
 ```  
   
- 特定のアプリケーションでは、C ランタイム ライブラリのマクロで提供されているデバッグ レポートでは不十分な場合があります。その場合は、独自の要件を満たす専用のマクロを設計できます。  たとえば、ヘッダー ファイルの 1 つに、次のような **ALERT\_IF2** というマクロを定義できます。  
+ If you find that a particular application needs debug reporting that the macros supplied with the C run-time library do not provide, you can write a macro designed specifically to fit your own requirements. In one of your header files, for example, you could include code like the following to define a macro called **ALERT_IF2**:  
   
 ```  
 #ifndef _DEBUG                  /* For RELEASE builds */  
@@ -73,14 +89,14 @@ if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d,
 #endif  
 ```  
   
- 次のように **ALERT\_IF2** を 1 回呼び出すだけで、このトピックの冒頭に示した **printf** コードと同じ機能を実現できます。  
+ One call to **ALERT_IF2** could perform all the functions of the **printf** code at the start of this topic:  
   
 ```  
 ALERT_IF2(someVar > MAX_SOMEVAR, "OVERFLOW! In NameOfThisFunc( ),   
 someVar=%d, otherVar=%d.\n", someVar, otherVar );  
 ```  
   
- カスタム マクロは、目的に応じて出力情報の量を増減したり、出力先を変更したりなどの変更を簡単に実現できるため、デバッグ要件が複雑さを増してくる段階で使用すると便利です。  
+ Because a custom macro can easily be changed to report more or less information to different destinations (depending on what is more convenient), this approach can be particularly useful as your debugging requirements evolve.  
   
-## 参照  
- [CRT のデバッグ技術](../debugger/crt-debugging-techniques.md)
+## <a name="see-also"></a>See Also  
+ [CRT Debugging Techniques](../debugger/crt-debugging-techniques.md)

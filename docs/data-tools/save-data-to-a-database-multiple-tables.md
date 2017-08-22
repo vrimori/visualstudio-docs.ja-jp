@@ -1,165 +1,168 @@
 ---
-title: "チュートリアル : データベースへのデータの保存 (複数テーブル) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Visual Studio], 保存"
-  - "データ [Visual Studio], 更新"
-  - "保存 (データを), チュートリアル"
-  - "更新 (データセットを), チュートリアル"
+title: Save data to a database (multiple tables) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
+helpviewer_keywords:
+- updating datasets, walkthroughs
+- data [Visual Studio], saving
+- saving data, walkthroughs
+- data [Visual Studio], updating
 ms.assetid: 7ebe03da-ce8c-4cbc-bac0-a2fde4ae4d07
 caps.latest.revision: 24
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 16b38cf82530761509c27bd8e242f5021bc7453f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
+
 ---
-# チュートリアル : データベースへのデータの保存 (複数テーブル)
-アプリケーション開発における最も一般的なシナリオの 1 つに、Windows アプリケーションのフォームにデータを表示して編集し、更新したデータをデータベースに返送する操作があります。  このチュートリアルでは、2 つの関連するテーブルのデータを表示するフォームを作成し、レコードを編集して変更内容をデータベースに保存する方法を示します。  この例では、Northwind サンプル データベースの `Customers` テーブルと `Orders` テーブルを使用します。  
+# <a name="save-data-to-a-database-multiple-tables"></a>Save data to a database (multiple tables)
+One of the most common scenarios in application development is to display data on a form in a Windows application, edit the data, and send the updated data back to the database. This walkthrough creates a form that displays data from two related tables and shows how to edit records and save changes back to the database. This example uses the `Customers` and `Orders` tables from the Northwind sample database.  
   
- アプリケーション内のデータをデータベースに保存するには、TableAdapter の `Update` メソッドを呼び出します。  項目を **\[データ ソース\]** ウィンドウからドラッグすると、データを保存するコードが、フォームにドラッグされた最初のテーブルに自動的に追加されます。  さらに別のテーブルをフォームに追加した場合は、データ保存用のコードを手動で追加する必要があります。  ここでは、複数のテーブルから更新を保存するコードを追加する手順を示します。  
+ You can save data in your application back to the database by calling the `Update` method of a TableAdapter. When you drag tables from the **Data Sources** window onto a form, the code that's required to save data is automatically added.Any additional tables that are added to a form require the manual addition of this code. This walkthrough shows how to add code to save updates from more than one table.  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。  設定を変更するには、**\[ツール\]** メニューの **\[設定のインポートとエクスポート\]** をクリックします。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or the edition that you're using. To change your settings, choose **Import and Export Settings** on the **Tools** menu. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
- このチュートリアルでは、以下のタスクを行います。  
+ Tasks illustrated in this walkthrough include:  
   
--   新しい **Windows アプリケーション** プロジェクトを作成します。  
+-   Creating a new **Windows Application** project.  
   
--   [データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)を使用して、アプリケーションにデータ ソースを作成して構成します。  
+-   Creating and configuring a data source in your application with the [Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png).  
   
--   [ウィンドウ](../Topic/Data%20Sources%20Window.md)で、項目のコントロールを設定します。  詳細については、「[\[データ ソース\] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../Topic/Set%20the%20control%20to%20be%20created%20when%20dragging%20from%20the%20Data%20Sources%20window.md)」を参照してください。  
+-   Setting the controls of the items in the [Data Sources Window](add-new-data-sources.md). For more information, see [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
   
--   **\[データ ソース\]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。  
+-   Creating data-bound controls by dragging items from the **Data Sources** window onto your form.  
   
--   データセットの各テーブルのいくつかのレコードを変更します。  
+-   Modifying a few records in each table in the dataset.  
   
--   データセット内の更新されたデータをデータベースに返送するコードを変更します。  
+-   Modifying the code to send the updated data in the dataset back to the database.  
   
-## 必須コンポーネント  
- このチュートリアルを完了するための要件は次のとおりです。  
+## <a name="prerequisites"></a>Prerequisites  
+ In order to complete this walkthrough, you will need:  
   
--   Northwind サンプル データベースにアクセスします。  詳細については、「[方法 : サンプル データベースをインストールする](../data-tools/how-to-install-sample-databases.md)」を参照してください。  
+-   Access to the Northwind sample database.  For more information, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
   
-## Windows アプリケーションの作成  
- 最初に **Windows アプリケーション**を作成します。  この手順ではプロジェクトへの名前の割り当てはオプションですが、後でこのプロジェクトを保存するため、プロジェクトに名前を付けます。  
+## <a name="create-the-windows-application"></a>Create the Windows application  
+ The first step is to create a **Windows Application**. Assigning a name to the project is optional during this step, but we'll give it a name because we're planning on saving it later.  
   
-#### 新しい Windows アプリケーション プロジェクトを作成するには  
+#### <a name="to-create-the-new-windows-application-project"></a>To create the new Windows application project  
   
-1.  **\[ファイル\]** メニューで新しいプロジェクトを作成します。  
+1.  On the **File** menu, create a new project.  
   
-2.  プロジェクトに `UpdateMultipleTablesWalkthrough` という名前を付けます。  
+2.  Name the project `UpdateMultipleTablesWalkthrough`.  
   
-3.  **\[Windows アプリケーション\]** をクリックし、**\[OK\]** をクリックします。  詳細については、「[クライアント アプリケーション](../Topic/Developing%20Client%20Applications%20with%20the%20.NET%20Framework.md)」を参照してください。  
+3.  Select **Windows Application**, and then select **OK**. For more information, see [Client Applications](/dotnet/framework/develop-client-apps).  
   
-     **UpdateMultipleTablesWalkthrough** プロジェクトが作成されて**ソリューション エクスプローラー**に追加されます。  
+     The **UpdateMultipleTablesWalkthrough** project is created and added to **Solution Explorer**.  
   
-## データ ソースの作成  
- この手順では、**データ ソース構成**ウィザードを使用して、Northwind データベースからデータ ソースを作成します。  接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。  Northwind サンプル データベースのセットアップの詳細については、「[方法 : サンプル データベースをインストールする](../data-tools/how-to-install-sample-databases.md)」を参照してください。  
+## <a name="create-the-data-source"></a>Create the data source  
+ This step creates a data source from the Northwind database using the **Data Source Configuration Wizard**. You must have access to the Northwind sample database to create the connection. For information about setting up the Northwind sample database, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
   
-#### データ ソースを作成するには  
+#### <a name="to-create-the-data-source"></a>To create the data source  
   
-1.  **\[データ\]** メニューの **\[データ ソースの表示\]** をクリックします。  
+1.  On the **Data** menu, select **Show Data Sources**.  
   
-2.  **\[データ ソース\]** ウィンドウで、**\[新しいデータ ソースの追加\]** をクリックして**データ ソース構成ウィザード**を起動します。  
+2.  In the **Data Sources** window, select**Add New Data Source** to start the **Data Source Configuration Wizard**.  
   
-3.  **\[データソースの種類を選択\]** ページで、**\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
+3.  On the **Choose a Data Source Type** screen, select **Database**, and then select **Next**.  
   
-4.  **\[データ接続の選択\]** ページで、次のいずれかの操作を行います。  
+4.  On the **Choose your Data Connection** screen do one of the following:  
   
-    -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
+    -   If a data connection to the Northwind sample database is available in the drop-down list, select it.  
   
-         または  
+         -or-  
   
-    -   **\[新しい接続\]** を選択して **\[接続の追加\] または \[接続の変更\]** ダイアログ ボックスを表示します。  
+    -   Select **New Connection** to open the **Add/Modify Connection** dialog box.  
   
-5.  データベースにパスワードが必要な場合は、該当するオプションを選択して重要情報を含め、**\[次へ\]** をクリックします。  
+5.  If your database requires a password, select the option to include sensitive data, and then select **Next**.  
   
-6.  **\[アプリケーション構成ファイルに接続文字列を保存\]** ページで、**\[次へ\]** をクリックします。  
+6.  On the **Save connection string to the Application Configuration file**, select **Next**.  
   
-7.  **\[データベース オブジェクトの選択\]** ページの **\[テーブル\]** ノードを展開します。  
+7.  On the **Choose your Database Objects**screen, expand the **Tables** node .  
   
-8.  **Customers** テーブルと **Orders** テーブルを選択し、**\[完了\]** をクリックします。  
+8.  Select the **Customers** and **Orders** tables, and then select **Finish**.  
   
-     プロジェクトに **NorthwindDataSet** が追加され、**\[データ ソース\]** ウィンドウにテーブルが表示されます。  
+     The **NorthwindDataSet** is added to your project, and the tables appear in the **Data Sources** window.  
   
-## 作成するコントロールの設定  
- このチュートリアルでは、データが個別のコントロールに表示される**詳細**レイアウトで、`Customers` テーブル内のデータを表示します。  `Orders` テーブルのデータは、<xref:System.Windows.Forms.DataGridView> コントロール内に表示される **グリッド** レイアウトで表示します。  
+## <a name="set-the-controls-to-be-created"></a>Set the controls to be created  
+ For this walkthrough, the data in the `Customers` table is in a **Details** layout where data is displayed in individual controls. The data from the `Orders` table is in a **Grid** layout that's displayed in a <xref:System.Windows.Forms.DataGridView> control.  
   
-#### \[データ ソース\] ウィンドウの項目のドロップ タイプを設定するには  
+#### <a name="to-set-the-drop-type-for-the-items-in-the-data-sources-window"></a>To set the drop type for the items in the Data Sources window  
   
-1.  **\[データ ソース\]** ウィンドウの **\[Customers\]** ノードを展開します。  
+1.  In the **Data Sources** window, expand the **Customers** node.  
   
-2.  **\[Customers\]** ノードのコントロール リストの **\[詳細\]** を選択し、**Customers** テーブルのコントロールを個別のコントロールに変更します。  詳細については、「[\[データ ソース\] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../Topic/Set%20the%20control%20to%20be%20created%20when%20dragging%20from%20the%20Data%20Sources%20window.md)」を参照してください。  
+2.  On the **Customers** node, select **Details** from the control list to change the control of the **Customers** table to individual controls. For more information, see [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
   
-## データ バインド フォームの作成  
- **\[データ ソース\]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。  
+## <a name="create-the-data-bound-form"></a>Create the data-bound form  
+ You can create the data-bound controls by dragging items from the **Data Sources** window onto your form.  
   
-#### フォームにデータ バインド コントロールを作成するには  
+#### <a name="to-create-data-bound-controls-on-the-form"></a>To create data-bound controls on the form  
   
-1.  **\[データ ソース\]** ウィンドウから **Form1** にメインの **\[Customers\]** ノードをドラッグします。  
+1.  Drag the main **Customers** node from the **Data Sources** window onto **Form1**.  
   
-     説明のラベルが付いたデータ バインド コントロールとレコード間を移動するためのツール ストリップ \(<xref:System.Windows.Forms.BindingNavigator>\) がフォームに表示されます。  [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、[CustomersTableAdapter](../data-tools/tableadapter-overview.md)、<xref:System.Windows.Forms.BindingSource>、および <xref:System.Windows.Forms.BindingNavigator> がコンポーネント トレイに表示されます。  
+     Data-bound controls with descriptive labels appear on the form, along with a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter`, <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.  
   
-2.  **\[データ ソース\]** ウィンドウから **Form1** に **\[Orders\]** ノードをドラッグします。  
+2.  Drag the related **Orders** node from the **Data Sources** window onto **Form1**.  
   
     > [!NOTE]
-    >  関連する **\[Orders\]** ノードは **\[Fax\]** 列の下にあり、**\[Customers\]** ノードの子ノードです。  
+    >  The related **Orders** node is located below the **Fax** column and is a child node of the **Customers** node.  
   
-     レコード間をナビゲートするための <xref:System.Windows.Forms.DataGridView> コントロールとツール ストリップ \(<xref:System.Windows.Forms.BindingNavigator>\) がフォームに表示されます。  コンポーネント トレイに [OrdersTableAdapter](../data-tools/tableadapter-overview.md) と <xref:System.Windows.Forms.BindingSource> が表示されます。  
+     A <xref:System.Windows.Forms.DataGridView> control and a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records appear on the form. An `OrdersTableAdapter` and <xref:System.Windows.Forms.BindingSource> appear in the component tray.  
   
-## データベースを更新するコードの追加  
- **Customers** TableAdapter および **Orders** TableAdapter の `Update` メソッドを呼び出して、データベースを更新できます。  既定では、<xref:System.Windows.Forms.BindingNavigator> の **\[データの保存\]** ボタンのイベント ハンドラーが、データベースへの更新を送信するフォームのコードに追加されます。  この手順では、正しい順序で更新を送信し、参照整合性エラーが発生する可能性がなくなるようにコードを変更します。  また、Update 呼び出しを try\-catch ブロックにラップして、エラー処理も実装します。  アプリケーションの要件に適合するようにコードを変更できます。  
+## <a name="addcode-to-update-the-database"></a>Addcode to update the database  
+ You can update the database by calling the `Update` methods of the **Customers** and **Orders** TableAdapters. By default, an event handler for the **Save** button of the<xref:System.Windows.Forms.BindingNavigator> is added to the form's code to send updates to the database. This procedure modifies the code to send updates in the correct order.This eliminates the possibility of raising referential integrity errors. The code also implements error handling by wrapping the update call in a try-catch block. You can modify the code to suit the needs of your application.  
   
 > [!NOTE]
->  説明をわかりやすくするために、ここではトランザクションを使用していませんが、関連する複数のテーブルを更新する場合は、すべての更新ロジックを 1 つのトランザクションに含める必要があります。  トランザクションは、データベースに対するすべての関連する変更が正常に完了した後に、変更をコミットするプロセスです。  詳細については、「[トランザクションと同時実行](../Topic/Transactions%20and%20Concurrency.md)」を参照してください。  
+>  For clarity, this walkthrough does not use a transaction.However, if you're updating two or more related tables, include all the update logic within a transaction. A transaction is a process that assures that all related changes to a database are successful before any changes are committed. For more information, see [Transactions and Concurrency](/dotnet/framework/data/adonet/transactions-and-concurrency).  
   
-#### アプリケーションに更新ロジックを追加するには  
+#### <a name="to-add-update-logic-to-the-application"></a>To add update logic to the application  
   
-1.  <xref:System.Windows.Forms.BindingNavigator> の **\[データの保存\]** ボタンをダブルクリックして、コード エディターで `bindingNavigatorSaveItem_Click` イベント ハンドラーを開きます。  
+1.  Select the **Save** button on the <xref:System.Windows.Forms.BindingNavigator>.This opens the Code Editor to the `bindingNavigatorSaveItem_Click` event handler.  
   
-2.  イベント ハンドラーのコードを、関連する TableAdapter の `Update` メソッドを呼び出すコードに置き換えます。  次のコードは、最初に、各 <xref:System.Data.DataRowState> \(<xref:System.Data.DataRowState>、<xref:System.Data.DataRowState>、および <xref:System.Data.DataRowState>\) の更新済み情報を保持する 3 つの一時的なデータ テーブルを作成します。  次に、正しい順序で更新を実行します。  コードは、次のようになります。  
+2.  Replace the code in the event handler to call the `Update` methods of the related TableAdapters. The following code first creates three temporary data tables to hold the updated information for each <xref:System.Data.DataRowState> (<xref:System.Data.DataRowState>, <xref:System.Data.DataRowState>, and <xref:System.Data.DataRowState>). Then updates are run in the correct order. The code should look like the following:  
   
-     [!code-vb[VbRaddataSaving#10](../data-tools/codesnippet/VisualBasic/save-data-to-a-database-multiple-tables_1.vb)]
-     [!code-cs[VbRaddataSaving#10](../data-tools/codesnippet/CSharp/save-data-to-a-database-multiple-tables_1.cs)]  
+     [!code-vb[VbRaddataSaving#10](../data-tools/codesnippet/VisualBasic/save-data-to-a-database-multiple-tables_1.vb)]  [!code-cs[VbRaddataSaving#10](../data-tools/codesnippet/CSharp/save-data-to-a-database-multiple-tables_1.cs)]  
   
-## アプリケーションのテスト  
+## <a name="test-the-application"></a>Test the application  
   
-#### アプリケーションをテストするには  
+#### <a name="to-test-the-application"></a>To test the application  
   
-1.  F5 キーを押します。  
+1.  Select **F5**.  
   
-2.  各テーブルの 1 つ以上のレコードのデータを変更します。  
+2.  Make some changes to the data of one or more records in each table.  
   
-3.  **\[データの保存\]** をクリックします。  
+3.  Select the **Save** button.  
   
-4.  データベースの値をチェックし、変更が保存されたことを確認します。  
+4.  Check the values in the database to verify that the changes were saved.  
   
-## 次の手順  
- Windows アプリケーションにデータ バインド フォームを作成した後で、アプリケーションの要件によってはさらに操作を追加する必要があります。  このチュートリアルで行うことができる拡張には次のものがあります。  
   
--   フォームに検索機能を追加します。  詳細については、「[方法: パラメーター クエリを Windows フォーム アプリケーションに追加する](../Topic/How%20to:%20Add%20a%20Parameterized%20Query%20to%20a%20Windows%20Forms%20Application.md)」を参照してください。  
-  
--   データ ソースを編集し、データベース オブジェクトの追加または削除を行います。  詳細については、「[方法 : データセットを編集する](../Topic/How%20to:%20Edit%20a%20Dataset.md)」を参照してください。  
-  
-## 参照  
- [データに関するチュートリアル](../Topic/Data%20Walkthroughs.md)   
- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visual Studio のデータ アプリケーションの概要](../data-tools/overview-of-data-applications-in-visual-studio.md)   
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
- [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [アプリケーションへのデータのフェッチ](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
- [データの検証](../Topic/Validating%20Data.md)   
- [データの保存](../data-tools/saving-data.md)
+## <a name="see-also"></a>See Also  
+ [Save data back to the database](../data-tools/save-data-back-to-the-database.md)

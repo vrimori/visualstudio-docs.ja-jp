@@ -1,117 +1,158 @@
 ---
-title: "[自動変数] ウィンドウと [ローカル] ウィンドウ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "hero-article"
-f1_keywords: 
-  - "vs.debug.autos"
-  - "vs.debug.locals"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "デバッガー、変数ウィンドウ"
-  - "デバッグ [Visual Studio]、変数ウィンドウ"
+title: Inspect Variables in the Autos and Locals Windows | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 04/17/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.autos
+- vs.debug.locals
+helpviewer_keywords:
+- debugger, variable windows
+- debugging [Visual Studio], variable windows
 ms.assetid: bb6291e1-596d-4af0-9f22-5fd713d6b84b
 caps.latest.revision: 24
-caps.handback.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# [自動変数] ウィンドウと [ローカル] ウィンドウ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 8663c848e5a6988c20e2d1c020bf99a368e82b60
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-**\[自動変数\]** ウィンドウ \(デバッグ中に **CTRL\+ALT\+V キーを押し、A を押す**か、または **\[デバッグ\]、\[Windows\]、\[自動変数\]** を選択\) および **\[ローカル\]** ウィンドウ \(デバッグ中に **CTRL\+ALT\+V キーを押し、L を押す**か、または **\[デバッグ\]、\[Windows\]、\[ローカル\]** を選択\) は、デバッグ中に変数の値を表示するときに、非常に役立ちます。**\[ローカル\]** ウィンドウにはローカル スコープで定義されている変数が表示されます。これは一般に、現在実行されている関数またはメソッドです。**\[自動変数\]** ウィンドウには、現在の行 \(デバッガーが停止している場所\) の付近で使用されている変数が表示されます。 正確にはどの変数が表示されるかは、言語によって異なります。 以下の「\[自動変数\] ウィンドウに表示される変数」をご覧ください。  
+---
+# <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>Inspect Variables in the Autos and Locals Windows in Visual Studio
+The **Autos** window (while debugging, **CTRL+ALT+V, A**, or **Debug > Windows > Autos**) and the **Locals** window (while debugging, **CTRL+ALT+V, L**, or **Debug > Windows > Locals**) are quite useful when you want to see variable values while you are debugging. The **Locals** window displays variables that are defined in the local  scope, which is generally the function or method that is currently being executed. The **Autos** window displays variables used around the current line (the place where the debugger is stopped). Exactly which variables display in this window is different in different languages. See [What variables appear in the Autos Window?](#bkmk_whatvariables) below.  
   
- デバッグの基礎について詳しくは、「[デバッガーの使用開始](../debugger/getting-started-with-the-debugger.md)」をご覧ください。  
+If you need more information about basic debugging, see [Getting Started with the Debugger](../debugger/getting-started-with-the-debugger.md).  
   
-## \[自動変数\] と \[ローカル\] ウィンドウ内のオブジェクトを調べる  
- 配列とオブジェクトは、\[自動変数\] と \[ローカル\] ウィンドウにツリー コントロールで表示されます。 変数名の左側にある矢印をクリックするとビューが展開され、フィールドとプロパティが表示されます。 以下に、**\[ローカル\]** ウィンドウに表示されている [FileStream](../Topic/FileStream%20Class.md) オブジェクトの例を示します。  
+## <a name="looking-at-objects-in-the-autos-and-locals-windows"></a>Looking at objects in the Autos and Locals windows  
+Arrays and objects are displayed in the Autos and Locals windows as tree controls. Click on the arrow to the left of the variable name to expand the view to show fields and properties. Here is an example of a [FileStream](http://msdn.microsoft.com/Library/a8737776-e545-4867-91ed-51c7f031fa19) object in the **Locals** window:  
   
- ![&#91;ローカル&#93;&#45;FileStream](../debugger/media/locals-filestream.png "Locals\-FileStream")  
+![Locals&#45;FileStream](../debugger/media/locals-filestream.png "Locals-FileStream")  
   
-## \[自動変数\] ウィンドウに表示される変数  
- **\[自動変数\]** ウィンドウは C\#、Visual Basic、C\+\+ のコードで使用できます。**\[自動変数\]** ウィンドウでは JavaScript も F\# もサポートされません。  
+## <a name="bkmk_whatvariables"></a> What variables appear in the Autos window?  
+ You can use the **Autos** window in C#, Visual Basic, and C++ code. The **Autos** window does not support JavaScript or F#.  
   
- C\# および Visual Basic では、現在の行または前の行に使用されている変数があれば、それが **\[自動変数\]** ウィンドウに表示されます。 たとえば、4 つの変数を宣言し、これらを次のように設定したとします。  
+ In C# and Visual Basic, the **Autos** window displays any  variable used on the current or preceding line. For example, if you declare four variables and set them as follows:
+
+```CSharp
+    public static void Main()
+    {
+       int a, b, c, d;
+       a = 1;
+       b = 2;
+       c = 3;
+       d = 4;
+    }
+```
+
+ If you set a breakpoint on the line `c = 3`; and run the debugger, when execution stops the **Autos** window will look like this:  
+
+ ![Autos&#45;CSharp](../debugger/media/autos-csharp.png "Autos-CSharp")  
+
+ Note that the value of `c` is 0, because the line `c = 3` has not yet been executed.  
+
+ In C++ the **Autos** window displays the variables used at least three lines before the current line (the line at which execution is stopped). If you declare six variables:
+
+```C++
+    void main() {
+        int a, b, c, d, e, f;
+        a = 1;
+        b = 2;
+        c = 3;
+        d = 4;
+        e = 5;
+        f = 6;
+    }
+```
+
+ If you set a breakpoint on the line `e = 5;` and run the debugger, when execution stops the **Autos** window will look like this:  
   
-```c#  
-public static void Main() { int a, b, c, d; a = 1; b = 2; c = 3; d = 4; }  
-```  
+ ![Autos&#45;Cplus](../debugger/media/autos-cplus.png "Autos-Cplus")  
   
- 行 `c = 3` にブレークポイントを設定した場合、デバッガーを実行して、実行が停止すると、**\[自動変数\]** ウィンドウは次のようになります。  
+ Note that the variable e is uninitialized because the code on the line `e = 5;` has not yet been executed.  
   
- ![Autos&#45;CSharp](../debugger/media/autos-csharp.png "Autos\-CSharp")  
+ You can also see the return values of functions and methods in certain circumstances. See [View return values of method calls](#bkmk_returnValue) below.  
   
- `c` の値が 0 であることにご注意ください。これは、`c = 3` 行目のコードがまだ実行されていないからです。  
+##  <a name="bkmk_returnValue"></a> View return values of method calls  
+ In .NET and C++ code you can examine return values when you step over or out of a method call. This functionality is useful when the result of a method call is not stored in a local variable, for example when a method is used as a parameter or as a return value of another    method.  
   
- C\+\+ では、最低でも現在の行 \(実行が停止した行\) の 3 行前で使用された変数が **\[自動変数\]** ウィンドウに表示されます。 6 つの変数を宣言するとします。  
+ The following C# code adds the return values of two functions:  
+
+```CSharp
+static void Main(string[] args)  
+{  
+    int a, b, c, d;  
+    a = 1;  
+    b = 2;  
+    c = 3;  
+    d = 4;  
+    int x = sumVars(a, b) + subtractVars(c, d);  
+}  
   
-```cpp  
-void main() { int a, b, c, d, e, f; a = 1; b = 2; c = 3; d = 4; e = 5; f = 6; }  
-```  
+private static int sumVars(int i, int j)  
+{  
+    return i + j;  
+}  
   
- 行 `e = 5;` にブレークポイントを設定した場合、デバッガーを実行して、実行が停止すると、**\[自動変数\]** ウィンドウは次のようになります。  
+private static int subtractVars(int i, int j)  
+{  
+    return j - i;  
+}  
+```
+
+ Set a breakpoint on the int `x = sumVars(a, b) + subtractVars(c, d);` line.  
   
- ![&#91;自動変数&#93;&#45;Cplus](../debugger/media/autos-cplus.png "Autos\-Cplus")  
+ Start debugging, and when execution breaks at the first breakpoint, press **F10 (Step Over)**. You should see the following in the **Autos** window:  
   
- e の変数が初期化されていないことにご注意ください。これは  `e = 5;`  行目のコードがまだ実行されていないからです。  
+ ![AutosReturnValueCSharp2](../debugger/media/autosreturnvaluecsharp2.png "AutosReturnValueCSharp2")  
   
- ある状況では、関数やメソッドの戻り値が表示されることもあります。 以下の「[メソッド呼び出しの戻り値の表示](#bkmk_returnValue)」をご覧ください。  
+## <a name="why-are-variable-values-sometimes-red-in-locals-and-autos-windows"></a>Why are variable values sometimes red in Locals and Autos windows?  
+You may notice that the value of a variable is sometimes red in the **Locals** and **Autos** windows. These are variable values that have been changed since the last evaluation. The change could be from a previous debugging session, or because the value was changed in the window.  
   
-##  <a name="bkmk_returnValue"></a> メソッド呼び出しの戻り値の表示  
- .NET および C\+\+ のコードでは、メソッド呼び出しのステップ オーバーまたはステップ アウトをするときに戻り値を確認できます。 この機能が便利なのは、メソッド呼び出しの結果がローカル変数に格納されないときです。たとえば、メソッドが別のメソッドのパラメーターまたは戻り値として使用されるときなどです。  
+## <a name="changing-the-numeric-format-of-a-variable-window"></a>Changing the numeric format of a variable window  
+The default numeric format is decimal, but you can change it to hexadecimal. Right-click inside a **Locals** or **Autos** window and select **Hexadecimal Display**. The change affects all debugger windows.  
   
- 次の C\# コードは、2 つの関数の戻り値を加算します。  
+## <a name="editing-a-value-in-a-variable-window"></a>Editing a value in a Variable window  
+You can edit the values of most variables that appear in the **Autos**, **Locals**, **Watch**, and **QuickWatch** windows. For information about **Watch** and **QuickWatch** windows, see [Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md). Just double-click the value you want to change and add the new the value.  
   
-```c#  
-static void Main(string[] args) { int a, b, c, d; a = 1; b = 2; c = 3; d = 4; int x = sumVars(a, b) + subtractVars(c, d); } private static int sumVars(int i, int j) { return i + j; } private static int subtractVars(int i, int j) { return j - i; }  
+You can enter an expression for a value, for example `a + b`. The debugger accepts most valid language expressions.  
   
-```  
+In native C++ code, you might have to qualify the context of a variable name. For more information, see [Context Operator (C++)](../debugger/context-operator-cpp.md).  
+ 
+However, you should exercise caution when changing values. Here are some possible issues:  
   
- int `x = sumVars(a, b) + subtractVars(c, d);`  行にブレークポイントを設定します。  
+-   Evaluating some expressions can change the value of a variable or otherwise affect the state of your program. For example, evaluating `var1 = ++var2` changes the value of `var1` and `var2`.  
   
- デバッグを開始して、最初のブレークポイントで実行が中断したときに、**F10 キー \(ステップ オーバー\)** を押します。**\[自動変数\]** ウィンドウには次のように表示されます。  
+     Expressions that change data are said to have [side effects](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)), which can produce unexpected results if you are not aware of them. Make sure you understand the consequences of such a change before you make it.  
   
- ![&#91;自動変数&#93;戻り値C&#35;&#35;](../debugger/media/autosreturnvaluecsharp2.png "AutosReturnValueCSharp2")  
+-   Editing floating-point values can result in minor inaccuracies because of decimal-to-binary conversion of fractional components. Even a seemingly harmless edit can result in changes to some of the least significant bits in the floating-point variable.  
   
-## \[ローカル\] ウィンドウと \[自動変数\] ウィンドウで変数の値が時々赤色で表示される理由  
- **\[ローカル\]** ウィンドウと **\[自動変数\]** ウィンドウで時々、変数の値が赤色で表示されることがあります。 これらは、前回の評価以降、変化した変数の値です。 この変更は前のデバッグ セッションに由来する場合もあれば、ウィンドウで値が変更されたための場合もあります。  
+## <a name="changing-the-window-context"></a>Changing the window context  
+You can use the **Debug Location** toolbar to select the desired function, thread, or process, which changes the context for the variable windows. Set a breakpoint and start debugging. (If you do not see this toolbar, you can enable it by clicking in an empty part of the toolbar area. You should see a list of toolbars; select **Debug Location**). When the breakpoint is hit, execution stops and you can see the Debug Location toolbar, which is the bottom row of the following illustration.
   
-## 変数ウィンドウの数値の形式の変更  
- 既定の数値の形式は 10 進数ですが、これを 16 進数に変更することができます。**\[ローカル\]** または **\[自動変数\]** ウィンドウ内で右クリックし、**\[16 進数で表示\]** を選びます。 この変更は、すべてのデバッガー ウィンドウに反映されます。  
+![DebugLocationToolbar](../debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")   
   
-## \[変数\] ウィンドウで値を編集する  
- **\[自動変数\]**、**\[ローカル\]**、**\[ウォッチ\]**、**\[クイック ウォッチ\]** ウィンドウに表示される変数の大部分は、値を編集できます。**\[ウォッチ\]** と **\[クイック ウォッチ\]** ウィンドウについては、「[ウォッチ ウィンドウと \[クイック ウォッチ\] ウィンドウ](../Topic/Watch%20and%20QuickWatch%20Windows.md)」をご覧ください。 変更する値をダブルクリックするだけで、新しい値を追加できます。  
-  
- たとえば `a + b` のように、値に式を入力することもできます。 デバッガーは、正しい言語式であれば大部分を受け入れます。  
-  
- ネイティブの C\+\+ コードでは、変数名のコンテキストを修飾しなければならない場合があります。 詳細については、「[context 演算子 \(C\+\+\)](../debugger/context-operator-cpp.md)」を参照してください。  
-  
- ただし、値を変更するときには注意が必要です。 考えられる問題のいくつかを次に示します。  
-  
--   式を評価すると、変数の値が変わる場合や、プログラムの状態に影響が及ぶ場合があります。 たとえば、`var1 = ++var2` を評価すると `var1` と `var2` の値が変更されます。  
-  
-     データを変更する式は、[副作用](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))があると言われています。気付かないうちに予期しない結果になる可能性があります。 変更を加える前に、そうした変更の結果を理解する必要があります。  
-  
--   浮動小数点値を編集すると、小数部分の 10 進とバイナリの変換により、多少の誤差が発生する場合があります。 特に影響のないように見える編集でも、浮動小数点値の最下位バイトが変化する場合があります。  
-  
-## \[デバッグの場所\] ツール バー  
- **\[デバッグの場所\]** ツール バーを使用して、必要な関数、スレッド、またはプロセスを選択できます。 ブレークポイントを設定し、デバッグを開始します。 \(このツール バーが表示されていない場合は、ツール バーの領域の空白の場所をクリックして有効にできます。 ツール バーの一覧が表示されたら、**\[デバッグの場所\]** を選びます。\) ブレークポイントがヒットすると、実行が停止し、\[デバッグの場所\] ツール バーが表示されます \(次の図の一番下の行\)。  
-  
- ![&#91;デバッグの場所&#93; ツール バー](~/debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")  
-  
- **\[呼び出し履歴\]** ウィンドウ、**\[スレッド\]** ウィンドウ、または **\[プロセス\]** ウィンドウで要素をダブルクリックすれば、コンテキストを別の関数呼び出し、スレッド、またはプロセスに変更することもできます。  
-  
-## 参照  
- [デバッガー ウィンドウ](../debugger/debugger-windows.md)
+## <a name="see-also"></a>See Also  
+ [Debugger Windows](../debugger/debugger-windows.md)

@@ -1,170 +1,214 @@
 ---
-title: "実行中のプロセスへのアタッチ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.processes.attach"
-  - "vs.debug.process"
-  - "vs.debug.programs"
-  - "vs.debug.detaching"
-  - "vs.debug.processes"
-  - "vs.debug.error.attach"
-  - "vs.debug.remotemachine"
-dev_langs: 
-  - "C++"
-  - "CSharp"
-  - "FSharp"
-  - "VB"
-  - "c++"
-helpviewer_keywords: 
-  - "リモート デバッグ、プログラムへのアタッチ"
-  - "プロセス、実行中のプロセスへのアタッチ"
-  - "[プロセスにアタッチ] ダイアログ ボックス"
-  - "デバッグ [Visual Studio]、プロセスへのアタッチ"
-  - "デバッガー、プロセス"
+title: Attach to Running Processes with the Debugger in Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 05/18/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.processes.attach
+- vs.debug.process
+- vs.debug.programs
+- vs.debug.detaching
+- vs.debug.processes
+- vs.debug.error.attach
+- vs.debug.remotemachine
+dev_langs:
+- CSharp
+- FSharp
+- C++
+- VB
+helpviewer_keywords:
+- remote debugging, attaching to programs
+- processes, attaching to running processes
+- Attach to Process dialog box
+- debugging [Visual Studio], attaching to processes
+- debugger, processes
 ms.assetid: 27900e58-090c-4211-a309-b3e1496d5824
-caps.latest.revision: 57
-caps.handback.revision: 53
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: 53
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 90969e747a57c781740409f8d21da3c37153f6af
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
+
 ---
-# 実行中のプロセスへのアタッチ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+# <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Attach to Running Processes with the Visual Studio Debugger
+You can attach the Visual Studio debugger to a running process on a local or remote computer. After the process is running, click **Debug > Attach to Process** (or press **CTRL+ALT+P**) to open the **Attach to Process** dialog box.
 
-Visual Studio デバッガーをアタッチするプロセスには、Visual Studio からアプリを起動していないが、それをデバッグする場合に多くの場合、役立ちます。 たとえば、IIS プロセスまたは .NET アプリケーションをホストする Windows サービスにアタッチすることができます。 アタッチするプロセスは、ローカルまたはリモートにあります。 別の例は、次デバッグを開始するアプリケーションを実行しているプロセスをアタッチ、デバッガーを使用しないでアプリケーションを実行するいるし、例外が発生すると、可能性があります。
+You can use this capability to debug apps that are running on a local or remote computer, debug multiple processes simultaneously, or debug an application that was not created in Visual Studio. It is often useful when you want to debug an app, but (for whatever reason) you did not start the app from Visual Studio with the debugger attached. For example, if you are running the app without the debugger and hit an exception, you might then attach to the process running the app to begin debugging.
 
-(Windows ストア アプリ) のようなアプリの種類によって、プロセス名に直接アタッチしない] が使用して、 **インストール済みアプリ パッケージのデバッグ** メニュー オプション (テーブルを参照してください)。
+> [!TIP]
+> Not sure whether you need to use **Attach to Process** for your debugging scenario? See [Common debugging scenarios](#BKMK_Scenarios). If you want to debug ASP.NET applications that have been deployed to IIS, see [Remote Debugging ASP.NET on a remote IIS computer](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md).
 
-シナリオでは、プロセスにアタッチする必要があるかどうかを識別するために、最も一般的なデバッグ シナリオをいくつか次に示します。 複数の手順については、ここでは、リンクを提供しています。
+##  <a name="BKMK_Attach_to_a_running_process"></a> Attach to a running process on the local machine  
+ In order to attach to a process, you must know the name of the process (see [Common debugging scenarios](#BKMK_Scenarios) for a few common process names).
+  
+1.  In Visual Studio, select **Debug > Attach to Process** (or press **CTRL+ALT+P**).
 
-|シナリオ|メソッドをデバッグします。|プロセス名|注とリンク|
+    If you want to quickly reattach to a process instead, see [Reattach to Process](#BKMK_reattach).
+  
+2.  In the **Attach to Process** dialog box, find the program that you want to attach to from the **Available Processes** list.  
+
+     To quickly select the process you want, type the first letter of the process name. If you don't know the process name, see [Common debugging scenarios](#BKMK_Scenarios).
+     
+     ![DBG_Basics_Attach_To_Process](../debugger/media/DBG_Basics_Attach_To_Process.png "DBG_Basics_Attach_To_Process") 
+  
+     If the process is running under a different user account, select the **Show processes from all users** check box.
+  
+3.  In the **Attach to** box, make sure that the type of code you will debug is listed. The default **Automatic** setting tries to determine what type of code you want to debug. To set the type of code manually, do the following  
+  
+    1.  In the **Attach to** box, click **Select**.  
+  
+    2.  In the **Select Code Type** dialog box, click **Debug these code types** and select the types to debug.  
+  
+    3.  Click **OK**.  
+  
+4.  Click **Attach**.
+
+##  <a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a> Attach to a process on a remote computer  
+ In order to attach to a process, you must know the name of the process (see [Common debugging scenarios](#BKMK_Scenarios) for a few common process names). For more complete guidance for ASP.NET apps that have been deployed to IIS, see [Remote Debugging ASP.NET on a remote IIS computer](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md). For other apps, you may be able to find the name of the process in the Task Manager.
+  
+ When you use the **Attach to Process** dialog box, you can select another computer that has been set up for remote debugging. For more information, see [Remote Debugging](../debugger/remote-debugging.md). When you have selected a remote computer, you can view a list of available processes running on that computer and attach to one or more of the processes for debugging.
+  
+ **To select a remote computer:**  
+
+1. In Visual Studio, select **Debug > Attach to Process** (or press **CTRL+ALT+P**).
+
+    If you want to quickly reattach to a process instead, see [Reattach to Process](#BKMK_reattach).
+
+2.  In the **Attach to Process** dialog box, select the appropriate connection type from the **Transport** list. **Default** is the correct setting for most cases.
+
+    The **Transport** setting persists between debugging sessions. 
+  
+3.  Use the **Qualifier** list box to choose the remote computer name by one of the following methods:  
+  
+    1.  Type the name in the **Qualifier** list box.
+    
+        >**Note** If, in later steps, you can't connect using the remote computer name, use the IP address. (The port number may appear automatically after selecting the process. You can also enter it manually. In the illustration below, 4020 is the default port for the remote debugger.)  
+
+        If you want to use the **Find** button, you may need to [open UDP port 3702](../debugger/remote-debugger-port-assignments.md) on the server.
+  
+    2.  Click the drop-down arrow attached to the **Qualifier** list box and select the computer name from the drop-down list.  
+  
+    3.  Click the **Find** button next to the**Qualifier** list to open the **Select Remote Debugger Connection** dialog box. The **Select Remote Debugger Connection** dialog box lists all the devices that are on your local sub-net, and any device that is directly attached to your computer through an Ethernet cable. Click the computer or device that you want, and then click **Select**. 
+  
+     The **Qualifier** setting persists between debugging sessions only if a successful debugging connection occurs with that qualifier.
+     
+4.  Click **Refresh**.
+
+      The **Available Processes** list is displayed automatically when you open the **Processes** dialog box. Processes can start and stop in the background while the dialog box is open. However, the contents are not always current. You can refresh the list at any time to see the current list of processes by clicking **Refresh**. 
+     
+4.  In the **Attach to Process** dialog box, find the program that you want to attach to from the **Available Processes** list.
+
+     To quickly select the process you want, type the first letter of the process name. If you don't know the process name, see [Common debugging scenarios](#BKMK_Scenarios).
+  
+     If the process is running under a different user account, select the **Show processes from all users** check box.
+     
+5.  Click **Attach**.
+
+## <a name="BKMK_reattach"></a> Reattach to process
+
+You can quickly reattach to processes that you were previously attached to by choosing **Debug > Reattach to Process...** (**Shift+Alt+P**). When you choose this command, the debugger will immediately try to attach to the last processes you attached to using the **Attach to Process** dialog box.
+
+The debugger will reattach by first attempting to match the previous process ID and then, if that fails, by matching to the previous process name. If no matches are found, or if there are multiple processes found with the same name, then the **Attach to Process** dialog box will appear so that you can select the correct process.
+
+> [!NOTE]
+> The **Reattach to Process** command is new in Visual Studio 2017.
+
+## <a name="additional-info"></a>Additional info
+
+You can be attached to multiple programs when you are debugging, but only one program is active in the debugger at any time. You can set the active program in the **Debug Location** toolbar or the **Processes** window. For more information, see [How to: Set the Current Program](http://msdn.microsoft.com/en-us/7e1d7fa5-0e40-44cf-8c41-d3dba31c969e).  
+  
+If you try to attach to a process owned by an untrusted user account, a security warning dialog box confirmation will appear. For more information see [Security Warning: Attaching to a process owned by an untrusted user can be dangerous. If the following information looks suspicious or you are unsure, do not attach to this process](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md).  
+  
+In some cases, when you debug in a Remote Desktop (Terminal Services) session, the **Available Processes** list will not display all available processes. If you are running Visual Studio as a user who has a limited user account, the **Available Processes** list will not show processes that are running in Session 0, which is used for services and other server processes, including w3wp.exe. You can solve the problem by running [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] under an administrator account or by running [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] from the server console instead of a Terminal Services session. If neither of those workarounds is possible, a third option is to attach to the process by running `vsjitdebugger.exe -p` *ProcessId* from the Windows command line. You can determine the process id using tlist.exe. To obtain tlist.exe, download and install Debugging Tools for Windows, available at  [WDK and WinDbg downloads](http://go.microsoft.com/fwlink/?LinkId=168279).
+
+## <a name="BKMK_Scenarios"></a> Common debugging scenarios
+
+To help you identify whether you need to use **Attach to process** and what process to attach to, a few common debugging scenarios are shown here (the list is not exhaustive). Where more instructions are available, we provide links.
+
+For some app types (like Windows Store apps), you don't attach directly to a process name, but use the **Debug Installed App Package** menu option instead (see table).
+
+> [!NOTE]
+> For information about basic debugging in Visual Studio, see [Getting started with the debugger](../debugger/getting-started-with-the-debugger.md).
+
+|Scenario|Debug Method|Process Name|Notes and Links|
 |-|-|-|-|
-|Visual Studio から起動して、ローカル コンピューターに、すべての種類のサポートされているアプリのデバッグします。|標準的な f5 キーによるデバッグ|N/A|参照してください [デバッガーの概要](../debugger/getting-started-with-the-debugger.md)|
-|リモート デバッグ ASP.NET 4 または 4.5 を IIS サーバー|リモート ツールを使用し、プロセスにアタッチします。|w3wp.exe|参照してください [リモート IIS のリモート コンピューター上の ASP.NET のデバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
-|IIS サーバー上のリモート デバッグ ASP.NET Core|リモート ツールを使用し、プロセスにアタッチします。|dnx.exe|アプリの展開を参照してください。 [IIS への発行](https://docs.asp.net/en/latest/publishing/iis.html)します。 デバッグは、次を参照してください [リモート IIS のリモート コンピューター上の ASP.NET のデバッグ。](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
-|サーバー プロセスの他のサポートされているアプリの種類をデバッグします。|(リモート サーバーの場合)、リモート ツールを使用し、プロセスにアタッチします。|iexplore.exe または他のプロセス|必要に応じて、タスク マネージャーを使用して、プロセスを識別しやすくします。 参照してください [リモート デバッグ](../debugger/remote-debugging.md) と以降のセクションでは、このトピック|
-|リモート デバッグ、Windows デスクトップ アプリ|リモート ツールと、f5 キー|N/A| 参照してください [リモート デバッグ](../debugger/remote-debugging.md)|
-|リモートは、Windows Universal (UWP)、OneCore、HoloLens、または IoT アプリをデバッグします。|インストール済みのアプリ パッケージをデバッグします。|N/A|使用 **デバッグ]、[その他のデバッグ ターゲット]、[インストール済みアプリ パッケージをデバッグ** の代わりに **プロセスにアタッチします。**|
-|Visual Studio から開始していない場合、Windows ユニバーサル (UWP) や OneCore、HoloLens、IoT のアプリをデバッグします。|インストール済みのアプリ パッケージをデバッグします。|N/A|使用 **デバッグ]、[その他のデバッグ ターゲット]、[インストール済みアプリ パッケージをデバッグ** の代わりに **プロセスにアタッチします。**|
+|Debug a managed or native app on the local machine|Use attach to process or [standard debugging](../debugger/getting-started-with-the-debugger.md)|*appname*.exe|To quickly access the dialog box, use **CTRL+ALT+P** and then type the first letter of the process name.|
+|Debug ASP.NET apps on the local machine after starting the app without the debugger|Use attach to process|iiexpress.exe|This may be helpful to make your app load faster, such as (for example) when profiling. |
+|Remote debug ASP.NET 4 or 4.5 on an IIS server|Use remote tools and attach to process|w3wp.exe|See [Remote Debugging ASP.NET on a remote IIS computer](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)|
+|Remote debug ASP.NET Core on an IIS server|Use remote tools and attach to process|dotnet.exe|For app deployment, see [Publish to IIS](https://docs.asp.net/en/latest/publishing/iis.html). For debugging, see [Remote Debugging ASP.NET on a remote IIS computer](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)|
+|Debug other supported app types on a server process|Use remote tools (if server is remote) and attach to process|iexplore.exe or other processes|If necessary, use Task Manager to help identify the process. See [Remote Debugging](../debugger/remote-debugging.md) and later sections in this topic|
+|Remote debug a Windows desktop app|Remote Tools and F5|N/A| See [Remote Debugging](../debugger/remote-debugging.md)|
+|Remote debug a Universal (UWP), OneCore, HoloLens, or IoT app|Debug installed app package|N/A|See [Debug an Installed App Package](debug-installed-app-package.md) instead of using **Attach to process**|
+|Debug a Universal Windows App (UWP), OneCore, HoloLens, or IoT app that you didn't start from Visual Studio|Debug installed app package|N/A|See [Debug an Installed App Package](debug-installed-app-package.md) instead of using **Attach to process**|
   
 > [!WARNING]
->  JavaScript で記述された Windows ユニバーサル アプリにアタッチするには、まずそのアプリに対してデバッグを有効にする必要があります。 Windows デベロッパー センター内の「 [Attach the debugger](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md#BKMK_Attach_the_debugger) 」をご覧ください。  
+>  To attach to a UWP that is written in JavaScript, you must first enable debugging for the app. See [Attach the debugger](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md#BKMK_Attach_the_debugger) in the Windows Dev Center.  
   
 > [!NOTE]
->  C++ で記述されたコードにデバッガーをアタッチするには、コードが `DebuggableAttribute`を生成する必要があります。 [/ASSEMBLYDEBUG](/visual-cpp/build/reference/assemblydebug-add-debuggableattribute) リンカー オプションを使ってリンクすると、これを自動的にコードに追加できます。
+>  For the debugger to attach to code written in C++, the code needs to emit `DebuggableAttribute`. You can add this to your code automatically by linking with the [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) linker option.
 
-## <a name="what-debugger-features-can-i-use"></a>どのようなデバッガー機能を使用できますか。
+## <a name="what-debugger-features-can-i-use"></a>What debugger features can I use?
 
-Visual Studio デバッガー (ブレークポイントにヒット) などの完全な機能を使用する実行可能ファイルとまったく同じにローカル ソースとシンボル (つまり、デバッガーが、正しいを読み込むことにする必要があります [シンボル (.pbd) ファイルを](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md))。 既定では、デバッグ ビルドが必要です。
+To use the full features of the Visual Studio debugger (like hitting breakpoints) when attaching to a process, the executable must exactly match your local source and symbols (that is, the debugger must be able to load the correct [symbol (.pbd) files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)). By default, this requires a debug build.
 
-リモートのデバッグ シナリオでは、いずれか、ソース コードのソース コードのコピー Visual Studio で既に開かれているが必要です。 リモート コンピューターでコンパイルされたアプリのバイナリは、ローカル コンピューター上と同じビルドから取得する必要です。
+For remote debugging scenarios, you must have the source code (or a copy of the source code) already open in Visual Studio. The compiled app binaries on the remote machine must come from the same build as on the local machine.
 
-いくつかのローカル デバッグ シナリオでデバッグできます Visual Studio で、ソースにアクセスできず、適正なシンボル ファイルがアプリケーションに存在している場合 (既定では、これが必要、デバッグ ビルド)。 詳細については、次を参照してください。 [指定シンボルとソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)します。
-
-Windows デスクトップ アプリでは、JIT デバッガー (Visual Studio が表示され、エラーが発生した後、アプリケーション コードを中断する) を使用して実行中のアプリをデバッグすることもできます。
-
-##  <a name="a-namebkmkattachtoaprocessonaremotecomputera-attach-to-a-process-on-a-remote-computer"></a><a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a> リモート コンピューター上のプロセスにアタッチします。  
- プロセスにアタッチするには、プロセスの名前を知っている必要があります。 IIS に配置されている ASP.NET アプリケーションを参照してください。 [リモート IIS コンピューター上でリモート デバッグの ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) または [を IIS に発行](https://docs.asp.net/en/latest/publishing/iis.html) ASP.NET Core アプリです。 他のアプリについては、タスク マネージャーで、プロセスの名前を検索できる場合があります。
+In some local debugging scenarios, you can debug in Visual Studio with no access to the source if the correct symbol files are present with the app (by default, this requires a debug build). For more info, see [Specify Symbol and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
   
- **[プロセスにアタッチ]** ダイアログ ボックスでは、リモート デバッグ用にセットアップした他のコンピューターを選択できます。 詳細については、次を参照してください。 [リモート デバッグ](../Topic/Set%20Up%20the%20Remote%20Tools%20on%20the%20Device.md)します。 リモート コンピューターを選択すると、そのコンピューターで実行されている選択可能なプロセスの一覧を表示して、1 つ以上のプロセスにアタッチしてデバッグを実行できます。
+##  <a name="BKMK_Troubleshoot_attach_errors"></a> Troubleshoot attach errors  
+ When the debugger attaches to a running process, the process can contain one or more types of code. The code types the debugger can attach to are displayed and selected in the **Select Code Type** dialog box.  
   
- **リモート コンピューターを選択します。**  
-
-1. Visual Studio で、 **[デバッグ]、[プロセスにアタッチ]**の順に選択します。
-
-2.  **[プロセスにアタッチ]** ダイアログ ボックスの **[トランスポート]** ボックスの一覧で、該当する接続の種類を選択します。 **[既定値]** は、ほとんどの場合に適切な設定です。
-
-    **[トランスポート]** の設定は、デバッグ セッション間で保持されます。 
+ Sometimes, the debugger can successfully attach to one code type, but not to another code type. This might occur if you are trying to attach to a process that is running on a remote computer. The remote computer might have remote debugging components installed for some code types but not for others. It can also occur if you try to attach to two or more processes for direct database debugging. SQL debugging supports attaching to a single process only.  
   
-3.  **[修飾子]** ボックスの一覧でリモート コンピューター名を選択します。以下のいずれかの方法を使用します。  
+ If the debugger is able to attach to some, but not all, code types, you will see a message identifying which types failed to attach.  
   
-    1.  **[修飾子]** ボックスの一覧に名前を入力します。
-    
-        >**注** 場合、後の手順では、リモート コンピューター名を使用して接続できない、IP アドレスを使用します。 (ポート番号が自動的に表示プロセスを選択した後。 手動で入力することもできます。 次の図で 4020 はリモート デバッガーの既定のポート) です。  
+ If the debugger successfully attaches to at least one code type, you can proceed to debug the process. You will be able to debug only the code types that were successfully attached. The preceding example message shows that the script code type failed to attach. Therefore, you would not be able to debug script code within the process. The script code in the process would still run, but you would not be able to set breakpoints, view data, or perform other debugging operations in the Script.  
   
-    2.  **[修飾子]** ボックスの一覧の横のドロップダウン矢印をクリックし、一覧でコンピューター名を選択します。  
+ If you want more specific information about why the debugger failed to attach to a code type, you can try to reattach to only that code type.  
   
-    3.  **[修飾子]** ボックスの一覧の横にある**[検索]** ボタンをクリックして、 **[リモート デバッガー接続の選択]** ダイアログ ボックスを開きます。 **[リモート デバッガー接続の選択]** ダイアログ ボックスには、ローカル サブネット上にあるデバイスと、イーサネット ケーブルで自分のコンピューターに直接接続されているデバイスがすべて表示されます。 目的のコンピューターまたはデバイスをクリックし、 **[選択]**をクリックします。 
-    
-    ![DBG_Basics_Attach_To_Process](../debugger/media/dbg_basics_attach_to_process.png "DBG_Basics_Attach_To_Process") 
+ **To obtain specific information about why a code type failed to attach**  
   
-     **[修飾子]** の設定は、その修飾子でデバッグ接続が成功した場合のみ、デバッグ セッション間で保持されます。
-     
-4.   **[更新]**を生成する必要があります。
-
-      **[プロセス]** ダイアログ ボックスを開くと、 **[選択可能なプロセス]** ボックスが自動的に表示されます。 このダイアログ ボックスが開いている間に、プロセスをバックグラウンドで開始および停止できます。 このため、内容が常に最新であるとは限りません。 **[更新]**をクリックすると、いつでも一覧の内容を更新して、現在のプロセス一覧を確認できます。 
-     
-4.  **[プロセスにアタッチ]** ダイアログ ボックスの **[選択可能なプロセス]** ボックスの一覧で、アタッチするプログラムを探します。  
+1.  Detach from the process. On the **Debug** menu, click **Detach All**.  
   
-     プロセスが別のユーザー アカウントで実行されている場合は、 **[すべてのユーザーからのプロセスを表示する]** チェック ボックスをオンにします。
-     
-5.  **[アタッチ]**をクリックします。  
+2.  Reattach to the process, selecting only a single code type.  
   
-##  <a name="a-namebkmkattachtoarunningprocessa-attach-to-a-running-process-on-the-local-machine"></a><a name="BKMK_Attach_to_a_running_process"></a> ローカル コンピューターで実行中のプロセスにアタッチします。  
- プロセスにアタッチするには、プロセスの名前を知っている必要があります。  タスク マネージャーで、プロセスの名前を検索できる場合があります。  
+    1.  In the **Attach to Process** dialog box, select the process in the **Available Processes** list.  
   
-1.  Visual Studio で、 **[デバッグ]、[プロセスにアタッチ]**の順に選択します。
+    2.  Click **Select**.  
   
-2.  **[プロセスにアタッチ]** ダイアログ ボックスの **[選択可能なプロセス]** ボックスの一覧で、アタッチするプログラムを探します。  
+    3.  In the **Select Code Type** dialog box, select **Debug these code types** and the code type that failed to attach. Clear any other code.  
   
-     プロセスが別のユーザー アカウントで実行されている場合は、 **[すべてのユーザーからのプロセスを表示する]** チェック ボックスをオンにします。
+    4.  Click **OK**. The **Select Code Type** dialog box closes.  
   
-3.  **[アタッチ先]** ボックスに、デバッグするコードの種類が表示されていることを確認します。 既定の **[自動]** 設定では、デバッグするコードの種類が自動的に判断されます。 コードの種類を手動で設定するには、次の操作を行います  
+    5.  In the **Attach to Process** dialog box, click **Attach**.  
   
-    1.  **[プロセスにアタッチ]** ボックスで、 **[選択]**をクリックします。  
+     This time, the attach will fail completely, and you will get a specific error message.  
   
-    2.  **[コードの種類の選択]** ダイアログ ボックスで、 **[次のコードの種類をデバッグする]** をクリックし、デバッグする種類を選択します。  
-  
-    3.  **[OK]**をクリックします。  
-  
-4.  **[アタッチ]**をクリックします。
-
-## <a name="additional-info"></a>追加情報
-
-デバッグ中には複数のプログラムにアタッチできますが、デバッガーでアクティブになっているプログラムは常に 1 つだけです。 アクティブなプログラムは、 **[デバッグの場所]** ツール バーまたは **[プロセス]** ウィンドウで設定できます。 詳細については、「 [方法 : 現在のプロセスを設定する](http://msdn.microsoft.com/ja-jp/7e1d7fa5-0e40-44cf-8c41-d3dba31c969e)」を参照してください。  
-  
-信頼関係のないユーザー アカウントによって所有されているプロセスにアタッチしようとすると、セキュリティ警告の確認ダイアログ ボックスが表示されます。 詳細については、次を参照してください。 [セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするのは危険です。次の情報に関して疑わしい、または不明ながこのプロセスにアタッチしません。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)します。  
-  
-リモート デスクトップ (ターミナル サービス) セッションでのデバッグ時には、 **[選択可能なプロセス]** ボックスに、使用可能なプロセスのすべてが表示されない場合があります。 Visual Studio を、制限付きユーザー アカウントを持つユーザーとして実行している場合、 **[選択可能なプロセス]** ボックスの一覧には、セッション 0 で実行しているプロセスは表示されません。セッション 0 は、サービスおよび w3wp.exe を含むその他のサーバー プロセス用に使用されます。 この問題を解決するには、管理者アカウントで [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を実行するか、ターミナル サービス セッションからではなくサーバー コンソールから [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を実行します。 どちらの方法も実行できない場合、3 つ目の方法として、Windows コマンド ラインから `vsjitdebugger.exe -p` *ProcessId* を実行することによって、プロセスにアタッチできます。 プロセス ID は tlist.exe を使用して確認できます。 tlist.exe を入手するには、「  [WDK と WinDbg のダウンロード](http://go.microsoft.com/fwlink/?LinkId=168279)」で Windows 対応のデバッグ ツールをダウンロードし、インストールします。
-  
-##  <a name="a-namebkmktroubleshootattacherrorsa-troubleshoot-attach-errors"></a><a name="BKMK_Troubleshoot_attach_errors"></a> トラブルシューティング: アタッチ エラー  
- 実行中のプロセスにデバッガーがアタッチすると、このプロセスは、1 種類以上のコードを含むことができます。 デバッガーをアタッチできるコードの種類は **[コードの種類の選択]** ダイアログ ボックスで表示されて選択されています。  
-  
- デバッガーは、ある種類のコードに正常にアタッチできても、別の種類にはアタッチできないことがあります。 この問題は、リモート コンピューターで動作しているプロセスにアタッチしようとする場合に発生することがあります。 リモート コンピューターには、一部の種類のコードにしか対応しないリモート デバッグ コンポーネントがインストールされている場合があるためです。 また、ダイレクト データベース デバッグのために複数のプロセスにアタッチしようとした場合にも発生することがあります。 SQL デバッグ機能は、単一プロセスへのアタッチのみをサポートします。  
-  
- デバッガーが一部の種類のコードにしかアタッチできない場合は、アタッチできなかった種類を識別するメッセージが表示されます。  
-  
- デバッガーが少なくとも 1 種類のコードに正常にアタッチできる場合は、プロセスのデバッグを開始できます。 正常にアタッチされたコードの種類のみをデバッグできます。 上記のメッセージの例は、種類がスクリプトのコードにアタッチできなかったことを示しています。 この場合、プロセス内でスクリプト コードをデバッグできません。 プロセス内のスクリプト コードはそのまま実行されますが、スクリプトでのブレークポイントの設定、データの表示、またはその他のデバッグ操作は実行できません。  
-  
- デバッガーがコードの種類へのアタッチに失敗した理由についてより詳しい情報が必要な場合は、該当するコードの種類のみに再アタッチを試行できます。  
-  
- **コードの種類の接続が失敗した理由に関する特定の情報を取得するには**  
-  
-1.  プロセスからデタッチします。 **[デバッグ]** メニューの **[すべてデタッチ]**をクリックします。  
-  
-2.  コードの種類を 1 つだけ選択して、プロセスに再度アタッチします。  
-  
-    1.  **[プロセスにアタッチ]** ダイアログ ボックスの **[選択可能なプロセス]** ボックスの一覧で、プロセスを選択します。  
-  
-    2.  **[選択]**をクリックします。  
-  
-    3.  **[コードの種類の選択]** ダイアログ ボックスの **[次のコードの種類をデバッグする]** をクリックし、アタッチに失敗したコードの種類を選択します。 他のコードをすべてオフにします。  
-  
-    4.  **[OK]**をクリックします。 **[コードの種類の選択]** ダイアログ ボックスが閉じます。  
-  
-    5.  **[プロセスにアタッチ]** ダイアログ ボックスで、 **[アタッチ]**をクリックします。  
-  
-     このとき、アタッチは完全に失敗し、詳細なエラー メッセージが表示されます。  
-  
-## <a name="see-also"></a>「  
- [複数のプロセスをデバッグします。](../debugger/debug-multiple-processes.md)   
- [ジャスト イン タイム デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)   
- [リモート デバッグ](../debugger/remote-debugging.md)
+## <a name="see-also"></a>See Also  
+ [Debug Multiple Processes](../debugger/debug-multiple-processes.md)   
+ [Just-In-Time Debugging](../debugger/just-in-time-debugging-in-visual-studio.md)   
+ [Remote Debugging](../debugger/remote-debugging.md)

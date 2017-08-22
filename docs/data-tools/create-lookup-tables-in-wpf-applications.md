@@ -1,66 +1,85 @@
 ---
-title: "方法: WPF アプリケーションでルックアップ テーブルを作成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [WPF], 表示"
-  - "データ バインド, WPF"
-  - "表示 (データを), WPF"
-  - "WPF [WPF], データ"
-  - "WPF データ バインド [Visual Studio]"
-  - "WPF デザイナー, データ バインド"
-  - "WPF, データ バインド (Visual Studio での)"
+title: Create lookup tables in WPF applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
+helpviewer_keywords:
+- data [WPF], displaying
+- WPF, data binding in Visual Studio
+- WPF data binding [Visual Studio]
+- displaying data, WPF
+- WPF [WPF], data
+- WPF Designer, data binding
+- data binding, WPF
 ms.assetid: 56a1fbff-c7e8-4187-a1c1-ffd17024bc1b
 caps.latest.revision: 16
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 35c99d7b903674af2e4d8b6f6e8c770d440d95c8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
+
 ---
-# 方法: WPF アプリケーションでルックアップ テーブルを作成する
-**\[データ ソース\]** ウィンドウ内の親テーブルまたは親オブジェクトのメイン ノードを、関連する子テーブルの列またはプロパティにバインドされたコントロールにドラッグすると、ルックアップ テーブルを作成できます。  *ルックアップ テーブル* \(*検索バインド*と呼ばれることもあります\) とは、あるテーブルの外部キー フィールドの値に基づいて別のデータ テーブルの情報を表示するコントロールを表します。  
+# <a name="create-lookup-tables-in-wpf-applications"></a>Create lookup tables in WPF applications
+The term *lookup table* (sometimes called a *lookup binding*) describes a control that displays information from one data table based on the value of a foreign-key field in another table. You can create a lookup table by dragging the main node of a parent table or object in the **Data Sources** window onto a control that is already bound to a column or property in a related child table.  
   
- たとえば、販売データベースの `Orders` テーブルであれば、次のように使用されます。  `Orders` テーブルの各レコードには、注文した顧客を表す `CustomerID` が含まれます。  `CustomerID` は、`Customers` テーブルの顧客レコードを指す外部キーです。  `Orders` テーブルの注文の一覧を表示する場合に、`CustomerID` ではなく、実際の顧客名を表示できます。  顧客名は `Customers` テーブルに格納されているため、顧客名を表示するにはルックアップ テーブルを作成する必要があります。  ルックアップ テーブルでは、`Orders` レコードの `CustomerID` の値を使用してリレーションシップをたどり、わかりやすい顧客名を返します。  
+ For example, consider a table of `Orders` in a sales database. Each record in the `Orders` table includes a `CustomerID` that indicates which customer placed the order. The `CustomerID` is a foreign key that points to a customer record in the `Customers` table. When you display a list of orders from the `Orders` table, you may want to display the actual customer name instead of the `CustomerID`. Because the customer name is in the `Customers` table, you need to create a lookup table to display the customer name. The lookup table uses the `CustomerID` value in the `Orders` record to navigate the relationship, and return the customer name.  
   
-### ルックアップ テーブルを作成するには  
+## <a name="to-create-a-lookup-table"></a>To create a lookup table  
   
-1.  プロジェクトに、関連データを持つ次のいずれかの種類のデータ ソースを追加します。  
+1.  Add one of the following types of data sources with related data to your project:  
   
-    -   データセットまたは Entity Data Model。  詳細については、「[方法 : データベース内のデータに接続する](../data-tools/how-to-connect-to-data-in-a-database.md)」を参照してください。  
+    -   Dataset or Entity Data Model. 
   
-    -   WCF データ サービス、WCF サービス、または Web サービス。  詳細については、「[方法: サービスのデータに接続する](../data-tools/how-to-connect-to-data-in-a-service.md)」を参照してください。  
+    -   WCF Data Service, WCF service or Web service. For more information, see [How to: Connect to Data in a Service](../data-tools/how-to-connect-to-data-in-a-service.md).  
   
-    -   オブジェクト。  詳細については、「[方法: オブジェクトのデータに接続する](../Topic/How%20to:%20Connect%20to%20Data%20in%20Objects.md)」を参照してください。  
-  
-    > [!NOTE]
-    >  ルックアップ テーブルを作成するには、関連する 2 つのテーブルまたはオブジェクトがプロジェクトのデータ ソースとして存在している必要があります。  
-  
-2.  **WPF デザイナー**を開き、**\[データ ソース\]** ウィンドウ内の項目に対して有効なドロップ ターゲットとなるコンテナーが、WPF デザイナーに含まれていることを確認します。  
-  
-     有効なドロップ ターゲットの詳細については、「[Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)」を参照してください。  
-  
-3.  **\[データ\]** メニューの **\[データ ソースの表示\]** をクリックして **\[データ ソース\]** ウィンドウを開きます。  
-  
-4.  **\[データ ソース\]** ウィンドウで、親テーブルまたは親オブジェクトと関連する子テーブルまたは子オブジェクトが表示されるまでノードを展開します。  
+    -   Objects. For more information, see [Bind to objects in Visual Studio](bind-objects-in-visual-studio.md).  
   
     > [!NOTE]
-    >  関連する子テーブルまたは子オブジェクトは、親テーブルまたは親オブジェクトの下に展開可能な子ノードとして表示されるノードです。  
+    >  Before you can create a lookup table, two related tables or objects must exist as a data source for the project.  
   
-5.  子ノードのドロップダウン メニューをクリックし、**\[詳細\]** を選択します。  
+2.  Open the **WPF Designer**, and make sure that the designer contains a container that is a valid drop target for items in the **Data Sources** window.  
   
-6.  子ノードを展開します。  
+     For more information about valid drop targets, see [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).  
   
-7.  子ノードの下で、子と親のデータを関連付けている項目のドロップダウン メニューをクリックします \(上の例の場合、これは **\[CustomerID\]** ノードになります\)。  検索バインドをサポートする次のいずれかの種類のコントロールを選択します。  
+3.  On the **Data** menu, click **Show Data Sources** to open the **Data Sources** window.  
+  
+4.  Expand the nodes in the **Data Sources** window, until you can see the parent table or object and the related child table or object.  
+  
+    > [!NOTE]
+    >  The related child table or object is the node that appears as an expandable child node under the parent table or object.  
+  
+5.  Click the drop-down menu for the child node, and select **Details**.  
+  
+6.  Expand the child node.  
+  
+7.  Under the child node, click the drop-down menu for the item that relates the child and parent data. (In the preceding example, this is the **CustomerID** node.) Select one of the following types of controls that support lookup binding:  
   
     -   **ComboBox**  
   
@@ -69,30 +88,30 @@ manager: "ghogen"
     -   **ListView**  
   
         > [!NOTE]
-        >  **ListBox** コントロールまたは **ListView** コントロールが一覧に表示されない場合は、これらのコントロールを一覧に追加できます。  詳細については、「[\[データ ソース\] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../Topic/Set%20the%20control%20to%20be%20created%20when%20dragging%20from%20the%20Data%20Sources%20window.md)」を参照してください。  
+        >  If the **ListBox** or **ListView** control does not appear in the list, you can add these controls to the list. For information, see [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
   
-    -   <xref:System.Windows.Controls.Primitives.Selector> から派生した任意のカスタム コントロール。  
+    -   Any custom control that derives from <xref:System.Windows.Controls.Primitives.Selector>.  
   
         > [!NOTE]
-        >  **\[データ ソース\]** ウィンドウの項目に対して選択できるコントロールの一覧にカスタム コントロールを追加する方法については、「[\[データ ソース\] ウィンドウにカスタム コントロールを追加する](../Topic/Add%20custom%20controls%20to%20the%20Data%20Sources%20window.md)」を参照してください。  
+        >  For information about how to add custom controls to the list of controls you can select for items in the **Data Sources** window, see [Add custom controls to the Data Sources window](../data-tools/add-custom-controls-to-the-data-sources-window.md).  
   
-8.  **\[データ ソース\]** ウィンドウから、WPF デザイナー内のコンテナーに子ノードをドラッグします \(上の例の場合、子ノードは **\[Orders\]** ノードです\)。  
+8.  Drag the child node from the **Data Sources** window onto a container in the WPF designer. (In the preceding example, the child node is the **Orders** node.)  
   
-     ドラッグした各項目に対して新しいデータ バインド コントロールを作成する XAML が、Visual Studio によって生成されます。  さらに、この XAML により、子テーブルまたは子オブジェクトの新しい <xref:System.Windows.Data.CollectionViewSource> がドロップ ターゲットのリソースに追加されます。  一部のデータ ソースでは、Visual Studio により、テーブルまたはオブジェクトにデータを読み込むコードも生成されます。  詳細については、「[Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)」を参照してください。  
+     Visual Studio generates XAML that creates new data-bound controls for each of the items that you drag. The XAML also adds a new <xref:System.Windows.Data.CollectionViewSource> for the child table or object to the resources of the drop target. For some data sources, Visual Studio also generates code to load data into the table or object. For more information, see [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).  
   
-9. **\[データ ソース\]** ウィンドウから、前の手順で作成した検索バインド コントロールに親ノードをドラッグします \(上の例の場合、親ノードは **\[Customers\]** ノードです\)。  
+9. Drag the parent node from the **Data Sources** window onto the lookup binding control that you created earlier. (In the preceding example, the parent node is the **Customers** node).  
   
-     Visual Studio は、コントロールのいくつかのプロパティを設定して検索バインドを構成します。  Visual Studio によって変更されるプロパティを次の表に示します。  必要に応じて、これらのプロパティを XAML または **\[プロパティ\]** ウィンドウで変更できます。  
+     Visual Studio sets some properties on the control to configure the lookup binding. The following table lists the properties that Visual Studio modifies. If necessary, you can change these properties in the XAML or in the **Properties** window.  
   
-    |プロパティ|設定の説明|  
-    |-----------|-----------|  
-    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|このプロパティは、コントロールに表示するデータの取得に使用するコレクションまたはバインドを指定します。  このプロパティは、Visual Studio によって、コントロールにドラッグした親データの <xref:System.Windows.Data.CollectionViewSource> に設定されます。|  
-    |<xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>|このプロパティは、コントロールに表示するデータ項目のパスを指定します。  このプロパティは、Visual Studio によって、親データ内で主キーの後にあり、文字列データ型を含んでいる最初の列またはプロパティに設定されます。<br /><br /> 親データの別の列またはプロパティを表示する場合は、このプロパティを別のプロパティのパスに変更します。|  
-    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|このプロパティは、Visual Studio によって、デザイナーにドラッグした子データの列またはプロパティにバインドされます。  この列またはプロパティが、親データの外部キーになります。|  
-    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A>|このプロパティは、Visual Studio によって、親データの外部キーである子データの列またはプロパティのパスに設定されます。|  
+    |Property|Explanation of setting|  
+    |--------------|----------------------------|  
+    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|This property specifies the collection or binding that is used to get the data that is displayed in the control. Visual Studio sets this property to the <xref:System.Windows.Data.CollectionViewSource> for the parent data you dragged to the control.|  
+    |<xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>|This property specifies the path of the data item that is displayed in the control. Visual Studio sets this property to the first column or property in the parent data, after the primary key, that has a string data type.<br /><br /> If you want to display a different column or property in the parent data, change this property to the path of a different property.|  
+    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|Visual Studio binds this property to the column or property of the child data that you dragged to the designer. This is the foreign key to the parent data.|  
+    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A>|Visual Studio sets this property to the path of the column or property of the child data that is the foreign key to the parent data.|  
   
-## 参照  
- [Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)   
- [方法: Visual Studio でデータに WPF コントロールをバインドする](../data-tools/bind-wpf-controls-to-data-in-visual-studio2.md)   
- [方法: WPF アプリケーションで関連データを表示する](../data-tools/display-related-data-in-wpf-applications.md)   
- [チュートリアル: WPF アプリケーションでの関連データの表示](../data-tools/walkthrough-displaying-related-data-in-a-wpf-application.md)
+## <a name="see-also"></a>See Also  
+ [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
+ [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
+ [Display related data in WPF applications](../data-tools/display-related-data-in-wpf-applications.md)   
+ [Walkthrough: Displaying Related Data in a WPF Application](../data-tools/display-related-data-in-wpf-applications.md)

@@ -1,51 +1,70 @@
 ---
-title: "How to: Add Validation to Entity Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'How to: Add validation to entity classes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 61107da9-7fa3-4dba-b101-ae46536f52c4
 caps.latest.revision: 3
-caps.handback.revision: 1
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 25df2b3849a0cb18ec15a0fde2798e36c829a8da
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
+
 ---
-# How to: Add Validation to Entity Classes
-エンティティ クラスの*検証*とは、データ オブジェクトに入力された値が、アプリケーションに対して設定された規則に従っていること、およびオブジェクトのスキーマ内の制約に従っていることを確認するプロセスです。基になるデータベースに更新を送信する前にデータを検証すると、エラーを減らすことができます。アプリケーションとデータベースの間で生じる可能性のあるラウンド トリップの回数も減ります。  
+# <a name="how-to-add-validation-to-entity-classes"></a>How to: Add validation to entity classes
+*Validating* entity classes is the process of confirming that the values entered into data objects comply with the constraints in an object's schema, and also to the rules established for the application. Validating data before you send updates to the underlying database is a good practice that reduces errors. It also reduces the potential number of round trips between an application and the database.  
   
- [Object Relational Designer \(O\/R Designer\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md) では、部分メソッドがサポートされており、これを使用することで、完全なエンティティの挿入、更新、および削除の処理中や、個々の列の変更中および変更後に実行される、デザイナーで生成されたコードをユーザーが拡張できます。  
+ The [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) provides partial methods that enable users to extend the designer-generated code that runs during Inserts, Updates, and Deletes of complete entities, and also during and after individual column changes.  
   
 > [!NOTE]
->  このトピックでは、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]を使用してエンティティ クラスに検証を追加する基本的な手順を示します。特定のエンティティ クラスを参照しないでこれらの汎用的な手順に従うのは難しい可能性があるため、実際のデータを使用するチュートリアルが用意されています。[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]を使用して検証を構成する詳細な手順については、「[Walkthrough: Adding Validation to Entity Classes](../Topic/Walkthrough:%20Adding%20Validation%20to%20Entity%20Classes.md)」を参照してください。  
+>  This topic provides the basic steps for adding validation to entity classes by using the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. Because it might be difficult to follow these generic steps without referring to a specific entity class, a walkthrough that uses actual data has been provided.  
   
-## 特定の列の値の変更に対する検証の追加  
- この手順では、列の値の変更時にデータを検証する方法を示します。検証はユーザー インターフェイスではなくクラス定義の内部で実行されるため、値によって検証が失敗する場合は例外がスローされます。列の値を変更しようとするアプリケーションのコードには、エラー処理を実装してください。  
+## <a name="adding-validation-for-changes-to-the-value-in-a-specific-column"></a>Adding Validation for Changes to the Value in a Specific Column  
+ This procedure shows how to validate data when the value in a column changes. Because the validation is performed inside the class definition (instead of in the user interface) an exception is thrown if the value causes validation to fail. Implement error handling for the code in your application that attempts to change the column values.  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-#### 列の値の変更時にデータを検証するには  
+#### <a name="to-validate-data-during-a-columns-value-change"></a>To validate data during a column's value change  
   
-1.  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]で新しい LINQ to SQL クラス ファイル \(**.dbml** ファイル\) を開くか、新しく作成します \(**ソリューション エクスプローラー**で **.dbml** ファイルをダブルクリックします\)。  
+1.  Open or create a new LINQ to SQL Classes file (**.dbml** file) in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. (Double-click the **.dbml** file in **Solution Explorer**.)  
   
-2.  O\/R デザイナーで、検証を追加するクラスを右クリックし、**\[コードの表示\]** をクリックします。  
+2.  In the O/R Designer, right-click the class for which you want to add validation and then click **View Code**.  
   
-     コード エディターが開き、選択したエンティティ クラスの部分クラスが表示されます。  
+     The Code Editor opens with a partial class for the selected entity class.  
   
-3.  部分クラスにカーソルを置きます。  
+3.  Place the cursor in the partial class.  
   
-4.  Visual Basic プロジェクトの場合は、次の操作を行います。  
+4.  For Visual Basic projects:  
   
-    1.  **\[メソッド名\]** の一覧を展開します。  
+    1.  Expand the **Method Name** list.  
   
-    2.  検証を追加する列の **On***COLUMNNAME***Changing** メソッドを見つけます。  
+    2.  Locate the **On*COLUMNNAME*Changing** method for the column you want to add validation to.  
   
-    3.  `On` *COLUMNNAME* `Changing` メソッドが部分クラスに追加されます。  
+    3.  An `On`*COLUMNNAME*`Changing` method is added to the partial class.  
   
-    4.  次のコードを追加して、まず値が入力されたことを確認し、次に列に入力された値がアプリケーションで許容されることを確認します。入力された値は `value` 引数に含まれています。そこで、これが有効な値であることを確認するロジックを追加します。  
+    4.  Add the following code to first verify that a value has been entered and then to ensure that the value entered for the column is acceptable for your application. The `value` argument contains the proposed value, so add logic to confirm that it is a valid value:  
   
         ```vb#  
         If value.HasValue Then  
@@ -56,11 +75,11 @@ manager: "ghogen"
         End If  
         ```  
   
-     C\# プロジェクトの場合は、次の操作を行います。  
+     For C# projects:  
   
-    1.  C\# プロジェクトでは、イベント ハンドラーの生成は自動的には行われないため、IntelliSense を使用して列変更部分メソッドを作成します。  
+    1.  Because C# projects do not automatically generate the event handlers, you can use IntelliSense to create the column-changing partial methods.  
   
-         「`partial`」に続けてスペースを入力して、使用可能な部分メソッドの一覧にアクセスします。検証を追加する列の列変更メソッドをクリックします。列変更部分メソッドを選択したときに生成されるコードは次のようになります。  
+         Type `partial` and then a space to access the list of available partial methods. Click the column-changing method for the column you want to add validation for. The following code resembles code that is generated when you select a column-changing partial method:  
   
         ```c#  
         partial void OnCOLUMNNAMEChanging(COLUMNDATATYPE value)  
@@ -70,31 +89,31 @@ manager: "ghogen"
   
         ```  
   
-## エンティティ クラスの更新に対する検証の追加  
- 変更時の値のチェックに加えて、エンティティ クラス全体の更新が試行されたときにデータを検証することもできます。更新の試行時の検証では、ビジネス ルールにおける必要性に応じて複数の列の値を比較できます。次の手順は、エンティティ クラス全体の更新が試行されたときに検証を行う方法を示しています。  
+## <a name="adding-validation-for-updates-to-an-entity-class"></a>Adding Validation for Updates to an Entity Class  
+ In addition to checking values during changes, you can also validate data when an attempt is made to update a complete entity class. Validation during an attempted update enables you to compare values in multiple columns if business rules require this. The following procedure shows how to validate when an attempt is made to update a complete entity class.  
   
 > [!NOTE]
->  エンティティ クラス全体の更新に対する検証コードは、特定のエンティティ クラスの部分クラスではなく、部分 <xref:System.Data.Linq.DataContext> クラスで実行されます。  
+>  Validation code for updates to complete entity classes is executed in the partial <xref:System.Data.Linq.DataContext> class (instead of in the partial class of a specific entity class).  
   
-#### エンティティ クラスの更新時にデータを検証するには  
+#### <a name="to-validate-data-during-an-update-to-an-entity-class"></a>To validate data during an update to an entity class  
   
-1.  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]で LINQ to SQL クラス ファイル \(**.dbml** ファイル\) を開くか、新しく作成します \(**ソリューション エクスプローラー**で **.dbml** ファイルをダブルクリックします\)。  
+1.  Open or create a new LINQ to SQL Classes file (**.dbml** file) in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. (Double-click the **.dbml** file in **Solution Explorer**.)  
   
-2.  O\/R デザイナーで空の領域を右クリックし、**\[コードの表示\]** をクリックします。  
+2.  Right-click an empty area on the O/R Designer and click **View Code**.  
   
-     コード エディターが開き、`DataContext` の部分クラスが表示されます。  
+     The Code Editor opens with a partial class for the `DataContext`.  
   
-3.  `DataContext` の部分クラスにカーソルを置きます。  
+3.  Place the cursor in the partial class for the `DataContext`.  
   
-4.  Visual Basic プロジェクトの場合は、次の操作を行います。  
+4.  For Visual Basic projects:  
   
-    1.  **\[メソッド名\]** の一覧を展開します。  
+    1.  Expand the **Method Name** list.  
   
-    2.  **\[更新\]** *ENTITYCLASSNAME* をクリックします。  
+    2.  Click **Update***ENTITYCLASSNAME*.  
   
-    3.  `Update` *ENTITYCLASSNAME* メソッドが部分クラスに追加されます。  
+    3.  An `Update`*ENTITYCLASSNAME* method is added to the partial class.  
   
-    4.  次のコードに示すように、`instance` 引数を使用して個々の列の値にアクセスします。  
+    4.  Access individual column values by using the `instance` argument, as shown in the following code:  
   
         ```vb#  
         If (instance.COLUMNNAME = x) And (instance.COLUMNNAME = y) Then  
@@ -103,11 +122,11 @@ manager: "ghogen"
         End If  
         ```  
   
-     C\# プロジェクトの場合は、次の操作を行います。  
+     For C# projects:  
   
-    1.  C\# プロジェクトでは、イベント ハンドラーの生成は自動的には行われないため、IntelliSense を使用して部分 `Update`*CLASSNAME* メソッドを作成します。  
+    1.  Because C# projects do not automatically generate the event handlers, you can use IntelliSense to create the partial `Update`*CLASSNAME* method.  
   
-    2.  「`partial`」に続けてスペースを入力して、使用可能な部分メソッドの一覧にアクセスします。検証を追加するクラスの更新メソッドをクリックします。`Update`*CLASSNAME* 部分メソッドを選択したときに生成されるコードは次のようになります。  
+    2.  Type `partial` and then a space to access the list of available partial methods. Click the update method for the class you want to add validation for. The following code resembles code that is generated when you select an `Update`*CLASSNAME* partial method:  
   
         ```c#  
         partial void UpdateCLASSNAME(CLASSNAME instance)  
@@ -120,7 +139,7 @@ manager: "ghogen"
         }  
         ```  
   
-## 参照  
- [Object Relational Designer \(O\/R Designer\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [データの検証](../Topic/Validating%20Data.md)
+## <a name="see-also"></a>See Also  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
+ [Validating Data](validate-data-in-datasets.md)

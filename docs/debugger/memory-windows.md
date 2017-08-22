@@ -1,125 +1,138 @@
 ---
-title: "[メモリ] ウィンドウ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.memory"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "[メモリ 1] ウィンドウ"
-  - "文字列 [Visual Studio]、表示"
-  - "デバッガー [Visual Studio]、[メモリ] ウィンドウ"
-  - "メモリ [Visual Studio]、デバッグ"
-  - "デバッグ [Visual Studio]、[メモリ] ウィンドウ"
-  - "バッファー、表示"
+title: View Memory for Variables in the Debugger | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.memory
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- Memory window
+- strings [Visual Studio], viewing
+- debugger [Visual Studio], Memory window
+- memory [Visual Studio], debugging
+- debugging [Visual Studio], Memory window
+- buffers, viewing
 ms.assetid: 7f7a0439-10e4-4966-bb2d-51f04cda4fe2
 caps.latest.revision: 32
-caps.handback.revision: 32
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# [メモリ] ウィンドウ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 2b271eaf132aea65c1217d8b4f3bfef7e1e1ac0e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-**\[メモリ\]** ウィンドウには、アプリケーションが使用しているメモリ空間の内容が表示されます。  **\[ウォッチ\]** ウィンドウ、**\[クイック ウォッチ\]** ダイアログ ボックス、**\[自動変数\]** ウィンドウ、および **\[ローカル\]** ウィンドウには、メモリ内の特定の位置に格納された変数の内容が表示されます。  一方、**\[メモリ\]** ウィンドウには大きな画像が表示されます。  これは、ほかのウィンドウではうまく表示されない大きなデータ \(バッファーや長い文字列など\) をチェックする場合に便利です。  ただし、**\[メモリ\]** ウィンドウの機能は、データの表示だけではありません。  \[メモリ\] ウィンドウには、データ、コード、または未使用メモリの不要なランダム ビットを問わず、メモリ空間内のすべての要素が表示されます。  
+---
+# <a name="use-the-memory-windows-in-the-visual-studio-debugger"></a>Use the Memory Windows in the Visual Studio Debugger
+The **Memory** window provides a view into the memory space that is used by your application. The **Watch** window, **QuickWatch** dialog box, **Autos** window, and **Locals** window show you the content of variables, which are stored at specific locations in memory. But the **Memory** window shows you the large-scale picture. This view can be convenient for examining large pieces of data (buffers or large strings, for example) that do not display well in the other windows. However, the **Memory** window is not limited to displaying data. It displays everything in the memory space, whether the content is data, code, or random bits of garbage in unassigned memory.  
   
- **\[メモリ\]** ウィンドウは、**\[オプション\]** ダイアログ ボックスの **\[デバッグ\]** ノードで、アドレスレベルのデバッグが有効な場合にのみ、使用できます。  **\[メモリ\]** ウィンドウは、メモリの概念を認識しないスクリプトや SQL などの言語では使用できません。  
+ The **Memory** window is available only if address-level debugging is enabled in the **Options** dialog box, **Debugging** node. The **Memory** window is not available for Script or SQL, which are languages that do not recognize the concept of memory.  
   
-## \[メモリ\] ウィンドウを開く  
+## <a name="opening-a-memory-window"></a>Opening a Memory Window  
   
-#### \[メモリ\] ウィンドウを開くには  
+#### <a name="to-open-a-memory-window"></a>To open a Memory window  
   
-1.  デバッグを開始します \(デバッグ モードでない場合\)。  
+1.  Start debugging, if you are not already in debug mode.  
   
-2.  **\[デバッグ\]** メニューの **\[ウィンドウ\]** をポイントします。  **\[メモリ\]** をポイントし、**\[メモリ 1\]**、**\[メモリ 2\]**、**\[メモリ 3\]**、または **\[メモリ 4\]** をクリックします  \([!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の下位エディションで提供される **\[メモリ\]** ウィンドウは 1 つです。  これらのエディションを使用している場合は、単に **\[メモリ\]** をクリックします\)。  
+2.  In the **Debug** menu, point to **Windows**. Then, point to **Memory** and then click **Memory 1**, **Memory 2**, **Memory 3**, or **Memory 4**. (Lower-level editions of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] have only a single **Memory** window. If you are using one of those editions, just click **Memory**.)  
   
-## \[メモリ\] ウィンドウでのページング  
- **\[メモリ\]** ウィンドウには、通常とは動作の異なる垂直スクロール バーがあります。  最近のコンピューターのアドレス空間はきわめて大きくなっており、スクロール バーのつまみをクリックして任意の位置にドラッグすると、簡単に表示範囲から外れてしまいます。  このため、つまみは "スプリング" のようになっており、ドラッグしても常にスクロール バーの中央に戻ります。  ネイティブ コード アプリケーションの場合、1 ページ単位の上下移動はできますが、自由にスクロールすることはできません。  
+## <a name="paging-in-the-memory-window"></a>Paging in the Memory Window  
+ The **Memory** window has a vertical scrollbar that operates in a nonstandard manner. The address space of a modern computer is very large, and you could easily get lost by grabbing the scrollbar thumb and dragging it to a random location. For that reason, the thumb is "spring-loaded" and always remains in the center of the scrollbar. In native code applications, you can page up or down, but cannot scroll about freely.  
   
- 上位のメモリ アドレスは、ウィンドウの下部に表示されます。  上位アドレスを表示するには、スクロール アップではなくスクロール ダウンする必要があります。  
+ Higher memory addresses appear at the bottom of the window. To view a higher address, scroll down, not up.  
   
-#### メモリ内で 1 ページずつ上下に移動するには  
+#### <a name="to-page-up-or-down-in-memory"></a>To page up or down in memory  
   
-1.  1 ページ下に \(上位メモリ アドレスに\) 移動するには、垂直スクロール バーのつまみの下の部分をクリックします。  
+1.  To page down (move to a higher memory address), click under the thumb in the vertical scrollbar.  
   
-2.  1 ページ上に \(下位メモリ アドレスに\) 移動するには、垂直スクロール バーのつまみの上の部分をクリックします。  
+2.  To page up (move to a lower memory address), click above the thumb the vertical scrollbar.  
   
-## メモリ位置の選択  
- ドラッグ アンド ドロップを使用するか、**\[アドレス\]** ボックスで値を編集すると、選択したメモリ内の位置に瞬時に移動できます。  **\[アドレス\]** ボックスには、数値だけでなく、アドレスとして評価される式も指定できます。  既定では、**\[メモリ\]** ウィンドウの **\[アドレス\]** ボックスの式は、プログラムの実行時に再評価されるライブ式として処理されます。  ライブ式は非常に便利です。  たとえば、ポインターが指すメモリを確認するときに使用できます。  
+## <a name="selecting-a-memory-location"></a>Selecting a Memory Location  
+ If you want to move instantly to a selected location in memory, you can do so by using a drag-and-drop operation or by editing the value in the **Address** box. The **Address** box accepts not only numeric values but also expressions that evaluate to addresses. By default, the **Memory** window treats an **Address** expression as a live expression, which is reevaluated as your program executes. Live expressions can be very useful. For example, you can use them to view the memory that is touched by a pointer.  
   
-#### ドラッグ アンド ドロップを使用してメモリ位置を選択するには  
+#### <a name="to-select-a-memory-location-by-dragging-and-dropping"></a>To select a memory location by dragging and dropping  
   
-1.  任意のウィンドウで、メモリ アドレス、またはメモリ アドレスを含むポインター変数を選択します。  
+1.  In any window, select a memory address or pointer variable that contains a memory address.  
   
-2.  アドレスまたはポインターを **\[メモリ\]** ウィンドウにドラッグします。  
+2.  Drag the address or pointer to the **Memory** window.  
   
-#### メモリ位置を編集して選択するには  
+#### <a name="to-select-a-memory-location-by-editing"></a>To select a memory location by editing  
   
-1.  **\[メモリ\]** ウィンドウで、**\[アドレス\]** ボックスをクリックします。  
+1.  In the **Memory** window, select the **Address** box.  
   
-2.  表示するアドレスを入力するか貼り付けて、**Enter** キーを押します。  
+2.  Type or paste the address you want to see, and then press **ENTER**.  
   
-## \[メモリ\] ウィンドウでの情報の表示方法の変更  
- **\[メモリ\]** ウィンドウでのメモリの内容の表示方法をカスタマイズできます。  既定では、メモリの内容は 16 進形式の 1 バイトの整数として表示され、列数は現在のウィンドウ幅によって自動的に決定されます。  
+## <a name="changing-the-way-the-memory-window-displays-information"></a>Changing the Way the Memory Window Displays Information  
+ You can customize the way the **Memory** window shows memory contents. By default, memory contents appear as one-byte integers in hexadecimal format, and the number of columns is determined automatically by the current width of the window.  
   
-#### メモリの内容の表示形式を変更するには  
+#### <a name="to-change-the-format-of-the-memory-contents"></a>To change the format of the memory contents  
   
-1.  **\[メモリ\]** ウィンドウをマウスの右ボタンでクリックします。  
+1.  Right-click the **Memory** window.  
   
-2.  表示形式を選択します。  
+2.  Choose the format that you want.  
   
-#### \[メモリ\] ウィンドウの列数を変更するには  
+#### <a name="to-change-the-number-of-columns-in-the-memory-window"></a>To change the number of columns in the Memory window  
   
-1.  **\[メモリ\]** ウィンドウの上部にあるツール バーで、**\[列\]** の一覧を探します。  
+1.  In the toolbar at the top of the **Memory** window, locate the **Columns** list.  
   
-2.  **\[列\]** の一覧で、表示する列数を選択するか、**\[自動\]** を選択してウィンドウ幅に収まるように列数を自動的に調整させます。  
+2.  In the **Columns** list, select the number of columns that you want to display or select **Auto** for automatic adjustment to fit the width of the window.  
   
- プログラムの実行時に **\[メモリ\]** ウィンドウの内容が変化しないようにする必要がある場合は、ライブ式の評価をオフにできます。  
+ If you do not want the contents of the **Memory** window to change as your program executes, you can turn off live expression evaluation.  
   
-#### ライブ評価のオンとオフを切り替えるには  
+#### <a name="to-toggle-live-evaluation"></a>To toggle live evaluation  
   
-1.  **\[メモリ\]** ウィンドウをマウスの右ボタンでクリックします。  
+1.  Right-click the **Memory** window.  
   
-2.  ショートカット メニューの **\[自動的に再評価\]** をクリックします。  
+2.  On the shortcut menu, click **Reevaluate Automatically**.  
   
-     ライブ評価がオンになっている場合は、このオプションがオンになっており、クリックするとオフに切り替わります。  ライブ評価がオフになっている場合は、このオプションがオフになっており、クリックするとオンに切り替わります。  
+     If live evaluation is on, the option will be selected, and clicking it turns off live evaluation. If live evaluation is off, the option is not selected, and clicking it turns on live evaluation.  
   
- **\[メモリ\]** ウィンドウの上部にあるツール バーの表示\/非表示を切り替えることができます。  ツール バーが非表示になっている間は、\[アドレス\] ボックスや他のツールにはアクセスできません。  
+ You can hide or display the toolbar at the top of the **Memory** window. You will not have access to Address box or other tools as long as the toolbar is hidden.  
   
-#### ツール バーを切り替えるには  
+#### <a name="to-toggle-the-toolbar"></a>To toggle the toolbar  
   
-1.  **\[メモリ\]** ウィンドウをマウスの右ボタンでクリックします。  
+1.  Right-click a **Memory** window.  
   
-2.  ショートカット メニューの **\[ツール バーの表示\]** をクリックします。  
+2.  On the shortcut menu, click **Show Toolbar**.  
   
-     直前の状態に応じて、ツール バーが表示されるか非表示になります。  
+     The toolbar appears or disappears, depending on its previous state.  
   
-## メモリ内でポインターを追跡する  
- ネイティブ コード アプリケーションでは、レジスタ名をライブ式として使用できます。  たとえば、スタック ポインターを使用して、スタックを追跡できます。  
+## <a name="following-a-pointer-through-memory"></a>Following a Pointer Through Memory  
+ In native code applications, you can use register names as live expressions. For example, you can use the stack pointer to follow the stack.  
   
-#### メモリ内でポインターを追跡するには  
+#### <a name="to-follow-a-pointer-through-memory"></a>To follow a pointer through memory  
   
-1.  **\[メモリ\]** ウィンドウの **\[アドレス\]** ボックスに、ポインター式を入力します。  ポインター変数は、現在のスコープ内にあることが必要です。  言語によっては、逆参照が必要な場合があります。  
+1.  In the **Memory** window **Address** box, type a pointer expression. The pointer variable must be in the current scope. Depending on the language, you might have to dereference it.  
   
-2.  **ENTER** キーを押します。  
+2.  Press **ENTER**.  
   
-     ここで **\[ステップ\]** などの実行コマンドを使用すると、ポインターが変化するたびに、表示されるメモリ アドレスが自動的に変化します。  
+     Now, when you use an execution command such as **Step**, the memory address that is displayed will automatically change as the pointer changes.  
   
-## 参照  
- [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)
+## <a name="see-also"></a>See Also  
+ [Viewing Data in the Debugger](../debugger/viewing-data-in-the-debugger.md)

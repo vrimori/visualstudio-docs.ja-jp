@@ -1,55 +1,74 @@
 ---
-title: "方法 : n 層アプリケーションの TableAdapters にコードを追加する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "n 層アプリケーション, 拡張 (TableAdapters を) "
-  - "TableAdapter, n 層アプリケーション"
+title: Add code to TableAdapters in n-tier applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
+helpviewer_keywords:
+- TableAdapters, n-tier applications
+- n-tier applications, extending TableAdapters
 ms.assetid: dafac00e-df9d-4d4a-95a6-e34b4d099425
 caps.latest.revision: 19
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 87a1ea1c7c56cece66e98ae05116bde4af642834
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
+
 ---
-# 方法 : n 層アプリケーションの TableAdapters にコードを追加する
-*DatasetName*.DataSet.Designer ファイルにコードを追加する代わりに、`TableAdapter` の部分クラス ファイルを作成してコードを追加することにより、`TableAdapter` の機能を拡張できます。  部分クラスによって、特定のクラスのコードを複数の物理ファイルに分割できます。  詳細については、「[Partial](/dotnet/visual-basic/language-reference/modifiers/partial)」または「[partial \(型\)](/dotnet/csharp/language-reference/keywords/partial-type)」を参照してください。  
+# <a name="add-code-to-tableadapters-in-n-tier-applications"></a>Add code to TableAdapters in n-tier applications
+You can extend the functionality of a `TableAdapter` by creating a partial class file for the `TableAdapter` and adding code to it (instead of adding code to the *DatasetName*.DataSet.Designer file). Partial classes enable code for a specific class to be divided among multiple physical files. For more information, see [Partial](/dotnet/visual-basic/language-reference/modifiers/partial) or [partial (Type)](/dotnet/csharp/language-reference/keywords/partial-type).  
   
- `TableAdapter` を定義するコードは、\([型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)で\) `TableAdapter` に変更が加えられるたびに生成されます。  このコードは、`TableAdapter` の構成を変更するウィザードの実行中に変更を加えた場合も生成されます。  `TableAdapter` の再生成中にコードが削除されるのを防ぐには、`TableAdapter` の部分クラス ファイルにコードを追加します。  
+ The code that defines a `TableAdapter` is generated every time changes are made to the `TableAdapter` in the dataset. This code is also generated when changes are made during the running of any wizard that modifies the configuration of the `TableAdapter`. To prevent your code from being deleted during the regeneration of a `TableAdapter`, add code to the partial class file of the `TableAdapter`.  
   
- 既定では、データセットと `TableAdapter` コードを分離すると、結果としてプロジェクトごとに別個のクラス ファイルが生成されます。  元のプロジェクトには、`TableAdapter` コードを含む *DatasetName*.Designer.vb \(または *DatasetName*.Designer.cs\) というファイルが存在します。  **"DataSet プロジェクト"** プロパティで指定したプロジェクトには、データセット コードを含む *DatasetName*.DataSet.Designer.vb \(または *DatasetName*.DataSet.Designer.cs\) というファイルが存在します。  
-  
-> [!NOTE]
->  **"DataSet プロジェクト"** プロパティを設定してデータセットと `TableAdapter` を分離する場合でも、プロジェクト内の既存のデータセット部分クラスは自動的には移動されません。  既存のデータセット部分クラスは、手動でデータセット プロジェクトに移動する必要があります。  
+ By default, after you separate the dataset and `TableAdapter` code, the result is a discrete class file in each project. The original project has a file named *DatasetName*.Designer.vb (or *DatasetName*.Designer.cs) that contains the `TableAdapter` code. The project that's designated in the **Dataset Project** property has a file named *DatasetName*.DataSet.Designer.vb (or *DatasetName*.DataSet.Designer.cs) that contains the dataset code.  
   
 > [!NOTE]
->  [型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)には、検証コードを追加する必要がある場合に <xref:System.Data.DataTable.ColumnChanging> イベント ハンドラーおよび <xref:System.Data.DataTable.RowChanging> イベント ハンドラーを生成する機能も備わっています。  詳細については、「[方法 : n 層データセットに検証を追加する](../data-tools/add-validation-to-an-n-tier-dataset.md)」を参照してください。  
+>  When you separate datasets and `TableAdapter`s (by setting the **DataSet Project** property), existing partial dataset classes in the project will not be moved automatically. Existing dataset partial classes must be moved manually to the dataset project.  
+  
+> [!NOTE]
+>  The datasetprovides functionality for generating <xref:System.Data.DataTable.ColumnChanging> and <xref:System.Data.DataTable.RowChanging> event handlers when validation is needed. For more information, see [Add validation to an n-tier dataset](../data-tools/add-validation-to-an-n-tier-dataset.md).  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-### n 層アプリケーションの TableAdapter にユーザー コードを追加するには  
+### <a name="to-add-user-code-to-a-tableadapter-in-an-n-tier-application"></a>To add user code to a TableAdapter in an n-tier application  
   
-1.  .xsd ファイルを含むプロジェクト \([型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)\) を見つけます。  
+1.  Locate the project that contains the .xsd file.
   
-2.  **.xsd** ファイルをダブルクリックして、[型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)を開きます。  
+2.  Double click the **.xsd** file to open the **Dataset Designer**.  
   
-3.  コードを追加する `TableAdapter` を右クリックし、**\[コードの表示\]** をクリックします。  
+3.  Right-click the `TableAdapter` that you want to add code to, and then select **View Code**.  
   
-     部分クラスが作成され、コード エディターが開きます。  
+     A partial class is created and opens in the Code Editor.  
   
-4.  部分クラスの宣言内にコードを追加します。  
+4.  Add code inside the partial class declaration.  
   
-5.  次の例は、`NorthwindDataSet` 内の `CustomersTableAdapter` にコードを追加する場所を示しています。  
+5.  The following example shows where to add code to the `CustomersTableAdapter` in the `NorthwindDataSet`:  
   
     ```vb#  
     Partial Public Class CustomersTableAdapter  
@@ -66,10 +85,10 @@ manager: "ghogen"
     }  
     ```  
   
-## 参照  
- [n 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)   
- [方法 : n 層アプリケーションのデータセットにコードを追加する](../data-tools/add-code-to-datasets-in-n-tier-applications.md)   
- [TableAdapter](../Topic/TableAdapters.md)   
- [TableAdapterManager の概要](../Topic/TableAdapterManager%20Overview.md)   
- [階層更新の概要](../Topic/Hierarchical%20Update%20Overview.md)   
- [データ アプリケーションの作成](../data-tools/creating-data-applications.md)
+## <a name="see-also"></a>See Also  
+ [N-Tier Data Applications Overview](../data-tools/n-tier-data-applications-overview.md)   
+ [Add code to datasets in n-tier applications](../data-tools/add-code-to-datasets-in-n-tier-applications.md)   
+ [Create and Configure TableAdapters](create-and-configure-tableadapters.md)   
+ [Create and Configure TableAdapters](create-and-configure-tableadapters.md)   
+ [Hierarchical Update Overview](hierarchical-update.md)   
+

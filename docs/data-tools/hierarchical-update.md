@@ -1,84 +1,139 @@
 ---
-title: "階層更新 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Visual Basic], 階層更新"
-  - "データセット [Visual Basic], 階層更新"
-  - "階層更新"
-  - "変更されたデータの保存"
-  - "関連テーブル, 保存"
-  - "保存 (データを), 変更されたデータ"
-  - "保存 (データを), 階層更新"
-  - "保存 (更新データを)"
-  - "更新データの保存"
+title: Hierarchical update | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
+helpviewer_keywords:
+- saving data, changed data
+- data [Visual Basic], hierarchical update
+- saving updated data
+- datasets [Visual Basic], hierarchical update
+- hierarchical update
+- saving data, hierarchical update
+- modified data saving
+- updated data saving
+- related tables, saving
 ms.assetid: 68bae3f6-ec9b-45ee-a33a-69395029f54c
 caps.latest.revision: 26
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 78f1d4a53dee7bd0e9cfe22e1ad2b1f94555f7e1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
+
 ---
-# 階層更新
-*階層更新*とは、参照整合性規則を保持しながら、複数の関連テーブルで構成されるデータセットから、更新されたデータをデータベースに保存するプロセスのことです。  *参照整合性*とは、関連レコードの挿入、更新、および削除を制御するデータベース内の制約によって定義される一貫性規則のことです。  たとえば、顧客レコードを先に作成しておかなければ、その顧客の注文を作成できないようにすることが参照整合性です。  
+# <a name="hierarchical-update"></a>Hierarchical update
+*Hierarchical update* refers to the process of saving updated data (from a dataset with two or more related tables) back to a database while maintaining referential integrity rules. *Referential integrity* refers to the consistency rules provided by the constraints in a database that control the behavior of inserting, updating, and deleting related records. For example, it's referential integrity that enforces the creation of a customer record before allowing orders to be created for that customer.  For more information about relationships in datasets, see [Relationships in datasets](../data-tools/relationships-in-datasets.md)  
   
- 関連付けられているデータ テーブルから変更されたデータの保存は、1 つのテーブルから変更されたデータの保存より若干複雑です。  これは、各関連テーブルの更新コマンド、挿入コマンド、および削除コマンドは、参照整合性制約に違反しない順序で実行する必要があるためです。  たとえば、新しい顧客と注文、および既存の顧客と注文の両方を管理できる注文入力アプリケーションがあるとします。  既存の顧客を削除する場合、顧客レコードを削除する前に、その顧客の注文をすべて削除しておく必要があります。  また、新しい顧客を注文と共に追加する場合は、テーブルに関連付けられている外部キー制約により、新しい顧客レコードを挿入してからでなければ、その顧客の注文を挿入することはできません。  これらの例が示すとおり、特定のデータのサブセットを抽出してから、参照整合性を維持する正しい順序で、更新 \(挿入コマンド、更新コマンド、および削除コマンド\) を送信する必要があります。  
+ The hierarchical update feature uses a `TableAdapterManager` to manage the `TableAdapter`s in a typed dataset. The `TableAdapterManager` component is a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]-generated class, so it's not part of the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]. When you drag a table from the data sources window to a Windows Form or WPF page, Visual Studio adds a variable of type TableAdapterManager to the form or page, and you see it in the designer in the component tray. For detailed information about the `TableAdapterManager` class, see the TableAdapterManager Reference section of [TableAdapters](../data-tools/create-and-configure-tableadapters.md).  
   
- 階層更新機能は、`TableAdapterManager` を使用して、型指定されたデータセットの `TableAdapter` を管理します。  `TableAdapterManager` コンポーネントは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって生成されるコンポーネントであり、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] の一部ではありません。  `TableAdapterManager` クラスの詳細については、「[TableAdapterManager の概要](../Topic/TableAdapterManager%20Overview.md)」の TableAdapterManager の参照に関するセクションを参照してください。  
+ By default, a dataset treats related tables as "relations only," which means that it doesn't enforce foreign key constraints. You can modify that setting at design time by using the Dataset Designer. Select the relation line between two tables to bring up the **Relation** dialog box. The changes you make here will determine how the TableAdapterManager behaves when it send the changes in the related tables back to the database.  
   
- アプリケーションが型指定されたデータセットを使用していて、関連データ テーブル \(Customers と Orders など、1 対多リレーションシップで関連付けられているデータ テーブル\) 内のデータをユーザーが変更できるようにするときは、多くの場合、階層更新を使用することになります。  
+## <a name="enable-hierarchical-update-in-a-dataset"></a>Enable hierarchical update in a dataset  
+ By default, hierarchical update is enabled for all new datasets that are added or created in a project. Turn hierarchical update on or off by setting the **Hierarchical Update** property of a typed dataset in The dataset to **True** or **False**:  
   
-## このセクションの内容  
- [階層更新の概要](../Topic/Hierarchical%20Update%20Overview.md)  
- 階層更新の概要および実装方法の詳細について説明します。  
+ ![Hierarchical update setting](../data-tools/media/hierarchical-update-setting.png "Hierarchical update setting")  
   
- [TableAdapterManager の概要](../Topic/TableAdapterManager%20Overview.md)  
- `TableAdapterManager` の概要およびデータセット デザイナーによって生成される `TableAdapterManager` コードについて説明します。  
+## <a name="create-a-new-relation-between-tables"></a>Create a new relation between tables  
+ To create a new relation between two tables, in the Dataset Designer, select the title bar of each table, then right-click and select **Add relation**.  
   
- [方法 : 階層更新を有効または無効にする](../Topic/How%20to:%20Enable%20and%20Disable%20Hierarchical%20Update.md)  
- 型指定されたデータセットの `Hierarchical Update` プロパティを設定して、関連テーブルを保存するためのコードを生成する方法について説明します。  
+ ![Hierarchical update add relation menu](../data-tools/media/hierarchical-update-add-relation-menu.png "Hierarchical update add relation menu")  
   
- [方法 : データセットでの外部キー制約を構成する](../Topic/How%20to:%20Configure%20Foreign-Key%20Constraints%20in%20a%20Dataset.md)  
- データセットの制約を構成する方法について説明します。  
+## <a name="understand-foreign-key-constraints-cascading-updates-and-deletes"></a>Understand foreign-key constraints, cascading updates, and deletes  
+ It's important to understand how foreign-key constraints and cascading behavior in the database are created in the generated dataset code.  
   
- [方法 : データの保存前にデータ バインド コントロールで実行中の編集をコミットする](../data-tools/commit-in-process-edits-on-data-bound-controls-before-saving-data.md)  
- 保存するデータ ソースを準備するためにフォーム上のデータ バインド コントロール内の実行中の編集をすべて停止する方法について説明します。  
+ By default, the data tables in a dataset are generated with relationships (<xref:System.Data.DataRelation>) that match the relationships in the database. However, the relationship in the dataset is not generated as a foreign-key constraint. The <xref:System.Data.DataRelation> is configured as **Relation Only** without <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> or <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> in effect.  
   
- [方法 : 階層更新の実行順序を設定する](../Topic/How%20to:%20Set%20the%20Order%20When%20Performing%20a%20Hierarchical%20Update.md)  
- `TableAdapterManager` の `UpdateOrder` プロパティを設定して、挿入、更新、および削除を実行する順序を制御する方法について説明します。  
+ By default, cascading updates and cascading deletes are turned off even if the database relationship is set with cascading updates and/or cascading deletes turned on. For example, creating a new customer and a new order and then trying to save the data can cause a conflict with the foreign-key constraints that are defined in the database. For more information, see [Turn off constraints while filling a dataset](turn-off-constraints-while-filling-a-dataset.md).  
   
- [方法 : 既存の Visual Studio プロジェクトで階層更新を実装する](../Topic/How%20to:%20Implement%20Hierarchical%20Update%20in%20Existing%20Visual%20Studio%20Projects.md)  
- `TableAdapterManager` を使用して、関連データ テーブルにデータを保存するアプリケーションをアップグレードする方法について説明します。  
+## <a name="set-the-order-to-perform-updates"></a>Set the order to perform updates  
+ Setting the order to perform updates sets the order of the individual inserts, updates, and deletes that are required to save all the modified data in all tables of a dataset. When hierarchical update is enabled, inserts are performed first, then updates, and then deletes. The `TableAdapterManager` provides an `UpdateOrder` property that can be set to perform updates first, then inserts, and then deletes.  
   
- [チュートリアル : 関連するデータ テーブルからのデータの保存 \(階層更新\)](../Topic/Walkthrough:%20Saving%20Data%20from%20Related%20Data%20Tables%20\(Hierarchical%20Update\).md)  
- 関連データ テーブルを持つアプリケーションを作成し、`TableAdapterManager` を使用してデータを保存する方法の詳細な手順について説明します。  
+> [!NOTE]
+>  It's  important to understand that the update order is all inclusive. That is, when updates are performed, inserts, and then deletes are performed for all tables in the dataset.  
   
-## 関連項目  
- <xref:System.Data.DataSet>  
+ To set the `UpdateOrder` property, after dragging items from the [Data Sources Window](add-new-data-sources.md) onto a form, select the `TableAdapterManager` in the component tray, and then set the `UpdateOrder` property in the **Properties** window. 
   
- <xref:System.Data.DataTable>  
+## <a name="create-a-backup-copy-of-a-dataset-before-performing-a-hierarchical-update"></a>Create a backup copy of a dataset before performing a hierarchical update  
+ When you save data (by calling the `TableAdapterManager.UpdateAll()` method), the `TableAdapterManager` attempts to update the data for each table in a single transaction. If any part of the update for any table fails, the whole transaction is rolled back. In most situations, the rollback returns your application to its original state.  
   
-## 関連項目  
- [n 層アプリケーションでのデータセットの操作](../data-tools/work-with-datasets-in-n-tier-applications.md)  
+ However, sometimes you might want to restore the dataset from the backup copy. One example of this might occur when you're using auto-increment values. For example, if a save operation is not successful, auto-increment values are not reset in the dataset, and the dataset  continues to create auto-incrementing values.This leaves a gap in numbering that might not be acceptable in your application. In situations where this is an issue, the `TableAdapterManager` provides a `BackupDataSetBeforeUpdate` property that replaces the existing dataset with a backup copy if the transaction fails.  
   
- [データの保存](../data-tools/saving-data.md)  
+> [!NOTE]
+>  The backup copy is only in memory while the `TableAdapterManager.UpdateAll` method is running. Therefore, there is no programmatic access to this backup dataset because it either replaces the original dataset or goes out of scope as soon as the `TableAdapterManager.UpdateAll` method finishes running.  
   
- [型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)  
+## <a name="modify-the-generated-save-code-to-perform-the-hierarchical-update"></a>Modify the generated save code to perform the hierarchical update  
+ Save changes from the related data tables in the dataset to the database by calling the `TableAdapterManager.UpdateAll` method and passing in the name of the dataset that contains the related tables. For example, run the `TableAdapterManager.UpdateAll(NorthwindDataset)` method to send updates from all the tables in NorthwindDataset to the back-end database.  
   
- [TableAdapter](../Topic/TableAdapters.md)  
+ After you drop the items from the **Data Sources** window, code is automatically added to the `Form_Load` event to populate each table (the `TableAdapter.Fill` methods). Code is also added to the **Save** button click event of the <xref:System.Windows.Forms.BindingNavigator> to save data from the dataset back to the database (the `TableAdapterManager.UpdateAll` method).  
   
- [DataSets、DataTables、および DataViews](../Topic/DataSets,%20DataTables,%20and%20DataViews.md)  
+ The generated save code also contains a line of code that calls the `CustomersBindingSource.EndEdit` method. More specifically, it calls the <xref:System.Windows.Forms.BindingSource.EndEdit%2A> method of the first <xref:System.Windows.Forms.BindingSource>that's added to the form. In other words, this code is only generated for the first table that's dragged from the **Data Sources** window onto the form. The <xref:System.Windows.Forms.BindingSource.EndEdit%2A> call commits any changes that are in process in any data-bound controls that are currently being edited. Therefore, if a data-bound control still has focus and you click the **Save** button, all pending edits in that control are committed before the actual save (the `TableAdapterManager.UpdateAll` method).  
   
- [DataTable](../Topic/DataTables.md)  
+> [!NOTE]
+>  The Dataset Designer only adds the `BindingSource.EndEdit` code for the first table that's dropped onto the form. Therefore, you have to add a line of code to call the `BindingSource.EndEdit` method for each related table on the form. For this walkthrough, this means you have to add a call to the `OrdersBindingSource.EndEdit` method.  
   
- [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)
+#### <a name="to-update-the-code-to-commit-changes-to-the-related-tables-before-saving"></a>To update the code to commit changes to the related tables before saving  
+  
+1.  Double-click the **Save** button on the <xref:System.Windows.Forms.BindingNavigator> to open **Form1** in the Code Editor.  
+  
+2.  Add a line of code to call the `OrdersBindingSource.EndEdit` method after the line that calls the `CustomersBindingSource.EndEdit` method. The code in the **Save** button click event should resemble the following:  
+  
+     [!code-vb[VSProDataOrcasHierarchicalUpdate#1](../data-tools/codesnippet/VisualBasic/hierarchical-update_1.vb)]  [!code-cs[VSProDataOrcasHierarchicalUpdate#1](../data-tools/codesnippet/CSharp/hierarchical-update_1.cs)]  
+  
+ In addition to committing changes on a related child table before saving data to a database, you might also have to commit newly created parent records before adding new child records to a dataset. In other words, you might have to add the new parent record (Customer) to the dataset before foreign key constraints enable new child records (Orders) to be added to the dataset. To accomplish this, you can use the child `BindingSource.AddingNew` event.  
+  
+> [!NOTE]
+>  Whether you have to commit new parent records depends on the type of control that's used to bind to your data source. In this walkthrough, you use individual controls to bind to the parent table. This requires the additional code to commit the new parent record. If the parent records were instead displayed in a complex binding control like the <xref:System.Windows.Forms.DataGridView>, this additional <xref:System.Windows.Forms.BindingSource.EndEdit%2A> call for the parent record would not be necessary. This is because the underlying data-binding functionality of the control handles the committing of the new records.  
+  
+#### <a name="to-add-code-to-commit-parent-records-in-the-dataset-before-adding-new-child-records"></a>To add code to commit parent records in the dataset before adding new child records  
+  
+1.  Create an event handler for the `OrdersBindingSource.AddingNew` event.  
+  
+    -   Open **Form1** in design view, select **OrdersBindingSource** in the component tray, select **Events** in the **Properties** window, and then double-click the **AddingNew** event.  
+  
+2.  Add a line of code to the event handler that calls the `CustomersBindingSource.EndEdit` method. The code in the `OrdersBindingSource_AddingNew` event handler should resemble the following:  
+  
+     [!code-vb[VSProDataOrcasHierarchicalUpdate#2](../data-tools/codesnippet/VisualBasic/hierarchical-update_2.vb)]  [!code-cs[VSProDataOrcasHierarchicalUpdate#2](../data-tools/codesnippet/CSharp/hierarchical-update_2.cs)]  
+  
+## <a name="tableadaptermanager-reference"></a>TableAdapterManager reference  
+ By default, a `TableAdapterManager` class is generated when you create a dataset that contains related tables. To prevent the class from being generated, change the value of the `Hierarchical Update` property of the dataset to false. When you drag a table that has a relation onto the design surface of a Windows Form or WPF page, Visual Studio declares a member variable of the class. If you don't use databinding, you have to manually declare the variable.  
+  
+ The `TableAdapterManager` class is not part of the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]. Therefore, you cannot look it up in the documentation. It is created at design time as part of the dataset creation process.  
+  
+ The following are the frequently used methods and properties of the `TableAdapterManager` class:  
+  
+|Member|Description|  
+|------------|-----------------|  
+|`UpdateAll` method|Saves all data from all data tables.|  
+|`BackUpDataSetBeforeUpdate` property|Determines whether to create a backup copy of the dataset before executing the `TableAdapterManager.UpdateAll` method.Boolean.|  
+|*tableName* `TableAdapter` property|Represents a `TableAdapter`. The generated `TableAdapterManager` contains a property for each `TableAdapter` it manages. For example, a dataset with a Customers and Orders table is generated with a `TableAdapterManager` that contains `CustomersTableAdapter` and `OrdersTableAdapter` properties.|  
+|`UpdateOrder` property|Controls the order of the individual insert, update, and delete commands. Set this to one of the values in the `TableAdapterManager.UpdateOrderOption` enumeration.<br /><br /> By default, the `UpdateOrder` is set to **InsertUpdateDelete**. This means that inserts, then updates, and then deletes are performed for all tables in the dataset.|  
+  
+## <a name="see-also"></a>See Also  
+ [Save data back to the database](../data-tools/save-data-back-to-the-database.md)

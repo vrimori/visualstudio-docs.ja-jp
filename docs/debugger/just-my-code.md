@@ -1,139 +1,124 @@
 ---
-title: "Just My Code | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Debug user code with Just My Code | Microsoft Docs
+ms.custom: 
+ms.date: 05/18/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f0df097-bbaf-46ad-9ad1-ef5f40435079
 caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Just My Code
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 7022188e0771c19d5f6def0d4ac9f3a4f45576f7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-.NET Framework 言語を使用する開発者は、システム、フレームワーク、およびその他の非ユーザー呼び出しをステップ オーバーし、呼び出し履歴ウィンドウでそれらの呼び出しを折りたたむ、"マイ コードのみ" デバッガー機能に習熟しています。  "マイ コードのみ" 機能は C\+\+ および JavaScript 言語に拡張されました。  このトピックでは、.NET Framework、ネイティブ C\+\+、および JavaScript のプロジェクトでの "マイ コードのみ" の使用について詳しく説明します。  
+---
+# <a name="specify-whether-to-debug-only-user-code-using-just-my-code-in-visual-studio"></a>Specify whether to debug only user code using Just My Code in Visual Studio
+You can configure Visual Studio to automatically step over system, framework, and other non-user calls and collapse those calls in the call stack window. The feature that enables or disables this behavior is called *Just My Code*. This topic describes how to use Just My Code in C#, Visual Basic, C++, and JavaScript projects.
+
+For most programming languages, Just My Code is enabled by default.
   
-##  <a name="BKMK_Contents"></a> 内容  
- ["マイ コードのみ" の有効/無効の切り替え](#BKMK_Enable_or_disable_Just_My_Code)  
+##  <a name="BKMK_Enable_or_disable_Just_My_Code"></a> Enable or disable Just My Code  
+ To enable or disable Just My Code, choose the **Tools > Options** menu in Visual Studio. In the **Debugging** > **General** node, choose or clear **Enable Just My Code**.
   
- [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
-  
- [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
-  
- [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
-  
-##  <a name="BKMK_Enable_or_disable_Just_My_Code"></a> "マイ コードのみ" の有効\/無効の切り替え  
- "マイ コードのみ" を有効または無効にするには、**\[デバッグ\]** メニューの **\[オプションと設定\]** をクリックします。  **\[デバッグ\]** \/ **\[全般\]** ノードで、**\[マイ コードのみを有効にする\]** チェック ボックスをオンまたはオフにします。  
-  
- ![&#91;オプション&#93; ダイアログ ボックス内の &#91;マイ コードのみを有効にする&#93;](../debugger/media/dbg_justmycode_options.png "DBG\_JustMyCode\_Options")  
+ ![Enable Just My Code in the Options dialog box](../debugger/media/dbg_justmycode_options.png "DBG_JustMyCode_Options")  
   
 > [!NOTE]
->  **\[マイ コードのみを有効にする\]** の設定は、すべての言語のすべての Visual Studio プロジェクトに適用されるグローバルな設定です。  
+>  The **Enable Just My Code** setting is a global setting that is applied to all Visual Studio projects in all languages.  
   
-###  <a name="BKMK_Override_call_stack_filtering"></a> 呼び出し履歴のフィルター処理のオーバーライド  
- "マイ コードのみ" が有効な場合は、\[呼び出し履歴\] ウィンドウや \[タスク\] ウィンドウなどの呼び出し履歴の表示で、非ユーザー コードは`[External Code]` というラベルの注釈付きフレームに折りたたまれます。  折りたたまれたフレームを表示するには、呼び出し履歴表示のコンテキスト メニューで **\[外部コードの表示\]** をクリックします。  
+###  <a name="BKMK_Override_call_stack_filtering"></a> Show non-user code in call stack views  
+ In views that show the call stack, such as the **Call Stack** and **Tasks** windows, Just My Code collapses non-user code into an annotated frame labeled `[External Code]`. To view the collapsed frames, choose **Show External Code** on the context menu of the call stack display.
+
+ ![Show External Code in the Call Stack Window](../debugger/media/dbg_justmycode_showexternalcode.png "DBG_JustMyCode_ShowExternalCode")
   
 > [!NOTE]
->  **\[外部コードの表示\]** の設定は、現在のユーザーのプロファイラーに保存されます。  この設定は、ユーザーによって開かれたすべての言語のすべてのプロジェクトに適用されます。  
+>  The **Show External Code** setting is saved to the current user's profiler. It is applied to all projects in all languages that are opened by the user.
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents)  
+##  <a name="BKMK__NET_Framework_Just_My_Code"></a> .NET Framework Just My Code  
   
-##  <a name="BKMK__NET_Framework_Just_My_Code"></a> .NET Framework での "マイ コードのみ"  
- [ユーザー コードと非ユーザー コード](#BKMK_NET_User_and_non_user_code) **&#124;** [ステップ実行の動作](#BKMK_NET_Stepping_behavior) **&#124;** [ブレークポイントの動作](#BKMK_NET_Breakpoint_behavior) **&#124;** [例外の動作](#BKMK_NET_Exception_behavior)  
+###  <a name="BKMK_NET_User_and_non_user_code"></a> User and non-user code  
+ To distinguish user code from non-user code, Just My Code looks at symbol (.pdb) files and program optimizations. The debugger considers code to be non-user code when the binary is optimized or when the .pdb file is not available.
   
-###  <a name="BKMK_NET_User_and_non_user_code"></a> ユーザー コードと非ユーザー コード  
- ユーザー コードと非ユーザー コードを区別するために、"マイ コードのみ" 機能はプロジェクト、シンボル \(.pdb\) ファイル、およびプログラム最適化をチェックします。  
+ Three attributes also affect what the debugger considers to be My Code:  
   
-1.  開いている Visual Studio プロジェクトからビルドされたバイナリは、常にユーザー コードと見なされます。  
+-   <xref:System.Diagnostics.DebuggerNonUserCodeAttribute> tells the debugger that the code it is applied to is not My Code.  
   
-2.  デバッガーは、バイナリが最適化されているか、.pdb ファイルが入手できないとき、コードがユーザー コードであると見なします。  
+-   <xref:System.Diagnostics.DebuggerHiddenAttribute> hides the code from the debugger, even if Just My Code is turned off.  
   
- 以下の 3 つの属性も、デバッガーが何をマイ コードであると見なすかに影響を与えます。  
+-   <xref:System.Diagnostics.DebuggerStepThroughAttribute> tells the debugger to step through the code it is applied to, rather than step into the code.  
   
--   <xref:System.Diagnostics.DebuggerNonUserCodeAttribute> は、適用先のコードがマイ コードでないことをデバッガーに通知します。  
+ All other code is considered to be user code.  
   
--   <xref:System.Diagnostics.DebuggerHiddenAttribute> は、"マイ コードのみ" がオフになっていても、コードをデバッガーから見えないようにするための属性です。  
+###  <a name="BKMK_NET_Stepping_behavior"></a> Stepping behavior  
+ When you **Step Into** (Keyboard shortcut: F11) non-user code, the debugger steps over the code to the next user statement. When you **Step Out** (Keyboard: Shift + F11), the debugger runs to the next line of user code. If no user code is encountered, then execution continues until the app exits, a breakpoint is hit, or an exception occurs.  
   
--   <xref:System.Diagnostics.DebuggerStepThroughAttribute> は、それが適用されているコードを \(ステップ インではなく\) ステップ スルーするよう、デバッガーに伝える属性です。  
+###  <a name="BKMK_NET_Breakpoint_behavior"></a> Breakpoint behavior  
+ When Just My Code is enabled, you can choose **Break All** (Keyboard: Ctrl + Alt + Break) and stop execution at a location where there is no user code to display. When this happens, the No Source window is displayed. If you then choose a Step command, the debugger takes you to the next line of user code.  
   
- 他のすべてのコードはユーザー コードであると見なされます。  
+###  <a name="BKMK_NET_Exception_behavior"></a> Exception behavior  
+ If an unhandled exception occurs in non-user code, the debugger breaks at the line in user code where the exception was generated.  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
+ If first chance exceptions are enabled for the exception, the user-code line is highlighted in green. The call stack displays an annotated frame labeled **[External Code]**.  
   
-###  <a name="BKMK_NET_Stepping_behavior"></a> ステップ実行の動作  
- 非ユーザー コードに **\[ステップ イン\]** \(キーボード ショートカット: F11\) すると、デバッガーはそのコードを次のユーザー ステートメントにステップ オーバーします。  **\[ステップ アウト\]** \(キーボード: Shift \+ F11\) すると、デバッガーはユーザー コードの次の行に進みます。  ユーザー コードが出現しない場合は、アプリケーションが終了するか、ブレークポイントにヒットするか、または例外が発生するまで実行が続けられます。  
+##  <a name="BKMK_C___Just_My_Code"></a> C++ Just My Code  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
+###  <a name="BKMK_CPP_User_and_non_user_code"></a> User and non-user code  
+ C++ Just My Code is different than .NET Framework and JavaScript Just My Code because the stepping behavior is independent of the call stack behavior.  
   
-###  <a name="BKMK_NET_Breakpoint_behavior"></a> ブレークポイントの動作  
- "マイ コードのみ" が有効な場合は、**\[すべて中断\]** をクリックし \(キーボード: Ctrl \+ Alt \+ Break\)、表示するユーザー コードがない位置で実行を停止できます。  停止すると、\[No Source\] \(ソースがありません\) ウィンドウが表示されます。  次に \[ステップ\] をクリックすると、デバッガーによってユーザー コードの次の行に進められます。  
+ **Call stacks**  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
+ By default, the debugger considers these functions to be non-user code in call stack windows:  
   
-###  <a name="BKMK_NET_Exception_behavior"></a> 例外の動作  
- ハンドルされない例外が非ユーザー コードで発生した場合、デバッガーはユーザー コードの例外が発生した行で停止します。  
+-   Functions with stripped source information in their symbols file.  
   
- 初回例外がその例外に対して有効になっている場合、ユーザー コード行は緑で強調表示されます。  呼び出し履歴に、**\[外部コード\]** というラベルの注釈付きフレームが表示されます。  
+-   Functions where the symbol files indicate that there is no source file corresponding to the stack frame.  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [.NET Framework での "マイ コードのみ"](#BKMK__NET_Framework_Just_My_Code)  
+-   Functions specified in `*.natjmc` files in the `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` folder.  
   
-##  <a name="BKMK_C___Just_My_Code"></a> C\+\+ での "マイ コードのみ"  
- [ユーザー コードと非ユーザー コード](#BKMK_CPP_User_and_non_user_code) **&#124;** [ステップ実行の動作](#BKMK_CPP_Stepping_behavior) **&#124;** [例外の動作](#BKMK_CPP_Exception_behavior) **&#124;** [ステップ実行の動作のカスタマイズ](#BKMK_CPP_Customize_stepping_behavior) **&#124;** [呼び出し履歴の動作のカスタマイズ](#BKMK_CPP_Customize_call_stack_behavior)  
+ **Stepping**  
   
-###  <a name="BKMK_CPP_User_and_non_user_code"></a> ユーザー コードと非ユーザー コード  
- ステップ実行の動作が呼び出し履歴の動作に依存しないため、C\+\+ での "マイ コードのみ" は .NET Framework での "マイ コードのみ" および JavaScript での "マイ コードのみ" とは異なります。  
+ By default, only functions specified in `*.natstepfilter` files in the `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` folder are considered non-user code.  
   
- **呼び出し履歴**  
+ You can create your own `.natstepfilter` and `.natjmc` to customize the stepping and call stack window behavior in the `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`.  
   
- 既定では、デバッガーは呼び出し履歴ウィンドウで以下の関数が非ユーザー コードであると見なします。  
+###  <a name="BKMK_CPP_Stepping_behavior"></a> Stepping behavior  
+ When you **Step Into** (Keyboard shortcut: F11) non-user code from user code, the debugger steps over the code to the next line of user-code. When you **Step Out** (Keyboard: Shift + F11), the debugger runs to the next line of user code. If no user code is encountered, then execution continues until the app exits, a breakpoint is hit, or an exception occurs.  
   
--   シンボル ファイル内に除去されたソース情報がある関数。  
+ If the debugger breaks in non-user code (for example, if a Break All command stops in non-user code), stepping continues in the non-user code.  
   
--   シンボル ファイルがスタック フレームに対応するソース ファイルがないことを示す関数。  
+###  <a name="BKMK_CPP_Exception_behavior"></a> Exception behavior  
+ When the debugger hits an exception, it stops on the exception regardless of whether it is in user or non-user code. The **User-unhandled** options in the **Exceptions** dialog box are ignored.  
   
--   `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` フォルダーの `*.natjmc` ファイルに指定された関数。  
+###  <a name="BKMK_CPP_Customize_stepping_behavior"></a> Customize stepping behavior  
+ You can specify functions to step over by listing them as non-user code in `*.natstepfilter` files.  
   
- **ステップ実行**  
+-   To specify non-user code for all users of the Visual Studio machine, add the .natstepfilter file to the `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` folder.  
   
- 既定では、`%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` フォルダーの `*.natstepfilter` ファイルに指定された関数だけが非ユーザー コードと見なされます。  
+-   To specify non-user code for an individual user, add the .natstepfilter file to the `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` folder.  
   
- `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` に独自の `.natstepfilter` および `.natjmc` を作成して、ステップ実行と呼び出し履歴ウィンドウの動作をカスタマイズすることができます。  
-  
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
-  
-###  <a name="BKMK_CPP_Stepping_behavior"></a> ステップ実行の動作  
- ユーザー コードから非ユーザー コードに **\[ステップ イン\]** \(キーボード ショートカット: F11\) すると、デバッガーはそのコードをユーザー コードの次の行にステップ オーバーします。  **\[ステップ アウト\]** \(キーボード: Shift \+ F11\) すると、デバッガーはユーザー コードの次の行に進みます。  ユーザー コードが出現しない場合は、アプリケーションが終了するか、ブレークポイントにヒットするか、または例外が発生するまで実行が続けられます。  
-  
- デバッガーが非ユーザー コードで実行を中断した場合 \(たとえば、\[すべて中断\] が非ユーザー コードで停止した場合\)、その非ユーザー コードでステップ実行が続けられます。  
-  
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
-  
-###  <a name="BKMK_CPP_Exception_behavior"></a> 例外の動作  
- デバッガーの実行中に例外が発生すると、デバッガーはユーザー コードを実行中か非ユーザー コードを実行中かに関係なくその例外で停止します。  **\[例外\]** ダイアログ ボックスの **\[ユーザーにハンドルされていないとき\]** オプションは無視されます。  
-  
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
-  
-###  <a name="BKMK_CPP_Customize_stepping_behavior"></a> ステップ実行の動作のカスタマイズ  
- `*.natstepfilter`  ファイルに関数を非ユーザー コードとして記述することで、それらの関数をステップ オーバーすることを指定できます。  
-  
--   Visual Studio コンピューターのすべてのユーザーの非ユーザー コードを指定するには、  `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` フォルダーに .natstepfilter ファイルを追加します。  
-  
--   個々 のユーザーの非ユーザー コードを指定するには、  `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` フォルダーに .natstepfilter ファイルを追加します。  
-  
- .  natstepfilter ファイルは、次の構文を使用する xml ファイルです。  
+ .natstepfilter files are xml files with this syntax:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -151,23 +136,21 @@ manager: "ghogen"
   
 ```  
   
-|要素|説明|  
-|--------|--------|  
-|関数|必ず指定します。  1 つ以上の関数を非ユーザー関数として指定します。|  
-|`Name`|必須。  一致を照合する完全な関数名を指定する ECMA\-262 書式の正規表現。  例:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> は、`MyNS::MyClass` のすべてのメソッドが非ユーザー コードと見なされることをデバッガーに知らせます。  一致照合では、大文字と小文字が区別されます。|  
-|`Module`|省略可能です。  関数を含むモジュールへの完全パスを指定する ECMA\-262 書式の正規表現。  一致では、大文字と小文字を区別しません。|  
-|`Action`|必須。  大文字と小文字が区別される以下のいずれかの値です。<br /><br /> -   `NoStepInto`  – 一致した関数をステップ オーバーすることをデバッガーに指示します。<br />-   `StepInto`  – 一致した関数にステップ インし、一致した関数のその他の `NoStepInto` をオーバーライドすることをデバッガーに指示します。|  
+|Element|Description|  
+|-------------|-----------------|  
+|Function|Required. Specifies one or more functions as non-user functions.|  
+|`Name`|Required. An ECMA-262 formatted regular expression specifying the full function name to match. For example:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> tells the debugger that all methods in `MyNS::MyClass` are to be considered non-user code. The match is case-sensitive.|  
+|`Module`|Optional. An ECMA-262 formatted regular expression specifying the full path to the module containing the function. The match is case-insensitive.|  
+|`Action`|Required. One of these case-sensitive values:<br /><br /> -   `NoStepInto`  - tells the debugger to step over the matched function.<br />-   `StepInto`  - tells the debugger to step into the matched functions, overriding any other `NoStepInto` for the matched functions.|  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
+###  <a name="BKMK_CPP_Customize_call_stack_behavior"></a> Customize call stack behavior  
+ You can specify modules, source files, and functions to treat as non-user code in call stacks by specifying them in `*.natjmc` files.  
   
-###  <a name="BKMK_CPP_Customize_call_stack_behavior"></a> 呼び出し履歴の動作のカスタマイズ  
- モジュール、ソース ファイル、および関数を `*.natjmc` ファイルで指定することで、呼び出し履歴でそれらを非ユーザー コードとして扱うことを指定できます。  
+-   To specify non-user code for all users of the Visual Studio machine, add the .natjmc file to the `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` folder.  
   
--   Visual Studio コンピューターのすべてのユーザーの非ユーザー コードを指定するには、  `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` フォルダーに .natjmc ファイルを追加します。  
+-   To specify non-user code for an individual user, add the .natjmc file to the `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` folder.  
   
--   個々 のユーザーの非ユーザー コードを指定するには、  `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` フォルダーに .natjmc ファイルを追加します。  
-  
- .  natjmc ファイルは、次の構文を使用する xml ファイルです。  
+ .natjmc files are xml files with this syntax:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -189,114 +172,103 @@ manager: "ghogen"
   
 ```  
   
- **Module 要素の属性**  
+ **Module element attributes**  
   
-|属性|説明|  
-|--------|--------|  
-|`Name`|必須。  モジュールの完全パス。  Windows のワイルドカード文字、`?` \(0 個または 1 個の文字\) および `*` \(0 個以上の文字\) を使用できます。  次に例を示します。<br /><br /> `<Module Name=”?:\3rdParty\UtilLibs\*” />`<br /><br /> は、ドライブの `\3rdParty\UtilLibs` 内のすべてのモジュールを外部コードとして扱うことをデバッガーに指示します。|  
-|`Company`|省略可能です。  実行可能ファイルに埋め込まれているモジュールを発行する会社の名前。  この属性を使用して、モジュールのあいまいさを解消することができます。|  
+|Attribute|Description|  
+|---------------|-----------------|  
+|`Name`|Required. The full path of the module or modules. You can use the Windows wildcard characters `?` (zero or one character) and `*` (zero or more characters). For example,<br /><br /> `<Module Name="?:\3rdParty\UtilLibs\*" />`<br /><br /> tells the debugger to treat all modules in `\3rdParty\UtilLibs` on any drive as external code.|  
+|`Company`|Optional. The name of the company that publishes the module that is embedded in the executable file. You can use this attribute to disambiguate the modules.|  
   
- **File 要素の属性**  
+ **File element attributes**  
   
-|属性|説明|  
-|--------|--------|  
-|`Name`|必須。  外部コードとして扱うソース ファイルの完全パス。  パスを指定するときに Windows のワイルドカード文字、`?` および `*` を使用できます。|  
+|Attribute|Description|  
+|---------------|-----------------|  
+|`Name`|Required. The full path of the source file or files to treat as external code. You can use the Windows wildcard characters `?` and `*` when specifying the path.|  
   
- **Function 要素の属性**  
+ **Function element attributes**  
   
-|属性|説明|  
-|--------|--------|  
-|`Name`|必須。  外部コードとして扱う関数の完全修飾名。|  
-|`Module`|省略可能です。  関数を含むモジュールの名前または完全パス。  この属性を使用して、同じ名前の関数のあいまいさを解消することができます。|  
-|`ExceptionImplementation`|`true`  に設定すると、この関数ではなく、例外をスローした関数が呼び出し履歴に表示されます。|  
+|Attribute|Description|  
+|---------------|-----------------|  
+|`Name`|Required. The fully qualified name of the function to treat as external code.|  
+|`Module`|Optional. The name or full path to the module that contains the function. You can use this attribute to disambiguate functions with the same name.|  
+|`ExceptionImplementation`|When set to `true`, the call stack displays the function that threw the exception rather than this function.|  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [C++ での "マイ コードのみ"](#BKMK_C___Just_My_Code)  
+##  <a name="BKMK_JavaScript_Just_My_Code"></a> JavaScript Just My Code  
   
-##  <a name="BKMK_JavaScript_Just_My_Code"></a> JavaScript での "マイ コードのみ"  
- [ユーザー コードと非ユーザー コード](#BKMK_JS_User_and_non_user_code) **&#124;** [ステップ実行の動作](#BKMK_JS_Stepping_behavior) **&#124;** [ブレークポイントの動作](#BKMK_JS_Breakpoint_behavior) **&#124;** [例外の動作](#BKMK_JS_Exception_behavior) **&#124;** ["マイ コードのみ" のカスタマイズ](#BKMK_JS_Customize_Just_My_Code)  
+###  <a name="BKMK_JS_User_and_non_user_code"></a> User and non-user code  
+ **Code classifications**  
   
-###  <a name="BKMK_JS_User_and_non_user_code"></a> ユーザー コードと非ユーザー コード  
- **コードの分類**  
-  
- JavaScript の "マイ コードのみ" は、以下のいずれかの方法でコードを分類することでステップ実行と呼び出し履歴表示を制御します。  
+ JavaScript Just My Code controls stepping and call stack display by categorizing code in one of these classifications:  
   
 |||  
 |-|-|  
-|**MyCode**|ユーザーが所有および制御するユーザー コード。|  
-|**LibraryCode**|ユーザーが通常使用し、アプリケーションが正しく機能するために必要なライブラリからの非ユーザー コード \(WinJS や jQuery など\)。|  
-|**UnrelatedCode**|ユーザーのアプリケーションで実行することはできるが、ユーザーが所有せず、アプリケーションが正しく機能するために直接必要としない非ユーザー コード \(広告を表示する広告 SDK など\)。  Windows ストア プロジェクトでは、HTTP または HTTPS URI からアプリケーションに読み込まれるコードも UnrelatedCode と見なされます。|  
+|**MyCode**|User code that you own and control.|  
+|**LibraryCode**|Non-user code from libraries that you use regularly and your application relies on to function correctly (for example WinJS or jQuery).|  
+|**UnrelatedCode**|Non-user code that could be running in your application, but you don't own it and your application doesn't directly rely on it to function correctly. (For example, this could include an advertising SDK that displays ads.) In Windows Store projects, any code that is loaded into your app from an HTTP or HTTPS URI is also considered UnrelatedCode.|  
   
- JavaScript デバッガーは、以下のコードの種類を自動的に分類します。  
+ The JavaScript debugger automatically classifies these types of code:  
   
--   ホスト提供の `eval` 関数に文字列を渡すことで実行されるスクリプトは、**MyCode** として分類されます。  
+-   Script that is executed by passing a string to the host-provided `eval` function is classified as **MyCode**.  
   
--   `Function` コンストラクターに文字列を渡すことで実行されるスクリプトは、**LibraryCode** として分類されます。  
+-   Script that is executed by passing a string to the `Function` constructor is classified as **LibraryCode**.  
   
--   WinJS や Azure SDK など、フレームワーク参照に含まれるスクリプトは、**LibraryCode** として分類されます。  
+-   Script that is contained in a framework reference, such as WinJS or the Azure SDK, is classified as **LibraryCode**.  
   
--   `setTimeout`、`setImmediate`、または `setInterval` 関数に文字列を渡すことで実行されるスクリプトは、**UnrelatedCode** として分類されます。  
+-   Script that is executed by passing a string to the `setTimeout`, `setImmediate`, or `setInterval` functions is classified as **UnrelatedCode**.  
   
--   `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` は、すべての Visual Studio JavaScript プロジェクトの他のユーザー コードと非ユーザー コードを指定します。  
+-   The `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` specifies other user and non-user code for all Visual Studio JavaScript projects.  
   
- プロジェクトのルート フォルダーに `mycode.json` という名前の .json ファイルを追加することで、既定の分類を変更し、特定のファイルや URL を分類することができます。  
+ You can modify the default classifications and classify specific files and urls by add a .json file named `mycode.json` to the root folder of a project.  
   
- 他のすべてのコードは、**MyCode** として分類されます。  
+ All other code is classified as **MyCode**.  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
+###  <a name="BKMK_JS_Stepping_behavior"></a> Stepping behavior  
   
-###  <a name="BKMK_JS_Stepping_behavior"></a> ステップ実行の動作  
+-   If a function is not user (**MyCode**) code, **Step Into** (Keyboard shortcut: F11) behaves as **Step Over** (Keyboard: F10).  
   
--   関数がユーザー \(**MyCode**\) コードでない場合、**\[ステップ イン\]** \(キーボード ショートカット: F11\) は **\[ステップ オーバー\]** \(キーボード: F10\) として動作します。  
+-   If a step begins in non-user (**LibraryCode** or **UnrelatedCode**) code, then stepping temporarily behaves as if Just My Code is not enabled. When you step back to user code, Just My Code stepping is re-enabled.  
   
--   ステップが非ユーザー \(**LibraryCode** または **UnrelatedCode**\) コードで始まる場合、ステップ実行は一時的に "マイ コードのみ" が有効でないように動作します。  ステップがユーザー コードに戻ると、"マイ コードのみ" のステップ実行が再び有効になります。  
+-   When a step in user code results in leaving the current execution context (such as doing a step on the last line of an event handler), the debugger stops at the next executed line of user code. For example, if a callback executes in **LibraryCode** code the debugger continues until the next line of user code executes.
   
--   ユーザー コード内のステップが現在の実行コンテキストから出ることになると \(イベント ハンドラーの最後の行でのステップの実行など\)、ユーザー コードの次に実行される行でデバッガーが停止します。  たとえば、コールバックが **LibraryCode** コードで実行されると、デバッガーはユーザー コードの次の行が実行されるまで続行されます。  
+-   **Step Out** (Keyboard: Shift + F11) stops on the next line of user code. If no user code is encountered, then execution continues until the app exits, a breakpoint is hit, or an exception occurs.  
   
--   **\[ステップ アウト\]** \(キーボード: Shift \+ F11\) を実行すると、ユーザー コードの次の行で停止します。  ユーザー コードが出現しない場合は、アプリケーションが終了するか、ブレークポイントにヒットするか、または例外が発生するまで実行が続けられます。  
+###  <a name="BKMK_JS_Breakpoint_behavior"></a> Breakpoint behavior  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
+-   Breakpoints set in code will always be hit regardless of the classification of that code  
   
-###  <a name="BKMK_JS_Breakpoint_behavior"></a> ブレークポイントの動作  
+-   If the `debugger` keyword is encountered in:  
   
--   どのコードで設定されたブレークポイントでも、そのコードの分類とは無関係に常にヒットします。  
+    -   **LibraryCode** code, the debugger always breaks.  
   
--   `debugger`  キーワードが、  
+    -   **UnrelatedCode** code, the debugger doesn't stop.  
   
-    -   **LibraryCode** コードに出現した場合、デバッガーは常に中断します。  
+###  <a name="BKMK_JS_Exception_behavior"></a> Exception behavior  
+ If an unhandled exception occurs in:  
   
-    -   **UnrelatedCode** コードに出現した場合、デバッガーは停止しません。  
+-   **MyCode** or **LibraryCode** code, the debugger always breaks.  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
+-   **UnrelatedCode** code, and **MyCode** or **LibraryCode** code is on the call stack, the debugger breaks.  
   
-###  <a name="BKMK_JS_Exception_behavior"></a> 例外の動作  
- ハンドルされていない例外が、  
+ If first chance exceptions are enabled for the exception on the Exceptions dialog box, and the exception is thrown in **LibraryCode** or **UnrelatedCode** code:  
   
--   **MyCode** または **LibraryCode** コードで発生した場合、デバッガーは常に中断します。  
+-   If the exception is handled, the debugger doesn't break.  
   
--   **UnrelatedCode** コードで発生し、呼び出し履歴に **MyCode** または **LibraryCode** コードがある場合、デバッガーは中断します。  
+-   If the exception is not handled, the debugger breaks.  
   
- \[例外\] ダイアログ ボックスで初回例外がその例外に対して有効になっている場合に、例外が **LibraryCode** または **UnrelatedCode** コードでスローされた場合、  
+###  <a name="BKMK_JS_Customize_Just_My_Code"></a> Customize Just My Code  
+ To categorize user and non-user code for a single Visual Studio project, add a .json file named `mycode.json` to the root folder of the project.  
   
--   例外が処理される場合、デバッガーは中断しません。  
+ Classifications are performed in this order:  
   
--   例外が処理されない場合、デバッガーは中断します。  
+1.  Default classifications  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)  
+2.  Classifications in the `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` file  
   
-###  <a name="BKMK_JS_Customize_Just_My_Code"></a> "マイ コードのみ" のカスタマイズ  
- 単一の Visual Studio プロジェクトのユーザー コードと非ユーザー コードを分類するには、プロジェクトのルート フォルダーに `mycode.json` という名前の .json ファイルを追加します。  
+3.  Classifications in the `mycode. json` file of the current project.  
   
- 分類は次の順序で行われます。  
+ Each classification step overrides the previous steps. A .json file does not need to list all key value pairs, and the **MyCode**, **Libraries**, and **Unrelated** values can be empty arrays.  
   
-1.  既定の分類  
-  
-2.  `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` ファイルでの分類  
-  
-3.  現在のプロジェクトの `mycode. json` ファイルでの分類。  
-  
- 分類の各手順で、前の手順はオーバーライドされます。  .json ファイルでは、すべてのキーと値のペアを示す必要はなく、**MyCode**、**Libraries**、および **Unrelated** の値は空の配列にすることもできます。  
-  
- マイ コードの .json ファイルでは、次の構文を使用します。  
+ My Code .json files use this syntax:  
   
 ```json  
 {  
@@ -304,52 +276,50 @@ manager: "ghogen"
     "Function" : "Classification",  
     "ScriptBlock" : "Classification",  
     "MyCode" : [  
-        "UrlOrFileSpec”,  
+        "UrlOrFileSpec",  
         . . .  
-        "UrlOrFileSpec”  
+        "UrlOrFileSpec"  
     ],  
     "Libraries" : [  
-        "UrlOrFileSpec”,  
+        "UrlOrFileSpec",  
         . .  
-        "UrlOrFileSpec”  
+        "UrlOrFileSpec"  
     ],  
     "Unrelated" : [  
-        "UrlOrFileSpec”,  
+        "UrlOrFileSpec",  
         . . .  
-        "UrlOrFileSpec”  
+        "UrlOrFileSpec"  
     ]  
 }  
   
 ```  
   
- **Eval、Function、および ScriptBlock**  
+ **Eval, Function, and ScriptBlock**  
   
- **Eval**、**Function**、および **ScriptBlock** のキーと値のペアで、動的に生成されたコードを分類する方法が決まります。  
-  
-|||  
-|-|-|  
-|**Eval**|ホスト提供の `eval` 関数に文字列を渡すことで実行されるスクリプト。  既定では、Eval スクリプトは **MyCode** として分類されます。|  
-|**関数**|`Function` コンストラクターに文字列を渡すことで実行されるスクリプト。  既定では、Function スクリプトは **LibraryCode** として分類されます。|  
-|**ScriptBlock**|`setTimeout`、`setImmediate`、または `setInterval` 関数に文字列を渡すことで実行されるスクリプト。  既定では、ScriptBlock スクリプトは **UnrelatedCode** として分類されます。|  
-  
- 以下のいずれかのキーワードに値を変更できます。  
-  
--   `MyCode`  は、スクリプトを **MyCode** として分類します。  
-  
--   `Library`  は、スクリプトを **LibraryCode** として分類します。  
-  
--   `Unrelated`  は、スクリプトを **UnrelatedCode** として分類します。  
-  
- **MyCode、Libraries、および Unrelated**  
-  
- **MyCode**、**Libraries**、および **Unrelated** のキーと値のペアは、分類に含める URL またはファイルを指定します。  
+ The **Eval**, **Function**, and **ScriptBlock** key value pairs determine how dynamically generated code is classified.  
   
 |||  
 |-|-|  
-|**MyCode**|**MyCode**として分類される URL またはファイルの配列。|  
-|**ライブラリ**|**LibraryCode**として分類される URL またはファイルの配列。|  
-|**Unrelated**|**UnrelatedCode**として分類される URL またはファイルの配列。|  
+|**Eval**|Script that is executed by passing a string to the host-provided `eval` function. By default, Eval script is classified as **MyCode**.|  
+|**Function**|Script that is executed by passing a string to the `Function` constructor. By default, Function script is classified as **LibraryCode**.|  
+|**ScriptBlock**|Script that is executed by passing a string to the `setTimeout`, `setImmediate`, or `setInterval` functions. By default, ScriptBlock script is classified as **UnrelatedCode**.|  
   
- URL またはファイルの文字列には、0 個以上の文字に一致する `*` 文字を 1 つ以上含めることができます。  `*` は、正規表現 `.*` と同等です。  
+ You can change the value to one of these keywords:  
   
- ![ページのトップへ](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [内容](#BKMK_Contents) **&#124;** [JavaScript での "マイ コードのみ"](#BKMK_JavaScript_Just_My_Code)
+-   `MyCode`  classifies the script as **MyCode**.  
+  
+-   `Library`  classifies the script as **LibraryCode**.  
+  
+-   `Unrelated`  classifies the script as **UnrelatedCode**.  
+  
+ **MyCode, Libraries, and Unrelated**  
+  
+ The **MyCode**, **Libraries**, and **Unrelated** key value pairs specify the urls or files that you want to include in a classification:  
+  
+|||  
+|-|-|  
+|**MyCode**|An array of urls or files that are classified as **MyCode**.|  
+|**Libraries**|An array of urls or files that are classified as **LibraryCode**.|  
+|**Unrelated**|An array of urls or files that are classified as **UnrelatedCode**.|  
+  
+ The url or file string can contain one or more `*` characters, which match zero or more characters. `*` is the equivalent of the regular expression `.*`.
