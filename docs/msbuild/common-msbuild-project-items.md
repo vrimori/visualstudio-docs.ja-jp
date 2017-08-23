@@ -1,145 +1,163 @@
 ---
-title: "Common MSBuild Project Items | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild, common project items"
+title: Common MSBuild Project Items | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MSBuild, common project items
 ms.assetid: 1eba3721-cc12-4b80-9987-84923ede5e2e
 caps.latest.revision: 17
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Common MSBuild Project Items
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
+ms.openlocfilehash: 95cc68dfeb1005913198f9eb4564b2237818a5da
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、項目は 1 つ以上のファイルに対応する名前付きの参照です。  項目には、ファイル名、パス、バージョン番号などのメタデータが含まれます。  項目には、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のすべてのプロジェクトの種類に共通のものがあります。  これらの項目は、microsoft.build.commontypes.xsd ファイルに定義されています。  
+---
+# <a name="common-msbuild-project-items"></a>Common MSBuild Project Items
+In [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], an item is a named reference to one or more files. Items contain metadata such as file names, paths, and version numbers. All project types in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] have several items in common. These items are defined in the file microsoft.build.commontypes.xsd.  
   
-## 共通の項目  
- 次に、プロジェクトの共通項目の一覧を示します。  
+## <a name="common-items"></a>Common Items  
+ The following is a list of all the common project items.  
   
-### 参照  
- プロジェクト内のアセンブリ \(マネージ\) 参照を表します。  
+### <a name="reference"></a>Reference  
+ Represents an assembly (managed) reference in the project.  
   
-|項目名|説明|  
-|---------|--------|  
-|HintPath|省略可能な文字列。  アセンブリの相対パスまたは絶対パスを指定します。|  
-|名前|省略可能な文字列。  アセンブリの表示名を指定します \(たとえば、"System.Windows.Forms"\)。|  
-|FusionName|省略可能な文字列。  項目の簡易または厳密な fusion 名を指定します。<br /><br /> この属性が存在する場合、fusion 名を得るためにアセンブリ ファイルを開く必要がないため、時間を節約できます。|  
-|SpecificVersion|省略可能なブール値。  fusion 名の特定のバージョンを参照する必要があるかどうかを指定します。|  
-|Aliases|省略可能な文字列。  参照の任意のエイリアスです。|  
-|プライベート|省略可能なブール値。  参照を出力フォルダーにコピーする必要があるかどうかを指定します。  この属性は、Visual Studio IDE に存在する参照の **\[ローカルにコピー\]** プロパティに一致します。|  
+|Item Name|Description|  
+|---------------|-----------------|  
+|HintPath|Optional string. Relative or absolute path of the assembly.|  
+|Name|Optional string. The display name of the assembly, for example, "System.Windows.Forms."|  
+|FusionName|Optional string. Specifies the simple or strong fusion name for the item.<br /><br /> When this attribute is present, it can save time because the assembly file does not have to be opened to obtain the fusion name.|  
+|SpecificVersion|Optional boolean. Specifies whether only the version in the fusion name should be referenced.|  
+|Aliases|Optional string. Any aliases for the reference.|  
+|Private|Optional boolean. Specifies whether the reference should be copied to the output folder. This attribute matches the **Copy Local** property of the reference that's in the Visual Studio IDE.|  
   
-### COMReference  
- プロジェクト内の COM \(アンマネージ\) コンポーネント参照を表します。  
+### <a name="comreference"></a>COMReference  
+ Represents a COM (unmanaged) component reference in the project.  
   
-|項目名|説明|  
-|---------|--------|  
-|名前|省略可能な文字列。  コンポーネントの表示名を指定します。|  
-|Guid|省略可能な文字列。  コンポーネントの GUID を {12345678\-1234\-1234\-1234\-123456789012} の形式で指定します。|  
-|VersionMajor|省略可能な文字列。  コンポーネントのメジャー バージョン番号を指定します。  たとえば、完全なバージョン番号が "5.46" である場合、"5" を指定します。|  
-|VersionMinor|省略可能な文字列。  コンポーネントのマイナー バージョン番号を指定します。  たとえば、完全なバージョン番号が "5.46" である場合、"46" を指定します。|  
-|LCID|省略可能な文字列。  コンポーネントの LocaleID です。|  
-|WrapperTool|省略可能な文字列。  コンポーネントで使用されるラッパー ツールの名前を指定します \(たとえば、"tlbimp"\)。|  
-|Isolated|省略可能なブール値。  コンポーネントが Reg\-Free コンポーネントであるかどうかを指定します。|  
+|Item Name|Description|  
+|---------------|-----------------|  
+|Name|Optional string. The display name of the component.|  
+|Guid|Optional string. A GUID for the component, in the form {12345678-1234-1234-1234-1234567891234}.|  
+|VersionMajor|Optional string. The major part of the version number of the component. For example, "5" if the full version number is "5.46."|  
+|VersionMinor|Optional string. The minor part of the version number of the component. For example, "46" if the full version number is "5.46."|  
+|LCID|Optional string. The LocaleID for the component.|  
+|WrapperTool|Optional string. The name of the wrapper tool that is used on the component, for example, "tlbimp."|  
+|Isolated|Optional boolean. Specifies whether the component is a reg-free component.|  
   
-### COMFileReference  
- ResolvedComreference ターゲットに送られるタイプ ライブラリの一覧を表します。  
+### <a name="comfilereference"></a>COMFileReference  
+ Represents a list of type libraries that feed into the ResolvedComreference target.  
   
-|項目名|説明|  
-|---------|--------|  
-|WrapperTool|省略可能な文字列。  コンポーネントで使用されるラッパー ツールの名前を指定します \(たとえば、"tlbimp"\)。|  
+|Item Name|Description|  
+|---------------|-----------------|  
+|WrapperTool|Optional string. The name of the wrapper tool that is used on the component, for example, "tlbimp."|  
   
-### NativeReference  
- ネイティブ マニフェスト ファイル、またはこのようなファイルへの参照を表します。  
+### <a name="nativereference"></a>NativeReference  
+ Represents a native manifest file or a reference to such a file.  
   
-|項目名|説明|  
-|---------|--------|  
-|名前|必須の文字列。  マニフェスト ファイルの基本名を指定します。|  
-|HintPath|必須の文字列。  マニフェスト ファイルの相対パスを指定します。|  
+|Item Name|Description|  
+|---------------|-----------------|  
+|Name|Required string. The base name of the manifest file.|  
+|HintPath|Required string. The relative path of the manifest file.|  
   
-### ProjectReference  
- 別のプロジェクトへの参照を表します。  
+### <a name="projectreference"></a>ProjectReference  
+ Represents a reference to another project.  
   
-|項目名|説明|  
-|---------|--------|  
-|名前|省略可能な文字列。  参照の表示名を指定します。|  
-|プロジェクト|省略可能な文字列。  参照の GUID を {12345678\-1234\-1234\-1234\-123456789012} の形式で指定します。|  
-|Package|省略可能な文字列。  参照されるプロジェクト ファイルのパスを指定します。|  
+|Item Name|Description|  
+|---------------|-----------------|  
+|Name|Optional string. The display name of the reference.|  
+|Project|Optional string. A GUID for the reference, in the form {12345678-1234-1234-1234-1234567891234}.|  
+|Package|Optional string. The path of the project file that is being referenced.|  
   
-### Compile  
- コンパイラのソース ファイルを表します。  
+### <a name="compile"></a>Compile  
+ Represents the source files for the compiler.  
   
-|項目名|説明|  
-|---------|--------|  
-|DependentUpon|省略可能な文字列。  正しくコンパイルする必要があるファイルを指定します。|  
-|AutoGen|省略可能なブール値。  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 統合開発環境 \(IDE\) で使用するプロジェクト用にファイルを生成するかどうかを指定します。|  
-|Link|省略可能な文字列。  プロジェクト ファイルの影響が及ばない物理的な場所にファイルが配置されるときに表示される表記パスです。|  
-|Visible|省略可能なブール値。   **の[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューション エクスプローラー**にファイルを表示するかどうかを指定します。|  
-|CopyToOutputDirectory|省略可能な文字列。  出力ディレクトリにファイルをコピーするかどうかを判断します。  値は次のとおりです。<br /><br /> 1.  Never<br />2.  Always<br />3.  PreserveNewest|  
+|Item Name|Description|  
+|---------------|-----------------|  
+|DependentUpon|Optional string. Specifies the file this file depends on to compile correctly.|  
+|AutoGen|Optional boolean. Indicates whether the file was generated for the project by the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrated development environment (IDE).|  
+|Link|Optional string. The notational path to be displayed when the file is physically located outside the influence of the project file.|  
+|Visible|Optional boolean. Indicates whether to display the file in **Solution Explorer** in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|  
+|CopyToOutputDirectory|Optional string. Determines whether to copy the file to the output directory. Values are:<br /><br /> 1.  Never<br />2.  Always<br />3.  PreserveNewest|  
   
-### EmbeddedResource  
- 生成されるアセンブリに埋め込まれるリソースを表します。  
+### <a name="embeddedresource"></a>EmbeddedResource  
+ Represents resources to be embedded in the generated assembly.  
   
-|項目名|説明|  
-|---------|--------|  
-|DependentUpon|省略可能な文字列。  正しくコンパイルするために、このファイルが依存するファイルを指定します|  
-|ジェネレーター|必須の文字列。  この項目に対して実行される任意のファイル ジェネレーターの名前です。|  
-|LastGenOutput|必須の文字列。  この項目に対して実行された任意のファイル ジェネレーターによって作成されたファイルの名前です。|  
-|CustomToolNamespace|必須の文字列。  名前空間を指定します。指定した名前空間で、この項目に対して実行する任意のファイル ジェネレーターによってコードが作成されます。|  
-|Link|省略可能な文字列。  プロジェクトの影響が及ばない物理的な場所にファイルが配置されるときに表示される表記パスです。|  
-|Visible|省略可能なブール値。   **の[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューション エクスプローラー**にファイルを表示するかどうかを指定します。|  
-|CopyToOutputDirectory|省略可能な文字列。  出力ディレクトリにファイルをコピーするかどうかを判断します。  値は次のとおりです。<br /><br /> 1.  Never<br />2.  Always<br />3.  PreserveNewest|  
-|LogicalName|必須の文字列。  埋め込まれるリソースの論理名です。|  
+|Item Name|Description|  
+|---------------|-----------------|  
+|DependentUpon|Optional string. Specifies the file this file depends on to compile correctly|  
+|Generator|Required string. The name of any file generator that is run on this item.|  
+|LastGenOutput|Required string. The name of the file that was created by any file generator that ran on this item.|  
+|CustomToolNamespace|Required string. The namespace in which any file generator that runs on this item should create code.|  
+|Link|Optional string. The notational path is displayed if the file is physically located outside the influence of the project.|  
+|Visible|Optional boolean. Indicates whether to display the file in **Solution Explorer** in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|  
+|CopyToOutputDirectory|Optional string. Determines whether to copy the file to the output directory. Values are:<br /><br /> 1.  Never<br />2.  Always<br />3.  PreserveNewest|  
+|LogicalName|Required string. The logical name of the embedded resource.|  
   
-### Content  
- プロジェクトにコンパイルはされないものの、プロジェクトと共に埋め込まれるか発行されることのあるファイルを表します。  
+### <a name="content"></a>Content  
+ Represents files that are not compiled into the project, but may be embedded or published together with it.  
   
-|項目名|説明|  
-|---------|--------|  
-|DependentUpon|省略可能な文字列。  正しくコンパイルする必要があるファイルを指定します。|  
-|ジェネレーター|必須の文字列。  この項目に対して実行する任意のファイル ジェネレーターの名前です。|  
-|LastGenOutput|必須の文字列。  この項目に対して実行された任意のファイル ジェネレーターによって作成されたファイルの名前です。|  
-|CustomToolNamespace|必須の文字列。  名前空間を指定します。指定した名前空間で、この項目に対して実行する任意のファイル ジェネレーターによってコードが作成されます。|  
-|Link|省略可能なブール値。   **の[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューション エクスプローラー**にファイルを表示するかどうかを指定します。|  
-|PublishState|必須の文字列。  コンテンツの発行状態を示すもので、以下のいずれかの値を取ります。<br /><br /> -   既定値<br />-   Included<br />-   Excluded<br />-   DataFile<br />-   必須コンポーネント|  
-|IsAssembly|省略可能なブール値。  ファイルがアセンブリであるかどうかを指定します。|  
-|Visible|省略可能なブール値。   **の[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューション エクスプローラー**にファイルを表示するかどうかを指定します。|  
-|CopyToOutputDirectory|省略可能な文字列。  出力ディレクトリにファイルをコピーするかどうかを判断します。  値は次のとおりです。<br /><br /> 1.  Never<br />2.  Always<br />3.  PreserveNewest|  
+|Item Name|Description|  
+|---------------|-----------------|  
+|DependentUpon|Optional string. Specifies the file this file depends on to compile correctly.|  
+|Generator|Required string. The name of any file generator that runs on this item.|  
+|LastGenOutput|Required string. The name of the file that was created by any file generator that was run on this item.|  
+|CustomToolNamespace|Required string. The namespace in which any file generator that runs on this item should create code.|  
+|Link|Optional string. The notational path to be displayed if the file is physically located outside the influence of the project.|  
+|PublishState|Required string. The publish state of the content, either:<br /><br /> -   Default<br />-   Included<br />-   Excluded<br />-   DataFile<br />-   Prerequisite|  
+|IsAssembly|Optional boolean. Specifies whether the file is an assembly.|  
+|Visible|Optional boolean. Indicates whether to display the file in **Solution Explorer** in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|  
+|CopyToOutputDirectory|Optional string. Determines whether to copy the file to the output directory. Values are:<br /><br /> 1.  Never<br />2.  Always<br />3.  PreserveNewest|  
   
-### なし  
- ビルド プロセスでは使用しないことが推奨されるファイルを表します。  
+### <a name="none"></a>None  
+ Represents files that should have no role in the build process.  
   
-|項目名|説明|  
-|---------|--------|  
-|DependentUpon|省略可能な文字列。  正しくコンパイルする必要があるファイルを指定します。|  
-|ジェネレーター|必須の文字列。  この項目に対して実行される任意のファイル ジェネレーターの名前です。|  
-|LastGenOutput|必須の文字列。  この項目に対して実行された任意のファイル ジェネレーターによって作成されたファイルの名前です。|  
-|CustomToolNamespace|必須の文字列。  名前空間を指定します。指定した名前空間で、この項目に対して実行する任意のファイル ジェネレーターによってコードが作成されます。|  
-|Link|省略可能な文字列。  プロジェクトの影響が及ばない物理的な場所にファイルが配置されるときに表示される表記パスです。|  
-|Visible|省略可能なブール値。   **の[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューション エクスプローラー**にファイルを表示するかどうかを指定します。|  
-|CopyToOutputDirectory|省略可能な文字列。  出力ディレクトリにファイルをコピーするかどうかを判断します。  値は次のとおりです。<br /><br /> 1.  Never<br />2.  Always<br />3.  PreserveNewest|  
+|Item Name|Description|  
+|---------------|-----------------|  
+|DependentUpon|Optional string. Specifies the file this file depends on to compile correctly.|  
+|Generator|Required string. The name of any file generator that is run on this item.|  
+|LastGenOutput|Required string. The name of the file that was created by any file generator that ran on this item.|  
+|CustomToolNamespace|Required string. The namespace in which any file generator that runs on this item should create code.|  
+|Link|Optional string. The notational path to be displayed if the file is physically located outside the influence of the project.|  
+|Visible|Optional boolean. Indicates whether to display the file in **Solution Explorer** in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|  
+|CopyToOutputDirectory|Optional string. Determines whether to copy the file to the output directory. Values are:<br /><br /> 1.  Never<br />2.  Always<br />3.  PreserveNewest|  
   
-### BaseApplicationManifest  
- ビルドの基本アプリケーション マニフェストを表し、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置セキュリティ情報を含みます。  
+### <a name="baseapplicationmanifest"></a>BaseApplicationManifest  
+ Represents the base application manifest for the build, and contains [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] deployment security information.  
   
-### CodeAnalysisImport  
- インポートする FxCop プロジェクトを表します。  
+### <a name="codeanalysisimport"></a>CodeAnalysisImport  
+ Represents the FxCop project to import.  
   
-### インポート  
- アセンブリを表します。このアセンブリの名前空間が、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] コンパイラによってインポートされます。  
+### <a name="import"></a>Import  
+ Represents assemblies whose namespaces should be imported by the [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] compiler.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [Common MSBuild Project Properties](../msbuild/common-msbuild-project-properties.md)
+
