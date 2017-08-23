@@ -14,10 +14,10 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 1f384f593129c4a0e879762d6e2e7f5944171af6
+ms.sourcegitcommit: 0387b9a656f97d9354f95f121cad8422e93a69bc
+ms.openlocfilehash: b1d99a132c6e29239862e9bd7629eb47a679138f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="getting-started-with-wpf"></a>WPF の概要
@@ -31,10 +31,11 @@ Windows Presentation Foundation (WPF) は、デスクトップ クライアン�
 | XAML デザイン ツールの比較 |[Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)|  
 |.NET の初心者向け|[.NET Framework の概要](https://msdn.microsoft.com/en-us/library/zw4w595w\(v=vs.140\).aspx)<br /><br /> [アプリケーションの基本事項](/dotnet/standard/application-essentials)<br /><br /> [Visual C# と Visual Basic の概要](../ide/getting-started-with-visual-csharp-and-visual-basic.md)|  
 |WPF の詳細な説明...|[WPF の概要](../designers/introduction-to-wpf.md)<br /><br /> [XAML の概要 (WPF)](https://docs.microsoft.com/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br /> [コントロール](https://docs.microsoft.com/dotnet/framework/wpf/controls/)<br /><br /> [データ バインディングの概要](https://docs.microsoft.com/dotnet/framework/wpf/data/data-binding-overview)<br /><br /> [LINQ to XML による WPF のデータ バインディング](../designers/wpf-data-binding-with-linq-to-xml.md)|  
-|Windows フォームの開発者向け|[Windows フォーム コントロールおよび同等の WPF コントロール](https://docs.microsoft.com/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls).aspx)<br /><br /> [WPF と Windows フォームの相互運用性に関してサポートするシナリオ](https://docs.microsoft.com/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|  
+|Windows フォームの開発者向け|[Windows フォーム コントロールおよび同等の WPF コントロール](https://docs.microsoft.com/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br /> [WPF と Windows フォームの相互運用性に関してサポートするシナリオ](https://docs.microsoft.com/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|  
   
 ## <a name="see-also"></a>関連項目  
  [クラス ライブラリ (WPF)](https://docs.microsoft.com/dotnet/framework/wpf/class-library-wpf)   
  [アプリケーション開発の概要](https://docs.microsoft.com/dotnet/framework/wpf/app-development/index)   
  [.NET ドキュメント ホーム](https://docs.microsoft.com/dotnet/index)   
  [Windows Presentation Foundation での最新のデスクトップ アプリケーションの作成](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
+
