@@ -66,7 +66,7 @@ ms.lasthandoff: 05/13/2017
   
      プロファイラーの分析ターゲットを変更する場合は、**[ターゲットの変更]**を選択します。  
   
-     ![分析ターゲットを変更する](~/profiling/media/js_tools_target.png "JS_Tools_Target")  
+     ![分析ターゲットを変更する](../profiling/media/js_tools_target.png "JS_Tools_Target")  
   
      分析ターゲットに対して、次のオプションを使用できます。  
   
@@ -80,8 +80,7 @@ ms.lasthandoff: 05/13/2017
   
          このオプションを使用すると、ソース コードにアクセスできないときに、コンピューターにインストールされているアプリのパフォーマンスを分析できます。 このオプションは、自分が開発に携わっていないアプリのパフォーマンスを分析する場合にも便利です。  
   
-3.  
-                **[使用可能なツール]**で **[HTML UI の応答性]**を選択し、 **[開始]**をクリックします。  
+3.  **[使用可能なツール]**で **[HTML UI の応答性]**を選択し、 **[開始]**をクリックします。  
   
 4.  UI 応答性プロファイラーの開始時に、Visual Studio ETW Collector.exe を実行するためのアクセス許可を要求するユーザー アカウント制御ウィンドウが表示される場合があります。 **[はい]**をクリックします。  
   
@@ -118,7 +117,7 @@ ms.lasthandoff: 05/13/2017
   
 8.  ユーザー マークが追加済みの場合は、プロファイラーの [診断セッションのタイムラインの表示](#Ruler) に表示されます。 次の図は、コードで特定の操作を指定するために使用される単一のユーザー マークを示しています。  
   
-     ![ユーザー マークを表示している診断ルーラー](~/profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
+     ![ユーザー マークを表示している診断ルーラー](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
   
 9. ユーザー マーク、アプリケーション ライフ サイクル イベント、グラフ内のデータを使って、タイムラインとプロファイラー グラフで関心のある領域を特定します。 グラフのデータの分析と使用に役立つガイドラインを次に示します。  
   
@@ -132,7 +131,7 @@ ms.lasthandoff: 05/13/2017
   
      次の図は、関心のある領域を強調表示した、CPU 使用状況グラフを示します。  
   
-     ![CPU 使用状況グラフ](~/profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
+     ![CPU 使用状況グラフ](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
   
 11. [タイムライン グラフの表示](#TimelineDetails) 」 を使用すると、あまりに頻繁に実行されるイベントまたは完了に多くの時間がかかっているイベントに関する詳細情報を取得できます。 たとえば、次のものを探します。  
   
@@ -175,7 +174,7 @@ if (performance && performance.mark) {
   
  次の図は、1 つのユーザー マークとツールヒントが表示された診断ルーラーを示しています。  
   
- ![ユーザー マークを表示している診断ルーラー](~/profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
+ ![ユーザー マークを表示している診断ルーラー](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
   
  また、タイムライン詳細表示で、ツールで生成されるイベントを作成して、2 つのユーザー マーク間で経過する期間を表示することもできます。 次のコードでは、2 番目のユーザー マークと、2 つのユーザー マークを実行する間に経過する時間の測定値が追加されています (前のコードは最初のユーザー マークを示しています)。  
   
@@ -200,7 +199,7 @@ if (performance.mark && performance.measure) {
   
  次に、診断セッションのタイムラインの外観を示します。 いくつかのアプリ ライフサイクル イベントのツールヒントが表示されています。  
   
- ![診断セッション ルーラー](~/profiling/media/js_htmlvizprof_ruler.png "JS_HTMLVizProf_Ruler")  
+ ![診断セッション ルーラー](../profiling/media/js_htmlvizprof_ruler.png "JS_HTMLVizProf_Ruler")  
   
  タイムラインには、アクティブ化イベントのようなアプリのライフサイクル イベントが発生した日時が示されます。 また、コードに追加することができるユーザー マーク (ユーザー マークの三角形) も表示されます。 イベントを選択すると、より多くの情報を含むヒントが表示されます。 ユーザー マークの詳細については、このトピックの「 [分析用のコードのマーク](#ProfileMark) 」を参照してください。  
   
@@ -220,7 +219,7 @@ if (performance.mark && performance.measure) {
   
  次の例は、CPU 使用状況グラフの外観を示しています。  
   
- ![CPU 使用状況グラフ](~/profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
+ ![CPU 使用状況グラフ](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
   
  このグラフには、次のような用途があります。  
   
@@ -304,7 +303,7 @@ if (performance.mark && performance.measure) {
   
  イメージ デコード、予測ダウンロード、および GC イベントを除去するには、下部のペインのフィルター アイコンから **[バックグラウンド アクティビティ]** オプションの選択を解除します。 これらのイベントはあまり実用的ではないため、既定では非表示になっています。  
   
- ![タイムライン上のイベントにフィルター処理](~/profiling/media/js_htmlvizprofiler_event_filter.png "JS_HTMLVizProfiler_Event_Filter")  
+ ![タイムライン上のイベントにフィルター処理](../profiling/media/js_htmlvizprofiler_event_filter.png "JS_HTMLVizProfiler_Event_Filter")  
   
  HTTP 要求イベントを除去するには、下部のペインのフィルター アイコンから **[ネットワーク トラフィック]** オプションの選択を解除します。 既定では、これらのイベントはタイムラインの詳細グラフに表示されます。  
   
@@ -318,7 +317,7 @@ if (performance.mark && performance.measure) {
 ###  <a name="GroupFrames"></a> フレームごとのグループ イベント  
  [タイムラインの詳細] ビューに表示されるイベントをグループ化して個々のフレームにすることができます。 これらのフレーム イベントは、ツールで生成されたイベントで、描画イベント間で発生するすべての UI スレッドの作業におけるトップレベルのイベント コンテナーを表しています。 このビューを有効にするには、 **[トップレベル イベントをフレームごとにグループ化する]**を選択します。  
   
- ![トップレベル イベントをフレーム別にグループ化](~/profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")  
+ ![トップレベル イベントをフレーム別にグループ化](../profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")  
   
  イベントをフレームごとにグループ化する場合、[タイムラインの詳細] ビューにあるトップレベル イベントは、それぞれフレームを表します。  
   
