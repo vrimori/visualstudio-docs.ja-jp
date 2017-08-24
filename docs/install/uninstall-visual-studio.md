@@ -17,10 +17,10 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: b01caada54c08bb7f9c9baabfe9ece486e087794
-ms.openlocfilehash: 190a5e183757a5f02eeeb4aca7fc1c2e7f1beb1c
+ms.sourcegitcommit: 1e85a41fea58723b8f7f2119d0d0c951574c4f9c
+ms.openlocfilehash: f0fb1e91107017fd25e44f524550b0eef1732865
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 
@@ -45,6 +45,14 @@ ms.lasthandoff: 08/07/2017
      ![Visual Studio 2017 の変更 (製品のアンインストール)](media/vs2017-uninstall-confirm.PNG "Visual Studio 2017 のアンインストールを確定")  
 
 後で気が変わり、Visual Studio 2017 を再インストールする場合は、もう一度 Visual Studio インストーラーを起動し、選択画面で **[インストール]** を選びます。
+
+## <a name="uninstall-visual-studio-installer"></a>Visual Studio インストーラーをアンインストールする
+Visual Studio 2017 と Visual Studio インストーラーを自分のコンピューターから完全に削除するには、[アプリと機能] からアンインストールします。
+1. [アプリと機能] を開きます。 たとえば、Windows 10 の場合、**[スタート]** を選択し、検索バーに「**アプリと機能**」と入力します。  
+2. **Microsoft Visual Studio 2017** を見つけます。  
+3. [アンインストール] をクリックします。 ****  
+
+これで、コンピューター上の Visual Studio 2017 のすべてのインストールと、Visual Studio インストーラーが削除されます。
 
 ## <a name="see-also"></a>関連項目  
 * [Visual Studio のインストール](install-visual-studio.md)

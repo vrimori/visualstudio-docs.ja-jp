@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio のネットワーク ベース インストールを更新する | Microsoft Docs"
-description: "{{プレースホルダー}}"
-ms.date: 05/05/2017
+description: "--layout コマンドを実行して Visual Studio のネットワークベース インストールを更新する方法について説明します"
+ms.date: 08/14/2017
 ms.reviewer: tims
 ms.suite: 
 ms.technology:
@@ -15,26 +15,11 @@ ms.assetid: 1AF69C0E-0AC9-451B-845D-AE4EDBCEA65C
 author: timsneath
 ms.author: tims
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: 75c65d75ab751058ac435d62f253ead149ccfe42
+ms.translationtype: HT
+ms.sourcegitcommit: f23906933add1f4706d8786b2950fb3b5d2e6781
+ms.openlocfilehash: 55af5ee53ee49d83a301936a84c1aa3697568e3e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Visual Studio のネットワーク ベース インストールを更新する
@@ -42,22 +27,48 @@ ms.lasthandoff: 05/09/2017
 ネットワーク インストール レイアウトを Visual Studio の最新のインストール ポイントとして使用できるように、また、クライアント ワークステーションに既に配置されているインストールを保持するために、最新の製品の更新プログラムを使って Visual Studio のネットワーク インストール レイアウトを更新できます。
 
 ## <a name="how-to-update-a-network-layout"></a>ネットワーク レイアウトの更新方法
-最新の更新プログラムが含まれるように、ネットワーク インストールの共有を更新するには、レイアウトを最初に作成するときに実行したものと同じ `--layout` コマンドを実行して、更新されたパッケージの増分をダウンロードします。
+最新の更新プログラムが含まれるように、ネットワーク インストールの共有を更新するには、--layout コマンドを実行して、更新されたパッケージの増分をダウンロードします。 
 
-最初にネットワーク レイアウトを作成するときに部分的なレイアウトを選択した場合は、最初にネットワーク インストール レイアウトを作成したときに使用したものと同じコマンドライン パラネーターを使用してください (つまり、同じワークロードおよび言語)。 複数のオプションを選んだ場合、2 つ目の `--layout` コマンドが、2 回目を指定していなかったパッケージを更新することはありません。
+最初にネットワーク レイアウトを作成したときに部分的レイアウトを選択した場合は、その設定が保存されます。  以後のレイアウト コマンドでは以前のオプションと、指定した新しいすべてのオプションが使用されます。  (これは 15.3 の新機能です。)古いバージョンのレイアウトを使用している場合は、コンテンツの更新時に最初にネットワーク インストール レイアウトを作成したときに使用したものと同じコマンドライン パラメーター (つまり、同じワークロードと言語) を使用してください。
 
-ファイル共有上にレイアウトをホストしている場合は、レイアウトのプライベート コピーを更新し (例: `c:\vs2017offline`)、すべての更新されたコンテンツがダウンロードされた後に、ファイル共有にコピーします (例: `\\server\products\VS2017`)。  この操作を行わない場合は、レイアウトの更新中にユーザーがセットアップを実行しても、レイアウトは完全に更新されていないため、レイアウトからすべてのコンテンツを取得することはできない可能性が高くなります。
+ファイル共有上にレイアウトをホストしている場合は、レイアウトのプライベート コピーを更新し (例: c:\vs2017offline)、すべての更新されたコンテンツがダウンロードされた後に、ファイル共有にコピーします (例: \\server\products\VS2017)。 この操作を行わない場合、レイアウトの更新中にユーザーがセットアップを実行しても、レイアウトが完全に更新されていないため、レイアウトからすべてのコンテンツを取得できない可能性が非常に高くなります。 
+
+レイアウトを作成して更新する方法について順番に説明します。
+
+* 最初に、英語のみ対象の 1 つのワークロードを含むレイアウトの作成例を示します。
+
+  ```
+  vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --lang en-US 
+  ```
+
+* 以下は、同じレイアウトを新しいバージョンに更新する場合です。 追加のコマンド ライン パラメーターを指定する必要はありません。 このレイアウト フォルダーに保存されている以前の設定が、後続のすべてのレイアウト コマンドで使用されます。  
+
+  ``` 
+  vs_enterprise.exe --layout c:\VS2017Layout  
+  ```
+
+* 次に、追加のワークロードとローカライズされた言語を追加する方法を示します。  (このコマンドでは、Azure のワークロードを追加しています。)これで、Managed Desktop と Azure の両方がこのレイアウトに含まれるようになります。  英語とドイツ語の言語リソースもすべてのワークロードに含まれます。  さらに、レイアウトが利用可能な最新バージョンに更新されます。 
+
+  ``` 
+  vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE 
+  ``` 
+
+* 最後に、バージョンを更新せずに追加のワークロードとローカライズされた言語を追加する方法を示します。 (このコマンドでは、ASP.NET Web のワークロードを追加しています。)これで、Managed Desktop、Azure、ASP.NET Web のワークロードがこのレイアウトに含まれるようになりました。  英語、ドイツ語、フランス語の言語リソースもすべてのワークロードに含まれます。  ただし、このコマンドが実行されたときにレイアウトが利用可能な最新バージョンに更新されませんでした。  そのため、既存のバージョンのままになります。 
+
+  ``` 
+  vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion 
+  ```
 
 ## <a name="how-to-deploy-an-update-to-client-machines"></a>クライアント マシンに更新を配置する方法
-ネットワーク環境が構成される方法によって、更新プログラムをエンタープライズ管理者が配置することも、クライアント マシンから開始することもできます。 
+ネットワーク環境が構成される方法によって、更新プログラムをエンタープライズ管理者が配置することも、クライアント マシンから開始することもできます。
 
-- ユーザーは、オフラインのインストール フォルダーからインストールした Visual Studio インスタンスを更新することができます。
-  - Visual Studio インストーラーを実行します。
-  - 次に、**[更新]** をクリックします。
+* ユーザーは、オフラインのインストール フォルダーからインストールした Visual Studio インスタンスを更新することができます。
+  * Visual Studio インストーラーを実行します。
+  * 次に、**[更新]** をクリックします。
 
-- 管理者は、次の 2 つの別々のコマンドを使用して、ユーザーの相互作用なしに、Visual Studio のクライアント展開を更新できます。
-  - 最初に、Visual Studio インストーラーを更新します。 <br>```vs_enterprise.exe --quiet --update```
-  - 次に、Visual Studio アプリケーション自体を更新します。 <br>```vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" --quiet --wait --norestart```
+* 管理者は、次の 2 つの別々のコマンドを使用して、ユーザーの相互作用なしに、Visual Studio のクライアント展開を更新できます。
+  * 最初に、Visual Studio インストーラーを更新します。 <br>```vs_enterprise.exe --quiet --update```
+  * 次に、Visual Studio アプリケーション自体を更新します。 <br>```vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" --quiet --wait --norestart```
 
 > [!NOTE]
 > [vswhere.exe コマンド](tools-for-managing-visual-studio-instances.md)を使用して、クライアント コンピューター上にある Visual Studio の既存のインスタンスのインストール パスを特定します。
@@ -65,6 +76,54 @@ ms.lasthandoff: 05/09/2017
 > [!TIP]
 > 更新通知をユーザーに表示するときの制御方法の詳細については、「[Control updates to network-based Visual Studio deployments](controlling-updates-to-visual-studio-deployments.md)」 (ネットワーク ベースの Visual Studio 配置の更新プログラムを制御する) を参照してください。
 
+## <a name="how-to-verify-a-layout"></a>レイアウトを検証する方法 
+`--verify` を使用して指定したオフライン キャッシュに対する検証を行います。 パッケージ ファイルが見つからないか、無効であるかどうかがチェックされます。 検証の最後に、見つからないファイルと無効なファイルのリストを出力します。 
+
+``` 
+vs_enterprise.exe --layout <layoutDir> --verify 
+``` 
+
+layoutDir 内の vs_enterprise.exe を呼び出すことができます。 
+
+
+> [!NOTE] 
+> レイアウト オフライン キャッシュには `--verify` オプションで必要とされるいくつかの重要なメタデータ ファイルが必要です。 これらのメタデータ ファイルが見つからない場合、"--verify" が実行できず、セットアップでエラーが返されます。 このエラーが発生した場合、新しいオフライン レイアウトを別のフォルダー (または同じオフライン キャッシュ フォルダー) に再作成してください。 そのためには、初期オフライン レイアウトの作成に使用したものと同じレイアウト コマンドを実行します。 たとえば、`Vs_enterprise.exe --layout <layoutDir>` のようにします。
+
+Microsoft は定期的に Visual Studio の更新プログラムを提供しているため、作成した新しいレイアウトが初期レイアウトと同じバージョンでない可能性があります。  
+
+## <a name="how-to-fix-a-layout"></a>レイアウトの修正方法 
+`--fix` を使用して `--verify` と同じ検証を実行して、特定された問題の修正も試みます。 `--fix` の処理にはインターネット接続が必要なため、`--fix` を呼び出す前に、コンピューターがインターネットに接続していることを確認してください。 
+
+``` 
+vs_enterprise.exe --layout <layoutDir> --fix 
+``` 
+
+layoutDir 内の vs_enterprise.exe を呼び出すことができます。 
+
+## <a name="how-to-remove-older-versions-from-a-layout"></a>以前のバージョンをレイアウトから削除する方法
+オフライン キャッシュにレイアウトの更新を実行した後、レイアウト キャッシュ フォルダーには最新の Visual Studio のインストールに不要な古いパッケージがいくつか含まれている場合があります。 `--clean` オプションを使用すると、オフライン キャッシュ フォルダーから古いパッケージを削除できます。 
+
+これを行うには、その古いパッケージが含まれるカタログ マニフェストのファイル パスが必要になります。 カタログ マニフェストは、オフライン レイアウト キャッシュの "Archive" フォルダーにあります。 これは、レイアウトの更新時に保存されたものです。 "Archive" フォルダーには、1 つまたは複数の "GUID" 名フォルダーがあり、そのそれぞれに古いカタログ マニフェストが含まれています。 "GUID" フォルダーの数は、オフライン キャッシュに対する更新プログラムの数と同じである必要があります。 
+
+各 "GUID" フォルダー内にいくつかのファイルが保存されています。 特に関係のあるファイルが "catalog.json" ファイルと "version.txt" ファイルの 2 つです。 "catalog.json" ファイルは `--clean` オプションに渡す必要がある古いカタログ マニフェストです。 その他の version.txt ファイルには、この古いカタログ マニフェストのバージョンが含まれています。 バージョン番号に基づき、このカタログ マニフェストから古いパッケージを削除するかどうかを決定できます。 他の "GUID" フォルダーでも同じように行います。 クリーンアップを実行するカタログが決まったら、そのカタログのファイル パスを指定して `--clean` カタログを実行します。  
+
+--clean オプションを使用するいくつかの例を示します。   
+
+``` 
+vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> <file-path-of-catalog2> … 
+``` 
+
+``` 
+vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> --clean <file-path-of-catalog2> … 
+``` 
+
+&lt;layoutDir&gt; 内の vs_enterprise.exe を呼び出すことができます。 次に例を示します。
+
+```  
+c:\VS2017Layout\vs_enterprise.exe --layout c:\VS2017Layout --clean c:\VS2017Layout\Archive\1cd70189-fc55-4583-8ad8-a2711e928325\Catalog.json --clean c:\VS2017Layout\Archive\d420889f-6aad-4ba4-99e4-ed7833795a10\Catalog.json 
+```  
+
+このコマンドを実行すると、セットアップでオフライン キャッシュ フォルダーが分析され、削除されるファイルのリストが検索されます。 このリストで、削除されるファイルを確認し、削除を確定できます。 
 
 ## <a name="see-also"></a>関連項目
 * [Visual Studio のインストール](install-visual-studio.md)

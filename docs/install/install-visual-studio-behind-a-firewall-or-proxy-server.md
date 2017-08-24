@@ -2,7 +2,7 @@
 title: "ファイアウォールまたはプロキシ サーバーの内側に Visual Studio をインストールする | Microsoft Docs"
 description: 
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 08/01/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: ddbbda1069749e2ce685507d55a070f1dec27c17
-ms.openlocfilehash: 48fd143f917d6e13c18f6913bea625b2e8cf5ce8
+ms.sourcegitcommit: f23906933add1f4706d8786b2950fb3b5d2e6781
+ms.openlocfilehash: 0803ea25bd8f45d79d618ff481094fb5786b1acb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="install-visual-studio-behind-a-firewall-or-proxy-server"></a>ファイアウォールまたはプロキシ サーバーの内側に Visual Studio をインストールする
@@ -43,8 +43,13 @@ Visual Studio インストーラーは、さまざまなドメインと、それ
 | dl.xamarin.com | パッケージのダウンロード場所を設定する |
 | visualstudiogallery.msdn.microsoft.com | Visual Studio 拡張機能のダウンロード場所 |
 | www.visualstudio.com | ドキュメントの場所 |
+| docs.microsoft.com | ドキュメントの場所 |
 | msdn.microsoft.com | ドキュメントの場所 |
 | www.microsoft.com | ドキュメントの場所 |
+| *.windows.net | サインインの場所 |
+| *.microsoftonline.com | サインインの場所 |
+| *.live.com | サインインの場所 |
+
 
 ## <a name="non-microsoft-domains"></a>Microsoft 以外のドメイン
 | ドメイン | 以下のワークロードをインストールします。 |

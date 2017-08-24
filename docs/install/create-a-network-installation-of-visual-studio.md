@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio のネットワーク ベース インストールを作成する | Microsoft Docs"
 description: "{{プレースホルダー}}"
-ms.date: 05/05/2017
+ms.date: 08/14/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,35 +15,20 @@ ms.assetid: 4CABFD20-962E-482C-8A76-E4012052F701
 author: timsneath
 ms.author: tims
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: c8c48a92ba4ba75e87d947364919688032842265
+ms.translationtype: HT
+ms.sourcegitcommit: f23906933add1f4706d8786b2950fb3b5d2e6781
+ms.openlocfilehash: 6f70719d487a02c803fb149ab0e30df85765b0e6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 
 # <a name="create-a-network-installation-of-visual-studio-2017"></a>Visual Studio 2017 のネットワーク インストールを作成する
 
-一般的に、企業の管理者はクライアント ワークステーションに展開するためのネットワーク インストール ポイントを作成します。 Microsoft はすべての製品更新と共に初回インストールを 1 つのフォルダーにキャッシュするように Visual Studio 2017 を設計しました (_レイアウトの作成_と呼ばれることもあります)。それにより、最新のサービスに更新していない場合でも、クライアント ワークステーションは、同じネットワークの場所を利用してインストールを管理できます。
+一般的に、企業の管理者はクライアント ワークステーションに展開するためのネットワーク インストール ポイントを作成します。 Visual Studio 2017 は、初期インストールのファイルがすべての製品の更新プログラムとともに単一のファイルにキャッシュできるように設計されています。 (このプロセスは_レイアウトの作成_とも呼ばれています。)これは、最新のサービスの更新プログラムに更新されていない場合でも、クライアント ワークステーションが同じネットワークの場所を使用してインストールを管理できるようにするためです。
 
 > [!NOTE]
-> 複数のエディションの Visual Studio を企業内で利用している場合 (たとえば、Visual Studio Professional と Visual Studio Enteprise の両方)、エディションごとに個別のネットワーク インストール共有を作成する必要があります。
+> 複数のエディションの Visual Studio を企業内で利用している場合 (たとえば、Visual Studio Professional と Visual Studio Enterprise の両方)、エディションごとに個別のネットワーク インストール共有を作成する必要があります。
 
 ## <a name="download-the-visual-studio-bootstrapper"></a>Visual Studio ブートストラップをダウンロードする
 必要な Visual Studio のエディションを**ダウンロード**します。 必ず **[保存]** をクリックし、**[フォルダーを開く]** をクリックします。
@@ -87,31 +72,57 @@ response.json を変更し、セットアップの実行時に使用される既
 ```xcopy /e c:\vs2017offline \\server\products\VS2017```
     
 ## <a name="customizing-the-network-layout"></a>ネットワーク レイアウトをカスタマイズする
-ネットワーク レイアウトはいくつかの方法でカスタマイズできます。 [言語ロケール](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)、[ワークロード、コンポーネント、推奨の依存関係または任意の依存関係](workload-and-component-ids.md)からなる特定のセットのみを含む部分的レイアウトを作成できます。 これは、一部のワークロードだけをクライアント ワークステーションに展開することがわかっている場合に便利です。 レイアウトをカスタマイズするための一般的コマンド ライン パラメーター:
+ネットワーク レイアウトはいくつかの方法でカスタマイズできます。 [言語ロケール](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)、[ワークロード、コンポーネント、推奨の依存関係または任意の依存関係](workload-and-component-ids.md)からなる特定のセットのみを含む部分的レイアウトを作成できます。 これは、一部のワークロードだけをクライアント ワークステーションに展開することがわかっている場合に便利です。 レイアウトをカスタマイズするための一般的なコマンド ライン パラメーターには次のようなものがあります。
 
- - ```--add``` は[ワークロードまたはコンポーネント ID](workload-and-component-ids.md) を指定します。  `--add` を使用すると、`--add` で指定されたワークロードとコンポーネントだけがダウンロードされます。  `--add` を使用しない場合、すべてのワークロードとコンポーネントがダウンロードされます。
- - ```--includeRecommended``` は指定したワークロード ID のすべての推奨コンポーネントを含めます。
- - ```--includeOptional``` は指定したワークロード ID のすべての推奨コンポーネントと任意コンポーネントを含めます。
- - ```--lang``` は[言語ロケール](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)を指定します。
+ * ```--add``` は[ワークロードまたはコンポーネント ID](workload-and-component-ids.md) を指定します。  `--add` を使用すると、`--add` で指定されたワークロードとコンポーネントだけがダウンロードされます。  `--add` を使用しない場合、すべてのワークロードとコンポーネントがダウンロードされます。
+ * ```--includeRecommended``` は指定したワークロード ID のすべての推奨コンポーネントを含めます。
+ * ```--includeOptional``` は指定したワークロード ID のすべての推奨コンポーネントと任意コンポーネントを含めます。
+ * ```--lang``` は[言語ロケール](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)を指定します。
  
 次に、レイアウトを部分的にカスタマイズする例をいくつか紹介します。
 
- - 1 つの言語に対して、すべてのワークロードとコンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --lang en-US```
- - 複数の言語に対して、すべてのワークロードとコンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --lang en-US de-DE ja-JP```
- - すべての言語に対して、1 つのワークロードをダウンロードするには、以下を実行します。 <br> ```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --includeRecommended```
- - 3 つの言語に対して、2 つのワークロードと 1 つのオプション コンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended --lang en-US de-DE ja-JP ```
- - 2 つのワークロードとその推奨コンポーネントのすべてをダウンロードするには、次を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended ```
- - 2 つのワークロードとそのすべての推奨コンポーネントと任意コンポーネントをダウンロードするには、次を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeOptional ```
+ * 1 つの言語に対して、すべてのワークロードとコンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --lang en-US```
+ * 複数の言語に対して、すべてのワークロードとコンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --lang en-US de-DE ja-JP```
+ * すべての言語に対して、1 つのワークロードをダウンロードするには、以下を実行します。 <br> ```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --includeRecommended```
+ * 3 つの言語に対して、2 つのワークロードと 1 つのオプション コンポーネントをダウンロードするには、以下を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended --lang en-US de-DE ja-JP ```
+ * 2 つのワークロードとその推奨コンポーネントのすべてをダウンロードするには、次を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended ```
+ * 2 つのワークロードとそのすべての推奨コンポーネントと任意コンポーネントをダウンロードするには、次を実行します。 <br>```vs_enterprise.exe --layout C:\vs2017offline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeOptional ```
+
+### <a name="new-in-153"></a>15.3 の新機能
+レイアウト コマンドを実行すると、(ワークロードや言語などの) 指定したオプションが保存されます。 後続のレイアウトコマンドには、それ以前のすべてのオプションが含まれます。  英語のみ対象の 1 つのワークロードを含むレイアウトの例を示します。 
+
+``` 
+vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --lang en-US 
+``` 
+レイアウトを新しいバージョンに更新したい場合、追加のコマンド ライン パラメーターを指定する必要はありません。 このレイアウト フォルダーに保存されている以前の設定が、後続のすべてのレイアウト コマンドで使用されます。  次のコマンドは、既存の部分的レイアウトを更新します。  
+
+``` 
+vs_enterprise.exe --layout c:\VS2017Layout  
+``` 
+
+追加のワークロードを追加したい場合は、次のようなコマンドを使用します。 この場合、Azure のワークロードとローカライズされた言語を追加します。  これで、Managed Desktop と Azure の両方がこのレイアウトに含まれるようになります。  英語とドイツ語の言語リソースがすべてのワークロードに含まれます。 レイアウトは利用可能な最新バージョンに更新されます。 
+
+``` 
+vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE 
+``` 
+
+既存のレイアウトを完全なレイアウトに更新したい場合は、次の例に示すように all オプションを使用します。 
+
+``` 
+vs_enterprise.exe --layout c:\VS2017Layout --all  
+``` 
 
 
 ## <a name="deploying-from-a-network-installation"></a>ネットワーク インストールから展開する
-管理者はインストール スクリプトの一部として Visual Studio をクライアント ワークステーションに展開することがあります。 あるいは、管理者権限を持つユーザーは共有から直接セットアップを実行し、自分のコンピューターに Visual Studio をインストールできます。
+管理者はインストール スクリプトの一部として Visual Studio をクライアント ワークステーションに展開することができます。 あるいは、管理者権限を持つユーザーは共有から直接セットアップを実行し、自分のコンピューターに Visual Studio をインストールできます。
 
 - ユーザーは次を実行してインストールできます。 <br>```\\server\products\VS2017\vs_enterprise.exe```
 - 管理者は次を実行し、無人モードでインストールできます。 <br>```\\server\products\VS2017\vs_enterprise.exe --quiet --wait --norestart```
 
 > [!TIP]
-> バッチ ファイルの一部として実行するとき、`--wait` オプションを利用すると、`vs_enterprise.exe` プロセスはインストールの完了を待ち、それから終了コードを返します。 これは、企業の管理者が完了したインストールでさらにアクションを実行するときに役立ちます (たとえば、[インストールの完了後、製品キーを適用します](automatically-apply-product-keys-when-deploying-visual-studio.md))。 インストールが完了するまで待ってから、そのインストールからのリターン コードを処理する必要があるような状況です。  `--wait` を使用しない場合、vs_enterprise.exe プロセスはインストールが終了する前に終了し、インストール操作の状態を表す正確な終了コードを返しません。
+> バッチ ファイルの一部として実行するとき、`--wait` オプションを利用すると、`vs_enterprise.exe` プロセスはインストールの完了を待ち、それから終了コードを返します。 これは、企業の管理者が完了したインストールに追加のアクション (たとえば、[成功したインストールにプロダクト キーを適用する](automatically-apply-product-keys-when-deploying-visual-studio.md)など) を実行したい場合に便利ですが、そのインストールからのリターン コードを処理するにはインストールが終了するまで待つ必要があります。  `--wait` を使用しない場合、インストールが完了する前に `vs_enterprise.exe` プロセスが終了し、インストール操作の状態を表していない不正確な終了コードが返されます。
+
+レイアウトからインストールする場合、インストールされる内容はレイアウトから取得されます。  ただし、インストール対象に選択されているものがレイアウトにない場合は、インターネットから取得されます。  Visual Studio のセットアップでレイアウトにない内容がダウンロードされないようにするには、`--noWeb` オプションを使用します。  `--noWeb` が使用されていて、インストール対象として選択されている内容がレイアウトにない場合、セットアップは失敗します。  
 
 ### <a name="error-codes"></a>エラー コード
 `--wait` パラメーターを使用した場合、操作の結果に応じて、`%ERRORLEVEL%` 環境変数は次のいずれかの値に設定されます。
@@ -126,14 +137,15 @@ response.json を変更し、セットアップの実行時に使用される既
 製品の更新プログラムが利用できるようになったら、[ネットワーク インストール レイアウトを更新し](update-a-network-installation-of-visual-studio.md)、更新されたパッケージを組み込むことが推奨されます。
 
 ## <a name="how-to-create-a-layout-for-a-previous-visual-studio-2017-release"></a>以前の Visual Studio 2017 リリースのレイアウトを作成する方法
-**注**: http://www.visualstudio.com で入手可能な VS 2017 ブートストラップは、それを実行したときに利用できる最新の VS 2017 リリースをダウンロードし、インストールします。 VS ブートストラップを今日ダウンロードし、今日から 6 か月後に実行すると、6 か月後に利用できる VS 2017 リリースがインストールされます。 レイアウトを作成する場合、そのレイアウトから VS をインストールすると、レイアウトに存在する特定のバージョンの VS がインストールされます。 新しいバージョンがオンラインに存在するとしても、レイアウトに存在するバージョンの VS が取得されます。
+> [!NOTE] 
+> [VisualStudio.com](http://www.visualstudio.com) で入手可能な Visual Studio 2017 ブートストラップは、それを実行したときに利用できる最新の Visual Studio 2017 リリースをダウンロードし、インストールします。 Visual Studio ブートストラップを今日ダウンロードし、今日から 6 か月後に実行すると、6 か月後に利用できる Visual Studio 2017 リリースがインストールされます。 レイアウトを作成する場合、そのレイアウトから Visual Studio をインストールすると、レイアウトに存在する特定のバージョンの Visual Studio がインストールされます。 新しいバージョンがオンラインに存在するとしても、レイアウトに存在するバージョンの Visual Studio が取得されます。
 
 旧バージョンの Visual Studio 2017 のレイアウトを作成する場合、https://my.visualstudio.com に進み、サポートされるバージョンの Visual Studio 2017 ブートストラップの "固定" バージョンをダウンロードできます。その旧バージョンのネットワーク インストール レイアウトを作成できます。 
 
 ### <a name="how-to-get-support-for-your-offline-installer"></a>オフライン インストーラーのサポートを受ける方法
 オフライン インストールに問題が発生した場合は、マイクロソフトにお知らせください。 問題報告の最善の方法として、[[問題を報告する]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールを使用できます。 このツールでは、テレメトリとログを送信できます。これを、マイクロソフトは問題の診断と解決に役立てます。
 
-他にも利用可能なサポート オプションがあります。 これらの一覧については、[[ご意見]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ページをご覧ください。
+他にも利用可能なサポート オプションがあります。 一覧については、[[ご意見]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ページをご覧ください。
 
 ## <a name="see-also"></a>関連項目
 * [Visual Studio のインストール](install-visual-studio.md)
