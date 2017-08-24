@@ -1,51 +1,68 @@
 ---
-title: "IDebugExpressionEvaluator::SetRegistryRoot | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExpressionEvaluator::SetRegistryRoot"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluator::SetRegistryRoot メソッド"
+title: IDebugExpressionEvaluator::SetRegistryRoot | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugExpressionEvaluator::SetRegistryRoot
+helpviewer_keywords:
+- IDebugExpressionEvaluator::SetRegistryRoot method
 ms.assetid: 790886d8-1975-4d3c-9a75-cd86c1faf4ca
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugExpressionEvaluator::SetRegistryRoot
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: fa53f80196102f29fdc42be927abef5cc53e6593
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-このメソッドはレジストリ ルートを設定します。  side\-by\-side のデバッグに使用されます。  
+---
+# <a name="idebugexpressionevaluatorsetregistryroot"></a>IDebugExpressionEvaluator::SetRegistryRoot
+This method sets the registry root. Used for side-by-side debugging.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT SetRegistryRoot (   
-   LPCOLESTR ustrRegistryRoot  
+HRESULT SetRegistryRoot (   
+   LPCOLESTR ustrRegistryRoot  
 );  
 ```  
   
-```c#  
+```cs  
 int SetRegistryRoot(  
-   string ustrRegistryRoot  
+   string ustrRegistryRoot  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ustrRegistryRoot`  
- \[入力\] 新しいレジストリ ルート。  
+ [in] The new registry root.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- 指定したレジストリのルートは式エバリュエーターが最初にインスタンス化されると *X.Y* のバージョン番号である Visual Studio \(HKEY\_LOCAL\_MACHINE \\ Software \\ Microsoft \\ VisualStudio \\*X.Y* の特定のバージョンのレジストリ キーへのポインターには通常設定します。  
+## <a name="remarks"></a>Remarks  
+ The specified registry root is typically set when the expression evaluator is first instantiated and points to the registry key for a specific version of Visual Studio (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*X.Y*, where *X.Y* is a version number).  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

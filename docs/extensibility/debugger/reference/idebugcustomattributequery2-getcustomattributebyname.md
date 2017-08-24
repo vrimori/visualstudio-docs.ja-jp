@@ -1,5 +1,5 @@
 ---
-title: "IDebugCustomAttributeQuery2::GetCustomAttributeByName |Microsoft ドキュメント"
+title: IDebugCustomAttributeQuery2::GetCustomAttributeByName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bc1b59d4f13029a765f11dfd4fe3dbe12778d00c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 4416a16018ee07116b8fb5259b240f5aa413c6c9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
-カスタム属性の名前で指定されたカスタム属性のバイト数を取得します。  
+Obtains the custom attributes bytes given the name of the custom attribute.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetCustomAttributeByName(   
@@ -49,7 +50,7 @@ HRESULT GetCustomAttributeByName(
 );  
 ```  
   
-```c#  
+```cs  
 int GetCustomAttributeByName(  
    [In] string        pszCustomAttributeName,   
    [In, Out] byte[]   ppBlob,   
@@ -57,26 +58,26 @@ int GetCustomAttributeByName(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pszCustomAttributeName`  
- [in]検索するカスタム属性の名前を表す文字列。  
+ [in] A string containing the name of the custom attribute to look for.  
   
  `ppBlob`  
- [入力、出力]カスタム属性のバイトが格納されている配列。  
+ [in, out] An array that is filled in with the custom attribute bytes.  
   
  `pdwLen`  
- [入力、出力]返されるバイトの最大数を指定、`ppBlob`配列を配列に実際に書き込まれたバイト数を返します。  
+ [in, out] Specifies the maximum number of bytes to return in the `ppBlob` array and returns the number of bytes actually written to the array.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返すか、カスタム属性が存在しない場合は S_FALSE 返します。 それ以外の場合はエラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK or returns S_FALSE if the custom attribute does not exist. Otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- 設定、`ppBlob`属性使用できるバイト数のパラメーターに null 値の数を取得します。 配列を割り当てて、しのでは、その配列を渡す、`ppBlob`パラメーター。  
+## <a name="remarks"></a>Remarks  
+ Set the `ppBlob` parameter to a null value to return the number of attributes bytes available. Then allocate an array and pass that array in for the `ppBlob` parameter.  
   
- 属性のデータは、カスタム属性の生データを表します。  
+ The attribute bytes represent the raw data of the custom attribute.  
   
- 場合、`ppBlob`と`pdwLen`パラメーターが null 値に設定されて、このメソッドは、カスタム属性の存在だけで確認に使用できます。 簡単に別の方法を呼び出して、 [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)メソッドです。  
+ If the `ppBlob` and `pdwLen` parameters are set to a null value, this method can be used to determine if the custom attribute merely exists. An easier alternative, however, is to call the [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) method.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)   
  [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)

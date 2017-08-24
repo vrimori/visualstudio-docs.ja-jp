@@ -1,57 +1,74 @@
 ---
-title: "IDebugMethodField::EnumParameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMethodField::EnumParameters"
-helpviewer_keywords: 
-  - "IDebugMethodField::EnumParameters メソッド"
+title: IDebugMethodField::EnumParameters | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugMethodField::EnumParameters
+helpviewer_keywords:
+- IDebugMethodField::EnumParameters method
 ms.assetid: d77b1197-deb6-4144-8d1b-8b09949ccfac
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugMethodField::EnumParameters
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1317844c50e4d80347e8ab7a85f90c65c43adb14
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-メソッドのパラメーターの列挙子を作成します。  
+---
+# <a name="idebugmethodfieldenumparameters"></a>IDebugMethodField::EnumParameters
+Creates an enumerator for the parameters of the method.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT EnumParameters(   
-   IEnumDebugFields** ppParams  
+HRESULT EnumParameters(   
+   IEnumDebugFields** ppParams  
 );  
 ```  
   
-```c#  
+```cs  
 int EnumParameters(  
-   out IEnumDebugFields ppParams  
+   out IEnumDebugFields ppParams  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppParams`  
- \[入力\] メソッドの [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) のパラメーターを表すオブジェクトのリストを返します ; パラメーターが存在しない場合null 値を返します。  
+ [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object representing the list of parameters to the method; otherwise, returns a null value if there are no parameters.  
   
-## 戻り値  
- S\_FALSEは S\_OK または成功したパラメーターがあります。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK or returns S_FALSE if there are no parameters. Otherwise, returns an error code.  
   
-## 解説  
- 各要素はパラメーターの [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) を表すオブジェクトの種類です。  どのようなパラメーターをオブジェクトが表すかを確認するには各オブジェクトの [GetKind](../Topic/IDebugField::GetKind.md) のメソッドを呼び出します。  
+## <a name="remarks"></a>Remarks  
+ Each element is an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object representing different types of parameters. Call the [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) method on each object to determine exactly what kind of parameter the object represents.  
   
- パラメーターは変数名と型の両方が含まれます。  クラス メソッドの最初のパラメーターは「」ポインターです。  
+ A parameter includes both its variable name and its type. The first parameter to a class method is typically the "this" pointer.  
   
- パラメーターの型だけ [EnumArguments](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md)のメソッドを呼び出します。  
+ If only the types of the parameters is needed, call the [EnumArguments](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) method.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   

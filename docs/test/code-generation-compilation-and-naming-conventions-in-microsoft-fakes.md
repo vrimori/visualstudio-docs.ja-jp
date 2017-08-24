@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則 | Microsoft Docs"
+title: Code generation, compilation, and naming conventions in Microsoft Fakes | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,56 +26,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 5acc74abd56b128bf9df708ab7c0f3451c6eb270
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2b5a72042d2c0d9115cdce835f681ac7b29d69de
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則
-このトピックでは、Fakes のコード生成とコンパイルのオプションと問題について説明し、Fakes で生成される型、メンバー、およびパラメーターの名前付け規則について説明します。  
+# <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Code generation, compilation, and naming conventions in Microsoft Fakes
+This topic discusses options and issues in Fakes code generation and compilation, and describes the naming conventions for Fakes generated types, members, and parameters.  
   
  **Requirements**  
   
 -   Visual Studio Enterprise  
   
-##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
+##  <a name="BKMK_In_this_topic"></a> In this topic  
   
--   [コードの生成とコンパイル](#BKMK_Code_generation_and_compilation)  
+-   [Code generation and compilation](#BKMK_Code_generation_and_compilation)  
   
--   [スタブのコード生成を構成する](#BKMK_Configuring_code_generation_of_stubs)
+-   [Configuring code generation of stubs](#BKMK_Configuring_code_generation_of_stubs)
   
--   [型のフィルター処理](#BKMK_Type_filtering)
+-   [Type filtering](#BKMK_Type_filtering)
   
--   [具象クラスと仮想メソッドをスタブする](#BKMK_Stubbing_concrete_classes_and_virtual_methods)
+-   [Stubbing concrete classes and virtual methods](#BKMK_Stubbing_concrete_classes_and_virtual_methods)
   
--   [内部型](#BKMK_Internal_types)
+-   [Internal types](#BKMK_Internal_types)
   
--   [ビルド時間を最適化する](#BKMK_Optimizing_build_times)
+-   [Optimizing build times](#BKMK_Optimizing_build_times)
   
--   [アセンブリ名の競合を回避する](#BKMK_Avoiding_assembly_name_clashing)  
+-   [Avoiding assembly name clashing](#BKMK_Avoiding_assembly_name_clashing)  
   
--   [Fakes 名前付け規則](#BKMK_Fakes_naming_conventions)  
+-   [Fakes naming conventions](#BKMK_Fakes_naming_conventions)  
   
--   [Shim 型とスタブ型の名前付け規則](#BKMK_Shim_type_and_stub_type_naming_conventions)
+-   [Shim type and stub type naming conventions](#BKMK_Shim_type_and_stub_type_naming_conventions)
   
--   [Shim デリゲート プロパティまたはスタブ デリゲート フィールドの名前付け規則](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions)
+-   [Shim delegate property or stub delegate field naming conventions](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions)
   
--   [パラメーターの型の名前付け規則](#BKMK_Parameter_type_naming_conventions)
+-   [Parameter type naming conventions](#BKMK_Parameter_type_naming_conventions)
   
--   [再帰的な規則](#BKMK_Recursive_rules)  
+-   [Recursive rules](#BKMK_Recursive_rules)  
   
--   [外部リソース](#BKMK_External_resources)  
+-   [External resources](#BKMK_External_resources)  
   
--   [ガイダンス](#BKMK_Guidance)  
+-   [Guidance](#BKMK_Guidance)  
   
-##  <a name="BKMK_Code_generation_and_compilation"></a> コードの生成とコンパイル  
+##  <a name="BKMK_Code_generation_and_compilation"></a> Code generation and compilation  
   
-###  <a name="BKMK_Configuring_code_generation_of_stubs"></a> スタブのコード生成を構成する  
- スタブ型の生成は、.fakes ファイル拡張子を持つ XML ファイルで構成されます。 Fakes フレームワークは、カスタム MSBuild タスクによってビルド処理で統合され、ビルド時にそれらのファイルを検出します。 Fakes コード ジェネレーターは、スタブ型をアセンブリにコンパイルし、参照をプロジェクトに追加します。  
+###  <a name="BKMK_Configuring_code_generation_of_stubs"></a> Configuring code generation of stubs  
+ The generation of stub types is configured in an XML file that has the .fakes file extension. The Fakes framework integrates in the build process through custom MSBuild tasks and detects those files at build time. The Fakes code generator compiles the stub types into an assembly and adds the reference to the project.  
   
- 次の例に、FileSystem.dll で定義されたスタブ型を示します。  
+ The following example illustrates stub types defined in FileSystem.dll:  
   
 ```xml  
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">  
@@ -84,10 +84,10 @@ ms.lasthandoff: 05/13/2017
   
 ```  
   
-###  <a name="BKMK_Type_filtering"></a> 型のフィルター処理  
- .fakes ファイルでフィルターを設定して、スタブされる型を制限できます。 StubGeneration 要素の下に Clear、Add、Remove 要素を無制限に追加して、選択された型の一覧を作成できます。  
+###  <a name="BKMK_Type_filtering"></a> Type filtering  
+ Filters can be set in the .fakes file to restrict which types should be stubbed. You can add an unbounded number of Clear, Add, Remove elements under the StubGeneration element to build the list of selected types.  
   
- たとえば、次の .fakes ファイルは、System および System.IO 名前空間の下に型のスタブを生成しますが、System では "Handle" が含まれる型は除外します。  
+ For example, this .fakes file generates stubs for types under the System and System.IO namespaces, but excludes any type containing "Handle" in System:  
   
 ```xml  
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">  
@@ -103,30 +103,30 @@ ms.lasthandoff: 05/13/2017
 </Fakes>  
 ```  
   
- フィルター文字列では、単純な文法を使用して一致の照合方法を定義します。  
+ The filter strings use a simple grammar to define how the matching should be done:  
   
--   既定では、フィルターは大文字と小文字を区別しません。フィルターは部分文字列の一致を照合します。  
+-   Filters are case-insensitive by default; filters perform a substring matching:  
   
-     `el` は "hello" に一致します  
+     `el` matches "hello"  
   
--   フィルターの末尾に `!` を追加すると、正確な大文字小文字を区別する照合が行われます。  
+-   Adding `!` to the end of the filter will make it a precise case-sensitive match:  
   
-     `el!` は "hello" に一致しません  
+     `el!` does not match "hello"  
   
-     `hello!` は "hello" に一致します  
+     `hello!` matches "hello"  
   
--   フィルターの末尾に `*` を追加すると、文字列のプレフィックスとの一致が照合されます。  
+-   Adding `*` to the end of the filter will make it match the prefix of the string:  
   
-     `el*` は "hello" に一致しません  
+     `el*` does not match "hello"  
   
-     `he*` は "hello" に一致します  
+     `he*` matches "hello"  
   
--   セミコロン区切りのリストに複数のフィルターを記述すると、フィルターは論理和として組み合わされます。  
+-   Multiple filters in a semicolon-separated list are combined as a disjunction:  
   
-     `el;wo` は "hello" と "world" に一致します。  
+     `el;wo` matches "hello" and "world"  
   
-###  <a name="BKMK_Stubbing_concrete_classes_and_virtual_methods"></a> 具象クラスと仮想メソッドをスタブする  
- 既定では、スタブ型はすべての非シール クラスに対して生成されます。 .fakes 構成ファイルで指定して、スタブ型を抽象クラスに制限することができます。  
+###  <a name="BKMK_Stubbing_concrete_classes_and_virtual_methods"></a> Stubbing concrete classes and virtual methods  
+ By default, stub types are generated for all non-sealed classes. It is possible to restrict the stub types to abstract classes through the .fakes configuration file:  
   
 ```xml  
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">  
@@ -142,24 +142,24 @@ ms.lasthandoff: 05/13/2017
 </Fakes>  
 ```  
   
-###  <a name="BKMK_Internal_types"></a> 内部型  
- Fakes コード ジェネレーターは、生成された Fakes アセンブリから見える型の shim 型と stub 型を生成します。 shim が適用されたアセンブリの内部型を Fakes アセンブリおよびテスト アセンブリから見えるようにするには、生成された Fakes アセンブリとテスト アセンブリに可視性を与える、shim が適用されたアセンブリ コードに <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を追加します。 次に例を示します。  
+###  <a name="BKMK_Internal_types"></a> Internal types  
+ The Fakes code generator will generate shim types and stub types for types that are visible to the generated Fakes assembly. To make internal types of a shimmed assembly visible to Fakes and your test assembly, add  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attributes to the shimmed assembly code that gives visibility to the generated Fakes assembly and to the test assembly. Here's an example:  
   
-```c#  
+```cs  
 // FileSystem\AssemblyInfo.cs  
 [assembly: InternalsVisibleTo("FileSystem.Fakes")]  
 [assembly: InternalsVisibleTo("FileSystem.Tests")]  
 ```  
   
- **厳密な名前を持つアセンブリの内部型**  
+ **Internal types in strongly named assemblies**  
   
- shim が適用されたアセンブリが厳密な名前を持つ場合に、アセンブリの内部型にアクセスするには、  
+ If the shimmed assembly is strongly named and you want access internal types of the assembly:  
   
--   テスト アセンブリと Fakes アセンブリの両方に、厳密な名前を付ける必要があります。  
+-   Both your test assembly and the Fakes assembly must be strongly named.  
   
--   テスト アセンブリと Fakes アセンブリの公開キーを、shim が適用されたアセンブリの **InternalsVisibleToAttribute** 属性に追加する必要があります。 以下に、shim が適用されたアセンブリが厳密な名前を持つとき、shim が適用されたアセンブリ コード内のサンプル属性がどのように表示されるかを示します。  
+-   You must add the public keys of the test and Fakes assembly to the **InternalsVisibleToAttribute** attributes in the shimmed assemblies. Here's how our example attributes in the shimmed assembly code would look when the shimmed assembly is strongly named:  
   
-    ```c#  
+    ```cs  
     // FileSystem\AssemblyInfo.cs  
     [assembly: InternalsVisibleTo("FileSystem.Fakes",  
         PublicKey=<Fakes_assembly_public_key>)]  
@@ -167,15 +167,15 @@ ms.lasthandoff: 05/13/2017
         PublicKey=<Test_assembly_public_key>)]  
     ```  
   
- shim が適用されたアセンブリが厳密な名前を持つ場合、Fakes フレームワークは生成された Fakes アセンブリに自動的に厳密な名前で署名します。 テスト アセンブリに厳密な名前で署名する必要があります。 「[厳密な名前付きアセンブリの作成と使用](http://msdn.microsoft.com/Library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9)」をご覧ください。  
+ If the shimmed assembly is strongly named, the Fakes framework will automatically strongly sign the generated Fakes assembly. You have to strong sign the test assembly. See [Creating and Using Strong-Named Assemblies](http://msdn.microsoft.com/Library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9).  
   
- Fakes フレームワークは、生成されるすべてのアセンブリに同じキーを使って署名するため、このスニペットを開始点として使って Fakes アセンブリの **InternalsVisibleTo** 属性を shim が適用されたアセンブリ コードに追加することができます。  
+ The Fakes framework uses the same key to sign all generated assemblies, so you can use this snippet as a starting point to add the **InternalsVisibleTo** attribute for the fakes assembly to your shimmed assembly code.  
   
-```c#  
+```cs  
 [assembly: InternalsVisibleTo("FileSystem.Fakes, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e92decb949446f688ab9f6973436c535bf50acd1fd580495aae3f875aa4e4f663ca77908c63b7f0996977cb98fcfdb35e05aa2c842002703cad835473caac5ef14107e3a7fae01120a96558785f48319f66daabc862872b2c53f5ac11fa335c0165e202b4c011334c7bc8f4c4e570cf255190f4e3e2cbc9137ca57cb687947bc")]  
 ```  
   
- **.fakes** ファイルの `Fakes`\\`Compilation` 要素に、`KeyFile` 属性値として代替キーを含む **.snk** ファイルへの完全パスを指定して、shim が適用されたアセンブリ用に作成したキーなどの別の公開キーを Fakes アセンブリに指定することができます。 例:  
+ You can specify a different public key for the Fakes assembly, such as a key you have created for the shimmed assembly, by specifying the full path to the **.snk** file that contains the alternate key as the `KeyFile` attribute value in the `Fakes`\\`Compilation` element of the **.fakes** file. For example:  
   
 ```xml  
 <-- FileSystem.Fakes.fakes -->  
@@ -185,9 +185,9 @@ ms.lasthandoff: 05/13/2017
   
 ```  
   
- shim が適用されたアセンブリ コード内の Fakes アセンブリの InternalVisibleTo 属性の 2 番目のパラメーターとして、代替 **.snk** ファイルの公開キーを使う必要があります。  
+ You then have to use the public key of the alternate **.snk** file as the second parameter of the InternalVisibleTo attribute for the Fakes assembly in the shimmed assembly code:  
   
-```c#  
+```cs  
 // FileSystem\AssemblyInfo.cs  
 [assembly: InternalsVisibleTo("FileSystem.Fakes",  
     PublicKey=<Alternate_public_key>)]  
@@ -195,35 +195,35 @@ ms.lasthandoff: 05/13/2017
     PublicKey=<Test_assembly_public_key>)]  
 ```  
   
- 上の例で、値 `Alternate_public_key` と `Test_assembly_public_key` は同じでもかまいません。  
+ In the example above, the values `Alternate_public_key` and the `Test_assembly_public_key` can be the same.  
   
-###  <a name="BKMK_Optimizing_build_times"></a> ビルド時間を最適化する  
- Fakes アセンブリのコンパイルで、ビルド時間が非常に長くなることがあります。 別の一元化されたプロジェクトで .NET System のアセンブリとサードパーティのアセンブリの Fakes アセンブリを生成することで、ビルド時間を最小限に抑えることができます。 こういうアセンブリはコンピューターでほとんど変更されないため、生成された Fakes アセンブリを他のプロジェクトで再利用できます。  
+###  <a name="BKMK_Optimizing_build_times"></a> Optimizing build times  
+ The compilation of Fakes assemblies can significantly increase your build time. You can minimize the build time by generating the Fakes assemblies for .NET System assemblies and third-party assemblies in a separate centralized project. Because such assemblies rarely change on your machine, you can reuse the generated Fakes assemblies in other projects.  
   
- 単体テスト プロジェクトから、プロジェクト フォルダーの FakesAssemblies の下に置かれたコンパイル済みの Fakes アセンブリへの参照を取得できます。  
+ From your unit test projects, you can simply take a reference to the compiled Fakes assemblies that are placed under the FakesAssemblies in the project folder.  
   
-1.  テスト プロジェクトに一致する .NET ランタイム バージョンを含む新しいクラス ライブラリを作成します。 これに Fakes.Prebuild という名前を付けます。 プロジェクトから不要な class1.cs ファイルを削除します。  
+1.  Create a new Class Library with the .NET runtime version matching your test projects. Let's call it Fakes.Prebuild. Remove the class1.cs file from the project, not needed.  
   
-2.  Fakes が必要なすべてのシステムおよびサードパーティのアセンブリへの参照を追加します。  
+2.  Add reference to all the System and third-party assemblies you need Fakes for.  
   
-3.  アセンブリごとに .fakes ファイルを追加し、ビルドします。  
+3.  Add a .fakes file for each of the assemblies and build.  
   
-4.  テスト プロジェクトから  
+4.  From your test project  
   
-    -   Fakes ランタイム DLL への参照があることを確認します。  
+    -   Make sure that you have a reference to the Fakes runtime DLL:  
   
          C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.QualityTools.Testing.Fakes.dll  
   
-    -   Fakes を作成したアセンブリごとに、プロジェクトの Fakes.Prebuild\FakesAssemblies フォルダーの対応する DLL ファイルへの参照を追加します。  
+    -   For each assembly that you have created Fakes for, add a reference to the corresponding DLL file in the Fakes.Prebuild\FakesAssemblies folder of your project.  
   
-###  <a name="BKMK_Avoiding_assembly_name_clashing"></a> アセンブリ名の競合を回避する  
- チーム ビルド環境では、すべてのビルド出力が 1 つのディレクトリにマージされます。 複数のプロジェクトが Fakes を使用している場合は、異なるバージョンの Fakes アセンブリが互いにオーバーライドすることがあります。 たとえば、.NET Framework 2.0 からの TestProject1 による mscorlib.dll の Fakes 処理と .NET Framework 4 の TestProject2 による mscorlib.dll の Fakes 処理は、いずれも mscorlib.Fakes.dll Fakes アセンブリを生成します。  
+###  <a name="BKMK_Avoiding_assembly_name_clashing"></a> Avoiding assembly name clashing  
+ In a Team Build environment, all build outputs are merged into a single directory. In the case of multiple projects using Fakes, it might happen that Fakes assemblies from different version override each other. For example, TestProject1 fakes mscorlib.dll from the .NET Framework 2.0 and TestProject2 fakes mscorlib.dll for the .NET Framework 4 would both yield to a mscorlib.Fakes.dll Fakes assembly.  
   
- この問題を回避するには、.fakes ファイルを追加するとき、Fakes 処理で非プロジェクト参照用にバージョンで修飾された Fakes アセンブリ名を自動的に作成する必要があります。 バージョンで修飾された Fakes アセンブリ名の場合は、Fakes アセンブリ名を作成するときにバージョン番号が埋め込まれます。  
+ To avoid this issue, Fakes should automatically create version qualified Fakes assembly names for non-project references when adding the .fakes files. A version-qualified Fakes assembly name embeds a version number when you create the Fakes assembly name:  
   
- アセンブリ MyAssembly とバージョン 1.2.3.4 の場合、Fakes アセンブリ名は MyAssembly.1.2.3.4.Fakes です。  
+ Given an assembly MyAssembly and a version 1.2.3.4, the Fakes assembly name is MyAssembly.1.2.3.4.Fakes.  
   
- .fakes の Assembly 要素の Version 属性を編集して、このバージョンを変更または削除できます。  
+ You can change or remove this version by the editing the Version attribute of the Assembly element in the .fakes:  
   
 ```xml  
 attribute of the Assembly element in the .fakes:  
@@ -234,92 +234,92 @@ attribute of the Assembly element in the .fakes:
   
 ```  
   
-##  <a name="BKMK_Fakes_naming_conventions"></a> Fakes 名前付け規則  
+##  <a name="BKMK_Fakes_naming_conventions"></a> Fakes naming conventions  
   
-###  <a name="BKMK_Shim_type_and_stub_type_naming_conventions"></a> Shim 型とスタブ型の名前付け規則  
- **名前空間**  
+###  <a name="BKMK_Shim_type_and_stub_type_naming_conventions"></a> Shim type and stub type naming conventions  
+ **Namespaces**  
   
--   .Fakes サフィックスは名前空間に追加されます。  
+-   .Fakes suffix is added to the namespace.  
   
-     たとえば、`System.Fakes` 名前空間には System 名前空間の shim 型が含まれています。  
+     For example, `System.Fakes` namespace contains the shim types of System namespace.  
   
--   Global.Fakes には、空の名前空間の shim 型が含まれています。  
+-   Global.Fakes contains the shim type of the empty namespace.  
   
- **型名**  
+ **Type names**  
   
--   Shim プレフィックスが型名に追加されて、shim 型名が作成されます。  
+-   Shim prefix is added to the type name to build the shim type name.  
   
-     たとえば、ShimExample は Example 型の shim 型です。  
+     For example, ShimExample is the shim type of the Example type.  
   
--   Stub プレフィックスが型名に追加されて、stub 型名が作成されます。  
+-   Stub prefix is added to the type name to build the stub type name.  
   
-     たとえば、StubIExample は IExample 型の stub 型です。  
+     For example, StubIExample is the stub type of the IExample type.  
   
- **型引数および入れ子にされた型の構造体**  
+ **Type Arguments and Nested Type Structures**  
   
--   ジェネリック型の引数がコピーされます。  
+-   Generic type arguments are copied.  
   
--   shim 型の場合、入れ子にされた型の構造体がコピーされます。  
+-   Nested type structure is copied for shim types.  
   
-###  <a name="BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions"></a> Shim デリゲート プロパティまたはスタブ デリゲート フィールドの名前付け規則  
- 空の名前から始まるフィールド名の付け方の**基本的な規則**は次のとおりです。  
+###  <a name="BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions"></a> Shim delegate property or stub delegate field naming conventions  
+ **Basic rules** for field naming, starting from an empty name:  
   
--   メソッド名が追加されます。  
+-   The method name is appended.  
   
--   メソッド名が明示的なインターフェイスの実装の場合、ドットは削除されます。  
+-   If the method name is an explicit interface implementation, the dots are removed.  
   
--   メソッドがジェネリックの場合、`Of`*n* が追加されます。*n* はジェネリック メソッドの引数の数です。  
+-   If the method is generic, `Of`*n* is appended where *n* is the number of generic method arguments.  
   
- プロパティの get/set アクセス操作子などの**特殊なメソッド名**は、次の表に示すように処理されます。  
+ **Special method names** such as property getter or setters are treated as described in the following table.  
   
-|メソッドの種類|例|追加されるメソッド名|  
+|If method is...|Example|Method name appended|  
 |-------------------|-------------|--------------------------|  
-|**コンストラクター**|`.ctor`|`Constructor`|  
-|静的**コンストラクター**|`.cctor`|`StaticConstructor`|  
-|"_" で区切られた 2 つの部分で構成されるメソッド名を持つ**アクセサー** (プロパティの get アクセス操作子など)|*kind_name* (一般的なケース。ただし ECMA で強制されていない)|*NameKind*。両方のパーツが大文字になり、前後が逆になっています|  
-||プロパティの get アクセス操作子 `Prop`|`PropGet`|  
-||プロパティの set アクセス操作子 `Prop`|`PropSet`|  
-||イベントを追加する操作子|`Add`|  
-||イベントを削除する操作子|`Remove`|  
-|2 つの部分で構成される**演算子**|`op_name`|`NameOp`|  
-|例: + 演算子|`op_Add`|`AddOp`|  
-|**変換演算子**の場合は、戻り値の型が追加されます。|`T op_Implicit`|`ImplicitOpT`|  
+|A **constructor**|`.ctor`|`Constructor`|  
+|A static **constructor**|`.cctor`|`StaticConstructor`|  
+|An **accessor** with method name composed of two parts separated by "_" (such as property getters)|*kind_name* (common case, but not enforced by ECMA)|*NameKind*, where both parts have been capitalized and swapped|  
+||Getter of property `Prop`|`PropGet`|  
+||Setter of property `Prop`|`PropSet`|  
+||Event adder|`Add`|  
+||Event remover|`Remove`|  
+|An **operator** composed of two parts|`op_name`|`NameOp`|  
+|For example: + operator|`op_Add`|`AddOp`|  
+|For a **conversion operator**, the return type is appended.|`T op_Implicit`|`ImplicitOpT`|  
   
- **注**  
+ **Notes**  
   
--   **インデクサーの get および set アクセス操作子**は、プロパティと同様に扱われます。 インデクサーの既定の名前は `Item` です。  
+-   **Getters and setters of indexers** are treated similarly to the property. The default name for an indexer is `Item`.  
   
--   **パラメーターの型**の名前は変換され、連結されます。  
+-   **Parameter type** names are transformed and concatenated.  
   
--   **戻り値の型**は、オーバーロードのあいまいさがない場合は無視されます。 あいまいさがある場合は、戻り値の型が名前の末尾に追加されます  
+-   **Return type** is ignored unless there's an overload ambiguity. If this is the case, the return type is appended at the end of the name  
   
-###  <a name="BKMK_Parameter_type_naming_conventions"></a> パラメーターの型の名前付け規則  
+###  <a name="BKMK_Parameter_type_naming_conventions"></a> Parameter type naming conventions  
   
-|種類|追加される文字列|  
+|Given|Appended string is...|  
 |-----------|-------------------------|  
-|**型**`T`|T<br /><br /> 名前空間、入れ子になった構造体、およびジェネリック チックは削除されます。|  
-|**out パラメーター** `out T`|`TOut`|  
-|**ref パラメーター** `ref T`|`TRef`|  
-|**配列型** `T[]`|`TArray`|  
-|**多次元配列**型 `T[ , , ]`|`T3`|  
-|**ポインター**型 `T*`|`TPtr`|  
-|**ジェネリック型** `T<R1, ...>`|`TOfR1`|  
-|型 `C<TType>` の**ジェネリック型引数** `!i`|`Ti`|  
-|メソッド `M<MMethod>` の**ジェネリック メソッド引数** `!!i`|`Mi`|  
-|**入れ子にされた型** `N.T`|`N` が追加され、その後に `T`|  
+|A **type**`T`|T<br /><br /> The namespace, nested structure, and generic tics are dropped.|  
+|An **out parameter**`out T`|`TOut`|  
+|A **ref parameter** `ref T`|`TRef`|  
+|An **array type**`T[]`|`TArray`|  
+|A **multi-dimensional array** type `T[ , , ]`|`T3`|  
+|A **pointer** type `T*`|`TPtr`|  
+|A **generic type**`T<R1, ...>`|`TOfR1`|  
+|A **generic type argument**`!i` of type `C<TType>`|`Ti`|  
+|A **generic method argument**`!!i` of method `M<MMethod>`|`Mi`|  
+|A **nested type**`N.T`|`N` is appended, then `T`|  
   
-###  <a name="BKMK_Recursive_rules"></a> 再帰的な規則  
- 次の規則は再帰的に適用されます。  
+###  <a name="BKMK_Recursive_rules"></a> Recursive rules  
+ The following rules are applied recursively:  
   
--   Fakes は C# を使用して Fakes アセンブリを生成するため、無効な C# トークンを生成する文字は "_" (アンダースコア) にエスケープされます。  
+-   Because Fakes uses C# to generate the Fakes assemblies, any character that would produce an invalid C# token is escaped to "_" (underscore).  
   
--   結果の名前が宣言する型のいずれかのメンバーと競合する場合は、01 から始まる 2 桁のカウンターの追加して番号付けスキーマが使用されます。  
+-   If a resulting name clashes with any member of the declaring type, a numbering scheme is used by appending a two-digit counter, starting at 01.  
   
-##  <a name="BKMK_External_resources"></a> 外部リソース  
+##  <a name="BKMK_External_resources"></a> External resources  
   
-###  <a name="BKMK_Guidance"></a> ガイダンス  
- [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
+###  <a name="BKMK_Guidance"></a> Guidance  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>関連項目  
- [Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)
+## <a name="see-also"></a>See Also  
+ [Isolating Code Under Test with Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)
 

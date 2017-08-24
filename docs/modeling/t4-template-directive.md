@@ -1,5 +1,5 @@
 ---
-title: "T4 テンプレート ディレクティブ |Microsoft ドキュメント"
+title: T4 Template Directive | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,78 +25,79 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: eb2ab9d49cdeb1ed71da8ef67841f7796862dc30
-ms.openlocfilehash: ae369eacf934db165a10783bb59ad8a812f8c542
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b29e3397cf5efbffb3bed41d11d942750cb9b76a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="t4-template-directive"></a>T4 テンプレート ディレクティブ
-通常、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の T4 テキスト テンプレートは、テンプレートの処理方法を指定する `template` ディレクティブで始まります。 テキスト テンプレートおよびそれに含まれるファイルには、template ディレクティブを&1; つしか含めることができません。  
+# <a name="t4-template-directive"></a>T4 Template Directive
+A [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] T4 text template usually starts with a `template` directive, which specifies how the template should be processed. There should be no more than one template directive in a text template and any files that it includes.  
   
- テキスト テンプレートの作成の全般的な概要については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)します。  
+ For a general overview of writing text templates, see [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md).  
   
-## <a name="using-the-template-directive"></a>template ディレクティブの使用  
+## <a name="using-the-template-directive"></a>Using the Template Directive  
   
 ```  
 <#@ template [language="VB"] [compilerOptions="options"] [culture="code"] [debug="true"] [hostspecific="true"] [inherits="templateBaseClass"] [visibility="internal"] [linePragmas="false"] #>  
 ```  
   
- `template` ディレクティブには、変換のさまざまな側面を指定できる属性がいくつかあります。 属性はすべて省略可能です。  
+ The `template` directive has several attributes that allow you to specify different aspects of the transformation. All the attributes are optional.  
   
-## <a name="compileroptions-attribute"></a>compilerOptions 属性  
- 例:  
+## <a name="compileroptions-attribute"></a>compilerOptions attribute  
+ Example:  
  `compilerOptions="optimize+"`  
   
- 有効な値:  
- 有効なコンパイラ オプション。  
+ Valid values:  
+ Any valid compiler options.  
   
- 実行時 (前処理された) テンプレートでは無視されます。  
+ Ignored for run-time (preprocessed) templates.  
   
- テンプレートが [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] または [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] に変換されている場合にこれらのオプションが適用され、生成されたコードがコンパイルされます。  
+ These options are applied when the template has been converted into [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] or [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)], and the resulting code is compiled.  
   
-## <a name="culture-attribute"></a>culture 属性  
- 例:  
+## <a name="culture-attribute"></a>culture attribute  
+ Example:  
  `culture="de-CH"`  
   
- 有効な値:  
- インバリアント カルチャである "" (既定値)。  
+ Valid values:  
+ "", the invariant culture, which is the default.  
   
- xx-XX 形式の文字列で表現されたカルチャ。 たとえば、en-US、ja-JP、de-CH、de-DE などがあります。 詳細については、 <xref:System.Globalization.CultureInfo?displayProperty=fullName>。</xref:System.Globalization.CultureInfo?displayProperty=fullName>を参照してください。  
+ A culture expressed as a string in the form xx-XX. For example, en-US, ja-JP, de-CH, de-DE. For more information, see <xref:System.Globalization.CultureInfo?displayProperty=fullName>.  
   
- culture 属性では、式ブロックをテキストに変換する際に使用するカルチャを指定します。  
+ The culture attribute specifies the culture to use when an expression block is converted to text.  
   
-## <a name="debug-attribute"></a>debug 属性  
- 例:  
+## <a name="debug-attribute"></a>debug attribute  
+ Example:  
  ```  
 debug="true"  
 ```  
   
- 有効値:  
- `true, false`。 False が既定値です。  
+ Valid values:  
+ `true, false`. False is the default.  
   
- `debug` 属性が `true` の場合、デバッガーでテンプレート内の中断または例外の発生位置を正確に特定できるようにする情報が中間コード ファイルに出力されるようになります。  
+ If the `debug` attribute is `true`, the intermediate code file will contain information that enables the debugger to identify more accurately the position in your template where a break or exception occurred.  
   
- デザイン時テンプレートにある中間コード ファイルが書き込まれます、 **%temp%**ディレクトリ。  
+ For design-time templates the intermediate code file will be written to your **%TEMP%** directory.  
   
- デバッガーでデザイン時テンプレートを実行するテキスト テンプレートを保存し、ソリューション エクスプ ローラーで、テキスト テンプレートのショートカット メニューを開きし、選択**T4 テンプレートのデバッグ**します。  
+ To run a design-time template in the debugger, save the text template, then open the shortcut menu of the text template in Solution Explorer, and choose **Debug T4 Template**.  
   
-## <a name="hostspecific-attribute"></a>hostspecific 属性  
- 例:  
+## <a name="hostspecific-attribute"></a>hostspecific attribute  
+ Example:  
  ```  
 hostspecific="true"  
 ```  
   
- 有効値:  
- `true, false, trueFromBase`。 False が既定値です。  
+ Valid values:  
+ `true, false, trueFromBase`. False is the default.  
   
- この属性の値を `true` に設定した場合、テキスト テンプレートによって生成されたクラスに、`Host` というプロパティが追加されます。 プロパティは変換エンジンのホストへの参照であり、 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>。</xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>として宣言されています カスタム ホストを定義している場合は、そのカスタム ホストの型にキャストできます。  
+ If you set the value of this attribute to `true`, a property named `Host` is added to the class generated by your text template. The property is a reference to the host of the transformation engine, and is declared as <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>. If you have defined a custom host, you can cast it to the custom host type.  
   
- このプロパティの型はホストの型に依存するため、特定のホストとのみ連携するテキスト テンプレートを作成している場合以外、利用価値はありません。 適用[デザイン時テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)、ではなく[実行時テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)します。  
+ Because the type of this property depends on the type of host, it is only useful if you are writing a text template that works only with a specific host. It's applicable to [design-time templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md), but not [run-time templates](../modeling/run-time-text-generation-with-t4-text-templates.md).  
   
- `hostspecific` が `true` で、なおかつ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を使用している場合は、`this.Host` を IServiceProvider にキャストして、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の機能にアクセスすることができます。 また、`Host.ResolvePath(filename)` を使用して、プロジェクトのファイルの絶対パスを取得することもできます。 例:  
+ When `hostspecific` is `true` and you are using [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], you can cast `this.Host` to IServiceProvider to access [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] features. You can also use `Host.ResolvePath(filename)` to obtain the absolute path of a file in the project. For example:  
   
-```c#  
+```cs  
 <#@ template debug="false" hostspecific="true" language="C#" #>  
 <#@ output extension=".txt" #>  
 <#@ assembly name="EnvDTE" #>  
@@ -116,22 +117,22 @@ Content of myFile is:
   
 ```  
   
- `inherits` 属性と `hostspecific` 属性を一緒に使用する場合は、派生クラスで host="trueFromBase"、基底クラスで host="true" を指定します。 これで、生成されるコードで `Host` プロパティの定義が重複することを回避できます。  
+ If you use the `inherits` and `hostspecific` attributes together, specify host="trueFromBase" in the derived class and host="true" in the base class. This avoids a double definition of the `Host` property in the generated code.  
   
-## <a name="language-attribute"></a>language 属性  
- 例:  
+## <a name="language-attribute"></a>language attribute  
+ Example:  
  `language="VB"`  
   
- 有効な値:  
- `C#` (既定値)  
+ Valid values:  
+ `C#` (default)  
   
  `VB`  
   
- 言語を指定の言語 属性 ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]または[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]) ステートメントよぶ式ブロック内のソース コードを使用します。 出力の生成元である中間コード ファイルでこの言語が使用されます。 この言語はテンプレートで生成される言語とは無関係であり、どのような種類のテキストであってもかまいません。  
+ The language attribute specifies the language ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] or [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]) to use for the source code in statement and expression blocks. The intermediate code file from which the output is generated will use this language. This language is not related to the language that your template generates, which can be any kind of text.  
   
- 例:  
+ For example:  
   
-```vb#  
+```vb  
 <#@ template language="VB" #>  
 <#@ output extension=".txt" #>  
 Squares of numbers:  
@@ -146,17 +147,17 @@ Squares of numbers:
   
 ```  
   
-## <a name="inherits-attribute"></a>inherits 属性  
- テンプレートのプログラム コードを別のクラスから継承できることを指定できます。クラスは、テキスト テンプレートから生成することもできます。  
+## <a name="inherits-attribute"></a>inherits attribute  
+ You can specify that the program code of your template can inherit from another class, which can also be generated from a text template.  
   
-### <a name="inheritance-in-a-run-time-preprocessed-text-template"></a>実行時 (前処理された) テキスト テンプレートでの継承  
- 実行時テキスト テンプレート間で継承を使用して、複数の派生バリアントを含む基本テンプレートを作成できます。 実行時テンプレートを持つ、**カスタム ツール**プロパティに設定**TextTemplatingFilePreprocessor**します。 実行時テンプレートでは、そのテンプレートに定義されているテキストを作成するために、アプリケーションで呼び出すことができるコードが生成されます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。  
+### <a name="inheritance-in-a-run-time-preprocessed-text-template"></a>Inheritance in a run-time (preprocessed) text template  
+ You can use inheritance between run-time text templates to create a basic template that has several derived variants. Run-time templates are those that have the **Custom Tool** property set to **TextTemplatingFilePreprocessor**. A run-time template generates code that you can call in your application to create the text defined in the template. For more information, see [Run-Time Text Generation with T4 Text Templates](../modeling/run-time-text-generation-with-t4-text-templates.md).  
   
- `inherits` 属性を指定しない場合は、テキスト テンプレートから基底クラスと派生クラスが生成されます。 `inherits` 属性を指定すると、派生クラスだけが生成されます。 基底クラスは手動で作成できますが、派生クラスで使用するメソッドを提供する必要があります。  
+ If you do not specify an `inherits` attribute, a base class and a derived class are generated from your text template. When you specify an `inherits` attribute, only the derived class is generated. You can write a base class by hand, but it must provide the methods that are used by the derived class.  
   
- 通常は、前処理された別のテンプレートを基底クラスとして指定します。 基本テンプレートでは、派生テンプレートのテキストとインタリーブできる共通のテキスト ブロックを提供します。 クラス機能ブロック (`<#+ ... #>`) を使用して、テキスト フラグメントを含むメソッドを定義できます。 たとえば、基本テンプレートに出力テキストのフレームワークを配置し、派生テンプレートでオーバーライドできる仮想メソッドを提供することができます。  
+ More typically, you specify another preprocessed template as the base class. The base template provides common blocks of text, which can be interleaved with text from the derived templates. You can use class feature blocks `<#+ ... #>` to define methods that contain text fragments. For example, you can place the framework of the output text in the base template, providing virtual methods that can be overridden in derived templates:  
   
- 実行時 (前処理された) テキスト テンプレートの BaseTemplate.tt:  
+ Run-time (preprocessed) text template BaseTemplate.tt:  
  ```scr  
 This is the common header.  
 <#   
@@ -175,8 +176,8 @@ This is the common footer.
   
 ```  
   
- 実行時 (前処理された) テキスト テンプレートの DerivedTemplate1.tt:  
- ```c#  
+ Run-time (preprocessed) text template DerivedTemplate1.tt:  
+ ```cs  
 <#@ template language="C#" inherits="BaseTemplate" #>  
 <#   
   // Run the base template:  
@@ -200,12 +201,12 @@ protected override void SpecificFragment2()
   
 ```  
   
- DerivedTemplate1 を呼び出すアプリケーション コード:  
- ```c#  
+ Application code to invoke DerivedTemplate1:  
+ ```cs  
 Console.WriteLine(new DerivedTemplate().TransformText());  
 ```  
   
- 結果の出力:  
+ Resulting output:  
  ```  
 This is the common header.  
    Fragment 1 for DerivedTemplate1  
@@ -214,41 +215,41 @@ A common central text.
 This is the common footer.  
 ```  
   
- さまざまなプロジェクトの基底クラスと派生クラスを作成できます。 派生プロジェクトの参照に基本プロジェクトまたは基本アセンブリを追加することを忘れないでください。  
+ You can build the base and derived classes in different projects. Remember to add the base project or assembly to the derived project's references.  
   
- 手動で作成した通常のクラスを基底クラスとして使用することもできます。 基底クラスでは、派生クラスで使用するメソッドを提供する必要があります。  
+ You can also use an ordinary hand-written class as the base class. The base class must provide the methods used by the derived class.  
   
 > [!WARNING]
->  `inherits` 属性と `hostspecific` 属性を一緒に使用する場合は、派生クラスで hostspecific="trueFromBase"、基底クラスで host="true" を指定します。 これで、生成されるコードで `Host` プロパティの定義が重複することを回避できます。  
+>  If you use the `inherits` and `hostspecific` attributes together, specify hostspecific="trueFromBase" in the derived class and host="true" in the base class. This avoids a double definition of the `Host` property in the generated code.  
   
-### <a name="inheritance-in-a-design-time-text-template"></a>デザイン時テキスト テンプレートでの継承  
- デザイン時テキスト テンプレートは、対象のファイルを**カスタム ツール**に設定されている**TextTemplatingFileGenerator**します。 このテンプレートでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトの一部となるコードまたはテキストの出力ファイルが生成されます。 出力ファイルを生成するために、テンプレートは、まず中間プログラム コード ファイルに変換されます。通常、このファイルは表示されません。 `inherits` 属性では、この中間コードの基底クラスを指定します。  
+### <a name="inheritance-in-a-design-time-text-template"></a>Inheritance in a design-time text template  
+ A design-time text template is a file for which **Custom Tool** is set to **TextTemplatingFileGenerator**. The template generates an output file of code or text, which forms part of your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project. To generate the output file, the template is first translated into an intermediate program code file, which you do not usually see. The `inherits` attribute specifies the base class for this intermediate code.  
   
- デザイン時テキスト テンプレートの場合は、 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>。</xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>から派生する基本クラスを指定できます。 `<#@assembly#>` ディレクティブを使用して、基底クラスを含むアセンブリまたはプロジェクトを読み込みます。  
+ For a design-time text template, you can specify any base class that is derived from <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>. Use the `<#@assembly#>` directive to load the assembly or project that contains the base class.  
   
- 詳細については、次を参照してください。 ["継承でテキスト テンプレート"Gareth Jones のブログで](http://go.microsoft.com/fwlink/?LinkId=208373)します。  
+ For more information, see ["Inheritance in Text Templates" in Gareth Jones' Blog](http://go.microsoft.com/fwlink/?LinkId=208373).  
   
-## <a name="linepragmas-attribute"></a>LinePragmas 属性  
- 例:  
+## <a name="linepragmas-attribute"></a>LinePragmas attribute  
+ Example:  
  `linePragmas="false"`  
   
- 有効な値:  
- `true` (既定値)  
+ Valid values:  
+ `true` (default)  
   
  `false`  
   
- この属性を false に設定すると、生成されたコード内で行番号を識別するタグが削除されます。 つまり、コンパイラは生成されたコードの行番号を使用してエラーを報告します。このため、デバッグ時の選択肢が増えて、テキスト テンプレートをデバッグするか、それとも生成されたコードをデバッグするかを選択できます。  
+ Setting this attribute to false removes the tags that identify your line numbers within the generated code. This means that the compiler will report any errors by using line numbers of the generated code.This gives you more debugging options, as you can choose to debug either the text template or the generated code.  
   
- この属性は、プラグマの絶対ファイル名によってソース コード管理下で無駄なマージが発生している場合にも役立ちます。  
+ This attribute can also help if you're finding the absolute filenames in pragmas are causing distracting merges under source code control.  
   
-## <a name="visibility-attribute"></a>Visibility 属性  
- 例:  
+## <a name="visibility-attribute"></a>Visibility attribute  
+ Example:  
  `visibility="internal"`  
   
- 有効な値:  
- `public` (既定値)  
+ Valid values:  
+ `public` (default)  
   
  `internal`  
   
- 実行時テキスト テンプレートでは、これは生成されたクラスの可視性属性を設定します。 既定では、クラスはコードのパブリック API の一部ですが、`visibility="internal"` を設定すると、自分のコードだけがそのテキスト生成クラスを使用するようにできます。
+ In a runtime text template, this sets the visibility attribute of the generated class. By default, the class is part of the public API of your code, but by setting `visibility="internal"` you can make sure that only your code can use the text-generating class.
 

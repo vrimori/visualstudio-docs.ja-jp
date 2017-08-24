@@ -1,5 +1,5 @@
 ---
-title: "IDebugSettingsCallback2::GetMetricString |Microsoft ドキュメント"
+title: IDebugSettingsCallback2::GetMetricString | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0bdf7e64da1e49bd965f0ca91acb4ae66e9936ff
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d37082925fdef5bd52af91acecec1ce8d58a0b2d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugsettingscallback2getmetricstring"></a>IDebugSettingsCallback2::GetMetricString
-指定した名前のメトリックの値の文字列を取得します。  
+Retrieves the value string of the metric given its name.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetMetricString(  
@@ -49,7 +50,7 @@ HRESULT GetMetricString(
 );  
 ```  
   
-```c#  
+```cs  
 private int GetMetricString(  
     string     pszType,  
     ref Guid   guidSection,  
@@ -58,21 +59,21 @@ private int GetMetricString(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pszType`  
- [in]メトリックの種類です。  
+ [in] Type of the metric.  
   
  `guidSection`  
- [in]セクションの一意の識別子。  
+ [in] Unique identifier of the section.  
   
  `pszMetric`  
- [in]メトリックの名前です。  
+ [in] Name of the metric.  
   
  `pbstrValue`  
- [out]メトリックの値の文字列を返します。  
+ [out] Returns the value string of the metric.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

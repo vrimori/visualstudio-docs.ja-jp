@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: マネージ コードに対する単体テストの作成と実行 | Microsoft Docs"
+title: 'Walkthrough: Creating and Running Unit Tests for Managed Code | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,81 +33,81 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
-ms.openlocfilehash: 8b60481a9895e818773273cecbf89212f557d620
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: fd79f278f3ef81bc7dd00e9d640fc7103ea90ea5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>チュートリアル: マネージ コードに対する単体テストの作成と実行
-このチュートリアルでは、マネージ コード用の Microsoft 単体テスト フレームワークと Visual Studio テスト エクスプローラーを使用して一連の単体テストを作成、実行、およびカスタマイズする手順について説明します。 開発中の C# プロジェクトで作業を開始し、そのコードを実行するテストを作成し、テストを実行し、結果を調べます。 次に、プロジェクト コードを変更し、テストを再実行します。  
+# <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>Walkthrough: Creating and Running Unit Tests for Managed Code
+This walkthrough will step you through creating, running, and customizing a series of unit tests using the Microsoft unit test framework for managed code and the Visual Studio Test Explorer. You start with a C# project that is under development, create tests that exercise its code, run the tests, and examine the results. Then you can change your project code and re-run the tests.  
   
- このトピックは、次のセクションで構成されています。  
+ This topic contains the following sections:  
   
- [チュートリアルを準備する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)  
+ [Prepare the walkthrough](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)  
   
- [単体テスト プロジェクトを作成する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_a_unit_test_project)  
+ [Create a unit test project](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_a_unit_test_project)  
   
- [テスト クラスを作成する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_the_test_class)  
+ [Create the test class](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_the_test_class)  
   
--   [テスト クラスの要件](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_class_requirements)  
+-   [Test class requirements](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_class_requirements)  
   
- [最初のテスト メソッドを作成する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_the_first_test_method)  
+ [Create the first test method](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Create_the_first_test_method)  
   
--   [テスト メソッドの要件](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_method_requirements)  
+-   [Test method requirements](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Test_method_requirements)  
   
- [テストをビルドして実行する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Build_and_run_the_test)  
+ [Build and run the test](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Build_and_run_the_test)  
   
- [コードを修正してテストを再実行する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Fix_your_code_and_rerun_your_tests)  
+ [Fix your code and rerun your tests](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Fix_your_code_and_rerun_your_tests)  
   
- [単体テストを使用してコードを改良する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Use_unit_tests_to_improve_your_code)  
-  
-> [!NOTE]
->  このチュートリアルでは、マネージ コード用の Microsoft 単体テスト フレームワークを使用します。 また、テスト エクスプローラー用のアダプターを備えたサード パーティの単体テスト フレームワークからテスト エクスプローラーを実行することもできます。 詳細については、「[サードパーティ製の単体テスト フレームワークをインストールする](../test/install-third-party-unit-test-frameworks.md)」をご覧ください。  
+ [Use unit tests to improve your code](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Use_unit_tests_to_improve_your_code)  
   
 > [!NOTE]
->  コマンド ラインからテストを実行する方法については、「[チュートリアル: コマンド ライン テスト ユーティリティの使用](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)」をご覧ください。  
+>  This walkthrough uses the Microsoft unit test framework for managed code. Test Explorer also can run tests from third party unit test frameworks that have adapters for Test Explorer. For more information, see [Install third-party unit test frameworks](../test/install-third-party-unit-test-frameworks.md)  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+> [!NOTE]
+>  For information about how to run tests from a command line, see [Walkthrough: using the command-line test utility](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867).  
   
--   Bank プロジェクト。 「[単体テストを作成するサンプル プロジェクト](../test/sample-project-for-creating-unit-tests.md)」をご覧ください。  
+## <a name="prerequisites"></a>Prerequisites  
   
-##  <a name="BKMK_Prepare_the_walkthrough"></a> チュートリアルを準備する  
+-   The Bank project. See [Sample Project for Creating Unit Tests](../test/sample-project-for-creating-unit-tests.md).  
   
-1.  Visual Studio を開きます。  
+##  <a name="BKMK_Prepare_the_walkthrough"></a> Prepare the walkthrough  
   
-2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]**をクリックします。  
+1.  Open Visual Studio.  
   
-     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+2.  On the **File** menu, point to **New** and then click **Project**.  
   
-3.  **[インストールされているテンプレート]**の **[Visual C#]**をクリックします。  
+     The **New Project** dialog box appears.  
   
-4.  アプリケーションの種類の一覧の **[クラス ライブラリ]**をクリックします。  
+3.  Under **Installed Templates**, click **Visual C#**.  
   
-5.  In the **[名前]** ボックスに「 `Bank` をポイントし、 **[OK]**」をご覧ください。  
+4.  In the list of application types, click **Class Library**.  
   
-    > [!NOTE]
-    >  "Bank" という名前が既に使用されている場合は、別のプロジェクト名を選択します。  
-  
-     新しい Bank プロジェクトが作成され、コード エディターに Class1.cs ファイルが開いた状態でソリューション エクスプローラーが表示されます。  
+5.  In the **Name** box, type `Bank` and then click **OK**.  
   
     > [!NOTE]
-    >  コード エディターに Class1.cs ファイルが表示されない場合、ソリューション エクスプローラーのファイル Class1.cs をダブルクリックして開きます。  
+    >  If the name "Bank" is already used, choose another name for the project.  
   
-6.  「[単体テストを作成するためのサンプル プロジェクト](../test/sample-project-for-creating-unit-tests.md)」からソース コードをコピーします。  
+     The new Bank project is created and displayed in Solution Explorer with the Class1.cs file open in the Code Editor.  
   
-7.  Class1.cs の元の内容を、「[単体テスト作成用のサンプル プロジェクト](../test/sample-project-for-creating-unit-tests.md)」のコードで置き換えます。  
+    > [!NOTE]
+    >  If the Class1.cs file is not open in the Code Editor, double-click the file Class1.cs in Solution Explorer to open it.  
   
-8.  ファイルを BankAccount.cs として保存します。  
+6.  Copy the source code from the [Sample Project for Creating Unit Tests](../test/sample-project-for-creating-unit-tests.md).  
   
-9. **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
+7.  Replace the original contents of Class1.cs with the code from the [Sample Project for Creating Unit Tests](../test/sample-project-for-creating-unit-tests.md).  
   
- Bank という名前のプロジェクトができます。 これには、テストするソース コードとテストに使用するツールが含まれています。 Bank の **BankAccountNS**名前空間には、パブリック クラス **BankAccount**が含まれます。そのメソッドを次の手順でテストします。  
+8.  Save the file as BankAccount.cs  
   
- このクイック スタートでは、 `Debit` メソッドについて説明します。Debit メソッドは、現金が口座から引き出され、次のコードが含まれているときに呼び出されます。  
+9. On the **Build** menu, click **Build Solution**.  
   
-```c#  
+ You now have a project named Bank. It contains source code to test and tools to test it with. The namespace for Bank, **BankAccountNS**, contains the public class **BankAccount**, whose methods you will test in the following procedures.  
+  
+ In this quick start, we focus on the `Debit` method.The Debit method is called when money is withdrawn an account and contains the following code:  
+  
+```cs  
 // method under test  
 public void Debit(double amount)  
 {  
@@ -124,37 +124,37 @@ public void Debit(double amount)
   
 ```  
   
-##  <a name="BKMK_Create_a_unit_test_project"></a> 単体テスト プロジェクトを作成する  
- **必要条件**: 「 [Prepare the walkthrough](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough)」の手順に従います。  
+##  <a name="BKMK_Create_a_unit_test_project"></a> Create a unit test project  
+ **Prerequisite**: Follow the steps in the procedure, [Prepare the walkthrough](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough).  
   
-#### <a name="to-create-a-unit-test-project"></a>単体テスト プロジェクトを作成するには  
+#### <a name="to-create-a-unit-test-project"></a>To create a unit test project  
   
-1.  **[ファイル]** メニューの **[追加]**をポイントし、 **[新しいプロジェクト]**をクリックします。  
+1.  On the **File** menu, choose **Add**, and then choose **New Project ...**.  
   
-2.  [新しいプロジェクト] ダイアログ ボックスで、 **[インストール済み]**、 **[Visual C#]**の順に展開し、 **[テスト]**をクリックします。  
+2.  In the New Project dialog box, expand **Installed**, expand **Visual C#**, and then choose **Test**.  
   
-3.  テンプレートの一覧から、 **[単体テスト プロジェクト]**を選択します。  
+3.  From the list of templates, select **Unit Test Project**.  
   
-4.  **[名前]** ボックスに「BankTest」と入力し、 **[OK]**をクリックします。  
+4.  In the **Name** box, enter BankTest, and then choose **OK**.  
   
-     **BankTests** プロジェクトが **Bank** ソリューションに追加されます。  
+     The **BankTests** project is added to the the **Bank** solution.  
   
-5.  **BankTests** プロジェクトで、 **Bank** ソリューションへの参照を追加します。  
+5.  In the **BankTests** project, add a reference to the **Bank** solution.  
   
-     ソリューション エクスプローラーで、 **BankTests** プロジェクトの **[参照設定]** をクリックし、コンテキスト メニューの **[参照の追加]** をクリックします。  
+     In Solution Explorer, select **References** in the **BankTests** project and then choose **Add Reference...** from the context menu.  
   
-6.  [参照マネージャー] ダイアログ ボックスで、 **[ソリューション]** を展開し、 **[Bank]** チェックボックスをオンにします。  
+6.  In the Reference Manager dialog box, expand **Solution** and then check the **Bank** item.  
   
-##  <a name="BKMK_Create_the_test_class"></a> テスト クラスを作成する  
- `BankAccount` クラスを検証するためのテスト クラスが必要です。 プロジェクト テンプレートによって生成された UnitTest1.cs を使用できますが、ファイルとクラスにはよりわかりやすい名前を付ける必要があります。 ソリューション エクスプローラーでファイルの名前変更機能を使用すると、この処理を 1 つの手順で実行できます。  
+##  <a name="BKMK_Create_the_test_class"></a> Create the test class  
+ We need a test class for verifying the `BankAccount` class. We can use the UnitTest1.cs that was generated by the project template, but we should give the file and class more descriptive names. We can do that in one step by renaming the file in Solution Explorer.  
   
- **クラス ファイルの名前を変更する**  
+ **Renaming a class file**  
   
- ソリューション エクスプローラーで、BankTests プロジェクトの UnitTest1.cs ファイルを選択します。 コンテキスト メニューの **[名前の変更]**をクリックし、ファイルの名前を BankAccountTests.cs に変更します。 コード要素 UnitTest1 に対するプロジェクトのすべての参照を名前変更するかどうかを確認するダイアログで **[はい]** をクリックします。 この手順により、クラスの名前が `BankAccountTest`に変更されます。  
+ In Solution Explorer, select the UnitTest1.cs file in the BankTests project. From the context menu, choose **Rename**, and then rename the file to BankAccountTests.cs. Choose **Yes** on the dialog that asks if you want to rename all references in the project to the code element 'UnitTest1'. This step changes the name of the class to `BankAccountTest`.  
   
- BankAccountTests.cs ファイルには次のコードが含まれるようになりました。  
+ The BankAccountTests.cs file now contains the following code:  
   
-```c#  
+```cs  
 // unit test code  
 using System;  
 using Microsoft.VisualStudio.TestTools.UnitTesting;  
@@ -172,43 +172,43 @@ namespace BankTests
 }  
 ```  
   
- **テスト対象のプロジェクトに using ステートメントを追加する**  
+ **Add a using statement to the project under test**  
   
- using ステートメントをクラスに追加して、完全修飾名を使用せずにテスト対象のプロジェクトに呼び出すことができるようにすることも可能です。 クラス ファイルの先頭に次のように追加します。  
+ We can also add a using statement to the class to let us to call into the project under test without using fully qualified names. At the top of the class file, add:  
   
-```c#  
+```cs  
 using BankAccountNS;  
 ```  
   
-###  <a name="BKMK_Test_class_requirements"></a> テスト クラスの要件  
- テスト クラスの最小要件は次のとおりです。  
+###  <a name="BKMK_Test_class_requirements"></a> Test class requirements  
+ The minimum requirements for a test class are the following:  
   
--   マネージ コード用の Microsoft 単体テスト フレームワークでは、テスト エクスプローラーで実行する単体テスト メソッドを含むすべてのクラスについて、 `[TestClass]` 属性が必要です。  
+-   The `[TestClass]` attribute is required in the Microsoft unit testing framework for managed code for any class that contains unit test methods that you want to run in Test Explorer.  
   
--   テスト エクスプローラーで実行する各テスト メソッドには `[TestMethod]`属性が必要です。  
+-   Each test method that you want Test Explorer to run must have the `[TestMethod]`attribute.  
   
- 単体テスト プロジェクトで `[TestClass]` 属性がない別のクラスを使用することができます。また、テスト クラスで `[TestMethod]` 属性がない別のメソッドを使用することもできます。 こうした別のクラスやメソッドをテスト メソッドで使用できます。  
+ You can have other classes in a unit test project that do not have the `[TestClass]` attribute, and you can have other methods in test classes that do not have the `[TestMethod]` attribute. You can use these other classes and methods in your test methods.  
   
-##  <a name="BKMK_Create_the_first_test_method"></a> 最初のテスト メソッドを作成する  
- この手順では、 `Debit` クラスの `BankAccount` メソッドの動作を検証する単体テスト メソッドを記述します。 メソッドは上に一覧表示されています。  
+##  <a name="BKMK_Create_the_first_test_method"></a> Create the first test method  
+ In this procedure, we will write unit test methods to verify the behavior of the `Debit` method of the `BankAccount` class. The method is listed above.  
   
- テスト対象のメソッドを分析したところ、チェックする必要のある動作が 3 つ以上あると判断されます。  
+ By analyzing the method under test, we determine that there are at least three behaviors that need to be checked:  
   
-1.  引き落とし金額が残高を上回る場合、このメソッドは <xref:System.ArgumentOutOfRangeException> をスローします。  
+1.  The method throws an <xref:System.ArgumentOutOfRangeException> if the debit amount is greater than the balance.  
   
-2.  また、引き落とし金額が 0 未満の場合も、このメソッドは `ArgumentOutOfRangeException` をスローします。  
+2.  It also throws `ArgumentOutOfRangeException` if the debit amount is less than zero.  
   
-3.  1. と 2. のチェックで金額が有効な範囲内であることが確認された場合、このメソッドは口座残高から当該金額を減算します。  
+3.  If the checks in 1.) and 2.) are satisfied, the method subtracts the amount from the account balance.  
   
- 最初のテストでは、正しい金額 (口座残高未満かつ 0 を上回る金額) によって口座から正しい金額が引き出されることが確認されます。  
+ In our first test, we verify that a valid amount (one that is less than the account balance and that is greater than zero) withdraws the correct amount from the account.  
   
-#### <a name="to-create-a-test-method"></a>テスト メソッドを作成するには  
+#### <a name="to-create-a-test-method"></a>To create a test method  
   
-1.  使用する `BankAccountNS;` ステートメントを BankAccountTests.cs ファイルに追加します。  
+1.  Add a using `BankAccountNS;` statement to the BankAccountTests.cs file.  
   
-2.  次のメソッドを `BankAccountTests` クラスに追加します。  
+2.  Add the following method to that `BankAccountTests` class:  
   
-    ```c#  
+    ```cs  
     // unit test code  
     [TestMethod]  
     public void Debit_WithValidAmount_UpdatesBalance()  
@@ -228,70 +228,70 @@ using BankAccountNS;
     }  
     ```  
   
- このメソッドはやや単純です。 期首残高を含む新しい `BankAccount` オブジェクトを設定し、有効な金額を引き出します。 マネージ コード用の Microsoft 単体テスト フレームワークの <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> メソッドを使用して、期末残高が想定どおりであることを確認します。  
+ The method is rather simple. We set up a new `BankAccount` object with a beginning balance and then withdraw a valid amount. We use the Microsoft unit test framework for managed code <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> method to verify that the ending balance is what we expect.  
   
-###  <a name="BKMK_Test_method_requirements"></a> テスト メソッドの要件  
- テスト メソッドは次の条件を満たしている必要があります。  
+###  <a name="BKMK_Test_method_requirements"></a> Test method requirements  
+ A test method must meet the following requirements:  
   
--   メソッドは `[TestMethod]` 属性で装飾される必要があります。  
+-   The method must be decorated with the `[TestMethod]` attribute.  
   
--   メソッドは `void`を返します。  
+-   The method must return `void`.  
   
--   メソッドはパラメーターを含むことができません。  
+-   The method cannot have parameters.  
   
-##  <a name="BKMK_Build_and_run_the_test"></a> テストをビルドして実行する  
+##  <a name="BKMK_Build_and_run_the_test"></a> Build and run the test  
   
-#### <a name="to-build-and-run-the-test"></a>テストをビルドして実行するには  
+#### <a name="to-build-and-run-the-test"></a>To build and run the test  
   
-1.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
+1.  On the **Build** menu, choose **Build Solution**.  
   
-     エラーがない場合は、[UnitTestExplorer] ウィンドウが表示され、 **[テストを実行しない]** グループに **[Debit_WithValidAmount_UpdatesBalance]** が表示されます。 ビルドの成功後にテスト エクスプローラーが表示されない場合は、メニューの **[テスト]** をクリックし、 **[ウィンドウ]**、  **[テスト エクスプローラー]**の順にクリックします。  
+     If there are no errors, the UnitTestExplorer window appears with **Debit_WithValidAmount_UpdatesBalance** listed in the **Not Run Tests** group. If Test Explorer does not appear after a successful build, choose **Test** on the menu, then choose **Windows**, and then choose  **Test Explorer**.  
   
-2.  **[すべて実行]** をクリックしてテストを実行します。 テストの実行中は、ウィンドウの上部にあるステータス バーがアニメーション化されます。 テストの実行の終了時に、すべてのテスト メソッドが成功した場合はステータス バーが緑色に変わり、いずれかのテストが失敗した場合は赤色に変わります。  
+2.  Choose **Run All** to run the test. As the test is running the status bar at the top of the window is animated. At the end of the test run, the bar turns green if all the test methods pass, or red if any of the tests fail.  
   
-3.  この場合は、テストが失敗します。 このテスト メソッドは、 **[失敗したテスト]**に移動します。 が表示されます。 エクスプローラーでテスト メソッドを選択すると、ウィンドウの下部に詳細が表示されます。  
+3.  In this case, the test does fail. The test method is moved to the **Failed Tests**. group. Select the method in Test Explorer to view the details at the bottom of the window.  
   
-##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> コードを修正してテストを再実行する  
- **テスト結果を分析する**  
+##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> Fix your code and rerun your tests  
+ **Analyze the test results**  
   
- テスト結果には失敗を示すメッセージが含まれています。 `AreEquals` メソッドについて、メッセージには、想定された事項 (**Expected\<*XXX*> **パラメーター) および実際に受け取られた事項 (**Actual\<**>** パラメーター) が示されます。 ここでは、残高が期首残高よりも減少していることを想定していましたが、逆に、引き出し額の分が増加していました。  
+ The test result contains a message that describes the failure. For the `AreEquals` method, message displays you what was expected (the (**Expected\<*XXX*>**parameter) and what was actually received (the **Actual\<*YYY*>** parameter). We were expecting the balance to decline from the beginning balance, but instead it has increased by the amount of the withdrawal.  
   
- Debit コードの再検査では、単体テストでバグを検出できたことが示されます。 引き出し額は、減算する必要があるときに口座残高に追加されます。  
+ A reexamination of the Debit code shows that the unit test has succeeded in finding a bug. The amount of the withdrawal is added to the account balance when it should be subtracted.  
   
- **バグを修正する**  
+ **Correct the bug**  
   
- エラーを修正するには、単純に行を置き換えます。  
+ To correct the error, simply replace the line  
   
-```c#  
+```cs  
 m_balance += amount;  
 ```  
   
- 代入  
+ with  
   
-```c#  
+```cs  
 m_balance -= amount;  
 ```  
   
- **テストを再実行する**  
+ **Rerun the test**  
   
- テスト エクスプローラーで、 **[すべて実行]** をクリックしてテストを再実行します。 赤色/緑色のステータス バーは緑色になり、テストは **[成功したテスト]** グループに移動します。  
+ In Test Explorer, choose **Run All** to rerun the test. The red/green bar turns green, and the test is moved to the **Passed Tests** group.  
   
-##  <a name="BKMK_Use_unit_tests_to_improve_your_code"></a> 単体テストを使用してコードを改良する  
- このセクションでは、分析の反復処理、単体テストの進展、およびリファクタリングが、実稼働のコードの堅牢性と有効性を高めるうえでどのように役立つかを説明します。  
+##  <a name="BKMK_Use_unit_tests_to_improve_your_code"></a> Use unit tests to improve your code  
+ This section describes how an iterative process of analysis, unit test development, and refactoring can help you make your production code more robust and effective.  
   
- **問題を分析する**  
+ **Analyze the issues**  
   
- `Debit` メソッドで有効な金額が正しく差し引かれることを確認するテスト メソッドを作成したら、元の分析における残りのケースに移ることができます。  
+ After creating a test method to confirm that a valid amount is correctly deducted in the `Debit` method, we can turn to remaining cases in our original analysis:  
   
-1.  引き落とし金額が残高を上回る場合、このメソッドは `ArgumentOutOfRangeException` をスローします。  
+1.  The method throws an `ArgumentOutOfRangeException` if the debit amount is greater than the balance.  
   
-2.  また、引き落とし金額が 0 未満の場合も、このメソッドは `ArgumentOutOfRangeException` をスローします。  
+2.  It also throws `ArgumentOutOfRangeException` if the debit amount is less than zero.  
   
- **テスト メソッドを作成する**  
+ **Create the test methods**  
   
- これらの問題に対処するためのテスト メソッド作成への最初の試みは、期待の持てるものです。  
+ A first attempt at creating a test method to address these issues seems promising:  
   
-```c#  
+```cs  
 //unit test method  
 [TestMethod]  
 [ExpectedException(typeof(ArgumentOutOfRangeException))]  
@@ -310,43 +310,43 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
   
 ```  
   
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> 属性を使用して、正しい例外がスローされたことをアサートします。 この属性により、 `ArgumentOutOfRangeException` がスローされない限り、テストは失敗します。 正と負の両方の `debitAmount` 値を使用してテストを実行し、金額が 0 未満のときに汎用的な <xref:System.ApplicationException> をスローするようにメソッドを一時的に変更すると、テストが正しく動作することが示されます。 引き出し金額が残高を上回るケースをテストするために必要なことは次のとおりです。  
+ We use the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> attribute to assert that the right exception has been thrown. The attribute causes the test to fail unless an `ArgumentOutOfRangeException` is thrown. Running the test with both positive and negative `debitAmount` values and then temporarily modifying the method under test to throw a generic <xref:System.ApplicationException> when the amount is less than zero demonstrates that test behaves correctly. To test the case when the amount withdrawn is greater than the balance, all we need to do is:  
   
-1.  `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange`という新しいテスト メソッドを作成します。  
+1.  Create a new test method named `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange`.  
   
-2.  メソッド本体を `Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange` から新しいメソッドにコピーします。  
+2.  Copy the method body from `Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange` to the new method.  
   
-3.  `debitAmount` を、残高を上回る数値に設定します。  
+3.  Set the `debitAmount` to a number greater than the balance.  
   
- **テストを実行**  
+ **Run the tests**  
   
- `debitAmount` を異なる値にして 2 つのメソッドを実行すると、テストで残りのケースが適切に処理されることが示されます。 3 つのすべてのテストを実行すると、元の分析のすべてのケースが正しく処理されることを確認できます。  
+ Running the two methods with different values for `debitAmount` demonstrates that the tests adequately handle our remaining cases. Running all three tests confirm that all cases in our original analysis are correctly covered.  
   
- **分析を継続する**  
+ **Continue the analysis**  
   
- 一方で、最後の 2 つのテスト メソッドには多少の問題もあります。 一方のテストの実行時に、テスト対象のコードのいずれの条件がスローされたかがはっきりしません。 そこで、2 つの条件を区別するのに役立つ方法があります。 この問題についてさらに考えてみると、いずれの条件に違反したかを把握することでテストの信頼性が高まることが明らかになります。 また、この情報は、テスト対象のメソッドで例外がスローされたときに例外を処理する実稼働のメカニズムにも役立つ可能性があります。 メソッドでのスロー時により多くの情報が生成されると、すべての懸念事項に役立ちますが、 `ExpectedException` 属性ではこの情報を提供できません。  
+ However, the last two test methods are also somewhat troubling. We cannot be certain which condition in the code under test throws when either test runs. Some way of differentiating the two conditions would be helpful. As we think about the problem more, it becomes apparent that knowing which condition was violated would increase our confidence in the tests. This information would also very likely be helpful to the production mechanism that handles the exception when it is thrown by the method under test. Generating more information when the method throws would assist all concerned, but the `ExpectedException` attribute cannot supply this information..  
   
- テスト対象のメソッドをもう一度確認すると、引数の名前をパラメーターとして使用する `ArgumentOutOfRangeException` コンストラクターが両方の条件ステートメントで使用されていることがわかります。  
+ Looking at the method under test again, we see both conditional statements use an `ArgumentOutOfRangeException` constructor that takes name of the argument as a parameter:  
   
-```c#  
+```cs  
 throw new ArgumentOutOfRangeException("amount");  
 ```  
   
- また、MSDN ライブラリを検索すると、さらに豊富な情報を報告するコンストラクターが存在することがわかります。 <xref:System.ArgumentOutOfRangeException.%23ctor%2A>`(String, Object, String)` には、引数の名前、引数の値、およびユーザー定義のメッセージが含まれています。 このコンストラクターを使用するようにテスト対象のメソッドをリファクタリングできます。 さらに、一般に公開されている型メンバーを使用して、エラーを指定できます。  
+ From a search of the MSDN Library, we discover that a constructor exists that reports far richer information. <xref:System.ArgumentOutOfRangeException.%23ctor%2A>`(String, Object, String)` includes the name of the argument, the argument value, and a user-defined message. We can refactor the method under test to use this constructor. Even better, we can use publicly available type members to specify the errors.  
   
- **テスト対象のコードをリファクタリングする**  
+ **Refactor the code under test**  
   
- 最初に、エラー メッセージの 2 つの定数をクラス スコープで定義します。  
+ We first define two constants for the error messages at class scope:  
   
-```c#  
+```cs  
 // class under test  
 public const string DebitAmountExceedsBalanceMessage = "Debit amount exceeds balance";  
 public const string DebitAmountLessThanZeroMessage = "Debit amount less than zero";  
 ```  
   
- 次に、 `Debit` メソッドの 2 つの条件ステートメントを変更します。  
+ We then modify the two conditional statements in the `Debit` method:  
   
-```c#  
+```cs  
 // method under test  
 // ...  
     if (amount > m_balance)  
@@ -361,19 +361,19 @@ public const string DebitAmountLessThanZeroMessage = "Debit amount less than zer
 // ...  
 ```  
   
- **テスト メソッドをリファクタリングする**  
+ **Refactor the test methods**  
   
- このテスト メソッドでは、最初に `ExpectedException` 属性を削除します。 その代わりに、スローされた例外をキャッチし、その例外が正しい条件ステートメントでスローされたことを確認します。 また一方、2 つのオプションのどちらを使用して残りの条件を検証するかをここで決める必要があります。 たとえば `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` メソッドでは、次のアクションのいずれかを使用できます。  
+ In our test method, we first remove the `ExpectedException` attribute. In its place, we catch the thrown exception and verify that it was thrown in the correct condition statement. However, we must now decide between two options to verify our remaining conditions. For example in the `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` method, we can take one of the following actions:  
   
--   例外 ( `ActualValue` コンストラクターの 2 番目のパラメーター) の `ArgumentOutOfRangeException` プロパティが期首残高を上回っていることをアサートします。 このオプションでは、テスト メソッドの `ActualValue` 変数に対して例外の `beginningBalance` プロパティをテストし、 `ActualValue` が 0 を上回ることを確認する必要があります。  
+-   Assert that the `ActualValue` property of the exception (the second parameter of the `ArgumentOutOfRangeException` constructor) is greater than the beginning balance. This option requires that we test the `ActualValue` property of the exception against the `beginningBalance` variable of the test method, and also requires then verify that the `ActualValue` is greater than zero.  
   
--   `DebitAmountExceedsBalanceMessage` クラスに定義された `BankAccount` がメッセージ (コンストラクターの 3 番目のパラメーター) に含まれていることをアサートします。  
+-   Assert that the message (the third parameter of the constructor) includes the `DebitAmountExceedsBalanceMessage` defined in the `BankAccount` class.  
   
- Microsoft 単体テスト フレームワークの <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> メソッドでは、1 番目のオプションで必要とされる計算を行わなくても、2 番目のオプションを確認できます。  
+ The <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> method in the Microsoft unit test framework enables us to verify the second option without the calculations that are required of the first option.  
   
- `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` の変更の 2 回目の試行は次のようになります。  
+ A second attempt at revising `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` might look like:  
   
-```c#  
+```cs  
 [TestMethod]  
 public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()  
 {  
@@ -395,21 +395,21 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 }  
 ```  
   
- **再テストする、書き換える、再分析する**  
+ **Retest, rewrite, and reanalyze**  
   
- テスト メソッドを別の値で再テストする場合、次の事項が発生します。  
+ When we retest the test methods with different values, we encounter the following facts:  
   
-1.  `debitAmount` が残高を上回るアサートを使用することで適切なエラーをキャッチした場合、 `Contains` アサートは成功し、例外は無視されます。したがって、テスト メソッドは成功することになります。 これは想定どおりの動作です。  
+1.  If we catch the correct error by using an assert where `debitAmount` that is greater than the balance, the `Contains` assert passes, the exception is ignored, and so the test method passes. This is the behavior we want.  
   
-2.  0 未満の `debitAmount` を使用した場合、不適切なエラー メッセージが返されるため、アサートは失敗します。 テスト対象メソッドのコード パス上の別のポイントで一時的な `ArgumentOutOfRange` 例外を導入した場合も、アサートは失敗します。 これも適切です。  
+2.  If we use a `debitAmount` that is less than 0, the assert fails because the wrong error message is returned. The assert also fails if we introduce a temporary `ArgumentOutOfRange` exception at another point in the method under test code path. This too is good.  
   
-3.  `debitAmount` 値が有効な場合 (残高未満だが 0 よりは大きい場合)、例外はキャッチされないので、アサートはキャッチされません。 テスト メソッドは成功します。 これは適切ではありません。例外がスローされない場合はテスト メソッドが失敗することを想定しているためです。  
+3.  If the `debitAmount` value is valid (i.e., less than the balance but greater than zero, no exception is caught, so the assert is never caught. The test method passes. This is not good, because we want the test method to fail if no exception is thrown.  
   
- 3 番目の事項はテスト メソッドのバグです。 この問題を解決しようとする場合は、テスト メソッドの最後に <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> アサートを追加して、例外がスローされないケースを処理するようにします。  
+ The third fact is a bug in our test method. To attempt to resolve the issue, we add a <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> assert at the end of the test method to handle the case where no exception is thrown.  
   
- ただし、再テストでは、正しい例外がキャッチされた場合にテストが失敗したことが示されます。 catch ステートメントで例外がリセットされ、メソッドは継続して実行されますが、新しいアサートで失敗します。 この新しい問題を解決するために、 `return` の後に `StringAssert`ステートメントを追加します。 再テストにより、問題を修正したことを確認します。 `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` の最終バージョンは、次のようになります。  
+ But retesting shows that the test now fails if the correct exception is caught. The catch statement resets the exception and the method continues to execute, failing at the new assert. To resolve the new problem, we add a `return` statement after the `StringAssert`. Retesting confirms that we have fixed our problems. Our final version of the `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` looks like the following:  
   
-```c#  
+```cs  
 [TestMethod]  
 public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()  
 {  
@@ -434,5 +434,5 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
   
 ```  
   
- この最後のセクションでは、テスト コード向上の作業を実行したことにより、より堅牢でわかりやすいテスト メソッドになりました。 さらに重要なこととして、分析の追加によってテスト対象のプロジェクトのコードを改善することもできます。
+ In this final section, the work that we did improving our test code led to more robust and informative test methods. But more importantly, the extra analysis also led to better code in our project under test.
 

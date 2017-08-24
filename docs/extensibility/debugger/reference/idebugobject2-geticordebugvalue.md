@@ -1,51 +1,68 @@
 ---
-title: "IDebugObject2::GetICorDebugValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject2::GetICorDebugValue"
-helpviewer_keywords: 
-  - "IDebugObject2::GetICorDebugValue メソッド"
+title: IDebugObject2::GetICorDebugValue | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject2::GetICorDebugValue
+helpviewer_keywords:
+- IDebugObject2::GetICorDebugValue method
 ms.assetid: bcd4355d-3fbe-483f-bb23-a44348323c6a
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugObject2::GetICorDebugValue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 88cda3ca25f75e955396f85c1e165eb692133362
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-マネージ コードを表すオブジェクトの値をこのオブジェクトに関連付けられているを取得します。  
+---
+# <a name="idebugobject2geticordebugvalue"></a>IDebugObject2::GetICorDebugValue
+Gets a managed code object representing the value associated with this object.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetICorDebugValue(  
-   IUnknown** ppUnk  
+HRESULT GetICorDebugValue(  
+   IUnknown** ppUnk  
 );  
 ```  
   
-```c#  
-int GetICorDebugValue(  
-   out object ppUnk  
+```cs  
+int GetICorDebugValue(  
+   out object ppUnk  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppUnk`  
- \[出力\] この `IUnknown` のエイリアスを表すインターフェイス。  このインターフェイスは `ICorDebugValue` のインターフェイスを照会できます。  
+ [out] `IUnknown` interface that represents this alias. This interface can be queried for the `ICorDebugValue` interface.  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 解説  
- `ICorDebugValue` のオブジェクトが値を表す共通言語ランタイムのインターフェイスです。  
+## <a name="remarks"></a>Remarks  
+ The `ICorDebugValue` object is a Common Language Runtime interface that represents a value.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

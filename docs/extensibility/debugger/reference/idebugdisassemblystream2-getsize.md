@@ -1,53 +1,70 @@
 ---
-title: "IDebugDisassemblyStream2::GetSize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDisassemblyStream2::GetSize"
-helpviewer_keywords: 
-  - "IDebugDisassemblyStream2::GetSize"
+title: IDebugDisassemblyStream2::GetSize | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDisassemblyStream2::GetSize
+helpviewer_keywords:
+- IDebugDisassemblyStream2::GetSize
 ms.assetid: 8f512704-12d0-46d2-959a-4f8dffe117b5
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugDisassemblyStream2::GetSize
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 989db77c6bccf9a1f89a5ac033384309b6354717
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-この構成のストリーム内で命令のサイズを取得します。  
+---
+# <a name="idebugdisassemblystream2getsize"></a>IDebugDisassemblyStream2::GetSize
+Gets the size in instructions of this disassembly stream.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetSize(   
-   UINT64* pnSize  
+HRESULT GetSize(   
+   UINT64* pnSize  
 );  
 ```  
   
-```c#  
-int GetSize(   
-   out ulong pnSize  
+```cs  
+int GetSize(   
+   out ulong pnSize  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pnSize`  
- \[入力\] 命令のサイズを返します。  
+ [out] Returns the size, in instructions.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- このメソッドにより返される値が [読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) のメソッドに渡される [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) の構造体の配列を割り当てるために使用できます。  
+## <a name="remarks"></a>Remarks  
+ The value returned from this method can be used to allocate an array of [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) structures which is then passed to the [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) method.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
- [読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
+ [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)

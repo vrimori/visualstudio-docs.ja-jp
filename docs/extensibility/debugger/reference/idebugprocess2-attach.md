@@ -1,75 +1,92 @@
 ---
-title: "IDebugProcess2::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcess2::Attach"
-helpviewer_keywords: 
-  - "IDebugProcess2::Attach"
+title: IDebugProcess2::Attach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProcess2::Attach
+helpviewer_keywords:
+- IDebugProcess2::Attach
 ms.assetid: 40d78417-fde2-45c3-96c9-16e06bd9008d
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugProcess2::Attach
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d2324fce8a6dcc14e9fa9b2c20278781d0dbebfd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-プロセスにセッションの \(SDM\) デバッグ マネージャーをアタッチします。  
+---
+# <a name="idebugprocess2attach"></a>IDebugProcess2::Attach
+Attaches the session debug manager (SDM) to the process.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT Attach(   
-   IDebugEventCallback2* pCallback,  
-   GUID*                 rgguidSpecificEngines,  
-   DWORD                 celtSpecificEngines,  
-   HRESULT*              rghrEngineAttach  
+HRESULT Attach(   
+   IDebugEventCallback2* pCallback,  
+   GUID*                 rgguidSpecificEngines,  
+   DWORD                 celtSpecificEngines,  
+   HRESULT*              rghrEngineAttach  
 );  
 ```  
   
-```c#  
-int Attach(   
-   IDebugEventCallback2 pCallback,  
-   Guid[]               rgguidSpecificEngines,  
-   uint                 celtSpecificEngines,  
-   int[]                rghrEngineAttach  
+```cs  
+int Attach(   
+   IDebugEventCallback2 pCallback,  
+   Guid[]               rgguidSpecificEngines,  
+   uint                 celtSpecificEngines,  
+   int[]                rghrEngineAttach  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pCallback`  
- \[入力\] デバッグ イベント通知のために使用される [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) のオブジェクト。  
+ [in] An [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) object that is used for debug event notification.  
   
  `rgguidSpecificEngines`  
- \[出力\] プロセスで実行するプログラム デバッグに使用するデバッグ エンジンの GUID の配列。  このパラメーターは null になることがあります。  詳細については" 解説 " を参照してください。  
+ [in] An array of GUIDs of debug engines to be used to debug programs running in the process. This parameter can be a null value. See Remarks for details.  
   
  `celtSpecificEngines`  
- \[入力\] `rghrEngineAttach` の配列の `rgguidSpecificEngines` の配列とサイズのデバッグ エンジンの数。  
+ [in] The number of debug engines in the `rgguidSpecificEngines` array and the size of the `rghrEngineAttach` array.  
   
  `rghrEngineAttach`  
- \[入力出力\] HRESULT コードの配列はデバッグ エンジンによって返される。  配列のサイズは `celtSpecificEngines` のパラメーターで指定されます。  各コードは`S_OK` または `S_ATTACH_DEFERRED` です。  後者は機能しますがプログラムに現在割り当てられていないことを示します。  
+ [in, out] An array of HRESULT codes returned by the debug engines. The size of this array is specified in the `celtSpecificEngines` parameter. Each code is typically either `S_OK` or `S_ATTACH_DEFERRED`. The latter indicates that the DE is currently attached to no programs.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  次の表は他の値を示します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. The following table shows other possible values.  
   
-|値|Description|  
-|-------|-----------------|  
-|`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|指定されたプロセスがデバッガーに既にアタッチされます。|  
-|`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|セキュリティ違反が前の手順の間に発生しました。|  
-|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|デスクトップ プロセスにデバッガーをアタッチすることはできません。|  
+|Value|Description|  
+|-----------|-----------------|  
+|`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|The specified process is already attached to the debugger.|  
+|`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|A security violation occurred during the attach procedure.|  
+|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|A desktop process cannot be attached to the debugger.|  
   
-## 解説  
- プロセスへのアタッチを `rgguidSpecificEngines` の配列で指定したデバッグ エンジン \(DE\) がデバッグできるそのプロセスを実行するすべてのプログラムで SDM をアタッチします。  `rgguidSpecificEngines` のパラメーターを null 値に設定するかまたは配列にプロセスのすべてのプログラムにアタッチするに `GUID_NULL` を追加します。  
+## <a name="remarks"></a>Remarks  
+ Attaching to a process attaches the SDM to all programs running in that process that can be debugged by the debug engines (DE) specified in the `rgguidSpecificEngines` array. Set the `rgguidSpecificEngines` parameter to a null value or include `GUID_NULL` in the array to attach to all programs in the process.  
   
- プロセスに発生するすべてのデバッグ イベントは[IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) の特定のオブジェクトに送信されます。  `IDebugEventCallback2`このオブジェクトは SDM がこのメソッドを呼び出すと提供されます。  
+ All debug events that occur in the process are sent to the given [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) object. This `IDebugEventCallback2` object is provided when the SDM calls this method.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

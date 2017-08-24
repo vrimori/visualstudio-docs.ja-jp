@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: 初めての WPF デスクトップ アプリケーション 2 | Microsoft Docs"
+title: 'Walkthrough: My First WPF Desktop Application2 | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,57 +28,57 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 6045516b1be3ed5a603751e71a720090a5e0fe50
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1496b93aafc43793b2b0c97d24ba0dbb0666fa2f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
-<a name="introduction"></a> このチュートリアルを、Windows Presentation Foundation (WPF) 開発入門としてご利用ください。 ここでは、ほとんどの WPF デスクトップ アプリケーションに共通する要素 (XAML マークアップ、分離コード、アプリケーション定義、コントロール、レイアウト、データ バインディング、スタイル) を含む基本的なアプリケーションを作成します。  
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>Walkthrough: My First WPF Desktop Application
+<a name="introduction"></a> This walkthrough provides an introduction to Windows Presentation Foundation (WPF) development. You'll create a basic application that includes the elements that are common to most WPF desktop applications: XAML markup, code-behind, application definitions, controls, layout, data binding, and styles.  
   
-##  <a name="Create_The_Application_Code_Files"></a> アプリケーション プロジェクトの作成  
- このセクションでは、プロジェクトとメイン ウィンドウまたはフォームを含むアプリケーション インフラストラクチャを作成します。  
+##  <a name="Create_The_Application_Code_Files"></a> Creating the Application Project  
+ In this section, you'll create the application infrastructure, which includes the project and a main window or form.  
   
-#### <a name="to-create-the-project"></a>プロジェクトを作成するには  
+#### <a name="to-create-the-project"></a>To create the project  
   
-1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
+1.  On the menu bar, choose **File**, **New**, **Project**.  
   
-2.  **[新しいプロジェクト]** ダイアログで、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードを展開し、 **[Windows]** ノードを選択して **[Windows]** ノードを展開してから **[従来の (クラシック) デスクトップ]** ノードを選択します。  
+2.  In the **New Project** dialog, expand either the **Visual C#** or **Visual Basic** node and choose the **Windows** node, and then expand the **Windows** node and choose the **Classic Desktop** node.  
   
-3.  テンプレートの一覧で、 **[WPF アプリケーション]** テンプレートを選択します。  
+3.  In the template list, choose the **WPF Application** template.  
   
-4.  **[名前]** ボックスに「 `ExpenseIt`」と入力して、 **[OK]** を選択します。  
+4.  In the **Name** textbox enter `ExpenseIt`, and then choose the **OK** button.  
   
-     プロジェクトが作成され、プロジェクト ファイルが **ソリューション エクスプローラー**に追加され、 **MainWindow.xaml** という名前の既定のアプリケーション ウィンドウのデザイナーが表示されます。  
+     The project is created and the project files are added to **Solution Explorer**, and the designer for the default application window named **MainWindow.xaml** is displayed.  
   
-#### <a name="to-modify-the-main-window"></a>メイン ウィンドウを変更するには  
+#### <a name="to-modify-the-main-window"></a>To modify the main window  
   
-1.  デザイナーで **[MainWindow.xaml]** タブがアクティブでなければ、このタブを選択します。  
+1.  In the designer, choose the **MainWindow.xaml** tab if it isn't already the active designer tab.  
   
-2.  C# を使用する場合は、`<Window x:Class="ExpenseIt.MainWindow"` という行を見つけ、その行を `<NavigationWindow x:Class="ExpenseIt.MainWindow"` に置き換えます。  
+2.  If you're using C#, find the line `<Window x:Class="ExpenseIt.MainWindow"` and replace it with `<NavigationWindow x:Class="ExpenseIt.MainWindow"`.  
   
-     Visual Basic を使用する場合は、`<Window x:Class=" MainWindow"` という行を見つけ、その行を `<NavigationWindow x:Class="MainWindow"` に置き換えます。  
+     If you're using Visual Basic, find the line `<Window x:Class=" MainWindow"` and replace it with `<NavigationWindow x:Class="MainWindow"`.  
   
-     `<Window` タグを `<NavigationWindow`に変更すると、Intellisense によって終了タグも `</NavigationWindow>` に自動的に変更されます。  
+     Notice that when you change the `<Window` tag to `<NavigationWindow`, Intellisense automatically changes the closing tag to `</NavigationWindow>` as well.  
   
     > [!NOTE]
-    >  タグを変更した後、 **[エラー一覧]** ウィンドウが開いていると、エラーがいくつか表示される場合があります。 心配しないでください。この後の手順で加える変更でそれらのエラーは解消されます。  
+    >  After changing the tag, if the **Error List** window is open you may notice several errors. Don't worry, the changes you make in the next few steps will make these go away.  
   
-3.  `<Grid>` と `</Grid>` のタグを選択して削除します。  
+3.  Choose the `<Grid>` and `</Grid>` tags and delete them.  
   
-     **NavigationWindow** に、**グリッド**などの他の UI 要素を含めることはできません。  
+     A **NavigationWindow** can't contain other UI elements such as a **Grid**.  
   
-4.  **[プロパティ]** ウィンドウで、 **Common** カテゴリ ノードを展開し **[Title]** プロパティを選択してから、「 `ExpenseIt` 」と入力して **Enter** キーを押します。  
+4.  In the **Properties** window, expand the **Common** category node and choose the **Title** property, and then enter `ExpenseIt` and press the **Enter** key.  
   
-     [XAML] ウィンドウの **[Title]** 要素がこの新しい値と一致していることに注目してください。 XAML のプロパティは、[XAML] ウィンドウまたは **[プロパティ]** ウィンドウのいずれかで変更でき、それらの変更は同期されます。  
+     Notice that the **Title** element in the XAML window changes to match the new value. You can modify XAML properties in either the XAML window or the **Properties** window, and the changes are synchronized.  
   
-5.  [XAML] ウィンドウで **[高さ]** 要素の値を `375`に設定し、 **[幅]** プロパティの値を `500`の順にクリックします。  
+5.  In the XAML window, set the value of the **Height** element to `375`, and set the value of the **Width** property to `500`.  
   
-     これらの要素は、 **[プロパティ]** ウィンドウの **[レイアウト]** カテゴリにある **[高さ]** プロパティと **[幅]** プロパティに対応します。  
+     These elements correspond to the **Height** and **Width** properties, found in the **Layout** category in the **Properties** window.  
   
-     **MainWindow.xaml** ファイルは C# では次のようになります。  
+     Your **MainWindow.xaml** file should now look like this in C#:  
   
     ```xaml  
     <NavigationWindow x:Class="ExpenseIt.MainWindow"  
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/13/2017
     </NavigationWindow>  
     ```  
   
-     また、Visual Basic では次のようになります。  
+     Or like this in Visual Basic:  
   
     ```xaml  
     <NavigationWindow x:Class="MainWindow"  
@@ -108,30 +108,30 @@ ms.lasthandoff: 05/13/2017
     </NavigationWindow>  
     ```  
   
-#### <a name="to-modify-the-code-behind-file-c"></a>分離コード ファイルを変更するには (C#)  
+#### <a name="to-modify-the-code-behind-file-c"></a>To modify the code-behind file (C#)  
   
-1.  **ソリューション エクスプローラー**で **[MainWindow.xaml]** ノードを展開し、 **MainWindow.xaml.cs** ファイルを開きます。  
+1.  In **Solution Explorer**, expand the **MainWindow.xaml** node and open the **MainWindow.xaml.cs** file.  
   
-2.  `public partial class MainWindow : Window` という行を見つけ、その行を `public partial class MainWindow : NavigationWindow`に置き換えます。  
+2.  Find the line `public partial class MainWindow : Window` and replace it with `public partial class MainWindow : NavigationWindow`.  
   
-     これにより、 `MainWindow` クラスが `NavigationWindow`から派生するように変更されます。 Visual Basic では、これは XAML でウィンドウを変更すると自動的に実行されます。そのため、コードを変更する必要はありません。  
+     This changes the `MainWindow` class to derive from `NavigationWindow`. In Visual Basic, this happens automatically when you change the window in XAML, so no code changes are necessary.  
   
-##  <a name="add_files_to_the_application"></a> ファイルのアプリケーションへの追加  
- このセクションでは、アプリケーションに 2 つのページと 1 つのイメージを追加します。  
+##  <a name="add_files_to_the_application"></a> Adding Files to the Application  
+ In this section, you'll add two pages and an image to the application.  
   
-#### <a name="to-add-a-home-screen"></a>ホーム画面を追加するには  
+#### <a name="to-add-a-home-screen"></a>To add a home screen  
   
-1.  **ソリューション エクスプローラー**で **[ExpenseIt]** ノードのショートカット メニューを開き、 **[追加]**、 **[ページ]**を選択します。  
+1.  In **Solution Explorer**, open the shortcut menu for the **ExpenseIt** node and choose **Add**, **Page**.  
   
-2.  **[新しい項目の追加]** ダイアログで **[名前]** テキスト ボックスを選択して「 `ExpenseItHome`」と入力し、 **[追加]** ボタンを選択します。  
+2.  In the **Add New Item** dialog, choose the **Name** text box and enter `ExpenseItHome`, and then choose the **Add** button.  
   
-     このページが、アプリケーションの起動時に表示される最初のウィンドウになります。  
+     This page is the first window that is displayed when the application is launched.  
   
-3.  デザイナーで **[ExpenseItHome.xaml]** タブがアクティブでなければ、このタブを選択します。  
+3.  In the designer, choose the **ExpenseItHome.xaml** tab if it isn't already the active designer tab.  
   
-4.  `<Title>` 要素を選択し、タイトルを "**ExpenseIt – ホーム**" に変更します。  
+4.  Choose the `<Title>` element and change the title to **ExpenseIt - Home**.  
   
-     **ExpenseItHome.xaml** ファイルは C# では次のようになります。  
+     Your **ExpenseItHome.xaml** file should now look like this in C#:  
   
     ```xaml  
     <Page x:Class="ExpenseIt.ExpenseItHome"  
@@ -150,7 +150,7 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-     また、Visual Basic では次のようになります。  
+     Or like this in Visual Basic:  
   
     ```xaml  
     <Page x:Class="ExpenseItHome"  
@@ -168,11 +168,11 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-5.  デザイナーで **MainWindow.xaml** タブを選択します。  
+5.  In the designer, choose the **MainWindow.xaml** tab.  
   
-6.  行 `Title="ExpenseIt" Height="375" Width="500">` 要素を見つけ、 `Source="ExpenseItHome.xaml"` プロパティを追加します。  
+6.  Find the line `Title="ExpenseIt" Height="375" Width="500">` element and add a `Source="ExpenseItHome.xaml"` property.  
   
-     これにより、 **ExpenseItHome.xaml** が、アプリケーションの起動時に最初に開くページになります。 **MainWindow.xaml** ファイルは C# では次のようになります。  
+     This sets **ExpenseItHome.xaml** to be the first page opened when the application starts. Your **MainWindow.xaml** file should now look like this in C#:  
   
     ```xaml  
     <NavigationWindow x:Class="ExpenseIt.MainWindow"  
@@ -187,7 +187,7 @@ ms.lasthandoff: 05/13/2017
     </NavigationWindow>  
     ```  
   
-     また、Visual Basic では次のようになります。  
+     Or like this in Visual Basic:  
   
     ```xaml  
     NavigationWindow x:Class="MainWindow"  
@@ -202,21 +202,21 @@ ms.lasthandoff: 05/13/2017
     </NavigationWindow>  
     ```  
   
-     これまでに設定したプロパティと同様に、 `Source` [プロパティ] **ウィンドウの** [その他] **カテゴリの** プロパティを設定できます。  
+     As with the properties that you set earlier, you could have set the `Source` property in the **Miscellaneous** category of the **Properties** window.  
   
-#### <a name="to-add-a-details-window"></a>詳細ウィンドウを追加するには  
+#### <a name="to-add-a-details-window"></a>To add a details window  
   
-1.  **ソリューション エクスプローラー**で **[ExpenseIt]** ノードのショートカット メニューを開き、 **[追加]**、 **[ページ]**を選択します。  
+1.  In **Solution Explorer**, open the shortcut menu for the **ExpenseIt** node and choose **Add**, **Page**.  
   
-2.  **[新しい項目の追加]** ダイアログで **[名前]** テキスト ボックスを選択して「 `ExpenseReportPage`」と入力し、 **[追加]** ボタンを選択します。  
+2.  In the **Add New Item** dialog, choose the **Name** text box and enter `ExpenseReportPage`, and then choose the **Add** button.  
   
-     このウィンドウには、個々の経費明細書が表示されます。  
+     This window will display an individual expense report.  
   
-3.  デザイナーで **[ExpenseReportPage.xaml]** タブがアクティブでなければ、このタブを選択します。  
+3.  In the designer, choose the **ExpenseReportPage.xaml** tab if it isn't already the active designer tab.  
   
-4.  `<Title>` 要素を選択し、タイトルを "**ExpenseIt – 経費の表示**" に変更します。  
+4.  Choose the `<Title>` element and change the title to **ExpenseIt - View Expense**.  
   
-     ExpenseReportPage.xaml ファイルは C# では次のようになります。  
+     Your ExpenseReportPage.xaml file should now look like this in C#:  
   
     ```xaml  
     Page x:Class="ExpenseIt.ExpenseReportPage"  
@@ -235,7 +235,7 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-     また、Visual Basic では次のようになります。  
+     Or like this in Visual Basic:  
   
     ```xaml  
     <Page x:Class="ExpenseReportPage"  
@@ -253,26 +253,26 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-5.  メニュー バーで、 **[デバッグ]**、 **[デバッグ開始]** の順に選択して (または F5 キーを押して) アプリケーションを実行します。  
+5.  On the menu bar, choose **Debug**, **Start Debugging** (or press F5) to run the application.  
   
-     次の図は、ナビゲーション ウィンドウ ボタンが配置されたアプリケーションを示しています。  
+     The following illustration shows the application with the navigation window buttons.  
   
-     ![ExpenseIt のサンプルのスクリーン ショット](~/designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
+     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
   
-6.  アプリケーションを閉じてデザイン モードに戻ります。  
+6.  Close the application to return to design mode.  
   
-##  <a name="Add_Layout"></a> ユーザー インターフェイスの作成  
- レイアウトを使用すると、順序付けされた方法で要素を配置できます。また、フォームのサイズが変更された場合の要素のサイズと位置が管理されます。 このセクションでは、3 つの行を持つ単一列のグリッドを作成します。 2 つのページにコントロールを追加し、いくつかのコードを追加して、最後にコントロールの再利用可能なスタイルを定義します。  
+##  <a name="Add_Layout"></a> Creating the User Interface  
+ Layout provides an ordered way to place elements, and also manages the size and position of those elements when a form is resized. In this section, you'll create a single-column grid with three rows. You'll add controls to the two pages, add some code, and finally define reusable styles for the controls.  
   
-#### <a name="to-create-the-layout"></a>レイアウトを作成するには  
+#### <a name="to-create-the-layout"></a>To create the layout  
   
-1.  **ExpenseItHome.xaml** を開き、 `<Grid>` 要素を選択します。  
+1.  Open **ExpenseItHome.xaml** and choose the `<Grid>` element.  
   
-2.  **[プロパティ]** ウィンドウで **[高さ]** カテゴリ ノードを展開し、 **[余白]** の値を `10`、 `10`、 `0`、 and `10`、 which corresponds to left、 right、 top and bottom margins.  
+2.  In the **Properties** window, expand the **Layout** category node and set the **Margin** values to `10`, `10`, `0`, and `10`, which corresponds to left, right, top and bottom margins.  
   
-     要素 `Margin="10,0,10,10"` は XAML 内の `<Grid>` 要素に追加されます。 繰り返しになりますが、 **[プロパティ]** ウィンドウの代わりに XAML コード内にこれらの値を直接入力しても同じ結果になります。  
+     The element `Margin="10,0,10,10"` is added to the `<Grid>` element in the XAML. Once again, you could have entered these values directly in the XAML code instead of in the **Properties** window with the same result.  
   
-3.  次の XAML コードを `Grid` 要素に追加して、行と列の定義を作成します。  
+3.  Add the following XAML code to the `Grid` element to create the row and column definitions:  
   
     ```xaml  
     <Grid.ColumnDefinitions>  
@@ -285,11 +285,11 @@ ms.lasthandoff: 05/13/2017
     </Grid.RowDefinitions>  
     ```  
   
-#### <a name="to-add-controls"></a>コントロールを追加するには  
+#### <a name="to-add-controls"></a>To add controls  
   
-1.  **ExpenseItHome.xaml**を開きます。  
+1.  Open **ExpenseItHome.xaml**.  
   
-2.  次の XAML コードを `</Grid>` タグのすぐ上に追加して、 `Border`、 `ListBox` 、および `Button` コントロールを作成します。  
+2.  Add the following XAML code just above the `</Grid>` tag to create the `Border`, `ListBox` and `Button` controls.  
   
     ```xaml  
     <!-- People list -->  
@@ -309,31 +309,31 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-     これらのコントロールがデザイン ウィンドウに表示されたことを確認してください。 コントロールを **[ツールボックス]** ウィンドウからデザイン ウィンドウにドラッグし、 **[プロパティ]** ウィンドウでプロパティを設定することよって、コントロールを作成することもできます。  
+     Notice that the controls appear in the design window. You could also have created the controls by dragging them from the **Toolbox** window onto the design window and setting their properties in the **Properties** window.  
   
-3.  アプリケーションをビルドして実行します。 次の図は、この手順によって XAML で作成されるコントロールの実行時の外観を示しています。  
+3.  Build and run the application. The following illustration shows the run time appearance of the controls that are created by the XAML in this procedure.  
   
-     ![ExpenseIt のサンプルのスクリーン ショット](~/designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
+     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
   
-4.  アプリケーションを閉じてデザイン モードに戻ります。  
+4.  Close the application to return to design mode.  
   
-#### <a name="to-add-a-background-image"></a>背景イメージを追加するには  
+#### <a name="to-add-a-background-image"></a>To add a background image  
   
-1.  次のイメージを選択し、`watermark.png` として保存します。  
+1.  Choose the following image and save it as `watermark.png`.  
   
-     ![チュートリアル ](../designers/media/wpf_watermark.png "WPF_watermark のウォーターマーク イメージ")  
-  
-    > [!NOTE]
-    >  または、独自のイメージを作成し、`watermark.png` として保存します。  
-  
-2.  **ソリューション エクスプローラー**で **[ExpenseIt]** ノードのショートカット メニューを開き、 **[追加]**、 **[既存の項目]**を選択します。  
-  
-3.  **[既存項目の追加]** ダイアログで、追加したばかりの **watermark.png** イメージを探して選択し、 **[追加]** ボタンを選択します。  
+     ![Watermark image for walkthrough](../designers/media/wpf_watermark.png "WPF_watermark")  
   
     > [!NOTE]
-    >  **[ファイルの種類]** リストを展開し、 **[イメージ ファイル]**を選択する必要がある場合があります。  
+    >  Alternatively you can create your own image and save it as `watermark.png`.  
   
-4.  **ExpenseItHome.xaml** ファイルを開き、次の XAML コードを `</Grid>` タグのすぐ上に追加し、背景イメージを作成します。  
+2.  In **Solution Explorer**, open the shortcut menu for the **ExpenseIt** node and choose **Add**, **Existing Item**.  
+  
+3.  In the **Add Existing Item** dialog, find the **watermark.png** image that you just added, choose it and then choose the **Add** button.  
+  
+    > [!NOTE]
+    >  You may need to expand the **File Types** list and choose **Image Files**.  
+  
+4.  Open the **ExpenseItHome.xaml** file and add the following XAML code just above the `</Grid>` tag to create a background image:  
   
     ```xaml  
     <Grid.Background>  
@@ -342,37 +342,37 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-#### <a name="to-add-a-title"></a>タイトルを追加するには  
+#### <a name="to-add-a-title"></a>To add a title  
   
-1.  **ExpenseItHome.xaml**を開きます。  
+1.  Open **ExpenseItHome.xaml**.  
   
-2.  行 `<Grid.ColumnDefinitions>` を見つけ、そのすぐ下に次を追加します。  
+2.  Find the line `<Grid.ColumnDefinitions>` and add the following just below it:  
   
     ```xaml  
     <ColumnDefinition Width="230" />  
   
     ```  
   
-     これにより、他の列の左側に、追加の列が 230 ピクセルの固定幅で作成されます。  
+     This creates an additional column to the left of the other columns with a fixed width of 230 pixels.  
   
-3.  行 `<Grid.RowDefinitions>` を見つけ、そのすぐ下に次を追加します。  
+3.  Find the line `<Grid.RowDefinitions>` and add the following just below it:  
   
     ```xaml  
     <RowDefinition />  
   
     ```  
   
-     これにより、グリッドの上部に行が追加されます。  
+     This adds a row to the top of the grid.  
   
-4.  `Grid.Column` の値を 1 に設定して、2 番目の列にコントロールを移動します。 それぞれの `Grid.Row` の値を 1 つずつ増やして、各コントロールを 1 行下に移動します。  
+4.  Move the controls to the second column by setting the `Grid.Column` value to 1. Move each control down a row, by increasing each `Grid.Row` value by 1.  
   
-    1.  行 `<Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">`を見つけます。 `Grid.Column="0"` を `Grid.Column="1"` に変更して、 `Grid.Row="0"` を `Grid.Row="1"`に変更します。  
+    1.  Find the line `<Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">`. Change `Grid.Column="0"` to `Grid.Column="1"` and change `Grid.Row="0"` to `Grid.Row="1"`.  
   
-    2.  行 `<ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1"`を見つけます。 `Grid.Column="0"` を `Grid.Column="1"` に変更して、 `Grid.Row="1"` を `Grid.Row="2"`に変更します。  
+    2.  Find the line `<ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1"`. Change `Grid.Column="0"` to `Grid.Column="1"` and change `Grid.Row="1"` to `Grid.Row="2"`.  
   
-    3.  行 `<Button Grid.Column="0" Grid.Row="2" Margin="0,10,0,0" Width="125"`を見つけます。 `Grid.Column="0"` を `Grid.Column="1"` に変更して、 `Grid.Row="2"` を `Grid.Row="3"`に変更します。  
+    3.  Find the line `<Button Grid.Column="0" Grid.Row="2" Margin="0,10,0,0" Width="125"`. Change `Grid.Column="0"` to `Grid.Column="1"` and change `Grid.Row="2"` to `Grid.Row="3"`.  
   
-5.  `<Border` 要素の直前に、次の XAML コードを追加してタイトルを表示します。  
+5.  Just before the `<Border` element add the following XAML code to display the title:  
   
     ```xaml  
     <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS"   
@@ -382,7 +382,7 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-     **ExpenseItHome.xaml** ファイルの内容は、C# では次のようになります。  
+     The contents of **ExpenseItHome.xaml** should now look like this in C#:  
   
     ```xaml  
     <Page x:Class="ExpenseIt.ExpenseItHome"  
@@ -430,7 +430,7 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-     また、Visual Basic では次のようになります。  
+     Or like this in Visual Basic:  
   
     ```xaml  
     <Page x:Class="ExpenseItHome"  
@@ -478,17 +478,17 @@ ms.lasthandoff: 05/13/2017
     </Page>  
     ```  
   
-6.  この時点でアプリケーションをビルドして実行すると、次の図のようになります。  
+6.  If you build and run the application at this point, it should look like the following illustration:  
   
-     ![ExpenseIt のサンプルのスクリーン ショット](~/designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
+     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
   
-#### <a name="to-add-code-to-the-button"></a>コードをボタンに追加するには  
+#### <a name="to-add-code-to-the-button"></a>To add code to the button  
   
-1.  **ExpenseItHome.xaml**を開きます。  
+1.  Open **ExpenseItHome.xaml**.  
   
-2.  `<Button` 要素を選択し、次の XAML コード **を、** HorizontalAlignment="Right" `Click="Button_Click"`要素の直後に追加します。  
+2.  Chose the `<Button` element and add the following XAML code immediately after the **HorizontalAlignment="Right"** element: `Click="Button_Click"`.  
   
-     これにより、ボタンの `Click` イベントのイベント ハンドラーが追加されます。 **<Button** 要素のコードは、次のようになります。  
+     This adds an event handler for the button's `Click` event. The **<Button** element code should now look like this:  
   
     ```  
     <!-- View report button -->  
@@ -496,11 +496,11 @@ ms.lasthandoff: 05/13/2017
     Height="25" HorizontalAlignment="Right" Click="Button_Click">View</Button>  
     ```  
   
-3.  **ExpenseItHome.xaml.cs** または **ExpenseItHome.xaml.vb** ファイルを開きます。  
+3.  Open the **ExpenseItHome.xaml.cs** or **ExpenseItHome.xaml.vb** file.  
   
-4.  `ExpenseItHome` クラスに次のコードを追加します。  
+4.  Add the following code to the `ExpenseItHome` class:  
   
-    ```c#  
+    ```cs  
     private void Button_Click(object sender, RoutedEventArgs e)  
     {  
         // View Expense Report  
@@ -518,15 +518,15 @@ ms.lasthandoff: 05/13/2017
     End Sub  
     ```  
   
-     このイベント ハンドラーは、ボタンがクリックされたときに経費明細書ページを開きます。  
+     This event handler opens the Expense Report Page when the button is clicked.  
   
-#### <a name="to-create-the-ui-for-the-report-page"></a>レポート ページの UI を作成するには  
+#### <a name="to-create-the-ui-for-the-report-page"></a>To create the UI for the report page  
   
-1.  **ExpenseReportPage.xaml**を開きます。  
+1.  Open **ExpenseReportPage.xaml**.  
   
-     このページには、ホーム ページで選択されたユーザーの経費明細書が表示されます。  
+     This page will display the expense report for the person that is selected on the Home page.  
   
-2.  `<Grid>` と `</Grid>` のタグの間に次の XAML を追加します。  
+2.  Add the following XAML code between the `<Grid>` and `</Grid>` tags:  
   
     ```xaml  
     <Grid.Background>  
@@ -590,23 +590,23 @@ ms.lasthandoff: 05/13/2017
     </Grid>  
     ```  
   
-     この UI はホーム ページで作成した UI と似ていますが、 **DataGrid** コントロールにレポート データが表示されます。  
+     This UI is similar to the UI created for the home page, but the report data is displayed in a **DataGrid** control.  
   
-3.  アプリケーションをビルドして実行します。  
+3.  Build and run the application.  
   
-4.  **[表示]** ボタンを選択します。  
+4.  Choose the **View** button.  
   
-     経費明細書ページが表示されます。  
+     The expense report page appears.  
   
-     次の図は、経費明細書ページを示しています。 [戻る] ナビゲーション ボタンが有効になっていることを確認してください。  
+     The following illustration shows the Expense Report Page. Notice that the back navigation button is enabled.  
   
-     ![ExpenseIt のサンプルのスクリーン ショット](../designers/media/gettingstartedfigure4.png "GettingStartedFigure4")  
+     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure4.png "GettingStartedFigure4")  
   
-#### <a name="to-style-controls"></a>コントロールのスタイルを設定するには  
+#### <a name="to-style-controls"></a>To style controls  
   
-1.  **App.xaml** ファイル (C#) または **Application.xaml** ファイル (Visual Basic) を開きます。  
+1.  Open the **App.xaml** file (C#) or **Application.xaml** file (Visual Basic).  
   
-2.  `<Application.Resources>` と `</Application.Resources>` のタグの間に次の XAML を追加します。  
+2.  Add the following XAML between the `<Application.Resources>` and `</Application.Resources>` tags:  
   
     ```xaml  
     <!-- Header text style -->  
@@ -657,21 +657,21 @@ ms.lasthandoff: 05/13/2017
     </Style>  
     ```  
   
-     この XAML は、次のスタイルを追加します。  
+     This XAML adds the following styles:  
   
-    -   `headerTextStyle`: ページ タイトル `Label`の書式を設定します。  
+    -   `headerTextStyle`: To format the page title `Label`.  
   
-    -   `labelStyle`: `Label` コントロールの書式を設定します。  
+    -   `labelStyle`: To format the `Label` controls.  
   
-    -   `columnHeaderStyle`: `DataGridColumnHeader`の書式を設定します。  
+    -   `columnHeaderStyle`: To format the `DataGridColumnHeader`.  
   
-    -   `listHeaderStyle`: リスト ヘッダーの `Border` コントロールの書式を設定します。  
+    -   `listHeaderStyle`: To format the list header `Border` controls.  
   
-    -   `listHeaderTextStyle`: リスト ヘッダー **Label**の書式を設定します。  
+    -   `listHeaderTextStyle`: To format the list header **Label**.  
   
-    -   `buttonStyle`: `Button` [ExpenseItHome.xaml] **ページの** の書式を設定します。  
+    -   `buttonStyle`: To format the `Button` on the **ExpenseItHome.xaml** pppage.  
   
-3.  **ExpenseItHome.xaml** を開き、 `<Grid>` と `</Grid>` の要素の間にあるすべてを次の XAML に置き換えます。  
+3.  Open **ExpenseItHome.xaml** and replace everything between the `<Grid>` and `</Grid>` elements with the following XAML  
   
     ```xaml  
     <Grid.ColumnDefinitions>  
@@ -706,9 +706,9 @@ ms.lasthandoff: 05/13/2017
             </Grid.Background>  
     ```  
   
-     各コントロールの外観を定義する `VerticalAlignment` や `FontFamily` などのプロパティは、これらのスタイルを適用することで、削除されて置き換えられます。  
+     The properties such as `VerticalAlignment` and `FontFamily` that define the look of each control are removed and replaced by applying the styles.  
   
-4.  **ExpenseReportPage.xaml** を開き、 `<Grid>` と最後の `</Grid>` の要素の間にあるすべてを次の XAML に置き換えます。  
+4.  Open **ExpenseReportPage.xaml** and replace everything between the `<Grid>` and final `</Grid>` elements with the following XAML  
   
     ```xaml  
     <Grid.Background>  
@@ -764,16 +764,16 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-     これにより、スタイルが `<Label>` と `<Border>` の要素に追加されます。  
+     This adds styles to the `<Label>` and `<Border>` elements.  
   
-## <a name="connecting-to-data"></a>データへの接続  
- このセクションでは、データ プロバイダーとデータ テンプレートを作成して、データを表示するコントロールを接続します。  
+## <a name="connecting-to-data"></a>Connecting to Data  
+ In this section, you'll create a data provider and a data template, and then connect the controls to display the data.  
   
-#### <a name="to-bind-data-to-a-control"></a>データをコントロールにバインドするには  
+#### <a name="to-bind-data-to-a-control"></a>To bind data to a control  
   
-1.  **ExpenseItHome.xaml** を開き、 `<Grid>` 要素を選択します。  
+1.  Open **ExpenseItHome.xaml** and choose the `<Grid>` element..  
   
-2.  次の XAML コードを追加します。  
+2.  Add the following XAML code:  
   
     ```xaml  
   
@@ -806,9 +806,9 @@ ms.lasthandoff: 05/13/2017
     </Grid.Resources>  
     ```  
   
-     このコードにより、各ユーザーのデータを格納する `XmlDataProvider` クラスが作成されます。 通常、これはファイルとして読み込まれますが、説明を簡単にするため、データをインラインで追加します。  
+     This code creates an `XmlDataProvider` class that contains the data for each person. Normally this would be loaded as a file, but for simplicity the data is added inline.  
   
-3.  `<Grid.Resources>` 要素内に、次の XAML コードを追加します。  
+3.  Inside the `<Grid.Resources>` element, add the following XAML code:  
   
     ```xaml  
     <!-- Name item template -->  
@@ -817,9 +817,9 @@ ms.lasthandoff: 05/13/2017
     </DataTemplate>  
     ```  
   
-     これにより、 `Data Template` ListBox **にデータを表示する方法を定義する**が追加されます。  
+     This adds a `Data Template` which defines how to display the data in the **ListBox**.  
   
-4.  既存の `<ListBox>` 要素を次の XAML に置き換えます。  
+4.  Replace the existing `<ListBox>` element with the following XAML.  
   
     ```xaml  
     <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2"   
@@ -828,15 +828,15 @@ ms.lasthandoff: 05/13/2017
     </ListBox>  
     ```  
   
-     このコードは、 `ItemsSource` の `ListBox` プロパティをデータ ソースにバインドし、データ テンプレートを `ItemTemplate`として適用します。  
+     This code binds the `ItemsSource` property of the `ListBox` to the data source and applies the data template as the `ItemTemplate`.  
   
-#### <a name="to-connect-data-to-controls"></a>コントロールにデータを接続するには  
+#### <a name="to-connect-data-to-controls"></a>To connect data to controls  
   
-1.  **ExpenseReportPage.xaml.vb** または **ExpenseReportPage.xaml.cs**を開きます。  
+1.  Open **ExpenseReportPage.xaml.vb** or **ExpenseReportPage.xaml.cs**.  
   
-2.  C# では、次のコンストラクターを **ExpenseReportPage** クラスに追加します。また、Visual Basic では、既存のクラスを次に置き換えます。  
+2.  In C#, add the following constructor to the **ExpenseReportPage** class, or in Visual Basic replace the existing class with the following:  
   
-    ```c#  
+    ```cs  
     // Custom constructor to pass expense report data  
         public ExpenseReportPage(object data):this()  
         {  
@@ -862,13 +862,13 @@ ms.lasthandoff: 05/13/2017
     End Class  
     ```  
   
-     このコンストラクターは、データ オブジェクトをパラメーターとして受け取ります。 この場合、データ オブジェクトには、選択したユーザーの名前が格納されます。  
+     This constructor takes a data object as a parameter. In this case the data object will contain the name of the selected person.  
   
-3.  **ExpenseItHome.xaml.vb** または **ExpenseItHome.xaml.cs**ファイルを開きます。  
+3.  Open **ExpenseItHome.xaml.vb** or **ExpenseItHome.xaml.cs**.  
   
-4.  `Click` イベント ハンドラー コードを次に置き換えます。  
+4.  Replace the `Click` event handler code with the following:  
   
-    ```c#  
+    ```cs  
     private void Button_Click(object sender, RoutedEventArgs e)  
     {  
         // View Expense Report  
@@ -886,13 +886,13 @@ ms.lasthandoff: 05/13/2017
     End Sub  
     ```  
   
-     このコードは、新しいコンストラクターを呼び出します。  
+     This code calls the new constructor.  
   
-#### <a name="to-update-the-ui-with-data-templates"></a>データ テンプレートを使用して UI を更新するには  
+#### <a name="to-update-the-ui-with-data-templates"></a>To update the UI with data templates  
   
-1.  **ExpenseReportPage.xaml**を開きます。  
+1.  Open **ExpenseReportPage.xaml**.  
   
-2.  **[名前]** と **Department**`<StackPanel` 要素の XAML コードを次に置き換えます。  
+2.  Replace the XAML code for the **Name** and **Department**`<StackPanel` elements with the following:  
   
     ```xaml  
     <!-- Name -->  
@@ -909,9 +909,9 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-     これにより、 **Label** コントロールを適切なデータ ソース プロパティにバインドします。  
+     This binds the **Label** controls to the appropriate data source properties.  
   
-3.  `<Grid>` 要素内に、次の XAML コードを追加します。  
+3.  Add the following XAML code inside the `<Grid>` element:  
   
     ```xaml  
     <!--Templates to display expense report data-->  
@@ -928,9 +928,9 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-     これにより、経費明細書データを表示する方法が定義されます。  
+     This defines how to display the expense report data.  
   
-4.  `<DataGrid>` 要素を次に置き換えます。  
+4.  Replace the `<DataGrid>` element with the following:  
   
     ```xaml  
     <!-- Expense type and Amount table -->  
@@ -944,54 +944,54 @@ ms.lasthandoff: 05/13/2017
     </DataGrid>  
     ```  
   
-     これにより、 **ItemSource** が追加され、経費品目のバインディングが定義されます。  
+     This adds an **ItemSource** and defines the bindings for the expense items.  
   
-5.  アプリケーションをビルドして実行します。  
+5.  Build and run the application.  
   
-6.  ユーザーを選択し、 **[表示]** ボタンを選択します。  
+6.  Choose a person and then choose the **View** button.  
   
-     次の図には、コントロール、レイアウト、スタイル、データ バインディング、データ テンプレートが適用された ExpenseIt アプリケーションの両方のページが示されています。  
+     The following illustration shows both pages of the ExpenseIt application with controls, layout, styles, data binding, and data templates applied.  
   
-     ![ExpenseIt のサンプルのスクリーン ショット](../designers/media/gettingstartedfigure5.png "GettingStartedFigure5")  
+     ![ExpenseIt sample screen shots](../designers/media/gettingstartedfigure5.png "GettingStartedFigure5")  
   
-##  <a name="Best_Practices"></a> ベスト プラクティス  
- このサンプルは、WPF の基礎を説明するものであり、アプリケーション開発のベスト プラクティスには従っていません。 WPF と .NET Framework のアプリケーション開発のベスト プラクティスの包括的な情報については、必要に応じて次のトピックを参照してください。  
+##  <a name="Best_Practices"></a> Best Practices  
+ This sample demonstrates the basics of WPF and, consequently, does not follow application development best practices. For comprehensive coverage of WPF and .NET Framework application development best practices, see the following topics as appropriate:  
   
--   ユーザー補助 - [ユーザー補助のベスト プラクティス](https://msdn.microsoft.com/en-us/library/aa350483\(v=vs.100\).aspx)  
+-   Accessibility - [Accessibility Best Practices](https://msdn.microsoft.com/en-us/library/aa350483\(v=vs.100\).aspx)  
   
--   セキュリティ - [Windows Presentation Foundation のセキュリティ](https://msdn.microsoft.com/en-us/library/aa970906\(v=vs.100\).aspx)  
+-   Security - [Windows Presentation Foundation Security](https://msdn.microsoft.com/en-us/library/aa970906\(v=vs.100\).aspx)  
   
--   ローカリゼーション - [WPF のグローバリゼーションおよびローカリゼーションの概要](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx)  
+-   Localization - [WPF Globalization and Localization Overview](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx)  
   
--   パフォーマンス - [WPF アプリケーションのパフォーマンスの最適化](https://msdn.microsoft.com/en-us/library/aa970683\(v=vs.100\).aspx)  
+-   Performance - [Optimizing WPF Application Performance](https://msdn.microsoft.com/en-us/library/aa970683\(v=vs.100\).aspx)  
   
-##  <a name="Whats_Next"></a> 次の内容  
- これで、WPF を使用してデスクトップ アプリケーションを作成するためのいくつかの手法を習得できました。 データ バインドされた WPF アプリケーションの構成要素についての基本を理解することもできました。 このトピックは決して網羅的なものではありませんが、このトピックの手法を基に、自分で学習を進められるようになったはずです。  
+##  <a name="Whats_Next"></a> What's Next  
+ You now have a number of techniques at your disposal for creating a desktop application by using WPF. You should now have a basic understanding of the building blocks of a data-bound WPF application. This topic is by no means exhaustive, but hopefully you also now have a sense of some of the possibilities you might discover on your own beyond the techniques in this topic.  
   
- WPF のアーキテクチャおよびプログラミング モデルの詳細については、次のトピックを参照してください。  
+ For more information about the WPF architecture and programming models, see the following topics:  
   
--   [WPF アーキテクチャ](https://msdn.microsoft.com/en-us/library/ms750441\(v=vs.100\).aspx)  
+-   [WPF Architecture](https://msdn.microsoft.com/en-us/library/ms750441\(v=vs.100\).aspx)  
   
--   [XAML の概要](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)  
+-   [XAML Overview](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)  
   
--   [依存関係プロパティの概要](https://msdn.microsoft.com/en-us/library/ms752914\(v=vs.100\).aspx)  
+-   [Dependency Properties Overview](https://msdn.microsoft.com/en-us/library/ms752914\(v=vs.100\).aspx)  
   
--   [レイアウト システム](https://msdn.microsoft.com/en-us/library/ms745058\(v=vs.100\).aspx)  
+-   [Layout System](https://msdn.microsoft.com/en-us/library/ms745058\(v=vs.100\).aspx)  
   
--   [スタイルおよびテンプレート](https://msdn.microsoft.com/en-us/library/bb613570\(v=vs.100\).aspx)  
+-   [Styles and Templates](https://msdn.microsoft.com/en-us/library/bb613570\(v=vs.100\).aspx)  
   
- アプリケーションの作成の詳細については、次のトピックを参照してください。  
+ For more information about creating applications, see the following topics:  
   
--   [アプリケーション開発の概要](https://msdn.microsoft.com/en-us/library/bb613549\(v=vs.100\).aspx)  
+-   [Application Development Overview](https://msdn.microsoft.com/en-us/library/bb613549\(v=vs.100\).aspx)  
   
--   [コントロールの概要](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)  
+-   [Controls Overview](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)  
   
--   [データ バインディングの概要](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)  
+-   [Data Binding Overview](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)  
   
--   [WPF のグラフィックス、アニメーション、およびメディアの概要](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)  
+-   [WPF Graphics, Animation, and Media Overview](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)  
   
--   [WPF のドキュメント](https://msdn.microsoft.com/en-us/library/ms748388\(v=vs.100\).aspx)  
+-   [Documents in WPF](https://msdn.microsoft.com/en-us/library/ms748388\(v=vs.100\).aspx)  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)   
- [Windows Presentation Foundation での最新のデスクトップ アプリケーションの作成](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
+## <a name="see-also"></a>See Also  
+ [Walkthrough: Create a WPF Desktop Application connected to an Azure Mobile Service](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)   
+ [Create Modern Desktop Applications with Windows Presentation Foundation](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)

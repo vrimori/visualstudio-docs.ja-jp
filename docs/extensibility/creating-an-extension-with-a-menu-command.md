@@ -1,58 +1,75 @@
 ---
-title: "メニュー コマンドを使用して拡張機能の作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "vspackage を作成します。"
-  - "vspackage"
-  - "チュートリアル"
-  - "visual studio パッケージ"
+title: Creating an Extension with a Menu Command | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- write a vspackage
+- vspackage
+- tutorials
+- visual studio package
 ms.assetid: f97104c8-2bcb-45c7-a3c9-85abeda8df98
 caps.latest.revision: 56
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 56
----
-# メニュー コマンドを使用して拡張機能の作成
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 83b337db3c5852ad4d1f31be966833de4e025d5a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-このチュートリアルでは、メモ帳を起動するメニュー コマンドを使用して拡張機能を作成する方法を示します。  
+---
+# <a name="creating-an-extension-with-a-menu-command"></a>Creating an Extension with a Menu Command
+This walkthrough shows how to create an extension with a menu command that launches Notepad.  
   
-## 必須コンポーネント  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## メニュー コマンドの作成  
+## <a name="creating-a-menu-command"></a>Creating a Menu Command  
   
-1.  という名前の VSIX プロジェクトを作成する **FirstMenuCommand**します。 VSIX プロジェクトのテンプレートを見つけることができます、 **新しいプロジェクト** \] ダイアログ ボックス \[ **Visual c\#\/機能拡張**します。  
+1.  Create a VSIX project named **FirstMenuCommand**. You can find the VSIX project template in the **New Project** dialog under **Visual C# / Extensibility**.  
   
-2.  プロジェクトを開いたら、という名前のカスタム コマンド項目テンプレートを追加 **FirstCommand**します。**ソリューション エクスプ ローラー**, プロジェクト ノードを右クリックして、選択 **追加\/\[新しい項目の**します。**新しい項目の追加** ダイアログ ボックスに移動 **Visual c\#\/機能拡張** を選択して **にカスタム コマンド**します。**名** ウィンドウの下部にあるフィールドに、コマンド ファイルの名前を変更する **FirstCommand.cs**します。  
+2.  When the project opens, add a custom command item template named **FirstCommand**. In the **Solution Explorer**, right-click the project node and select **Add / New Item**. In the **Add New Item** dialog, go to **Visual C# / Extensibility** and select **Custom Command**. In the **Name** field at the bottom of the window, change the command file name to **FirstCommand.cs**.  
   
-3.  プロジェクトをビルドし、デバッグを開始します。  
+3.  Build the project and start debugging.  
   
-     Visual Studio の実験用インスタンスが表示されます。 実験用インスタンスの詳細については、次を参照してください。 [実験用インスタンス](../extensibility/the-experimental-instance.md)します。  
+     The experimental instance of Visual Studio appears. For more information about the experimental instance, see [The Experimental Instance](../extensibility/the-experimental-instance.md).  
   
-4.  実験用インスタンスで開き、  **ツール\/拡張機能と更新プログラム** ウィンドウです。 確認する必要があります、 **FirstMenuCommand** 拡張機能は、ここです。 \(開く場合 **拡張機能と更新プログラム** 、作業には、Visual Studio のインスタンスでは表示されません **FirstMenuCommand**\)。  
+4.  In the experimental instance, open the  **Tools / Extensions and Updates** window. You should see the **FirstMenuCommand** extension here. (If you open **Extensions and Updates** in your working instance of Visual Studio, you won't see **FirstMenuCommand**).  
   
-     進んでください、 **ツール** 実験用インスタンスのメニュー。 はず **呼び出す FirstCommand** コマンドです。 この時点でのみ表示"FirstCommandPackage 内 FirstMenuCommand.FirstCommand.MenuItemCallback\(\)"を示すメッセージ ボックスです。 実際には、次のセクションで、このコマンドからメモ帳を起動する方法を見ていきます。  
+     Now go to the **Tools** menu in the experimental instance. You should see **Invoke FirstCommand** command. At this point it just brings up a message box that says "FirstCommandPackage Inside FirstMenuCommand.FirstCommand.MenuItemCallback()". We'll see how to actually start Notepad from this command in the next section.  
   
-## メニュー コマンドのハンドラーを変更します。  
- ここでメモ帳を起動するコマンド ハンドラーを更新します。  
+## <a name="changing-the-menu-command-handler"></a>Changing the Menu Command Handler  
+ Now let's update the command handler to start Notepad.  
   
-1.  デバッグを停止し、作業用インスタンスの Visual Studio に戻ります。 FirstCommand.cs ファイルを開き、次の追加ステートメントを使用します。  
+1.  Stop debugging and go back to your working instance of Visual Studio. Open the FirstCommand.cs file and add the following using statement:  
   
-    ```c#  
+    ```cs  
     using System.Diagnostics;  
     ```  
   
-2.  プライベート FirstCommand コンス トラクターを検索します。 ここコマンド サービスにコマンドがフックし、コマンド ハンドラーを指定します。 コマンド ハンドラーの名前を StartNotepad、次のように変更します。  
+2.  Find the private FirstCommand constructor. This is where the command is hooked up to the command service and the command handler is specified. Change the name of the command handler to StartNotepad, as follows:  
   
-    ```c#  
+    ```cs  
     private FirstCommand(Package package)  
     {  
         if (package == null)  
@@ -73,9 +90,9 @@ caps.handback.revision: 56
     }  
     ```  
   
-3.  MenuItemCallback メソッドを削除し、メモ帳が起動した StartNotepad メソッドを追加します。  
+3.  Remove the MenuItemCallback method and add a StartNotepad method which will just start Notepad:  
   
-    ```c#  
+    ```cs  
     private void StartNotepad(object sender, EventArgs e)  
     {  
         Process proc = new Process();  
@@ -84,52 +101,52 @@ caps.handback.revision: 56
     }  
     ```  
   
-4.  試してみましょう。 プロジェクトのデバッグを開始し、をクリックして **ツール\] を呼び出す FirstCommand**, 、メモ帳のインスタンスからエラーが表示されます。  
+4.  Now try it out. When you start debugging the project and click **Tools / Invoke FirstCommand**, you should see an instance of Notepad come up.  
   
-     インスタンスを使用する、 <xref:System.Diagnostics.Process> クラスはすべて、実行可能ファイルだけでなくメモ帳を実行します。 と共に使用して、calc.exe などです。  
+     You can use an instance of the <xref:System.Diagnostics.Process> class to run any executable, not just Notepad. Try it with calc.exe, for example.  
   
-## 実験用の環境をクリーンアップします。  
- 複数の拡張機能の開発またはだけさまざまなバージョンの拡張機能のコードの結果を表示する場合、実験用の環境が動作することを停止します。 この場合、リセット スクリプトを実行する必要があります。 呼び出された **Visual Studio 2015 の実験用インスタンスをリセット**, 、Visual Studio SDK の一部として出荷とします。 このスクリプトは、最初から起動できるように、実験用の環境から、拡張機能に対するすべての参照を削除します。  
+## <a name="cleaning-up-the-experimental-environment"></a>Cleaning up the Experimental Environment  
+ If you are developing multiple extensions, or just exploring outcomes with different versions of your extension code, your experimental environment may stop working the way it should. In this case, you should run the reset script. It's called **Reset the Visual Studio 2015 Experimental Instance**, and it ships as part of the Visual Studio SDK. This script removes all references to your extensions from the experimental environment, so you can start from scratch.  
   
- 2 つの方法のいずれかでこのスクリプトを取得できます。  
+ You can get to this script in one of two ways:  
   
-1.  デスクトップで、検索 **Visual Studio 2015 の実験用インスタンスをリセット**します。  
+1.  From the desktop, find **Reset the Visual Studio 2015 Experimental Instance**.  
   
-2.  コマンド プロンプトから次の手順を実行します。  
+2.  From the command line, run the following:  
   
     ```  
     <VSSDK installation>\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe /Reset /VSInstance=14.0 /RootSuffix=Exp && PAUSE  
   
     ```  
   
-## 拡張機能を展開します。  
- これで、思いどおりに実行されているツールの拡張機能がある場合は、ある友人や同僚と共有について考えてみましょう。 インストールされている Visual Studio 2015 を持っていればは、簡単です。 行う必要があるすべては、ビルドした .vsix ファイルを送信します。 \(必ずリリース モードでビルドする\)。  
+## <a name="deploying-your-extension"></a>Deploying your extension  
+ Now that you have your tool extension running the way you want, it's time to think about sharing it with your friends and colleagues. That's easy, as long as they have Visual Studio 2015 installed. All you have to do is send them the .vsix file you built. (Be sure to build it in Release mode.)  
   
- この拡張機能に .vsix ファイル FirstMenuCommand bin ディレクトリにあります。 具体的には、リリース構成を作成したと仮定した場合、それになります。  
+ You can find the .vsix file for this extension in the FirstMenuCommand bin directory. Specifically, assuming you have built the Release configuration, it will be in:  
   
- **\< コード ディレクトリ \> \\FirstMenuCommand\\FirstMenuCommand\\bin\\Release\\ FirstMenuCommand.vsix**  
+ **\<code directory>\FirstMenuCommand\FirstMenuCommand\bin\Release\ FirstMenuCommand.vsix**  
   
- 友人を拡張機能をインストールするには、Visual Studio の開いているすべてのインスタンスを閉じてから、起動を .vsix ファイルをダブルクリックする必要がある、 **VSIX インストーラー**します。 ファイルがコピー、 **%LocalAppData%\\Microsoft\\VisualStudio\\14.0\\Extensions** ディレクトリ。  
+ To install the extension, your friend needs to close all open instances of Visual Studio, then double-click the .vsix file, which brings up the **VSIX Installer**. The files are copied to the **%LocalAppData%\Microsoft\VisualStudio\14.0\Extensions** directory.  
   
- 友人は、Visual Studio をもう一度表示、彼がわかります FirstMenuCommand 拡張子 **ツール\/拡張機能と更新プログラム**します。 アクセスする彼が **拡張機能と更新プログラム** をアンインストールするかも、拡張機能を無効にします。  
+ When your friend brings up Visual Studio again, he'll find the FirstMenuCommand extension in **Tools / Extensions and Updates**. He can go to **Extensions and Updates** to uninstall or disable the extension, too.  
   
-## 次の手順  
- このチュートリアルでは、Visual Studio 拡張機能で何ができるのごく一部のみを説明します。 Visual Studio 拡張機能で行うことができます \(比較的簡単\) などの簡単な一覧を次に示します。  
+## <a name="next-steps"></a>Next Steps  
+ This walkthrough has shown you only a small part of what you can do with a Visual Studio extension. Here's a short list of other (reasonably easy) things you can do with Visual Studio extensions:  
   
-1.  多くの単純なメニュー コマンドを使用して行うことができます。  
+1.  You can do many more things with a simple menu command:  
   
-    1.  独自のアイコンを追加します。 [メニュー コマンドにアイコンを追加します。](../extensibility/adding-icons-to-menu-commands.md)  
+    1.  Add your own icon: [Adding Icons to Menu Commands](../extensibility/adding-icons-to-menu-commands.md)  
   
-    2.  メニュー コマンドのテキストを変更します。 [メニュー コマンドのテキストを変更します。](../extensibility/changing-the-text-of-a-menu-command.md)  
+    2.  Change the text of the menu command: [Changing the Text of a Menu Command](../extensibility/changing-the-text-of-a-menu-command.md)  
   
-    3.  コマンドをメニューのショートカットを追加します。 [メニュー項目にバインドのキーボード ショートカット](../extensibility/binding-keyboard-shortcuts-to-menu-items.md)  
+    3.  Add a menu shortcut to a command: [Binding Keyboard Shortcuts to Menu Items](../extensibility/binding-keyboard-shortcuts-to-menu-items.md)  
   
-2.  さまざまな種類のコマンド、メニューのおよびツールバーを追加します。 [拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)  
+2.  Add different kinds of commands, menus, and toolbars: [Extending Menus and Commands](../extensibility/extending-menus-and-commands.md)  
   
-3.  ツール ウィンドウを追加し、組み込みの Visual Studio のツール ウィンドウを拡張します。 [拡張とカスタマイズ ツール ウィンドウ](../extensibility/extending-and-customizing-tool-windows.md)  
+3.  Add tool windows and extend the built-in Visual Studio tool windows: [Extending and Customizing Tool Windows](../extensibility/extending-and-customizing-tool-windows.md)  
   
-4.  既存のコード エディターには、IntelliSense、コードの推奨事項、およびその他の機能を追加します。 [エディターと言語サービスの拡張](../extensibility/extending-the-editor-and-language-services.md)  
+4.  Add IntelliSense, code suggestions, and other features to existing code editors: [Extending the Editor and Language Services](../extensibility/extending-the-editor-and-language-services.md)  
   
-5.  オプションとプロパティ ページやユーザー設定、拡張機能を追加します [プロパティと \[プロパティ\] ウィンドウの拡張](../Topic/Extending%20Properties%20and%20the%20Property%20Window.md) と。 [ユーザー設定の拡張とオプション](../extensibility/extending-user-settings-and-options.md)  
+5.  Add Options and Property pages and user settings to your extension: [Extending Properties and the Property Window](../extensibility/extending-properties-and-the-property-window.md) and [Extending User Settings and Options](../extensibility/extending-user-settings-and-options.md)  
   
- その他の種類の拡張機能プロジェクトの新しい種類の作成などのもう少し作業が必要に \([プロジェクトの拡張](../extensibility/extending-projects.md)\)、エディターの新しい型を作成する \([カスタム エディターとデザイナーを作成します。](../extensibility/creating-custom-editors-and-designers.md)\)、または分離されたシェルで、拡張機能を実装します。 [Visual Studio シェルの分離](../extensibility/visual-studio-isolated-shell.md)
+ Other kinds of extensions require a little more work, such as creating a new type of project ([Extending Projects](../extensibility/extending-projects.md)), creating a new type of editor ([Creating Custom Editors and Designers](../extensibility/creating-custom-editors-and-designers.md)), or implementing your extension in an isolated shell: [Visual Studio Isolated Shell](../extensibility/visual-studio-isolated-shell.md)

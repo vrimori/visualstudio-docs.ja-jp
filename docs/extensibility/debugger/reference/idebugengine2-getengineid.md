@@ -1,54 +1,71 @@
 ---
-title: "IDebugEngine2::GetEngineID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine2::GetEngineID"
-helpviewer_keywords: 
-  - "IDebugEngine2::GetEngineID"
+title: IDebugEngine2::GetEngineID | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngine2::GetEngineID
+helpviewer_keywords:
+- IDebugEngine2::GetEngineID
 ms.assetid: 0d5674c8-a9b9-4b72-8211-d2d68695775a
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugEngine2::GetEngineID
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 0f680816fb7471334cb081e8d9bcac07faf92a87
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-デバッグ エンジン \(DE\) の GUID を取得します。  
+---
+# <a name="idebugengine2getengineid"></a>IDebugEngine2::GetEngineID
+Gets the GUID of the debug engine (DE).  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetEngineID(   
-   GUID* pguidEngine  
+HRESULT GetEngineID(   
+   GUID* pguidEngine  
 );  
 ```  
   
-```c#  
-int GetEngineID(   
-   out Guid pguidEngine  
+```cs  
+int GetEngineID(   
+   out Guid pguidEngine  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pguidEngine`  
- \[入力\] DE の GUID を返します。  
+ [out] Returns the GUID of the DE.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- 一般的な GUID の例を `guidScriptEng``guidNativeEng`または `guidSQLEng` です。  新しいデバッグ エンジンは特定の独自の GUID を作成します。  
+## <a name="remarks"></a>Remarks  
+ Some examples of typical GUIDs are `guidScriptEng`, `guidNativeEng`, or `guidSQLEng`. New debug engines will create their own GUID for identification.  
   
-## 使用例  
- 次の例に `CEngine` の単純なオブジェクトに対してこのメソッドを実装する方法を実装するインターフェイスの [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) 示します。  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CEngine` object that implements the [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) interface.  
   
 ```cpp#  
 HRESULT CEngine::GetEngineId(GUID *pguidEngine){    
@@ -64,5 +81,5 @@ HRESULT CEngine::GetEngineId(GUID *pguidEngine){
 }    
 ```  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

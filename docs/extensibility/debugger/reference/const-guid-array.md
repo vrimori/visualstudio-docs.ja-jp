@@ -1,65 +1,82 @@
 ---
-title: "CONST_GUID_ARRAY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CONST_GUID_ARRAY"
-helpviewer_keywords: 
-  - "CONST_GUID_ARRAY 構造体"
+title: CONST_GUID_ARRAY | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CONST_GUID_ARRAY
+helpviewer_keywords:
+- CONST_GUID_ARRAY structure
 ms.assetid: bd55e7d8-372c-4c3e-9eed-28f6b415a5db
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# CONST_GUID_ARRAY
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6d819936facdd2f1c05af41b584d167aa39c7bd3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-`GUID`. のリストを保持する構造体。  
+---
+# <a name="constguidarray"></a>CONST_GUID_ARRAY
+A structure that holds a list of `GUID`s.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-typedef struct tagCONST_GUID_ARRAY {  
-   DWORD       dwCount;  
-   CONST GUID* Members;  
-} CONST_GUID_ARRAY;  
+typedef struct tagCONST_GUID_ARRAY {  
+   DWORD       dwCount;  
+   CONST GUID* Members;  
+} CONST_GUID_ARRAY;  
 ```  
   
-```c#  
-public struct CONST_GUID_ARRAY {  
-   public uint   dwCount;  
-   public Guid[] Members;  
+```cs  
+public struct CONST_GUID_ARRAY {  
+   public uint   dwCount;  
+   public Guid[] Members;  
 }  
 ```  
   
-## メンバー  
+## <a name="members"></a>Members  
  dwCount  
- `Members` の配列の `GUID`の数。  
+ Number of `GUID`s in the `Members` array.  
   
- メンバー  
- `GUID`. の配列。  
+ Members  
+ Array of `GUID`s.  
   
-## 解説  
- この構造は [PublishProgram](../Topic/IDebugProgramPublisher2::PublishProgram.md) のメソッドに渡され[GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) と [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) のメソッドから返されます。  
+## <a name="remarks"></a>Remarks  
+ This structure is passed to the [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) method, and is returned from the [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) and [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) methods.  
   
- この構造体のインスタンスの所有者は割り当てられたメモリの解放を管理します。  
+ The owner of an instance of this structure is responsible for freeing any memory allocated.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [PublishProgram](../Topic/IDebugProgramPublisher2::PublishProgram.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+ [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)   
  [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)   
  [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)

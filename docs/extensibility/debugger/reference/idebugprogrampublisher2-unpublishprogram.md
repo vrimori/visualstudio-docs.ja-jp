@@ -1,52 +1,69 @@
 ---
-title: "IDebugProgramPublisher2::UnpublishProgram | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramPublisher2::UnpublishProgram"
-helpviewer_keywords: 
-  - "IDebugProgramPublisher2::UnpublishProgram"
+title: IDebugProgramPublisher2::UnpublishProgram | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramPublisher2::UnpublishProgram
+helpviewer_keywords:
+- IDebugProgramPublisher2::UnpublishProgram
 ms.assetid: 627e7d38-b2ac-4873-9a40-37ff7f47cd1d
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugProgramPublisher2::UnpublishProgram
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: fffd194f2842516b15df2b66d89dab3c143b402f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-デバッグするプログラムの利用不可になります。  
+---
+# <a name="idebugprogrampublisher2unpublishprogram"></a>IDebugProgramPublisher2::UnpublishProgram
+Makes a program unavailable to be debugged.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT UnpublishProgram(  
-   IUnknown* pDebuggeeInterface  
+HRESULT UnpublishProgram(  
+   IUnknown* pDebuggeeInterface  
 );  
 ```  
   
-```c#  
-int UnpublishProgram(  
-   object pDebuggeeInterface  
+```cs  
+int UnpublishProgram(  
+   object pDebuggeeInterface  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pDebuggeeInterface`  
- \[入力\] プログラムに `IUnknown` のインターフェイス。  これは [PublishProgram](../Topic/IDebugProgramPublisher2::PublishProgram.md) のメソッドに指定された値と同じで削除するプログラムを識別します \(つまりクッキーとして使用されます\)。  
+ [in] An `IUnknown` interface to the program. This is the same value supplied to the [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) method and uniquely identifies the program being removed (that is, it is used as a cookie).  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- デバッグ エンジンとセッションにプログラムで使用できるようにするにはマネージャーを使用して [PublishProgram](../Topic/IDebugProgramPublisher2::PublishProgram.md) のメソッドをデバッグします。  
+## <a name="remarks"></a>Remarks  
+ To make a program available to the debug engines and session debug manager, use the [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) method.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   
- [PublishProgram](../Topic/IDebugProgramPublisher2::PublishProgram.md)
+ [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)

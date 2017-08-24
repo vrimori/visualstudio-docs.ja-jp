@@ -1,5 +1,5 @@
 ---
-title: "ナビゲートおよびでのモデルの更新プログラムのコード |Microsoft ドキュメント"
+title: Navigating and Updating a Model in Program Code | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,70 +27,71 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: eb2ab9d49cdeb1ed71da8ef67841f7796862dc30
-ms.openlocfilehash: f17f676025a19efb09184b7a49645986723cb29f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e2bc4ea32af0d470b3c58414b7702588a5b68e8e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="navigating-and-updating-a-model-in-program-code"></a>プログラム コードにおけるモデル内の移動およびモデルの更新
-作成しモデル要素を削除、プロパティの設定、および作成、要素間のリンクを削除するコードを記述することができます。 すべての変更は、トランザクション内で行う必要があります。 要素を図に表示する場合の図は""自動的に修正、トランザクションの終了時。  
+# <a name="navigating-and-updating-a-model-in-program-code"></a>Navigating and Updating a Model in Program Code
+You can write code to create and delete model elements, set their properties, and create and delete links between elements. All changes must be made within a transaction. If the elements are viewed on a diagram, the diagram will be "fixed up" automatically at the end of the transaction.  
   
-## <a name="in-this-topic"></a>このトピックの内容  
- [DSL 定義の例](#example)  
+## <a name="in-this-topic"></a>In this Topic  
+ [An Example DSL Definition](#example)  
   
- [モデル内の移動](#navigation)  
+ [Navigating the Model](#navigation)  
   
- [クラス情報へのアクセス](#metadata)  
+ [Accessing Class Information](#metadata)  
   
- [トランザクション内の変更を加える](#transaction)  
+ [Perform Changes inside a Transaction](#transaction)  
   
- [モデル要素を作成します。](#elements)  
+ [Creating Model Elements](#elements)  
   
- [リレーションシップ リンクの作成](#links)  
+ [Creating Relationship Links](#links)  
   
- [要素を削除します。](#deleteelements)  
+ [Deleting Elements](#deleteelements)  
   
- [リレーションシップ リンクを削除します。](#deletelinks)  
+ [Deleting Relationship Links](#deletelinks)  
   
- [リレーションシップのリンクの順序変更](#reorder)  
+ [Reordering the Links of a Relationship](#reorder)  
   
- [ロック](#locks)  
+ [Locks](#locks)  
   
- [コピーと貼り付け](#copy)  
+ [Copy and Paste](#copy)  
   
- [ナビゲートおよび図を更新](#diagrams)  
+ [Navigating and Updating Diagrams](#diagrams)  
   
- [図形および要素間を移動します。](#views)  
+ [Navigating between Shapes and Elements](#views)  
   
- [図形とコネクタのプロパティ](#shapeProperties)  
+ [Properties of Shapes and Connectors](#shapeProperties)  
   
- [DocView と DocData](#docdata)  
+ [DocView and DocData](#docdata)  
   
-##  <a name="a-nameexamplea-an-example-dsl-definition"></a><a name="example"></a>DSL 定義の例  
- これは、このトピックの例として DslDefinition.dsl の主要部分です。  
+##  <a name="example"></a> An Example DSL Definition  
+ This is the main part of DslDefinition.dsl for the examples in this topic:  
   
- ![DSL 定義ダイアグラム - ファミリ ツリー モデル](~/modeling/media/familyt_person.png "FamilyT_Person")  
+ ![DSL Definition diagram &#45; family tree model](../modeling/media/familyt_person.png "FamilyT_Person")  
   
- このモデルでは、この DSL のインスタンスを示します。  
+ This model is an instance of this DSL:  
   
- ![Tudor ファミリ ツリー モデル](~/modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
+ ![Tudor Family Tree Model](../modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
   
-### <a name="references-and-namespaces"></a>参照と名前空間  
- このトピックのコードを実行するを参照する必要があります。  
+### <a name="references-and-namespaces"></a>References and Namespaces  
+ To run the code in this topic, you should reference:  
   
  `Microsoft.VisualStudio.Modeling.Sdk.11.0.dll`  
   
- コードでは、この名前空間を使用します。  
+ Your code will use this namespace:  
   
  `using Microsoft.VisualStudio.Modeling;`  
   
- さらに、DSL が定義されている&1; つから別のプロジェクトで、コードを記述する場合は、Dsl プロジェクトでビルドされるアセンブリをインポートする必要があります。  
+ In addition, if you are writing the code in a different project from the one in which your DSL is defined, you should import the assembly that is built by the Dsl project.  
   
-##  <a name="a-namenavigationa-navigating-the-model"></a><a name="navigation"></a>モデル内の移動  
+##  <a name="navigation"></a> Navigating the Model  
   
-### <a name="properties"></a>プロパティ  
- DSL 定義で定義したドメインのプロパティでは、プログラム コードで使用できるプロパティになります。  
+### <a name="properties"></a>Properties  
+ Domain properties that you define in the DSL definition become properties that you can access in program code:  
   
  `Person henry = ...;`  
   
@@ -98,28 +99,28 @@ ms.lasthandoff: 02/22/2017
   
  `if (henry.Name.EndsWith("VIII")) ...`  
   
- プロパティを設定する場合は、行う必要があります内、[トランザクション](#transaction):  
+ If you want to set a property, you must do so inside a [transaction](#transaction):  
   
  `henry.Name = "Henry VIII";`  
   
- DSL 定義で、プロパティの場合**種類**は**計算**、設定することはできません。 詳細については、次を参照してください。[計算し、カスタム ストレージ プロパティ](../modeling/calculated-and-custom-storage-properties.md)します。  
+ If in the DSL definition, a property's **Kind** is **Calculated**, you cannot set it. For more information, see [Calculated and Custom Storage Properties](../modeling/calculated-and-custom-storage-properties.md).  
   
-### <a name="relationships"></a>リレーションシップ  
- DSL 定義で定義したドメインの関係では、1 つは、リレーションシップの両端にクラス プロパティのペアになります。 プロパティの名前は、リレーションシップの両端でロールのラベルとして DslDefinition ダイアグラムに表示されます。 ロールの多重度、に応じてプロパティの型は、リレーションシップのもう一方の端にあるクラスまたはそのクラスのコレクションのいずれかです。  
+### <a name="relationships"></a>Relationships  
+ Domain relationships that you define in the DSL definition become pairs of properties, one on the class at each end of the relationship. The names of the properties appear in the DslDefinition diagram as labels on the roles at each side of the relationship. Depending on the multiplicity of the role, the type of the property is either the class at the other end of the relationship, or a collection of that class.  
   
  `foreach (Person child in henry.Children) { ... }`  
   
  `FamilyTreeModel ftree = henry.FamilyTreeModel;`  
   
- リレーションシップのもう一方の端にあるプロパティは常に逆数。 リンクを作成または削除すると、両方の要素のロールのプロパティが更新されます。 次の式 (の拡張機能を使用して`System.Linq`) は常に ParentsHaveChildren リレーションシップの例では true。  
+ The properties at opposite ends of a relationship are always reciprocal. When a link is created or deleted, the role properties on both elements are updated. The following expression (which uses the extensions of `System.Linq`) is always true for the ParentsHaveChildren relationship in the example:  
   
  `(Person p) => p.Children.All(child => child.Parents.Contains(p))`  
   
  `&& p.Parents.All(parent => parent.Children.Contains(p));`  
   
- **ElementLinks**します。 リレーションシップと呼ばれるモデル要素によって表されるも、*リンク*、ドメイン リレーションシップの種類のインスタンスであります。 リンクには、必ず、1 つのソース要素と&1; つのターゲット要素があります。 ソース要素とターゲット要素を同じにすることができます。  
+ **ElementLinks**. A relationship is also represented by a model element called a *link*, which is an instance of the domain relationship type. A link always has one source element and one target element. The source element and the target element can be the same.  
   
- リンクとそのプロパティにアクセスできます。  
+ You can access a link and its properties:  
   
  `ParentsHaveChildren link = ParentsHaveChildren.GetLink(henry, edward);`  
   
@@ -127,35 +128,35 @@ ms.lasthandoff: 02/22/2017
   
  `link == null || link.Parent == henry && link.Child == edward`  
   
- 既定では、リレーションシップの&2; つ以上のインスタンスが許可されたモデル要素のペアをリンクします。 DSL 定義の場合は、`Allow Duplicates`フラグは、リレーションシップの場合は true、1 つ以上のリンクがある可能性があり、使用する必要があります`GetLinks`:  
+ By default, no more than one instance of a relationship is allowed to link any pair of model elements. But if in the DSL definition, the `Allow Duplicates` flag is true for the relationship, then there might be more than one link, and you must use `GetLinks`:  
   
  `foreach (ParentsHaveChildren link in ParentsHaveChildren.GetLinks(henry, edward)) { ... }`  
   
- リンクにアクセスするためには、その他の方法も。 例:  
+ There are also other methods for accessing links. For example:  
   
  `foreach (ParentsHaveChildren link in     ParentsHaveChildren.GetLinksToChildren(henry)) { ... }`  
   
- **非表示の役割です。** DSL 定義の場合**プロパティが生成**は**false**特定のロールに対して、プロパティは生成されませんそのロールに対応します。 ただし、まだリンクにアクセスしてリレーションシップのメソッドを使用してリンクを通過します。  
+ **Hidden roles.** If in the DSL definition, **Is Property Generated** is **false** for a particular role, then no property is generated that corresponds to that role. However, you can still access the links and traverse the links using the methods of the relationship:  
   
  `foreach (Person p in ParentsHaveChildren.GetChildren(henry)) { ... }`  
   
- 最もよく使用される例は、<xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject>ダイアグラムに表示される図形からモデル要素へのリンク関係:</xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject>  
+ The most frequently used example is the <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> relationship, which links a model element to the shape that displays it on a diagram:  
   
  `PresentationViewsSubject.GetPresentation(henry)[0] as PersonShape`  
   
-### <a name="the-element-directory"></a>要素のディレクトリ  
- 要素のディレクトリを使用して、ストア内のすべての要素にアクセスできます。  
+### <a name="the-element-directory"></a>The Element Directory  
+ You can access all the elements in the store using the element directory:  
   
  `store.ElementDirectory.AllElements`  
   
- 次のように、要素を検索する方法もあります。  
+ There are also methods for finding elements, such as the following:  
   
  `store.ElementDirectory.FindElements(Person.DomainClassId);`  
   
  `store.ElementDirectory.GetElement(elementId);`  
   
-##  <a name="a-namemetadataa-accessing-class-information"></a><a name="metadata"></a>クラス情報へのアクセス  
- クラス、リレーションシップ、および DSL 定義の他の側面に関する情報を取得できます。 例:  
+##  <a name="metadata"></a> Accessing Class Information  
+ You can get information about the classes, relationships, and other aspects of the DSL definition. For example:  
   
  `DomainClassInfo personClass = henry.GetDomainClass();`  
   
@@ -169,16 +170,16 @@ ms.lasthandoff: 02/22/2017
   
  `DomainRoleInfo sourceRole = relationship.DomainRole[0];`  
   
- モデル要素の親クラスは次のとおりです。  
+ The ancestor classes of model elements are as follows:  
   
--   モデル要素のすべての要素および関係はモデル要素です。  
+-   ModelElement - all elements and relationships are ModelElements  
   
--   ElementLink - すべてのリレーションシップは ElementLinks  
+-   ElementLink - all relationships are ElementLinks  
   
-##  <a name="a-nametransactiona-perform-changes-inside-a-transaction"></a><a name="transaction"></a>トランザクション内の変更を加える  
- ストアでは何も、プログラム コードが変わるたびに、トランザクション内は、必要があります。 これは、すべてのモデル要素、リレーションシップ、図形、図、およびそれらのプロパティに適用されます。 詳細については、 <xref:Microsoft.VisualStudio.Modeling.Transaction>。</xref:Microsoft.VisualStudio.Modeling.Transaction>を参照してください。  
+##  <a name="transaction"></a> Perform Changes inside a Transaction  
+ Whenever your program code changes anything in the Store, it must do so inside a transaction. This applies to all model elements, relationships, shapes, diagrams, and their properties. For more information, see <xref:Microsoft.VisualStudio.Modeling.Transaction>.  
   
- トランザクションを管理する最も便利なメソッドは、`using`ステートメントで囲む、`try...catch`ステートメント。  
+ The most convenient method of managing a transaction is with a `using` statement enclosed in a `try...catch` statement:  
   
 ```  
 Store store; ...  
@@ -204,12 +205,12 @@ catch (Exception ex)
 }  
 ```  
   
- 任意の数の&1; つのトランザクション内で変更を行うことができます。 アクティブなトランザクション内で新しいトランザクションを開くことができます。  
+ You can make any number of changes inside one transaction. You can open new transactions inside an active transaction.  
   
- 永続的な変更を加える、する必要があります`Commit`が破棄される前に、トランザクションです。 トランザクション内でキャッチされない例外が発生した場合、ストアは、変更前に、の状態にリセットされます。  
+ To make your changes permanent, you should `Commit` the transaction before it is disposed. If an exception occurs that is not caught inside the transaction, the Store will be reset to its state before the changes.  
   
-##  <a name="a-nameelementsa-creating-model-elements"></a><a name="elements"></a>モデル要素を作成します。  
- この例では、既存のモデル要素を追加します。  
+##  <a name="elements"></a> Creating Model Elements  
+ This example adds an element to an existing model:  
   
 ```  
 FamilyTreeModel familyTree = ...; // The root of the model.         
@@ -229,97 +230,97 @@ using (Transaction t =
 }  
 ```  
   
- この例では、要素の作成について、次の重要な点を示します。  
+ This example illustrates these essential points about creating an element:  
   
--   ストアの特定のパーティションに新しい要素を作成します。 モデル要素と関係が形状ではなく、これは通常、既定のパーティションです。  
+-   Create the new element in a specific partition of the Store. For model elements and relationships, but not shapes, this is usually the default partition.  
   
--   埋め込みリレーションシップのターゲットになります。 この例の DslDefinition で各ユーザーは埋め込みリレーションシップ FamilyTreeHasPeople の対象にする必要があります。 これを実現するには、Person オブジェクトの FamilyTreeModel ロールのプロパティを設定するか、FamilyTreeModel オブジェクトのユーザー ロールのプロパティにそのユーザーを追加おことができます。  
+-   Make it the target of an embedding relationship. In the DslDefinition of this example, each Person must be the target of embedding relationship FamilyTreeHasPeople. To achieve this, we can either set the FamilyTreeModel role property of the Person object, or add the Person to the People role property of the FamilyTreeModel object.  
   
--   対象のプロパティでは特に、新しい要素のプロパティを設定`IsName`DslDefinition に当てはまります。 このフラグは、その所有者内で一意に要素を識別するプロパティをマークします。 この場合は、Name プロパティには、そのフラグがいます。  
+-   Set the properties of a new element, particularly the property for which `IsName` is true in the DslDefinition. This flag marks the property that serves to identify the element uniquely within its owner. In this case, the Name property has that flag.  
   
--   この DSL の DSL 定義は、ストアに読み込まれている必要があります。 メニュー コマンドのような拡張機能を作成している場合は、通常これは既に true です。 それ以外の場合に、明示的に、モデル、ストアへの読み込みまたは<xref:Microsoft.VisualStudio.Modeling.Integration.ModelBus>を</xref:Microsoft.VisualStudio.Modeling.Integration.ModelBus>使用してそれを読み込むことができます。 詳細については、次を参照してください。[方法: プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)します。  
+-   The DSL definition of this DSL must have been loaded into the Store. If you are writing an extension such as a menu command, this will typically be already true. In other cases, you can explicitly load the model into the Store, or use <xref:Microsoft.VisualStudio.Modeling.Integration.ModelBus> to load it. For more information, see [How to: Open a Model from File in Program Code](../modeling/how-to-open-a-model-from-file-in-program-code.md).  
   
- この方法で要素を作成するときに (DSL に図がある場合)、図形が自動的に作成します。 既定の形状、色、およびその他の機能と、自動的に割り当てられている場所に表示されます。 参照してください、関連付けられた図形が表示される場所と方法を制御する場合[要素とその図形を作成する](#merge)です。  
+ When you create an element in this way, a shape is automatically created (if the DSL has a diagram). It appears in an automatically assigned location, with default shape, color, and other features. If you want to control where and how the associated shape appears, see [Creating an Element and its Shape](#merge).  
   
-##  <a name="a-namelinksa-creating-relationship-links"></a><a name="links"></a>リレーションシップ リンクの作成  
- DSL 定義の例で定義されている&2; つの関係があります。 各リレーションシップを定義、*ロール プロパティ*リレーションシップの両端にあるクラスにします。  
+##  <a name="links"></a> Creating Relationship Links  
+ There are two relationships defined in the example DSL definition. Each relationship defines a *role property* on the class at each end of the relationship.  
   
- リレーションシップのインスタンスを作成できる&3; つの方法はあります。 これら&3; つのメソッドのそれぞれは、同じ効果があります。  
+ There are three ways in which you can create an instance of a relationship. Each of these three methods has the same effect:  
   
--   ソース ロール プレーヤーのプロパティを設定します。 例:  
+-   Set the property of the source role player. For example:  
   
     -   `familyTree.People.Add(edward);`  
   
     -   `edward.Parents.Add(henry);`  
   
--   ターゲット ロール プレイヤーのプロパティを設定します。 例:  
+-   Set the property of the target role player. For example:  
   
     -   `edward.familyTreeModel = familyTree;`  
   
-         このロールの多重度が`1..1`ので、値を代入します。  
+         The multiplicity of this role is `1..1`, so we assign the value.  
   
     -   `henry.Children.Add(edward);`  
   
-         このロールの多重度が`0..*`、ため、コレクションに追加します。  
+         The multiplicity of this role is `0..*`, so we add to the collection.  
   
--   リレーションシップのインスタンスを明示的に作成します。 例:  
+-   Construct an instance of the relationship explicitly. For example:  
   
     -   `FamilyTreeHasPeople edwardLink = new FamilyTreeHasPeople(familyTreeModel, edward);`  
   
     -   `ParentsHaveChildren edwardHenryLink = new ParentsHaveChildren(henry, edward);`  
   
- 最後のメソッドは、リレーションシップ自体のプロパティを設定する場合に便利です。  
+ The last method is useful if you want to set properties on the relationship itself.  
   
- この方法で要素を作成するときは、図上のコネクタが自動的に作成するは、既定の図形、色、およびその他の機能があります。 関連するコネクタを作成する方法を制御するを参照してください。[要素とその図形を作成する](#merge)です。  
+ When you create an element in this way, a connector on the diagram is automatically created, but it has a default shape, color, and other features. To control how the associated connector is created, see [Creating an Element and its Shape](#merge).  
   
-##  <a name="a-namedeleteelementsa-deleting-elements"></a><a name="deleteelements"></a>要素を削除します。  
- 呼び出すことにより、要素を削除`Delete()`:  
+##  <a name="deleteelements"></a> Deleting Elements  
+ Delete an element by calling `Delete()`:  
   
  `henry.Delete();`  
   
- この操作も削除されます。  
+ This operation will also delete:  
   
--   要素との間のリレーションシップ リンクします。 たとえば、`edward.Parents`は含まれなく`henry`します。  
+-   Relationship links to and from the element. For example, `edward.Parents` will no longer contain `henry`.  
   
--   要素をロールに、`PropagatesDelete`フラグが true を指定します。 たとえば、要素を表示する図形が削除されます。  
+-   Elements at roles for which the `PropagatesDelete` flag is true. For example, the shape that displays the element will be deleted.  
   
- 既定では、すべての埋め込みリレーションシップを持つ`PropagatesDelete`ターゲット ロールの場合は true です。 削除する`henry`は削除されません、`familyTree`が`familyTree.Delete()`すべてを削除するように、`Persons`です。 詳細については、次を参照してください。[削除の動作のカスタマイズ](../modeling/customizing-deletion-behavior.md)します。  
+ By default, every embedding relationship has `PropagatesDelete` true at the target role. Deleting `henry` does not delete the `familyTree`, but `familyTree.Delete()` would delete all the `Persons`. For more information, see [Customizing Deletion Behavior](../modeling/customizing-deletion-behavior.md).  
   
- 既定では、`PropagatesDelete`参照リレーションシップのロールについては該当しません。  
+ By default, `PropagatesDelete` is not true for the roles of reference relationships.  
   
- 削除規則オブジェクトを削除する場合は、特定の伝達を省略する可能性があります。 これは、別の&1; つの要素を置換する場合に便利です。 1 つ以上のロールを削除する必要があります反映できませんの GUID を指定します。 GUID は、リレーションシップ クラスから取得できます。  
+ You can cause the deletion rules to omit specific propagations when you delete an object. This is useful if you are substituting one element for another. You supply the GUID of one or more roles for which deletion should not be propagated. The GUID can be obtained from the relationship class:  
   
  `henry.Delete(ParentsHaveChildren.SourceDomainRoleId);`  
   
- (この例の効果はありません、ため`PropagatesDelete`は`false`の役割、`ParentsHaveChildren`リレーションシップです)。  
+ (This particular example would have no effect, because `PropagatesDelete` is `false` for the roles of the `ParentsHaveChildren` relationship.)  
   
- 場合によっては、削除は、要素または伝達によって削除される要素のいずれか、ロックの存在によってできません。 使用する`element.CanDelete()`要素を削除できるかどうかを確認します。  
+ In some cases, deletion is prevented by the existence of a lock, either on the element or on an element that would be deleted by propagation. You can use `element.CanDelete()` to check whether the element can be deleted.  
   
-##  <a name="a-namedeletelinksa-deleting-relationship-links"></a><a name="deletelinks"></a>リレーションシップ リンクを削除します。  
- リレーションシップ リンクを削除するには、ロールのプロパティから要素を削除します。  
+##  <a name="deletelinks"></a> Deleting Relationship Links  
+ You can delete a relationship link by removing an element from a role property:  
   
  `henry.Children.Remove(edward); // or:`  
   
  `edward.Parents.Remove(henry);  // or:`  
   
- また、リンクを明示的に削除できます。  
+ You can also delete the link explicitly:  
   
  `edwardHenryLink.Delete();`  
   
- これら&3; つのメソッドには、同じ効果があります。 うちの&1; つを使用する必要があるだけです。  
+ These three methods all have the same effect. You only need to use one of them.  
   
- 役割に 0..1 または 1..1 の多重度がある場合に設定できます`null`、または別の値にします。  
+ If the role has 0..1 or 1..1 multiplicity, you can set it to `null`, or to another value:  
   
- `edward.FamilyTreeModel = null;`または。  
+ `edward.FamilyTreeModel = null;` // or:  
   
  `edward.FamilyTreeModel = anotherFamilyTree;`  
   
-##  <a name="a-namereordera-re-ordering-the-links-of-a-relationship"></a><a name="reorder"></a>リレーションシップのリンクの順序を変更  
- ソースまたは特定のモデル要素を対象とされている特定のリレーションシップのリンクでは、特定のシーケンスがあります。 追加された順序で表示されます。 たとえば、このステートメントは常に同じ順序で子を生成します。  
+##  <a name="reorder"></a> Re-ordering the Links of a Relationship  
+ The links of a particular relationship that are sourced or targeted at a particular model element have a specific sequence. They appear in the order in which they were added. For example, this statement will always yield the children in the same order:  
   
  `foreach (Person child in henry.Children) ...`  
   
- リンクの順序を変更することができます。  
+ You can change the order of the links:  
   
  `ParentsHaveChildren link = GetLink(henry,edward);`  
   
@@ -331,13 +332,13 @@ using (Transaction t =
   
  `link.MoveBefore(role, nextLink);`  
   
-##  <a name="a-namelocksa-locks"></a><a name="locks"></a>ロック  
- ロックによって、変更ができない可能性があります。 個々 の要素、パーティション、およびストアのロックを設定できます。 変更の種類を防止するロックを以下のレベルにある場合は、試行するときに例外がスロー可能性があります。 ロックは、要素を使用して設定するかどうかを検出できます。<xref:Microsoft.VisualStudio.Modeling.Immutability>。</xref:Microsoft.VisualStudio.Modeling.Immutability>名前空間で定義されている拡張メソッドである GetLocks()  
+##  <a name="locks"></a> Locks  
+ Your changes might be prevented by a lock. Locks can be set on individual elements, on partitions, and on the store. If any of these levels has a lock that prevents the kind of change that you want to make, an exception might be thrown when you attempt it. You can discover whether locks are set by using element.GetLocks(), which is an extension method that is defined in the namespace <xref:Microsoft.VisualStudio.Modeling.Immutability>.  
   
- 詳細については、次を参照してください。[を読み取り専用セグメントを作成するロック ポリシーを定義する](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)です。  
+ For more information, see [Defining a Locking Policy to Create Read-Only Segments](../modeling/defining-a-locking-policy-to-create-read-only-segments.md).  
   
-##  <a name="a-namecopya-copy-and-paste"></a><a name="copy"></a>コピーと貼り付け  
- <xref:System.Windows.Forms.IDataObject>::</xref:System.Windows.Forms.IDataObject>に要素または要素グループをコピーすることができます。  
+##  <a name="copy"></a> Copy and Paste  
+ You can copy elements or groups of elements to an <xref:System.Windows.Forms.IDataObject>:  
   
 ```  
 Person person = personShape.ModelElement as Person;  
@@ -347,9 +348,9 @@ personShape.Diagram.ElementOperations
       .Copy(data, person.Children.ToList<ModelElement>());  
 ```  
   
- 要素は、シリアル化された要素のグループとして格納されます。  
+ The elements are stored as a serialized Element Group.  
   
- モデルには、IDataObject から要素をマージできます。  
+ You can merge elements from an IDataObject into a model:  
   
 ```  
 using (Transaction t = targetDiagram.Store.  
@@ -359,34 +360,34 @@ using (Transaction t = targetDiagram.Store.
 }  
 ```  
   
- `Merge ()`いずれかを受け入れることができる、`PresentationElement`または`ModelElement`です。 指定した場合、 `PresentationElement`、3 番目のパラメーターとしてコピー先のダイアグラムでの位置を指定することもできます。  
+ `Merge ()` can accept either a `PresentationElement` or a `ModelElement`. If you give it a `PresentationElement`, you can also specify a position on the target diagram as a third parameter.  
   
-##  <a name="a-namediagramsa-navigating-and-updating-diagrams"></a><a name="diagrams"></a>ナビゲートおよび図を更新  
- DSL、人や音楽などの概念を表す、ドメイン モデル要素は別の図に表示されるものを表す図形要素からです。 ドメイン モデルの要素は、重要なプロパティと概念の間のリレーションシップを格納します。 図形要素は、サイズ、位置、ダイアグラムで、オブジェクトのビューの色とその構成部分のレイアウトを格納します。  
+##  <a name="diagrams"></a> Navigating and updating diagrams  
+ In a DSL, the domain model element, which represents a concept such as Person or Song, is separate from the shape element, which represents what you see on the diagram. The domain model element stores the important properties and relationships of the concepts. The shape element stores the size, position and color of the object's view on the diagram, and the layout of its component parts.  
   
-### <a name="presentation-elements"></a>プレゼンテーション要素  
- ![基本図形および要素型のクラス図](~/modeling/media/dslshapesandelements.png "DSLshapesAndElements")  
+### <a name="presentation-elements"></a>Presentation Elements  
+ ![Class diagram of base shape and element types](../modeling/media/dslshapesandelements.png "DSLshapesAndElements")  
   
- DSL 定義では、指定した各要素は、次の標準的なクラスのいずれかから派生したクラスを作成します。  
+ In your DSL Definition, each element that you specify creates a class that is derived from one of the following standard classes.  
   
-|要素の種類|基底クラス|  
+|Kind of element|Base class|  
 |---------------------|----------------|  
-|ドメイン クラス|<xref:Microsoft.VisualStudio.Modeling.ModelElement></xref:Microsoft.VisualStudio.Modeling.ModelElement>|  
-|ドメインの関係|<xref:Microsoft.VisualStudio.Modeling.ElementLink></xref:Microsoft.VisualStudio.Modeling.ElementLink>|  
-|形式|<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape></xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>|  
-|コネクタ|<xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape></xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>|  
-|図|<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram></xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>|  
+|Domain class|<xref:Microsoft.VisualStudio.Modeling.ModelElement>|  
+|Domain relationship|<xref:Microsoft.VisualStudio.Modeling.ElementLink>|  
+|Shape|<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>|  
+|Connector|<xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>|  
+|Diagram|<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>|  
   
- 図上の要素は、通常、モデル要素を表します。 通常 (必ずではありませんが)、<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>ドメイン クラスのインスタンスを表す、<xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>ドメイン リレーションシップのインスタンスを表します</xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape></xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>。 <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject>リレーションシップでは、ノードまたはリンクの図形をそのモデル要素にリンクします</xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject>。  
+ An element on a diagram usually represents a model element. Typically (but not always), a <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> represents a domain class instance, and a <xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape> represents a domain relationship instance. The <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> relationship links a node or link shape to the model element that it represents.  
   
- すべてのノードまたはリンクの図形は、1 つの図に属しています。 バイナリのリンク図形は、2 つのノードの図形を接続します。  
+ Every node or link shape belongs to one diagram. A binary link shape connects two node shapes.  
   
- 図形は、2 つのセットに子図形を設定できます。 内の図形、`NestedChildShapes`セットは、親の境界ボックスに限られています。 内の図形、`RelativeChildShapes`一覧が親 – ラベルやポートなどの境界の外側外側、またはその他の部分を表示できます。 ダイアグラムを持たない`RelativeChildShapes`および no`Parent`します。  
+ Shapes can have child shapes in two sets. A shape in the `NestedChildShapes` set is confined to the bounding box of its parent. A shape in the `RelativeChildShapes` list can appear outside or partly outside the bounds of the parent - for example a label or a port. A diagram has no `RelativeChildShapes` and no `Parent`.  
   
-###  <a name="a-nameviewsa-navigating-between-shapes-and-elements"></a><a name="views"></a>図形および要素間を移動します。  
- ドメイン モデル要素および図形要素は関連する、<xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject>リレーションシップ</xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject>。  
+###  <a name="views"></a> Navigating between shapes and elements  
+ Domain model elements and shape elements are related by the <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> relationship.  
   
-```c#  
+```cs  
 // using Microsoft.VisualStudio.Modeling;  
 // using Microsoft.VisualStudio.Modeling.Diagrams;  
 // using System.Linq;  
@@ -396,7 +397,7 @@ PersonShape henryShape =
     .FirstOrDefault() as PersonShape;  
 ```  
   
- 同じリレーションシップをリンクを図上のコネクタに関係しています。  
+ The same relationship links relationships to connectors on the diagram:  
   
 ```  
 Descendants link = Descendants.GetLink(henry, edward);  
@@ -406,7 +407,7 @@ DescendantConnector dc =
 // dc.FromShape == henryShape && dc.ToShape == edwardShape  
 ```  
   
- このリレーションシップでは、図にモデルのルートもリンクします。  
+ This relationship also links the root of the model to the diagram:  
   
 ```  
 FamilyTreeDiagram diagram =   
@@ -414,72 +415,72 @@ FamilyTreeDiagram diagram =
       .FirstOrDefault() as FamilyTreeDiagram;  
 ```  
   
- 図形により表されるモデル要素を取得するには、次のように使用します。  
+ To get the model element represented by a shape, use:  
   
  `henryShape.ModelElement as Person`  
   
  `diagram.ModelElement as FamilyTreeModel`  
   
-### <a name="navigating-around-the-diagram"></a>ダイアグラム上で移動します。  
- 一般に図形とコネクタ、図の間を移動することをお勧めはできません。 図の外観で作業する必要がある場合にのみ、図形とコネクタの間で移動モデルでリレーションシップをナビゲートすることをお勧めします。 これらのメソッドは、コネクタを両方の end での図形にリンクします。  
+### <a name="navigating-around-the-diagram"></a>Navigating around the Diagram  
+ In general it is not advisable to navigate between shapes and connectors on the diagram. It is better to navigate the relationships in the model, moving between the shapes and connectors only when it is necessary to work on the appearance of the diagram. These methods link connectors to the shapes at each end:  
   
  `personShape.FromRoleLinkShapes, personShape.ToRoleLinkShapes`  
   
  `connector.FromShape, connector.ToShape`  
   
- 多くの図形は、合成します。これらについては、親シェイプと子の&1; つまたは複数の層の構成されます。 別の形を基準に配置する図形があると言われますが、*子*します。 親シェイプに移動したとき、子はそのと共に移動します。  
+ Many shapes are composites; they are made up of a parent shape and one or more layers of children. Shapes that are positioned relative to another shape are said to be its *children*. When the parent shape moves, the children move with it.  
   
- *相対子*親シェイプの境界ボックス外に表示されます。 *入れ子になった*子は厳密に親の境界内に表示されます。  
+ *Relative children* can appear outside the bounding box of the parent shape. *Nested* children appear strictly inside the bounds of the parent.  
   
- ダイアグラムで図形の上部のセットを取得するには、次のように使用します。  
+ To obtain the top set of shapes on a diagram, use:  
   
  `Diagram.NestedChildShapes`  
   
- 図形とコネクタの親クラスがあります。  
+ The ancestor classes of shapes and connectors are:  
   
- <xref:Microsoft.VisualStudio.Modeling.ModelElement></xref:Microsoft.VisualStudio.Modeling.ModelElement>  
+ <xref:Microsoft.VisualStudio.Modeling.ModelElement>  
   
- --<xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationElement></xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationElement>  
+ -- <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationElement>  
   
- --<xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement></xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement>  
+ -- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement>  
   
- -----<xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape></xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>  
+ ----- <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape>  
   
- -------<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram></xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>  
+ ------- <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>  
   
  ------- *YourShape*  
   
- -----<xref:Microsoft.VisualStudio.Modeling.Diagrams.LinkShape></xref:Microsoft.VisualStudio.Modeling.Diagrams.LinkShape>  
+ ----- <xref:Microsoft.VisualStudio.Modeling.Diagrams.LinkShape>  
   
- -------<xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape></xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>  
+ ------- <xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>  
   
  --------- *YourConnector*  
   
-###  <a name="a-nameshapepropertiesa-properties-of-shapes-and-connectors"></a><a name="shapeProperties"></a>図形とコネクタのプロパティ  
- ほとんどの場合は、図形に明示的な変更を加える必要はありません。 モデル要素が変更されると、「修正」ルールは、図形とコネクタを更新します。 詳細については、次を参照してください。[に応答すると変更の伝達](../modeling/responding-to-and-propagating-changes.md)します。  
+###  <a name="shapeProperties"></a> Properties of Shapes and Connectors  
+ In most cases, it is not necessary to make explicit changes to shapes. When you have changed the model elements, the "fix up" rules update the shapes and connectors. For more information, see [Responding to and Propagating Changes](../modeling/responding-to-and-propagating-changes.md).  
   
- ただし、図形には、モデル要素に依存しないプロパティに明示的ないくつか変更を加える便利です。 たとえば、これらのプロパティを変更する可能性があります。  
+ However, it is useful to make some explicit changes to shapes in properties that are independent of the model elements. For example, you could change these properties:  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Size%2A>図形の幅と高さを決定します。</xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Size%2A>  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Size%2A> - determines the height and width of the shape.  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Location%2A>-親図形または図に対して相対的な位置</xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Location%2A>  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Location%2A> - position relative to the parent shape or diagram  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.StyleSet%2A>-ペンと、図形またはコネクタを描画するために使用されるブラシのセット</xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.StyleSet%2A>  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.StyleSet%2A> - the set of pens and brushes used for drawing the shape or connector  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Hide%2A>その図形を非表示</xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Hide%2A>  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Hide%2A> - makes the shape invisible  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Show%2A>その図形が表示される、`Hide()`</xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Show%2A>  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Show%2A> - makes the shape visible after a `Hide()`  
   
-###  <a name="a-namemergea-creating-an-element-and-its-shape"></a><a name="merge"></a>要素とその図形を作成します。  
- 作成する要素の埋め込みリレーションシップ ツリーにリンクすると、図形が自動的に作成され、関連付けられています。 これは、トランザクションの最後に実行するルールを「修正」を実行します。 ただし、図形は、自動的に割り当てられている場所に表示されます、形状、色、およびその他の機能が既定値です。 図形を作成する方法を制御するには、マージ関数を使用できます。 まず、ElementGroup に追加する要素を追加し、図に、グループをマージする必要があります。  
+###  <a name="merge"></a> Creating an Element and its Shape  
+ When you create an element and link it into the tree of embedding relationships, a shape is automatically created and associated with it. This is done by the "fixup" rules that execute at the end of the transaction. However, the shape will appear in an automatically-assigned location, and its shape, color and other features will have default values. To control how the shape is created, you can use the merge function. You must first add the elements you want to add into an ElementGroup, and then merge the group into the diagram.  
   
- この方法では:  
+ This method:  
   
--   要素名とプロパティが割り当てられている場合、名前を設定します。  
+-   Sets the name, if you have assigned a property as the element name.  
   
--   DSL 定義で指定した要素マージ ディレクティブすべてを監視します。  
+-   Observes any Element Merge Directives that you specified in the DSL Definition.  
   
- この例では、ユーザーをダブルクリックすると、図に、マウスの位置に図形を作成します。 このサンプルでは、DSL 定義で、`FillColor`の`ExampleShape`公開されています。  
+ This example creates a shape at the mouse position, when the user double-clicks the diagram. In the DSL Definition for this sample, the `FillColor` property of `ExampleShape` has been exposed.  
   
 ```  
   
@@ -516,24 +517,24 @@ partial class MyDiagram
   
 ```  
   
- 複数の図形を指定した場合を使用して、相対的な位置を設定、`AbsoluteBounds`です。  
+ If you provide more than one shape, set their relative positions using the `AbsoluteBounds`.  
   
- 色とコネクタがこのメソッドを使用して公開されているその他のプロパティを設定することもできます。  
+ You can also set the color and other exposed properties of connectors using this method.  
   
-### <a name="use-transactions"></a>トランザクションを使用して  
- 図形、コネクタと図のサブタイプ<xref:Microsoft.VisualStudio.Modeling.ModelElement>とストアのライブ</xref:Microsoft.VisualStudio.Modeling.ModelElement>。 トランザクションの内部でのみ変更を加える必要がありますのでにします。 詳細については、次を参照してください。[方法: モデルを更新するトランザクションを使用して](../modeling/how-to-use-transactions-to-update-the-model.md)します。  
+### <a name="use-transactions"></a>Use Transactions  
+ Shapes, connectors and diagrams are subtypes of <xref:Microsoft.VisualStudio.Modeling.ModelElement> and live in the Store. You must therefore make changes to them only inside a transaction. For more information, see [How to: Use Transactions to Update the Model](../modeling/how-to-use-transactions-to-update-the-model.md).  
   
-##  <a name="a-namedocdataa-document-view-and-document-data"></a><a name="docdata"></a>ドキュメント ビューとドキュメント データ  
- ![標準タイプのクラス図](../modeling/media/dsldiagramsanddocs.png "DSLDiagramsandDocs")  
+##  <a name="docdata"></a> Document View and Document Data  
+ ![Class diagram of standard diagram types](../modeling/media/dsldiagramsanddocs.png "DSLDiagramsandDocs")  
   
-## <a name="store-partitions"></a>パーティションを格納します。  
- モデルが読み込まれるときに付随する図が同時に読み込まれます。 通常は、モデルが Store.DefaultPartition に読み込まれ、ダイアグラムの内容が別のパーティションに読み込まれます。 通常、各パーティションのコンテンツが読み込まれ、別のファイルに保存されます。  
+## <a name="store-partitions"></a>Store Partitions  
+ When a model is loaded, the accompanying diagram is loaded at the same time. Typically, the model is loaded into Store.DefaultPartition, and the diagram content is loaded into another Partition. Usually, the content of each partition is loaded and saved to a separate file.  
   
-## <a name="see-also"></a>関連項目  
- <xref:Microsoft.VisualStudio.Modeling.ModelElement></xref:Microsoft.VisualStudio.Modeling.ModelElement>   
- [ドメイン固有言語における検証](../modeling/validation-in-a-domain-specific-language.md)   
- [ドメイン固有言語からコードを生成します。](../modeling/generating-code-from-a-domain-specific-language.md)   
- [方法: トランザクションを使用してモデルを更新します。](../modeling/how-to-use-transactions-to-update-the-model.md)   
- [Visual Studio Modelbus を使用して、モデルの統合](../modeling/integrating-models-by-using-visual-studio-modelbus.md)   
- [変更内容への対応および変更内容の反映](../modeling/responding-to-and-propagating-changes.md)
+## <a name="see-also"></a>See Also  
+ <xref:Microsoft.VisualStudio.Modeling.ModelElement>   
+ [Validation in a Domain-Specific Language](../modeling/validation-in-a-domain-specific-language.md)   
+ [Generating Code from a Domain-Specific Language](../modeling/generating-code-from-a-domain-specific-language.md)   
+ [How to: Use Transactions to Update the Model](../modeling/how-to-use-transactions-to-update-the-model.md)   
+ [Integrating Models by using Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)   
+ [Responding to and Propagating Changes](../modeling/responding-to-and-propagating-changes.md)
 

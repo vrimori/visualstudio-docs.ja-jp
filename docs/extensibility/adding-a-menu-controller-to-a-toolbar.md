@@ -1,48 +1,65 @@
 ---
-title: "ツールバー] メニューの [コント ローラーの追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ツールバー [Visual Studio] メニューのコント ローラーの追加"
-  - "メニュー、ツールバーを] メニューの [コント ローラーの追加"
-  - "ツールバーへの追加] メニューの [コント ローラー"
+title: Adding a Menu Controller to a Toolbar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Visual Studio], adding menu controllers
+- menus, adding menu controllers to toolbars
+- menu controllers, adding to toolbars
 ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
 caps.latest.revision: 38
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 38
----
-# ツールバー] メニューの [コント ローラーの追加
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b7c9d2fe8e710040a26d2ca682036c82cf621fbc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-このチュートリアルに基づき、 [ツール ウィンドウに、ツールバーを追加します。](../extensibility/adding-a-toolbar-to-a-tool-window.md) チュートリアルにツール ウィンドウのツールバー\] メニューの \[コント ローラーを追加する方法を示しています。 以下に示す手順もに適用できるで作成されたツールバー、 [ツールバーを追加します。](../extensibility/adding-a-toolbar.md) チュートリアルです。  
+---
+# <a name="adding-a-menu-controller-to-a-toolbar"></a>Adding a Menu Controller to a Toolbar
+This walkthrough builds on the [Adding a Toolbar to a Tool Window](../extensibility/adding-a-toolbar-to-a-tool-window.md) walkthrough and shows how to add a menu controller to the tool window toolbar. The steps shown here also can be applied to the toolbar that is created in the [Adding a Toolbar](../extensibility/adding-a-toolbar.md) walkthrough.  
   
- メニューの \[コント ローラーは、分割コントロールです。 メニューの \[コント ローラーの左側にあるは最後に使用されたコマンドを示しをクリックして実行できます。 メニューの \[コント ローラーの右側にある矢印はをクリックすると、その他のコマンドの一覧を表示します。 リストで、コマンドの実行\] をクリックして、メニュー コント ローラーの左側にあるコマンドが置き換えられます。 この方法では\] メニューの \[コント ローラーは、一覧から最後に使用されたコマンドが常に表示されるコマンド ボタンのように動作します。  
+ A menu controller is a split control. The left side of the menu controller shows the last-used command, and it can be run by clicking it. The right side of the menu controller is an arrow that, when clicked, opens a list of additional commands. When you click a command on the list, the command runs, and it replaces the command on the left side of the menu controller. In this way, the menu controller operates like a command button that always shows the last-used command from a list.  
   
- コント ローラーのメニューがメニューに表示できますが、ツールバーに最もよく使用されます。  
+ Menu controllers can appear on menus but they are most often used on toolbars.  
   
-## 必須コンポーネント  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## メニューの \[コント ローラーの作成  
+## <a name="creating-a-menu-controller"></a>Creating a Menu Controller  
   
-#### メニューの \[コント ローラーを作成するには  
+#### <a name="to-create-a-menu-controller"></a>To create a menu controller  
   
-1.  説明する手順に従います [ツール ウィンドウに、ツールバーを追加します。](../extensibility/adding-a-toolbar-to-a-tool-window.md) ツールバーのあるツール ウィンドウを作成します。  
+1.  Follow the procedures described in [Adding a Toolbar to a Tool Window](../extensibility/adding-a-toolbar-to-a-tool-window.md) to create a tool window that has a toolbar.  
   
-2.  TWTestCommandPackage.vsct、Symbols セクションに移動します。 指定された GuidSymbol 要素で **guidTWTestCommandPackageCmdSet**, 、\] メニューの \[コント ローラー、\] メニューの \[コント ローラーのグループ、および 3 つのメニュー項目を宣言します。  
+2.  In TWTestCommandPackage.vsct, go to the Symbols section. In the GuidSymbol element named **guidTWTestCommandPackageCmdSet**, declare your menu controller, menu controller group, and three menu items.  
   
     ```xml  
     <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />  
     ```  
   
-3.  メニュー」のセクションで、最後のメニュー エントリの後に、メニューとして\] メニューの \[コント ローラーを定義します。  
+3.  In the Menus section, after the last menu entry, define the menu controller as a menu.  
   
     ```xml  
     <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">  
@@ -57,9 +74,9 @@ caps.handback.revision: 38
     </Menu>  
     ```  
   
-     `TextChanges` と `TextIsAnchorCommand` フラグは、選択した最後のコマンドを反映するように、メニュー コント ローラーを有効に含める必要があります。  
+     The `TextChanges` and `TextIsAnchorCommand` flags must be included to enable the menu controller to reflect the last selected command.  
   
-4.  グループの最後のグループのエントリの後のセクション\] メニューの \[コント ローラーのグループを追加します。  
+4.  In the Groups section, after the last group entry, add the menu controller group.  
   
     ```xml  
     <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">  
@@ -67,9 +84,9 @@ caps.handback.revision: 38
     </Group>  
     ```  
   
-     メニューの \[コント ローラーを親として設定することにより、このグループに配置されたすべてのコマンドは、メニュー コント ローラーに表示されます。`priority` 属性を省略すると、既定値は 0 に設定する\] メニューの \[コント ローラーのみのグループとなります。  
+     By setting the menu controller as the parent, any commands placed in this group will appear in the menu controller. The `priority` attribute is omitted, which sets it to the default value of 0, because it will be the only group on the menu controller.  
   
-5.  \[ボタン\] セクションで、最後のボタンのエントリの後に、メニュー項目の各 Button 要素を追加します。  
+5.  In the Buttons section, after the last button entry, add a Button element for each of your menu items.  
   
     ```xml  
     <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">  
@@ -101,35 +118,35 @@ caps.handback.revision: 38
     </Button>  
     ```  
   
-6.  この時点では、\] メニューの \[コント ローラーで確認することができます。 プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
+6.  At this point, you can look at the menu controller. Build the project and start debugging. You should see the experimental instance.  
   
-    1.  **ビュー\/その他のウィンドウ** \] メニューの \[開く **テスト ツール ウィンドウ**します。  
+    1.  On the **View / Other Windows** menu, open **Test ToolWindow**.  
   
-    2.  \[ツール\] ウィンドウ ツールバー\] メニューの \[コント ローラーが表示されます。  
+    2.  The menu controller appears on the toolbar in the tool window.  
   
-    3.  次の 3 つの可能なコマンドを参照してください\] メニューの \[コント ローラーの右側にある矢印をクリックします。  
+    3.  Click the arrow on the right-hand side of the menu controller to see the three possible commands.  
   
-     コマンドをクリックすると、そのコマンドを表示する\] メニューの \[コント ローラーのタイトルが変更に注意してください。 次のセクションでは、これらのコマンドをアクティブ化するコードを追加します。  
+     Notice that when you click a command, the title of the menu controller changes to display that command. In the next section, we will add the code to activate these commands.  
   
-## コント ローラーのメニュー コマンドを実装します。  
+## <a name="implementing-the-menu-controller-commands"></a>Implementing the Menu Controller Commands  
   
-1.  TWTestCommandPackageGuids.cs では、既存のコマンド Id の後に 3 つのメニュー項目のコマンド Id を追加します。  
+1.  In TWTestCommandPackageGuids.cs, add command IDs for your three menu items after the existing command IDs.  
   
-    ```c#  
-    public const int cmdidMCItem1 = 0x130;  
-    public const int cmdidMCItem2 = 0x131;  
-    public const int cmdidMCItem3 = 0x132;  
+    ```cs  
+    public const int cmdidMCItem1 = 0x130;  
+    public const int cmdidMCItem2 = 0x131;  
+    public const int cmdidMCItem3 = 0x132;  
     ```  
   
-2.  TWTestCommand.cs では、TWTestCommand クラスの上部にある次のコードを追加します。  
+2.  In TWTestCommand.cs, add the following code at the top of the TWTestCommand class.  
   
-    ```c#  
-    private int currentMCCommand; // The currently selected menu controller command  
+    ```cs  
+    private int currentMCCommand; // The currently selected menu controller command  
     ```  
   
-3.  TWTestCommand コンス トラクターの最後の呼び出しの後で、 `AddCommand` メソッドでは、同じ処理を使ったコマンドごとにイベントをルーティングするためのコードを追加します。  
+3.  In the TWTestCommand constructor, after the last call to the `AddCommand` method, add code to route the events for each command through the same handlers.  
   
-    ```c#  
+    ```cs  
     for (int i = TWTestCommandPackageGuids.cmdidMCItem1; i <=  
         TWTestCommandPackageGuids.cmdidMCItem3; i++)  
     {  
@@ -139,7 +156,7 @@ caps.handback.revision: 38
           EventHandler(OnMCItemClicked), cmdID);  
         mc.BeforeQueryStatus += new EventHandler(OnMCItemQueryStatus);  
         commandService.AddCommand(mc);  
-        // The first item is, by default, checked.   
+        // The first item is, by default, checked.   
         if (TWTestCommandPackageGuids.cmdidMCItem1 == i)  
         {  
             mc.Checked = true;  
@@ -148,10 +165,10 @@ caps.handback.revision: 38
     }  
     ```  
   
-4.  Checked のように選択したコマンドをマークする TWTestCommand クラスにイベント ハンドラーを追加します。  
+4.  Add an event handler to the TWTestCommand class to mark the selected command as checked.  
   
-    ```c#  
-    private void OnMCItemQueryStatus(object sender, EventArgs e)  
+    ```cs  
+    private void OnMCItemQueryStatus(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  
@@ -161,10 +178,10 @@ caps.handback.revision: 38
     }  
     ```  
   
-5.  ユーザーが\] メニューの \[コント ローラーでコマンドを選択したときに、メッセージ ボックスを表示するイベント ハンドラーを追加します。  
+5.  Add an event handler that displays a MessageBox when the user selects a command on the menu controller:  
   
-    ```c#  
-    private void OnMCItemClicked(object sender, EventArgs e)  
+    ```cs  
+    private void OnMCItemClicked(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  
@@ -211,20 +228,20 @@ caps.handback.revision: 38
     }  
     ```  
   
-## メニューの \[コント ローラーのテスト  
+## <a name="testing-the-menu-controller"></a>Testing the Menu Controller  
   
-1.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
+1.  Build the project and start debugging. You should see the experimental instance.  
   
-2.  開いている、 **テスト ツール ウィンドウ** 上、 **ビュー\/その他のウィンドウ** メニュー。  
+2.  Open the **Test ToolWindow** on the **View / Other Windows** menu.  
   
-     メニューの \[コント ローラーがツール ウィンドウのツールバーに表示され **MC アイテム 1**します。  
+     The menu controller appears in the toolbar in the tool window and displays **MC Item 1**.  
   
-3.  矢印の左側にあるメニュー コント ローラー ボタンをクリックします。  
+3.  Click the menu controller button to the left of the arrow.  
   
-     まずが選択されており、そのアイコンを囲む強調表示の 3 つの項目が表示されます。 クリックして **MC 項目 3**します。  
+     You should see three items, the first of which is selected and has a highlight box around its icon. Click **MC Item 3**.  
   
-     ダイアログ ボックスが、メッセージが表示されます **コント ローラーのメニュー項目 3 を選択した**します。 コント ローラーのメニュー ボタンのテキストにメッセージが対応していることを確認します。 コント ローラーのメニュー ボタンが表示されます **MC 項目 3**します。  
+     A dialog box appears with the message **You selected Menu controller Item 3**. Notice that the message corresponds to the text on the menu controller button. The menu controller button now displays **MC Item 3**.  
   
-## 参照  
- [ツール ウィンドウに、ツールバーを追加します。](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
- [ツールバーを追加します。](../extensibility/adding-a-toolbar.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Toolbar to a Tool Window](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
+ [Adding a Toolbar](../extensibility/adding-a-toolbar.md)

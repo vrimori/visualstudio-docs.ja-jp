@@ -1,53 +1,70 @@
 ---
-title: "IDebugPendingBreakpoint2::SetCondition | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPendingBreakpoint2::SetCondition"
-helpviewer_keywords: 
-  - "SetCondition メソッド"
-  - "IDebugPendingBreakpoint2::SetCondition メソッド"
+title: IDebugPendingBreakpoint2::SetCondition | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPendingBreakpoint2::SetCondition
+helpviewer_keywords:
+- SetCondition method
+- IDebugPendingBreakpoint2::SetCondition method
 ms.assetid: 0534224f-654f-4862-bc4d-a9a81a5f8899
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugPendingBreakpoint2::SetCondition
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 54347da59033c5902a4c8b106a7eb6df3a78cc52
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-変更セットまたは保留中のブレークポイントに関連付けられた条件。  
+---
+# <a name="idebugpendingbreakpoint2setcondition"></a>IDebugPendingBreakpoint2::SetCondition
+Sets or changes the condition associated with the pending breakpoint.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT SetCondition(   
-   BP_CONDITION bpCondition  
+HRESULT SetCondition(   
+   BP_CONDITION bpCondition  
 );  
 ```  
   
-```c#  
-int SetCondition(   
-   BP_CONDITION bpCondition  
+```cs  
+int SetCondition(   
+   BP_CONDITION bpCondition  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `bpCondition`  
- \[入力\] 設定する条件を指定する [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) の構造体。  
+ [in] A [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) structure that specifies the condition to set.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- 保留中のブレークポイントが関連付けられている条件が失われます。  この保留中のブレークポイントからバインドされたすべてのブレークポイントは `bpCondition` のパラメーターに指定された値に条件を設定するために呼び出されます。  
+## <a name="remarks"></a>Remarks  
+ Any condition that was previously associated with the pending breakpoint is lost. All breakpoints bound from this pending breakpoint are called to set their condition to the value specified in the `bpCondition` parameter.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
- [BP\_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)
+ [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)

@@ -1,74 +1,91 @@
 ---
-title: "BP_PASSCOUNT_STYLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_PASSCOUNT_STYLE"
-helpviewer_keywords: 
-  - "BP_PASSCOUNT_STYLE 構造体"
+title: BP_PASSCOUNT_STYLE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BP_PASSCOUNT_STYLE
+helpviewer_keywords:
+- BP_PASSCOUNT_STYLE structure
 ms.assetid: 0a647047-e2d5-4724-a0b8-68108425ecad
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# BP_PASSCOUNT_STYLE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f1952cd8419c8f05a44ff08f8efa6f31e09a5260
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-ブレークポイントを発生させるブレークポイントのパスの数に関連付けられた条件を指定します。  
+---
+# <a name="bppasscountstyle"></a>BP_PASSCOUNT_STYLE
+Specifies the condition associated with the breakpoint pass count that causes the breakpoint to fire.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_BP_PASSCOUNT_STYLE {   
-   BP_PASSCOUNT_NONE             = 0x0000,  
-   BP_PASSCOUNT_EQUAL            = 0x0001,  
-   BP_PASSCOUNT_EQUAL_OR_GREATER = 0x0002,  
-   BP_PASSCOUNT_MOD              = 0x0003  
+enum enum_BP_PASSCOUNT_STYLE {   
+   BP_PASSCOUNT_NONE             = 0x0000,  
+   BP_PASSCOUNT_EQUAL            = 0x0001,  
+   BP_PASSCOUNT_EQUAL_OR_GREATER = 0x0002,  
+   BP_PASSCOUNT_MOD              = 0x0003  
 };  
 typedef DWORD BP_PASSCOUNT_STYLE;  
 ```  
   
-```c#  
-public enum enum_BP_PASSCOUNT_STYLE {   
-   BP_PASSCOUNT_NONE             = 0x0000,  
-   BP_PASSCOUNT_EQUAL            = 0x0001,  
-   BP_PASSCOUNT_EQUAL_OR_GREATER = 0x0002,  
-   BP_PASSCOUNT_MOD              = 0x0003  
+```cs  
+public enum enum_BP_PASSCOUNT_STYLE {   
+   BP_PASSCOUNT_NONE             = 0x0000,  
+   BP_PASSCOUNT_EQUAL            = 0x0001,  
+   BP_PASSCOUNT_EQUAL_OR_GREATER = 0x0002,  
+   BP_PASSCOUNT_MOD              = 0x0003  
 };  
 ```  
   
-## メンバー  
- BP\_PASSCOUNT\_NONE  
- ブレークポイントのパスの数のスタイルを指定しません。  
+## <a name="members"></a>Members  
+ BP_PASSCOUNT_NONE  
+ Specifies no breakpoint pass count style.  
   
- BP\_PASSCOUNT\_EQUAL  
- 等号とブレークポイントのパスの数のスタイルを設定します。  ブレークポイントのヒット回数があるパスの数がある場合ブレークポイントの起動します。  
+ BP_PASSCOUNT_EQUAL  
+ Sets the breakpoint pass count style to equal. The breakpoint fires when the number of times the breakpoint is hit equals the pass count.  
   
- BP\_PASSCOUNT\_EQUAL\_OR\_GREATER  
- 同じかそれよりも大きくブレークポイントのパスの数のスタイルを設定します。  回数がブレークポイントの場合ブレークポイントで起動するとヒット カウントが大きいパスの数。  
+ BP_PASSCOUNT_EQUAL_OR_GREATER  
+ Sets the breakpoint pass count style to equal or greater. The breakpoint fires when the number of times the breakpoint is hit is equal to or greater than the pass count.  
   
- BP\_PASSCOUNT\_MOD  
- 残りのパスの数を指定します。  たとえばパスの数が型 `BP_PASSCOUNT_MOD` でパスの値が 4 の場合ヒット カウントが 4. の倍数するたびにブレークポイントを起動します。  
+ BP_PASSCOUNT_MOD  
+ Specifies a modulo pass count. For example, if the pass count is of the type `BP_PASSCOUNT_MOD` and the pass count value is 4, the breakpoint fires every time the hit count is a multiple of 4.  
   
-## 解説  
- [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)および [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) の構造体のメンバーである [BP\_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) の構造体のメンバー `stylePassCount` に使用されます。  
+## <a name="remarks"></a>Remarks  
+ Used for the `stylePassCount` member of the [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) structure that is in turn a member of the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) and [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) structures.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [BP\_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
- [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
- [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
+ [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
+ [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)

@@ -1,89 +1,106 @@
 ---
-title: "TYPE_INFO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TYPE_INFO"
-helpviewer_keywords: 
-  - "TYPE_INFO 構造体"
+title: TYPE_INFO | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TYPE_INFO
+helpviewer_keywords:
+- TYPE_INFO structure
 ms.assetid: d725cb68-a565-49d1-a16f-ff0445c587a0
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# TYPE_INFO
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 0d4e4ca140424a9252a283379c65bf554d09c124
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-この構造体はさまざまな種類のフィールドの種類に関する情報を指定します。  
+---
+# <a name="typeinfo"></a>TYPE_INFO
+This structure specifies various kinds of information about a field's type.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 struct _tagTYPE_INFO_UNION {  
-   dwTYPE_KIND dwKind;  
-   union {  
-      METADATA_TYPE typeMeta;  
-      PDB_TYPE      typePdb;  
-      BUILT_TYPE    typeBuilt;  
-      DWORD         unused;  
-   } type;  
+   dwTYPE_KIND dwKind;  
+   union {  
+      METADATA_TYPE typeMeta;  
+      PDB_TYPE      typePdb;  
+      BUILT_TYPE    typeBuilt;  
+      DWORD         unused;  
+   } type;  
 } TYPE_INFO;  
 ```  
   
-```c#  
+```cs  
 public struct TYPE_INFO {  
-   public uint   dwKind;  
-   public IntPtr unionmember;  
+   public uint   dwKind;  
+   public IntPtr unionmember;  
 };  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  dwKind  
- 共用体を解釈する方法を決定 [dwTYPE\_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) の列挙体の値。  
+ A value from the [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) enumeration that determines how to interpret the union.  
   
  type.typeMeta  
- \[C\+\+\] `dwKind` のみが `TYPE_KIND_METADATA` 場合 [METADATA\_TYPE](../../../extensibility/debugger/reference/metadata-type.md) 構造を設定します。  
+ [C++ only] Contains a [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) structure if `dwKind` is `TYPE_KIND_METADATA`.  
   
  type.typePdb  
- \[C\+\+\] `dwKind` のみが `TYPE_KIND_PDB` 場合 [PDB\_TYPE](../../../extensibility/debugger/reference/pdb-type.md) 構造を設定します。  
+ [C++ only] Contains a [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) structure if `dwKind` is `TYPE_KIND_PDB`.  
   
  type.typeBuilt  
- \[C\+\+\] `dwKind` のみが `TYPE_KIND_BUILT` 場合 [BUILT\_TYPE](../../../extensibility/debugger/reference/built-type.md) 構造を設定します。  
+ [C++ only] Contains a [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) structure if `dwKind` is `TYPE_KIND_BUILT`.  
   
  type.unused  
- 未使用の埋め込み。  
+ Unused padding.  
   
  type  
- 共用体の名前。  
+ Name of the union.  
   
  unionmember  
- \[C\#\] `dwKind` のみに基づいて適切な構造体の型にマーシャリングします。  
+ [C# only] Marshal this to the appropriate structure type based on `dwKind`.  
   
-## 解説  
- この構造が表示される [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) のメソッドに渡されます。  構造体の内容がどのように解釈されるか `dwKind` のフィールドに基づいています。  
+## <a name="remarks"></a>Remarks  
+ This structure is passed to the [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) method where it is filled in. How the contents of the structure are interpreted is based on the `dwKind` field.  
   
 > [!NOTE]
->  `dwKind` が `TYPE_KIND_BUILT` と等しい場合のみ\[C\+\+\] `TYPE_INFO` の構造を破棄するとき [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) の基になるオブジェクトを解放する必要があります。  これは `typeInfo.type.typeBuilt.pUnderlyingField->Release()` を呼び出してされます。  
+>  [C++ only] If `dwKind` equals `TYPE_KIND_BUILT`, then it is necessary to release the underlying [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object when destroying the `TYPE_INFO` structure. This is done by calling `typeInfo.type.typeBuilt.pUnderlyingField->Release()`.  
   
- \[C\# のみそれぞれの型の `unionmember` のメンバーを解釈する方法\] 次の表に示します。  これは1 種類の種類用にする方法の例を次に示します。  
+ [C# only] The following table shows how to interpret the `unionmember` member for each kind of type. The Example shows how this is done for one kind of type.  
   
-|`dwKind`|`unionmember` は型として解釈します|  
-|--------------|------------------------------|  
-|`TYPE_KIND_METADATA`|[METADATA\_TYPE](../../../extensibility/debugger/reference/metadata-type.md)|  
-|`TYPE_KIND_PDB`|[PDB\_TYPE](../../../extensibility/debugger/reference/pdb-type.md)|  
-|`TYPE_KIND_BUILT`|[BUILT\_TYPE](../../../extensibility/debugger/reference/built-type.md)|  
+|`dwKind`|`unionmember` interpreted as|  
+|--------------|----------------------------------|  
+|`TYPE_KIND_METADATA`|[METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)|  
+|`TYPE_KIND_PDB`|[PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)|  
+|`TYPE_KIND_BUILT`|[BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)|  
   
-## 使用例  
- この例ではC\# の `TYPE_INFO` の構造体の `unionmember` のメンバーをデコードする方法を示します。  この例では1 種類だけ \(\)`TYPE_KIND_METADATA` 解釈する例では同じとして解釈されます。  
+## <a name="example"></a>Example  
+ This example shows how to interpret the `unionmember` member of the `TYPE_INFO` structure in C#. This example shows interpreting only one type (`TYPE_KIND_METADATA`) but the others are interpreted in exactly the same way.  
   
-```c#  
+```cs  
 using System;  
 using System.Runtime.Interop.Services;  
 using Microsoft.VisualStudio.Debugger.Interop;  
@@ -104,17 +121,17 @@ namespace MyPackage
 }  
 ```  
   
-## 必要条件  
- ヘッダー : sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [dwTYPE\_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+ [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)   
  [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)   
- [METADATA\_TYPE](../../../extensibility/debugger/reference/metadata-type.md)   
- [PDB\_TYPE](../../../extensibility/debugger/reference/pdb-type.md)   
- [BUILT\_TYPE](../../../extensibility/debugger/reference/built-type.md)
+ [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)   
+ [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)   
+ [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)

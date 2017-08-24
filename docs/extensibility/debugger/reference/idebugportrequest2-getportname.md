@@ -1,51 +1,68 @@
 ---
-title: "IDebugPortRequest2::GetPortName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortRequest2::GetPortName"
-helpviewer_keywords: 
-  - "IDebugPortRequest2::GetPortName"
+title: IDebugPortRequest2::GetPortName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPortRequest2::GetPortName
+helpviewer_keywords:
+- IDebugPortRequest2::GetPortName
 ms.assetid: 53e2a3a4-bb34-4a02-a983-6bd84ea70587
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugPortRequest2::GetPortName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 54d218b4a706cdbfe918ebf3e50197e9131ea537
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-ポートの名前を取得します。  
+---
+# <a name="idebugportrequest2getportname"></a>IDebugPortRequest2::GetPortName
+Gets the name of the port.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetPortName(   
-   BSTR* pbstrPortName  
+HRESULT GetPortName(   
+   BSTR* pbstrPortName  
 );  
 ```  
   
-```c#  
-int GetPortName(   
-   out string pbstrPortName  
+```cs  
+int GetPortName(   
+   out string pbstrPortName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pbstrPortName`  
- \[入力\] ポートの名前を返します。  
+ [out] Returns the name of the port.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) のデバッグ インターフェイスは通常パッケージ \(クライアント\) のポートのサプライヤー \(サーバー\) とポートへの接続を取得するために渡されます。  デバッグの両方のパッケージとポートの業者はポートの使用可能な選択に認識しています。  単純な文字列がポートについて `IDebugPortRequest2::GetPortName` の場合にメソッドを関連付けるための十分な情報があります。  それ以外の場合は追加のインターフェイスは `IDebugPortRequest2::QueryInterface` を使用してサーバー上で取得できるクライアントに提供できます。  
+## <a name="remarks"></a>Remarks  
+ The [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) interface is usually passed from a debug package (the client) to a port supplier (the server) to obtain a connection to a port. Both the debug package and the port supplier are aware of the possible choices for the port. If a simple string can describe the port, then the `IDebugPortRequest2::GetPortName` method has enough information to make the connection. Otherwise, additional interfaces can be provided by the client, which can be obtained by the server using `IDebugPortRequest2::QueryInterface`.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)

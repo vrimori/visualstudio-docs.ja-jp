@@ -1,5 +1,5 @@
 ---
-title: "コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認 | Microsoft Docs"
+title: Using Code Coverage to Determine How Much Code is being Tested | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,93 +28,93 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 90d4fec70dd131289f37d35f896d87c6e0843e83
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7948545809a2f2069afefcb5e53be07c1daec239
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認
-単体テストなどのコード化されたテストによって実際にテストされるプロジェクトのコードの割合を調べるには、Visual Studio のコード カバレッジ機能を使用できます。 バグから効果的に保護するには、コードの大部分を "カバー" するようにテストを実行する必要があります。  
+# <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>Using Code Coverage to Determine How Much Code is being Tested
+To determine what proportion of your project's code is actually being tested by coded tests such as unit tests, you can use the code coverage feature of Visual Studio. To guard effectively against bugs, your tests should exercise or 'cover' a large proportion of your code.  
   
- コード カバレッジ分析は、マネージ (CLI) コードにもアンマネージ (ネイティブ) コードにも適用できます。  
+ Code coverage analysis can be applied to both managed (CLI) and unmanaged (native) code.  
   
- コード カバレッジは、テスト エクスプローラーを使用してテスト メソッドを実行する場合のオプションです。 結果テーブルには、各アセンブリ、クラス、およびメソッドで実行されたコードの割合が表示されます。 また、ソース エディターには、どのコードがテストされたかが表示されます。  
+ Code coverage is an option when you run test methods using Test Explorer. The results table shows the percentage of the code that was run in each assembly, class, and method. In addition, the source editor shows you which code has been tested.  
   
- ![色分けされたコード カバレッジの結果](../test/media/codecoverage1.png "CodeCoverage1")  
+ ![Code coverage results with coloring](../test/media/codecoverage1.png "CodeCoverage1")  
   
  **Requirements**  
   
 -   Visual Studio Enterprise  
   
-### <a name="to-analyze-code-coverage-on-unit-tests-in-test-explorer"></a>テスト エクスプローラーで単体テストのコード カバレッジを分析するには  
+### <a name="to-analyze-code-coverage-on-unit-tests-in-test-explorer"></a>To analyze code coverage on unit tests in Test Explorer  
   
-1.  **[テスト]** メニューの **[コード カバレッジの分析]** を選択します。  
+1.  On the **Test** menu, choose **Analyze Code Coverage**.  
   
-2.  実行された行を表示するには、![[コード カバレッジの色分けを表示] アイコン](~/test/media/codecoverage-showcoloringicon.png "CodeCoverage-ShowColoringIcon") **[コード カバレッジの色分け表示]** を選択します。  
+2.  To see which lines have been run, choose ![Show Code Coverage Coloring Icon](../test/media/codecoverage-showcoloringicon.png "CodeCoverage-ShowColoringIcon")**Show Code Coverage Coloring**.  
   
-     色を変更したり太字を使用したりする場合は、**[ツール]**、**[オプション]**、**[環境]**、**[フォントおよび色]**、**[設定の表示: テキスト エディター]** の順に選択します。 **[表示項目]** でカバレッジ項目を調整します。  
+     To alter the colors, or to use bold face, choose **Tools**, **Options**, **Environment**, **Fonts and Colors**, **Show settings for: Text Editor**. Under **Display Items**, adjust the Coverage items.  
   
-3.  結果が低カバレッジを示していた場合は、コードのどの部分が実行されていないかを調べ、その部分をカバーするテストをさらに作成します。 開発チームは、通常、約 80% のコード カバレッジを目標にします。 状況によっては、より低いカバレッジでも許容されます。 たとえば、一部のコードが標準テンプレートから生成される場合は、より低いカバレッジでも許容されます。  
+3.  If the results show low coverage, investigate which parts of the code are not being exercised, and write more tests to cover them. Development teams typically aim for about 80% code coverage. In some situations, lower coverage is acceptable. For example, lower coverage is acceptable where some code is generated from a standard template.  
   
 > [!TIP]
->  正確な結果を得るには、次の点に注意します。  
+>  To get accurate results:  
 >   
->  -   コンパイラの最適化がオフになっていることを確認します。  
+>  -   Make sure that compiler optimization is turned off.  
 >   
->      アンマネージ (ネイティブ) コードを操作している場合は、デバッグ ビルドを使用します。  
-> -   各アセンブリのシンボル (.pdb) ファイルが生成されていることを確認します。  
+>      If you are working with unmanaged (native) code, use a debug build.  
+> -   Make sure that you are generating .pdb (symbol) files for each assembly.  
 >   
->  期待した結果が得られない場合は、「[トラブルシューティング コード カバレッジ](../test/troubleshooting-code-coverage.md) 」を参照してください。 コードを更新した後は、コード カバレッジを忘れずに再度実行します。 コードの変更後やテストの実行後に、カバレッジ結果とコードの色分けは自動的には更新されません。  
+>  If you don't get the results you expect, see [Troubleshooting Code Coverage](../test/troubleshooting-code-coverage.md). . Don't forget to run code coverage again after updating your code. Coverage results and code coloring are not automatically updated after you modify your code or when you run tests.  
   
-## <a name="reporting-in-blocks-or-lines"></a>ブロック単位または行単位で報告する  
- コード カバレッジは、*ブロック*単位でカウントされます。 ブロックは、エントリ ポイントと終了ポイントを 1 つだけ持つ、コードの部分です。  プログラムの制御フローがテストの実行中にブロックを通過すると、そのブロックはカバー済みとしてカウントされます。 ブロックが使用された回数は、結果には影響しません。  
+## <a name="reporting-in-blocks-or-lines"></a>Reporting in blocks or lines  
+ Code coverage is counted in *blocks*. A block is a piece of code with exactly one entry and exit point.  If the program's control flow passes through a block during a test run, that block is counted as covered. The number of times the block is used has no effect on the result.  
   
- テーブル ヘッダーで **[列の追加と削除]** を選択して、結果を行単位で表示することもできます。 テストの実行がコードのいずれかの行内のすべてのコード ブロックを処理すると、1 行としてカウントされます。 実行されたコード ブロックと実行されなかったコード ブロックが行内に含まれている場合は、部分行としてカウントされます。  
+ You can also have the results displayed in terms of lines by choosing **Add/Remove Columns** in the table header. If the test run exercised all the code blocks in any line of code, it is counted as one line. Where a line contains some code blocks that were exercised and some that were not, that is counted as a partial line.  
   
- 行単位での割合の方が、ソース コードで見ることができるフラグメントのサイズに正確に対応するため、一部のユーザーは行単位でのカウントを選びます。 計算の長いブロックは、複数の行にわたっていても、1 つのブロックとしてカウントされます。  
+ Some users prefer a count of lines because the percentages correspond more closely to the size of the fragments that you see in the source code. A long block of calculation would count as a single block even if it occupies many lines.  
   
-## <a name="managing-code-coverage-results"></a>コード カバレッジの結果を管理する  
- [コード カバレッジの結果] ウィンドウには、通常、最新の実行の結果が表示されます。 結果は、テスト データを変更したり、テストの一部だけを実行したりすると、そのたびに異なります。  
+## <a name="managing-code-coverage-results"></a>Managing code coverage results  
+ The Code Coverage Results window usually shows the result of the most recent run. The results will vary if you change your test data, or if you run only some of your tests each time.  
   
- コード カバレッジ ウィンドウを使用して、以前の結果や、他のコンピューター上で取得した結果を表示することもできます。  
+ The code coverage window can also be used to view previous results, or results obtained on other computers.  
   
- いくつかの実行 (たとえば、異なるテスト データを使用した実行) の結果をマージできます。  
+ You can merge the results of several runs, for example from runs that use different test data.  
   
--   **以前の結果のセットを表示するには**、それをドロップダウン メニューから選択します。 メニューには一時的な一覧が表示され、新しいソリューションを開くとクリアされます。  
+-   **To view a previous set of results**, select it from the drop-down menu. The menu shows a temporary list that is cleared when you open a new solution.  
   
--   **以前のセッションの結果を表示するには**、**[コード カバレッジの結果のインポート]** を選択し、ソリューションの TestResults フォルダーに移動して、.coverage ファイルをインポートします。  
+-   **To view results from a previous session**, choose **Import Code Coverage Results**, navigate to the TestResults folder in your solution, and import a .coverage file.  
   
-     .coverage ファイルの生成後、ソース コードを変更した場合は、カバレッジの色分けが正しくない場合があります。  
+     The coverage coloring might be incorrect if the source code has changed since the .coverage file was generated.  
   
--   **結果をテキストとして読みやすくするには**、**[コード カバレッジの結果のエクスポート]** を選択します。 他のツールで処理したり電子メールで簡単に送信したりすることができる、読める形式の .coveragexml ファイルが生成されます。  
+-   **To make results readable as text**, choose **Export Code Coverage Results**. This generates a readable .coveragexml file which you could process with other tools or send easily in mail.  
   
--   **結果を他のユーザーに送信するには**、.coverage ファイルまたはエクスポートされた .coveragexml ファイルを送信します。 受け取ったユーザーは、ファイルをインポートできます。 同じバージョンのソース コードを持っていれば、カバレッジの色分けも表示できます。  
+-   **To send results to someone else**, send either a .coverage file or an exported .coveragexml file. They can then import the file. If they have the same version of the source code, they can see coverage coloring.  
   
-## <a name="merging-results-from-different-runs"></a>さまざまな実行による結果をマージする  
- 状況によっては、テスト データに応じて、コード内の異なるブロックが使用されます。 そのため、異なるテスト実行の結果を結合する必要がある場合があります。  
+## <a name="merging-results-from-different-runs"></a>Merging results from different runs  
+ In some situations, different blocks in your code will be used depending on the test data. Therefore, you might want to combine the results from different test runs.  
   
- たとえば、入力が "2" のテストを実行したときに、特定の関数の 50% がカバーされるとします。 入力を "-2" にして再度テストを実行すると、カバレッジの色分けビューで、関数の残りの 50% がカバーされていることがわかるとします。 ここで、2 つのテスト実行の結果をマージすると、レポートやカバレッジの色分けビューで、関数の 100% がカバーされたことが表示されます。  
+ For example, suppose that when you run a test with input "2", you find that 50% of a particular function is covered. When you run the test a second time with the input "-2" you see in the coverage coloring view that the other 50% of the function is covered. Now you merge the results from the two test runs, and the report and coverage coloring view show that 100% of the function was covered.  
   
- そのためには、![[コード カバレッジ] ウィンドウの [マージ] ボタンのアイコン](~/test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon") **[コード カバレッジの結果のマージ]** を使用します。 最新の実行またはインポートされた結果を任意の組み合わせで選択できます。 エクスポートされた結果を結合する場合は、まず、それらをインポートする必要があります。  
+ Use ![Icon for Merge button in Code Coverage window](../test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon")**Merge Code Coverage Results** to do this. You can choose any combination of recent runs or imported results. If you want to combine exported results, you must import them first.  
   
- マージ操作の結果を保存するには、**[コード カバレッジの結果のエクスポート]** を使用します。  
+ Use **Export Code Coverage Results** to save the results of a merge operation.  
   
-### <a name="limitations-in-merging"></a>マージの制限事項  
+### <a name="limitations-in-merging"></a>Limitations in merging  
   
--   バージョンが異なるコードのカバレッジ データをマージすると、結果は個別に表示され、結合はされません。 完全に結合された結果を取得するには、同じビルドのコードを使用し、テスト データだけを変更します。  
+-   If you merge coverage data from different versions of the code, the results are shown separately, but they are not combined. To get fully combined results, use the same build of the code, changing only the test data.  
   
--   エクスポートしてからインポートされた結果ファイルをマージした場合は、行単位の結果のみを表示でき、ブロック単位の結果は表示できません。 行データを表示するには、**[列の追加と削除]** コマンドを使用します。  
+-   If you merge a results file that has been exported and then imported, you can only view the results by lines, not by blocks. Use the **Add/Remove Columns** command to show the line data.  
   
--   ASP.NET プロジェクトのテスト結果をマージした場合は、個別のテストの結果は表示されますが、結合された結果は表示されません。 このようになるのは、ASP.NET の成果物自体だけです。他のアセンブリの結果は結合されます。  
+-   If you merge results from tests of an ASP.NET project, the results for the separate tests are displayed, but not combined. This applies only to the ASP.NET artifacts themselves: results for any other assemblies will be combined.  
   
-## <a name="excluding-elements-from-the-code-coverage-results"></a>コード カバレッジの結果から要素を除外する  
- コードがテキスト テンプレートから生成された場合のように、コード内の特定の要素をカバレッジのスコアから除外する必要があることがあります。 その場合は、コード要素であるクラス、構造体、メソッド、プロパティ、プロパティ set または get アクセス操作子、およびイベントに、属性 `System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage` を追加します。 クラスを除外しても、派生クラスは除外されないことに注意してください。  
+## <a name="excluding-elements-from-the-code-coverage-results"></a>Excluding elements from the code coverage results  
+ You might want to exclude specific elements in your code from the coverage scores, for example if the code is generated from a text template. Add the attribute `System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage` to any of the following code elements: class, struct, method, property, property setter or getter, event. Note that excluding a class does not exclude its derived classes.  
   
- 例:  
+ For example:  
   
-```c#  
+```cs  
   
 using System.Diagnostics.CodeAnalysis;   
 ...  
@@ -146,7 +146,7 @@ class ExampleClass2 { ... }
   
 ```  
   
-```vb#  
+```vb  
 Imports System.Diagnostics.CodeAnalysis  
   
 Class ExampleClass1          
@@ -207,8 +207,8 @@ public ref class ExampleClass2
   
 ```  
   
-### <a name="excluding-elements-in-native-c-code"></a>ネイティブ C++ コード内の要素を除外する  
- C++ コードでアンマネージ (ネイティブ) 要素を除外するには:  
+### <a name="excluding-elements-in-native-c-code"></a>Excluding elements in Native C++ code  
+ To exclude unmanaged (native) elements in C++ code:  
   
 ```cpp  
   
@@ -235,72 +235,72 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
   
 ```  
   
- 以下のマクロを使用します。  
+ Use the following macros:  
   
  `ExcludeFromCodeCoverage(` *ExclusionName* `, L"` *FunctionName* `");`  
   
  `ExcludeSourceFromCodeCoverage(` *ExclusionName* `, L"` *SourceFilePath* `");`  
   
--   *ExclusionName* は任意の一意の名前です。  
+-   *ExclusionName* is any unique name.  
   
--   *FunctionName* は完全修飾関数名です。 ワイルドカードを含めることができます。 たとえば、クラスのすべての関数を除外するには、`MyNamespace::MyClass::*` と記述します。  
+-   *FunctionName* is a fully qualified function name. It may contain wildcards. For example, to exclude all the functions of a class, write `MyNamespace::MyClass::*`  
   
--   *SourceFilePath* は .cpp ファイルのローカル パスまたは UNC パスです。 ワイルドカードを含めることができます。 たとえば、`\\MyComputer\Source\UnitTests\*.cpp` と記述すると、特定のディレクトリ内のすべてのファイルが除外されます。  
+-   *SourceFilePath* is the local or UNC path of a .cpp file. It may contain wildcards. The following example excludes all files in a particular directory: `\\MyComputer\Source\UnitTests\*.cpp`  
   
 -   `#include <CodeCoverage\CodeCoverage.h>`  
   
--   除外マクロの呼び出しは、いずれかの名前空間またはクラス内ではなく、グローバル名前空間に配置します。  
+-   Place calls to the exclusion macros in the global namespace, not within any namespace or class.  
   
--   除外は単体テスト コード ファイルまたはアプリケーション コード ファイル内に配置できます。  
+-   You can place the exclusions either in the unit test code file or the application code file.  
   
--   除外は、コンパイラ オプションを設定するか、`#pragma managed(off)` を使用して、アンマネージ (ネイティブ) コードとしてコンパイルする必要があります。  
+-   The exclusions must be compiled as unmanaged (native) code, either by setting the compiler option or by using `#pragma managed(off)`.  
   
 > [!NOTE]
->  C++/CLI コード内の関数を除外するには、関数に `[System::Diagnostics::CodeAnalysis::ExcludeFromCodeCoverage]` 属性を適用します。 これは、C# の場合と同じです。  
+>  To exclude functions in C++/CLI code, apply the attribute `[System::Diagnostics::CodeAnalysis::ExcludeFromCodeCoverage]` to the function. This is the same as for C#.  
   
-### <a name="including-or-excluding-additional-elements"></a>追加の要素を含めるか除外する  
- コード カバレッジ分析の対象となるのは、読み込まれ、.dll または .exe ファイルと同じディレクトリ内の .pdb ファイルを利用できるアセンブリだけです。 そのため、状況によっては、適切な .pdb ファイルのコピーを取得することによって、対象となるアセンブリのセットを拡張できます。  
+### <a name="including-or-excluding-additional-elements"></a>Including or excluding additional elements  
+ Code coverage analysis is performed only on assemblies that are loaded and for which a .pdb file is available in the same directory as the .dll or .exe file. Therefore in some circumstances, you can extend the set of assemblies that is included by getting copies of the appropriate .pdb files.  
   
- .runsettings ファイルを記述すると、コード カバレッジ分析の対象としてどのアセンブリと要素を選択するかをより詳細に制御できます。 たとえば、クラスに属性を追加せずに、特定の種類のアセンブリを除外できます。 詳細については、「[コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)」を参照してください。  
+ You can exercise more control over which assemblies and elements are selected for code coverage analysis by writing a .runsettings file. For example, you can exclude assemblies of particular kinds without having to add attributes to their classes. For more information, see [Customizing Code Coverage Analysis](../test/customizing-code-coverage-analysis.md).  
   
-## <a name="analyzing-code-coverage-in-the-build-service"></a>ビルド サービスでコード カバレッジを分析する  
- コードをチェックインすると、テストがビルド サーバー上で、他のチーム メンバーによる他のすべてのテストと共に実行されます。 まだこの設定を行っていない場合は、「[ビルド プロセスでのテストの実行](http://msdn.microsoft.com/Library/d05743a1-c5cf-447e-bed9-bed3cb595e38)」を参照してください。これによって、プロジェクト全体のカバレッジに関する最新の全体像が得られるため、ビルド サービスのコード カバレッジを分析する場合に便利です。 これには、自動化されたシステム テストと、通常は開発用コンピューターでは実行しない、その他のコード化されたテストも含まれます。  
+## <a name="analyzing-code-coverage-in-the-build-service"></a>Analyzing code coverage in the build service  
+ When you check in your code, your tests will run on the build server, along with all the other tests from other team members. (If you haven't already set this up, see [Run tests in your build process](http://msdn.microsoft.com/Library/d05743a1-c5cf-447e-bed9-bed3cb595e38).) It's useful to analyze code coverage on the build service, because that gives the most up-to-date and comprehensive picture of coverage in the whole project. It will also include automated system tests and other coded tests that you don't usually run on the development machines.  
   
-1.  チーム エクスプローラーで、[**ビルド**] を開き、ビルド定義を追加または編集します。  
+1.  In Team Explorer, open **Builds**, and then add or edit a build definition.  
   
-2.  [**プロセス**] ページで [**自動テスト**]、[**テスト ソース**]、[**実行設定**] の順に展開します。 [**実行設定の種類**] を [**コード カバレッジの有効化**] に設定します。  
+2.  On the **Process** page, expand **Automated Tests**, **Test Source**, **Run Settings**. Set **Type of Run Settings File** to **Code Coverage Enabled**.  
   
-     複数のテスト ソース定義がある場合は、各定義に対してこの手順を繰り返します。  
+     If you have more than one Test Source definition, repeat this step for each one.  
   
-    -   *ただし、**[実行設定の種類]** というフィールドはありません。*  
+    -   *But there is no field named **Type of Run Settings File**.*  
   
-         [**自動テスト**] の下の [**テスト アセンブリ**] を選択し、行の末尾の省略記号 (**[...]**) ボタンを選択します。 [**テストの実行の追加と編集**] ダイアログ ボックスで、[**テスト ランナー**] の下の [**Visual Studio テスト ランナー**] を選択します。  
+         Under **Automated Tests**, select **Test Assembly** and choose the ellipsis button **[...]** at the end of the line. In the **Add/Edit Test Run** dialog box, under **Test Runner**, choose **Visual Studio Test Runner**.  
   
- ![コード カバレッジのビルド定義の設定](~/test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")  
+ ![Setting the build definition for code coverage](../test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")  
   
- ビルドの実行後、コード カバレッジの結果はテスト実行にアタッチされ、ビルドの概要に表示されます。  
+ After the build runs, the code coverage results are attached to the test run and appear in the build summary.  
   
-## <a name="analyzing-code-coverage-in-a-command-line"></a>コマンド ラインでコード カバレッジを分析する  
- コマンド ラインからテストを実行するには、vstest.console.exe を使用します。 コード カバレッジは、このユーティリティのオプションです。 詳細については、「[VSTest.Console.exe のコマンド ライン オプション](/devops-test-docs/test/vstest-console-exe-command-line-options)」を参照してください。  
+## <a name="analyzing-code-coverage-in-a-command-line"></a>Analyzing Code Coverage in a Command Line  
+ To run tests from the command line, use vstest.console.exe. Code coverage is an option of this utility. For more information, see [VSTest.Console.exe command-line options](/devops-test-docs/test/vstest-console-exe-command-line-options).  
   
-1.  Visual Studio 開発者コマンド プロンプトを起動します。  
+1.  Launch the Visual Studio Developer Command Prompt:  
   
-     Windows の **[スタート]** メニューで **[すべてのプログラム]**、**[Microsoft Visual Studio]**、**[Visual Studio Tools]**、**[開発者コマンド プロンプト]** の順に選択します。  
+     On the Windows **Start** menu, choose **All Programs**, **Microsoft Visual Studio**, **Visual Studio Tools**, **Developer Command Prompt**.  
   
-2.  実行します。  
+2.  Run:  
   
      `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`  
   
-## <a name="troubleshooting"></a>トラブルシューティング  
- コード カバレッジの結果が表示されない場合は、「[トラブルシューティング コード カバレッジ](../test/troubleshooting-code-coverage.md)」を参照してください。  
+## <a name="troubleshooting"></a>Troubleshooting  
+ If you do not see code coverage results, see  [Troubleshooting Code Coverage](../test/troubleshooting-code-coverage.md).  
   
-## <a name="external-resources"></a>外部リソース  
+## <a name="external-resources"></a>External resources  
   
-### <a name="guidance"></a>ガイダンス  
- [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
+### <a name="guidance"></a>Guidance  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>関連項目  
- [コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)   
- [トラブルシューティング コード カバレッジ](../test/troubleshooting-code-coverage.md)   
- [コードの単体テスト](../test/unit-test-your-code.md)
+## <a name="see-also"></a>See Also  
+ [Customizing Code Coverage Analysis](../test/customizing-code-coverage-analysis.md)   
+ [Troubleshooting Code Coverage](../test/troubleshooting-code-coverage.md)   
+ [Unit Test Your Code](../test/unit-test-your-code.md)
 

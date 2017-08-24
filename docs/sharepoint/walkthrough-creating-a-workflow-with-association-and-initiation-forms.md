@@ -1,132 +1,137 @@
 ---
-title: "チュートリアル: 関連付けフォームと開始フォームを持つワークフローの作成"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "関連付けフォーム [Visual Studio での SharePoint 開発]"
-  - "開始フォーム [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, ワークフロー関連付けフォーム"
-  - "Visual Studio での SharePoint 開発, ワークフロー開始フォーム"
-  - "Visual Studio での SharePoint 開発, ワークフロー"
-  - "ワークフロー [Visual Studio での SharePoint 開発]"
+title: 'Walkthrough: Creating a Workflow with Association and Initiation Forms | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, workflows
+- SharePoint development in Visual Studio, workflow association forms
+- workflows [SharePoint development in Visual Studio]
+- association forms [SharePoint development in Visual Studio]
+- initiation forms [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, workflow initiation forms
 ms.assetid: c8666d8c-b173-4245-8014-9c1cd6acb071
 caps.latest.revision: 38
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 37
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7ee04fda23bf03f6101731557d08e07befe66ecd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
+
 ---
-# チュートリアル: 関連付けフォームと開始フォームを持つワークフローの作成
-  このチュートリアルでは、組み込まれたかたちで関連付けフォームと開始フォームを使用する基本的なシーケンシャル ワークフローの作成方法について説明します。  関連付けフォームと開始フォームは、それぞれ、SharePoint 管理者が初めてワークフローの関連付けを行うときと、ユーザーがワークフローを開始するときに、ワークフローにパラメーターが追加されるようにする ASPX フォームです。  
+# <a name="walkthrough-creating-a-workflow-with-association-and-initiation-forms"></a>Walkthrough: Creating a Workflow with Association and Initiation Forms
+  This walkthrough demonstrates how to create a basic sequential workflow that incorporates the use of association and initiation forms. These are ASPX forms that enable parameters to be added to a workflow when it is first associated by the SharePoint administrator (the association form), and when the workflow is started by the user (the initiation form).  
   
- このチュートリアルでは、次の要件を満たす経費明細書承認ワークフローを作成します。  
+ This walkthrough outlines a scenario where a user wants to create an approval workflow for expense reports that has the following requirements:  
   
--   管理者がワークフローをリストに関連付けようとすると、関連付けフォームが表示され、経費明細書の上限金額を入力するよう求められます。  
+-   When the workflow is associated with a list, the administrator is prompted with an association form where they enter a dollar limit for expense reports.  
   
--   従業員は各自の経費明細書を共有ドキュメント リストにアップロードしてワークフローを開始し、経費の合計をワークフローの開始フォームに入力します。  
+-   Employees upload their expense reports to the Shared Documents list, start the workflow, and then enter the expense total in the workflow initiation form.  
   
--   従業員の経費明細書の合計が、管理者によってあらかじめ定義された上限を超えている場合は、その従業員の上司が経費明細書を承認するためのタスクが作成されます。  従業員の経費明細書の合計が経費の上限と等しい場合、またはそれよりも少ない場合は、自動承認メッセージがワークフローの履歴リストに書き込まれます。  
+-   If an employee expense report total exceeds the administrator's predefined limit, a task is created for the employee's manager to approve the expense report. However, if an employee's expense report total is less than or equal to the expense limit, an auto-approved message is written to the workflow's history list.  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   SharePoint リスト定義シーケンシャル ワークフロー プロジェクトを [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で作成する。  
+-   Creating a SharePoint list definition sequential workflow project in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
--   ワークフロー スケジュールを作成する。  
+-   Creating a workflow schedule.  
   
--   ワークフロー アクティビティのイベントを処理する。  
+-   Handling workflow activity events.  
   
--   ワークフローの関連付けフォームと開始フォームを作成する。  
+-   Creating workflow association and initiation forms.  
   
--   ワークフローを関連付ける。  
+-   Associating the workflow.  
   
--   ワークフローを手動で開始する。  
+-   Manually starting the workflow.  
   
 > [!NOTE]  
->  このチュートリアルではシーケンシャル ワークフロー プロジェクトを使用していますが、ステート マシン ワークフローでも手順は同じです。  
+>  Although this walkthrough uses a sequential workflow project, the process is the same for state machine workflows.  
 >   
->  また、次の手順で参照している [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前または場所が異なる場合があります。  これらの要素は、使用する [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] のエディションとその設定によって決まります。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  Also, your computer might show different names or locations for some of the [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] user interface elements in the following instructions. The [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   サポート対象エディションの [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] および SharePoint。  詳細については、「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio  
+-   Visual Studio.  
   
-## SharePoint シーケンシャル ワークフロー プロジェクトの作成  
- まず、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] でシーケンシャル ワークフロー プロジェクトを作成します。  シーケンシャル ワークフローは、最後のアクティビティが完了するまで順番に実行される一連の手順です。  この手順では、SharePoint の共有ドキュメント リストに適用するシーケンシャル ワークフローを作成します。  ワークフローのウィザードを使用すると、サイト定義またはリスト定義のいずれかにワークフローを関連付けることができ、またワークフローを開始するタイミングを指定することができます。  
+## <a name="creating-a-sharepoint-sequential-workflow-project"></a>Creating a SharePoint Sequential Workflow Project  
+ First, create a sequential workflow project in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. A sequential workflow is a series of steps that executes in order until the last activity finishes. In this procedure, you will create a sequential workflow that applies to the Shared Documents list in SharePoint. The workflow's wizard lets you associate the workflow with either the site or the list definition and lets you determine when the workflow will start.  
   
-#### SharePoint シーケンシャル ワークフロー プロジェクトを作成するには  
+#### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>To create a SharePoint sequential workflow project  
   
-1.  メニュー バーで、**\[新しいプロジェクト\]** ダイアログ ボックスを表示するには、**\[新規作成\]**、**\[プロジェクト\]\[ファイル\]** をクリックします。  
+1.  On the menu bar, choose **File**, **New**, **Project** to display the **New Project** dialog box.  
   
-2.  **\[SharePoint\]** ノードを **\[Visual C\#\]** または **\[Visual Basic\]** で展開し、**2010** ノードを選択します。  
+2.  Expand the **SharePoint** node under either **Visual C#** or **Visual Basic**, and then choose the **2010** node.  
   
-3.  **\[テンプレート\]** のペインで、**\[SharePoint 2010 プロジェクト\]** プロジェクト テンプレートを選択します。  
+3.  In the **Templates** pane, choose the **SharePoint 2010 Project** project template.  
   
-4.  **\[名前\]** ボックスで、ExpenseReport "と入力し、**\[OK\]** ボタンをクリックします。  
+4.  In the **Name** box, enter **ExpenseReport** and then choose the **OK** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+     The **SharePoint Customization Wizard** appears.  
   
-5.  **\[デバッグのサイトとセキュリティ レベルの指定\]** ページで、**\[ファーム ソリューションとして配置する\]** のオプション ボタンを選択し、信頼レベルと既定のサイトを受け入れるように **\[完了\]** ボタンをクリックします。  
+5.  In the **Specify the site and security level for debugging** page, choose the **Deploy as a farm solution** option button, and then choose the **Finish** button to accept the trust level and default site.  
   
-     また、この段階で、ソリューションの信頼レベルがファーム ソリューション \(ワークフロー プロジェクトではこれ以外は選択できません\) として設定されます。  
+     This step also sets the trust level for the solution as farm solution, which is the only available option for workflow projects.  
   
-6.  **ソリューション エクスプローラー**で、プロジェクト ノードを選択します。  
+6.  In **Solution Explorer**, choose the project node.  
   
-7.  メニュー バーで **\[プロジェクト\]**、**\[新しい項目の追加\]** の順に選択します。  
+7.  On the menu bar, choose **Project**, **Add New Item**.  
   
-8.  **\[Visual C\#\]** または **\[Visual Basic\]** で、**\[SharePoint\]** ノードを展開し、**2010** ノードを選択します。  
+8.  Under either **Visual C#** or **Visual Basic**, expand the **SharePoint** node, and then choose the **2010** node.  
   
-9. **\[テンプレート\]** のペインでテンプレートを **\[シーケンシャル ワークフロー \(ファーム ソリューションのみ\)\]** をクリックします、**\[追加\]** ボタンをクリックします。  
+9. In the **Templates** pane, choose **Sequential Workflow (Farm Solution only)** template, and then choose the **Add** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+     The **SharePoint Customization Wizard** appears.  
   
-10. **\[デバッグのワークフロー名の指定\]** ページで、既定の名前 \(**ExpenseReport \- Workflow1**\) を受け入れます。  既定のワークフロー テンプレートの種類である **\[リスト ワークフロー\]** を受け入れます。  **\[次へ\]** ボタンをクリックします。  
+10. In the **Specify the workflow name for debugging** page, accept the default name (**ExpenseReport - Workflow1**). Keep the default workflow template type value (**List Workflow)**. Choose the **Next** button.  
   
-11. **\[デバッグ セッション中に Visual Studio によってワークフローが自動的に関連付けられるようにする\]** ページで、ワークフロー テンプレートを自動的に関連付けるためのチェック ボックスがオンの場合は、チェック ボックスをオフにします。  
+11. In the **Would you like Visual Studio to automatically associate the workflow in a debug session?** page, clear the box that automatically associates your workflow template if it is checked.  
   
-     この手順によって、後で関連付けフォームを表示し、ワークフローを共有ドキュメント リストに手動で関連付けることができます。  
+     This step lets you manually associate the workflow with the Shared Documents list later on, which displays the association form.  
   
-12. **\[完了\]** をクリックします。  
+12. Choose the **Finish** button.  
   
-## ワークフローへの関連付けフォームの追加  
- 次に、SharePoint 管理者が初めてワークフローを経費明細書ドキュメントに関連付けるときに表示される .ASPX 形式の関連付けフォームを作成します。  
+## <a name="adding-an-association-form-to-the-workflow"></a>Adding an Association Form to the Workflow  
+ Next, create an .ASPX association form that appears when the SharePoint administrator first associates the workflow with an expense report document.  
   
-#### ワークフローに関連付けフォームを追加するには  
+#### <a name="to-add-an-association-form-to-the-workflow"></a>To add an association form to the workflow  
   
-1.  **\[ソリューション エクスプローラー\]** の **\[Workflow1\]** ノードを選択します。  
+1.  Choose the **Workflow1** node in **Solution Explorer**.  
   
-2.  メニュー バーで、**\[新しいアイテムの追加\]** ダイアログ ボックスを表示するには、**\[新しいアイテムの追加\]\[プロジェクト\]** をクリックします。  
+2.  On the menu bar, choose **Project**, **Add New Item** to display the **Add New Item** dialog box.  
   
-3.  ダイアログ ボックスのツリー ビューで、**\[Visual C\#\]** または **\[Visual Basic \]**  \(プロジェクトの言語によって\) を展開し、**\[SharePoint\]** ノードを展開し、**2010** ノードを選択します。  
+3.  In the dialog box tree view, expand either **Visual C#** or **Visual Basic** (depending on your project language), expand the **SharePoint** node, and then choose the **2010** node.  
   
-4.  テンプレートの一覧で、**\[ワークフロー関連付けフォーム\]** テンプレートを選択します。  
+4.  In the list of templates, choose the **Workflow Association Form** template.  
   
-5.  **\[名前\]** のテキスト ボックスに" ExpenseReportAssocForm.aspx "と入力します。  
+5.  In the **Name** text box, enter **ExpenseReportAssocForm.aspx**.  
   
-6.  プロジェクトにフォームを追加するに **\[追加\]** ボタンをクリックします。  
+6.  Choose the **Add** button to add the form to the project.  
   
-## 関連付けフォームのデザインとコーディング  
- この手順では、関連付けフォームにコントロールとコードを追加して必要な機能を組み込みます。  
+## <a name="designing-and-coding-the-association-form"></a>Designing and Coding the Association Form  
+ In this procedure, you introduce functionality to the association form by adding controls and code to it.  
   
-#### 関連付けフォームのデザインとコーディングを行うには  
+#### <a name="to-design-and-code-the-association-form"></a>To design and code the association form  
   
-1.  関連フォーム \(ExpenseReportAssocForm.aspx\) で、`ID="Main"` の `asp:Content` 要素を特定します。  
+1.  In the association form (ExpenseReportAssocForm.aspx), locate the `asp:Content` element that has `ID="Main"`.  
   
-2.  このコンテンツ要素の先頭行の直後に次のコードを追加して、承認する経費の上限 \(*AutoApproveLimit*\) を入力するよう求めるラベルとテキスト ボックスを作成します。  
+2.  Directly after the first line in this content element, add the following code to create a label and textbox that prompts for the expense approval limit (*AutoApproveLimit*):  
   
     ```  
     <asp:Label ID="lblAutoApproveLimit" Text="Auto Approval Limit:" runat="server" />  
@@ -135,14 +140,14 @@ caps.handback.revision: 37
     <br /><br />  
     ```  
   
-3.  **ソリューション エクスプローラー**で **ExpenseReportAssocForm.aspx** ファイルを展開して、その依存ファイルを表示します。  
+3.  Expand the **ExpenseReportAssocForm.aspx** file in **Solution Explorer** to display its dependent files.  
   
     > [!NOTE]  
-    >  プロジェクトが [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]にある場合は、この手順を実行するに **\[すべてのファイルを表示します。\]** ボタンを選択する必要があります。  
+    >  If your project is in [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)], you must choose the **View All Files** button to perform this step.  
   
-4.  ExpenseReportAssocForm.aspx ファイルのショートカット メニューを開き、**\[コードの表示\]** をクリックします。  
+4.  Open the shortcut menu for the ExpenseReportAssocForm.aspx file and choose **View Code**.  
   
-5.  `GetAssociationData` メソッドを次のコードに置き換えます。  
+5.  Replace the `GetAssociationData` method with:  
   
     ```vb  
     Private Function GetAssociationData() As String  
@@ -153,7 +158,7 @@ caps.handback.revision: 37
     End Function  
     ```  
   
-    ```csharp  
+    ```cs  
     private string GetAssociationData()  
     {  
         // TODO: Return a string that contains the association data that   
@@ -163,31 +168,31 @@ caps.handback.revision: 37
     }  
     ```  
   
-## ワークフローへの開始フォームの追加  
- 次に、ユーザーが各自の経費明細書に対してワークフローを実行すると表示される開始フォームを作成します。  
+## <a name="adding-an-initiation-form-to-the-workflow"></a>Adding an Initiation Form to the Workflow  
+ Next, create the initiation form that appears when users run the workflow against their expense reports.  
   
-#### 開始フォームを作成するには  
+#### <a name="to-create-an-initiation-form"></a>To create an initiation form  
   
-1.  **\[ソリューション エクスプローラー\]** の **\[Workflow1\]** ノードを選択します。  
+1.  Choose the **Workflow1** node in **Solution Explorer**.  
   
-2.  メニュー バーで、**\[新しいアイテムの追加\]** の表示 **\[新しいアイテムの追加\]** ダイアログ ボックス **\[プロジェクト\]** をクリックします。  
+2.  On the menu bar, choose **Project**, **Add New Item** display the **Add New Item** dialog box.  
   
-3.  ダイアログ ボックスのツリー ビューで、**\[Visual C\#\]** または **\[Visual Basic \]**  \(プロジェクトの言語によって\) を展開し、**\[SharePoint\]** ノードを展開し、**2010** ノードを選択します。  
+3.  In the dialog box tree view, expand either **Visual C#** or **Visual Basic**  (depending on your project language), expand the **SharePoint** node, and then choose the **2010** node.  
   
-4.  テンプレートの一覧で、**\[ワークフロー開始フォーム\]** テンプレートを選択します。  
+4.  In the list of templates, choose the **Workflow Initiation Form** template.  
   
-5.  **\[名前\]** のテキスト ボックスに" ExpenseReportInitForm.aspx "と入力します。  
+5.  In the **Name** text box, enter **ExpenseReportInitForm.aspx**.  
   
-6.  プロジェクトにフォームを追加するに **\[追加\]** ボタンをクリックします。  
+6.  Choose the **Add** button to add the form to the project.  
   
-## 開始フォームのデザインとコーディング  
- 次に、開始フォームにコントロールとコードを追加して必要な機能を組み込みます。  
+## <a name="designing-and-coding-the-initiation-form"></a>Designing and Coding the Initiation Form  
+ Next, introduce functionality to the initiation form by adding controls and code to it.  
   
-#### 開始フォームのコーディングをするには  
+#### <a name="to-code-the-initiation-form"></a>To code the initiation form  
   
-1.  初期化フォーム \(ExpenseReportInitForm.aspx\) で、`ID="Main"`を含む `asp:Content` 要素を見つけます。  
+1.  In the initiation form (ExpenseReportInitForm.aspx), locate the `asp:Content` element that contains `ID="Main"`.  
   
-2.  このコンテンツ要素の先頭行の直後に、次のコードを追加して、関連付けフォームで入力された承認する経費の上限 \(*AutoApproveLimit*\) を表示するラベルとテキスト ボックス、および経費の合計 \(*ExpenseTotal*\) を入力するよう求めるラベルとテキスト ボックスを作成します。  
+2.  Directly after the first line in this content element, add the following code to create a label and textbox that displays the expense approval limit (*AutoApproveLimit*) that was entered in the association form, and another label and textbox to prompt for the expense total (*ExpenseTotal*):  
   
     ```  
     <asp:Label ID="lblAutoApproveLimit" Text="Auto Approval Limit:" runat="server" />  
@@ -200,11 +205,11 @@ caps.handback.revision: 37
     <br /><br />  
     ```  
   
-3.  **ソリューション エクスプローラー**で **ExpenseReportInitForm.aspx** ファイルを展開して、その依存ファイルを表示します。  
+3.  Expand the **ExpenseReportInitForm.aspx** file in **Solution Explorer** to display its dependent files.  
   
-4.  ExpenseReportInitForm.aspx ファイルのショートカット メニューを開き、**\[コードの表示\]** をクリックします。  
+4.  Open the shortcut menu for the ExpenseReportInitForm.aspx file and choose **View Code**.  
   
-5.  `Page_Load` メソッドを次のコード例に置き換えます。  
+5.  Replace the `Page_Load` method with the following example:  
   
     ```vb  
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As   
@@ -216,7 +221,7 @@ caps.handback.revision: 37
     End Sub  
     ```  
   
-    ```csharp  
+    ```cs  
     protected void Page_Load(object sender, EventArgs e)  
     {  
         InitializeParams();  
@@ -226,7 +231,7 @@ caps.handback.revision: 37
     }  
     ```  
   
-6.  `GetInitiationData` メソッドを次のコード例に置き換えます。  
+6.  Replace the `GetInitiationData` method with the following example:  
   
     ```vb  
     ' This method is called when the user clicks the button to start the workflow.  
@@ -239,7 +244,7 @@ caps.handback.revision: 37
     End Function  
     ```  
   
-    ```csharp  
+    ```cs  
     // This method is called when the user clicks the button to start the workflow.          
     private string GetInitiationData()  
     {  
@@ -250,59 +255,59 @@ caps.handback.revision: 37
     }  
     ```  
   
-## ワークフローのカスタマイズ  
- 次に、ワークフローをカスタマイズします。  後で 2 つのフォームをワークフローに関連付けます。  
+## <a name="customizing-the-workflow"></a>Customizing the Workflow  
+ Next, customize the workflow. Later, you will associate two forms to the workflow.  
   
-#### ワークフローをカスタマイズするには  
+#### <a name="to-customize-the-workflow"></a>To customize the workflow  
   
-1.  プロジェクトの Workflow1 を起動して、ワークフロー デザイナーにワークフローを表示します。  
+1.  Display the workflow in the workflow designer by opening Workflow1 in the project.  
   
-2.  **\[ツールボックス\]** で、**\[Windows Workflow v3.0\]** ノードを展開し、**\[IfElse\]** アクティビティを探します。  
+2.  In the **Toolbox**, expand the **Windows Workflow v3.0** node and locate the **IfElse** activity.  
   
-3.  次の手順の実行 1 かによってこのアクティビティをワークフローに追加します:  
+3.  Add this activity to the workflow by performing one of the following steps:  
   
-    -   **\[IfElse\]** アクティビティのショートカット メニューを開き、**\[コピー\]** をクリックします、行のショートカット メニューをワークフロー デザイナーの **\[onWorkflowActivated1\]** アクティビティで開き、**\[貼り付け\]** をクリックします。  
+    -   Open the shortcut menu for the **IfElse** activity, choose **Copy**, open the shortcut menu for the line under the **onWorkflowActivated1** activity in the workflow designer, and then choose **Paste**.  
   
-    -   **\[ツールボックス\]** から **\[IfElse\]** アクティビティをドラッグし、行は、ワークフロー デザイナーの **\[onWorkflowActiviated1\]** アクティビティの下に接続します。  
+    -   Drag the **IfElse** activity from the **Toolbox**, and connect it to the line under the **onWorkflowActiviated1** activity in the workflow designer.  
   
-4.  ツールボックスの **\[SharePoint ワークフロー\]** ノードを展開し、**\[CreateTask\]** アクティビティを探します。  
+4.  In the Toolbox, expand the **SharePoint Workflow** node and locate the **CreateTask** activity.  
   
-5.  次の手順の実行 1 かによってこのアクティビティをワークフローに追加します:  
+5.  Add this activity to the workflow by performing one of the following steps:  
   
-    -   **\[CreateTask\]** アクティビティのショートカット メニューを開き、**\[コピー\]** をクリックします、ワークフロー デザイナーの IfElseActivity1 内の **\[ここにアクティビティをドロップします\]** の 2 種類の領域の 1 種類のショートカット メニューを開き、**\[貼り付け\]** をクリックします。  
+    -   Open the shortcut menu for the **CreateTask** activity, choose **Copy**, open the shortcut menu for one of the two **Drop Activities Here** areas within **IfElseActivity1** in the workflow designer, and then choose **Paste**.  
   
-    -   IfElseActivity1 内に **\[ここにアクティビティをドロップします\]** の 2 種類の領域の 1 種類に **\[ツールボックス\]** から **\[CreateTask\]** アクティビティをドラッグします。  
+    -   Drag the **CreateTask** activity from the **Toolbox** onto one of the two **Drop Activities Here** areas within **IfElseActivity1**.  
   
-6.  **\[プロパティ\]** ウィンドウで、**CorrelationToken** プロパティの *taskToken* のプロパティ値を入力します。  
+6.  In the **Properties** window, enter a property value of *taskToken* for the **CorrelationToken** property.  
   
-7.  名の横にある正符号をクリックして **CorrelationToken** のプロパティ \(![TreeView 正符号](~/sharepoint/media/plus.gif "TreeView 正符号")\) を展開します。  
+7.  Expand the **CorrelationToken** property by choosing the plus sign (![TreeView plus](../sharepoint/media/plus.gif "TreeView plus")) next to it.  
   
-8.  **OwnerActivityName** subs プロパティのドロップダウン矢印をクリックし、*Workflow1* 値を設定します。  
+8.  Choose the drop-down arrow on the **OwnerActivityName** sub property, and set the *Workflow1* value.  
   
-9. **TaskId** のプロパティを選択し、**\[プロパティのバインド\]** ダイアログ ボックスを表示するには、省略記号 \(![ASP.NET モバイル デザイナー楕円](~/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")\) ボタンをクリックします。  
+9. Choose the **TaskId** property, and then choose the ellipsis (![ASP.NET Mobile Designer ellipse](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer ellipse")) button to display the **Bind Property** dialog box.  
   
-10. **\[新しいメンバーへのバインド\]** タブを選択し、**\[フィールドの作成\]** のオプション ボタンを選択し、**\[OK\]** ボタンをクリックします。  
+10. Choose the **Bind to a new member** tab, choose the **Create Field** option button, and then choose the **OK** button.  
   
-11. **TaskProperties** のプロパティを選択し、**\[プロパティのバインド\]** ダイアログ ボックスを表示するには、省略記号 \(![ASP.NET モバイル デザイナー楕円](~/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")\) ボタンをクリックします。  
+11. choose the **TaskProperties** property, and then choose the ellipsis (![ASP.NET Mobile Designer ellipse](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer ellipse")) button to display the **Bind Property** dialog box.  
   
-12. **\[新しいメンバーへのバインド\]** タブを選択し、**\[フィールドの作成\]** のオプション ボタンを選択し、**\[OK\]** ボタンをクリックします。  
+12. Choose the **Bind to a new member** tab, choose the **Create Field** option button, and then choose the **OK** button.  
   
-13. **\[ツールボックス\]** で、**\[SharePoint ワークフロー\]** ノードを展開し、**\[LogToHistoryListActivity\]** アクティビティを探します。  
+13. In the **Toolbox**, expand the **SharePoint Workflow** node, and locate the **LogToHistoryListActivity** activity.  
   
-14. 次の手順の実行 1 かによってこのアクティビティをワークフローに追加します:  
+14. Add this activity to the workflow by performing one of the following steps:  
   
-    -   **\[LogToHistoryListActivity\]** アクティビティのショートカット メニューを開き、**\[コピー\]** をクリックします、ワークフロー デザイナーの IfElseActivity1 内の **\[ここにアクティビティをドロップします\]** の他の領域のショートカット メニューを開き、**\[貼り付け\]** をクリックします。  
+    -   Open the shortcut menu for the **LogToHistoryListActivity** activity, choose **Copy**, open the shortcut menu for the other **Drop Activities Here** area within **IfElseActivity1** in the workflow designer, and then choose **Paste**.  
   
-    -   **\[ツールボックス\]** から **\[LogToHistoryListActivity\]** アクティビティをドラッグし、IfElseActivity1 内の **\[ここにアクティビティをドロップします\]** の他の領域にドロップします。  
+    -   Drag the **LogToHistoryListActivity** activity from the **Toolbox**, and drop it onto the other **Drop Activities Here** area within **IfElseActivity1**.  
   
-## ワークフローへのコードの追加  
- 次に、ワークフローにコードを追加して、必要な機能を実装します。  
+## <a name="adding-code-to-the-workflow"></a>Adding Code to the Workflow  
+ Next, add code to the workflow to give it functionality.  
   
-#### ワークフローにコードを追加するには  
+#### <a name="to-add-code-to-the-workflow"></a>To add code to the workflow  
   
-1.  ワークフロー デザイナーで **\[createTask1\]** アクティビティのショートカット メニューを開き、**\[コードの表示\]** をクリックします。  
+1.  Open the shortcut menu for the **createTask1** activity in the workflow designer, and then choose **View Code**.  
   
-2.  次のメソッドを追加する:  
+2.  Add the following method:  
   
     ```vb  
     Private Sub createTask1_MethodInvoking(ByVal sender As   
@@ -316,7 +321,7 @@ caps.handback.revision: 37
     End Sub   
     ```  
   
-    ```csharp  
+    ```cs  
     private void createTask1_MethodInvoking(object sender, EventArgs e)  
     {  
         createTask1_TaskId1 = Guid.NewGuid();  
@@ -329,9 +334,9 @@ caps.handback.revision: 37
     ```  
   
     > [!NOTE]  
-    >  コード内の `somedomain\\someuser` の部分を、タスクの作成対象のドメインとユーザー名に置き換えます \(例: "`Office\\JoeSch`"\)。  テストの目的では、開発用のアカウントを使用するのが最も簡単です。  
+    >  In the code, replace `somedomain\\someuser` with a domain and user name for which a task will be created, such as, "`Office\\JoeSch`". For testing it is easiest to use the account you are developing with.  
   
-3.  `MethodInvoking` メソッドの下に、次のコード例を追加します。  
+3.  Below the `MethodInvoking` method, add the following example:  
   
     ```vb  
     Private Sub checkApprovalNeeded(ByVal sender As Object, ByVal e As   
@@ -345,7 +350,7 @@ caps.handback.revision: 37
     End Sub   
     ```  
   
-    ```csharp  
+    ```cs  
     private void checkApprovalNeeded(object sender, ConditionalEventArgs   
       e)  
     {  
@@ -359,15 +364,15 @@ caps.handback.revision: 37
     }   
     ```  
   
-4.  ワークフロー デザイナーで、**\[ifElseBranchActivity1\]** アクティビティをクリックします。  
+4.  In the workflow designer, choose the **ifElseBranchActivity1** activity.  
   
-5.  **\[プロパティ\]** ウィンドウで、**\[条件\]** のプロパティのドロップダウン矢印をクリックし、*Code Condition* 値を設定します。  
+5.  In the **Properties** window, choose the drop-down arrow of the **Condition** property, and then set the *Code Condition* value.  
   
-6.  **\[条件\]** のプロパティをプラス記号の選択 \(![TreeView 正符号](~/sharepoint/media/plus.gif "TreeView 正符号")\) によってその横の展開し、*checkApprovalNeeded*に値を設定します。  
+6.  Expand the **Condition** property by choosing the plus sign (![TreeView plus](../sharepoint/media/plus.gif "TreeView plus")) next to it, and then set its value to *checkApprovalNeeded*.  
   
-7.  ワークフロー デザイナーで、**\[logToHistoryListActivity1\]** アクティビティのショートカット メニューを開き、`MethodInvoking` イベントに対する空のメソッドを生成する **\[ハンドラーの生成\]** をクリックします。  
+7.  In the workflow designer, open the shortcut menu for the **logToHistoryListActivity1** activity, and then choose **Generate Handlers** to generate an empty method for the `MethodInvoking` event.  
   
-8.  `MethodInvoking` コードを次の内容に置き換えます。  
+8.  Replace the `MethodInvoking` code with the following:  
   
     ```vb  
     Private Sub logToHistoryListActivity1_MethodInvoking(ByVal sender As   
@@ -377,7 +382,7 @@ caps.handback.revision: 37
     End Sub   
     ```  
   
-    ```csharp  
+    ```cs  
     private void logToHistoryListActivity1_MethodInvoking(object sender,   
       EventArgs e)  
     {  
@@ -386,71 +391,71 @@ caps.handback.revision: 37
     }   
     ```  
   
-9. プログラムをデバッグするには、F5 キーを押します。  
+9. Choose the F5 key to debug the program.  
   
-     これで、アプリケーションがコンパイルされ、パッケージ化されて配置されます。さらに、そのフィーチャーがアクティブ化され、[!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] アプリケーション プールがリサイクルされて、ブラウザーが起動されます。このとき、ブラウザーには、**\[サイト URL\]** プロパティで指定されている場所が表示されます。  
+     This compiles the application, packages it, deploys it, activates its features, recycles the [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] application pool, and then starts the browser at the location specified in the **Site Url** property.  
   
-## ドキュメント リストへのワークフローの関連付け  
- 次に、SharePoint サイトの**共有ドキュメント** リストにワークフローを関連付けることによって、ワークフローの関連付けフォームを表示します。  
+## <a name="associating-the-workflow-to-the-documents-list"></a>Associating the Workflow to the Documents List  
+ Next, display the workflow association form by associating the workflow with the **SharedDocuments** list on the SharePoint site.  
   
-#### ワークフローを関連付けるには  
+#### <a name="to-associate-the-workflow"></a>To associate the workflow  
   
-1.  クイック起動バーの **\[共有ドキュメント\]** リンクをクリックします。  
+1.  Choose the **Shared Documents** link on the QuickLaunch bar.  
   
-2.  **\[ライブラリ ツール\]** タブの **\[ライブラリ\]** リンクを選択し、**\[ライブラリの設定\]** のリボン ボタンをクリックします。  
+2.  Choose the **Library** link on the **Library Tools** tab and then choose the **Library Settings** ribbon button.  
   
-3.  **\[権限と管理\]** セクションで、**\[ワークフロー設定\]** リンクを選択し、**\[ワークフロー\]** ページの **\[ワークフローの追加\]** リンクをクリックします。  
+3.  In the **Permissions and Management** section, choose the **Workflow Settings** link and then choose the **Add a workflow** link on the **Workflows** page.  
   
-4.  ワークフローの設定の上部にある一覧で **\[ExpenseReport \- Workflow1\]** のテンプレートのページングを選択します。  
+4.  In the top list in the workflow settings page, choose the **ExpenseReport - Workflow1** template.  
   
-5.  次のフィールドに" ExpenseReportWorkflow "と入力し、**\[次へ\]** ボタンをクリックします。  
+5.  In the next field, enter **ExpenseReportWorkflow** and then choose the **Next** button.  
   
-     これにより、ワークフローと**共有ドキュメント** リストが関連付けられ、ワークフローの関連付けフォームが表示されます。  
+     This associates the workflow with the **Shared Documents** list and displays the workflow association form.  
   
-6.  **\[Auto Approval Limit\]** のテキスト ボックスに、" 1200 "と入力し、**\[ワークフローの関連付け\]** ボタンをクリックします。  
+6.  In the **Auto Approval Limit** text box, enter **1200** and then choose the **Associate Workflow** button.  
   
-## ワークフローの開始  
- 次に、**共有ドキュメント** リストのいずれかのドキュメントにワークフローを関連付けて、ワークフローの開始フォームを表示します。  
+## <a name="starting-the-workflow"></a>Starting the Workflow  
+ Next, associate the workflow to one of the documents in the **Shared Documents** list to display the workflow initiation form.  
   
-#### ワークフローを開始するには  
+#### <a name="to-start-the-workflow"></a>To start the workflow  
   
-1.  SharePoint ページで、**\[ホーム\]** ボタンをクリックします。  
+1.  On the SharePoint page, choose the **Home** button.  
   
-2.  **\[共有ドキュメント\]** の一覧を表示するには、クイック起動バーの **\[共有ドキュメント\]** リンクをクリックします。  
+2.  Choose the **Shared Documents** link on the QuickLaunch bar to display the **Shared Documents** list.  
   
-3.  **\[ライブラリ ツール\]** タブの **\[ドキュメント\]** リンクをページの一番上にある選択し、**\[共有ドキュメント\]** の一覧に新しいドキュメントをアップロードするに **\[ドキュメントのアップロード\]** リボンのボタンをクリックします。  
+3.  Choose the **Documents** link on the **Library Tools** tab at the top of the page, and then choose the **Upload Document** button on the ribbon to upload a new document into the **Shared Documents** list.  
   
-4.  **\[ドキュメントのアップロード\]** ダイアログ ボックスで、**\[参照\]** ボタンを選択し、ドキュメント ファイルを選択し、**\[開く\]** ボタンをクリックし、**\[OK\]** ボタンをクリックします。  
+4.  In the **Upload Document** dialog box, choose the **Browse** button, choose any document file, choose the **Open** button, and then choose the **OK** button.  
   
-     このダイアログ ボックスのドキュメントの設定を変更できますが既定値で **\[保存\]** ボタンをクリックすると、これらが保存されます。  
+     You can change the settings for the document in this dialog box, but leave them at the default values by choosing the **Save** button.  
   
-5.  アップロードしたドキュメントを選択し、表示をクリックし、**\[ワークフロー\]** 項目をドロップダウン矢印をクリックします。  
+5.  Choose the uploaded document, choose the drop-down arrow that appears, and then choose the **Workflows** item.  
   
-6.  ExpenseReportWorkflow の横に表示されるイメージをクリックします。  
+6.  Choose the image next to ExpenseReportWorkflow.  
   
-     これでワークフローの開始フォームが表示されます。**\[Auto Approval Limit\]** ボックスに表示される値は、関連付けフォームで入力された値であるため読み取り専用です。  
+     This displays the workflow initiation form. (Note that the value displayed in the **Auto Approval Limit** box is read-only because it was entered in the association form.)  
   
-7.  **\[経費の合計\]** のテキスト ボックスに、" 1600 "と入力し、**\[ワークフローの開始\]** ボタンをクリックします。  
+7.  In the **Expense Total** text box, enter **1600**, and then choose the **Start Workflow** button.  
   
-     **共有ドキュメント** リストが再度表示されます。  たった今ワークフローによって開始された項目に、**ExpenseReportWorkflow** という新しい列が追加され、列の値は **\[完了\]** になっています。  
+     This displays the **Shared Documents** list again. A new column named **ExpenseReportWorkflow** with the value **Completed** is added to the item the workflow just started.  
   
-8.  ドロップダウン矢印をアップロードするドキュメントの横に選択し、ワークフローの状態ページを表示するに **\[ワークフロー\]** 項目を選択します。  **\[完了したワークフロー\]** で **\[完了\]** 値を選択します。  **\[タスク\]** セクションにタスクが表示されます。  
+8.  Choose the drop-down arrow next to the uploaded document and then choose the **Workflows** item to display the workflow status page. Choose the **Completed** value under **Completed Workflows**. The task is listed under the **Tasks** section.  
   
-9. タスクの詳細を表示するタスクのタイトルをクリックします。  
+9. Choose the title of the task to display its task details.  
   
-10. **共有ドキュメント** リストに戻り、同じドキュメントまたは別のドキュメントを使用して再度ワークフローを開始します。  
+10. Go back to the **SharedDocuments** list and restart the workflow, using either the same document or a different one.  
   
-11. 関連付けページで入力した値 \(1200\) 以下である開始ページの金額を入力します。  
+11. Enter an amount on the initiation page that is less than or equal to the amount entered on the association page (**1200**).  
   
-     この場合、タスクは作成されずに、履歴リストのエントリが作成されます。  このエントリは、ワークフローの状態ページの **\[ワークフローの履歴\]** セクションに表示されます。  履歴イベントの **\[結果\]** 列に表示されたメッセージに注目してください。  `logToHistoryListActivity1.MethodInvoking` イベントで入力したテキスト \(自動承認された金額を含む\) が出力されています。  
+     When this occurs, an entry in the history list is created instead of a task. The entry displays in the **Workflow History** section of the workflow status page. Note the message in the **Outcome** column of the history event. It contains the text entered in the `logToHistoryListActivity1.MethodInvoking` event that includes the amount which was auto-approved.  
   
-## 次の手順  
- ワークフロー テンプレートの作成方法の詳細については、以下のトピックを参照してください。  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to create workflow templates from these topics:  
   
--   SharePoint のワークフローの詳細については、"参照してください [Windows SharePoint Services のワークフロー](http://go.microsoft.com/fwlink/?LinkID=166275)。  
+-   To learn more about SharePoint workflows, see [Workflows in Windows SharePoint Services](http://go.microsoft.com/fwlink/?LinkID=166275).  
   
-## 参照  
- [SharePoint ワークフロー ソリューションの作成](../sharepoint/creating-sharepoint-workflow-solutions.md)   
- [チュートリアル: ワークフローへのアプリケーション ページの追加](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)  
+## <a name="see-also"></a>See Also  
+ [Creating SharePoint Workflow Solutions](../sharepoint/creating-sharepoint-workflow-solutions.md)   
+ [Walkthrough: Add an Application Page to a Workflow](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)  
   
   

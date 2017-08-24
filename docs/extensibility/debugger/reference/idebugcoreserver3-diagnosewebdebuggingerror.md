@@ -1,5 +1,5 @@
 ---
-title: "IDebugCoreServer3::DiagnoseWebDebuggingError |Microsoft ドキュメント"
+title: IDebugCoreServer3::DiagnoseWebDebuggingError | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 04a8ecbb1bfdc7f14f6b493df7f1dc9e16b53cd6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: bd482214cbdfbb75ce48d7150afd2f451518e93d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugcoreserver3diagnosewebdebuggingerror"></a>IDebugCoreServer3::DiagnoseWebDebuggingError
-理由、auto-attach を特定する試みが失敗しました。  
+Attempts to determine why an auto-attach failed.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT DiagnoseWebDebuggingError(  
@@ -47,24 +48,24 @@ HRESULT DiagnoseWebDebuggingError(
 );  
 ```  
   
-```c#  
+```cs  
 int DiagnoseWebDebuggingError(  
    string pszUrl  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pszUrl`  
- [in]現在使用されていません。null 値を常に設定する必要があります。  
+ [in] Not currently used; should always be set to a null value.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。 その他の一般的なリターン コードを次に示します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. The following are other typical return codes:  
   
-|コード|説明|  
+|Code|Description|  
 |----------|-----------------|  
-|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|リモート サーバーのデバッグの開始が失敗した理由を判断できません。|  
-|`S_WEBDBG_DEBUG_VERB_BLOCKED`|おそらくアクセス許可が不十分のためのリモート サーバーではデバッグできません、DEBUG の動詞が有効になっていませんか。|  
-|`E_WEBDBG_DEBUG_VERB_BLOCKED`|Web サーバーでは、ロックダウンされているし、デバッグを有効にする必要がある DEBUG の動詞をブロックしています。|  
+|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|Cannot determine why the remote server failed to start debugging.|  
+|`S_WEBDBG_DEBUG_VERB_BLOCKED`|Cannot debug on remote server, possibly due to insufficient permissions or because the DEBUG verb is not enabled.|  
+|`E_WEBDBG_DEBUG_VERB_BLOCKED`|The web server has been locked down and is blocking the DEBUG verb, which is required to enable debugging.|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

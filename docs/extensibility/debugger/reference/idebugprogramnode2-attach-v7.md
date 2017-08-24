@@ -1,73 +1,90 @@
 ---
-title: "IDebugProgramNode2::Attach_V7 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramNode2::Attach"
-helpviewer_keywords: 
-  - "IDebugProgramNode2::Attach_V7"
-  - "IDebugProgramNode2::Attach"
+title: IDebugProgramNode2::Attach_V7 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramNode2::Attach
+helpviewer_keywords:
+- IDebugProgramNode2::Attach_V7
+- IDebugProgramNode2::Attach
 ms.assetid: b5ffc736-efc7-4ca8-964d-5536ff891b0e
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugProgramNode2::Attach_V7
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: edbfe9de4e2300db92f0b31edbebd5496de122a7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-使用されていません。  使用しないでください。  
+---
+# <a name="idebugprogramnode2attachv7"></a>IDebugProgramNode2::Attach_V7
+DEPRECATED. DO NOT USE.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT Attach_V7 (   
-   IDebugProgram2*       pMDMProgram,  
-   IDebugEventCallback2* pCallback,  
-   DWORD                 dwReason  
+HRESULT Attach_V7 (   
+   IDebugProgram2*       pMDMProgram,  
+   IDebugEventCallback2* pCallback,  
+   DWORD                 dwReason  
 );  
 ```  
   
-```c#  
-int Attach_V7 (   
-   IDebugProgram2       pMDMProgram,  
-   IDebugEventCallback2 pCallback,  
-   uint                 dwReason  
+```cs  
+int Attach_V7 (   
+   IDebugProgram2       pMDMProgram,  
+   IDebugEventCallback2 pCallback,  
+   uint                 dwReason  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pMDMProgram`  
- \[入力\] プログラムをアタッチするに [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 表すインターフェイス。  
+ [in] The [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) interface that represents the program to attach to.  
   
  `pCallback`  
- \[入力\] SDM にデバッグ イベントを送信するために使用する [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) のインターフェイス。  
+ [in] The [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) interface to be used to send debug events to the SDM.  
   
  `dwReason`  
- \[入力\] アタッチする理由を指定する [ATTACH\_REASON](../../../extensibility/debugger/reference/attach-reason.md) の列挙体の値。  
+ [in] A value from the [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) enumeration that specifies the reason for attaching.  
   
-## 戻り値  
- 実装は `E_NOTIMPL` を常に返す必要です。  
+## <a name="return-value"></a>Return Value  
+ An implementation should always return `E_NOTIMPL`.  
   
-## 解説  
+## <a name="remarks"></a>Remarks  
   
 > [!WARNING]
->  [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)] 時点ではこのメソッドは使用されなくなり`E_NOTIMPL` を常に返す必要です。  別の方法の [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md) のインターフェイスはプログラムのノードに示す必要がある場合はアタッチできないまたはプログラムのノードがプログラム `GUID` を設定する " " を参照してください。  それ以外 [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) のメソッドを実装します。  
+>  As of [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)], this method is no longer used and should always return `E_NOTIMPL`. See the [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md) interface for an alternative approach if the program node needs to indicate it cannot be attached to or if the program node is simply setting the program `GUID`. Otherwise, implement the [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) method.  
   
-## Visual Studio 2005 以前  
- このメソッドはをデバッグするプログラムのアドレス空間にします runs 実装する必要があります。  それ以外の場合は `S_FALSE` を返す必要があります。  
+## <a name="prior-to-visual-studio-2005"></a>Prior to Visual Studio 2005  
+ This method needs to be implemented only if the DE runs in the address space of the program being debugged. Otherwise, this method should return `S_FALSE`.  
   
- このメソッドが呼び出されるとde\-DE は [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) インターフェイスのこのインスタンスに対して既に送られなかったら[IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) と [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) のイベント オブジェクトはイベント送信 [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) のオブジェクト。  [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md) のイベント オブジェクトは`dwReason` のパラメーターがの場合 `ATTACH_REASON_LAUNCH` 送信されます。  
+ When this method is called, the DE must send the [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) event object, if it has not already been sent for this instance of the [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) interface, as well as the [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) and [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) event objects. The [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md) event object is then sent if the `dwReason` parameter is `ATTACH_REASON_LAUNCH`.  
   
- DE は [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) のイベント オブジェクトによって提供される [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) のオブジェクトの [GetProgramId](../../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) のメソッドを呼び出して de\-DE によって実装される `IDebugProgram2` のオブジェクトのインスタンス データにするプログラムの GUID 保存する必要があります。  
+ The DE must call the [GetProgramId](../../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) method on the [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object supplied by the [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) event object, and must store that program's GUID in the instance data for the `IDebugProgram2` object implemented by the DE.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)   
  [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)   
@@ -77,4 +94,4 @@ int Attach_V7 ( 
  [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md)   
  [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md)   
  [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md)   
- [ATTACH\_REASON](../../../extensibility/debugger/reference/attach-reason.md)
+ [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md)

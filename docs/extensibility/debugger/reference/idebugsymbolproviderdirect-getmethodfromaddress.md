@@ -1,77 +1,94 @@
 ---
-title: "IDebugSymbolProviderDirect::GetMethodFromAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugSymbolProviderDirect::GetMethodFromAddress"
-  - "GetMethodFromAddress"
+title: IDebugSymbolProviderDirect::GetMethodFromAddress | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugSymbolProviderDirect::GetMethodFromAddress
+- GetMethodFromAddress
 ms.assetid: 33ffd197-1221-41bc-a9f6-f133ebdcb783
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugSymbolProviderDirect::GetMethodFromAddress
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 44cb5adc9d8305aa0444376d3192a3262d86ff4e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-デバッグ指定のアドレスのメソッドについての情報を取得します。  
+---
+# <a name="idebugsymbolproviderdirectgetmethodfromaddress"></a>IDebugSymbolProviderDirect::GetMethodFromAddress
+Retrieves information about the method at the specified debug address.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetMethodFromAddress(  
-   IDebugAddress* pAddress,  
-   GUID*          pGuid,  
-   DWORD*         pAppID,  
-   _mdToken*      pTokenClass,  
-   _mdToken*      pTokenMethod,  
-   DWORD*         pdwOffset,  
-   DWORD*         pdwVersion  
+   IDebugAddress* pAddress,  
+   GUID*          pGuid,  
+   DWORD*         pAppID,  
+   _mdToken*      pTokenClass,  
+   _mdToken*      pTokenMethod,  
+   DWORD*         pdwOffset,  
+   DWORD*         pdwVersion  
 );  
 ```  
   
-```c#  
+```cs  
 int GetMethodFromAddress(  
-   IDebugAddress pAddress,  
-   out Guid      pGuid,  
-   out uint      pAppID,  
-   out uint      pTokenClass,  
-   out uint      pTokenMethod,  
-   out uint      pdwOffset,  
-   out uint      pdwVersion  
+   IDebugAddress pAddress,  
+   out Guid      pGuid,  
+   out uint      pAppID,  
+   out uint      pTokenClass,  
+   out uint      pTokenMethod,  
+   out uint      pdwOffset,  
+   out uint      pdwVersion  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pAddress`  
- \[入力\] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) のインターフェイスで表されるアドレスをデバッグします。  
+ [in] Debug address that is represented by the [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
   
  `pGuid`  
- \[出力\] モジュールの一意の識別子。  
+ [out] Unique identifier of the module.  
   
  `pAppID`  
- \[出力\] アプリケーション ドメインの ID。  
+ [out] Identifier of the application domain.  
   
  `pTokenClass`  
- \[コンテナー\] クラスを表すトークン。  
+ [out] Token that represents the containing class.  
   
  `pTokenMethod`  
- \[入力\] モジュールを表すトークン。  
+ [out] Token that represents the module.  
   
  `pdwOffset`  
- \[入力\] `pAddress` のパラメーターのバイトの開始時からのオフセット。  
+ [out] An offset in bytes from the start of the `pAddress` parameter.  
   
  `pdwVersion`  
- \[入力\] メソッドのバージョン番号。  
+ [out] Version number of the method.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

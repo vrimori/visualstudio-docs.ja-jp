@@ -1,72 +1,89 @@
 ---
-title: "MACHINE_INFO_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MACHINE_INFO_FIELDS"
-helpviewer_keywords: 
-  - "MACHINE_INFO_FIELDS 列挙型"
+title: MACHINE_INFO_FIELDS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MACHINE_INFO_FIELDS
+helpviewer_keywords:
+- MACHINE_INFO_FIELDS enumeration
 ms.assetid: 2d61d206-7d40-4df1-8c88-1b3c9c78821e
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MACHINE_INFO_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 204452fe8b697becc889f3c09c2bb50adf0a3f41
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-特定のコンピューターのために取得するような情報を指定します。  
+---
+# <a name="machineinfofields"></a>MACHINE_INFO_FIELDS
+Specifies what kind of information to retrieve for a particular machine.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_MACHINE_INFO_FIELDS {   
-   MCIF_NAME  = 0x00000001,  
-   MCIF_FLAGS = 0x00000002,  
-   MCIF_ALL   = 0x00000003  
+enum enum_MACHINE_INFO_FIELDS {   
+   MCIF_NAME  = 0x00000001,  
+   MCIF_FLAGS = 0x00000002,  
+   MCIF_ALL   = 0x00000003  
 };  
 typedef DWORD MACHINE_INFO_FIELDS;  
 ```  
   
-```c#  
-public enum enum_MACHINE_INFO_FIELDS {   
-   MCIF_NAME  = 0x00000001,  
-   MCIF_FLAGS = 0x00000002,  
-   MCIF_ALL   = 0x00000003  
+```cs  
+public enum enum_MACHINE_INFO_FIELDS {   
+   MCIF_NAME  = 0x00000001,  
+   MCIF_FLAGS = 0x00000002,  
+   MCIF_ALL   = 0x00000003  
 };  
 ```  
   
-## メンバー  
- MCIF\_NAME  
- 構造体の初期化と `bstrName` のフィールドを使用します。  
+## <a name="members"></a>Members  
+ MCIF_NAME  
+ Initialize/use the `bstrName` field in the structure.  
   
- MCIF\_FLAGS  
- 構造体の初期化と `Flags` のフィールドを使用します。  
+ MCIF_FLAGS  
+ Initialize/use the `Flags` field in the structure.  
   
- MIF\_ALL  
- すべての構造体フィールドの初期化とを使用します。  
+ MIF_ALL  
+ Initialize/use all of the fields in the structure.  
   
-## 解説  
- これらの値は [GetMachineInfo](../Topic/IDebugCoreServer2::GetMachineInfo.md) のメソッドに [MACHINE\_INFO](../../../extensibility/debugger/reference/machine-info.md) の構造体のメンバーを初期化するかを示すために渡されます。  
+## <a name="remarks"></a>Remarks  
+ These values are passed to the [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) method to indicate which members of the [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) structure are to be initialized.  
   
- フィールドを使用して有効であることを示すために `MACHINE_INFO` の構造体の `Fields` のメンバーでも使用します。  
+ Also used in the `Fields` member of the `MACHINE_INFO` structure to indicate which fields are used and valid.  
   
- これらのフラグはビットごと `OR` に組み合わせることがあります。  
+ These flags may be combined with a bitwise `OR`.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [MACHINE\_INFO](../../../extensibility/debugger/reference/machine-info.md)   
- [GetMachineInfo](../Topic/IDebugCoreServer2::GetMachineInfo.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md)   
+ [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md)

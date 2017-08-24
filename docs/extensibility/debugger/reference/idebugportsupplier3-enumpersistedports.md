@@ -1,58 +1,75 @@
 ---
-title: "IDebugPortSupplier3::EnumPersistedPorts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortSupplier3::EnumPersistedPorts"
-helpviewer_keywords: 
-  - "IDebugPortSupplier3::EnumPersistedPorts"
+title: IDebugPortSupplier3::EnumPersistedPorts | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPortSupplier3::EnumPersistedPorts
+helpviewer_keywords:
+- IDebugPortSupplier3::EnumPersistedPorts
 ms.assetid: 1c3dead3-5d6c-4067-8418-4015f0b0dd07
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugPortSupplier3::EnumPersistedPorts
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c0696c95c0b1219646b669d2f82d7c62f28485cc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-このメソッドはオブジェクトを永続化されたポートのリストの列挙体を取得します。  
+---
+# <a name="idebugportsupplier3enumpersistedports"></a>IDebugPortSupplier3::EnumPersistedPorts
+This method retrieves an object that allows enumeration of the list of persisted ports.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT EnumPersistedPorts(  
-   BSTR_ARRAY         PortNames,  
-   IEnumDebugPorts2** ppEnum  
+HRESULT EnumPersistedPorts(  
+   BSTR_ARRAY         PortNames,  
+   IEnumDebugPorts2** ppEnum  
 );  
 ```  
   
-```c#  
-int EnumPersistedPorts(  
-   BSTR_ARRAY           PortNames,  
-   out IEnumDebugPorts2 ppEnum  
+```cs  
+int EnumPersistedPorts(  
+   BSTR_ARRAY           PortNames,  
+   out IEnumDebugPorts2 ppEnum  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `PortNames`  
- \[入力\] 永続化されたポート間にある戻るにはポート名の一覧を含む [BSTR\_ARRAY](../../../extensibility/debugger/reference/bstr-array.md) の構造体。  これらはポートの名前で保持します。  
+ [in] A [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md) structure that contains a list of port names to find and return among the persisted ports. Only those persisted ports with these names will be returned.  
   
  `ppEnum`  
- \[入力\] [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) のインターフェイスを実装するオブジェクト。  
+ [out] An object that implements the [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) interface.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- 永続化されたポートはポートのサプライヤーがインスタンス化される読み込まれポートのサプライヤーがいつ破棄されるときに格納されます。  
+## <a name="remarks"></a>Remarks  
+ Persisted ports are loaded when a port supplier is instantiated, and saved when the port supplier is destroyed.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)   
  [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)   
- [BSTR\_ARRAY](../../../extensibility/debugger/reference/bstr-array.md)
+ [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md)

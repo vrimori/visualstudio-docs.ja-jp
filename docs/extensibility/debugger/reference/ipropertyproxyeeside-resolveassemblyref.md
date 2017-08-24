@@ -1,5 +1,5 @@
 ---
-title: "IPropertyProxyEESide::ResolveAssemblyRef |Microsoft ドキュメント"
+title: IPropertyProxyEESide::ResolveAssemblyRef | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b9e0b4cb6294b0437366282fd0d5f82feea14f5a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 63603241b6faee3c595d846d59ab9a70e570db05
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="ipropertyproxyeesideresolveassemblyref"></a>IPropertyProxyEESide::ResolveAssemblyRef
-指定したマネージ アセンブリの参照の場所を決定します。  
+Determines the location of the specified managed assembly reference.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT ResolveAssemblyRef(  
@@ -51,7 +52,7 @@ HRESULT ResolveAssemblyRef(
 );  
 ```  
   
-```c#  
+```cs  
 int ResolveAssemblyRef(  
    ref string                     assemName,  
    out IEEDataStorage             assemBytes,  
@@ -61,29 +62,29 @@ int ResolveAssemblyRef(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `assemName`  
- [in]解決するのにはアセンブリの名前。  
+ [in] Name of the assembly to resolve.  
   
  `assemBytes`  
- [out]返します。、 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)参照に関連付けられているアセンブリのバイト数を格納するオブジェクト。  
+ [out] Returns an [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) object containing the assembly bytes associated with the reference.  
   
  `assemPdb`  
- [out]返します。、`IEEDataStorage`シンボルを含むオブジェクトは、この参照に関連付けられているデータを格納します。  
+ [out] Returns an `IEEDataStorage` object containing the symbol store data associated with this reference.  
   
  `assemLocation`  
- [out]この参照のパスの場所を返します。  
+ [out] Returns the path location of this reference.  
   
  `alr`  
- [out]値を返す、 [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)この参照アセンブリの場所を示す列挙値。  
+ [out] Returns a value from the [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) enumeration indicating the location of this reference's assembly.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- 通常、このメソッドは、カスタム式エバリュエーターでは実装しません。  
+## <a name="remarks"></a>Remarks  
+ This method is not typically implemented by a custom expression evaluator.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)

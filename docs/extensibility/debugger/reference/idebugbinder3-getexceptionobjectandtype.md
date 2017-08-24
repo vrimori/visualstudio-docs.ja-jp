@@ -1,56 +1,73 @@
 ---
-title: "IDebugBinder3::GetExceptionObjectAndType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBinder3::GetExceptionObjectAndType"
-helpviewer_keywords: 
-  - "IDebugBinder3::GetExceptionObjectAndType メソッド"
+title: IDebugBinder3::GetExceptionObjectAndType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugBinder3::GetExceptionObjectAndType
+helpviewer_keywords:
+- IDebugBinder3::GetExceptionObjectAndType method
 ms.assetid: 2a313fe1-4ee1-4f01-af86-382d6c661a8f
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugBinder3::GetExceptionObjectAndType
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7efac74fa7a0c62df1817884d113ddc21233bad3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-このメソッドはオブジェクトに関連付けられていない場合は例外を取得します。  
+---
+# <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
+This method retrieves the exception associated with an object, if any.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetExceptionObjectAndType(  
-   IDebugObject** ppException,  
-   IDebugField**  ppField  
+HRESULT GetExceptionObjectAndType(  
+   IDebugObject** ppException,  
+   IDebugField**  ppField  
 );  
 ```  
   
-```c#  
-int GetExceptionObjectAndType(  
-   out IDebugObject ppException,  
-   out IDebugField  ppField  
+```cs  
+int GetExceptionObjectAndType(  
+   out IDebugObject ppException,  
+   out IDebugField  ppField  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppException`  
- \[入力\] 例外を表すオブジェクトを返します。  
+ [out] Returns the object representing the exception.  
   
  `ppField`  
- \[入力\] オブジェクトを表す例外を発生させる可能性がある特定のフィールドを返します \(これは null になることがあります\)。  
+ [out] Returns the object representing a specific field that may have caused the exception (this may be a null value).  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
 > [!NOTE]
->  例外があるかどうかを確認するには`ppException` によって返される値をチェックする : このが null 値の場合は例外がこのオブジェクトに関連付けられません。  
+>  To verify whether there is an exception, check the value returned by `ppException`: if it is a null value, then no exception is associated with this object.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

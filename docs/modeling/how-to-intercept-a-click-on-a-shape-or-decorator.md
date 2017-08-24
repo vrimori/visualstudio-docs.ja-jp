@@ -1,5 +1,5 @@
 ---
-title: "方法: シェイプまたはデコレーターのクリックをインターセプト |Microsoft ドキュメント"
+title: 'How to: Intercept a Click on a Shape or Decorator | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,17 +13,18 @@ caps.latest.revision: 21
 author: alancameronwills
 ms.author: awills
 manager: douge
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c6edcb51e3de083ff2a8c3ee7998a64f091fe176
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c1c8b7bf0735550f6146532fd5d1a9fa0c2243bb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>方法: シェイプまたはデコレーターに対するクリック操作を受け取る
-次の手順をクリック、図形やアイコン デコレータをインターセプトする方法を示します。 クリックをインターセプトすることができますをダブルクリックするをドラッグしてジェスチャーが、その他を対応する要素。  
+# <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>How to: Intercept a Click on a Shape or Decorator
+The following procedures demonstrate how to intercept a click on a shape or an icon decorator. You can intercept clicks, double-clicks, drags, and other gestures, and make the element respond.  
   
-## <a name="to-intercept-clicks-on-shapes"></a>図形のクリックをインターセプトするには  
- 生成されたコード ファイルから分離したコード ファイルで、Dsl プロジェクトでは、shape クラスの部分クラス定義を記述します。 オーバーライド`OnDoubleClick()`または名前の先頭にある他の方法の&1; つ`On...`します。 例:  
+## <a name="to-intercept-clicks-on-shapes"></a>To Intercept Clicks on Shapes  
+ In the Dsl project, in a code file that is separate from the generated code files, write a partial class definition for the shape class. Override `OnDoubleClick()` or one of the other methods that has a name beginning with `On...`. For example:  
   
 ```  
 public partial class MyShape // change  
@@ -37,20 +38,20 @@ public partial class MyShape // change
 ```  
   
 > [!NOTE]
->  設定`e.Handled`に`true`を含む図形または図に渡されるイベントがない限り、します。  
+>  Set `e.Handled` to `true`, unless you want the event to be passed to the containing shape or diagram.  
   
-## <a name="to-intercept-clicks-on-decorators"></a>デコレータでのクリックをインターセプトするには  
- OnDoubleClick メソッドを含む ImageField クラスのインスタンスでは、イメージのデコレータが実行されます。 ImageField サブクラスを作成する場合、クリックをインターセプトすることができます。 フィールド InitializeShapeFields メソッドで設定されます。 したがって、正規の ImageField ではなく、サブクラスのインスタンスを作成するには、そのメソッドを変更する必要があります。 InitializeShapeFields メソッドは、shape クラスの生成されたコード内に示します。 シェイプ クラスをオーバーライドするには、設定した場合、`Generates Double Derived`プロパティを次の手順で説明したようにします。  
+## <a name="to-intercept-clicks-on-decorators"></a>To Intercept Clicks on Decorators  
+ Image decorators are carried on an instance of ImageField class, which has an OnDoubleClick method. You can intercept the clicks if you write an ImageField subclass. The fields are set up in the InitializeShapeFields method. Therefore, you must change that method to instantiate your subclass instead of the regular ImageField. The InitializeShapeFields method is in the generated code of the shape class. You can override the shape class if you set its `Generates Double Derived` property as described in the following procedure.  
   
- InitializeShapeFields はインスタンス メソッドですが、1 回だけクラスごとに呼び出されます。 そのため、ダイアグラム内の各図形の&1; つインスタンスではなく、各クラスの各フィールドに対して ClickableImageField の&1; つだけのインスタンスが存在しています。 ユーザーをダブルクリックすると、インスタンスは、例のコードに示すよう対象のインスタンスをクリックするを識別する必要があります。  
+ Although InitializeShapeFields is an instance method, it is called only once for each class. Therefore, only one instance of ClickableImageField exists for each field in each class, not one instance for each shape in the diagram. When the user double-clicks an instance, you must identify which instance has been hit, as the code in the example demonstrates.  
   
-#### <a name="to-intercept-a-click-on-an-icon-decorator"></a>クリックすると、アイコン デコレータをインターセプトするには  
+#### <a name="to-intercept-a-click-on-an-icon-decorator"></a>To intercept a click on an icon decorator  
   
-1.  開くか、DSL ソリューションを作成します。  
+1.  Open or create a DSL solution.  
   
-2.  選択またはアイコン デコレータでは、図形を作成し、ドメイン クラスにマップします。  
+2.  Choose or create a shape that has an icon decorator, and map it to a domain class.  
   
-3.  コード ファイル内のファイルとは別に、`GeneratedCode`フォルダー、ImageField の新しいサブクラスを作成します。  
+3.  In a code file that is separate from the files in the `GeneratedCode` folder, create the new subclass of ImageField:  
   
     ```  
     using Microsoft.VisualStudio.Modeling;  
@@ -86,9 +87,9 @@ public partial class MyShape // change
     }  
     ```  
   
-     図形が含まれているに渡されるイベントしたくない場合は true に Handled を設定する必要があります。  
+     You should set Handled to true if you do not want the event to be passed to the containing shape.  
   
-4.  次の部分クラス定義を追加することで図形渡してで InitializeShapeFields メソッドをオーバーライドします。  
+4.  Override the InitializeShapeFields method in your shape classs by adding the following partial class definition.  
   
     ```  
     public partial class MyShape // change  
@@ -115,40 +116,40 @@ public partial class MyShape // change
     }  
     ```  
   
-1.  ソリューションをビルドして実行します。  
+1.  Build and run the solution.  
   
-2.  図形のインスタンスにあるアイコンをダブルクリックします。 テスト メッセージが表示されます。  
+2.  Double-click the icon on an instance of the shape. Your test message should appear.  
   
-## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>傍受をクリックしておよびドラッグ CompartmentShape リスト  
- 次の例では、順序にドラッグしてコンパートメント シェイプで項目を変更することができます。 このコードを実行します。  
+## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>Intercepting clicks and drags on CompartmentShape lists  
+ The following sample allows users to re-order items in a compartment shape by dragging them. To run this code:  
   
-1.  使用して、新しい DSL ソリューションを作成、**クラス図**ソリューション テンプレートです。  
+1.  Create a new DSL solution by using the **Class Diagrams** solution template.  
   
-     コンパートメント シェイプを含む独自のソリューションも併用できます。 このコードでは、シェイプによって表されるモデル要素とコンパートメント リスト項目で表される要素間に埋め込みリレーションシップがあることを前提としています。  
+     You can also work with a solution of your own that contains compartment shapes. This code assumes that there is an embedding relationship between the model elements represented by the shape, and the elements represented in the compartment list items.  
   
-2.  設定、 **Double Derived の生成**コンパートメント シェイプのプロパティです。  
+2.  Set the **Generates Double Derived** property of the compartment shape.  
   
-3.  内のファイルに次のコードを追加、 **Dsl**プロジェクトです。  
+3.  Add this code in a file in the **Dsl** project.  
   
-4.  このコードに、独自の DSL に一致するドメインのクラスおよび図形の名前を調整します。  
+4.  Adjust the domain class and shape names in this code to match your own DSL.  
   
- 要約すると、コードの次のように動作します。 この例では`ClassShape`コンパートメント シェイプの名前を指定します。  
+ In summary, the code works as follows. In this example, `ClassShape` is the name of the compartment shape.  
   
--   作成されると、一連のマウス イベント ハンドラーはコンパートメントの各インスタンスにアタッチされます。  
+-   A set of mouse event handlers is attached to each compartment instance when it is created.  
   
--   `ClassShape.MouseDown`イベントには、現在のアイテムが格納されています。  
+-   The `ClassShape.MouseDown` event stores the current item.  
   
--   ときに、マウスを移動現在の項目から MouseAction のインスタンスを作成、カーソルを設定およびが解放されるまでに、マウスをキャプチャします。  
+-   When the mouse moves out of the current item, an instance of MouseAction is created, which sets the cursor and captures the mouse until it is released.  
   
-     項目のテキストを選択するなどその他のマウス操作に干渉することを避けるために、マウスが元のアイテムのままになるまで、MouseAction は作成されません。  
+     To avoid interfering with other mouse actions, such as selecting the text of an item, the MouseAction is not created until the mouse has left the original item.  
   
-     MouseAction を作成する代わりには、MouseUp をリッスンするように単純になります。 ただし、これは正しく機能しない場合は、コンパートメント外ドラッグした後、ユーザーがマウスを解放します。 MouseAction は、マウスを解放する場所に関係なく、適切な操作を実行することです。  
+     An alternative to creating a MouseAction would be simply to listen for MouseUp. However, this would not work properly if the user releases the mouse after dragging it outside the compartment. The MouseAction is able to perform the appropriate action no matter where the mouse is released.  
   
--   マウス ボタンが離さ MouseAction.MouseUp はモデル要素間のリンクの順序を並べ替えます。  
+-   When the mouse is released, MouseAction.MouseUp rearranges the order of the links between the model elements.  
   
--   ロールの順序の変更は、表示を更新するルールを発生させます。 この動作が既に定義されているし、コードを追加する必要はありません。  
+-   The change of role order fires a rule that updates the display. This behavior is already defined, and no additional code is required.  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Modeling;  
 using Microsoft.VisualStudio.Modeling.Design;  
 using Microsoft.VisualStudio.Modeling.Diagrams;  
@@ -397,6 +398,6 @@ namespace Company.CompartmentDrag
   
 ```  
   
-## <a name="see-also"></a>関連項目  
- [対応し、変更の反映](../modeling/responding-to-and-propagating-changes.md)   
- [デコレーターのプロパティ](../modeling/properties-of-decorators.md)
+## <a name="see-also"></a>See Also  
+ [Responding to and Propagating Changes](../modeling/responding-to-and-propagating-changes.md)   
+ [Properties of Decorators](../modeling/properties-of-decorators.md)

@@ -1,55 +1,72 @@
 ---
-title: "IDebugProgram2::GetDebugProperty | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::GetDebugProperty"
-helpviewer_keywords: 
-  - "IDebugProgram2::GetDebugProperty"
+title: IDebugProgram2::GetDebugProperty | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgram2::GetDebugProperty
+helpviewer_keywords:
+- IDebugProgram2::GetDebugProperty
 ms.assetid: d194224e-f0e6-46ab-85d4-9e2639e28946
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugProgram2::GetDebugProperty
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 24ecc5a7b974dcbb89715dc69c9a34f8e11e9da4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-プログラムのプロパティを取得します。  
+---
+# <a name="idebugprogram2getdebugproperty"></a>IDebugProgram2::GetDebugProperty
+Gets the program's properties.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetDebugProperty(   
-   IDebugProperty2** ppProperty  
+HRESULT GetDebugProperty(   
+   IDebugProperty2** ppProperty  
 );  
 ```  
   
-```c#  
-int GetDebugProperty(   
-   out IDebugProperty2 ppProperty  
+```cs  
+int GetDebugProperty(   
+   out IDebugProperty2 ppProperty  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppProperty`  
- \[入力\] プログラムのプロパティを表す [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) のオブジェクトを返します。  
+ [out] Returns an [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object that represents the program's properties.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- このメソッドによって返されるプロパティはプログラムに固有です。  複数のプロパティを返すプログラムの場合はこのメソッドによって返される [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトの追加のプロパティと [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) のメソッドをすべてのプロパティの一覧を呼び出すことのコンテナーです。  
+## <a name="remarks"></a>Remarks  
+ The properties returned by this method are specific to the program. If the program needs to return more than one property, then the [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object returned by this method is a container of additional properties and calling the [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) method returns a list of all properties.  
   
- プログラムは `IDebugProperty2` のインターフェイスを通じて記述できる追加のプロパティの数と型を公開する場合があります。  IDE では一般的なプロパティ ブラウザーのユーザー インターフェイスを通じてプログラムの追加プロパティを表示する場合があります。  
+ A program may expose any number and type of additional properties that can be described through the `IDebugProperty2` interface. An IDE might display the additional program properties through a generic property browser user interface.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)

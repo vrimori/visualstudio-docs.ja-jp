@@ -1,99 +1,116 @@
 ---
-title: "CONTEXT_COMPARE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CONTEXT_COMPARE"
-helpviewer_keywords: 
-  - "CONTEXT_COMPARE 列挙型"
+title: CONTEXT_COMPARE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CONTEXT_COMPARE
+helpviewer_keywords:
+- CONTEXT_COMPARE enumeration
 ms.assetid: 701ed61c-a320-4c20-a335-0b840024abc0
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# CONTEXT_COMPARE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c062c3e52114eb6ec58df3f371bd242235973155
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-2 個のメモリのコンテキストを比較するための条件を指定します。  
+---
+# <a name="contextcompare"></a>CONTEXT_COMPARE
+Specifies the criteria for comparing two memory contexts.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_CONTEXT_COMPARE {   
-   CONTEXT_EQUAL                 = 0x0001,  
-   CONTEXT_LESS_THAN             = 0x0002,  
-   CONTEXT_GREATER_THAN          = 0x0003,  
-   CONTEXT_LESS_THAN_OR_EQUAL    = 0x0004,  
-   CONTEXT_GREATER_THAN_OR_EQUAL = 0x0005,  
-   CONTEXT_SAME_SCOPE            = 0x0006,  
-   CONTEXT_SAME_FUNCTION         = 0x0007,  
-   CONTEXT_SAME_MODULE           = 0x0008,  
-   CONTEXT_SAME_PROCESS          = 0x0009  
+enum enum_CONTEXT_COMPARE {   
+   CONTEXT_EQUAL                 = 0x0001,  
+   CONTEXT_LESS_THAN             = 0x0002,  
+   CONTEXT_GREATER_THAN          = 0x0003,  
+   CONTEXT_LESS_THAN_OR_EQUAL    = 0x0004,  
+   CONTEXT_GREATER_THAN_OR_EQUAL = 0x0005,  
+   CONTEXT_SAME_SCOPE            = 0x0006,  
+   CONTEXT_SAME_FUNCTION         = 0x0007,  
+   CONTEXT_SAME_MODULE           = 0x0008,  
+   CONTEXT_SAME_PROCESS          = 0x0009  
 };  
 typedef DWORD CONTEXT_COMPARE;  
 ```  
   
-```c#  
-public enum enum_CONTEXT_COMPARE {   
-   CONTEXT_EQUAL                 = 0x0001,  
-   CONTEXT_LESS_THAN             = 0x0002,  
-   CONTEXT_GREATER_THAN          = 0x0003,  
-   CONTEXT_LESS_THAN_OR_EQUAL    = 0x0004,  
-   CONTEXT_GREATER_THAN_OR_EQUAL = 0x0005,  
-   CONTEXT_SAME_SCOPE            = 0x0006,  
-   CONTEXT_SAME_FUNCTION         = 0x0007,  
-   CONTEXT_SAME_MODULE           = 0x0008,  
-   CONTEXT_SAME_PROCESS          = 0x0009  
+```cs  
+public enum enum_CONTEXT_COMPARE {   
+   CONTEXT_EQUAL                 = 0x0001,  
+   CONTEXT_LESS_THAN             = 0x0002,  
+   CONTEXT_GREATER_THAN          = 0x0003,  
+   CONTEXT_LESS_THAN_OR_EQUAL    = 0x0004,  
+   CONTEXT_GREATER_THAN_OR_EQUAL = 0x0005,  
+   CONTEXT_SAME_SCOPE            = 0x0006,  
+   CONTEXT_SAME_FUNCTION         = 0x0007,  
+   CONTEXT_SAME_MODULE           = 0x0008,  
+   CONTEXT_SAME_PROCESS          = 0x0009  
 };  
 ```  
   
-## メンバー  
- CONTEXT\_EQUAL  
- ターゲットのメモリのコンテキストと同じリストの最初のメモリのコンテキストを探します。  
+## <a name="members"></a>Members  
+ CONTEXT_EQUAL  
+ Find the first memory context in the list that is equal to the target memory context.  
   
- CONTEXT\_LESS\_THAN  
- ターゲットであるメモリのコンテキストより小さいリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_LESS_THAN  
+ Find the first memory context in the list that is less than the target memory context.  
   
- CONTEXT\_GREATER\_THAN  
- ターゲットのメモリのコンテキストより大きなリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_GREATER_THAN  
+ Find the first memory context in the list that is greater than the target memory context.  
   
- CONTEXT\_LESS\_THAN\_OR\_EQUAL  
- ターゲットのメモリのコンテキスト以下であるリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_LESS_THAN_OR_EQUAL  
+ Find the first memory context in the list that is less than or equal to the target memory context.  
   
- CONTEXT\_GREATER\_THAN\_OR\_EQUAL  
- より大きい \[ターゲットのメモリのコンテキストに設定します。リストの最初のメモリをコンテキスト。  
+ CONTEXT_GREATER_THAN_OR_EQUAL  
+ Find the first memory context in the list that is greater than or equal to the target memory context.  
   
- CONTEXT\_SAME\_SCOPE  
- ターゲットのメモリのコンテキストと同じスコープ内にあるリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_SAME_SCOPE  
+ Find the first memory context in the list that is in the same scope as the target memory context.  
   
- CONTEXT\_SAME\_FUNCTION  
- ターゲットのメモリの範囲と同じ機能にあるリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_SAME_FUNCTION  
+ Find the first memory context in the list that is in the same function as the target memory scope.  
   
- CONTEXT\_SAME\_MODULE  
- ターゲットのメモリのコンテキストと同じモジュールにあるリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_SAME_MODULE  
+ Find the first memory context in the list that is in the same module as the target memory context.  
   
- CONTEXT\_SAME\_PROCESS  
- ターゲットのメモリのコンテキストと同じプロセスにあるリストの最初のメモリのコンテキストを探します。  
+ CONTEXT_SAME_PROCESS  
+ Find the first memory context in the list that is in the same process as the target memory context.  
   
-## 解説  
- [比較](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) のメソッドに引数として渡されます。  
+## <a name="remarks"></a>Remarks  
+ Passed as an argument to the [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) method.  
   
- これらの値は指定した比較条件を満たすリスト内の最初のメモリのコンテキストを検索するために使用されます。  メモリの `IDebugMemoryContext2::Compare` のコンテキストがメソッドを介してに対して自身を比較するメモリのコンテキストの一覧を示します。  比較演算子を `true` なリストに対するメモリの最初のコンテキストはを返します。  
+ These values are used to find the first memory context in a list that satisfies the specified comparison criteria. A memory context is given a list of memory contexts to compare itself against through the `IDebugMemoryContext2::Compare` method. The first memory context in the list for which the comparison operator is `true` is then returned.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [比較](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)

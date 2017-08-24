@@ -1,45 +1,61 @@
 ---
-title: "CA2231: ValueType.Equals のオーバーライドで、演算子 equals をオーバーロードします | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OverloadOperatorEqualsOnOverridingValueTypeEquals"
-  - "CA2231"
-  - "OverrideOperatorEqualsOnOverridingValueTypeEquals"
-helpviewer_keywords: 
-  - "CA2231"
-  - "OverloadOperatorEqualsOnOverridingValueTypeEquals"
+title: 'CA2231: Overload operator equals on overriding ValueType.Equals | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OverloadOperatorEqualsOnOverridingValueTypeEquals
+- CA2231
+- OverrideOperatorEqualsOnOverridingValueTypeEquals
+helpviewer_keywords:
+- OverloadOperatorEqualsOnOverridingValueTypeEquals
+- CA2231
 ms.assetid: 114c0161-261a-40ad-8b2c-0932d6909d2a
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2231: ValueType.Equals のオーバーライドで、演算子 equals をオーバーロードします
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d299c2805a3837643a2038f7eb78821e1982a112
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
+---
+# <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231: Overload operator equals on overriding ValueType.Equals
 |||  
 |-|-|  
 |TypeName|OverloadOperatorEqualsOnOverridingValueTypeEquals|  
 |CheckId|CA2231|  
-|分類|Microsoft.Usage|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Non Breaking|  
   
-## 原因  
- 値型は <xref:System.Object.Equals%2A?displayProperty=fullName> をオーバーロードしますが、等値演算子は実装していません。  
+## <a name="cause"></a>Cause  
+ A value type overrides <xref:System.Object.Equals%2A?displayProperty=fullName> but does not implement the equality operator.  
   
-## 規則の説明  
- ほとんどのプログラミング言語では、値型に対する等値演算子 \(\=\=\) の既定の実装がありません。  プログラミング言語で演算子のオーバーロードをサポートしている場合、等値演算子の実装を考慮してください。  等値演算子の動作は、<xref:System.Object.Equals%2A> と同様です。  
+## <a name="rule-description"></a>Rule Description  
+ In most programming languages there is no default implementation of the equality operator (==) for value types. If your programming language supports operator overloads, you should consider implementing the equality operator. Its behavior should be identical to that of <xref:System.Object.Equals%2A>.  
   
- 等値演算子がオーバーロードされた実装では、既定の等値演算子は使用できません。  使用すると、スタック オーバーフローが発生します。  等値演算子を実装するには、Object.Equals メソッドを使用します。  たとえば、次のようになります。  
+ You cannot use the default equality operator in an overloaded implementation of the equality operator. Doing so will cause a stack overflow. To implement the equality operator, use the Object.Equals method in your implementation. For example:  
   
 ```vb  
 If (Object.ReferenceEquals(left, Nothing)) Then  
@@ -49,33 +65,33 @@ Else
 End If  
 ```  
   
-```c#  
+```cs  
 if (Object.ReferenceEquals(left, null))   
     return Object.ReferenceEquals(right, null);  
 return left.Equals(right);  
 ```  
   
-## 違反の修正方法  
- この規則違反を修正するには、等値演算子を実装します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, implement the equality operator.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しても安全ですが、可能であれば等値演算子を実装することをお勧めします。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule; however, we recommend that you provide the equality operator if possible.  
   
-## 使用例  
- この規則に違反する型の定義を次の例に示します。  
+## <a name="example"></a>Example  
+ The following example defines a type that violates this rule.  
   
- [!CODE [FxCop.Usage.EqualsGetHashCode#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Usage.EqualsGetHashCode#1)]  
+ [!code-cs[FxCop.Usage.EqualsGetHashCode#1](../code-quality/codesnippet/CSharp/ca2231-overload-operator-equals-on-overriding-valuetype-equals_1.cs)]  
   
-## 関連規則  
- [CA1046: 参照型で、演算子 equals をオーバーロードしないでください](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1046: Do not overload operator equals on reference types](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)  
   
- [CA2225: 演算子オーバーロードには名前付けされた代替が存在します](../Topic/CA2225:%20Operator%20overloads%20have%20named%20alternates.md)  
+ [CA2225: Operator overloads have named alternates](../code-quality/ca2225-operator-overloads-have-named-alternates.md)  
   
- [CA2226: 演算子は対称型オーバーロードを含まなければなりません](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
+ [CA2226: Operators should have symmetrical overloads](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
   
- [CA2224: オーバーロードする演算子 equals で Equals をオーバーライドします](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)  
+ [CA2224: Override equals on overloading operator equals](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)  
   
- [CA2218: オーバーライドする Equals で GetHashCode をオーバーライドします](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)  
+ [CA2218: Override GetHashCode on overriding Equals](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  <xref:System.Object.Equals%2A?displayProperty=fullName>

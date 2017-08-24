@@ -1,58 +1,75 @@
 ---
-title: "IDebugBinder3::GetAllAliases | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBinder3::GetAllAliases"
-helpviewer_keywords: 
-  - "IDebugBinder3::GetAllAliases メソッド"
+title: IDebugBinder3::GetAllAliases | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugBinder3::GetAllAliases
+helpviewer_keywords:
+- IDebugBinder3::GetAllAliases method
 ms.assetid: 1f9ab2ee-2ab3-4a61-8b99-95dd7fdf3511
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugBinder3::GetAllAliases
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e39fb66c7618085393dfdb6a14ec085aa0f4b99e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-このメソッドはプログラムからエイリアスの一覧を取得します。  
+---
+# <a name="idebugbinder3getallaliases"></a>IDebugBinder3::GetAllAliases
+This method retrieves a list of aliases from the program.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetAllAliases(  
-   UINT          uRequest,  
-   IDebugAlias** ppAliases,  
-   UINT*         puFetched  
+   UINT          uRequest,  
+   IDebugAlias** ppAliases,  
+   UINT*         puFetched  
 );  
 ```  
   
-```c#  
+```cs  
 int GetAllAliases(  
-   uint          uRequest,   
-   IDebugAlias[] ppAliases,   
-   out uint      puFetched  
+   uint          uRequest,   
+   IDebugAlias[] ppAliases,   
+   out uint      puFetched  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `uRequest`  
- \[出力\] 返されるエイリアスの最大数 \(`ppAliases` に渡される配列の長さを指定します。  
+ [in] The maximum number of aliases to return (specifies the length of the array passed into `ppAliases`).  
   
  `ppAliases`  
- \[入力出力\] エイリアスが格納する配列 \(このが null 値であり`uRequest` が 0 の場合返される可能性のある `puFetched` によってエイリアスの数が返されます\)。  
+ [in, out] Array to fill in with aliases (if this is a null value and `uRequest` is 0, the count of aliases that can be returned will be returned by `puFetched`).  
   
  `puFetched`  
- \[入力\] から派生するエイリアスの数を返します。  
+ [out] Returns the number of aliases obtained.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

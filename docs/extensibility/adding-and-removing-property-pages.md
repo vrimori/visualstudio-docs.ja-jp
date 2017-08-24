@@ -1,37 +1,54 @@
 ---
-title: "追加して、プロパティ ページを削除します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[プロパティ ページ] を追加します。"
-  - "プロパティ ページ、プロジェクトのサブタイプ"
-  - "[プロパティ ページ] を削除します。"
+title: Adding and Removing Property Pages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- property pages, adding
+- property pages, project subtypes
+- property pages, removing
 ms.assetid: 34853412-ab8a-4caa-9601-7d0727b2985d
 caps.latest.revision: 29
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# 追加して、プロパティ ページを削除します。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 4bac421c26e2160c88f450e6484f1774dc4af4ee
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-プロジェクト デザイナーが [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の管理プロジェクトのプロパティ設定およびリソースを中心点として機能します。  これは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の統合開発環境で単一のウィンドウとして表示され\(IDE\) 左のタブを使用してアクセスするためのいくつかのウィンドウが含まれます。  プロジェクト デザイナーのウィンドウ \(通常プロパティ ページと呼びます\) プロジェクトの種類と言語によって異なります。  プロジェクト デザイナーが ENT1ENT \[入力\] メニューの  **プロパティ**  のコマンドにアクセスできます。  
+---
+# <a name="adding-and-removing-property-pages"></a>Adding and Removing Property Pages
+The Project Designer provides a centralized location for managing project properties, settings, and resources in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. It appears as a single window in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrated development environment (IDE) and contains a number of panes on the right that are accessed through the tabs on the left. The panes (often referred to as property pages) in the Project Designer vary by project type and language. The Project Designer can be accessed with the **Properties** command on the **Project** menu.  
   
- プロジェクトのサブタイプはプロジェクト デザイナーの追加のプロパティ ページを表示する必要があります。  またそのプロジェクトのサブタイプは組み込みのプロパティ ページを削除する必要がある場合があります。  いずれかを行うにはプロジェクトのサブタイプは<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> のインターフェイスを実装し<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> のメソッドをオーバーライドする必要があります。  このメソッドをオーバーライドし<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> の列挙値のいずれか 1 つがを含む `propId` のパラメーターを使用することでプロジェクトのプロパティをフィルタリングしたり追加または削除できます。  たとえば構成依存プロパティ ページにページを追加する必要があります。  これを行うには構成依存プロパティ ページをフィルター処理し既存のリストに新しいページを追加する必要があります。  
+ A project subtype frequently needs to display additional property pages in the Project Designer. Likewise, some project subtypes might require that built-in property pages be removed. To do either, your project subtype must implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> interface and override the <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> method. By overriding this method and using `propId` parameter containing one of the values of the <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> enumeration, you can filter, add or remove project properties. For example, you might need to add a page to the configuration-dependent property pages. To do this, you need to filter configuration-dependent property pages and then add a new page to the existing list.  
   
-## プロジェクト デザイナーのプロパティ ページを追加および削除します  
+## <a name="adding-and-removing-property-pages-in-project-designer"></a>Adding and Removing Property Pages in Project Designer  
   
-#### プロジェクト デザイナーのプロパティ ページを削除するには  
+#### <a name="to-remove-a-property-page-in-project-designer"></a>To remove a property page in Project Designer  
   
-1.  `GetProperty(uint itemId, int propId, out object property)` のメソッドのフィルターのプロパティ ページにオーバーライドし`clsids` のリストを取得します。  
+1.  Override the `GetProperty(uint itemId, int propId, out object property)` method to filter property pages and obtain a `clsids` list.  
   
-    ```vb#  
+    ```vb  
     Protected Overrides int GetProperty(uint itemId, int propId, out object property)  
     Protected Overrides Function GetProperty(ByVal itemId As UInteger, ByVal propId As Integer, ByRef [property] As Object) As Integer  
         'Use propId to filter configuration-independent property pages.  
@@ -51,7 +68,7 @@ caps.handback.revision: 29
   
     ```  
   
-    ```c#  
+    ```cs  
     protected override int GetProperty(uint itemId, int propId, out object property)  
     {  
         //Use propId to filter configuration-independent property pages.  
@@ -74,9 +91,9 @@ caps.handback.revision: 29
     }  
     ```  
   
-2.  派生 `clsids` の一覧から \[ENT0ENT ページを削除します。  
+2.  Remove the **Build Events** page from obtained `clsids` list.  
   
-    ```vb#  
+    ```vb  
     Private buildEventsPageGuid As String = "{1E78F8DB-6C07-4D61-A18F-7514010ABD56}"  
     Private index As Integer = propertyPagesList.IndexOf(buildEventsPageGuid)  
     If index <> -1 Then  
@@ -92,7 +109,7 @@ caps.handback.revision: 29
     property = propertyPagesList  
     ```  
   
-    ```c#  
+    ```cs  
     string buildEventsPageGuid = "{1E78F8DB-6C07-4D61-A18F-7514010ABD56}";  
     int index = propertyPagesList.IndexOf(buildEventsPageGuid);  
     if (index != -1)  
@@ -108,11 +125,11 @@ caps.handback.revision: 29
     property = propertyPagesList;  
     ```  
   
-#### プロジェクト デザイナーのプロパティ ページを追加するには  
+#### <a name="to-add-a-property-page-in-project-designer"></a>To add a property page in Project Designer  
   
-1.  追加するプロパティ ページを作成します。  
+1.  Create a property page you want to add.  
   
-    ```vb#  
+    ```vb  
     Class DeployPropertyPage  
             Inherits Form  
             Implements Microsoft.VisualStudio.OLE.Interop.IPropertyPage  
@@ -134,7 +151,7 @@ caps.handback.revision: 29
     End Class  
     ```  
   
-    ```c#  
+    ```cs  
     class DeployPropertyPage : Form, Microsoft.VisualStudio.OLE.Interop.IPropertyPage  
     {  
         . . . .   
@@ -155,19 +172,19 @@ caps.handback.revision: 29
     }  
     ```  
   
-2.  新しいプロパティ ページを登録します。  
+2.  Register your new property page.  
   
-    ```vb#  
+    ```vb  
     <MSVSIP.ProvideObject(GetType(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)>  
     ```  
   
-    ```c#  
+    ```cs  
     [MSVSIP.ProvideObject(typeof(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)]  
     ```  
   
-3.  `GetProperty(uint itemId, int propId, out object property)` のメソッドのフィルターのプロパティ ページにオーバーライドし`clsids` の一覧を取得しその新しいプロパティ ページを追加します。  
+3.  Override the `GetProperty(uint itemId, int propId, out object property)` method to filter property pages, obtain a `clsids` list and add a new property page.  
   
-    ```vb#  
+    ```vb  
     Protected Overrides Function GetProperty(ByVal itemId As UInteger, ByVal propId As Integer, ByRef [property] As Object) As Integer  
         'Use propId to filter configuration-dependent property pages.  
         Select Case propId  
@@ -183,7 +200,7 @@ caps.handback.revision: 29
     End Function  
     ```  
   
-    ```c#  
+    ```cs  
     protected override int GetProperty(uint itemId, int propId, out object property)  
     {  
         //Use propId to filter configuration-dependent property pages.  
@@ -204,7 +221,7 @@ caps.handback.revision: 29
     ```  
   
 > [!NOTE]
->  このトピックで説明するすべてのコード例はより大きな例の一部 [VSSDK のサンプル](../misc/vssdk-samples.md)です。  
+>  All code examples provided in this topic are parts of a larger example in [VSSDK Samples](http://aka.ms/vs2015sdksamples).  
   
-## 参照  
- [プロジェクトのサブタイプ](../extensibility/internals/project-subtypes.md)
+## <a name="see-also"></a>See Also  
+ [Project Subtypes](../extensibility/internals/project-subtypes.md)

@@ -1,5 +1,5 @@
 ---
-title: "IEnumDebugFields::Skip |Microsoft ドキュメント"
+title: IEnumDebugFields::Skip | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2174206faa86e9853bcc31f1f91add9361f00636
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 27dbf25eff7dd34181c1dda6f72c1437b99a8200
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="ienumdebugfieldsskip"></a>IEnumDebugFields::Skip
-このメソッドは、指定した要素数をスキップします。  
+This method skips over the specified number of elements.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Skip(  
@@ -47,21 +48,21 @@ HRESULT Skip(
 );  
 ```  
   
-```c#  
+```cs  
 int Skip(  
    uint celt  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `celt`  
- [in]スキップする要素の数です。  
+ [in] Number of elements to skip.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`します。 返します`S_FALSE`場合`celt`残りの要素の数よりも大きい。 それ以外の場合、エラー コードが返されます。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`. Returns `S_FALSE` if `celt` is greater than the number of remaining elements; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- 場合`celt`数より大きい値を指定残りの要素の列挙体が最後に設定し、`S_FALSE`が返されます。  
+## <a name="remarks"></a>Remarks  
+ If `celt` specifies a value greater than the number of remaining elements, the enumeration is set to the end and `S_FALSE` is returned.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

@@ -1,72 +1,89 @@
 ---
-title: "CA1024: 適切な場所にプロパティを使用します | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "UsePropertiesWhereAppropriate"
-  - "CA1024"
-helpviewer_keywords: 
-  - "CA1024"
-  - "UsePropertiesWhereAppropriate"
+title: 'CA1024: Use properties where appropriate | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- UsePropertiesWhereAppropriate
+- CA1024
+helpviewer_keywords:
+- CA1024
+- UsePropertiesWhereAppropriate
 ms.assetid: 3a04f765-af7c-4872-87ad-9cc29e8e657f
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 21
----
-# CA1024: 適切な場所にプロパティを使用します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 966928ed97aef1c692b5019fc6e8d7280dbbe4f6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
+---
+# <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Use properties where appropriate
 |||  
 |-|-|  
 |TypeName|UsePropertiesWhereAppropriate|  
 |CheckId|CA1024|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Design|  
+|Breaking Change|Breaking|  
   
-## 原因  
- パブリック メソッドまたはプロテクト メソッドに、`Get` で始まる名前が付けられ、パラメーターは使用されていません。また、配列ではない値を返します。  
+## <a name="cause"></a>Cause  
+ A public or protected method has a name that starts with `Get`, takes no parameters, and returns a value that is not an array.  
   
-## 規則の説明  
- ほとんどの場合、プロパティはデータを表し、メソッドはアクションを実行します。  プロパティにはフィールドと同様にアクセスできるため、使用が簡単です。  次のいずれかの条件に該当する場合は、メソッドをプロパティに変更できる可能性があります。  
+## <a name="rule-description"></a>Rule Description  
+ In most cases, properties represent data and methods perform actions. Properties are accessed like fields, which makes them easier to use. A method is a good candidate to become a property if one of these conditions is present:  
   
--   引数を受け取らず、オブジェクトのステータス情報を返す場合。  
+-   Takes no arguments and returns the state information of an object.  
   
--   オブジェクトの状態の一部を設定する単一の引数を受け取る場合。  
+-   Accepts a single argument to set some part of the state of an object.  
   
- プロパティは、フィールドと同様に動作します。メソッドで同様に動作できない場合、プロパティに変更しないでください。  次のような場合、プロパティよりもメソッドの方が適しています。  
+ Properties should behave as if they are fields; if the method cannot, it should not be changed to a property. Methods are better than properties in the following situations:  
   
--   メソッドで時間のかかる操作を実行する場合。  メソッドは、フィールド値の設定または取得に必要な時間よりも、明らかに長くかかります。  
+-   The method performs a time-consuming operation. The method is perceivably slower than the time that is required to set or get the value of a field.  
   
--   メソッドで変換を実行する場合。  フィールドへのアクセスでは、格納データの変換されたバージョンは返されません。  
+-   The method performs a conversion. Accessing a field does not return a converted version of the data that it stores.  
   
--   Get メソッドに明らかな副作用がある場合。  フィールド値の取得には副作用はありません。  
+-   The Get method has an observable side effect. Retrieving the value of a field does not produce any side effects.  
   
--   実行順序が重要となる場合。  フィールド値の設定は、発生した他の操作に依存しません。  
+-   The order of execution is important. Setting the value of a field does not rely on the occurrence of other operations.  
   
--   メソッドを 2 回続けて呼び出した場合に、異なる結果が生じるとき。  
+-   Calling the method two times in succession creates different results.  
   
--   メソッドが静的でも、呼び出し元によって変更できるオブジェクトを返す場合。  フィールド値の取得の場合、呼び出し元は、フィールドに格納されているデータを変更できません。  
+-   The method is static but returns an object that can be changed by the caller. Retrieving the value of a field does not allow the caller to change the data that is stored by the field.  
   
--   メソッドが配列を返す場合。  
+-   The method returns an array.  
   
-## 違反の修正方法  
- この規則違反を修正するには、メソッドをプロパティに変更します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, change the method to a property.  
   
-## 警告を抑制する状況  
- メソッドが上記で列挙した基準のいずれかに適合する場合、この規則からの警告を抑制します。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Suppress a warning from this rule if the method meets at least one of the previously listed criteria.  
   
-## デバッガーでのプロパティの展開の制御  
- プログラマがプロパティの使用を避ける理由の 1 つは、デバッガーがプロパティを自動展開するのを好まないためです。  たとえば、プロパティが大きなオブジェクトの割り当てや P\/Invoke の呼び出しに関連していても、実際には明らかな影響を及ぼさない場合があります。  
+## <a name="controlling-property-expansion-in-the-debugger"></a>Controlling Property Expansion in the Debugger  
+ One reason programmers avoid using a property is because they do not want the debugger to auto-expand it. For example, the property might involve allocating a large object or calling a P/Invoke, but it might not actually have any observable side effects.  
   
- <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName> を適用することで、デバッガーがプロパティを自動展開しないようにすることができます。  次の例では、この属性がインスタンス プロパティに適用されています。  
+ You can prevent the debugger from auto-expanding properties by applying <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>. The following example shows this attribute being applied to an instance property.  
   
 ```vb  
 Imports System   
@@ -74,48 +91,48 @@ Imports System.Diagnostics
   
 Namespace Microsoft.Samples   
   
-    Public Class TestClass   
+    Public Class TestClass   
   
-        ' [...]   
+        ' [...]   
   
-        <DebuggerBrowsable(DebuggerBrowsableState.Never)> _   
-        Public ReadOnly Property LargeObject() As LargeObject   
-            Get   
-                ' Allocate large object   
-                ' [...]   
-            End Get   
-        End Property   
+        <DebuggerBrowsable(DebuggerBrowsableState.Never)> _   
+        Public ReadOnly Property LargeObject() As LargeObject   
+            Get   
+                ' Allocate large object   
+                ' [...]   
+            End Get   
+        End Property   
   
-    End Class   
+    End Class   
   
 End Namespace  
 ```  
   
-```c#  
+```cs  
   
-        using System;   
+      using System;   
 using System.Diagnostics;   
   
 namespace Microsoft.Samples   
 {   
-    public class TestClass   
-    {   
-        // [...]   
+    publicclass TestClass   
+    {   
+        // [...]   
   
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]   
-        public LargeObject LargeObject   
-        {   
-            get   
-            {   
-                // Allocate large object   
-                // [...]   
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]   
+        public LargeObject LargeObject   
+        {   
+            get   
+            {   
+                // Allocate large object   
+                // [...]   
   
-        }  
-    }  
+        }  
+    }  
 }  
 ```  
   
-## 使用例  
- 次の例には、プロパティに変換する方がよいメソッドと、フィールドのように動作しないため変換しない方がよいメソッドがいくつか含まれています。  
+## <a name="example"></a>Example  
+ The following example contains several methods that should be converted to properties, and several that should not because they do not behave like fields.  
   
  [!code-cs[FxCop.Design.MethodsProperties#1](../code-quality/codesnippet/CSharp/ca1024-use-properties-where-appropriate_1.cs)]

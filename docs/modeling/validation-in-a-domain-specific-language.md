@@ -1,91 +1,108 @@
 ---
-title: "ドメイン固有言語における検証 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ドメイン固有言語、制約"
-  - "ドメイン固有言語、検証"
+title: Validation in a Domain-Specific Language | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Domain-Specific Language, constraints
+- Domain-Specific Language, validation
 ms.assetid: 65b93df8-af3c-462b-904c-60292f8ed381
 caps.latest.revision: 33
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 33
----
-# ドメイン固有言語における検証
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: alancameronwills
+ms.author: awills
+manager: douge
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f9b849775a53996a262edf84da29e829bc492f03
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-ドメイン固有言語 (DSL) の作成者は、検証制約を定義して、ユーザーが作成したモデルが意味を持つことを確認できます。 たとえば、DSL でユーザーが人々とその先祖の家系図を描くことができる場合、子の誕生日が親の誕生日よりも後であることを確認する制約を作成できます。  
+---
+# <a name="validation-in-a-domain-specific-language"></a>Validation in a Domain-Specific Language
+As the author of a domain-specific language (DSL), you can define validation constraints to verify that the model created by the user is meaningful. For example, if your DSL allows users to draw a family tree of people and their ancestors, you could write a constraint that ensures that children have birth dates after their parents.  
   
- モデルを保存すると、開かれたときと、ユーザーが明示的に実行時に実行する検証制約を持つことができます、 **検証** メニュー コマンドです。 検証をプログラム制御の下で実行することもできます。 たとえば、プロパティ値またはリレーションシップの変更に応じて検証を実行できます。  
+ You can have the validation constraints execute when the model is saved, when it is opened, and when the user explicitly runs the **Validate** menu command. You can also execute validation under program control. For example, you could execute validation in response to a change in a property value or relationship.  
   
- 検証はユーザーのモデルを処理するテキスト テンプレートまたは他のツールを作成する場合に特に重要です。 検証により、そうしたツールが仮定する事前条件をモデルが満たすことが保証されます。  
+ Validation is particularly important if you are writing text templates or other tools that process your users' models. Validation ensures that the models fulfill the preconditions assumed by those tools.  
   
 > [!WARNING]
->  検証制約は、拡張機能メニュー コマンドおよびジェスチャ ハンドラーとともに、DSL の別個の拡張機能内で定義することもできます。 ユーザーは DSL に加えて、こうした拡張機能を選択的にインストールできます。 詳細については、次を参照してください。 [MEF による DSL の拡張](../modeling/extend-your-dsl-by-using-mef.md)します。  
+>  You can also allow validation constraints to be defined in separate extensions to your DSL, along with extension menu commands and gesture handlers. Users can choose to install these extensions in addition to your DSL. For more information, see [Extend your DSL by using MEF](../modeling/extend-your-dsl-by-using-mef.md).  
   
-## <a name="running-validation"></a>検証の実行  
- ユーザーがモデル、つまりドメイン固有言語のインスタンスを編集しているとき、次の操作により検証を実行できます。  
+## <a name="running-validation"></a>Running Validation  
+ When a user is editing a model, that is, an instance of your domain-specific language, the following actions can run validation:  
   
--   ダイアグラムを右クリックして **すべて検証**します。  
+-   Right-click the diagram and select **Validate All**.  
   
--   選択、DSL のエクスプ ローラーで最上位ノードを右クリックして **すべて検証**  
+-   Right-click the top node in the Explorer of your DSL and select **Validate All**  
   
--   モデルを保存します。  
+-   Save the model.  
   
--   モデルを開きます。  
+-   Open the model.  
   
--   さらに、たとえばメニュー コマンドの一部として、または変更に応じて検証を実行するプログラム コードを作成できます。  
+-   In addition, you can write program code that runs validation, for example, as part of a menu command or in response to a change.  
   
- 検証エラーが表示されます、 **エラー一覧** ウィンドウです。 ユーザーはエラー メッセージをダブルクリックして、エラーの原因であるモデル要素を選択できます。  
+ Any validation errors will appear in the **Error List** window. The user can double-click an error message to select the model elements that are the cause of the error.  
   
-## <a name="defining-validation-constraints"></a>検証制約の定義  
- DSL のドメイン クラスまたはリレーションシップに検証メソッドを追加することにより、検証制約を定義します。 ユーザーまたはプログラム制御のいずれかにより検証が実行されると、検証メソッドの一部または全部が実行されます。 各メソッドはそのクラスの各インスタンスに適用され、各クラスにはいくつかの検証メソッドを含めることができます。  
+## <a name="defining-validation-constraints"></a>Defining Validation Constraints  
+ You define validation constraints by adding validation methods to the domain classes or relationships of your DSL. When validation is run, either by the user or under program control, some or all of the validation methods are executed. Each method is applied to each instance of its class, and there can be several validation methods in each class.  
   
- 各検証メソッドは発見したすべてのエラーを報告します。  
+ Each validation method reports any errors that it finds.  
   
 > [!NOTE]
->  検証メソッドはエラーを報告しますが、モデルを変更しません。 場合は、調整または特定の変更を防ぐためを参照してください [検証の代替手段](#alternatives)します。  
+>  Validation methods report errors, but do not change the model. If you want to adjust or prevent certain changes, see [Alternatives to Validation](#alternatives).  
   
-#### <a name="to-define-a-validation-constraint"></a>検証制約を定義するには  
+#### <a name="to-define-a-validation-constraint"></a>To define a validation constraint  
   
-1.  検証を有効にする、 **発します** ノード。  
+1.  Enable validation in the **Editor\Validation** node:  
   
-    1.  開いている **Dsl\DslDefinition.dsl**します。  
+    1.  Open **Dsl\DslDefinition.dsl**.  
   
-    2.  DSL エクスプ ローラーで、 **エディター** ノード **検証**します。  
+    2.  In DSL Explorer, expand the **Editor** node and select **Validation**.  
   
-    3.  [プロパティ] ウィンドウで、設定、 **を使用して**  プロパティを `true`します。 これらのプロパティをすべて設定すると利便性が最高になります。  
+    3.  In the Properties window, set the **Uses**  properties to `true`. It is most convenient to set all these properties.  
   
-    4.  クリックして **すべてのテンプレートの変換** ソリューション エクスプ ローラーのツールバー。  
+    4.  Click **Transform All Templates** in the Solution Explorer toolbar.  
   
-2.  1 つ以上のドメイン クラスまたはドメイン リレーションシップに対して部分クラス定義を作成します。 内の新しいコード ファイルにこれらの定義を作成、 **Dsl** プロジェクトです。  
+2.  Write partial class definitions for one or more of your domain classes or domain relationships. Write these definitions in a new code file in the **Dsl** project.  
   
-3.  各クラスのプレフィックスとして次の属性を使用します。  
+3.  Prefix each class with this attribute:  
   
-    ```c#  
+    ```cs  
     [ValidationState(ValidationState.Enabled)]  
     ```  
   
-    -   既定では、この属性により、派生したクラスの検証も有効になります。 特定の派生クラスについて検証を無効にする場合は、`ValidationState.Disabled` を使用できます。  
+    -   By default, this attribute will also enable validation for derived classes. If you want to disable validation for a specific derived class, you can use `ValidationState.Disabled`.  
   
-4.  検証メソッドをクラスに追加します。 各検証メソッドが任意の名前、型のパラメーターが 1 つ <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationContext>します。  
+4.  Add validation methods to the classes. Each validation method can have any name, but have one parameter of type <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationContext>.  
   
-     プレフィックスとして 1 つ以上の `ValidationMethod` 属性を使用する必要があります。  
+     It must be prefixed with one or more `ValidationMethod` attributes:  
   
-    ```c#  
+    ```cs  
     [ValidationMethod (ValidationCategories.Open | ValidationCategories.Save | ValidationCategories.Menu ) ]  
     ```  
   
-     ValidationCategories はメソッドが実行されるタイミングを指定します。  
+     The ValidationCategories specify when the method is executed.  
   
- 次に例を示します。  
+ For example:  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Modeling;  
 using Microsoft.VisualStudio.Modeling.Validation;  
   
@@ -124,37 +141,37 @@ public partial class ParentsHaveChildren
   }  
 ```  
   
- このコードについては次の点に注意してください。  
+ Notice the following points about this code:  
   
--   検証メソッドをドメイン クラスまたはドメイン リレーションシップに追加できます。 これらの型のコードは **Dsl\Generated Code\Domain\*.cs**します。  
+-   You can add validation methods to domain classes or domain relationships. The code for these types is in **Dsl\Generated Code\Domain\*.cs**.  
   
--   各検証メソッドはそのクラスおよびサブクラスのすべてのインスタンスに適用されます。 ドメイン リレーションシップの場合、各インスタンスは 2 つのモデル要素間のリンクです。  
+-   Each validation method is applied to every instance of its class and its subclasses. In the case of a domain relationship, each instance is a link between two model elements.  
   
--   検証メソッドは指定された順序で適用されず、各メソッドは予測可能な順序でそのクラスのインスタンスに適用されません。  
+-   Validation methods are not applied in any specified order, and each method is not applied to the instances of its class in any predictable order.  
   
--   通常、検証メソッドでストア コンテンツを更新するのは、一貫性のない結果を生じる可能性があるため、不適切な処理です。 代わりに、`context.LogError`、`LogWarning`、または `LogInfo` を呼び出すことにより、メソッドはすべてのエラーを報告する必要があります。  
+-   It is usually bad practice for a validation method to update the store content, because this would lead to inconsistent results. Instead, the method should report any error by calling `context.LogError`, `LogWarning` or `LogInfo`.  
   
--   LogError 呼び出しでは、ユーザーがエラー メッセージをダブルクリックしたときに選択される、モデル要素またはリレーションシップ リンクの一覧を指定できます。  
+-   In the LogError call, you can provide a list of model elements or relationship links that will be selected when the user double-clicks the error message.  
   
--   プログラム コードでモデルを読み取る方法については、次を参照してください。 [ナビゲートおよびプログラム コードでモデルを更新](../modeling/navigating-and-updating-a-model-in-program-code.md)します。  
+-   For information about how to read the model in program code, see [Navigating and Updating a Model in Program Code](../modeling/navigating-and-updating-a-model-in-program-code.md).  
   
- 例は次のドメイン モデルに適用されます。 ParentsHaveChildren リレーションシップは Child および Parent という名前のロールを含みます。  
+ The example applies to the following domain model. The ParentsHaveChildren relationship has roles that are named Child and Parent.  
   
- ![DSL 定義図と #45 です。ファミリ ツリー モデル](~/modeling/media/familyt_person.png "FamilyT_Person")  
+ ![DSL Definition diagram &#45; family tree model](../modeling/media/familyt_person.png "FamilyT_Person")  
   
-## <a name="validation-categories"></a>検証カテゴリ  
-  <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> 検証メソッドを実行するときに指定する属性、します。  
+## <a name="validation-categories"></a>Validation Categories  
+ In the <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> attribute, you specify when the validation method should be executed.  
   
-|カテゴリ|実行|  
+|Category|Execution|  
 |--------------|---------------|  
-|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|ユーザーが検証メニュー コマンドを呼び出すとき。|  
-|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|モデル ファイルが開くとき。|  
-|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|ファイルが保存されるとき。 検証エラーがある場合、ユーザーは保存操作を取り消すことができます。|  
-|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|ファイルが保存されるとき。 このカテゴリでメソッドからのエラーがある場合、ユーザーはファイルを再度開くことができない可能性があることを警告されます。<br /><br /> このカテゴリは、読み込みエラーを引き起こす可能性がある、複製された名前または ID、またはその他の条件をテストする検証メソッドに使用します。|  
-|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|ValidateCustom メソッドが呼び出されるとき。 このカテゴリの検証はプログラム コードからのみ呼び出すことができます。<br /><br /> 詳細については、次を参照してください。 [カスタム検証カテゴリ](#custom)します。|  
+|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|When the user invokes the Validate menu command.|  
+|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|When the model file is opened.|  
+|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|When the file is saved. If there are validation errors, the user will be given the option of canceling the save operation.|  
+|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|When the file is saved. If there are errors from methods in this category, the user is warned that it might not be possible to re-open the file.<br /><br /> Use this category for validation methods that test for duplicated names or IDs, or other conditions that might cause loading errors.|  
+|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|When the ValidateCustom method is called. Validations in this category can be invoked only from program code.<br /><br /> For more information, see [Custom Validation Categories](#custom).|  
   
-## <a name="where-to-place-validation-methods"></a>検証メソッドを配置する場所  
- 多くの場合、異なる型に 1 つの検証メソッドを配置することで、同じ効果を得ることができます。 たとえば、次のように、ParentsHaveChildren リレーションシップの代わりに Person クラスにメソッドを追加し、リンクを通して反復することができます。  
+## <a name="where-to-place-validation-methods"></a>Where to Place Validation Methods  
+ You can often achieve the same effect by placing a validation method on a different type. For example, you could add a method to the Person class instead of the ParentsHaveChildren relationship, and have it iterate through the links:  
   
 ```  
 [ValidationState(ValidationState.Enabled)]  
@@ -175,13 +192,13 @@ public partial class Person
   
 ```  
   
- **検証制約の集約です。** 予測可能な順序で検証を適用するには、モデルのルート要素など、オーナー クラスで単一の検証メソッドを定義します。 この手法により、複数のエラー報告を単一のメッセージに集約することもできます。  
+ **Aggregating validation constraints.** To apply validation in a predictable order, define a single validation method on an owner class, such the root element of your model. This technique also lets you aggregate multiple error reports into a single message.  
   
- 欠点は組み合わされたメソッドが管理しにくいことと、すべての制約が同じ `ValidationCategories` を含む必要があることです。 したがって、可能であれば、各制約を別々のメソッドに維持することをお勧めします。  
+ Drawbacks are that the combined method is less easy to manage, and that the constraints must all have the same `ValidationCategories`. We therefore recommend that you keep each constraint in a separate method if possible.  
   
- **コンテキスト キャッシュ内の値を渡す。** コンテキスト パラメーターは任意の値を配置可能なディクショナリを持っています。 このディクショナリは検証が実行中保持されます。 たとえば、特定の検証メソッドはコンテキスト内でエラー カウントを維持し、繰り返しのメッセージでエラー ウィンドウがあふれることを防ぐために使用できます。 次に例を示します。  
+ **Passing values in the context cache.** The context parameter has a dictionary into which you can place arbitrary values. The dictionary persists for the life of the validation run. A particular validation method could, for example, keep an error count in the context, and use it to avoid flooding the error window with repeated messages. For example:  
   
-```c#  
+```cs  
 List<ParentsHaveChildren> erroneousLinks;  
 if (!context.TryGetCacheValue("erroneousLinks", out erroneousLinks))  
 erroneousLinks = new List<ParentsHaveChildren>();  
@@ -191,17 +208,17 @@ if (erroneousLinks.Count < 5) { context.LogError( ... ); }
   
 ```  
   
-## <a name="validation-of-multiplicities"></a>多重度の検証  
- 最小多重度をチェックするための検証メソッドは DSL 用に自動生成されます。 コードを記述する **Dsl\Generated Code\MultiplicityValidation.cs**します。 検証を有効にすると、これらのメソッドが効果を取得、 **発します** DSL エクスプ ローラーのノードです。  
+## <a name="validation-of-multiplicities"></a>Validation of Multiplicities  
+ Validation methods for checking minimum multiplicity are automatically generated for your DSL. The code is written to **Dsl\Generated Code\MultiplicityValidation.cs**. These methods take effect when you enable validation in the **Editor\Validation** node in DSL Explorer.  
   
- ドメイン リレーションシップのロールの多重度を 1..* または 1..1 に設定し、ユーザーがこのリレーションシップのリンクを作成しない場合、検証エラー メッセージが表示されます。  
+ If you set the multiplicity of a role of a domain relationship to be 1..* or 1..1, but the user does not create a link of this relationship, a validation error message will appear.  
   
- DSL が Person および Town と関係を持つリレーションシップ PersonLivesInTown のクラスなど **1.\*** Town ロールすると、Town を持たないするユーザーごとに、エラー メッセージが表示されます。  
+ For example, if your DSL has classes Person and Town, and a relationship PersonLivesInTown with a relationship **1..\*** at the Town role, then for each Person that has no Town, an error message will appear.  
   
-## <a name="running-validation-from-program-code"></a>プログラム コードからの検証の実行  
- ValidationController をアクセスまたは作成することにより検証を実行できます。 エラーをユーザーに対するエラー ウィンドウ内に表示する場合、図の DocData にアタッチされる ValidationController を使用します。 たとえば、メニュー コマンドを作成する場合、コマンド セット クラスで `CurrentDocData.ValidationController` を使用できます。  
+## <a name="running-validation-from-program-code"></a>Running Validation from Program Code  
+ You can run validation by accessing or creating a ValidationController. If you want the errors to be displayed to the user in the error window, use the ValidationController that is attached to your diagram's DocData. For example, if you are writing a menu command, `CurrentDocData.ValidationController` is available in the command set class:  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Modeling;  
 using Microsoft.VisualStudio.Modeling.Validation;  
 using Microsoft.VisualStudio.Modeling.Shell;  
@@ -215,11 +232,11 @@ partial class MyLanguageCommandSet
   
 ```  
   
- 詳細については、次を参照してください。 [方法: ショートカット メニューにコマンドを追加](../Topic/How%20to:%20Add%20a%20Command%20to%20the%20Shortcut%20Menu.md)します。  
+ For more information, see [How to: Add a Command to the Shortcut Menu](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).  
   
- 別個の検証コントローラーを作成して、独自にエラーを管理することもできます。 次に例を示します。  
+ You can also create a separate validation controller, and manage the errors yourself. For example:  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Modeling;  
 using Microsoft.VisualStudio.Modeling.Validation;  
 using Microsoft.VisualStudio.Modeling.Shell;  
@@ -235,12 +252,12 @@ if (!validator.Validate(store, ValidationCategories.Save))
   
 ```  
   
-## <a name="running-validation-when-a-change-occurs"></a>変更発生時の検証実行  
- モデルが無効になった直後にユーザーへの警告を表示する場合、検証を実行するストア イベントを定義できます。 ストア イベントの詳細については、次を参照してください。 [イベント ハンドラー反映されるまで変更 Outside the モデル](../modeling/event-handlers-propagate-changes-outside-the-model.md)します。  
+## <a name="running-validation-when-a-change-occurs"></a>Running validation when a change occurs  
+ If you want to make sure that the user is warned immediately if the model becomes invalid, you can define a store event that runs validation. For more information about store events, see [Event Handlers Propagate Changes Outside the Model](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
   
- 検証コードに加えて、カスタム コード ファイルを追加、 **DslPackage** プロジェクトは、次の例に似た内容のです。 このコードはドキュメントにアタッチされる `ValidationController` を使用します。 このコントローラーは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] エラー一覧に検証エラーを表示します。  
+ In addition to the validation code, add a custom code file to your **DslPackage** project, with content similar to the following example. This code uses the `ValidationController` that is attached to the document. This controller displays the validation errors in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] error list.  
   
-```c#  
+```cs  
 using System;  
 using System.Linq;  
 using Microsoft.VisualStudio.Modeling;  
@@ -299,16 +316,16 @@ namespace Company.FamilyTree
   
 ```  
   
- ハンドラーはリンクまたは要素に影響する、元に戻す操作またはやり直し操作の後でも呼び出されます。  
+ The handlers are also called after Undo or Redo operations that affect the links or elements.  
   
-##  <a name="a-namecustoma-custom-validation-categories"></a><a name="custom"></a> カスタム検証カテゴリ  
- 「メニュー」や「開く」といった標準の検証カテゴリに加えて、独自のカテゴリを定義できます。 これらのカテゴリをプログラム コードから呼び出すことができます。 ユーザーはそれらを直接呼び出すことができません。  
+##  <a name="custom"></a> Custom Validation Categories  
+ In addition to the standard validation categories, such as Menu and Open, you can define your own categories. You can invoke these categories from program code. The user cannot invoke them directly.  
   
- カスタム カテゴリの一般的な使用法は、モデルが特定のツールの事前条件を満たすかどうかをテストするカテゴリを定義することです。  
+ A typical use for custom categories is to define a category that tests whether the model satisfies the preconditions of a particular tool.  
   
- 特定のカテゴリに検証メソッドを追加するには、プレフィックスとして次のような属性を使用します。  
+ To add a validation method to a particular category, prefix it with an attribute like this:  
   
-```c#  
+```cs  
 [ValidationMethod(CustomCategory = "PreconditionsForGeneratePartsList")]  
 [ValidationMethod(ValidationCategory.Menu)]   
 private void TestForCircularLinks(ValidationContext context)   
@@ -317,11 +334,11 @@ private void TestForCircularLinks(ValidationContext context)
 ```  
   
 > [!NOTE]
->  メソッドのプレフィックスには任意の数の `[ValidationMethod()]` 属性を使用できます。 メソッドをカスタム カテゴリと標準カテゴリの両方に追加できます。  
+>  You can prefix a method with as many `[ValidationMethod()]` attributes as you want. You can add a method to both custom and standard categories.  
   
- カスタム検証を呼び出すには次のようにします。  
+ To invoke a custom validation:  
   
-```c#  
+```cs  
   
 // Invoke all validation methods in a custom category:   
 validationController.ValidateCustom  
@@ -329,18 +346,18 @@ validationController.ValidateCustom
    "PreconditionsForGeneratePartsList");  
 ```  
   
-##  <a name="a-namealternativesa-alternatives-to-validation"></a><a name="alternatives"></a> 検証の代替手段  
- 検証制約はエラーを報告しますが、モデルを変更しません。 代わりに、モデルが無効になることを防ぐ場合、他の手法を使用できます。  
+##  <a name="alternatives"></a> Alternatives to Validation  
+ Validation constraints report errors, but do not change the model. If, instead, you want to prevent the model becoming invalid, you can use other techniques.  
   
- ただし、これらの手法は推奨されません。 通常、無効なモデルの修正方法をユーザーに決めてもらう方が適切です。  
+ However, these techniques are not recommended. It is usually better to let the user decide how to correct an invalid model.  
   
- **モデルを有効に復元する変更を調整します。** たとえば、ユーザーが許容される最大値を超えてプロパティを設定した場合、プロパティを最大値にリセットできます。 そのためには、規則を定義します。 詳細については、次を参照してください。 [ルール反映されるまで変更内で、モデル](../modeling/rules-propagate-changes-within-the-model.md)します。  
+ **Adjust the change to restore the model to validity.** For example, if the user sets a property above the allowed maximum, you could reset the property to the maximum value. To do this, define a rule. For more information, see [Rules Propagate Changes Within the Model](../modeling/rules-propagate-changes-within-the-model.md).  
   
- **トランザクションをロールバックして無効な変更が試行されるとします。** この目的のルールを定義できますが、場合によってはプロパティ ハンドラーをオーバーライドできます **OnValueChanging()**, 、やなどのメソッドをオーバーライドする `OnDeleted().` トランザクションをロールバックするには使用 `this.Store.TransactionManager.CurrentTransaction.Rollback().` 詳細については、次を参照してください。 [ドメイン プロパティ値変更ハンドラー](../modeling/domain-property-value-change-handlers.md)します。  
+ **Roll back the transaction if an invalid change is attempted.** You could also define a rule for this purpose, but in some cases it is possible to override a property handler **OnValueChanging()**, or to override a method such as `OnDeleted().` To roll back a transaction, use `this.Store.TransactionManager.CurrentTransaction.Rollback().` For more information, see [Domain Property Value Change Handlers](../modeling/domain-property-value-change-handlers.md).  
   
 > [!WARNING]
->  変更が調整またはロールバックされたことをユーザーが認識できるようにします。 たとえば、`System.Windows.Forms.MessageBox.Show("message").` を使用します。  
+>  Make sure that the user knows that the change has been adjusted or rolled back. For example, use `System.Windows.Forms.MessageBox.Show("message").`  
   
-## <a name="see-also"></a>関連項目  
- [移動して、プログラム コードでモデルを更新します。](../modeling/navigating-and-updating-a-model-in-program-code.md)   
- [イベント ハンドラーには、モデルの外部で変更が反映されるまでください。](../modeling/event-handlers-propagate-changes-outside-the-model.md)
+## <a name="see-also"></a>See Also  
+ [Navigating and Updating a Model in Program Code](../modeling/navigating-and-updating-a-model-in-program-code.md)   
+ [Event Handlers Propagate Changes Outside the Model](../modeling/event-handlers-propagate-changes-outside-the-model.md)

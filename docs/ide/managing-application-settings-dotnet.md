@@ -1,5 +1,5 @@
 ---
-title: "アプリケーションの設定の管理 (.NET) | Microsoft Docs"
+title: Managing Application Settings (.NET) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,90 +32,84 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: a6435584544cbffb9d90258cfba1d83bd71ee8cc
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d8d2fbd4af47b3c94ec3f5d1cbc6d88a52ca2e39
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# アプリケーションの設定の管理 (.NET)
-<a id="managing-application-settings-net" class="xliff"></a>
-アプリケーション設定を使用すると、アプリケーション情報を動的に格納できます。 たとえば、アプリケーション コードに含まれないクライアント コンピューター情報 (接続文字列など)、ユーザー設定、および実行時に必要なその他の情報を格納できます。  
+# <a name="managing-application-settings-net"></a>Managing Application Settings (.NET)
+Application settings enable you to store application information dynamically. Settings allow you to store information on the client computer that should not be included in the application code (for example a connection string), user preferences and other information you need at runtime.  
   
- アプリケーション設定は、以前のバージョンの Visual Studio で使用されていた動的プロパティに代わる機能です。  
+ Application settings replace the dynamic properties used in earlier versions of Visual Studio.  
   
- アプリケーション設定には、それぞれ一意の名前を付ける必要があります。 名前には、文字、数字、アンダースコアを自由に組み合わせて使用できますが、先頭には数字を使用できず、また、空白は使用できません。 名前は `Name` プロパティで変更できます。  
+ Each application setting must have a unique name. The name can be any combination of letters, numbers, or an underscore that does not start with a number, and it cannot contain spaces. The name can be changed through the `Name` property.  
   
- アプリケーション設定は、XML にシリアル化できる任意のデータ型、または `TypeConverter` / `ToString`/`FromString`を持つ任意のデータ型として保存できます。 一般的な型は、`String`、`Integer`、および `Boolean` ですが、<xref:System.Drawing.Color>、<xref:System.Object>、または接続文字列として値を保存することもできます。  
+ Application settings can be stored as any data type that can be serialized to XML or has a `TypeConverter` that implements `ToString`/`FromString`. The most common types are `String`, `Integer`, and `Boolean`, but you can also store values as <xref:System.Drawing.Color>, <xref:System.Object>, or as a connection string.  
   
- アプリケーション設定には、値も含まれます。 値は、 **値** プロパティで設定します。また、設定のデータ型と一致している必要があります。  
+ Application settings also contain a value. The value is set with the **Value** property and must match the data type of the setting.  
   
- さらに、デザイン時には、アプリケーション設定をフォームまたはコントロールのプロパティに関連付けることができます。  
+ In addition, application settings can be bound to a property of a form or control at design time.  
   
- アプリケーション設定には、スコープによって次の 2 種類があります。  
+ There are two types of application settings, based on scope:  
   
--   アプリケーション スコープ設定は、Web サービスの URL やデータベース接続文字列などの情報に使用できます。 これらの値は、アプリケーションに関連付けられます。 したがって、ユーザーがこれらを実行時に変更することはできません。  
+-   Application-scoped settings can be used for information such as a URL for a Web service or a database connection string. These values are associated with the application. Therefore, users cannot change them at run time.  
   
--   ユーザー スコープ設定は、終了時のフォームの位置やフォント設定などの情報の保持に使用できます。 ユーザーは実行時に値を変更できます。  
+-   User-scoped settings can be used for information such as persisting the last position of a form or a font preference. Users can change these values at run time.  
   
- 設定の種類は、 **スコープ** プロパティを使用して変更できます。  
+ You can change the type of a setting by using the **Scope** property.  
   
- プロジェクト システムは、アプリケーション設定を 2 つの XML ファイルに保存します。1 つは、デザイン時に最初のアプリケーション設定を作成したときに作成される app.config ファイルで、もう 1 つは、アプリケーションを実行するユーザーが実行時にユーザー設定の値を変更したときに作成される user.config ファイルです。 アプリケーションが明示的にメソッドを呼び出さない限り、ユーザー設定の変更はディスクに書き込まれないことに注意してください。  
+ The project system stores application settings in two XML files: an app.config file, which is created at design time when you create the first application setting; and a user.config file, which is created at run time when the user who runs the application changes the value of any user setting. Notice that changes in user settings are not written to disk unless the application specifically calls a method to do this.  
   
-## デザイン時におけるアプリケーション設定の作成
-<a id="creating-application-settings-at-design-time" class="xliff"></a>  
- デザイン時にアプリケーションの設定を作成するには、 **プロジェクト デザイナー** の **[設定]**ページを使用するか、フォームやコントロールの **[プロパティ]** ウィンドウを使用します。後者では、プロパティに設定を直接関連付けることができます。  
+## <a name="creating-application-settings-at-design-time"></a>Creating Application Settings at Design Time  
+ At design time, you can create application settings in two ways: by using the **Settings** page of the **Project Designer**, or by using the **Properties** window for a form or control, which allows you to bind a setting to a property.  
   
- アプリケーション スコープ設定 (データベース接続文字列やサーバー リソースへの参照など) を作成した場合、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、 `<applicationSettings>` タグを使用して app.config に設定を保存します。 接続文字列は、 `<connectionStrings>` タグの下に保存されます。  
+ When you create an application-scoped setting (for example, a database connection string, or a reference to server resources), [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] saves it in app.config with the `<applicationSettings>` tag. (Connection strings are saved under the `<connectionStrings>` tag.)  
   
- ユーザー スコープ設定 (既定のフォント、ホーム ページ、ウィンドウ サイズなど) を作成した場合、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、 `<userSettings>` タグを使用して app.config に設定を保存します。  
+ When you create a user-scoped setting (for example, default font, home page, or window size), [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] saves it in app.config with the `<userSettings>` tag.  
   
 > [!IMPORTANT]
->  接続文字列を app.config に保存するときは、パスワードやサーバー パスなどの機密情報が接続文字列に表示されないように注意する必要があります。  
+>  When you store connection strings in app.config, you should take precautions to avoid revealing sensitive information, such as passwords or server paths, in the connection string.  
 >   
->  接続文字列情報 (ユーザーが入力するユーザー ID やパスワードなど) を外部ソースから受け取った場合は、接続文字列の作成に使用する値に、接続の動作を変更してしまうような接続文字列パラメーターが含まれていないことを注意して確認する必要があります。  
+>  If you take connection string information from an external source, such as a user supplying a user ID and password, you must be careful to ensure that the values that you use to construct your connection string do not contain additional connection string parameters that change the behavior of your connection.  
 >   
->  構成ファイル内の機密情報は、"保護された構成" 機能を使用して暗号化することを考慮してください。 詳細については、「[接続情報の保護](/dotnet/framework/data/adonet/protecting-connection-information)」を参照してください。  
+>  Consider using the Protected Configuration feature to encrypt sensitive information in the configuration file. See [Protecting Connection Information](/dotnet/framework/data/adonet/protecting-connection-information) for more information.  
   
 > [!NOTE]
->  クラス ライブラリには構成ファイル モデルが存在しないため、アプリケーション設定は、クラス ライブラリ プロジェクトでは使用できません。 ただし、Visual Studio Tools for Office DLL プロジェクトは例外で、構成ファイルを使用できます。  
+>  Because there is no configuration file model for class libraries, application settings do not apply for Class Library projects. The exception is a Visual Studio Tools for Office DLL project, which can have a configuration file.  
   
-## カスタマイズした設定ファイルの使用
-<a id="using-customized-settings-files" class="xliff"></a>  
- カスタマイズした設定ファイルをプロジェクトに追加すると、設定をグループ化して管理できます。 1 つのファイルに含まれている設定は、1 つの単位として読み込まれ、保存されます。 したがって、頻繁に使用するグループと頻繁に使用されないグループとでは、設定を別々のファイルに格納できると、設定の読み込みと保存にかかる時間が短縮されます。  
+## <a name="using-customized-settings-files"></a>Using Customized Settings Files  
+ You can add customized settings files to your project for convenient management of groups of settings. Settings that are contained in a single file are loaded and saved as a unit. Therefore, being able to store settings in separate files for frequently-used and infrequently-used groups can save time in loading and saving settings.  
   
- たとえば、SpecialSettings.settings という名前のファイルをプロジェクトに追加できます。 `SpecialSettings` クラスは `My` 名前空間に公開されませんが、 **[コードの表示]** では、 `Partial Class SpecialSettings`が格納されているカスタムの設定ファイルを読み込むことができます。  
+ For example, you can add a file such as SpecialSettings.settings to your project. While your `SpecialSettings` class is not exposed in the `My` namespace, **View Code** can read the custom settings file that contains `Partial Class SpecialSettings`.  
   
- 設定デザイナーでは、プロジェクト システムによって作成される Settings.settings ファイルがまず検索されます。これは、プロジェクト デザイナーによって **[設定]** タブに表示される既定のファイルです。 Settings.settings は [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクトでは My Project フォルダーに、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクトでは Properties フォルダーにあります。 プロジェクト デザイナーは、その次にプロジェクトのルート フォルダーで他の設定ファイルを検索します。 したがって、カスタム設定ファイルはここに置いておく必要があります。 プロジェクト内の他の場所に .settings ファイルを追加しても、プロジェクト デザイナーはそのファイルを見つけることができません。  
+ The Settings Designer first searches for the Settings.settings file that the project system creates; this is the default file that the Project Designer displays in the **Settings** tab. Settings.settings is located in the My Project folder for [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projects and in the Properties folder for [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projects. The Project Designer then searches for other settings files in the project's root folder. Therefore, you should put your custom settings file there. If you add a .settings file elsewhere in your project, the Project Designer will not be able to locate it.  
   
-## 実行時におけるアプリケーション設定へのアクセスまたは変更 (Visual Basic)
-<a id="accessing-or-changing-application-settings-at-run-time-in-visual-basic" class="xliff"></a>  
- [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクトでは、 `My.Settings` オブジェクトを使用することで、実行時にアプリケーション設定にアクセスできます。 **[設定]** ページの **[コードの表示]** ボタンをクリックして、Settings.vb ファイルを表示します。 Settings.vb は `Settings` クラスを定義し、<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>、<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>、<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>、<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> の各イベントを Settings クラスで処理できるようにします。 Settings.vb の `Settings` クラスは部分クラスであり、生成されたクラス全体ではなくユーザー所有コードだけが表示されることに注意してください。 `My.Settings` オブジェクトを使用したアプリケーション設定へのアクセスの詳細については、「[アプリケーション設定へのアクセス](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings)」を参照してください。  
+## <a name="accessing-or-changing-application-settings-at-run-time-in-visual-basic"></a>Accessing or Changing Application Settings at Run Time in Visual Basic  
+ In [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projects, you can access application settings at run time by using the `My.Settings` object. On the **Settings** page, click the **View code** button to view the Settings.vb file. Settings.vb defines the `Settings` class, which enables you to handle these events on the settings class: <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>, <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>, <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>, and <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>. Notice that the `Settings` class in Settings.vb is a partial class that displays only the user-owned code, not the whole generated class. For more information about accessing application settings by using the `My.Settings` object, see [Accessing Application Settings](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings).  
   
- ユーザーが実行時に変更するユーザー スコープ設定の値 (フォームの位置など) は、user.config ファイルに保存されます。 既定値は引き続き app.config に保存されていることに注意してください。  
+ The values of any user-scoped settings that the user changes at run time (for example, the position of a form) are stored in a user.config file. Notice that the default values are still saved in app.config.  
   
- アプリケーションのテストなど、実行時にユーザー スコープ設定を変更した後で設定を既定値にリセットする場合は、 **[同期]** をクリックします。  
+ If you have changed any user-scoped settings during run time, for example in testing the application, and want to reset these settings to their default values, click the **Synchronize** button.  
   
- 設定へのアクセスには、 `My.Settings` オブジェクトおよび既定の .settings ファイルを使用することを強くお勧めします。 これは、設定デザイナーを使用して、プロパティを設定に割り当てることができ、さらにアプリケーションのシャットダウン前にユーザー設定が自動的に保存されるためです。 ただし、 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] アプリケーションから設定に直接アクセスすることもできます。 その場合は、 `MySettings` クラスにアクセスし、プロジェクトのルートにあるカスタムの .settings ファイルを使用する必要があります。 また、C# アプリケーションと同様、アプリケーションを終了する前にユーザー設定を保存する必要があります。この方法については、次のセクションで説明します。  
+ We strongly recommend that you use the `My.Settings` object and the default .settings file to access settings. This is because you can use the Settings Designer to assign properties to settings, and, additionally, user settings are automatically saved before application shutdown. However, your [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] application can access settings directly. In that case you have to access the `MySettings` class and use a custom .settings file in the root of the project. You must also save the user settings before ending the application, as you would do for a C# application; this is described in the following section.  
   
-## 実行時におけるアプリケーション設定へのアクセスまたは変更 (Visual C#)
-<a id="accessing-or-changing-application-settings-at-run-time-in-visual-c" class="xliff"></a> #
- 次の [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]の例に示すように、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]などの `Settings` 以外の言語では、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] クラスに直接アクセスする必要があります。  
+## <a name="accessing-or-changing-application-settings-at-run-time-in-visual-c"></a>Accessing or Changing Application Settings at Run Time in Visual C# #
+ In languages other than [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], such as [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)], you must access the `Settings` class directly, as shown in the following [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] example.  
   
-```c#  
+```cs  
 Properties.Settings.Default.FirstUserSetting = "abc";  
 ```  
   
- ユーザー設定を保持するためには、このラッパー クラスの `Save` メソッドを明示的に呼び出す必要があります。 これは、通常、メイン フォームの `Closing` イベント ハンドラーで行います。 次の [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] の例では、`Save` メソッドの呼び出しを示します。  
+ You must also explicitly call the `Save` method of this wrapper class in order to persist the user settings. You usually do this in the `Closing` event handler of the main form. The following [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] example shows a call to the `Save` method.  
   
-```c#  
+```cs  
 Properties.Settings.Default.Save();  
 ```  
   
- `Settings` クラスを使用してアプリケーション設定にアクセスする方法の一般情報については、「[アプリケーション設定の概要](/dotnet/framework/winforms/advanced/application-settings-overview)」を参照してください。 設定の反復処理については、この [フォーラム ポスト](http://social.msdn.microsoft.com/Forums/vstudio/40fbb470-f1e8-4a02-a4a0-9f62b54d0fc4/is-this-possible-propertiessettingsdefault?forum=csharpgeneral)を参照してください。  
+ For general information about accessing application settings through the `Settings` class, see [Application Settings Overview](/dotnet/framework/winforms/advanced/application-settings-overview). For information about iterating through the settings, see this [forum post](http://social.msdn.microsoft.com/Forums/vstudio/40fbb470-f1e8-4a02-a4a0-9f62b54d0fc4/is-this-possible-propertiessettingsdefault?forum=csharpgeneral).  
   
-## 関連項目
-<a id="see-also" class="xliff"></a>  
- [アプリケーション設定へのアクセス](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings)
+## <a name="see-also"></a>See Also  
+ [Accessing Application Settings](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings)
 

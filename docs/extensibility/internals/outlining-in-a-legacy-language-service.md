@@ -1,55 +1,72 @@
 ---
-title: "従来の言語サービスでのアウトライン | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アウトライン"
-  - "アウトライン表示言語サービス [マネージ パッケージ framework]"
-  - "アウトライン、言語サービス [マネージ パッケージ フレームワーク] でのサポート"
+title: Outlining in a Legacy Language Service | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- outlining
+- language services [managed package framework], outlining
+- outlining, supporting in language services [managed package framework]
 ms.assetid: 7b5578b4-a20a-4b94-ad4c-98687ac133b9
 caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# 従来の言語サービスでのアウトライン
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e5cf0a9d11720022861231ba434e56050c664c64
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-アウトライン表示できるようになります、概要やアウトラインに複雑なプログラムを折りたたみます。 たとえば、C\# の場合は、すべてのメソッドをメソッド署名のみを示す 1 つの行に縮小ことができます。 さらに、構造体とクラスは、構造体とクラス名のみを表示するために折りたたむことができます。 1 つのメソッド内の複雑なロジックを折りたためるなどのステートメントの最初の行のみを表示することによって、全体的な流れを表示する `foreach`, 、`if`, 、および `while`です。  
+---
+# <a name="outlining-in-a-legacy-language-service"></a>Outlining in a Legacy Language Service
+Outlining makes it possible to collapse a complex program into an overview or outline. For example, in C# all methods can be collapsed to a single line, showing only the method signature. In addition, structures and classes can be collapsed to show only the names of the structures and classes. Inside a single method, complex logic can be collapsed to show the overall flow by showing only the first line of statements such as `foreach`, `if`, and `while`.  
   
- 従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は、MEF の拡張機能を使用します。 詳細については、次を参照してください。 [チュートリアル: アウトラインの中止\]](../../extensibility/walkthrough-outlining.md)します。  
+ Legacy language services are implemented as part of a VSPackage, but the newer way to implement language service features is to use MEF extensions. To find out more, see [Walkthrough: Outlining](../../extensibility/walkthrough-outlining.md).  
   
 > [!NOTE]
->  エディターを使用して、新しい API できるだけ早く始めることをお勧めします。 言語サービスのパフォーマンスを向上させる、エディターの新機能を活用できます。  
+>  We recommend that you begin to use the new editor API as soon as possible. This will improve the performance of your language service and let you take advantage of new editor features.  
   
-## アウトライン表示のサポートを有効にします。  
- `AutoOutlining` 自動アウトライン表示を有効にするレジストリ エントリが 1 に設定します。 ファイルが読み込まれるか非表示の領域を特定し、\[アウトラインの記号を表示するために変更をソース全体の解析を設定自動アウトライン表示します。 アウトライン表示制御することも手動でユーザーがいます。  
+## <a name="enabling-support-for-outlining"></a>Enabling Support for Outlining  
+ The `AutoOutlining` registry entry is set to 1 to enable automatic outlining. Automatic outlining sets up a parse of the whole source when a file is loaded or changed in order to identify hidden regions and show the outlining glyphs. Outlining can also be controlled manually by the user.  
   
- 値、 `AutoOutlining` でレジストリ エントリを取得できます、 <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> プロパティを <xref:Microsoft.VisualStudio.Package.LanguagePreferences> クラスです。`AutoOutlining` で名前付きパラメーターをレジストリ エントリを初期化すること、 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> 属性 \(を参照してください [言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md) 詳細\)。  
+ The value of the `AutoOutlining` registry entry can be obtained through the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> property on the <xref:Microsoft.VisualStudio.Package.LanguagePreferences> class. The `AutoOutlining` registry entry can be initialized with a named parameter to the <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> attribute (see [Registering a Legacy Language Service](../../extensibility/internals/registering-a-legacy-language-service1.md) for details).  
   
-## 非表示の領域  
- アウトラインを提供するには、言語サービスは非表示の領域をサポートする必要があります。 これらは、展開または折りたたまれているテキストの範囲です。 非表示の領域は、中かっこなどの標準言語記号またはカスタムの記号で区切ることができます。 たとえば、c\# では、 `#region`\/`#endregion` を非表示の領域を区切るペアです。  
+## <a name="the-hidden-region"></a>The Hidden Region  
+ To provide outlining, your language service must support hidden regions. These are spans of text that can be expanded or collapsed. Hidden regions can be delimited by standard language symbols, such as curly braces, or by custom symbols. For example, C# has a `#region`/`#endregion` pair that delimits a hidden region.  
   
- 非表示の領域として公開されている非表示の領域マネージャーによって管理されている、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> インターフェイスです。  
+ Hidden regions are managed by a hidden region manager, which is exposed as the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> interface.  
   
- アウトラインの非表示の領域を使用して、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegion> インターフェイスし、非表示の領域、現在の表示状態と期間が折りたたまれているときに表示されるバナーの範囲が含まれています。  
+ Outlining uses hidden regions the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegion> interface and contain the span of the hidden region, the current visible state, and the banner to be shown when the span is collapsed.  
   
- 言語サービス パーサーを使用して、 <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> メソッドを非表示の領域の既定の動作と新しい非表示の領域を追加するときに、 <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> メソッドでは、アウトラインの動作と外観をカスタマイズすることができます。 非表示の領域を非表示の領域のセッションに指定 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 言語サービスの非表示の領域を管理します。  
+ The language service parser uses the <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> method to add a new hidden region with the default behavior for hidden regions, while the <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> method allows you to customize the appearance and behavior of the outline. Once hidden regions are given to the hidden region session, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] manages the hidden regions for the language service.  
   
- 非表示の領域を変更すると、非表示の領域のセッションを破棄するかを決める必要がある場合、または特定の非表示の領域が表示されるかどうかを確認する必要があります。クラスを派生する必要があります、 <xref:Microsoft.VisualStudio.Package.Source> クラスし、適切なメソッドをオーバーライド <xref:Microsoft.VisualStudio.Package.Source.OnBeforeSessionEnd%2A>, 、<xref:Microsoft.VisualStudio.Package.Source.OnHiddenRegionChange%2A>, 、および <xref:Microsoft.VisualStudio.Package.Source.MakeBaseSpanVisible%2A>, 、それぞれします。  
+ If you need to determine when the hidden region session is destroyed, a hidden region is changed, or you need to make sure a particular hidden region is visible; you must derive a class from the <xref:Microsoft.VisualStudio.Package.Source> class and override the appropriate methods, <xref:Microsoft.VisualStudio.Package.Source.OnBeforeSessionEnd%2A>, <xref:Microsoft.VisualStudio.Package.Source.OnHiddenRegionChange%2A>, and <xref:Microsoft.VisualStudio.Package.Source.MakeBaseSpanVisible%2A>, respectively.  
   
-### 例  
- 中かっこのペアはすべての非表示の領域を作成する簡単な例を次に示します。 想定され、言語に中かっこの一致が用意されていると照合するために中かっこが含まれている、少なくとも、中かっこには \({および}\)。 この方法は、説明のためには。 内のケースの完全な処理を完全に実装が必要があります <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>します。 この例では、設定する方法も示しています、 <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> を優先する `true` 一時的にします。 代わりを指定し、 `AutoOutlining` 名前付きパラメーター、 `ProvideLanguageServiceAttribute` 言語パッケージ内の属性です。  
+### <a name="example"></a>Example  
+ Here is a simplified example of creating hidden regions for all pairs of curly braces. It is assumed that the language provides brace matching, and that the braces to be matched include at least the curly braces ({ and }). This approach is for illustrative purposes only. A full implementation would have a complete handling of cases in <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>. This example also shows how to set the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> preference to `true` temporarily. An alternative is to specify the `AutoOutlining` named parameter in the `ProvideLanguageServiceAttribute` attribute in your language package.  
   
- この例では、c\# のコメント、文字列、およびリテラルの規則を使用します。  
+ This example assumes C# rules for comments, strings, and literals.  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -118,6 +135,6 @@ namespace MyLanguagePackage
 }  
 ```  
   
-## 参照  
- [従来の言語サービスの機能](../../extensibility/internals/legacy-language-service-features1.md)   
- [言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md)
+## <a name="see-also"></a>See Also  
+ [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md)   
+ [Registering a Legacy Language Service](../../extensibility/internals/registering-a-legacy-language-service1.md)

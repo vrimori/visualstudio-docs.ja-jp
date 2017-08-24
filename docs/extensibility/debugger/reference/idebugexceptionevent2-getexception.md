@@ -1,5 +1,5 @@
 ---
-title: "IDebugExceptionEvent2::GetException |Microsoft ドキュメント"
+title: IDebugExceptionEvent2::GetException | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ff936ca2da3025cd7ff8a7117f0227cd343b152e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 717e5b46c7102ade1ab7ffbb2db618482e3a6f67
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
-このイベントを発生させた例外の詳細な説明を取得します。  
+Gets a detailed description of the exception that fired this event.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetException(   
@@ -47,23 +48,23 @@ HRESULT GetException(
 );  
 ```  
   
-```c#  
+```cs  
 int GetException(   
    EXCEPTION_INFO[] pExceptionInfo  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pExceptionInfo`  
- [入力、出力][EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)例外の説明が入力構造体。  
+ [in, out] An [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure that is filled in with the description of the exception.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- [C++ のみ]内の任意の文字列を解放するため、呼び出し元が、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)を解放するだけでなく構造体、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)構造内のオブジェクト。  
+## <a name="remarks"></a>Remarks  
+ [C++ only] The caller is responsible for freeing any strings in the [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure as well as releasing the [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object in the structure.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   
  [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   

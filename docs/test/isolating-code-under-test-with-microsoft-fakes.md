@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Fakes を使用したテストでのコードの分離 | Microsoft Docs"
+title: Isolating Code Under Test with Microsoft Fakes | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,82 +26,82 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 3941968fa0e2e6205c94076f555c8366f009d4c0
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 934e3b35f095f949ad11ef73e4365169d1c3e2c3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="isolating-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes を使用したテストでのコードの分離
-Microsoft Fakes では、アプリケーションの別の部分を*スタブ*または *shim* で置き換えることにより、テストするコードを分離できます。 これらは、テストの制御下にある小さいコードです。 テストのコードを分離することにより、テストが失敗した場合に、原因が別の場所ではなくそこにあることを確認できます。 また、アプリケーションの別の部分がまだ機能していない場合でも、スタブと shim を使用すると、コードをテストできます。  
+# <a name="isolating-code-under-test-with-microsoft-fakes"></a>Isolating Code Under Test with Microsoft Fakes
+Microsoft Fakes help you isolate the code you are testing by replacing other parts of the application with *stubs* or *shims*. These are small pieces of code that are under the control of your tests. By isolating your code for testing, you know that if the test fails, the cause is there and not somewhere else. Stubs and shims also let you test your code even if other parts of your application are not working yet.  
   
- Fakes には 2 種類のフレーバーがあります。  
+ Fakes come in two flavors:  
   
--   [スタブ](#stubs)は、クラスを同じインターフェイスを実装する小さな代用に置き換えます。  スタブを使用するには、各コンポーネントがインターフェイスのみに依存し、その他のコンポーネントには依存しないようにアプリケーションを設計する必要があります  ("コンポーネント" とは、1 つのクラス、または一緒に設計され更新される複数のクラスで、通常は 1 つのアセンブリに格納されるもののことです)。  
+-   A [stub](#stubs) replaces a class with a small substitute that implements the same interface.  To use stubs, you have to design your application so that each component depends only on interfaces, and not on other components. (By "component" we mean a class or group of classes that are designed and updated together and typically contained in an assembly.)  
   
--   [shim](#shims) は、アプリケーションのコンパイル済みコードを実行時に変更します。これにより、指定されたメソッド呼び出しを実行する代わりに、テストで提供される shim コードが実行されるようになります。 Shim を使用すると、.NET アセンブリなど、変更できないアセンブリの呼び出しを置き換えることができます。  
+-   A [shim](#shims) modifies the compiled code of your application at run time so that instead of making a specified method call, it runs the shim code that your test provides. Shims can be used to replace calls to assemblies that you cannot modify, such .NET assemblies.  
   
- ![他のコンポーネントに置き換わる Fakes](../test/media/fakes-2.png "Fakes-2")  
+ ![Fakes replace other components](../test/media/fakes-2.png "Fakes-2")  
   
  **Requirements**  
   
 -   Visual Studio Enterprise  
   
-## <a name="choosing-between-stub-and-shim-types"></a>スタブ型と shim 型から選択する  
- 通常、Visual Studio プロジェクトはコンポーネントと見なされますが、それは、これらのクラスを同時に開発および更新するためです。 プロジェクトがソリューション内の別のプロジェクトに対して実行する呼び出し、またはプロジェクトが参照する別のアセンブリに対して実行する呼び出しにスタブと shim を使用することを検討します。  
+## <a name="choosing-between-stub-and-shim-types"></a>Choosing between stub and shim types  
+ Typically, you would consider a Visual Studio project to be a component, because you develop and update those classes at the same time. You would consider using stubs and shims for calls that the project makes to other projects in your solution, or to other assemblies that the project references.  
   
- 一般的なガイドラインとして、Visual Studio ソリューション内の呼び出しにはスタブを使用し、その他の参照先アセンブリの呼び出しには shim を使用します。 これは、独自のソリューション内では、スタブする際に必要な方法でインターフェイスを定義することによってコンポーネントを分離することが適切な方法であるためです。 ただし、一般的には System.dll などの外部アセンブリは分離されたインターフェイス定義を伴わないので、代わりに shim を使用する必要があります。  
+ As a general guide, use stubs for calls within your Visual Studio solution, and shims for calls to other referenced assemblies. This is because within your own solution it is good practice to decouple the components by defining interfaces in the way that stubbing requires. But external assemblies such as System.dll typically are not provided with separate interface definitions, so you must use shims instead.  
   
- その他の考慮事項:  
+ Other considerations are:  
   
- **パフォーマンス。** shim の場合は実行時にコードを書き直すので、処理速度が遅くなります。 スタブの場合はこのようなパフォーマンス オーバーヘッドがないので、仮想メソッドの場合と同じように高速です。  
+ **Performance.** Shims run slower because they rewrite your code at run time. Stubs do not have this performance overhead and are as fast as virtual methods can go.  
   
- **静的メソッド、sealed 型。** スタブを使用できるのは、インターフェイスを実装する場合のみです。 したがって、静的メソッド、仮想でないメソッド、シールされた仮想メソッド、sealed 型のメソッドなどにはスタブ型を使用できません。  
+ **Static methods, sealed types.** You can only use stubs to implement interfaces. Therefore, stub types cannot be used for static methods, non-virtual methods, sealed virtual methods, methods in sealed types, and so on.  
   
- **内部型。** スタブと shim はいずれも、アセンブリ属性 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> を使用することでアクセス可能になる内部型に使用できます。  
+ **Internal types.** Both stubs and shims can be used with internal types that are made accessible by using the assembly attribute <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.  
   
- **プライベート メソッド。** メソッド シグネチャですべての型が参照可能な場合、Shim はプライベート メソッドの呼び出しを置き換えることができます。 スタブは、参照可能なメソッドのみを置き換えることができます。  
+ **Private methods.** Shims can replace calls to private methods if all the types on the method signature are visible. Stubs can only replace visible methods.  
   
- **インターフェイスと抽象メソッド。** スタブは、テストに使用できるインターフェイスおよび抽象メソッドの実装を可能にします。 Shim の場合は、メソッド本体がないため、インターフェイスおよび抽象メソッドをインストルメント化することができません。  
+ **Interfaces and abstract methods.** Stubs provide implementations of interfaces and abstract methods that can be used in testing. Shims can't instrument interfaces and abstract methods, because they don't have method bodies.  
   
- 一般に、コードベース内の依存関係から分離するためにスタブ型を使用することをお勧めします。 これを行うには、インターフェイスの背後にあるコンポーネントを非表示にします。 Shim 型は、テスト可能な API を提供しないサードパーティのコンポーネントから分離する場合に使用できます。  
+ In general, we recommend that you use stub types to isolate from dependencies within your codebase. You can do this by hiding the components behind interfaces. Shim types can be used to isolate from third-party components that do not provide a testable API.  
   
-##  <a name="stubs"></a>スタブの概要  
- より詳細な説明については、「[スタブを使用して単体テストでアプリケーションの各部分を相互に分離する](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)」を参照してください。  
+##  <a name="stubs"></a> Getting started with stubs  
+ For a more detailed description, see [Using stubs to isolate parts of your application from each other for unit testing](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).  
   
-1.  **インターフェイスの挿入**  
+1.  **Inject interfaces**  
   
-     スタブを使用するには、アプリケーションの別のコンポーネントのクラスを明示的に示すことがないように、テストするコードを記述する必要があります。 "コンポーネント" とは、1 つのクラス、または一緒に設計され更新される複数のクラスで、通常は 1 つの Visual Studio コンポーネントに格納されるもののことです。 変数とパラメーターは、インターフェイスを使用して宣言される必要があります。別のコンポーネントのインスタンスは、渡されるかファクトリを使用して作成される必要があります。 たとえば、StockFeed がアプリケーションの別のコンポーネントのクラスである場合、これは不適切であると見なされます。  
+     To use stubs, you have to write the code you want to test in such a way that it does not explicitly mention classes in another component of your application. By "component" we mean a class or classes that are developed and updated together, and typically contained in one Visual Studio project. Variables and parameters should be declared by using interfaces and instances of other components should be passed in or created by using a factory. For example, if StockFeed is a class in another component of the application, then this would be considered bad:  
   
      `return (new StockFeed()).GetSharePrice("COOO"); // Bad`  
   
-     代わりに、別のコンポーネントによる実装が可能で、テスト目的でスタブによる実装も可能なインターフェイスを定義します。  
+     Instead, define an interface that can be implemented by the other component, and which can also be implemented by a stub for test purposes:  
   
-    ```c#  
+    ```cs  
     public int GetContosoPrice(IStockFeed feed)  
     { return feed.GetSharePrice("COOO"); }  
   
     ```  
   
-    ```vb#  
+    ```vb  
     Public Function GetContosoPrice(feed As IStockFeed) As Integer  
      Return feed.GetSharePrice("COOO")  
     End Function  
   
     ```  
   
-2.  **Fakes アセンブリの追加**  
+2.  **Add Fakes Assembly**  
   
-    1.  ソリューション エクスプローラーで、テスト プロジェクトの参照一覧を展開します。 Visual Basic で作業している場合、参照一覧を表示するには、**[すべてのファイルを表示]** を選択する必要があります。  
+    1.  In Solution Explorer, expand the test project's reference list. If you are working in Visual Basic, you must choose **Show All Files** in order to see the reference list.  
   
-    2.  インターフェイス (たとえば IStockFeed) が定義されているアセンブリへの参照を選択します。 この参照のショートカット メニューで、**[Fakes アセンブリに追加]** をクリックします。  
+    2.  Select the reference to the assembly in which the interface (for example IStockFeed) is defined. On the shortcut menu of this reference, choose **Add Fakes Assembly**.  
   
-    3.  ソリューションをリビルドします。  
+    3.  Rebuild the solution.  
   
-3.  テストで、スタブのインスタンスを構築し、そのメソッドのためのコードを指定します。  
+3.  In your tests, construct instances of the stub and provide code for its methods:  
   
-    ```c#  
+    ```cs  
     [TestClass]  
     class TestStockAnalyzer  
     {  
@@ -132,7 +132,7 @@ Microsoft Fakes では、アプリケーションの別の部分を*スタブ*�
     }  
     ```  
   
-    ```vb#  
+    ```vb  
     <TestClass()> _  
     Class TestStockAnalyzer  
   
@@ -157,16 +157,16 @@ Microsoft Fakes では、アプリケーションの別の部分を*スタブ*�
   
     ```  
   
-     ここでの特殊なマジックは、`StubIStockFeed` クラスです。 参照アセンブリのそれぞれのインターフェイスに対して、Microsoft Fakes のメカニズムによってスタブ クラスが生成されます。 スタブ クラスの名前はインターフェイスの名前から派生します。プレフィックスとして `Fakes.Stub` が付き、パラメーターの型名が加わります。  
+     The special piece of magic here is the class `StubIStockFeed`. For every interface in the referenced assembly, the Microsoft Fakes mechanism generates a stub class. The name of the stub class is the derived from the name of the interface, with "`Fakes.Stub`" as a prefix, and the parameter type names appended.  
   
-     また、イベントおよびジェネリック メソッドについて、プロパティの getter および setter に対してもスタブが生成されます。 詳細については、「[スタブを使用して単体テストでアプリケーションの各部分を相互に分離する](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)」を参照してください。  
+     Stubs are also generated for the getters and setters of properties, for events, and for generic methods. For more information, see [Using stubs to isolate parts of your application from each other for unit testing](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).  
   
-##  <a name="shims"></a>shim の概要  
- (より詳細な説明については、「[shim を使用して単体テストでアプリケーションを他のアセンブリから分離する](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)」を参照してください。)  
+##  <a name="shims"></a> Getting started with shims  
+ (For a more detailed description, see [Using shims to isolate your application from other assemblies for unit testing](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).)  
   
- コンポーネントに `DateTime.Now` の呼び出しが含まれているとします。  
+ Suppose your component contains calls to `DateTime.Now`:  
   
-```c#  
+```cs  
 // Code under test:  
     public int GetTheCurrentYear()  
     {  
@@ -175,19 +175,19 @@ Microsoft Fakes では、アプリケーションの別の部分を*スタブ*�
   
 ```  
   
- テストの実行中、実際のバージョンでは不都合なことにそれぞれの呼び出しで異なる値が返されるため、`Now` プロパティに shim を使用します。  
+ During testing, you would like to shim the `Now` property, because the real version inconveniently returns a different value at every call.  
   
- shim を使用するためにアプリケーション コードを変更したり、特定の方法を記述したりする必要はありません。  
+ To use shims, you don't have to modify the application code or write it a particular way.  
   
-1.  **Fakes アセンブリの追加**  
+1.  **Add Fakes Assembly**  
   
-     ソリューション エクスプローラーで、単体テスト プロジェクトの参照を開き、偽装の対象となるメソッドが格納されているアセンブリへの参照を選択します。 この例では、`DateTime` クラスが **System.dll** にあります。  Visual Basic プロジェクトの参照を確認するには、**[すべてのファイルを表示]** を選択します。  
+     In Solution Explorer, open your unit test project's references and select the reference to the assembly that contains the method you want to fake. In this example, the `DateTime` class is in **System.dll**.  To see the references in a Visual Basic project, choose **Show All Files**.  
   
-     **[Fakes アセンブリに追加]** をクリックします。  
+     Choose **Add Fakes Assembly**.  
   
-2.  **ShimsContext に shim を挿入する**  
+2.  **Insert a shim in a ShimsContext**  
   
-    ```c#  
+    ```cs  
     [TestClass]  
     public class TestClass1  
     {   
@@ -220,7 +220,7 @@ Microsoft Fakes では、アプリケーションの別の部分を*スタブ*�
   
     ```  
   
-    ```vb#  
+    ```vb  
     <TestClass()> _  
     Public Class TestClass1  
         <TestMethod()> _  
@@ -246,22 +246,22 @@ Microsoft Fakes では、アプリケーションの別の部分を*スタブ*�
     End Class  
     ```  
   
-     Shim クラスの名前は、元の型名の先頭に `Fakes.Shim` を付けることで構成されます。 パラメーター名がメソッド名に追加されます  (System.Fakes へのアセンブリ参照を追加する必要はありません)。  
+     Shim class names are made up by prefixing `Fakes.Shim` to the original type name. Parameter names are appended to the method name. (You don't have to add any assembly reference to System.Fakes.)  
   
- 前の例では、静的メソッドに shim を使用しています。 インスタンス メソッドに shim を使用する場合は、型名とメソッド名の間に `AllInstances` を記述します。  
+ The previous example uses a shim for a static method. To use a shim for an instance method, write `AllInstances` between the type name and the method name:  
   
 ```  
 System.IO.Fakes.ShimFile.AllInstances.ReadToEnd = ...  
 ```  
   
- 参照する 'System.IO.Fakes' アセンブリがありません。 名前空間は、shim の作成プロセスによって生成されます。 ただし、通常どおり、'using' または 'Import' を使用できます。  
+ (There is no 'System.IO.Fakes' assembly to reference. The namespace is generated by the shim creation process. But you can use 'using' or 'Import' in the usual way.)  
   
- また、特定のインスタンス、コンストラクター、およびプロパティに shim を作成することもできます。 詳細については、「[shim を使用して単体テストでアプリケーションを他のアセンブリから分離する](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)」を参照してください。  
+ You can also create shims for specific instances, for constructors, and for properties. For more information, see [Using shims to isolate your application from other assemblies for unit testing](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).  
   
-## <a name="in-this-section"></a>このセクションの内容  
- [スタブを使用して単体テストでアプリケーションの各部分を相互に分離する](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)  
+## <a name="in-this-section"></a>In this section  
+ [Using stubs to isolate parts of your application from each other for unit testing](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)  
   
- [shim を使用して単体テストでアプリケーションを他のアセンブリから分離する](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)  
+ [Using shims to isolate your application from other assemblies for unit testing](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)  
   
- [Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則](../test/code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md)
+ [Code generation, compilation, and naming conventions in Microsoft Fakes](../test/code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md)
 

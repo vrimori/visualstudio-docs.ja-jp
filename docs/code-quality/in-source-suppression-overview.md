@@ -1,126 +1,142 @@
 ---
-title: "ソース内抑制の概要 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ソースの抑制, コード分析"
-  - "コード分析, ソースの抑制"
+title: In Source Suppression Overview | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- source suppression, code analysis
+- code analysis, source suppression
 ms.assetid: f1a2dc6a-a9eb-408c-9078-2571e57d207d
 caps.latest.revision: 40
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 40
----
-# ソース内抑制の概要
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6b3ce7761c6a7bee5c0b4270b7784f67fe60080f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-ソース内抑制とは、違反の原因になっているコード セグメントに **SuppressMessage** 属性を追加して、マネージ コードでコード分析における規則違反を抑制または無視する機能です。  **SuppressMessage** 属性は条件属性であり、コンパイル時にコンパイル シンボル CODE\_ANALYSIS を定義した場合のみマネージ コード アセンブリの IL メタデータに含められます。  
+---
+# <a name="in-source-suppression-overview"></a>In Source Suppression Overview
+In-source suppression is the ability to suppress or ignore Code Analysis violations in managed code by adding the **SuppressMessage** attribute to the code segments that cause the violations. The **SuppressMessage** attribute is a conditional attribute which is included in the IL metadata of your managed code assembly only if the CODE_ANALYSIS compilation symbol is defined at compile time.  
   
- C\+\+\/CLI では、属性を追加するには、ヘッダー ファイルで CA\_SUPPRESS\_MESSAGE マクロまたは CA\_GLOBAL\_SUPPRESS\_MESSAGE マクロを使用します。  
+ In C++/CLI, use the macros CA_SUPPRESS_MESSAGE or CA_GLOBAL_SUPPRESS_MESSAGE in the header file,  to add the attribute .  
   
- ソース内抑制のメタデータが誤って出荷されることがないように、リリース ビルドではソース内抑制を使わないようにしてください。  ソース内抑制の処理負荷のため、ソース内抑制のメタデータを含めるとアプリケーションのパフォーマンスが低下する可能性もあります。  
+ You should not use in-source suppressions on release builds to prevent shipping the in-source suppression metadata accidentally. Because of the processing cost of in-source suppression, the performance of your application can also be degraded by including the in-source suppression metadata.  
   
 > [!NOTE]
->  これらの属性をハンド コードする必要はありません。  詳細については、「[方法: メニュー項目を使用して警告を抑制する](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)」を参照してください。  C\+\+ コードではメニュー項目を使用できません。  
+>  You do not have to hand code these attributes yourself. For more information, see [How to: Suppress Warnings by Using the Menu Item](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md). The menu item is not available for C++ code.  
   
-## SuppressMessage 属性  
- **\[エラー一覧\]** でコード分析の警告を右クリックし、**\[メッセージの非表示\]** をクリックすると、コードまたはプロジェクトのグローバル抑制ファイルに **SuppressMessage** 属性が追加されます。  
+## <a name="suppressmessage-attribute"></a>SuppressMessage Attribute  
+ When you right-click a Code Analysis warning in the **Error List** and then click **Suppress Message(s)**, a **SuppressMessage** attribute is added either in your code or to the project's global suppressions file.  
   
- **SuppressMessage** 属性は次の形式で定義します。  
+ The **SuppressMessage** attribute has the following format:  
   
 ```vb  
 <Scope:SuppressMessage("Rule Category", "Rule Id", Justification = "Justification", MessageId = "MessageId", Scope = "Scope", Target = "Target")>  
 ```  
   
-```c#  
+```cs  
 [Scope:SuppressMessage("Rule Category", "Rule Id", Justification = "Justification", MessageId = "MessageId", Scope = "Scope", Target = "Target")]  
   
 ```  
   
- \[C\+\+\]  
+ [C++]  
   
 ```  
 CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification", MessageId = "MessageId", Scope = "Scope", Target = "Target")  
   
 ```  
   
- 指定項目:  
+ Where:  
   
--   **Rule Category** \- 規則を定義するカテゴリ。  コード分析規則のカテゴリの詳細については、「[マネージ コードの警告に対応するコードの解析](../code-quality/code-analysis-for-managed-code-warnings.md)」を参照してください。  
+-   **Rule Category** - The category in which the rule is defined. For more information about code analysis rule categories, see [Code Analysis for Managed Code Warnings](../code-quality/code-analysis-for-managed-code-warnings.md).  
   
--   **Rule Id** \- 規則の識別子。  規則識別子の短い名前と長い名前の両方を使用できます。  短い名前は CAXXXX で、長い名前は CAXXXX:FriendlyTypeName です。  
+-   **Rule Id** - The identifier of the rule. Support includes both a short and long name for the rule identifier. The short name is CAXXXX; the long name is CAXXXX:FriendlyTypeName.  
   
--   **Justification** \- メッセージを抑制する理由を説明するテキスト。  
+-   **Justification** - The text that is used to document the reason for suppressing the message.  
   
--   **Message Id** \- 各メッセージが報告する問題の一意の識別子。  
+-   **Message Id** - Unique identifier of a problem for each message.  
   
--   **Scope** \- 警告を抑制する対象。  Target が指定されなかった場合、Scope が属性の対象に設定されます。  次のスコープがサポートされます。  
+-   **Scope** - The target on which the warning is being suppressed. If the target is not specified, it is set to the target of the attribute. Supported scopes include the following:  
   
-    -   モジュール  
+    -   Module  
   
-    -   名前空間  
+    -   Namespace  
   
-    -   リソース  
+    -   Resource  
   
-    -   型  
+    -   Type  
   
-    -   メンバー  
+    -   Member  
   
--   **Target** \- 警告を抑制する対象を指定するための識別子。  この識別子には完全修飾項目名を使用する必要があります。  
+-   **Target** - An identifier that is used to specify the target on which the warning is being suppressed. It must contain a fully-qualified item name.  
   
-## SuppressMessage の使用方法  
- コード分析の警告は、**SuppressMessage**  属性のインスタンスが適用されるレベルで抑制されます。  これは、抑制情報を違反が発生するコードに密に結合するためです。  
+## <a name="suppressmessage-usage"></a>SuppressMessage Usage  
+ Code Analysis warnings are suppressed at the level to which an instance of the **SuppressMessage** attribute is applied. The purpose of this is to tightly couple the suppression information to the code where the violation occurs.  
   
- 抑制属性を指定する際、一般には、規則カテゴリと規則識別子 \(オプションで規則の名称を指定することも可能\) が使用されます。  次に例を示します。  
+ The general form of suppression includes the rule category and a rule identifier which contains an optional human-readable representation of the rule name. For example,  
   
  `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`  
   
- パフォーマンス上の要件が厳しく、ソース内抑制のメタデータを可能な限り小さくする必要がある場合は、規則の名前を省略することができます。  規則を一意に識別するには、規則カテゴリと規則 ID だけで十分です。  次に例を示します。  
+ If there are strict performance reasons for minimizing in-source suppression metadata, the rule name itself can be left out. The rule category and its rule ID together constitute a sufficiently unique rule identifier. For example,  
   
  `[SuppressMessage("Microsoft.Design", "CA1039")]`  
   
- この形式は、保守性の点でお勧めできません。  
+ This format is not recommended because of maintainability issues.  
   
-## メソッド本体内の複数の違反を抑制する方法  
- 属性をメソッドに対して適用することはできますが、メソッド本体に埋め込むことはできません。  ただし、識別子をメッセージ ID として指定すると、1 つのメソッドにおける同じ違反の複数の出現を識別できます。  
+## <a name="suppressing-multiple-violations-within-a-method-body"></a>Suppressing Multiple Violations within a method body  
+ Attributes can only be applied to a method and cannot be embedded within the method body. However, you can specify the identifier as the message ID to distinguish multiple occurrences of a violation within a method.  
   
- [!code-cpp[InSourceSuppression#1](../code-quality/codesnippet/CPP/in-source-suppression-overview_1.cpp)]
- [!code-vb[InSourceSuppression#1](../code-quality/codesnippet/VisualBasic/in-source-suppression-overview_1.vb)]
- [!code-cs[InSourceSuppression#1](../code-quality/codesnippet/CSharp/in-source-suppression-overview_1.cs)]  
+ [!code-cpp[InSourceSuppression#1](../code-quality/codesnippet/CPP/in-source-suppression-overview_1.cpp)] [!code-vb[InSourceSuppression#1](../code-quality/codesnippet/VisualBasic/in-source-suppression-overview_1.vb)] [!code-cs[InSourceSuppression#1](../code-quality/codesnippet/CSharp/in-source-suppression-overview_1.cs)]  
   
-## 生成されたコード  
- マネージ コード コンパイラや一部のサードパーティ製ツールは、迅速なコード開発を目的とするコードを生成します。  ソース ファイルに含まれるコンパイラ生成のコードは、通常、**GeneratedCodeAttribute** 属性でマークされます。  
+## <a name="generated-code"></a>Generated Code  
+ Managed code compilers and some third-party tools generate code to facilitate rapid code development. Compiler-generated code that appears in source files is usually marked with the **GeneratedCodeAttribute** attribute.  
   
- 生成されたコードのコード分析の警告とエラーを抑制するかどうかを指定できます。  このような警告やエラーを抑制する方法については、「[方法: 生成されたコードに対する警告を抑制する](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md)」を参照してください。  
+ You can choose whether to suppress Code Analysis warnings and errors for generated code. For information about how to suppress such warnings and errors, see [How to: Suppress Warnings for Generated Code](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md).  
   
- アセンブリ全体または 1 つのパラメーターに適用された **GeneratedCodeAttribute** 属性は、コード分析では無視されます。  このような状況はほとんど発生しません。  
+ Note that Code Analysis ignores **GeneratedCodeAttribute** when it is applied to either an entire assembly or a single parameter. These situations occur rarely.  
   
-## グローバル レベルの抑制  
- マネージ コード分析ツールは、アセンブリ、モジュール、型、メンバー、パラメーターの各レベルで適用された **SuppressMessage** 属性を調べます。  リソースおよび名前空間に対しても違反が検出されます。  これらの違反については、グローバル レベルで適用し、スコープと対象を指定する必要があります。  たとえば、次のメッセージでは、名前空間の違反が抑制されます。  
+## <a name="global-level-suppressions"></a>Global-Level Suppressions  
+ The managed code analysis tool examines **SuppressMessage** attributes that are applied at the assembly, module, type, member, or parameter level. It also fires violations against resources and namespaces. These violations must be applied at the global level and are scoped and targeted. For example, the following message suppresses a namespace violation:  
   
  `[module: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "MyNamespace")]`  
   
 > [!NOTE]
->  名前空間をスコープとして警告を抑制すると、名前空間それ自体に対する警告が抑制されます。  名前空間に含まれる型に対する警告は抑制されません。  
+>  When you suppress a warning with namespace scope, it suppresses the warning against the namespace itself. It does not suppress the warning against types within the namespace.  
   
- 明示的にスコープを指定することにより、あらゆる違反を抑制できます。  このような抑制はグローバル レベルで指定されている必要があります。  型を修飾することによってメンバー レベルの抑制を指定することはできません。  
+ Any suppression can be expressed by specifying an explicit scope. These suppressions must live at the global level. You cannot specify member-level suppression by decorating a type.  
   
- コンパイラによって生成されたコードなど、明示的に指定されたユーザー ソースとの対応関係を持たないコードを参照するメッセージについては、必ずグローバル レベルの抑制を使用します。  たとえば、次のコードはコンパイラによって生成されたコンストラクターに対する違反を抑制します。  
+ Global-level suppressions are the only way to suppress messages that refer to compiler-generated code that does not map to explicitly provided user source. For example, the following code suppresses a violation against a compiler-emitted constructor:  
   
  `[module: SuppressMessage("Microsoft.Design", "CA1055:AbstractTypesDoNotHavePublicConstructors", Scope="member", Target="Microsoft.Tools.FxCop.Type..ctor()")]`  
   
 > [!NOTE]
->  Target には、常に完全修飾項目名を指定します。  
+>  Target always contains the fully-qualified item name.  
   
-## グローバル抑制ファイル  
- グローバル抑制ファイルには、グローバル レベルの違反または対象が指定されていない違反が保存されます。  たとえば、アセンブリ レベルの違反に対する抑制は、このファイルに格納されます。  また、ASP.NET に関して抑制する一部の警告もこのファイルに格納されます。フォームのコードからプロジェクト レベルの設定にアクセスすることはできないためです。  \[エラー一覧\] ウィンドウで **\[メッセージの非表示\]** コマンドの **\[プロジェクト抑制ファイル内\]** オプションを初めて選択すると、グローバル抑制が作成されてプロジェクトに追加されます。  詳細については、「[方法: メニュー項目を使用して警告を抑制する](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md)」を参照してください。  
+## <a name="global-suppression-file"></a>Global Suppression File  
+ The global suppression file maintains suppressions that are either global-level suppressions or suppressions that do not specify a target. For example, suppressions for assembly level violations are stored in this file. Additionally, some ASP.NET suppressions are stored in this file because project level settings are not available for code behind a form. A global suppression is created and added to your project the first time that you select the **In Project Suppression File** option of the **Suppress Message(s)** command in the Error List window. For more information, see [How to: Suppress Warnings by Using the Menu Item](../code-quality/how-to-suppress-warnings-by-using-the-menu-item.md).  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  <xref:System.Diagnostics.CodeAnalysis>

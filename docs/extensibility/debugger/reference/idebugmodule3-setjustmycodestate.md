@@ -1,5 +1,5 @@
 ---
-title: "IDebugModule3::SetJustMyCodeState |Microsoft ドキュメント"
+title: IDebugModule3::SetJustMyCodeState | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4fd680371b20b12e3e8ed5a1c8991eb35a1cb51f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d6c12c6bbbeed1228d36fb40acfcb7b8b6ab69e2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugmodule3setjustmycodestate"></a>IDebugModule3::SetJustMyCodeState
-ユーザー コードとみなすかモジュールをマークします。  
+Marks the module as being user code or not.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT SetJustMyCodeState(  
@@ -47,18 +48,18 @@ HRESULT SetJustMyCodeState(
 );  
 ```  
   
-```c#  
+```cs  
 int SetJustMyCodeState(  
    int fIsUserCode  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `fIsUserCode`  
- [in]0 以外の値 (`TRUE`) 場合は、モジュールには、ユーザー コードを考慮する必要があります、ゼロ (`FALSE`) してはいけない場合。  
+ [in] Nonzero (`TRUE`) if the module should be considered user code, zero (`FALSE`) if it should not.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns error code.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

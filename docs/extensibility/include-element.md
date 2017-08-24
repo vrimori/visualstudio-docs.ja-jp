@@ -1,62 +1,79 @@
 ---
-title: "要素が含まれます | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Include"
-helpviewer_keywords: 
-  - "Include 要素 (VSCT XML スキーマ)"
-  - "VSCT XML スキーマ要素を含める"
+title: Include Element | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Include
+helpviewer_keywords:
+- Include element (VSCT XML schema)
+- VSCT XML schema elements, Include
 ms.assetid: c923dfe6-084a-4105-aec1-f0a3f8399c54
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 要素が含まれます
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 92af4aa2802558fba71fe3b088ea76fee3d58f0d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-Include 要素に存在するファイルの指定に、指定された現在のファイルに挿入するためのパスを含めます。  すべてのシンボルと定義されている型はコンパイルの結果の一部になります。  
+---
+# <a name="include-element"></a>Include Element
+The Include element specifies a file that can be located on the supplied include path for insertion into the current file.  All symbols and types defined will become part of the compiled result.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```c#  
+```cs  
 <Include href="stdidcmd.h" />  
 ```  
   
-## 属性および要素  
- 以降のセクションでは、属性、子要素、および親要素について説明します。  
+## <a name="attributes-and-elements"></a>Attributes and Elements  
+ The following sections describe attributes, child elements, and parent elements.  
   
-### 属性  
+### <a name="attributes"></a>Attributes  
   
-|属性|説明|  
-|--------|--------|  
-|href|必須です。 ヘッダー ファイルのパス:<br /><br /> href\="stdidcmd.h"|  
-|状態|省略可能です。 「[条件付きの属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|  
+|Attribute|Description|  
+|---------------|-----------------|  
+|href|Required. The path to the header file:<br /><br /> href="stdidcmd.h"|  
+|Condition|Optional. See [Conditional Attributes](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
-### 子要素  
+### <a name="child-elements"></a>Child Elements  
   
-|要素|説明|  
-|--------|--------|  
-|なし。|なし。|  
+|Element|Description|  
+|-------------|-----------------|  
+|None.|None.|  
   
-### 親要素  
+### <a name="parent-elements"></a>Parent Elements  
   
-|要素|説明|  
-|--------|--------|  
-|[CommandTable 要素](../extensibility/commandtable-element.md)|すべてのコマンドを表す要素の定義: メニュー項目、メニューのツールバー、およびコンボ ボックスは、\-VSPackage を IDE に提供します。|  
+|Element|Description|  
+|-------------|-----------------|  
+|[CommandTable Element](../extensibility/commandtable-element.md)|Defines all of the elements that represent commands — that is, menu items, menus, toolbars, and combo boxes — that a VSPackage provides to the IDE.|  
   
-## 使用例  
+## <a name="example"></a>Example  
   
 ```  
 <Include href="PackagePlacements.vsct"/>  
 ```  
   
-## 参照  
- [Visual Studio コマンド テーブル \(します。Vsct\) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>See Also  
+ [Visual Studio Command Table (.Vsct) Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

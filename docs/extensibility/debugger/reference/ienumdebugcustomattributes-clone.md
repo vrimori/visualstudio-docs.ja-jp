@@ -1,5 +1,5 @@
 ---
-title: "IEnumDebugCustomAttributes::Clone |Microsoft ドキュメント"
+title: IEnumDebugCustomAttributes::Clone | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 97fe72954a3d1d178f17f5b3a582ee7d7ae4aa55
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 0c0a5dfc9b149fb410a36287d6f6b9164475e1dd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="ienumdebugcustomattributesclone"></a>IEnumDebugCustomAttributes::Clone
-現在の列挙子と同じ列挙型の状態を格納する列挙子を作成します。  
+Creates an enumerator that contains the same enumeration state as the current enumerator.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Clone (   
@@ -47,21 +48,21 @@ HRESULT Clone (
 );  
 ```  
   
-```c#  
+```cs  
 int Clone(  
    out IEnumDebugCustomAttributes ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  ppEnum  
- [out]個別のオブジェクトとして、この列挙体のコピーを返します。  
+ [out] Returns a copy of this enumeration as a separate object.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- 列挙体のコピーは、このメソッドが呼び出された時点の元と同じ状態がします。 ただし、コピーのと、元の状態は別に、個別に変更することができます。  
+## <a name="remarks"></a>Remarks  
+ The copy of the enumeration has the same state as the original at the time this method is called. However, the copy's and the original's states are separate and can be changed individually.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

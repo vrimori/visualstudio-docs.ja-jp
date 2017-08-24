@@ -1,5 +1,5 @@
 ---
-title: "IDebugComPlusSymbolProvider::AreSymbolsLoaded |Microsoft ドキュメント"
+title: IDebugComPlusSymbolProvider::AreSymbolsLoaded | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b7de250f826aa35fcd8f71b0f9c74e5ddd60fb58
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d1f6c3eab594ca927aa79b4ec618f799bf1336c7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugcomplussymbolprovideraresymbolsloaded"></a>IDebugComPlusSymbolProvider::AreSymbolsLoaded
-アプリケーション ドメイン id が指定された特定のモジュールでのデバッグ シンボルが読み込まれたかどうかを判断します。  
+Determines if the debug symbols are loaded for the specified module given the application domain identifier.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT AreSymbolsLoaded (  
@@ -47,25 +48,25 @@ HRESULT AreSymbolsLoaded (
 );  
 ```  
   
-```c#  
+```cs  
 int AreSymbolsLoaded (  
    uint ulAppDomainID,  
    Guid guidModule  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- [in]アプリケーション ドメインの識別子。  
+ [in] Identifier for the application domain.  
   
  `guidModule`  
- [in]モジュールの一意の識別子。  
+ [in] Unique identifier for the module.  
   
-## <a name="return-value"></a>戻り値  
- デバッグ シンボルが読み込まれている場合に返す`S_OK`、それ以外を返します`S_FALSE`します。  
+## <a name="return-value"></a>Return Value  
+ If the debug symbols are loaded, returns `S_OK`; otherwise, returns `S_FALSE`.  
   
-## <a name="example"></a>例  
- 次の例では、このメソッドは実装する方法、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスです。  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::AreSymbolsLoaded(  
@@ -87,5 +88,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

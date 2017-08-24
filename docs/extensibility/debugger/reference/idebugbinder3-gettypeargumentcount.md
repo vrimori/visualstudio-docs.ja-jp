@@ -1,5 +1,5 @@
 ---
-title: "IDebugBinder3::GetTypeArgumentCount |Microsoft ドキュメント"
+title: IDebugBinder3::GetTypeArgumentCount | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fcb2dec4b7ea626035af5b6db4205b70d8c2b7e3
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1614c312c6aa307bd151cc76acbc843cd092a313
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugbinder3gettypeargumentcount"></a>IDebugBinder3::GetTypeArgumentCount
-このメソッドは、このオブジェクトに関連付けられている引数の型の数を返します。  
+This method returns the number of argument types associated with this object.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetTypeArgumentCount(  
@@ -47,22 +48,22 @@ HRESULT GetTypeArgumentCount(
 );  
 ```  
   
-```c#  
+```cs  
 int GetTypeArgumentCount(  
    out uint uCount  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `uCount`  
- [out]このオブジェクトに関連付けられている引数の型の数です。  
+ [out] Number of argument types associated with this object.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- このメソッドによって返される値はで使用するための配列を割り当てるために使用することができます、 [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ The value returned by this method can be used to allocate an array for use with the [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md) method.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
  [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)

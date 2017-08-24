@@ -1,48 +1,65 @@
 ---
-title: "IDebugProperty3::DestroyObjectID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProperty3::DestroyObjectID"
-helpviewer_keywords: 
-  - "IDebugProperty3::DestroyObjectID"
+title: IDebugProperty3::DestroyObjectID | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProperty3::DestroyObjectID
+helpviewer_keywords:
+- IDebugProperty3::DestroyObjectID
 ms.assetid: bd08f356-cc67-4717-98c9-c3d00cad2040
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugProperty3::DestroyObjectID
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: cbea09405c1cc7f7f808d7dd8b5261b52291603f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-他のすべてのプロパティからこのプロパティを識別する呼び出し元が気遣わないことを示すこのプロパティに関連付けられた一意の ID を破棄します。  
+---
+# <a name="idebugproperty3destroyobjectid"></a>IDebugProperty3::DestroyObjectID
+Destroys the unique ID associated with this property, indicating that the caller no longer cares to identify this property uniquely from all other properties.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT DestroyObjectID(  
-   void  
+HRESULT DestroyObjectID(  
+   void  
 );  
 ```  
   
-```c#  
-int DestroyObjectID();  
+```cs  
+int DestroyObjectID();  
 ```  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- \(は既にを一意に内部的に追跡するためデバッグ エンジンはプロパティの一意の ID をサポートする必要がない場合はこのメソッドの `E_NOTIMPL` を返すことができます。  
+## <a name="remarks"></a>Remarks  
+ If the debug engine doesn't need to support unique IDs for a property (because it already tracks them uniquely internally), then it can simply return `E_NOTIMPL` for this method.  
   
- 一意の ID は [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) メソッドの呼び出しと呼び出し元がこのプロパティは他のすべてのプロパティ間で識別されることを確認するときに作成されます。  
+ Unique IDs are created with a call to the [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md) method when the caller wants to make sure that this property is uniquely identified among all other properties.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md)

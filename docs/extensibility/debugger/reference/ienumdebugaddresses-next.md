@@ -1,5 +1,5 @@
 ---
-title: "IEnumDebugAddresses::Next |Microsoft ドキュメント"
+title: IEnumDebugAddresses::Next | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bd67e57bcea0822f6c8dbcf57e58f5b4a268647a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1c7cf35f4d6a6f61d93a0b5025f257f4fb685254
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="ienumdebugaddressesnext"></a>IEnumDebugAddresses::Next
-このメソッドは、列挙体から次の要素のセットを返します。  
+This method returns the next set of elements from the enumeration.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Next(  
@@ -49,7 +50,7 @@ HRESULT Next(
 );  
 ```  
   
-```c#  
+```cs  
 int Next(  
    uint            celt,  
    IDebugAddress[] rgelt,  
@@ -57,19 +58,19 @@ int Next(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `celt`  
- [in]取得する要素の数。 また、最大のサイズを指定、`rgelt`配列。  
+ [in] The number of elements to retrieve. Also specifies the maximum size of the `rgelt` array.  
   
  `rgelt`  
- [入力、出力]配列[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)格納する要素。  
+ [in, out] Array of [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) elements to be filled in.  
   
  `pceltFetched`  
- [out]実際に返される要素の数を返します`rgelt`します。  
+ [out] Returns the number of elements actually returned in `rgelt`.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`します。 返します`S_FALSE`要求された要素数よりも少ない可能性がありますは返される場合、それ以外の場合、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`. Returns `S_FALSE` if fewer than the requested number of elements could be returned; otherwise, returns an error code.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)

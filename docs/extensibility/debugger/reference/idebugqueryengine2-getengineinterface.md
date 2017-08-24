@@ -1,5 +1,5 @@
 ---
-title: "IDebugQueryEngine2::GetEngineInterface |Microsoft ドキュメント"
+title: IDebugQueryEngine2::GetEngineInterface | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 63f2edfe3ebd787b067c12213d783edc06e4d46c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 4aa59a9c33d4b29277da374fe6b35fc496385cf6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugqueryengine2getengineinterface"></a>IDebugQueryEngine2::GetEngineInterface
-カスタム デバッグ エンジン (DE) インターフェイスを取得します。  
+Gets a custom debug engine (DE) interface.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetEngineInterface(   
@@ -47,23 +48,23 @@ HRESULT GetEngineInterface(
 );  
 ```  
   
-```c#  
+```cs  
 int GetEngineInterface(   
    out object ppUnk  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppUnk`  
- [out]返します。、`IUnknown`オブジェクトを表します (DE) のデバッグ エンジンとなる、DE に関連付けられているその他の有効なインターフェイスに対してクエリを行うことができます (たとえば[IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)または[IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md))。  
+ [out] Returns an `IUnknown` object represents the debug engine (DE), and which can be queried for any other valid interface associated with a DE (for example [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) or [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)).  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- このメソッドから取得したインターフェイスを使用した呼び出しは、セッション デバッグ マネージャーの処理を回避され、正常な状態に入るか、デバッグ中にエラーを生成する SDM が発生するため、注意して結果として得られるインターフェイスを使用してください。  
+## <a name="remarks"></a>Remarks  
+ The resulting interface should be used with care because calling through interfaces retrieved from this method circumvents the session debug manager's processing and may result in the SDM getting into a bad state or generating errors while debugging.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugQueryEngine2](../../../extensibility/debugger/reference/idebugqueryengine2.md)   
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

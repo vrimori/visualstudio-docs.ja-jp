@@ -1,5 +1,5 @@
 ---
-title: "スタート ページにユーザー コントロールの追加 |Microsoft ドキュメント"
+title: Adding User Control to the Start Page | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,34 +30,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 69c2ff24616af373461de0cbf4456499db63f902
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 421de69556d8833b78b401331db4584d7243cdb7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="adding-user-control-to-the-start-page"></a>スタート ページにユーザー コントロールを追加します。
-このチュートリアルでは、カスタム スタート ページへの DLL 参照を追加する方法を示します。 例では、ソリューションにユーザー コントロールがユーザー コントロールをビルドし、スタート ページの .xaml ファイルからビルドされたアセンブリを参照を追加します。 新しいタブでは、基本的な Web ブラウザーとして機能するユーザー コントロールをホストします。  
+# <a name="adding-user-control-to-the-start-page"></a>Adding User Control to the Start Page
+This walkthrough shows how to add a DLL reference to a custom Start Page. The example adds a user control to the solution, builds the user control, and then references the built assembly from the Start Page .xaml file. A new tab hosts the user control, which functions as a basic Web browser.  
   
- 同じプロセスを使用すると、.xaml ファイルから呼び出すことができる任意のアセンブリを追加します。  
+ You can use the same process to add any assembly that can be called from a .xaml file.  
   
-## <a name="adding-a-wpf-user-control-to-the-solution"></a>ソリューションに WPF ユーザー コントロールの追加  
- 最初に、Windows Presentation Foundation (WPF) ユーザー コントロールをスタート ページ ソリューションに追加します。  
+## <a name="adding-a-wpf-user-control-to-the-solution"></a>Adding a WPF User Control to the Solution  
+ First, add a Windows Presentation Foundation (WPF) user control to the Start Page solution.  
   
-1.  作成を開始 ページで作成したを使用して[カスタム スタート ページを作成する](../extensibility/creating-a-custom-start-page.md)です。  
+1.  Create a Start Page by using we created in [Creating a Custom Start Page](../extensibility/creating-a-custom-start-page.md).  
   
-2.  **ソリューション エクスプ ローラー**をソリューションを右クリックして、**追加**、 をクリックし、**新しいプロジェクト**します。  
+2.  In **Solution Explorer**, right-click the solution, click **Add**, and then click **New Project**.  
   
-3.  左側のウィンドウで、**新しいプロジェクト** ダイアログ ボックスで、いずれかを展開、 **Visual Basic**または**Visual C# の場合**ノード、およびクリック**Windows**します。 中央のウィンドウで  **WPF ユーザー コントロール ライブラリ**します。  
+3.  In the left pane of the **New Project** dialog box, expand either the **Visual Basic** or **Visual C#** node, and click **Windows**. In the middle pane, select **WPF User Control Library**.  
   
-4.  コントロールの名前`WebUserControl` をクリックし、 **OK**します。  
+4.  Name the control `WebUserControl` and then click **OK**.  
   
-## <a name="implementing-the-user-control"></a>ユーザー コントロールを実装します。  
- WPF ユーザー コントロールを実装するのには、XAML でユーザー インターフェイス (UI) を構築し、c# または他の .NET 言語でコードのイベントを書き込みます。  
+## <a name="implementing-the-user-control"></a>Implementing the User Control  
+ To implement a WPF user control, build the user interface (UI) in XAML and then write the code-behind events in C# or another .NET language.  
   
-#### <a name="to-write-the-xaml-for-the-user-control"></a>ユーザー コントロールの XAML を記述するには  
+#### <a name="to-write-the-xaml-for-the-user-control"></a>To write the XAML for the user control  
   
-1.  ユーザー コントロールの XAML ファイルを開きます。 \<グリッド > 要素、コントロールに行の次の定義を追加します。  
+1.  Open the XAML file for the user control. In the \<Grid> element, add the following row definitions to the control.  
   
     ```vb  
     <Grid.RowDefinitions>  
@@ -67,7 +68,7 @@ ms.lasthandoff: 02/22/2017
   
     ```  
   
-2.  メイン`Grid`要素、次の新しい追加`Grid`要素は、Web アドレスと新しいアドレスを設定するためのボタンを入力するテキスト ボックスが含まれています。  
+2.  In the main `Grid` element, add the following new `Grid` element, which contains a text box for typing Web addresses and a button for setting the new address.  
   
     ```xml  
     <Grid Grid.Row="0">  
@@ -80,13 +81,13 @@ ms.lasthandoff: 02/22/2017
     </Grid>  
     ```  
   
-3.  次のフレームを最上位レベルに追加`Grid`要素直後に、 `Grid` button と textbox を含む要素です。  
+3.  Add the following frame to the top-level `Grid` element just after the `Grid` element that contains the button and textbox.  
   
     ```vb  
     <Frame Grid.Row="1" x:Name="WebFrame" Source="http://www.bing.com" Navigated="WebFrame_Navigated" />  
     ```  
   
-4.  次の例では、ユーザー コントロールの完全な XAML を示します。  
+4.  The following example shows the completed XAML for the user control.  
   
     ```xml  
     <UserControl x:Class="WebUserControl.UserControl1"  
@@ -115,15 +116,15 @@ ms.lasthandoff: 02/22/2017
   
     ```  
   
-#### <a name="to-write-the-code-behind-events-for-the-user-control"></a>ユーザー コントロールの分離コード イベントの書き込み  
+#### <a name="to-write-the-code-behind-events-for-the-user-control"></a>To write the code-behind events for the user control  
   
-1.  XAML デザイナーで、ダブルクリック、**アドレスの設定**コントロールに追加 ボタンをクリックします。  
+1.  In the XAML designer, double-click the **Set Address** button you added to the control.  
   
-     UserControl1.cs ファイルは、コード エディターで開きます。  
+     The UserControl1.cs file opens in the code editor.  
   
-2.  SetButton_Click イベント ハンドラーを次のように入力します。  
+2.  Fill in the SetButton_Click Event Handler as follows.  
   
-    ```c#  
+    ```cs  
     private void SetButton_Click(object sender, RoutedEventArgs e)  
     {  
         try  
@@ -137,45 +138,45 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-     このコードは、Web ブラウザーのターゲットとしてテキスト ボックスに入力された Web アドレスを設定します。 アドレスが有効でない場合、コードはエラーをスローします。  
+     This code sets the Web address that is typed in the text box as the target for the Web browser. If the address is not valid, the code throws an error.  
   
-3.  WebFrame_Navigated イベントを処理する必要もあります。  
+3.  You must also handle the WebFrame_Navigated event:  
   
-    ```c#  
+    ```cs  
     private void WebFrame_Navigated(object sender, EventArgs e)  
     { }  
     ```  
   
-4.  ソリューションをビルドします。  
+4.  Build the solution.  
   
-## <a name="adding-the-user-control-to-the-start-page"></a>スタート ページにユーザー コントロールの追加  
- このコントロールを使用可能にスタート ページのプロジェクトにスタート ページのプロジェクト ファイルで、新しいコントロール ライブラリへの参照を追加します。 スタート ページの XAML マークアップに、コントロールを追加できます。  
+## <a name="adding-the-user-control-to-the-start-page"></a>Adding the User Control to the Start Page  
+ To make this control available to the Start Page project, in the Start Page project file, add a reference to the new control library. Then you can add the control to the Start Page XAML markup.  
   
-1.  **ソリューション エクスプ ローラー**、スタート ページにプロジェクトを右クリックして**参照** をクリックし、**参照の追加**します。  
+1.  In **Solution Explorer**, in the Start Page project, right-click **References** and then click **Add Reference**.  
   
-2.  **プロジェクト**] タブで [ **WebUserControl**順にクリック**OK**します。  
+2.  On the **Projects** tab, select **WebUserControl** and then click **OK**.  
   
-3.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
+3.  On the **Build** menu, click **Build Solution**.  
   
-     ソリューションをビルド可能ユーザー コントロールの intellisense ソリューションで他のファイル。  
+     Building the solution makes the user control available to IntelliSense for other files in the solution.  
   
- スタート ページの XAML マークアップにコントロールを追加するには、アセンブリの名前空間の参照を追加し、ページにコントロールを配置します。  
+ To add the control to the Start Page XAML markup, add a namespace reference to the assembly, then put the control on the page.  
   
-#### <a name="to-add-the-control-to-the-markup"></a>コントロールのマークアップを追加するには  
+#### <a name="to-add-the-control-to-the-markup"></a>To add the control to the markup  
   
-1.  **ソリューション エクスプ ローラー**、スタート ページの .xaml ファイルを開きます。  
+1.  In **Solution Explorer**, open the Start Page .xaml file.  
   
-2.  **XAML**  ウィンドウで、次の名前空間宣言を最上位レベルに追加<xref:System.Windows.Controls.Grid>要素</xref:System.Windows.Controls.Grid>。  
+2.  In the **XAML** pane, add the following namespace declaration to the top-level <xref:System.Windows.Controls.Grid> element.  
   
     ```xml  
     xmlns:vsc="clr-namespace:WebUserControl;assembly=WebUserControl"  
     ```  
   
-3.  **XAML**  ウィンドウで、スクロールして、\<グリッド >」セクション。  
+3.  In the **XAML** pane, scroll to the \<Grid> section.  
   
-     このセクションで説明、<xref:System.Windows.Controls.TabControl>内の要素、<xref:System.Windows.Controls.Grid>要素</xref:System.Windows.Controls.Grid></xref:System.Windows.Controls.TabControl>。  
+     The section contains a <xref:System.Windows.Controls.TabControl> element in a <xref:System.Windows.Controls.Grid> element.  
   
-4.  追加、 \<TabControl > 要素を含む、 \<TabItem > ユーザー コントロールへの参照を格納しています。  
+4.  Add a \<TabControl> element containing a \<TabItem> that contains a reference to your user control.  
   
     ```xml  
   
@@ -185,22 +186,22 @@ ms.lasthandoff: 02/22/2017
   
     ```  
   
- これで、コントロールをテストできます。  
+ Now you can test the control.  
   
-## <a name="testing-a-manually-created-custom-start-page"></a>手動で作成したカスタム スタート ページのテスト  
+## <a name="testing-a-manually-created-custom-start-page"></a>Testing a manually created custom Start Page  
   
-1.  XAML ファイルとサポート テキスト ファイル、またはマークアップ ファイルをコピー、 **%USERPROFILE%\My documents \visual Studio 2015\StartPages\\ **フォルダーです。  
+1.  Copy your XAML file, and any supporting text files or markup files, to the **%USERPROFILE%\My Documents\Visual Studio 2015\StartPages\\** folder.  
   
-2.  スタート ページが、コントロールや Visual Studio がインストールされていないアセンブリ内の型を参照する場合、アセンブリをコピーし、貼り付けることで*Visual Studio インストール フォルダー***\Common7\IDE\PrivateAssemblies\\**します。  
+2.  If your start page references any controls or types in assemblies that are not installed by Visual Studio, copy the assemblies and then paste them in *Visual Studio installation folder***\Common7\IDE\PrivateAssemblies\\**.  
   
-3.  Visual Studio コマンド プロンプトで次のように入力します。 **devenv/rootsuffix Exp**を Visual Studio の実験用インスタンスを開きます。  
+3.  At a Visual Studio command prompt, type **devenv /rootsuffix Exp** to open an experimental instance of Visual Studio.  
   
-4.  実験用インスタンスで、**ツール/オプション/環境/スタートアップ**ページおよび元の XAML ファイルを選択、**スタート ページのカスタマイズ**ドロップダウンです。  
+4.  In the experimental instance, go to the **Tools / Options / Environment / Startup** page and select your XAML file from the **Customize Start Page** dropdown.  
   
-5.  **[表示]** メニューの **[スタート ページ]**をクリックします。  
+5.  On the **View** menu, click **Start Page**.  
   
-     カスタム スタート ページが表示されます。 ファイルを変更する場合は、する必要があります実験用インスタンスを閉じる、変更を加える、コピーし変更されたファイルを貼り付けますおよび変更を表示する実験用インスタンスを再度開きます。  
+     Your custom start page should be displayed. If you want to change any files, you must close the experimental instance, make the changes, copy and paste the changed files, and then re-open the experimental instance to view the changes.  
   
-## <a name="see-also"></a>関連項目  
- [WPF コンテナー コントロール](http://msdn.microsoft.com/en-us/a0177167-d7db-4205-9607-8ae316952566)   
- [チュートリアル: カスタム XAML をスタート ページに追加します。](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)
+## <a name="see-also"></a>See Also  
+ [WPF Container Controls](http://msdn.microsoft.com/en-us/a0177167-d7db-4205-9607-8ae316952566)   
+ [Walkthrough: Adding Custom XAML to the Start Page](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)

@@ -1,49 +1,66 @@
 ---
-title: "レガシ言語サービス内のコメント行のコード | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コメント、言語サービス [マネージ パッケージ フレームワーク] でのサポート"
-  - "コードをコメント化言語サービス [マネージ パッケージ framework]"
+title: Commenting Code in a Legacy Language Service | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- comments, supporting in language services [managed package framework]
+- language services [managed package framework], commenting code
 ms.assetid: 9600d6f0-e2b6-4fe0-b935-fb32affb97a4
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# レガシ言語サービス内のコメント行のコード
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f1814fc40bac1e977a02fa53a34c8e59e299b2bd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-プログラミング言語には通常注釈したりコード コメント方法を示します。  コメントはコードに関する追加情報を提供するがでコンパイルされない解釈時には無視されますテキストのセクション。  
+---
+# <a name="commenting-code-in-a-legacy-language-service"></a>Commenting Code in a Legacy Language Service
+Programming languages typically provide a means to annotate or comment the code. A comment is a section of text that provides additional information about the code but is ignored during compilation or interpretation.  
   
- マネージ パッケージ フレームワーク \(MPF\) クラスコメントを保持しuncommenting 選択したテキストをサポートします。  
+ The managed package framework (MPF) classes provide support for commenting and uncommenting selected text.  
   
-## コメントのスタイル  
- コメントの 2 個の一般的なスタイルです :  
+## <a name="comment-styles"></a>Comment Styles  
+ There are two general styles of comment:  
   
-1.  単一行コメントがある場合に行のコメント。  
+1.  Line comments, where the comment is on a single line.  
   
-2.  コメントを複数行もコメントをブロックします。  
+2.  Block comments, where the comment may include multiple lines.  
   
- ブロックのコメントに開始文字と終了文字の両方がありますが行のコメントには開始文字 \(文字があります。  たとえばC\#\/\/ の行にコメントの開始および \/\* ブロックのコメントの先頭および末尾での \*\/。  
+ Line comments typically have a starting character (or characters), while block comments have both start and end characters. For example, in C#, a line comment starts with //, and a block comment starts with /* and ends with \*/.  
   
- ユーザーが  **編集**  のコマンド  **選択範囲のコメント**  を選択すると\>\] メニューの \[ENT2ENT は <xref:Microsoft.VisualStudio.Package.Source> クラスの <xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A> のメソッドはコマンド ルーティングされます。  ユーザーがコマンド  **選択範囲のコメントを解除**  を選択するとそのコマンドは <xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A> のメソッドにルーティングされます。  
+ When the user selects the command **Comment Selection** from the **Edit** -> **Advanced** menu, the command is routed to the <xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A> method on the <xref:Microsoft.VisualStudio.Package.Source> class. When the user selects the command **Uncomment Selection**, the command is routed to the <xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A> method.  
   
-## サポート コード コメント  
- <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> の `EnableCommenting` の名前付きパラメーターによって言語サービスのサポートのコード コメントを使用できます。  これは <xref:Microsoft.VisualStudio.Package.LanguagePreferences> クラスの <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCommenting%2A> のプロパティを設定します。  設定の言語 servicce の機能の詳細については[言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md) を参照してください。  
+## <a name="supporting-code-comments"></a>Supporting Code Comments  
+ You can have your language service support code comments by means of the `EnableCommenting` named parameter of the <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> . This sets the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCommenting%2A> property of the <xref:Microsoft.VisualStudio.Package.LanguagePreferences> class. For more information about setting language servicce features, see [Registering a Legacy Language Service](../../extensibility/internals/registering-a-legacy-language-service1.md)).  
   
- また言語のコメント文字を含む <xref:Microsoft.VisualStudio.Package.CommentInfo> の構造を返すように <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> のメソッドをオーバーライドする必要があります。  C\# 形式の行のコメント文字が既定値です。  
+ You must also override the <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> method to return a <xref:Microsoft.VisualStudio.Package.CommentInfo> structure with the comment characters for your language. C#-style line comment characters are the default.  
   
-### 例  
- <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> のメソッドの実装例を次に示します。  
+### <a name="example"></a>Example  
+ Here is an example implementation of the <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> method.  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.Package;  
   
 namespace MyLanguagePackage  
@@ -62,6 +79,6 @@ namespace MyLanguagePackage
 }  
 ```  
   
-## 参照  
- [従来の言語サービスの機能](../../extensibility/internals/legacy-language-service-features1.md)   
- [言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md)
+## <a name="see-also"></a>See Also  
+ [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md)   
+ [Registering a Legacy Language Service](../../extensibility/internals/registering-a-legacy-language-service1.md)

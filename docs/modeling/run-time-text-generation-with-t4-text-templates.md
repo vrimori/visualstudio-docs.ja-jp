@@ -1,31 +1,48 @@
 ---
-title: "T4 テキスト テンプレートを使用した実行時テキスト生成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "前処理されたテキスト テンプレート プロジェクト項目"
-  - "テキスト テンプレート, 生成 (ファイルを実行時に)"
-  - "テキスト テンプレート, TransformText() メソッド"
-  - "TextTemplatingFilePreprocessor カスタム ツール"
+title: Run-Time Text Generation with T4 Text Templates | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Preprocessed Text Template project item
+- TextTemplatingFilePreprocessor custom tool
+- text templates, TransformText() method
+- text templates, generating files at run time
 ms.assetid: 79b4b3c6-a9a7-4446-b6fd-e2388fc6b05f
 caps.latest.revision: 22
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 22
----
-# T4 テキスト テンプレートを使用した実行時テキスト生成
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: alancameronwills
+ms.author: awills
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7396ea74f72c7407d41f396c6b9a713faf8826c0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-使用して、アプリケーション実行時の文字列を生成できます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキスト テンプレートの実行時。  アプリケーションを実行するコンピューターに [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がインストールされている必要はありません。  コンパイル時に、テンプレートを実行時に実行されるコードが生成されますので実行時のテンプレート「テキスト テンプレートを前処理」呼ばれます。  
+---
+# <a name="run-time-text-generation-with-t4-text-templates"></a>Run-Time Text Generation with T4 Text Templates
+You can generate text strings in your application at run time by using [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] runtime text templates. The computer where the application executes does not have to have [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Runtime templates are sometimes called "preprocessed text templates" because at compile time, the template generates code that is executed at run time.  
   
- 各テンプレートは、生成される文字列に表示されるテキストとプログラム コードのフラグメントを組み合わせたものです。  プログラムのフラグメントでは、文字列の可変部分の値を提供すると共に、条件付きの部分と繰り返し部分を制御します。  
+ Each template is a mixture of the text as it will appear in the generated string, and fragments of program code. The program fragments supply values for the variable parts of the string, and also control conditional and repeated parts.  
   
- たとえば、HTML レポートを作成するアプリケーションでは、次のテンプレートを使用できます。  
+ For example, the following template could be used in an application that creates an HTML report.  
   
 ```  
 <#@ template language="C#" #>  
@@ -42,26 +59,26 @@ This report is Company Confidential.
 </body></html>  
 ```  
   
- このテンプレートは、可変部分がプログラム コードに置き換えられた HTML ページであることに注意してください。  このようなページをデザインするには、まず、HTML ページの静的プロトタイプを作成します。  その後、テーブルや他の可変部分を、状況に応じて変化するコンテンツを生成するプログラム コードに置き換えます。  
+ Notice that the template is an HTML page in which the variable parts have been replaced with program code. You could begin the design of such a page by writing a static prototype of the HTML page. You could then replace the table and other variable parts with program code that generates the content that varies from one occasion to the next.  
   
- アプリケーションでテンプレートを使用すると、一連の Write ステートメントなどに比べ、出力の最終的な形式を確認しやすくなります。  出力の形式の変更が容易になり、信頼性も高まります。  
+ Using a template in your application makes it is easier to see the final form of the output than you could in, for example, a long series of write statements. Making changes to the form of the output is easier and more reliable.  
   
-## 任意のアプリケーションでの実行時テキスト テンプレートの作成  
+## <a name="creating-a-run-time-text-template-in-any-application"></a>Creating a Run-Time Text Template in any Application  
   
-#### 実行時テキスト テンプレートを作成するには  
+#### <a name="to-create-a-run-time-text-template"></a>To create a run-time text template  
   
-1.  ソリューション エクスプ ローラーで、プロジェクトのショートカット メニューを選択**追加**、 **新しい項目**。  
+1.  In Solution Explorer, on the shortcut menu of your project, choose **Add**, **New Item**.  
   
-2.  **\[新しい項目の追加** ダイアログ ボックスで、 **ランタイム テキスト テンプレート**。  \([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] の場合は、**\[共通項目\] \- \[全般\]** にあります。\)  
+2.  In the **Add New Item** dialog box, select **Runtime Text Template**. (In [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] look under **Common Items\General**.)  
   
-3.  テンプレート ファイルの名前を入力します。  
+3.  Type a name for your template file.  
   
     > [!NOTE]
-    >  このテンプレート ファイル名は、生成されたコードでクラス名として使用されます。  そのため、スペースと区切り記号は使用しないでください。  
+    >  The template file name will be used as a class name in the generated code. Therefore, it should not have spaces or punctuation.  
   
-4.  選択**追加**。  
+4.  Choose **Add**.  
   
-     **.tt** という拡張子を持つ新しいファイルが作成されます。  その "**カスタム ツール**" プロパティは **TextTemplatingFilePreprocessor** に設定されます。  これは、次の行が含まれます。  
+     A new file is created that has extension **.tt**. Its **Custom Tool** property is set to **TextTemplatingFilePreprocessor**. It contains the following lines:  
   
     ```  
     <#@ template language="C#" #>  
@@ -71,37 +88,37 @@ This report is Company Confidential.
     <#@ import namespace="System.Collections.Generic" #>  
     ```  
   
-## 既存のファイルから実行時テンプレートへの変換  
- テンプレートを作成する場合は、既存の出力例を変換することをお勧めします。  たとえば、HTML ファイルを生成するアプリケーションの場合は、まずプレーン HTML ファイルを作成します。  このファイルが正しく機能することと、その表示形式が適切であることを確認してください。  その後で、このファイルを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトに追加し、テンプレートに変換します。  
+## <a name="converting-an-existing-file-to-a-run-time-template"></a>Converting an Existing File to a Run-Time Template  
+ A good way to create a template is to convert an existing example of the output. For example, if your application will generate HTML files, you can start by creating a plain HTML file. Make sure that it works correctly and that its appearance is correct. Then include it into your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project and convert it to a template.  
   
-#### 既存のテキスト ファイルを実行時テンプレートに変換するには  
+#### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>To convert an existing text file to a run-time template  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトにファイルを追加します。  ソリューション エクスプ ローラーで、プロジェクトのショートカット メニューを選択**追加**、 **既存アイテム**。  
+1.  Include the file into your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project. In Solution Explorer, on the shortcut menu of the project, choose **Add**, **Existing Item**.  
   
-2.  ファイルの **\[カスタム ツール\]** プロパティを **TextTemplatingFilePreprocessor** に設定します。  ソリューション エクスプ ローラーで、ファイルのショートカット メニューを選択する**のプロパティ**。  
+2.  Set the file's **Custom Tools** property to **TextTemplatingFilePreprocessor**. In Solution Explorer, on the shortcut menu of the file, choose **Properties**.  
   
     > [!NOTE]
-    >  プロパティが既に設定されている場合は、**TextTemplatingFileGenerator** ではなく **TextTemplatingFilePreprocessor** になっていることを確認してください。  この状況は、拡張子が **.tt** のファイルを追加した場合に発生することがあります。  
+    >  If the property is already set, make sure that it is **TextTemplatingFilePreprocessor** and not **TextTemplatingFileGenerator**. This can happen if you include a file that already has the extension **.tt**.  
   
-3.  ファイル名拡張子を **.tt** に変更します。  この手順は省略できますが、このようにすると、ファイルが不適切なエディターで開かれるのを防ぐことができます。  
+3.  Change the file name extension to **.tt**. Although this step is optional, it helps you avoid opening the file in an incorrect editor.  
   
-4.  ファイル名のメインの部分からスペースと区切り記号を削除します。  たとえば、"My Web Page.tt" ではなく "MyWebPage.tt" が正しい形式です。  このファイル名は、生成されたコードでクラス名として使用されます。  
+4.  Remove any spaces or punctuation from the main part of the file name. For example "My Web Page.tt" would be incorrect, but "MyWebPage.tt" is correct. The file name will be used as a class name in the generated code.  
   
-5.  ファイルの先頭に次の行を挿入します。  Visual Basic プロジェクトで作業している場合は、"C\#" を "VB" に置き換えます。  
+5.  Insert the following line at the beginning of the file. If you are working in a Visual Basic project, replace "C#" with "VB".  
   
      `<#@ template language="C#" #>`  
   
-## 実行時テンプレートのコンテンツ  
+## <a name="the-content-of-the-run-time-template"></a>The Content of the Run-Time Template  
   
-### template ディレクティブ  
- 次のように、テンプレートの先頭行はファイル作成時の状態のままにしておきます。  
+### <a name="template-directive"></a>Template directive  
+ Keep the first line of the template as it was when you created the file:  
   
  `<#@ template language="C#" #>`  
   
- 言語のパラメーターは、プロジェクトの言語によって変わります。  
+ The language parameter will depend on the language of your project.  
   
-### プレーン コンテンツ  
- **.tt** ファイルを編集し、アプリケーションで生成するテキストを追加します。  次に例を示します。  
+### <a name="plain-content"></a>Plain content  
+ Edit the **.tt** file to contain the text that you want your application to generate. For example:  
   
 ```  
 <html><body>  
@@ -111,10 +128,10 @@ This report is Company Confidential.
 </body></html>  
 ```  
   
-### 埋め込みプログラム コード  
- `<#` と `#>` の間には、プログラム コードを挿入できます。  次に例を示します。  
+### <a name="embedded-program-code"></a>Embedded program code  
+ You can insert program code between `<#` and `#>`. For example:  
   
-```c#  
+```cs  
 <table>  
     <# for (int i = 1; i <= 10; i++)  
        { #>  
@@ -124,7 +141,7 @@ This report is Company Confidential.
  </table>  
 ```  
   
-```vb#  
+```vb  
 <table>  
 <#  
     For i As Integer = 1 To 10  
@@ -138,54 +155,54 @@ This report is Company Confidential.
   
 ```  
   
- ステートメントは `<# ... #>` の間に挿入され、式は `<#= ... #>` の間に挿入されていることに注意してください。  詳細については、「[T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)」を参照してください。  
+ Notice that statements are inserted between `<# ... #>` and expressions are inserted between `<#= ... #>`. For more information, see [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md).  
   
-## テンプレートの使用  
+## <a name="using-the-template"></a>Using the Template  
   
-### テンプレートからビルドされるコード  
- **.tt** ファイルを保存するたびに、従属する **.cs** ファイルまたは **.vb** ファイルが生成されます。  このファイルをソリューション エクスプローラーで表示するには、**.tt** ファイルのノードを展開します。  Visual Basic プロジェクトの場合、このノードを展開するには、先にソリューション エクスプローラーのツール バーの **\[すべてのファイルを表示\]** をクリックする必要があります。  
+### <a name="the-code-built-from-the-template"></a>The code built from the template  
+ Whenever you save the **.tt** file, a subsidiary **.cs** or **.vb** file will be generated. To see this file in Solution Explorer, expand the **.tt** file node. In a Visual Basic project, you will be able to expand the node after you click **Show All Files** in the Solution Explorer toolbar.  
   
- この従属ファイルには、`TransformText()` というメソッドを含む部分クラスが含まれます。  このメソッドは、アプリケーションから呼び出すことができます。  
+ Notice that this subsidiary file contains a partial class that contains a method called `TransformText()`. You can call this method from your application.  
   
-### 実行時のテキストの生成  
- アプリケーション コードでは、次のような呼び出しを使用してテンプレートのコンテンツを生成できます。  
+### <a name="generating-text-at-run-time"></a>Generating text at run time  
+ In your application code, you can generate the content of your template using a call like this:  
   
-```c#  
+```cs  
 MyWebPage page = new MyWebPage();  
 String pageContent = page.TransformText();  
 System.IO.File.WriteAllText("outputPage.html", pageContent);  
   
 ```  
   
-```vb#  
+```vb  
 Dim page = New My.Templates.MyWebPage  
 Dim pageContent = page.TransformText()  
 System.IO.File.WriteAllText("outputPage.html", pageContent)  
   
 ```  
   
- 生成されたクラスを特定の名前空間に配置するには、テキスト テンプレート ファイルの **"カスタム ツールの名前空間"** プロパティを設定します。  
+ To place the generated class in a particular namespace, set the **Custom Tool Namespace** property of the text template file.  
   
-### ランタイム テキスト テンプレートのデバッグ  
- デバッグし、通常のコードと同じようにランタイム テキスト テンプレートをテストします。  
+### <a name="debugging-runtime-text-templates"></a>Debugging Runtime Text Templates  
+ Debug and test runtime text templates in the same way as ordinary code.  
   
- テキスト テンプレートでは、ブレークポイントを設定できます。  Visual Studio からのデバッグ モードでアプリケーションを起動する場合は、コードをステップ実行し、通常の方法で \[ウォッチ式の評価することができます。  
+ You can set a breakpoint in a text template. If you start the application in debugging mode from Visual Studio, you can step through the code and evaluate watch expressions in the usual way.  
   
-### コンストラクターへのパラメーターの引き渡し  
- 通常、テンプレートでは、アプリケーションの他の部分からデータをインポートする必要があります。  この処理を容易にするため、テンプレートによってビルドされるコードは部分クラスになります。  同じクラスの別の部分をプロジェクトの別のファイルに作成できます。  そのファイルには、テンプレートに埋め込まれたコードとアプリケーションの残りの部分の両方からアクセスできるパラメーター、プロパティ、および関数を持つコンストラクターを含めることができます。  
+### <a name="passing-parameters-in-the-constructor"></a>Passing parameters in the constructor  
+ Usually a template must import some data from other parts of the application. To make this easy, the code built by the template is a partial class. You can create another part of the same class in another file in your project. That file can include a constructor with parameters, properties and functions that can accessed both by the code that is embedded in the template, and by the rest of the application.  
   
- たとえば、**MyWebPageCode.cs** というファイルを別に作成できます。  
+ For example, you could create a separate file **MyWebPageCode.cs**:  
   
-```c#  
+```cs  
 partial class MyWebPage  
 {  
     private MyData m_data;  
     public MyWebPage(MyData data) { this.m_data = data; }}  
 ```  
   
- テンプレート ファイルの **MyWebPage.tt** では、次のように記述できます。  
+ In your template file **MyWebPage.tt**, you could write:  
   
-```c#  
+```cs  
 <h2>Sales figures</h2>  
 <table>  
 <# foreach (MyDataItem item in m_data.Items)   
@@ -198,19 +215,19 @@ partial class MyWebPage
 </table>  
 ```  
   
- このテンプレートをアプリケーションで使用するには、次のように記述します。  
+ To use this template in the application:  
   
-```c#  
+```cs  
 MyData data = ...;  
 MyWebPage page = new MyWebPage(data);  
 String pageContent = page.TransformText();  
 System.IO.File.WriteAllText("outputPage.html", pageContent);  
 ```  
   
-#### Visual Basic のコンストラクター パラメーター  
- [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] では、**MyWebPageCode.vb** という別のファイルに次のコードが含まれています。  
+#### <a name="constructor-parameters-in-visual-basic"></a>Constructor parameters in Visual Basic  
+ In [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], the separate file **MyWebPageCode.vb** contains:  
   
-```vb#  
+```vb  
 Namespace My.Templates  
   Partial Public Class MyWebPage  
     Private m_data As MyData  
@@ -221,9 +238,9 @@ Namespace My.Templates
 End Namespace  
 ```  
   
- テンプレート ファイルに次のコードを含めることができます。  
+ The template file could contain:  
   
-```vb#  
+```vb  
 <#@ template language="VB" #>  
 <html><body>  
 <h1>Sales for January</h2>  
@@ -242,9 +259,9 @@ This report is Company Confidential.
   
 ```  
   
- パラメーターをコンストラクターに渡すことによってテンプレートが呼び出されます。  
+ And the template would be invoked by passing the parameter in the constructor:  
   
-```vb#  
+```vb  
 Dim data = New My.Templates.MyData  
     ' Add data values here ....  
 Dim page = New My.Templates.MyWebPage(data)  
@@ -253,55 +270,55 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
   
 ```  
   
-#### テンプレートのプロパティへのデータの引き渡し  
- データをテンプレートに渡す方法として、部分クラス定義でパブリック プロパティをテンプレート クラスに追加する方法もあります。  アプリケーションで、`TransformText()` を呼び出す前にこれらのプロパティを設定できます。  
+#### <a name="passing-data-in-template-properties"></a>Passing data in template properties  
+ An alternative method of passing data to the template is to add public properties to the template class in a partial class definition. Your application can set the properties before invoking `TransformText()`.  
   
- また、部分定義でテンプレート クラスにフィールドを追加することもできます。  この場合、テンプレートの連続的な実行の間でデータを渡すことができます。  
+ You can also add fields to your template class in a partial definition. This would enable you to pass data between successive executions of the template.  
   
-### コードでの部分クラスの使用  
- 多くの開発者は、テンプレートにコードの大きな本体を記述するのは望ましくないと考えています。  代わりに、テンプレート ファイルと同じ名前の部分クラスにメソッドを定義します。  テンプレートからこれらのメソッドを呼び出します。  このようにすると、テンプレートによって対象の出力文字列の表示状態がより明確に示されるようになります。  結果の表示状態を、表示されるデータの作成ロジックから切り離して検討できます。  
+### <a name="use-partial-classes-for-code"></a>Use partial classes for code  
+ Many developers prefer to avoid writing large bodies of code in templates. Instead, define methods in a partial class that has the same name as the template file. Call those methods from the template. In this way, the template shows you more clearly what the target output string will look like. Discussions about the appearance of the result can be separated from the logic of creating the data that it displays.  
   
-### アセンブリと参照  
- テンプレート コードで .NET やその他のアセンブリ \(**System.Xml.dll** など\) を参照する場合は、通常の方法でプロジェクトの **\[参照設定\]** に追加する必要があります。  
+### <a name="assemblies-and-references"></a>Assemblies and references  
+ If you want your template code to reference a .NET or other assembly such as **System.Xml.dll**, you should add it to your project's **References** in the usual manner.  
   
- `using` ステートメントと同じ方法で名前空間をインポートする場合は、`import` ディレクティブを使用できます。  
+ If you want to import a namespace in the same way as a `using` statement, you can do this with the `import` directive:  
   
 ```  
 <#@ import namespace="System.Xml" #>  
 ```  
   
- これらのディレクティブは、ファイルの先頭 \(`<#@template` ディレクティブの直後\) に記述する必要があります。  
+ These directives must be placed at the beginning of the file, immediately after the `<#@template` directive.  
   
-### 共有コンテンツ  
- 複数のテンプレートで共有するテキストがある場合は、そのテキストを独立したファイルに記述し、テキストを使用する各ファイルでそのファイルをインクルードできます。  
+### <a name="shared-content"></a>Shared content  
+ If you have text that is shared between several templates, you can place it in a separate file and include it in each file in which it should appear:  
   
 ```  
 <#@include file="CommonHeader.txt" #>  
 ```  
   
- インクルードするコンテンツには、プログラム コードとプレーンテキストの組み合わせを含めることができます。また、他の include ディレクティブやその他のディレクティブを含めることもできます。  
+ The included content can contain any mixture of program code and plain text, and it can contain other include directives and other directives.  
   
- include ディレクティブは、テンプレート ファイルまたはインクルード ファイルのテキスト内の任意の場所で使用できます。  
+ The include directive can be used anywhere within the text of a template file or an included file.  
   
-### 実行時テキスト テンプレート間での継承  
- 基本クラス テンプレートを作成することで、実行時テンプレート間でコンテンツを共有できます。テンプレートは、抽象基本クラス テンプレートでもかまいません。  使用、 `inherits`のパラメーター、 `<@#template#>`別のランタイムのテンプレート クラスを参照するディレクティブ。  
+### <a name="inheritance-between-run-time-text-templates"></a>Inheritance between Run-Time Text Templates  
+ You can share content between run-time templates by writing a base class template, which can be abstract. Use the `inherits` parameter of the `<@#template#>` directive to reference another runtime template class.  
   
-#### 継承パターン: 基本メソッド内のフラグメント  
- 次の例で使用しているパターンでは、以下の点に注目してください。  
+#### <a name="inheritance-pattern-fragments-in-base-methods"></a>Inheritance pattern: Fragments in Base Methods  
+ In the pattern used in the example that follows, notice the following points:  
   
--   `SharedFragments` 基本クラスでは、クラス機能ブロック \(`<#+ ... #>`\) 内でメソッドを定義しています。  
+-   The base class `SharedFragments` defines methods within class feature blocks `<#+ ... #>`.  
   
--   基本クラスには、フリーテキストは含まれていません。  代わりに、クラス機能メソッド内にすべてのテキスト ブロックが含まれています。  
+-   The base class contains no free text. Instead, all its text blocks occur inside the class feature methods.  
   
--   `SharedFragments` で定義されたメソッドを派生クラスで呼び出しています。  
+-   The derived class invokes the methods defined in `SharedFragments`.  
   
--   アプリケーションでは、派生クラスの `TextTransform()` メソッドを呼び出していますが、`SharedFragments` 基本クラスは変換していません。  
+-   The application calls the `TextTransform()` method of the derived class, but does not transform the base class `SharedFragments`.  
   
--   ランタイム テキスト テンプレートの基本と派生クラスの両方は：、 **カスタム ツール** でプロパティを設定  **TextTemplatingFilePreprocessor**。  
+-   Both the base and derived classes are runtime text templates: that is, the **Custom Tool** property is set to **TextTemplatingFilePreprocessor**.  
   
  **SharedFragments.tt:**  
   
-```c#  
+```cs  
 <#@ template language="C#" #>  
 <#+  
 protected void SharedText(int n)  
@@ -317,7 +334,7 @@ protected void SharedText(int n)
   
  **MyTextTemplate1.tt:**  
   
-```c#  
+```cs  
 <#@ template language="C#" inherits="SharedFragments" #>  
 begin 1  
    <# SharedText(2); #>  
@@ -327,14 +344,14 @@ end 1
   
  **MyProgram.cs:**  
   
-```c#  
+```cs  
 ...   
 MyTextTemplate1 t1  = new MyTextTemplate1();  
 string result = t1.TransformText();  
 Console.WriteLine(result);  
 ```  
   
- **結果の出力:**  
+ **The resulting output:**  
   
 ```  
 begin 1  
@@ -342,12 +359,12 @@ begin 1
 end 1  
 ```  
   
-#### 継承パターン: 基本本体内のテキスト  
- テンプレートの継承を使用するもう 1 つの方法では、テキストの大半を基本テンプレートに定義します。  派生テンプレートでは、基本コンテンツに組み込むデータとテキスト フラグメントを提供します。  
+#### <a name="inheritance-pattern-text-in-base-body"></a>Inheritance Pattern: Text in Base Body  
+ In this alternative approach to using template inheritance, the bulk of the text is defined in the base template. The derived templates provide data and text fragments that fit into the base content.  
   
  **AbstractBaseTemplate1.tt:**  
   
-```c#  
+```cs  
 <#@ template language="C#" #>  
   
 Here is the description for this derived template:  
@@ -371,7 +388,7 @@ End of common template.
   
  **DerivedTemplate1.tt:**  
   
-```c#  
+```cs  
 <#@ template language="C#" inherits="AbstractBaseTemplate1" #>  
 <#   
   // Set the base template properties:  
@@ -396,16 +413,16 @@ protected override void SpecificFragment(int n)
   
 ```  
   
- **アプリケーション コード:**  
+ **Application code:**  
   
-```c#  
+```cs  
 ...   
 DerivedTemplate1 t1 = new DerivedTemplate1();  
 string result = t1.TransformText();  
 Console.WriteLine(result);  
 ```  
   
- **結果の出力:**  
+ **Resulting output:**  
   
 ```  
 Here is the description for this derived template:  
@@ -417,12 +434,12 @@ End of common template.
 End material for DerivedTemplate1.  
 ```  
   
-## 関連トピック  
- デザイン時テンプレート: テンプレートを使用してアプリケーションの一部になるコードを生成する場合は、「[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)」を参照してください。  
+## <a name="related-topics"></a>Related Topics  
+ Design Time Templates: If you want to use a template to generate code that becomes part of your application, see [Design-Time Code Generation by using T4 Text Templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md).  
   
- テンプレートとその内容がコンパイル時に決定されると、任意のアプリケーションで実行時のテンプレートを使用できます。  ただし、実行時に変更されるテンプレートからテキストを生成する [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 拡張機能を作成する場合は、「[VS 拡張機能内でのテキスト変換の呼び出し](../modeling/invoking-text-transformation-in-a-vs-extension.md)」を参照してください。  
+ Runtime templates can be used in any application where the templates and their content are determined at compile time. But if you want to write a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extension that generates text from templates that change at run time, see [Invoking Text Transformation in a VS Extension](../modeling/invoking-text-transformation-in-a-vs-extension.md).  
   
-## 参照  
- [コード生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)   
- [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)   
- [T4 の理解: oleg が Sych によってテキスト テンプレートを前処理](http://www.olegsych.com/2009/09/t4-preprocessed-text-templates/)
+## <a name="see-also"></a>See Also  
+ [Code Generation and T4 Text Templates](../modeling/code-generation-and-t4-text-templates.md)   
+ [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md)   
+ [Understanding T4: Preprocessed Text Templates by Oleg Sych](http://www.olegsych.com/2009/09/t4-preprocessed-text-templates/)

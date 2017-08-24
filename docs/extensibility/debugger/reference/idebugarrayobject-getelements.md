@@ -1,51 +1,68 @@
 ---
-title: "IDebugArrayObject::GetElements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugArrayObject::GetElements"
-helpviewer_keywords: 
-  - "IDebugArrayObject::GetElements メソッド"
+title: IDebugArrayObject::GetElements | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugArrayObject::GetElements
+helpviewer_keywords:
+- IDebugArrayObject::GetElements method
 ms.assetid: f6a6262f-5183-46ce-8a45-33ef46088b98
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugArrayObject::GetElements
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e656313cdd0ffce45e7e2668990db1e22bf0f5f9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-配列のすべての要素の列挙子を取得します。  
+---
+# <a name="idebugarrayobjectgetelements"></a>IDebugArrayObject::GetElements
+Gets an enumerator of all elements of the array.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetElements(   
-   IEnumDebugObjects** ppEnum  
+HRESULT GetElements(   
+   IEnumDebugObjects** ppEnum  
 );  
 ```  
   
-```c#  
+```cs  
 int GetElements(  
-   out IEnumDebugObjects ppEnum  
+   out IEnumDebugObjects ppEnum  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppEnum`  
- \[入力\] [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md) するオブジェクトをすべての要素に列挙できる返します。  
+ [out] Returns an [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md) object that allows enumerating over all elements.  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## 解説  
- 代わりに要素を反復処理するために [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) と [GetElement](../Topic/IDebugArrayObject::GetElement.md) のメソッドを使用します。  
+## <a name="remarks"></a>Remarks  
+ As an alternative, use the [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) and [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) methods to iterate through the elements.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

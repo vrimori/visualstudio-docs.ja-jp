@@ -1,5 +1,5 @@
 ---
-title: "従来の言語サービスの [自動変数] ウィンドウのサポート |Microsoft ドキュメント"
+title: Support for the Autos Window in a Legacy Language Service | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,28 +29,29 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 88cff53ca5c335fdf60aef85d79e9c6e86f03cfa
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f9c457a74995854b853e9664a093da2a6e3217b8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>従来の言語サービスの [自動変数] ウィンドウのサポート
-**自動変数**  ウィンドウに変数とパラメーター (いずれか、ブレークポイントまたは例外のため)、デバッグ中のプログラムが一時停止されると、スコープ内のような式が表示されます。 式には、変数、ローカルまたはグローバル、およびローカル スコープで変更されているパラメーターを含めることができます。 **自動変数**  ウィンドウでは、クラス、構造体、またはその他の種類のインスタンスを含めることもできます。 評価できる式エバリュエーターは何も表示できる可能性がある、 **[自動変数]**ウィンドウです。  
+# <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>Support for the Autos Window in a Legacy Language Service
+The **Autos** window displays expressions such as variables and parameters that are in scope when the program being debugged is paused (either due to a breakpoint or an exception). The expressions can include variables, local or global, and parameters that have been changed in the local scope. The **Autos** window can also include instantiations of a class, structure, or some other type. Anything that an expression evaluator can evaluate can potentially be shown in the **Autos** window.  
   
- マネージ パッケージ フレームワーク (MPF) に直接をサポートしていません、 **[自動変数]**ウィンドウです。 ただし、オーバーライドする場合、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>メソッドを表示する式のリストを返すことができます、 **[自動変数]**ウィンドウ</xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>。  
+ The managed package framework (MPF) does not provide direct support for the **Autos** window. However, if you override the <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> method, you can return a list of expressions to be presented in the **Autos** window.  
   
-## <a name="implementing-support-for-the-autos-window"></a>[自動変数] ウィンドウのサポートを実装します。  
- サポートするために必要な**[自動変数]**ウィンドウは、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A><xref:Microsoft.VisualStudio.Package.LanguageService>クラス</xref:Microsoft.VisualStudio.Package.LanguageService>のメソッド</xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>を実装するには 式に表示されるソース ファイル内の場所を指定の実装を決定する必要があります、 **[自動変数]**ウィンドウです。 メソッドでは、各文字列が&1; つの式を表す文字列のリストを返します。 戻り値<xref:Microsoft.VisualStudio.VSConstants.S_OK>一覧に、式が含まれていることを示します中に<xref:Microsoft.VisualStudio.VSConstants.S_FALSE>を表示する式がないことを示します。</xref:Microsoft.VisualStudio.VSConstants.S_FALSE> </xref:Microsoft.VisualStudio.VSConstants.S_OK> 。  
+## <a name="implementing-support-for-the-autos-window"></a>Implementing Support for the Autos Window  
+ All you need to do to support the **Autos** window is to implement the <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> method in the <xref:Microsoft.VisualStudio.Package.LanguageService> class. Your implementation must decide, given a location in the source file, which expressions should appear in the **Autos** window. The method returns a list of strings in which each string represents a single expression. A return value of <xref:Microsoft.VisualStudio.VSConstants.S_OK> indicates that the list contains expressions, while <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> indicates that there are no expressions to show.  
   
- 実際に返される式は、変数やコード内の場所に表示されるパラメーターの名前です。 これらの名前は、値とに表示される、型を取得する式エバリュエーターに渡される、 **[自動変数]**ウィンドウです。  
+ The actual expressions returned are the names of the variables or parameters that appear at that location in the code. These names are passed to the expression evaluator to obtain values and types that are then displayed in the **Autos** window.  
   
-### <a name="example"></a>例  
- 次の例は、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A><xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドは、解析理由<xref:Microsoft.VisualStudio.Package.ParseReason>。</xref:Microsoft.VisualStudio.Package.ParseReason>を使用して</xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>式のリストを取得するメソッド</xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>の実装を示しています。 としてラップされたそれぞれの式は、`TestVsEnumBSTR`を実装する、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsEnumBSTR>インターフェイス</xref:Microsoft.VisualStudio.TextManager.Interop.IVsEnumBSTR>。  
+### <a name="example"></a>Example  
+ The following example shows an implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> method that gets a list of expressions from the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method using the parse reason <xref:Microsoft.VisualStudio.Package.ParseReason>. Each of the expressions is wrapped as a `TestVsEnumBSTR` that implements the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsEnumBSTR> interface.  
   
- 注意してください、`GetAutoExpressionsCount`と`GetAutoExpression`メソッドにカスタム メソッドは、`TestAuthoringSink`オブジェクトし、この例をサポートするために追加されました。 追加する式で&1; つの方法を表す、`TestAuthoringSink`パーサーによってオブジェクト (を呼び出して、<xref:Microsoft.VisualStudio.Package.AuthoringSink.AutoExpression%2A>メソッド)、パーサー外でアクセスできる</xref:Microsoft.VisualStudio.Package.AuthoringSink.AutoExpression%2A>。  
+ Note that the `GetAutoExpressionsCount` and `GetAutoExpression` methods are custom methods on the `TestAuthoringSink` object and were added to support this example. They represent one way in which expressions added to the `TestAuthoringSink` object by the parser (by calling the <xref:Microsoft.VisualStudio.Package.AuthoringSink.AutoExpression%2A> method) can be accessed outside the parser.  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio;  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  

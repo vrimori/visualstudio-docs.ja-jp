@@ -1,47 +1,64 @@
 ---
-title: "IEnumDebugAddresses::Reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugAddresses::Reset"
-helpviewer_keywords: 
-  - "IEnumDebugAddresses::Reset メソッド"
+title: IEnumDebugAddresses::Reset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEnumDebugAddresses::Reset
+helpviewer_keywords:
+- IEnumDebugAddresses::Reset method
 ms.assetid: 3a9d7f20-5bc6-4e13-8e91-5af4092e092f
 caps.latest.revision: 5
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# IEnumDebugAddresses::Reset
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2390ca1e6db27158a72924c62170662a20d758db
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-このメソッドは最初の要素には列挙型をリセットします。  
+---
+# <a name="ienumdebugaddressesreset"></a>IEnumDebugAddresses::Reset
+This method resets the enumeration to the first element.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Reset(void);  
 ```  
   
-```c#  
+```cs  
 int Reset();  
 ```  
   
-#### パラメーター  
- なし  
+#### <a name="parameters"></a>Parameters  
+ None  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- このメソッドが呼び出された後[次へ](../Topic/IEnumDebugAddresses::Next.md) への呼び出しは列挙型の最初の要素を返します。  
+## <a name="remarks"></a>Remarks  
+ After this method is called, the next call to [Next](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md) returns the first element of the enumeration.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)   
- [次へ](../Topic/IEnumDebugAddresses::Next.md)
+ [Next](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md)

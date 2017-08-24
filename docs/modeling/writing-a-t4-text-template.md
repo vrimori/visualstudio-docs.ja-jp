@@ -1,5 +1,5 @@
 ---
-title: "T4 テキスト テンプレートの作成 |Microsoft ドキュメント"
+title: Writing a T4 Text Template | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,62 +29,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: eb2ab9d49cdeb1ed71da8ef67841f7796862dc30
-ms.openlocfilehash: 4585b4f44e3bb81fc0de03c183c3363bcccbd93d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 850cb90c0a861ead17efd3513e566e352cbbb44b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="writing-a-t4-text-template"></a>T4 テキスト テンプレートの作成
-テキスト テンプレートには、そのテンプレートから生成されるテキストが含まれます。 たとえば、web ページを作成するテンプレートには"\<html >..." HTML ページの他のすべての標準的な部分です。 テンプレートに挿入されて*コントロール ブロック*、プログラム コードのフラグメントであります。 コントロール ブロックはさまざまな値を提供すると共に、テキストの一部を条件付きにしたり、繰り返したりできるようにします。  
+# <a name="writing-a-t4-text-template"></a>Writing a T4 Text Template
+A text template contains the text that will be generated from it. For example, a template that creates a web page will contain "\<html>..." and all the other standard parts of an HTML page. Inserted into the template are *control blocks*, which are fragments of program code. Control blocks provide varying values and allow parts of the text to be conditional and repeated.  
   
- この構造によって、テンプレートの作成が簡単になります。生成されるファイルのプロトタイプを最初に作成しておき、結果を変化させるコントロール ブロックは徐々に挿入するという手法を利用できるためです。  
+ This structure makes a template easy to develop, because you can start with a prototype of the generated file, and incrementally insert control blocks that vary the result.  
   
- テキスト テンプレートは次の要素から構成されます。  
+ Text templates are composed of the following parts:  
   
--   **ディレクティブ**-テンプレートの処理方法を制御する要素。  
+-   **Directives** - elements that control how the template is processed.  
   
--   **テキスト ブロック**: 出力に直接コピーされるコンテンツ。  
+-   **Text blocks** - content that is copied directly to the output.  
   
--   **コントロール ブロック**-変数の値をテキストに挿入し、テキストの条件付きまたは繰り返し部分を制御するプログラム コード。  
+-   **Control blocks** - program code that inserts variable values into the text, and controls conditional or repeated parts of the text.  
   
- このトピックの例には、それらをファイルにコピー テンプレート」の説明に従って[T4 テキスト テンプレートを使用して、デザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)します。 テンプレート ファイルを編集するには、後に保存し、出力を検査して**.txt**ファイルです。  
+ To try the examples in this topic, copy them into a template file as described in [Design-Time Code Generation by using T4 Text Templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md). After editing the template file, save it, and then inspect the output **.txt** file.  
   
-## <a name="directives"></a>ディレクティブ  
- テキスト テンプレート ディレクティブは、変換コードと出力ファイルの生成方法に関する一般的な指示をテキスト テンプレート エンジンに与えます。  
+## <a name="directives"></a>Directives  
+ Text template directives provide general instructions to the text templating engine about how to generate the transformation code and the output file.  
   
- たとえば、次のディレクティブでは、出力ファイルに .txt という拡張子を付けるように指定しています。  
+ For example, the following directive specifies that the output file should have a .txt extension:  
   
 ```  
   
 <#@ output extension=".txt" #>  
 ```  
   
- ディレクティブの詳細については、次を参照してください。 [T4 テキスト テンプレート ディレクティブ](../modeling/t4-text-template-directives.md)します。  
+ For more information about directives, see [T4 Text Template Directives](../modeling/t4-text-template-directives.md).  
   
-## <a name="text-blocks"></a>テキスト ブロック  
- テキスト ブロックのテキストは、出力ファイルに直接挿入されます。 テキスト ブロックに特別な書式指定はありません。 たとえば、次のテキスト テンプレートからは、"Hello" という単語を含むテキスト ファイルが生成されます。  
+## <a name="text-blocks"></a>Text blocks  
+ A text block inserts text directly into the output file. There is no special formatting for text blocks. For example, the following text template will produce a text file that contains the word "Hello":  
   
 ```  
 <#@ output extension=".txt" #>  
 Hello  
 ```  
   
-## <a name="control-blocks"></a>コントロール ブロック  
- コントロール ブロックは、テンプレートの変換に使用されるプログラム コードのセクションです。 既定の言語は C# ですが、次のディレクティブをファイルの先頭に記述すると、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] を使用できます。  
+## <a name="control-blocks"></a>Control blocks  
+ Control blocks are sections of program code that are used to transform the templates. The default language is C#, but to use [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], you can write this directive at the beginning of the file:  
   
 ```  
 <#@ template language="VB" #>  
 ```  
   
- コントロール ブロックでのコードの記述に使用する言語は、生成されるテキストの言語とは関係ありません。  
+ The language in which you write the code in the control blocks is unrelated to the language of the text that is generated.  
   
-### <a name="standard-control-blocks"></a>標準コントロール ブロック  
- 標準コントロール ブロックは、出力ファイルの一部を生成するプログラム コードのセクションです。  
+### <a name="standard-control-blocks"></a>Standard control blocks  
+ A standard control block is a section of program code that generates part of the output file.  
   
- テンプレート ファイルには、任意の数のテキスト ブロックと標準コントロール ブロックを混在させることができます。 ただし、コントロール ブロックを他のコントロール ブロックの内部に配置することはできません。 それぞれの標準コントロール ブロックは、`<# ... #>` という記号で区切られます。  
+ You can mix any number of text blocks and standard control blocks in a template file. However, you cannot place one control block inside another. Each standard control block is delimited by the symbols `<# ... #>`.  
   
- たとえば、次のコントロール ブロックとテキスト ブロックを使用した場合、出力ファイルには "0, 1, 2, 3, 4 Hello!" という行が含まれます。  
+ For example, the following control block and text block cause the output file to contain the line "0, 1, 2, 3, 4 Hello!":  
   
 ```  
   
@@ -97,7 +98,7 @@ Hello
 #> Hello!  
 ```  
   
- 明示的な `Write()` ステートメントを使用する代わりに、インタリーブ テキストとインタリーブ コードを使用できます。 次の例は、「こんにちは!」を出力します。 次の&4; つの時間:  
+ Instead of using explicit `Write()` statements, you can interleave text and code. The following example prints "Hello!" four times:  
   
 ```  
 <#  
@@ -110,25 +111,25 @@ Hello!
 #>  
 ```  
   
- テキスト ブロックは、`Write();` ステートメントを使用できる場所であれば、どこにでも挿入できます。  
+ You can insert a text block wherever a `Write();` statement would be allowed in the code.  
   
 > [!NOTE]
->  複合ステートメントや条件など、ループ内にテキスト ブロックを埋め込む場合は常に中かっこ {...} を使用します。 テキスト ブロックが含まれています。  
+>  When you embed a text block within a compound statement such as a loop or conditional, always use braces {...} to contain the text block.  
   
-### <a name="expression-control-blocks"></a>式コントロール ブロック  
- 式コントロール ブロックでは、式を評価して文字列に変換します。 出力ファイルにはその文字列が挿入されます。  
+### <a name="expression-control-blocks"></a>Expression control blocks  
+ An expression control block evaluates an expression and converts it to a string. This is inserted into the output file.  
   
- 式コントロール ブロックは `<#= ... #>` という記号で区切られます。  
+ Expression control blocks are delimited by the symbols `<#= ... #>`  
   
- たとえば、次のコントロール ブロックを使用した場合、出力ファイルには "5" が含まれます。  
+ For example, the following control block causes the output file to contain "5":  
   
 ```  
 <#= 2 + 3 #>  
 ```  
   
- 先頭の記号として「<#=」の&3; つの文字が含まれています。  
+ Notice that the opening symbol has three characters "<#=".  
   
- 式には、スコープ内の任意の変数を含めることができます。 たとえば、次のブロックでは、数値を含む複数の行が出力されます。  
+ The expression can include any variable that is in scope. For example, this block prints lines with numbers:  
   
 ```  
 <#@ output extension=".txt" #>  
@@ -142,12 +143,12 @@ This is hello number <#= i+1 #>: Hello!
 #>  
 ```  
   
-### <a name="class-feature-control-blocks"></a>クラス機能コントロール ブロック  
- クラス機能コントロール ブロックでは、メインの変換の対象から除外する、プロパティやメソッドなどのコードを定義します。 クラス機能ブロックは、ヘルパー関数でよく使用されます。  通常、クラス機能ブロックは、個別のファイルに接続できるように[含まれている](#Include)1 つ以上のテキスト テンプレートでします。  
+### <a name="class-feature-control-blocks"></a>Class feature control blocks  
+ A class feature control block defines properties, methods, or any other code that should not be included in the main transform. Class feature blocks are frequently used for helper functions.  Typically, class feature blocks are placed in separate files so that they can be [included](#Include) by more than one text template.  
   
- クラス機能コントロール ブロックは `<#+ ... #>` という記号で区切られます。  
+ Class feature control blocks are delimited by the symbols `<#+ ... #>`  
   
- たとえば、次のテンプレート ファイルでは、メソッドを宣言して使用しています。  
+ For example, the following template file declares and uses a method:  
   
 ```  
 <#@ output extension=".txt" #>  
@@ -169,12 +170,12 @@ private int Square(int i)
 #>  
 ```  
   
- クラス機能は、それを記述するファイルの末尾に配置する必要があります。 ただし、`<#@include#>` を使用すると、`include` ディレクティブの後ろに標準ブロックとテキストが続く場合でも、クラス機能を含むファイルをインクルードすることができます。  
+ Class features must be placed at the end of the file in which they are written. However, you can `<#@include#>` a file that contains a class feature, even if the `include` directive is followed by standard blocks and text.  
   
- コントロール ブロックの詳細については、次を参照してください。[テキスト テンプレートのコントロール ブロック](../modeling/text-template-control-blocks.md)します。  
+ For more information about control blocks, see [Text Template Control Blocks](../modeling/text-template-control-blocks.md).  
   
-### <a name="class-feature-blocks-can-contain-text-blocks"></a>クラス機能ブロックにはテキスト ブロックを含めることができる  
- テキストを生成するメソッドを記述できます。 次に例を示します。  
+### <a name="class-feature-blocks-can-contain-text-blocks"></a>Class feature blocks can contain text blocks  
+ You can write a method that generates text. For example:  
   
 ```  
 List of Squares:  
@@ -193,74 +194,74 @@ private void WriteSquareLine(int i)
 #>  
 ```  
   
- テキストを生成するメソッドは、複数のテンプレートでインクルードできる独立したファイルに配置すると特に便利です。  
+ It is particularly useful to place a method that generates text in a separate file that can be included by more than one template.  
   
-## <a name="using-external-definitions"></a>外部定義の使用  
+## <a name="using-external-definitions"></a>Using external definitions  
   
-### <a name="assemblies"></a>アセンブリ  
- テンプレートのコード ブロックでは、最もよく使用される .NET アセンブリ (System.dll など) で定義されている型を使用できます。 さらに、他の .NET アセンブリや独自のアセンブリを参照することもできます。 パス名、つまりアセンブリの厳密な名前を指定できます。  
+### <a name="assemblies"></a>Assemblies  
+ The code blocks of your template can use types that are defined the most frequently used .NET assemblies such as System.dll. In addition, you can reference other .NET assemblies or your own assemblies. You can provide a pathname, or the strong name of an assembly:  
   
 ```  
 <#@ assembly name="System.Xml" #>  
 ```  
   
- 絶対パス名を使用するか、パス名で標準マクロ名を使用する必要があります。 例:  
+ You should use absolute path names, or use standard macro names in the path name. For example:  
   
 ```  
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>  
 ```  
   
- Assembly ディレクティブ効果はありません、[前処理されたテキスト テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)します。  
+ The assembly directive has no effect in a [preprocessed text template](../modeling/run-time-text-generation-with-t4-text-templates.md).  
   
- 詳細については、次を参照してください。 [T4 アセンブリ ディレクティブ](../modeling/t4-assembly-directive.md)します。  
+ For more information, see [T4 Assembly Directive](../modeling/t4-assembly-directive.md).  
   
-### <a name="namespaces"></a>名前空間  
- import ディレクティブは、C# での `using` 句または Visual Basic での `imports` 句と同じ働きをします。 これを使用すると、完全修飾名を使用せずにコードで型を参照できます。  
+### <a name="namespaces"></a>Namespaces  
+ The import directive is the same as the `using` clause in C# or the `imports` clause in Visual Basic. It allows you to refer to types in your code without using a fully qualified name:  
   
 ```  
 <#@ import namespace="System.Xml" #>  
 ```  
   
- `assembly` ディレクティブと `import` ディレクティブは、必要に応じていくつでも使用できます。 これらのディレクティブは、テキスト ブロックとコントロール ブロックの前に配置する必要があります。  
+ You can use as many `assembly` and `import` directives as you want. You must place them before text and control blocks.  
   
- 詳細については、次を参照してください。 [T4 インポート ディレクティブ](../modeling/t4-import-directive.md)します。  
+ For more information, see [T4 Import Directive](../modeling/t4-import-directive.md).  
   
-###  <a name="a-nameincludea-including-code-and-text"></a><a name="Include"></a>コードとテキストのインクルード  
- `include` ディレクティブを使用すると、別のテンプレート ファイルのテキストを挿入できます。 たとえば、次のディレクティブでは、`test.txt` のコンテンツが挿入されます。  
+###  <a name="Include"></a> Including code and text  
+ The `include` directive inserts text from another template file. For example, this directive inserts the content of `test.txt`.  
   
  `<#@ include file="c:\test.txt" #>`  
   
- インクルードされたコンテンツは、インクルード先のテキスト テンプレートに元から含まれていた場合とほとんど同じように処理されます。 ただし、include ディレクティブの後に通常のテキスト ブロックと標準コントロール ブロックが続く場合でも、クラス機能ブロック (`<#+...#>`) を含むファイルをインクルードすることができます。  
+ The included content is processed almost as if it were part of the including text template. However, you can include a file that contains a class feature block `<#+...#>` even if the include directive is followed by ordinary text and standard control blocks.  
   
- 詳細については、次を参照してください。 [T4 Include ディレクティブ](../modeling/t4-include-directive.md)します。  
+ For more information, see [T4 Include Directive](../modeling/t4-include-directive.md).  
   
-### <a name="utility-methods"></a>ユーティリティ メソッド  
- `Write()` をはじめ、コントロール ブロックでいつでも使用できるメソッドがいくつかあります。 これには、出力のインデントに役立つメソッドや、エラーの報告に役立つメソッドが含まれます。  
+### <a name="utility-methods"></a>Utility methods  
+ There are several methods such as `Write()` that are always available to you in a control block. They include methods for helping you indent the output, and for reporting errors.  
   
- 独自のユーティリティ メソッドのセットを記述することもできます。  
+ You can also write your own set of utility methods.  
   
- 詳細については、次を参照してください。[テキスト テンプレートのユーティリティ メソッド](../modeling/text-template-utility-methods.md)します。  
+ For more information, see [Text Template Utility Methods](../modeling/text-template-utility-methods.md).  
   
-## <a name="transforming-data-and-models"></a>データとモデルの変換  
- テキスト テンプレートが最も役に立つのは、モデル、データベース、データ ファイルなどのソースのコンテンツに基づいてマテリアルを生成する場合です。 テンプレートによってデータが抽出され、その書式が再設定されます。 テンプレートのコレクションでは、このようなソースを複数のファイルに変換できます。  
+## <a name="transforming-data-and-models"></a>Transforming Data and Models  
+ The most useful application for a text template is to generate material based on the content of a source such as a model, database, or data file. Your template extracts and reformats the data. A collection of templates can transform such a source into multiple files.  
   
- ソース ファイルを読み取る方法はいくつかあります。  
+ There are several approaches to reading the source file.  
   
- **テキスト テンプレートでファイルを読み取る**します。 これは、テンプレートにデータを取り込む方法としては最も簡単です。  
+ **Read a file in the text template**. This is simplest way to get data into the template:  
   
 ```  
 <#@ import namespace="System.IO" #>  
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...  
 ```  
   
- **ナビゲートできるモデルとしてファイルを読み込む**です。 より効果的な方法は、テキスト テンプレート コードでナビゲートできるモデルとしてデータを読み取ることです。 たとえば、XML ファイルを読み込み、XPath 式でそのファイル内をナビゲートできます。 使用することも[xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765)を一連の XML データを読み取ることが可能クラスを作成します。  
+ **Load a file as a navigable model**. A more powerful method is to read the data as a model, which your text template code can navigate. For example, you can load an XML file and navigate it with XPath expressions. You could also use [xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765) to create a set of classes with which you can read the XML data.  
   
- **図またはフォームでモデル ファイルを編集します。** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]図または Windows フォームとして、モデルを編集するのに便利なツールを提供します。 このため、生成されたアプリケーションのユーザーと、モデルについて効率的に話し合うことができます。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]では、モデルの構造を反映した、厳密に型指定されたクラスのセットも作成できます。 詳細については、次を参照してください。[ドメイン固有言語からコードを生成する](../modeling/generating-code-from-a-domain-specific-language.md)です。  
+ **Edit the model file in a diagram or form.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] provides tools that let you edit a model as a diagram or Windows form. This makes it easier to discuss the model with users of the generated application. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] also creates a set of strongly-typed classes that reflect the structure of the model. For more information, see [Generating Code from a Domain-Specific Language](../modeling/generating-code-from-a-domain-specific-language.md).  
   
-### <a name="relative-file-paths-in-design-time-templates"></a>デザイン時テンプレートの相対ファイル パス  
- [デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)テキスト テンプレートで使用する基準とする場所にファイルを参照する場合、`this.Host.ResolvePath()`です。 また、`hostspecific="true"` ディレクティブで `template` を設定する必要もあります。  
+### <a name="relative-file-paths-in-design-time-templates"></a>Relative file paths in design-time templates  
+ In a [design-time text template](../modeling/design-time-code-generation-by-using-t4-text-templates.md), if you want to reference a file in a location relative to the text template, use `this.Host.ResolvePath()`. You must also set `hostspecific="true"` in the `template` directive:  
   
-```c#  
+```cs  
 <#@ template hostspecific="true" language="C#" #>  
 <#@ output extension=".txt" #>  
 <#@ import namespace="System.IO" #>  
@@ -273,24 +274,24 @@ Content of MyFile.txt is:
   
 ```  
   
- ホストから提供される他のサービスを取得することもできます。 詳細については、次を参照してください。[にアクセスする Visual Studio またはテンプレートからの他のホスト](http://msdn.microsoft.com/en-us/0556f20c-fef4-41a9-9597-53afab4ab9e4)します。  
+ You can also obtain other services that are provided by the host. For more information, see [Accessing Visual Studio or other Hosts from a Template](http://msdn.microsoft.com/en-us/0556f20c-fef4-41a9-9597-53afab4ab9e4).  
   
-### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>別の AppDomain で実行されるデザイン時テキスト テンプレート  
- 点に注意する必要がありますが、[デザイン時テキスト テンプレート](../modeling/design-time-code-generation-by-using-t4-text-templates.md)メインのアプリケーションから分離した AppDomain で実行します。 ほとんどの場合、これは重要ではありませんが、一部の複雑な状況で制限が生じることがあります。 たとえば、別のサービスからテンプレート内またはテンプレート外のデータを渡す場合、そのサービスでシリアル化可能な API を提供する必要があります。  
+### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>Design-time Text Templates run in a separate AppDomain  
+ You should be aware that a [design-time text template](../modeling/design-time-code-generation-by-using-t4-text-templates.md) runs in an AppDomain that is separate from the main application. In most cases this is not important, but you might discover restrictions in certain complex cases. For example, if you want to pass data in or out of the template from a separate service, then the service must provide a serializable API.  
   
- (のそうでない、[実行時テキスト テンプレート](../modeling/run-time-text-generation-with-t4-text-templates.md)コードの残りの部分と共にコンパイルされるコードを提供します)。  
+ (This isn't true of a [run-time text template](../modeling/run-time-text-generation-with-t4-text-templates.md), which provides code that is compiled along with the rest of your code.)  
   
-## <a name="editing-templates"></a>テンプレートの編集  
- 拡張機能マネージャーのオンライン ギャラリーからは、専用のテキスト テンプレート エディターをダウンロードできます。 **ツール** メニューのをクリックして**拡張機能マネージャー**します。 クリックして**オンライン ギャラリー**、し検索ツールを使用します。  
+## <a name="editing-templates"></a>Editing Templates  
+ Specialized text template editors can be downloaded from the Extension Manager Online Gallery. On the **Tools** menu, click **Extension Manager**. Click **Online Gallery**, and then use the search tool.  
   
-## <a name="related-topics"></a>関連トピック  
+## <a name="related-topics"></a>Related topics  
   
-|タスク|トピック|  
+|Task|Topic|  
 |----------|-----------|  
-|テンプレートを作成する。|[T4 テキスト テンプレートの記述に関するガイドライン](../modeling/guidelines-for-writing-t4-text-templates.md)|  
-|プログラム コードを使用してテキストを生成する。|[テキスト テンプレートの構造](../modeling/writing-a-t4-text-template.md)|  
-|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューション内にファイルを生成する。|[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|  
-|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部でテキストの生成を行う。|[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)|  
-|ドメイン固有言語の形式でデータを変換する。|[ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)|  
-|独自のデータ ソースを変換するためのディレクティブ プロセッサを作成する。|[T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)|
+|Writing a template.|[Guidelines for Writing T4 Text Templates](../modeling/guidelines-for-writing-t4-text-templates.md)|  
+|Generate text by using program code.|[Text Template Structure](../modeling/writing-a-t4-text-template.md)|  
+|Generate files in a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution.|[Design-Time Code Generation by using T4 Text Templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|  
+|Run text generation outside [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|[Generating Files with the TextTransform Utility](../modeling/generating-files-with-the-texttransform-utility.md)|  
+|Transform your data in the form of a domain-specific language.|[Generating Code from a Domain-Specific Language](../modeling/generating-code-from-a-domain-specific-language.md)|  
+|Write directive processors to transform your own data sources.|[Customizing T4 Text Transformation](../modeling/customizing-t4-text-transformation.md)|
 

@@ -1,68 +1,85 @@
 ---
-title: "IDebugProperty2::GetExtendedInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProperty2::GetExtendedInfo"
-helpviewer_keywords: 
-  - "IDebugProperty2::GetExtendedInfo"
+title: IDebugProperty2::GetExtendedInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProperty2::GetExtendedInfo
+helpviewer_keywords:
+- IDebugProperty2::GetExtendedInfo
 ms.assetid: 0c9c0b2b-7540-4424-adb5-fce7aa37a026
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugProperty2::GetExtendedInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e60212320ef6bcc5cc7fd658777c5d44797d292b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-プロパティの情報が拡張されます。  
+---
+# <a name="idebugproperty2getextendedinfo"></a>IDebugProperty2::GetExtendedInfo
+Gets extended information for the property.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetExtendedInfo (   
-   REFGUID* guidExtendedInfo,  
-   VARIANT* pExtendedInfo  
+HRESULT GetExtendedInfo (   
+   REFGUID* guidExtendedInfo,  
+   VARIANT* pExtendedInfo  
 );  
 ```  
   
-```c#  
-int GetExtendedInfo (   
-   ref Guid guidExtendedInfo,  
-   out object pExtendedInfo  
+```cs  
+int GetExtendedInfo (   
+   ref Guid guidExtendedInfo,  
+   out object pExtendedInfo  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `guidExtendedInfo`  
- \[入力\] 取得する拡張情報の種類を指定する GUID。  詳細については" 解説 " を参照してください。  
+ [in] GUID that determines the type of extended information to be retrieved. See Remarks for details.  
   
  `pExtendedInfo`  
- \[入力\] 拡張プロパティの情報を取得するために使用できる `VARIANT` \(C\+\+\) を返したりまたはオブジェクト \(C\#\)。  たとえばこのパラメーターは [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) のインターフェイスに対して照会できる `IUnknown` のインターフェイスを返すことがあります。  詳細については" 解説 " を参照してください。  
+ [out] Returns a `VARIANT` (C++) or object (C#) that can be used to retrieve the extended property information. For example, this parameter might return an `IUnknown` interface that can be queried for an [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) interface. See Remarks for details.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  取得する拡張 `S_GETEXTENDEDINFO_NO_EXTENDEDINFO` 情報がない場合はを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns error code. Returns `S_GETEXTENDEDINFO_NO_EXTENDEDINFO` if there is no extended information to retrieve.  
   
-## 解説  
- このメソッドは [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) のメソッドを呼び出して取得にある情報を取得するために使用されます。  
+## <a name="remarks"></a>Remarks  
+ This method exists for the purpose of retrieving information that does not lend itself to being retrieved by calling the [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) method.  
   
- 次の GUID はその名前がアセンブリでは使用できないためこのメソッドで認識されます \(GUID 値はC\# に指定されます。  追加の GUID は内部で使用するために作成できます。  
+ The following GUIDs are typically recognized by this method (the GUID values are specified for C# since the name is not available in any assembly). Additional GUIDs can be created for internal use.  
   
-|名前|GUID|Description|  
-|--------|----------|-----------------|  
-|guidDocument|{} 3f98de84\-fee9\-11d0\-b47f\-00a0244a1dd2|ドキュメントに `IUnknown` のインターフェイスを返します。  通常[IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) のインターフェイスは `IUnknown`このインターフェイスから取得できます。|  
-|guidCodeContext|{} e2fc65e\-56ce\-11d1\-b528\-00aax004a8797|ドキュメントのコンテキストに `IUnknown` のインターフェイスを返します。  通常[IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) のインターフェイスは `IUnknown`このインターフェイスから取得できます。|  
-|guidCustomViewerSupported|{} d9c9da31\-ffbe\-4eeb\-9186\-23121e3c088c|文字列を通常の式エバリュエーターで実行するカスタム ビューアーの CLSID 返します。|  
-|guidExtendedInfoSlot|{} 6df235ad\-82c6\-4292\-9c97\-7389770bc42f|このプロパティがマネージ コードのローカル アドレスを表す 32 ビットのスロット数を表す数値を返します。|  
-|guidExtendedInfoSignature|{} b5fb6d46\-f805\-417f\-96a3\-8ba737073ffd|変数の定義にプロパティ オブジェクトに関連付けられた文字列を返します。|  
+|Name|GUID|Description|  
+|----------|----------|-----------------|  
+|guidDocument|{3f98de84-fee9-11d0-b47f-00a0244a1dd2}|Returns an `IUnknown` interface to the document. Typically, the [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) interface can be obtained from this `IUnknown` interface.|  
+|guidCodeContext|{e2fc65e-56ce-11d1-b528-00aax004a8797}|Returns an `IUnknown` interface to the document context. Typically, the [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) interface can be obtained from this `IUnknown` interface.|  
+|guidCustomViewerSupported|{d9c9da31-ffbe-4eeb-9186-23121e3c088c}|Returns a string containing the CLSID of a custom viewer, typically implemented by an expression evaluator.|  
+|guidExtendedInfoSlot|{6df235ad-82c6-4292-9c97-7389770bc42f}|Returns a 32-bit number representing the desired slot number if this property represents a managed code local address.|  
+|guidExtendedInfoSignature|{b5fb6d46-f805-417f-96a3-8ba737073ffd}|Returns a string containing the signature of the variable associated with the property object.|  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)   
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

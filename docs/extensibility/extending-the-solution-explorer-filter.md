@@ -1,39 +1,56 @@
 ---
-title: "ソリューション エクスプ ローラーのフィルターを拡張します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ソリューション エクスプ ローラーを拡張します。"
-  - "プロジェクトおよびソリューションの機能拡張 [Visual Studio]"
+title: Extending the Solution Explorer Filter | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Solution Explorer, extending
+- extensibility [Visual Studio], projects and solutions
 ms.assetid: df976c76-27ec-4f00-ab6d-a26a745dc6c7
 caps.latest.revision: 25
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# ソリューション エクスプ ローラーのフィルターを拡張します。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 17da2e6f18c9528e861013e13f1192571aa59d7e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-拡張する **ソリューション エクスプ ローラー** と別のファイルを非表示機能をフィルター処理します。 たとえば、c\# クラス ファクトリ内のファイルのみを表示するフィルターを作成することができます、 **ソリューション エクスプ ローラー**, についても説明してください。  
+---
+# <a name="extending-the-solution-explorer-filter"></a>Extending the Solution Explorer Filter
+You can extend **Solution Explorer** filter functionality to show or hide different files. For example, you can create a filter that shows only C# class factory files in the **Solution Explorer**, as this walkthrough demonstrates.  
   
-## 必須コンポーネント  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-### Visual Studio パッケージ プロジェクトを作成します。  
+### <a name="create-a-visual-studio-package-project"></a>Create a Visual Studio Package Project  
   
-1.  という名前の VSIX プロジェクトを作成する `FileFilter`です。 という名前のカスタム コマンド項目テンプレートを追加 **FileFilter**します。 詳細については、「[メニュー コマンドを使用して拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)」を参照してください。  
+1.  Create a VSIX project named `FileFilter`. Add a custom command item template named **FileFilter**. For more information, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
-2.  参照を追加 `System.ComponentModel.Composition` と `Microsoft.VisualStudio.Utilities`です。  
+2.  Add a reference to `System.ComponentModel.Composition` and `Microsoft.VisualStudio.Utilities`.  
   
-3.  表示されるメニュー コマンド、 **ソリューション エクスプ ローラー** ツールバーです。 FileFilterPackage.vsct ファイルを開きます。  
+3.  Make the menu command appear on the **Solution Explorer** toolbar. Open the FileFilterPackage.vsct file.  
   
-4.  変更、 `<Button>` には、次のブロック。  
+4.  Change the `<Button>` block to the following:  
   
     ```xml  
     <Button guid="guidFileFilterPackageCmdSet" id="FileFilterId" priority="0x0400" type="Button">  
@@ -45,36 +62,36 @@ caps.handback.revision: 25
     </Button>  
     ```  
   
-### マニフェスト ファイルを更新します。  
+### <a name="update-the-manifest-file"></a>Update the Manifest File  
   
-1.  Source.extension.vsixmanifest ファイルでは、MEF コンポーネントである資産を追加します。  
+1.  In the source.extension.vsixmanifest file, add an asset that is a MEF component.  
   
-2.  **\[アセット\]** タブで **\[新規作成\]** をクリックします。  
+2.  On the **Assets** tab, choose the **New** button.  
   
-3.  **型** フィールドで、選択 **Microsoft.VisualStudio.MefComponent**します。  
+3.  In the **Type** field, choose **Microsoft.VisualStudio.MefComponent**.  
   
-4.  **ソース** フィールドで、選択 **現在のソリューション内のプロジェクト**します。  
+4.  In the **Source** field, choose **A project in current solution**.  
   
-5.  **プロジェクト** フィールドで、選択 **FileFilter**, を選択し、 **OK** \] ボタンをクリックします。  
+5.  In the **Project** field, choose **FileFilter**, and then choose the **OK** button.  
   
-### フィルターのコードを追加します。  
+### <a name="add-the-filter-code"></a>Add the Filter Code  
   
-1.  いくつかの Guid を FileFilterPackageGuids.cs ファイルに追加します。  
+1.  Add some GUIDs to the FileFilterPackageGuids.cs file:  
   
-    ```c#  
+    ```cs  
     public const string guidFileFilterPackageCmdSetString = "00000000-0000-0000-0000-00000000"; // get your GUID from the .vsct file  
     public const int FileFilterId = 0x100;  
     ```  
   
-2.  FileNameFilter.cs をという名前のファイル プロジェクトにクラス ファイルを追加します。  
+2.  Add a class file to the FileFilter project named FileNameFilter.cs.  
   
-3.  空の名前空間と空のクラスを次のコードに置き換えます。  
+3.  Replace the empty namespace and the empty class with the code below.  
   
-     `Task<IReadOnlyObservableSet> GetIncludedItemsAsync(IEnumerable<IVsHierarchyItem rootItems)` メソッドは、ソリューションのルートを含むコレクションを受け取ります \(`rootItems`\) し、フィルターに含まれる項目のコレクションを返します。  
+     The `Task<IReadOnlyObservableSet> GetIncludedItemsAsync(IEnumerable<IVsHierarchyItem rootItems)` method takes the collection that contains the root of the solution (`rootItems`) and returns the collection of items to be included in the filter.  
   
-     `ShouldIncludeInFilter` メソッド内の項目をフィルター処理、 **ソリューション エクスプ ローラー** を指定するという条件に基づく階層です。  
+     The `ShouldIncludeInFilter` method filters the items in the **Solution Explorer** hierarchy based on the condition that you specify.  
   
-    ```c#  
+    ```cs  
     using System;  
     using System.Collections.Generic;  
     using System.ComponentModel.Composition;  
@@ -159,9 +176,9 @@ caps.handback.revision: 25
   
     ```  
   
-4.  FileFilter.cs では、FileFilter コンス トラクターからコマンドの配置と処理のコードを削除します。 結果は、次のようになります。  
+4.  In FileFilter.cs, remove the command placement and handling code from the FileFilter constructor. The result should look like this:  
   
-    ```c#  
+    ```cs  
     private FileFilter(Package package)  
     {  
         if (package == null)  
@@ -173,11 +190,11 @@ caps.handback.revision: 25
     }  
     ```  
   
-     ShowMessageBox\(\) メソッドを削除します。  
+     Remove the ShowMessageBox() method as well.  
   
-5.  FileFilterPackage、cs では、次のように Initialize\(\) メソッドのコードを置き換えます。  
+5.  In FileFilterPackage,cs, replace the code in the Initialize() method with the following:  
   
-    ```c#  
+    ```cs  
     protected override void Initialize()  
     {  
         Debug.WriteLine (string.Format(CultureInfo.CurrentCulture, "Entering Initialize() of: {0}", this.ToString()));  
@@ -185,12 +202,12 @@ caps.handback.revision: 25
     }  
     ```  
   
-### コードをテストします。  
+### <a name="test-your-code"></a>Test Your Code  
   
-1.  プロジェクトをビルドして実行します。 Visual Studio の 2 つ目のインスタンスが表示されます。 これは、実験用インスタンスと呼ばれます。  
+1.  Build and run the project. A second instance of Visual Studio appears. This is called the experimental instance.  
   
-2.  Visual Studio の実験用インスタンスでは、c\# プロジェクトを開きます。  
+2.  In the experimental instance of Visual Studio, open a C# project.  
   
-3.  ソリューション エクスプ ローラーのツールバーに追加したボタンを探します。 左から 4 番目のボタンができます。  
+3.  Look for the button you added on the Solution Explorer toolbar. It should be the fourth button from the left.  
   
-4.  ボタンをクリックすると、すべてのファイルをフィルター処理する必要があり、「すべての項目がフィルター選択されたビューからです」が表示されます。 ソリューション エクスプ ローラー。
+4.  When you click the button, all the files should be filtered out, and you should see "All items have been filtered from view." in the Solution Explorer.

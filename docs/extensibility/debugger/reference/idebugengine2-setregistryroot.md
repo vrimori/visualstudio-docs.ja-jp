@@ -1,51 +1,68 @@
 ---
-title: "IDebugEngine2::SetRegistryRoot | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine2::SetRegistryRoot"
-helpviewer_keywords: 
-  - "IDebugEngine2::SetRegistryRoot"
+title: IDebugEngine2::SetRegistryRoot | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngine2::SetRegistryRoot
+helpviewer_keywords:
+- IDebugEngine2::SetRegistryRoot
 ms.assetid: d0d81202-8a4a-4bc3-b297-30a047c5ec60
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugEngine2::SetRegistryRoot
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e6d541283d3655ec3a57f1aa549726d95d041df6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-レジストリ ルートしてデバッグ エンジンを設定します \(DE\)。  
+---
+# <a name="idebugengine2setregistryroot"></a>IDebugEngine2::SetRegistryRoot
+Sets the registry root for the debug engine (DE).  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT SetRegistryRoot(   
-   LPCOLESTR pszRegistryRoot  
+HRESULT SetRegistryRoot(   
+   LPCOLESTR pszRegistryRoot  
 );  
 ```  
   
-```c#  
-int SetRegistryRoot(   
-   string pszRegistryRoot  
+```cs  
+int SetRegistryRoot(   
+   string pszRegistryRoot  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pszRegistryRoot`  
- \[入力\] 使用するレジストリ ルート。  
+ [in] The registry root to use.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- このメソッドは [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] がレジストリ設定を表示するように指定しますが別のレジストリ ルートを指定できるようにします ; たとえば「 HKEY\_LOCAL\_MACHINE \\ SOFTWARE \\ Microsoft \\ VisualStudio \\ 8.0Exp 」。  
+## <a name="remarks"></a>Remarks  
+ This method allows [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] to specify an alternate registry root that the DE should use to obtain registry settings; for example, "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp".  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

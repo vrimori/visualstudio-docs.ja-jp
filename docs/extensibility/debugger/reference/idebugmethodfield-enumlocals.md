@@ -1,60 +1,77 @@
 ---
-title: "IDebugMethodField::EnumLocals | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMethodField::EnumLocals"
-helpviewer_keywords: 
-  - "IDebugMethodField::EnumLocals メソッド"
+title: IDebugMethodField::EnumLocals | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugMethodField::EnumLocals
+helpviewer_keywords:
+- IDebugMethodField::EnumLocals method
 ms.assetid: b0456a6d-2b96-49e2-a871-516571b4f6a5
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugMethodField::EnumLocals
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f7c9df9c7408d1fdfdb403e09c7515915d530909
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-メソッドの選択されたローカル変数の列挙子を作成します。  
+---
+# <a name="idebugmethodfieldenumlocals"></a>IDebugMethodField::EnumLocals
+Creates an enumerator for selected local variables of the method.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT EnumLocals(   
-   IDebugAddress*     pAddress,  
-   IEnumDebugFields** ppLocals  
+HRESULT EnumLocals(   
+   IDebugAddress*     pAddress,  
+   IEnumDebugFields** ppLocals  
 );  
 ```  
   
-```c#  
+```cs  
 int EnumLocals(  
-   IDebugAddress        pAddress,   
-   out IEnumDebugFields ppLocals  
+   IDebugAddress        pAddress,   
+   out IEnumDebugFields ppLocals  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pAddress`  
- \[入力\] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) を表すオブジェクトを取得するローカル スコープまたはコンテキストを選択するデバッグのアドレス。  
+ [in] An [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) object representing the debug address that selects the context or scope from which to get the locals.  
   
  `ppLocals`  
- \[入力\] [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) にローカルの一覧を返します ; ローカルである場合null 値を返します。  
+ [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object representing a list of the locals; otherwise, returns a null value if there are no locals.  
   
-## 戻り値  
- S\_FALSEは S\_OK または成功している場合を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK or returns S_FALSE if there are no locals. Otherwise, returns an error code.  
   
-## 解説  
- 特定のデバッグのアドレスを含むブロック内で定義されている変数のみを列挙します。  すべてのコンパイラが生成したローカルを含むすべてのローカルに応じて[EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) のメソッドを呼び出します。  
+## <a name="remarks"></a>Remarks  
+ Only the variables defined within the block that contains the given debug address are enumerated. If all locals including any compiler-generated locals are needed, call the [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) method.  
   
- メソッドのコンテキストまたはスコープは複数のブロックを含めることができます。  たとえば次の考案されているメソッドは 3 個の範囲は2 種類の内部ブロックとメソッド本体自体が含まれています。  
+ A method can contain multiple scoping contexts or blocks. For example, the following contrived method contains three scopes, the two inner blocks and the method body itself.  
   
-```c#  
+```cs  
 public void func(int index)  
 {  
     // Method body scope  
@@ -72,9 +89,9 @@ public void func(int index)
 }  
 ```  
   
- [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) のオブジェクトは `func` のメソッド自体を表します。  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) の `EnumLocals` のメソッドを呼び出します `Inner Scope 1` のアドレスの戻り値に `temp1` の変数を含む列挙型などを設定します。  
+ The [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) object represents the `func` method itself. Calling the `EnumLocals` method with an [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) set to the `Inner Scope 1` address returns an enumeration containing the `temp1` variable, for example.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   

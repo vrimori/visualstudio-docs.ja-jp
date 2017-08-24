@@ -1,5 +1,5 @@
 ---
-title: "コード スニペット (レガシ) がインストールされている一覧の取得 |Microsoft ドキュメント"
+title: Getting a List of Installed Code Snippets (Legacy) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,24 +30,25 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: d5bc147592bfc36247c35f23ac2885055d096af3
-ms.openlocfilehash: d49d5eb1a6a2e045d477dd03fba9372123cae83a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 51bac52e28b37818b45fd63d3c30bebb7e8d8d35
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>チュートリアル: インストールされているコード スニペット (従来の実装) の一覧を取得します。
-コード スニペットは、(これにより、インストールされているコード スニペットの一覧を選択) メニューのコマンドを使用して、または、ソース バッファーを挿入するコードの IntelliSense コンプリート リストから、スニペット ショートカットを選択します。  
+# <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>Walkthrough: Getting a List of Installed Code Snippets (Legacy Implementation)
+A code snippet is a piece of code that can be inserted into the source buffer either with a menu command (which allows choosing among a list of installed code snippets) or by selecting a snippet shortcut from an IntelliSense completion list.  
   
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A>メソッドは、特定の言語の GUID のすべてのコード スニペットを取得します</xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A>。 これらのスニペットのショートカットは、IntelliSense コンプリート リストに挿入できます。  
+ The <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A> method gets all code snippets for a specific language GUID. The shortcuts for those snippets can be inserted into an IntelliSense completion list.  
   
- 参照してください[レガシ言語サービスでのコード スニペットのサポート](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md)の詳細については、パッケージの管理対象のフレームワーク (MPF) 言語サービスでのコード スニペットの実装です。  
+ See [Support for Code Snippets in a Legacy Language Service](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md) for details about implementing code snippets in a managed package framework (MPF) language service.  
   
-### <a name="to-retrieve-a-list-of-code-snippets"></a>コード スニペットの一覧を取得するには  
+### <a name="to-retrieve-a-list-of-code-snippets"></a>To retrieve a list of code snippets  
   
-1.  次のコードでは、特定の言語のコード スニペットの一覧を取得する方法を示します。 配列で、結果が格納されている<xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion>構造体</xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion>。 このメソッドは、静的な<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>取得するメソッド、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager>からインターフェイス、<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>サービス</xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager></xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager></xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>。 ただし、VSPackage と呼び出しに指定されたサービス プロバイダー使用も、<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>メソッド</xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>。  
+1.  The following code shows how to get a list of code snippets for a given language. The results are stored in an array of <xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion> structures. This method uses the static <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> method to get the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> interface from the <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> service. However, you can also use the service provider given to your VSPackage and call the <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> method.  
   
-    ```c#  
+    ```cs  
     using System;  
     using System.Collections;  
     using System.Runtime.InteropServices;  
@@ -118,14 +119,14 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-### <a name="to-call-the-getsnippets-method"></a>GetSnippets メソッドを呼び出す  
+### <a name="to-call-the-getsnippets-method"></a>To call the GetSnippets method  
   
-1.  次のメソッドを呼び出す方法を示しています、`GetSnippets`解析操作の完了時のメソッドです。 <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A> <xref:Microsoft.VisualStudio.Package.ParseReason>。</xref:Microsoft.VisualStudio.Package.ParseReason>の理由で起動された解析操作の後に呼び出されます</xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A>  
+1.  The following method shows how to call the `GetSnippets` method at the completion of a parsing operation. The <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A> method is called after a parsing operation that was started with the reason <xref:Microsoft.VisualStudio.Package.ParseReason>.  
   
 > [!NOTE]
->  `expansionsList`パフォーマンス上の理由からキャッシュされたリストの配列。 一覧には、言語サービスが停止して、再読み込みするまでスニペットに変更は反映されません (たとえばを停止し、再起動[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)])。  
+>  The `expansionsList` array listis cached for performance reasons. Changes to the snippets are not reflected in the list until the language service is stopped and reloaded (for example, by stopping and restarting [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]).  
   
-```c#  
+```cs  
 class TestLanguageService : LanguageService  
 {  
     private ArrayList expansionsList;  
@@ -142,15 +143,15 @@ class TestLanguageService : LanguageService
 }  
 ```  
   
-### <a name="to-use-the-snippet-information"></a>スニペットの情報を使用するには  
+### <a name="to-use-the-snippet-information"></a>To use the snippet information  
   
-1.  次のコードによって返されるスニペットの情報を使用する方法を示しています、`GetSnippets`メソッドです。 `AddSnippets`解析理由コード スニペットの一覧を設定するために使用する応答のパーサーから呼び出されます。 これは、後に実行を最初に、完全な解析が行われています。  
+1.  The following code shows how to use the snippet information returned by the `GetSnippets` method. The `AddSnippets` method is called from the parser in response to any parse reason that is used to populate a list of code snippets. This should take place after the full parse has been done for the first time.  
   
-     `AddDeclaration`メソッドは、補完リストに後で選択されている宣言の一覧を作成します。  
+     The `AddDeclaration` method builds a list of declarations that is later displayed in a completion list.  
   
-     `TestDeclaration`クラスには、宣言の型と同様に、コンプリート リストに表示できるすべての情報が含まれています。  
+     The `TestDeclaration` class contains all the information that can be displayed in a completion list as well as the type of declaration.  
   
-    ```c#  
+    ```cs  
     class TestAuthoringScope : AuthoringScope  
     {  
         public void AddDeclarations(TestDeclaration declaration)  
@@ -193,5 +194,5 @@ class TestLanguageService : LanguageService
   
     ```  
   
-## <a name="see-also"></a>関連項目  
- [従来の言語サービスでのコード スニペットのサポート](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md)
+## <a name="see-also"></a>See Also  
+ [Support for Code Snippets in a Legacy Language Service](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md)

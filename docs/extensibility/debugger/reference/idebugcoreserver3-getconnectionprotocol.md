@@ -1,5 +1,5 @@
 ---
-title: "IDebugCoreServer3::GetConnectionProtocol |Microsoft ドキュメント"
+title: IDebugCoreServer3::GetConnectionProtocol | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: da90a4143297af71ae85f10b10ca31c66f617e17
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 78e1ad6e35ef53bb2ee1a19af6fbfe7c3a045382
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="idebugcoreserver3getconnectionprotocol"></a>IDebugCoreServer3::GetConnectionProtocol
-サーバーとデバッグ パッケージ間の通信に使用されているプロトコルを示す値を返します。  
+# IDebugCoreServer3::GetConnectionProtocol
+Returns a value indicating the protocol that is being used to communicate between the server and the debug package.  
   
-## <a name="syntax"></a>構文  
+## Syntax  
   
 ```cpp#  
 HRESULT GetConnectionProtocol(  
@@ -47,19 +48,19 @@ HRESULT GetConnectionProtocol(
 );  
 ```  
   
-```c#  
+```cs  
 int GetConnectionProtocol(  
    CONNECTION_PROTOCOL[] pProtocol  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### Parameters  
  `pProtocol`  
- [out]値のいずれかを返す、 [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md)列挙します。  
+ [out] Returns one of the values from the [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) enumeration.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## Return Value  
+ If successful, returns `S_OK`; otherwise, returns error code.  
   
-## <a name="see-also"></a>関連項目  
+## See Also  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md)

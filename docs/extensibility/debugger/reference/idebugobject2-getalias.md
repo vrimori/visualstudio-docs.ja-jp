@@ -1,5 +1,5 @@
 ---
-title: "IDebugObject2::GetAlias |Microsoft ドキュメント"
+title: IDebugObject2::GetAlias | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7658dcff9f51f6f34d43b98869c038c926c59be2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 5119711d8479004f706c15b009d8780d55d4c857
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugobject2getalias"></a>IDebugObject2::GetAlias
-存在する場合は、このオブジェクトに関連付けられているエイリアスを取得します。  
+Gets the alias associated with this object, if any.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetAlias(  
@@ -47,22 +48,22 @@ HRESULT GetAlias(
 );  
 ```  
   
-```c#  
+```cs  
 int GetAlias(  
    out IDebugAlias ppAlias  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppAlias`  
- [out]返します、 [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)このオブジェクトの別名を表すオブジェクト。 それ以外の場合、null 値が返されます。  
+ [out] Returns an [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) object representing the alias for this object; otherwise, returns a null value.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- 呼び出しでオブジェクトの別名を作成、 [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ An alias for an object is created with a call to the [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) method.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

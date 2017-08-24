@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する | Microsoft Docs"
+title: Build apps with native UI using Xamarin in Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,101 +28,101 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 48b5010ae161b2ce6ad22513afbca4a8e5fe82d3
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ab0564672a2d93a7065cdae1f662642f49cc4dbc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
-「[セットアップとインストール](../cross-platform/setup-and-install.md)」と「[Xamarin 環境を検証する](../cross-platform/verify-your-xamarin-environment.md)」の手順を完了しましたが、このチュートリアルでは、ネイティブ UI レイヤーを備えた基本的な Xamarin アプリ (下図) を作成する方法を示します。 ネイティブ UI を使用すると、共有コードはポータブル クラス ライブラリ (PCL) に存在し、個別のプラットフォーム プロジェクトに UI 定義が含まれます。  
+# <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Build apps with native UI using Xamarin in Visual Studio
+Once you've done the steps in [Setup and install](../cross-platform/setup-and-install.md) and [Verify your Xamarin environment](../cross-platform/verify-your-xamarin-environment.md), this walkthrough shows you how to build a basic Xamarin app (shown below) with native UI layers. With native UI, shared code resides in a portable class library (PCL) and the individual platform projects contain the UI definitions.  
   
- ![Android と Windows Phone 用 Xamarin アプリ](~/cross-platform/media/cross-plat-xamarin-build-1.png "Cross-Plat Xamarin Build 1")  
+ ![Xamarin app on Android and Windows Phone](../cross-platform/media/cross-plat-xamarin-build-1.png "Cross-Plat Xamarin Build 1")  
   
- 作成するには次の作業を行います。  
+ You'll do these things to build it:  
   
--   [ソリューションの設定](#solution)  
+-   [Set up your solution](#solution)  
   
--   [共有データ サービス コードの記述](#dataservice)  
+-   [Write shared data service code](#dataservice)  
   
--   [Android 用 UI の設計](#Android)  
+-   [Design UI for Android](#Android)  
   
--   [Windows Phone 用 UI の設計](#Windows)  
+-   [Design UI for Windows Phone](#Windows)  
   
--   [次のステップ](#next)  
+-   [Next steps](#next)  
   
 > [!TIP]
->  このプロジェクトの完全なソース コードは [GitHub の mobile-samples リポジトリ](https://github.com/xamarin/mobile-samples/tree/master/Weather)にあります。
+>  You can find the complete source code for this project in the [mobile-samples repository on GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather).
 >
->   問題やエラーが発生した場合は、[forums.xamarin.com](http://forums.xamarin.com) に質問を投稿してください。 Xamarin に必要な最新の SDK に更新することで多くのエラーを解決できます。エラーについては、[Xamarin リリース ノート](https://developer.xamarin.com/releases/)でプラットフォームごとの説明を参照してください。    
+>   If you have difficulties or run into errors, please post questions on [forums.xamarin.com](http://forums.xamarin.com). Many errors can be resolved by updating to the latest SDKs required by Xamarin, which are described in the  [Xamarin Release Notes](https://developer.xamarin.com/releases/) for each platform.    
   
 > [!NOTE]
->  Xamarin の開発者向けドキュメントには、以下の一覧に示すクイック スタートと詳細情報の両方のセクションで、いくつかのチュートリアルも用意されています。 これらのすべてのページで Visual Studio 固有のチュートリアルを表示するには、必ずページの右上で "Visual Studio" を選びます。  
+>  Xamarin's developer documentation also offers several walkthroughs with both Quickstart and Deep Dive sections as listed below. On all these pages, be sure that "Visual Studio" is selected in the upper right of the page to see Visual Studio-specific walkthroughs.  
 >   
->  -   ネイティブ UI を使用した Xamarin アプリ:  
+>  -   Xamarin apps with native UI:  
 >   
->      -   [Hello, Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) (1 つの画面を使用した簡単なアプリ)  
->     -   [Hello, Android マルチスクリーン](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) (画面間でナビゲーションを使用したアプリ)  
->     -   [Android フラグメント チュートリアル](http://developer.xamarin.com/guides/android/platform_features/fragments/fragments_walkthrough/) (特に、マスター/詳細画面で使用)  
+>      -   [Hello, Android](https://developer.xamarin.com/guides/android/getting_started/hello,android/) (simple app with one screen)  
+>     -   [Hello, Android multiscreen](https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/) (app with navigation between screens)  
+>     -   [Android Fragments Walkthrough](http://developer.xamarin.com/guides/android/platform_features/fragments/fragments_walkthrough/) (used for master/detail screens, among other things)  
 >     -   [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)  
->     -   [Hello, iOS マルチスクリーン](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)  
-> -   Xamarin.Forms (共有 UI) を使用した Xamarin アプリ  
+>     -   [Hello, iOS Multiscreen](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS_multiscreen/)  
+> -   Xamarin apps with Xamarin.Forms (shared UI)  
 >   
 >      -   [Hello, Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)  
->     -   [Hello, Xamarin.Forms マルチスクリーン](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)  
+>     -   [Hello, Xamarin.Forms Multiscreen](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)  
   
-##  <a name="solution"></a>ソリューションの設定  
- 次の手順では、ネイティブ UI を使用した、共有コードの PCL と 2 つの追加された NuGet パッケージを含む Xamarin ソリューションを作成します。  
+##  <a name="solution"></a> Set up your solution  
+ These steps create a Xamarin solution with native UI that contains a PCL for shared code and two added NuGet packages.  
   
-1.  Visual Studio では、新しい **[空のアプリ (ネイティブ ポータブル)]** ソリューションを作成し、名前を **WeatherApp** とします。 このテンプレートは、検索フィールドに「**ネイティブ ポータブル**」と入力することによって、最も簡単に見つけることができます。  
+1.  In Visual Studio, create a new **Blank App (Native Portable)** solution and name it **WeatherApp**. You can find this template most easily by entering **Native Portable** into the search field.  
   
-     これがない場合は、Xamarin をインストールするか、Visual Studio 2015 の機能を有効にする必要があります。「[セットアップとインストール](../cross-platform/setup-and-install.md)」を参照してください。  
+     If it's not there, you might have to install Xamarin or enable the Visual Studio 2015 feature, see [Setup and install](../cross-platform/setup-and-install.md).  
   
-2.  ソリューションを作成するために [OK] をクリックすると、いくつかの個別のプロジェクトが表示されます。  
+2.  After clicking OK to create the solution, you'll have a number of individual projects:  
   
-    -   **WeatherApp (ポータブル)**: Xamarin.Forms を使用している共通のビジネス ロジックと UI コードを含む、プラットフォームで共有されるコードの記述先である PCL。  
+    -   **WeatherApp (Portable)**: the PCL where you'll write code that is shared across platforms, including common business logic and UI code using with Xamarin.Forms.  
   
-    -   **WeatherApp.Droid**: ネイティブの Android コードを含むプロジェクト。 これは、既定のスタートアップ プロジェクトとして設定されます。  
+    -   **WeatherApp.Droid**: the project that contains the native Android code. This is set as the default startup project.  
   
-    -   **WeatherApp.iOS**: ネイティブの iOS コードを含むプロジェクト。  
+    -   **WeatherApp.iOS**: the project that contains the native iOS code.  
   
-    -   **WeatherApp.WinPhone (Windows Phone 8.1)**: ネイティブの Windows Phone コードを含むプロジェクト。  
+    -   **WeatherApp.WinPhone (Windows Phone 8.1)**: the project that contains the native Windows Phone code.  
   
-     各ネイティブ プロジェクト内では、対応するプラットフォームのネイティブ デザイナーにアクセスでき、プラットフォーム固有の画面を実装できます。  
+     Within each native project you have access to the native designer for the corresponding platform and can implement platform specific screens.  
   
-3.  気象データ サービスから取得した情報を処理するのに使用する **Newtonsoft.Json** と NuGet パッケージを PCL プロジェクトに追加します。  
+3.  Add the **Newtonsoft.Json** and NuGet package to the PCL project, which you'll use to process information retrieved from a weather data service:  
   
-    -   ソリューション エクスプローラーで **[ソリューション 'WeatherApp']** を右クリックし、**[ソリューションの NuGet パッケージの管理]** を選択します。  
+    -   Right-click **Solution 'WeatherApp'** in Solution explorer and select **Manage NuGet Packages for Solution...**.  
   
-         NuGet のウィンドウで **[参照]** タブを選択し、**Newtonsoft** を検索します。  
+         In the NuGet window, select the **Browse** tab and search for **Newtonsoft**.  
   
-    -   **Newtonsoft.Json**を選択します。  
+    -   Select **Newtonsoft.Json**.  
   
-    -   ウィンドウの右側で、**WeatherApp** プロジェクトをチェックします (パッケージをインストールする必要があるプロジェクトは、このプロジェクトだけです)。  
+    -   On the right side of the window, check the **WeatherApp** project (this is the only project in which you need to install the package).  
   
-    -   **[バージョン]** フィールドが **最新の安定した** バージョンに設定されていることを確認してください。  
+    -   Ensure the **Version** field is set to the **Latest stable** version.  
   
-    -   **[インストール]**をクリックします。  
+    -   Click **Install**.  
   
-    -   ![Newtonsoft.Json NuGet パッケージの検索とインストール](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")  
+    -   ![Locating and installing the Newtonsoft.Json NuGet package](../cross-platform/media/crossplat-xamarin-formsguide-5.png "CrossPlat Xamarin FormsGuide 5")  
   
-4.  手順 3 を繰り返して、**Microsoft.Net.Http** パッケージを検索し、インストールします。  
+4.  Repeat step 3 to find and install the **Microsoft.Net.Http** package.  
   
-5.  ソリューションをビルドし、ビルド エラーがないことを確認します。  
+5.  Build your solution and verify that there are no build errors.  
   
-##  <a name="dataservice"></a> 共有データ サービス コードの記述  
- **WeatherApp (ポータブル)** プロジェクトは、すべてのプラットフォームで共有されているポータブル クラス ライブラリ (PCL) 用のコードを記述する場所です。 PCL は、iOS、Android、Windows Phone 用のプロジェクトでビルドされたアプリ パッケージに自動的に含まれます。  
+##  <a name="dataservice"></a> Write shared data service code  
+ The **WeatherApp (Portable)** project is where you'll write code for the portable class library (PCL) that's shared across all platforms. The PCL is automatically included in the app packages built by the iOS, Android, and Windows Phone projects.  
   
- 次の手順では、PCL にコードを追加して、気象サービスからのデータにアクセスし、データを格納します。  
+ The following steps then add code to the PCL to access and store data from that weather service:  
   
-1.  このサンプルを実行するには、まず [http://openweathermap.org/appid](http://openweathermap.org/appid)で無料 API キーを申し込む必要があります。  
+1.  To run this sample you must first sign up for a free API key at [http://openweathermap.org/appid](http://openweathermap.org/appid).  
   
-2.  **WeatherApp** プロジェクトを右クリックし、**[追加]、[クラス...]** の順に選択します。 **[新しい項目の追加]** ダイアログで、ファイルに **Weather.cs**という名前を指定します。 このクラスは、気象データ サービスからのデータを保存するときに使用します。  
+2.  Right-click the **WeatherApp** project and select **Add > Class...**. In the **Add New Item** dialog, name the file **Weather.cs**. You'll use this class to store data from the weather data service.  
   
-3.  **Weather.cs** の内容全体を次のコードで置き換えます。  
+3.  Replace the entire contents of **Weather.cs** with the following:  
   
-    ```c#  
+    ```cs  
     namespace WeatherApp  
     {  
         public class Weather  
@@ -151,11 +151,11 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-4.  別のクラスを **DataService.cs** という名前の PCL プロジェクトに追加します。これは、気象データ サービスからの JSON データを処理するのに使用します。  
+4.  Add another class to the PCL project named **DataService.cs** in which you'll use to process JSON data from the weather data service.  
   
-5.  **DataService.cs** の内容全体を次のコードで置き換えます。  
+5.  Replace the entire contents of **DataService.cs** with the following code:  
   
-    ```c#  
+    ```cs  
     using System.Threading.Tasks;  
     using Newtonsoft.Json;  
     using System.Net.Http;  
@@ -182,11 +182,11 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-6.  3 番目のクラスを、**Core** という名前の PCL に追加します。ここには、郵便番号を使用してクエリ文字列を生成し、気象データ サービスを呼び出した後に、**Weather** クラスのインスタンスを取り込むロジックなどの共有ビジネス ロジックを配置します。  
+6.  Add a third class to the PCL named **Core** where you'll put shared business logic, such as logic that forms a query string with a zip code, calls the weather data service, and populates an instance of the **Weather** class.  
   
-7.  **Core.cs** の内容を次のコードで置き換えます。  
+7.  Replace the contents of **Core.cs** with the following:  
   
-    ```c#  
+    ```cs  
     using System;  
     using System.Threading.Tasks;  
   
@@ -234,38 +234,38 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-8.  コード内の *YOUR KEY HERE* は、手順 1 で取得した API キーで置き換えます (キーを囲む引用符は必要です)。  
+8.  Replace *YOUR KEY HERE* in the code with the API key you obtained in step 1 (it still needs quotes around it).  
   
-9. PCL の MyClass.cs は使用しないので削除します。  
+9. Delete MyClass.cs in the PCL because we won't be using it.  
   
-10. **WeatherApp** PCL プロジェクトをビルドし、コードが正しいことを確認します。  
+10. Build the **WeatherApp** PCL project to make sure the code is correct.  
   
-##  <a name="Android"></a> Android 用 UI の設計  
- 次に、ユーザー インターフェイスを設計して共有コードに接続してから、アプリを実行します。  
+##  <a name="Android"></a> Design UI for Android  
+ Now, we'll design the user interface, connect it to your shared code, and then run the app.  
   
-### <a name="design-the-look-and-feel-of-your-app"></a>アプリの外観を設計する  
+### <a name="design-the-look-and-feel-of-your-app"></a>Design the look and feel of your app  
   
-1.  **ソリューション エクスプ ローラー**で、**[WeatherApp.Droid]**>**[リソース]**>**[レイアウト]** フォルダーを開き、**Main.axml** を開きます。 ビジュアル デザイナーでファイルが開きます。 (Java 関連のエラーが表示された場合は、この[ブログの投稿](http://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9)を参照してください。)  
-  
-    > [!TIP]
-    >  このプロジェクトには、他にも多くのファイルがあります。 それらの説明はこのトピックの範囲を超えていますが、Android プロジェクトの構造を詳細に知りたい場合は、xamarin.com で Hello Android のトピックにある「[Part 2 Deep Dive](http://developer.xamarin.com/guides/android/getting_started/hello,android/hello,android_deepdive/)」を参照してください。  
-  
-2.  デザイナーで表示される既定のボタンを選択し、削除します。  
-  
-3.  **[表示] > [その他のウィンドウ] > [ツールボックス]**を選択してツールボックスを開きます。  
-  
-4.  **[ツールボックス]**から、 **[相対レイアウト]** コントロールをデザイナーにドラッグします。 このコントロールは、他のコントロールの親コンテナーとして使用します。  
+1.  In **Solution Explorer**, expand the **WeatherApp.Droid**>**Resources**>**layout** folder and open **Main.axml**. This opens the file in the visual designer. (If a Java-related error appears, see this [blog post](http://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9).)  
   
     > [!TIP]
-    >  レイアウトが正しく表示されない場合は、ファイルを保存し、**[デザイン]** タブと **[ソース]** タブを切り替えて表示を更新します。  
+    >  There are many other files in the project. Exploring them is beyond the scope of this topic, but if you want to dive into the structure of an Android project a bit more, see [Part 2 Deep Dive](http://developer.xamarin.com/guides/android/getting_started/hello,android/hello,android_deepdive/) of the Hello Android topic on xamarin.com.  
   
-5.  **[プロパティ]** ウィンドウで、**background** プロパティ (スタイルのグループ) を `#545454` に設定します。  
+2.  Select and delete the default button that appears in the designer.  
   
-6.  **[ツールボックス]**から、 **[TextView]** コントロールを **[相対レイアウト]** コントロールにドラッグします。  
+3.  Open the Toolbox with **View > Other Windows > Toolbox**.  
   
-7.  **[プロパティ]** ウィンドウで、次のプロパティを設定します (注: [プロパティ] ウィンドウのツール バーにある並べ替えボタンを使用して、一覧をアルファベット順に並べ替えるとわかりやすくなります)。  
+4.  From the **Toolbox**, drag a **RelativeLayout** control onto the designer. You'll use this control as a parent container for other controls.  
   
-    |プロパティ|値|  
+    > [!TIP]
+    >  If at any time the layout doesn't seem to display correctly, save the file and switching between the **Design** and **Source** tabs to refresh.  
+  
+5.  In the **Properties** window, set the **background** property (in the Style group) to `#545454`.  
+  
+6.  From the **Toolbox**, drag a **TextView** control onto the **RelativeLayout** control.  
+  
+7.  In the **Properties** window, set these properties (note: it can help to sort the list alphabetically using the sort button in the Properties window toolbar):  
+  
+    |Property|Value|  
     |--------------|-----------|  
     |**text**|**Search by Zip Code**|  
     |**id**|`@+id/ZipCodeSearchLabel`|  
@@ -274,11 +274,11 @@ ms.lasthandoff: 05/13/2017
     |**textStyle**|`bold`|  
   
     > [!TIP]
-    >  選択可能な値のドロップダウン リストが表示されないプロパティが多いことに注意してください。  特定のプロパティにどのような文字列値を使用すべきなのか、推測しにくい場合があります。 情報が必要な場合は、 [R.attr](http://developer.android.com/reference/android/R.attr.html) クラスのページでプロパティの名前を検索してみてください。  
+    >  Notice that many properties don't contain a drop-down list of values that you can select.  It can be difficult to guess what string value to use for any given property. For suggestions, try searching for the name of a property in the [R.attr](http://developer.android.com/reference/android/R.attr.html) class page.  
     >   
-    >  また、クイック Web 検索を実行すると、他のユーザーが同じプロパティを使ったページ「 [http://stackoverflow.com/](http://stackoverflow.com/) 」が表示されることもよくあります。  
+    >  Also, a quick web search often leads to a page on [http://stackoverflow.com/](http://stackoverflow.com/) where others have used the same property.  
   
-     参考として、**[ソース]** ビューに切り替えると、この要素のコードが次のように表示されます。  
+     For reference, if you switch to **Source** view, you should see the following code for this element:  
   
     ```xml  
     <TextView  
@@ -293,18 +293,18 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-8.  **[ツールボックス]** から、**[TextView]** コントロールを **[RelativeLayout]** コントロールにドラッグして、ZipCodeSearchLabel コントロールの下に配置します。 このとき、新しいコントロールを既存のコントロールの端に合わせてドロップします。デザイナーを拡大表示すると操作しやすくなります。  
+8.  From the **Toolbox**, drag a **TextView** control onto the **RelativeLayout** control and position it below the ZipCodeSearchLabel control. You do this by dropping the new control on the appropriate edge of the existing control; it helps to zoom the designer in somewhat for this.  
   
-9. **[プロパティ]** ウィンドウで、次のプロパティを設定します。  
+9. In the **Properties** window, set these properties:  
   
-    |プロパティ|値|  
+    |Property|Value|  
     |--------------|-----------|  
-    |**テキスト**|**[郵便番号]**|  
-    |**ID**|`@+id/ZipCodeLabel`|  
+    |**text**|**Zip Code**|  
+    |**id**|`@+id/ZipCodeLabel`|  
     |**layout_marginLeft**|`10dp`|  
     |**layout_marginTop**|`5dp`|  
   
-     **[ソース]** ビューに表示されるコードは次のようになります。  
+     The code in **Source** view should look like this:  
   
     ```xml  
     <TextView  
@@ -317,16 +317,16 @@ ms.lasthandoff: 05/13/2017
         android:layout_marginLeft="10dp" />  
     ```  
   
-10. **[ツールボックス]** から **[Number]** コントロールを **[RelativeLayout]** にドラッグし、**[Zip Code]** ラベルの下に配置します。 その後、次のプロパティを設定します。  
+10. From the **Toolbox**, drag a **Number** control onto the **RelativeLayout**, position it below the **Zip Code** label. Then set the following properties:  
   
-    |プロパティ|値|  
+    |Property|Value|  
     |--------------|-----------|  
-    |**ID**|`@+id/zipCodeEntry`|  
+    |**id**|`@+id/zipCodeEntry`|  
     |**layout_marginLeft**|`10dp`|  
     |**layout_marginBottom**|`10dp`|  
     |**width**|`165dp`|  
   
-     コードは次のようになります。  
+     Again, the code:  
   
     ```xml  
     <EditText  
@@ -340,12 +340,12 @@ ms.lasthandoff: 05/13/2017
         android:width="165dp" />  
     ```  
   
-11. **[ツールボックス]** から、**[Button]** を **[RelativeLayout]** コントロールにドラッグして、[zipCodeEntry] コントロールの右に配置します。 次に、以下のプロパティを設定します。  
+11. From the **Toolbox**, drag a **Button** onto the **RelativeLayout** control and position it to the right of the zipCodeEntry control. Then set these properties:  
   
-    |プロパティ|値|  
+    |Property|Value|  
     |--------------|-----------|  
-    |**ID**|`@+id/weatherBtn`|  
-    |**テキスト**|**Get Weather**|  
+    |**id**|`@+id/weatherBtn`|  
+    |**text**|**Get Weather**|  
     |**layout_marginLeft**|`20dp`|  
     |**layout_alignBottom**|`@id/zipCodeEntry`|  
     |**width**|`165dp`|  
@@ -361,7 +361,7 @@ ms.lasthandoff: 05/13/2017
         android:width="165dp" />  
     ```  
   
-12. 以上で、Android デザイナーを使用して基本的な UI を構築するための知識は十分です。 ページの .asxml ファイルにマークアップを直接追加して UI を構築することもできます。 その方法で残りの UI を構築するには、デザイナーの [ソース] ビューに切り替えて、次のマークアップを `</RelativeLayout>` タグの*下*に貼り付けます (つまり、これらの要素は ReleativeLayout に含まれません)。  
+12. You now have enough experience to build a basic UI by using the Android designer. You can also build a UI by adding markup directly to the .asxml file of the page. To build the rest of the UI that way, switch to Source view in the designer, then past the following markup *beneath* the `</RelativeLayout>` tag (yes, that's beneath the tag...these elements are not contained in the ReleativeLayout).  
   
     ```xml  
     <TextView  
@@ -466,11 +466,11 @@ ms.lasthandoff: 05/13/2017
   
     ```  
   
-13. ファイルを保存し、**[デザイン]** ビューに切り替えます。 次のような UI が表示されます。  
+13. Save the file and switch to **Design** view. Your UI should appear as follows:  
   
-     ![Android アプリ用 UI](~/cross-platform/media/xamarin_androidui.png "Xamarin_AndroidUI")  
+     ![UI for Android app](../cross-platform/media/xamarin_androidui.png "Xamarin_AndroidUI")  
   
-14. **MainActivity.cs** を開き、前の手順で削除した既定のボタンを参照している行を *OnCreate* メソッドから削除します。 完了したコードは次のようになります。  
+14. Open **MainActivity.cs** and delete the lines in the *OnCreate* method that refer to the default button that was removed earlier. The code should look like this when you're done:  
   
     ```  
     protected override void OnCreate (Bundle bundle)  
@@ -482,13 +482,13 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-15. Android プロジェクトをビルドして作業内容を確認します。 ビルドを実行すると、**Resource.Designer.cs** ファイルにコントロール ID が追加されるため、コード中で名前を指定してコントロールを参照できるようになります。  
+15. Build the Android project to check your work. Note that building adds control IDs to the **Resource.Designer.cs** file so that you can refer to controls by name in code.  
   
-### <a name="consume-your-shared-code"></a>共有コードを使用する  
+### <a name="consume-your-shared-code"></a>Consume your shared code  
   
-1.  コード エディターで **WeatherApp** プロジェクトの **MainActivity.cs** ファイルを開き、ファイルの内容を以下のコードに置き換えます。 このコードは、共有コードで定義した `GetWeather` メソッドを呼び出します。 そして、そのメソッドから取得したデータをアプリの UI に表示します。  
+1.  Open the **MainActivity.cs** file of the **WeatherApp** project in the code editor and replace its contents with the code below. This code calls the `GetWeather` method that you defined in your shared code. Then, in the UI of the app, it shows the data that is retrieved from that method.  
   
-    ```c#  
+    ```cs  
     using System;  
     using Android.App;  
     using Android.Widget;  
@@ -530,26 +530,26 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-### <a name="run-the-app-and-see-how-it-looks"></a>アプリを実行して結果を確認してください。  
+### <a name="run-the-app-and-see-how-it-looks"></a>Run the app and see how it looks  
   
-1.  **ソリューション エクスプローラー**で、**WeatherApp.Droid** プロジェクトがスタートアップ プロジェクトとして設定されていることを確認します。  
+1.  In **Solution Explorer**, make sure the **WeatherApp.Droid** project is set as the startup project.  
   
-2.  適切なデバイスまたはエミュレーターのターゲットを選択し、F5 キーを押してアプリケーションを開始します。  
+2.  Select an appropriate device or emulator target, then start the app by pressing the F5 key.  
   
-3.  デバイスまたはエミュレーターで、米国の有効な郵便番号 (例: 60601) を編集ボックスに入力してから、**[Get Weather]** をクリックします。 該当する地域の気象データがコントロールに表示されます。  
+3.  On the device or in the emulator, type a valid United States zip code into the edit box (for example: 60601), and press **Get Weather**. Weather data for that region then appears in the controls.  
   
-     ![Android および Windows Phone 用お天気アプリ](../cross-platform/media/xamarin_getstarted_results.png "Xamarin_GetStarted_Results")  
+     ![Weather app for Android and Windows Phone](../cross-platform/media/xamarin_getstarted_results.png "Xamarin_GetStarted_Results")  
   
 > [!TIP]
->  このプロジェクトの完全なソース コードは [GitHub の mobile-samples リポジトリ](https://github.com/xamarin/mobile-samples/tree/master/Weather)にあります。  
+>  The complete source code for this project is in the [mobile-samples repository on GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather).  
   
-##  <a name="Windows"></a>Windows Phone 用 UI の設計  
- 次に、Windows Phone 用のユーザー インターフェイスを設計して共有コードに接続してから、アプリを実行します。  
+##  <a name="Windows"></a> Design UI for Windows Phone  
+ Now we'll design the user interface for Windows Phone, connect it to your shared code, and then run the app.  
   
-### <a name="design-the-look-and-feel-of-your-app"></a>アプリの外観を設計する  
- Xamarin アプリでネイティブの Windows Phone UI を設計するプロセスは、他のネイティブ Windows Phone アプリと同じです。 このため、デザイナーの使用方法の詳細についてここでは説明しません。 「[XAML デザイナーを使用した UI の作成](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)」を参照してください。  
+### <a name="design-the-look-and-feel-of-your-app"></a>Design the look and feel of your app  
+ The process of designing native Windows Phone UI in a Xamarin app is no different from any other native Windows Phone app. For this reason, we won't go into the details here of how to use the designer. For that, refer to [Creating a UI by using XAML Designer](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md).  
   
- 代わりに、MainPage.xaml を開き、すべての XAML コードを以下のコードで置き換えます。  
+ Instead, simply open MainPage.xaml and replace all the XAML code with the following:  
   
 ```xaml  
 <Page  
@@ -595,25 +595,25 @@ ms.lasthandoff: 05/13/2017
 </Page>  
 ```  
   
- デザイン ビユーでは、UI は次のように表示されます。  
+ In the design view, your UI should appear as follows:  
   
- ![Windows Phone アプリの UI](~/cross-platform/media/xamarin_winphone_finalui.png "Xamarin_WinPhone_FinalUI")  
+ ![Windows Phone app UI](../cross-platform/media/xamarin_winphone_finalui.png "Xamarin_WinPhone_FinalUI")  
   
-### <a name="consume-your-shared-code"></a>共有コードを使用する  
+### <a name="consume-your-shared-code"></a>Consume your shared code  
   
-1.  デザイナーで、 **[Get Weather]** ボタンをクリックします。  
+1.  In the designer, select the **Get Weather** button.  
   
-2.  **[プロパティ]** ウィンドウで、イベント ハンドラー ボタン (![Visual Studio イベント ハンドラー アイコン](~/cross-platform/media/blend_vs_eventhandlers_icon.png "blend_VS_EventHandlers_icon")) を選択します。  
+2.  In the **Properties** window, choose the event handler button (![Visual Studio Event Handlers icon](../cross-platform/media/blend_vs_eventhandlers_icon.png "blend_VS_EventHandlers_icon")).  
   
-     このアイコンは **[プロパティ]** ウィンドウの上隅に表示されます。  
+     This icon appears in the top corner of the **Properties** window.  
   
-3.  **[クリック]** イベントの隣に「 **GetWeatherButton_Click**」と入力し、ENTER キーを押します。  
+3.  Next to the **Click** event, type **GetWeatherButton_Click**, and then press the ENTER key.  
   
-     `GetWeatherButton_Click`という名前のイベント ハンドラーが生成されます。 コード エディターが開き、カーソルがイベント ハンドラーのコード ブロック内に配置されます。  注: Enter キーを押してもエディターが開かない場合は、イベント名をダブルクリックします。  
+     This generates an event handler named `GetWeatherButton_Click`. The code editor opens and places your cursor inside of the event handler code block.  Note: if the editor doesn't open when pressing ENTER, just double-click the event name.  
   
-4.  イベント ハンドラーを次のコードで置き換えます。  
+4.  Replace that event handler with the following code.  
   
-    ```c#  
+    ```cs  
     private async void GetWeatherButton_Click(object sender, RoutedEventArgs e)  
     {  
         if (!String.IsNullOrEmpty(zipCodeEntry.Text))  
@@ -632,35 +632,35 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-     このコードは、共有コードで定義した `GetWeather` メソッドを呼び出します。 このメソッドは、Android アプリで呼び出したものと同じです。 このコードは、アプリの UI コントロールのメソッドから取得したデータも表示します。  
+     This code calls the `GetWeather` method that you defined in your shared code. This is the same method that you called in your Android app. This code also shows data retrieved from that method in the UI controls of your app.  
   
-5.  開いている MainPage.xaml.cs で、**OnNavigatedTo** メソッドの中のすべてのコードを削除します。 このコードは、MainPage.xaml の内容を置き換えたときに削除された既定のボタンを処理したコードです。  
+5.  In MainPage.xaml.cs, which is open, delete all the code inside the **OnNavigatedTo** method. This code simply handled the default button that was removed when we replaced the contents of MainPage.xaml.  
   
-### <a name="run-the-app-and-see-how-it-looks"></a>アプリを実行して結果を確認してください。  
+### <a name="run-the-app-and-see-how-it-looks"></a>Run the app and see how it looks  
   
-1.  **ソリューション エクスプローラー**で、**WeatherApp.WinPhone** プロジェクトをスタートアップ プロジェクトに設定します。  
+1.  In **Solution Explorer**, set the **WeatherApp.WinPhone** project as the startup project.  
   
-2.  F5 キーを押すとアプリが起動します。  
+2.  Start the app by pressing the F5 key.  
   
-3.  Windows Phone エミュレーターで、米国の有効な郵便番号を編集ボックスに入力 (例: 60601) してから、**[Get Weather]** をクリックします。 該当する地域の気象データがコントロールに表示されます。  
+3.  In the Windows Phone emulator, type a valid United States zip code into the edit box (for example: 60601), and press **Get Weather**. Weather data for that region then appears in the controls.  
   
-     ![実行中のアプリの Windows バージョン](../cross-platform/media/xamarin_getstarted_results_windows.png "Xamarin_GetStarted_Results_Windows")  
+     ![Windows version of the running app](../cross-platform/media/xamarin_getstarted_results_windows.png "Xamarin_GetStarted_Results_Windows")  
   
 > [!TIP]
->  このプロジェクトの完全なソース コードは [GitHub の mobile-samples リポジトリ](https://github.com/xamarin/mobile-samples/tree/master/Weather)にあります。  
+>  The complete source code for this project is in the [mobile-samples repository on GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather).  
   
-##  <a name="next"></a>次のステップ  
- **iOS 用 UI をソリューションに追加する**  
+##  <a name="next"></a> Next steps  
+ **Add UI for iOS to the solution**  
   
- iOS 用のネイティブ UI を追加することで、このサンプルを拡張します。 そのためには、Xcode と Xamarin がインストールされているローカル ネットワーク上の Mac に接続する必要があります。 接続すると、Visual Studio で直接 iOS デザイナーを使用することができます。 完成したアプリを確認するには、[GitHub の mobile-samples リポジトリ](https://github.com/xamarin/mobile-samples/tree/master/Weather)を参照してください。  
+ Extend this sample by adding native UI for iOS. For this you'll need to connect to a Mac on your local network that has Xcode and Xamarin installed. Once you do, you can use the iOS designer directly in Visual Studio. See the [mobile-samples repository on GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather) for a completed app.  
   
- また、[Hello, iOS](http://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/hello,iOS_quickstart/) (xamarin.com) のチュートリアルもご覧ください。 このページで正しい手順のセットを表示するには、必ず xamarin.com 上のページの右上で "Visual Studio" を選びます。  
+ Also refer to the [Hello, iOS](http://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/hello,iOS_quickstart/) (xamarin.com) walkthrough. Note that on this page, be sure that "Visual Studio" is selected in the upper right corner of pages on xamarin.com so that the correct set of instructions appear.  
   
- **共有プロジェクトにプラットフォーム固有のコードを追加する**  
+ **Add platform-specific code in a shared project**  
   
- PCL はコンパイルされてから各プラットフォーム固有のアプリ パッケージに組み込まれるため、PCL の共有コードはプラットフォームに中立的です。 条件付きコンパイルを使用してプラットフォーム固有のコードを区別した共有コードを記述する場合は、*共有*プロジェクトを使用することができます。 詳細については、[コード共有オプション](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/sharing_code_options/) (xamarin.com) の説明を参照してください。  
+ Shared code in a PCL is platform-neutral, because the PCL is compiled once and included in each platform-specific app package. If you want to write shared code that uses conditional compilation to isolate platform-specific code, you can use a *shared* project. For more details, see [ode Sharing Options](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/sharing_code_options/) (xamarin.com).  
   
-## <a name="see-also"></a>関連項目  
- [Xamarin の開発者向けサイト](http://developer.xamarin.com/)   
- [Windows デベロッパー センター](https://dev.windows.com/en-us)   
- [Swift および C# のクイック リファレンス ポスター](http://aka.ms/scposter)
+## <a name="see-also"></a>See Also  
+ [Xamarin Developer site](http://developer.xamarin.com/)   
+ [Windows Dev Center](https://dev.windows.com/en-us)   
+ [Swift and C# Quick Reference Poster](http://aka.ms/scposter)

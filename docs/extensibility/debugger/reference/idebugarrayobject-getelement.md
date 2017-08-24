@@ -1,5 +1,5 @@
 ---
-title: "IDebugArrayObject::GetElement |Microsoft ドキュメント"
+title: IDebugArrayObject::GetElement | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ddfb54b0bf5d6adb1721095fe0c6e748aea024e5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 69574670a49b45b60143bfb90f01bfc246507be0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugarrayobjectgetelement"></a>IDebugArrayObject::GetElement
-配列の要素を取得します。  
+Gets an element of the array.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetElement(   
@@ -48,25 +49,25 @@ HRESULT GetElement(
 );  
 ```  
   
-```c#  
+```cs  
 int GetElement(  
    [In] uint dwIndex,   
    out IDebugObject ppElement  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `dwIndex`  
- [in]要素のインデックス。  
+ [in] The element index.  
   
  `ppElement`  
- [out]返します。、 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)要素を表すインターフェイスです。  
+ [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) interface that represents the element.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、1 次元の配列として、配列オブジェクトが多次元場合でもすべての要素の配列オブジェクトのように表示されます。 たとえば、配列を指定`myarray[3][2][6]`と`dwIndex`20 のパラメーターは、このメソッドは元の要素`myarray[1][1][2]`と`dwIndex`21 のパラメーターは元の要素を返します`myarray[1][1][3]`します。 使用して、 [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md)配列内の要素の合計数を決定する方法です。  
+## <a name="remarks"></a>Remarks  
+ This method sees all of the elements of an array object as a one-dimensional array, even if the array object is multi-dimensional. For example, given the array `myarray[3][2][6]` and a `dwIndex` parameter of 20, this method would return the element from `myarray[1][1][2]`, and a `dwIndex` parameter of 21 would return the element from `myarray[1][1][3]`. Use the [GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md) method to determine the total number of elements in the array.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

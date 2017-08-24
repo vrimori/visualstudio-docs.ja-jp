@@ -1,50 +1,67 @@
 ---
-title: "IDebugObject::IsProxy | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugObject::IsProxy"
-  - "IsProxy"
+title: IDebugObject::IsProxy | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugObject::IsProxy
+- IsProxy
 ms.assetid: 06c66b87-db95-4400-ab26-5d33e743a439
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugObject::IsProxy
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 65702f87e1d482ab6c1920bb9b75ba9ed97718cf
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-オブジェクトが透過プロキシかどうかを判定します。  
+---
+# <a name="idebugobjectisproxy"></a>IDebugObject::IsProxy
+Determines if the object is a transparent proxy.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT IsProxy (  
-   BOOL* pfIsProxy  
+   BOOL* pfIsProxy  
 );  
 ```  
   
-```c#  
+```cs  
 int IsProxy (  
-   out bool pfIsProxy  
+   out bool pfIsProxy  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pfIsProxy`  
- \[入力\] オブジェクトが透明なプロキシである `TRUE` ; それ以外 `FALSE`。  
+ [out] `TRUE` if the object is a transparent proxy; otherwise, `FALSE`.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- このメソッドは既定の C\+\+ デバッグ エンジンによって実装されます。  
+## <a name="remarks"></a>Remarks  
+ This method is implemented by the default C++ debug engine.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

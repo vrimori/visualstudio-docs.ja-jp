@@ -1,36 +1,53 @@
 ---
-title: "ユニバーサル Windows プロジェクトの管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Managing Universal Windows Projects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# ユニバーサル Windows プロジェクトの管理
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 79cddc78f8c7f90bc364dc49dca013c1b5a2dab3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-ユニバーサル Windows アプリは、Windows 8.1 と Windows Phone 8.1、両方のプラットフォームでのコードやその他のアセットを使用する開発者の両方を対象とするアプリです。 共有コードとリソースは、プラットフォーム固有のコードおよびリソースが個別のプロジェクト、Windows Phone 用および Windows のいずれかの保持中に、共有プロジェクトに保持されます。 ユニバーサル Windows アプリについての詳細については、次を参照してください。 [ユニバーサル Windows アプリ](http://msdn.microsoft.com/library/windows/apps/dn609832.aspx)します。 プロジェクトを管理する、visual Studio 拡張機能は、ユニバーサル Windows アプリ プロジェクトが単一プラットフォームのアプリとは異なる構造を持っていることに注意する必要があります。 このチュートリアルでは、共有プロジェクトを移動し、共有アイテムを管理する方法を示します。  
+---
+# <a name="managing-universal-windows-projects"></a>Managing Universal Windows Projects
+Universal Windows apps are apps that target both Windows 8.1 and Windows Phone 8.1, allowing developers to use code and other assets on both platforms. The shared code and resources are kept in a shared project, while the platform-specific code and resources are kept in separate projects, one for Windows and the other for Windows Phone. For more information about universal Windows apps, see [Universal Windows Apps](http://msdn.microsoft.com/library/windows/apps/dn609832.aspx). Visual Studio extensions that manage projects should be aware that universal Windows app projects have a structure that differs from single-platform apps. This walkthrough shows you how to navigate the shared project and manage the shared items.  
   
-## 必須コンポーネント  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-### 共有プロジェクトを移動します。  
+### <a name="navigate-the-shared-project"></a>Navigate the shared project  
   
-1.  という名前の C\# の場合は、VSIX プロジェクトを作成する **TestUniversalProject**します。 \(**ファイル\]、\[新規\]、\[プロジェクト** し **C\# の場合、拡張性、Visual Studio パッケージ**\)。 追加、 **にカスタム コマンド** プロジェクト項目テンプレート \(ソリューション エクスプ ローラーで、プロジェクト ノードを右クリックし \[ **追加\/\[新しい項目の**, に移動し、 **拡張**\)。 ファイルに名前を **TestUniversalProject**します。  
+1.  Create a C# VSIX project named **TestUniversalProject**. (**File, New, Project** and then **C#, Extensibility, Visual Studio Package**). Add a **Custom Command** project item template (on the Solution Explorer, right-click the project node and select **Add / New Item**, then go to **Extensibility**). Name the file **TestUniversalProject**.  
   
-2.  Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll および Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll への参照の追加 \(で、 **拡張** セクション\)。  
+2.  Add a reference to Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll and Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll (in the **Extensions** section).  
   
-3.  TestUniversalProject.cs を開き、次の追加 `using` ステートメント。  
+3.  Open TestUniversalProject.cs and add the following `using` statements:  
   
-    ```c#  
+    ```cs  
     using EnvDTE;  
     using EnvDTE80;  
     using Microsoft.VisualStudio;  
@@ -41,9 +58,9 @@ caps.handback.revision: 14
     using System.Windows.Forms;  
     ```  
   
-4.  TestUniversalProject クラスでポイントするプライベート フィールドを追加、 **出力** ウィンドウです。  
+4.  In the TestUniversalProject class add a private field pointing to the **Output** window.  
   
-    ```c#  
+    ```cs  
     public sealed class TestUniversalProject   
     {  
         IVsOutputWindowPane output;  
@@ -51,9 +68,9 @@ caps.handback.revision: 14
     }  
     ```  
   
-5.  TestUniversalProject コンス トラクター内にある出力ウィンドウへの参照を設定します。  
+5.  Set the reference to the output pane inside TestUniversalProject constructor:  
   
-    ```c#  
+    ```cs  
     private TestUniversalProject(Package package)  
     {  
         if (package == null)  
@@ -76,17 +93,17 @@ caps.handback.revision: 14
     }  
     ```  
   
-6.  既存のコードからの削除、 `ShowMessageBox` メソッド。  
+6.  Remove the existing code from the `ShowMessageBox` method:  
   
-    ```c#  
+    ```cs  
     private void ShowMessageBox(object sender, EventArgs e)   
     {  
     }  
     ```  
   
-7.  このチュートリアルではいくつかの異なる目的で使用する DTE オブジェクトを取得します。 また、メニュー ボタンがクリックされたときに、ソリューションが読み込まれていることを確認してください。  
+7.  Get the DTE object, which we will use for several different purposes in this walkthrough. Also, make sure that a solution is loaded when the menu button is clicked.  
   
-    ```c#  
+    ```cs  
     private void ShowMessageBox(object sender, EventArgs e)  
     {   
         var dte = (EnvDTE.DTE)this.ServiceProvider.GetService(typeof(EnvDTE.DTE));  
@@ -102,9 +119,9 @@ caps.handback.revision: 14
     }  
     ```  
   
-8.  共有プロジェクトを検索します。 共有プロジェクトは、純粋なコンテナーです。ビルドや出力を生成できません。 次のメソッドなソリューション内の最初の共有プロジェクトの検出を探して、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 共有プロジェクトの機能を持つオブジェクト。  
+8.  Find the shared project. The shared project is a pure container; it does not build or produce outputs. The following method finds the first shared project in the solution by looking for the <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> object that has the shared project capability.  
   
-    ```c#  
+    ```cs  
     private IVsHierarchy FindSharedProject()  
     {  
         var sln = (IVsSolution)this.ServiceProvider.GetService(typeof(SVsSolution));  
@@ -124,9 +141,9 @@ caps.handback.revision: 14
     }  
     ```  
   
-9. `ShowMessageBox` メソッドを出力キャプション \(に表示されるプロジェクトの名前、 **ソリューション エクスプ ローラー**\)、共有プロジェクトのです。  
+9. In the `ShowMessageBox` method, output the caption (the project name that appears in the **Solution Explorer**) of the shared project.  
   
-    ```c#  
+    ```cs  
     private void ShowMessageBox(object sender, EventArgs e)  
     {  
         var dte = (DTE)this.ServiceProvider.GetService(typeof(DTE));  
@@ -154,9 +171,9 @@ caps.handback.revision: 14
     }  
     ```  
   
-10. アクティブなプラットフォーム プロジェクトを取得します。 プラットフォームのプロジェクトとは、プラットフォーム固有のコードとリソースを含むプロジェクトです。 次のメソッドは、新しいフィールドを使用して <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7> をアクティブなプラットフォーム プロジェクトを取得します。  
+10. Get the active platform project. Platform projects are the projects that contain platform-specific code and resources. The following method uses the new field <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7> to get the active platform project.  
   
-    ```c#  
+    ```cs  
     private IVsHierarchy GetActiveProjectContext(IVsHierarchy hierarchy)  
     {  
         IVsHierarchy activeProjectContext;  
@@ -172,9 +189,9 @@ caps.handback.revision: 14
     }  
     ```  
   
-11. `ShowMessageBox` メソッドがアクティブなプラットフォーム プロジェクトのキャプションを出力します。  
+11. In the `ShowMessageBox` method, output the caption of the active platform project.  
   
-    ```c#  
+    ```cs  
     private void ShowMessageBox(object sender, EventArgs e)  
     {  
         var dte = (DTE)this.ServiceProvider.GetService(typeof(DTE));  
@@ -215,9 +232,9 @@ caps.handback.revision: 14
   
     ```  
   
-12. プラットフォームのプロジェクトを反復処理します。 次のメソッドは、共有プロジェクトからインポートするすべての \(プラットフォーム\) プロジェクトを取得します。  
+12. Iterate through the platform projects. The following method gets all the importing (platform) projects from the shared project.  
   
-    ```c#  
+    ```cs  
     private IEnumerable<IVsHierarchy> EnumImportingProjects(IVsHierarchy hierarchy)  
     {  
         IVsSharedAssetsProject sharedAssetsProject;  
@@ -234,9 +251,9 @@ caps.handback.revision: 14
     ```  
   
     > [!IMPORTANT]
-    >  ユーザーには、実験用インスタンスで C\+\+ ユニバーサル Windows アプリ プロジェクトが開き、上記のコードは例外をスローします。 これは、既知の問題です。 例外を避けるためには、置換、 `foreach` の上に次のブロックします。  
+    >  If the user has opened a C++ universal Windows app project in the experimental instance, the code above throws an exception. This is a known issue. To avoid the exception, replace the `foreach` block above with the following:  
   
-    ```c#  
+    ```cs  
     var importingProjects = sharedAssetsProject.EnumImportingProjects();  
     for (int i = 0; i < importingProjects.Count; ++i)  
     {  
@@ -244,9 +261,9 @@ caps.handback.revision: 14
     }   
     ```  
   
-13. `ShowMessageBox` メソッドは、各プラットフォーム プロジェクトのキャプションを出力します。 アクティブなプラットフォーム プロジェクトのキャプションを出力する行の後に次のコードを挿入します。 この一覧に読み込まれているプラットフォーム プロジェクトのみが表示されます。  
+13. In the `ShowMessageBox` method, output the caption of each platform project. Insert the following code after the line that outputs the caption of the active platform project. Only the platform projects that are loaded appear in this list.  
   
-    ```c#  
+    ```cs  
     output.OutputStringThreadSafe("Platform projects:\n");  
   
     IEnumerable<IVsHierarchy> projects = this.EnumImportingProjects(sharedHier);  
@@ -260,18 +277,18 @@ caps.handback.revision: 14
     }  
     ```  
   
-14. アクティブなプラットフォーム プロジェクトを変更します。 次の設定を使用して、アクティブなプロジェクト <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A>します。  
+14. Change the active platform project. The following method sets the active project using <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A>.  
   
-    ```c#  
+    ```cs  
     private int SetActiveProjectContext(IVsHierarchy hierarchy, IVsHierarchy activeProjectContext)  
     {  
         return hierarchy.SetProperty((uint)VSConstants.VSITEMID.Root, (int)__VSHPROPID7.VSHPROPID_SharedItemContextHierarchy, activeProjectContext);  
     }  
     ```  
   
-15. `ShowMessageBox` メソッドでは、アクティブなプラットフォームのプロジェクトを変更します。 内でこのコードを挿入、 `foreach` ブロックします。  
+15. In the `ShowMessageBox` method, change the active platform project. Insert this code inside the `foreach` block.  
   
-    ```c#  
+    ```cs  
     bool isActiveProjectSet = false;  
     string platformCaption = null;  
     foreach (IVsHierarchy platformHier in projects)  
@@ -292,7 +309,7 @@ caps.handback.revision: 14
     output.OutputStringThreadSafe("set active project: " + platformCaption +'\n');  
     ```  
   
-16. 試してみましょう。 F5 キーを押して、実験用インスタンスを起動します。 実験用インスタンスで c\# ハブのユニバーサル アプリ プロジェクトの作成 \(で、 **新しいプロジェクト** ダイアログ ボックスで、 **Visual c\#\/Windows\/Windows 8 ユニバーサル\/\/ハブ アプリケーション**\)。 ソリューションが読み込まれた後に、 **ツール** メニューをクリック **呼び出す TestUniversalProject**, テキストを確認し、 **出力** ウィンドウです。 次のような結果を表示する必要があります。  
+16. Now try it out. Press F5 to launch the experimental instance. Create a C# universal hub app project in the experimental instance (in the **New Project** dialog box, **Visual C# / Windows / Windows 8 / Universal / Hub App**). After the solution is loaded, go to the **Tools** menu and click **Invoke TestUniversalProject**, and then check the text in the **Output** pane. You should see something like the following:  
   
     ```  
     Found shared project: HubApp.Shared  
@@ -303,11 +320,11 @@ caps.handback.revision: 14
     set active project: HubApp.WindowsPhone  
     ```  
   
-### プラットフォームのプロジェクトで共有項目を管理します。  
+### <a name="manage-the-shared-items-in-the-platform-project"></a>Manage the shared items in the platform project  
   
-1.  プラットフォーム プロジェクトの共有の項目を検索します。 共有プロジェクト内の項目が、プラットフォーム プロジェクトに共有項目として表示されます。 表示されない、 **ソリューション エクスプ ローラー**, を探せば、プロジェクト階層を移動することができますが、します。 次のメソッドは、階層について説明し、すべての共有アイテムを収集します。 必要に応じて、各項目のキャプションを出力します。 共有項目が、新しいプロパティで識別される <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7>します。  
+1.  Find the shared items in the platform project. The items in the shared project appear in the platform project as shared items. You can't see them in the **Solution Explorer**, but you can walk the project hierarchy to find them. The following method walks the hierarchy and collects all the shared items. It optionally outputs the caption of each item,. The shared items are identified by the new property <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7>.  
   
-    ```c#  
+    ```cs  
     private void InspectHierarchyItems(IVsHierarchy hier, uint itemid, int level, List<uint> itemIds, bool getSharedItems, bool printItems)  
     {  
         string caption = HierarchyUtilities.GetHierarchyProperty<string>(hier, itemid, (int)__VSHPROPID.VSHPROPID_Caption);  
@@ -337,24 +354,24 @@ caps.handback.revision: 14
     }  
     ```  
   
-2.  `ShowMessageBox` メソッドをプラットフォーム プロジェクトの階層構造の項目を順番に次のコードを追加します。 内での挿入、 `foreach` ブロックします。  
+2.  In the `ShowMessageBox` method, add the following code to walk the platform project hierarchy items. Insert it inside the `foreach` block.  
   
-    ```c#  
+    ```cs  
     output.OutputStringThreadSafe("Walk the active platform project:\n");  
     var sharedItemIds = new List<uint>();  
     this.InspectHierarchyItems(activePlatformHier, (uint)VSConstants.VSITEMID.Root, 1, sharedItemIds, true, true);  
     ```  
   
-3.  共有アイテムを読み取る。 共有の項目が非表示のリンクされたファイルとしてプラットフォーム プロジェクトが表示され、通常のリンクされたファイルとしてのすべてのプロパティを読み取ることができます。 次のコードでは、共有の最初の項目の完全なパスを読み取ります。  
+3.  Read the shared items. The shared items appear in the platform project as hidden linked files, and you can read all the properties as ordinary linked files. The following code reads the full path of the first shared item.  
   
-    ```c#  
+    ```cs  
     var sharedItemId = sharedItemIds[0];  
     string fullPath;  
     ErrorHandler.ThrowOnFailure(((IVsProject)activePlatformHier).GetMkDocument(sharedItemId, out fullPath));  
     output.OutputStringThreadSafe(string.Format("Shared item full path: {0}\n", fullPath));  
     ```  
   
-4.  試してみましょう。 F5 キーを押して、実験用インスタンスを起動します。 実験用インスタンスで c\# ハブのユニバーサル アプリ プロジェクトの作成 \(で、 **新しいプロジェクト** ダイアログ ボックスで、 **Visual C\# の場合\/Windows\/Windows 8 ユニバーサル\/\/ハブ アプリケーション**\) に移動、 **ツール** メニューをクリック **呼び出す TestUniversalProject**, テキストを確認し、 **出力** ウィンドウです。 次のような結果を表示する必要があります。  
+4.  Now try it out. Press F5 to launch the experimental instance. Create a C# universal hub app project in the experimental instance (in the **New Project** dialog box, **Visual C# / Windows / Windows 8 / Universal / Hub App**) go to the **Tools** menu and click **Invoke TestUniversalProject**, and then check the text in the **Output** pane. You should see something like the following:  
   
     ```  
     Found shared project: HubApp.Shared  
@@ -408,44 +425,44 @@ caps.handback.revision: 14
                 SectionPage.xaml.cs  
     ```  
   
-### プラットフォーム プロジェクトおよび共有プロジェクトの変更の検出  
+### <a name="detecting-changes-in-platform-projects-and-shared-projects"></a>Detecting changes in platform projects and shared projects  
   
-1.  プラットフォーム プロジェクトと同様、共有プロジェクトでの変更を検出するために階層とプロジェクトのイベントを使用できます。 ただし、共有プロジェクトでプロジェクト項目は表示されません、つまり、共有プロジェクト項目が変更されたときに特定のイベントは起動されません。  
+1.  You can use hierarchy and project events to detect changes in shared projects, just as you can for platform projects. However, the project items in the shared project are not visible, which means that certain events do not fire when shared project items are changed.  
   
-     プロジェクトのファイルの名前が変更されるイベントの順序を考慮してください。  
+     Consider the sequence of events when a file in a project is renamed:  
   
-    1.  ファイルの名前は、ディスクに変更されます。  
+    1.  The file name is changed on disk.  
   
-    2.  ファイルの新しい名前を含めるには、プロジェクト ファイルが更新されます。  
+    2.  The project file is updated to include the new name of the file.  
   
-     階層のイベント \(たとえば、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>\)、通常のように、UI に表示される変更を追跡、 **ソリューション エクスプ ローラー**します。 階層のイベントは、ファイルの削除と、ファイルの追加で構成するファイルの名前の変更操作を検討してください。 ただし、非表示の項目を変更すると、階層イベント システムが発生する <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> イベントではなく、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> イベントです。 そのため、プラットフォーム プロジェクトのファイルの名前を変更する場合、取得両方 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>, が、共有プロジェクト内のファイルの名前を変更する場合のみ <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>します。  
+     Hierarchy events (for example, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>) generally track the changes displayed in the UI, as in the **Solution Explorer**. Hierarchy events consider a file rename operation to consist of a file deletion and then a file addition. However, when invisible items are changed, the hierarchy event system fires an <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> event but not an <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> event. Therefore, if you rename a file in a platform project, you get both <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> and <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>, but if you rename a file in a shared project, you get only <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>.  
   
-     プロジェクト項目の変更を追跡するには、DTE プロジェクト項目のイベントを処理 \(記載されている <xref:EnvDTE.ProjectItemsEventsClass>\)。 ただし、多数のイベントを処理する場合は、イベントの処理パフォーマンスを向上させるを入手できます <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>します。 このチュートリアルでは、DTE イベントと階層のイベントのみを紹介します。 この手順では、共有のプロジェクトおよびプラットフォーム プロジェクトにイベント リスナーを追加します。 次に、プラットフォームのプロジェクトで別のファイルおよび共有プロジェクトの 1 つのファイルの名前を変更するときに、名前の変更操作ごとに発生するイベントを確認できます。  
+     To track changes in project items, you can handle DTE project item events (the ones found in <xref:EnvDTE.ProjectItemsEventsClass>). However, if you are handling large numbers of events, you can get better performance handling the events in <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>. In this walkthrough we show only the hierarchy events and the DTE events. In this procedure you add an event listener to a shared project and a platform project. Then, when you rename one file in a shared project and another file in a platform project, you can see the events that are fired for each rename operation.  
   
-     この手順では、共有のプロジェクトおよびプラットフォーム プロジェクトにイベント リスナーを追加します。 次に、プラットフォームのプロジェクトで別のファイルおよび共有プロジェクトの 1 つのファイルの名前を変更するときに、名前の変更操作ごとに発生するイベントを確認できます。  
+     In this procedure you add an event listener to a shared project and a platform project. Then, when you rename one file in a shared project and another file in a platform project, you can see the events that are fired for each rename operation.  
   
-2.  イベント リスナーを追加します。 新しいクラス ファイルをプロジェクトに追加し、HierarchyEventListener.cs 付けます。  
+2.  Add an event listener. Add a new class file to the project and call it HierarchyEventListener.cs.  
   
-3.  HierarchyEventListener.cs ファイルを開き、次の追加のステートメントを使用します。  
+3.  Open the HierarchyEventListener.cs file and add the following using statements:  
   
-    ```c#  
+    ```cs  
     using Microsoft.VisualStudio.Shell.Interop;  
     using Microsoft.VisualStudio;  
     using System.IO;  
   
     ```  
   
-4.  `HierarchyEventListener` クラス実装 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>:  
+4.  Have the `HierarchyEventListener` class implement <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>:  
   
-    ```c#  
+    ```cs  
     class HierarchyEventListener : IVsHierarchyEvents  
     { }  
   
     ```  
   
-5.  メンバーを実装 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>, 次のコードでは、次のようにします。  
+5.  Implement the members of <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>, as in the code below.  
   
-    ```c#  
+    ```cs  
     class HierarchyEventListener : IVsHierarchyEvents  
     {  
         private IVsHierarchy hierarchy;  
@@ -487,9 +504,9 @@ caps.handback.revision: 14
   
     ```  
   
-6.  同じクラスで DTE イベントの別のイベント ハンドラーを追加 <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>, 、プロジェクト項目の名前が変更されるたびに発生します。  
+6.  In the same class add another event handler for the DTE event <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>, which occurs whenever a project item is renamed.  
   
-    ```c#  
+    ```cs  
     public void OnItemRenamed(EnvDTE.ProjectItem projItem, string oldName)  
     {  
         output.OutputStringThreadSafe(string.Format("[Event] Renamed {0} to {1} in project {2}\n",  
@@ -497,9 +514,9 @@ caps.handback.revision: 14
     }  
     ```  
   
-7.  階層のイベントにサインアップします。 個別に追跡しているすべてのプロジェクトにサインアップする必要があります。 次のコードを追加 `ShowMessageBox`, 、共有プロジェクトと他のプラットフォーム プロジェクトのいずれかのいずれかです。  
+7.  Sign up for the hierarchy events. You need to sign up separately for every project you are tracking. Add the following code in `ShowMessageBox`, one for the shared project, and the other for one of the platform projects.  
   
-    ```c#  
+    ```cs  
     // hook up the event listener for hierarchy events on the shared project  
     HierarchyEventListener listener1 = new HierarchyEventListener(sharedHier, output);  
     uint cookie1;  
@@ -512,23 +529,23 @@ caps.handback.revision: 14
     activePlatformHier.AdviseHierarchyEvents(listener2, out cookie2);  
     ```  
   
-8.  DTE プロジェクト項目のイベントにサインアップ <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>します。 2 つ目のリスナーをフックした後は、次のコードを追加します。  
+8.  Sign up for the DTE project item event <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>. Add the following code after you hook up the second listener.  
   
-    ```c#  
+    ```cs  
     // hook up DTE events for project items  
     Events2 dteEvents = (Events2)dte.Events;  
     dteEvents.ProjectItemsEvents.ItemRenamed += listener1.OnItemRenamed;  
   
     ```  
   
-9. 共有項目を変更します。 プラットフォーム プロジェクトの共有項目を変更することはできません。代わりに、これらのアイテムの実際の所有者である共有プロジェクトでそれらを変更する必要があります。 共有プロジェクトに対応する項目の ID を取得できます <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A>, 、共有アイテムの完全なパスを付けます。 共有項目を変更します。 プラットフォーム プロジェクトには、変更が反映されます。  
+9. Modify the shared item. You can't modify shared items in a platform project; instead, you must modify them in the shared project that is the actual owner of these items. You can get the corresponding item ID in the shared project with <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A>, giving it the shared item's full path. Then you can modify the shared item. The change is propagated to the platform projects.  
   
     > [!IMPORTANT]
-    >  プロジェクト項目が共有項目を変更する前にかどうかを探します。  
+    >  You should find out whether or not a project item is a shared item before modifying it.  
   
-     次のメソッドでは、プロジェクト項目ファイルの名前を変更します。  
+     The following method modifies the name of a project item file.  
   
-    ```c#  
+    ```cs  
     private void ModifyFileNameInProject(IVsHierarchy project, string path)  
     {    
         int found;  
@@ -544,9 +561,9 @@ caps.handback.revision: 14
     }  
     ```  
   
-10. 結局のところに他のコードでこのメソッドを呼び出す `ShowMessageBox` ファイルの共有プロジェクト内の項目の名前を変更します。 共有プロジェクト内のアイテムの完全パスを取得するコードの後に、これを挿入します。  
+10. Call this method after all the other code in `ShowMessageBox` to modify the file name the item in the shared project. Insert this after the code that gets the full path of the item in the shared project.  
   
-    ```c#  
+    ```cs  
     // change the file name of an item in a shared project  
     this.InspectHierarchyItems(activePlatformHier, (uint)VSConstants.VSITEMID.Root, 1, sharedItemIds, true, true);  
     ErrorHandler.ThrowOnFailure(((IVsProject)activePlatformHier).GetMkDocument(sharedItemId, out fullPath));   
@@ -554,11 +571,11 @@ caps.handback.revision: 14
     this.ModifyFileNameInProject(sharedHier, fullPath);  
     ```  
   
-11. プロジェクトをビルドして実行します。 移動して、実験用インスタンスで、c\# のユニバーサル ハブ アプリを作成、 **ツール** メニューをクリック **呼び出す TestUniversalProject**, 、全般的な出力ペイン内のテキストを確認します。 共有の最初の項目の名前 \(思います App.xaml ファイルである\) プロジェクトを変更する必要がありますとを確認する必要があります、 <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> イベントが発生します。 この場合は、App.xaml 名前の変更によって App.xaml.cs も名前を変更するのには後、は、4 つのイベント \(各プラットフォーム プロジェクトの 2 つ\) が表示されます。 \(DTE イベントは、共有プロジェクト内の項目を追跡しないしません\)。 2 つが表示されます <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> \(プラットフォーム プロジェクトごとに 1 つ\)、イベントがない <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> イベントです。  
+11. Build and run the project. Create a C# universal hub app in the experimental instance, go to the **Tools** menu and click **Invoke TestUniversalProject**, and check the text in the general output pane. The name of the first item in the shared project (we expect it to be the App.xaml file) should be changed, and you should see that the <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> event has fired. In this case, since renaming App.xaml causes App.xaml.cs to be renamed as well, you should see four events (two for each platform project). (DTE events do not track the items in the shared project.) You should see two <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> events (one for each of platform projects), but no <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> events.  
   
-12. プラットフォーム プロジェクトのファイル名を変更してみましょうし、取得が発生するイベントの違いを確認することができます。 次のコードを追加 `ShowMessageBox` への呼び出し後 `ModifyFileName`します。  
+12. Now try renaming a file in a platform project, and you can see the difference in the events that get fired. Add the following code in `ShowMessageBox` after the call to `ModifyFileName`.  
   
-    ```c#  
+    ```cs  
     // change the file name of an item in a platform project  
     var unsharedItemIds = new List<uint>();  
     this.InspectHierarchyItems(activePlatformHier, (uint)VSConstants.VSITEMID.Root, 1, unsharedItemIds, false, false);  
@@ -571,4 +588,4 @@ caps.handback.revision: 14
     this.ModifyFileNameInProject(activePlatformHier, unsharedPath);  
     ```  
   
-13. プロジェクトをビルドして実行します。 実験用インスタンスで、c\# のユニバーサル プロジェクトを作成する」に進んでください、 **ツール** メニューをクリック **呼び出す TestUniversalProject**, 、全般的な出力ペイン内のテキストを確認します。 プラットフォームのプロジェクトで、ファイルの名前を変更した後、両方を表示する必要があります、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> イベントと <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> イベントです。 変更した後、ファイルの原因となったないその他のファイルを変更して、任意の場所、プラットフォーム プロジェクト内の項目の変更は反映されないのでのみについて 1 つある各これらのイベントです。
+13. Build and run the project. Create a C# Universal Project in the experimental instance, go to the **Tools** menu and click **Invoke TestUniversalProject**, and check the text in the general output pane. After the file in the platform project is renamed, you should see both an <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> event and an <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> event. Since changing the file caused no other files to be changed, and since changes to items in a platform project don't get propagated anywhere, there is only one each of these events.

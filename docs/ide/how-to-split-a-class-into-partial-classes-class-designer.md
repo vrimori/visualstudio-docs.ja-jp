@@ -1,5 +1,5 @@
 ---
-title: "方法: 1 つのクラスを複数の部分クラスに分割する (クラス デザイナー) | Microsoft Docs"
+title: 'How to: Split a Class into Partial Classes (Class Designer) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,32 +31,32 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 63aad78bdc7df685ca3a73ec16a9cbc87b78151f
-ms.openlocfilehash: 9d74565f8e7e5b89e1716e9e2d88e2e18e077124
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c2497ca7503b5334fd3e45cf3f1655ebad9a043f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="how-to-split-a-class-into-partial-classes-class-designer"></a>方法: 1 つのクラスを複数の部分クラスに分割する (クラス デザイナー)
-複数の宣言間でクラスまたは構造体の宣言を分割できます。Visual Basic の場合、`Partial` キーワードを、Visual C# の場合、`partial` キーワードを使用します。 部分宣言は必要な数だけ使用できます。複数のソース ファイルで使用することも、1 つのソース ファイルで使用することもできます。 ただし、すべての宣言は同じアセンブリおよび同じ名前空間にある必要があります。  
+# <a name="how-to-split-a-class-into-partial-classes-class-designer"></a>How to: Split a Class into Partial Classes (Class Designer)
+You can divide the declaration of a class or structure among several declarations by using the `Partial` keyword in Visual Basic or the `partial` keyword in Visual C#. You can use as many partial declarations as you want, in as many different source files as you want, or in one source file. However, all the declarations must be in the same assembly and the same namespace.  
   
- 部分クラスはいくつかの状況で便利です。 たとえば、大規模なプロジェクトで作業しているとき、クラスを複数のファイルに分割すれば、複数のプログラマーが同時に作業できます。 Visual Studio によって生成されたコードを使用しているとき、ソース ファイルを再作成しなくてもクラスを変更できます。 (Visual Studio によって生成されたコードの例には、Windows フォームと Web サービス ラッパー コードが含まれています。)Visual Studio によって作成されたファイルを変更せずに、自動生成クラスを使用するコードを作成できます。  
+ Partial classes are useful in several situations. For example, when you are working on large projects, separating a class into more than one file enables more than one programmer to work on it at the same time. When you are working with code that Visual Studio generates, you can change the class without having to re-create the source file. (Examples of code that Visual Studio generates include Windows Forms and Web Service wrapper code.) You can thus create code that uses auto-generated classes without having to modify the file that Visual Studio creates.  
   
- 部分メソッドには次の 2 種類があります。 Visual C# では、宣言 (declaring) と実装 (implementing) と呼ばれています。Visual Basic では、宣言 (declaration) と実装 (implementation) と呼ばれています。  
+ There are two kinds of partial methods. In Visual C#, they are called declaring and implementing; in Visual Basic, they are called declaration and implementation.  
   
- クラス デザイナーは部分クラスとメソッドに対応しています。 クラス ダイアグラムの型シェイプは、部分クラスの単一の宣言場所を参照します。 部分クラスが複数のファイルで定義されている場合、**[プロパティ]** ウィンドウで **[新しいメンバーの場所]** プロパティを設定するときにクラス デザイナーにより使用される宣言場所を指定できます。 つまり、クラスのシェイプをダブルクリックすると、**[新しいメンバーの場所]** プロパティで識別されるクラス宣言を含むソース ファイルにクラス デザイナーが移動します。 クラスのシェイプの部分メソッドをダブルクリックすると、クラス デザイナーは部分メソッド宣言に移動します。 また、**[プロパティ]** ウィンドウの **[ファイル名]** プロパティは宣言場所を参照します。 部分クラスの場合、**[ファイル名]** には、そのクラスの宣言と実装コードを含むファイルがすべて一覧表示されます。 ただし、部分メソッドの場合、**[ファイル名]** には、部分メソッド宣言が含まれるファイルのみが一覧表示されます。  
+ Class Designer supports partial classes and methods. The type shape in the class diagram refers to a single declaration location for the partial class. If the partial class is defined in multiple files, you can specify which declaration location Class Designer will use by setting the **New Member Location** property in the **Properties** window. That is, when you double-click a class shape, Class Designer goes to the source file that contains the class declaration identified by the **New Member Location** property. When you double-click a partial method in a class shape, Class Designer goes to the partial method declaration. Also, in the **Properties** window, the **File Name** property refers to the declaration location. For partial classes, **File Name** lists all of the files that contain declaration and implementation code for that class. However, for partial methods, **File Name** lists only the file that contains the partial method declaration.  
   
- 次の例では、クラス `Employee` の定義が 2 つの宣言に分割され、それぞれが別のプロシージャを定義します。 この例にある 2 つの部分定義は、1 つのソース ファイル内にあっても、2 つの異なるソース ファイル内にあってもかまいません。  
+ The following examples split the definition of class `Employee` into two declarations, each of which defines a different procedure. The two partial definitions in the examples could be in one source file or in two different source files.  
   
 > [!NOTE]
->  Visual Basic では、部分クラス定義を使用し、Visual Studio によって生成されたコードとユーザーが作成したコードを分離します。 コードは別個のソース ファイルに分割されます。 たとえば、**Windows フォーム デザイナー**では、`Form` などのコントロールに部分クラスを定義します。 これらのコントロールでは、生成されたコードを変更しないでください。  
+>  Visual Basic uses partial-class definitions to separate Visual Studio—generated code from user-authored code. The code is separated into discrete source files. For example, the **Windows Form Designer** defines partial classes for controls such as `Form`. You should not modify the generated code in these controls.  
   
- Visual Basic の部分型に関する詳細については、「[Partial](/dotnet/visual-basic/language-reference/modifiers/partial)」 (部分型) を参照してください。  
+ For more information about partial types in Visual Basic, see [Partial](/dotnet/visual-basic/language-reference/modifiers/partial).  
   
-## <a name="example"></a>例  
- Visual Basic でクラス定義を分割するには、次の例のように、`Partial` キーワードを使用します。  
+## <a name="example"></a>Example  
+ To split a class definition in Visual Basic, use the `Partial` keyword, as shown in the following example.  
   
-```vb#  
+```vb  
 ' First part of class definition.  
 Partial Public Class Employee  
     Public Sub CalculateWorkHours()  
@@ -70,10 +70,10 @@ Partial Public Class Employee
 End Class  
 ```  
   
-## <a name="example"></a>例  
- Visual C# でクラス定義を分割するには、次の例のように、`partial` キーワードを使用します。  
+## <a name="example"></a>Example  
+ To split a class definition in Visual C#, use the `partial` keyword, as shown in the following example.  
   
-```c#  
+```cs  
 // First part of class definition.  
 public partial class Employee  
 {  
@@ -91,8 +91,8 @@ public partial class Employee
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [部分クラスと部分メソッド](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)   
- [partial (型)](/dotnet/csharp/language-reference/keywords/partial-type)   
- [partial (メソッド) (C# リファレンス)](/dotnet/csharp/language-reference/keywords/partial-method)   
+## <a name="see-also"></a>See Also  
+ [Partial Classes and Methods](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)   
+ [partial (Type)](/dotnet/csharp/language-reference/keywords/partial-type)   
+ [partial (Method) (C# Reference)](/dotnet/csharp/language-reference/keywords/partial-method)   
  [Partial](/dotnet/visual-basic/language-reference/modifiers/partial)

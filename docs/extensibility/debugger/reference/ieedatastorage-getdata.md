@@ -1,5 +1,5 @@
 ---
-title: "IEEDataStorage::GetData |Microsoft ドキュメント"
+title: IEEDataStorage::GetData | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2e2430a6b2e8ae1a39882611e55499ebdb9bf4d8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 9c174e7b05638c232583077020e68a49020fa0be
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="ieedatastoragegetdata"></a>IEEDataStorage::GetData
-オブジェクトから指定したバイト数を取得します。  
+Retrieves the specified number of bytes from the object.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetData(  
@@ -49,7 +50,7 @@ HRESULT GetData(
 );  
 ```  
   
-```c#  
+```cs  
 int GetData(  
    uint     dataSize,  
    out uint sizeGotten,  
@@ -57,22 +58,22 @@ int GetData(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `dataSize`  
- [in]取得するバイト数 (、`data`配列が、少なくともこのバイト数で保持する必要があります)。  
+ [in] The number of bytes to retrieve (the `data` array must hold at least this number of bytes).  
   
  `sizeGotten`  
- [out]実際に取得するバイト数を返します。  
+ [out] Returns the number of bytes actually retrieved.  
   
  `data`  
- [入力、出力]要求されたデータと共に格納する配列。  
+ [in, out] Array to be filled in with the requested data.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- このメソッドの推奨される使用法は取得プロセス内のバイトをスキップする方法がないために、ローカル配列にすべてのデータ バイトを取得することです。 この場合は、パラメーター`dataSize`値によって返される、 [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ The recommended use of this method is to retrieve all the data bytes into a local array, since there is no way to skip over bytes in the retrieval process. In this case, the parameter `dataSize` should be the value returned by the [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md) method.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)

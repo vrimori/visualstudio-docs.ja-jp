@@ -1,202 +1,219 @@
 ---
-title: "Walkthrough: Creating and Accessing a WCF Data Service in Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data services in Visual Studio"
-  - "WCF Data Services, Visual Studio"
-  - "ADO.NET Data Services, Visual Studio"
-  - "WCF data services in Visual Studio"
+title: 'Walkthrough: Creating a WCF Data Service with WPF and Entity Framework | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data services in Visual Studio
+- WCF Data Services, Visual Studio
+- ADO.NET Data Services, Visual Studio
+- WCF data services in Visual Studio
 ms.assetid: da66ad1b-a25d-485c-af13-2d18f0422e3d
 caps.latest.revision: 24
-caps.handback.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d2ae80673afdceb5cc5f816d92ab9b9cbf084801
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
+
 ---
-# Walkthrough: Creating and Accessing a WCF Data Service in Visual Studio
-このチュートリアルでは、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] Web アプリケーションでホストされる簡単な [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] を作成して、Windows フォーム アプリケーションからアクセスする方法について説明します。  
+# <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>Walkthrough: Creating a WCF Data Service with WPF and Entity Framework
+This walkthrough demonstrates how to create a simple [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] that is hosted in an [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web application and then access it from a Windows Forms application.  
   
- このチュートリアルでは、次の作業を行います。  
+ In this walkthrough you will:  
   
--   [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] をホストする Web アプリケーションを作成します。  
+-   Create a Web application to host a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)].  
   
--   Northwind データベースの Customers テーブルを表す[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]を作成します。  
+-   Create an [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] that represents the Customers table in the Northwind database.  
   
--   [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] を作成します。  
+-   Create a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)].  
   
--   クライアント アプリケーションを作成し、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] への参照を追加します。  
+-   Create a client application and add a reference to the [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)].  
   
--   サービスへのデータ バインディングを有効にし、ユーザー インターフェイスを生成します。  
+-   Enable data binding to the service and generate the user interface.  
   
--   必要に応じて、アプリケーションにフィルター処理機能を追加します。  
+-   Optionally add filtering capabilities to the application.  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   Northwind サンプル データベース。  
+-   The Northwind sample database.  
   
-     開発用コンピューターにこのデータベースがない場合は、[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=98088)からダウンロードします。  手順については、「[Downloading Sample Databases](../Topic/Downloading%20Sample%20Databases.md)」を参照してください。  
+     If you do not have this database on your development computer, you can download it from the [Microsoft Download Center](/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases).  
   
-## サービスの作成  
- [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] を作成するには、Web プロジェクトを追加し、[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]を作成した後、そのモデルからサービスを作成します。  
+## <a name="creating-the-service"></a>Creating the Service  
+ To create a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)], you will add a Web project, create an [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)], and then create the service from the model.  
   
- 最初に、サービスをホストする Web プロジェクトを追加します。  
+ In the first step, you will add a Web project to host the service.  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-#### Web プロジェクトを作成するには  
+#### <a name="to-create-the-web-project"></a>To create the Web project  
   
-1.  メニュー バーで **\[ファイル\]**、**\[新規\]**、**\[プロジェクト\]** の順にクリックします。  
+1.  On the menu bar, choose **File**, **New**,  **Project**.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスの **\[Visual Basic\]** または **\[Visual C\#\]** ノードを展開して、**\[Web\]** ノードをクリックし、**\[ASP.NET Web アプリケーション\]** テンプレートをクリックします。  
+2.  In the **New Project** dialog box, expand the **Visual Basic** or **Visual C#** and **Web** nodes, and then choose the **ASP.NET Web Application** template.  
   
-3.  **\[名前\]** ボックスに「NorthwindWeb」と入力し、**\[OK\]** をクリックします。  
+3.  In the **Name** text box, enter **NorthwindWeb**, and then choose the **OK** button.  
   
-4.  **\[新しい ASP.NET プロジェクト\]** ダイアログ ボックスの **\[テンプレートの選択\]** リストで **\[なし\]** を選択し、**\[OK\]** ボタンをクリックします。  
+4.  In the **New ASP.NET Project** dialog box, in the **Select a template** list, choose **Empty**, and then choose the **OK** button.  
   
- この手順では、Northwind データベースにある Customers テーブルを表す[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]を作成します。  
+ In this step, you will create an [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] that represents the Customers table in the Northwind database.  
   
-#### Entity Data Model を作成するには  
+#### <a name="to-create-the-entity-data-model"></a>To create the Entity Data Model  
   
-1.  メニュー バーで **\[プロジェクト\]**、**\[新しい項目の追加\]** の順に選択します。  
+1.  On the menu bar, choose **Project**, **Add New Item**.  
   
-2.  **\[新しい項目の追加\]** ダイアログ ボックスで **\[データ\]** ノードを選択し、**\[ADO.NET エンティティ データ モデル\]** 項目を選択します。  
+2.  In the **Add New Item** dialog box, choose the **Data** node, and then choose the **ADO.NET Entity Data Model** item.  
   
-3.  **\[名前\]** ボックスに「`NorthwindModel`」と入力し、**\[追加\]** ボタンをクリックします。  
+3.  In the **Name** text box, enter `NorthwindModel`, and then choose the **Add** button.  
   
-     Entity Data Model ウィザードが表示されます。  
+     The Entity Data Model Wizard appears.  
   
-4.  エンティティ データ モデル ウィザードの **\[モデルのコンテンツの選択\]** ページで、**\[データベースからの EF デザイナー \(EF Designer from database\)\]** 項目を選択してから **\[次へ\]** ボタンを選択します。  
+4.  In the Entity Data Model Wizard, on the **Choose Model Contents** page, choose the **EF Designer from database** item, and then choose the **Next** button.  
   
-5.  **\[データ接続の選択\]** ページで、次のいずれかの操作を行います。  
+5.  On the **Choose Your Data Connection** page, perform one of the following steps:  
   
-    -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
+    -   If a data connection to the Northwind sample database is available in the drop-down list, choose it.  
   
-         または  
+         -or-  
   
-    -   **\[新しい接続\]** を選択して、新しいデータ接続を構成します。  詳細については、「[方法: SQL Server データベースへの接続を作成する](http://msdn.microsoft.com/ja-jp/360c340d-e5a6-4a7e-a569-e95d500be43d)」を参照してください。  
+    -   Choose the **New Connection** button to configure a new data connection. For more information, see [Add new connections](../data-tools/add-new-connections.md).  
   
-6.  データベースにパスワードが必要な場合は、**\[はい、重要情報を接続文字列に含めます。\]** を選択し、**\[次へ\]** をクリックします。  
-  
-    > [!NOTE]
-    >  ダイアログ ボックスが表示された場合は、**\[はい\]** をクリックしてファイルをプロジェクトに保存します。  
-  
-7.  **\[バージョンの選択\]** ページで **\[Entity Framework 5.0\]** オプション ボタンを選択し、**\[次へ\]** をクリックします。  
+6.  If the database requires a password, choose the **Yes, include sensitive data in the connection string** option button, and then choose the **Next** button.  
   
     > [!NOTE]
-    >  WCF サービス で Entity Framework 6 の最新バージョンを使用するには、WCF Data Services Entity Framework Provider NuGet パッケージのインストールが必要になります。  「[Using WCF Data Services 5.6.0 with Entity Framework 6\+](http://blogs.msdn.com/b/odatateam/archive/2013/10/02/using-wcf-data-services-5-6-0-with-entity-framework-6.aspx)」を参照してください。  
+    >  If a dialog box appears, choose **Yes** to save the file to your project.  
   
-8.  **\[データベース オブジェクトの選択\]** ページで、**\[テーブル\]** ノードを展開し、**\[Customers\]** チェック ボックスをオンにして **\[完了\]** をクリックします。  
-  
-     エンティティ モデル ダイアグラムが表示され、プロジェクトに NorthwindModel.edmx ファイルが追加されます。  
-  
- この手順では、データ サービスを作成してテストします。  
-  
-#### データ サービスを作成するには  
-  
-1.  メニュー バーで **\[プロジェクト\]**、**\[新しい項目の追加\]** の順に選択します。  
-  
-2.  **\[新しい項目の追加\]** ダイアログ ボックスで **\[Web\]** ノードを選択し、**\[WCF Data Service 5.6\]** 項目を選択します。  
-  
-3.  **\[名前\]** ボックスに「`NorthwindCustomers`」と入力し、**\[追加\]** をクリックします。  
-  
-     NorthwindCustomers.svc ファイルが**コード エディター**に表示されます。  
-  
-4.  **コード エディター**で、最初の `TODO:` コメントを探して、コードを次のコードに置き換えます。  
-  
-     [!code-vb[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.vb)]
-     [!code-cs[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.cs)]  
-  
-5.  `InitializeService` イベント ハンドラーのコメントを次のコードに置き換えます。  
-  
-     [!code-vb[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.vb)]
-     [!code-cs[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.cs)]  
-  
-6.  メニュー バーで **\[デバッグ\]**、**\[デバッグなしで開始\]** の順にクリックして、プロジェクトを実行します。  ブラウザー ウィンドウが開き、そのサービスの XML スキーマが表示されます。  
-  
-7.  **\[アドレス\]** バーの NorthwindCustomers.svc の URL の末尾に「`Customers`」と入力し、Enter キーを押します。  
-  
-     Customers テーブル内のデータの XML 表現が表示されます。  
+7.  On the **Choose your version** page, choose the **Entity Framework 5.0** option button, and then choose the **Next** button.  
   
     > [!NOTE]
-    >  Internet Explorer がデータを誤って RSS フィードとして解釈する場合があります。  RSS フィードを表示するオプションが無効になっていることを確認してください。  詳細については、「[Troubleshooting Service References](../data-tools/troubleshooting-service-references.md)」を参照してください。  
+    >  In order to use the latest version of the Entity Framework 6 with WCF Services, you'll need to install the WCF Data Services Entity Framework Provider NuGet package. See [Using WCF Data Services 5.6.0 with Entity Framework 6+](http://blogs.msdn.com/b/odatateam/archive/2013/10/02/using-wcf-data-services-5-6-0-with-entity-framework-6.aspx).  
   
-8.  ブラウザー ウィンドウを閉じます。  
+8.  On the **Choose Your Database Objects** page, expand the **Tables** node, select the **Customers** check box, and then choose the **Finish** button.  
   
- 次の手順では、サービスを使用する Windows フォーム クライアント アプリケーションを作成します。  
+     The entity model diagram will be displayed, and a NorthwindModel.edmx file will be added to your project.  
   
-## クライアント アプリケーションの作成  
- クライアント アプリケーションを作成するには、2 つ目のプロジェクトを追加し、そのプロジェクトにサービス参照を追加します。そして、データ ソースを構成し、サービスから取得したデータを表示するユーザー インターフェイスを作成します。  
+ In this step, you will create and test the data service.  
   
- 最初に、Windows フォーム プロジェクトをソリューションに追加し、スタートアップ プロジェクトに設定します。  
+#### <a name="to-create-the-data-service"></a>To create the data service  
   
-#### クライアント アプリケーションを作成するには  
+1.  On the menu bar, choose **Project**, **Add New Item**.  
   
-1.  メニュー バーで \[ファイル\]、**\[追加\]**、**\[新しいプロジェクト\]** の順にクリックします。  
+2.  In the **Add New Item** dialog box, choose the **Web** node, and then choose the **WCF Data Service 5.6** item.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[Visual Basic\]** ノードまたは **\[Visual C\#\]** ノードを展開し、**\[Windows\]** をクリックして **\[Windows フォーム アプリケーション\]** をクリックします。  
+3.  In the **Name** text box, enter `NorthwindCustomers`, and then choose the **Add** button.  
   
-3.  **\[名前\]** ボックスに「`NorthwindClient`」と入力し、**\[OK\]** をクリックします。  
+     The NorthwindCustomers.svc file appears in the **Code Editor**.  
   
-4.  **ソリューション エクスプローラー**で、**\[NorthwindClient\]** プロジェクト ノードをクリックします。  
+4.  In the **Code Editor**, locate the first `TODO:` comment and replace the code with the following:  
   
-5.  メニュー バーで、**\[プロジェクト\]**、**\[スタートアップ プロジェクトに設定\]** の順に選択します。  
+     [!code-vb[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.vb)]  [!code-cs[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.cs)]  
   
- この手順では、Web プロジェクト内の [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] へのサービス参照を追加します。  
+5.  Replace the comments in the `InitializeService` event handler with the following code:  
   
-#### サービス参照を追加するには  
+     [!code-vb[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.vb)]  [!code-cs[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.cs)]  
   
-1.  メニュー バーで、**\[プロジェクト\]**、**\[サービス参照の追加\]** の順に選択します。  
+6.  On the menu bar, choose **Debug**, **Start Without Debugging** to run the service. A browser window opens and the XML schema for the service is displayed.  
   
-2.  **\[サービス参照の追加\]** ダイアログ ボックスで、**\[探索\]** をクリックします。  
+7.  In the **Address** bar, enter `Customers` at the end of the URL for NorthwindCustomers.svc, and then choose the **ENTER** key.  
   
-     NorthwindCustomers サービスの URL が **"アドレス"** フィールドに表示されます。  
+     An XML representation of the data in the Customers table is displayed.  
   
-3.  **\[OK\]** をクリックして、サービス参照を追加します。  
+    > [!NOTE]
+    >  In some cases, Internet Explorer will misinterpret the data as an RSS feed. You must make sure that the option to display RSS feeds is disabled. For more information, see [Troubleshooting Service References](../data-tools/troubleshooting-service-references.md).  
   
- この手順では、データ ソースを構成して、サービスへのデータ バインディングを有効にします。  
+8.  Close the browser window.  
   
-#### サービスへのデータ バインディングを有効にするには  
+ In the next steps, you will create a Windows Forms client application to consume the service.  
   
-1.  メニュー バーの **\[表示\]** をクリックし、**\[その他のウィンドウ\]**、**\[データ ソース\]** の順にクリックします。  
+## <a name="creating-the-client-application"></a>Creating the Client Application  
+ To create the client application, you will add a second project, add a service reference to the project, configure a data source, and create a user interface to display the data from the service.  
   
-2.  **\[データ ソース\]** ウィンドウで、**\[新しいデータ ソースの追加\]** をクリックします。  
+ In the first step, you will add a Windows Forms project to the solution and set it as the startup project.  
   
-3.  **データ ソースの構成**ウィザードの **\[データ ソースの種類を選択\]** ページで、**\[オブジェクト\]** をクリックし、**\[次へ\]** をクリックします。  
+#### <a name="to-create-the-client-application"></a>To create the client application  
   
-4.  **\[データ オブジェクトの選択\]** ページで、**NorthwindClient** ノードを展開し、さらに **NorthwindClient.ServiceReference1** ノードを展開します。  
+1.  On the menu bar, choose File, **Add**, **New Project**.  
   
-5.  **\[Customer\]** チェック ボックスをオンにし、**\[完了\]** をクリックします。  
+2.  In the **New Project** dialog box, expand the **Visual Basic** or **Visual C#** node and choose the **Windows** node, and then choose **Windows Forms Application**.  
   
- この手順では、サービスから取得したデータを表示するユーザー インターフェイスを作成します。  
+3.  In the **Name** text box, enter `NorthwindClient`, and then choose the **OK** button.  
   
-#### ユーザー インターフェイスを作成するには  
+4.  In **Solution Explorer**, choose the **NorthwindClient** project node.  
   
-1.  **\[データ ソース\]** ウィンドウで、**\[Customers\]** ノードのショートカット メニューを開き、**\[コピー\]** をクリックします。  
+5.  On the menu bar, choose **Project**, **Set as StartUp Project**.  
   
-2.  **\[Form1.vb\]** または **\[Form1.cs\]** フォーム デザイナーで、ショートカット メニューを開き、**\[貼り付け\]** をクリックします。  
+ In this step, you will add a service reference to the [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] in the Web project.  
   
-     <xref:System.Windows.Forms.DataGridView> コントロール、<xref:System.Windows.Forms.BindingSource> コンポーネント、および <xref:System.Windows.Forms.BindingNavigator> コンポーネントがフォームに追加されます。  
+#### <a name="to-add-a-service-reference"></a>To add a service reference  
   
-3.  **\[CustomersDataGridView\]** コントロールを選択してから、**\[プロパティ\]** ウィンドウで **\[Dock\]** プロパティを **\[Fill\]** に設定します。  
+1.  On the menu bar, choose **Project**, **Add Service Reference**.  
   
-4.  **ソリューション エクスプローラー**で、**\[Form1\]** ノードのショートカット メニューを開き、**\[コードの表示\]** を選択してコード エディターを開き、次の Imports または Using ステートメントをファイルの先頭に追加します。  
+2.  In the **Add Service Reference** dialog box, choose the **Discover** button.  
+  
+     The URL for the NorthwindCustomers service appears in the **Address** field.  
+  
+3.  Choose the **OK** button to add the service reference.  
+  
+ In this step, you will configure a data source to enable data binding to the service.  
+  
+#### <a name="to-enable-data-binding-to-the-service"></a>To enable data binding to the service  
+  
+1.  On the menu bar, choose **View**, **Other Windows**, **Data Sources**.  
+  
+2.  In the **Data Sources** window, choose the **Add New Data Source** button.  
+  
+3.  On the **Choose a Data Source Type** page of the **Data Source Configuration Wizard**, choose **Object**, and then choose the **Next** button.  
+  
+4.  On the **Select the Data Objects** page, expand the **NorthwindClient** node, and then expand the **NorthwindClient.ServiceReference1** node.  
+  
+5.  Select **Customer** check box, and then choose the **Finish** button.  
+  
+ In this step, you will create the user interface that will display the data from the service.  
+  
+#### <a name="to-create-the-user-interface"></a>To create the user interface  
+  
+1.  In the **Data Sources** window, open the shortcut menu for the **Customers** node and choose **Copy**.  
+  
+2.  In the **Form1.vb** or **Form1.cs** form designer, open the shortcut menu and choose **Paste**.  
+  
+     A <xref:System.Windows.Forms.DataGridView> control, a <xref:System.Windows.Forms.BindingSource> component, and a <xref:System.Windows.Forms.BindingNavigator> component are added to the form.  
+  
+3.  Choose the **CustomersDataGridView** control, and then in the **Properties** window set the **Dock** property to **Fill**.  
+  
+4.  In **Solution Explorer**, open the shortcut menu for the **Form1** node and choose **View Code** to open the Code Editor, and add the following Imports or Using statement at the top of the file:  
   
     ```vb  
     Imports NorthwindClient.ServiceReference1  
     ```  
   
-    ```c#  
+    ```cs  
     using NorthwindClient.ServiceReference1;  
     ```  
   
-5.  `Form1_Load` イベント ハンドラーに次のコードを追加します。  
+5.  Add the following code to the `Form1_Load` event handler:  
   
     ```vb  
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load  
@@ -206,7 +223,7 @@ manager: "ghogen"
         End Sub  
     ```  
   
-    ```c#  
+    ```cs  
     private void Form1_Load(object sender, EventArgs e)  
     {  
     NorthwindEntities proxy = new NorthwindEntities(new Uri("http://localhost:53161/NorthwindCustomers.svc/"));  
@@ -215,28 +232,28 @@ manager: "ghogen"
   
     ```  
   
-6.  **ソリューション エクスプローラー**で、NorthwindCustomers.svc ファイルのショートカット メニューを開き、**\[ブラウザーで表示\]** をクリックします。  Internet Explorer が開き、そのサービスの XML スキーマが表示されます。  
+6.  In **Solution Explorer**, open the shortcut menu for the NorthwindCustomers.svc file and choose **View in Browser**. Internet Explorer opens and the XML schema for the service is displayed.  
   
-7.  Internet Explorer のアドレス バーから URL をコピーします。  
+7.  Copy the URL from the Internet Explorer address bar.  
   
-8.  手順 4. で追加したコードの「`http://localhost:53161/NorthwindCustomers.svc/`」を選択し、コピーした URL に置き換えます。  
+8.  In the code that you added in step 4, select `http://localhost:53161/NorthwindCustomers.svc/` and replace it with the URL that you just copied.  
   
-9. メニュー バーで、**\[デバッグ\]**、**\[デバッグ開始\]** の順に選択してアプリケーションを実行します。  顧客情報が表示されます。  
+9. On the menu bar, choose **Debug**, **Start Debugging** to run the application. The customer information is displayed.  
   
- この時点で、NorthwindCustomers サービスから取得した顧客の一覧を表示するアプリケーションが作成されました。  このサービスを使用して他のデータも公開する場合は、[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]を変更して、Northwind データベースの他のテーブルを含めます。  
+ You now have a working application that displays a list of customers from the NorthwindCustomers service. If you want to expose additional data through the service, you can modify the [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] to include additional tables from the Northwind database.  
   
- 次の省略可能な手順では、サービスによって返されたデータをフィルター処理する方法について説明します。  
+ In the next optional step, you will learn how to filter the data that is returned by the service.  
   
-## フィルター処理機能の追加  
- この手順では、アプリケーションをカスタマイズして、都市で顧客データをフィルター処理します。  
+## <a name="adding-filtering-capabilities"></a>Adding Filtering Capabilities  
+ In this step, you will customize the application to filter the data by the customer's city.  
   
-#### 都市によるフィルター処理を追加するには  
+#### <a name="to-add-filtering-by-city"></a>To add filtering by city  
   
-1.  **ソリューション エクスプローラー**で、**\[Form1.vb\]** または **\[Form1.cs\]** ノードのショートカット メニューを開き、**\[開く\]** をクリックします。  
+1.  In **Solution Explorer**, open the shortcut menu for the **Form1.vb** or **Form1.cs** node and choose **Open**.  
   
-2.  <xref:System.Windows.Forms.TextBox>\[ツールボックス\] から、<xref:System.Windows.Forms.Button> コントロールと  **コントロールをフォームに追加します。**  
+2.  Add a <xref:System.Windows.Forms.TextBox> control and a <xref:System.Windows.Forms.Button> control from the **Toolbox** to the form.  
   
-3.  <xref:System.Windows.Forms.Button> コントロールのショートカット メニューを開き、**\[コードの表示\]** をクリックして、`Button1_Click` イベント ハンドラーに次のコードを追加します。  
+3.  Open the shortcut menu for the <xref:System.Windows.Forms.Button> control, and choose **View Code**, and then add the following code in the `Button1_Click` event handler:  
   
     ```vb  
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click  
@@ -252,7 +269,7 @@ manager: "ghogen"
         End Sub  
     ```  
   
-    ```c#  
+    ```cs  
     private void Button1_Click(object sender, EventArgs e)  
     {  
     ServiceReference1.northwindModel.northwindEntities proxy = new northwindEntities(new Uri("http://localhost:53161/NorthwindCustomers.svc"));  
@@ -265,11 +282,12 @@ manager: "ghogen"
     }  
     ```  
   
-4.  このコードの `http://localhost:53161/NorthwindCustomers.svc` を `Form1_Load` イベント ハンドラーの URL に置き換えます。  
+4.  In the previous code, replace `http://localhost:53161/NorthwindCustomers.svc` with the URL from the `Form1_Load` event handler.  
   
-5.  メニュー バーで、**\[デバッグ\]**、**\[デバッグ開始\]** の順に選択してアプリケーションを実行します。  
+5.  On the menu bar, choose **Debug**, **Start Debugging** to run the application.  
   
-6.  テキスト ボックスに「London」と入力し、ボタンをクリックします。  ロンドンの顧客だけが表示されます。  
+6.  In the text box, enter **London**, and then choose the button. Only the customers from London are displayed.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
+ [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)   
  [How to: Add, Update, or Remove a WCF Data Service Reference](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md)

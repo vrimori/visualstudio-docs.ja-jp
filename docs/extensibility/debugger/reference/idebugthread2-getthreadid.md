@@ -1,54 +1,71 @@
 ---
-title: "IDebugThread2::GetThreadId | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugThread2::GetThreadId"
-helpviewer_keywords: 
-  - "IDebugThread2::GetThreadId"
+title: IDebugThread2::GetThreadId | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugThread2::GetThreadId
+helpviewer_keywords:
+- IDebugThread2::GetThreadId
 ms.assetid: db8b1c07-6b86-47f9-b292-bac19c276d36
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugThread2::GetThreadId
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ef87feadee26a8e4611526691a85c8f9c68d830a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-システムのスレッド識別子を取得します。  
+---
+# <a name="idebugthread2getthreadid"></a>IDebugThread2::GetThreadId
+Gets the system thread identifier.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetThreadId (   
-   DWORD* pdwThreadId  
+HRESULT GetThreadId (   
+   DWORD* pdwThreadId  
 );  
 ```  
   
-```c#  
-int GetThreadId (   
-   out uint pdwThreadId  
+```cs  
+int GetThreadId (   
+   out uint pdwThreadId  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pdwThreadId`  
- \[入力\] システムのスレッド識別子を返します。  
+ [out] Returns the system thread identifier.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- スレッド ID はプロセス内のすべてのスレッド間のスレッドを識別するために使用されます。  
+## <a name="remarks"></a>Remarks  
+ A thread ID is used to identify a thread among all other threads in a process.  
   
-## 使用例  
- 次の例 `CProgram` の単純なオブジェクトに対してこのメソッドを実装する方法を実装する [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) のインターフェイス。  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CProgram` object that implements the [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) interface.  
   
 ```cpp#  
 HRESULT CProgram::GetThreadId(DWORD* pdwThreadId) {     
@@ -57,5 +74,5 @@ HRESULT CProgram::GetThreadId(DWORD* pdwThreadId) {
 }    
 ```  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

@@ -1,5 +1,5 @@
 ---
-title: "図形とコネクタ、モデルを反映するように更新 |Microsoft ドキュメント"
+title: Updating Shapes and Connectors to Reflect the Model | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,16 +11,17 @@ caps.latest.revision: 6
 author: alancameronwills
 ms.author: awills
 manager: douge
-translationtype: Machine Translation
-ms.sourcegitcommit: eb2ab9d49cdeb1ed71da8ef67841f7796862dc30
-ms.openlocfilehash: 97ec749c0a89dae6c5a98702926d8ad82b6af3ac
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6f6e72eefb8a61a12940a95eba59411469625c98
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="updating-shapes-and-connectors-to-reflect-the-model"></a>シェイプおよびコネクタの更新とモデルへの反映
-ドメイン固有言語[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、基になるモデルの状態を反映して、図形の外観を行うことができます。  
+# <a name="updating-shapes-and-connectors-to-reflect-the-model"></a>Updating Shapes and Connectors to Reflect the Model
+In a domain-specific language in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], you can make the appearance of a shape reflect the state of the underlying model.  
   
- このトピックのコード例に追加する必要があります、`.cs`ファイルで、`Dsl`プロジェクトです。 各ファイルにこれらのステートメントを必要となります。  
+ The code examples in this topic should be added to a `.cs` file in your `Dsl` project. You will need these statements in each file:  
   
 ```  
 using Microsoft.VisualStudio.Modeling;  
@@ -28,26 +29,26 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
 ```  
   
-## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>デコレーターの可視性を制御する図形マップ プロパティの設定  
- DSL 定義で、図形とドメイン クラス間のマッピングを構成することによって、プログラム コードを記述することがなくデコレーターの可視性を制御できます。 詳細については、次を参照してください。 [ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)します。
+## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>Set Shape Map properties to control the visibility of a decorator  
+ You can control the visibility of a decorator without writing program code, by configuring the mapping between the shape and the domain class in the DSL Definition. For more information, see [How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md).
   
-## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>色と形のスタイル プロパティとして公開します。  
- DSL 定義では、shape クラスを右クリックし、順にポイント**公開されている追加**、クリックして、項目のいずれかなど、**塗りつぶしの色**します。  
+## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>Expose the color and style of a shape as properties  
+ In the DSL Definition, right-click the shape class, point to **Add Exposed**, and then click one of the items such as **Fill Color**.  
   
- 図形は、ドメイン プロパティまたはユーザーとしてプログラム コードで設定できるようになりました。 たとえば、コマンドまたはルールのプログラム コードで設定するに記述できます。  
+ The shape now has a domain property that you can set in program code or as a user. For example, to set it in the program code of a command or rule, you could write:  
   
  `shape.FillColor = System.Drawing.Color.Red;`  
   
- プログラムの制御下でのみ、ユーザーではなく、プロパティの変数を作成する場合など、新しいドメインのプロパティを選択**塗りつぶしの色**DSL 定義図にします。 次に、[プロパティ] ウィンドウで次のように設定します。**はブラウズ可能な**に`false`設定または**は読み取り専用 UI**に`true`します。  
+ If you want to make the property variable only under program control, and not by the user, select the new domain property such as **Fill Color** in the DSL Definition diagram. Then, in the Properties window, set **Is Browsable** to `false` or set **Is UI Readonly** to `true`.  
   
-## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>色、スタイルまたは場所のモデル要素のプロパティに依存することの変更ルールを定義します。  
- モデルの他の部分に依存して、図形の外観を更新するルールを定義することができます。 たとえば、モデル要素のプロパティに依存して、図形の色を更新するモデル要素には、ルールの変更を定義できます。 ルールを変更の詳細については、次を参照してください。[ルール反映されるまで変更内で、モデル](../modeling/rules-propagate-changes-within-the-model.md)します。  
+## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>Define Change Rules to make color, style or location depend on model element properties  
+ You can define rules that update the appearance the shape dependent on other parts of the model. For example, you could define a Change Rule on a model element that updates the color of its shape dependent on the properties of the model element. For more information about Change Rules, see [Rules Propagate Changes Within the Model](../modeling/rules-propagate-changes-within-the-model.md).  
   
- ルールは、元に戻すコマンドが実行されるときに、規則が呼び出されないためには、ストア内で保持されているプロパティを更新のみを使用する必要があります。 これは、サイズ、形状の表示などのいくつかのグラフィカル機能には含まれません。 図形の機能を更新するを参照してください。[非ストア グラフィックの更新機能](#OnAssociatedProperty)です。  
+ You should use rules only to update properties that are maintained within the Store, because rules are not invoked when the Undo command is performed. This does not include some graphical features such as the size and visibility of a shape. To update those features of a shape, see [Updating Non-Store Graphical features](#OnAssociatedProperty).  
   
- 次の例は、公開したと想定しています。`FillColor`ドメイン プロパティの前のセクションで説明されているとします。  
+ The following example assumes that you have exposed `FillColor` as a domain property as described in the previous section.  
   
-```c#  
+```cs  
 [RuleOn(typeof(ExampleElement))]  
   class ExampleElementPropertyRule : ChangeRule  
   {  
@@ -84,10 +85,10 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
 ```  
   
-## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>図形のプロパティを初期化するために使用する OnChildConfigured  
- 図形のプロパティは、最初に設定を作成、上書き`OnChildConfigured()`で図のクラスの部分定義します。 図クラスは、DSL 定義で指定し、生成されたコードは**Dsl\Generated Code\Diagram.cs**します。 例:  
+## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>Use OnChildConfigured to initialize a shape's properties  
+ To set the properties of a shape when it is first created, the override `OnChildConfigured()` in a partial definition of your diagram class. The diagram class is specified in your DSL Definition, and the generated code is in **Dsl\Generated Code\Diagram.cs**. For example:  
   
-```c#  
+```cs  
 partial class MyLanguageDiagram  
 {  
   protected override void OnChildConfigured(ShapeElement child, bool childWasPlaced, bool createdDuringViewFixup)  
@@ -108,12 +109,12 @@ partial class MyLanguageDiagram
   
 ```  
   
- このメソッドは、ドメインのプロパティと、図形のサイズなどの非ストア機能の両方に使用できます。  
+ This method can be used both for domain properties and non-store features, such as the size of the shape.  
   
-##  <a name="a-nameonassociatedpropertya-use-associatevaluewith-to-update-other-features-of-a-shape"></a><a name="OnAssociatedProperty"></a>AssociateValueWith() を使用して、図形の他の機能の更新  
- 一部の機能は、影、または、コネクタの矢印のスタイルなどの図形の機能は、ドメインのプロパティとして公開するための組み込みのメソッドはありません。  このような機能に対する変更は、トランザクション システムの制御下ではありません。 したがって、これらを更新する適切なことはありません、ユーザーが元に戻すコマンドを実行するときに、規則が呼び出されないため、規則を使用します。  
+##  <a name="OnAssociatedProperty"></a> Use AssociateValueWith() to update other features of a shape  
+ For some features of a shape, such as whether it has a shadow, or the arrow style of a connector, there is no built-in method of exposing the feature as a domain property.  Changes to such features are not under the control of the transaction system. Therefore, it is not appropriate to update them using rules, because rules are not invoked when the user performs the Undo command.  
   
- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>。</xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>を使用して、このような機能を更新する代わりに、 次の例では、コネクタの矢印のスタイルは、コネクタを表示するリレーションシップにドメイン プロパティの値によって制御されます。  
+ Instead, you can update such features by using <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>. In the following example, the arrow style of a connector is controlled by a value of a domain property in the relationship that the connector displays:  
   
 ```  
 public partial class ArrowConnector // My connector class.   
@@ -130,7 +131,7 @@ public partial class ArrowConnector // My connector class.
       if ("IsDirected".Equals(e.PropertyName))  
       {  
         if (e.NewValue.Equals(true))  
-        { // Update the shape’s built-in Decorator feature:  
+        { // Update the shape's built-in Decorator feature:  
           this.DecoratorTo = LinkDecorator.DecoratorEmptyArrow;  
         }  
         else  
@@ -154,7 +155,7 @@ public partial class ArrowConnector // My connector class.
   
 ```  
   
- `AssociateValueWith()`登録する各ドメイン プロパティに&1; 回呼び出すは、必要があります。 呼び出された後、指定したプロパティに対して変更を加えたが呼び出す`OnAssociatedPropertyChanged()`プロパティのモデル要素を表示するすべての図形にします。  
+ `AssociateValueWith()` should be called one time for each domain property that you want to register. After it has been called, any changes to the specified property will call `OnAssociatedPropertyChanged()` in any shapes that present the property's model element.  
   
- 呼び出す必要はありません`AssociateValueWith()`インスタンスごとにします。 InitializeResources はインスタンス メソッドですが、各図形クラスに対して&1; 回だけ呼び出されます。
+ It is not necessary to call `AssociateValueWith()` for each instance. Although InitializeResources is an instance method, it is invoked only one time for each shape class.
 

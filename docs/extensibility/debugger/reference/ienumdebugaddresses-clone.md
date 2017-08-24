@@ -1,51 +1,68 @@
 ---
-title: "IEnumDebugAddresses::Clone | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugAddresses::Clone"
-helpviewer_keywords: 
-  - "IEnumDebugAddresses::Clone メソッド"
+title: IEnumDebugAddresses::Clone | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEnumDebugAddresses::Clone
+helpviewer_keywords:
+- IEnumDebugAddresses::Clone method
 ms.assetid: 71189a00-34eb-4c71-b96e-8bd6e70c6966
 caps.latest.revision: 5
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# IEnumDebugAddresses::Clone
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d4b3cbf4daef962099c5f2bbcea217a19282db8d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-メソッドは現在の列挙体のコピーを個々のオブジェクトとしてこの。  
+---
+# <a name="ienumdebugaddressesclone"></a>IEnumDebugAddresses::Clone
+This method returns a copy of the current enumeration as a separate object.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Clone(  
-   IEnumDebugAddresses** ppEnum  
+   IEnumDebugAddresses** ppEnum  
 );  
 ```  
   
-```c#  
+```cs  
 int Clone(  
-   out IEnumDebugAddresses ppEnum  
+   out IEnumDebugAddresses ppEnum  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppEnum`  
- \[入力\] 個々のオブジェクトとしてこの列挙体のコピーを返します。  
+ [out] Returns a copy of this enumeration as a separate object.  
   
-## プロパティ値\/戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="property-valuereturn-value"></a>Property Value/Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- このメソッドが呼び出されたときに列挙値のコピー元と同じ状態があります。  ただしコピー元の状態とは別にそれぞれ変更できます。  
+## <a name="remarks"></a>Remarks  
+ The copy of the enumeration has the same state as the original at the time this method is called. However, the copy's and the original's states are separate and can be changed individually.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

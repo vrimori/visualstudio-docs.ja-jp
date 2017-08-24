@@ -1,5 +1,5 @@
 ---
-title: "IDebugSymbolProvider::GetNextAddress |Microsoft ドキュメント"
+title: IDebugSymbolProvider::GetNextAddress | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7f16f03e7e61fb059fdea10986ca76cf26b77590
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 3f5821f39a29d41cd56ac73d6f5b0be48ae8f2a2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugsymbolprovidergetnextaddress"></a>IDebugSymbolProvider::GetNextAddress
-メソッド内の特定のデバッグ アドレスに依存してデバッグ アドレスを取得します。  
+Gets the debug address that follows a given debug address in a method.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetNextAddress(   
@@ -49,7 +50,7 @@ HRESULT GetNextAddress(
 );  
 ```  
   
-```c#  
+```cs  
 int GetNextAddress(   
    IDebugAddress     pAddress,  
    bool              fStatementOnly,  
@@ -57,18 +58,18 @@ int GetNextAddress(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pAddress`  
- [in]特定のデバッグのアドレス。  
+ [in] Given debug address.  
   
  `fStatementOnly`  
- [in]TRUE の場合は、1 つのステートメントにデバッグ アドレスを制限します。  
+ [in] If TRUE, limits the debug addresses to a single statement.  
   
  `ppAddress`  
- [out]次のデバッグのアドレスを返します。  
+ [out] Returns the next debug address.  
   
-## <a name="return-value"></a>戻り値  
- 返す有効な`HRESULT`、通常は S_OK です。  
+## <a name="return-value"></a>Return Value  
+ Returns a valid `HRESULT`, typically S_OK.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

@@ -1,5 +1,5 @@
 ---
-title: "IDebugArrayObject2::GetBaseIndices |Microsoft ドキュメント"
+title: IDebugArrayObject2::GetBaseIndices | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a4d56a4d6173f1efc648792f3e00c74757044a4b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ab6252c2083af79cf8f48fe4741dcb882993cdc6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugarrayobject2getbaseindices"></a>IDebugArrayObject2::GetBaseIndices
-配列の次元数を指定された各インデックスの基本のインデックス (下限) を取得します。  
+Retrieves the base indices (lower bounds) for each index given the number of dimensions in the array.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetBaseIndices (  
@@ -47,25 +48,25 @@ HRESULT GetBaseIndices (
 );  
 ```  
   
-```c#  
+```cs  
 int GetBaseIndices (  
    uint       dwRank,  
    out uint[] dwIndices  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `dwRank`  
- [in]配列の次元 (ランク) の数。  
+ [in] The number of dimensions (rank) of the array.  
   
  `dwIndices`  
- [out]配列のベース インデックス (下限) です。  
+ [out] The base indices (lower bounds) for the array.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- たとえば、この関数に次の c# コードで作成された配列には、「5」と返されます。  
+## <a name="remarks"></a>Remarks  
+ As an example, this function would return '5' for the array created by the following C# code:  
   
 ```  
 int[] lengths = { 12 };  
@@ -73,5 +74,5 @@ int[] lowerbounds = { 5 };
 Array.CreateInstance(typeof(int), lengths, lowerbounds);  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugArrayObject2](../../../extensibility/debugger/reference/idebugarrayobject2.md)

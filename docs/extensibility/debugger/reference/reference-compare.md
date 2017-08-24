@@ -1,67 +1,84 @@
 ---
-title: "REFERENCE_COMPARE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "REFERENCE_COMPARE"
-helpviewer_keywords: 
-  - "REFERENCE_COMPARE 列挙型"
+title: REFERENCE_COMPARE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- REFERENCE_COMPARE
+helpviewer_keywords:
+- REFERENCE_COMPARE enumeration
 ms.assetid: e31cdc78-f621-498b-9ca4-aefa790b9f6f
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# REFERENCE_COMPARE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 767f841a637405a642e84674e979cf55adeea2bb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-参照を比較の種類を指定します。  
+---
+# <a name="referencecompare"></a>REFERENCE_COMPARE
+Specifies the type of comparison for references.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_REFERENCE_COMPARE {   
-   REF_COMPARE_EQUAL        = 0x0001,  
-   REF_COMPARE_LESS_THAN    = 0x0002,  
-   REF_COMPARE_GREATER_THAN = 0x0003  
+enum enum_REFERENCE_COMPARE {   
+   REF_COMPARE_EQUAL        = 0x0001,  
+   REF_COMPARE_LESS_THAN    = 0x0002,  
+   REF_COMPARE_GREATER_THAN = 0x0003  
 };  
 typedef DWORD REFERENCE_COMPARE;  
 ```  
   
-```c#  
-public enum enum_REFERENCE_COMPARE {   
-   REF_COMPARE_EQUAL        = 0x0001,  
-   REF_COMPARE_LESS_THAN    = 0x0002,  
-   REF_COMPARE_GREATER_THAN = 0x0003  
+```cs  
+public enum enum_REFERENCE_COMPARE {   
+   REF_COMPARE_EQUAL        = 0x0001,  
+   REF_COMPARE_LESS_THAN    = 0x0002,  
+   REF_COMPARE_GREATER_THAN = 0x0003  
 };  
 ```  
   
-## メンバー  
- REF\_COMPARE\_EQUAL  
- の大小関係 \(等しくない\) を指定します。  
+## <a name="members"></a>Members  
+ REF_COMPARE_EQUAL  
+ Specifies an equal-to comparison.  
   
- REF\_COMPARE\_LESS\_THAN  
- 大小関係 \(より小さい\) を指定します。  
+ REF_COMPARE_LESS_THAN  
+ Specifies a less-than comparison.  
   
- REF\_COMPARE\_GREATER\_THAN  
- 比較的なを指定します。  
+ REF_COMPARE_GREATER_THAN  
+ Specifies a greater-than comparison.  
   
-## 解説  
- [比較](../../../extensibility/debugger/reference/idebugreference2-compare.md) のメソッドに引数として渡されます。  
+## <a name="remarks"></a>Remarks  
+ Passed as an argument to the [Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md) method.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [比較](../../../extensibility/debugger/reference/idebugreference2-compare.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md)

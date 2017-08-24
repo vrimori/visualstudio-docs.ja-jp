@@ -1,5 +1,5 @@
 ---
-title: "従来の言語サービス内のナビゲーション バーのサポート |Microsoft ドキュメント"
+title: Support for the Navigation Bar in a Legacy Language Service | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,24 +29,25 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 88636468da333fd9200f8661d88af6e7fdeedc59
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 52436aef005377095be87f64a301338867b2af46
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>従来の言語サービス内のナビゲーション バーのサポート
-エディターのビューの上部にあるナビゲーション バーには、ファイル内の型とメンバーが表示されます。 種類は左ドロップダウンで表示され、メンバーを表示する右のボックスの一覧です。 ユーザーは、型を選択するキャレットは、型の最初の行に配置されます。 ユーザーは、メンバーを選択するときに、メンバーの定義のキャレットが配置されます。 ドロップ ダウン ボックスは、カーソルの現在の場所を反映するように更新されます。  
+# <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>Support for the Navigation Bar in a Legacy Language Service
+The Navigation bar at the top of the editor view displays the types and members in the file. Types are shown in the left drop-down, and members are shown in the right drop-down. When the user selects a type, the caret is placed on the first line of the type. When the user selects a member, the caret is placed on the definition of the member. The drop-down boxes are updated to reflect the current location of the caret.  
   
-## <a name="displaying-and-updating-the-navigation-bar"></a>表示およびナビゲーション バーを更新します。  
- ナビゲーション バーをサポートするためには派生クラスを<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>クラスし、実装、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>メソッド</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A></xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>。 言語サービスがコード ウィンドウで、ベースに指定されている場合<xref:Microsoft.VisualStudio.Package.LanguageService>クラスをインスタンス化、<xref:Microsoft.VisualStudio.Package.CodeWindowManager>を含む、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>コード ウィンドウを表すオブジェクト</xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow></xref:Microsoft.VisualStudio.Package.CodeWindowManager></xref:Microsoft.VisualStudio.Package.LanguageService>。 <xref:Microsoft.VisualStudio.Package.CodeWindowManager>オブジェクトが、新しいきます<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>オブジェクト</xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView></xref:Microsoft.VisualStudio.Package.CodeWindowManager>。 <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>メソッドを取得、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>オブジェクト</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars></xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>。 インスタンスを返す場合、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>クラス、<xref:Microsoft.VisualStudio.Package.CodeWindowManager>呼び出し、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>一覧表示し、内部に挿入する方法、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>オブジェクトを[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ドロップダウン バーのマネージャー</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> </xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> </xref:Microsoft.VisualStudio.Package.CodeWindowManager> </xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> 。 ドロップダウン リスト マネージャーで、バー、さらに、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.SetDropdownBar%2A>メソッドを<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>確立するためにオブジェクト、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBar>2 つのドロップダウン バーを保持するオブジェクト</xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBar></xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars></xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.SetDropdownBar%2A>。  
+## <a name="displaying-and-updating-the-navigation-bar"></a>Displaying and Updating the Navigation bar  
+ To support the Navigation bar, you must derive a class from the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> class and implement the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method. When your language service is given a code window, the base <xref:Microsoft.VisualStudio.Package.LanguageService> class instantiates the <xref:Microsoft.VisualStudio.Package.CodeWindowManager>, which contains the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> object representing the code window. The <xref:Microsoft.VisualStudio.Package.CodeWindowManager> object is then given a new <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> object. The <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> method gets a <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> object. If you return an instance of your <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> class, the <xref:Microsoft.VisualStudio.Package.CodeWindowManager> calls your <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method to populate the internal lists and passes your <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> object to the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] drop-down bar manager. The drop-down bar manager, in turn, calls the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.SetDropdownBar%2A> method on your <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> object to establish the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBar> object that holds the two drop-down bars.  
   
- キャレットを移動すると、<xref:Microsoft.VisualStudio.Package.LanguageService.OnIdle%2A>メソッドの呼び出し、<xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A>メソッド</xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A></xref:Microsoft.VisualStudio.Package.LanguageService.OnIdle%2A>。 基本の<xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A>メソッド<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>ナビゲーション バーの状態を更新するクラス</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>でメソッド</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>を呼び出す</xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> セットを渡す<xref:Microsoft.VisualStudio.Package.DropDownMember>このメソッドへのオブジェクト</xref:Microsoft.VisualStudio.Package.DropDownMember>。 各オブジェクトは、ドロップダウン リスト内のエントリを表します。  
+ When the caret moves, the <xref:Microsoft.VisualStudio.Package.LanguageService.OnIdle%2A> method calls the <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> method. The base <xref:Microsoft.VisualStudio.Package.LanguageService.OnCaretMoved%2A> method calls the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method in your <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> class to update the state of the Navigation bar. You pass a set of <xref:Microsoft.VisualStudio.Package.DropDownMember> objects to this method. Each object represents an entry in the drop-down.  
   
-## <a name="the-contents-of-the-navigation-bar"></a>ナビゲーション バーの内容  
- ナビゲーション バーの種類の一覧とメンバーの一覧が通常含まれています。 種類の一覧には、現在のソース ファイル内の利用可能なすべての型が含まれています。 型名には、完全な名前空間情報が含まれます。 2 種類が c# コードの例を次に示します。  
+## <a name="the-contents-of-the-navigation-bar"></a>The Contents of the Navigation Bar  
+ The Navigation bar usually contains a list of types and a list of members. The list of types includes all types available in the current source file. The type names include the complete namespace information. The following is an example of C# code with two types:  
   
-```c#  
+```cs  
 namespace TestLanguagePackage  
 {  
     public class TestLanguageService  
@@ -61,48 +62,48 @@ namespace TestLanguagePackage
 }  
 ```  
   
- 型の一覧が表示されます`TestLanguagePackage.TestLanguageService`と`TestLanguagePackage.TestLanguageService.Tokens`です。  
+ The type list will display `TestLanguagePackage.TestLanguageService` and `TestLanguagePackage.TestLanguageService.Tokens`.  
   
- メンバーの一覧には、型の一覧で選択されている型の使用可能なメンバーが表示されます。 場合に、上記のコード例を使用して`TestLanguagePackage.TestLanguageService`が選択されている型は、メンバーの一覧には、プライベート メンバーが含まれます`tokens`と`serviceName`です。 内部構造`Token`は表示されません。  
+ The members list displays the available members of the type that is selected in the types list. Using the code example above, if `TestLanguagePackage.TestLanguageService` is the type that is selected, the members list would contain the private members `tokens` and `serviceName`. The internal structure `Token` is not displayed.  
   
- メンバー リスト内のキャレットを配置した場合は、メンバーの名前を太字を実装することができます。 メンバーできますにも表示されるグレー表示のテキストが、現在のキャレット位置のスコープ内でないを示します。  
+ You can implement the members list to make the name of a member bold when the caret is placed inside it. Members can also be displayed in grayed out text, indicating that they are not within the scope where the caret is currently positioned.  
   
-## <a name="enabling-support-for-the-navigation-bar"></a>ナビゲーション バーのサポートの有効化  
- ナビゲーション バーのサポートを有効にするには、`ShowDropdownBarOption`のパラメーター、<xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>属性を`true`</xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>。 このパラメーターを設定、<xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A>プロパティ</xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A>。 ナビゲーション バーをサポートするためには、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars><xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A><xref:Microsoft.VisualStudio.Package.LanguageService>クラス</xref:Microsoft.VisualStudio.Package.LanguageService>のメソッド</xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>内のオブジェクト</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>を実装する必要があります。  
+## <a name="enabling-support-for-the-navigation-bar"></a>Enabling Support for the Navigation Bar  
+ To enable support for the Navigation bar, you must set the `ShowDropdownBarOption` parameter of the <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> attribute to `true`. This parameter sets the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> property. To support the Navigation bar, you must implement the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> object in the <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> method on the <xref:Microsoft.VisualStudio.Package.LanguageService> class.  
   
- 実装で、<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>メソッド場合、<xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A>にプロパティが設定されている`true`、返すことができます、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>オブジェクト</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars></xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A></xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>。 オブジェクトが返されない場合は、ナビゲーション バーは表示されません。  
+ In your implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A> method, if the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ShowNavigationBar%2A> property is set to `true`, you can return a <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> object. If you do not return the object, the Navigation bar is not displayed.  
   
- このコントロール エディターのビューが開いているときにリセットすることは、ユーザーがナビゲーション バーを表示するオプションを設定できます。 ユーザーは、閉じてから、変更が行われる前に、エディター ウィンドウを再び開く必要があります。  
+ The option to show the Navigation bar can be set by the user, so it is possible for this control to be reset while the editor view is open. The user must close and reopen the editor window before the change takes place.  
   
-## <a name="implementing-support-for-the-navigation-bar"></a>ナビゲーション バーのサポートを実装します。  
- <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>メソッドは、2 つのリスト (各ボックスに&1; つ) と各リストの現在の選択項目を表す&2; つの値を受け取ります</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>。 リストと選択範囲の値を更新できる場合、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>メソッドが返す必要があります`true`リストが変更されていることを示すために</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>。  
+## <a name="implementing-support-for-the-navigation-bar"></a>Implementing Support for the Navigation Bar  
+ The <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method takes two lists (one for each drop-down) and two values representing the current selection in each list. The lists and the selection values can be updated, in which case the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method must return `true` to indicate that the lists have changed.  
   
- ドロップダウンの種類の選択範囲の変化に応じて、新しい種類を反映するように、メンバー リストを更新しなければなりません。 メンバー リストに表示内容は、いずれかができます。  
+ As the selection changes in the types drop-down, the members list must be updated to reflect the new type. What is shown in the members list can be either:  
   
--   現在の型のメンバーの一覧。  
+-   The list of members for the current type.  
   
--   ソースで利用可能なすべてのメンバーは、ファイルしますが、灰色のテキストで表示される現在の型ではなく、すべてのメンバーを含む。 すばやく移動できますが、色は、現在選択されている型の一部ではないことを示しているように、ユーザーは灰色のメンバーを選択もできます。  
+-   All the members available in the source file, but with all members not in the current type displayed in grayed-out text. The user can still select the grayed-out members, so they can be used for quick navigation, but the color indicates that they are not part of the currently selected type.  
   
- 実装、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>メソッドは、通常、次の手順を実行します</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>。  
+ An implementation of the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method typically performs the following steps:  
   
-1.  ソース ファイルの現在の宣言の一覧を取得します。  
+1.  Get a list of current declarations for the source file.  
   
-     さまざまなリストを作成する方法があります。 カスタム メソッドのバージョンを作成する方法が、<xref:Microsoft.VisualStudio.Package.LanguageService>クラスを呼び出す、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッド宣言のすべてのリストを返すカスタム解析理由を使用します</xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A></xref:Microsoft.VisualStudio.Package.LanguageService>。 呼び出す別の方法があります、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドから直接、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>カスタム解析理由を持つメソッドです</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A></xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>。 キャッシュ内の宣言にする&3; つ目の方法が、<xref:Microsoft.VisualStudio.Package.AuthoringScope>の最後の完全解析操作から返されるクラス、<xref:Microsoft.VisualStudio.Package.LanguageService>クラスを取り出してから、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>メソッド</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A></xref:Microsoft.VisualStudio.Package.LanguageService></xref:Microsoft.VisualStudio.Package.AuthoringScope>。  
+     There are a number of ways to populate the lists. One approach is to create a custom method on your version of the <xref:Microsoft.VisualStudio.Package.LanguageService> class that calls the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method with a custom parse reason that returns a list of all declarations. Another approach might be to call the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method directly from the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method with the custom parse reason. A third approach might be to cache the declarations in the <xref:Microsoft.VisualStudio.Package.AuthoringScope> class returned by the last full parsing operation in the <xref:Microsoft.VisualStudio.Package.LanguageService> class and retrieve that from the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method.  
   
-2.  設定またはの種類の一覧を更新します。  
+2.  Populate or update the list of types.  
   
-     型リストの内容は、ソースが変更されたときに、または現在のキャレット位置に基づいて、種類のテキストのスタイルを変更する場合に更新することがあります。 この位置はなお、<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>メソッド</xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A>。  
+     The contents of the types list may to be updated when the source has changed or if you have chosen to change the text styling of the types based on the current caret position. Note that this position is passed to the <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> method.  
   
-3.  型リストに現在のキャレット位置に基づいて選択する種類を決定します。  
+3.  Determine the type to select in the types list based on the current caret position.  
   
-     現在のキャレット位置を囲む型を検索する、手順 1 で取得した宣言を検索し、型のリストにそのインデックスを特定するには、その型の種類の一覧を検索できます。  
+     You can search the declarations that were obtained in step 1 to find the type that encloses the current caret position, and then search the types list for that type to determine its index into the types list.  
   
-4.  入力または選択した種類に基づくメンバーの一覧を更新します。  
+4.  Populate or update the list of members based on the selected type.  
   
-     メンバー リストを反映に現在表示されて、**メンバー**ボックスの一覧です。 メンバーの一覧の内容は、ソースが変更された場合、または、選択した型のメンバーだけを表示して、選択した型が変更された場合に更新する必要があります。 ソース ファイル内のすべてのメンバーの表示を選択する場合は、一覧内の各メンバーのテキスト スタイルの設定を現在選択されている型が変更された場合に更新する必要があります。  
+     The members list reflects what is currently displayed in the **Members** drop-down. The contents of the members list may need to be updated if the source has changed or if you are displaying only the members of the selected type and the selected type has changed. If you choose to display all the members in the source file, then the text styling of each member in the list needs to be updated if the currently selected type has changed.  
   
-5.  現在のキャレット位置に基づいてメンバーの一覧から選択するメンバーを決定します。  
+5.  Determine the member to select in the members list based on the current caret position.  
   
-     現在のキャレット位置を含むメンバーを手順 1. で取得した宣言を検索し、メンバー リストにそのインデックスを特定するには、そのメンバーのメンバーの一覧を検索します。  
+     Search the declarations that were obtained in step 1 for the member that contains the current caret position, then search the members list for that member to determine its index into the member list.  
   
-6.  返す`true`リストまたはいずれかの一覧の選択項目に変更が加えられた場合。
+6.  Return `true` if any changes have been made to the lists or the selections in either list.

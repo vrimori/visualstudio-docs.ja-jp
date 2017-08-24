@@ -1,5 +1,5 @@
 ---
-title: "クイック スタート: テスト エクスプローラーによるテスト駆動開発 | Microsoft Docs"
+title: 'Quick Start: Test Driven Development with Test Explorer | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,79 +27,79 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 2efe98a5b421fbffbe2a39cc69a5e0acf06af7db
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d988b3022d706b96d11260c61feb5e1bdf0f327f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="quick-start-test-driven-development-with-test-explorer"></a>クイック スタート: テスト エクスプローラーによるテスト駆動開発
-変更を繰り返して段階的に開発を行ううえで、コードの正しい動作を維持するには、単体テストを作成することをお勧めします。 サード パーティ製を含めていくつかのフレームワークを単体テストの記述に使用できます。 一部のテスト フレームワークは、別々の言語またはプラットフォームでのテストに特化されています。 テスト エクスプローラーは、1 つのインターフェイスで、どのフレームワークでの単体テストにも対応します。 最も一般的に使用されるフレームワーク用にアダプターが用意されており、他のフレームワーク用に独自のアダプターを作成することもできます。  
+# <a name="quick-start-test-driven-development-with-test-explorer"></a>Quick Start: Test Driven Development with Test Explorer
+We recommend that you create unit tests to help keep your code working correctly through many incremental steps of development. There are several frameworks that you can use to write unit tests, including some developed by third parties. Some test frameworks are   specialized to testing in different languages or platforms. Test Explorer provides a single interface for unit tests in any of these frameworks. Adapters are available for the most commonly-used frameworks, and you can write your own adapters for other frameworks.  
   
- テスト エクスプローラーは、Visual Studio の以前のエディションにあった単体テスト ウィンドウに代わる機能です。 これには次のような利点があります。  
+ Test Explorer supersedes the unit test windows found in earlier editions of Visual Studio. Its benefits include:  
   
--   .NET、アンマネージ、データベース、およびその他の種類のテストを 1 つのインターフェイスで実行できます。  
+-   Run .NET, unmanaged, database and other kinds of tests using a single interface.  
   
--   NUnit や MSTest など、任意の単体テスト フレームワークを使用できます。  
+-   Use the unit test framework of your choice, such as NUnit or MSTest frameworks.  
   
--   必要な情報をすべて、1 つのウィンドウで確認できます。  
+-   See in one window all the information that you need.  
   
-## <a name="using-test-explorer"></a>テスト エクスプローラーの使用  
- ![[すべて実行] ボタンを示す単体テスト エクスプローラー](~/test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
+## <a name="using-test-explorer"></a>Using Test Explorer  
+ ![Unit Test Explorer showing Run All button](../test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
   
-#### <a name="to-run-unit-tests-by-using-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行するには  
+#### <a name="to-run-unit-tests-by-using-test-explorer"></a>To Run Unit Tests by using Test Explorer  
   
-1.  任意のテスト フレームワークを使用して単体テストを作成します。  
+1.  Create unit tests that use the test frameworks of your choice.  
   
-     たとえば、MSTest フレームワークを使用するテストを作成するには:  
+     For example, to create a test that uses the MSTest Framework:  
   
-    1.  テスト プロジェクトを作成します。  
+    1.  Create a test project.  
   
-         **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual Basic]**、 **[Visual C#]**、または **[Visual C++]**を展開し、 **[テスト]**をクリックします。  
+         In the **New Project** dialog box, expand **Visual Basic**, **Visual C#**, or **Visual C++**, and then choose **Test**.  
   
-         **[単体テスト プロジェクト]**を選択します。  
+         Select **Unit Test Project**.  
   
-    2.  各単体テストをメソッドとして記述します。 各テスト メソッドにプレフィックスとして `[TestMethod]` 属性を付けます。  
+    2.  Write each unit test as a method. Prefix each test method with the `[TestMethod]` attribute.  
   
-2.  個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。  
+2.  If individual tests have no dependencies that prevent them from being run in any order, turn on parallel test execution with the ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") toggle button on the toolbar. This can noticeably reduce the time taken to run all the tests.  
   
-3.  メニュー バーで、 **[テスト]**、 **[単体テストの実行]**、 **[すべてのテスト]**の順にクリックします。  
+3.  On the menu bar, choose **Test**, **Run Unit Tests**, **All Tests**.  
   
-     ソリューションがビルドされ、テストが実行されます。  
+     The solution builds and the tests run.  
   
-     テスト エクスプローラーが開き、結果の概要が表示されます。  
+     Test Explorer opens and displays a summary of the results.  
   
- **テストの一覧を表示するには:** 任意のカテゴリで、 **[すべて表示]** をクリックします。  
+ **To see a full list of tests:** Choose **Show All** in any category.  
   
- **テスト結果の詳細を表示するには:** 例外メッセージなどの詳細を詳細ペインに表示するには、テスト エクスプローラーでテストを選択します。  
+ **To see the details of a test result:** Select the test in Test Explorer to view details such as exception messages in the details pane.  
   
- **テストのコードに移動するには:** テスト エクスプローラーでテストをダブルクリックするか、ショートカット メニューの **[テストを開く]** をクリックします。  
+ **To navigate to the code of a test:** Double-click the test in Test Explorer, or choose **Open Test** on the shortcut menu.  
   
- **テストをデバッグするには:** 1 つ以上のテストを選択し、ショートカット メニューの **[選択したテストのデバッグ]**をクリックします。  
+ **To debug a test:** Open the shortcut menu for one or more tests, and then choose **Debug Selected Tests**.  
   
 > [!IMPORTANT]
->  最新のテスト実行の結果が表示されます。 色分けされた結果バーに表示されるのは、実行されたテストの結果のみです。 たとえば、複数のテストを実行してそのいくつかに失敗し、次に成功したテストのみを実行した場合は、結果バーには緑色のみが表示されます。  
+>  The results that are displayed are for the most recent run. The colored results bar shows only the results for the tests that ran. For example, if you run several tests and some of them fail, and then run only the successful tests, then the results bar will show all green.  
   
 > [!NOTE]
->  テストが表示されない場合は、使用するテスト フレームワークにテスト エクスプローラーを接続するためのアダプターがインストールされていることを確認してください。 詳細については、「 [テスト エクスプローラーでさまざまなテスト フレームワークを使用する](#frameworks)」を参照してください。  
+>  If no test appears, make sure that you have installed an adapter to connect Test Explorer to the test framework that you are using. For more information, see [Using Different Test Frameworks with Test Explorer](#frameworks).  
   
-##  <a name="walkthrough"></a> チュートリアル: 単体テストを使用してメソッドを開発する  
- このチュートリアルでは、Microsoft 単体テスト フレームワークを使用して、テスト済みメソッドを C# で開発する方法を示します。 他の言語に適合させることも、NUnit など他のテスト フレームワークを使用することも、容易です。 詳細については、「 [さまざまなテスト フレームワークを使用する](#frameworks)」を参照してください。  
+##  <a name="walkthrough"></a> Walkthrough: Using Unit Tests to Develop a Method  
+ This walkthrough demonstrates how to develop a tested method in C# using the Microsoft Unit Test framework. You can easily adapt it for other languages, and to use other test frameworks such as NUnit. For more information, see [Using Different Test Frameworks](#frameworks).  
   
-#### <a name="creating-the-test-and-method"></a>テストとメソッドを作成する  
+#### <a name="creating-the-test-and-method"></a>Creating the Test and Method  
   
-1.  Visual C# クラス ライブラリ プロジェクトを作成します。 このプロジェクトには、提供するコードを含めます。 この例では、 `MyMath`という名前が付いています。  
+1.  Create a Visual C# Class Library project. This project will contain the code that we want to deliver. In this example, it is named `MyMath`.  
   
-2.  テスト プロジェクトを作成します。  
+2.  Create a Test project.  
   
-    -   **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C#]**、 **[テスト]** 、 **[単体テスト プロジェクト]**の順にクリックします。  
+    -   In the **New Project** dialog, choose **Visual C#**, **Test** and then choose **Unit Test Project**.  
   
-         ![新しいコードとテスト プロジェクト](../test/media/unittestexplorerwalk1.png "UnitTestExplorerWalk1")  
+         ![New code and test projects](../test/media/unittestexplorerwalk1.png "UnitTestExplorerWalk1")  
   
-3.  基本的なテスト メソッドを記述します。 特定の入力に対して生じた結果を確認します。  
+3.  Write a basic test method. Verify the result obtained for a specific input:  
   
-    ```c#  
+    ```cs  
   
     [TestMethod]  
     public void BasicRooterTest()  
@@ -117,63 +117,63 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-4.  テストからメソッドを生成します。  
+4.  Generate the method from the test.  
   
-    1.  `Rooter`にカーソルを置き、ショートカット メニューで **[生成]**、 **[新しい型]**の順にクリックします。  
+    1.  Place the cursor on `Rooter`, and then on the shortcut menu choose **Generate**, **New Type**.  
   
-    2.  **[新しい型の生成]** ダイアログ ボックスで、 **[プロジェクト]** をクラス ライブラリ プロジェクトに設定します。 この例では、 `MyMath`です。  
+    2.  In the **Generate New Type** dialog box, set **Project** to the class library project. In this example, it is `MyMath`.  
   
-    3.  `SquareRoot`にカーソルを置き、ショートカット メニューで **[生成]**、 **[メソッド スタブ]**の順にクリックします。  
+    3.  Place the cursor on `SquareRoot`, and then on the shortcut menu choose **Generate**, **Method Stub**.  
   
-5.  単体テストを実行します。  
+5.  Run the unit test.  
   
-    1.  **[テスト]** メニューで、 **[単体テストの実行]**、 **[すべてのテスト]**の順にクリックします。  
+    1.  On the **Test** menu, choose **Run Unit Tests**, **All Tests**.  
   
-         ソリューションがビルドされ、実行されます。  
+         The solution builds and runs.  
   
-         テスト エクスプローラーが開き、結果が表示されます。  
+         Test Explorer opens and displays the results.  
   
-         **[失敗したテスト]**の下にテストが表示されます。  
+         The test appears under **Failed Tests**.  
   
-6.  テストの名前を選択します。  
+6.  Select the name of the test.  
   
-     テストの詳細は、テスト エクスプローラーの下部に表示されます。  
+     The details of the test appear in the lower part of Test Explorer.  
   
-7.  テストに失敗した箇所を確認するには、 **[スタック トレース]** の下に表示されている項目を選択します。  
+7.  Select the items under **Stack Trace** to see where the test failed.  
   
- ![テストの失敗を示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough2.png "UnitTestExplorerWalkthrough2")  
+ ![Unit Test Explorer showing failed test.](../test/media/unittestexplorerwalkthrough2.png "UnitTestExplorerWalkthrough2")  
   
- この時点で、テストとスタブが作成されています。テストに合格するには、これらを修正する必要があります。  
+ At this point, you have created a test and a stub that you will modify so that the test passes.  
   
-#### <a name="after-every-change-make-all-the-tests-pass"></a>各変更後にすべてのテストに合格する  
+#### <a name="after-every-change-make-all-the-tests-pass"></a>After every change, make all the tests pass  
   
-1.  `MyMath\Rooter.cs`で、 `SquareRoot`のコードを改良します。  
+1.  In `MyMath\Rooter.cs`, improve the code of `SquareRoot`:  
   
-    ```c#  
+    ```cs  
     public double SquareRoot(double input)  
      {  
        return input / 2;  
      }  
     ```  
   
-2.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
+2.  In Test Explorer, choose **Run All**.  
   
-     テストがビルドされ、テストが実行されます。  
+     The code builds and the test runs.  
   
-     テストに合格します。  
+     The test passes.  
   
-     ![テストの成功を示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough3.png "UnitTestExplorerWalkthrough3")  
+     ![Unit Test Explorer showing a passing test.](../test/media/unittestexplorerwalkthrough3.png "UnitTestExplorerWalkthrough3")  
   
-#### <a name="add-tests-to-extend-the-range-of-inputs"></a>テストを追加して入力の範囲を拡張する  
+#### <a name="add-tests-to-extend-the-range-of-inputs"></a>Add tests to extend the range of inputs  
   
-1.  あらゆる場合にコードが動作するという信頼性を強化するには、テストを追加して、より広範囲の入力値を試みます。  
+1.  To improve your confidence that your code works in all cases, add tests that try a broader range of input values.  
   
     > [!TIP]
-    >  合格した既存のテストは変更しないでください。 代わりに、新しいテストを追加します。 既存のテストを変更するのは、ユーザー要件が変更されたときのみに限定します。 このポリシーにより、コードを拡張する作業において既存の機能が失われる状況を回避できます。  
+    >  Avoid altering existing tests that pass. Instead, add new tests. Change existing tests only when the user requirements change. This policy helps ensure that you don't lose existing functionality as you work to extend the code.  
   
-     一定範囲の入力値を試みるために、次のテストをテスト クラスに追加します。  
+     In your test class, add the following test, which tries a range of input values:  
   
-    ```c#  
+    ```cs  
     [TestMethod]  
     public void RooterValueRange()  
     {  
@@ -197,13 +197,13 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-2.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
+2.  In Test Explorer, choose **Run All**.  
   
-     最初のテストには今回も合格しますが、新しいテストには失敗します。  
+     The new test fails, although the first test still passes.  
   
-     エラー箇所を見つけるには、失敗したテストを選択し、テスト エクスプローラーの下部で、 **[スタック トレース]**の下に表示されている先頭の項目を選択します。  
+     To find the point of failure, select the failing test and then in the lower part of Test Explorer, select the top item of the **Stack Trace**.  
   
-3.  テスト対象のメソッドを調べて、問題点を確認します。 `MyMath.Rooter` クラスで、コードを書き直します。  
+3.  Inspect the method under test to see what might be wrong. In the `MyMath.Rooter` class, rewrite the code:  
   
     ```  
     public double SquareRoot(double input)  
@@ -219,15 +219,15 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-4.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
+4.  In Test Explorer, choose **Run All**.  
   
-     今回は、両方のテストに合格します。  
+     Both tests now pass.  
   
-#### <a name="add-tests-for-exceptional-cases"></a>例外的なケース用にテストを追加する  
+#### <a name="add-tests-for-exceptional-cases"></a>Add tests for exceptional cases  
   
-1.  負数の入力用にテストを追加します。  
+1.  Add a test for negative inputs:  
   
-    ```c#  
+    ```cs  
     [TestMethod]  
      public void RooterTestNegativeInputx()  
      {  
@@ -244,17 +244,17 @@ ms.lasthandoff: 05/13/2017
      }  
     ```  
   
-2.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
+2.  In Test Explorer, choose **Run All**.  
   
-     テスト対象のメソッドはループするため、実行を手動で取り消す必要があります。  
+     The method under test loops, and must be canceled manually.  
   
-3.  **[キャンセル]**をクリックします。  
+3.  Choose **Cancel**.  
   
-     テストが 10 秒後に停止します。  
+     The test stops after 10 seconds.  
   
-4.  メソッドのコードを修正します。  
+4.  Fix the method code:  
   
-    ```c#  
+    ```cs  
   
     public double SquareRoot(double input)  
     {  
@@ -265,20 +265,20 @@ ms.lasthandoff: 05/13/2017
     ...  
     ```  
   
-5.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
+5.  In Test Explorer, choose **Run All**.  
   
-     すべてのテストに合格します。  
+     All the tests pass.  
   
-#### <a name="refactor-without-changing-tests"></a>テストを変更せずにリファクタリングする  
+#### <a name="refactor-without-changing-tests"></a>Refactor without changing tests  
   
-1.  テストを変更せずに、コードを簡略化します。  
+1.  Simplify the code, but do not change the tests.  
   
     > [!TIP]
-    >  *リファクタリング* とは、コードのパフォーマンスを高めたり、コードをわかりやすくすることを目的として行う変更です。 コードの動作を変更することを意図しないため、テストは変更されません。  
+    >  A *refactoring* is a change that is intended to make the code perform better or to make the code easier to understand. It is not intended to alter the behavior of the code, and therefore the tests are not changed.  
     >   
-    >  リファクタリングの手順は、機能を拡張する手順とは別に実行することをお勧めします。 テストを変更しないことで、リファクタリング時に誤ってバグが生じる状況を回避できます。  
+    >  We recommend that you perform refactoring steps separately from steps that extend functionality. Keeping the tests unchanged gives you confidence that you have not accidentally introduced bugs while refactoring.  
   
-    ```c#  
+    ```cs  
     public class Rooter  
     {  
       public double SquareRoot(double input)  
@@ -300,9 +300,9 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-2.  **[すべて実行]**をクリックします。  
+2.  Choose **Run All**.  
   
-     今回もすべてのテストに合格します。  
+     All the tests still pass.  
   
-     ![3 つのテストが成功したことを示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough4.png "UnitTestExplorerWalkthrough4")
+     ![Unit Test Explorer showing 3 passed tests.](../test/media/unittestexplorerwalkthrough4.png "UnitTestExplorerWalkthrough4")
 

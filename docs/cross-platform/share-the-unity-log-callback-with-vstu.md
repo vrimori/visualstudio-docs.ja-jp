@@ -1,5 +1,5 @@
 ---
-title: "Unity のログ コールバックを VSTU と共有する | Microsoft Docs"
+title: Share the Unity Log Callback with VSTU | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,21 +27,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b4362bcbd04411be4db296fc5996232fd61f5d7f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e598b0f08bd0703bdec3b1abb380fb127df550ae
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="share-the-unity-log-callback-with-vstu"></a>Unity のログ コールバックを VSTU と共有する
-Visual Studio Tools for Unity では、Unity コンソールを Visual Studio にストリーミングできるよう、Unity にログ コールバックを登録します。 エディターのスクリプトもログ コールバックを Unity に登録すると、そのコールバックが VSTU コールバックから影響を受けることがあります。 この可能性を回避するには、`VisualStudioIntegration.LogCallback` イベントを使用して VSTU と連携します。  
+# <a name="share-the-unity-log-callback-with-vstu"></a>Share the Unity Log Callback with VSTU
+Visual Studio Tools for Unity registers a log callback with Unity to be able to stream its console to Visual Studio. If your editor scripts also register a log callback with Unity, the VSTU callback might interfere with your callback. To prevent this possibility, use the `VisualStudioIntegration.LogCallback` event to cooperate with VSTU.  
   
-## <a name="demonstrates"></a>使用例  
- Visual Studio Tools for Unity によって作成されるログ コールバックを共有する方法を示します。  
+## <a name="demonstrates"></a>Demonstrates  
+ How to share the Unity Log Callback created by Visual Studio Tools for Unity.  
   
-## <a name="example"></a>例  
+## <a name="example"></a>Example  
   
-```c#  
+```cs  
 using System;  
   
 using UnityEngine;  
@@ -62,5 +63,5 @@ public class LogCallbackHook
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [例: プロジェクト ファイルの生成](../cross-platform/customize-project-files-created-by-vstu.md)
+## <a name="see-also"></a>See Also  
+ [Example: Project File Generation](../cross-platform/customize-project-files-created-by-vstu.md)

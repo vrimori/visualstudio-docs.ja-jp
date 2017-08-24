@@ -1,5 +1,5 @@
 ---
-title: "UNMANAGED_ADDRESS_THIS_RELATIVE |Microsoft ドキュメント"
+title: UNMANAGED_ADDRESS_THIS_RELATIVE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b5b889a5901883e6dfe2f27723d5fd7a0085d1d5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1cdc7b3f07a08beb10fec7178962443ba8b693c9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="unmanagedaddressthisrelative"></a>UNMANAGED_ADDRESS_THIS_RELATIVE
-この構造体に関連するアドレスを表す、`this`ポインター (`Me` Visual Basic で)。  
+This structure represents an address that is relative to a `this` pointer (`Me` in Visual Basic).  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagUNMANAGED_THIS_RELATIVE {  
@@ -49,7 +50,7 @@ typedef struct _tagUNMANAGED_THIS_RELATIVE {
 } UNMANAGED_ADDRESS_THIS_RELATIVE;  
 ```  
   
-```c#  
+```cs  
 public struct UNMANAGED_THIS_RELATIVE {  
    public uint dwOffset;  
    public uint dwBitOffset;  
@@ -57,26 +58,26 @@ public struct UNMANAGED_THIS_RELATIVE {
 }  
 ```  
   
-## <a name="terms"></a>用語  
+## <a name="terms"></a>Terms  
  dwOffset  
- 基本の位置 (たとえば、クラスの vtable の先頭) からのオフセットのバイト。  
+ Byte offset from a base position (for example, start of a class vtable).  
   
  dwBitOffset  
- 基本の位置からのビット単位のオフセット (常に 0 ビット フィールドを参照する場合を除き、)。  
+ Offset in bits from a base position (always 0 unless referring to a bit field).  
   
  dwBitLength  
- アドレスを表すビット数 (常に 0 ビット フィールドを参照する場合を除き、)。  
+ Number of bits representing the address (always 0 unless referring to a bit field).  
   
-## <a name="remarks"></a>コメント  
- この構造体の共用体の一部である、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)ときに構造体、`dwKind`のフィールド、`DEBUG_ADDRESS_UNION`に設定されている構造`ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`(からの値、 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙型)。  
+## <a name="remarks"></a>Remarks  
+ This structure is part of the union in the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure when the `dwKind` field of the `DEBUG_ADDRESS_UNION` structure is set to `ADDRESS_KIND_UNMANAGED_THIS_RELATIVE` (a value from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration).  
   
-## <a name="requirements"></a>要件  
- ヘッダー: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
- [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)

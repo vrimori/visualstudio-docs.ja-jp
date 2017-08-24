@@ -1,90 +1,107 @@
 ---
-title: "複数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EVENTATTRIBUTES"
-helpviewer_keywords: 
-  - "複数の列挙型"
+title: EVENTATTRIBUTES | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- EVENTATTRIBUTES
+helpviewer_keywords:
+- EVENTATTRIBUTES enumeration
 ms.assetid: 04db10f7-df31-4464-98e8-b3777428179e
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 複数
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 8c991f748b39573bd388423255e11ef12c188aa0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-イベント属性を指定します。  
+---
+# <a name="eventattributes"></a>EVENTATTRIBUTES
+Specifies the event attributes.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_EVENTATTRIBUTES {   
-   EVENT_ASYNCHRONOUS          = 0x0000,  
-   EVENT_SYNCHRONOUS           = 0x0001,  
-   EVENT_STOPPING              = 0x0002,  
-   EVENT_ASYNC_STOP            = 0x0002,  
-   EVENT_SYNC_STOP             = 0x0003,  
-   EVENT_IMMEDIATE             = 0x0004,  
-   EVENT_EXPRESSION_EVALUATION = 0x0008  
+enum enum_EVENTATTRIBUTES {   
+   EVENT_ASYNCHRONOUS          = 0x0000,  
+   EVENT_SYNCHRONOUS           = 0x0001,  
+   EVENT_STOPPING              = 0x0002,  
+   EVENT_ASYNC_STOP            = 0x0002,  
+   EVENT_SYNC_STOP             = 0x0003,  
+   EVENT_IMMEDIATE             = 0x0004,  
+   EVENT_EXPRESSION_EVALUATION = 0x0008  
 };  
 typedef DWORD EVENTATTRIBUTES;  
 ```  
   
-```c#  
-public enum enum_EVENTATTRIBUTES {   
-   EVENT_ASYNCHRONOUS          = 0x0000,  
-   EVENT_SYNCHRONOUS           = 0x0001,  
-   EVENT_STOPPING              = 0x0002,  
-   EVENT_ASYNC_STOP            = 0x0002,  
-   EVENT_SYNC_STOP             = 0x0003,  
-   EVENT_IMMEDIATE             = 0x0004,  
-   EVENT_EXPRESSION_EVALUATION = 0x0008  
+```cs  
+public enum enum_EVENTATTRIBUTES {   
+   EVENT_ASYNCHRONOUS          = 0x0000,  
+   EVENT_SYNCHRONOUS           = 0x0001,  
+   EVENT_STOPPING              = 0x0002,  
+   EVENT_ASYNC_STOP            = 0x0002,  
+   EVENT_SYNC_STOP             = 0x0003,  
+   EVENT_IMMEDIATE             = 0x0004,  
+   EVENT_EXPRESSION_EVALUATION = 0x0008  
 };  
 ```  
   
-## メンバー  
- EVENT\_ASYNCHRONOUS  
- イベントは非同期なイベントへの応答が必要なことを示します。  
+## <a name="members"></a>Members  
+ EVENT_ASYNCHRONOUS  
+ Indicates that the event is asynchronous and no reply to the event is needed.  
   
- EVENT\_SYNCHRONOUS  
- イベントが同期されていることを示しています ; [ContinueFromSynchronousEvent](../Topic/IDebugEngine2::ContinueFromSynchronousEvent.md) して応答。  
+ EVENT_SYNCHRONOUS  
+ Indicates that the event is synchronous; reply by means of [ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md).  
   
- EVENT\_STOPPING  
- これが停止のイベントであることを示します。  `EVENT_ASYNCHRONOUS` または `EVENT_SYNCHRONOUS` と組み合わせる必要があります。  
+ EVENT_STOPPING  
+ Indicates that this is a stopping event. Must be combined with either `EVENT_ASYNCHRONOUS` or `EVENT_SYNCHRONOUS`.  
   
- EVENT\_ASYNC\_STOP  
- 非同期停止のイベントが表示されます。  現在このようなイベントはありません。  このフラグはのプレースホルダーです。  
+ EVENT_ASYNC_STOP  
+ Indicates an asynchronous stopping event. There is currently no such event. This flag is only a placeholder.  
   
- EVENT\_SYNC\_STOP  
- 同期停止のイベント \(`EVENT_SYNCHRONOUS` と `EVENT_STOPPING` の組み合わせ\) を示します。  この値はデバッグ エンジン \(DE\) によって停止イベントを送信するときに使用されます。  [実行](../../../extensibility/debugger/reference/idebugprogram2-execute.md)[ステップ](../../../extensibility/debugger/reference/idebugprogram2-step.md)または [続行](../../../extensibility/debugger/reference/idebugprogram2-continue.md) への応答が呼び出しによって行われます。  
+ EVENT_SYNC_STOP  
+ Indicates a synchronous stopping event (a combination of `EVENT_SYNCHRONOUS` and `EVENT_STOPPING`). This value is used by a debug engine (DE) when it sends a stopping event. The reply is made by means of a call to [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md), [Step](../../../extensibility/debugger/reference/idebugprogram2-step.md), or [Continue](../../../extensibility/debugger/reference/idebugprogram2-continue.md).  
   
- EVENT\_IMMEDIATE  
- IDE に迅速かつ同期的に送信されるイベントを示します。  このフラグは `EVENT_ASYNCHRONOUS``EVENT_SYNCHRONOUS`または `EVENT_SYNC_STOP` などの他のフラグによって応答の機能 \(存在する場合\) がわかっているということおよびイベントの種類を示すようになります。  
+ EVENT_IMMEDIATE  
+ Indicates an event that is sent immediately and synchronously to the IDE. This flag is combined with other flags like `EVENT_ASYNCHRONOUS`, `EVENT_SYNCHRONOUS`, or `EVENT_SYNC_STOP` to indicate the type of event and the fact that the reply mechanism (if any) is known.  
   
- EVENT\_EXPRESSION\_EVALUATION  
- イベントは式の評価結果があります。  
+ EVENT_EXPRESSION_EVALUATION  
+ The event is a result of expression evaluation.  
   
-## 解説  
- これらの値は [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) のメソッドの `dwAttrib` のパラメーターに渡されます。  
+## <a name="remarks"></a>Remarks  
+ These values are passed in the `dwAttrib` parameter of the [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) method.  
   
- これらの値はビットごとの `OR` と組み合わせることがあります。  
+ These values may be combined with a bitwise `OR`.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [ContinueFromSynchronousEvent](../Topic/IDebugEngine2::ContinueFromSynchronousEvent.md)   
- [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md)   
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

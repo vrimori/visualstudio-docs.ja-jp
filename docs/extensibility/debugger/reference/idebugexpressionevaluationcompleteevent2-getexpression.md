@@ -1,53 +1,70 @@
 ---
-title: "IDebugExpressionEvaluationCompleteEvent2::GetExpression | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExpressionEvaluationCompleteEvent2::GetExpression"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluationCompleteEvent2::GetExpression"
+title: IDebugExpressionEvaluationCompleteEvent2::GetExpression | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugExpressionEvaluationCompleteEvent2::GetExpression
+helpviewer_keywords:
+- IDebugExpressionEvaluationCompleteEvent2::GetExpression
 ms.assetid: faf6b2dd-2afd-4852-b21c-7e8d3130e141
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugExpressionEvaluationCompleteEvent2::GetExpression
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d08e9f449a51b730199495ad0759e4a9a7735de2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-元の式を取得します。  
+---
+# <a name="idebugexpressionevaluationcompleteevent2getexpression"></a>IDebugExpressionEvaluationCompleteEvent2::GetExpression
+Gets the original expression.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetExpression(   
-   IDebugExpression2** ppExpr  
+HRESULT GetExpression(   
+   IDebugExpression2** ppExpr  
 );  
 ```  
   
-```c#  
-int GetExpression(   
-   out IDebugExpression2 ppExpr  
+```cs  
+int GetExpression(   
+   out IDebugExpression2 ppExpr  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppExpr`  
- \[入力\] [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) 解析された式を表すオブジェクトを返します。  
+ [out] Returns an [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) object that represents the expression that was parsed.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- このメソッドは [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) のメソッドに作成された呼び出し中にオブジェクト。  
+## <a name="remarks"></a>Remarks  
+ This method returns the object that was created in a call to the [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) method.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)   
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)   
  [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)

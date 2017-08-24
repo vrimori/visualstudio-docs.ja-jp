@@ -1,5 +1,5 @@
 ---
-title: "手順 3: カウントダウン タイマーの追加 | Microsoft ドキュメント"
+title: 'Step 3: Add a Countdown Timer | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,51 +28,51 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 451635681519303b5e85b70788534e22af21707c
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 475d67f74c6fdecf970b5bb25f672b17560c1338
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="step-3-add-a-countdown-timer"></a>手順 3: カウントダウン タイマーの追加
-このチュートリアルの第 3 部では、クイズの受け手が完了するまでの残り秒数を追跡するためのカウントダウン タイマーを追加します。  
+# <a name="step-3-add-a-countdown-timer"></a>Step 3: Add a Countdown Timer
+In the third part of this tutorial, you'll add a countdown timer to track the number of seconds that remain for the quiz taker to finish.  
   
 > [!NOTE]
->  このトピックは、コーディングの基本概念に関するチュートリアル シリーズの一部です。 チュートリアルの概要については、「[チュートリアル 2: 制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。  
+>  This topic is part of a tutorial series about basic coding concepts. For an overview of the tutorial, see [Tutorial 2: Create a Timed Math Quiz](../ide/tutorial-2-create-a-timed-math-quiz.md).  
   
-### <a name="to-add-a-countdown-timer"></a>カウントダウン タイマーを追加するには  
+### <a name="to-add-a-countdown-timer"></a>To add a countdown timer  
   
-1.  前の手順と同様に、**timeLeft** という名前の整数変数を追加します。 コードは次のようになります。  
+1.  Add an integer variable that's named **timeLeft**, just like you did in the previous procedure. Your code should look like the following.  
   
      [!code-vb[VbExpressTutorial3Step3#5](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_1.vb)]  [!code-cs[VbExpressTutorial3Step3#5](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_1.cs)]  
   
-     次に、指定した時間の後にイベントを生成する、タイマーのような、実際に秒をカウントするメソッドが必要になります。  
+     Now you need a method that actually counts the seconds, such as a timer, which raises an event after the amount of time that you specify.  
   
-2.  デザイン ウィンドウで、ツールボックスの **[コンポーネント]** カテゴリから `Timer` コントロールをフォームに移動します。  
+2.  In the design window, move a `Timer` control from the **Components** category of the Toolbox to your form.  
   
-     このコントロールは、デザイン ウィンドウの下部にある灰色の領域に表示されます。  
+     The control appears in the gray area at the bottom of the design window.  
   
-3.  フォーム上で、追加した **[timer1]** アイコンをクリックし、**Interval** プロパティを **1000** に設定します。  
+3.  On the form, choose the **timer1** icon that you just added, and set its **Interval** property to **1000**.  
   
-     間隔の値はミリ秒であるため、値が 1000 の場合は Tick イベントが毎秒生成されます。  
+     Because the interval value is milliseconds, a value of 1000 causes the Tick event to fire every second.  
   
-4.  フォーム上で、Timer コントロールをダブルクリックするか、または Timer コントロールをクリックして Enter キーを押します。  
+4.  On the form, double-click the Timer control, or choose it and then choose the Enter key.  
   
-     コード エディターが開き、追加した Tick イベント ハンドラーのメソッドが表示されます。  
+     The code editor appears and displays the method for the Tick event handler that you just added.  
   
-5.  次のステートメントを新しいイベント ハンドラー メソッドに追加します。  
+5.  Add the following statements to the new event handler method.  
   
      [!code-vb[VbExpressTutorial3Step3#6](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_2.vb)]  [!code-cs[VbExpressTutorial3Step3#6](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_2.cs)]  
   
-     追加されたステートメントに基づいて、タイマーは毎秒、**timeLeft** 整数変数が 0 より大きいかどうかを確認することで、残り時間がなくなっていないかどうかを確認します。 0 より大きい場合、時間はそのまま残ります。 タイマーは、まず timeLeft から 1 を減算し、次に残り秒数をクイズの受け手に示すために `timeLabel` コントロールの **Text** プロパティを更新します。  
+     Based on what you added, the timer checks each second whether time has run out by determining whether the **timeLeft** integer variable is greater than 0. If it is, time still remains. The timer first subtracts 1 from timeLeft and then updates the **Text** property of the `timeLabel` control to show the quiz taker how many seconds remain.  
   
-     残り時間がなくなると、タイマーは停止し、"**Time's up!**" と表示されるように `timeLabel` コントロールのテキストを変更します。 メッセージ ボックスはクイズが終了したことを知らせ、この場合、解答は addend1 と addend2 を加算することによって表示されます。 `startButton` コントロールの **Enabled** プロパティは、クイズの受け手が別の問題を開始できるように `true` に設定されます。  
+     If no time remains, the timer stops and changes the text of the `timeLabel` control so that it shows **Time's up!** A message box announces that the quiz is over, and the answer is revealed—in this case, by adding addend1 and addend2. The **Enabled** property of the `startButton` control is set to `true` so that the quiz taker can start another quiz.  
   
-     ここでは、`if else` ステートメントを追加しました。これは、プログラムで条件判断を行うように指定するためのステートメントです。 `if else` ステートメントは次のようになります。  
+     You just added an `if else` statement, which is how you tell programs to make decisions. An `if else` statement looks like the following.  
   
     > [!NOTE]
-    >  次の例は例示のみを目的としています。プロジェクトに追加しないでください。  
+    >  The following example is for illustration only-don't add it to your project.  
   
     ```vb  
     If (something that your program will check) Then  
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/13/2017
     End If  
     ```  
   
-    ```c#  
+    ```cs  
     if (something that your program will check)  
     {  
         // One or more statements that will run  
@@ -97,29 +97,29 @@ ms.lasthandoff: 05/13/2017
     }  
     ```  
   
-     加算問題の解答を表示するために `else` ブロックに追加したステートメントについて詳しく見てみましょう。  
+     Look closely at the statement that you added in the `else` block to show the answer to the addition problem.  
   
      [!code-vb[VbExpressTutorial3Step3#24](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_3.vb)]  [!code-cs[VbExpressTutorial3Step3#24](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_3.cs)]  
   
-     ステートメント `addend1 + addend2` は 2 つの変数の値を加算します。 最初の部分 (`sum.Value`) は、sum `NumericUpDown` コントロールの **Value** プロパティを使用して正しい解答を表示します。 クイズの解答を確認するために後で同じプロパティを使用します。  
+     The statement `addend1 + addend2` adds the values in the two variables together. The first part (`sum.Value`) uses the **Value** property of the sum `NumericUpDown` control to display the correct answer. You use the same property later to check the answers for the quiz.  
   
-     `NumericUpDown` コントロールを使用するとクイズの受け手がさらに簡単に数値を入力できるので、これを計算問題の解答のために使用します。 解答となる可能性があるものはすべて、0 ～ 100 の整数です。 **[最小値]**、**[最大値]**、および **[DecimalPlaces]** の各プロパティの既定値を残しておくと、クイズの受け手は小数、負の値、大きすぎる数を入力できなくなります  (クイズの受け手が 3.141 は入力できるが、3.1415 は入力できないようにする場合は、**DecimalPlaces** プロパティを 3 に設定します)。  
+     Quiz takers can enter numbers more easily by using a `NumericUpDown` control, which is why you use one for the answers to the math problems. All of the potential answers are whole numbers from 0 through 100. By leaving the default values of the **Minimum**, **Maximum**, and **DecimalPlaces** properties, you ensure that quiz takers can't enter decimals, negative numbers, or numbers that are too high. (If you wanted to allow quiz takers to enter 3.141 but not 3.1415, you could set the **DecimalPlaces** property to 3.)  
   
-6.  `StartTheQuiz()` メソッドの最後に 3 行のコードを追加します。コードは次のようになります。  
+6.  Add three lines to the end of the `StartTheQuiz()` method, so the code looks like the following.  
   
      [!code-vb[VbExpressTutorial3Step3#7](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_4.vb)]  [!code-cs[VbExpressTutorial3Step3#7](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_4.cs)]  
   
-     これで、クイズの開始時に、**timeLeft** 変数が 30 に設定され、`timeLabel` コントロールの **Text** プロパティが 30 seconds に変更されます。 次に、`Timer` コントロールの `Start()` メソッドがカウントダウンを開始します  (解答の確認は次の手順で設定するため、まだ行われません)。  
+     Now, when your quiz starts, the **timeLeft** variable is set to 30 and the **Text** property of the `timeLabel` control is set to 30 seconds. Then the `Start()` method of the `Timer` control starts the countdown. (The quiz doesn't check the answer yet—that comes next.)  
   
-7.  プログラムを保存し、実行して、フォームの **[Start]** ボタンをクリックします。  
+7.  Save your program, run it, and then choose the **Start** button on the form.  
   
-     タイマーはカウント ダウンを開始します。 残り時間がなくなると、クイズが終了し、答えが表示されます。 次の図は実行中のクイズを示します。  
+     The timer starts to count down. When time runs out, the quiz ends, and the answer appears. The following illustration shows the quiz in progress.  
   
-     ![実行中の計算クイズ](~/ide/media/express_addcountdown.png "Express_AddCountdown")  
-実行中の計算クイズ  
+     ![Math quiz in progress](../ide/media/express_addcountdown.png "Express_AddCountdown")  
+Math quiz in progress  
   
-### <a name="to-continue-or-review"></a>続行または確認するには  
+### <a name="to-continue-or-review"></a>To continue or review  
   
--   チュートリアルの次の手順に進むには、「[手順 4: CheckTheAnswer() メソッドの追加](../ide/step-4-add-the-checktheanswer-parens-method.md)」を参照してください。  
+-   To go to the next tutorial step, see [Step 4: Add the CheckTheAnswer() Method](../ide/step-4-add-the-checktheanswer-parens-method.md).  
   
--   チュートリアルの前の手順に戻るには、「[手順 2: ランダムな加算問題の作成](../ide/step-2-create-a-random-addition-problem.md)」を参照してください。
+-   To return to the previous tutorial step, see [Step 2: Create a Random Addition Problem](../ide/step-2-create-a-random-addition-problem.md).

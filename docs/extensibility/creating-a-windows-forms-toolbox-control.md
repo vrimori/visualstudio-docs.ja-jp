@@ -1,5 +1,5 @@
 ---
-title: "ツールボックス コントロールをフォーム、Windows の作成 |Microsoft ドキュメント"
+title: Creating a Windows Forms Toolbox Control | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,67 +30,68 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 770963e06655c0d4da2946fa7981fd1e4496b7f0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 797ca4c11f9eae2da8890ff3ab1e908b1c45e381
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="creating-a-windows-forms-toolbox-control"></a>Windows フォームのツールボックス コントロールの作成
-Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フォームのツールボックス コントロールの項目テンプレートを使用して、自動的に追加するコントロールを作成できる、**ツールボックス**拡張機能がインストールされている場合。 このトピックでは、テンプレートを使用して、他のユーザーに配布できる単純なカウンター コントロールを作成する方法を示します。  
+# <a name="creating-a-windows-forms-toolbox-control"></a>Creating a Windows Forms Toolbox Control
+The Windows Forms Toolbox Control item template that is included in the Visual Studio Extensibility Tools (VS SDK) lets you create a control that is automatically added to the **Toolbox** when the extension is installed. This topic shows how to use the template to create a simple counter control that you can distribute to other users.  
   
-## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-windows-forms-toolbox-control"></a>Windows フォームのツールボックス コントロールの作成  
- Windows フォームのツールボックス コントロールのテンプレートが定義されていないユーザー コントロールを作成し、すべてのコントロールを追加するために必要な機能を提供、**ツールボックス**します。  
+## <a name="creating-a-windows-forms-toolbox-control"></a>Creating a Windows Forms Toolbox Control  
+ The Windows Forms Toolbox Control template creates an undefined user control and provides all of the functionality that is required to add the control to the **Toolbox**.  
   
-#### <a name="create-an-extension-with-a-windows-forms-toolbox-control"></a>Windows フォームのツールボックス コントロールでの拡張機能を作成します。  
+#### <a name="create-an-extension-with-a-windows-forms-toolbox-control"></a>Create an extension with a Windows Forms Toolbox Control  
   
-1.  という名前の VSIX プロジェクトを作成する`MyWinFormsControl`です。 VSIX プロジェクトのテンプレートを見つけることができます、**新しいプロジェクト**] ダイアログ ボックス [ **Visual c#/機能拡張**します。  
+1.  Create a VSIX project named `MyWinFormsControl`. You can find the VSIX project template in the **New Project** dialog under **Visual C# / Extensibility**.  
   
-2.  プロジェクトを開いたら、追加、 **Windows フォームのツールボックス コントロール**という名前の項目テンプレート`Counter`します。 **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックして、選択**追加/新しい項目の**です。 **新しい項目の追加**ダイアログ ボックスに移動**Visual c#/機能拡張**選択**Windows フォームのツールボックス コントロール**  
+2.  When the project opens, add a **Windows Forms Toolbox Control** item template named `Counter`. In the **Solution Explorer**, right-click the project node and select **Add / New Item**. In the **Add New Item** dialog, go to **Visual C# / Extensibility** and select **Windows Forms Toolbox Control**  
   
-3.  ユーザー コントロールを追加、 `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>でコントロールを配置する、**ツールボックス**、および**Microsoft.VisualStudio.ToolboxControl**で配置の VSIX マニフェスト アセット エントリ</xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>。  
+3.  This adds a user control, a `ProvideToolboxControlAttribute`<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> to place the control in the **Toolbox**, and a **Microsoft.VisualStudio.ToolboxControl** Asset entry in the VSIX manifest for deployment.  
   
-### <a name="building-a-user-interface-for-the-control"></a>コントロールのユーザー インターフェイスの構築  
- `Counter`コントロールが 2 つの子コントロールが必要です。<xref:System.Windows.Forms.Label>を現在の数を表示して、<xref:System.Windows.Forms.Button>カウントを 0 にリセットする</xref:System.Windows.Forms.Button></xref:System.Windows.Forms.Label>。 その他の子コントロールは必要ありませんので、呼び出し元プログラムを使用して、カウンターをインクリメントします。  
+### <a name="building-a-user-interface-for-the-control"></a>Building a User Interface for the Control  
+ The `Counter` control requires two child controls: a <xref:System.Windows.Forms.Label> to display the current count, and a <xref:System.Windows.Forms.Button> to reset the count to 0. No other child controls are required because callers will increment the counter programmatically.  
   
-##### <a name="to-build-the-user-interface"></a>ユーザー インターフェイスを作成するには  
+##### <a name="to-build-the-user-interface"></a>To build the user interface  
   
-1.  **ソリューション エクスプ ローラー**Counter.cs をデザイナーで開く をダブルクリックします。  
+1.  In **Solution Explorer**, double-click Counter.cs to open it in the designer.  
   
-2.  "Click Here!"を削除します。 **ボタン**Windows フォームのツールボックス コントロールの項目テンプレートを追加するときに既定で含まれています。  
+2.  Remove the "Click Here !" **Button** that is included by default when you add the Windows Forms Toolbox Control item template.  
   
-3.  **ツールボックス**、ドラッグ、`Label`制御し、`Button`下にあるコントロールのデザイン画面にします。  
+3.  From the **Toolbox**, drag a `Label` control and then a `Button` control below it to the design surface.  
   
-4.  150 に全体的なユーザー コントロールのサイズを 50 (ピクセル単位)、サイズ変更、ボタンを 50 に制御が 20 ピクセルです。  
+4.  Resize the overall user control to 150, 50 pixels, and resize the button control to 50, 20 pixels.  
   
-5.  **プロパティ**ウィンドウでは、デザイン サーフェイス上のコントロールの次の値を設定します。  
+5.  In the **Properties** window, set the following values for the controls on the design surface.  
   
-    |コントロール|プロパティ|値|  
+    |Control|Property|Value|  
     |-------------|--------------|-----------|  
-    |`Label1`|**テキスト**|""|  
-    |`Button1`|**名前**|btnReset|  
-    |`Button1`|**テキスト**|リセット|  
+    |`Label1`|**Text**|""|  
+    |`Button1`|**Name**|btnReset|  
+    |`Button1`|**Text**|Reset|  
   
-### <a name="coding-the-user-control"></a>ユーザー コントロールのコーディング  
- `Counter` コントロールは、カウンターをインクリメントするメソッド、カウンターがインクリメントされると発生するイベント、および `Reset` ボタンを公開します。また、現在のカウント、表示テキスト、および `Reset` ボタンの表示または非表示の状態を格納するための、3 つのプロパティも公開します。 `ProvideToolboxControl`属性内の場所を決定する、**ツールボックス**、`Counter`コントロールが表示されます。  
+### <a name="coding-the-user-control"></a>Coding the User Control  
+ The `Counter` control will expose a method to increment the counter, an event to be raised whenever the counter is incremented, a `Reset` button, and three properties to store the current count, the display text, and whether to show or hide the `Reset` button. The `ProvideToolboxControl` attribute determines where in the **Toolbox** the `Counter` control will appear.  
   
-##### <a name="to-code-the-user-control"></a>ユーザー コントロールをコーディングするには  
+##### <a name="to-code-the-user-control"></a>To code the user control  
   
-1.  フォームをダブルクリックしてコード ウィンドウで、load イベント ハンドラーを開きます。  
+1.  Double-click the form to open its load event handler in the code window.  
   
-2.  イベントのハンドラー メソッドの上のコントロール クラスでカウンターの値と、次の例で示すように表示するテキストを格納する文字列を格納する整数を作成します。  
+2.  Above the event handler method, in the control class create an integer to store the counter value and a string to store the display text as shown in the following example.  
   
-    ```c#  
+    ```cs  
     int currentValue;  
     string displayText;  
     ```  
   
-3.  次のパブリック プロパティの宣言を作成します。  
+3.  Create the following public property declarations.  
   
-    ```c#  
+    ```cs  
     public int Value {  
         get { return currentValue; }   
     }  
@@ -107,11 +108,11 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
     ```  
   
-     呼び出し元がこれらのプロパティを取得およびカウンターの表示テキストを設定しを表示または非表示にアクセスできる、 `Reset`  ボタンをクリックします。 呼び出し元は、読み取り専用の現在の値を取得できる`Value`ですが、値を直接設定できません。  
+     Callers can access these properties to get and set the display text of the counter and to show or hide the `Reset` button. Callers can obtain the current value of the read-only `Value` property, but they cannot set the value directly.  
   
-4.  次のコードを配置、`Load`コントロールのイベントです。  
+4.  Put the following code in the `Load` event for the control.  
   
-    ```c#  
+    ```cs  
     private void Counter_Load(object sender, EventArgs e)  
     {  
         currentValue = 0;  
@@ -120,11 +121,11 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
     ```  
   
-     設定、**ラベル**内のテキスト、<xref:System.Windows.Forms.UserControl.Load>イベントにより、ターゲットのプロパティの値が適用される前に読み込めません</xref:System.Windows.Forms.UserControl.Load>。 設定、**ラベル**コンス トラクター内のテキストは、空になる**ラベル**します。  
+     Setting the **Label** text in the <xref:System.Windows.Forms.UserControl.Load> event enables the target properties to load before their values are applied. Setting the **Label** text in the constructor would result in an empty **Label**.  
   
-5.  カウンターをインクリメントする次のパブリック メソッドを作成します。  
+5.  Create the following public method to increment the counter.  
   
-    ```c#  
+    ```cs  
     public void Increment()  
     {  
         currentValue++;  
@@ -134,17 +135,17 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
     ```  
   
-6.  宣言を追加、`Incremented`コントロール クラスにイベントです。  
+6.  Add a declaration for the `Incremented` event to the control class.  
   
-    ```c#  
+    ```cs  
     public event EventHandler Incremented;  
     ```  
   
-     呼び出し元は、カウンターの値の変化に対応するこのイベントにハンドラーを追加することができます。  
+     Callers can add handlers to this event to respond to changes in the value of the counter.  
   
-7.  ダブルクリックしてデザイン ビューに戻り、`Reset`を生成する ボタン、`btnReset_Click`イベント ハンドラーし、次の例に示すように入力します。  
+7.  Return to design view and double-click the `Reset` button to generate the `btnReset_Click` event handler, and then fill it in as shown in the following example.  
   
-    ```c#  
+    ```cs  
     private void btnReset_Click(object sender, EventArgs e)  
     {  
         currentValue = 0;  
@@ -153,80 +154,80 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
     ```  
   
-8.  クラス定義のすぐ上で、`ProvideToolboxControl`属性宣言から最初のパラメーターの値を変更`"MyWinFormsControl.Counter"`に`"General"`します。 これにより、 **[ツールボックス]**のコントロールをホストする項目グループの名前が設定されます。  
+8.  Immediately above the class definition, in the `ProvideToolboxControl` attribute declaration, change the value of the first parameter from `"MyWinFormsControl.Counter"` to `"General"`. This sets the name of the item group that will host the control in the **Toolbox**.  
   
-     次の例では、 `ProvideToolboxControl` の属性と、調整されたクラス定義を示しています。  
+     The following example shows the `ProvideToolboxControl` attribute and the adjusted class definition.  
   
-    ```c#  
+    ```cs  
     [ProvideToolboxControl("General", false)]  
     public partial class Counter : UserControl  
     ```  
   
-### <a name="testing-the-control"></a>コントロールのテスト  
- テストする、**ツールボックス**、管理、開発環境でこれをテストや、コンパイル済みのアプリケーションでテストします。  
+### <a name="testing-the-control"></a>Testing the Control  
+ To test a **Toolbox** control, first test it in the development environment and then test it in a compiled application.  
   
-##### <a name="to-test-the-control"></a>コントロールをテストするには  
+##### <a name="to-test-the-control"></a>To test the control  
   
-1.  F5 キーを押します。  
+1.  Press F5.  
   
-     プロジェクトがビルドされ、インストールされているコントロールを含む Visual Studio の&2; つ目の実験用インスタンスを開きます。  
+     This builds the project and opens a second Experimental instance of Visual Studio that has the control installed.  
   
-2.  Visual Studio の実験用インスタンスの作成、 **Windows フォーム アプリケーション**プロジェクトです。  
+2.  In the Experimental instance of Visual Studio, create a **Windows Forms Application** project.  
   
-3.  **ソリューション エクスプ ローラー**が開いていない場合は、デザイナーで開く Form1.cs をダブルクリックします。  
+3.  In **Solution Explorer**, double-click Form1.cs to open it in the designer if it is not already open.  
   
-4.  **ツールボックス**、`Counter`にコントロールを表示するか、**全般**セクションです。  
+4.  In the **Toolbox**, the `Counter` control should be displayed in the **General** section.  
   
-5.  ドラッグ、`Counter`コントロールがフォーム、および、それを選択します。 `Value`、 `Message`、および`ShowReset`でプロパティが表示されます、**プロパティ** <xref:System.Windows.Forms.UserControl>.</xref:System.Windows.Forms.UserControl>から継承されたプロパティと共にのウィンドウ  
+5.  Drag a `Counter` control to your form, and then select it. The `Value`, `Message`, and `ShowReset` properties will be displayed in the **Properties** window, together with the properties that are inherited from <xref:System.Windows.Forms.UserControl>.  
   
-6.  `Message` プロパティを `Count:` に設定します。  
+6.  Set the `Message` property to `Count:`.  
   
-7.  ドラッグ、<xref:System.Windows.Forms.Button>をフォームに制御し、ボタンの名前とテキストのプロパティを設定`Test`</xref:System.Windows.Forms.Button>。  
+7.  Drag a <xref:System.Windows.Forms.Button> control to the form, and then set the name and text properties of the button to `Test`.  
   
-8.  コード ビューで Form1.cs を開き、クリック ハンドラーを作成する ボタンをダブルクリックします。  
+8.  Double-click the button to open Form1.cs in code view and create a click handler.  
   
-9. クリック ハンドラーを呼び出して`counter1.Increment()`します。  
+9. In the click handler, call `counter1.Increment()`.  
   
-10. コンス トラクター関数の呼び出しの後に`InitializeComponent`、型`counter1``.``Incremented +=`し、tab を&2; 回クリックします。  
+10. In the constructor function, after the call to `InitializeComponent`, type `counter1``.``Incremented +=` and then press TAB twice.  
   
-     Visual Studio のフォーム レベルのハンドラーを生成する、`counter1.Incremented`イベントです。  
+     Visual Studio generates a form-level handler for the `counter1.Incremented` event.  
   
-11. 強調表示、`Throw`イベント ハンドラーの種類のステートメント`mbox`、し、tab キーを押してセットアップ コード スニペットからメッセージ ボックスを生成するには、2 回クリックします。  
+11. Highlight the `Throw` statement in the event handler, type `mbox`, and then press TAB twice to generate a message box from the mbox code snippet.  
   
-12. 次の行には、次のコードを追加`if` / `else`ブロックの表示を設定する、 `Reset`  ボタンをクリックします。  
+12. On the next line, add the following `if`/`else` block to set the visibility of the `Reset` button.  
   
-    ```c#  
+    ```cs  
     if (counter1.Value < 5) counter1.ShowReset = false;  
     else counter1.ShowReset = true;  
     ```  
   
-13. F5 キーを押します。  
+13. Press F5.  
   
-     フォームを開きます。 `Counter`コントロールは、次のテキストを表示します。  
+     The form opens. The `Counter` control displays the following text.  
   
-     **カウント: 0**  
+     **Count: 0**  
   
-14. **[テスト]**をクリックします。  
+14. Click **Test**.  
   
-     カウンターがインクリメントされるおよび Visual Studio には、メッセージ ボックスが表示されます。  
+     The counter increments and Visual Studio displays a message box.  
   
-15. メッセージ ボックスを閉じます。  
+15. Close the message box.  
   
-     **リセット**ボタンは表示されなくなります。  
+     The **Reset** button disappears.  
   
-16. クリックして**テスト**カウンターに到達するまで**5**たびに、メッセージを閉じるボックスします。  
+16. Click **Test** until the counter reaches **5** closing the message boxes each time.  
   
-     **リセット**が再度表示されるボタンをクリックします。  
+     The **Reset** button re-appears.  
   
-17. **[リセット]**をクリックします。  
+17. Click **Reset**.  
   
-     カウンターがリセット**0**です。  
+     The counter resets to **0**.  
   
-## <a name="next-steps"></a>次の手順  
- **[ツールボックス]** のコントロールを構築すると、Visual Studio によって、プロジェクトの \bin\debug\ フォルダーに *プロジェクト名*.vsix という名前のファイルが作成されます。 コントロールは、.vsix ファイルをネットワークや Web サイトにアップロードすることで展開できます。 コントロールがインストールされているし、Visual Studio に追加されたユーザーは、.vsix ファイルを開いたら、**ツールボックス**ユーザーのコンピューターにします。 .Vsix ファイルをアップロードする代わりに、 [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkID=123847) Web サイトのユーザーが参照によって検出できるように、**ツール/拡張機能と更新プログラム**ダイアログ。  
+## <a name="next-steps"></a>Next Steps  
+ When you build a **Toolbox** control, Visual Studio creates a file named *ProjectName*.vsix in the \bin\debug\ folder of your project. You can deploy the control by uploading the .vsix file to a network or to a Web site. When a user opens the .vsix file, the control is installed and added to the Visual Studio **Toolbox** on the user's computer. Alternatively, you can upload the .vsix file to the [Visual Studio Gallery](http://go.microsoft.com/fwlink/?LinkID=123847) Web site so that users can find it by browsing in the **Tools / Extension and Updates** dialog.  
   
-## <a name="see-also"></a>関連項目  
- [ツールボックスを拡張します。](../misc/extending-the-toolbox.md)   
- [WPF ツールボックス コントロールを作成します。](../extensibility/creating-a-wpf-toolbox-control.md)   
- [Visual Studio の他の部分を拡張します。](../extensibility/extending-other-parts-of-visual-studio.md)   
- [Windows フォーム コントロール開発の基本概念](http://msdn.microsoft.com/Library/6277bb81-90f7-4c5b-9f4b-b02bb42dd316)
+## <a name="see-also"></a>See Also  
+ [Extending other parts of Visual Studio](../extensibility/extending-other-parts-of-visual-studio.md)   
+ [Creating a WPF Toolbox Control](../extensibility/creating-a-wpf-toolbox-control.md)   
+ [Extending Other Parts of Visual Studio](../extensibility/extending-other-parts-of-visual-studio.md)   
+ [Windows Forms Control Development Basics](/dotnet/framework/winforms/controls/windows-forms-control-development-basics)
