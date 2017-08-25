@@ -37,11 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7ec5dd2249f67a2aa23dc42b1f4065bc5d9a318c
+ms.translationtype: HT
+ms.sourcegitcommit: 1c2afd23f9f6a7444b723a0f7d93ababad2624e7
+ms.openlocfilehash: 15e453ace87993aae4ecf80e37cf97e4afce2f28
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="common-msbuild-project-properties"></a>MSBuild プロジェクトの共通プロパティ
@@ -78,6 +78,7 @@ ms.lasthandoff: 05/13/2017
 |DefineTrace|定数 TRACE を定義するかどうかを示すブール値です。|  
 |DebugType|生成するデバッグ情報のレベルを定義します。 有効な値は "full"、"pdbonly"、および "none" です。|  
 |DelaySign|アセンブリに完全署名ではなく遅延署名するかどうかを示すブール値です。|  
+|Deterministic|コンパイラが同じ入力に対して同じアセンブリを生成するかどうかを指示するブール値。 このパラメーターは、`vbc.exe` コンパイラと `csc.exe` コンパイラの `/deterministic` スイッチに相当します。|
 |DisabledWarnings|指定された警告の出力を抑制します。 警告 ID の数値だけを指定してください。 複数の警告を指定するときは、セミコロン (;) で区切ります。 このパラメーターは、vbc.exe コンパイラの `/nowarn` スイッチに相当します。|  
 |DisableFastUpToDateCheck|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のみに適用されるブール値です。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド マネージャーは、FastUpToDateCheck と呼ばれるプロセスを使用して、プロジェクトをリビルドして最新の状態にする必要があるかどうかを判断します。 この判断を行う機能としては、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] より、このプロセスの方が高速です。 DisableFastUpToDateCheck プロパティを `true` に設定すると、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド マネージャーをバイパスし、プロジェクトが最新の状態かどうかを判断するために [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] を使用するように強制できます。|  
 |DocumentationFile|XML ドキュメント ファイルとして生成されるファイルの名前です。 この名前はファイル名のみを示し、パス情報は含んでいません。|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/13/2017
 |ExcludeDeploymentUrl|プロジェクト ファイルに次の要素が含まれている場合は、[GenerateDeploymentManifest Task](../msbuild/generatedeploymentmanifest-task.md) によって、deploymentProvider タグが配置マニフェストに追加されます。<br /><br /> -   UpdateUrl<br />-   InstallUrl<br />-   PublishUrl<br /><br /> ただし、ExcludeDeploymentUrl を使用すると、上記の URL が指定されている場合でも、配置マニフェストに deploymentProvider タグが追加されないようにすることができます。 これを行うには、次のプロパティをプロジェクト ファイルに追加します。<br /><br /> `<ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>` **注意:** ExcludeDeploymentUrl は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE では公開されていないため、プロジェクト ファイルを手動で編集する方法でのみ設定できます。 このプロパティを設定しても、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内での発行には影響はありません。つまり、PublishUrl で指定された URL に deploymentProvider タグが追加されます。|  
 |FileAlignment|出力ファイルでセクションをアラインするサイズをバイト単位で指定します。 有効値は 512、1024、2048、4096、および 8192 です。 このプロパティは、`/filealignment` コンパイラ スイッチに相当します。|  
 |FrameworkPathOverride|mscorlib.dll および microsoft.visualbasic.dll の位置を指定します。 このパラメーターは、vbc.exe コンパイラの `/sdkpath` スイッチに相当します。|  
-|GenerateDocumentation|ビルドによってドキュメントを生成するかどうかを示すブール値パラメーターです。 `true` に設定すると、ビルドによってドキュメント情報が生成され、ビルド タスクが作成した実行可能ファイルまたはライブラリの名前と共に .xml ファイルに格納されます。|  
+|GenerateDocumentation|(Visual Basic .NET のみ) ビルドによってドキュメントを生成するかどうかを示すブール値パラメーターです。 `true` に設定すると、ビルドによってドキュメント情報が生成され、ビルド タスクが作成した実行可能ファイルまたはライブラリの名前と共に .xml ファイルに格納されます。|
 |IntermediateOutputPath|中間出力ファイルの完全パスであり、パスが指定されていない場合に `BaseIntermediateOutputPath` を基に生成されます。 たとえば、\obj\debug\\ のようなパスが生成されます。 このプロパティがオーバーライドされた場合、`BaseIntermediateOutputPath` は無効になります。|  
 |KeyContainerName|厳密名キーのコンテナー名です。|  
 |KeyOriginatorFile|厳密名キー ファイルの名前です。|  
@@ -105,6 +106,7 @@ ms.lasthandoff: 05/13/2017
 |OverwriteReadOnlyFiles|ビルドにおいて読み取り専用ファイルを上書きするかエラーを発生させるかを示すブール値です。|  
 |PdbFile|出力する .pdb ファイルの名前です。 このプロパティは、csc.exe コンパイラの `/pdb` スイッチに相当します。|  
 |プラットフォーム|ビルドの対象とするオペレーティング システムです。 有効な値は "Any CPU"、"x86"、および "x64" です。|  
+|ProduceReferenceAssembly|`true` に設定すると、現在のアセンブリに対して[参照アセンブリ](https://github.com/dotnet/roslyn/blob/master/docs/features/refout.md)の生成が可能になるブール値。 この機能の利用時、`Deterministic` を `true` にする必要があります。 このプロパティは、`vbc.exe` コンパイラと `csc.exe` コンパイラの `/refout` スイッチに対応します。|
 |RemoveIntegerChecks|整数オーバーフロー エラー チェックを無効にするかどうかを示すブール値です。 既定値は `false` です。 このプロパティは、vbc.exe コンパイラの `/removeintchecks` スイッチに相当します。|  
 |SGenUseProxyTypes|SGen.exe によってプロキシ型を生成するかどうかを示すブール値です。<br /><br /> SGen ターゲットは、このプロパティを使用して UseProxyTypes フラグを設定します。 このプロパティの既定値は true で、これを変更するための UI はありません。 webservice 以外の型のシリアル化アセンブリを生成するには、Microsoft.Common.Targets または C#/VB.targets をインポートする前に、このプロパティをプロジェクト ファイルに追加し、その値を false に設定します。|  
 |SGenToolPath|SGen.exe の現在のバージョンがオーバーライドされた場合に SGen.exe を取得する場所を示すツール パスです (省略可能)。|  
