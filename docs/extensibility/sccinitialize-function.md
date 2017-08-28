@@ -1,91 +1,108 @@
 ---
-title: "SccInitialize 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccInitialize"
-helpviewer_keywords: 
-  - "SccInitialize 関数"
+title: SccInitialize Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccInitialize
+helpviewer_keywords:
+- SccInitialize function
 ms.assetid: 5bc0d28b-2c68-4d43-9e51-541506a8f76e
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# SccInitialize 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 76235f932ccaac04672e50f8d349ab6fcd55cd4d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-この関数は、ソース管理プラグインを初期化し、機能および統合開発環境 \(IDE\) に制限を提供します。  
+---
+# <a name="sccinitialize-function"></a>SccInitialize Function
+This function initializes the source control plug-in and provides capabilities and limits to the integrated development environment (IDE).  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccInitialize (  
-   LPVOID* ppvContext,  
-   HWND    hWnd,  
-   LPCSTR  lpCallerName,  
-   LPSTR   lpSccName,  
-   LPLONG  lpSccCaps,  
-   LPSTR   lpAuxPathLabel,  
-   LPLONG  pnCheckoutCommentLen,  
-   LPLONG  pnCommentLen  
+   LPVOID* ppvContext,  
+   HWND    hWnd,  
+   LPCSTR  lpCallerName,  
+   LPSTR   lpSccName,  
+   LPLONG  lpSccCaps,  
+   LPSTR   lpAuxPathLabel,  
+   LPLONG  pnCheckoutCommentLen,  
+   LPLONG  pnCommentLen  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppvContext`  
- \[in\]ソース管理プラグインでは、ここでその context 構造体へのポインターを配置できます。  
+ [in] The source control plug-in can place a pointer to its context structure here.  
   
  `hWnd`  
- \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  `lpCallerName`  
- \[in\]ソース管理プラグインを呼び出し元のプログラムの名前。  
+ [in] The name of the program calling the source control plug-in.  
   
  `lpSccName`  
- \[入力、出力\]ソース管理プラグインが、独自の名前を格納するバッファー \(を超えないように `SCC_NAME_LEN`\)。  
+ [in, out] The buffer where the source control plug-in puts its own name (not to exceed `SCC_NAME_LEN`).  
   
  `lpSccCaps`  
- \[out\]ソース管理プラグインの機能フラグを返します。  
+ [out] Returns the source control plug-in's capability flags.  
   
  `lpAuxPathLabel`  
- \[入力、出力\]ソース管理プラグインが説明する文字列を格納するバッファー、 `lpAuxProjPath` パラメーターによって返される、 [SccOpenProject](../extensibility/sccopenproject-function.md) と [SccGetProjPath](../extensibility/sccgetprojpath-function.md) \(を超えないように `SCC_AUXLABEL_LEN`\)。  
+ [in, out] The buffer where the source control plug-in puts a string that describes the `lpAuxProjPath` parameter returned by the [SccOpenProject](../extensibility/sccopenproject-function.md) and the [SccGetProjPath](../extensibility/sccgetprojpath-function.md) (not to exceed `SCC_AUXLABEL_LEN`).  
   
  `pnCheckoutCommentLen`  
- \[out\]チェック アウトのコメントの最大許容サイズを返します。  
+ [out] Returns the maximum permissible length for a checkout comment.  
   
  `pnCommentLen`  
- \[out\]その他のコメントの最大許容サイズを返します。  
+ [out] Returns the maximum permissible length for other comments.  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|値|説明|  
-|-------|--------|  
-|SCC\_OK|ソース コントロールの初期化が成功しました。|  
-|SCC\_E\_INITIALIZEFAILED|システムを初期化できませんでした。|  
-|SCC\_E\_NOTAUTHORIZED|指定の操作を実行できません。|  
-|SCC\_E\_NONSPECFICERROR|不特定のエラーです。ソース管理システムは初期化されませんでした。|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Source control initialization succeeded.|  
+|SCC_E_INITIALIZEFAILED|System could not be initialized.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform the specified operation.|  
+|SCC_E_NONSPECFICERROR|Nonspecific failure; source control system was not initialized.|  
   
-## 解説  
- IDE は、ソース管理プラグインが初めて読み込まれるときに、この関数を呼び出します。 IDE プラグインへの呼び出し元の名前などの特定の情報を渡すようになります。 IDE のコメントと、プラグインの機能の許容最大長などの特定の情報も取得バックアップします。  
+## <a name="remarks"></a>Remarks  
+ The IDE calls this function when it first loads the source control plug-in. It enables the IDE to pass certain information, such as the caller name, to the plug-in. The IDE also gets back certain information such as the maximum allowable length for comments and the plug-in's capabilities.  
   
- `ppvContext` を指す、 `NULL` ポインター。 ソース管理プラグインが構造体を使用して独自の割り当てし、その構造体へのポインターを格納 `ppvContext`します。 IDE はこのポインターを渡してのどの VSSCI API 関数にプラグイン グローバル ストレージに頼らなくても利用可能なコンテキスト情報を持つことと、プラグインの複数のインスタンスをサポートすることができます。 ときにこの構造体を解放は、 [SccUninitialize](../extensibility/sccuninitialize-function.md) が呼び出されます。  
+ The `ppvContext` points to a `NULL` pointer. The source control plug-in can allocate a structure for its own use and store a pointer to that structure in `ppvContext`. The IDE will pass this pointer to every other VSSCI API function, allowing the plug-in to have context information available without resorting to global storage and to support multiple instances of the plug-in. This structure should be deallocated when the [SccUninitialize](../extensibility/sccuninitialize-function.md) is called.  
   
- `lpCallerName` と `lpSccName` パラメーター名を交換するには、IDE とソース管理プラグインを有効にします。 これらの名前は、複数のインスタンスを区別するためにだけ使用可能性がありますが実際に表示されるか、メニューまたはダイアログ ボックスでします。  
+ The `lpCallerName` and `lpSccName` parameters enable the IDE and the source control plug-in to exchange names. These names may be used simply to distinguish among multiple instances, or they may actually appear in menus or dialog boxes.  
   
- `lpAuxPathLabel` パラメーターは、ソリューション ファイルに格納されてへの呼び出しでプラグインをソース管理に渡されたに補助プロジェクト パスを識別するコメントとして使用する文字列、 [SccOpenProject](../extensibility/sccopenproject-function.md)です。[!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] 文字列を使用して"SourceSafe プロジェクト:"です。この特定の文字列を使用しないように他のソース管理プラグインを使用する必要があります。  
+ The `lpAuxPathLabel` parameter is a string used as a comment to identify the auxiliary project path that is stored in the solution file and passed to the source control plug-in in a call to the [SccOpenProject](../extensibility/sccopenproject-function.md). [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] uses the string "SourceSafe Project:"; other source control plug-ins should refrain from using this particular string.  
   
- `lpSccCaps` パラメーターは、ソース管理プラグインのプラグインの機能を示すビットフラグを格納する場所です。 \(機能ビットフラグの一覧については、次を参照してください。 [機能フラグ](../extensibility/capability-flags.md)\)。 たとえば、プラグインは、機能の設定、呼び出し元から提供されるコールバック関数に結果を記述するプラグインのプランに SCC\_CAP\_TEXTOUT ビットかどうか。 バージョン管理の結果のウィンドウを作成する IDE この通知はします。  
+ The `lpSccCaps` parameter gives the source control plug-in a place to store bitflags indicating the plug-in's capabilities. (For a full list of capability bitflags, see [Capability Flags](../extensibility/capability-flags.md)). For instance, if the plug-in plans to write results into a caller-provided callback function, the plug-in would set the capability bit SCC_CAP_TEXTOUT. This would signal the IDE to create a window for version control results.  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccUninitialize](../extensibility/sccuninitialize-function.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)   
- [機能フラグ](../extensibility/capability-flags.md)
+ [Capability Flags](../extensibility/capability-flags.md)

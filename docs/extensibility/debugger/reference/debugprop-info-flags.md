@@ -1,5 +1,5 @@
 ---
-title: "DEBUGPROP_INFO_FLAGS |Microsoft ドキュメント"
+title: DEBUGPROP_INFO_FLAGS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c5b749cffbc05fcc3fa6c533dc4bb3bdcd1ad1c0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f4633730a3dbe09f356c3731cd48c9428b9e8890
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="debugpropinfoflags"></a>DEBUGPROP_INFO_FLAGS
-Debug プロパティ オブジェクトの概要を取得するには、どのような情報を指定します。  
+Specifies what information to retrieve about a debug property object.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_DEBUGPROP_INFO_FLAGS {   
    DEBUGPROP_INFO_FULLNAME          = 0x00000001,  
    DEBUGPROP_INFO_NAME              = 0x00000002,  
@@ -63,7 +64,7 @@ enum enum_DEBUGPROP_INFO_FLAGS {
 typedef DWORD DEBUGPROP_INFO_FLAGS;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_DEBUGPROP_INFO_FLAGS {   
    DEBUGPROP_INFO_FULLNAME          = 0x00000001,  
    DEBUGPROP_INFO_NAME              = 0x00000002,  
@@ -84,62 +85,62 @@ public enum enum_DEBUGPROP_INFO_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>メンバー  
+## <a name="members"></a>Members  
  DEBUGPROP_INFO_FULLNAME  
- 初期化/を使用して、`bstrFullName`フィールドです。  
+ Initialize/use the `bstrFullName` field.  
   
  DEBUGPROP_INFO_NAME  
- 初期化/を使用して、`bstrName`フィールドです。  
+ Initialize/use the `bstrName` field.  
   
  DEBUGPROP_INFO_TYPE  
- 初期化/を使用して、`bstrType`フィールドです。  
+ Initialize/use the `bstrType` field.  
   
  DEBUGPROP_INFO_VALUE  
- 初期化/を使用して、`bstrValue`フィールドです。  
+ Initialize/use the `bstrValue` field.  
   
  DEBUGPROP_INFO_ATTRIB  
- 初期化/を使用して、`dwAttrib`フィールドです。  
+ Initialize/use the `dwAttrib` field.  
   
- DEBUGPROP_INFO_PROP、  
- 初期化/を使用して、`pProperty`を含むフィールドを[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)インターフェイスです。  
+ DEBUGPROP_INFO_PROP,  
+ Initialize/use the `pProperty` field that contains an [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) interface.  
   
  DEBUGPROP_INFO_VALUE_AUTOEXPAND  
- 指定値 フィールドには、この型のオブジェクトで使用可能な場合は、自動拡張値を含める必要があります。  
+ Specifies that the value field should contain the auto-expanded value, if available, for this type of object.  
   
  DEBUGPROP_INFO_VALUE_NOFUNCEVAL  
- 使用しないでください。  
+ Deprecated.  
   
  DEBUGPROP_INFO_VALUE_RAW  
- 値の見た目を整理やメンバーは返されません (つまり、値はフォーマットされません)。  
+ Do not return any beautified values or members (that is, do not format the values).  
   
  DEBUGPROP_INFO_VALUE_NO_TOSTRING  
- 特殊な合成された値が返されません (たとえば、呼び出す必要はありません`ToString()`値を生成するオブジェクト)。  
+ Do not return any special synthesized values (for example, do not call `ToString()` on an object to produce a value).  
   
  DEBUGPROP_INFO_NONE  
- フラグが設定されていないことを指定します。  
+ Specifies that no flags are set.  
   
  DEBUGPROP_INFO_STANDARD  
- 初期化/を使用して、 `dwAttrib`、 `bstrName`、 `bstrType`、および`bstrValue`フィールドです。  
+ Initialize/use the `dwAttrib`, `bstrName`, `bstrType`, and `bstrValue` fields.  
   
  DEBUGPROP_INFO_All  
- すべてのフラグのマスクを示します。  
+ Indicates a mask of all flags.  
   
-## <a name="remarks"></a>コメント  
- これらの値が渡される、 [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)、 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)、および[EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)メソッドを初期化するフィールドを示す、 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)構造体。  
+## <a name="remarks"></a>Remarks  
+ These values are passed to the [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md), [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md), and [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) methods to indicate which fields are to be initialized the [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) structure.  
   
- これらの値がの使用も、`dwFields`のメンバー、`DEBUG_PROPERTY_INFO`構造体、構造体が返される構造体のフィールドが使用し、有効なことを示します。  
+ These values are also used for the `dwFields` member of the `DEBUG_PROPERTY_INFO` structure to indicate which fields of the structure are used and valid when the structure is returned.  
   
- これらの値は、演算と組み合わせることも`OR`です。  
+ These values may be combined with a bitwise `OR`.  
   
-## <a name="requirements"></a>要件  
- ヘッダー: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
- [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)   
  [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)   

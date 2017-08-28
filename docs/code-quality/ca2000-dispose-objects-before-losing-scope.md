@@ -1,102 +1,185 @@
 ---
-title: "CA2000: スコープが失われる前にオブジェクトを破棄します | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2000"
-  - "Dispose objects before losing scope"
-  - "DisposeObjectsBeforeLosingScope"
-helpviewer_keywords: 
-  - "CA2000"
-  - "DisposeObjectsBeforeLosingScope"
+title: 'CA2000: Dispose objects before losing scope | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2000
+- Dispose objects before losing scope
+- DisposeObjectsBeforeLosingScope
+helpviewer_keywords:
+- CA2000
+- DisposeObjectsBeforeLosingScope
 ms.assetid: 0c3d7d8d-b94d-46e8-aa4c-38df632c1463
 caps.latest.revision: 32
-caps.handback.revision: 32
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2000: スコープが失われる前にオブジェクトを破棄します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 61903e0c6ec3a27648e69ca210e0a5fa71615c22
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
+---
+# <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: Dispose objects before losing scope
 |||  
 |-|-|  
 |TypeName|DisposeObjectsBeforeLosingScope|  
 |CheckId|CA2000|  
-|分類|Microsoft.Reliability|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Reliability|  
+|Breaking Change|Non-breaking|  
   
-## 原因  
- <xref:System.IDisposable> 型のローカル オブジェクトは作成されますが、そのオブジェクトに対するすべての参照がスコープ外になる前に、オブジェクトが破棄されていません。  
+## <a name="cause"></a>Cause  
+ A local object of a <xref:System.IDisposable> type is created but the object is not disposed before all references to the object are out of scope.  
   
-## 規則の説明  
- 破棄できるオブジェクトに対するすべての参照がスコープ外になる前に、オブジェクトが明示的に破棄されない場合、ガベージ コレクターでオブジェクトのファイナライザーが実行されるときに破棄されますが、タイミングは一定ではありません。  例外的なイベントが発生するとオブジェクトのファイナライザーを実行できないため、オブジェクトは明示的に破棄する必要があります。  
+## <a name="rule-description"></a>Rule Description  
+ If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.  
   
-## 違反の修正方法  
- この規則違反を修正するには、オブジェクトに対するすべての参照がスコープ外になる前に、そのオブジェクトで <xref:System.IDisposable.Dispose%2A> を呼び出します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, call <xref:System.IDisposable.Dispose%2A> on the object before all references to it are out of scope.  
   
- `using` ステートメント \([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] の場合は `Using`\) を使用して、`IDisposable` を実装するオブジェクトをラップすることができます。  このステートメントによってラップされたオブジェクトは、`using` ブロックの終わりで自動的に破棄されます。  
+ Note that you can use the `using` statement (`Using` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) to wrap objects that implement `IDisposable`. Objects that are wrapped in this manner will automatically be disposed at the close of the `using` block.  
   
- using ステートメントでは十分に IDisposable オブジェクトを保護できない次のような場合があります。この場合、CA2000 が発生する可能性があります。  
+ The following are some situations where the using statement is not enough to protect IDisposable objects and can cause CA2000 to occur.  
   
--   破棄可能オブジェクトを返すには、このオブジェクトは using ブロック外の try\/finally ブロックで構築される必要があります。  
+-   Returning a disposable object requires that the object is constructed in a try/finally block outside a using block.  
   
--   破棄可能オブジェクトのメンバーは、using ステートメントのコンストラクターでは初期化できません。  
+-   Initializing members of a disposable object should not be done in the constructor of a using statement.  
   
--   1 つの例外ハンドラーによってのみ保護された入れ子のコンストラクター。  次に例を示します。  
+-   Nesting constructors that are protected only by one exception handler. For example,  
   
-    ```  
+    ```csharp
     using (StreamReader sr = new StreamReader(new FileStream("C:\myfile.txt", FileMode.Create)))  
     { ... }  
-    ```  
+    ```
   
-     この場合、StreamReader オブジェクトの構築が失敗すると FileStream オブジェクトが閉じられなくなることがあるので、CA2000 が発生します。  
+     causes CA2000 to occur because a failure in the construction of the StreamReader object can result in the FileStream object never being closed.  
   
--   動的オブジェクトは、シャドウ オブジェクトを使用して IDisposable オブジェクトの Dispose パターンを実装する必要があります。  
+-   Dynamic objects should use a shadow object to implement the Dispose pattern of IDisposable objects.  
   
-## 警告を抑制する状況  
- `Dispose` を呼び出すオブジェクトに対して <xref:System.IO.Stream.Close%2A> などのメソッドを呼び出した場合、または警告を発生させたメソッドがオブジェクトをラップする IDisposable オブジェクトを返す場合を除き、この規則による警告を抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule unless you have called a method on your object that calls `Dispose`, such as <xref:System.IO.Stream.Close%2A>, or if the method that raised the warning returns an IDisposable object wraps your object.  
   
-## 関連規則  
- [CA2213: 破棄可能なフィールドは破棄されなければなりません](../code-quality/ca2213-disposable-fields-should-be-disposed.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA2213: Disposable fields should be disposed](../code-quality/ca2213-disposable-fields-should-be-disposed.md)  
   
- [CA2202: オブジェクトを複数回破棄しません](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)  
+ [CA2202: Do not dispose objects multiple times](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)  
   
-## 使用例  
- 破棄可能なオブジェクトを返すメソッドを実装している場合は、catch ブロックのない try\/finally ブロックを使用して、そのオブジェクトが確実に破棄されるようにします。  try\/finally ブロックを使用することによって、障害点での例外の発生が可能になり、そのオブジェクトが確実に破棄されます。  
+## <a name="example"></a>Example  
+ If you are implementing a method that returns a disposable object, use a try/finally block without a catch block to make sure that the object is disposed. By using a try/finally block, you allow exceptions to be raised at the fault point and make sure that object is disposed.  
   
- OpenPort1 メソッドでは、ISerializable オブジェクトの SerialPort を開くための呼び出し、または SomeMethod の呼び出しが失敗する可能性があります。  この実装では CA2000 警告は発生しません。  
+ In the OpenPort1 method, the call to open the ISerializable object SerialPort or the call to SomeMethod can fail. A CA2000 warning is raised on this implementation.  
   
- OpenPort2 メソッドでは、次の 2 つの SerialPort オブジェクトが宣言され、null に設定されます。  
+ In the OpenPort2 method, two SerialPort objects are declared and set to null:  
   
--   `tempPort`。メソッド操作が成功しているかどうかをテストするのに使用されます。  
+-   `tempPort`, which is used to test that the method operations succeed.  
   
--   `port`。メソッドの戻り値に使用されます。  
+-   `port`, which is used for the return value of the method.  
   
- `tempPort` は、`try` ブロックで構築され、開かれます。その他必要な作業も同じ `try` ブロック内で実行されます。  `try` ブロックの最後に、開かれたポートが `port` オブジェクトに割り当てられ、このオブジェクトが返されます。`tempPort` オブジェクトは `null` に設定されます。  
+ The `tempPort` is constructed and opened in a `try` block, and any other required work is performed in the same `try` block. At the end of the `try` block, the opened port is assigned to the `port` object that will be returned and the `tempPort` object is set to `null`.  
   
- `finally` ブロックは `tempPort` 値をチェックします。  null でない場合、メソッド内の操作は失敗しています。`tempPort` は閉じられ、すべてのリソースが解放されます。  返されるオブジェクトには、メソッド操作が成功した場合、開かれた SerialPort オブジェクトが含まれます。メソッドの操作が失敗した場合は null になります。  
+ The `finally` block checks the value of `tempPort`. If it is not null, an operation in the method has failed, and `tempPort` is closed to make sure that any resources are released. The returned port object will contain the opened SerialPort object if the operations of the method succeeded, or it will be null if an operation failed.  
+
+```csharp
+public SerialPort OpenPort1(string portName)
+{
+   SerialPort port = new SerialPort(portName);
+   port.Open();  //CA2000 fires because this might throw
+   SomeMethod(); //Other method operations can fail
+   return port;
+}
+
+public SerialPort OpenPort2(string portName)
+{
+   SerialPort tempPort = null;
+   SerialPort port = null;
+   try
+   {
+      tempPort = new SerialPort(portName);
+      tempPort.Open();
+      SomeMethod();
+      //Add any other methods above this line
+      port = tempPort;
+      tempPort = null;
+      
+   }
+   finally
+   {
+      if (tempPort != null)
+      {
+         tempPort.Close();
+      }
+   }
+   return port;
+}
+```
+
+```vb
+Public Function OpenPort1(ByVal PortName As String) As SerialPort
+
+   Dim port As New SerialPort(PortName)
+   port.Open()    'CA2000 fires because this might throw
+   SomeMethod()   'Other method operations can fail
+   Return port
+
+End Function
+
+
+Public Function OpenPort2(ByVal PortName As String) As SerialPort
+
+   Dim tempPort As SerialPort = Nothing
+   Dim port As SerialPort = Nothing
+
+   Try
+      tempPort = New SerialPort(PortName)
+      tempPort.Open()
+      SomeMethod()
+      'Add any other methods above this line
+      port = tempPort
+      tempPort = Nothing
+
+   Finally
+      If Not tempPort Is Nothing Then
+         tempPort.Close()
+      End If
+
+
+   End Try
+
+   Return port
+
+End Function
+```
+ 
+## <a name="example"></a>Example  
+ By default, the [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] compiler has all arithmetic operators check for overflow. Therefore, any Visual Basic arithmetic operation might throw an <xref:System.OverflowException>. This could lead to unexpected violations in rules such as CA2000. For example, the following CreateReader1 function will produce a CA2000 violation because the Visual Basic compiler is emitting an overflow checking instruction for the addition that could throw an exception that would cause the StreamReader not to be disposed.  
   
- [!code-vb[FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope#1](../code-quality/codesnippet/VisualBasic/ca2000-dispose-objects-before-losing-scope_1.vb)]
- [!code-vb[FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope#1](../code-quality/codesnippet/VisualBasic/ca2000-dispose-objects-before-losing-scope_1.vb)]
- [!code-cs[FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope#1](../code-quality/codesnippet/CSharp/ca2000-dispose-objects-before-losing-scope_1.cs)]  
+ To fix this, you can disable the emitting of overflow checks by the Visual Basic compiler in your project or you can modify your code as in the following CreateReader2 function.  
   
-## 使用例  
- [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] コンパイラは既定ですべての算術演算子のオーバーフローをチェックします。  そのため、いずれかの Visual Basic 算術演算子で <xref:System.OverflowException> がスローされる可能性があります。  これにより、CA2000 のような予期しない規則違反が発生する場合があります。  たとえば、次の CreateReader1 関数では、Visual Basic コンパイラが加算に対するオーバーフロー チェックを実行し、それが例外をスローすると StreamReader が破棄されなくなるので、CA2000 違反が発生します。  
+ To disable the emitting of overflow checks, right-click the project name in Solution Explorer and then click **Properties**. Click **Compile**, click **Advanced Compile Options**, and then check **Remove integer overflow checks**.  
   
- これを修正するには、プロジェクトで Visual Basic コンパイラによるオーバーフロー チェックの実施を無効にするか、または次の CreateReader2 関数のようにコードを変更します。  
-  
- オーバーフロー チェックの実施を無効にするには、ソリューション エクスプローラーでプロジェクト名を右クリックし、**\[プロパティ\]** をクリックします。  **\[コンパイル\]** をクリックし、**\[詳細コンパイル オプション\]** をクリックし、**\[整数オーバーフローのチェックを解除\]** をオンにします。  
-  
- [!CODE [FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope.VBOverflow#1](FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope.VBOverflow#1)]  
-  
-## 参照  
+  [!code-vb[FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope#1](../code-quality/codesnippet/VisualBasic/ca2000-dispose-objects-before-losing-scope-vboverflow_1.vb)]
+
+## <a name="see-also"></a>See Also  
  <xref:System.IDisposable>   
- [Dispose パターン](../Topic/Dispose%20Pattern.md)
+ [Dispose Pattern](/dotnet/standard/design-guidelines/dispose-pattern)

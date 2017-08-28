@@ -1,5 +1,5 @@
 ---
-title: "BP_RESOLUTION_DATA |Microsoft ドキュメント"
+title: BP_RESOLUTION_DATA | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3d9addc48c7960cbcbf2864619384633072dc51e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f5be75214e9ab112cc3af17bd8bdcfae00083661
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="bpresolutiondata"></a>BP_RESOLUTION_DATA
-データ ブレークポイントをバインドした結果について説明します。  
+Describes the result of binding a data breakpoint.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 typedef struct _BP_RESOLUTION_DATA {   
    BSTR              bstrDataExpr;  
    BSTR              bstrFunc;  
@@ -50,7 +51,7 @@ typedef struct _BP_RESOLUTION_DATA {
 } BP_RESOLUTION_DATA;  
 ```  
   
-```c#  
+```csharp  
 public struct BP_RESOLUTION_DATA {   
    public string bstrDataExpr;  
    public string bstrFunc;  
@@ -59,31 +60,31 @@ public struct BP_RESOLUTION_DATA {
 };  
 ```  
   
-## <a name="members"></a>メンバー  
+## <a name="members"></a>Members  
  `bstrDataExpr`  
- バインドされているデータの式。  
+ The data expression that has been bound.  
   
  `bstrFunc`  
- 関数の名前データ ブレークポイントが (もしあれば) にバインドします。  
+ The name of the function the data breakpoint has bound in (if any).  
   
  `bstrImage`  
- データ ブレークポイントがバインドされているモジュール (たとえば MyModule.dll) の名前。  
+ The name of the module (MyModule.dll, for example) that the data breakpoint has bound in.  
   
  `dwFlags`  
- 値、 [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md)データ ブレークポイントを実装する方法を説明する列挙です。  
+ A value from the [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) enumeration, describing how the data breakpoint is implemented.  
   
-## <a name="remarks"></a>コメント  
- この構造体のメンバーである、 [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)はでオフにしてのメンバーの構造、 [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)によって返される構造体、 [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ This structure is a member of the [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) structure, which is in turn a member of the [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) structure returned by the [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) method.  
   
-## <a name="requirements"></a>要件  
- ヘッダー: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
- [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)   
  [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)   
  [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)

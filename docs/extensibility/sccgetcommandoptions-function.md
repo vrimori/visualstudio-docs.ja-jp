@@ -1,5 +1,5 @@
 ---
-title: "SccGetCommandOptions 関数 |Microsoft ドキュメント"
+title: SccGetCommandOptions Function | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 86f8b896581d4238e1328bd0fe086987145c9fb5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: df497de98463d728b5cd040415924a40fb6717b8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sccgetcommandoptions-function"></a>SccGetCommandOptions 関数
-この関数は、指定されたコマンドの詳細設定オプションのユーザーに求めます。  
+# <a name="sccgetcommandoptions-function"></a>SccGetCommandOptions Function
+This function prompts the user for advanced options for a given command.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccGetCommandOptions(  
    LPVOID pvContext,  
    HWND hWnd,  
@@ -50,48 +51,48 @@ SCCRTN SccGetCommandOptions(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- [in]ソース管理プラグイン コンテキスト構造体。  
+ [in] The source control plug-in context structure.  
   
- hwnd の分離  
- [in]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
+ hWnd  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  iCommand  
- [in]高度なオプションを要求する対象のコマンド (を参照してください[コマンド コード](../extensibility/command-code-enumerator.md)指定できる値について)。  
+ [in] The command for which advanced options are requested (see [Command Code](../extensibility/command-code-enumerator.md) for possible values).  
   
  ppvOptions  
- [in]オプションの構造 (することもできます`NULL`)。  
+ [in] The option structure (can also be `NULL`).  
   
-## <a name="return-value"></a>戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|値|説明|  
+|Value|Description|  
 |-----------|-----------------|  
-|SCC_OK|成功。|  
-|SCC_I_ADV_SUPPORT|ソース管理プラグインでは、コマンドの詳細オプションをサポートしています。|  
-|SCC_I_OPERATIONCANCELED|ユーザーは、ソース管理プラグインのキャンセル**オプション** ダイアログ ボックス。|  
-|SCC_E_OPTNOTSUPPORTED|ソース管理プラグインでは、この操作はサポートしません。|  
-|SCC_E_ISCHECKEDOUT|現在チェック アウトされているファイルでこの操作を実行できません。|  
-|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
-|SCC_E_NONSPECIFICERROR|不特定のエラーです。|  
+|SCC_OK|Success.|  
+|SCC_I_ADV_SUPPORT|The source control plug-in supports advanced options for the command.|  
+|SCC_I_OPERATIONCANCELED|The user cancelled the source control plug-in's **Options** dialog box.|  
+|SCC_E_OPTNOTSUPPORTED|The source control plug-in does not support this operation.|  
+|SCC_E_ISCHECKEDOUT|Cannot perform this operation on a file that is currently checked out.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
   
-## <a name="remarks"></a>コメント  
- IDE で最初にこの関数が呼び出さ`ppvOptions` = `NULL`ソース管理プラグインが指定されたコマンドでのオプションの高度な機能をサポートしているかどうか。 ならばプラグイン機能をサポートして、そのコマンドの IDE によってこの関数もう一度、ユーザーは、高度なオプションを要求すると (通常として実装、**詳細** ダイアログ ボックスのボタン) の NULL 以外のポインターを提供し、`ppvOptions`を指す、`NULL`ポインター。 プラグインにプライベート構造体でユーザーが指定されている高度なオプションを格納し、その構造体へのポインターを返します`ppvOptions`します。 この構造体への後続の呼び出しなど、それについて認識する必要がある他のすべてのソース管理プラグインの API 関数に渡されます、`SccGetCommandOptions`関数です。  
+## <a name="remarks"></a>Remarks  
+ The IDE calls this function for the first time with `ppvOptions`=`NULL` to determine if the source control plug-in supports the advanced options feature for the specified command. If the plug-in does support the feature for that command, the IDE calls this function again when the user requests advanced options (usually implemented as an **Advanced** button in a dialog box) and supplies a non-NULL pointer for `ppvOptions` that points to a `NULL` pointer. The plug-in stores any advanced options specified by the user in a private structure and returns a pointer to that structure in `ppvOptions`. This structure is then passed to all other Source Control Plug-in API functions that need to know about it, including subsequent calls to the `SccGetCommandOptions` function.  
   
- 例を使用してこのような状況を明確にします。  
+ An example may help clarify this situation.  
   
- ユーザーが選択、**取得**コマンドと、IDE を表示、**取得** ダイアログ ボックス。 IDE の呼び出し、`SccGetCommandOptions`関数を`iCommand`に設定`SCC_COMMAND_GET`と`ppvOptions`に設定`NULL`します。 これは、質問とプラグインのソース管理によって解釈されますが、"このコマンドの高度なオプションですか?" プラグインを返した場合`SCC_I_ADV_SUPPORT`、IDE が表示されます、 **[詳細設定**ボタンをクリックして、**取得**] ダイアログ ボックス。  
+ A user chooses the **Get** command and the IDE displays a **Get** dialog box. The IDE calls the `SccGetCommandOptions` function with `iCommand` set to `SCC_COMMAND_GET` and `ppvOptions` set to `NULL`. This is interpreted by the source control plug-in as the question, "Do you have any advanced options for this command?" If the plug-in returns `SCC_I_ADV_SUPPORT`, the IDE displays an **Advanced** button in its **Get** dialog box.  
   
- はじめて、ユーザーがクリックすると、 **詳細設定**ボタン、IDE をもう一度呼び出す、`SccGetCommandOptions`機能しますが、この時点ではない`NULL``ppvOptions`を指す、`NULL`ポインター。 プラグインの表示、独自**取得オプション** ダイアログ ボックスについては、ユーザー要求独自の構造体には、その情報を格納し、その構造体へのポインターを返します`ppvOptions`します。  
+ The first time the user clicks the **Advanced** button, the IDE again calls the `SccGetCommandOptions` function, this time with a non-`NULL``ppvOptions` that points to a `NULL` pointer. The plug-in displays its own **Get Options** dialog box, prompts the user for information, puts that information into its own structure, and returns a pointer to that structure in `ppvOptions`.  
   
- ユーザーがクリックした場合**[詳細設定**再び同じ] ダイアログ ボックスで、IDE を呼び出します、`SccGetCommandOptions`関数を変更せずにもう一度`ppvOptions`、構造体がプラグインに渡されるようにします。 これにより、以前に設定した値には、そのダイアログ ボックスを再初期化するには、プラグインできます。 プラグインを返す前に、配置内の構造を変更します。  
+ If the user clicks **Advanced** again in the same dialog box, the IDE calls the `SccGetCommandOptions` function again without changing `ppvOptions`, so that the structure is passed back to the plug-in. This enables the plug-in to reinitialize its dialog box to the values that the user had previously set. The plug-in modifies the structure in place before returning.  
   
- 最後に、ユーザーがクリックすると**OK** 、IDE で**取得**ダイアログ ボックスで、IDE の呼び出し、 [SccGet](../extensibility/sccget-function.md)で返される構造体を渡すこと`ppvOptions`高度なオプションを含みます。  
+ Finally, when the user clicks **OK** in the IDE's **Get** dialog box, the IDE calls the [SccGet](../extensibility/sccget-function.md), passing the structure returned in `ppvOptions` that contains the advanced options.  
   
 > [!NOTE]
->  コマンドは、 `SCC_COMMAND_OPTIONS` IDE が表示されたときに使用される、**オプション**ダイアログ ボックスを表示、ユーザーは、統合のしくみを制御する基本設定を設定します。 表示できる、ソース管理プラグインは、独自の基本設定 ダイアログ ボックスを指定する必要がある場合、**詳細**IDE の基本設定 ダイアログ ボックスでボタンをクリックします。 プラグインを取得し、この情報を永続化する責任を負うものIDE や使用しないことを変更します。  
+>  The command `SCC_COMMAND_OPTIONS` is used when the IDE displays an **Options** dialog box that lets the user set preferences that control how the integration works. If the source control plug-in wants to supply its own preferences dialog box, it can display it from an **Advanced** button in the IDE's preferences dialog box. The plug-in is solely responsible for getting and persisting this information; the IDE does not use it or modify it.  
   
-## <a name="see-also"></a>関連項目  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
- [コマンドのコード](../extensibility/command-code-enumerator.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+ [Command Code](../extensibility/command-code-enumerator.md)

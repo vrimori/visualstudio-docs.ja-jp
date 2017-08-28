@@ -1,41 +1,58 @@
 ---
-title: "タスクの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, 作成 (タスクを)"
-  - "MSBuild, 記述 (タスクを)"
-  - "タスク, 作成 (MSBuild 用に)"
+title: Task Writing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, writing tasks
+- tasks, creating for MSBuild
+- MSBuild, creating tasks
 ms.assetid: 3ebc5f87-8f00-46fc-82a1-228f35a6823b
 caps.latest.revision: 19
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# タスクの作成
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 633d01614009ca69d3e8ce78b60530b2881f47c2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-タスクでは、ビルド プロセスの間に実行するコードを指定します。  タスクはターゲット内に含まれます。  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には一般的なタスクのライブラリが含まれていますが、独自にタスクを作成することもできます。  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に付属のタスク ライブラリの詳細については、「[Task Reference](../msbuild/msbuild-task-reference.md)」を参照してください。  
+---
+# <a name="task-writing"></a>Task Writing
+Tasks provide the code that runs during the build process. Tasks are contained in targets. A library of typical tasks is included with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], and you can also create your own tasks. For more information about the library of tasks that are included with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], see [Task Reference](../msbuild/msbuild-task-reference.md).  
   
-## タスク  
- タスクの例として、1 つ以上のファイルをコピーする [Copy](../msbuild/copy-task.md)、ディレクトリを作成する [MakeDir](../msbuild/makedir-task.md)、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ソース コード ファイルをコンパイルする [Csc](../msbuild/csc-task.md) などがあります。  各タスクは、<xref:Microsoft.Build.Framework.ITask> インターフェイスを実装する .NET クラスとして実装されます。これは、Microsoft.Build.Framework.dll アセンブリで定義されます。  
+## <a name="tasks"></a>Tasks  
+ Examples of tasks include [Copy](../msbuild/copy-task.md), which copies one or more files, [MakeDir](../msbuild/makedir-task.md), which creates a directory, and [Csc](../msbuild/csc-task.md), which compiles [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] source code files. Each task is implemented as a .NET class that implements the <xref:Microsoft.Build.Framework.ITask> interface, which is defined in the Microsoft.Build.Framework.dll assembly.  
   
- タスクを実装する際には、次の 2 つの手法があります。  
+ There are two approaches you can use when implementing a task:  
   
--   <xref:Microsoft.Build.Framework.ITask> インターフェイスを直接実装する。  
+-   Implement the <xref:Microsoft.Build.Framework.ITask> interface directly.  
   
--   ヘルパー クラス <xref:Microsoft.Build.Utilities.Task> からクラスを派生させる。これは、Microsoft.Build.Utilities.dll アセンブリで定義されます。  タスクは ITask を実装し、一部の ITask メンバーの既定の実装を提供します。  さらに、ログ記録が簡単になります。  
+-   Derive your class from the helper class, <xref:Microsoft.Build.Utilities.Task>, which is defined in the Microsoft.Build.Utilities.dll assembly. Task implements ITask and provides default implementations of some ITask members. Additionally, logging is easier.  
   
- どちらの場合も、`Execute` という名前のメソッドをクラスに追加する必要があります。これはタスクの実行時に呼び出されるメソッドです。  このメソッドはパラメーターを受け取らず、`Boolean` 値を返します。タスクが成功した場合は `true`、失敗した場合は `false` です。  次の例は、アクションを実行せずに `true` を返すタスクを示します。  
+ In both cases, you must add to your class a method named `Execute`, which is the method that is called when the task runs. This method takes no parameters and returns a `Boolean` value: `true` if the task succeeded or `false` if it failed. The following example shows a task that performs no action and returns `true`.  
   
-```  
+```csharp
 using System;  
 using Microsoft.Build.Framework;  
 using Microsoft.Build.Utilities;  
@@ -52,9 +69,9 @@ namespace MyTasks
 }  
 ```  
   
- 次のプロジェクト ファイルは、このタスクを実行します。  
+ The following project file runs this task:  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <Target Name="MyTarget">  
         <SimpleTask />  
@@ -62,9 +79,9 @@ namespace MyTasks
 </Project>  
 ```  
   
- 実行されたタスクは、タスク クラスで .NET プロパティを作成した場合は、プロジェクト ファイルから入力を受け取ることができます。  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、これらのプロパティを直ちに設定してから、タスクの `Execute` メソッドを呼び出します。  文字列プロパティを作成するには、次のようなタスク コードを使用します。  
+ When tasks run, they can also receive inputs from the project file if you create .NET properties on the task class. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] sets these properties immediately before calling the task's `Execute` method. To create a string property, use task code such as:  
   
-```  
+```csharp
 using System;  
 using Microsoft.Build.Framework;  
 using Microsoft.Build.Utilities;  
@@ -88,9 +105,9 @@ namespace MyTasks
 }  
 ```  
   
- 次のプロジェクト ファイルはこのタスクを実行し、`MyProperty` に特定の値を設定します。  
+ The following project file runs this task and sets `MyProperty` to the given value:  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
    <Target Name="MyTarget">  
       <SimpleTask MyProperty="Value for MyProperty" />  
@@ -98,18 +115,18 @@ namespace MyTasks
 </Project>  
 ```  
   
-## タスクの登録  
- プロジェクトがタスクを実行する場合は、タスク クラスを含むアセンブリの検索方法を [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] が認識している必要があります。  タスクは [UsingTask Element \(MSBuild\)](../msbuild/usingtask-element-msbuild.md) を使用して登録されます。  
+## <a name="registering-tasks"></a>Registering Tasks  
+ If a project is going to run a task, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] must know how to locate the assembly that contains the task class. Tasks are registered using the [UsingTask Element (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
   
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] の Microsoft.Common.Tasks ファイルは、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に組み込まれたすべてのタスクを登録する `UsingTask` 要素の一覧が収められたプロジェクト ファイルです。  このファイルは、すべてのプロジェクトのビルド時に自動的にインクルードされます。  Microsoft.Common.Tasks に登録されているタスクが現在のプロジェクト ファイルにも登録されている場合は、現在のプロジェクト ファイルが優先されます。つまり、既定のタスクを同じ名前の独自のタスクでオーバーライドできます。  
+ The [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] file Microsoft.Common.Tasks is a project file that contains a list of `UsingTask` elements that register all the tasks that are supplied with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. This file is automatically included when building every project. If a task that is registered in Microsoft.Common.Tasks is also registered in the current project file, the current project file takes precedence; that is, you can override a default task with your own task that has the same name.  
   
 > [!TIP]
->  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に含まれるタスクの一覧を表示するには、Microsoft.Common.Tasks の内容を表示します。  
+>  You can see a list of the tasks that are supplied with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] by viewing the contents of Microsoft.Common.Tasks.  
   
-## タスクからのイベントの生成  
- タスクが <xref:Microsoft.Build.Utilities.Task> ヘルパー クラスから派生する場合は、<xref:Microsoft.Build.Utilities.Task> クラスで次のヘルパー メソッドのいずれかを使用して、任意の登録済みロガーによって取得および表示されるイベントを生成できます。  
+## <a name="raising-events-from-a-task"></a>Raising Events from a Task  
+ If your task derives from the <xref:Microsoft.Build.Utilities.Task> helper class, you can use any of the following helper methods on the <xref:Microsoft.Build.Utilities.Task> class to raise events that will be caught and displayed by any registered loggers:  
   
-```  
+```csharp
 public override bool Execute()  
 {  
     Log.LogError("messageResource1", "1", "2", "3");  
@@ -119,9 +136,9 @@ public override bool Execute()
 }  
 ```  
   
- タスクが <xref:Microsoft.Build.Framework.ITask> を直接実装する場合も、そのようなイベントを生成できますが、IBuildEngine インターフェイスを使用する必要があります。  次の例に、ITask を実装し、カスタム イベントを生成するタスクを示します。  
+ If your task implements <xref:Microsoft.Build.Framework.ITask> directly, you can still raise such events but you must use the IBuildEngine interface. The following example shows a task that implements ITask and raises a custom event:  
   
-```  
+```csharp
 public class SimpleTask : ITask  
 {  
     private IBuildEngine buildEngine;  
@@ -143,10 +160,10 @@ public class SimpleTask : ITask
 }  
 ```  
   
-## 設定する必須のタスク パラメーター  
- 特定のタスク プロパティを "required" とマークすると、タスクを実行するすべてのプロジェクト ファイルでそのプロパティの値を設定する必要があり、設定しない場合はビルドが失敗します。  次のように `[Required]` 属性をタスクの .NET プロパティに適用します。  
+## <a name="requiring-task-parameters-to-be-set"></a>Requiring Task Parameters to be Set  
+ You can mark certain task properties as "required" so that any project file that runs the task must set values for these properties or the build fails. Apply the `[Required]` attribute to the .NET property in your task as follows:  
   
-```  
+```csharp
 private string requiredProperty;  
   
 [Required]  
@@ -157,16 +174,16 @@ public string RequiredProperty
 }  
 ```  
   
- `[Required]` 属性は、<xref:Microsoft.Build.Framework> 名前空間の <xref:Microsoft.Build.Framework.RequiredAttribute> によって定義されます。  
+ The `[Required]` attribute is defined by <xref:Microsoft.Build.Framework.RequiredAttribute> in the <xref:Microsoft.Build.Framework> namespace.  
   
-## 例  
+## <a name="example"></a>Example  
   
-### Description  
- 次の [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] クラスは、<xref:Microsoft.Build.Utilities.Task> ヘルパー クラスから派生したタスクを示します。  このタスクは `true` を返して、成功したことを示します。  
+### <a name="description"></a>Description  
+ This following [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] class demonstrates a task deriving from the <xref:Microsoft.Build.Utilities.Task> helper class. This task returns `true`, indicating that it succeeded.  
   
-### コード  
+### <a name="code"></a>Code  
   
-```  
+```csharp
 using System;  
 using Microsoft.Build.Utilities;  
   
@@ -183,14 +200,14 @@ namespace SimpleTask1
 }  
 ```  
   
-## 例  
+## <a name="example"></a>Example  
   
-### Description  
- 次の [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] クラスは、<xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するタスクを示します。  このタスクは `true` を返して、成功したことを示します。  
+### <a name="description"></a>Description  
+ This following [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] class demonstrates a task implementing the <xref:Microsoft.Build.Framework.ITask> interface. This task returns `true`, indicating that it succeeded.  
   
-### コード  
+### <a name="code"></a>Code  
   
-```  
+```csharp
 using System;  
 using Microsoft.Build.Framework;  
   
@@ -241,22 +258,22 @@ namespace SimpleTask2
 }  
 ```  
   
-## 例  
+## <a name="example"></a>Example  
   
-### Description  
- この [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] クラスは、<xref:Microsoft.Build.Utilities.Task> ヘルパー クラスから派生したタスクを示します。  必須の文字列プロパティがあり、すべての登録済みロガーによって表示されるイベントを生成します。  
+### <a name="description"></a>Description  
+ This [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] class demonstrates a task that derives from the <xref:Microsoft.Build.Utilities.Task> helper class. It has a required string property, and raises an event that is displayed by all registered loggers.  
   
-### コード  
+### <a name="code"></a>Code  
  [!code-cs[msbuild_SimpleTask3#1](../msbuild/codesnippet/CSharp/task-writing_1.cs)]  
   
-## 例  
+## <a name="example"></a>Example  
   
-### Description  
- 次の例は、前に示したタスクの例 SimpleTask3 を呼び出すプロジェクト ファイルを示します。  
+### <a name="description"></a>Description  
+ The following example shows a project file invoking the previous example task, SimpleTask3.  
   
-### コード  
+### <a name="code"></a>Code  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <UsingTask TaskName="SimpleTask3.SimpleTask3"   
         AssemblyFile="SimpleTask3\bin\debug\simpletask3.dll"/>  
@@ -267,6 +284,6 @@ namespace SimpleTask2
 </Project>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [Task Reference](../msbuild/msbuild-task-reference.md)   
  [Task Reference](../msbuild/msbuild-task-reference.md)

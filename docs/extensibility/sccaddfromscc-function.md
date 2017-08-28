@@ -1,73 +1,90 @@
 ---
-title: "SccAddFromScc 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccAddFromScc"
-helpviewer_keywords: 
-  - "SccAddFromScc 関数"
+title: SccAddFromScc Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccAddFromScc
+helpviewer_keywords:
+- SccAddFromScc function
 ms.assetid: 902e764d-200e-46e1-8c42-4da7b037f9a0
 caps.latest.revision: 17
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# SccAddFromScc 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4711028976d9a55e4281cb2ba3e8b0dd27aa1417
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-この関数は、ソース管理システムに既に存在するファイルを参照することができ、後でこれらのファイル部分を現在のプロジェクトを作成します。 たとえば、この関数は、ファイルをコピーせず、現在のプロジェクトに共通のヘッダー ファイルを取得できます。 ファイルの戻り値の配列 `lplpFileNames`, 、ユーザーが、IDE プロジェクトを追加するファイルの一覧が含まれています。  
+---
+# <a name="sccaddfromscc-function"></a>SccAddFromScc Function
+This function allows the user to browse for files that are already in the source control system and subsequently make those files part of the current project. For example, this function can get a common header file into the current project without copying the file. The return array of files, `lplpFileNames`, contains the list of files that the user wants to add to the IDE project.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccAddFromScc (  
-   LPVOID   pvContext,  
-   HWND     hWnd,  
-   LPLONG   lpnFiles,  
-   LPCSTR** lplpFileNames  
+   LPVOID   pvContext,  
+   HWND     hWnd,  
+   LPLONG   lpnFiles,  
+   LPCSTR** lplpFileNames  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in] The source control plug-in context structure.  
   
- hwnd の分離  
- \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
+ hWnd  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  lpnFiles  
- \[入力、出力\]追加されているファイルの数をバッファー。 \(これは、 `NULL` によって、メモリを指している場合 `lplpFileNames` が解放されます。 詳細については「解説」を参照します。\)  
+ [in, out] A buffer for the number of files that are being added in. (This is `NULL` if the memory pointed to by `lplpFileNames` is to be released. See Remarks for details.)  
   
  lplpFileNames  
- \[入力、出力\]ディレクトリ パスがないすべてのファイル名へのポインターの配列。 この配列が割り当てられているされ、ソース管理プラグインによって解放されます。 場合 `lpnFiles` \= 1 と `lplpFileNames` は `NULL`, 、配列の最初の名前を指す `lplpFileNames` コピー先のフォルダーが含まれています。  
+ [in, out] An array of pointers to all the file names without directory paths. This array is allocated and freed by the source control plug-in. If `lpnFiles` = 1 and `lplpFileNames` is not `NULL`, the first name in the array pointed to by `lplpFileNames` contains the destination folder.  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|値|説明|  
-|-------|--------|  
-|SCC\_OK|ファイルが正常にあり、プロジェクトに追加。|  
-|SCC\_I\_OPERATIONCANCELED|効果なしで操作が取り消されました。|  
-|SCC\_I\_RELOADFILE|ファイルまたはプロジェクトを再読み込みする必要があります。|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|The files were successfully located and added to the project.|  
+|SCC_I_OPERATIONCANCELED|Operation was canceled with no effect.|  
+|SCC_I_RELOADFILE|A file or project needs to be reloaded.|  
   
-## 解説  
- IDE では、この関数を呼び出します。 ソース管理プラグインでは、ローカルの格納先フォルダーの指定をサポートする場合に、IDE が合格 `lpnFiles` \= 1 とにローカル フォルダーの名前を渡します `lplpFileNames`します。  
+## <a name="remarks"></a>Remarks  
+ The IDE calls this function. If the source control plug-in supports specifying a local destination folder, the IDE passes `lpnFiles` = 1 and passes the local folder name into `lplpFileNames`.  
   
- ときにへの呼び出し、 `SccAddFromScc` 関数から返された、プラグインが割り当てられている値を `lpnFiles` と `lplpFileNames`, 、必要に応じて、ファイル名の配列のメモリを割り当て \(この割り当てには、ポインターが置き換えられます `lplpFileNames`\)。 ソース管理プラグインは、ユーザーのディレクトリに、または指定された指定のフォルダーには、すべてのファイルを配置することをします。 IDE のプロジェクトにし、ファイルが追加されます。  
+ When the call to the `SccAddFromScc` function returns, the plug-in has assigned values to `lpnFiles` and `lplpFileNames`, allocating the memory for the file name array as necessary (note that this allocation replaces the pointer in `lplpFileNames`). The source control plug-in is responsible for placing all files into the user's directory or in the specified designation folder. The IDE then adds the files to the IDE project.  
   
- 最後に、IDE この関数に渡すこと、もう一度 `NULL` の `lpnFiles`です。 これは、ソース管理にファイル名の配列に割り当てられたメモリを解放するプラグインによって特別なシグナルとして解釈されます。 `lplpFileNames``.`  
+ Finally, the IDE calls this function a second time, passing in `NULL` for `lpnFiles`. This is interpreted as a special signal by the source control plug-in to release the memory allocated for the file-name array in `lplpFileNames``.`  
   
- `lplpFileNames` `char ***` ポインター。 ソース管理プラグインでは、ファイル名、つまり標準の方法でこの API の一覧を渡すことへのポインターの配列へのポインターを配置します。  
+ `lplpFileNames` is a `char ***` pointer. The source control plug-in places a pointer to an array of pointers to file names, thus passing the list in the standard way for this API.  
   
 > [!NOTE]
->  VSSCI API の最初のバージョンは、ターゲットのプロジェクトに追加されたファイルを指定する手段を提供しませんでした。 これのセマンティクスに合わせて、 `lplpFIleNames` パラメーターが出力パラメーターではなく、入力\/出力パラメーターに強化されました。 1 つのファイルを指定すると、だけの場合は、値が指す `lpnFiles` \= 1 では、最初の要素の `lplpFileNames` ターゲット フォルダーが含まれています。 これらの新しいセマンティクスを IDE の呼び出しを使用する、 `SccSetOption` 関数を `nOption`パラメーターを設定する `SCC_OPT_SHARESUBPROJ`です。 返すかどうか、ソース管理プラグインをサポートしていないセマンティクス `SCC_E_OPTNOTSUPPORTED`します。 使用は無効を行って、 **\[ソース管理から追加** 機能します。 プラグインのサポートしている場合、 **\[ソース管理から追加** 機能 \(`SCC_CAP_ADDFROMSCC`\)、それは新しいセマンティクスをサポートありを返す必要があります `SCC_I_SHARESUBPROJOK`します。  
+>  Initial versions of the VSSCI API did not provide a way to indicate the target project for the added files. To accommodate this, the semantics of the `lplpFIleNames` parameter have been enhanced to make it an in/out parameter rather than an output parameter. If only a single file is specified, that is, the value pointed to by `lpnFiles` = 1, then the first element of `lplpFileNames` contains the target folder. To use these new semantics, the IDE calls the `SccSetOption` function with the `nOption`parameter set to `SCC_OPT_SHARESUBPROJ`. If a source control plug-in does not support the semantics, it returns `SCC_E_OPTNOTSUPPORTED`. Doing so disables the use of the **Add from Source Control** feature. If a plug-in supports the **Add from Source Control** feature (`SCC_CAP_ADDFROMSCC`), then it must support the new semantics and return `SCC_I_SHARESUBPROJOK`.  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccSetOption](../extensibility/sccsetoption-function.md)

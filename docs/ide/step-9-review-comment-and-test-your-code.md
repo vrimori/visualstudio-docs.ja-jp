@@ -1,95 +1,111 @@
 ---
-title: "手順 9: 確認、コメントの追加、およびコードのテスト | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Step 9: Review, Comment, and Test Your Code | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f26f79ba-c91b-4164-b87f-679a1b231c09
 caps.latest.revision: 29
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# 手順 9: 確認、コメントの追加、およびコードのテスト
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0be5e2b0e5d7471ec6ed60077545557ee1c9f151
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-次に、コードにコメントを追加します。  コメントは、プログラムの動作には影響しないメモです。  コメントを追加すると、コードを読む人が動作内容を理解しやすくなります。  コードにコメントを追加することをお勧めします。  行をコメントとしてマークするには、Visual C\# では 2 つのスラッシュ \(\/\/\) を使用します。  Visual Basic では、単一引用符 \('\) を使用してコメントとしてマークします。  コメントを追加したら、プログラムをテストします。  プロジェクトで作業している間にコードを頻繁に実行してテストすることをお勧めします。これによって、コードが複雑になる前に、問題を早期に見つけて修正することができます。  これは*反復テスト*と呼ばれます。  
+---
+# <a name="step-9-review-comment-and-test-your-code"></a>Step 9: Review, Comment, and Test Your Code
+You next add a comment to your code. A comment is a note that doesn't change the way the program behaves. It makes it easier for someone who is reading your code to understand what it does. Adding comments to your code is a good habit to get into. In Visual C#, two forward slashes (//) mark a line as a comment. In Visual Basic, a single quotation mark (') is used to mark a line as a comment. After you add a comment, you test your program. It's good practice to run and test your code frequently while you're working on your projects, so you can catch and fix any problems early, before the code gets more complicated. This is called *iterative testing*.  
   
- 一部の機能を作成しただけで、まだ完成はしていませんが、既にピクチャを読み込むことはできます。  コードへのコメントの追加とテストを行う前に、頻繁に使用することになるコードの概念についてここで確認しておきましょう。  
+ You just built something that works, and although it's not done yet, it can already load a picture. Before you add a comment to your code and test it, take time to review the code concepts, because you will use these concepts frequently:  
   
--   Windows フォーム デザイナーで **\[Show a picture\]** ボタンをダブルクリックしたとき、プログラムのコードに自動的に*メソッド*が追加されました。  
+-   When you double-clicked the **Show a picture** button in Windows Forms Designer, the IDE automatically added a *method* to your program's code.  
   
--   メソッドはコードを整理する 1 つの方法で、これを使用してコードをまとめることができます。  
+-   Methods are how you organize your code: It's how your code is grouped together.  
   
--   ほとんどの場合、メソッドではいくつかの処理を特定の順序で行います。たとえば、ここで作成した `showButton_Click()` メソッドでは、ダイアログ ボックスを表示してから、ピクチャを読み込みます。  
+-   Most of the time, a method does a small number of things in a specific order, like how your `showButton_Click()` method shows a dialog box and then loads a picture.  
   
--   メソッドは、コード *ステートメント*、またはコード行で構成されます。  コード ステートメントをまとめたものがメソッドであると考えることができます。  
+-   A method is made up of code *statements*, or lines of code. Think of a method as a way to bundle code statements together.  
   
--   メソッドを実行する \(*呼び出す*\) と、メソッド内のステートメントが最初のものから順番に 1 つずつ実行されます。  
+-   When a method is executed, or *called*, the statements in the method are executed in order, one after another, starting with the first one.  
   
-     ステートメントの例を次に示します。  
+     The following is an example of a statement.  
   
-    ```c#  
+    ```csharp  
     pictureBox1.Load(openFileDialog1.FileName);  
     ```  
   
-    ```vb#  
+    ```vb  
     pictureBox1.Load(openFileDialog1.FileName)  
     ```  
   
-     ステートメントは、プログラムに処理を実行させる指示にあたります。  Visual C\# の場合、ステートメントは必ずセミコロンで終わります。  Visual Basic の場合は、行の末尾がステートメントの末尾になります  \(Visual Basic ではセミコロンは必要ありません\)。 上記のステートメントでは、ユーザーが **OpenFileDialog** コンポーネントで選択したファイルを読み込むように `PictureBox` コントロールに指示しています。  
+     Statements are what make your programs do things. In Visual C#, a statement always ends in a semicolon. In Visual Basic, the end of a line is the end of a statement. (No semicolon is needed in Visual Basic.) The preceding statement tells your `PictureBox` control to load the file that the user selected with the **OpenFileDialog** component.  
   
- ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") このトピックのビデオ版については、「[Tutorial 1: Create a Picture Viewer in Visual Basic \- Video 5 \(チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 \- ビデオ 5\)](http://go.microsoft.com/fwlink/?LinkId=205216)」または「[Tutorial 1: Create a Picture Viewer in C\# \- Video 5 \(チュートリアル 1: C\# によるピクチャ ビューアーの作成 \- ビデオ 5\)](http://go.microsoft.com/fwlink/?LinkId=205206)」を参照してください。  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。  ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+ ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 5](http://go.microsoft.com/fwlink/?LinkId=205216) or [Tutorial 1: Create a Picture Viewer in C# - Video 5](http://go.microsoft.com/fwlink/?LinkId=205206). These videos use an earlier version of Visual Studio, so there are slight differences in some menu commands and other user interface elements. However, the concepts and procedures work similarly in the current version of Visual Studio.  
   
-### コメントを追加するには  
+### <a name="to-add-comments"></a>To add comments  
   
-1.  コードに次のコメントを追加します。  
+1.  Add the following comment to your code.  
   
-     [!code-vb[VbExpressTutorial1Step9_10#1](../ide/codesnippet/VisualBasic/step-9-review-comment-and-test-your-code_1.vb)]
-     [!code-cs[VbExpressTutorial1Step9_10#1](../ide/codesnippet/CSharp/step-9-review-comment-and-test-your-code_1.cs)]  
+     [!code-vb[VbExpressTutorial1Step9_10#1](../ide/codesnippet/VisualBasic/step-9-review-comment-and-test-your-code_1.vb)]  [!code-cs[VbExpressTutorial1Step9_10#1](../ide/codesnippet/CSharp/step-9-review-comment-and-test-your-code_1.cs)]  
   
     > [!NOTE]
-    >  これで **showButton** ボタンの Click イベント ハンドラーが完成し、使用できる状態になりました。  コードの記述を開始するとき、最初に `if` ステートメントを記述しました。  `if` ステートメントは、"ある条件を確認し、それに当てはまる場合に処理を実行する" ようにプログラムに指示するステートメントです。 ここでは、**\[ファイルを開く\]** ダイアログ ボックスを開き、ユーザーがファイルを選択して **\[OK\]** をクリックした場合にそのファイルを PictureBox に読み込むように指示しています。  
+    >  Your **showButton** button's Click event handler is now finished, and it works. You have started writing code, starting with an `if` statement. An `if` statement is how you tell your program, "Check this one thing, and if it's true, do these actions." In this case, you tell your program to open the **Open File** dialog box, and if the user selects a file and chooses the **OK** button, load that file in the PictureBox.  
   
     > [!TIP]
-    >  IDE はコードを簡単に記述できるように設計されており、そのための方法の 1 つとして*コード スニペット*が用意されています。  スニペットは、小さなコードのブロックに展開されるショートカットです。  
+    >  The IDE is built to make it easy for you to write code, and *code snippets* are one way it does that. A snippet is a shortcut that gets expanded into a small block of code.  
     >   
-    >  使用可能なすべてのスニペットを表示できます。  メニュー バーで、**\[ツール\]**、**\[コード スニペット マネージャー\]** の順にクリックします。  Visual C\# の場合、`if` スニペットは **\[Visual C\#\]** にあります。  Visual Basic の場合、`if` スニペットは **\[条件とループ\]**、**\[コード パターン\]** にあります。  このマネージャーを使用して、既存のスニペットを参照したり独自のスニペットを追加したりすることができます。  
+    >  You can see all of the snippets available. On the menu bar, choose **Tools**, **Code Snippets Manager**. For Visual C#, the `if` snippet is in **Visual C#** . For Visual Basic, the `if` snippets are in **Conditionals and Loops**, **Code Patterns**. You can use this manager to browse existing snippets or add your own snippets.  
     >   
-    >  コードの入力時にスニペットをアクティブにするには、そのスニペットを入力して Tab キーを押します。  多くのスニペットは **IntelliSense** ウィンドウに表示されます。Tab キーを 2 回押すのは、1 回目で **IntelliSense** ウィンドウからスニペットを選択し、2 回目でそのスニペットを使用するように IDE に指示するためです \(IntelliSense は `if` スニペットはサポートしますが、`ifelse` スニペットはサポートしません\)。  
+    >  To activate a snippet when typing code, type it and choose the TAB key. Many snippets appear in the **IntelliSense** window, which is why you choose the TAB key twice: first to select the snippet from the **IntelliSense** window, and then to tell the IDE to use the snippet. (IntelliSense supports the `if` snippet, but not the `ifelse` snippet.)  
   
-2.  プログラムを実行する前に、ツール バーの **\[すべてを保存\]** \(次の図を参照\) をクリックしてプログラムを保存します。  
+2.  Before you run your program, save your program by choosing the **Save All** toolbar button, which appears as follows.  
   
-     ![&#91;すべてを保存&#93; ツール バー ボタン](~/ide/media/express_iconsaveall.png "Express\_IconSaveAll")  
-\[すべてを保存\] ボタン  
+     ![Save All toolbar button](../ide/media/express_iconsaveall.png "Express_IconSaveAll")  
+Save All button  
   
-     または、メニュー バーで、**\[ファイル\]**、**\[すべてを保存\]** の順にクリックしてプログラムを保存します。  早めに、かつ頻繁に保存することをお勧めします。  
+     Alternatively, to save your program, on the menu bar, choose **File**, **Save All**. It's a best practice to save early and often.  
   
-     実行中のプログラムは次の図のようになります。  
+     When it's running, your program should look like the following picture.  
   
-     ![Picture Viewer](../ide/media/express_pictureviewerdonerun.png "Express\_PictureViewerDoneRun")  
-ピクチャ ビューアー  
+     ![Picture Viewer](../ide/media/express_pictureviewerdonerun.png "Express_PictureViewerDoneRun")  
+Picture Viewer  
   
-### プログラムをテストするには  
+### <a name="to-test-your-program"></a>To test your program  
   
-1.  F5 キーを押すか、ツール バーの **\[デバッグ開始\]** をクリックします。  
+1.  Choose the F5 key or choose the **Start Debugging** toolbar button.  
   
-2.  **\[Show a picture\]** をクリックして、記述したコードを実行します。  最初に、**\[ファイルを開く\]** ダイアログ ボックスが開きます。  ダイアログ ボックスの下部にある **\[ファイルの種類\]** ボックスにフィルターが表示されることを確認します。  次に、ピクチャがある場所に移動して、そのピクチャを開きます。  通常、Windows オペレーティング システムに付属しているサンプルのピクチャが **My Documents** フォルダーの **My Pictures\\Sample Pictures** フォルダーにあります。  
+2.  Choose the **Show a picture** button to run the code you just wrote. First, the program opens an **Open File** dialog box. Verify that your filters appear in the **Files of type** drop-down list at the bottom of the dialog box. Then navigate to a picture and open it. You can usually find sample pictures that ship with the Windows operating system in your **My Documents** folder, inside the **My Pictures\Sample Pictures** folder.  
   
     > [!NOTE]
-    >  **\[Select a picture file\]** ダイアログ ボックスにイメージが表示されない場合は、ダイアログ ボックスの右下のボックスで All files \(\*.\*\) フィルターが選択されていることを確認します。  
+    >  If you don't see any images in the **Select a picture file** dialog box, be sure that the "All files (*.\*)" filter is selected in the drop-down list on the lower right side of the dialog box.  
   
-3.  ピクチャを読み込みます。ピクチャが PictureBox に表示されます。  その後、境界線をドラッグしてフォームのサイズを変更してみてください。  フォーム内にドッキングした TableLayoutPanel 内に PictureBox をドッキングしてあるため、ピクチャの領域が、幅はフォームと同じで、高さはフォームの上部 90% に収まるようにサイズ変更されます。  TableLayoutPanel コンテナーと FlowLayoutPanel コンテナーを使用したのはそのためです。これらのコンテナーを使用することで、ユーザーがフォームのサイズを変更したときに適切なサイズが維持されます。  
+3.  Load a picture, and it appears in your PictureBox. Then try resizing your form by dragging its borders. Because you have your PictureBox docked inside a TableLayoutPanel, which itself is docked inside the form, your picture area will resize itself so that it's as wide as the form, and fills the top 90 percent of the form. That's why you used the TableLayoutPanel and FlowLayoutPanel containers: They keep your form sized correctly when the user resizes it.  
   
-     この時点では、大きなピクチャはピクチャ ビューアーの境界線を超えます。  次の手順では、ウィンドウに合ったピクチャを作成するコードを追加します。  
+     Right now, larger pictures go beyond the borders of your picture viewer. In the next step, you'll add code to make pictures fit in the window.  
   
-### 続行または確認するには  
+### <a name="to-continue-or-review"></a>To continue or review  
   
--   チュートリアルの次の手順に進むには、「[手順 10: その他のボタンおよびチェック ボックスに対するコードの記述](../Topic/Step%2010:%20Write%20Code%20for%20Additional%20Buttons%20and%20a%20Check%20Box.md)」を参照してください。  
+-   To go to the next tutorial step, see [Step 10: Write Code for Additional Buttons and a Check Box](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md).  
   
--   チュートリアルの前の手順に戻るには、「[手順 8:ボタンのイベント ハンドラーのコードの記述](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)」を参照してください。
+-   To return to the previous tutorial step, see [Step 8: Write Code for the Show a Picture Button Event Handler](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md).

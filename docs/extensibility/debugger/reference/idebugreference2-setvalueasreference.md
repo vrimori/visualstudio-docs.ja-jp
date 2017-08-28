@@ -1,5 +1,5 @@
 ---
-title: "IDebugReference2::SetValueAsReference |Microsoft ドキュメント"
+title: IDebugReference2::SetValueAsReference | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 36c017b6579d5f6fa1e99f44470836e68640321f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e295ad3fd09a8b5dbaa17cdd6f10f3cb8a9ff1b9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugreference2setvalueasreference"></a>IDebugReference2::SetValueAsReference
-別の参照から参照の値を設定します。 将来使用するために予約されています。  
+Sets the value of a reference from another reference. Reserved for future use.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT SetValueAsReference (   
    IDebugReference2** rgpArgs,  
    DWORD              dwArgCount,  
@@ -50,7 +51,7 @@ HRESULT SetValueAsReference (
 );  
 ```  
   
-```cpp#  
+```cpp  
 int SetValueAsReference (   
    IDebugReference2[] rgpArgs,  
    uint               dwArgCount,  
@@ -59,21 +60,21 @@ int SetValueAsReference (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `rgpArgs`  
- [in]配列[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)オブジェクト参照値を設定する方法を決定するために使用します。  
+ [in] An array of [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objects used to determine how to set the reference value.  
   
  `dwArgCount`  
- [in]配列内の参照の数。  
+ [in] The number of references in the array.  
   
  `pValue`  
- [in][IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)プロパティ値を設定する対象のオブジェクト。  
+ [in] An [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object from which to set the property value.  
   
  `dwTimeout`  
- [in]このメソッドから戻る前に待機するミリ秒単位での最大時間。 使用`INFINITE`無制限に待機します。  
+ [in] Maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
   
-## <a name="return-value"></a>戻り値  
- 常に `E_NOTIMPL` を返します。  
+## <a name="return-value"></a>Return Value  
+ Always returns `E_NOTIMPL`.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

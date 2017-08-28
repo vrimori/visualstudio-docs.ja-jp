@@ -1,5 +1,5 @@
 ---
-title: "IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage |Microsoft ドキュメント"
+title: IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 35db32026b122ac070e4216d9820fc7815f9c544
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0868998a43c48bc985c4801deddcf089c73f01bf
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugcomplussymbolprovidergetattributedclassesforlanguage"></a>IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage
-指定されたプログラミング言語で実装されている指定された属性を持つクラスを取得します。  
+Retrieves the classes with the specified attribute that are implemented in the specified programming language.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```  
 [C++]  
@@ -58,23 +59,23 @@ int GetAttributedClassesForLanguage (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `guidLanguage`  
- [in]言語の一意の識別子。  
+ [in] Unique identifier for the language.  
   
  `pstrAttribute`  
- [in]属性の文字列です。  
+ [in] The attribute string.  
   
  `ppEnum`  
- [out]属性クラスの列挙を返します。  
+ [out] Returns an enumeration of the attribute classes.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="example"></a>例  
- 次の例では、このメソッドは実装する方法、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスです。  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::GetAttributedClassesForLanguage(  
     GUID guidLanguage,  
     __in_z LPOLESTR pstrAttribute,  
@@ -202,5 +203,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

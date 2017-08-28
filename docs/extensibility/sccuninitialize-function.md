@@ -1,50 +1,67 @@
 ---
-title: "SccUninitialize 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccUninitialize"
-helpviewer_keywords: 
-  - "SccUninitialize 関数"
+title: SccUninitialize Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccUninitialize
+helpviewer_keywords:
+- SccUninitialize function
 ms.assetid: 17cf5337-d251-4422-bc96-93fe7d48f2ae
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# SccUninitialize 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7b88c889b66314cec269efd68f0f1d00ce4c1f8d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-この関数は、すべての割り当てと開いている接続を以前の呼び出しによって作成されたクリーンアップ、 [SccInitialize](../extensibility/sccinitialize-function.md) 、ソース管理プラグインをシャット ダウンに備える。  
+---
+# <a name="sccuninitialize-function"></a>SccUninitialize Function
+This function cleans up any allocations or open connections created by a previous call to the [SccInitialize](../extensibility/sccinitialize-function.md) in preparation for shutting down the source control plug-in.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccUninitialize (  
-   LPVOID pvContext  
+   LPVOID pvContext  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\]作成したソース コントロールのプラグインの context 構造体へのポインター、 [SccInitialize](../extensibility/sccinitialize-function.md)です。  
+ [in] The pointer to the source control plug-in context structure created in the [SccInitialize](../extensibility/sccinitialize-function.md).  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|値|説明|  
-|-------|--------|  
-|SCC\_OK|クリーンアップを正常に完了しました。|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|The clean-up completed successfully.|  
   
-## 解説  
- ソース管理プラグインでは、シャット ダウンするための準備と構造体のプラグインが割り当てたメモリを解放する責任者です。 関数は、プラグインの特定のインスタンスごとに 1 回呼び出されます。 呼び出し、 [SccInitialize](../extensibility/sccinitialize-function.md) この呼び出しの前にします。 プロジェクトを開いたままになっていないへの呼び出し時に `SccUninitialize`します。  
+## <a name="remarks"></a>Remarks  
+ The source control plug-in is responsible for preparing to be shut down and for freeing memory that the plug-in has allocated for the context structure. The function is called once for each given instance of a plug-in. A call to the [SccInitialize](../extensibility/sccinitialize-function.md) precedes this call. No projects can still be open at the time of the call to `SccUninitialize`.  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)

@@ -1,63 +1,80 @@
 ---
-title: "BP_LOCATION_DATA_STRING | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_LOCATION_DATA_STRING"
-helpviewer_keywords: 
-  - "BP_LOCATION_DATA_STRING 構造体"
+title: BP_LOCATION_DATA_STRING | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BP_LOCATION_DATA_STRING
+helpviewer_keywords:
+- BP_LOCATION_DATA_STRING structure
 ms.assetid: 445d6f3f-95b0-47ac-85e2-51b778240687
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# BP_LOCATION_DATA_STRING
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 639ba9c6a51b1d6803f2ab83336d1ce098e70440
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-統合開発環境からユーザーが入力できる文字列に基づいてデータ ブレークポイントを設定する場合に使用 \(IDE\) します。  
+---
+# <a name="bplocationdatastring"></a>BP_LOCATION_DATA_STRING
+Used for setting data breakpoints that are based on a string that the user can enter from the integrated development environment (IDE).  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-typedef struct _BP_LOCATION_DATA_STRING {   
-   IDebugThread2* pThread;  
-   BSTR           bstrContext;  
-   BSTR           bstrDataExpr;  
-   DWORD          dwNumElements;  
+```cpp  
+typedef struct _BP_LOCATION_DATA_STRING {   
+   IDebugThread2* pThread;  
+   BSTR           bstrContext;  
+   BSTR           bstrDataExpr;  
+   DWORD          dwNumElements;  
 } BP_LOCATION_DATA_STRING;  
 ```  
   
-## メンバー  
+## <a name="members"></a>Members  
  `pThread`  
- ブレークポイントが発生したスレッドを表す [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) のオブジェクト。  
+ The [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object that represents the thread on which the breakpoint occurs.  
   
  `bstrContext`  
- コード内のブレークポイントのコンテキスト \(通常は呼び出し履歴に表示されるメソッドまたは関数名。  
+ The context of the breakpoint within the code, typically a method or function name as seen on a call stack.  
   
  `bstrDataExpr`  
- データをユーザーが Enter ブレークポイントを設定するにはにおける文字列。  
+ The data string the user enters to set the breakpoint.  
   
  `dwNumElements`  
- ブレークポイントが発生したデータの文字列の要素の数。  
+ The number of elements in the data string in which the breakpoint occurs.  
   
-## 解説  
- この構造体共用体の一部として [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md) の構造体のメンバーです。  
+## <a name="remarks"></a>Remarks  
+ This structure is a member of the [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) structure as part of a union.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

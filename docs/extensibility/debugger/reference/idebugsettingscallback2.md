@@ -1,61 +1,78 @@
 ---
-title: "IDebugSettingsCallback2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugSettingsCallback2 インターフェイス"
+title: IDebugSettingsCallback2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugSettingsCallback2 interface
 ms.assetid: 7e525d0b-7d7a-4d1c-8b78-e1398fa922f2
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugSettingsCallback2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 1ed91f112f29f78d0be64fadbacbc313bede39ac
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-非常設定をリモートで有効なデバッグ エンジン。  
+---
+# <a name="idebugsettingscallback2"></a>IDebugSettingsCallback2
+Enables debug engines to read metric settings remotely.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugSettingsCallback2D : IUnknown  
 ```  
   
-## 実装についてのメモ  
- このインターフェイスはデバッグ セッションのマネージャーのイベント コールバックによって実装されデバッグ エンジンによって実装されます。  またDbgmetric \[d\] .lib ではなくローカルで使用できます。  
+## <a name="notes-for-implementers"></a>Notes for Implementers  
+ This interface is implemented by the event callback of the session debug manager and consumed by debug engines. It could also be used locally instead of Dbgmetric[d].lib.  
   
-## メソッド  
- 次の表は `IDebugSettingsCallback2` のメソッドを示します。  
+## <a name="methods"></a>Methods  
+ The following table shows the methods of `IDebugSettingsCallback2`.  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[EnumEEs](../../../extensibility/debugger/reference/idebugsettingscallback2-enumees.md)|言語の販売元の ID を持つ使用できる式エバリュエーターを列挙します。|  
-|[GetEELocalObject](../../../extensibility/debugger/reference/idebugsettingscallback2-geteelocalobject.md)|メトリックを持つ式エバリュエーターのローカル オブジェクトを取得します。|  
-|[GetEEMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricdword.md)|式エバリュエーターの指定に対応する値を取得します。|  
-|[GetEEMetricFile](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricfile.md)|名前やメトリックスを持つ式エバリュエーター メトリック ファイルを取得します。|  
-|[GetEEMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricguid.md)|名前を持つ式エバリュエーターの測度の一意の識別子を取得します。|  
-|[GetEEMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricstring.md)|名前を持つ式エバリュエーターのメトリックスの値の文字列を取得します。|  
-|[GetMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricdword.md)|名前を持つメトリックスの値を取得します。|  
-|[GetMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricguid.md)|名前を持つメトリックスの一意識別子を取得します。|  
-|[GetMetricString](../Topic/IDebugSettingsCallback2::GetMetricString.md)|名前を持つメトリックスの値の文字列を取得します。|  
+|Method|Description|  
+|------------|-----------------|  
+|[EnumEEs](../../../extensibility/debugger/reference/idebugsettingscallback2-enumees.md)|Enumerates the available expression evaluators given the language and vendor identifiers.|  
+|[GetEELocalObject](../../../extensibility/debugger/reference/idebugsettingscallback2-geteelocalobject.md)|Retrieves a expression evaluator local object given the metric.|  
+|[GetEEMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricdword.md)|Retrieves a value that corresponds to the specified metric of the expression evaluator.|  
+|[GetEEMetricFile](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricfile.md)|Retrieves the expression evaluator metric file given the name or the metric.|  
+|[GetEEMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricguid.md)|Retrieves the unique identifier for a expression evaluator metric given its name.|  
+|[GetEEMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricstring.md)|Retrieves the value string of an expression evaluator metric given its name.|  
+|[GetMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricdword.md)|Retrieves the value of a metric given its name.|  
+|[GetMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricguid.md)|Retrieves the unique identifier of a metric given its name.|  
+|[GetMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricstring.md)|Retrieves the value string of the metric given its name.|  
   
-## 必要条件  
- ヘッダー : Msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: Msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 使用例  
- 次の例ではパラメーターとして **IDebugSettingsCallback2** オブジェクトを受け取る関数を示します。  
+## <a name="example"></a>Example  
+ The following example shows a function that takes an **IDebugSettingsCallback2** object as a parameter.  
   
-```cpp#  
+```cpp  
 HRESULT GetDebugSettingsCallback (IDebugSettingsCallback2 **ppCallback)  
 {  
     HRESULT hRes = E_FAIL;  

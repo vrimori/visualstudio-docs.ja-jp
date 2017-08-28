@@ -1,74 +1,91 @@
 ---
-title: "SccRunScc 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccRunScc"
-helpviewer_keywords: 
-  - "SccRunScc 関数"
+title: SccRunScc Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccRunScc
+helpviewer_keywords:
+- SccRunScc function
 ms.assetid: bbe7c931-b17a-4779-9cf6-59e5f9f0c172
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# SccRunScc 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: db173b2a22556c360808b93049f39fca7f95656f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-この関数は、ソース管理の管理ツールを呼び出します。  
+---
+# <a name="sccrunscc-function"></a>SccRunScc Function
+This function invokes the source control administration tool.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccRunScc(  
-   LPVOID  pvContext,  
-   HWND    hWnd,  
-   LONG    nFiles,  
-   LPCSTR* lpFileNames  
+   LPVOID  pvContext,  
+   HWND    hWnd,  
+   LONG    nFiles,  
+   LPCSTR* lpFileNames  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in] The source control plug-in context structure.  
   
- hwnd の分離  
- \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
+ hWnd  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  nFiles  
- \[in\]指定されたファイルの数、 `lpFileNames` 配列。  
+ [in] Number of files specified in the `lpFileNames` array.  
   
  lpFileNames  
- \[in\]選択したファイル名の配列。  
+ [in] Array of selected file names.  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|値|説明|  
-|-------|--------|  
-|SCC\_OK|ソース管理の管理ツールが正常に呼び出されます。|  
-|SCC\_I\_OPERATIONCANCELED|操作が取り消されました。|  
-|SCC\_E\_INITIALIZEFAILED|ソース管理システムを初期化できませんでした。|  
-|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。|  
-|SCC\_E\_CONNECTIONFAILURE|ソース管理システムに接続できませんでした。|  
-|SCC\_E\_FILENOTCONTROLLED|選択したファイルはソース管理下ではありません。|  
-|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|The source control administration tool was successfully invoked.|  
+|SCC_I_OPERATIONCANCELED|The operation was cancelled.|  
+|SCC_E_INITIALIZEFAILED|Failed to initialize the source control system.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues.|  
+|SCC_E_CONNECTIONFAILURE|Failed to connect to the source control system.|  
+|SCC_E_FILENOTCONTROLLED|The selected file is not under source control.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
   
-## 解説  
- この関数には、外部の管理ツールを介してさまざまなソース管理システムの機能にアクセスする呼び出し元ができます。 ソース管理システムがユーザー インターフェイスを持たない場合、ソース管理プラグインは必要な管理機能を実行するためのインターフェイスを実装できます。  
+## <a name="remarks"></a>Remarks  
+ This function allows the caller to access the full range of features of the source control system through an external administration tool. If the source control system has no user interface, the source control plug-in can implement an interface to perform necessary administration functions.  
   
- この関数の数と、現在選択されているファイルのファイル名の配列。 管理インターフェイス内のファイルを事前に選択するファイルの一覧を使用できる、管理ツールをサポートする場合はそれ以外の場合、一覧を無視できます。  
+ This function is called with a count and an array of file names for the currently selected files. If the administration tool supports it, the list of files can be used to preselect files in the administration interface; otherwise, the list can be ignored.  
   
- この関数は通常、ユーザーが選択したときに呼び出さ、 **起動 \< ソース管理サーバー \>** から、 **ファイル** \]\-\> \[ **ソース管理** メニュー。 これは、 **起動** メニュー オプションを常に無効になっているか、レジストリ エントリを設定しても非表示です。 詳細については、「[方法: ソース管理プラグインのインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)」を参照してください。 場合にのみ、この関数が呼び出されます [SccInitialize](../extensibility/sccinitialize-function.md) 返します、 `SCC_CAP_RUNSCC` 機能ビット \(を参照してください [機能フラグ](../extensibility/capability-flags.md) 詳細についてはこのデバイスとその他の機能のビットで\)。  
+ This function is typically invoked when the user selects the **Launch \<Source Control Server>** from the **File** -> **Source Control** menu. This **Launch** menu option can be always disabled or even hidden by setting a registry entry. See [How to: Install a Source Control Plug-in](../extensibility/internals/how-to-install-a-source-control-plug-in.md) for details. This function is called only if [SccInitialize](../extensibility/sccinitialize-function.md) returns the `SCC_CAP_RUNSCC` capability bit (see [Capability Flags](../extensibility/capability-flags.md) for details on this and other capability bits).  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
- [方法: ソース管理プラグインのインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)   
- [機能フラグ](../extensibility/capability-flags.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+ [How to: Install a Source Control Plug-in](../extensibility/internals/how-to-install-a-source-control-plug-in.md)   
+ [Capability Flags](../extensibility/capability-flags.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)

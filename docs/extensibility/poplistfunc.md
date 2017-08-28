@@ -1,65 +1,87 @@
 ---
-title: "POPLISTFUNC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "POPDIRLISTFUNC"
-helpviewer_keywords: 
-  - "POPLISTFUNC コールバック関数"
+title: POPLISTFUNC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- POPDIRLISTFUNC
+helpviewer_keywords:
+- POPLISTFUNC callback function
 ms.assetid: b2199fd5-d707-4628-92dd-e2a01e2f507a
 caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# POPLISTFUNC
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 034bf39f44d8e3684e553ea5e60c68c041cefafe
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-このコールバックが提供される、 [SccPopulateList](../extensibility/sccpopulatelist-function.md) IDE でファイルまたはディレクトリの一覧を更新する、ソース管理プラグインによって使用されます \(に指定されている、 `SccPopulateList` 関数\)。  
+---
+# <a name="poplistfunc"></a>POPLISTFUNC
+This callback is supplied to the [SccPopulateList](../extensibility/sccpopulatelist-function.md) by the IDE and is used by the source control plug-in to update a list of files or directories (also supplied to the `SccPopulateList` function).  
   
- ユーザーが選択すると、 **取得** IDE では、コマンドのユーザーを取得できるすべてのファイルの一覧ボックスが表示されます。 残念ながら、IDE を知らないユーザーを取得可能性があります。 すべてのファイルの正確な一覧このリスト プラグインのみがあります。 他のユーザーをソース コード管理プロジェクト ファイルに追加した場合は、これらのファイルが、一覧に表示する必要がありますが、IDE が認識していないこと。 IDE では、ユーザーを取得できると思われるファイルの一覧を作成します。 呼び出しをユーザーにこの一覧を表示にする前に、 [SccPopulateList](../extensibility/sccpopulatelist-function.md)`,` 、ソース管理プラグインを与えるを追加し、一覧からファイルを削除します。  
+ When a user chooses the **Get** command in the IDE, the IDE displays a list box of all files that the user can get. Unfortunately, the IDE does not know the exact list of all the files that the user might get; only the plug-in has this list. If other users have added files to the source code control project, these files should appear in the list, but the IDE does not know about them. The IDE builds a list of the files that it thinks the user can get. Before it displays this list to the user, it calls the [SccPopulateList](../extensibility/sccpopulatelist-function.md)`,` giving the source control plug-in a chance to add and delete files from the list.  
   
-## Signature  
- ソース管理プラグインでは、次のプロトタイプで IDE 実装関数を呼び出してでリストを変更します。  
+## <a name="signature"></a>Signature  
+ The source control plug-in modifies the list by calling an IDE-implemented function with the following prototype:  
   
-```cpp#  
-typedef BOOL (*POPLISTFUNC) ( LPVOID pvCallerData, BOOL fAddRemove, LONG nStatus, LPSTR lpFileName );  
+```cpp  
+typedef BOOL (*POPLISTFUNC) (  
+   LPVOID pvCallerData,  
+   BOOL fAddRemove,  
+   LONG nStatus,  
+   LPSTR lpFileName  
+);  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>Parameters  
  pvCallerData  
- `pvCallerData` に呼び出し元 \(IDE\) で渡されるパラメーター、 [SccPopulateList](../extensibility/sccpopulatelist-function.md)です。 ソース管理プラグインは、このパラメーターの内容について何も想定してください。  
+ The `pvCallerData` parameter passed by the caller (the IDE) to the [SccPopulateList](../extensibility/sccpopulatelist-function.md). The source control plug-in should assume nothing about the contents of this parameter.  
   
  fAddRemove  
- 場合 `TRUE`, 、`lpFileName` ファイル、ファイルの一覧に追加する必要があります。 場合 `FALSE`, 、`lpFileName` ファイルで、ファイルの一覧から削除する必要があります。  
+ If `TRUE`, `lpFileName` is a file that should be added to the file list. If `FALSE`, `lpFileName` is a file that should be deleted from the file list.  
   
- 送ら  
- ステータス `lpFileName` \(の組み合わせ、 `SCC_STATUS` ビット; を参照してください [ファイルの状態コード](../extensibility/file-status-code-enumerator.md) 詳細\)。  
+ nStatus  
+ Status of `lpFileName` (a combination of the `SCC_STATUS` bits; see [File Status Code](../extensibility/file-status-code-enumerator.md) for details).  
   
  lpFileName  
- 一覧から追加または削除するには、ファイル名の完全なディレクトリ パス。  
+ Full directory path of the file name to add or delete from the list.  
   
-## 戻り値  
+## <a name="return-value"></a>Return Value  
   
-|値|説明|  
-|-------|--------|  
-|`TRUE`|プラグインを続行できますこの関数を呼び出します。|  
-|`FALSE`|\(メモリの状況の送信\) などの IDE 側で問題が発生しました。 操作は、プラグインの場合に中断する必要があります。|  
+|Value|Description|  
+|-----------|-----------------|  
+|`TRUE`|The plug-in can continue calling this function.|  
+|`FALSE`|There has been a problem on the IDE side (such as an out of memory situation). The plug-in should stop operation.|  
   
-## 解説  
- ソース管理プラグインを追加したり、ファイルの一覧から削除する必要のある各ファイルにするのに対してを渡して、この関数を呼び出し、 `lpFileName`です。`fAddRemove` フラグは、一覧に追加する新しいファイルまたは古いファイルを削除することを示します。`nStatus` パラメーターは、ファイルの状態。 プラグインのソース コード管理を追加して、ファイルの削除が完了したらからが返されます、 [SccPopulateList](../extensibility/sccpopulatelist-function.md) 呼び出します。  
+## <a name="remarks"></a>Remarks  
+ For each file that the source control plug-in wants to add to or delete from the file list, it calls this function, passing in the `lpFileName`. The `fAddRemove` flag indicates a new file to add to the list or an old file to delete. The `nStatus` parameter gives the status of the file. When the SCC plug-in has finished adding and deleting files, it returns from the [SccPopulateList](../extensibility/sccpopulatelist-function.md) call.  
   
 > [!NOTE]
->  `SCC_CAP_POPULATELIST` 機能ビットは、Visual Studio に必要です。  
+>  The `SCC_CAP_POPULATELIST` capability bit is required for Visual Studio.  
   
-## 参照  
- [IDE で実装されるコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)   
- [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
+## <a name="see-also"></a>See Also  
+ [Callback Functions Implemented by the IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
+ [Source Control Plug-ins](../extensibility/source-control-plug-ins.md)   
  [SccPopulateList](../extensibility/sccpopulatelist-function.md)   
- [ファイルの状態コード](../extensibility/file-status-code-enumerator.md)
+ [File Status Code](../extensibility/file-status-code-enumerator.md)
