@@ -1,49 +1,54 @@
 ---
-title: "方法: プログラムによって電子メールを送信する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "電子メール [Visual Studio での Office 開発], 送信"
-  - "メール アイテム [Visual Studio での Office 開発], 送信 (電子メールを)"
-  - "Outlook [Visual Studio での Office 開発], 作成 (電子メールを)"
-  - "Outlook [Visual Studio での Office 開発], 送信 (電子メールを)"
+title: 'How to: Programmatically Send E-Mail | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- mail items [Office development in Visual Studio], sending e-mail
+- Outlook [Office development in Visual Studio], creating e-mail
+- Outlook [Office development in Visual Studio], sending e-mail
+- e-mail [Office development in Visual Studio], sending
 ms.assetid: 4fa0e1b5-2caf-4a11-8626-df643b23f5f0
 caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: 58349ce01a01536557be051142e7657506b6360e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法: プログラムによって電子メールを送信する
-  この例では、電子メール アドレスに **example.com** というドメイン名を含む連絡先に電子メール メッセージを送信します。  
+# <a name="how-to-programmatically-send-e-mail"></a>How to: Programmatically Send E-Mail  
+  This example sends an e-mail message to contacts that have the domain name **example.com** in their e-mail addresses.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## 使用例  
- [!code-csharp[Trin_OL_ProgramEmail#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_OL_ProgramEMail/CS/thisaddin.cs#1)]  
+## <a name="example"></a>Example  
+ [!code-cs[Trin_OL_ProgramEmail#1](../vsto/codesnippet/CSharp/Trin_OL_ProgramEMail/thisaddin.cs#1)]  
   
-## コードのコンパイル  
- この例には、次の項目が必要です。  
+## <a name="compiling-the-code"></a>Compiling the Code  
+ This example requires:  
   
--   電子メール アドレスに **example.com** というドメイン名を含む連絡先。  
+-   Contacts that have the domain name **example.com** in their e-mail addresses.  
   
-## 信頼性の高いプログラミング  
- **example.com** というドメイン名を検索するフィルター コードは削除しないでください。  このフィルターを削除すると、そのソリューションでは、すべての連絡先に電子メール メッセージが送信されてしまいます。  
+## <a name="robust-programming"></a>Robust Programming  
+ Do not remove the filter code that searches for the domain name **example.com**. Your solution will send e-mail messages to all of your contacts if you remove the filter.  
   
-## 参照  
- [メール アイテムの操作](../vsto/working-with-mail-items.md)   
- [方法: プログラムによって電子メール アイテムを作成する](../vsto/how-to-programmatically-create-an-e-mail-item.md)   
- [方法: プログラムによって Outlook の連絡先にアクセスする](../vsto/how-to-programmatically-access-outlook-contacts.md)   
- [方法: プログラムによって電子メール メッセージを受信したときにアクションを実行する](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Mail Items](../vsto/working-with-mail-items.md)   
+ [How to: Programmatically Create an E-Mail Item](../vsto/how-to-programmatically-create-an-e-mail-item.md)   
+ [How to: Programmatically Access Outlook Contacts](../vsto/how-to-programmatically-access-outlook-contacts.md)   
+ [How to: Programmatically Perform Actions When an E-Mail Message Is Received](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
   
   

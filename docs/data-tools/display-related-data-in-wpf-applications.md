@@ -1,65 +1,79 @@
 ---
-title: "方法: WPF アプリケーションで関連データを表示する | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [WPF], 表示"
-  - "データ バインド, WPF"
-  - "表示 (データを), WPF"
-  - "WPF [WPF], データ"
-  - "WPF データ バインド [Visual Studio]"
-  - "WPF デザイナー, データ バインド"
-  - "WPF, データ バインド (Visual Studio での)"
+title: Display related data in WPF applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [WPF], displaying
+- WPF, data binding in Visual Studio
+- WPF data binding [Visual Studio]
+- displaying data, WPF
+- WPF [WPF], data
+- WPF Designer, data binding
+- data binding, WPF
 ms.assetid: 3aa80194-0191-474d-9d28-5ec05654b426
 caps.latest.revision: 16
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: b28319fe2bdc885c660ac8e26b1edbc83a1118fa
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法: WPF アプリケーションで関連データを表示する
-アプリケーションによっては、親子のリレーションシップによって相互に関連付けられた複数のテーブルやエンティティから取得したデータを使用する場合があります。  たとえば、`Customers` テーブルの顧客を表示するグリッドを表示するような場合です。  ユーザーが特定の顧客を選択すると、関連する `Orders` テーブルを使用して、その顧客の注文が別のグリッドに表示されます。  
+# <a name="display-related-data-in-wpf-applications"></a>Display related data in WPF applications
+In some applications, you might want to work with data that comes from multiple tables or entities that are related to each other in a parent-child relationship. For example, you might want to display a grid that displays customers from a `Customers` table. When the user selects a specific customer, another grid displays the orders for that customer from a related `Orders` table.  
   
- **\[データ ソース\]** ウィンドウから WPF デザイナーに項目をドラッグすると、関連データを表示するデータ バインド コントロールを作成できます。  
+ You can create data-bound controls that display related data by dragging items from the **Data Sources** window to the WPF Designer.  
   
-### 関連するレコードを表示するコントロールを作成するには  
+## <a name="to-create-controls-that-display-related-records"></a>To create controls that display related records  
   
-1.  **\[データ\]** メニューの **\[データ ソースの表示\]** をクリックして **\[データ ソース\]** ウィンドウを開きます。  
+1.  On the **Data** menu, click **Show Data Sources** to open the **Data Sources** window.  
   
-2.  **\[新しいデータ ソースの追加\]** をクリックして、**データ ソース構成**ウィザードの操作を完了します。  
+2.  Click **Add New Data Source**, and complete the **Data Source Configuration** wizard.  
   
-3.  WPF デザイナーを開き、**\[データ ソース\]** ウィンドウ内の項目に対して有効なドロップ ターゲットとなるコンテナーが、WPF デザイナーに含まれていることを確認します。  
+3.  Open the WPF designer, and make sure that the designer contains a container that is a valid drop target for the items in the **Data Sources** window.  
   
-     有効なドロップ ターゲットの詳細については、「[Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)」を参照してください。  
+     For more information about valid drop targets, see [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).  
   
-4.  **\[データ ソース\]** ウィンドウで、リレーションシップの親テーブルまたは親オブジェクトを表すノードを展開します。  親テーブルまたは親オブジェクトは、一対多リレーションシップの "一" の側のテーブルまたはオブジェクトです。  
+4.  In the **Data Sources** window, expand the node that represents the parent table or object in the relationship. The parent table or object is on the "one" side of a one-to-many relationship.  
   
-5.  **\[データ ソース\]** ウィンドウから、親ノード \(または親ノード内の個別の項目\) をデザイナー内の有効なドロップ ターゲットにドラッグします。  
+5.  Drag the parent node (or any individual items in the parent node) from the **Data Sources** window onto a valid drop target in the designer.  
   
-     ドラッグした各項目に対して新しいデータ バインド コントロールを作成する XAML が、Visual Studio によって生成されます。  さらに、この XAML により、親テーブルまたは親オブジェクトの新しい <xref:System.Windows.Data.CollectionViewSource> がドロップ ターゲットのリソースに追加されます。  一部のデータ ソースでは、Visual Studio により、親テーブルまたは親オブジェクトにデータを読み込むためのコードも生成されます。  詳細については、「[Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)」を参照してください。  
+     Visual Studio generates XAML that creates new data-bound controls for each item that you drag. The XAML also adds a new <xref:System.Windows.Data.CollectionViewSource> for the parent table or object to the resources of the drop target. For some data sources, Visual Studio also generates code to load the data into the parent table or object. For more information, see [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).  
   
-6.  **\[データ ソース\]** ウィンドウで、関連する子テーブルまたは子オブジェクトを見つけます。  データの親ノードの一覧の下部に、関連する子テーブルと子オブジェクトが展開可能なノードとして表示されます。  
+6.  In the **Data Sources** window, locate the related child table or object. Related child tables and objects appear as expandable nodes at the bottom of the parent node's list of data.  
   
-7.  **\[データ ソース\]** ウィンドウから、子ノード \(または子ノードの個別の項目\) をデザイナー内の有効なドロップ ターゲットにドラッグします。  
+7.  Drag the child node (or any individual items in the child node) from the **Data Sources** window onto a valid drop target in the designer.  
   
-     ドラッグした各項目に対して新しいデータ バインド コントロールを作成する XAML が、Visual Studio によって生成されます。  さらに、この XAML により、子テーブルまたは子オブジェクトの新しい <xref:System.Windows.Data.CollectionViewSource> がドロップ ターゲットのリソースに追加されます。  この新しい <xref:System.Windows.Data.CollectionViewSource> が、デザイナーにドラッグした親テーブルまたは親オブジェクトのプロパティにバインドされます。  一部のデータ ソースでは、Visual Studio により、子テーブルまたは子オブジェクトにデータを読み込むためのコードも生成されます。  
+     Visual Studio generates XAML that creates new data-bound controls for each of the items you drag. The XAML also adds a new <xref:System.Windows.Data.CollectionViewSource> for the child table or object to the resources of the drop target. This new <xref:System.Windows.Data.CollectionViewSource> is bound to the property of the parent table or object that you just dragged to the designer. For some data sources, Visual Studio also generates code to load the data into the child table or object.  
   
-     次の図は、**\[データ ソース\]** ウィンドウのデータセットに表示された、**Customers** テーブルに関連する **Orders** テーブルを示しています。  
+     The following figure demonstrates the related **Orders** table of the **Customers** table in a dataset in the **Data Sources** window.  
   
-     ![関係を示すデータ ソース ウィンドウ](~/data-tools/media/datasources2.gif "DataSources2")  
+     ![Data Sources Window showing relation](../data-tools/media/datasources2.gif "DataSources2")  
   
-## 参照  
- [Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)   
- [方法: Visual Studio でデータに WPF コントロールをバインドする](../data-tools/bind-wpf-controls-to-data-in-visual-studio2.md)   
- [方法: WPF アプリケーションでルックアップ テーブルを作成する](../data-tools/create-lookup-tables-in-wpf-applications.md)   
- [チュートリアル: WPF アプリケーションでの関連データの表示](../data-tools/walkthrough-displaying-related-data-in-a-wpf-application.md)
+## <a name="see-also"></a>See Also  
+ [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
+ [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
+ [Create lookup tables in WPF applications](../data-tools/create-lookup-tables-in-wpf-applications.md)   
+ [Walkthrough: Displaying Related Data in a WPF Application](../data-tools/display-related-data-in-wpf-applications.md)

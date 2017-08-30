@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio での C++ と Python の使用 | Microsoft Docs"
+title: Working with C++ and Python in Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 7/12/2017
 ms.reviewer: 
@@ -10,47 +10,47 @@ ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: f7dbda92-21bf-4af0-bb34-29b8bf231f32
-description: "Visual Studio で Python 用に C++ の拡張機能またはモジュールを記述するプロセスと手順について説明します"
+description: The process amd steps to write a C++ extension or module for Python in Visual Studio
 caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 6128d78b99b7fa82ffd5676678a49b1b6a0de177
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: 1912afdba22d9dec6ee3f68aafc78c07779a5b3c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 
-# <a name="creating-a-c-extension-for-python"></a>Python 用 C++ 拡張機能の作成
+# <a name="creating-a-c-extension-for-python"></a>Creating a C++ extension for Python
 
-Python インタープリターの機能を拡張するため、およびオペレーティング システムの低レベル機能にアクセスするためには、C++ (または C) で記述されたモジュールがよく使われます。 モジュールの主要な種類は次の 3 つです。
+Modules written in C++ (or C) are commonly used to extend the capabilities of a Python interpreter as well as to enable access to low-level operating system capabilities. There are three primary types of modules:
 
-- アクセラレータ モジュール: Python はインタープリター言語であるため、コードの特定の部分を C++ で書くことによってパフォーマンスを向上させることができます。 
-- ラッパー モジュール: ラッパーは、既存の C/C++ インターフェイスを Python コードに公開します。また、Python から使いやすい、より "Python らしい" API を公開します。
-- 低レベル システム アクセス モジュール: CPython ランタイム、オペレーティング システム、または基盤ハードウェアの低レベル機能にアクセスするために作成します。 
+- Accelerator modules: because Python is an interpreted language, certain pieces of code can be written in C++ for higher performance. 
+- Wrapper modules: wrappers expose existing C/C++ interfaces to Python code or expose a more "Pythonic" API that's easy to use from Python.
+- Low-level system access modules: created to access lower-level features of the CPython runtime, the operating system, or the underlying hardware. 
 
-このトピックでは、双曲正接を計算する CPython 用の C++ 拡張モジュールを作成し、Python コードからそれを呼び出す手順について説明します。 Python では最初にルーチンを実装して、C++ で同じルーチンを実装した場合のパフォーマンス向上を示します。
+This topic walks through building a C++ extension module for CPython that computes a hyperbolic tangent and calls it from Python code. The routine is implemented first in Python to demonstrate the performance gain of implementing the same routine in C++.
 
-ここでは、[Python のドキュメント](https://docs.python.org/3/c-api/)で説明されている CPython の標準拡張機能のためのアプローチを使います。 この方法と他の方法の比較については、このトピックの最後にある「[別の方法](#alternative-approaches)」で説明します。
+The approach taken here is that for standard CPython extensions as described in the [Python documentation](https://docs.python.org/3/c-api/). A comparison between this and other means is described under [alternative approaches](#alternative-approaches) at the end of this topic.
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
-このチュートリアルは Visual Studio 2017 向けに書かれており、既定のオプション (既定のインタープリターとして Python 3.6 など) の **C++ によるデスクトップ開発**ワークロードと **Python 開発**ワークロードを使います。 **Python 開発**ワークロードでは、**[Python ネイティブ開発ツール]** のチェック ボックスもオンにし、それによりこのトピックで説明するほとんどのオプションが設定されます (このオプションには、C++ のワークロードも自動的に含まれます)。 
+This walkthrough is written for Visual Studio 2017 with both the **Desktop Development with C++** and **Python Development** workloads with their default options (such as Python 3.6 as the default interpreter). In the **Python Development** workload, also check the box on the right for **Python native development tools**, which sets up most of the options described in this topic. (This option also includes the C++ workload automatically.) 
 
-![[Python ネイティブ開発ツール] オプションの選択](media/cpp-install-native.png)
+![Selecting the Python native development tools option](media/cpp-install-native.png)
 
-他のバージョンの Visual Studio の使用など、詳細については「[Visual Studio 用の Python サポートのインストール](installation.md)」を参照してください。 Python を別にインストールする場合は、インストーラーで **[詳細オプション]** の **[Download debugging symbols (デバッグ シンボルのダウンロード)]** と **[Download debug binaries (デバッグ バイナリのダウンロード)]** を必ず選んでください。 このオプションを選択すると、デバッグ ビルドを行う場合に、必要なデバッグ ライブラリを確実に使用できます。
+For more information, see [Installing Python Support for Visual Studio](installation.md), including using other versions of Visual Studio. If you install Python separately, be sure to select **Download debugging symbols** and **Download debug binaries** under **Advanced Options** in the installer. This option ensures that you have the necessary debug libraries available if you choose to do a debug build.
 
 > [!Note]
-> Python は、**データ サイエンスと分析のアプリケーション** ワークロードからも使用できます。これには、既定で Anaconda 3 64-bit (最新バージョンの CPython も含む)、および **Python ネイティブ開発ツール**が含まれます。
+> Python is also available through the **Data science and analytical applications** workload, which includes Anaconda 3 64-bit (with the latest version of CPython) and the **Python native development tools** option by default.
 
-## <a name="create-the-python-application"></a>Python アプリケーションを作成する
+## <a name="create-the-python-application"></a>Create the Python application
 
-1. Visual Studio で **[ファイル]、[新規]、[プロジェクト]** の順に選択して、新しい Python プロジェクトを作成します。 "Python" を検索し、**Python アプリケーション** テンプレートを選択し、適切な名前と場所を指定し、**[OK]** を選択します。
+1. Create a new Python project in Visual Studio by selecting **File > New > Project**. Search for "Python", select the **Python Application** template, give it a suitable name and location, and select **OK**.
 
-1. プロジェクトの `.py` ファイルに、双曲正接の計算をベンチマークする次のコードを貼り付けます (簡単に比較できるよう、数値演算ライブラリを使わずに実装されています)。 自由に手動でコードを入力し、[Python の編集機能](code-editing.md)を体験してください。
+1. In the project's `.py` file, paste the following code that benchmarks the computation of a hyperbolic tangent (implemented without using the math library for easier comparison). Feel free to enter the code manually to experience some of the [Python editing features](code-editing.md).
 
     ```python
     from itertools import islice
@@ -98,41 +98,41 @@ Python インタープリターの機能を拡張するため、およびオペ�
         test(lambda d: [tanh(x) for x in d], '[tanh(x) for x in d]')
     ```
 
-1. **[デバッグ] > [デバッグなしで開始]** (Ctrl + F5 キー) を使ってプログラムを実行し、結果を確認します。 各ベンチマークは完了するまでに数秒かかります。
+1. Run the program using **Debug > Start without Debugging** (Ctrl+F5) to see the results. Each benchmark takes several seconds to complete.
 
-## <a name="create-the-core-c-project"></a>C++ のコア プロジェクトを作成する
+## <a name="create-the-core-c-project"></a>Create the core C++ project
 
-1. ソリューション エクスプローラーでソリューション名を右クリックし、**[追加] > [新しいプロジェクト...]** を選びます。 同じ Visual Studio ソリューションに、Python と C++ 両方のプロジェクトを含めることができます。
+1. Right-click the solution in Solution Explorer and select **Add > New Project...**. A Visual Studio solution can contain both Python and C++ projects together.
 
-1. "C++" を検索し、**[空のプロジェクト]** を選び、名前 (TanhBenchmark など) を指定して、**[OK]** を選びます。 注: Visual Studio 2017 で **Python ネイティブ開発ツール**をインストールした場合は、**Python 拡張モジュール**から始めることができます。このテンプレートには、ここで説明するものの多くが既に配置されています。 ただし、このチュートリアルでは、拡張モジュールの作成手順を実際に示すため、空のプロジェクトから始めます。
+1. Search on "C++", select **Empty project**, specify a name (such as TanhBenchmark), and select **OK**. Note: if you've installed the **Python native development tools** with Visual Studio 2017, you can start with the **Python Extension Module** template, which has much of what's described here already in place. For this walkthrough, though, starting with an empty project demonstrates building the extension module step by step.
 
-1. **[ソース ファイル]** ノードを右クリックし、**[追加] > [新しい項目...]** を選び、**[C++ ファイル]** を選んで名前 (`module.cpp` など) を指定してから **[OK]** を選び、新しいプロジェクトに C++ ファイルを作成します。 このステップは、次のステップで C++ のプロパティ ページを有効にするために必要です。
+1. Create a C++ file in the new project by right-clicking the **Source Files** node, then select **Add > New Item..."**, select **C++ File**, give it a name (like `module.cpp`), and select **OK**. This step is necessary to turn on the C++ property pages in the next steps.
 
-1. 新しいプロジェクトを右クリックして **[プロパティ]** を選び、表示される **[プロパティ ページ]** ダイアログ ボックスの上部で、**[構成]** を **[すべての構成]** に設定します。
+1. Right-click the new project and select **Properties**, then at the top of the **Property Pages** dialog that appears, set **Configuration** to **All Configurations**.
 
-1. 以下で説明するように特定のプロパティを設定した後、**[適用]** を選びます (**[適用]** ボタンを有効にするには、編集可能なフィールドの外側をクリックすることが必要な場合があります)。
+1. Set the specific properties as described below, then select **Apply** (you may need to click outside of an editable field for the **Apply** button to become enabled).
 
-    | タブ | プロパティ | 値 | 
+    | Tab | Property | Value | 
     | --- | --- | --- |
-    | 全般 | [全般] > [ターゲット名] | Python が認識するモジュールの名前と完全に一致するようにこのフィールドを設定します。 |
-    | | [全般] > [ターゲットの拡張子] | .pyd |
-    | | [プロジェクトの既定値] > [構成の種類] | ダイナミック ライブラリ (.dll) |
-    | [C/C++] > [全般] | 追加のインクルード ディレクトリ | インストールに合わせて Python の `include` フォルダーを追加します (例: `c:\Python36\include`) |     
-    | [C/C++] > [コード生成] | ランタイム ライブラリ | マルチスレッド DLL (/MD) (下記の「警告」を参照) |
-    | [C/C++] > [プリプロセッサ] | プリプロセッサの定義 | 文字列の先頭に `Py_LIMITED_API;` を追加し、Python から呼び出すことができる一部の関数を制限し、Python の異なるバージョン間でのコードの移植性を高くします。 |
-    | [リンカー] > [全般] | 追加のライブラリ ディレクトリ | インストールに合わせて、`.lib` ファイルが含まれる Python の `lib` フォルダーを追加します (例: `c:\Python36\libs`) (`.py` ファイルが含まれる `Lib` フォルダーでは*なく*、`.lib` ファイルが含まれる `libs` フォルダーを必ず指定してください)。 | 
+    | General | General > Target Name | Set this field to exactly match the name of the module as Python sees it. |
+    | | General > Target Extension | .pyd |
+    | | Project Defaults > Configuration Type | Dynamic Library (.dll) |
+    | C/C++ > General | Additional Include Directories | Add the Python `include` folder as appropriate for your installation, for example, `c:\Python36\include` |     
+    | C/C++ > Code Generation | Runtime Library | Multi-threaded DLL (/MD) (see Warning below) |
+    | C/C++ > Preprocessor | Preprocessor Definitions | Add `Py_LIMITED_API;` to the beginning of the string, which restricts some of the functions you can call from Python and makes the code more portable between different versions of Python. |
+    | Linker > General | Additional Library Directories | Add the Python `lib` folder containing `.lib` files as appropriate for your installation, for example, `c:\Python36\libs`. (Be sure to point to the `libs` folder that contains `.lib` files, and *not* the `Lib` folder that contains `.py` files.) | 
 
     > [!Tip]
-    > [C/C++] タブが表示されない場合は、C/C++ ソース ファイルとして識別されるファイルがプロジェクトに含まれないためです。 このような条件は、`.c` または `.cpp` 拡張子を付けずにソース ファイルを作成すると発生する可能性があります。 たとえば、前の [新しい項目] ダイアログで、つい `module.cpp` ではなく `module.coo` と入力してしまった場合、Visual Studio はファイルを作成しますが、ファイルの種類を "C/C++ コード" に設定しないので、C/C++ のプロパティ タブがアクティブになりません。 この識別の誤処理は、ファイル名を `.cpp` に変更しても解決しません。 ファイルの種類を正しく設定するには、ソリューション エクスプローラーでファイルを右クリックして **[プロパティ]** を選び、**[ファイルの種類]** を **[C/C++ コード]** に設定します。
+    > If you don't see the C/C++ tab, it's because the project doesn't contain any files that it identifies as C/C++ source files. This condition can occur if you create a source file without a `.c` or `.cpp` extension. For example, if you accidentally entered `module.coo` instead of `module.cpp` in the new item dialog earlier, then Visual Studio creates the file but doesn't set the file type to "C/C+ Code," which is what activates the C/C++ properties tab. This misidentification remains the case even if you rename the file with `.cpp`. To set the file type properly, right-click the file in Solution Explorer, select **Properties**, then set  **File Type** to **C/C++ Code**.
 
     > [!Warning]
-    > デバッグ構成であっても、**[C/C++] > [コード生成] > [ランタイム ライブラリ]** オプションを [マルチスレッド デバッグ DLL (/MDd)] に設定しないでください。 非デバッグ Python バイナリのビルドに使われている [マルチスレッド DLL (/MD)] ランタイムを選択してください。 /MDd オプションを設定すると、DLL のデバッグ構成をビルドするときに、*C1189: Py_LIMITED_API は Py_DEBUG、Py_TRACE_REFS、Py_REF_DEBUG と互換性がありません*というエラーが表示されます。 さらに、ビルド エラーを避けるために `Py_LIMITED_API` を削除すると、モジュールをインポートしようとしたときに Python がクラッシュします (後で説明しますが、クラッシュは DLL の`PyModule_Create` の呼び出し内で発生し、出力メッセージは "*Fatal Python error: PyThreadState_Get: no current thread (Python 致命的エラー: PyThreadState_Get: 現在のスレッドがありません)*" です)。
+    > Don't set the **C/C++ > Code Generation > Runtime Library** option to "Multi-threaded Debug DLL (/MDd)" even for a Debug configuration. Select the "Multi-threaded DLL (/MD)" runtime because that's what the non-debug Python binaries are built with. If you happen to set the /MDd option, you see error *C1189: Py_LIMITED_API is incompatible with Py_DEBUG, Py_TRACE_REFS, and Py_REF_DEBUG* when building a Debug configuration of your DLL. Furthermore, if you remove `Py_LIMITED_API` to avoid the build error, Python crashes when attempting to import the module. (The crash happens within the DLL's call to `PyModule_Create` as described later, with the output message of *Fatal Python error: PyThreadState_Get: no current thread*.)
     >
-    > /MDd オプションは Python デバッグ バイナリ (python_d.exe など) のビルドに使われますが、拡張 DLL に対して選ぶと、やはり `Py_LIMITED_API` のビルド エラーになることに注意してください。
+    > Note that the /MDd option is what's used to build the Python debug binaries (such as python_d.exe), but selecting it for an extension DLL still causes the build error with `Py_LIMITED_API`.
    
-1. C++ プロジェクトを右クリックし、**[ビルド]** を選んで構成をテストします (デバッグとリリースの両方)。 `.pyd` ファイルは、C++ のプロジェクト フォルダー自体ではなく、**Debug** および **Release** の下の *solution* フォルダーにあります。
+1. Right-click the C++ project and select **Build** to test your configurations (both Debug and Release). The `.pyd` files are located in the *solution* folder under **Debug** and **Release**, not the C++ project folder itself.
 
-1. C++ プロジェクトのメインの `.cpp` ファイルに、次のコードを追加します。
+1. Add the following code to the C++ project's main `.cpp` file:
 
     ```cpp
     #include <Windows.h>
@@ -153,20 +153,20 @@ Python インタープリターの機能を拡張するため、およびオペ�
     }
     ```
 
-1. C++ プロジェクトを再度ビルドし、コードが正しいことを確認します。
+1. Build the C++ project again to confirm that your code is correct.
 
 
-## <a name="convert-the-c-project-to-an-extension-for-python"></a>C++ プロジェクトを Python の拡張機能に変換する
+## <a name="convert-the-c-project-to-an-extension-for-python"></a>Convert the C++ project to an extension for Python
 
-C++ の DLL を Python の拡張機能にするには、Python の型と対話するようにエクスポートしたメソッドを変更する必要があります。 その後、モジュールのメソッドの定義と共に、モジュールをエクスポートする関数を追加する必要があります。 これらの背景については、python.org で「[Python/C API Reference Manual](https://docs.python.org/3/c-api/index.html)」(Python/C API リファレンス マニュアル) および特に「[Module Objects](https://docs.python.org/3/c-api/module.html)」(モジュールのオブジェクト) をご覧ください (右上のドロップダウン コントロールで Python のバージョンを選んでください)。
+To make the C++ DLL into an extension for Python, you need to modify the exported method to interact with Python types. Then you need to add a function that exports the module, along with definitions of the module's methods. For background on what's shown here, refer to the [Python/C API Reference Manual](https://docs.python.org/3/c-api/index.html) and especially [Module Objects](https://docs.python.org/3/c-api/module.html) on python.org. (Remember to select your version of Python from the drop-down control on the upper right.)
 
-1. C++ ファイルの先頭に `Python.h` を含めます。
+1. In the C++ file, include `Python.h` at the top:
 
     ```cpp
     #include <Python.h>
     ```
 
-1. Python の型を受け付けて戻すように、`tanh` メソッドを変更します。
+1. Modify the `tanh` method to accept and return Python types:
 
     ```cpp
     PyObject* tanh(PyObject *, PyObject* o) {
@@ -176,7 +176,7 @@ C++ の DLL を Python の拡張機能にするには、Python の型と対話�
     }
     ```
 
-1. Python に対して C++ の `tanh` 関数を提示する方法を定義する構造体を追加します。
+1. Add a structure that defines how the C++ `tanh` function is presented to Python:
 
     ```cpp
     static PyMethodDef superfastcode_methods[] = {
@@ -188,7 +188,7 @@ C++ の DLL を Python の拡張機能にするには、Python の型と対話�
     };
     ```
 
-1. Python が認識するモジュールを定義する構造体を追加します。
+1. Add a structure that defines the module as Python sees it:
 
     ```cpp
     static PyModuleDef superfastcode_module = {
@@ -200,7 +200,7 @@ C++ の DLL を Python の拡張機能にするには、Python の型と対話�
     };
     ```
 
-1. モジュールを読み込むときに Python が呼び出すメソッドを追加します。`PyInit_<module-name>` という名前にする必要があります。*&lt;module_name&gt;* は、C++ プロジェクトの **[全般] > [ターゲット名]** プロパティと正確に一致します (つまり、プロジェクトによってビルドされる `.pyd` のファイル名と一致します)。
+1. Add a method that Python calls when it loads the module, which must be named `PyInit_<module-name>`, where *&lt;module_name&gt;* exactly matches the C++ Project's **General > Target Name** property (that is, it matches the filename of the `.pyd` built by the project).
 
     ```cpp
     PyMODINIT_FUNC PyInit_superfastcode() {    
@@ -208,21 +208,21 @@ C++ の DLL を Python の拡張機能にするには、Python の型と対話�
     }
     ```
 
-1. もう一度 DLL をビルドして、コードを検証します。
+1. Build the DLL again to verify your code.
 
-## <a name="test-the-code-and-compare-the-results"></a>コードをテストして結果を比較する
+## <a name="test-the-code-and-compare-the-results"></a>Test the code and compare the results
 
-Python 拡張機能の構造の DLL ができたので、Python プロジェクトからそれを参照し、モジュールをインポートして、そのメソッドを使うことができます。
+Now that you have the DLL structured as a Python extension, you can refer to it from the Python project, import the module, and use its methods.
 
-Python で DLL を使えるようにするには 2 つの方法があります。 第 1 の方法は、Python プロジェクトと C++ プロジェクトが同じ Visual Studio ソリューション内にある場合に有効で、Python プロジェクトから C++ プロジェクトへの参照を追加します。
+There are two ways to make the DLL available to Python. First, you can add a reference from the Python project to the C++ project, provided that they're in the same Visual Studio solution:
 
-1. ソリューション エクスプローラーで Python プロジェクトを右クリックし、**[参照]** を選びます。 ダイアログ ボックスの **[プロジェクト]** タブで **superfastcode** プロジェクトを選び、**[OK]** を選びます。
+1. In Solution Explorer, right-click the Python project and select **References**. In the dialog, select the **Projects** tab, select the **superfastcode** project, and then **OK**.
 
-第 2 の方法は、グローバル Python 環境にモジュールをインストールし、他の Python プロジェクトでも使えるようにします。 そのためには、通常、その環境に合わせて IntelliSense 入力候補データベースを更新する必要があります。 環境からモジュールを削除するときも、更新する必要があります。
+Second, you can install the module in the global Python environment, making it available to other Python projects as well. Doing so typically requires that you refresh the IntelliSense completion database for that environment. Refreshing is also necessary when removing the module from the environment.
 
-1. Visual Studio 2017 を使っている場合は、Visual Studio インストーラーを実行して **[変更]** を選び、**[個別のコンポーネント] > [コンパイラ、ビルド ツール、およびランタイム] > [Visual C++ 2015.3 v140 ツールセット]** を選びます。 この手順が必要な理由は、Python (for Windows) 自体が Visual Studio 2015 (バージョン 14.0) でビルドされ、ここで説明する方法で拡張機能をビルドするときはこれらのツールが使えることが想定されるためです。
+1. If you're using Visual Studio 2017, run the Visual Studio installer, select **Modify**, select **Individual Components > Compilers, build tools, and runtimes > Visual C++ 2015.3 v140 toolset**. This step is necessary because Python (for Windows) is itself build with Visual Studio 2015 (version 14.0) and expects those tools be available when building an extension through the method described here.
 
-1. `setup.py` という名前のファイルを C++ プロジェクトに作成します。それには、プロジェクトを右クリックして **[追加] > [新しい項目...]* を選び、"Python" を検索して **Python ファイル**を選び、名前を setup.py にして、**[OK]** を選びます。 ファイルがエディターに表示されたら、そこに次のコードを貼り付けます。
+1. Create a file named `setup.py` in your C++ project by right-clicking the project, selecting **Add > New Items...**, searching for "Python" and selecting **Python file**, naming it setup.py, and selecting **OK**. When the file appears in the editor, paste the following code into it:
 
     ```python
     from distutils.core import setup, Extension, DEBUG
@@ -235,49 +235,49 @@ Python で DLL を使えるようにするには 2 つの方法があります�
         )
     ```
 
-    このスクリプトについては、「[Building C and C++ Extensions](https://docs.python.org/3/extending/building.html)」(C と C++ の拡張機能のビルド) (python.org) をご覧ください。
+    See [Building C and C++ Extensions](https://docs.python.org/3/extending/building.html) (python.org) for documentation on this script.
 
-1. `setup.py` コードは、Visual Studio 2015 C++ ツールセットを使って拡張機能をビルドするように Python に指示します。これは、コマンド ラインから行われます。 管理者特権でコマンド プロンプトを開き、C++ プロジェクト (および `setup.py`) を含むフォルダーに移動して、次のコマンドを入力します。
+1. The `setup.py` code instructs Python to build the extension (using the Visual Studio 2015 C++ toolset), which happens from the command line. Open an elevated command prompt, navigate to the folder containing the C++ project (and `setup.py`), and enter the following command:
 
     ```bash
     pip install .
     ```
 
-`tanh` コードとモジュールを呼び出し、Python での実装とパフォーマンスを比較できるようになります。
+Now you can call the `tanh` code the module and compare its performance to the Python implementation:
 
-1. DLL からエクスポートされた `fast_tanh` メソッドを呼び出してベンチマークの出力に追加する次の行を、`tanhbenchmark.py` に追加します。 `from s` ステートメントを手入力する場合は、入力候補一覧に `superfastcode` が表示され、「`import`」と入力すると `fast_tanh` メソッドが表示されます。
+1. Add the following lines in `tanhbenchmark.py` to call the `fast_tanh` method exported from the DLL, and add it to the benchmark output. If you type the `from s` statement manually, you'll see `superfastcode` come up in the completion list, and after typing `import` the `fast_tanh` method appears.
 
     ```python
     from superfastcode import fast_tanh    
     test(lambda d: [fast_tanh(x) for x in d], '[fast_tanh(x) for x in d]')
     ```
 
-1. Python プログラムを実行すると、Python の実装より C++ ルーチンの方が 15 から 20 倍速いことがわかります。
+1. Run the Python program and see that the C++ routine runs around 15 to 20 times faster than the Python implementation.
 
-## <a name="debug-the-c-code"></a>C++ コードをデバッグする
+## <a name="debug-the-c-code"></a>Debug the C++ code
 
-[Visual Studio での Python のサポート](installation.md)には、[Python と C++ のコードをまとめてデバッグ](debugging-mixed-mode.md)する機能が用意されています。 この混合モードのデバッグを試すには、次の手順を実行します。
+[Python support in Visual Studio](installation.md) includes the ability to [debug Python and C++ code together](debugging-mixed-mode.md). To experience this mixed-mode debugging, do the following steps:
 
-1. ソリューション エクスプローラーで Python プロジェクトを右クリックして、**[プロパティ]** の **[デバッグ]** タブを選び、**[デバッグ] > [ネイティブ コードのデバッグを有効にする]** オプションをオンにします。
+1. Right-click the Python project in Solution Explorer, select **Properties**, select the **Debug** tab, and then select the **Debug > Enable native code debugging** option.
 
     > [!Tip]
-    > ネイティブ コードのデバッグを有効にすると、プログラムが通常の [続行するには、任意のキーを押してください] で一時停止せずに完了した場合に、Python の出力ウィンドウがすぐに消えることがあります。 強制的に一時停止するには、ネイティブ コードのデバッグを有効にするときに、**[デバッグ]** タブの **[実行] > [インタープリターの引数]** フィールドに、`-i` オプションを追加します。 この引数を使用すると、Python インタープリターはコード終了後に対話モードになり、この時点でユーザーが Ctrl + Z キー、Enter キーの順に押して終了するのを待機します。 (または、Python コードを変更してもよい場合は、プログラムの最後に `import os` および `os.system("pause")` ステートメントを追加します。 このコードで、元の一時停止プロンプトが複製されます)。
+    > When you enable native code debugging, the Python output window may disappear immediately when the program has completed without giving you the usual "Press any key to continue..." pause. To force a pause, add the `-i` option to the **Run > Interpreter Arguments** field on the **Debug** tab when you enable native code debugging. This argument puts the Python interpreter into interactive mode after the code finishes, at which point it waits for you to press Ctrl+Z, Enter to exit. (Alternately, if you don't mind modifying your Python code, you can add `import os` and `os.system("pause")` statements at the end of your program. This code duplicates the original pause prompt.)
 
-1. C++ コードで `tanh` メソッドの先頭行にブレークポイントを設定して、デバッガーを開始します。 そのコードが呼び出されるとデバッガーが停止します。
+1. In your C++ code, set a breakpoint on the first line within the `tanh` method, then start the debugger. The debugger stops when that code is called:
 
-    ![C++ コードのブレークポイントでの停止](media/cpp-debugging.png)
+    ![Stopping at a breakpoint in C++ code](media/cpp-debugging.png)
 
-1. この時点で、C++ コードをステップ実行したり、変数を調べたりできます。詳しくは、「[Python と C++ の同時デバッグ](debugging-mixed-mode.md)」をご覧ください。
+1. At this point you can step through the C++ code, examine variables, and so on, as detailed in [Debugging C++ and Python Together](debugging-mixed-mode.md).
 
-## <a name="alternative-approaches"></a>別の方法 
+## <a name="alternative-approaches"></a>Alternative approaches 
 
-次の表で説明するように、Python の拡張機能を作成するには他にも方法があります。 CPython の最初の項目は、このトピックで既に説明したものです。
+There are other means to create Python extensions as described in the table below. The first entry for CPython is what's been discussed this topic already.
 
-| 方法 | 時期 | 代表的ユーザー | 長所 | 短所 |
+| Approach | Vintage | Representative User(s) | Pro(s) | Con(s) |
 | --- | --- | --- | --- | --- |
-| CPython 用の C/C++ 拡張モジュール | 1991 | 標準ライブラリ | [広範なドキュメントとチュートリアル](https://docs.python.org/3/c-api/)。 総合的な制御。 | コンパイル、移植性、参照の管理。 C についての深い知識。 |
-| SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 多くの言語のバインドを一度に生成。 | Python が唯一のターゲットである場合、過剰なオーバーヘッド。 |
-| ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | コンパイルがなく、広く利用可能。 | C 構造体のアクセスや変更が煩雑で、エラーを起こしやすい。 |
-| Cython | 2007 | [gevent](http://www.gevent.org/)、[kivy](https://kivy.org/) | Python に似ている。 非常に完成されている。 高パフォーマンス。 | コンパイル、新しい構文、ツールチェーン。 |
-| cffi | 2013 | [cryptography](https://cryptography.io/en/latest/)、[pypy](http://pypy.org/) | 容易な統合、PyPy との互換性。 | 新しく、未完成な部分がある。 |
+| C/C++ extension modules for CPython | 1991 | Standard Library | [Extensive documentation and tutorials](https://docs.python.org/3/c-api/). Total control. | Compilation, portability, reference management. High C knowledge. |
+| SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | Generate bindings for many languages at once. | Excessive overhead if Python is the only target. |
+| ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | No compilation, wide availability. | Accessing and mutating C structures cumbersome and error prone. |
+| Cython | 2007 | [gevent](http://www.gevent.org/), [kivy](https://kivy.org/) | Python-like. Highly mature. High performance. | Compilation, new syntax and toolchain. |
+| cffi | 2013 | [cryptography](https://cryptography.io/en/latest/), [pypy](http://pypy.org/) | Ease of integration, PyPy compatibility. | New, less mature. |
 

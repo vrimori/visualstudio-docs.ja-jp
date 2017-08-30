@@ -1,206 +1,203 @@
 ---
-title: "チュートリアル: Visual Studio でのローカル データベース ファイルの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Visual Studio], ローカル データ"
-  - "データ [Visual Studio], チュートリアル"
-  - "データベース ファイル, 作成"
-  - "データベース, 作成"
-  - "ローカル データ"
-  - "LocalDB"
-  - "SQL Express"
-  - "SQL Server Express"
-  - "SQLEXPRESS"
+title: Create a SQL database by using a designer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Express
+- local data
+- LocalDB
+- SQLEXPRESS
+- data [Visual Studio], Local data
+- SQL Express
+- data [Visual Studio], walkthroughs
+- databases, creating
+- database files, creating
 ms.assetid: 99c2b06f-47aa-414e-8057-a3453712fd23
 caps.latest.revision: 49
-caps.handback.revision: 44
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
 robots: noindex,nofollow
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: f83a5530eccf7c24e351dd29c7d083c5593a7878
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル: Visual Studio でのローカル データベース ファイルの作成
-SQL Server Express LocalDB にローカル データベース ファイルを作成して更新するために、Visual Studio を使用して、テーブルの追加、列の定義などの基本的なタスクを実行できます。「[ローカル データの概要](../data-tools/local-data-overview.md)」で説明します。  このチュートリアルを終了すると、ローカル データベースを使用してさらに高度な機能を使用できるようになり、こうした機能を必要とする他のチュートリアルへの準備となります。  
+# <a name="create-a-sql-database-by-using-a-designer"></a>Create a SQL database by using a designer
+You can explore basic tasks, such as adding tables and defining columns, by using Visual Studio to create and update a local database file in SQL Server Express LocalDB. After you finish this walkthrough, you can discover more advanced capabilities by using your local database as a starting point for other walkthroughs that require it.  
   
- SQL Server Management Studio または Transact\-SQL を使用してデータベースを作成する方法の詳細については、「[Create a Database](http://msdn.microsoft.com/ja-jp/4c4beea2-6cbc-4352-9db6-49ea8130bb64)」を参照してください。  
+ You can also create a database by using SQL Server Management Studio (a separate download) or Transact-SQL statements in the **SQL Server Object Explorer** tool window in Visual Studio.  
   
- このチュートリアルには次のタスクがあります。  
+ During this walkthrough, you'll explore the following tasks:  
   
--   [プロジェクトとローカル データベース ファイルの作成](../data-tools/create-a-sql-database-by-using-a-designer.md#BKMK_CreateNewSQLDB)。  
+-   [Create a project and a local database file](../data-tools/create-a-sql-database-by-using-a-designer.md#BKMK_CreateNewSQLDB)  
   
--   [テーブル、列、主キー、外部キーの作成](../data-tools/create-a-sql-database-by-using-a-designer.md#BKMK_CreateNewTbls)。  
+-   [Create tables, columns, primary keys, and foreign keys](../data-tools/create-a-sql-database-by-using-a-designer.md#BKMK_CreateNewTbls)  
   
--   [テーブルへのデータの読み込み](../data-tools/create-a-sql-database-by-using-a-designer.md#BKMK_Populating)  
+-   [Populate the tables with data](../data-tools/create-a-sql-database-by-using-a-designer.md#BKMK_Populating)  
   
-## 必須コンポーネント  
- このチュートリアルを完了するには、[!INCLUDE[vs_dev12_expwin](../data-tools/includes/vs_dev12_expwin_md.md)]、Visual Studio Professional 2013、Visual Studio Premium 2013、または Visual Studio Ultimate 2013 をインストールする必要があります。  Visual Studio のこれらのバージョンには、SQL Server Data Tools が含まれています。  
+## <a name="prerequisites"></a>Prerequisites  
+ To complete this walkthrough, ensure that you have SQL Server Data Tools installed. On the **View** menu, you should see **SQL Server Object Explorer**. If it's not there, go to **Add or Remove Programs**, click **Visual Studio 2015**, select **Change**, and select the box next to **SQL Server Data Tools**.  
   
-##  <a name="BKMK_CreateNewSQLDB"></a> プロジェクトとローカル データベース ファイルの作成  
+##  <a name="BKMK_CreateNewSQLDB"></a> Create a project and a local database file  
   
-#### プロジェクトとローカル データベース ファイルを作成するには  
+#### <a name="to-create-a-project-and-a-database-file"></a>To create a project and a database file  
   
-1.  `SampleDatabaseWalkthrough` という名前の Windows フォーム プロジェクトを作成します。  
+1.  Create a Windows Forms project that's named `SampleDatabaseWalkthrough`.  
   
-     「[ソリューションとプロジェクトの作成](../ide/creating-solutions-and-projects.md)」を参照してください。  
+2.  On the menu bar, select **Project** > **Add New Item**.  
   
-2.  メニュー バーで **\[プロジェクト\]**、**\[新しい項目の追加\]** の順に選択します。  
+3.  In the list of item templates, scroll down and select **Service-based Database**.  
   
-     **\[新しい項目の追加\]** ダイアログ ボックスが表示され、Windows フォーム プロジェクトに適切な項目を追加できます。  
+     ![Item Templates dialog box](../data-tools/media/raddata-vsitemtemplates.png "raddata VSItemTemplates")  
   
-3.  項目テンプレートの一覧で、**サービス ベースのデータベース**が表示されるまでスクロールし、これを選択します。  
+4.  Name the database **SampleDatabase**, and then select the **Add** button.  
   
-     ![&#91;アイテム テンプレート&#93; ダイアログ ボックス](../data-tools/media/raddata-vsitemtemplates.png "raddata VSItemTemplates")  
+5.  If the **Data Sources** window isn't open, open it by selecting the Shift+Alt+D keys or, on the menu bar, selecting **View** > **Other Windows** > **Data Sources**.  
   
-4.  このデータベースに「SampleDatabase」という名前を付け、**\[追加\]** をクリックします。  
+6.  In the **Data Sources** window, select the **Add New Data Source** link.  
   
-5.  **\[データ ソース\]** ウィンドウが開かない場合は、Shift \+ Alt \+ D キーを押すか、メニュー バーで **\[表示\]**、**\[その他のウィンドウ\]**、\[データ ソースの表示\] の順にクリックして開きます。  
+7.  In the **Data Source Configuration Wizard**, select the **Next** button four times to accept the default settings, and then select the **Finish** button.  
   
-6.  \[データ ソース\] ウィンドウで **\[新しいデータ ソースの追加\]** リンクをクリックします。  
+ By opening the properties window for the database, you can view its connection string and the location of the primary .mdf file. You will see that the database file is in the project folder.  
   
-7.  **データ ソース構成ウィザード**で、**\[次へ\]** ボタンを 4 回クリックして既定の設定を使用し、次に **\[完了\]** ボタンをクリックします。  
+-   In Visual Studio, select **View** > **SQL Server Object Explorer** if that window isn't already open. Open the properties window by expanding the **Data Connections** node, opening the shortcut menu for SampleDatabase.mdf, and then selecting **Properties**.  
   
- データベースのプロパティ ウィンドウを開くと、その接続文字列と、プライマリ .mdf ファイルの位置を確認できます。  
+-   Alternatively, you can select **View** > **Server Explorer**, if that window isn't already open. Open the properties window by expanding the **Data Connections** node. Open the shortcut menu for SampleDatabase.mdf, and then select **Properties**.  
   
--   Visual Studio Express で、データベース エクスプローラーのウィンドウがまだ開いていない場合は、**\[表示\]**、**\[その他のウィンドウ\]**、**\[データベース エクスプローラー\]** をクリックします。  **\[データ接続\]** ノードを展開し、SampleDatabase.mdf のショートカット メニューを開いた後、**\[プロパティ\]** をクリックしてプロパティ ウィンドウを開きます。  
+##  <a name="BKMK_CreateNewTbls"></a> Create tables, columns, primary keys, and foreign keys  
+ In this section, you'll create a couple of tables, a primary key in each table, and a few rows of sample data. In the next walkthrough, you'll get an idea of how that information might appear in an application. You'll also create a foreign key to specify how records in one table might correspond to records in the other table.  
   
--   Visual Studio の他のバージョンで、サーバー エクスプローラーのウィンドウがまだ開いていない場合は、**\[表示\]**、**\[サーバー エクスプローラー\]** をクリックします。  **\[データ接続\]** ノードを展開し、SampleDatabase.mdf のショートカット メニューを開いた後、**\[プロパティ\]** をクリックしてプロパティ ウィンドウを開きます。  
+#### <a name="to-create-the-customers-table"></a>To create the Customers table  
   
-##  <a name="BKMK_CreateNewTbls"></a> テーブル、列、主キー、外部キーの作成  
- このセクションでは、いくつかのテーブルと各テーブルの主キー、およびサンプル データの行を作成します。  次のチュートリアルでは、この情報がアプリケーションでどのように表示されるかを理解することができます。  また外部キーを作成して、1 つのテーブルのレコードが他のテーブルのレコードに対応する方法を指定できます。  
+1.  In **Server Explorer** or **SQL Server Object Explorer**, expand the **Data Connections** node, and then expand the **SampleDatabase.mdf** node.  
   
-#### Customers テーブルを作成するには  
+2.  Open the shortcut menu for **Tables**, and then select **Add New Table**.  
   
-1.  **\[サーバー エクスプローラー\]** または **\[データベース エクスプローラー\]** で、**\[データ接続\]** のノードを展開し、**SampleDatabase.mdf** ノードを展開します。  
+     The **Table Designer** opens and shows a grid with one default row, which represents a single column in the table that you're creating. By adding rows to the grid, you'll add columns in the table.  
   
-     使用しているバージョンの Visual Studio のエクスプローラーが開いていない場合は、メニュー バーで、**\[表示\]**、**\[サーバー エクスプローラー\]** の順に、または **\[表示\]**、**\[その他のウィンドウ\]**、**\[データベース エクスプローラー\]** の順にクリックします。  
+3.  In the grid, add a row for each of the following entries:  
   
-2.  **\[テーブル\]** のショートカット メニューを開き、**\[新しいテーブルの追加\]** をクリックします。  
+    |Column name|Data type|Allow nulls|  
+    |-----------------|---------------|-----------------|  
+    |`CustomerID`|`nchar(5)`|False (cleared)|  
+    |`CompanyName`|`nvarchar(50)`|False (cleared)|  
+    |`ContactName`|`nvarchar (50)`|True (selected)|  
+    |`Phone`|`nvarchar (24)`|True (selected)|  
   
-     **\[テーブル デザイナー\]** は、作成しているテーブルの 1 つの列を表す、1 つの既定の行のグリッドを開いて表示します。  行をグリッドに追加することによって、テーブルに列を追加します。  
+4.  Open the shortcut menu for the `CustomerID` row, and then select **Set Primary Key**.  
   
-3.  グリッドで、次のエントリのそれぞれに行を追加します。  
+5.  Open the shortcut menu for the default row, and then select **Delete**.  
   
-    |列名|\[データ型\]|Null を許容|  
-    |--------|--------------|--------------|  
-    |`CustomerID`|`nchar(5)`|false \(オフ\)|  
-    |`CompanyName`|`nvarchar(40)`|false \(オフ\)|  
-    |`ContactName`|`nvarchar (30)`|true \(オン\)|  
-    |`Phone`|`nvarchar (24)`|true \(オン\)|  
-  
-4.  `CustomerID` の行でショートカット メニューを開き、**\[主キーの設定\]** をクリックします。  
-  
-5.  既定の行のショートカット メニューを開き、**\[削除\]** をクリックします。  
-  
-6.  スクリプト ペインの最初の行の次のサンプルのように更新して、Customers \(顧客\) をテーブルと名前を付けます:  
+6.  Name the Customers table by updating the first line in the script pane to match the following sample:  
   
     ```  
     CREATE TABLE [dbo].[Customers]  
     ```  
   
-7.  次の図に示すように、テーブル デザイナーの左上にある **\[更新\]** をクリックします。  
+     You should see something like this:  
   
-     ![テーブル デザイナーの &#91;更新&#93; ボタン](../data-tools/media/updatelocaldb.png "UpdateLocalDB")  
+     ![Table Designer](../data-tools/media/raddata-table-designer.png "raddata Table Designer")  
   
-8.  **\[データベース更新のプレビュー\]** ダイアログ ボックスで、**\[データベースの更新\]** をクリックします。  
+7.  In the upper-left corner of the **Table Designer**, select the **Update** button.  
   
-     変更はローカル データベース ファイルに保存されます。  
+8.  In the **Preview Database Updates** dialog box, select the **Update Database** button.  
   
-#### Orders テーブルを作成するには  
+     Your changes are saved to the local database file.  
   
-1.  別のテーブルを追加し、次の表の各エントリの行を追加します。  
+#### <a name="to-create-the-orders-table"></a>To create the Orders table  
   
-    |列名|データ型|Null を許容|  
-    |--------|----------|--------------|  
-    |`OrderID`|`int`|false \(オフ\)|  
-    |`CustomerID`|`nchar(5)`|false \(オフ\)|  
-    |`OrderDate`|`datetime`|true \(オン\)|  
-    |`OrderQuantity`|`int`|true \(オン\)|  
+1.  Add another table, and then add a row for each entry in the following table:  
   
-2.  **\[OrderID\]** を主キーとして設定した後、既定の行を削除します。  
+    |Column name|Data type|Allow nulls|  
+    |-----------------|---------------|-----------------|  
+    |`OrderID`|`int`|False (cleared)|  
+    |`CustomerID`|`nchar(5)`|False (cleared)|  
+    |`OrderDate`|`datetime`|True (selected)|  
+    |`OrderQuantity`|`int`|True (selected)|  
   
-3.  スクリプト ペインの最初の行の次のサンプルのように更新して、Orders \(注文\) をテーブルと名前を付けます:  
+2.  Set **OrderID** as the primary key, and then delete the default row.  
+  
+3.  Name the Orders table by updating the first line in the script pane to match the following sample:  
   
     ```  
     CREATE TABLE [dbo].[Orders]  
     ```  
   
-4.  テーブル デザイナーの左上にある **\[更新\]** をクリックします。  
+4.  In the upper-left corner of the **Table Designer**, select the **Update** button.  
   
-5.  **\[データベース更新のプレビュー\]** ダイアログ ボックスで、**\[データベースの更新\]** をクリックします。  
+5.  In the **Preview Database Updates** dialog box, select the **Update Database** button.  
   
-     変更はローカル データベース ファイルに保存されます。  
+     Your changes are saved to the local database file.  
   
-#### 外部キーを作成するには  
+#### <a name="to-create-a-foreign-key"></a>To create a foreign key  
   
-1.  次の図に示すように、グリッドの右側のコンテキスト ペインで、**\[外部キー\]** ショートカット メニューを開き、**\[新しい外部キーを追加\]** をクリックします。  
+1.  In the context pane on the right side of the grid, open the shortcut menu for **Foreign Keys**, and then select **Add New Foreign Key**, as the following illustration shows.  
   
-     ![テーブル デザイナーでの外部キーの追加](../data-tools/media/foreignkey.png "ForeignKey")  
+     ![Adding a foreign key in Table Designer](../data-tools/media/foreignkey.png "ForeignKey")  
   
-2.  表示されるテキスト ボックスで、**ToTable** を `Customers` に置換します。  
+2.  In the text box that appears, replace **ToTable** with `Customers`.  
   
-3.  スクリプト ペインで、次のサンプルのように最後の行を更新します:  
+3.  In the T-SQL pane, update the last line to match the following sample:  
   
     ```  
     CONSTRAINT [FK_Orders_Customers] FOREIGN KEY ([CustomerID]) REFERENCES [Customers]([CustomerID])  
     ```  
   
-4.  テーブル デザイナーの左上にある **\[更新\]** をクリックします。  
+4.  In the upper-left corner of the **Table Designer**, select the **Update** button.  
   
-5.  **\[データベース更新のプレビュー\]** ダイアログ ボックスで、**\[データベースの更新\]** をクリックします。  
+5.  In the **Preview Database Updates** dialog box, select the **Update Database** button.  
   
-     変更はローカル データベース ファイルに保存されます。  
+     Your changes are saved to the local database file.  
   
-##  <a name="BKMK_Populating"></a> テーブルへのデータの読み込み  
+##  <a name="BKMK_Populating"></a> Populate the tables with data  
   
-#### テーブルにデータを読み込むには  
+#### <a name="to-populate-the-tables-with-data"></a>To populate the tables with data  
   
-1.  **サーバー エクスプローラー**または**データベース エクスプローラー**で、サンプル データベースのノードを展開します。  
+1.  In **Server Explorer** or **SQL Server Object Explorer**, expand the node for the sample database.  
   
-2.  \[テーブル\] ノードのショートカット メニューを開き、**\[最新の情報に更新\]** をクリックし、次に \[テーブル\] ノードを展開します。  
+2.  Open the shortcut menu for the **Tables** node, select **Refresh**, and then expand the **Tables** node.  
   
-3.  Customers テーブルのショートカット メニューを開き、**\[テーブル データの表示\]** をクリックします。  
+3.  Open the shortcut menu for the Customers table, and then select **Show Table Data**.  
   
-4.  最低 3 人の Customer \(顧客\) に任意のデータを追加します。  
+4.  Add whatever data you want for at least three customers.  
   
-     顧客 ID には任意の 5 文字を指定できます。この手順では、後で使用するために、少なくとも 1 つを選択します。  
+     You can specify any five characters you want as the customer IDs, but choose at least one that you can remember for use later in this procedure.  
   
-5.  Orders テーブルのショートカット メニューを開き、**\[テーブル データの表示\]** をクリックします。  
+5.  Open the shortcut menu for the Orders table, and then select **Show Table Data**.  
   
-6.  最低 3 件の注文データを追加します。  
+6.  Add data for at least three orders.  
   
     > [!IMPORTANT]
-    >  すべての注文 ID および注文数量が整数であり、各顧客 ID が、Customers テーブルの CustomerID 列で指定した値と一致することを確認します。  
+    >  Make sure that all order IDs and order quantities are integers and that each customer ID  matches a value that you specified in the CustomerID column of the Customers table.  
   
-7.  メニュー バーで、**\[ファイル\]**、**\[すべてを保存\]** の順に選択します。  
+7.  On the menu bar, select **File** > **Save All**.  
   
-8.  メニュー バーで **\[ファイル\]**、**\[ソリューションを閉じる\]** の順に選択します。  
+8.  On the menu bar, select **File** > **Close Solution**.  
   
     > [!NOTE]
-    >  ベスト プラクティスとして、データベースをコピーし、他の場所にそのコピーを貼り付ける、またはコピーに異なる名前を付けることによって、作成したデータベースのバックアップを実行します。  
+    >  As a best practice, you can back up the database file that you just created by copying it and then either pasting the copy in another location or giving the copy a different name.  
   
-## 次の手順  
- これで、ローカル データベース ファイルにサンプル データが追加されました。データベースのタスクを紹介した他のチュートリアルに加えて、[チュートリアル: ローカル データベース ファイル内のデータへの接続 \(Windows フォーム\)](../Topic/Walkthrough:%20Connecting%20to%20Data%20in%20a%20Local%20Database%20File%20\(Windows%20Forms\).md) も完了しました。  
-  
-## 参照  
- [方法 : プロジェクトでローカル データ ファイルを管理する](../data-tools/how-to-manage-local-data-files-in-your-project.md)   
- [ローカル データの概要](../data-tools/local-data-overview.md)   
- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visual Studio のデータ アプリケーションの概要](../data-tools/overview-of-data-applications-in-visual-studio.md)   
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
- [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [アプリケーションへのデータのフェッチ](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
- [データの検証](../Topic/Validating%20Data.md)   
- [データの保存](../data-tools/saving-data.md)
+## <a name="next-steps"></a>Next Steps  
+ Now that you have a local database file with some sample data, you can complete any of the walkthroughs that demonstrate database tasks.

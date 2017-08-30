@@ -1,104 +1,110 @@
 ---
-title: "[データ ソース] ウィンドウにカスタム コントロールを追加する | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.datasource.howtoaddcustomcontrol"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "[データ ソース] ウィンドウ、コントロールの追加"
-  - "コントロール [Visual Studio]、[データ ソース] ウィンドウへの追加"
-  - "DefaultBindingPropertyAttribute クラス、使用"
-  - "LookupBindingPropertiesAttribute クラス、使用"
-  - "ComplexBindingPropertiesAttribute クラス、使用"
-  - "[データ ソース] ウィンドウ、コントロールの選択"
+title: Add custom controls to the Data Sources window | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.datasource.howtoaddcustomcontrol
+helpviewer_keywords:
+- Data Sources Window, adding controls
+- controls [Visual Studio], adding to Data Sources Window
+- DefaultBindingPropertyAttribute class, using
+- LookupBindingPropertiesAttribute class, using
+- ComplexBindingPropertiesAttribute class, using
+- Data Sources Window, selecting controls
 ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
 caps.latest.revision: 42
-caps.handback.revision: 39
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: c8980eb2e7724112731e3b9fef75aa2c4521cbc0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# [データ ソース] ウィンドウにカスタム コントロールを追加する
-**\[データ ソース\]** ウィンドウからデザイン サーフェイスに項目をドラッグしてデータ バインド コントロールを作成するときに、作成するコントロールの種類を選択できます。  ウィンドウ内の各項目には、選択可能なコントロールを表示するドロップダウン リストがあります。  各項目に関連付けられる一連のコントロールは、項目のデータ型によって決まります。  作成するコントロールが一覧に表示されない場合は、このトピックの説明に従って一覧にコントロールを追加できます。  
+# <a name="add-custom-controls-to-the-data-sources-window"></a>Add custom controls to the Data Sources window
+When you drag an item from the **Data Sources** window to a design surface to create a data-bound control, you can select the type of control that you create. Each item in the window has a drop-down list that displays the controls that you can choose from. The set of controls associated with each item is determined by the data type of the item. If the control that you want to create does not appear in the list, you can follow the instructions in this topic to add the control to the list.  
   
- **\[データ ソース\]** ウィンドウ内の項目に対して作成するデータ バインド コントロールの選択方法の詳細については、「[\[データ ソース\] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../Topic/Set%20the%20control%20to%20be%20created%20when%20dragging%20from%20the%20Data%20Sources%20window.md)」を参照してください。  
+ For more information about selecting data-bound controls to create for items in the **Data Sources** window, see [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
   
 > [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。  設定を変更するには、**\[ツール\]** メニューの **\[設定のインポートとエクスポート\]** をクリックします。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  The dialog boxes and menu commands you see might differ from those described in Help, depending on your active settings or edition. To change your settings, on the **Tools** menu, select **Import and Export Settings**. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-##  <a name="customizinglist"></a> データ型のバインド可能なコントロールの一覧のカスタマイズ  
- **\[データ ソース\]** ウィンドウ内の特定のデータ型を持つ項目で利用できるコントロールの一覧にコントロールを追加または削除するには、次の手順を実行します。  
+##  <a name="customizinglist"></a> Customize the list of bindable controls for a data type  
+ To add or remove controls from the list of available controls for items in the **Data Sources** window that have a specific data type, perform the following steps.  
   
-#### データ型に一覧表示するコントロールを選択するには  
+#### <a name="to-select-the-controls-to-be-listed-for-a-data-type"></a>To select the controls to be listed for a data type  
   
-1.  WPF デザイナーまたは Windows フォーム デザイナーが開いていることを確認します。  
+1.  Make sure that the WPF Designer or the Windows Forms Designer is open.  
   
-2.  **\[データ ソース\]** ウィンドウで、ウィンドウに追加したデータ ソースの一部である項目をクリックし、その項目のドロップダウン メニューをクリックします。  
+2.  In the **Data Sources** window, click an item that is part of a data source you added to the window, and then click the drop-down menu for the item.  
   
-3.  ドロップダウン メニューで、**\[カスタマイズ\]** をクリックします。  次のいずれかのダイアログ ボックスが表示されます。  
+3.  In the drop-down menu, click **Customize**. One of the following dialog boxes opens:  
   
-    -   Windows フォーム デザイナーが開いている場合、**\[オプション\]** ダイアログ ボックスの **\[データ UI カスタマイズ\]** ページが表示されます。  
+    -   If the Windows Forms Designer is open, the **Data UI Customization** page of the **Options** dialog box opens.  
   
-    -   WPF デザイナーが開いている場合、**\[コントロールのバインドのカスタマイズ\]** ダイアログ ボックスが表示されます。  
+    -   If the WPF Designer is open, the **Customize Control Binding** dialog box opens.  
   
-4.  ダイアログ ボックスで、**\[データ型\]** ドロップダウン リストからデータ型を選択します。  
+4.  In the dialog box, select a data type from the **Data type** drop-down list.  
   
-    -   テーブルまたはオブジェクトのコントロールの一覧をカスタマイズするには、**\[リスト\]** をクリックします。  
+    -   To customize the list of controls for a table or object, select **[List]**.  
   
-    -   テーブルの列またはオブジェクトのプロパティのコントロールの一覧をカスタマイズするには、基になるデータ ストアの列またはプロパティのデータ型を選択します。  
+    -   To customize the list of controls for a column of a table or a property of an object, select the data type of the column or property in the underlying data store.  
   
-    -   ユーザー定義の形状を持つデータ オブジェクトを表示するようにコントロールの一覧をカスタマイズするには、**\[その他\]** をクリックします。  たとえば、特定のオブジェクトの複数のプロパティからデータを表示するカスタム コントロールをアプリケーションで使用している場合、**\[その他\]** をクリックします。  
+    -   To customize the list of controls to display data objects that have user-defined shapes, select **[Other]**. For example, select **[Other]** if your application has a custom control that displays data from more than one property of a particular object.  
   
-5.  **\[関連付けられたコントロール\]** ボックスで、選択したデータ型で利用できるようにするコントロールをそれぞれ選択するか、一覧から削除するコントロールの選択を解除します。  
-  
-    > [!NOTE]
-    >  選択するコントロールが **\[関連付けられたコントロール\]** ボックスに表示されていない場合は、一覧にコントロールを追加する必要があります。  詳細については、「[データ型に関連付けられたコントロールの一覧へのコントロールの追加](#addingcontrols)」を参照してください。  
-  
-6.  **\[OK\]** をクリックします。  
-  
-7.  **\[データ ソース\]** ウィンドウで、1 つ以上のコントロールを関連付けたデータ型の項目をクリックし、その項目のドロップダウン メニューをクリックします。  
-  
-     **\[関連付けられたコントロール\]** ボックスで選択したコントロールが、項目のドロップダウン メニューに表示されます。  
-  
-##  <a name="addingcontrols"></a> データ型に関連付けられたコントロールの一覧へのコントロールの追加  
- データ型にコントロールを関連付けたいが、そのコントロールが **\[関連付けられたコントロール\]** ボックスに表示されていない場合は、一覧にコントロールを追加する必要があります。  コントロールは、現在のソリューションまたは参照アセンブリに存在し、**ツールボックス**で利用でき、コントロールのデータ バインディング動作を指定する属性を備えている必要があります。  
-  
-#### 関連付けられたコントロールの一覧にコントロールを追加するには  
-  
-1.  **ツールボックス**を右クリックし、**\[アイテムの選択\]** を選択することにより、目的のコントロールを**ツールボックス**に追加します。  
-  
-     コントロールは、次のいずれかの属性を備えている必要があります。  
-  
-    |属性|説明|  
-    |--------|--------|  
-    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|単一のデータ列 \(またはプロパティ\) を表示する <xref:System.Windows.Forms.TextBox> のような簡単なコントロールに、この属性を実装します。|  
-    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|データの一覧 \(またはテーブル\) を表示する <xref:System.Windows.Forms.DataGridView> のようなコントロールに、この属性を実装します。|  
-    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|データの一覧 \(またはテーブル\) に加えて、単一の列またはプロパティを表示する必要もある <xref:System.Windows.Forms.ComboBox> のようなコントロールに、この属性を実装します。|  
-  
-2.  **\[オプション\]** ダイアログ ボックスの **\[データ UI カスタマイズ\]** ページを開くか \(Windows フォームの場合\)、**\[コントロールのバインドのカスタマイズ\]** ダイアログ ボックスを開きます \(WPF の場合\)。  詳細については、「[データ型のバインド可能なコントロールの一覧のカスタマイズ](#customizinglist)」を参照してください。  
-  
-3.  **\[関連付けられたコントロール\]** ボックスに、**ツールボックス**に追加したコントロールが表示されます。  
+5.  In the **Associated controls** box, select each control that you want to be available for the selected data type, or clear the selection of any controls that you want to remove from the list.  
   
     > [!NOTE]
-    >  現在のソリューションまたは参照アセンブリに存在するコントロール \(および前の表に示したデータ バインディング属性のいずれかを実装したコントロール\) だけを、関連付けられたコントロールの一覧に追加できます。   **\[データ ソース\]** ウィンドウで利用できないカスタム コントロールにデータをバインドするには、**ツールボックス**からデザイン サーフェイスにコントロールをドラッグし、バインド先の項目を **\[データ ソース\]** ウィンドウからコントロールにドラッグします。  
+    >  If the control that you want to select does not appear in the **Associated controls** box, you must add the control to the list. For more information, see [Adding Controls to the List of Associated Controls for a Data Type](#addingcontrols).  
   
-## 参照  
- [チュートリアル: Windows フォームでのデータの表示](../data-tools/walkthrough-displaying-data-on-a-windows-form.md)   
- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)   
- [データ ソースの概要](../data-tools/add-new-data-sources.md)   
- [\[データ ソース\] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../Topic/Set%20the%20control%20to%20be%20created%20when%20dragging%20from%20the%20Data%20Sources%20window.md)   
- [チュートリアル: 単純データ バインドをサポートする Windows フォーム ユーザー コントロールの作成](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md)   
- [チュートリアル: 複合データ バインドをサポートする Windows フォーム ユーザー コントロールの作成](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md)   
- [チュートリアル: 検索データ バインドをサポートする Windows フォーム ユーザー コントロールの作成](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md)   
- [\[コントロールのバインドのカスタマイズ\] ダイアログ ボックス](../Topic/Customize%20Control%20Binding%20Dialog%20Box.md)
+6.  Click **OK**.  
+  
+7.  In the **Data Sources** window, click an item of the data type that you just associated one or more controls, and then click the drop-down menu for the item.  
+  
+     The controls you selected in the **Associated controls** box now appear in the drop-down menu for the item.  
+  
+##  <a name="addingcontrols"></a> Addcontrols to the list of associated controls for a data type  
+ If you want to associate a control with a data type, but the control does not appear in the **Associated controls** box, you must add the control to the list. The control must be located in the current solution or in a referenced assembly. It must also be available in the **Toolbox**, and have an attribute that specifies the control's data binding behavior.  
+  
+#### <a name="to-add-controls-to-the-list-of-associated-controls"></a>To add controls to the list of associated controls  
+  
+1.  Add the desired control to the **Toolbox** by right-clicking the **Toolbox** and selecting **Choose Items**.  
+  
+     The control must have one of the following attributes.  
+  
+    |Attribute|Description|  
+    |---------------|-----------------|  
+    |<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Implement this attribute on simple controls that display a single column (or property) of data, such as a <xref:System.Windows.Forms.TextBox>.|  
+    |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Implement this attribute on controls that display lists (or tables) of data, such as a <xref:System.Windows.Forms.DataGridView>.|  
+    |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Implement this attribute on controls that display lists (or tables) of data, but also need to present a single column or property, such as a <xref:System.Windows.Forms.ComboBox>.|  
+  
+2.  For Windows Forms, on the      **Options** dialog box, open the **Data UI Customization** page. Or, for WPF, open the **Customize Control Binding** dialog box. For more information, see [Customizing the List of Bindable Controls for a Data Type](#customizinglist).  
+  
+3.  In the **Associated controls** box, the control that you just added to the **Toolbox** should now appear.  
+  
+    > [!NOTE]
+    >  Only controls that are located within the current solution or in a referenced assembly can be added to the list of associated controls. (The controls must also implement one of the data-binding attributes in the previous table.) To bind data to a custom control that is not available in the **Data Sources** window, drag the control from the **Toolbox** onto the design surface, and then drag the item to bind to from the **Data Sources** window onto the control.  
+  
+## <a name="see-also"></a>See Also  
+ [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)
