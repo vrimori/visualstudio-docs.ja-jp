@@ -84,7 +84,7 @@ Visual Studio でのネイティブ C モジュールのビルド、テスト、
 
 ### <a name="stepping-between-python-and-native-code"></a>Python とネイティブ コード間のステップ実行
 
-[ステップ イン] (F11) コマンドまたは [ステップ アウト] (Shift + F11 キー) コマンドを使用したとき、混合モードのデバッガーは、コードの種類の変更を正しく処理します。 たとえば、C で実装されている型のメソッドをPython で呼び出しているときに、そのメソッドへの呼び出しにステップ インすると、実行は、メソッドを実装しているネイティブ関数の先頭で停止します。 同様に、ネイティブ コードが Python API 関数を呼び出しているときは、呼び出されている Python コードで停止します。 たとえば、Python で定義された関数値の `PyObject_CallObject` にステップ インすると、Python 関数の先頭で停止します。 Python からネイティブへのステップ インは、Python から [ctypes](http://docs.python.org/3/library/ctypes.html) 経由で呼び出されるネイティブ関数でもサポートされています。
+[ステップ イン]\(F11) コマンドまたは [ステップ アウト]\(Shift + F11 キー) コマンドを使用したとき、混合モードのデバッガーは、コードの種類の変更を正しく処理します。 たとえば、C で実装されている型のメソッドをPython で呼び出しているときに、そのメソッドへの呼び出しにステップ インすると、実行は、メソッドを実装しているネイティブ関数の先頭で停止します。 同様に、ネイティブ コードが Python API 関数を呼び出しているときは、呼び出されている Python コードで停止します。 たとえば、Python で定義された関数値の `PyObject_CallObject` にステップ インすると、Python 関数の先頭で停止します。 Python からネイティブへのステップ インは、Python から [ctypes](http://docs.python.org/3/library/ctypes.html) 経由で呼び出されるネイティブ関数でもサポートされています。
 
 ### <a name="pyobject-values-view-in-native-code"></a>ネイティブ コード内の PyObject 値の表示
 
