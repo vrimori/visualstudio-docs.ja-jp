@@ -1,87 +1,100 @@
 ---
-title: "手順 6: 減算問題の追加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Step 6: Add a Subtraction Problem | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59204ef9-24bd-4f81-b85f-e3168e518a3e
 caps.latest.revision: 25
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# 手順 6: 減算問題の追加
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: d5323f8d6518992ebdb06c86c5931a556b7622a7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
-このチュートリアルの第 6 部では、減算問題を追加し、次のタスクを実行する方法を説明します。  
+---
+# <a name="step-6-add-a-subtraction-problem"></a>Step 6: Add a Subtraction Problem
+In the sixth part of this tutorial, you'll add a subtraction problem and learn how to perform the following tasks:  
   
--   減算の値を格納します。  
+-   Store the subtraction values.  
   
--   問題の乱数を生成します \(答えが 0 ～ 100 になるようにします\)。  
+-   Generate random numbers for the problem (and be sure that the answer is between 0 and 100).  
   
--   解答を確認するメソッドを更新して、新しい減算問題についても確認するようにします。  
+-   Update the method that checks the answers so that it checks the new subtraction problem too.  
   
--   タイマーの Tick イベント ハンドラーを、残り時間がなくなったら正しい答えを表示するように更新します。  
+-   Update your timer's Tick event handler so that the event handler fills in the correct answer when time runs out.  
   
-### 減算問題を追加するには  
+### <a name="to-add-a-subtraction-problem"></a>To add a subtraction problem  
   
-1.  減算問題の 2 つの整数変数をフォームの加算問題の整数変数とタイマーの間に追加します。  コードは次のようになります。  
+1.  Add two integer variables for the subtraction problem to your form, between the integer variables for the addition problem and the timer. The code should look like the following.  
   
-     [!code-vb[VbExpressTutorial3Step5_6#12](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_1.vb)]
-     [!code-cs[VbExpressTutorial3Step5_6#12](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_1.cs)]  
+     [!code-vb[VbExpressTutorial3Step5_6#12](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_1.vb)]  [!code-csharp[VbExpressTutorial3Step5_6#12](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_1.cs)]  
   
-     新しい整数変数の名前 \(**minuend** および **subtrahend**\) は、プログラミング用語ではありません。  これらは、減算する数値 \(subtrahend\/減数\) と減算される数値 \(minuend\/被減数\) を表す従来の数学用語です。  被減数から減数を引いたものが差になります。  変数、コントロール、コンポーネント、またはメソッドの名前を特定の名前にするようにプログラムで制限されているわけではないため、別の名前を使用することもできます。  名前の先頭を数字にすることはできないなどの規則に従う必要はありますが、一般に、x1、x2、x3、x4 などの名前を使用できます。  ただし、汎用名はコードを読み取りにくくし、問題の追跡がほとんど不可能になります。  変数名を一意で役立つようにしておくために、このチュートリアルでは乗算 \(被乗数 × 乗数 \= 積\) および除算 \(被除数 ÷ 除数 \= 商\) についても従来の名前を使用します。  
+     The names of the new integer variables—**minuend** and **subtrahend**—aren't programming terms. They're the traditional names in arithmetic for the number that's being subtracted (the subtrahend) and the number from which the subtrahend is being subtracted (the minuend). The difference is the minuend minus the subtrahend. You could use other names, because your program doesn't require specific names for variables, controls, components, or methods. You must follow rules such as not starting names with digits, but you can generally use names such as x1, x2, x3, and x4. However, generic names make code difficult to read and problems nearly impossible to track down. To keep variable names unique and helpful, you'll use the traditional names for multiplication (multiplicand × multiplier = product) and division (dividend ÷ divisor = quotient) later in this tutorial.  
   
-     次に、`StartTheQuiz()` メソッドを変更して減算問題に乱数値を提供します。  
+     Next, you'll modify the `StartTheQuiz()` method to provide random values for the subtraction problem.  
   
-2.  "Fill in the subtraction problem" というコメントの後に次のコードを追加します。  
+2.  Add the following code after the "Fill in the subtraction problem" comment.  
   
-     [!code-vb[VbExpressTutorial3Step5_6#13](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_2.vb)]
-     [!code-cs[VbExpressTutorial3Step5_6#13](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_2.cs)]  
+     [!code-vb[VbExpressTutorial3Step5_6#13](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_2.vb)]  [!code-csharp[VbExpressTutorial3Step5_6#13](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_2.cs)]  
   
-     減算問題の解答が負にならないように、このコードでは、加算問題とは少し異なる方法で `Random` クラスの `Next()` メソッドを使用します。  `Next()` メソッドに 2 つの値を指定した場合、最初の値以上で 2 番目の値未満の乱数が選択されます。  次のコードでは、1 ～ 100 の乱数が選択され、minuend 変数に格納されます。  
+     To prevent negative answers for the subtraction problem, this code uses the `Next()` method of the `Random` class a little differently from how the addition problem does. When you give the `Next()` method two values, it picks a random number that's greater than or equal to the first value and less than the second one. The following code chooses a random number from 1 through 100 and stores it in the minuend variable.  
   
-     [!code-vb[VbExpressTutorial3Step5_6#21](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_3.vb)]
-     [!code-cs[VbExpressTutorial3Step5_6#21](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_3.cs)]  
+     [!code-vb[VbExpressTutorial3Step5_6#21](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_3.vb)]  [!code-csharp[VbExpressTutorial3Step5_6#21](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_3.cs)]  
   
-     複数の方法で、このチュートリアルで前に randomizer と名付けた、`Random` クラスの `Next()` メソッドを呼び出すことができます。  複数の方法で呼び出すことができるメソッドをオーバーロード メソッドと呼び、IntelliSense を使用して確認することができます。  `Next()` メソッドについての IntelliSense ウィンドウのツールヒントをもう一度見てください。  
+     You can call the `Next()` method of the `Random` class, which you named "randomizer" earlier  in this tutorial, in multiple ways. Methods that you can call in more than one way are referred to as overloaded, and you can use IntelliSense to explore them. Look again at the tooltip of the IntelliSense window for the `Next()` method.  
   
-     ![IntelliSense ウィンドウのツールヒント](~/ide/media/express_overloads.png "Express\_Overloads")  
-IntelliSense ウィンドウのツールヒント  
+     ![Intellisense window tooltip](../ide/media/express_overloads.png "Express_Overloads")  
+Intellisense window tooltip  
   
-     ツールヒントには **"\(\+ 2 オーバーロード\)"** と表示され、これは他の 2 つの方法で `Next()` メソッドを呼び出せることを意味します。  オーバーロードには、異なる数または型の引数が含まれていて、互いに動作が若干異なります。  たとえば、オーバーロードの 1 つは整数と文字列を受け取ることがありますが、メソッドは単一の整数引数を受け取ることがあります。  目的に基づいて適切なオーバーロードを選択します。  `StartTheQuiz()` メソッドにコードを追加すると、`randomizer.Next(` を入力するとすぐに、詳細情報が IntelliSense ウィンドウに表示されます。  上矢印キーおよび下矢印キーを押すと、次の図に示すように、別のオーバーロードに切り替わります。  
+     The tooltip shows **(+ 2 overload(s))**, which means that you can call the `Next()` method in two other ways. Overloads contain different numbers or types of arguments, so that they work slightly differently from one another. For example, a method might take a single integer argument, whereas one of its overloads might take an integer and a string. You choose the correct overload based on what you want it to do. When you add the code to the `StartTheQuiz()` method, more information appears in the Intellisense window as soon as you enter `randomizer.Next(`. Choose the Up Arrow and Down Arrow keys to cycle through the overloads, as the following illustration shows.  
   
-     ![IntelliSense 内での Next&#40;&#41; メソッドのオーバーライド](~/ide/media/express_nextoverload.png "Express\_NextOverload")  
-IntelliSense での Next\(\) メソッドのオーバーロード  
+     ![Overload for Next&#40;&#41; method in IntelliSense](../ide/media/express_nextoverload.png "Express_NextOverload")  
+Overload for Next() method in IntelliSense  
   
-     この場合、最小値と最大値を指定できるため、最後のオーバーロードを選択する必要があります。  
+     In this case, you want to choose the last overload, because you can specify minimum and maximum values.  
   
-3.  `CheckTheAnswer()` メソッドを、減算の答えが正しいかどうかを確認するように変更します。  
+3.  Modify the `CheckTheAnswer()` method to check for the correct subtraction answer.  
   
-     [!code-vb[VbExpressTutorial3Step5_6#14](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_4.vb)]
-     [!code-cs[VbExpressTutorial3Step5_6#14](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_4.cs)]  
+     [!code-vb[VbExpressTutorial3Step5_6#14](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_4.vb)]  [!code-csharp[VbExpressTutorial3Step5_6#14](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_4.cs)]  
   
-     Visual C\# では、`&&` は `logical and` 演算子です。  Visual Basic でこれに相当する演算子は `AndAlso` です。  これらの演算子は、"addend1 と addend2 の合計が sum NumericUpDown の値と等しい場合、かつ minuend から subtrahend を引いた値が difference NumericUpDown の値と等しい場合" ということを示しています。 `CheckTheAnswer()` メソッドは、加算問題と減算問題の両方に正解した場合にのみ `true` を返します。  
+     In Visual C#, `&&` is the `logical and` operator. In Visual Basic, the equivalent operator is `AndAlso`. These operators indicate "If the sum of addend1 and addend2 equals the value of the sum NumericUpDown and if minuend minus subtrahend equals the value of the difference NumericUpDown." The `CheckTheAnswer()` method returns `true` only if the answers to the addition and the subtraction problems are both correct.  
   
-4.  タイマーの Tick イベント ハンドラーの最後の部分を次のコードで置き換えて、残り時間がなくなったら正しい解答を表示するようにします。  
+4.  Replace the last part of the timer's Tick event handler with the following code so that it fills in the correct answer when time runs out.  
   
-     [!code-vb[VbExpressTutorial3Step5_6#22](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_5.vb)]
-     [!code-cs[VbExpressTutorial3Step5_6#22](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_5.cs)]  
+     [!code-vb[VbExpressTutorial3Step5_6#22](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_5.vb)]  [!code-csharp[VbExpressTutorial3Step5_6#22](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_5.cs)]  
   
-5.  コードを保存し、実行します。  
+5.  Save and run your code.  
   
-     プログラムには、次の図に示すように減算問題が含まれます。  
+     Your program includes a subtraction problem, as the following illustration shows.  
   
-     ![減算の問題のある計算クイズ](../ide/media/express_addsubtract.png "Express\_AddSubtract")  
-減算問題が表示された計算クイズ  
+     ![Math quiz with subtraction problem](../ide/media/express_addsubtract.png "Express_AddSubtract")  
+Math quiz with subtraction problem  
   
-### 続行または確認するには  
+### <a name="to-continue-or-review"></a>To continue or review  
   
--   チュートリアルの次の手順に進むには、「[手順 7: 乗算問題と除算問題の追加](../Topic/Step%207:%20Add%20Multiplication%20and%20Division%20Problems.md)」を参照してください。  
+-   To go to the next tutorial step, see [Step 7: Add Multiplication and Division Problems](../ide/step-7-add-multiplication-and-division-problems.md).  
   
--   チュートリアルの前の手順に戻るには、「[手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加](../Topic/Step%205:%20Add%20Enter%20Event%20Handlers%20for%20the%20NumericUpDown%20Controls.md)」を参照してください。
+-   To return to the previous tutorial step, see [Step 5: Add Enter Event Handlers for the NumericUpDown Controls](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md).

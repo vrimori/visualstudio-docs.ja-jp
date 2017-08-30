@@ -1,101 +1,104 @@
 ---
-title: "方法 : ワークシートに ListObject コントロールを追加する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ListObject コントロール、追加 (ワークシートに)"
-  - "コントロール [Visual Studio での Office 開発]、追加 (ワークシートに)"
+title: 'How to: Add ListObject Controls to Worksheets | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- ListObject control, adding to worksheets
+- controls [Office development in Visual Studio], adding to worksheets
 ms.assetid: 40788ecb-937f-4d2a-90ba-9c938e495b74
 caps.latest.revision: 44
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 43
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 86c5bef09fb2b40deb5ab914b2e94e23d0ffe91a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法 : ワークシートに ListObject コントロールを追加する
-  ドキュメント レベルのプロジェクトでは、デザイン時および実行時に、<xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを Microsoft Office Excel ワークシートに追加できます。  
+# <a name="how-to-add-listobject-controls-to-worksheets"></a>How to: Add ListObject Controls to Worksheets
+  You can add <xref:Microsoft.Office.Tools.Excel.ListObject> controls to a Microsoft Office Excel worksheet at design time and at run time in document-level projects.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- VSTO アドイン プロジェクトでも、実行時に <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを追加できます。  
+ You can also add <xref:Microsoft.Office.Tools.Excel.ListObject> controls at run time in VSTO Add-in projects.  
   
- このトピックでは、次のタスクについて説明します。  
+ This topic describes the following tasks:  
   
--   [デザイン時の ListObject コントロールの追加](#designtime)  
+-   [Adding ListObject controls at design time](#designtime)  
   
--   [ドキュメント レベルのプロジェクトで、ListObject コントロールを実行時に追加する](#runtimedoclevel)  
+-   [Adding ListObject controls at run time in a document-level project](#runtimedoclevel)  
   
--   [VSTO アドイン プロジェクトで、ListObject コントロールを実行時に追加する](#runtimeaddin)  
+-   [Adding ListObject controls at run time in an VSTO Add-in project](#runtimeaddin)  
   
- <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールの詳細については、「[ListObject コントロール](../vsto/listobject-control.md)」を参照してください。  
+ For more information about <xref:Microsoft.Office.Tools.Excel.ListObject> controls, see [ListObject Control](../vsto/listobject-control.md).  
   
-##  <a name="designtime"></a> デザイン時の ListObject コントロールの追加  
- デザイン時にドキュメント レベルのプロジェクトのワークシートに <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを追加する方法として、Excel から行う方法、Visual Studio の**ツールボックス**から行う方法、および **\[データ ソース\]** ウィンドウから行う方法があります。  
+##  <a name="designtime"></a> Adding ListObject Controls at Design Time  
+ There are several ways to add <xref:Microsoft.Office.Tools.Excel.ListObject> controls to a worksheet in a document-level project at design time: From within Excel, from the Visual Studio **Toolbox**, and from the **Data Sources** window.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-#### Excel のリボンを使用するには  
+#### <a name="to-use-the-ribbon-in-excel"></a>To use the Ribbon in Excel  
   
-1.  **\[挿入\]** タブの **\[テーブル\]** グループで、**\[テーブル\]** をクリックします。  
+1.  On the **Insert** tab, in the **Tables** group, click **Table**.  
   
-2.  リストに含める 1 つ以上のセルを選択し、**\[OK\]** をクリックします。  
+2.  Select the cell or cells you want to include in the list and click **OK**.  
   
-#### ツールボックスを使用するには  
+#### <a name="to-use-the-toolbox"></a>To use the Toolbox  
   
-1.  **ツールボックス**の **\[Excel コントロール\]** タブからワークシートまで <xref:Microsoft.Office.Tools.Excel.ListObject> をドラッグします。  
+1.  From the **Excel Controls** tab of the **Toolbox**, drag a <xref:Microsoft.Office.Tools.Excel.ListObject> to the worksheet.  
   
-     **\[ListObject コントロールの追加\]** ダイアログ ボックスが表示されます。  
+     The **Add ListObject Control** dialog box appears.  
   
-2.  リストに含める 1 つ以上のセルを選択し、**\[OK\]** をクリックします。  
+2.  Select the cell or cells you want to include in the list and click **OK**.  
   
-     名前を既定のままにしない場合は、**\[プロパティ\]** ウィンドウで変更します。  
+     If you do not want to keep the default name, you can change the name in the **Properties** window.  
   
-#### \[データ ソース\] ウィンドウを使用するには  
+#### <a name="to-use-the-data-sources-window"></a>To use the Data Sources window  
   
-1.  **\[データ ソース\]** ウィンドウを開いて、プロジェクトのデータ ソースを作成します。 詳細については、「[方法 : データベース内のデータに接続する](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Database.md)」を参照してください。  
+1.  Open the **Data Sources** window and create a data source for your project. For more information, see [Add new connections](../data-tools/add-new-connections.md).  
   
-2.  **\[データ ソース\]** ウィンドウからワークシートまでテーブルをドラッグします。  
+2.  Drag a table from the **Data Sources** window to your worksheet.  
   
-     データがバインドされた <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールがワークシートに追加されます。 詳細については、「[データ連結と Windows フォーム](../Topic/Data%20Binding%20and%20Windows%20Forms.md)」を参照してください。  
+     A data-bound <xref:Microsoft.Office.Tools.Excel.ListObject> control is added to the worksheet. For more information, see [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms).  
   
-##  <a name="runtimedoclevel"></a> ドキュメント レベルのプロジェクトで、ListObject コントロールを実行時に追加する  
- 実行時に <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを動的に追加できます。 この方法を使用すると、イベントに応答してホスト コントロールを作成できます。 動的に作成されたリスト オブジェクトは、ワークシートを閉じる際に、ホスト コントロールとしてワークシートに残りません。 詳細については、「[実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+##  <a name="runtimedoclevel"></a> Adding ListObject Controls at Run Time in a Document-Level Project  
+ You can add the <xref:Microsoft.Office.Tools.Excel.ListObject> control dynamically at run time. This enables you to create the host controls in response to events. Dynamically created list objects are not persisted in the worksheet as host controls when the worksheet is closed. For more information, see [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md).  
   
-#### プログラムを使用してワークシートに ListObject コントロールを追加するには  
+#### <a name="to-add-a-listobject-control-to-a-worksheet-programmatically"></a>To add a ListObject control to a worksheet programmatically  
   
-1.  `Sheet1` の <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> イベント ハンドラーに以下のコードを挿入して、<xref:Microsoft.Office.Tools.Excel.ListObject> コントロールをセル **A1** ～ **A4** に追加します。  
+1.  In the <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> event handler of `Sheet1`, insert the following code to add a <xref:Microsoft.Office.Tools.Excel.ListObject> control to cells **A1** through **A4**.  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/CS/Sheet1.cs#2)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/VB/Sheet1.vb#2)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#2)]  [!code-vb[Trin_VstcoreHostControlsExcel#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#2)]  
   
-##  <a name="runtimeaddin"></a> VSTO アドイン プロジェクトで、ListObject コントロールを実行時に追加する  
- プログラムによって <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを VSTO アドイン プロジェクトの任意の開いているワークシートに追加できます。 動的に作成されたリスト オブジェクトは、ワークシートを保存して閉じる際に、ホスト コントロールとしてワークシートに残りません。 詳細については、「[VSTO アドインにおける実行時の Word 文書と Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)」を参照してください。  
+##  <a name="runtimeaddin"></a> Adding ListObject Controls at Run Time in an VSTO Add-in project  
+ You can add a <xref:Microsoft.Office.Tools.Excel.ListObject> control programmatically to any open worksheet in an VSTO Add-in project. Dynamically created list objects are not persisted in the worksheet as host controls when the worksheet is saved and then closed. For more information, see [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
   
-#### プログラムを使用してワークシートに ListObject コントロールを追加するには  
+#### <a name="to-add-a-listobject-control-to-a-worksheet-programmatically"></a>To add a ListObject control to a worksheet programmatically  
   
-1.  次のコードでは、開いているワークシートに基づいたワークシート ホスト項目を生成し、<xref:Microsoft.Office.Tools.Excel.ListObject> コントロールをセル **A1** ～ **A4** に追加します。  
+1.  The following code generates a worksheet host item that is based on the open worksheet, and then adds a <xref:Microsoft.Office.Tools.Excel.ListObject> control to cells **A1** through **A4**.  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#8](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/CS/ThisAddIn.cs#8)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#8](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/VB/ThisAddIn.vb#8)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#8](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#8)]  [!code-vb[Trin_Excel_Dynamic_Controls#8](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#8)]  
   
-## 参照  
- [VSTO アドインにおける実行時の Word 文書と Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
- [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
- [ListObject コントロール](../vsto/listobject-control.md)   
- [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
- [方法 : ListObject コントロールのサイズを変更する](../vsto/how-to-resize-listobject-controls.md)   
- [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
+## <a name="see-also"></a>See Also  
+ [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
+ [Controls on Office Documents](../vsto/controls-on-office-documents.md)   
+ [ListObject Control](../vsto/listobject-control.md)   
+ [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [How to: Resize ListObject Controls](../vsto/how-to-resize-listobject-controls.md)   
+ [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
   
   

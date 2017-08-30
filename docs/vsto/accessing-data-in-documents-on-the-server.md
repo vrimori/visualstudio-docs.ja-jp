@@ -1,86 +1,89 @@
 ---
-title: "サーバー上のドキュメント内のデータへのアクセス"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "データ [Visual Studio での Office 開発], アクセス (サーバーで)"
-  - "データ アクセス [Visual Studio での Office 開発]"
+title: Accessing Data in Documents on the Server | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data [Office development in Visual Studio], accessing on server
+- data access [Office development in Visual Studio]
 ms.assetid: 14a42e96-ed2f-48a1-a0c0-e19f9eba4956
 caps.latest.revision: 32
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 31
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 2e40f5a2c4daa058dfdff06354904dc3a8a0a4fe
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# サーバー上のドキュメント内のデータへのアクセス
-  Microsoft Office Word または Microsoft Office Excel のオブジェクト モデルを使用しなくても、ドキュメント レベルのカスタマイズ内のデータに対してプログラムを作成できます。  これは、Word または Excel がインストールされていないサーバー上のドキュメントに含まれているデータにアクセスできることを意味します。  たとえば、\([!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] ページ内の\) サーバー上のコードは、ドキュメント内のデータをカスタマイズし、カスタマイズされたドキュメントをエンド ユーザーに送信できます。  エンド ユーザーがドキュメントを開くと、ソリューション アセンブリのデータ バインディング コードが、カスタマイズされたデータをドキュメントにバインドします。  これが可能なのは、ドキュメント内のデータがユーザー インターフェイスから切り離されているためです。  詳細については、「[ドキュメント レベルのカスタマイズのキャッシュ データ](../vsto/cached-data-in-document-level-customizations.md)」を参照してください。  
+# <a name="accessing-data-in-documents-on-the-server"></a>Accessing Data in Documents on the Server
+  You can program against the data in a document-level customization without having to use the object model of Microsoft Office Word or Microsoft Office Excel. This means that you can access data that is contained in a document on a server that does not have Word or Excel installed. For example, code on a server (for instance, in an [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] page) can customize the data in a document and send the customized document to an end user. When the end user opens the document, data binding code in the solution assembly binds the customized data into the document. This is possible because the data in the document is separated from the user interface. For more information, see [Cached Data in Document-Level Customizations](../vsto/cached-data-in-document-level-customizations.md).  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
-## サーバー上で使用するデータのキャッシュ  
- ドキュメント内のデータ オブジェクトをキャッシュするには、デザイン時にそのオブジェクトを <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 属性でマークするか、または実行時にホスト項目の `StartCaching` メソッドを使用します。  ドキュメント内のデータ オブジェクトをキャッシュするとき、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、ドキュメントに格納されている XML 文字列にオブジェクトをシリアル化します。  オブジェクトをキャッシュするには、オブジェクトが特定の要件を満たしている必要があります。  詳細については、「[キャッシュされたデータ](../vsto/caching-data.md)」を参照してください。  
+## <a name="caching-data-for-use-on-a-server"></a>Caching Data for Use on a Server  
+ To cache a data object in a document, mark it with the <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> attribute at design time, or use the `StartCaching` method of a host item at run time. When you cache a data object in a document, the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] serializes the object into an XML string that is stored in the document. Objects must meet certain requirements to be eligible for caching. For more information, see [Caching Data](../vsto/caching-data.md).  
   
- サーバー側のコードは、データ キャッシュ内の任意のデータ オブジェクトを操作できます。  キャッシュされたデータ インスタンスにバインドされているコントロールはユーザー インターフェイスに同期しており、データに加えられるサーバー側のすべての変更は、クライアント上でドキュメントを開くときに自動的に反映されます。  
+ Server-side code can manipulate any data objects in the data cache. Controls that are bound to cached data instances are synchronized with the user interface, so that any server-side changes that are made to the data show up automatically when the document is opened on the client.  
   
-## キャッシュ内のデータへのアクセス  
- コンソール アプリケーション、Windows フォーム アプリケーション、Web ページなど、Office 以外のアプリケーションからキャッシュ内のデータにアクセスできます。  キャッシュされたデータにアクセスするアプリケーションは、完全に信頼されている必要があります。部分信頼の Web アプリケーションは、Office ドキュメントにキャッシュされたデータを挿入、取得、または変更できません。  
+## <a name="accessing-data-in-the-cache"></a>Accessing Data in the Cache  
+ You can access data in the cache from applications outside of Office, for example from a console application, a Windows Forms application, or a Web page. The application that accesses the cached data must have full trust; a Web application that has partial trust cannot insert, retrieve, or change data that is cached in an Office document.  
   
- データ キャッシュには、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> クラスの <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> プロパティによって公開されるコレクションの階層からアクセスできます。  
+ The data cache is accessible through a hierarchy of collections that are exposed by the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> property of the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class:  
   
--   <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> プロパティは、ドキュメント レベルのカスタマイズのキャッシュされたすべてのデータを含む <xref:Microsoft.VisualStudio.Tools.Applications.CachedData> を返します。  
+-   The <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> property returns a <xref:Microsoft.VisualStudio.Tools.Applications.CachedData>, which contains all of the cached data in a document-level customization.  
   
--   各 <xref:Microsoft.VisualStudio.Tools.Applications.CachedData> には、1 つ以上の <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem> オブジェクトが含まれます。  <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem> には、1 つのクラス内で定義されている、キャッシュされたデータ オブジェクトがすべて含まれます。  
+-   Each <xref:Microsoft.VisualStudio.Tools.Applications.CachedData> contains one or more <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem> objects. A <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem> contains all of the cached data objects that are defined within a single class.  
   
--   各 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem> には、1 つ以上の <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> オブジェクトが含まれます。  <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> は、1 つのキャッシュされたデータ オブジェクトを表します。  
+-   Each <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem> contains one or more <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> objects. A <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> represents a single cached data object.  
   
- 次のコード例は、Excel ブック プロジェクトの `Sheet1` クラス内のキャッシュされた文字列にアクセスする方法を示しています。  この例は、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> メソッドのトピックで提供されているコード例の一部分です。  
+ The following code example demonstrates how to access a cached string in the `Sheet1` class of an Excel workbook project. This example is part of a larger example that is provided for the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> method.  
   
- [!code-csharp[Trin_ServerDocument#12](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#12)]
- [!code-vb[Trin_ServerDocument#12](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#12)]  
+ [!code-csharp[Trin_ServerDocument#12](../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs#12)] [!code-vb[Trin_ServerDocument#12](../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb#12)]  
   
-## キャッシュ内のデータの変更  
- キャッシュされたデータ オブジェクトを変更するには、通常、次の操作を行います。  
+## <a name="modifying-data-in-the-cache"></a>Modifying Data in the Cache  
+ To modify a cached data object, you typically perform the following steps:  
   
-1.  キャッシュされたオブジェクトの XML 表現をオブジェクトの新しいインスタンスに逆シリアル化します。  XML にアクセスするには、キャッシュされたデータ オブジェクトを表す <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> の <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A> プロパティを使用します。  
+1.  Deserialize the XML representation of the cached object into a new instance of the object. You can access the XML by using the <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A> property of the <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> that represents the cached data object.  
   
-2.  このコピーに対して変更を加えます。  
+2.  Make the changes to this copy.  
   
-3.  次のいずれかの方法を使用して、変更を加えたオブジェクトをデータ キャッシュにシリアル化します。  
+3.  Serialize the changed object back into the data cache by using one of the following options:  
   
-    -   変更を自動的にシリアル化する場合は、<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A> メソッドを使います。  このメソッドでは、データ キャッシュ内の <xref:System.Data.DataSet>、<xref:System.Data.DataTable>、および型指定されたデータセット オブジェクトをシリアル化するために **DiffGram** 形式を使用します。  **DiffGram** 形式により、オフライン ドキュメントのデータ キャッシュに対する変更がサーバーに正しく送信されるようになります。  
+    -   If you want to automatically serialize the changes, use the <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A> method. This method uses the **DiffGram** format for serializing <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, and typed dataset objects in the data cache. The **DiffGram** format ensures that changes to the data cache in an offline document are sent to the server correctly.  
   
-    -   キャッシュされたデータの変更に対して独自のシリアル化を実行する場合は、<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A> プロパティに直接書き込むことができます。  <xref:System.Data.Common.DataAdapter> を使用し、<xref:System.Data.DataSet>、<xref:System.Data.DataTable>、または型指定されたデータセット内のデータに対して行われた変更でデータベースを更新する場合は、**DiffGram** 形式を指定します。  それ以外の場合は、既存の行を変更するのではなく新しい行を追加することによって、<xref:System.Data.Common.DataAdapter> がデータベースを更新します。  
+    -   If you want to perform your own serialization for changes to cached data, you can write directly to the <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A> property. Specify the **DiffGram** format if you use a <xref:System.Data.Common.DataAdapter> to update a database with changes made to data in a <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, or typed dataset. Otherwise, the <xref:System.Data.Common.DataAdapter> will update the database by adding new rows instead of modifying existing rows.  
   
-### 現在の値を逆シリアル化せずにデータを変更する  
- 状況に応じて、現在の値を最初に逆シリアル化せずにキャッシュされたオブジェクトの値を変更することが必要になる場合があります。  たとえば、単純型 \(たとえば文字列や整数\) のオブジェクトの値を変更する場合やサーバー上のドキュメントのキャッシュされた <xref:System.Data.DataSet> を初期化する場合に、この操作を行います。  この場合、キャッシュされたオブジェクトの現在の値を最初に逆シリアル化することなく <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A> メソッドを使用できます。  
+### <a name="modifying-data-without-deserializing-the-current-value"></a>Modifying Data Without Deserializing the Current Value  
+ In some cases, you might want to modify the value of the cached object without first deserializing the current value. For example, you can do this if you are changing the value of an object that has a simple type, such as a string or integer, or if you are initializing a cached <xref:System.Data.DataSet> in a document on a server. In these cases, you can use the <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A> method without first deserializing the current value of the cached object.  
   
- 次のコード例は、Excel ブック プロジェクトの `Sheet1` クラス内のキャッシュされた文字列の値を変更する方法を示しています。  この例は、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> メソッドのトピックで提供されているコード例の一部分です。  
+ The following code example demonstrates how to change the value of a cached string in the `Sheet1` class of an Excel workbook project. This example is part of a larger example that is provided for the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> method.  
   
- [!code-csharp[Trin_ServerDocument#11](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ServerDocument/CS/Form1.cs#11)]
- [!code-vb[Trin_ServerDocument#11](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ServerDocument/VB/Form1.vb#11)]  
+ [!code-csharp[Trin_ServerDocument#11](../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs#11)] [!code-vb[Trin_ServerDocument#11](../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb#11)]  
   
-### データ キャッシュ内の null 値の変更  
- データ キャッシュは、ドキュメントを保存するときおよび閉じるときに **null** 値を含むオブジェクトを格納しません。  この制限から、キャッシュされたデータを変更すると、次のような動作が発生します。  
+### <a name="modifying-null-values-in-the-data-cache"></a>Modifying Null Values in the Data Cache  
+ The data cache does not store objects that have the value **null** when the document is saved and closed. This limitation has several consequences when you modify cached data:  
   
--   データ キャッシュ内のいずれかのオブジェクトを **null** 値に設定した場合、ドキュメントを開いたときにデータ キャッシュ内のすべてのオブジェクトが自動的に **null** に設定され、ドキュメントを保存したときおよび閉じたときにデータ キャッシュ全体が消去されます。  つまり、キャッシュされたすべてのオブジェクトがデータ キャッシュから削除され、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> コレクションが空になります。  
+-   If you set any object in the data cache to the value **null**, all of the objects in the data cache will be automatically set to **null** when the document is opened, and the entire data cache will be cleared when the document is saved and closed. That is, all of the cached objects will be removed from the data cache, and the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> collection will be empty.  
   
--   データ キャッシュ内の **null** オブジェクトを使用してソリューションをビルドし、ドキュメントが初めて開かれる前に <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> クラスを使用してこれらのオブジェクトを初期化する場合は、データ キャッシュ内のすべてのオブジェクトを初期化する必要があります。  一部のオブジェクトのみを初期化した場合、ドキュメントを開いたときにすべてのオブジェクトが **null** に設定され、ドキュメントを保存したときおよび閉じたときにデータ キャッシュ全体が消去されます。  
+-   If you build a solution with **null** objects in the data cache and you want to initialize these objects by using the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class before the document is opened for the first time, you must ensure that you initialize all of the objects in the data cache. If you initialize only some of the objects, all of the objects will be set to **null** when the document is opened, and the entire data cache will be cleared when the document is saved and closed.  
   
-## キャッシュ内の型指定されたデータセットへのアクセス  
- Office ソリューションと、Windows フォーム アプリケーションや [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] プロジェクトなどの Office 以外のアプリケーションの両方から、型指定されたデータセット内のデータにアクセスする場合は、両方のプロジェクトで参照される各アセンブリで型指定されたデータセットを定義する必要があります。  **データ ソース構成ウィザード**または**データセット デザイナー**を使用して、型指定されたデータセットを各プロジェクトに追加すると、.NET Framework では、2 つのプロジェクト内の型指定されたデータセットの型が異なっていると見なされます。  型指定されたデータセットの作成の詳細については、「[方法 : 型指定されたデータセットを作成する](../Topic/Creating%20and%20configuring%20datasets%20in%20Visual%20Studio.md)」を参照してください。  
+## <a name="accessing-typed-datasets-in-the-cache"></a>Accessing Typed Datasets in the Cache  
+ If you want to access the data in a typed dataset both from an Office solution and from an application outside of Office, such as a Windows Forms application or an [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] project, you must define the typed dataset in a separate assembly that is referenced in both projects. If you add the typed dataset to each project by using the **Data Source Configuration Wizard** or the **Dataset Designer**, the .NET Framework will treat the typed datasets in the two projects as different types. For more information about creating typed datasets, see [Create and configure datasets in Visual Studio](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)   
- [ドキュメント レベルのカスタマイズのキャッシュ データ](../vsto/cached-data-in-document-level-customizations.md)  
+ [Cached Data in Document-Level Customizations](../vsto/cached-data-in-document-level-customizations.md)  
   
   

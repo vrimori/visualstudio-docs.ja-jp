@@ -1,41 +1,59 @@
 ---
-title: "CA1010: コレクションは、ジェネリック インターフェイスを実装しなければなりません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1010"
-  - "CollectionsShouldImplementGenericInterface"
-helpviewer_keywords: 
-  - "CA1010"
-  - "CollectionsShouldImplementGenericInterface"
+title: 'CA1010: Collections should implement generic interface | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1010
+- CollectionsShouldImplementGenericInterface
+helpviewer_keywords:
+- CA1010
+- CollectionsShouldImplementGenericInterface
 ms.assetid: c7d7126f-fa70-40be-8f93-3243e1760dc5
 caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 24
----
-# CA1010: コレクションは、ジェネリック インターフェイスを実装しなければなりません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4fa28f832773e41ee976cba7ba26494231cfd6ba
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1010-collections-should-implement-generic-interface"></a>CA1010: Collections should implement generic interface
 |||  
 |-|-|  
 |TypeName|CollectionsShouldImplementGenericInterface|  
 |CheckId|CA1010|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## 原因  
- 外部から参照可能な型は、<xref:System.Collections.IEnumerable?displayProperty=fullName> インターフェイスを実装していますが、<xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> インターフェイスを実装していません。また、包含アセンブリが [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] を対象としています。  この規則は、<xref:System.Collections.IDictionary?displayProperty=fullName> を実装する型を無視します。  
+## <a name="cause"></a>Cause  
+ An externally visible type implements the <xref:System.Collections.IEnumerable?displayProperty=fullName> interface but does not implement the <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> interface, and the containing assembly targets [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]. This rule ignores types that implement <xref:System.Collections.IDictionary?displayProperty=fullName>.  
   
-## 規則の説明  
- コレクションの操作性を拡充するために、ジェネリック コレクション インターフェイスの 1 つを実装します。  次に、コレクションを使用して、次のようなジェネリック コレクション型を設定できます。  
+## <a name="rule-description"></a>Rule Description  
+ To broaden the usability of a collection, implement one of the generic collection interfaces. Then the collection can be used to populate generic collection types such as the following:  
   
 -   <xref:System.Collections.Generic.List%601?displayProperty=fullName>  
   
@@ -43,8 +61,8 @@ caps.handback.revision: 24
   
 -   <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>  
   
-## 違反の修正方法  
- この規則違反を修正するには、次のジェネリック コレクション インターフェイスの 1 つを実装します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, implement one of the following generic collection interfaces:  
   
 -   <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>  
   
@@ -52,53 +70,53 @@ caps.handback.revision: 24
   
 -   <xref:System.Collections.Generic.IList%601?displayProperty=fullName>  
   
-## 警告を抑制する状況  
- この規則による警告を抑制しても安全ですが、コレクションの用途が限定されます。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule; however, the collection will have a more limited use.  
   
-## 違反例  
+## <a name="example-violation"></a>Example Violation  
   
-### 説明  
- この規則に違反する例として、非ジェネリック `CollectionBase` クラスから派生したクラス \(参照型\) を次に示します。  
+### <a name="description"></a>Description  
+ The following example shows a class (reference type) that derives from the non-generic `CollectionBase` class, which violates this rule.  
   
-### コード  
- [!code-cs[FxCop.Design.CollectionsGenericViolation#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_1.cs)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.CollectionsGenericViolation#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_1.cs)]  
   
-### コメント  
- この規則違反を修正するには、ジェネリック インターフェイスを実装するか、`Collection<T>` クラスのように、ジェネリック インターフェイスと非ジェネリック インターフェイスの両方を既に実装している型に基本クラスを変更する必要があります。  
+### <a name="comments"></a>Comments  
+ To fix a violation of this violation, you should either implement the generic interfaces or change the base class to a type that already implements both the generic and non-generic interfaces, such as the `Collection<T>` class.  
   
-## 基本クラスの変更による修正  
+## <a name="fix-by-base-class-change"></a>Fix by Base Class Change  
   
-### 説明  
- コレクションの基本クラスを非ジェネリック `CollectionBase` クラスからジェネリック `Collection<T>` \([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] の `Collection(Of T)`\) クラスに変更することによって上記の違反を修正するコード例を次に示します。  
+### <a name="description"></a>Description  
+ The following example fixes the violation by changing the base class of the collection from the non-generic `CollectionBase` class to the generic `Collection<T>` (`Collection(Of T)` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) class.  
   
-### コード  
- [!code-cs[FxCop.Design.CollectionsGenericBase#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_2.cs)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.CollectionsGenericBase#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_2.cs)]  
   
-### コメント  
- 既にリリースされているクラスの基本クラスを変更することは、既存のコンシューマーに対する互換性に影響すると考えられます。  
+### <a name="comments"></a>Comments  
+ Changing the base class of an already released class is considered a breaking change to existing consumers.  
   
-## インターフェイスの実装による修正  
+## <a name="fix-by-interface-implementation"></a>Fix by Interface Implementation  
   
-### 説明  
- これらのジェネリック インターフェイス `IEnumerable<T>`、`ICollection<T>`、および `IList<T>` \([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] の `IEnumerable(Of T)`、`ICollection(Of T)`、および `IList(Of T)`\) の実装によって上記の違反を修正するコード例を次に示します。  
+### <a name="description"></a>Description  
+ The following example fixes the violation by implementing these generic interfaces: `IEnumerable<T>`, `ICollection<T>`, and `IList<T>` (`IEnumerable(Of T)`, `ICollection(Of T)`, and `IList(Of T)` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]).  
   
-### コード  
- [!code-cs[FxCop.Design.CollectionsGenericInterface#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_3.cs)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.CollectionsGenericInterface#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_3.cs)]  
   
-## 関連規則  
- [CA1005: ジェネリック型でパラメーターを使用しすぎないでください](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1005: Avoid excessive parameters on generic types](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)  
   
- [CA1000: ジェネリック型の静的メンバーを宣言しません](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)  
+ [CA1000: Do not declare static members on generic types](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)  
   
- [CA1002: ジェネリック リストを公開しません](../Topic/CA1002:%20Do%20not%20expose%20generic%20lists.md)  
+ [CA1002: Do not expose generic lists](../code-quality/ca1002-do-not-expose-generic-lists.md)  
   
- [CA1006: ジェネリック型をメンバー シグネチャ内で入れ子にしません](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)  
+ [CA1006: Do not nest generic types in member signatures](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)  
   
- [CA1004: ジェネリック メソッドは型パラメーターを指定しなければなりません](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)  
+ [CA1004: Generic methods should provide type parameter](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)  
   
- [CA1003: 汎用イベント ハンドラーのインスタンスを使用します](../Topic/CA1003:%20Use%20generic%20event%20handler%20instances.md)  
+ [CA1003: Use generic event handler instances](../code-quality/ca1003-use-generic-event-handler-instances.md)  
   
- [CA1007: 適切な場所にジェネリックを使用します](../code-quality/ca1007-use-generics-where-appropriate.md)  
+ [CA1007: Use generics where appropriate](../code-quality/ca1007-use-generics-where-appropriate.md)  
   
-## 参照  
- [ジェネリック](/dotnet/csharp/programming-guide/generics/index)
+## <a name="see-also"></a>See Also  
+ [Generics](/dotnet/csharp/programming-guide/generics/index)

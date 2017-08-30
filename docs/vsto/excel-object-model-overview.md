@@ -1,35 +1,40 @@
 ---
-title: "Excel オブジェクト モデルの概要"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Excel オブジェクト モデル"
-  - "オブジェクト モデル [Visual Studio での Office 開発], Excel"
-  - "オブジェクト モデル [Visual Studio での Office 開発], Office"
-  - "オブジェクト [Visual Studio での Office 開発], Office オブジェクト モデル"
-  - "Office オブジェクト モデル"
-  - "Range オブジェクト"
-  - "Workbook クラス"
-  - "Worksheet オブジェクト"
+title: Excel Object Model Overview | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Worksheet object
+- Range object
+- object models [Office development in Visual Studio], Excel
+- object models [Office development in Visual Studio], Office
+- Workbook class
+- objects [Office development in Visual Studio], Office object models
+- Excel object model
+- Office object models
 ms.assetid: e4b2e46b-ea6c-4a88-a416-a7d4f495fc33
 caps.latest.revision: 66
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 65
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: fc96fe66349ca54082a2d75c81d176294b2528d9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# Excel オブジェクト モデルの概要
-  Microsoft Office Excel を使用するソリューションを開発するため、Excel オブジェクト モデルによって提供されるオブジェクトと対話することができます。  このトピックでは、特に重要なオブジェクトについて説明します。  
+# <a name="excel-object-model-overview"></a>Excel Object Model Overview
+  To develop solutions that use Microsoft Office Excel, you can interact with the objects provided by the Excel object model. This topic introduces the most important objects:  
   
 -   <xref:Microsoft.Office.Interop.Excel.Application>  
   
@@ -41,86 +46,85 @@ caps.handback.revision: 65
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- オブジェクト モデルは、ユーザー インターフェイスに緊密に従います。   <xref:Microsoft.Office.Interop.Excel.Application> オブジェクトは、アプリケーション全体を表し、それぞれの <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトには `Worksheet` オブジェクトのコレクションが含まれます。  つまり、セルを表す主要な概念は <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトになり、これにより個々のセルやセルのグループを使用できるようになります。  
+ The object model closely follows the user interface. The <xref:Microsoft.Office.Interop.Excel.Application> object represents the entire application, and each <xref:Microsoft.Office.Interop.Excel.Workbook> object contains a collection of `Worksheet` objects. From there, the major abstraction that represents cells is the <xref:Microsoft.Office.Interop.Excel.Range> object, which enables you to work with individual cells or groups of cells.  
   
- Visual Studio の Office プロジェクトは、Excel オブジェクト モデルだけでなく、Excel オブジェクト モデルの一部のオブジェクトを拡張する*ホスト項目*と*ホスト コントロール*を提供します。  ホスト項目とホスト コントロールは、これらが拡張する Excel オブジェクトと同様に動作しますが、これ以外にデータ バインド機能や他のイベントなどの追加機能もあります。  詳細については、「[拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)」と「[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)」を参照してください。  
+ In addition to the Excel object model, Office projects in Visual Studio provide *host items* and *host controls* that extend some objects in the Excel object model. Host items and host controls behave like the Excel objects they extend, but they also have additional functionality such as data-binding capabilities and extra events. For more information, see [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md) and [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md).  
   
- ここでは、Excel オブジェクト モデルの概念について簡単に説明します。  リソースについては、「[Excel オブジェクト モデル ドキュメントの使用](#ExcelOMDocumentation)」を参照して、全体の Excel オブジェクト モデルの詳細を入手してください。  
+ This topic provides a brief overview of the Excel object model. For resources where you can learn more about the entire Excel object model, see [Using the Excel Object Model Documentation](#ExcelOMDocumentation).  
   
- ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[Excel 2007 アドインでイベント ハンドラーを使用する方法](http://go.microsoft.com/fwlink/?LinkID=130291)」および「[Excel で図形を使用してバブル チャートを作成する方法](http://go.microsoft.com/fwlink/?LinkID=130313)」を参照してください。  
+ ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Use Event Handlers in an Excel 2007 Add-in?](http://go.microsoft.com/fwlink/?LinkID=130291), and [How Do I: Use Shapes to Create a Bubble Chart in Excel?](http://go.microsoft.com/fwlink/?LinkID=130313).  
   
-## Excel プロジェクト内のオブジェクトへのアクセス  
- Excel で新しい VSTO アドイン プロジェクトを作成すると、Visual Studio によって ThisAddIn.vb または ThisAddIn.cs というコード ファイルが自動的に作成されます。   `Me.Application` または `this.Application` を使用して、アプリケーション オブジェクトにアクセスすることができます。  
+## <a name="accessing-objects-in-an-excel-project"></a>Accessing Objects in an Excel Project  
+ When you create a new VSTO Add-in project for Excel, Visual Studio automatically creates a ThisAddIn.vb or ThisAddIn.cs code file. You can access the Application object by using `Me.Application` or `this.Application`.  
   
- Excel で新しいドキュメント レベルのプロジェクトを作成する場合は、新しい Excel ブックまたは Excel テンプレート プロジェクトを作成するオプションがあります。  Visual Studio によって新しい Excel プロジェクトの次のコード ファイルがブックとテンプレートの両方のプロジェクトで自動的に作成されます。  
+ When you create a new document-level project for Excel, you have the option of creating a new Excel Workbook or Excel Template project. Visual Studio automatically creates the following code files in your new Excel project for both workbook and template projects.  
   
-|Visual Basic|C\#|  
+|Visual Basic|C#|  
 |------------------|---------|  
 |ThisWorkbook.vb|ThisWorkbook.cs|  
 |Sheet1.vb|Sheet1.cs|  
 |Sheet2.vb|Sheet2.cs|  
 |Sheet3.vb|Sheet3.cs|  
   
- プロジェクト内の `Globals` クラスを使用して、それぞれのクラスの外部から `ThisWorkbook`、`Sheet1`、`Sheet2`、または `Sheet3` にアクセスすることができます。  詳細については、「[Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)」を参照してください。  次の例では、コードが `Sheet`*n* クラスまたは `ThisWorkbook` クラスのいずれかに配置されるかどうかに関係なく、`Sheet1` の <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A> メソッドを呼び出します。  
+ You can use the `Globals` class in your project to access `ThisWorkbook`, `Sheet1`, `Sheet2`, or `Sheet3` from outside of the respective class. For more information, see [Global Access to Objects in Office Projects](../vsto/global-access-to-objects-in-office-projects.md). The following example calls the <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A> method of `Sheet1` regardless of whether the code is placed in one of the `Sheet`*n* classes or the `ThisWorkbook` class.  
   
- [!code-csharp[Trin_VstcoreExcelAutomation#82](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#82)]
- [!code-vb[Trin_VstcoreExcelAutomation#82](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#82)]  
+ [!code-csharp[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#82)] [!code-vb[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#82)]  
   
- Excel ドキュメントのデータは高度に構造化されているため、オブジェクト モデルは階層的で単純です。  Excel では対話が可能な何百ものオブジェクトを提供していますが、最初にオブジェクト モデルを使い始めるときは、使用可能なオブジェクトの非常に小さなサブセットに重点を置くと良いでしょう。  このようなオブジェクトには次の 4 つがあります。  
+ Because the data in an Excel document is highly structured, the object model is hierarchical and straightforward. Excel provides hundreds of objects with which you might want to interact, but you can get a good start on the object model by focusing on a very small subset of the available objects. These objects include the following four:  
   
--   アプリケーション  
+-   Application  
   
--   ブック  
+-   Workbook  
   
--   ワークシート  
+-   Worksheet  
   
--   範囲  
+-   Range  
   
- Excel の作業の多くはこれら 4 つのオブジェクトとそのメンバーを中心に行われます。  
+ Much of the work done with Excel centers around these four objects and their members.  
   
-### アプリケーション オブジェクト  
- Excel の <xref:Microsoft.Office.Interop.Excel.Application> オブジェクトは、Excel のアプリケーション自体を表します。  <xref:Microsoft.Office.Interop.Excel.Application> オブジェクトは、実行中のアプリケーション、そのインスタンスに適用されるオプション、そのインスタンス内で開いている現在のユーザー オブジェクトに関する多くの情報を公開します。  
+### <a name="application-object"></a>Application Object  
+ The Excel <xref:Microsoft.Office.Interop.Excel.Application> object represents the Excel application itself. The <xref:Microsoft.Office.Interop.Excel.Application> object exposes a great deal of information about the running application, the options applied to that instance, and the current user objects open within the instance.  
   
 > [!NOTE]  
->  Excel の <xref:Microsoft.Office.Interop.Excel.Application> オブジェクトの <xref:Microsoft.Office.Interop.Excel.ApplicationClass.EnableEvents%2A> プロパティを **false** に設定しないでください。  このプロパティを false に設定すると、ホスト コントロールのイベントを含む、すべてのイベントが Excel で発生しなくなります。  
+>  You should not set the <xref:Microsoft.Office.Interop.Excel.ApplicationClass.EnableEvents%2A> property of the <xref:Microsoft.Office.Interop.Excel.Application> object in Excel to **false**. Setting this property to false prevents Excel from raising any events, including the events of host controls.  
   
-### ブックのオブジェクト  
- <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトは、Excel アプリケーション内の 1 つのブックを表します。  
+### <a name="workbook-object"></a>Workbook Object  
+ The <xref:Microsoft.Office.Interop.Excel.Workbook> object represents a single workbook within the Excel application.  
   
- Visual Studio の Office 開発ツールは、<xref:Microsoft.Office.Tools.Excel.Workbook> 型を提供することにより、<xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトを拡張します。  この型により、<xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトのすべての機能にアクセスできるようになります。  詳細については、「[Workbook ホスト項目](../vsto/workbook-host-item.md)」を参照してください。  
+ The Office development tools in Visual Studio extends the <xref:Microsoft.Office.Interop.Excel.Workbook> object by providing the <xref:Microsoft.Office.Tools.Excel.Workbook> type. This type gives you access to all features of a <xref:Microsoft.Office.Interop.Excel.Workbook> object. For more information, see [Workbook Host Item](../vsto/workbook-host-item.md).  
   
-### ワークシート オブジェクト  
- <xref:Microsoft.Office.Interop.Excel.Worksheet> オブジェクトは <xref:Microsoft.Office.Interop.Excel.Worksheets> コレクションのメンバーです。  <xref:Microsoft.Office.Interop.Excel.Worksheet> のプロパティ、メソッド、およびイベントの多くは、<xref:Microsoft.Office.Interop.Excel.Application> または <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトによって提供されるメンバーと同一か類似しています。  
+### <a name="worksheet-object"></a>Worksheet Object  
+ The <xref:Microsoft.Office.Interop.Excel.Worksheet> object is a member of the <xref:Microsoft.Office.Interop.Excel.Worksheets> collection. Many of the properties, methods, and events of the <xref:Microsoft.Office.Interop.Excel.Worksheet> are identical or similar to members provided by the <xref:Microsoft.Office.Interop.Excel.Application> or <xref:Microsoft.Office.Interop.Excel.Workbook> objects.  
   
- Excel は、<xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトのプロパティとして <xref:Microsoft.Office.Interop.Excel.Sheets> コレクションを提供します。  <xref:Microsoft.Office.Interop.Excel.Sheets> コレクションの各メンバーは、<xref:Microsoft.Office.Interop.Excel.Worksheet> または <xref:Microsoft.Office.Interop.Excel.Chart> オブジェクトのどちらかです。  
+ Excel provides a <xref:Microsoft.Office.Interop.Excel.Sheets> collection as a property of a <xref:Microsoft.Office.Interop.Excel.Workbook> object. Each member of the <xref:Microsoft.Office.Interop.Excel.Sheets> collection is either a <xref:Microsoft.Office.Interop.Excel.Worksheet> or a <xref:Microsoft.Office.Interop.Excel.Chart> object.  
   
- Visual Studio の Office 開発ツールは、<xref:Microsoft.Office.Tools.Excel.Worksheet> 型を提供することにより、<xref:Microsoft.Office.Interop.Excel.Worksheet> オブジェクトを拡張します。  この型は <xref:Microsoft.Office.Interop.Excel.Worksheet> オブジェクトのすべての機能にアクセスできるだけでなく、マネージ コントロールをホストし、新しいイベントを処理する機能などの新機能にもアクセスできます。  詳細については、「[Worksheet ホスト項目](../vsto/worksheet-host-item.md)」を参照してください。  
+ The Office development tools in Visual Studio extend the <xref:Microsoft.Office.Interop.Excel.Worksheet> object by providing the <xref:Microsoft.Office.Tools.Excel.Worksheet> type. This type gives you access to all features of a <xref:Microsoft.Office.Interop.Excel.Worksheet> object, as well as new features such as the ability to host managed controls and handle new events. For more information, see [Worksheet Host Item](../vsto/worksheet-host-item.md).  
   
-### 範囲オブジェクト  
- <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトは、Excel アプリケーション内で特に使用されるオブジェクトです。  Excel 内で任意の領域を操作するには、その領域を <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトとして表し、その範囲のメソッドとプロパティを作業する必要があります。  <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトは、セル、行、列、セルの 1 つ以上のブロックを含むセルの選択を表します。連続する場合もしない場合もあり、セルのグループが複数のシートにわたっている場合もあります。  
+### <a name="range-object"></a>Range Object  
+ The <xref:Microsoft.Office.Interop.Excel.Range> object is the object you will use most within your Excel applications. Before you can manipulate any region within Excel, you must express it as a <xref:Microsoft.Office.Interop.Excel.Range> object and work with methods and properties of that range. A <xref:Microsoft.Office.Interop.Excel.Range> object represents a cell, a row, a column, a selection of cells that contains one or more blocks of cells, which might or might not be contiguous, or even a group of cells on multiple sheets.  
   
- Visual Studio は <xref:Microsoft.Office.Tools.Excel.NamedRange> および <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 型を提供することで <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトを拡張します。  これらの型は <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトとほぼ同じ機能を含むだけでなく、データ バインド機能や新しいイベントなどの新機能も含んでいます。  詳細については、「[NamedRange コントロール](../vsto/namedrange-control.md)」と「[XmlMappedRange コントロール](../vsto/xmlmappedrange-control.md)」を参照してください。  
+ Visual Studio extends the <xref:Microsoft.Office.Interop.Excel.Range> object by providing the <xref:Microsoft.Office.Tools.Excel.NamedRange> and <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> types. These types have most of the same features as a <xref:Microsoft.Office.Interop.Excel.Range> object, as well as new features such as the data binding capability and new events. For more information, see [NamedRange Control](../vsto/namedrange-control.md) and [XmlMappedRange Control](../vsto/xmlmappedrange-control.md).  
   
-##  <a name="ExcelOMDocumentation"></a> Excel オブジェクト モデル ドキュメントの使用  
- Excel オブジェクト モデルに関する詳細については、Excel プライマリ相互運用機能アセンブリ \(PIA\) のリファレンスと、VBA オブジェクト モデルのリファレンスを参照してください。  
+##  <a name="ExcelOMDocumentation"></a> Using the Excel Object Model Documentation  
+ For complete information about the Excel object model, you can refer to the Excel primary interop assembly (PIA) reference and the VBA object model reference.  
   
-### プライマリ相互運用機能アセンブリのリファレンス  
- Excel PIA のリファレンス ドキュメントは、Excel のプライマリ相互運用機能アセンブリの種類について説明しています。  このドキュメントは、「[Excel 2010 プライマリ相互運用機能アセンブリのリファレンス](http://go.microsoft.com/fwlink/?LinkId=189585)」から入手できます。  
+### <a name="primary-interop-assembly-reference"></a>Primary Interop Assembly Reference  
+ The Excel PIA reference documentation describes the types in the primary interop assembly for Excel. This documentation is available from the following location: [Excel 2010 Primary Interop Assembly Reference](http://go.microsoft.com/fwlink/?LinkId=189585).  
   
- PIA のクラスとインターフェイスの違い、PIA 内でのイベントの実装方法など、Excel PIA の設計に関する詳細については、「[Office プライマリ相互運用機能アセンブリのクラスとインターフェイスの概要](http://go.microsoft.com/fwlink/?LinkId=189592)」を参照してください。  
+ For more information about the design of the Excel PIA, such as the differences between classes and interfaces in the PIA and how events in the PIA are implemented, see [Overview of Classes and Interfaces in the Office Primary Interop Assemblies](http://go.microsoft.com/fwlink/?LinkId=189592).  
   
-### VBA オブジェクト モデルのリファレンス  
- VBA オブジェクト モデルのリファレンスでは、Visual Basic for Applications \(VBA\) コードに公開される Excel オブジェクト モデルについて説明しています。  詳細については、「[オブジェクト モデル リファレンス \(Excel 2013 開発者用リファレンス\)](http://go.microsoft.com/fwlink/?LinkId=199768)」を参照してください。  
+### <a name="vba-object-model-reference"></a>VBA Object Model Reference  
+ The VBA object model reference documents the Excel object model as it is exposed to Visual Basic for Applications (VBA) code. For more information, see [Excel 2010 Object Model Reference](http://go.microsoft.com/fwlink/?LinkId=199768).  
   
- VBA オブジェクト モデルのリファレンス内のオブジェクトとメンバーはすべて、Excel PIA の型とメンバーに対応します。  たとえば、VBA オブジェクト モデルのリファレンス内の Worksheet オブジェクトは、Excel PIA の <xref:Microsoft.Office.Interop.Excel.Worksheet> オブジェクトに対応します。  VBA オブジェクト モデルのリファレンスでは、ほとんどのプロパティ、メソッド、およびイベントのコード例を紹介しています。ただし、Visual Studio を使用して作成した Excel プロジェクトでこのリファレンス内の VBA コードを使用するには、それらを Visual Basic または Visual C\# に変換する必要があります。  
+ All of the objects and members in the VBA object model reference correspond to types and members in the Excel PIA. For example, the Worksheet object in the VBA object model reference corresponds to the <xref:Microsoft.Office.Interop.Excel.Worksheet> object in the Excel PIA. Although the VBA object model reference provides code examples for most properties, methods, and events, you must translate the VBA code in this reference to Visual Basic or Visual C# if you want to use them in an Excel project that you create by using Visual Studio.  
   
-### 関連トピック  
+### <a name="related-topics"></a>Related Topics  
   
-|タイトル|説明|  
-|----------|--------|  
-|[Excel ソリューション](../vsto/excel-solutions.md)|Microsoft Office Excel でドキュメント レベルのカスタマイズと VSTO アドインを作成する方法について説明します。|  
-|[範囲の使用](../vsto/working-with-ranges.md)|範囲を使用して一般的なタスクを実行する方法を示す例を提供します。|  
-|[ワークシートの操作](../vsto/working-with-worksheets.md)|ワークシートを使用して一般的なタスクを実行する方法を示す例を提供します。|  
-|[ブックの操作](../vsto/working-with-workbooks.md)|ブックを使用して一般的なタスクを実行する方法を示す例を提供します。|  
+|Title|Description|  
+|-----------|-----------------|  
+|[Excel Solutions](../vsto/excel-solutions.md)|Explains how you can create document-level customizations and VSTO Add-ins for Microsoft Office Excel.|  
+|[Working with Ranges](../vsto/working-with-ranges.md)|Provides examples that show how to perform common tasks with ranges.|  
+|[Working with Worksheets](../vsto/working-with-worksheets.md)|Provides examples that show how to perform common tasks with worksheets.|  
+|[Working with Workbooks](../vsto/working-with-workbooks.md)|Provides examples that show how to perform common tasks with workbooks.|  
   
   

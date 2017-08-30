@@ -1,41 +1,58 @@
 ---
-title: "CA2238: シリアル化メソッドを正しく実装します | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ImplementSerializationMethodsCorrectly"
-  - "CA2238"
-helpviewer_keywords: 
-  - "CA2238"
-  - "ImplementSerializationMethodsCorrectly"
+title: 'CA2238: Implement serialization methods correctly | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ImplementSerializationMethodsCorrectly
+- CA2238
+helpviewer_keywords:
+- ImplementSerializationMethodsCorrectly
+- CA2238
 ms.assetid: 00882cf9-e10d-4d40-9126-3e6753e3c934
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 16
----
-# CA2238: シリアル化メソッドを正しく実装します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: baf8e2b37fba2ec759c9478ca45b97b334f3d2d4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2238-implement-serialization-methods-correctly"></a>CA2238: Implement serialization methods correctly
 |||  
 |-|-|  
 |TypeName|ImplementSerializationMethodsCorrectly|  
 |CheckId|CA2238|  
-|分類|Microsoft.Usage|  
-|互換性に影響する変更点|あり – メソッドがアセンブリの外部で参照できる場合<br /><br /> なし – メソッドがアセンブリの外部で参照できない場合|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Breaking - If the method is visible outside the assembly.<br /><br /> Non Breaking - If the method is not visible outside the assembly.|  
   
-## 原因  
- シリアル化イベントを処理するメソッドに、適切なシグネチャ、戻り値の型、または参照範囲がありません。  
+## <a name="cause"></a>Cause  
+ A method that handles a serialization event does not have the correct signature, return type, or visibility.  
   
-## 規則の説明  
- 次のシリアル化イベント属性のいずれかを適用すると、メソッドはシリアル化のイベント ハンドラーに指定されます。  
+## <a name="rule-description"></a>Rule Description  
+ A method is designated a serialization event handler by applying one of the following serialization event attributes:  
   
 -   <xref:System.Runtime.Serialization.OnSerializingAttribute?displayProperty=fullName>  
   
@@ -45,31 +62,30 @@ caps.handback.revision: 16
   
 -   <xref:System.Runtime.Serialization.OnDeserializedAttribute?displayProperty=fullName>  
   
- シリアル化イベント ハンドラーでは、<xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> 型のパラメーターを 1 つ使用し、`void` を返します。参照範囲は `private` です。  
+ Serialization event handlers take a single parameter of type <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>, return `void`, and have `private` visibility.  
   
-## 違反の修正方法  
- この規則違反を修正するには、シリアル化イベント ハンドラーのシグネチャ、戻り値の型、または参照範囲を正しく指定します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, correct the signature, return type, or visibility of the serialization event handler.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 使用例  
- 正しく宣言したシリアル化イベント ハンドラーを次の例に示します。  
+## <a name="example"></a>Example  
+ The following example shows correctly declared serialization event handlers.  
   
- [!code-vb[FxCop.Usage.SerializationEventHandlers#1](../code-quality/codesnippet/VisualBasic/ca2238-implement-serialization-methods-correctly_1.vb)]
- [!code-cs[FxCop.Usage.SerializationEventHandlers#1](../code-quality/codesnippet/CSharp/ca2238-implement-serialization-methods-correctly_1.cs)]  
+ [!code-vb[FxCop.Usage.SerializationEventHandlers#1](../code-quality/codesnippet/VisualBasic/ca2238-implement-serialization-methods-correctly_1.vb)] [!code-csharp[FxCop.Usage.SerializationEventHandlers#1](../code-quality/codesnippet/CSharp/ca2238-implement-serialization-methods-correctly_1.cs)]  
   
-## 関連規則  
- [CA2236: ISerializable 型で基本クラス メソッドを呼び出します](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA2236: Call base class methods on ISerializable types](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)  
   
- [CA2240: ISerializable を正しく実装します](../Topic/CA2240:%20Implement%20ISerializable%20correctly.md)  
+ [CA2240: Implement ISerializable correctly](../code-quality/ca2240-implement-iserializable-correctly.md)  
   
- [CA2229: シリアル化コンストラクターを実装します](../code-quality/ca2229-implement-serialization-constructors.md)  
+ [CA2229: Implement serialization constructors](../code-quality/ca2229-implement-serialization-constructors.md)  
   
- [CA2235: すべてのシリアル化不可能なフィールドを設定します](../code-quality/ca2235-mark-all-non-serializable-fields.md)  
+ [CA2235: Mark all non-serializable fields](../code-quality/ca2235-mark-all-non-serializable-fields.md)  
   
- [CA2237: ISerializable 型を SerializableAttribute に設定します](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)  
+ [CA2237: Mark ISerializable types with SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)  
   
- [CA2239: オプションのフィールドに逆シリアル化メソッドを指定します](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)  
+ [CA2239: Provide deserialization methods for optional fields](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)  
   
- [CA2120: シリアル化コンストラクターをセキュリティで保護します](../Topic/CA2120:%20Secure%20serialization%20constructors.md)
+ [CA2120: Secure serialization constructors](../code-quality/ca2120-secure-serialization-constructors.md)

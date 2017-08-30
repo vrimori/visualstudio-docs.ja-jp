@@ -1,171 +1,171 @@
 ---
-title: "チュートリアル : NamedRange コントロールのイベントのプログラミング
-"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "NamedRange コントロール, イベント"
-  - "範囲, プログラミング (イベントに対して)"
-  - "ワークシート, 自動化"
-  - "ワークシート, 変更 (セル値を)"
-  - "ワークシート, イベント"
+title: 'Walkthrough: Programming Against Events of a NamedRange Control | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- ranges, programming against events
+- worksheets, changing cell values
+- NamedRange control, events
+- worksheets, events
+- worksheets, automating
 ms.assetid: b69676f9-23b2-4ed6-83ab-8868c3f10948
 caps.latest.revision: 57
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 56
----
-# チュートリアル : NamedRange コントロールのイベントのプログラミング
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a5f6633c7dba31b88bf1daab0ab02dede3bd1e79
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
-  Microsoft Office Excel ワークシートに <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを追加し、Visual Studio の Office 開発ツールを使用してそのコントロールのイベントをプログラミングする手順を説明します。  
+---
+# <a name="walkthrough-programming-against-events-of-a-namedrange-control"></a>Walkthrough: Programming Against Events of a NamedRange Control
+  This walkthrough demonstrates how to add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to a Microsoft Office Excel worksheet and program against its events using by using Office development tools in Visual Studio.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- このチュートリアルでは、次の作業を行う方法について説明します。  
+ During this walkthrough, you will learn how to:  
   
--   ワークシートへの <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールの追加  
+-   Add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to a worksheet.  
   
--   <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールのイベントのプログラミング  
+-   Program against <xref:Microsoft.Office.Tools.Excel.NamedRange> control events.  
   
--   プロジェクトのテスト  
+-   Test your project.  
   
 > [!NOTE]  
->  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。  これらの要素は、使用する Visual Studio のエディションとその設定によって決まります。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] または [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]。  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
-## プロジェクトの作成  
- この手順では、Visual Studio を使用して Excel ブック プロジェクトを作成します。  
+## <a name="creating-the-project"></a>Creating the Project  
+ In this step, you will create an Excel workbook project using Visual Studio.  
   
-#### 新しいプロジェクトを作成するには  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  My Named Range Events という名前の Excel ブック プロジェクトを作成します。  **\[新規ドキュメントの作成\]** が選択されていることを確認します。  詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+1.  Create an Excel Workbook project with the name **My Named Range Events**. Make sure that **Create a new document** is selected. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     Visual Studio により、デザイナーで新しい Excel ブックが開き、My Named Range Events プロジェクトが**ソリューション エクスプローラー**に追加されます。  
+     Visual Studio opens the new Excel workbook in the designer and adds the **My Named Range Events** project to **Solution Explorer**.  
   
-## ワークシートへのテキストと名前付き範囲の追加  
- ホスト コントロールは Office オブジェクトを拡張したものであり、ネイティブ オブジェクトをドキュメントに追加するのと同じ方法でドキュメントに追加できます。  たとえば、Excel の <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをワークシートに追加するには、**\[挿入\]** メニューの **\[名前\]** をポイントし、**\[定義\]** をクリックします。  **ツールボックス**から <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをワークシートにドラッグして追加することもできます。  
+## <a name="adding-text-and-named-ranges-to-the-worksheet"></a>Adding Text and Named Ranges to the Worksheet  
+ Because host controls are extended Office objects, you can add them to your document in the same manner you would add the native object. For example, you can add an Excel <xref:Microsoft.Office.Tools.Excel.NamedRange> control to a worksheet by opening the **Insert** menu, pointing to **Name**, and choosing **Define**. You can also add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control by dragging it from the **Toolbox** onto the worksheet.  
   
- この手順では、**ツールボックス**を使用して 2 つの名前付き範囲コントロールをワークシートに追加し、その後でワークシートにテキストを追加します。  
+ In this step, you will add two named range controls to the worksheet using the **Toolbox**, and then add text to the worksheet.  
   
-#### ワークシートに範囲を追加するには  
+#### <a name="to-add-a-range-to-your-worksheet"></a>To add a range to your worksheet  
   
-1.  **\[My Named Range Events.xlsx\]** ブックがVisual Studioのデザイナーで開かれ、`Sheet1` と、表示されることを確認します。  
+1.  Verify that the **My Named Range Events.xlsx** workbook is open in the Visual Studio designer, with `Sheet1` displayed.  
   
-2.  ツールボックスの **\[Excel コントロール\]** タブから、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを `Sheet1` のセル **A1** にドラッグします。  
+2.  From the **Excel Controls** tab of the Toolbox, drag a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to cell **A1** in `Sheet1`.  
   
-     **\[NamedRange コントロールの追加\]** ダイアログ ボックスが表示されます。  
+     The **Add NamedRange Control** dialog box appears.  
   
-3.  編集可能なテキスト ボックスに "**$A$1**" と表示され、セル **A1** が選択されていることを確認します。  選択されていない場合は、セル **A1** をクリックして選択します。  
+3.  Verify that **$A$1** appears in the editable text box, and that cell **A1** is selected. If it is not, click cell **A1** to select it.  
   
-4.  **\[OK\]** をクリックします。  
+4.  Click **OK**.  
   
-     セル **A1** が、`namedRange1` という名前の範囲になります。  ワークシート上には範囲を示す表示はありませんが、セル **A1** の選択時に `namedRange1` が **\[名前ボックス\]**\(左側のワークシートのすぐ上\) に表示されます。  
+     Cell **A1** becomes a range named `namedRange1`. There is no visible indication on the worksheet, but `namedRange1` appears in the **Name** box (located just above the worksheet on the left side) when cell **A1** is selected.  
   
-5.  セル **B3** に、もう 1 つの <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを追加します。  
+5.  Add another <xref:Microsoft.Office.Tools.Excel.NamedRange> control to cell **B3**.  
   
-6.  編集可能なテキスト ボックスに "**$B$3**" と表示され、セル **B3** が選択されていることを確認します。  選択されていない場合は、セル **B3** をクリックして選択します。  
+6.  Verify that **$B$3** appears in the editable text box, and that cell **B3** is selected. If it is not, click cell **B3** to select it.  
   
-7.  **\[OK\]** をクリックします。  
+7.  Click **OK**.  
   
-     セル **B3** が、`namedRange2` という名前の範囲になります。  
+     Cell **B3** becomes a range named `namedRange2`.  
   
-#### ワークシートにテキストを追加するには  
+#### <a name="to-add-text-to-your-worksheet"></a>To add text to your worksheet  
   
-1.  セル **A1** に以下のテキストを入力します。  
+1.  In Cell **A1**, type the following text:  
   
-     This is an example of a NamedRange control.  
+     **This is an example of a NamedRange control.**  
   
-2.  セル **A3** \(`namedRange2` の左側\) に以下のテキストを入力します。  
+2.  In Cell **A3** (to the left of `namedRange2`), type the following text:  
   
-     Events:  
+     **Events:**  
   
- 以下の各セクションでは、`namedRange1` の <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> イベント、<xref:Microsoft.Office.Tools.Excel.NamedRange.Change> イベント、および <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> イベントに応答して、`namedRange2` にテキストを挿入し、`namedRange2` コントロールのプロパティを変更するコードを記述します。  
+ In the following sections, you will write code that inserts text into `namedRange2` and modifies properties of the `namedRange2` control in response to the <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick>, <xref:Microsoft.Office.Tools.Excel.NamedRange.Change>, and <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> events of `namedRange1`.  
   
-## BeforeDoubleClick イベントに応答するコードを追加するには  
+## <a name="adding-code-to-respond-to-the-beforedoubleclick-event"></a>Adding Code to Respond to the BeforeDoubleClick Event  
   
-#### BeforeDoubleClick イベントに基づいて NamedRange2 にテキストを挿入するには  
+#### <a name="to-insert-text-into-namedrange2-based-on-the-beforedoubleclick-event"></a>To insert text into NamedRange2 based on the BeforeDoubleClick event  
   
-1.  **ソリューション エクスプローラー**で **Sheet1.vb** または **Sheet1.cs** を右クリックし、**\[コードの表示\]** をクリックします。  
+1.  In **Solution Explorer**, right-click **Sheet1.vb** or **Sheet1.cs** and select **View Code**.  
   
-2.  `namedRange1_BeforeDoubleClick` イベント ハンドラーに次のようにコードを追加します。  
+2.  Add code so the `namedRange1_BeforeDoubleClick` event handler looks like the following:  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#24](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/CS/Sheet1.cs#24)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#24](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/VB/Sheet1.vb#24)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#24](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#24)]  [!code-vb[Trin_VstcoreHostControlsExcel#24](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#24)]  
   
-3.  C\# では、次の <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> イベントで示すとおり、名前付き範囲のイベント ハンドラーを追加する必要があります。  イベント ハンドラーの作成については、「[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)」を参照してください。  
+3.  In C#, you must add event handlers for the named range as shown in the <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> event below. For information on creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#25](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/CS/Sheet1.cs#25)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#25](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#25)]  
   
-## Change イベントに応答するコードの追加  
+## <a name="adding-code-to-respond-to-the-change-event"></a>Adding Code to Respond to the Change Event  
   
-#### Change イベントに基づいて namedRange2 にテキストを挿入するには  
+#### <a name="to-insert-text-into-namedrange2-based-on-the-change-event"></a>To insert text into namedRange2 based on the Change event  
   
-1.  `NamedRange1_Change` イベント ハンドラーに次のようにコードを追加します。  
+1.  Add code so the `NamedRange1_Change` event handler looks like the following:  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#26](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/CS/Sheet1.cs#26)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#26](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/VB/Sheet1.vb#26)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#26](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#26)]  [!code-vb[Trin_VstcoreHostControlsExcel#26](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#26)]  
   
     > [!NOTE]  
-    >  Excel の範囲にあるセルをダブルクリックすると編集モードになるので、選択が範囲の外に移動すると、テキストは変更されていなくても <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> イベントが発生します。  
+    >  Because double-clicking a cell in an Excel range enters edit mode, a <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> event occurs when the selection is moved outside of the range even if no changes to text occurred.  
   
-## SelectionChange イベントに応答するコードの追加  
+## <a name="adding-code-to-respond-to-the-selectionchange-event"></a>Adding Code to Respond to the SelectionChange Event  
   
-#### SelectionChange イベントに基づいて namedRange2 にテキストを挿入するには  
+#### <a name="to-insert-text-into-namedrange2-based-on-the-selectionchange-event"></a>To insert text into namedRange2 based on the SelectionChange event  
   
-1.  **NamedRange1\_SelectionChange** イベント ハンドラーに次のようにコードを追加します。  
+1.  Add code so the **NamedRange1_SelectionChange** event handler looks like the following:  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#27](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/CS/Sheet1.cs#27)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#27](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreHostControlsExcel/VB/Sheet1.vb#27)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#27](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#27)]  [!code-vb[Trin_VstcoreHostControlsExcel#27](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#27)]  
   
     > [!NOTE]  
-    >  Excel の範囲にあるセルをダブルクリックすると選択が範囲内に移動するので、<xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> イベントが発生する前に <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> イベントが発生します。  
+    >  Because double-clicking a cell in an Excel range causes the selection to move into the range, a <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> event occurs before the <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> event occurs.  
   
-## アプリケーションのテスト  
- ここで、ブックをテストして、イベントが発生したときに <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールのイベントを示すテキストがもう 1 つの名前付き範囲に挿入されることを確認できます。  
+## <a name="testing-the-application"></a>Testing the Application  
+ Now you can test your workbook to verify that text describing the events of a <xref:Microsoft.Office.Tools.Excel.NamedRange> control is inserted into another named range when the events are raised.  
   
-#### 文書をテストするには  
+#### <a name="to-test-your-document"></a>To test your document  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  Press F5 to run your project.  
   
-2.  `namedRange1` にカーソルを置き、<xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> イベントに関するテキストが挿入されており、ワークシートにコメントが挿入されていることを確認します。  
+2.  Place your cursor in `namedRange1`, and verify that the text regarding the <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> event is inserted and that a comment is inserted into the worksheet.  
   
-3.  `namedRange1` 内をダブルクリックし、<xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> イベントに関するテキストが赤い斜体文字で `namedRange2` に挿入されることを確認します。  
+3.  Double click inside `namedRange1`, and verify that the text regarding <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> events is inserted with red italicized text in `namedRange2`.  
   
-4.  `namedRange1` の外部をクリックし、編集モードを終了すると、テキストは変更されていなくても Change イベントが発生することを確認します。  
+4.  Click outside of `namedRange1` and note that the change event occurs when exiting edit mode even though no change to the text was made.  
   
-5.  `namedRange1` 内のテキストを変更します。  
+5.  Change the text within `namedRange1`.  
   
-6.  `namedRange1` の外部をクリックし、<xref:Microsoft.Office.Tools.Excel.NamedRange.Change> イベントに関するテキストが青い文字で `namedRange2` に挿入されることを確認します。  
+6.  Click outside of `namedRange1`, and verify that the text regarding <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> event is inserted with blue text into `namedRange2`.  
   
-## 次の手順  
- このチュートリアルは、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールのイベントについてプログラムを記述する際の基本事項を示しています。  次は、以下の作業を行います。  
+## <a name="next-steps"></a>Next Steps  
+ This walkthrough shows the basics of programming against events of a <xref:Microsoft.Office.Tools.Excel.NamedRange> control. Here is a task that might come next:  
   
--   プロジェクトの配置。  詳細については、「[Office ソリューションの配置](../vsto/deploying-an-office-solution.md)」を参照してください。  
+-   Deploying the project. For more information, see [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
   
-## 参照  
- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
- [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
- [NamedRange コントロール](../vsto/namedrange-control.md)   
- [方法 : NamedRange コントロールのサイズを変更する](../vsto/how-to-resize-namedrange-controls.md)   
- [方法 : ワークシートに NamedRange コントロールを追加する](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)  
+## <a name="see-also"></a>See Also  
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)   
+ [NamedRange Control](../vsto/namedrange-control.md)   
+ [How to: Resize NamedRange Controls](../vsto/how-to-resize-namedrange-controls.md)   
+ [How to: Add NamedRange Controls to Worksheets](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
+ [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md)  
   
   

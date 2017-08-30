@@ -1,70 +1,88 @@
 ---
-title: "CA1810: 参照型の静的フィールドをインラインで初期化します | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "InitializeReferenceTypeStaticFieldsInline"
-  - "CA1810"
-helpviewer_keywords: 
-  - "InitializeReferenceTypeStaticFieldsInline"
-  - "CA1810"
+title: 'CA1810: Initialize reference type static fields inline | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- InitializeReferenceTypeStaticFieldsInline
+- CA1810
+helpviewer_keywords:
+- InitializeReferenceTypeStaticFieldsInline
+- CA1810
 ms.assetid: e9693118-a914-4efb-9550-ec659d8d97d2
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 21
----
-# CA1810: 参照型の静的フィールドをインラインで初期化します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: f3660a31f03daaf278453dddd46a1e73cb7b200d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1810-initialize-reference-type-static-fields-inline"></a>CA1810: Initialize reference type static fields inline
 |||  
 |-|-|  
 |TypeName|InitializeReferenceTypeStaticFieldsInline|  
 |CheckId|CA1810|  
-|分類|Microsoft.Performance|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Performance|  
+|Breaking Change|Non-breaking|  
   
-## 原因  
- 参照型で明示的な静的コンストラクターを宣言しています。  
+## <a name="cause"></a>Cause  
+ A reference type declares an explicit static constructor.  
   
-## 規則の説明  
- 型で明示的な静的コンストラクターを宣言すると、Just\-In\-Time \(JIT\) コンパイラが、静的コンストラクターが呼び出されたことを確認するために、型の静的メソッドと静的インスタンス コンストラクターに個別にチェックを追加します。  任意の静的メンバーがアクセスされたとき、または型のインスタンスが作成されたときに、静的な初期化が発生します。  ただし、可変の型を宣言していて使用しないと、静的な初期化は発生しません。初期化によってグローバルな状態が変化する場合、これは重要な問題になることがあります。  
+## <a name="rule-description"></a>Rule Description  
+ When a type declares an explicit static constructor, the just-in-time (JIT) compiler adds a check to each static method and instance constructor of the type to make sure that the static constructor was previously called. Static initialization is triggered when any static member is accessed or when an instance of the type is created. However, static initialization is not triggered if you declare a variable of the type but do not use it, which can be important if the initialization changes global state.  
   
- 静的データがすべてインラインで初期化され、明示的な静的コンストラクターが宣言されていない場合、Microsoft Intermediate Language \(MSIL\) コンパイラは、`beforefieldinit` フラグと暗黙的な静的コンストラクターを追加します。これによって静的データは MSIL の型定義に初期化されます。  JIT コンパイラで `beforefieldinit` フラグが検出されると、ほとんどの場合、静的コンストラクターのチェックは追加されません。  静的な初期化は、静的フィールドにアクセスされる前に発生することは保証されていますが、静的メソッドまたは静的インスタンス コンストラクターが呼び出される前に発生することは保証されていません。  静的な初期化は、可変の型が宣言された後であればいつでも発生する可能性があることに注意してください。  
+ When all static data is initialized inline and an explicit static constructor is not declared, Microsoft intermediate language (MSIL) compilers add the `beforefieldinit` flag and an implicit static constructor, which initializes the static data, to the MSIL type definition. When the JIT compiler encounters the `beforefieldinit` flag, most of the time the static constructor checks are not added. Static initialization is guaranteed to occur at some time before any static fields are accessed but not before a static method or instance constructor is invoked. Note that static initialization can occur at any time after a variable of the type is declared.  
   
- 静的コンストラクターのチェックによってパフォーマンスが低下することがあります。  多くの場合、静的コンストラクターは、静的フィールドを初期化するためにのみ使用されます。このとき必要なのは、静的な初期化が静的フィールドへ最初にアクセスされる前に発生することのみです。  このような場合、および他のほとんどの型の場合、`beforefieldinit` の動作は適切です。  静的な初期化によってグローバル状態に影響を及ぼし、さらに次のいずれかの条件に該当する場合は、不適切になります。  
+ Static constructor checks can decrease performance. Often a static constructor is used only to initialize static fields, in which case you must only make sure that static initialization occurs before the first access of a static field. The `beforefieldinit` behavior is appropriate for these and most other types. It is only inappropriate when static initialization affects global state and one of the following is true:  
   
--   グローバル状態に及ぼす影響のコストが高く、型を使用しなければ必要がない場合。  
+-   The effect on global state is expensive and is not required if the type is not used.  
   
--   型の静的フィールドにアクセスしなくても、グローバル状態の結果にアクセスできる場合。  
+-   The global state effects can be accessed without accessing any static fields of the type.  
   
-## 違反の修正方法  
- この規則違反を修正するには、静的データが宣言されたとき、および静的コンストラクターを削除するときに、静的データをすべて初期化します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, initialize all static data when it is declared and remove the static constructor.  
   
-## 警告を抑制する状況  
- この規則による警告を抑制しても安全なのは、パフォーマンスが重要視されていない場合、静的な初期化によるグローバル状態の変化のコストが高い場合、その型の静的メソッドが呼び出されるかその型のインスタンスが作成される前にグローバル状態の変化が発生すると保証されている必要がある場合のいずれかです。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule if performance is not a concern; or if global state changes that are caused by static initialization are expensive or must be guaranteed to occur before a static method of the type is called or an instance of the type is created.  
   
-## 使用例  
- この規則に違反する型 `StaticConstructor` と、規則に適合するように静的コンストラクターをインラインの初期化で置換した型 `NoStaticConstructor` を次の例に示します。  
+## <a name="example"></a>Example  
+ The following example shows a type, `StaticConstructor`, that violates the rule and a type, `NoStaticConstructor`, that replaces the static constructor with inline initialization to satisfy the rule.  
   
- [!CODE [FxCop.Performance.RefTypeStaticCtor#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Performance.RefTypeStaticCtor#1)]  
+ [!code-csharp[FxCop.Performance.RefTypeStaticCtor#1](../code-quality/codesnippet/CSharp/ca1810-initialize-reference-type-static-fields-inline_1.cs)] [!code-vb[FxCop.Performance.RefTypeStaticCtor#1](../code-quality/codesnippet/VisualBasic/ca1810-initialize-reference-type-static-fields-inline_1.vb)]  
   
- `NoStaticConstructor` クラスの MSIL 定義に `beforefieldinit` フラグを追加していることに注意してください。  
+ Note the addition of the `beforefieldinit` flag on the MSIL definition for the `NoStaticConstructor` class.  
   
-  **.class public auto ansi StaticConstructor**  
- **extends \[mscorlib\]System.Object**  
+ **.class public auto ansi StaticConstructor**  
+ **extends [mscorlib]System.Object**  
 **{**  
-**} \/\/ end of class StaticConstructor**  
+**} // end of class StaticConstructor**  
 **.class public auto ansi beforefieldinit NoStaticConstructor**  
- **extends \[mscorlib\]System.Object**  
+ **extends [mscorlib]System.Object**  
 **{**  
-**} \/\/ end of class NoStaticConstructor**   
-## 関連規則  
- [CA2207: 値型のスタティック フィールドのインラインを初期化します](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)
+**} // end of class NoStaticConstructor**   
+## <a name="related-rules"></a>Related Rules  
+ [CA2207: Initialize value type static fields inline](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)

@@ -1,66 +1,81 @@
 ---
-title: "CA1016: アセンブリに AssemblyVersionAttribute を設定します | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MarkAssembliesWithAssemblyVersion"
-  - "CA1016"
-helpviewer_keywords: 
-  - "CA1016"
-  - "MarkAssembliesWithAssemblyVersion"
+title: 'CA1016: Mark assemblies with AssemblyVersionAttribute | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MarkAssembliesWithAssemblyVersion
+- CA1016
+helpviewer_keywords:
+- CA1016
+- MarkAssembliesWithAssemblyVersion
 ms.assetid: 4340aed8-d92b-4cde-a398-cb6963c6da5a
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1016: アセンブリに AssemblyVersionAttribute を設定します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: d86a1bc4c8cbb7f327b837c03e826039f6e52e91
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Mark assemblies with AssemblyVersionAttribute
 |||  
 |-|-|  
 |TypeName|MarkAssembliesWithAssemblyVersion|  
 |CheckId|CA1016|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## 原因  
- アセンブリにバージョン番号がありません。  
+## <a name="cause"></a>Cause  
+ The assembly does not have a version number.  
   
-## 規則の説明  
- アセンブリの ID は次の情報で構成されます。  
+## <a name="rule-description"></a>Rule Description  
+ The identity of an assembly is composed of the following information:  
   
--   アセンブリ名  
+-   Assembly name  
   
--   バージョン番号  
+-   Version number  
   
--   カルチャ  
+-   Culture  
   
--   公開キー \(厳密名のアセンブリ\)  
+-   Public key (for strongly named assemblies).  
   
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] では、バージョン番号を使用してアセンブリを一意に識別し、厳密な名前を持つアセンブリの型にバインドします。  バージョン番号は、バージョンと発行者のポリシーと共に使用されます。  既定で、アプリケーションは、ビルドされたアセンブリのバージョンでのみ実行されます。  
+ The [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] uses the version number to uniquely identify an assembly, and to bind to types in strongly named assemblies. The version number is used together with version and publisher policy. By default, applications run only with the assembly version with which they were built.  
   
-## 違反の修正方法  
- この規則違反を修正するには、<xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> 属性を使用してアセンブリにバージョン番号を追加します。  次の例を参照してください。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, add a version number to the assembly by using the <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> attribute. See the following example.  
   
-## 警告を抑制する状況  
- アセンブリがサード パーティによって使用される場合、または稼動環境で使用される場合は、この規則による警告を抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule for assemblies that are used by third parties, or in a production environment.  
   
-## 使用例  
- <xref:System.Reflection.AssemblyVersionAttribute> 属性を適用したアセンブリを次の例に示します。  
+## <a name="example"></a>Example  
+ The following example shows an assembly that has the <xref:System.Reflection.AssemblyVersionAttribute> attribute applied.  
   
- [!code-cs[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CSharp/ca1016-mark-assemblies-with-assemblyversionattribute_1.cs)]
- [!code-vb[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/VisualBasic/ca1016-mark-assemblies-with-assemblyversionattribute_1.vb)]
- [!code-cpp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CPP/ca1016-mark-assemblies-with-assemblyversionattribute_1.cpp)]  
+ [!code-csharp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CSharp/ca1016-mark-assemblies-with-assemblyversionattribute_1.cs)] [!code-vb[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/VisualBasic/ca1016-mark-assemblies-with-assemblyversionattribute_1.vb)] [!code-cpp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CPP/ca1016-mark-assemblies-with-assemblyversionattribute_1.cpp)]  
   
-## 参照  
- [アセンブリのバージョン管理](../Topic/Assembly%20Versioning.md)   
- [方法 : 発行者ポリシーを作成する](../Topic/How%20to:%20Create%20a%20Publisher%20Policy.md)
+## <a name="see-also"></a>See Also  
+ [Assembly Versioning](/dotnet/framework/app-domains/assembly-versioning)   
+ [How to: Create a Publisher Policy](/dotnet/framework/configure-apps/how-to-create-a-publisher-policy)

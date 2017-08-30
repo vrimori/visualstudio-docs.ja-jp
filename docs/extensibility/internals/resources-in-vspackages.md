@@ -1,5 +1,5 @@
 ---
-title: "Vspackage でリソース |Microsoft ドキュメント"
+title: Resources in VSPackages | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,42 +30,42 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 184642501b9452566a15e1aba30312e17500f7bb
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 8a49aa40daaa1bd0fc0543d2f6198212185c8490
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="resources-in-vspackages"></a>Vspackage でのリソース
-ネイティブ UI、サテライト Dll マネージ サテライト Dll、またはマネージ VSPackage 自体では、ローカライズされたリソースを埋め込むことができます。  
+# <a name="resources-in-vspackages"></a>Resources in VSPackages
+You can embed localized resources in native satellite UI DLLs, managed satellite DLLs, or in a managed VSPackage itself.  
   
- 一部のリソースは、Vspackage に埋め込むことはできません。 次のマネージ型を埋め込むことができます。  
+ Some resources cannot be embedded in VSPackages. The following managed types can be embedded:  
   
--   文字列  
+-   Strings  
   
--   パッケージ読み込みキー (これはもある文字列)  
+-   Package load keys (which are also strings)  
   
--   [ツール] ウィンドウ アイコン  
+-   Tool window icons  
   
--   コンパイル済みのコマンド テーブルの出力 (CTO) ファイル  
+-   Compiled Command Table Output (CTO) files  
   
--   最高技術責任者のビットマップ  
+-   CTO bitmaps  
   
--   コマンドラインのヘルプ  
+-   Command-line Help  
   
--   ダイアログ ボックスのデータについて  
+-   About dialog box data  
   
- 管理されているパッケージにリソースのリソース ID を選択します。 例外は、最高技術責任者ファイルは、CTMENU という名前です。 最高技術責任者ファイルは、リソース テーブルに表示する必要があります、`byte[]`です。 その他のすべてのリソース項目は、型で識別されます。  
+ Resources in a managed package are selected by resource ID. An exception is the CTO file, which must be named CTMENU. The CTO file must appear in the resource table as a `byte[]`. All other resource items are identified by type.  
   
- 使用することができます、<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>に示すために属性[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]マネージ リソースが使用できることです</xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>。  
+ You can use the <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> attribute to indicate to [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] that managed resources are available.  
   
- [!code-cs[VSSDKResources&1;](../../extensibility/internals/codesnippet/CSharp/resources-in-vspackages_1.cs)]
- [!code-vb[VSSDKResources&1;](../../extensibility/internals/codesnippet/VisualBasic/resources-in-vspackages_1.vb)]  
+ [!code-csharp[VSSDKResources#1](../../extensibility/internals/codesnippet/CSharp/resources-in-vspackages_1.cs)] [!code-vb[VSSDKResources#1](../../extensibility/internals/codesnippet/VisualBasic/resources-in-vspackages_1.vb)]  
   
- 設定<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>こうすることを示します[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>.</xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>を使用して、たとえば、リソースについては、検索するときに、アンマネージ サテライト Dll を無視する必要があります</xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> 場合[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]が同一のリソース ID を持つ&2; つ以上のリソースを検出したが見つかった最初のリソースを使用します。  
+ Setting <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> in this manner indicates that [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] should ignore unmanaged satellite DLLs when it searches for resources, for example, by using <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>. If [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] encounters two or more resources that have the same resource ID, it uses the first resource it finds.  
   
-## <a name="example"></a>例  
- 次の例は、ツール ウィンドウ アイコンのマネージ表現です。  
+## <a name="example"></a>Example  
+ The following example is a managed representation of a tool window icon.  
   
 ```  
 <data name="1001"  
@@ -81,7 +81,7 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 </data>  
 ```  
   
- 次の例では、最高技術責任者のバイト配列、CTMENU という名前を埋め込む方法を示します。  
+ The following example demonstrates how to embed the CTO byte array, which must be named CTMENU.  
   
 ```  
 <data name="CTMENU"  
@@ -97,13 +97,12 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 </data>  
 ```  
   
-## <a name="implementation-notes"></a>実装に関するメモ  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]可能な限り VSPackages の遅延読み込みします。 VSPackage で CTO ファイルに埋め込むを[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンドがマージされたテーブルを作成する場合はセットアップ中にメモリ内でこのようなすべての VSPackages を読み込む必要があります。 VSPackage でコードを実行することがなく、メタデータを確認するには、VSPackage からリソースを抽出できます。 パフォーマンスの低下が最小限で済むため、VSPackage ではこの時点で初期化されていません。  
+## <a name="implementation-notes"></a>Implementation Notes  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] delays loading of VSPackages whenever possible. A consequence of embedding a CTO file in a VSPackage is that [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] must load all such VSPackages in memory during Setup, which is when it builds a merged command table. Resources can be extracted from a VSPackage by examining the metadata without running code in the VSPackage. The VSPackage is not initialized at this time, so the performance loss is minimal.  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]セットアップ後に VSPackage からリソースを要求、パッケージが既に読み込まれ、初期化する可能性、パフォーマンスの低下が最小限で済むようにします。  
+ When [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] requests a resource from a VSPackage after Setup, that package is likely to be already loaded and initialized, so the performance loss is minimal.  
   
-## <a name="see-also"></a>関連項目  
- [マネージ VSPackages](../../misc/managed-vspackages.md)   
- [Vspackage を管理します。](../../extensibility/managing-vspackages.md)   
- [MFC アプリケーションのローカライズされたリソース: サテライト Dll](http://msdn.microsoft.com/Library/3a1100ae-a9c8-47b5-adbd-cbedef5992ef)   
- [マネージ VSPackage](../../misc/managed-vspackages.md)
+## <a name="see-also"></a>See Also  
+ [Managing VSPackages](../../extensibility/managing-vspackages.md)   
+ [Localized Resources in MFC Applications: Satellite DLLs](/cpp/build/localized-resources-in-mfc-applications-satellite-dlls)   
+

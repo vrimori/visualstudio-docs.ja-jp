@@ -1,66 +1,83 @@
 ---
-title: "CA2147: 透過コードは、セキュリティ アサートを使用してはならない | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SecurityTransparentCodeShouldNotAssert"
-  - "CA2147"
-  - "CA2128"
-helpviewer_keywords: 
-  - "CA2128"
-  - "SecurityTransparentCodeShouldNotAssert"
+title: 'CA2147: Transparent methods may not use security asserts | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SecurityTransparentCodeShouldNotAssert
+- CA2147
+- CA2128
+helpviewer_keywords:
+- CA2128
+- SecurityTransparentCodeShouldNotAssert
 ms.assetid: 5d31e940-e599-4b23-9b28-1c336f8d910e
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 18
----
-# CA2147: 透過コードは、セキュリティ アサートを使用してはならない
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: eb5ab9afc21d0f3bcce6a5a0e49d021971532262
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2147-transparent-methods-may-not-use-security-asserts"></a>CA2147: Transparent methods may not use security asserts
 |||  
 |-|-|  
 |TypeName|SecurityTransparentCodeShouldNotAssert|  
 |CheckId|CA2147|  
-|分類|Microsoft.Security|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## 原因  
- <xref:System.Security.SecurityTransparentAttribute> とマークされたコードには、アサートに必要なアクセス許可が付与されません。  
+## <a name="cause"></a>Cause  
+ Code that is marked as <xref:System.Security.SecurityTransparentAttribute> is not granted sufficient permissions to assert.  
   
-## 規則の説明  
- この規則では、100% 透過的なアセンブリまたは透過的\/クリティカル混在のアセンブリ内のすべてのメソッドと型を分析し、宣言的または強制的に使用されている <xref:System.Security.CodeAccessPermission.Assert%2A> にフラグを設定します。  
+## <a name="rule-description"></a>Rule Description  
+ This rule analyzes all methods and types in an assembly which is either 100% transparent or mixed transparent/critical, and flags any declarative or imperative usage of <xref:System.Security.CodeAccessPermission.Assert%2A>.  
   
- 実行時には、透過的なコードから <xref:System.Security.CodeAccessPermission.Assert%2A> を呼び出すと、<xref:System.InvalidOperationException> がスローされます。  この状況は、100% 透過的なアセンブリで発生するだけでなく、透過的\/クリティカル混在のアセンブリでも、メソッドまたは型が透過的と宣言されているにもかかわらず宣言的または強制的な Assert を含んでいる場合に発生することがあります。  
+ At run time, any calls to <xref:System.Security.CodeAccessPermission.Assert%2A> from transparent code will cause a <xref:System.InvalidOperationException> to be thrown. This can occur in both 100% transparent assemblies, and also in mixed transparent/critical assemblies where a method or type is declared transparent, but includes a declarative or imperative Assert.  
   
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 2.0 には、*透過性*と呼ばれる機能が導入されました。  メソッド、フィールド、インターフェイス、クラス、および型を個別的に透過的またはクリティカルとすることができます。  
+ The [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 2.0 introduced a feature named *transparency*. Individual methods, fields, interfaces, classes, and types can be either transparent or critical.  
   
- 透過的なコードでは、セキュリティ特権を昇格することはできません。  したがって、透過的なコードに付与または要求されるアクセス許可は、自動的にコードを通じて呼び出し元またはホスト アプリケーション ドメインに渡されます。  昇格の例として、Assert、LinkDemand、SuppressUnmanagedCode、`unsafe` コードなどがあります。  
+ Transparent code is not allowed to elevate security privileges. Therefore, any permissions granted or demanded of it are automatically passed through the code to the caller or host application domain. Examples of elevations include Asserts, LinkDemands, SuppressUnmanagedCode, and `unsafe` code.  
   
-## 違反の修正方法  
- この問題を解決するには、Assert を呼び出すコードに対して <xref:System.Security.SecurityCriticalAttribute> を設定するか、Assert を削除します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To resolve the issue, either mark the code which calls the Assert with the <xref:System.Security.SecurityCriticalAttribute>, or remove the Assert.  
   
-## 警告を抑制する状況  
- この規則によるメッセージは抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a message from this rule.  
   
-## 使用例  
- `SecurityTestClass`  が透過的である場合、`Assert` メソッドが <xref:System.InvalidOperationException> をスローすると、このコードは失敗します。  
+## <a name="example"></a>Example  
+ This code will fail if `SecurityTestClass` is transparent, when the `Assert` method throws a <xref:System.InvalidOperationException>.  
   
- [!CODE [FxCop.Security.CA2147.TransparentMethodsMustNotUseSecurityAsserts#1](../CodeSnippet/VS_Snippets_CodeAnalysis/fxcop.security.ca2147.transparentmethodsmustnotusesecurityasserts#1)]  
+ [!code-csharp[FxCop.Security.CA2147.TransparentMethodsMustNotUseSecurityAsserts#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_1.cs)]  
   
-## 使用例  
- 1 つの方法は、以下の例の SecurityTransparentMethod メソッドのコード レビューを行い、昇格に対して安全であると判断できる場合に、SecurityTransparentMethod メソッドをセキュリティ クリティカルとしてマークすることです。この方法では、メソッドとメソッド内の Assert において発生するすべての呼び出しに対し、詳細で完全なエラーのないセキュリティ監査を実行する必要があります。  
+## <a name="example"></a>Example  
+ One option is to code review the SecurityTransparentMethod method in the example below, and if the method is considered safe for elevation, mark SecurityTransparentMethod with secure-critical This requires that a detailed, complete, and error-free security audit must be performed on the method together with any call-outs that occur within the method under the Assert:  
   
- [!CODE [FxCop.Security.SecurityTransparentCode2#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Security.SecurityTransparentCode2#1)]  
+ [!code-csharp[FxCop.Security.SecurityTransparentCode2#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_2.cs)]  
   
- また、コードから Assert を削除し、後続のファイル I\/O アクセス許可要求が SecurityTransparentMethod を通過して呼び出し元へ到達できるようにする方法もあります。  これにより、セキュリティ チェックが有効になります。  この場合、一般にはセキュリティ監査は必要ありません。アクセス許可要求が呼び出し元またはアプリケーション ドメインに送られるからです。  アクセス許可要求は、セキュリティ ポリシー、ホスト環境、およびコード ソース アクセス許可の付与によって厳密に制御されます。  
+ Another option is to remove the Assert from the code, and let any subsequent file I/O permission demands flow beyond SecurityTransparentMethod to the caller. This enables security checks. In this case, no security audit is generally needed, because the permission demands will flow to the caller and/or the application domain. Permission demands are closely controlled through security policy, hosting environment, and code-source permission grants.  
   
-## 参照  
- [セキュリティの警告](../code-quality/security-warnings.md)
+## <a name="see-also"></a>See Also  
+ [Security Warnings](../code-quality/security-warnings.md)

@@ -1,63 +1,65 @@
 ---
-title: "方法: プログラムによって Excel の範囲に色を適用する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "色, Excel 範囲"
-  - "書式設定 [Visual Studio での Office 開発]"
-  - "範囲, 適用 (色を)"
+title: 'How to: Programmatically Apply Color to Excel Ranges | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- formatting [Office development in Visual Studio]
+- color, Excel ranges
+- ranges, applying color
 ms.assetid: a9c40229-5308-459a-9216-7e13d82c7cb5
 caps.latest.revision: 47
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 46
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6407cd7fee22f42eeea5f89558116291c79dd233
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法: プログラムによって Excel の範囲に色を適用する
-  セルの範囲にあるテキストに色を適用するには、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールまたはネイティブな Excel 範囲オブジェクトを使用します。  
+# <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>How to: Programmatically Apply Color to Excel Ranges
+  To apply a color to text within a range of cells, use a <xref:Microsoft.Office.Tools.Excel.NamedRange> control or a native Excel range object.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## NamedRange コントロールの使用  
- この例は、ドキュメント レベルのカスタマイズ用に作成されています。  
+## <a name="using-a-namedrange-control"></a>Using a NamedRange Control  
+ This example is for document-level customizations.  
   
-#### NamedRange コントロールに色を適用するには  
+#### <a name="to-apply-color-to-a-namedrange-control"></a>To apply color to a NamedRange control  
   
-1.  <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをセル A1 に作成します。  
+1.  Create a <xref:Microsoft.Office.Tools.Excel.NamedRange> control at cell A1.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#65](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#65)]
-     [!code-vb[Trin_VstcoreExcelAutomation#65](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#65)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#65](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#65)]  [!code-vb[Trin_VstcoreExcelAutomation#65](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#65)]  
   
-2.  <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロール内のテキストの色を設定します。  
+2.  Set the color of the text in the <xref:Microsoft.Office.Tools.Excel.NamedRange> control.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#66](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#66)]
-     [!code-vb[Trin_VstcoreExcelAutomation#66](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#66)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#66](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#66)]  [!code-vb[Trin_VstcoreExcelAutomation#66](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#66)]  
   
-## ネイティブな Excel 範囲の使用  
+## <a name="using-native-excel-ranges"></a>Using Native Excel Ranges  
   
-#### ネイティブな Excel 範囲オブジェクトに色を適用するには  
+#### <a name="to-apply-color-to-a-native-excel-range-object"></a>To apply color to a native Excel range object  
   
-1.  セル A1 に範囲を作成し、テキストの色を設定します。  
+1.  Create a range at cell A1 and then set the color of the text.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#67](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#67)]
-     [!code-vb[Trin_VstcoreExcelAutomation#67](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#67)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#67](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#67)]  [!code-vb[Trin_VstcoreExcelAutomation#67](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#67)]  
   
-## 参照  
- [範囲の使用](../vsto/working-with-ranges.md)   
- [NamedRange コントロール](../vsto/namedrange-control.md)   
- [方法: プログラムによってブック内の範囲にスタイルを適用する](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
- [方法: プログラムによってコード内でワークシートの範囲を参照する](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
- [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
- [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Ranges](../vsto/working-with-ranges.md)   
+ [NamedRange Control](../vsto/namedrange-control.md)   
+ [How to: Programmatically Apply Styles to Ranges in Workbooks](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
+ [How to: Programmatically Refer to Worksheet Ranges in Code](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
+ [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

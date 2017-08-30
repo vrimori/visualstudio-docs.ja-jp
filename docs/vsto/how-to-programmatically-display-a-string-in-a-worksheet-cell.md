@@ -1,57 +1,60 @@
 ---
-title: "方法: プログラムによってワークシートのセルに文字列を表示する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "テキスト [Visual Studio での Office 開発], 追加 (ワークシートに)"
-  - "ワークシート, 表示 (ワークシートのセルでテキストを)"
+title: 'How to: Programmatically Display a String in a Worksheet Cell | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- text [Office development in Visual Studio], adding to worksheets
+- worksheets, displaying text in cells
 ms.assetid: b19870ad-e132-49fd-994e-0a91710fa4c9
 caps.latest.revision: 45
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 44
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4667c2fe28cf927b6192cd1011a4570838425d7b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法: プログラムによってワークシートのセルに文字列を表示する
-  プログラムを使用してセルにテキストを表示する方法の例を次に示します。  セルにテキストを表示するには、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールまたはネイティブな Excel 範囲オブジェクトを使用します。  
+# <a name="how-to-programmatically-display-a-string-in-a-worksheet-cell"></a>How to: Programmatically Display a String in a Worksheet Cell
+  This example demonstrates how to display text in a cell programmatically. To display text in cell, use either a <xref:Microsoft.Office.Tools.Excel.NamedRange> control or a native Excel range object.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## NamedRange コントロールの使用  
- この例では、`message` という名前の <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを使用します。  コントロールは、デザイン時にドキュメント レベルのカスタマイズに追加される必要があります。  次のコードは、`ThisWorkbook` クラスではなくシート クラスに配置する必要があります。  
+## <a name="using-a-namedrange-control"></a>Using a NamedRange Control  
+ This example uses a <xref:Microsoft.Office.Tools.Excel.NamedRange> control named `message`. The control must be added to a document-level customization at design time. The following code must be placed in a sheet class, not in the `ThisWorkbook` class.  
   
-#### NamedRange コントロールにテキストを表示するには  
+#### <a name="to-display-text-in-a-namedrange-control"></a>To display text in a NamedRange control  
   
-1.  <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールの値を **Hello World** に設定します。  
+1.  Set the value of the <xref:Microsoft.Office.Tools.Excel.NamedRange> control to **Hello World**.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#68](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#68)]
-     [!code-vb[Trin_VstcoreExcelAutomation#68](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#68)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#68](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#68)]  [!code-vb[Trin_VstcoreExcelAutomation#68](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#68)]  
   
-## ネイティブな Excel 範囲の使用  
- 以下のコードは、プログラムで新しい範囲を作成し、値を割り当てます。  
+## <a name="using-a-native-excel-range"></a>Using a Native Excel Range  
+ The following code creates a new range programmatically and then assigns a value to it.  
   
-#### Excel の範囲にテキストを表示するには  
+#### <a name="to-display-text-in-an-excel-range"></a>To display text in an Excel range  
   
-1.  `Sheet1` のセル **A1** の範囲を取得し、値を **Hello World** に設定します。  
+1.  Retrieve the range at cell **A1** on `Sheet1` and set the value to **Hello World**.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#69](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#69)]
-     [!code-vb[Trin_VstcoreExcelAutomation#69](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#69)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#69](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#69)]  [!code-vb[Trin_VstcoreExcelAutomation#69](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#69)]  
   
-## 参照  
- [チュートリアル : Windows フォームを使用してデータを収集する方法](../vsto/walkthrough-collecting-data-using-a-windows-form.md)   
- [Office ソリューションのトラブルシューティング](../vsto/troubleshooting-office-solutions.md)   
- [NamedRange コントロール](../vsto/namedrange-control.md)   
- [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)   
- [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Walkthrough: Collecting Data Using a Windows Form](../vsto/walkthrough-collecting-data-using-a-windows-form.md)   
+ [Troubleshooting Office Solutions](../vsto/troubleshooting-office-solutions.md)   
+ [NamedRange Control](../vsto/namedrange-control.md)   
+ [Global Access to Objects in Office Projects](../vsto/global-access-to-objects-in-office-projects.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

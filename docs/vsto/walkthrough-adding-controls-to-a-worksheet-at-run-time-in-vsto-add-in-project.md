@@ -1,198 +1,198 @@
 ---
-title: "チュートリアル : 実行時における VSTO アドイン プロジェクトのワークシートへのコントロールの追加"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "アドイン [Visual Studio での Office 開発], 追加 (コントロールを)"
-  - "アプリケーション レベルのアドイン [Visual Studio での Office 開発], 追加 (コントロールを)"
-  - "コントロール [Visual Studio での Office 開発], 追加 (実行時にワークシートに)"
-  - "ワークシート, 追加 (実行時にコントロールを)"
+title: 'Walkthrough: Adding Controls to a Worksheet at Run Time in VSTO add-in Project | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- add-ins [Office development in Visual Studio], adding controls
+- controls [Office development in Visual Studio], adding to worksheets at run time
+- application-level add-ins [Office development in Visual Studio], adding controls
+- worksheets, adding controls at run time
 ms.assetid: 4f68677a-4789-4564-b229-02e2d4031a5f
 caps.latest.revision: 38
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 37
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 05ef7ad5662fd9009f082abb01a111e152be4ab4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : 実行時における VSTO アドイン プロジェクトのワークシートへのコントロールの追加
-  Excel VSTO アドインを使用して、任意の開いているワークシートにコントロールを追加できます。  このチュートリアルでは、リボンを使用してユーザーがワークシートに <xref:Microsoft.Office.Tools.Excel.Controls.Button>、<xref:Microsoft.Office.Tools.Excel.NamedRange>、および <xref:Microsoft.Office.Tools.Excel.ListObject> を追加できるようにする方法を説明します。  詳細については、「[実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」をご覧ください。  
+# <a name="walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>Walkthrough: Adding Controls to a Worksheet at Run Time in VSTO add-in Project
+  You can add controls to any open worksheet by using an Excel VSTO Add-in. This walkthrough demonstrates how to use the Ribbon to enable users to add a <xref:Microsoft.Office.Tools.Excel.Controls.Button>, a <xref:Microsoft.Office.Tools.Excel.NamedRange>, and a <xref:Microsoft.Office.Tools.Excel.ListObject> to a worksheet. For information, see [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md).  
   
- **対象:** このトピックの情報は、Excel の VSTO アドインのプロジェクトに適用されます。  詳細については、「[Office アプリケーションおよびプロジェクト タイプ別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
+ **Applies to:** The information in this topic applies to VSTO Add-in projects for Excel. For more information, see [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md).  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   ワークシートにコントロールを追加するためのユーザー インターフェイス \(UI\) を提供する。  
+-   Providing a user interface (UI) to add controls to the worksheet.  
   
--   ワークシートにコントロールを追加する。  
+-   Adding controls to the worksheet.  
   
--   ワークシートからコントロールを削除する。  
+-   Removing controls from the worksheet.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   Excel  
   
-## 新しい Excel VSTO アドイン プロジェクトの作成  
- まず、Excel VSTO アドイン プロジェクトを作成します。  
+## <a name="creating-a-new-excel-vsto-add-in-project"></a>Creating a New Excel VSTO Add-in Project  
+ Start by creating an Excel VSTO Add-in project.  
   
-#### 新しい Excel VSTO アドイン プロジェクトを作成するには  
+#### <a name="to-create-a-new-excel-vsto-add-in-project"></a>To create a new Excel VSTO Add-in project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で、ExcelDynamicControls という名前の Excel VSTO アドイン プロジェクトを作成します。  詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」をご覧ください。  
+1.  In [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], create an Excel VSTO Add-in project with the name **ExcelDynamicControls**. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-2.  **Microsoft.Office.Tools.Excel.v4.0.Utilities.dll** アセンブリへの参照を追加します。  この参照は、このチュートリアルの後半で Windows フォーム コントロールをワークシートにプログラムを使用して追加するのに必要です。  
+2.  Add a reference to the **Microsoft.Office.Tools.Excel.v4.0.Utilities.dll** assembly. This reference is required to programmatically add a Windows Forms control to a worksheet later in this walkthrough.  
   
-## ワークシートにコントロールを追加するための UI の提供  
- Excel のリボンにカスタム タブを追加します。  ユーザーはタブにあるチェック ボックスをオンにして、ワークシートにコントロールを追加できます。  
+## <a name="providing-a-ui-to-add-controls-to-a-worksheet"></a>Providing a UI to Add Controls to a Worksheet  
+ Add a custom tab to the Excel Ribbon. Users can select check boxes on the tab to add controls to a worksheet.  
   
-#### ワークシートにコントロールを追加するための UI を提供するには  
+#### <a name="to-provide-a-ui-to-add-controls-to-a-worksheet"></a>To provide a UI to add controls to a worksheet  
   
-1.  **\[プロジェクト\]** メニューの **\[新しい項目の追加\]** をクリックします。  
+1.  On the **Project** menu, click **Add New Item**.  
   
-2.  **\[新しい項目の追加\]** ダイアログ ボックスで、**\[リボン \(ビジュアル デザイナー\)\]** を選択し、**\[追加\]** をクリックします。  
+2.  In the **Add New Item** dialog box, select **Ribbon (Visual Designer)**, and then click **Add**.  
   
-     リボン デザイナーで **Ribbon1.cs** または **Ribbon1.vb** という名前のファイルが開き、既定のタブとグループが表示されます。  
+     A file named **Ribbon1.cs** or **Ribbon1.vb** opens in the Ribbon Designer and displays a default tab and group.  
   
-3.  **ツールボックス**の **\[Office リボン コントロール\]** タブから、CheckBox コントロールを **group1** にドラッグします。  
+3.  From the **Office Ribbon Controls** tab of the **Toolbox**, drag a CheckBox control onto **group1**.  
   
-4.  **\[CheckBox1\]** をクリックしてオンにします。  
+4.  Click **CheckBox1** to select it.  
   
-5.  **\[プロパティ\]** ウィンドウで、次のプロパティを変更します。  
+5.  In the **Properties** window, change the following properties.  
   
-    |プロパティ|値|  
-    |-----------|-------|  
-    |**名前**|ボタン|  
-    |**ラベル**|ボタン|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**Button**|  
+    |**Label**|**Button**|  
   
-6.  **group1** に 2 つ目のチェック ボックスを追加し、次のプロパティを変更します。  
+6.  Add a second check box to **group1**, and then change the following properties.  
   
-    |プロパティ|値|  
-    |-----------|-------|  
-    |**名前**|NamedRange|  
-    |**ラベル**|NamedRange|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**NamedRange**|  
+    |**Label**|**NamedRange**|  
   
-7.  **group1** に 3 つ目のチェック ボックスを追加し、次のプロパティを変更します。  
+7.  Add a third check box to **group1**, and then change the following properties.  
   
-    |プロパティ|値|  
-    |-----------|-------|  
-    |**名前**|ListObject|  
-    |**ラベル**|ListObject|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**ListObject**|  
+    |**Label**|**ListObject**|  
   
-## ワークシートへのコントロールの追加  
- マネージ コントロールは、ホスト項目に対してのみ追加できます。これは、コンテナーとして機能します。  VSTO アドイン プロジェクトは任意の開いているブックを操作するため、VSTO アドインはワークシートをホスト項目に変換するか、または既存のホスト項目を取得してから、コントロールを追加します。  開いているワークシートに基づく <xref:Microsoft.Office.Tools.Excel.Worksheet> ホスト項目を生成するように、各コントロールのクリック イベント ハンドラーにコードを追加します。  次に、ワークシートの現在選択されている位置に <xref:Microsoft.Office.Tools.Excel.Controls.Button>、<xref:Microsoft.Office.Tools.Excel.NamedRange>、および <xref:Microsoft.Office.Tools.Excel.ListObject> を追加します。  
+## <a name="adding-controls-to-the-worksheet"></a>Adding Controls to the Worksheet  
+ Managed controls can only be added to host items, which act as containers. Because VSTO Add-in projects work with any open workbook, the VSTO Add-in converts the worksheet into a host item, or gets an existing host item, before adding the control. Add code to the click event handlers of each control to generate a <xref:Microsoft.Office.Tools.Excel.Worksheet> host item that is based on the open worksheet. Then, add a <xref:Microsoft.Office.Tools.Excel.Controls.Button>, a <xref:Microsoft.Office.Tools.Excel.NamedRange>, and a <xref:Microsoft.Office.Tools.Excel.ListObject> at the current selection in the worksheet.  
   
-#### ワークシートにコントロールを追加するには  
+#### <a name="to-add-controls-to-a-worksheet"></a>To add controls to a worksheet  
   
-1.  リボン デザイナーで **\[Button\]** をダブルクリックします。  
+1.  In the Ribbon Designer, double-click **Button**.  
   
-     **\[Button\]** チェック ボックスの <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> イベント ハンドラーがコード エディターで開きます。  
+     The <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> event handler of the **Button** check box opens in the Code Editor.  
   
-2.  `Button_Click` イベント ハンドラーを次のコードで置き換えます。  
+2.  Replace the `Button_Click` event handler with the following code.  
   
-     このコードでは、`GetVstoObject` メソッドを使用してブックの最初のワークシートを表すホスト項目を取得し、現在選択されているセルに <xref:Microsoft.Office.Tools.Excel.Controls.Button> コントロールを追加します。  
+     This code uses the `GetVstoObject` method to get a host item that represents the first worksheet in the workbook, and then adds a <xref:Microsoft.Office.Tools.Excel.Controls.Button> control to the currently selected cell.  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/CS/Ribbon1.cs#2)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/VB/Ribbon1.vb#2)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#2)]  [!code-vb[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#2)]  
   
-3.  **ソリューション エクスプ ローラー**で、Ribbon1.cs または Ribbon1.vb を選択します。  
+3.  In **Solution Explorer**, select Ribbon1.cs or Ribbon1.vb.  
   
-4.  **\[表示\]** メニューの **\[デザイナー\]** をクリックします。  
+4.  On the **View** menu, click **Designer**.  
   
-5.  リボン デザイナーで **\[NamedRange\]** をダブルクリックします。  
+5.  In the Ribbon Designer, double-click **NamedRange**.  
   
-6.  `NamedRange_Click` イベント ハンドラーを次のコードで置き換えます。  
+6.  Replace the `NamedRange_Click` event handler with the following code.  
   
-     このコードでは、`GetVstoObject` メソッドを使用してブックの最初のワークシートを表すホスト項目を取得し、現在選択されている \(1 つまたは複数の\) セルの <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを定義します。  
+     This code uses the `GetVstoObject` method to get a host item that represents the first worksheet in the workbook, and then defines a <xref:Microsoft.Office.Tools.Excel.NamedRange> control for the currently selected cell or cells.  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/CS/Ribbon1.cs#3)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/VB/Ribbon1.vb#3)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#3](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#3)]  [!code-vb[Trin_Excel_Dynamic_Controls#3](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#3)]  
   
-7.  リボン デザイナーで **\[ListObject\]** をダブルクリックします。  
+7.  In the Ribbon Designer, double-click **ListObject**.  
   
-8.  `ListObject_Click` イベント ハンドラーを次のコードで置き換えます。  
+8.  Replace the `ListObject_Click` event handler with the following code.  
   
-     このコードでは、`GetVstoObject` メソッドを使用してブックの最初のワークシートを表すホスト項目を取得し、現在選択されている \(1 つまたは複数の\) セルの <xref:Microsoft.Office.Tools.Excel.ListObject> を定義します。  
+     This code uses the `GetVstoObject` method to get a host item that represents the first worksheet in the workbook, and then defines a <xref:Microsoft.Office.Tools.Excel.ListObject> for the currently selected cell or cells.  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/CS/Ribbon1.cs#4)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/VB/Ribbon1.vb#4)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#4](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#4)]  [!code-vb[Trin_Excel_Dynamic_Controls#4](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#4)]  
   
-9. リボン コード ファイルの先頭に次のステートメントを追加します。  
+9. Add the following statements to the top of the Ribbon code file.  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/CS/Ribbon1.cs#1)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/VB/Ribbon1.vb#1)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#1](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#1)]   [!code-vb[Trin_Excel_Dynamic_Controls#1](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#1)]  
   
-## ワークシートからコントロールを削除する。  
- ワークシートが保存されて閉じられるとき、コントロールは保持されません。  ワークシートを保存する前に、生成されたすべての Windows フォーム コントロールをプログラムを使用して削除する必要があります。そうしないと、ワークシートを再び開いたときに、コントロールのアウトラインのみが表示されます。  生成されたホスト項目のコントロール コレクションから Windows フォーム コントロールを削除するコードを <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> イベントに追加します。  詳細については、「[Office ドキュメントでのダイナミック コントロールの永続化](../vsto/persisting-dynamic-controls-in-office-documents.md)」をご覧ください。  
+## <a name="removing-controls-from-the-worksheet"></a>Removing Controls from the Worksheet  
+ Controls are not persisted when the worksheet is saved and closed. You should programmatically remove all generated Windows Forms controls before the worksheet is saved, or only an outline of the control will appear when the workbook is opened again. Add code to the <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> event that removes Windows Forms controls from the controls collection of the generated host item. For more information, see [Persisting Dynamic Controls in Office Documents](../vsto/persisting-dynamic-controls-in-office-documents.md).  
   
-#### ワークシートからコントロールを削除するには  
+#### <a name="to-remove-controls-from-the-worksheet"></a>To remove controls from the worksheet  
   
-1.  **ソリューション エクスプ ローラー**で、ThisAddIn.cs または ThisAddIn.vb を選択します。  
+1.  In **Solution Explorer**, select ThisAddIn.cs or ThisAddIn.vb.  
   
-2.  **\[表示\]** メニューの **\[コード\]** をクリックします。  
+2.  On the **View** menu, click **Code**.  
   
-3.  次のメソッドを ThisAddIn クラスに追加します。  このコードはブックの最初のワークシートを取得し、`HasVstoObject` メソッドを使用して、ワークシートにワークシート オブジェクトが生成されているかどうかを確認します。  生成されたワークシート オブジェクトにコントロールがある場合、コードはそのワークシート オブジェクトを取得し、コントロール コレクションを反復処理してコントロールを削除します。  
+3.  Add the following method to the ThisAddIn class. This code gets the first worksheet in the workbook and then uses the `HasVstoObject` method to check whether the worksheet has a generated worksheet object. If the generated worksheet object has controls, the code gets that worksheet object and iterates through the control collection, removing the controls.  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/CS/ThisAddIn.cs#6)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#6](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/VB/ThisAddIn.vb#6)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#6)]  [!code-vb[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#6)]  
   
-4.  C\# では、<xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> イベントのイベント ハンドラーを作成する必要があります。  このコードを `ThisAddIn_Startup` メソッドに配置できます。  イベント ハンドラーの作成に関する詳細については、「[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)」をご覧ください。  `ThisAddIn_Startup` メソッドを次のコードに置き換えます。  
+4.  In C#, you must create an event handler for the <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> event. You can place this code in the `ThisAddIn_Startup` method. For more information about creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md). Replace the `ThisAddIn_Startup` method with the following code.  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#5](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Excel_Dynamic_Controls/CS/ThisAddIn.cs#5)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#5](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#5)]  
   
-## ソリューションのテスト  
- リボンのカスタム タブからコントロールを選択し、ワークシートに追加します。  ワークシートを保存すると、これらのコントロールは削除されます。  
+## <a name="testing-the-solution"></a>Testing the Solution  
+ Add controls to a worksheet by selecting them from a custom tab on the Ribbon. When you save the worksheet, these controls are removed.  
   
-#### ソリューションをテストするには  
+#### <a name="to-test-the-solution"></a>To test the solution.  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  Press F5 to run your project.  
   
-2.  Sheet1 で任意のセルを選択します。  
+2.  Select any cell in Sheet1.  
   
-3.  **\[アドイン\]** タブをクリックします。  
+3.  Click the **Add-Ins** tab.  
   
-4.  **\[Group1\]** グループで、**\[Button\]** をクリックします。  
+4.  In the **group1** group, click **Button**.  
   
-     選択したセルにボタンが表示されます。  
+     A button appears in the selected cell.  
   
-5.  Sheet1 で別のセルを選択します。  
+5.  Select a different cell in Sheet1.  
   
-6.  **\[Group1\]** グループで、**\[NamedRange\]** をクリックします。  
+6.  In the **group1** group, click **NamedRange**.  
   
-     選択したセルに名前付き範囲が定義されます。  
+     A named range is defined for the selected cell.  
   
-7.  Sheet1 で一連のセルを選択します。  
+7.  Select a series of cells in Sheet1.  
   
-8.  **\[Group1\]** グループで、**\[ListObject\]** をクリックします。  
+8.  In the **group1** group, click **ListObject**.  
   
-     選択したセルにリスト オブジェクトが追加されます。  
+     A list object is added for the selected cells.  
   
-9. ワークシートを保存します。  
+9. Save the worksheet.  
   
-     Sheet1 に追加したコントロールは表示されなくなります。  
+     The controls that you added to Sheet1 no longer appear.  
   
-## 次の手順  
- Excel VSTO アドイン プロジェクトのコントロールの詳細については、以下のトピックをご覧ください。  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about controls in Excel VSTO Add-in projects from this topic:  
   
--   ワークシートにコントロールを保存する方法の詳細については、「[Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)」にある、Excel VSTO アドイン ダイナミック コントロールのサンプルをご覧ください。  
+-   To learn about how to save controls to a worksheet, see the Excel VSTO Add-in Dynamic Controls Sample at [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md).  
   
-## 参照  
- [Excel ソリューション](../vsto/excel-solutions.md)   
- [Office ドキュメントでの Windows フォーム コントロールの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
- [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
- [NamedRange コントロール](../vsto/namedrange-control.md)   
- [ListObject コントロール](../vsto/listobject-control.md)  
+## <a name="see-also"></a>See Also  
+ [Excel Solutions](../vsto/excel-solutions.md)   
+ [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md)   
+ [Controls on Office Documents](../vsto/controls-on-office-documents.md)   
+ [NamedRange Control](../vsto/namedrange-control.md)   
+ [ListObject Control](../vsto/listobject-control.md)  
   
   

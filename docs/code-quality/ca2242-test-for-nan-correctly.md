@@ -1,49 +1,65 @@
 ---
-title: "CA2242: NaN に対して正しくテストします | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TestForNaNCorrectly"
-  - "CA2242"
-helpviewer_keywords: 
-  - "CA2242"
+title: 'CA2242: Test for NaN correctly | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TestForNaNCorrectly
+- CA2242
+helpviewer_keywords:
+- CA2242
 ms.assetid: e12dcffc-e255-4e1e-8fdf-3c6054d44abe
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 11
----
-# CA2242: NaN に対して正しくテストします
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 0c80dc1d292219a0c635792a65a4928888a56bdc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2242-test-for-nan-correctly"></a>CA2242: Test for NaN correctly
 |||  
 |-|-|  
 |TypeName|TestForNaNCorrectly|  
 |CheckId|CA2242|  
-|分類|Microsoft.Usage|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Non Breaking|  
   
-## 原因  
- 式が <xref:System.Single.Nan?displayProperty=fullName> または <xref:System.Double.Nan?displayProperty=fullName> に対して値をテストしています。  
+## <a name="cause"></a>Cause  
+ An expression tests a value against <xref:System.Single.NaN?displayProperty=fullName> or <xref:System.Double.NaN?displayProperty=fullName>.  
   
-## 規則の説明  
- 算術演算が定義されていない場合、結果として非数値を表す <xref:System.Double.NaN?displayProperty=fullName> が返されます。  ある値と <xref:System.Double.NaN?displayProperty=fullName> が等値であることをテストする式は、常に `false` を返します。  ある値と <xref:System.Double.NaN?displayProperty=fullName> が非等値であることをテストする式は、常に `true` を返します。  
+## <a name="rule-description"></a>Rule Description  
+ <xref:System.Double.NaN?displayProperty=fullName>, which represents not-a-number, results when an arithmetic operation is undefined. Any expression that tests equality between a value and <xref:System.Double.NaN?displayProperty=fullName> always returns `false`. Any expression that tests inequality between a value and <xref:System.Double.NaN?displayProperty=fullName> always returns `true`.  
   
-## 違反の修正方法  
- この規則違反を修正し、値が <xref:System.Double.NaN?displayProperty=fullName> を表すかどうかを正確に判定するには、<xref:System.Single.IsNan%2A?displayProperty=fullName> または <xref:System.Double.IsNan%2A?displayProperty=fullName> を使用して値をテストします。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule and accurately determine whether a value represents <xref:System.Double.NaN?displayProperty=fullName>, use <xref:System.Single.IsNaN%2A?displayProperty=fullName> or <xref:System.Double.IsNaN%2A?displayProperty=fullName> to test the value.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 使用例  
- 次の例は、値を <xref:System.Double.NaN?displayProperty=fullName> に対して正しくテストしない 2 つの式と <xref:System.Double.IsNaN%2A?displayProperty=fullName> を正しく使用して値をテストする式を示しています。  
+## <a name="example"></a>Example  
+ The following example shows two expressions that incorrectly test a value against <xref:System.Double.NaN?displayProperty=fullName> and an expression that correctly uses <xref:System.Double.IsNaN%2A?displayProperty=fullName> to test the value.  
   
- [!code-vb[FxCop.Usage.TestForNaN#1](../code-quality/codesnippet/VisualBasic/ca2242-test-for-nan-correctly_1.vb)]
- [!code-cs[FxCop.Usage.TestForNaN#1](../code-quality/codesnippet/CSharp/ca2242-test-for-nan-correctly_1.cs)]
+ [!code-vb[FxCop.Usage.TestForNaN#1](../code-quality/codesnippet/VisualBasic/ca2242-test-for-nan-correctly_1.vb)] [!code-csharp[FxCop.Usage.TestForNaN#1](../code-quality/codesnippet/CSharp/ca2242-test-for-nan-correctly_1.cs)]

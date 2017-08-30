@@ -1,111 +1,111 @@
 ---
-title: "方法: プログラムによって文書に画像およびワードアートを追加する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ドキュメント [Visual Studio での Office 開発], 追加 (ピクチャを)"
-  - "グラフィックス, 追加 (Word ドキュメントに)"
-  - "Word ドキュメント, 追加 (ピクチャを)"
-  - "Word ドキュメント, 追加 (ワードアートを)"
-  - "WordArt, 追加 (ドキュメントに)"
+title: 'How to: Programmatically Add Pictures and Word Art to Documents | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- documents [Office development in Visual Studio], adding pictures
+- Word documents, adding pictures
+- Word documents, adding Word Art
+- graphics, adding to Word documents
+- WordArt, adding to documents
 ms.assetid: 944e1858-bc7c-471f-b5e7-adf3b0fa574d
 caps.latest.revision: 24
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 23
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 921234bb8d2e226035730c676d72b0162b255b2b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法: プログラムによって文書に画像およびワードアートを追加する
-  デザイン時または実行時に、画像および描画オブジェクトをドキュメントに追加できます。  ワードアートでは、Microsoft Office Word ドキュメントに装飾的なテキストを追加することができます。  これらの特別なテキスト効果は、ドキュメントに挿入できる、カスタマイズ可能な描画オブジェクトです。  
+# <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>How to: Programmatically Add Pictures and Word Art to Documents
+  You can add pictures and drawing objects to your documents at design time or during run time. WordArt enables you to add decorative text to Microsoft Office Word documents. These special text effects are drawing objects that you can customize and insert into your document.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## デザイン時に画像を追加する  
- ドキュメント レベルのカスタマイズを開発している場合は、デザイン時にドキュメントに画像を追加できます。  
+## <a name="adding-a-picture-at-design-time"></a>Adding a Picture at Design Time  
+ If you are developing a document-level customization, you can add a picture to the document at design time.  
   
-#### デザイン時に Word 文書に画像を追加するには  
+#### <a name="to-add-a-picture-to-a-word-document-at-design-time"></a>To add a picture to a Word document at design time  
   
-1.  ドキュメント内の画像を挿入する場所にカーソルを置きます。  
+1.  Place your cursor where you want to insert the picture in the document.  
   
-2.  リボンの **\[挿入\]** タブをクリックします。  
+2.  Click the **Insert** tab of the Ribbon.  
   
-3.  **\[図\]** グループで、**\[図\]** をクリックします。  
+3.  In the **Illustrations** group, click **Picture**.  
   
-4.  **\[図の挿入\]** ダイアログ ボックスで、挿入する画像に移動し、**\[挿入\]** をクリックします。  
+4.  In the **Insert Picture** dialog box, navigate to the picture you want to insert, and click **Insert**.  
   
-     画像が、ドキュメントの現在のカーソル位置に追加されます。  
+     The picture is added to your document at the current cursor location.  
   
-## 実行時に画像を追加する  
- 現在のカーソル位置でドキュメントに画像を挿入できます。  
+## <a name="adding-a-picture-at-run-time"></a>Adding a Picture at Run Time  
+ You can insert a picture into a document at the current cursor location.  
   
-#### カーソルの場所に画像を追加するには  
+#### <a name="to-add-a-picture-at-the-cursor-location"></a>To add a picture at the cursor location  
   
-1.  <xref:Microsoft.Office.Interop.Word.InlineShapes> コレクションの <xref:Microsoft.Office.Interop.Word.InlineShapes.AddPicture%2A> メソッドを呼び出し、ファイル名を渡します。  
+1.  Call the <xref:Microsoft.Office.Interop.Word.InlineShapes.AddPicture%2A> method of the <xref:Microsoft.Office.Interop.Word.InlineShapes> collection and pass in the name of the file.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#108](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#108)]
-     [!code-vb[Trin_VstcoreWordAutomation#108](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#108)]  
+     [!code-vb[Trin_VstcoreWordAutomation#108](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#108)]  [!code-csharp[Trin_VstcoreWordAutomation#108](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#108)]  
   
-## デザイン時にワードアートを追加する  
- ドキュメント レベルのカスタマイズを開発している場合は、デザイン時にドキュメントにワードアートを追加できます。  
+## <a name="adding-wordart-at-design-time"></a>Adding WordArt at Design Time  
+ If you are developing a document-level customization, you can add WordArt to the document at design time.  
   
-#### デザイン時にワードアートを Word ドキュメントを追加するには  
+#### <a name="to-add-wordart-to-a-word-document-at-design-time"></a>To add WordArt to a Word document at design time  
   
-1.  ドキュメント内のワードアートを挿入する場所にカーソルを置きます。  
+1.  Place your cursor where you want to insert the WordArt in the document.  
   
-2.  リボンの **\[挿入\]** タブをクリックします。  
+2.  Click the **Insert** tab of the Ribbon.  
   
-3.  **\[テキスト\]** グループで、**\[ワードアート\]** をクリックし、ワードアートのスタイルをクリックします。  
+3.  In the **Text** group, click **WordArt**, and then select a WordArt style.  
   
-4.  ドキュメント内に表示するテキストを、**\[ワードアート テキストの編集\]** ダイアログ ボックスに追加し、**\[OK\]** をクリックします。  
+4.  Add the text that you want to appear in the document to the **Edit WordArt Text** dialog box and click **OK**.  
   
-     選択したワードアート スタイルが適用されたテキストが、ドキュメントに追加されます。  
+     The text is added to your document with the selected WordArt style applied.  
   
-## 実行時にワードアートを追加する  
- 現在のカーソル位置でドキュメントにワードアートを挿入できます。  ドキュメント レベルのカスタマイズと VSTO アドインでは、手順が異なります。  
+## <a name="adding-wordart-at-run-time"></a>Adding WordArt at Run Time  
+ You can insert WordArt into a document at the current cursor location. The procedure is different for document-level customizations and VSTO Add-ins.  
   
-#### ドキュメント レベルのカスタマイズで、カーソル位置にワードアートを追加するには  
+#### <a name="to-add-wordart-at-the-cursor-location-in-a-document-level-customization"></a>To add WordArt at the cursor location in a document-level customization  
   
-1.  現在のカーソル位置の左と上の位置を取得します。  
+1.  Get the left and top position of the current cursor location.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#109](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#109)]
-     [!code-vb[Trin_VstcoreWordAutomation#109](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#109)]  
+     [!code-vb[Trin_VstcoreWordAutomation#109](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#109)]  [!code-csharp[Trin_VstcoreWordAutomation#109](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#109)]  
   
-2.  ドキュメント内の <xref:Microsoft.Office.Interop.Word.Shapes> オブジェクトの <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> メソッドを呼び出します。  
+2.  Call the <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> method of the <xref:Microsoft.Office.Interop.Word.Shapes> object in the document.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#110](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#110)]
-     [!code-vb[Trin_VstcoreWordAutomation#110](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#110)]  
+     [!code-vb[Trin_VstcoreWordAutomation#110](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#110)]  [!code-csharp[Trin_VstcoreWordAutomation#110](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#110)]  
   
-#### VSTO アドインでカーソル位置にワードアートを追加するには  
+#### <a name="to-add-wordart-at-the-cursor-location-in-a-vsto-add-in"></a>To add WordArt at the cursor location in a VSTO Add-in  
   
-1.  現在のカーソル位置の左と上の位置を取得します。  
+1.  Get the left and top position of the current cursor location.  
   
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#109](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/CS/ThisAddIn.cs#109)]
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#109](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/VB/ThisAddIn.vb#109)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#109](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#109)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#109](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#109)]  
   
-2.  作業中のドキュメント \(または指定した別のドキュメント\) の <xref:Microsoft.Office.Interop.Word.Shapes> オブジェクトの <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> メソッドを呼び出します。  
+2.  Call the <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> method of the <xref:Microsoft.Office.Interop.Word.Shapes> object of the active document (or a different document that you specify).  
   
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#110](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/CS/ThisAddIn.cs#110)]
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#110](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/VB/ThisAddIn.vb#110)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#110](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#110)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#110](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#110)]  
   
-## コードのコンパイル  
+## <a name="compiling-the-code"></a>Compiling the Code  
   
--   ドライブ C 上に **SamplePicture.jpg** という名前の画像が存在する必要があります。  
+-   A picture named **SamplePicture.jpg** must exist on drive C.  
   
-## 参照  
- [方法: プログラムによって既存文書を開く](../vsto/how-to-programmatically-open-existing-documents.md)   
- [方法: プログラムによって Word 文書にテキストを挿入する](../vsto/how-to-programmatically-insert-text-into-word-documents.md)   
- [方法: プログラムによって検索後に選択範囲を復元する](../vsto/how-to-programmatically-restore-selections-after-searches.md)   
- [方法: プログラムによって文書を保存する](../vsto/how-to-programmatically-save-documents.md)   
- [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [How to: Programmatically Open Existing Documents](../vsto/how-to-programmatically-open-existing-documents.md)   
+ [How to: Programmatically Insert Text into Word Documents](../vsto/how-to-programmatically-insert-text-into-word-documents.md)   
+ [How to: Programmatically Restore Selections After Searches](../vsto/how-to-programmatically-restore-selections-after-searches.md)   
+ [How to: Programmatically Save Documents](../vsto/how-to-programmatically-save-documents.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

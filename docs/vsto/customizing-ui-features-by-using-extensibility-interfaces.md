@@ -1,89 +1,92 @@
 ---
-title: "機能拡張インターフェイスによる UI 機能のカスタマイズ"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ICustomTaskPaneConsumer インターフェイス"
-  - "IRibbonExtensibility インターフェイス"
-  - "UI のカスタマイズ [Visual Studio での Office 開発]"
-  - "ユーザー インターフェイス [Visual Studio での Office 開発]、カスタマイズ"
-  - "アプリケーション レベルのアドイン [Visual Studio での Office 開発]、機能拡張インターフェイス"
-  - "カスタマイズ (UI 機能を) [Visual Studio での Office 開発]"
-  - "FormRegionStartup インターフェイス"
-  - "アドイン [Visual Studio での Office 開発]、機能拡張インターフェイス"
-  - "機能拡張インターフェイス [Visual Studio での Office 開発]"
+title: Customizing UI Features By Using Extensibility Interfaces | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- ICustomTaskPaneConsumer interface
+- IRibbonExtensibility interface
+- UI customizing [Office development in Visual Studio]
+- user interfaces [Office development in Visual Studio], customizing
+- application-level add-ins [Office development in Visual Studio], extensibility interfaces
+- customizing UI features [Office development in Visual Studio]
+- FormRegionStartup interface
+- add-ins [Office development in Visual Studio], extensibility interfaces
+- extensibility interfaces [Office development in Visual Studio]
 ms.assetid: 3f3f7908-9404-4eda-8899-4d18c75e3b4a
 caps.latest.revision: 40
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 39
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 47c9e12e7f61a4b6750a5c9aafa3dd964d07ad55
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 機能拡張インターフェイスによる UI 機能のカスタマイズ
-  Visual Studio に含まれる Office 開発ツールは、VSTO アドインにおけるカスタム作業ウィンドウ、リボンのカスタマイズ、および Outlook フォーム領域の作成に使用可能な、多数の実装の詳細を処理するクラスとデザイナーを提供します。 ただし、特別な要件がある場合、各機能の*拡張インターフェイス*を自分で実装することもできます。  
+# <a name="customizing-ui-features-by-using-extensibility-interfaces"></a>Customizing UI Features By Using Extensibility Interfaces
+  The Office development tools in Visual Studio provide classes and designers that handle many implementation details when you use them to create custom task panes, ribbon customizations, and Outlook form regions in a VSTO Add-in. However, you can also implement the *extensibility interface* for each feature yourself if you have special requirements.  
   
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]  
   
-## 機能拡張インターフェイスの概要  
- Microsoft Office は、COM VSTO アドインがリボンなどの特定の機能をカスタマイズするために実装可能な、機能拡張インターフェイスのセットを定義します。 これらのインターフェイスは、アクセスを提供する機能に対するフル コントロールを提供します。 ただし、これらのインターフェイスを実装するには、マネージ コードにおける COM 相互運用性について一定の知識が必要です。 これらのインターフェイスのプログラミング モデルは、.NET Framework に慣れた開発者にとって直観的でない場合もあります。  
+## <a name="overview-of-extensibility-interfaces"></a>Overview of Extensibility Interfaces  
+ Microsoft Office defines a set of extensibility interfaces that COM VSTO Add-ins can implement to customize certain features, such as the ribbon. These interfaces provide full control over the features they provide access to. However, implementing these interfaces requires some knowledge of COM interoperability in managed code. In some cases, the programming model of these interfaces is also not intuitive for developers who are accustomed to the .NET Framework.  
   
- Visual Studio に含まれる Office プロジェクト テンプレートを使用して VSTO アドインを作成する場合、リボンなどの機能をカスタマイズするために機能拡張インターフェイスを実装する必要はありません。[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] はこれらのインターフェイスを実装します。 代わりに、Visual Studio が提供する、より直観的なクラスおよびデザイナーを使用することもできます。 ただし、必要に応じて、機能拡張インターフェイスを直接 VSTO アドインに実装することもできます。  
+ When you create a VSTO Add-in by using the Office project templates in Visual Studio, you do not have to implement the extensibility interfaces to customize features like the ribbon. The [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] implements these interfaces for you. Instead, you can use more intuitive classes and designers provided by Visual Studio. However, you can still implement the extensibility interfaces directly in your VSTO Add-in if you want to.  
   
- これらの機能に関して Visual Studio が提供するクラスとデザイナーの詳細については、「[カスタム作業ウィンドウ](../vsto/custom-task-panes.md)」、「[リボン デザイナー](../vsto/ribbon-designer.md)」、および「[Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)」を参照してください。  
+ For more information about the classes and designers that Visual Studio provides for these features, see [Custom Task Panes](../vsto/custom-task-panes.md), [Ribbon Designer](../vsto/ribbon-designer.md), and [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md).  
   
-## VSTO アドインに実装できる機能拡張インターフェイス  
- 次の表に、実装可能な機能拡張インターフェイスとそれらをサポートするアプリケーションを示します。  
+## <a name="extensibility-interfaces-you-can-implement-in-a-vsto-add-in"></a>Extensibility Interfaces You Can Implement in a VSTO Add-in  
+ The following table lists the extensibility interfaces you can implement and the applications that support them.  
   
-|Interface|説明|アプリケーション|  
-|---------------|--------|--------------|  
-|<xref:Microsoft.Office.Core.IRibbonExtensibility>|このインターフェイスを実装してリボン UI をカスタマイズします。 **Note:**  プロジェクトに **\[リボン \(XML\)\]** 項目を追加して、VSTO アドインに既定の <xref:Microsoft.Office.Core.IRibbonExtensibility> 実装を生成できます。 詳細については、「[リボン XML](../vsto/ribbon-xml.md)」を参照してください。|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> InfoPath 2010<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> プロジェクト<br /><br /> Visio<br /><br /> Word|  
-|<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>|このインターフェイスを実装してカスタム作業ウィンドウを作成します。|Excel<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word|  
-|<xref:Microsoft.Office.Interop.Outlook.FormRegionStartup>|このインターフェイスを実装して Outlook フォーム領域を作成します。|Outlook|  
+|Interface|Description|Applications|  
+|---------------|-----------------|------------------|  
+|<xref:Microsoft.Office.Core.IRibbonExtensibility>|Implement this interface to customize the ribbon UI. **Note:**  You can add a **Ribbon (XML)** item to a project to generate a default <xref:Microsoft.Office.Core.IRibbonExtensibility> implementation in your VSTO Add-in. For more information, see [Ribbon XML](../vsto/ribbon-xml.md).|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> InfoPath 2010<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Visio<br /><br /> Word|  
+|<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>|Implement this interface to create a custom task pane.|Excel<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word|  
+|<xref:Microsoft.Office.Interop.Outlook.FormRegionStartup>|Implement this interface to create an Outlook form region.|Outlook|  
   
- Microsoft Office で定義されている機能拡張インターフェイスには他に、<xref:Microsoft.Office.Core.IBlogExtensibility>、<xref:Microsoft.Office.Core.EncryptionProvider>、および <xref:Microsoft.Office.Core.SignatureProvider> があります。 Visual Studio では、Office プロジェクト テンプレートを使用して VSTO アドインにこれらのインターフェイスを実装することはサポートされていません。  
+ There are several other extensibility interfaces that are defined by Microsoft Office, such as <xref:Microsoft.Office.Core.IBlogExtensibility>, <xref:Microsoft.Office.Core.EncryptionProvider>, and <xref:Microsoft.Office.Core.SignatureProvider>. Visual Studio does not support implementing these interfaces in a VSTO Add-in created by using the Office project templates.  
   
-## 機能拡張インターフェイスの使用法  
- 機能拡張インターフェイスを使用して UI をカスタマイズするには、VSTO アドイン プロジェクトに適切なインターフェイスを実装します。 次に、そのインターフェイスを実装するクラスのインスタンスを返すために、<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> メソッドをオーバーライドします。  
+## <a name="using-extensibility-interfaces"></a>Using Extensibility Interfaces  
+ To customize a UI feature by using an extensibility interface, implement the appropriate interface in your VSTO Add-in project. Then, override the <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> method to return an instance of the class that implements the interface.  
   
- Outlook 用 VSTO アドインにおける <xref:Microsoft.Office.Core.IRibbonExtensibility>、<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>、および <xref:Microsoft.Office.Interop.Outlook.FormRegionStartup> インターフェイスの実装方法を示すサンプル アプリケーションについては、「[Office 開発のサンプル](../vsto/office-development-samples.md)」の UI マネージャーのサンプルを参照してください。  
+ For a sample application that demonstrates how to implement the <xref:Microsoft.Office.Core.IRibbonExtensibility>, <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>, and <xref:Microsoft.Office.Interop.Outlook.FormRegionStartup> interfaces in a VSTO Add-in for Outlook, see the UI Manager Sample in [Office Development Samples](../vsto/office-development-samples.md).  
   
-### 機能拡張インターフェイスの実装例  
- 次のコード例は、カスタム作業ウィンドウを作成するための <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> インターフェイスの簡単な実装を示します。 この例では、2 つのクラスを定義しています。  
+### <a name="example-of-implementing-an-extensibility-interface"></a>Example of Implementing an Extensibility Interface  
+ The following code example demonstrates a simple implementation of the <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> interface to create a custom task pane. This example defines two classes:  
   
--   `TaskPaneHelper` クラスは、カスタム作業ウィンドウの作成と表示を行うための <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> を実装します。  
+-   The `TaskPaneHelper` class implements <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> to create and display a custom task pane.  
   
--   `TaskPaneUI` クラスは、作業ウィンドウの UI を提供します。`TaskPaneUI` クラスの属性により、クラスが COM に対して可視化され、Microsoft Office アプリケーションがクラスを発見することができるようになります。 この例で、UI は空の <xref:System.Windows.Forms.UserControl> ですが、コードを修正してコントロールを追加できます。  
+-   The `TaskPaneUI` class provides the UI of the task pane. The attributes for the `TaskPaneUI` class make the class visible to COM, which enables Microsoft Office applications to discover the class. In this example, the UI is an empty <xref:System.Windows.Forms.UserControl>, but you can add controls by modifying the code.  
   
     > [!NOTE]  
-    >  `TaskPaneUI` クラスを COM に公開するには、プロジェクトの **\[COM の相互運用機能の登録\]** プロパティを設定する必要もあります。  
+    >  To expose the `TaskPaneUI` class to COM, you must also set the **Register for COM Interop** property for the project.  
   
- [!code-csharp[Trin_SimpleExtensibilityInterface#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_SimpleExtensibilityInterface/CS/ThisAddIn.cs#1)]
- [!code-vb[Trin_SimpleExtensibilityInterface#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_SimpleExtensibilityInterface/VB/ThisAddIn.vb#1)]  
+ [!code-vb[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#1)] [!code-csharp[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#1)]  
   
- <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> の実装の詳細については、Microsoft Office ドキュメントの「[Creating Custom Task Panes in the 2007 Office System \(2007 Office システムにおけるカスタム作業ウィンドウの作成\)](http://msdn.microsoft.com/ja-jp/256313db-18cc-496c-a961-381ed9ca94be)」を参照してください。  
+ For more information about implementing <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>, see [Creating Custom Task Panes in the 2007 Office System](http://msdn.microsoft.com/en-us/256313db-18cc-496c-a961-381ed9ca94be) in the Microsoft Office documentation.  
   
-### RequestService メソッドのオーバーライド例  
- 次のコード例は、前のコード例から <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> クラスのインスタンスを返すために `TaskPaneHelper` メソッドをオーバーライドする方法を示します。*serviceGuid* パラメーターの値を検査し、要求されているインターフェイスを特定して、そのインターフェイスを実装するオブジェクトを返します。  
+### <a name="example-of-overriding-the-requestservice-method"></a>Example of Overriding the RequestService Method  
+ The following code example demonstrates how to override the <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> method to return an instance of the `TaskPaneHelper` class from the previous code example. It checks the value of the *serviceGuid* parameter to determine which interface is being requested, and then returns an object that implements that interface.  
   
- [!code-csharp[Trin_SimpleExtensibilityInterface#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_SimpleExtensibilityInterface/CS/ThisAddIn.cs#2)]
- [!code-vb[Trin_SimpleExtensibilityInterface#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_SimpleExtensibilityInterface/VB/ThisAddIn.vb#2)]  
+ [!code-vb[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#2)] [!code-csharp[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#2)]  
   
-## 参照  
- [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
- [VSTO アドインのプログラミング](../vsto/programming-vsto-add-ins.md)   
- [Office ソリューションの開発](../vsto/developing-office-solutions.md)   
- [その他の Office ソリューションから VSTO アドインのコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)   
- [方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)   
- [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)  
+## <a name="see-also"></a>See Also  
+ [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md)   
+ [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
+ [Developing Office Solutions](../vsto/developing-office-solutions.md)   
+ [Calling Code in VSTO Add-ins from Other Office Solutions](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)   
+ [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)   
+ [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)  
   
   

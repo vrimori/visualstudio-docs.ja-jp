@@ -1,56 +1,71 @@
 ---
-title: "CA1017: アセンブリに ComVisibleAttribute を設定します | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1017"
-  - "MarkAssembliesWithComVisible"
-helpviewer_keywords: 
-  - "MarkAssembliesWithComVisible"
-  - "CA1017"
+title: 'CA1017: Mark assemblies with ComVisibleAttribute | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1017
+- MarkAssembliesWithComVisible
+helpviewer_keywords:
+- MarkAssembliesWithComVisible
+- CA1017
 ms.assetid: 4842cb49-8dd8-4e5d-a2d6-ceeaf6c6cf8e
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1017: アセンブリに ComVisibleAttribute を設定します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 642740f4750d643fddf51ba405be4acad6733ea7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Mark assemblies with ComVisibleAttribute
 |||  
 |-|-|  
 |TypeName|MarkAssembliesWithComVisible|  
 |CheckId|CA1017|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## 原因  
- アセンブリには、それに適用される <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> 属性がありません。  
+## <a name="cause"></a>Cause  
+ An assembly does not have the <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> attribute applied to it.  
   
-## 規則の説明  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute> 属性によって、COM クライアントからマネージ コードにアクセスする方法を決定します。  アセンブリで COM の参照範囲を明示することをお勧めします。  COM の参照範囲は、アセンブリ全体に設定し、個々の型と型のメンバー用にオーバーライドできます。  この属性がない場合、アセンブリのコンテンツは COM クライアントから参照できます。  
+## <a name="rule-description"></a>Rule Description  
+ The <xref:System.Runtime.InteropServices.ComVisibleAttribute> attribute determines how COM clients access managed code. Good design dictates that assemblies explicitly indicate COM visibility. COM visibility can be set for a whole assembly and then overridden for individual types and type members. If the attribute is not present, the contents of the assembly are visible to COM clients.  
   
-## 違反の修正方法  
- この規則違反を修正するには、アセンブリにこの属性を追加します。  アセンブリを COM クライアントから参照できないようにするには、属性を適用し、属性値を `false` に設定します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, add the attribute to the assembly. If you do not want the assembly to be visible to COM clients, apply the attribute and set its value to `false`.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  アセンブリを参照できるようにする場合、この属性を適用し、値を `true` に設定します。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule. If you want the assembly to be visible, apply the attribute and set its value to `true`.  
   
-## 使用例  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute> 属性を適用したアセンブリを次の例に示します。例では、COM クライアントからこのアセンブリを参照できなくなります。  
+## <a name="example"></a>Example  
+ The following example shows an assembly that has the <xref:System.Runtime.InteropServices.ComVisibleAttribute> attribute applied to prevent it from being visible to COM clients.  
   
- [!code-cpp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CPP/ca1017-mark-assemblies-with-comvisibleattribute_1.cpp)]
- [!code-vb[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/VisualBasic/ca1017-mark-assemblies-with-comvisibleattribute_1.vb)]
- [!code-cs[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CSharp/ca1017-mark-assemblies-with-comvisibleattribute_1.cs)]  
+ [!code-cpp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CPP/ca1017-mark-assemblies-with-comvisibleattribute_1.cpp)] [!code-vb[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/VisualBasic/ca1017-mark-assemblies-with-comvisibleattribute_1.vb)] [!code-csharp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CSharp/ca1017-mark-assemblies-with-comvisibleattribute_1.cs)]  
   
-## 参照  
- [アンマネージ コードとの相互運用](../Topic/Interoperating%20with%20Unmanaged%20Code.md)   
- [相互運用のための .NET 型の要件](../Topic/Qualifying%20.NET%20Types%20for%20Interoperation.md)
+## <a name="see-also"></a>See Also  
+ [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)   
+ [Qualifying .NET Types for Interoperation](/dotnet/framework/interop/qualifying-net-types-for-interoperation)

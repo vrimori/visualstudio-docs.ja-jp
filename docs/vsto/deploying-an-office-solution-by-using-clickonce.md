@@ -1,267 +1,271 @@
 ---
-title: "ClickOnce を使用した Office ソリューションの配置"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ClickOnce 配置 [Visual Studio での Office 開発], 配置 (ソリューションを)"
-  - "Visual Studio での Office 開発, 配置 (ソリューションを)"
+title: Deploying an Office Solution by Using ClickOnce | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office development in Visual Studio, deploying solutions
+- ClickOnce deployment [Office development in Visual Studio], deploying solutions
 ms.assetid: feb516b3-5e4d-449a-9fd2-347d08d90252
 caps.latest.revision: 59
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 58
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a8430c32a7d9352554a9fc940eabe3b4ef0428c4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# ClickOnce を使用した Office ソリューションの配置
-  ClickOnce を使用する場合は、少しの手順で Office ソリューションを配置できます。  更新プログラムを公開する場合は、ソリューションはそれらを自動的に検出してインストールします。  ただし、ClickOnce を使用する場合は、コンピューターのユーザーごとに、ソリューションを個別にインストールする必要があります。  したがって、複数のユーザーが同じコンピューターでソリューションを実行する場合は、Windows インストーラー \(.msi\) の使用を検討する必要があります。  
+# <a name="deploying-an-office-solution-by-using-clickonce"></a>Deploying an Office Solution by Using ClickOnce
+  You can deploy your Office solution in fewer steps if you use ClickOnce. If you publish updates, your solution will automatically detect and install them. However, ClickOnce requires that you install your solution separately for each user of a computer. Therefore, you should consider using Windows Installer (.msi) if more than one user will run your solution on the same computer.  
   
-## このトピックの内容  
+## <a name="in-this-topic"></a>In this topic  
   
--   [ソリューションの発行](#Publish)  
+-   [Publish the solution](#Publish)  
   
--   [ソリューションに信頼を付与する方法の決定](#Trust)  
+-   [Decide how you want to grant trust to the solution](#Trust)  
   
--   [ユーザーによるソリューションのインストールの支援](#Helping)  
+-   [Help users install the solution](#Helping)  
   
--   [ソリューションのドキュメントをエンド ユーザーのコンピューターに配置 (ドキュメント レベルのカスタマイズのみ)](#Put)  
+-   [Put the document of a solution onto the end user's computer (document-level customizations only)](#Put)  
   
--   [ソリューションのドキュメントを、SharePoint を実行しているサーバーに配置 (ドキュメント レベルのカスタマイズのみ)](#SharePoint)  
+-   [Put the document of a solution onto a server that's running SharePoint (document-level customizations only)](#SharePoint)  
   
--   [カスタム インストーラーの作成](#Custom)  
+-   [Create a custom installer](#Custom)  
   
--   [更新の発行](#Update)  
+-   [Publish an update](#Update)  
   
--   [ソリューションのインストール場所の変更](#Location)  
+-   [Change the installation location of a solution](#Location)  
   
--   [ソリューションを以前のバージョンにロールバック](#Roll)  
+-   [Roll back a solution to an earlier version](#Roll)  
   
- Windows インストーラー ファイルを作成して Office ソリューションを配置する方法の詳細については、「[Windows インストーラーを使用した Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-windows-installer.md)」を参照してください。  
+ For more information about how to deploy an Office solution by creating a Windows Installer file, see [Deploying an Office Solution by Using Windows Installer](../vsto/deploying-an-office-solution-by-using-windows-installer.md).  
   
-##  <a name="Publish"></a> ソリューションの発行  
- **\[発行ウィザード\]** または **\[プロジェクト デザイナー\]** を使用して、ソリューションを発行できます。  この手順では、発行オプションの完全なセットが利用できる **\[プロジェクト デザイナー\]** を使用します。  「[発行ウィザード &#40;Visual Studio での Office 開発&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md)」を参照してください。  
+##  <a name="Publish"></a> Publish the solution  
+ You can publish your solution by using the **Publish Wizard** or the **Project Designer**. In this procedure, you'll use the **Project Designer** because it provides the complete set of publishing options. See [Publish Wizard &#40;Office Development in Visual Studio&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md).  
   
-#### ソリューションを発行するには  
+#### <a name="to-publish-the-solution"></a>To publish the solution  
   
-1.  **ソリューション エクスプローラー**で、自分のプロジェクトに合わせて名前を付けたノードを選択します。  
+1.  In **Solution Explorer**, choose the node that's named for your project.  
   
-2.  メニュー バーで、**\[プロジェクト\]**、\[*ProjectName***のプロパティ\]** の順に選択します。  
+2.  On the menu bar, choose **Project**, *ProjectName* **Properties**.  
   
-3.  **プロジェクト デザイナー**で、**\[発行\]** タブをクリックします。アプリケーションを配置するためのオプションが表示されます。  
+3.  In the **Project Designer**, choose the **Publish** tab, which the following illustration shows.  
   
-     ![プロジェクト デザイナーの [発行] タブ](../vsto/media/vsto-publishtab.png "プロジェクト デザイナーの [発行] タブ")  
+     ![The publish tab of the Project Designer](../vsto/media/vsto-publishtab.png "The publish tab of the Project Designer")  
   
-4.  **\[発行フォルダーの場所 \(FTP サーバーまたはファイル パス\)\]** ボックスに、**プロジェクト デザイナー**によってソリューション ファイルをコピーするフォルダーのパスを入力します。  
+4.  In the **Publishing Folder Location (ftp server, or file path)** box, enter the path of the folder where you want the **Project Designer** to copy the solution files.  
   
-     次のいずれかの種類のパスを入力できます。  
+     You can enter any of the following types of paths.  
   
-    -   ローカル パス \(たとえば、*C:\\FolderName\\FolderName*\)。  
+    -   A local path (for example, *C:\FolderName\FolderName*).  
   
-    -   ネットワーク上にあるフォルダーの汎用名前付け規則 \(UNC\) パス \(たとえば、*\\\\ServerName\\FolderName*\)。  
+    -   A Uniform Naming Convention (UNC) path to a folder on your network (for example, *\\\ServerName\FolderName*).  
   
-    -   相対パス \(たとえば、プロジェクトが既定で公開されるフォルダーである *PublishFolder\\*\)。  
+    -   A relative path (for example, *PublishFolder\\*, which is the folder into which the project is published by default).  
   
-5.  **\[インストール フォルダーの URL\]** ボックスに、エンド ユーザーが目にすることになる、ソリューションの完全修飾パスを入力します。  
+5.  In the **Installation Folder URL** box, enter the fully qualified path of the location where end users will find your solution.  
   
-     まだ位置が確定していない場合は、このフィールドに何も入力しないでください。  既定では、ClickOnce はこのフォルダーの中で、ユーザーがソリューションをインストールするための更新プログラムを検索します。  
+     If you don't know the location yet, don't enter anything into this field. By default, ClickOnce looks for updates in the folder from which your users install the solution.  
   
-6.  **\[必須コンポーネント\]** ボタンをクリックします。  
+6.  Choose the **Prerequisites** button.  
   
-7.  **\[必須コンポーネント\]** ダイアログ ボックスの **\[必須コンポーネントをインストールするセットアップ プログラムを作成する\]** チェック ボックスをオンにします。  
+7.  In the **Prerequisites** dialog box, ensure that the **Create setup program to install prerequisite components** check box is selected.  
   
-8.  **\[インストールする必須コンポーネントを選択する\]** リストで、**\[Windows インストーラー 4.5\]**、および適切な .NET Framework パッケージに対応するチェック ボックスをオンにします。  
+8.  In the **Choose which prerequisites to install** list, select the check boxes for **Windows Installer 4.5** and the appropriate .NET Framework package.  
   
-     たとえば、ソリューションが [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] を対象とする場合は、**\[Microsoft .NET Framework 4.5 Full\]** と **\[Microsoft .NET Framework 4.5 Full\]** の各チェック ボックスをオンにします。  
+     For example, if your solution targets the [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], select the check boxes for **Windows Installer 4.5** and **Microsoft .NET Framework 4.5 Full**.  
   
-9. ソリューションが .NET Framework 4.5 を対象とする場合は、**\[Visual Studio 2010 Tools for Office Runtime\]** チェック ボックスもオンにします。  
-  
-    > [!NOTE]  
-    >  既定では、このチェック ボックスは表示されません。  このチェック ボックスを表示するには、ブートストラップ パッケージを作成する必要があります。  「[Creating a Bootstrapper package for an Office 2013 VSTO Add\-in with Visual Studio 2012](http://blogs.msdn.com/b/vsto/archive/2012/12/21/creating-a-bootstrapper-package-for-an-office-2013-vsto-add-in-with-visual-studio-2012.aspx)」を参照してください。  
-  
-10. **\[必須コンポーネントのインストール場所を指定してください\]** の下に表示されるオプションのいずれかをクリックし、**\[OK\]** をクリックします。  
-  
-     各オプションの説明を次の表に示します。  
-  
-    |オプション|説明|  
-    |-----------|--------|  
-    |**\[必須コンポーネントをコンポーネントの開発元の Web サイトからダウンロードする\]**|ユーザーは、販売元からこれらの必須コンポーネントをダウンロードしてインストールするように求められます。|  
-    |**\[アプリケーションと同じ場所から必須コンポーネントをダウンロードする\]**|必要なソフトウェアは、ソリューションと共にインストールされます。  このオプションを選択すると、Visual Studio はすべての必須パッケージを発行場所に自動的にコピーします。  このオプションを使用するには、必須パッケージが開発用コンピューターに存在する必要があります。|  
-    |**次の場所から必須コンポーネントをダウンロード**|Visual Studio は、指定した場所にすべての必須パッケージをコピーし、ソリューションと共にそれらをインストールします。|  
-  
-     「[&#91;必須コンポーネント&#93; ダイアログ ボックス](../ide/reference/prerequisites-dialog-box.md)」を参照してください。  
-  
-11. **\[更新プログラム\]** ボタンをクリックし、各エンド ユーザーが VSTO アドインまたはカスタマイズの更新を確認する頻度を指定してから、**\[OK\]** をクリックします。  
+9. If your solution targets the .NET Framework 4.5, also select the **Visual Studio 2010 Tools for Office Runtime** check box.  
   
     > [!NOTE]  
-    >  CD またはリムーバブル ドライブを使用して配置を行う場合は、**\[更新の確認をしない\]** オプション ボタンをオンにします。  
+    >  By default, this check box doesn't appear. To show this check box, you must create a Bootstrapper package. See [Creating a Bootstrapper package for an Office 2013 VSTO Add-in with Visual Studio 2012](http://blogs.msdn.com/b/vsto/archive/2012/12/21/creating-a-bootstrapper-package-for-an-office-2013-vsto-add-in-with-visual-studio-2012.aspx).  
   
-     更新を発行する方法の詳細については、[更新の発行](#Update) を参照してください。  
+10. Under **Specify the install location for prerequisites**, choose one of the options that appear, and then choose the **OK** button.  
   
-12. **\[オプション\]** ボタンをクリックし、**\[オプション\]** ダイアログ ボックス内のオプションを確認してから、**\[OK\]** をクリックします。  
+     The following table describes each option.  
   
-13. **\[今すぐ発行\]** をクリックします。  
+    |Option|Description|  
+    |------------|-----------------|  
+    |**Download prerequisites from the component vendor's web site**|The user is prompted to download and install these prerequisites from the vendor.|  
+    |**Download prerequisites from the same location as my application**|The prerequisite software is installed with the solution. If you choose this option, Visual Studio copies all of the prerequisite packages to the publish location for you. For this option to work, the prerequisite packages must be on the development computer.|  
+    |**Download prerequisites from the following location**|Visual Studio copies all of the prerequisite packages to the location that you specify and installs them with the solution.|  
   
-     この手順で既に指定した発行フォルダーに、Visual Studio は次のフォルダーとファイルを追加します。  
+     See [Prerequisites Dialog Box](/visualstudio/ide/reference/prerequisites-dialog-box).  
   
-    -   **\[アプリケーション ファイル\]** フォルダー。  
-  
-    -   セットアップ プログラム。  
-  
-    -   最新バージョンの配置マニフェストを指す配置マニフェスト。  
-  
-     **\[アプリケーション ファイル\]** フォルダーには、発行する各バージョンに対応するサブフォルダーが含まれます。  バージョン固有の各サブフォルダーには、次のファイルが含まれます。  
-  
-    -   アプリケーション マニフェスト。  
-  
-    -   配置マニフェスト。  
-  
-    -   カスタマイズ アセンブリ。  
-  
-     次の図に、Outlook VSTO アドインに対応する発行フォルダーの構造を示します。  
-  
-     ![発行フォルダーの構造](~/vsto/media/publishfolderstructure.png "発行フォルダーの構造")  
+11. Choose the **Updates** button, specify how often you want each end user's VSTO Add-in or customization to check for updates, and then choose the **OK** button.  
   
     > [!NOTE]  
-    >  ClickOnce はアセンブリに .deploy 拡張子を追加します。その結果、セキュリティで保護されたインターネット インフォメーション サービス \(IIS\) がインストールされている場合でも、安全ではない拡張子が原因でこのファイルがブロックされることはありません。  ユーザーがソリューションをインストールする時点で、ClickOnce は .deploy 拡張子を削除します。  
+    >  If you're deploying by using a CD or a removable drive, choose the **Never check for updates** option button.  
   
-14. この手順で既に指定したインストール場所に、ソリューション ファイルをコピーします。  
+     For information about how to publish an update, see [Publish an update](#Update).  
   
-##  <a name="Trust"></a> ソリューションに信頼を付与する方法の決定  
- ユーザーのコンピューターでソリューションを実行する前に、次のいずれかの方法で信頼を付与する必要があります。そうしない場合は、ユーザーはソリューションをインストールするときに、信頼プロンプトに応答する必要が生じます。  ソリューションに信頼を付与するには、既知の信頼される発行者を特定する証明書を使用してマニフェストに署名します。  詳細については、[ソリューションのアプリケーション マニフェストと配置マニフェストの署名によって信頼します](../vsto/granting-trust-to-office-solutions.md#Signing) を参照してください。  
+12. Choose the **Options** button, review the options in the **Options** dialog box, and then choose the **OK** button.  
   
- ドキュメント レベルのカスタマイズを配置し、ユーザーのコンピューター上のフォルダーにドキュメントを配置するか、または SharePoint サイトでドキュメントを使用できるようにする場合は、ドキュメントの場所を Office が信頼していることを確認します。  「[ドキュメントへの信頼の付与](../vsto/granting-trust-to-documents.md)」を参照してください。  
+13. Choose the **Publish Now** button.  
   
-##  <a name="Helping"></a> ユーザーによるソリューションのインストールの支援  
- ユーザーはソリューションをインストールするために、セットアップ プログラムを実行して配置マニフェストを開くか、またはドキュメント レベルのカスタマイズの場合はドキュメントを直接開くことができます。  ベスト プラクティスとして、ユーザーはセットアップ プログラムを使用してソリューションをインストールする必要があります。  他の 2 とおりの方法は、必要なソフトウェアがインストール済みであることを確認しません。  ユーザーがインストール場所からドキュメントを開こうとする場合は、Office アプリケーションのセキュリティ センターにある信頼できる場所の一覧に、そのインストール場所を追加する必要があります。  
+     Visual Studio adds the following folders and files to the publishing folder that you specified earlier in this procedure.  
   
-### ドキュメント レベルのカスタマイズに対応するドキュメントを開く  
- ドキュメント レベルのカスタマイズに対応するドキュメントの場合は、ユーザーはインストール場所からそのドキュメントを直接開くか、またはドキュメントをローカル コンピューターにコピーしてからコピー先ドキュメントを開くことができます。  
+    -   The **Application Files** folder.  
   
- ベスト プラクティスとして、ユーザーはローカル コンピューター上にあるドキュメントのコピーを開く必要があります。その結果、複数のユーザーが同じドキュメントを同時に開こうとすることはありません。  このプラクティスを強制するために、ユーザーのコンピューターにドキュメントをコピーするようにセットアップ プログラムを構成することができます。  [ソリューションのドキュメントをエンド ユーザーのコンピューターに配置 (ドキュメント レベルのカスタマイズのみ)](#Put)を参照してください。  
+    -   The setup program.  
   
-### IIS の Web サイトから配置マニフェストを開く方法でソリューションをインストール  
- ユーザーは、Web で配置マニフェストを開くことにより、Office ソリューションをインストールできます。  ただし、セキュリティで保護されたインターネット インフォメーション サービス \(IIS\) がインストールされていると、.vsto 拡張子を持つファイルはブロックされます。  IIS を使用して Office ソリューションを配置する前に、IIS に MIME の種類を定義する必要があります。  
+    -   A deployment manifest that points to the deployment manifest of the most recent version.  
   
-##### IIS 6.0 に MIME の種類 \(.vsto\) を追加するには  
+     The **Application Files** folder contains a subfolder for each version that you publish. Each version-specific subfolder contains the following files.  
   
-1.  IIS 6.0 を実行しているサーバー上で、**\[スタート\]**、**\[すべてのプログラム\]**、**\[管理ツール\]**、**\[インターネット インフォメーション サービス \(IIS\) マネージャー\]** の順にクリックします。  
+    -   An application manifest.  
   
-2.  構成するコンピューター名、**\[Web サイト\]** フォルダー、または Web サイトをクリックします。  
+    -   A deployment manifest.  
   
-3.  メニュー バーで **\[操作\]**、**\[プロパティ\]** の順にクリックします。  
+    -   Customization assemblies.  
   
-4.  **\[HTTP ヘッダー\]** タブの **\[MIME の種類\]** をクリックします。  
+     The following illustration shows the structure of the publish folder for an Outlook VSTO Add-in.  
   
-5.  **\[MIME の種類\]** ウィンドウの **\[新規作成\]** をクリックします。  
-  
-6.  **\[MIME の種類\]** ウィンドウで、拡張子として「**.vsto**」と入力し、MIME の種類として「**application\/x\-ms\-vsto**」と入力してから、新しい設定を適用します。  
+     ![Publish Folder Structure](../vsto/media/publishfolderstructure.png "Publish Folder Structure")  
   
     > [!NOTE]  
-    >  変更を有効にするために、World Wide Web Publishing Service を再起動するか、ワーカー プロセスがリサイクルされるまで待つ必要があります。  その後、ブラウザーのディスク キャッシュをフラッシュし、.vsto ファイルを再度開く必要があります。  
+    >  ClickOnce appends the .deploy extension to assemblies so that a secured installation of Internet Information Services (IIS) won't block the files because of an unsafe extension. When the user installs the solution, ClickOnce removes the .deploy extension.  
   
-##### IIS 7.0 に MIME の種類 \(.vsto\) を追加するには  
+14. Copy the solution files to the installation location that you specified earlier in this procedure.  
   
-1.  IIS 7.0 を実行しているサーバーで、**\[スタート\]**、**\[すべてのプログラム\]**、**\[アクセサリ\]** の順にクリックします。  
+##  <a name="Trust"></a> Decide how you want to grant trust to the solution  
+ Before a solution can run on user computers, either you must grant trust or users must respond to a trust prompt when they install the solution. To grant trust to the solution, sign the manifests by using a certificate that identifies a known and trusted publisher. See [Trusting the Solution by Signing the Application and Deployment Manifests](../vsto/granting-trust-to-office-solutions.md#Signing).  
   
-2.  **\[コマンド プロンプト\]** のショートカット メニューを開き、**\[管理者として実行\]** をクリックします。  
+ If you're deploying a document-level customization and you want to put the document into a folder on the user's computer or make the document available on a SharePoint site, ensure that Office trusts the location of the document. See [Granting Trust to Documents](../vsto/granting-trust-to-documents.md).  
   
-3.  **\[開く\]** ボックスで次のパスを入力し、**\[OK\]** をクリックします。  
+##  <a name="Helping"></a> Help users install the solution  
+ Users can install the solution by running the setup program, opening the deployment manifest, or in the case of a document-level customization, opening the document directly. As a best practice, users should install your solution by using the setup program. The other two approaches don't ensure that the prerequisite software is installed. If users want to open the document from the installation location, they must add it to the list of trusted locations in the Trust Center of the Office application.  
+  
+### <a name="opening-the-document-of-a-document-level-customization"></a>Opening the document of a document-level customization  
+ Users can open the document of a document-level customization directly from the installation location or by copying the document to their local computer and then opening the copy.  
+  
+ As a best practice, users should open a copy of the document on their computers so that multiple users won't try to open the same copy at the same time. To enforce this practice, you can configure your setup program to copy the document to user computers. See [Put the document of a solution onto the end user's computer (document-level customizations only)](#Put).  
+  
+### <a name="installing-the-solution-by-opening-the-deployment-manifest-from-an-iis-website"></a>Installing the solution by opening the deployment manifest from an IIS website  
+ Users can install an Office solution by opening the deployment manifest from the web. However, a secured installation of Internet Information Services (IIS) will block files that have the .vsto extension. The MIME type must be defined in IIS before you can deploy an Office solution by using IIS.  
+  
+##### <a name="to-add-the-vsto-mime-type-to-iis-60"></a>To add the .vsto MIME type to IIS 6.0  
+  
+1.  On the server that's running IIS 6.0, choose **Start**, **All Programs**, **Administrative Tools**,  **Internet Information Services (IIS) Manager**.  
+  
+2.  Choose the computer name, the **Web Sites** folder, or the web site that you're configuring.  
+  
+3.  On the menu bar, choose **Action**, **Properties**.  
+  
+4.  On the **HTTP Headers** tab, choose the **MIME Types** button.  
+  
+5.  In the **MIME Types** window, choose the **New** button.  
+  
+6.  In the **MIME Type** window, enter **.vsto** as the extension, enter **application/x-ms-vsto** as the MIME type, and then apply the new settings.  
+  
+    > [!NOTE]  
+    >  For the changes to take effect, you must restart the World Wide Web Publishing Service or wait for the worker process to recycle. You must then flush the browser's disk cache and then try to open the .vsto file again.  
+  
+##### <a name="to-add-the-vsto-mime-type-to-iis-70"></a>To add the .vsto MIME type to IIS 7.0  
+  
+1.  On the server that's running IIS 7.0, choose **Start**, **All Programs**, **Accessories**.  
+  
+2.  Open the shortcut menu for **Command Prompt**, and then choose  **Run as administrator.**  
+  
+3.  In the **Open** box, enter the following path, and then choose the **OK** button.  
   
     ```  
     %windir%\system32\inetsrv   
     ```  
   
-4.  次のコマンドを入力し、新しい設定を適用します。  
+4.  Enter the following command, and then apply the new settings.  
   
     ```  
     set config /section:staticContent /+[fileExtension='.vsto',mimeType='application/x-ms-vsto']  
     ```  
   
     > [!NOTE]  
-    >  変更を有効にするために、World Wide Web Publishing Service を再起動するか、ワーカー プロセスがリサイクルされるまで待つ必要があります。  その後、ブラウザーのディスク キャッシュをフラッシュし、.vsto ファイルを再度開く必要があります。  
+    >  For the changes to take effect, you must restart the World Wide Web Publishing Service, or you must wait for the worker process to recycle. You must then flush the browser's disk cache and then try to open the .vsto file again.  
   
-##  <a name="Put"></a> ソリューションのドキュメントをエンド ユーザーのコンピューターに配置 \(ドキュメント レベルのカスタマイズのみ\)  
- 配置後アクションを作成すると、エンド ユーザーのコンピューターに対して、ソリューションのドキュメントを自動的にコピーすることができます。  この方法により、ソリューションのインストール後に、ユーザーがインストール場所から自らのコンピューターにドキュメントを手動でコピーする必要はありません。  開発者はクラスを作成し、その中で配置後アクションを定義し、ソリューションのビルドと発行を行い、アプリケーション マニフェストを変更し、アプリケーション マニフェストと配置マニフェストに再署名する必要があります。  
+##  <a name="Put"></a> Put the document of a solution onto the end user's computer (document-level customizations only)  
+ You can copy the document of your solution onto the end user's computer for them by creating a post-deployment action. That way, the user doesn't have to manually copy the document from the installation location to their computer after they install your solution. You'll have to create a class that defines the post-deployment action, build and publish the solution, modify the application manifest, and re-sign the application and deployment manifest.  
   
- 次の手順は、プロジェクト名が **ExcelWorkbook** で、このソリューションをコンピューターの **C:\\publish** ディレクトリに発行することを想定します。  
+ The following procedures assume that your project name is **ExcelWorkbook** and that you publish the solution to the **C:\publish** directory on your computer.  
   
-### 配置後アクションを定義するクラスを作成します。  
+### <a name="create-a-class-that-defines-the-post-deployment-action"></a>Create a class that defines the post-deployment action  
   
-1.  メニュー バーで **\[ファイル\]** をクリックし、**\[追加\]** を選択し、**\[新しいプロジェクト\]** をクリックします。  
+1.  On the menu bar, choose **File**, **Add**, **New Project**.  
   
-2.  **\[新しいプロジェクトの追加\]** ダイアログ ボックスの **\[インストールされたテンプレート\]** ペインで、**\[Windows\]** フォルダーをクリックします。  
+2.  In the **Add New Project** dialog box, in the **Installed Templates** pane, choose the **Windows** folder.  
   
-3.  **\[テンプレート\]** ペインで、**\[クラス ライブラリ\]** テンプレートをクリックします。  
+3.  In the **Templates** pane, choose the **Class Library** template.  
   
-4.  **\[名前\]** フィールドに「**FileCopyPDA**」と入力し、**\[OK\]** をクリックします。  
+4.  In the **Name** field, enter **FileCopyPDA**, and then choose the **OK** button.  
   
-5.  **ソリューション エクスプローラー**で、**FileCopyPDA** プロジェクトをクリックします。  
+5.  In **Solution Explorer**, choose the **FileCopyPDA** project.  
   
-6.  メニュー バーで、**\[プロジェクト\]**、**\[参照の追加\]** の順に選択します。  
+6.  On the menu bar, choose **Project**, **Add Reference**.  
   
-7.  **\[.NET\]** タブで、Microsoft.VisualStudio.Tools.Applications.Runtime および Microsoft.VisualStudio.Tools.Applications.ServerDocument への参照を追加します。  
+7.  On the **.NET** tab, add references to Microsoft.VisualStudio.Tools.Applications.Runtime and Microsoft.VisualStudio.Tools.Applications.ServerDocument.  
   
-8.  クラスの名前を `FileCopyPDA` に変更してから、ファイルの内容を次のコードに置き換えます。  このコードは次のタスクを実行します。  
+8.  Rename the class to `FileCopyPDA`, and then replace the contents of the file with the code. This code performs the following tasks:  
   
-    -   ドキュメントをユーザーのデスクトップにコピーします。  
+    -   Copies the document to the user's desktop.  
   
-    -   \_AssemblyLocation プロパティを相対パスから配置マニフェストの絶対パスに変更します。  
+    -   Changes the _AssemblyLocation property from a relative path to a fully qualified path for the deployment manifest.  
   
-    -   ユーザーがソリューションをアンインストールする場合は、ファイルを削除します。  
+    -   Deletes the file if the user uninstalls the solution.  
   
-     [!code-csharp[Trin_ExcelWorkbookPDA#7](../snippets/csharp/VS_Snippets_OfficeSP/trin_excelworkbookpda/cs/filecopypda/class1.cs#7)]
-     [!code-vb[Trin_ExcelWorkbookPDA#7](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_excelworkbookpda/vb/filecopypda/class1.vb#7)]  
+     [!code-vb[Trin_ExcelWorkbookPDA#7](../vsto/codesnippet/VisualBasic/trin_excelworkbookpda/filecopypda/class1.vb#7)] [!code-csharp[Trin_ExcelWorkbookPDA#7](../vsto/codesnippet/CSharp/trin_excelworkbookpda/filecopypda/class1.cs#7)]  
   
-### ソリューションをビルドし、発行します。  
+### <a name="build-and-publish-the-solution"></a>Build and publish the solution  
   
-1.  **ソリューション エクスプローラー**で、**FileCopyPDA** プロジェクトのショートカット メニューを開き、**\[ビルド\]** をクリックします。  
+1.  In **Solution Explorer**, open the shortcut menu for the **FileCopyPDA** project, and then choose **Build**.  
   
-2.  **ExcelWorkbook** プロジェクトのショートカット メニューを開いてから、**\[ビルド\]** をクリックします。  
+2.  Open the shortcut menu for the **ExcelWorkbook** project, and then choose **Build**.  
   
-3.  **ExcelWorkbook** プロジェクトのショートカット メニューを開いてから、**\[参照の追加\]** をクリックします。  
+3.  Open the shortcut menu for the **ExcelWorkbook** project, and then choose **Add Reference**.  
   
-4.  **\[参照の追加\]** ダイアログ ボックスで **\[プロジェクト\]** タブ、**\[FileCopyPDA\]**、**\[OK\]** の順にクリックします。  
+4.  In the **Add Reference** dialog box, choose the **Projects** tab, choose **FileCopyPDA**, and then choose the **OK** button.  
   
-5.  **ソリューション エクスプローラー**で、**ExcelWorkbook** プロジェクトをクリックします。  
+5.  In **Solution Explorer**, choose the **ExcelWorkbook** project.  
   
-6.  メニュー バーで **\[プロジェクト\]**、**\[新しいフォルダー\]** を順にクリックします。  
+6.  On menu bar, choose **Project**, **New Folder**.  
   
-7.  「Data」と入力してから、Enter キーを押します。  
+7.  Enter **Data**, and then choose the Enter key.  
   
-8.  **ソリューション エクスプローラー**で、**Data** フォルダーをクリックします。  
+8.  In **Solution Explorer**, choose the **Data** folder.  
   
-9. メニュー バーで **\[プロジェクト\]**、**\[既存項目の追加\]** の順にクリックします。  
+9. On the menu bar, choose **Project**, **Add Existing Item**.  
   
-10. **\[既存項目の追加\]** ダイアログ ボックスで、**ExcelWorkbook** プロジェクトの出力ディレクトリを参照し、**ExcelWorkbook.xlsx** ファイルを選択してから **\[追加\]** をクリックします。  
+10. In the **Add Existing Item** dialog box, browse to the output directory for the **ExcelWorkbook** project, choose the **ExcelWorkbook.xlsx** file, and then choose the **Add** button.  
   
-11. **ソリューション エクスプローラー**で、**ExcelWorkbook.xlsx** ファイルをクリックします。  
+11. In **Solution Explorer** choose the **ExcelWorkbook.xlsx** file.  
   
-12. **プロパティ** ウィンドウで、**"ビルド アクション"** プロパティを **"コンテンツ"** に変更し、**"出力ディレクトリにコピー"** プロパティを **"新しい場合はコピーする"** に変更します。  
+12. In the **Properties** window, change the **Build Action** property to **Content** and the **Copy to Output Directory** property to **Copy if newer**.  
   
-     これらの手順を完了した時点で、プロジェクトは次の図のようになります。  
+     When you've completed these steps, your project will resemble the following illustration.  
   
-     ![配置後アクションのプロジェクト構造。](../vsto/media/vsto-postdeployment.png "配置後アクションのプロジェクト構造。")  
+     ![Project structure of the post deployment action.](../vsto/media/vsto-postdeployment.png "Project structure of the post deployment action.")  
   
-13. **ExcelWorkbook** プロジェクトを発行します。  
+13. Publish the **ExcelWorkbook** project.  
   
-### アプリケーション マニフェストの変更  
+### <a name="modify-the-application-manifest"></a>Modify the application manifest  
   
-1.  **ファイル エクスプローラー** を使用して **c:\\publish** ディレクトリを開きます。  
+1.  Open the **c:\publish** directory by using **File Explorer**.  
   
-2.  **Application Files** フォルダーを開いてから、ソリューションの最新の発行済みバージョンに対応するフォルダーを開きます。  
+2.  Open the **Application Files** folder, and then open the folder that corresponds to the most recent published version of your solution.  
   
-3.  メモ帳のようなテキスト エディターで **ExcelWorkbook.dll.manifest** ファイルを開きます。  
+3.  Open the **ExcelWorkbook.dll.manifest** file in a text editor such as Notepad.  
   
-4.  `</vstav3:update>` 要素の後に、次のコードを追加します。  `<vstav3:entryPoint>` 要素の class 属性には、次の構文を使用します。*NamespaceName.ClassName*。  次の例では、名前空間名とクラス名は同じであるため、最終的にエントリ ポイント名は `FileCopyPDA.FileCopyPDA` になります。  
+4.  After the `</vstav3:update>` element, add following code. For the class attribute of the `<vstav3:entryPoint>` element, use the following syntax: *NamespaceName.ClassName*. In the following example, the namespace and class names are the same, so the resulting entry point name is `FileCopyPDA.FileCopyPDA`.  
   
     ```  
     <vstav3:postActions>  
@@ -280,21 +284,25 @@ caps.handback.revision: 58
     </vstav3:postActions>  
     ```  
   
-### アプリケーション マニフェストと配置マニフェストへの再署名  
+### <a name="re-sign-the-application-and-deployment-manifests"></a>Re-sign the application and deployment manifests  
   
-1.  **%USERPROFILE%\\Documents\\Visual Studio 2013\\Projects\\ExcelWorkbook\\ExcelWorkbook** フォルダー内で、**ExcelWorkbook\_TemporaryKey.pfx** 証明書ファイルをクリップボードにコピーし、そのファイルを *PublishFolder* **\\Application Files\\ExcelWorkbook***MostRecentPublishedVersion* フォルダーに貼り付けます。  
+1.  In the **%USERPROFILE%\Documents\Visual Studio 2013\Projects\ExcelWorkbook\ExcelWorkbook** folder, copy the **ExcelWorkbook_TemporaryKey.pfx** certificate file, and then paste it into the *PublishFolder* **\Application Files\ExcelWorkbook***MostRecentPublishedVersion* folder.  
   
-2.  Visual Studio コマンド プロンプトを開き、ディレクトリを **c:\\publish\\Application Files\\ExcelWorkbook***MostRecentPublishedVersion* フォルダーに移動します \(たとえば、**c: \\publish\\Application Files\\ExcelWorkbook\_1\_0\_0\_4**\)。  
+2.  
   
-3.  次のコマンドを実行し、変更したアプリケーション マニフェストに署名します。  
+3.  Open the Visual Studio command prompt, and then change directories to the **c:\publish\Application Files\ExcelWorkbook***MostRecentPublishedVersion* folder (for example, **c:\publish\Application Files\ExcelWorkbook_1_0_0_4**).  
+  
+4.  Sign the modified application manifest by running the following command:  
   
     ```  
     mage -sign ExcelWorkbook.dll.manifest -certfile ExcelWorkbook_TemporaryKey.pfx  
     ```  
   
-     "ExcelWorkbook.dll.manifest が正常に署名されました" というメッセージが表示されます。  
+     The message "ExcelWorkbook.dll.manifest successfully signed" appears.  
   
-4.  **c: \\publish** フォルダーに移動してから、次のコマンドを実行し、配置マニフェストを更新して署名します:  
+5.  
+  
+6.  Change to the **c:\publish** folder, and then update and sign the deployment manifest by running the following command:  
   
     ```  
     mage -update ExcelWorkbook.vsto -appmanifest "Application Files\Ex  
@@ -302,168 +310,168 @@ caps.handback.revision: 58
     ```  
   
     > [!NOTE]  
-    >  前の例では、MostRecentVersionNumber を、ソリューションの最新発行バージョンのバージョン番号に置換します \(たとえば、**1\_0\_0\_4**\)。  
+    >  In the previous example, replace MostRecentVersionNumber with the version number of the most recently published version of your solution (for example, **1_0_0_4**).  
   
-     "ExcelWorkbook.vsto 正常に署名されました" というメッセージが表示されます。  
+     The message "ExcelWorkbook.vsto successfully signed" appears.  
   
-5.  ExcelWorkbook.vsto ファイルを **c:\\publish\\Application Files\\ExcelWorkbook***MostRecentVersionNumber* ディレクトリにコピーします。  
+7.  Copy the ExcelWorkbook.vsto file to the **c:\publish\Application Files\ExcelWorkbook***MostRecentVersionNumber* directory.  
   
-##  <a name="SharePoint"></a> ソリューションのドキュメントを、SharePoint を実行しているサーバーに配置 \(ドキュメント レベルのカスタマイズのみ\)  
- SharePoint を使用して、エンド ユーザーに対してドキュメント レベルのカスタマイズを発行できます。  ユーザーが SharePoint サイトにアクセスし、ドキュメントを開くと、ランタイムが自動的に共有ネットワーク フォルダーからユーザーのローカル コンピューターにソリューションをインストールします。  ソリューションをローカル インストールした後、ドキュメントをデスクトップなど別の場所にコピーした場合でも、カスタマイズは引き続き機能します。  
+##  <a name="SharePoint"></a> Put the document of a solution onto a server that's running SharePoint (document-level customizations only)  
+ You can publish your document-level customization to end users by using SharePoint. When users go to the SharePoint site and open the document, the runtime automatically installs the solution from the shared network folder to the user's local computer. After the solution is installed locally, the customization will still function even if the document is copied elsewhere, such as the desktop.  
   
-#### SharePoint を実行しているサーバーにドキュメントを配置するには  
+#### <a name="to-put-the-document-on-a-server-thats-running-sharepoint"></a>To put the document on a server that's running SharePoint  
   
-1.  SharePoint サイト上のドキュメント ライブラリにソリューション ドキュメントを追加します。  
+1.  Add the solution document to a document library on a SharePoint site.  
   
-2.  次の方法のいずれかに対応する手順を実行します。  
+2.  Perform the steps for one of the following approaches:  
   
-    -   Office 構成ツールを使用し、すべてのユーザーのコンピューターで Word または Excel のセキュリティ センターに、SharePoint を実行しているサーバーを追加します。  
+    -   Use the Office Configuration Tool to add the server that's running SharePoint to the Trust Center in Word or Excel on all user computers.  
   
-         「[Office 2010 でのセキュリティ ポリシーと設定](http://go.microsoft.com/fwlink/?LinkId=99227)」を参照してください。  
+         See [Security policies and settings in Office 2010](http://go.microsoft.com/fwlink/?LinkId=99227).  
   
-    -   各ユーザーが確実に次の手順を実行するようにします。  
+    -   Ensure that each user performs the following steps.  
   
-        1.  ローカル コンピューターで Word または Excel を開き、**\[ファイル\]** タブをクリックし、**\[オプション\]** ボタンをクリックします。  
+        1.  On the local computer, open Word or Excel, choose the **File** tab, and then choose the **Options** button.  
   
-        2.  **\[セキュリティ センター\]** ダイアログ ボックスで **\[信頼できる場所\]** ボタンをクリックします。  
+        2.  In the **Trust Center** dialog box, choose the **Trusted Locations** button.  
   
-        3.  **\[プライベート ネットワーク上にある信頼できる場所を許可する \(推奨しません\)\]** チェック ボックスをオンにし、**\[新しい場所の追加\]** ボタンをクリックします。  
+        3.  Select the **Allow Trusted Locations on my network (not recommended)** check box, and then choose the **Add new location** button.  
   
-        4.  **\[パス\]** ボックスで、アップロードしたドキュメントを含む SharePoint ドキュメント ライブラリの URL \(たとえば、*http:\/\/SharePointServerName\/TeamName\/ProjectName\/DocumentLibraryName*\) を入力します。  
+        4.  In the **Path** box, enter the URL of the SharePoint document library that contains the document that you uploaded (for example, *http://SharePointServerName/TeamName/ProjectName/DocumentLibraryName*).  
   
-             ここで、default.aspx や AllItems.aspx など、既定の Web ページの名前を追加しないでください。  
+             Don't add the name of the default Web page, such as default.aspx or AllItems.aspx.  
   
-        5.  **\[この場所のサブフォルダーも信頼する\]** チェック ボックスをオンにし、**\[OK\]** をクリックします。  
+        5.  Select the **Subfolders of this location are also trusted** check box, and then choose the **OK** button.  
   
-             ユーザーが SharePoint サイトからドキュメントを開いた時点で、そのドキュメントが開かれ、カスタマイズがインストールされます。  ユーザーは、ドキュメントを自分のデスクトップにコピーすることができます。  ドキュメント内のプロパティは、ドキュメントが存在しているネットワークの場所を指しているので、カスタマイズは引き続き実行されます。  
+             When users open the document from the SharePoint site, the document opens, and the customization is installed. Users can copy the document to their desktop. The customization will still run because properties in the document point to the network location of the document.  
   
-##  <a name="Custom"></a> カスタム インストーラーの作成  
- ソリューションを発行したときに自動的に作成されたセットアップ プログラムを使用する代わりに、Office ソリューション用のカスタム インストーラーを作成することもできます。  たとえば、ログイン スクリプトを使用してインストールを開始したり、バッチ ファイルを使用して、ユーザーの操作なしにソリューションをインストールすることもできます。  このようなシナリオは、エンド ユーザーのコンピューターに必須コンポーネントがインストール済みの場合に最適です。  
+##  <a name="Custom"></a> Create a custom installer  
+ You can create a custom installer for your Office solution, instead of using the setup program that's created for you when you publish the solution. For example, you could use a logon script to start the installation, or you could use a batch file to install the solution without user interaction. These scenarios work best if the prerequisites are already installed on end-user computers.  
   
- カスタム インストール プロセスの一環として、Office ソリューション用のインストーラー ツール \(VSTOInstaller.exe\) を呼び出します。既定では、このツールは次の場所にインストールされます。  
+ As part of your custom installation process, call the installer tool for Office solutions (VSTOInstaller.exe), which is installed in the following location by default:  
   
- %commonprogramfiles%\\microsoft shared\\VSTO\\10.0\\VSTOInstaller.exe  
+ %commonprogramfiles%\microsoft shared\VSTO\10.0\VSTOInstaller.exe  
   
- ツールがこの場所にない場合は、HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\VSTO Runtime Setup\\v4\\InstallerPath レジストリ キーまたは HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\VSTO Runtime Setup\\v4\\InstallerPath レジストリ キーを使用して、このツールのパスを見つけることができます。  
+ If the tool isn't in that location, you can use the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSTO Runtime Setup\v4\InstallerPath or HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSTO Runtime Setup\v4\InstallerPath registry key to find the path to that tool.  
   
- VSTOinstaller.exe で次のパラメーターを使用できます。  
+ You can use the following parameters with VSTOinstaller.exe.  
   
-|パラメーター|定義|  
-|------------|--------|  
-|\/Install または \/I|ソリューションをインストールします。  このオプションの後に配置マニフェストのパスを指定する必要があります。  ローカル コンピューター上のパス、汎用名前付けの規則 \(UNC\) のファイル共有を指定できます。  ローカル パス \(*C:\\FolderName\\PublishFolder*\)、相対パス \(*Publish\\*\)、または完全修飾の場所 \(*\\\\ServerName\\FolderName* または http:\/\/*ServerName\/FolderName*\) を指定できます。|  
-|\/Uninstall または \/U|ソリューションをアンインストールします。  このオプションの後に配置マニフェストのパスを指定する必要があります。  ローカル コンピューター上のパス、UNC ファイル共有を指定できます。  ローカル パス \(*c:\\FolderName\\PublishFolder*\)、相対パス \(*Publish\\*\)、または完全修飾の場所 \(*\\\\ServerName\\FolderName* または http:\/\/*ServerName\/FolderName*\) を指定できます。|  
-|\/Silent または \/S|ユーザーに入力を要求したりメッセージを表示したりすることなくソリューションをインストールまたはアンインストールします。  信頼プロンプトが必要な場合は、カスタマイズのインストールまたは更新は実行されません。|  
-|\/Help または \/?|ヘルプ情報を表示します。|  
+|Parameter|Definition|  
+|---------------|----------------|  
+|/Install or /I|Install the solution. You must follow this option with the path of a deployment manifest. You can specify a path on the local computer, a universal naming convention (UNC) file share. You can specify a local path (*C:\FolderName\PublishFolder*), a relative path (*Publish\\*), or a fully qualified location (*\\\ServerName\FolderName* or http://*ServerName/FolderName*).|  
+|/Uninstall or /U|Uninstall the solution. You must follow this option with the path of a deployment manifest. You can specify a path can be on the local computer, a UNC file share. You can specify a local path (*c:\FolderName\PublishFolder*), a relative path (*Publish\\*), or a fully qualified location (*\\\ServerName\FolderName* or http://*ServerName/FolderName*).|  
+|/Silent or /S|Install or uninstall without prompting the user for input or displaying any messages. If a trust prompt is required, the customization isn't installed or updated.|  
+|/Help or /?|Display the Help information.|  
   
- VSTOinstaller.exe を実行すると、次のエラー コードが表示されることがあります。  
+ When you run VSTOinstaller.exe, the following error codes might appear.  
   
-|エラー コード|定義|  
-|-------------|--------|  
-|0|ソリューションが正常にインストールまたはアンインストールされたか、VSTOInstaller ヘルプが表示されました。|  
-|\-100|1 つ以上のコマンド ライン オプションが有効でないか、複数回設定されました。  詳細については、"vstoinstaller \/?" と入力するか、「[ClickOnce Office ソリューションのカスタム インストーラーの作成](http://msdn.microsoft.com/ja-jp/3e5887ed-155f-485d-b8f6-3c02c074085e)」を参照してください。|  
-|\-101|1 つ以上のコマンド ライン オプションが有効ではありません。  詳細については、"vstoinstaller \/?" と入力してください。|  
-|\-200|配置マニフェストの URI が有効でありません。  詳細については、"vstoinstaller \/?" と入力してください。|  
-|\-201|配置マニフェストが有効でないため、ソリューションをインストールできませんでした。  「[Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)」を参照してください。|  
-|\-202|アプリケーション マニフェストの Visual Studio Tools for Office セクションが有効ではないため、ソリューションをインストールできませんでした。  「[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)」を参照してください。|  
-|\-203|ダウンロード エラーが発生したため、ソリューションをインストールできませんでした。  配置マニフェストの URI またはネットワーク ファイルの位置を確認し、もう一度、実行してみてください。|  
-|\-300|セキュリティ例外が発生したため、ソリューションをインストールできませんでした。  「[Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)」を参照してください。|  
-|\-400|ソリューションをインストールできませんでした。|  
-|\-401|ソリューションをアンインストールできませんでした。|  
-|\-500|ソリューションをインストールまたはアンインストールできなかったこと、または配置マニフェストをダウンロードできなかったことが原因で、操作は取り消されました。|  
+|Error Code|Definition|  
+|----------------|----------------|  
+|0|The solution was successfully installed or uninstalled, or the VSTOInstaller Help appeared.|  
+|-100|One or more command-line options isn't valid or was set more than once. For more information, enter "vstoinstaller /?" or see [Creating a Custom Installer for a ClickOnce Office Solution](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e).|  
+|-101|One or more command-line options isn't valid. For more information, enter "vstoinstaller /?".|  
+|-200|The deployment manifest URI isn't valid. For more information, enter "vstoinstaller /?".|  
+|-201|The solution couldn't be installed because the deployment manifest isn't valid. See [Deployment Manifests for Office Solutions](../vsto/deployment-manifests-for-office-solutions.md).|  
+|-202|The solution couldn't be installed because the Visual Studio Tools for Office section of the application manifest isn't valid. See [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md).|  
+|-203|The solution couldn't be installed because a download error occurred. Check the URI or network file location of the deployment manifest, and then try again.|  
+|-300|The solution couldn't be installed because a security exception occurred. See [Securing Office Solutions](../vsto/securing-office-solutions.md).|  
+|-400|The solution couldn't be installed.|  
+|-401|The solution couldn't be uninstalled.|  
+|-500|The operation has been canceled because the solution couldn't be installed or uninstalled or the deployment manifest couldn't be downloaded.|  
   
-##  <a name="Update"></a> 更新の発行  
- ソリューションを更新するには、**\[プロジェクト デザイナー\]** または **\[発行ウィザード\]** を使用してソリューションを再度発行し、更新後のソリューションをインストール場所にコピーします。  インストール場所にファイルをコピーするときに、前のファイルを確実に上書きしてください。  
+##  <a name="Update"></a> Publish an update  
+ To update a solution, you publish it again by using the **Project Designer** or **Publish Wizard**, and then you copy the updated solution to the installation location. When you copy the files to the installation location, make sure that you overwrite the previous files.  
   
- 次回ソリューションが更新プログラムをチェックしたときに、自動的に新しいバージョンが検出され、読み込まれます。  
+ The next time that the solution checks for an update, it'll find and load the new version automatically.  
   
-##  <a name="Location"></a> ソリューションのインストール場所の変更  
- ソリューションを発行した後、インストール パスの追加または変更を行うことができます。  次の理由の 1 つ以上により、インストール パスを変更する可能性があります:  
+##  <a name="Location"></a> Change the installation location of a solution  
+ You can add or change the installation path after a solution is published. You might want to change the installation path for one or more of the following reasons:  
   
--   インストール パスが既知になる前に、セットアップ プログラムをコンパイルした。  
+-   The setup program was compiled before the installation path was known.  
   
--   ソリューション ファイルは、別の場所からコピーされたものである。  
+-   The solution files have been copied to a different location.  
   
--   インストール ファイルをホストするサーバーの名前または場所が変更された。  
+-   The server that hosts the installation files has a new name or location.  
   
- ソリューションのインストール パスを変更するには、開発者がセットアップ プログラムを更新し、その後、ユーザーがそのプログラムを実行する必要があります。  ドキュメント レベルのカスタマイズの場合、新しい場所を指すように、ユーザーがドキュメントのプロパティを更新する必要もあります。  
+ To change the installation path of a solution, you must update the setup program, and then users must run it. For document-level customizations, users must also update a property in their document to point to the new location.  
   
 > [!NOTE]  
->  ユーザーにドキュメント プロパティの更新を依頼することを望まない場合は、更新後のドキュメントをインストール場所から取得するようにユーザーに依頼することができます。  
+>  If you don't want to ask users to update their document properties, you can ask users to get the updated document from the installation location.  
   
-#### セットアップ プログラムのインストール パスを変更するには  
+#### <a name="to-change-the-installation-path-in-the-setup-program"></a>To change the installation path in the setup program  
   
-1.  **コマンド プロンプト** ウィンドウを開き、インストール フォルダーに移動します。  
+1.  Open a **Command Prompt** window, and then change directories to the installation folder.  
   
-2.  セットアップ プログラムを実行します。このとき、文字列として新しいインストール パスを表す `/url` パラメーターを指定します。  
+2.  Run the setup program, and include the `/url` parameter, which takes the new installation path as a string.  
   
-     次の例で、インストール パスを、Fabrikam の Web サイト上にある場所に変更する方法を示しますが、この URL は必要なパスに置き換えることができます。  
+     The following example shows how to change the installation path to a location on the Fabrikam website, but you can replace that URL with the path that you want:  
   
     ```  
     setup.exe /url="http://www.fabrikam.com/newlocation"  
     ```  
   
     > [!NOTE]  
-    >  実行可能ファイルのシグネチャが無効化されることを示すメッセージが表示された場合は、ソリューションの署名に使用された証明書がもう有効ではなく、発行者が不明です。  その結果、ユーザーはソリューションをインストールする前に、ソリューションのソースを信頼することを示すために、メッセージを確認する必要があります。  
+    >  If a message appears and state that the signature of the executable will be invalidated, the certificate that was used to sign the solution is no longer valid, and the publisher is unknown. As a result, users will need to confirm that they trust the source of the solution before they can install it.  
   
     > [!NOTE]  
-    >  URL の現在の値を表示するには、`setup.exe /url` を実行します。  
+    >  To display the current value of the URL, run `setup.exe /url`.  
   
- ドキュメント レベルのカスタマイズでは、ユーザーがドキュメントを開いてから、そのドキュメントの \_AssemblyLocation プロパティを更新する必要があります。  次の手順では、ユーザーがこのタスクを実行する方法について説明します。  
+ For document-level customizations, users must open the document and then update its _AssemblyLocation property. The following steps describe how users can perform this task.  
   
-#### ドキュメントの\_AssemblyLocation プロパティを更新するには  
+#### <a name="to-update-the-assemblylocation-property-in-a-document"></a>To update the _AssemblyLocation property in a document  
   
-1.  次の図に示すように、**\[ファイル\]** タブの **\[情報\]** をクリックします。  
+1.  On the **File** tab, choose **Info**, which the following illustration shows.  
   
-     ![Excel の [情報] タブ](../vsto/media/vsto-infotab.png "Excel の [情報] タブ")  
+     ![Info tab in Excel](../vsto/media/vsto-infotab.png "Info tab in Excel")  
   
-2.  次の図に示すように、**\[プロパティ\]** の一覧で **\[詳細プロパティ\]** をクリックします。  
+2.  In the **Properties** list, choose **Advanced Properties**, which the following illustration shows.  
   
-     ![Excel の [詳細プロパティ]。](../vsto/media/vsto-advanceddocumentproperties.png "Excel の [詳細プロパティ]。")  
+     ![Advanced Properties in Excel.](../vsto/media/vsto-advanceddocumentproperties.png "Advanced Properties in Excel.")  
   
-3.  次の図に示すように、**\[カスタム\]** タブにある **\[プロパティ\]** の一覧で、\_AssemblyLocation をクリックします。  
+3.  On the **Custom** tab in the **Properties** list, choose _AssemblyLocation, as the following illustration shows.  
   
-     ![[AssemblyLocation] プロパティ。](../vsto/media/vsto-assemblylocationproperty.png "[AssemblyLocation] プロパティ。")  
+     ![The AssemblyLocation property.](../vsto/media/vsto-assemblylocationproperty.png "The AssemblyLocation property.")  
   
-     **\[値\]** ボックスには、配置マニフェストの識別子が含まれています。  
+     The **Value** box contains the deployment manifest identifier.  
   
-4.  次のような形式で、識別子の前にドキュメントの絶対パスと縦棒を入力します。*パス* |*識別子* \(たとえば、 *File:\/\/ServerName\/FolderName\/FileName|74744e4b\-e4d6\-41eb\-84f7\-ad20346fe2d9*\)。  
+4.  Before the identifier, enter the fully qualified path of the document, followed by a bar, in the format *Path*|*Identifier* (for example, *File://ServerName/FolderName/FileName|74744e4b-e4d6-41eb-84f7-ad20346fe2d9*.  
   
-     この識別子を指定する方法の詳細については、「[カスタム ドキュメント プロパティの概要](../vsto/custom-document-properties-overview.md)」を参照してください。  
+     For more information about how to format this identifier, see [Custom Document Properties Overview](../vsto/custom-document-properties-overview.md).  
   
-5.  **\[OK\]** をクリックし、ドキュメントを保存して閉じます。  
+5.  Choose the **OK** button, and then save and close the document.  
   
-6.  セットアップ プログラムを実行します。このとき、指定の場所にあるソリューションをインストールするための \/url パラメーターは指定しません。  
+6.  Run the setup program without the /url parameter to install the solution in the specified location.  
   
-##  <a name="Roll"></a> ソリューションを以前のバージョンにロールバック  
- 開発者がソリューションをロールバックすると、ユーザーはそのソリューションの以前のバージョンに戻されることになります。  
+##  <a name="Roll"></a> Roll back a solution to an earlier version  
+ When you roll back a solution, you revert users back to an earlier version of that solution.  
   
-#### ソリューションをロールバックするには  
+#### <a name="to-roll-back-a-solution"></a>To roll back a solution  
   
-1.  ソリューションのインストール場所を開きます。  
+1.  Open the installation location of the solution.  
   
-2.  トップレベルの発行フォルダーで、配置マニフェスト \(.vsto ファイル\) を削除します。  
+2.  In the top-level publish folder, delete the deployment manifest (the .vsto file).  
   
-3.  ロールバック先のバージョンに対応するサブフォルダーを見つけます。  
+3.  Find the subfolder for the version to which you want to roll back.  
   
-4.  このサブフォルダー内の配置マニフェストをトップレベルの発行フォルダーにコピーします。  
+4.  Copy the deployment manifest from that subfolder to the top-level publish folder.  
   
-     たとえば、**OutlookAddIn1** という名前のソリューションをバージョン 1.0.0.1 からバージョン 1.0.0.0 にロールバックするには、**OutlookAddIn1\_1\_0\_0\_0** フォルダーから **OutlookAddIn1.vsto** ファイルをコピーします。  トップレベルの発行フォルダーにファイルを貼り付け、既に存在していた **OutlookAddIn1\_1\_0\_0\_1** に対応するバージョン固有の配置マニフェストを上書きします。  
+     For example, to roll back a solution that's called **OutlookAddIn1** from version 1.0.0.1 to version 1.0.0.0, copy the file **OutlookAddIn1.vsto** from the **OutlookAddIn1_1_0_0_0** folder. Paste the file into the top-level publish folder, overwriting the version-specific deployment manifest for **OutlookAddIn1_1_0_0_1** that was already there.  
   
-     次の図に、この例に対応する発行フォルダーの構造を示します。  
+     The following illustration shows the publish folder structure in this example.  
   
-     ![発行フォルダーの構造](~/vsto/media/publishfolderstructure.png "発行フォルダーの構造")  
+     ![Publish Folder Structure](../vsto/media/publishfolderstructure.png "Publish Folder Structure")  
   
-     アプリケーションまたはカスタマイズされたドキュメントをユーザーが次回開くときに、配置マニフェストの変更が検出されます。  Office ソリューションの以前のバージョンは、ClickOnce キャッシュから実行されます。  
+     The next time that a user opens the application or customized document, the deployment manifest change is detected. The earlier version of the Office solution runs from the ClickOnce cache.  
   
 > [!NOTE]  
->  ローカル データは、ソリューションの 1 つ前のバージョンについてのみ保存されます。  開発者が 2 つのバージョンをロールバックする場合は、ローカル データは保持されません。  ローカル データの詳細については、「[ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)」を参照してください。  
+>  Local data is saved for only one previous version of a solution. If you roll back two versions, local data isn't retained. For more information about local data, see [Accessing Local and Remote Data in ClickOnce Applications](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
   
-## 参照  
- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
- [Office ソリューションの発行](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
- [方法: ClickOnce を使用して Office ソリューションを公開する](http://msdn.microsoft.com/ja-jp/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)   
- [方法: ClickOnce Office ソリューションをインストールする](http://msdn.microsoft.com/ja-jp/14702f48-9161-4190-994c-78211fe18065)   
- [方法: ClickOnce を使用して SharePoint Server にドキュメント レベルの Office ソリューションを公開する](http://msdn.microsoft.com/ja-jp/2408e809-fb78-42a1-9152-00afa1522e58)   
- [ClickOnce Office ソリューションのカスタム インストーラーの作成](http://msdn.microsoft.com/ja-jp/3e5887ed-155f-485d-b8f6-3c02c074085e)  
+## <a name="see-also"></a>See Also  
+ [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)   
+ [Publishing Office Solutions](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
+ [How to: Publish an Office Solution by Using ClickOnce](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)   
+ [How to: Install a ClickOnce Office Solution](http://msdn.microsoft.com/en-us/14702f48-9161-4190-994c-78211fe18065)   
+ [How to: Publish a Document-Level Office Solution to a SharePoint Server by Using ClickOnce](http://msdn.microsoft.com/en-us/2408e809-fb78-42a1-9152-00afa1522e58)   
+ [Creating a Custom Installer for a ClickOnce Office Solution](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e)  
   
   

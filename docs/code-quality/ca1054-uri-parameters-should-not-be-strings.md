@@ -1,60 +1,75 @@
 ---
-title: "CA1054: URI パラメーターを文字列にすることはできません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1054"
-  - "UriParametersShouldNotBeStrings"
-helpviewer_keywords: 
-  - "CA1054"
-  - "UriParametersShouldNotBeStrings"
+title: 'CA1054: URI parameters should not be strings | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1054
+- UriParametersShouldNotBeStrings
+helpviewer_keywords:
+- CA1054
+- UriParametersShouldNotBeStrings
 ms.assetid: 8e99d72b-a658-47a7-8dd5-9784ce2c30b8
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 14
----
-# CA1054: URI パラメーターを文字列にすることはできません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 25d3c92f117d86193dad1230950f308ec5d2394b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1054-uri-parameters-should-not-be-strings"></a>CA1054: URI parameters should not be strings
 |||  
 |-|-|  
 |TypeName|UriParametersShouldNotBeStrings|  
 |CheckId|CA1054|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Design|  
+|Breaking Change|Breaking|  
   
-## 原因  
- 型で、"uri"、"Uri"、"urn"、"Urn"、"url"、または "Url" という文字列パラメーターを持つメソッドを宣言しています。また、その型では、<xref:System.Uri?displayProperty=fullName> パラメーターを使用する、対応するオーバーロードを宣言していません。  
+## <a name="cause"></a>Cause  
+ A type declares a method with a string parameter whose name contains "uri", "Uri", "urn", "Urn", "url", or "Url" and the type does not declare a corresponding overload that takes a <xref:System.Uri?displayProperty=fullName> parameter.  
   
-## 規則の説明  
- この規則では、パラメーター名は Camel 形式の大文字と小文字の表記規則に基づいて、トークンに分割されます。次に、各トークンは、"uri"、"Uri"、"urn"、"Urn"、"url"、または "Url" と一致するかどうかがチェックされます。  一致する場合、規則では、パラメーターは URI \(Uniform Resource Identifier\) を表すと想定されます。  URI の文字列表現は解析エラーやエンコーディング エラーが発生しやすく、セキュリティ上の脆弱性の原因となる場合があります。  メソッドで URI の文字列形式を使用する場合、対応するオーバーロードを宣言し、<xref:System.Uri> クラスのインスタンスを使用します。こうすることで、安全な方法でこのサービスを実現できます。  
+## <a name="rule-description"></a>Rule Description  
+ This rule splits the parameter name into tokens based on the camel casing convention and checks whether each token equals "uri", "Uri", "urn", "Urn", "url", or "Url". If there is a match, the rule assumes that the parameter represents a uniform resource identifier (URI). A string representation of a URI is prone to parsing and encoding errors, and can lead to security vulnerabilities. If a method takes a string representation of a URI, a corresponding overload should be provided that takes an instance of the <xref:System.Uri> class, which provides these services in a safe and secure manner.  
   
-## 違反の修正方法  
- この規則違反を修正するには、パラメーターを <xref:System.Uri> 型に変更します。これは互換性に影響のある変更です。  代替案として、<xref:System.Uri> パラメーターを使用するメソッドのオーバーロードを宣言する方法もあります。これは互換性に影響がありません。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, change the parameter to a <xref:System.Uri> type; this is a breaking change. Alternately, provide an overload of the method which takes a <xref:System.Uri> parameter; this is a nonbreaking change.  
   
-## 警告を抑制する状況  
- パラメーターが URI を表さない場合は、この規則による警告を抑制しても安全です。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule if the parameter does not represent a URI.  
   
-## 使用例  
- この規則に違反している型 `ErrorProne` と、規則に適合する型 `SaferWay` を次の例に示します。  
+## <a name="example"></a>Example  
+ The following example shows a type, `ErrorProne`, that violates this rule, and a type, `SaferWay`, that satisfies the rule.  
   
- [!code-cs[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CSharp/ca1054-uri-parameters-should-not-be-strings_1.cs)]
- [!code-vb[FxCop.Design.UriNotString#1](../code-quality/codesnippet/VisualBasic/ca1054-uri-parameters-should-not-be-strings_1.vb)]
- [!code-cpp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CPP/ca1054-uri-parameters-should-not-be-strings_1.cpp)]  
+ [!code-csharp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CSharp/ca1054-uri-parameters-should-not-be-strings_1.cs)] [!code-vb[FxCop.Design.UriNotString#1](../code-quality/codesnippet/VisualBasic/ca1054-uri-parameters-should-not-be-strings_1.vb)] [!code-cpp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CPP/ca1054-uri-parameters-should-not-be-strings_1.cpp)]  
   
-## 関連規則  
- [CA1056: URI プロパティを文字列にすることはできません](../code-quality/ca1056-uri-properties-should-not-be-strings.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1056: URI properties should not be strings](../code-quality/ca1056-uri-properties-should-not-be-strings.md)  
   
- [CA1055: URI 戻り値を文字列にすることはできません](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)  
+ [CA1055: URI return values should not be strings](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)  
   
- [CA2234: 文字列の代わりに System.Uri オブジェクトを渡します](../Topic/CA2234:%20Pass%20System.Uri%20objects%20instead%20of%20strings.md)  
+ [CA2234: Pass System.Uri objects instead of strings](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)  
   
- [CA1057: 文字列 URI オーバーロードが、System.Uri オーバーロードを呼び出します](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)
+ [CA1057: String URI overloads call System.Uri overloads](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)

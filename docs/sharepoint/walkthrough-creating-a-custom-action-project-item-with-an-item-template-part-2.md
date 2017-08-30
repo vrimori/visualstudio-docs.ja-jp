@@ -1,100 +1,105 @@
 ---
-title: "Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "project items [SharePoint development in Visual Studio], creating template wizards"
-  - "SharePoint project items, creating template wizards"
-  - "SharePoint development in Visual Studio, defining new project item types"
+title: 'Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2 | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- project items [SharePoint development in Visual Studio], creating template wizards
+- SharePoint project items, creating template wizards
+- SharePoint development in Visual Studio, defining new project item types
 ms.assetid: 2d8165d3-4af9-4a5e-bdba-8b2a06b1dc8d
 caps.latest.revision: 44
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 43
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 1156c1eaab8ce1e73018778ef2b91e6f86806cc7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2
-  SharePoint プロジェクト項目のカスタム種類を定義し、Visual Studio でその種類を項目テンプレートと関連付けてから、テンプレート用のウィザードを用意することもできます。  ユーザーが独自のテンプレートを使用してプロジェクト項目の新しいインスタンスをプロジェクトに追加するときに、ウィザードを使用してユーザーから情報を収集できます。  収集した情報を使用して、プロジェクト項目を初期化できます。  
+# <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2"></a>Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2
+  After you define a custom type of SharePoint project item and associate it with an item template in Visual Studio, you might also want to provide a wizard for the template. You can use the wizard to collect information from users when they use your template to add a new instance of the project item to a project. The information that you collect can be used to initialize the project item.  
   
- このチュートリアルでは、「[Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)」で示されているカスタム動作プロジェクト項目にウィザードを追加します。  userがSharePointプロジェクトにカスタム動作プロジェクト項目を追加すると、ウィザードは、エンド ユーザーが選択したときにカスタム動作についての情報 \(移動するための場所とURLなど\) に収集し、新しいプロジェクト項目のElements.xmlファイルにこの情報を追加します。  
+ In this walkthrough, you will add a wizard to the Custom Action project item that is demonstrated in [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md). When a user adds a Custom Action project item to a SharePoint project, the wizard collects information about the custom action (such as its location and the URL to navigate to when an end user chooses it) and adds this information to the Elements.xml file in the new project item.  
   
- このチュートリアルでは、次のタスクを実行します。  
+ This walkthrough demonstrates the following tasks:  
   
--   項目テンプレートに関連付けるカスタム SharePoint プロジェクト項目の種類に対するウィザードの作成。  
+-   Creating a wizard for a custom SharePoint project item type that is associated with an item template.  
   
--   Visual Studio の SharePoint プロジェクト項目用の組み込みウィザードと似たカスタム ウィザードの UI の定義。  
+-   Defining a custom wizard UI that resembles the built-in wizards for SharePoint project items in Visual Studio.  
   
--   置き換え可能パラメーターを使用して、ウィザードで収集したデータで SharePoint プロジェクト ファイルを初期化します。  
+-   Using replaceable parameters to initialize SharePoint project files with data that you collect in the wizard.  
   
--   ウィザードをデバッグおよびテストします。  
+-   Debugging and testing the wizard.  
   
 > [!NOTE]  
->  次の場所から、このチュートリアルの完了のプロジェクト、コードとそのほかのファイルを含むサンプルをダウンロードできます: [SharePointのプロジェクト ファイルは、機能拡張のチュートリアルにTools](http://go.microsoft.com/fwlink/?LinkId=191369)。  
+>  You can download a sample that contains the completed projects, code, and other files for this walkthrough from the following location:  [Project files for SharePoint Tools Extensibility Walkthroughs](http://go.microsoft.com/fwlink/?LinkId=191369).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、先に「[Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)」を完了して CustomActionProjectItem ソリューションを作成しておく必要があります。  
+## <a name="prerequisites"></a>Prerequisites  
+ To perform this walkthrough, you must first create the CustomActionProjectItem solution by completing [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md).  
   
- また、このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
+ You also need the following components on the development computer to complete this walkthrough:  
   
--   Windows SharePoint、およびサポートされるVisual Studioのエディション。  詳細については、「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of Windows, SharePoint, and Visual Studio. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio SDK。  このチュートリアルでは、SDK の **VSIX プロジェクト** テンプレートを使用して、プロジェクト項目を配置するための VSIX パッケージを作成します。  詳細については、「[Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)」を参照してください。  
+-   The Visual Studio SDK. This walkthrough uses the **VSIX Project** template in the SDK to create a VSIX package to deploy the project item. For more information, see [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).  
   
- 次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+ Knowledge of the following concepts is helpful, but not required, to complete the walkthrough:  
   
--   Visual Studio のプロジェクトおよび項目テンプレート用のウィザード。  詳細については、「[方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md)」および <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを参照してください。  
+-   Wizards for project and item templates in Visual Studio. For more information, see [How to: Use Wizards with Project Templates](../extensibility/how-to-use-wizards-with-project-templates.md) and the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface.  
   
--   SharePoint のカスタム動作。  詳細については、「[Custom Action \(カスタム動作\)](http://go.microsoft.com/fwlink/?LinkId=177800)」を参照してください。  
+-   Custom actions in SharePoint. For more information, see [Custom Action](http://go.microsoft.com/fwlink/?LinkId=177800).  
   
-## ウィザード プロジェクトの作成  
- [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)で作成したこのチュートリアルを完了するには、CustomActionProjectItemソリューションにプロジェクトを追加する必要があります。  このプロジェクトで、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装し、ウィザードの UI を定義します。  
+## <a name="creating-the-wizard-project"></a>Creating the Wizard Project  
+ To complete this walkthrough, you must add a project to the CustomActionProjectItem solution that you created in [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md). You will implement the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface and define the wizard UI in this project.  
   
-#### ウィザード プロジェクトを作成するには  
+#### <a name="to-create-the-wizard-project"></a>To create the wizard project  
   
-1.  Visual Studioでは、CustomActionProjectItemソリューションを開きます。  
+1.  In Visual Studio, open the CustomActionProjectItem solution  
   
-2.  **\[ソリューション エクスプローラー\]**で、ソリューション ノードのショートカット メニューを開き、**\[追加\]**を選択し、を **\[新しいプロジェクト\]**を選択します。  
+2.  In **Solution Explorer**, open the shortcut menu for the solution node, choose **Add**, and then choose **New Project**.  
   
     > [!NOTE]  
-    >  Visual Basic プロジェクトで**ソリューション エクスプローラー**にソリューション ノードが表示されるのは、[NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/ja-jp/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)の **\[常にソリューションを表示\]** チェック ボックスがオンになっている場合だけです。  
+    >  In Visual Basic projects, the solution node appears in **Solution Explorer** only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
   
-3.  **\[新しいプロジェクト\]** のダイアログ ボックスで、**\[Visual C\#\]** または **\[Visual Basic\]** のノードを展開し、**\[ウィンドウ\]** のノードを選択します。  
+3.  In the **New Project** dialog box, expand the **Visual C#** or **Visual Basic** nodes, and then choose the **Windows** node.  
   
-4.  **\[新しいプロジェクト\]** のダイアログ ボックスの上部に、**\[.NET Framework 4.5\]** が.NET Frameworkのバージョンの一覧で、が選択されていることを確認します。  
+4.  At the top of the **New Project** dialog box, make sure that **.NET Framework 4.5** is chosen in the list of versions of the .NET Framework.  
   
-5.  **\[WPF ユーザー コントロール ライブラリ\]** のプロジェクト テンプレートを選択し、プロジェクト **\[ItemTemplateWizard\]**を付けておくと、**\[OK\]** のボタンをクリックします。  
+5.  Choose the **WPF User Control Library** project template, name the project **ItemTemplateWizard**, and then choose the **OK** button.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] のソリューションに **ItemTemplateWizard** プロジェクトが追加されます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **ItemTemplateWizard** project to the solution.  
   
-6.  プロジェクトから UserControl1 アイテムを削除します。  
+6.  Delete the UserControl1 item from the project.  
   
-## ウィザード プロジェクトの構成  
- ウィザードを作成する前に、プロジェクトにWindows Presentation Foundation \(WPF\)のウィンドウ、コード ファイルおよびアセンブリ参照を追加する必要があります。  
+## <a name="configuring-the-wizard-project"></a>Configuring the Wizard Project  
+ Before you create the wizard, you must add a Windows Presentation Foundation (WPF) window, a code file, and assembly references to the project.  
   
-#### ウィザード プロジェクトを構成するには  
+#### <a name="to-configure-the-wizard-project"></a>To configure the wizard project  
   
-1.  **\[ソリューション エクスプローラー\]**では、**\[ItemTemplateWizard\]** のプロジェクト ノードからショートカット メニューを開き、**\[プロパティ\]**を選択します。  
+1.  In **Solution Explorer**, open the shortcut menu from the **ItemTemplateWizard** project node, and then choose **Properties**.  
   
-2.  **\[プロジェクト デザイナー\]**で、ターゲット フレームワークを.NET Framework 4.5に設定されていることを確認します。  
+2.  In the **Project Designer**, make sure that the target framework is set to .NET Framework 4.5.  
   
-     Visual C\#プロジェクトの場合は、**\[アプリケーション\]** のタブにこの値を設定できます。  Visual Basicプロジェクトの場合、**\[コンパイル\]** のタブにこの値を設定できます。  詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../Topic/How%20to:%20Target%20a%20Version%20of%20the%20.NET%20Framework.md)」を参照してください。  
+     For Visual C# projects, you can set this value on the **Application** tab. For Visual Basic projects, you can set this value on the **Compile** tab. For more information, see [How to: Target a Version of the .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md).  
   
-3.  **\[ItemTemplateWizard\]** のプロジェクトでは、**\[ウィンドウ \(WPF\)\]** の項目をプロジェクトに追加し、項目 **WizardWindow**を表示します。  
+3.  In the **ItemTemplateWizard** project, add a **Window (WPF)** item to the project, and then name the item **WizardWindow**.  
   
-4.  CustomActionWizard String 2とという二つのコード ファイルを追加します。  
+4.  Add two code files that are named CustomActionWizard and Strings.  
   
-5.  **\[ItemTemplateWizard\]** のプロジェクトのショートカット メニューを開き、**\[参照の追加\]**を選択します。  
+5.  Open the shortcut menu for the **ItemTemplateWizard** project,  and then choose **Add Reference**.  
   
-6.  **\[Reference Manager \- ItemTemplateWizard\]** のダイアログ ボックスで、**\[アセンブリ\]** のノードの下で、**\[拡張機能\]** のノードを選択します。  
+6.  In the **Reference Manager - ItemTemplateWizard** dialog box, under the **Assemblies** node, choose the **Extensions** node.  
   
-7.  チェック ボックスは、次のアセンブリの横にあるを選択し、**\[OK\]** のボタンを選択する:  
+7.  Select the check boxes next to the following assemblies, and then choose the **OK** button:  
   
     -   EnvDTE  
   
@@ -102,110 +107,107 @@ caps.handback.revision: 43
   
     -   Microsoft.VisualStudio.TemplateWizardInterface  
   
-8.  ItemTemplateWizardプロジェクトの **\[参照\]** フォルダーの **\[ソリューション エクスプローラー\]**では、**\[EnvDTE\]** の参照を選択します。  
+8.  In **Solution Explorer**, in the **References** folder for the ItemTemplateWizard project, choose the **EnvDTE** reference.  
   
     > [!NOTE]  
-    >  Visual Basic プロジェクトでは、**\[参照設定\]** フォルダーが表示されるのは、[NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/ja-jp/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca) で **\[常にソリューションを表示\]** チェック ボックスがオンになっている場合のみです。  
+    >  In Visual Basic projects, the **References** folder appears only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
   
-9. **\[プロパティ\]** のペインで、**\[false\]**に **\[相互運用型の埋め込み\]** のプロパティの値を変更します。  
+9. In the **Properties** window, change the value of the **Embed Interop Types** property to **False**.  
   
-## カスタム動作の既定の場所と ID 文字列の定義  
- すべてのカスタム動作には場所と ID があり、Elements.xml ファイルの `CustomAction` 要素の `GroupID` 属性と `Location` 属性で指定されています。  この手順では、ItemTemplateWizard プロジェクトでこれらの属性に有効な文字列のいくつかを定義します。  このチュートリアルを完了すると、これらの文字列は、カスタム動作プロジェクト項目のElements.xmlファイルにuser、このウィザードの場所とIDを指定するときに書き込まれます。  
+## <a name="defining-the-default-location-and-id-strings-for-custom-actions"></a>Defining the Default Location and ID Strings for Custom Actions  
+ Every custom action has a location and ID that is specified in the `GroupID` and `Location` attributes of the `CustomAction` element in the Elements.xml file. In this step, you define some of the valid strings for these attributes in the ItemTemplateWizard project. When you complete this walkthrough, these strings are written to the Elements.xml file in the Custom Action project item when users specify a location and an ID in the wizard.  
   
- 簡潔にするため、このサンプルでは使用可能な既定の場所と ID のサブセットのみをサポートしています。  完全な一覧については、「[Default Custom Action Locations and IDs \(カスタム動作の既定の場所と ID\)](http://go.microsoft.com/fwlink/?LinkId=181964)」を参照してください。  
+ For simplicity, this sample supports only a subset of the available default locations and IDs. For a full list, see [Default Custom Action Locations and IDs](http://go.microsoft.com/fwlink/?LinkId=181964).  
   
-#### 既定の場所と ID の文字列を定義するには  
+#### <a name="to-define-the-default-location-and-id-strings"></a>To define the default location and ID strings  
   
-1.  開きます。  
+1.  open.  
   
-2.  **\[ItemTemplateWizard\]** のプロジェクトでは、次のコードにStringコード ファイルのコードに置き換えます。  
+2.  In the **ItemTemplateWizard** project, replace the code in the Strings code file with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#6](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/cs/itemtemplatewizard/strings.cs#6)]
-     [!code-vb[SPExtensibility.ProjectItem.CustomAction#6](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/vb/itemtemplatewizard/strings.vb#6)]  
+     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#6](../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/strings.cs#6)]  [!code-vb[SPExtensibility.ProjectItem.CustomAction#6](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/strings.vb#6)]  
   
-## ウィザードの UI の作成  
- ウィザードの UI を定義する XAML を追加し、ウィザードの一部のコントロールを ID 文字列にバインドするためのコードを追加します。  作成するウィザードは、Visual Studio の SharePoint プロジェクト用の組み込みウィザードに似ています。  
+## <a name="creating-the-wizard-ui"></a>Creating the Wizard UI  
+ Add XAML to define the UI of the wizard, and add some code to bind some of the controls in the wizard to the ID strings. The wizard that you create resembles the built-in wizard for SharePoint projects in Visual Studio.  
   
-#### ウィザードの UI を作成するには  
+#### <a name="to-create-the-wizard-ui"></a>To create the wizard UI  
   
-1.  **\[ItemTemplateWizard\]** のプロジェクトでは、**\[WizardWindow.xaml\]** ファイルのショートカット メニューを開き、ウィンドウをデザイナーで開くに **\[開く\]** を選択します。  
+1.  In the **ItemTemplateWizard** project, open the shortcut menu for the **WizardWindow.xaml** file, and then choose **Open** to open the window in the designer.  
   
-2.  XAMLビューで、次のXAMLに現在のXAMLに置き換えます。  この XAML は、見出しを含む UI、カスタム動作の振る舞いを指定するためのコントロール、およびウィンドウの下部に示されるナビゲーション ボタンを定義します。  
-  
-    > [!NOTE]  
-    >  このコードを追加すると、いくつかのコンパイル エラーが発生します。  これらのエラーは、この後の手順でコードを追加すると解消されます。  
-  
-     [!code-xml[SPExtensibility.ProjectItem.CustomAction#9](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/cs/itemtemplatewizard/wizardwindow.xaml#9)]  
+2.  In the XAML view, replace the current XAML with the following XAML. The XAML defines a UI that includes a heading, controls for specifying the behavior of the custom action, and navigation buttons at the bottom of the window.  
   
     > [!NOTE]  
-    >  このXAMLで作成するウィンドウは <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> の基本クラスから派生します。  Visual StudioにカスタムのWPFダイアログ ボックスを追加すると、Visual Studioの他のダイアログ ボックスで一貫したスタイル設定を使用すると、モーダル ダイアログ ボックスとして別の方法で発生する可能性のある問題を回避するには、このクラスからダイアログ ボックスを取得することをお勧めします。  詳細については、「[作成して、モーダル ダイアログ ボックスを管理します。](../extensibility/creating-and-managing-modal-dialog-boxes.md)」を参照してください。  
+    >  Your project will have some compile errors after you add this code. These errors will go away when you add code in later steps.  
   
-3.  Visual Basicプロジェクトを開発している場合は、`Window` の要素の `x:Class` の属性の `WizardWindow` の `ItemTemplateWizard` のクラス名から名前空間を削除します。  この要素は、の最初の行にあります。  されると、最初の行は次のようになります。:  
+     [!code-xml[SPExtensibility.ProjectItem.CustomAction#9](../sharepoint/codesnippet/Xaml/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml#9)]  
+  
+    > [!NOTE]  
+    >  The window that's created in this XAML is derived from the <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> base class. When you add a custom WPF dialog box to Visual Studio, we recommend that you derive your dialog box from this class to have consistent styling with other dialog boxes in Visual Studio and to avoid issues that might otherwise occur with modal dialog boxes. For more information, see [Creating and Managing Modal Dialog Boxes](/visualstudio/extensibility/creating-and-managing-modal-dialog-boxes).  
+  
+3.  If you're developing a Visual Basic project, remove the `ItemTemplateWizard` namespace from the `WizardWindow` class name in the `x:Class` attribute of the `Window` element. This element is in the first line of the XAML. When you're done, the first line should resemble the following code:  
   
     ```  
     <Window x:Class="WizardWindow"  
     ```  
   
-4.  WizardWindow.xamlファイルの分離コード ファイルで、次のコードでは、現在のコードに置き換えます。  
+4.  In the code-behind file for the WizardWindow.xaml file, replace the current code with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#7](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/cs/itemtemplatewizard/wizardwindow.xaml.cs#7)]
-     [!code-vb[SPExtensibility.ProjectItem.CustomAction#7](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/vb/itemtemplatewizard/wizardwindow.xaml.vb#7)]  
+     [!code-vb[SPExtensibility.ProjectItem.CustomAction#7](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml.vb#7)]  [!code-csharp[SPExtensibility.ProjectItem.CustomAction#7](../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml.cs#7)]  
   
-## ウィザードの実装  
- <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装することで、ウィザードの機能を定義します。  
+## <a name="implementing-the-wizard"></a>Implementing the Wizard  
+ Define the functionality of the wizard by implementing the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface.  
   
-#### ウィザードを実装するには  
+#### <a name="to-implement-the-wizard"></a>To implement the wizard  
   
-1.  **\[ItemTemplateWizard\]** のプロジェクトでは、**\[CustomActionWizard\]** コード ファイルを開き、次のコードでこのファイルの現在のコードに置き換えます。:  
+1.  In the **ItemTemplateWizard** project, open the **CustomActionWizard** code file, and then replace the current code in this file with the following code:  
   
-     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#8](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/cs/itemtemplatewizard/customactionwizard.cs#8)]
-     [!code-vb[SPExtensibility.ProjectItem.CustomAction#8](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/vb/itemtemplatewizard/customactionwizard.vb#8)]  
+     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#8](../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/customactionwizard.cs#8)]  [!code-vb[SPExtensibility.ProjectItem.CustomAction#8](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/customactionwizard.vb#8)]  
   
-## チェックポイント  
- この段階で、ウィザードに必要なすべてのコードがプロジェクトに揃ったことになります。  エラーが発生することなくプロジェクトをコンパイルできるかどうか、プロジェクトをビルドして確認してください。  
+## <a name="checkpoint"></a>Checkpoint  
+ At this point in the walkthrough, all the code for the wizard is now in the project. Build the project to make sure that it compiles without errors.  
   
-#### プロジェクトをビルドするには  
+#### <a name="to-build-your-project"></a>To build your project  
   
-1.  メニュー バーで、**\[ビルド\]**、**\[ソリューションのビルド\]**を選択します。  
+1.  On the menu bar, choose **Build**, **Build Solution**.  
   
-## ウィザードと項目テンプレートの関連付け  
- ウィザードの実装が済んだので、**\[ユーザー設定のアクション\]** の項目テンプレートで3種類の主要な手順を実行すると、アプリケーションを関連付ける必要があります:  
+## <a name="associating-the-wizard-with-the-item-template"></a>Associating the Wizard with the Item Template  
+ Now that you have implemented the wizard, you must associate it with the **Custom Action** item template by completing three main steps:  
   
-1.  ウィザード アセンブリに厳密な名前で署名します。  
+1.  Sign the wizard assembly with a strong name.  
   
-2.  ウィザード アセンブリの公開キー トークンを取得します。  
+2.  Get the public key token for the wizard assembly.  
   
-3.  **カスタム動作**項目テンプレートの .vstemplate ファイルに、ウィザード アセンブリへの参照を追加します。  
+3.  Add a reference to the wizard assembly in the .vstemplate file for the **Custom Action** item template.  
   
-#### ウィザード アセンブリに厳密な名前で署名するには  
+#### <a name="to-sign-the-wizard-assembly-with-a-strong-name"></a>To sign the wizard assembly with a strong name  
   
-1.  **\[ソリューション エクスプローラー\]**では、**\[ItemTemplateWizard\]** のプロジェクト ノードからショートカット メニューを開き、**\[プロパティ\]**を選択します。  
+1.  In **Solution Explorer**, open the shortcut menu from the **ItemTemplateWizard** project node, and then choose **Properties**.  
   
-2.  **\[署名\]** タブの **\[アセンブリの署名\]** チェック ボックスをオンにします。  
+2.  On the **Signing** tab, select the **Sign the assembly** check box.  
   
-3.  **\[厳密な名前のキー ファイルを選択してください\]** の一覧で、を選択 **\<New...\>**します。  
+3.  In the **Choose a strong name key file** list, choose **\<New...>**.  
   
-4.  **\[厳密な名前キーの作成\]** のダイアログ ボックスに名前を入力し、**\[キーファイルをパスワードで保護する\]** のチェック ボックスをオフにし、を **\[OK\]** のボタンをクリックします。  
+4.  In the **Create Strong Name Key** dialog box, enter a name, clear the **Protect my key file with a password** check box, and then choose the **OK** button.  
   
-5.  メニュー バーで、**\[ビルド\]**、**\[ソリューションのビルド\]**を選択します。  
+5.  On the menu bar, choose **Build**, **Build Solution**.  
   
-#### ウィザード アセンブリの公開キー トークンを取得するには  
+#### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>To get the public key token for the wizard assembly  
   
-1.  Visual Studioのコマンド プロンプト ウィンドウで、開発用コンピューターにItemTemplateWizardプロジェクトのビルドされたItemTemplateWizard.dllアセンブリに完全パスで *PathToWizardAssembly* を置き換える次のコマンドを実行します。  
+1.  In a Visual Studio Command Prompt window, run the following command, replacing *PathToWizardAssembly* with the full path to the built ItemTemplateWizard.dll assembly for the ItemTemplateWizard project on your development computer.  
   
     ```  
     sn.exe -T PathToWizardAssembly  
     ```  
   
-     ItemTemplateWizard.dll アセンブリに対する公開キー トークンが Visual Studio コマンド プロンプト ウィンドウに記述されます。  
+     The public key token for the ItemTemplateWizard.dll assembly is written to the Visual Studio Command Prompt window.  
   
-2.  Visual Studio コマンド プロンプト ウィンドウは開いたままにします。  公開キー トークンが次の手順を実行する必要があります。  
+2.  Keep the Visual Studio Command Prompt window open. You'll need the public key token to complete the next procedure.  
   
-#### .vstemplate ファイルにウィザード アセンブリへの参照を追加するには  
+#### <a name="to-add-a-reference-to-the-wizard-assembly-in-the-vstemplate-file"></a>To add a reference to the wizard assembly in the .vstemplate file  
   
-1.  **\[ソリューション エクスプローラー\]**では、**\[ItemTemplate\]** のプロジェクト ノードを展開し、ItemTemplate.vstemplateファイルを開きます。  
+1.  In **Solution Explorer**, expand the **ItemTemplate** project node, and then open the ItemTemplate.vstemplate file.  
   
-2.  ファイルの末尾の近くで、次の `WizardExtension` 要素を `</TemplateContent>` タグと `</VSTemplate>` タグの間に追加します。  前の手順で取得した公開キー トークンで `PublicKeyToken` の属性の *YourToken* の値に置き換えます。  
+2.  Near the end of the file, add the following `WizardExtension` element between the `</TemplateContent>` and `</VSTemplate>` tags. Replace the *YourToken* value of the `PublicKeyToken` attribute with the public key token that you obtained in the previous procedure.  
   
     ```  
     <WizardExtension>  
@@ -214,21 +216,21 @@ caps.handback.revision: 43
     </WizardExtension>  
     ```  
   
-     `WizardExtension` 要素の詳細については、「[WizardExtension 要素 &#40;Visual Studio テンプレート&#41;](../extensibility/wizardextension-element-visual-studio-templates.md)」を参照してください。  
+     For more information about the `WizardExtension` element, see [WizardExtension Element &#40;Visual Studio Templates&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).  
   
-3.  ファイルを保存して閉じます。  
+3.  Save and close the file.  
   
-## 項目テンプレートの Elements.xml ファイルへの置き換え可能パラメーターの追加  
- 複数の置き換え可能パラメーターを、ItemTemplate プロジェクトの Elements.xml ファイルに追加します。  これらのパラメーターは、前に定義した `CustomActionWizard` クラスの `PopulateReplacementDictionary` メソッドで初期化されます。  ユーザーがカスタム動作プロジェクト項目をプロジェクトに追加すると、Visual Studio によって自動的に、新しいプロジェクト項目の Elements.xml ファイル内のこれらのパラメーターが、ウィザードでユーザーが指定した値に置き換えられます。  
+## <a name="adding-replaceable-parameters-to-the-elementsxml-file-in-the-item-template"></a>Adding Replaceable Parameters to the Elements.xml File in the Item Template  
+ Add several replaceable parameters to the Elements.xml file in the ItemTemplate project. These parameters are initialized in the `PopulateReplacementDictionary` method in the `CustomActionWizard` class that you defined earlier. When a user adds a Custom Action project item to a project, Visual Studio automatically replaces these parameters in the Elements.xml file in the new project item with the values that they specified in the wizard.  
   
- 置き換え可能パラメーターはドル記号 \($\) が付いて開始と終了のトークンです。  独自の置き換え可能パラメーターの定義に加えて、SharePointプロジェクト システムが定義し、初期化、組み込みパラメーターを使用できます。  詳細については、「[置き換え可能パラメーター](../sharepoint/replaceable-parameters.md)」を参照してください。  
+ A replaceable parameter is a token that starts and ends with the dollar sign ($) character. In addition to defining your own replaceable parameters, you can use built-in parameters that the SharePoint project system defines and initializes. For more information, see [Replaceable Parameters](../sharepoint/replaceable-parameters.md).  
   
-#### 置き換え可能パラメーターを Elements.xml ファイルに追加するには  
+#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>To add replaceable parameters to the Elements.xml file  
   
-1.  ItemTemplateプロジェクトでは、次のXMLにElements.xmlファイルの内容を置き換えます。  
+1.  In the ItemTemplate project, replace the contents of the Elements.xml file with the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8" ?>  
     <Elements Id="$guid8$" xmlns="http://schemas.microsoft.com/sharepoint/">  
       <CustomAction Id="$IdValue$"  
                     GroupId="$GroupIdValue$"  
@@ -241,120 +243,120 @@ caps.handback.revision: 43
     </Elements>  
     ```  
   
-     新しい XML では、`Id`、`GroupId`、`Location`、`Description`、`Url` の各属性の値が置き換え可能パラメーターに変更されます。  
+     The new XML changes the values of the `Id`, `GroupId`, `Location`, `Description`, and `Url` attributes to replaceable parameters.  
   
-2.  ファイルを保存して閉じます。  
+2.  Save and close the file.  
   
-## VSIX パッケージへのウィザードの追加  
- VSIXプロジェクトのsource.extension.vsixmanifestファイルで、プロジェクト項目を含むVSIXパッケージで配置したように、ウィザード プロジェクトへの参照を追加します。  
+## <a name="adding-the-wizard-to-the-vsix-package"></a>Adding the Wizard to the VSIX Package  
+ In the source.extension.vsixmanifest file in the VSIX project, add a reference to the wizard project so that it's deployed with the VSIX package that contains the project item.  
   
-#### VSIX パッケージにウィザードを追加するには  
+#### <a name="to-add-the-wizard-to-the-vsix-package"></a>To add the wizard to the VSIX package  
   
-1.  **\[ソリューション エクスプローラー\]**では、CustomActionProjectItemプロジェクトの **\[source.extension.vsixmanifest\]** ファイルからショートカット メニューを開き、マニフェスト エディターでファイルを開くには **\[開く\]** を選択します。  
+1.  In **Solution Explorer**, open the shortcut menu from the **source.extension.vsixmanifest** file in the CustomActionProjectItem project, and then choose **Open** to open the file in the manifest editor.  
   
-2.  マニフェスト エディターで、**\[資産\]** タブをクリックし、を **\[新規作成\]** のボタンをクリックします。  
+2.  In the manifest editor, choose the **Assets** tab, then choose the **New** button.  
   
-     **\[新しい資産の追加\]** のダイアログ ボックスが表示されます。  
+     The **Add New Asset** dialog box appears.  
   
-3.  **\[種類\]** の一覧で、**\[Microsoft.VisualStudio.Assembly\]**を選択します。  
+3.  In the **Type** list, choose **Microsoft.VisualStudio.Assembly**.  
   
-4.  **\[ソース\]** の一覧で、**\[現在のソリューション内のプロジェクト\]**を選択します。  
+4.  In the **Source** list, choose **A project in current solution**.  
   
-5.  **\[プロジェクト\]** の一覧で、**\[ItemTemplateWizard\]**を選択し、**\[OK\]** のボタンをクリックします。  
+5.  In the **Project** list, choose **ItemTemplateWizard**, and then choose the **OK** button.  
   
-6.  メニュー バーで、**\[ビルド\]**、**\[ソリューションのビルド\]**を選択し、次に、ソリューションのエラーなしでコンパイルしてください。  
+6.  On the menu bar, choose **Build**, **Build Solution**, and then make sure that the solution compiles without errors.  
   
-## ウィザードのテスト  
- これで、ウィザードをテストする準備ができました。  まず、Visual Studioの実験用インスタンスでCustomActionProjectItemソリューションのデバッグを開始します。  次に、Visual Studioの実験用インスタンスで、SharePointプロジェクトのカスタム動作プロジェクト項目のウィザードをテストします。  最後に、SharePoint プロジェクトをビルドして実行し、カスタム動作が正常に機能することを確認します。  
+## <a name="testing-the-wizard"></a>Testing the Wizard  
+ You are now ready to test the wizard. First, start to debug the CustomActionProjectItem solution in the experimental instance of Visual Studio. Then test the wizard for the Custom Action project item in a SharePoint project in the experimental instance of Visual Studio. Finally, build and run the SharePoint project to verify that the custom action works as expected.  
   
-#### ソリューションをデバッグする  
+#### <a name="to-start-to-debug-the-solution"></a>To start to debug the solution  
   
-1.  管理資格情報を使用してVisual Studioを再起動し、CustomActionProjectItemソリューションを開きます。  
+1.  Restart Visual Studio with administrative credentials, and then open the CustomActionProjectItem solution.  
   
-2.  ItemTemplateWizardプロジェクトで、CustomActionWizardコード ファイルを開き、`RunStarted` のメソッドのコードの先頭行にブレークポイントを追加します。  
+2.  In the ItemTemplateWizard project, open the CustomActionWizard code file, and then add a breakpoint to the first line of code in the `RunStarted` method.  
   
-3.  メニュー バーで、**\[デバッグ\]**、**\[例外\]**を選択します。  
+3.  On the menu bar, choose **Debug**, **Exceptions**.  
   
-4.  **\[例外\]** のダイアログ ボックスで、**\[Common Language Runtime Exceptions\]** の **\[スローされるとき\]** と **\[ユーザーにハンドルされていないとき\]** のチェック ボックスがオフになっていることを確認し、次に **\[OK\]** のボタンを選択します。  
+4.  In the **Exceptions** dialog box, make sure that the **Thrown** and **User-unhandled** check boxes for **Common Language Runtime Exceptions** are cleared, and then choose the **OK** button.  
   
-5.  F5キーのは、**\[デバッグ\]**を選択するメニュー バーのをクリックしてデバッグを開始した **\[デバッグの開始\]**。  
+5.  Start debugging by choosing the F5 key, or, on the menu bar, choosing **Debug**, **Start Debugging**.  
   
-     Visual Studioは、%UserProfile%\\AppData\\Local\\Microsoft\\VisualStudio\\11.0Exp\\Extensions\\Contoso\\Custom Action Project Item\\1.0に拡張機能をインストール、Visual Studioの実験用インスタンスを起動します。  Visual Studioでプロジェクト項目をテストします。この場合  
+     Visual Studio installs the extension to %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom Action Project Item\1.0 and starts an experimental instance of Visual Studio. You'll test the project item in this instance of Visual Studio.  
   
-#### Visual Studio でウィザードをテストするには  
+#### <a name="to-test-the-wizard-in-visual-studio"></a>To test the wizard in Visual Studio  
   
-1.  Visual Studioの実験用インスタンスで、メニュー バーで、**\[ファイル\]**、**\[新規作成\]**、**\[プロジェクト\]**を選択します。  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **File**, **New**, **Project**.  
   
-2.  **\[Visual C\#\]** または **\[Visual Basic\]** のノードを次の項目テンプレートがサポートする言語に応じて\) **\[SharePoint\]** 展開し、ノードを展開し、を **\[2010\]** のノードを選択します。  
+2.  Expand the **Visual C#** or **Visual Basic** node (depending on the language that your item template supports), expand the **SharePoint** node, and then choose the **2010** node.  
   
-3.  プロジェクト テンプレートの一覧で、**\[SharePoint 2010 プロジェクト\]**を選択し、プロジェクト **CustomActionWizardTest**を付けておくと、**\[OK\]** のボタンをクリックします。  
+3.  In the list of project templates, choose **SharePoint 2010 Project**, name the project **CustomActionWizardTest**, and then choose the **OK** button.  
   
-4.  **\[SharePoint カスタマイズ ウィザード\]**では、デバッグ用に使用する入力し、次に **\[完了\]** のボタンを選択します。サイトのURL。  
+4.  In the **SharePoint Customization Wizard**, enter the URL of the site that you want to use for debugging, and then choose the **Finish** button.  
   
-5.  **\[ソリューション エクスプローラー\]**で、プロジェクトのノードのショートカット メニューを開き、**\[追加\]**を選択し、を **\[新しい項目\]**を選択します。  
+5.  In **Solution Explorer**, open the shortcut menu for the project node, choose **Add**, and then choose **New Item**.  
   
-6.  **\[Add New Item \- CustomItemWizardTest\]** のダイアログ ボックスで、**\[SharePoint\]** のノードを展開し、**\[2010\]** のノードを展開します。  
+6.  In the **Add New Item - CustomItemWizardTest** dialog box, expand the **SharePoint** node, and then expand the **2010** node.  
   
-7.  プロジェクト項目の一覧で、**\[ユーザー設定のアクション\]** の項目を選択し、**\[追加\]** のボタンをクリックします。  
+7.  In the list of project items, choose the **Custom Action** item, and then choose the **Add** button.  
   
-8.  Visual Studio のもう一方のインスタンスで、先ほど `RunStarted` メソッドに設定したブレークポイントで、コードが停止していることを確認します。  
+8.  Verify that the code in the other instance of Visual Studio stops on the breakpoint that you set earlier in the `RunStarted` method.  
   
-9. または、**\[デバッグ\]**を選択するメニュー バーで **\[続行\]**F5キーをクリックして、プロジェクトのデバッグを続行します。  
+9. Continue to debug the project by choosing the F5 key or, on the menu bar, choosing **Debug**, **Continue**.  
   
-     SharePoint カスタマイズ ウィザードが表示されます。  
+     The SharePoint Customization Wizard appears.  
   
-10. **\[場所\]**の下に、**\[List Edit\]** のオプション ボタンを選択します。  
+10. Under **Location**, choose the **List Edit** option button.  
   
-11. **\[グループ ID\]** の一覧で、**\[通信\]**を選択します。  
+11. In the **Group ID** list, choose **Communications**.  
   
-12. **\[タイトル\]** ボックスに、**\[SharePoint Developer Center\]**を入力します。  
+12. In the **Title** box, enter **SharePoint Developer Center**.  
   
-13. **\[説明\]** ボックスに、**SharePoint Developer Center Webサイトを開きます**を入力します。  
+13. In the  **Description** box, enter **Opens the SharePoint Developer Center website**.  
   
-14. **\[URL\]** ボックスに、**http:\/\/msdn.microsoft.com\/sharepoint\/default.aspx**を入力し、を **\[完了\]** のボタンをクリックします。  
+14. In the **URL** box, enter **http://msdn.microsoft.com/sharepoint/default.aspx**, and then choose the **Finish** button.  
   
-     isual Studioでは、プロジェクトへの **\[CustomAction1\]** という追加され、エディターのElements.xmlファイルを項目を開きます。  Elements.xml にウィザードで指定した値が含まれることを確認します。  
+     isual Studio adds an item that's named **CustomAction1** to your project and opens the Elements.xml file in the editor. Verify that Elements.xml contains the values that you specified in the wizard.  
   
-#### SharePoint のカスタム動作をテストするには  
+#### <a name="to-test-the-custom-action-in-sharepoint"></a>To test the custom action in SharePoint  
   
-1.  Visual Studioの実験用インスタンスで、F5キーのキーを選択したり、メニュー バーで、**\[デバッグ\]**、**\[デバッグの開始\]**を選択します。  
+1.  In the experimental instance of Visual Studio, choose the F5 key or, on the menu bar, choose **Debug**, **Start Debugging**.  
   
-     プロジェクトの **\[サイト URL\]** のプロパティで指定されたカスタム動作はSharePointサイトにパッケージ化および配置され、WebBrowserには、このサイトの既定のページが表示されます。  
+     The custom action is packaged and deployed to the SharePoint site specified by the **Site URL** property of the project, and the web browser opens to the default page of this site.  
   
     > [!NOTE]  
-    >  **\[スクリプト デバッグが無効\]** ダイアログ ボックスが表示されたら、**\[○\]** のボタンをクリックします。  
+    >  If the **Script Debugging Disabled** dialog box appears, choose the **Yes** button.  
   
-2.  SharePointサイトのリストの領域では、**\[タスク\]** のリンクを選択します。  
+2.  In the Lists area of the SharePoint site, choose the **Tasks** link.  
   
-     **\[–にすべてのタスクおよびタスク\]** のページが表示されます。  
+     The **Tasks - All Tasks** page appears.  
   
-3.  次に、リボン **\[リスト ​​ツール\]** のタブで、**\[一覧\]** のタブを、**\[設定\]** のグループで、をクリックします **\[リストの設定\]**を選択します。  
+3.  On the **List Tools** tab of the ribbon, choose the **List** tab, and then, in the **Settings** group, choose **List Settings**.  
   
-     **\[リストの設定\]** のページが表示されます。  
+     The **List Settings** page appears.  
   
-4.  ページの先頭付近に **\[通信\]** 見出しの下で、ブラウザーがWebサイトhttp:\/\/msdn.microsoft.com\/sharepoint\/default.aspxを開き、ブラウザーを閉じます選択することを **\[SharePoint Developer Center\]** のリンクを確認します。  
+4.  Under the **Communications** heading near the top of the page, choose the **SharePoint Developer Center** link, verify that the browser opens the website http://msdn.microsoft.com/sharepoint/default.aspx, and then close the browser.  
   
-## 開発コンピューターのクリーンアップ  
- プロジェクト項目のテストが終わったら、プロジェクト項目テンプレートを Visual Studio の実験用インスタンスから削除します。  
+## <a name="cleaning-up-the-development-computer"></a>Cleaning up the Development Computer  
+ After you finish testing the project item, remove the project item template from the experimental instance of Visual Studio.  
   
-#### 開発コンピューターをクリーンアップするには  
+#### <a name="to-clean-up-the-development-computer"></a>To clean up the development computer  
   
-1.  Visual Studioの実験用インスタンスで、メニュー バーで、**\[ツール\]**、**\[拡張機能と更新プログラム\]**を選択します。  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **Tools**, **Extensions and Updates**.  
   
-     **\[拡張機能と更新プログラム\]** のダイアログ ボックスが表示されます。  
+     The **Extensions and Updates** dialog box opens.  
   
-2.  拡張機能の一覧で、**\[Custom Action Project Item\]** の拡張機能を選択し、**\[アンインストール\]** のボタンをクリックします。  
+2.  In the list of extensions, choose the **Custom Action Project Item** extension, and then choose the **Uninstall** button.  
   
-3.  表示されたダイアログ ボックスで、拡張機能をアンインストールする選択し、アンインストールを実行するに **\[今すぐ再起動\]** のボタンを選択します。ことを確認するために **\[○\]** のボタンをクリックします。  
+3.  In the dialog box that appears, choose the **Yes** button to confirm that you want to uninstall the extension, and then choose the **Restart Now** button to complete the uninstallation.  
   
-4.  Visual Studioの実験用インスタンスとインスタンス \(CustomActionProjectItemソリューションが開いている\) Visual Studioの両方のインスタンスのインスタンスを閉じます。  
+4.  Close both instances of Visual Studio (the experimental instance and the instance of Visual Studio in which the CustomActionProjectItem solution is open).  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
  [Defining Custom SharePoint Project Item Types](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md)   
- [カスタム アクションの既定の場所および ID](http://go.microsoft.com/fwlink/?LinkId=181964)  
+ [Visual Studio Template Schema Reference](/visualstudio/extensibility/visual-studio-template-schema-reference)   
+ [How to: Use Wizards with Project Templates](../extensibility/how-to-use-wizards-with-project-templates.md)   
+ [Default Custom Action Locations and IDs](http://go.microsoft.com/fwlink/?LinkId=181964)  
   
   

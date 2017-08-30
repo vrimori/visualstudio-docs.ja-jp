@@ -1,60 +1,77 @@
 ---
-title: "CA1403: Auto 配置の型を COM 参照可能にすることはできません | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AutoLayoutTypesShouldNotBeComVisible"
-  - "CA1403"
-helpviewer_keywords: 
-  - "CA1403"
-  - "AutoLayoutTypesShouldNotBeComVisible"
+title: 'CA1403: Auto layout types should not be COM visible | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- AutoLayoutTypesShouldNotBeComVisible
+- CA1403
+helpviewer_keywords:
+- CA1403
+- AutoLayoutTypesShouldNotBeComVisible
 ms.assetid: a7007714-f9b4-4730-94e0-67d3dc68991f
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1403: Auto 配置の型を COM 参照可能にすることはできません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: d37505e5525641ad1917bae8f8f4327ea4888faf
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1403-auto-layout-types-should-not-be-com-visible"></a>CA1403: Auto layout types should not be COM visible
 |||  
 |-|-|  
 |TypeName|AutoLayoutTypesShouldNotBeComVisible|  
 |CheckId|CA1403|  
-|分類|Microsoft.Interoperability|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Interoperability|  
+|Breaking Change|Breaking|  
   
-## 原因  
- コンポーネント オブジェクト モデル \(COM: Component Object Model\) から参照可能な値型が、<xref:System.Runtime.InteropServices.LayoutKind?displayProperty=fullName> に設定された <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=fullName> 属性でマークされています。  
+## <a name="cause"></a>Cause  
+ A Component Object Model (COM) visible value type is marked with the <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=fullName> attribute set to <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=fullName>.  
   
-## 規則の説明  
- <xref:System.Runtime.InteropServices.LayoutKind> レイアウト型は、共通言語ランタイムによって管理されています。  これらの型のレイアウトは .NET Framework のバージョンによって異なる場合があるため、特定のレイアウトを必要とする COM クライアントが動作しなくなる可能性があります。  <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性が指定されていない場合、C\#、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]、および C\+\+ のコンパイラが <xref:System.Runtime.InteropServices.LayoutKind> レイアウトを値型に指定することに注意してください。  
+## <a name="rule-description"></a>Rule Description  
+ <xref:System.Runtime.InteropServices.LayoutKind> layout types are managed by the common language runtime. The layout of these types can change between versions of the .NET Framework, which will break COM clients that expect a specific layout. Note that if the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute is not specified, the C#, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], and C++ compilers specify the <xref:System.Runtime.InteropServices.LayoutKind> layout for value types.  
   
- 特にマークされていない限り、すべてのパブリックな非ジェネリック型は、COM 参照可能ですが、すべての非パブリックなジェネリック型は COM 参照不可能です。  ただし、誤った規則違反のレポートを減らすために、この規則では、COM から参照できる型を明示的に示す必要があります。包含アセンブリは、<xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> を `false` に設定してマークし、型は、<xref:System.Runtime.InteropServices.ComVisibleAttribute> を `true` に設定してマークする必要があります。  
+ Unless marked otherwise, all public nongeneric types are visible to COM; all nonpublic and generic types are invisible to COM. However, to reduce false positives, this rule requires the COM visibility of the type to be explicitly stated; the containing assembly must be marked with the <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> set to `false` and the type must be marked with the <xref:System.Runtime.InteropServices.ComVisibleAttribute> set to `true`.  
   
-## 違反の修正方法  
- この規則違反を修正するには、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性の値を <xref:System.Runtime.InteropServices.LayoutKind> または <xref:System.Runtime.InteropServices.LayoutKind> に変更するか、型を COM 参照できないようにします。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, change the value of the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to <xref:System.Runtime.InteropServices.LayoutKind> or <xref:System.Runtime.InteropServices.LayoutKind>, or make the type invisible to COM.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 使用例  
- この規則に違反している型と、規則に適合する型を次の例に示します。  
+## <a name="example"></a>Example  
+ The following example shows a type that violates the rule and a type that satisfies the rule.  
   
- [!CODE [FxCop.Interoperability.AutoLayout#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Interoperability.AutoLayout#1)]  
+ [!code-csharp[FxCop.Interoperability.AutoLayout#1](../code-quality/codesnippet/CSharp/ca1403-auto-layout-types-should-not-be-com-visible_1.cs)] [!code-vb[FxCop.Interoperability.AutoLayout#1](../code-quality/codesnippet/VisualBasic/ca1403-auto-layout-types-should-not-be-com-visible_1.vb)]  
   
-## 関連規則  
- [CA1408: AutoDual ClassInterfaceType を使用しないでください](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1408: Do not use AutoDual ClassInterfaceType](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)  
   
-## 参照  
- [Introducing the Class Interface](http://msdn.microsoft.com/ja-jp/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
- [相互運用のための .NET 型の要件](../Topic/Qualifying%20.NET%20Types%20for%20Interoperation.md)   
- [アンマネージ コードとの相互運用](../Topic/Interoperating%20with%20Unmanaged%20Code.md)
+## <a name="see-also"></a>See Also  
+ [Introducing the Class Interface](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
+ [Qualifying .NET Types for Interoperation](/dotnet/framework/interop/qualifying-net-types-for-interoperation)   
+ [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)

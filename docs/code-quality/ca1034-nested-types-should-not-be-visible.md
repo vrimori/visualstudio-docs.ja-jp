@@ -1,57 +1,73 @@
 ---
-title: "CA1034: 入れ子にされた型を参照可能にすることはできません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NestedTypesShouldNotBeVisible"
-  - "CA1034"
-helpviewer_keywords: 
-  - "NestedTypesShouldNotBeVisible"
-  - "CA1034"
+title: 'CA1034: Nested types should not be visible | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- NestedTypesShouldNotBeVisible
+- CA1034
+helpviewer_keywords:
+- NestedTypesShouldNotBeVisible
+- CA1034
 ms.assetid: e9789a2c-2540-42a1-8705-ae7104011194
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 18
----
-# CA1034: 入れ子にされた型を参照可能にすることはできません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 69a2a595b21dcc7f63bf905e1740e15c3ac56598
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1034-nested-types-should-not-be-visible"></a>CA1034: Nested types should not be visible
 |||  
 |-|-|  
 |TypeName|NestedTypesShouldNotBeVisible|  
 |CheckId|CA1034|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Design|  
+|Breaking Change|Breaking|  
   
-## 原因  
- 外部から参照できる型に、外部から参照できる型宣言があります。  入れ子にされた列挙およびプロテクト型には、この規則は適用されません。  
+## <a name="cause"></a>Cause  
+ An externally visible type contains an externally visible type declaration. Nested enumerations and protected types are exempt from this rule.  
   
-## 規則の説明  
- 入れ子にされた型とは、別の型のスコープ内で宣言された型のことです。  入れ子にされた型は、含まれる型のプライベート実装の詳細をカプセル化するときに便利です。  このような用途なので、入れ子にされた型は外部から参照できないようにします。  
+## <a name="rule-description"></a>Rule Description  
+ A nested type is a type declared within the scope of another type. Nested types are useful for encapsulating private implementation details of the containing type. Used for this purpose, nested types should not be externally visible.  
   
- 論理的なグループ化や、名前の衝突を回避する目的では、外部から参照できる入れ子にされた型を使用しないでください。代わりに、名前空間を使用します。  
+ Do not use externally visible nested types for logical grouping or to avoid name collisions; instead, use namespaces.  
   
- 入れ子にされた型には、メンバーのアクセシビリティという概念が含まれますが、プログラマによっては、この概念を明確に理解していない場合もあります。  
+ Nested types include the notion of member accessibility, which some programmers do not understand clearly.  
   
- プロテクト型はサブクラスで使用でき、入れ子にされた型は高度なカスタマイズ シナリオで使用できます。  
+ Protected types can be used in subclasses and nested types in advance customization scenarios.  
   
-## 違反の修正方法  
- 入れ子にされた型が外部から参照できなくてもよい場合は、型のアクセシビリティを変更します。  または、入れ子にされた型を親の型から削除します。  型を分類するために入れ子にした場合、入れ子にするのではなく、名前空間を使用して階層構造を作成します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ If you do not intend the nested type to be externally visible, change the type's accessibility. Otherwise, remove the nested type from its parent. If the purpose of the nesting is to categorize the nested type, use a namespace to create the hierarchy instead.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 使用例  
- この規則に違反する型を次の例に示します。  
+## <a name="example"></a>Example  
+ The following example shows a type that violates the rule.  
   
- [!code-cpp[FxCop.Design.NestedTypes#1](../code-quality/codesnippet/CPP/ca1034-nested-types-should-not-be-visible_1.cpp)]
- [!code-cs[FxCop.Design.NestedTypes#1](../code-quality/codesnippet/CSharp/ca1034-nested-types-should-not-be-visible_1.cs)]
- [!code-vb[FxCop.Design.NestedTypes#1](../code-quality/codesnippet/VisualBasic/ca1034-nested-types-should-not-be-visible_1.vb)]
+ [!code-cpp[FxCop.Design.NestedTypes#1](../code-quality/codesnippet/CPP/ca1034-nested-types-should-not-be-visible_1.cpp)] [!code-csharp[FxCop.Design.NestedTypes#1](../code-quality/codesnippet/CSharp/ca1034-nested-types-should-not-be-visible_1.cs)] [!code-vb[FxCop.Design.NestedTypes#1](../code-quality/codesnippet/VisualBasic/ca1034-nested-types-should-not-be-visible_1.vb)]

@@ -1,204 +1,209 @@
 ---
-title: "チュートリアル: ビジネス データを使用した SharePoint での外部リストの作成"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発]、Web パーツのビジネス データ"
-  - "BDC [Visual Studio での SharePoint 開発]、外部リスト"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発]、SharePoint リストのビジネス データ"
-  - "BDC [Visual Studio での SharePoint 開発]、SharePoint リストのビジネス データ"
-  - "BDC [Visual Studio での SharePoint 開発]、Web パーツのビジネス データ"
-  - "BDC [Visual Studio での SharePoint 開発]、エンティティに基づくリスト"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発]、エンティティに基づくリスト"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発]、外部リスト"
+title: 'Walkthrough: Creating an External List in SharePoint by Using Business Data | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- Business Data Connectivity service [SharePoint development in Visual Studio], business data in a Web Part
+- BDC [SharePoint development in Visual Studio], external list
+- Business Data Connectivity service [SharePoint development in Visual Studio], business data in a SharePoint list
+- BDC [SharePoint development in Visual Studio], business data in a SharePoint list
+- BDC [SharePoint development in Visual Studio], business data in a Web Part
+- BDC [SharePoint development in Visual Studio], entity backed list
+- Business Data Connectivity service [SharePoint development in Visual Studio], entity backed list
+- Business Data Connectivity service [SharePoint development in Visual Studio], external list
 ms.assetid: 046cf234-705a-4a6f-91f8-c5c569ae0dd0
 caps.latest.revision: 38
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 37
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a83672695efad46c8205c056f35b841878fc0698
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル: ビジネス データを使用した SharePoint での外部リストの作成
-  ビジネス データ接続 \(BDC\) サービスを使用すると、バックエンド サーバー アプリケーション、Web サービス、およびデータベースのビジネス データを SharePoint で表示できます。  
+# <a name="walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data"></a>Walkthrough: Creating an External List in SharePoint by Using Business Data
+  The Business Data Connectivity (BDC) service enables SharePoint to display business data from back-end server applications, Web services, and databases.  
   
- このチュートリアルでは、サンプル データベースに含まれる連絡先に関する情報を返すという、BDC サービスのモデルを作成する方法について説明します。  次に、このモデルを使用して SharePoint に外部リストを作成します。  
+ This walkthrough shows you how to create a model for the BDC service that returns information about contacts in a sample database. You will then create an external list in SharePoint by using this model.  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   プロジェクトを作成する。  
+-   Creating a project.  
   
--   モデルにエンティティを追加する。  
+-   Adding an entity to the model.  
   
--   Finder メソッドを追加する。  
+-   Adding a finder method.  
   
--   SpecificFinder メソッドを追加する。  
+-   Adding a specific finder method.  
   
--   プロジェクトをテストする。  
+-   Testing the project.  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   サポート対象エディションの Windows と SharePoint。  詳細については、「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of Windows and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)]、[!INCLUDE[vsUltLong](../sharepoint/includes/vsultlong-md.md)]、または [!INCLUDE[vsPreLong](../sharepoint/includes/vsprelong-md.md)]  
+-   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)], [!INCLUDE[vsUltLong](../sharepoint/includes/vsultlong-md.md)], or [!INCLUDE[vsPreLong](../sharepoint/includes/vsprelong-md.md)].  
   
--   AdventureWorks サンプル データベースへのアクセス権。  この方法の詳細については、AdventureWorks データベースをインストールする参照します [SQL Server のサンプル データベース](http://go.microsoft.com/fwlink/?LinkID=117483)。  
+-   Access to the AdventureWorks sample database. For more information about how to install the AdventureWorks database, see [SQL Server Sample Databases](http://go.microsoft.com/fwlink/?LinkID=117483).  
   
-## BDC モデルを含むプロジェクトを作成する  
+## <a name="creating-a-project-that-contains-a-bdc-model"></a>Creating a Project that Contains a BDC Model  
   
-#### BDC モデルを含むプロジェクトを作成するには  
+#### <a name="to-create-a-project-that-contains-a-bdc-model"></a>To create a project that contains a BDC model  
   
-1.  Visual Studio のメニュー バーで、**\[ファイル\]**、**\[新規作成\]**、**\[プロジェクト\]** の順にクリックします。  
+1.  On the menu bar in Visual Studio, choose **File**, **New**, **Project**.  
   
-     **\[新しいプロジェクト\]** ダイアログ ボックスが表示されます。  
+     The **New Project** dialog box opens.  
   
-2.  **\[Visual C\#\]** または **\[Visual Basic\]** で、**\[SharePoint\]** ノードを展開し、**2010** 項目を選択します。  
+2.  Under either **Visual C#** or **Visual Basic**, expand the **SharePoint** node, and then choose the **2010** item.  
   
-3.  **\[テンプレート\]** のペインで、**\[SharePoint 2010 プロジェクト\]** をクリックします、プロジェクト AdventureWorksTest "という名前を付けて、**\[OK\]** ボタンをクリックします。  
+3.  In the **Templates** pane, choose **SharePoint 2010 Project**, name the project **AdventureWorksTest**, and then choose the **OK** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  このウィザードで、プロジェクトをデバッグし、ソリューションの信頼レベルを設定するために使用するサイトを指定できます。  
+     The **SharePoint Customization Wizard** appears. In this wizard, you can specify the site that you'll use to debug the project and set the trust level of the solution.  
   
-4.  信頼レベルを設定するに **\[ファーム ソリューションとして配置する\]** のオプション ボタンを選択します。  
+4.  Choose the **Deploy as a farm solution** option button to set the trust level.  
   
-5.  **\[完了\]** ボタンをクリックして、既定のローカル SharePoint サイトを作成します。  
+5.  Choose the **Finish** button to accept the default local SharePoint site.  
   
-6.  **\[ソリューション エクスプローラー\]** で SharePoint のプロジェクト ノードをクリックします。  
+6.  In **Solution Explorer**, choose the SharePoint project node.  
   
-7.  メニュー バーで **\[プロジェクト\]**、**\[新しい項目の追加\]** の順に選択します。  
+7.  On the menu bar, choose **Project**, **Add New Item**.  
   
-     **\[新しい項目の追加\]** ダイアログ ボックスが表示されます。  
+     The **Add New Item** dialog box opens.  
   
-8.  **\[テンプレート\]** のペインで、**\[ビジネス データ接続モデル \(ファーム ソリューションのみ\)\]** をクリックします、プロジェクト AdventureWorksContacts "を付けておくと、**\[追加\]** ボタンをクリックします。  
+8.  In the **Templates** pane, choose **Business Data Connectivity Model (Farm Solution Only)**, name the project **AdventureWorksContacts**, and then choose the **Add** button.  
   
-## プロジェクトへのデータ アクセス クラスの追加  
+## <a name="adding-data-access-classes-to-the-project"></a>Adding Data Access Classes to the Project  
   
-#### プロジェクトにデータ アクセス クラスを追加するには  
+#### <a name="to-add-data-access-classes-to-the-project"></a>To add data access classes to the project  
   
-1.  メニュー バーで、**\[データベースへの接続\]\[ツール\]** をクリックします。  
+1.  On the menu bar, choose **Tools**, **Connect to Database**.  
   
-     **\[接続の追加\]** ダイアログ ボックスが表示されます。  
+     The **Add Connection** dialog box opens.  
   
-2.  SQL Server AdventureWorks サンプル データベースとの接続を追加します。  
+2.  Add a connection to the SQL Server AdventureWorks sample database.  
   
-     詳細については、「[Add\/Modify Connection \(Microsoft SQL Server\)](http://msdn.microsoft.com/ja-jp/fa400910-26c3-4df7-b9d1-115e688b4ea3)」を参照してください。  
+     For more information, see [Add/Modify Connection (Microsoft SQL Server)](http://msdn.microsoft.com/en-us/fa400910-26c3-4df7-b9d1-115e688b4ea3).  
   
-3.  **ソリューション エクスプローラー**で、プロジェクト ノードを選択します。  
+3.  In **Solution Explorer**, choose the project node.  
   
-4.  メニュー バーで **\[プロジェクト\]**、**\[新しい項目の追加\]** の順に選択します。  
+4.  On the menu bar, choose **Project**, **Add New Item**.  
   
-5.  **\[インストールされているテンプレート\]** のペインで、**\[データ\]** ノードを選択します。  
+5.  In the **Installed Templates** pane, choose the **Data** node.  
   
-6.  **\[テンプレート\]** のペインで、**\[LINQ to SQL クラス\]** をクリックします。  
+6.  In the **Templates** pane, choose **LINQ to SQL Classes**.  
   
-7.  **\[名前\]** ボックスで、AdventureWorks を指定し、**\[追加\]** ボタンをクリックします。  
+7.  In the **Name** box, specify **AdventureWorks**, and then choose the **Add** button.  
   
-     .dbml ファイルがプロジェクトに追加され、オブジェクト リレーショナル デザイナー \(O\/R デザイナー\) が表示されます。  
+     A .dbml file is added to the project, and the Object Relational Designer (O/R Designer) opens.  
   
-8.  メニュー バーで、**\[サーバー エクスプローラー\]\[表示\]** をクリックします。  
+8.  On the menu bar, choose **View**, **Server Explorer**.  
   
-9. **サーバー エクスプローラー**で、AdventureWorks サンプル データベースを示すノードを展開し、**\[テーブル\]** ノードを展開します。  
+9. In **Server Explorer**, expand the node that represents the AdventureWorks sample database, and then expand the **Tables** node.  
   
-10. O\/R デザイナーに **\[連絡担当者\]** テーブルを追加します。  
+10. Add the **Contact (Person)** table onto the O/R Designer.  
   
-     エンティティ クラスが作成され、デザイン サーフェイスに表示されます。  このエンティティ クラスには、Contact \(Person\) テーブルの列にマップされるプロパティが含まれています。  
+     An entity class is created and appears on the design surface. The entity class has properties that map to the columns in the Contact (Person) table.  
   
-## BDC モデルからの既定のエンティティの削除  
- **\[ビジネス データ接続モデル\]** プロジェクトでは、Entity1 という名前の既定のエンティティがモデルに追加されます。  このエンティティを削除します。  後で、新しいエンティティを追加します。  空のモデルから始めることで、チュートリアルの完了までに必要な手順数を減らすことができます。  
+## <a name="removing-the-default-entity-from-the-bdc-model"></a>Removing the Default Entity from the BDC Model  
+ The **Business Data Connectivity Model** project adds a default entity named Entity1 to the model. Remove this entity. Later, you will add a new entity. Starting with an empty model reduces the number of steps required to complete the walkthrough.  
   
-#### BDC モデルからの既定のエンティティを削除するには  
+#### <a name="to-remove-the-default-entity-from-the-model"></a>To remove the default entity from the model  
   
-1.  **\[ソリューション エクスプローラー\]** で、**\[BdcModel1\]** ノードを展開し、BdcModel1.bdcm ファイルを開きます。  
+1.  In **Solution Explorer**, expand the **BdcModel1** node, and then open the BdcModel1.bdcm file.  
   
-2.  BDC デザイナーにビジネス データ接続モデル ファイルが開きます。  
+2.  The Business Data Connectivity model file opens in the BDC designer.  
   
-3.  デザイナーで、**\[Entity1\]** のショートカット メニューを開き、**\[削除\]** をクリックします。  
+3.  In the designer, open the shortcut menu for **Entity1**, and then choose **Delete**.  
   
-4.  **\[ソリューション エクスプローラー\]** で、Entity1.vb \(Visual Basic の場合\) または Entity1.cs のショートカット メニュー \(C\# の場合\) を開き、**\[削除\]** をクリックします。  
+4.  In **Solution Explorer**, open the shortcut menu for Entity1.vb (in Visual Basic) or Entity1.cs (in C#), and then choose **Delete**.  
   
-5.  Entity1Service.vb \(Visual Basic の場合\) または Entity1Service.cs のショートカット メニュー \(C\# の場合\) を開き、**\[削除\]** をクリックします。  
+5.  Open the shortcut menu for Entity1Service.vb (in Visual Basic) or Entity1Service.cs (in C#), and then choose **Delete**.  
   
-## モデルへのエンティティの追加  
- モデルにエンティティを追加します。  BDC デザイナーに Visual Studio **\[ツールボックス\]** からエンティティを追加する。  
+## <a name="adding-an-entity-to-the-model"></a>Adding an Entity to the Model  
+ Add an entity to the model. You can add entities from the Visual Studio **Toolbox** onto the BDC designer.  
   
-#### モデルにエンティティを追加するには  
+#### <a name="to-add-an-entity-to-the-model"></a>To add an Entity to the model  
   
-1.  メニュー バーで **\[表示\]**、**\[ツールボックス\]** の順にクリックします。  
+1.  On the menu bar, choose **View**, **Toolbox**.  
   
-2.  **\[ツールボックス\]** の **\[BusinessDataConnectivity\]** タブで、BDC デザイナーに **\[エンティティ\]** を追加します。  
+2.  On the **BusinessDataConnectivity** tab of the **Toolbox**, add an **Entity** onto the BDC designer.  
   
-     新しいエンティティがデザイナーに表示されます。  Visual Studio は EntityService.vb \(Visual Basic の場合\) またはプロジェクトに EntityService.cs \(C\# の場合\) という名前のファイルが追加されます。  
+     The new entity appears on the designer. Visual Studio adds a file that's named EntityService.vb (in Visual Basic) or EntityService.cs (in C#) to the project.  
   
-3.  メニュー バーで、**\[プロパティ\]**、**\[ウィンドウ\]\[表示\]** をクリックします。  
+3.  On the menu bar, choose **View**, **Properties**, **Window**.  
   
-4.  **\[プロパティ\]** ウィンドウで、連絡先の **\[名前\]** プロパティ値を設定します。  
+4.  In the **Properties** window, set the **Name** property value to **Contact**.  
   
-5.  デザイナーのエンティティのショートカット メニューを開き、**\[追加\]** をクリックします、**\[識別子\]** をクリックします。  
+5.  On the designer, open the shortcut menu for the entity, choose **Add**, and then choose **Identifier**.  
   
-     新しい識別子がエンティティに表示されます。  
+     A new identifier appears on the entity.  
   
-6.  **プロパティ** ウィンドウで、ContactID の識別子の名前を変更します。  
+6.  In the **Properties** window, change the name of the identifier to **ContactID**.  
   
-7.  **\[型の名前\]** の一覧で、**\[System.Int32\]** をクリックします。  
+7.  In the **Type Name** list, choose **System.Int32**.  
   
-## SpecificFinder メソッドの追加  
- BDC サービスで特定の連絡先を表示できるようにするには、SpecificFinder メソッドを追加する必要があります。  ユーザーがリストの項目を選択し、次へをクリックすると、BDC サービス呼び出しから SpecificFinder メソッドのリボンのボタンを **\[アイテムの表示\]**。  
+## <a name="adding-a-specific-finder-method"></a>Adding a Specific Finder Method  
+ To enable the BDC service to display a specific contact, you must add a Specific Finder method. The BDC service calls the Specific Finder method when a user chooses an item in a list and then chooses the **View Item** button on the Ribbon.  
   
- **\[BDC メソッドの詳細\]** ウィンドウを使用して、SpecificFinder メソッドを Contact エンティティに追加します。  特定のエンティティを返すには、メソッドにコードを追加します。  
+ Add a Specific Finder method to the Contact entity by using the **BDC Method Details** window. To return a specific entity, add code to the method.  
   
-#### SpecificFinder メソッドを追加するには  
+#### <a name="to-add-a-specific-finder-method"></a>To add a Specific Finder method  
   
-1.  BDC デザイナーで、**\[連絡先\]** エンティティを選択します。  
+1.  On the BDC designer, choose the **Contact** entity.  
   
-2.  メニュー バーで、**\[その他のウィンドウ\]**、**\[BDC メソッドの詳細\]\[表示\]** をクリックします。  
+2.  On the menu bar, choose **View**, **Other Windows**, **BDC Method Details**.  
   
-     \[BDC メソッドの詳細\] ウィンドウが表示されます。  
+     The BDC Method Details window opens.  
   
-3.  **\[メソッドの追加\]** の一覧で、**\[SpecificFinder メソッドの作成\]** をクリックします。  
+3.  In the **Add a Method** list, choose **Create Specific Finder Method**.  
   
-     次の要素がモデルに追加されます。  これらの要素は **\[BDC メソッドの詳細\]** ウィンドウに表示されます。  
+     Visual Studio adds the following elements to the model. These elements appear in the **BDC Method Details** window.  
   
-    -   ReadItem というメソッド。  
+    -   A method named ReadItem.  
   
-    -   メソッドの入力パラメーター。  
+    -   An input parameter for the method.  
   
-    -   メソッドの戻り値パラメーター。  
+    -   A return parameter for the method.  
   
-    -   各パラメーターの型記述子。  
+    -   A type descriptor for each parameter.  
   
-    -   メソッドのメソッド インスタンス。  
+    -   A method instance for the method.  
   
-4.  **\[BDC メソッドの詳細\]** ウィンドウで、**\[連絡先\]** 型記述子に表示される開き、**\[編集\]** をクリックしますリストを返します。  
+4.  In the **BDC Method Details** window, open the list that appears for the **Contact** type descriptor, and then choose **Edit**.  
   
-     **\[BDC エクスプローラー\]** はモデルの階層ビューを開き、提供します。  
+     The **BDC Explorer** opens and provides a hierarchical view of the model.  
   
-5.  **\[プロパティ\]** ウィンドウでリストを **\[TypeName\]** のプロパティの横に開き、**\[現在のプロジェクト\]** タブをクリックし、**\[連絡先\]** のプロパティをクリックします。  
+5.  In the **Properties** window, open the list next to the **TypeName** property, choose the **Current Project** tab, and then choose the **Contact** property.  
   
-6.  **\[BDC エクスプローラー\]** で、**\[連絡先\]** のショートカット メニューを開き、**\[型記述子の追加\]** をクリックします。  
+6.  In the **BDC Explorer**, open the shortcut menu of the **Contact**, and then choose **Add Type Descriptor**.  
   
-     **\[TypeDescriptor1\]** という新しい型記述子が **\[BDC エクスプローラー\]** に表示されます。  
+     A new type descriptor that's named **TypeDescriptor1** appears in the **BDC Explorer**.  
   
-7.  **\[プロパティ\]** ウィンドウで、**ContactID**に **\[名前\]** プロパティ値を設定します。  
+7.  In the **Properties** window, set the **Name** property value to **ContactID**.  
   
-8.  リストを **\[TypeName\]** のプロパティの横に開き、**\[Int32\]** をクリックします。  
+8.  Open the list next to the **TypeName** property, and then choose **Int32**.  
   
-9. リストを **\[識別子\]** のプロパティの横に開き、**ContactID**を選択します。  
+9. Open the list next to the **Identifier** property, and then choose **ContactID**.  
   
-10. 手順 6. を繰り返して、次の各フィールドについて型記述子を作成します。  
+10. Repeat step 6 to create a type descriptor for each of the following fields.  
   
-    |名前|型の名前|  
-    |--------|----------|  
+    |Name|Type Name|  
+    |----------|---------------|  
     |FirstName|System.String|  
     |LastName|System.String|  
     |Phone|System.String|  
@@ -208,94 +213,92 @@ caps.handback.revision: 37
     |PasswordHash|System.String|  
     |PasswordSalt|System.String|  
   
-11. BDC デザイナーで、**\[連絡先\]** エンティティで、**\[ReadItem\]** のメソッドを開きます。  
+11. In the BDC designer, on the **Contact** entity, open the **ReadItem** method.  
   
-     コード エディターで、Contact のサービス コード ファイルが開きます。  
+     The Contact service code file opens in Code Editor.  
   
-12. `ContactService` クラスで、`ReadItem` メソッドを次のコードに置き換えます。  このコードは次のタスクを実行します。  
+12. In the `ContactService` class, replace the `ReadItem` method with the following code. This code performs the following tasks:  
   
-    -   AdventureWorks データベースの Contacts テーブルのレコードを取得します。  
+    -   Retrieves a record from Contact table of the AdventureWorks database.  
   
-    -   Contact エンティティを BDC サービスに返します。  
-  
-    > [!NOTE]  
-    >  `ServerName` フィールドの値を、使用するサーバーの名前に置き換えます。  
-  
-     [!code-csharp[SP_BDC#3](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/contactservice.cs#3)]
-     [!code-vb[SP_BDC#3](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/contactservice.vb#3)]  
-  
-## Finder メソッドの追加  
- BDC サービスで連絡先を一覧表示できるようにするには、Finder メソッドを追加する必要があります。  **\[BDC メソッドの詳細\]** ウィンドウを使用して、Finder メソッドを Contact エンティティに追加します。  エンティティのコレクションを BDC サービスに返すには、メソッドにコードを追加します。  
-  
-#### Finder メソッドを追加するには  
-  
-1.  BDC デザイナーで、**\[連絡先\]** エンティティを選択します。  
-  
-2.  **\[BDC メソッドの詳細\]** ウィンドウで、**\[ReadItem\]** ノードを折りたたんでします。  
-  
-3.  **\[ReadList\]** のメソッドの **\[メソッドの追加\]** の一覧で、**\[Finder メソッドの作成\]** をクリックします。  
-  
-     メソッド、戻り値パラメーター、および型記述子が追加されます。  
-  
-4.  BDC デザイナーで、**\[連絡先\]** エンティティで、**\[ReadList\]** のメソッドを開きます。  
-  
-     連絡先サービスのコード ファイルがコード エディターで開きます。  
-  
-5.  `ContactService` クラスで、`ReadList` メソッドを次のコードに置き換えます。  このコードは次のタスクを実行します。  
-  
-    -   AdventureWorks データベースの Contacts テーブルのデータを取得します。  
-  
-    -   Contact エンティティの一覧を BDC サービスに返します。  
+    -   Returns a Contact entity to the BDC service.  
   
     > [!NOTE]  
-    >  `ServerName` フィールドの値を、使用するサーバーの名前に置き換えます。  
+    >  Replace the value of the `ServerName` field with the name of your server.  
   
-     [!code-csharp[SP_BDC#2](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/contactservice.cs#2)]
-     [!code-vb[SP_BDC#2](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/contactservice.vb#2)]  
+     [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]  [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]  
   
-## プロジェクトのテスト  
- プロジェクトを実行すると、SharePoint サイトが開き、Visual Studio ではモデルがビジネス データ接続サービスに追加されます。  SharePoint に Contact エンティティを参照する外部リストを作成します。  AdventureWorks データベースに含まれる連絡先のデータが一覧表示されます。  
+## <a name="adding-a-finder-method"></a>Adding a Finder Method  
+ To enable the BDC service to display the contacts in a list, you must add a Finder method. Add a Finder method to the Contact entity by using the **BDC Method Details** window. To return a collection of entities to the BDC service, add code to the method.  
+  
+#### <a name="to-add-a-finder-method"></a>To add a Finder method  
+  
+1.  In the BDC designer, choose the **Contact** entity.  
+  
+2.  In the **BDC Method Details** window, collapse the **ReadItem** node.  
+  
+3.  In the **Add a Method** list under the **ReadList** method, choose **Create Finder Method**.  
+  
+     Visual Studio adds a method, a return parameter, and a type descriptor.  
+  
+4.  In the BDC designer, on the **Contact** entity, open the **ReadList** method.  
+  
+     The code file for the Contact service opens in Code Editor.  
+  
+5.  In the `ContactService` class, replace the `ReadList` method with the following code. This code performs the following tasks:  
+  
+    -   Retrieves data from the Contacts table of the AdventureWorks database.  
+  
+    -   Returns a list of Contact entities to the BDC service.  
+  
+    > [!NOTE]  
+    >  Replace the value of the `ServerName` field with the name of your server.  
+  
+     [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]  [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]  
+  
+## <a name="testing-the-project"></a>Testing the Project  
+ When you run the project, the SharePoint site opens and Visual Studio adds your model to the Business Data Connectivity service. Create an external list in SharePoint that references the Contact entity. The data for contacts in the AdventureWorks database appear in the list.  
   
 > [!NOTE]  
->  場合によっては、ソリューションをデバッグする前に SharePoint のセキュリティ設定を変更する必要があります。詳細については、「[Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)」を参照してください。  
+>  You might have to modify your security settings in SharePoint before you can debug your solution.  For more information, see [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md).  
   
-#### プロジェクトをテストするには  
+#### <a name="to-test-the-project"></a>To test the project  
   
-1.  **F5** キーを押します。  
+1.  Choose the **F5** key.  
   
-     SharePoint サイトが開きます。  
+     The SharePoint site opens.  
   
-2.  **\[サイトの操作\]** メニューで、**\[その他のオプション\]** コマンドを選択します。  
+2.  On the **Site Actions** menu, choose the **More Options** command.  
   
-3.  **\[作成\]** ページで、**\[外部リスト\]** テンプレートを選択し、**\[作成\]** ボタンをクリックします。  
+3.  On the **Create** page, choose the **External List** template, and then choose the **Create** button.  
   
-4.  カスタム リストに Contacts と名前を付けます。  
+4.  Name the custom list **Contacts**.  
   
-5.  **\[外部コンテンツ タイプ\]** フィールドの横にある参照ボタンをクリックします。  
+5.  Choose the browse button next to the **External Content Type** field.  
   
-6.  **\[外部コンテンツ タイプの選択\]** ダイアログ ボックスで、**\[AdventureWorksContacts.BdcModel1.Contact\]** 項目を選択し、**\[作成\]** ボタンをクリックします。  
+6.  In the **External Content Type Picker** dialog box, choose the **AdventureWorksContacts.BdcModel1.Contact** item, and then choose the **Create** button.  
   
-     SharePoint では、AdventureWorks サンプル データベースの連絡先を含む外部リストを作成します。  
+     SharePoint creates an external list that contains contacts from the AdventureWorks sample database.  
   
-7.  特定の Finder メソッドをテストするには、一覧から連絡先を選択します。  
+7.  To test the Specific Finder method, choose a contact in the list.  
   
-8.  リボンで、**\[項目\]** タブをクリックし、**\[アイテムの表示\]** コマンドを選択します。  
+8.  On the Ribbon, choose the **Items** tab, and then choose the **View Item** command.  
   
-     選択した連絡先の詳細情報がフォームに表示されます。  
+     The details of the contact that you chose appear on a form.  
   
-## 次の手順  
- SharePoint で BDC サービスのモデルを設計する方法の詳細については、次のトピックを参照してください。  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to design models for the BDC service in SharePoint from these topics:  
   
--   [方法: Creator メソッドを追加する](../sharepoint/how-to-add-a-creator-method.md).  
+-   [How to: Add a Creator Method](../sharepoint/how-to-add-a-creator-method.md).  
   
--   [方法: Updater メソッドを追加する](../sharepoint/how-to-add-an-updater-method.md).  
+-   [How to: Add an Updater Method](../sharepoint/how-to-add-an-updater-method.md).  
   
--   [方法: Deleter メソッドを追加する](../sharepoint/how-to-add-a-deleter-method.md).  
+-   [How to: Add a Deleter Method](../sharepoint/how-to-add-a-deleter-method.md).  
   
-## 参照  
- [Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [ビジネス データ接続モデルの作成](../sharepoint/creating-a-business-data-connectivity-model.md)   
- [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
- [SharePoint へのビジネス データの統合](../sharepoint/integrating-business-data-into-sharepoint.md)  
+## <a name="see-also"></a>See Also  
+ [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [Creating a Business Data Connectivity Model](../sharepoint/creating-a-business-data-connectivity-model.md)   
+ [BDC Model Design Tools Overview](../sharepoint/bdc-model-design-tools-overview.md)   
+ [Integrating Business Data into SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)  
   
   

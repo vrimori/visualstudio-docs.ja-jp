@@ -1,67 +1,68 @@
 ---
-title: "方法: プログラムによって印刷プレビューで文書を表示する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Word [Visual Studio での Office 開発]、表示 (文書を印刷プレビューで)"
-  - "文書 [Visual Studio での Office 開発]、表示 (印刷プレビューで)"
+title: 'How to: Programmatically Display Documents in Print Preview | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Word [Office development in Visual Studio], displaying documents in print preview
+- documents [Office development in Visual Studio], displaying in print preview
 ms.assetid: 96c7faea-9c5c-42b4-a009-08894a6d15c9
 caps.latest.revision: 39
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 38
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 0fe14cd11a3b2b9a94a0e39f60d1ddc9b4bfe0b0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法: プログラムによって印刷プレビューで文書を表示する
-  レポートを生成するソリューションでは、印刷プレビュー モードでユーザーにレポートを表示する必要がある場合があります。  
+# <a name="how-to-programmatically-display-documents-in-print-preview"></a>How to: Programmatically Display Documents in Print Preview
+  If your solution generates a report, you might want to display the report to the user in Print Preview mode.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## ドキュメント レベルのカスタマイズ用の手順  
+## <a name="procedures-for-document-level-customizations"></a>Procedures for Document-Level Customizations  
   
-#### PrintPreview メソッドを呼び出して印刷プレビューで文書を表示するには  
+#### <a name="to-display-a-document-in-print-preview-by-calling-the-printpreview-method"></a>To display a document in Print Preview by calling the PrintPreview method  
   
-1.  <xref:Microsoft.Office.Tools.Word.Document> クラスの <xref:Microsoft.Office.Tools.Word.Document.PrintPreview%2A> メソッドを呼び出します。 このコード例を使用するには、プロジェクトの `ThisDocument` クラスからコードを実行します。  
+1.  Call the <xref:Microsoft.Office.Tools.Word.Document.PrintPreview%2A> method of the <xref:Microsoft.Office.Tools.Word.Document> class. To use this code example, run it from the `ThisDocument` class in your project.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#13](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#13)]
-     [!code-vb[Trin_VstcoreWordAutomation#13](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#13)]  
+     [!code-vb[Trin_VstcoreWordAutomation#13](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#13)]  [!code-csharp[Trin_VstcoreWordAutomation#13](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#13)]  
   
-#### PrintPreview プロパティを設定して印刷プレビューで文書を表示するには  
+#### <a name="to-display-a-document-in-print-preview-by-setting-the-printpreview-property"></a>To display a document in Print Preview by setting the PrintPreview property  
   
-1.  <xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A> オブジェクトの <xref:Microsoft.Office.Interop.Word.Application> プロパティを **true** に設定します。  
+1.  Set the <xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A> property of the <xref:Microsoft.Office.Interop.Word.Application> object to **true**.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#14](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#14)]
-     [!code-vb[Trin_VstcoreWordAutomation#14](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#14)]  
+     [!code-vb[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#14)]  [!code-csharp[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#14)]  
   
-## VSTO アドイン用の手順  
+## <a name="procedures-for-vsto-add-ins"></a>Procedures for VSTO Add-ins  
   
-#### PrintPreview メソッドを呼び出して印刷プレビューで文書を表示するには  
+#### <a name="to-display-a-document-in-print-preview-by-calling-the-printpreview-method"></a>To display a document in Print Preview by calling the PrintPreview method  
   
-1.  プレビューする <xref:Microsoft.Office.Interop.Word.Document> の <xref:Microsoft.Office.Interop.Word._Document.PrintPreview%2A> メソッドを呼び出します。 このコード例を使用するには、プロジェクトの `ThisAddIn` クラスからコードを実行します。  
+1.  Call the <xref:Microsoft.Office.Interop.Word._Document.PrintPreview%2A> method of the <xref:Microsoft.Office.Interop.Word.Document> that you want to preview. To use this code example, run it from the `ThisAddIn` class in your project.  
   
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#13](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/CS/ThisAddIn.cs#13)]
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#13](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/VB/ThisAddIn.vb#13)]  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#13](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#13)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#13](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#13)]  
   
-#### PrintPreview プロパティを設定して印刷プレビューで文書を表示するには  
+#### <a name="to-display-a-document-in-print-preview-by-setting-the-printpreview-property"></a>To display a document in Print Preview by setting the PrintPreview property  
   
-1.  <xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A> オブジェクトの <xref:Microsoft.Office.Interop.Word.Application> プロパティを **true** に設定します。  
+1.  Set the <xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A> property of the <xref:Microsoft.Office.Interop.Word.Application> object to **true**.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#14](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#14)]
-     [!code-vb[Trin_VstcoreWordAutomation#14](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#14)]  
+     [!code-vb[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#14)]  [!code-csharp[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#14)]  
   
-## 参照  
- [方法: プログラムによって文書を印刷する](../vsto/how-to-programmatically-print-documents.md)   
- [方法: プログラムによって既存文書を開く](../vsto/how-to-programmatically-open-existing-documents.md)   
- [方法: プログラムによって新しい文書を作成する](../vsto/how-to-programmatically-create-new-documents.md)  
+## <a name="see-also"></a>See Also  
+ [How to: Programmatically Print Documents](../vsto/how-to-programmatically-print-documents.md)   
+ [How to: Programmatically Open Existing Documents](../vsto/how-to-programmatically-open-existing-documents.md)   
+ [How to: Programmatically Create New Documents](../vsto/how-to-programmatically-create-new-documents.md)  
   
   

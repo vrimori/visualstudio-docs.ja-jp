@@ -1,233 +1,236 @@
 ---
-title: "チュートリアル : ドキュメント レベルのプロジェクトでの複合データ バインド"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "複合データ [Visual Studio での Office 開発]"
-  - "データ [Visual Studio での Office 開発], バインド (データを)"
-  - "データ バインド [Visual Studio での Office 開発], 複数列"
-  - "複数列のデータ バインド [Visual Studio での Office 開発]"
+title: 'Walkthrough: Complex Data Binding in a Document-Level Project | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data [Office development in Visual Studio], binding data
+- complex data [Office development in Visual Studio]
+- multiple column data binding [Office development in Visual Studio]
+- data binding [Office development in Visual Studio], multiple columns
 ms.assetid: 32ffad3d-fba4-476a-99b8-ef440434f4e1
 caps.latest.revision: 50
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 49
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: eabb6c71606a980cb0056bd844e93cde6c3a746e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : ドキュメント レベルのプロジェクトでの複合データ バインド
-  このチュートリアルでは、ドキュメント レベルのプロジェクトでの複合データ バインディングの基本事項について説明します。  Microsoft Office Excel ワークシートの複数のセルを Northwind SQL Server データベースのフィールドにバインドできます。  
+# <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>Walkthrough: Complex Data Binding in a Document-Level Project
+  This walkthrough demonstrates the basics of complex data binding in a document-level project. You can bind multiple cells in a Microsoft Office Excel worksheet to fields in the Northwind SQL Server database.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   ブック プロジェクトにデータ ソースを追加します。  
+-   Adding a data source to your workbook project.  
   
--   ワークシートにデータ バインド コントロールを追加します。  
+-   Adding data-bound controls to a worksheet.  
   
--   データの変更内容をデータベースに保存します。  
+-   Saving data changes back to the database.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] または [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]。  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
--   Northwind SQL Server サンプル データベースがインストールされたサーバーへのアクセス  
+-   Access to a server with the Northwind SQL Server sample database.  
   
--   SQL Server データベースの読み込み\/書き込みアクセス許可  
+-   Permissions to read from and write to the SQL Server database.  
   
-## 新規プロジェクトの作成  
- 最初に、Excel ブック プロジェクトを作成します。  
+## <a name="creating-a-new-project"></a>Creating a New Project  
+ The first step is to create an Excel workbook project.  
   
-#### 新しいプロジェクトを作成するには  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  **My Complex Data Binding** という名前の Excel ブック プロジェクトを作成します。  ウィザードで、**\[新規ドキュメントの作成\]** をクリックします。  
+1.  Create an Excel workbook project with the name **My Complex Data Binding**. In the wizard, select **Create a new document**.  
   
-     詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+     For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     新しい Excel ブックが Visual Studio のデザイナーで開き、My Complex Data Binding プロジェクトが**ソリューション エクスプローラー**に追加されます。  
+     Visual Studio opens the new Excel workbook in the designer and adds the **My Complex Data Binding** project to **Solution Explorer**.  
   
-## データ ソースの作成  
- **\[データ ソース\]** ウィンドウを使用して型指定されたデータセットをプロジェクトに追加します。  
+## <a name="creating-the-data-source"></a>Creating the Data Source  
+ Use the **Data Sources** window to add a typed dataset to your project.  
   
-#### データ ソースを作成するには  
+#### <a name="to-create-the-data-source"></a>To create the data source  
   
-1.  **\[データ ソース\]** のウィンドウが表示されない場合は、これを、**\[ビュー\]**、**\[その他のウィンドウ\]** を選択する、メニュー バーの **\[データ ソース\]** 表示されます。  
+1.  If the **Data Sources** window is not visible, display it by, on the menu bar, choosing **View**, **Other Windows**, **Data Sources**.  
   
-2.  **\[データ ソース構成ウィザード\]** を開始するには **\[新しいデータ ソースの追加\]** を選択します。  
+2.  Choose **Add New Data Source** to start the **Data Source Configuration Wizard**.  
   
-3.  **\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
+3.  Select **Database** and then click **Next**.  
   
-4.  SQL Server Northwind サンプル データベースへのデータ接続を選択するか、または **\[新しい接続\]** をクリックして新しい接続を追加します。  
+4.  Select a data connection to the Northwind sample SQL Server database, or add a new connection by using the **New Connection** button.  
   
-5.  接続を選択または作成した後、**\[次へ\]** をクリックします。  
+5.  After a connection has been selected or created, click **Next**.  
   
-6.  接続を保存するオプションがオンになっている場合はオフにし、**\[次へ\]** をクリックします。  
+6.  Clear the option to save the connection if it is selected, and then click **Next**.  
   
-7.  **\[データベース オブジェクト\]** ウィンドウの **\[テーブル\]** ノードを展開します。  
+7.  Expand the **Tables** node in the **Database objects** window.  
   
-8.  **\[Employees\]** テーブルの横のチェック ボックスをオンにします。  
+8.  Select the check box next to the **Employees** table.  
   
-9. \[完了\] をクリックします。  
+9. Click **Finish**.  
   
- **\[データ ソース\]** ウィンドウに **\[Employees\]** テーブルが追加されます。  さらに、**ソリューション エクスプローラー**に表示されるプロジェクトに、型指定されたデータセットも追加されます。  
+ The wizard adds the **Employees** table to the **Data Sources** window. It also adds a typed dataset to your project that is visible in **Solution Explorer**.  
   
-## ワークシートへのコントロールの追加  
- ブックを開くと、ワークシートに **Employees** テーブルが表示されます。  ユーザーは、データに変更を加え、ボタンをクリックして変更内容をデータベースに保存できます。  
+## <a name="adding-controls-to-the-worksheet"></a>Adding Controls to the Worksheet  
+ A worksheet will display the **Employees** table when the workbook is opened. Users will be able to make changes to the data and then save those changes back to the database by clicking a button.  
   
- テーブルに対してワークシートを自動的にバインドするには、**\[データ ソース\]** ウィンドウからワークシートに <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを追加します。  変更を保存するオプションをユーザーが選択できるようにするには、**ツールボックス**から <xref:System.Windows.Forms.Button> コントロールを追加します。  
+ To bind the worksheet to the table automatically, you can add a <xref:Microsoft.Office.Tools.Excel.ListObject> control to the worksheet from the **Data Sources** window. To give the user the option to save changes, add a <xref:System.Windows.Forms.Button> control from the **Toolbox**.  
   
-#### リスト オブジェクトを追加するには  
+#### <a name="to-add-a-list-object"></a>To add a list object  
   
-1.  **\[My Complex Data Binding.xlsx\]** ブックが Visual Studio のデザイナーで開いていると、表示 **\[Sheet1\]** ことを確認します。  
+1.  Verify that the **My Complex Data Binding.xlsx** workbook is open in the Visual Studio designer, with **Sheet1** displayed.  
   
-2.  **\[データ ソース\]** ウィンドウを開き、**\[Employees\]** ノードを選択します。  
+2.  Open the **Data Sources** window and select the **Employees** node.  
   
-3.  表示されるドロップダウン矢印をクリックします。  
+3.  Click the drop-down arrow that appears.  
   
-4.  ドロップダウン リストで **\[ListObject\]** を選択します。  
+4.  Select **ListObject** in the drop-down list.  
   
-5.  **Employees** テーブルをセル **A6** にドラッグします。  
+5.  Drag the **Employees** table to cell **A6**.  
   
-     `EmployeesListObject` という名前の <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールがセル **A6** に作成されます。  同時に、`EmployeesBindingSource` という名前の <xref:System.Windows.Forms.BindingSource>、テーブル アダプター、および <xref:System.Data.DataSet> のインスタンスがプロジェクトに追加されます。  コントロールは <xref:System.Windows.Forms.BindingSource> にバインドされ、さらにこれが <xref:System.Data.DataSet> インスタンスにバインドされます。  
+     A <xref:Microsoft.Office.Tools.Excel.ListObject> control named `EmployeesListObject` is created in cell **A6**. At the same time, a <xref:System.Windows.Forms.BindingSource> named `EmployeesBindingSource`, a table adapter, and a <xref:System.Data.DataSet> instance are added to the project. The control is bound to the <xref:System.Windows.Forms.BindingSource>, which in turn is bound to the <xref:System.Data.DataSet> instance.  
   
-#### ボタンを追加するには  
+#### <a name="to-add-a-button"></a>To add a button  
   
-1.  **ツールボックス**の **\[コモン コントロール\]** タブからワークシートのセル **A4** へ、<xref:System.Windows.Forms.Button> コントロールをドラッグします。  
+1.  From the **Common Controls** tab of the **Toolbox**, add a <xref:System.Windows.Forms.Button> control to cell **A4** of the worksheet.  
   
- 次の手順では、ワークシートを開くときにボタンにテキストを追加します。  
+ The next step is to add text to the button when the worksheet opens.  
   
-## コントロールの初期化  
- <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> イベント ハンドラーで、ボタンにテキストを追加します。  
+## <a name="initializing-the-control"></a>Initializing the Control  
+ Add text to the button in the <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> event handler.  
   
-#### コントロールを初期化するには  
+#### <a name="to-initialize-the-control"></a>To initialize the control  
   
-1.  **ソリューション エクスプローラー**の **Sheet1.vb** または **Sheet1.cs** を右クリックし、ショートカット メニューの **\[コードの表示\]** をクリックします。  
+1.  In **Solution Explorer**, right-click **Sheet1.vb** or **Sheet1.cs**, and then click **View Code** on the shortcut menu.  
   
-2.  `Sheet1_Startup` メソッドに次のコードを追加し、`button` のテキストを設定します。  
+2.  Add the following code to the `Sheet1_Startup` method to set the text for the b`utton`.  
   
-     [!code-csharp[Trin_VstcoreDataExcel#8](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet3.cs#8)]
-     [!code-vb[Trin_VstcoreDataExcel#8](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/VB/Sheet3.vb#8)]  
+     [!code-csharp[Trin_VstcoreDataExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#8)]  [!code-vb[Trin_VstcoreDataExcel#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#8)]  
   
-3.  C\# の場合のみ、<xref:System.Windows.Forms.Control.Click> イベントのイベント ハンドラーを `Sheet1_Startup` メソッドに追加します。  
+3.  For C# only, add an event handler for the <xref:System.Windows.Forms.Control.Click> event to the `Sheet1_Startup` method.  
   
-     [!code-csharp[Trin_VstcoreDataExcel#9](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet3.cs#9)]  
+     [!code-csharp[Trin_VstcoreDataExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#9)]  
   
- ボタンの <xref:System.Windows.Forms.Control.Click> イベントを処理するコードを追加します。  
+ Now add code to handle the <xref:System.Windows.Forms.Control.Click> event of the button.  
   
-## データベースへの変更の保存  
- データに加えられた変更は、明示的にデータベースに保存されない限り、ローカル データセット内でのみ存在します。  
+## <a name="saving-changes-to-the-database"></a>Saving Changes to the Database  
+ Any changes have been made to the data exist only in the local dataset until they are explicitly saved back to the database.  
   
-#### データベースに変更を保存するには  
+#### <a name="to-save-changes-to-the-database"></a>To save changes to the database  
   
-1.  `button` の <xref:System.Windows.Forms.Control.Click> イベントのイベント ハンドラーを追加し、次のコードを追加して、データセット内で行われたすべての変更をデータベースにコミットします。  
+1.  Add an event handler for the <xref:System.Windows.Forms.Control.Click> event of the b`utton`, and add the following code to commit all changes that have been made in the dataset back to the database.  
   
-     [!code-csharp[Trin_VstcoreDataExcel#10](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet3.cs#10)]
-     [!code-vb[Trin_VstcoreDataExcel#10](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/VB/Sheet3.vb#10)]  
+     [!code-csharp[Trin_VstcoreDataExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#10)]  [!code-vb[Trin_VstcoreDataExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#10)]  
   
-## アプリケーションのテスト  
- ブックをテストして、データが期待どおりに表示され、リスト オブジェクト内のデータを操作できることを確認します。  
+## <a name="testing-the-application"></a>Testing the Application  
+ Now you can test your workbook to verify that the data appears as expected, and that you can manipulate the data in the list object.  
   
-#### データ バインディングをテストするには  
+#### <a name="to-test-the-data-binding"></a>To test the data binding  
   
--   F5 キーを押します。  
+-   Press F5.  
   
-     ブックを開いたときに、**Employees** テーブルのデータがリスト オブジェクトに設定されていることを確認します。  
+     Verify that when the workbook opens, the list object is filled with data from the **Employees** table.  
   
-#### データを変更するには  
+#### <a name="to-modify-data"></a>To modify data  
   
-1.  **Davolio** という名前が含まれているセル **B7** をクリックします。  
+1.  Click cell **B7**, which should contain the name **Davolio**.  
   
-2.  「Anderson」という名前を入力し、Enter キーを押します。  
+2.  Type the name **Anderson**, and then press ENTER.  
   
-#### 列ヘッダーを変更するには  
+#### <a name="to-modify-a-column-header"></a>To modify a column header  
   
-1.  **LastName** という列ヘッダーを含むセルをクリックします。  
+1.  Click the cell that contains the column header **LastName**.  
   
-2.  「Last Name」\(2 つの単語の間には空白を含む\) を入力し、Enter キーを押します。  
+2.  Type **Last Name**, including a space between the two words, and then press ENTER.  
   
-#### データを保存するには  
+#### <a name="to-save-data"></a>To save data  
   
-1.  ワークシートの **\[\<ファイル名\> の保存\]** をクリックします。  
+1.  Click **Save** on the worksheet.  
   
-2.  Excel を終了します。  変更の保存を確認するメッセージに対して、**\[いいえ\]** をクリックします。  
+2.  Exit Excel. Click **No** when prompted to save the changes you made.  
   
-3.  F5 キーを押してプロジェクトを再び実行します。  
+3.  Press F5 to run the project again.  
   
-     リスト オブジェクトには、**Employees** テーブルのデータが設定されます。  
+     The list object is filled with data from the **Employees** table.  
   
-4.  セル **B7** 内の名前は Anderson であることに注意してください。これは、変更してデータベースに保存したデータです。  列ヘッダーの **LastName** は、空白を含まない元の形式に戻っています。これは、列ヘッダーはデータベースにバインドされておらず、ワークシートへの変更を保存しなかったためです。  
+4.  Notice that the name in cell **B7** is still **Anderson**, which is the data change that you made and saved back to the database. The column header **LastName** has changed back to its original form with no space, because the column header is not bound to the database and you did not save the changes you made to the worksheet.  
   
-#### 新規行を追加するには  
+#### <a name="to-add-new-rows"></a>To add new rows  
   
-1.  リスト オブジェクト内のセルを選択します。  
+1.  Select a cell inside the list object.  
   
-     リストの下部に新規行が表示され、新規行の先頭のセルにはアスタリスク \(**\***\) が表示されます。  
+     A new row appears at the bottom of the list, with an asterisk (**\***) in the first cell of the new row.  
   
-2.  空の行に次の情報を追加します。  
+2.  Add the following information in the empty row.  
   
     |EmployeeID|LastName|FirstName|Title|  
     |----------------|--------------|---------------|-----------|  
     |10|Ito|Shu|Sales Manager|  
   
-#### 行を削除するには  
+#### <a name="to-delete-rows"></a>To delete rows  
   
--   ワークシートの左端にある番号 16 \(行 16\) をクリックして、**\[削除\]** をクリックします。  
+-   Right-click the number 16 (row 16) on the far left side of the worksheet, and then click **Delete**.  
   
-#### リスト内の行を並べ替えるには  
+#### <a name="to-sort-the-rows-in-the-list"></a>To sort the rows in the List  
   
-1.  リスト内のセルを選択します。  
+1.  Select a cell inside the list.  
   
-     各列ヘッダーに矢印ボタンが表示されます。  
+     Arrow buttons appear in each column header.  
   
-2.  **\[Last Name\]** という列ヘッダーの矢印ボタンをクリックします。  
+2.  Click the arrow button in the **Last Name** column header.  
   
-3.  **\[昇順で並べ替え\]** をクリックします。  
+3.  Click **Sort Ascending**.  
   
-     姓のアルファベット順に行が並べ替えられます。  
+     The rows are sorted alphabetically by last names.  
   
-#### 情報をフィルター処理するには  
+#### <a name="to-filter-information"></a>To filter information  
   
-1.  リスト内のセルを選択します。  
+1.  Select a cell inside the list.  
   
-2.  **\[Title\]** という列ヘッダーの矢印ボタンをクリックします。  
+2.  Click the arrow button in the **Title** column header.  
   
-3.  **\[Sales Representative\]** をクリックします。  
+3.  Click **Sales Representative**.  
   
-     **\[Title\]** 列が **\[Sales Representative\]** の行のみ表示されます。  
+     The list shows only those rows that have **Sales Representative** in the **Title** column.  
   
-4.  **\[Title\]** という列ヘッダーの矢印ボタンを再びクリックします。  
+4.  Click the arrow button in the **Title** column header again.  
   
-5.  **\[\(すべて\)\]** をクリックします。  
+5.  Click **(All)**.  
   
-     フィルターが削除され、すべての行が表示されます。  
+     Filtering is removed and all the rows appear.  
   
-## 次の手順  
- このチュートリアルでは、データベース内のテーブルをリスト オブジェクトにバインドする際の基本事項について説明します。  次に行う作業は以下のとおりです。  
+## <a name="next-steps"></a>Next Steps  
+ This walkthrough shows the basics of binding a table in a database to a list object. Here are some tasks that might come next:  
   
--   データをキャッシュしてオフラインで使用できるようにします。  詳細については、「[方法 : オフラインで使用するデータまたはサーバー上で使用するデータをキャッシュする](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)」を参照してください。  
+-   Cache the data so that it can be used offline. For more information, see [How to: Cache Data for Use Offline or on a Server](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).  
   
--   ソリューションの配置。  詳細については、「[Office ソリューションの配置](../vsto/deploying-an-office-solution.md)」を参照してください。  
+-   Deploy the solution. For more information, see [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
   
--   フィールドとテーブル間のマスター\/詳細リレーションシップの作成。  詳細については、「[チュートリアル : キャッシュされたデータセットを使用したマスター&#47;詳細関係の作成](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)」を参照してください。  
+-   Create a master/detail relation between a field and a table. For more information, see [Walkthrough: Creating a Master Detail Relation Using a Cached Dataset](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md).  
   
-## 参照  
- [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
- [チュートリアル : ドキュメント レベルのプロジェクトでの単純データ バインド](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  
+## <a name="see-also"></a>See Also  
+ [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [Data in Office Solutions](../vsto/data-in-office-solutions.md)   
+ [Walkthrough: Simple Data Binding in a Document-Level Project](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  
   
   

@@ -1,170 +1,174 @@
 ---
-title: "チュートリアル : 初めての Word 用ドキュメント レベルのカスタマイズの作成"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ドキュメント レベルのカスタマイズ [Visual Studio での Office 開発], 作成 (初めてのプロジェクトを)"
-  - "Visual Studio での Office 開発, 作成 (初めてのプロジェクトを)"
-  - "Word [Visual Studio での Office 開発], 作成 (初めてのプロジェクトを)"
+title: 'Walkthrough: Creating Your First Document-Level Customization For Word | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office development in Visual Studio, creating your first project
+- Word [Office development in Visual Studio], creating your first project
+- document-level customizations [Office development in Visual Studio], creating your first project
 ms.assetid: ec9f5173-0923-4aee-985a-e760e80eaae3
 caps.latest.revision: 45
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 44
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 5d18e432f348950ce973baf92b8e9afd3146b63d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : 初めての Word 用ドキュメント レベルのカスタマイズの作成
-  この入門編のチュートリアルでは、Microsoft Office Word 用のドキュメント レベルのカスタマイズを作成する方法について説明します。  この種のソリューションで作成した機能は、特定の文書が開いている場合にのみ使用可能です。  ドキュメント レベルのカスタマイズでは、文書が開いたときに新しいリボン タブを表示するなどの、アプリケーション全体の変更を行うことはできません。  
+# <a name="walkthrough-creating-your-first-document-level-customization-for-word"></a>Walkthrough: Creating Your First Document-Level Customization For Word
+  This introductory walkthrough shows you how to create a document-level customization for Microsoft Office Word. The features that you create in this kind of solution are available only when a specific document is open. You cannot use a document-level customization to make application-wide changes, for example, displaying a new Ribbon tab when any document is open.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   新しい Word 文書プロジェクトを作成する。  
+-   Creating a Word document project.  
   
--   Visual Studio デザイナーでホストされるドキュメントにテキストを追加する。  
+-   Adding text to the document that is hosted in the Visual Studio designer.  
   
--   Word のオブジェクト モデルを使用して、カスタマイズされた文書が開かれたときにテキストを追加するコードを記述する。  
+-   Writing code that uses the object model of Word to add text to the customized document when it is opened.  
   
--   プロジェクトをビルドし、実行してテストする。  
+-   Building and running the project to test it.  
   
--   プロジェクトをクリーンアップして、不要なビルド ファイルやセキュリティ設定を開発用コンピューターから削除する。  
+-   Cleaning up the project to remove unnecessary build files and security settings from your development computer.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   Microsoft Word  
   
-## プロジェクトの作成  
+## <a name="creating-the-project"></a>Creating the Project  
   
-#### Visual Studio で新しい Word 文書プロジェクトを作成するには  
+#### <a name="to-create-a-new-word-document-project-in-visual-studio"></a>To create a new Word document project in Visual Studio  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  **\[ファイル\]** メニューの **\[新規作成\]** をポイントし、**\[プロジェクト\]** をクリックします。  
+2.  On the **File** menu, point to **New**, and then click **Project**.  
   
-3.  テンプレート ペインで、**\[Visual C\#\]** または **\[Visual Basic\]** を展開してから **\[Office\/SharePoint\]** を展開します。  
+3.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then expand **Office/SharePoint**.  
   
-4.  展開した **\[Office\/SharePoint\]** ノードの下で、**\[Office Add\-ins\]** ノードを選択します。  
+4.  Under the expanded **Office/SharePoint** node, select the **Office Add-ins** node.  
   
-5.  プロジェクト テンプレートの一覧で、Word VSTO 文書プロジェクトを選択します。  
+5.  In the list of project templates, select a Word VSTO document project .  
   
-6.  **\[名前\]** ボックスに「**FirstDocumentCustomization**」と入力します。  
+6.  In the **Name** box, type **FirstDocumentCustomization**.  
   
-7.  **\[OK\]** をクリックします。  
+7.  Click **OK**.  
   
-     **Visual Studio Tools for Office プロジェクト ウィザード**が開きます。  
+     The **Visual Studio Tools for Office Project Wizard** opens.  
   
-8.  **\[新規ドキュメントの作成\]** を選択し、**\[OK\]** をクリックします。  
+8.  Select **Create a new document**, and click **OK**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] により **FirstDocumentCustomization** プロジェクトが作成され、**FirstDocumentCustomization** ドキュメントおよび ThisDocument コード ファイルがプロジェクトに追加されます。  **FirstDocumentCustomization** ドキュメントがデザイナーで自動的に開かれます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] creates the **FirstDocumentCustomization** project, and adds the **FirstDocumentCustomization** document and ThisDocument code file to the project. The **FirstDocumentCustomization** document is opened automatically in the designer.  
   
-## デザイナーで文書を閉じ、再び開く  
- プロジェクトの開発中にデザイナーで開いたドキュメントを意図的にまたは誤って閉じた場合は、そのドキュメントを再び開くことができます。  
+## <a name="closing-and-reopening-the-document-in-the-designer"></a>Closing and Reopening the Document in the Designer  
+ If you deliberately or accidentally close the document in the designer while you are developing your project, you can reopen it.  
   
-#### デザイナーで文書を閉じ、再び開くには  
+#### <a name="to-close-and-reopen-the-document-in-the-designer"></a>To close and reopen the document in the designer  
   
-1.  デザイナー ウィンドウの **\[閉じる\]** ボタン \(X\) をクリックしてドキュメントを閉じます。  
+1.  Close the document by clicking the **Close** button (X) for the designer window.  
   
-2.  **ソリューション エクスプローラー**で、**ThisDocument** コード ファイルを右クリックし、**\[デザイナーの表示\]** をクリックします。  
+2.  In **Solution Explorer**, right-click the **ThisDocument** code file, and click **View Designer**.  
   
-     または  
+     \- or -  
   
-     **ソリューション エクスプローラー**で **ThisDocument** コード ファイルをダブルクリックします。  
+     In **Solution Explorer**, double-click the **ThisDocument** code file.  
   
-## デザイナーによるドキュメントへのテキストの追加  
- デザイナーで開いたドキュメントを変更することで、カスタマイズのユーザー インターフェイス \(UI\) をデザインできます。  たとえば、テキスト、テーブル、または Word コントロールを追加できます。  デザイナーの使用方法の詳細については、「[Visual Studio 環境における Office プロジェクト](../vsto/office-projects-in-the-visual-studio-environment.md)」を参照してください。  
+## <a name="adding-text-to-the-document-in-the-designer"></a>Adding Text to the Document in the Designer  
+ You can design the user interface (UI) of your customization by modifying the document that is open in the designer. For example, you can add text, tables, or Word controls. For more information about how to use the designer, see [Office Projects in the Visual Studio Environment](../vsto/office-projects-in-the-visual-studio-environment.md).  
   
-#### デザイナーを使用してドキュメントにテキストを追加するには  
+#### <a name="to-add-text-to-your-document-by-using-the-designer"></a>To add text to your document by using the designer  
   
-1.  デザイナーで開いているドキュメントに次のテキストを入力します。  
+1.  In the document that is open in the designer, type the following text.  
   
-     **このテキストは、デザイナーを使用して追加されました。**  
+     **This text was added by using the designer.**  
   
-## プログラムによるドキュメントへのテキストの追加  
- 次に、ThisDocument コード ファイルにコードを追加します。  この新しいコードでは、Word のオブジェクト モデルを使用して、ドキュメントに 2 番目のテキスト段落を追加します。  ThisDocument コード ファイルには、既定で次の生成済みコードが含まれています。  
+## <a name="adding-text-to-the-document-programmatically"></a>Adding Text to the Document Programmatically  
+ Next, add code to the ThisDocument code file. The new code uses the object model of Word to add a second paragraph of text to the document. By default, the ThisDocument code file contains the following generated code:  
   
--   `ThisDocument` クラスの部分定義。このクラスは、ドキュメントのプログラミング モデルを表し、Word のオブジェクト モデルへのアクセスを提供します。  詳細については、「[Document ホスト項目](../vsto/document-host-item.md)」および「[Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)」を参照してください。  `ThisDocument` クラスの残りの部分は、変更すべきでない非表示のコード ファイルに定義されています。  
+-   A partial definition of the `ThisDocument` class, which represents the programming model of the document and provides access to the object model of Word. For more information, see [Document Host Item](../vsto/document-host-item.md) and [Word Object Model Overview](../vsto/word-object-model-overview.md). The remainder of the `ThisDocument` class is defined in a hidden code file that you should not modify.  
   
--   `ThisDocument_Startup` イベント ハンドラーおよび `ThisDocument_Shutdown` イベント ハンドラー。  これらのイベント ハンドラーは、ドキュメントが開いたとき、および閉じたときに呼び出されます。  これらのイベント ハンドラーを使用して、ドキュメントが開いたときにカスタマイズを初期化し、ドキュメントが閉じたときにカスタマイズが使用したリソースをクリーンアップします。  詳細については、「[Office プロジェクトのイベント](../vsto/events-in-office-projects.md)」を参照してください。  
+-   The `ThisDocument_Startup` and `ThisDocument_Shutdown` event handlers. These event handlers are called when the document is opened and closed. Use these event handlers to initialize your customization when the document is opened, and to clean up resources used by your customization when the document is closed. For more information, see [Events in Office Projects](../vsto/events-in-office-projects.md).  
   
-#### コードを使用してドキュメントに 2 番目のテキスト段落を追加するには  
+#### <a name="to-add-a-second-paragraph-of-text-to-the-document-by-using-code"></a>To add a second paragraph of text to the document by using code  
   
-1.  **ソリューション エクスプローラー**で **ThisDocument** を右クリックし、**\[コードの表示\]** をクリックします。  
+1.  In **Solution Explorer**, right-click **ThisDocument**, and then click **View Code**.  
   
-     Visual Studio でコード ファイルが開かれます。  
+     The code file opens in Visual Studio.  
   
-2.  `ThisDocument_Startup` イベント ハンドラーを次のコードで置き換えます。  ドキュメントが開かれると、この新しいコードにより、2 番目のテキスト段落がドキュメントに追加されます。  
+2.  Replace the `ThisDocument_Startup` event handler with the following code. When the document is opened, this code adds a second paragraph of text to the document.  
   
-     [!code-csharp[Trin_WordDocumentTutorial#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_WordDocumentTutorial/CS/ThisDocument.cs#1)]
-     [!code-vb[Trin_WordDocumentTutorial#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordDocumentTutorial/VB/ThisDocument.vb#1)]  
+     [!code-vb[Trin_WordDocumentTutorial#1](../vsto/codesnippet/VisualBasic/FirstDocumentCustomization/ThisDocument.vb#1)]  [!code-csharp[Trin_WordDocumentTutorial#1](../vsto/codesnippet/CSharp/FirstDocumentCustomization/ThisDocument.cs#1)]  
   
     > [!NOTE]  
-    >  このコードでは、インデックス値 1 を使用して <xref:Microsoft.Office.Tools.Word.Document.Paragraphs%2A> プロパティ内の最初の段落にアクセスします。  Visual Basic および Visual C\# ではインデックスが 0 から始まる配列が使用されますが、Word オブジェクト モデルのほとんどのコレクションでは配列の下限のインデックスが 1 から始まります。  詳細については、「[Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)」を参照してください。  
+    >  This code uses the index value 1 to access the first paragraph in the <xref:Microsoft.Office.Tools.Word.Document.Paragraphs%2A> property. Although Visual Basic and Visual C# use 0-based arrays, the lower array bounds of most collections in the Word object model is 1. For more information, see [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md).  
   
-## プロジェクトのテスト  
+## <a name="testing-the-project"></a>Testing the Project  
   
-#### 文書をテストするには  
+#### <a name="to-test-your-document"></a>To test your document  
   
-1.  **F5** キーを押して、プロジェクトをビルドおよび実行します。  
+1.  Press **F5** to build and run your project.  
   
-     プロジェクトをビルドすると、コードがアセンブリにコンパイルされ、ドキュメントに関連付けられます。  Visual Studio は、ドキュメントとアセンブリのコピーをプロジェクトのビルド出力フォルダーに格納し、カスタマイズを実行できるように開発用コンピューターのセキュリティ設定を行います。  詳細については、「[Office ソリューションのビルド](../vsto/building-office-solutions.md)」を参照してください。  
+     When you build the project, the code is compiled into an assembly that is associated with the document. Visual Studio puts a copy of the document and the assembly in the build output folder for the project, and it configures the security settings on the development computer to enable the customization to run. For more information, see [Building Office Solutions](../vsto/building-office-solutions.md).  
   
-2.  次のテキストがドキュメントに表示されることを確認します。  
+2.  In the document, verify that you see the following text.  
   
-     **このテキストは、デザイナーを使用して追加されました。**  
+     **This text was added by using the designer.**  
   
-     **このテキストは、コードを使用して追加されました。**  
+     **This text was added by using code.**  
   
-3.  ドキュメントを閉じます。  
+3.  Close the document.  
   
-## プロジェクトのクリーンアップ  
- プロジェクトの開発が完了したら、ビルド プロセスによって作成されたビルド出力フォルダー内のファイルおよびセキュリティ設定を削除する必要があります。  
+## <a name="cleaning-up-the-project"></a>Cleaning up the Project  
+ When you finish developing a project, you should remove the files in the build output folder and the security settings created by the build process.  
   
-#### 開発用コンピューターから、完成したプロジェクトをクリーンアップするには  
+#### <a name="to-clean-up-the-completed-project-on-your-development-computer"></a>To clean up the completed project on your development computer  
   
-1.  Visual Studio で、**\[ビルド\]** メニューの **\[ソリューションのクリーン\]** をクリックします。  
+1.  In Visual Studio, on the **Build** menu, click **Clean Solution**.  
   
-## 次の手順  
- Word 用の基本的なドキュメント レベルのカスタマイズを作成した後は、カスタマイズの開発方法の詳細について、以下のトピックを参照してください。  
+## <a name="next-steps"></a>Next Steps  
+ Now that you have created a basic document-level customization for Word, you can learn more about how to develop customizations from these topics:  
   
--   ドキュメント レベルのカスタマイズで実行できる一般的なプログラミング タスク: [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)。  
+-   General programming tasks that you can perform in document-level customizations: [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md).  
   
--   Word 用のドキュメント レベルのカスタマイズに固有のプログラミング タスク: [Word ソリューション](../vsto/word-solutions.md)。  
+-   Programming tasks that are specific to document-level customizations for Word: [Word Solutions](../vsto/word-solutions.md).  
   
--   Word のオブジェクト モデルの使用方法: [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)。  
+-   Using the object model of Word: [Word Object Model Overview](../vsto/word-object-model-overview.md).  
   
--   Word の UI のカスタマイズ \(リボンへのカスタム タブの追加や、独自のカスタム作業ウィンドウの作成など\): [Office UI のカスタマイズ](../vsto/office-ui-customization.md)。  
+-   Customizing the UI of Word, for example, by adding a custom tab to the Ribbon or creating your own actions pane: [Office UI Customization](../vsto/office-ui-customization.md).  
   
--   Word オブジェクト モデルを使用して実行できないタスク \(たとえば、ドキュメント上でマネージ コントロールをホストする、Windows フォーム データ バインディング モデルを使用して Word コントロールをデータにバインドするなど\) を、Visual Studio の Office ソリューションで提供される拡張 Word オブジェクトを使用して実行する: [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)。  
+-   Using extended Word objects provided by Office solutions in Visual Studio to perform tasks that are not possible by using the Word object model (for example, hosting managed controls on documents and binding Word controls to data by using the Windows Forms data binding model): [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md).  
   
--   Word 用のドキュメント レベルのカスタマイズのビルドとデバッグ: [Office ソリューションのビルド](../vsto/building-office-solutions.md)。  
+-   Building and debugging document-level customizations for Word: [Building Office Solutions](../vsto/building-office-solutions.md).  
   
--   Word 用のドキュメント レベルのカスタマイズの配置: [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)。  
+-   Deploying document-level customizations for Word: [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
   
-## 参照  
- [Office ソリューションの開発の概要 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
- [Word ソリューション](../vsto/word-solutions.md)   
- [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   
- [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
- [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
- [Office UI のカスタマイズ](../vsto/office-ui-customization.md)   
- [Office ソリューションのビルド](../vsto/building-office-solutions.md)   
- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
- [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)  
+## <a name="see-also"></a>See Also  
+ [Office Solutions Development Overview &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
+ [Word Solutions](../vsto/word-solutions.md)   
+ [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)   
+ [Word Object Model Overview](../vsto/word-object-model-overview.md)   
+ [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md)   
+ [Office UI Customization](../vsto/office-ui-customization.md)   
+ [Building Office Solutions](../vsto/building-office-solutions.md)   
+ [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)   
+ [Office Project Templates Overview](../vsto/office-project-templates-overview.md)  
   
   

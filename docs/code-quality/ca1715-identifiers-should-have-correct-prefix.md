@@ -1,81 +1,95 @@
 ---
-title: "CA1715: 識別子は正しいプレフィックスを含んでいなければなりません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1715"
-  - "IdentifiersShouldHaveCorrectPrefix"
-helpviewer_keywords: 
-  - "IdentifiersShouldHaveCorrectPrefix"
-  - "CA1715"
+title: 'CA1715: Identifiers should have correct prefix | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1715
+- IdentifiersShouldHaveCorrectPrefix
+helpviewer_keywords:
+- IdentifiersShouldHaveCorrectPrefix
+- CA1715
 ms.assetid: cf45f8df-6855-4cb6-a4e2-7cfed714cf2f
 caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 30
----
-# CA1715: 識別子は正しいプレフィックスを含んでいなければなりません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 79edfba42de7f89dd2827c3ce03a3a0194543361
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Identifiers should have correct prefix
 |||  
 |-|-|  
 |TypeName|IdentifiersShouldHaveCorrectPrefix|  
 |CheckId|CA1715|  
-|分類|Microsoft.Naming|  
-|互換性に影響する変更点|あり – インターフェイスで発生した場合。<br /><br /> なし – ジェネリック型パラメーターで発生した場合。|  
+|Category|Microsoft.Naming|  
+|Breaking Change|Breaking - when fired on interfaces.<br /><br /> Non-breaking - when raised on generic type parameters.|  
   
-## 原因  
- 外部から参照できるインターフェイスの名前が大文字の "I" から始まっていません。  
+## <a name="cause"></a>Cause  
+ The name of an externally visible interface does not start with an uppercase 'I'.  
   
- または  
+ -or-  
   
- 外部から参照できる型またはメソッドのジェネリック型パラメーターの名前が、大文字の "T" から始まっていません。  
+ The name of a generic type parameter on an externally visible type or method does not start with an uppercase 'T'.  
   
-## 規則の説明  
- 規則では、特定のプログラミング要素名は、固有のプレフィックスで始まります。  
+## <a name="rule-description"></a>Rule Description  
+ By convention, the names of certain programming elements start with a specific prefix.  
   
- インターフェイス名は、大文字の "I" で始め、別の英大文字を続けます。  この規則では、"MyInterface" と "IsolatedInterface" などのインターフェイス名の場合に違反をレポートします。  
+ Interface names should start with an uppercase 'I' followed by another uppercase letter. This rule reports violations for interface names such as 'MyInterface' and 'IsolatedInterface'.  
   
- ジェネリック型パラメーターの名前は、大文字の "T" で始め、必要に応じて別の英大文字を続けます。  この規則では、"V" や "Type" などのジェネリック型パラメーター名の場合に違反をレポートします。  
+ Generic type parameter names should start with an uppercase 'T' and optionally may be followed by another uppercase letter. This rule reports violations for generic type parameter names such as 'V' and 'Type'.  
   
- 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。  これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージ コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。  
+ Naming conventions provide a common look for libraries that target the common language runtime. This reduces the learning curve that is required for new software libraries, and increases customer confidence that the library was developed by someone who has expertise in developing managed code.  
   
-## 違反の修正方法  
- 識別子のプレフィックスが正しくなるように名前を変更します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ Rename the identifier so that it is correctly prefixed.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 使用例  
- **次の例に、不適切な名前のインターフェイスを示します。**  
+## <a name="example"></a>Example  
+ **The following example shows an incorrectly named interface.**  
   
- [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_1.cpp)]
- [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_1.vb)]
- [!code-cs[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_1.cs)]  
+ [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_1.cpp)] [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_1.vb)] [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_1.cs)]  
   
-## 使用例  
- **インターフェイス名の先頭に "T" を付けることによって上記の違反を修正するコード例を次に示します。**  
+## <a name="example"></a>Example  
+ **The following example fixes the previous violation by prefixing the interface with 'I'.**  
   
- [!code-cs[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_2.cs)]
- [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_2.cpp)]
- [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_2.vb)]  
+ [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_2.cs)] [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_2.cpp)] [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_2.vb)]  
   
-## 使用例  
- **次の例に、不適切な名前のジェネリック型パラメーターを示します。**  
+## <a name="example"></a>Example  
+ **The following example shows an incorrectly named generic type parameter.**  
   
- [!CODE [FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1)]  
+ [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_3.cpp)] [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_3.vb)] [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_3.cs)]  
   
-## 使用例  
- **ジェネリック型パラメーター名の先頭に "T" を付けることによって上記の違反を修正するコード例を次に示します。**  
+## <a name="example"></a>Example  
+ **The following example fixes the previous violation by prefixing the generic type parameter with 'T'.**  
   
- [!CODE [FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1)]  
+ [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_4.cpp)] [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_4.cs)] [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_4.vb)]  
   
-## 関連規則  
- [CA1722: 識別子は不適切なプレフィックスを含むことはできません。](../code-quality/ca1722-identifiers-should-not-have-incorrect-prefix.md)
+## <a name="related-rules"></a>Related Rules  
+ [CA1722: Identifiers should not have incorrect prefix](../code-quality/ca1722-identifiers-should-not-have-incorrect-prefix.md)

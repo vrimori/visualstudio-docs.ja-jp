@@ -1,314 +1,328 @@
 ---
-title: "チュートリアル: 並行アプリケーションのデバッグ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "デバッガー, 並列タスクのチュートリアル"
-  - "デバッグ, 並行アプリケーション"
-  - "並行アプリケーション, デバッグ [C#]"
-  - "並行アプリケーション, デバッグ [C++]"
-  - "並行アプリケーション, デバッグ [Visual Basic]"
-  - "[並列スタック] ツール ウィンドウ"
-  - "[並列タスク] ツール ウィンドウ"
+title: 'Walkthrough: Debugging a Parallel Application | Microsoft Docs'
+ms.custom: H1HackMay2017
+ms.date: 05/18/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugger, parallel tasks walkthrough
+- parallel stacks toolwindow
+- parallel tasks toolwindow
+- parallel applications, debugging [C++]
+- debugging, parallel applications
+- parallel applications, debugging [Visual Basic]
+- parallel applications, debugging [C#]
 ms.assetid: 2820ac4c-c893-4d87-8c62-83981d561493
 caps.latest.revision: 28
-caps.handback.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# チュートリアル: 並行アプリケーションのデバッグ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 70301ddf35e675d2d187346f4c0e77f034576c14
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
-このチュートリアルでは、**\[並列タスク\]** ウィンドウと **\[並列スタック\]** ウィンドウを使用して並行アプリケーションをデバッグする方法について説明します。  これらのウィンドウは、[Task Parallel Library \(TPL\)](../Topic/Task%20Parallel%20Library%20\(TPL\).md)または[同時実行ランタイム](/visual-cpp/parallel/concrt/concurrency-runtime)を使用するコードの実行時の動作の把握や確認に役立ちます。  このチュートリアルには、ブレークポイントが組み込まれたサンプル コードが用意されています。  ブレークポイントでコードの実行が中断されたら、**\[並列タスク\]** ウィンドウと **\[並列スタック\]** ウィンドウを使用してコードを調べます。  
+---
+# <a name="walkthrough-debugging-a-parallel-application-in-visual-studio"></a>Walkthrough: Debugging a Parallel Application in Visual Studio
+This walkthrough shows how to use the **Parallel Tasks** and **Parallel Stacks** windows to debug a parallel application. These windows help you understand and verify the runtime behavior of code that uses the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) or the [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime). This walkthrough provides sample code that has built-in breakpoints. After the code breaks, the walkthrough shows how to use the **Parallel Tasks** and **Parallel Stacks** windows to examine it.  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough teaches these tasks:  
   
--   すべてのスレッドの呼び出し履歴を 1 つのビューに表示する方法  
+-   How to view the call stacks of all threads in one view.  
   
--   アプリケーションで作成された `System.Threading.Tasks.Task` インスタンスの一覧を表示する方法  
+-   How to view the list of `System.Threading.Tasks.Task` instances that are created in your application.  
   
--   スレッドではなくタスクの実際の呼び出し履歴を表示する方法  
+-   How to view the real call stacks of tasks instead of threads.  
   
--   **\[並列タスク\]** ウィンドウや **\[並列スタック\]** ウィンドウからコードに移動する方法  
+-   How to navigate to code from the **Parallel Tasks** and **Parallel Stacks** windows.  
   
--   グループ化やズームなどの機能を使用してウィンドウの表示を調整する方法  
+-   How the windows cope with scale through grouping, zooming, and other related features.  
   
-## 必須コンポーネント  
- このチュートリアルは、**\[マイ コードのみ\]** が有効になっていることを前提としています。  **\[ツール\]** メニューの **\[オプション\]** をクリックし、**\[デバッグ\]** ノードを展開して **\[全般\]** を選択し、**\['マイ コードのみ' 設定を有効にする\]** を選択してください。  この機能が設定されていなくてもこのチュートリアルを使用できますが、図と異なる結果になる可能性があります。  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough assumes that **Just My Code** is enabled (it is enabled by default in more recent versions of Visual Studio). On the **Tools** menu, click **Options**, expand the **Debugging** node, select **General**, and then select **Enable Just My Code (Managed only)**. If you do not set this feature, you can still use this walkthrough, but your results may differ from the illustrations.  
   
-## C\# のサンプル  
- C\# のサンプルを使用する場合は、外部コードが非表示になっていることも前提になります。  外部コードの表示と非表示を切り替えるには、**\[呼び出し履歴\]** ウィンドウの **\[名前\]** テーブル ヘッダーを右クリックし、**\[外部コードの表示\]** をオンまたはオフにします。  この機能が設定されていなくてもこのチュートリアルを使用できますが、図と異なる結果になる可能性があります。  
+## <a name="c-sample"></a>C# Sample  
+ If you use the C# sample, this walkthrough also assumes that External Code is hidden. To toggle whether external code is displayed, right-click the **Name** table header of the **Call Stack** window, and then select or clear **Show External Code**. If you do not set this feature, you can still use this walkthrough, but your results may differ from the illustrations.  
   
-## C\+\+ のサンプル  
- C\+\+ のサンプルを使用する場合は、このトピックの外部コードに関する記述は無視してかまいません。  外部コードに関する記述が当てはまるのは C\# のサンプルだけです。  
+## <a name="c-sample"></a>C++ Sample  
+ If you use the C++ sample, you can ignore references to External Code in this topic. External Code only applies to the C# sample.  
   
-## 図  
- このトピックの図は、C\# のサンプルを実行するクアッド コア コンピューターで記録されたものです。  他の構成を使用してこのチュートリアルを実行することもできますが、画面の表示が図と同じにならない場合があります。  
+## <a name="illustrations"></a>Illustrations  
+ The illustrations in this topic recorded on a quad core computer running the C# sample. Although you can use other configurations to complete this walkthrough, the illustrations may differ from what is displayed on your computer.  
   
-## サンプル プロジェクトの作成  
- このチュートリアルのサンプル コードは、何もしないアプリケーションのコードです。  ここでの目的は、ツール ウィンドウを使用して並行アプリケーションをデバッグする方法を理解することだけです。  
+## <a name="creating-the-sample-project"></a>Creating the Sample Project  
+ The sample code in this walkthrough is for an application that does nothing. The goal is just to understand how to use the tool windows to debug a parallel application.  
   
-#### サンプル プロジェクトを作成するには  
+#### <a name="to-create-the-sample-project"></a>To create the sample project  
   
-1.  Visual Studio で、**\[ファイル\]** メニューの **\[新規作成\]** をポイントし、**\[プロジェクト\]** をクリックします。  
+1.  In Visual Studio, on the **File** menu, point to **New** and then click **Project**.  
   
-2.  **\[インストールされたテンプレート\]** ペインで、Visual C\#、Visual Basic、または Visual C\+\+ を選択します。  マネージ言語については、フレームワークのボックスに [!INCLUDE[net_v40_short](../debugger/includes/net_v40_short_md.md)] が表示されていることを確認します。  
+2.  In the **Installed Templates** pane, select either Visual C#, Visual Basic, or Visual C++. For the managed languages, ensure that [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] is displayed in the framework box.  
   
-3.  **\[コンソール アプリケーション\]** を選択し、**\[OK\]** をクリックします。  既定のデバッグ構成をそのまま使用します。  
+3.  Select **Console Application** and then click **OK**. Remain in Debug configuration, which is the default.  
   
-4.  プロジェクトで .cpp、.cs、または .vb コード ファイルを開きます。  その内容を削除して、空のコード ファイルを作成します。  
+4.  Open the .cpp, .cs, or .vb code file in the project. Delete its contents to create an empty code file.  
   
-5.  空のコード ファイルに、選択した言語の次のコードを貼り付けます。  
+5.  Paste the following code for your chosen language into the empty code file.  
   
- [!code-cs[Debugger#1](../debugger/codesnippet/CSharp/walkthrough-debugging-a-parallel-application_1.cs)]
- [!code-cpp[Debugger#1](../debugger/codesnippet/CPP/walkthrough-debugging-a-parallel-application_1.cpp)]
- [!code-vb[Debugger#1](../debugger/codesnippet/VisualBasic/walkthrough-debugging-a-parallel-application_1.vb)]  
+ [!code-csharp[Debugger#1](../debugger/codesnippet/CSharp/walkthrough-debugging-a-parallel-application_1.cs)] [!code-cpp[Debugger#1](../debugger/codesnippet/CPP/walkthrough-debugging-a-parallel-application_1.cpp)] [!code-vb[Debugger#1](../debugger/codesnippet/VisualBasic/walkthrough-debugging-a-parallel-application_1.vb)]  
   
-1.  **\[ファイル\]** メニューの **\[すべてを保存\]** をクリックします。  
+1.  On the **File** menu, click **Save All**.  
   
-2.  **\[ビルド\]** メニューの **\[ソリューションのリビルド\]** をクリックします。  
+2.  On the **Build** menu, click **Rebuild Solution**.  
   
-     このコードには、`Debugger.Break` の呼び出しが 4 つあります \(C\+\+ サンプルの場合は `DebugBreak`\)。したがって、ブレークポイントを挿入する必要はありません。そのまま実行するだけで、デバッガーでアプリケーションの実行が 4 回中断されます。  
+     Notice that there are four calls to `Debugger.Break` (`DebugBreak` in the C++ sample) Therefore, you do not have to insert breakpoints; just running the application will cause it to break in the debugger up to four times.  
   
-## \[並列スタック\] ウィンドウの使用: スレッド ビュー  
- **\[デバッグ\]** メニューの **\[デバッグ開始\]** をクリックします。  1 つ目のブレークポイントにヒットするまで待ちます。  
+## <a name="using-the-parallel-stacks-window-threads-view"></a>Using the Parallel Stacks Window: Threads View  
+ On the **Debug** menu, click **Start Debugging**. Wait for the first breakpoint to be hit.  
   
-#### 1 つのスレッドの呼び出し履歴を表示するには  
+#### <a name="to-view-the-call-stack-of-a-single-thread"></a>To view the call stack of a single thread  
   
-1.  **\[デバッグ\]** メニューの **\[ウィンドウ\]** をポイントし、**\[スレッド\]** をクリックします。  **\[スレッド\]** ウィンドウを Visual Studio の下部にドッキングします。  
+1.  On the **Debug** menu, point to **Windows** and then click **Threads**. Dock the **Threads** window at the bottom of Visual Studio.  
   
-2.  **\[デバッグ\]** メニューの **\[ウィンドウ\]** をポイントし、**\[呼び出し履歴\]** をクリックします。  **\[呼び出し履歴\]** ウィンドウを Visual Studio の下部にドッキングします。  
+2.  On the **Debug** menu, point to **Windows** and then click **Call Stack**. Dock the **Call Stack** window at the bottom Visual Studio.  
   
-3.  **\[スレッド\]** ウィンドウのスレッドをダブルクリックして、そのスレッドを現在のスレッドにします。  現在のスレッドには黄色の矢印が表示されます。  現在のスレッドを変更すると、そのスレッドの呼び出し履歴が **\[呼び出し履歴\]** ウィンドウに表示されます。  
+3.  Double-click a thread in the **Threads** window to make it current. Current threads have a yellow arrow. When you change the current thread, its call stack is displayed in the **Call Stack** window.  
   
-#### \[並列スタック\] ウィンドウを調べるには  
+#### <a name="to-examine-the-parallel-stacks-window"></a>To examine the Parallel Stacks window  
   
-1.  **\[デバッグ\]** メニューの **\[ウィンドウ\]** をポイントし、**\[並列スタック\]** をクリックします。  左上隅のボックスで **\[スレッド\]** が選択されていることを確認します。  
+1.  On the **Debug** menu, point to **Windows** and then click **Parallel Stacks**. Make sure that **Threads** is selected in the box at the upper-left corner.  
   
-     **\[並列スタック\]** ウィンドウを使用すると、複数の呼び出し履歴を 1 つのビューに同時に表示できます。  次の図では、**\[呼び出し履歴\]** ウィンドウの上に **\[並列スタック\]** ウィンドウが表示されています。  
+     By using the **Parallel Stacks** window, you can view multiple call stacks at the same time in one view. The following illustration shows the **Parallel Stacks** window above the **Call Stack** window.  
   
-     ![並列スタック ウィンドウのスレッド ビュー](../debugger/media/pdb_walkthrough_1.png "PDB\_Walkthrough\_1")  
+     ![Threads view in Parallel Stacks window](../debugger/media/pdb_walkthrough_1.png "PDB_Walkthrough_1")  
   
-     一方のボックスにはメイン スレッドの呼び出し履歴が表示され、もう一方のボックスには他の 4 つのスレッドの呼び出し履歴がグループ化されて表示されています。  4 つのスレッドがグループ化されているのは、これらのスレッドのスタック フレームが同じメソッド コンテキストを共有している \(`A`、`B`、`C` という同じメソッドにある\) からです。  同じボックスを共有しているスレッドのスレッド ID と名前を表示するには、ヘッダー \(**"4 個のスレッド"**\) をポイントします。  次の図のように、現在のスレッドが太字で表示されます。  
+     The call stack of the Main thread appears in one box and the call stacks for the other four threads are grouped in another box. Four threads are grouped together because their stack frames share the same method contexts; that is, they are in the same methods: `A`, `B`, and `C`. To view the thread IDs and names of the threads that share the same box, hover over the header (**4 Threads**). The current thread is displayed in bold, as shown in the following illustration.  
   
-     ![スレッド ID および名前を表示するツールヒント](~/debugger/media/pdb_walkthrough_1a.png "PDB\_Walkthrough\_1A")  
+     ![Tooltip that shows thread IDs and names](../debugger/media/pdb_walkthrough_1a.png "PDB_Walkthrough_1A")  
   
-     黄色の矢印は、現在のスレッドのアクティブなスタック フレームを示します。  そこをポイントすると、詳細情報が表示されます。  
+     The yellow arrow indicates the active stack frame of the current thread. To get more information, hover over it  
   
-     ![アクティブ スタック フレームのツールヒント](../debugger/media/pdb_walkthrough_1b.png "PDB\_Walkthrough\_1B")  
+     ![Tooltip on active stack frame](../debugger/media/pdb_walkthrough_1b.png "PDB_Walkthrough_1B")  
   
-     表示するスタック フレームの詳細情報 \(**\[モジュール名\]**、**\[パラメーターの型\]**、**\[パラメーター名\]**、**\[パラメーター値\]**、**\[行番号\]**、および **\[バイト オフセット\]** を設定するには、**\[呼び出し履歴\]** ウィンドウを右クリックします。  
+     You can set how much detail to show for the stack frames (**Module Names**, **Parameter Types**, **Parameter Names**, **Parameter Values**, **Line Numbers** and **Byte Offsets**) by right-clicking in the **Call Stack** window.  
   
-     ボックスを囲む青の強調表示は、そのボックスに現在のスレッドが含まれていることを示します。  現在のスレッドは、ツールヒントで太字のスタック フレームによっても示されます。  \[スレッド\] ウィンドウでメイン スレッドをダブルクリックすると、それに応じて **\[並列スタック\]** ウィンドウの青の強調表示が移動します。  
+     A blue highlight around a box indicates that the current thread is part of that box. The current thread is also indicated by the bold stack frame in the tooltip. If you double-click the Main thread in the Threads window, you can observe that the blue highlight in the **Parallel Stacks** window moves accordingly.  
   
-     ![並列スタック ウィンドウの強調表示されたメイン スレッド](~/debugger/media/pdb_walkthrough_1c.png "PDB\_Walkthrough\_1C")  
+     ![Highlighted main thread in Parallel Stacks window](../debugger/media/pdb_walkthrough_1c.png "PDB_Walkthrough_1C")  
   
-#### 2 つ目のブレークポイントまで実行を再開するには  
+#### <a name="to-resume-execution-until-the-second-breakpoint"></a>To resume execution until the second breakpoint  
   
-1.  2 つ目のブレークポイントにヒットするまで実行を再開するには、**\[デバッグ\]** メニューの **\[続行\]** をクリックします。  次の図は、2 つ目のブレークポイントのスレッド ツリーを示しています。  
+1.  To resume execution until the second breakpoint is hit, on the **Debug** menu, click **Continue**. The following illustration shows the thread tree at the second breakpoint.  
   
-     ![多数の分岐を表示する並列スタック ウィンドウ](../debugger/media/pdb_walkthrough_2.png "PDB\_Walkthrough\_2")  
+     ![Parallel Stacks window that shows many branches](../debugger/media/pdb_walkthrough_2.png "PDB_Walkthrough_2")  
   
-     1 つ目のブレークポイントでは、4 つのスレッドのすべてが、S.A メソッド、S.B メソッド、S.C メソッドの順に進んでいました。  その情報もまだ **\[並列スタック\]** ウィンドウに表示されていますが、4 つのスレッドはさらに先に進んでいます。  そのうちの 1 つは、S.D、S.E の順に進んでいます。  また別のスレッドは、S.F、S.G、S.H の順に進んでいます。  残りの 2 つは、S.I、S.J の順に進み、そこから一方は S.K に進み、もう一方は非ユーザー外部コードに進んでいます。  
+     At the first breakpoint, four threads all went from S.A to S.B to S.C methods. That information is still visible in the **Parallel Stacks** window, but the four threads have progressed further. One of them continued to S.D and then S.E. Another continued to S.F, S.G, and S.H. Two others continued to S.I and S.J, and from there one of them went to S.K and the other continued to non-user External Code.  
   
-     **"1 個のスレッド"**、**"2 個のスレッド"** などのボックス ヘッダーをポイントすると、スレッドのスレッド ID が表示されます。  スタック フレームをポイントすると、スレッド ID とフレームのその他の詳細が表示されます。  青の強調表示は現在のスレッドを示し、黄色の矢印は現在のスレッドのアクティブなスタック フレームを示します。  
+     You can hover over the box header, for example, **1 Thread** or **2 Threads**, to see the thread IDs of the threads. You can hover over stack frames to see thread IDs plus other frame details. The blue highlight indicates the current thread and the yellow arrow indicates the active stack frame of the current thread.  
   
-     より糸のアイコン \(青と赤の波線が重なったアイコン\) は、現在のスレッドではないスレッドのアクティブなスタック フレームを示します。  **\[呼び出し履歴\]** ウィンドウで S.B をダブルクリックしてフレームを切り替えます。  **\[並列スタック\]** ウィンドウで、現在のスレッドの現在のスタック フレームが緑色の曲線矢印のアイコンによって示されます。  
+     The cloth-threads icon (overlapping blue and red waved lines) indicate the active stack frames of the noncurrent threads. In the **Call Stack** window, double-click S.B to switch frames. The **Parallel Stacks** window indicates the current stack frame of the current thread by using a green curved arrow icon.  
   
-     **\[スレッド\]** ウィンドウでスレッドを切り替えて、**\[並列スタック\]** ウィンドウのビューが更新されることを確認します。  
+     In the **Threads** window, switch between threads and observe that the view in the **Parallel Stacks** window is updated.  
   
-     別のスレッドに切り替えたり、別のスレッドの別のフレームに切り替えたりするには、**\[並列スタック\]** ウィンドウのショートカット メニューを使用することもできます。  たとえば、S.J を右クリックし、**\[フレームに切り替え\]** をポイントして、いずれかのコマンドをクリックします。  
+     You can switch to another thread, or to another frame of another thread, by using the shortcut menu in the **Parallel Stacks** window. For example, right-click S.J, point to **Switch To Frame**, and then click a command.  
   
-     ![並列スタックの実行パス](../debugger/media/pdb_walkthrough_2b.png "PDB\_Walkthrough\_2B")  
+     ![Parallel Stacks Path of Execution](../debugger/media/pdb_walkthrough_2b.png "PDB_Walkthrough_2B")  
   
-     S.C を右クリックし、**\[フレームに切り替え\]** をポイントします。  チェック マークが付いているコマンドがあります。これは、現在のスレッドのスタック フレームを示します。  その同じスレッドのフレームに切り替えることも \(緑色の矢印のみが移動します\)、他のスレッドに切り替えることもできます \(青の強調表示も移動します\)。  次の図は、このサブメニューを示しています。  
+     Right-click S.C and point to **Switch To Frame**. One of the commands has a check mark that indicates the stack frame of the current thread. You can switch to that frame of the same thread (just the green arrow will move) or you can switch to the other thread (the blue highlight will also move). The following illustration shows the submenu.  
   
-     ![J が最新の際に C に 2 つのオプションがあるスタック メニュー](../debugger/media/pdb_walkthrough_3.png "PDB\_Walkthrough\_3")  
+     ![Stacks menu with 2 options on C while J is current](../debugger/media/pdb_walkthrough_3.png "PDB_Walkthrough_3")  
   
-     メソッド コンテキストに関連付けられているスタック フレームが 1 つしかない場合は、ボックス ヘッダーに **"1 個のスレッド"** と表示されます。この場合は、メソッド コンテキストをダブルクリックするだけでそのフレームに切り替えることができます。  複数のフレームが関連付けられているメソッド コンテキストをダブルクリックすると、自動的にメニューがポップアップ表示されます。  メソッド コンテキストをポイントすると右側に表示される黒い三角形を  クリックして、このショートカット メニューを表示することもできます。  
+     When a method context is associated with just one stack frame, the box header displays **1 Thread** and you can switch to it by double-clicking. If you double-click a method context that has more than 1 frame associated with it, then the menu automatically pops up. As you hover over the method contexts, notice the black triangle at the right. Clicking that triangle also displays the shortcut menu.  
   
-     多数のスレッドを持つ大規模なアプリケーションでは、一部のスレッドのみに焦点を絞ることもできます。  **\[並列スタック\]** ウィンドウでは、フラグが設定されたスレッドの呼び出し履歴のみを表示することができます。  ツール バーで、リスト ボックスの横にある **\[フラグが設定されたもののみを表示\]** ボタンをクリックします。  
+     For large applications that have many threads, you may want to focus on just a subset of threads. The **Parallel Stacks** window can display call stacks only for flagged threads. On the toolbar, click the **Show Only Flagged** button next to the list box.  
   
-     ![空のパラレル ウィンドウおよびツールヒント](../debugger/media/pdb_walkthrough_3a.png "PDB\_Walkthrough\_3A")  
+     ![Empty Parallel Stacks window and tooltip](../debugger/media/pdb_walkthrough_3a.png "PDB_Walkthrough_3A")  
   
-     次に、**\[スレッド\]** ウィンドウでスレッドに 1 つずつフラグを設定し、それらの呼び出し履歴が **\[並列スタック\]** ウィンドウに表示されることを確認します。  スレッドにフラグを設定するには、ショートカット メニューを使用するか、スレッドの最初のセルを使用します。  ツール バーの **\[フラグが設定されたもののみを表示\]** ボタンをもう一度クリックして、すべてのスレッドを表示します。  
+     Next, in the **Threads** window, flag threads one by one to see how their call stacks appear in the **Parallel Stacks** window. To flag threads, use the shortcut menu or the first cell of a thread. Click the **Show Only Flagged** toolbar button again to show all threads.  
   
-#### 3 つ目のブレークポイントまで実行を再開するには  
+#### <a name="to-resume-execution-until-the-third-breakpoint"></a>To resume execution until the third breakpoint  
   
-1.  3 つ目のブレークポイントにヒットするまで実行を再開するには、**\[デバッグ\]** メニューの **\[続行\]** をクリックします。  
+1.  To resume execution until the third breakpoint is hit, on the **Debug** menu, click **Continue**.  
   
-     同じメソッドに複数のスレッドがあるが、そのメソッドが呼び出し履歴の先頭にない場合、そのメソッドは複数のボックスに表示されます。  たとえば、現在のブレークポイントの S.L がこれに当たります。このメソッドは 3 つのスレッドを持ち、3 つのボックスに表示されています。  S.L をダブルクリックします。  
+     When multiple threads are in the same method but the method was not at the beginning of the call stack, the method appears in different boxes. An example at the current breakpoint is S.L, which has three threads in it and appears in three boxes. Double-click S.L.  
   
-     ![並列スタック ウィンドウの実行パス](../debugger/media/pdb_walkthrough_3b.png "PDB\_Walkthrough\_3B")  
+     ![Execution path in Parallel Stacks window](../debugger/media/pdb_walkthrough_3b.png "PDB_Walkthrough_3B")  
   
-     他の 2 つのボックスで S.L が太字になっていることに注目してください。これにより、このメソッドが他にどこにあるのかがわかります。  S.L がどのフレームから呼び出され、どのフレームを呼び出すのかを確認するには、ツール バーの **\[メソッド ビューの切り替え\]** ボタンをクリックします。  次の図は、**\[並列スタック\]** ウィンドウのメソッド ビューを示しています。  
+     Notice that S.L is bold in the other two boxes so that you can see where else it appears. If you want to see which frames call into S.L and which frames it calls, click the **Toggle Method View** button on the toolbar. The following illustration shows the method view of The **Parallel Stacks** window.  
   
-     ![並列スタック ウィンドウのメソッド ビュー](../debugger/media/pdw_walkthrough_4.png "PDW\_Walkthrough\_4")  
+     ![Method view in Parallel Stacks window](../debugger/media/pdw_walkthrough_4.png "PDW_Walkthrough_4")  
   
-     選択したメソッドを中心とする図が表示されます。選択したメソッドが固有のボックスに入れられて、ビューの中心に配置されます。  その上下には、呼び出し先と呼び出し元が表示されます。  もう一度 **\[メソッド ビューの切り替え\]** ボタンをクリックして、このモードを終了します。  
+     Notice how the diagram pivoted on the selected method and positioned it in its own box in the middle of the view. The callees and callers appear on the top and bottom. Click the **Toggle Method View** button again to leave this mode.  
   
-     **\[並列スタック\]** ウィンドウのショートカット メニューには、次のような項目も含まれています。  
+     The shortcut menu of the **Parallel Stacks** window also has the following other items.  
   
-    -   **\[16 進数で表示\]**: ツールヒントの数値を 10 進数または 16 進数に切り替えます。  
+    -   **Hexadecimal Display** toggles the numbers in the tooltips between decimal and hexadecimal.  
   
-    -   **\[シンボル読み込み情報\]** および **\[シンボルの設定\]**: それぞれのダイアログ ボックスを開きます。  
+    -   **Symbol Load Information** and **Symbol Settings** open the respective dialog boxes.  
   
-    -   **\[ソース コードへ移動\]** および **\[逆アセンブルを表示\]**: エディターで、選択したメソッドに移動します。  
+    -   **Go To Source Code** and **Go To Disassembly** navigate in the editor to the selected method.  
   
-    -   **\[外部コードの表示\]**: ユーザー コード以外のものも含めてすべてのフレームを表示します。  この項目を選択し、図に追加のフレームが表示されることを確認してください \(シンボルがないために選択不可になっている可能性があります\)。  
+    -   **Show External Code** displays all the frames even if they are not in user code. Try it to see the diagram expand to accommodate the additional frames (which may be dimmed because you do not have symbols for them).  
   
-     大きな図がある場合は、次のブレークポイントにステップするときに、現在のスレッド \(最初にブレークポイントにヒットしたスレッド\) のアクティブなスタック フレームまでビューが自動的にスクロールするようにすることができます。  **\[並列スタック\]** ウィンドウで、ツール バーの **\[現在のスタック フレームに自動スクロール\]** ボタンがオンになっていることを確認します。  
+     When you have large diagrams and you step to the next breakpoint, you may want the view to auto scroll to the active stack frame of the current thread; that is, the thread that hit the breakpoint first. In the **Parallel Stacks** window, make sure that the **Auto Scroll to Current Stack Frame** button on the toolbar is on.  
   
-     ![並列スタック ウィンドウの自動スクロール](../debugger/media/pdb_walkthrough_4a.png "PDB\_Walkthrough\_4A")  
+     ![Autoscrolling in the Parallel Stacks window](../debugger/media/pdb_walkthrough_4a.png "PDB_Walkthrough_4A")  
   
-2.  次に進む前に、**\[並列スタック\]** ウィンドウを一番左の一番下までスクロールしておきます。  
+2.  Before you continue, in the **Parallel Stacks** window, scroll all the way to the left and all the way down.  
   
-#### 4 つ目のブレークポイントまで実行を再開するには  
+#### <a name="to-resume-execution-until-the-fourth-breakpoint"></a>To resume execution until the fourth breakpoint  
   
-1.  4 つ目のブレークポイントにヒットするまで実行を再開するには、**\[デバッグ\]** メニューの **\[続行\]** をクリックします。  
+1.  To resume execution until the fourth breakpoint is hit, on the **Debug** menu, click **Continue**.  
   
-     ビューが適切な位置まで自動的にスクロールすることに注目してください。  **\[スレッド\]** ウィンドウでスレッドを切り替えたり、**\[呼び出し履歴\]** ウィンドウでスタック フレームを切り替えたりして、ビューが常に適切なフレームまで自動的にスクロールすることを確認します。  さらに、**\[現在のツール フレームに自動スクロール\]** オプションをオフにして違いを確認します。  
+     Notice how the view autoscrolled into place. Switch threads in the **Threads** window or switch stack frames in the **Call Stack** window and notice how the view always autoscrolls to the correct frame. Turn off **Auto Scroll to Current Tool Frame** option and view the difference.  
   
-     **\[並列スタック\]** ウィンドウに大きな図がある場合は、**バード アイ ビュー** も便利です。  **バード アイ ビュー** を表示するには、次の図に示すように、ウィンドウの右下のスクロール バーの間にあるボタンをクリックします。  
+     The **Bird's Eye View** also helps with large diagrams in the **Parallel Stacks** window. You can see the **Bird's Eye View** by clicking the button between the scroll bars on the lower-right corner of the window, as shown in the following illustration.  
   
-     ![並列スタック ウィンドウの鳥瞰図](../debugger/media/pdb_walkthrough_5.png "PDB\_Walkthrough\_5")  
+     ![Bird's&#45;eye view in Parallel Stacks window](../debugger/media/pdb_walkthrough_5.png "PDB_Walkthrough_5")  
   
-     四角形の枠を移動することにより、図のさまざまな場所をすばやく表示できます。  
+     You can move the rectangle to quickly pan around the diagram.  
   
-     図を任意の方向に移動するには、図の空白の領域をクリックして目的の方向にドラッグすることもできます。  
+     Another way to move the diagram in any direction is to click a blank area of the diagram and drag it where you want it.  
   
-     図を拡大\/縮小するには、Ctrl キーを押しながらマウス ホイールを動かします。  または、ツール バーの \[ズーム\] ボタンをクリックしてズーム ツールを使用します。  
+     To zoom in and out of the diagram, press and hold CTRL while you move the mouse wheel. Alternatively, click the Zoom button on the toolbar and then use the Zoom tool.  
   
-     ![並列スタック ウィンドウの拡大&#47;縮小されたスタック](../debugger/media/pdb_walkthrough_5a.png "PDB\_Walkthrough\_5A")  
+     ![Zoomed stacks in Parallel Stacks window](../debugger/media/pdb_walkthrough_5a.png "PDB_Walkthrough_5A")  
   
-     スタックを下から上の方向ではなく上から下の方向で表示することもできます。**\[ツール\]** メニューの **\[オプション\]** をクリックし、**\[デバッグ\]** ノードのオプションをオンまたはオフにします。  
+     You can also view the stacks in a top-down direction instead of bottom-up, by clicking the **Tools** menu, clicking **Options**, and then select or clear the option under the **Debugging** node.  
   
-2.  次に進む前に、**\[デバッグ\]** メニューの **\[デバッグの停止\]** をクリックして実行を終了します。  
+2.  Before you continue, on the **Debug** menu, click **Stop Debugging** to end execution.  
   
-## \[並列タスク\] ウィンドウと、\[並列スタック\] ウィンドウのタスク ビューの使用  
- 先に進む前に前の手順を完了することをお勧めします。  
+## <a name="using-the-parallel-tasks-window-and-the-tasks-view-of-the-parallel-stacks-window"></a>Using the Parallel Tasks Window and the Tasks View of the Parallel Stacks window  
+ We recommended that you complete the earlier procedures before you continue.  
   
-#### 1 つ目のブレークポイントにヒットするまでアプリケーションの実行を再開するには  
+#### <a name="to-restart-the-application-until-the-first-breakpoint-is-hit"></a>To restart the application until the first breakpoint is hit  
   
-1.  **\[デバッグ\]** メニューの **\[デバッグ開始\]** をクリックし、1 つ目のブレークポイントにヒットするまで待ちます。  
+1.  On the **Debug** menu, click **Start Debugging** and wait for the first breakpoint to be hit.  
   
-2.  **\[デバッグ\]** メニューの **\[ウィンドウ\]** をポイントし、**\[スレッド\]** をクリックします。  **\[スレッド\]** ウィンドウを Visual Studio の下部にドッキングします。  
+2.  On the **Debug** menu, point to **Windows** and then click **Threads**. Dock the **Threads** window at the bottom of Visual Studio.  
   
-3.  **\[デバッグ\]** メニューの **\[ウィンドウ\]** をポイントし、**\[呼び出し履歴\]** をクリックします。  **\[呼び出し履歴\]** ウィンドウを Visual Studio の下部にドッキングします。  
+3.  On the **Debug** menu, point to **Windows** and click **Call Stack**. Dock the **Call Stack** window at the bottom Visual Studio.  
   
-4.  **\[スレッド\]** ウィンドウのスレッドをダブルクリックして、そのスレッドを現在のスレッドにします。  現在のスレッドには黄色の矢印が表示されます。  現在のスレッドを変更すると、他のウィンドウが更新されます。  次に、タスクについて調べます。  
+4.  Double-click a thread in the **Threads** window to makes it current. Current threads have the yellow arrow. When you change the current thread, the other windows are updated. Next, we will examine tasks.  
   
-5.  **\[デバッグ\]** メニューの **\[ウィンドウ\]** をポイントし、**\[並列タスク\]** をクリックします。  次の図は、**\[並列タスク\]** ウィンドウを示しています。  
+5.  On the **Debug** menu, point to **Windows** and then click **Parallel Tasks**. The following illustration shows the **Tasks** window.  
   
-     ![並列タスク ウィンドウの 4 つの実行中のタスク](~/debugger/media/pdw_walkthrough_6.png "PDW\_Walkthrough\_6")  
+     ![Four running tasks in Tasks window](../debugger/media/pdw_walkthrough_6.png "PDW_Walkthrough_6")  
   
-     実行中の各タスクについて、タスクの ID \(同名のプロパティから返されます\)、そのタスクを実行しているスレッドの ID と名前、およびタスクの場所 \(ここをポイントすると、ツールヒントに呼び出し履歴全体が表示されます\) が表示されます。  また、**\[タスク\]** 列には、そのタスクに渡されたメソッド \(開始点\) が表示されます。  
+     For each running Task, you can read its ID, which is returned by the same-named property, the ID and name of the thread that runs it, its location (hovering over that displays a tooltip that has the whole call stack). Also, under the **Task** column, you can see the method that was passed into the task; in other words, the starting point.  
   
-     この一覧は、任意の列で並べ替えることができます。  並べ替えグリフにより、並べ替えの列と方向が示されます。  列を左右にドラッグして列の順序を変更することもできます。  
+     You can sort any column. Notice the sort glyph that indicates the sort column and direction. You can also reorder the columns by dragging them left or right.  
   
-     黄色の矢印は現在のタスクを示します。  タスクを切り替えるには、タスクをダブルクリックするか、ショートカット メニューを使用します。  タスクを切り替えると、基になるスレッドが現在のスレッドになり、他のウィンドウが更新されます。  
+     The yellow arrow indicates the current task. You can switch tasks by double-clicking a task or by using the shortcut menu. When you switch tasks, the underlying thread becomes current and the other windows are updated.  
   
-     タスクを手動で切り替えると黄色の矢印が移動しますが、デバッガーが中断されたタスクは引き続き白の矢印によって示されます。  
+     When you manually switch from one task to another, the yellow arrow moves, but a white arrow still shows the task that caused the debugger to break.  
   
-#### 2 つ目のブレークポイントまで実行を再開するには  
+#### <a name="to-resume-execution-until-the-second-breakpoint"></a>To resume execution until the second breakpoint  
   
-1.  2 つ目のブレークポイントにヒットするまで実行を再開するには、**\[デバッグ\]** メニューの **\[続行\]** をクリックします。  
+1.  To resume execution until the second breakpoint is hit, on the **Debug** menu, click **Continue**.  
   
-     先ほどは、**\[状態\]** 列ですべてのタスクが "実行中" になっていましたが、現在は 2 つのタスクが "待機中" になっています。  タスクがブロックされるのにはさまざまな理由があります。  **\[状態\]** 列で待機中のタスクをポイントすると、タスクがブロックされている理由を確認できます。  たとえば、次の図では、タスク 3 はタスク 4 を待機しています。  
+     Previously, the **Status** column showed all tasks as Running, but now two of the tasks are Waiting. Tasks can be blocked for many different reasons. In the **Status** column, hover over a waiting task to learn why it is blocked. For example, in the following illustration, task 3 is waiting on task 4.  
   
-     ![並列タスク ウィンドウの 2 つの待機中のタスク](../debugger/media/pdb_walkthrough_7.png "PDB\_Walkthrough\_7")  
+     ![Two waiting tasks in Tasks window](../debugger/media/pdb_walkthrough_7.png "PDB_Walkthrough_7")  
   
-     一方、タスク 4 は、タスク 2 に割り当てられているスレッドが所有するモニターを待機しています。  
+     Task 4, in turn, is waiting on a monitor owned by the thread assigned to task 2.  
   
-     ![タスク ウィンドウの待機中のタスクとツールヒント](../debugger/media/pdb_walkthrough_7a.png "PDB\_Walkthrough\_7A")  
+     ![Waiting task and tooltip in Tasks window](../debugger/media/pdb_walkthrough_7a.png "PDB_Walkthrough_7A")  
   
-     **\[並列タスク\]** ウィンドウの最初の列のフラグをクリックすると、タスクにフラグを設定できます。  
+     You can flag a task by clicking the flag in the first column of the **Tasks** window.  
   
-     フラグを設定することにより、同じデバッグ セッションの異なるブレークポイントの間でタスクを追跡したり、**\[並列スタック\]** ウィンドウに呼び出し履歴を表示するタスクをフィルター選択したりすることができます。  
+     You can use flagging to track tasks between different breakpoints in the same debugging session or to filter for tasks whose call stacks are shown in the **Parallel Stacks** window.  
   
-     先ほど **\[並列スタック\]** ウィンドウを使用したときにはアプリケーションのスレッドを表示しましたが、  今度は **\[並列スタック\]** ウィンドウでアプリケーションのタスクを表示します。  そのためには、左上のボックスで **\[タスク\]** を選択します。  次の図は、タスク ビューを示しています。  
+     When you used the **Parallel Stacks** window earlier, you viewed the application threads. View the **Parallel Stacks** window again, but this time view the application tasks. Do this by selecting **Tasks** in the box on the upper left. The following illustration shows the Tasks View.  
   
-     ![並列スタック ウィンドウのスレッド ビュー](~/debugger/media/pdb_walkthrough_8.png "PDB\_Walkthrough\_8")  
+     ![Threads view in Parallel Stacks window](../debugger/media/pdb_walkthrough_8.png "PDB_Walkthrough_8")  
   
-     **\[並列スタック\]** ウィンドウのタスク ビューには、現在タスクを実行していないスレッドは表示されません。  タスクを実行するスレッドについても、タスクに関連しないスタック フレームはスタックの上下からフィルターで除外されます。  
+     Threads that are not currently executing tasks are not shown in the Tasks View of the **Parallel Stacks** window. Also, for threads that execute tasks, some of the stack frames that are not relevant to tasks are filtered from the top and bottom of the stack.  
   
-     再び **\[並列タスク\]** ウィンドウを表示します。  任意の列ヘッダーを右クリックして、その列のショートカット メニューを表示します。  
+     View the **Tasks** window again. Right-click any column header to see a shortcut menu for the column.  
   
-     ![並列タスク ウィンドウのショートカット ビュー メニュー](../debugger/media/pdb_walkthrough_8a.png "PDB\_Walkthrough\_8A")  
+     ![Shortcut view menu in Tasks window](../debugger/media/pdb_walkthrough_8a.png "PDB_Walkthrough_8A")  
   
-     ショートカット メニューを使用して、列を追加したり削除したりすることができます。  たとえば、\[AppDomain\] 列は選択されていないため、一覧に表示されていません。  **\[Parent\]** をクリックします。  **\[Parent\]** 列が表示されますが、4 つのタスクのいずれにもこの列の値はありません。  
+     You can use the shortcut menu to add or remove columns. For example, the AppDomain column is not selected; therefore, it is not displayed in the list. Click **Parent**. The **Parent** column appears without values for any of the four tasks.  
   
-#### 3 つ目のブレークポイントまで実行を再開するには  
+#### <a name="to-resume-execution-until-the-third-breakpoint"></a>To resume execution until the third breakpoint  
   
-1.  3 つ目のブレークポイントにヒットするまで実行を再開するには、**\[デバッグ\]** メニューの **\[続行\]** をクリックします。  
+1.  To resume execution until the third breakpoint is hit, on the **Debug** menu, click **Continue**.  
   
-     新しいタスク \(タスク 5\) が実行中になり、タスク 4 は待機中になっています。  **\[状態\]** 列でこの待機中のタスクをポイントすると、理由が表示されます。  **\[Parent\]** 列を見ると、タスク 4 はタスク 5 の親であることがわかります。  
+     A new task, task 5, is now running and task 4 is now waiting. You can see why by hovering over the waiting task in the **Status** window. In the **Parent** column, notice that task 4 is the parent of task 5.  
   
-     この親子関係をわかりやすく表示するために、**\[Parent\]** 列の列ヘッダーを右クリックし、**\[親子ビュー\]** をクリックします。  次の図のような画面が表示されます。  
+     To better visualize the parent-child relationship, right-click the **Parent** column header and then click **Parent Child View**. You should see the following illustration.  
   
-     ![並列タスク ウィンドウの親子ビュー](../debugger/media/pdb_walkthrough_9.png "PDB\_Walkthrough\_9")  
+     ![Parent&#45;child view in Tasks window](../debugger/media/pdb_walkthrough_9.png "PDB_Walkthrough_9")  
   
-     タスク 4 とタスク 5 が同じスレッドで実行されていることに注目してください。  この情報は、**\[スレッド\]** ウィンドウには表示されません。この情報を表示できるのも、**\[並列タスク\]** ウィンドウの利点の 1 つです。  この情報を確認するために、**\[並列スタック\]** ウィンドウを表示します。  ビューが **\[タスク\]** になっていることを確認します。  タスク 4 とタスク 5 を見つけるには、**\[並列タスク\]** ウィンドウでそれらをダブルクリックします。  これにより、**\[並列スタック\]** ウィンドウの青の強調表示が更新されます。  **\[並列スタック\]** ウィンドウでツールヒントを調べてタスク 4 とタスク 5 を見つけることもできます。  
+     Notice that task 4 and task 5 are running on the same thread. This information is not displayed in the **Threads** window; seeing it here is another benefit of the **Tasks** window. To confirm this, view the **Parallel Stacks** window. Make sure that you are viewing **Tasks**. Locate tasks 4 and 5 by double-clicking them in the **Tasks** window. When you do, the blue highlight in the **Parallel Stacks** window is updated. You can also locate tasks 4 and 5 by scanning the tooltips on the **Parallel Stacks** window.  
   
-     ![並列スタック ウィンドウのタスク ビュー](../debugger/media/pdb_walkthrough_9a.png "PDB\_Walkthrough\_9A")  
+     ![Task view in Parallel Stacks window](../debugger/media/pdb_walkthrough_9a.png "PDB_Walkthrough_9A")  
   
-     **\[並列スタック\]** ウィンドウで、S.P を右クリックし、**\[スレッドに移動\]** をクリックします。  ウィンドウがスレッド ビューに切り替わり、対応するフレームが表示されます。  両方のタスクが同じスレッドにあることがわかります。  
+     In the **Parallel Stacks** window, right-click S.P, and then click **Go To Thread**. The window switches to Threads View and the corresponding frame is in view. You can see both tasks on the same thread.  
   
-     ![スレッド ビューの強調表示されたスレッド](~/debugger/media/pdb_walkthrough_9b.png "PDB\_Walkthrough\_9B")  
+     ![Highlighted thread in threads view](../debugger/media/pdb_walkthrough_9b.png "PDB_Walkthrough_9B")  
   
-     これもまた、**\[スレッド\]** ウィンドウにはない、**\[並列スタック\]** ウィンドウのタスク ビューならではの利点です。  
+     This is another benefit of the Tasks View in the **Parallel Stacks** window, compared to the **Threads** window.  
   
-#### 4 つ目のブレークポイントまで実行を再開するには  
+#### <a name="to-resume-execution-until-the-fourth-breakpoint"></a>To resume execution until the fourth breakpoint  
   
-1.  4 つ目のブレークポイントにヒットするまで実行を再開するには、**\[デバッグ\]** メニューの **\[続行\]** をクリックします。  **\[ID\]** 列の列ヘッダーをクリックして ID で並べ替えます。  次の図のような画面が表示されます。  
+1.  To resume execution until the third breakpoint is hit, on the **Debug** menu, click **Continue**. Click the **ID** column header to sort by ID. You should see the following illustration.  
   
-     ![並列スタック ウィンドウの 4 つのタスク状態](../debugger/media/pdb_walkthrough_10.png "PDB\_Walkthrough\_10")  
+     ![Four task states in Parallel Stacks window](../debugger/media/pdb_walkthrough_10.png "PDB_Walkthrough_10")  
   
-     タスク 5 は完了したため、もう表示されません。  お使いのコンピューターでそうならず、デッドロックが表示されていない場合は、F11 キーを押して 1 回ステップ実行してください。  
+     Because task 5 has completed, it is no longer displayed. If that is not the case on your computer and the deadlock is not shown, step one time by pressing F11.  
   
-     タスク 3 とタスク 4 は互いを待機しており、デッドロックの状態になっています。  また、5 つの新しいタスクがあります。これらはタスク 2 の子で、現在スケジュールされているタスクです。  スケジュールされたタスクとは、コードで開始されているがまだ実行されていないタスクです。  したがって、**\[場所\]** 列と **\[スレッドの割り当て\]** 列が空になっています。  
+     Task 3 and task 4 are now waiting on each other and are deadlocked. There are also 5 new tasks that are children of task 2 and are now scheduled. Scheduled tasks are tasks that have been started in code but have not run yet. Therefore, their **Location** and **Thread Assignment** columns are empty.  
   
-     再び **\[並列スタック\]** ウィンドウを表示します。  各ボックスのヘッダーをポイントすると、ツールヒントにスレッドの ID と名前が表示されます。  **\[並列スタック\]** ウィンドウのタスク ビューに切り替えます。  次の図のようにヘッダーをポイントして、タスクの ID、名前、および状態を確認します。  
+     View the **Parallel Stacks** window again. The header of each box has a tooltip that shows the thread IDs and names. Switch to Tasks View in the **Parallel Stacks** window. Hover over a header to see the task ID and name, and the status of the task, as shown in the following illustration.  
   
-     ![並列スタック ウィンドウのヘッダー ツールヒント](../debugger/media/pdb_walkthrough_11.png "PDB\_Walkthrough\_11")  
+     ![Header tooltip in Parallel Stacks window](../debugger/media/pdb_walkthrough_11.png "PDB_Walkthrough_11")  
   
-     タスクを列でグループ化することもできます。  **\[並列タスク\]** ウィンドウで、**\[状態\]** 列の列ヘッダーを右クリックし、**\[状態でグループ化\]** をクリックします。  次の図は、状態でグループ化された **\[並列タスク\]** ウィンドウを示しています。  
+     You can group the tasks by column. In the **Tasks** window, right-click the **Status** column header and then click **Group by Status**. The following illustration shows the **Tasks** window grouped by status.  
   
-     ![並列タスク ウィンドウのグループ化されたタスク](~/debugger/media/pdb_walkthrough_12.png "PDB\_Walkthrough\_12")  
+     ![Grouped tasks in Tasks window](../debugger/media/pdb_walkthrough_12.png "PDB_Walkthrough_12")  
   
-     ほかにも任意の列でグループ化できます。  タスクをグループ化すると、一部のタスクに焦点を絞ることができます。  各グループは折りたたみ可能で、それぞれにグループ化されている項目の数が表示されます。  また、**\[折りたたみ\]** ボタンの右にある **\[フラグ設定\]** ボタンをクリックすることで、グループ内のすべての項目にすばやくフラグを設定できます。  
+     You can also group by any other column. By grouping tasks, you can focus on a subset of tasks. Each collapsible group has a count of the items that are grouped together. You can also quickly flag all items in the group by clicking the **Flag** button to the right of the **Collapse** button.  
   
-     ![並列スタック ウィンドウのグループ化されたスタック](../debugger/media/pdb_walkthrough_12a.png "PDB\_Walkthrough\_12A")  
+     ![Grouped stacks in Parallel Stacks window](../debugger/media/pdb_walkthrough_12a.png "PDB_Walkthrough_12A")  
   
-     最後に、**\[並列タスク\]** ウィンドウでタスクを右クリックすると表示されるショートカット メニューを確認します。  
+     The last feature of the **Tasks** window to examine is the shortcut menu that is displayed when you right-click a task.  
   
-     ![並列タスク ウィンドウのショートカット メニュー](../debugger/media/pdb_walkthrough_12b.png "PDB\_Walkthrough\_12B")  
+     ![Shortcut menu in Tasks window](../debugger/media/pdb_walkthrough_12b.png "PDB_Walkthrough_12B")  
   
-     このショートカット メニューに表示されるコマンドは、タスクの状態によって異なります。  たとえば、**\[コピー\]**、**\[すべて選択\]**、**\[16 進数で表示\]**、**\[タスクに切り替え\]**、**\[割り当てられたスレッドを凍結\]**、**\[これ以外のすべてのスレッドを凍結\]**、**\[割り当てられたスレッドの凍結を解除\]**、**\[フラグ設定\]** などのコマンドが表示されます。  
+     The shortcut menu displays different commands, depending on the status of the task. The commands may include **Copy**, **Select All**, **Hexadecimal Display**, **Switch to Task**, **Freeze Assigned Thread**, **Freeze All Threads But This**, and **Thaw Assigned Thread**, and **Flag**.  
   
-     1 つまたは複数のタスクの基になるスレッドを凍結したり、割り当てられたスレッド以外のすべてのスレッドを凍結したりすることができます。  凍結されたスレッドは、**\[並列タスク\]** ウィンドウでも、**\[スレッド\]** ウィンドウと同じように青の*一時停止*のアイコンで表されます。  
+     You can freeze the underlying thread of a task, or tasks, or you can freeze all threads except the assigned one. A frozen thread is represented in the **Tasks** window as it is in the **Threads** window, by a blue *pause* icon.  
   
-## 概要  
- このチュートリアルでは、デバッガーの **\[並列タスク\]** ウィンドウと **\[並列スタック\]** ウィンドウについて説明しました。  マルチスレッド コードを使用する実際のプロジェクトでこれらのウィンドウを使用してみてください。  C\+\+、C\#、または Visual Basic で記述された並列コードを調べることができます。  
+## <a name="summary"></a>Summary  
+ This walkthrough demonstrated the **Parallel Tasks** and **Parallel Stacks** debugger windows. Use these windows on real projects that use multithreaded code. You can examine parallel code written in C++, C#, or Visual Basic.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [Debugging Multithreaded Applications](../debugger/walkthrough-debugging-a-parallel-application.md)   
- [デバッガーの基本事項](../debugger/debugger-basics.md)   
- [マネージ コードのデバッグ](../debugger/debugging-managed-code.md)   
- [Parallel Programming](../Topic/Parallel%20Programming%20in%20the%20.NET%20Framework.md)   
- [同時実行ランタイム](/visual-cpp/parallel/concrt/concurrency-runtime)   
- [\[並列スタック\] ウィンドウの使用](../Topic/Using%20the%20Parallel%20Stacks%20Window.md)   
- [\[タスク\] ウィンドウの使用](../Topic/Using%20the%20Tasks%20Window.md)
+ [Debugger Basics](../debugger/debugger-basics.md)   
+ [Debugging Managed Code](../debugger/debugging-managed-code.md)   
+ [Parallel Programming](/dotnet/standard/parallel-programming/index)   
+ [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime)   
+ [Using the Parallel Stacks Window](../debugger/using-the-parallel-stacks-window.md)   
+ [Using the Tasks Window](../debugger/using-the-tasks-window.md)

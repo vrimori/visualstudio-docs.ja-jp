@@ -1,80 +1,93 @@
 ---
-title: "CA2208: 引数の例外を正しくインスタンス化します | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2208"
-  - "InstantiateArgumentExceptionsCorrectly"
-helpviewer_keywords: 
-  - "CA2208"
-  - "InstantiateArgumentExceptionsCorrectly"
+title: 'CA2208: Instantiate argument exceptions correctly | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2208
+- InstantiateArgumentExceptionsCorrectly
+helpviewer_keywords:
+- InstantiateArgumentExceptionsCorrectly
+- CA2208
 ms.assetid: e2a48939-d9fa-478c-b2f9-3bdbce07dff7
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 19
----
-# CA2208: 引数の例外を正しくインスタンス化します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 770dc36e002712905fc90652308bfd9a63b1b897
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2208-instantiate-argument-exceptions-correctly"></a>CA2208: Instantiate argument exceptions correctly
 |||  
 |-|-|  
 |TypeName|InstantiateArgumentExceptionsCorrectly|  
 |CheckId|CA2208|  
-|分類|Microsoft.Usage|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Non Breaking|  
   
-## 原因  
- 考えられる原因には次の場合があります。  
+## <a name="cause"></a>Cause  
+ Possible causes include the following situations:  
   
--   [System.ArgumentException](assetId:///System.ArgumentException?qualifyHint=True&autoUpgrade=True)、またはそのクラスから派生した例外の種類の、既定 \(パラメーターなし\) のコンストラクターに対して呼び出しが行われました。  
+-   A call is made to the default (parameterless) constructor of an exception type that is, or derives from <xref:System.ArgumentException>.  
   
--   [System.ArgumentException.](assetId:///System.ArgumentException.?qualifyHint=True&autoUpgrade=True)、またはそのクラスから派生した例外の種類の、パラメーター付きのコンストラクターに不適切な文字列型の引数が渡されました。  
+-   An incorrect string argument is passed to a parameterized constructor of an exception type that is, or derives from <xref:System.ArgumentException>.  
   
-## 規則の説明  
- 既定のコンストラクターを呼び出す代わりに、より意味のある例外メッセージを表示できるコンストラクターのオーバーロードを呼び出します。  例外メッセージは開発者を対象にし、エラー条件、例外の修正方法、および例外の回避方法が明確にわかるようにします。  
+## <a name="rule-description"></a>Rule Description  
+ Instead of calling the default constructor, call one of the constructor overloads that allows a more meaningful exception message to be provided. The exception message should target the developer and clearly explain the error condition and how to correct or avoid the exception.  
   
- <xref:System.ArgumentException> および派生型の、文字列型の引数が 1 つまたは 2 つである文字列コンストラクターのシグネチャは、`message` パラメーターと `paramName` パラメーターに関して整合性が取れていません。  このようなコンストラクターは、正しい文字列型の引数で呼び出すようにします。  次のようなシグネチャがあります。  
+ The signatures of the one and two string constructors of <xref:System.ArgumentException> and its derived types are not consistent with respect to the `message` and `paramName` parameters. Make sure these constructors are called with the correct string arguments. The signatures are as follows:  
   
- <xref:System.ArgumentException>\(string `message`\)  
+ <xref:System.ArgumentException>(string `message`)  
   
- <xref:System.ArgumentException>\(string `message`, string `paramName`\)  
+ <xref:System.ArgumentException>(string `message`, string `paramName`)  
   
- <xref:System.ArgumentNullException>\(string `paramName`\)  
+ <xref:System.ArgumentNullException>(string `paramName`)  
   
- <xref:System.ArgumentNullException>\(string `paramName`, string `message`\)  
+ <xref:System.ArgumentNullException>(string `paramName`, string `message`)  
   
- <xref:System.ArgumentOutOfRangeException>\(string `paramName`\)  
+ <xref:System.ArgumentOutOfRangeException>(string `paramName`)  
   
- <xref:System.ArgumentOutOfRangeException>\(string `paramName`, string `message`\)  
+ <xref:System.ArgumentOutOfRangeException>(string `paramName`, string `message`)  
   
- <xref:System.DuplicateWaitObjectException>\(string `parameterName`\)  
+ <xref:System.DuplicateWaitObjectException>(string `parameterName`)  
   
- <xref:System.DuplicateWaitObjectException>\(string `parameterName`, string `message`\)  
+ <xref:System.DuplicateWaitObjectException>(string `parameterName`, string `message`)  
   
-## 違反の修正方法  
- この規則違反を修正するには、メッセージ、パラメーター名、またはその両方を使用するコンストラクターを呼び出し、呼び出される <xref:System.ArgumentException> の型に適した引数を指定します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, call a constructor that takes a message, a parameter name, or both, and make sure the arguments are proper for the type of <xref:System.ArgumentException> being called.  
   
-## 警告を抑制する状況  
- パラメーター付きのコンストラクターが正しい文字列型の引数で呼び出される場合のみ、この規則による警告を抑制しても安全です。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule only if a parameterized constructor is called with the correct string arguments.  
   
-## 使用例  
- ArgumentNullException 型のインスタンスを正しくインスタンス化していないコンストラクターの例を次に示します。  
+## <a name="example"></a>Example  
+ The following example shows a constructor that incorrectly instantiates an instance of the ArgumentNullException type.  
   
- [!code-cpp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/CPP/ca2208-instantiate-argument-exceptions-correctly_1.cpp)]
- [!code-cs[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/CSharp/ca2208-instantiate-argument-exceptions-correctly_1.cs)]
- [!code-vb[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/VisualBasic/ca2208-instantiate-argument-exceptions-correctly_1.vb)]  
+ [!code-cpp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/CPP/ca2208-instantiate-argument-exceptions-correctly_1.cpp)] [!code-csharp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/CSharp/ca2208-instantiate-argument-exceptions-correctly_1.cs)] [!code-vb[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/VisualBasic/ca2208-instantiate-argument-exceptions-correctly_1.vb)]  
   
-## 使用例  
- コンストラクター引数を変更することによって上の違反を修正するコード例を次に示します。  
+## <a name="example"></a>Example  
+ The following example fixes the above violation by switching the constructor arguments.  
   
- [!code-cpp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/CPP/ca2208-instantiate-argument-exceptions-correctly_2.cpp)]
- [!code-cs[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/CSharp/ca2208-instantiate-argument-exceptions-correctly_2.cs)]
- [!code-vb[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/VisualBasic/ca2208-instantiate-argument-exceptions-correctly_2.vb)]
+ [!code-cpp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/CPP/ca2208-instantiate-argument-exceptions-correctly_2.cpp)] [!code-csharp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/CSharp/ca2208-instantiate-argument-exceptions-correctly_2.cs)] [!code-vb[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/VisualBasic/ca2208-instantiate-argument-exceptions-correctly_2.vb)]

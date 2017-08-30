@@ -1,69 +1,72 @@
 ---
-title: "方法: プログラムによってワークシート内の行をグループ化する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "列 [Visual Studio での Office 開発], グループ化解除"
-  - "グループ"
-  - "グループ [Visual Studio での Office 開発], クリア (ワークシートを)"
-  - "グループ, 作成 (ワークシートで)"
-  - "範囲, 作成 (グループを)"
-  - "行 [Visual Studio での Office 開発], グループ化解除"
-  - "ワークシート, クリア (グループを)"
-  - "ワークシート, 作成 (グループを)"
-  - "ワークシート, グループ化解除 (行と列の)"
+title: 'How to: Programmatically Group Rows in a Worksheet | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- worksheets, creating groups
+- groups, creating in worksheets
+- ranges, creating groups
+- worksheets, clearing groups
+- groups
+- groups [Office development in Visual Studio], clearing in worksheets
+- worksheets, ungrouping rows and columns
+- rows [Office development in Visual Studio], ungrouping
+- columns [Office development in Visual Studio], ungrouping
 ms.assetid: 48037dca-35a2-4df2-918b-6a9f568fae91
 caps.latest.revision: 46
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 45
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 996904cfea85793c2359e6fc5264b8e8dd973024
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法: プログラムによってワークシート内の行をグループ化する
-  1 つ以上の行をグループ化できます。  ワークシートにグループを作成するには、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールまたはネイティブな Excel 範囲オブジェクトを使用します。  
+# <a name="how-to-programmatically-group-rows-in-a-worksheet"></a>How to: Programmatically Group Rows in a Worksheet
+  You can group one or more whole rows. To create a group in a worksheet, use a <xref:Microsoft.Office.Tools.Excel.NamedRange> control or a native Excel range object.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## NamedRange コントロールの使用  
- デザイン時にドキュメント レベルのプロジェクトに <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを追加する場合、そのコントロールを使用してプログラムでグループを作成できます。  次の例では、同じワークシートに 3 つの <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロール \(`data2001`、`data2002`、および `dataAll`\) があることを前提としています。  名前付き範囲はそれぞれ、ワークシートの行全体を参照します。  
+## <a name="using-a-namedrange-control"></a>Using a NamedRange Control  
+ If you add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to a document-level project at design time, you can use the control to programmatically create a group. The following example assumes that there are three <xref:Microsoft.Office.Tools.Excel.NamedRange> controls on the same worksheet: `data2001`, `data2002`, and `dataAll`. Each named range refers to a whole row in the worksheet.  
   
-#### NamedRange コントロールのグループをワークシートに作成するには  
+#### <a name="to-create-a-group-of-namedrange-controls-on-a-worksheet"></a>To create a group of NamedRange controls on a worksheet  
   
-1.  それぞれの範囲の <xref:Microsoft.Office.Tools.Excel.NamedRange.Group%2A> メソッドを呼び出して、3 つの名前付き範囲をグループ化します。  このコードは、`ThisWorkbook` クラスではなくシート クラスに配置する必要があります。  
+1.  Group three named ranges by calling the <xref:Microsoft.Office.Tools.Excel.NamedRange.Group%2A> method of each range. This code must be placed in a sheet class, not in the `ThisWorkbook` class.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#32](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#32)]
-     [!code-vb[Trin_VstcoreExcelAutomation#32](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#32)]  
-  
-    > [!NOTE]  
-    >  行のグループ化を解除するには、<xref:Microsoft.Office.Tools.Excel.NamedRange.Ungroup%2A> メソッドを呼び出します。  
-  
-## ネイティブな Excel 範囲の使用  
- このコードでは、ワークシートに `data2001`、`data2002`、および `dataAll` という 3 つの Excel 範囲があることを前提としています。  
-  
-#### ワークシート内に Excel 範囲のグループを作成するには  
-  
-1.  それぞれの範囲の <xref:Microsoft.Office.Interop.Excel.Range.Group%2A> メソッドを呼び出して、3 つの名前付き範囲をグループ化します。  次の例では、同じワークシートに `data2001`、`data2002`、および `dataAll` という名前の 3 つの <xref:Microsoft.Office.Interop.Excel.Range> コントロールがあることを前提としています。  名前付き範囲はそれぞれ、ワークシートの行全体を参照します。  
-  
-     [!code-csharp[Trin_VstcoreExcelAutomation#33](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#33)]
-     [!code-vb[Trin_VstcoreExcelAutomation#33](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#33)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#32](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#32)]  [!code-vb[Trin_VstcoreExcelAutomation#32](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#32)]  
   
     > [!NOTE]  
-    >  行のグループ化を解除するには、<xref:Microsoft.Office.Interop.Excel.Range.Ungroup%2A> メソッドを呼び出します。  
+    >  To ungroup rows, call the <xref:Microsoft.Office.Tools.Excel.NamedRange.Ungroup%2A> method.  
   
-## 参照  
- [ワークシートの操作](../vsto/working-with-worksheets.md)   
- [NamedRange コントロール](../vsto/namedrange-control.md)   
- [方法 : ワークシートに NamedRange コントロールを追加する](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
- [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="using-native-excel-ranges"></a>Using Native Excel Ranges  
+ The code assumes that you have three Excel ranges named `data2001`, `data2002`, and `dataAll` on a worksheet.  
+  
+#### <a name="to-create-a-group-of-excel-ranges-in-a-worksheet"></a>To create a group of Excel ranges in a worksheet  
+  
+1.  Group three named ranges by calling the <xref:Microsoft.Office.Interop.Excel.Range.Group%2A> method of each range. The following example assumes that there are three <xref:Microsoft.Office.Interop.Excel.Range> controls named `data2001`, `data2002`, and `dataAll` on the same worksheet. Each named range refers to a whole row in the worksheet.  
+  
+     [!code-csharp[Trin_VstcoreExcelAutomation#33](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#33)]  [!code-vb[Trin_VstcoreExcelAutomation#33](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#33)]  
+  
+    > [!NOTE]  
+    >  To ungroup rows, call the <xref:Microsoft.Office.Interop.Excel.Range.Ungroup%2A> method.  
+  
+## <a name="see-also"></a>See Also  
+ [Working with Worksheets](../vsto/working-with-worksheets.md)   
+ [NamedRange Control](../vsto/namedrange-control.md)   
+ [How to: Add NamedRange Controls to Worksheets](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

@@ -1,60 +1,77 @@
 ---
-title: "CA2111: ポインターは参照可能にすることはできません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PointersShouldNotBeVisible"
-  - "CA2111"
-helpviewer_keywords: 
-  - "CA2111"
-  - "PointersShouldNotBeVisible"
+title: 'CA2111: Pointers should not be visible | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PointersShouldNotBeVisible
+- CA2111
+helpviewer_keywords:
+- CA2111
+- PointersShouldNotBeVisible
 ms.assetid: b3a8d466-895b-43bc-a2df-5d7058fe915f
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 14
----
-# CA2111: ポインターは参照可能にすることはできません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 9cc87d45fe19ec583499f918cb1e50528c418925
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2111-pointers-should-not-be-visible"></a>CA2111: Pointers should not be visible
 |||  
 |-|-|  
 |TypeName|PointersShouldNotBeVisible|  
 |CheckId|CA2111|  
-|分類|Microsoft.Security|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## 原因  
- パブリックまたはプロテクトの <xref:System.IntPtr?displayProperty=fullName> フィールドまたは <xref:System.UIntPtr?displayProperty=fullName> フィールドが読み取り専用ではありません。  
+## <a name="cause"></a>Cause  
+ A public or protected <xref:System.IntPtr?displayProperty=fullName> or <xref:System.UIntPtr?displayProperty=fullName> field is not read-only.  
   
-## 規則の説明  
- <xref:System.IntPtr> と <xref:System.UIntPtr> は、アンマネージ メモリにアクセスするときに使用するポインターの型です。  ポインターがプライベート、内部、または読み取り専用のいずれでもない場合、悪意のあるコードで、ポインターの値が変更される可能性があります。結果的に、メモリの任意の位置にアクセスされたり、アプリケーション エラーやシステム エラーの原因になります。  
+## <a name="rule-description"></a>Rule Description  
+ <xref:System.IntPtr> and <xref:System.UIntPtr> are pointer types that are used to access unmanaged memory. If a pointer is not private, internal, or read-only, malicious code can change the value of the pointer, potentially allowing access to arbitrary locations in memory or causing application or system failures.  
   
- ポインターのフィールドを含む型に対するアクセスを保護するには、「[CA2112: セキュリティで保護された型はフィールドを公開してはなりません](../code-quality/ca2112-secured-types-should-not-expose-fields.md)」を参照してください。  
+ If you intend to secure access to the type that contains the pointer field, see [CA2112: Secured types should not expose fields](../code-quality/ca2112-secured-types-should-not-expose-fields.md).  
   
-## 違反の修正方法  
- 読み取り専用、内部、またはプライベートにすることで、ポインターを保護します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ Secure the pointer by making it read-only, internal, or private.  
   
-## 警告を抑制する状況  
- ポインターの値に依存していない場合は、この規則による警告を抑制します。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Suppress a warning from this rule if you do not rely on the value of the pointer.  
   
-## 使用例  
- この規則に違反するポインターと適合するポインターを次のコードに示します。  ポインターをプライベートにしないと、規則「[CA1051: 参照できるインスタンス フィールドを宣言しないでください](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)」にも違反するので注意してください。  
+## <a name="example"></a>Example  
+ The following code shows pointers that violate and satisfy the rule. Notice that the non-private pointers also violate the rule [CA1051: Do not declare visible instance fields](../code-quality/ca1051-do-not-declare-visible-instance-fields.md).  
   
- [!code-cs[FxCop.Security.PointersArePrivate#1](../code-quality/codesnippet/CSharp/ca2111-pointers-should-not-be-visible_1.cs)]  
+ [!code-csharp[FxCop.Security.PointersArePrivate#1](../code-quality/codesnippet/CSharp/ca2111-pointers-should-not-be-visible_1.cs)]  
   
-## 関連規則  
- [CA2112: セキュリティで保護された型はフィールドを公開してはなりません](../code-quality/ca2112-secured-types-should-not-expose-fields.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA2112: Secured types should not expose fields](../code-quality/ca2112-secured-types-should-not-expose-fields.md)  
   
- [CA1051: 参照できるインスタンス フィールドを宣言しないでください](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)  
+ [CA1051: Do not declare visible instance fields](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  <xref:System.IntPtr?displayProperty=fullName>   
  <xref:System.UIntPtr?displayProperty=fullName>

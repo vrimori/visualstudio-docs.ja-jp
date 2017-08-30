@@ -1,191 +1,193 @@
 ---
-title: "チュートリアル : 操作ウィンドウから文書へのテキストの挿入"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "操作ウィンドウ [Visual Studio での Office 開発], 追加 (コントロールを)"
-  - "操作ウィンドウ [Visual Studio での Office 開発], 作成 (Word で)"
-  - "スマート ドキュメント [Visual Studio での Office 開発], 追加 (コントロールを)"
-  - "スマート ドキュメント [Visual Studio での Office 開発], 作成 (Word で)"
+title: 'Walkthrough: Inserting Text into a Document from an Actions Pane | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- smart documents [Office development in Visual Studio], creating in Word
+- smart documents [Office development in Visual Studio], adding controls
+- actions panes [Office development in Visual Studio], creating in Word
+- actions panes [Office development in Visual Studio], adding controls
 ms.assetid: fd14c896-5737-4a20-94f7-6064b67112c5
 caps.latest.revision: 70
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 69
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: f4952081dea98ae372ff1df9d87cd4146b6e6da6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : 操作ウィンドウから文書へのテキストの挿入
-  このチュートリアルでは、Microsoft Office Word 文書で操作ウィンドウを作成する方法について説明します。  操作ウィンドウには、入力を収集するコントロールと、そのテキストを文書に送信するコントロールがあります。  
+# <a name="walkthrough-inserting-text-into-a-document-from-an-actions-pane"></a>Walkthrough: Inserting Text into a Document from an Actions Pane
+  This walkthrough demonstrates how to create an actions pane in a Microsoft Office Word document. The actions pane contains two controls that collect input and then send the text to the document.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   操作ウィンドウ コントロール上で Windows フォーム コントロールを使用してユーザー インターフェイスをデザインします。  
+-   Designing an interface by using Windows Forms controls on an actions pane control.  
   
--   アプリケーションが開かれたときに操作ウィンドウを表示します。  
+-   Displaying the actions pane when the application opens.  
   
 > [!NOTE]  
->  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。  これらの要素は、使用する Visual Studio のエディションとその設定によって決まります。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] または [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]。  
+-   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] or [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].  
   
-## プロジェクトの作成  
- まず、Word 文書プロジェクトを作成します。  
+## <a name="creating-the-project"></a>Creating the Project  
+ The first step is to create a Word Document project.  
   
-#### 新しいプロジェクトを作成するには  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  My Basic Actions Pane という名前の Word 文書プロジェクトを作成します。  ウィザードで、**\[新規ドキュメントの作成\]** をクリックします。  詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+1.  Create a Word Document project with the name **My Basic Actions Pane**. In the wizard, select **Create a new document**. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     Visual Studio により、デザイナーで新しい Word 文書が開き、**My Basic Actions Pane** プロジェクトが**ソリューション エクスプローラー**に追加されます。  
+     Visual Studio opens the new Word document in the designer and adds the **My Basic Actions Pane** project to **Solution Explorer**.  
   
-## 文書へのテキストとブックマークの追加  
- 操作ウィンドウは、文書内のブックマークにテキストを送信します。  文書をデザインするには、いくつかのテキストを入力して基本となるフォームを作成します。  
+## <a name="adding-text-and-bookmarks-to-the-document"></a>Adding Text and Bookmarks to the Document  
+ The actions pane will send text to bookmarks in the document. To design the document, type some text to create a basic form.  
   
-#### 文書にテキストを追加するには  
+#### <a name="to-add-text-to-your-document"></a>To add text to your document  
   
-1.  次のテキストを Word 文書に入力します。  
+1.  Type the following text into your Word document:  
   
-     March 21, 2008  
+     **March 21, 2008**  
   
-     名前  
+     **Name**  
   
-     Address  
+     **Address**  
   
-     This is an example of a basic actions pane in Word.  
+     **This is an example of a basic actions pane in Word.**  
   
- 文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加するには、Visual Studio で**ツールボックス**からコントロールをドラッグするか、Word で **\[ブックマーク\]** ダイアログ ボックスを使用します。  
+ You can add a <xref:Microsoft.Office.Tools.Word.Bookmark> control to your document by dragging it from the **Toolbox** in Visual Studio or by using the **Bookmark** dialog box in Word.  
   
-#### 文書に Bookmark コントロールを追加するには  
+#### <a name="to-add-a-bookmark-control-to-your-document"></a>To add a Bookmark control to your document  
   
-1.  **ツールボックス**の **\[Word コントロール\]** タブから <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを文書にドラッグします。  
+1.  From the **Word Controls** tab of the **Toolbox**, drag a <xref:Microsoft.Office.Tools.Word.Bookmark> control to your document.  
   
-     **\[ブックマーク コントロールの追加\]** ダイアログ ボックスが表示されます。  
+     The **Add Bookmark Control** dialog box appears.  
   
-2.  文書内の "**Name**" という語を、段落記号は除いて選択し、**\[OK\]** をクリックします。  
+2.  Select the word **Name**, without selecting the paragraph mark, and click **OK**.  
   
     > [!NOTE]  
-    >  段落記号はブックマークに含めないようにします。  文書に段落記号が表示されていない場合は、**\[ツール\]** メニューをクリックし、**\[Microsoft Office Word ツール\]** をポイントして、**\[オプション\]** をクリックします。  **\[表示\]** タブをクリックし、**\[オプション\]** ダイアログ ボックスの **\[編集記号の表示\]** セクションの **\[段落記号\]** チェック ボックスをオンにします。  
+    >  The paragraph mark should be outside of the bookmark. If paragraph marks are not visible in the document, click the **Tools** menu, point to **Microsoft Office Word Tools** and then click **Options**. Click the **View** tab, and select the **Paragraph marks** check box in the **Formatting marks** section of the **Options** dialog box.  
   
-3.  **\[プロパティ\]** ウィンドウで **\[Name\]** プロパティを **Bookmark1** から **showName** に変更します。  
+3.  In the **Properties** window, change the **Name** property of **Bookmark1** to **showName**.  
   
-4.  "**Address**" という語を、段落記号は除いて選択します。  
+4.  Select the word **Address**, without selecting the paragraph mark.  
   
-5.  リボンの **\[挿入\]** タブの **\[リンク\]** で **\[ブックマーク\]** をクリックします。  
+5.  On the **Insert** tab of the Ribbon, in the **Links** group, click **Bookmark**.  
   
-6.  **\[ブックマーク\]** ダイアログ ボックスで、**\[ブックマーク名\]** ボックスに「**showAddress**」と入力し、**\[追加\]** をクリックします。  
+6.  In the **Bookmark** dialog box, type **showAddress** in the **Bookmark Name** box and click **Add**.  
   
-## 操作ウィンドウへのコントロールの追加  
- 操作ウィンドウのインターフェイスをデザインするには、プロジェクトに操作ウィンドウ コントロールを追加し、追加した操作ウィンドウ コントロールに Windows フォーム コントロールを追加します。  
+## <a name="adding-controls-to-the-actions-pane"></a>Adding Controls to the Actions Pane  
+ To design the actions pane interface, add an actions pane control to the project and then add Windows Forms controls to the actions pane control.  
   
-#### 操作ウィンドウ コントロールを追加するには  
+#### <a name="to-add-an-actions-pane-control"></a>To add an actions pane control  
   
-1.  **ソリューション エクスプローラー**で **My Basic Actions Pane** プロジェクトを選択します。  
+1.  Select the **My Basic Actions Pane** project in **Solution Explorer**.  
   
-2.  **\[プロジェクト\]** メニューの **\[新しい項目の追加\]** をクリックします。  
+2.  On the **Project** menu, click **Add New Item**.  
   
-3.  **\[新しい項目の追加\]** ダイアログ ボックスで **\[操作ウィンドウ コントロール\]** をクリックし、コントロールに **InsertTextControl** という名前を指定して、**\[追加\]** をクリックします。  
+3.  In the **Add New Item** dialog box, click **Actions Pane Control**, name the control **InsertTextControl,** and click **Add**.  
   
-#### 操作ウィンドウ コントロールに Windows フォーム コントロールを追加するには  
+#### <a name="to-add-windows-form-controls-to-the-actions-pane-control"></a>To add Windows Form controls to the actions pane control  
   
-1.  デザイナーで操作ウィンドウ コントロールが非表示になっている場合は、**InsertTextControl** をダブルクリックします。  
+1.  If the actions pane control is not visible in the designer, double-click **InsertTextControl**.  
   
-2.  **ツールボックス**の **\[コモン コントロール\]** タブから **Label** コントロールを操作ウィンドウ コントロールにドラッグします。  
+2.  From the **Common Controls** tab of the **Toolbox**, drag a **Label** control to the actions pane control.  
   
-3.  Label コントロールの **Text** プロパティを **Name** に変更します。  
+3.  Change the **Text** property of the Label control to **Name**.  
   
-4.  操作ウィンドウ コントロールに **Textbox** コントロールを追加し、以下のプロパティを変更します。  
+4.  Add a **Textbox** control to the actions pane control, and change the following properties.  
   
-    |プロパティ|価値|  
-    |-----------|--------|  
-    |**名前**|**getName**|  
-    |**サイズ**|**130, 20**|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**getName**|  
+    |**Size**|**130, 20**|  
   
-5.  操作ウィンドウ コントロールに 2 番目の **Label** コントロールを追加し、**Text** プロパティを **Address** に変更します。  
+5.  Add a second **Label** control to the actions pane control, and change the **Text** property to **Address**.  
   
-6.  操作ウィンドウ コントロールに 2 番目の **Textbox** コントロールを追加し、以下のプロパティを変更します。  
+6.  Add a second **Textbox** control to the actions pane control, and change the following properties.  
   
-    |プロパティ|価値|  
-    |-----------|--------|  
-    |**名前**|**getAddress**|  
-    |**AcceptsReturn**|**True**|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**getAddress**|  
+    |**Accepts Return**|**True**|  
     |**Multiline**|**True**|  
-    |**サイズ**|**130, 40**|  
+    |**Size**|**130, 40**|  
   
-7.  操作ウィンドウ コントロールに **Button** コントロールを追加し、以下のプロパティを変更します。  
+7.  Add a **Button** control to the actions pane control, and change the following properties.  
   
-    |プロパティ|価値|  
-    |-----------|--------|  
-    |**名前**|**addText**|  
-    |**テキスト**|**\[挿入\]**|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**addText**|  
+    |**Text**|**Insert**|  
   
-## 文書にテキストを挿入するコードの追加  
- 操作ウィンドウで、テキスト ボックスのテキストを文書内の対応する <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールに挿入するコードを記述します。  `Globals` クラスを使用して、操作ウィンドウ上のコントロールから文書上のコントロールにアクセスできます。  詳細については、「[Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)」を参照してください。  
+## <a name="adding-code-to-insert-text-into-the-document"></a>Adding Code to Insert Text into the Document  
+ In the actions pane, write code that inserts the text from the text boxes into the appropriate <xref:Microsoft.Office.Tools.Word.Bookmark> controls in the document. You can use the `Globals` class to access controls on the document from the controls on the actions pane. For more information, see [Global Access to Objects in Office Projects](../vsto/global-access-to-objects-in-office-projects.md).  
   
-#### 操作ウィンドウから文書内のブックマークにテキストを挿入するには  
+#### <a name="to-insert-text-from-the-actions-pane-in-a-bookmark-in-the-document"></a>To insert text from the actions pane in a bookmark in the document  
   
-1.  **addText** ボタンの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに次のコードを追加します。  
+1.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the **addText** button.  
   
-     [!code-csharp[Trin_VstcoreActionsPaneWord#8](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneWord/CS/InsertTextControl.cs#8)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#8](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneWord/VB/InsertTextControl.vb#8)]  
+     [!code-csharp[Trin_VstcoreActionsPaneWord#8](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/InsertTextControl.cs#8)]  [!code-vb[Trin_VstcoreActionsPaneWord#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/InsertTextControl.vb#8)]  
   
-2.  C\# では、ボタン クリックのイベント ハンドラーを追加する必要があります。  このコードは、`IntializeComponent` の呼び出しの後の `InsertTextControl` コンストラクターに追加できます。  イベンド ハンドラーの作成方法の詳細については、「[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)」を参照してください。  
+2.  In C#, you must add an event handler for the button click. You can place this code in the `InsertTextControl` constructor after the call to `IntializeComponent`. For information about creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
-     [!code-csharp[Trin_VstcoreActionsPaneWord#9](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneWord/CS/InsertTextControl.cs#9)]  
+     [!code-csharp[Trin_VstcoreActionsPaneWord#9](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/InsertTextControl.cs#9)]  
   
-## 操作ウィンドウを表示するコードの追加  
- 操作ウィンドウを表示するには、作成したコントロールをコントロール コレクションに追加します。  
+## <a name="adding-code-to-show-the-actions-pane"></a>Adding Code to Show the Actions Pane  
+ To show the actions pane, add the control you created to the control collection.  
   
-#### 操作ウィンドウを表示するには  
+#### <a name="to-show-the-actions-pane"></a>To show the actions pane  
   
-1.  `ThisDocument` クラスで、操作ウィンドウ コントロールの新しいインスタンスを作成します。  
+1.  Create a new instance of the actions pane control in the `ThisDocument` class.  
   
-     [!code-csharp[Trin_VstcoreActionsPaneWord#10](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneWord/CS/ThisDocument.cs#10)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#10](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneWord/VB/ThisDocument.vb#10)]  
+     [!code-csharp[Trin_VstcoreActionsPaneWord#10](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#10)]  [!code-vb[Trin_VstcoreActionsPaneWord#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#10)]  
   
-2.  `ThisDocument` の <xref:Microsoft.Office.Tools.Word.Document.Startup> イベント ハンドラーに次のコードを追加します。  
+2.  Add the following code to the <xref:Microsoft.Office.Tools.Word.Document.Startup> event handler of `ThisDocument`.  
   
-     [!code-csharp[Trin_VstcoreActionsPaneWord#11](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneWord/CS/ThisDocument.cs#11)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#11](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneWord/VB/ThisDocument.vb#11)]  
+     [!code-csharp[Trin_VstcoreActionsPaneWord#11](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#11)]  [!code-vb[Trin_VstcoreActionsPaneWord#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#11)]  
   
-## アプリケーションのテスト  
- 文書をテストして、文書を開いたときに操作ウィンドウが開くこと、およびボタンをクリックしたときにテキスト ボックスに入力したテキストがブックマークに挿入されることを確認します。  
+## <a name="testing-the-application"></a>Testing the Application  
+ Test your document to verify that the actions pane opens when the document is opened and that text typed into the text boxes is inserted into the bookmarks when the button is clicked.  
   
-#### 文書をテストするには  
+#### <a name="to-test-your-document"></a>To test your document  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  Press F5 to run your project.  
   
-2.  操作ウィンドウが表示されていることを確認します。  
+2.  Confirm that the actions pane is visible.  
   
-3.  操作ウィンドウ上のテキスト ボックスに自分の名前と住所を入力し、**\[Insert\]** をクリックします。  
+3.  Type your name and address into the text boxes on the actions pane and click **Insert**.  
   
-## 次の手順  
- 次に行う作業は以下のとおりです。  
+## <a name="next-steps"></a>Next Steps  
+ Here are some tasks that might come next:  
   
--   Excel の操作ウィンドウの作成。  詳細については、「[How to: Add an Actions Pane to Excel Workbooks](http://msdn.microsoft.com/ja-jp/62abfce6-e44f-419d-85d8-26bf59f33872)」を参照してください。  
+-   Creating an actions pane in Excel. For more information, see [How to: Add an Actions Pane to Excel Workbooks](http://msdn.microsoft.com/en-us/62abfce6-e44f-419d-85d8-26bf59f33872).  
   
--   操作ウィンドウ上のコントロールへのデータのバインド。  詳細については、「[チュートリアル : Word の操作ウィンドウ上のコントロールへのデータ バインド](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)」を参照してください。  
+-   Binding data to controls on an actions pane. For more information, see [Walkthrough: Binding Data to Controls on a Word Actions Pane](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md).  
   
-## 参照  
- [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
- [方法: Word 文書または Excel ブックに操作ウィンドウを追加する](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
- [How to: Add an Actions Pane to Excel Workbooks](http://msdn.microsoft.com/ja-jp/62abfce6-e44f-419d-85d8-26bf59f33872)   
- [方法 : アクション ペイン上のコントロールのレイアウトを管理する](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
- [Bookmark コントロール](../vsto/bookmark-control.md)  
+## <a name="see-also"></a>See Also  
+ [Actions Pane Overview](../vsto/actions-pane-overview.md)   
+ [How to: Add an Actions Pane to Word Documents or Excel Workbooks](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
+ [How to: Add an Actions Pane to Excel Workbooks](http://msdn.microsoft.com/en-us/62abfce6-e44f-419d-85d8-26bf59f33872)   
+ [How to: Manage Control Layout on Actions Panes](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
+ [Bookmark Control](../vsto/bookmark-control.md)  
   
   

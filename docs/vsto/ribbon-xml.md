@@ -1,142 +1,156 @@
 ---
-title: "リボン XML"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VSTO.Ribbon.RibbonXMLItem"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "カスタム リボン、XML"
-  - "カスタマイズ (リボンを)、XML"
-  - "リボン [Visual Studio での Office 開発]、XML"
-  - "コールバック メソッド"
-  - "カスタム リボン、表示"
-  - "カスタム リボン、定義 (動作を)"
-  - "XML [Visual Studio での Office 開発]、リボン"
-  - "カスタマイズ (リボンを)、定義 (動作を)"
-  - "リボン [Visual Studio での Office 開発]、カスタマイズ"
-  - "カスタマイズ (リボンを)、表示"
+title: Ribbon XML | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VSTO.Ribbon.RibbonXMLItem
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- custom Ribbon, XML
+- customizing the Ribbon, XML
+- Ribbon [Office development in Visual Studio], XML
+- callback methods
+- custom Ribbon, displaying
+- custom Ribbon, defining behavior
+- XML [Office development in Visual Studio], Ribbon
+- customizing the Ribbon, defining behavior
+- Ribbon [Office development in Visual Studio], customizing
+- customizing the Ribbon, displaying
 ms.assetid: a5945667-40e8-4191-9f1e-71c18ec30a2e
 caps.latest.revision: 35
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 34
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6b0eb5783aa5a58a1292f52bb50cb765673deddb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# リボン XML
-  リボン \(XML\) 項目では XML を使用してリボンをカスタマイズできます。 リボン \(ビジュアル デザイナー\) 項目ではサポートされていない方法で、リボンをカスタマイズする場合は、リボン \(XML\) 項目を使用します。 各項目で実行できる操作の比較については、「[リボンの概要](../vsto/ribbon-overview.md)」をご覧ください。  
+# <a name="ribbon-xml"></a>Ribbon XML
+  The Ribbon (XML) item enables you to customize a Ribbon by using XML. Use the Ribbon (XML) item if you want to customize the Ribbon in a way that is not supported by the Ribbon (Visual Designer) item. For a comparison of what you can do with each item, see [Ribbon Overview](../vsto/ribbon-overview.md).  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
-## リボン \(XML\) 項目をプロジェクトに追加する  
- **\[新しい項目の追加\]** ダイアログ ボックスから、**リボン \(XML\)**項目を任意の Office プロジェクトに追加できます。 Visual Studio によってプロジェクトに次のファイルが自動的に追加されます。  
+## <a name="adding-a-ribbon-xml-item-to-a-project"></a>Adding a Ribbon (XML) Item to a Project  
+ You can add a **Ribbon (XML)** item to any Office project from the **Add New Item** dialog box. Visual Studio automatically adds the following files to your project:  
   
--   リボン XML ファイル。 このファイルは、リボン ユーザー インターフェイス \(UI\) を定義します。 タブ、グループ、およびコントロールなどの UI 要素を追加するには、このファイルを使用します。 詳細についてはこのトピックで後述する、「[リボン XML ファイル リファレンス](#RibbonDescriptorFile)」を参照してください。  
+-   A Ribbon XML file. This file defines the Ribbon user interface (UI). Use this file to add UI elements such as tabs, groups, and controls. For details, see [Ribbon XML File Reference](#RibbonDescriptorFile) later in this topic.  
   
--   リボン コード ファイル。 このファイルには*リボン クラス*が含まれています。 このクラスの名前は、**\[新しい項目の追加\]** ダイアログ ボックスで**リボン \(XML\)** 項目に指定した名前になります。 Microsoft Office アプリケーションは、このクラスのインスタンスを使用して、カスタム リボンを読み込みます。 詳細についてはこのトピックで後述する「[リボン クラスのリファレンス](#RibbonExtensionClass)」を参照してください。  
+-   A Ribbon code file. This file contains the *Ribbon class*. This class has the name that you specified for the **Ribbon (XML)** item in the **Add New Item** dialog box. Microsoft Office applications use an instance of this class to load the custom Ribbon. For details, see [Ribbon Class Reference](#RibbonExtensionClass) later in this topic.  
   
- 既定では、これらのファイルはカスタム グループをリボンの **\[アドイン\]** タブに追加します。  
+ By default, these files add a custom group to the **Add-Ins** tab in the Ribbon.  
   
-## Microsoft Office アプリケーションでのカスタム リボンの表示  
- **リボン \(XML\)** 項目をプロジェクトに追加した後に、コードを **ThisAddin**、**ThisWorkbook**、**ThisDocument** クラスに追加して、CreateRibbonExtensibilityObject メソッドをオーバーライドし Office アプリケーションにリボン XML クラスを返すようにする必要があります。  
+## <a name="displaying-the-custom-ribbon-in-a-microsoft-office-application"></a>Displaying the Custom Ribbon in a Microsoft Office Application  
+ After you add a **Ribbon (XML)** item to your project, you must add code to the **ThisAddin**, **ThisWorkbook**, or **ThisDocument** class that overrides the CreateRibbonExtensibilityObject method and returns the Ribbon XML class to the Office application.  
   
- 次のコード例は CreateRibbonExtensibilityObject メソッドをオーバーライドして、MyRibbon という名前のリボン XML クラスを返します。  
+ The following code example overrides the CreateRibbonExtensibilityObject method and returns a Ribbon XML class named MyRibbon.  
   
- [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab_XML/CS/ThisAddIn.cs#1)]
- [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab_XML/VB/ThisAddIn.vb#1)]  
+ [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)] [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]  
   
-## カスタムのリボンの動作を定義する  
- *コールバック メソッド*を作成することで、リボンのボタンのクリックなどのユーザー操作に応答できます。 コールバック メソッドは Windows フォーム コントロールのイベントと似ていますが、UI 要素の XML の属性によって識別されます。 リボン クラスでメソッドを記述すると、コントロールは属性値と同じ名前を持つメソッドを呼び出します。 たとえば、ユーザーがリボン上のボタンをクリックしたときに呼び出されるコールバック メソッドを作成できます。 コールバック メソッドを作成するには、2 つの手順が必要です。  
+## <a name="defining-the-behavior-of-the-custom-ribbon"></a>Defining the Behavior of the Custom Ribbon  
+ You can respond to user actions, such as clicking a button on the Ribbon, by creating *callback methods*. Callback methods resemble events in Windows Forms controls, but they are identified by an attribute in the XML of the UI element. You write methods in the Ribbon class, and a control calls the method that has the same name as the attribute value. For example, you can create a callback method that is called when a user clicks a button on the Ribbon. Two steps are required to create a callback method:  
   
--   コード内のコールバック メソッドを識別するリボン XML ファイル内のコントロールに、属性を割り当てます。  
+-   Assign an attribute to a control in the Ribbon XML file that identifies a callback method in your code.  
   
--   リボン クラスでコールバック メソッドを定義します。  
+-   Define the callback method in the Ribbon class.  
   
 > [!NOTE]  
->  Outlook では追加の手順が必要です。 詳細については、「[Outlook のリボンのカスタマイズ](../vsto/customizing-a-ribbon-for-outlook.md)」を参照してください。  
+>  Outlook requires an additional step. For more information, see [Customizing a Ribbon for Outlook](../vsto/customizing-a-ribbon-for-outlook.md).  
   
- リボンからアプリケーションを自動化する方法を示すチュートリアルについては、「[チュートリアル : リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)」をご覧ください。  
+ For a walkthrough that demonstrates how to automate an application from the Ribbon, see [Walkthrough: Creating a Custom Tab by Using Ribbon XML](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md).  
   
-### コントロールへのコールバック メソッドの割り当て  
- コールバック メソッドをリボン XML ファイル内のコントロールに割り当てるには、コールバック メソッドの種類とメソッドの名前を指定する属性を追加します。 たとえば、次の要素は `OnToggleButton1` という名前の **onAction** コールバック メソッドを持つトグル ボタンを定義します。  
+### <a name="assigning-callback-methods-to-controls"></a>Assigning Callback Methods to Controls  
+ To assign a callback method to a control in the Ribbon XML file, add an attribute that specifies the type of the callback method and the name of the method. For example, the following element defines a toggle button that has an **onAction** callback method named `OnToggleButton1`.  
   
 ```  
 <toggleButton id="toggleButton1" onAction="OnToggleButton1" />  
 ```  
   
- **onAction** は、特定のコントロールに関連付けられている主なタスクをユーザーが実行すると呼び出されます。 たとえば、トグル ボタンの **onAction** コールバック メソッドは、ユーザーがボタンをクリックするとが呼び出されます。  
+ **onAction** is called when the user performs the main task associated with a particular control. For example, the **onAction** callback method of a toggle button is called when the user clicks the button.  
   
- 属性で指定するメソッドは、どんな名前をつけてもかまいません。 ただし、その名前はリボンのコード ファイルで定義するメソッドの名前と一致する必要があります。  
+ The method that you specify in the attribute can have any name. However, it must match the name of the method that you define in the Ribbon code file.  
   
- リボン コントロールに割り当てることができるコールバック メソッドにはさまざまな種類があります。 各コントロールの使用可能なコールバック メソッドの完全な一覧については、技術記事「[2007 Office Fluent リボンをカスタマイズする \(開発者向け\) \(パート 3\/3\)](http://msdn.microsoft.com/ja-jp/a16c7df5-93f3-4920-baa8-7b7290794c15)」を参照してください。  
+ There are many different types of callback methods that you can assign to Ribbon controls. For a complete list of the callback methods available for each control, see the technical article [Customizing the Office (2007) Ribbon User Interface for Developers (Part 3 of 3)](http://msdn.microsoft.com/en-us/a16c7df5-93f3-4920-baa8-7b7290794c15).  
   
-###  <a name="CallBackMethods"></a> コールバック メソッドの定義  
- リボン クラスのコールバック メソッドはリボン コード ファイルで定義します。 コールバック メソッドにはいくつかの要件があります。  
+###  <a name="CallBackMethods"></a> Defining Callback Methods  
+ Define your callback methods in the Ribbon class in the Ribbon code file. A callback method has several requirements:  
   
--   コールバック メソッドはパブリック メソッドとして宣言されなければなりません。  
+-   It must be declared as public.  
   
--   コールバック メソッドの名前は、リボン XML ファイル内のコントロールに割り当てたコールバック メソッドの名前と一致する必要があります。  
+-   Its name must match the name of a callback method that you assigned to a control in the Ribbon XML file.  
   
--   コールバック メソッドのシグネチャは、関連付けられているリボン コントロールの利用可能なコールバック メソッドの型のシグネチャと一致する必要があります。  
+-   Its signature must match the signature of a type of callback method that is available for the associated Ribbon control.  
   
- リボン コントロールのコールバック メソッドのシグネチャの完全な一覧については、技術記事「[2007 Office Fluent リボンをカスタマイズする \(開発者向け\) \(パート 3\/3\)](http://msdn.microsoft.com/ja-jp/a16c7df5-93f3-4920-baa8-7b7290794c15)」を参照してください。 Visual Studio では、リボン コード ファイルで作成するコールバック メソッドの IntelliSense サポートは提供されていません。 有効なシグネチャに一致しないコールバック メソッドを作成した場合、コードはコンパイルされますが、ユーザーがコントロールをクリックしても、何も起こりません。  
+ For a complete list of the callback method signatures for Ribbon controls, see the technical article [Customizing the Office (2007) Ribbon User Interface for Developers (Part 3 of 3)](http://msdn.microsoft.com/en-us/a16c7df5-93f3-4920-baa8-7b7290794c15). Visual Studio does not provide IntelliSense support for callback methods that you create in the Ribbon code file. If you create a callback method that does not match a valid signature, the code will compile, but nothing will occur when the user clicks the control.  
   
- すべてのコールバック メソッドには、メソッドを呼び出すコントロールを表す <xref:Microsoft.Office.Core.IRibbonControl> パラメーターがあります。 このパラメーターを使用して、同じコールバック メソッドを複数のコントロールで再利用できます。 次のコード例は、ユーザーがクリックするコントロールに応じて異なるタスクを実行する **onAction** コールバック メソッドを示しています。  
+ All callback methods have a <xref:Microsoft.Office.Core.IRibbonControl> parameter that represents the control that called the method. You can use this parameter to reuse the same callback method for multiple controls. The following code example demonstrates an **onAction** callback method that performs different tasks depending on which control the user clicks.  
   
- [!code-csharp[Trin_RibbonOutlookBasic#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_RibbonOutlookBasic/CS/Ribbon1.cs#2)]
- [!code-vb[Trin_RibbonOutlookBasic#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_RibbonOutlookBasic/VB/Ribbon1.vb#2)]  
+ [!code-csharp[Trin_RibbonOutlookBasic#2](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#2)] [!code-vb[Trin_RibbonOutlookBasic#2](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#2)]  
   
-##  <a name="RibbonDescriptorFile"></a> リボン XML ファイル リファレンス  
- リボン XML ファイルに要素と属性を追加することにより、カスタム リボンを定義できます。 既定では、リボン XML ファイルには次の XML が含まれています。  
+##  <a name="RibbonDescriptorFile"></a> Ribbon XML File Reference  
+ You can define your custom Ribbon by adding elements and attributes to the Ribbon XML file. By default, the Ribbon XML file contains the following XML.  
   
 ```  
-<?xml version="1.0" encoding="UTF-8"?> <customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnLoad"> <ribbon> <tabs> <tab idMso="TabAddIns"> <group id="MyGroup" label="My Group"> </group> </tab> </tabs> </ribbon> </customUI>  
+<?xml version="1.0" encoding="UTF-8"?>  
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnLoad">  
+  <ribbon>  
+    <tabs>  
+      <tab idMso="TabAddIns">  
+        <group id="MyGroup"  
+               label="My Group">  
+        </group>  
+      </tab>  
+    </tabs>  
+  </ribbon>  
+</customUI>  
 ```  
   
- 次の表は、リボン XML ファイルの既定の要素について説明しています。  
+ The following table describes the default elements in the Ribbon XML file.  
   
-|要素|説明|  
-|--------|--------|  
-|**customUI**|VSTO アドイン プロジェクトのカスタム リボンを表します。|  
-|**ribbon**|リボンを表します。|  
-|**tabs**|\[リボン\] タブのセットを表します。|  
-|**tab**|単独の \[リボン\] タブを表します。|  
-|**group**|\[リボン\] タブのコントロールのグループを表します。|  
+|Element|Description|  
+|-------------|-----------------|  
+|**customUI**|Represents the custom Ribbon in the VSTO Add-in project.|  
+|**ribbon**|Represents the Ribbon.|  
+|**tabs**|Represents a set of Ribbon tabs.|  
+|**tab**|Represents a single Ribbon tab.|  
+|**group**|Represents a group of controls on the Ribbon tab.|  
   
- これらの要素には、カスタム リボンの動作と外観を指定する属性があります。 次の表は、リボン XML ファイルの既定の属性について説明しています。  
+ These elements have attributes that specify the appearance and behavior of the custom Ribbon. The following table describes the default attributes in the Ribbon XML file.  
   
-|属性|親要素|説明|  
-|--------|---------|--------|  
-|**onLoad**|**customUI**|アプリケーションがリボンを読み込むときに呼び出されるメソッドを識別します。|  
-|**idMso**|**tab**|リボンに表示する組み込みタブを識別します。|  
-|**id**|**group**|グループを識別します。|  
-|**label**|**group**|グループに表示するテキストを指定します。|  
+|Attribute|Parent element|Description|  
+|---------------|--------------------|-----------------|  
+|**onLoad**|**customUI**|Identifies a method that is called when the application loads the Ribbon.|  
+|**idMso**|**tab**|Identifies a built-in tab to display in the Ribbon.|  
+|**id**|**group**|Identifies the group.|  
+|**label**|**group**|Specifies the text that appears on the group.|  
   
- リボン XML ファイルの既定の要素と属性は、使用できる要素と属性の小さなサブセットです。 使用可能な要素と属性の完全な一覧については、技術記事「[2007 Office Fluent リボンをカスタマイズする \(開発者向け\) \(パート 2\/3\)](http://msdn.microsoft.com/ja-jp/6b904f55-525f-4520-9b81-a017db65657b)」を参照してください。  
+ The default elements and attributes in the Ribbon XML file are a small subset of the elements and attributes that are available. For a complete list of the available elements and attributes, see the technical article [Customizing the Office (2007) Ribbon User Interface for Developers (Part 2 of 3)](http://msdn.microsoft.com/en-us/6b904f55-525f-4520-9b81-a017db65657b).  
   
-##  <a name="RibbonExtensionClass"></a> リボン クラスのリファレンス  
- Visual Studio は、リボン コード ファイルにリボン クラスを生成します。 このクラスに、リボン上のコントロールのコールバック メソッドを追加します。 このクラスは、<xref:Microsoft.Office.Core.IRibbonExtensibility> インターフェイスを実装します。  
+##  <a name="RibbonExtensionClass"></a> Ribbon Class Reference  
+ Visual Studio generates the Ribbon class in the Ribbon code file. Add the callback methods for controls on the Ribbon to this class. This class implements the <xref:Microsoft.Office.Core.IRibbonExtensibility> interface.  
   
- 次の表はこのクラスの既定のメソッドについて説明しています。  
+ The following table describes the default methods in this class.  
   
-|メソッド|説明|  
-|----------|--------|  
-|`GetCustomUI`|リボン XML ファイルの内容を返します。 Microsoft Office アプリケーションはこのメソッドを呼び出して、カスタム リボンのユーザー インターフェイスを定義する XML 文字列を取得します。 このメソッドは、<xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> メソッドを実装します。 **Note:**  `GetCustomUI` はリボンの実装は、XML ファイルの内容を返すだけにする必要があります。VSTO アドインを初期化するために使用してはいけません。 具体的には、`GetCustomUI` の実装で、ダイアログ ボックスや他のウィンドウを表示しようとしてはいけません。 カスタム リボンが正しく動作しない可能性があります。 VSTO アドインを初期化するコードを実行する必要がある場合は、そのコードを `ThisAddIn_Startup` イベント ハンドラーに追加します。|  
-|`OnLoad`|<xref:Microsoft.Office.Core.IRibbonControl> パラメーターを `ribbon` フィールドに割り当てます。 Microsoft Office アプリケーションは、カスタム リボンが読み込まれるときに、このメソッドを呼び出します。 このフィールドを使用すると、カスタムのリボンを動的に更新することができます。 詳細については、技術記事「[2007 Office Fluent リボンをカスタマイズする \(開発者向け\) \(パート 1\/3\)](http://msdn.microsoft.com/ja-jp/a4fd6d18-d4a8-4e64-bd89-f437208573d3)」を参照してください。|  
-|`GetResourceText`|`GetCustomUI` メソッドによって呼び出され、リボン XML ファイルの内容を取得します。|  
+|Method|Description|  
+|------------|-----------------|  
+|`GetCustomUI`|Returns the contents of the Ribbon XML file. Microsoft Office applications call this method to obtain an XML string that defines the user interface of your custom Ribbon. This method implements the <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> method. **Note:**  `GetCustomUI` should be implemented only to return the contents of the Ribbon XML file; it should not be used to initialize your VSTO Add-in. In particular, you should not try to display dialog boxes or other windows in your `GetCustomUI` implementation. Otherwise, the custom Ribbon might not behave correctly. If you have to run code that initializes your VSTO Add-in, add the code to the `ThisAddIn_Startup` event handler.|  
+|`OnLoad`|Assigns the <xref:Microsoft.Office.Core.IRibbonControl> parameter to the `ribbon` field. Microsoft Office applications call this method when they load the custom Ribbon. You can use this field to dynamically update the custom Ribbon. For more information, see the technical article [Customizing the Office (2007) Ribbon User Interface for Developers (Part 1 of 3)](http://msdn.microsoft.com/en-us/a4fd6d18-d4a8-4e64-bd89-f437208573d3).|  
+|`GetResourceText`|Called by the `GetCustomUI` method to obtain the contents of the Ribbon XML file.|  
   
-## 参照  
- [リボンの概要](../vsto/ribbon-overview.md)   
- [チュートリアル : リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)   
- [Office UI のカスタマイズ](../vsto/office-ui-customization.md)  
+## <a name="see-also"></a>See Also  
+ [Ribbon Overview](../vsto/ribbon-overview.md)   
+ [Walkthrough: Creating a Custom Tab by Using Ribbon XML](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)   
+ [Office UI Customization](../vsto/office-ui-customization.md)  
   
   

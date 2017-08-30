@@ -1,5 +1,5 @@
 ---
-title: "手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加 | Microsoft ドキュメント"
+title: 'Step 5: Add Enter Event Handlers for the NumericUpDown Controls | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,67 +28,66 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c4060c35d7bfd0f82cb05a7fbb99931fae0d1f1e
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: b5f12c71a894937ad452a31bf53e19e4fbb2d7a2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加
-このチュートリアルの第 5 部では、クイズ問題の解答の入力が少し楽になるように Enter イベント ハンドラーを追加します。 このコードは、クイズの受け手が選択して別の値の入力を開始するとすぐに、各 NumericUpDown コントロールの現在の値を選択し、クリアします。  
+# <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>Step 5: Add Enter Event Handlers for the NumericUpDown Controls
+In the fifth part of this tutorial, you'll add Enter event handlers to make entering answers for quiz problems a little easier. This code will select and clear the current value in each NumericUpDown control as soon as the quiz taker chooses it and starts to enter a different value.  
   
 > [!NOTE]
->  このトピックは、コーディングの基本概念に関するチュートリアル シリーズの一部です。 チュートリアルの概要については、「[チュートリアル 2: 制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。  
+>  This topic is part of a tutorial series about basic coding concepts. For an overview of the tutorial, see [Tutorial 2: Create a Timed Math Quiz](../ide/tutorial-2-create-a-timed-math-quiz.md).  
   
-### <a name="to-verify-the-default-behavior"></a>既定の動作を確認するには  
+### <a name="to-verify-the-default-behavior"></a>To verify the default behavior  
   
-1.  プログラムを実行し、クイズを開始します。  
+1.  Run your program, and start the quiz.  
   
-     加算問題の NumericUpDown コントロールで、カーソルが **0** (ゼロ) の横で点滅します。  
+     In the NumericUpDown control for the addition problem, the cursor flashes next to **0** (zero).  
   
-2.  「`3`」と入力すると、コントロールが **30** を示すことに注意してください。  
+2.  Enter `3`, and note that the control shows **30**.  
   
-3.  「`5`」と入力すると **350** と表示されますが、その後すぐに **100** に変わります。  
+3.  Enter `5`, and note that **350** appears but changes to **100** after a second.  
   
-     この問題を修正する前に、状況をまとめておきましょう。 「`3`」を入力したときに **0** が消えなかった理由、および **350** が **100** にすぐに変化しなかった理由を検討します。  
+     Before you fix this problem, think about what's happening. Consider why the **0** didn't disappear when you entered `3` and why **350** changed to **100** but not immediately.  
   
-     この動作は不適切に見えますが、コードのロジックからすると当然です。 **[Start]** ボタンをクリックすると、**Enabled** プロパティが **False** に設定され、ボタンは淡色表示になり使用できません。 プログラムは、加算問題の NumericUpDown コントロールである、次に小さい TabIndex 値を持つコントロールに現在の選択 (フォーカス) を変更します。 Tab キーを使用して NumericUpDown コントロールに移動すると、カーソルはそのコントロールの先頭に自動的に移動します。このため、入力した数値が右ではなく左から入力されます。 100 に設定されている、**MaximumValue** プロパティの値を超える数を指定すると、入力した数はそのプロパティの値に置き換えられます。  
+     This behavior may seem odd, but it makes sense given the logic of the code. When you choose the **Start** button, its **Enabled** property is set to **False**, and the button appears dimmed and is unavailable. Your program changes the current selection (focus) to the control that has the next lowest TabIndex value, which is the NumericUpDown control for the addition problem. When you use the Tab key to go to a NumericUpDown control, the cursor is automatically positioned at the start of the control, which is why the numbers that you enter appear from the left side and not the right side. When you specify a number that's higher than the value of the **MaximumValue** property, which is set to 100, the number that you enter is replaced with the value of that property.  
   
-### <a name="to-add-an-enter-event-handler-for-a-numericupdown-control"></a>NumericUpDown コントロールの Enter イベント ハンドラーを追加するには  
+### <a name="to-add-an-enter-event-handler-for-a-numericupdown-control"></a>To add an Enter event handler for a NumericUpDown control  
   
-1.  フォームの最初の NumericUpDown コントロール ("sum") を選択し、次に、**[プロパティ]** ダイアログ ボックスでツール バーの **[イベント]** アイコンをクリックします。  
+1.  Choose the first NumericUpDown control (named "sum") on the form, and then, in the **Properties** dialog box, choose the **Events** icon on the toolbar.  
   
-     **[プロパティ]** ダイアログ ボックスの **[イベント]** タブには、フォーム上で選択した項目に対して応答 (処理) できるイベントがすべて表示されます。 NumericUpDown コントロールを選択したため、そのコントロールに関係のあるすべてのイベントが一覧に表示されます。  
+     The **Events** tab in the **Properties** dialog box displays all of the events that you can respond to (handle) for the item that you choose on the form. Because you chose the NumericUpDown control, all of the events listed pertain to it.  
   
-2.  **Enter** イベントをクリックし、「`answer_Enter`」と入力して、Enter キーを押します。  
+2.  Choose the **Enter** event, enter `answer_Enter`, and then choose the Enter key.  
   
-     ![[プロパティ] ダイアログ ボックス](~/ide/media/express_answerenter.png "Express_AnswerEnter")  
-[プロパティ] ダイアログ ボックス  
+     ![Properties dialog box](../ide/media/express_answerenter.png "Express_AnswerEnter")  
+Properties dialog box  
   
-     sum NumericUpDown コントロールの Enter イベント ハンドラーを追加し、そのハンドラーに **answer_Enter** という名前を付けます。  
+     You've just added an Enter event handler for the sum NumericUpDown control, and you've named the handler **answer_Enter**.  
   
-3.  **answer_Enter** イベント ハンドラーのメソッドに、次のコードを追加します。  
+3.  In the method for the **answer_Enter** event handler, add the following code.  
   
-     [!code-vb[VbExpressTutorial3Step5_6#11](../ide/codesnippet/VisualBasic/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.vb)]
-     [!code-cs[VbExpressTutorial3Step5_6#11](../ide/codesnippet/CSharp/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.cs)]  
+     [!code-vb[VbExpressTutorial3Step5_6#11](../ide/codesnippet/VisualBasic/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.vb)]  [!code-csharp[VbExpressTutorial3Step5_6#11](../ide/codesnippet/CSharp/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.cs)]  
   
-     このコードは複雑に見えますが、順番に見ていけば理解できます。 まず、メソッドの先頭の部分 (C# の場合は `object sender`、Visual Basic の場合は `sender As System.Object`) を見てください。 このパラメーターは、sender と呼ばれる、イベントが発生しているオブジェクトを参照します。 この場合、sender オブジェクトは NumericUpDown コントロールです。 したがって、メソッドの 1 行目で、sender が汎用オブジェクトではなく、具体的に NumericUpDown コントロールであると指定します。 (NumericUpDown コントロールはいずれもオブジェクトですが、オブジェクトがすべて NumericUpDown コントロールであるとは限りません)。NumericUpDown コントロールはこのメソッドで **answerBox** と名付けられます。これは、sum NumericUpDown コントロールだけではなく、フォームのすべての NumericUpDown コントロールに使用されるためです。 このメソッドで answerBox 変数を宣言するため、そのスコープはこのメソッドにのみ適用されます。 つまり、変数はこのメソッド内でのみ使用できます。  
+     This code may look complex, but you can understand it if you look at it step by step. First, look at the top of the method: `object sender` in C# or `sender As System.Object` in Visual Basic. This parameter refers to the object whose event is firing, which is known as the sender. In this case, the sender object is the NumericUpDown control. So, in the first line of the method, you specify that the sender isn't just any generic object but specifically a NumericUpDown control. (Every NumericUpDown control is an object, but not every object is a NumericUpDown control.) The NumericUpDown control is named **answerBox** in this method, because it will be used for all of the NumericUpDown controls on the form, not just the sum NumericUpDown control. Because you declare the answerBox variable in this method, its scope applies only to this method. In other words, the variable can be used only within this method.  
   
-     次の行では、answerBox がオブジェクトから NumericUpDown コントロールに正常に変換 (キャスト) されたかどうかを確認しています。 変換が成功しなかったときは、変数は `null` (C#) または `Nothing` (Visual Basic) の値になります。 3 行目は NumericUpDown コントロールに表示される解答の長さを取得し、4 行目はこの長さに基づいてコントロールの現在の値を選択します。 これで、クイズの受け手がコントロールを選択すると、Visual Studio がこのイベントを発生させ、現在の解答が選択されます。 クイズの受け手が別の解答の入力を開始するとすぐに、前の解答がクリアされて新しい解答に置き換えられます。  
+     The next line verifies whether answerBox was successfully converted (cast) from an object to a NumericUpDown control. If the conversion was unsuccessful, the variable would have a value of `null` (C#) or `Nothing` (Visual Basic). The third line gets the length of the answer that appears in the NumericUpDown control, and the fourth line selects the current value in the control based on this length. Now, when the quiz taker chooses the control, Visual Studio fires this event, which causes the current answer to be selected. As soon as the quiz taker starts to enter a different answer, the previous answer is cleared and replaced with the new answer.  
   
-4.  Windows フォーム デザイナーで、difference NumericUpDown コントロールを選択します。  
+4.  In Windows Forms Designer, choose the difference NumericUpDown control.  
   
-5.  **[プロパティ]** ダイアログ ボックスの **[イベント]** ページで、**Enter** イベントまでスクロールし、行の末尾にあるドロップダウン矢印をクリックし、追加した `answer_Enter` イベント ハンドラーを選択します。  
+5.  In the **Events** page of the **Properties** dialog box, scroll down to the **Enter** event, choose the drop-down arrow at the end of the row, and then choose the `answer_Enter` event handler that you just added.  
   
-6.  product および quotient の各 NumericUpDown コントロールに対して、前の手順を繰り返します。  
+6.  Repeat the previous step for the product and quotient NumericUpDown controls.  
   
-7.  プログラムを保存し、実行します。  
+7.  Save your program, and then run it.  
   
-     NumericUpDown コントロールを選択すると、既存の値が自動的に選択され、別の値を入力を開始するとクリアされます。  
+     When you choose a NumericUpDown control, the existing value is automatically selected and then cleared when you start to enter a different value.  
   
-### <a name="to-continue-or-review"></a>続行または確認するには  
+### <a name="to-continue-or-review"></a>To continue or review  
   
--   チュートリアルの次の手順に進むには、「[手順 6: 減算問題の追加](../ide/step-6-add-a-subtraction-problem.md)」を参照してください。  
+-   To go to the next tutorial step, see [Step 6: Add a Subtraction Problem](../ide/step-6-add-a-subtraction-problem.md).  
   
--   チュートリアルの前の手順に戻るには、「[手順 4: CheckTheAnswer() メソッドの追加](../ide/step-4-add-the-checktheanswer-parens-method.md)」を参照してください。
+-   To return to the previous tutorial step, see [Step 4: Add the CheckTheAnswer() Method](../ide/step-4-add-the-checktheanswer-parens-method.md).

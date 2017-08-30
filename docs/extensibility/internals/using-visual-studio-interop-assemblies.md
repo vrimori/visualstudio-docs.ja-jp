@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio の相互運用機能アセンブリを使用する |Microsoft ドキュメント"
+title: Using Visual Studio Interop Assemblies | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,52 +30,51 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 9762ba0404e739c167cadc3e9d3106c7f3ee14e8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 5d4b825b33339367ee331eb74aa2eb210c85206c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="using-visual-studio-interop-assemblies"></a>Visual Studio の相互運用機能アセンブリを使用します。
-Visual Studio の相互運用機能アセンブリでは、マネージ アプリケーションが Visual Studio 拡張機能を提供する COM インターフェイスへのアクセスを許可します。 いくつかの違いは、直線の COM インターフェイスとその相互運用機能のバージョンがあります。 たとえば、Hresult は、通常、整数値として表されます例外と同じ方法で処理する必要と (特に out パラメーター) のパラメーターの処理と異なります。  
+# <a name="using-visual-studio-interop-assemblies"></a>Using Visual Studio Interop Assemblies
+Visual Studio interop assemblies allow managed applications to access the COM interfaces that provide Visual Studio extensibility. There are some differences between straight COM interfaces and their interop versions. For example, HRESULTs are generally represented as int values and need to be handled in the same way as exceptions, and parameters (especially out parameters) are treated differently.  
   
-## <a name="handling-hresults-returned-to-managed-code-from-com"></a>COM からマネージ コードに返される HRESULT の処理  
- マネージ コードから COM インターフェイスを呼び出す場合は、HRESULT 値を確認し、必要な場合に例外をスローします。 <xref:Microsoft.VisualStudio.ErrorHandler>クラスには、<xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>それに渡された HRESULT の値に応じて、COM 例外をスローするメソッド</xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>が含まれています。</xref:Microsoft.VisualStudio.ErrorHandler>  
+## <a name="handling-hresults-returned-to-managed-code-from-com"></a>Handling HRESULTs Returned to Managed Code from COM  
+ When you call a COM interface from managed code, examine the HRESULT value and throw an exception if required. The <xref:Microsoft.VisualStudio.ErrorHandler> class contains the <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> method, which throws a COM exception, depending on the value of the HRESULT passed to it.  
   
- 既定では、<xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>を&0; より小さい値を持つ HRESULT を渡される場合は例外をスローします</xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>。 このような Hresult が許容される値と、例外をスローする必要がありますに追加する HRESULT の値を渡す必要が<xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>、値がテストした後</xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>。 テスト対象の HRESULT に明示的に渡す任意の HRESULT 値と一致するかどうかは<xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>、例外はスローされません</xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>。  
-  
-> [!NOTE]
->  <xref:Microsoft.VisualStudio.VSConstants>クラスに含まれる定数の一般的な HRESULT は、たとえば、<xref:Microsoft.VisualStudio.VSConstants.S_OK>と<xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL>、および[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA> <xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT>.</xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT></xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>などの HRESULT</xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> </xref:Microsoft.VisualStudio.VSConstants.S_OK> </xref:Microsoft.VisualStudio.VSConstants> <xref:Microsoft.VisualStudio.VSConstants>また、<xref:Microsoft.VisualStudio.ErrorHandler.Succeeded%2A>および<xref:Microsoft.VisualStudio.ErrorHandler.Failed%2A>COM の成功と失敗のマクロに対応する方法</xref:Microsoft.VisualStudio.ErrorHandler.Failed%2A></xref:Microsoft.VisualStudio.ErrorHandler.Succeeded%2A></xref:Microsoft.VisualStudio.VSConstants>  
-  
- たとえば、次の関数呼び出しを<xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL>は許容可能な戻り値が他の HRESULT エラーがゼロより小さいを表します</xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL>。  
-  
- [!code-vb[VSSDKHRESULTInformation&1;](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_1.vb) ] 
- [!code-cs [VSSDKHRESULTInformation&1;](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_1.cs)]  
-  
- 1 つ以上使用可能な戻り値がある場合は、 <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>。</xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>への呼び出しでリストに追加の HRESULT 値だけできます。 追加できます。  
-  
- [!code-vb[VSSDKHRESULTInformation&2;](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_2.vb) ] 
- [!code-cs [VSSDKHRESULTInformation&2;](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_2.cs)]  
-  
-## <a name="returning-hresults-to-com-from-managed-code"></a>マネージ コードから COM に HRESULT を返す  
- マネージ コードが<xref:Microsoft.VisualStudio.VSConstants.S_OK>それを呼び出すことは COM 関数に</xref:Microsoft.VisualStudio.VSConstants.S_OK>戻る場合は例外が発生しません。 COM 相互運用では、マネージ コードで厳密に型指定される一般的な例外がサポートされます。 たとえばを受け取るメソッドを許容できない`null`引数<xref:System.ArgumentNullException>.</xref:System.ArgumentNullException>をスローします。  
-  
- 使用することができますを COM に戻したいされていない例外をスローすると、HRESULT がわかっている場合、<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>適切な例外をスローするメソッド</xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。 これは、動作も非標準のエラーなど<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>。</xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA> <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>HRESULT をマップしようは、厳密に型指定の例外には、それに渡されます。</xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> できない場合は、代わりに一般的な COM 例外をスローします。 最終的には、HRESULT を渡すことを<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>マネージ コードからそれを呼び出す COM 関数に返されます</xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>  
+ By default, <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> throws an exception whenever it is passed an HRESULT that has a value less than zero. In cases where such HRESULTs are acceptable values and no exception should be thrown, the values of additional HRESULTS should be passed to <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> after the values are tested. If the HRESULT being tested matches any HRESULT values explicitly passed to <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>, no exception is thrown.  
   
 > [!NOTE]
->  例外によって、パフォーマンスが低下します。例外は、異常なプログラムの条件を示すことを目的としています。 頻繁に発生する条件は、スローされた例外ではなく、インラインで処理をする必要があります。  
+>  The <xref:Microsoft.VisualStudio.VSConstants> class contains constants for common HRESULTS, for example, <xref:Microsoft.VisualStudio.VSConstants.S_OK> and <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL>, and [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] HRESULTS, for example, <xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA> and <xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT>. <xref:Microsoft.VisualStudio.VSConstants> also provides the <xref:Microsoft.VisualStudio.ErrorHandler.Succeeded%2A> and <xref:Microsoft.VisualStudio.ErrorHandler.Failed%2A> methods, which correspond to the SUCCEEDED and FAILED macros in COM.  
   
-## <a name="iunknown-parameters-passed-as-type-void"></a>IUnknown パラメーターの型 void * * として渡されます  
- [Out] パラメーター型として定義されている探します`void **`、COM では、としてインターフェイスでは、それを定義します。`[``iid_is``]`で、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]相互運用機能アセンブリのメソッドのプロトタイプです。  
+ For example, consider the following function call, in which <xref:Microsoft.VisualStudio.VSConstants.E_NOTIMPL> is an acceptable return value but any other HRESULT less than zero represents an error.  
   
- 場合によっては、COM インターフェイスを生成、`IUnknown`オブジェクト、および COM インターフェイス、として渡します型`void **`します。 これらのインターフェイスは特に重要ですのでとして変数が定義されている場合、IDL では、[出力].、`IUnknown`オブジェクトは、参照カウントを`AddRef`メソッドです。 オブジェクトが正しく処理されない場合は、メモリ リークが発生します。  
+ [!code-vb[VSSDKHRESULTInformation#1](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_1.vb)] [!code-csharp[VSSDKHRESULTInformation#1](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_1.cs)]  
+  
+ If there are more than one acceptable return values, additional HRESULT values can just be appended to the list in the call to <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A>.  
+  
+ [!code-vb[VSSDKHRESULTInformation#2](../../extensibility/internals/codesnippet/VisualBasic/using-visual-studio-interop-assemblies_2.vb)] [!code-csharp[VSSDKHRESULTInformation#2](../../extensibility/internals/codesnippet/CSharp/using-visual-studio-interop-assemblies_2.cs)]  
+  
+## <a name="returning-hresults-to-com-from-managed-code"></a>Returning HRESULTS to COM from Managed Code  
+ If no exception occurs, managed code returns <xref:Microsoft.VisualStudio.VSConstants.S_OK> to the COM function that called it. COM interop supports common exceptions that are strongly typed in managed code. For example, a method that receives an unacceptable `null` argument throws an <xref:System.ArgumentNullException>.  
+  
+ If you are not certain which exception to throw, but you know the HRESULT you want to return to COM, you can use the <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> method to throw an appropriate exception. This works even with a nonstandard error, for example, <xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>. <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> attempts to map the HRESULT passed to it to a strongly typed exception. If it cannot, it throws a generic COM exception instead. The ultimate result is that the HRESULT you pass to <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> from managed code is returned to the COM function that called it.  
   
 > [!NOTE]
->  `IUnknown`が明示的に解放されない場合、COM インターフェイスによって作成され、[out] 変数で返されるオブジェクトがメモリ リークを発生します。  
+>  Exceptions compromise performance and are intended to indicate abnormal program conditions. Conditions that occur often should be handled inline, instead of a thrown exception.  
   
- このようなオブジェクトを処理するマネージ メソッドを扱う必要があります<xref:System.IntPtr>へのポインターとして、`IUnknown`オブジェクト、および呼び出し、<xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A>オブジェクトを取得するメソッド</xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A></xref:System.IntPtr>。 呼び出し元は、どのような型の適切な戻り値をキャストする必要があります。 オブジェクトが不要になったときに<xref:System.Runtime.InteropServices.Marshal.Release%2A>それを解放する</xref:System.Runtime.InteropServices.Marshal.Release%2A>呼び出し  
+## <a name="iunknown-parameters-passed-as-type-void"></a>IUnknown parameters passed as Type void**  
+ Look for [out] parameters that are defined as type `void **` in the COM interface, but that are defined as `[``iid_is``]` in the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interop assembly method prototype.  
   
- 呼び出しの例を次に示します、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A>メソッドと処理、`IUnknown`正しくオブジェクト:</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A>  
+ Sometimes, a COM interface generates an `IUnknown` object, and the COM interface then passes it as type `void **`. These interfaces are especially important because if the variable is defined as [out] in the IDL, then the `IUnknown` object is reference-counted with the `AddRef` method. A memory leak occurs if the object is not handled correctly.  
+  
+> [!NOTE]
+>  An `IUnknown` object created by the COM interface and returned in an [out] variable causes a memory leak if it is not explicitly released.  
+  
+ Managed methods that handle such objects should treat <xref:System.IntPtr> as a pointer to an `IUnknown` object, and call the <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> method to obtain the object. The caller should then cast the return value to whatever type is appropriate. When the object is no longer needed, call <xref:System.Runtime.InteropServices.Marshal.Release%2A> to release it.  
+  
+ Following is an example of calling the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A> method and handling the `IUnknown` object correctly:  
   
 ```  
 MyClass myclass;  
@@ -102,50 +101,50 @@ else
 ```  
   
 > [!NOTE]
->  渡すため、次の方法が呼ばれる`IUnknown` <xref:System.IntPtr>.</xref:System.IntPtr>の種類としてのポインターをオブジェクト このセクションで説明されているとは、それらを処理します。  
+>  The following methods are known to pass `IUnknown` object pointers as type <xref:System.IntPtr>. Handle them as described in this section.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A></xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.InitializeForOwner%2A></xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.InitializeForOwner%2A>  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.InitializeForOwner%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetNestedHierarchy%2A></xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetNestedHierarchy%2A>  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetNestedHierarchy%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.CreateProject%2A></xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.CreateProject%2A>  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.CreateProject%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A></xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A>  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.QueryViewInterface%2A>  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A></xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>  
   
-## <a name="optional-out-parameters"></a>[Out] パラメーターは省略可能です  
- [Out] として定義されているパラメーターを探しますデータ型 (`int`、`object`など)、COM で同じデータ型の配列としてインターフェイスでは、それを定義します。、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]相互運用機能アセンブリのメソッドのプロトタイプです。  
+## <a name="optional-out-parameters"></a>Optional [out] Parameters  
+ Look for parameters that are defined as an [out] data type (`int`, `object`, and so on) in the COM interface, but that are defined as arrays of the same data type in the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interop assembly method prototype.  
   
- いくつかの COM インターフェイスなど<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A>、[out] パラメーターを省略可能として扱います</xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A>。 これらの COM インターフェイスを返すかどうかは、オブジェクトが必要ない、 `null` [out] オブジェクトを作成する代わりにパラメーターの値としてのポインター。 これは仕様に基づく制限事項です。 これらのインターフェイスの`null`ポインターは、VSPackage を正常に動作の一部としてと見なされ、エラーは返されません。  
+ Some COM interfaces, such as <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A>, treat [out] parameters as optional. If an object is not required, these COM interfaces return a `null` pointer as the value of that parameter instead of creating the [out] object. This is by design. For these interfaces, `null` pointers are assumed as part of the correct behavior of the VSPackage, and no error is returned.  
   
- CLR がである [out] パラメーターの値を許可していないので`null`、これらのインターフェイスの設計上の動作のパーツをマネージ コード内で直接使用できません。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]影響を受けるインターフェイスの相互運用機能アセンブリのメソッドは、CLR の通過を許可しているので、配列として適切なパラメーターを定義することで問題を回避する`null`配列。  
+ Because the CLR does not allow the value of an [out] parameter to be `null`, part of the designed behavior of these interfaces is not directly available within managed code. The [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interop assembly methods for affected interfaces work around the issue by defining the relevant parameters as arrays because the CLR allows the passing of `null` arrays.  
   
- これらのメソッドのマネージ実装を配置する必要があります、`null`は何も返されるときに、パラメーターの配列。 それ以外の場合、適切な型の&1; つの要素の配列を作成し、戻り値を配列に格納します。  
+ Managed implementations of these methods should put a `null` array into the parameter when there is nothing to be returned. Otherwise, create a one-element array of the correct type and put the return value in the array.  
   
- 省略可能な [out] とのインターフェイスから情報を受け取るメソッドのマネージ パラメーターが配列としてパラメーターを受け取ります。 配列の最初の要素の値を調べる。 ない場合は`null`、元のパラメーターの場合と同様に、最初の要素を処理します。  
+ Managed methods that receive information from interfaces with optional [out] parameters receive the parameter as an array. Just examine the value of the first element of the array. If it is not `null`, treat the first element as if it were the original parameter.  
   
-## <a name="passing-constants-in-pointer-parameters"></a>ポインター パラメーターの引き渡し定数  
- 検索パラメーターで定義されているように [] で、COM インターフェイス ポインターとして定義されている、<xref:System.IntPtr>入力、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]相互運用機能アセンブリのメソッドのプロトタイプ</xref:System.IntPtr>。  
+## <a name="passing-constants-in-pointer-parameters"></a>Passing Constants in Pointer Parameters  
+ Look for parameters that are defined as [in] pointers in the COM interface, but that are defined as a <xref:System.IntPtr> type in the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interop assembly method prototype.  
   
- 同様の問題は、COM インターフェイスには、0、-1、またはオブジェクト ポインターではなく、– 2 などの特殊な値が渡されたときに発生します。 異なり[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]CLR では、定数をオブジェクトとしてキャストすることはできません。 代わりに、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]相互運用機能アセンブリを定義、パラメーターとして、<xref:System.IntPtr>型です</xref:System.IntPtr>。  
+ A similar issue occurs when a COM interface passes a special value, such as 0, -1, or -2, instead of an object pointer. Unlike [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)], the CLR does not allow constants to be cast as objects. Instead, the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interop assembly defines the parameter as a <xref:System.IntPtr> type.  
   
- これらのメソッドのマネージ実装を活用して、ファクトを<xref:System.IntPtr>クラスには両方とも`int`と`void *`コンス トラクターを作成、<xref:System.IntPtr>オブジェクトまたは整数定数で、必要に応じて</xref:System.IntPtr></xref:System.IntPtr>。  
+ Managed implementations of these methods should take advantage of the fact that the <xref:System.IntPtr> class has both `int` and `void *` constructors to create an <xref:System.IntPtr> from either an object or an integer constant, as appropriate.  
   
- 受け取るメソッドのマネージ<xref:System.IntPtr>この型のパラメーターを使用する必要があります、<xref:System.IntPtr>結果を処理する変換演算子を入力します</xref:System.IntPtr></xref:System.IntPtr>。 最初の変換、<xref:System.IntPtr>に`int`し関連する整数の定数に対してテストします</xref:System.IntPtr>。 値と一致しない場合は、必要な型のオブジェクトに変換し、続行します。  
+ Managed methods that receive <xref:System.IntPtr> parameters of this type should use the <xref:System.IntPtr> type conversion operators to handle the results. First convert the <xref:System.IntPtr> to `int` and test it against relevant integer constants. If no values match, convert it to an object of the required type and continue.  
   
- この例については、「 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenSpecificEditor%2A>.</xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenSpecificEditor%2A></xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>の使用」を参照していますください。  
+ For examples of this, see <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> and <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenSpecificEditor%2A>.  
   
-## <a name="ole-return-values-passed-as-out-parameters"></a>OLE 返す値として渡された [out] パラメーター  
- 持つメソッドの検索、 `retval` COM インターフェイスで戻り値が、`int`値と追加 [出力] 配列パラメーターを返す、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]相互運用機能アセンブリのメソッドのプロトタイプです。 クリアのために、これらのメソッドが特別な処理を必要とすることが、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]相互運用機能アセンブリのメソッドのプロトタイプがある COM インターフェイスのメソッドよりも&1; つのパラメーターです。  
+## <a name="ole-return-values-passed-as-out-parameters"></a>OLE Return Values Passed as [out] Parameters  
+ Look for methods that have a `retval` return value in the COM interface, but that have an `int` return value and an additional [out] array parameter in the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interop assembly method prototype. It should be clear that these methods require special handling because the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interop assembly method prototypes have one more parameter than the COM interface methods.  
   
- OLE のアクティビティを処理する多くの COM インターフェイスに格納されている呼び出し元のプログラムに戻る OLE 状態に関する情報を送信する、`retval`インターフェイスの値を返します。 対応する、戻り値を使用する代わりに[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]相互運用機能アセンブリのメソッドを呼び出し元のプログラムが [out] に格納されている情報を送信するパラメーターの配列。  
+ Many COM interfaces that deal with OLE activity send information about OLE status back to the calling program stored in the `retval` return value of the interface. Instead of using a return value, the corresponding [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] interop assembly methods send the information back to the calling program stored in an [out] array parameter.  
   
- これらのメソッドのマネージ実装は、[out] パラメーターと同じ型の単一要素の配列を作成し、パラメーターに格納する必要があります。 配列の要素の値が適切な COM の場合と同じにする必要があります`retval`します。  
+ Managed implementations of these methods should create a single-element array of the same type as the [out] parameter and put it in the parameter. The value of the array element should be the same as the appropriate COM `retval`.  
   
- この型のインターフェイスを呼び出すマネージ メソッドには、[出力] 配列から最初の要素をプルする必要があります。 この要素は、場合と同様に扱うことができます、`retval`対応する COM インターフェイスから値を返します。  
+ Managed methods that call interfaces of this type should pull the first element out of the [out] array. This element can be treated as if it were a `retval` return value from the corresponding COM interface.  
   
-## <a name="see-also"></a>関連項目  
- [アンマネージ コードとの相互運用](http://msdn.microsoft.com/Library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)
+## <a name="see-also"></a>See Also  
+ [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)

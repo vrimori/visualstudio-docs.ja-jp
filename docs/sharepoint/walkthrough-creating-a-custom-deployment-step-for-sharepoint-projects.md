@@ -1,317 +1,321 @@
 ---
-title: "Walkthrough: Creating a Custom Deployment Step for SharePoint Projects"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SharePoint commands"
-  - "SharePoint development in Visual Studio, extending deployment"
+title: 'Walkthrough: Creating a Custom Deployment Step for SharePoint Projects | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint commands
+- SharePoint development in Visual Studio, extending deployment
 ms.assetid: 4ba2d120-06b8-4ef3-84eb-c6c50ced9d82
 caps.latest.revision: 63
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 62
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 884ff540c52d6ea684e5fbd84af6289cd461e4f7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# Walkthrough: Creating a Custom Deployment Step for SharePoint Projects
-  SharePointプロジェクトを配置する場合、Visual Studioは、特定の順序で一連の配置手順が実行されます。  Visual Studio には、さまざまな組み込みの配置手順が用意されていますが、配置手順を独自に作成することもできます。  
+# <a name="walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects"></a>Walkthrough: Creating a Custom Deployment Step for SharePoint Projects
+  When you deploy a SharePoint project, Visual Studio executes a series of deployment steps in a specific order. Visual Studio includes many built-in deployment steps, but you can also create your own.  
   
- このチュートリアルでは、SharePointで実行しているサーバーのソリューションをアップグレードするカスタムの配置手順を作成します。  Visual Studioは、多くのタスク、このような取り消すか、または追加ソリューションの組み込みの配置手順が含まれますが、ソリューションをアップグレードするための配置手順が含まれていません。  SharePointソリューションを配置すると、既定では、Visual Studioは、まずソリューション \(既に配置されている場合\) 取り消し、ソリューション全体を再配置します。  組み込みの配置手順の詳細については、「[SharePoint ソリューションのパッケージの配置、発行、アップグレード](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)」を参照してください。  
+ In this walkthrough, you will create a custom deployment step to upgrade solutions on a server that's running SharePoint. Visual Studio includes built-in deployment steps for many tasks, such retracting or adding solutions, but it doesn't include a deployment step for upgrading solutions. By default, when you deploy a SharePoint solution, Visual Studio first retracts the solution (if it's already deployed) and then redeploys the entire solution. For more information about the built-in deployment steps, see [Deploying, Publishing, and Upgrading SharePoint Solution Packages](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md).  
   
- このチュートリアルでは、次のタスクを実行します。  
+ This walkthrough demonstrates the following tasks:  
   
--   次の 2 つの主要タスクを実行する Visual Studio の拡張機能を作成する。  
+-   Creating a Visual Studio extension that performs two main tasks:  
   
-    -   拡張機能では、SharePointソリューションのアップグレードするカスタムの配置手順を定義します。  
+    -   The extension defines a custom deployment step to upgrade SharePoint solutions.  
   
-    -   拡張子は、特定のプロジェクトについて実行される一連の配置手順ですが、新しい配置構成を定義する、プロジェクトの拡張機能を作成します。  新しい配置構成には、カスタムの配置手順と、いくつかの組み込みの配置手順が含まれます。  
+    -   The extension creates a project extension that defines a new deployment configuration, which is a set of deployment steps that are executed for a given project. The new deployment configuration includes the custom deployment step and several built-in deployment steps.  
   
--   拡張機能アセンブリが呼び出す2とおりのカスタムSharePointコマンドを作成します。  SharePointコマンドは、SharePointのサーバー オブジェクト モデルのAPIを使用する拡張機能のアセンブリから呼び出すことのできるメソッドです。  詳細については、「[Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md)」を参照してください。  
+-   Creating two custom SharePoint commands that the extension assembly calls. SharePoint commands are methods that can be called by extension assemblies to use APIs in the server object model for SharePoint. For more information, see [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md).  
   
--   両方のアセンブリを配置するための Visual Studio Extension \(VSIX\) パッケージを構築する。  
+-   Building a Visual Studio Extension (VSIX) package to deploy both of the assemblies.  
   
--   新しい配置手順をテストする。  
+-   Testing the new deployment step.  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components on the development computer to complete this walkthrough:  
   
--   Windows SharePoint、およびサポートされるVisual Studioのエディション。  詳細については、「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of Windows, SharePoint, and Visual Studio. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio SDK。  このチュートリアルでは、拡張機能を配置するための VSIX パッケージを、SDK の **VSIX プロジェクト** テンプレートを使用して作成します。  詳細については、「[Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)」を参照してください。  
+-   The Visual Studio SDK. This walkthrough uses the **VSIX Project** template in the SDK to create a VSIX package to deploy the extension. For more information, see [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).  
   
- 次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+ Knowledge of the following concepts is helpful, but not required, to complete the walkthrough:  
   
--   SharePointのサーバー オブジェクト モデルの使用。  詳細については、「[Using the SharePoint Foundation Server\-Side Object Model \(SharePoint Foundation Server 側オブジェクト モデルの使用\)](http://go.microsoft.com/fwlink/?LinkId=177796)」を参照してください。  
+-   Using the server object model for SharePoint. For more information, see [Using the SharePoint Foundation Server-Side Object Model](http://go.microsoft.com/fwlink/?LinkId=177796).  
   
--   SharePoint ソリューション。  詳細については、「[Solutions Overview \(ソリューションの概要\)](http://go.microsoft.com/fwlink/?LinkId=169422)」を参照してください。  
+-   SharePoint solutions. For more information, see [Solutions Overview](http://go.microsoft.com/fwlink/?LinkId=169422).  
   
--   SharePoint ソリューションのアップグレード。  詳細については、「[Upgrading a Solution \(ソリューションのアップグレード\)](http://go.microsoft.com/fwlink/?LinkId=177802)」を参照してください。  
+-   Upgrading SharePoint solutions. For more information, see [Upgrading a Solution](http://go.microsoft.com/fwlink/?LinkId=177802).  
   
-## プロジェクトの作成  
- このチュートリアルを完了するには、3種類のプロジェクトを作成する必要があります:  
+## <a name="creating-the-projects"></a>Creating the Projects  
+ To complete this walkthrough, you must create three projects:  
   
--   拡張機能を配置するために VSIX パッケージを作成する VSIX プロジェクト。  
+-   A VSIX project to create the VSIX package to deploy the extension.  
   
--   プロジェクトの拡張機能を実装するクラス ライブラリ プロジェクト。  このプロジェクトが.NET Framework 4.5を対象とする必要があります。  
+-   A class library project that implements the extension. This project must target the .NET Framework 4.5.  
   
--   カスタムの SharePoint コマンドを定義するクラス ライブラリ プロジェクト。  このプロジェクトが.NET Framework 3.5を対象とする必要があります。  
+-   A class library project that defines the custom SharePoint commands. This project must target the .NET Framework 3.5.  
   
- この 2 つのプロジェクトを作成することから始めます。  
+ Start the walkthrough by creating the projects.  
   
-#### VSIX プロジェクトを作成するには  
+#### <a name="to-create-the-vsix-project"></a>To create the VSIX project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  メニュー バーで **\[ファイル\]**、**\[新規\]**、**\[プロジェクト\]** の順にクリックします。  
+2.  On the menu bar, choose **File**, **New**, **Project**.  
   
-3.  **\[新しいプロジェクト\]** のダイアログ ボックスで、**\[Visual C\#\]** または **\[Visual Basic\]** のノードを展開し、**\[機能拡張\]** のノードを選択します。  
-  
-    > [!NOTE]  
-    >  **\[機能拡張\]** のノードは、Visual Studio SDKをインストールするときだけです。  詳細については、このトピックで前に説明した「前提条件」を参照してください。  
-  
-4.  ダイアログ ボックスの上部に、.NET Frameworkのバージョンの **\[.NET Framework 4.5\]** リストのを選択します。  
-  
-5.  **\[VSIX プロジェクト\]** テンプレートを選択し、プロジェクト **\[UpgradeDeploymentStep\]**を付けておくと、**\[OK\]** のボタンをクリックします。  
-  
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] の**ソリューション エクスプローラー**に **UpgradeDeploymentStep** プロジェクトが追加されます。  
-  
-#### 拡張機能プロジェクトを作成するには  
-  
-1.  **\[ソリューション エクスプローラー\]**では、UpgradeDeploymentStepソリューション ノードのショートカット メニューを開き、**\[追加\]**を選択し、を **\[新しいプロジェクト\]**を選択します。  
+3.  In the **New Project** dialog box, expand the **Visual C#** or **Visual Basic** nodes, and then choose the **Extensibility** node.  
   
     > [!NOTE]  
-    >  Visual Basic プロジェクトで**ソリューション エクスプローラー**にソリューション ノードが表示されるのは、[NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/ja-jp/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)の **\[常にソリューションを表示\]** チェック ボックスがオンになっている場合だけです。  
+    >  The **Extensibility** node is available only if you install the Visual Studio SDK. For more information, see the prerequisites section earlier in this topic.  
   
-2.  **\[新しいプロジェクト\]** のダイアログ ボックスで、**\[Visual C\#\]** または **\[Visual Basic\]** のノードを展開し、**\[ウィンドウ\]** のノードを選択します。  
+4.  At the top of the dialog box, choose **.NET Framework 4.5** in the list of versions of the .NET Framework.  
   
-3.  ダイアログ ボックスの上部に、.NET Frameworkのバージョンの **\[.NET Framework 4.5\]** リストのを選択します。  
+5.  Choose the **VSIX Project** template, name the project **UpgradeDeploymentStep**, and then choose the **OK** button.  
   
-4.  **\[クラス ライブラリ\]** のプロジェクト テンプレートを選択し、プロジェクト **\[DeploymentStepExtension\]**を付けておくと、**\[OK\]** のボタンをクリックします。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **UpgradeDeploymentStep** project to **Solution Explorer**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって、**DeploymentStepExtension** プロジェクトがソリューションに追加され、既定の Class1 コード ファイルが開きます。  
+#### <a name="to-create-the-extension-project"></a>To create the extension project  
   
-5.  Class1 コード ファイルをプロジェクトから削除します。  
-  
-#### SharePoint コマンド プロジェクトを作成するには  
-  
-1.  **\[ソリューション エクスプローラー\]**では、UpgradeDeploymentStepソリューション ノードのショートカット メニューを開き、**\[追加\]**を選択し、を **\[新しいプロジェクト\]**を選択します。  
+1.  In **Solution Explorer**, open the shortcut menu for the UpgradeDeploymentStep solution node, choose **Add**, and then choose **New Project**.  
   
     > [!NOTE]  
-    >  Visual Basic プロジェクトで**ソリューション エクスプローラー**にソリューション ノードが表示されるのは、[NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/ja-jp/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)の **\[常にソリューションを表示\]** チェック ボックスがオンになっている場合だけです。  
+    >  In Visual Basic projects, the solution node appears in **Solution Explorer** only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
   
-2.  **\[新しいプロジェクト\]** のダイアログ ボックスで、**\[Visual C\#\]** か **\[Visual Basic\]**を展開し、**\[ウィンドウ\]** のノードを選択します。  
+2.  In the **New Project** dialog box, expand the **Visual C#** or **Visual Basic** nodes, and then choose the **Windows** node.  
   
-3.  ダイアログ ボックスの上部に、.NET Frameworkのバージョンの **\[.NET Framework 3.5\]** リストのを選択します。  
+3.  At the top of the dialog box, choose **.NET Framework 4.5** in the list of versions of the .NET Framework.  
   
-4.  **\[クラス ライブラリ\]** のプロジェクト テンプレートを選択し、プロジェクト **\[SharePointCommands\]**を付けておくと、**\[OK\]** のボタンをクリックします。  
+4.  Choose the **Class Library** project template, name the project **DeploymentStepExtension**, and then choose the **OK** button.  
   
-     ソリューションに **SharePointCommands** プロジェクトが追加され、既定の Class1 コード ファイルが開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **DeploymentStepExtension** project to the solution and opens the default Class1 code file.  
   
-5.  Class1 コード ファイルをプロジェクトから削除します。  
+5.  Delete the Class1 code file from the project.  
   
-## プロジェクトの構成  
- カスタムの配置手順を作成するためのコードを記述する前に、コード ファイルおよびアセンブリ参照を追加してプロジェクトを構成する必要があります。  
+#### <a name="to-create-the-sharepoint-command-project"></a>To create the SharePoint command project  
   
-#### DeploymentStepExtension プロジェクトを構成するには  
+1.  In **Solution Explorer**, open the shortcut menu for the UpgradeDeploymentStep solution node, choose **Add**, and then choose **New Project**.  
   
-1.  **\[DeploymentStepExtension\]** のプロジェクトでは、次の名前を持つ2種類のコード ファイルを追加します:  
+    > [!NOTE]  
+    >  In Visual Basic projects, the solution node only appears in **Solution Explorer** when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
+  
+2.  In the **New Project** dialog box, expand **Visual C#** or **Visual Basic**, and then choose the **Windows** node.  
+  
+3.  At the top of the dialog box, choose **.NET Framework 3.5** in the list of versions of the .NET Framework.  
+  
+4.  Choose the **Class Library** project template, name the project **SharePointCommands**, and then choose the **OK** button.  
+  
+     Visual Studio adds the **SharePointCommands** project to the solution and opens the default Class1 code file.  
+  
+5.  Delete the Class1 code file from the project.  
+  
+## <a name="configuring-the-projects"></a>Configuring the Projects  
+ Before you write code to create the custom deployment step, you must add code files and assembly references, and you must configure the projects.  
+  
+#### <a name="to-configure-the-deploymentstepextension-project"></a>To configure the DeploymentStepExtension project  
+  
+1.  In the **DeploymentStepExtension** project, add two code files that have the following names:  
   
     -   UpgradeStep  
   
     -   DeploymentConfigurationExtension  
   
-2.  DeploymentStepExtensionプロジェクトのショートカット メニューを開き、**\[参照の追加\]**を選択します。  
+2.  Open the shortcut menu on the DeploymentStepExtension project, and then choose **Add Reference**.  
   
-3.  **\[Framework\]** のタブで、System.ComponentModel.Compositionアセンブリのチェック ボックスをオンにします。  
+3.  On the **Framework** tab, select the check box for the System.ComponentModel.Composition assembly.  
   
-4.  **\[拡張機能\]** のタブで、Microsoft.VisualStudio.SharePointアセンブリのチェック ボックスをオンにし、**\[OK\]** のボタンをクリックします。  
+4.  On the **Extensions** tab, select the check box for the Microsoft.VisualStudio.SharePoint assembly, and then choose the **OK** button.  
   
-#### SharePointCommands プロジェクトを構成するには  
+#### <a name="to-configure-the-sharepointcommands-project"></a>To configure the SharePointCommands project  
   
-1.  **\[SharePointCommands\]** のプロジェクトでは、Commandsという名前のコード ファイルを追加します。  
+1.  In the **SharePointCommands** project, add a code file that's named Commands.  
   
-2.  **\[ソリューション エクスプローラー\]**では、**\[SharePointCommands\]** のプロジェクト ノードのショートカット メニューを開き、**\[参照の追加\]**を選択します。  
+2.  In **Solution Explorer**, open the shortcut menu on the **SharePointCommands** project node, and then choose **Add Reference**.  
   
-3.  **\[拡張機能\]** のタブで、次のアセンブリのチェック ボックスをオンにし、を選択します **\[OK\]** のボタンをクリックします。  
+3.  On the **Extensions** tab, select the check boxes for the following assemblies, and then click choose the **OK** button  
   
     -   Microsoft.SharePoint  
   
     -   Microsoft.VisualStudio.SharePoint.Commands  
   
-## カスタムの配置手順の定義  
- アップグレードの配置手順を定義するクラスを作成します。  配置手順を定義するため、このクラスに <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep> インターフェイスを実装します。  このインターフェイスは、カスタムの配置手順を定義する場合に必ず実装します。  
+## <a name="defining-the-custom-deployment-step"></a>Defining the Custom Deployment Step  
+ Create a class that defines the upgrade deployment step. To define the deployment step, the class implements the <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep> interface. Implement this interface whenever you want to define a custom deployment step.  
   
-#### カスタムの配置手順を定義するには  
+#### <a name="to-define-the-custom-deployment-step"></a>To define the custom deployment step  
   
-1.  **\[DeploymentStepExtension\]** のプロジェクトでは、UpgradeStepコード ファイルを開き、そのファイルに次のコードを貼り付けます。  
-  
-    > [!NOTE]  
-    >  このコードを追加すると、いくつかのコンパイル エラーがありますが、後の手順のコードを追加すると解消されます。  
-  
-     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#1](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectextension.upgradedeploymentstep/CS/deploymentstepextension/upgradestep.cs#1)]
-     [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#1](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectextension.upgradedeploymentstep/vb/deploymentstepextension/upgradestep.vb#1)]  
-  
-## カスタムの配置手順を含んだ配置構成の作成  
- いくつかの組み込みの配置手順と新しいアップグレードの配置手順を含んだ新しい配置構成のプロジェクトの拡張機能を作成します。  この拡張機能を作成することにより、SharePoint開発者がSharePointプロジェクトにアップグレードの配置手順を使用できます。  
-  
- 配置構成を作成するため、このクラスに <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> インターフェイスを実装します。  このインターフェイスは、SharePoint プロジェクトの拡張機能を作成する場合に必ず実装します。  
-  
-#### 配置構成を作成するには  
-  
-1.  **\[DeploymentStepExtension\]** のプロジェクトでは、DeploymentConfigurationExtensionコード ファイルを開き、そのファイルに次のコードを貼り付けます。  
-  
-     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectextension.upgradedeploymentstep/CS/deploymentstepextension/deploymentconfigurationextension.cs#2)]
-     [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectextension.upgradedeploymentstep/vb/deploymentstepextension/deploymentconfigurationextension.vb#2)]  
-  
-## カスタム SharePoint コマンドの作成  
- SharePointのサーバー オブジェクト モデルを呼び出す2とおりのカスタム コマンドを作成します。  1 つはソリューションが配置済みかどうかを判断するコマンドで、もう 1 つはソリューションをアップグレードするコマンドです。  
-  
-#### SharePoint コマンドを定義するには  
-  
-1.  **\[SharePointCommands\]** のプロジェクトのCommandsコード ファイルを開き、そのファイルに次のコードを貼り付けます。  
-  
-     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#4](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectextension.upgradedeploymentstep/CS/SharePointCommands/Commands.cs#4)]
-     [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#4](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectextension.upgradedeploymentstep/vb/sharepointcommands/commands.vb#4)]  
-  
-## チェックポイント  
- この段階で、カスタムの配置手順および SharePoint コマンドに必要なすべてのコードがプロジェクトに揃ったことになります。  これらはコンパイル エラーが発生しないことを確認するために、それらをビルドします。  
-  
-#### プロジェクトをビルドするには  
-  
-1.  **\[ソリューション エクスプローラー\]**では、**\[DeploymentStepExtension\]** のプロジェクトのショートカット メニューを開き、**\[ビルド\]**を選択します。  
-  
-2.  **\[SharePointCommands\]** のプロジェクトのショートカット メニューを開き、**\[ビルド\]**を選択します。  
-  
-## 拡張機能を配置するための VSIX パッケージの作成  
- 拡張機能を配置するには、ソリューションで VSIX プロジェクトを使用して VSIX パッケージを作成します。  まず、VSIXプロジェクトのsource.extension.vsixmanifestファイルを変更して、VSIXパッケージを構成します。  ソリューションをビルドしてVSIXパッケージを作成します。  
-  
-#### VSIX パッケージを構成および作成するには  
-  
-1.  **\[ソリューション エクスプローラー\]**では、**\[UpgradeDeploymentStep\]** のプロジェクトの下で、を開き、**\[source.extension.vsixmanifest\]** ファイルのショートカット メニューで、を **\[開く\]**を選択します。  
-  
-     Visual Studio によってマニフェスト エディターでファイルが開きます。  source.extension.vsixmanifestファイルは、すべてのVSIXパッケージが必要とするextension.vsixmanifestファイルの基礎です。  このファイルの詳細については、「[VSIX 拡張機能のスキーマに関するリファレンス](http://msdn.microsoft.com/ja-jp/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)」を参照してください。  
-  
-2.  **\[製品名\]** ボックスに、**\[Upgrade Deployment Step for SharePoint Projects\]**を入力します。  
-  
-3.  **\[作成者\]** ボックスに、**\[Contoso\]**を入力します。  
-  
-4.  **\[説明\]** ボックスに、**SharePointプロジェクトで使用できるカスタム アップグレードの配置手順が用意されています。**を入力します。  
-  
-5.  エディターの **\[資産\]** のタブで、**\[新規作成\]** のボタンをクリックします。  
-  
-     **\[新しい資産の追加\]** のダイアログ ボックスが表示されます。  
-  
-6.  **\[種類\]** の一覧で、**\[Microsoft.VisualStudio.MefComponent\]**を選択します。  
+1.  In the **DeploymentStepExtension** project, open the UpgradeStep code file, and then paste the following code into it.  
   
     > [!NOTE]  
-    >  この値は、extension.vsixmanifest ファイル内の `MefComponent` 要素に対応します。  この要素は、VSIX パッケージ内の拡張機能アセンブリの名前を指定します。  詳細については、「[NIB: MEFComponent Element \(VSX Schema\)](http://msdn.microsoft.com/ja-jp/8a813141-8b73-44c9-b80b-ca85bbac9551)」を参照してください。  
+    >  After you add this code, the project will have some compile errors, but they'll go away when you add code in later steps.  
   
-7.  **\[ソース\]** の一覧で、**\[現在のソリューション内のプロジェクト\]**を選択します。  
+     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#1](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs#1)]  [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#1](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb#1)]  
   
-8.  **\[プロジェクト\]** の一覧で、**\[DeploymentStepExtension\]**を選択し、**\[OK\]** のボタンをクリックします。  
+## <a name="creating-a-deployment-configuration-that-includes-the-custom-deployment-step"></a>Creating a Deployment Configuration that Includes the Custom Deployment Step  
+ Create a project extension for the new deployment configuration, which includes several built-in deployment steps and the new upgrade deployment step. By creating this extension, you help SharePoint developers to use the upgrade deployment step in SharePoint projects.  
   
-9. マニフェスト エディターで、**\[新規作成\]** のボタンをもう一度クリックします。  
+ To create the deployment configuration, the class implements the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> interface. Implement this interface whenever you want to create a SharePoint project extension.  
   
-     **\[新しい資産の追加\]** のダイアログ ボックスが表示されます。  
+#### <a name="to-create-the-deployment-configuration"></a>To create the deployment configuration  
   
-10. **\[種類\]** の一覧で、**\[SharePoint.Commands.v4\]**を入力します。  
+1.  
+  
+2.  In the **DeploymentStepExtension** project, open the DeploymentConfigurationExtension code file, and then paste the following code into it.  
+  
+     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/deploymentconfigurationextension.cs#2)]  [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/deploymentconfigurationextension.vb#2)]  
+  
+## <a name="creating-the-custom-sharepoint-commands"></a>Creating the Custom SharePoint Commands  
+ Create two custom commands that call into the server object model for SharePoint. One command determines whether a solution is already deployed; the other command upgrades a solution.  
+  
+#### <a name="to-define-the-sharepoint-commands"></a>To define the SharePoint commands  
+  
+1.  In the **SharePointCommands** project, open the Commands code file, and then paste the following code into it.  
+  
+     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#4](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#4)]  [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#4](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb#4)]  
+  
+## <a name="checkpoint"></a>Checkpoint  
+ At this point in the walkthrough, all the code for the custom deployment step and the SharePoint commands are now in the projects. Build them to make sure that they compile without errors.  
+  
+#### <a name="to-build-the-projects"></a>To build the projects  
+  
+1.  In **Solution Explorer**, open the shortcut menu for the **DeploymentStepExtension** project, and then choose **Build**.  
+  
+2.  Open the shortcut menu for the **SharePointCommands** project, and then choose **Build**.  
+  
+## <a name="creating-a-vsix-package-to-deploy-the-extension"></a>Creating a VSIX Package to Deploy the Extension  
+ To deploy the extension, use the VSIX project in your solution to create a VSIX package. First, configure the VSIX package by modifying the source.extension.vsixmanifest file in the VSIX project. Then create the VSIX package by building the solution.  
+  
+#### <a name="to-configure-and-create-the-vsix-package"></a>To configure and create the VSIX package  
+  
+1.  In **Solution Explorer**, under the **UpgradeDeploymentStep** project, open the shortcut menu for the **source.extension.vsixmanifest** file, and then choose **Open**.  
+  
+     Visual Studio opens the file in the manifest editor. The source.extension.vsixmanifest file is the basis for the extension.vsixmanifest file that all VSIX packages require. For more information about this file, see [VSIX Extension Schema 1.0 Reference](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).  
+  
+2.  In the **Product Name** box, enter **Upgrade Deployment Step for SharePoint Projects**.  
+  
+3.  In the **Author** box, enter **Contoso**.  
+  
+4.  In the **Description** box, enter **Provides a custom upgrade deployment step that can be used in SharePoint projects**.  
+  
+5.  In the **Assets** tab of the editor, choose the **New** button.  
+  
+     The **Add New Asset** dialog box appears.  
+  
+6.  In the **Type** list, choose **Microsoft.VisualStudio.MefComponent**.  
   
     > [!NOTE]  
-    >  Visual Studio の拡張機能に追加するカスタム拡張機能は、この要素によって指定されます。  詳細については、「[資産の要素 \(VSX スキーマ\)](http://msdn.microsoft.com/ja-jp/9fcfc098-edc7-484b-9d4c-acd17829d737)」を参照してください。  
+    >  This value corresponds to the `MefComponent` element in the extension.vsixmanifest file. This element specifies the name of an extension assembly in the VSIX package. For more information, see [NIB: MEFComponent Element (VSX Schema)](http://msdn.microsoft.com/en-us/8a813141-8b73-44c9-b80b-ca85bbac9551).  
   
-11. **\[ソース\]** の一覧で、**\[現在のソリューション内のプロジェクト\]**を選択します。  
+7.  In the **Source** list, choose **A project in current solution**.  
   
-12. **\[プロジェクト\]** の一覧で、**\[SharePointCommands\]**を選択し、**\[OK\]** のボタンをクリックします。  
+8.  In the **Project** list, choose **DeploymentStepExtension**, and then choose the **OK** button.  
   
-13. メニュー バーで、**\[ビルド\]**、**\[ソリューションのビルド\]**を選択し、次に、ソリューションのエラーなしでコンパイルしてください。  
+9. In the manifest editor, choose the **New** button again.  
   
-14. UpgradeDeploymentStepプロジェクトのビルド出力フォルダーにUpgradeDeploymentStep.vsixファイルが含まれていることを確認します。  
+     The **Add New Asset** dialog box appears.  
   
-     既定では、プロジェクト ファイルに格納されているフォルダー  の ..\\bin\\Debug フォルダーがビルド出力フォルダーです。  
-  
-## アップグレードの配置手順をテストする準備  
- アップグレードの配置手順をテストするために、まず、SharePoint サイトにサンプル ソリューションを配置する必要があります。  まず、Visual Studio の実験用インスタンスで拡張機能のデバッグを開始します。  次に、リスト定義を作成し、配置手順をテストするようにインスタンスを示します。次に、SharePointサイトに配置します。  次に、リスト定義を変更して、そのインスタンスが一覧表示され、既定の配置プロセスではSharePointサイトのソリューションにどのように上書きするかを示すには、変更を加えて再配置します。  
-  
- このチュートリアルで後で、リスト定義とリスト インスタンスを変更し、SharePointサイトでアップグレードします。  
-  
-#### 拡張機能のデバッグを開始するには  
-  
-1.  管理資格情報を使用してVisual Studioを再起動し、UpgradeDeploymentStepソリューションを開きます。  
-  
-2.  DeploymentStepExtensionプロジェクトで、UpgradeStepコード ファイルを開き、`CanExecute` と `Execute` のメソッドのコードの先頭行にブレークポイントを追加します。  
-  
-3.  F5キーのまたはを選択する **\[デバッグ\]**、メニュー バーのをクリックしてデバッグを開始した **\[デバッグの開始\]**。  
-  
-4.  Visual Studioは、SharePoint Projects\\1.0の%UserProfile%\\AppData\\Local\\Microsoft\\VisualStudio\\11.0Exp\\Extensions\\Contoso\\Upgradeの配置手順に拡張機能をインストール、Visual Studioの実験用インスタンスを起動します。  Visual Studioのアップグレードの配置手順をテストします。この場合  
-  
-#### リスト定義とリストでSharePointプロジェクトを作成するには、この例に付けます。  
-  
-1.  Visual Studioの実験用インスタンスで、メニュー バーで、**\[ファイル\]**、**\[新規作成\]**、**\[プロジェクト\]**を選択します。  
-  
-2.  **\[新しいプロジェクト\]** のダイアログ ボックスで、**\[Visual C\#\]** の **\[Visual Basic\]** のノードまたはノードを展開し、**\[SharePoint\]** のノードを展開し、を **\[2010\]** のノードを選択します。  
-  
-3.  ダイアログ ボックスの上部に、**\[.NET Framework 3.5\]** が.NET Framework Versionの一覧に表示されることを確認します。  
-  
-     [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] および [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] のプロジェクトには、このバージョンの .NET Framework が必要です。  
-  
-4.  プロジェクト テンプレートの一覧で、**\[SharePoint 2010 プロジェクト\]**を選択し、プロジェクト **\[EmployeesListDefinition\]**を付けておくと、**\[OK\]** のボタンをクリックします。  
-  
-5.  **\[SharePoint カスタマイズ ウィザード\]**で、デバッグに使用するサイトのURLを入力します。  
-  
-6.  **\[What is the trust level for this SharePoint solution\]**の下に、**\[ファーム ソリューションとして配置する\]** のオプション ボタンを選択します。  
+10. In the **Type** list, enter **SharePoint.Commands.v4**.  
   
     > [!NOTE]  
-    >  アップグレードの配置手順がサンドボックス ソリューションをサポートしていません。  
+    >  This element specifies a custom extension that you want to include in the Visual Studio extension. For more information, see [Asset Element (VSX Schema)](http://msdn.microsoft.com/en-us/9fcfc098-edc7-484b-9d4c-acd17829d737).  
   
-7.  **\[完了\]** のボタンをクリックします。  
+11. In the **Source** list, choose **A project in current solution**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] はEmployeesListDefinitionプロジェクトを作成します。  
+12. In the **Project** list, choose **SharePointCommands**, and then choose the **OK** button.  
   
-8.  EmployeesListDefinitionプロジェクトのショートカット メニューを開き、**\[追加\]**を選択し、を **\[新しい項目\]**を選択します。  
+13. On the menu bar, choose **Build**, **Build Solution**, and then make sure that the solution compiles without errors.  
   
-9. **\[新しい項目– EmployeesListDefinitionを追加します。\]** のダイアログ ボックスで、**\[SharePoint\]** のノードを展開し、**\[2010\]** のノードを選択します。  
+14. Make sure that the build output folder for the UpgradeDeploymentStep project now contains the UpgradeDeploymentStep.vsix file.  
   
-10. **\[一覧\]** の項目テンプレートを選択し、項目 **\[Employees List\]**を付けておくと、**\[追加\]** のボタンをクリックします。  
+     By default, the build output folder is the ..\bin\Debug folder under the folder that contains your project file.  
   
-     SharePointカスタマイズ ウィザードが表示されます  
+## <a name="preparing-to-test-the-upgrade-deployment-step"></a>Preparing to Test the Upgrade Deployment Step  
+ To test the upgrade deployment step, you must first deploy a sample solution to the SharePoint site. Start by debugging the extension in the experimental instance of Visual Studio. Then create a list definition and list instance to use to test the deployment step, and then deploy them to the SharePoint site. Next, modify the list definition and list instance and redeploy them to demonstrate how the default deployment process overwrites solutions on the SharePoint site.  
   
-11. **\[リストの設定を選択\]** のページに次の設定を確認し、**\[完了\]** のボタンを選択する:  
+ Later in this walkthrough, you'll modify the list definition and list instance, and then you'll upgrade them on the SharePoint site.  
   
-    1.  **\[Employees List\]** は **\[リストに表示する名前\]** ボックスに表示されます。  
+#### <a name="to-start-debugging-the-extension"></a>To start debugging the extension  
   
-    2.  **\[Create a customizable list based on:\]** のオプション ボタンが選択されます。  
+1.  Restart Visual Studio with administrative credentials, and then open the UpgradeDeploymentStep solution.  
   
-    3.  **\[既定値 \(null\)\]** は **\[Create a customizable list based on:\]** の一覧で選択されます。  
+2.  In the DeploymentStepExtension project, open the UpgradeStep code file, and then add a breakpoint to the first line of code in the `CanExecute` and `Execute` methods.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] はタイトル列を持つ従業員一覧の項目を作成し、単一インスタンスはデザイナーで開くリストを空にします。  
+3.  Start debugging by choosing the F5 key or, on the menu bar, choosing **Debug**, **Start Debugging**.  
   
-12. リストのデザイナーで、**\[列\]** のタブで、**\[新規または既存の列名を入力します\]** の行を選択し、**\[列の表示名\]** の一覧の次の列を追加します:  
+4.  Visual Studio installs the extension to %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Upgrade Deployment Step for SharePoint Projects\1.0 and starts an experimental instance of Visual Studio. You'll test the upgrade deployment step in this instance of Visual Studio.  
   
-    1.  \[名\]  
+#### <a name="to-create-a-sharepoint-project-with-a-list-definition-and-a-list-instance"></a>To create a SharePoint project with a list definition and a list instance  
   
-    2.  \[会社\]  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **File**, **New**, **Project**.  
   
-    3.  \[会社電話番号\]  
+2.  In the **New Project** dialog box, expand the **Visual C#** node or the **Visual Basic** node, expand the **SharePoint** node, and then choose the **2010** node.  
   
-    4.  \[電子メール\]  
+3.  At the top of the dialog box, make sure that **.NET Framework 3.5** appears in the list of versions of the .NET Framework.  
   
-13. すべてのファイルを保存し、リストのデザイナーを閉じます。  
+     Projects for [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] and [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] require this version of the .NET Framework.  
   
-14. **\[ソリューション エクスプローラー\]**では、**\[Employees List\]** のノードを展開し、**\[Employees List Instance\]** の子ノードを展開します。  
+4.  In the list of project templates, choose **SharePoint 2010 Project**, name the project **EmployeesListDefinition**, and then choose the **OK** button.  
   
-15. Elements.xmlファイルで、次のXMLにこのファイルの既定XMLに置き換えます。  このXMLは **\[従業員\]** にリストの名前を変更し、Jim Hanceの従業員の情報を追加します。  
+5.  In the **SharePoint Customization Wizard**, enter the URL of the site that you want to use for debugging.  
+  
+6.  Under **What is the trust level for this SharePoint solution**, choose the **Deploy as a farm solution** option button.  
+  
+    > [!NOTE]  
+    >  The upgrade deployment step doesn't support sandboxed solutions.  
+  
+7.  Choose the **Finish** button.  
+  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] creates the EmployeesListDefinition project.  
+  
+8.  Open the shortcut menu for the EmployeesListDefinition project, choose **Add**, and then choose **New Item**.  
+  
+9. In the **Add New Item - EmployeesListDefinition** dialog box, expand the **SharePoint** node, and then choose the **2010** node.  
+  
+10. Choose the **List** item template, name the item **Employees List**, and then choose the **Add** button.  
+  
+     The SharePoint Customization Wizard appears  
+  
+11. On the **Choose List Settings** page, verify the following settings, and then choose the **Finish** button:  
+  
+    1.  **Employees List** appears in the **What name do you want to display for your list?** box.  
+  
+    2.  The **Create a customizable list based on:** option button is chosen.  
+  
+    3.  **Default (Blank)** is chosen in the **Create a customizable list based on:** list.  
+  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] creates the Employees List item with a Title column and a single empty instance and opens the List Designer.  
+  
+12. In the List Designer, on the **Columns** tab, choose the **Type a new or existing column name** row, and then add the following columns in the **Column Display Name** list:  
+  
+    1.  First Name  
+  
+    2.  Company  
+  
+    3.  Business Phone  
+  
+    4.  E-Mail  
+  
+13. Save all files, and then close the List Designer.  
+  
+14. In **Solution Explorer**, expand the **Employees List** node, and then expand the **Employees List Instance** child node.  
+  
+15. In the Elements.xml file, replace the default XML in this file with the following XML. This XML changes the name of the list to **Employees** and adds information for an employee who's named Jim Hance.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
       <ListInstance Title="Employees"  
                     OnQuickLaunch="TRUE"  
@@ -333,36 +337,36 @@ caps.handback.revision: 62
     </Elements>  
     ```  
   
-16. Elements.xmlファイルを保存して閉じます。  
+16. Save and close the Elements.xml file.  
   
-17. EmployeesListDefinitionプロジェクトのショートカット メニューを開き、**\[開く\]** か **\[プロパティ\]**を選択します。  
+17. Open the shortcut menu for the EmployeesListDefinition project, and then choose **Open** or **Properties**.  
   
-     プロパティのデザイナーが開きます。  
+     The Properties Designer opens.  
   
-18. **\[SharePoint\]** のタブで、**\[デバッグ後に自動取り消し\]** のチェック ボックスをオフにし、プロパティを保存します。  
+18. On the **SharePoint** tab, clear the **Auto-retract after debugging** check box, and then save the properties.  
   
-#### リスト定義とリスト インスタンスを配置するには  
+#### <a name="to-deploy-the-list-definition-and-list-instance"></a>To deploy the list definition and list instance  
   
-1.  **\[ソリューション エクスプローラー\]**では、**\[EmployeesListDefinition\]** のプロジェクト ノードを選択します。  
+1.  In **Solution Explorer**, choose the **EmployeesListDefinition** project node.  
   
-2.  **\[プロパティ\]** ウィンドウで、**\[アクティブな配置構成\]** プロパティが **\[既定\]** に設定されていることを確認します。  
+2.  In the **Properties** window, make sure that the **Active Deployment Configuration** property is set to **Default**.  
   
-3.  F5キーをまたはで、メニュー バーのをクリックするか、**\[デバッグ\]**、**\[デバッグの開始\]**を選択します。  
+3.  Choose the F5 key or, on the menu bar, choose **Debug**, **Start Debugging**.  
   
-4.  のクイック起動バーの **\[リスト\]** の項目が **\[従業員\]** の新しいリストを含むこと、および **\[従業員\]** の一覧がJim Hanceのエントリが含まれることをWebブラウザーがSharePointサイトに開くとプロジェクトが正常にビルドして確認してください。  
+4.  Verify that the project builds successfully, that the web browser opens to the SharePoint site, that the **Lists** item in the Quick Launch bar includes the new **Employees** list, and that the **Employees** list includes the entry for Jim Hance.  
   
-5.  Webブラウザーを閉じます。  
+5.  Close the web browser.  
   
-#### リスト定義とリスト インスタンスに変更を加えて再配置するには  
+#### <a name="to-modify-the-list-definition-and-list-instance-and-redeploy-them"></a>To modify the list definition and list instance and redeploy them  
   
-1.  EmployeesListDefinitionプロジェクトで、**\[Employee List Instance\]** プロジェクト項目の子であるElements.xmlファイルを開きます。  
+1.  In the EmployeesListDefinition project, open the Elements.xml file that's a child of the **Employee List Instance** project item.  
   
-2.  `Data` 要素とその子を削除し、リストから Jim Hance のエントリを削除します。  
+2.  Remove the `Data` element and its children to remove the entry for Jim Hance from the list.  
   
-     終了すると、ファイルは次のXMLを含める必要があります。  
+     When you finish, the file should contain the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
       <ListInstance Title="Employees"  
                     OnQuickLaunch="TRUE"  
@@ -373,125 +377,125 @@ caps.handback.revision: 62
     </Elements>  
     ```  
   
-3.  Elements.xmlファイルを保存して閉じます。  
+3.  Save and close the Elements.xml file.  
   
-4.  **\[Employees List\]** プロジェクト項目に対するショートカット メニューを開き、**\[開く\]** か **\[プロパティ\]**を選択します。  
+4.  Open the shortcut menu for the **Employees List** project item, and then choose **Open** or **Properties**.  
   
-5.  リストのデザイナーで、**\[ビュー\]** のタブをクリックします。  
+5.  In the List Designer, choose the **Views** tab.  
   
-6.  **\[選択された列\]** の一覧で、**\[添付ファイル\]**を選択し、\< **\[使用可能な列\]** の一覧に移動キー列を選択します。  
+6.  In the **Selected columns** list, choose **Attachments**, and then choose the < key to move that column to the **Available columns** list.  
   
-7.  **\[選択された列\]** の一覧から **\[使用可能な列\]** の一覧に **\[会社電話番号\]** の列を移動するには、前の手順を繰り返します。  
+7.  Repeat the previous step to move the **Business Phone** column from the **Selected columns** list to the **Available columns** list.  
   
-     SharePoint サイトの **Employees** リストの既定の表示から、これらのフィールドが削除されます。  
+     This action removes these fields from the default view of the **Employees** list on the SharePoint site.  
   
-8.  F5キーのまたはを選択する **\[デバッグ\]**、メニュー バーのをクリックしてデバッグを開始した **\[デバッグの開始\]**。  
+8.  Start debugging by choosing the F5 key or, on the menu bar, choosing **Debug**, **Start Debugging**.  
   
-9. **\[配置競合\]** ダイアログ ボックスが表示されます。  
+9. Verify that the **Deployment Conflicts** dialog box appears.  
   
-     このダイアログ ボックスは、Visual Studioがそのソリューションが配置されているSharePointサイトにソリューション \(リスト インスタンス\) を配置しようとすると表示されます。  このダイアログ ボックスでは、このチュートリアルのアップグレードの配置手順を実装するされません。  
+     This dialog box appears when Visual Studio tries to deploy a solution (the list instance) to a SharePoint site to which that solution has already been deployed. This dialog box won't appear when you execute the upgrade deployment step later in this walkthrough.  
   
-10. **\[配置競合\]** のダイアログ ボックスで、**\[自動的に解決\]** のオプション ボタンを選択します。  
+10. In the **Deployment Conflicts** dialog box, choose the **Resolve Automatically** option button.  
   
-     Visual Studioは、SharePointサイトのリスト インスタンスを削除し、プロジェクト リスト項目を展開して、SharePointサイトが開きます。  
+     Visual Studio deletes the list instance on the SharePoint site, deploys the list item in the project, and then opens the SharePoint site.  
   
-11. のクイック起動バーの **\[リスト\]** のセクションでは、**\[従業員\]** のリストをクリックし、次の事項を確認する:  
+11. In the **Lists** section of the Quick Launch bar, choose the **Employees** list, and then verify the following details:  
   
-    -   **\[添付ファイル\]** とは **\[自宅電話番号\]** の列がこのリストのビューに表示されません。  
+    -   The **Attachments** and **Home Phone** columns don't appear in this view of the list.  
   
-    -   リストは空です。  **既定**の配置構成を使用してソリューションを再配置した場合、**Employees** リストが、プロジェクト内の新しい空のリストに置き換えられます。  
+    -   The list is empty. When you used the **Default** deployment configuration to redeploy the solution, the **Employees** list was replaced with the new empty list in your project.  
   
-## 配置手順のテスト  
- これで、アップグレードの配置手順をテストする準備ができました。  まず、SharePoint でリスト インスタンスに項目を追加します。  次に、リスト定義を変更して、インスタンスを一覧し、SharePointサイトでアップグレードし、アップグレードの配置手順が新しい項目が上書きします。  
+## <a name="testing-the-deployment-step"></a>Testing the Deployment Step  
+ You are now ready to test the upgrade deployment step. First, add an item to the list instance in SharePoint. Then change the list definition and list instance, upgrade them on the SharePoint site, and confirm that the upgrade deployment step doesn't overwrite the new item.  
   
-#### リストに手動で項目を追加するには  
+#### <a name="to-manually-add-an-item-to-the-list"></a>To manually add an item to the list  
   
-1.  SharePointサイトのリボンで、**\[リスト ​​ツール\]** のタブで、**\[項目\]** のタブをクリックします。  
+1.  In the ribbon on the SharePoint site, under the **List Tools** tab, choose the **Items** tab.  
   
-2.  **\[新規作成\]** のグループで、**\[新しい項目\]**を選択します。  
+2.  In the **New** group, choose **New Item**.  
   
-     別の方法として、項目のリストの **\[新しい項目の追加\]** 自体のリンクを選択できます。  
+     As an alternative, you can choose the **Add new item** link in the item list itself.  
   
-3.  **\[従業員–の新しい項目\]** のペインで、**\[タイトル\]** ボックスに、**機能マネージャー**を入力します。  
+3.  In the **Employees - New Item** window, in the **Title** box, enter **Facilities Manager**.  
   
-4.  **\[名\]** ボックスに、**アンディー**を入力します。  
+4.  In the **First Name** box, enter **Andy**.  
   
-5.  **\[会社\]** ボックスに、**\[Contoso\]**を入力します。  
+5.  In the **Company** box, type **Contoso**.  
   
-6.  **\[保存\]** のボタンを選択し、新しい項目がリストに表示される確認し、Webブラウザーを閉じます。  
+6.  Choose the **Save** button, verify that the new item appears in the list, and then close the web browser.  
   
-     後の手順で、アップグレードの配置手順では、このリストの内容を上書きしないことを確認するために、この項目を使用します。  
+     Later in this walkthrough, you will use this item to verify that the upgrade deployment step doesn't overwrite the contents of this list.  
   
-#### アップグレードの配置手順をテストするには  
+#### <a name="to-test-the-upgrade-deployment-step"></a>To test the upgrade deployment step  
   
-1.  Visual Studioの実験用インスタンスで、**\[ソリューション エクスプローラー\]**で、を開き、**\[EmployeesListDefinition\]** のプロジェクト ノードのショートカット メニューで、を **\[プロパティ\]**を選択します。  
+1.  In the experimental instance of Visual Studio, in **Solution Explorer**, open the shortcut menu for the **EmployeesListDefinition** project node, and then choose **Properties**.  
   
-     プロパティ エディターまたはデザイナーが開きます。  
+     The Properties Editor/Designer opens.  
   
-2.  **\[SharePoint\]** のタブで、**\[アップグレード\]**に **\[アクティブな配置構成\]** のプロパティを設定します。  
+2.  On the **SharePoint** tab, set the **Active Deployment Configuration** property to **Upgrade**.  
   
-     このカスタムの配置構成には、新しいアップグレードの配置手順が含まれます。  
+     This custom deployment configuration includes the new upgrade deployment step.  
   
-3.  **\[Employees List\]** プロジェクト項目に対するショートカット メニューを開き、**\[プロパティ\]** か **\[開く\]**を選択します。  
+3.  Open the shortcut menu for the **Employees List** project item, and then choose **Properties** or **Open**.  
   
-     プロパティ エディターまたはデザイナーが開きます。  
+     The Properties Editor/Designer opens.  
   
-4.  **\[ビュー\]** のタブで、**\[電子メール\]** の列を選択し、**\[選択された列\]** の一覧から **\[使用可能な列\]** の一覧に列を移動することに **\[\<\]** のキーを選択します。  
+4.  On the **Views** tab, choose the **E-Mail** column, and then choose the **<** key to move that column from the **Selected columns** list to the **Available columns** list.  
   
-     SharePoint サイトの **Employees** リストの既定の表示から、これらのフィールドが削除されます。  
+     This action removes these fields from the default view of the **Employees** list on the SharePoint site.  
   
-5.  F5キーのまたはを選択する **\[デバッグ\]**、メニュー バーのをクリックしてデバッグを開始した **\[デバッグの開始\]**。  
+5.  Start debugging by choosing the F5 key or, on the menu bar, choosing **Debug**, **Start Debugging**.  
   
-6.  Visual Studio のもう一方のインスタンスで、先ほど `CanExecute` メソッドに設定したブレークポイントで、コードが停止していることを確認します。  
+6.  Verify that the code in the other instance of Visual Studio stops on the breakpoint that you set earlier in the `CanExecute` method.  
   
-7.  F5キーをまたはで、メニュー バーで再度選択するか、**\[デバッグ\]**、**\[続行\]**を選択します。  
+7.  Choose the F5 key again or, on the menu bar, choose **Debug**, **Continue**.  
   
-8.  先ほど `Execute` メソッドに設定したブレークポイントで、コードが停止していることを確認します。  
+8.  Verify that the code stops on the breakpoint that you set earlier in the `Execute` method.  
   
-9. F5キーをまたはで、メニュー バーのをクリックするか、**\[デバッグ\]**、最終的な時間 **\[続行\]** を選択します。  
+9. Choose the F5 key or, on the menu bar, choose **Debug**, **Continue** a final time.  
   
-     WebブラウザーでSharePointサイトが開きます。  
+     The web browser opens the SharePoint site.  
   
-10. クイック起動領域の **\[リスト\]** のセクションでは、**\[従業員\]** のリストをクリックし、次の事項を確認する:  
+10. In the **Lists** section of the Quick Launch area, choose the **Employees** list, and then verify the following details:  
   
-    -   は、手動で前に追加した項目には、リスト \(アンディー、機能マネージャー\) に存在します。  
+    -   The item that you manually added earlier (for Andy, the facilities manager) is still in the list.  
   
-    -   **\[会社電話番号\]** とは **\[電子メール アドレス\]** の列がこのリストのビューに表示されません。  
+    -   The **Business Phone** and **E-mail Address** columns don't appear in this view of the list.  
   
-     **アップグレード**の配置構成によって、SharePoint サイト上の既存の **Employees** リスト インスタンスが変更されます。  仮に**アップグレード**ではなく、**既定**の配置構成を使用した場合、配置の競合が発生します。  Visual Studioは、**\[従業員\]** のリストを置き換えることによって競合を解決し、アンディーの項目、機能マネージャーは削除されます。  
+     The **Upgrade** deployment configuration modifies the existing **Employees** list instance on the SharePoint site. If you used the **Default** deployment configuration instead of the **Upgrade** configuration, you would encounter a deployment conflict. Visual Studio would resolve the conflict by replacing the **Employees** list, and the item for Andy, the facilities manager, would be deleted.  
   
-## 開発コンピューターのクリーンアップ  
- アップグレードの配置手順のテストが終わったら、リスト インスタンスおよびリスト定義を SharePoint サイトから削除し、さらに配置手順の拡張機能を Visual Studio から削除します。  
+## <a name="cleaning-up-the-development-computer"></a>Cleaning up the Development Computer  
+ After you finish testing the upgrade deployment step, remove the list instance and list definition from the SharePoint site, and remove the deployment step extension from Visual Studio.  
   
-#### SharePoint サイトからリスト インスタンスを削除するには  
+#### <a name="to-remove-the-list-instance-from-the-sharepoint-site"></a>To remove the list instance from the SharePoint site  
   
-1.  リストがまだ開いていないときは、SharePointサイトの **\[従業員\]** の一覧を表示します。  
+1.  Open the **Employees** list on the SharePoint site, if the list isn't already open.  
   
-2.  SharePointサイトのリボンで、**\[リスト ​​ツール\]** のタブをクリックし、**\[一覧\]** のタブをクリックします。  
+2.  In the ribbon on the SharePoint site, choose the **List Tools** tab, and then choose the **List** tab.  
   
-3.  **\[設定\]** のグループで、**\[リストの設定\]** の項目を選択します。  
+3.  In the **Settings** group, choose the **List Settings** item.  
   
-4.  **\[権限と管理\]**の下に、**\[このリストを削除します\]** のコマンドをごみ箱にリストを送信する次に閉じられるWebブラウザーを選択します。ことを確認するために **\[OK\]** を選択します。  
+4.  Under **Permissions and Management**, choose the **Delete this list** command, choose **OK** to confirm that you want to send the list to the Recycle Bin, and then close the web browser.  
   
-#### SharePoint サイトからリスト定義を削除するには  
+#### <a name="to-remove-the-list-definition-from-the-sharepoint-site"></a>To remove the list definition from the SharePoint site  
   
-1.  Visual Studioの実験用インスタンスで、メニュー バーで、**\[ビルド\]**、**\[取り消し\]**を選択します。  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **Build**, **Retract**.  
   
-     SharePoint サイトからリスト定義が取り消されます。  
+     Visual Studio retracts the list definition from the SharePoint site.  
   
-#### 拡張機能をアンインストールするには  
+#### <a name="to-uninstall-the-extension"></a>To uninstall the extension  
   
-1.  Visual Studioの実験用インスタンスで、メニュー バーで、**\[ツール\]**、**\[拡張機能と更新プログラム\]**を選択します。  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **Tools**, **Extensions and Updates**.  
   
-     **\[拡張機能と更新プログラム\]** のダイアログ ボックスが表示されます。  
+     The **Extensions and Updates** dialog box opens.  
   
-2.  拡張機能の一覧で、**\[Upgrade Deployment Step for SharePoint Projects\]**を選択し、**\[アンインストール\]** のコマンドを選択します。  
+2.  In the list of extensions, choose **Upgrade Deployment Step for SharePoint Projects**, and then choose the **Uninstall** command.  
   
-3.  表示されたダイアログ ボックスで、拡張機能をアンインストールする選択し、アンインストールを実行するに **\[今すぐ再起動\]** を選択します。ことを確認するためにを **\[○\]**。  
+3.  In the dialog box that appears, choose **Yes** to confirm that you want to uninstall the extension, and then choose **Restart Now** to complete the uninstallation.  
   
-4.  Visual Studioの実験用インスタンスとインスタンス \(UpgradeDeploymentStepソリューションが開いている\) Visual Studioの両方のインスタンスのインスタンスを閉じます。  
+4.  Close both instances of Visual Studio (the experimental instance and the instance of Visual Studio in which the UpgradeDeploymentStep solution is open).  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [Extending SharePoint Packaging and Deployment](../sharepoint/extending-sharepoint-packaging-and-deployment.md)  
   
   

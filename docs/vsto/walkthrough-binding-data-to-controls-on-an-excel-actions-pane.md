@@ -1,193 +1,195 @@
 ---
-title: "チュートリアル : Excel のアクション ペインのコントロールへのデータ連結"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "操作ウィンドウ [Visual Studio での Office 開発], バインド (コントロールを)"
-  - "操作ウィンドウ [Visual Studio での Office 開発], データ バインド"
-  - "コントロール [Visual Studio での Office 開発], データ バインド"
-  - "データ バインド [Visual Studio での Office 開発], 操作ウィンドウ"
-  - "データ バインド [Visual Studio での Office 開発], スマート ドキュメント"
-  - "スマート ドキュメント [Visual Studio での Office 開発], データ バインド"
+title: 'Walkthrough: Binding Data to Controls on an Excel Actions Pane | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- controls [Office development in Visual Studio], data binding
+- actions panes [Office development in Visual Studio], data binding
+- data binding [Office development in Visual Studio], smart documents
+- data binding [Office development in Visual Studio], actions panes
+- actions panes [Office development in Visual Studio], binding controls
+- smart documents [Office development in Visual Studio], data binding
 ms.assetid: 106c07bd-e931-4dc5-94dc-ca43900fe09d
 caps.latest.revision: 63
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 62
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 66b4340f86c480fa040c0fc6a51623f30da34d27
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : Excel のアクション ペインのコントロールへのデータ連結
-  このチュートリアルでは、Microsoft Office Excel の操作ウィンドウ内のコントロールに対するデータのバインドについて説明します。  このコントロールは、SQL Server データベースのテーブル間のマスター\/詳細リレーションシップを示します。  
+# <a name="walkthrough-binding-data-to-controls-on-an-excel-actions-pane"></a>Walkthrough: Binding Data to Controls on an Excel Actions Pane
+  This walkthrough demonstrates data binding to controls on an actions pane in Microsoft Office Excel. The controls demonstrate a master/detail relation between tables in a SQL Server database.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   ワークシートへのコントロールの追加  
+-   Adding controls to a worksheet.  
   
--   操作ウィンドウ コントロールの作成  
+-   Creating an actions pane control.  
   
--   操作ウィンドウ コントロールへのデータ バインド Windows フォーム コントロールの追加  
+-   Adding data-bound Windows Forms controls to an actions pane control.  
   
--   アプリケーションが開かれたときの操作ウィンドウの表示  
+-   Showing the actions pane when the application opens.  
   
 > [!NOTE]  
->  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。  これらの要素は、使用する Visual Studio のエディションとその設定によって決まります。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] または [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]。  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
--   Northwind SQL Server サンプル データベースがインストールされたサーバーへのアクセス  
+-   Access to a server with the Northwind SQL Server sample database.  
   
--   SQL Server データベースの読み込み\/書き込みアクセス許可  
+-   Permissions to read from and write to the SQL Server database.  
   
-## プロジェクトの作成  
- 最初に、Excel ワークブック プロジェクトを作成します。  
+## <a name="creating-the-project"></a>Creating the Project  
+ The first step is to create an Excel Workbook project.  
   
-#### 新しいプロジェクトを作成するには  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  My Excel Actions Pane という名前の Excel ワークブック プロジェクトを作成します。  ウィザードで、**\[新規ドキュメントの作成\]** をクリックします。  詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+1.  Create an Excel Workbook project with the name **My Excel Actions Pane**. In the wizard, select **Create a new document**. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     新しい Excel ブックがデザイナーで開き、**My Excel Actions Pane** プロジェクトが**ソリューション エクスプローラー**に追加されます。  
+     Visual Studio opens the new Excel workbook in the designer and adds the **My Excel Actions Pane** project to **Solution Explorer**.  
   
-## プロジェクトへの新しいデータ ソースの追加  
+## <a name="adding-a-new-data-source-to-the-project"></a>Adding a New Data Source to the Project  
   
-#### プロジェクトに新しいデータ ソースを追加するには  
+#### <a name="to-add-a-new-data-source-to-the-project"></a>To add a new data source to the project  
   
-1.  **\[データ ソース\]** のウィンドウが表示されない場合は、これを、**\[ビュー\]**、**\[その他のウィンドウ\]** を選択する、メニュー バーの **\[データ ソース\]** 表示されます。  
+1.  If the **Data Sources** window is not visible, display it by, on the menu bar, choosing **View**, **Other Windows**, **Data Sources**.  
   
-2.  **\[データ ソース構成ウィザード\]** を開始するには **\[新しいデータ ソースの追加\]** を選択します。  
+2.  Choose **Add New Data Source** to start the **Data Source Configuration Wizard**.  
   
-3.  **\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
+3.  Select **Database** and then click **Next**.  
   
-4.  SQL Server Northwind サンプル データベースへのデータ接続を選択するか、または **\[新しい接続\]** をクリックして新しい接続を追加します。  
+4.  Select a data connection to the Northwind sample SQL Server database, or add a new connection by using the **New Connection** button.  
   
-5.  **\[次へ\]** をクリックします。  
+5.  Click **Next**.  
   
-6.  接続を保存するオプションがオンになっている場合はオフにし、**\[次へ\]** をクリックします。  
+6.  Clear the option to save the connection if it is selected, and then click **Next**.  
   
-7.  **\[データベース オブジェクト\]** ウィンドウの **\[テーブル\]** ノードを展開します。  
+7.  Expand the **Tables** node in the **Database objects** window.  
   
-8.  **\[Suppliers\]** テーブルの横のチェック ボックスをオンにします。  
+8.  Select the check box next to the **Suppliers** table.  
   
-9. **\[Products\]** テーブルを展開し、**\[ProductName\]**、**\[SupplierID\]**、**\[QuantityPerUnit\]**、および **\[UnitPrice\]** を選択します。  
+9. Expand the **Products** table and select **ProductName**, **SupplierID**, **QuantityPerUnit**, and **UnitPrice**.  
   
-10. \[完了\] をクリックします。  
+10. Click **Finish**.  
   
- **\[Suppliers\]** テーブルと **\[Products\]** テーブルが **\[データ ソース\]** ウィンドウに追加されます。  さらに、**ソリューション エクスプローラー**に表示されるプロジェクトに、型指定されたデータセットも追加されます。  
+ The wizard adds the **Suppliers** table and **Products** table to the **Data Sources** window. It also adds a typed dataset to your project that is visible in **Solution Explorer**.  
   
-## ワークシートへのコントロールの追加  
- 次に、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールと <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールを、最初のワークシートに追加します。  
+## <a name="adding-controls-to-the-worksheet"></a>Adding Controls to the Worksheet  
+ Next, add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control and a <xref:Microsoft.Office.Tools.Excel.ListObject> control to the first worksheet.  
   
-#### NamedRange コントロールおよび ListObject コントロールを追加するには  
+#### <a name="to-add-a-namedrange-control-and-a-listobject-control"></a>To add a NamedRange control and a ListObject control  
   
-1.  **\[My Excel Actions Pane.xlsx\]** ブックが Visual Studio のデザイナーで開いていると、表示 `Sheet1` ことを確認します。  
+1.  Verify that the **My Excel Actions Pane.xlsx** workbook is open in the Visual Studio designer, with `Sheet1` displayed.  
   
-2.  **\[データ ソース\]** ウィンドウの **\[Suppliers\]** テーブルを展開します。  
+2.  In the **Data Sources** window, expand the **Suppliers** table.  
   
-3.  **\[会社名\]** ノードのドロップダウン矢印をクリックし、**\[NamedRange\]** をクリックします。  
+3.  Click the drop-down arrow on the **Company Name** node, and then click **NamedRange**.  
   
-4.  **\[データ ソース\]** ウィンドウから `Sheet1` のセル **A2** へ、**\[会社名\]** をドラッグします。  
+4.  Drag **Company Name** from the **Data Sources** window to cell **A2** in `Sheet1`.  
   
-     `CompanyNameNamedRange` という名前の <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールが作成され、セル **A2** に \<CompanyName\> というテキストが表示されます。  同時に、`suppliersBindingSource` という名前の <xref:System.Windows.Forms.BindingSource>、テーブル アダプター、および <xref:System.Data.DataSet> がプロジェクトに追加されます。  コントロールは <xref:System.Windows.Forms.BindingSource> にバインドされ、さらにこれが <xref:System.Data.DataSet> インスタンスにバインドされます。  
+     A <xref:Microsoft.Office.Tools.Excel.NamedRange> control named `CompanyNameNamedRange` is created, and the text \<CompanyName> appears in cell **A2**. At the same time, a <xref:System.Windows.Forms.BindingSource> named `suppliersBindingSource`, a table adapter, and a <xref:System.Data.DataSet> are added to the project. The control is bound to the <xref:System.Windows.Forms.BindingSource>, which in turn is bound to the <xref:System.Data.DataSet> instance.  
   
-5.  **\[データ ソース\]** ウィンドウで、**\[Suppliers\]** テーブルの下にある列をスクロール ダウンします。  リストの一番下には、**\[Suppliers\]** テーブルの子である **\[Products\]** テーブルがあります。  **\[Suppliers\]** テーブルと同じレベルにあるものではなく、この **\[Products\]** テーブルを選択し、表示されるドロップダウン矢印をクリックします。  
+5.  In the **Data Sources** window, scroll down past the columns that are under the **Suppliers** table. At the bottom of the list is the **Products** table; it is here because it is a child of the **Suppliers** table. Select this **Products** table, not the one that is at the same level as the **Suppliers** table, and then click the drop-down arrow that appears.  
   
-6.  ドロップダウン リストの **\[ListObject\]** をクリックし、**\[Products\]** テーブルを `Sheet1` のセル **A6** にドラッグします。  
+6.  Click **ListObject** in the drop-down list, and then drag the **Products** table to cell **A6** in `Sheet1`.  
   
-     `ProductNameListObject` という名前の <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールがセル **A6** に作成されます。  同時に、`productsBindingSource` という名前の <xref:System.Windows.Forms.BindingSource> とテーブル アダプターがプロジェクトに追加されます。  コントロールは <xref:System.Windows.Forms.BindingSource> にバインドされ、さらにこれが <xref:System.Data.DataSet> インスタンスにバインドされます。  
+     A <xref:Microsoft.Office.Tools.Excel.ListObject> control named `ProductNameListObject` is created in cell **A6**. At the same time, a <xref:System.Windows.Forms.BindingSource> named `productsBindingSource` and a table adapter are added to the project. The control is bound to the <xref:System.Windows.Forms.BindingSource>, which in turn is bound to the <xref:System.Data.DataSet> instance.  
   
-7.  C\# の場合のみ、コンポーネント トレイの **\[suppliersBindingSource\]** を選択し、**\[プロパティ\]** ウィンドウで **\[Modifiers\]** プロパティを Internal に変更します。  
+7.  For C# only, select **suppliersBindingSource** on the component tray, and change the **Modifiers** property to **Internal** in the **Properties** window.  
   
-## 操作ウィンドウへのコントロールの追加  
- 次に、コンボ ボックスを含む操作ウィンドウ コントロールが必要です。  
+## <a name="adding-controls-to-the-actions-pane"></a>Adding Controls to the Actions Pane  
+ Next, you need an actions pane control that contains a combo box.  
   
-#### 操作ウィンドウ コントロールを追加するには  
+#### <a name="to-add-an-actions-pane-control"></a>To add an actions pane control  
   
-1.  **ソリューション エクスプローラー**で **My Excel Actions Pane** プロジェクトを選択します。  
+1.  Select the **My Excel Actions Pane** project in **Solution Explorer**.  
   
-2.  **\[プロジェクト\]** メニューの **\[新しい項目の追加\]** をクリックします。  
+2.  On the **Project** menu, click **Add New Item**.  
   
-3.  **\[新しい項目の追加\]** ダイアログ ボックスで、**\[操作ウィンドウ コントロール\]** を選択し、**ActionsControl** という名前を指定して、**\[追加\]** をクリックします。  
+3.  In the **Add New Item** dialog box, select **Actions Pane Control**, name it **ActionsControl**, and click **Add**.  
   
-#### データ バインド Windows フォーム コントロールを操作ウィンドウ コントロールに追加するには  
+#### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>To add data-bound Windows Forms controls to an actions pane control  
   
-1.  **ツールボックス**の **\[コモン コントロール\]** タブから操作ウィンドウ コントロールへ、<xref:System.Windows.Forms.ComboBox> コントロールをドラッグします。  
+1.  From the **Common Controls** tabs of the **Toolbox**, drag a <xref:System.Windows.Forms.ComboBox> control to the actions pane control.  
   
-2.  **\[Size\]** プロパティを 171, 21 に変更します。  
+2.  Change the **Size** property to **171, 21**.  
   
-3.  ユーザー コントロールのサイズをコンボ ボックスと同じ大きさに変更します。  
+3.  Resize the user control to fit the combo box.  
   
-## 操作ウィンドウ コントロールのデータへのバインド  
- ここでは、<xref:System.Windows.Forms.ComboBox> のデータ ソースを、ワークシート上の <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールと同じデータ ソースに設定します。  
+## <a name="binding-the-control-on-the-actions-pane-to-data"></a>Binding the Control on the Actions Pane to Data  
+ In this section, you will set the data source of the <xref:System.Windows.Forms.ComboBox> to the same data source as the <xref:Microsoft.Office.Tools.Excel.NamedRange> control on the worksheet.  
   
-#### コントロールのデータ バインディング プロパティを設定するには  
+#### <a name="to-set-data-binding-properties-of-the-control"></a>To set data binding properties of the control  
   
-1.  操作ウィンドウ コントロールを右クリックし、**\[コードの表示\]** をクリックします。  
+1.  Right-click the actions pane control, and then click **View Code**.  
   
-2.  操作ウィンドウ コントロールの <xref:System.Windows.Forms.UserControl.Load> イベントに次のコードを追加します。  
+2.  Add the following code to the <xref:System.Windows.Forms.UserControl.Load> event of the actions pane control.  
   
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneExcel/CS/ActionsControl.cs#1)]
-     [!code-vb[Trin_VstcoreActionsPaneExcel#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneExcel/VB/ActionsControl.vb#1)]  
+     [!code-vb[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ActionsControl.vb#1)]  [!code-csharp[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#1)]  
   
-3.  C\# では、`ActionsControl` のイベント ハンドラーを作成する必要があります。  このコードを `ActionsControl` コンストラクターに追加できます。  イベンド ハンドラーの作成方法の詳細については、「[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)」を参照してください。  
+3.  In C#, you must create an event handler for the `ActionsControl`. You can place this code in the `ActionsControl` constructor. For more information about creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneExcel/CS/ActionsControl.cs#2)]  
+     [!code-csharp[Trin_VstcoreActionsPaneExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#2)]  
   
-## 操作ウィンドウの表示  
- 実行時に操作ウィンドウ コントロールを追加するまで、操作ウィンドウは表示されません。  
+## <a name="showing-the-actions-pane"></a>Showing the Actions Pane  
+ The actions pane is not visible until you add the control at run time.  
   
-#### 操作ウィンドウを表示するには  
+#### <a name="to-show-the-actions-pane"></a>To show the actions pane  
   
-1.  **ソリューション エクスプローラー**で ThisWorkbook.vb または ThisWorkbook.cs を右クリックし、**\[コードの表示\]** をクリックします。  
+1.  In **Solution Explorer**, right-click ThisWorkbook.vb or ThisWorkbook.cs, and then click **View Code**.  
   
-2.  `ThisWorkbook` クラスで、ユーザー コントロールの新しいインスタンスを作成します。  
+2.  Create a new instance of the user control in the `ThisWorkbook` class.  
   
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneExcel/CS/ThisWorkbook.cs#3)]
-     [!code-vb[Trin_VstcoreActionsPaneExcel#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneExcel/VB/ThisWorkbook.vb#3)]  
+     [!code-csharp[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#3)]  [!code-vb[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#3)]  
   
-3.  `ThisWorkbook` の <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> イベント ハンドラーで、コントロールを操作ウィンドウに追加します。  
+3.  In the <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> event handler of `ThisWorkbook`, add the control to the actions pane.  
   
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneExcel/CS/ThisWorkbook.cs#4)]
-     [!code-vb[Trin_VstcoreActionsPaneExcel#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneExcel/VB/ThisWorkbook.vb#4)]  
+     [!code-csharp[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#4)]  [!code-vb[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#4)]  
   
-## アプリケーションのテスト  
- 文書をテストして、文書を開いたときに操作ウィンドウが開き、コントロールの間にマスター\/詳細リレーションシップがあることを確認します。  
+## <a name="testing-the-application"></a>Testing the Application  
+ Now you can test your document to verify that the actions pane opens when the document is opened, and that the controls have a master/detail relation.  
   
-#### 文書をテストするには  
+#### <a name="to-test-your-document"></a>To test your document  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  Press F5 to run your project.  
   
-2.  操作ウィンドウが表示されていることを確認します。  
+2.  Confirm that the actions pane is visible.  
   
-3.  リスト ボックスから会社を選択します。  会社名が <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールに表示され、製品の詳細が <xref:Microsoft.Office.Tools.Excel.ListObject> コントロールに表示されることを確認します。  
+3.  Select a company in the list box. Verify that the company name is listed in the <xref:Microsoft.Office.Tools.Excel.NamedRange> control and that the product details are listed in the <xref:Microsoft.Office.Tools.Excel.ListObject> control.  
   
-4.  さまざまな会社を選択して、会社名と製品の詳細が適切に変化することを確認します。  
+4.  Select various companies to verify the company name and product details change as appropriate.  
   
-## 次の手順  
- 次に行う作業は以下のとおりです。  
+## <a name="next-steps"></a>Next Steps  
+ Here are some tasks that might come next:  
   
--   Word のコントロールへのデータのバインド。  詳細については、「[チュートリアル : Word の操作ウィンドウ上のコントロールへのデータ バインド](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)」を参照してください。  
+-   Binding data to controls in Word. For more information, see [Walkthrough: Binding Data to Controls on a Word Actions Pane](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md).  
   
--   プロジェクトの配置。  詳細については、「[ClickOnce を使用した Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)」を参照してください。  
+-   Deploying the project. For more information, see [Deploying an Office Solution by Using ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).  
   
-## 参照  
- [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
- [方法 : アクション ペイン上のコントロールのレイアウトを管理する](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
- [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Actions Pane Overview](../vsto/actions-pane-overview.md)   
+ [How to: Manage Control Layout on Actions Panes](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
+ [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)  
   
   

@@ -1,123 +1,126 @@
 ---
-title: "Office ソリューションに固有のセキュリティに関する考慮事項"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での Office 開発のトラブルシューティング、セキュリティ"
-  - "信頼されるコード [Visual Studio での Office 開発]"
-  - "ブロックされたコード [Visual Studio での Office 開発]"
-  - "Outlook [Visual Studio での Office 開発]、オブジェクト モデルの保護"
-  - "悪意のあるコード [Visual Studio での Office 開発]"
-  - "Outlook オブジェクト モデルの保護 [Visual Studio での Office 開発]"
-  - "セキュリティ [Visual Studio での Office 開発]、トラブルシューティング"
+title: Specific Security Considerations for Office Solutions | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- troubleshooting Office development in Visual Studio, security
+- trusted code [Office development in Visual Studio]
+- blocked code [Office development in Visual Studio]
+- Outlook [Office development in Visual Studio], object model guard
+- malicious code [Office development in Visual Studio]
+- Outlook object model guard [Office development in Visual Studio]
+- security [Office development in Visual Studio], troubleshooting
 ms.assetid: 6a8b3e12-26c6-4ee2-a37e-d5bc8df9c5d1
 caps.latest.revision: 51
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 50
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: dc32486a654a47acc3c341d4b625c4c3d4efcaa7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# Office ソリューションに固有のセキュリティに関する考慮事項
-  Microsoft .NET Framework および Microsoft Office には、Office ソリューションをセキュリティ上の脅威から保護するためのセキュリティ機能が備わっています。 このトピックでは、このような脅威のいくつかについて説明し、脅威対策に関する推奨事項を示します。 また、Microsoft Office のセキュリティ設定が Office ソリューションに及ぼす影響についても説明します。  
+# <a name="specific-security-considerations-for-office-solutions"></a>Specific Security Considerations for Office Solutions
+  The security features provided by the Microsoft .NET Framework and Microsoft Office can help to protect your Office solutions against possible security threats. This topic explains some of those threats and provides recommendations to help protect against them. It also includes information about how Microsoft Office security settings affect Office solutions.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## 信頼されたコードが悪意のある新しいドキュメントで別の目的のために使用される  
- 攻撃者は、たとえば、個人情報をダウンロードするための雇用アプリケーションのコードなど、ある特定の用途のための信頼されたコードを取得し、ワークシートなどの別のドキュメントでそのコードを再利用する可能性があります。 コードは元のドキュメントが実行されていないことを認識しないため、別のユーザーが開いた場合に他の脅威 \(個人情報の漏洩や拡大された権限によるコードの実行など\) を招くことがあります。 あるいは、攻撃者は単にワークシートのデータを、被害者に送信されたときに予期しない動作を実行するように変更することもできます。 悪意を持つユーザーは、コードにリンクされているワークシートの値、数式、または表示特性を変更して、変更後のファイルを送りつけて別のユーザーを攻撃する可能性があります。 また、ワークシートの値を修正して、許可されていない情報にアクセスすることもできます。  
+## <a name="trusted-code-is-repurposed-in-a-new-malicious-document"></a>Trusted Code Is Repurposed in a New, Malicious Document  
+ An attacker could take trusted code that is meant for one particular purpose, for example, downloading personal information for an employment application, and reuse it in another document, such as a worksheet. The code does not know that the original document is not running, and may open up other threats, such as revealing personal information or executing code with increased privileges, when opened by a different user. Alternatively, the attacker can simply modify the data in the worksheet such that, when sent to the victim, it behaves unexpectedly. By changing the values, formulas, or presentation characteristics of a worksheet linked to code, it is possible for a malicious user to attack another user by sending a modified file. It may also be possible for users to access information they are not supposed to see by modifying values in the worksheet.  
   
- 実行するには、アセンブリの位置とドキュメントの位置の両方の証拠が十分でなければならないため、このような攻撃は簡単には実行できません。 たとえば、電子メール添付ファイルのドキュメントや信頼されていないイントラネット サーバーのドキュメントには、実行に必要なアクセス許可がありません。  
+ Since both the assembly location and the document location must have sufficient evidence to execute, this attack is not easy to mount. For example, documents in e-mail attachments or on untrusted intranet servers do not have enough permissions to run.  
   
- このような攻撃を可能にするには、コード自体が、信頼できない可能性のあるデータに基づいて決定を下すように作成されていなければなりません。 たとえば、非表示のセルにデータベース サーバーの名前を含むワークシートを作成するとします。 ユーザーがこのワークシートを ASPX ページに送信すると、SQL 認証およびハードコーディングされた SA パスワードを使用してそのサーバーに接続しようとします。 攻撃者は、非表示のセルの内容を別のコンピューター名に置き換え、SA パスワードを取得する可能性があります。 このような問題を回避するために、絶対にパスワードはハードコーディングしないでください。また、サーバーにアクセスする前に、必ず、既知の信頼できるサーバーを示す内部リストでそのサーバー ID を確認してください。  
+ To make this attack possible, the code itself must be written in such a way that it makes decisions based on potentially untrustworthy data. An example is creating a worksheet that has a hidden cell that contains the name of a database server. The user submits the worksheet to an ASPX page, which attempts to connect to that server using SQL authentication and a hard-coded SA password. An attacker could replace the contents of the hidden cell with a different computer name and get the SA password. To avoid this problem, never hard-code passwords, and always check server IDs against an internal list of servers that are known to be good before accessing the server.  
   
-### 推奨事項  
+### <a name="recommendations"></a>Recommendations  
   
--   入力内容およびデータのソースが、ユーザー、ドキュメント、データベース、Web サービス、その他のソースのどれであるかを常に確認してください。  
+-   Always validate input and data, whether it comes from the user, the document, a database, a web service, or any other source.  
   
--   特定の種類の機能を公開する場合には、注意が必要です。たとえば、権限の設定されたデータをユーザーに代わって取得し、保護されていないワークシートにこのデータを挿入する場合に注意が必要となります。  
+-   Be careful about exposing particular types of functionality, such as getting privileged data on behalf of the user and putting it into an unprotected worksheet.  
   
--   アプリケーションの種類によっては、元のドキュメントが実行されていることを検証してからコードを実行することが有効な対策になります。 たとえば、既知の安全な場所に保存されているドキュメントから実行されていることを検証します。  
+-   Depending on the type of application, it might make sense to verify that the original document is running before executing any code. For example, verify that it is running from a document stored at a known, secure location.  
   
--   権限の設定されたアクションを実行するアプリケーションの場合は、ドキュメントを開くときに警告メッセージを表示することをお勧めします。 たとえば、アプリケーションが個人情報にアクセスすることを知らせるスプラッシュ スクリーンやスタートアップのダイアログ ボックスを作成して、ユーザーに操作の続行またはキャンセルを選択してもらうことができます。 エンド ユーザーは、一見無害なドキュメントからこのような警告が表示された場合に、情報が漏洩する前にアプリケーションを終了できます。  
+-   It might be a good idea to display a warning when the document opens if your application performs any privileged actions. For example, you might create a splash screen or a startup dialog box saying that the application will access personal information, and have the user choose to continue or cancel. If an end user gets such a warning from a seemingly innocent document, he or she will be able to quit the application before anything is compromised.  
   
-## コードが Outlook オブジェクト モデルの保護によってブロックされる  
- Microsoft Office では、オブジェクト モデルの特定のプロパティ、メソッド、およびオブジェクトをコードで使用できないように制限できます。 こうしたオブジェクトへのアクセスを制限することは、電子メール ワームやウイルスによってオブジェクト モデルが不正な目的で使用されるのを防ぐうえで有効です。 このセキュリティ機能は、Outlook オブジェクト モデルの保護と呼ばれています。 オブジェクト モデルの保護が有効になっているときに、制限されているプロパティまたはメソッドを VSTO アドインが使用しようとすると、Outlook はセキュリティ警告を表示します。これを受けてユーザーは、操作を中断したり、一定の時間内だけプロパティまたはメソッドへのアクセス許可を与えたりできます。 ユーザーが操作を中断した場合、Visual Studio で Office ソリューションを使用して作成された Outlook VSTO アドインは <xref:System.Runtime.InteropServices.COMException> をスローします。  
+## <a name="code-is-blocked-by-the-outlook-object-model-guard"></a>Code Is Blocked by the Outlook Object Model Guard  
+ Microsoft Office can restrict code from using certain properties, methods, and objects in the object model. By restricting access to these objects, Outlook helps to prevent e-mail worms and viruses from using the object model for malicious purposes. This security feature is known as the Outlook object model guard. If an VSTO Add-in attempts to use a restricted property or method while the object model guard is enabled, Outlook displays a security warning that enables the user to stop the operation, or enables the user to grant access to the property or method for a limited period of time. If the user stops the operation, Outlook VSTO Add-ins created by using Office solutions in Visual Studio will throw a <xref:System.Runtime.InteropServices.COMException>.  
   
- オブジェクト モデルの保護の対象にできる VSTO アドインは、Outlook を Microsoft Exchange Server と併用しているかどうかに応じて、次のように異なります。  
+ The object model guard can affect VSTO Add-ins in different ways, depending on whether Outlook is used with Microsoft Exchange Server:  
   
--   Outlook を Exchange と併用していない場合、管理者は、コンピューター上のすべての VSTO アドインを対象として、オブジェクト モデルの保護を有効または無効にできます。  
+-   If Outlook is not used with Exchange, an administrator can enable or disable the object model guard for all VSTO Add-ins on the computer.  
   
--   Outlook を Exchange と併用している場合、管理者は、コンピューター上のすべての VSTO アドインを対象としてオブジェクト モデルの保護を有効または無効にできるのに加え、オブジェクト モデルの保護の対象外として動作させる特定の VSTO アドインを指定できます。 また、管理者は、オブジェクト モデルの特定の領域でのオブジェクト モデルの保護の動作を変更することもできます。 たとえば管理者は、オブジェクト モデルの保護が有効な場合でも、VSTO アドインのプログラムによる電子メールの送信を自動的に有効にできます。  
+-   If Outlook is used with Exchange, an administrator can enable or disable the object model guard for all VSTO Add-ins on the computer, or the administrator can specify that certain VSTO Add-ins can run without encountering the object model guard. Administrators can also modify the behavior of the object model guard for certain areas of the object model. For example, administrators can automatically allow VSTO Add-ins to send e-mail programmatically, even if the object model guard is enabled.  
   
- Outlook 2007 以降、オブジェクト モデルの保護の動作は、Outlook のセキュリティを維持しながらも、開発者やユーザー エクスペリエンスを向上させるように変更されています。 詳細については、「[Outlook 2007 でのコード セキュリティの変更点](http://go.microsoft.com/fwlink/?LinkId=73429)」をご覧ください。  
+ Starting in Outlook 2007, the behavior of the object model guard has been changed to improve the developer and user experience while helping to keep Outlook secure. For more information, see [Code Security Changes in Outlook 2007](http://go.microsoft.com/fwlink/?LinkId=73429).  
   
-### オブジェクト モデルの保護の警告を最小限に抑える  
- 制限されたプロパティおよびメソッドを使用したときのセキュリティ警告を回避するには、VSTO アドインで、Outlook オブジェクトをプロジェクト内の `ThisAddIn` クラスの `Application` フィールドから取得するようにします。 このフィールドの詳細については、「[VSTO アドインのプログラミング](../vsto/programming-vsto-add-ins.md)」を参照してください。  
+### <a name="minimizing-object-model-guard-warnings"></a>Minimizing Object Model Guard Warnings  
+ To help avoid security warnings when you use restricted properties and methods, make sure that your VSTO Add-in obtains Outlook objects from the `Application` field of the `ThisAddIn` class in your project. For more information about this field, see [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md).  
   
- オブジェクト モデルの保護が信頼するのは、このオブジェクトから取得された Outlook オブジェクトのみです。 一方、新しい Microsoft.Office.Interop.Outlook.Application オブジェクトから取得したオブジェクトは信頼されないため、オブジェクト モデルの保護が有効になっている場合には、制限されたプロパティおよびメソッドでセキュリティ警告が発生します。  
+ Only Outlook objects obtained from this object can be trusted by the object model guard. In contrast, objects that are obtained from a new Microsoft.Office.Interop.Outlook.Application object are not trusted, and the restricted properties and methods will raise security warnings if the object model guard is enabled.  
   
- 次のコード例は、オブジェクト モデルの保護が有効になっている場合に、セキュリティの警告を表示します。Microsoft.Office.Interop.Outlook.MailItem クラスの To プロパティは、オブジェクト モデルの保護によって制限されています。Microsoft.Office.Interop.Outlook.MailItem オブジェクトは信頼されません。これは、コードが `Application` フィールドから取得したものではなく、**new** 演算子を使用して作成した Microsoft.Office.Interop.Outlook.Application から取得したものであるからです。  
+ The following code example displays a security warning if the object model guard is enabled. The To property of the Microsoft.Office.Interop.Outlook.MailItem class is restricted by the object model guard. The Microsoft.Office.Interop.Outlook.MailItem object is untrusted because the code gets it from a Microsoft.Office.Interop.Outlook.Application that is created using the **new** operator, instead of obtaining it from the `Application` field.  
   
- [!code-csharp[Trin_VstcoreOutlookSecurity#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreOutlookSecurity/CS/ThisAddIn.cs#1)]
- [!code-vb[Trin_VstcoreOutlookSecurity#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreOutlookSecurity/VB/ThisAddIn.vb#1)]  
+ [!code-csharp[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#1)] [!code-vb[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#1)]  
   
- 次のコード例は、オブジェクト モデルの保護によって信頼される Microsoft.Office.Interop.Outlook.MailItem オブジェクトの To プロパティ \(制限されたプロパティ\) を使用する方法を示します。 コードは、信頼される `Application` フィールドを使用して Microsoft.Office.Interop.Outlook.MailItem を取得します。  
+ The following code example demonstrates how to use the restricted To property of a Microsoft.Office.Interop.Outlook.MailItem object that is trusted by the object model guard. The code uses the trusted `Application` field to get the Microsoft.Office.Interop.Outlook.MailItem.  
   
- [!code-csharp[Trin_VstcoreOutlookSecurity#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreOutlookSecurity/CS/ThisAddIn.cs#2)]
- [!code-vb[Trin_VstcoreOutlookSecurity#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreOutlookSecurity/VB/ThisAddIn.vb#2)]  
+ [!code-csharp[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#2)] [!code-vb[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#2)]  
   
 > [!NOTE]  
->  Outlook を Exchange と併用している場合、すべての Outlook オブジェクトを `ThisAddIn.Application` から取得しても、VSTO アドインが Outlook オブジェクト モデル全体にアクセスできるとは限りません。 たとえば、Exchange 管理者が、Outlook オブジェクト モデルを使用したアドレス情報へのアクセスをすべて自動的に拒否するように Outlook を設定している場合、信頼されている `ThisAddIn.Application` フィールドを使用している前述のコード例でも、To プロパティにはアクセスできません。  
+>  If Outlook is used with Exchange, then obtaining all Outlook objects from `ThisAddIn.Application` does not guarantee that your VSTO Add-in will be able to access the entire Outlook object model. For example, if an Exchange administrator sets Outlook to automatically deny all attempts to access address information using the Outlook object model, then Outlook will not allow the previous code example to access the To property, even though the code example uses the trusted `ThisAddIn.Application` field.  
   
-### Exchange の使用時に信頼するアドインを指定する  
- Outlook を Exchange と併用している場合、管理者は、オブジェクト モデルの保護の対象外として動作させる特定の VSTO アドインを指定できます。 Visual Studio で Office ソリューションを使用して作成した個別の Outlook VSTO アドインは信頼できません。これらはグループとしてのみ信頼できます。  
+### <a name="specifying-which-add-ins-to-trust-when-using-exchange"></a>Specifying Which Add-ins to Trust When Using Exchange  
+ When Outlook is used with Exchange, administrators can specify that certain VSTO Add-ins can run without encountering the object model guard. Outlook VSTO Add-ins created by using Office solutions in Visual Studio cannot be trusted individually; they can only be trusted as a group.  
   
- Outlook は、VSTO アドインのエントリ ポイント DLL のハッシュ コードに基づいて VSTO アドインを信頼します。[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] をターゲットとする Outlook VSTO アドインは、すべて同じエントリ ポイント DLL \(VSTOLoader.dll\) を使用します。 つまり、管理者が、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] をターゲットとする VSTO アドインを信頼してオブジェクト モデルの保護の対象外として動作させる場合、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] をターゲットとする他のすべての VSTO アドインも併せて信頼されます。 特定の VSTO アドインを信頼してオブジェクト モデルの保護の対象外として動作させる方法の詳細については、[「Outlook でウイルス対策機能を管理するために使用する方法を指定する」](http://go.microsoft.com/fwlink/?LinkId=128773)を参照してください。  
+ Outlook trusts an VSTO Add-in based on a hash code of the entry point DLL of the VSTO Add-in. All Outlook VSTO Add-ins that target the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] use the same entry point DLL (VSTOLoader.dll). This means that if an administrator trusts any VSTO Add-in that targets the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] to run without encountering the object model guard, then all other VSTO Add-ins that targets the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] are also trusted. For more information about trusting specific VSTO Add-ins to run without encountering the object model guard, see [Specify the method Outlook uses to manage virus prevention features](http://go.microsoft.com/fwlink/?LinkId=128773).  
   
-## アクセス許可の変更がすぐに有効にならない  
- 管理者がドキュメントまたはアセンブリのアクセス許可を調整した場合、それらの調整を適用させるには、ユーザーがすべての Office アプリケーションを終了して再起動する必要があります。  
+## <a name="permission-changes-do-not-take-effect-immediately"></a>Permission Changes Do Not Take Effect Immediately  
+ If the administrator adjusts permissions for a document or assembly, users must quit and then restart all Office applications for those changes to be enforced.  
   
- Microsoft Office アプリケーションをホストする他のアプリケーションが原因で、新しいアクセス許可が適用されない場合もあります。 セキュリティ ポリシーが変更された場合、ユーザーは Office を使用するすべてのアプリケーションを \(ホストされているか、スタンドアロンであるかを問わず\) 終了してください。  
+ Other applications that host Microsoft Office applications can also prevent the new permissions from being enforced. Users should quit all applications that use Office, hosted or stand-alone, when security policies are changed.  
   
-## Microsoft Office System のセキュリティ センターの設定がアドインまたはドキュメント レベルのカスタマイズに影響しない  
- ユーザーは、**セキュリティ センター**でオプションを設定して、VSTO アドインの読み込みを禁止できます。 ただし、Visual Studio で Office ソリューションを使用して作成される VSTO アドインとドキュメント レベルのカスタマイズには、これらのセキュリティ設定は影響しません。  
+## <a name="trust-center-settings-in-the-microsoft-office-system-do-not-affect-add-ins-or-document-level-customizations"></a>Trust Center Settings in the Microsoft Office System Do Not Affect Add-ins or Document-Level Customizations  
+ Users can prevent VSTO Add-ins from loading by setting an option in the **Trust Center**. However, VSTO Add-ins and document-level customizations created by using Office solutions in Visual Studio are not affected by these trust settings.  
   
- **セキュリティ センター**を使用して VSTO アドインの読み込みを禁止した場合、次のタイプのアドインは読み込まれません。  
+ If the user prevents VSTO Add-ins from loading by using the **Trust Center**, the following types of VSTO Add-ins will not load:  
   
--   マネージ COM VSTO アドインおよびアンマネージ COM VSTO アドイン。  
+-   Managed and unmanaged COM VSTO Add-ins.  
   
--   マネージ スマート ドキュメントおよびアンマネージ スマート ドキュメント。  
+-   Managed and unmanaged smart documents.  
   
--   マネージ オートメーション VSTO アドインおよびアンマネージ オートメーション VSTO アドイン。  
+-   Managed and unmanaged Automation VSTO Add-ins.  
   
--   マネージ リアルタイム データ コンポーネントおよびアンマネージ リアルタイム データ コンポーネント。  
+-   Managed and unmanaged real-time data components.  
   
- 次の手順では、ユーザーが **\[セキュリティ センター\]** を使用して、Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] および Microsoft Office 2010 で VSTO アドインの読み込みを制限する方法について説明します。 これらの手順は、Visual Studio で Office 開発ツールを使用して作成された VSTO アドインまたはカスタマイズには影響しません。  
+ The following procedures describe how users can use the **Trust Center** to restrict VSTO Add-ins from loading in Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] and Microsoft Office 2010. These procedures do not affect VSTO Add-ins or customizations created by using Office development tools in Visual Studio.  
   
-#### Microsoft Office 2010 および Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] アプリケーションの VSTO アドインを無効にするには  
+#### <a name="to-disable-vsto-add-ins-in-microsoft-office-2010-and-microsoft-includeoffice15shortvstoincludesoffice-15-short-mdmd-applications"></a>To disable VSTO Add-ins in Microsoft Office 2010 and Microsoft [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] applications  
   
-1.  **\[ファイル\]** タブを選択します。  
+1.  Choose the **File** tab.  
   
-2.  *\[ApplicationName*  **オプション\]** ボタンを選択します。  
+2.  Choose the *ApplicationName* **Options** button.  
   
-3.  \[カテゴリ\] ウィンドウで **\[セキュリティ センター\]** を選択します。  
+3.  In the categories pane, choose **Trust Center**.  
   
-4.  詳細ウィンドウで **\[セキュリティ センターの設定\]** を選択します。  
+4.  In the details pane, choose **Trust Center Settings**.  
   
-5.  \[カテゴリ\] ウィンドウで **\[アドイン\]** を選択します。  
+5.  In the categories pane, choose **Add-ins**.  
   
-6.  詳細ウィンドウで **\[アプリケーション アドインに対し、信頼できる発行元の署名を必須にする\]** または **\[すべてのアプリケーション アドインを無効にする\]** を選択します。  
+6.  In the details pane, select **Require Application Add-ins to be Signed by Trusted Publisher** or **Disable all Application Add-ins**.  
   
-## 参照  
- [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Securing Office Solutions](../vsto/securing-office-solutions.md)  
   
   

@@ -1,58 +1,75 @@
 ---
-title: "CA1051: 参照できるインスタンス フィールドを宣言しないでください | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1051"
-  - "DoNotDeclareVisibleInstanceFields"
-helpviewer_keywords: 
-  - "CA1051"
-  - "DoNotDeclareVisibleInstanceFields"
+title: 'CA1051: Do not declare visible instance fields | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1051
+- DoNotDeclareVisibleInstanceFields
+helpviewer_keywords:
+- CA1051
+- DoNotDeclareVisibleInstanceFields
 ms.assetid: 2805376c-824c-462c-81d1-c51aaf7cabe7
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1051: 参照できるインスタンス フィールドを宣言しないでください
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 3c4be3eb3862e462b840569460993b2ff8a1000b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: Do not declare visible instance fields
 |||  
 |-|-|  
 |TypeName|DoNotDeclareVisibleInstanceFields|  
 |CheckId|CA1051|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Design|  
+|Breaking Change|Breaking|  
   
-## 原因  
- 外部から参照できる型に、外部から参照できるインスタンス フィールドがあります。  
+## <a name="cause"></a>Cause  
+ An externally visible type has an externally visible instance field.  
   
-## 規則の説明  
- フィールドの主な用途は、実装の詳細にする必要があります。  フィールドは `private` または `internal` にし、プロパティによって公開するようにします。  プロパティのアクセス方法はフィールドの場合と同様に簡単です。また、プロパティのアクセサーでは、互換性に影響を与えずに型の機能が拡張されるため、コードで変更できます。  プライベート フィールドまたは内部フィールドの値を返すだけのプロパティは、フィールドにアクセスする場合と同様に、簡単に実行できます。外部から参照できるフィールドを使用することで、プロパティの場合よりもパフォーマンスが向上することはほとんどありません。  
+## <a name="rule-description"></a>Rule Description  
+ The primary use of a field should be as an implementation detail. Fields should be `private` or `internal` and should be exposed by using properties. It is as easy to access a property as it is to access a field, and the code in the accessors of a property can change as the features of the type expand without introducing breaking changes. Properties that just return the value of a private or internal field are optimized to perform on par with accessing a field; very little performance gain is associated with the use of externally visible fields over properties.  
   
- 外部から参照できるフィールドとは、`public`、`protected`、および `protected internal` \(Visual Basic では `Public`、`Protected`、および `Protected Friend`\) のアクセシビリティ レベルが指定されたフィールドです。  
+ Externally visible refers to `public`, `protected`, and `protected internal` (`Public`, `Protected`, and `Protected Friend` in Visual Basic) accessibility levels.  
   
-## 違反の修正方法  
- この規則違反を修正するには、フィールドを `private` または `internal` にするか、外部から参照できるプロパティを使用して公開します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, make the field `private` or `internal` and expose it by using an externally visible property.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  外部から参照できるフィールドの利点のすべては、プロパティでも実現できます。  さらに、パブリック フィールドは[リンク確認要求](../Topic/Link%20Demands.md)で保護されません。  「[CA2112: セキュリティで保護された型はフィールドを公開してはなりません](../code-quality/ca2112-secured-types-should-not-expose-fields.md)」を参照してください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule. Externally visible fields do not provide any benefits that are unavailable to properties. Additionally, public fields cannot be protected by [Link Demands](/dotnet/framework/misc/link-demands). See [CA2112: Secured types should not expose fields](../code-quality/ca2112-secured-types-should-not-expose-fields.md).  
   
-## 使用例  
- この規則に違反する型 \(`BadPublicInstanceFields`\) を次の例に示します。  `GoodPublicInstanceFields` は、修正後のコードを示します。  
+## <a name="example"></a>Example  
+ The following example shows a type (`BadPublicInstanceFields`) that violates this rule. `GoodPublicInstanceFields` shows the corrected code.  
   
- [!code-cs[FxCop.Design.TypesPublicInstanceFields#1](../code-quality/codesnippet/CSharp/ca1051-do-not-declare-visible-instance-fields_1.cs)]  
+ [!code-csharp[FxCop.Design.TypesPublicInstanceFields#1](../code-quality/codesnippet/CSharp/ca1051-do-not-declare-visible-instance-fields_1.cs)]  
   
-## 関連規則  
- [CA2112: セキュリティで保護された型はフィールドを公開してはなりません](../code-quality/ca2112-secured-types-should-not-expose-fields.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA2112: Secured types should not expose fields](../code-quality/ca2112-secured-types-should-not-expose-fields.md)  
   
-## 参照  
- [リンク確認要求](../Topic/Link%20Demands.md)
+## <a name="see-also"></a>See Also  
+ [Link Demands](/dotnet/framework/misc/link-demands)

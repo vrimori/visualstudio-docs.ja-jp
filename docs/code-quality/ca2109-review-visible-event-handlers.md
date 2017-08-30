@@ -1,68 +1,85 @@
 ---
-title: "CA2109: 表示するイベント ハンドラーを確認します | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2109"
-  - "ReviewVisibleEventHandlers"
-helpviewer_keywords: 
-  - "CA2109"
-  - "ReviewVisibleEventHandlers"
+title: 'CA2109: Review visible event handlers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2109
+- ReviewVisibleEventHandlers
+helpviewer_keywords:
+- ReviewVisibleEventHandlers
+- CA2109
 ms.assetid: 8f8fa0ee-e94e-400e-b516-24d8727725d7
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 18
----
-# CA2109: 表示するイベント ハンドラーを確認します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 930c98a6b91eee69c3e145479694a58050dd3d22
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2109-review-visible-event-handlers"></a>CA2109: Review visible event handlers
 |||  
 |-|-|  
 |TypeName|ReviewVisibleEventHandlers|  
 |CheckId|CA2109|  
-|分類|Microsoft.Security|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## 原因  
- パブリックまたはプロテクトのイベント ハンドラー メソッドが検出されました。  
+## <a name="cause"></a>Cause  
+ A public or protected event-handling method was detected.  
   
-## 規則の説明  
- 外部から参照できるイベント ハンドラー メソッドにはセキュリティ上の問題があるため、再確認が必要です。  
+## <a name="rule-description"></a>Rule Description  
+ An externally visible event-handling method presents a security issue that requires review.  
   
- イベント ハンドラー メソッドは、絶対に必要な場合を除き公開しないでください。  公開されたメソッドを呼び出すイベント ハンドラー \(デリゲート型\) とイベントのシグネチャが一致していれば、そのイベント ハンドラーを任意のイベントに追加できます。  イベントはどのコードからでも発生する可能性があり、ボタンのクリックなどユーザー操作に応答して信頼性の高いシステム コードからイベントが呼び出されることがよくあります。  イベント ハンドラー メソッドにセキュリティ チェックを追加する方法では、メソッドを呼び出すイベント ハンドラーがコードに登録されることを防ぐことはできません。  
+ Event-handling methods should not be exposed unless absolutely necessary. An event handler, a delegate type, that invokes the exposed method can be added to any event as long as the handler and event signatures match. Events can potentially be raised by any code, and are frequently raised by highly trusted system code in response to user actions such as clicking a button. Adding a security check to an event-handling method does not prevent code from registering an event handler that invokes the method.  
   
- 確認要求では、イベント ハンドラーから呼び出されるメソッドを確実に保護できません。  セキュリティ確認要求によってコール スタックの呼び出し元を検査することで、信頼関係のない呼び出し元からコードを保護できます。  イベント ハンドラー メソッドが実行されているとき、イベント ハンドラーをイベントに追加するコードを、コール スタックに配置する必要はありません。  そのため、イベント ハンドラー メソッドが呼び出されたときに、コール スタックに信頼性の高い呼び出し元しかないことがあります。  これにより、イベント ハンドラー メソッドによって正常に確認要求が行われます。  また、要求されたアクセス許可は、メソッドが呼び出されたときにアサートされることがあります。  そのため、この規則違反を修正しない場合のリスクは、イベント ハンドラー メソッドを再確認した後にのみ評価できます。  コードを再確認するときに、次の問題を検討します。  
+ A demand cannot reliably protect a method invoked by an event handler. Security demands help protect code from untrusted callers by examining the callers on the call stack. Code that adds an event handler to an event is not necessarily present on the call stack when the event handler's methods run. Therefore, the call stack might have only highly trusted callers when the event handler method is invoked. This causes demands made by the event handler method to succeed. Also, the demanded permission might be asserted when the method is invoked. For these reasons, the risk of not fixing a violation of this rule can only be assessed after reviewing the event-handling method. When you review your code, consider the following issues:  
   
--   アクセス許可のアサートやアンマネージ コード アクセス許可の削除など、イベント ハンドラーで危険な操作やセキュリティ上の脆弱性がある操作を実行するか。  
+-   Does your event handler perform any operations that are dangerous or exploitable, such as asserting permissions or suppressing unmanaged code permission?  
   
--   コール スタック上の信頼性の高い呼び出し元のみを使用して任意のタイミングで実行できるために発生する、コードのセキュリティ上の脅威は何か。  
+-   What are the security threats to and from your code because it can run at any time with only highly trusted callers on the stack?  
   
-## 違反の修正方法  
- この規則違反を修正するには、メソッドを再確認し、次の項目を評価します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, review the method and evaluate the following:  
   
--   イベント ハンドラー メソッドを非パブリックにすることはできるか。  
+-   Can you make the event-handling method non-public?  
   
--   イベント ハンドラーから、すべての危険な機能を外すことはできるか。  
+-   Can you move all dangerous functionality out of the event handler?  
   
--   セキュリティ確認要求が設定された場合、別の方法で実現できるか。  
+-   If a security demand is imposed, can this be accomplished in some other manner?  
   
-## 警告を抑制する状況  
- 必ず、コードにセキュリティ上の脅威がないようにセキュリティの再確認を慎重に行ってから、この規則による警告を抑制します。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Suppress a warning from this rule only after a careful security review to make sure that your code does not pose a security threat.  
   
-## 使用例  
- 次のコードは、悪意のあるコードから不正使用される可能性のあるイベント ハンドラー メソッドの例です。  
+## <a name="example"></a>Example  
+ The following code shows an event-handling method that can be misused by malicious code.  
   
- [!code-cs[FxCop.Security.EventSecLib#1](../code-quality/codesnippet/CSharp/ca2109-review-visible-event-handlers_1.cs)]  
+ [!code-csharp[FxCop.Security.EventSecLib#1](../code-quality/codesnippet/CSharp/ca2109-review-visible-event-handlers_1.cs)]  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  <xref:System.Security.CodeAccessPermission.Demand%2A?displayProperty=fullName>   
  <xref:System.EventArgs?displayProperty=fullName>   
- [Security Demands](http://msdn.microsoft.com/ja-jp/324c14f8-54ff-494d-9fd1-bfd20962c8ba)
+ [Security Demands](http://msdn.microsoft.com/en-us/324c14f8-54ff-494d-9fd1-bfd20962c8ba)
