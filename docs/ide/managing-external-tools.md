@@ -82,12 +82,10 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/24/2017
 
 ---
-# 外部ツールの管理
-<a id="manage-external-tools" class="xliff"></a>
+# <a name="manage-external-tools"></a>外部ツールの管理
 Visual Studio から **[ツール]** メニューを使用して外部ツールを呼び出すことができます。 いくつかの既定ツールは **[ツール]** メニューで使用できますが、他の実行可能ファイルを独自に追加することもできます。  
 
-## [Visual Studio ツール] メニューで使用できるツール
-<a id="tools-available-on-the-visual-studio-tools-menu" class="xliff"></a>
+## <a name="tools-available-on-the-visual-studio-tools-menu"></a>[Visual Studio ツール] メニューで使用できるツール
  **[ツール]** メニューには、次のように組み込みコマンドがいくつか表示されます。
 
 *  [Visual Studio 拡張機能を管理する](finding-and-using-visual-studio-extensions.md) **[拡張機能と更新プログラム]**
@@ -96,8 +94,7 @@ Visual Studio から **[ツール]** メニューを使用して外部ツール�
 *  [メニューとツールバーをカスタマイズする](how-to-customize-menus-and-toolbars-in-visual-studio.md) **[カスタマイズ]**
 *  [Visual Studio IDE と他のツールの多様なオプションを設定する](reference/options-dialog-box-visual-studio.md) **[オプション]**
 
-## [ツール] メニューに新しいツールを追加する
-<a id="add-new-tools-to-the-tools-menu" class="xliff"></a> 
+## <a name="add-new-tools-to-the-tools-menu"></a>[ツール] メニューに新しいツールを追加する 
  **[ツール]** メニューに外部ツールを追加することができます。 **[外部ツール]** ダイアログ ボックスを開き、**[追加]** をクリックして、情報を入力します。 たとえば、次のエントリを指定すると、Visual Studio で現在開いているファイルのディレクトリでエクスプローラーが開きます。  
   
 1.  タイトル: *開いているファイルの場所*
@@ -130,7 +127,6 @@ Visual Studio から **[ツール]** メニューを使用して外部ツール�
 |ソリューション ディレクトリ|$(SolutionDir)|現在のソリューションのディレクトリ (ドライブ + パス)。|  
 |ソリューション ファイル名|$(SolutionFileName)|現在のソリューションのファイル名 (ドライブ + パス + ファイル名)。|  
 
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
  [C と C++ のビルド ツール](/cpp/build/reference/c-cpp-build-tools)
 

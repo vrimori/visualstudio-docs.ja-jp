@@ -40,8 +40,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/24/2017
 
 ---
-# 方法 : エディターで使用するフォントのフォント フェイス、サイズ、色を変更する
-<a id="how-to-change-fonts-and-colors-in-the-editor" class="xliff"></a>
+# <a name="how-to-change-fonts-and-colors-in-the-editor"></a>方法 : エディターで使用するフォントのフォント フェイス、サイズ、色を変更する
 コード エディターでは、さまざまなテキスト**表示項目**の既定のフォント フェイスを変更し、フォント サイズを調整し、前景色と背景色を変更することができます。 フォントの設定を変更するときは、次の情報に注意してください。  
   
 -   **[フォント]** と **[サイズ]** の設定は、すべての [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] エディターのすべてのテキスト要素に対するグローバルな設定です。  
@@ -53,8 +52,7 @@ ms.lasthandoff: 05/24/2017
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、**ヘルプ**の説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-### 既定のフォント フェイス、サイズ、色を変更するには
-<a id="to-change-the-default-font-face-size-and-colors" class="xliff"></a>  
+### <a name="to-change-the-default-font-face-size-and-colors"></a>既定のフォント フェイス、サイズ、色を変更するには  
   
 1.  **[ツール]** メニューの **[オプション]** を選び、**[環境]** フォルダーで **[フォントおよび色]** を選びます。  
   
@@ -71,8 +69,7 @@ ms.lasthandoff: 05/24/2017
   
 5.  **[OK]** をクリックします。  
   
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
  [エディターのカスタマイズ](../../ide/customizing-the-editor.md)   
  [[テキスト エディター] ([オプション] ダイアログ ボックス)](../../ide/reference/text-editor-options-dialog-box.md)   
  [コードの作成](../../ide/writing-code-in-the-code-and-text-editor.md)   

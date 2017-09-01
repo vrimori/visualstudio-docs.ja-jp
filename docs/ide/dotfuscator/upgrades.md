@@ -1,12 +1,12 @@
 ---
-title: Upgrade Dotfuscator Community Edition (CE) | Microsoft Docs
+title: "Dotfuscator Community Edition (CE) をアップグレードする | Microsoft Docs"
 ms.date: 2017-02-08
 ms.prod: visual-studio-dev15
 ms.devlang: dotnet
 ms.technology:
 - dotfuscator
 ms.topic: article
-keywords: Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, obfuscation, .NET, free, Visual Studio 2017, upgrade, command line
+keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, 難読化, .NET, 無料, Visual Studio 2017, アップグレード, コマンド ライン"
 helpviewer_keywords:
 - PreEmptive Protection - Dotfuscator
 - Dotfuscator Community Edition
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - registering Dotfuscator
 - Dotfuscator command line
 - Dotfuscator Professional
-description: Learn how to upgrade the free Dotfuscator Community Edition included in Visual Studio 2017.
+description: "Visual Studio 2017 に含まれる無料の Dotfuscator Community Edition をアップグレードする方法について説明します。"
 ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: Joe-Sewell-PreEmptive
 manager: ghogen
@@ -39,62 +39,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: a81ef70613931a23121aae0b4817553c1f170e5f
-ms.openlocfilehash: fe29d3990faa138d121fcc972fa2e732e505c988
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
+ms.openlocfilehash: 60ca38639f6523cdbace4efa4aa48b48d5e9a886
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 
-# <a name="upgrade-dotfuscator-community-edition-ce"></a>Upgrade Dotfuscator Community Edition (CE)
+# <a name="upgrade-dotfuscator-community-edition-ce"></a>Dotfuscator Community Edition (CE) をアップグレードする
 
-Dotfuscator Community Edition (Dotfuscator CE) offers many application protection and hardening features immediately to all developers using Microsoft Visual Studio.
-However, there are more features available to users who upgrade their version of Dotfuscator.
+Dotfuscator Community Edition (Dotfuscator CE) には、Microsoft Visual Studio.を使用しているすべての開発者がすぐに利用できる多くのアプリケーション保護機能と強化機能がありますが、
+Dotfuscator のバージョンをアップグレードすると、さらに多くの機能を利用できるようになります。
 
-## <a name="registering-dotfuscator-ce"></a>Registering Dotfuscator CE
+## <a name="registering-dotfuscator-ce"></a>Dotfuscator CE の登録
 
-Registered users of Dotfuscator CE get access to additional features, such as [command line support][cli], which makes it easy to integrate Dotfuscator CE into your automated build process.
+Dotfuscator CE の登録ユーザーは、[コマンド ライン サポート][cli]などの追加機能にアクセスできます。コマンド ラインを使用すると、Dotfuscator CE を自動ビルド プロセスに簡単に統合できます。
 
-Registration is quick, simple, and free of charge.
-To register Dotfuscator CE, see [the Registering Dotfuscator CE section on the Getting Started page of the full Dotfuscator CE User Guide][register-ce].
+登録は無料で、簡単な手順ですぐに実行できます。
+Dotfuscator CE を登録する方法については、[「Dotfuscator CE User Guide」(Dotfuscator CE ユーザー ガイド) の「Registering Dotfuscator CE」(Dotfuscator CE の登録) セクション][register-ce]を参照してください。
 
 ## <a name="dotfuscator-professional"></a>Dotfuscator Professional
 
-While Dotfuscator Community Edition provides a basic level of protection, **_PreEmptive Protection - Dotfuscator_ Professional Edition** includes enhanced obfuscation transforms and protection capabilities.
-These include:
+Dotfuscator Community Edition には基本的なレベルの保護機能である **_PreEmptive Protection - Dotfuscator_ が備わっています。一方、Professional Edition** では、難読化変換機能と保護機能が強化されています。
+次の設定があります。
 
-* *Intellectual Property Protection*
-  * Additional renaming options, including Enhanced Overload Induction™ and randomized identifier selection.
-  * Tooling for decoding obfuscated stack traces.
-  * Access to enterprise-level obfuscation transforms, including [transforms targeted at defeating automated code decompilation][control-flow].
-  * The ability to [obscure sensitive strings][string-encryption], making a simple search of the decompiled code impossible.
-  * The ability to [discreetly embed ownership and distribution strings into your assemblies][watermarking] (software watermarking), allowing you to determine the source of unauthorized software leaks.
-  * The ability to [combine multiple assemblies into one][linking], making it even more difficult for attackers to determine the roles of code elements, as separation of concerns has been eliminated.
-  * The ability to [automatically remove unused code from your application][pruning], reducing the amount of sensitive code that is shipped.
-* *Application Integrity Protection*
-  * Additional [application defense behaviors][check-actions].
-  * The ability to inject anti-tamper and anti-debug code into `.dll` assemblies.
-  * The ability to provide a warning period before an application's end-of-life deadline.
-  * The ability to notify application code during an end-of-life warning period or after the deadline.
-  * Telemetry encryption.
-* *Application Monitoring*
-  * The ability to collect and save collected information during temporary network outages.
-  * The ability to collect personally-identifiable information.
-  * Unlimited use of [feature tracking][features].
-  * The ability to track exceptions caught and thrown by your code, in addition to unhandled exceptions.
-  * The ability to track exceptions in `.dll` assemblies.
-  * Telemetry encryption.
+* *知的財産の保護*
+  * Enhanced Overload Induction™、ランダムな識別子選択など、追加の名前変更オプション。
+  * 難読化されたスタック トレースをデコードするツール。
+  * エンタープライズレベルの難読化変換へのアクセス ([自動コード逆コンパイルを阻止する目的の変換など][control-flow])。
+  * [機密性の高い文字列を難読化][string-encryption]し、逆コンパイルされたコードの単純な検索不可能にする機能。
+  * [所有権と配布文字列をアセンブリに慎重に埋め込み][watermarking] (ソフトウェア透かし)、不正なソフトウェア リークのソースを判断できる機能。
+  * [複数のアセンブリを組み合わせ][linking]て、懸案事項の分離を除去することで、攻撃者がコード要素の役割を判断するのをさらに困難にする機能。
+  * [使用されていないコードをアプリケーションから自動的に削除][pruning]して、付属される機密性の高いコードの量を減らす機能。
+* *アプリケーション整合性の保護*
+  * その他の[アプリケーション保護動作][check-actions]。
+  * 改ざん対策とデバッグ対策のコードを `.dll` アセンブリに挿入する機能。
+  * アプリケーションの有効期限前の警告期間を指定する機能。
+  * 有効期限の警告期間中、または有効期限後にアプリケーション コードを通知する機能。
+  * 製品利用統計情報の暗号化。
+* *アプリケーション監視*
+  * 一時的なネットワーク停止中に情報を収集し、収集された情報を保存する機能。
+  * 個人を特定できる情報を収集する機能。
+  * [機能の追跡][features]を無制限で使用可能。
+  * ハンドルされない例外に加え、コード内でキャッチされ、スローされた例外を追跡する機能。
+  * `.dll` アセンブリの例外を追跡する機能。
+  * 製品利用統計情報の暗号化。
 
-Dotfuscator Professional is the industry standard [.NET Obfuscator][net-obfuscator] and is suitable for enterprise developers requiring ongoing support, maintenance, and product updates.
-Additionally, Dotfuscator Professional offers tighter integration with Visual Studio and is licensed for commercial use.
+Dotfuscator Professional は業界標準の [.NET 難読化ツール][net-obfuscator]です。継続的なサポート、保守、製品の更新が必要な企業の開発者に適しています。
+また、Dotfuscator Professional は Visual Studio との統合が強化され、商業目的の使用についてライセンスが付与されます。
 
-For more information on the advanced application protection features of Dotfuscator Professional, please visit PreEmptive Solutions' [Dotfuscator Overview page][product-about] and [compare it to Community Edition][product-compare].
-[Fully-supported trials are available on request at preemptive.com][eval].
+Dotfuscator Professional の高度なアプリケーション保護機能の詳細については、PreEmptive Solutions の「[Dotfuscator Overview][product-about]」(Dotfuscator の概要) ページと、[Community Edition との比較][product-compare]のページを参照してください。
+[preemptive.com では、完全にサポートされている評価版をリクエストして入手できます][eval]。
 
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>関連項目
 
-[This topic in the full Dotfuscator CE User Guide][full]
+[Dotfuscator CE の完全なユーザー ガイドのこのトピック][full]
 
 <!-- Copyright © 2017 PreEmptive Solutions, LLC -->
 

@@ -35,8 +35,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/19/2017
 
 ---
-# Visual Studio でのリファクタリング
-<a id="refactoring-in-visual-studio" class="xliff"></a>
+# <a name="refactoring-in-visual-studio"></a>Visual Studio でのリファクタリング
 リファクタリングとは、コードの動作を変更することなく、簡単にコードを維持、理解、拡張するためのプロセスです。 一般的な*リファクタリング*の一部には、次のものがあります。  
   
 1.  長い関数を短く分割する  
@@ -49,24 +48,19 @@ ms.lasthandoff: 05/19/2017
   
  リファクタリングのロジックは言語の構文に密接に結び付けられているため、Visual Studio の各言語サービスには、それぞれ独自のリファクタリング機能があります。 詳細については、次のページを参照してください。  
   
-### リファクタリング [C#]
-<a id="refactoring-in-c" class="xliff"></a> #
+### <a name="refactoring-in-c"></a>リファクタリング [C#] #
  [リファクタリング (C#)](../csharp-ide/refactoring-csharp.md)  
   
-### Visual Studio でのリファクタリング
-<a id="refactoring-in-visual-basic" class="xliff"></a>  
+### <a name="refactoring-in-visual-basic"></a>Visual Studio でのリファクタリング  
  [リファクタリング (Visual Basic)](../vb-ide/refactoring-vb.md)  
   
-### リファクタリング [C++]
-<a id="refactoring-in-c" class="xliff"></a>  
+### <a name="refactoring-in-c"></a>リファクタリング [C++]  
  [コードの作成とリファクタリング (C++)](/cpp/ide/writing-and-refactoring-code-cpp)  
   
-### リファクタリング [F#]
-<a id="refactoring-in-f" class="xliff"></a> #
+### <a name="refactoring-in-f"></a>リファクタリング [F#] #
  F# のリファクタリングのサポートは、サード パーティ製の Visual Studio 拡張機能の [Visual f# Power Tool](https://visualstudiogallery.msdn.microsoft.com/136b942e-9f2c-4c0b-8bac-86d774189cff) で提供されます。  
   
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
  [Visual Studio IDE](../ide/visual-studio-ide.md)   
  [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)  
  [変更のプレビュー](../ide/preview-changes.md)

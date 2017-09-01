@@ -44,8 +44,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/23/2017
 
 ---
-# Visual C++ コードの使用 (クラス デザイナー)
-<a id="working-with-visual-c-code-class-designer" class="xliff"></a>
+# <a name="working-with-visual-c-code-class-designer"></a>Visual C++ コードの使用 (クラス デザイナー)
 クラス デザイナーは、*クラス ダイアグラム*と呼ばれるビジュアル デザイン サーフェイスを表示します。クラス ダイアグラムは、プロジェクトのコード要素を視覚的に表現するものです。 クラス ダイアグラムを使用して、プロジェクト内のクラスおよびその他の型を設計し、視覚化できます。  
 
  クラス デザイナーは、次の C++ コード要素をサポートしています。  
@@ -67,21 +66,17 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]
 >  これは、モデリング プロジェクトで作成できる UML クラス図と同じではありません。 詳細については、「[UML Class Diagrams: Reference](../modeling/uml-class-diagrams-reference.md)」(UML クラス図: リファレンス) を参照してください。  
 
-## 型解決および表示の問題のトラブルシューティング
-<a id="troubleshooting-type-resolution-and-display-issues" class="xliff"></a>  
+## <a name="troubleshooting-type-resolution-and-display-issues"></a>型解決および表示の問題のトラブルシューティング  
 
-### ソース ファイルの場所
-<a id="location-of-source-files" class="xliff"></a>  
+### <a name="location-of-source-files"></a>ソース ファイルの場所  
  クラス デザイナーは、ソース ファイルの場所を追跡しません。 したがって、プロジェクト構造を変更するか、プロジェクト内でソース ファイルを移動すると、クラス デザイナーが型を見失うことがあります (特に typedef のソース型、基本クラス、または関連型の場合)。 **クラス デザイナーはこの型を表示できません**などのエラーが発生することがあります。 エラーが発生した場合は、変更または再配置したソース コードをもう一度クラス ダイアグラムにドラッグして再表示します。  
 
-### 更新およびパフォーマンスの問題
-<a id="update-and-performance-issues" class="xliff"></a>  
+### <a name="update-and-performance-issues"></a>更新およびパフォーマンスの問題  
  Visual C++ プロジェクトの場合、ソース ファイルでの変更がクラス ダイアグラムに表示されるまでに 30 ～ 60 秒かかることがあります。 この遅延によって、クラス デザイナーから **選択内で型が見つかりませんでした**というエラーがスローされることもあります。 このようなエラーが表示された場合は、エラー メッセージで **[キャンセル]** をクリックし、クラス ビューにコード要素が表示されるまで待ちます。 その後、クラス デザイナーが型を表示できるようになります。  
 
  コードに加えた変更でクラス ダイアグラムが更新されない場合は、ダイアグラムを閉じて、再度開く必要がある場合があります。  
 
-### 型解決の問題
-<a id="type-resolution-issues" class="xliff"></a>  
+### <a name="type-resolution-issues"></a>型解決の問題  
  クラス デザイナーは、次のような理由により、型解決ができない場合があります。  
   
 -   型が、クラス ダイアグラムを含むプロジェクトから参照されていないプロジェクトまたはアセンブリ内にあります。 このエラーを修正するには、型を含むプロジェクトまたはアセンブリへの参照を追加します。 詳細については、「[プロジェクト内の参照の管理](managing-references-in-a-project.md)」を参照してください。  
@@ -104,8 +99,7 @@ ms.lasthandoff: 06/23/2017
   
 -   クラス デザイナーが型を検出できるように、型が正しいスコープ内にあることを確認します。 コードに `using` ステートメント、`imports` ステートメント、または `#include` ステートメントが欠落していないことを確認します。 また、型 (または関連する型) を最初に配置した名前空間の外に移動していないことも確認します。  
 
-### その他のエラー メッセージのトラブルシューティング
-<a id="troubleshooting-other-error-messages" class="xliff"></a>  
+### <a name="troubleshooting-other-error-messages"></a>その他のエラー メッセージのトラブルシューティング  
  MSDN (Microsoft Developer Network) のパブリック フォーラムでは、エラーや警告のトラブルシューティングに役立つ情報を参照できます。 [Visual Studio クラス デザイナー フォーラム](http://go.microsoft.com/fwlink/?linkid=160754)を参照してください。  
 
 ##  <a name="limitations"></a> C++ コード要素の制限事項  
@@ -130,8 +124,7 @@ ms.lasthandoff: 06/23/2017
 
 -   クラス デザイナーでは、void 型または void 型から派生した型を表示できません。  
 
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
  [クラスと型のデザインおよび表示](../ide/designing-and-viewing-classes-and-types.md)   
  [クラスと他の型の使用 (クラス デザイナー)](../ide/working-with-classes-and-other-types-class-designer.md)   
  [クラス ダイアグラムの使用 (クラス デザイナー)](../ide/working-with-class-diagrams-class-designer.md)   
