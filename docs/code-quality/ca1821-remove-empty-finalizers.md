@@ -1,48 +1,66 @@
 ---
-title: "CA1821: 空のファイナライザーを削除します | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RemoveEmptyFinalizers"
-  - "CA1821"
-helpviewer_keywords: 
-  - "CA1821"
+title: 'CA1821: Remove empty finalizers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- RemoveEmptyFinalizers
+- CA1821
+helpviewer_keywords:
+- CA1821
 ms.assetid: 3f4855a0-e4a0-46e6-923c-4c3b7074048d
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 13
----
-# CA1821: 空のファイナライザーを削除します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4ef95f8961e156cdfbe6858b5424296ee1ba4667
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1821-remove-empty-finalizers"></a>CA1821: Remove empty finalizers
 |||  
 |-|-|  
 |TypeName|RemoveEmptyFinalizers|  
 |CheckId|CA1821|  
-|分類|Microsoft.Performance|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Performance|  
+|Breaking Change|Non-breaking|  
   
-## 原因  
- 型が空のファイナライザーを実装しているか、基本型ファイナライザーのみを呼び出しているか、条件付きで出力されたメソッドのみを呼び出しています。  
+## <a name="cause"></a>Cause  
+ A type implements a finalizer that is empty, calls only the base type finalizer, or calls only conditionally emitted methods.  
   
-## 規則の説明  
- オブジェクトの有効期間の追跡に関連するパフォーマンス オーバーヘッドが増大するため、ファイナライザーは可能な限り使用しないでください。  ガベージ コレクターはファイナライザーを実行してからオブジェクトを収集します。  そのため、オブジェクトの収集には 2 つのコレクションが必要となります。  空のファイナライザーを使用すると、オーバーヘッドが増大するだけで何の利点もありません。  
+## <a name="rule-description"></a>Rule Description  
+ Whenever you can, avoid finalizers because of the additional performance overhead that is involved in tracking object lifetime. The garbage collector will run the finalizer before it collects the object. This means that two collections will be required to collect the object. An empty finalizer incurs this added overhead without any benefit.  
   
-## 違反の修正方法  
- 空のファイナライザーを削除します。  デバッグのためにファイナライザーが必要な場合は、ファイナライザー全体を `#if DEBUG / #endif` ディレクティブで囲んでください。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ Remove the empty finalizer. If a finalizer is required for debugging, enclose the whole finalizer in `#if DEBUG / #endif` directives.  
   
-## 警告を抑制する状況  
- この規則によるメッセージは抑制しないでください。  終了処理を省略した場合のエラーによってパフォーマンスが低下します。また何も利点がありません。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a message from this rule. Failure to suppress finalization decreases performance and provides no benefits.  
   
-## 使用例  
- 次の例は、削除する必要のある空のファイナライザー、`#if DEBUG / #endif` ディレクティブで囲む必要のあるファイナライザー、および `#if DEBUG / #endif` ディレクティブを正しく使用しているファイナライザーを示しています。  
+## <a name="example"></a>Example  
+ The following example shows an empty finalizer that should be removed, a finalizer that should be enclosed in `#if DEBUG / #endif` directives, and a finalizer that uses the `#if DEBUG / #endif` directives correctly.  
   
- [!code-cs[FxCop.Performance.RemoveEmptyFinalizers#1](../code-quality/codesnippet/CSharp/ca1821-remove-empty-finalizers_1.cs)]
+ [!code-csharp[FxCop.Performance.RemoveEmptyFinalizers#1](../code-quality/codesnippet/CSharp/ca1821-remove-empty-finalizers_1.cs)]

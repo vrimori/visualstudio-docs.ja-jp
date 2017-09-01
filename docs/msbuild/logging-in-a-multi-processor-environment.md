@@ -1,55 +1,72 @@
 ---
-title: "マルチプロセッサ環境でのログ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, ログ記録"
-  - "MSBuild, マルチ プロセッサ ログ記録"
+title: Logging in a Multi-Processor Environment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, multi-processor logging
+- MSBuild, logging
 ms.assetid: dd4dae65-ed04-4883-b48d-59bcb891c4dc
 caps.latest.revision: 9
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# マルチプロセッサ環境でのログ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e78d6c35fa294d2f1a39c91af5e278e9e4519d2d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-MSBuild では複数のプロセッサを使用できるため、プロジェクトのビルド時間が大幅に短縮されますが、同時にログの複雑性も高まります。  シングルプロセッサ環境であれば、logger は、イベント、メッセージ、警告、およびエラーを順序に従った予測可能な方法で処理できます。  それに対し、マルチプロセッサ環境では、イベントが複数のソースから同時に、または誤った順序で送られてくることがあります。  MSBuild には、マルチプロセッサ対応の新しい logger が用意されており、カスタム "転送 logger" を作成できます。  
+---
+# <a name="logging-in-a-multi-processor-environment"></a>Logging in a Multi-Processor Environment
+The ability of MSBuild to use multiple processors can greatly decrease project building time, but it also adds complexity to logging. In a single-processor environment, the logger can handle incoming events, messages, warnings, and errors in a predictable, sequential manner. However, in a multi-processor environment, events from several sources can arrive simultaneously or out of sequence. MSBuild provides a new multi-processor-aware logger and enables the creation of custom "forwarding loggers."  
   
-## マルチプロセッサ ビルドのログ  
- 1 つ以上のプロジェクトをマルチプロセッサ システムまたはマルチコア システムでビルドすると、すべてのプロジェクトの MSBuild ビルド イベントが同時に生成されます。  大量のイベント データが同時に、または誤った順序で logger に送られてくる可能性があります。  これにより、logger が過負荷となり、ビルド時間の増加や不正確な logger 出力をもたらすだけでなく、ビルドが破損することもあります。  これらの問題を解決するために、MSBuild の logger は順序が誤っているイベントを処理し、イベントとそのソースを対応付けます。  
+## <a name="logging-multiple-processor-builds"></a>Logging Multiple-Processor Builds  
+ When you build one or more projects in a multi-processor or multi-core system, MSBuild build events for all the projects are generated simultaneously. An avalanche of event data may arrive at the logger at the same time or out of sequence. This can overwhelm the logger and cause increased build times, incorrect logger output, or even a broken build. To address these issues, the MSBuild logger can process out-of-sequence events and correlate events and their sources.  
   
- カスタム転送 logger を作成すると、ログの効率をさらに高めることができます。  カスタム転送 logger はフィルターの役割を果たし、ビルドを開始する前に監視の対象とするイベントを選択できます。  カスタム転送 logger を使用すると、不要なイベントが除外されるため、logger の過負荷、ログの煩雑化、ビルド時間の増加を防ぐことができます。  
+ You can improve logging efficiency even more by creating a custom forwarding logger. A custom-forwarding logger acts as a filter by letting you choose, before you build, the events you want to monitor. When you use a custom forwarding logger, unwanted events do not overwhelm the logger, clutter your logs, or slow build times.  
   
-### 中央ログ モデル  
- マルチプロセッサ ビルドの場合、MSBuild では "中央ログ モデル" が使用されます。中央ログ モデルでは、MSBuild.exe のインスタンスがプライマリ ビルド プロセスの役割を果たします。これを "中央ノード" といいます。中央ノードには、MSBuild.exe のセカンダリ インスタンスがアタッチされます。これを "セカンダリ ノード" といいます。  中央ノードにアタッチされる ILogger ベースの logger を "中央 logger" と呼び、セカンダリ ノードにアタッチされる logger を "セカンダリ logger" と呼びます。  
+### <a name="central-logging-model"></a>Central Logging Model  
+ For multi-processor builds, MSBuild uses a "central logging model." In the central logging model, an instance of MSBuild.exe acts as the primary build process, or "central node." Secondary instances of MSBuild.exe, or "secondary nodes," are attached to the central node. Any ILogger-based loggers attached to the central node are known as "central loggers" and loggers attached to secondary nodes are known as "secondary loggers."  
   
- ビルドを開始すると、セカンダリ logger がイベント トラフィックを中央 logger にルーティングします。  イベントは複数のセカンダリ ノードで発生するため、イベント データは同時に中央ノードに到着しますが、インタリーブされます。  イベントとプロジェクト間の参照やイベントとターゲット間の参照を解決するために、イベント引数には追加のビルド イベント コンテキスト情報が含まれています。  
+ When a build occurs, the secondary loggers route their event traffic to the central loggers. Because events originate at several secondary nodes, the data arrives at the central node simultaneously but interleaved. To resolve event-to-project and event-to-target references, the event arguments include additional build event context information.  
   
- 中央 logger による実装が必要なのは <xref:Microsoft.Build.Framework.ILogger> だけですが、中央 logger をビルドに参加するノードの数で初期化する場合は、<xref:Microsoft.Build.Framework.INodeLogger> も実装することをお勧めします。  エンジンが logger を初期化するときには、次のような <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> メソッドのオーバーロードが呼び出されます。  
+ Although only <xref:Microsoft.Build.Framework.ILogger> is required to be implemented by the central logger, we recommend that you also implement <xref:Microsoft.Build.Framework.INodeLogger> if you want the central logger to initialize with the number of nodes that are participating in the build. The following overload of the <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> method is invoked when the engine initializes the logger:  
   
-```  
+```csharp
 public interface INodeLogger: ILogger  
 {  
     public void Initialize(IEventSource eventSource, int nodeCount);  
 }  
 ```  
   
-### 分散ログ モデル  
- 中央ログ モデルでは、一度に多数のプロジェクトをビルドする場合など、大量の受信メッセージ トラフィックの発生により、中央ノードが過負荷となることがあり、それがシステムの負担を増大させ、ビルド パフォーマンスの低下につながります。  
+### <a name="distributed-logging-model"></a>Distributed Logging Model  
+ In the central logging model, too much incoming message traffic, such as when many projects build at once, can overwhelm the central node, which stresses the system and lowers build performance.  
   
- この問題を軽減するために、MSBuild は転送 logger の作成によって中央ログ モデルを拡張する "分散ログ モデル" にも対応しています。  転送 logger はセカンダリ ノードにアタッチされ、このノードで生成されるビルド イベントを受け取ります。  転送 logger が通常の logger と異なる点は、イベントをフィルター処理して必要なイベントだけを中央ノードに転送できることです。  これにより、中央ノードへのメッセージ トラフィックが減少するため、パフォーマンスが向上します。  
+ To reduce this problem, MSBuild also enables a "distributed logging model" that extends the central logging model by letting you create forwarding loggers. A forwarding logger is attached to a secondary node and receives incoming build events from that node. The forwarding logger is just like a regular logger except that it can filter the events and then forward only the desired ones to the central node. This reduces the message traffic at the central node and therefore enables better performance.  
   
- 転送 logger を作成するには、<xref:Microsoft.Build.Framework.ILogger> の派生インターフェイスである <xref:Microsoft.Build.Framework.IForwardingLogger> を実装します。  このインターフェイスは次のように定義されます。  
+ You can create a forwarding logger by implementing the <xref:Microsoft.Build.Framework.IForwardingLogger> interface, which derives from <xref:Microsoft.Build.Framework.ILogger>. The interface is defined as:  
   
-```  
+```csharp
 public interface IForwardingLogger: INodeLogger  
 {  
     public IEventRedirector EventRedirector { get; set; }  
@@ -57,12 +74,12 @@ public interface IForwardingLogger: INodeLogger
 }  
 ```  
   
- 転送 logger 内のイベントを転送するには、<xref:Microsoft.Build.Framework.IEventRedirector> インターフェイスの <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> メソッドを呼び出します。  パラメーターとして、適切な <xref:Microsoft.Build.Framework.BuildEventArgs> または派生クラスを渡します。  
+ To forward events in a forwarding logger, call the <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> method of the <xref:Microsoft.Build.Framework.IEventRedirector> interface. Pass the appropriate <xref:Microsoft.Build.Framework.BuildEventArgs>, or a derivative, as the parameter.  
   
- 詳細については、「[転送 logger の作成](../msbuild/creating-forwarding-loggers.md)」を参照してください。  
+ For more information, see [Creating Forwarding Loggers](../msbuild/creating-forwarding-loggers.md).  
   
-### 分散 logger のアタッチ  
- コマンド ラインでのビルドで分散 logger をアタッチするには、`/distributedlogger` \(短縮形は `/dl`\) スイッチを使用します。  logger の型名およびクラス名の形式は、`/logger` スイッチの場合と同じです。ただし、分散 logger は転送 logger と中央 logger という 2 つのログ記録クラスから成ります。  分散 logger をアタッチするコードの例を次に示します。  
+### <a name="attaching-a-distributed-logger"></a>Attaching a Distributed Logger  
+ To attaching a distributed logger on a command line build, use the `/distributedlogger` (or, `/dl` for short) switch. The format for specifying the names of the logger types and classes are the same as those for the `/logger` switch, except that a distributed logger is comprised of two logging classes: a forwarding logger and a central logger. Following is an example of attaching a distributed logger:  
   
 ```  
 msbuild.exe *.proj /distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,  
@@ -70,8 +87,8 @@ Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,
 Culture=neutral  
 ```  
   
- `/dl` スイッチでは、2 つの logger 名をアスタリスク \(\*\) で区切っています。  
+ An asterisk (*) separates the two logger names in the `/dl` switch.  
   
-## 参照  
- [ビルド ロガー](../msbuild/build-loggers.md)   
- [転送 logger の作成](../msbuild/creating-forwarding-loggers.md)
+## <a name="see-also"></a>See Also  
+ [Build Loggers](../msbuild/build-loggers.md)   
+ [Creating Forwarding Loggers](../msbuild/creating-forwarding-loggers.md)

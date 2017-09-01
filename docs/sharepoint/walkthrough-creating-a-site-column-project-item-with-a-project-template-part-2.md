@@ -1,135 +1,140 @@
 ---
-title: "チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 2)"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロジェクト項目 [Visual Studio での SharePoint 開発]、テンプレート ウィザードの作成"
-  - "SharePoint プロジェクト項目、テンプレート ウィザードの作成"
-  - "Visual Studio での SharePoint 開発、定義 (新しいプロジェクト項目の種類を)"
+title: 'Walkthrough: Creating a Site Column Project Item with a Project Template, Part 2 | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- project items [SharePoint development in Visual Studio], creating template wizards
+- SharePoint project items, creating template wizards
+- SharePoint development in Visual Studio, defining new project item types
 ms.assetid: da14207d-ac09-41ba-b387-c7f881b2a366
 caps.latest.revision: 54
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 53
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: cc33e878acb87deac73190e6b590b58f59ce8ffd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 2)
-  SharePoint プロジェクト項目のカスタム種類を定義し、Visual Studio でその種類をプロジェクト テンプレートと関連付けてから、テンプレート用のウィザードを用意することもできます。  ウィザードを使用すると、ユーザーがテンプレートを使用してプロジェクト項目を含む新しいプロジェクトを作成するときに、ユーザーから情報を収集できます。  収集した情報を使用して、プロジェクト項目を初期化できます。  
+# <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2"></a>Walkthrough: Creating a Site Column Project Item with a Project Template, Part 2
+  After you define a custom type of SharePoint project item and associate it with a project template in Visual Studio, you might also want to provide a wizard for the template. You can use the wizard to collect information from users when they use your template to create a new project that contains the project item. The information that you collect can be used to initialize the project item.  
   
- このチュートリアルでは、「[チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 1&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)」で示されている Site Column プロジェクト テンプレートにウィザードを追加します。  ユーザーが Site Column プロジェクトを作成するときに、ウィザードは、サイト内の列に関する情報 \(その基本型やグループなど\) を収集し、この情報を新しいプロジェクトの Elements.xml ファイルに追加します。  
+ In this walkthrough, you will add a wizard to the Site Column project template that is demonstrated in [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md). When a user creates a Site Column project, the wizard collects information about the site column (such as its base type and group) and adds this information to the Elements.xml file in the new project.  
   
- このチュートリアルでは、次のタスクについて説明します。  
+ This walkthrough demonstrates the following tasks:  
   
--   プロジェクト テンプレートに関連付けるカスタム SharePoint プロジェクト項目の種類に対するウィザードを作成します。  
+-   Creating a wizard for a custom SharePoint project item type that is associated with a project template.  
   
--   Visual Studio の SharePoint プロジェクト用の組み込みウィザードと似たカスタム ウィザードの UI を定義します。  
+-   Defining a custom wizard UI that resembles the built-in wizards for SharePoint projects in Visual Studio.  
   
--   ウィザードの実行中にローカル SharePoint サイトへの呼び出しを行うために使用される 2 つの *SharePoint コマンド*を作成します。  SharePoint コマンドは、SharePoint サーバー オブジェクト モデルの API を呼び出すために Visual Studio 拡張機能で使用できるメソッドです。  詳細については、「[Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md)」を参照してください。  
+-   Creating two *SharePoint commands* that are used to call into the local SharePoint site while the wizard is running. SharePoint commands are methods that can be used by Visual Studio extensions to call APIs in the SharePoint server object model. For more information, see [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md).  
   
--   置き換え可能パラメーターを使用して、ウィザードで収集したデータで SharePoint プロジェクト ファイルを初期化します。  
+-   Using replaceable parameters to initialize SharePoint project files with data that you collect in the wizard.  
   
--   新しい各 Site Column プロジェクト インスタンスで新しい .snk ファイルを作成します。  このファイルを使用してプロジェクトの出力に署名し、SharePoint ソリューション アセンブリをグローバル アセンブリ キャッシュに配置できるようにします。  
+-   Creating a new .snk file in each new Site Column project instance. This file is used to sign the project output so that the SharePoint solution assembly can be deployed to the global assembly cache.  
   
--   ウィザードをデバッグおよびテストします。  
+-   Debugging and testing the wizard.  
   
 > [!NOTE]  
->  このチュートリアル用の完全なプロジェクト、コード、およびその他のファイルを含むサンプルは、[http:\/\/go.microsoft.com\/fwlink\/?LinkId\=191369](http://go.microsoft.com/fwlink/?LinkId=191369) からダウンロードできます。  
+>  You can download a sample that contains the completed projects, code, and other files for this walkthrough from the following location:  [http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、先に「[チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 1&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)」を完了して SiteColumnProjectItem ソリューションを作成しておく必要があります。  
+## <a name="prerequisites"></a>Prerequisites  
+ To perform this walkthrough, you must first create the SiteColumnProjectItem solution by completing [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md).  
   
- また、このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
+ You also need the following components on the development computer to complete this walkthrough:  
   
--   サポート対象エディションの Windows、SharePoint、Visual Studio。  詳細については、「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of Windows, SharePoint, and Visual Studio. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio SDK。  このチュートリアルでは、SDK の **VSIX プロジェクト** テンプレートを使用して、プロジェクト項目を配置するための VSIX パッケージを作成します。  詳細については、「[Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)」を参照してください。  
+-   The Visual Studio SDK. This walkthrough uses the **VSIX Project** template in the SDK to create a VSIX package to deploy the project item. For more information, see [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).  
   
- 次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+ Knowledge of the following concepts is helpful, but not required, to complete the walkthrough:  
   
--   Visual Studio のプロジェクトおよび項目テンプレート用のウィザード。  詳細については、「[方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md)」および <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを参照してください。  
+-   Wizards for project and item templates in Visual Studio. For more information, see [How to: Use Wizards with Project Templates](../extensibility/how-to-use-wizards-with-project-templates.md) and the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface.  
   
--   SharePoint のサイト内の列。  詳細については、「[列](http://go.microsoft.com/fwlink/?LinkId=183547)」を参照してください。  
+-   Site columns in SharePoint. For more information, see [Columns](http://go.microsoft.com/fwlink/?LinkId=183547).  
   
-##  <a name="wizardcomponents"></a> ウィザードのコンポーネントについて  
- このチュートリアルで説明されているウィザードには、いくつかのコンポーネントが含まれています。  次の表は、これらのコンポーネントについての説明です。  
+##  <a name="wizardcomponents"></a> Understanding the Wizard Components  
+ The wizard that is demonstrated in this walkthrough contains several components. The following table describes these components.  
   
-|コンポーネント|説明|  
-|-------------|--------|  
-|ウィザード実装|これは `SiteColumnProjectWizard` という名前のクラスであり、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装します。  このインターフェイスは、ウィザードの起動および終了時と、ウィザードの実行中の特定のタイミングで Visual Studio によって呼び出されるメソッドを定義します。|  
-|ウィザード UI|これは、`WizardWindow` という名前の WPF ベースのウィンドウです。  このウィンドウには、`Page1` および `Page2` という名前の 2 つのユーザー コントロールが含まれます。  これらのユーザー コントロールは、ウィザードの 2 つのページを表します。<br /><br /> このチュートリアルでは、ウィザード実装の <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> メソッドによって、ウィザード UI が表示されます。|  
-|ウィザード データ モデル|これは、`SiteColumnWizardModel` という名前の中間クラスであり、ウィザード UI とウィザード実装の間のレイヤーを提供します。  このサンプルでは、このクラスを使用して、ウィザード実装とウィザード UI を互いに抽象化できるようにします。このクラスは、すべてのウィザードで必須コンポーネントとなるわけではありません。<br /><br /> このチュートリアルでは、ウィザード UI が表示されるときに、ウィザード実装によって、ウィザード ウィンドウに `SiteColumnWizardModel` オブジェクトが渡されます。  ウィザード UI は、このオブジェクトのメソッドを使用して UI にコントロールの値を保存し、入力されたサイト URL が有効であることの確認などのタスクを実行します。  ユーザーがウィザードを終了すると、ウィザード実装は `SiteColumnWizardModel` オブジェクトを使用して、UI の最終的な状態を判断します。|  
-|プロジェクト署名マネージャー|これは、`ProjectSigningManager` という名前のヘルパー クラスであり、新しい各プロジェクト インスタンスで新しい key.snk ファイルを作成するためにウィザード実装によって使用されます。|  
-|SharePoint コマンド|これらは、ウィザードの実行中にローカル SharePoint サイトへの呼び出しを行うためにウィザード データ モデルによって使用されるメソッドです。  SharePoint コマンドは .NET Framework 3.5 をターゲットとする必要があるため、これらのコマンドは他のウィザード コードとは異なるアセンブリに実装されます。|  
+|Component|Description|  
+|---------------|-----------------|  
+|Wizard implementation|This is a class, named `SiteColumnProjectWizard`, which implements the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface. This interface defines the methods that Visual Studio calls when the wizard starts and finishes, and at certain times while the wizard runs.|  
+|Wizard UI|This is a WPF-based window, named `WizardWindow`. This window includes two user controls, named `Page1` and `Page2`. These user controls represent the two pages of the wizard.<br /><br /> In this walkthrough, the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> method of the wizard implementation displays the wizard UI.|  
+|Wizard data model|This is an intermediary class, named `SiteColumnWizardModel`, which provides a layer between the wizard UI and the wizard implementation. This sample uses this class to help abstract the wizard implementation and the wizard UI from each other; this class is not a required component of all wizards.<br /><br /> In this walkthrough, the wizard implementation passes a `SiteColumnWizardModel` object to the wizard window when it displays the wizard UI. The wizard UI uses methods of this object to save the values of controls in the UI, and to perform tasks like verifying that the input site URL is valid. After the user finishes the wizard, the wizard implementation uses the `SiteColumnWizardModel` object to determine the final state of the UI.|  
+|Project signing manager|This is a helper class, named `ProjectSigningManager`, which is used by the wizard implementation to create a new key.snk file in each new project instance.|  
+|SharePoint commands|These are methods that are used by the wizard data model to call into the local SharePoint site while the wizard is running. Because SharePoint commands must target the .NET Framework 3.5, these commands are implemented in a different assembly than the rest of the wizard code.|  
   
-## プロジェクトの作成  
- このチュートリアルを行うには、「[チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 1&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)」で作成した SiteColumnProjectItem ソリューションにいくつかのプロジェクトを追加する必要があります。  
+## <a name="creating-the-projects"></a>Creating the Projects  
+ To complete this walkthrough, you need to add several projects to the SiteColumnProjectItem solution that you created in [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md):  
   
--   WPF プロジェクト。  このプロジェクトで、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装し、ウィザードの UI を定義します。  
+-   A WPF project. You will implement the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface and define the wizard UI in this project.  
   
--   SharePoint コマンドを定義するクラス ライブラリ プロジェクト。  このプロジェクトは .NET Framework 3.5 を対象にする必要があります。  
+-   A class library project that defines the SharePoint commands. This project must target the.NET Framework 3.5.  
   
- この 2 つのプロジェクトを作成することから始めます。  
+ Start the walkthrough by creating the projects.  
   
-#### WPF プロジェクトを作成するには  
+#### <a name="to-create-the-wpf-project"></a>To create the WPF project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で、SiteColumnProjectItem ソリューションを開きます。  
+1.  In [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], open the SiteColumnProjectItem solution.  
   
-2.  **ソリューション エクスプローラー**で **\[SiteColumnProjectItem\]** ソリューション ノードのショートカット メニューを開き、**\[追加\]**、**\[新しいプロジェクト\]** の順にクリックします。  
+2.  In **Solution Explorer**, open the shortcut menu for the **SiteColumnProjectItem** solution node, choose **Add**, and then choose **New Project**.  
   
     > [!NOTE]  
-    >  Visual Basic プロジェクトでは、[NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/ja-jp/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)の **\[常にソリューションを表示\]** チェック ボックスがオンになっている場合にのみ、ソリューション ノードが表示されます。  
+    >  In Visual Basic projects, the solution node appears only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
   
-3.  **\[新しいプロジェクトの追加\]** ダイアログ ボックスの上部にある .NET Framework のバージョンの一覧で、**\[.NET Framework 4.5\]** が選択されていることを確認します。  
+3.  At the top of the **Add New Project** dialog box, make sure that **.NET Framework 4.5** is chosen in the list of versions of the .NET Framework.  
   
-4.  **\[Visual C\#\]** ノードまたは **\[Visual Basic\]** ノードを展開し、**\[Windows\]** ノードをクリックします。  
+4.  Expand the **Visual C#** node or the **Visual Basic** node, and choose the **Windows** node.  
   
-5.  プロジェクト テンプレートの一覧で **\[WPF ユーザー コントロール ライブラリ\]** を選択し、プロジェクトに「**ProjectTemplateWizard**」という名前を付けて、**\[OK\]** をクリックします。  
+5.  In the list of project templates, choose **WPF User Control Library**, name the project **ProjectTemplateWizard**, and then choose the **OK** button.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって、**ProjectTemplateWizard** プロジェクトがソリューションに追加され、既定の UserControl1.xaml ファイルが開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **ProjectTemplateWizard** project to the solution and opens the default UserControl1.xaml file.  
   
-6.  UserControl1.xaml ファイルをプロジェクトから削除します。  
+6.  Delete the UserControl1.xaml file from the project.  
   
-#### SharePoint コマンド プロジェクトを作成するには  
+#### <a name="to-create-the-sharepoint-commands-project"></a>To create the SharePoint commands project  
   
-1.  **ソリューション エクスプローラー**で **\[SiteColumnProjectItem\]** ソリューション ノードのショートカット メニューを開き、**\[追加\]**、\[新しいプロジェクト\] の順にクリックします。  
+1.  In **Solution Explorer**, open the shortcut menu for the SiteColumnProjectItem solution node, choose **Add**, and then choose **New Project**.  
   
-2.  **\[新しいプロジェクトの追加\]** ダイアログ ボックスの上部にある .NET Framework のバージョンの一覧で **\[.NET Framework 3.5\]** を選択します。  
+2.  At the top of the **Add New Project** dialog box, choose **.NET Framework 3.5** in the list of versions of the .NET Framework.  
   
-3.  **\[Visual C\#\]** ノードまたは **\[Visual Basic\]** ノードを展開し、**\[Windows\]** ノードをクリックします。  
+3.  Expand the **Visual C#** node or the  **Visual Basic** node, and then choose the **Windows** node.  
   
-4.  **\[クラス ライブラリ\]** プロジェクト テンプレートを選択し、プロジェクトに「**SharePointCommands**」という名前を付けて、**\[OK\]** をクリックします。  
+4.  Choose the **Class Library** project template, name the project **SharePointCommands**, and then choose the **OK** button.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって、**\[SharePointCommands\]** プロジェクトがソリューションに追加され、既定の Class1 コード ファイルが開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **SharePointCommands** project to the solution and opens the default Class1 code file.  
   
-5.  Class1 コード ファイルをプロジェクトから削除します。  
+5.  Delete the Class1 code file from the project.  
   
-## プロジェクトの構成  
- ウィザードを作成する前に、いくつかのコード ファイルとアセンブリ参照をプロジェクトに追加する必要があります。  
+## <a name="configuring-the-projects"></a>Configuring the Projects  
+ Before you create the wizard, you must add some code files and assembly references to the projects.  
   
-#### ウィザード プロジェクトを構成するには  
+#### <a name="to-configure-the-wizard-project"></a>To configure the wizard project  
   
-1.  **ソリューション エクスプローラー**で、**\[ProjectTemplateWizard\]** プロジェクト ノードのショートカット メニューを開き、**\[プロパティ\]** をクリックします。  
+1.  In **Solution Explorer**, open the shortcut menu for the **ProjectTemplateWizard** project node, and then choose **Properties**.  
   
-2.  **プロジェクト デザイナー**で、Visual C\# プロジェクトの場合は **\[アプリケーション\]** タブを選択し、Visual Basic プロジェクトの場合は **\[コンパイル\]** タブを選択します。  
+2.  In the **Project Designer**, choose the **Application** tab for a Visual C# project or the **Compile** tab for a Visual Basic project.  
   
-3.  ターゲット フレームワークが .NET Framework 4.5 Client Profile ではなく .NET Framework 4.5 に設定されていることを確認します。  
+3.  Make sure that the target framework is set to the .NET Framework 4.5, not the .NET Framework 4.5 Client Profile.  
   
-     詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../Topic/How%20to:%20Target%20a%20Version%20of%20the%20.NET%20Framework.md)」を参照してください。  
+     For more information, see [How to: Target a Version of the .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md).  
   
-4.  **\[ProjectTemplateWizard\]** プロジェクトのショートカット メニューを開き、**\[追加\]** をクリックし、**\[新しい項目\]** を選択します。  
+4.  Open the shortcut menu for the **ProjectTemplateWizard** project, choose **Add**, and then choose **New Item**.  
   
-5.  **\[ウィンドウ \(WPF\)\]** 項目を選択し、項目に「**WizardWindow**」という名前を付けて、**\[追加\]** をクリックします。  
+5.  Choose the **Window (WPF)** item, name the item **WizardWindow**, and then choose the **Add** button.  
   
-6.  2 つの **\[ユーザー コントロール \(WPF\)\]** 項目をプロジェクトに追加し、それらの項目に「**Page1**」と「**Page2**」という名前を付けます。  
+6.  Add two **User Control (WPF)** items to the project, and name them **Page1** and **Page2**.  
   
-7.  次の名前で 4 つのコード ファイルをプロジェクトに追加します。  
+7.  Add four code files to the project, and give them the following names:  
   
     -   SiteColumnProjectWizard  
   
@@ -139,9 +144,9 @@ caps.handback.revision: 53
   
     -   CommandIds  
   
-8.  **\[ProjectTemplateWizard\]** プロジェクト ノードのショートカット メニューを開き、**\[参照の追加\]** をクリックします。  
+8.  Open the shortcut menu for the **ProjectTemplateWizard** project node, and then choose **Add Reference**.  
   
-9. **\[アセンブリ\]** ノードを展開し、**\[拡張機能\]** ノードをクリックして、次のアセンブリの横にあるチェック ボックスをオンにします。  
+9. Expand the **Assemblies** node, choose the **Extensions** node, and then select the check boxes next to the following assemblies:  
   
     -   EnvDTE  
   
@@ -157,194 +162,186 @@ caps.handback.revision: 53
   
     -   Microsoft.VisualStudio.TemplateWizardInterface  
   
-10. **\[OK\]** をクリックして、アセンブリをプロジェクトに追加します。  
+10. Choose the **OK** button to add the assemblies to the project.  
   
-11. **ソリューション エクスプローラー**で、**\[ProjectTemplateWizard\]** プロジェクトの **\[参照設定\]** フォルダーの下の **\[EnvDTE\]** をクリックします。  
+11. In **Solution Explorer**, under the **References** folder for the **ProjectTemplateWizard** project, choose **EnvDTE**.  
   
     > [!NOTE]  
-    >  Visual Basic プロジェクトでは、**\[参照設定\]** フォルダーが表示されるのは、[NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/ja-jp/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca) で **\[常にソリューションを表示\]** チェック ボックスがオンになっている場合のみです。  
+    >  In Visual Basic projects, the **References** folder appears only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
   
-12. **\[プロパティ\]** ウィンドウで、**\[相互運用型の埋め込み\]** プロパティの値を **False** に変更します。  
+12. In the **Properties** window, change the value of the **Embed Interop Types** property to **False**.  
   
-13. Visual Basic プロジェクトを開発している場合は、**プロジェクト デザイナー**を使用して ProjectTemplateWizard 名前空間をプロジェクトにインポートします。  
+13. If you're developing a Visual Basic project, import the ProjectTemplateWizard namespace into your project by using the **Project Designer**.  
   
-     詳細については、「[方法 : インポートした名前空間を追加または削除する &#40;Visual Basic&#41;](../Topic/How%20to:%20Add%20or%20Remove%20Imported%20Namespaces%20(Visual%20Basic).md)」を参照してください。  
+     For more information, see [How to: Add or Remove Imported Namespaces &#40;Visual Basic&#41;](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md).  
   
-#### SharePointCommands プロジェクトを構成するには  
+#### <a name="to-configure-the-sharepointcommands-project"></a>To configure the SharePointCommands project  
   
-1.  **ソリューション エクスプローラー**で、**\[SharePointCommands\]** プロジェクト ノードをクリックします。  
+1.  In **Solution Explorer**, choose the **SharePointCommands** project node.  
   
-2.  メニュー バーで **\[プロジェクト\]**、**\[既存項目の追加\]** の順にクリックします。  
+2.  On the menu bar, choose **Project**,  **Add Existing Item**.  
   
-3.  **\[既存項目の追加\]** ダイアログ ボックスで、ProjectTemplateWizard プロジェクトのコード ファイルが格納されているフォルダーを参照し、**CommandIds** コード ファイルを選択します。  
+3.  In the **Add Existing Item** dialog box, browse to the folder that contains the code files for the ProjectTemplateWizard project, and then choose the **CommandIds** code file.  
   
-4.  **\[追加\]** ボタンの横にある矢印をクリックし、表示されるメニューの **\[リンクとして追加\]** オプションをクリックします。  
+4.  Choose the arrow next to the **Add** button, and then choose the **Add As Link** option on the menu that appears.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] により、**SharePointCommands** プロジェクトにリンクとしてコード ファイルが追加されます。  コード ファイルそのものは **ProjectTemplateWizard** プロジェクトに存在しますが、そのファイル内のコードは **SharePointCommands** プロジェクトでもコンパイルされます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the code file to the **SharePointCommands** project as a link. The code file is located in the **ProjectTemplateWizard** project, but the code in the file is also compiled in the **SharePointCommands** project.  
   
-5.  **SharePointCommands** プロジェクトに、Commands という別のコード ファイルを追加します。  
+5.  In the **SharePointCommands** project, add another code file that's named Commands.  
   
-6.  SharePointCommands プロジェクトを選択し、メニュー バーで **\[プロジェクト\]**、**\[参照の追加\]** の順にクリックします。  
+6.  Choose the SharePointCommands project, and then, on the menu bar, choose **Project**, **Add Reference**.  
   
-7.  **\[アセンブリ\]** ノードを展開し、**\[拡張機能\]** ノードをクリックして、次のアセンブリの横にあるチェック ボックスをオンにします。  
+7.  Expand the **Assemblies** node, choose the **Extensions** node, and then select the check boxes next to the following assemblies:  
   
     -   Microsoft.SharePoint  
   
     -   Microsoft.VisualStudio.SharePoint.Commands  
   
-8.  **\[OK\]** をクリックして、アセンブリをプロジェクトに追加します。  
+8.  Choose the **OK** button to add the assemblies to the project.  
   
-## ウィザード モデル、署名マネージャー、および SharePoint コマンド ID の作成  
- ProjectTemplateWizard プロジェクトにコードを追加して、サンプルの次のコンポーネントを実装します。  
+## <a name="creating-the-wizard-model-signing-manager-and-sharepoint-command-ids"></a>Creating the Wizard Model, Signing Manager, and SharePoint Command IDs  
+ Add code to the ProjectTemplateWizard project to implement the following components in the sample:  
   
--   SharePoint コマンド ID。  これらは、ウィザードによって使用される SharePoint コマンドを識別する文字列です。  このチュートリアルの後半で、SharePointCommands プロジェクトにコードを追加してコマンドを実装します。  
+-   The SharePoint command IDs. These strings identify the SharePoint commands that the wizard uses. Later in this walkthrough, you'll add code to the SharePointCommands project to implement the commands.  
   
--   ウィザード データ モデル。  
+-   The wizard data model.  
   
--   プロジェクト署名マネージャー。  
+-   The project signing manager.  
   
- これらのコンポーネントの詳細については、「[ウィザードのコンポーネントについて](#wizardcomponents)」を参照してください。  
+ For more information about these components, see [Understanding the Wizard Components](#wizardcomponents).  
   
-#### SharePoint コマンド ID を定義するには  
+#### <a name="to-define-the-sharepoint-command-ids"></a>To define the SharePoint command IDs  
   
-1.  ProjectTemplateWizard プロジェクトで、CommandIds コード ファイルを開き、このファイルの内容全体を次のコードに置き換えます。  
+1.  In the ProjectTemplateWizard project, open the CommandIds code file, and then replace the entire contents of this file with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#5](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/projecttemplatewizard/commandids.cs#5)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#5](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/vb/projecttemplatewizard/commandids.vb#5)]  
+     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#5](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/commandids.cs#5)]  [!code-vb[SPExtensibility.ProjectItem.SiteColumn#5](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/commandids.vb#5)]  
   
-#### ウィザード モデルを作成するには  
+#### <a name="to-create-the-wizard-model"></a>To create the wizard model  
   
-1.  SiteColumnWizardModel コード ファイルを開き、このファイルの内容全体を次のコードに置き換えます。  
+1.  Open the SiteColumnWizardModel code file, and replace the entire contents of this file with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#6](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/projecttemplatewizard/sitecolumnwizardmodel.cs#6)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#6](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/vb/projecttemplatewizard/sitecolumnwizardmodel.vb#6)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#6](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.vb#6)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#6](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.cs#6)]  
   
-#### プロジェクト署名マネージャーを作成するには  
+#### <a name="to-create-the-project-signing-manager"></a>To create the project signing manager  
   
-1.  ProjectSigningManager コード ファイルを開き、このファイルの内容全体を次のコードに置き換えます。  
+1.  Open the ProjectSigningManager code file, and then replace the entire contents of this file with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#8](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/projecttemplatewizard/projectsigningmanager.cs#8)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#8](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/vb/projecttemplatewizard/projectsigningmanager.vb#8)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#8](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.vb#8)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#8](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.cs#8)]  
   
-## ウィザードの UI の作成  
- ウィザード ウィンドウの UI と、ウィザード ページの UI を提供する 2 つのユーザー コントロールを定義する XAML を追加し、ウィンドウとユーザー コントロールの動作を定義するコードを追加します。  作成するウィザードは、Visual Studio の SharePoint プロジェクト用の組み込みウィザードに似ています。  
+## <a name="creating-the-wizard-ui"></a>Creating the Wizard UI  
+ Add XAML to define the UI of the wizard window and the two user controls that provide the UI for the wizard pages, and add code to define the behavior of the window and user controls. The wizard that you create resembles the built-in wizard for SharePoint projects in Visual Studio.  
   
 > [!NOTE]  
->  以降の手順では、プロジェクトに XAML またはコードを追加した後で、いくつかのコンパイル エラーが発生します。  これらのエラーは、この後の手順でコードを追加すると解消されます。  
+>  In the following steps, your project will have some compile errors after you add XAML or code to your project. These errors will go away when you add code in later steps.  
   
-#### ウィザード ウィンドウの UI を作成するには  
+#### <a name="to-create-the-wizard-window-ui"></a>To create the wizard window UI  
   
-1.  ProjectTemplateWizard プロジェクトで、WizardWindow.xaml ファイルのショートカット メニューを開き、**\[開く\]** をクリックしてウィンドウをデザイナーで開きます。  
+1.  In the ProjectTemplateWizard project, open the shortcut menu for the WizardWindow.xaml file, and then choose **Open** to open the window in the designer.  
   
-2.  デザイナーの XAML ビューで、現在の XAML を次の XAML に置き換えます。  この XAML は、見出しを含む UI、ウィザード ページが含まれる <xref:System.Windows.Controls.Grid>、およびウィンドウの下部に示されるナビゲーション ボタンを定義します。  
+2.  In the XAML view of the designer, replace the current XAML with the following XAML. The XAML defines a UI that includes a heading, a <xref:System.Windows.Controls.Grid> that contains the wizard pages, and navigation buttons at the bottom of the window.  
   
-     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#10](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/projecttemplatewizard/wizardwindow.xaml#10)]  
+     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#10](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml#10)]  
   
     > [!NOTE]  
-    >  この XAML で作成するウィンドウは <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> 基底クラスから派生します。  カスタムの WPF ダイアログ ボックスを Visual Studio に追加する場合は、ダイアログ ボックスをこのクラスから派生し、スタイルを他の Visual Studio ダイアログ ボックスと一貫させ、発生する可能性のあるモーダル ダイアログの問題を回避することをお勧めします。  詳細については、「[作成して、モーダル ダイアログ ボックスを管理します。](../extensibility/creating-and-managing-modal-dialog-boxes.md)」を参照してください。  
+    >  The window that's created in this XAML is derived from the <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> base class. When you add a custom WPF dialog box to Visual Studio, we recommend that you derive your dialog box from this class to have consistent styling with other Visual Studio dialog boxes and to avoid modal dialog issues that might otherwise occur. For more information, see [Creating and Managing Modal Dialog Boxes](/visualstudio/extensibility/creating-and-managing-modal-dialog-boxes).  
   
-3.  Visual Basic プロジェクトを開発している場合は、`Window` 要素の `x:Class` 属性の `WizardWindow` クラス名から `ProjectTemplateWizard` 名前空間を削除します。  この要素は XAML の 1 行目にあります。  変更後の 1 行目は次の例のようになります。  
+3.  If you're developing a Visual Basic project, remove the `ProjectTemplateWizard` namespace from the `WizardWindow` class name in the `x:Class` attribute of the `Window` element. This element is in the first line of the XAML. When you're done, the first line should look like the following example.  
   
     ```  
     <Window x:Class="WizardWindow"  
     ```  
   
-4.  WizardWindow.xaml ファイルの分離コード ファイルを開きます。  
+4.  Open the code-behind file for the WizardWindow.xaml file.  
   
-5.  このファイルの内容を、ファイルの先頭の `using` 宣言を除いて、次のコードに置き換えます。  
+5.  Replace the contents of this file, except for the `using` declarations at the top of the file, with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#4](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/projecttemplatewizard/wizardwindow.xaml.cs#4)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#4](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/vb/projecttemplatewizard/wizardwindow.xaml.vb#4)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.vb#4)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.cs#4)]  
   
-#### 1 つ目のウィザード ページの UI を作成するには  
+#### <a name="to-create-the-first-wizard-page-ui"></a>To create the first wizard page UI  
   
-1.  ProjectTemplateWizard プロジェクトで、Page1.xaml ファイルのショートカット メニューを開き、**\[開く\]** をクリックしてユーザー コントロールをデザイナーで開きます。  
+1.  In the ProjectTemplateWizard project, open the shortcut menu for the Page1.xaml file, and then choose **Open** to open the user control in the designer.  
   
-2.  デザイナーの XAML ビューで、現在の XAML を次の XAML に置き換えます。  この XAML で定義している UI には、ユーザーがデバッグに使用するローカル サイトの URL を入力できるテキスト ボックスが含まれます。  この UI には、ユーザーがプロジェクトをサンドボックス化するかどうかを指定できるオプション ボタンも含まれます。  
+2.  In the XAML view of the designer, replace the current XAML with the following XAML. The XAML defines a UI that includes a text box where users can enter the URL of the local sites that they want to use for debugging. The UI also includes option buttons with which users can specify whether the project is sandboxed.  
   
-     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#11](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/projecttemplatewizard/page1.xaml#11)]  
+     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#11](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page1.xaml#11)]  
   
-3.  Visual Basic プロジェクトを開発している場合は、`UserControl` 要素の `x:Class` 属性の `Page1` クラス名から `ProjectTemplateWizard` 名前空間を削除します。  これは XAML の 1 行目にあります。  変更後の 1 行目は次のようになります。  
+3.  If you are developing a Visual Basic project, remove the `ProjectTemplateWizard` namespace from the `Page1` class name in the `x:Class` attribute of the `UserControl` element. This is in the first line of the XAML. When you are done, the first line should look like the following.  
   
     ```  
     <UserControl x:Class="Page1"  
     ```  
   
-4.  Page1.xaml ファイルの内容を、ファイルの先頭にある `using` 宣言を除いて、次のコードに置き換えます。  
+4.  Replace the contents of the Page1.xaml file, except for the `using` declarations at the top of the file, with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#2](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/projecttemplatewizard/page1.xaml.cs#2)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#2](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/vb/projecttemplatewizard/page1.xaml.vb#2)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.vb#2)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.cs#2)]  
   
-#### 2 つ目のウィザード ページの UI を作成するには  
+#### <a name="to-create-the-second-wizard-page-ui"></a>To create the second wizard page UI  
   
-1.  ProjectTemplateWizard プロジェクトで、Page2.xaml ファイルのショートカット メニューを開き、**\[開く\]** をクリックします。  
+1.  In the ProjectTemplateWizard project, open the shortcut menu for the Page2.xaml file, and then choose **Open**.  
   
-     ユーザー コントロールがデザイナーで開きます。  
+     The user control opens in the designer.  
   
-2.  XAML ビューで、現在の XAML を次の XAML に置き換えます。  この XAML は、サイト内の列の基本型を選択するためのドロップダウン リスト、ギャラリーでサイト内の列を表示する組み込みまたはカスタムのグループを指定するためのコンボ ボックス、およびサイト内の列の名前を指定するためのボックスが含まれる UI を定義します。  
+2.  In the XAML view, replace the current XAML with the following XAML. The XAML defines a UI that includes a drop-down list for choosing the base type of the site column, a combo box for specifying a built-in or custom group under which to display the site column in the gallery, and a text box for specifying the name of the site column.  
   
-     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#12](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/projecttemplatewizard/page2.xaml#12)]  
+     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#12](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page2.xaml#12)]  
   
-3.  Visual Basic プロジェクトを開発している場合は、`UserControl` 要素の `x:Class` 属性の `Page2` クラス名から `ProjectTemplateWizard` 名前空間を削除します。  これは XAML の 1 行目にあります。  変更後の 1 行目は次のようになります。  
+3.  If you are developing a Visual Basic project, remove the `ProjectTemplateWizard` namespace from the `Page2` class name in the `x:Class` attribute of the `UserControl` element. This is in the first line of the XAML. When you are done, the first line should look like the following.  
   
     ```  
     <UserControl x:Class="Page2"  
     ```  
   
-4.  Page2.xaml ファイルの分離コード ファイルの内容を、ファイルの先頭にある `using` 宣言を除いて、次のコードに置き換えます。  
+4.  Replace the contents of the code-behind file for the Page2.xaml file, except for the `using` declarations at the top of the file, with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#3](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/projecttemplatewizard/page2.xaml.cs#3)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#3](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/vb/projecttemplatewizard/page2.xaml.vb#3)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.vb#3)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.cs#3)]  
   
-## ウィザードの実装  
- <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装することで、ウィザードの主要機能を定義します。  このインターフェイスは、ウィザードの起動および終了時と、ウィザードの実行中の特定のタイミングで Visual Studio によって呼び出されるメソッドを定義します。  
+## <a name="implementing-the-wizard"></a>Implementing the Wizard  
+ Define the main functionality of the wizard by implementing the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface. This interface defines the methods that Visual Studio calls when the wizard starts and finishes, and at certain times while the wizard runs.  
   
-#### ウィザードを実装するには  
+#### <a name="to-implement-the-wizard"></a>To implement the wizard  
   
-1.  ProjectTemplateWizard プロジェクトで、SiteColumnProjectWizard コード ファイルを開きます。  
+1.  In the ProjectTemplateWizard project, open the SiteColumnProjectWizard code file.  
   
-2.  このファイルの内容全体を次のコードで置き換えます。  
+2.  Replace the entire contents of this file with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#7](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/projecttemplatewizard/sitecolumnprojectwizard.cs#7)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#7](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/vb/projecttemplatewizard/sitecolumnprojectwizard.vb#7)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#7](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.vb#7)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#7](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.cs#7)]  
   
-## SharePoint コマンドの作成  
- SharePoint サーバー オブジェクト モデルを呼び出す 2 つのカスタム コマンドを作成します。  一方のコマンドは、ウィザードでユーザーが入力するサイトの URL が有効かどうかを判断します。  もう一方のコマンドは、指定した SharePoint サイトからすべてのフィールドの型を取得して、ユーザーが新しいサイト内の列の基本として使用するフィールドの型を選択できるようにします。  
+## <a name="creating-the-sharepoint-commands"></a>Creating the SharePoint Commands  
+ Create two custom commands that call into the SharePoint server object model. One command determines whether the site URL that the user types in the wizard is valid. The other command gets all of the field types from the specified SharePoint site so that users can select which one to use as the basis for their new site column.  
   
-#### SharePoint コマンドを定義するには  
+#### <a name="to-define-the-sharepoint-commands"></a>To define the SharePoint commands  
   
-1.  **SharePointCommands** プロジェクトの Commands コード ファイルを開きます。  
+1.  In the **SharePointCommands** project, open the Commands code file.  
   
-2.  このファイルの内容全体を次のコードで置き換えます。  
+2.  Replace the entire contents of this file with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#9](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/sharepointcommands/commands.cs#9)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#9](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/vb/sharepointcommands/commands.vb#9)]  
+     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/sharepointcommands/commands.vb#9)]  [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/sharepointcommands/commands.cs#9)]  
   
-## チェックポイント  
- この段階で、ウィザードに必要なすべてのコードがプロジェクトに揃ったことになります。  エラーが発生することなくプロジェクトをコンパイルできるかどうか、プロジェクトをビルドして確認してください。  
+## <a name="checkpoint"></a>Checkpoint  
+ At this point in the walkthrough, all the code for the wizard is now in the project. Build the project to make sure that it compiles without errors.  
   
-#### プロジェクトをビルドするには  
+#### <a name="to-build-your-project"></a>To build your project  
   
-1.  メニュー バーの **\[ビルド\]**、**\[ソリューションのビルド\]** の順にクリックします。  
+1.  On the menu bar, choose **Build**, **Build Solution**.  
   
-## プロジェクト テンプレートからの key.snk ファイルの削除  
- 「[チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 1&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)」では、作成したプロジェクト テンプレートに、各 Site Column プロジェクト インスタンスに署名するために使用される key.snk ファイルが含まれています。  ウィザードでプロジェクトごとに新しい key.snk ファイルが生成されるようになったため、この key.snk ファイルはもう必要ありません。  プロジェクト テンプレートから key.snk ファイルを削除し、このファイルへの参照を削除します。  
+## <a name="removing-the-keysnk-file-from-the-project-template"></a>Removing the key.snk File from the Project Template  
+ In [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md), the project template that you created contains a key.snk file that is used to sign each Site Column project instance. This key.snk file is no longer necessary because the wizard now generates a new key.snk file for each project. Remove the key.snk file from the project template and remove references to this file.  
   
-#### プロジェクト テンプレートから key.snk ファイルを削除するには  
+#### <a name="to-remove-the-keysnk-file-from-the-project-template"></a>To remove the key.snk file from the project template  
   
-1.  **ソリューション エクスプローラー**で、**\[SiteColumnProjectTemplate\]** ノードの下の **key.snk** ファイルのショートカット メニューを開き、**\[削除\]** をクリックします。  
+1.  In **Solution Explorer**, under the **SiteColumnProjectTemplate** node, open the shortcut menu for the **key.snk** file, and then choose **Delete**.  
   
-2.  表示される確認のダイアログ ボックスで、**\[OK\]** をクリックします。  
+2.  In the confirmation dialog box that appears, choose the **OK** button.  
   
-3.  **\[SiteColumnProjectTemplate\]** ノードの下の SiteColumnProjectTemplate.vstemplate ファイルを開き、そのファイルから次の要素を削除します。  
+3.  Under the **SiteColumnProjectTemplate** node, open the SiteColumnProjectTemplate.vstemplate file, and then remove the following element from it.  
   
     ```  
     <ProjectItem ReplaceParameters="false" TargetFileName="key.snk">key.snk</ProjectItem>  
     ```  
   
-4.  ファイルを保存して閉じます。  
+4.  Save and close the file.  
   
-5.  **\[SiteColumnProjectTemplate\]** ノードの下の ProjectTemplate.csproj または ProjectTemplate.vbproj ファイルを開き、そのファイルから次の `PropertyGroup` 要素を削除します。  
+5.  Under the **SiteColumnProjectTemplate** node, open the ProjectTemplate.csproj or ProjectTemplate.vbproj file, and then remove the following `PropertyGroup` element from it.  
   
     ```  
     <PropertyGroup>  
@@ -353,56 +350,56 @@ caps.handback.revision: 53
     </PropertyGroup>  
     ```  
   
-6.  次の `None` 要素を削除します。  
+6.  Remove the following `None` element.  
   
     ```  
     <None Include="key.snk" />  
     ```  
   
-7.  ファイルを保存して閉じます。  
+7.  Save and close the file.  
   
-## ウィザードとプロジェクト テンプレートの関連付け  
- ウィザードの実装が済んだので、ウィザードと **Site Column** プロジェクト テンプレートを関連付ける必要があります。  これを行うために必要となる手順は次の 3 つです。  
+## <a name="associating-the-wizard-with-the-project-template"></a>Associating the Wizard with the Project Template  
+ Now that you have implemented the wizard, you must associate the wizard with the **Site Column** project template. There are three procedures you must complete to do this:  
   
-1.  ウィザード アセンブリに厳密な名前で署名します。  
+1.  Sign the wizard assembly with a strong name.  
   
-2.  ウィザード アセンブリの公開キー トークンを取得します。  
+2.  Get the public key token for the wizard assembly.  
   
-3.  **Site Column** プロジェクト テンプレートの .vstemplate ファイルに、ウィザード アセンブリへの参照を追加します。  
+3.  Add a reference to the wizard assembly in the .vstemplate file for the **Site Column** project template.  
   
-#### ウィザード アセンブリに厳密な名前で署名するには  
+#### <a name="to-sign-the-wizard-assembly-with-a-strong-name"></a>To sign the wizard assembly with a strong name  
   
-1.  **ソリューション エクスプローラー**で、**\[ProjectTemplateWizard\]** プロジェクトのショートカット メニューを開き、**\[プロパティ\]** をクリックします。  
+1.  In **Solution Explorer**, open the shortcut menu for the **ProjectTemplateWizard** project, and then choose **Properties**.  
   
-2.  **\[署名\]** タブの **\[アセンブリの署名\]** チェック ボックスをオンにします。  
+2.  On the **Signing** tab, select the **Sign the assembly** check box.  
   
-3.  **\[厳密な名前のキー ファイルを選択してください\]** ボックスの一覧で **\[\<新規作成...\>\]** を選択します。  
+3.  In the **Choose a strong name key file** list, choose **\<New...>**.  
   
-4.  **\[厳密な名前キーの作成\]** ダイアログ ボックスで、新しいキー ファイルの名前を入力し、**\[キー ファイルをパスワードで保護する\]** チェック ボックスをオフにして、**\[OK\]** をクリックします。  
+4.  In the **Create Strong Name Key** dialog box, enter a name for the new key file, clear the **Protect my key file with a password** check box, and then choose the **OK** button.  
   
-5.  **\[ProjectTemplateWizard\]** プロジェクトのショートカット メニューを開き、**\[ビルド\]** をクリックして ProjectTemplateWizard.dll ファイルを作成します。  
+5.  Open the shortcut menu for the **ProjectTemplateWizard** project, and then choose **Build** to create the ProjectTemplateWizard.dll file.  
   
-#### ウィザード アセンブリの公開キー トークンを取得するには  
+#### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>To get the public key token for the wizard assembly  
   
-1.  **\[スタート\]** メニューで **\[すべてのプログラム\]**、**\[Microsoft Visual Studio\]**、**\[Visual Studio ツール\]** の順にポイントし、**\[開発者コマンド プロンプト\]** をクリックします。  
+1.  On the **Start Menu**, choose **All Programs**, choose **Microsoft Visual Studio**, choose **Visual Studio Tools**, and then choose **Developer Command Prompt**.  
   
-     Visual Studio コマンド プロンプト ウィンドウが開きます。  
+     A Visual Studio Command Prompt window opens.  
   
-2.  次のコマンドを実行します。*PathToWizardAssembly* は、開発コンピューター上で ProjectTemplateWizard プロジェクト用にビルドされた ProjectTemplateWizard.dll アセンブリへの完全パスで置き換えます。  
+2.  Run the following command, replacing *PathToWizardAssembly* with the full path to the built ProjectTemplateWizard.dll assembly for the ProjectTemplateWizard project on your development computer:  
   
     ```  
     sn.exe -T PathToWizardAssembly  
     ```  
   
-     ProjectTemplateWizard.dll アセンブリに対する公開キー トークンが Visual Studio コマンド プロンプト ウィンドウに記述されます。  
+     The public key token for the ProjectTemplateWizard.dll assembly is written to the Visual Studio Command Prompt window.  
   
-3.  Visual Studio コマンド プロンプト ウィンドウは開いたままにします。  次の手順の間に、公開キー トークンが必要になります。  
+3.  Keep the Visual Studio Command Prompt window open. You will need the public key token during the next procedure.  
   
-#### .vstemplate ファイルにウィザード アセンブリへの参照を追加するには  
+#### <a name="to-add-a-reference-to-the-wizard-assembly-in-the-vstemplate-file"></a>To add a reference to the wizard assembly in the .vstemplate file  
   
-1.  **ソリューション エクスプローラー**で、**\[SiteColumnProjectTemplate\]** プロジェクト ノードを展開し、SiteColumnProjectTemplate.vstemplate ファイルを開きます。  
+1.  In **Solution Explorer**, expand the **SiteColumnProjectTemplate** project node and open the SiteColumnProjectTemplate.vstemplate file.  
   
-2.  ファイルの末尾の近くで、次の `WizardExtension` 要素を `</TemplateContent>` タグと `</VSTemplate>` タグの間に追加します。  `PublicKeyToken` 属性の *your token* の値は、前の手順で取得した公開キー トークンで置き換えます。  
+2.  Near the end of the file, add the following `WizardExtension` element between the `</TemplateContent>` and `</VSTemplate>` tags. Replace the *your token* value of the `PublicKeyToken` attribute with the public key token that you obtained in the previous procedure.  
   
     ```  
     <WizardExtension>  
@@ -411,21 +408,21 @@ caps.handback.revision: 53
     </WizardExtension>  
     ```  
   
-     `WizardExtension` 要素の詳細については、「[WizardExtension 要素 &#40;Visual Studio テンプレート&#41;](../extensibility/wizardextension-element-visual-studio-templates.md)」を参照してください。  
+     For more information about the `WizardExtension` element, see [WizardExtension Element &#40;Visual Studio Templates&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).  
   
-3.  ファイルを保存して閉じます。  
+3.  Save and close the file.  
   
-## プロジェクト テンプレートの Elements.xml ファイルへの置き換え可能パラメーターの追加  
- 複数の置き換え可能パラメーターを、SiteColumnProjectTemplate プロジェクトの Elements.xml ファイルに追加します。  これらのパラメーターは、前に定義した `SiteColumnProjectWizard` クラスの `RunStarted` メソッドで初期化されます。  ユーザーが Site Column プロジェクトを作成すると、Visual Studio によって自動的に、新しいプロジェクト項目の Elements.xml ファイル内のこれらのパラメーターが、ウィザードでユーザーが指定した値に置き換えられます。  
+## <a name="adding-replaceable-parameters-to-the-elementsxml-file-in-the-project-template"></a>Adding Replaceable Parameters to the Elements.xml File in the Project Template  
+ Add several replaceable parameters to the Elements.xml file in the SiteColumnProjectTemplate project. These parameters are initialized in the `RunStarted` method in the `SiteColumnProjectWizard` class that you defined earlier. When a user creates a Site Column project, Visual Studio automatically replaces these parameters in the Elements.xml file in the new project with the values that they specified in the wizard.  
   
- 置き換え可能パラメーターはトークンであり、先頭と末尾にはドル記号 \($\) が付いています。  独自の置き換え可能パラメーターを定義するだけでなく、SharePoint プロジェクト システムによって定義されて初期化される組み込みパラメーターを使用することもできます。  詳細については、「[置き換え可能パラメーター](../sharepoint/replaceable-parameters.md)」を参照してください。  
+ A replaceable parameter is a token that begins and ends with the dollar sign ($) character. In addition to defining your own replaceable parameters, you can use built-in parameters that are defined and initialized by the SharePoint project system. For more information, see [Replaceable Parameters](../sharepoint/replaceable-parameters.md).  
   
-#### 置き換え可能パラメーターを Elements.xml ファイルに追加するには  
+#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>To add replaceable parameters to the Elements.xml file  
   
-1.  SiteColumnProjectTemplate プロジェクトで、Elements.xml ファイルの内容を次の XML に置き換えます。  
+1.  In the SiteColumnProjectTemplate project, replace the contents of the Elements.xml file with the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
       <Field ID="{$guid5$}"   
              Name="$fieldname$"   
@@ -436,121 +433,121 @@ caps.handback.revision: 53
     </Elements>  
     ```  
   
-     新しい XML では、`Name`、`DisplayName`、`Type`、`Group` の各属性の値がカスタムの置き換え可能パラメーターに変更されます。  
+     The new XML changes the values of the `Name`, `DisplayName`, `Type`, and `Group` attributes to custom replaceable parameters.  
   
-2.  ファイルを保存して閉じます。  
+2.  Save and close the file.  
   
-## VSIX パッケージへのウィザードの追加  
- Site Column プロジェクト テンプレートが含まれる VSIX パッケージと共にウィザードを配置するには、ウィザード プロジェクトと SharePoint コマンド プロジェクトへの参照を VSIX プロジェクトの source.extension.vsixmanifest ファイルに追加します。  
+## <a name="adding-the-wizard-to-the-vsix-package"></a>Adding the Wizard to the VSIX Package  
+ To deploy the wizard with the VSIX package that contains the Site Column project template, add references to the wizard project and the SharePoint commands project to the source.extension.vsixmanifest file in the VSIX project.  
   
-#### VSIX パッケージにウィザードを追加するには  
+#### <a name="to-add-the-wizard-to-the-vsix-package"></a>To add the wizard to the VSIX package  
   
-1.  **ソリューション エクスプローラー**に表示されている **\[SiteColumnProjectItem\]** プロジェクトで、**source.extension.vsixmanifest** ファイルのショートカット メニューを開き、**\[開く\]** をクリックします。  
+1.  In **Solution Explorer**, in the **SiteColumnProjectItem** project, open the shortcut menu for the **source.extension.vsixmanifest** file, and then choose **Open**.  
   
-     Visual Studio によってマニフェスト エディターでファイルが開きます。  
+     Visual Studio opens the file in the manifest editor.  
   
-2.  エディターの **\[アセット\]** タブで **\[新規作成\]** をクリックします。  
+2.  On the **Assets** tab of the editor, choose the **New** button.  
   
-     **\[Add New Asset\]** \(新しいアセットの追加\) ダイアログ ボックスが表示されます。  
+     The **Add New Asset** dialog box opens.  
   
-3.  **\[種類\]** ボックスの一覧で、**\[Microsoft.VisualStudio.Assembly\]** を選択します。  
+3.  In the **Type** list, choose **Microsoft.VisualStudio.Assembly**.  
   
-4.  **\[ソース\]** ボックスの一覧で **\[A project in current solution\]** \(現在のソリューション内のプロジェクト\) を選択します。  
+4.  In the **Source** list, choose **A project in current solution**.  
   
-5.  **\[プロジェクト\]** ボックスの一覧で、**\[ProjectTemplateWizard\]** を選択し、**\[OK\]** をクリックします。  
+5.  In the **Project** list, choose **ProjectTemplateWizard**, and then choose the **OK** button.  
   
-6.  エディターの **\[アセット\]** タブで、もう一度 **\[新規作成\]** をクリックします。  
+6.  On the **Assets** tab of the editor, choose the **New** button again.  
   
-     **\[Add New Asset\]** \(新しいアセットの追加\) ダイアログ ボックスが表示されます。  
+     The **Add New Asset** dialog box opens.  
   
-7.  **\[種類\]** ボックスに「**SharePoint.Commands.v4**」と入力します。  
+7.  In the **Type** list, enter **SharePoint.Commands.v4**.  
   
-8.  **\[ソース\]** ボックスの一覧で **\[A project in current solution\]** \(現在のソリューション内のプロジェクト\) を選択します。  
+8.  In the **Source** list, choose **A project in current solution**.  
   
-9. **\[プロジェクト\]** の一覧で **\[SharePointCommands\]** プロジェクトを選択し、**\[OK\]** をクリックします。  
+9. In the **Project** list, choose the **SharePointCommands** project, and then choose the **OK** button.  
   
-10. メニュー バーで **\[ビルド\]**、**\[ソリューションのビルド\]** の順にクリックし、ソリューションがエラーなしでビルドされることを確認します。  
+10. On the menu bar, choose **Build**, **Build Solution**, and then make sure that the solution builds without errors.  
   
-## ウィザードのテスト  
- これで、ウィザードをテストする準備ができました。  まず、Visual Studio の実験用インスタンスで SiteColumnProjectItem ソリューションのデバッグを開始します。  次に、Visual Studio の実験用インスタンスで、Site Column プロジェクトのウィザードをテストします。  最後に、プロジェクトをビルドして実行し、サイト内の列が正常に機能することを確認します。  
+## <a name="testing-the-wizard"></a>Testing the Wizard  
+ You are now ready to test the wizard. First, start debugging the SiteColumnProjectItem solution in the experimental instance of Visual Studio. Then, test the wizard for the Site Column project in the experimental instance of Visual Studio. Finally, build and run the project to verify that the site column works as expected.  
   
-#### ソリューションのデバッグを開始するには  
+#### <a name="to-start-debugging-the-solution"></a>To start debugging the solution  
   
-1.  管理者の資格情報で Visual Studio を再起動し、SiteColumnProjectItem ソリューションを開きます。  
+1.  Restart Visual Studio with administrative credentials, and then open the SiteColumnProjectItem solution.  
   
-2.  ProjectTemplateWizard プロジェクトで、SiteColumnProjectWizard コード ファイルを開き、`RunStarted` メソッド内のコードの 1 行目にブレークポイントを追加します。  
+2.  In the ProjectTemplateWizard project, open the SiteColumnProjectWizard code file, and then add a breakpoint to the first line of code in the `RunStarted` method.  
   
-3.  メニュー バーで **\[デバッグ\]**、**\[例外\]** の順にクリックします。  
+3.  On the menu bar, choose **Debug**, **Exceptions**.  
   
-4.  **\[例外\]** ダイアログ ボックスで、**\[Common Language Runtime Exceptions\]** の **\[スローされるとき\]** チェック ボックスと **\[ユーザーにハンドルされていないとき\]** チェック ボックスがオフになっていることを確認して、**\[OK\]** をクリックします。  
+4.  In the **Exceptions** dialog box, make sure that the **Thrown** and **User-unhandled** check boxes for **Common Language Runtime Exceptions** are cleared, and then choose the **OK** button.  
   
-5.  **F5** キーを押すかメニュー バーで **\[デバッグ\]**、**\[デバッグ開始\]** の順にクリックして、デバッグを開始します。  
+5.  Start debugging by choosing the **F5** key or, on the menu bar, choosing **Debug**, **Start Debugging**.  
   
-     Visual Studio によって、拡張機能が %UserProfile%\\AppData\\Local\\Microsoft\\VisualStudio\\11.0Exp\\Extensions\\Contoso\\Site Column\\1.0 にインストールされ、Visual Studio の実験用インスタンスが開始されます。  このインスタンスの Visual Studio でプロジェクト項目をテストします。  
+     Visual Studio installs the extension to %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Site Column\1.0 and starts an experimental instance of Visual Studio. You'll test the project item in this instance of Visual Studio.  
   
-#### Visual Studio でウィザードをテストするには  
+#### <a name="to-test-the-wizard-in-visual-studio"></a>To test the wizard in Visual Studio  
   
-1.  Visual Studio の実験用インスタンスのメニュー バーで **\[ファイル\]**、**\[新規作成\]**、**\[プロジェクト\]** の順にクリックします。  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **File**, **New**, **Project**.  
   
-2.  \(プロジェクト テンプレートがサポートする言語に応じて\) **\[Visual C\#\]** ノードまたは **\[Visual Basic\]**  ノードを展開し、**\[SharePoint\]** ノードを展開して、**\[2010\]** ノードをクリックします。  
+2.  Expand the **Visual C#** node or the **Visual Basic** node (depending on the language that your project template supports), expand the **SharePoint** node, and then choose the **2010** node.  
   
-3.  プロジェクト テンプレートの一覧で **\[サイト列\]** を選択し、プロジェクトに「**SiteColumnWizardTest**」という名前を付けて、**\[OK\]** をクリックします。  
+3.  In the list of project templates, choose **Site Column**, name the project **SiteColumnWizardTest**, and then choose the **OK** button.  
   
-4.  Visual Studio のもう一方のインスタンスで、先ほど `RunStarted` メソッドに設定したブレークポイントで、コードが停止していることを確認します。  
+4.  Verify that the code in the other instance of Visual Studio stops on the breakpoint that you set earlier in the `RunStarted` method.  
   
-5.  **F5** キーを押すかメニュー バーで **\[デバッグ\]**、**\[続行\]** の順にクリックして、プロジェクトのデバッグを続行します。  
+5.  Continue to debug the project by choosing the **F5** key or, on the menu bar, choosing **Debug**, **Continue**.  
   
-6.  **SharePoint カスタマイズ ウィザード**で、デバッグに使用するサイトの URL を入力し、**\[次へ\]** をクリックします。  
+6.  In the **SharePoint Customization Wizard**, enter the URL of the site that you want to use for debugging, and then choose the **Next** button.  
   
-7.  **SharePoint カスタマイズ ウィザード**の 2 つ目のページで、次のように選択します。  
+7.  In the second page of the **SharePoint Customization Wizard**, make the following selections:  
   
-    -   **\[種類\]** ボックスの一覧で **\[ブール型\]** を選択します。  
+    -   In the **Type** list, choose **Boolean**.  
   
-    -   **\[グループ\]** ボックスの一覧で **\[Custom Yes\/No Columns\]** を選択します。  
+    -   In the **Group** list, choose **Custom Yes/No Columns**.  
   
-    -   **\[名前\]** ボックスに「My Yes\/No Column」と入力し、**\[完了\]** をクリックします。  
+    -   In the **Name** box, enter **My Yes/No Column**, and then choose the **Finish** button.  
   
-     **ソリューション エクスプローラー**に、新しいプロジェクトが開き、そのプロジェクトに含まれる **Field1** というプロジェクト項目が表示されます。また、Visual Studio エディターに、プロジェクトの Elements.xml ファイルが開きます。  
+     In **Solution Explorer**, a new project appears and contains a project item that's named **Field1**, and Visual Studio opens the project's Elements.xml file in the editor.  
   
-8.  Elements.xml にウィザードで指定した値が含まれることを確認します。  
+8.  Verify that Elements.xml contains the values that you specified in the wizard.  
   
-#### SharePoint でサイト内の列をテストするには  
+#### <a name="to-test-the-site-column-in-sharepoint"></a>To test the site column in SharePoint  
   
-1.  Visual Studio の実験用インスタンスで、F5 キーを押します。  
+1.  In the experimental instance of Visual Studio, choose the F5 key.  
   
-     サイト列がパッケージ化され、プロジェクトの **\[サイト URL\]** プロパティで指定された SharePoint サイトに配置されます。  Web ブラウザーには、このサイトの既定のページが表示されます。  
+     The site column is packaged and deployed to the SharePoint site that the **Site URL** property of the project specifies. The web browser opens to the default page of this site.  
   
     > [!NOTE]  
-    >  **\[スクリプト デバッグが無効\]** ダイアログ ボックスが表示された場合は、**\[はい\]** をクリックしてプロジェクトをデバッグします。  
+    >  If the **Script Debugging Disabled** dialog box appears, choose the **Yes** button to continue to debug the project.  
   
-2.  **\[サイトの操作\]** メニューの **\[サイトの設定\]** をクリックします。  
+2.  On the **Site Actions** menu, choose **Site Settings**.  
   
-3.  \[サイトの設定\] ページの **\[ギャラリー\]** で **\[サイト列\]** リンクをクリックします。  
+3.  On the Site Settings page, under **Galleries**, choose the **Site columns** link.  
   
-4.  サイト列の一覧で、**\[Custom Yes\/No Columns\]** グループに **\[My Yes\/No Column\]** という列が含まれることを確認して、Web ブラウザーを閉じます。  
+4.  In the list of site columns, verify that a **Custom Yes/No Columns** group contains a column that's named **My Yes/No Column**, and then close the web browser.  
   
-## 開発コンピューターのクリーンアップ  
- プロジェクト項目のテストが終わったら、プロジェクト テンプレートを Visual Studio の実験用インスタンスから削除します。  
+## <a name="cleaning-up-the-development-computer"></a>Cleaning up the Development Computer  
+ After you finish testing the project item, remove the project template from the experimental instance of Visual Studio.  
   
-#### 開発コンピューターをクリーンアップするには  
+#### <a name="to-clean-up-the-development-computer"></a>To clean up the development computer  
   
-1.  Visual Studio の実験用インスタンスのメニュー バーで **\[ツール\]**、**\[拡張機能と更新プログラム\]** の順にクリックします。  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **Tools**, **Extensions and Updates**.  
   
-     **\[拡張機能と更新プログラム\]** ダイアログ ボックスが表示されます。  
+     The **Extensions and Updates** dialog box opens.  
   
-2.  拡張機能の一覧で **\[サイト列\]** を選択し、**\[アンインストール\]** をクリックします。  
+2.  In the list of extensions, choose **Site Column**, and then choose the **Uninstall** button.  
   
-3.  表示されるダイアログ ボックスで、**\[はい\]** をクリックして拡張機能のアンインストールを確定し、**\[今すぐ再起動\]** をクリックしてアンインストールを完了します。  
+3.  In the dialog box that appears, choose the **Yes** button to confirm that you want to uninstall the extension, and then choose the **Restart Now** button to complete the uninstallation.  
   
-4.  Visual Studio の実験用インスタンスと、CustomActionProjectItem ソリューションが開いているインスタンスの両方を閉じます。  
+4.  Close both the experimental instance of Visual Studio and the instance in which the CustomActionProjectItem solution is open.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 拡張機能の配置方法の詳細については、「[Visual Studio 拡張機能を配布](../extensibility/shipping-visual-studio-extensions.md)」を参照してください。  
+     For information about how to deploy [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] extensions, see [Shipping Visual Studio Extensions](/visualstudio/extensibility/shipping-visual-studio-extensions).  
   
-## 参照  
- [チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 1&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)   
+## <a name="see-also"></a>See Also  
+ [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)   
  [Defining Custom SharePoint Project Item Types](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md)  
+ [Visual Studio Template Schema Reference](/visualstudio/extensibility/visual-studio-template-schema-reference)   
+ [How to: Use Wizards with Project Templates](../extensibility/how-to-use-wizards-with-project-templates.md)  
   
   

@@ -1,50 +1,66 @@
 ---
-title: "CA1044: プロパティを書き込み専用にすることはできません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PropertiesShouldNotBeWriteOnly"
-  - "CA1044"
-helpviewer_keywords: 
-  - "CA1044"
-  - "PropertiesShouldNotBeWriteOnly"
+title: 'CA1044: Properties should not be write only | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PropertiesShouldNotBeWriteOnly
+- CA1044
+helpviewer_keywords:
+- CA1044
+- PropertiesShouldNotBeWriteOnly
 ms.assetid: 8386bf3a-b161-4841-bf8b-92591595aea9
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 15
----
-# CA1044: プロパティを書き込み専用にすることはできません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 129c2ded7f18a21c97f95869fa385f897e12125a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1044-properties-should-not-be-write-only"></a>CA1044: Properties should not be write only
 |||  
 |-|-|  
 |TypeName|PropertiesShouldNotBeWriteOnly|  
 |CheckId|CA1044|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Design|  
+|Breaking Change|Breaking|  
   
-## 原因  
- パブリック プロパティまたはプロテクト プロパティに set アクセサーはありますが、get アクセサーがありません。  
+## <a name="cause"></a>Cause  
+ The public or protected property has a set accessor but does not have a get accessor.  
   
-## 規則の説明  
- get アクセサーでプロパティに読み取りアクセスが可能になり、set アクセサーで書き込みアクセスが可能になります。  読み取り専用のプロパティは許容され、必要な場合もよくありますが、書き込み専用のプロパティを使用することはデザインのガイドラインで禁止されています。  これは、値を設定できてもその値を参照できず、セキュリティが確保されないためです。  また、読み取りアクセスがないと、共有オブジェクトのステータスを参照できないため、実用性が制限されます。  
+## <a name="rule-description"></a>Rule Description  
+ Get accessors provide read access to a property and set accessors provide write access. Although it is acceptable and often necessary to have a read-only property, the design guidelines prohibit the use of write-only properties. This is because letting a user set a value and then preventing the user from viewing the value does not provide any security. Also, without read access, the state of shared objects cannot be viewed, which limits their usefulness.  
   
-## 違反の修正方法  
- この規則違反を修正するには、プロパティに get アクセサーを追加します。  または、書き込み専用のプロパティの動作が必要な場合、このプロパティをメソッドに変換する方法を検討します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, add a get accessor to the property. Alternatively, if the behavior of a write-only property is necessary, consider converting this property to a method.  
   
-## 警告を抑制する状況  
- この規則による警告を抑制しないことを強くお勧めします。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is strongly recommended that you do not suppress a warning from this rule.  
   
-## 使用例  
- 次の例では、`BadClassWithWriteOnlyProperty` は書き込み専用プロパティがある型です。  `GoodClassWithReadWriteProperty` に修正後のコードが格納されます。  
+## <a name="example"></a>Example  
+ In the following example, `BadClassWithWriteOnlyProperty` is a type with a write-only property. `GoodClassWithReadWriteProperty` contains the corrected code.  
   
- [!code-vb[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/VisualBasic/ca1044-properties-should-not-be-write-only_1.vb)]
- [!code-cs[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/CSharp/ca1044-properties-should-not-be-write-only_1.cs)]
+ [!code-vb[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/VisualBasic/ca1044-properties-should-not-be-write-only_1.vb)] [!code-csharp[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/CSharp/ca1044-properties-should-not-be-write-only_1.cs)]

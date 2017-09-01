@@ -1,83 +1,97 @@
 ---
-title: "方法 : [モジュール] ウィンドウを使用する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.modules"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "デバッガー、[モジュール] ウィンドウ"
-  - "[モジュール] ウィンドウ"
-  - "実行可能ファイル、デバッグ中の表示"
-  - "デバッグ [Visual Studio]、モジュールの表示"
-  - "DLL、デバッグ中の表示"
-  - "モジュール、表示"
+title: View DLLs and Executables in the Debugger | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.modules
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- debugger, Modules window
+- Modules window
+- executable files, displaying while debugging
+- debugging [Visual Studio], displaying modules
+- DLLs, displaying while debugging
+- modules, displaying
 ms.assetid: d840fdca-b035-4452-b652-72580c831896
 caps.latest.revision: 36
-caps.handback.revision: 36
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: e0e565507f2ae48992231a122d32971d90c461c7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
+
 ---
-# 方法 : [モジュール] ウィンドウを使用する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+# <a name="view-dlls-and-executables-using-the-modules-window-in-the-visual-studio-debugger"></a>View DLLs and Executables using the Modules Window in the Visual Studio Debugger
+ 
+The **Modules** window lists the DLLs and executables (EXE) that are used by your program and shows relevant information for each. 
 
 > [!NOTE]
->  この機能は、SQL またはスクリプトのデバッグでは使用できません。  
+>  This feature is not available for SQL or script debugging. 
   
- **\[モジュール\]** ウィンドウには、プログラムで使用される DLL と EXE の一覧と、それぞれの関連情報が表示されます。  
+### <a name="to-display-the-modules-window"></a>To display the Modules window  
   
-### \[モジュール\] ウィンドウを表示するには \(中断モードまたは実行モードの場合\)  
+-   While you are debugging, select **Debug > Windows** and then click **Modules**.  
   
--   **\[デバッグ\]** メニューの **\[ウィンドウ\]** をポイントし、**\[モジュール\]** をクリックします。  
+     By default, the **Modules** window sorts modules by load order. However, you can choose to sort by any column.  
   
-     既定では、**\[モジュール\]** ウィンドウには、モジュールが読み込み順に表示されます。  ただし、基準列を指定して並べ替えるように選択できます。  
+### <a name="to-sort-by-any-column"></a>To sort by any column  
   
-### 基準列を指定して並べ替えるには  
+-   Click the button at the top of the column.  
   
--   列の上部にあるボタンをクリックします。  
+     You can load symbols or specify a symbol path from the **Modules** window by using the shortcut menu.  
   
-     **\[モジュール\]** ウィンドウでは、ショートカット メニューを使用してシンボルを読み込んだり、シンボル パスを指定したりできます。  
+## <a name="loading-symbols"></a>Loading Symbols  
+ In the **Modules** window, you can see which modules have debugging symbols loaded. This information appears in the **Symbol Status** column. If the status says **Skipped loadingCannot find or open the PDB file**, or **Loading disabled by include/exclude setting**, you can direct the debugger to download symbols from the Microsoft public symbol servers or to load symbols from a symbol directory on your computer. For more information, see [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
-## シンボルの読み込み  
- **\[モジュール\]** ウィンドウでは、デバッグ シンボルが読み込まれたモジュールを確認できます。  この情報は、**\[シンボルの状態\]** 列に表示されます。  **\[シンボルの読み込みをスキップしました\]**、**\[PDB ファイルを開けないか、ファイルが見つかりません\]**、または **\[含める\/除外する設定により、読み込みは無効になっています\]** と表示されている場合は、Microsoft のパブリック シンボル サーバーからシンボルをダウンロードするか、コンピューター上のシンボルのディレクトリからシンボルを読み込むことを指示できます。  詳細については、「[シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」を参照してください。  
+#### <a name="to-load-symbols-manually"></a>To load symbols manually  
   
-#### シンボルを手動で読み込むには  
+1.  In the **Modules** window, right-click a module for which symbols have not loaded.  
   
-1.  **\[モジュール\]** ウィンドウで、シンボルが読み込まれていないモジュールを右クリックします。  
+2.  Point to **Load Symbols From** and then click **Microsoft Symbol Servers** or **Symbol Path**.  
   
-2.  **\[シンボルの読み込み元\]** をポイントし、**\[Microsoft シンボル サーバー\]** または **\[シンボル パス\]** をクリックします。  
+#### <a name="to-change-symbol-load-settings"></a>To change symbol load settings  
   
-#### シンボル読み込みの設定を変更するには  
+1.  In the **Modules** window, right-click any module.  
   
-1.  **\[モジュール\]** ウィンドウで、任意のモジュールを右クリックします。  
+2.  Click **Symbol Settings**.  
   
-2.  **\[シンボルの設定\]** をクリックします。  
+     You can now change the symbol load settings, as described in [Specify symbol locations and loading behavior](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Specify_symbol_locations_and_loading_behavior). Changes do not take effect until you restart the debugging session.  
   
-     シンボルの読み込み設定を変更できます。詳細については「[シンボルの場所と読み込み動作を指定する](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Specify_symbol_locations_and_loading_behavior)」を参照してください。  変更内容は、デバッグ セッションを再起動しないと有効になりません。  
+#### <a name="to-change-symbol-load-behavior-for-a-specific-module"></a>To change symbol load behavior for a specific module  
   
-#### 特定のモジュールのシンボル読み込み動作を変更するには  
+1.  In the **Modules** window, right-click the module.  
   
-1.  **\[モジュール\]** ウィンドウで、モジュールを右クリックします。  
+2.  Point to **Automatic Symbol Load Settings** and then click **Always Load Manually** or **Default**. Changes do not take effect until you restart the debugging session.  
   
-2.  **\[自動シンボル読み込みの設定\]** をポイントし、**\[常に手動で読み込む\]** または **\[既定\]** をクリックします。  変更内容は、デバッグ セッションを再起動しないと有効になりません。  
-  
-## 参照  
- [Breaking Execution](http://msdn.microsoft.com/ja-jp/30fc4643-f337-4651-b1ff-f2de2c098d40)   
- [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)   
- [シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+## <a name="see-also"></a>See Also  
+ [Breaking Execution](http://msdn.microsoft.com/en-us/30fc4643-f337-4651-b1ff-f2de2c098d40)   
+ [Viewing Data in the Debugger](../debugger/viewing-data-in-the-debugger.md)   
+ [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

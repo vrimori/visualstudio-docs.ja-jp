@@ -1,122 +1,139 @@
 ---
-title: "MODULE_INFO_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MODULE_INFO_FIELDS"
-helpviewer_keywords: 
-  - "MODULE_INFO_FIELDS 列挙型"
+title: MODULE_INFO_FIELDS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MODULE_INFO_FIELDS
+helpviewer_keywords:
+- MODULE_INFO_FIELDS enumeration
 ms.assetid: 8bed85f4-235f-4192-b58f-5fad7a4d7a78
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MODULE_INFO_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 55c2435922cdd3898a57bfe20ef83c1c96f65924
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-モジュールのデバッグ情報のフラグを指定します。  
+---
+# <a name="moduleinfofields"></a>MODULE_INFO_FIELDS
+Specifies the flags for the debug module information.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-enum enum_MODULE_INFO_FIELDS {   
-   MIF_NONE              = 0x0000,  
-   MIF_NAME              = 0x0001,  
-   MIF_URL               = 0x0002,  
-   MIF_VERSION           = 0x0004,  
-   MIF_DEBUGMESSAGE      = 0x0008,  
-   MIF_LOADADDRESS       = 0x0010,  
-   MIF_PREFFEREDADDRESS  = 0x0020,  
-   MIF_SIZE              = 0x0040,  
-   MIF_LOADORDER         = 0x0080,  
-   MIF_TIMESTAMP         = 0x0100,  
-   MIF_URLSYMBOLLOCATION = 0x0200,  
-   MIF_FLAGS             = 0x0400,  
-   MIF_ALLFIELDS         = 0x07ff  
+```cpp  
+enum enum_MODULE_INFO_FIELDS {   
+   MIF_NONE              = 0x0000,  
+   MIF_NAME              = 0x0001,  
+   MIF_URL               = 0x0002,  
+   MIF_VERSION           = 0x0004,  
+   MIF_DEBUGMESSAGE      = 0x0008,  
+   MIF_LOADADDRESS       = 0x0010,  
+   MIF_PREFFEREDADDRESS  = 0x0020,  
+   MIF_SIZE              = 0x0040,  
+   MIF_LOADORDER         = 0x0080,  
+   MIF_TIMESTAMP         = 0x0100,  
+   MIF_URLSYMBOLLOCATION = 0x0200,  
+   MIF_FLAGS             = 0x0400,  
+   MIF_ALLFIELDS         = 0x07ff  
 };  
 typedef DWORD MODULE_INFO_FIELDS;  
 ```  
   
-```c#  
-public enum enum_MODULE_INFO_FIELDS {   
-   MIF_NONE              = 0x0000,  
-   MIF_NAME              = 0x0001,  
-   MIF_URL               = 0x0002,  
-   MIF_VERSION           = 0x0004,  
-   MIF_DEBUGMESSAGE      = 0x0008,  
-   MIF_LOADADDRESS       = 0x0010,  
-   MIF_PREFFEREDADDRESS  = 0x0020,  
-   MIF_SIZE              = 0x0040,  
-   MIF_LOADORDER         = 0x0080,  
-   MIF_TIMESTAMP         = 0x0100,  
-   MIF_URLSYMBOLLOCATION = 0x0200,  
-   MIF_FLAGS             = 0x0400,  
-   MIF_ALLFIELDS         = 0x07ff  
+```csharp  
+public enum enum_MODULE_INFO_FIELDS {   
+   MIF_NONE              = 0x0000,  
+   MIF_NAME              = 0x0001,  
+   MIF_URL               = 0x0002,  
+   MIF_VERSION           = 0x0004,  
+   MIF_DEBUGMESSAGE      = 0x0008,  
+   MIF_LOADADDRESS       = 0x0010,  
+   MIF_PREFFEREDADDRESS  = 0x0020,  
+   MIF_SIZE              = 0x0040,  
+   MIF_LOADORDER         = 0x0080,  
+   MIF_TIMESTAMP         = 0x0100,  
+   MIF_URLSYMBOLLOCATION = 0x0200,  
+   MIF_FLAGS             = 0x0400,  
+   MIF_ALLFIELDS         = 0x07ff  
 };  
 ```  
   
-## メンバー  
- MIF\_NONE  
- 初期化使用または構造体のフィールドと \[なし\]  
+## <a name="members"></a>Members  
+ MIF_NONE  
+ Initialize/use none of the fields in the structure.  
   
- MIF\_NAME  
- [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md) の構造体の初期化と `m_bstrName` のフィールドを使用します。  
+ MIF_NAME  
+ Initialize/use the `m_bstrName` field in the [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) structure.  
   
- MIF\_URL  
- `MODULE_INFO` の構造体の初期化と `m_bstrUrl` のフィールドを使用します。  
+ MIF_URL  
+ Initialize/use the `m_bstrUrl` field in the `MODULE_INFO` structure.  
   
- MIF\_VERSION  
- `MODULE_INFO` の構造体の初期化と `m_bstrVersion` のフィールドを使用します。  
+ MIF_VERSION  
+ Initialize/use the `m_bstrVersion` field in the `MODULE_INFO` structure.  
   
- MIF\_DEBUGMESSAGE  
- `MODULE_INFO` の構造体の初期化と `m_bstrDebugMessage` のフィールドを使用します。  
+ MIF_DEBUGMESSAGE  
+ Initialize/use the `m_bstrDebugMessage` field in the `MODULE_INFO` structure.  
   
- MIF\_LOADADDRESS  
- `MODULE_INFO` の構造体の初期化と `m_addrLoadAddress` のフィールドを使用します。  
+ MIF_LOADADDRESS  
+ Initialize/use the `m_addrLoadAddress` field in the `MODULE_INFO` structure.  
   
- MIF\_PREFFEREDADDRESS  
- `MODULE_INFO` の構造体の初期化と `m_addrPreferredLoadAddress` のフィールドを使用します。  
+ MIF_PREFFEREDADDRESS  
+ Initialize/use the `m_addrPreferredLoadAddress` field in the `MODULE_INFO` structure.  
   
- MIF\_SIZE  
- `MODULE_INFO` の構造体の初期化と `m_dwSize` のフィールドを使用します。  
+ MIF_SIZE  
+ Initialize/use the `m_dwSize` field in the `MODULE_INFO` structure.  
   
- MIF\_LOADORDER  
- `MODULE_INFO` の構造体の初期化と `m_dwLoadOrder` のフィールドを使用します。  
+ MIF_LOADORDER  
+ Initialize/use the `m_dwLoadOrder` field in the `MODULE_INFO` structure.  
   
- MIF\_TIMESTAMP  
- `MODULE_INFO` の構造体の初期化と `m_TimeStamp` のフィールドを使用します。  
+ MIF_TIMESTAMP  
+ Initialize/use the `m_TimeStamp` field in the `MODULE_INFO` structure.  
   
- MIF\_URLSYMBOLLOCATION  
- `MODULE_INFO` の構造体の初期化と `m_bstrUrlSymbolLocation` のフィールドを使用します。  
+ MIF_URLSYMBOLLOCATION  
+ Initialize/use the `m_bstrUrlSymbolLocation` field in the `MODULE_INFO` structure.  
   
- MIF\_FLAGS  
- `MODULE_INFO` の構造体の初期化と `m_dwModuleFlags` のフィールドを使用します。  
+ MIF_FLAGS  
+ Initialize/use the `m_dwModuleFlags` field in the `MODULE_INFO` structure.  
   
- MIF\_ALLFIELDS  
- すべての `MODULE_INFO` 構造体のフィールドの初期化とを使用します。  
+ MIF_ALLFIELDS  
+ Initialize/use all of the fields in the `MODULE_INFO` structure.  
   
-## 解説  
- [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md) の構造体のフィールドが初期化するかを示すためにこれらの値は引数 [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) のメソッドに渡されます。  
+## <a name="remarks"></a>Remarks  
+ These values are passed as an argument to the [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) method to indicate which fields of the [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) structure are to be initialized.  
   
- `MODULE_INFO` の構造体はこれらの値がどのフィールドが使用され有効かを示すために使用されます。  
+ These values are also used in the `MODULE_INFO` structure to indicate which fields are used and valid.  
   
- これらのフラグはビットごと `OR` に組み合わせることがあります。  
+ These flags may be combined with a bitwise `OR`.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)

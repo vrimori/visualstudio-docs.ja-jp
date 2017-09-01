@@ -1,5 +1,5 @@
 ---
-title: "BPREQI_FIELDS90 |Microsoft ドキュメント"
+title: BPREQI_FIELDS90 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,18 +28,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4c4377f2d9d95cc99e6b49d9ae32110d3caaae47
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2de27fc0c3ea470e63c82c8116e34e450eb08bb2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="bpreqifields90"></a>BPREQI_FIELDS90
-取得する要求に関する情報は、ブレークポイントを指定する有効な値を列挙します。 この列挙体を拡張、 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)列挙します。  
+Enumerates the valid values that specify the information to be retrieved about a breakpoint request. This enumeration extends the [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) enumeration.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_BPREQI_FIELDS90  
 {  
    // VS 8.0 values  
@@ -65,7 +66,7 @@ enum enum_BPREQI_FIELDS90
 typedef DWORD BPREQI_FIELDS90;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_BPREQI_FIELDS90  
 {  
     // VS 8.0 values  
@@ -90,58 +91,58 @@ public enum enum_BPREQI_FIELDS90
 };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  BPREQI90_BPLOCATION  
- 初期化または使用して、`bpLocation`の (ブレークポイントの位置) フィールド、 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)または[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)構造体。  
+ Initialize or use the `bpLocation` (breakpoint location) field of the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) or [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) structure.  
   
  BPREQI90_LANGUAGE  
- 初期化または使用して、`guidLanguage`のフィールド、`BP_REQUEST_INFO`または`BP_REQUEST_INFO2`構造体。  
+ Initialize or use the `guidLanguage` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI90_PROGRAM  
- 初期化または使用して、`pProgram`のフィールド、`BP_REQUEST_INFO`または`BP_REQUEST_INFO2`構造体。  
+ Initialize or use the `pProgram` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI90_PROGRAMNAME  
- 初期化または使用して、`bstrProgramName`のフィールド、`BP_REQUEST_INFO`または`BP_REQUEST_INFO2`構造体。  
+ Initialize or use the `bstrProgramName` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI90_THREAD  
- 初期化または使用して、`pThread`のフィールド、`BP_REQUEST_INFO`または`BP_REQUEST_INFO2`構造体。  
+ Initialize or use the `pThread` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI90_THREADNAME  
- 初期化または使用して、`bstrThreadName`のフィールド、`BP_REQUEST_INFO`または`BP_REQUEST_INFO2`構造体。  
+ Initialize or use the `bstrThreadName` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI90_PASSCOUNT  
- 初期化または使用して、`bpPassCount`のフィールド、`BP_REQUEST_INFO`または`BP_REQUEST_INFO2`構造体。  
+ Initialize or use the `bpPassCount` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI90_CONDITION  
- 初期化または使用して、`bpCondition`の (ブレークポイントの条件) フィールド、`BP_REQUEST_INFO`または`BP_REQUEST_INFO2`構造体。  
+ Initialize or use the `bpCondition` (breakpoint condition) field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI90_FLAGS  
- 初期化または使用して、`dwFlags`のフィールド、`BP_REQUEST_INFO`または`BP_REQUEST_INFO2`構造体。  
+ Initialize or use the `dwFlags` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
   
  BPREQI90_ALLOLDFIELDS  
- 初期化またはすべてのフィールドを使用して、、`BP_REQUEST_INFO`構造体。  
+ Initialize or use all fields for the of the `BP_REQUEST_INFO` structure.  
   
  BPREQI90_VENDOR  
- 初期化または使用して、`guidVendor`フィールド`BP_REQUEST_INFO2`構造体。  
+ Initialize or use the `guidVendor` field of `BP_REQUEST_INFO2` structure.  
   
  BPREQI90_CONSTRAINT  
- 初期化または使用して、`bstrConstraint`フィールド`BP_REQUEST_INFO2`構造体。  
+ Initialize or use the `bstrConstraint` field of `BP_REQUEST_INFO2` structure.  
   
  BPREQI90_TRACEPOINT  
- 初期化または使用して、`bstrTracepoint`フィールド`BP_REQUEST_INFO2`構造体。  
+ Initialize or use the `bstrTracepoint` field of `BP_REQUEST_INFO2` structure.  
   
  BPREQI90_MACROTRACEPOINT  
- 初期化または使用して、`bstrMacroTracepoint`フィールド`BP_REQUEST_INFO2`構造体。 BPREQI_ALLFIELDS では、このフィールドは含まれません。  
+ Initialize or use the `bstrMacroTracepoint` field of `BP_REQUEST_INFO2` structure. BPREQI_ALLFIELDS does not include this field.  
   
  BPREQI90_ALLFIELDS  
- すべてのフィールドの指定、`BP_REQUEST_INFO2`構造体。  
+ Specifies all fields for the `BP_REQUEST_INFO2` structure.  
   
-## <a name="requirements"></a>要件  
- ヘッダー: Msdbg90.h  
+## <a name="requirements"></a>Requirements  
+ Header: Msdbg90.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
- [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

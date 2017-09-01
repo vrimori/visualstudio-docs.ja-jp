@@ -1,133 +1,137 @@
 ---
-title: "チュートリアル: サイトのカスタム ワークフロー アクティビティの作成"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "カスタム ワークフロー アクティビティ [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, カスタム ワークフロー アクティビティ"
-  - "Visual Studio での SharePoint 開発, サイト ワークフロー"
-  - "サイト ワークフロー [Visual Studio での SharePoint 開発]"
-  - "ワークフロー アクティビティ [Visual Studio での SharePoint 開発]"
+title: 'Walkthrough: Create a Custom Site Workflow Activity | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- custom workflow activities [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, custom workflow activities
+- site workflows [SharePoint development in Visual Studio]
+- workflow activities [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, site workflows
 ms.assetid: 8219a779-c27b-4186-92c9-5bda03328aa9
 caps.latest.revision: 20
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 19
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 794ffdffb96c7b0914c283f13ec8ca7014f425b0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル: サイトのカスタム ワークフロー アクティビティの作成
-  このチュートリアルでは、サイト レベルのワークフローに使用するカスタム アクティビティを [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で作成する方法について説明します。サイト レベルのワークフローは、サイト上のリストだけでなく、サイト全体に適用されます。カスタム アクティビティによって、バックアップのお知らせリストが作成され、そこにお知らせリストの内容がコピーされます。  
+# <a name="walkthrough-create-a-custom-site-workflow-activity"></a>Walkthrough: Create a Custom Site Workflow Activity
+  This walkthrough demonstrates how to create a custom activity for a site-level workflow using [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. (Site-level workflows apply to the whole site, not just a list on the site.) The custom activity creates a backup Announcements list and then copies the contents of the Announcements list into it.  
   
- このチュートリアルでは、次のタスクについて説明します。  
+ This walkthrough demonstrates the following tasks:  
   
--   サイト レベルのワークフローを作成する。  
+-   Creating a site-level workflow.  
   
--   カスタム ワークフロー アクティビティを作成する。  
+-   Creating a custom workflow activity.  
   
--   SharePoint リストを作成および削除する。  
+-   Creating and deleting a SharePoint list.  
   
--   リスト間で項目をコピーする。  
+-   Copying items from one list to another.  
   
--   クイック起動バーにリストを表示する。  
+-   Displaying a list on the QuickLaunch bar.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   サポート対象エディションの [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] および SharePoint。  詳細については、「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio  
+-   Visual Studio.  
   
-## サイトのカスタム ワークフロー アクティビティ プロジェクトの作成  
- まず、カスタム ワークフロー アクティビティを格納し、テストするプロジェクトを作成します。  
+## <a name="creating-a-site-workflow-custom-activity-project"></a>Creating a Site Workflow Custom Activity Project  
+ First, create a project to hold and test the custom workflow activity.  
   
-#### サイトのカスタム ワークフロー アクティビティ プロジェクトを作成するには  
+#### <a name="to-create-a-site-workflow-custom-activity-project"></a>To create a site workflow custom activity project  
   
-1.  メニュー バーで、**\[新しいプロジェクト\]** ダイアログ ボックスを表示するには、**\[新規作成\]**、**\[プロジェクト\]\[ファイル\]** をクリックします。  
+1.  On the menu bar, choose **File**, **New**, **Project** to display the **New Project** dialog box.  
   
-2.  **\[SharePoint\]** ノードを **\[Visual C\#\]** または **\[Visual Basic\]** で展開し、**2010** ノードを選択します。  
+2.  Expand the **SharePoint** node under either **Visual C#** or **Visual Basic**, and then choose the **2010** node.  
   
-3.  **\[テンプレート\]** のペインで、**\[SharePoint 2010 プロジェクト\]** テンプレートを選択します。  
+3.  In the **Templates** pane, choose the **SharePoint 2010 Project** template.  
   
-4.  **\[名前\]** ボックスに" AnnouncementBackup "と入力し、**\[OK\]** ボタンをクリックします。  
+4.  In the **Name** box, enter **AnnouncementBackup**, and then choose the **OK** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+     The **SharePoint Customization Wizard** appears.  
   
-5.  **\[デバッグのサイトとセキュリティ レベルの指定\]** ページで、**\[ファーム ソリューションとして配置する\]** のオプション ボタンを選択し、信頼レベルと既定のサイトを受け入れるように **\[完了\]** ボタンをクリックします。  
+5.  On the **Specify the site and security level for debugging** page, choose the **Deploy as a farm solution** option button, and then choose the **Finish** button to accept the trust level and default site.  
   
-     また、この段階で、ソリューションの信頼レベルがファーム ソリューション \(ワークフロー プロジェクトではこれ以外は選択できません\) として設定されます。  
+     This step sets the trust level for the solution as farm solution, the only available option for workflow projects.  
   
-6.  次に **\[ソリューション エクスプローラー\]** で、プロジェクト ノードを選択し、メニュー バーで、**\[プロジェクト\]** をクリックします、**\[新しいアイテムの追加\]** を選択します。  
+6.  In **Solution Explorer**, choose the project node, and then, on the menu bar, choose **Project**, **Add New Item**.  
   
-7.  **\[Visual C\#\]** または **\[Visual Basic\]** で、**\[SharePoint\]** ノードを展開し、**2010** ノードを選択します。  
+7.  Under either **Visual C#** or **Visual Basic**, expand the **SharePoint** node, and then choose the **2010** node.  
   
-8.  **\[テンプレート\]** のペインで、**\[シーケンシャル ワークフロー \(ファーム ソリューションのみ\)\]** テンプレートを選択し、**\[追加\]** ボタンをクリックします。  
+8.  In the **Templates** pane, choose the **Sequential Workflow (Farm Solution only)** template, and then choose the **Add** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+     The **SharePoint Customization Wizard** appears.  
   
-9. **\[デバッグのワークフロー名の指定\]** ページで、既定の名前 \(AnnouncementBackup \- Workflow1\) を受け入れます。  ワークフロー テンプレートの種類を **\[サイト ワークフロー\]** に変更し、**\[次へ\]** ボタンをクリックします。  
+9. On the **Specify the workflow name for debugging** page, accept the default name (AnnouncementBackup - Workflow1). Change the workflow template type to **Site Workflow**, and then choose the **Next** button.  
   
-10. 残りの既定の設定を受け入れるように **\[完了\]** ボタンをクリックします。  
+10. Choose the **Finish** button to accept the remaining default settings.  
   
-## カスタム ワークフロー アクティビティ クラスの追加  
- 次に、カスタム ワークフロー アクティビティのコードを記述するためのクラスをプロジェクトに追加します。  
+## <a name="adding-a-custom-workflow-activity-class"></a>Adding a Custom Workflow Activity Class  
+ Next, add a class to the project to contain the code for the custom workflow activity.  
   
-#### カスタム ワークフロー アクティビティ クラスを追加するには  
+#### <a name="to-add-a-custom-workflow-activity-class"></a>To add a custom workflow activity class  
   
-1.  メニュー バーで、**\[新しいアイテムの追加\]** ダイアログ ボックスを表示するには、**\[新しいアイテムの追加\]\[プロジェクト\]** をクリックします。  
+1.  On the menu bar, choose **Project**, **Add New Item** to display the **Add New Item** dialog box.  
   
-2.  **\[インストールされているテンプレート\]** のツリー ビューで、**\[コード\]** ノードを選択し、プロジェクト項目テンプレートの一覧で **\[クラス\]** テンプレートを選択します。  既定の名前である Class1 を使用します。  **\[追加\]** ボタンをクリックします。  
+2.  In the **Installed Templates** tree view, choose the **Code** node, and then choose the **Class** template in the list of project item templates. Use the default name Class1. Choose the **Add** button.  
   
-3.  Class1 のすべてのコードを次のコードに置き換えます。  
+3.  Replace all of the code in Class1 with the following:  
   
-     [!code-csharp[SP_AnnBackup#1](../snippets/csharp/VS_Snippets_OfficeSP/sp_annbackup/cs/class1.cs#1)]
-     [!code-vb[SP_AnnBackup#1](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_annbackup/vb/class1.vb#1)]  
+     [!code-csharp[SP_AnnBackup#1](../sharepoint/codesnippet/CSharp/announcementbackup/class1.cs#1)]  [!code-vb[SP_AnnBackup#1](../sharepoint/codesnippet/VisualBasic/announcementbackupvb/class1.vb#1)]  
   
-4.  次に、プロジェクトを選択し、メニュー バーで保存し、**\[ソリューションのビルド\]\[ビルド\]** をクリックします。  
+4.  Save the project, and then, on the menu bar, choose **Build**, **Build Solution**.  
   
-     Class1 が **\[AnnouncementBackup コンポーネント\]** タブの **\[ツールボックス\]** をカスタム動作として表示されます。  
+     Class1 appears as a custom action in the **Toolbox** on the **AnnouncementBackup Components** tab.  
   
-## サイトのワークフローへのカスタム アクティビティの追加  
- 次に、カスタム コードを含んだアクティビティをワークフローに追加します。  
+## <a name="adding-the-custom-activity-to-the-site-workflow"></a>Adding the Custom Activity to the Site Workflow  
+ Next, add an activity to the Workflow to contain the custom code.  
   
-#### サイトのワークフローにカスタム アクティビティを追加するには  
+#### <a name="to-add-a-custom-activity-to-the-site-workflow"></a>To add a custom activity to the site Workflow  
   
-1.  ワークフロー デザイナーのデザイン ビューで Workflow1 を開きます。  
+1.  Open Workflow1 in the workflow designer in design view.  
   
-2.  `onWorkflowActivated1` アクティビティで表示し、Class1 のショートカット メニューを開き、**\[コピー\]** をクリックします、行のショートカット メニューを `onWorkflowActivated1` アクティビティで開き、**\[貼り付け\]** をクリックしますように **\[ツールボックス\]** の Class1 を。  
+2.  Drag Class1 from the **Toolbox** so that it appears under the `onWorkflowActivated1` activity, or open the shortcut menu for Class1, choose **Copy**, open the shortcut menu for the line under the `onWorkflowActivated1` activity, and then choose **Paste**.  
   
-3.  プロジェクトを保存します。  
+3.  Save the project.  
   
-## サイトのカスタム ワークフロー アクティビティのテスト  
- 次に、プロジェクトを実行して、サイトのワークフローを開始します。  カスタム アクティビティによって、バックアップのお知らせリストが作成され、そこに最新のお知らせリストの内容がコピーされます。  このコードは、バックアップ リストの作成前に、既存のバックアップ リストが存在するかどうかもチェックします。  既存のバックアップ リストが存在する場合は、それを削除します。  また、このコードは、SharePoint サイトのクイック起動バーに新しいリストへのリンクを追加します。  
+## <a name="testing-the-site-workflow-custom-activity"></a>Testing the Site Workflow Custom Activity  
+ Next, run the project and start the site workflow. The custom activity creates a backup Announcements list and copies the contents from the current Announcements list into it. The code also checks whether a backup list already exists before creating one. If a backup list already exists, it is deleted. The code also adds a link to the new list on the SharePoint site's QuickLaunch bar.  
   
-#### サイトのカスタム ワークフロー アクティビティをテストするには  
+#### <a name="to-test-the-site-workflow-custom-activity"></a>To test the site workflow custom activity  
   
-1.  プロジェクトを実行し、SharePoint に配置するには、F5 キーを押します。  
+1.  Choose the F5 key to run the project and deploy it to SharePoint.  
   
-2.  クイック起動バーに、SharePoint サイトで使用できるリストをすべて表示するに **\[リスト\]** リンクをクリックします。  **\[お知らせ\]**という名前のお知らせのリストが 1 つだけ表示されます。  
+2.  On the QuickLaunch bar, choose the **Lists** link to display all of the lists that are available in the SharePoint site. Notice there is only one list for announcements named **Announcements**.  
   
-3.  SharePoint Web ページの一番上にある **\[サイト ワークフロー\]** リンクをクリックします。  
+3.  At the top of the SharePoint webpage, choose the **Site Workflows** link.  
   
-4.  新しいワークフローの開始セクションでは、**\[AnnouncementBackup – Workflow1\]** リンクをクリックします。  これで、サイトのワークフローが開始されて、カスタム動作のコードが実行されます。  
+4.  Under the Start a New Workflow section, choose the **AnnouncementBackup - Workflow1** link. This starts the site workflow and runs the code in the custom action.  
   
-5.  クイック起動バーに、**\[お知らせのバックアップ\]** リンクをクリックします。  **\[お知らせ\]** ボックスにあるすべてのお知らせが、この新しいリストにコピーされていることがわかります。  
+5.  On the QuickLaunch bar, choose the **Announcements Backup** link. Notice that all of the announcements that are contained in the **Announcements** list have been copied to this new list.  
   
-## 参照  
- [方法: イベント レシーバーを作成する](../sharepoint/how-to-create-an-event-receiver.md)   
+## <a name="see-also"></a>See Also  
+ [How to: Create an Event Receiver](../sharepoint/how-to-create-an-event-receiver.md)   
  [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
   
   

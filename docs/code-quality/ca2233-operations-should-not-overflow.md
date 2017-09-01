@@ -1,117 +1,133 @@
 ---
-title: "CA2233: 操作はオーバーフローできません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OperationsShouldNotOverflow"
-  - "CA2233"
-helpviewer_keywords: 
-  - "CA2233"
-  - "OperationsShouldNotOverflow"
+title: 'CA2233: Operations should not overflow | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OperationsShouldNotOverflow
+- CA2233
+helpviewer_keywords:
+- OperationsShouldNotOverflow
+- CA2233
 ms.assetid: 3a2b06ba-6d1b-4666-9eaf-e053ef47ffaa
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 19
----
-# CA2233: 操作はオーバーフローできません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: f77e3f267d991f4bffbb18c1f69f66c4603d104c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2233-operations-should-not-overflow"></a>CA2233: Operations should not overflow
 |||  
 |-|-|  
 |TypeName|OperationsShouldNotOverflow|  
 |CheckId|CA2233|  
-|分類|Microsoft.Usage|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Non Breaking|  
   
-## 原因  
- メソッドで算術演算が実行され、オーバーフローが発生する前にオペランドの検証が完了しません。  
+## <a name="cause"></a>Cause  
+ A method performs an arithmetic operation and does not validate the operands beforehand to prevent overflow.  
   
-## 規則の説明  
- まずオペランドを検証し、演算結果が関連するデータ型で使用できる値の範囲を超えないことを確認してから、算術演算を実行します。  実行コンテキストおよび関連するデータ型によって変わりますが、算術オーバーフローによって <xref:System.OverflowException?displayProperty=fullName> または結果の最上位ビットが破棄されます。  
+## <a name="rule-description"></a>Rule Description  
+ Arithmetic operations should not be performed without first validating the operands to make sure that the result of the operation is not outside the range of possible values for the data types involved. Depending on the execution context and the data types involved, arithmetic overflow can result in either a <xref:System.OverflowException?displayProperty=fullName> or the most significant bits of the result discarded.  
   
-## 違反の修正方法  
- この規則違反を修正するには、演算を実行する前にオペランドを検証します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, validate the operands before you perform the operation.  
   
-## 警告を抑制する状況  
- オペランドで使用できる値によって算術演算のオーバーフローが発生しない場合、この規則による警告を抑制しても安全です。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule if the possible values of the operands will never cause the arithmetic operation to overflow.  
   
-## 違反の例  
+## <a name="example-of-a-violation"></a>Example of a Violation  
   
-### 説明  
- 次の例にあるメソッドは、この規則に違反する整数を操作します。  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] では、これを実行するには **Remove** 整数のオーバーフロー オプションを無効にする必要があります。  
+### <a name="description"></a>Description  
+ A method in the following example manipulates an integer that violates this rule. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] requires the **Remove** integer overflow option to be disabled for this to fire.  
   
-### コード  
- [!code-vb[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_1.vb)]
- [!code-cs[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_1.cs)]  
+### <a name="code"></a>Code  
+ [!code-vb[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_1.vb)] [!code-csharp[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_1.cs)]  
   
-### コメント  
- この例のメソッドに <xref:System.Int32.MinValue?displayProperty=fullName> が渡される場合、演算はアンダーフローします。  これにより、結果の最上位ビットは破棄されます。  このしくみを次のコードに示します。  
+### <a name="comments"></a>Comments  
+ If the method in this example is passed <xref:System.Int32.MinValue?displayProperty=fullName>, the operation would underflow. This causes the most significant bit of the result to be discarded. The following code shows how this occurs.  
   
- \[C\#\]  
+ [C#]  
   
 ```  
 public static void Main()  
 {  
-    int value = int.MinValue;    // int.MinValue is -2147483648   
-    value = Calculator.Decrement(value);   
-    Console.WriteLine(value);  
+    int value = int.MinValue;    // int.MinValue is -2147483648   
+    value = Calculator.Decrement(value);   
+    Console.WriteLine(value);  
 }  
 ```  
   
- \[VB\]  
+ [VB]  
   
 ```  
 Public Shared Sub Main()       
-    Dim value = Integer.MinValue    ' Integer.MinValue is -2147483648   
-    value = Calculator.Decrement(value)   
-    Console.WriteLine(value)   
+    Dim value = Integer.MinValue    ' Integer.MinValue is -2147483648   
+    value = Calculator.Decrement(value)   
+    Console.WriteLine(value)   
 End Sub  
 ```  
   
-### 出力  
+### <a name="output"></a>Output  
   
 ```  
 2147483647  
 ```  
   
-## 入力パラメーターの検証による修正  
+## <a name="fix-with-input-parameter-validation"></a>Fix with Input Parameter Validation  
   
-### 説明  
- 入力の値を検証することによって上記の違反を修正するコード例を次に示します。  
+### <a name="description"></a>Description  
+ The following example fixes the previous violation by validating the value of input.  
   
-### コード  
- [!CODE [FxCop.Usage.OperationOverflowFixed#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflowFixed#1)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_2.cs)] [!code-vb[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_2.vb)]  
   
-## checked ブロックによる修正  
+## <a name="fix-with-a-checked-block"></a>Fix with a Checked Block  
   
-### 説明  
- checked ブロックで演算をラップすることによって上記の違反を修正するコード例を次に示します。  演算がオーバーフローする場合は、<xref:System.OverflowException?displayProperty=fullName> がスローされます。  
+### <a name="description"></a>Description  
+ The following example fixes the previous violation by wrapping the operation in a checked block. If the operation causes an overflow, a <xref:System.OverflowException?displayProperty=fullName> will be thrown.  
   
- checked ブロックは、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ではサポートされていません。  
+ Note that checked blocks are not supported in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)].  
   
-### コード  
- [!CODE [FxCop.Usage.OperationOverflowChecked#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflowChecked#1)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Usage.OperationOverflowChecked#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_3.cs)]  
   
-## 演算のオーバーフローおよびアンダーフローのチェックの有効化  
- C\# で演算のオーバーフローおよびアンダーフローのチェックを有効にすると、すべての整数演算を checked ブロックでラップしたときと同じ結果が得られます。  
+## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>Turn on Checked Arithmetic Overflow/Underflow  
+ If you turn on checked arithmetic overflow/underflow in C#, it is equivalent to wrapping every integer operation in a checked block.  
   
- **C\# で演算のオーバーフローおよびアンダーフローのチェックを有効にするには**  
+ **To turn on checked arithmetic overflow/underflow in C#**  
   
-1.  **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**\[プロパティ\]** をクリックします。  
+1.  In **Solution Explorer**, right-click your project and choose **Properties**.  
   
-2.  **\[ビルド\]** タブをクリックし、**\[詳細設定\]** をクリックします。  
+2.  Select the **Build** tab and click **Advanced**.  
   
-3.  **\[演算のオーバーフローおよびアンダーフローのチェック\]** を選択し、**\[OK\]** をクリックします。  
+3.  Select **Check for arithmetic overflow/underflow** and click **OK**.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  <xref:System.OverflowException?displayProperty=fullName>   
- [C\# 演算子](/dotnet/csharp/language-reference/operators/index)   
- [Checked と Unchecked](/dotnet/csharp/language-reference/keywords/checked-and-unchecked)
+ [C# Operators](/dotnet/csharp/language-reference/operators/index)   
+ [Checked and Unchecked](/dotnet/csharp/language-reference/keywords/checked-and-unchecked)

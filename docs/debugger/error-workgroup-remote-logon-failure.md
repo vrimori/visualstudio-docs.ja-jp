@@ -1,86 +1,98 @@
 ---
-title: "エラー : ワークグループ リモート ログオン エラー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.workgroup_remote_logon_failure"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ログオン エラー, リモート デバッグ"
-  - "リモート デバッグ, ログオン エラー"
+title: 'Error: Workgroup Remote Logon Failure | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.workgroup_remote_logon_failure
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- JScript
+- C++
+helpviewer_keywords:
+- logon failure, remote debugging
+- remote debugging, logon failure
 ms.assetid: 7be2c5bb-40fe-48d6-8cfc-c231fbd3d64e
 caps.latest.revision: 19
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# エラー : ワークグループ リモート ログオン エラー
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: d0ebccfdb523661ba04a103bf6999e9c6546d1c7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-このエラーには、次のメッセージが表示されます。  
+---
+# <a name="error-workgroup-remote-logon-failure"></a>Error: Workgroup Remote Logon Failure
+This error reads:  
   
- ログオン エラー: 不明なユーザー名、または不適切なパスワードです。  
+ Logon failure: unknown user name or bad password  
   
- **原因**  
+ **Cause**  
   
- このエラーは、ワークグループのコンピューターからデバッグしているときにリモート コンピューターに接続しようとすると発生することがあります。  以下の原因が考えられます。  
+ This error can occur when you are debugging from a machine on a workgroup and you try to connect to remote machine. Possible causes include:  
   
--   名前とパスワードが一致するアカウントがリモート コンピューター上に存在しない。  
+-   There is no account with the matching name and password on the remote machine.  
   
--   Visual Studio コンピューターとリモート コンピューターの両方がワークグループに存在する場合、リモート コンピューターのローカル セキュリティ ポリシーの既定値によって、このエラーが発生することがあります。  ローカル セキュリティ ポリシーの既定値は **\[Guest のみ \- ローカル ユーザーが Guest として認証する\]** です。  このセットアップでデバッグするには、リモート コンピューターの設定を **\[クラシック \- ローカル ユーザーがローカル ユーザーとして認証する\]** に変更する必要があります。  
+-   If both the Visual Studio computer and the remote machine are on workgroups, this error may occur due to the default **Local Security Policy** setting on the remote machine. The default setting for the **Local Security Policy** setting is **Guest only - local users authenticate as Guest**. To debug on this setup, you must change the setting on the remote machine to **Classic - local users authenticate as themselves**.  
   
 > [!NOTE]
->  次のタスクを実行するには、管理者権限が必要です。  
+>  You must be an administrator to carry out the following tasks.  
   
-### \[ローカル セキュリティ ポリシー\] ウィンドウを開くには  
+### <a name="to-open-the-local-security-policy-window"></a>To open the Local Security Policy window  
   
-1.  **secpol.msc** Microsoft 管理コンソール スナップインを開始します。  Windows Search、\[ファイル名を指定して実行\] ボックス、またはコマンド プロンプトで「secpol.msc」と入力します。  
+1.  Start the **secpol.msc** Microsoft Management Console snap-in. Type secpol.msc in Windows search, the Windows Run box, or at a command prompt.  
   
-### ユーザー権限の割り当てを追加するには  
+### <a name="to-add-user-rights-assignments"></a>To add user rights assignments  
   
-1.  ローカル セキュリティ ポリシーを開きます。  
+1.  Open the **Local Security Policy** window.  
   
-2.  **\[ローカル セキュリティ ポリシー\]** ウィンドウを開きます。  
+2.  Expand the **Local Policies** folder.  
   
-3.  **\[ローカル ポリシー\]** フォルダーを展開します。  
+3.  Click **User Rights Assignment**.  
   
-4.  **\[ユーザー権利の割り当て\]** をクリックします。  
+4.  In the **Policy** column, double-click **Debug programs** to view current local group policy assignments in the **Local Security Policy Setting** dialog box.  
   
-5.  **\[ポリシー\]** 列の **\[プログラムのデバッグ\]** をダブルクリックして、**\[ローカル セキュリティ ポリシーの設定\]** ダイアログ ボックスに現在のローカル グループ ポリシーの割り当てを表示します。  
+     ![Local Security Policy User Rights](../debugger/media/dbg_err_localsecuritypolicy_userrightsdebugprograms.png "DBG_ERR_LocalSecurityPolicy_UserRightsDebugPrograms")  
   
-     ![ローカル セキュリティ ポリシーのユーザー権限](../debugger/media/dbg_err_localsecuritypolicy_userrightsdebugprograms.png "DBG\_ERR\_LocalSecurityPolicy\_UserRightsDebugPrograms")  
+5.  To add new users, click the **Add User or Group** button.  
   
-6.  新しいユーザーを追加するには、**\[ユーザーまたはグループの追加\]** をクリックします。  
+### <a name="to-change-the-sharing-and-security-model"></a>To change the Sharing and Security Model  
   
-### 共有とセキュリティ モデルを変更するには  
+1.  Open the **Local Security Policy** window.  
   
-1.  **\[ローカル セキュリティ ポリシー\]** ウィンドウを開きます。  
+2.  Expand the **Local Policies** folder.  
   
-2.  **\[ローカル ポリシー\]** フォルダーを展開します。  
+3.  Click **Security Options**.  
   
-3.  **\[セキュリティ オプション\]** をクリックします。  
+4.  In the **Policy** column, double-click **Network access: Sharing and security model for local accounts**.  
   
-4.  **\[ポリシー\]** 列の **\[ネットワーク アクセス : ローカル アカウントの共有とセキュリティ モデル\]** をダブルクリックします。  
+5.  In the **Network access: Sharing and security model for local accounts** dialog box, change the value to **Classic - local users authenticate as themselves** and click the **Apply** button.  
   
-5.  **\[ネットワーク アクセス: 共有とローカル アカウントのセキュリティ モデル\]** ダイアログ ボックスで、値を **\[クラシック \- ローカル ユーザーがローカル ユーザーとして認証する\]** に変更し、**\[適用\]** をクリックします。  
+     ![Local Security Policy Security Options](../debugger/media/dbg_err_localsecuritypolicy_securityoptions_networkaccess.png "DBG_ERR_LocalSecurityPolicy_SecurityOptions_NetworkAccess")  
   
-     ![ローカル セキュリティ ポリシーのセキュリティ オプション](../debugger/media/dbg_err_localsecuritypolicy_securityoptions_networkaccess.png "DBG\_ERR\_LocalSecurityPolicy\_SecurityOptions\_NetworkAccess")  
-  
-## 参照  
- [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   
- [リモート デバッグ](../debugger/remote-debugging.md)
+## <a name="see-also"></a>See Also  
+ [Remote Debugging Errors and Troubleshooting](../debugger/remote-debugging-errors-and-troubleshooting.md)   
+ [Remote Debugging](../debugger/remote-debugging.md)

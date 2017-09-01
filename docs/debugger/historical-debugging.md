@@ -1,41 +1,58 @@
 ---
-title: "デバッグ履歴 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Historical Debugging | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7cc5ddf2-2f7c-4f83-b7ca-58e92e9bfdd2
 caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# デバッグ履歴
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 9f73ccc235c3b893b2ad8d2ddb07dd1848414734
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-デバッグ履歴は、IntelliTrace で収集された情報に依存するデバッグのモードです。  アプリケーションの実行内を前後に移動して、実行の状態を調べることができます。  
+---
+# <a name="historical-debugging"></a>Historical Debugging
+Historical debugging is a mode of debugging that depends on the information collected by IntelliTrace. It allows you to move backward and forward through the execution of your application and inspect its state.  
   
- IntelliTrace は Visual Studio Enterprise Edition で使用できます \(Professional Edition または Community Edition の場合は使用できません\)。  
+ You can use IntelliTrace in Visual Studio Enterprise edition (but not the Professional or Community editions).  
   
-## デバッグ履歴を使用する理由  
- ブレークポイントを設定してバグを探すのは、どちらかというと行き当たりばったりな方法です。  バグがありそうな場所のコードの近くにブレークポイントを設定し、デバッガーでアプリケーションを実行して、ブレークポイントがヒットし、実行が中断した場所でバグの原因が明らかになることを期待します。  原因がわからない場合は、コードの別の場所にブレークポイントを設定し、デバッガーを再実行して、問題が見つかるまで繰り返しテスト手順を実行する必要があります。  
+## <a name="why-use-historical-debugging"></a>Why use Historical Debugging?  
+ Setting breakpoints to find bugs can be a rather hit-or-miss affair. You set a breakpoint close to the place in your code where you suspect the bug to be, then run the application in the debugger and hope your breakpoint gets hit, and that the place where execution breaks can reveal the source of the bug. If not, you'll have to try setting a breakpoint somewhere else in the code and rerun the debugger, executing your test steps over and over until you find the problem.  
   
- ![ブレークポイントの設定](~/debugger/media/breakpointprocesa.png "BreakpointProcesa")  
+ ![setting a breakpoint](../debugger/media/breakpointprocesa.png "BreakpointProcesa")  
   
- IntelliTrace とデバッグ履歴を使用すると、アプリケーション内を移動して状態を調べることができ \(呼び出し履歴およびローカル変数\)、ブレークポイントを設定し、デバッグを再実行し、テスト手順を繰り返す必要はありません。  これにより多くの時間を節約できます。実行に時間がかかるテスト シナリオの深い場所にバグがある場合は特に有効です。  
+ You can use IntelliTrace and Historical Debugging to roam around in your application and inspect its state (call stack and local variables) without having to set breakpoints, restart debugging, and repeat test steps. This can save you a lot of time, especially when the bug is located deep in a test scenario that takes a long time to execute.  
   
-## デバッグ履歴の使用を始める方法  
- IntelliTrace は既定で有効になります。  決定する必要があるのは、調査対象のイベントと関数呼び出しだけです。  調べる対象の定義について詳しくは、「[IntelliTrace の機能](../debugger/intellitrace-features.md)」をご覧ください。  IntelliTrace でのデバッグの詳細な手順については、「[チュートリアル: IntelliTrace の使用](../debugger/walkthrough-using-intellitrace.md)」をご覧ください。  
+## <a name="how-do-i-start-using-historical-debugging"></a>How do I start using Historical Debugging?  
+ IntelliTrace is on by default. All you have to do is decide which events and function calls are of interest to you. For more information about defining what you want to look for, see [IntelliTrace Features](../debugger/intellitrace-features.md). For a step-by-step account of debugging with IntelliTrace, see [Walkthrough: Using IntelliTrace](../debugger/walkthrough-using-intellitrace.md).  
   
-## デバッグ履歴でのコード内の移動  
- バグのある単純なプログラムから始めましょう。  C\# コンソール アプリケーションで次のコードを追加します。  
+## <a name="navigating-your-code-with-historical-debugging"></a>Navigating your code with Historical Debugging  
+ Let's start with a simple program that has a bug. In a C# console application, add the following code:  
   
-```c#  
+```CSharp  
 static void Main(string[] args)  
 {  
     int testInt = 0;  
@@ -61,28 +78,28 @@ private static int AddInt(int add)
 }  
 ```  
   
- `AddAll()` を呼び出した後の `resultInt` の予想される値が 20 であるものとします \(`testInt` を 20 回インクリメントした結果\)   \(また、`AddInt()` 内のバグはわからないものします\)。しかし、実際の結果は 44 です。  `AddAll()` を 10 回ステップ実行しないでバグを見つけるにはどうすればよいでしょう。  デバッグ履歴を使うと、迅速かつ簡単にバグを発見できます。  次の手順に従います。  
+ We'll assume that the expected value of `resultInt` after calling `AddAll()` is 20 (the result of incrementing `testInt` 20 times). (We'll also assume that you can't see the bug in `AddInt()`).But the result is actually 44. How can we find the bug without stepping through `AddAll()` 10 times? We can use Historical Debugging to find the bug faster and more easily. Here's how:  
   
-1.  \[ツール\]、\[オプション\]、\[IntelliTrace\]、\[一般\] で、IntelliTrace が有効になっていることを確認し、\[IntelliTrace イベントと呼び出し情報\] オプションを選択します。  このオプションを選択しないと、ナビゲーション余白が表示されません \(後で説明します\)。  
+1.  In Tools > Options > IntelliTrace > General, make sure that IntelliTrace is enabled, and select the IntelliTrace events and call information option. If you do not select this option, you will not be able to see the navigation gutter (as explained below).  
   
-2.  `Console.WriteLine(resultInt);` の行にブレークポイントを設定します。  
+2.  Set a breakpoint on the `Console.WriteLine(resultInt);` line.  
   
-3.  デバッグを開始します。  コードがブレークポイントまで実行されます。  \[**ローカル**\] ウィンドウに、`resultInt` の値が 44 と表示されます。  
+3.  Start debugging. The code executes to the breakpoint. In the **Locals** window, you can see that the value of `resultInt` is 44.  
   
-4.  \[**診断ツール**\] ウィンドウを開きます \(**\[デバッグ\]、\[診断ツールの表示\]**\)。  コード ウィンドウは、次のようになります。  
+4.  Open the **Diagnostic Tools** window (**Debug > Show Diagnostic Tools**). The code window should look like this:  
   
-     ![ブレークポイントでのコード ウィンドウ](~/debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")  
+     ![Code window at the breakpoint](../debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")  
   
-5.  ブレークポイントのすぐ上の左余白の横に双方向矢印が表示されます。  この領域はナビゲーション余白と呼ばれ、履歴デバッグに使用されます。  矢印をクリックします。  
+5.  You should see a double arrow next to the left margin, just above the breakpoint. This area is called the navigation gutter, and is used for Historical Debugging. Click the arrow.  
   
-     コード ウィンドウでは、上記のコード行 \(`int resultInt = AddIterative(testInt);`\) がピンク色で表示されます。  ウィンドウの上には、現在デバッグ履歴中であることを示すメッセージが表示されます。  
+     In the code window, you should see that the preceding line of code (`int resultInt = AddIterative(testInt);`) is colored pink. Above the window, you should see a message that you are now in Historical Debugging.  
   
-     コード ウィンドウは、次のようになります。  
+     The code window now looks like this:  
   
-     ![デバッグ履歴モードでのコード ウィンドウ](~/debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")  
+     ![code window in historical debugging mode](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")  
   
-6.  ここで、`AddAll()` メソッドにステップ インできます \(**F11** キー、またはナビゲーション余白の \[**ステップ イン**\] ボタン\)。  ステップ前進します \(**F10** キー、またはナビゲーション余白の \[**次の呼び出しへ移動**\]\)。  ピンクの行が `j = AddInt(j);` 行に移ります。  ここで **F10** キーを押しても、次のコード行にはステップしません。  代わりに、次の関数呼び出しに移動します。  デバッグ履歴は呼び出しから呼び出しに移動し、関数呼び出しを含まないコード行はスキップされます。  
+6.  Now you can step into the `AddAll()` method (**F11**, or the **Step Into** button in the navigation gutter. Step forward (**F10**, or **Go to Next Call** in the navigation gutter. The pink line is now on the `j = AddInt(j);` line. **F10** in this case does not step to the next line of code. Instead, it steps to the next function call. Historical debugging navigates from call to call, and it skips lines of code that do not include a function call.  
   
-7.  ここで、`AddInt()` メソッドにステップ インします。  このコードにバグがあることがすぐにわかります。  
+7.  Now step into the `AddInt()` method. You should see the bug in this code immediately.  
   
- この手順では、デバッグ履歴でできることの表面的な部分のみを見ています。  他の設定およびナビゲーション余白の他のボタンの効果について詳しくは、「[IntelliTrace の機能](../debugger/intellitrace-features.md)」をご覧ください。
+ This procedure just scratched the surface of what you can do with Historical Debugging. To find out more about the different settings and the effects of the different buttons in the navigation gutter, see [IntelliTrace Features](../debugger/intellitrace-features.md).

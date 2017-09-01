@@ -1,12 +1,13 @@
 ---
 title: "Visual Studio から Azure App Service への Python アプリの発行 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 7/13/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85031f91-3a65-463b-a678-1e69f1b843e6
@@ -14,24 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 0163d1279b41ef8fecf9ca774cd3e67f0f47f1b1
-ms.lasthandoff: 03/07/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 9bce1901cc86eea29638d4a715c18c6367fa6dc6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -51,7 +39,7 @@ ms.lasthandoff: 03/07/2017
 
 Azure への発行には、Azure サブスクリプションが必要です。または、一時的なサイトを使うこともできます。
 
-サブスクリプションには、[無料の完全な Azure アカウント](https://azure.microsoft.com/en-us/free/)から始めます。これには、Azure サービスのクレジットが含まれます。 [Visual Studio Dev Essentials](https://azure.microsoft.com/en-us/pricing/member-offers/vs-dev-essentials/) へのサインアップも検討してください。1 年間、毎月&25; ドルのクレジットが提供されます。
+サブスクリプションには、[無料の完全な Azure アカウント](https://azure.microsoft.com/en-us/free/)から始めます。これには、Azure サービスのクレジットが含まれます。 [Visual Studio Dev Essentials](https://azure.microsoft.com/en-us/pricing/member-offers/vs-dev-essentials/) へのサインアップも検討してください。1 年間、毎月 25 ドルのクレジットが提供されます。
 
 Azure サブスクリプションなしで Azure App Service に一時的なサイトを作成するには:
 
@@ -65,17 +53,17 @@ Azure サブスクリプションなしで Azure App Service に一時的なサ�
 
 1. Visual Studio で、**[ファイル] > [新規] > [プロジェクト]** の順に選び、"Bottle" を検索して、**[Bottle Web Project (Bottle Web プロジェクト)]** を選び、**[OK]** をクリックします。    
 
-1. 外部パッケージのインストールを求めるメッセージが表示されたら、**[Install into a virtual environment (仮想環境にインストールする)]** を選びます。 ダイアログの下部にある **[Show required packages (必要なパッケージを表示する)]** コントロールに注意してください。これを使うと、インストールされるパッケージが表示されます。
+1. 外部パッケージのインストールを求めるメッセージが表示されたら、**[Install into a virtual environment (仮想環境にインストールする)]** を選びます。 ダイアログの下部にある **[必要なパッケージを表示]** コントロールに注意してください。これを使うと、インストールされるパッケージが表示されます。
 
-  ![必要なパッケージのインストール](~/python/media/tutorials-common-external-packages.png)
+  ![必要なパッケージのインストール](media/tutorials-common-external-packages.png)
 
 1. 仮想環境の優先ベース インタープリターを選び (たとえば、**Python 2.7** や **Python 3.4**)、**[作成]** をクリックします。
 
-  ![プロジェクトを作成するときの仮想環境の追加](~/python/media/tutorials-common-add-virtual-environment.png)
+  ![プロジェクトを作成するときの仮想環境の追加](media/tutorials-common-add-virtual-environment.png)
 
 1. プロジェクトが作成されたら、**[デバッグ] > [デバッグ開始]** を選ぶか、F5 キーを押して、ローカルにテストします。 既定では、アプリケーションはメモリ内リポジトリを使うので、構成は必要ありません。 Web サーバーが停止すると、すべてのデータが失われます。
 
-1. アプリケーション内をあちこちクリックして、動作を確認します。
+1. アプリケーション内をあちこちクリックして、動作をテストします。
 
 1. 終了したら、デバッガーを停止します (**[デバッグ] > [デバッグの停止]** または Shift + F5 キー)。
 
@@ -85,7 +73,7 @@ Azure サブスクリプションなしで Azure App Service に一時的なサ�
 
 1. **[発行]** ダイアログで、**[Microsoft Azure App Service]** を選びます。
 
-  ![Azure 発行手順 1](~/python/media/tutorials-common-publish-1.png)
+  ![Azure 発行手順 1](media/tutorials-common-publish-1.png)
 
 1. ターゲットを選びます。
 
@@ -94,7 +82,7 @@ Azure サブスクリプションなしで Azure App Service に一時的なサ�
 
 1. App Service の詳細が、**[発行]** ダイアログの **[接続]** タブに表示されます (下図参照)。
 
-  ![Azure 発行手順 2](~/python/media/tutorials-common-publish-2.png)
+  ![Azure 発行手順 2](media/tutorials-common-publish-2.png)
 
 1. 必要に応じて、**[次へ >]** を選んで追加設定を確認します。 [Azure で Python コードをリモート デバッグする](debugging-azure-remote.md)場合は、**[構成]** を **[デバッグ]** に設定する必要があります。
 1. **[発行]** を選びます。 アプリケーションが Azure に配置されると、そのサイトで既定のブラウザーが開きます。 

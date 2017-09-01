@@ -1,248 +1,247 @@
 ---
-title: "チュートリアル : コンテンツ コントロールによるテンプレートの作成"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "文書パーツ [Visual Studio での Office 開発]"
-  - "コンテンツ コントロール [Visual Studio での Office 開発], 追加 (ドキュメントに)"
-  - "Word [Visual Studio での Office 開発], 作成 (文書を)"
+title: 'Walkthrough: Creating a Template By Using Content Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- building blocks [Office development in Visual Studio]
+- Word [Office development in Visual Studio], creating documents
+- content controls [Office development in Visual Studio], adding to documents
 ms.assetid: 88fb9a60-dcc3-4a5f-a8c9-7aff01ca4b4b
 caps.latest.revision: 46
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 42
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 3876ec91cb4872e2a08ee83b60aeca7ce974ad0d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : コンテンツ コントロールによるテンプレートの作成
-  このチュートリアルでは、コンテンツ コントロールを使用して、Microsoft Office Word テンプレートで構造化された再利用可能なコンテンツを作成するための、ドキュメント レベルのカスタマイズを作成する方法について説明します。  
+# <a name="walkthrough-creating-a-template-by-using-content-controls"></a>Walkthrough: Creating a Template By Using Content Controls
+  This walkthrough demonstrates how to create a document-level customization that uses content controls to create structured and reusable content in a Microsoft Office Word template.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- Word では「*文書パーツ*」という名前の、再利用可能な文書パーツのコレクションを作成することができます。  このチュートリアルでは、文書パーツとして 2 つの表を作成する方法を説明します。  各表には、プレーン テキストや日付などさまざまな種類のコンテンツを保持できる、複数のコンテンツ コントロールが含まれます。  表の 1 つには従業員に関する情報が含まれ、もう一方の表には顧客からのフィードバックが含まれています。  
+ Word enables you to create a collection of reusable document parts, named *building blocks*. This walkthrough shows how to create two tables as building blocks. Each table contains several content controls that can hold different types of content, such as plain text or dates. One of the tables contains information about an employee, and the other table contains customer feedback.  
   
- テンプレートからドキュメントを作成した後に、複数の <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> オブジェクトを使用して、いずれかの表をドキュメントに追加できます。これらのオブジェクトには、テンプレート内で使用できる文書パーツが表示されます。  
+ After you create a document from the template, you can add either of the tables to the document by using several <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> objects, which display the available building blocks in the template.  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   デザイン時に Word テンプレートで、コンテンツ コントロールが含まれる表を作成する。  
+-   Creating tables that contain content controls in a Word template at design time.  
   
--   プログラムを使用して、コンボ ボックス コンテンツ コントロールおよびドロップダウン リスト コンテンツ コントロールのデータを読み込む。  
+-   Populating a combo box content control and a drop-down list content control programmatically.  
   
--   特定の表を保護してユーザーが編集できないようにする。  
+-   Preventing users from editing a specified table.  
   
--   表をテンプレートの文書パーツ コレクションに追加する。  
+-   Adding tables to the building block collection of a template.  
   
--   テンプレートで使用可能な文書パーツを表示するコンテンツ コントロールを作成する。  
+-   Creating a content control that displays the available building blocks in the template.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   Microsoft Word  
+-   Microsoft Word.  
   
-## 新しい Word テンプレート プロジェクトを作成する  
- ユーザーが独自のコピーを簡単に作成できるように、Word テンプレートを作成します。  
+## <a name="creating-a-new-word-template-project"></a>Creating a New Word Template Project  
+ Create a Word template so that users can create their own copies easily.  
   
-#### 新しい Word テンプレート プロジェクトを作成するには  
+#### <a name="to-create-a-new-word-template-project"></a>To create a new Word template project  
   
-1.  MyBuildingBlockTemplate という名前の Word テンプレート プロジェクトを作成します。  ウィザードで、ソリューション内に新しいドキュメントを作成します。  詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」をご覧ください。  
+1.  Create a Word template project with the name **MyBuildingBlockTemplate**. In the wizard, create a new document in the solution. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] が、デザイナーで新しい Word テンプレートを開き、**ソリューション エクスプローラー**に **MyBuildingBlockTemplate** プロジェクトを追加します。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] opens the new Word template in the designer and adds the **MyBuildingBlockTemplate** project to **Solution Explorer**.  
   
-## 従業員表を作成する  
- ユーザーが従業員に関する情報を入力できる 4 種類のコンテンツ コントロールが含まれる表を作成します。  
+## <a name="creating-the-employee-table"></a>Creating the Employee Table  
+ Create a table that contains four different types of content controls where the user can enter information about an employee.  
   
-#### 従業員表を作成するには  
+#### <a name="to-create-the-employee-table"></a>To create the employee table  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] デザイナーでホストされている Word テンプレートのリボンで **\[挿入\]** タブをクリックします。  
+1.  In the Word template that is hosted in the [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] designer, on the Ribbon, click the **Insert** tab.  
   
-2.  **\[表\]** グループの **\[表\]** をクリックし、2 列 4 行の表を挿入します。  
+2.  In the **Tables** group, click **Table**, and insert a table with 2 columns and 4 rows.  
   
-3.  最初の列に次のようにテキストを入力します。  
+3.  Type text in the first column so that it resembles the following column:  
   
     ||  
     |-|  
-    |Employee Name|  
-    |Hire Date|  
-    |タイトル|  
-    |画像|  
+    |**Employee Name**|  
+    |**Hire Date**|  
+    |**Title**|  
+    |**Picture**|  
   
-4.  2 番目の列の最初のセル \(**\[Employee Name\]** の横\) をクリックします。  
+4.  Click in the first cell in the second column (next to **Employee Name**).  
   
-5.  リボンの **\[開発\]** タブをクリックします。  
+5.  On the Ribbon, click the **Developer** tab.  
   
     > [!NOTE]  
-    >  **\[開発\]** タブが表示されていない場合は、最初にこれを表示する必要があります。  詳細については、「[方法 :タブをリボンに表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
+    >  If the **Developer** tab is not visible, you must first show it. For more information, see [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
   
-6.  **\[コントロール\]** グループの **\[テキスト\]** ボタン ![PlainTextContentControl](~/vsto/media/plaintextcontrol.gif "PlainTextContentControl") をクリックし、最初のセルに <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> を追加します。  
+6.  In the **Controls** group, click the **Text** button ![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") to add a <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> to the first cell.  
   
-7.  2 番目の列の 2 番目のセル \(**\[Hire Date\]** の横\) をクリックします。  
+7.  Click the second cell in the second column (next to **Hire Date**).  
   
-8.  **\[コントロール\]** グループの **\[日付の選択\]** ボタン ![DatePickerContentControl](~/vsto/media/datepicker.gif "DatePickerContentControl") をクリックし、2 番目のセルに <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> を追加します。  
+8.  In the **Controls** group, click the **Date Picker** button ![DatePickerContentControl](../vsto/media/datepicker.gif "DatePickerContentControl") to add a <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> to the second cell.  
   
-9. 2 番目の列の 3 番目のセル \(**\[タイトル\]** の横\) をクリックします。  
+9. Click the third cell in the second column (next to **Title**).  
   
-10. **\[コントロール\]** グループの **\[コンボ ボックス\]** ボタン ![ComboBoxContentControl](~/vsto/media/combobox.gif "ComboBoxContentControl") をクリックし、3 番目のセルに <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> を追加します。  
+10. In the **Controls** group, click the **Combo Box** button ![ComboBoxContentControl](../vsto/media/combobox.gif "ComboBoxContentControl") to add a <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> to the third cell.  
   
-11. 2 番目の列の最後のセル \(**\[画像\]** の横\) をクリックします。  
+11. Click the last cell in the second column (next to **Picture**).  
   
-12. **\[コントロール\]** グループで、**\[画像コンテンツ コントロール\]** ボタン ![PictureContentControl](~/vsto/media/pictcontentcontrol.gif "PictureContentControl") をクリックして、最後のセルに <xref:Microsoft.Office.Tools.Word.PictureContentControl> を追加します。  
+12. In the **Controls** group, click the **Picture Content Control** button ![PictureContentControl](../vsto/media/pictcontentcontrol.gif "PictureContentControl") to add a <xref:Microsoft.Office.Tools.Word.PictureContentControl> to the last cell.  
   
-## 顧客フィードバック表を作成する  
- ユーザーが顧客のフィードバック情報を入力できる 3 種類のコンテンツ コントロールが含まれる表を作成します。  
+## <a name="creating-the-customer-feedback-table"></a>Creating the Customer Feedback Table  
+ Create a table that contains three different types of content controls where the user can enter customer feedback information.  
   
-#### 顧客フィードバック表を作成するには  
+#### <a name="to-create-the-customer-feedback-table"></a>To create the customer feedback table  
   
-1.  Word テンプレートで、前の手順で追加した従業員表の次の行をクリックし、ENTER キーを押して新しい段落を追加ます。  
+1.  In the Word template, click in the line after the employee table that you added earlier, and press ENTER to add a new paragraph.  
   
-2.  リボンの **\[挿入\]** タブをクリックします。  
+2.  On the Ribbon, click the **Insert** tab.  
   
-3.  **\[表\]** グループの **\[表\]** をクリックし、2 列 3 行の表を挿入します。  
+3.  In the **Tables** group, click **Table**, and insert a table with 2 columns and 3 rows.  
   
-4.  最初の列に次のようにテキストを入力します。  
+4.  Type text in the first column so that it resembles the following column:  
   
     ||  
     |-|  
-    |顧客名|  
-    |満足度評価|  
-    |コメント|  
+    |**Customer Name**|  
+    |**Satisfaction Rating**|  
+    |**Comments**|  
   
-5.  2 番目の列の最初のセル \(**\[顧客名\]** の横\) をクリックします。  
+5.  Click in the first cell of the second column (next to **Customer Name**).  
   
-6.  リボンの **\[開発\]** タブをクリックします。  
+6.  On the Ribbon, click the **Developer** tab.  
   
-7.  **\[コントロール\]** グループの **\[テキスト\]** ボタン ![PlainTextContentControl](~/vsto/media/plaintextcontrol.gif "PlainTextContentControl") をクリックし、最初のセルに <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> を追加します。  
+7.  In the **Controls** group, click the **Text** button ![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") to add a <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> to the first cell.  
   
-8.  2 番目の列の 2 番目のセル \(**\[満足度評価\]** の横\) をクリックします。  
+8.  Click in the second cell of the second column (next to **Satisfaction Rating**).  
   
-9. **\[コントロール\]** グループの **\[ドロップダウン リスト\]** ボタン ![DropDownListContentControl](~/vsto/media/dropdownlist.gif "DropDownListContentControl") をクリックして、2 番目のセルに <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> を追加します。  
+9. In the **Controls** group, click the **Drop-Down List** button ![DropDownListContentControl](../vsto/media/dropdownlist.gif "DropDownListContentControl") to add a <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> to the second cell.  
   
-10. 2 番目の列の最後のセル \(**\[コメント\]** の横\) をクリックします。  
+10. Click in the last cell of the second column (next to **Comments**).  
   
-11. **\[コントロール\]** グループの **\[リッチ テキスト\]** ボタン ![RichTextContentControl](~/vsto/media/richtextcontrol.gif "RichTextContentControl") をクリックして、最後のセルに <xref:Microsoft.Office.Tools.Word.RichTextContentControl> を追加します。  
+11. In the **Controls** group, click the **Rich Text** button ![RichTextContentControl](../vsto/media/richtextcontrol.gif "RichTextContentControl") to add a <xref:Microsoft.Office.Tools.Word.RichTextContentControl> to the last cell.  
   
-## プログラムにより、コンボ ボックスとドロップ ダウン リストのデータを読み込む  
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] の **\[プロパティ\]** ウィンドウを使用して、デザイン時にコンテンツ コントロールを初期化することができます。  また、実行時に初期化することも可能で、これにより、コンテンツ コントロールを動的に初期の状態に設定できます。  このチュートリアルでは、これらのオブジェクトの動作を確認できるように、実行時に <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> および <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> にエントリのデータを読み込むコードを使用します。  
+## <a name="populating-the-combo-box-and-drop-down-list-programmatically"></a>Populating the Combo Box and Drop Down List Programmatically  
+ You can initialize content controls at design time by using the **Properties** window in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. You can also initialize them at run time, which enables you to set their initial states dynamically. For this walkthrough, use code to populate the entries in the <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> and <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> at run time so that you can see how these objects work.  
   
-#### コンテンツ コントロールの UI をプログラムで変更するには  
+#### <a name="to-modify-the-ui-of-the-content-controls-programmatically"></a>To modify the UI of the content controls programmatically  
   
-1.  **ソリューションエクスプローラー**で **ThisDocument.cs** または **ThisDocument.vb** を右クリックしてから、**\[コードの表示\]** をクリックします。  
+1.  In **Solution Explorer**, right-click **ThisDocument.cs** or **ThisDocument.vb**, and then click **View Code**.  
   
-2.  `ThisDocument` クラスに次のコードを追加します。  このコードは、このチュートリアルの後半で使用するいくつかのオブジェクトを宣言します。  
+2.  Add the following code to the `ThisDocument` class. This code declares several objects that you will use later in this walkthrough.  
   
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/CS/ThisDocument.cs#1)]
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/VB/ThisDocument.vb#1)]  
+     [!code-vb[Trin_ContentControlTemplateWalkthrough#1](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#1)]  [!code-csharp[Trin_ContentControlTemplateWalkthrough#1](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#1)]  
   
-3.  `ThisDocument_Startup` クラスの `ThisDocument` メソッドに次のコード行を追加します。  このコードは表の <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> と <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> にエントリを追加し、ユーザーがコンテンツ コントロールを編集する前に、各コントロールに表示されるプレースホルダー テキストを設定します。  
+3.  Add the following code to the `ThisDocument_Startup` method of the `ThisDocument` class. This code adds entries to the <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> and <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> in the tables, and sets the placeholder text that is displayed in each of these controls before the user edits them.  
   
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/CS/ThisDocument.cs#2)]
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/VB/ThisDocument.vb#2)]  
+     [!code-vb[Trin_ContentControlTemplateWalkthrough#2](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#2)]  [!code-csharp[Trin_ContentControlTemplateWalkthrough#2](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#2)]  
   
-## 従業員表を保護してユーザーが編集できないようにする  
- 先ほど宣言した <xref:Microsoft.Office.Tools.Word.GroupContentControl> オブジェクトを使用して、従業員表を保護します。  表を保護した後でも、ユーザーは表内のコンテンツ コントロールを編集できます。  ただし、最初の列のテキストを編集したり、他の方法で表を変更すること \(行や列を追加\/削除するなど\) はできません。  <xref:Microsoft.Office.Tools.Word.GroupContentControl> を使用してドキュメントの一部を保護する方法の詳細については、「[コンテンツ コントロール](../vsto/content-controls.md)」を参照してください。  
+## <a name="preventing-users-from-editing-the-employee-table"></a>Preventing Users from Editing the Employee Table  
+ Use the <xref:Microsoft.Office.Tools.Word.GroupContentControl> object that you declared earlier to protect the employee table. After protecting the table, users can still edit the content controls in the table. However, they cannot edit text in the first column or modify the table in other ways, such as adding or deleting rows and columns. For more information about how to use a <xref:Microsoft.Office.Tools.Word.GroupContentControl> to protect a part of a document, see [Content Controls](../vsto/content-controls.md).  
   
-#### 従業員表を保護してユーザーが編集できないようにするには  
+#### <a name="to-prevent-users-from-editing-the-employee-table"></a>To prevent users from editing the employee table  
   
-1.  `ThisDocument` クラスの `ThisDocument_Startup` メソッドに \(前の手順で追加したコードの後ろに\) 次のコードを追加します。  このコードにより、先ほど宣言した <xref:Microsoft.Office.Tools.Word.GroupContentControl> オブジェクト内に表を配置することで、ユーザーが従業員表を編集できないようにします。  
+1.  Add the following code to the `ThisDocument_Startup` method of the `ThisDocument` class, after the code that you added in the previous step. This code prevents users from editing the employee table by putting the table inside the <xref:Microsoft.Office.Tools.Word.GroupContentControl> object that you declared earlier.  
   
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/CS/ThisDocument.cs#3)]
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/VB/ThisDocument.vb#3)]  
+     [!code-vb[Trin_ContentControlTemplateWalkthrough#3](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#3)]  [!code-csharp[Trin_ContentControlTemplateWalkthrough#3](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#3)]  
   
-## 表を文書パーツ コレクションに追加する  
- 作成した表をユーザーがドキュメントに挿入できるように、テンプレート内の文書パーツ コレクションに表を追加します。  ドキュメントの文書パーツの詳細については、「[コンテンツ コントロール](../vsto/content-controls.md)」を参照してください。  
+## <a name="adding-the-tables-to-the-building-block-collection"></a>Adding the Tables to the Building Block Collection  
+ Add the tables to a collection of document building blocks in the template so that users can insert the tables that you have created into the document. For more information about document building blocks, see [Content Controls](../vsto/content-controls.md).  
   
-#### テンプレートの文書パーツに表を追加するには  
+#### <a name="to-add-the-tables-to-the-building-blocks-in-the-template"></a>To add the tables to the building blocks in the template  
   
-1.  `ThisDocument` クラスの `ThisDocument_Startup` メソッドに \(前の手順で追加したコードの後ろに\) 次のコードを追加します。  このコードにより、表が含まれる新しい文書パーツが Microsoft.Office.Interop.Word.BuildingBlockEntries コレクションに追加されます。このコレクションにはテンプレート内のすべての再利用可能な文書パーツが含まれています。  新しい文書パーツは「**Employee and Customer Information**」という新しいカテゴリーに定義され、文書パーツの種類 Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustom1 が割り当てられます。  
+1.  Add the following code to the `ThisDocument_Startup` method of the `ThisDocument` class, after the code that you added in the previous step. This code adds new building blocks that contain the tables to the Microsoft.Office.Interop.Word.BuildingBlockEntries collection, which contains all the reusable building blocks in the template. The new building blocks are defined in a new category named **Employee and Customer Information** and are assigned the building block type Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustom1.  
   
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/CS/ThisDocument.cs#4)]
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/VB/ThisDocument.vb#4)]  
+     [!code-vb[Trin_ContentControlTemplateWalkthrough#4](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#4)]  [!code-csharp[Trin_ContentControlTemplateWalkthrough#4](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#4)]  
   
-2.  `ThisDocument` クラスの `ThisDocument_Startup` メソッドに \(前の手順で追加したコードの後ろに\) 次のコードを追加します。  このコードは、テンプレートから、表を削除します。  表は、テンプレートの再利用可能な文書パーツのギャラリーに追加されたため、もう必要ありません。  コードは最初にドキュメントをデザイン モードにして、保護されている従業員表を削除できるようにします。  
+2.  Add the following code to the `ThisDocument_Startup` method of the `ThisDocument` class, after the code that you added in the previous step. This code deletes the tables from the template. The tables are no longer necessary, because you have added them to the gallery of reusable building blocks in the template. The code first puts the document into design mode so that the protected employee table can be deleted.  
   
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#5](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/CS/ThisDocument.cs#5)]
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#5](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/VB/ThisDocument.vb#5)]  
+     [!code-vb[Trin_ContentControlTemplateWalkthrough#5](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#5)]  [!code-csharp[Trin_ContentControlTemplateWalkthrough#5](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#5)]  
   
-## 文書パーツを表示するコンテンツ コントロールの作成  
- 先ほど作成した文書パーツ \(表\) へのアクセスを提供するコンテンツ コントロールを作成します。  ユーザーはこのコントロールをクリックして、ドキュメントに表を追加できます。  
+## <a name="creating-a-content-control-that-displays-the-building-blocks"></a>Creating a Content Control That Displays the Building Blocks  
+ Create a content control that provides access to the building blocks (that is, the tables) that you created earlier. Users can click this control to add the tables to the document.  
   
-#### 文書パーツを表示するコンテンツ コントロールを作成するには  
+#### <a name="to-create-a-content-control-that-displays-the-building-blocks"></a>To create a content control that displays the building blocks  
   
-1.  `ThisDocument` クラスの `ThisDocument_Startup` メソッドに \(前の手順で追加したコードの後ろに\) 次のコードを追加します。  このコードは先ほど宣言した <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> オブジェクトを初期化します。   <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> は「**Employee and Customer Information**」というカテゴリーに定義されていて文書パーツの種類 Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustom1 のすべての文書パーツを表示します。  
+1.  Add the following code to the `ThisDocument_Startup` method of the `ThisDocument` class, after the code that you added in the previous step. This code initializes the <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> object that you declared earlier. The <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> displays all building blocks that are defined in the category **Employee and Customer Information** and that have the building block type Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustom1.  
   
-     [!code-csharp[Trin_ContentControlTemplateWalkthrough#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/CS/ThisDocument.cs#6)]
-     [!code-vb[Trin_ContentControlTemplateWalkthrough#6](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_ContentControlTemplateWalkthrough/VB/ThisDocument.vb#6)]  
+     [!code-vb[Trin_ContentControlTemplateWalkthrough#6](../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb#6)]  [!code-csharp[Trin_ContentControlTemplateWalkthrough#6](../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs#6)]  
   
-## プロジェクトのテスト  
- ユーザーはドキュメント内の文書パーツ ギャラリー コントロールをクリックして、従業員表や顧客フィードバック表を挿入できます。  ユーザーは、両方の表内のコンテンツ コントロールで、応答を入力または選択できます。  ユーザーは顧客フィードバック表の他の部分を変更できますが、従業員表の他の部分を変更できてはなりません。  
+## <a name="testing-the-project"></a>Testing the Project  
+ Users can click the building block gallery controls in the document to insert the employee table or the customer feedback table. Users can type or select responses in the content controls in both of the tables. Users can modify other parts of the customer feedback table, but they should not be able to modify other parts of the employee table.  
   
-#### 従業員表をテストするには  
+#### <a name="to-test-the-employee-table"></a>To test the employee table  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  Press F5 to run the project.  
   
-2.  **\[最初の文書パーツを選択する\]** をクリックして、最初の文書パーツ ギャラリーのコンテンツ コントロールを表示します。  
+2.  Click **Choose your first building block** to display the first building block gallery content control.  
   
-3.  **\[カスタム ギャラリー 1\]** 見出しの横のドロップダウン矢印をクリックして、**\[Employee Table\]** を選択します。  
+3.  Click the drop-down arrow next to the **Custom Gallery 1** heading in the control, and select **Employee Table**.  
   
-4.  「Employee Name」セルの右側のセルをクリックし、名前を入力します。  
+4.  Click in the cell to the right of the **Employee Name** cell and type a name.  
   
-     このセルにテキストのみを追加できることを確認します。  <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> により、ユーザーはテキストのみを追加でき、アートや表など他の種類のコンテンツは追加できません。  
+     Verify that you can add only text to this cell. The <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> allows users to add only text, not other types of content such as art or a table.  
   
-5.  Hire Date セルの右側のセルをクリックし、日付の選択で日付を選択します。  
+5.  Click in the cell to the right of the **Hire Date** cell and select a date in the date picker.  
   
-6.  Title セルの右側にあるセルをクリックし、コンボ ボックスで役職名のいずれかを選択します。  
+6.  Click in the cell to the right of the **Title** cell and select one of the job titles in the combo box.  
   
-     必要に応じて、リストに含まれていない役職名を入力します。  <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> ではユーザーがエントリの一覧から選択することも、独自のエントリを入力することもできるため、このようなケースが生じることがあります。  
+     Optionally, type the name of a job title that is not in the list. This is possible because the <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> enables users to select from a list of entries or to type their own entries.  
   
-7.  画像セルの右側にあるセルでアイコンをクリックし、表示する画像を参照します。  
+7.  Click the icon in the cell to the right of the **Picture** cell and browse to an image to display it.  
   
-8.  表に行や列を追加できるか、また、表から行や列を削除できるか、試してみます。  表を変更できないことを確認します。  <xref:Microsoft.Office.Tools.Word.GroupContentControl> により、表は変更できないようになっています。  
+8.  Try to add rows or columns to the table, and try to delete rows and columns from the table. Verify that you cannot modify the table. The <xref:Microsoft.Office.Tools.Word.GroupContentControl> prevents you from making any modifications.  
   
-#### 顧客フィードバック表をテストするには  
+#### <a name="to-test-the-customer-feedback-table"></a>To test the customer feedback table  
   
-1.  **\[2 番目の文書パーツを選択する\]** をクリックして、2 番目の文書パーツ ギャラリー コンテンツ コントロールを表示します。  
+1.  Click **Choose your second building block** to display the second building block gallery content control.  
   
-2.  **\[カスタム ギャラリー 1\]** 見出しの横のドロップダウン矢印をクリックして、**\[Customer Table\]** を選択します。  
+2.  Click the drop-down arrow next to the **Custom Gallery 1** heading in the control, and select **Customer Table**.  
   
-3.  「顧客名」セルの右側のセルをクリックし、名前を入力します。  
+3.  Click in the cell to the right of the **Customer Name** cell and type a name.  
   
-4.  「満足度評価」セルの右側にあるセルをクリックし、使用可能なオプションのいずれかを選択します。  
+4.  Click in the cell to the right of the **Satisfaction Rating** cell and select one of the available options.  
   
-     独自のエントリを入力できないことを確認します。  <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> では、ユーザーはエントリの一覧から選択することのみが可能です。  
+     Verify that you cannot type your own entry. The <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> allows users only to select from a list of entries.  
   
-5.  コメント セルの右側のセルをクリックし、いくつかのコメントを入力します。  
+5.  Click in the cell to the right of the **Comments** cell and type some comments.  
   
-     必要に応じて、アートや、埋め込み表など、テキスト以外のコンテンツを追加します。  <xref:Microsoft.Office.Tools.Word.RichTextContentControl> ではユーザーがテキスト以外のコンテンツを追加できるため、このようなケースが生じることがあります。  
+     Optionally, add some content other than text, such as art or an embedded table. This is possible because the <xref:Microsoft.Office.Tools.Word.RichTextContentControl> enables users to add content other than text.  
   
-6.  表に行や列を追加できること、また、表から行や列を削除できることを確認します。  表を <xref:Microsoft.Office.Tools.Word.GroupContentControl> に配置して保護していないため、表への変更が可能です。  
+6.  Verify that you can add rows or columns to the table, and that you can delete rows and columns from the table. This is possible because you have not protected the table by putting it in a <xref:Microsoft.Office.Tools.Word.GroupContentControl>.  
   
-7.  テンプレートを閉じます。  
+7.  Close the template.  
   
-## 次の手順  
- コンテンツ コントロールの使用方法の詳細については、次の各トピックを参照してください。  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to use content controls from this topic:  
   
--   コンテンツ コントロールを、文書に埋め込まれている XML の一部 \(「カスタム XML 部分」とも呼ばれます\) にバインドします。  詳細については、「[チュートリアル : カスタム XML 部分へのコンテンツ コントロールのバインド](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)」を参照してください。  
+-   Bind content controls to pieces of XML, also named custom XML parts, that are embedded in a document. For more information, see [Walkthrough: Binding Content Controls to Custom XML Parts](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md).  
   
-## 参照  
- [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
- [コンテンツ コントロール](../vsto/content-controls.md)   
- [方法 : Word 文書にコンテンツ コントロールを追加する](../vsto/how-to-add-content-controls-to-word-documents.md)   
- [方法 : コンテンツ コントロールを使用して文書を保護する](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)   
- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)  
+## <a name="see-also"></a>See Also  
+ [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md)   
+ [Content Controls](../vsto/content-controls.md)   
+ [How to: Add Content Controls to Word Documents](../vsto/how-to-add-content-controls-to-word-documents.md)   
+ [How to: Protect Parts of Documents by Using Content Controls](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)  
   
   

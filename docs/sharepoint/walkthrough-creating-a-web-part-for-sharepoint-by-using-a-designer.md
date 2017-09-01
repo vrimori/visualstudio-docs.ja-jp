@@ -1,205 +1,206 @@
 ---
-title: "チュートリアル: デザイナーを使用した SharePoint の Web パーツの作成"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Web パーツ [Visual Studio での SharePoint 開発], 作成"
-  - "Web パーツ [Visual Studio での SharePoint 開発], デザイナー"
-  - "Web パーツ [Visual Studio での SharePoint 開発], デザイン"
+title: 'Walkthrough: Creating a Web Part for SharePoint by Using a Designer | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- Web Parts [SharePoint development in Visual Studio], designer
+- Web Parts [SharePoint development in Visual Studio], creating
+- Web Parts [SharePoint development in Visual Studio], designing
 ms.assetid: 3dd62654-ada2-468f-b7da-eb5704a2ff7a
 caps.latest.revision: 34
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 33
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 58ffc130a6b339d101cb24b582420d78f892aaa5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル: デザイナーを使用した SharePoint の Web パーツの作成
-  SharePoint サイトの Web パーツを作成すれば、ユーザーはブラウザーを使用して、そのサイトを構成するページのコンテンツ、外観、動作を直接変更できます。  このチュートリアルでは、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] に用意されている SharePoint の**視覚的 Web パーツ** プロジェクト テンプレートを使用して、Web パーツを視覚的に作成する方法を説明します。  
+# <a name="walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer"></a>Walkthrough: Creating a Web Part for SharePoint by Using a Designer
+  If you create web parts for a SharePoint site, your users can directly modify the content, appearance, and behavior of pages in that site by using a browser. This walkthrough shows you how to create a web part visually by using the SharePoint **Visual Web Part** project template in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
- ここで作成する Web パーツには、月間カレンダー ビューと、サイトで使用する各カレンダー リストのチェック ボックスが表示されます。  ユーザーがチェック ボックスをオンにすると、それに対応するカレンダー リストが月間カレンダー ビューに追加されます。  
+ The web part that you'll create displays a monthly calendar view and a check box for each calendar list on the site. Users can specify which calendar lists to include in the monthly calendar view by selecting the check boxes.  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   **視覚的 Web パーツ** プロジェクト テンプレートを使用して Web パーツを作成する  
+-   Creating a web part by using the **Visual Web Part** project template.  
   
--   Visual Studio の Visual Web Developer デザイナーを使用して Web パーツをデザインする  
+-   Designing the web part by using the Visual Web Developer designer in Visual Studio.  
   
--   Web パーツに配置したコントロールのイベントを処理するコードを追加する  
+-   Adding code to handle the events of controls on the web part.  
   
--   SharePoint で Web パーツをテストする  
+-   Testing the web part in SharePoint.  
   
     > [!NOTE]  
-    >  このチュートリアルに記載されている Visual Studio ユーザー インターフェイスの一部の要素は、お使いのコンピューターに実際に表示される名前や場所と異なる場合があります。  これらの要素は、使用する Visual Studio のエディションとその設定によって決まります。  「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+    >  Your computer might show different names or locations for some elements of the user interface for Visual Studio in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. See [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   サポート対象エディションの Windows と SharePoint。  「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of Windows and SharePoint. See [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)] 以上  
+-   [!INCLUDE[vsPro](../sharepoint/includes/vspro-md.md)] or greater.  
   
-## Web パーツ プロジェクトを作成する  
- まず、**視覚的 Web パーツ** プロジェクト テンプレートを使用して Web パーツ プロジェクトを作成します。  
+## <a name="creating-a-web-part-project"></a>Creating a web part project  
+ First, create a web part project by using the **Visual Web Part** project template.  
   
-#### 視覚的 Web パーツ プロジェクトを作成するには  
+#### <a name="to-create-a-visual-web-part-project"></a>To create a Visual Web Part project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を、**\[管理者として実行\]** オプションを使用して起動します。  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] by using the **Run as Administrator** option.  
   
-2.  メニュー バーで **\[ファイル\]**、**\[新規\]**、**\[プロジェクト\]** の順にクリックします。  
+2.  On the menu bar, choose **File**, **New**, **Project**.  
   
-     \[新しいプロジェクト\] ダイアログ ボックスが表示されます。  
+     The **New Project** dialog box appears.  
   
-3.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[Visual C\#\]** または **\[Visual Basic\]** の **\[Office\/SharePoint\]** を展開し、**\[SharePoint ソリューション\]** カテゴリを選択します。  
+3.  In the **New Project** dialog box, under either **Visual C#** or **Visual Basic**, expand **Office/SharePoint**, and then choose the **SharePoint Solutions** category.  
   
-4.  テンプレートの一覧で **\[SharePoint 2013 視覚的 Web パーツ\]** テンプレートを選択し、**\[OK\]** をクリックします。  
+4.  In the list of templates, choose the **SharePoint 2013 - Visual Web Part** template, and then choose the **OK** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  このウィザードでは、プロジェクトのデバッグ時に使用するサイトやソリューションの信頼レベルを指定できます。  
+     The **SharePoint Customization Wizard** appears. By using this wizard, you can specify the site that you'll use to debug the project and the trust level of the solution.  
   
-5.  **\[この SharePoint ソリューションの信頼レベル\]** セクションで **\[ファーム ソリューションとして配置する\]** を選択します。  
+5.  In the **What is the trust level for this SharePoint solution?** section, choose the **Deploy as a farm solution** option button.  
   
-6.  **\[完了\]** ボタンをクリックして、既定のローカル SharePoint サイトを作成します。  
+6.  Choose the **Finish** button to accept the default local SharePoint site.  
   
-## Web パーツをデザインする  
- **ツールボックス**にあるコントロールを Visual Web Developer デザイナーのサーフェイスへ追加して、Web パーツをデザインします。  
+## <a name="designing-the-web-part"></a>Designing the web part  
+ Design the web part by adding controls from the **Toolbox** to the surface of the Visual Web Developer designer.  
   
-#### Web パーツのレイアウトをデザインするには  
+#### <a name="to-design-the-layout-of-the-web-part"></a>To design the layout of the web part  
   
-1.  Visual Web Developer デザイナーで、**\[デザイン\]** タブを選択してデザイン ビューに切り替えます。  
+1.  On the Visual Web Developer designer, choose the **Design** tab to switch to Design view.  
   
-2.  メニュー バーで **\[表示\]**、**\[ツールボックス\]** の順にクリックします。  
+2.  On the menu bar, choose **View**, **Toolbox**.  
   
-3.  **ツールボックス**の **\[標準\]** ノードで **\[CheckBoxList\]** コントロールを選択し、次のいずれかの手順に従います。  
+3.  In the **Standard** node of the **Toolbox**, choose the **CheckBoxList** control, and then perform one of the following steps:  
   
-    -   **\[CheckBoxList\]** コントロールのショートカット メニューを開き、**\[コピー\]** を選択します。デザイナーで最初の行のショートカット メニューを開き、**\[貼り付け\]** を選択します。  
+    -   Open the shortcut menu for the **CheckBoxList** control, choose **Copy**, open the shortcut menu for the first line in the designer, and then choose **Paste**.  
   
-    -   **ツールボックス**から **\[CheckBoxList\]** コントロールをドラッグし、デザイナーの最初の行に接続します。  
+    -   Drag the **CheckBoxList** control from the **Toolbox**, and connect the control to the first line in the designer.  
   
-4.  前の手順を繰り返します。ただし、ここでは、デザイナーの次の行へボタンを移動します。  
+4.  Repeat the previous step, but move a Button to the next line of the designer.  
   
-5.  デザイナーで **\[Button1\]** ボタンを選択します。  
+5.  In the designer, choose the **Button1** button.  
   
-6.  メニュー バーで、**\[表示\]**、**\[プロパティ ウィンドウ\]** の順に選択します。  
+6.  On the menu bar, choose **View**, **Properties Window**.  
   
-     **\[プロパティ\]** ウィンドウが開きます。  
+     The **Properties** window opens.  
   
-7.  ボタンの **\[テキスト\]** プロパティに「更新」と入力します。  
+7.  In the **Text** property of the button, enter **Update**.  
   
-## Web パーツ上のコントロールのイベントを処理する  
- ユーザーがマスター カレンダー ビューにカレンダーを追加できるようにするコードを追加します。  
+## <a name="handling-the-events-of-controls-on-the-web-part"></a>Handling the events of controls on the web part  
+ Add code that enables the user to add calendars to the master calendar view.  
   
-#### Web パーツ上のコントロールのイベントを処理するには  
+#### <a name="to-handle-events-of-controls-on-the-web-part"></a>To handle events of controls on the web part  
   
-1.  次のいずれかの操作を実行します。  
+1.  Perform one of the following sets of steps:  
   
-    -   デザイナーで、**\[更新\]** ボタンをダブルクリックします。  
+    -   In the designer, double-click the **Update** button.  
   
-    -   **\[更新\]** ボタンの **\[プロパティ\]** ウィンドウで、**\[Events\]** ボタンを選択します。  **\[Click\]** プロパティに「**Button1\_Click**」と入力し、Enter キーを押します。  
+    -   In the **Properties** window for the **Update** button, choose the **Events** button. In the **Click** property, enter **Button1_Click**, and then choose the Enter key.  
   
-     ユーザー コントロール コード ファイルがコード エディターで開き、`Button1_Click` イベント ハンドラーが表示されます。  後で、このイベント ハンドラーにコードを追加します。  
+     The user control code file opens in Code Editor and the `Button1_Click` event handler appears. Later, you'll add code to this event handler.  
   
-2.  ユーザー コントロール コード ファイルの先頭に次のステートメントを追加します。  
+2.  Add the following statements to the top of the user control code file.  
   
-     [!code-csharp[SP_VisualWebPart#1](../snippets/csharp/VS_Snippets_OfficeSP/sp_visualwebpart/cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#1)]
-     [!code-vb[SP_VisualWebPart#1](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_visualwebpart/vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#1)]  
+     [!code-vb[SP_VisualWebPart#1](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#1)]  [!code-csharp[SP_VisualWebPart#1](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#1)]  
   
-3.  `VisualWebPart1` クラスに次のコード行を追加します。  このコードでは、月間カレンダー ビュー コントロールを宣言します。  
+3.  Add the following line of code to the `VisualWebPart1` class. This code declares a monthly calendar view control.  
   
-     [!code-csharp[SP_VisualWebPart#2](../snippets/csharp/VS_Snippets_OfficeSP/sp_visualwebpart/cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#2)]
-     [!code-vb[SP_VisualWebPart#2](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_visualwebpart/vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#2)]  
+     [!code-vb[SP_VisualWebPart#2](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#2)]  [!code-csharp[SP_VisualWebPart#2](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#2)]  
   
-4.  `VisualWebPart1` クラスの `Page_Load` メソッドを次のコードに置き換えます。  このコードは次のタスクを実行します。  
+4.  Replace the `Page_Load` method of the `VisualWebPart1` class with the following code. This code performs the following tasks:  
   
-    -   月間カレンダー ビューをユーザー コントロールに追加します。  
+    -   Adds a monthly calendar view to the user control.  
   
-    -   サイト上の各カレンダー リストにチェック ボックスを追加します。  
+    -   Adds a check box for each calendar list on the site.  
   
-    -   カレンダー ビューに表示される項目の種類ごとにテンプレートを指定します。  
+    -   Specifies a template for each type of item that appears in the calendar view.  
   
-     [!code-csharp[SP_VisualWebPart#3](../snippets/csharp/VS_Snippets_OfficeSP/sp_visualwebpart/cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#3)]
-     [!code-vb[SP_VisualWebPart#3](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_visualwebpart/vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#3)]  
+     [!code-vb[SP_VisualWebPart#3](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#3)] [!code-csharp[SP_VisualWebPart#3](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#3)]  
   
-5.  `VisualWebPart1` クラスの `Button1_Click` メソッドを次のコードに置き換えます。  このコードでは、選択したカレンダーの項目をマスター カレンダー ビューに追加します。  
+5.  Replace the `Button1_Click` method of the `VisualWebPart1` class with the following code. This code adds items from each selected calendar to the master calendar view.  
   
-     [!code-csharp[SP_VisualWebPart#4](../snippets/csharp/VS_Snippets_OfficeSP/sp_visualwebpart/cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#4)]
-     [!code-vb[SP_VisualWebPart#4](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_visualwebpart/vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#4)]  
+     [!code-vb[SP_VisualWebPart#4](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1usercontrol.ascx.vb#4)]  [!code-csharp[SP_VisualWebPart#4](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1usercontrol.ascx.cs#4)]  
   
-## Web パーツをテストする  
- プロジェクトを実行すると、SharePoint サイトが開きます。  SharePoint の Web パーツ ギャラリーに Web パーツが自動的に追加されます。  このプロジェクトをテストするには、次のタスクを実行します。  
+## <a name="testing-the-web-part"></a>Testing the web part  
+ When you run the project, the SharePoint site opens. The web part is automatically added to the Web Part Gallery in SharePoint. To test this project, you'll perform the following tasks:  
   
--   2 つのカレンダー リストそれぞれにイベントを追加します。  
+-   Add an event to each of two separate calendar lists.  
   
--   Web パーツを Web パーツ ページに追加します。  
+-   Add the web part to a web part page.  
   
--   月間カレンダー ビューに含めるリストを指定します。  
+-   Specify the lists to include in the monthly calendar view.  
   
-#### サイト上のカレンダー リストにイベントを追加するには  
+#### <a name="to-add-events-to-calendar-lists-on-the-site"></a>To add events to calendar lists on the site  
   
-1.  Visual Studio で F5 キーを押します。  
+1.  In Visual Studio, choose the F5 key.  
   
-     SharePoint サイトが開き、ページ上に [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] クイック起動バーが表示されます。  
+     The SharePoint site opens, and the [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] Quick Launch bar appears on the page.  
   
-2.  クイック起動バーの **\[リスト\]** にある **\[カレンダー\]** リンクを選択します。  
+2.  On the Quick Launch bar, under **Lists**, choose the **Calendar** link.  
   
-     **\[カレンダー\]** ページが表示されます。  
+     The **Calendar** page appears.  
   
-     クイック起動バーにカレンダー リンクが表示されない場合は、**\[サイト コンテンツ\]** リンクを選択します。  \[サイト コンテンツ\] ページに **\[カレンダー\]** 項目が表示されない場合は、カレンダーを作成します。  
+     If you no Calendar link appears on the Quick Launch bar, choose the **Site Contents** link. If the Site Contents page doesn't show a **Calendar** item, create one.  
   
-3.  カレンダー ページで、日を選択し、選択した日の **\[追加\]** リンクを選択してイベントを追加します。  
+3.  On the Calendar page, choose a day, and then choose the **Add** link in the selected day to add an event.  
   
-4.  既定のカレンダーの **\[タイトル\]** ボックスに「イベント」と入力し、**\[保存\]** ボタンをクリックします。  
+4.  In the **Title** box, enter **Event in the default calendar**, and then choose the **Save** button.  
   
-5.  **\[サイト コンテンツ\]** リンクを選択し、**\[アプリの追加\]** タイルを選択します。  
+5.  Choose the **Site Contents** link, and then choose the **Add an app** tile.  
   
-6.  **\[作成\]** ページで、種類として **\[カレンダー\]** を選択し、カレンダーの名前を入力します。**\[作成\]** ボタンをクリックします。  
+6.  On the **Create** page, choose the **Calendar** type, name the calendar, and then choose the **Create** button.  
   
-7.  新しいカレンダーにイベントを追加し、カスタム カレンダーのイベントに「イベント」という名前を付けます。**\[保存\]** ボタンをクリックします。  
+7.  Add an event to the new calendar, name the event **Event in the custom calendar**, and then choose the **Save** button.  
   
-#### Web パーツを Web パーツ ページに追加するには  
+#### <a name="to-add-the-web-part-to-a-web-part-page"></a>To add the web part to a web part page  
   
-1.  **\[サイト コンテンツ\]** ページで **\[サイトのページ\]** フォルダーを開きます。  
+1.  On the **Site Contents** page, open the **Site Pages** folder.  
   
-2.  リボンで **\[ファイル\]** タブを選択します。**\[新しいドキュメント\]** メニューを開き、**\[Web パーツ ページ\]** を選択します。  
+2.  On the ribbon, choose the **Files** tab, open the **New Document** menu, and then choose the **Web Part Page** command.  
   
-3.  **\[新しい Web パーツ ページ\]**で、ページに「**SampleWebPartPage.aspx**」と名前を付け、**\[作成\]** ボタンをクリックします。  
+3.  On the **New Web Part Page** page, name the page **SampleWebPartPage.aspx**, and then choose the **Create** button.  
   
-     Web パーツ ページが表示されます。  
+     The web part page appears.  
   
-4.  Web パーツ ページの上部にある **\[挿入\]** タブをクリックし、**\[Web パーツ\]** ボタンをクリックします。  
+4.  In the top zone of the web part page, choose the **Insert** tab, and then choose the **Web Part** button.  
   
-5.  **\[カスタム\]** フォルダーを選択します。さらに **\[VisualWebPart1\]** Web パーツを選択し、**\[追加\]** ボタンをクリックします。  
+5.  Choose the **Custom** folder, choose the **VisualWebPart1** web part, and then choose the **Add** button.  
   
-     ページに Web パーツが表示されます。  Web パーツに次のコントロールが表示されます。  
+     The web part appears on the page. The following controls appear on the web part:  
   
-    -   月間カレンダー ビュー  
+    -   A monthly calendar view.  
   
-    -   **\[更新\]** ボタン  
+    -   An **Update** button.  
   
-    -   **\[カレンダー\]** チェック ボックス  
+    -   A **Calendar** check box.  
   
-    -   **\[カスタム カレンダー\]** チェック ボックス  
+    -   A **Custom Calendar** check box.  
   
-#### 月間カレンダー ビューに追加するリストを指定するには  
+#### <a name="to-specify-lists-to-include-in-the-monthly-calendar-view"></a>To specify lists to include in the monthly calendar view  
   
-1.  Web パーツで、月間カレンダー ビューに追加するカレンダーを選択し、**\[更新\]** ボタンをクリックします。  
+1.  In the web part, specify calendars that you want to include in the monthly calendar view, and then choose the **Update** button.  
   
-     指定したすべてのカレンダーのイベントが月間カレンダー ビューに表示されます。  
+     Events from all calendars that you specified appear in the monthly calendar view.  
   
-## 参照  
- [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)   
- [方法: SharePoint Web パーツを作成する](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
- [方法: デザイナーを使用して SharePoint Web パーツを作成する](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   
- [チュートリアル: SharePoint の Web パーツを作成する](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)  
+## <a name="see-also"></a>See Also  
+ [Creating Web Parts for SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)   
+ [How to: Create a SharePoint Web Part](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
+ [How to: Create a SharePoint Web Part by Using a Designer](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   
+ [Walkthrough: Creating a Web Part for SharePoint](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)  
   
   

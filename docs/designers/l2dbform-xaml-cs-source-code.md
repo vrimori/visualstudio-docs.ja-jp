@@ -1,5 +1,5 @@
 ---
-title: "L2DBForm.xaml.cs ソース コード | Microsoft Docs"
+title: L2DBForm.xaml.cs Source Code | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,61 +27,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 753635060d71edf9d71e5919d00c9b566e16320d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: c54155a382aa9fce95ecaab212632d80dfa61d9f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="l2dbformxamlcs-source-code"></a>L2DBForm.xaml.cs Source Code
-このトピックでは、L2DBForm.xaml.cs ファイルの C# ソース コードの内容と説明を示します。 このファイルに含まれている L2XDBForm 部分クラスは、3 つの論理的な部分、つまりデータ メンバー、`OnRemove`、`OnAddBook` ボタン クリック イベント ハンドラーに分けることができます。  
+This topic contains the contents and description of the C# source code in the file L2DBForm.xaml.cs. The L2XDBForm partial class contained in this file can be divided into three logical sections: data members and the `OnRemove` and `OnAddBook` button click event handlers.  
   
-## <a name="data-members"></a>データ メンバー  
- このクラスを L2DBForm.xaml で使用されているウィンドウ リソースに関連付けるために、2 つのプライベート データ メンバーが使用されています。  
+## <a name="data-members"></a>Data Members  
+ Two private data members are used to associate this class to the window resources used in L2DBForm.xaml.  
   
--   名前空間変数 `myBooks` は、`"http://www.mybooks.com"` に初期化されます。  
+-   The namespace variable `myBooks` is initialized to `"http://www.mybooks.com"`.  
   
--   メンバー `bookList` は、コンストラクター内で次の行を使用して L2DBForm.xaml 内の CDATA 文字列に初期化されます。  
+-   The member `bookList` is initialized in the constructor to the CDATA string in L2DBForm.xaml with the following line:  
   
     ```  
     bookList = (XElement)((ObjectDataProvider)Resources["LoadedBooks"]).Data;  
     ```  
   
-## <a name="onaddbook-event-handler"></a>OnAddBook イベント ハンドラー  
- このメソッドには次の&3; つのステートメントが含まれています。  
+## <a name="onaddbook-event-handler"></a>OnAddBook Event Handler  
+ This method contains the following three statements:  
   
--   最初の条件ステートメントでは、入力が検証されます。  
+-   The first conditional statement is used for input validation.  
   
--   2 番目のステートメントでは、**[Add New Book]** ユーザー インターフェイス (UI) セクションでユーザーが入力した文字列値から新しい <xref:System.Xml.Linq.XElement> が作成されます。  
+-   The second statement creates a new <xref:System.Xml.Linq.XElement> from the string values the user entered in the **Add New Book** user interface (UI) section.  
   
--   最後のステートメントでは、この新しい書籍要素が、L2DBForm.xaml のデータ プロバイダーに追加されます。 その結果、動的なデータ バインドによって UI がこの新しい項目で自動的に更新されます。ユーザーがコードを追加する必要はありません。  
+-   The last statement adds this new book element to the data provider in L2DBForm.xaml. Consequently, dynamic data binding will automatically update the UI with this new item; no extra user-supplied code is required.  
   
-## <a name="onremove-event-handler"></a>OnRemove イベント ハンドラー  
- `OnRemove` ハンドラーは、2 つの理由で `OnAddBook` ハンドラーよりも複雑です。 1 つは、生の XML に保持された空白が含まれているために、一致する改行を書籍エントリと共に削除する必要があることです。 もう&1; つは、削除された項目に設定されていた選択が、便宜上、一覧の前の項目にリセットされることです。  
+## <a name="onremove-event-handler"></a>OnRemove Event Handler  
+ The `OnRemove` handler is more complicated than the `OnAddBook` handler for two reasons. First, because the raw XML contains preserved white space, matching newlines must also be removed with the book entry. Second, as a convenience, the selection, which was on the deleted item, is reset to the previous one in the list.  
   
- ただし、選択された書籍項目を削除するための中心的な作業は、2 つのステートメントだけで完了します。  
+ However the core work of removing the selected book item is accomplished by only two statements:  
   
--   まず、リスト ボックスで現在選択されている項目に関連する書籍要素が取得されます。  
+-   First, the book element associated with the currently selected item in the list box is retrieved:  
   
     ```  
     XElement selBook = (XElement)lbBooks.SelectedItem;   
     ```  
   
--   次に、この要素がデータ プロバイダーから削除されます。  
+-   Then, this element is deleted from the data provider:  
   
     ```  
     selBook.Remove();  
     ```  
   
- この場合も、動的なデータ バインドによってプログラムの UI が自動的に更新されます。  
+ Again, dynamic data binding assures that the program's UI is automatically updated.  
   
-## <a name="example"></a>例  
+## <a name="example"></a>Example  
   
-### <a name="description"></a>説明  
+### <a name="description"></a>Description  
   
-### <a name="code"></a>コード  
+### <a name="code"></a>Code  
   
-```c#  
+```csharp  
 using System;  
 using System.Linq;  
 using System.Collections;  
@@ -149,9 +150,9 @@ namespace LinqToXmlDataBinding {
   
 ```  
   
-### <a name="comments"></a>コメント  
- これらのハンドラーに関連する XAML ソースについては、「[L2DBForm.xaml ソース コード](../designers/l2dbform-xaml-source-code.md)」を参照してください。  
+### <a name="comments"></a>Comments  
+ For the associated XAML source for these handlers, see [L2DBForm.xaml Source Code](../designers/l2dbform-xaml-source-code.md).  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアル: LinqToXmlDataBinding の例](../designers/walkthrough-linqtoxmldatabinding-example.md)   
- [L2DBForm.xaml ソース コード](../designers/l2dbform-xaml-source-code.md)
+## <a name="see-also"></a>See Also  
+ [Walkthrough: LinqToXmlDataBinding Example](../designers/walkthrough-linqtoxmldatabinding-example.md)   
+ [L2DBForm.xaml Source Code](../designers/l2dbform-xaml-source-code.md)

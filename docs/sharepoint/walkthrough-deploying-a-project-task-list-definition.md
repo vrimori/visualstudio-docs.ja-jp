@@ -1,199 +1,203 @@
 ---
-title: "チュートリアル: プロジェクト タスク リスト定義の配置"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, 配置"
+title: 'Walkthrough: Deploying a Project Task List Definition | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, deploying
 ms.assetid: 18b62016-ed30-4dd1-9dfc-0d7e82c6767f
 caps.latest.revision: 34
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 33
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 1e0f260d1f814a2b2a3396ece8a2505561ecbbfd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル: プロジェクト タスク リスト定義の配置
-  このチュートリアルでは、SharePoint リストを作成、カスタマイズ、デバッグ、および、プロジェクト タスクを追跡するために配置する際に [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] を使用する方法を示します。  
+# <a name="walkthrough-deploying-a-project-task-list-definition"></a>Walkthrough: Deploying a Project Task List Definition
+  This walkthrough shows you how to use [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] to create, customize, debug, and deploy a SharePoint list to track project tasks.  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   [SharePoint リストの作成](#CreatingListDef)。  
+-   [Creating a SharePoint List](#CreatingListDef).  
   
--   [SharePoint リストの作成](#CreatingListDef)。  
+-   [Creating a SharePoint List](#CreatingListDef).  
   
--   [イベント レシーバーの追加](#AddEventRcvr)。  
+-   [Adding an Event Receiver](#AddEventRcvr).  
   
--   [プロジェクト タスク リスト フィーチャーのカスタマイズ](#CustomizeFeature)。  
+-   [Customizing the Project Task List Feature](#CustomizeFeature).  
   
--   [プロジェクト タスク リストのビルドとテスト](#BuildTest)。  
+-   [Building and Testing the Project Task List](#BuildTest).  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   サポート対象エディションの Microsoft Windows および SharePoint。  詳細については、「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of Microsoft Windows and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   [!INCLUDE[vs_pro_current_short](../sharepoint/includes/vs-pro-current-short-md.md)] または Visual Studio アプリケーション ライフサイクル管理 \(ALM\) のエディション  
+-   [!INCLUDE[vs_pro_current_short](../sharepoint/includes/vs-pro-current-short-md.md)] or an edition of Visual Studio Application Lifecycle Management (ALM).  
   
-##  <a name="CreatingListDef"></a> SharePoint リストの作成  
- SharePoint リストのプロジェクトが作成され、そのリスト定義をタスクに関連付けます。  
+##  <a name="CreatingListDef"></a> Creating a SharePoint List  
+ Create a SharePoint list project and associate the list definition with tasks.  
   
-#### SharePoint リストのプロジェクトを作成するには  
+#### <a name="to-create-a-sharepoint-list-project"></a>To create a SharePoint list project  
   
-1.  **\[新しいプロジェクト\]** ダイアログ ボックスを開き、**\[SharePoint\]** ノードを展開し、**2010** ノードを選択します。  
+1.  Open the **New Project** dialog box, expand the **SharePoint** node, and then choose the **2010** node.  
   
-2.  **\[テンプレート\]** のペインで、**\[SharePoint 2010 プロジェクト\]** のテンプレートを選択して、プロジェクト ProjectTaskList を付けておくと、**\[OK\]** ボタンをクリックします。  
+2.  In the **Templates** pane, choose the **SharePoint 2010 Project** template, name the project **ProjectTaskList**, and then choose the **OK** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+     The **SharePoint Customization Wizard** appears.  
   
-3.  サイトが、**\[ファーム ソリューションとして配置する\]** のオプション ボタンをクリックし、デバッグに使用するローカル SharePoint を指定し、**\[完了\]** ボタンをクリックします。  
+3.  Specify the local SharePoint site that you use for debugging, choose the **Deploy as a farm solution** option button, and then choose the **Finish** button.  
   
-4.  プロジェクトのショートカット メニューを開き、**\[新しいアイテム\]**、**\[追加\]** をクリックします。  
+4.  Open the shortcut menu for the project, and then choose **Add**, **New Item**.  
   
-5.  **\[テンプレート\]** のペインで、**\[リスト\]** テンプレートを選択し、**\[追加\]** ボタンをクリックします。  
+5.  In the **Templates** pane, choose the **List** template, and then choose the **Add** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+     The **SharePoint Customization Wizard** appears.  
   
-6.  **\[リストに表示する名前\]** ボックスで、プロジェクトのタスク リストを入力します。  
+6.  In the **What name do you want to display for your list?** box, enter **Project Task List**.  
   
-7.  次に **\[既存のリストの種類に基づくカスタマイズできないリストを作成\]** のオプション ボタンを選択し、一覧で、**\[タスク\]** をクリックします、次へをクリックします **\[完了\]** ボタンをクリックします。  
+7.  Choose the **Create a non-customizable list based on an existing list type of** option button, and then, in its list, choose **Tasks**, and then choose the **Finish** button.  
   
-     リスト、フィーチャーおよびパッケージが **\[ソリューション エクスプローラー\]** に表示されます。  
+     The list, feature, and package appear in **Solution Explorer**.  
   
-##  <a name="AddEventRcvr"></a> イベント レシーバーの追加  
- タスク一覧で、自動的にタスクの期限と説明を設定するイベント レシーバーを追加できます。  次の手順では、イベント レシーバーとして単純なイベント ハンドラーをリスト インスタンスに追加します。  
+##  <a name="AddEventRcvr"></a> Adding an Event Receiver  
+ In the task list, you can add an event receiver that automatically sets the due date and description of the task. The following procedure adds a simple event handler to the list instance as an event receiver.  
   
-#### イベント レシーバーを追加するには  
+#### <a name="to-add-an-event-receiver"></a>To add an event receiver  
   
-1.  プロジェクト ノードのショートカット メニューを開き、**\[追加\]** をクリックし、**\[新しい項目\]** を選択します。  
+1.  Open the shortcut menu for the project node, choose **Add**, and then choose **New Item**.  
   
-2.  SharePoint テンプレートの一覧で、**\[イベント レシーバー\]** テンプレートを選択し、**ProjectTaskListEventReceiver**という名前を付けます。  
+2.  In the list of SharePoint templates, choose the **Event Receiver** template, and then name it **ProjectTaskListEventReceiver**.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+     The **SharePoint Customization Wizard** appears.  
   
-3.  **\[イベント レシーバー設定の選択\]** ページで、イベント レシーバーの種類として **\[使用するイベント レシーバーの種類\]** 型の一覧を **\[リスト項目イベント\]** をクリックします。  
+3.  On the **Choose Event Receiver Settings** page, choose **List Item Events** as the event receiver type in the **What type of event receiver do you want** list.  
   
-4.  **\[イベント ソースとなる項目\]** の一覧で、**\[タスク\]** をクリックします。  
+4.  In the **What item should be the event source** list, choose **Tasks**.  
   
-5.  処理するイベントの一覧で、必要チェック ボックスを **\[項目が追加されました\]** の横にし、**\[完了\]** ボタンをクリックします。  
+5.  In the list of events to handle, select the check box next to **An item was added**, and then choose the **Finish** button.  
   
-     新しいイベント レシーバー ノードが、**ProjectTaskListEventReceiver** という名前のコード ファイルと共にプロジェクトに追加されます。  
+     A new event receiver node is added to the project with a code file that is named **ProjectTaskListEventReceiver**.  
   
-6.  **ProjectTaskListEventReceiver** コード ファイルで、`ItemAdded` メソッドにコードを追加します。  新しいタスクが追加されるたびに、既定の期限および説明がタスクに追加されます。  既定の期限は 2009 年 7 月 1 日です。  
+6.  Add code to the `ItemAdded` method in the **ProjectTaskListEventReceiver** code file. Each time a new task is added, a default due date and a description is added to the task. The default due date is July 1, 2009.  
   
-     [!code-csharp[SPProjectTaskList#1](../snippets/csharp/VS_Snippets_OfficeSP/spprojecttasklist/cs/projecttasklisteventreceiver/projecttasklisteventreceiver.cs#1)]
-     [!code-vb[SPProjectTaskList#1](../snippets/visualbasic/VS_Snippets_OfficeSP/spprojecttasklist/vb/projecttasklisteventreceiver/projecttasklisteventreceiver.vb#1)]  
+     [!code-vb[SPProjectTaskList#1](../sharepoint/codesnippet/VisualBasic/projecttasklist1/projecttasklisteventreceiver/projecttasklisteventreceiver.vb#1)]  [!code-csharp[SPProjectTaskList#1](../sharepoint/codesnippet/CSharp/projecttasklist/projecttasklisteventreceiver/projecttasklisteventreceiver.cs#1)]  
   
-##  <a name="CustomizeFeature"></a> プロジェクト タスク リスト フィーチャーのカスタマイズ  
- SharePoint ソリューションを作成すると、既定のプロジェクト項目のフィーチャーが自動的に作成されます。  SharePoint サイトのプロジェクト タスク リスト設定をカスタマイズするには、フィーチャー デザイナーを使用します。  
+##  <a name="CustomizeFeature"></a> Customizing the Project Task List Feature  
+ When you create a SharePoint solution, Visual Studio automatically creates features for the default project items. You can customize the project task list settings for the SharePoint site by using the Feature Designer.  
   
-#### プロジェクト タスク リスト フィーチャーをカスタマイズするには  
+#### <a name="to-customize-the-project-task-list-feature"></a>To customize the project task list feature  
   
-1.  **ソリューション エクスプローラー**で、**\[フィーチャー\]** を展開します。  
+1.  In **Solution Explorer**, expand **Features**.  
   
-2.  **\[Feature1\]** のショートカット メニューを開き、**\[デザイナーの表示\]** をクリックします。  
+2.  Open the shortcut menu for **Feature1**, and then choose **View Designer**.  
   
-3.  **\[タイトル\]** ボックスで、**プロジェクト タスク リスト フィーチャーの**を入力します。  
+3.  In the **Title** box, enter **Project Task List Feature**.  
   
-4.  **\[スコープ\]** の一覧で、**\[Web\]** をクリックします。  
+4.  In the **Scope** list, choose **Web**.  
   
-5.  **\[プロパティ\]** ウィンドウで、**\[バージョン\]** のプロパティの値として **1.0.0.0** を入力します。  
+5.  In the **Properties** window, enter **1.0.0.0** as the value for the **Version** property.  
   
-##  <a name="CustomizePackage"></a> プロジェクト タスク リスト パッケージのカスタマイズ  
- SharePoint プロジェクトを作成すると、既定のプロジェクト項目を含んだフィーチャーが、Visual Studio によって自動的にパッケージへと追加されます。  SharePoint サイトのプロジェクト タスク リスト設定をカスタマイズするには、パッケージ デザイナーを使用します。  
+##  <a name="CustomizePackage"></a> Customizing the Project Task List Package  
+ When you create a SharePoint project, Visual Studio automatically adds the features that contain the default project items to the package. You can customize the project task list settings for the SharePoint site by using the Package Designer.  
   
-#### プロジェクト タスク リスト パッケージをカスタマイズするには  
+#### <a name="to-customize-the-project-task-list-package"></a>To customize the project task list package  
   
-1.  **\[ソリューション\]\[エクスプローラ\]** で、**\[パッケージ\]** のショートカット メニューを開き、**\[デザイナーの表示\]** をクリックします。  
+1.  In **SolutionExplorer**, open the shortcut menu for **Package**, and then choose **View Designer**.  
   
-2.  **\[名前\]** ボックスで、**ProjectTaskListPackage**を入力します。  
+2.  In the **Name** box, enter **ProjectTaskListPackage**.  
   
-3.  **\[Web サーバーのリセット\]** チェック ボックスをオンにします。  
+3.  Select the **Reset Web Server** check box.  
   
-##  <a name="BuildTest"></a> プロジェクト タスク リストのビルドとテスト  
- プロジェクトを実行すると、SharePoint サイトが開きます。  ただし、タスク リストの場所には手動で移動する必要があります。  
+##  <a name="BuildTest"></a> Building and Testing the Project Task List  
+ When you run the project, the SharePoint site opens. However, you must manually navigate to the location of the task list.  
   
-#### プロジェクト タスク リストをテストするには  
+#### <a name="to-test-the-project-task-list"></a>To test the project task list  
   
-1.  プロジェクトのタスク リストをビルドおよび配置するには、F5 キーを押します。  
+1.  Choose the F5 key to build and deploy your project task list.  
   
-     SharePoint サイトが開きます。  
+     The SharePoint site opens.  
   
-2.  **\[ホーム\]** タブをクリックします。  
+2.  Choose the **Home** tab.  
   
-3.  左サイドバーでは、**\[プロジェクト計画 タスク リスト\]** リンクをクリックします。  
+3.  In the left sidebar, choose the **Project Task List** link.  
   
-     \[プロジェクト タスク リスト\] ページが表示されます。  
+     The Project Task List page appears.  
   
-4.  **\[リスト ツール\]** タブで、**\[項目\]** タブをクリックします。  
+4.  In the **List Tools** tab, choose the **Items** tab.  
   
-5.  **\[項目\]** グループでは、**\[新しいアイテム\]** ボタンをクリックします。  
+5.  In the **Items** group, choose the **New Item** button.  
   
-6.  **\[タイトル\]** のテキスト ボックスに" Task1 "と入力します。  
+6.  In the **Title** text box, enter **Task1**.  
   
-7.  **\[保存\]** ボタンをクリックします。  
+7.  Choose the **Save** button.  
   
-     サイトを更新すると、2009 年 7 月 1 日を期限とする **Task1** というタスクが表示されます。  
+     After the site is refreshed, the **Task1** task appears with a due date of 7/1/2009.  
   
-8.  **\[Task1\]** をクリックします。  
+8.  Choose **Task1**.  
   
-     タスクの詳細表示になり、"This is a critical task." という説明が表示されます。  
+     The detailed view of the task appears, and the description shows "This is a critical task."  
   
-##  <a name="Deploy"></a> プロジェクト タスク リストの配置  
- ビルドおよびテストが済んだプロジェクト タスク リストは、*ローカル システム*または*リモート システム*に配置できます。  ローカル システムはソリューションの開発に使用したコンピューターであり、リモート システムはそれとは別のコンピューターです。  
+##  <a name="Deploy"></a> Deploying the Project Task List  
+ After you build and test the project task list, you can deploy it to the *local system* or a *remote system*. The local system is the same computer on which you developed the solution, whereas a remote system is a different computer.  
   
-#### プロジェクト タスク リストをローカル システムに配置するには  
+#### <a name="to-deploy-the-project-task-list-to-the-local-system"></a>To deploy the project task list to the local system  
   
-1.  Visual Studio のメニュー バーで、**\[ソリューションの配置\]\[ビルド\]** をクリックします。  
+1.  On the Visual Studio menu bar, choose **Build**, **Deploy Solution**.  
   
-     Visual Studio によって IIS アプリケーション プールがリサイクルされ、ソリューションの既存のバージョンがすべて取り消され、ソリューション パッケージ \(.wsp\) ファイルが SharePoint にコピーされ、そのフィーチャーがアクティブ化されます。  これで、SharePoint でソリューションを使用する準備が整いました。  配置構成手順の詳細については、「[方法: SharePoint の配置構成を編集する](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)」を参照してください。  
+     Visual Studio recycles the IIS application pool, retracts any existing versions of the solution, copies the solution package (.wsp) file to SharePoint, and then activates its features. You can now use the solution in SharePoint. For more information about deployment configuration steps, see [How to: Edit a SharePoint Deployment Configuration](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).  
   
-#### プロジェクト タスク リストをリモート システムに配置するには  
+#### <a name="to-deploy-the-project-task-list-to-a-remote-system"></a>To deploy the project task list to a remote system  
   
-1.  Visual Studio のメニュー バーで、**\[発行\]\[ビルド\]** をクリックします。  
+1.  On the Visual Studio menu bar, choose **Build**, **Publish**.  
   
-2.  **\[発行\]** ダイアログ ボックスで、**\[ファイル システムに発行する\]** のオプション ボタンを選択します。  
+2.  In the **Publish** dialog box, choose the **Publish to File System** option button.  
   
-     省略記号ボタンをクリックして、別の場所に移動し、**\[発行\]** ![省略記号アイコン](~/sharepoint/media/ellipsisicon.gif "省略記号アイコン") ダイアログ ボックスのターゲットの場所を変更できます。  
+     You can change the target location in the **Publish** dialog box by choosing the ellipsis button ![Ellipsis Icon](../sharepoint/media/ellipsisicon.gif "Ellipsis Icon") and then navigating to another location.  
   
-3.  **\[発行\]** ボタンをクリックします。  
+3.  Choose the **Publish** button.  
   
-     .wsp ファイルがソリューションに作成されます。  
+     A .wsp file is created for the solution.  
   
-4.  .wsp ファイルをリモートの SharePoint システムにコピーします。  
+4.  Copy the .wsp file to the remote SharePoint system.  
   
-5.  PowerShell の `Add-SPUserSolution` コマンドを使用して、リモートの SharePoint インストール環境にパッケージをインストールします\(ファーム ソリューションの場合は `Add-SPSolution` コマンドを使用します\)。  
+5.  Use the PowerShell `Add-SPUserSolution` command to install the package on the remote SharePoint installation. (For farm solutions, use the `Add-SPSolution` command.)  
   
-     たとえば、`Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp` のようにします。  
+     For example, `Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp`.  
   
-6.  PowerShell の `Install-SPUserSolution` コマンドを使用して、ソリューションを配置します\(ファーム ソリューションの場合は `Install-SPSolution` コマンドを使用します\)。  
+6.  Use the PowerShell `Install-SPUserSolution` command to deploy the solution. (For farm solutions, use the `Install-SPSolution` command.)  
   
-     たとえば、`Install-SPUserSolution –Identity ProjectTaskList.wsp –Site http://NewSiteName` のようにします。  
+     For example, `Install-SPUserSolution -Identity ProjectTaskList.wsp -Site http://NewSiteName`.  
   
-     リモート配置の詳細については、[ソリューションを使用する](http://go.microsoft.com/fwlink/?LinkId=217680) 参照します [SharePoint 2010 の PowerShell の追加、配置のソリューション](http://go.microsoft.com/fwlink/?LinkId=217682)。  
+     For more information about remote deployment, see [Using Solutions](http://go.microsoft.com/fwlink/?LinkId=217680) and [Adding and Deploying Solutions with PowerShell in SharePoint 2010](http://go.microsoft.com/fwlink/?LinkId=217682).  
   
-## 次の手順  
- SharePoint ソリューションのカスタマイズ方法と配置方法の詳細については、次のトピックを参照してください。  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to customize and deploy SharePoint solutions from the following topics:  
   
--   [チュートリアル: SharePoint のサイト列、コンテンツ タイプ、およびリストの作成](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)  
+-   [Walkthrough: Create a Site Column, Content Type, and List for SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)  
   
--   [方法: イベント レシーバーを作成する](../sharepoint/how-to-create-an-event-receiver.md)  
+-   [How to: Create an Event Receiver](../sharepoint/how-to-create-an-event-receiver.md)  
   
--   [SharePoint Server 2010 の Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=217684)  
+-   [Windows PowerShell for SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=217684)  
   
-## 参照  
- [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Packaging and Deploying SharePoint Solutions](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

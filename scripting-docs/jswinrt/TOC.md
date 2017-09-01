@@ -5,3 +5,4 @@
 # [JavaScript での Windows ランタイム イベントの処理](handling-windows-runtime-events-in-javascript.md)
 # [Windows ランタイム型の JavaScript 表現](javascript-representation-of-windows-runtime-types.md)
 # [Windows ランタイムの DateTime と TimeSpan 表現](windows-runtime-datetime-and-timespan-representations.md)
+# [JavaScript を使用した Windows ランタイム アプリのエラー コード](error-codes-for-windows-runtime-apps-using-javascript.md)

@@ -1,58 +1,53 @@
----
-title: "方法: Web アプリケーションをデバッグする | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
+-- title: "How to: Debug Web Applications | Microsoft Docs" ms.custom: "" ms.date: "11/04/2016" ms.reviewer: "" ms.suite: "" ms.technology: 
+  - "vs-ide-debug" ms.tgt_pltfrm: "" ms.topic: "article" dev_langs: 
   - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ASP.NET Web フォーム, デバッグ"
-  - "ASP.NET, デバッグ (Web アプリケーションを)"
-  - "デバッグ (ASP.NET Web アプリケーションを), 開発中"
-  - "Web サービス, デバッグ"
-ms.assetid: 6440d12e-6b29-42c5-a958-99aeaaff480f
-caps.latest.revision: 37
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 37
+  - "VB"
+  - "FSharp"
+  - "C++" helpviewer_keywords: 
+  - "Web services, debugging"
+  - "ASP.NET Web Forms, debugging"
+  - "ASP.NET, debugging Web applications"
+  - "debugging ASP.NET Web applications, during development" ms.assetid: 6440d12e-6b29-42c5-a958-99aeaaff480f caps.latest.revision: 37 author: "mikejo5000" ms.author: "mikejo" manager: "ghogen" translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# 方法: Web アプリケーションをデバッグする
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で Web アプリケーションを開発する際の主要なテクノロジです。  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーには、ローカルまたはリモート サーバーで [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションをデバッグするための強力なツールが用意されています。  ここでは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロジェクトを開発中にデバッグする方法について説明します。  運用サーバーに既に配置済みの [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションをデバッグする方法については、「[配置した Web アプリケーションのデバッグ](../debugger/debugging-deployed-web-applications.md)」を参照してください。  
+# <a name="how-to-debug-web-applications"></a>How to: Debug Web Applications
+[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] is the primary technology for developing Web applications in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] debugger provides powerful tools for debugging [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web applications locally or on a remote server. This topic describes how to debug a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] project during development. For information about how to debug a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web application already deployed on a production server, see [Debugging Deployed Web Applications](../debugger/debugging-deployed-web-applications.md).  
   
- [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションをデバッグするには  
+ To debug a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application:  
   
--   適切なアクセス許可が必要です。  詳細については、「[システム要件](../debugger/aspnet-debugging-system-requirements.md)」を参照してください。  
+-   You must have required permissions. For more information, see [System Requirements](../debugger/aspnet-debugging-system-requirements.md).  
   
--   [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] デバッグを **\[プロジェクトのプロパティ\]** で有効にしておく必要があります。  
+-   [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] debugging must be enabled in **Project Properties**.  
   
--   アプリケーションの構成ファイル \(Web.config\) をデバッグ モードに設定する必要があります。  デバッグ モードの [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] では、動的に生成されたファイル用のシンボルが生成され、デバッガーの [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションへのアタッチが可能になります。  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、プロジェクトを Web プロジェクト テンプレートから作成した場合は、デバッグ開始時にこの処理が自動的に実行されます。  
+-   The configuration file of your application (Web.config) must be set to debug mode. Debug mode causes [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] to generate symbols for dynamically generated files and enables the debugger to attach to the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sets this automatically when you start to debug, if you created your project from the Web projects template.  
   
--   詳細については、「[方法 : .NET アプリケーションのデバッグを有効にする](../debugger/how-to-enable-debugging-for-aspnet-applications.md)」を参照してください。  
+-   For more information, see [How to: Enable Debugging for ASP.NET Applications](../debugger/how-to-enable-debugging-for-aspnet-applications.md).  
   
-### 開発時に Web アプリケーションをデバッグするには  
+### <a name="to-debug-a-web-application-during-development"></a>To debug a Web application during development  
   
-1.  **\[デバッグ\]** メニューの **\[開始\]** をクリックして、Web アプリケーションのデバッグを開始します。  
+1.  On the **Debug** menu, click **Start** to begin debugging the Web application.  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、Web アプリケーション プロジェクトのビルド、必要に応じたアプリケーションの配置、ローカルでデバッグしている場合に ASP.NET 開発サーバーの起動、および [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスへのアタッチを実行します。  
+     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] builds the Web application project, deploys the application if necessary, starts the ASP.NET Development Server if you are debugging locally, and attaches to the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] worker process.  
   
-2.  デバッガーを使用して、ほかのアプリケーションの場合と同様に、ブレークポイントの設定と解除、ステップの実行、およびその他のデバッグ処理を行います。  
+2.  Use the Debugger to set and clear breakpoints, step, and perform other debugging operations, as you would for any application.  
   
-     詳細については、「[デバッガーの基本事項](../debugger/debugger-basics.md)」を参照してください。  
+     For more information, see [Debugger Basics](../debugger/debugger-basics.md).  
   
-3.  デバッグ セッションを終了するには、**\[デバッグ\]** メニューの **\[デバッグの停止\]** をクリックするか、Internet Explorer の **\[ファイル\]** メニューの **\[閉じる\]** をクリックします。  
+3.  On the **Debug** menu, click **Stop Debugging** to end the debugging session or on the **File** menu in Internet Explorer, click **Close**.  
   
-## 参照  
- [Web アプリケーションとスクリプトのデバッグ](../debugger/debugging-web-applications-and-script.md)   
- [ASP.NET アプリケーションおよび AJAX アプリケーションのデバッグ](../debugger/debugging-aspnet-and-ajax-applications.md)   
- [方法 : .NET アプリケーションのデバッグを有効にする](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
+## <a name="see-also"></a>See Also  
+ [Debugging Web Applications and Script](../debugger/debugging-web-applications-and-script.md)   
+ [Debugging ASP.NET and AJAX Applications](../debugger/debugging-aspnet-and-ajax-applications.md)   
+ [How to: Enable Debugging for ASP.NET Applications](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

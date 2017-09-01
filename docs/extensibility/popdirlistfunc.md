@@ -1,59 +1,80 @@
 ---
-title: "POPDIRLISTFUNC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "POPLISTFUNC"
-helpviewer_keywords: 
-  - "POPDIRLISTFUNC コールバック関数"
+title: POPDIRLISTFUNC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- POPLISTFUNC
+helpviewer_keywords:
+- POPDIRLISTFUNC callback function
 ms.assetid: 0ee90fd2-5467-4154-ab4c-7eb02ac3a14c
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# POPDIRLISTFUNC
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: cb56a3e8f90ed31d051f28fe7cfe99be154d2696
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-これに指定されたコールバック関数、 [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) ディレクトリおよび \(必要に応じて\) を検索するソース管理下にファイル名のコレクションを更新する関数。  
+---
+# <a name="popdirlistfunc"></a>POPDIRLISTFUNC
+This is a callback function given to the [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) function to update a collection of directories and (optionally) file names to find out which are under source control.  
   
- `POPDIRLISTFUNC` コールバックは、これらのディレクトリとファイル名に対してのみ呼び出す必要があります \(に指定された一覧で、 `SccPopulateDirList` 関数\)、ソース管理下に実際にします。  
+ The `POPDIRLISTFUNC` callback should be called only for those directories and file names (in the list given to the `SccPopulateDirList` function) that are actually under source control.  
   
-## Signature  
+## <a name="signature"></a>Signature  
   
-```cpp#  
-typedef BOOL (*POPDIRLISTFUNC)( LPVOID pvCallerData, BOOL bFolder, LPCSTR lpDirectoryOrFileName );  
+```cpp  
+typedef BOOL (*POPDIRLISTFUNC)(  
+   LPVOID pvCallerData,  
+   BOOL bFolder,  
+   LPCSTR lpDirectoryOrFileName  
+);  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>Parameters  
  pvCallerData  
- \[in\]渡されたユーザー値 [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)です。  
+ [in] User value given to [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md).  
   
  bFolder  
- \[in\] `TRUE` 場合に名前 `lpDirectoryOrFileName` ディレクトリは、それ以外の場合、名前は、ファイル名。  
+ [in] `TRUE` if the name in `lpDirectoryOrFileName` is a directory; otherwise the name is a file name.  
   
  lpDirectoryOrFileName  
- \[in\]ソース コード管理下にあるディレクトリまたはファイル名への完全なローカル パス。  
+ [in] Full local path to a directory or file name that is under source code control.  
   
-## 戻り値  
- IDE には、該当するエラー コードが返されます。  
+## <a name="return-value"></a>Return Value  
+ The IDE returns an appropriate error code:  
   
-|値|説明|  
-|-------|--------|  
-|SCC\_OK|処理を続行します。|  
-|SCC\_I\_OPERATIONCANCELED|処理を停止します。|  
-|SCC\_E\_xxx|適切なソース制御エラーは、処理を停止する必要があります。|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Continue processing.|  
+|SCC_I_OPERATIONCANCELED|Stop processing.|  
+|SCC_E_xxx|Any appropriate source control error should stop processing.|  
   
-## 解説  
- 場合、 `fOptions` のパラメーター、 `SccPopulateDirList` が含まれている、 `SCC_PDL_INCLUDEFILES` フラグで、一覧はファイル名だけでなく、ディレクトリの名前を含む可能性があります。  
+## <a name="remarks"></a>Remarks  
+ If the `fOptions` parameter of the `SccPopulateDirList` function contains the `SCC_PDL_INCLUDEFILES` flag, then the list will possibly contain file names as well as directory names.  
   
-## 参照  
- [IDE で実装されるコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)   
+## <a name="see-also"></a>See Also  
+ [Callback Functions Implemented by the IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)   
- [エラー コード](../extensibility/error-codes.md)
+ [Error Codes](../extensibility/error-codes.md)

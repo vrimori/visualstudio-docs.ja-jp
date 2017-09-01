@@ -1,49 +1,66 @@
 ---
-title: "IDebugDocumentPosition2::GetDocument | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentPosition2::GetDocument"
-helpviewer_keywords: 
-  - "IDebugDocumentPosition2::GetDocument"
+title: IDebugDocumentPosition2::GetDocument | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentPosition2::GetDocument
+helpviewer_keywords:
+- IDebugDocumentPosition2::GetDocument
 ms.assetid: eaa172c9-5748-4ce1-a0e2-33c2063f6752
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugDocumentPosition2::GetDocument
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: cfbe0b5234b62a0557b822c2e4ae921aae0e6cc5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-含む文書を取得します。  
+---
+# <a name="idebugdocumentposition2getdocument"></a>IDebugDocumentPosition2::GetDocument
+Gets the containing document.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetDocument(   
-   IDebugDocument2** ppDoc  
+```cpp  
+HRESULT GetDocument(   
+   IDebugDocument2** ppDoc  
 );  
 ```  
   
-```c#  
-int GetDocument(   
-   out IDebugDocument2 ppDoc  
+```csharp  
+int GetDocument(   
+   out IDebugDocument2 ppDoc  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppDoc`  
- \[入力\] ドキュメントこの [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) の位置を表すオブジェクトを返します。  
+ [out] Returns an [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) object that represents the document containing this position.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)   
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

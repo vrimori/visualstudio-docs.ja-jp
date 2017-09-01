@@ -1,12 +1,13 @@
 ---
 title: "R Tools for Visual Studio へようこそ | Microsoft Docs"
 ms.custom: 
-ms.date: 4/28/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ebaacfba-12a1-45da-9817-c0937ca38acc
@@ -14,33 +15,19 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: 5a8b1864787566c63e148d4f95391c28807ad3dd
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: 1737975dc62bb1b1ccbfe9de99d4fa4b541eb8e9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 
 # <a name="welcome-to-r-tools-for-visual-studio"></a>R Tools for Visual Studio へようこそ
 
-R Tools for Visual Studio (RTVS) をインストールいただきありがとうございます。 ご利用になり、下の「[リソース](#resources)」のリンクを使用して、ご意見をお寄せ下さい。
+R Tools for Visual Studio (RTVS) をインストールいただきありがとうございます。 ご利用になり、「[リソース](#resources)」のリンクをクリックして、ご意見をお寄せください。
 
-![RTVS のスクリーンショット](~/rtvs/media/installer-screenshot.png)
+![RTVS のスクリーンショット](media/installer-screenshot.png)
 
 ## <a name="resources"></a>リソース
 

@@ -1,5 +1,5 @@
 ---
-title: "IDebugDocumentPositionOffset2::GetRange |Microsoft ドキュメント"
+title: IDebugDocumentPositionOffset2::GetRange | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,51 +28,52 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d14c212a3cb4499996ba6cf4d73d0b2fca73f7bc
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 501acf49bec28092c7a41fee83f6dfd9fe9d11c9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugdocumentpositionoffset2getrange"></a>IDebugDocumentPositionOffset2::GetRange
-現在のドキュメントの位置の範囲を取得します。  
+Retrieves the range for the current document position.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetRange(  
    DWORD* pdwBegOffset,  
    DWORD* pdwEndOffset  
 );  
 ```  
   
-```c#  
+```csharp  
 public int GetRange(  
    ref uint pdwBegOffset,  
    ref uint pdwEndOffset  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pdwBegOffset`  
- [入力、出力]範囲の開始位置をオフセットします。 この情報が必要でない場合は、このパラメーターを null 値に設定します。  
+ [in, out] Offset for the start position of the range. Set this parameter to a null value if this information is not needed.  
   
  `pdwEndOffset`  
- [入力、出力]範囲の終了位置をオフセットします。 この情報が必要でない場合は、このパラメーターを null 値に設定します。  
+ [in, out] Offset for the end position of the range. Set this parameter to a null value if this information is not needed.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- ブレークポイントの位置のドキュメントの位置で指定された範囲は、実際にコードを提供するステートメントを前方に検索するデバッグ エンジン (DE) によって使用されます。 次に例を示します。  
+## <a name="remarks"></a>Remarks  
+ The range specified in a document position for a location breakpoint is used by the debug engine (DE) to search ahead for a statement that actually contributes code. For example, consider the following code:  
   
 ```  
 Line 5: // comment  
 Line 6: x = 1;  
 ```  
   
- 5 行目でコードをデバッグするプログラムは使用されません。 5 行目で、ブレークポイントを設定、デバッガーでは、DE、一定量のコードを提供する最初の行を前方に検索する必要がある場合、デバッガーは、ブレークポイントを正しく配置があるその他の候補行を含む範囲を指定します。 デはしを前方に検索それらの行からブレークポイントを受け入れることができる行が見つかるまでです。  
+ Line 5 contributes no code to the program being debugged. If the debugger that sets the breakpoint on line 5 wants the DE to search forward a certain amount for the first line that contributes code, the debugger would specify a range that includes additional candidate lines where a breakpoint might be correctly placed. The DE would then search forward through those lines until it found a line that could accept a breakpoint.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentPositionOffset2](../../../extensibility/debugger/reference/idebugdocumentpositionoffset2.md)   
  [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)

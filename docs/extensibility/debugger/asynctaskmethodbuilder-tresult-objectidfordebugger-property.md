@@ -1,39 +1,55 @@
 ---
-title: "AsyncTaskMethodBuilder &lt; TResult &gt; です。ObjectIdForDebugger プロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ObjectForDebugger プロパティには、AsyncTaskMethodBuilder < TResult > 構造体 [.NET Framework のデバッグ エンジン]"
+title: AsyncTaskMethodBuilder&lt;TResult&gt;.ObjectIdForDebugger Property | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ObjectForDebugger property, AsyncTaskMethodBuilder<TResult> structure [.NET Framework debug engines]
 ms.assetid: 060b857f-daf5-43ea-bb51-abf9368e1e91
 caps.latest.revision: 3
-caps.handback.revision: 3
-ms.author: "gregvanl"
-manager: "ghogen"
----
-# AsyncTaskMethodBuilder &lt; TResult &gt; です。ObjectIdForDebugger プロパティ
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 34897ff3766f6e30176b08720063f9c6115857c8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-デバッガーには、このビルダーを一意に識別するために使用がオブジェクトを取得します。  
+---
+# <a name="asynctaskmethodbuilderlttresultgtobjectidfordebugger-property"></a>AsyncTaskMethodBuilder&lt;TResult&gt;.ObjectIdForDebugger Property
+Gets an object that may be used to uniquely identify this builder to the debugger.  
   
- **名前空間:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **アセンブリ:** \(mscorlib.dll\) の mscorlib  
+ **Assembly:** mscorlib (in mscorlib.dll)  
   
- .NET Framework からこの内部のメンバーにアクセスできないため、次の構文は共通中間言語 \(CIL\) に提供されます。  
+ Because you cannot access this internal member from the .NET Framework, the following syntax is provided in Common Intermediate Language (CIL).  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```c#  
+```csharp  
 private object ObjectIdForDebugger  
 ```  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>   
- [.NET Framework の並列拡張機能の内部](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+ [Parallel Extension Internals for the .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

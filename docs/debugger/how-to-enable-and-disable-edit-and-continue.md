@@ -1,59 +1,85 @@
 ---
-title: "方法 : エディット コンティニュを有効および無効にする | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "/INCREMENTAL リンカー オプション"
-  - "[コード変更を適用] コマンド"
-  - "中断モード, 適用 (コード変更の)"
-  - "コード変更, 適用 (中断モードで)"
-  - "エディット コンティニュ, 適用 (コード変更の)"
-  - "エディット コンティニュ, 無効化"
-  - "エディット コンティニュ, 有効化"
-  - "[移動] コマンド"
-  - "INCREMENTAL リンカー オプション"
-  - "Step コマンド"
+title: 'How to: Enable and Disable Edit and Continue (C#, VB, C++) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- /INCREMENTAL linker option
+- Apply Code Changes command
+- Edit and Continue, disabling
+- code changes, applying in break mode
+- INCREMENTAL linker option
+- Edit and Continue, enabling
+- break mode, applying code changes
+- Edit and Continue, applying code changes
+- Step command
+- Go command
 ms.assetid: fd961a1c-76fa-420d-ad8f-c1a6c003b0db
 caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 方法 : エディット コンティニュを有効および無効にする
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: e47cf3946f303bde8274006c092562d1883fd422
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-エディット コンティニュの有効と無効の切り替えは、デザイン時に **\[オプション\]** ダイアログ ボックスで行います。  デバッグの最中にこの設定を変更することはできません。  
+---
+# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>How to: Enable and Disable Edit and Continue (C#, VB, C++)
+You can disable or enable Edit and Continue in the **Options** dialog box at design time. You cannot change this setting while you are debugging.  
   
- エディット コンティニュはデバッグ ビルドでのみ動作します。  ネイティブ C\+\+ については、エディット コンティニュで \/INCREMENTAL オプションを使用する必要があります。  
+Edit and Continue works only in debug builds. For native C++, Edit and Continue requires using the /INCREMENTAL option. For more information about feature requirements in C++, see this [blog post](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/) and [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md).
   
-## 手順  
+#### <a name="to-enabledisable-edit-and-continue"></a>To enable/disable Edit and Continue  
   
-#### \[エディット コンティニュ\] を有効または無効にするには  
+1.  If you are in a debugging session, stop debugging (**Shift + F5**).
+
+2.  Open debugging options page (**Tools > Options > Debugging**).
   
-1.  **\[ツール\]** メニューの **\[オプション\]** をクリックします。  
+3.  Select **General**, and scroll down to **Edit and Continue** category (right pane).  
   
-2.  **\[オプション\]** ダイアログ ボックスで、**\[デバッグ\]** ノードを開き、**\[エディット コンティニュ\]** カテゴリをクリックします。  
-  
-3.  有効にするには、**\[エディット コンティニュを有効にする\]** チェック ボックスをオンにします。  無効にするには、このチェック ボックスをオフにします。  
+4.  To enable, select the **Enable Edit and Continue** check box. To disable, clear the check box.  
   
     > [!NOTE]
-    >  IntelliTrace が有効になっている場合に、IntelliTrace イベントと呼び出し情報の両方を収集すると、エディット コンティニュが無効になります。  詳細については、「[デバッグ情報収集のための IntelliTrace の構成](http://msdn.microsoft.com/ja-jp/7657ecab-e07e-4b1b-872d-f05d966be37e)」を参照してください。  
+    >  If IntelliTrace is enabled and you collect both IntelliTrace events and call information, Edit and Continue is disabled. For more information, see [IntelliTrace](../debugger/intellitrace.md).
+
+5. (C++) To enable, select **Enable Native Edit and Continue**. To disable, clear the check box.
+
+6. (C++) Set additional options for native code.
+
+    - **Apply changes on continue (Native only)**  
+        Visual Studio automatically compiles and applies any outstanding code changes you have made when continuing the process from a break state. If not selected, you can choose to apply changes using the "Apply Code Changes" item under the Debug menu.  
   
-4.  **\[OK\]** をクリックします。  
+    - **Warn about stale code (Native only)**  
+        Get warnings about stale code. 
   
-## 参照  
- [エディット コンティニュ](../debugger/edit-and-continue.md)   
- [\(ダイアログ ボックス \-\)](../Topic/Edit%20and%20Continue,%20Debugging,%20Options%20Dialog%20Box.md)
+7.  Click **OK**.    
+  
+## <a name="see-also"></a>See Also  
+ [Edit and Continue](../debugger/edit-and-continue.md)

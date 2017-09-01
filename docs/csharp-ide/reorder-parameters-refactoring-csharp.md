@@ -1,43 +1,60 @@
 ---
-title: "Reorder Parameters Refactoring (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.csharp.refactoring.reorder"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "refactoring [C#], Reorder Parameters"
-  - "Reorder Parameters refactoring [C#]"
+redirect_url: /visualstudio/csharp-ide/refactoring/change-method-signature
+title: Reorder Parameters Refactoring (C#) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.csharp.refactoring.reorder
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- refactoring [C#], Reorder Parameters
+- Reorder Parameters refactoring [C#]
 ms.assetid: 4dabf21a-a9f0-41e9-b11b-55760cf2bd90
 caps.latest.revision: 26
-caps.handback.revision: 26
-author: "BillWagner"
-ms.author: "wiwagn"
-manager: "wpickett"
----
-# Reorder Parameters Refactoring (C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: BillWagner
+ms.author: wiwagn
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 76fb3d24801d2f5fc04f4fc349080ee643e39f76
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-`Reorder Parameters` は、メソッド、インデクサー、およびデリゲートのパラメーターの順序を簡単に変更できる Visual C\# リファクタリング操作です。  `Reorder Parameters` によって宣言が変更され、メンバーが呼び出されるすべての場所で、パラメーターが新しい順序を反映するように再配置されます。  
+---
+# <a name="reorder-parameters-refactoring-c"></a>Reorder Parameters Refactoring (C#)
+`Reorder Parameters` is a Visual C# refactoring operation that provides an easy way to change the order of the parameters for methods, indexers, and delegates. `Reorder Parameters` changes the declaration, and at any locations where the member is called, the parameters are rearranged to reflect the new order.  
   
- `Reorder Parameters` の操作を実行するには、メソッド、インデクサー、またはデリゲートの上か横にカーソルを移動します。  カーソルを移動したら、ショートカット キーを使用するか、またはショートカット メニューのコマンドをクリックして、`Reorder Parameters` を呼び出します。  
+ To perform the `Reorder Parameters` operation, put the cursor on or next to a method, indexer, or delegate. When the cursor is in position, invoke the `Reorder Parameters` operation by pressing the keyboard shortcut, or by clicking the command from the shortcut menu.  
   
 > [!NOTE]
->  拡張メソッドの最初のパラメーターの順序を変更することはできません。  
+>  You cannot reorder the first parameter in an extension method.  
   
-### パラメーターを並べ替えるには  
+### <a name="to-reorder-parameters"></a>To reorder parameters  
   
-1.  `ReorderParameters` という名前のクラス ライブラリを作成し、`Class1` を次のプログラム例で置き換えます。  
+1.  Create a class library named `ReorderParameters`, and then replace `Class1` with the following example code.  
   
-    ```c#  
+    ```csharp  
     class ProtoClassA  
     {  
         // Invoke on 'MethodB'.  
@@ -56,26 +73,26 @@ manager: "wpickett"
     }  
     ```  
   
-2.  メソッド宣言またはメソッド呼び出しで、`MethodB` にカーソルを移動します。  
+2.  Place the cursor on `MethodB`, either in the method declaration or the method call.  
   
-3.  **\[リファクター\]** メニューの **\[パラメーター順序の再変更\]** をクリックします。  
+3.  On the **Refactor** menu, click **Reorder Parameters**.  
   
-     **\[パラメーターの順番の再変更\]** ダイアログ ボックスが表示されます。  
+     The **Reorder Parameters** dialog box appears.  
   
-4.  **\[パラメーター順序の再変更\]** ダイアログ ボックスの **\[パラメーター\]** ボックスで \[`int i`\] を選択し、ダウン ボタンをクリックします。  
+4.  In the **Reorder Parameters** dialog box, select `int i` in the **Parameters** list, and then click the down button.  
   
-     または、**\[パラメーター\]** ボックスで \[`bool b`\] の後の \[`int i`\] をドラッグする方法もあります。  
+     Alternatively, you can drag `int i` after `bool b` in the **Parameters** list.  
   
-5.  **\[パラメーター順序の再変更\]** ダイアログ ボックスで、**\[OK\]** をクリックします。  
+5.  In the **Reorder Parameters** dialog box, click **OK**.  
   
-     **\[パラメーター順序の再変更\]** ダイアログ ボックスの **\[参照の変更のプレビュー\]** チェック ボックスがオンの場合は、**\[変更のプレビュー \- パラメーターの順番の再変更\]** ダイアログ ボックスが表示されます。  メソッド シグネチャとメソッド呼び出しの両方における `MethodB` のパラメーター リストの変更がプレビューされます。  
+     If the **Preview reference changes** option is selected in the **Reorder Parameters** dialog box, the **Preview Changes - Reorder Parameters** dialog box will appear. It provides a preview of the changes in the parameter list for `MethodB` in both the signature and the method call.  
   
-    1.  **\[変更のプレビュー \- パラメーターの順番の再変更\]** ダイアログ ボックスが表示された場合は、**\[適用\]** をクリックします。  
+    1.  If the **Preview Changes - Reorder Parameters** dialog box appears, click **Apply**.  
   
-         この例では、`MethodB` のメソッド宣言とすべてのメソッド呼び出しサイトが更新されます。  
+         In this example, the method declaration and all the method call sites for `MethodB` are updated.  
   
-## 解説  
- メソッド宣言またはメソッド呼び出しからパラメーターの順序を変更できます。  カーソルはメソッドまたはデリゲートの宣言の上か横に移動し、コードの本体には移動しないでください。  
+## <a name="remarks"></a>Remarks  
+ You can reorder parameters from a method declaration or a method call. Position the cursor on or next to the method or delegate declaration but not in the body.  
   
-## 参照  
- [Refactoring \(C\#\)](../csharp-ide/refactoring-csharp.md)
+## <a name="see-also"></a>See Also  
+ [Refactoring (C#)](refactoring-csharp.md)

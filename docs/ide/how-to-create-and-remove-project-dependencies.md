@@ -43,12 +43,10 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/23/2017
 
 ---
-# 方法 : プロジェクトの依存関係を作成および削除する
-<a id="how-to-create-and-remove-project-dependencies" class="xliff"></a>
+# <a name="how-to-create-and-remove-project-dependencies"></a>方法 : プロジェクトの依存関係を作成および削除する
 複数のプロジェクトを含むソリューションをビルドするとき、最初に特定のプロジェクトをビルドし、他のプロジェクトで使われるコードを生成することが必要な場合があります。 別のプロジェクトによって生成された実行可能コードをプロジェクトで使用するとき、コードを生成するプロジェクトは、そのコードを使うプロジェクトのプロジェクトの依存関係と呼ばれます。 このような依存関係は、**[プロジェクトの依存関係]** ダイアログ ボックスで定義できます。  
 
-### プロジェクトに依存関係を割り当てるには
-<a id="to-assign-dependencies-to-projects" class="xliff"></a>  
+### <a name="to-assign-dependencies-to-projects"></a>プロジェクトに依存関係を割り当てるには  
 
 1.  ソリューション エクスプローラーでプロジェクトを選択します。  
 
@@ -65,8 +63,7 @@ ms.lasthandoff: 06/23/2017
 
  プロジェクトの依存関係を作成するには、先に複数のプロジェクトでソリューションを構成しておく必要があります。  
 
-### プロジェクトから依存関係を削除するには
-<a id="to-remove-dependencies-from-projects" class="xliff"></a>  
+### <a name="to-remove-dependencies-from-projects"></a>プロジェクトから依存関係を削除するには  
 
 1.  ソリューション エクスプローラーでプロジェクトを選択します。  
 
@@ -81,8 +78,7 @@ ms.lasthandoff: 06/23/2017
 
 4.  **[依存先]** フィールドで、このプロジェクトの依存関係ではなくなった他のプロジェクトの横にあるチェック ボックスをオフにします。  
 
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
  [Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)   
  [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)   
  [ビルド構成について](../ide/understanding-build-configurations.md)   

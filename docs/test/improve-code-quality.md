@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: fbc3a182d2c3dbceaa17685f649ea73a3e73ed85
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: db500747061b436db2a0897e5b43a1cae4a3acae
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="improve-code-quality"></a>コードの品質向上
@@ -54,8 +54,8 @@ ms.lasthandoff: 05/13/2017
 |[マネージ コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|コード メトリックスとは、開発者が開発中のコードをより理解できるようにする、ソフトウェアの一連の基準です。 このメトリックスには、関数とクラスの保守容易性指数、関数のサイクロマティック複雑度、クラスの継承の深さ、およびクラス間の結合の度合いが含まれます。|  
   
 ## <a name="related-scenarios"></a>関連するシナリオ  
- [アプリケーション ライフサイクル管理のための Visual Studio および Team Foundation Server の導入](assetId:///7ae9182f-4762-4bd3-b238-39ce987932e5)  
- Visual Studio Team Foundation の使用経験がない場合は、チームの開発環境で使用して、アプリケーションの開発に関連する生産性を向上し、リスクを軽減する方法を学ぶことができます。  
+ [Team Services と TFS の DevOps の概要](https://www.visualstudio.com/docs/devops-alm-overview)  
+ Visual Studio Team Foundation と Visual Studio Team Services の使用経験がない場合は、チームの開発環境で使用して、アプリケーションの開発に関連する生産性を向上し、リスクを軽減する方法を学ぶことができます。  
   
  [アーキテクチャの分析およびモデリング](../modeling/analyze-and-model-your-architecture.md)  
  [!INCLUDE[vsPreExt](../test/includes/vspreext_md.md)] を使用すると、ソフトウェアの設計における課題と複雑さを管理できます。 [!INCLUDE[vsPreShort](../test/includes/vspreshort_md.md)] を使用して、現在のアプリケーションの状態および将来のアプリケーションの状態を視覚的にモデル化できます。 アプリケーションの論理的なモデルを視覚化できるダイアグラムを作成および管理すると同時に、それらを物理的なモデルに対応付けることができます。これにより、"設計中" のソフトウェアを変更、検証、および分析できます。  

@@ -1,82 +1,99 @@
 ---
-title: "SccHistory 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccHistory"
-helpviewer_keywords: 
-  - "SccHistory 関数"
+title: SccHistory Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccHistory
+helpviewer_keywords:
+- SccHistory function
 ms.assetid: a636d9d3-47c1-4b48-ac6b-bcfde19d6cf9
 caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# SccHistory 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0efb8505fa59957f8178214d64c7ac0d979a3359
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-この関数は、指定されたファイルの履歴を表示します。  
+---
+# <a name="scchistory-function"></a>SccHistory Function
+This function displays the history of the specified files.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccHistory(  
-   LPVOID    pvContext,  
-   HWND      hWnd,  
-   LONG      nFiles,  
-   LPCSTR*   lpFileNames,  
-   LONG      fOptions,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pvContext,  
+   HWND      hWnd,  
+   LONG      nFiles,  
+   LPCSTR*   lpFileNames,  
+   LONG      fOptions,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pvContext`  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in] The source control plug-in context structure.  
   
  `hWnd`  
- \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  `nFiles`  
- \[in\]指定されたファイルの数、 `lpFileName` 配列。  
+ [in] Number of files specified in the `lpFileName` array.  
   
  `lpFileName`  
- \[in\]ファイルの完全修飾名の配列。  
+ [in] Array of fully qualified names of files.  
   
  `fOptions`  
- \[in\]\(現在は未使用\) コマンドのフラグです。  
+ [in] Command flags (currently not used).  
   
  `pvOptions`  
- \[in\]ソース管理プラグインに固有のオプションです。  
+ [in] Source control plug-in-specific options.  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|値|説明|  
-|-------|--------|  
-|SCC\_OK|バージョン履歴が正常に取得しました。|  
-|SCC\_I\_RELOADFILE|実際には、ソース管理システムは \(たとえば、取得することによって、古いバージョンのこと\)、履歴をフェッチ中にディスク上のファイルを変更ため、IDE は、このファイルを再読み込みする必要があります。|  
-|SCC\_E\_FILENOTCONTROLLED|ファイルはソース管理されていません。|  
-|SCC\_E\_OPNOTSUPPORTED|ソース管理システムでは、この操作はサポートされません。|  
-|SCC\_E\_NOTAUTHORIZED|この操作を実行できません。|  
-|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
-|SCC\_E\_PROJNOTOPEN|プロジェクトになっているを開きます。|  
-|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。 ファイル履歴を取得できませんでした。|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Version history was successfully obtained.|  
+|SCC_I_RELOADFILE|The source control system actually modified the file on disk while fetching the history (for instance, by getting an old version of it), so the IDE should reload this file.|  
+|SCC_E_FILENOTCONTROLLED|The file is not under source control.|  
+|SCC_E_OPNOTSUPPORTED|The source control system does not support this operation.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_PROJNOTOPEN|The project is has not been opened.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure. File history could not be obtained.|  
   
-## 解説  
- ソース管理プラグインが各ファイルの履歴を表示する、独自のダイアログ ボックスを表示を使用して `hWnd` 親ウィンドウとします。 または、省略可能なテキストがコールバックを出力する関数が提供される、 [SccOpenProject](../extensibility/sccopenproject-function.md) 使用できますが、サポートされている場合。  
+## <a name="remarks"></a>Remarks  
+ The source control plug-in can display its own dialog box to show the history of each file, using `hWnd` as the parent window. Alternatively, the optional text output callback function supplied to the [SccOpenProject](../extensibility/sccopenproject-function.md) can be used, if it is supported.  
   
- 注: 特定の状況ではこの呼び出しの実行中に検査するファイルが変更可能性があります。 たとえば、 [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] history コマンドは、ファイルの古いバージョンを取得する機会をユーザーに与えます。 このような場合は、ソース管理プラグインを返します。 `SCC_I_RELOAD` ファイルを再読み込みする必要があることを IDE に警告します。  
+ Note that under certain circumstances, the file being examined may change during the execution of this call. For example, the [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] history command gives the user a chance to get an old version of the file. In such a case, the source control plug-in returns `SCC_I_RELOAD` to warn the IDE that it needs to reload the file.  
   
 > [!NOTE]
->  ソース管理プラグインが配列の場合、ファイルのこの関数をサポートしない場合は、最初のファイルのファイル履歴のみを表示できます。  
+>  If the source control plug-in does not support this function for an array of files, only the file history for the first file can be displayed.  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)

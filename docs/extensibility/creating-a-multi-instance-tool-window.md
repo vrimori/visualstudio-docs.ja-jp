@@ -1,41 +1,58 @@
 ---
-title: "複数インスタンスのツール ウィンドウを作成します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "マルチ"
-  - "ツール ウィンドウ"
+title: Creating a Multi-Instance Tool Window | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multi
+- tool windows
 ms.assetid: 4a7872f1-acc9-4f43-8932-5a526b36adea
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 複数インスタンスのツール ウィンドウを作成します。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: bed04fe13e7232b2c227072ab91e6a56db0c6963
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-複数のインスタンスが同時に開くできるように、ツール ウィンドウをプログラミングできます。 既定では、ツール ウィンドウ インスタンスが 1 つだけを開くことができます。  
+---
+# <a name="creating-a-multi-instance-tool-window"></a>Creating a Multi-Instance Tool Window
+You can program a tool window so that multiple instances of it can be open simultaneously. By default, tool windows can have only one instance open.  
   
- 複数インスタンスのツール ウィンドウを使用する場合は、同時に情報のいくつかの関連するソースを表示できます。 たとえば、複数行に配置する <xref:System.Windows.Forms.TextBox> プログラミング セッション中にいくつかのコード スニペットが同時に使用できるように、複数インスタンスのツール ウィンドウで制御します。 たとえばも置いたり、 <xref:System.Windows.Forms.DataGrid> コントロールとドロップダウン リスト ボックスに複数インスタンスのツール ウィンドウいくつかのリアルタイムのデータ ソースを同時に追跡できるようにします。  
+ When you use a multi-instance tool window, you can show several related sources of information at the same time. For example, you could put a multi-line <xref:System.Windows.Forms.TextBox> control in a multi-instance tool window so that several code snippets are simultaneously available during a programming session. Also for example, you could put a <xref:System.Windows.Forms.DataGrid> control and a drop-down list box in a multi-instance tool window so that several real-time data sources can be tracked simultaneously.  
   
-## Basic \(単独\) のツール ウィンドウを作成します。  
+## <a name="creating-a-basic-single-instance-tool-window"></a>Creating a Basic (Single-Instance) Tool Window  
   
-1.  という名前のプロジェクトを作成する **MultiInstanceToolWindow** VSIX のテンプレートを使用し、という名前のカスタム ツール ウィンドウの項目テンプレートを追加 **MIToolWindow**します。  
+1.  Create a project named **MultiInstanceToolWindow** using the VSIX template, and add a custom tool window item template named **MIToolWindow**.  
   
     > [!NOTE]
-    >  ツール ウィンドウで拡張機能の作成の詳細については、次を参照してください。 [ツール ウィンドウで、拡張機能を作成します。](../extensibility/creating-an-extension-with-a-tool-window.md)します。  
+    >  For more information about creating an extension with a tool window, see [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-## ツール ウィンドウのマルチ インスタンスの作成  
+## <a name="making-a-tool-window-multi-instance"></a>Making a tool window multi-instance  
   
-1.  開いている、 **MIToolWindowPackage.cs** ファイルを見つけて、 `ProvideToolWindow` 属性です。 および `MultiInstances=true` パラメーターは、次の例で示すようにします。  
+1.  Open the **MIToolWindowPackage.cs** file and find the `ProvideToolWindow` attribute. and the `MultiInstances=true` parameter, as shown in the following example.  
   
-    ```c#  
+    ```csharp  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
         [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About  
         [ProvideMenuResource("Menus.ctmenu", 1)]  
@@ -45,17 +62,17 @@ caps.handback.revision: 12
     {. . .}  
     ```  
   
-2.  MIToolWindowCommand.cs ファイルでは、ShowToolWindos\(\) メソッドを見つけます。 このメソッドを呼び出して、 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> メソッドとその `create` フラグを `false` には、使用可能なまでツール ウィンドウの既存のインスタンスを反復処理できるように `id` が見つかった。  
+2.  In the MIToolWindowCommand.cs file, find the ShowToolWindos() method. In this method, call the <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> method and set its `create` flag to `false` so that it will iterate through existing tool window instances until an available `id` is found.  
   
-3.  ツール ウィンドウのインスタンスを作成するには、 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> メソッドとその `id` 使用可能な値をその `create` フラグを `true`します。  
+3.  To create a tool window instance, call the <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> method and set its `id` to an available value and its `create` flag to `true`.  
   
-     既定では、値、 `id` のパラメーター、 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> メソッドは `0`です。 これにより、単一インスタンスのツール ウィンドウです。 複数のインスタンスをホストする、すべてのインスタンスがありますが独自の一意 `id`します。  
+     By default, the value of the `id` parameter of the <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> method is `0`. This makes a single-instance tool window. For more than one instance to be hosted, every instance must have its own unique `id`.  
   
-4.  呼び出す、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> メソッドを <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> によって返されるオブジェクト、 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane.Frame%2A> ツール ウィンドウのインスタンスのプロパティです。  
+4.  Call the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> method on the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> object that is returned by the <xref:Microsoft.VisualStudio.Shell.ToolWindowPane.Frame%2A> property of the tool window instance.  
   
-5.  既定では、 `ShowToolWindow` ツール ウィンドウの項目テンプレートによって作成されるメソッドは、単一インスタンスのツール ウィンドウを作成します。 次の例を変更する方法を示しています、 `ShowToolWindow` メソッドを複数のインスタンスを作成します。  
+5.  By default, the `ShowToolWindow` method that is created by the tool window item template creates a single-instance tool window. The following example shows how to modify the `ShowToolWindow` method to create multiple instances.  
   
-    ```c#  
+    ```csharp  
     private void ShowToolWindow(object sender, EventArgs e)  
     {  
         for (int i = 0; i < 10; i++)  

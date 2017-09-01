@@ -39,12 +39,10 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/30/2017
 
 ---
-# 方法 : エンコーディングを使用してファイルを保存および開く
-<a id="how-to-save-and-open-files-with-encoding" class="xliff"></a>
+# <a name="how-to-save-and-open-files-with-encoding"></a>方法 : エンコーディングを使用してファイルを保存および開く
 双方向言語をサポートするために、特定の文字エンコーディングを使用してファイルを保存できます。 また、Visual Studio でファイルが正しく開かれるように、ファイルを開くときにもエンコーディングを指定できます。  
   
-### エンコーディングを使用してファイルを保存するには
-<a id="to-save-a-file-with-encoding" class="xliff"></a>  
+### <a name="to-save-a-file-with-encoding"></a>エンコーディングを使用してファイルを保存するには  
   
 1.  **[ファイル]** メニューの **[名前を付けてファイルを保存]** を選び、**[保存]** の横のドロップダウン ボタンをクリックします。  
   
@@ -58,8 +56,7 @@ ms.lasthandoff: 05/30/2017
   
      特定の方法でエンコードされていることがわかっているファイルを使用する場合は、ファイルを開くときに、そのエンコーディングを使用するように指定できます。 その方法は、ファイルがプロジェクトの一部であるかどうかによって異なります。  
   
-### プロジェクトの一部であるエンコードされたファイルを開くには
-<a id="to-open-an-encoded-file-that-is-part-of-a-project" class="xliff"></a>  
+### <a name="to-open-an-encoded-file-that-is-part-of-a-project"></a>プロジェクトの一部であるエンコードされたファイルを開くには  
   
 1.  **ソリューション エクスプローラー**でファイルを右クリックし、**[ファイルを開くアプリケーションの選択]** を選びます。  
   
@@ -69,8 +66,7 @@ ms.lasthandoff: 05/30/2017
   
 3.  **[エンコード]** ダイアログ ボックスで、エディターで使うエンコーディングを選びます。  
   
-### プロジェクトの一部ではないエンコードされたファイルを開くには
-<a id="to-open-an-encoded-file-that-is-not-part-of-a-project" class="xliff"></a>  
+### <a name="to-open-an-encoded-file-that-is-not-part-of-a-project"></a>プロジェクトの一部ではないエンコードされたファイルを開くには  
   
 1.  **[ファイル]** メニューの **[開く]** をポイントし、**[ファイル]** または **[Web のファイル]** を選んで、開くファイルを選びます。  
   
@@ -78,7 +74,6 @@ ms.lasthandoff: 05/30/2017
   
 3.  前の手順の 2. と 3. を実行します。  
   
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
  [エンコード方式および Windows フォームのグローバリゼーション](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)   
  [アプリケーションのグローバライズとローカライズ](../ide/globalizing-and-localizing-applications.md)

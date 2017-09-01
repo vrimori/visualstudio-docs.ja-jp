@@ -1,68 +1,81 @@
 ---
-title: "方法: サービスのデータに接続する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Visual Studio], 接続 (Web サービスに)"
-  - "データ [Visual Studio], 読み取り (Web サービスから)"
-  - "データ ソース, 作成 (Web サービスから)"
-  - "読み取り (データを), Web サービスから"
-  - "Web サービス, データ ソースとして"
-  - "Web サービス, 接続"
-  - "Web サービス, 読み取り (データを)"
+title: 'How to: Connect to Data in a Service | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Visual Studio], connecting to Web services
+- data sources, creating from Web services
+- data [Visual Studio], reading from Web services
+- reading data, from Web services
+- Web services, reading data
+- Web services, as data sources
+- Web services, connecting
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
 caps.latest.revision: 32
-caps.handback.revision: 30
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: 1d5ac117c835addd202e30a8ad4e1b9692202558
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法: サービスのデータに接続する
-サービスから返されたデータにアプリケーションを接続するには、[データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)を実行し、**\[データ ソースの種類を選択\]** ページの **\[サービス\]** をクリックします。  
+# <a name="how-to-connect-to-data-in-a-service"></a>How to: Connect to Data in a Service
+You connect your application to the data returned from a service by running the [Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png) and selecting **Service** on the **Choose a Data Source Type** page.  
   
- ウィザードを完了すると、プロジェクトにサービス参照が追加され、[ウィンドウ](../Topic/Data%20Sources%20Window.md)ですぐに使用できるようになります。  
+ Upon completion of the wizard, a service reference is added to your project and is immediately available in the [Data Sources Window](add-new-data-sources.md).  
   
 > [!NOTE]
->  **\[データ ソース\]** ウィンドウに表示される項目は、サービスから返される情報に応じて異なります。  サービスによっては、**データ ソース構成ウィザード**でバインドできるオブジェクトを作成するための十分な情報を提供しないものもあります。  たとえば、サービスから型指定されていないデータセットが返される場合、ウィザードを完了しても **\[データ ソース\]** ウィンドウには項目が表示されません。  これは、型指定されていないデータセットからはスキーマが提供されず、したがってウィザードでデータ ソースを作成するための十分な情報が得られないためです。  
+>  The items that appear in the **Data Sources** window are dependent on the information that the service returns. Some services might not provide enough information for the **Data Source Configuration Wizard** to create bindable objects. For example, if the service returns an untyped dataset, then no items appear in the **Data Sources Window** upon completing the wizard. This is because untyped datasets do not provide schema, so the wizard does not have enough information to create the data source.  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-### アプリケーションをサービスに接続するには  
+### <a name="to-connect-your-application-to-a-service"></a>To connect your application to a service  
   
-1.  **\[データ\]** メニューの **\[新しいデータ ソースの追加\]** をクリックします。  
+1.  On the **Data** menu, click **Add New Data Source**.  
   
-2.  **\[データ ソースの種類を選択\]** ページで **\[サービス\]** をクリックし、**\[次へ\]** をクリックします。  
+2.  Select **Service** on the **Choose a Data Source Type** page, and then click **Next**.  
   
-3.  使用するサービスのアドレスを入力するか、**\[探索\]** をクリックして現在のソリューション内のサービスを検索し、**\[移動\]** をクリックします。  
+3.  Enter the address of the service you want to use, or click **Discover** to locate services in the current solution, and then click **Go**.  
   
-4.  必要に応じて、既定値の代わりに新しい**名前空間**を入力できます。  
+4.  Optionally, a new **Namespace** can be typed in place of the default value.  
   
     > [!NOTE]
-    >  **\[詳細設定\]** をクリックして [\[サービス参照の構成\] ダイアログ ボックス](../Topic/Configure%20Service%20Reference%20Dialog%20Box.md)を開きます。  
+    >  Click **Advanced** to open the [Configure Service Reference Dialog Box](../data-tools/configure-service-reference-dialog-box.md).  
   
-5.  **\[OK\]** をクリックして、プロジェクトにサービス参照を追加します。  
+5.  Click **OK** to add a service reference to your project.  
   
-6.  **\[完了\]** をクリックします。  
+6.  Click **Finish**.  
   
-     **\[データ ソース\]** ウィンドウにデータ ソースが追加されます。  
+     The data source is added to the **Data Sources** window.  
   
-## 次の手順  
+## <a name="next-steps"></a>Next Steps  
   
-#### アプリケーションに機能を追加するには  
+#### <a name="to-add-functionality-to-your-application"></a>To add functionality to your application  
   
--   **\[データ ソース\]** ウィンドウ内の項目を選択し、フォームにドラッグして、バインド コントロールを作成します。  詳細については、「[Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)」を参照してください。  
+-   Select an item in the **Data Sources** window and drag it onto a form to create bound controls. For more information, see [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md).  
   
-## 参照  
- [チュートリアル: WCF Data Service への WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)   
- [チュートリアル: WCF Data Service への Silverlight コントロールのバインド](../Topic/Walkthrough:%20Binding%20Silverlight%20Controls%20to%20a%20WCF%20Data%20Service.md)   
+## <a name="see-also"></a>See Also  
+ [Bind WPF controls to a WCF data service](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)   
  [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Emulator for Android | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 07f3e972f06707f21543b5a70c9712d9706a3980
+ms.translationtype: HT
+ms.sourcegitcommit: fd35d38110fdd82d8748a57701d15dcc1933053e
+ms.openlocfilehash: 9a0dc7e7d771fa13300c8287096e330633461400
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android
@@ -39,23 +39,10 @@ Visual Studio Emulator for Android は、Android デバイスをエミュレー�
   
  Visual Studio Emulator for Android は、実際のデバイスに匹敵するパフォーマンスを提供するように設計されています。 ただし、アプリを公開する前に、物理デバイスでアプリをテストすることをお勧めします。  
   
- Android プラットフォームごとに異なるデバイス プロファイル、画面の解像度、および Visual Studio Emulator for Android でサポートされるその他のハードウェア プロパティで、アプリをテストできます。  
-  
- このトピックは、次のセクションで構成されています。  
-  
--   [インストールとアンインストール](#Installing)  
-  
--   [システム要件と下位互換性](#Requirements)  
-  
--   [Visual Studio Emulator for Android でのネットワーク](#Networking)  
-  
--   [Visual Studio Emulator for Android の構成](#Configuring)  
-  
--   [エミュレーターでテストできる機能](#FeaturesTest)  
-  
--   [エミュレーターでテストできない機能](#FeaturesNonTest)  
-  
--   [サポート リソース](#Support)  
+ Android プラットフォームごとに異なるデバイス プロファイル、画面の解像度、および Visual Studio Emulator for Android でサポートされるその他のハードウェア プロパティで、アプリをテストできます。
+
+> [!NOTE]
+> Visual Studio Tools for Apache Cordova では Google Android エミュレーターを使用することをお勧めします。 詳細については、「[Android での Apache Cordova アプリの実行](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#a-idgoogle-android-emulatora-run-on-the-google-android-emulator)」を参照してください。
   
 ##  <a name="Installing"></a> インストールとアンインストール  
  インストール  
@@ -100,7 +87,7 @@ Visual Studio Emulator for Android は、Android デバイスをエミュレー�
   
  Visual Studio 2015 では、Emulator Manager を使用してデバイス プロファイルをインストール、アンインストール、開始できます。 Emulator Manager にアクセスするには、**[ツール]**、**[Visual Studio Emulator for Android]** の順に選択します。  
   
- ![Visual Studio Emulator for Android Manager](~/cross-platform/media/android_emu_manager.png "Android_Emu_Manager")  
+ ![Visual Studio Emulator for Android Manager](../cross-platform/media/android_emu_manager.png "Android_Emu_Manager")  
   
  既定では、4 つのインストール済みデバイス プロファイルがあり (KitKat and Lollipop phone/5" および tablet/7" 構成)、白いテキストとアイコンで示されます。 一覧の他のプロファイルは、**[プロファイルのインストール]** ボタンをクリックしてインストールが完了するまで、グレー表示になっています。 API レベルで一覧をフィルター処理でき、プロファイルの右下にある詳細矢印をクリックすると構成の詳細が表示されます。  
   

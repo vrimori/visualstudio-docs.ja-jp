@@ -1,171 +1,173 @@
 ---
-title: "チュートリアル : CheckBox コントロールを使用したワークシート書式の変更"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "コントロール [Visual Studio での Office 開発], 追加 (ワークシートに)"
-  - "ワークシート, 変更 (マネージ コントロールを使って書式設定を)"
-  - "ワークシート, チェック ボックス コントロール"
+title: 'Walkthrough: Changing Worksheet Formatting Using CheckBox Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- worksheets, changing formatting using managed controls
+- worksheets, check box controls
+- controls [Office development in Visual Studio], adding to worksheets
 ms.assetid: 4be79613-50a0-428e-9816-aadbc098272a
 caps.latest.revision: 70
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 69
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6afc0a002671d0a5ae91908e5b0ed3b100c36c54
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : CheckBox コントロールを使用したワークシート書式の変更
-  このチュートリアルでは、Microsoft Office Excel ワークシートでチェック ボックスを使用して、書式を変更する際の基本事項について説明します。  Visual Studio の Office 開発ツールを使用して、コードを作成し、プロジェクトに追加します。  この結果として完成したサンプルについては、「[Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)」の Excel コントロールのサンプルを参照してください。  
+# <a name="walkthrough-changing-worksheet-formatting-using-checkbox-controls"></a>Walkthrough: Changing Worksheet Formatting Using CheckBox Controls
+  This walkthrough shows the basics of using check boxes on a Microsoft Office Excel worksheet to change formatting. You will use Office development tools in Visual Studio to create and add code to your project. To see the result as a completed sample, see the Excel Controls Sample at [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md).  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- このチュートリアルでは、次の作業を行う方法について説明します。  
+ During this walkthrough, you will learn how to:  
   
--   ワークシートにテキストやコントロールを追加します。  
+-   Add text and controls to a worksheet.  
   
--   オプション選択時にテキストを書式設定します。  
+-   Format the text when an option is selected.  
   
--   プロジェクトのテスト  
+-   Test your project.  
   
 > [!NOTE]  
->  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。  これらの要素は、使用する Visual Studio のエディションとその設定によって決まります。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] または [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]。  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
-## プロジェクトの作成  
- この手順では、Visual Studio を使用して Excel ブック プロジェクトを作成します。  
+## <a name="creating-the-project"></a>Creating the Project  
+ In this step, you will create an Excel Workbook project by using Visual Studio.  
   
-#### 新しいプロジェクトを作成するには  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  My Excel Formatting という名前で Excel ブックのプロジェクトを作成します。  **\[新規ドキュメントの作成\]** が選択されていることを確認します。  詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+1.  Create an Excel Workbook project with the name **My Excel Formatting**. Make sure that **Create a new document** is selected. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     新しい Excel ブックが Visual Studio のデザイナーに開かれ、**\[My Excel Formatting\]** プロジェクトが**ソリューション エクスプローラー**に追加されます。  
+     Visual Studio opens the new Excel workbook in the designer and adds the **My Excel Formatting** project to **Solution Explorer**.  
   
-## ワークシートへのテキストとコントロールの追加  
- このチュートリアルでは、3 つの <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> コントロール、および <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロール内のテキストが必要です。  
+## <a name="adding-text-and-controls-to-the-worksheet"></a>Adding Text and Controls to the Worksheet  
+ For this walkthrough, you will need three <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> controls and some text in a <xref:Microsoft.Office.Tools.Excel.NamedRange> control.  
   
-#### 3 つのチェック ボックスを追加するには  
+#### <a name="to-add-three-check-boxes"></a>To add three check boxes  
   
-1.  ブックが Visual Studio のデザイナーで開かれ、`Sheet1` が開かれていることを確認します。  
+1.  Verify that the workbook is open in the Visual Studio designer and that `Sheet1` is open.  
   
-2.  **ツールボックス**の **\[コモン コントロール\]** タブから <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> コントロールを **\[Sheet1\]** のセル **B2** の内側または近辺にドラッグします。  
+2.  From the **Common Controls** tab of the **Toolbox**, drag a <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> control to or near cell **B2** in **Sheet1**.  
   
-3.  **\[表示\]** メニューの **\[プロパティ\]** ウィンドウをクリックします。  
+3.  From the **View** menu, select **Properties** window.  
   
-4.  **\[プロパティ\]** ウィンドウのオブジェクト名リスト ボックスに **\[Checkbox1\]** が表示されていることを確認し、次のプロパティを変更します。  
+4.  Be sure that **Checkbox1** is visible in the object name list box of the **Properties** window, and change the following properties:  
   
-    |プロパティ|価値|  
-    |-----------|--------|  
-    |**名前**|**applyBoldFont**|  
-    |**テキスト**|太字|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**applyBoldFont**|  
+    |**Text**|**Bold**|  
   
-5.  2 番目のチェック ボックスをセル **B4** の内部または近辺にドラッグし、次のプロパティを変更します。  
+5.  Drag a second check box on or near cell **B4** and change the following properties:  
   
-    |プロパティ|価値|  
-    |-----------|--------|  
-    |**名前**|**applyItalicFont**|  
-    |**テキスト**|イタリック体|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**applyItalicFont**|  
+    |**Text**|**Italic**|  
   
-6.  3 番目のチェック ボックスをセル **B6** の内部または近辺にドラッグし、次のプロパティを変更します。  
+6.  Drag a third check box on or near cell **B6** and change the following properties:  
   
-    |プロパティ|価値|  
-    |-----------|--------|  
-    |**名前**|**applyUnderlineFont**|  
-    |**テキスト**|Underline|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**applyUnderlineFont**|  
+    |**Text**|**Underline**|  
   
-7.  Ctrl キーを押しながら、3 つのチェック ボックス コントロールを選択します。  
+7.  Select all three check box controls while holding the CTRL key.  
   
-8.  Excel形式の配置のタブのグループで、**\[配置\]**をクリックし、**\[左揃え\]**をクリックします。  
+8.  In the Arrange Group of the Format tab in Excel, click **Align**, and then click **Align Left**.  
   
-     3種類のチェック ボックス コントロールは、選択した最初のコントロールの位置の左側に配置されます。  
+     The three check box controls are aligned on the left side, at the position of the first control you selected.  
   
-     次に、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをワークシートにドラッグします。  
+     Next, you will drag a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to the worksheet.  
   
     > [!NOTE]  
-    >  **\[名前ボックス\]** に「**textFont**」と入力しても <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを追加できます。  
+    >  You can also add the <xref:Microsoft.Office.Tools.Excel.NamedRange> control by typing **textFont** into the **Name** box.  
   
-#### テキストを NamedRange コントロールに追加するには  
+#### <a name="to-add-text-to-a-namedrange-control"></a>To add text to a NamedRange control  
   
-1.  ツールボックスの **\[Excel コントロール\]** タブから <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをセル **B9** にドラッグします。  
+1.  From the **Excel Controls** tab of the toolbox, drag a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to cell **B9**.  
   
-2.  編集可能なテキスト ボックスに **\[$B$10\]** と表示され、セル **B9** が選択されていることを確認します。  選択されていない場合は、セル **B9** をクリックして選択します。  
+2.  Verify that **$B$9** appears in the editable text box, and that cell **B9** is selected. If it is not, click cell **B9** to select it.  
   
-3.  **\[OK\]** をクリックします。  
+3.  Click **OK**.  
   
-4.  セル **B9** は、`NamedRange1` という名前の範囲になります。  
+4.  Cell **B9** becomes a range named `NamedRange1`.  
   
-     ワークシート上には範囲を示す表示はありませんが、セル **B9** の選択時に `NamedRange1` が **\[名前ボックス\]**\(左側のワークシートのすぐ上\) に表示されます。  
+     There is no visible indication on the worksheet, but `NamedRange1` appears in the **Name box** (just above the worksheet on the left side) when cell **B9** is selected.  
   
-5.  **\[プロパティ\]** ウィンドウのオブジェクト名リスト ボックスに **\[NamedRange1\]** が表示されていることを確認し、次のプロパティを変更します。  
+5.  Be sure that **NamedRange1** is visible in the object name list box of the **Properties** window, and change the following properties:  
   
-    |プロパティ|価値|  
-    |-----------|--------|  
-    |**名前**|**textFont**|  
-    |**Value2**|チェック ボックスをクリックしてこのテキストの書式を変更します。|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**textFont**|  
+    |**Value2**|**Click a check box to change the formatting of this text.**|  
   
- 次に、オプションの選択時にテキストに書式を設定するコードを記述します。  
+ Next, write the code to format the text when an option is selected.  
   
-## オプション選択時のテキストへの書式設定  
- ここでは、ユーザーが書式設定オプションを選択したときにワークシート内のテキストの書式が変更されるようにするコードを記述します。  
+## <a name="formatting-the-text-when-an-option-is-selected"></a>Formatting the Text When an Option is Selected  
+ In this section, you will write code so that when the user selects a formatting option, the format of the text in the worksheet is changed.  
   
-#### チェック ボックス選択時に書式を変更するには  
+#### <a name="to-change-formatting-when-a-check-box-is-selected"></a>To change formatting when a check box is selected  
   
-1.  **\[Sheet1\]** を右クリックし、ショートカット メニューの **\[コードの表示\]** をクリックします。  
+1.  Right-click **Sheet1**, and then click **View Code** on the shortcut menu.  
   
-2.  `applyBoldFont` チェック ボックスの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに次のコードを追加します。  
+2.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyBoldFont` check box:  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#7](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#7)]
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#7](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/VB/Sheet1.vb#7)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsExcel#7](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#7)]  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#7)]  
   
-3.  `applyItalicFont` チェック ボックスの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに次のコードを追加します。  
+3.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyItalicFont` check box:  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#8](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#8)]
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#8](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/VB/Sheet1.vb#8)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsExcel#8](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#8)]  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#8)]  
   
-4.  `applyUnderlineFont` チェック ボックスの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに次のコードを追加します。  
+4.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyUnderlineFont` check box:  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#9](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#9)]
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#9](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/VB/Sheet1.vb#9)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsExcel#9](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#9)]  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#9)]  
   
-5.  C\# では、次に示すように、チェック ボックスのイベント ハンドラーを <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> イベントに追加する必要があります。  イベント ハンドラーの作成については、「[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)」を参照してください。  
+5.  In C#, you must add event handlers for the check boxes to the <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> event as shown below. For information on creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#10](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#10)]  
+     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#10)]  
   
-## アプリケーションのテスト  
- ブックをテストして、チェック ボックスをオンまたはオフにしたときにテキストの書式が正しく設定されることを確認できます。  
+## <a name="testing-the-application"></a>Testing the Application  
+ You can now test your workbook to make sure that the text is formatted correctly when you select or clear a check box.  
   
-#### ブックをテストするには  
+#### <a name="to-test-your-workbook"></a>To test your workbook  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  Press F5 to run your project.  
   
-2.  チェック ボックスをオンまたはオフにします。  
+2.  Select or clear a check box.  
   
-3.  テキストの書式が正しく設定されることを確認します。  
+3.  Confirm that the text is formatted correctly.  
   
-## 次の手順  
- このチュートリアルでは、Excel ワークシートでのチェック ボックスの使用とテキストの書式設定に関する基本事項について説明します。  次に行う作業は以下のとおりです。  
+## <a name="next-steps"></a>Next Steps  
+ This walkthrough shows the basics of using check boxes and formatting text on Excel worksheets. Here are some tasks that might come next:  
   
--   プロジェクトの配置。  詳細については、「[ClickOnce を使用した Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)」を参照してください。  
+-   Deploying the project. For more information, see [Deploying an Office Solution by Using ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).  
   
--   ボタンを使用したテキスト ボックスへのデータの読み込み。  詳細については、「[チュートリアル : ボタンを使用してワークシート内テキスト ボックスにテキストを表示する方法](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)」を参照してください。  
+-   Using a button to populate a text box. For more information, see [Walkthrough: Displaying Text in a Text Box in a Worksheet Using a Button](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md).  
   
-## 参照  
- [Excel を使用したチュートリアル](../vsto/walkthroughs-using-excel.md)   
- [NamedRange コントロール](../vsto/namedrange-control.md)   
- [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
+## <a name="see-also"></a>See Also  
+ [Walkthroughs Using Excel](../vsto/walkthroughs-using-excel.md)   
+ [NamedRange Control](../vsto/namedrange-control.md)   
+ [Limitations of Windows Forms Controls on Office Documents](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
   
   

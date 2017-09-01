@@ -44,8 +44,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/24/2017
 
 ---
-# [オプション]、[テキスト エディター]、[C#]、[IntelliSense]
-<a id="options-text-editor-c-intellisense" class="xliff"></a>
+# <a name="options-text-editor-c-intellisense"></a>[オプション]、[テキスト エディター]、[C#]、[IntelliSense]
 Visual C# での IntelliSense の動作設定を変更するには、[**IntelliSense**] プロパティ ページを使用します。 [**IntelliSense**] プロパティ ページにアクセスするには、[**ツール**] メニューの [**オプション**] をクリックして、[**テキスト エディター**] フォルダーで [**C#**] をクリックし、[**IntelliSense**] をクリックします。  
   
 > [!NOTE]
@@ -53,8 +52,7 @@ Visual C# での IntelliSense の動作設定を変更するには、[**IntelliS
   
  **[IntelliSense]** プロパティ ページには、以下のプロパティがあります。  
   
-## 入力候補一覧
-<a id="completion-lists" class="xliff"></a>  
+## <a name="completion-lists"></a>入力候補一覧  
  **文字が入力された後に入力候補一覧を表示する**  
  このオプションを選択すると、入力を開始したときに IntelliSense によって入力候補一覧が自動的に表示されます。 このオプションを選択しない場合でも、IntelliSense の入力候補は [**IntelliSense**] メニューから、または CTRL キーを押しながら SPACE キーを押して使用できます。  
   
@@ -64,8 +62,7 @@ Visual C# での IntelliSense の動作設定を変更するには、[**IntelliS
  **入力候補一覧にコード スニペットを配置する**  
  このオプションを選択すると、IntelliSense によって C# コード スニペットのエイリアスが入力候補一覧に追加されます。 コード スニペットのエイリアスがキーワードと同じ場合 ([class](/dotnet/csharp/language-reference/keywords/class) など)、キーワードは、ショートカットで置き換えられます。 詳細については、「[Visual C# のコード スニペット](../../ide/visual-csharp-code-snippets.md)」を参照してください。  
   
-## 入力候補一覧からの選択
-<a id="selection-in-completion-lists" class="xliff"></a>  
+## <a name="selection-in-completion-lists"></a>入力候補一覧からの選択  
  **次の文字の入力によって確定する**  
  入力すると、入力候補一覧内の選択した項目に対して IntelliSense のオート コンプリートを実行するすべての文字を指定します。  
   
@@ -85,13 +82,11 @@ Visual C# での IntelliSense の動作設定を変更するには、[**IntelliS
   
  `else|` (カーソルの位置)  
   
-## IntelliSense メンバーの選択
-<a id="intellisense-member-selection" class="xliff"></a>  
+## <a name="intellisense-member-selection"></a>IntelliSense メンバーの選択  
  **最近使用されたメンバーをあらかじめ選択する**  
  このオプションを選択すると、統合開発環境 (IDE) での現在のセッション中に、オブジェクト名の自動補完のために、ポップアップ メンバーの一覧ボックスで最近選択したメンバーが IntelliSense によってあらかじめ選択されます。 最近使用したメンバーの履歴は、IDE の各セッションの間に消去されます。 詳細については、「[最近使用されたメンバーに対する IntelliSense](../../ide/visual-csharp-intellisense.md#most-recently-used-members)」を参照してください。  
   
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
  [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)   
  [XML ドキュメント コメント](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)   
  [IntelliSense の使用](../../ide/using-intellisense.md)

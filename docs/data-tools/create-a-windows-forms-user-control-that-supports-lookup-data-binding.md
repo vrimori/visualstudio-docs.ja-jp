@@ -1,188 +1,195 @@
 ---
-title: "チュートリアル: 検索データ バインドをサポートする Windows フォーム ユーザー コントロールの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ バインド, ユーザー コントロール"
-  - "LookupBindingPropertiesAttribute クラス, 例"
-  - "ユーザー コントロール [Visual Basic], 作成"
+title: Using lookup tables in data binding - Windows Forms controls| Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data binding, user controls
+- LookupBindingPropertiesAttribute class, examples
+- user controls [Visual Basic], creating
 ms.assetid: c48b4d75-ccfc-4950-8b14-ff8adbfe4208
 caps.latest.revision: 14
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: df0d36441585a6ad856edaf4c5bc0cf3fd65e5bc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル: 検索データ バインドをサポートする Windows フォーム ユーザー コントロールの作成
-フォームにデータを表示する場合は、ツールボックスから既存のコントロールを選択するか、またはアプリケーションが標準コントロールでは提供できない機能を必要とする場合は、カスタム コントロールを記述できます。  このチュートリアルでは、<xref:System.ComponentModel.LookupBindingPropertiesAttribute> を実装するコントロールを作成する方法を示します。  <xref:System.ComponentModel.LookupBindingPropertiesAttribute> を実装するコントロールには、データにバインドできるプロパティを 3 つ含めることができます。  このようなコントロールは、<xref:System.Windows.Forms.ComboBox> に似ています。  
+# <a name="create-a-windows-forms-user-control-that-supports-lookup-data-binding"></a>Create a Windows Forms user control that supports lookup data binding
+When displaying data on Windows Forms, you can choose existing controls from the **Toolbox**, or you can author custom controls if your application requires functionality not available in the standard controls. This walkthrough shows how to create a control that implements the <xref:System.ComponentModel.LookupBindingPropertiesAttribute>. Controls that implement the <xref:System.ComponentModel.LookupBindingPropertiesAttribute> can contain three properties that can be bound to data. Such controls are similar to a <xref:System.Windows.Forms.ComboBox>.  
   
- コントロールの作成の詳細については、「[デザイン時の Windows フォーム コントロールの開発](../Topic/Developing%20Windows%20Forms%20Controls%20at%20Design%20Time.md)」を参照してください。  
+ For more information on control authoring, see [Developing Windows Forms Controls at Design Time](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).  
   
- データ バインディングのシナリオで使用するためのコントロールを作成するときは、次のいずれかのデータ バインド属性を実装する必要があります。  
+ When authoring controls for use in data-binding scenarios you need to implement one of the following data-binding attributes:  
   
-|データ バインド属性の使用|  
-|-------------------|  
-|単一のデータ列またはプロパティを表示する <xref:System.Windows.Forms.TextBox> のような <xref:System.ComponentModel.DefaultBindingPropertyAttribute> を簡単なコントロールに実装します。  詳細については、「[チュートリアル: 単純データ バインドをサポートする Windows フォーム ユーザー コントロールの作成](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md)」を参照してください。|  
-|データの一覧またはテーブルを表示する <xref:System.Windows.Forms.DataGridView> のような <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> をコントロールに実装します。  詳細については、「[チュートリアル: 複合データ バインドをサポートする Windows フォーム ユーザー コントロールの作成](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md)」を参照してください。|  
-|データの一覧またはテーブルを表示しますが、単一の列またはプロパティを表示する必要もある <xref:System.Windows.Forms.ComboBox> のような <xref:System.ComponentModel.LookupBindingPropertiesAttribute> をコントロールに実装します。  このチュートリアルでは、このプロセスについて説明します。|  
+|Data-binding attribute usage|  
+|-----------------------------------|  
+|Implement the <xref:System.ComponentModel.DefaultBindingPropertyAttribute> on simple controls, like a <xref:System.Windows.Forms.TextBox>, that display a single column (or property) of data. For more information, see [Create a Windows Forms user control that supports simple data binding](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).|  
+|Implement the <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> on controls, like a <xref:System.Windows.Forms.DataGridView>, that display lists (or tables) of data. For more information, see [Create a Windows Forms user control that supports complex data binding](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).|  
+|Implement the <xref:System.ComponentModel.LookupBindingPropertiesAttribute> on controls, like a <xref:System.Windows.Forms.ComboBox>, that display lists (or tables) of data, but also need to present a single column or property. (This process is described in this walkthrough page.)|  
   
- このチュートリアルでは、2 つのテーブルのデータにバインドする検索コントロールを作成します。  この例では、Northwind サンプル データベースの `Customers` テーブルと `Orders` テーブルを使用します。  この検索コントロールは `Orders` テーブルの `CustomerID` フィールドにバインドされます。  コントロールは、この値を使用して `Customers` テーブルの `CompanyName` を検索します。  
+ This walkthrough creates a lookup control that binds to data from two tables. This example uses the `Customers` and `Orders` tables from the Northwind sample database. The lookup control will be bound to the `CustomerID` field from the `Orders` table. It will use this value to look up the `CompanyName` from the `Customers` table.  
   
- このチュートリアルでは、次の作業を行う方法について説明します。  
+ During this walkthrough, you will learn how to:  
   
--   新しい **Windows アプリケーション**を作成します。  
+-   Create a new **Windows Application**.  
   
--   新しい**ユーザー コントロール**をプロジェクトに追加します。  
+-   Add a new **User Control** to your project.  
   
--   ユーザー コントロールをビジュアルに設計します。  
+-   Visually design the user control.  
   
--   `LookupBindingProperty` 属性を実装します。  
+-   Implement the `LookupBindingProperty` attribute.  
   
--   [データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)を使用して、データセットを作成します。  
+-   Create a dataset with the **Data Source Configuration** wizard.  
   
--   **\[データ ソース\]** ウィンドウで **Orders** テーブルの **\[CustomerID\]** 列が新しいコントロールを使用するように設定します。  
+-   Set the **CustomerID** column on the **Orders** table, in the **Data Sources** window, to use the new control.  
   
--   フォームを作成して、新しいコントロールにデータを表示します。  
+-   Create a form to display data in the new control.  
   
-## 必須コンポーネント  
- このチュートリアルを完了するための要件は次のとおりです。  
+## <a name="prerequisites"></a>Prerequisites  
+ In order to complete this walkthrough, you will need:  
   
--   Northwind サンプル データベースにアクセスします。  詳細については、「[方法 : サンプル データベースをインストールする](../data-tools/how-to-install-sample-databases.md)」を参照してください。  
+-   Access to the Northwind sample database.  
   
-## Windows アプリケーションの作成  
- 最初に **Windows アプリケーション**を作成します。  
+## <a name="create-a-windows-application"></a>Create a Windows Application  
+ The first step is to create a **Windows Application**.  
   
-#### 新しい Windows プロジェクトを作成するには  
+#### <a name="to-create-the-new-windows-project"></a>To create the new Windows project  
   
-1.  Visual Studio の **\[ファイル\]** メニューの **\[新しいプロジェクト\]** をクリックします。  
+1.  In Visual Studio, from the **File** menu, create a new **Project**.  
   
-2.  プロジェクトに LookupControlWalkthrough という名前を付けます。  
+2.  Name the project **LookupControlWalkthrough**.  
   
-3.  **\[Windows アプリケーション\]** をクリックし、**\[OK\]** をクリックします。  詳細については、「[クライアント アプリケーション](../Topic/Developing%20Client%20Applications%20with%20the%20.NET%20Framework.md)」を参照してください。  
+3.  Select **Windows  Forms Application**, and click **OK**.  
   
-     **LookupControlWalkthrough** プロジェクトが作成されて**ソリューション エクスプローラー**に追加されます。  
+     The **LookupControlWalkthrough** project is created, and added to **Solution Explorer**.  
   
-## プロジェクトへのユーザー コントロールの追加  
- このチュートリアルでは**ユーザー コントロール**から検索コントロールを作成するので、**ユーザー コントロール**の項目を **LookupControlWalkthrough** プロジェクトに追加します。  
+## <a name="add-a-user-control-to-the-project"></a>Add a user control to the project  
+ This walkthrough creates a lookup control from a **User Control**, so add a **User Control** item to the **LookupControlWalkthrough** project.  
   
-#### プロジェクトにユーザー コントロールを追加するには  
+#### <a name="to-add-a-user-control-to-the-project"></a>To add a user control to the project  
   
-1.  **\[プロジェクト\]** メニューの **\[ユーザー コントロールの追加\]** をクリックします。  
+1.  From the **Project** menu, select **Add User Control**.  
   
-2.  **\[ファイル名\]** 領域に「`LookupBox`」と入力し、**\[追加\]** をクリックします。  
+2.  Type `LookupBox` in the **Name** area, and then click **Add**.  
   
-     **LookupBox** コントロールが **ソリューション エクスプローラー**に追加され、デザイナーが開きます。  
+     The **LookupBox** control is added to **Solution Explorer**, and opens in the designer.  
   
-## LookupBox コントロールの設計  
+## <a name="design-the-lookupbox-control"></a>Design the LookupBox control  
   
-#### LookupBox コントロールを設計するには  
+#### <a name="to-design-the-lookupbox-control"></a>To design the LookupBox control  
   
--   **ツールボックス**からユーザー コントロールのデザイン サーフェイスに <xref:System.Windows.Forms.ComboBox> をドラッグします。  
+-   Drag a <xref:System.Windows.Forms.ComboBox> from the **Toolbox** onto the user control's design surface.  
   
-## 必要なデータ バインディング属性の追加  
- データ バインディングをサポートする検索コントロールには、<xref:System.ComponentModel.LookupBindingPropertiesAttribute> を実装できます。  
+## <a name="add-the-required-data-binding-attribute"></a>Add the required data-binding attribute  
+ For lookup controls that support data binding, you can implement the <xref:System.ComponentModel.LookupBindingPropertiesAttribute>.  
   
-#### LookupBindingProperties 属性を実装するには  
+#### <a name="to-implement-the-lookupbindingproperties-attribute"></a>To implement the LookupBindingProperties attribute  
   
-1.  **LookupBox** コントロールをコード ビューに切り替えます。  **\[表示\]** メニューの **\[コード\]** をクリックします。  
+1.  Switch the **LookupBox** control to code view. (On the **View** menu, choose **Code**.)  
   
-2.  `LookupBox` のコードを次のコードで置き換えます。  
+2.  Replace the code in the `LookupBox` with the following:  
   
-     [!code-vb[VbRaddataDisplaying#5](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-lookup-data-binding_1.vb)]
-     [!code-cs[VbRaddataDisplaying#5](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-lookup-data-binding_1.cs)]  
+     [!code-vb[VbRaddataDisplaying#5](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-lookup-data-binding_1.vb)]  [!code-csharp[VbRaddataDisplaying#5](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-lookup-data-binding_1.cs)]  
   
-3.  **\[ビルド\]** メニューの **\[ソリューションのビルド\]** をクリックします。  
+3.  From the **Build** menu, choose **Build Solution**.  
   
-## データベースからのデータ ソースの作成  
- この手順では、**データ ソース構成ウィザード**を使用して、Northwind サンプル データベースの `Customers` テーブルと `Orders` テーブルに基づいてデータ ソースを作成します。  接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。  Northwind サンプル データベースのセットアップの詳細については、「[方法 : サンプル データベースをインストールする](../data-tools/how-to-install-sample-databases.md)」を参照してください。  
+## <a name="create-a-data-source-from-your-database"></a>Create a data source from your database  
+ This step creates a data source using the **Data Source Configuration**wizard, based on the `Customers` and `Orders` tables in the Northwind sample database. You must have access to the Northwind sample database to create the connection. For information on setting up the Northwind sample database, see [Install SQL Server sample databases](../data-tools/install-sql-server-sample-databases.md).  
   
-#### データ ソースを作成するには  
+#### <a name="to-create-the-data-source"></a>To create the data source  
   
-1.  **\[データ\]** メニューの **\[データ ソースの表示\]** をクリックします。  
+1.  On the **Data** menu, click **Show Data Sources**.  
   
-2.  **\[データ ソース\]** ウィンドウで、**\[新しいデータ ソースの追加\]** をクリックして**データ ソース構成ウィザード**を起動します。  
+2.  In the **Data Sources** window, select **Add New Data Source** to start the **Data Source Configuration** wizard.  
   
-3.  **\[データソースの種類を選択\]** ページで、**\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
+3.  Select **Database** on the **Choose a Data Source Type** page, and then click **Next**.  
   
-4.  **\[データ接続の選択\]** ページで、次のいずれかの操作を行います。  
+4.  On the **Choose your Data Connection** page do one of the following:  
   
-    -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
+    -   If a data connection to the Northwind sample database is available in the drop-down list, select it.  
   
-         または  
+    -   Select **New Connection** to launch the **Add/Modify Connection** dialog box.  
   
-    -   **\[新しい接続\]** を選択して **\[接続の追加\] または \[接続の変更\]** ダイアログ ボックスを表示します。  
+5.  If your database requires a password, select the option to include sensitive data, and then click **Next**.  
   
-5.  データベースにパスワードが必要な場合は、該当するオプションを選択して重要情報を含め、**\[次へ\]** をクリックします。  
+6.  On the **Save connection string to the Application Configuration file** page, click **Next**.  
   
-6.  **\[アプリケーション構成ファイルに接続文字列を保存\]** ページで、**\[次へ\]** をクリックします。  
+7.  On the **Choose your Database Objects** page, expand the **Tables** node.  
   
-7.  **\[データベース オブジェクトの選択\]** ページの **\[テーブル\]** ノードを展開します。  
+8.  Select the `Customers` and `Orders` tables, and then click **Finish**.  
   
-8.  `Customers` テーブルと `Orders` テーブルを選択し、**\[完了\]** をクリックします。  
+     The **NorthwindDataSet** is added to your project, and the `Customers` and `Orders` tables appear in the **Data Sources** window.  
   
-     プロジェクトに **NorthwindDataSet** が追加され、**\[データ ソース\]** ウィンドウに `Customers` テーブルと `Orders` テーブルが表示されます。  
+## <a name="set-the-customerid-column-of-the-orders-table-to-use-the-lookupbox-control"></a>Set the CustomerID column of the Orders table to use the LookupBox control  
+ Within the **Data Sources** window, you can set the control to be created prior to dragging items onto your form.  
   
-## LookupBox コントロールを使用するように Orders テーブルの \[CustomerID\] 列を設定する  
- **\[データ ソース\]** ウィンドウでは、フォームにコントロールをドラッグする前に作成するコントロールを設定できます。  
+#### <a name="to-set-the-customerid-column-to-bind-to-the-lookupbox-control"></a>To set the CustomerID column to bind to the LookupBox control  
   
-#### \[CustomerID\] 列を LookupBox コントロールにバインドするように設定するには  
+1.  Open **Form1** in the designer.  
   
-1.  デザイナーで **Form1** を開きます。  
+2.  Expand the **Customers** node in the **Data Sources** window.  
   
-2.  **\[データ ソース\]** ウィンドウの **\[Customers\]** ノードを展開します。  
+3.  Expand the **Orders** node (the one in the **Customers** node below the **Fax** column).  
   
-3.  **\[Fax\]** 列の下の **\[Customers\]** 列にある **\[Orders\]** ノードを展開します。  
+4.  Click the drop-down arrow on the **Orders** node, and choose **Details** from the control list.  
   
-4.  **\[Orders\]** ノードのドロップダウン矢印をクリックし、コントロール一覧の **\[Details\]** を選択します。  
+5.  Click the drop-down arrow on the **CustomerID** column (in the **Orders** node), and choose **Customize**.  
   
-5.  **\[Orders\]** ノードの **\[CustomerID\]** 列のドロップダウン矢印をクリックし、**\[Customize\]** をクリックします。  
+6.  Select the **LookupBox** from the list of **Associated Controls** in the **Data UI Customization Options** dialog box.  
   
-6.  **\[データ UI カスタマイズ オプション\]** ダイアログ ボックスの **\[関連付けられたコントロール\]** の一覧の **\[LookupBox\]** を選択します。  
+7.  Click **OK**.  
   
-7.  **\[OK\]** をクリックします。  
+8.  Click the drop-down arrow on the **CustomerID** column, and choose **LookupBox**.  
   
-8.  **\[CustomerID\]** 列のドロップダウン矢印をクリックし、**\[LookupBox\]** をクリックします。  
+## <a name="add-controls-to-the-form"></a>Add controls to the form  
+ You can create the data-bound controls by dragging items from the **Data Sources** window onto **Form1**.  
   
-## フォームへのコントロールの追加  
- **\[データ ソース\]** ウィンドウから **Form1** に項目をドラッグして、データ バインディング コントロールを作成します。  
+#### <a name="to-create-data-bound-controls-on-the-windows-form"></a>To create data-bound controls on the Windows Form  
   
-#### Windows フォームにデータ バインディング コントロールを作成するには  
+-   Drag the **Orders** node from the **Data Sources** window onto the Windows Form, and verify that the **LookupBox** control is used to display the data in the `CustomerID` column.  
   
--   **\[データ ソース\]** ウィンドウから Windows フォームに **\[Orders\]** ノードをドラッグし、**LookupBox** コントロールを使用して `CustomerID` 列にデータが表示されていることを確認します。  
+## <a name="bind-the-control-to-look-up-companyname-from-the-customers-table"></a>Bind the control to look up CompanyName from the Customers table  
   
-## Customers テーブルから CompanyName を検索するためにコントロールをバインドする  
+#### <a name="to-setup-the-lookup-bindings"></a>To setup the lookup bindings  
   
-#### 検索バインドをセットアップするには  
+-   Select the main **Customers** node in the **Data Sources** window, and drag it onto the combo box in the **CustomerIDLookupBox** on **Form1**.  
   
--   **\[データ ソース\]** ウィンドウでメインの **\[Customers\]** ノードを選択し、**Form1** の **CustomerIDLookupBox** 内のコンボ ボックスにドラッグします。  
+     This sets up the data binding to display the `CompanyName` from the `Customers` table, while maintaining the `CustomerID` value from the `Orders` table.  
   
-     これによって、`Orders` テーブルの `CustomerID` 値を維持しながら、`Customers` テーブルの `CompanyName` を表示するためのデータ バインディングがセットアップされます。  詳細については、「[方法: Windows フォーム アプリケーションでルックアップ テーブルを作成する](../data-tools/create-lookup-tables-in-windows-forms-applications.md)」を参照してください。  
+## <a name="running-the-application"></a>Running the application  
   
-## アプリケーションの実行  
+#### <a name="to-run-the-application"></a>To run the application  
   
-#### アプリケーションを実行するには  
+-   Press F5 to run the application.  
   
--   F5 キーを押してアプリケーションを実行します。  
+-   Navigate through some records, and verify that the `CompanyName` appears in the `LookupBox` control.  
   
--   レコード間を移動し、`LookupBox` コントロールに `CompanyName` が表示されることを確認します。  
-  
-## 参照  
- [\[データ ソース\] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../Topic/Set%20the%20control%20to%20be%20created%20when%20dragging%20from%20the%20Data%20Sources%20window.md)   
- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
- [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [アプリケーションへのデータのフェッチ](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
- [データの検証](../Topic/Validating%20Data.md)   
- [データの保存](../data-tools/saving-data.md)
+## <a name="see-also"></a>See Also  
+ [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+

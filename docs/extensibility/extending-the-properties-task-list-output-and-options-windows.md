@@ -1,5 +1,5 @@
 ---
-title: "プロパティ、タスク一覧、出力、およびオプションの Windows の拡張 |Microsoft ドキュメント"
+title: Extending the Properties, Task List, Output, and Options Windows | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,40 +33,41 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 75937e3f2cf1d3fa9c5c78de8b7df5f8869ef49e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5f16658320df87a479d9669fadf269856f80a67a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="extending-the-properties-task-list-output-and-options-windows"></a>プロパティ、タスク一覧、出力、およびオプションの Windows の拡張
-Visual Studio でのツール ウィンドウを表示できます。 このチュートリアルでは、新しいツール ウィンドウに関する情報を統合する方法**オプション**ページと、新しい設定で、**プロパティ** ページとを記述する方法、**タスク一覧**と**出力**windows です。  
+# <a name="extending-the-properties-task-list-output-and-options-windows"></a>Extending the Properties, Task List, Output, and Options Windows
+You can access any tool window in Visual Studio. This walkthrough shows how to integrate information about your tool window into a new **Options** page and a new setting on the **Properties** page, and also how to write to the **Task List** and **Output** windows.  
   
-## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="create-an-extension-with-a-tool-window"></a>ツール ウィンドウでの拡張機能を作成します。  
+## <a name="create-an-extension-with-a-tool-window"></a>Create an Extension with a Tool Window  
   
-1.  という名前のプロジェクトを作成する**TodoList** VSIX のテンプレートを使用し、という名前のカスタム ツール ウィンドウの項目テンプレートを追加**TodoWindow**します。  
-  
-    > [!NOTE]
-    >  ツール ウィンドウで拡張機能の作成の詳細については、次を参照してください。[ツール ウィンドウで、拡張機能を作成する](../extensibility/creating-an-extension-with-a-tool-window.md)です。  
-  
-## <a name="set-up-the-tool-window"></a>ツール ウィンドウを設定します。  
- 新しい ToDo 項目をリストに新しい項目を追加 ボタンをクリックし、リストに項目を表示するリスト ボックスに入力するためのテキスト ボックスを追加します。  
-  
-1.  TodoWindow.xaml では、ユーザー コントロールから、ボタン、テキスト ボックスと StackPanel コントロールを削除します。  
+1.  Create a project named **TodoList** using the VSIX template, and add a custom tool window item template named **TodoWindow**.  
   
     > [!NOTE]
-    >  これは削除されません、 **button1_Click**イベント ハンドラーは、後の手順で再利用されます。  
+    >  For more information about creating an extension with a tool window, see [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-2.  **すべての WPF コントロール**のセクションで、**ツールボックス**、ドラッグ、**キャンバス**コントロールはグリッドにします。  
+## <a name="set-up-the-tool-window"></a>Set Up the Tool Window  
+ Add a TextBox in which to type a new ToDo item, a Button to add the new item to the list, and a ListBox to display the items on the list.  
   
-3.  ドラッグ、 ** テキスト ボックス**、**ボタン**、および**ListBox**をキャンバスにします。 テキスト ボックスとボタンが同じレベルには、リスト ボックスには、次の図に示すように、それらの下のウィンドウの残りの要素を配置します。  
+1.  In TodoWindow.xaml, delete the Button, TextBox, and StackPanel controls from the UserControl.  
   
-     ![ツール ウィンドウを終了](~/extensibility/media/t5-toolwindow.png "T5 ツール ウィンドウ")  
+    > [!NOTE]
+    >  This does not delete the **button1_Click** event handler, which you will reuse in a later step.  
   
-4.  XAML ウィンドウで、ボタンを見つけて、コンテンツのプロパティを設定**追加**します。 Button コントロールにボタンのイベント ハンドラーを追加することで再接続、`Click="button1_Click"`属性です。 キャンバスのブロックは、次のようになります。  
+2.  From the **All WPF Controls** section of the **Toolbox**, drag a **Canvas** control to the grid.  
+  
+3.  Drag a **TextBox**, a **Button**, and a **ListBox** to the Canvas. Arrange the elements so that the TextBox and the Button are on the same level, and the ListBox fills the rest of the window below them, as in the picture below.  
+  
+     ![Finished Tool Window](../extensibility/media/t5-toolwindow.png "T5-ToolWindow")  
+  
+4.  In the XAML pane, find the Button and set its Content property to **Add**. Reconnect the button event handler to the Button control by adding a `Click="button1_Click"` attribute. The Canvas block should look like this:  
   
     ```xml  
     <Canvas HorizontalAlignment="Left" Width="306">  
@@ -76,17 +77,17 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     </Canvas>  
     ```  
   
-#### <a name="customize-the-constructor"></a>コンス トラクターをカスタマイズします。  
+#### <a name="customize-the-constructor"></a>Customize the constructor  
   
-1.  TodoWindowControl.xaml.cs ファイルに次のコードを追加ステートメントを使用します。  
+1.  In the TodoWindowControl.xaml.cs file, add the following using statement:  
   
-    ```c#  
+    ```csharp  
     using System;  
     ```  
   
-2.  TodoWindow パラメーターを受け取る TodoWindowControl コンス トラクターと、TodoWindow にパブリックの参照を追加します。 コードは、次のようになります。  
+2.  Add a public reference to the TodoWindow and have the TodoWindowControl constructor take a TodoWindow parameter. The code should look like this:  
   
-    ```c#  
+    ```csharp  
     public TodoWindow parent;  
   
     public TodoWindowControl(TodoWindow window)  
@@ -96,9 +97,9 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-3.  TodoWindow.cs では、TodoWindowControl TodoWindow パラメーターが含まれてコンス トラクターを変更します。 コードは、次のようになります。  
+3.  In TodoWindow.cs, change TodoWindowControl constructor to include the TodoWindow parameter. The code should look like this:  
   
-    ```c#  
+    ```csharp  
     public TodoWindow() : base(null)  
     {  
         this.Caption = "TodoWindow";  
@@ -109,26 +110,26 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-## <a name="create-an-options-page"></a>オプション ページを作成します。  
- ページを指定することができます、**オプション** ダイアログ ボックスのユーザーがツール ウィンドウの設定を変更できるようにします。 オプション ページを作成するには、オプションと TodoListPackage.cs または TodoListPackage.vb ファイル内のエントリを表す両方のクラスが必要です。  
+## <a name="create-an-options-page"></a>Create an Options Page  
+ You can provide a page in the **Options** dialog box so that users can change settings for the tool window. Creating an Options page requires both a class that describes the options and an entry in the TodoListPackage.cs or TodoListPackage.vb file.  
   
-1.  という名前のクラスを追加`ToolsOptions.cs`します。 <xref:Microsoft.VisualStudio.Shell.DialogPage>。</xref:Microsoft.VisualStudio.Shell.DialogPage>から継承制御クラスします。  
+1.  Add a class named `ToolsOptions.cs`. Make the ToolsOptions class inherit from <xref:Microsoft.VisualStudio.Shell.DialogPage>.  
   
-    ```c#  
+    ```csharp  
     class ToolsOptions : DialogPage  
     {  
     }  
     ```  
   
-2.  次の追加ステートメントを使用します。  
+2.  Add the following using statement:  
   
-    ```c#  
+    ```csharp  
     using Microsoft.VisualStudio.Shell;  
     ```  
   
-3.  このチュートリアルで [オプション] ページには、1 つだけのオプションが DaysAhead という名前が提供されます。 というプライベート フィールドを追加**daysAhead**という名前のプロパティと**DaysAhead**制御クラスにします。  
+3.  The Options page in this walkthrough provides only one option named DaysAhead. Add a private field named **daysAhead** and a property named **DaysAhead** to the ToolsOptions class:  
   
-    ```c#  
+    ```csharp  
     private double daysAhead;  
   
     public double DaysAhead  
@@ -138,54 +139,54 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
- これで、プロジェクトをこのオプション ページを認識させる必要があります。  
+ Now you must make the project aware of this Options page.  
   
-#### <a name="make-the-options-page-available-to-users"></a>[オプション] ページをユーザーが使用できるように  
+#### <a name="make-the-options-page-available-to-users"></a>Make the Options page available to users  
   
-1.  TodoWindowPackage.cs で追加、 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>TodoWindowPackage クラス:</xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>  
+1.  In TodoWindowPackage.cs, add a <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> to the TodoWindowPackage class:  
   
-    ```c#  
+    ```csharp  
     [ProvideOptionPage(typeof(ToolsOptions), "ToDo", "General", 101, 106, true)]  
     ```  
   
-2.  ProvideOptionPage コンス トラクターの最初のパラメーターは、先ほど作成した制御クラスの型です。 2 番目のパラメーターでは、"ToDo"は、[カテゴリの名前、**オプション**] ダイアログ ボックス。 3 番目のパラメーターのサブカテゴリの名前を「全般」には、**オプション** ダイアログ ボックスの オプション ページを使用できます。 次の&2; つのパラメーターは次のリソース Id の文字列です。1 つ目は、カテゴリの名前で、2 番目は、サブカテゴリの名前です。 最後のパラメーターは、このページをオートメーションを使用してアクセスできるかどうかを決定します。  
+2.  The first parameter to the ProvideOptionPage constructor is the type of the class ToolsOptions, which you created earlier. The second parameter, "ToDo", is the name of the category in the **Options** dialog box. The third parameter, "General", is the name of the subcategory of the **Options** dialog box where the Options page will be available. The next two parameters are resource IDs for strings; the first is the name of the category, and the second is the name of the subcategory. The final parameter determines whether this page can be accessed by using automation.  
   
-     ユーザーが、[オプション] ページを開いたときは、次の図ようになります。  
+     When a user opens your Options page, it should resemble the following picture.  
   
-     ![オプション ページ](~/extensibility/media/t5optionspage.gif "T5OptionsPage")  
+     ![Options Page](../extensibility/media/t5optionspage.gif "T5OptionsPage")  
   
-     カテゴリに注意してください**ToDo**とサブカテゴリ**全般**します。  
+     Notice the category **ToDo** and the subcategory **General**.  
   
-## <a name="make-data-available-to-the-properties-window"></a>[プロパティ] ウィンドウにデータを利用できるように  
- 一覧の情報を使用できるようにするには ToDo リスト内の個々 の項目に関する情報を格納する TodoItem という名前のクラスを作成することで。  
+## <a name="make-data-available-to-the-properties-window"></a>Make Data Available to the Properties Window  
+ You can make To Do list information available by creating a class named TodoItem that stores information about the individual items in the ToDo list.  
   
-1.  という名前のクラスを追加`TodoItem.cs`します。  
+1.  Add a class named `TodoItem.cs`.  
   
-     ツール ウィンドウは、ユーザーが利用できるが、リスト ボックス内の項目は TodoItems で表されます。 ユーザーが、リスト ボックスにこれらの項目のいずれかを選択すると、**プロパティ**ウィンドウの項目についての情報が表示されます。  
+     When the tool window is available to users, the items in the ListBox will be represented by TodoItems. When the user selects one of these items in the ListBox, the **Properties** window will display information about the item.  
   
-     データで利用できるようにする、**プロパティ**ウィンドウで、次の&2; つの特別な属性を持つパブリック プロパティにデータを変換する`Description`と`Category`です。 `Description`下部に表示されるテキスト、**プロパティ**ウィンドウです。 `Category`ときに、プロパティが表示される場所を決定する、**プロパティ**でウィンドウが表示されます、**項目別**ビューです。 次の図に、**プロパティ**期間が**項目別**ビュー、**名**プロパティに、 **ToDo フィールド**カテゴリを選択するとの説明、**名前**プロパティは、ウィンドウの下部に表示されます。  
+     To make data available in the **Properties** window, you turn the data into public properties that have two special attributes, `Description` and `Category`. `Description` is the text that appears at the bottom of the **Properties** window. `Category` determines where the property should appear when the **Properties** window is displayed in the **Categorized** view. In the following picture, the **Properties** window is in **Categorized** view, the **Name** property in the **ToDo Fields** category is selected, and the description of the **Name** property is displayed at the bottom of the window.  
   
-     ![[プロパティ] ウィンドウ](~/extensibility/media/t5properties.png "T5Properties")  
+     ![Properties Window](../extensibility/media/t5properties.png "T5Properties")  
   
-2.  次の追加ステートメントを TodoItem.cs ファイルを使用します。  
+2.  Add the following using statements the TodoItem.cs file.  
   
-    ```c#  
+    ```csharp  
     using System.ComponentModel;  
     using System.Windows.Forms;  
     using Microsoft.VisualStudio.Shell.Interop;  
     ```  
   
-3.  追加、`public`クラス宣言に、アクセス修飾子です。  
+3.  Add the `public` access modifier to the class declaration.  
   
-    ```c#  
+    ```csharp  
     public class TodoItem  
     {  
     }  
     ```  
   
-     2 つのプロパティ名と DueDate を追加します。 UpdateList() と CheckForErrors() を後で実行します。  
+     Add the two properties, Name and DueDate. We'll do the UpdateList() and CheckForErrors() later.  
   
-    ```c#  
+    ```csharp  
     public class TodoItem  
     {  
         private TodoWindowControl parent;  
@@ -218,9 +219,9 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-4.  ユーザー コントロールへの参照をプライベートを追加します。 ユーザー コントロールおよびこの ToDo 項目の名前を取得するコンス トラクターを追加します。 DaysAhead の値を検索するには、オプション ページのプロパティを取得します。  
+4.  Add a private reference to the user control. Add a constructor that takes the user control and the name for this ToDo item. To find the value for daysAhead, it gets the Options page property.  
   
-    ```c#  
+    ```csharp  
     private TodoWindowControl parent;  
   
     public TodoItem(TodoWindowControl control, string itemName)  
@@ -247,18 +248,18 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-5.  のインスタンス、`TodoItem`クラスは、リスト ボックスとリスト ボックスが呼び出されます、`ToString`関数をオーバー ロードする必要があります、`ToString`関数です。 コンス トラクターとクラスの末尾の間には、次のコードを TodoItem.cs を追加します。  
+5.  Because instances of the `TodoItem` class will be stored in the ListBox and the ListBox will call the `ToString` function, you must overload the `ToString` function. Add the following code to TodoItem.cs, after the constructor and before the end of the class.  
   
-    ```c#  
+    ```csharp  
     public override string ToString()  
     {  
         return name + " Due: " + dueDate.ToShortDateString();  
     }  
     ```  
   
-6.  TodoWindowControl.xaml.cs で TodoWindowControl クラスにスタブ メソッドを追加、`CheckForError`と`UpdateList`メソッドです。 ProcessDialogChar 後、ファイルの末尾の前に配置します。  
+6.  In TodoWindowControl.xaml.cs, add stub methods to the TodoWindowControl class for the `CheckForError` and `UpdateList` methods. Put them after the ProcessDialogChar and before the end of the file.  
   
-    ```c#  
+    ```csharp  
     public void CheckForErrors()  
     {  
     }  
@@ -267,16 +268,16 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-     `CheckForError`メソッドは、親オブジェクトで同じ名前を持つメソッドを呼び出しますおり、そのメソッドは、すべてのエラーが発生し、適切に処理するかどうかを確認します。 `UpdateList`メソッドは、親コントロールのリスト ボックスで、更新、ときに、メソッドが呼び出された、`Name`と`DueDate`このクラスの変更のプロパティです。 これらは後で実装されます。  
+     The `CheckForError` method will call a method that has the same name in the parent object, and that method will check whether any errors have occurred and handle them correctly. The `UpdateList` method will update the ListBox in the parent control; the method is called when the `Name` and `DueDate` properties in this class change. They will be implemented later.  
   
-## <a name="integrate-into-the-properties-window"></a>[プロパティ] ウィンドウに統合します。  
- 関連付けられている、リスト ボックスを管理するコードを記述、**プロパティ**ウィンドウです。  
+## <a name="integrate-into-the-properties-window"></a>Integrate into the Properties Window  
+ Now write the code that manages the ListBox, which will be tied to the **Properties** window.  
   
- ボタンを変更する必要があります、テキスト ボックスを読み取り、作成、TodoItem にハンドラーをクリックし、リスト ボックスに追加します。  
+ You must change the button click handler to read the TextBox, create a TodoItem, and adds it to the ListBox.  
   
-1.  既存`button1_Click`関数を新しい TodoItem を作成し、リスト ボックスに追加するコードです。 後で定義されている TrackSelection() を呼び出します。  
+1.  Replace the existing `button1_Click` function with code that creates a new TodoItem and adds it to the ListBox. It calls TrackSelection(), which will be defined later.  
   
-    ```c#  
+    ```csharp  
     private void button1_Click(object sender, RoutedEventArgs e)  
     {  
         if (textBox.Text.Length > 0)  
@@ -289,9 +290,9 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-2.  デザイン ビューでは、ListBox コントロールを選択します。 **プロパティ**ウィンドウをクリックして、**イベント ハンドラー**  ボタンをクリックし、SelectionChanged イベントを確認します。 テキスト ボックスに入力**listBox_SelectionChanged**します。 これを行うと、SelectionChanged ハンドラーのスタブを追加して、イベントに割り当てます。  
+2.  In the Design view select the ListBox control. In the **Properties** window click the **Event handlers** button and find the SelectionChanged event. Fill in the text box with **listBox_SelectionChanged**. Doing this adds a stub for a SelectionChanged handler and assigns it to the event.  
   
-3.  TrackSelection() メソッドを実装します。 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>を取得する必要がある<xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>する必要がある、サービス、 <xref:Microsoft.VisualStudio.Shell.WindowPane.GetService%2A>、TodoWindowControl からアクセスできる</xref:Microsoft.VisualStudio.Shell.WindowPane.GetService%2A></xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>。</xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> TodoWindow クラスに次のメソッドを追加します。  
+3.  Implement the TrackSelection() method. Since you will need to get the <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell><xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> services, you need make the <xref:Microsoft.VisualStudio.Shell.WindowPane.GetService%2A> accessible by the TodoWindowControl. Add the following method to the TodoWindow class:  
   
     ```  
     internal object GetVsService(Type service)  
@@ -300,16 +301,16 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-4.  次の追加 TodoWindowControl.xaml.cs にステートメントを使用します。  
+4.  Add the following using statements to TodoWindowControl.xaml.cs:  
   
-    ```c#  
+    ```csharp  
     using System.Runtime.InteropServices;  
     using Microsoft.VisualStudio.Shell.Interop;  
     using Microsoft.VisualStudio;  
     using Microsoft.VisualStudio.Shell;  
     ```  
   
-5.  SelectionChanged ハンドラーを次のように入力します。  
+5.  Fill in the SelectionChanged handler as follows:  
   
     ```  
     private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)  
@@ -318,9 +319,9 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-6.  これで、入力との統合を提供する TrackSelection 関数、**プロパティ**ウィンドウです。 ユーザーがリスト ボックスに項目を追加またはリスト ボックスに項目をクリックしたときは、この関数が呼び出されます。 SelectionContainer をリスト ボックスの内容を追加しを SelectionContainer、**プロパティ**ウィンドウの<xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A>イベント ハンドラー</xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> 。 TrackSelection サービスは、ユーザー インターフェイス (UI) で選択したオブジェクトを追跡し、そのプロパティが表示されます。  
+6.  Now, fill in the TrackSelection function, which will provide integration with the **Properties** window. This function is called when the user adds an item to the ListBox or clicks an item in the ListBox. It adds the contents of the ListBox to a SelectionContainer and passes the SelectionContainer to the **Properties** window's <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> event handler. The TrackSelection service tracks selected objects in the user interface (UI) and displays their properties  
   
-    ```c#  
+    ```csharp  
     private SelectionContainer mySelContainer;  
     private System.Collections.ArrayList mySelItems;  
     private IVsWindowFrame frame = null;  
@@ -366,11 +367,11 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-     クラスが作成できたが、**プロパティ**ウィンドウを使用して、統合することができます、**プロパティ**ツール ウィンドウを持つウィンドウです。 ユーザーがツール ウィンドウのリスト ボックス内の項目をクリックすると、**プロパティ**ウィンドウに更新する必要があります。 同様に、ユーザーが内の ToDo 項目を変更すると、**プロパティ**ウィンドウで、関連付けられているアイテムを更新する必要があります。  
+     Now that you have a class that the **Properties** window can use, you can integrate the **Properties** window with the tool window. When the user clicks an item in the ListBox in the tool window, the **Properties** window should be updated accordingly. Similarly, when the user changes a ToDo item in the **Properties** window, the associated item should be updated.  
   
-7.  これで、TodoWindowControl.xaml.cs で UpdateList 関数のコードの残りの部分を追加します。 削除して、再、リスト ボックスから変更された TodoItem を追加する必要があります。  
+7.  Now, add the rest of the UpdateList function code in TodoWindowControl.xaml.cs. It should drop and re-add the modified TodoItem from the ListBox.  
   
-    ```c#  
+    ```csharp  
     public void UpdateList(TodoItem item)  
     {  
         var index = listBox.SelectedIndex;  
@@ -380,22 +381,22 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-8.  コードをテストします。 プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
+8.  Test your code. Build the project and start debugging. The experimental instance should appear.  
   
-9. 開いている、**ツール/オプション**ページです。 左側のウィンドウで、[ToDo] カテゴリが表示されます。 カテゴリはアルファベット順で表示されます、そのため、Ts を調べます。  
+9. Open the **Tools / Options** pages. You should see the ToDo category in the left pane. Categories are listed in alphabetical, so look under the Ts.  
   
-10. Todo オプション ページで、DaysAhead プロパティに設定を確認する必要があります**0**です。 変更して**2**します。  
+10. On the Todo options page, you should see the DaysAhead property set to **0**. Change it to **2**.  
   
-11. ビュー/その他のウィンドウ メニューを開いている**TodoWindow**します。 型**EndDate**  をクリックし、テキスト ボックスに**追加**します。  
+11. On the View / Other Windows menu, open **TodoWindow**. Type **EndDate** in the text box and click **Add**.  
   
-12. リスト ボックスでは、2 つの日の後に今日より後の日付が表示されます。  
+12. In the list box you should see a date two days later than today.  
   
-## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>[出力] ウィンドウとタスクのリストに項目にテキストを追加します。  
- **タスク一覧**、[タスク] タイプの新しいオブジェクトを作成し、その Task オブジェクトを追加、**タスク一覧**の Add メソッドを呼び出すことによってです。 書き込む、**出力**ウィンドウで、ウィンドウ オブジェクトを取得するには、その GetPane メソッドを呼び出すし、ウィンドウ オブジェクトの OutputString メソッドを呼び出します。  
+## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>Add Text to the Output Window and Items to the Task List  
+ For the **Task List**, you create a new object of type Task, and then add that Task object to the **Task List** by calling its Add method. To write to the **Output** window, you call its GetPane method to obtain a pane object, and then you call the OutputString method of the pane object.  
   
-1.  TodoWindowControl.xaml.cs、で、`button1_Click`メソッドを取得するコードを追加、**全般的な**のウィンドウ、**出力**ウィンドウ (既定値) と書き込みをします。 このメソッドは、次のようになります。  
+1.  In TodoWindowControl.xaml.cs, in the `button1_Click` method, add code to get the **General** pane of the **Output** window (which is the default), and write to it. The method should look like this:  
   
-    ```c#  
+    ```csharp  
     private void button1_Click(object sender, EventArgs e)  
     {  
         if (textBox.Text.Length > 0)  
@@ -420,9 +421,9 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-2.  必要なタスクのリストに項目を追加するために、TodoWindowControl クラスに入れ子になったクラスを追加します。 入れ子になったクラスが<xref:Microsoft.VisualStudio.Shell.TaskProvider>。</xref:Microsoft.VisualStudio.Shell.TaskProvider>から派生する必要があります。 TodoWindowControl クラスの末尾に次のコードを追加します。  
+2.  In order to add items to the Task List, you need a to add a nested class to the TodoWindowControl class. The nested class needs to derive from <xref:Microsoft.VisualStudio.Shell.TaskProvider>. Add the following code to the end of the TodoWindowControl class.  
   
-    ```c#  
+    ```csharp  
     [Guid("72de1eAD-a00c-4f57-bff7-57edb162d0be")]  
     public class TodoWindowTaskProvider : TaskProvider  
     {  
@@ -433,9 +434,9 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-3.  次に TodoWindowControl クラス TodoTaskProvider への参照をプライベートと CreateProvider() メソッドを追加します。 コードは、次のようになります。  
+3.  Next add a private reference to TodoTaskProvider and a CreateProvider() method to the TodoWindowControl class. The code should look like this:  
   
-    ```c#  
+    ```csharp  
     private TodoWindowTaskProvider taskProvider;  
     private void CreateProvider()  
     {  
@@ -447,9 +448,9 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-4.  TodoWindowControl クラスに、タスクの一覧を消去、ClearError() と ReportError() で、タスク一覧にエントリを追加を追加します。  
+4.  Add ClearError(), which clears the Task List, and ReportError(), which adds an entry to the Task List, to the TodoWindowControl class.  
   
-    ```c#  
+    ```csharp  
     private void ClearError()  
     {  
         CreateProvider();  
@@ -479,9 +480,9 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-5.  次のように CheckForErrors メソッドを実装するようになりました。  
+5.  Now implement the CheckForErrors method, as follows.  
   
-    ```c#  
+    ```csharp  
     public void CheckForErrors()  
     {  
         foreach (TodoItem item in listBox.Items)  
@@ -495,30 +496,30 @@ Visual Studio でのツール ウィンドウを表示できます。 このチ�
     }  
     ```  
   
-## <a name="trying-it-out"></a>試してみる  
+## <a name="trying-it-out"></a>Trying It Out  
   
-1.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
+1.  Build the project and start debugging. The experimental instance appears.  
   
-2.  開く、TodoWindow (**ビュー/その他の Windows/TodoWindow**)。  
+2.  Open the TodoWindow (**View / Other Windows / TodoWindow**).  
   
-3.  テキスト ボックスに情報を入力し、**追加**します。  
+3.  Type something in the text box and then click **Add**.  
   
-     期日今日は、リスト ボックスに追加した後、2 日間です。 エラーは発生せず、および**タスク一覧**(**を表示する]、[タスク一覧**) エントリはありません。  
+     A due date 2 days after today is added to the list box. No errors are generated, and the **Task List** (**View / Task List**) should have no entries.  
   
-4.  現在の設定を変更、**ツール/オプション/ToDo**からページ**2**に**0**です。  
+4.  Now change the setting on the **Tools / Options / ToDo** page from **2** back to **0**.  
   
-5.  内の他の何か入力、 **TodoWindow**  をクリックし、**追加**再度します。 これは、場合、トリガー内のエントリをエラー、**タスク一覧**します。  
+5.  Type something else in the **TodoWindow** and then click **Add** again. This triggers an error and also an entry in the **Task List**.  
   
-     項目を追加すると、最初の日付は、ここでさらに 2 日間に設定されます。  
+     As you add items, the initial date is set to now plus 2 days.  
   
-6.  **ビュー**  メニューのをクリックして**出力**を開くには、**出力**ウィンドウです。  
+6.  On the **View** menu, click **Output** to open the **Output** window.  
   
-     確認するたびに項目を追加することで、メッセージが表示されます、**タスク一覧**ウィンドウです。  
+     Notice that every time that you add an item, a message is displayed in the **Task List** pane.  
   
-7.  リスト ボックス内の項目のいずれかをクリックします。  
+7.  Click one of the items in the ListBox.  
   
-     **プロパティ**ウィンドウには、アイテムの&2; つのプロパティが表示されます。  
+     The **Properties** window displays the two properties for the item.  
   
-8.  プロパティのいずれかを変更し、ENTER キーを押します。  
+8.  Change one of the properties and then press ENTER.  
   
-     リスト ボックス内の項目を更新します。
+     The item is updated in the ListBox.

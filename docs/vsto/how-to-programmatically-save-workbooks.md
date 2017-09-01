@@ -1,95 +1,94 @@
 ---
-title: "方法: プログラムによってブックを保存する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ブック, 保存"
-  - "ブック, 保存 (バックアップ コピーを)"
-  - "ブック, 保存 (XML 形式で)"
+title: 'How to: Programmatically Save Workbooks | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- workbooks, saving in XML format
+- workbooks, saving
+- workbooks, saving backup copies
 ms.assetid: 991ccf9b-5213-4094-9030-284ec167bdcc
 caps.latest.revision: 50
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 49
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: b20aa9c1bfa93295420f4a50803abb31e0d3da07
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法: プログラムによってブックを保存する
-  ブックを保存する方法はいくつかあります。  パスを変更しないでブックを保存できます。  以前にブックが保存されていない場合は、パスを指定してブックを保存する必要があります。  明示的なパスがない場合、Microsoft Office Excel は、ファイルが作成されたときに付けられた名前で現在のフォルダーにファイルを保存します。  メモリ内の開いているブックを変更しないで、ブックのコピーを保存することもできます。  
+# <a name="how-to-programmatically-save-workbooks"></a>How to: Programmatically Save Workbooks
+  There are several ways to save a workbook. You can save a workbook without changing the path. If the workbook has not been saved before, you should save the workbook by specifying a path. Without an explicit path, Microsoft Office Excel saves the file in the current folder with the name it was given when it was created. You can also save a copy of the workbook without modifying the open workbook in memory.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## パスを変更しないでブックを保存する  
+## <a name="saving-a-workbook-without-changing-the-path"></a>Saving a Workbook Without Changing the Path  
   
-#### ドキュメント レベルのカスタマイズに関連付けられているブックを保存するには  
+#### <a name="to-save-a-workbook-associated-with-a-document-level-customization"></a>To save a workbook associated with a document-level customization  
   
-1.  ThisWorkbook クラスの <xref:Microsoft.Office.Tools.Excel.Workbook.Save%2A> メソッドを呼び出します。  
+1.  Call the <xref:Microsoft.Office.Tools.Excel.Workbook.Save%2A> method of the ThisWorkbook class.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/ThisWorkbook.cs#4)]
-     [!code-vb[Trin_VstcoreExcelAutomation#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/ThisWorkbook.vb#4)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#4](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#4)]  [!code-vb[Trin_VstcoreExcelAutomation#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#4)]  
   
-#### VSTO アドインで作業中のブックを保存するには  
+#### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>To save the active workbook in a VSTO Add-in  
   
-1.  作業中のブックを保存するには <xref:Microsoft.Office.Interop.Excel._Workbook.Save%2A> メソッドを呼び出します。  次のコード例を使用するには、Excel 用 VSTO アドイン プロジェクトの `ThisAddIn` クラスから実行します。  
+1.  Call the <xref:Microsoft.Office.Interop.Excel._Workbook.Save%2A> method to save the active workbook. To use the following code example, run it in the `ThisAddIn` class in a VSTO Add-in project for Excel.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/CS/ThisAddIn.cs#3)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/VB/ThisAddIn.vb#3)]  
+     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#3](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#3)]  [!code-vb[Trin_VstcoreExcelAutomationAddIn#3](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#3)]  
   
-## 新しいパスでブックを保存する  
- 指定したブックを、新しい場所にまたは新しい名前を付けて、そしてオプションでファイル形式、パスワード、アクセス モードなどを指定して保存できます。  
+## <a name="saving-a-workbook-with-a-new-path"></a>Saving a Workbook with a New Path  
+ You can save the specified workbook to a new location or with a new name, optionally specifying a file format, a password, an access mode, and more.  
   
 > [!NOTE]  
->  新しい書式で保存するにはユーザー操作が必要なため、新しいパスでブックを保存する前に、<xref:Microsoft.Office.Interop.Excel._Application.DisplayAlerts%2A> プロパティを **False** に設定する場合があります。  このプロパティを **False** に設定すると、Excel はすべて既定値を使用します。  
+>  You might want to set the <xref:Microsoft.Office.Interop.Excel._Application.DisplayAlerts%2A> property to **False** before saving the workbook with a new path because saving in some formats requires interaction. Setting this property to **False** causes Excel to use all defaults.  
   
-#### ドキュメント レベルのカスタマイズに関連付けられているブックを保存するには  
+#### <a name="to-save-a-workbook-associated-with-a-document-level-customization"></a>To save a workbook associated with a document-level customization  
   
-1.  `ThisWorkbook` クラスの <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> メソッドを呼び出します。  次のコード例を使用するには、`ThisWorkbook` クラスで実行します。  
+1.  Call the <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> method of the `ThisWorkbook` class. To use the following code example, run it in the `ThisWorkbook` class.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#5](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/ThisWorkbook.cs#5)]
-     [!code-vb[Trin_VstcoreExcelAutomation#5](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/ThisWorkbook.vb#5)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#5](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#5)]  [!code-vb[Trin_VstcoreExcelAutomation#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#5)]  
   
-#### VSTO アドインで作業中のブックを保存するには  
+#### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>To save the active workbook in a VSTO Add-in  
   
-1.  作業中のブックを新しいパスに保存するには <xref:Microsoft.Office.Interop.Excel._Workbook.SaveAs%2A> メソッドを呼び出します。  次のコード例を使用するには、Excel 用 VSTO アドイン プロジェクトの `ThisAddIn` クラスから実行します。  
+1.  Call the <xref:Microsoft.Office.Interop.Excel._Workbook.SaveAs%2A> method to save the active workbook to a new path. To use the following code example, run it in the `ThisAddIn` class in a VSTO Add-in project for Excel.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/CS/ThisAddIn.cs#4)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/VB/ThisAddIn.vb#4)]  
+     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#4](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#4)]  [!code-vb[Trin_VstcoreExcelAutomationAddIn#4](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#4)]  
   
-## ブックのコピーを保存する  
- メモリ内の開いているブックを変更しないで、ブックのコピーをファイルに保存することができます。  これは、ブックの場所を変更することがなくバックアップ コピーを作成するときに役立ちます。  
+## <a name="saving-a-copy-of-the-workbook"></a>Saving a Copy of the Workbook  
+ You can save a copy of the workbook to a file without modifying the open workbook in memory. This is useful when you want to create a backup copy without modifying the location of the workbook.  
   
-#### ドキュメント レベルのカスタマイズに関連付けられているブックを保存するには  
+#### <a name="to-save-a-workbook-associated-with-a-document-level-customization"></a>To save a workbook associated with a document-level customization  
   
-1.  `ThisWorkbook` クラスの <xref:Microsoft.Office.Tools.Excel.Workbook.SaveCopyAs%2A> メソッドを呼び出します。  次のコード例を使用するには、`ThisWorkbook` クラスで実行します。  
+1.  Call the <xref:Microsoft.Office.Tools.Excel.Workbook.SaveCopyAs%2A> method of the `ThisWorkbook` class. To use the following code example, run it in the `ThisWorkbook` class.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/ThisWorkbook.cs#6)]
-     [!code-vb[Trin_VstcoreExcelAutomation#6](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/ThisWorkbook.vb#6)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#6](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#6)]  [!code-vb[Trin_VstcoreExcelAutomation#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#6)]  
   
-#### VSTO アドインで作業中のブックを保存するには  
+#### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>To save the active workbook in a VSTO Add-in  
   
-1.  作業中のブックのコピーを保存するには <xref:Microsoft.Office.Interop.Excel._Workbook.SaveCopyAs%2A> メソッドを呼び出します。  次のコード例を使用するには、Excel 用 VSTO アドイン プロジェクトの `ThisAddIn` クラスから実行します。  
+1.  Call the <xref:Microsoft.Office.Interop.Excel._Workbook.SaveCopyAs%2A> method to save a copy of the active workbook. To use the following code example, run it in the `ThisAddIn` class in a VSTO Add-in project for Excel.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#5](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/CS/ThisAddIn.cs#5)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#5](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomationAddIn/VB/ThisAddIn.vb#5)]  
+     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#5](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#5)]  [!code-vb[Trin_VstcoreExcelAutomationAddIn#5](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#5)]  
   
-## 信頼性の高いプログラミング  
- ブックを保存またはコピーするメソッドのいずれかを対話的にキャンセルすると、コード内で実行時エラーが発生します。  たとえば、プロシージャが <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> メソッドを呼び出した際に Excel のプロンプトを無効にしなかった場合、プロンプトが表示されたときにユーザーが **\[キャンセル\]** をクリックすると、Excel で実行時エラーが発生します。  
+## <a name="robust-programming"></a>Robust Programming  
+ Interactively canceling any of the methods that save or copy the workbook raises a run-time error in your code. For example, if your procedure calls the <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> method but does not disable prompts from Excel, and your user clicks **Cancel** when prompted, Excel raises a run-time error.  
   
-## 参照  
- [ブックの操作](../vsto/working-with-workbooks.md)   
- [Workbook ホスト項目](../vsto/workbook-host-item.md)   
- [方法: プログラムによってブックを閉じる](../vsto/how-to-programmatically-close-workbooks.md)   
- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)   
- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Workbooks](../vsto/working-with-workbooks.md)   
+ [Workbook Host Item](../vsto/workbook-host-item.md)   
+ [How to: Programmatically Close Workbooks](../vsto/how-to-programmatically-close-workbooks.md)   
+ [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)  
   
   

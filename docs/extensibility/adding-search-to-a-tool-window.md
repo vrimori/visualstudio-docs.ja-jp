@@ -1,5 +1,5 @@
 ---
-title: "ツール ウィンドウに検索を追加する |Microsoft ドキュメント"
+title: Adding Search to a Tool Window | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,50 +28,51 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: bca8c87d4f7d89d491fab13e1a511febce81d3d8
-ms.openlocfilehash: 845bbc5c34280f7ceafcaa3d763065f6d73388fe
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: ecaa03757b5b40e92d343fa9328f9d3f9e584ba3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="adding-search-to-a-tool-window"></a>ツール ウィンドウに検索を追加します。
-作成または拡張機能のツール ウィンドウを更新する場合は、Visual Studio で他の場所に表示される同じ検索機能を追加できます。 この機能には、次の機能があります。  
+# <a name="adding-search-to-a-tool-window"></a>Adding Search to a Tool Window
+When you create or update a tool window in your extension, you can add the same search functionality that appears elsewhere in Visual Studio. This functionality includes the following features:  
   
--   常に、ツールバーのカスタムの領域にある検索ボックス。  
+-   A search box that's always located in a custom area of the toolbar.  
   
--   検索ボックス自体が込められている進行状況インジケーター。  
+-   A progress indicator that's overlaid on the search box itself.  
   
--   (クイック検索) の各文字を入力するとすぐに、または Enter キー (オンデマンドでの検索) を選択した後にのみ、結果を表示する権限です。  
+-   The ability to show results as soon as you enter each character (instant search) or only after you choose the Enter key (search on demand).  
   
--   検索する最後の用語を示す一覧です。  
+-   A list that shows terms for which you've searched most recently.  
   
--   特定のフィールド、または検索対象の関連で検索をフィルター処理する機能。  
+-   The ability to filter searches by specific fields or aspects of the search targets.  
   
- このチュートリアルでは、次のタスクを実行する方法について説明します。  
+ By following this walkthrough, you'll learn how to perform the following tasks:  
   
-1.  VSPackage プロジェクトを作成します。  
+1.  Create a VSPackage project.  
   
-2.  読み取り専用テキスト ボックスにユーザー コントロールを含むツール ウィンドウを作成します。  
+2.  Create a tool window that contains a UserControl with a read-only TextBox.  
   
-3.  ツール ウィンドウに検索ボックスを追加します。  
+3.  Add a search box to the tool window.  
   
-4.  検索の実装を追加します。  
+4.  Add the search implementation.  
   
-5.  クイック検索と進行状況バーの表示を有効にします。  
+5.  Enable instant search and display of a progress bar.  
   
-6.  追加、**大文字小文字を**オプション。  
+6.  Add a **Match case** option.  
   
-7.  追加、**偶数行のみを検索**フィルター。  
+7.  Add a **Search even lines only** filter.  
   
-## <a name="to-create-a-vsix-project"></a>VSIX プロジェクトを作成するには  
+## <a name="to-create-a-vsix-project"></a>To create a VSIX project  
   
-1.  という名前の VSIX プロジェクトを作成する`TestToolWindowSearch`という名前のツール ウィンドウで**TestSearch**します。 この操作の説明を必要がある場合は、次を参照してください。[ツール ウィンドウで、拡張機能を作成する](../extensibility/creating-an-extension-with-a-tool-window.md)です。  
+1.  Create a VSIX project named `TestToolWindowSearch` with a tool window named **TestSearch**. If you need help doing this, see [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-## <a name="to-create-a-tool-window"></a>ツール ウィンドウを作成するには  
+## <a name="to-create-a-tool-window"></a>To create a tool window  
   
-1.  `TestToolWindowSearch`プロジェクト TestSearchControl.xaml ファイルを開きます。  
+1.  In the `TestToolWindowSearch` project, open the TestSearchControl.xaml file.  
   
-2.  既存`<StackPanel>`読み取り専用の追加は、次のブロックとブロック<xref:System.Windows.Controls.TextBox>に、<xref:System.Windows.Controls.UserControl>ツール ウィンドウ</xref:System.Windows.Controls.UserControl></xref:System.Windows.Controls.TextBox>。  
+2.  Replace the existing `<StackPanel>` block with the following block, which adds a read-only <xref:System.Windows.Controls.TextBox> to the <xref:System.Windows.Controls.UserControl> in the tool window.  
   
     ```xaml  
     <StackPanel Orientation="Vertical">  
@@ -82,19 +83,19 @@ ms.lasthandoff: 02/22/2017
     </StackPanel>  
     ```  
   
-3.  TestSearchControl.xaml.cs ファイルに次のコードを追加ステートメントを使用します。  
+3.  In the TestSearchControl.xaml.cs file, add the following using statement:  
   
-    ```c#  
+    ```csharp  
     using System.Text;  
     ```  
   
-4.  削除、`button1_Click()`メソッドです。  
+4.  Remove the `button1_Click()` method.  
   
-     **TestSearchControl**クラスを次のコードを追加します。  
+     In the **TestSearchControl** class, add the following code.  
   
-     このコードによって追加パブリック<xref:System.Windows.Controls.TextBox>という名前のプロパティ**SearchResultsTextBox**とという名前のパブリック文字列プロパティ**SearchContent**</xref:System.Windows.Controls.TextBox> 。 コンス トラクターで SearchResultsTextBox がテキスト ボックスに設定されているし、SearchContent は改行で区切られた一連の文字列に初期化します。 テキスト ボックスの内容は、文字列のセットにも初期化されます。  
+     This code adds a public <xref:System.Windows.Controls.TextBox> property  named **SearchResultsTextBox** and a public string property named **SearchContent**. In the constructor, SearchResultsTextBox is set to the text box, and SearchContent is initialized to a newline-delimited set of strings. The content of the text box is also initialized to the set of strings.  
   
-    ```c#  
+    ```csharp  
     public partial class TestSearchControl : UserControl  
     {  
         public TextBox SearchResultsTextBox { get; set; }  
@@ -125,40 +126,39 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-     [!code-cs[ToolWindowSearch&1;](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs) ] 
-     [!code-vb [ToolWindowSearch&1;](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]  
+     [!code-csharp[ToolWindowSearch#1](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs)]  [!code-vb[ToolWindowSearch#1](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]  
   
-5.  プロジェクトをビルドし、デバッグを開始します。 Visual Studio の実験用インスタンスが表示されます。  
+5.  Build the project and start debugging. The experimental instance of Visual Studio appears.  
   
-6.  メニュー バー**ビュー**、**その他のウィンドウ**、 **TestSearch**します。  
+6.  On the menu bar, choose **View**, **Other Windows**, **TestSearch**.  
   
-     ツール ウィンドウが表示されますが、検索コントロールがまだ表示されません。  
+     The tool window appears, but the search control doesn't yet appear.  
   
-## <a name="to-add-a-search-box-to-the-tool-window"></a>ツール ウィンドウに検索ボックスを追加するには  
+## <a name="to-add-a-search-box-to-the-tool-window"></a>To add a search box to the tool window  
   
-1.  TestSearch.cs ファイルで次のコードを追加、`TestSearch`クラスです。 コードは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A>プロパティ get アクセサーが返されるように`true`</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A>。  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. The code overrides the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> property so that the get accessor returns `true`.  
   
-     検索を有効にするをオーバーライドする必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A>プロパティ</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A>。 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>クラスが実装する<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch>し検索では、既定の実装を提供します</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch></xref:Microsoft.VisualStudio.Shell.ToolWindowPane>。  
+     To enable search, you must override the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> property. The <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> class implements <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> and provides a default implementation that doesn't enable search.  
   
-    ```c#  
+    ```csharp  
     public override bool SearchEnabled  
     {  
         get { return true; }  
     }  
     ```  
   
-2.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
+2.  Build the project and start debugging. The experimental instance appears.  
   
-3.  Visual Studio の実験用インスタンスで開きます**TestSearch**します。  
+3.  In the experimental instance of Visual Studio, open **TestSearch**.  
   
-     ツール ウィンドウの上部にある検索コントロールが表示されます、**検索**透かしとガラス虫眼鏡のアイコン。 ただし、検索では、検索のプロセスが実装されていないために機能 いません。  
+     At the top of the tool window, a search control appears with a **Search** watermark and a magnifying-glass icon. However, search doesn't work yet because the search process hasn't been implemented.  
   
-## <a name="to-add-the-search-implementation"></a>検索の実装を追加するには  
- 検索を有効にすると、<xref:Microsoft.VisualStudio.Shell.ToolWindowPane>前の手順で、[ツール] ウィンドウが検索ホストを作成してください</xref:Microsoft.VisualStudio.Shell.ToolWindowPane>。 このホストを設定し、常にバック グラウンド スレッドで実行する検索のプロセスを管理します。 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>クラスを検索の search ホストと、設定の作成を管理する、のみ検索タスクを作成し、search メソッドを提供する必要があります</xref:Microsoft.VisualStudio.Shell.ToolWindowPane>。 検索処理がバック グラウンド スレッドで発生し、ツール ウィンドウ コントロールへの呼び出しが UI スレッドで発生します。 したがって、使用する必要があります、<xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>方法にコントロールを扱うで行ったすべての呼び出しを管理する</xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>。  
+## <a name="to-add-the-search-implementation"></a>To add the search implementation  
+ When you enable search on a <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>, as in the previous procedure, the tool window creates a search host. This host sets up and manages search processes, which always occur on a background thread. Because the <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> class manages the creation of the search host and the setting up of the search, you need only create a search task and provide the search method. The search process occurs on a background thread, and calls to the tool window control occur on the UI thread. Therefore, you must use the <xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A> method to manage any calls that you make in dealing with the control.  
   
-1.  TestSearch.cs ファイルに次のコードを追加`using`ステートメント。  
+1.  In the TestSearch.cs file, add the following `using` statements:  
   
-    ```c#  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using System.Runtime.InteropServices;  
@@ -171,17 +171,17 @@ ms.lasthandoff: 02/22/2017
     using Microsoft.VisualStudio.Shell.Interop;  
     ```  
   
-2.  `TestSearch`クラスを次のコードは、次の操作を追加します。  
+2.  In the `TestSearch` class, add the following code, which performs the following actions:  
   
-    -   上書き、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch>検索タスクを作成する方法</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch>。  
+    -   Overrides the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> method to create a search task.  
   
-    -   上書き、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A>テキスト ボックスの状態を復元する方法</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A>。 このメソッドは、ユーザーを検索タスクと、ユーザーが設定または設定オプションやフィルターが解除されます。 両方とも<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A>UI スレッドで呼び出されます</xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A></xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A>。 テキスト ボックスにアクセスする必要はありませんので、<xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>メソッド</xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A>。  
+    -   Overrides the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> method to restore the state of the text box. This method is called when a user cancels a search task and when a user sets or unsets options or filters. Both <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> and <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> are called on the UI thread. Therefore, you don't need to access the text box by means of the <xref:Microsoft.VisualStudio.Shell.ThreadHelper.Invoke%2A> method.  
   
-    -   という名前のクラスを作成できます`TestSearchTask` <xref:Microsoft.VisualStudio.Shell.VsSearchTask> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask>.</xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask>の既定の実装を提供する</xref:Microsoft.VisualStudio.Shell.VsSearchTask>から継承します。  
+    -   Creates a class that's named `TestSearchTask` that inherits from <xref:Microsoft.VisualStudio.Shell.VsSearchTask>, which provides a default implementation of <xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask>.  
   
-         `TestSearchTask`、コンス トラクターは、ツール ウィンドウを参照するプライベート フィールドを設定します。 オーバーライドする search メソッドを提供する、<xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A>と<xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A>メソッド</xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A></xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A>。 <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A>メソッドは、検索処理を実装する</xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A>。 このプロセスには、検索を実行する、テキスト ボックスに検索結果が表示および検索が完了したことを報告するには、このメソッドの基本クラス実装の呼び出しが含まれています。  
+         In `TestSearchTask`, the constructor sets a private field that references the tool window. To provide the search method, you override the <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> and <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A> methods. The <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> method is where you implement the search process. This process includes performing the search, displaying the search results in the text box, and calling the base class implementation of this method to report that the search is complete.  
   
-    ```c#  
+    ```csharp  
     public override IVsSearchTask CreateSearch(uint dwCookie, IVsSearchQuery pSearchQuery, IVsSearchCallback pSearchCallback)  
     {  
         if (pSearchQuery == null || pSearchCallback == null)  
@@ -276,20 +276,20 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-3.  次の手順を実行して、検索の実装をテストします。  
+3.  Test your search implementation by performing the following steps:  
   
-    1.  プロジェクトをリビルドし、デバッグを開始します。  
+    1.  Rebuild the project and start debugging.  
   
-    2.  Visual Studio の実験用インスタンスのツール ウィンドウをもう一度開く検索 ウィンドウに検索テキストを入力し、enter キーを押します。  
+    2.  In the experimental instance of Visual Studio, open the tool window again, enter some search text in the search window, and click ENTER.  
   
-         正しい結果が表示されます。  
+         The correct results should appear.  
   
-## <a name="to-customize-the-search-behavior"></a>検索の動作をカスタマイズするには  
- 検索の設定を変更すると、検索コントロールの表示方法と、検索の実行方法のさまざまな変更を行うことができます。 たとえば、ウォーターマーク (検索ボックスに表示される既定のテキスト)、最小値と検索コントロールの幅の最大値および進行状況バーを表示するかどうかを変更できます。 (オンデマンドまたはクイック検索の場合) に表示される検索結果を起動し、最近検索した語句の一覧を表示するかどうかの時点を変更することもできます。 <xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource>クラス</xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource>の設定の完全な一覧を見つけることができます。  
+## <a name="to-customize-the-search-behavior"></a>To customize the search behavior  
+ By changing the search settings, you can make a variety of changes in how the search control appears and how the search is carried out. For example, you can change the watermark (the default text that appears in the search box), the minimum and maximum width of the search control, and whether to show a progress bar. You can also change the point at which search results start to appear (on demand or instant search) and whether to show a list of terms for which you recently searched. You can find the complete list of settings in the <xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource> class.  
   
-1.  TestSearch.cs ファイルで次のコードを追加、`TestSearch`クラスです。 このコードは、オンデマンドで検索 (つまり、ユーザー入力 をクリックする必要はありません) ではなくクイック検索を有効します。 コードは、`ProvideSearchSettings`メソッドで、`TestSearch`クラスで、既定の設定を変更する必要があります。  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. This code enables instant search instead of on-demand search (meaning that the user doesn't have to click ENTER). The code overrides the `ProvideSearchSettings` method in the `TestSearch` class, which is necessary to change the default settings.  
   
-    ```c#  
+    ```csharp  
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)  
     {  
         Utilities.SetValue(pSearchSettings,   
@@ -297,13 +297,13 @@ ms.lasthandoff: 02/22/2017
             (uint)VSSEARCHSTARTTYPE.SST_INSTANT);}  
     ```  
   
-2.  新しいテスト ソリューションをリビルドして、デバッガーを再起動して設定します。  
+2.  Test the new setting by rebuilding the solution and restarting the debugger.  
   
-     検索結果は表示たびに、検索ボックスに文字を入力してください。  
+     Search results appear every time that you enter a character in the search box.  
   
-3.  `ProvideSearchSettings`メソッド、進行状況バーを表示するように、次の行を追加します。  
+3.  In the `ProvideSearchSettings` method, add the following line, which enables the display of a progress bar.  
   
-    ```c#  
+    ```csharp  
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)  
     {  
         Utilities.SetValue(pSearchSettings,   
@@ -315,28 +315,28 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-     表示される進行状況バーで、進行状況を報告する必要があります。 進行状況を報告するために次のコードをコメント解除、`OnStartSearch`のメソッド、`TestSearchTask`クラス。  
+     For the progress bar to appear, the progress must be reported. To report the progress, uncomment the following code in the `OnStartSearch` method of the `TestSearchTask` class:  
   
-    ```c#  
+    ```csharp  
     SearchCallback.ReportProgress(this, progress++, (uint)contentArr.GetLength(0));  
     ```  
   
-4.  次の行のコメントを解除する進行状況を処理するための十分な速度の遅いバーが表示されて、`OnStartSearch`のメソッド、`TestSearchTask`クラス。  
+4.  To slow processing enough that the progress bar is visible, uncomment the following line in the `OnStartSearch` method of the `TestSearchTask` class:  
   
-    ```c#  
+    ```csharp  
     System.Threading.Thread.Sleep(100);  
     ```  
   
-5.  ソリューションをリビルドして、debugb を開始して、新しい設定をテストします。  
+5.  Test the new settings by rebuilding the solution and starting to debugb.  
   
-     進行状況バー、検索ウィンドウとして表示されます (検索テキスト ボックスの下の青い線) たびに検索を実行することです。  
+     The progress bar appears in the search window (as a blue line below the search text box) every time that you perform a search.  
   
-## <a name="to-enable-users-to-refine-their-searches"></a>検索を絞り込むのにを有効にするには  
- オプションにより、検索を絞り込むようにユーザーができる**大文字小文字を**または**単語単位**します。 オプションは、チェック ボックス、またはボタンとして表示するコマンドとして表示される、ブール値で指定できます。 このチュートリアルでは、ブール型のオプションを作成します。  
+## <a name="to-enable-users-to-refine-their-searches"></a>To enable users to refine their searches  
+ You can allow users to refine their searches by means of options such as **Match case** or **Match whole word**. Options can be boolean, which appear as check boxes, or commands, which appear as buttons. For this walkthrough, you'll create a boolean option.  
   
-1.  TestSearch.cs ファイルで次のコードを追加、`TestSearch`クラスです。 コードは、`SearchOptionsEnum`メソッドで、指定したオプションがオンかオフかどうかを検出するために検索を実装できるようにします。 内のコード`SearchOptionsEnum`大文字小文字にするためのオプションを追加、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions>列挙子</xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions>。 大文字小文字をするためのオプションが利用可能にもとして、`MatchCaseOption`プロパティです。  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. The code overrides the `SearchOptionsEnum` method, which allows the search implementation to detect whether a given option is on or off. The code in `SearchOptionsEnum` adds an option to match case to an <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> enumerator. The option to match case is also made available as the `MatchCaseOption` property.  
   
-    ```c#  
+    ```csharp  
     private IVsEnumWindowSearchOptions m_optionsEnum;  
     public override IVsEnumWindowSearchOptions SearchOptionsEnum  
     {  
@@ -368,9 +368,9 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-2.  `TestSearchTask`クラスで matchCase 行をコメント解除、`OnStartSearch`メソッド。  
+2.  In the `TestSearchTask` class, uncomment matchCase line in the `OnStartSearch` method:  
   
-    ```c#  
+    ```csharp  
     private IVsEnumWindowSearchOptions m_optionsEnum;  
     public override IVsEnumWindowSearchOptions SearchOptionsEnum  
     {  
@@ -402,22 +402,22 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-3.  オプションをテストします。  
+3.  Test the option:  
   
-    1.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
+    1.  Build the project and start debugging. The experimental instance appears.  
   
-    2.  ツール ウィンドウで、テキスト ボックスの右側にある下向き矢印を選択します。  
+    2.  In the tool window, choose the Down arrow on the right side of the text box.  
   
-         **大文字** チェック ボックスが表示されます。  
+         The **Match case** check box appears.  
   
-    3.  選択、**大文字小文字を**チェック ボックスをオンし、いくつかの検索を実行します。  
+    3.  Select the **Match case** check box, and then perform some searches.  
   
-## <a name="to-add-a-search-filter"></a>検索フィルターを追加するには  
- 許可をユーザーに一連の検索対象を絞り込む検索フィルターを追加することができます。 たとえばにそれらが最近変更された日付とそのファイル名拡張子によってファイル エクスプ ローラーでファイルをフィルター処理できます。 このチュートリアルでは、偶数行だけのフィルターを追加します。 そのフィルターを選択すると、検索のホストは、検索クエリを指定する文字列を追加します。 Search メソッド内のこれらの文字列を識別し、検索対象をそれに応じてフィルター処理します。  
+## <a name="to-add-a-search-filter"></a>To add a search filter  
+ You can add search filters that allow users to refine the set of search targets. For example, you can filter files in File Explorer by the dates on which they were modified most recently and their file name extensions. In this walkthrough, you'll add a filter for even lines only. When the user chooses that filter, the search host adds the strings that you specify to the search query. You can then identify these strings inside your search method and filter the search targets accordingly.  
   
-1.  TestSearch.cs ファイルで次のコードを追加、`TestSearch`クラスです。 コードを実装して`SearchFiltersEnum`追加することで、<xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter>偶数行のみが表示されるように、検索結果をフィルタ リングするを指定します</xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter>。  
+1.  In the TestSearch.cs file, add the following code to the `TestSearch` class. The code implements `SearchFiltersEnum` by adding a <xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter> that specifies to filter the search results so that only even lines appear.  
   
-    ```c#  
+    ```csharp  
     public override IVsEnumWindowSearchFilters SearchFiltersEnum  
     {  
         get  
@@ -430,11 +430,11 @@ ms.lasthandoff: 02/22/2017
   
     ```  
   
-     検索コントロールに検索フィルターが表示されます`Search even lines only`します。 ユーザーが、文字列、フィルターを選択すると`lines:"even"`検索ボックスに表示されます。 他の検索条件でフィルターと同時に表示されます。 検索文字列が、フィルターの前に、フィルター、またはその両方の後に表示されます。  
+     Now the search control displays the search filter `Search even lines only`. When the user chooses the filter, the string `lines:"even"` appears in the search box. Other search criteria can appear at the same time as the filter. Search strings may appear before the filter, after the filter, or both.  
   
-2.  TestSearch.cs ファイルで次のメソッドを追加、`TestSearchTask`では、クラス、`TestSearch`クラスです。 これらのメソッドのサポート、`OnStartSearch`メソッドで、次の手順で変更します。  
+2.  In the TestSearch.cs file, add the following methods to the `TestSearchTask` class, which is in the `TestSearch` class. These methods support the `OnStartSearch` method, which you'll modify in the next step.  
   
-    ```c#  
+    ```csharp  
     private string RemoveFromString(string origString, string stringToRemove)  
     {  
         int index = origString.IndexOf(stringToRemove);  
@@ -460,9 +460,9 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-3.  `TestSearchTask`クラス、更新、`OnStartSearch`メソッドを次のコードです。 この変更は、フィルターをサポートするためにコードを更新します。  
+3.  In the `TestSearchTask` class, update the `OnStartSearch` method with the following code. This change updates the code to support the filter.  
   
-    ```c#  
+    ```csharp  
     protected override void OnStartSearch()  
     {  
         // Use the original content of the text box as the target of the search.   
@@ -539,32 +539,32 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-4.  コードをテストします。  
+4.  Test your code.  
   
-5.  プロジェクトをビルドし、デバッグを開始します。 Visual Studio の実験用インスタンスのツール ウィンドウを開き検索コントロール下方向キーを選択します。  
+5.  Build the project and start debugging. In the experimental instance of Visual Studio, open the tool window, and then choose the Down arrow on the search control.  
   
-     **大文字小文字を** チェック ボックスおよび**偶数行のみを検索**フィルターが表示されます。  
+     The **Match case** check box and the **Search even lines only** filter appear.  
   
-6.  フィルターを選択します。  
+6.  Choose the filter.  
   
-     検索ボックスには**行:「偶数」**、され、次の結果が表示されます。  
+     The search box contains **lines:"even"**, and the following results appear:  
   
-     適切な&2;  
+     2 good  
   
-     適切では&4;  
+     4 Good  
   
-     6 goodbye  
+     6 Goodbye  
   
-7.  削除`lines:"even"`、検索ボックスから選択、**大文字小文字を**チェック ボックスをオンにし、入力`g`検索ボックスにします。  
+7.  Delete `lines:"even"` from the search box, select the **Match case** check box, and then enter `g` in the search box.  
   
-     次の結果が表示されます。  
+     The following results appear:  
   
-     1 します。  
+     1 go  
   
-     適切な&2;  
+     2 good  
   
-     5"goodbye"  
+     5 goodbye  
   
-8.  検索ボックスの右側にある X を選択します。  
+8.  Choose the X on the right side of the search box.  
   
-     検索をオフにすると、され、元の内容が表示されます。 ただし、**大文字小文字を** チェック ボックスが選択されたままです。
+     The search is cleared, and the original contents appear. However, the **Match case** check box is still selected.

@@ -37,12 +37,10 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/24/2017
 
 ---
-# プロジェクトのプロパティのリファレンス
-<a id="project-properties-reference" class="xliff"></a>
+# <a name="project-properties-reference"></a>プロジェクトのプロパティのリファレンス
 プロジェクトのプロパティを構成およびカスタマイズする方法について詳しく学習します。  
   
-## プロジェクト プロパティ ページ
-<a id="project-properties-pages" class="xliff"></a>  
+## <a name="project-properties-pages"></a>プロジェクト プロパティ ページ  
   
 |タイトル|説明|  
 |-----------|-----------------|  
@@ -62,6 +60,5 @@ ms.lasthandoff: 05/24/2017
 |||  
 |||  
   
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
  [ソリューションおよびプロジェクト](../../ide/solutions-and-projects-in-visual-studio.md)

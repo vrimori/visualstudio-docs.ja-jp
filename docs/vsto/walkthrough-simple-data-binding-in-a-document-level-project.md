@@ -1,201 +1,201 @@
 ---
-title: "チュートリアル : ドキュメント レベルのプロジェクトでの単純データ バインド"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "データ [Visual Studio での Office 開発], バインド (データを)"
-  - "データ バインド [Visual Studio での Office 開発], ワークシートのセルをデータベース フィールドに"
-  - "データベース フィールド [Visual Studio での Office 開発]"
-  - "単純データ バインド [Visual Studio での Office 開発]"
-  - "ワークシート [Visual Studio での Office 開発], バインディング (ワークシートのセルをデータベース フィールドに)"
+title: 'Walkthrough: Simple Data Binding in a Document-Level Project | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data binding [Office development in Visual Studio], worksheet cell to Database field
+- worksheets [Office development in Visual Studio], binding worksheet cell to Database field
+- Database field [Office development in Visual Studio]
+- data [Office development in Visual Studio], binding data
+- simple data binding [Office development in Visual Studio]
 ms.assetid: 6b8fd638-af13-4ea1-b1c0-2763e2d8ae23
 caps.latest.revision: 58
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 57
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: ffe9f48755d77ad09430b08391e1aee10089c973
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : ドキュメント レベルのプロジェクトでの単純データ バインド
-  このチュートリアルでは、ドキュメント レベルのプロジェクトでのデータ バインディングの基本事項について説明します。  SQL Server データベース内の単一のデータ フィールドを Microsoft Office Excel 内の名前付き範囲にバインドする方法について説明します。  テーブル内のすべてのレコードをスクロールできるようにするコントロールを追加する方法も説明します。  
+# <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>Walkthrough: Simple Data Binding in a Document-Level Project
+  This walkthrough demonstrates the basics of data binding in a document-level project. A single data field in a SQL Server database is bound to a named range in Microsoft Office Excel. The walkthrough also shows how to add controls that enable you to scroll through all the records in the table.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   Excel プロジェクトのデータ ソースの作成  
+-   Creating a data source for an Excel project.  
   
--   ワークシートへのコントロールの追加  
+-   Adding controls to a worksheet.  
   
--   データベース レコード間のスクロール  
+-   Scrolling through database records.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] または [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]。  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
--   Northwind SQL Server サンプル データベースがインストールされたサーバーへのアクセス  
+-   Access to a server with the Northwind SQL Server sample database.  
   
--   SQL Server データベースの読み込み\/書き込みアクセス許可  
+-   Permissions to read from and write to the SQL Server database.  
   
-## 新規プロジェクトの作成  
- この手順では、Excel ブックのプロジェクトを作成します。  
+## <a name="creating-a-new-project"></a>Creating a New Project  
+ In this step, you will create an Excel workbook project.  
   
-#### 新しいプロジェクトを作成するには  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  Visual Basic または C\# を使用して、"**My Simple Data Binding**" という名前の Excel ブック プロジェクトを作成します。  **\[新規ドキュメントの作成\]** が選択されていることを確認します。  詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+1.  Create an Excel workbook project with the name **My Simple Data Binding**, using either Visual Basic or C#. Make sure that **Create a new document** is selected. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
- 新しい Excel ブックが Visual Studio のデザイナーで開き、My Simple Data Binding プロジェクトが**ソリューション エクスプローラー**に追加されます。  
+ Visual Studio opens the new Excel workbook in the designer and adds the **My Simple Data Binding** project to **Solution Explorer**.  
   
-## データ ソースの作成  
- **\[データ ソース\]** ウィンドウを使用して型指定されたデータセットをプロジェクトに追加します。  
+## <a name="creating-the-data-source"></a>Creating the Data Source  
+ Use the **Data Sources** window to add a typed dataset to your project.  
   
-#### データ ソースを作成するには  
+#### <a name="to-create-the-data-source"></a>To create the data source  
   
-1.  **\[データ ソース\]** のウィンドウが表示されない場合は、これを、**\[ビュー\]**、**\[その他のウィンドウ\]** を選択する、メニュー バーの **\[データ ソース\]** 表示されます。  
+1.  If the **Data Sources** window is not visible, display it by, on the menu bar, choosing **View**, **Other Windows**, **Data Sources**.  
   
-2.  **\[データ ソース構成ウィザード\]** を開始するには **\[新しいデータ ソースの追加\]** を選択します。  
+2.  Choose **Add New Data Source** to start the **Data Source Configuration Wizard**.  
   
-3.  **\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
+3.  Select **Database** and then click **Next**.  
   
-4.  Northwind サンプル SQL Server データベースへのデータ接続を選択するか、または **\[新しい接続\]** をクリックして新しい接続を追加します。  
+4.  Select a data connection to the Northwind sample SQL Server database, or add a new connection using the **New Connection** button.  
   
-5.  接続を選択または作成した後、**\[次へ\]** をクリックします。  
+5.  After a connection has been selected or created, click **Next**.  
   
-6.  接続を保存するオプションがオンになっている場合はオフにし、**\[次へ\]** をクリックします。  
+6.  Clear the option to save the connection if it is selected, and then click **Next**.  
   
-7.  **\[データベース オブジェクト\]** ウィンドウの **\[テーブル\]** ノードを展開します。  
+7.  Expand the **Tables** node in the **Database objects** window.  
   
-8.  **\[Customers\]** テーブルの横にあるチェック ボックスをオンにします。  
+8.  Select the check box next to the **Customers** table.  
   
-9. \[完了\] をクリックします。  
+9. Click **Finish**.  
   
- **\[Customers\]** テーブルが **\[データ ソース\]** ウィンドウに追加されます。  さらに、**ソリューション エクスプローラー**に表示されるプロジェクトに、型指定されたデータセットも追加されます。  
+ The wizard adds the **Customers** table to the **Data Sources** window. It also adds a typed dataset to your project that is visible in **Solution Explorer**.  
   
-## ワークシートへのコントロールの追加  
- このチュートリアルでは、2 つの名前付き範囲と 4 つのボタンが最初のワークシートに必要です。  最初に、2 つの名前付き範囲を **\[データ ソース\]** ウィンドウから追加して自動的にデータ ソースにバインドされるようにします。  次に、**ツールボックス**からボタンを追加します。  
+## <a name="adding-controls-to-the-worksheet"></a>Adding Controls to the Worksheet  
+ For this walkthrough, you need two named ranges and four buttons on the first worksheet. First, add the two named ranges from the **Data Sources** window so that they are automatically bound to the data source. Next, add the buttons from the **Toolbox**.  
   
-#### 2 つの名前付き範囲を追加するには  
+#### <a name="to-add-two-named-ranges"></a>To add two named ranges  
   
-1.  **\[My Simple Data Binding.xlsx\]** ブックが Visual Studio のデザイナーで開いていると、表示 **\[Sheet1\]** ことを確認します。  
+1.  Verify that the **My Simple Data Binding.xlsx** workbook is open in the Visual Studio designer, with **Sheet1** displayed.  
   
-2.  **\[データ ソース\]** ウィンドウを開き、**\[Customers\]** ノードを展開します。  
+2.  Open the **Data Sources** window and expand the **Customers** node.  
   
-3.  **\[CompanyName\]** 列を選択し、表示されるドロップダウン矢印をクリックします。  
+3.  Select the **CompanyName** column, and then click the drop-down arrow that appears.  
   
-4.  ドロップダウン リストの **NamedRange** を選択し、**CompanyName** 列をセル **A1** にドラッグします。  
+4.  Select **NamedRange** in the drop-down list, and then drag the **CompanyName** column to cell **A1**.  
   
-     `companyNameNamedRange` という <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールがセル **A1** に作成されます。  それと同時に、`customersBindingSource` という <xref:System.Windows.Forms.BindingSource>、テーブル アダプター、および <xref:System.Data.DataSet> インスタンスがプロジェクトに追加されます。  コントロールは <xref:System.Windows.Forms.BindingSource> にバインドされ、さらにこれが <xref:System.Data.DataSet> インスタンスにバインドされます。  
+     A <xref:Microsoft.Office.Tools.Excel.NamedRange> control named `companyNameNamedRange` is created in cell **A1**. At the same time, a <xref:System.Windows.Forms.BindingSource> named `customersBindingSource`, a table adapter, and a <xref:System.Data.DataSet> instance are added to the project. The control is bound to the <xref:System.Windows.Forms.BindingSource>, which in turn is bound to the <xref:System.Data.DataSet> instance.  
   
-5.  **\[データ ソース\]** ウィンドウの **\[CustomerID\]** 列を選択し、表示されるドロップダウン矢印をクリックします。  
+5.  Select the **CustomerID** column in the **Data Sources** window, and then click the drop-down arrow that appears.  
   
-6.  ドロップダウン リストの **\[NamedRange\]** を選択し、**\[CustomerID\]** 列をセル **B1** にドラッグします。  
+6.  Click **NamedRange** in the drop-down list, and then drag the **CustomerID** column to cell **B1**.  
   
-7.  `customerIDNamedRange` という別の <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールがセル **B1** 内に作成され、<xref:System.Windows.Forms.BindingSource> にバインドされます。  
+7.  Another <xref:Microsoft.Office.Tools.Excel.NamedRange> control named `customerIDNamedRange` is created in cell **B1**, and bound to the <xref:System.Windows.Forms.BindingSource>.  
   
-#### 4 つのボタンを追加するには  
+#### <a name="to-add-four-buttons"></a>To add four buttons  
   
-1.  **ツールボックス**の **\[コモン コントロール\]** タブからワークシートのセル **A3** へ、<xref:System.Windows.Forms.Button> コントロールをドラッグします。  
+1.  From the **Common Controls** tab of the **Toolbox**, add a <xref:System.Windows.Forms.Button> control to cell **A3** of the worksheet.  
   
-     このボタンは `Button1` という名前になります。  
+     This button is named `Button1`.  
   
-2.  残りの 3 つのボタンを次の順序でセルに追加し、ボタンがこのとおりの名前になるようにします。  
+2.  Add three more buttons to the following cells in this order, so that the names are as shown:  
   
-    |セル|\(Name\)|  
-    |--------|--------------|  
+    |Cell|(Name)|  
+    |----------|--------------|  
     |B3|Button2|  
     |C3|Button3|  
     |D3|Button4|  
   
- 次の手順で、テキストをボタンに追加します。C\# ではイベント ハンドラーを追加します。  
+ The next step is to add text to the buttons, and in C# add event handlers.  
   
-## コントロールの初期化  
- ボタン テキストを設定し、<xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> イベント中にイベント ハンドラーを追加します。  
+## <a name="initializing-the-controls"></a>Initializing the Controls  
+ Set the button text and add event handlers during the <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> event.  
   
-#### コントロールを初期化するには  
+#### <a name="to-initialize-the-controls"></a>To initialize the controls  
   
-1.  **ソリューション エクスプローラー**の **Sheet1.vb** または **Sheet1.cs** を右クリックし、ショートカット メニューの **\[コードの表示\]** をクリックします。  
+1.  In **Solution Explorer**, right-click **Sheet1.vb** or **Sheet1.cs**, and then click **View Code** on the shortcut menu.  
   
-2.  各ボタンにテキストを設定する次のコードを `Sheet1_Startup` メソッドに追加します。  
+2.  Add the following code to the `Sheet1_Startup` method to set the text for each button.  
   
-     [!code-csharp[Trin_VstcoreDataExcel#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet1.cs#2)]
-     [!code-vb[Trin_VstcoreDataExcel#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/VB/Sheet1.vb#2)]  
+     [!code-csharp[Trin_VstcoreDataExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#2)]  [!code-vb[Trin_VstcoreDataExcel#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#2)]  
   
-3.  C\# の場合のみ、ボタン クリック イベントのイベント ハンドラーを `Sheet1_Startup` メソッドに追加します。  
+3.  For C# only, add event handlers for the button click events to the `Sheet1_Startup` method.  
   
-     [!code-csharp[Trin_VstcoreDataExcel#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet1.cs#3)]  
+     [!code-csharp[Trin_VstcoreDataExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#3)]  
   
- <xref:System.Windows.Forms.Control.Click> ボタンのイベントを処理するコードを追加し、ユーザーがレコード間を移動できるようにします。  
+ Now add code to handle the <xref:System.Windows.Forms.Control.Click> events of the buttons so that the user can browse through the records.  
   
-## レコード間をスクロールするためのコードの追加  
- レコード間を移動するためのコードを各ボタンの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに追加します。  
+## <a name="adding-code-to-enable-scrolling-through-the-records"></a>Adding Code to Enable Scrolling Through the Records  
+ Add code to the <xref:System.Windows.Forms.Control.Click> event handler of each button to move through the records.  
   
-#### 最初のレコードに移動するには  
+#### <a name="to-move-to-the-first-record"></a>To move to the first record  
   
-1.  `Button1` ボタンの <xref:System.Windows.Forms.Control.Click> イベントにイベント ハンドラーを追加し、最初のレコードに移動するための次のコードを追加します。  
+1.  Add an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `Button1` button, and add the following code to move to the first record:  
   
-     [!code-csharp[Trin_VstcoreDataExcel#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet1.cs#4)]
-     [!code-vb[Trin_VstcoreDataExcel#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/VB/Sheet1.vb#4)]  
+     [!code-csharp[Trin_VstcoreDataExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#4)]  [!code-vb[Trin_VstcoreDataExcel#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#4)]  
   
-#### 後方のレコードに移動するには  
+#### <a name="to-move-to-the-previous-record"></a>To move to the previous record  
   
-1.  `Button2` ボタンの <xref:System.Windows.Forms.Control.Click> イベントにイベント ハンドラーを追加し、位置を 1 つ後方に移動するための次のコードを追加します。  
+1.  Add an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `Button2` button, and add the following code to move the position back by one:  
   
-     [!code-csharp[Trin_VstcoreDataExcel#5](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet1.cs#5)]
-     [!code-vb[Trin_VstcoreDataExcel#5](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/VB/Sheet1.vb#5)]  
+     [!code-csharp[Trin_VstcoreDataExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#5)]  [!code-vb[Trin_VstcoreDataExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#5)]  
   
-#### 次のレコードに移動するには  
+#### <a name="to-move-to-the-next-record"></a>To move to the next record  
   
-1.  `Button3` ボタンの <xref:System.Windows.Forms.Control.Click> イベントにイベント ハンドラーを追加し、位置を 1 つ前方に移動するための次のコードを追加します。  
+1.  Add an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `Button3` button, and add the following code to advance the position by one:  
   
-     [!code-csharp[Trin_VstcoreDataExcel#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet1.cs#6)]
-     [!code-vb[Trin_VstcoreDataExcel#6](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/VB/Sheet1.vb#6)]  
+     [!code-csharp[Trin_VstcoreDataExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#6)]  [!code-vb[Trin_VstcoreDataExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#6)]  
   
-#### 最後のレコードに移動するには  
+#### <a name="to-move-to-the-last-record"></a>To move to the last record  
   
-1.  `Button4` ボタンの <xref:System.Windows.Forms.Control.Click> イベントにイベント ハンドラーを追加し、最後のレコードに移動するための次のコードを追加します。  
+1.  Add an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `Button4` button, and add the following code to move to the last record:  
   
-     [!code-csharp[Trin_VstcoreDataExcel#7](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet1.cs#7)]
-     [!code-vb[Trin_VstcoreDataExcel#7](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/VB/Sheet1.vb#7)]  
+     [!code-csharp[Trin_VstcoreDataExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#7)]  [!code-vb[Trin_VstcoreDataExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#7)]  
   
-## アプリケーションのテスト  
- ブックをテストして、データベース内のレコード間を移動できることを確認できます。  
+## <a name="testing-the-application"></a>Testing the Application  
+ Now you can test your workbook to make sure that you can browse through the records in the database.  
   
-#### ブックをテストするには  
+#### <a name="to-test-your-workbook"></a>To test your workbook  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  Press F5 to run your project.  
   
-2.  最初のレコードがセル **A1** とセル **B1** に表示されることを確認します。  
+2.  Confirm that the first record appears in cells **A1** and **B1**.  
   
-3.  **\[\>\]** \(`Button3`\) ボタンをクリックし、次のレコードがセル **A1** とセル **B1** に表示されることを確認します。  
+3.  Click the **>** (`Button3`) button and confirm that the next record appears in cell **A1** and **B1**.  
   
-4.  他のスクロール ボタンをクリックして、レコードが適切に変わることを確認します。  
+4.  Click the other scroll buttons to confirm that the record changes as expected.  
   
-## 次の手順  
- このチュートリアルでは、名前付き範囲をデータベース内のフィールドにバインドする際の基本事項について説明します。  次に行う作業は以下のとおりです。  
+## <a name="next-steps"></a>Next Steps  
+ This walkthrough shows the basics of binding a named range to a field in a database. Here are some tasks that might come next:  
   
--   データをキャッシュしてオフラインで使用できるようにします。  詳細については、「[方法 : オフラインで使用するデータまたはサーバー上で使用するデータをキャッシュする](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)」を参照してください。  
+-   Cache the data so that it can be used offline. For more information, see [How to: Cache Data for Use Offline or on a Server](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).  
   
--   セルを 1 つのフィールドではなくテーブル内の複数の列にバインドします。  詳細については、「[チュートリアル : ドキュメント レベルのプロジェクトでの複合データ バインド](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)」を参照してください。  
+-   Bind cells to multiple columns in a table, instead of to one field. For more information, see [Walkthrough: Complex Data Binding in a Document-Level Project](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md).  
   
--   <xref:System.Windows.Forms.BindingNavigator> コントロールを使用してレコード間をスクロールします。  詳細については、「[方法 : Windows フォーム BindingNavigator コントロールを使用してデータ間を移動する](../Topic/How%20to:%20Navigate%20Data%20with%20the%20Windows%20Forms%20BindingNavigator%20Control.md)」を参照してください。  
+-   Use a <xref:System.Windows.Forms.BindingNavigator> control to scroll through the records. For more information, see [How to: Navigate Data with the Windows Forms BindingNavigator Control](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms).  
   
-## 参照  
- [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
- [チュートリアル : ドキュメント レベルのプロジェクトでの複合データ バインド](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)  
+## <a name="see-also"></a>See Also  
+ [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [Data in Office Solutions](../vsto/data-in-office-solutions.md)   
+ [Walkthrough: Complex Data Binding in a Document-Level Project](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)  
   
   

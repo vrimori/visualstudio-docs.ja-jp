@@ -1,65 +1,82 @@
 ---
-title: "REFERENCE_TYPE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "REFERENCE_TYPE"
-helpviewer_keywords: 
-  - "REFERENCE_TYPE 列挙型"
+title: REFERENCE_TYPE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- REFERENCE_TYPE
+helpviewer_keywords:
+- REFERENCE_TYPE enumeration
 ms.assetid: b1ffba10-eb9d-48ba-bf48-6d8b71d6f270
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# REFERENCE_TYPE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: fb9725ad4f75414c74a60cd952e457710591ebb2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-参照型を指定します。  
+---
+# <a name="referencetype"></a>REFERENCE_TYPE
+Specifies the reference type.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-enum enum_REFERENCE_TYPE {   
-   REF_TYPE_WEAK   = 0x0001,  
-   REF_TYPE_STRONG = 0x0002  
+```cpp  
+enum enum_REFERENCE_TYPE {   
+   REF_TYPE_WEAK   = 0x0001,  
+   REF_TYPE_STRONG = 0x0002  
 };  
 typedef DWORD REFERENCE_TYPE;  
 ```  
   
-```c#  
-public enum enum_REFERENCE_TYPE {   
-   REF_TYPE_WEAK   = 0x0001,  
-   REF_TYPE_STRONG = 0x0002  
+```csharp  
+public enum enum_REFERENCE_TYPE {   
+   REF_TYPE_WEAK   = 0x0001,  
+   REF_TYPE_STRONG = 0x0002  
 };  
 ```  
   
-## メンバー  
- REF\_TYPE\_WEAK  
- 弱い参照を指定します。  `REF_TYPE_STRONG` と組み合わせることはできません。  
+## <a name="members"></a>Members  
+ REF_TYPE_WEAK  
+ Specifies a weak reference. Cannot be combined with `REF_TYPE_STRONG`.  
   
- REF\_TYPE\_STRONG  
- 強い参照を指定します。  `REF_TYPE_WEAK` と組み合わせることはできません。  
+ REF_TYPE_STRONG  
+ Specifies a strong reference. Cannot be combined with `REF_TYPE_WEAK`.  
   
-## 解説  
- [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) の構造体の `dwRefType` のメンバーとして使用されます。  
+## <a name="remarks"></a>Remarks  
+ Used as the `dwRefType` member of the [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) structure.  
   
- [SetReferenceType](../Topic/IDebugReference2::SetReferenceType.md) のパラメーターとしてメソッドに渡されます。  
+ Passed as a parameter to the [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) method.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
- [SetReferenceType](../Topic/IDebugReference2::SetReferenceType.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
+ [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)

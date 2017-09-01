@@ -1,66 +1,83 @@
 ---
-title: "BP_PASSCOUNT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_PASSCOUNT"
-helpviewer_keywords: 
-  - "BP_PASSCOUNT 構造体"
+title: BP_PASSCOUNT | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BP_PASSCOUNT
+helpviewer_keywords:
+- BP_PASSCOUNT structure
 ms.assetid: 791ac175-b897-4c70-873e-240da7e0ac89
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# BP_PASSCOUNT
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2b486a8ef06c557c45e565f49017a45710df359d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-条件付きブレークポイントが発生する条件と数を表します。  
+---
+# <a name="bppasscount"></a>BP_PASSCOUNT
+Describes the count and conditions upon which a conditional breakpoint is fired.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-typedef struct _BP_PASSCOUNT {   
-   DWORD              dwPassCount;  
-   BP_PASSCOUNT_STYLE stylePassCount;  
+```cpp  
+typedef struct _BP_PASSCOUNT {   
+   DWORD              dwPassCount;  
+   BP_PASSCOUNT_STYLE stylePassCount;  
 } BP_PASSCOUNT;  
 ```  
   
-```c#  
-public struct BP_PASSCOUNT {   
-   public uint dwPassCount;  
-   public uint stylePassCount;  
+```csharp  
+public struct BP_PASSCOUNT {   
+   public uint dwPassCount;  
+   public uint stylePassCount;  
 };  
 ```  
   
-## メンバー  
+## <a name="members"></a>Members  
  `dwPassCount`  
- これを実行する前にブレークポイントにヒット回数。  
+ The number of times to pass over the breakpoint before firing it.  
   
  `stylePassCount`  
- ブレークポイントのパスの数のスタイルを指定する [BP\_PASSCOUNT\_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md) の列挙体の値。  
+ A value from the [BP_PASSCOUNT_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md) enumeration that specifies the style of the breakpoint pass count.  
   
-## 解説  
- この構造は [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) の構造体のメンバーです。  
+## <a name="remarks"></a>Remarks  
+ This structure is a member of the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) structure.  
   
- この構造体には[SetPassCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setpasscount.md) と [SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md) のメソッドにパラメーターとして渡します。  
+ This structure is also passed as a parameter to the[SetPassCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setpasscount.md) and[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md) methods.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+ [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
  [SetPassCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setpasscount.md)   
  [SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md)   
- [BP\_PASSCOUNT\_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md)
+ [BP_PASSCOUNT_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md)

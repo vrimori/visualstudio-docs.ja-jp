@@ -1,83 +1,88 @@
 ---
-title: "チュートリアル: IntelliTrace を使用した SharePoint アプリケーションのデバッグ"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "IntelliTrace [Visual Studio での SharePoint 開発]"
-  - "スタンドアロン データ コレクター"
-  - "Visual Studio での SharePoint 開発、IntelliTrace"
-  - "データ コレクター"
-  - "IntelliTrace"
+title: 'Walkthrough: Debugging a SharePoint Application by Using IntelliTrace | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- IntelliTrace [SharePoint development in Visual Studio]
+- standalone data collector
+- SharePoint development in Visual Studio, IntelliTrace
+- data collector
+- IntelliTrace
 ms.assetid: 4bd80d2f-f680-4bf4-81c3-f14e8185f6a4
 caps.latest.revision: 27
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 26
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 8cc2fa18b3f6e81acc3ab65894ea5d293462f6a8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
+
 ---
-# チュートリアル: IntelliTrace を使用した SharePoint アプリケーションのデバッグ
-  IntelliTrace を使用すると、SharePoint ソリューション簡単にデバッグできます。  従来のデバッガーでは、現時点のソリューションを示すスナップショットだけを取得できました。  IntelliTrace を使用すると、ソリューション内で過去に発生したイベントと、そのイベントが発生したコンテキストをレビューし、コードに移動できます。  
+# <a name="walkthrough-debugging-a-sharepoint-application-by-using-intellitrace"></a>Walkthrough: Debugging a SharePoint Application by Using IntelliTrace
+  By using IntelliTrace, you can more easily debug SharePoint solutions. Traditional debuggers give you only a snapshot of a solution at the current moment. However, you can use IntelliTrace to review past events that occurred in your solution and the context in which they occurred and navigate to the code.  
   
- このチュートリアルでは、配置済みアプリケーションからの IntelliTrace データの収集に Microsoft Monitoring Agent を使用して、Visual Studio Ultimate で SharePoint 2010 プロジェクトまたは SharePoint 2013 プロジェクトをデバッグする方法について説明します。  このデータを分析するには、Visual Studio Ultimate を使用する必要があります。  このプロジェクトには、フィーチャーがアクティブ化されたときに、タスク リストにタスクを、お知らせリストにお知らせを追加するフィーチャー レシーバーが組み込まれます。  フィーチャーが非アクティブ化されると、タスクは完了とマークされ、次のお知らせがお知らせリストに追加されます。  ただし、このプロシージャには、プロジェクトの正常な実行を妨げる論理エラーが含まれています。  IntelliTrace を使用することで、このエラーを見つけて修正できます。  
+ This walkthrough demonstrates how to debug a SharePoint 2010 or SharePoint 2013 project in Visual Studio Ultimate by using Microsoft Monitoring Agent to collect IntelliTrace data from deployed applications. To analyze that data, you must use Visual Studio Ultimate. This project incorporates a feature receiver that, when the feature is activated, adds a task to the Task list and an announcement to the Announcements list. When the feature is deactivated, the task is marked as completed, and a second announcement is added to the Announcements list. However, the procedure contains a logical error that prevents the project from running correctly. By using IntelliTrace, you'll locate and correct the error.  
   
- **対象:** このトピックの情報は、Visual Studio で作成された SharePoint 2010 ソリューションおよび SharePoint 2013 ソリューションに適用されます。  
+ **Applies to:** The information in this topic applies to SharePoint 2010 and SharePoint 2013 solutions that were created in Visual Studio.  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   [フィーチャー レシーバーを作成する](#BKMK_CreateReceiver)  
+-   [Create a Feature Receiver](#BKMK_CreateReceiver)  
   
--   [フィーチャー レシーバーにコードを追加する](#BKMK_AddCode)  
+-   [Add Code to the Feature Receiver](#BKMK_AddCode)  
   
--   [プロジェクトをテストする](#BKMK_Test1)  
+-   [Test the Project](#BKMK_Test1)  
   
--   [Microsoft Monitoring Agent を使用して IntelliTrace データを収集する](#BKMK_CollectDiagnosticData)  
+-   [Collect IntelliTrace Data by using Microsoft Monitoring Agent](#BKMK_CollectDiagnosticData)  
   
--   [SharePoint ソリューションをデバッグして修正する](#BKMK_DebugSolution)  
+-   [Debug and Fix the SharePoint Solution](#BKMK_DebugSolution)  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   サポート対象エディションの Windows と SharePoint。  「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of Windows and SharePoint. See [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio Ultimate。  
+-   Visual Studio Ultimate.  
   
-##  <a name="BKMK_CreateReceiver"></a> フィーチャー レシーバーを作成する  
- 最初に、フィーチャー レシーバーがある空の SharePoint プロジェクトを作成します。  
+##  <a name="BKMK_CreateReceiver"></a> Create a Feature Receiver  
+ First, you create an empty SharePoint project that has a feature receiver.  
   
-#### フィーチャー レシーバーを作成するには  
+#### <a name="to-create-a-feature-receiver"></a>To create a feature receiver  
   
-1.  SharePoint 2010 ソリューションまたは SharePoint 2013 ソリューションのプロジェクトを作成し、IntelliTraceTest という名前を付けます。  
+1.  Create a SharePoint 2010 or SharePoint 2013 solution project, and name it **IntelliTraceTest**.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。このウィザードで、プロジェクト用の SharePoint サイトとソリューションの信頼レベルの両方を指定できます。  
+     The **SharePoint Customization Wizard** appears, in which you can specify both the SharePoint site for your project and the trust level of the solution.  
   
-2.  **\[ファーム ソリューションとして配置する\]** をクリックし、**\[完了\]** をクリックします。  
+2.  Choose the **Deploy as a farm solution** option button, and then choose the **Finish** button.  
   
-     IntelliTrace は、ファーム ソリューションに対してのみ動作します。  
+     IntelliTrace operates only on farm solutions.  
   
-3.  **ソリューション エクスプローラー**で、**\[フィーチャー\]** ノードのショートカット メニューを開き、**\[フィーチャーの追加\]** を選択します。  
+3.  In **Solution Explorer**, open the shortcut menu for the **Features** node, and then choose **Add Feature**.  
   
-     Feature1.feature が表示されます。  
+     Feature1.feature appears.  
   
-4.  Feature1.feature のショートカット メニューを開き、**\[イベント レシーバーの追加\]** を選択して、コード モジュールをフィーチャーに追加します。  
+4.  Open the shortcut menu for Feature1.feature, and then choose **Add Event Receiver** to add a code module to the feature.  
   
-##  <a name="BKMK_AddCode"></a> フィーチャー レシーバーにコードを追加する  
- 次に、フィーチャー レシーバー内の 2 つのメソッド \(`FeatureActivated` と `FeatureDeactivating`\) にコードを追加します。  これらのメソッドは、SharePoint でフィーチャーがアクティブ化または非アクティブ化されたときにトリガーされます。  
+##  <a name="BKMK_AddCode"></a> Add Code to the Feature Receiver  
+ Next, add code to two methods in the feature receiver: `FeatureActivated` and `FeatureDeactivating`. These methods trigger whenever a feature is activated or deactivated in SharePoint, respectively.  
   
-#### フィーチャー レシーバーにコードを追加するには  
+#### <a name="to-add-code-to-the-feature-receiver"></a>To add code to the feature receiver  
   
-1.  `Feature1EventReceiver` クラスの一番上に次のコードを追加します。このコードは、SharePoint サイトとサブサイトを指定する変数を宣言します。  
+1.  At the top of the `Feature1EventReceiver` class, add the following code, which declares variables that specify the SharePoint site and subsite:  
   
     ```vb  
     ' SharePoint site and subsite.  
@@ -91,7 +96,7 @@ caps.handback.revision: 26
     private string webUrl = "/";  
     ```  
   
-2.  `FeatureActivated` メソッドを次のコードで置き換えます。  
+2.  Replace the `FeatureActivated` method with the following code:  
   
     ```vb  
     Public Overrides Sub FeatureActivated(ByVal properties As SPFeatureReceiverProperties)  
@@ -157,7 +162,7 @@ caps.handback.revision: 26
     }  
     ```  
   
-3.  `FeatureDeactivating` メソッドを次のコードで置き換えます。  
+3.  Replace the `FeatureDeactivating` method with the following code:  
   
     ```vb  
     Public Overrides Sub FeatureDeactivating(ByVal properties As SPFeatureReceiverProperties)  
@@ -247,94 +252,94 @@ caps.handback.revision: 26
     }  
     ```  
   
-##  <a name="BKMK_Test1"></a> プロジェクトをテストする  
- コードがフィーチャー レシーバーに追加され、データ コレクターが実行されているので、SharePoint ソリューションを配置して実行し、それが正常に動作するかどうかをテストします。  
+##  <a name="BKMK_Test1"></a> Test the Project  
+ Now that the code is added to the feature receiver and the data collector is running, deploy and run the SharePoint solution to test whether it works correctly.  
   
 > [!IMPORTANT]  
->  この例では、FeatureDeactivating イベント ハンドラーでエラーがスローされます。  このチュートリアルの後半で、データ コレクターが作成した .iTrace ファイルを使用してこのエラーを特定します。  
+>  For this example, an error is thrown in the FeatureDeactivating event handler. Later in this walkthrough, you locate this error by using the .iTrace file that the data collector created.  
   
-#### プロジェクトをテストするには  
+#### <a name="to-test-the-project"></a>To test the project  
   
-1.  ソリューションを SharePoint に配置し、ブラウザーで SharePoint サイトを開きます。  
+1.  Deploy the solution to SharePoint, and then open the SharePoint site in a browser.  
   
-     フィーチャーは自動的にアクティブ化され、フィーチャー レシーバーによってお知らせとタスクが自動的に追加されます。  
+     The feature automatically activates, causing its feature receiver to add an announcement and a task.  
   
-2.  お知らせリストとタスク一覧の内容を表示します。  
+2.  Display the contents of the Announcements and Tasks lists.  
   
-     お知らせリストには **Activated feature: IntelliTraceTest\_Feature1** という名前の新しいお知らせがあり、タスク一覧には **Deactivate feature: IntelliTraceTest\_Feature1** という名前の新しいタスクがあります。  このいずれかがない場合は、フィーチャーがアクティブになっているかどうかを確認します。  アクティブになっていない場合は、アクティブにします。  
+     The Announcements list should have a new announcement that's named **Activated feature: IntelliTraceTest_Feature1**, and the Tasks list should have a new task that's named **Deactivate feature: IntelliTraceTest_Feature1**. If either of these items is missing, verify whether the feature is activated. If it isn't activated, activate it.  
   
-3.  次の手順を実行して、フィーチャーを非アクティブにします。  
+3.  Deactivate the feature by performing the following steps:  
   
-    1.  SharePoint の **\[サイトの操作\]** メニューで、**\[サイトの設定\]** を選択します。  
+    1.  On the **Site Actions** menu in SharePoint, choose **Site Settings**.  
   
-    2.  **\[サイトの操作\]** で、**\[サイトのフィーチャーの管理\]** リンクをクリックします。  
+    2.  Under **Site Actions**, choose the **Manage site features** link.  
   
-    3.  **\[IntelliTraceTest Feature1\]** の横にある **\[非アクティブ化\]** をクリックします。  
+    3.  Next to **IntelliTraceTest Feature1**, choose the **Deactivate** button.  
   
-    4.  警告ページで、**\[この機能を非アクティブ化\]** リンクをクリックします。  
+    4.  On the Warning page, choose the **Deactivate this feature** link.  
   
-     FeatureDeactivating\(\) イベント ハンドラーによってエラーがスローされます。  
+     The FeatureDeactivating() event handler throws an error.  
   
-##  <a name="BKMK_CollectDiagnosticData"></a> Microsoft Monitoring Agent を使用して IntelliTrace データを収集する  
- SharePoint が実行されているシステムに Microsoft Monitoring Agent をインストールすると、IntelliTrace から返されるジェネリック情報よりも具体的なデータを使用して、SharePoint ソリューションをデバッグできます。  エージェントは、PowerShell コマンドレットを使用して Visual Studio 外で動作し、SharePoint ソリューションの実行中にデバッグ情報をキャプチャします。  
+##  <a name="BKMK_CollectDiagnosticData"></a> Collect IntelliTrace Data by using Microsoft Monitoring Agent  
+ If you install Microsoft Monitoring Agent on the system that's running SharePoint, you can debug SharePoint solutions by using data that's more specific than the generic information that IntelliTrace returns. The agent works outside of Visual Studio by using PowerShell cmdlets to capture debug information while your SharePoint solution runs.  
   
 > [!NOTE]  
->  このセクションの構成情報は、この例に固有です。  その他の構成オプションの詳細については、「[IntelliTrace スタンドアロン コレクターを使用する](../debugger/using-the-intellitrace-stand-alone-collector.md)」を参照してください。  
+>  The configuration information in this section is specific to this example. For more information about other configuration options, see [Using the IntelliTrace stand-alone collector](/visualstudio/debugger/using-the-intellitrace-stand-alone-collector).  
   
-1.  SharePoint を実行しているコンピューターで、[Microsoft Monitoring Agent を設定し、ソリューションの監視を開始します](../debugger/using-the-intellitrace-stand-alone-collector.md)。  
+1.  On the computer that's running SharePoint, [set up Microsoft Monitoring Agent and start to monitor your solution](/visualstudio/debugger/using-the-intellitrace-stand-alone-collector).  
   
-2.  フィーチャーを非アクティブ化します。  
+2.  Deactivate the feature:  
   
-    1.  SharePoint の **\[サイトの操作\]** メニューで、**\[サイトの設定\]** を選択します。  
+    1.  On the **Site Actions** menu in SharePoint, choose **Site Settings**.  
   
-    2.  **\[サイトの操作\]** で、**\[サイトのフィーチャーの管理\]** リンクをクリックします。  
+    2.  Under **Site Actions**, choose the **Manage site features** link.  
   
-    3.  **\[IntelliTraceTest Feature1\]** の横にある **\[非アクティブ化\]** をクリックします。  
+    3.  Next to **IntelliTraceTest Feature1**, choose the **Deactivate** button.  
   
-    4.  警告ページで、**\[この機能を非アクティブ化\]** リンクをクリックします。  
+    4.  On the Warning page, choose the **Deactivate this feature** link.  
   
-     エラーが発生します \(この場合は、FeatureDeactivating\(\) イベント ハンドラーでスローされたエラーが原因\)。  
+     An error occurs (in this case, because of the error thrown in the FeatureDeactivating() event handler).  
   
-3.  PowerShell ウィンドウで [Stop\-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313687) コマンドを実行することにより、.iTrace ファイルを作成し、監視を停止して、SharePoint ソリューションを再起動します。  
+3.  In the PowerShell window, run the [Stop-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313687) command to create the .iTrace file, stop monitoring, and restart your SharePoint solution.  
   
-     **Stop\-WebApplicationMonitoring**  *"\<SharePointSite\>\\\<SharePointAppName\>"*  
+     **Stop-WebApplicationMonitoring**  *"\<SharePointSite>\\<SharePointAppName\>"*  
   
-##  <a name="BKMK_DebugSolution"></a> SharePoint ソリューションをデバッグして修正する  
- この時点で、Visual Studio で IntelliTrace ログ ファイルを表示し、SharePoint ソリューションのエラーを見つけて修正することができます。  
+##  <a name="BKMK_DebugSolution"></a> Debug and Fix the SharePoint Solution  
+ Now you can view the IntelliTrace log file in Visual Studio to find and fix the error in the SharePoint solution.  
   
-#### SharePoint ソリューションをデバッグして修正するには  
+#### <a name="to-debug-and-fix-the-sharepoint-solution"></a>To debug and fix the SharePoint solution  
   
-1.  Visual Studio で、\\IntelliTraceLogs フォルダーにある .iTrace ファイルを開きます。  
+1.  In the \IntelliTraceLogs folder, open the .iTrace file in Visual Studio.  
   
-     **\[IntelliTrace の概要\]** ページが表示されます。  エラーは処理されなかったので、SharePoint の相関 ID \(GUID\) が **\[分析\]** セクションのハンドルされない例外領域に表示されます。  エラーが発生した呼び出し履歴を表示するには、**\[呼び出し履歴\]** をクリックします。  
+     The **IntelliTrace Summary** page appears. Because the error wasn't handled, a SharePoint correlation ID (a GUID) appears in the unhandled exception area of the **Analysis** section. Choose the **Call Stack** button if you want to view the call stack where the error occurred.  
   
-2.  **\[例外のデバッグ\]** をクリックします。  
+2.  Choose the **Debug Exception** button.  
   
-     プロンプトが表示されたら、シンボル ファイルを読み込みます。  **\[IntelliTrace\]** ウィンドウで、例外が "スロー: 重大なエラーが発生しました" というテキストで強調表示されます。  
+     If prompted, load symbol files. In the **IntelliTrace** window, the exception is highlighted as "Thrown: Serious error occurred!".  
   
-     \[IntelliTrace\] ウィンドウで、例外を選択して失敗したコードを表示します。  
+     In the IntelliTrace window, choose the exception to display the code that failed.  
   
-3.  SharePoint ソリューションを開き、FeatureDeactivating \(\) プロシージャの一番上にある **throw** ステートメントをコメント アウトまたは削除してエラーを修正します。  
+3.  Fix the error by opening the SharePoint solution and then either commenting out or removing the **throw** statement at the top of the FeatureDeactivating() procedure.  
   
-4.  Visual Studio でソリューションをリビルドし、SharePoint に再配置します。  
+4.  Rebuild the solution in Visual Studio, and then redeploy it to SharePoint.  
   
-5.  次の手順を実行して、フィーチャーを非アクティブにします。  
+5.  Deactivate the feature by performing the following steps:  
   
-    1.  SharePoint の **\[サイトの操作\]** メニューで、**\[サイトの設定\]** を選択します。  
+    1.  On the **Site Actions** menu in SharePoint, choose **Site Settings**.  
   
-    2.  **\[サイトの操作\]** で、**\[サイトのフィーチャーの管理\]** リンクをクリックします。  
+    2.  Under **Site Actions**, choose the **Manage site features** link.  
   
-    3.  **\[IntelliTraceTest Feature1\]** の横にある **\[非アクティブ化\]** をクリックします。  
+    3.  Next to **IntelliTraceTest Feature1**, choose the **Deactivate** button.  
   
-    4.  警告ページで、**\[この機能を非アクティブ化\]** リンクをクリックします。  
+    4.  On the Warning page, choose the **Deactivate this feature** link.  
   
-6.  タスク一覧を開き、非アクティブ化タスクの **\[ステータス\]** が \[完了\] で、**\[達成率\]** が \[100%\] であることを確認します。  
+6.  Open the Task list, and verify that the **Status** value of the Deactivate task is "Completed" and its **% Complete** value is 100%.  
   
-     コードは、適切に実行されています。  
+     The code now runs properly.  
   
-## 参照  
- [SharePoint コードの検証およびデバッグ](../sharepoint/verifying-and-debugging-sharepoint-code.md)   
- [IntelliTrace の使用](../debugger/intellitrace.md)   
- [チュートリアル: 単体テストを使用して SharePoint コードを検証する](http://msdn.microsoft.com/ja-jp/3d2c4aaf-3cb5-4825-b21b-f10222abe818)  
+## <a name="see-also"></a>See Also  
+ [Verifying and Debugging SharePoint Code](../sharepoint/verifying-and-debugging-sharepoint-code.md)   
+ [IntelliTrace](/visualstudio/debugger/intellitrace)   
+ [NIB: Walkthrough: Verify SharePoint Code by Using Unit Tests](http://msdn.microsoft.com/en-us/3d2c4aaf-3cb5-4825-b21b-f10222abe818)  
   
   

@@ -1,67 +1,84 @@
 ---
-title: "IDebugSymbolSearchEvent2::GetSymbolSearchInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugSymbolSearchEvent2::GetSymbolSearchInfo"
-helpviewer_keywords: 
-  - "IDebugSymbolSearchEvent2::GetSymbolSearchInfo"
+title: IDebugSymbolSearchEvent2::GetSymbolSearchInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugSymbolSearchEvent2::GetSymbolSearchInfo
+helpviewer_keywords:
+- IDebugSymbolSearchEvent2::GetSymbolSearchInfo
 ms.assetid: ae9eb72b-f2aa-43b8-87ca-da19d2e78d17
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugSymbolSearchEvent2::GetSymbolSearchInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 923693683194b452881a562e5957ccc036deda45
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-シンボルの読み込みプロセスの結果を取得するイベント ハンドラーによって呼び出されます。  
+---
+# <a name="idebugsymbolsearchevent2getsymbolsearchinfo"></a>IDebugSymbolSearchEvent2::GetSymbolSearchInfo
+Called by an event handler to retrieve results about a symbol load process.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetSymbolSearchInfo(  
-   IDebugModule3**    pModule,  
-   BSTR*              pbstrDebugMessage,  
-   MODULE_INFO_FLAGS* pdwModuleInfoFlags  
+   IDebugModule3**    pModule,  
+   BSTR*              pbstrDebugMessage,  
+   MODULE_INFO_FLAGS* pdwModuleInfoFlags  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetSymbolSearchInfo(  
-   IDebugModule3              pModule,   
-   ref string                 pbstrDebugMessage,   
-   out enum_MODULE_INFO_FLAGS pdwModuleInfoFlags  
+   IDebugModule3              pModule,   
+   ref string                 pbstrDebugMessage,   
+   out enum_MODULE_INFO_FLAGS pdwModuleInfoFlags  
 );  
   
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pModule`  
- \[入力\] IDebugModule3 表すオブジェクト シンボルが読み込まれたモジュール。  
+ [out] An IDebugModule3 object representing the module for which the symbols were loaded.  
   
  `pbstrDebugMessage`  
- \[入力出力\] モジュールからエラー メッセージの文字列を返します。  エラーがない場合この文字列はモジュール名が含まれますが空ではありません。  
+ [in, out] Returns a string containing any error messages from the module. If there is no error, then this string will just contain the module's name but it is never empty.  
   
 > [!NOTE]
->  \[C\+\+\] `pbstrDebugMessage` は `NULL` である必要があり`SysFreeString` と放されなければ必要があります。  
+>  [C++] `pbstrDebugMessage` cannot be `NULL` and must be freed with `SysFreeString`.  
   
  `pdwModuleInfoFlags`  
- \[入力\] のシンボルが読み込まれているかどうかを示す [MODULE\_INFO\_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) の列挙体のフラグの組み合わせ。  
+ [out] A combination of flags from the [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) enumeration indicating whether any symbols were loaded.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns an error code.  
   
-## 解説  
- モジュールのデバッグ シンボルの読み込みが行われた後のイベント ハンドラーが [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) を受け取るとハンドラーはロード テストの結果を確認するに thismethod を呼び出すことができます。  
+## <a name="remarks"></a>Remarks  
+ When a handler receives the [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) event after an attempt is made to load debugging symbols for a module, the handler can call thismethod to determine the results of that load.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)   
- [MODULE\_INFO\_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md)   
+ [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md)   
  [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md)

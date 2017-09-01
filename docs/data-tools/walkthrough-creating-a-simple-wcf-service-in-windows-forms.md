@@ -1,126 +1,143 @@
 ---
-title: "Walkthrough: Creating and Accessing WCF Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, walkthrough [Visual Studio]"
-  - "WCF, Visual Studio tools for"
-  - "WCF services"
-  - "WCF services, walkthrough"
+title: 'Walkthrough: Creating a simple WCF Service in Windows Forms | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- WCF, walkthrough [Visual Studio]
+- WCF, Visual Studio tools for
+- WCF services
+- WCF services, walkthrough
 ms.assetid: 5fef1a64-27a4-4f10-aa57-29023e28a2d6
 caps.latest.revision: 25
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 895f6420446d88dfa9289866e90c20642955a0cf
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# Walkthrough: Creating and Accessing WCF Services
-このチュートリアルは、単純な [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] サービスを作成し、テストして、Windows フォーム アプリケーションからアクセスする方法を例示しています。  
+# <a name="walkthrough-creating-a-simple-wcf-service-in-windows-forms"></a>Walkthrough: Creating a simple WCF Service in Windows Forms
+This walkthrough demonstrates how to create a simple [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] service, test it, and then access it from a Windows Forms application.  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## サービスの作成  
+## <a name="creating-the-service"></a>Creating the Service  
   
-#### WCF サービスを作成するには  
+#### <a name="to-create-a-wcf-service"></a>To create a WCF service  
   
-1.  **\[ファイル\]** メニューの **\[新規作成\]** をポイントし、**\[プロジェクト\]** をクリックします。  
+1.  On the **File** menu, point to **New** and then click **Project**.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[Visual Basic\]** または **\[Visual C\#\]** ノードを展開し、**\[WCF\]** をクリックしてから **\[WCF サービス ライブラリ\]** をクリックします。  **\[OK\]** をクリックして、プロジェクトを開きます。  
+2.  In the **New Project** dialog box, expand the **Visual Basic** or **Visual C#** node and click **WCF**, followed by **WCF Service Library**. Click **OK** to open the project.  
   
-     ![WCF サービス ライブラリ プロジェクト](../data-tools/media/wcf1.PNG "wcf1")  
+     ![The WCF Service Library project](../data-tools/media/wcf1.PNG "wcf1")  
   
     > [!NOTE]
-    >  これにより、テストしてアクセスすることが可能な機能するサービスが作成されます。  次の 2 つの手順は、別のデータ型を使用するように既定の方法を変更する方法を示しています。  実際のアプリケーションで、独自の関数をサービスに追加することもできます。  
+    >  This creates a working service that can be tested and accessed. The following two steps demonstrate how you might modify the default method to use a different data type. In a real application, you would also add your own functions to the service.  
   
-3.  ![IService1 ファイル](~/data-tools/media/wcf2.png "wcf2")  
+3.  ![The IService1 file](../data-tools/media/wcf2.png "wcf2")  
   
-     **ソリューション エクスプローラー**で、IService1.vb または IService1.cs をダブルクリックし、次の行を探します。  
+     In **Solution Explorer**, double-click IService1.vb or IService1.cs and find the following line:  
   
-     [!code-cs[WCFWalkthrough#4](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.cs)]
-     [!code-vb[WCFWalkthrough#4](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.vb)]  
+     [!code-csharp[WCFWalkthrough#4](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.cs)]  [!code-vb[WCFWalkthrough#4](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.vb)]  
   
-     `value` パラメーターの種類を `String` に変更します。  
+     Change the type for the `value` parameter to string:  
   
-     [!code-cs[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.cs)]
-     [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.vb)]  
+     [!code-csharp[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.cs)]  [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.vb)]  
   
-     上記のコードで、`<OperationContract()>` または `[OperationContract]` 属性に注意してください。  これらの属性は、サービスによって公開されている任意のメソッドに必要です。  
+     In the above code, note the `<OperationContract()>` or `[OperationContract]` attributes. These attributes are required for any method exposed by the service.  
   
-4.  ![Service1 ファイル](../data-tools/media/wcf3.png "wcf3")  
+4.  ![The Service1 file](../data-tools/media/wcf3.png "wcf3")  
   
-     **ソリューション エクスプローラー**で、Service1.vb または Service1.cs をダブルクリックし、次の行を探します。  
+     In **Solution Explorer**, double-click Service1.vb or Service1.cs and find the following line:  
   
-     [!code-vb[WCFWalkthrough#5](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.vb)]
-     [!code-cs[WCFWalkthrough#5](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.cs)]  
+     [!code-vb[WCFWalkthrough#5](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.vb)]  [!code-csharp[WCFWalkthrough#5](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.cs)]  
   
-     値パラメーターの種類を `String` に変更します。  
+     Change the type for the value parameter to string:  
   
-     [!code-cs[WCFWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.cs)]
-     [!code-vb[WCFWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.vb)]  
+     [!code-csharp[WCFWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.cs)]  [!code-vb[WCFWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.vb)]  
   
-## サービスのテスト  
+## <a name="testing-the-service"></a>Testing the Service  
   
-#### WCF サービスをテストするには  
+#### <a name="to-test-a-wcf-service"></a>To test a WCF service  
   
-1.  **F5** キーを押してサービスを実行します。  **\[WCF のテスト用クライアント\]** フォームが表示されて、サービスが読み込まれます。  
+1.  Press **F5** to run the service. A **WCF Test Client** form will be displayed and it will load the service.  
   
-2.  **\[WCF のテスト用クライアント\]** フォームで、**IService1** の下の **GetData\(\)** メソッドをダブルクリックします。  **\[GetData\]** タブが表示されます。  
+2.  In the **WCF Test Client** form, double-click the **GetData()** method under **IService1**. The **GetData** tab will be displayed.  
   
-     ![GetData&#40;&#41; メソッド](../data-tools/media/wcf4.png "wcf4")  
+     ![The GetData&#40;&#41; method](../data-tools/media/wcf4.png "wcf4")  
   
-3.  **\[要求\]** ボックスで、**\[値\]** フィールドを選択して `Hello` と入力します。  
+3.  In the **Request** box, select the **Value** field and type `Hello`.  
   
-     ![&#91;値&#93; フィールド](../data-tools/media/wcf5.png "wcf5")  
+     ![The Value field](../data-tools/media/wcf5.png "wcf5")  
   
-4.  **\[起動\]** ボタンをクリックします。  **\[セキュリティ警告\]** ダイアログ ボックスが表示された場合、**\[OK\]** をクリックします。  結果が **\[応答\]** ボックスに表示されます。  
+4.  Click the **Invoke** button. If a **Security Warning** dialog box is displayed, click **OK**. The result will be displayed in the **Response** box.  
   
-     ![&#91;応答&#93; ボックスに結果が表示される](../data-tools/media/wcf6.png "wcf6")  
+     ![The result in the Response box](../data-tools/media/wcf6.png "wcf6")  
   
-5.  **\[ファイル\]** メニューの **\[終了\]** をクリックして、テスト フォームを閉じます。  
+5.  On the **File** menu, click **Exit** to close the test form.  
   
-## サービスへのアクセス  
+## <a name="accessing-the-service"></a>Accessing the Service  
   
-#### WCF サービスを参照するには  
+#### <a name="to-reference-a-wcf-service"></a>To reference a WCF service  
   
-1.  **\[ファイル\]** メニューの **\[追加\]** をポイントし、**\[新しいプロジェクト\]** をクリックします。  
+1.  On the **File** menu, point to **Add** and then click **New Project**.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[Visual Basic\]** ノードまたは **\[Visual C\#\]** ノードを展開し、**\[Windows\]** を選択して **\[Windows フォーム アプリケーション\]** を選択します。  **\[OK\]** をクリックして、プロジェクトを開きます。  
+2.  In the **New Project** dialog box, expand the **Visual Basic** or **Visual C#** node and select **Windows**, and then select **Windows Forms Application**. Click **OK** to open the project.  
   
-     ![Windows フォーム アプリケーション プロジェクト](../data-tools/media/wcf7.png "wcf7")  
+     ![Windows Forms Application project](../data-tools/media/wcf7.png "wcf7")  
   
-3.  **\[WindowsApplication1\]** を右クリックして **\[サービス参照の追加\]** をクリックします。  **\[サービス参照の追加\]** ダイアログ ボックスが表示されます。  
+3.  Right-click **WindowsApplication1** and click **Add Service Reference**. The **Add Service Reference** dialog box will appear.  
   
-4.  **\[サービス参照の追加\]** ダイアログ ボックスで **\[探索\]** をクリックします。  
+4.  In the **Add Service Reference** dialog box, click **Discover**.  
   
-     ![&#91;サービス参照の追加&#93; ダイアログ ボックス](../data-tools/media/wcf8.png "wcf8")  
+     ![The Add Service Reference dialog box](../data-tools/media/wcf8.png "wcf8")  
   
-     **Service1** が **\[サービス\]** ペインに表示されます。  
+     **Service1** will be displayed in the **Services** pane.  
   
-5.  **\[OK\]** をクリックしてサービス参照を追加します。  
+5.  Click **OK** to add the service reference.  
   
-#### クライアント アプリケーションをビルドするには  
+#### <a name="to-build-a-client-application"></a>To build a client application  
   
-1.  **ソリューション エクスプローラー**で、**\[Form1.vb\]** または **\[Form1.cs\]** をダブルクリックして、Windows フォーム デザイナーを \(まだ開いていない場合に\) 開きます。  
+1.  In **Solution Explorer**, double-click **Form1.vb** or **Form1.cs** to open the Windows Forms Designer if it is not already open.  
   
-2.  **ツールボックス**で、`TextBox` コントロール、`Label` コントロール、および`Button` コントロールをフォームにドラッグします。  
+2.  From the **Toolbox**, drag a `TextBox` control, a `Label` control, and a `Button` control onto the form.  
   
-     ![フォームへのコントロールの追加](../data-tools/media/wcf9.png "wcf9")  
+     ![Adding controls to the form](../data-tools/media/wcf9.png "wcf9")  
   
-3.  `Button` をダブルクリックし、`Click` イベント ハンドラーに次のコードを追加します。  
+3.  Double-click the `Button`, and add the following code in the `Click` event handler:  
   
-     [!code-cs[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.cs)]
-     [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.vb)]  
+     [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.cs)]  [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.vb)]  
   
-4.  **ソリューション エクスプローラー**で、**\[WindowsApplication1\]** を右クリックして **\[スタートアップ プロジェクトに設定\]** をクリックします。  
+4.  In **Solution Explorer**, right-click **WindowsApplication1** and click **Set as StartUp Project**.  
   
-5.  **F5** キーを押してプロジェクトを実行します。  いくつかのテキストを入力し、ボタンをクリックします。  ラベルに「You entered:」と入力したテキストが表示されます。  
+5.  Press **F5** to run the project. Enter some text and click the button. The label will display "You entered:" and the text that you entered.  
   
-     ![結果を表示するフォーム](~/data-tools/media/wcf10.png "wcf10")  
+     ![The form showing the result](../data-tools/media/wcf10.png "wcf10")  
   
-## 参照  
- [ASMX サービスと WCF サービスを利用するサンプル](http://msdn.microsoft.com/ja-jp/788ddf2c-2ac1-416b-8789-2fbb1e29b8fe)
+## <a name="see-also"></a>See Also  
+ [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

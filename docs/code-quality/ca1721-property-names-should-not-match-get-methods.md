@@ -1,57 +1,75 @@
 ---
-title: "CA1721: プロパティ名は get メソッドと同一にすることはできません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1721"
-  - "PropertyNamesShouldNotMatchGetMethods"
-helpviewer_keywords: 
-  - "CA1721"
-  - "PropertyNamesShouldNotMatchGetMethods"
+title: 'CA1721: Property names should not match get methods | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1721
+- PropertyNamesShouldNotMatchGetMethods
+helpviewer_keywords:
+- CA1721
+- PropertyNamesShouldNotMatchGetMethods
 ms.assetid: 45a0e853-1f06-4688-af1b-cc634409e295
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 17
----
-# CA1721: プロパティ名は get メソッドと同一にすることはできません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 7020896493b641f1b2aa4c77912636554441b3fe
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721: Property names should not match get methods
 |||  
 |-|-|  
 |TypeName|PropertyNamesShouldNotMatchGetMethods|  
 |CheckId|CA1721|  
-|分類|Microsoft.Naming|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Naming|  
+|Breaking Change|Breaking|  
   
-## 原因  
- パブリック メンバーまたはプロテクト メンバーの名前が、"Get" から始まります。または、パブリック プロパティまたはプロテクト プロパティの名前と一致します。  たとえば、"GetColor" というメソッドを含む型と "Color" というプロパティがあると、この規則に違反します。  
+## <a name="cause"></a>Cause  
+ The name of a public or protected member starts with 'Get' and otherwise matches the name of a public or protected property. For example, a type that contains a method that is named 'GetColor' and a property that is named 'Color' violates this rule.  
   
-## 規則の説明  
- get メソッドとプロパティは、機能を明確に区別できる名前にします。  
+## <a name="rule-description"></a>Rule Description  
+ Get methods and properties should have names that clearly distinguish their function.  
   
- 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。  これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージ コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。  
+ Naming conventions provide a common look for libraries that target the common language runtime. This reduces the time that is required to learn a new software library, and increases customer confidence that the library was developed by someone who has expertise in developing managed code.  
   
-## 違反の修正方法  
- "Get" で始まるメソッド名に一致しないように、名前を変更します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ Change the name so that it does not match the name of a method that is prefixed with 'Get'.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
 > [!NOTE]
->  Get メソッドが IExtenderProvider インターフェイスの実装によって呼び出された場合は、この警告は除外されることがあります。  
+>  This warning may be excluded if the Get method is caused by implementing IExtenderProvider interface.  
   
-## 使用例  
- この規則に違反するメソッドとプロパティを含む例を次に示します。  
+## <a name="example"></a>Example  
+ The following example contains a method and property that violate this rule.  
   
- [!CODE [FxCop.Naming.GetMethod#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Naming.GetMethod#1)]  
+ [!code-csharp[FxCop.Naming.GetMethod#1](../code-quality/codesnippet/CSharp/ca1721-property-names-should-not-match-get-methods_1.cs)] [!code-vb[FxCop.Naming.GetMethod#1](../code-quality/codesnippet/VisualBasic/ca1721-property-names-should-not-match-get-methods_1.vb)]  
   
-## 関連規則  
- [CA1024: 適切な場所にプロパティを使用します](../code-quality/ca1024-use-properties-where-appropriate.md)
+## <a name="related-rules"></a>Related Rules  
+ [CA1024: Use properties where appropriate](../code-quality/ca1024-use-properties-where-appropriate.md)

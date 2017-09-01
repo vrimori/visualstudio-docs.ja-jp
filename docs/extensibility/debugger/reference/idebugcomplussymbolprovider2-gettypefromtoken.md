@@ -1,5 +1,5 @@
 ---
-title: "IDebugComPlusSymbolProvider2::GetTypeFromToken |Microsoft ドキュメント"
+title: IDebugComPlusSymbolProvider2::GetTypeFromToken | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,18 +29,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c14a46cd2d46edb245e78025d03626414dcbb3f2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: b8395849f002519d52ed1f547e92b67e35f6408e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugcomplussymbolprovider2gettypefromtoken"></a>IDebugComPlusSymbolProvider2::GetTypeFromToken
-指定したトークンの種類を取得します。  
+Retrieves a type given its token.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetTypeFromToken(  
    ULONG32       appDomain,  
    GUID          guidModule,  
@@ -49,7 +50,7 @@ HRESULT GetTypeFromToken(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetTypeFromToken(  
    uint            appDomain,  
    Guid            guidModule,  
@@ -58,26 +59,26 @@ int GetTypeFromToken(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `appDomain`  
- [in]アプリケーション ドメインの識別子。  
+ [in] Identifier of the application domain.  
   
  `guidModule`  
- [in]モジュールの一意の識別子。  
+ [in] Unique identifier of the module.  
   
  `tdToken`  
- [in]取得する型のトークンです。  
+ [in] Token of the type to be retrieved.  
   
  `ppField`  
- [out]によって表される型を返す、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)します。  
+ [out] Returns the type that is represented by the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md).  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="example"></a>例  
- 次の例では、このメソッドは実装する方法、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)インターフェイスです。  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::GetTypeFromToken(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -103,5 +104,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

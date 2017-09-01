@@ -1,5 +1,5 @@
 ---
-title: "従来の言語サービス内のブレークポイントの検証 |Microsoft ドキュメント"
+title: Validating Breakpoints in a Legacy Language Service | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,33 +29,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3a8c2df45c0a834430a499cf6a7e7ef2da10bdbf
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2a87c22948e710a3b95ee7f79b31626794dc7708
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="validating-breakpoints-in-a-legacy-language-service"></a>従来の言語サービス内のブレークポイントを検証します。
-ブレークポイントは、デバッガーで実行されている間に特定の時点でプログラムの実行を停止することを示します。 ユーザーは、エディターには、ブレークポイントの有効な場所の構成要素の知識があるないために、ソース ファイル内の任意の行にブレークポイントを配置できます。 デバッガーを起動する場合のすべてのマークされているブレークポイント (保留中のブレークポイントと呼ばれます) は実行中のプログラム内の適切な場所にバインドされます。 ブレークポイントが検証されていることを確認が同時に有効なコードの場所をマークします。 たとえば、ソース コードでは、その場所でコードがないため、コメントのブレークポイントが有効でありません。 デバッガーは、無効なブレークポイントを無効にします。  
+# <a name="validating-breakpoints-in-a-legacy-language-service"></a>Validating Breakpoints in a Legacy Language Service
+A breakpoint indicates that program execution should stop at a particular point while it is being run in a debugger. A user can place a breakpoint on any line in the source file, since the editor has no knowledge of what constitutes a valid location for a breakpoint. When the debugger is launched, all of the marked breakpoints (called pending breakpoints) are bound to the appropriate location in the running program. At the same time the breakpoints are validated to ensure that they mark valid code  locations. For example, a breakpoint on a comment is not valid, because there is no code at that location in the source code. The debugger disables invalid breakpoints.  
   
- 言語サービスが表示されているソース コードを知っているために、デバッガーが起動される前に、ブレークポイントを検証できます。 オーバーライドすることができます、<xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>ブレークポイントの有効な場所を指定する範囲を返すメソッド</xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>。 ブレークポイントの位置は、デバッガーを起動するが、ユーザーには、デバッガーを読み込むを待たずに無効なブレークポイントの通知も検証されます。  
+ Since the language service knows about the source code being displayed, it can validate breakpoints before the debugger is launched. You can override the <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method to return a span specifying a valid location for a breakpoint. The breakpoint location is still validated when the debugger is launched, but the user is notified of invalid breakpoints without waiting for the debugger to load.  
   
-## <a name="implementing-support-for-validating-breakpoints"></a>ブレークポイントを検証するためのサポートの実装  
+## <a name="implementing-support-for-validating-breakpoints"></a>Implementing Support for Validating Breakpoints  
   
--   <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>メソッドには、ブレークポイントの位置が与えられます</xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>。 実装には、場所が有効期限、およびコードを識別するテキスト範囲を返すことによってこれに関連付けられている行位置ブレークポイントを指定するかどうかを決める必要があります。  
+-   The <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method is given the position of the breakpoint. Your implementation must decide whether or not the location is valid, and indicate this by returning a text span that identifies the code associated with the line position the breakpoint.  
   
--   返す<xref:Microsoft.VisualStudio.VSConstants.S_OK>場合は、場所が有効、または<xref:Microsoft.VisualStudio.VSConstants.S_FALSE>が有効でない場合</xref:Microsoft.VisualStudio.VSConstants.S_FALSE></xref:Microsoft.VisualStudio.VSConstants.S_OK>。  
+-   Return <xref:Microsoft.VisualStudio.VSConstants.S_OK> if the location is valid, or <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> if it is not valid.  
   
--   ブレークポイントが有効な場合は、ブレークポイントと共にテキスト範囲が強調表示されます。  
+-   If the breakpoint is valid the text span is highlighted along with the breakpoint.  
   
--   ブレークポイントが有効でない場合、エラー メッセージがステータス バーに表示されます。  
+-   If the breakpoint is invalid, an error message appears in the status bar.  
   
-### <a name="example"></a>例  
- この例の実装、 <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>(存在する場合)、コードの範囲を取得するためにパーサーを指定された場所で呼び出すメソッド</xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>。  
+### <a name="example"></a>Example  
+ This example shows an implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> method that calls the parser to obtain the span of code (if any) at the specified location.  
   
- この例では、追加した、`GetCodeSpan`メソッドを<xref:Microsoft.VisualStudio.Package.AuthoringSink>テキスト範囲とを返します検証クラス`true`有効なブレークポイントの位置である場合。</xref:Microsoft.VisualStudio.Package.AuthoringSink> 。  
+ This example assumes that you have added a `GetCodeSpan` method to the <xref:Microsoft.VisualStudio.Package.AuthoringSink> class that validates the text span and returns `true` if it is a valid breakpoint location.  
   
-```c#  
+```csharp  
 using Microsoft VisualStudio;  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
@@ -115,5 +116,5 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [従来の言語サービスの機能](../../extensibility/internals/legacy-language-service-features1.md)
+## <a name="see-also"></a>See Also  
+ [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md)

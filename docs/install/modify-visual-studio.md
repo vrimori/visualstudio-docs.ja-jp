@@ -18,30 +18,15 @@ ms.assetid: 3399ea7b-a291-4a9e-80a1-b861a21afa1d
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: f8d907587deb8e14e777d9c69f07da6d819143e5
+ms.translationtype: HT
+ms.sourcegitcommit: 89f86a5935ad283ef5c0e29ea2db0ae22cf603a8
+ms.openlocfilehash: 3899b139066dddf0b39acaabe2874e0a7d9ad3d3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>ワークロードやコンポーネントを追加または削除することで Visual Studio 2017 を変更する
-実行する作業に合わせて Visual Studio をより簡単にカスタマイズできるようになっただけでなく、Visual Studio をより簡単にカスタマイズできるようにもなりました。 これまでのようにコントロール パネルに移動する必要はありません。新しい Visual Studio インストーラーを起動して、必要な変更を加えるだけです。  
+実行する作業に合わせて Visual Studio をより簡単にカスタマイズできるようになっただけでなく、Visual Studio をより簡単にカスタマイズできるようにもなりました。 これまでのようにコントロール パネルに移動する必要はありません。代わりに新しい Visual Studio インストーラーを起動して、必要な変更を加えます。
 
 ここではその方法を説明します。  
 
@@ -52,18 +37,18 @@ ms.lasthandoff: 05/13/2017
 
      たとえば、Windows 10 Anniversary Update を実行しているコンピューター上では、**[スタート]** を選択し、**Visual Studio インストーラー**としてリスト表示される **V** の文字までスクロールします。  
 
-     ![Visual Studio インストーラー](~/install/media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
+     ![Visual Studio インストーラー](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
 
      >[!NOTE]
-     一部のコンピューターでは、Visual Studio インストーラーが **Microsoft Visual Studio インストーラー**として **"M"** の項に表示される場合があります。
+     一部のコンピューターでは、Visual Studio インストーラーが **Microsoft Visual Studio インストーラー**として **"M"** の項に表示される場合があります。<br/><br/> Visual Studio インストーラーは `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe` にもあります。
 
 2.  インストーラーをクリックまたはタップして起動し、**[変更]** を選択します。  
 
-     ![Visual Studio の起動または変更](~/install/media/vs2017-modify.PNG "Visual Studio 2017 の変更")  
+     ![Visual Studio の起動または変更](media/vs2017-modify.PNG "Visual Studio 2017 の変更")  
 
 3.  **[ワークロード]** 画面で、インストールまたはアンインストールするワークロードを選択または選択解除します。  
 
-    ![Visual Studio 2017 のセットアップ ダイアログ](~/install/media/vs2017-modify-workloads.PNG "Visual Studio 2017 でのワークロードの選択")
+    ![Visual Studio 2017 のセットアップ ダイアログ](media/vs2017-modify-workloads.PNG "Visual Studio 2017 でのワークロードの選択")
 
 4. もう一度 **[変更]** をクリックまたはタップします。  
 
@@ -74,7 +59,7 @@ ms.lasthandoff: 05/13/2017
 便利なワークロード機能を使用せずに Visual Studio のインストールをカスタマイズする場合は、Visual Studio インストーラーで **[個々のコンポーネント]** オプションを選択し、必要なものを選択して、画面の指示に従います。  
 
 ## <a name="get-support"></a>サポートを受ける
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、サポート技術情報の記事「[Visual Studio 2017 で発生するインストールおよびアップグレード エラーのトラブルシューティング](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures)」にあるトラブルシューティングのヒントを参照してください。
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング](troubleshooting-installation-issues.md)」ページにあるトラブルシューティングのヒントをご覧ください。
 
 ## <a name="see-also"></a>関連項目  
 * [Visual Studio 2017 のインストール](https://go.microsoft.com/fwlink/?linkid=833223)

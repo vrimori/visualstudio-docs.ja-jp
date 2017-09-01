@@ -1,121 +1,168 @@
 ---
-title: ".NET Framework 4 または .NET Framework 4.5 に移行する Outlook プロジェクトのフォーム領域の更新 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Office プロジェクト [Visual Studio での Office 開発]、.NET Framework 4 への移行"
+title: Updating Form Regions in Outlook Projects that You Migrate to the .NET Framework 4 or the .NET Framework 4.5 | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office projects [Office development in Visual Studio], migrating to .NET Framework 4
 ms.assetid: 65991e2f-4875-49f0-b21b-6a3d0175d0f4
 caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 47e751b76324ec6a8d15df1ace36da647649c5a1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
+
 ---
-# .NET Framework 4 または .NET Framework 4.5 に移行する Outlook プロジェクトのフォーム領域の更新
-  フォーム領域を含む Outlook VSTO アドイン プロジェクトのターゲット フレームワークを [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更する場合は、生成されるフォーム領域コードおよび実行時に特定のフォーム領域クラスをインスタンス化するすべてのコードに対して、いくつかの変更を加える必要があります。  
+# <a name="updating-form-regions-in-outlook-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>Updating Form Regions in Outlook Projects that You Migrate to the .NET Framework 4 or the .NET Framework 4.5
+  If the target framework of an Outlook VSTO Add-in project with a form region is changed to the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, you must make some changes to the generated form region code and to any code that instantiates certain form region classes at run time.  
   
-## 生成されたフォーム領域コードの更新  
- プロジェクトのターゲット フレームワークが [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更される場合は、生成されるフォーム領域コードを変更する必要があります。 加える変更は、Visual Studio でデザインしたフォーム領域と、Outlook からインポートしたフォーム領域とで異なります。 これらのフォーム領域の種類の違いの詳細については、「[Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)」を参照してください。  
+## <a name="updating-the-generated-form-region-code"></a>Updating the Generated Form Region Code  
+ If the target framework of the project is changed to the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, you must change the generated form region code. The changes you make are different for form regions that you designed in Visual Studio and form regions that you imported from Outlook. For more information about the differences between these types of form regions, see [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md).  
   
-#### Visual Studio でデザインしたフォーム領域の生成されたコードを更新するには  
+#### <a name="to-update-the-generated-code-for-a-form-region-that-you-designed-in-visual-studio"></a>To update the generated code for a form region that you designed in Visual Studio  
   
-1.  コード エディターでフォーム領域の分離コード ファイルを開きます。 このファイル名は *YourFormRegion*.Designer.cs または *YourFormRegion*.Designer.vb です。 Visual Basic プロジェクトでこのファイルを確認するには、**ソリューション エクスプローラー**の **\[すべてのファイルの表示\]** ボタンをクリックします。  
+1.  Open the form region code-behind file in the code editor. This file is named *YourFormRegion*.Designer.cs or *YourFormRegion*.Designer.vb. To see this file in Visual Basic projects, click the **Show All Files** button in **Solution Explorer**.  
   
-2.  Microsoft.Office.Tools.Outlook.FormRegionControl の代わりに <xref:Microsoft.Office.Tools.Outlook.FormRegionBase> から派生するように、フォーム領域クラスの宣言を変更します。  
+2.  Modify the declaration of the form region class so that it derives from <xref:Microsoft.Office.Tools.Outlook.FormRegionBase> instead of Microsoft.Office.Tools.Outlook.FormRegionControl.  
   
-3.  次のコード例に示すように、フォーム領域クラスのコンストラクターを変更します。  
+3.  Modify the constructor of the form region class as shown in the following code examples.  
   
-     .NET Framework 3.5 を対象とするプロジェクトのフォーム領域クラスのコンストラクターを、次のコード例に示します。  
+     The following code example shows the constructor of a form region class in a project that targets the .NET Framework 3.5.  
   
     ```vb  
-    Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion) MyBase.New(formRegion) Me.InitializeComponent() End Sub  
+    Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)  
+        MyBase.New(formRegion)  
+        Me.InitializeComponent()  
+    End Sub  
     ```  
   
     ```csharp  
-    public FormRegion1(Microsoft.Office.Interop.Outlook.FormRegion formRegion) : base(formRegion) { this.InitializeComponent(); }  
+    public FormRegion1(Microsoft.Office.Interop.Outlook.FormRegion formRegion)  
+        : base(formRegion)  
+    {  
+        this.InitializeComponent();  
+    }  
     ```  
   
-     [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] を対象とするプロジェクトのフォーム領域クラスのコンストラクターを、次のコード例に示します。  
+     The following code example shows the constructor of a form region class in a project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)].  
   
     ```vb  
-    Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion) MyBase.New(Globals.Factory, formRegion) Me.InitializeComponent() End Sub  
+    Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)  
+        MyBase.New(Globals.Factory, formRegion)  
+        Me.InitializeComponent()  
+    End Sub  
     ```  
   
     ```csharp  
-    public FormRegion1(Microsoft.Office.Interop.Outlook.FormRegion formRegion) : base(Globals.Factory, formRegion) { this.InitializeComponent(); }  
+    public FormRegion1(Microsoft.Office.Interop.Outlook.FormRegion formRegion)  
+        : base(Globals.Factory, formRegion)  
+    {  
+        this.InitializeComponent();  
+    }  
     ```  
   
-4.  次に示すように、`InitializeManifest` メソッドのシグネチャを変更します。 メソッドのコードを変更していないことを確認します。このコードは、デザイナーで適用したフォーム領域の設定を表します。 Visual C\# プロジェクトの場合、このメソッドを表示するには、`Form Region Designer generated code` という名前の領域を展開する必要があります。  
+4.  Modify the signature of the `InitializeManifest` method as shown below. Make sure that you do not modify the code in the method; this code represents form region settings that you applied in the designer. In Visual C# projects, you must expand the region that is named `Form Region Designer generated code` to see this method.  
   
-     .NET Framework 3.5 を対象とするプロジェクトの `InitializeManifest` メソッドのシグネチャを次のコード例に示します。  
+     The following code example shows the signature of the `InitializeManifest` method in a project that targets the .NET Framework 3.5.  
   
     ```vb  
-    Private Shared Sub InitializeManifest(ByVal manifest As Microsoft.Office.Tools.Outlook.FormRegionManifest) ' Do not change code in this method. End Sub  
+    Private Shared Sub InitializeManifest(ByVal manifest As Microsoft.Office.Tools.Outlook.FormRegionManifest)  
+  
+        ' Do not change code in this method.  
+    End Sub  
     ```  
   
     ```csharp  
-    private static void InitializeManifest(Microsoft.Office.Tools.Outlook.FormRegionManifest manifest) { // Do not change code in this method. }  
+    private static void InitializeManifest(Microsoft.Office.Tools.Outlook.FormRegionManifest manifest)  
+    {  
+        // Do not change code in this method.  
+    }  
     ```  
   
-     [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] を対象とするプロジェクトの `InitializeManifest` メソッドのシグネチャを次のコード例に示します。  
+     The following code example shows the signature `InitializeManifest` method in a project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)].  
   
     ```vb  
-    Private Shared Sub InitializeManifest(ByVal manifest As Microsoft.Office.Tools.Outlook.FormRegionManifest, ByVal factory As Microsoft.Office.Tools.Outlook.Factory) ' Do not change code in this method. End Sub  
+    Private Shared Sub InitializeManifest(ByVal manifest As Microsoft.Office.Tools.Outlook.FormRegionManifest,   
+        ByVal factory As Microsoft.Office.Tools.Outlook.Factory)  
+  
+        ' Do not change code in this method.  
+    End Sub  
     ```  
   
     ```csharp  
-    private static void InitializeManifest(Microsoft.Office.Tools.Outlook.FormRegionManifest manifest, Microsoft.Office.Tools.Outlook.Factory factory) { // Do not change code in this method. }  
+    private static void InitializeManifest(Microsoft.Office.Tools.Outlook.FormRegionManifest manifest,   
+        Microsoft.Office.Tools.Outlook.Factory factory)  
+    {  
+        // Do not change code in this method.  
+    }  
     ```  
   
-5.  プロジェクトに新しい Outlook フォーム領域アイテムを追加します。 新しいフォーム領域の分離コード ファイルを開き、ファイルの *YourNewFormRegion*`Factory` および `WindowFormRegionCollection` クラスを見つけて、これらのクラスをクリップボードにコピーします。  
+5.  Add a new Outlook Form Region item to your project. Open the code-behind file for the new form region, locate the *YourNewFormRegion*`Factory` and `WindowFormRegionCollection` classes in the file, and copy these classes to the Clipboard.  
   
-6.  プロジェクトに追加した新しいフォーム領域を削除します。  
+6.  Delete the new form region you added to your project.  
   
-7.  再ターゲットのプロジェクトの作業を更新するフォーム領域の分離コード ファイルで、*YourOriginalFormRegion*`Factory` および `WindowFormRegionCollection` クラスを見つけ、新しいフォーム領域からコピーしたコードに置き換えます。  
+7.  In the code-behind file of the form region that you are updating to work in the retargeted project, locate the *YourOriginalFormRegion*`Factory` and `WindowFormRegionCollection` classes and replace them with the code that you copied from the new form region.  
   
-8.  *YourNewFormRegion* `Factory` と `WindowFormRegionCollection` クラスで、*YourNewFormRegion* クラスしへのすべての参照を検索し、それぞれの参照先を、代わりに *YourOriginalFormRegion* クラスに変更します。 たとえば、更新するフォーム領域の名前が `SalesDataFormRegion` で、手順 5 で作成した新しいフォーム領域の名前が `FormRegion1` の場合、`FormRegion1` のすべての参照を `SalesDataFormRegion` に変更します。  
+8.  In the *YourNewFormRegion*`Factory` and `WindowFormRegionCollection` classes, search for all references to the *YourNewFormRegion* class and change each reference to the *YourOriginalFormRegion* class instead. For example, if the form region you are updating is named `SalesDataFormRegion` and the new form region you created in step 5 is named `FormRegion1`, change all references of `FormRegion1` to `SalesDataFormRegion`.  
   
-#### Outlook からインポートしたフォーム領域の生成されたコードを更新するには  
+#### <a name="to-update-the-generated-code-for-a-form-region-that-you-imported-from-outlook"></a>To update the generated code for a form region that you imported from Outlook  
   
-1.  コード エディターでフォーム領域の分離コード ファイルを開きます。 このファイル名は *YourFormRegion*.Designer.cs または *YourFormRegion*.Designer.vb です。 Visual Basic プロジェクトでこのファイルを確認するには、**ソリューション エクスプローラー**の **\[すべてのファイルの表示\]** ボタンをクリックします。  
+1.  Open the form region code-behind file in the code editor. This file is named *YourFormRegion*.Designer.cs or *YourFormRegion*.Designer.vb. To see this file in Visual Basic projects, click the **Show All Files** button in **Solution Explorer**.  
   
-2.  Microsoft.Office.Tools.Outlook.ImportedFormRegion の代わりに <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase> から派生するように、フォーム領域クラスの宣言を変更します。  
+2.  Modify the declaration of the form region class so that it derives from <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase> instead of Microsoft.Office.Tools.Outlook.ImportedFormRegion.  
   
-3.  次のコード例に示すように、フォーム領域クラスのコンストラクターを変更します。  
+3.  Modify the constructor of the form region class as shown in the following code examples.  
   
-     .NET Framework 3.5 を対象とするプロジェクトのフォーム領域クラスのコンストラクターを、次のコード例に示します。  
+     The following code example shows the constructor of a form region class in a project that targets the .NET Framework 3.5.  
   
     ```vb  
-    Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion) MyBase.New(formRegion) End Sub  
+    Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)  
+        MyBase.New(formRegion)  
+    End Sub  
     ```  
   
     ```csharp  
-    public ImportedFormRegion1(Microsoft.Office.Interop.Outlook.FormRegion formRegion) : base(formRegion) { this.FormRegionShowing += new System.EventHandler(this.TaskFormRegion_FormRegionShowing); this.FormRegionClosed += new System.EventHandler(this.TaskFormRegion_FormRegionClosed); }  
+    public ImportedFormRegion1(Microsoft.Office.Interop.Outlook.FormRegion formRegion)  
+        : base(formRegion)  
+    {  
+        this.FormRegionShowing += new System.EventHandler(this.TaskFormRegion_FormRegionShowing);  
+        this.FormRegionClosed += new System.EventHandler(this.TaskFormRegion_FormRegionClosed);  
+    }  
     ```  
   
-     [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] を対象とするプロジェクトのフォーム領域クラスのコンストラクターのシグネチャを、次のコード例に示します。  
+     The following code example shows the signature of the constructor of a form region class in a project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)].  
   
     ```vb  
-    Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion) MyBase.New(Globals.Factory, formRegion) End Sub  
+    Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)  
+        MyBase.New(Globals.Factory, formRegion)  
+    End Sub  
     ```  
   
     ```csharp  
-    public ImportedFormRegion1(Microsoft.Office.Interop.Outlook.FormRegion formRegion) : base(Globals.Factory, formRegion) { this.FormRegionShowing += new System.EventHandler(this.TaskFormRegion_FormRegionShowing); this.FormRegionClosed += new System.EventHandler(this.TaskFormRegion_FormRegionClosed); }  
+    public ImportedFormRegion1(Microsoft.Office.Interop.Outlook.FormRegion formRegion)  
+        : base(Globals.Factory, formRegion)  
+    {  
+        this.FormRegionShowing += new System.EventHandler(this.TaskFormRegion_FormRegionShowing);  
+        this.FormRegionClosed += new System.EventHandler(this.TaskFormRegion_FormRegionClosed);  
+    }  
     ```  
   
-4.  フォーム領域クラスのコントロールを初期化する `InitializeControls` メソッドのコードの各行について、次に示すようにコードを変更します。  
+4.  For each line of code in the `InitializeControls` method that initializes a control in the form region class, modify the code as shown below.  
   
-     .NET Framework 3.5 を対象とするプロジェクトのコントロールを初期化する方法を、次のコード例に示します。 このコードの GetFormRegionControl メソッドには、返されるコントロールの種類を指定する型パラメーターがあります。  
+     The following code example shows how to initialize a control in a project that targets the .NET Framework 3.5. In this code, the GetFormRegionControl method has a type parameter that specifies the type of the control that is returned.  
   
     ```vb  
     Me.olkTextBox1 = Me.GetFormRegionControl(Of Microsoft.Office.Interop.Outlook.OlkTextBox)("OlkTextBox1")  
@@ -125,7 +172,7 @@ caps.handback.revision: 14
     this.olkTextBox1 = this.GetFormRegionControl<Microsoft.Office.Interop.Outlook.OlkTextBox>("OlkTextBox1");  
     ```  
   
-     [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] を対象とするプロジェクトのコントロールを初期化する方法を、次のコード例に示します。 このコードの <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.GetFormRegionControl%2A> メソッドには、型パラメーターがありません。 初期化するコントロールの型に戻り値をキャストする必要があります。  
+     The following code example shows how to initialize a control in a project that targets the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. In this code, the <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase.GetFormRegionControl%2A> method does not have a type parameter. You must cast the return value to the type of the control that you are initializing.  
   
     ```vb  
     Me.olkTextBox1 = CType(GetFormRegionControl("OlkTextBox1"), Microsoft.Office.Interop.Outlook.OlkTextBox)  
@@ -135,29 +182,28 @@ caps.handback.revision: 14
     this.olkTextBox1 = (Microsoft.Office.Interop.Outlook.OlkTextBox)GetFormRegionControl("OlkTextBox1");  
     ```  
   
-5.  プロジェクトに新しい Outlook フォーム領域アイテムを追加します。 新しいフォーム領域の分離コード ファイルを開き、ファイルの *YourNewFormRegion*`Factory` および `WindowFormRegionCollection` クラスを見つけて、これらのクラスをクリップボードにコピーします。  
+5.  Add a new Outlook Form Region item to your project. Open the code-behind file for the new form region, locate the *YourNewFormRegion*`Factory` and `WindowFormRegionCollection` classes in the file, and copy these classes to the Clipboard.  
   
-6.  プロジェクトに追加した新しいフォーム領域を削除します。  
+6.  Delete the new form region you added to your project.  
   
-7.  再ターゲットのプロジェクトの作業を更新するフォーム領域の分離コード ファイルで、*YourOriginalFormRegion*`Factory` および `WindowFormRegionCollection` クラスを見つけ、新しいフォーム領域からコピーしたコードに置き換えます。  
+7.  In the code-behind file of the form region that you are updating to work in the retargeted project, locate the *YourOriginalFormRegion*`Factory` and `WindowFormRegionCollection` classes and replace them with the code that you copied from the new form region.  
   
-8.  *YourNewFormRegion* `Factory` と `WindowFormRegionCollection` クラスで、*YourNewFormRegion* クラスしへのすべての参照を検索し、それぞれの参照先を、代わりに *YourOriginalFormRegion* クラスに変更します。 たとえば、更新するフォーム領域の名前が `SalesDataFormRegion` で、手順 5 で作成した新しいフォーム領域の名前が `FormRegion1` の場合、`FormRegion1` のすべての参照を `SalesDataFormRegion` に変更します。  
+8.  In the *YourNewFormRegion*`Factory` and `WindowFormRegionCollection` classes, search for all references to the *YourNewFormRegion* class and change each reference to the *YourOriginalFormRegion* class instead. For example, if the form region you are updating is named `SalesDataFormRegion` and the new form region you created in step 5 is named `FormRegion1`, change all references of `FormRegion1` to `SalesDataFormRegion`.  
   
-## フォーム領域クラスのインスタンス化  
- 特定のフォーム領域クラスを動的にインスタンス化するすべてのコードを変更する必要があります。 .NET Framework 3.5 を対象とするプロジェクトでは、Microsoft.Office.Tools.Outlook.FormRegionManifest などのフォーム領域クラスを直接インスタンス化できます。[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトの場合、これらのクラスはインターフェイスであるため、直接インスタンス化できません。  
+## <a name="instantiating-form-region-classes"></a>Instantiating Form Region Classes  
+ You must modify any code that dynamically instantiates certain form region classes. In projects that target the .NET Framework 3.5, you can instantiate form region classes such as Microsoft.Office.Tools.Outlook.FormRegionManifest directly. In projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, these classes are interfaces that you cannot instantiate directly.  
   
- プロジェクトのターゲット フレームワークが [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更される場合は、Globals.Factory プロパティにより提供されるメソッドを使用してインターフェイスをインスタンス化する必要があります。Globals.Factory プロパティの詳細については、「[Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)」を参照してください。  
+ If the target framework of your project is changed to the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later, you must instantiate the interfaces by using methods that are provided by the Globals.Factory property. For more information about the Globals.Factory property, see [Global Access to Objects in Office Projects](../vsto/global-access-to-objects-in-office-projects.md).  
   
- 次の表に、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトのフォーム領域の型と、型のインスタンス化に使用するメソッドをリストします。  
+ The following table lists the form region types and the method to use to instantiate the types in projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or later.  
   
-|型|使用するファクトリ メソッド|  
-|-------|--------------------|  
+|Type|Factory method to use|  
+|----------|---------------------------|  
 |<xref:Microsoft.Office.Tools.Outlook.FormRegionCustomAction>|<xref:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionCustomAction%2A>|  
 |<xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs>|<xref:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionInitializingEventArgs%2A>|  
 |<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest>|<xref:Microsoft.Office.Tools.Outlook.Factory.CreateFormRegionManifest%2A>|  
   
-## 参照  
- [.NET Framework 4 以降への Office ソリューションの移行](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
- [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)  
-  
+## <a name="see-also"></a>See Also  
+ [Migrating Office Solutions to the .NET Framework 4 or later](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
+ [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md)  
   

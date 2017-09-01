@@ -1,211 +1,215 @@
 ---
-title: "Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SharePoint project items, creating custom templates"
-  - "SharePoint project items, defining your own types"
-  - "project items [SharePoint development in Visual Studio], defining your own types"
-  - "SharePoint development in Visual Studio, defining new project item types"
+title: 'Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1 | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint project items, creating custom templates
+- SharePoint project items, defining your own types
+- project items [SharePoint development in Visual Studio], defining your own types
+- SharePoint development in Visual Studio, defining new project item types
 ms.assetid: 41ed9c1c-4239-4d80-934b-975fde744288
 caps.latest.revision: 152
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 151
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 277d10d8fbbdc90a6606d91b80a0d704c76b5b4c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1
-  Visual Studio の SharePoint プロジェクト システムは、プロジェクト項目の種類を独自に作成することによって拡張することができます。  このチュートリアルでは、SharePoint プロジェクトに追加できるプロジェクト項目を作成します。これは SharePoint サイトにカスタム動作を作成するためのプロジェクト項目です。  SharePoint サイトの **\[サイトの操作\]** メニューに対し、カスタム動作によってメニュー項目を追加します。  
+# <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1"></a>Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1
+  You can extend the SharePoint project system in Visual Studio by creating your own project item types. In this walkthrough, you will create a project item that can be added to a SharePoint project to create a custom action on a SharePoint site. The custom action adds a menu item to the **Site Actions** menu of the SharePoint site.  
   
- このチュートリアルでは、次のタスクについて説明します。  
+ This walkthrough demonstrates the following tasks:  
   
--   カスタム動作のための SharePoint プロジェクト項目の新しい種類を定義する Visual Studio 拡張機能の作成。  この新しいプロジェクト項目の種類では、次に示すいくつかのカスタム機能を実装します。  
+-   Creating a Visual Studio extension that defines a new type of SharePoint project item for a custom action. The new project item type implements several custom features:  
   
-    -   プロジェクト項目に関連したさまざまな追加タスク \(Visual Studio でカスタム動作を作成するためのデザイナーを表示するなど\) の開始点となるショートカット メニュー。  
+    -   A shortcut menu that serves as a starting point for additional tasks related to the project item, such as displaying a designer for the custom action in Visual Studio.  
   
-    -   開発者がプロジェクト項目やそれを含んでいるプロジェクトの特定のプロパティを変更したときに実行されるコード。  
+    -   Code that runs when a developer changes certain properties of the project item and the project that contains it.  
   
-    -   **ソリューション エクスプローラー**で、プロジェクト項目の横に表示されるカスタム アイコン。  
+    -   A custom icon that appears next to the project item in **Solution Explorer**.  
   
--   対応するプロジェクト項目用の Visual Studio 項目テンプレートを作成する。  
+-   Creating a Visual Studio item template for the project item.  
   
--   プロジェクト項目テンプレートや拡張機能のアセンブリを配置するための Visual Studio Extension \(VSIX\) パッケージを構築する。  
+-   Building a Visual Studio Extension (VSIX) package to deploy the project item template and the extension assembly.  
   
--   プロジェクト項目のデバッグとテストを行う。  
+-   Debugging and testing the project item.  
   
- これは、独立したチュートリアルです。  このチュートリアルを完了すると、項目テンプレートにウィザードを追加してプロジェクト項目を拡張できるようになります。  詳細については、「[Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)」を参照してください。  
+ This is a stand-alone walkthrough. After you complete this walkthrough, you can enhance the project item by adding a wizard to the item template. For more information, see [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md).  
   
 > [!NOTE]  
->  このチュートリアル用の完全なプロジェクト、コード、およびその他のファイルを含むサンプルは、[http:\/\/go.microsoft.com\/fwlink\/?LinkId\=191369](http://go.microsoft.com/fwlink/?LinkId=191369) からダウンロードできます。  
+>  You can download a sample that contains the completed projects, code, and other files for this walkthrough from the following location:  [http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components on the development computer to complete this walkthrough:  
   
--   サポート対象エディションの Microsoft Windows、SharePoint、および Visual Studio。  詳細については、「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of Microsoft Windows, SharePoint and Visual Studio. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。  このチュートリアルでは、プロジェクト項目を配置するための VSIX パッケージを、SDK の **VSIX プロジェクト** テンプレートを使用して作成します。  詳細については、「[Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)」を参照してください。  
+-   The [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]. This walkthrough uses the **VSIX Project** template in the SDK to create a VSIX package to deploy the project item. For more information, see [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).  
   
- 次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+ Knowledge of the following concepts is helpful, but not required, to complete the walkthrough:  
   
--   SharePoint のカスタム動作。  詳細については、「[カスタム アクション](http://go.microsoft.com/fwlink/?LinkId=177800)」を参照してください。  
+-   Custom actions in SharePoint. For more information, see [Custom Action](http://go.microsoft.com/fwlink/?LinkId=177800).  
   
--   Visual Studio の項目テンプレート。  詳細については、「[Visual Studio でのカスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)」を参照してください。  
+-   Item templates in Visual Studio. For more information, see [Creating Project and Item Templates](/visualstudio/ide/creating-project-and-item-templates).  
   
-## プロジェクトの作成  
- このチュートリアルを実行するには、3 つのプロジェクトを作成する必要があります。  
+## <a name="creating-the-projects"></a>Creating the Projects  
+ To complete this walkthrough, you need to create three projects:  
   
--   VSIX プロジェクト。  このプロジェクトは、SharePoint プロジェクト項目を配置するための VSIX パッケージを作成します。  
+-   A VSIX project. This project creates the VSIX package to deploy the SharePoint project item.  
   
--   項目テンプレート プロジェクト。  このプロジェクトは、SharePoint プロジェクト項目を SharePoint プロジェクトに追加するために使用できる項目テンプレートを作成します。  
+-   An item template project. This project creates an item template that can be used to add the SharePoint project item to a SharePoint project.  
   
--   クラス ライブラリ プロジェクト。  このプロジェクトは、SharePoint プロジェクト項目の動作を定義する Visual Studio 拡張機能を実装します。  
+-   A class library project. This project implements a Visual Studio extension that defines the behavior of the SharePoint project item.  
   
- この 2 つのプロジェクトを作成することから始めます。  
+ Start the walkthrough by creating the projects.  
   
-#### VSIX プロジェクトを作成するには  
+#### <a name="to-create-the-vsix-project"></a>To create the VSIX project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  メニュー バーで **\[ファイル\]**、**\[新規\]**、**\[プロジェクト\]** の順にクリックします。  
+2.  On the menu bar, choose **File**, **New**, **Project**.  
   
-3.  **\[新しいプロジェクト\]** ダイアログ ボックスの上部にある一覧で **\[.NET Framework 4.5\]** が選択されていることを確認します。  
+3.  In the list at the top of the **New Project** dialog box, make sure that **.NET Framework 4.5** is selected.  
   
-4.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[Visual C\#\]** ノードまたは **\[Visual Basic\]** ノードを展開し、**\[機能拡張\]** ノードをクリックします。  
-  
-    > [!NOTE]  
-    >  **\[機能拡張\]** ノードは、Visual Studio SDK がインストールされている場合にのみ使用できます。  詳細については、このトピックで前に説明した「前提条件」を参照してください。  
-  
-5.  **\[VSIX プロジェクト\]** テンプレートを選択します。  
-  
-6.  **\[Name\]** ボックスに「**CustomActionProjectItem**」と入力し、**\[OK\]** をクリックします。  
-  
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] の**ソリューション エクスプローラー**に **CustomActionProjectItem** プロジェクトが追加されます。  
-  
-#### 項目テンプレート プロジェクトを作成するには  
-  
-1.  **ソリューション エクスプローラー**でソリューション ノードのショートカット メニューを開き、**\[追加\]**、**\[新しいプロジェクト\]** の順にクリックします。  
+4.  In the **New Project** dialog box, expand the **Visual C#** or **Visual Basic** nodes, and then choose the **Extensibility** node.  
   
     > [!NOTE]  
-    >  Visual Basic プロジェクトで**ソリューション エクスプローラー**にソリューション ノードが表示されるのは、[NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/ja-jp/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)の **\[常にソリューションを表示\]** チェック ボックスがオンになっている場合だけです。  
+    >  The **Extensibility** node is available only if you install the Visual Studio SDK. For more information, see the prerequisites section earlier in this topic.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスの上部にある一覧で **\[.NET Framework 4.5\]** が選択されていることを確認します。  
+5.  Choose the **VSIX Project** template.  
   
-3.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[Visual C\#\]** ノードまたは **\[Visual Basic\]** ノードを展開し、**\[機能拡張\]** ノードをクリックします。  
+6.  In the **Name** box, enter **CustomActionProjectItem**, and then choose the **OK** button.  
   
-4.  プロジェクト テンプレートの一覧で **\[C\# 項目テンプレート\]** または **\[Visual Basic 項目テンプレート\]** テンプレートを選択します。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **CustomActionProjectItem** project to **Solution Explorer**.  
   
-5.  **\[名前\]** ボックスに「**ItemTemplate**」と入力し、**\[OK\]** をクリックします。  
+#### <a name="to-create-the-item-template-project"></a>To create the item template project  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] のソリューションに **ItemTemplate** プロジェクトが追加されます。  
+1.  In **Solution Explorer**, open the shortcut menu for the solution node, choose **Add**, and then choose **New Project**.  
   
-#### 拡張機能プロジェクトを作成するには  
+    > [!NOTE]  
+    >  In Visual Basic projects, the solution node appears in **Solution Explorer** only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
   
-1.  **ソリューション エクスプローラー**でソリューション ノードのショートカット メニューを開き、**\[追加\]**、**\[新しいプロジェクト\]** の順にクリックします。  
+2.  In the list at the top of the **New Project** dialog box, make sure that **.NET Framework 4.5** is selected.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスの上部にある一覧で **\[.NET Framework 4.5\]** が選択されていることを確認します。  
+3.  In the **New Project** dialog box, expand the **Visual C#** or **Visual Basic** nodes, and then choose the **Extensibility** node.  
   
-3.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[Visual C\#\]** ノードまたは **\[Visual Basic\]** ノードを展開します。次に、**\[Windows\]** ノード、**\[クラス ライブラリ\]** プロジェクト テンプレートの順にクリックします。  
+4.  In the list of project templates, choose the **C# Item Template** or **Visual Basic Item Template** template.  
   
-4.  **\[名前\]** ボックスに「**ProjectItemDefinition**」と入力し、**\[OK\]** をクリックします。  
+5.  In the **Name** box, enter **ItemTemplate**, and then choose the **OK** button.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって、**ProjectItemDefinition** プロジェクトがソリューションに追加され、既定の Class1 コード ファイルが開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **ItemTemplate** project to the solution.  
   
-5.  Class1 コード ファイルをプロジェクトから削除します。  
+#### <a name="to-create-the-extension-project"></a>To create the extension project  
   
-## 拡張機能プロジェクトの構成  
- SharePoint プロジェクト項目の種類を定義するためのコードを記述する前に、コード ファイルおよびアセンブリ参照を拡張機能プロジェクトに追加しておく必要があります。  
+1.  In **Solution Explorer**, open the shortcut menu for the solution node, choose **Add**, and then choose **New Project**.  
   
-#### プロジェクトを構成するには  
+2.  In the list at the top of the **New Project** dialog box, make sure that **.NET Framework 4.5** is selected.  
   
-1.  **ソリューション エクスプローラー**で **\[ProjectItemDefinition\]** プロジェクトのショートカット メニューを開き、**\[追加\]**、**\[新しい項目\]** の順にクリックします。  
+3.  In the **New Project** dialog box, expand the **Visual C#** or **Visual Basic** nodes, choose the **Windows** node, and then choose the **Class Library** project template.  
   
-2.  プロジェクト項目の一覧で **\[コード ファイル\]** を選択します。  
+4.  In the **Name** box, enter **ProjectItemDefinition**, and then choose the **OK** button.  
   
-3.  **\[名前\]** ボックスに「**CustomAction**」という名前と適切なファイル名拡張子を入力し、**\[追加\]** をクリックします。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **ProjectItemDefinition** project to the solution and opens the default Class1 code file.  
   
-4.  **ソリューション エクスプローラー**で、**\[ProjectItemDefinition\]** プロジェクトのショートカット メニューを開き、**\[参照の追加\]** をクリックします。  
+5.  Delete the Class1 code file from the project.  
   
-5.  **\[参照マネージャー \- ProjectItemDefinition\]** ダイアログ ボックスで、**\[アセンブリ\]** ノード、**\[フレームワーク\]** ノードの順にクリックします。  
+## <a name="configuring-the-extension-project"></a>Configuring the Extension Project  
+ Before you write code to define the SharePoint project item type, you have to add code files and assembly references to the extension project.  
   
-6.  次の各アセンブリの横にあるチェック ボックスをオンにします。  
+#### <a name="to-configure-the-project"></a>To configure the project  
+  
+1.  In **Solution Explorer**, open the shortcut menu for the **ProjectItemDefinition** project, choose **Add**, then choose **New Item**.  
+  
+2.  In the list of project items, choose **Code File**.  
+  
+3.  In the **Name** box, enter the name **CustomAction** with the appropriate file name extension, and then choose the **Add** button.  
+  
+4.  In **Solution Explorer**, open the shortcut menu for the **ProjectItemDefinition** project, and then choose **Add Reference**.  
+  
+5.  In the **Reference Manager - ProjectItemDefinition** dialog box, choose the **Assemblies** node, and then choose the **Framework** node.  
+  
+6.  Select the check box next to each of the following assemblies:  
   
     -   System.ComponentModel.Composition  
   
     -   System.Windows.Forms  
   
-7.  **\[拡張機能\]** ノードを選択し、Microsoft.VisualStudio.Sharepoint アセンブリの横にあるチェック ボックスをオンにして、**\[OK\]** をクリックします。  
+7.  Choose the **Extensions** node, select the check box next to the Microsoft.VisualStudio.Sharepoint assembly, and then choose the **OK** button.  
   
-## 新しい SharePoint プロジェクト項目の種類の定義  
- <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> インターフェイスを実装するクラスを作成して、新しいプロジェクト項目の種類の動作を定義します。  このインターフェイスは、新しい種類のプロジェクト項目を定義するたびに必ず実装します。  
+## <a name="defining-the-new-sharepoint-project-item-type"></a>Defining the New SharePoint Project Item Type  
+ Create a class that implements the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> interface to define the behavior of the new project item type. Implement this interface whenever you want to define a new type of project item.  
   
-#### 新しい SharePoint プロジェクト項目の種類を定義するには  
+#### <a name="to-define-the-new-sharepoint-project-item-type"></a>To define the new SharePoint project item type  
   
-1.  ProjectItemDefinition プロジェクトで、CustomAction コード ファイルを開きます。  
+1.  In the ProjectItemDefinition project, open the CustomAction code file.  
   
-2.  このファイル内のコードを次のコードに置き換えます。  
+2.  Replace the code in this file with the following code.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#1](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/cs/projectitemtypedefinition/customaction.cs#1)]
-     [!code-vb[SPExtensibility.ProjectItem.CustomAction#1](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.customaction/vb/projectitemdefinition/customaction.vb#1)]  
+     [!code-csharp[SPExtensibility.ProjectItem.CustomAction#1](../sharepoint/codesnippet/CSharp/customactionprojectitem/projectitemtypedefinition/customaction.cs#1)]  [!code-vb[SPExtensibility.ProjectItem.CustomAction#1](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/projectitemdefinition/customaction.vb#1)]  
   
-## ソリューション エクスプローラーに表示されるプロジェクト項目用アイコンの作成  
- カスタム SharePoint プロジェクト項目を作成した場合、そのプロジェクト項目にはイメージ \(アイコンまたはビットマップ\) を関連付けることができます。  **ソリューション エクスプローラー**には、このイメージがプロジェクト項目の横に表示されます。  
+## <a name="creating-an-icon-for-the-project-item-in-solution-explorer"></a>Creating an Icon for the Project Item in Solution Explorer  
+ When you create a custom SharePoint project item, you can associate an image (an icon or bitmap) with the project item. This image appears next to the project item in **Solution Explorer**.  
   
- 次の手順では、プロジェクト項目のアイコンを実際に作成し、拡張機能のアセンブリに埋め込みます。  このアイコンは、先ほど作成した `CustomActionProjectItemTypeProvider` クラスの <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute> から参照されます。  
+ In the following procedure, you create an icon for the project item and embed the icon in the extension assembly. This icon is referenced by the <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute> of the `CustomActionProjectItemTypeProvider` class that you created earlier.  
   
-#### プロジェクト項目のカスタム アイコンを作成するには  
+#### <a name="to-create-a-custom-icon-for-the-project-item"></a>To create a custom icon for the project item  
   
-1.  **ソリューション エクスプローラー**で **\[ProjectItemDefinition\]** プロジェクトのショートカット メニューを開き、**\[追加\]**、**\[新しい項目\]** の順にクリックします。  
+1.  In **Solution Explorer**, open the shortcut menu for the **ProjectItemDefinition** project, choose **Add**, and then choose **New Item...**.  
   
-2.  プロジェクト項目の一覧で **\[アイコン ファイル\]** 項目を選択します。  
-  
-    > [!NOTE]  
-    >  Visual Basic プロジェクトの場合、**\[アイコン ファイル\]** 項目を表示するには、**\[全般\]** ノードをクリックする必要があります。  
-  
-3.  **\[名前\]** ボックスに「**CustomAction\_SolutionExplorer.ico**」と入力し、**\[追加\]** をクリックします。  
-  
-     **イメージ エディター**に新しいアイコンが表示されます。  
-  
-4.  認識しやすいデザインとなるよう 16x16 版のアイコン ファイルを編集し、アイコン ファイルを保存します。  
-  
-5.  **ソリューション エクスプローラー**で **\[CustomAction\_SolutionExplorer.ico\]** をクリックします。  
-  
-6.  **\[プロパティ\]** ウィンドウで、**\[ビルド アクション\]** プロパティの横にある矢印をクリックします。  
-  
-7.  表示された一覧で **\[埋め込まれたリソース\]** を選択します。  
-  
-## チェックポイント  
- この段階で、プロジェクト項目に必要なすべてのコードがプロジェクトに揃ったことになります。  エラーが発生することなくプロジェクトをコンパイルできるかどうか、プロジェクトをビルドして確認してください。  
-  
-#### プロジェクトをビルドするには  
-  
-1.  **\[ProjectItemDefinition\]** プロジェクトのショートカット メニューを開き、**\[ビルド\]** をクリックします。  
-  
-## Visual Studio 項目テンプレートの作成  
- 自分が定義したプロジェクト項目を他の開発者が使用できるようにするには、プロジェクト テンプレートまたは項目テンプレートを作成します。  Visual Studio で新しいプロジェクトを作成する際または既存のプロジェクトに項目を追加する際、開発者は、そのテンプレートを使用して、プロジェクト項目のインスタンスを作成します。  このチュートリアルでは、ItemTemplate プロジェクトを使用してプロジェクト項目を構成します。  
-  
-#### 項目テンプレートを作成するには  
-  
-1.  Class1 コード ファイルを ItemTemplate プロジェクトから削除します。  
-  
-2.  ItemTemplate プロジェクトで、ItemTemplate.vstemplate ファイルを開きます。  
-  
-3.  ファイルの内容を次の XML に置き換え、ファイルを保存して閉じます。  
+2.  In the list of project items, choose the **Icon File** item.  
   
     > [!NOTE]  
-    >  次の XML は、Visual C\# の項目テンプレート用です。  Visual Basic の項目テンプレートを作成する場合は、`ProjectType` 要素の値を `VisualBasic` に置き換えてください。  
+    >  In Visual Basic projects, you must choose the **General** node to display the **Icon File** item.  
+  
+3.  In the **Name** box, enter **CustomAction_SolutionExplorer.ico**, and then choose the **Add** button.  
+  
+     The new icon opens in the **Image Editor**.  
+  
+4.  Edit the 16x16 version of the icon file so that it has a design you can recognize, and then save the icon file.  
+  
+5.  In **Solution Explorer**, choose **CustomAction_SolutionExplorer.ico**.  
+  
+6.  In the **Properties** window, choose the arrow next to the **Build Action** property.  
+  
+7.  In the list that appears, choose **Embedded Resource**.  
+  
+## <a name="checkpoint"></a>Checkpoint  
+ At this point in the walkthrough, all the code for the project item is now in the project. Build the project to verify that it compiles without errors.  
+  
+#### <a name="to-build-your-project"></a>To build your project  
+  
+1.  Open the shortcut menu for the **ProjectItemDefinition** project and choose **Build**.  
+  
+## <a name="creating-a-visual-studio-item-template"></a>Creating a Visual Studio Item Template  
+ To enable other developers to use your project item, you must create a project template or item template. Developers use these templates in Visual Studio to create an instance of your project item by creating a new project, or by adding an item to an existing project. For this walkthrough, use the ItemTemplate project to configure your project item.  
+  
+#### <a name="to-create-the-item-template"></a>To create the item template  
+  
+1.  Delete the Class1 code file from the ItemTemplate project.  
+  
+2.  In the ItemTemplate project, open the ItemTemplate.vstemplate file.  
+  
+3.  Replace the contents of the file with the following XML, and then save and close the file.  
+  
+    > [!NOTE]  
+    >  The following XML is for a Visual C# item template. If you are creating a Visual Basic item template, replace the value of the `ProjectType` element with `VisualBasic`.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">  
       <TemplateData>  
         <DefaultName>CustomAction</DefaultName>  
@@ -223,18 +227,18 @@ caps.handback.revision: 151
     </VSTemplate>  
     ```  
   
-     このファイルには、項目テンプレートの内容と動作が定義されています。  このファイルの内容の詳細については、「[Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)」を参照してください。  
+     This file defines the contents and behavior of the item template. For more information about the contents of this file, see [Visual Studio Template Schema Reference](/visualstudio/extensibility/visual-studio-template-schema-reference).  
   
-4.  **ソリューション エクスプローラー**で **\[ItemTemplate\]** プロジェクトのショートカット メニューを開き、**\[追加\]**、**\[新しい項目\]** の順にクリックします。  
+4.  In **Solution Explorer**, open the shortcut menu for the **ItemTemplate** project, choose **Add**, and then choose **New Item**.  
   
-5.  **\[新しい項目の追加\]** ダイアログ ボックスで、**\[テキスト ファイル\]** テンプレートを選択します。  
+5.  In the **Add New Item** dialog box, choose the **Text File** template.  
   
-6.  **\[名前\]** ボックスに「**CustomAction.spdata**」と入力し、**\[追加\]** をクリックします。  
+6.  In the **Name** box, enter **CustomAction.spdata**, and then choose the **Add** button.  
   
-7.  次の XML を CustomAction.spdata ファイルに追加し、ファイルを保存して閉じます。  
+7.  Add the following XML to the CustomAction.spdata file, and then save and close the file.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <ProjectItem Type="Contoso.CustomAction" DefaultFile="Elements.xml"   
      xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">  
       <Files>  
@@ -243,18 +247,18 @@ caps.handback.revision: 151
     </ProjectItem>  
     ```  
   
-     このファイルには、プロジェクト項目に含まれている各ファイルに関する情報が格納されます。  `ProjectItem` 要素の `Type` 属性には、プロジェクト項目定義 \(先ほど作成した `CustomActionProjectItemTypeProvider` クラス\) の <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> に渡した文字列を設定します。  .spdata ファイルの内容の詳細については、「[SharePoint Project Item Schema Reference](../sharepoint/sharepoint-project-item-schema-reference.md)」を参照してください。  
+     This file contains information about the files that are contained by the project item. The `Type` attribute of the `ProjectItem` element must be set to the same string that is passed to the <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> on the project item definition (the `CustomActionProjectItemTypeProvider` class you created earlier in this walkthrough). For more information about the contents of .spdata files, see [SharePoint Project Item Schema Reference](../sharepoint/sharepoint-project-item-schema-reference.md).  
   
-8.  **ソリューション エクスプローラー**で **\[ItemTemplate\]** プロジェクトのショートカット メニューを開き、**\[追加\]**、**\[新しい項目\]** の順にクリックします。  
+8.  In **Solution Explorer**, open the shortcut menu for the **ItemTemplate** project, choose **Add**, and then choose **New Item**.  
   
-9. **\[新しい項目の追加\]** ダイアログ ボックスで **\[XML ファイル\]** テンプレートを選択します。  
+9. In the **Add New Item** dialog box, choose the **XML File** template.  
   
-10. **\[名前\]** ボックスに「**Elements.xml**」と入力し、**\[追加\]** をクリックします。  
+10. In the **Name** box, enter **Elements.xml**, and then choose the **Add** button.  
   
-11. Elements.xml ファイルの内容を次の XML に置き換え、ファイルを保存して閉じます。  
+11. Replace the contents of the Elements.xml file with the following XML, and then save and close the file.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8" ?>  
     <Elements Id="$guid8$" xmlns="http://schemas.microsoft.com/sharepoint/">  
       <CustomAction Id="Replace this with a GUID or some other unique string"  
                     GroupId="SiteActions"  
@@ -267,21 +271,21 @@ caps.handback.revision: 151
     </Elements>  
     ```  
   
-     このファイルは、SharePoint サイトの **\[サイトの操作\]** メニューのメニュー項目を作成する既定のカスタム動作を定義します。  ユーザーがメニュー項目をクリックすると、`UrlAction` 要素に指定された URL が Web ブラウザーに表示されます。  カスタム動作の定義に使用できる XML 要素の詳細については、「[カスタム アクション定義スキーマ](http://go.microsoft.com/fwlink/?LinkId=177801)」を参照してください。  
+     This file defines a default custom action that creates a menu item on the **Site Actions** menu of the SharePoint site. When a user chooses the menu item, the URL specified in the `UrlAction` element opens in the web browser. For more information about the XML elements you can use to define a custom action, see [Custom Action Definitions](http://go.microsoft.com/fwlink/?LinkId=177801).  
   
-12. 必要に応じて、ItemTemplate.ico ファイルを開き、わかりやすいデザインに変更します。  **\[新しい項目の追加\]** ダイアログ ボックスで、対応するプロジェクト項目の横にこのアイコンが表示されます。  
+12. Optionally, open the ItemTemplate.ico file and modify it so that it has a design that you can recognize. This icon will display next to the project item in the **Add New Item** dialog box.  
   
-13. **ソリューション エクスプローラー**で、**\[ItemTemplate\]** プロジェクトのショートカット メニューを開き、**\[プロジェクトのアンロード\]** をクリックします。  
+13. In **Solution Explorer**, open the shortcut menu for the **ItemTemplate** project, and then choose **Unload Project**.  
   
-14. **\[ItemTemplate\]** プロジェクトのショートカット メニューを開き、**\[ItemTemplate.csproj の編集\]** または **\[ItemTemplate.vbproj の編集\]** をクリックします。  
+14. Open the shortcut menu for the **ItemTemplate** project again, and then choose **Edit ItemTemplate.csproj** or **Edit ItemTemplate.vbproj**.  
   
-15. プロジェクト ファイルで次の `VSTemplate` 要素を見つけます。  
+15. Locate the following `VSTemplate` element in the project file.  
   
     ```  
     <VSTemplate Include="ItemTemplate.vstemplate">  
     ```  
   
-16. `VSTemplate` 要素を次の XML に置き換え、ファイルを保存して閉じます。  
+16. Replace this `VSTemplate` element with the following XML, and then save and close the file.  
   
     ```  
     <VSTemplate Include="ItemTemplate.vstemplate">  
@@ -289,178 +293,178 @@ caps.handback.revision: 151
     </VSTemplate>  
     ```  
   
-     `OutputSubPath` 要素は、プロジェクトをビルドすると項目テンプレートが作成されるパス内の追加フォルダーを指定します。  ここで指定されたフォルダー内の項目テンプレートが使用可能になるのは、顧客が **\[新しい項目の追加\]** ダイアログ ボックスを開き、**\[SharePoint\]** ノードを展開して、**\[2010\]** ノードを選択したときのみです。  
+     The `OutputSubPath` element specifies additional folders in the path under which the item template is created when you build the project. The folders specified here ensure that the item template will be available only when customers open the **Add New Item** dialog box, expand the **SharePoint** node, and then choose the **2010** node.  
   
-17. **ソリューション エクスプローラー**で、**\[ItemTemplate\]** プロジェクトのショートカット メニューを開き、**\[プロジェクトの再読み込み\]** をクリックします。  
+17. In **Solution Explorer**, open the shortcut menu for the **ItemTemplate** project, and then choose **Reload Project**.  
   
-## プロジェクト項目を配置するための VSIX パッケージの作成  
- 拡張機能を配置するには、ソリューションで VSIX プロジェクトを使用して VSIX パッケージを作成します。  まず、VSIX プロジェクトに含まれている source.extension.vsixmanifest ファイルを変更して、VSIX パッケージを構成します。  次に、ソリューションをビルドして VSIX パッケージを作成します。  
+## <a name="creating-a-vsix-package-to-deploy-the-project-item"></a>Creating a VSIX Package to Deploy the Project Item  
+ To deploy the extension, use the VSIX project in your solution to create a VSIX package. First, configure the VSIX package by modifying the source.extension.vsixmanifest file that is included in the VSIX project. Then, create the VSIX package by building the solution.  
   
-#### VSIX パッケージを構成および作成するには  
+#### <a name="to-configure-and-create-the-vsix-package"></a>To configure and create the VSIX package  
   
-1.  **ソリューション エクスプローラー**で、CustomActionProjectItem プロジェクトの **source.extension.vsixmanifest** ファイルのショートカット メニューを開き、**\[開く\]** をクリックします。  
+1.  In **Solution Explorer**, open the shortcut menu for the **source.extension.vsixmanifest** file in the CustomActionProjectItem project, and then choose **Open**.  
   
-     Visual Studio によってマニフェスト エディターでファイルが開きます。  source.extension.vsixmanifest ファイルが、すべての VSIX パッケージで必要になる extension.vsixmanifest ファイルの基礎となります。  このファイルの詳細については、「[VSIX 拡張機能のスキーマに関するリファレンス](http://msdn.microsoft.com/ja-jp/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)」を参照してください。  
+     Visual Studio opens the file in the manifest editor. The source.extension.vsixmanifest file is the basis for the extension.vsixmanifest file that all VSIX packages require. For more information about this file, see [VSIX Extension Schema 1.0 Reference](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).  
   
-2.  **\[プロジェクト名\]** ボックスに「**Custom Action Project Item**」と入力します。  
+2.  In the **Product Name** box, enter **Custom Action Project Item**.  
   
-3.  **\[作成者\]** ボックスに「**Contoso**」と入力します。  
+3.  In the **Author** box, enter **Contoso**.  
   
-4.  **\[説明\]** ボックスに、「**A SharePoint project item that represents a custom action**」\(カスタム動作を表す SharePoint プロジェクト項目\) と入力します。  
+4.  In the **Description** box, enter **A SharePoint project item that represents a custom action**.  
   
-5.  **\[アセット\]** タブで **\[新規作成\]** をクリックします。  
+5.  On the **Assets** tab, choose the **New** button.  
   
-     **\[Add New Asset\]** \(新しいアセットの追加\) ダイアログ ボックスが表示されます。  
+     The **Add New Asset** dialog box appears.  
   
-6.  **\[種類\]** ボックスの一覧で **\[Microsoft.VisualStudio.ItemTemplate\]** を選択します。  
-  
-    > [!NOTE]  
-    >  この値は、extension.vsixmanifest ファイル内の `ItemTemplate` 要素に対応します。  プロジェクト項目テンプレートが格納される VSIX パッケージ内のサブフォルダーは、この要素によって指定されます。  詳細については、「[NIB: ItemTemplate Element \(VSX Schema\)](http://msdn.microsoft.com/ja-jp/1d489e54-c1c5-4f96-a510-6c2640867ff0)」を参照してください。  
-  
-7.  **\[ソース\]** ボックスの一覧で **\[A project in current solution\]** \(現在のソリューション内のプロジェクト\) を選択します。  
-  
-8.  **\[プロジェクト\]** ボックスの一覧で **\[ItemTemplate\]** を選択し、**\[OK\]** をクリックします。  
-  
-9. **\[アセット\]** タブで、もう一度 **\[新規作成\]** をクリックします。  
-  
-     **\[Add New Asset\]** \(新しいアセットの追加\) ダイアログ ボックスが表示されます。  
-  
-10. **\[種類\]** ボックスの一覧で **\[Microsoft.VisualStudio.MefComponent\]** を選択します。  
+6.  In the **Type** list, choose **Microsoft.VisualStudio.ItemTemplate**.  
   
     > [!NOTE]  
-    >  この値は、extension.vsixmanifest ファイル内の `MefComponent` 要素に対応します。  この要素は、VSIX パッケージ内の拡張機能アセンブリの名前を指定します。  詳細については、「[NIB: MEFComponent Element \(VSX Schema\)](http://msdn.microsoft.com/ja-jp/8a813141-8b73-44c9-b80b-ca85bbac9551)」を参照してください。  
+    >  This value corresponds to the `ItemTemplate` element in the extension.vsixmanifest file. This element identifies the subfolder in the VSIX package that contains the project item template. For more information, see [NIB: ItemTemplate Element (VSX Schema)](http://msdn.microsoft.com/en-us/1d489e54-c1c5-4f96-a510-6c2640867ff0).  
   
-11. **\[ソース\]** ボックスの一覧で **\[A project in current solution\]** \(現在のソリューション内のプロジェクト\) を選択します。  
+7.  In the **Source** list, choose **A project in current solution**.  
   
-12. **\[プロジェクト\]** ボックスの一覧で **\[ProjectItemDefinition\]** を選択します。  
+8.  In the **Project** list, choose **ItemTemplate**, and then choose the **OK** button.  
   
-13. **\[OK\]** を選択します。  
+9. In the **Assets** tab, choose the **New** button again.  
   
-14. メニュー バーで **\[ビルド\]**、**\[ソリューションのビルド\]** の順にクリックし、プロジェクトがエラーなしでコンパイルされたことを確認します。  
+     The **Add New Asset** dialog box appears.  
   
-15. CustomActionProjectItem プロジェクトのビルド出力フォルダーに CustomActionProjectItem.vsix ファイルが格納されていることを確認します。  
+10. In the **Type** list, choose **Microsoft.VisualStudio.MefComponent**.  
   
-     既定では、ビルド出力フォルダーは ..\\bin\\Debug で、CustomActionProjectItem プロジェクトが格納されているフォルダーの下にあります。  
+    > [!NOTE]  
+    >  This value corresponds to the `MefComponent` element in the extension.vsixmanifest file. This element specifies the name of an extension assembly in the VSIX package. For more information, see [NIB: MEFComponent Element (VSX Schema)](http://msdn.microsoft.com/en-us/8a813141-8b73-44c9-b80b-ca85bbac9551).  
   
-## プロジェクト項目のテスト  
- これで、プロジェクト項目をテストする準備ができました。  まず、Visual Studio の実験用インスタンスで CustomActionProjectItem ソリューションのデバッグを開始します。  次に、Visual Studio の実験用インスタンスで、SharePoint プロジェクトの**カスタム動作**プロジェクト項目をテストします。  最後に、SharePoint プロジェクトをビルドして実行し、カスタム動作が正常に機能することを確認します。  
+11. In the **Source** list, choose **A project in current solution**.  
   
-#### ソリューションのデバッグを開始するには  
+12. In the **Project** list, choose **ProjectItemDefinition**.  
   
-1.  管理者の資格情報で Visual Studio を再起動し、CustomActionProjectItem ソリューションを開きます。  
+13. Choose the **OK** button.  
   
-2.  CustomAction コード ファイルを開き、`InitializeType` メソッドのコードの先頭行にブレークポイントを追加します。  
+14. On the menu bar, choose **Build**, **Build Solution**, and then make sure that the project compiles without errors.  
   
-3.  **F5** キーを押してデバッグを開始します。  
+15. Make sure that the build output folder for the CustomActionProjectItem project contains the CustomActionProjectItem.vsix file.  
   
-     Visual Studio によって、拡張機能が %UserProfile%\\AppData\\Local\\Microsoft\\VisualStudio\\10.0Exp\\Extensions\\Contoso\\Custom Action Project Item\\1.0 にインストールされ、Visual Studio の実験用インスタンスが開始されます。  このインスタンスの Visual Studio でプロジェクト項目をテストします。  
+     By default, the build output folder is the ..\bin\Debug folder under the folder that contains the CustomActionProjectItem project.  
   
-#### Visual Studio でプロジェクト項目をテストするには  
+## <a name="testing-the-project-item"></a>Testing the Project Item  
+ You are now ready to test the project item. First, start debugging the CustomActionProjectItem solution in the experimental instance of Visual Studio. Then, test the **Custom Action** project item in a SharePoint project in the experimental instance of Visual Studio. Finally, build and run the SharePoint project to verify that the custom action works as expected.  
   
-1.  Visual Studio の実験用インスタンスのメニュー バーで **\[ファイル\]**、**\[新規作成\]**、**\[プロジェクト\]** の順にクリックします。  
+#### <a name="to-start-debugging-the-solution"></a>To start debugging the solution  
   
-2.  \(項目テンプレートがサポートする言語に応じて\) **\[Visual C\#\]** または **\[Visual Basic\]**  を展開し、**\[SharePoint\]** を展開して、**\[2010\]** ノードをクリックします。  
+1.  Restart Visual Studio with administrative credentials, and then open the CustomActionProjectItem solution.  
   
-3.  プロジェクト テンプレートの一覧で **\[SharePoint 2010 プロジェクト\]** を選択します。  
+2.  Open the CustomAction code file, and then add a breakpoint to the first line of code in the `InitializeType` method.  
   
-4.  **\[名前\]** ボックスに「**CustomActionTest**」と入力し、**\[OK\]** をクリックします。  
+3.  Choose the **F5** key to start debugging.  
   
-5.  **SharePoint カスタマイズ ウィザード**で、デバッグに使用するサイトの URL を入力し、**\[完了\]** をクリックします。  
+     Visual Studio installs the extension to %UserProfile%\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Contoso\Custom Action Project Item\1.0 and starts an experimental instance of Visual Studio. You'll test the project item in this instance of Visual Studio.  
   
-6.  **ソリューション エクスプローラー**でプロジェクトのショートカット メニューを開き、**\[追加\]**、**\[新しい項目\]** の順にクリックします。  
+#### <a name="to-test-the-project-item-in-visual-studio"></a>To test the project item in Visual Studio  
   
-7.  **\[新しい項目の追加\]** ダイアログ ボックスで、**\[SharePoint\]** ノードの下の **\[2010\]** ノードをクリックします。  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **File**, **New**, **Project**.  
   
-     **\[カスタム動作\]** 項目がプロジェクト項目の一覧に表示されることを確認します。  
+2.  Expand **Visual C#** or **Visual Basic** (depending on the language that your item template supports), expand **SharePoint**, and then choose the **2010** node.  
   
-8.  **\[カスタム動作\]** 項目を選択し、**\[追加\]** をクリックします。  
+3.  In the list of project templates, choose **SharePoint 2010 Project**.  
   
-     **CustomAction1** という名前の項目がプロジェクトに追加され、エディターに Elements.xml ファイルが表示されます。  
+4.  In the **Name** box, enter **CustomActionTest**, and then choose the **OK** button.  
   
-9. Visual Studio のもう一方のインスタンスで、先ほど `InitializeType` メソッドに設定したブレークポイントで、コードが停止していることを確認します。  
+5.  In the **SharePoint Customization Wizard**, enter the URL of the site that you want to use for debugging, and then choose the **Finish** button.  
   
-10. **F5** キーを押して、プロジェクトのデバッグを続行します。  
+6.  In **Solution Explorer**, open the shortcut menu for the project node, choose **Add**, and then choose **New Item**.  
   
-11. Visual Studio の実験用インスタンスで、**ソリューション エクスプローラー**を開き、**\[CustomAction1\]** ノードのショートカット メニューを開いて、**\[カスタム動作デザイナーの表示\]** をクリックします。  
+7.  In the **Add New Item** dialog box, choose the **2010** node under the **SharePoint** node.  
   
-12. メッセージ ボックスが表示されることを確認して、**\[OK\]** をクリックします。  
+     Verify that the **Custom Action** item appears in the list of project items.  
   
-     このショートカット メニューを使用して、追加のオプションやコマンド \(カスタム動作のデザイナーを表示するなど\) を開発者に提供することができます。  
+8.  Choose the **Custom Action** item, and then choose the **Add** button.  
   
-13. メニュー バーで **\[表示\]**、**\[出力\]** の順にクリックします。  
+     Visual Studio adds an item that's named **CustomAction1** to your project and opens the Elements.xml file in the editor.  
   
-     **\[出力\]** ウィンドウが開きます。  
+9. Verify that the code in the other instance of Visual Studio stops on the breakpoint that you set earlier in the `InitializeType` method.  
   
-14. **ソリューション エクスプローラー**で、**\[CustomAction1\]** 項目のショートカット メニューを開き、その名前を「**MyCustomAction**」に変更します。  
+10. Choose the **F5** key to continue to debug the project.  
   
-     **\[出力\]** ウィンドウに確認メッセージが表示されます。  `CustomActionProjectItemTypeProvider` クラスに定義した <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemNameChanged> イベント ハンドラーによってメッセージが出力されます。  このイベントを初めとする、プロジェクト項目の各種イベントを処理することにより、プロジェクト項目に対して開発者が変更を加えたときのカスタム動作を実装することができます。  
+11. In the experimental instance of Visual Studio, in **Solution Explorer**, open the shortcut menu for the **CustomAction1** node, and then choose **View Custom Action Designer**.  
   
-#### SharePoint のカスタム動作をテストするには  
+12. Verify that a message box appears, and then choose the **OK** button.  
   
-1.  Visual Studio の実験用インスタンスで、**\[MyCustomAction\]** プロジェクト項目の子である Elements.xml ファイルを開きます。  
+     You can use this shortcut menu to provide additional options or commands for developers, such as displaying a designer for the custom action.  
   
-2.  Elements.xml ファイルで、次の変更を行い、ファイルを保存します。  
+13. On the menu bar, choose **View**, **Output**.  
   
-    -   `CustomAction` 要素で、次の例に示すように、`Id` 属性を GUID などの一意の文字列に設定します。  
+     The **Output** window opens.  
+  
+14. In **Solution Explorer**, open the shortcut menu for the **CustomAction1** item, and then change its name to **MyCustomAction**.  
+  
+     In the **Output** window, a confirmation message appears. This message is written by the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemNameChanged> event handler that you defined in the `CustomActionProjectItemTypeProvider` class. You can handle this event and other project item events to implement custom behavior when the developer modifies the project item.  
+  
+#### <a name="to-test-the-custom-action-in-sharepoint"></a>To test the custom action in SharePoint  
+  
+1.  In the experimental instance of Visual Studio, open the Elements.xml file that's a child of the **MyCustomAction** project item.  
+  
+2.  In the Elements.xml file, make the following changes, and then save the file:  
+  
+    -   In the `CustomAction` element, set the `Id` attribute to a GUID or some other unique string as the following example shows:  
   
         ```  
         Id="cd85f6a7-af2e-44ab-885a-0c795b52121a"  
         ```  
   
-    -   `CustomAction` 要素で、次の例に示すように、`Title` 属性を設定します。  
+    -   In the `CustomAction` element, set the `Title` attribute as the following example shows:  
   
         ```  
         Title="SharePoint Developer Center"  
         ```  
   
-    -   `CustomAction` 要素で、次の例に示すように、`Description` 属性を設定します。  
+    -   In the `CustomAction` element, set the `Description` attribute as the following example shows:  
   
         ```  
         Description="Opens the SharePoint Developer Center Web site."  
         ```  
   
-    -   `UrlAction` 要素で、次の例に示すように、`Url` 属性を設定します。  
+    -   In the `UrlAction` element, set the `Url` attribute as the following example shows:  
   
         ```  
         Url="http://msdn.microsoft.com/sharepoint/default.aspx"  
         ```  
   
-3.  F5 キーを押します。  
+3.  Choose the F5 key.  
   
-     カスタム動作がパッケージ化され、プロジェクトの **\[サイト URL\]** プロパティで指定された SharePoint サイトに配置されます。  Web ブラウザーには、このサイトの既定のページが表示されます。  
+     The custom action is packaged and deployed to the SharePoint site that's specified in the **Site URL** property of the project. The web browser opens to the default page of this site.  
   
     > [!NOTE]  
-    >  **\[スクリプト デバッグが無効\]** ダイアログ ボックスが表示された場合は、**\[はい\]** をクリックしてプロジェクトをデバッグします。  
+    >  If the **Script Debugging Disabled** dialog box appears, choose the **Yes** button to continue to debug the project.  
   
-4.  **\[サイトの操作\]** メニューで **\[SharePoint デベロッパー センター\]** をクリックし、ブラウザーで Web サイト http:\/\/msdn.microsoft.com\/sharepoint\/default.aspx が開かれていること確認したら、Web ブラウザーを閉じます。  
+4.  On the **Site Actions** menu, choose **SharePoint Developer Center**, verify that the browser opens the website http://msdn.microsoft.com/sharepoint/default.aspx, and then close the web browser.  
   
-## 開発コンピューターのクリーンアップ  
- プロジェクト項目のテストが終わったら、プロジェクト項目テンプレートを Visual Studio の実験用インスタンスから削除します。  
+## <a name="cleaning-up-the-development-computer"></a>Cleaning up the Development Computer  
+ After you finish testing the project item, remove the project item template from the experimental instance of Visual Studio.  
   
-#### 開発コンピューターをクリーンアップするには  
+#### <a name="to-clean-up-the-development-computer"></a>To clean up the development computer  
   
-1.  Visual Studio の実験用インスタンスのメニュー バーで **\[ツール\]**、**\[拡張機能と更新プログラム\]** の順にクリックします。  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **Tools**, **Extensions and Updates**.  
   
-     **\[拡張機能と更新プログラム\]** ダイアログ ボックスが表示されます。  
+     The **Extensions and Updates** dialog box opens.  
   
-2.  拡張機能の一覧で **\[Custom Action Project Item\]** を選択し、**\[アンインストール\]** をクリックします。  
+2.  In the list of extensions, choose **Custom Action Project Item**, and then choose the **Uninstall** button.  
   
-3.  確認のダイアログ ボックスが表示されたら、**\[はい\]** をクリックして、拡張機能をアンインストールします。  
+3.  In the dialog box that appears, choose the **Yes** button to confirm that you want to uninstall the extension.  
   
-4.  **\[今すぐ再起動\]** をクリックするとアンインストールは完了です。  
+4.  Choose the **Restart Now** button to complete the uninstallation.  
   
-5.  Visual Studio の実験用インスタンスと、CustomActionProjectItem ソリューションが開いているインスタンスの両方を閉じます。  
+5.  Close both the experimental instance of Visual Studio and the instance in which the CustomActionProjectItem solution is open.  
   
-## 次の手順  
- このチュートリアルを完了すると、項目テンプレートにウィザードを追加できるようになります。  ユーザーがカスタム動作プロジェクト項目を SharePoint プロジェクトに追加するときに、このウィザードは動作についての情報 \(その動作が選択されたときに移動するための場所と URL など\) を収集し、Elements.xml ファイルの新しいプロジェクト項目にこの情報を追加します。  詳細については、「[Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)」を参照してください。  
+## <a name="next-steps"></a>Next Steps  
+ After you complete this walkthrough, you can add a wizard to the item template. When a user adds a Custom Action project item to a SharePoint project, the wizard collects information about the action (such as its location and the URL to navigate to when the action is chosen) and adds this information to the Elements.xml file in the new project item. For more information, see [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md).  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)   
  [Defining Custom SharePoint Project Item Types](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
  [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md)   
- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [Image Editor for Icons](/visual-cpp/windows/image-editor-for-icons)   
- [Creating an Icon or Other Image &#40;Image Editor for Icons&#41;](/visual-cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
+ [Visual Studio Template Schema Reference](/visualstudio/extensibility/visual-studio-template-schema-reference)   
+ [Image Editor for Icons](/cpp/windows/image-editor-for-icons)   
+ [Creating an Icon or Other Image &#40;Image Editor for Icons&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
   
   

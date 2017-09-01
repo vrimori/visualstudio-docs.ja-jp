@@ -1,145 +1,161 @@
 ---
-title: "方法 : [呼び出し履歴] ウィンドウを使用する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.callstack"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "SQL"
-  - "aspx"
-helpviewer_keywords: 
-  - "スレッド処理 [Visual Studio]、呼び出し先または呼び出し元の表示"
-  - "機能 [デバッガー]、呼び出し履歴上のコードの表示"
-  - "逆アセンブリ コード"
-  - "ブレークポイント、[呼び出し履歴] ウィンドウ"
-  - "デバッグ [Visual Studio]、別のスタック フレームへの切り替え"
-  - "デバッグ [Visual Studio]、[呼び出し履歴] ウィンドウ"
-  - "[呼び出し履歴] ウィンドウ、呼び出し履歴上の関数のソース コードの表示"
-  - "スタック、スタック フレームの切り替え"
-  - "[呼び出し履歴] ウィンドウ、呼び出し履歴上の関数の逆アセンブリ コードの表示"
+title: View the call stack in the Visual Studio debugger | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 04/06/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.callstack
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+- SQL
+- aspx
+helpviewer_keywords:
+- threading [Visual Studio], displaying calls to or from
+- functions [debugger], viewing code on call stack
+- disassembly code
+- breakpoints, Call Stack window
+- debugging [Visual Studio], switching to another stack frame
+- debugging [Visual Studio], Call Stack window
+- Call Stack window, viewing source code for functions on the call stack
+- stack, switching stack frames
+- Call Stack window, viewing disassembly code for functions on the call stack
 ms.assetid: 5154a2a1-4729-4dbb-b675-db611a72a731
 caps.latest.revision: 40
-caps.handback.revision: 38
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# 方法 : [呼び出し履歴] ウィンドウを使用する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 83977d96d8e8503565f811608089279cfbef5d05
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-**\[呼び出し履歴\]** ウィンドウを使用すると、現在呼び出し履歴にある関数呼び出しやプロシージャ呼び出しを表示できます。  
+---
+# <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-visual-studio-debugger"></a>View the call stack and use the Call Stack Window in the Visual Studio debugger
+
+By using the **Call Stack** window, you can view the function or procedure calls that are currently on the stack. The **Call Stack** window shows the order in which methods and functions are getting called. The call stack is a good way to examine and understand the execution flow of an app.
   
- **\[呼び出し履歴\]** ウィンドウには、関数と、それを記述しているプログラミング言語の名前が表示されます。  関数またはプロシージャ名に、モジュール名、行番号、パラメーター名、型、値などのオプション情報が追加される場合があります。  このオプション情報の表示は、オンとオフを切り替えることができます。  
+When [debugging symbols](#bkmk_symbols) are not available for part of a call stack, the **Call Stack** window might not be able to display correct information for that part of the call stack. If that occurs, the following notation appears:  
   
- 黄色の矢印は、現在、実行ポインターが存在するスタック フレームを示します。  既定では、このフレームの情報がソース、**\[逆アセンブル\]**、**\[ローカル\]**、**\[ウォッチ\]**、および **\[自動変数\]** の各ウィンドウに表示されます。  コンテキストをスタック上の別のフレームに変更するには、**\[呼び出し履歴\]** ウィンドウを使用します。  
-  
- デバッグ シンボルを呼び出し履歴の一部で使用できない場合、**\[呼び出し履歴\]** ウィンドウは呼び出し履歴のその部分の正しい情報を表示できないことがあります。  次のような出力が表示されます。  
-  
- \[下のフレームは間違っているか、または見つかりません。name.dll に対して読み込まれたシンボルはありません。\]  
-  
- マネージ コードの **\[呼び出し履歴\]** ウィンドウでは、既定で非ユーザー コード情報は非表示になります。  非表示情報の代わりに次のような出力が表示されます。  
-  
- **\[\<External Code\>\]**  
-  
- 非ユーザー コードとは "マイ コード" 以外のすべてのコードです。ショートカット メニューを使用して非ユーザー コードの呼び出し履歴情報を表示することもできます。  
-  
- ショートカット メニューを使用することにより、スレッド間の呼び出しを表示するかどうかを選択できます。  
-  
+`[Frames below may be incorrect and/or missing, no symbols loaded for name.dll]`
+
+>  [!NOTE]
+> The **Call Stack** window is similar to the Debug perspective in some IDEs like Eclipse. 
+
 > [!NOTE]
->  使用している設定またはエディションによっては、ヘルプの記載と異なるダイアログ ボックスやメニュー コマンドが表示される場合があります。  設定を変更するには、**\[ツール\]** メニューの **\[設定のインポートとエクスポート\]** をクリックします。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  The dialog boxes and menu commands you see might differ from those described here, depending on your active settings or edition. To change your settings, select **Import and Export Settings** on the **Tools** menu.  See [Personalizing the IDE](../ide/personalizing-the-visual-studio-ide.md)
   
-### \[呼び出し履歴\] ウィンドウを表示するには \(中断モードまたは実行モードの場合\)  
+## <a name="view-the-call-stack-while-in-the-debugger"></a>View the call stack while in the debugger 
   
--   **\[デバッグ\]** メニューの **\[ウィンドウ\]** をポイントし、**\[呼び出し履歴\]** をクリックします。  
+-   While debugging, in the **Debug** menu, select **Windows > Call Stack**.
+
+ ![Call Stack Window](../debugger/media/dbg_basics_callstack_window.png "CallStackWindow")
+
+A yellow arrow identifies the stack frame where the execution pointer is currently located. By default, this is the stack frame whose information appears in the source, **Locals**, **Autos**, **Watch**, and **Disassembly** windows. If you want to change the debugger context to another frame on the stack, you can do that by [switching to another stack frame](#bkmk_switch).   
   
-### 表示されるオプション情報を変更するには  
+## <a name="display-non-user-code-in-the-call-stack-window"></a>Display non-user code in the Call Stack window  
   
--   **\[呼び出し履歴\]** ウィンドウを右クリックし、\[**\<***the information that you want***\>** の表示\] をクリックします。  
+-   Right-click the **Call Stack** window and select **Show External Code**.
+
+Non-user code is any code that is not shown when [Just My Code](../debugger/just-my-code.md) is enabled. In managed code, non-user code frames are hidden by default. The following notation appears instead of the non-user code frames:  
   
-### \[呼び出し履歴\] ウィンドウで非ユーザー コードのフレームを表示するには  
+**[\<External Code>]**  
   
--   **\[呼び出し履歴\]** ウィンドウを右クリックし、**\[外部コードの表示\]** をクリックします。  
+## <a name="bkmk_switch"></a> Switch to another stack frame (change the debugger context)
   
-### 別のスタック フレームに切り替えるには  
+1.  In the **Call Stack** window, right-click the stack frame whose code and data that you want to view.
+
+    Or, you can double-click a frame in the **Call Stack** window to switch to the selected frame. 
   
-1.  **\[呼び出し履歴\]** ウィンドウで、表示するコードやデータがあるフレームを右クリックします。  
+2.  Select **Switch to Frame**.  
   
-2.  **\[フレームに切り替え\]** をクリックします。  
+     A green arrow with a curly tail appears next to the stack frame you selected. The execution pointer remains in the original frame, which is still marked with the yellow arrow. If you select **Step** or **Continue** from the **Debug** menu, execution will continue in the original frame, not the frame you selected.  
   
-     巻いた尾の付いた緑色の矢印が、選択したフレームの横に表示されます。  実行ポインターは、黄色の矢印でマークされた元のフレームに置かれたままです。  **\[デバッグ\]** メニューの **\[ステップ\]** または **\[続行\]** をクリックすると、選択したフレームではなく、元のフレームで実行が継続されます。  
+## <a name="view-the-source-code-for-a-function-on-the-call-stack"></a>View the source code for a function on the call stack  
   
-### 別のスレッドとの間の呼び出しを表示するには  
+-   In the **Call Stack** window, right-click the function whose source code you want to see and select **Go To Source Code**.
+
+## <a name="run-to-a-specific-function-from-the-call-stack-window"></a>Run to a specific function from the Call Stack window  
   
--   **\[呼び出し履歴\]** ウィンドウを右クリックし、**\[他のスレッドの呼び出しを含む\]** をクリックします。  
+-  In the **Call Stack** window, select the function, right-click and  choose **Run to Cursor**.  
   
-### 呼び出し履歴上の関数のソース コードを表示するには  
+## <a name="set-a-breakpoint-on-the-exit-point-of-a-function-call"></a>Set a breakpoint on the exit point of a function call  
   
--   **\[呼び出し履歴\]** ウィンドウで、ソース コードを表示する関数を右クリックし、**\[ソース コードへ移動\]** をクリックします。  
+-   See [Set a breakpoint at a call stack function](../debugger/using-breakpoints.md#BKMK_Set_a_breakpoint_in_the_call_stack_window).
+
+## <a name="display-calls-to-or-from-another-thread"></a>Display calls to or from another thread  
   
-### 呼び出し履歴を視覚的にトレースするには  
+-   Right-click the **Call Stack** window and select **Include Calls To/From Other Threads**.   
   
-1.  **\[呼び出し履歴\]** ウィンドウでショートカット メニューを開きます。  **\[Show Call Stack on Code Map\]** \(コード マップで呼び出し履歴を表示する\) を選択します  \(キーボード: **CTRL** \+ **SHIFT** \+ **\`**\)。  
+## <a name="visually-trace-the-call-stack"></a>Visually trace the call stack  
+
+If you are using Visual Studio Enterprise (only), you can view code maps for the call stack while debugging.
+
+- In the **Call Stack** window, open the shortcut menu. Choose **Show Call Stack on Code Map**. (Keyboard: **CTRL** + **SHIFT** + **`**)  
   
-     「[デバッグを行うときの呼び出し履歴に対するメソッドのマップ](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)」を参照してください。  
+    For detailed information, see [Map methods on the call stack while debugging](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).
+
+![Show Call Stack on Code Map](../debugger/media/dbg_basics_show_call_stack_on_code_map.gif "ShowCallStackOnCodeMap")
   
-### 呼び出し履歴上の関数の逆アセンブリ コードを表示するには  
+## <a name="view-the-disassembly-code-for-a-function-on-the-call-stack"></a>View the disassembly code for a function on the call stack  
   
--   **\[呼び出し履歴\]** ウィンドウで、逆アセンブリ コードを表示する関数を右クリックし、**\[逆アセンブルを表示\]** をクリックします。  
+-   In the **Call Stack** window, right-click the function whose disassembly code you want to see and select **Go To Disassembly**.    
+
+## <a name="change-the-optional-information-displayed"></a>Change the optional information displayed  
   
-### \[呼び出し履歴\] ウィンドウで特定の関数までを実行するには  
+-   Right-click the **Call Stack** window and set or clear **Show \<***the information that you want***>**.  
   
--   「[指定した位置または関数まで実行する](../debugger/navigating-through-code-with-the-debugger.md#BKMK_Run_to_a_specified_location_or_function)」を参照してください。  
+## <a name="bkmk_symbols"></a> Load Symbols for a module
+In the **Call Stack** window, you can load debugging symbols for code that does not currently have symbols loaded. These symbols can be .NET Framework or system symbols downloaded from the Microsoft public symbol servers or symbols in a symbol path on the computer that you are debugging.  
   
-### 関数呼び出しの終了ポイントにブレークポイントを設定するには  
+See [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
--   「[ソース行、アセンブリ命令、または呼び出し履歴の関数にブレークポイントを設定する](../debugger/using-breakpoints.md#BKMK_Set_a_breakpoint_at_a_source_line__assembly_instruction__or_call_stack_function_)」を参照してください。  
+### <a name="to-load-symbols"></a>To load symbols  
   
-### モジュールのシンボルを読み込むには  
+1.  In the **Call Stack** window, right-click the stack frame for which symbols are not loaded. The frame will be dimmed.  
   
--   **\[呼び出し履歴\]** ウィンドウで、シンボルを再読み込みするモジュールが表示されているフレームを右クリックし、**\[シンボルの読み込み\]** をクリックします。  
+2.  Point to **Load Symbols** and then click **Microsoft Symbol Servers** (if available) or browse to the symbol path.  
   
-## シンボルの読み込み  
- **\[呼び出し履歴\]** ウィンドウで、シンボルがまだ読み込まれていないコードに対してデバッグ シンボルを読み込むことができます。  これらのシンボルには、Microsoft のパブリック シンボル サーバーからダウンロードされる .NET Framework シンボルやシステム シンボル、または、デバッグしているコンピューター上のシンボル パス内のシンボルを指定できます。  
+### <a name="to-set-the-symbol-path"></a>To set the symbol path  
   
- 「[シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」を参照してください。  
+1.  In the **Call Stack** window, choose **Symbol Settings** from the shortcut menu.  
   
-#### シンボルを読み込むには  
+     The **Options** dialog box opens and the **Symbols** page is displayed.  
   
-1.  **\[呼び出し履歴\]** ウィンドウで、シンボルが読み込まれていないフレームを右クリックします。  フレームが淡色表示されます。  
+2.  Click **Symbol Settings**.  
   
-2.  **\[シンボルの読み込み元\]** をポイントし、**\[Microsoft シンボル サーバー\]** または **\[シンボル パス\]** をクリックします。  
+3.  In the **Options** dialog box, click the Folder icon.  
   
-#### シンボル パスを設定するには  
+     In the **Symbol file (.pdb) locations** box, a cursor appears.  
   
-1.  **\[呼び出し履歴\]** ウィンドウで、ショートカット メニューの **\[シンボルの設定\]** をクリックします。  
+4.  Type a directory pathname to the symbol location on the computer that you are debugging. For local and remote debugging, this is a path on your local computer.
   
-     **\[オプション\]** ダイアログ ボックスが表示され、**\[シンボル\]** ページが表示されます。  
+5.  Click **OK** to close the **Options** dialog box.  
   
-2.  **\[シンボルの設定\]** をクリックします。  
-  
-3.  **\[オプション\]** ダイアログ ボックスで、フォルダー アイコンをクリックします。  
-  
-     **\[シンボル ファイル \(.pdb\) の場所\]** ボックスにカーソルが表示されます。  
-  
-4.  デバッグしているコンピューター上のシンボルの場所へのディレクトリ パス名を入力します。  ローカル デバッグの場合、これはローカル コンピューターです。  リモート デバッグの場合、これはリモート コンピューターです。  
-  
-5.  **\[OK\]** をクリックして、**\[オプション\]** ダイアログ ボックスを閉じます。  
-  
-## 参照  
- [\[呼び出し履歴\] ウィンドウの混合コードと不足情報](../Topic/Mixed%20Code%20and%20Missing%20Information%20in%20the%20Call%20Stack%20Window.md)   
- [方法 :ウィンドウの数値書式を変更する](../Topic/How%20to:%20Change%20the%20Numeric%20Format%20of%20Debugger%20Windows.md)   
- [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)   
- [シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
- [ブレークポイントの使用](../debugger/using-breakpoints.md)
+## <a name="see-also"></a>See Also  
+ [Mixed Code and Missing Information in the Call Stack Window](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md) [Viewing Data in the Debugger](../debugger/viewing-data-in-the-debugger.md)   
+ [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+ [Using Breakpoints](../debugger/using-breakpoints.md)

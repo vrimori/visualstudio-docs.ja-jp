@@ -1,5 +1,5 @@
 ---
-title: "VSIX v3 で拡張機能フォルダー外にインストールする |Microsoft ドキュメント"
+title: Installing outside the extensions folder with VSIX v3 | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2016
 ms.reviewer: 
@@ -27,37 +27,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
-ms.openlocfilehash: 6d87c86d0a7793f661c6a3b28e95340f3a28c616
-ms.lasthandoff: 03/07/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: da7f91cc71eb6d0bc403089a0e34b6d81165e026
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="installing-outside-the-extensions-folder"></a>拡張機能フォルダー外にインストールします。
+# <a name="installing-outside-the-extensions-folder"></a>Installing outside the extensions folder
 
-以降では、Visual Studio 2017 と VSIX v3 (バージョン 3)、機能拡張フォルダーの外部で資産を拡張機能をインストールするためここではサポートされています。 現時点では、次の場所は ([installdir] は、Visual Studio インスタンスのインストール ディレクトリにマッピング) の有効なインストール場所として有効にします。
+Starting with Visual Studio 2017 and VSIX v3 (version 3), there is now support for installing extension assets outside of the extensions folder. Currently, the following locations are enabled as valid installation locations (where [INSTALLDIR] is mapped to the Visual Studio instance's installation directory):
 
-* [installdir] \Common7\IDE\PublicAssemblies
-* [installdir] \Common7\IDE\ReferenceAssemblies
-* [installdir] \MSBuild
-* [installdir] \Schemas
-* [installdir] \Licenses
-* [installdir] \RemoteDebugger
-* [installdir] \VSTargets
+* [INSTALLDIR]\MSBuild
+* [INSTALLDIR]\Xml\Schemas
+* [INSTALLDIR]\Common7\IDE\PublicAssemblies
+* [INSTALLDIR]\Licenses
+* [INSTALLDIR]\Common7\IDE\ReferenceAssemblies
+* [INSTALLDIR]\Common7\IDE\RemoteDebugger
+* [INSTALLDIR]\Common7\IDE\VC\VCTargets
 
->**注:** VSIX 形式 VS インストール フォルダーの構造体の外部のインストールはできません。
+>**Note:** The VSIX format does not allow you to install outside the VS install folder structure.
 
-これらのディレクトリへのインストールをサポートするために、VSIX を「インスタンスごとのコンピューターごとの」インストールする必要があります。 これは、extension.vsixmanifest の各デザイナーで"all users"チェック ボックスをオンに有効にすることができます。
+In order to support installing to these directories, the VSIX must be installed "per-instance per-machine". This can be enabled by checking the "all-users" checkbox in the extension.vsixmanifest designer:
 
-![すべてのユーザーを確認します。](~/extensibility/media/check-all-users.png)
+![check all users](media/check-all-users.png)
 
-## <a name="how-to-set-the-installroot"></a>として「installroot」を設定する方法
+## <a name="how-to-set-the-installroot"></a>How to set the InstallRoot
 
-インストール ディレクトリを設定するには、使用することができます、**プロパティ**Visual Studio のウィンドウです。 たとえば、設定、`InstallRoot`上の場所のいずれかへの参照をプロジェクトのプロパティ。
+To set the installation directories, you can use the **Properties** window in Visual Studio. For instance, you can set the `InstallRoot` property of a project reference to one of the above locations:
 
-![ルートのプロパティをインストールします。](~/extensibility/media/install-root-properties.png)
+![install root properties](media/install-root-properties.png)
 
-これは、いくつかのメタデータが、対応する追加されます`ProjectReference`VSIX プロジェクトの .csproj ファイル内のプロパティ。
+This will add some metadata to the corresponding `ProjectReference` property inside of the VSIX project's .csproj file:
 
 ```xml
  <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
@@ -67,15 +68,15 @@ ms.lasthandoff: 03/07/2017
  </ProjectReference>
 ```
 
->**注:**したい場合、.csproj ファイルを直接、編集することができます。
+>**Note:** You can edit the .csproj file directly, if you prefer.
 
-## <a name="how-to-set-a-subpath-under-the-installroot"></a>として「installroot」下サブパスを設定する方法
+## <a name="how-to-set-a-subpath-under-the-installroot"></a>How to set a subpath under the InstallRoot
 
-下にあるサブパスをインストールするようにかどうか、 `InstallRoot`、できるように設定して、`VsixSubPath`プロパティと同様に、`InstallRoot`プロパティです。 たとえば、プロジェクト参照の出力をインストールしたい ' [installdir]\MSBuild\MyCompany\MySDK\1.0' です。 それが可能に簡単にプロパティ デザイナーを使用します。
+If you'd like to install to a subpath underneath the `InstallRoot`, you can do so by setting the `VsixSubPath` property just like the `InstallRoot` property. For instance, say we want our project reference's output to install to '[INSTALLDIR]\MSBuild\MyCompany\MySDK\1.0'. We can do this easily with the property designer:
 
-![セットのサブパス](~/extensibility/media/set-subpath.png)
+![set subpath](media/set-subpath.png)
 
-対応する .csproj 変更は、次のようになります。
+The corresponding .csproj changes will look like this:
 
 ```xml
 <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
@@ -86,7 +87,7 @@ ms.lasthandoff: 03/07/2017
 </ProjectReference>
 ```
 
-## <a name="extra-information"></a>追加情報
+## <a name="extra-information"></a>Extra information
 
-プロパティのデザイナー変更はプロジェクト参照だけに適用します。設定することができます、`InstallRoot`も、プロジェクト内のアイテムのメタデータ (上記で説明したのと同じ方法を使用)。
+The property designer changes apply to more than just project references; you can set the `InstallRoot` metadata for items inside of your project as well (using the same methods described above).
 

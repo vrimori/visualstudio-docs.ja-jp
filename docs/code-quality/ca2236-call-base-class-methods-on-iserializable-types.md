@@ -1,69 +1,85 @@
 ---
-title: "CA2236: ISerializable 型で基本クラス メソッドを呼び出します | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2236"
-  - "CallBaseClassMethodsOnISerializableTypes"
-helpviewer_keywords: 
-  - "CA2236"
-  - "CallBaseClassMethodsOnISerializableTypes"
+title: 'CA2236: Call base class methods on ISerializable types | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2236
+- CallBaseClassMethodsOnISerializableTypes
+helpviewer_keywords:
+- CA2236
+- CallBaseClassMethodsOnISerializableTypes
 ms.assetid: 5a15b20d-769c-4640-b31a-36e07077daae
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 15
----
-# CA2236: ISerializable 型で基本クラス メソッドを呼び出します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: ae87df4ff5efceee22fc76f6449ac8c3c9993e8b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2236-call-base-class-methods-on-iserializable-types"></a>CA2236: Call base class methods on ISerializable types
 |||  
 |-|-|  
 |TypeName|CallBaseClassMethodsOnISerializableTypes|  
 |CheckId|CA2236|  
-|分類|Microsoft.Usage|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Non Breaking|  
   
-## 原因  
- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> インターフェイスを実装している型から別の型が派生し、次の条件のいずれかに該当します。  
+## <a name="cause"></a>Cause  
+ A type derives from a type that implements the <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> interface, and one of the following conditions is true:  
   
--   型でシリアル化コンストラクター \(つまり、<xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> を持つコンストラクター\) である <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> パラメーター シグネチャを実装していますが、基本型の同期化コンストラクターを呼び出していません。  
+-   The type implements the serialization constructor, that is, a constructor with the <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>, <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> parameter signature, but does not call the serialization constructor of the base type.  
   
--   型で <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> メソッドを実装していますが、基本型の <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> メソッドを呼び出していません。  
+-   The type implements the <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> method but does not call the <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method of the base type.  
   
-## 規則の説明  
- カスタムのシリアル化プロセスでは、型でフィールドをシリアル化するには <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> メソッドを実装し、フィールドを逆シリアル化するにはシリアル化コンストラクターを実装します。  その型が <xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装する型から派生する場合、基本型の <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> メソッドとシリアル化コンストラクターを呼び出して、基本型のフィールドのシリアル化\/逆シリアル化を行う必要があります。  そうしないと、型のシリアル化\/逆シリアル化が正しく行われません。  派生型で新しいフィールドを追加しない場合、型で <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> メソッドやシリアル化コンストラクターを実装したり、基本型で対応するメソッドやシリアル化コンストラクターを呼び出す必要はありません。  
+## <a name="rule-description"></a>Rule Description  
+ In a custom serialization process, a type implements the <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method to serialize its fields and the serialization constructor to de-serialize the fields. If the type derives from a type that implements the <xref:System.Runtime.Serialization.ISerializable> interface, the base type <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method and serialization constructor should be called to serialize/de-serialize the fields of the base type. Otherwise, the type will not be serialized and de-serialized correctly. Note that if the derived type does not add any new fields, the type does not need to implement the <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method nor the serialization constructor or call the base type equivalents.  
   
-## 違反の修正方法  
- この規則違反を修正するには、基本型の <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> メソッドまたはシリアル化コンストラクターを、対応する派生型のメソッドまたはコンストラクターから呼び出します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, call the base type <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method or serialization constructor from the corresponding derived type method or constructor.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 使用例  
- 次の例は、基本クラスのシリアル化コンストラクターと <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> メソッドを呼び出すことでこの規則に適合する派生型を示します。  
+## <a name="example"></a>Example  
+ The following example shows a derived type that satisfies the rule by calling the serialization constructor and <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> method of the base class.  
   
- [!code-vb[FxCop.Usage.CallBaseISerializable#1](../code-quality/codesnippet/VisualBasic/ca2236-call-base-class-methods-on-iserializable-types_1.vb)]
- [!code-cs[FxCop.Usage.CallBaseISerializable#1](../code-quality/codesnippet/CSharp/ca2236-call-base-class-methods-on-iserializable-types_1.cs)]  
+ [!code-vb[FxCop.Usage.CallBaseISerializable#1](../code-quality/codesnippet/VisualBasic/ca2236-call-base-class-methods-on-iserializable-types_1.vb)] [!code-csharp[FxCop.Usage.CallBaseISerializable#1](../code-quality/codesnippet/CSharp/ca2236-call-base-class-methods-on-iserializable-types_1.cs)]  
   
-## 関連規則  
- [CA2240: ISerializable を正しく実装します](../Topic/CA2240:%20Implement%20ISerializable%20correctly.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA2240: Implement ISerializable correctly](../code-quality/ca2240-implement-iserializable-correctly.md)  
   
- [CA2229: シリアル化コンストラクターを実装します](../code-quality/ca2229-implement-serialization-constructors.md)  
+ [CA2229: Implement serialization constructors](../code-quality/ca2229-implement-serialization-constructors.md)  
   
- [CA2238: シリアル化メソッドを正しく実装します](../code-quality/ca2238-implement-serialization-methods-correctly.md)  
+ [CA2238: Implement serialization methods correctly](../code-quality/ca2238-implement-serialization-methods-correctly.md)  
   
- [CA2235: すべてのシリアル化不可能なフィールドを設定します](../code-quality/ca2235-mark-all-non-serializable-fields.md)  
+ [CA2235: Mark all non-serializable fields](../code-quality/ca2235-mark-all-non-serializable-fields.md)  
   
- [CA2237: ISerializable 型を SerializableAttribute に設定します](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)  
+ [CA2237: Mark ISerializable types with SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)  
   
- [CA2239: オプションのフィールドに逆シリアル化メソッドを指定します](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)  
+ [CA2239: Provide deserialization methods for optional fields](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)  
   
- [CA2120: シリアル化コンストラクターをセキュリティで保護します](../Topic/CA2120:%20Secure%20serialization%20constructors.md)
+ [CA2120: Secure serialization constructors](../code-quality/ca2120-secure-serialization-constructors.md)

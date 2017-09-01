@@ -41,14 +41,12 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/30/2017
 
 ---
-# アプリケーションのグローバライズとローカライズ
-<a id="globalizing-and-localizing-applications" class="xliff"></a>
+# <a name="globalizing-and-localizing-applications"></a>アプリケーションのグローバライズとローカライズ
 アプリケーションを各国のユーザー向けに配布する場合は、デザイン段階や開発段階で留意する必要のある事項がいくつかあります。 アプリケーションを国際対応にする計画がない場合でも、事前に多少の配慮をしておくと、アプリケーションの将来のバージョンで計画が変更になったときに役立ちます。 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] に組み込まれたサービスを利用すると、Visual Studio でマネージ開発を使用して、異なるロケールに適応できる単一のアプリケーションを簡単に開発できます。  
   
  Visual Studio は、設計の初期段階から、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] に組み込まれたサービスを活用して各国用アプリケーションを簡単に開発できるようにすることを目指してきました。 次に示す各ページでは、Visual Studio に組み込まれた国際化機能について紹介します。  
   
-## このセクションの内容
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>このセクションの内容  
  [.NET Framework ベースの国際対応アプリケーションの概要](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)  
  Visual Studio および [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を使用した国際市場向けソフトウェアの開発に関するいくつかの概念を紹介します。  
   
@@ -58,8 +56,7 @@ ms.lasthandoff: 05/30/2017
  [アプリケーションのグローバル化](../ide/globalizing-applications.md)  
  複数のカルチャをサポートするアプリケーションの作成について説明するページへのリンクを提供します。  
   
-## 関連項目
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>関連項目  
  [アプリのグローバル化 (JavaScript と HTML を使った Windows ストア アプリ)](http://go.microsoft.com/fwlink/?LinkId=258266)  
  JavaScript と HTML を使用して開発された [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリのグローバル化およびローカライズに役立つ「方法」トピックとガイドラインが含まれています。  
   

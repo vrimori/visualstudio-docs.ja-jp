@@ -28,23 +28,78 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7aa8de1116409f30cf1a0cd2fd689c03c2242724
+ms.translationtype: HT
+ms.sourcegitcommit: a2cfae1be1415a2d770d1467a09f207f73eafd05
+ms.openlocfilehash: 5b872f1d28c132fe2910bed16882ba6fb01e6782
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>変更ログ (Visual Studio Tools for Unity)
 Visual Studio Tools for Unity の変更ログです。  
 
+## <a name="3302"></a>3.3.0.2
+ リリース: 2017 年 8 月 15 日
+
+### <a name="bug-fixes"></a>バグ修正  
+  
+-   **プロジェクトの生成:**  
+   
+    -   Unity 5.5 と以前のバージョンの Visual Studio ソリューションの生成を修正します。
+   
+## <a name="3300"></a>3.3.0.0
+ リリース: 2017 年 8 月 14 日
+
+### <a name="new-features"></a>新機能  
+  
+-   **評価:**  
+
+    -   新しい Unity ランタイムによる構造体の作成のサポートが追加されました。
+    
+    -   ポインターの最低限のサポートが追加されました。
+    
+### <a name="bug-fixes"></a>バグ修正  
+  
+-   **評価:**  
+
+    -   プリミティブに対するメソッド呼び出しが修正されました。
+    
+    -   BeforeFieldInit とマークされた型によるフィールド評価が修正されました。
+    
+    -   二項演算子 (減算) でサポートされていない呼び出しが修正されました。
+    
+    -   Visual Studio ウォッチへの項目の追加時の問題が修正されました。
+
+-   **Project Generation:**  
+
+    -   mcs.rsp ファイルを使用したアセンブリ名の参照が修正されました。
+    
+    -   API レベルの定義が修正されました。    
+
+## <a name="3200"></a>3.2.0.0
+ リリース: 2017 年 5 月 10 日
+
+### <a name="new-features"></a>新機能  
+  
+-   **インストーラー:**  
+   
+    -   MEF キャッシュの消去に関するサポートが追加されました。
+   
+### <a name="bug-fixes"></a>バグ修正  
+  
+-   **コード エディター:**  
+
+    -   カスタム属性を使用した分類/補完が修正されました。
+
+    -   Unity メッセージの画面のちらつきが修正されました。
+    
 ## <a name="3100"></a>3.1.0.0
  リリース: 2017 年 4 月 7 日
 
 ### <a name="new-features"></a>新機能  
   
 -   **デバッガー:**  
-
+   
     -   新しい Unity ランタイムのサポートが追加されました (.NET 4.6/C# 6 と互換性あり)。
         
 -   **プロジェクトの生成:**  
@@ -60,28 +115,28 @@ Visual Studio Tools for Unity の変更ログです。
 ### <a name="bug-fixes"></a>バグ修正  
   
 -   **コード エディター:**  
-
+   
     -   オートコンプリートでメソッドを挿入した後のキャレット位置を修正しました。
-  
+   
 -   **プロジェクトの生成:**  
-  
+   
     -   アセンブリ バージョンの後処理を削除しました。
-
+   
 ## <a name="3001"></a>3.0.0.1
  リリース: 2017 年 3 月 7 日
 
 ### <a name="this-version-includes-all-new-features-and-bug-fixes-introduced-with-28x-series"></a>このバージョンには、2.8.x シリーズで導入されたすべての新機能とバグ修正が含まれています。
 
-## <a name="282-30-preview-3"></a>2.8.2 (3.0 Preview 3)
+## <a name="2820---30-preview-3"></a>2.8.2.0 - 3.0 プレビュー 3
  リリース: 2017 年 1 月 25 日
    
 ### <a name="bug-fixes"></a>バグ修正  
-
+   
 -   **プロジェクトの生成:**  
   
     -   最初はバイナリ DLL として次にプロジェクト参照として 2 回参照されたプラグイン プロジェクトの固定回帰。
-
-## <a name="281-30-preview-2"></a>2.8.1 (3.0 Preview 2)
+   
+## <a name="2810---30-preview-2"></a>2.8.1.0 - 3.0 プレビュー 2
  リリース: 2017 年 1 月 23 日
    
 ### <a name="bug-fixes"></a>バグ修正  
@@ -108,7 +163,7 @@ Visual Studio Tools for Unity の変更ログです。
     
     -   リモートの Unity のドキュメントをターゲットとして https に切り替えました。
 
-## <a name="28-30-preview"></a>2.8 (3.0 Preview)
+## <a name="2800---30-preview"></a>2.8.0.0 - 3.0 プレビュー
  リリース: 2016 年 11 月 17 日
 
 ### <a name="new-features"></a>新機能  
@@ -175,7 +230,7 @@ Visual Studio Tools for Unity の変更ログです。
     
     -   Web エンコードされたファイル名のスクリプトをコンパイルするときにコンパイルを妨げるバグを修正しました。
 
-## <a name="23"></a>2.3  
+## <a name="2300"></a>2.3.0.0  
  リリース: 2016 年 7 月 14 日  
   
 ### <a name="new-features"></a>新機能  
@@ -187,13 +242,13 @@ Visual Studio Tools for Unity の変更ログです。
     -   生成されたプロジェクトのプロパティを変更できるオプションを追加しました。  
   
 -   **デバッガー:**  
-  
+   
     -   テキスト、XML、HTML、および JSON 文字列のビジュアライザーを追加しました。  
-  
+   
 -   **ウィザード:**  
-  
+   
     -   不足している MonoBehaviors を追加しました。  
-  
+   
 ### <a name="bug-fixes"></a>バグ修正  
   
 -   **全般:**  
@@ -210,7 +265,7 @@ Visual Studio Tools for Unity の変更ログです。
   
     -   いくつかの式の評価の問題を修正しました。  
   
-## <a name="22"></a>2.2  
+## <a name="2200"></a>2.2.0.0  
  リリース: 2016 年 2 月 4 日  
   
 ### <a name="new-features"></a>新機能  
@@ -248,16 +303,16 @@ Visual Studio Tools for Unity の変更ログです。
     -   デバッグ時に Visual Studio の凍結の原因となる問題を修正しました。  
   
 -   **UI:**  
-  
+   
     -   [Tabs Studio](https://tabsstudio.com/) Visual Studio 拡張機能との非互換性の問題を修正しました。  
-  
+   
 -   **インストーラー:**  
   
     -   HKLM レジストリ エントリを作成することで、VSTU のコンピューター全体のインストール (すべてのユーザー向けのインストール) をサポートします。  
   
     -   複数の異なるバージョンの Visual Studio に同じバージョンの VSTU をインストールする際の VSTU のアンインストールに関する問題が修正されました。 VSTU **2015** 2.1.0.0 と VSTU **2013** 2.1.0.0 の両方がインストールされていた場合など。  
   
-## <a name="21"></a>2.1  
+## <a name="2100"></a>2.1.0.0  
  リリース: 2015 年 9 月 8 日  
   
 ### <a name="new-features"></a>新機能  
@@ -278,7 +333,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   Visual Studio 2015 でのヒット カウント ブレークポイントを修正しました。  
   
-## <a name="20"></a>2.0  
+## <a name="2000"></a>2.0.0.0  
  リリース: 2015 年 7 月 20 日  
   
 ### <a name="bug-fixes"></a>バグ修正  
@@ -313,7 +368,7 @@ Visual Studio Tools for Unity の変更ログです。
   
     -   空の配列の検査の問題を修正しました。  
   
-## <a name="199-20-preview-2"></a>1.9.9 (2.0 Preview 2)
+## <a name="1990---20-preview-2"></a>1.9.9.0 - 2.0 プレビュー 2
  リリース: 2015 年 4 月 2 日  
   
 ### <a name="new-features"></a>新機能  
@@ -402,7 +457,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   **UI:** コンテキスト メニューおよびアイコンで Visual Studio のテーマをサポートします。  
   
-## <a name="198-20-preview"></a>1.9.8 (2.0 Preview)
+## <a name="1980---20-preview"></a>1.9.8.0 - 2.0 プレビュー
  リリース: 2014 年 11 月 12 日  
   
 ### <a name="new-features"></a>新機能  
@@ -441,7 +496,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   必要ない場合は、ログのコールバックを登録しないようにしました。  
   
-## <a name="192"></a>1.9.2  
+## <a name="1920"></a>1.9.2.0  
  リリース: 2014 年 10 月 9 日  
   
 ### <a name="new-features"></a>新機能  
@@ -464,7 +519,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   拡張子のフィルターが空である場合に、プロジェクト ファイルにすべてのアセットが含められるバグを修正しました。  
   
-## <a name="191"></a>1.9.1  
+## <a name="1910"></a>1.9.1.0  
  リリース: 2014 年 9 月 22 日  
   
 ### <a name="new-features"></a>新機能  
@@ -509,7 +564,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   Unity の 64 ビット バージョンの VSTU でスクリプトを開く際の問題を修正しました。  
   
-## <a name="19"></a>1.9  
+## <a name="1900"></a>1.9.0.0  
  リリース: 2014 年 7 月 29 日  
   
 ### <a name="new-features"></a>新機能  
@@ -557,7 +612,7 @@ Visual Studio Tools for Unity の変更ログです。
 > [!IMPORTANT]
 >  Unity のエコシステムで最もよく利用されている言語は C# です。新しいサンプル アセットは C# で記述されており、Unity のドキュメントの既定言語も今後は C# になります。C# でのエクスペリエンスに重点を移すため、Microsoft では UnityScript と Boo に対する基本的なサポートを終了しました。 その結果、現在のところ VSTU ソリューションは C# のみとなり、読み込みが大幅に高速化しました。  
   
-## <a name="182"></a>1.8.2  
+## <a name="1820"></a>1.8.2.0  
  リリース: 2014 年 1 月 7 日  
   
 ### <a name="new-features"></a>新機能  
@@ -584,7 +639,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   バージョン固有のアセンブリを生成した場合に、同期が失われると Unity がクラッシュする問題を回避するようにしました。  
   
-## <a name="181"></a>1.8.1  
+## <a name="1810"></a>1.8.1.0  
  リリース: 2013 年 11 月 21 日  
   
 ### <a name="new-features"></a>新機能  
@@ -617,7 +672,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   Unity からの開始スクリプトを修正して、Unity 4.2 以降の場合に Alt + Tab キーの動作が混同されないようにしました。  
   
-## <a name="180"></a>1.8.0  
+## <a name="1800"></a>1.8.0.0  
  リリース: 2013 年 9 月 24 日  
   
 ### <a name="new-features"></a>新機能  
@@ -658,7 +713,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   ローカル ビューでブール値を変更する場合の問題を修正しました。  
   
-## <a name="122"></a>1.2.2  
+## <a name="1220"></a>1.2.2.0  
  リリース: 2013 年 7 月 9 日  
   
 ### <a name="bug-fixes"></a>バグ修正  
@@ -681,7 +736,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   Unity 4.2 のベータ版のアセンブリの処理を修正しました。  
   
-## <a name="121"></a>1.2.1  
+## <a name="1210"></a>1.2.1.0  
  リリース: 2013 年 4 月 9 日  
   
 ### <a name="bug-fixes"></a>バグ修正  
@@ -694,7 +749,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   いくつかの外部 DLL 内のブレークポイントのバインディングを修正しました。  
   
-## <a name="12"></a>1.2  
+## <a name="1200"></a>1.2.0.0  
  リリース: 2013 年 3 月 25 日  
   
 ### <a name="new-features"></a>新機能  
@@ -761,10 +816,10 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   バグ「UVS-11: コルーチンでのローカル」を修正しました。  
   
-## <a name="11---beta-release"></a>1.1 - ベータ リリース  
+## <a name="1100---beta-release"></a>1.1.0.0 - ベータ リリース  
  リリース: 2014 年 10 月 9 日  
   
-## <a name="1013"></a>1.0.13  
+## <a name="10130"></a>1.0.13.0  
  リリース: 2013 年 1 月 21 日  
   
 ### <a name="bug-fixes"></a>バグ修正  
@@ -787,7 +842,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   Unity から UnityVS に長いメッセージが送信された場合の処理を修正しました。 以前は、長いメッセージを処理する UnityVS のメッセージング部分でクラッシュすることがあったため、 Unity から UnityVS のファイルを開けないことがありました。  
   
-## <a name="1012"></a>1.0.12  
+## <a name="10120"></a>1.0.12.0  
  リリース: 2013 年 1 月 3 日  
   
 ### <a name="bug-fixes"></a>バグ修正  
@@ -806,7 +861,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   ユーザー コードがログのコールバック ハンドラーに参加できないという API の不具合を修正しました。  
   
-## <a name="1011"></a>1.0.11  
+## <a name="10110"></a>1.0.11.0  
  リリース: 2012 年 11 月 28 日  
   
 ### <a name="new-features"></a>新機能  
@@ -837,7 +892,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   Visual Studio のステータス バーに UnityVS のアイコンを挿入できない場合のクラッシュを修正しました。  
   
-## <a name="1010"></a>1.0.10  
+## <a name="10100"></a>1.0.10.0  
  リリース: 2012 年 10 月 9 日  
   
 ### <a name="bug-fixes"></a>バグ修正  
@@ -850,7 +905,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   Unity からのアセンブリの取得方法を修正することにより、ファイルのロックにより Unity のビルド プロセスが混乱するという問題を回避しました。  
   
-## <a name="109"></a>1.0.9  
+## <a name="1090"></a>1.0.9.0  
  リリース: 2012 年 10 月 3 日  
   
 ### <a name="bug-fixes"></a>バグ修正  
@@ -869,7 +924,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   バグ「UVS-21: Unity Math API へのメソッドの呼び出しを評価すると、無効なポインターが発生する」を修正しました。  
   
-## <a name="108"></a>1.0.8  
+## <a name="1080"></a>1.0.8.0  
  リリース: 2012 年 9 月 26 日  
   
 ### <a name="bug-fixes"></a>バグ修正  
@@ -880,7 +935,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   UnityVS が Visual Studio 2010 に登録される方法を修正しました。  
   
-## <a name="107"></a>1.0.7  
+## <a name="1070"></a>1.0.7.0  
  リリース: 2012 年 9 月 14 日  
   
 ### <a name="new-features"></a>新機能  
@@ -896,10 +951,10 @@ Visual Studio Tools for Unity の変更ログです。
 > [!IMPORTANT]
 >  Visual Studio 2012 をサポートするため、一部のファイルの名前変更や移動を行いました。 Unity をインポートする UnityVS パッケージの名前を、Visual Studio 2010 であるか Visual Studio 2012 であるかに応じて UnityVS 2010 または UnityVS 2012 とするようにしました。 さらに、このバージョンでは、UnityVS プロジェクト ファイルを再生成する必要もあります。  
   
-## <a name="106---internal-build"></a>1.0.6 - 内部ビルド  
+## <a name="1060---internal-build"></a>1.0.6.0 - 内部ビルド  
  リリース: 2012 年 9 月 12 日  
   
-## <a name="105"></a>1.0.5  
+## <a name="1050"></a>1.0.5.0  
  リリース: 2012 年 9 月 10 日  
   
 ### <a name="bug-fixes"></a>バグ修正  
@@ -908,7 +963,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   Unity がアセット サーバーに接続されている場合の Unity インスタンスの検出を修正しました。 この問題が原因で、Unity からのファイルのオープンと Visual Studio デバッガーの自動接続に不具合が起きていました。  
   
-## <a name="104"></a>1.0.4  
+## <a name="1040"></a>1.0.4.0  
  リリース: 2012 年 9 月 5 日  
   
 ### <a name="new-features"></a>新機能  
@@ -921,7 +976,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   Unity 内のメソッドやプロパティによってスローされた例外が原因でデバッグ中に UnityVS がクラッシュする問題を修正しました。  
   
-## <a name="103"></a>1.0.3  
+## <a name="1030"></a>1.0.3.0 
  リリース: 2012 年 9 月 4 日  
   
 ### <a name="new-features"></a>新機能  
@@ -936,7 +991,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   UnityVS のカスタム ステータス バーが原因で VS がランダムにクラッシュする問題を修正しました。  
   
-## <a name="102"></a>1.0.2  
+## <a name="1020"></a>1.0.2.0  
  リリース: 2012 年 8 月 30 日  
   
 ### <a name="bug-fixes"></a>バグ修正  
@@ -947,7 +1002,7 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   Unity から Unity 4 b7 を使用してスクリプティング アセンブリを取得する方法のバグを修正しました。  
   
-## <a name="101"></a>1.0.1  
+## <a name="1010"></a>1.0.1.0  
  リリース: 2012 年 8 月 28 日  
   
 ### <a name="new-features"></a>新機能  
@@ -964,6 +1019,6 @@ Visual Studio Tools for Unity の変更ログです。
   
 -   アセット フォルダー内の dll について UnityScript と Boo 用に実行される補完機能を修正しました。  
   
-## <a name="10---initial-release"></a>1.0 - 初期リリース  
+## <a name="1000---initial-release"></a>1.0.0.0 - 初期リリース  
  リリース: 2012 年 8 月 22 日
 

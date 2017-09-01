@@ -1,74 +1,91 @@
 ---
-title: "PROCESS_INFO_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROCESS_INFO_FLAGS"
-helpviewer_keywords: 
-  - "PROCESS_INFO_FLAGS 列挙型"
+title: PROCESS_INFO_FLAGS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PROCESS_INFO_FLAGS
+helpviewer_keywords:
+- PROCESS_INFO_FLAGS enumeration
 ms.assetid: 696951ce-701a-40c2-ac8c-b897f3aae6e2
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# PROCESS_INFO_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f1bd6e203424bdc53e6af0aa97d320b80ee9d911
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-プロセスのプロパティを記述したり指定します。  
+---
+# <a name="processinfoflags"></a>PROCESS_INFO_FLAGS
+Describes or specifies properties of a process.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-enum enum_PROCESS_INFO_FLAGS {   
-   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
-   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
-   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
-   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
+```cpp  
+enum enum_PROCESS_INFO_FLAGS {   
+   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
+   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
+   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
+   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
 };  
 typedef DWORD PROCESS_INFO_FLAGS;  
 ```  
   
-```c#  
-enum enum_PROCESS_INFO_FLAGS {   
-   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
-   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
-   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
-   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
+```csharp  
+enum enum_PROCESS_INFO_FLAGS {   
+   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
+   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
+   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
+   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
 };  
 ```  
   
-## メンバー  
- PIFLAG\_SYSTEM\_PROCESS  
- プロセスがシステム プロセスであることを示します。  
+## <a name="members"></a>Members  
+ PIFLAG_SYSTEM_PROCESS  
+ Indicates that the process is a system process.  
   
- PIFLAG\_DEBUGGER\_ATTACHED  
- プロセスにデバッガーを使用してデバッグことを示します。  これは [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] のデバッガーであるかは他のデバッガーなど読み込まれた WinDbg である場合があります。  
+ PIFLAG_DEBUGGER_ATTACHED  
+ Indicates that the process is being debugged by a debugger. It may be a [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] debugger, or it may be some other debugger, for example, WinDbg.  
   
- PIFLAG\_PROCESS\_STOPPED  
- プロセスが停止していることを示します。  `PIFLAG_DEBUGGER_ATTACHED` は指定した場合にのみ有効です。  の以降で使用できます [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)]。  
+ PIFLAG_PROCESS_STOPPED  
+ Indicates the process is stopped. Valid only if `PIFLAG_DEBUGGER_ATTACHED` is also specified. Available in [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)] and later.  
   
- PIFLAG\_PROCESS\_RUNNING  
- プロセスが実行されていることを示します。  `PIFLAG_DEBUGGER_ATTACHED` は指定した場合にのみ有効です。  の以降で使用できます [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)]。  
+ PIFLAG_PROCESS_RUNNING  
+ Indicates the process is running. Valid only if `PIFLAG_DEBUGGER_ATTACHED` is also specified. Available in [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)] and later.  
   
-## 解説  
- [PROCESS\_INFO](../../../extensibility/debugger/reference/process-info.md) の構造体のメンバー `Flags` に使用されます。  
+## <a name="remarks"></a>Remarks  
+ Used for the `Flags` member of the [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) structure.  
   
- これらのフラグはビットごと `OR` に組み合わせることがあります。  
+ These flags may be combined with a bitwise `OR`.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [PROCESS\_INFO](../../../extensibility/debugger/reference/process-info.md)
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

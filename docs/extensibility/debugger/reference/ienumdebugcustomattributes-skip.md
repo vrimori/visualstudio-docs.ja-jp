@@ -1,51 +1,68 @@
 ---
-title: "IEnumDebugCustomAttributes::Skip | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumCustomAttributes::Skip"
-helpviewer_keywords: 
-  - "IEnumDebugCustomAttributes::Skip"
+title: IEnumDebugCustomAttributes::Skip | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEnumCustomAttributes::Skip
+helpviewer_keywords:
+- IEnumDebugCustomAttributes::Skip
 ms.assetid: 54c72e23-cd4c-4746-935c-abea8057dd1b
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IEnumDebugCustomAttributes::Skip
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 6e16751dc75716d4d07ccb898a78ef6abf6ac5e8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-列挙体シーケンス内のカスタム属性の指定した数の要素をスキップします。  
+---
+# <a name="ienumdebugcustomattributesskip"></a>IEnumDebugCustomAttributes::Skip
+Skips a specified number of custom attributes in an enumeration sequence.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT Skip (   
-   ULONG celt  
+```cpp  
+HRESULT Skip (   
+   ULONG celt  
 );  
 ```  
   
-```c#  
+```csharp  
 int Skip(  
-   uint celt  
+   uint celt  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `celt`  
- \[入力\] スキップする要素の数。  
+ [in] Number of elements to skip.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK` `celt` の残りの要素の数を超える場合はを返します `S_FALSE` ; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`. Returns `S_FALSE` if `celt` is greater than the number of remaining elements; otherwise, returns an error code.  
   
-## 解説  
- `celt` の残りの要素数を超える値を指定する列挙体が最後に`S_FALSE` が返されます。  
+## <a name="remarks"></a>Remarks  
+ If `celt` specifies a value greater than the number of remaining elements, the enumeration is set to the end and `S_FALSE` is returned.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

@@ -1,5 +1,5 @@
 ---
-title: "チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成 | Microsoft Docs"
+title: 'Walkthrough: Creating an MSBuild Project File from Scratch | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,55 +29,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 8cc8cb349901c7a2b0c94875d29e602c33baa5bf
-ms.lasthandoff: 04/05/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 346c00891913ea2050f3e6790d738cccc5136c0a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成
-.NET Framework を対象とするプログラミング言語は、MSBuild プロジェクト ファイルを使用してアプリケーションのビルド プロセスを記述および制御します。 Visual Studio を使用して MSBuild プロジェクト ファイルを作成すると、適切な XML が自動的に追加されますが、 その XML がどのように構成されているかや、それに変更を加えてビルドを制御するにはどうすればよいかを知っておくことも有用です。  
+# <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>Walkthrough: Creating an MSBuild Project File from Scratch
+Programming languages that target the .NET Framework use MSBuild project files to describe and control the application build process. When you use Visual Studio to create an MSBuild project file, the appropriate XML is added to the file automatically. However, you may find it helpful to understand how the XML is organized and how you can change it to control a build.  
   
- C++ プロジェクトのプロジェクト ファイルを作成する方法の詳細については、「[MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp)」をご覧ください。  
+ For information about creating a project file for a C++ project, see [MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp).  
   
- このチュートリアルでは、テキスト エディターのみを使用して、基本的なプロジェクト ファイルをインクリメント方式で作成する方法について説明します。 このチュートリアルの手順を以下に示します。  
+ This walkthrough shows how to create a basic project file incrementally, by using only a text editor. The walkthrough follows these steps:  
   
--   最低限の内容のみを含むアプリケーション ソース ファイルを作成します。  
+-   Create a minimal application source file.  
   
--   最低限の内容のみを含む MSBuild プロジェクト ファイルを作成します。  
+-   Create a minimal MSBuild project file.  
   
--   MSBuild が含まれるように PATH 環境変数を拡張します。  
+-   Extend the PATH environment variable to include MSBuild.  
   
--   プロジェクト ファイルを使用してアプリケーションをビルドします。  
+-   Build the application by using the project file.  
   
--   ビルドを制御するためのプロパティを追加します。  
+-   Add properties to control the build.  
   
--   プロパティの値を変更してビルドを制御します。  
+-   Control the build by changing property values.  
   
--   ビルド ターゲットを追加します。  
+-   Add targets to the build.  
   
--   ターゲットを指定してビルドを制御します。  
+-   Control the build by specifying targets.  
   
--   インクリメンタル ビルドを実行します。  
+-   Build incrementally.  
   
- このチュートリアルでは、コマンド プロンプトでプロジェクトをビルドして結果を確認する方法を説明します。 MSBuild の詳細および MSBuild をコマンド プロンプトで実行する方法の詳細については、「[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)」をご覧ください。  
+ This walkthrough shows how to build the project at the command prompt and examine the results. For more information about MSBuild and how to run MSBuild at the command prompt, see [Walkthrough: Using MSBuild](../msbuild/walkthrough-using-msbuild.md).  
   
- このチュートリアルを実行するには、.NET Framework (Version 2.0、3.5、4.0、または 4.5) がインストールされている必要があります。これらには、このチュートリアルに必要な MSBuild と Visual C# コンパイラが含まれています。  
+ To complete the walkthrough, you must have the .NET Framework (version 2.0, 3.5, 4.0, or 4.5) installed because it includes MSBuild and the Visual C# compiler, which are required for the walkthrough.  
   
-## <a name="creating-a-minimal-application"></a>最低限の内容のみを含むアプリケーションを作成する  
- ここでは、最低限の内容のみを含む Visual C# アプリケーション ソース ファイルをテキスト エディターで作成する方法を説明します。  
+## <a name="creating-a-minimal-application"></a>Creating a Minimal Application  
+ This section shows how to create a minimal Visual C# application source file by using a text editor.  
   
-#### <a name="to-create-the-minimal-application"></a>最低限の内容のみを含むアプリケーションを作成するには  
+#### <a name="to-create-the-minimal-application"></a>To create the minimal application  
   
-1.  コマンド プロンプトで、アプリケーションを作成するフォルダーに移動します (\My Documents\、\Desktop\\ など)。  
+1.  At the command prompt, browse to the folder where you want to create the application, for example, \My Documents\ or \Desktop\\.  
   
-2.  「**md HelloWorld**」と入力して、\HelloWorld\\ というサブフォルダーを作成します。  
+2.  Type **md HelloWorld** to create a subfolder named \HelloWorld\\.  
   
-3.  「**cd HelloWorld**」と入力して、その新しいフォルダーに移動します。  
+3.  Type **cd HelloWorld** to change to the new folder.  
   
-4.  メモ帳またはその他のテキスト エディターを起動して、次のコードを入力します。  
+4.  Start Notepad or another text editor, and then type the following code.  
   
-    ```cs
+    ```csharp
     using System;  
   
     class HelloWorld  
@@ -93,39 +94,39 @@ ms.lasthandoff: 04/05/2017
     }  
     ```  
   
-5.  このソース コード ファイルを Helloworld.cs という名前で保存します。  
+5.  Save this source code file and name it Helloworld.cs.  
   
-6.  コマンド プロンプトで「**csc helloworld.cs**」と入力して、アプリケーションをビルドします。  
+6.  Build the application by typing **csc helloworld.cs** at the command prompt.  
   
-7.  コマンド プロンプトで「**helloworld**」と入力して、アプリケーションをテストします。  
+7.  Test the application by typing **helloworld** at the command prompt.  
   
-     "**Hello, world!**"  というメッセージが表示されます。  
+     The **Hello, world!** message should be displayed.  
   
-8.  コマンド プロンプトで「**del helloworld.exe**」と入力して、アプリケーションを削除します。  
+8.  Delete the application by typing **del helloworld.exe** at the command prompt.  
   
-## <a name="creating-a-minimal-msbuild-project-file"></a>最低限の内容のみを含む MSBuild プロジェクト ファイルを作成する  
- 最低限の内容のみを含むアプリケーション ソース ファイルを作成できたので、次に、そのアプリケーションをビルドするための最低限の内容のみを含むプロジェクト ファイルを作成します。 このプロジェクト ファイルに含まれる要素は次のとおりです。  
+## <a name="creating-a-minimal-msbuild-project-file"></a>Creating a Minimal MSBuild Project File  
+ Now that you have a minimal application source file, you can create a minimal project file to build the application. This project file contains the following elements:  
   
--   必須のルート `Project` ノード  
+-   The required root `Project` node.  
   
--   項目要素を格納する `ItemGroup` ノード  
+-   An `ItemGroup` node to contain item elements.  
   
--   アプリケーション ソース ファイルを参照する項目要素  
+-   An item element that refers to the application source file.  
   
--   アプリケーションをビルドするために必要なタスクを格納する `Target` ノード  
+-   A `Target` node to contain tasks that are required to build the application.  
   
--   アプリケーションをビルドするために Visual C# コンパイラを起動する `Task` 要素  
+-   A `Task` element to start the Visual C# compiler to build the application.  
   
-#### <a name="to-create-a-minimal-msbuild-project-file"></a>最低限の内容のみを含む MSBuild プロジェクト ファイルを作成するには  
+#### <a name="to-create-a-minimal-msbuild-project-file"></a>To create a minimal MSBuild project file  
   
-1.  テキスト エディターで、既存のテキストを次の 2 つの行に置き換えます。  
+1.  In the text editor, replace the existing text by using these two lines:  
   
     ```xml  
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     </Project>  
     ```  
   
-2.  次の `ItemGroup` ノードを `Project` ノードの子要素として挿入します。  
+2.  Insert this `ItemGroup` node as a child element of the `Project` node:  
   
     ```xml  
     <ItemGroup>  
@@ -133,24 +134,24 @@ ms.lasthandoff: 04/05/2017
     </ItemGroup>  
     ```  
   
-     この `ItemGroup` には既に項目要素が含まれています。  
+     Notice that this `ItemGroup` already contains an item element.  
   
-3.  `Target` ノードの子要素として `Project` ノードを追加します。 そのノードに `Build` という名前を付けます。  
+3.  Add a `Target` node as a child element of the `Project` node. Name the node `Build`.  
   
     ```xml  
     <Target Name="Build">  
     </Target>  
     ```  
   
-4.  次のタスク要素を `Target` ノードの子要素として挿入します。  
+4.  Insert this task element as a child element of the `Target` node:  
   
     ```xml  
     <Csc Sources="@(Compile)"/>  
     ```  
   
-5.  このプロジェクト ファイルを Helloworld.csproj という名前で保存します。  
+5.  Save this project file and name it Helloworld.csproj.  
   
- 最低限の内容のみを含むプロジェクト ファイルが完成すると、コードが次のようになります。  
+ Your minimal project file should resemble the following code:  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -163,56 +164,56 @@ ms.lasthandoff: 04/05/2017
 </Project>  
 ```  
   
- Build ターゲットのタスクは順番に実行されます。 ここでは、Visual C# コンパイラの `Csc` タスクが唯一のタスクです。 このタスクは、コンパイルするソース ファイルのリストを受け取ります。これは、`Compile` 項目の値によって渡されます。 `Compile` 項目は、Helloworld.cs という 1 つのソース ファイルのみを参照しています。  
+ Tasks in the Build target are executed sequentially. In this case, the Visual C# compiler `Csc` task is the only task. It expects a list of source files to compile, and this is given by the value of the `Compile` item. The `Compile` item references just one source file, Helloworld.cs.  
   
 > [!NOTE]
->  項目要素でワイルドカード文字のアスタリスク (*) を使用して、拡張子 .cs を持つすべてのファイルを参照することもできます。次に例を示します。  
+>  In the item element, you can use the asterisk wildcard character (*) to reference all files that have the .cs file name extension, as follows:  
 >   
 >  `<Compile Include="*.cs" />`  
 >   
->  ただし、ワイルドカード文字を使用すると、ソース ファイルを追加または削除した場合にデバッグやターゲットの選択が困難になるため、できるだけ使用しないようにしてください。  
+>  However, we do not recommend the use of wildcard characters because it makes debugging and selective targeting more difficult if source files are added or deleted.  
   
-## <a name="extending-the-path-to-include-msbuild"></a>MSBuild が含まれるようにパスを拡張する  
- MSBuild を使用するには、.NET Framework フォルダーが含まれるように PATH 環境変数を拡張する必要があります。  
+## <a name="extending-the-path-to-include-msbuild"></a>Extending the Path to Include MSBuild  
+ Before you can access MSBuild, you must extend the PATH environment variable to include the .NET Framework folder.  
   
-#### <a name="to-add-msbuild-to-your-path"></a>MSBuild をパスに追加するには  
+#### <a name="to-add-msbuild-to-your-path"></a>To add MSBuild to your path  
   
--   Visual Studio 2013 では、MSBuild フォルダー (32 ビット オペレーティング システムの場合は `%ProgramFiles%\MSBuild`、64 ビット オペレーティング システムの場合は `%ProgramFiles(x86)%\MSBuild`) 内に MSBuild.exe があります。  
+-   Starting in Visual Studio 2013, you can find MSBuild.exe in the MSBuild folder (`%ProgramFiles%\MSBuild` on a 32-bit operating system, or `%ProgramFiles(x86)%\MSBuild` on a 64-bit operating system).  
   
-     コマンド プロンプトで、「**set PATH=%PATH%;%ProgramFiles%\MSBuild**」または「**set PATH=%PATH%;%ProgramFiles(x86)%\MSBuild**」と入力します。  
+     At the command prompt, type **set PATH=%PATH%;%ProgramFiles%\MSBuild** or **set PATH=%PATH%;%ProgramFiles(x86)%\MSBuild**.  
   
-     Visual Studio がインストールされている場合は、**Visual Studio コマンド プロンプト**を使用することもできます。Visual Studio コマンド プロンプトでは、MSBuild フォルダーへのパスが設定されています。  
+     Alternatively, if you have Visual Studio installed, you can use the **Visual Studio Command Prompt**, which has a path that includes the MSBuild folder.  
   
-## <a name="using-the-project-file-to-build-the-application"></a>プロジェクト ファイルを使用してアプリケーションをビルドする  
- 次に、先ほど作成したプロジェクト ファイルを使用してアプリケーションをビルドします。  
+## <a name="using-the-project-file-to-build-the-application"></a>Using the Project File to Build the Application  
+ Now, to build the application, use the project file that you just created.  
   
-#### <a name="to-build-the-application"></a>アプリケーションをビルドするには  
+#### <a name="to-build-the-application"></a>To build the application  
   
-1.  コマンド プロンプトで、「**msbuild helloworld.csproj/t:Build**」と入力します。  
+1.  At the command prompt, type **msbuild helloworld.csproj /t:Build**.  
   
-     Visual C# コンパイラが呼び出され、Helloworld プロジェクト ファイルの Build ターゲットがビルドされて、Helloworld アプリケーションが作成されます。  
+     This builds the Build target of the Helloworld project file by invoking the Visual C# compiler to create the Helloworld application.  
   
-2.  「**helloworld**」と入力してアプリケーションをテストします。  
+2.  Test the application by typing **helloworld**.  
   
-     "**Hello, world!**"  というメッセージが表示されます。  
+     The **Hello, world!** message should be displayed.  
   
 > [!NOTE]
->  詳細レベルを上げると、ビルドの詳細情報を表示できます。 詳細レベルを "detailed" に設定するには、コマンド プロンプトで次のいずれかのコマンドを入力します。  
+>  You can see more details about the build by increasing the verbosity level. To set the verbosity level to "detailed", type either of these commands at the command prompt:  
 >   
 >  **msbuild helloworld.csproj /t:Build /verbosity:detailed**  
   
-## <a name="adding-build-properties"></a>ビルド プロパティを追加する  
- プロジェクト ファイルにビルド プロパティを追加すると、ビルドをさらに細かく制御できます。 ここでは、次のプロパティを追加します。  
+## <a name="adding-build-properties"></a>Adding Build Properties  
+ You can add build properties to the project file to further control the build. Now add these properties:  
   
--   アプリケーションの名前を指定する `AssemblyName` プロパティ  
+-   An `AssemblyName` property to specify the name of the application.  
   
--   アプリケーションを格納するフォルダーを指定する `OutputPath` プロパティ  
+-   An `OutputPath` property to specify a folder to contain the application.  
   
-#### <a name="to-add-build-properties"></a>ビルド プロパティを追加するには  
+#### <a name="to-add-build-properties"></a>To add build properties  
   
-1.  コマンド プロンプトで「**del helloworld.exe**」と入力して、既存のアプリケーションを削除します。  
+1.  Delete the existing application by typing **del helloworld.exe** at the command prompt.  
   
-2.  プロジェクト ファイルで、次の `PropertyGroup` 要素を開始 `Project` 要素の直後に挿入します。  
+2.  In the project file, insert this `PropertyGroup` element just after the opening `Project` element:  
   
     ```xml  
     <PropertyGroup>  
@@ -221,25 +222,25 @@ ms.lasthandoff: 04/05/2017
     </PropertyGroup>  
     ```  
   
-3.  次のタスクを Build ターゲットの `Csc` タスクの直前に追加します。  
+3.  Add this task to the Build target, just before the `Csc` task:  
   
     ```xml  
     <MakeDir Directories="$(OutputPath)"      Condition="!Exists('$(OutputPath)')" />  
     ```  
   
-     この `MakeDir` タスクは、`OutputPath` プロパティによって指定されるフォルダーを、同名のフォルダーが存在しない場合に作成します。  
+     The `MakeDir` task creates a folder that is named by the `OutputPath` property, provided that no folder by that name currently exists.  
   
-4.  次の `OutputAssembly` 属性を `Csc` タスクに追加します。  
+4.  Add this `OutputAssembly` attribute to the `Csc` task:  
   
     ```xml  
     <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />  
     ```  
   
-     この属性は、Visual C# コンパイラに対して、`AssemblyName` プロパティによって指定されるアセンブリを生成し、`OutputPath` プロパティによって指定されるフォルダーに配置するように指定します。  
+     This instructs the Visual C# compiler to produce an assembly that is named by the `AssemblyName` property and to put it in the folder that is named by the `OutputPath` property.  
   
-5.  変更内容を保存します。  
+5.  Save your changes.  
   
- プロジェクト ファイルのコードが次のようになります。  
+ Your project file should now resemble the following code:  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -258,45 +259,45 @@ ms.lasthandoff: 04/05/2017
 ```  
   
 > [!NOTE]
->  パス区切り記号の円記号 (\\) は、`Csc` タスクの `OutputAssembly` 属性に追加するのではなく、`OutputPath` 要素で指定するフォルダー名の末尾に追加することをお勧めします。 次に例を示します。  
+>  We recommend that you add the backslash (\\) path delimiter at the end of the folder name when you specify it in the `OutputPath` element, instead of adding it in the `OutputAssembly` attribute of the `Csc` task. Therefore,  
 >   
 >  `<OutputPath>Bin\</OutputPath>`  
 >   
 >  `OutputAssembly=="$(OutputPath)$(AssemblyName).exe" />`  
 >   
->  この形式が次の形式より推奨されます。  
+>  is better than  
 >   
 >  `<OutputPath>Bin</OutputPath>`  
 >   
 >  `OutputAssembly=="$(OutputPath)\$(AssemblyName).exe" />`  
   
-## <a name="testing-the-build-properties"></a>ビルド プロパティをテストする  
- 次に、ビルド プロパティで出力フォルダーとアプリケーション名を指定したプロジェクト ファイルを使用してアプリケーションをビルドします。  
+## <a name="testing-the-build-properties"></a>Testing the Build Properties  
+ Now you can build the application by using the project file in which you used build properties to specify the output folder and application name.  
   
-#### <a name="to-test-the-build-properties"></a>ビルド プロパティをテストするには  
+#### <a name="to-test-the-build-properties"></a>To test the build properties  
   
-1.  コマンド プロンプトで、「**msbuild helloworld.csproj/t:Build**」と入力します。  
+1.  At the command prompt, type **msbuild helloworld.csproj /t:Build**.  
   
-     \Bin\ フォルダーが作成され、Visual C# コンパイラが呼び出されて、MSBuildSample アプリケーションが作成されて \Bin\ フォルダーに配置されます。  
+     This creates the \Bin\ folder and then invokes the Visual C# compiler to create the MSBuildSample application and puts it in the \Bin\ folder.  
   
-2.  「**dir Bin**」と入力して、\Bin\ フォルダーが作成されていることと、そこに MSBuildSample アプリケーションが含まれていることを確認します。  
+2.  To verify that the \Bin\ folder has been created, and that it contains the MSBuildSample application, type **dir Bin**.  
   
-3.  「**Bin\MSBuildSample**」と入力してアプリケーションをテストします。  
+3.  Test the application by typing **Bin\MSBuildSample**.  
   
-     "**Hello, world!**"  というメッセージが表示されます。  
+     The **Hello, world!** message should be displayed.  
   
-## <a name="adding-build-targets"></a>ビルド ターゲットを追加する  
- 次に、次の 2 つのターゲットをプロジェクト ファイルに追加します。  
+## <a name="adding-build-targets"></a>Adding Build Targets  
+ Next, add two more targets to the project file, as follows:  
   
--   古いファイルを削除する Clean ターゲット  
+-   A Clean target that deletes old files.  
   
--   `DependsOnTargets` 属性を使用して Build タスクの前に強制的に Clean タスクを実行する Rebuild ターゲット  
+-   A Rebuild target that uses the `DependsOnTargets` attribute to force the Clean task to run before the Build task.  
   
- ターゲットが複数になるので、Build ターゲットを既定のターゲットに設定します。  
+ Now that you have multiple targets, you can set the Build target as the default target.  
   
-#### <a name="to-add-build-targets"></a>ビルド ターゲットを追加するには  
+#### <a name="to-add-build-targets"></a>To add build targets  
   
-1.  プロジェクト ファイルで、Build ターゲットの直後に次の 2 つのターゲットを追加します。  
+1.  In the project file, add these two targets just after the Build target:  
   
     ```xml  
     <Target Name="Clean" >  
@@ -305,17 +306,17 @@ ms.lasthandoff: 04/05/2017
     <Target Name="Rebuild" DependsOnTargets="Clean;Build" />  
     ```  
   
-     Clean ターゲットは、Delete タスクを呼び出してアプリケーションを削除します。 Rebuild ターゲットは、Clean ターゲットと Build ターゲットの両方が実行されるまで実行されません。 Rebuild ターゲットにはタスクは含まれていませんが、このターゲットにより、Build ターゲットの前に Clean ターゲットが実行されるようになります。  
+     The Clean target invokes the Delete task to delete the application. The Rebuild target does not run until both the Clean target and the Build target have run. Although the Rebuild target has no tasks, it causes the Clean target to run before the Build target.  
   
-2.  次の `DefaultTargets` 属性を開始 `Project` 要素に追加します。  
+2.  Add this `DefaultTargets` attribute to the opening `Project` element:  
   
     ```xml  
     <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     ```  
   
-     これにより、Build ターゲットが既定のターゲットに設定されます。  
+     This sets the Build target as the default target.  
   
- プロジェクト ファイルのコードが次のようになります。  
+ Your project file should now resemble the following code:  
   
 ```xml  
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -337,59 +338,59 @@ ms.lasthandoff: 04/05/2017
 </Project>  
 ```  
   
-## <a name="testing-the-build-targets"></a>ビルド ターゲットをテストする  
- 新しいビルド ターゲットを使用して、プロジェクト ファイルの以下の機能をテストします。  
+## <a name="testing-the-build-targets"></a>Testing the Build Targets  
+ You can exercise the new build targets to test these features of the project file:  
   
--   既定のビルドをビルドする。  
+-   Building the default build.  
   
--   コマンド プロンプトでアプリケーション名を設定する。  
+-   Setting the application name at the command prompt.  
   
--   別のアプリケーションをビルドする前にアプリケーションを削除する。  
+-   Deleting the application before another application is built.  
   
--   別のアプリケーションをビルドせずにアプリケーションを削除する。  
+-   Deleting the application without building another application.  
   
-#### <a name="to-test-the-build-targets"></a>ビルド ターゲットをテストするには  
+#### <a name="to-test-the-build-targets"></a>To test the build targets  
   
-1.  コマンド プロンプトで、「**msbuild helloworld.csproj /p:AssemblyName=Greetings**」と入力します。  
+1.  At the command prompt, type **msbuild helloworld.csproj /p:AssemblyName=Greetings**.  
   
-     **/t** スイッチを使用してターゲットを明示的に設定していないため、既定の Build ターゲットがビルドされます。 **/p** スイッチでは、`AssemblyName` プロパティをオーバーライドして新しい値 `Greetings` を割り当てています。 これにより、Greetings.exe という新しいアプリケーションが \Bin\ フォルダーに作成されます。  
+     Because you did not use the **/t** switch to explicitly set the target, MSBuild runs the default Build target. The **/p** switch overrides the `AssemblyName` property and gives it the new value, `Greetings`. This causes a new application, Greetings.exe, to be created in the \Bin\ folder.  
   
-2.  「**dir Bin**」と入力して、\Bin\ フォルダーに MSBuildSample アプリケーションと新しい Greetings アプリケーションの両方が含まれていることを確認します。  
+2.  To verify that the \Bin\ folder contains both the MSBuildSample application and the new Greetings application, type **dir Bin**.  
   
-3.  「**Bin\Greetings**」と入力して、Greetings アプリケーションをテストします。  
+3.  Test the Greetings application by typing **Bin\Greetings**.  
   
-     "**Hello, world!**"  というメッセージが表示されます。  
+     The **Hello, world!** message should be displayed.  
   
-4.  「**msbuild helloworld.csproj /t:clean**」を入力して、MSBuildSample アプリケーションを削除します。  
+4.  Delete the MSBuildSample application by typing **msbuild helloworld.csproj /t:clean**.  
   
-     Clean タスクが実行されて、`AssemblyName` プロパティの値が既定値の `MSBuildSample` になっているアプリケーションが削除されます。  
+     This runs the Clean task to remove the application that has the default `AssemblyName` property value, `MSBuildSample`.  
   
-5.  「**msbuild helloworld.csproj /t:clean /p:AssemblyName=Greetings**」を入力して、Greetings アプリケーションを削除します。  
+5.  Delete the Greetings application by typing **msbuild helloworld.csproj /t:clean /p:AssemblyName=Greetings**.  
   
-     Clean タスクが実行されて、**AssemblyName** プロパティの値が、指定した値 `Greetings` になっているアプリケーションが削除されます。  
+     This runs the Clean task to remove the application that has the given **AssemblyName** property value, `Greetings`.  
   
-6.  「**dir Bin**」と入力して、\Bin\ フォルダーが空になったことを確認します。  
+6.  To verify that the \Bin\ folder is now empty, type **dir Bin**.  
   
-7.  「**msbuild**」と入力します。  
+7.  Type **msbuild**.  
   
-     プロジェクト ファイルが指定されていませんが、現在のフォルダーにはプロジェクト ファイルが 1 つしかないため、helloworld.csproj ファイルがビルドされます。 その結果、\Bin\ フォルダーに MSBuildSample アプリケーションが作成されます。  
+     Although a project file is not specified, MSBuild builds the helloworld.csproj file because there is only one project file in the current folder. This causes the MSBuildSample application to be created in the \Bin\ folder.  
   
-     「**dir Bin**」と入力して、\Bin\ フォルダーに MSBuildSample アプリケーションが含まれていることを確認します。  
+     To verify that the \Bin\ folder contains the MSBuildSample application, type **dir Bin**.  
   
-## <a name="building-incrementally"></a>インクリメンタル ビルドを実行する  
- MSBuild では、ターゲットが依存しているソース ファイルやターゲット ファイルが変更された場合にのみターゲットをビルドすることができます。 ファイルが変更されているかどうかはファイルのタイム スタンプを使用して特定されます。  
+## <a name="building-incrementally"></a>Building Incrementally  
+ You can tell MSBuild to build a target only if the source files or target files that the target depends on have changed. MSBuild uses the time stamp of a file to determine whether it has changed.  
   
-#### <a name="to-build-incrementally"></a>インクリメンタル ビルドを実行するには  
+#### <a name="to-build-incrementally"></a>To build incrementally  
   
-1.  プロジェクト ファイルで、開始 Build ターゲットに次の属性を追加します。  
+1.  In the project file, add these attributes to the opening Build target:  
   
     ```  
     Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe"  
     ```  
   
-     ここでは、`Compile` 項目グループに指定されている入力ファイルに Build ターゲットが依存していること、出力対象がアプリケーション ファイルであることを指定しています。  
+     This specifies that the Build target depends on the input files that are specified in the `Compile` item group, and that the output target is the application file.  
   
-     この結果、Build ターゲットのコードは次のようになります。  
+     The resulting Build target should resemble the following code:  
   
     ```xml  
     <Target Name="Build" Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe">  
@@ -398,28 +399,28 @@ ms.lasthandoff: 04/05/2017
     </Target>  
     ```  
   
-2.  コマンド プロンプトで「**msbuild /v:d**」と入力して、Build ターゲットをテストします。  
+2.  Test the Build target by typing **msbuild /v:d** at the command prompt.  
   
-     helloworld.csproj が既定のプロジェクト ファイルであること、Build が既定のターゲットであることに注意してください。  
+     Remember that helloworld.csproj is the default project file, and that Build is the default target.  
   
-     **/v:d** スイッチは、ビルド処理の詳細な説明を表示するように指定します。  
+     The **/v:d** switch specifies a verbose description for the build process.  
   
-     以下の行が表示されます。  
+     These lines should be displayed:  
   
-     **すべての出力ファイルが入力ファイルに対して最新なので、ターゲット "Build" を省略します。**  
+     **Skipping target "Build" because all output files are up-to-date with respect to the input files.**  
   
-     **入力ファイル: HelloWorld.cs**  
+     **Input files: HelloWorld.cs**  
   
-     **出力ファイル: BinMSBuildSample.exe**  
+     **Output files: BinMSBuildSample.exe**  
   
-     アプリケーションがビルドされてから変更されたソース ファイルがないため、Build ターゲットはスキップされます。  
+     MSBuild skips the Build target because none of the source files have changed since the application was last built.  
   
-## <a name="example"></a>例  
+## <a name="example"></a>Example  
   
-### <a name="description"></a>説明  
- 次の例は、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションをコンパイルし、出力ファイル名を含むメッセージを記録するプロジェクト ファイルを示しています。  
+### <a name="description"></a>Description  
+ The following example shows a project file that compiles a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] application and logs a message that contains the output file name.  
   
-### <a name="code"></a>コード  
+### <a name="code"></a>Code  
   
 ```xml
 <Project DefaultTargets = "Compile"  
@@ -452,14 +453,14 @@ ms.lasthandoff: 04/05/2017
 </Project>  
 ```  
   
-### <a name="comments"></a>コメント  
+### <a name="comments"></a>Comments  
   
-## <a name="example"></a>例  
+## <a name="example"></a>Example  
   
-### <a name="description"></a>説明  
- 次の例は、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] アプリケーションをコンパイルし、出力ファイル名を含むメッセージを記録するプロジェクト ファイルを示しています。  
+### <a name="description"></a>Description  
+ The following example shows a project file that compiles a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] application and logs a message that contains the output file name.  
   
-### <a name="code"></a>コード  
+### <a name="code"></a>Code  
   
 ```xml  
 <Project DefaultTargets = "Compile"  
@@ -492,9 +493,9 @@ ms.lasthandoff: 04/05/2017
 </Project>  
 ```  
   
-## <a name="whats-next"></a>次の内容  
- このチュートリアルで説明した作業の大半は、Visual Studio で自動的に実行できます。 Visual Studio を使用して MSBuild プロジェクト ファイルを作成、編集、ビルド、およびテストする方法については、「[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)」をご覧ください。  
+## <a name="whats-next"></a>What's Next?  
+ Visual Studio can automatically do much of the work that is shown in this walkthrough. To learn how to use Visual Studio to create, edit, build, and test MSBuild project files, see [Walkthrough: Using MSBuild](../msbuild/walkthrough-using-msbuild.md).  
   
-## <a name="see-also"></a>関連項目  
-[MSBuild の概要](../msbuild/msbuild.md)  
- [MSBuild リファレンス](../msbuild/msbuild-reference.md)
+## <a name="see-also"></a>See Also  
+[MSBuild Overview](../msbuild/msbuild.md)  
+ [MSBuild Reference](../msbuild/msbuild-reference.md)

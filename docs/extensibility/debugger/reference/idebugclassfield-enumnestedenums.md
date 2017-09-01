@@ -1,53 +1,70 @@
 ---
-title: "IDebugClassField::EnumNestedEnums | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugClassField::EnumNestedEnums"
-helpviewer_keywords: 
-  - "IDebugClassField::EnumNestedEnums メソッド"
+title: IDebugClassField::EnumNestedEnums | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugClassField::EnumNestedEnums
+helpviewer_keywords:
+- IDebugClassField::EnumNestedEnums method
 ms.assetid: 90fd0cef-9145-4de6-91d4-6c881df39d6e
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugClassField::EnumNestedEnums
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: efc8c16c3486e7decc5f3d4009bfcb1175a943db
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-このクラスの入れ子になった列挙子の列挙子を作成します。  
+---
+# <a name="idebugclassfieldenumnestedenums"></a>IDebugClassField::EnumNestedEnums
+Creates an enumerator for the nested enumerators of this class.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT EnumNestedEnums(   
-   IEnumDebugFields** ppEnum  
+```cpp  
+HRESULT EnumNestedEnums(   
+   IEnumDebugFields** ppEnum  
 );  
 ```  
   
-```c#  
+```csharp  
 int EnumNestedEnums(  
-   out IEnumDebugFields ppEnum  
+   out IEnumDebugFields ppEnum  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `ppEnum`  
- \[入力\] [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) の入れ子になったオブジェクトを表す列挙型のリストを返します。  入れ子になった列挙型が存在しない場合は null を返します。  
+ [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object representing the list of nested enumerations. Returns a null value if there are no nested enumerations.  
   
-## 戻り値  
- S\_FALSEは S\_OK または成功した場合入れ子になった列挙子を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK or returns S_FALSE if there are no nested enumerators. Otherwise, returns an error code.  
   
-## 解説  
- 列挙体の各要素は入れ子になった列挙型を記述する [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md) のオブジェクトです。  
+## <a name="remarks"></a>Remarks  
+ Each element of the enumeration is an [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md) object describing a nested enumeration.  
   
- クラス内で宣言された列挙型は入れ子になった列挙型と見なされます。  次に例を示します。  
+ An enumeration declared inside a class is considered a nested enumeration. For example, given:  
   
 ```  
 class RootClass {  
@@ -55,9 +72,9 @@ class RootClass {
 };  
 ```  
   
- `EnumNestedEnums` のメソッドは `NestedEnum` の列挙型を表す [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md) の 1 個のオブジェクトを含む [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) のオブジェクトを返します。  
+ The `EnumNestedEnums` method would return an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object that contains one [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md) object that represents the `NestedEnum` enumeration.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

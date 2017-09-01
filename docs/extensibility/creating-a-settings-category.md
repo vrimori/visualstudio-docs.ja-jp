@@ -1,65 +1,82 @@
 ---
-title: "設定のカテゴリを作成します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロファイルの設定を使用して、カテゴリを作成します。"
+title: Creating a Settings Category | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- profile settings, creating categories
 ms.assetid: 97c88693-05ff-499e-8c43-352ee073dcb7
 caps.latest.revision: 39
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 39
----
-# 設定のカテゴリを作成します。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 6a5d6b839eb021bded2627241b6f7cbfdbfcbac3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-このチュートリアルは、Visual Studio の設定のカテゴリを作成し、値を保存し、設定ファイルから値を復元する使用します。 カテゴリの設定は、カスタム設定「ポイント」; として表示される関連するプロパティのグループつまりのチェック ボックスと、 **インポートおよびエクスポート設定** ウィザード。 \(\[あります、 **ツール** メニュー\)。 設定を保存または復元をカテゴリとして、個々 の設定は、ウィザードには表示されません。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+---
+# <a name="creating-a-settings-category"></a>Creating a Settings Category
+In this walkthrough you create a Visual Studio settings category and use it to save values to and restore values from a settings file. A settings category is a group of related properties that appear as a "custom settings point"; that is, as a check box in the **Import and Exports Settings** Wizard. (You can find it on the **Tools** menu.) Settings are saved or restored as a category, and individual settings are not displayed in the wizard. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
- 派生することで、カテゴリの設定を作成する、 <xref:Microsoft.VisualStudio.Shell.DialogPage> クラスです。  
+ You create a settings category by deriving it from the <xref:Microsoft.VisualStudio.Shell.DialogPage> class.  
   
- このチュートリアルを開始するの最初のセクションを最初に完了する必要があります [オプション ページを作成します。](../extensibility/creating-an-options-page.md)します。 結果として得られるオプションのプロパティ グリッドを確認し、カテゴリのプロパティを変更することができます。 プロパティのカテゴリの設定ファイルを保存した後は、プロパティ値を格納する方法を表示するファイルを調べます。  
+ To start this walkthrough, you must first complete the first section of [Creating an Options Page](../extensibility/creating-an-options-page.md). The resulting Options property grid lets you examine and change the properties in the category. After you save the property category in a settings file, you examine the file to see how the property values are stored.  
   
-## 必須コンポーネント  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## 設定のカテゴリを作成します。  
- このセクションでは、カスタム設定ポイントを使用するを保存し、\[設定\] カテゴリの値を復元します。  
+## <a name="creating-a-settings-category"></a>Creating a Settings Category  
+ In this section, you use a custom settings point to save and restore the values of the settings category.  
   
-#### 設定のカテゴリを作成するには  
+#### <a name="to-create-a-settings-category"></a>To create a settings category  
   
-1.  完了、 [オプション ページを作成します。](../extensibility/creating-an-options-page.md)です。  
+1.  Complete the [Creating an Options Page](../extensibility/creating-an-options-page.md).  
   
-2.  VSPackage.resx ファイルを開き、次の 3 つの文字列リソースを追加します。  
+2.  Open the VSPackage.resx file and add these three string resources:  
   
-    |名前|値|  
-    |--------|-------|  
-    |106|\[カテゴリ|  
-    |107|設定|  
-    |108|OptionInteger と OptionFloat|  
+    |Name|Value|  
+    |----------|-----------|  
+    |106|My Category|  
+    |107|My Settings|  
+    |108|OptionInteger and OptionFloat|  
   
-     これは、その名前、カテゴリの"My Category"、オブジェクト"My Settings"、およびカテゴリの説明"OptionInteger と OptionFloat"で、リソースを作成します。  
+     This creates resources that name the category "My Category", the object "My Settings", and the category description "OptionInteger and OptionFloat".  
   
     > [!NOTE]
-    >  これら 3 つのカテゴリの名前だけがインポートとエクスポートの設定ウィザードで表示されません。  
+    >  Of these three, only the category name does not appear in the Import and Export Settings wizard.  
   
-3.  MyToolsOptionsPackage.cs で追加、 `float` という名前のプロパティ `OptionFloat` に、 `OptionPageGrid` クラスでは次の例に示すようにします。  
+3.  In MyToolsOptionsPackage.cs, add a `float` property named `OptionFloat` to the `OptionPageGrid` class, as shown in the following example.  
   
-    ```c#  
-    public class OptionPageGrid : DialogPage  
+    ```csharp  
+    public class OptionPageGrid : DialogPage  
     {  
-        private int optionInt = 256;  
-        private float optionFloat = 3.14F;  
+        private int optionInt = 256;  
+        private float optionFloat = 3.14F;  
   
         [Category("My Options")]  
         [DisplayName("My Integer option")]  
         [Description("My integer option")]  
-        public int OptionInteger  
+        public int OptionInteger  
         {  
             get { return optionInt; }  
             set { optionInt = value; }  
@@ -67,7 +84,7 @@ caps.handback.revision: 39
         [Category("My Options")]  
         [DisplayName("My Float option")]  
         [Description("My float option")]  
-        public float OptionFloat  
+        public float OptionFloat  
         {  
             get { return optionFloat; }  
             set { optionFloat = value; }  
@@ -76,81 +93,81 @@ caps.handback.revision: 39
     ```  
   
     > [!NOTE]
-    >  `OptionPageGrid` "My Category"を今すぐという名前のカテゴリには 2 つのプロパティの `OptionInteger` と `OptionFloat`です。  
+    >  The `OptionPageGrid` category named "My Category" now consists of the two properties, `OptionInteger` and `OptionFloat`.  
   
-4.  追加、 <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> に、 `MyToolsOptionsPackage` クラスし CategoryName"My Category"を付けます、ObjectName「個人の設定」を付けますおよび isToolsOptionPage を true に設定します。 対応する文字列リソース Id が前に作成するには、categoryResourceID、objectNameResourceID、および DescriptionResourceID を設定します。  
+4.  Add a <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> to the `MyToolsOptionsPackage` class and give it the CategoryName "My Category", give it the ObjectName "My Settings", and set isToolsOptionPage to true. Set the categoryResourceID, objectNameResourceID, and DescriptionResourceID to the corresponding string resource IDs created earlier.  
   
-    ```c#  
+    ```csharp  
     [ProvideProfileAttribute(typeof(OptionPageGrid),   
         "My Category", "My Settings", 106, 107, isToolsOptionPage:true, DescriptionResourceID = 108)]  
     ```  
   
-5.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示される **個人用のグリッド ページ** 整数と浮動小数点数の両方の値になりました。  
+5.  Build the project and start debugging. In the experimental instance you should see that **My Grid Page** now has both integer and float values.  
   
-## 設定ファイルを確認します。  
- このセクションでは、プロパティのカテゴリの値を設定ファイルにエクスポートします。 ファイルを確認し、プロパティのカテゴリに値をインポートします。  
+## <a name="examining-the-settings-file"></a>Examining the Settings File  
+ In this section, you export property category values to a settings file. You examine the file and then import the values back into the property category.  
   
-1.  F5 キーを押して、デバッグ モードで、プロジェクトを起動します。 これは、実験用インスタンスを起動します。  
+1.  Start the project in debug mode by pressing F5. This starts the experimental instance.  
   
-2.  開いている、 **ツール\/オプション** ダイアログ。  
+2.  Open the **Tools / Options** dialog.  
   
-3.  左側のウィンドウのツリー ビューで、展開 **My Category** \] をクリックし、 **個人用のグリッド ページ**します。  
+3.  In the tree view in the left pane, expand **My Category** and then click **My Grid Page**.  
   
-4.  値を変更 **OptionFloat** 3.1416 へと **OptionInteger** 12 にします。**\[OK\]** をクリックします。  
+4.  Change the value of **OptionFloat** to 3.1416 and **OptionInteger** to 12. Click **OK**.  
   
-5.  **\[ツール\]** メニューの **\[設定のインポートとエクスポート\]** を選択します。  
+5.  On the **Tools** menu, click **Import and Export Settings**.  
   
-     **インポートおよびエクスポート設定** ウィザードが表示されます。  
+     The **Import and Export Settings** wizard appears.  
   
-6.  確認 **選択された環境設定をエクスポート** クリックして選択すると、 **次**します。  
+6.  Make sure **Export selected environment settings** is selected, and then click **Next**.  
   
-     **エクスポートするには、\[設定の選択** ページが表示されます。  
+     The **Choose Settings to Export** page appears.  
   
-7.  クリックして **設定**します。  
+7.  Click **My Settings**.  
   
-     **説明** 変更 **OptionInteger と OptionFloat**します。  
+     The **Description** changes to **OptionInteger and OptionFloat**.  
   
-8.  確認して **個人の設定** が唯一のカテゴリを選択し、\[ **次**します。  
+8.  Make sure that **My Settings** is the only category that is selected, and then click **Next**.  
   
-     **名前、設定ファイル** ページが表示されます。  
+     The **Name Your Settings File** page appears.  
   
-9. 新しい設定ファイルに名前を `MySettings.vssettings` し、適切なディレクトリに保存します。**\[完了\]** をクリックします。  
+9. Name the new settings file `MySettings.vssettings` and save it in an appropriate directory. Click **Finish**.  
   
-     **エクスポートの完了** \] ページで、設定が正常にエクスポートされたことを報告します。  
+     The **Export Complete** page reports that your settings were successfully exported.  
   
-10. **ファイル** \] メニューをポイント **開く**, 、\] をクリックし、 **ファイル**します。 検索 `MySettings.vssettings` し、開きます。  
+10. On the **File** menu, point to **Open**, and then click **File**. Locate `MySettings.vssettings` and open it.  
   
-     \(、Guid は異なります\)、ファイルの次のセクションでエクスポートしたプロパティのカテゴリが表示されます。  
+     You can find the property category you exported in the following section of the file (your GUIDs will differ).  
   
     ```  
     <Category name="My Category_My Settings"   
-          Category="{4802bc3e-3d9d-4591-8201-23d1a05216a6}"   
-          Package="{6bb6942e-014c-489e-a612-a935680f703d}"   
-          RegisteredName="My Category_My Settings">  
-          PackageName="MyToolsOptionsPackage">  
-       <PropertyValue name="OptionFloat">3.1416</PropertyValue>   
-       <PropertyValue name="OptionInteger">12</PropertyValue>   
+          Category="{4802bc3e-3d9d-4591-8201-23d1a05216a6}"   
+          Package="{6bb6942e-014c-489e-a612-a935680f703d}"   
+          RegisteredName="My Category_My Settings">  
+          PackageName="MyToolsOptionsPackage">  
+       <PropertyValue name="OptionFloat">3.1416</PropertyValue>   
+       <PropertyValue name="OptionInteger">12</PropertyValue>   
     </Category>  
     ```  
   
-     カテゴリ名の後に、オブジェクト名にアンダー スコアを追加して、すべてのカテゴリの名前を生成することに注意してください。 OptionFloat と OptionInteger は、\[カテゴリで、そのエクスポート値と共に表示されます。  
+     Notice that the full category name is formed by the addition of an underscore to the category name followed by the object name. OptionFloat and OptionInteger appear in the category, together with their exported values.  
   
-11. これを変更することがなく、設定ファイルを閉じます。  
+11. Close the settings file without changing it.  
   
-12. **ツール** \] メニューのをクリックして **オプション**, 、展開 **My Category**, 、\] をクリックして **個人用のグリッド ページ** の値を変更し、 **OptionFloat** 1.0 と **OptionInteger** を 1 にします。**\[OK\]** をクリックします。  
+12. On the **Tools** menu, click **Options**, expand **My Category**, click **My Grid Page** and then change the value of **OptionFloat** to 1.0 and **OptionInteger** to 1. Click **OK**.  
   
-13. **ツール** \] メニューのをクリックして **インポートおよびエクスポート設定**, を選択 **選択された環境設定をインポート**, 、順にクリック **次**します。  
+13. On the **Tools** menu, click **Import and Export Settings**, select **Import selected environment settings**, and then click **Next**.  
   
-     **現在の設定の保存** ページが表示されます。  
+     The **Save Current Settings** page appears.  
   
-14. 選択 **残念ですが、新しい設定をインポート** \] をクリックし、 **次**します。  
+14. Select **No, just import new settings** and then click **Next**.  
   
-     **インポートする設定コレクションの選択** ページが表示されます。  
+     The **Choose a Collection of Settings to Import** page appears.  
   
-15. 選択、 `MySettings.vssettings` ファイルで、 **個人の設定** ツリー ビューのノードです。 ツリー ビューで、ファイルが表示されない場合はクリックして **参照** だとします。**\[次へ\]** をクリックします。  
+15. Select the `MySettings.vssettings` file in the **My Settings** node of the tree view. If the file does not appear in the tree view, click **Browse** and find it. Click **Next**.  
   
-     **インポートするには、\[設定の選択** \] ダイアログ ボックスが表示されます。  
+     The **Choose Settings to Import** dialog box appears.  
   
-16. 確認して **個人の設定** クリックして選択すると、 **完了**します。 ときに、 **インポートの完了** ページが表示されたら、クリックして **閉じる**します。  
+16. Make sure that **My Settings** is selected, and then click **Finish**. When the **Import Complete** page appears, click **Close**.  
   
-17. **ツール** \] メニューのをクリックして **オプション**, 、展開 **My Category**, 、\] をクリックして **個人用のグリッド ページ** プロパティ カテゴリの値が復元されたことを確認します。
+17. On the **Tools** menu, click **Options**, expand **My Category**, click **My Grid Page** and verify that the property category values have been restored.

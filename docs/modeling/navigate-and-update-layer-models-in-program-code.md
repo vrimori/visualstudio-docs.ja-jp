@@ -1,5 +1,5 @@
 ---
-title: "移動し、プログラム コードにおけるレイヤー モデルの更新 |Microsoft ドキュメント"
+title: Navigate and update layer models in program code | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,19 +28,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: fd26c504273cae739ccbeef5e406891def732985
-ms.openlocfilehash: 626fc2b217285ae0c79dbd57f925281e10a0efbb
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: cfe4f389516a3421bdc0d8643790dbb9c7cc2733
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="navigate-and-update-layer-models-in-program-code"></a>プログラム コードでレイヤー モデル内を移動し、レイヤー モデルを更新する
-このトピックでは、プログラム コードを使ってナビゲートおよび更新できるレイヤー モデルの要素と関係について説明します。 ユーザーの観点から、依存関係図に関する詳細については、次を参照してください。 [、依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)と[、依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)します。  
+# <a name="navigate-and-update-layer-models-in-program-code"></a>Navigate and update layer models in program code
+This topic describes the elements and relationships in layer models, which you can navigate and update by using program code. For more information about dependency diagrams from the user's point of view, see [Dependency Diagrams: Reference](../modeling/layer-diagrams-reference.md) and [Dependency Diagrams: Guidelines](../modeling/layer-diagrams-guidelines.md).  
   
- <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer>このトピックで説明するモデルより一般的なファサード<xref:Microsoft.VisualStudio.GraphModel>モデル</xref:Microsoft.VisualStudio.GraphModel></xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer>。 作成している場合、[メニュー コマンドまたはジェスチャ拡張](../modeling/add-commands-and-gestures-to-layer-diagrams.md)を使用して、`Layer`モデルです。 作成している場合、[レイヤー検証拡張機能](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)が使いやすく、`GraphModel`です。  
+ The <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer> model described in this topic is a facade on a more general <xref:Microsoft.VisualStudio.GraphModel> model. If you are writing a [menu command or gesture extension](../modeling/add-commands-and-gestures-to-layer-diagrams.md), use the `Layer` model. If you are writing a [layer validation extension](../modeling/add-custom-architecture-validation-to-layer-diagrams.md), it is easier to use the `GraphModel`.  
   
-## <a name="transactions"></a>トランザクション  
- モデルを更新する場合、変更を `ILinkedUndoTransaction` で囲むことを検討します。 これにより変更が&1; つのトランザクションにグループ化されます。 いずれかの変更が失敗した場合、トランザクション全体がロールバックされます。 ユーザーが変更を元に戻した場合は、すべての変更がまとめて元に戻されます。  
+## <a name="transactions"></a>Transactions  
+ When you update a model, consider enclosing the changes in a `ILinkedUndoTransaction`. This groups your changes into one transaction. If any of the changes fails, the whole transaction will be rolled back. If the user undoes a change, all the changes will be undone together.  
   
 ```  
 using (ILinkedUndoTransaction t =  
@@ -51,32 +52,32 @@ using (ILinkedUndoTransaction t =
 }  
 ```  
   
-## <a name="containment"></a>含有  
- ![ILayer および ILayerModel 両方の Ilayer を含めることができます。] (../modeling/media/layerapi_containment.png "LayerApi_Containment")  
+## <a name="containment"></a>Containment  
+ ![ILayer and ILayerModel can both contain ILayers.](../modeling/media/layerapi_containment.png "LayerApi_Containment")  
   
- レイヤー (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>) およびレイヤー モデル (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>) コメントとレイヤーを含めることができます</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel></xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>。  
+ Layers (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>) and the layer model (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>) can contain Comments and Layers.  
   
- レイヤー (`ILayer`) は、レイヤー モデル (`ILayerModel`) に含めることも、別の `ILayer` に入れ子にすることもできます。  
+ A layer (`ILayer`) can be contained in a layer model (`ILayerModel`) or it can be nested within another `ILayer`.  
   
- コメントまたはレイヤーを作成するには、適切なコンテナーで作成メソッドを使用します。  
+ To create a comment or a layer, use the creation methods on the appropriate container.  
   
-## <a name="dependency-links"></a>依存関係リンク  
- 依存関係リンクはオブジェクトによって表されます。 どちらの方向にもナビゲートできます。  
+## <a name="dependency-links"></a>Dependency Links  
+ A dependency link is represented by an object. It can be navigated in either direction:  
   
- ![ILayerDependencyLink は&2; つの Ilayer を接続します。] (~/modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
+ ![An ILayerDependencyLink connects two ILayers.](../modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
   
- 依存関係リンクを作成するには、`source.CreateDependencyLink(target)` を呼び出します。  
+ To create a dependency link, call `source.CreateDependencyLink(target)`.  
   
-## <a name="comments"></a>コメント  
- コメントは、レイヤーまたはレイヤー モデルの中に含めることができ、任意のレイヤー要素にリンクすることもできます。  
+## <a name="comments"></a>Comments  
+ Comments can be contained inside layers or the layer model, and can also be linked to any layer element:  
   
- ![任意のレイヤー要素にコメントを添付できます。] (~/modeling/media/layerapi_comments.png "LayerApi_Comments")  
+ ![Comments can be attached to any layer element.](../modeling/media/layerapi_comments.png "LayerApi_Comments")  
   
- コメントは任意の数の要素 (ゼロ個も可能) にリンクすることができます。  
+ A comment can be linked to any number of elements, including none.  
   
- レイヤー要素にアタッチしたコメントを取得するには、次のコードを使用します。  
+ To get the comments that are attached to a layer element, use:  
   
-```c#  
+```csharp  
 ILayerModel model = diagram.GetLayerModel();   
 IEnumerable<ILayerComment> comments =   
    model.Comments.Where(comment =>   
@@ -85,41 +86,39 @@ IEnumerable<ILayerComment> comments =
 ```  
   
 > [!CAUTION]
->  
-          `Comments` の `ILayer` プロパティは、`ILayer` に含まれるコメントを取得します。 そこにリンクされているコメントは取得しません。  
+>  The `Comments` property of an `ILayer` gets comments that are contained within the `ILayer`. It does not get the comments that are linked to it.  
   
- 適切なコンテナーで `CreateComment()` を呼び出すことによってコメントを作成します。  
+ Create a comment by invoking `CreateComment()` on the appropriate container.  
   
- コメントで `CreateLink()` を使用してリンクを作成します。  
+ Create a link by using `CreateLink()` on the comment.  
   
-## <a name="layer-elements"></a>レイヤー要素  
- モデルに含めることのできるタイプの要素はすべてレイヤー要素です。  
+## <a name="layer-elements"></a>Layer Elements  
+ All the types of element that can be contained in a model are layer elements:  
   
- ![依存関係図のコンテンツは ilayerelement です。] (../modeling/media/layerapi_layerelements.png "LayerApi_LayerElements")  
+ ![dependency diagram contents are ILayerElements.](../modeling/media/layerapi_layerelements.png "LayerApi_LayerElements")  
   
-## <a name="properties"></a>プロパティ  
- 各 `ILayerElement` には `Properties` という名前の文字列の辞書があります。 この辞書を使うと、任意の情報をレイヤー要素にアタッチできます。  
+## <a name="properties"></a>Properties  
+ Each `ILayerElement` has a string dictionary named `Properties`. You can use this dictionary to attach arbitrary information to any layer element.  
   
-## <a name="artifact-references"></a>成果物参照  
- 成果物参照 (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>)、レイヤーとファイル、クラス、またはフォルダーなどのプロジェクト アイテム間のリンクを表します</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>。 ユーザーは、レイヤーを作成または依存関係図に、ソリューション エクスプ ローラー、クラス ビュー、またはオブジェクト ブラウザーから項目をドラッグしてを追加するときに、成果物を作成します。 成果物参照はいくつでもレイヤーにリンクできます。  
+## <a name="artifact-references"></a>Artifact References  
+ An artifact reference (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>) represents the link between a layer and a project item such as a file, class, or folder. The user creates artifacts when they create a layer or add to it by dragging items from Solution Explorer, Class View, or Object Browser onto a dependency diagram. Any number of artifact references can be linked to a layer.  
   
- レイヤー エクスプローラーの各行には成果物参照が表示されます。 詳細については、次を参照してください。[コードから依存関係図を作成](../modeling/create-layer-diagrams-from-your-code.md)します。  
+ Each row in Layer Explorer displays an artifact reference. For more information, see [Create dependency diagrams from your code](../modeling/create-layer-diagrams-from-your-code.md).  
   
- 成果物参照に関係する主な型およびメソッドは次のとおりです。  
+ The principal types and methods concerned with artifact references are as follows:  
   
- <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference> カテゴリ プロパティは、参照される成果物の種類 (クラス、実行ファイル、アセンブリなど) を示します。 カテゴリは、対象となる成果物を識別子が特定する方法を決定します。  
+ <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>. The Categories property indicates what kind of artifact is referenced, such as a class, executable file, or assembly. Categories determines how the Identifier identifies the target artifact.  
   
- <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ArtifactReferenceExtensions.CreateArtifactReferenceAsync%2A>成果物参照から、作成、<xref:EnvDTE.Project>または<xref:EnvDTE.ProjectItem>.</xref:EnvDTE.ProjectItem> </xref:EnvDTE.Project></xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ArtifactReferenceExtensions.CreateArtifactReferenceAsync%2A> これは非同期操作です。 そのため、作成が完了したときに呼び出すコールバックを通常は提供します。  
+ <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ArtifactReferenceExtensions.CreateArtifactReferenceAsync%2A> creates an artifact reference from an <xref:EnvDTE.Project> or <xref:EnvDTE.ProjectItem>. This is an asynchronous operation. Therefore, you usually provide a callback that is called when the creation is complete.  
   
- レイヤー成果物参照は、ユースケース図の成果物と混同してはなりません。  
+ Layer Artifact References should not be confused with Artifacts in use case diagrams.  
   
-## <a name="shapes-and-diagrams"></a>図形と図  
- 2 つのオブジェクトは、レイヤー モデル内の各要素を表すために使用します、 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement>、 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> </xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement> 。 
-          `IShape` は、図の位置と形のサイズを表します。 レイヤー モデルでは、すべて`ILayerElement`が&1; つ`IShape`、あらゆる`IShape`図では、依存関係上に&1; つ`ILayerElement`します。 `IShape` は UML モデルにも使用されます。 そのため、すべての `IShape` にレイヤー要素があるわけではありません。  
+## <a name="shapes-and-diagrams"></a>Shapes and Diagrams  
+ Two objects are used to represent each element in a layer model: an <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement>, and an <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>. The `IShape` represents the position and size of the shape on the diagram. In layer models, every `ILayerElement` has one `IShape`, and every `IShape` on a dependency diagram has one `ILayerElement`. `IShape` is also used for UML models. Therefore, not every `IShape` has a layer element.  
   
- 同様に、 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel> <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>に表示される</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>  
+ In the same manner, the <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel> is displayed on one <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>.  
   
- カスタム コマンドまたはジェスチャ ハンドラーのコードでは、`DiagramContext` インポートから現在の図や現在の形の選択を取得できます。  
+ In the code of a custom command or gesture handler, you can get the current diagram and the current selection of shapes from the `DiagramContext` import:  
   
 ```  
 public class ... {  
@@ -136,14 +135,14 @@ public void ... (...)
     if (element != null) ... }}  
 ```  
   
- ![各 ILayerElement は IShape で表示されます。] (~/modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
+ ![Each ILayerElement is presented by an IShape.](../modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
   
- <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape><xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>は UML モデルの表示にも使用します</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>。</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> 詳細については、次を参照してください。 [UML モデルを図に表示](../modeling/display-a-uml-model-on-diagrams.md)します。  
+ <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> and <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram> are also used to display UML models. For more information, see [Display a UML model on diagrams](../modeling/display-a-uml-model-on-diagrams.md).  
   
-## <a name="see-also"></a>関連項目  
- [依存関係図にコマンドおよびジェスチャを追加します。](../modeling/add-commands-and-gestures-to-layer-diagrams.md)   
- [依存関係ダイアグラムへのカスタム アーキテクチャ検証を追加します。](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   
- [カスタム プロパティの依存関係図を追加します。](../modeling/add-custom-properties-to-layer-diagrams.md)   
- [依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)   
- [依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)   
+## <a name="see-also"></a>See Also  
+ [Add commands and gestures to dependency diagrams](../modeling/add-commands-and-gestures-to-layer-diagrams.md)   
+ [Add custom architecture validation to dependency diagrams](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   
+ [Add custom properties to dependency diagrams](../modeling/add-custom-properties-to-layer-diagrams.md)   
+ [Dependency Diagrams: Reference](../modeling/layer-diagrams-reference.md)   
+ [Dependency Diagrams: Guidelines](../modeling/layer-diagrams-guidelines.md)   
 

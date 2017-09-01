@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 17fd26b26e25c31772adf4b8629852256317968c
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: 6a45db14ee055c4fbdf738cf36df503a4a1fffd0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild ツールセット (ToolsVersion)
@@ -68,9 +68,9 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
   
  `ToolsVersion` 属性はプロジェクトの移行でも使用されます。 たとえば、Visual Studio 2010 で Visual Studio 2008 プロジェクトを開く場合、プロジェクト ファイルは ToolsVersion="4.0" を含むように更新されます。 次に、そのプロジェクトを Visual Studio 2008 で開こうとすると、アップグレードされた `ToolsVersion` は認識されないため、プロジェクトは属性が 3.5 に設定された場合と同様にビルドされます。  
   
- Visual Studio 2010 と Visual Studio 2012 は、4.0 の ToolsVersion を使用します。 Visual Studio 2013 は、12.0 の ToolsVersion を使用します。 多くの場合、3 つのうちどのバージョンの Visual Studio でもプロジェクトを開くことができます。変更する必要はありません。 Visual Studio は常に正しいツールセットを使用しますが、使用されているバージョンがプロジェクト ファイルのバージョンと一致しない場合は、そのことが通知されます。 ほとんどの場合、ツールセットには互換性があるため、この警告は問題にはなりません。  
+ Visual Studio 2010 と Visual Studio 2012 は、4.0 の ToolsVersion を使用します。 Visual Studio 2013 は、12.0 の ToolsVersion を使用します。 Visual Studio 2015 は ToolsVersion 14.0 を使用し、Visual Studio 2017 は ToolsVersion 15.0 を使用します。 多くの場合、複数のバージョンの Visual Studio でプロジェクトを開くことができます。変更する必要はありません。 Visual Studio は常に正しいツールセットを使用しますが、使用されているバージョンがプロジェクト ファイルのバージョンと一致しない場合は、そのことが通知されます。 ほとんどの場合、ツールセットには互換性があるため、この警告は問題にはなりません。  
   
- このトピックの後半で説明するサブツールセットを使用すると、MSBuild では、ビルドが実行されるコンテキストに基づいて、使用するツールのセットを自動的に切り替えることができます。 たとえば、プロジェクト ファイルを明示的に変更しなくても、MSBuild では、Visual Studio 2010 での実行時に Visual Studio 2010 での実行時よりも新しいツールのセットを使用できるようになります。 詳細については、「[カスタム プロジェクトでのバージョンの認識](../misc/making-custom-projects-version-aware.md)」を参照してください。  
+ このトピックの後半で説明するサブツールセットを使用すると、MSBuild では、ビルドが実行されるコンテキストに基づいて、使用するツールのセットを自動的に切り替えることができます。 たとえば、プロジェクト ファイルを明示的に変更しなくても、MSBuild では、Visual Studio 2010 での実行時に Visual Studio 2010 での実行時よりも新しいツールのセットを使用できるようになります。  
   
 ## <a name="toolset-implementation"></a>ツールセットの実装  
  ツールセットを実装するには、ツールセットを構成するさまざまなツール、ターゲット、およびタスクのパスを選択します。 MSBuild で定義されるツールセットに含まれるツールは、次のソースから取得されます。  
@@ -134,3 +134,4 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
 ## <a name="see-also"></a>関連項目  
  [標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)   
  [マルチ ターゲット](../msbuild/msbuild-multitargeting-overview.md)
+

@@ -1,64 +1,81 @@
 ---
-title: "CA2243: 属性文字列リテラルは、正しく解析する必要があります | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2243"
-  - "AttributeStringLiteralsShouldParseCorrectly"
-helpviewer_keywords: 
-  - "AttributeStringLiteralsShouldParseCorrectly"
-  - "CA2243"
+title: 'CA2243: Attribute string literals should parse correctly | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2243
+- AttributeStringLiteralsShouldParseCorrectly
+helpviewer_keywords:
+- AttributeStringLiteralsShouldParseCorrectly
+- CA2243
 ms.assetid: bfadb366-379d-4ee4-b17b-c4a09bf1106b
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 10
----
-# CA2243: 属性文字列リテラルは、正しく解析する必要があります
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: e79579bec2c181775f6c6dc91a66e12793ac0319
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243: Attribute string literals should parse correctly
 |||  
 |-|-|  
 |TypeName|AttributeStringLiteralsShouldParseCorrectly|  
 |CheckId|CA2243|  
-|分類|Microsoft.Usage|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Usage|  
+|Breaking Change|Non Breaking|  
   
-## 原因  
- 属性文字列のリテラル パラメーターが URL、GUID、またはバージョンとして正しく解析されません。  
+## <a name="cause"></a>Cause  
+ An attribute's string literal parameter does not parse correctly for a URL, GUID, or Version.  
   
-## 規則の説明  
- 属性は <xref:System.Attribute?displayProperty=fullName> から派生し、コンパイル時に使用されるため、コンストラクターには定数値だけを渡すことができます。  URL、GUID、およびバージョンを表す属性パラメーターは、<xref:System.Uri?displayProperty=fullName>、<xref:System.Guid?displayProperty=fullName>、および <xref:System.Version?displayProperty=fullName> として型指定することはできません。これらの型を定数として表すことはできないからです。  このような属性パラメーターは文字列で表す必要があります。  
+## <a name="rule-description"></a>Rule Description  
+ Since attributes are derived from <xref:System.Attribute?displayProperty=fullName>, and attributes are used at compile time, only constant values can be passed to their constructors. Attribute parameters that must represent URLs, GUIDs and Versions cannot be typed as <xref:System.Uri?displayProperty=fullName>, <xref:System.Guid?displayProperty=fullName>, and <xref:System.Version?displayProperty=fullName>, because these types cannot be represented as constants. Instead, they must be represented by strings.  
   
- パラメーターを文字列として型指定することにより、コンパイル時に誤った形式のパラメーターが渡されることがあります。  
+ Because the parameter is typed as a string, it is possible that an incorrectly formatted parameter could be passed at compile time.  
   
- この規則では、名前付けヒューリスティックを使用して、URI \(Uniform Resource Identifier\)、グローバル一意識別子 \(GUID\)、またはバージョンを表すパラメーターを検索し、渡された値が正しいことを確認します。  
+ This rule uses a naming heuristic to find parameters that represent a uniform resource identifier (URI), a Globally Unique Identifier (GUID) or a Version and verifies that the passed value is correct.  
   
-## 違反の修正方法  
- パラメーター文字列を正しい形式の URL、GUID、またはバージョンに変更します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ Change the parameter string to a correctly formed URL, GUID, or Version.  
   
-## 警告を抑制する状況  
- パラメーターが URL、GUID、またはバージョンを表さない場合は、この規則による警告を抑制しても安全です。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule if the parameter does not represent a URL, GUID, or Version.  
   
-## 使用例  
- 次の例は、この規則に違反する AssemblyFileVersionAttribute のコードを示しています。  
+## <a name="example"></a>Example  
+ The following example shows code for the AssemblyFileVersionAttribute that violates this rule.  
   
- [!code-cs[FxCop.Usage.AttributeStringLiteralsShouldParseCorrectly#1](../code-quality/codesnippet/CSharp/ca2243-attribute-string-literals-should-parse-correctly_1.cs)]  
+ [!code-csharp[FxCop.Usage.AttributeStringLiteralsShouldParseCorrectly#1](../code-quality/codesnippet/CSharp/ca2243-attribute-string-literals-should-parse-correctly_1.cs)]  
   
- この規則は以下のパラメーターによってトリガーされます。  
+ The rule is triggered by the following:  
   
--   “version” が含まれており、System.Version と解析できないパラメーター  
+-   Parameters that contain 'version' and cannot be parsed to System.Version.  
   
--   “guid” が含まれており、System.Guid と解析できないパラメーター  
+-   Parameters that contain 'guid' and cannot be parsed to System.Guid.  
   
--   “uri”、“urn”、または “url” が含まれており、System.Uri と解析できないパラメーター  
+-   Parameters that contain 'uri', 'urn', or 'url' and cannot be parsed to System.Uri.  
   
-## 参照  
- [CA1054: URI パラメーターを文字列にすることはできません](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
+## <a name="see-also"></a>See Also  
+ [CA1054: URI parameters should not be strings](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)

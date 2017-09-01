@@ -1,77 +1,94 @@
 ---
-title: "IDebugErrorEvent2::GetErrorMessage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugErrorEvent2::GetErrorMessage"
-helpviewer_keywords: 
-  - "IDebugErrorEvent2::GetErrorMessage"
+title: IDebugErrorEvent2::GetErrorMessage | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugErrorEvent2::GetErrorMessage
+helpviewer_keywords:
+- IDebugErrorEvent2::GetErrorMessage
 ms.assetid: 9e3b0d74-a2dd-4eaa-bd95-21b2f9c79409
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugErrorEvent2::GetErrorMessage
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: a4c15d3a000a1b960bfcf3f7f3a0d46708718bda
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-情報をユーザーが認識できるエラー メッセージの構築を利用できる返します。  
+---
+# <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
+Returns information that allows construction of a human-readable error message.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetErrorMessage(  
-   MESSAGETYPE* pMessageType,  
-   BSTR*        pbstrErrorFormat,  
-   HRESULT*     hrErrorReason,  
-   DWORD*       pdwType,  
-   BSTR*        pbstrHelpFileName,  
-   DWORD*       pdwHelpId  
+```cpp  
+HRESULT GetErrorMessage(  
+   MESSAGETYPE* pMessageType,  
+   BSTR*        pbstrErrorFormat,  
+   HRESULT*     hrErrorReason,  
+   DWORD*       pdwType,  
+   BSTR*        pbstrHelpFileName,  
+   DWORD*       pdwHelpId  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetErrorMessage(  
-   out enum_MESSAGETYPE   pMessageType,  
-   out string             pbstrErrorFormat,  
-   out int                phrErrorReason,  
-   out uint               pdwType,  
-   out string             pbstrHelpFileName,  
-   out uint               pdwHelpId  
+   out enum_MESSAGETYPE   pMessageType,  
+   out string             pbstrErrorFormat,  
+   out int                phrErrorReason,  
+   out uint               pdwType,  
+   out string             pbstrHelpFileName,  
+   out uint               pdwHelpId  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pMessageType`  
- \[入力\] メッセージの種類を示す [メッセージの種類](../../../extensibility/debugger/reference/messagetype.md) の列挙型の値を返します。  
+ [out] Returns a value from the [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) enumeration, describing the type of message.  
   
  `pbstrErrorFormat`  
- \[入力\] ユーザーに最終的なメッセージの形式 \(詳細については「解説」を参照してください\)。  
+ [out] The format of the final message to the user (see "Remarks" for details).  
   
  `hrErrorReason`  
- \[入力\] エラー コードはメッセージ通知します。  
+ [out] The error code the message is about.  
   
  `pdwType`  
- \[入力\] エラーの重大度レベル \(`MessageBox` に MB\_XXX の定数を使用してください ; たとえば`MB_EXCLAMATION` または `MB_WARNING`\)。  
+ [out] Severity of the error (use the MB_XXX constants for `MessageBox`; for example, `MB_EXCLAMATION` or `MB_WARNING`).  
   
  `pbstrHelpFileName`  
- \[入力\] ヘルプ ファイルがない場合はヘルプ ファイルへのパス \(null 値に設定します。  
+ [out] Path to a help file (set to a null value if there is no help file).  
   
  `pdwHelpId`  
- \[入力\] ヘルプ トピックがある\) 表示するヘルプ トピック ID \(0 に設定します。  
+ [out] ID of the help topic to display (set to 0 if there is no help topic).  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- エラー メッセージが `"What I was doing. %1"` に従って書式指定する必要があります。  `"%1"` \(`hrErrorReason` でエラー メッセージが呼び出し元によって返されるエラー コードから派生\) に置き換えられます。  `pMessageType` のパラメーターは最終的なエラー メッセージを表示するかを呼び出し元に通知します。  
+## <a name="remarks"></a>Remarks  
+ The error message should be formatted along the lines of `"What I was doing.  %1"`. The `"%1"` would then be replaced by the caller with the error message derived from the error code (which is returned in `hrErrorReason`). The `pMessageType` parameter tells the caller how the final error message should be displayed.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)   
- [メッセージの種類](../../../extensibility/debugger/reference/messagetype.md)
+ [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)

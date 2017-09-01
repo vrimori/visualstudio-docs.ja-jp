@@ -1,33 +1,50 @@
 ---
-title: "メニュー コマンドのテキストを変更します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メニュー、テキストの変更"
-  - "メニューのテキスト"
-  - "テキストを変更するコマンド"
+title: Changing the Text of a Menu Command | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- menus, changing text
+- text, menus
+- commands, changing text
 ms.assetid: 5cb676a0-c6e2-47e5-bd2b-133dc8842e46
 caps.latest.revision: 25
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# メニュー コマンドのテキストを変更します。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5cff9c7a8f834478e9ba414491c193c7a485c936
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-次の手順を使用してメニュー コマンドのテキスト ラベルを変更する方法を説明する、 <xref:System.ComponentModel.Design.IMenuCommandService> サービスです。  
+---
+# <a name="changing-the-text-of-a-menu-command"></a>Changing the Text of a Menu Command
+The following steps show how to change the text label of a menu command by using the <xref:System.ComponentModel.Design.IMenuCommandService> service.  
   
-## IMenuCommandService とメニュー コマンドのラベルを変更します。  
+## <a name="changing-a-menu-command-label-with-the-imenucommandservice"></a>Changing a menu command label with the IMenuCommandService  
   
-1.  という名前の VSIX プロジェクトを作成する `MenuText` メニュー コマンドを使用して名前付き **ChangeMenuText**します。 詳細については、「[メニュー コマンドを使用して拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)」を参照してください。  
+1.  Create a VSIX project named `MenuText` with a menu command named **ChangeMenuText**. For more information, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
-2.  .Vstc ファイルで、追加、 `TextChanges` の次の例に示すように、メニュー コマンドにフラグを設定します。  
+2.  In the .vstc file, add the `TextChanges` flag to your menu command, as shown in the following example.  
   
     ```xml  
     <Button guid="guidChangeMenuTextPackageCmdSet" id="ChangeMenuTextId" priority="0x0100" type="Button">  
@@ -40,26 +57,26 @@ caps.handback.revision: 25
     </Button>  
     ```  
   
-3.  ChangeMenuText.cs ファイルでは、メニュー コマンドが表示される前に呼び出されるイベント ハンドラーを作成します。  
+3.  In the ChangeMenuText.cs file, create an event handler that will be called before the menu command is displayed.  
   
-    ```c#  
+    ```csharp  
     private void OnBeforeQueryStatus(object sender, EventArgs e)  
     {  
         var myCommand = sender as OleMenuCommand;  
         if (null != myCommand)  
         {  
             myCommand.Text = "New Text";  
-                    }  
+        }  
     }  
     ```  
   
-     変更することで、このメソッドでメニュー コマンドの状態を更新することもできます。、 <xref:System.ComponentModel.Design.MenuCommand.Visible%2A>, 、<xref:System.ComponentModel.Design.MenuCommand.Checked%2A>, 、および <xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> プロパティを、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> オブジェクトです。  
+     You can also update the status of the menu command in this method by changing the <xref:System.ComponentModel.Design.MenuCommand.Visible%2A>, <xref:System.ComponentModel.Design.MenuCommand.Checked%2A>, and <xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> properties on the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> object.  
   
-4.  ChangeMenuText コンス トラクターで元のコマンドの初期化と配置のコードを作成するコードを書き換えます、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> \(なく `MenuCommand`\) メニュー コマンドを表し、追加する、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> イベント ハンドラー、および、メニュー コマンド、メニュー コマンドのサービスを提供します。  
+4.  In the ChangeMenuText constructor, replace the original command initialization and placement code with code that creates a <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> (rather than a `MenuCommand`) that represents the menu command, adds the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> event handler, and gives the menu command to the menu command service.  
   
-     次のようになりますに示します。  
+     Here is what it should look like:  
   
-    ```c#  
+    ```csharp  
     private ChangeMenuText(Package package)  
     {  
         if (package == null)  
@@ -82,8 +99,9 @@ caps.handback.revision: 25
     }  
     ```  
   
-5.  プロジェクトをビルドし、デバッグを開始します。 Visual Studio の実験用インスタンスが表示されます。  
+5.  Build the project and start debugging. The experimental instance of Visual Studio appears.  
   
-6.  **ツール** メニューという名前のコマンドを表示する必要があります **呼び出す ChangeMenuText**します。  
+6.  On the **Tools** menu you should see a command named **Invoke ChangeMenuText**.  
   
-7.  コマンドをクリックします。 MenuItemCallback が呼び出されているお知らせメッセージ ボックスが表示されます。 メッセージ ボックスを閉じると、\[ツール\] メニュー コマンドの名前を参照する必要があります **新しいテキスト**します。
+7.  Click the command. You should see the message box announcing that MenuItemCallback has been called. When you dismiss the message box, you should see that the name of the command on the Tools menu is now **New Text**.
+

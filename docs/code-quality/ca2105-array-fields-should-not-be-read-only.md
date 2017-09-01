@@ -1,72 +1,90 @@
 ---
-title: "CA2105: 配列フィールドは読み取り専用にできません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2105"
-  - "ArrayFieldsShouldNotBeReadOnly"
-helpviewer_keywords: 
-  - "ArrayFieldsShouldNotBeReadOnly"
-  - "CA2105"
+title: 'CA2105: Array fields should not be read only | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2105
+- ArrayFieldsShouldNotBeReadOnly
+helpviewer_keywords:
+- ArrayFieldsShouldNotBeReadOnly
+- CA2105
 ms.assetid: 0bdc3421-3ceb-4182-b30c-a992fbfcc35d
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 16
----
-# CA2105: 配列フィールドは読み取り専用にできません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 3980baa67ba22ff52329aaa8bf94c9699af63ed9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105: Array fields should not be read only
 |||  
 |-|-|  
 |TypeName|ArrayFieldsShouldNotBeReadOnly|  
 |CheckId|CA2105|  
-|分類|Microsoft.Security|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## 原因  
- 配列を含むパブリック フィールドまたはプロテクト フィールドが、読み取り専用と宣言されています。  
+## <a name="cause"></a>Cause  
+ A public or protected field that holds an array is declared read-only.  
   
-## 規則の説明  
- 配列を含むフィールドに `readonly` \([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] では `ReadOnly`\) 修飾子を適用すると、そのフィールドで参照先の配列を変更できません。  ただし、読み取り専用フィールドに格納された配列の要素は変更できます。  パブリックにアクセスできる読み取り専用の配列で、その要素に基づいてコードで条件判断または操作を行うと、セキュリティ上の脆弱性が生じます。  
+## <a name="rule-description"></a>Rule Description  
+ When you apply the `readonly` (`ReadOnly` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) modifier to a field that contains an array, the field cannot be changed to refer to a different array. However, the elements of the array that are stored in a read-only field can be changed. Code that makes decisions or performs operations that are based on the elements of a read-only array that can be publicly accessed might contain an exploitable security vulnerability.  
   
- パブリック フィールドが存在すること自体も、デザイン規則「[CA1051: 参照できるインスタンス フィールドを宣言しないでください](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)」に違反しています。  
+ Note that having a public field also violates the design rule [CA1051: Do not declare visible instance fields](../code-quality/ca1051-do-not-declare-visible-instance-fields.md).  
   
-## 違反の修正方法  
- この規則で特定されるセキュリティ上の脆弱性を修正するには、パブリックにアクセスできる読み取り専用の配列の要素に依存しないようにします。  次の手順のいずれかを実行することを強くお勧めします。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix the security vulnerability that is identified by this rule, do not rely on the contents of a read-only array that can be publicly accessed. It is strongly recommended that you use one of the following procedures:  
   
--   変更できない、厳密に型指定されたコレクションで、配列を置換します。  詳細については、「<xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>」を参照してください。  
+-   Replace the array with a strongly typed collection that cannot be changed. For more information, see <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>.  
   
--   プライベート配列のクローンを返すメソッドで、パブリック フィールドを置換します。  コードはクローンに依存しないため、要素が変更されても危険はありません。  
+-   Replace the public field with a method that returns a clone of a private array. Because your code does not rely on the clone, there is no danger if the elements are modified.  
   
- 2 つ目の方法を選択した場合、フィールドをプロパティで置換しないでください。配列を返すプロパティの場合、パフォーマンスに悪影響を及ぼすことがあります。  詳細については、「[CA1819: プロパティは、配列を返すことはできません](../code-quality/ca1819-properties-should-not-return-arrays.md)」を参照してください。  
+ If you chose the second approach, do not replace the field with a property; properties that return arrays adversely affect performance. For more information, see [CA1819: Properties should not return arrays](../code-quality/ca1819-properties-should-not-return-arrays.md).  
   
-## 警告を抑制する状況  
- この規則からは、できるだけ警告を除外しないでください。  読み取り専用フィールドの内容が重要ではない場合はほとんどありません。  読み取り専用フィールドの内容が重要ではない場合、メッセージを除外するのではなく、`readonly` 修飾子を削除します。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Exclusion of a warning from this rule is strongly discouraged. Almost no scenarios occur where the contents of a read-only field are unimportant. If this is the case with your scenario, remove the `readonly` modifier instead of excluding the message.  
   
-## 使用例  
- この規則に違反した場合の危険性について、例を説明します。  最初の部分には、`MyClassWithReadOnlyArrayField` という型のサンプル ライブラリが表示されます。安全ではない 2 つのフィールド \(`grades` と `privateGrades`\) が含まれています。  `grades` フィールドはパブリックであるため、どのような呼び出し元に対しても脆弱性があります。  `privateGrades` フィールドはプライベートですが、`GetPrivateGrades` メソッドで呼び出し元に返されるため、脆弱性があります。  `securePrivateGrades` フィールドは、`GetSecurePrivateGrades` メソッドを使用すると安全な方法で公開されます。  適切なデザイン方法に従って、プライベートと宣言します。  2 つ目の部分には、`grades` メンバーと `privateGrades` メンバーに格納されている値を変更するコードが表示されます。  
+## <a name="example"></a>Example  
+ This example demonstrates the dangers of violating this rule. The first part shows an example library that has a type, `MyClassWithReadOnlyArrayField`, that contains two fields (`grades` and `privateGrades`) that are not secure. The field `grades` is public, and therefore vulnerable to any caller. The field `privateGrades` is private but is still vulnerable because it is returned to callers by the `GetPrivateGrades` method. The `securePrivateGrades` field is exposed in a safe manner by the `GetSecurePrivateGrades` method. It is declared as private to follow good design practices. The second part shows code that changes values stored in the `grades` and `privateGrades` members.  
   
- サンプルのクラス ライブラリを次に示します。  
+ The example class library appears in the following example.  
   
- [!code-cs[FxCop.Security.ArrayFieldsNotReadOnly#1](../code-quality/codesnippet/CSharp/ca2105-array-fields-should-not-be-read-only_1.cs)]  
+ [!code-csharp[FxCop.Security.ArrayFieldsNotReadOnly#1](../code-quality/codesnippet/CSharp/ca2105-array-fields-should-not-be-read-only_1.cs)]  
   
-## 使用例  
- 次のコードでは、サンプルのクラス ライブラリを使用して、読み取り専用の配列が持つセキュリティ問題を表しています。  
+## <a name="example"></a>Example  
+ The following code uses the example class library to illustrate read-only array security issues.  
   
- [!code-cs[FxCop.Security.TestArrayFieldsRead#1](../code-quality/codesnippet/CSharp/ca2105-array-fields-should-not-be-read-only_2.cs)]  
+ [!code-csharp[FxCop.Security.TestArrayFieldsRead#1](../code-quality/codesnippet/CSharp/ca2105-array-fields-should-not-be-read-only_2.cs)]  
   
- このサンプルによる出力は次のとおりです。  
+ The output from this example is:  
   
-  **変更前: Grades: 90, 90, 90 Private Grades: 90, 90, 90  Secure Grades, 90, 90, 90**  
-**変更後: Grades: 90, 555, 90 Private Grades: 90, 555, 90  Secure Grades, 90, 90, 90**   
-## 参照  
+ **Before tampering: Grades: 90, 90, 90 Private Grades: 90, 90, 90  Secure Grades, 90, 90, 90**  
+**After tampering: Grades: 90, 555, 90 Private Grades: 90, 555, 90  Secure Grades, 90, 90, 90**   
+## <a name="see-also"></a>See Also  
  <xref:System.Array?displayProperty=fullName>   
  <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>

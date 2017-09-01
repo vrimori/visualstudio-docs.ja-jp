@@ -1,66 +1,70 @@
 ---
-title: "方法 : ワークシートのセル内のコントロールをサイズ変更する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "コントロール [Visual Studio での Office 開発], サイズ変更"
-  - "マネージ コントロール, サイズ変更"
-  - "Windows フォーム コントロール [Visual Studio での Office 開発], サイズ変更"
-  - "ワークシート, サイズ変更"
+title: 'How to: Resize Controls Within Worksheet Cells | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- controls [Office development in Visual Studio], resizing
+- managed controls, resizing
+- worksheets, resizing
+- Windows Forms controls [Office development in Visual Studio], resizing
 ms.assetid: 1439db4a-e64b-4381-a6e6-605ba94db3de
 caps.latest.revision: 33
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 32
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 03a56a89259bd1f50be85ea244c97667bad906e1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法 : ワークシートのセル内のコントロールをサイズ変更する
-  ワークシートの列や行のサイズを変更すると、セルに含まれているホスト コントロールは、サイズが変更されたセルの高さまたは幅に合わせて、自動的にサイズが変更されます。  Windows フォーム コントロールは、既定では、自動的にサイズ変更されません。  
+# <a name="how-to-resize-controls-within-worksheet-cells"></a>How to: Resize Controls Within Worksheet Cells
+  When you resize columns or rows on a worksheet, any host controls contained in the cells automatically resize to the height or width of the cell that was resized. Windows Forms controls do not resize automatically by default.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- デザイン時にコントロールを追加する場合は、コントロールごとに配置オプションを設定する必要があります。  
+ If you add the controls at design time, you must set positioning options for each control.  
   
- Windows フォーム コントロールをプログラムで追加し、範囲引数を指定した場合は、範囲内のセルのサイズが変更されると、コントロールは自動的にサイズ変更されます。  詳細については、「[実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+ If you add a Windows Forms control programmatically and supply a range argument, the control automatically resizes when a cell within the range is resized. For more information, see [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md).  
   
-## デザイン時のコントロールのサイズ変更  
+## <a name="resizing-controls-at-design-time"></a>Resizing Controls at Design Time  
   
-#### デザイン時にセルに合わせてコントロールのサイズを変更するには  
+#### <a name="to-make-controls-resize-with-cells-at-design-time"></a>To make controls resize with cells at design time  
   
-1.  **ツールボックス**からワークシートに Windows フォーム コントロールをドラッグします。  
+1.  From the **Toolbox**, drag a Windows Forms control to a worksheet.  
   
-2.  コントロールを右クリックし、**\[コントロールの書式設定\]** をクリックします。  
+2.  Right-click the control, and then click **Format Control**.  
   
-3.  **\[コントロールの書式設定\]** ダイアログ ボックスの **\[プロパティ\]** タブをクリックします。  
+3.  In the **Format Control** dialog box, click the **Properties** tab.  
   
-4.  **\[オブジェクトの位置関係\]** の **\[セルに合わせて移動やサイズ変更をする\]** をクリックし、**\[OK\]** をクリックします。  
+4.  Under **Object Positioning**, select the **Move and size with cells** option, and then click **OK**.  
   
-     コントロールを含むセルのサイズを変更すると、セルに合わせてコントロールのサイズが変更されます。  
+     When you resize the cell that contains the control, the control resizes to fit the cell.  
   
-## 実行時のコントロールのサイズ変更  
- 実行時に Windows フォーム コントロールを追加し、コントロールの場所として <xref:Microsoft.Office.Interop.Excel.Range> を渡した場合、範囲を含むワークシートのセルのサイズが変更されると、コントロールのサイズも自動的に変更されます。  
+## <a name="resizing-controls-at-run-time"></a>Resizing Controls at Run Time  
+ If you add a Windows Forms control at run time and pass in a <xref:Microsoft.Office.Interop.Excel.Range> as the location for the control, the control will automatically resize when the worksheet cell that contains the range is resized.  
   
-#### 実行時にセルに合わせてコントロールのサイズを変更するには  
+#### <a name="to-make-controls-resize-with-cells-at-run-time"></a>To make controls resize with cells at run time  
   
-1.  コントロールを範囲 A1 に追加します。  
+1.  Add a control to range A1.  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#5](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#5)]
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#5](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/VB/Sheet1.vb#5)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsExcel#5](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#5)]  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#5)]  
   
-     コントロールを含むセルのサイズを変更すると、セルに合わせてコントロールのサイズが変更されます。  
+     When you resize the cell that contains the control, the control resizes to fit the cell.  
   
-## コントロールの配置のリセット  
- `Placement` プロパティを次のいずれかの <xref:Microsoft.Office.Interop.Excel.XlPlacement> 値に設定することで、コントロールの配置とサイズ変更をリセットできます。  
+## <a name="resetting-control-placement"></a>Resetting Control Placement  
+ You can reset the placement and resizing of the control by setting the `Placement` property to one of the following <xref:Microsoft.Office.Interop.Excel.XlPlacement> values:  
   
 -   <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>  
   
@@ -68,18 +72,16 @@ caps.handback.revision: 32
   
 -   <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlMoveAndSize>  
   
-#### セルに合わせてコントロールのサイズが変更したり位置が移動したりしないように動作を変更するには  
+#### <a name="to-change-the-behavior-of-a-control-so-that-it-does-not-resize-or-move-with-the-cell"></a>To change the behavior of a control so that it does not resize or move with the cell  
   
-1.  コントロールの配置プロパティを呼び出し、値を <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating> に設定します。  
+1.  Call the placement property of the control and set the value to <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>.  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/CS/Sheet1.cs#6)]
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#6](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsExcel/VB/Sheet1.vb#6)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#6)]  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#6)]  
   
-## 参照  
- [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
- [方法 : Office ドキュメントに Windows フォーム コントロールを追加する](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
- [方法 : 印刷時にワークシートのコントロールを非表示にする](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)   
- [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
-  
+## <a name="see-also"></a>See Also  
+ [Controls on Office Documents](../vsto/controls-on-office-documents.md)   
+ [How to: Add Windows Forms Controls to Office Documents](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
+ [How to: Hide Controls on Worksheets when Printing](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)   
+ [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)   
+ [Limitations of Windows Forms Controls on Office Documents](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
   

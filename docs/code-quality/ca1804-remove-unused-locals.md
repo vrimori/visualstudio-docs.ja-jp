@@ -1,58 +1,76 @@
 ---
-title: "CA1804: 使用されていないローカルを削除します | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1804"
-  - "RemoveUnusedLocals"
-helpviewer_keywords: 
-  - "RemoveUnusedLocals"
-  - "CA1804"
+title: 'CA1804: Remove unused locals | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1804
+- RemoveUnusedLocals
+helpviewer_keywords:
+- RemoveUnusedLocals
+- CA1804
 ms.assetid: cc332e67-6543-4813-bd8a-6f6fc75bf22a
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 18
----
-# CA1804: 使用されていないローカルを削除します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 59d25656b929c36978f609f8b97da506e582f6af
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1804-remove-unused-locals"></a>CA1804: Remove unused locals
 |||  
 |-|-|  
 |TypeName|RemoveUnusedLocals|  
 |CheckId|CA1804|  
-|分類|Microsoft.Performance|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Performance|  
+|Breaking Change|Non-breaking|  
   
-## 原因  
- メソッドでローカル変数を宣言していますが、その変数を使用していません。ただし、代入ステートメントの受け取りとして使用されている可能性はあります。  この規則違反を解析するには、テスト対象のアセンブリをデバッグ情報を含めてビルドします。また、関連するプログラム データベース \(.pdb\) ファイルを使用できるようにします。  
+## <a name="cause"></a>Cause  
+ A method declares a local variable but does not use the variable except possibly as the recipient of an assignment statement. For analysis by this rule, the tested assembly must be built with debugging information and the associated program database (.pdb) file must be available.  
   
-## 規則の説明  
- 使用されていないローカル変数や不要な引数があると、アセンブリのサイズが大きくなり、パフォーマンスが低下します。  
+## <a name="rule-description"></a>Rule Description  
+ Unused local variables and unnecessary assignments increase the size of an assembly and decrease performance.  
   
-## 違反の修正方法  
- この規則違反を修正するには、そのローカル変数を削除するか、使用します。  [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] に同梱される C\# コンパイラは、`optimize` オプションが有効である場合、このような未使用のローカル変数を削除します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, remove or use the local variable. Note that the C# compiler that is included with [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] removes unused local variables when the `optimize` option is enabled.  
   
-## 警告を抑制する状況  
- そのローカル変数がコンパイラで生成された場合は、この規則による警告を抑制します。  また、パフォーマンスとコードの保守が重要ではない場合、この規則による警告を抑制するか、この規則を無効にしても安全です。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Suppress a warning from this rule if the variable was compiler emitted. It is also safe to suppress a warning from this rule, or to disable the rule, if performance and code maintenance are not primary concerns.  
   
-## 使用例  
- 使用されていないローカル変数を次の例にいくつか示します。  
+## <a name="example"></a>Example  
+ The following example shows several unused local variables.  
   
- [!CODE [FxCop.Performance.UnusedLocals#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Performance.UnusedLocals#1)]  
+ [!code-vb[FxCop.Performance.UnusedLocals#1](../code-quality/codesnippet/VisualBasic/ca1804-remove-unused-locals_1.vb)] [!code-csharp[FxCop.Performance.UnusedLocals#1](../code-quality/codesnippet/CSharp/ca1804-remove-unused-locals_1.cs)]  
   
-## 関連規則  
- [CA1809: ローカルを使用しすぎないでください](../code-quality/ca1809-avoid-excessive-locals.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1809: Avoid excessive locals](../code-quality/ca1809-avoid-excessive-locals.md)  
   
- [CA1811: 呼び出されていないプライベート コードを使用しません](../code-quality/ca1811-avoid-uncalled-private-code.md)  
+ [CA1811: Avoid uncalled private code](../code-quality/ca1811-avoid-uncalled-private-code.md)  
   
- [CA1812: インスタンス化されていない内部クラスを使用しないでください](../Topic/CA1812:%20Avoid%20uninstantiated%20internal%20classes.md)  
+ [CA1812: Avoid uninstantiated internal classes](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)  
   
- [CA1801: 使用されていないパラメーターを再確認します](../Topic/CA1801:%20Review%20unused%20parameters.md)
+ [CA1801: Review unused parameters](../code-quality/ca1801-review-unused-parameters.md)

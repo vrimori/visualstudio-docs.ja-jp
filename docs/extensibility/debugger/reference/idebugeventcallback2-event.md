@@ -1,89 +1,106 @@
 ---
-title: "IDebugEventCallback2::Event | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEventCallback2::Event"
-helpviewer_keywords: 
-  - "IDebugEventCallback2::Event"
+title: IDebugEventCallback2::Event | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEventCallback2::Event
+helpviewer_keywords:
+- IDebugEventCallback2::Event
 ms.assetid: e5a3345b-d460-4e40-8f5b-3111c56a2ed9
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugEventCallback2::Event
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: c22bd5b1a07947bc7cca7819adaf7b66334d23a7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-デバッグ イベント通知を送信します。  
+---
+# <a name="idebugeventcallback2event"></a>IDebugEventCallback2::Event
+Sends notification of debug events.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT Event(   
-   IDebugEngine2*  pEngine,  
-   IDebugProcess2* pProcess,  
-   IDebugProgram2* pProgram,  
-   IDebugThread2*  pThread,  
-   IDebugEvent2*   pEvent,  
-   REFIID          riidEvent,  
-   DWORD           dwAttrib  
+```cpp  
+HRESULT Event(   
+   IDebugEngine2*  pEngine,  
+   IDebugProcess2* pProcess,  
+   IDebugProgram2* pProgram,  
+   IDebugThread2*  pThread,  
+   IDebugEvent2*   pEvent,  
+   REFIID          riidEvent,  
+   DWORD           dwAttrib  
 );  
 ```  
   
-```c#  
-int Event(   
-   IDebugEngine2  pEngine,  
-   IDebugProcess2 pProcess,  
-   IDebugProgram2 pProgram,  
-   IDebugThread2  pThread,  
-   IDebugEvent2   pEvent,  
-   ref Guid       riidEvent,  
-   uint           dwAttrib  
+```csharp  
+int Event(   
+   IDebugEngine2  pEngine,  
+   IDebugProcess2 pProcess,  
+   IDebugProgram2 pProgram,  
+   IDebugThread2  pThread,  
+   IDebugEvent2   pEvent,  
+   ref Guid       riidEvent,  
+   uint           dwAttrib  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pEngine`  
- \[出力\] このイベントを送信する [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) デバッグ \(DE\) エンジンを表すオブジェクト。  DE はこのパラメーターを入力する必要があります。  
+ [in] An [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) object that represents the debug engine (DE) that is sending this event. A DE is required to fill out this parameter.  
   
  `pProcess`  
- \[入力\] イベントが発生するプロセスを表すオブジェクトの [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)。  このパラメーターはデバッグ セッションのマネージャー \(SDM\) によって格納されます。  DE はこのパラメーターに null 値を常に渡します。  
+ [in] An [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) object that represents the process in which the event occurs. This parameter is filled in by the session debug manager (SDM). A DE always passes a null value for this parameter.  
   
  `pProgram`  
- \[出力\] このイベントが発生する [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) プログラムを表すオブジェクト。  ほとんどのイベントの場合このパラメーターは null 値ではありません。  
+ [in] An [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) object that represents the program in which this event occurs. For most events, this parameter is not a null value.  
   
  `pThread`  
- \[出力\] このイベントが発生する [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) スレッドを表すオブジェクト。  イベントを行う場合このパラメーターはスタック フレームがこのパラメーターから派生したときに null にすることはできません。  
+ [in] An [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object that represents the thread in which this event occurs. For stopping events, this parameter cannot be a null value as the stack frame is obtained from this parameter.  
   
  `pEvent`  
- \[入力\] デバッグ イベントを表す [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) のオブジェクト。  
+ [in] An [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) object that represents the debug event.  
   
  `riidEvent`  
- \[出力\] によって識別する GUID `pEvent` のパラメーターから取得するイベント インターフェイス。  
+ [in] GUID that identifies which event interface to obtain from the `pEvent` parameter.  
   
  `dwAttrib`  
- \[入力\] [複数](../../../extensibility/debugger/reference/eventattributes.md) の列挙体のフラグの組み合わせ。  
+ [in] A combination of flags from the [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) enumeration.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- このメソッドを呼び出すときは`dwAttrib` のパラメーターが一致する必要 [GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md) のメソッドから返された値として配置 `pEvent` のパラメーターで渡されるイベント オブジェクト。  
+## <a name="remarks"></a>Remarks  
+ When calling this method, the `dwAttrib` parameter must match the value returned from the [GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md) method as called on the event object passed in the `pEvent` parameter.  
   
- すべてのデバッグ イベントはイベント自体が非同期であるかどうかに関係なく非同期的に送信されます。  DE がこのメソッドを呼び出すと戻り値はイベントが処理されたかどうかは示されませんイベントを受信したかどうかを確認します。  実際ほとんどの場合イベントはこのメソッドは処理されません。  
+ All debug events are posted asynchronously, regardless of whether an event itself is asynchronous or not. When a DE calls this method, the return value does not indicate whether the event was processed, only whether the event was received. In fact, under most circumstances, the event has not been processed when this method returns.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
- [複数](../../../extensibility/debugger/reference/eventattributes.md)
+ [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md)

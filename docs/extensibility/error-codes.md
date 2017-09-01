@@ -1,82 +1,101 @@
 ---
-title: "エラー コード | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エラー コードをソース管理プラグイン"
-  - "ソース管理プラグインをエラー コード"
-  - "エラー [Visual Studio SDK]"
+title: Error Codes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error codes, source control plug-ins
+- source control plug-ins, error codes
+- errors [Visual Studio SDK]
 ms.assetid: d9cbd1c4-719b-467a-8100-333c1e146d3b
 caps.latest.revision: 19
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# エラー コード
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 69f5ade6fa28b85d77924dffab9b82d602e04421
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-ソース管理プラグインの API 関数がエラーを返したは、次のエラー コードのいずれかを指定すると想定されます。 すべてのエラーが警告または情報エラー コードは正、負の値と、成功した場合は 0 です。  
+---
+# <a name="error-codes"></a>Error Codes
+When a Source Control Plug-in API function returns an error, it is expected to be one of the following error codes. All errors are negative, warnings or informational error codes are positive, and success is 0.  
   
-|エラー コード|値|説明|  
-|-------------|-------|--------|  
-|`SCC_I_SHARESUBPROJOK`|7|2 つの手順でソース管理からファイルを追加するプラグインをサポートします。 詳細については、「[SccSetOption](../extensibility/sccsetoption-function.md)」を参照してください。|  
-|`SCC_I_FILEDIFFERS`|6|ローカル ファイルはソース管理データベースにファイルを異なる \(たとえば、 [SccDiff](../extensibility/sccdiff-function.md) この値を返す可能性があります\)。|  
-|`SCC_I_RELOADFILE`|5|ローカル ファイルがソース管理の操作中に変更されましたIDE、ファイルの可能な場合は再読み込みする必要があります。|  
-|`SCC_I_FILENOTAFFECTED`|4|ファイルが影響を受けません。|  
-|`SCC_I_PROJECTCREATED`|3|ソース管理操作中に、プロジェクトの作成 \(への呼び出し中など、 [SccOpenProject](../extensibility/sccopenproject-function.md) と `SCC_OP_CREATEIFNEW` フラグが指定されて\)。|  
-|`SCC_I_OPERATIONCANCELED`|2|操作が取り消されました。|  
-|`SCC_I_ADV_SUPPORT`|1|指定されたコマンドのオプションを高度なプラグインをサポートします。 詳細については、「[SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)」を参照してください。|  
-|`SCC_OK`|0|成功。|  
-|`SCC_E_INITIALIZEFAILED`|\-1|エラー: 初期化に失敗しました。|  
-|`SCC_E_UNKNOWNPROJECT`|\-2|エラー: プロジェクトでは、不明です。|  
-|`SCC_E_COULDNOTCREATEPROJECT`|\-3|エラー: プロジェクトを作成できませんでした。|  
-|`SCC_E_NOTCHECKEDOUT`|\-4|エラー: ファイル チェック アウトをされていません。|  
-|`SCC_E_ALREADYCHECKEDOUT`|\-5|エラー: ファイルは既にチェック アウトをされています。|  
-|`SCC_E_FILEISLOCKED`|\-6|エラー: ファイルがロックされています。|  
-|`SCC_E_FILEOUTEXCLUSIVE`|\-7|エラー: ファイルが排他的にチェック アウトします。|  
-|`SCC_E_ACCESSFAILURE`|\-8|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
-|`SCC_E_CHECKINCONFLICT`|\-9|エラー: チェックイン中に競合が発生しました。|  
-|`SCC_E_FILEALREADYEXISTS`|\-10|エラー: ファイルは既に存在します。|  
-|`SCC_E_FILENOTCONTROLLED`|\-11|エラー: ファイルは、ソース管理下ではありません。|  
-|`SCC_E_FILEISCHECKEDOUT`|\-12|エラー: ファイルのチェック アウトします。|  
-|`SCC_E_NOSPECIFIEDVERSION`|\-13|エラー: 指定されたバージョンはありません。|  
-|`SCC_E_OPNOTSUPPORTED`|\-14|エラー: 操作がサポートされていません。|  
-|`SCC_E_NONSPECIFICERROR`|\-15|不特定のエラーです。|  
-|`SCC_E_OPNOTPERFORMED`|\-16|エラー、操作は実行されませんでした。|  
-|`SCC_E_TYPENOTSUPPORTED`|\-17|エラー: バイナリなど、ファイルの種類は、ソース コード管理システムではサポートされていません。|  
-|`SCC_E_VERIFYMERGE`|\-18|ファイルは、自動マージにしましたが、保留中のユーザーの確認となっているチェックされていません。|  
-|`SCC_E_FIXMERGE`|\-19|ファイルは、自動マージにしましたが、手動で解決しなければなりませんマージの競合によってチェックインされていません。|  
-|`SCC_E_SHELLFAILURE`|\-20|シェルの問題が原因のエラーです。|  
-|`SCC_E_INVALIDUSER`|\-21|エラー: ユーザーは有効です。|  
-|`SCC_E_PROJECTALREADYOPEN`|\-22|エラー: プロジェクトが開いています。|  
-|`SCC_E_PROJSYNTAXERR`|\-23|プロジェクトの構文エラーです。|  
-|`SCC_E_INVALIDFILEPATH`|\-24|エラー: ファイルのパスは有効です。|  
-|`SCC_E_PROJNOTOPEN`|\-25|エラー: プロジェクトは開かれていません。|  
-|`SCC_E_NOTAUTHORIZED`|\-26|エラー: ユーザーは、この操作を実行する権限がありません。|  
-|`SCC_E_FILESYNTAXERR`|\-27|ファイルの構文エラーです。|  
-|`SCC_E_FILENOTEXIST`|\-28|エラー、ローカルのファイルは存在しません。|  
-|`SCC_E_CONNECTIONFAILURE`|\-29|エラー: 接続エラーが発生しました。|  
-|`SCC_E_UNKNOWNERROR`|\-30|不明なエラーがあります。|  
-|`SCC_E_BACKGROUNDGETINPROGRESS`|\-31|バック グラウンドの取得操作が進行中です。|  
+|Error Code|Value|Description|  
+|----------------|-----------|-----------------|  
+|`SCC_I_SHARESUBPROJOK`|7|Plug-in supports adding files from source control in two steps. For more information, see [SccSetOption](../extensibility/sccsetoption-function.md).|  
+|`SCC_I_FILEDIFFERS`|6|The local file is different from the file in the source control database (for example, [SccDiff](../extensibility/sccdiff-function.md) may return this value).|  
+|`SCC_I_RELOADFILE`|5|Local file was changed during the source control operation; the IDE should reload the file if possible.|  
+|`SCC_I_FILENOTAFFECTED`|4|The file is not affected.|  
+|`SCC_I_PROJECTCREATED`|3|The Project was created during the source control operation (for example, during a call to [SccOpenProject](../extensibility/sccopenproject-function.md) when `SCC_OP_CREATEIFNEW` flag is specified).|  
+|`SCC_I_OPERATIONCANCELED`|2|Operation was cancelled.|  
+|`SCC_I_ADV_SUPPORT`|1|Plug-in supports advanced options for the specified command. For more information, see [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md).|  
+|`SCC_OK`|0|Success.|  
+|`SCC_E_INITIALIZEFAILED`|-1|Error: initialization failed.|  
+|`SCC_E_UNKNOWNPROJECT`|-2|Error: project is unknown.|  
+|`SCC_E_COULDNOTCREATEPROJECT`|-3|Error: project could not be created.|  
+|`SCC_E_NOTCHECKEDOUT`|-4|Error: the file is not checked out.|  
+|`SCC_E_ALREADYCHECKEDOUT`|-5|Error: the file is already checked out.|  
+|`SCC_E_FILEISLOCKED`|-6|Error: the file is locked.|  
+|`SCC_E_FILEOUTEXCLUSIVE`|-7|Error: the file is exclusively checked out.|  
+|`SCC_E_ACCESSFAILURE`|-8|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|`SCC_E_CHECKINCONFLICT`|-9|Error: there was a conflict during check in.|  
+|`SCC_E_FILEALREADYEXISTS`|-10|Error: the file already exists.|  
+|`SCC_E_FILENOTCONTROLLED`|-11|Error: the file is not under source control.|  
+|`SCC_E_FILEISCHECKEDOUT`|-12|Error: the file is checked out.|  
+|`SCC_E_NOSPECIFIEDVERSION`|-13|Error: there is no specified version.|  
+|`SCC_E_OPNOTSUPPORTED`|-14|Error: the operation is not supported.|  
+|`SCC_E_NONSPECIFICERROR`|-15|Nonspecific error.|  
+|`SCC_E_OPNOTPERFORMED`|-16|Error, the operation was not performed.|  
+|`SCC_E_TYPENOTSUPPORTED`|-17|Error: the type of the file, for example, binary, is not supported by the source code control system.|  
+|`SCC_E_VERIFYMERGE`|-18|File has been auto-merged but has not been checked because it is pending user verification.|  
+|`SCC_E_FIXMERGE`|-19|File has been auto-merged but has not been checked in due to a merge conflict that must be manually resolved.|  
+|`SCC_E_SHELLFAILURE`|-20|Error due to a shell failure.|  
+|`SCC_E_INVALIDUSER`|-21|Error: the user is invalid.|  
+|`SCC_E_PROJECTALREADYOPEN`|-22|Error: the project is already open.|  
+|`SCC_E_PROJSYNTAXERR`|-23|Project syntax error.|  
+|`SCC_E_INVALIDFILEPATH`|-24|Error: the file path is invalid.|  
+|`SCC_E_PROJNOTOPEN`|-25|Error: the project is not open.|  
+|`SCC_E_NOTAUTHORIZED`|-26|Error: the user is not authorized to perform this operation.|  
+|`SCC_E_FILESYNTAXERR`|-27|File syntax error.|  
+|`SCC_E_FILENOTEXIST`|-28|Error, the local file does not exist.|  
+|`SCC_E_CONNECTIONFAILURE`|-29|Error: there was a connection failure.|  
+|`SCC_E_UNKNOWNERROR`|-30|Unknown error.|  
+|`SCC_E_BACKGROUNDGETINPROGRESS`|-31|Background get operation is currently in progress.|  
   
-## クイックをチェックするために用意されているマクロ  
+## <a name="macros-provided-for-quick-checking"></a>Macros Provided for Quick Checking  
   
-```cpp#  
-IS_SCC_ERROR(rtn) (((rtn) < 0) ? TRUE : FALSE) IS_SCC_SUCCESS(rtn) (((rtn) == SCC_OK) ? TRUE : FALSE) IS_SCC_WARNING(rtn) (((rtn) > 0) ? TRUE : FALSE)  
+```cpp  
+IS_SCC_ERROR(rtn) (((rtn) < 0) ? TRUE : FALSE)  
+IS_SCC_SUCCESS(rtn) (((rtn) == SCC_OK) ? TRUE : FALSE)  
+IS_SCC_WARNING(rtn) (((rtn) > 0) ? TRUE : FALSE)  
 ```  
   
-## 解説  
- すべてのソース管理プラグインの API 関数 \(を除く、 [SccAdd](../extensibility/sccadd-function.md), 、[SccCheckin](../extensibility/scccheckin-function.md), 、および [SccDiff](../extensibility/sccdiff-function.md)\) 引数として渡されるローカル ファイルが作業フォルダーに存在しない場合に成功すると予測されます。 たとえば、IDE がへの呼び出しを発行ことがあります、 [SccCheckout](../extensibility/scccheckout-function.md) または [SccUncheckout](../extensibility/sccuncheckout-function.md) 作業フォルダーに存在しませんが、ソース管理システムに存在しているファイルにします。 この呼び出しは成功します。 作業フォルダー内、またはソース管理システム内のファイルがない場合にのみが、関数の失敗を想定します。  
+## <a name="remarks"></a>Remarks  
+ All Source Control Plug-in API functions (except the [SccAdd](../extensibility/sccadd-function.md), [SccCheckin](../extensibility/scccheckin-function.md), and [SccDiff](../extensibility/sccdiff-function.md)) are expected to succeed when the local files that are passed as arguments do not exist in the working folder. For example, the IDE may issue a call to the [SccCheckout](../extensibility/scccheckout-function.md) or [SccUncheckout](../extensibility/sccuncheckout-function.md) on a file that does not exist in the working folder, but exists in the source control system. This call would succeed. Only when there is no file in the working folder or in the source control system is the function expected to fail.  
   
- などの特定の関数 `SccAdd` と `SccCheckin`, 、具体的に返す必要があります `SCC_E_FILENOTEXIST` 作業フォルダーにファイルが存在しない場合。 作業ファイルが存在しない場合を成功した場合に、関数は、ソース管理システムで有効なファイル名を操作するには、その他の機能が予想されます。  
+ Certain functions, such as `SccAdd` and `SccCheckin`, should specifically return `SCC_E_FILENOTEXIST` when the file in the working folder does not exist. Other functions are expected to succeed when the working file does not exist, if the functions operate on a valid file name in the source control system.  
   
- ソース管理プラグインすることは避けて、ファイルの権限に関する前提条件作業フォルダー内でも、プラグインがマークされている場合、ファイル読み取り専用いくつかの操作中にします。 作業フォルダー内のファイルの移動、削除、および、プラグインのコントロールの外部で変更できます。  
+ The source control plug-in should make no assumptions regarding privileges on a file in the working folder, even if the plug-in had marked the file read-only during some operation. A file in the working folder can be moved, deleted, and changed outside the plug-in's control.  
   
-## 参照  
- [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-ins](../extensibility/source-control-plug-ins.md)

@@ -1,5 +1,5 @@
 ---
-title: "IDebugSymbolProvider::GetMethodFieldsByName |Microsoft ドキュメント"
+title: IDebugSymbolProvider::GetMethodFieldsByName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d04fc7cb5142fe8c7dc9b966466ae35ac015e355
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3bf359535d5b11edb95910afe5a81ca048ab9c21
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugsymbolprovidergetmethodfieldsbyname"></a>IDebugSymbolProvider::GetMethodFieldsByName
-このメソッドは、完全修飾メソッド名を表すフィールドを取得します。  
+This method gets the field representing a fully qualified method name.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetMethodFieldsByName(   
    LPCOLESTR          pszFullName,  
    NAME_MATCH         nameMatch,  
@@ -49,7 +50,7 @@ HRESULT GetMethodFieldsByName(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetMethodFieldsByName(  
    string               pszFullName,   
    NAME_MATCH           nameMatch,   
@@ -57,22 +58,22 @@ int GetMethodFieldsByName(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pszFullName`  
- [in]メソッドの名前。  
+ [in] The method name.  
   
  `nameMatch`  
- [in]たとえば、一致の大文字小文字の区別の種類を選択します。  
+ [in] Selects the type of match, for example, case-sensitive.  
   
  `ppEnum`  
- [out]返します。、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)このメソッドに関連付けられているフィールドの列挙子。  
+ [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerator for the fields associated with this method.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- メソッドはオーバー ロードされて、たとえば場合、複数のフィールドに関連付けできます。  
+## <a name="remarks"></a>Remarks  
+ A method can be associated with multiple fields if it is overloaded, for example.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

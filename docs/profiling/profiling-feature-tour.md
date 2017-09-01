@@ -1,5 +1,5 @@
 ---
-title: "プロファイリング機能ツアー | Microsoft Docs"
+title: Profiling Feature Tour | Microsoft Docs
 ms.custom: H1HackMay2017
 ms.date: 05/18/2017
 ms.reviewer: 
@@ -30,155 +30,155 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
-ms.openlocfilehash: a219a09f96b34a434a3bf1103e560104c294eb96
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: b4f4e312fb7717edfe950cf6977279a1bd67a458
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 08/22/2017
 
 ---
-# <a name="feature-tour-of-profiling-in-visual-studio"></a>Visual Studio のプロファイリング機能ツアー
+# <a name="profiling-feature-tour"></a>Profiling Feature Tour
 
-Visual Studio にはさまざまなプロファイリング ツールがあります。各種アプリの多様な問題を診断できます。
+Visual Studio provides a variety of profiling tools to help you diagnose different kinds of performance issues depending on your app type.
 
-[診断ツール] ウィンドウのプロファイリング ツールには、デバッグ セッション中にアクセスできます。 [診断ツール] ウィンドウは、オフにしていない限り自動的に表示されます。 このウィンドウを表示するには、**[デバッグ]、[ウィンドウ]、[診断ツールの表示]** の順にクリックします。 ウィンドウを開いている状態で、データを収集するツールを選択できます。
+The profiling tools that you can access during a debugging session are available in the Diagnostic Tools window. The Diagnostic Tools window appears automatically unless you have turned it off. To bring up the window, click **Debug / Windows / Show Diagnostic Tools**. With the window open, you can select tools for which you want to collect data.
 
-![診断ツール ウィンドウ](~/profiling/media/prof-tour-diagnostic-tools.png "Diagnostic Tools")
+![Diagnostic Tools window](../profiling/media/prof-tour-diagnostic-tools.png "Diagnostic Tools")
 
-デバッグ中、**[診断ツール]** ウィンドウを利用し、CPU とメモリの使用状況を分析できます。また、パフォーマンス関連情報を示すイベントを閲覧できます。
+While you are debugging, you can use the **Diagnostic Tools** window to analyze CPU and memory usage, and you can view events that show performance-related information.
 
-![診断ツールの概要ビュー](~/profiling/media/prof-tour-cpu-and-memory-graph.gif "Diagnostic Tools Summary")
+![Diagnostic Tools Summary view](../profiling/media/prof-tour-cpu-and-memory-graph.gif "Diagnostic Tools Summary")
 
-**[診断ツール]** ウィンドウはアプリをプロファイリングする方法として人気がありますが、アプリの事後分析を行うこともできます。 各種手法の詳細については、「[Running Profiling Tools With or Without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」 (デバッガーを使用して、または使用せずにプロファイリング ツールを実行する) を参照してください。
+The **Diagnostic Tools** window is often the preferred way to profile apps, but you can also do a post-mortem analysis of your app instead. If you want more information on different approaches, see [Running Profiling Tools With or Without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-## <a name="analyze-cpu-usage"></a>CPU 使用率の分析
+## <a name="analyze-cpu-usage"></a>Analyze CPU Usage
 
-アプリのパフォーマンスを分析するとき、CPU 使用率ツールから始めると効率的です。 アプリが使用している CPU リソースについて理解できます。 CPU 使用率ツールの詳しいチュートリアルについては、「[パフォーマンス プロファイリングのビギナーズ ガイド](../profiling/beginners-guide-to-performance-profiling.md)」を参照してください。
+The CPU Usage tool is a good place to start analyzing your app's performance. It will tell you more about CPU resources that your app is consuming. For a more detailed walkthrough of the CPU Usage tool, see [Beginner's Guide to Performance Profiling](../profiling/beginners-guide-to-performance-profiling.md).
 
-診断ツールの **[概要]** ビューから、**[CPU プロファイルの有効化]** を選択します (デバッグ セッションに入っている必要があります)。
+From the **Summary** view of the Diagnostic Tools, choose **Enable CPU Profiling** (you must be in a debugging session).
 
-![診断ツールの CPU 使用率を有効にする](~/profiling/media/prof-tour-enable-cpu-profiling.png "Diagnostic Tools Enable CPU Usage")
+![Enable CPU usage in the Diagnostic Tools](../profiling/media/prof-tour-enable-cpu-profiling.png "Diagnostic Tools Enable CPU Usage")
 
-このツールを最も効果的に使用するには、コードにブレークポイントを 2 つ設定します。関数の始めと終わりに 1 つずつ設定するか、分析するコードの領域に設定します。 2 つ目のブレークポイントで止まったとき、プロファイリング データを調べます。
+To use the tool most effectively, set two breakpoints in your code, one at the beginning and one at the end of the function or the region of code you want to analyze. Examine the profiling data when you are paused at the second breakpoint.
 
-**CPU 使用率**ビューには、関数が実行時間順に一覧表示されます。実行時間が最も長い関数が一番上に表示されます。 パフォーマンス上のボトルネックが発生している関数を見つけるのに役立ちます。
+The **CPU Usage** view shows you a list of functions ordered by longest running, with the longest running function at the top. This can help guide you to functions where performance bottlenecks are happening.
 
-![診断ツールの CPU 使用率ビュー](~/profiling/media/prof-tour-cpu-usage.png "Diagnostic Tools CPU Usage")
+![Diagnostic Tools CPU Usage view](../profiling/media/prof-tour-cpu-usage.png "Diagnostic Tools CPU Usage")
 
-調べたい関数をダブルクリックすると、3 つのウィンドウを持つ詳細な "バタフライ" ビューが表示されます。選択した関数がウィンドウの中央に、呼び出した関数が左に、呼び出された関数が右に表示されます。 **関数本体**セクションに、呼び出し元の関数と呼び出される関数にかかった時間を除き、関数本体にかかった時間の合計 (と時間のパーセンテージ) が表示されます。 このデータは、関数自体がパフォーマンスのボトルネックであるかどうかを判定するのに役立ちます。
+Double-click on a function that you are interested in, and you will see a more detailed three-pane "butterfly" view, with the selected function in the middle of the window, the calling function on the left, and called functions on the right. The **Function Body** section shows the total amount of time (and the percentage of time) spent in the function body excluding time spent in calling and called functions. This data can help you evaluate whether the function itself is a performance bottleneck.
 
-![診断ツールの呼び出し元/呼び出し先 "バタフライ" ビュー](~/profiling/media/prof-tour-cpu-usage-caller-callee.png "Diagnostic Tools Caller Callee View")
+![Diagnostic Tools caller callee "butterfly" view](../profiling/media/prof-tour-cpu-usage-caller-callee.png "Diagnostic Tools Caller Callee View")
 
-## <a name="analyze-memory-usage"></a>メモリ使用量の分析
+## <a name="analyze-memory-usage"></a>Analyze Memory Usage
 
-診断ツール ウィンドウでは、アプリのメモリ使用量を測定することもできます。 たとえば、ヒープのオブジェクトの数とサイズと数を確認できます。 メモリの分析方法の詳細については、「[メモリ使用量](../profiling/memory-usage.md)」を参照してください。
+The Diagnostic Tools window also allows you to evaluate memory usage in your app. For example, you can look at the number and size of objects on the heap. For more detailed instructions to analyze memory, see [Analyze Memory Usage](../profiling/memory-usage.md).
 
-メモリ使用量を分析するには、デバッグ中に少なくとも 1 枚のメモリ スナップショットを取得する必要があります。 多くの場合、メモリを分析する最良の方法は 2 枚のスナップショットを取得することです。疑われるメモリ問題の発生直前に 1 枚、発生直後に 1 枚取得します。 それから、2 枚のスナップショットの違いを表示し、厳密に何が変化しているのか確認します。
+To analyze memory usage, you need to take at least one memory snapshot while you are debugging. Often, the best way to analyze memory is to take two snapshots; the first right before a suspected memory issue, and the second snapshot right after a suspected memory issue occurs. Then you can view a diff of the two snapshots and see exactly what changed.
 
-![診断ツールでスナップショットを取得する](~/profiling/media/prof-tour-take-snapshots.gif "Diagnostic Tools Take Snapshots")
+![Take a snapshot in the Diagnostic Tools](../profiling/media/prof-tour-take-snapshots.gif "Diagnostic Tools Take Snapshots")
 
-矢印リンクの 1 つを選択すると、ヒープの差分ビューが与えられます (赤い上向き矢印![メモリ使用量増加](~/profiling/media/prof-tour-mem-usage-up-arrow.png "メモリ使用量増加")は、オブジェクト数の増加 (左) とヒープ サイズの増加 (右) を示します)。 右のリンクをクリックすると、差異ヒープ ビューが表示されます。ヒープ サイズが多い順でオブジェクトが表示されます。 メモリ問題の厳密な場所の発見に役立ちます。 たとえば、次の図では、`ClassHandlersStore` オブジェクトで使用されているバイトが 2 枚目のスナップショットで 3,492 バイト増えています。
+When you select one of the arrow links, you are given a differential view of the heap (a red up arrow ![Memory Usage Increase](../profiling/media/prof-tour-mem-usage-up-arrow.png "Memory Usage Increase") shows an increasing object count (left) or an increasing heap size (right)). If you click the right link, you get a differential heap view ordered by objects that increased the most in heap size. This can help you pinpoint memory problems. For example, in the illustration below, the bytes used by `ClassHandlersStore` objects increased by 3,492 bytes in the second snapshot.
 
-![診断ツールのヒープ差分ビュー](~/profiling/media/prof-tour-mem-usage-diff-heap.png "Diagnostic Tools Heap Diff view")
+![Diagnostic Tools heap diff view](../profiling/media/prof-tour-mem-usage-diff-heap.png "Diagnostic Tools Heap Diff view")
 
-**[メモリ使用量]** ビューで代わりに左のリンクをクリックすると、ヒープ ビューがオブジェクト数で整理されます。最も増えたオブジェクトが一番上に表示されます (**[数の相違]** 列で並べ替えられます)。
+If you click the link on the left instead in the **Memory Usage** view, the heap view is organized by object count; the objects of a particular type that increased the most in number are shown at the top (sorted by **Count Diff** column).
 
-## <a name="examine-performance-events"></a>パフォーマンス イベントを調べる
+## <a name="examine-performance-events"></a>Examine Performance Events
 
-診断ツールの **[イベント]** ビューには、デバッグ中に発生したさまざまなイベントが表示されます。ブレークポイントの設定やコードのステップ実行操作などです。 イベントの継続時間などの情報を確認できます (この時間はデバッガーが最後に一時停止したところから、あるいはアプリが開始したところから計測されます)。 たとえば、コードをステップ実行すると (F10、F11)、**[イベント]** ビューには、前のステップ操作から現在のステップまでのアプリランタイムが表示されます。
+The **Events** view in the Diagnostic Tools shows you different events that occur while you are debugging, such as the setting of a breakpoint or a code stepping operation. You can check information such as the duration of the event (measured from when the debugger was last paused, or when the app started). For example, if you step through code (F10, F11), the **Events** view shows you the app runtime duration from the previous step operation to the current step.
 
-![診断ツールのイベントビュー](~/profiling/media/prof-tour-events.png "Diagnostic Tools View Events")
+![Diagnostic Tools Events view](../profiling/media/prof-tour-events.png "Diagnostic Tools View Events")
 
  > [!NOTE]
- > Visual Studio Enterprise をご利用の場合、このタブの [[IntelliTrace イベント]](../debugger/intellitrace.md) も参照してください。
+ > If you have Visual Studio Enterprise, you can also see [IntelliTrace events](../debugger/intellitrace.md) in this tab.
 
-同じイベントがコード エディターにも表示されます。これはパフォーマンスのヒントとして閲覧できます。
+The same events also show up in the code editor, which you can view as PerfTips.
 
-![プロファイルのパフォーマンスのヒント](~/profiling/media/prof-tour-perf-tips.png "プロファイルのパフォーマンスのヒント")
+![Profiling Tour PerfTips](../profiling/media/prof-tour-perf-tips.png "Profiling Tour PerfTips")
 
-## <a name="examine-ui-performance-and-accessibility-events-uwp"></a>UI のパフォーマンスとアクセシビリティのイベントを調べる (UWP)
+## <a name="examine-ui-performance-and-accessibility-events-uwp"></a>Examine UI Performance and Accessibility Events (UWP)
 
-UWP アプリで、[診断ツール] ウィンドウで **[UI 分析]** を有効にできます。 このツールはパフォーマンスとアクセシビリティに関する一般問題を探し出し、デバッグ中に **[イベント]** ビューに表示します。 イベントの説明に、問題解決に役に立つ情報があります。
+In your UWP apps, you can enable **UI Analysis** in the Diagnostic Tools window. The tool searches for common performance or accessibility issues and displays them in the **Events** view while you are debugging. The event descriptions provide information that can help resolve issues.
 
-![診断ツールで UI 分析イベントを表示する](~/profiling/media/prof-tour-ui-analysis.png "Diagnostic Tools View UI Analysis Events")
+![View UI Analysis events in the Diagnostic Tools](../profiling/media/prof-tour-ui-analysis.png "Diagnostic Tools View UI Analysis Events")
 
-## <a name="profile-release-builds-without-the-debugger"></a>デバッガーなしのプロファイル リリース ビルド
+## <a name="profile-release-builds-without-the-debugger"></a>Profile Release Builds without the Debugger
 
-CPU 使用量やメモリ使用量などのプロファイリング ツールはデバッガーと併用できます (前のセクションを参照してください)。あるいは、パフォーマンス プロファイラーを利用してプロファイリング ツールを実行できます。パフォーマンス プロファイラーは、**リリース** ビルドを分析するためのものです。 パフォーマンス プロファイラーでは、アプリの実行中に診断情報を収集し、アプリの停止後に収集した情報を調査できます。 各種手法の詳細については、「[Running Profiling Tools With or Without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」 (デバッガーを使用して、または使用せずにプロファイリング ツールを実行する) を参照してください。
+Profiling tools like CPU Usage and Memory Usage can be used with the debugger (see earlier sections), or you can run profiling tools using the Performance Profiler, which is intended to provide analysis for **Release** builds. In the Performance Profiler, you can collect diagnostic info while the app is running, and then examine the collected information after the app is stopped. For more information on these different approaches, see [Running Profiling Tools With or Without the Debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-![パフォーマンス プロファイラー](~/profiling/media/prof-tour-performance-profiler.png "パフォーマンス プロファイラー")
+![Performance Profiler](../profiling/media/prof-tour-performance-profiler.png "Performance Profiler")
 
-[デバッグ]、**[パフォーマンス プロファイラー]** の順に選択し、パフォーマンス プロファイラーを開きます。
+Open the Performance Profiler by choosing **Debug / Performance Profiler**.
 
-このウィンドウでは、シナリオによっては、複数のプロファイリング ツールを選択できます。 CPU 使用率などのツールでは、補足データを提供できることがあります。分析に役立てることができます。
+The window will allow you to select multiple profiling tools in some scenarios. Tools such as CPU Usage may provide complementary data that you can use to help in your analysis.
 
-## <a name="analyze-resource-consumption-xaml"></a>リソース消費量を分析する (XAML)
+## <a name="analyze-resource-consumption-xaml"></a>Analyze Resource Consumption (XAML)
 
-Windows デスクトップ WPF アプリや Windows ストア アプリなど、XAML アプリでは、アプリケーションのタイムライン ツールを利用してリソース消費を分析できます。 たとえば、アプリケーションが UI フレームの準備 (レイアウトとレンダリング) やネットワークとディスクの要求の処理を実行することで、およびアプリケーションの起動、ページの読み込み、ウィンドウのサイズ変更などのシナリオにおいて使用した時間を分析することができます。 ツールを使用するには、パフォーマンス プロファイラーで **[アプリケーションのタイムライン]** を選択し、**[開始]** を選択します。 アプリで、リソース消費問題が疑われるシナリオを進め、**[コレクションの停止]** を選択してレポートを生成します。
+In XAML apps, such as Windows desktop WPF apps and Windows Store apps, you can analyze resource consumption using the Application Timeline tool. For example, you can analyze the time spent by your application preparing UI frames (layout and render), servicing network and disk requests, and in scenarios like application startup, page load, and Window resize. To use the tool, choose **Application Timeline** in the Performance Profiler, and then choose **Start**. In your app, go through the scenario with a suspected resource consumption issue, and then choose **Stop collection** to generate the report.
 
-**ビジュアル スループット** でグラフのフレームレートが低い場合は、アプリの実行時に観察されるビジュアルの問題に関連している可能性があります。 同様に、**UI スレッド使用状況**グラフの数値が高いと、UI の応答性問題に関連している可能性があります。 レポートでは、パフォーマンス問題が疑われる期間を選択し、タイムライン詳細ビュー (下のウィンドウ) で UI スレッド アクティビティを詳しく調査できます。
+Low framerates in the **Visual throughput** graph may correspond to visual problems that you see when running your app. Similarly, high numbers in the **UI thread utilization** graph may also correspond to UI responsiveness issues. In the report, you can select a time period with a suspected performance issue, and then examine the detailed UI thread activities in the Timeline details view (lower pane).
 
-![アプリケーションのタイムラインのプロファイリング ツール](~/profiling/media/prof-tour-application-timeline.gif "Profiling Tour Application Timeline")
+![Application Timeline profiling tool](../profiling/media/prof-tour-application-timeline.gif "Profiling Tour Application Timeline")
 
-タイムライン詳細ビューでは、アクティビティの種類 (あるいは、関連している UI 要素) などの情報とアクティビティの継続時間を確認できます。 たとえば、この図では、グリッド コントロールの**レイアウト** イベントに 57.53 ミリ秒かかっています。
+In the Timeline details view, you can find information such as the type of activitiy (or the UI element involved) along with the duration of the activity. For example, in the illustration, a **Layout** event for a Grid control takes 57.53 ms.
 
-詳細については、[アプリケーションのタイムライン](../profiling/application-timeline.md)に関するページを参照してください。
+For more information, see [Application Timeline](../profiling/application-timeline.md).
 
-## <a name="analyze-gpu-usage-direct3d"></a>GPU の使用状況を分析する (Direct3D)
+## <a name="analyze-gpu-usage-direct3d"></a>Analyze GPU Usage (Direct3D)
 
-Direct3D アプリ (Direct3D コンポーネントは C++ である必要があります) では、GPU 上のアクティビティを調査し、パフォーマンス問題を分析できます。 詳細については、「[GPU 使用率](../debugger/gpu-usage.md)」を参照してください。 ツールを使用するには、パフォーマンス プロファイラーで **[GPU 使用量]** を選択し、**[開始]** を選択します。 アプリで、プロファイリングしたいシナリオを実行し、**[コレクションの停止]** を選択してレポートを生成します。
+In Direct3D apps (Direct3D components must be in C++), you can examine activity on the GPU and analyze performance issues. For more information, see [GPU Usage](../debugger/gpu-usage.md). To use the tool, choose **GPU Usage** in the Performance Profiler, and then choose **Start**. In your app, go through the scenario that you're interested in profiling, and then choose **Stop collection** to generate a report.
 
-グラフで期間を選択し、**[詳細の表示]** を選択すると、下のウィンドウに詳細ビューが表示されます。 詳細ビューで、CPU と GPU でそれぞれ、どの程度のアクティビティが行われているのか調査できます。 一番下のウィンドウでイベントを選択すると、タイムラインにポップアップ表示されます。 たとえば、**Present** イベントを選択すると、**Present** 呼び出しポップアップが表示されます。 (薄い灰色の垂直同期線を参照すると、特定の **Present** 呼び出しで垂直同期に失敗しているかどうかを理解できます。 アプリが安定的に 60 FPS をヒットするには、2 つの垂直同期の間に **Present** が 1 つ存在する必要があります。)
+When you select a time period in the graphs and choose **view details**, a detailed view appears in the lower pane. In the detailed view, you can examine how much activity is happening on each CPU and GPU. Select events in the lowest pane to get popups in the timeline. For example, select the **Present** event to view **Present** call popups. (The light gray vertical Vsync lines can be used as a reference to understand whether certain **Present** calls missed Vsync. There must be one **Present** call between every two Vsyncs in order for the app to steadily hit 60 FPS.)
 
-![GPU 使用率プロファイリング ツール](~/profiling/media/prof-tour-gpu-usage.png "Diag GPU Usage")
+![GPU Usage profiling tool](../profiling/media/prof-tour-gpu-usage.png "Diag GPU Usage")
 
-また、グラフを利用し、CPU バインドまたは GPU バインドのパフォーマンス問題があるかどうかを判断できます。
+You can also use the graphs to determine whether there are CPU bound or GPU bound performance bottlenecks.
 
-## <a name="analyze-performance-javascript"></a>パフォーマンスの分析 (JavaScript)
+## <a name="analyze-performance-javascript"></a>Analyze Performance (JavaScript)
 
-Windows ユニバーサル HTML アプリの場合、JavaScript メモリ ツールと HTML UI 応答性ツールを利用できます。
+For Windows Universal HTML apps, you can use the JavaScript Memory tool and the HTML UI Responsiveness tool.
 
-JavaScript メモリ ツールは、その他の種類のアプリで使用できるメモリ使用量ツールに似ています。 このツールを利用してメモリ使用量を理解し、アプリのメモリ リークを発見できます。 このツールの詳細については、「[JavaScript メモリ](../profiling/javascript-memory.md)」を参照してください。
+The JavaScript Memory tool is similar to the Memory Usage tool available for other app types. You can use this tool to understand memory usage and find memory leaks in your app. For more details about the tool, see [JavaScript Memory](../profiling/javascript-memory.md).
 
-![JavaScript メモリのプロファイリング ツール](../profiling/media/diagjsmemory.png "DiagJSMemory")
+![JavaScript Memory profiling tool](../profiling/media/diagjsmemory.png "DiagJSMemory")
 
-UI の応答性、遅い読み込み時間、Windows ユニバーサル HTML アプリの遅い表示更新を診断するには、HTML UI 応答性ツールを使用します。 使用方法は、他の種類のアプリのアプリケーションのタイムライン ツールに似ています。 詳細については、「[HTML UI の応答性](../profiling/html-ui-responsiveness.md)」を参照してください。
+To diagnose UI responsiveness, slow loading time, and slow visual updates in Windows Universal HTML apps, use the HTML UI Responsiveness tool. Usage is similar to the Application Timeline tool for other app types. For more information, see [HTML UI responsiveness](../profiling/html-ui-responsiveness.md).
 
-![HTML UI の応答性プロファイリング ツール](../profiling/media/diaghtmlresp.png "DiagHTMLResp")
+![HTML UI Responsiveness profiling tool](../profiling/media/diaghtmlresp.png "DiagHTMLResp")
 
-## <a name="analyze-network-usage-uwp"></a>ネットワーク使用量を分析する (UWP)
+## <a name="analyze-network-usage-uwp"></a>Analyze Network Usage (UWP)
 
-UWP アプリでは、`Windows.Web.Http` API を利用して実行されたネットワーク操作を分析できます。このツールは、アクセスと認証の問題、キャッシュの不適切な利用、ディスプレイとダウンロードの低いパフォーマンスなどの問題の解決に役に立つことがあります。 ツールを使用するには、パフォーマンス プロファイラーで **[ネットワーク]** を選択し、**[開始]** を選択します。 アプリで、`Windows.Web.Http` を使用するシナリオを実行し、**[コレクションの停止]** を選択してレポートを生成します。
+In UWP apps, you can analyze network operations performed using the `Windows.Web.Http` API.This tool may help you to resolve issues like access and authentication problems, incorrect cache-use, and poor display and download performance. To use the tool, choose **Network** in the Performance Profiler, and then choose **Start**. In your app, go through the scenario that uses `Windows.Web.Http`, and then choose **Stop collection** to generate the report.
 
-![ネットワーク使用率プロファイリング ツール](~/profiling/media/prof-tour-network-usage.png "Diag Network Usage")
+![Network Usage profiling tool](../profiling/media/prof-tour-network-usage.png "Diag Network Usage")
 
-概要ビューで操作を選択すると、詳細が表示されます。
+Select an operation in the summary view to view more details.
 
-![ネットワーク使用率ツールの詳細情報](~/profiling/media/prof-tour-network-usage-details.png "Diag Network Usage Details")
+![Detailed information in the Network Usage tool](../profiling/media/prof-tour-network-usage-details.png "Diag Network Usage Details")
 
-詳細については、「[ネットワーク使用率](../profiling/network-usage.md)」を参照してください。
+For more information, see [Network Usage](../profiling/network-usage.md).
 
-## <a name="analyze-performance-legacy-tools"></a>パフォーマンス分析 (レガシー ツール)
+## <a name="analyze-performance-legacy-tools"></a>Analyze Performance (Legacy Tools)
 
-CPU 使用量ツールやメモリ使用量ツールに現在入っていないインストルメンテーションのような機能が必要なとき、デスクトップまたは ASP.NET アプリを実行している場合、プロファイリングにパフォーマンス エクスプローラーを利用できます。 (UWP アプリではサポートされていません。) 詳細については、「[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)」を参照してください。
+If you need features such as instrumentation that are not currently present in CPU Usage or Memory Usage tools, and you are running desktop or ASP.NET apps, you can use the Performance Explorer for profiling. (Not supported in UWP apps). For more info, see [Performance Explorer](../profiling/performance-explorer.md)
 
-![パフォーマンス エクスプローラー ツール](~/profiling/media/prof-tour-performance-explorer.png "Performance Explorer")
+![Performance Explorer tool](../profiling/media/prof-tour-performance-explorer.png "Performance Explorer")
 
-## <a name="which-tool-should-i-use"></a>使用するツール  
-次の表では、Visual Studio のさまざまなツールとそれらを使用できる各種プロジェクトをまとめています。
+## <a name="which-tool-should-i-use"></a>Which Tool Should I Use?  
+Here is a table that lists the different tools Visual Studio offers and the different project types you can use them with:
   
-|パフォーマンス ツール|Windows デスクトップ|Windows ユニバーサル/ストア|ASP.NET/ASP.NET Core|  
+|Performance Tool|Windows desktop|Windows Universal/Store|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
-|[メモリ使用量](../profiling/memory-usage.md)|可|可|可|  
-|[CPU 使用率](../profiling/cpu-usage.md)|可|可|可|  
-|[GPU 使用率](../debugger/gpu-usage.md)|可|可|no|  
-|[アプリケーションのタイムライン](../profiling/application-timeline.md)|可|可|no|  
-|[パフォーマンスのヒント](../profiling/perftips.md)|可|XAML の場合は可、HTML の場合は不可|可|  
-|[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|可|no|可 (ASP.NET Core の場合は no)|  
-|[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise のみ|.NET Enterprise のみ|.NET Enterprise のみ|
-|[ネットワーク使用率](../profiling/network-usage.md)|no|可|no| 
-|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|HTML の場合は可、XAML の場合は不可|no|  
-|[JavaScript メモリ](../profiling/javascript-memory.md)|no|HTML の場合は可、XAML の場合は不可|no|  
+|[Memory Usage](../profiling/memory-usage.md)|yes|yes|yes|  
+|[CPU Usage](../profiling/cpu-usage.md)|yes|yes|yes|  
+|[GPU Usage](../debugger/gpu-usage.md)|yes|yes|no|  
+|[Application Timeline](../profiling/application-timeline.md)|yes|yes|no|  
+|[PerfTips](../profiling/perftips.md)|yes|yes for XAML, no for HTML|yes|  
+|[Performance Explorer](../profiling/performance-explorer.md)|yes|no|yes (no for ASP.NET Core)|  
+|[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise only|.NET Enterprise only|.NET Enterprise only|
+|[Network Usage](../profiling/network-usage.md)|no|yes|no| 
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|yes for HTML, no for XAML|no|  
+|[JavaScript Memory](../profiling/javascript-memory.md)|no|yes for HTML, no for XAML|no|  
 
-## <a name="see-also"></a>関連項目  
- [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Debugging in Visual Studio](../debugger/debugging-in-visual-studio.md)

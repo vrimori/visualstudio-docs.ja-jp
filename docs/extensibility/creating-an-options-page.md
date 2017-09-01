@@ -1,62 +1,79 @@
 ---
-title: "オプション ページを作成します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[ツール オプション] ページ [Visual Studio SDK]、作成"
+title: Creating an Options Page | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Tools Options pages [Visual Studio SDK], creating
 ms.assetid: 9f4e210c-4b47-4daa-91fa-1c301c4587f9
 caps.latest.revision: 62
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 62
----
-# オプション ページを作成します。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e98aa8d5b6fe5ef20e07585fc5c33135c0192ae1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-このチュートリアルでは、プロパティ グリッドを使用して確認し、プロパティを設定する単純なツール\/オプション ページを作成します。  
+---
+# <a name="creating-an-options-page"></a>Creating an Options Page
+This walkthrough creates a simple Tools/Options page that uses a property grid to examine and set properties.  
   
- これらのプロパティを保存して、設定ファイルからの復元、次の手順に従ってし、しを参照してください [設定のカテゴリを作成します。](../extensibility/creating-a-settings-category.md)します。  
+ To save these properties to and restore them from a settings file, follow these steps, and then see [Creating a Settings Category](../extensibility/creating-a-settings-category.md).  
   
- MPF ツール オプション ページを作成するために 2 つのクラスを提供する、 <xref:Microsoft.VisualStudio.Shell.Package> クラスおよび <xref:Microsoft.VisualStudio.Shell.DialogPage> クラスです。 パッケージ クラスをサブクラス化して、これらのページのコンテナーを提供する VSPackage を作成します。 各ツール オプション ページを作成するには、DialogPage クラスから派生します。  
+ The MPF provides two classes to help you create Tools Options pages, the <xref:Microsoft.VisualStudio.Shell.Package> class and the <xref:Microsoft.VisualStudio.Shell.DialogPage> class. You create a VSPackage to provide a container for these pages by subclassing the Package class. You create each tools options page by deriving from the DialogPage class.  
   
-## 必須コンポーネント  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## ツール オプションのグリッド ページを作成します。  
- このセクションでは、単純なツールのオプションのプロパティ グリッドを作成します。 表示し、プロパティの値を変更するには、このグリッドを使用します。  
+## <a name="creating-a-tools-options-grid-page"></a>Creating a Tools Options Grid Page  
+ In this section, you create a simple Tools Options property grid. You use this grid to display and change the value of a property.  
   
-#### VSIX プロジェクトを作成し、VSPackage を追加するには  
+#### <a name="to-create-the-vsix-project-and-add-a-vspackage"></a>To create the VSIX project and add a VSPackage  
   
-1.  すべての Visual Studio 拡張機能は、拡張機能の資産を格納する VSIX 配置プロジェクトから開始します。 作成、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] という名前の VSIX プロジェクト `MyToolsOptionsExtension`します。 VSIX プロジェクトのテンプレートを見つけることができます、 **新しいプロジェクト** \] ダイアログ ボックス \[ **Visual c\#\/機能拡張**します。  
+1.  Every Visual Studio extension starts with a VSIX deployment project which will contain the extension assets. Create a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX project named `MyToolsOptionsExtension`. You can find the VSIX project template in the **New Project** dialog under **Visual C# / Extensibility**.  
   
-2.  VSPackage をという名前の Visual Studio パッケージ項目テンプレートを追加することによって追加 `MyToolsOptionsPackage`します。**ソリューション エクスプ ローラー**, プロジェクト ノードを右クリックして、選択 **追加\/\[新しい項目の**します。**新しい項目の追加\] ダイアログ ボックス**, には、 **Visual c\# アイテム\/機能拡張** 選択 **Visual Studio パッケージ**します。**名** ダイアログの下部にあるフィールドに、ファイルの名前を変更する `MyToolsOptionsPackage.cs`です。 VSPackage を作成する方法の詳細については、次を参照してください。 [VSPackage で拡張機能を作成します。](../extensibility/creating-an-extension-with-a-vspackage.md)します。  
+2.  Add a VSPackage by adding a Visual Studio Package item template named `MyToolsOptionsPackage`. In the **Solution Explorer**, right-click the project node and select **Add / New Item**. In the **Add New Item dialog**, go to **Visual C# Items / Extensibility** and select **Visual Studio Package**. In the **Name** field at the bottom of the dialog, change the file name to `MyToolsOptionsPackage.cs`. For more information about how to create a VSPackage, see [Creating an Extension with a VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md).  
   
-#### ツール オプションのプロパティ グリッドを作成するには  
+#### <a name="to-create-the-tools-options-property-grid"></a>To create the Tools Options property grid  
   
-1.  コード エディターで MyToolsOptionsPackage ファイルを開きます。  
+1.  Open the MyToolsOptionsPackage file in the code editor.  
   
-2.  次の追加ステートメントを使用します。  
+2.  Add the following using statement.  
   
-    ```c#  
+    ```cs  
     using System.ComponentModel;  
     ```  
   
-3.  OptionPageGrid クラスを宣言してから派生 <xref:Microsoft.VisualStudio.Shell.DialogPage>します。  
+3.  Declare an OptionPageGrid class and derive it from <xref:Microsoft.VisualStudio.Shell.DialogPage>.  
   
-    ```c#  
+    ```cs  
     public class OptionPageGrid : DialogPage  
     {  }  
     ```  
   
-4.  適用、 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> VSPackage クラス オプションのカテゴリと、OptionPageGrid のオプション ページ名をクラスに割り当てるためにします。 結果は、次のようになります。  
+4.  Apply a <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> to the VSPackage class to assign to the class an options category and options page name for the OptionPageGrid. The result should look like this:  
   
-    ```c#  
+    ```cs  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]  
     [ProvideMenuResource("Menus.ctmenu", 1)]  
@@ -66,15 +83,15 @@ caps.handback.revision: 62
     public sealed class MyToolsOptionsPackage : Package  
     ```  
   
-5.  追加、 `OptionInteger` プロパティを `OptionPageGrid` クラスです。  
+5.  Add an `OptionInteger` property to the `OptionPageGrid` class.  
   
-    -   適用、 <xref:System.ComponentModel.CategoryAttribute?displayProperty=fullName> プロパティに割り当てる、プロパティ グリッドのカテゴリ。  
+    -   Apply a <xref:System.ComponentModel.CategoryAttribute?displayProperty=fullName> to assign to the property a property grid category.  
   
-    -   適用、 <xref:System.ComponentModel.DisplayNameAttribute?displayProperty=fullName> プロパティの名前を指定します。  
+    -   Apply a <xref:System.ComponentModel.DisplayNameAttribute?displayProperty=fullName> to assign to the property a name.  
   
-    -   適用、 <xref:System.ComponentModel.DescriptionAttribute?displayProperty=fullName> プロパティに割り当てる、説明します。  
+    -   Apply a <xref:System.ComponentModel.DescriptionAttribute?displayProperty=fullName> to assign to the property a description.  
   
-    ```c#  
+    ```cs  
     public class OptionPageGrid : DialogPage  
     {  
         private int optionInt = 256;  
@@ -91,30 +108,30 @@ caps.handback.revision: 62
     ```  
   
     > [!NOTE]
-    >  既定の実装 <xref:Microsoft.VisualStudio.Shell.DialogPage> 適切なコンバーターがあるか、構造体または適切なコンバーターのプロパティに展開可能な配列にあるプロパティがサポートされます。 コンバーターの一覧は、次を参照してください。、 <xref:System.ComponentModel> 名前空間。  
+    >  The default implementation of <xref:Microsoft.VisualStudio.Shell.DialogPage> supports properties that have appropriate converters or that are structures or arrays that can be expanded into properties that have appropriate converters. For a list of converters, see the <xref:System.ComponentModel> namespace.  
   
-6.  プロジェクトをビルドし、デバッグを開始します。  
+6.  Build the project and start debugging.  
   
-7.  Visual Studio の実験用インスタンスで、 **ツール** ボタンをクリックし **オプション**します。  
+7.  In the experimental instance of Visual Studio, on the **Tools** menu click **Options**.  
   
-     左側のペインで確認する必要があります **My Category**します。 \(オプション カテゴリはため、表示されるはずの途中で一覧の下にアルファベット順にで表示されるされます\)。 開いている **My Category** \] をクリックし、 **個人用のグリッド ページ**します。右側のウィンドウで、オプションのグリッドが表示されます。 プロパティのカテゴリは **My Options**, 、プロパティの名前と **マイ整数オプション**します。 プロパティの説明、 **マイ整数オプション**, 、ウィンドウの下部に表示されます。 値を 256 の初期値から別のものに変更します。 をクリックして **OK**, を閉じて再度開く **個人用のグリッド ページ**します。 新しい値が引き続き発生することを確認できます。  
+     In the left pane you should see **My Category**. (Options categories are listed in alphabetical order, so it should appear about halfway down the list.) Open **My Category** and then click **My Grid Page**.The options grid appears in the right pane. The property category is **My Options**, and the property name is **My Integer Option**. The property description, **My integer option**, appears at the bottom of the pane. Change the value from its initial value of 256 to something else. Click **OK**, and then reopen **My Grid Page**. You can see that the new value persists.  
   
-     オプション ページも Visual Studio のサイド リンク バーを使用できます。 IDE の右上隅の \[クイック起動\] ウィンドウで次のように入力します。 **My Category** され表示されます。 **My Category 個人用のグリッド ページをポイントする** 、ドロップダウン リストに表示します。  
+     Your options page is also available through Visual Studio's Quick Launch. In the Quick Launch window in the upper right corner of the IDE, type **My Category** and you will see **My Category -> My Grid Page** listed in the dropdown.  
   
-## ツール オプションのカスタム作成\] ページ  
- このセクションでは、ui をカスタム ツール オプション ページを作成します。 表示し、プロパティの値を変更するには、このページを使用できます。  
+## <a name="creating-a-tools-options-custom-page"></a>Creating a Tools Options Custom Page  
+ In this section, you create a Tools Options page with a custom UI. You use this page to display and change the value of a property.  
   
-1.  コード エディターで MyToolsOptionsPackage ファイルを開きます。  
+1.  Open the MyToolsOptionsPackage file in the code editor.  
   
-2.  次の追加ステートメントを使用します。  
+2.  Add the following using statement.  
   
     ```vb  
     using System.Windows.Forms;  
     ```  
   
-3.  追加、 `OptionPageCustom` クラス、直前に、 `OptionPageGrid` クラスです。 新しいクラスを派生 `DialogPage`します。  
+3.  Add an `OptionPageCustom` class, just before the `OptionPageGrid` class. Derive the new class from `DialogPage`.  
   
-    ```c#  
+    ```cs  
     public class OptionPageCustom : DialogPage  
     {  
         private string optionValue = "alpha";  
@@ -127,9 +144,9 @@ caps.handback.revision: 62
     }  
     ```  
   
-4.  GUID 属性を追加します。 なければプロパティを追加します。  
+4.  Add a GUID attribute. Add an OptionString property:  
   
-    ```c#  
+    ```cs  
     [Guid("00000000-0000-0000-0000-000000000000")]  
     public class OptionPageCustom : DialogPage  
     {  
@@ -143,9 +160,9 @@ caps.handback.revision: 62
     }  
     ```  
   
-5.  1 秒あたりの適用 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> VSPackage クラスにします。 この属性は、オプションのカテゴリとオプションのページ名に、クラスを割り当てます。  
+5.  Apply a second <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> to the VSPackage class. This attribute assigns the class an options category and options page name.  
   
-    ```c#  
+    ```cs  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]  
     [ProvideMenuResource("Menus.ctmenu", 1)]  
@@ -157,15 +174,15 @@ caps.handback.revision: 62
     public sealed class MyToolsOptionsPackage : Package  
     ```  
   
-6.  新しい **ユーザー コントロール** MyUserControl をプロジェクトにという名前です。  
+6.  Add a new **User Control** named MyUserControl to the project.  
   
-7.  追加、 **TextBox** ユーザー コントロールのコントロールにします。  
+7.  Add a **TextBox** control to the user control.  
   
-     **プロパティ** ウィンドウで、ツールバーのをクリックして、 **イベント** \] ボタンをクリックし、ダブルクリック、 **のままにして** イベントです。 新しいイベント ハンドラーは、MyUserControl.cs コードに表示されます。  
+     In the **Properties** window, on the toolbar, click the **Events** button, and then double-click the **Leave** event. The new event handler appears in the MyUserControl.cs code.  
   
-8.  追加パブリック `OptionsPage` フィールドで、 `Initialize` コントロール クラスと、イベント ハンドラー オプションを設定する値のテキスト ボックスの内容を更新する方法。  
+8.  Add a public `OptionsPage` field, an `Initialize` method to the control class, and update the event handler to set the option value to the contents of the text box:  
   
-    ```c#  
+    ```cs  
     public partial class MyUserControl : UserControl  
     {  
         public MyUserControl()  
@@ -187,11 +204,11 @@ caps.handback.revision: 62
     }  
     ```  
   
-     `optionsPage` フィールドは、親への参照を保持して `OptionPageCustom` インスタンス。`Initialize` メソッドが表示されます `OptionString` で、 **TextBox**します。 イベント ハンドラーの現在の値を書き込みます、 **TextBox** に、 `OptionString` とリーフを集中、 **\] テキスト ボックス**します。  
+     The `optionsPage` field holds a reference to the parent `OptionPageCustom` instance. The `Initialize` method displays `OptionString` in the **TextBox**. The event handler writes the current value of the **TextBox** to the `OptionString` when focus leaves the **TextBox**.  
   
-9. パッケージのコード ファイル内の上書きを追加、 `OptionPageCustom.Window` OptionPageCustom クラスの作成、初期化、およびインスタンスを返すプロパティ `MyUserControl`します。 クラスは、次のようになります。  
+9. In the package code file, add an override for the `OptionPageCustom.Window` property to the OptionPageCustom class to create, initialize, and return an instance of `MyUserControl`. The class should now look like this:  
   
-    ```c#  
+    ```cs  
     [Guid("00000000-0000-0000-0000-000000000000")]  
     public class OptionPageCustom : DialogPage  
     {  
@@ -216,18 +233,18 @@ caps.handback.revision: 62
     }  
     ```  
   
-10. プロジェクトをビルドして実行します。  
+10. Build and run the project.  
   
-11. 実験用インスタンスで、クリックして **ツール\/オプション**します。  
+11. In the experimental instance, click **Tools / Options**.  
   
-12. 検索 **マイ カテゴリ** し **、カスタム ページ**します。  
+12. Find **My Category** and then **My Custom Page**.  
   
-13. 値を変更 **なければ**します。 をクリックして **OK**, を閉じて再度開く **個人用ページのカスタム**します。 新しい値が保持されたことを確認できます。  
+13. Change the value of **OptionString**. Click **OK**, and then reopen **My Custom Page**. You can see that the new value has persisted.  
   
-## オプションにアクセスします。  
- このセクションでは、関連付けられたツール オプション ページをホストしている VSPackage のオプションの値を取得できます。 パブリック プロパティの値を取得する、同じ手法を使用できます。  
+## <a name="accessing-options"></a>Accessing Options  
+ In this section, you get the value of an option from the VSPackage that hosts the associated Tools Options page. The same technique can be used to obtain the value of any public property.  
   
-1.  パッケージのコード ファイルでというパブリック プロパティを追加 **OptionInteger** に、 **MyToolsOptionsPackage** クラスです。  
+1.  In the package code file, add a public property called **OptionInteger** to the **MyToolsOptionsPackage** class.  
   
     ```  
     public int OptionInteger  
@@ -241,13 +258,13 @@ caps.handback.revision: 62
   
     ```  
   
-     このコードは呼び出し <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> 作成または取得する、 `OptionPageGrid` インスタンス。`OptionPageGrid` 呼び出し <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> 、オプションでは、パブリック プロパティを読み込めません。  
+     This code calls <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> to create or retrieve an `OptionPageGrid` instance. `OptionPageGrid` calls <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> to load its options, which are public properties.  
   
-2.  という名前のカスタム コマンド項目テンプレートを今すぐ追加 **MyToolsOptionsCommand** 値を表示します。**新しい項目の追加** ダイアログ ボックスに移動 **Visual c\#\/機能拡張** を選択して **にカスタム コマンド**します。**名** ウィンドウの下部にあるフィールドに、コマンド ファイルの名前を変更する **MyToolsOptionsCommand.cs**します。  
+2.  Now add a custom command item template named **MyToolsOptionsCommand** to display the value. In the **Add New Item** dialog, go to **Visual C# / Extensibility** and select **Custom Command**. In the **Name** field at the bottom of the window, change the command file name to **MyToolsOptionsCommand.cs**.  
   
-3.  MyToolsOptionsCommand ファイル内のコマンドの本文を置き換える `ShowMessageBox` を次のメソッド。  
+3.  In the MyToolsOptionsCommand file, replace the body of the command's `ShowMessageBox` method with the following:  
   
-    ```c#  
+    ```cs  
     private void ShowMessageBox(object sender, EventArgs e)  
     {  
         MyToolsOptionsPackage myToolsOptionsPackage = this.package as MyToolsOptionsPackage;  
@@ -256,11 +273,11 @@ caps.handback.revision: 62
   
     ```  
   
-4.  プロジェクトをビルドし、デバッグを開始します。  
+4.  Build the project and start debugging.  
   
-5.  実験用インスタンスで、 **ツール** \] メニューのをクリックして **呼び出す MyToolsOptionsCommand**します。  
+5.  In the experimental instance, on the **Tools** menu, click **Invoke MyToolsOptionsCommand**.  
   
-     メッセージ ボックスの現在の値を表示する `OptionInteger`です。  
+     A message box displays the current value of `OptionInteger`.  
   
-## 参照  
- [オプションと \[オプション\] ページ](../Topic/Options%20and%20Options%20Pages.md)
+## <a name="see-also"></a>See Also  
+ [Options and Options Pages](../extensibility/internals/options-and-options-pages.md)

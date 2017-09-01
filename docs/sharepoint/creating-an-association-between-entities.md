@@ -1,85 +1,86 @@
 ---
-title: "エンティティ間の関連付けの作成"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.BDC.Association_Dialog"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "BDC [Visual Studio での SharePoint 開発], 関連付け (外部コンテンツ タイプを)"
-  - "BDC [Visual Studio での SharePoint 開発], 関連付け (エンティティ間の)"
-  - "BDC [Visual Studio での SharePoint 開発], 作成 (関連付けを)"
-  - "BDC [Visual Studio での SharePoint 開発], 関連付け (エンティティを)"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], 関連付け (外部コンテンツ タイプを)"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], 関連付け (エンティティ間の)"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], 作成 (関連付けを)"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], 関連付け (エンティティを)"
+title: Creating an Association Between Entities | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.BDC.Association_Dialog
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- BDC [SharePoint development in Visual Studio], create an assocation
+- Business Data Connectivity service [SharePoint development in Visual Studio], associations between entities
+- BDC [SharePoint development in Visual Studio], associations between entities
+- Business Data Connectivity service [SharePoint development in Visual Studio], create an assocation
+- Business Data Connectivity service [SharePoint development in Visual Studio], associate external content types
+- Business Data Connectivity service [SharePoint development in Visual Studio], relate entities
+- BDC [SharePoint development in Visual Studio], relate entities
+- BDC [SharePoint development in Visual Studio], associate external content types
 ms.assetid: c908448c-13d3-4d2f-89ad-8d709b2958fb
 caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4ce2395e01f29ab8b3ef836a4b7f9ba7c2c6de7f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# エンティティ間の関連付けの作成
-  関連付けを作成することで、ビジネス データ接続 \(BDC\) モデルのエンティティ間の関連性を定義できます。  Visual Studio では、モデルの使用者に各関連付けに関する情報を提供するメソッドが生成されます。  これらのメソッドは、SharePoint Web パーツ、またはカスタム アプリケーションでユーザー インターフェイス \(UI\) データ リレーションシップを表示するために使用できます。  
+# <a name="creating-an-association-between-entities"></a>Creating an Association Between Entities
+  You can define relationships between entities in your Business Data Connectivity (BDC) model by creating associations. Visual Studio generates methods that provide consumers of the model with information about each association. These methods can be consumed by SharePoint web parts, lists, or custom applications to display data relationships in a user interface (UI).  
   
-## 関連付けの作成  
- Visual Studio **\[ツールボックス\]** で **\[関連付け\]** のコントロールを選択し、最初のエンティティ \(ソース エンティティと呼ばれます\) をクリックし、2 番目のエンティティを作成します \(ターゲット エンティティと呼ばれます\) をクリックすると、関連付けを。  **関連付けエディター**で関連付けの詳細を定義できます。  詳細については、「[方法: エンティティ間に関連付けを作成する](../sharepoint/how-to-create-an-association-between-entities.md)」を参照してください。  
+## <a name="creating-an-association"></a>Creating an Association  
+ Create an association by choosing the **Association** control in the Visual Studio **Toolbox**, choosing the first entity (called the source entity), and then choosing the second entity (called the destination entity). You can define the details of the association in the **Association Editor**. For more information, see [How to: Create an Association between Entities](../sharepoint/how-to-create-an-association-between-entities.md).  
   
-## 関連付けのメソッド  
- SharePoint ビジネス データ Web パーツなどのアプリケーションは、エンティティのサービス クラスでメソッドを呼び出して関連付けを使用します。  **関連付けエディター**でメソッドを選択して、エンティティのサービス クラスにメソッドを追加できます。  
+## <a name="association-methods"></a>Association Methods  
+ Applications such as SharePoint business data web parts consume associations by calling methods in the service class of an entity. You can add methods to the service class of an entity by selecting them in the **Association Editor**.  
   
- 既定では、**関連付けエディター**によって、ソース エンティティとターゲット エンティティに Association Navigation メソッドが追加されます。  ソース エンティティに Association Navigation メソッドを使用すると、ターゲット エンティティの一覧を取得できます。  ターゲット エンティティに Association Navigation メソッドを使用すると、ターゲット エンティティに関連するソース エンティティを取得できます。  
+ By default, the **Association Editor** adds an Association Navigation method to the source and destination entities. An Association Navigation method in the source entity enables consumers to retrieve a list of destination entities. An Association Navigation method in the destination entity enables consumers to retrieve the source entity that relates to a destination entity.  
   
- 適切な情報を返すには、これらの各メソッドにコードを追加する必要があります。  また、他の種類のメソッドを追加して、より高度なシナリオをサポートすることもできます。  これらのメソッドの詳細については、参照します [サポートされていない操作](http://go.microsoft.com/fwlink/?LinkId=169286)。  
+ You must add the code to each of these methods to return the appropriate information. You can also add other types of methods to support more advanced scenarios. For more information about each of these methods, see [Supported Operations](http://go.microsoft.com/fwlink/?LinkId=169286).  
   
-## 関連付けの種類  
- BDC デザイナーでは、外部キーに基づく関連付けと外部キーなしの関連付けという 2 種類の関連付けを作成できます。  
+## <a name="types-of-associations"></a>Types of Associations  
+ You can create two types of associations in the BDC designer: foreign key-based associations and foreign keyless associations.  
   
-### 外部キーに基づく関連付け  
- ソース エンティティの識別子と、ターゲット エンティティに定義されている型記述子を関連付けることで、外部キーに基づく関連付けを作成できます。  モデルにこの関係を使用すると、ユーザーの UI を強化できます。  たとえば、ドロップダウン リストに顧客を表示できる販売注文を作成する Outlook のフォームや、顧客のプロファイル ページを開く SharePoint の販売注文の一覧などです。  
+### <a name="foreign-key-based-association"></a>Foreign Key-Based Association  
+ You can create a foreign key-based association by relating an identifier in the source entity to type descriptors defined in the destination entity. This relationship enables consumers of the model to provide an enhanced UI for their users. For example, a form in Outlook that enables a user to create a sales order that can display customers in a drop-down list; or a list of sales orders in SharePoint that enables users to open a profile page for a customer.  
   
- 外部キーに基づく関連付けを作成するには、同じ名前と型を共有する識別子と型記述子を関連付けます。  たとえば、`Contact` エンティティと `SalesOrder` エンティティの間に外部キーに基づく関連付けを作成するとします。  `SalesOrder` エンティティは、Finder メソッドまたは SpecificFinder メソッドの戻り値パラメーターの一部として `ContactID` 型記述子を返します。  **関連付けエディター**に両方の型記述子が表示されます。  `Contact` エンティティと `SalesOrder` エンティティの間に外部キーに基づく関連付けを作成するには、これらの各フィールドの横に `ContactID` の ID を選択します。  
+ To create a foreign key-based association, relate identifiers and type descriptors that share the same name and type. For example, you might create a foreign key-based association between a `Contact` entity and a `SalesOrder` entity. The `SalesOrder` entity returns a `ContactID` type descriptor as part of the return parameter of Finder or Specific Finder methods. Both type descriptors appear in the **Association Editor**. To create a foreign key-based relationship between the `Contact` entity and `SalesOrder` entity, choose the `ContactID` identifier next to each of these fields.  
   
- ソース エンティティの Association Navigator メソッドに、ターゲット エンティティのコレクションを返すコードを追加します。  次の例では、ある連絡先の販売注文を返します。  
+ Add code to the Association Navigator method of the source entity that returns a collection of destination entities. The following example returns the sales orders for a contact.  
   
- [!code-csharp[SP_BDC#7](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/contactservice.cs#7)]
- [!code-vb[SP_BDC#7](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/contactservice.vb#7)]  
+ [!code-csharp[SP_BDC#7](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#7)] [!code-vb[SP_BDC#7](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#7)]  
   
- ターゲット エンティティの Association Navigator メソッドに、ソース エンティティを返すコードを追加します。  次の例では、販売注文に関連付けられた連絡先を返します。  
+ Add code to the Association Navigator method of the destination entity that returns a source entity. The following example returns the contact that is related to the sales order.  
   
- [!code-csharp[SP_BDC#8](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/salesorderservice.cs#8)]
- [!code-vb[SP_BDC#8](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/salesorderservice.vb#8)]  
+ [!code-csharp[SP_BDC#8](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#8)] [!code-vb[SP_BDC#8](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#8)]  
   
-### 外部キーなしの関連付け  
- フィールド型記述子に識別子をマッピングしなくても、関連付けを作成できます。  このような関連付けを作成するのは、ソース エンティティがターゲット エンティティと直接的な関係がない場合です。  たとえば、`SalesOrderDetail` テーブルには、`Contact` テーブルの主キーにマップされる外部キーがありません。  
+### <a name="foreign-keyless-association"></a>Foreign Keyless Association  
+ You can create an association without mapping identifiers to field type descriptors. Create this kind of association when the source entity does not have a direct relationship with the destination entity. For example, a `SalesOrderDetail` table does not have a foreign key that maps to a primary key in a `Contact` table.  
   
- `Contact` に関連する情報を `SalesOrderDetail` テーブルに表示する場合、`Contact` エンティティと `SalesOrderDetail` エンティティの間に外部キーなしの関連付けを作成できます。  
+ If you want to display information in the `SalesOrderDetail` table that relates to a `Contact`, you can create a foreign keyless association between the `Contact` entity and `SalesOrderDetail` entity.  
   
- `Contact` エンティティの Association Navigation メソッドの場合、テーブルを結合するか、ストアド プロシージャを呼び出して `SalesOrderDetail` エンティティを返します。  
+ In the Association Navigation method of the `Contact` entity, return the `SalesOrderDetail` entities by joining tables, or by calling a stored procedure.  
   
- 次の例では、テーブルを結合して、すべての販売注文の詳細を返します。  
+ The following example returns details of all sales orders by joining tables.  
   
- [!code-csharp[SP_BDC#9](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/contactservice.cs#9)]
- [!code-vb[SP_BDC#9](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/contactservice.vb#9)]  
+ [!code-csharp[SP_BDC#9](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#9)] [!code-vb[SP_BDC#9](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#9)]  
   
- `SalesOrderDetail` エンティティの Association Navigation メソッドの場合、関連する `Contact` を返します。  次に例を示します。  
+ In the Association Navigation method of the `SalesOrderDetail` entity, return the related `Contact`. The following example demonstrates this.  
   
- [!code-csharp[SP_BDC#10](../snippets/csharp/VS_Snippets_OfficeSP/sp_bdc/CS/bdcmodel1/salesorderdetailservice.cs#10)]
- [!code-vb[SP_BDC#10](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_bdc/VB/bdcmodel1/salesorderdetailservice.vb#10)]  
+ [!code-csharp[SP_BDC#10](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderdetailservice.cs#10)] [!code-vb[SP_BDC#10](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderdetailservice.vb#10)]  
   
-## 参照  
- [Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [方法: エンティティ間に関連付けを作成する](../sharepoint/how-to-create-an-association-between-entities.md)  
+## <a name="see-also"></a>See Also  
+ [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [How to: Create an Association between Entities](../sharepoint/how-to-create-an-association-between-entities.md)  
   
   

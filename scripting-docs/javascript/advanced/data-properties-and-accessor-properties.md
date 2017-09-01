@@ -1,78 +1,83 @@
 ---
 title: "データ プロパティとアクセサー プロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: 7e132831-375d-4728-9a57-5c6f91075b1c
 caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 5b800131ba76aa432492c0caefdbb9e8d5291924
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/11/2017
+
 ---
-# データ プロパティとアクセサー プロパティ
-このセクションでは、データ プロパティおよびアクセサー プロパティに関して必要になるすべての情報について説明します。  
+# <a name="data-properties-and-accessor-properties"></a>データ プロパティとアクセサー プロパティ
+このセクションには、データ プロパティとアクセサー プロパティについて必要になる可能性のある情報がすべて含まれています。  
   
-### データ プロパティ  
- *データ プロパティ*は、値を取得および設定できるプロパティです。  データ プロパティの記述子には、`value` プロパティと `writable` プロパティがあります。  
+### <a name="data-properties"></a>データ プロパティ  
+ *データ プロパティ*は、値を取得および設定できるプロパティです。 データ プロパティの記述子には `value` および `writable` のプロパティが含まれています。  
   
- データ プロパティの記述子の属性を次の表に示します。  
+ 次の表は、データ プロパティの記述子の属性を一覧表示したものです。  
   
 |データ記述子の属性|説明|既定値|  
-|---------------|--------|---------|  
+|-------------------------------|-----------------|-------------|  
 |`value`|プロパティの現在値。|`undefined`|  
-|`writable`|`true` または `false`。  `writable` が `true` に設定されていると、プロパティ値を変更できます。|`false`|  
-|`enumerable`|`true` または `false`。  `enumerable` が `true`に設定されていると、プロパティは `for…in` ステートメントによって列挙できます。|`false`|  
-|`configurable`|`true` または `false`。  `configurable` が `true`に設定されていると、プロパティ属性の変更およびプロパティの削除ができます。|`false`|  
+|`writable`|`true` または `false`。 `writable` が `true` に設定されている場合、プロパティ値を変更することができます。|`false`|  
+|`enumerable`|`true` または `false`。 `enumerable` が `true` に設定されている場合、プロパティを `for...in` ステートメントで列挙することができます。|`false`|  
+|`configurable`|`true` または `false`。 `configurable` が `true` に設定されている場合、プロパティの属性を変更でき、プロパティを削除することができます。|`false`|  
   
- 記述子に `value` 属性、`writable` 属性、`get` 属性、または `set` 属性がなく、指定されたプロパティ名が見つからない場合は、データ プロパティが追加されます。  
+ 記述子に `value`、`writable`、`get`、または `set` の属性が含まれておらず、指定したプロパティ名が存在しない場合、データ プロパティが追加されます。  
   
- `configurable` 属性が `false`、 `writable` 属性が `true` の場合、 `value` 属性と `writable` 属性を変更できます。  
+ `configurable` 属性が `false` で、`writable` が `true` である場合、`value` および `writable` 属性を変更することができます。  
   
-#### defineProperty を使用せずに追加されたデータ プロパティ  
- `Object.defineProperty` 関数、`Object.defineProperties` 関数、または `Object.create` 関数を使用せずにデータ プロパティを追加する場合、`writable` 属性、`enumerable` 属性、および `configurable` 属性はすべて `true` に設定されます。  追加したプロパティは、`Object.defineProperty` 関数を使用して変更できます。  
+#### <a name="data-properties-added-without-using-defineproperty"></a>defineProperty を使用せずに追加されたデータ プロパティ  
+ `Object.defineProperty`、`Object.defineProperties`、または `Object.create` 関数を使用せずにデータ プロパティを追加すると、`writable`、`enumerable`、および `configurable` 属性がすべて `true` に設定されます。 プロパティが追加されると、`Object.defineProperty` 関数を使用することで変更ができるようになります。  
   
- データ プロパティを追加するには、次の方法を使用できます。  
+ 次の方法を使用して、データ プロパティを追加できます。  
   
--   `obj.color = "white";` における代入演算子 \(\=\)  
+-   代入演算子 (=) (例: `obj.color = "white";`)  
   
--   `obj = { color: "white", height: 5 };` におけるオブジェクト リテラル  
+-   オブジェクト リテラル (例: `obj = { color: "white", height: 5 };`)  
   
--   「[コンストラクターを使用した型の定義](../../javascript/advanced/using-constructors-to-define-types.md)」で説明されているコンストラクター関数  
+-   コンストラクション関数 (「[Using Constructors to Define Types](../../javascript/advanced/using-constructors-to-define-types.md)」(コンストラクターを使用した型の定義) を参照)  
   
-### アクセサー プロパティ  
- *アクセサー プロパティ*は、プロパティ値が設定または取得されるたびにユーザーが指定した関数を呼び出します。  アクセサー プロパティの記述子には、`get` 属性、`set` 属性、またはその両方が含まれます。  
+### <a name="accessor-properties"></a>アクセサー プロパティ  
+ *アクセサー プロパティ*は、プロパティ値が設定または取得されるたびにユーザーが指定した関数を呼び出します。 アクセサー プロパティの記述子には、`get` 属性、`set` 属性、またはその両方が含まれます。  
   
- アクセサー プロパティの記述子の属性を次の表に示します。  
+ 次の表は、アクセサー プロパティの記述子の属性を一覧表示したものです。  
   
 |アクセサー記述子の属性|説明|既定値|  
-|-----------------|--------|---------|  
-|`get`|プロパティ値を返す関数。  この関数にパラメーターはありません。|`undefined`|  
-|`set`|プロパティ値を設定する関数。  割り当てる値を含むパラメーターが 1 つあります。|`undefined`|  
-|`enumerable`|`true` または `false`。  `enumerable` が `true`に設定されていると、プロパティは `for…in` ステートメントによって列挙できます。|`false`|  
-|`configurable`|`true` または `false`。  `configurable` が `true`に設定されていると、プロパティ属性の変更およびプロパティの削除ができます。|`false`|  
+|-----------------------------------|-----------------|-------------|  
+|`get`|プロパティ値を戻す関数。 この関数にはパラメーターがありません。|`undefined`|  
+|`set`|プロパティ値を設定する関数。 割り当てられる値を含むパラメーターが 1 つあります。|`undefined`|  
+|`enumerable`|`true` または `false`。 `enumerable` が `true` に設定されている場合、プロパティを `for...in` ステートメントで列挙することができます。|`false`|  
+|`configurable`|`true` または `false`。 `configurable` が `true` に設定されている場合、プロパティの属性を変更でき、プロパティを削除することができます。|`false`|  
   
- `get` アクセサーが未定義でプロパティ値にアクセスしようとすると、`undefined` 値が返されます。  `set` アクセサーが未定義でアクセサー プロパティに値を代入しようとしても、何も実行されません。  
+ `get` アクセサーが未定義である場合にプロパティ値へのアクセスが試行されると、値 `undefined` が戻されます。 `set` アクセサーが未定義である場合にアクセサー プロパティへの値の割り当てが試行された場合は、何も起こりません。  
   
-### プロパティの変更  
- オブジェクトに既に指定された名前のプロパティがある場合は、プロパティの属性が変更されます。  プロパティを変更する際に、記述子で指定されていない属性は変更されません。  
+### <a name="property-modifications"></a>プロパティの変更  
+ オブジェクトに指定した名前のプロパティが既に含まれている場合は、プロパティの属性が変更されます。 プロパティを変更しても、記述子で指定されていない属性は変わりません。  
   
- 既存のプロパティの `configurable` 属性が `false` の場合、許容される唯一の変更は `writable` 属性を `true` から `false` に変更することです。  
+ 既存のプロパティの `configurable` 属性が `false` の場合、許可されている変更は、`true` から `false` への `writable` 属性の変更のみです。  
   
- データ プロパティはアクセサー プロパティに変更でき、その逆も可能です。  その場合、記述子に指定されていないプロパティ内の `configurable` 属性と `enumerable` 属性は維持されます。  記述子に指定されていない他の属性は、既定値に設定されます。  
+ データ プロパティからアクセサー プロパティに、およびその逆の変更ができます。 変更を行っても、記述子で指定されていない `configurable` および `enumerable` 属性はプロパティに保持されます。 記述子で指定されていないその他の属性は、既定値に設定されます。  
   
- `Object.defineProperty` 関数を複数回呼び出すことにより、設定可能なアクセサー プロパティをインクリメント方式で定義できます。  たとえば、`Object.defineProperty` を 1 回呼び出して、`get` アクセサーのみを定義する場合があります。  同じプロパティ名をその後に呼び出して、`set` アクセサーを定義する場合があります。  そのプロパティには、`get` アクセサーと `set` アクセサーの両方が定義されます。  
+ `Object.defineProperty` 関数に複数の呼び出しを行うことで、構成可能なアクセサー プロパティを段階的に定義できます。 たとえば、`Object.defineProperty` の 1 回の呼び出しでは、`get` アクセサーのみが定義されます。 同じプロパティ名に対して再度呼び出しを行うと、`set` アクセサーを定義することができます。 これで、このプロパティに `get` アクセサーと `set` アクセサーの両方が含まれます。  
   
- 既存のプロパティに適用する記述子オブジェクトを取得するには、[Object.getOwnPropertyDescriptor 関数](../../javascript/reference/object-getownpropertydescriptor-function-javascript.md) を使用できます。  
+ 既存のプロパティに適用される記述子オブジェクトを取得するには、[Object.getOwnPropertyDescriptor 関数](../../javascript/reference/object-getownpropertydescriptor-function-javascript.md) を使用します。  
   
- [Object.seal 関数](../../javascript/reference/object-seal-function-javascript.md) と [Object.freeze 関数](../../javascript/reference/object-freeze-function-javascript.md) を使用すると、プロパティの属性の変更を防止できます。
+ [Object.seal 関数](../../javascript/reference/object-seal-function-javascript.md)と [Object.freeze 関数](../../javascript/reference/object-freeze-function-javascript.md)を使用して、プロパティ属性の変更を防ぐことができます。

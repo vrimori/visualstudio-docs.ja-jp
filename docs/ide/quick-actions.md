@@ -37,34 +37,29 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/26/2017
 
 ---
-# クイック アクション
-<a id="quick-actions" class="xliff"></a>
+# <a name="quick-actions"></a>クイック アクション
 
-[クイック アクション](refactoring-code-generation-quick-actions.md#quick-actions)を使うと、コードのリファクタリング、生成、その他の変更を、1 つの操作で簡単に行うことができます。  多くのクイック アクションは C# または Visual Basic の一方だけに適用されますが、C# と Visual Basic 両方のプロジェクトに適用されるクイック アクションもいくつかあります。  これらのアクションは、電球アイコン ![小さい電球アイコン](~/ide/media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") を使うか、または適切なコード行にカーソルを置いて **Ctrl + .** キーを押すと 適用できます。
+[クイック アクション](refactoring-code-generation-quick-actions.md#quick-actions)を使うと、コードのリファクタリング、生成、その他の変更を、1 つの操作で簡単に行うことができます。  多くのクイック アクションは C# または Visual Basic の一方だけに適用されますが、C# と Visual Basic 両方のプロジェクトに適用されるクイック アクションもいくつかあります。  これらのアクションは、電球アイコン ![小さい電球アイコン](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") を使うか、または適切なコード行にカーソルを置いて **Ctrl + .** キーを押すと 適用できます。
 
 赤い波線が表示され、Visual Studio が問題の修正候補を提供できる場合に、電球アイコンが表示されます。 たとえば、赤い波線で示されるエラーがある場合、そのエラーの修正が可能な場合に電球マークが表示されます。 いずれの言語でも、サードパーティは、たとえば SDK の一部として、カスタマイズした診断や提案を表示できます。Visual Studio はそれらの規則に基づいて電球マークを表示します。  
 
-### 電球マークを表示するには
-<a id="to-see-a-light-bulb" class="xliff"></a>  
+### <a name="to-see-a-light-bulb"></a>電球マークを表示するには  
 
 1. 多くの場合、電球マークはマウスをエラーの地点に移動すると自動的に表示されます。あるいは、カレットをエラーのある行に移動すると、エディターの左端に表示されます。 赤い波線が表示されている場合にマウス ポインターを重ねると電球マークを表示させることができます。 問題が発生した行のどこかに、マウスやキーボードを使用して移動することで電球マークを表示させることもできます。  
 
 2. 行の任意の場所で **Ctrl キーを押しながら . キー**を押すと、 電球マークの表示を呼び出して修正候補のリストを直接表示できます。  
 
-   ![電球でのマウス ホバー](~/ide/media/vs2015_lightbulb_hover.png "VS2017_LightBulb_Hover")  
+   ![電球でのマウス ホバー](../ide/media/vs2015_lightbulb_hover.png "VS2017_LightBulb_Hover")  
 
-### 修正候補を表示するには
-<a id="to-see-potential-fixes" class="xliff"></a>  
+### <a name="to-see-potential-fixes"></a>修正候補を表示するには  
 下矢印をクリックするか、修正候補を表示するリンクをクリックすると、電球マークで実行可能なクイック操作のリストが表示されます。  
 
 ![拡大電球](../ide/media/vs2015_lightbulb_hover_expanded.png "VS2017_LightBulb_hover_expanded")
 
-## 共通のクイック アクション
-<a id="common-quick-actions" class="xliff"></a>
+## <a name="common-quick-actions"></a>共通のクイック アクション
 ここでは、C# と Visual Basic 両方のコードに共通に適用されるクイック アクションを示します。
 
-### 足りないケース、既定のケース、または両方を追加する
-<a id="add-missing-casesdefault-caseboth" class="xliff"></a>
+### <a name="add-missing-casesdefault-caseboth"></a>足りないケース、既定のケース、または両方を追加する
 `switch` ステートメント (C#) または `Select Case` ステートメント (Visual Basic) を作成するときは、コード アクションを使って、足りないケース項目、既定のケースのステートメント、または両方を自動的に追加できます。  空のステートメントは次のようになります。
 
 ```CSharp
@@ -126,8 +121,7 @@ Select Case myEnum
 End Select
 ```
 
-### スペルが正しくない型を修正する
-<a id="correct-misspelled-type" class="xliff"></a>
+### <a name="correct-misspelled-type"></a>スペルが正しくない型を修正する
 Visual Studio で型のスペルを誤って入力した場合、このクイック アクションは自動的にそれを修正します。  電球メニューでは **['*スペルが正しくない型*' を '*スペルが正しい型*' に変更]** と表示されます。  例:
 
 ```CSharp
@@ -156,8 +150,7 @@ Function MyFunction as Integer
 End Function
 ```
 
-### 不要なキャストを削除する
-<a id="remove-unnecessary-cast" class="xliff"></a>
+### <a name="remove-unnecessary-cast"></a>不要なキャストを削除する
 ある型をキャストが不要な別の型にキャストしている場合、**[不要なキャストの削除]** クイック アクション項目はキャストをコードから削除します。
 
 ```CSharp
@@ -180,8 +173,7 @@ Dim number as Integer = CType(3, Integer)
 Dim number as Integer = 3
 ```
 
-### メソッドをプロパティに置き換える/プロパティをメソッドに置き換える
-<a id="replace-method-with-property--replace-property-with-method" class="xliff"></a>
+### <a name="replace-method-with-property--replace-property-with-method"></a>メソッドをプロパティに置き換える/プロパティをメソッドに置き換える
 これらのクイック アクションは、メソッドをプロパティに、またはプロパティをメソッドに変換します。  次の例では、メソッドをプロパティに変更しています。  逆の場合は、単に *Before* セクションと *After* セクションが逆になります。
 
 ```CSharp
@@ -220,8 +212,7 @@ ReadOnly Property MyValue As Integer
 End Property
 ```
 
-### メソッドを同期させる
-<a id="make-method-synchronous" class="xliff"></a>
+### <a name="make-method-synchronous"></a>メソッドを同期させる
 `async`/`Async` キーワードをメソッドで使う場合は、そのメソッド内のどこかで `await`/`Await` キーワードも使われることが予想されます。  ただし、そうではない場合は、クイック アクションが表示され、`async`/`Async` キーワードを削除して戻り値の型を変更することにより、同期メソッドにすることができます。  [クイック アクション] メニューの **[メソッドを同期させます]** オプションを選びます。
 
 ```CSharp
@@ -254,8 +245,7 @@ Function MyAsyncMethod() As Integer
 End Function
 ```
 
-### メソッドを非同期にする
-<a id="make-method-asynchronous" class="xliff"></a>
+### <a name="make-method-asynchronous"></a>メソッドを非同期にする
 メソッド内で `await`/`Await` キーワードを使うときは、メソッド自体に `async`/`Async` キーワードが指定されていることが想定されます。  ただし、そうではない場合は、クイック アクションが表示され、非同期メソッドにすることができます。  [クイック アクション] メニューの **[Make method/Function asynchronous (メソッド/関数を非同期にします)]** オプションを使います。
 
 ```CSharp
@@ -288,12 +278,10 @@ Async Function MyAsyncMethod() As Task(Of Integer)
 End Function
 ```
 
-### 不必要な using/Import を削除する
-<a id="remove-unnecesary-usingsimports" class="xliff"></a>
+### <a name="remove-unnecesary-usingsimports"></a>不必要な using/Import を削除する
 **[不要な using の削除] / [不要なインポートの削除]** クイック アクションは、現在のファイルで使われていない `using` および `Import` ステートメントを削除します。  この項目を選ぶと、使われていない名前空間のインポートがすぐに削除されます。
 
-### 参照アセンブリの型、NuGet パッケージの型、またはソリューション内の他の型に using/Import を追加する
-<a id="add-usingsimports-for-types-in-reference-assemblies-nuget-packages-or-other-types-in-your-solution" class="xliff"></a>
+### <a name="add-usingsimports-for-types-in-reference-assemblies-nuget-packages-or-other-types-in-your-solution"></a>参照アセンブリの型、NuGet パッケージの型、またはソリューション内の他の型に using/Import を追加する
 ソリューション内の他のプロジェクトにある型を使うとクイック アクションが自動的に表示されますが、それ以外の場合は **[ツール] > [オプション] > [C#]** または **[Basic] > [詳細設定]** タブで有効にする必要があります。  
 
 * 参照アセンブリの型に using/import を提案する
@@ -325,8 +313,7 @@ Imports System.Diagnostics
 Debug.WriteLine("Hello")
 ```
 
-### 挿入文字列に変換する
-<a id="convert-to-interpolated-string" class="xliff"></a>
+### <a name="convert-to-interpolated-string"></a>挿入文字列に変換する
 [挿入文字列](/dotnet/csharp/language-reference/keywords/interpolated-strings)は、埋め込み変数を含む文字列を表現する簡単な方法であり、**[String.Format](https://msdn.microsoft.com/library/system.string.format.aspx)** メソッドに似ています。  このクイック アクションは、文字列が連結されている場合、または **String.Format** が使われている場合を認識し、それを挿入文字列に変更します。
 
 ```CSharp
@@ -353,54 +340,46 @@ Dim num as Integer = 3
 Dim s As String = $"My string with {num} in the middle"
 ```
 
-### マージ競合マーカーを削除する
-<a id="remove-merge-conflict-markers" class="xliff"></a>
+### <a name="remove-merge-conflict-markers"></a>マージ競合マーカーを削除する
 このクイック アクションを使用すると、"変更を取り入れる" ことで競合するコードおよびマーカーが削除され、マージ競合を解決することができます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - マージ競合を解決する](~/ide/media/vside-refactoring-merge-conflicts.png)
+![リファクタリング - マージ競合を解決する](../ide/media/vside-refactoring-merge-conflicts.png)
 
-### パラメーターの null チェックを追加する
-<a id="add-null-checks-for-parameters" class="xliff"></a>
+### <a name="add-null-checks-for-parameters"></a>パラメーターの null チェックを追加する
 このクイック アクションでは、パラメーターが null であるかどうかを示すチェックをコードに追加できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - null チェックを追加する](~/ide/media/vside-refactoring-nullcheck.png)
+![リファクタリング - null チェックを追加する](../ide/media/vside-refactoring-nullcheck.png)
 
-### コンストラクターのジェネレーターの機能強化
-<a id="constructor-generator-improvements" class="xliff"></a>
+### <a name="constructor-generator-improvements"></a>コンストラクターのジェネレーターの機能強化
 このクイック アクションにより、コンストラクターを作成するときに、生成するプロパティまたはフィールドを選択したり、空の本文からコンストラクターを生成したりできるようになります。 呼び出しサイトから既存のコンストラクターにパラメーターを追加する場合にも使用できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - コンストラクターを生成する](~/ide/media/vside-refactoring-constructors.png)
+![リファクタリング - コンストラクターを生成する](../ide/media/vside-refactoring-constructors.png)
 
-### 未使用の変数を削除する
-<a id="remove-unused-variables" class="xliff"></a>
+### <a name="remove-unused-variables"></a>未使用の変数を削除する
 このクイック アクションでは、宣言されているがコードで一度も使用されていない変数を削除することができます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - 未使用の変数](~/ide/media/vside-refactoring-unusedvars.png)
+![リファクタリング - 未使用の変数](../ide/media/vside-refactoring-unusedvars.png)
 
-### オーバーライドを生成する
-<a id="generate-overrides" class="xliff"></a>
+### <a name="generate-overrides"></a>オーバーライドを生成する
 このクイック アクションでは、クラスまたは構造体で空白の行からオーバーライドを作成することができます。 **[Pick Members (メンバーの選択)]** ダイアログ ボックスで、オーバーライドするメンバーを選択できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - オーバーライド](~/ide/media/vside-refactoring-overrides.png)
+![リファクタリング - オーバーライド](../ide/media/vside-refactoring-overrides.png)
 
-![リファクタリング - ダイアログ ボックスをオーバーライドする](~/ide/media/vside-refactoring-overrides-dialog.png)
+![リファクタリング - ダイアログ ボックスをオーバーライドする](../ide/media/vside-refactoring-overrides-dialog.png)
 
-### 数値リテラルの基本を変更する
-<a id="change-base-for-numeric-literals" class="xliff"></a>
+### <a name="change-base-for-numeric-literals"></a>数値リテラルの基本を変更する
 このクイック アクションでは、数値リテラルの基本数値システムを別のものに変換できます。 たとえば、数値を 16 進数からバイナリ形式に変更できます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - 基本を変更する](~/ide/media/vside-refactoring-changebase1.png)
+![リファクタリング - 基本を変更する](../ide/media/vside-refactoring-changebase1.png)
 
-![リファクタリング - 基本を変更する](~/ide/media/vside-refactoring-changebase2.png)
+![リファクタリング - 基本を変更する](../ide/media/vside-refactoring-changebase2.png)
 
-### リテラルに桁区切り記号を挿入する
-<a id="insert-digit-separators-into-literals" class="xliff"></a>
+### <a name="insert-digit-separators-into-literals"></a>リテラルに桁区切り記号を挿入する
 このクイック アクションでは、区切り文字をリテラル値に追加することができます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
-![リファクタリング - 桁区切り記号を変更する](~/ide/media/vside-refactoring-separators.png)
+![リファクタリング - 桁区切り記号を変更する](../ide/media/vside-refactoring-separators.png)
 
-### **if** コンストラクトを **switch** に変換する
-<a id="convert-if-construct-to-switch" class="xliff"></a>
+### <a name="convert-if-construct-to-switch"></a>**if** コンストラクトを **switch** に変換する
 このクイック アクションでは、**if-then-else** コンストラクトを **switch** コンストラクトに変換することができます。 (Visual Studio 2017 (バージョン 15.3 - プレビュー) でのみ使用できます。)
 
 ```CSharp
@@ -450,7 +429,6 @@ Select Case obj
 End Select
 ```
 
-# 関連項目
-<a id="see-also" class="xliff"></a>
+# <a name="see-also"></a>関連項目
 * [コード スタイルとクイック アクション](code-styles-and-quick-actions.md)
 

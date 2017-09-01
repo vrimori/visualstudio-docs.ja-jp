@@ -1,5 +1,5 @@
 ---
-title: "BP_ERROR_TYPE |Microsoft ドキュメント"
+title: BP_ERROR_TYPE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 07248d28d34373176f9897472c39c0756012da59
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: ab0dc686c4d002733bf8501be042e33c500fb8e3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="bperrortype"></a>BP_ERROR_TYPE
-ブレークポイントのエラーの種類を指定します。  
+Specifies the error type of a breakpoint.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_BP_ERROR_TYPE {   
    BPET_NONE            = 0x00000000,  
    BPET_TYPE_WARNING    = 0x00000001,  
@@ -58,7 +59,7 @@ enum enum_BP_ERROR_TYPE {
 typedef DWORD BP_ERROR_TYPE;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_BP_ERROR_TYPE {   
    BPET_NONE            = 0x00000000,  
    BPET_TYPE_WARNING    = 0x00000001,  
@@ -74,53 +75,53 @@ public enum enum_BP_ERROR_TYPE {
 };  
 ```  
   
-## <a name="members"></a>メンバー  
+## <a name="members"></a>Members  
  BPET_NONE  
- ブレークポイント エラーは指定されません。  
+ Specifies no breakpoint error.  
   
  BPET_TYPE_WARNING  
- 警告スタイル ブレークポイント エラーを指定します。  
+ Specifies a warning-style breakpoint error.  
   
  BPET_TYPE_ERROR  
- エラー スタイルのブレークポイント エラーを指定します。  
+ Specifies an error-style breakpoint error.  
   
  BPET_SEV_HIGH  
- 重要度の高いブレークポイント エラーを指定します。  
+ Specifies a high-severity breakpoint error.  
   
  BPET_SEV_GENERAL  
- 中規模、重大度レベルのブレークポイントのエラーを指定します。  
+ Specifies a medium-severity breakpoint error.  
   
  BPET_SEV_LOW  
- ブレークポイントの重要度の低いエラーを指定します。  
+ Specifies a low-severity breakpoint error.  
   
  BPET_TYPE_MASK  
- マスク スタイル ブレークポイント エラーを指定します。  
+ Specifies a mask-style breakpoint error.  
   
  BPET_SEV_MASK  
- 重要度マスク スタイル ブレークポイント エラーを指定します。  
+ Specifies a severity-mask-style breakpoint error.  
   
  BPET_GENERAL_WARNING  
- 一般的な警告スタイル ブレークポイント エラーを指定します。  
+ Specifies a general-warning-style breakpoint error.  
   
  BPET_GENERAL_ERROR  
- 一般的なエラー スタイルのブレークポイントのエラーを指定します。  
+ Specifies a general-error-style breakpoint error.  
   
  BPET_ALL  
- すべてのブレークポイント エラーの種類を指定します。  
+ Specifies all breakpoint error types.  
   
-## <a name="remarks"></a>コメント  
- これらの値は、演算と組み合わせることも`OR`あり、使用、`dwType`のメンバー、 [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)構造体。 パラメーターとして渡される、 [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ These values may be combined with a bitwise `OR` and used for the `dwType` member of the [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) structure. Passed as a parameter to the [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) method.  
   
- ブレークポイント エラーの種類は、型と、重大度で構成されます。 つまり、ブレークポイントのエラーの種類は、型だけではないこと (たとえば、 `BPET_TYPE_ERROR`、) か、重大度 (など`BPET_SEV_GENERAL`) 自体。 `BPET_GENERAL_WARNING``BPET_GENERAL_ERROR`警告およびエラーの一般的なブレークポイントの定義済みの値を指定します。  
+ A breakpoint error type is composed of a type and a severity. This means that a breakpoint error type is never just a type (for example, `BPET_TYPE_ERROR`,) or a severity (for example, `BPET_SEV_GENERAL`) by itself. `BPET_GENERAL_WARNING` and `BPET_GENERAL_ERROR` provide predefined values for general warning and error breakpoints.  
   
-## <a name="requirements"></a>要件  
- ヘッダー: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
- [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)   
  [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)

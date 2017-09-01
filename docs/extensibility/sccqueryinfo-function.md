@@ -1,5 +1,5 @@
 ---
-title: "SccQueryInfo 関数 |Microsoft ドキュメント"
+title: SccQueryInfo Function | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a178aada6303ed21f51a6be66ba02b2145dcd694
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4efd9b29a89bc490255c35558e5862ebc14b7fec
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sccqueryinfo-function"></a>SccQueryInfo 関数
-この関数は、一連のソース管理下で選択したファイルの状態に関する情報を取得します。  
+# <a name="sccqueryinfo-function"></a>SccQueryInfo Function
+This function obtains status information for a set of selected files under source control.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccQueryInfo(  
    LPVOID  pvContext,  
    LONG    nFiles,  
@@ -50,44 +51,44 @@ SCCRTN SccQueryInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- [in]ソース管理プラグイン コンテキスト構造体。  
+ [in] The source control plug-in context structure.  
   
  nFiles  
- [in]指定されたファイルの数、`lpFileNames`配列の長さ、および、`lpStatus`配列。  
+ [in] Number of files specified in the `lpFileNames` array and the length of the `lpStatus` array.  
   
  lpFileNames  
- [in]クエリを実行するファイルの名前の配列。  
+ [in] An array of names of files to be queried.  
   
  lpStatus  
- [入力、出力]ソース管理プラグインが各ファイルのステータスのフラグを返す配列。 詳細については、次を参照してください。[ファイルのステータス コードは](../extensibility/file-status-code-enumerator.md)です。  
+ [in, out] An array in which the source control plug-in returns the status flags for each file. For more information, see [File Status Code](../extensibility/file-status-code-enumerator.md).  
   
-## <a name="return-value"></a>戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|値|説明|  
+|Value|Description|  
 |-----------|-----------------|  
-|SCC_OK|クエリが正常に完了しました。|  
-|SCC_E_ACCESSFAILURE|おそらくネットワークや競合の問題の原因となったソース管理システムのアクセスに問題が発生しました。 再試行することをお勧めします。|  
-|SCC_E_PROJNOTOPEN|プロジェクトは、ソース管理下で開かれていません。|  
-|SCC_E_NONSPECIFICERROR|不特定のエラーです。|  
+|SCC_OK|Query was successful.|  
+|SCC_E_ACCESSFAILURE|There was a problem with accessing the source control system, probably caused by network or contention issues. A retry is recommended.|  
+|SCC_E_PROJNOTOPEN|The project is not open under source control.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
   
-## <a name="remarks"></a>コメント  
- 場合`lpFileName`空の文字列を更新するステータス情報は現在ありません。 それ以外の場合、ステータス情報の変更を可能性がありますが、ファイルの完全なパス名になります。  
+## <a name="remarks"></a>Remarks  
+ If `lpFileName` is an empty string, there is currently no status information to update. Otherwise, it is the full path name of the file for which the status information may have changed.  
   
- 戻り値の配列は、のビットマスク`SCC_STATUS_xxxx`ビットです。 詳細については、次を参照してください。[ファイルのステータス コードは](../extensibility/file-status-code-enumerator.md)です。 ソース管理システムはすべての bit 型をサポートしていません。 たとえば場合、`SCC_STATUS_OUTOFDATE`が提供されない、ビットが設定されていないだけです。  
+ The return array can be a bitmask of `SCC_STATUS_xxxx` bits. For more information, see [File Status Code](../extensibility/file-status-code-enumerator.md). A source control system may not support all bit types. For example, if `SCC_STATUS_OUTOFDATE` is not offered, the bit is just not set.  
   
- この関数を使用して、ファイルをチェック アウトする、次を注意してください。`MSSCCI`ステータスの要件。  
+ When using this function to check out files, note the following `MSSCCI` status requirements:  
   
--   `SCC_STATUS_OUTBYUSER`現在のユーザーがファイルをチェック アウト時に設定されています。  
+-   `SCC_STATUS_OUTBYUSER` is set when the current user has checked out the file.  
   
--   `SCC_STATUS_CHECKEDOUT`以外は設定できません`SCC_STATUS_OUTBYUSER`が設定されます。  
+-   `SCC_STATUS_CHECKEDOUT` cannot be set unless `SCC_STATUS_OUTBYUSER` is set.  
   
--   `SCC_STATUS_CHECKEDOUT`ときに、ファイルがチェック アウト、指定された作業ディレクトリにのみ設定されます。  
+-   `SCC_STATUS_CHECKEDOUT` is only set when the file is checked-out into the designated working directory.  
   
--   場合は、ファイルがチェック アウトされて現在のユーザーが作業ディレクトリ以外のディレクトリに`SCC_STATUS_OUTBYUSER`設定されているが、`SCC_STATUS_CHECKEDOUT`はありません。  
+-   If the file is checked-out by the current user into a directory other than the working directory, `SCC_STATUS_OUTBYUSER` is set but `SCC_STATUS_CHECKEDOUT` is not.  
   
-## <a name="see-also"></a>関連項目  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
- [ファイルの状態コード](../extensibility/file-status-code-enumerator.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+ [File Status Code](../extensibility/file-status-code-enumerator.md)

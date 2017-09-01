@@ -1,118 +1,122 @@
 ---
-title: "チュートリアル : ブックマークのショートカット メニューの作成"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Bookmark コントロール, イベント"
-  - "コンテキスト メニュー, Word"
-  - "メニュー, 作成 (Office アプリケーションで)"
-  - "ショートカット メニュー, Word"
+title: 'Walkthrough: Creating Shortcut Menus for Bookmarks | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- context menus, Word
+- Bookmark control, events
+- shortcut menus, Word
+- menus, creating in Office applications
 ms.assetid: 86dbf3ff-ba75-42f9-8df6-abfc19b3cf6b
 caps.latest.revision: 57
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 53
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 2479bc8afdf4f02b586e4631d75fcf884bb2271e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : ブックマークのショートカット メニューの作成
-  このチュートリアルでは、Word のドキュメント レベルのカスタマイズを使用して <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールのショートカット メニューを作成する方法を示します。  ユーザーがブックマーク内のテキストを右クリックすると、ショートカット メニューにテキストの書式設定オプションが表示されます。  
+# <a name="walkthrough-creating-shortcut-menus-for-bookmarks"></a>Walkthrough: Creating Shortcut Menus for Bookmarks
+  This walkthrough demonstrates how to create shortcut menus for <xref:Microsoft.Office.Tools.Word.Bookmark> controls in a document-level customization for Word. When a user right-clicks the text in a bookmark, a shortcut menu appears and gives the user options for formatting the text.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   [プロジェクトの作成](#BKMK_CreateProject)  
+-   [Creating the Project](#BKMK_CreateProject).  
   
--   [文書へのテキストとブックマークの追加](#BKMK_addtextandbookmarks)  
+-   [Adding Text and Bookmarks to the Document](#BKMK_addtextandbookmarks).  
   
--   [ショートカット メニューへのコマンドの追加](#BKMK_AddCmndsShortMenu)  
+-   [Adding Commands to a Shortcut Menu](#BKMK_AddCmndsShortMenu).  
   
--   [ブックマーク内のテキストの書式](#BKMK_formattextbkmk)  
+-   [Format the Text in the Bookmark](#BKMK_formattextbkmk).  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] または [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]  
+-   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] or [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]  
   
-##  <a name="BKMK_CreateProject"></a> プロジェクトの作成  
- まず、Visual Studio で Word 文書プロジェクトを作成します。  
+##  <a name="BKMK_CreateProject"></a> Creating the Project  
+ The first step is to create a Word document project in Visual Studio.  
   
-#### 新しいプロジェクトを作成するには  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
--   My Bookmark Shortcut Menu という名前の Word 文書プロジェクトを作成します。  ウィザードで、**\[新規ドキュメントの作成\]** をクリックします。  詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+-   Create a Word document project that has the name **My Bookmark Shortcut Menu**. In the wizard, select **Create a new document**. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     新しい Word 文書が Visual Studio のデザイナーに開かれ、**My Bookmark Shortcut Menu** プロジェクトが**ソリューション エクスプローラー**に追加されます。  
+     Visual Studio opens the new Word document in the designer and adds the **My Bookmark Shortcut Menu** project to **Solution Explorer**.  
   
-##  <a name="BKMK_addtextandbookmarks"></a> 文書へのテキストとブックマークの追加  
- 文書にテキストを追加し、部分的に重なった 2 つのブックマークを追加します。  
+##  <a name="BKMK_addtextandbookmarks"></a> Adding Text and Bookmarks to the Document  
+ Add some text to your document and then add two overlapping bookmarks.  
   
-#### 文書にテキストを追加するには  
+#### <a name="to-add-text-to-your-document"></a>To add text to your document  
   
--   プロジェクトのデザイナーで表示されているドキュメントに次のテキストを入力します。  
+-   In the document that appears in the designer of your project, type the following text.  
   
-     This is an example of creating a shortcut menu when you right\-click the text in a bookmark.  
+     **This is an example of creating a shortcut menu when you right-click the text in a bookmark.**  
   
-#### ドキュメントにブックマーク コントロールを追加するには  
+#### <a name="to-add-a-bookmark-control-to-your-document"></a>To add a Bookmark control to your document  
   
-1.  **\[ツールボックス\]** の **\[Word コントロール\]** タブから <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールをドキュメントにドラッグします。  
+1.  In the **Toolbox**, from the **Word Controls** tab, drag a <xref:Microsoft.Office.Tools.Word.Bookmark> control to your document.  
   
-     **\[ブックマーク コントロールの追加\]** ダイアログ ボックスが表示されます。  
+     The **Add Bookmark Control** dialog box appears.  
   
-2.  "creating a shortcut menu when you right\-click the text" という語句を選択し、**\[OK\]** をクリックします。  
+2.  Select the words "creating a shortcut menu when you right-click the text", and then click **OK**.  
   
-     `bookmark1` がドキュメントに追加されます。  
+     `bookmark1` is added to the document.  
   
-3.  別の <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを "right\-click the text in a bookmark" という語句に追加します。  
+3.  Add another <xref:Microsoft.Office.Tools.Word.Bookmark> control to the words "right-click the text in a bookmark".  
   
-     `bookmark2` がドキュメントに追加されます。  
+     `bookmark2` is added to the document.  
   
     > [!NOTE]  
-    >  "right\-click the text" という語句が `bookmark1` と `bookmark2` の両方に表示されます。  
+    >  The words "right-click the text" are in both `bookmark1` and `bookmark2`.  
   
- デザイン時に文書にブックマークを追加すると、<xref:Microsoft.Office.Tools.Word.Bookmark> コントロールが作成されます。  ブックマークの複数のイベントに対してプログラミングを行うことができます。  ブックマークの <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick> イベントにコードを作成することで、ユーザーがブックマーク内のテキストを右クリックしたときにショートカット メニューを表示できます。  
+ When you add a bookmark to a document at design time, a <xref:Microsoft.Office.Tools.Word.Bookmark> control is created. You can program against several events of the bookmark. You can write code in the <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick> event of the bookmark so that when the user right-clicks the text in the bookmark, a shortcut menu appears.  
   
-##  <a name="BKMK_AddCmndsShortMenu"></a> ショートカット メニューへのコマンドの追加  
- ドキュメントを右クリックすると表示されるショートカット メニューにボタンを追加します。  
+##  <a name="BKMK_AddCmndsShortMenu"></a> Adding Commands to a Shortcut Menu  
+ Add buttons to the shortcut menu that appears when you right-click the document.  
   
-#### ショートカット メニューにコマンドを追加するには  
+#### <a name="to-add-commands-to-a-shortcut-menu"></a>To add commands to a shortcut menu  
   
-1.  **\[リボン XML\]** 項目をプロジェクトに追加します。  詳細については、「[方法 : リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)」を参照してください。  
+1.  Add a **Ribbon XML** item to the project. For more information, see [How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md).  
   
-2.  **\[ソリューション エクスプローラー\]** で、**\[ThisDocument.cs\]** または **\[ThisDocument.vb\]** を選択します。  
+2.  In **Solution Explorer**, select **ThisDocument.cs** or **ThisDocument.vb**.  
   
-3.  メニュー バーで **\[表示\]**、**\[コード\]** の順に選択します。  
+3.  On the menu bar, choose **View**, **Code**.  
   
-     コード エディターで **ThisDocument** クラス ファイルが開きます。  
+     The **ThisDocument** class file opens in the Code Editor.  
   
-4.  **ThisDocument** クラスの先頭に、次のコードを追加します。  このコードは、CreateRibbonExtensibilityObject メソッドをオーバーライドし、Office アプリケーションにリボン XML クラスを返します。  
+4.  Add the following code to the **ThisDocument** class. This code overrides the CreateRibbonExtensibilityObject method and returns the Ribbon XML class to the Office application.  
   
-     [!code-csharp[Trin_Word_Document_Menus#1](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/thisdocument.cs#1)]
-     [!code-vb[Trin_Word_Document_Menus#1](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_word_document_menus/vb/thisdocument.vb#1)]  
+     [!code-csharp[Trin_Word_Document_Menus#1](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#1)]  [!code-vb[Trin_Word_Document_Menus#1](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#1)]  
   
-5.  **\[ソリューション エクスプローラー\]** でリボン XML ファイルを選択します。  既定では、リボン XML ファイルには Ribbon1.xml という名前が付けられます。  
+5.  In **Solution Explorer**, select the Ribbon XML file. By default, the Ribbon XML file is named Ribbon1.xml.  
   
-6.  メニュー バーで **\[表示\]**、**\[コード\]** の順に選択します。  
+6.  On the menu bar, choose **View**, **Code**.  
   
-     コード エディターでリボン XML ファイルが開きます。  
+     The Ribbon xml file opens in the Code Editor.  
   
-7.  コード エディターを使用して、リボン XML ファイルの内容を次のコードに置き換えます。  
+7.  In the Code Editor, replace the contents of the Ribbon XML file with the following code.  
   
     ```  
-  
+    <?xml version="1.0" encoding="UTF-8"?>  
     <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">  
       <contextMenus>  
         <contextMenu idMso="ContextMenuText">  
@@ -125,81 +129,76 @@ caps.handback.revision: 53
     </customUI>  
     ```  
   
-     このコードでは、ドキュメントを右クリックすると表示されるショートカット メニューに 2 つのボタンが追加されます。  
+     This code adds two buttons to the shortcut menu that appears when you right-click the document.  
   
-8.  **ソリューション エクスプローラー**で `ThisDocument` を右クリックし、**\[コードの表示\]** をクリックします。  
+8.  In **Solution Explorer**, right-click `ThisDocument`, and then click **View Code**.  
   
-9. 次の変数とブックマーク変数をクラス レベルで宣言します。  
+9. Declare the following variables and a bookmark variable at the class level.  
   
-     [!code-csharp[Trin_Word_Document_Menus#2](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/thisdocument.cs#2)]
-     [!code-vb[Trin_Word_Document_Menus#2](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_word_document_menus/vb/thisdocument.vb#2)]  
+     [!code-csharp[Trin_Word_Document_Menus#2](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#2)]   [!code-vb[Trin_Word_Document_Menus#2](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#2)]  
   
-10. **\[ソリューション エクスプローラー\]** でリボン コード ファイルを選択します。  既定では、リボン コード ファイルには **Ribbon1.cs** または **Ribbon1.vb** という名前が付けられます。  
+10. In **Solution Explorer**, select the Ribbon code file. By default, the Ribbon code file is named **Ribbon1.cs** or **Ribbon1.vb**.  
   
-11. メニュー バーで **\[表示\]**、**\[コード\]** の順に選択します。  
+11. On the menu bar, choose **View**, **Code**.  
   
-     コード エディターでリボン コード ファイルが開きます。  
+     The Ribbon code file opens in the Code Editor.  
   
-12. リボン コード ファイルで、次のメソッドを追加します。  これは、ドキュメントのショートカット メニューに追加した 2 つのボタンのコールバック メソッドです。  このメソッドでは、これらのボタンがショートカット メニューに表示されるかどうかが決定されます。  \[太字\] ボタンおよび \[斜体\] ボタンは、ブックマーク内のテキストを右クリックしたときにのみ表示されます。  
+12. In the Ribbon code file, add the following method. This is a callback method for the two buttons that you have added to the shortcut menu of the document. This method determines whether these buttons appear in the shortcut menu. The bold and italic buttons appear only if you right-click text within the bookmark.  
   
-     [!code-csharp[Trin_Word_Document_Menus#5](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/ribbon1.cs#5)]
-     [!code-vb[Trin_Word_Document_Menus#5](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_word_document_menus/vb/ribbon1.vb#5)]  
+     [!code-csharp[Trin_Word_Document_Menus#5](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#5)]  [!code-vb[Trin_Word_Document_Menus#5](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#5)]  
   
-##  <a name="BKMK_formattextbkmk"></a> ブックマーク内のテキストの書式  
+##  <a name="BKMK_formattextbkmk"></a> Format the Text in the Bookmark  
   
-#### ブックマーク内のテキストに書式を設定するには  
+#### <a name="to-format-the-text-in-the-bookmark"></a>To format the text in the bookmark  
   
-1.  リボン コード ファイルで、ブックマークに書式を適用するための `ButtonClick` イベント ハンドラーを追加します。  
+1.  In the Ribbon code file, add a `ButtonClick` event handler to apply formatting to the bookmark.  
   
-     [!code-csharp[Trin_Word_Document_Menus#6](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/ribbon1.cs#6)]
-     [!code-vb[Trin_Word_Document_Menus#6](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_word_document_menus/vb/ribbon1.vb#6)]  
+     [!code-csharp[Trin_Word_Document_Menus#6](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#6)]  [!code-vb[Trin_Word_Document_Menus#6](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#6)]  
   
-2.  **\[ソリューション エクスプローラー\]** で、**\[ThisDocument.cs\]** または **\[ThisDocument.vb\]** を選択します。  
+2.  **Solution Explorer**, select **ThisDocument.cs** or **ThisDocument.vb**.  
   
-3.  メニュー バーで **\[表示\]**、**\[コード\]** の順に選択します。  
+3.  On the menu bar, choose **View**, **Code**.  
   
-     コード エディターで **ThisDocument** クラス ファイルが開きます。  
+     The **ThisDocument** class file opens in the Code Editor.  
   
-4.  **ThisDocument** クラスの先頭に、次のコードを追加します。  
+4.  Add the following code to the **ThisDocument** class.  
   
-     [!code-csharp[Trin_Word_Document_Menus#3](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/thisdocument.cs#3)]
-     [!code-vb[Trin_Word_Document_Menus#3](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_word_document_menus/vb/thisdocument.vb#3)]  
+     [!code-csharp[Trin_Word_Document_Menus#3](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#3)]  [!code-vb[Trin_Word_Document_Menus#3](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#3)]  
   
     > [!NOTE]  
-    >  ブックマークが部分的に重なっている場合を処理するためのコードを作成する必要があります。  これを行わないと、既定でコードは選択範囲内にあるすべてのブックマークについて呼び出されます。  
+    >  You must write code to handle the case where bookmarks overlap. If you do not, by default, the code will be called for all bookmarks in the selection.  
   
-5.  C\# では、次に示すように、ブックマーク コントロールのイベント ハンドラーを <xref:Microsoft.Office.Tools.Word.Document.Startup> イベントに追加する必要があります。  イベンド ハンドラーの作成方法の詳細については、「[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)」を参照してください。  
+5.  In C#, you must add event handlers for the bookmark controls to the <xref:Microsoft.Office.Tools.Word.Document.Startup> event. For information about creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
-     [!code-csharp[Trin_Word_Document_Menus#4](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/thisdocument.cs#4)]  
+     [!code-csharp[Trin_Word_Document_Menus#4](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#4)]  
   
-## アプリケーションのテスト  
- ドキュメントをテストして、ブックマーク内のテキストを右クリックしたときにショートカット メニューに太字と斜体のメニュー項目が表示され、テキストが正しく書式設定されることを確認します。  
+## <a name="testing-the-application"></a>Testing the Application  
+ Test your document to verify that the bold and italic menu items appear in the shortcut menu when you right-click text in a bookmark and that the text is properly formatted.  
   
-#### 文書をテストするには  
+#### <a name="to-test-your-document"></a>To test your document  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  Press F5 to run your project.  
   
-2.  最初のブックマークを右クリックし、**\[太字\]** をクリックします。  
+2.  Right-click in the first bookmark, and then click **Bold**.  
   
-3.  `bookmark1` 内のすべてのテキストが太字になることを確認します。  
+3.  Verify that all of the text in `bookmark1` is formatted as bold.  
   
-4.  ブックマークが重なっている部分のテキストを右クリックし、**\[斜体\]** をクリックします。  
+4.  Right-click the text where the bookmarks overlap, and then click **Italic**.  
   
-5.  `bookmark2` ではすべてのテキストが斜体になるが、`bookmark1` では `bookmark2` と重なっている部分のテキストしか斜体にならないことを確認します。  
+5.  Verify that all of the text in `bookmark2` is italic, and only the part of the text in `bookmark1` that overlaps `bookmark2` is italic.  
   
-## 次の手順  
- ここでは、次の作業を行います。  
+## <a name="next-steps"></a>Next Steps  
+ Here are some tasks that might come next:  
   
--   Excel 内のホスト コントロールのイベントに応答するコードを作成します。  詳細については、「[チュートリアル : NamedRange コントロールのイベントのプログラミング  
-](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)」を参照してください。  
+-   Write code to respond to events of host controls in Excel. For more information, see [Walkthrough: Programming Against Events of a NamedRange Control](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md).  
   
--   チェック ボックスを使用してブックマーク内の書式を変更します。  詳細については、「[チュートリアル : CheckBox コントロールを使用したドキュメント書式の変更](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)」を参照してください。  
+-   Use a check box to change formatting in a bookmark. For more information, see [Walkthrough: Changing Document Formatting Using CheckBox Controls](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md).  
   
-## 参照  
- [Word を使用したチュートリアル](../vsto/walkthroughs-using-word.md)   
- [Office UI のカスタマイズ](../vsto/office-ui-customization.md)   
- [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
- [Bookmark コントロール](../vsto/bookmark-control.md)   
- [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Walkthroughs Using Word](../vsto/walkthroughs-using-word.md)   
+ [Office UI Customization](../vsto/office-ui-customization.md)   
+ [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md)   
+ [Bookmark Control](../vsto/bookmark-control.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

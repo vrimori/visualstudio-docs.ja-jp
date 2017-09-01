@@ -1,87 +1,104 @@
 ---
-title: "SccDiff 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccDiff"
-helpviewer_keywords: 
-  - "SccDiff 関数"
+title: SccDiff Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccDiff
+helpviewer_keywords:
+- SccDiff function
 ms.assetid: d49bc8c5-f631-4153-9d3c-feb3564da305
 caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# SccDiff 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: de66dd1f5bb36ac60c145d481f4d46722dc1ca59
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-この関数が表示されます \(または必要に応じてだけをチェック\)、元の \(ローカル ディスク\) 上の現在のファイルと、最新のチェックインされているバージョンの違いは、システムを制御します。  
+---
+# <a name="sccdiff-function"></a>SccDiff Function
+This function displays (or optionally just checks for) the differences between the current file (on the local disk) and its last checked-in version in the source control system.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccDiff(  
-   LPVOID    pvContext,  
-   HWND      hWnd,  
-   LPCSTR    lpFileName,  
-   LONG      fOptions,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pvContext,  
+   HWND      hWnd,  
+   LPCSTR    lpFileName,  
+   LONG      fOptions,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in] The source control plug-in context structure.  
   
- hwnd の分離  
- \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
+ hWnd  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  lpFileName  
- \[in\]違いを要求する対象のファイル名です。  
+ [in] File name for which the difference is requested.  
   
- される  
- \[in\]コマンドのフラグです。 詳細については、「解説」を参照してください。  
+ fOptions  
+ [in] Command flags. See Remarks for details.  
   
  pvOptions  
- \[in\]ソース管理プラグインに固有のオプションです。  
+ [in] Source control plug-in-specific options.  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|値|説明|  
-|-------|--------|  
-|SCC\_OK|作業のコピーとサーバーのバージョンと同じです。|  
-|SCC\_I\_FILESDIFFERS|作業コピーは、ソース管理下でバージョンによって異なります。|  
-|SCC\_I\_RELOADFILE|ファイルまたはプロジェクトを再読み込みする必要があります。|  
-|SCC\_E\_FILENOTCONTROLLED|ファイルはソース管理されていません。|  
-|SCC\_E\_NOTAUTHORIZED|この操作を実行できません。|  
-|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
-|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。ファイルの相違点は取得されませんでした。|  
-|SCC\_E\_FILENOTEXIST|ローカル ファイルが見つかりませんでした。|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|The working copy and server version are identical.|  
+|SCC_I_FILESDIFFERS|The working copy differs from the version under source control.|  
+|SCC_I_RELOADFILE|A file or project needs to be reloaded.|  
+|SCC_E_FILENOTCONTROLLED|The file is not under source control.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure; file difference was not obtained.|  
+|SCC_E_FILENOTEXIST|The local file was not found.|  
   
-## 解説  
- この関数は、2 つの異なる役割を果たします。 既定では、ファイルへの変更の一覧を表示します。 ソース管理プラグインでは、ディスク上のユーザーのファイルとソース管理下にあるファイルの最新バージョンの違いを表示する、選択される形式で、独自のウィンドウを開きます。  
+## <a name="remarks"></a>Remarks  
+ This function serves two different purposes. By default, it displays a list of changes to a file. The source control plug-in opens its own window, in whatever format it chooses, to display the differences between the user's file on disk and the latest version of the file under source control.  
   
- または、IDE は、ファイルが変更されたかどうかを判断することがありますだけです。 たとえば、IDE では、ユーザーに通知せずにファイルをチェック\_アウトしても安全かどうかを確認する必要があります。 その場合は、IDE の渡します、 `SCC_DIFF_CONTENTS` フラグ。 ソース管理プラグインはバイト単位でソース管理の対象ファイルに対して、ディスク上のファイルを確認する必要があり、ユーザーに何も表示せず、2 つのファイルが異なるかどうかを示す値を返します。  
+ Alternatively, the IDE may simply need to determine whether a file has changed. For example, the IDE may need to determine whether it is safe to check out a file without informing the user. In that case, the IDE passes in the `SCC_DIFF_CONTENTS` flag. The source control plug-in must check the file on disk, byte by byte, against the source-controlled file and return a value indicating whether the two files are different without displaying anything to the user.  
   
- パフォーマンスの最適化として、ソース管理プラグインがチェックサムまたはによってに対して呼び出されますバイトごとの比較ではなくタイムスタンプに基づいて別の方法を使用ことがあります `SCC_DIFF_CONTENTS`: これらのフォームに比較するは明らかに高速、信頼性が低い。 すべてのソース管理システムは、これらの代替の比較メソッドをサポート可能性があり、プラグインの内容の比較にフォールバックする必要があります。 すべてソース管理プラグインをサポートすること、最低限、内容の比較。  
+ As a performance optimization, the source control plug-in may use an alternative based on a checksum or a timestamp instead of the byte-by-byte comparison called for by `SCC_DIFF_CONTENTS`: these forms of comparison are obviously faster but less reliable. Not all source control systems may support these alternative comparison methods, and the plug-in may have to fall back to a contents comparison. All source control plug-ins must, at a minimum, support a contents comparison.  
   
 > [!NOTE]
->  クイック違いフラグは、相互に排他的です。 フラグが渡されない有効ですを同時に 1 つ以上を渡すことはできません。`SCC_DIFF_QUICK_DIFF`, をテストするにはすべてのフラグを結合するマスクを使用できますが、決してをパラメーターとして渡す必要があります。  
+>  The quick difference flags are mutually exclusive. It is valid to pass no flags, but it is not valid to simultaneously pass more than one. `SCC_DIFF_QUICK_DIFF`, which is a mask that combines all flags, can be used to test, but it should never be passed as a parameter.  
   
-|`fOption`|説明|  
-|---------------|--------|  
-|SCC\_DIFF\_IGNORECASE|大文字と小文字は \(クイックまたはビジュアルの差異に対する使用可能性があります\)。|  
-|SCC\_DIFF\_IGNORESPACE|\(クイックまたはビジュアルの差異に対する使用可能性があります\) の空白は無視されます。|  
-|SCC\_DIFF\_QD\_CONTENTS|何も行わずに、1 バイトずつファイルを比較します。|  
-|SCC\_DIFF\_QD\_CHECKSUM|サイレント モードでサポートされている場合、チェックサムを使用してファイルを比較します。 サポートされていない場合は、内容の比較にフォールバックします。|  
-|SCC\_DIFF\_QD\_TIME|サイレント モードでサポートされている場合、タイムスタンプを使用してファイルを比較します。 サポートされていない場合は、内容の比較にフォールバックします。|  
+|`fOption`|Meaning|  
+|---------------|-------------|  
+|SCC_DIFF_IGNORECASE|Case-insensitive comparison (may be used for either quick or visual difference).|  
+|SCC_DIFF_IGNORESPACE|Ignores white space (may be used for either quick or visual difference).|  
+|SCC_DIFF_QD_CONTENTS|Silently compares the file, byte by byte.|  
+|SCC_DIFF_QD_CHECKSUM|Silently compares the file via a checksum when supported. If not supported, falls back to a comparison of contents.|  
+|SCC_DIFF_QD_TIME|Silently compares the file via its timestamp when supported. If not supported, falls back to a comparison of contents.|  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: "FIELD_KIND |Microsoft ドキュメント"
+title: FIELD_KIND | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: f92dc8a17024e9189255156e1e23dabb1ab5ba62
-ms.lasthandoff: 04/05/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 533365fcdaa14a3178809cf04116a4358cd0ba51
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="fieldkind"></a>FIELD_KIND
-含まれるフィールドの種類を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
+Specifies the kind of field contained in an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_FIELD_KIND {   
    FIELD_KIND_NONE       = 0x00000000,  
   
@@ -90,7 +91,7 @@ enum enum_FIELD_KIND {
 typedef DWORD FIELD_KIND;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_FIELD_KIND {  
    FIELD_KIND_NONE       = 0x00000000,  
   
@@ -138,120 +139,120 @@ public enum enum_FIELD_KIND {
 };  
 ```  
   
-## <a name="members"></a>メンバー  
+## <a name="members"></a>Members  
  FIELD_KIND_TYPE  
- フィールドが、型のみであることを示します。  
+ Indicates that the field is a type only.  
   
  FIELD_KIND_SYMBOL  
- フィールドは、型、名、およびその他の情報を持つ、シンボルであることを示します。  
+ Indicates that the field is a symbol, with type, name, and other information.  
   
  FIELD_TYPE_PRIMITIVE  
- フィールドは、プリミティブ データ型であることを示します。  
+ Indicates that the field is a primitive data type.  
   
  FIELD_TYPE_STRUCT  
- フィールドは構造体であることを示します。  
+ Indicates that the field is a structure.  
   
  FIELD_TYPE_CLASS  
- フィールドがクラスであることを示します。  
+ Indicates that the field is a class.  
   
  FIELD_TYPE_INTERFACE  
- フィールドがインターフェイスであることを示します。  
+ Indicates that the field is an interface.  
   
  FIELD_TYPE_UNION  
- フィールドが共用体であることを示します。  
+ Indicates that the field is a union.  
   
  FIELD_TYPE_ARRAY  
- フィールドが配列であることを示します。  
+ Indicates that the field is an array.  
   
  FIELD_TYPE_METHOD  
- フィールドがメソッドであることを示します。  
+ Indicates that the field is a method.  
   
  FIELD_TYPE_BLOCK  
- フィールドが、ブロックであることを示します。  
+ Indicates that the field is a block.  
   
  FIELD_TYPE_POINTER  
- フィールドがポインターであることを示します。  
+ Indicates that the field is a pointer.  
   
  FIELD_TYPE_ENUM  
- フィールドが列挙型であることを示します。  
+ Indicates that the field is an enumerated data type.  
   
  FIELD_TYPE_LABEL  
- フィールドがラベルであることを示します。  
+ Indicates that the field is a label.  
   
  FIELD_TYPE_TYPEDEF  
- フィールドが typedef であることを示します。  
+ Indicates that the field is a typedef.  
   
  FIELD_TYPE_BITFIELD  
- フィールドがビット フィールドであることを示します。  
+ Indicates that the field is a bitfield.  
   
  FIELD_TYPE_NAMESPACE  
- フィールドが、名前空間であることを示します。  
+ Indicates that the field is a namespace.  
   
  FIELD_TYPE_MODULE  
- フィールドがモジュールであることを示します。  
+ Indicates that the field is a module.  
   
  FIELD_TYPE_DYNAMIC  
- フィールドが動的であることを示します。  
+ Indicates that the field is dynamic.  
   
  FIELD_TYPE_PROP  
- フィールド、プロパティであることを示します。  
+ Indicates that the field is a property.  
   
  FIELD_TYPE_INNERCLASS  
- フィールドは、内部クラスであることを示します。  
+ Indicates that the field is an inner class.  
   
  FIELD_TYPE_REFERENCE  
- フィールドが参照であることを示します。  
+ Indicates that the field is a reference.  
   
  FIELD_TYPE_EXTENDED  
- 将来使用するために予約されています。  
+ Reserved for future use.  
   
  FIELD_SYM_MEMBER  
- フィールドがメンバーであることを示します。  
+ Indicates that the field is a member.  
   
  FIELD_SYM_LOCAL  
- フィールドがローカルであることを示します。  
+ Indicates that the field is local.  
   
  FIELD_SYM_PARAMETER  
- フィールドが、パラメーターであることを示します。  
+ Indicates that the field is a parameter.  
   
  FIELD_SYM_THIS  
- フィールドが"this"ポインターであることを示します。  
+ Indicates that the field is the "this" pointer.  
   
  FIELD_SYM_GLOBAL  
- フィールドがグローバルであることを示します。  
+ Indicates that the field is global.  
   
  FIELD_SYM_PROP_GETTER  
- フィールドがプロパティを取得することを示します。  
+ Indicates that the field retrieves properties.  
   
  FIELD_SYM_PROP_SETTER  
- フィールドがプロパティを設定することを示します。  
+ Indicates that the field sets properties.  
   
  FIELD_SYM_EXTENDED  
- 将来使用するために予約されています。  
+ Reserved for future use.  
   
  FIELD_KIND_MASK  
- フィールドの種類のマスクを示します。  
+ Indicates a mask for field kinds.  
   
  FIELD_TYPE_MASK  
- フィールドの種類のマスクを示します。  
+ Indicates a mask for field types.  
   
  FIELD_SYM_MASK  
- シンボル情報のマスクを示します。  
+ Indicates a mask for symbol information.  
   
-## <a name="remarks"></a>コメント  
- 呼び出しから返される、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ Returned from a call to the [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) method.  
   
- フィールドの種類に応じて[QueryInterface](/cpp/atl/queryinterface)で呼び出すことができます、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスの複数の特定のフォームのインターフェイスです。 たとえば場合、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)を返します`FIELD_TYPE_METHOD`、し、呼び出すことができます`QueryInterface`i`DebugField`を取得する、 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)インターフェイスです。  
+ Depending on the kind of field, [QueryInterface](/cpp/atl/queryinterface) can be called on the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface for a more specific form of interface. For example, if [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) returns `FIELD_TYPE_METHOD`, you can then call `QueryInterface` on I`DebugField` to obtain the [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) interface.  
   
-## <a name="requirements"></a>要件  
- ヘッダー: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
- [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)   
  [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

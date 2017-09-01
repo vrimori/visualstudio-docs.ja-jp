@@ -1,5 +1,5 @@
 ---
-title: "IDebugBoundBreakpoint2::SetHitCount |Microsoft ドキュメント"
+title: IDebugBoundBreakpoint2::SetHitCount | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,41 +31,42 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6547a6ef77827154b1457b419d9933071f13a0b1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 72f4f12aecaeb3b45af5950a9ec3bc45f37c1969
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugboundbreakpoint2sethitcount"></a>IDebugBoundBreakpoint2::SetHitCount
-バインドされたブレークポイントのヒット カウントを設定します。  
+Sets the hit count for the bound breakpoint.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT SetHitCount(   
    DWORD dwHitCount  
 );  
 ```  
   
-```c#  
+```csharp  
 int SetHitCount(   
    uint dwHitCount  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `dwHitCount`  
- [in]ヒット カウントを設定します。  
+ [in] The hit count to set.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。 返します。`E_BP_DELETED`バインドされたブレークポイント オブジェクトの状態を設定する場合は`BPS_DELETED`(の一部では、 [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙型)。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the state of the bound breakpoint object is set to `BPS_DELETED` (part of the [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeration).  
   
-## <a name="remarks"></a>コメント  
- ヒット カウントは、このブレークポイントは、セッションの現在の実行中に発生した回数の合計です。  
+## <a name="remarks"></a>Remarks  
+ The hit count is the number of times this breakpoint has fired during the current run of the session.  
   
- このメソッドは通常、このブレークポイントで現在のヒット カウントを更新するデバッグ エンジンによって呼び出されます。  
+ This method is typically called by the debug engine to update the current hit count on this breakpoint.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
  [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

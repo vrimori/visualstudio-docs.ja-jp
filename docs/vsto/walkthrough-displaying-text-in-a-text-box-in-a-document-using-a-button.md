@@ -1,121 +1,125 @@
 ---
-title: "チュートリアル : ボタンを使用して文書内のテキスト ボックスにテキストを表示する方法"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "テキスト ボックス, 表示 (文書内のテキストを)"
+title: 'Walkthrough: Displaying Text in a Text Box in a Document Using a Button | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- text boxes, displaying text in documents
 ms.assetid: 04c54ed7-9f00-4068-aaec-1f3200110116
 caps.latest.revision: 60
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 59
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a1ebba5882cb430ca4c03c2127a58abb32b2ee2d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : ボタンを使用して文書内のテキスト ボックスにテキストを表示する方法
-  このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでボタンやテキスト ボックスを使用する方法を示します。  
+# <a name="walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button"></a>Walkthrough: Displaying Text in a Text Box in a Document Using a Button
+  This walkthrough demonstrates how to use buttons and text boxes in a document-level customization for Microsoft Office Word.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   デザイン時にドキュメント レベルのプロジェクトで Word 文書にコントロールを追加する。  
+-   Adding controls to the Word document in a document-level project at design time.  
   
--   ボタンがクリックされたときにテキスト ボックスにデータを読み込む。  
+-   Populating a text box when a button is clicked.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   Microsoft Word  
   
-## プロジェクトの作成  
- 最初に、Word 文書のプロジェクトを作成します。  
+## <a name="creating-the-project"></a>Creating the Project  
+ The first step is to create a Word Document project.  
   
-#### 新しいプロジェクトを作成するには  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  「My Word Button」という名前の Word 文書プロジェクトを作成します。  ウィザードで、**\[新規ドキュメントの作成\]** をクリックします。  
+1.  Create a Word Document project with the name **My Word Button**. In the wizard, select **Create a new document**.  
   
-     詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+     For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     新しい Word 文書が Visual Studio のデザイナーで開かれ、**My Word Button** プロジェクトが**\[ソリューション エクスプローラー\]**に追加されます。  
+     Visual Studio opens the new Word document in the designer and adds the **My Word Button** project to **Solution Explorer**.  
   
-## Word 文書へのコントロールの追加  
- ユーザー インターフェイス コントロールは、Word 文書上のボタンとテキスト ボックスで構成されます。  
+## <a name="adding-controls-to-the-word-document"></a>Adding Controls to the Word Document  
+ The user interface controls consist of a button and a text box on the Word document.  
   
-#### ボタンとテキスト ボックスを追加するには  
+#### <a name="to-add-a-button-and-a-text-box"></a>To add a button and a text box  
   
-1.  Visual Studio デザイナーで文書が開いていることを確認します。  
+1.  Verify that the document is open in the Visual Studio designer.  
   
-2.  **\[ツールボックス\]** の **\[コモン コントロール\]** タブから、<xref:Microsoft.Office.Tools.Word.Controls.TextBox> コントロールを文書にドラッグします。  
+2.  From the **Common Controls** tab of the **Toolbox**, drag a <xref:Microsoft.Office.Tools.Word.Controls.TextBox> control to the document.  
   
     > [!NOTE]  
-    >  Word の既定では、コントロールはテキスト中にインラインでドロップされます。  コントロールや図形オブジェクトの挿入方法を変更するには、Word の **\[オプション\]** ダイアログ ボックスの **\[編集\]** タブで既定の設定を変更します。  
+    >  In Word, controls are dropped in-line with text by default. You can modify the way controls and shape objects are inserted by changing the default on the **Edit** tab of the **Options** dialog box in Word.  
   
-3.  **\[表示\]** メニューの **\[プロパティ ウィンドウ\]** をクリックします。  
+3.  On the **View** menu, click **Properties Window**.  
   
-4.  **\[プロパティ\]** ウィンドウのドロップダウン ボックスで **\[TextBox1\]** を見つけ、このテキスト ボックスの **\[名前\]** プロパティを「**displayText**」に変更します。  
+4.  Find **TextBox1** in the **Properties** window drop-down box and change the **Name** property of the text box to **displayText**.  
   
-5.  **Button** コントロールを文書にドラッグし、次のプロパティを変更します。  
+5.  Drag a **Button** control to the document and change the following properties.  
   
-    |プロパティ|値|  
-    |-----------|-------|  
-    |**名前**|**insertText**|  
-    |**テキスト**|テキストの挿入|  
+    |Property|Value|  
+    |--------------|-----------|  
+    |**Name**|**insertText**|  
+    |**Text**|**Insert Text**|  
   
- これで、ボタンがクリックされたときに実行されるコードを記述できるようになりました。  
+ Now you can write the code that will run when the button is clicked.  
   
-## ボタンがクリックされたときにテキスト ボックスにデータを読み込む  
- ユーザーがボタンをクリックするたびに、テキスト ボックスに **Hello World\!** が追加されます。  
+## <a name="populating-the-text-box-when-the-button-is-clicked"></a>Populating the Text Box When the Button Is Clicked  
+ Every time the user clicks the button, **Hello World!** is added to the text box.  
   
-#### ボタンがクリックされたときにテキスト ボックスに書き込むには  
+#### <a name="to-write-to-the-text-box-when-the-button-is-clicked"></a>To write to the text box when the button is clicked  
   
-1.  **\[ソリューション エクスプローラー\]** で **\[ThisDocument\]** を右クリックし、ショートカット メニューの **\[コードの表示\]** をクリックします。  
+1.  In **Solution Explorer**, right-click **ThisDocument**, and then click **View Code** on the shortcut menu.  
   
-2.  ボタンの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに次のコードを追加します。  
+2.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the button.  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#7](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsWord/CS/ThisDocument.cs#7)]
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#7](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsWord/VB/ThisDocument.vb#7)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsWord#7](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#7)]  [!code-csharp[Trin_VstcoreProgrammingControlsWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#7)]  
   
-3.  C\# では、ボタンのイベント ハンドラーを <xref:Microsoft.Office.Tools.Word.Document.Startup> イベントに追加する必要があります。  イベント ハンドラーの作成方法の詳細については、「[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)」を参照してください。  
+3.  In C#, you must add an event handler for the button to the <xref:Microsoft.Office.Tools.Word.Document.Startup> event. For information about creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
-     [!code-csharp[Trin_VstcoreProgrammingControlsWord#8](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgrammingControlsWord/CS/ThisDocument.cs#8)]  
+     [!code-csharp[Trin_VstcoreProgrammingControlsWord#8](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#8)]  
   
-## アプリケーションのテスト  
- これで、文書をテストできるようになりました。ボタンをクリックした時に、メッセージ "**Hello World\!**" がテキスト ボックスに表示されることを確認します。  
+## <a name="testing-the-application"></a>Testing the Application  
+ You can now test your document to make sure that the message **Hello World!** appears in the text box when you click the button.  
   
-#### 文書をテストするには  
+#### <a name="to-test-your-document"></a>To test your document  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  Press F5 to run your project.  
   
-2.  ボタンをクリックします。  
+2.  Click the button.  
   
-3.  テキスト ボックスに **Hello World\!** と表示されることを確認します。  
+3.  Confirm that **Hello World!** appears in the text box.  
   
-## 次の手順  
- このチュートリアルでは、Word 文書でボタンとテキスト ボックスを使用する際の基本事項について説明しました。  ここでは、次の作業を行います。  
+## <a name="next-steps"></a>Next Steps  
+ This walkthrough shows the basics of using buttons and text boxes on Word documents. Here are some tasks that might come next:  
   
--   コンボ ボックスを使用して書式設定を変更する。  詳細については、「[チュートリアル : CheckBox コントロールを使用したドキュメント書式の変更](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)」を参照してください。  
+-   Using a combo box to change formatting. For more information, see [Walkthrough: Changing Document Formatting Using CheckBox Controls](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md).  
   
--   オプション ボタンを使用してグラフのスタイルを選択する。  詳細については、「[チュートリアル : オプション ボタンを使用してドキュメントのグラフを更新する方法](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)」を参照してください。  
+-   Using radio buttons to select chart styles. For more information, see [Walkthrough: Updating a Chart in a Document Using Radio Buttons](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md).  
   
-## 参照  
- [Office ドキュメントでの Windows フォーム コントロールの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
- [Word を使用したチュートリアル](../vsto/walkthroughs-using-word.md)   
- [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
- [方法 : Office ドキュメントに Windows フォーム コントロールを追加する](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)  
+## <a name="see-also"></a>See Also  
+ [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md)   
+ [Walkthroughs Using Word](../vsto/walkthroughs-using-word.md)   
+ [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md)   
+ [How to: Add Windows Forms Controls to Office Documents](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)  
   
   

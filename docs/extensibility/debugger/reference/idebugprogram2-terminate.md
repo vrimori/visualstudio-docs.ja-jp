@@ -1,48 +1,65 @@
 ---
-title: "IDebugProgram2::Terminate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::Terminate"
-helpviewer_keywords: 
-  - "IDebugProgram2::Terminate"
+title: IDebugProgram2::Terminate | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgram2::Terminate
+helpviewer_keywords:
+- IDebugProgram2::Terminate
 ms.assetid: 4d3127d3-b1e9-4b28-ac22-2f2eea255f86
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugProgram2::Terminate
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 259b7137650c1bc9d17e74a07e79543b884312ac
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-プログラムを終了します。  
+---
+# <a name="idebugprogram2terminate"></a>IDebugProgram2::Terminate
+Terminates the program.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT Terminate(   
-   void   
+```cpp  
+HRESULT Terminate(   
+   void   
 );  
 ```  
   
-```c#  
+```csharp  
 int Terminate();  
 ```  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- 可能であればプログラムが終了されプロセスからアンロードされます ; はデバッグ エンジンは \(DE\)必要なクリーンアップを実行します。  
+## <a name="remarks"></a>Remarks  
+ If possible, the program will be terminated and unloaded from the process; otherwise, the debug engine (DE) will perform any necessary cleanup.  
   
- このメソッドまたは [終了](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) のメソッドでデバッグを停止するのに応じて通常IDE によって呼び出されます。  このメソッドの実装では理想的なプロセス内のプログラムを終了します。  これができない場合de\-DE はプログラムでこのプロセスは実行されるのを防ぐ必要があります \(必要なクリーンアップを行うため\)。  `IDebugProcess2::Terminate` のメソッドが IDE で呼び出された場合このプロセス全体が `IDebugProgram2::Terminate` のメソッドが呼び出された後にある時点で終了します。  
+ This method or the [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) method is called by the IDE, typically in response to the user halting all debugging. The implementation of this method should, ideally, terminate the program within the process. If this is not possible, the DE should prevent the program from running any more in this process (and do any necessary cleanup). If the `IDebugProcess2::Terminate` method was called by the IDE, the entire process will be terminated sometime after the `IDebugProgram2::Terminate` method is called.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
- [終了](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)
+ [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)

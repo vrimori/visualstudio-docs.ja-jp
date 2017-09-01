@@ -13,11 +13,11 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 8d0cc37019b04d6f734d6bd604c0ddd948b6dc9f
+ms.translationtype: HT
+ms.sourcegitcommit: 3037d92e9de377ab4b306a5a0e164e29fa6659e7
+ms.openlocfilehash: 30ac6d277edf54ac56294ea0639a471a22dc00da
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>デバッガーを使用して、または使用せずにプロファイリング ツールを実行する
@@ -38,7 +38,7 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
   
 3.  パフォーマンスを正確に測定する必要がありますか、それともおおよその測定で構いませんか。  
   
-     デバッグ ビルドには、リリース ビルドにはある最適化がありません。たとえば、関数呼び出しと定数のインライン化、不使用のコード パスの除去、変数の保存などは、デバッガーが使用できない方法で行われます。 デバッガー自体によって、パフォーマンス時間が変わります。デバッガーによって必要な特定の操作 (例外の解釈やモジュール読み込みのイベントなど) が実行されるためです。 したがって、デバッガー統合ツールでのパフォーマンスの数値には、数十ミリ秒の誤差が生じます。 デバッガーを使用しないリリース構成のツールによるパフォーマンス数値の方が、精度が高くなります。  
+     デバッグ ビルドには、リリース ビルドにはある最適化がありません。たとえば、関数呼び出しと定数のインライン化、不使用のコード パスの除去、変数の保存などは、デバッガーが使用できない方法で行われます。 デバッガー自体によって、パフォーマンス時間が変わります。デバッガーによって必要な特定の操作 (例外の解釈やモジュール読み込みのイベントなど) が実行されるためです。 デバッガー統合ツールでのパフォーマンス数値は、デバッガーの最適化が考慮されないため、精度は低くなりますが、デバッグ中に行われる他の相対測定と比べると便利です。 デバッガーを使用しないリリース構成のツールによるパフォーマンス数値の方が、精度が高くなります。
   
 ##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> デバッグ中にプロファイリング データを収集する  
  次のセクションでは、ローカル デバッグについて説明します。 後のセクションでは、デバイスでのデバッグやリモート デバッグについて確認できます。  
@@ -63,11 +63,11 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
   
  ウィンドウには検索ボックスがあり、イベント一覧で特定の文字列を検索できます。 たとえば、次の図は、文字列 "install" の検索の結果、一致する 4 つのイベントが見つかったことを示しています。  
   
- ![DiagnosticsEventSearch](~/profiling/media/diagnosticseventsearch.png "DiagnosticsEventSearch")  
+ ![DiagnosticsEventSearch](../profiling/media/diagnosticseventsearch.png "DiagnosticsEventSearch")  
   
  ウィンドウに表示するイベントや表示しないイベントをフィルター処理することもできます。 **[フィルター]** ボックスの一覧で、イベントの特定のカテゴリをオンまたはオフにすることができます。 カテゴリ名は、プレフィックス名と同じです。  
   
- ![DiagnosticEventFilter](~/profiling/media/diagnosticeventfilter.png "DiagnosticEventFilter")  
+ ![DiagnosticEventFilter](../profiling/media/diagnosticeventfilter.png "DiagnosticEventFilter")  
   
  詳細については、「 [Searching and filtering the Events tab of the Diagnostic Tools window](http://blogs.msdn.com/b/visualstudioalm/archive/2015/11/12/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window.aspx)」を参照してください。  
   
@@ -80,7 +80,7 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
   
 3.  診断の起動ページで、セッションで実行する 1 つ以上のツールを選択します。 プロジェクトの種類、オペレーティング システム、およびプログラミング言語に適用されるツールのみが表示されます。 ある診断ツールを選択すると、同じ診断セッションで実行できないツールの選択肢が無効になります。 C# Windows ユニバーサル アプリでの選択例を次に示します。  
   
-     ![診断ツールの選択](~/profiling/media/diag_selecttool.png "DIAG_SelectTool")  
+     ![診断ツールの選択](../profiling/media/diag_selecttool.png "DIAG_SelectTool")  
   
 4.  診断セッションを開始するには、**[開始]** をクリックします。  
   
@@ -88,7 +88,7 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
   
      セッションを実行している間に、ツールによっては診断ツールの起動ページにリアルタイム データが表示されます。  
   
-     ![[パフォーマンスと診断] ページでデータを収集](~/profiling/media/pdhub_collectdata.png "PDHUB_CollectData")  
+     ![[パフォーマンスと診断] ページでデータを収集](../profiling/media/pdhub_collectdata.png "PDHUB_CollectData")  
   
 6.  診断セッションを終了するには、**[コレクションの停止]** をクリックします。  
   
@@ -96,32 +96,32 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
   
  また、診断ツールの起動ページで直前に開かれた一覧から保存された .diagnosis セッション ファイルを開くことができます。  
   
- ![保存済みの診断セッション ファイルを開く](~/profiling/media/pdhub_openexistingdiagsession.png "PDHUB_OpenExistingDiagSession")  
+ ![保存済みの診断セッション ファイルを開く](../profiling/media/pdhub_openexistingdiagsession.png "PDHUB_OpenExistingDiagSession")  
   
 ## <a name="the-profiling-report"></a>プロファイリング レポート  
- ![診断ツール レポート](~/profiling/media/diag_report.png "DIAG_Report")  
+ ![診断ツール レポート](../profiling/media/diag_report.png "DIAG_Report")  
   
 |||  
 |-|-|  
-|![手順 1](~/profiling/media/procguid_1.png "ProcGuid_1")|タイムラインは、プロファイル セッションの長さ、アプリケーションのアクティブ化ライフサイクル イベント、ユーザー マークを示します。|  
-|![手順 2](~/profiling/media/procguid_2.png "ProcGuid_2")|青いバーをドラッグしてタイムラインの領域を選択することにより、レポートをタイムラインの一部だけに制限できます。|  
-|![手順 3](~/profiling/media/procguid_3.png "ProcGuid_3")|ツールには 1 つ以上のマスター グラフが表示されます。 診断セッションが複数のツールによって作成される場合には、すべてのマスター グラフが表示されます。|  
-|![手順 4](~/profiling/media/procguid_4.png "ProcGuid_4")|個々のグラフを展開および折りたたむことができます。|  
-|![手順 5](~/profiling/media/procguid_6.png "ProcGuid_6")|データに複数のツールからの情報が含まれる場合、ツールの詳細情報が収集されてタブに表示されます。|  
-|![手順 6](~/profiling/media/procguid_6a.png "ProcGuid_6a")|ツールには、1 つ以上の詳細ビューが含まれることがあります。 ビューはタイムラインの選択された領域でフィルター処理されます。|  
+|![手順 1](../profiling/media/procguid_1.png "ProcGuid_1")|タイムラインは、プロファイル セッションの長さ、アプリケーションのアクティブ化ライフサイクル イベント、ユーザー マークを示します。|  
+|![手順 2](../profiling/media/procguid_2.png "ProcGuid_2")|青いバーをドラッグしてタイムラインの領域を選択することにより、レポートをタイムラインの一部だけに制限できます。|  
+|![手順 3](../profiling/media/procguid_3.png "ProcGuid_3")|ツールには 1 つ以上のマスター グラフが表示されます。 診断セッションが複数のツールによって作成される場合には、すべてのマスター グラフが表示されます。|  
+|![手順 4](../profiling/media/procguid_4.png "ProcGuid_4")|個々のグラフを展開および折りたたむことができます。|  
+|![手順 5](../profiling/media/procguid_6.png "ProcGuid_6")|データに複数のツールからの情報が含まれる場合、ツールの詳細情報が収集されてタブに表示されます。|  
+|![手順 6](../profiling/media/procguid_6a.png "ProcGuid_6a")|ツールには、1 つ以上の詳細ビューが含まれることがあります。 ビューはタイムラインの選択された領域でフィルター処理されます。|  
   
 ## <a name="setting-the-analysis-target-to-another-device"></a>分析ターゲットを別のデバイスに設定する  
  Visual Studio プロジェクトからのアプリの起動以外に、別のターゲットに対して診断セッションを実行することもできます。 たとえば、Windows アプリ ストアからインストールされたバージョンのアプリのパフォーマンス問題を診断することができます。  
   
- ![診断ツールの分析ターゲットを選択](~/profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")  
+ ![診断ツールの分析ターゲットを選択](../profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")  
   
  既にデバイスにインストール済みのアプリを起動することも、既に実行中の一部のアプリに診断ツールをアタッチすることもできます。 **[実行中のアプリ]** または **[インストール済みのアプリ]** を選択する場合、指定された配置ターゲット上で検出されたアプリの一覧の中からアプリを選択します。  
   
- ![診断用の実行中またはインストール済みのアプリを選択](~/profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")  
+ ![診断用の実行中またはインストール済みのアプリを選択](../profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")  
   
  **[Internet Explorer]** を選択する場合には、URL を指定して、電話の配置ターゲットを変更できます。  
   
- ![Internet Explorer に表示する URL を指定](~/profiling/media/pdhub_choosephoneanalysistarget.png "PDHUB_ChoosePhoneAnalysisTarget")  
+ ![Internet Explorer に表示する URL を指定](../profiling/media/pdhub_choosephoneanalysistarget.png "PDHUB_ChoosePhoneAnalysisTarget")  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
  リモート PC またはタブレットで診断セッションを実行するには、リモート ターゲットに Visual Studio リモート ツールがインストールおよび実行されている必要があります。 デスクトップ アプリについては、「[リモート デバッグ](../debugger/remote-debugging.md)」をご覧ください。  Windows ユニバーサル アプリについては、「[リモート コンピューターでの Windows ストア アプリの実行](../debugger/run-windows-store-apps-on-a-remote-machine.md)」をご覧ください。  
@@ -142,3 +142,4 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
  [Visual Studio 2015 の診断ツール [デバッガー] ウィンドウ](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015.aspx)  
   
  [IntelliTrace in Visual Studio Enterprise 2015 (Visual Studio Enterprise2015 の IntelliTrace)](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/intellitrace-in-visual-studio-ultimate-2015.aspx)
+

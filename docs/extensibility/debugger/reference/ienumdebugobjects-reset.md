@@ -1,47 +1,64 @@
 ---
-title: "IEnumDebugObjects::Reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugObjects::Reset"
-helpviewer_keywords: 
-  - "IEnumDebugObjects::Reset メソッド"
+title: IEnumDebugObjects::Reset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEnumDebugObjects::Reset
+helpviewer_keywords:
+- IEnumDebugObjects::Reset method
 ms.assetid: 4a245e47-cc39-4177-b83d-083ea0e3190f
 caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# IEnumDebugObjects::Reset
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 6e2e7589f7d951c1faaa517b37ea46d549c5260e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-このメソッドは最初の要素には列挙型をリセットします。  
+---
+# <a name="ienumdebugobjectsreset"></a>IEnumDebugObjects::Reset
+This method resets the enumeration to the first element.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT Reset(void);  
 ```  
   
-```c#  
+```csharp  
 int Reset();  
 ```  
   
-#### パラメーター  
- なし  
+#### <a name="parameters"></a>Parameters  
+ None  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- このメソッドが呼び出された後[次へ](../../../extensibility/debugger/reference/ienumdebugobjects-next.md) への呼び出しは列挙型の最初の要素を返します。  
+## <a name="remarks"></a>Remarks  
+ After this method is called, the next call to [Next](../../../extensibility/debugger/reference/ienumdebugobjects-next.md) returns the first element of the enumeration.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)   
- [次へ](../../../extensibility/debugger/reference/ienumdebugobjects-next.md)
+ [Next](../../../extensibility/debugger/reference/ienumdebugobjects-next.md)

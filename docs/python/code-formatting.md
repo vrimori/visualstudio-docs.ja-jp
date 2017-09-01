@@ -1,12 +1,13 @@
 ---
 title: "Visual Studio での Python コードの書式設定 | Microsoft Docs"
 ms.custom: 
-ms.date: 4/10/2017
+ms.date: 7/12/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d0f1631-360b-45d4-a0cb-01c3c10d25f2
@@ -14,25 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: a14bc7e8c9194fff3a1bec2739c9e9c2480e905b
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 9d04c52a595014d06b38205913e3eb1cdd264019
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -43,7 +30,7 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 - 選択範囲の書式を設定するには、**[編集] > [詳細設定] > [選択範囲のフォーマット]** を選択するか、Ctrl + E、F キーを押します。
 - ファイル全体の書式を設定するには、**[編集] > [詳細設定] > [ドキュメントのフォーマット]** を選択するか、Ctrl + E、D キーを押します。
 
-オプションは **[ツール] > [オプション] > [テキスト エディター] > [Python] > [書式設定]** とそのサブタブで設定しますが、既定値は [PEP 8 スタイル ガイド](http://www.python.org/dev/peps/pep-0008/)のスーパーセットに従って設定されます。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。以下のセクションで、他の 3 つのサブページについて説明します。
+オプションは **[ツール] > [オプション] > [テキスト エディター] > [Python] > [書式設定]** とその入れ子になったタブで設定しますが、既定値は [PEP 8 スタイル ガイド](http://www.python.org/dev/peps/pep-0008/)のスーパーセットに従って設定されます。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。このトピックでは、他の 3 つのタブについて説明します。
 
 [Visual Studio の Python のサポート](installation.md)で、**[編集] > [詳細設定]** には、[[コメントを段落幅に合わせる]](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
 
@@ -99,7 +86,7 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 ## <a name="statements"></a>ステートメント
 
-**[ステートメント]** では、さまざまなステートメントをより Python らしい形式に自動的に書き換えるかどうかを指定します。
+**[ステートメント]** オプションでは、さまざまなステートメントをより Python らしい形式に自動的に書き換えるかどうかを指定します。
 
 | オプション | 書式設定前 | 書式設定後 |
 | --- | --- | --- |
@@ -110,7 +97,7 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 ## <a name="wrapping"></a>折り返し
 
-**[折り返し]** では、**[コメントの最大幅]** (既定値は 80) を設定できます。**[長すぎるコメントを折り返します]** オプションを設定した場合、その幅を超えるコメントは自動的に再フォーマットされます。
+**[折り返し]** では、**[コメントの最大幅]** (既定値は 80) を設定できます。 **[長すぎるコメントを折り返します]** オプションを設定した場合、その最大幅を超えるコメントは自動的に再フォーマットされます。
 
 ```python
 # Wrapped to 40 columns
@@ -127,7 +114,7 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 ## <a name="fill-comment-paragraph-command"></a>[Fill Comment Paragraph(コメント段落をページ幅に合わせる)] コマンド
 
-**[編集] > [詳細設定] > [Fill Comment Paragraph (コメント段落をページ幅に合わせる)]** (Ctrl + E、Ctrl + P) を設定すると、コメント テキストがリフローおよび書式設定され、複数の短い行を 1 行にまとめたり長すぎる行を複数の行に分けたりできます。
+**[編集] > [詳細設定] > [Fill Comment Paragraph (コメント段落をページ幅に合わせる)]** (Ctrl + E、P) を設定すると、コメント テキストがリフローおよび書式設定され、複数の短い行を 1 行にまとめたり長すぎる行を複数の行に分けたりできます。
 
 例:
 

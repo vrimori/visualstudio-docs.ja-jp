@@ -1,5 +1,5 @@
 ---
-title: "IDebugEngine2::RemoveAllSetExceptions |Microsoft ドキュメント"
+title: IDebugEngine2::RemoveAllSetExceptions | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,42 +30,43 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b8a8074ea53054057515487f4d50cbe6cec5bb53
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: ea570fe5ab9df8ad2cc004a35113156436161dcd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugengine2removeallsetexceptions"></a>IDebugEngine2::RemoveAllSetExceptions
-IDE が特定のランタイムのアーキテクチャまたは言語の設定で例外の一覧を削除します。  
+Removes the list of exceptions the IDE has set for a particular run-time architecture or language.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT RemoveAllSetExceptions(   
    REFGUID guidType  
 );  
 ```  
   
-```c#  
+```csharp  
 int RemoveAllSetExceptions(   
    ref Guid guidType  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `guidType`  
- [in]言語の GUID またはデバッグ エンジンは実行時のアーキテクチャに固有の guid を指定します。  
+ [in] Either the GUID for the language or the GUID for the debug engine that is specific to a run-time architecture.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>コメント  
- このメソッドによって削除される例外は、以前の呼び出しによって設定された、 [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ The exceptions removed by this method were set by earlier calls to the [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) method.  
   
- 特定の例外を削除するには、呼び出し、 [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)メソッドです。  
+ To remove a specific exception, call the [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) method.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)

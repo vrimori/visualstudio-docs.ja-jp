@@ -1,90 +1,107 @@
 ---
-title: "SccPopulateList 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccPopulateList"
-helpviewer_keywords: 
-  - "SccPopulateList 関数"
+title: SccPopulateList Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccPopulateList
+helpviewer_keywords:
+- SccPopulateList function
 ms.assetid: 7416e781-c571-4a7f-8af3-a089ce8be662
 caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# SccPopulateList 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 8d335f9853531f25bd5c7d137248e3b03297a3d5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-この関数は、特定のソース管理コマンドのファイルのリストを更新し、指定されたすべてのファイルに対してソース管理ステータスを提供します。  
+---
+# <a name="sccpopulatelist-function"></a>SccPopulateList Function
+This function updates a list of files for a particular source control command and supplies source control status on all given files.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccPopulateList (  
-   LPVOID          pvContext,  
-   enum SCCCOMMAND nCommand,  
-   LONG            nFiles,  
-   LPCSTR*         lpFileNames,  
-   POPLISTFUNC     pfnPopulate,  
-   LPVOID          pvCallerData,  
-   LPLONG          lpStatus,  
-   LONG            fOptions  
+   LPVOID          pvContext,  
+   enum SCCCOMMAND nCommand,  
+   LONG            nFiles,  
+   LPCSTR*         lpFileNames,  
+   POPLISTFUNC     pfnPopulate,  
+   LPVOID          pvCallerData,  
+   LPLONG          lpStatus,  
+   LONG            fOptions  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in] The source control plug-in context structure.  
   
- %t%7  
- \[in\]ソース管理のコマンドですべてのファイルに適用される、 `lpFileNames` 配列 \(を参照してください [コマンドのコード](../extensibility/command-code-enumerator.md) 可能なコマンドの一覧については\)。  
+ nCommand  
+ [in] The source control command that will be applied to all files in the `lpFileNames` array (see [Command Code](../extensibility/command-code-enumerator.md) for a list of possible commands).  
   
  nFiles  
- \[in\]内のファイルの数、 `lpFileNames` 配列。  
+ [in] Number of files in the `lpFileNames` array.  
   
  lpFileNames  
- \[in\]IDE に認識されているファイルの名前の配列。  
+ [in] An array of file names known to the IDE.  
   
  pfnPopulate  
- \[in\]IDE のコールバック関数を追加し、ファイルを削除するために呼び出す \(を参照してください [POPLISTFUNC](../extensibility/poplistfunc.md) 詳細\)。  
+ [in] The IDE callback function to call to add and remove files (see [POPLISTFUNC](../extensibility/poplistfunc.md) for details).  
   
  pvCallerData  
- \[in\]コールバック関数に渡される値は変更されません。  
+ [in] Value that is to be passed unchanged to the callback function.  
   
  lpStatus  
- \[入力、出力\]ソース管理を各ファイルのステータスのフラグを返すプラグインの配列。  
+ [in, out] An array for the source control plug-in to return the status flags for each file.  
   
- される  
- \[in\]コマンドのフラグ \(の"PopulateList flag"を参照してください [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md) 詳細\)。  
+ fOptions  
+ [in] Command flags (see the "PopulateList flag" section of [Bitflags Used by Specific Commands](../extensibility/bitflags-used-by-specific-commands.md) for details).  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|値|説明|  
-|-------|--------|  
-|SCC\_OK|成功。|  
-|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Success.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
   
-## 解説  
- この関数は、現在の状態のファイルの一覧を調べます。 使用して、 `pfnPopulate` ファイルに使用される条件に一致しない場合、呼び出し元に通知するコールバック関数、 `nCommand`です。 たとえば、次のコマンドは `SCC_COMMAND_CHECKIN` リスト内のファイルがチェック アウトできませんし、呼び出し元に通知するコールバックを使用します。 場合によっては、ソース管理プラグインには、コマンドの一部である可能性があり、追加する他のファイルがあります。 これにより、たとえば、Visual Basic のユーザーが自分のプロジェクトで使用される Visual Basic プロジェクト ファイルにない .bmp ファイルをチェック アウトできます。 ユーザーが選択、 **取得** IDE でコマンドです。 IDE が発生することができますと思われるすべてのファイルの一覧を表示、ボックスの一覧を表示すると、前に、 `SccPopulateList` 関数が呼び出されて表示される一覧が最新の状態かどうかを確認します。  
+## <a name="remarks"></a>Remarks  
+ This function examines the list of files for its current status. It uses the `pfnPopulate` callback function to notify the caller when a file does not match the criteria for the `nCommand`. For example, if the command is `SCC_COMMAND_CHECKIN` and a file in the list is not checked out, then the callback is used to inform the caller. Occasionally, the source control plug-in may find other files that could be part of the command and add them. This allows, for example, a Visual Basic user to check out a .bmp file that is used by his or her project but does not appear in the Visual Basic project file. A user chooses the **Get** command in the IDE. The IDE will display a list of all files that it thinks the user can get, but before the list is shown, the `SccPopulateList` function is called to make sure the list to be displayed is up to date.  
   
-## 例  
- IDE では、ユーザーを取得できると思われるファイルの一覧を作成します。 この一覧が表示される前に呼び出し、 `SccPopulateList` 関数を追加し、一覧からファイルを削除する機会に、ソース管理プラグインを提供します。 プラグインに指定されたコールバック関数を呼び出すことによってリストを変更 \(表示 [POPLISTFUNC](../extensibility/poplistfunc.md) 詳細については\)。  
+## <a name="example"></a>Example  
+ The IDE builds a list of files that it thinks the user can get. Before it displays this list, it calls the `SccPopulateList` function, giving the source control plug-in the opportunity to add and delete files from the list. The plug-in modifies the list by calling the given callback function (see [POPLISTFUNC](../extensibility/poplistfunc.md) for more details).  
   
- プラグインの継続を呼び出す、 `pfnPopulate` 関数が追加されから戻りますを終了するまで、ファイルが削除、 `SccPopulateList` 関数です。 IDE では、その一覧を表示できます。`lpStatus` 配列は、IDE から渡された元のリストのすべてのファイルを表します。 プラグインの塗りつぶしに取り組んでこれらのファイルさらにすべての状態では、コールバック関数の使用します。  
+ The plug-in continues to call the `pfnPopulate` function, which adds and deletes files, until it is finished and then returns from the `SccPopulateList` function. The IDE can then display its list. The `lpStatus` array represents all files in the original list passed in by the IDE. The plug-in fills in the status of all these files in addition to making use of the callback function.  
   
 > [!NOTE]
->  ソース管理プラグインには、常に、単にすぐに、一覧のままであるため、この関数から返すようにオプションがあります。 プラグインは、この関数を実装する場合、分かりますこれを設定して、 `SCC_CAP_POPULATELIST` 機能ビットフラグ最初の呼び出しで、 [SccInitialize](../extensibility/sccinitialize-function.md)です。 既定では、プラグイン、常に想定してくださいに渡されるすべての項目にファイルがあること。 ただし、IDE を設定する場合、 `SCC_PL_DIR` フラグ、 `fOptions` パラメーターに渡されるすべての項目が見なされるディレクトリです。 プラグインに追加します属しているすべてのファイルのディレクトリ。 IDE は、ファイルとディレクトリの組み合わせで渡してください。  
+>  A source control plug-in always has the option to simply return immediately from this function, leaving the list as it is. If a plug-in implements this function, it can indicate this by setting the `SCC_CAP_POPULATELIST` capability bitflag in the first call to the [SccInitialize](../extensibility/sccinitialize-function.md). By default, the plug-in should always assume that all items being passed in are files. However, if the IDE sets the `SCC_PL_DIR` flag in the `fOptions` parameter, all the items being passed in are to be considered directories. The plug-in should add all the files that belong in the directories. The IDE will never pass in a mixture of files and directories.  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)   
  [POPLISTFUNC](../extensibility/poplistfunc.md)   
- [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)   
- [コマンドのコード](../extensibility/command-code-enumerator.md)
+ [Bitflags Used by Specific Commands](../extensibility/bitflags-used-by-specific-commands.md)   
+ [Command Code](../extensibility/command-code-enumerator.md)

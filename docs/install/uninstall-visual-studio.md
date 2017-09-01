@@ -1,8 +1,8 @@
 ---
-title: "Visual Studio 2017 のアンインストール | Microsoft Docs"
-description: "Visual Studio をアンインストールする方法について、ステップ バイ ステップで説明します。"
+title: Uninstall Visual Studio 2017 | Microsoft Docs
+description: Learn how to uninstall Visual Studio, step-by-step.
 ms.custom: 
-ms.date: 03/27/2017
+ms.date: 08/16/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,54 +16,46 @@ ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b430c85c7ef2979a9052685529cace6879432b96
+ms.translationtype: HT
+ms.sourcegitcommit: 7adecc638a0ea4b198501752930a5c92c9db282c
+ms.openlocfilehash: c1b7c0aa1218090e328f90ca6d44e5a7a47ca219
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
-# <a name="uninstall-visual-studio"></a>Visual Studio のアンインストール
-このページでは、開発者向け生産性向上ツールの統合スイートである、Visual Studio のアンインストールについて説明します。  
+# <a name="uninstall-visual-studio"></a>Uninstall Visual Studio
+This page walks you through uninstalling Visual Studio, our integrated suite of productivity tools for developers.  
 
-1.  コンピューター上で Visual Studio インストーラーを見つけます。  
+1.  Find the Visual Studio Installer on your computer.  
 
-     たとえば、Windows 10 Anniversary Update を実行しているコンピューター上では、**[スタート]** を選択し、**Visual Studio インストーラー**としてリスト表示される **V** の文字までスクロールします。  
+     For example, on a computer running Windows 10 Anniversary Update, select **Start** and scroll to the letter **V**, where it is listed as **Visual Studio Installer**.  
 
-     ![Visual Studio インストーラー](~/install/media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio インストーラーの検索")
+     ![Visual Studio Installer](media/vs2017-locate-the-visual-studio-installer.PNG "Locate the Microsoft Visual Studio Installer")
 
      >[!NOTE]
-     一部のコンピューターでは、Visual Studio インストーラーが **Microsoft Visual Studio インストーラー**として **"M"** の項に表示される場合があります。
+     On some computers, the Visual Studio Installer might be listed under the letter **"M"** as the **Microsoft Visual Studio Installer**.<br/><br/> Alternatively, you can find the Visual Studio Installer in the following location: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-2.  クリックしてインストーラーを起動し、![詳細アイコン](~/install/media/vs2017uninstall-UninstallIcon.png "オプション アイコンを選択") アイコンをクリックして、**[アンインストール]** をクリックします。  
+2.  Click to start the installer, click the ![Details icon](media/vs2017uninstall-UninstallIcon.png "Select the Options icon") icon, and then click **Uninstall**.  
 
-     ![Visual Studio 2017 の変更 (変更、起動、修復、またはアンインストール)](~/install/media/vs2017-uninstall.PNG "Visual Studio 2017 の修復またはアンインストール")  
+     ![Modifying Visual Studio 2017; Modify, Launch, Repair, or Uninstall](media/vs2017-uninstall.PNG "Repair or Uninstall Visual Studio 2017")  
 
-3.  **[OK]** をクリックして選択を確定します。
+3.  Click **OK** to confirm your choice.
 
-     ![Visual Studio 2017 の変更 (製品のアンインストール)](~/install/media/vs2017-uninstall-confirm.PNG "Visual Studio 2017 のアンインストールを確定")  
+     ![Modifying Visual Studio 2017; Uninstall product](media/vs2017-uninstall-confirm.PNG "Confirm to uninstall Visual Studio 2017")  
 
-Visual Studio 2017 を再インストールする場合は、もう一度 Visual Studio インストーラーを起動し、選択画面で **[インストール]** を選びます。
+If you change your mind later and want to reinstall Visual Studio 2017, start the Visual Studio Installer again, and then select **Install** from the selection screen.
 
-## <a name="see-also"></a>関連項目  
-* [Visual Studio のインストール](install-visual-studio.md)
-* [Visual Studio 2017 の変更](modify-visual-studio.md)
-* [Visual Studio の更新](update-visual-studio.md)
-* [Visual Studio 2017 で問題を報告する方法](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+## <a name="uninstall-visual-studio-installer"></a>Uninstall Visual Studio Installer
+To completely remove all installations of Visual Studio 2017 as well as the Visual Studio Installer from your machine, uninstall it from Apps & Features.
+1. Open Apps & Features. For example, in Windows 10, select **Start**, and in the search bar, type **Apps and Features**.  
+2. Find **Microsoft Visual Studio 2017**.  
+3. Click **Uninstall**.  
+
+
+## <a name="see-also"></a>See also  
+* [Install Visual Studio](install-visual-studio.md)
+* [Modify Visual Studio 2017](modify-visual-studio.md)
+* [Update Visual Studio](update-visual-studio.md)
+* [How to Report a Problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

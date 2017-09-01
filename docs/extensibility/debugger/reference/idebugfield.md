@@ -1,5 +1,5 @@
 ---
-title: "IDebugField |Microsoft ドキュメント"
+title: IDebugField | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,61 +30,62 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: b96de879e880fc786f3bcedbe797cb66e68e04b9
-ms.lasthandoff: 04/05/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 1e978ece2ecf56735dc538324b5c148f7f85b9bb
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugfield"></a>IDebugField
-このインターフェイスは、シンボルまたは型の説明は、フィールドを表します。  
+This interface represents a field, that is, a description of a symbol or type.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugField : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>実装についてのメモ  
- シンボル プロバイダーは、すべてのフィールドの基本クラスとして、このインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>Notes for Implementers  
+ A symbol provider implements this interface as the base class for all fields.  
   
-## <a name="notes-for-callers"></a>呼び出し元のノート  
- このインターフェイスは、すべてのフィールドの基本クラスです。 戻り値に基づく[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)、このインターフェイスを使用して複数の特殊なインターフェイスを返す可能性があります[QueryInterface](/cpp/atl/queryinterface)です。 さらに、多くのインターフェイスを返す`IDebugField`さまざまなメソッドからのオブジェクト。  
+## <a name="notes-for-callers"></a>Notes for Callers  
+ This interface is the base class for all fields. Based on the return value of [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md), this interface may return more specialized interfaces by using [QueryInterface](/cpp/atl/queryinterface). In addition, many interfaces return `IDebugField` objects from various methods.  
   
-## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
- 次の表は、メソッドの`IDebugField`します。  
+## <a name="methods-in-vtable-order"></a>Methods in Vtable Order  
+ The following table shows the methods of `IDebugField`.  
   
-|メソッド|説明|  
+|Method|Description|  
 |------------|-----------------|  
-|[GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)|シンボルまたは型の表示可能な情報を取得します。|  
-|[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)|フィールドの種類を取得します。|  
-|[GetType](../../../extensibility/debugger/reference/idebugfield-gettype.md)|フィールドの種類を取得します。|  
-|[GetContainer](../../../extensibility/debugger/reference/idebugfield-getcontainer.md)|フィールドのコンテナーを取得します。|  
-|[GetAddress](../../../extensibility/debugger/reference/idebugfield-getaddress.md)|フィールドのアドレスを取得します。|  
-|[GetSize](../../../extensibility/debugger/reference/idebugfield-getsize.md)|(バイト単位)、フィールドのサイズを取得します。|  
-|[GetExtendedInfo](../../../extensibility/debugger/reference/idebugfield-getextendedinfo.md)|フィールドに関する情報を拡張を取得します。|  
-|[等しいかどうか](../../../extensibility/debugger/reference/idebugfield-equal.md)|2 つのフィールドを比較します。|  
-|[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)|シンボルまたは型の型に依存しない情報を取得します。|  
+|[GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)|Gets displayable information about the symbol or type.|  
+|[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)|Gets the kind of field.|  
+|[GetType](../../../extensibility/debugger/reference/idebugfield-gettype.md)|Gets the type of field.|  
+|[GetContainer](../../../extensibility/debugger/reference/idebugfield-getcontainer.md)|Gets the container of the field.|  
+|[GetAddress](../../../extensibility/debugger/reference/idebugfield-getaddress.md)|Gets the address of the field.|  
+|[GetSize](../../../extensibility/debugger/reference/idebugfield-getsize.md)|Gets the size of a field, in bytes.|  
+|[GetExtendedInfo](../../../extensibility/debugger/reference/idebugfield-getextendedinfo.md)|Gets extended information about a field.|  
+|[Equal](../../../extensibility/debugger/reference/idebugfield-equal.md)|Compares two fields.|  
+|[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)|Gets type-independent information about the symbol or type.|  
   
-## <a name="remarks"></a>コメント  
- 型は C 言語に相当`typedef`です。  
+## <a name="remarks"></a>Remarks  
+ A type is equivalent to a C language `typedef`.  
   
- 次の C++ 言語の例では`weather`、クラス型と`sunny`と`stormy`シンボルします。  
+ In the following C++ language example, `weather` is a class type, and `sunny` and `stormy` are symbols:  
   
-```cpp#  
+```cpp  
 class weather;  
 weather sunny;  
 weather stormy;  
 ```  
   
- フィールドは、シンボルを表すかどうか、または型を呼び出すことで決定できる[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)を調べること、 [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)結果。 場合、`FIELD_KIND_TYPE`ビットが設定されている、このフィールドは、型と場合、`FIELD_KIND_SYMBOL`ビットが設定されているは、シンボル。  
+ Whether a field represents a symbol or type can be determined by calling [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) and examining the [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) result. If the `FIELD_KIND_TYPE` bit is set, the field is a type, and if the `FIELD_KIND_SYMBOL` bit is set, it is a symbol.  
   
-## <a name="requirements"></a>要件  
- ヘッダー: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
- [シンボルプロバイダーのインターフェイス](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
+## <a name="see-also"></a>See Also  
+ [Symbol Provider Interfaces](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

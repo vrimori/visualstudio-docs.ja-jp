@@ -1,93 +1,97 @@
 ---
-title: "チュートリアル : リボン XML によるカスタム タブの作成"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "カスタム タブ [Visual Studio での Office 開発]"
-  - "カスタマイズ (リボンを), tabscustom リボン, タブ"
-  - "リボン [Visual Studio での Office 開発], カスタマイズ"
-  - "リボン [Visual Studio での Office 開発], タブ"
-  - "リボン [Visual Studio での Office 開発], XML"
-  - "XML [Visual Studio での Office 開発], リボン"
+title: 'Walkthrough: Creating a Custom Tab by Using Ribbon XML | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Ribbon [Office development in Visual Studio], tabs
+- customizing the Ribbon, tabscustom Ribbon, tabs
+- Ribbon [Office development in Visual Studio], XML
+- XML [Office development in Visual Studio], Ribbon
+- Ribbon [Office development in Visual Studio], customizing
+- Custom tab [Office development in Visual Studio]
 ms.assetid: f6391a01-df1a-4a0f-bfbb-a9526c73b2b3
 caps.latest.revision: 35
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 34
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: c244548c3c890e449d785473fed9b55935163a9e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : リボン XML によるカスタム タブの作成
-  このチュートリアルでは、**リボン \(XML\)** 項目を使用してカスタム リボン タブを作成する方法について説明します。  
+# <a name="walkthrough-creating-a-custom-tab-by-using-ribbon-xml"></a>Walkthrough: Creating a Custom Tab by Using Ribbon XML
+  This walkthrough demonstrates how to create a custom Ribbon tab by using the **Ribbon (XML)** item.  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   **\[アドイン\]** タブへのボタンの追加。  **\[アドイン\]** タブは、リボン XML ファイルで定義されている既定のタブです。  
+-   Adding buttons to the **Add-Ins** tab. The **Add-Ins** tab is the default tab that is defined in the Ribbon XML file.  
   
--   **\[アドイン\]** タブ上のボタンを使用した Microsoft Office Word の自動化。  
+-   Automating Microsoft Office Word by using the buttons on the **Add-Ins** tab.  
   
 > [!NOTE]  
->  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。  これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   Microsoft Word  
+-   Microsoft Word.  
   
-## プロジェクトの作成  
- まず、Word VSTO アドイン プロジェクトを作成します。   後の手順で、このドキュメントの **\[アドイン\]** タブをカスタマイズします。  
+## <a name="creating-the-project"></a>Creating the Project  
+ The first step is to create a Word VSTO Add-in project. You will later customize the **Add-Ins** tab of this document.  
   
-#### 新しいプロジェクトを作成するには  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  MyRibbonAddIn という名前の **Word アドイン** プロジェクトを作成します。  
+1.  Create a **Word Add-in** project with the name **MyRibbonAddIn**.  
   
-     詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」をご覧ください。  
+     For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって、**ThisAddIn.cs** コード ファイルまたは **ThisAddIn.vb** コード ファイルが開き、**ソリューション エクスプローラー**に **MyRibbonAddIn** プロジェクトが追加されます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] opens the **ThisAddIn.cs** or **ThisAddIn.vb** code file and adds the **MyRibbonAddIn** project to **Solution Explorer**.  
   
-## VSTO \[アドイン\] タブの作成  
- **\[アドイン\]** タブを作成するには、**リボン \(XML\)** 項目をプロジェクトに追加します。  このチュートリアルの後半で、このタブにボタンを追加します。  
+## <a name="creating-the-vsto-add-ins-tab"></a>Creating the VSTO Add-ins Tab  
+ To create the **Add-Ins** tab, add a **Ribbon (XML)** item to your project. Later in this walkthrough, you will add some buttons to this tab.  
   
-#### \[アドイン\] タブを作成するには  
+#### <a name="to-create-the-add-ins-tab"></a>To create the Add-Ins tab  
   
-1.  **\[プロジェクト\]** メニューの **\[新しい項目の追加\]** をクリックします。  
+1.  On the **Project** menu, click **Add New Item**.  
   
-2.  **\[新しい項目の追加\]** ダイアログ ボックスで、**\[リボン \(XML\)\]** をクリックします。  
+2.  In the **Add New Item** dialog box, select **Ribbon (XML)**.  
   
-3.  新しいリボンの名前を "**MyRibbon**" に変更し、**\[追加\]** をクリックします。  
+3.  Change the name of the new Ribbon to **MyRibbon**, and click **Add**.  
   
-     デザイナーに **MyRibbon.cs** ファイルか **MyRibbon.vb** ファイルが開きます。  **MyRibbon.xml** という名前の XML ファイルもプロジェクトに追加されます。  
+     The **MyRibbon.cs** or **MyRibbon.vb** file opens in the designer. An XML file that is named **MyRibbon.xml** is also added to your project.  
   
-4.  **ソリューション エクスプ ローラー**で、**ThisAddin.cs** または **ThisAddin.vb** を右クリックし、**\[コードの表示\]** をクリックします。  
+4.  In **Solution Explorer**, right-click **ThisAddin.cs** or **ThisAddin.vb**, and then click **View Code**.  
   
-5.  次のコードを **ThisAddin** クラスに追加します。  このコードは、CreateRibbonExtensibilityObject メソッドをオーバーライドし、Office アプリケーションにリボン XML クラスを返します。  
+5.  Add the following code to the **ThisAddin** class. This code overrides the CreateRibbonExtensibilityObject method and returns the Ribbon XML class to the Office application.  
   
-     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab_XML/CS/ThisAddIn.cs#1)]
-     [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab_XML/VB/ThisAddIn.vb#1)]  
+     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]  [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]  
   
-6.  **ソリューション エクスプローラー**で、**MyRibbonAddIn** プロジェクトを右クリックし、**\[ビルド\]** をクリックします。  プロジェクトのビルドでエラーが発生しないことを確認します。  
+6.  In **Solution Explorer**, right-click the **MyRibbonAddIn** project and then click **Build**. Verify that the project builds without errors.  
   
-## \[アドイン\] タブへのボタンの追加  
- この VSTO アドインの目的は、定型句や特定の表を作業中のドキュメントに追加する手段をユーザーに提供することです。  このユーザー インターフェイスを提供するには、リボン XML ファイルを変更して、2 つのボタンを **\[アドイン\]** タブに追加します。  このチュートリアルの後半で、これらのボタンのコールバック メソッドを定義します。  リボン XML ファイルの詳細については、「[リボン XML](../vsto/ribbon-xml.md)」をご覧ください。  
+## <a name="adding-buttons-to-the-add-ins-tab"></a>Adding Buttons to the Add-Ins Tab  
+ The goal for this VSTO Add-in is to give users a way to add boilerplate text and a specific table to the active document. To provide the user interface, add two buttons to the **Add-Ins** tab by modifying the Ribbon XML file. Later in this walkthrough, you will define callback methods for the buttons. For more information about the Ribbon XML file, see [Ribbon XML](../vsto/ribbon-xml.md).  
   
-#### \[アドイン\] タブにボタンを追加するには  
+#### <a name="to-add-buttons-to-the-add-ins-tab"></a>To add buttons to the Add-Ins tab  
   
-1.  **ソリューション エクスプローラー**で **MyRibbon.xml** を右クリックし、**\[開く\]** をクリックします。  
+1.  In **Solution Explorer**, right-click **MyRibbon.xml** and then click **Open**.  
   
-2.  **tab** 要素の内容を次の XML に置き換えます。  この XML は、既定のコントロール グループのラベルを **Content** に変更して、**Insert Text** および **Insert Table** というラベルが付いた 2 つのボタンを新しく追加します。  
+2.  Replace the contents of the **tab** element with the following XML. This XML changes the label of the default control group to **Content**, and it adds two new buttons with the labels **Insert Text** and **Insert Table**.  
   
     ```  
     <tab idMso="TabAddIns">  
@@ -102,63 +106,60 @@ caps.handback.revision: 34
     </tab>  
     ```  
   
-## ボタンを使用したドキュメントの自動化  
- ユーザーが **\[Insert Text\]** ボタンや **\[Insert Table\]** ボタンをクリックしたときにアクションが実行されるようにするには、これらのボタンの `onAction` コールバック メソッドを追加する必要があります。  リボン コントロールのコールバック メソッドの詳細については、「[リボン XML](../vsto/ribbon-xml.md)」をご覧ください。  
+## <a name="automating-the-document-by-using-the-buttons"></a>Automating the Document by Using the Buttons  
+ You must add `onAction` callback methods for the **Insert Text** and **Insert Table** buttons to perform actions when the user clicks them. For more information about callback methods for Ribbon controls, see [Ribbon XML](../vsto/ribbon-xml.md).  
   
-#### ボタンのコールバック メソッドを追加するには  
+#### <a name="to-add-callback-methods-for-the-buttons"></a>To add callback methods for the buttons  
   
-1.  **ソリューション エクスプローラー**で **MyRibbon.cs** または **MyRibbon.vb** を右クリックし、**\[開く\]** をクリックします。  
+1.  In **Solution Explorer**, right-click **MyRibbon.cs** or **MyRibbon.vb**, and then click **Open**.  
   
-2.  **MyRibbon.cs** ファイルまたは **MyRibbon.vb** ファイルの先頭に次のコードを追加します。   このコードによって、<xref:Microsoft.Office.Interop.Word> 名前空間のエイリアスが作成されます。  
+2.  Add the following code to the top of the **MyRibbon.cs** or **MyRibbon.vb** file. This code creates an alias for the <xref:Microsoft.Office.Interop.Word> namespace.  
   
-     [!code-csharp[Trin_RibbonButtons#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_RibbonButtons/CS/MyRibbon.cs#1)]
-     [!code-vb[Trin_RibbonButtons#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_RibbonButtons/VB/MyRibbon.vb#1)]  
+     [!code-csharp[Trin_RibbonButtons#1](../vsto/codesnippet/CSharp/Trin_RibbonButtons/MyRibbon.cs#1)]  [!code-vb[Trin_RibbonButtons#1](../vsto/codesnippet/VisualBasic/Trin_RibbonButtons/MyRibbon.vb#1)]  
   
-3.  `MyRibbon` クラスに次のメソッドを追加します。  これは **\[Insert Text\]** ボタンのコールバック メソッドで、作業中のドキュメント内のカーソルの現在位置に文字列を追加します。  
+3.  Add the following method to the `MyRibbon` class. This is a callback method for the **Insert Text** button that adds a string to the active document at the current location of the cursor.  
   
-     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab_XML/CS/MyRibbon.cs#2)]
-     [!code-vb[Trin_Ribbon_Custom_Tab_XML#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab_XML/VB/MyRibbon.vb#2)]  
+     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#2](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.cs#2)]  [!code-vb[Trin_Ribbon_Custom_Tab_XML#2](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.vb#2)]  
   
-4.  `MyRibbon` クラスに次のメソッドを追加します。  これは **\[Insert Table\]** ボタンのコールバック メソッドで、作業中のドキュメント内のカーソルの現在位置に表を追加します。  
+4.  Add the following method to the `MyRibbon` class. This is a callback method for the **Insert Table** button that adds a table to the active document at the current location of the cursor.  
   
-     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab_XML/CS/MyRibbon.cs#3)]
-     [!code-vb[Trin_Ribbon_Custom_Tab_XML#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab_XML/VB/MyRibbon.vb#3)]  
+     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#3](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.cs#3)]  [!code-vb[Trin_Ribbon_Custom_Tab_XML#3](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.vb#3)]  
   
-## VSTO アドインのテスト  
- プロジェクトを実行すると、Word が開き、**\[アドイン\]** タブがリボン上に表示されます。  **\[アドイン\]** タブの **\[Insert Text\]** ボタンと **\[Insert Table\]** ボタンをクリックして、コードをテストします。  
+## <a name="testing-the-vsto-add-in"></a>Testing the VSTO Add-In  
+ When you run the project, Word opens and the tab named **Add-Ins** appears on the Ribbon. Click the **Insert Text** and **Insert Table** buttons on the **Add-Ins** tab to test the code.  
   
-#### VSTO アドインをテストするには  
+#### <a name="to-test-your-vsto-add-in"></a>To test your VSTO Add-in  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  Press F5 to run your project.  
   
-2.  **\[アドイン\]** タブがリボンに表示されていることを確認します。  
+2.  Confirm that the **Add-Ins** tab is visible on the Ribbon.  
   
-3.  **\[アドイン\]** タブをクリックします。  
+3.  Click the **Add-Ins** tab.  
   
-4.  **\[コンテンツ\]** グループがリボンに表示されていることを確認します。  
+4.  Confirm that the **Content** group is visible on the Ribbon.  
   
-5.  **\[コンテンツ\]** グループの **\[Insert Text\]** ボタンをクリックします。  
+5.  Click the **Insert Text** button in the **Content** group.  
   
-     ドキュメント内のカーソルの現在位置に文字列が追加されます。  
+     A string is added to the document at the current location of the cursor.  
   
-6.  **\[コンテンツ\]** グループの **\[Insert Table\]** ボタンをクリックします。  
+6.  Click the **Insert Table** button in the **Content** group.  
   
-     ドキュメント内のカーソルの現在位置に表が追加されます。  
+     A table is added to the document at the current location of the cursor.  
   
-## 次の手順  
- Office UI をカスタマイズする方法の詳細については、次のトピックで説明します。  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to customize the Office UI from these topics:  
   
--   別の Office アプリケーションのリボンをカスタマイズする。  リボンのカスタマイズをサポートするアプリケーションの詳細については、「[リボンの概要](../vsto/ribbon-overview.md)」をご覧ください。  
+-   Customize the Ribbon of a different Office application. For more information about the applications that support customizing the Ribbon, see [Ribbon Overview](../vsto/ribbon-overview.md).  
   
--   リボン デザイナーを使用して Office アプリケーションのリボンをカスタマイズする。  詳細については、「[リボン デザイナー](../vsto/ribbon-designer.md)」をご覧ください。  
+-   Customize the Ribbon of an Office application by using the Ribbon Designer. For more information, see [Ribbon Designer](../vsto/ribbon-designer.md).  
   
--   カスタム操作ウィンドウを作成する。  詳細については、「[操作ウィンドウの概要](../vsto/actions-pane-overview.md)」をご覧ください。  
+-   Create a custom actions pane. For more information, see [Actions Pane Overview](../vsto/actions-pane-overview.md).  
   
--   Outlook フォーム領域を使用して Microsoft Office Outlook の UI をカスタマイズする。  詳細については、「[チュートリアル : Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)」をご覧ください。  
+-   Customize the UI of Microsoft Office Outlook by using Outlook Form Regions. For more information, see [Walkthrough: Designing an Outlook Form Region](../vsto/walkthrough-designing-an-outlook-form-region.md).  
   
-## 参照  
- [リボンの概要](../vsto/ribbon-overview.md)   
- [リボン XML](../vsto/ribbon-xml.md)   
- [チュートリアル : リボン デザイナーを使用したカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  
+## <a name="see-also"></a>See Also  
+ [Ribbon Overview](../vsto/ribbon-overview.md)   
+ [Ribbon XML](../vsto/ribbon-xml.md)   
+ [Walkthrough: Creating a Custom Tab by Using the Ribbon Designer](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  
   
   

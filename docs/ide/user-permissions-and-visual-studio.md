@@ -39,8 +39,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/30/2017
 
 ---
-# ユーザー アクセス許可と Visual Studio
-<a id="user-permissions-and-visual-studio" class="xliff"></a>
+# <a name="user-permissions-and-visual-studio"></a>ユーザー アクセス許可と Visual Studio
 セキュリティ上の理由により、Visual Studio はできる限り通常のユーザーとして実行してください。  
 
 > [!WARNING]
@@ -66,12 +65,10 @@ ms.lasthandoff: 05/30/2017
 |パフォーマンス ツール|アプリケーションをプロファイルする。|[パフォーマンス プロファイリングのビギナーズ ガイド](../profiling/beginners-guide-to-performance-profiling.md)|  
 |配置|ローカル コンピューターでインターネット インフォメーション サービス (IIS) に Web アプリケーションを配置する。|[Visual Studio または Visual Web Developer を使用しているホスティング プロバイダーへの ASP.NET Web アプリケーションの配置: テスト環境としての IIS への配置](http://go.microsoft.com/fwlink/?LinkId=266478)|
 
-## 管理者としての Visual Studio の実行
-<a id="running-visual-studio-as-an-administrator" class="xliff"></a>  
+## <a name="running-visual-studio-as-an-administrator"></a>管理者としての Visual Studio の実行  
  IDE を起動するたびに管理アクセス許可を使用して Visual Studio を起動するか、管理アクセス許可で常に実行するようにアプリケーション ショートカットを変更できます。 詳細については、Windows のヘルプを参照してください。  
 
-#### [!INCLUDE[win8](../debugger/includes/win8_md.md)]、[!INCLUDE[win81](../debugger/includes/win81_md.md)]、[!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)]、または [!INCLUDE[winblue_server_2](../ide/includes/winblue_server_2_md.md)] で管理アクセス許可を使用して Visual Studio を実行するには
-<a id="to-run-visual-studio-with-administrative-permissions-on-includewin8debuggerincludeswin8mdmd-includewin81debuggerincludeswin81mdmd-includewinserver8debuggerincludeswinserver8mdmd-or-includewinblueserver2ideincludeswinblueserver2mdmd" class="xliff"></a>  
+#### <a name="to-run-visual-studio-with-administrative-permissions-on-includewin8debuggerincludeswin8mdmd-includewin81debuggerincludeswin81mdmd-includewinserver8debuggerincludeswinserver8mdmd-or-includewinblueserver2ideincludeswinblueserver2mdmd"></a>[!INCLUDE[win8](../debugger/includes/win8_md.md)]、[!INCLUDE[win81](../debugger/includes/win81_md.md)]、[!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)]、または [!INCLUDE[winblue_server_2](../ide/includes/winblue_server_2_md.md)] で管理アクセス許可を使用して Visual Studio を実行するには  
 
 1.  **[スタート]** 画面で、「**Visual Studio**」と入力します。 インストールされている Visual Studio のバージョンが表示されます。  
 
@@ -79,8 +76,7 @@ ms.lasthandoff: 05/30/2017
 
      Visual Studio の起動時には、**[(管理者)]** がタイトル バーの製品名の後に表示されます。  
 
-#### または [!INCLUDE[win7](../debugger/includes/win7_md.md)] で管理アクセス許可を使用して Visual Studio を実行するには[!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)]
-<a id="to-run-visual-studio-with-administrative-permissions-on-includewin7debuggerincludeswin7mdmd-or-includewinsvr08r2debuggerincludeswinsvr08r2mdmd" class="xliff"></a>  
+#### <a name="to-run-visual-studio-with-administrative-permissions-on-includewin7debuggerincludeswin7mdmd-or-includewinsvr08r2debuggerincludeswinsvr08r2mdmd"></a>または [!INCLUDE[win7](../debugger/includes/win7_md.md)] で管理アクセス許可を使用して Visual Studio を実行するには[!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)]  
 
 1.  **[スタート]** メニューをクリックし、**[すべてのプログラム]** をクリックします。  
 
@@ -88,8 +84,7 @@ ms.lasthandoff: 05/30/2017
 
      Visual Studio の起動時には、**[(管理者)]** がタイトル バーの製品名の後に表示されます。  
 
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
  [Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/port-migrate-and-upgrade-visual-studio-projects.md)   
  [Visual Studio のインストール](../install/install-visual-studio.md)
 

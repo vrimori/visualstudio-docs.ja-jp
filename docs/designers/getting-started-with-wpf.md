@@ -1,7 +1,7 @@
 ---
 title: "WPF の概要 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 7/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -13,26 +13,11 @@ caps.latest.revision: 5
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: a737c447bc97738c6e8f5285f672e9964578061b
+ms.translationtype: HT
+ms.sourcegitcommit: 0387b9a656f97d9354f95f121cad8422e93a69bc
+ms.openlocfilehash: b1d99a132c6e29239862e9bd7629eb47a679138f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="getting-started-with-wpf"></a>WPF の概要
@@ -43,13 +28,14 @@ Windows Presentation Foundation (WPF) は、デスクトップ クライアン�
 |||  
 |-|-|  
 |すぐに使用を開始する…|[チュートリアル: 初めての WPF デスクトップ アプリケーション](../designers/walkthrough-my-first-wpf-desktop-application2.md)<br /><br /> [チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)|  
-|アプリケーションの UI のデザイン方法|[Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)|  
-|.NET の初心者向け|[.NET Framework の概要](https://msdn.microsoft.com/en-us/library/zw4w595w\(v=vs.140\).aspx)<br /><br /> [アプリケーションの基本事項](http://msdn.microsoft.com/Library/653da4ba-3752-4d1f-a08a-de017dc86ecc)<br /><br /> [Visual C# と Visual Basic の概要](https://msdn.microsoft.com/en-us/library/dd492171\(v=vs.140\).aspx)|  
-|WPF の詳細な説明...|[WPF の概要](../designers/introduction-to-wpf.md)<br /><br /> [XAML の概要 (WPF)](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)<br /><br /> [コントロール](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)<br /><br /> [データ バインディングの概要](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)<br /><br /> [LINQ to XML による WPF のデータ バインディング](../designers/wpf-data-binding-with-linq-to-xml.md)|  
-|Windows フォームの開発者向け|[Windows フォーム コントロールおよび同等の WPF コントロール](https://msdn.microsoft.com/en-us/library/ms750559\(v=vs.100\).aspx)<br /><br /> [WPF と Windows フォームの相互運用性に関してサポートするシナリオ](https://msdn.microsoft.com/en-us/library/ms751797\(v=vs.100\).aspx)|  
+| XAML デザイン ツールの比較 |[Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)|  
+|.NET の初心者向け|[.NET Framework の概要](https://msdn.microsoft.com/en-us/library/zw4w595w\(v=vs.140\).aspx)<br /><br /> [アプリケーションの基本事項](/dotnet/standard/application-essentials)<br /><br /> [Visual C# と Visual Basic の概要](../ide/getting-started-with-visual-csharp-and-visual-basic.md)|  
+|WPF の詳細な説明...|[WPF の概要](../designers/introduction-to-wpf.md)<br /><br /> [XAML の概要 (WPF)](https://docs.microsoft.com/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br /> [コントロール](https://docs.microsoft.com/dotnet/framework/wpf/controls/)<br /><br /> [データ バインディングの概要](https://docs.microsoft.com/dotnet/framework/wpf/data/data-binding-overview)<br /><br /> [LINQ to XML による WPF のデータ バインディング](../designers/wpf-data-binding-with-linq-to-xml.md)|  
+|Windows フォームの開発者向け|[Windows フォーム コントロールおよび同等の WPF コントロール](https://docs.microsoft.com/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br /> [WPF と Windows フォームの相互運用性に関してサポートするシナリオ](https://docs.microsoft.com/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|  
   
 ## <a name="see-also"></a>関連項目  
- [クラス ライブラリ (WPF)](https://msdn.microsoft.com/en-us/library/ms753307\(v=vs.100\).aspx)   
- [アプリケーション開発の概要](https://msdn.microsoft.com/en-us/library/bb613549\(v=vs.100\).aspx)   
- [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=187437)   
+ [クラス ライブラリ (WPF)](https://docs.microsoft.com/dotnet/framework/wpf/class-library-wpf)   
+ [アプリケーション開発の概要](https://docs.microsoft.com/dotnet/framework/wpf/app-development/index)   
+ [.NET ドキュメント ホーム](https://docs.microsoft.com/dotnet/index)   
  [Windows Presentation Foundation での最新のデスクトップ アプリケーションの作成](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
+

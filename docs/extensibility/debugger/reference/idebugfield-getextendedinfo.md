@@ -1,66 +1,83 @@
 ---
-title: "IDebugField::GetExtendedInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugField::GetExtendedInfo"
-helpviewer_keywords: 
-  - "IDebugField::GetExtendedInfo メソッド"
+title: IDebugField::GetExtendedInfo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugField::GetExtendedInfo
+helpviewer_keywords:
+- IDebugField::GetExtendedInfo method
 ms.assetid: 46c0dd4d-4fd5-4efd-a908-71e4248e8e8d
 caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# IDebugField::GetExtendedInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3610a9e61d6140fee11a6db4a30060fa02207981
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-このメソッドはフィールドに関する情報を拡張します。  
+---
+# <a name="idebugfieldgetextendedinfo"></a>IDebugField::GetExtendedInfo
+This method gets extended information about a field.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetExtendedInfo(   
-   REFGUID guidExtendedInfo,  
-   BYTE**  prgBuffer,  
-   DWORD*  pdwLen  
+```cpp  
+HRESULT GetExtendedInfo(   
+   REFGUID guidExtendedInfo,  
+   BYTE**  prgBuffer,  
+   DWORD*  pdwLen  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetExtendedInfo(  
-   ref Guid guidExtendedInfo,   
-   IntPtr[] prgBuffer,   
-   ref uint pdwLen  
+   ref Guid guidExtendedInfo,   
+   IntPtr[] prgBuffer,   
+   ref uint pdwLen  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `guidExtendedInfo`  
- \[出力\] 返される情報をクリックします。  次の値を指定できます。  
+ [in] Selects the information to be returned. Valid values are:  
   
-|値|Description|  
-|-------|-----------------|  
-|`guidConstantValue`|バイトのシーケンスとしての値。|  
-|`guidConstantType`|型シグネチャとして型。|  
+|Value|Description|  
+|-----------|-----------------|  
+|`guidConstantValue`|The value as a sequence of bytes.|  
+|`guidConstantType`|The type as a type signature.|  
   
  `prgBuffer`  
- \[入力\] 拡張情報を返します。  
+ [out] Returns the extended information.  
   
  `pdwLen`  
- \[入力出力\] のバイト拡張情報のサイズを返します。  
+ [in, out] Returns the size of the extended information, in bytes.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 解説  
- 現在このメソッドは型のみまたは定数の値。  呼び出し元はCOM `CoTaskMemFree` の関数 \(C\+\+\) または \(C\#\) <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> を呼び出して `prgBuffer` に返されるバッファーを解放する必要があります。  
+## <a name="remarks"></a>Remarks  
+ Currently, this method returns only the type or value of a constant. The caller must free the buffer returned in `prgBuffer` by calling COM's `CoTaskMemFree` function (C++) or <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> (C#).  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

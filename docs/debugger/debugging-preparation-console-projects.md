@@ -1,67 +1,84 @@
 ---
-title: "デバッグの準備 : コンソール プロジェクト | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "コンソール アプリケーション, デバッグ"
-  - "デバッグ [Visual Studio], コンソール アプリケーション"
-  - "デバッグ (コンソール アプリケーションの)"
+title: 'Debugging Preparation: Console Projects | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugging [Visual Studio], console applications
+- debugging console applications
+- console applications, debugging
 ms.assetid: 9641f1d9-2d5a-48b1-8731-6525e8f67892
 caps.latest.revision: 26
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# デバッグの準備 : コンソール プロジェクト
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 5cb0008579e05b4b6f6281057106547c647734db
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-コンソール プロジェクトのデバッグの準備は Windows プロジェクトのデバッグの準備に似ていますが、次の点を考慮する必要があります。  詳細については、「[Windows フォーム アプリケーション](../debugger/debugging-preparation-windows-forms-applications.md)」および「[Debugging Preparation: Windows Forms Applications \(.NET\)](http://msdn.microsoft.com/ja-jp/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)」を参照してください。  コンソール アプリケーションはどれも類似しているため、このトピックでは次のプロジェクトの種類について説明します。  
+---
+# <a name="debugging-preparation-console-projects"></a>Debugging Preparation: Console Projects
+Preparing to debug a Console project is similar to preparing to debug a Windows project, with some additional considerations. For more information, see [Windows Forms Applications](../debugger/debugging-preparation-windows-forms-applications.md), and [Debugging Preparation: Windows Forms Applications (.NET)](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5). Because of the similarity of all console applications, this topic covers the following project types:  
   
--   C\# コンソール アプリケーション  
+-   C# Console Application  
   
--   Visual Basic コンソール アプリケーション  
+-   Visual Basic Console Application  
   
--   C\+\+ コンソール アプリケーション \(.NET\)  
+-   C++ Console Application (.NET)  
   
--   C\+\+ コンソール アプリケーション \(Win32\)  
+-   C++ Console Application (Win32)  
   
- コンソール アプリケーションのコマンド ライン引数を指定する必要がある場合があります。  詳細については、「[C\+\+ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)」、「[Visual Basic デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)」、または「[C\# デバッグ構成のプロジェクト設定](../debugger/project-settings-for-csharp-debug-configurations.md)」を参照してください。  
+ You might have to specify command-line arguments for your console application. For more information, see [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md), [Project Settings for a Visual Basic Debug Configuration](../debugger/project-settings-for-a-visual-basic-debug-configuration.md), or [Project Settings for  C# Debug Configurations](../debugger/project-settings-for-csharp-debug-configurations.md).  
   
- すべてのプロジェクト プロパティと同様に、これらの引数はデバッグ セッション間および Visual Studio セッション間で保持されます。  このため、対象のコンソール アプリケーションを以前にデバッグしたことがある場合は、前回のセッションで \[**\<プロジェクト名\> プロパティ ページ**\] ダイアログ ボックスに入力した引数が存在する場合があります。  
+ Like all project properties, these arguments persist between debug sessions and between  Visual Studio sessions. Therefore, if the console application is one that you have debugged previously, remember that there might be arguments from previous sessions entered in the **\<Project> Property Pages** dialog box.  
   
- コンソール アプリケーションは、**\[コンソール\]** ウィンドウを使用して、入力を受け付けたり出力メッセージを表示したりします。  **コンソール** ウィンドウに書き込むには、アプリケーションで Debug オブジェクトではなく **Console** オブジェクトを使用する必要があります。  ただし、**Visual Studio の出力**ウィンドウに書き込むには、通常どおりに Debug オブジェクトを使用します。  アプリケーションの書き込み先を理解し、間違った場所でメッセージを探すことのないようにしてください。  詳細については、「[Console クラス](https://msdn.microsoft.com/en-us/library/system.console.aspx)」、「[Debug クラス](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.aspx)」、および「[&#91;出力&#93; ウィンドウ](../ide/reference/output-window.md)」を参照してください。  
+ A console application uses the **Console** window to accept input and to display output messages. To write to the **Console** window, your application must use the **Console** object instead of the Debug object. To write to the **Visual Studio Output** window, use the Debug object, as usual. Be sure that you know where your application is writing or you might be looking for messages in the wrong place. For more information, see [Console Class](/dotnet/api/system.console), [Debug Class](/dotnet/api/system.diagnostics.debug), and [Output Window](../ide/reference/output-window.md).  
   
-## アプリケーションの起動  
- いくつかのコンソール アプリケーションが起動すると、それらのアプリケーションは最後まで実行されてから終了します。  この動作のため、実行を中断してデバッグする時間が十分ない場合があります。  アプリケーションをデバッグできるようにするには、次のいずれかの手順に従ってアプリケーションを起動します。  
+## <a name="starting-the-application"></a>Starting the application  
+ When some console applications start, they run to completion and then exit. This behavior might not give you enough time to break execution and debug. To be able to debug an application, use one of the following procedures to start the application:  
   
--   アプリケーションを起動し、ブレークポイントに達するまで実行する。  
+-   Your application starts executing and runs until it reaches the breakpoint.  
   
--   アプリケーションを起動し、ソース コードの最初の行ですぐに中断する。  
+-   Your application starts and immediately breaks at the first line of source code.  
   
--   ソース コード ウィンドウで、行を右クリックし、**\[カーソル行の前まで実行\]** をクリックする。  
+-   In a source code window, right-click a line and select **Run to cursor**.  
   
-     アプリケーションが起動され、選択した行まで実行されます。または、その行に達する前にブレークポイントがヒットした場合は、ブレークポイントまで実行されます。  
+     Your application starts and runs to the selected line, or to a breakpoint, if the breakpoint is hit before the line.  
   
- コンソール アプリケーションをデバッグする場合、Visual Studio からではなく、コマンド プロンプトからアプリケーションを起動することもできます。  その場合は、コマンド プロンプトからアプリケーションを起動し、Visual Studio デバッガーをアプリケーションにアタッチします。  詳細については、「[実行中のプロセスへのアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)」を参照してください。  
+ When you debug a console application, you might want to start the application from the command prompt rather than from Visual Studio. In that case, you can start the application from the command prompt and attach the Visual Studio debugger to it. For more information, see [Attach to Running Processes](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
- Visual Studio からコンソール アプリケーションを起動すると、**\[コンソール\]** ウィンドウが Visual Studio ウィンドウの背後に表示される場合があります。  Visual Studio からコンソール アプリケーションを起動しようとしても、何も起こらない場合は、Visual Studio ウィンドウを移動してみてください。  
+ When you start a console application from Visual Studio, the **Console** window sometimes appears behind the Visual Studio window. If you try to start your console application from Visual Studio and nothing seems to happen, try to move the Visual Studio window.  
   
-## 参照  
- [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   
- [マネージ コードのデバッグ](../debugger/debugging-managed-code.md)   
- [Visual C\+\+ プロジェクトの種類](../debugger/debugging-preparation-visual-cpp-project-types.md)   
- [C\#、F\#、および Visual Basic のプロジェクト](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
- [C\+\+ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
- [デバッガーのセキュリティ](../debugger/debugger-security.md)
+## <a name="see-also"></a>See Also  
+ [Debugging Native Code](../debugger/debugging-native-code.md)   
+ [Debugging Managed Code](../debugger/debugging-managed-code.md)   
+ [Visual C++ Project Types](../debugger/debugging-preparation-visual-cpp-project-types.md)   
+ [C#, F#, and Visual Basic Project Types](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
+ [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
+ [Debugger Security](../debugger/debugger-security.md)

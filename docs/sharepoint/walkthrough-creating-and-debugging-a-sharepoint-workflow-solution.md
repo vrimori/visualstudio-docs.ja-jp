@@ -1,67 +1,72 @@
 ---
-title: "チュートリアル : SharePoint ワークフロー ソリューションの作成とデバッグ"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.Workflow.WorkflowConditions"
-  - "VS.SharePointTools.Workflow.WorkflowList"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, ワークフロー"
-  - "ワークフロー [Visual Studio での SharePoint 開発]"
+title: 'Walkthrough: Creating and Debugging a SharePoint Workflow Solution | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.Workflow.WorkflowConditions
+- VS.SharePointTools.Workflow.WorkflowList
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, workflows
+- workflows [SharePoint development in Visual Studio]
 ms.assetid: 81756490-ab5a-4fa4-96c6-eed2cfbf8374
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7ee27378034bd9c4c8d7cc2700583d22210e4c70
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
+
 ---
-# チュートリアル : SharePoint ワークフロー ソリューションの作成とデバッグ
-  このチュートリアルでは、基本的なシーケンシャル ワークフロー テンプレートを作成する方法について説明します。  ワークフローは、共有ドキュメント ライブラリのプロパティをチェックして、ドキュメントの校閲が終了しているかどうかを確認します。  ドキュメントの校閲が終了している場合、ワークフローは完了します。  
+# <a name="walkthrough-creating-and-debugging-a-sharepoint-workflow-solution"></a>Walkthrough: Creating and Debugging a SharePoint Workflow Solution
+  This walkthrough demonstrates how to create a basic sequential workflow template. The workflow checks a property of a shared document library to determine whether a document has been reviewed. If the document has been reviewed, the workflow finishes.  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   SharePoint リスト定義シーケンシャル ワークフロー プロジェクトを [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で作成する。  
+-   Creating a SharePoint list definition sequential workflow project in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
--   ワークフロー アクティビティを作成する。  
+-   Creating workflow activities.  
   
--   ワークフロー アクティビティのイベントを処理する。  
+-   Handling workflow activity events.  
   
 > [!NOTE]  
->  このチュートリアルではシーケンシャル ワークフロー プロジェクトを使用していますが、ステート マシン ワークフロー プロジェクトでも手順は同じです。  
+>  Although this walkthrough uses a sequential workflow project, the process is identical for a state machine workflow project.  
 >   
->  また、次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前または場所が異なる場合があります。  これらの要素は、使用する Visual Studio のエディションとその設定によって決まります。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+>  Also, your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   サポート対象エディションの Microsoft Windows および SharePoint。  詳細については、「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of Microsoft Windows and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   Visual Studio  
+-   Visual Studio.  
   
-## SharePoint 共有ドキュメント ライブラリへのプロパティの追加  
- **共有ドキュメント** ライブラリでドキュメントの校閲ステータスを追跡するため、SharePoint サイトの共有ドキュメントに、`Status`、`Assignee`、および `Review Comments` という新しいプロパティを 3 つ作成します。  これらのプロパティは**共有ドキュメント** ライブラリで定義します。  
+## <a name="adding-properties-to-the-sharepoint-shared-documents-library"></a>Adding Properties to the SharePoint Shared Documents Library  
+ To track the review status of documents in the **Shared Documents** library, we will create three new properties for shared documents on our SharePoint site: `Status`, `Assignee`, and `Review Comments`. We define these properties in the **Shared Documents** library.  
   
-#### SharePoint 共有ドキュメント ライブラリにプロパティを追加するには  
+#### <a name="to-add-properties-to-the-sharepoint-shared-documents-library"></a>To add properties to the SharePoint shared documents library  
   
-1.  SharePoint サイトを、Web ブラウザーで http:\/\/system\<\>\< システム名 \>\/SitePages\/Home.aspx など\) を開きます。  
+1.  Open a SharePoint site, such as http://\<system name>/SitePages/Home.aspx, in a Web browser.  
   
-2.  クイック起動バーに、**\[ドキュメント\]** を **\[共有\]** をクリックします。  
+2.  On the QuickLaunch bar, choose **SharedDocuments**.  
   
-3.  **\[ライブラリ ツール\]** のリボンに **\[ライブラリ\]** をクリックします、新しい列を作成するには、リボンの **\[列の作成\]** ボタンをクリックします。  
+3.  Choose **Library** on the **Library Tools** ribbon and then choose the **Create Column** button on the ribbon to create a new column.  
   
-4.  列に" Document Status "という名前を付け、**\[選択肢 \(メニューから選択\)\]** に設定され、次の 3 種類の選択を指定し、**\[OK\]** ボタンを選択する:  
+4.  Name the column **Document Status**, set its type to **Choice (menu to choose from)**, specify the following three choices, and then choose the **OK** button:  
   
     -   **Review Needed**  
   
@@ -69,114 +74,114 @@ caps.handback.revision: 27
   
     -   **Changes Requested**  
   
-5.  Assignee と Review Comments という名前でさらに 2 つの列を作成します。  \[Assignee\] 列はテキストを 1 行だけ表示するように設定し、\[Review Comments\] 列は複数行のテキストを表示するように設定します。  
+5.  Create two more columns and name them **Assignee** and **Review Comments**. Set the Assignee column type as a single line of text, and the Review Comments column type as multiple lines of text.  
   
-## チェックアウトせずにドキュメントを編集できるようにする  
- チェックアウトせずにドキュメントを編集できると、ワークフロー テンプレートのテストが容易になります。  次の手順では、これを行うことができるように SharePoint サイトを構成します。  
+## <a name="enabling-documents-to-be-edited-without-requiring-a-check-out"></a>Enabling Documents to be Edited without Requiring a Check Out  
+ It is easier to test the workflow template when you can edit the documents without having to check them out. In the next procedure, you configure the SharePoint site to enable that.  
   
-#### チェックアウトせずにドキュメントを編集できるようにするには  
+#### <a name="to-enable-documents-to-be-edited-without-checking-them-out"></a>To enable documents to be edited without checking them out  
   
-1.  クイック起動バーに、**\[共有ドキュメント\]** リンクをクリックします。  
+1.  On the QuickLaunch bar, choose the **Shared Documents** link.  
   
-2.  **\[ライブラリ ツール\]** のリボンで、**\[ライブラリ\]** タブをクリックし、**\[ドキュメント ライブラリの設定\]** ページを表示するに **\[ライブラリの設定\]** ボタンをクリックします。  
+2.  On the **Library Tools** ribbon, choose the **Library** tab, and then choose the **Library Settings** button to display the **Document Library Settings** page.  
   
-3.  **\[全般設定\]** セクションで、**\[バージョン設定\]** ページを表示するに **\[バージョン設定\]** リンクをクリックします。  
+3.  In the **General Settings** section, choose the **Versioning Settings** link to display the **Versioning Settings** page.  
   
-4.  **\[ドキュメントを編集する前に必ずチェックアウトする\]** の設定が **\[いいえ\]** であることを確認します。  そうでない場合は、**\[いいえ\]** に変更し、**\[OK\]** ボタンをクリックします。  
+4.  Verify that the setting for **Require documents to be checked out before they can be edited** is **No**. If it is not, change it to **No** and then choose the **OK** button.  
   
-5.  ブラウザーを閉じます。  
+5.  Close the browser.  
   
-## SharePoint シーケンシャル ワークフロー プロジェクトの作成  
- シーケンシャル ワークフローは、最後のアクティビティが完了するまで順番に実行される一連の手順です。  この手順では、共有ドキュメント リストに適用するシーケンシャル ワークフローを作成します。  ワークフロー ウィザードを使用すると、サイト定義とリスト定義のいずれかにワークフローを関連付け、ワークフローを開始するタイミングを指定することができます。  
+## <a name="creating-a-sharepoint-sequential-workflow-project"></a>Creating a SharePoint Sequential Workflow Project  
+ A sequential workflow is a set of steps that executes in order until the last activity finishes. In this procedure, we create a sequential workflow that will apply to our Shared Documents list. The workflow wizard lets you associate the workflow with either the site definition or the list definition and lets you determine when the workflow will start.  
   
-#### SharePoint シーケンシャル ワークフロー プロジェクトを作成するには  
+#### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>To create a SharePoint sequential workflow project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  メニュー バーで、**\[新しいプロジェクト\]** ダイアログ ボックスを表示するには、**\[新規作成\]**、**\[プロジェクト\]\[ファイル\]** をクリックします。  
+2.  On the menu bar, choose **File**, **New**, **Project** to display the **New Project** dialog box.  
   
-3.  **\[SharePoint\]** ノードを **\[Visual C\#\]** または **\[Visual Basic\]** で展開し、**2010** ノードを選択します。  
+3.  Expand the **SharePoint** node under either **Visual C#** or **Visual Basic**, and then choose the **2010** node.  
   
-4.  **\[テンプレート\]** のペインで、**\[SharePoint 2010 プロジェクト\]** テンプレートを選択します。  
+4.  In the **Templates** pane, choose the **SharePoint 2010 Project** template.  
   
-5.  **\[名前\]** ボックスで、MySharePointWorkflow "と入力し、**\[OK\]** ボタンをクリックします。  
+5.  In the **Name** box, enter **MySharePointWorkflow** and then choose the **OK** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+     The **SharePoint Customization Wizard** appears.  
   
-6.  **\[デバッグのサイトとセキュリティ レベルの指定\]** ページで、**\[ファーム ソリューションとして配置する\]** のオプション ボタンを選択し、信頼レベルと既定のサイトを受け入れるように **\[完了\]** ボタンをクリックします。  
+6.  In the **Specify the site and security level for debugging** page, choose the **Deploy as a farm solution** option button, and then choose the **Finish** button to accept the trust level and default site.  
   
-     また、この段階で、ソリューションの信頼レベルがファーム ソリューション \(ワークフロー プロジェクトではこれ以外は選択できません\) として設定されます。  詳細については、「[サンドボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)」を参照してください。  
+     This step sets the trust level for the solution as farm solution, the only available option for workflow projects. For more information, see [Sandboxed Solution Considerations](../sharepoint/sandboxed-solution-considerations.md).  
   
-7.  次に **\[ソリューション エクスプローラー\]** で、プロジェクト ノードを選択し、メニュー バーで、**\[プロジェクト\]** をクリックします、**\[新しいアイテムの追加\]** を選択します。  
+7.  In **Solution Explorer**, choose the project node, and then, on the menu bar, choose **Project**, **Add New Item**.  
   
-8.  **\[Visual C\#\]** または **\[Visual Basic\]** で、**\[SharePoint\]** ノードを展開し、**2010** ノードを選択します。  
+8.  Under either **Visual C#** or **Visual Basic**, expand the **SharePoint** node, and then choose the **2010** node.  
   
-9. **\[テンプレート\]** のペインで、**\[シーケンシャル ワークフロー \(ファーム ソリューションのみ\)\]** テンプレートを選択し、**\[追加\]** ボタンをクリックします。  
+9. In the **Templates** pane, choose the **Sequential Workflow (Farm Solution only)** template, and then choose the **Add** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+     The **SharePoint Customization Wizard** appears.  
   
-10. **\[デバッグのワークフロー名の指定\]** ページで、既定の名前 \(**MySharePointWorkflow \- Workflow1**\) を受け入れます。  既定のワークフロー テンプレートの種類、**\[リスト ワークフロー\]** を保持し、次へ **\[次へ\]** ボタンをクリックします。  
+10. In the **Specify the workflow name for debugging** page, accept the default name (**MySharePointWorkflow - Workflow1**). Keep the default workflow template type value, **List Workflow**, and then choose the **Next** button.  
   
-11. **\[デバッグ セッション中に Visual Studio によってワークフローが自動的に関連付けられるようにする\]** ページで、既定の設定を受け入れるように **\[次へ\]** ボタンをクリックします。  
+11. In the **Would you like Visual Studio to automatically associate the workflow in a debug session?** page, choose the **Next** button to accept all of the default settings.  
   
-     この段階で、ワークフローが共有ドキュメント ライブラリに自動的に関連付けられます。  
+     This step automatically associates the workflow with the Shared Documents library.  
   
-12. **\[ワークフローの開始方法に関する条件の指定\]** ページで、既定のオプションを選択 **\[ワークフローの開始方法\]** セクションのままにし、**\[完了\]** ボタンをクリックします。  
+12. In the **Specify the conditions for how your workflow is started** page, leave the default options selected in the **How do you want the workflow to start?** section and choose the **Finish** button.  
   
-     このページでは、ワークフローを開始するタイミングを指定できます。  既定では、ユーザーが SharePoint でワークフローを手動で開始すると、またはワークフローが関連付けられている項目が作成されると、ワークフローが開始します。  
+     This page enables you to specify when your workflow starts. By default, the workflow starts either when a user manually starts it in SharePoint or when an item to which the workflow is associated is created.  
   
-## ワークフロー アクティビティの作成  
- ワークフローには、実行するアクションを表す*アクティビティ*が 1 つ以上含まれています。  ワークフローのアクティビティを調整するには、ワークフロー デザイナーを使用します。  この手順では、HandleExternalEventActivity と OnWorkFlowItemChanged の 2 つのアクティビティをワークフローに追加します。  これらのアクティビティは、**共有ドキュメント** リスト内のドキュメントの校閲ステータスを監視します。  
+## <a name="creating-workflow-activities"></a>Creating Workflow Activities  
+ Workflows contain one or more *activities* that represent actions to perform. Use the workflow designer to arrange activities for a workflow. In this procedure, we will add two activities to the workflow: HandleExternalEventActivity and OnWorkFlowItemChanged. These activities monitor the review status of documents in the **Shared Documents** list  
   
-#### ワークフロー アクティビティを作成するには  
+#### <a name="to-create-workflow-activities"></a>To create workflow activities  
   
-1.  ワークフロー デザイナーにワークフローが表示されている必要があります。  そうでない場合は、**\[ソリューション エクスプローラー\]** の **\[Workflow1.cs\]** または **\[Workflow1.vb\]** を開きます。  
+1.  The workflow should be displayed in the workflow designer. If it is not, then open either **Workflow1.cs** or **Workflow1.vb** in **Solution Explorer**.  
   
-2.  デザイナーで、**\[OnWorkflowActivated1\]** アクティビティをクリックします。  
+2.  In the designer, choose the **OnWorkflowActivated1** activity.  
   
-3.  **\[プロパティ \]** ウィンドウで、**\[呼び出される\]** のプロパティの横に" onWorkflowActivated "と入力し、Enter キーを押します。  
+3.  In the **Properties** window, enter **onWorkflowActivated** next to the **Invoked** property, and then choose the Enter key.  
   
-     コード エディターが開き、onWorkflowActivated という名前のイベント ハンドラー メソッドが Workflow1 コード ファイルに追加されます。  
+     The Code Editor opens, and an event handler method named onWorkflowActivated is added to the Workflow1 code file.  
   
-4.  ワークフロー デザイナーに戻り、ツールボックスを開いて、**\[Windows Workflow v3.0\]** ノードを展開します。  
+4.  Switch back to the workflow designer, open the toolbox, and then expand the **Windows Workflow v3.0** node.  
   
-5.  **\[ツールボックス\]** の **\[Windows Workflow v3.0\]** ノードで、手順の次の 1 組の実行:  
+5.  In the **Windows Workflow v3.0** node of the **Toolbox**, perform one of the following sets of steps:  
   
-    1.  **\[While\]** アクティビティのショートカット メニューを開き、**\[コピー\]** をクリックします。  ワークフロー デザイナーで、行のショートカット メニューを **\[onWorkflowActivated1\]** アクティビティで開き、**\[貼り付け\]** をクリックします。  
+    1.  Open the shortcut menu for the **While** activity, and then choose **Copy**. In the workflow designer, open the shortcut menu for the line under the **onWorkflowActivated1** activity, and then choose **Paste**.  
   
-    2.  **\[ツールボックス\]** からワークフロー デザイナーに **\[While\]** アクティビティをドラッグし、行に **\[onWorkflowActivated1\]** アクティビティでアクティビティを追加します。  
+    2.  Drag the **While** activity from the **Toolbox** to the workflow designer, and connect the activity to the line under the **onWorkflowActivated1** activity.  
   
-6.  **\[WhileActivity1\]** アクティビティをクリックします。  
+6.  Choose the **WhileActivity1** activity.  
   
-7.  **\[プロパティ\]** ウィンドウで、条件をコードに **\[条件\]** を設定します。  
+7.  In the **Properties** window, set **Condition** to Code Condition.  
   
-8.  **\[条件\]** のプロパティを展開し、子の **\[条件\]** のプロパティの横に" isWorkflowPending "と入力し、Enter キーを押します。  
+8.  Expand the **Condition** property, enter **isWorkflowPending** next to the child **Condition** property, and then choose the Enter key.  
   
-     コード エディターが開き、isWorkflowPending という名前のメソッドが Workflow1 コード ファイルに追加されます。  
+     The Code Editor opens, and a method named isWorkflowPending is added to the Workflow1 code file.  
   
-9. ワークフロー デザイナーに戻り、ツールボックスを開いて、**\[SharePoint ワークフロー\]** ノードを展開します。  
+9. Switch back to the workflow designer, open the toolbox, and then expand the **SharePoint Workflow** node.  
   
-10. **\[ツールボックス\]** の **\[SharePoint ワークフロー\]** ノードで、手順の次の 1 組の実行:  
+10. In the **SharePoint Workflow** node of the **Toolbox**, perform one of the following sets of steps:  
   
-    -   **\[OnWorkflowItemChanged\]** アクティビティのショートカット メニューを開き、**\[コピー\]** をクリックします。  ワークフロー デザイナーで、**\[whileActivity1\]** アクティビティ内の行のショートカット メニューを開き、**\[貼り付け\]** をクリックします。  
+    -   Open the shortcut menu for the **OnWorkflowItemChanged** activity, and then choose **Copy**. In the workflow designer, open the shortcut menu for the line inside the **whileActivity1** activity, and then choose **Paste**.  
   
-    -   **\[ツールボックス\]** からワークフロー デザイナーに **\[OnWorkflowItemChanged\]** アクティビティをドラッグし、**\[whileActivity1\]** アクティビティ内の行にアクティビティを追加します。  
+    -   Drag the **OnWorkflowItemChanged** activity from the **Toolbox** to the workflow designer, and connect the activity to the line inside the **whileActivity1** activity.  
   
-11. **\[onWorkflowItemChanged1\]** アクティビティをクリックします。  
+11. Choose the **onWorkflowItemChanged1** activity.  
   
-12. **\[プロパティ\]** ウィンドウで、次の表に示すようにプロパティを設定します。  
+12. In the **Properties** window, set the properties as shown in the following table.  
   
-    |プロパティ|値|  
-    |-----------|-------|  
+    |Property|Value|  
+    |--------------|-----------|  
     |**CorrelationToken**|**workflowToken**|  
     |**Invoked**|**onWorkflowItemChanged**|  
   
-## アクティビティのイベントの処理  
- 最後に、各アクティビティからドキュメントのステータスをチェックします。  ドキュメントの校閲が終了している場合、ワークフローは完了します。  
+## <a name="handling-activity-events"></a>Handling Activity Events  
+ Finally, check the status of the document from each activity. If the document has been reviewed, then the workflow is finished.  
   
-#### アクティビティのイベントを処理するには  
+#### <a name="to-handle-activity-events"></a>To handle activity events  
   
-1.  Workflow1.cs または Workflow1.vb で、`Workflow1` クラスの先頭に次のフィールドを追加します。  アクティビティ内のこのフィールドを使用して、ワークフローを完了させるかどうかを判断します。  
+1.  In Workflow1.cs or Workflow1.vb, add the following field to the top of the `Workflow1` class. This field is used in an activity to determine whether the workflow is finished.  
   
     ```vb  
     Dim workflowPending As Boolean = True  
@@ -186,7 +191,7 @@ caps.handback.revision: 27
     Boolean workflowPending = true;  
     ```  
   
-2.  `Workflow1` クラスに次のメソッドを追加します。  このメソッドは、Documents リストの `Document Status` プロパティの値をチェックして、ドキュメントの校閲が終了しているかどうかを確認します。  `Document Status` プロパティが `Review Complete` に設定されている場合、`checkStatus` メソッドは `workflowPending` フィールドに **false** を設定し、ワークフロー完了の準備が整っていることを示します。  
+2.  Add the following method to the `Workflow1` class. This method checks the value of the `Document Status` property of the Documents list to determine whether the document has been reviewed. If the `Document Status` property is set to `Review Complete`, then the `checkStatus` method sets the `workflowPending` field to **false** to indicate that the workflow is ready to finish.  
   
     ```vb  
     Private Sub checkStatus()  
@@ -204,7 +209,7 @@ caps.handback.revision: 27
     }  
     ```  
   
-3.  `onWorkflowActivated` メソッドと `onWorkflowItemChanged` メソッドに次のコードを追加して、`checkStatus` メソッドを呼び出します。  ワークフローが開始すると、`onWorkflowActivated` メソッドは `checkStatus` メソッドを呼び出して、ドキュメントの校閲が既に行われているかどうかを確認します。  まだ校閲が行われていない場合は、ワークフローは続行します。  ドキュメントが保存されると、`onWorkflowItemChanged` メソッドはもう一度 `checkStatus` メソッドを呼び出して、ドキュメントの校閲が行われたかどうかを確認します。  `workflowPending` フィールドが **true** に設定されている間は、ワークフローは処理を続行します。  
+3.  Add the following code to the `onWorkflowActivated` and `onWorkflowItemChanged` methods to call the `checkStatus` method. When the workflow starts, the `onWorkflowActivated` method calls the `checkStatus` method to determine whether the document has already been reviewed. If it has not been reviewed, the workflow continues. When the document is saved, the `onWorkflowItemChanged` method calls the `checkStatus` method again to determine whether the document has been reviewed. While the `workflowPending` field is set to **true**, the workflow continues to run.  
   
     ```vb  
     Private Sub onWorkflowActivated(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ExternalDataEventArgs)  
@@ -230,7 +235,7 @@ caps.handback.revision: 27
     }  
     ```  
   
-4.  `isWorkflowPending` メソッドに次のコードを追加して、`workflowPending` プロパティのステータスをチェックします。  ドキュメントが保存されるたびに、**whileActivity1** アクティビティは `isWorkflowPending` メソッドを呼び出します。  このメソッドは、<xref:System.Workflow.Activities.ConditionalEventArgs> オブジェクトの <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> プロパティを調べて、**WhileActivity1** アクティビティを続行すべきか完了すべきかを判断します。  プロパティが **true** に設定されていると、アクティビティは続行します。  それ以外の場合は、アクティビティが完了し、ワークフローも完了します。  
+4.  Add the following code to the `isWorkflowPending` method to check the status of the `workflowPending` property. Each time the document is saved, the **whileActivity1** activity calls the `isWorkflowPending` method. This method examines the <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> property of the <xref:System.Workflow.Activities.ConditionalEventArgs> object to determine whether the **WhileActivity1** activity should continue or finish. If the property is set to **true**, the activity continues. Otherwise, the activity finishes and the workflow finishes.  
   
     ```vb  
     Private Sub isWorkflowPending(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ConditionalEventArgs)  
@@ -245,55 +250,55 @@ caps.handback.revision: 27
     }  
     ```  
   
-5.  プロジェクトを保存します。  
+5.  Save the project.  
   
-## SharePoint ワークフロー テンプレートのテスト  
- デバッガーを起動すると、ワークフロー テンプレートが [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって SharePoint サーバーに配置され、ワークフロー が**共有ドキュメント** リストに関連付けられます。  ワークフローをテストするため、**共有ドキュメント** リスト内のドキュメントからワークフローのインスタンスを起動します。  
+## <a name="testing-the-sharepoint-workflow-template"></a>Testing the SharePoint Workflow Template  
+ When you start the debugger, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] deploys the workflow template to the SharePoint server and associates the workflow with the **Shared Documents** list. To test the workflow, start an instance of the workflow from a document in the **Shared Documents** list.  
   
-#### SharePoint ワークフロー テンプレートをテストするには  
+#### <a name="to-test-the-sharepoint-workflow-template"></a>To test the SharePoint workflow template  
   
-1.  Workflow1.cs または Workflow1.vb で **onWorkflowActivated** メソッドの横にブレークポイントを設定します。  
+1.  In Workflow1.cs or Workflow1.vb, set a breakpoint next to the **onWorkflowActivated** method.  
   
-2.  ソリューションをビルドして実行するには、F5 キーを押します。  
+2.  Choose the F5 key to build and run the solution.  
   
-     SharePoint サイトが表示されます。  
+     The SharePoint site appears.  
   
-3.  SharePoint のナビゲーション ペインで、**\[共有ドキュメント\]** リンクをクリックします。  
+3.  In the navigation pane in SharePoint, choose the **Shared Documents** link.  
   
-4.  **\[共有ドキュメント\]** ページで、**\[ライブラリ ツール\]** タブの **\[ドキュメント\]** リンクを選択し、**\[ドキュメントのアップロード\]** ボタンをクリックします。  
+4.  In the **Shared Documents** page, choose the **Documents** link on the **Library Tools** tab, and then choose the **Upload Document** button.  
   
-5.  **\[ドキュメントのアップロード\]** ダイアログ ボックスで、**\[参照\]** ボタンを選択し、ドキュメント ファイルを選択し、**\[開く\]** ボタンをクリックし、**\[OK\]** ボタンをクリックします。  
+5.  In the **Upload Document** dialog box, choose the **Browse** button, choose any document file, choose the **Open** button, and then choose the **OK** button.  
   
-     選択されたドキュメントが**共有ドキュメント** リストにアップロードされ、ワークフローが開始します。  
+     This uploads the selected document into the **Shared Documents** list and starts the workflow.  
   
-6.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で、`onWorkflowActivated` メソッドの横に指定したブレークポイントでデバッガーが停止することを確認します。  
+6.  In [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], verify that the debugger stops at the breakpoint next to the `onWorkflowActivated` method.  
   
-7.  実行を継続する、F5 キーを押します。  
+7.  Choose the F5 key to continue execution.  
   
-8.  ドキュメントの設定をここに変更できますが既定値で **\[保存\]** ボタンをクリックして、それらを今は残ります。  
+8.  You can change the settings for the document here, but leave them at the default values for now by choosing the **Save** button.  
   
-     既定の SharePoint Web サイトの **\[共有ドキュメント\]** ページに戻ります。  
+     This returns you to the **Shared Documents** page of the default SharePoint Web site.  
   
-9. **\[共有ドキュメント \]** ページで、**\[MySharePointWorkflow – Workflow1\]** 列の下にある値が **\[処理中\]** に設定されていることを確認します。  これは、ワークフローが処理中であり、ドキュメントが校閲待ちの状態であることを示します。  
+9. In the **Shared Documents** page, verify that the value underneath the **MySharePointWorkflow - Workflow1** column is set to **In Progress**. This indicates that the workflow is in progress and that the document is awaiting review.  
   
-10. **\[共有ドキュメント\]** ページのドキュメントを選択し、表示をクリックして **\[プロパティの編集\]** メニュー項目を選択すると、矢印を。  
+10. In the **Shared Documents** page, choose the document, choose the arrow that appears, and then choose the **Edit Properties** menu item.  
   
-11. **\[ドキュメントの状態\]** を **\[レビューの完了\]** に設定し、**\[保存\]** ボタンをクリックします。  
+11. Set **Document Status** to **Review Complete**, and then choose the **Save** button.  
   
-     既定の SharePoint Web サイトの **\[共有ドキュメント\]** ページに戻ります。  
+     This returns you to the **Shared Documents** page of the default SharePoint Web site.  
   
-12. **\[共有ドキュメント \]** ページで、**\[ドキュメントの状態\]** 列の下にある値が **\[レビューの完了\]** に設定されていることを確認します。  **\[共有ドキュメント\]** でページを更新し、**\[MySharePointWorkflow – Workflow1\]** 列の下にある値が **\[完了\]** に設定されていることを確認します。  これは、ワークフローが完了し、ドキュメントが校閲済みであることを示します。  
+12. In the **Shared Documents** page, verify that the value underneath the **Document Status** column is set to **Review Complete**. Refresh the **Shared Documents** page and verify that the value underneath the **MySharePointWorkflow - Workflow1** column is set to **Completed**. This indicates that workflow is finished and that the document has been reviewed.  
   
-## 次の手順  
- ワークフロー テンプレートの作成方法の詳細については、以下のトピックを参照してください。  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to create workflow templates from these topics:  
   
--   SharePoint ワークフロー アクティビティの詳細については、"参照してください [SharePoint Foundation のワークフロー アクティビティの概要](http://go.microsoft.com/fwlink/?LinkId=178992)。  
+-   To learn more about SharePoint workflow activities, see [Workflow Activities for SharePoint Foundation](http://go.microsoft.com/fwlink/?LinkId=178992).  
   
--   Windows Workflow Foundation アクティビティの詳細については、"参照してください [System.Workflow.Activities 名前空間](http://go.microsoft.com/fwlink/?LinkId=178993)。  
+-   To learn more about Windows Workflow Foundation activities, see [System.Workflow.Activities Namespace](http://go.microsoft.com/fwlink/?LinkId=178993).  
   
-## 参照  
- [SharePoint ワークフロー ソリューションの作成](../sharepoint/creating-sharepoint-workflow-solutions.md)   
- [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)   
- [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Creating SharePoint Workflow Solutions](../sharepoint/creating-sharepoint-workflow-solutions.md)   
+ [SharePoint Project and Project Item Templates](../sharepoint/sharepoint-project-and-project-item-templates.md)   
+ [Building and Debugging SharePoint Solutions](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   
   

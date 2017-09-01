@@ -1,257 +1,269 @@
 ---
-title: "ブレークポイントの使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/08/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "hero-article"
-f1_keywords: 
-  - "vs.debug.breakpointswin"
-  - "vs.debug.disassembly.insert"
-  - "vs.debug.sourcewin.edit"
-  - "vs.debug.file"
-  - "vs.debug.breakpt.new"
-  - "vs.debug.whenbreakpointishit"
-  - "vs.debug.breakpt.choose"
-  - "vs.debug.breakpt.location.address"
-  - "vs.debug.breakpt.constraints"
-  - "vs.debug.breakpoints.delete"
-  - "vs.debug.breakpt.location.data"
-  - "vc.breakpoints"
-  - "vs.debug.breakpt.condition"
-  - "vs.debug.breakpt.location.function"
-  - "vs.debug.breakpoints"
-  - "vs.debug.menu.insert"
-  - "vs.debug.filenames"
-  - "vs.debug.breakpt.action"
-  - "vs.debug.sourcewin.insert"
-  - "vs.debug.address"
-  - "vs.debug.data"
-  - "vs.debug.func"
-  - "vs.debug.breakpt.location.file"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "ブレークポイント, ブレークポイントの概要"
+title: Use Breakpoints in the Debugger in Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 02/07/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.breakpointswin
+- vs.debug.disassembly.insert
+- vs.debug.sourcewin.edit
+- vs.debug.file
+- vs.debug.breakpt.new
+- vs.debug.whenbreakpointishit
+- vs.debug.breakpt.choose
+- vs.debug.breakpt.location.address
+- vs.debug.breakpt.constraints
+- vs.debug.breakpoints.delete
+- vs.debug.breakpt.location.data
+- vc.breakpoints
+- vs.debug.breakpt.condition
+- vs.debug.breakpt.location.function
+- vs.debug.breakpoints
+- vs.debug.menu.insert
+- vs.debug.filenames
+- vs.debug.breakpt.action
+- vs.debug.sourcewin.insert
+- vs.debug.address
+- vs.debug.data
+- vs.debug.func
+- vs.debug.breakpt.location.file
+helpviewer_keywords:
+- breakpoints, about breakpoints
 ms.assetid: 020b2e97-3b3e-4b2c-872d-b5c6025e120e
 caps.latest.revision: 57
-caps.handback.revision: 56
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# ブレークポイントの使用
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
+ms.openlocfilehash: e88ab5f146507f4a3c1c28f2a3496fa5f01f6180
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-コードの変数の状態や呼び出し履歴の確認などのために、デバッガーの実行を停止するときにブレークポイントを設定できます。 ブレークポイントは、開発者が利用できる重要なデバッグ手法の 1 つです。  
+---
+# <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Use Breakpoints in the Visual Studio Debugger
+You can set breakpoints when you want to stop debugger execution, perhaps to see the state of code variables or to look at the call stack. They are one of the most important debugging techniques in a developer's toolbox.  
   
-##  <a name="BKMK_Overview"></a> ソース コードで関数のブレークポイントを設定する  
- ソース コードに関数のブレークポイントを設定するには、ソース コード ファイルの左側の余白をクリックするか、コード行をポイントし、F9 キーを押します。 ブレークポイントの印として左側の余白に赤い点が表示され、コードの行にも色が設定されます。  
+##  <a name="BKMK_Overview"></a> Setting a line breakpoint in source code  
+ You set a line breakpoint in source code by clicking in the left margin of a source code file, or by putting your cursor on a line of code and pressing F9. The breakpoint appears as a red dot in the left margin, and the line of code is colored as well:  
   
- ![ブレークポイントの設定](~/debugger/media/basicbreakpoint.png "BasicBreakpoint")  
+ ![Set a breakpoint](../debugger/media/basicbreakpoint.png "BasicBreakpoint")  
   
- デバッガーでこのコードを実行してブレークポイントに達すると、ブレークポイントの行のコードが実行される前に、実行は停止されます。 ソース コードの行は黄色で表示されます。  
+ When you run this code in the debugger, execution stops whenever the breakpoint is hit, before the code on that line is executed. The line of source code is colored yellow:  
   
- ![実行が停止されているブレークポイント](~/debugger/media/breakpointexecution.png "BreakpointExecution")  
+ ![Breakpoint execution stopped](../debugger/media/breakpointexecution.png "BreakpointExecution")  
   
- この時点で、`testInt` の値は 1 のままです。  
+ At this point the value of `testInt` is still 1.  
   
- 変数の値や呼び出し履歴など、アプリケーションの現在の状態を確認できます。 呼び出し履歴の詳細については、「[方法 : \[呼び出し履歴\] ウィンドウを使用する](../Topic/How%20to:%20Use%20the%20Call%20Stack%20Window.md)」を参照してください。  
+ You can look at the current state of the application, including variable values and the call stack. For more information about the call stack, see [How to: Use the Call Stack Window](../debugger/how-to-use-the-call-stack-window.md).  
   
- ブレークポイントは、実行可能ファイルの任意のコード行に設定できます。 たとえば、上記の C\# コードでは、変数の宣言、`for` ループ、または `for` ループ内の任意のコードにブレークポイントを設定できますが、名前空間またはクラスの宣言、またはメソッドのシグネチャにはブレークポイントを設定できません。  
+ You can set a breakpoint on any line of executable code. For example, in the C# code above you can set a breakpoint on the variable declaration, the `for` loop, or any code inside the `for` loop, but you cannot set a breakpoint on the namespace or class declarations or the method signature.  
   
-##  <a name="BKMK_Set_a_breakpoint_in_a_source_file"></a> その他のブレークポイントを設定する  
- データの条件またはメモリ アドレスによっては、呼び出し履歴、\[逆アセンブリ\] ウィンドウ、およびネイティブ C\+\+ コードにもブレークポイントを設定できます。  
+##  <a name="BKMK_Set_a_breakpoint_in_a_source_file"></a> Setting Other Kinds of Breakpoints  
+ You can also set breakpoints in the call stack, in the Disassembly window, and, in native C++ code, at a data condition or a memory address.  
   
-## \[呼び出し履歴\] ウィンドウでブレークポイントを設定する  
- **\[呼び出し履歴\]** ウィンドウでブレークポイントを設定することで、呼び出し元の関数が返す命令または行で実行を中断できます。 呼び出し履歴の詳細については、「[方法 : \[呼び出し履歴\] ウィンドウを使用する](../Topic/How%20to:%20Use%20the%20Call%20Stack%20Window.md)」を参照してください。 デバッガーの実行は停止している必要があります。  
+## <a name="BKMK_Set_a_breakpoint_in_the_call_stack_window"></a> Setting a Breakpoint in the Call Stack Window  
+ You can break execution at the instruction or line that a calling function returns to by setting a breakpoint in the **Call Stack** window. For more information about the call stack, see [How to: Use the Call Stack Window](../debugger/how-to-use-the-call-stack-window.md). The debugger must have stopped executing.  
   
-1.  アプリケーションのデバッグを開始し、\(ブレークポイントの位置などで\) 実行が停止するまで待ちます。**\[呼び出し履歴\]** ウィンドウを開きます \(**\[デバッグ\] \/ \[ウィンドウ\] \/ \[呼び出し履歴\]** または **CTRL \+ ALT \+ C** キー\)。  
+1.  Start debugging the application, and wait execution is stopped (for example, at a breakpoint). Open the **Call Stack** window (**Debug > Windows > Call Stack**, or **CTRL + ALT + C**).  
   
-2.  呼び出し元の関数を右クリックし、**\[ブレークポイント\] \/ \[ブレークポイントの挿入\]** を選択するか、**F9** キーを押します。  
+2.  Right-click the calling function and then select **Breakpoint > Insert Breakpoint**, or just use the shortcut key **F9**.  
   
-3.  関数呼び出し名の左側の余白にブレークポイント シンボルが表示されます。  
+3.  A breakpoint symbol appears in the left margin of the call stack, next to the function call name.  
   
- **\[ブレークポイント\]** ウィンドウには、関数内の次に実行可能な命令に対応するメモリ位置に設定されたアドレスとして、呼び出し履歴のブレークポイントが表示されます。 デバッガーはその命令で実行を中断します。  
+ In the **Breakpoints** window, the call stack breakpoint appears as an address with a memory location that corresponds to the next executable instruction in the function. The debugger breaks execution at the instruction.  
   
- コードの実行中にブレークポイントを視覚的にトレースするには、「[デバッグを行うときの呼び出し履歴に対するメソッドのマップ](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)」を参照してください。  
+ To visually trace breakpoints during code execution, see [Map methods on the call stack while debugging](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).  
   
-## \[逆アセンブリ\] ウィンドウでブレークポイントを設定する  
- アセンブリ命令にブレークポイントを設定するには、デバッガーが中断モードになっている必要があります。  
+## <a name="setting-a-breakpoint-in-the-disassembly-window"></a>Setting a Breakpoint in the Disassembly Window  
+ To set a breakpoint at an assembly instruction, the debugger must be in break mode.  
   
-1.  アプリケーションのデバッグを開始し、\(ブレークポイントの位置などで\) 実行が停止するまで待ちます。**\[逆アセンブリ\]** ウィンドウを開きます \(**\[デバッグ\] \/ \[ウィンドウ\] \/ \[逆アセンブリ\]** または **Ctrl \+ Alt \+ D** キー\)。  
+1.  Start debugging the application, and wait execution is stopped (for example, at a breakpoint). Open the **Disassembly** window (**Debug > Windows > Disassembly**, or **Ctrl + Alt + D**).  
   
-2.  中断する命令の左側の余白をクリックするか、命令をポイントして **F9** キーを押します。  
+2.  Click in the left margin at the instruction that you want to break at, or set your cursor at the instruction and press **F9**.  
   
-## データ ブレークポイントの設定 \(ネイティブ C\+\+ のみ\)  
- データ ブレークポイントを使用すると、指定したメモリ位置に格納された値が変更されたときに、実行が中断されます。 値が読み取られても変更されていなければ、実行は中断されません。 データ ブレークポイントを設定するには、デバッガーが中断モードになっている必要があります。  
+## <a name="BKMK_set_a_data_breakpoint_native_cplusplus_only"></a>Setting a Data Breakpoint (native C++ only)  
+ Data breakpoints break execution when a value that is stored at a specified memory address changes. If the value is read but not changed, execution doesn't break. To set data breakpoints, the debugger must be in break mode.  
   
-1.  アプリケーションのデバッグを開始し、ブレークポイントに到達するまで待ちます。**\[デバッグ\]** メニューの **\[ブレークポイントの作成\] \/ \[データ ブレークポイント\]** を選択します \(または、**\[ブレークポイント\]** ウィンドウを開き、**\[新規作成\] \/ \[データ ブレークポイント\]** を選択します\)。  
+1.  Start debugging the application, and wait until a breakpoint is reached. On the **Debug** menu, choose **New Breakpoint > Data Breakpoint** (or open the **Breakpoints** window and choose **New > Data Breakpoint**.  
   
-2.  **\[アドレス\]** ボックスに、メモリ アドレス、またはメモリ アドレスを表す式を入力します。 たとえば、「`&avar`」と入力すると、変数 `avar` の値が変更されたときに中断します。  
+2.  In the **Address** box, type a memory address or an expression that evaluates to a memory address. For example, type `&avar` to break when the contents of the variable `avar` changes.  
   
-3.  **\[バイト数\]** ドロップダウンで、デバッガーがウォッチするバイト数を選択します。 たとえば、**\[4\]** を選択すると、`&avar` で始まる 4 バイトがウォッチされ、そのバイト値のいずれかが変更されると中断します。  
+3.  In the **Byte Count** dropdown, select the number of bytes you want the debugger to watch. For example, if you select **4**, the debugger will watch the four bytes starting at `&avar` and break if any of those bytes change value.  
   
- データ ブレークポイントは、特定のメモリ アドレスの適用範囲に依存している点に注意してください。  
+ Keep in mind that data breakpoints depend on the applicability of specific memory addresses.  
   
--   変数のアドレスは、デバッグ セッションごとに変わります。 データ ブレークポイントは、デバッグ セッションが終了すると自動的に無効になります。  
+-   The address of a variable changes from one debugging session to the next. Data breakpoints are automatically disabled at the end of each debugging session.  
   
--   ローカル変数にデータ ブレークポイントを設定すると、関数が終了してもブレークポイントは有効なままですが、メモリ アドレスは変更されるので、ブレークポイントは予測どおりに機能しなくなります。 データ ブレークポイントをローカル変数に設定した場合は、関数が終了する前にブレークポイントを削除するか無効にすることをお勧めします。  
+-   If you set a data breakpoint on a local variable, the breakpoint remains enabled when the function ends, but the memory address is no longer applicable, and the behavior of the breakpoint is unpredictable. If you set a data breakpoint on a local variable, you should remove or disable the breakpoint before the function ends.  
   
- データ ブレークポイントは次の条件では機能しません。  
+ Data breakpoints don't work under these conditions:  
   
--   デバッグ対象外のプロセスがメモリ位置に書き込む場合  
+-   A process that is not being debugged writes to the memory location  
   
--   メモリ位置が複数のプロセス間で共有されている場合  
+-   The memory location is shared between two or more processes  
   
--   メモリ位置がカーネル内で更新される場合 たとえば、32 ビット Windows の `ReadFile` 関数にメモリが渡された場合、メモリはカーネル モードから更新されるので、メモリの書き込み時にもデバッガーは中断されません。  
+-   The memory location is updated within the kernel. For example, if memory is passed to the 32-bit Windows `ReadFile` function, the memory will be updated from kernel mode and the debugger doesn't break on the memory write.  
   
-## メモリ アドレス \(ネイティブ C\+\+ のみ\) を使用したブレークポイントの設定  
- オブジェクトのアドレスを使用して、クラスの特定のインスタンスで呼び出したメソッドにブレークポイントを設定することもできます。  次に例を示します。  
+## <a name="setting-a-breakpoint-with-a-memory-address-native-c-only"></a>Setting a Breakpoint with a Memory Address (native C++ only)  
+ You can also use the address of an object to set a breakpoint on a method called on a specific instance of a class.  Here's an example:  
   
- たとえば、アドレスを使用して型 `my_class` のオブジェクトを指定する場合、そのインスタンスから呼び出される  `my_method` という名前のメソッドに関数のブレークポイントを設定できます。  
+ For example, given an object of type `my_class` with the address, you can set a function breakpoint on a method named `my_method` called from that instance.  
   
-1.  クラスのそのインスタンスがインスタンス化された後のどこかにブレークポイントを設定します。  
+1.  Set a breakpoint somewhere after that instance of the class is instantiated.  
   
-2.  インスタンスのアドレスを見つけます \(ここでは `0xcccccccc`\)。  
+2.  Find the address of the instance (we'll say it's `0xcccccccc`).  
   
-3.  **\[デバッグ\] \/ \[ブレークポイントの作成\] \/ \[関数のブレークポイント\]** をクリックします \(または **ALT \+ F9、B** キー\)。  
+3.  Click **Debug > New Breakpoint > Function Breakpoint** (or **ALT + F9, B**).  
   
-4.  次のテキストを **\[関数名\]** ボックスに追加します。  
+4.  Add the following text to the **Function Name** box:  
   
-    ```cpp  
+    ```C++  
     ((my_class *) 0xcccccccc)->my_method  
     ```  
   
-##  <a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a> ブレークポイントを管理する  
- **\[ブレークポイント\]** ウィンドウ \(**\[デバッグ\] \/ \[ウィンドウ\] \/ \[ブレークポイント\]** または **CTRL \+ ALT \+ B** キー\) では、ソリューションに設定したすべてのブレークポイントを確認できます。  
+##  <a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a> Managing Breakpoints  
+ You can use the **Breakpoints** window (**Debug > Windows > Breakpoints**, or **CTRL + ALT + B**) to see all the breakpoints you have set in your solution:  
   
- ![&#91;ブレークポイント&#93; ウィンドウ](~/debugger/media/breakpointswindow.png "BreakpointsWindow")  
+ ![Breakpoints window](../debugger/media/breakpointswindow.png "BreakpointsWindow")  
   
- **\[ブレークポイント\]** ウィンドウでは、すべてのブレークポイントを一元的に管理できるます。ブレークポイントが重要な大規模なソリューションや複雑なデバッグ シナリオで、このウィンドウは特に役立ちます。 一連のブレークポイントの状態と位置を保存または共有する必要がある場合、**\[ブレークポイント\]** ウィンドウからのみ、ブレークポイントをエクスポートおよびインポートできます。  
+ The **Breakpoints** window gives you a central place to manage all your breakpoints, which can be especially helpful in a large solution or a complex debugging scenario where breakpoints are critical. If you need to save or share the state and location of a set of breakpoints, you can export and import breakpoints only from the **Breakpoints** window.  
   
-##  <a name="BKMK_Specify_a_breakpoint_condition_using_a_code_expression"></a> 高度なブレークポイント  
+##  <a name="BKMK_Specify_a_breakpoint_condition_using_a_code_expression"></a> Advanced Breakpoints  
   
-## ブレークポイント条件  
- 条件を設定して、ブレークポイントを実行するタイミングと場所を制御することができます。  
+## <a name="breakpoint-conditions"></a>Breakpoint conditions  
+ You can control when and where a breakpoint executes by setting conditions.  
   
-1.  ブレークポイントを右クリックするか、ブレークポイントをポイントして設定アイコンをクリックします。  
+1.  Right-click the breakpoint, or hover over the breakpoint and choose the settings icon.  
   
-2.  コンテキスト メニューで **\[条件\]** を選択します。**\[ブレークポイント設定\]** ウィンドウが開きます。  
+2.  In the context menu, select **Conditions**. This opens the **Breakpoint Settings** window:  
   
- ![ブレークポイント設定](../debugger/media/breakpointsettings.png "BreakpointSettings")  
+ ![Breakpoint settings](../debugger/media/breakpointsettings.png "BreakpointSettings")  
   
- **\[条件\]** ボックスをオンにすると、ウィンドウが展開され、さまざまな種類の条件が表示されます。  
+ When you check the **Conditions** box, the window expands to show the different kinds of conditions.  
   
- **条件式:** \[条件式\] を選択すると、**\[true の場合\]** と **\[変更された場合\]** という 2 つの条件を選択できます。 式の条件を満たす場合に中断するときは **\[true の場合\]** をオンにし、式の値が変更されたときに中断するときは **\[変更された場合\]** をオンにします。  
+ **Conditional Expression:** When you select Conditional Expression, you can then choose two conditions: **Is true** and **When changed**. Choose **Is true** if you want to break when the expression is satisfied, or choose **When changed** if you want to break when the value of the expression has changed.  
   
- 次の例では、`testInt` の値が **4** の場合にのみ、ブレークポイントがヒットするように設定します。  
+ In the following example we set the breakpoint to hit only when the value of `testInt` is **4**:  
   
- ![&#91;ブレークポイントの条件&#93; が true](../debugger/media/breakpointconditionistrue.png "BreakpointConditionIsTrue")  
+ ![Breakpoint condition is true](../debugger/media/breakpointconditionistrue.png "BreakpointConditionIsTrue")  
   
- 次の例では、`testInt` の値が変更された場合にのみ、ブレークポイントがヒットするように設定します。  
+ In the following example we set the breakpoint to hit only when the value of `testInt` changes:  
   
- ![変更時のブレークポイント](../debugger/media/breakpointwhenchanged.png "BreakpointWhenChanged")  
+ ![Breakpoint when changed](../debugger/media/breakpointwhenchanged.png "BreakpointWhenChanged")  
   
- \[変更された場合\] フィールドの動作は、プログラミング言語によって異なります。 ネイティブ コードに対して **\[変更された場合\]** をオンにしている場合、デバッガーは条件の最初の評価を変更と見なさないため、最初の評価でブレークポイントはヒットしません。 マネージ コードに対して **\[変更された場合\]** をオンにしている場合、**\[変更された場合\]** が選択された後の最初の評価でブレークポイントがヒットします。  
+ The behavior of the When changed field is different for different programming languages. If you choose **When changed** for native code, the debugger doesn't consider the first evaluation of the condition to be a change, so the breakpoint won't be hit on the first evaluation. If you choose **When changed** for managed code, he breakpoint is hit on the first evaluation after **When changed** is selected.  
   
- 無効な構文でブレークポイント条件を設定すると、警告メッセージが表示されます。 有効な構文でブレークポイント条件を指定しても、セマンティクスが無効な場合は、ブレークポイントに初めて達したときに警告メッセージが表示されます。 どちらの場合でも、無効なブレークポイントに達すると実行が中断されます。 ブレークポイント条件が有効で、評価結果が `false` の場合にのみ、ブレークポイントはスキップされます。  
+ If you set a breakpoint condition with invalid syntax, a warning message appears. If you specify a breakpoint condition with valid syntax but invalid semantics, a warning message appears the first time the breakpoint is hit. In either case, the debugger breaks execution when the invalid breakpoint is hit. The breakpoint is skipped only if the condition is valid and evaluates to `false`.  
   
- 条件には、デバッガーによって認識される有効な式を指定できます。 有効な式の詳細については、「[デバッガー内の式](../debugger/expressions-in-the-debugger.md)」を参照してください。  
+ The condition can be any valid expression that is recognized by the debugger. For more information about valid expressions, see [Expressions in the Debugger](../debugger/expressions-in-the-debugger.md).  
   
-## ブレークポイント条件 \(C\# および F\#\) でのオブジェクト ID の使用  
- 特定のオブジェクトの動作を確認することが必要になる場合があります。たとえば、オブジェクトがコレクションに複数回挿入された理由を確認することが必要になる場合があります。 C\# と F\# では、[参照型](/dotnet/csharp/language-reference/keywords/reference-types)の特定のインスタンスのオブジェクト ID を作成し、それらの ID をブレークポイントの条件で使用できます。 オブジェクト ID は、共通言語ランタイム \(CLR\) のデバッグ サービスで生成されて、オブジェクトに関連付けられます。  オブジェクト ID を作成するには、次の手順を実行します。  
+## <a name="using-object-ids-in-breakpoint-conditions-c-and-f"></a>Using Object IDs in Breakpoint Conditions (C# and F#)  
+ There are times when you want to observe the behavior of a specific object; for example, you might want to find out why an object was inserted more than once into a collection. In C# and F#, you can create object IDs for specific instances of [reference types](/dotnet/csharp/language-reference/keywords/reference-types) and use them in breakpoint conditions. The object ID is generated by the common language runtime (CLR) debugging services and associated with the object.  To create an object ID, do the following:  
   
-1.  コードで、オブジェクトが作成されてからしばらく経った時点にブレークポイントを設定します。  
+1.  Set a breakpoint in the code some time after the object has been created.  
   
-2.  デバッグを開始し、ブレークポイントで実行が停止したら、**\[ローカル\]** ウィンドウで対象のブレークポイントを見つけて右クリックし、**\[オブジェクト ID の作成\]** を選択します。  
+2.  Start debugging, and when execution stops in the breakpoint, find the breakpoint in the **Locals** window, right-click it, and select **Make Object ID**.  
   
-     **\[ローカル\]** ウィンドウに、**$** が付いた番号が表示されるはずです。 これが、オブジェクト ID です。  
+     You should see a **$** plus a number in the **Locals** window. This is the object ID.  
   
-3.  オブジェクトがコレクションに追加されるときなど、調査が必要となるポイントに、新しい条件付きブレークポイントを追加します。  
+3.  Add a new conditional breakpoint at the point you want to investigate, for example when the object is to be added to the collection.  
   
-4.  \[条件式\] フィールドでは、オブジェクト ID を使用します。 たとえば、コレクションに追加するオブジェクトを参照する変数 `item` が存在する場合、「**item \=\= $n**」と入力します。ここで、**n** はオブジェクト ID 番号です。  
+4.  Use the Object ID in the Conditional Expression field. For example, if there is a variable `item` referring to the object that is to be added to the collection, you would put **item == $n**, where **n** is the object ID number.  
   
-     そのオブジェクトがコレクションに追加されると、実行が停止します。  
+     Execution will break at the point when that object is to be added to the collection.  
   
- 後でオブジェクト ID を削除する場合は、**\[ローカル\]** ウィンドウで変数を右クリックして、**\[オブジェクト ID の削除\]** を選択します。  
+ If you later want to delete the object ID, you can right-click the variable in the **Locals** window and select **Delete Object ID**.  
   
- オブジェクト ID によって作成される参照は弱い参照であり、これにより、オブジェクトがガベージ コレクションの対象から除外されることはないことに注意してください。 オブジェクト ID は、現在のデバッグ セッションでのみ有効です。  
+ Note that Object IDs create weak references, and do not prevent the object from being garbage collected. They are valid only for the current debugging session.  
   
-## ヒット カウント  
- コード内のループがある回数の反復の後に誤動作を開始することが疑われる場合、関連するコード行に対して指定したヒット カウントを超えると実行を停止するブレークポイントを設定できます。これにより、目的の反復回数に達するまで何度も **F5** キーを押す必要がなくなります。  
+## <a name="hit-count"></a>Hit Count  
+ If you suspect that a loop in your code starts misbehaving after a certain number of iterations, you can set a breakpoint to stop execution after a specified number of hits to the to the associated line of code, rather than being forced to repeatedly press **F5** to reach the iteration level.  
   
- **\[ブレークポイントの設定\]** ウィンドウで、**\[ヒット カウント\]** に条件を設定します。 次に、イテレーション回数を指定できます。 次の例では、イテレーションごとにヒットするようにブレークポイントを設定します。  
+ In the **Breakpoint Settings** window, set the condition to **Hit Count**. You can then specify the number of iterations. In the following example, we set the breakpoint to hit on every other iteration:  
   
- ![ブレークポイントのヒット カウント](../debugger/media/breakpointhitcount.png "BreakpointHitCount")  
+ ![Breakpoint hit count](../debugger/media/breakpointhitcount.png "BreakpointHitCount")  
   
-## フィルター  
- 指定されたデバイスでのみ、または指定されたプロセスとスレッドでのみ、ブレークポイントが発生するように制限できます。  
+## <a name="filter"></a>Filter  
+ You can restrict a breakpoint to fire only on specified devices, or in specified processes and threads.  
   
- **\[ブレークポイントの設定\]** ウィンドウで、**\[フィルター\]** に条件を設定します。 次の式のうち 1 つ以上を入力します。  
+ In the **Breakpoint Setting**s window, set the condition to **Filter**. Enter one or more of the following expressions.  
   
--   MachineName \= "name"  
+-   MachineName = "name"  
   
--   ProcessId \= value  
+-   ProcessId = value  
   
--   ProcessName \= "name"  
+-   ProcessName = "name"  
   
--   ThreadId \= value  
+-   ThreadId = value  
   
--   ThreadName \= "name"  
+-   ThreadName = "name"  
   
- 文字列の値を二重引用符で囲みます。 句は、`&` \(AND\)、`||` \(OR\)、`!` \(NOT\)、およびかっこを使用して結合できます。  
+ Enclose string values in double quotes. You can combine clauses using `&` (AND), `||` (OR), `!` (NOT), and parentheses.  
   
-##  <a name="BKMK_Print_to_the_Output_window_with_tracepoints"></a> ブレークポイント アクションとトレースポイント  
- トレースポイントは、\[出力\] ウィンドウにメッセージを出力するブレークポイントです。 トレースポイントはプログラミング言語の一時的なトレース ステートメントのように機能できます。  
+##  <a name="BKMK_Print_to_the_Output_window_with_tracepoints"></a> Breakpoint Actions and Tracepoints  
+ A tracepoint is a breakpoint that prints a message to the Output window. A tracepoint can act like a temporary trace statement in the programming language.  
   
- **\[ブレークポイントの設定\]** ウィンドウで、**\[アクション\]** ボックスをオンにします。**\[アクション\]** グループの **\[出力ウィンドウにメッセージを記録する\]** を選択します。**"これはテストです"** など、汎用文字列を出力することができます。 変数または式の値を含めるには、中かっこで囲みます。  
+ In the **Breakpoint Settings** window, check the **Actions** box. Choose **Log a message to Output window** in the **Action** group. You can print a generic string, such as **this is a test**. To include the value of a variable or expression, enclose it in curly braces.  
   
- トレースポイントがヒットしときに実行を中断するには、**\[続けて実行する\]** チェック ボックスをオフにします。**\[続けて実行する\]** をオンにすると、実行は停止しません。 どちらの場合も、メッセージが出力されます。  
+ To break execution when the tracepoint is hit, clear the **Continue Execution** check box. When **Continue Execution** is checked, execution is not halted. In both cases, the message is printed.  
   
- 次の特別なキーワードを **\[メッセージ\]** に使用できます。  
+ You can use the following special keywords in the **Message**.  
   
 |||  
 |-|-|  
-|**$ADDRESS**|現在の命令|  
-|**$CALLER**|関数名の呼び出し|  
-|**$CALLSTACK**|呼び出し履歴|  
-|**$FUNCTION**|現在の関数名|  
-|**$PID**|プロセス ID|  
-|**$PNAME**|プロセス名|  
-|**$TID**|スレッド ID|  
-|**$TNAME**|スレッド名|  
+|**$ADDRESS**|Current instruction|  
+|**$CALLER**|Calling function name|  
+|**$CALLSTACK**|Call stack|  
+|**$FUNCTION**|Current function name|  
+|**$PID**|Process id|  
+|**$PNAME**|Process name|  
+|**$TID**|Thread id|  
+|**$TNAME**|Thread name|  
 |**$TICK**||  
 |**$TNAME**||  
   
-##  <a name="BKMK_Set_a_breakpoint_at_a_function_return_in_the_Call_Stack_window"></a> ブレークポイントのラベル  
- ブレークポイントのラベルは、**\[ブレークポイント\]** ウィンドウでブレークポイントの一覧の並べ替えとフィルターにのみ使用します。 ブレークポイントにラベルを追加するには、ブレークポイントの行を選択し、コンテキスト メニューの **\[ラベル\]** をクリックします。  
+##  <a name="BKMK_Set_a_breakpoint_at_a_function_return_in_the_Call_Stack_window"></a> Breakpoint labels  
+ Breakpoint labels are used only in the **Breakpoints** window to sort and filter the list of breakpoints. To add a label to a breakpoint, choose the breakpoint row and then choose **Label** on the context menu.  
   
-## ブレークポイントをエクスポートおよびインポートする  
- XML ファイルにブレークポイントをエクスポートするには、ブレークポイントを右クリックし、**\[エクスポート\]** を選択します。 既定で、ファイルはソリューション ディレクティブに保存されます。 ブレークポイントをインポートするには、**\[ブレークポイント\]** ウィンドウを開き \(**CTRL \+ ALT \+ B** キー\)、ツールバーの右向き矢印をクリックします \(ツールヒントは **\[ファイルからブレークポイントをインポートします\]** です\)。  
+## <a name="export-and-import-breakpoints"></a>Export and Import Breakpoints  
+ You can export a breakpoint to an XML file by right-clicking on the breakpoint and selecting **Export**. The file is saved by default in the solution directory. To import breakpoints, open the **Breakpoints** window (**CTRL + ALT + B**) and on the toolbar click the right-pointing arrow (the tooltip is **Import breakpoints from a file**).  
   
-## ブレークポイントをトラブルシューティングする  
+## <a name="troubleshoot-breakpoints"></a>Troubleshoot breakpoints  
   
-### ブレークポイントを削除したが、デバッグを再実行するとヒットし続ける  
- デバッグ中にブレークポイントを削除しても、場合によっては次にデバッグを開始したときにブレークポイントがヒットすることがあります。 このブレークポイントのヒットを停止するには、ブレークポイントのすべてのインスタンスが **\[ブレークポイント\]** ウィンドウから削除されていることを確認します。  
+### <a name="i-deleted-a-breakpoint-but-i-continue-to-hit-it-when-i-start-debugging-again"></a>I deleted a breakpoint, but I continue to hit it when I start debugging again  
+ If you deleted a breakpoint while debugging, in some cases you may hit the breakpoint again the next time you start debugging. To stop hitting this breakpoint, make sure all the instances of the breakpoint are removed from the **Breakpoints** window.  
   
-### デバッガーがブレークポイントのソース ファイルの正しいバージョンを特定できない  
- ソース ファイルが変更されて、デバッグ対象のコードと一致しなくなった場合、デバッガーは、ソース ファイルが存在していても、ブレークポイントに対応するソース ファイルを探すことがあります。  
+### <a name="the-debugger-cant-locate-the-correct-version-of-the-source-file-for-a-breakpoint"></a>The debugger can't locate the correct version of the source file for a breakpoint  
+ If a source file has changed and the source no longer matches the code you are debugging, the debugger might locate the source file that corresponds to a breakpoint, even though the source file exists.  
   
-1.  Visual Studio で、デバッグ対象のバージョンと一致しないソース コードを表示するには、**\[デバッグ\] \/ \[オプションと設定\]** を選択します。**\[デバッグ\] \/ \[全般\]** ページで、**\[元のバージョンと完全に一致するソース ファイルを必要とする\]** オプションをオフにします。  
+1.  If you want Visual Studio to display source code that doesn't match the version you are debugging, choose **Debug > Options and Settings**. On the **Debugging/General** page, clear the **Require source files that exactly match the original version** option.  
   
-2.  ブレークポイントをソース ファイルにバインドすることもできます。 ブレークポイントを選択し、コンテキスト メニューの **\[条件\]** をクリックします。**\[ブレークポイントの設定\]** ウィンドウで **\[元のバージョンと異なるソース コードを許可する\]** チェック ボックスをオンにします。  
+2.  You can also bind the breakpoint to the source file. Select the breakpoint and choose **Conditions** on the context menu. Check **Allow the source code to be different from the original** in the **Breakpoint Settings** window.  
   
-### ブレークポイントが DLL で機能しない  
- デバッガーがモジュールのコードの場所に関するデバッグ情報を読み込んでいない場合は、ソース ファイルにブレークポイントを設定できません。 このようなときは、**ブレークポイントを設定できない**ことを示すメッセージが表示されます。 ブレークポイントの場所に、警告ブレークポイント グリフが表示されます。 ただし、これらの警告ブレークポイントは、コードが読み込まれたときに実際のブレークポイントになります。 シンボルの読み込みの詳細については、「[シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」を参照してください。  
+### <a name="breakpoints-dont-work-in-a-dll"></a>Breakpoints don't work in a DLL  
+ You cannot set a breakpoint in a source file when the debugger hasn't loaded the debug information for the module where the code is located. Symptoms may include messages such as **the breakpoint will not be set**. The Warning breakpoint glyph appears at the breakpoint location. However, these Warning breakpoints become actual breakpoints when the code is loaded. For more information about loading symbols, see [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
-## 参照  
- [デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)
+## <a name="see-also"></a>See Also  
+ [Navigating through Code with the Debugger](../debugger/navigating-through-code-with-the-debugger.md)
+

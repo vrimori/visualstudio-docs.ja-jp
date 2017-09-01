@@ -38,17 +38,14 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/30/2017
 
 ---
-# アプリケーションのグローバル化
-<a id="globalizing-applications" class="xliff"></a>
+# <a name="globalizing-applications"></a>アプリケーションのグローバル化
 グローバリゼーションは、複数のロケールで機能するソフトウェア製品をデザインおよび開発するプロセスです。 このセクションの内容は、Windows フォームと Web フォームの両方のページに当てはまります。  
   
-## このセクションの内容
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>このセクションの内容  
  [グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス](../ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md)  
  カルチャの設定に従って日付、時刻、数値、通貨、その他の情報の書式を設定するクラスについて説明します。  
   
-## 関連項目
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームのグローバル化](/dotnet/framework/winforms/advanced/globalizing-windows-forms)  
  Windows フォームのグローバリゼーションに関するヘルプ ページへのリンクを提供します。  
   

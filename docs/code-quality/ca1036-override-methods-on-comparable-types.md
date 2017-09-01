@@ -1,70 +1,87 @@
 ---
-title: "CA1036: 比較可能な型でメソッドをオーバーライドします | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1036"
-  - "OverrideMethodsOnComparableTypes"
-helpviewer_keywords: 
-  - "OverrideMethodsOnComparableTypes"
-  - "CA1036"
+title: 'CA1036: Override methods on comparable types | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1036
+- OverrideMethodsOnComparableTypes
+helpviewer_keywords:
+- OverrideMethodsOnComparableTypes
+- CA1036
 ms.assetid: 2329f844-4cb8-426d-bee2-cd065d1346d0
 caps.latest.revision: 21
-caps.handback.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1036: 比較可能な型でメソッドをオーバーライドします
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: ed53ab63b1f56e9e3389bc6e8369adcba10445df
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1036-override-methods-on-comparable-types"></a>CA1036: Override methods on comparable types
 |||  
 |-|-|  
 |TypeName|OverrideMethodsOnComparableTypes|  
 |CheckId|CA1036|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## 原因  
- パブリック型またはプロテクト型で <xref:System.IComparable?displayProperty=fullName> インターフェイスが実装されています。これによって <xref:System.Object.Equals%2A?displayProperty=fullName> はオーバーライドされません。また、"等しい"、"等しくない"、"未満"、"より大きい" を示す言語固有の演算子はオーバーロードされません。  型でインターフェイスの実装のみを継承している場合、この規則違反はレポートされません。  
+## <a name="cause"></a>Cause  
+ A public or protected type implements the <xref:System.IComparable?displayProperty=fullName> interface and does not override <xref:System.Object.Equals%2A?displayProperty=fullName> or does not overload the language-specific operator for equality, inequality, less than, or greater than. The rule does not report a violation if the type inherits only an implementation of the interface.  
   
-## 規則の説明  
- カスタムの並べ替え順序を定義する型では、<xref:System.IComparable> インターフェイスを実装します。  <xref:System.IComparable.CompareTo%2A> メソッドは、その型の 2 つのインスタンスについて、適切な並べ替え順序を示す整数値を返します。  この規則では、並べ替え順序を設定する型を識別します。つまり、一般的な意味の "等しい"、"等しくない"、"未満"、"より大きい" は適用されません。  <xref:System.IComparable> の実装を提供する場合、一般に <xref:System.Object.Equals%2A> をオーバーライドする必要もあります。これは、<xref:System.IComparable.CompareTo%2A> との整合性がある値を返すためです。  <xref:System.Object.Equals%2A> をオーバーライドし、使用している言語で演算子のオーバーロードがサポートされている場合、<xref:System.Object.Equals%2A> との整合性がある演算子も指定します。  
+## <a name="rule-description"></a>Rule Description  
+ Types that define a custom sort order implement the <xref:System.IComparable> interface. The <xref:System.IComparable.CompareTo%2A> method returns an integer value that indicates the correct sort order for two instances of the type. This rule identifies types that set a sort order; this implies that the ordinary meaning of equality, inequality, less than, and greater than do not apply. When you provide an implementation of <xref:System.IComparable>, you must usually also override <xref:System.Object.Equals%2A> so that it returns values that are consistent with <xref:System.IComparable.CompareTo%2A>. If you override <xref:System.Object.Equals%2A> and are coding in a language that supports operator overloads, you should also provide operators that are consistent with <xref:System.Object.Equals%2A>.  
   
-## 違反の修正方法  
- この規則違反を修正するには、<xref:System.Object.Equals%2A> をオーバーライドします。  プログラミング言語で演算子のオーバーロードがサポートされている場合、次の演算子を指定します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, override <xref:System.Object.Equals%2A>. If your programming language supports operator overloading, supply the following operators:  
   
--   op\_Equality  
+-   op_Equality  
   
--   op\_Inequality  
+-   op_Inequality  
   
--   op\_LessThan  
+-   op_LessThan  
   
--   op\_GreaterThan  
+-   op_GreaterThan  
   
- C\# では、記述に使用されるトークンはこれらの演算子は次のとおりです。: \=\=、\! \= \<。\>  
+ In C#, the tokens that are used to represent these operators are as follows: ==, !=, \<, and >.  
   
-## 警告を抑制する状況  
- 演算子がないために違反が発生し、プログラミング言語で演算子のオーバーロードをサポートしていない場合、この規則による警告を抑制しても安全です。これは、Visual Basic .NET の場合も同様です。  また、この規則が op\_Equality 以外の等値演算子に適用されているときに、その等値演算子を実装することがアプリケーション コンテキストにおいて意味がないと判断した場合も、この規則による警告を抑制しても安全です。  ただし、Object.Equals をオーバーライドする場合は、必ず op\_Equality と \=\= 演算子をオーバーロードする必要があります。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule when the violation is caused by missing operators and your programming language does not support operator overloading, as is the case with Visual Basic .NET. It is also safe to suppress a warning for from this rule when it fires on equality operators other than op_Equality if you determine that implementing the operators does not make sense in your application context. However, you should always over op_Equality and the == operator if you override Object.Equals.  
   
-## 使用例  
- <xref:System.IComparable> を正しく実装した型を次の例に示します。  コードのコメントで、<xref:System.Object.Equals%2A> と <xref:System.IComparable> インターフェイスに関連するさまざまな規則に適合するメソッドを識別しています。  
+## <a name="example"></a>Example  
+ The following example contains a type that correctly implements <xref:System.IComparable>. Code comments identify the methods that satisfy various rules that are related to <xref:System.Object.Equals%2A> and the <xref:System.IComparable> interface.  
   
- [!code-cs[FxCop.Design.IComparable#1](../code-quality/codesnippet/CSharp/ca1036-override-methods-on-comparable-types_1.cs)]  
+ [!code-csharp[FxCop.Design.IComparable#1](../code-quality/codesnippet/CSharp/ca1036-override-methods-on-comparable-types_1.cs)]  
   
-## 使用例  
- 次のアプリケーションでは、前述した <xref:System.IComparable> 実装の動作をテストします。  
+## <a name="example"></a>Example  
+ The following application tests the behavior of the <xref:System.IComparable> implementation that was shown earlier.  
   
- [!code-cs[FxCop.Design.TestIComparable#1](../code-quality/codesnippet/CSharp/ca1036-override-methods-on-comparable-types_2.cs)]  
+ [!code-csharp[FxCop.Design.TestIComparable#1](../code-quality/codesnippet/CSharp/ca1036-override-methods-on-comparable-types_2.cs)]  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  <xref:System.IComparable?displayProperty=fullName>   
  <xref:System.Object.Equals%2A?displayProperty=fullName>   
- [等値演算子](../Topic/Equality%20Operators.md)
+ [Equality Operators](/dotnet/standard/design-guidelines/equality-operators)

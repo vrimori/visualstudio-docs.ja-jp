@@ -1,252 +1,144 @@
 ---
-title: "リモート デバッグ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "hero-article"
-f1_keywords: 
-  - "vs.debug.remote.overview"
-dev_langs: 
-  - "C++"
-  - "CSharp"
-  - "FSharp"
-  - "JScript"
-  - "VB"
-helpviewer_keywords: 
-  - "リモート デバッグ、セットアップ"
+title: Remote debugging in Visual Studio | Microsoft Docs
+ms.custom: remotedebugging
+ms.date: 08/14/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: hero-article
+f1_keywords:
+- vs.debug.remote.overview
+dev_langs:
+- C++
+- FSharp
+- CSharp
+- JScript
+- VB
+helpviewer_keywords:
+- remote debugging, setup
 ms.assetid: 5a94ad64-100d-43ca-9779-16cb5af86f97
-caps.latest.revision: 76
-caps.handback.revision: 45
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# リモート デバッグ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+caps.latest.revision: 65
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 78fd3b8e2832ec1431101273345bb27e23e28f5d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-別のコンピューターに配置されている Visual Studio アプリケーションをデバッグすることができます。  このデバッグを行うには、Visual Studio リモート デバッガーを使用します。  
-  
- ここに記載された情報は、Windows デスクトップ アプリケーションと ASP.NET アプリケーションに適用されます。  Windows ストア アプリと Azure アプリのリモート デバッグについては、「[Windows ストア アプリおよび Azure アプリに関するリモート デバッグ](#bkmk_winstoreAzure)」を参照してください。  
-  
-## リモート ツールのダウンロードおよびインストール  
- デバッグ用のリモート ツールは、「[Remote Tools for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48155)」でダウンロードできます。 x86、x64、および ARM の各バージョンのツールを選択できます。 実行可能ファイルのダウンロードが完了したら、アプリケーションをリモート コンピューターにインストールするための指示に従います。  
-  
- リモート ツールの Update 1 バージョンは、「[Remote Tools for Visual Studio 2015 Update 1](https://www.microsoft.com/en-us/download/details.aspx?id=49986&44F86079-8679-400C-BFF2-9CA5F2BCBDFC=1)」でダウンロードできます。  
-  
-> [!IMPORTANT]
->  Visual Studio のインストールのバージョンと一致するリモート ツールのバージョンをインストールする必要があります。 一致しないバージョンはサポートされていません。 また、デバッグするアプリケーションと同じアーキテクチャを持つリモート ツールをインストールする必要もあります。 つまり、64 ビット アプリケーションをデバッグする場合は、64 ビット バージョンのリモート ツールをインストールする必要があります。  
-  
- リモート コンピューターに Visual Studio 2015 の Community、Professional、または Enterprise が既にインストールされていて、リモート デバッガー \(**msvsmon.exe**\) が既にインストールされている場合は、リモート デバッガーを次のディレクトリから起動することができます。  
-  
- **\<Visual Studio のインストール ディレクトリ\>\\Common7\\IDE\\Remote Debugger\\\(x64、x86、Appx\)\\msvsmon.exe**  
-  
- ただし、ツールをダウンロードしてインストールしていた場合にのみ、**リモート デバッガー構成ウィザード** \(**rdbgwiz.exe**\) がインストールされ、後で構成のために使用することが必要になること \(特にリモート デバッガーをサービスとして実行する場合\) があります。 詳細については、下記の「[サービスとしてのリモート デバッガーの構成](#bkmk_configureService)」を参照してください。  
-  
-## サポートされているオペレーティング システム  
- リモート コンピューターで次のいずれかのオペレーティング システムが実行されている必要があります。  
-  
--   Windows 10  
-  
--   Windows 8 または 8.1  
-  
--   Windows 7 Service Pack 1  
-  
--   Windows Server 2012 または Windows Server 2012 R2  
-  
--   Windows Server 2008 Service Pack 2、Windows Server 2008 R2 Service Pack 1  
-  
-## サポートされているハードウェア構成  
-  
--   1.6 GHz 以上の高速プロセッサ  
-  
--   1 GB の RAM \(仮想マシン上で実行されている場合は 1.5 GB\)  
-  
--   1 GB のハード ディスク空き容量  
-  
--   5400 RPM のハード ドライブ  
-  
--   1024 x 768 以上のディスプレイ解像度の DirectX 9 対応ビデオ カード  
-  
-## ネットワーク構成  
- リモート コンピューターと Visual Studio コンピューターは、ネットワーク、ワークグループ、またはホームグループを介して接続されているか、あるいはイーサネット ケーブルによって直接接続されている必要があります。 インターネットを介したデバッグはサポートされません。  
-  
-## リモート デバッガーのセットアップ  
- リモート コンピューターに対する管理アクセス許可が必要です。  
-  
-1.  リモート デバッガー アプリケーションを探します。**リモート デバッガー**は **\[スタート\]** メニューで検索できます。  
-  
-2.  リモート ツールを初めて \(またはその構成を完了する前に\) 開始すると、**\[リモート デバッグの構成\]** ダイアログ ボックスが表示されます。  
-  
-     ![RemoteDebuggerConfWizardPage](../debugger/media/remotedebuggerconfwizardpage.png "RemoteDebuggerConfWizardPage")  
-  
-3.  Windows サービス API がインストールされていない場合 \(これは、Windows Server 2008 R2 でのみ発生します\) は、**\[インストール\]** ボタンをクリックします。  
-  
-4.  リモート ツールで利用される、使用するネットワークの種類を選択します。 少なくとも 1 つのネットワークの種類を選択する必要があります。 コンピューターがドメインを介して接続されている場合は、最初の項目を選択する必要があります。 コンピューターがワークグループまたはホーム グループを介して接続されている場合は、必要に応じて、2 番目または 3 番目の項目を選択する必要があります。  
-  
-5.  **\[リモート デバッグの構成\]** を選択して、ファイアウォールを構成し、ツールを開始します。  
-  
-6.  構成が完了すると、リモート デバッガーのウィンドウが表示されます。  
-  
-     ![リモート デバッガーのウィンドウ](~/debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")  
-  
- リモート デバッガーを停止するには、このウィンドウで **\[ファイル\] \/ \[終了\]** をクリックします。 リモート デバッガーを再起動するには、**\[スタート\]** メニュー、またはコマンド ラインから次のコマンドを実行します。  
-  
- **\<Visual Studio のインストール ディレクトリ\>\\Common7\\IDE\\Remote Debugger\\\<x86、x64、または Appx\\msvsmon.exe**。  
-  
-## リモート デバッガーの構成  
- リモート デバッガーを初めて起動した後、リモート デバッガーの構成の一部を変更できます。  
-  
--   他のユーザーがリモート デバッガーに接続できるようにするには、**\[ツール\] \/ \[アクセス許可\]** の順にクリックします。 アクセス許可を付与または拒否するには、管理者特権が必要です。  
-  
--   認証モードまたはポート番号を変更したり、リモート ツールのタイムアウト値を指定したりするには、\[ツール\] \/ \[オプション\] の順に選択します。  
-  
-     既定で使用されるポート番号の一覧については、「[リモート デバッガーのポートの割り当て](../debugger/remote-debugger-port-assignments.md)」を参照してください。  
-  
-> [!WARNING]
->  リモート ツールを \[認証なし\] モードで実行することも選択できますが、このモードの使用は避けることを強く推奨します。 このモードで実行した場合、ネットワーク セキュリティはまったく提供されません。 \[認証なし\] モードは、ネットワークに悪意のあるコードや悪意のあるトラフィックのリスクがないことが確実である場合にのみ選択してください。  
-  
-##  <a name="bkmk_configureService"></a> サービスとしてのリモート デバッガーの構成  
- ASP.NET および他のサーバー環境でのデバッグの場合、リモート デバッガーをサービスとして実行する必要があります。  
-  
-1.  **リモート デバッガー構成ウィザード** \(rdbgwiz.exe\) を見つけます  \(このアプリケーションは、リモート デバッガーとは別のアプリケーションです\)。 このアプリケーションは、リモート ツールをインストールした場合にのみ入手でき、 Visual Studio と共にはインストールされません。  
-  
-2.  構成ウィザードの実行を開始します。 最初のページが表示されたら、**\[次へ\]** をクリックします。  
-  
-3.  **\[Visual Studio 2015 リモート デバッガー サービスを実行する\]** チェック ボックスをオンにします。  
-  
-4.  ユーザー アカウントの名前とパスワードを追加します。  
-  
-     このアカウントに、**\[サービスとしてログオン\]** のユーザー権限を追加することが必要になる場合があります。 \(**ローカル セキュリティ ポリシー** \(secpol.msc\) を **\[スタート\]** ページまたはウィンドウで、あるいはコマンド プロンプトに「**secpol**」と入力して見つけます。 ウィンドウが表示されたら、**\[ユーザー権利の割り当て\]** をダブルクリックし、右ペインで **\[サービスとしてログオン\]** を見つけます。 これをダブルクリックします。 ユーザー アカウントを **\[プロパティ\]** ウィンドウに追加して **\[OK\]** をクリックします。\)**\[次へ\]** をクリックします。  
-  
-5.  リモート ツールが通信するネットワークの種類を選択します。 少なくとも 1 つのネットワークの種類を選択する必要があります。 コンピューターがドメインを介して接続されている場合は、最初の項目を選択する必要があります。 コンピューターがワークグループまたはホーム グループを介して接続されている場合は、2 番目または 3 番目の項目を選択する必要があります。**\[次へ\]** をクリックします。  
-  
-6.  サービスを開始できた場合は、「**Visual Studio リモート デバッガー構成ウィザードは正常に完了しました**」と表示されます。 サービスを開始できなかった場合は、「**Visual Studio リモート デバッガー構成ウィザードを完了できませんでした**」と表示されます。 このページには、サービスを開始するために従う必要があるヒントもいくつか提供されます。  
-  
-7.  **\[完了\]** をクリックします。  
-  
- この時点で、リモート デバッガーはサービスとして実行されています。 これを確認するには、**\[コントロール パネル\] \/ \[サービス\]** に移動して **\[Visual Studio 2015 リモート デバッガー\]** を探します。  
-  
- リモート デバッガー サービスは、**\[コントロール パネル\] \/ \[サービス\]** で停止してから開始することができます。  
-  
-## 異なるユーザー アカウントを使用したリモート デバッガーの実行  
- リモート デバッガーは、Visual Studio コンピューターに対して使用しているユーザー アカウントとは別のユーザー アカウントで実行できますが、その場合、リモート デバッガーのアクセス許可に別のユーザー アカウントを追加する必要があります。  
-  
--   リモート デバッガーは、コマンド ラインで **\/allow \<username\>** パラメーターの **msvsmon \/allow \<username@computer\>** を使用して開始できます。  
-  
--   リモート デバッガーのウィンドウで \(**\[ツール\] \/ \[アクセス許可\]**\)、リモート デバッガーのアクセス許可にユーザーを追加できます。  
-  
-## Visual C\+\+ プロジェクトのリモート デバッグ  
- 次の手順では、プロジェクトの名前とパスは C:\\remotetemp\\MyMfc で、リモート コンピューターの名前は **remote1** です。  
-  
-1.  **mymfc** という名前の MFC アプリケーションを作成します。  
-  
-2.  ブレークポイントを、アプリケーション内の達しやすい任意の箇所 \(たとえば、`CMainFrame::OnCreate` の開始時の **MainFrm.cpp**\) に設定します。  
-  
-3.  Visual Studio の **\[プロジェクト\]** メニューで、**\[プロパティ\]** を選択します。**\[デバッグ\]** タブを開きます。  
-  
-4.  **\[起動するデバッガー\]** を **\[リモート Windows デバッガー\]** に設定します。  
-  
-     ![RemoteDebuggingCPlus](../debugger/media/remotedebuggingcplus.png "RemoteDebuggingCPlus")  
-  
-5.  プロパティに次の変更を適用します。  
-  
-    |||  
-    |-|-|  
-    |**設定**|**値**|  
-    |リモート コマンド|C:\\remotetemp\\mymfc.exe|  
-    |作業ディレクトリ|C:\\remotetemp|  
-    |リモート サーバー名|remote1|  
-    |接続|Windows 認証でリモート接続する|  
-    |デバッガーの種類|ネイティブのみ|  
-    |配置ディレクトリ|C:\\remotetemp|  
-    |追加の配置ファイル|C:\\data\\mymfcdata.txt|  
-  
-6.  ツール バーで、**\[ソリューション構成\]** ドロップダウン メニューを開き、**\[構成マネージャー\]** をクリックします。  
-  
-7.  **\[デバッグ\]** 構成の **\[配置\]** チェック ボックスをオンにします。  
-  
-     ![RemoteDebugCplusDeploy](~/debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
-  
-8.  デバッグを開始します \(**\[デバッグ\] \/ \[デバッグの開始\]**、または **F5** キー\)。  
-  
-9. 実行可能ファイルが、リモート コンピューターに自動的に配置されます。  
-  
-10. Visual Studio コンピューターで、実行がブレークポイントで停止したことを確認できるはずです。  
-  
-    > [!TIP]
-    >  また、これらのファイルは別の手順でも配置できます。**ソリューション エクスプローラー**で、**\[mymfc\]** ノードを右クリックして **\[配置\]** を選択します。  
-  
- アプリケーションで使用する必要がある、コード以外のファイルがある場合は、Visual Studio プロジェクトに含める必要があります。 追加のファイル用のプロジェクト フォルダーを作成します \(**ソリューション エクスプローラー**で、**\[追加\] \/ \[新しいフォルダー\]** をクリックします\)。 次にファイルをそのフォルダーに追加します \(**ソリューション エクスプローラー**で、**\[追加\] \/ \[既存の項目\]** の順にクリックしてからファイルを選択します\)。 ファイルごとの **\[プロパティ\]** ページで、**\[出力ディレクトリにコピー\]** を **\[常にコピーする\]** に設定します。  
-  
-## Visual C\# プロジェクトまたは Visual Basic プロジェクトのリモート デバッグ  
- デバッガーでは、Visual C\# または Visual Basic のデスクトップ アプリケーションをリモート コンピューターに配置できませんが、次のようにリモートからそれらのデスクトップ アプリケーションをデバッグすることはできます。 次の手順では、**\[remote1\]** という名前のコンピューターでこのようなデスクトップ アプリケーションをデバッグすることを想定しています。  
-  
-1.  **MyWpf** という名前の WPF プロジェクトを作成します。  
-  
-2.  ブレークポイントをコード内の達しやすい任意の箇所に設定します。 たとえば、ブレークポイントをボタン ハンドラーに設定できます。  
-  
-3.  **\[プロジェクト\]** メニューの **\[プロパティ\]** をクリックします。  
-  
-4.  **\[プロパティ\]** ページで、**\[デバッグ\]** タブをクリックします。  
-  
-     ![RemoteDebuggerCSharp](../debugger/media/remotedebuggercsharp.png "RemoteDebuggerCSharp")  
-  
-5.  **\[作業ディレクトリ\]** テキスト ボックスが空であることを確認してください。  
-  
-6.  **\[リモート コンピューターを使用する\]** をオンにして、テキスト ボックスに「**remote1**」と入力します。  
-  
-7.  **\[ネイティブ コードのデバッグを有効にする\]** がオフであることを確認します。  
-  
-8.  プロジェクトをビルドします。  
-  
-9. Visual Studio コンピューター上の **\[Debug\]** フォルダー \(**\<ソース パス\>\\MyWPF\\MyWPF\\bin\\Debug**\) と同じパスのフォルダーをリモート コンピューター上に作成します。  
-  
-10. 上で作成した実行可能ファイルを、Visual Studio コンピューターから、リモート コンピューター上の新しく作成したフォルダーにコピーします。  
-  
-    > [!CAUTION]
-    >  このコードに変更を加えたり、この手順の前に再ビルドしたりしないでください。 リモート コンピューターにコピーした実行可能ファイルは、ローカルのソースとシンボルに正確に一致している必要があります。  
-  
-11. Visual Studio でデバッグを開始します \(**\[デバッグ\] \/ \[デバッグの開始\]**、または **F5** キー\)。  
-  
-12. ブレークポイントを確認します。 ブレークポイントがアクティブになっていることを確認できるはずです。 ブレークポイントがアクティブでない場合、アプリケーションのシンボルが読み込まれていません。 シンボルの読み込みと、それらのトラブルシューティング方法については、「[シンボル ファイルおよび Visual Studio のシンボルの設定について](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/05/understanding-symbol-files-and-visual-studio-s-symbol-settings.aspx)」を参照してください。  
-  
-13. WPF アプリケーションのメイン ウィンドウがリモート コンピューター上で開いていることを確認できるはずです。 ブレークポイントにヒットさせるアクションを実行します。  
-  
-14. Visual Studio コンピューターで、実行がブレークポイントで停止したことを確認できるはずです。  
-  
- アプリケーションで使用する必要がある、コード以外のファイルがある場合は、Visual Studio プロジェクトに含める必要があります。 追加のファイル用のプロジェクト フォルダーを作成します \(**ソリューション エクスプローラー**で、**\[追加\] \/ \[新しいフォルダー\]** をクリックします\)。 次にファイルをそのフォルダーに追加します \(**ソリューション エクスプローラー**で、**\[追加\] \/ \[既存の項目\]** の順にクリックしてからファイルを選択します\)。 ファイルごとの **\[プロパティ\]** ページで、**\[出力ディレクトリにコピー\]** を **\[常にコピーする\]** に設定します。  
-  
-## ASP.NET アプリケーションのリモート デバッグ  
- IIS が実行されているリモート コンピューターに ASP.NET アプリケーションを配置する手順は、オペレーティング システムと IIS のバージョンによって異なります。 IIS 8 \(またはそれ以降\) がインストールされている、Windows 8 以降または Windows Server 2012 オペレーティング システムが実行されているリモート コンピューターについては、「[IIS への公開](https://docs.asp.net/en/latest/publishing/iis.html)」を参照してください。  
-  
- IIS 7.5 がインストールされている、Windows 7 または Windows Server 2008 が実行されているリモート コンピューターについては、「[リモートの IIS 7.5 コンピューター上の ASP.NET のリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)」を参照してください。  
-  
-## リモート シンボルを使用したデバッグのセットアップ  
- Visual Studio コンピューターで生成したシンボルを使用して、コードをデバッグすることができます。 リモート デバッガーのパフォーマンスは、ローカル シンボルを使用すると大幅に向上します。 リモート シンボルを使用する必要がある場合、リモート コンピューター上のシンボルを検索するように、リモート デバッグ モニターに指示する必要があります。  
-  
- Visual Studio 2013 Update 2 以降では、msvsmon コマンド ライン スイッチの `Msvsmon / /FallbackLoadRemoteManagedPdbs`  を使用して、マネージ コードにリモート シンボルを使用できます。  
-  
- 詳細については、リモート デバッグのヘルプ \(リモート デバッガーのウィンドウで **F1** キーを押すか、または **\[ヘルプ\] \/ \[使い方\]** の順にクリックします\) を参照してください。 詳細については、「[Visual Studio 2012 および 2013 における .NET のリモート シンボルの読み込みの変更](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)」を参照してください。  
-  
-##  <a name="bkmk_winstoreAzure"></a> Windows ストア アプリおよび Azure アプリに関するリモート デバッグ  
- Windows ストア アプリのリモート デバッグについては、「[リモート デバイスでの Visual Studio からの Windows ストア アプリのデバッグおよびテスト](http://msdn.microsoft.com/library/windows/apps/hh441469.aspx)」を参照してください。  
-  
- Azure でのデバッグ方法の詳細については、次のトピックのいずれかを参照してください。  
-  
--   [Visual Studio でのクラウド サービスまたは仮想マシンのデバッグ](http://msdn.microsoft.com/library/azure/ff683670.aspx)  
-  
--   [Visual Studio での .NET バックエンドのデバッグ](http://blogs.msdn.com/b/azuremobile/archive/2014/03/14/debugging-net-backend-in-visual-studio.aspx)  
-  
--   Azure Web サイト上でのリモート デバッグの概要 \([パート 1](http://azure.microsoft.com/blog/2014/05/06/introduction-to-remote-debugging-on-azure-web-sites/), [パート 2](http://azure.microsoft.com/blog/2014/05/07/introduction-to-remote-debugging-azure-web-sites-part-2-inside-remote-debugging/), [パート 3](http://azure.microsoft.com/blog/2014/05/08/introduction-to-remote-debugging-on-azure-web-sites-part-3-multi-instance-environment-and-git/)\)。  
-  
-## 参照  
- [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)   
- [Windows ファイアウォールをリモート デバッグ用に構成する](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   
- [リモート デバッガーのポートの割り当て](../debugger/remote-debugger-port-assignments.md)   
- [リモートの IIS 7.5 コンピューター上の ASP.NET のリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)   
- [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)
+---
+# <a name="remote-debugging"></a>Remote Debugging
+You can debug a Visual Studio application that has been deployed on a different computer. To do so, you use the Visual Studio remote debugger.
+
+For in-depth instructions on remote debugging, see these topics.
+
+|Scenario|Link|
+|-|-|-|
+|ASP.NET|[Remote Debugging ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) or [Remote Debugging ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
+|C# or Visual Basic|[Remote Debugging a C# or Visual Basic Project](remote-debugging-csharp.md)|
+|C++|[Remote Debugging a C++ Project](remote-debugging-cpp.md)|
+|Universal Windows Apps (UWP)|[Debug an Installed App Package](debug-installed-app-package.md)|
+|Azure|[Remote Debugging ASP.NET on Azure](remote-debugging-azure.md)|
+|Azure Service Fabric|[Debug a remote Service Fabric application](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application).|
+
+If you just want to download and install the remote debugger and don't need any additional instructions for your scenario, follow the steps in this article.
+  
+## <a name="download-and-install-the-remote-tools"></a>Download and Install the Remote Tools  
+
+[!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
+
+### <a name="fileshare_msvsmon"></a> (Optional) To run the remote debugger from a file share
+
+You can find the remote debugger (**msvsmon.exe**) on a computer with Visual Studio Community, Professional, or Enterprise already installed. For some scenarios, the easiest way to set up remote debugging is to run the remote debugger (msvsmon.exe) from a file share. For usage limitations, see the remote debugger's Help page (**Help > Usage** in the remote debugger).
+
+1. Find **msvsmon.exe** in the directory matching your version of Visual Studio. For Visual Studio 2017:
+
+      **Program Files\Microsoft Visual Studio 15.0\Common7\IDE\Remote Debugger\x86\msvsmon.exe**
+      
+      **Program Files\Microsoft Visual Studio 15.0\Common7\IDE\Remote Debugger\x64\msvsmon.exe**
+
+2. Share the **Remote Debugger** folder on the Visual Studio computer.
+
+3. On the remote computer, run **msvsmon.exe**. Follow the [setup instructions](#bkmk_setup).
+
+> [!TIP] 
+> For command line installation and command line reference, see the Help page for **msvsmon.exe** by typing ``msvsmon.exe /?`` in the command line on the computer with Visual Studio installed (or go to **Help > Usage** in the remote debugger).
+  
+## <a name="requirements_msvsmon"></a> Requirements
+
+[!INCLUDE [remote-debugger-requirements](../debugger/includes/remote-debugger-requirements.md)]
+  
+## <a name="set-up-the-remote-debugger"></a>Set up the remote debugger  
+
+[!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
+
+### <a name="configure_msvsmon"></a> Configure the remote debugger  
+You can change some aspects of the configuration of the remote debugger after you have started it for the first time.
+  
+-   If you need to add permissions for other users to connect to the remote debugger, choose **Tools > Permissions**. You must have administrator privileges to grant or deny permissions.
+
+     > [!IMPORTANT] 
+     > You can run the remote debugger under a user account that differs from the user account you are using on the Visual Studio computer, but you must add the different user account to the remote debugger's permissions. 
+
+     Alternatively, you can start the remote debugger from the command line with the **/allow \<username>** parameter: **msvsmon /allow \<username@computer>**.
+  
+-   If you need to change the Authentication mode or the port number, or specify a timeout value for the remote tools: choose **Tools > Options**.  
+  
+     For a listing of the port numbers used by default, see [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md).  
+  
+     > [!WARNING]
+     >  You can choose to run the remote tools in No Authentication mode, but this mode is strongly discouraged. There is no network security when you run in this mode. Choose the No Authentication mode only if you are sure that the network is not at risk from malicious or hostile traffic.
+
+##  <a name="bkmk_configureService"></a> (Optional) Configure the remote debugger as a service
+For debugging in ASP.NET and other server environments, you must either run the remote debugger as an Administrator or, if you want it always running,  run the remote debugger as a service.
+  
+ If you want to configure the remote debugger as a service, follow these steps.  
+  
+1.  Find the **Remote Debugger Configuration Wizard** (rdbgwiz.exe). (This is a separate application from the Remote Debugger.) It is available only when you install the remote tools. It is not installed with Visual Studio.  
+  
+2.  Start running the configuration wizard. When the first page comes up, click **Next**.  
+  
+3.  Check the **Run the Visual Studio 2015 Remote Debugger as a service** checkbox.  
+  
+4.  Add the name of the user account and password.  
+  
+     You may need to add the **Log on as a service** user right to this account (Find **Local Security Policy** (secpol.msc) in the **Start** page or window (or type **secpol** at a command prompt). When the window appears, double-click **User Rights Assignment**, then find **Log on as a service** in the right pane. Double-click it. Add the user account to the **Properties** window and click **OK**). Click **Next**.  
+  
+5.  Select the type of network that you want the remote tools to communicate with. At least one network type must be selected. If the computers are connected through a domain, you should choose the first item. If the computers are connected through a workgroup or homegroup, you should choose the second or third items. Click **Next**.  
+  
+6.  If the service can be started, you will see **You have successfully completed the Visual Studio Remote Debugger Configuration Wizard**. If the service cannot be started, you will see **Failed to complete the Visual Studio Remote Debugger Configuration Wizard**. The page also gives some tips to follow to get the service to start.  
+  
+7.  Click **Finish**.  
+  
+ At this point the remote debugger is running as a service. You can verify this by going to **Control Panel > Services** and looking for **Visual Studio 2015 Remote Debugger**.  
+  
+ You can stop and start the remote debugger service from **Control Panel > Services**.
+
+## <a name="set-up-debugging-with-remote-symbols"></a>Set Up Debugging with Remote Symbols 
+
+[!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]
+  
+## <a name="see-also"></a>See Also  
+ [Debugger Feature Tour](../debugger/debugger-feature-tour.md)   
+ [Configure the Windows Firewall for Remote Debugging](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   
+ [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md)   
+ [Remote Debugging ASP.NET Core on a Remote IIS Computer](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)  
+ [Remote Debugging Errors and Troubleshooting](../debugger/remote-debugging-errors-and-troubleshooting.md)

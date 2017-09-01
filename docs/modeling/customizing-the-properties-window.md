@@ -1,135 +1,143 @@
 ---
-title: "プロパティ ウィンドウのカスタマイズ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ドメイン固有言語, [プロパティ] ウィンドウ"
+title: Customizing the Properties Window | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Domain-Specific Language, Properties window
 ms.assetid: b6658de5-4e85-4628-93b2-5cc12f63d25b
 caps.latest.revision: 20
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 20
----
-# プロパティ ウィンドウのカスタマイズ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: alancameronwills
+ms.author: awills
+manager: douge
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 82a3e26ffcc0bfaa25efcdc5b57976733fe2af05
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ドメイン固有の言語の \[プロパティ\] ウィンドウの外観および動作を \(DSL\) カスタマイズできます。  DSL 定義では各ドメインのドメイン クラスのプロパティを定義します。  図またはモデル エクスプローラーでクラスのインスタンスを選択すると既定ではドメインのプロパティがプロパティ ウィンドウに表示されます。  これは図のフィールドを具体化ようにマップしていないドメインのプロパティの値を表示して編集できるようにします。  
+---
+# <a name="customizing-the-properties-window"></a>Customizing the Properties Window
+You can customize the appearance and behavior of the properties window in your domain-specific language (DSL) in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. In your DSL Definition, you define domain properties on each domain class. By default, when you select an instance of the class, either on a diagram or in Model Explorer, every domain property is listed in the properties window. This lets you see and edit the values of domain properties, even if you have not mapped them to shape fields on the diagram.  
   
-## 名前説明およびカテゴリ  
- **名前および表示名** 。  ドメインのプロパティの定義ではプロパティの表示名はプロパティ ウィンドウのランタイムに表示されます。  これに対して場合はプロパティを更新するプログラム コードを記述するときに使用されます。  名前が正しい CLR の英数字の名前である必要があります表示名に空白を含めることができます。  
+## <a name="names-descriptions-and-categories"></a>Names, Descriptions, and Categories  
+ **Name and Display Name**. In your definition of a domain property, the Display Name of the property is the name that appears at runtime in the properties window. By contrast, the Name is used when you write program code to update the property. The Name must be a correct CLR alphanumeric name, but the Display Name can contain spaces.  
   
- DSL を定義するプロパティの名前を設定すると表示名とのコピーが自動的に設定されます。  「」 FuelGauge などPascal 形式でパッケージ化された名前を作成する場合は表示名が自動的に空白が含まれる場合 : 「」燃料計。  ただし別の値の表示名を明示的に設定できます。  
+ When you set the Name of a property in the DSL Definition, its Display Name is automatically set to a copy of the Name. If you write a Pascal cased name such as "FuelGauge", the Display Name will automatically contain a space: "Fuel Gauge". However, you can set the Display Name explicitly to another value.  
   
- **説明**。  ドメインのプロパティの説明は 2 か所に表示されます :  
+ **Description**. The Description of a domain property appears in two places:  
   
--   プロパティ ウィンドウの下部ユーザーがプロパティを選択するとします。  プロパティが表す項目をユーザーに示すために使用できます。  
+-   In the bottom of the properties window when the user selects the property. You can use it to explain to the user what the property represents.  
   
--   生成されるプログラム コード。  API に関するドキュメントを抽出するためにドキュメント機能を使用する API ではこのプロパティの説明として表示されます。  
+-   In the generated program code. If you use the documentation facilities to extract API documentation, it will appear as the description of this property in the API.  
   
- **カテゴリ**。  カテゴリはプロパティ ウィンドウの見出しです。  
+ **Category**. A category is a heading in the Properties window.  
   
-## スタイルの機能の公開  
- グラフィック要素の動的機能の一部はドメインのプロパティとして表現されるかまたは  *公開*  できます。  この方法で公開された機能のユーザーによる更新しプログラム コードをより簡単に更新できます。  
+## <a name="exposing-style-features"></a>Exposing Style Features  
+ Some of the dynamic features of graphical elements can be represented or *exposed* as domain properties. A feature that has been exposed in this manner can be updated by the user and can more easily be updated by program code.  
   
- DSL 定義のクラスの図形を右クリックしをポイント **\*\*\* Add Exposed \*\*\*** して機能を選択します。  
+ Right-click a shape class in DSL Definition, point to **Add Exposed**, and then choose a feature.  
   
- 図形で **\*\*\* FillColor \*\*\*\*\*\* OutlineColor \*\*\*\*\*\* TextColor \*\*\*\*\*\* OutlineDashStyle \*\*\*\*\*\* OutlineThickness \*\*\*** と **\*\*\* FillGradientMode \*\*\*** のプロパティを公開できます。  コネクタに  **カラー** `,`**\*\*\* TextColor \*\*\*\*\*\* DashStyle \*\*\*** と **\*\*\* Thickness \*\*\*** のプロパティを公開できます。  図に **\*\*\* FillColor \*\*\*** と **\*\*\* TextColor \*\*\*** のプロパティを公開できます。  
+ On shapes you can expose the **FillColor**, **OutlineColor**, **TextColor**, **OutlineDashStyle**, **OutlineThickness** and **FillGradientMode** properties. On connectors you can expose the **Color**`,`**TextColor**, **DashStyle**, and **Thickness** properties. On diagrams you can expose the **FillColor** and **TextColor** properties.  
   
-## 転送 : 関連要素のプロパティを表示する  
- DSL のユーザーがモデル要素を選択するとその要素のプロパティがプロパティ ウィンドウに表示されます。  ただし指定関連要素のプロパティを表示できます。  これは連携して動作する要素のグループを定義した場合に便利です。  たとえばメインの要素とオプションのプラグインの要素を定義する必要があります。  主要な要素が図形にマップされている場合などがない場合は1 個の要素に存在していたすべてのプロパティを確認できると便利です。  
+## <a name="forwarding-displaying-properties-of-related-elements"></a>Forwarding: Displaying Properties of Related Elements  
+ When the user of your DSL selects an element in a model, that element's properties are displayed in the properties window. However, you can also display the properties of specified related elements. This is useful if you have defined a group of elements that works together. For example, you might define a main element and an optional plug-in element. If the main element is mapped to a shape and the other is not, it is useful to see all their properties as if they were on one element.  
   
- この効果は  *転送*  された名前付きプロパティはさまざまな状況で自動的に行われます。  またドメインの型記述子の定義を通じて転送されるプロパティを使用します。  
+ This effect is named *property forwarding*, and it happens automatically in several cases. In other cases, you can achieve property forwarding by defining a domain type descriptor.  
   
-### ケースを転送既定のプロパティ  
- ユーザーがエクスプローラーのシェイプまたはコネクタまたは要素を選択すると次のプロパティがプロパティ ウィンドウに表示 :  
+### <a name="default-property-forwarding-cases"></a>Default Property Forwarding Cases  
+ When the user selects a shape or connector, or an element in the Explorer, the following properties are displayed in the Properties window:  
   
--   モデル要素のドメイン クラスで定義された基本クラスで定義されたプロパティを含むドメインのプロパティ。  例外は`False` に設定されている **\*\*\* Is Browsable \*\*\*** を持つドメインのプロパティです。  
+-   The domain properties that are defined on the domain class of the model element, including those that are defined in base classes. An exception is domain properties for which you have set **Is Browsable** to `False`.  
   
--   0..1 の多重度を持つ関係によってリンクされた要素の名前。  これはリレーションシップのコネクタのマッピングを定義していない場合でもオプションでリンクされた要素を表示する簡単な方法を提供します。  
+-   The names of elements that are linked through relationships that have a multiplicity of 0..1. This provides a convenient method of seeing optionally linked elements, even if you have not defined a connector mapping for the relationship.  
   
--   要素を対象とする埋め込みリレーションシップのドメインのプロパティ。  通常埋め込みリレーションシップを明示的に表示するためユーザーがプロパティを確認することができます。  
+-   Domain properties of the embedding relationship that targets the element. Because embedding relationships are usually not displayed explicitly, this lets the user see their properties.  
   
--   選択したシェイプまたはコネクタに定義されているドメインのプロパティ。  
+-   Domain properties that are defined on the selected shape or connector.  
   
-### プロパティの事前の追加  
- プロパティを転送するにはドメインの型記述子を定義します。  2 個のドメイン クラスのドメイン リレーションシップが含まれ2 番目のドメインのドメイン クラスのプロパティの値にファースト クラスのドメインのプロパティを設定するドメインの型記述子を使用できます。  たとえば書籍のドメイン クラスと作成者のドメイン クラス間の関係がある場合ユーザーが書籍を選択すると本の作成者の名前のプロパティをプロパティ ウィンドウに表示するドメインの型記述子を使用できます。  
+### <a name="adding-property-forwarding"></a>Adding Property Forwarding  
+ To forward a property, you define a domain type descriptor. If you have a domain relationship between two domain classes, you can use a domain type descriptor to set a domain property in the first class to the value of a domain property in the second domain class. For example, if you have a relationship between a **Book** domain class and an **Author** domain class, you can use a domain type descriptor to make the **Name** property of a Book's **Author** appear in the Properties window when the user selects the Book.  
   
 > [!NOTE]
->  ユーザーがモデルを編集しているときの影響を転送プロパティ ウィンドウだけです。  これは受け取る側のクラスがプロパティは定義されません。  DSL 定義の他の部分やプログラム コードの転送ドメインのプロパティにアクセスする場合はCOPY 要素にアクセスする必要があります。  
+>  Property forwarding affects only the Properties window when the user is editing a model. It does not define a domain property on the receiving class. If you want to access the forwarded domain property in other parts of the DSL Definition or in program code, you must access the forwarding element.  
   
- 次の手順ではDSL を作成していることを前提とします。  最初のいくつかの手順は必要条件の概要を示します。  
+ The following procedure assumes that you have created a DSL. The first few steps summarize the prerequisites.  
   
-##### 別の要素からプロパティを転送する  
+##### <a name="to-forward-a-property-from-another-element"></a>To forward a property from another element  
   
-1.  この例で Book と作成と呼ばれる2 文字以上のクラスを含む [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] のソリューションを作成します。  そこで作成者と間で Kind いずれかの関係。  
+1.  Create a [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] solution that contains at least two classes, which in this example are called **Book** and **Author**. There should be a relationship of either kind between **Book** and **Author**.  
   
-     ソースのロール \(books 側のロール\) の多重度は各ブックに 1 人の作成者が 0..1 または 1..1 必要があります。  
+     The multiplicity of the source role (the role at the **Book** side) should be 0..1 or 1..1, so that each **Book** has one **Author**.  
   
-2.  **\*\*\* DSL Explorer \*\*\*** では書籍のドメイン クラスを右クリックしを ENT1ENT \[\] をクリックします。  
+2.  In **DSL Explorer**, right-click the **Book** domain class, and then click **Add New DomainTypeDescriptor**.  
   
-     **\*\*\* Paths of Custom Property Descriptors \*\*\*** という名前のノードが ENT1ENT \[入力\] ノードの下に表示されます。  
+     A node named **Paths of Custom Property Descriptors** appears under the **Custom Type Descriptor** node.  
   
-3.  \[入力\] ENT0ENT ノードを右クリックしを ENT1ENT \[\] をクリックします。  
+3.  Right-click the **Custom Type Descriptor** node, and then click **Add New PropertyPath**.  
   
-     新しいプロパティのパスは ENT0ENT \[入力\] ノードの下に表示されます。  
+     A new property path appears under the **Paths Of Custom Property Descriptors** node.  
   
-4.  \[入力\] ENT0ENT ウィンドウの新しいプロパティのパスを設定して適切なモデル要素のパスに **\*\*\* Path to Property \*\*\*** を選択します。  
+4.  Select the new property path, and in the **Properties** window, set **Path to Property** to the path of the appropriate model element.  
   
-     このプロパティの右にある矢印をクリックしてツリー ビューのパスを変更できます。  ドメインのパスに関する詳細については[ドメイン パス構文](../modeling/domain-path-syntax.md) を参照してください。  それを編集した場合パスは **BookReferencesAuthor.Author\/\! 作成者**  になります。  
+     You can edit the path in a tree view by clicking the down arrow to the right of this property. For more information about domain paths, see [Domain Path Syntax](../modeling/domain-path-syntax.md). When you have edited it, the path should resemble **BookReferencesAuthor.Author/!Author**.  
   
-5.  作成者の **Name** ドメインのプロパティに  **プロパティ**  を設定します。  
+5.  Set **Property** to the **Name** domain property of **Author**.  
   
-6.  著者名に  **表示名**  を設定します。  
+6.  Set **Display Name** to **Author Name**.  
   
-7.  すべてのテンプレートを変換しDSL をビルドして実行します。  
+7.  Transform All Templates, build and run the DSL.  
   
-8.  モデル図ではブック著者を作成し参照リレーションシップを使用してファイルをリンクします。  書籍要素を選択し\[プロパティ\] ウィンドウでプロパティの他に著者名が表示されます。  リンク作成者の名前を変更したり別の作成者が書籍をリンクし書籍の著者名が変更されたことを確認します。  
+8.  In a model diagram, create a book, an author, and link them using the reference relationship. Select the book element, and in the Properties window you should see Author Name in addition to the properties of the book. Change the name of the linked author, or link the book to a different author, and observe that the Author Name of the book changes.  
   
-## カスタム プロパティ エディター  
- プロパティ ウィンドウがドメインの各プロパティの型に環境を編集する適切な既定値を指定します。  たとえば列挙型についてはユーザーがドロップダウン リストで数値プロパティではユーザーが数値を入力できます。  これは組み込み型にのみ当てはまります。  外部型を指定した場合ユーザーは属性を参照してそれを編集できます。  
+## <a name="custom-property-editors"></a>Custom Property Editors  
+ The property window provides an appropriate default editing experience for the type of each domain property. For example, for an enumerated type, the user sees a drop-down list, and for a numeric property, the user can enter digits. This is only true for the built-in types. If you specify an external type, the user will be able to see the property's values, but not edit it.  
   
- ただし次のエディターを指定できます :  
+ However, you can specify the following editors and types:  
   
-1.  基本データ型に使用される別のエディター。  たとえば文字列プロパティのファイル パスのエディターを指定できます。  
+1.  Another editor that is used with a standard type. For example, you could specify a file path editor for a string property.  
   
-2.  ドメインのプロパティの外部の型およびのエディター。  
+2.  An external type for the domain property, and an editor for it.  
   
-3.  ファイル パスのエディターもなどの .NET エディター独自のカスタム プロパティ エディターを作成できます。  
+3.  A .NET editor such as the file path editor, or you can create your own custom property editor.  
   
-     既定のエディターを持つ文字列などの外部型と型の間の変換。  
+     A conversion between an external type and an type such as String, which has a default editor.  
   
- DSL では *外部の型は*  単純型 \(Boolean 値を Int32 など\) や文字列の 1 種類です。  
+ In a DSL, an *external type* is any type that is not one of the simple types (such as Boolean or Int32) or String.  
   
-#### 外部型を持つドメインのプロパティを定義するには  
+#### <a name="to-define-a-domain-property-that-has-an-external-type"></a>To define a domain property that has an external type  
   
-1.  **ソリューション エクスプローラー**  では**Dsl** プロジェクトの外部の型を含むアセンブリ \(DLL\) への参照を追加します。  
+1.  In **Solution Explorer**, add a reference to the assembly (DLL) that contains the external type, in the **Dsl** project.  
   
-     アセンブリは .NET アセンブリまたは提供するアセンブリを指定できます。  
+     The assembly can be a .NET assembly, or an assembly supplied by you.  
   
-2.  まだ行っていない場合は\[入力\] ENT0ENT リストの型を追加します。  
+2.  Add the type to the **Domain Types** list, unless you have already done so.  
   
-    1.  **\*\*\* DSL Explorer \*\*\*** の開いている DslDefinition.dsl はルート ノードを右クリックしを ENT1ENT \[\] をクリックします。  
+    1.  Open DslDefinition.dsl, and in **DSL Explorer**, right-click the root node, and then click **Add New External Type**.  
   
-         新しいエントリが ENT1ENT \[入力\] ノードの下に表示されます。  
+         A new entry appears under the **Domain Types** node.  
   
         > [!WARNING]
-        >  メニュー項目は DSL のルート ノードに ENT2ENT \[入力\] ノードではなくです。  
+        >  The menu item is on the DSL root node, not the **Domain Types** node.  
   
-    2.  ウィンドウのプロパティに新しい型の名前空間と名前空間を設定します。  
+    2.  Set the name and the namespace of the new type in the Properties window.  
   
-3.  通常の方法でドメインのドメイン クラスにプロパティを追加します。  
+3.  Add a domain property to a domain class in the usual manner.  
   
-     \[プロパティ\] ウィンドウでENT1ENT \[入力\] フィールドのドロップダウン リストから外部型を選択します。  
+     In the Properties window, select the external type from the drop-down list in the **Type** field.  
   
- この段階ではユーザーはプロパティの値を表示できますが編集はできません。  表示される値は `ToString()` の関数から派生します。  コマンドや規則のプロパティの値を設定するなどプログラム コードを記述できます。  
+ At this stage, users can view the values of the property, but they cannot edit it. The displayed values are obtained from the `ToString()` function. You could write program code that sets the value of the property, for example in a command or rule.  
   
-### プロパティ エディターの設定  
- 次の形式のドメインのプロパティに CLR 属性を追加します :  
+### <a name="setting-a-property-editor"></a>Setting a Property Editor  
+ Add a CLR attribute to the domain property, in the following form:  
   
 ```  
 [System.ComponentModel.Editor (  
@@ -138,17 +146,17 @@ caps.handback.revision: 20
   
 ```  
   
- \[プロパティ\] ウィンドウで **\*\*\* Custom Attribute \*\*\*** のエントリを使用してプロパティの属性を設定します。  
+ You can set the attribute on a property by using the **Custom Attribute** entry in the Properties window.  
   
- `AnEditor` の種類は 2 番目のパラメーターで指定された型から派生している必要があります。  2 番目のパラメーターは <xref:System.Drawing.Design.UITypeEditor> または <xref:System.ComponentModel.ComponentEditor> 必要があります。  詳細については、「<xref:System.ComponentModel.EditorAttribute>」を参照してください。  
+ The type of `AnEditor` must be derived from the type specified in the second parameter. The second parameter should be either <xref:System.Drawing.Design.UITypeEditor> or <xref:System.ComponentModel.ComponentEditor>. For more information, see <xref:System.ComponentModel.EditorAttribute>.  
   
- <xref:System.Windows.Forms.Design.FileNameEditor> または <xref:System.Drawing.Design.ImageEditor> などの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] で独自のエディターまたは指定されたエディターを指定できます。  たとえばユーザーがファイル名を入力できるプロパティを使用するには次の手順を使用します。  
+ You can specify either your own editor, or an editor supplied in the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)], such as <xref:System.Windows.Forms.Design.FileNameEditor> or <xref:System.Drawing.Design.ImageEditor>. For example, use the following procedure to have a property in which the user can enter a file name.  
   
-##### ファイル名のドメインのプロパティを定義するには  
+##### <a name="to-define-a-file-name-domain-property"></a>To define a file name domain property  
   
-1.  DSL 定義のドメイン クラスにドメインのプロパティを追加します。  
+1.  Add a domain property to a domain class in your DSL Definition.  
   
-2.  新しいプロパティを選択します。  \[プロパティ\] ウィンドウの \[ENT0ENT\] フィールドでは次の属性を入力します。  この属性を入力するには省略記号 **\[...\]** をクリックし属性名とパラメーターを個別に指定します :  
+2.  Select the new property. In the **Custom Attribute** field in the Properties window, enter the following attribute. To enter this attribute, click the ellipsis **[...]** and then enter the attribute name and the parameters separately:  
   
     ```  
     [System.ComponentModel.Editor (  
@@ -157,31 +165,31 @@ caps.handback.revision: 20
   
     ```  
   
-3.  **文字列**  の既定の設定でドメインのプロパティの型をそのまま使用します。  
+3.  Leave the Type of the domain property at its default setting of **String**.  
   
-4.  ドメインのプロパティを編集するためのユーザーがファイル名のエディターを開くことができることをエディターをテストするには確認します。  
+4.  To test the editor, verify that users can open the file name editor to edit your domain property.  
   
-    1.  F5 キーまたは Ctrl \+ F5 キーを押します。  デバッグのソリューションではテスト ファイルを開きます。  ドメイン クラスの要素を作成しをクリックします。  
+    1.  Press CTRL+F5 or F5. In the debugging solution, open a test file. Create an element of the domain class and select it.  
   
-    2.  \[プロパティ\] ウィンドウでドメインのプロパティを選択します。  フィールド値は省略記号 **\[...\]** を示します。  
+    2.  In the Properties window, select the domain property. The value field shows an ellipsis **[...]**.  
   
-    3.  省略記号をクリックします。  ファイル ダイアログ ボックスが表示されます。  ファイルを選択しダイアログ ボックスを閉じます。  これでファイル パスはドメインのプロパティの値です。  
+    3.  Click the ellipsis. A file dialog box appears. Select a file and close the dialog box. The file path is now the value of the domain property.  
   
-### 独自のプロパティ エディターの定義  
- 独自のエディターを定義できます。  ユーザーのいずれかに編集するを定義して特殊な方法で基本型を型を編集する行います。  たとえばユーザーが式を表す文字列を送信することを許可できます。  
+### <a name="defining-your-own-property-editor"></a>Defining your own property editor  
+ You can define your own editor. You would do this to  allow the user either to edit a type that you have defined, or to edit a standard type in a special way. For example, you could allow the user to input a string that represents a formula.  
   
- <xref:System.Drawing.Design.UITypeEditor> から派生したクラスを記述することでエディターを定義します。  クラスでをオーバーライドする必要があります :  
+ You define an editor by writing a class that is derived from <xref:System.Drawing.Design.UITypeEditor>. Your class must override:  
   
--   <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>ユーザーとやり取りしプロパティ値を更新します。  
+-   <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>, to interact with the user and update the property value.  
   
--   <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>ダイアログ エディターでを開くかドロップダウン メニューを使用するかどうかを指定します。  
+-   <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>, to specify whether your editor will open a dialog or provide a drop-down menu.  
   
- またプロパティ グリッドに表示されるプロパティの値をグラフィカル表示を使用できます。  これを行うには`GetPaintValueSupported` と `PaintValue` をオーバーライドします。  詳細については、「<xref:System.Drawing.Design.UITypeEditor>」を参照してください。  
+ You can also provide a graphical representation of the property's value that will be displayed in the property grid. To do this, override `GetPaintValueSupported`, and `PaintValue`.  For more information, see <xref:System.Drawing.Design.UITypeEditor>.  
   
 > [!NOTE]
->  **Dsl** プロジェクトの別のコード ファイルにコードを追加します。  
+>  Add the code in a separate code file in the **Dsl** project.  
   
- 次に例を示します。  
+ For example:  
   
 ```  
 internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor  
@@ -196,7 +204,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
   
 ```  
   
- このエディターを使用するにはドメインの **\*\*\* Custom Attribute \*\*\*** のプロパティをに設定します :  
+ To use this editor, set the **Custom Attribute** of a domain property to:  
   
 ```  
 [System.ComponentModel.Editor (  
@@ -205,15 +213,15 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
   
 ```  
   
- 詳細については、「<xref:System.Drawing.Design.UITypeEditor>」を参照してください。  
+ For more information, see <xref:System.Drawing.Design.UITypeEditor>.  
   
-## 値のドロップダウン リストの使用  
- ユーザーが選択できるように値のリストを提供できます。  
+## <a name="providing-a-drop-down-list-of-values"></a>Providing a drop-down list of values  
+ You can provide a list of values for a user to choose from.  
   
 > [!NOTE]
->  この方法は実行時に変更できる値の一覧を示します。  変更されないリストを指定するには代わりにドメインのプロパティの型として列挙型を使用することを検討してください。  
+>  This technique provides a list of values that can change at runtime. If you want to provide a list that does not change, consider instead using an enumerated type as the type of your domain property.  
   
- 標準値のリストを定義するにはドメインのプロパティに次の形式を持つ CLR 属性を追加します :  
+ To define a list of standard values, you add to your domain property a CLR attribute that has the following form:  
   
 ```  
 [System.ComponentModel.TypeConverter   
@@ -221,9 +229,9 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
   
 ```  
   
- <xref:System.ComponentModel.TypeConverter> から派生するクラスを定義します。  **Dsl** プロジェクトの別のファイルのコードを追加します。  次に例を示します。  
+ Define a class that derives from <xref:System.ComponentModel.TypeConverter>. Add the code in a separate file in the **Dsl** project. For example:  
   
-```c#  
+```csharp  
 /// <summary>  
 /// Type converter that provides a list of values   
 /// to be displayed in the property grid.  
@@ -315,5 +323,5 @@ public class MyTypeConverter : System.ComponentModel.TypeConverter
   
 ```  
   
-## 参照  
- [プログラム コードにおけるモデル内の移動およびモデルの更新](../modeling/navigating-and-updating-a-model-in-program-code.md)
+## <a name="see-also"></a>See Also  
+ [Navigating and Updating a Model in Program Code](../modeling/navigating-and-updating-a-model-in-program-code.md)

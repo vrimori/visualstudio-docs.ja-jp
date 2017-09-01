@@ -1,80 +1,96 @@
 ---
-title: "CA1019: 属性引数にアクセサーを定義します | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1019"
-  - "DefineAccessorsForAttributeArguments"
-helpviewer_keywords: 
-  - "CA1019"
-  - "DefineAccessorsForAttributeArguments"
+title: 'CA1019: Define accessors for attribute arguments | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1019
+- DefineAccessorsForAttributeArguments
+helpviewer_keywords:
+- CA1019
+- DefineAccessorsForAttributeArguments
 ms.assetid: 197f2378-3c43-427e-80de-9ec25006c05c
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1019: 属性引数にアクセサーを定義します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: c54f96f07e1c02cfab07a63504cd44a7884a3fad
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1019-define-accessors-for-attribute-arguments"></a>CA1019: Define accessors for attribute arguments
 |||  
 |-|-|  
 |TypeName|DefineAccessorsForAttributeArguments|  
 |CheckId|CA1019|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## 原因  
- 属性のコンストラクターで、対応するプロパティのない引数が定義されています。  
+## <a name="cause"></a>Cause  
+ In its constructor, an attribute defines arguments that do not have corresponding properties.  
   
-## 規則の説明  
- 属性では、対象に適用するときに必ず指定する必須の引数を定義できます。  この引数は、コンストラクターに位置指定パラメーターで属性を指定できるようになるため、位置指定引数とも呼ばれます。  必須のすべての引数について、対応する読み取り専用のプロパティも属性で規定する必要があります。これは、引数値を実行時に取得できるようにするためです。  この規則では、各コンストラクターのパラメーターについて、対応するプロパティが定義されているかどうかを確認します。  
+## <a name="rule-description"></a>Rule Description  
+ Attributes can define mandatory arguments that must be specified when you apply the attribute to a target. These are also known as positional arguments because they are supplied to attribute constructors as positional parameters. For every mandatory argument, the attribute should also provide a corresponding read-only property so that the value of the argument can be retrieved at execution time. This rule checks that for each constructor parameter, you have defined the corresponding property.  
   
- また、属性ではオプションの引数も定義できます。これは名前付き引数とも呼ばれます。  この引数は、名前でコンストラクターに属性を指定するときに使用されます。また、対応する読み取り\/書き込みプロパティが必要です。  
+ Attributes can also define optional arguments, which are also known as named arguments. These arguments are supplied to attribute constructors by name and should have a corresponding read/write property.  
   
- 必須の引数でもオプションの引数でも、対応するプロパティとコンストラクターのパラメーターは、同じ名前を使用する必要があります。ただし、大文字と小文字の表記方法は異なります。  プロパティでは Pascal 形式、パラメーターでは Camel 形式の表記方法が使用されます。  
+ For mandatory and optional arguments, the corresponding properties and constructor parameters should use the same name but different casing. Properties use Pascal casing, and parameters use camel casing.  
   
-## 違反の修正方法  
- この規則違反を修正するには、コンストラクターのパラメーターに読み取り専用プロパティがなければ追加します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, add a read-only property for each constructor parameter that does not have one.  
   
-## 警告を抑制する状況  
- 必須の引数値を取得できるようにしない場合、この規則からの警告を抑制します。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Suppress a warning from this rule if you do not want the value of the mandatory argument to be retrievable.  
   
-## カスタム属性の例  
+## <a name="custom-attributes-example"></a>Custom Attributes Example  
   
-### 説明  
- 必須の \(位置\) パラメーターが定義された 2 つの属性を次の例に示します。  属性の 1 つ目の実装は、誤って定義されています。  2 つ目の実装は正しく定義されています。  
+### <a name="description"></a>Description  
+ The following example shows two attributes that define a mandatory (positional) parameter. The first implementation of the attribute is incorrectly defined. The second implementation is correct.  
   
-### コード  
- [!code-cs[FxCop.Design.AttributeAccessors#1](../code-quality/codesnippet/CSharp/ca1019-define-accessors-for-attribute-arguments_1.cs)]
- [!code-vb[FxCop.Design.AttributeAccessors#1](../code-quality/codesnippet/VisualBasic/ca1019-define-accessors-for-attribute-arguments_1.vb)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.AttributeAccessors#1](../code-quality/codesnippet/CSharp/ca1019-define-accessors-for-attribute-arguments_1.cs)] [!code-vb[FxCop.Design.AttributeAccessors#1](../code-quality/codesnippet/VisualBasic/ca1019-define-accessors-for-attribute-arguments_1.vb)]  
   
-## 位置指定引数と名前付き引数  
+## <a name="positional-and-named-arguments"></a>Positional and Named Arguments  
   
-### 説明  
- 位置指定引数と名前付き引数は、必須または省略可能な属性の引数をライブラリのコンシューマーに示します。  
+### <a name="description"></a>Description  
+ Positional and named arguments make to clear to consumers of your library which arguments are mandatory for the attribute and which arguments are optional.  
   
- 次の例は、位置指定引数と名前付き引数の両方を持つ属性の実装を示しています。  
+ The following example shows an implementation of an attribute that has both positional and named arguments.  
   
-### コード  
- [!code-cs[FxCop.Design.AttributeAccessorsNamed#1](../code-quality/codesnippet/CSharp/ca1019-define-accessors-for-attribute-arguments_2.cs)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.AttributeAccessorsNamed#1](../code-quality/codesnippet/CSharp/ca1019-define-accessors-for-attribute-arguments_2.cs)]  
   
-### コメント  
- 次の例は、カスタム属性を 2 つのプロパティに適用する方法を示しています。  
+### <a name="comments"></a>Comments  
+ The following example shows how to apply the custom attribute to two properties.  
   
-### コード  
- [!code-cs[FxCop.Design.AttributeAccessorsNamedApplied#1](../code-quality/codesnippet/CSharp/ca1019-define-accessors-for-attribute-arguments_3.cs)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.AttributeAccessorsNamedApplied#1](../code-quality/codesnippet/CSharp/ca1019-define-accessors-for-attribute-arguments_3.cs)]  
   
-## 関連規則  
- [CA1813: シールされていない属性を使用しません](../code-quality/ca1813-avoid-unsealed-attributes.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1813: Avoid unsealed attributes](../code-quality/ca1813-avoid-unsealed-attributes.md)  
   
-## 参照  
- [属性](../Topic/Attributes1.md)
+## <a name="see-also"></a>See Also  
+ [Attributes](/dotnet/standard/design-guidelines/attributes)

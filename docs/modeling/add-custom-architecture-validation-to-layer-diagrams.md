@@ -1,5 +1,5 @@
 ---
-title: "依存関係ダイアグラムへのカスタム アーキテクチャ検証の追加 |Microsoft ドキュメント"
+title: Add custom architecture validation to dependency diagrams | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,117 +28,118 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: fd26c504273cae739ccbeef5e406891def732985
-ms.openlocfilehash: 16702d78769037b693ddfc0a36ac62453e9b7115
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 25261e06fc2d5ef1d2850b8ecdf159b1085d8d83
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>依存関係ダイアグラムへのカスタム アーキテクチャ検証を追加します。
-Visual Studio で、ユーザーは、ソース コードが依存関係ダイアグラムへの依存関係に準拠していることを確認できるようにレイヤー モデルに対するプロジェクト内のソース コードを検証できます。 標準の検証アルゴリズムがありますが、独自の検証拡張機能を定義できます。  
+# <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Add custom architecture validation to dependency diagrams
+In Visual Studio, users can validate the source code in a project against a layer model so that they can verify that the source code conforms to the dependencies on a dependency diagram. There is a standard validation algorithm, but you can define your own validation extensions.  
   
- ユーザーが選択すると、**アーキテクチャの検証**依存関係図にコマンドの標準の検証メソッドが呼び出された後にインストールされている検証拡張機能です。  
+ When the user selects the **Validate Architecture** command on a dependency diagram, the standard validation method is invoked, followed by any validation extensions that have been installed.  
   
 > [!NOTE]
->  依存関係図では、検証の主目的は、ソリューションの他の部分のプログラム コードと図を比較します。  
+>  In a dependency diagram, the main purpose of validation is to compare the diagram with the program code in other parts of the solution.  
   
- レイヤー検証拡張機能を Visual Studio Integration Extension (VSIX) にパッケージ化し、他の Visual Studio ユーザーに配布できます。 検証機能は、単独で VSIX に配置することも、他の拡張機能と組み合わせて同じ VSIX に含めることもできます。 検証コントロールのコードは、他の拡張機能と同じプロジェクトではなく、専用の Visual Studio プロジェクトで作成する必要があります。  
+ You can package your layer validation extension into a Visual Studio Integration Extension (VSIX), which you can distribute to other Visual Studio users. You can either place your validator in a VSIX by itself, or you can combine it in the same VSIX as other extensions. You should write the code of the validator in its own Visual Studio project, not in the same project as other extensions.  
   
 > [!WARNING]
->  検証プロジェクトを作成したら、このトピックの最後にある [コード例](#example) をコピーし、各自のニーズに合わせて編集してください。  
+>  After you have created a validation project, copy the [example code](#example) at the end of this topic and then edit that to your own needs.  
   
-## <a name="requirements"></a>要件  
- 参照してください[要件](../modeling/extend-layer-diagrams.md#prereqs)します。  
+## <a name="requirements"></a>Requirements  
+ See [Requirements](../modeling/extend-layer-diagrams.md#prereqs).  
   
-## <a name="defining-a-layer-validator-in-a-new-vsix"></a>新しい VSIX でレイヤー検証コントロールを定義する  
- 最も簡単に検証コントロールを作成するには、プロジェクト テンプレートを使用します。 この方法では、コードと VSIX マニフェストが同じプロジェクトに配置されます。  
+## <a name="defining-a-layer-validator-in-a-new-vsix"></a>Defining a Layer Validator in a New VSIX  
+ The quickest method of creating a validator is to use the project template. This places the code and the VSIX manifest into the same project.  
   
-#### <a name="to-define-an-extension-by-using-a-project-template"></a>プロジェクト テンプレートを使用して拡張機能を定義するには  
+#### <a name="to-define-an-extension-by-using-a-project-template"></a>To define an extension by using a project template  
   
-1.  **[ファイル]** メニューの **[新しいプロジェクト]** を使用して、新しいソリューションにプロジェクトを作成します。  
+1.  Create a project in a new solution, by using the **New Project** command on the **File** menu.  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[モデリング プロジェクト]**で、 **[Layer Designer Validation Extension]**(レイヤー デザイナー検証拡張機能) をクリックします。  
+2.  In the **New Project** dialog box, under **Modeling Projects**, select **Layer Designer Validation Extension**.  
   
-     このテンプレートでは、小さい例を含むプロジェクトが作成されます。  
+     The template creates a project that contains a small example.  
   
     > [!WARNING]
-    >  テンプレートのために正常に動作します。  
+    >  To makethe template work properly:  
     >   
-    >  -   `LogValidationError` の呼び出しを編集し、省略可能な引数 `errorSourceNodes` と `errorTargetNodes`を削除します。  
-    > -   カスタム プロパティを使用する場合に記載されている更新プログラムの適用[カスタム プロパティの依存関係図を追加](../modeling/add-custom-properties-to-layer-diagrams.md)します。  
+    >  -   Edit calls to `LogValidationError` to remove the optional arguments `errorSourceNodes` and `errorTargetNodes`.  
+    > -   If you use custom properties, apply the update mentioned in [Add custom properties to dependency diagrams](../modeling/add-custom-properties-to-layer-diagrams.md).  
   
-3.  コードを編集して検証を定義します。 詳細については、「 [検証のプログラミング](#programming)」を参照してください。  
+3.  Edit the code to define your validation. For more information, see [Programming Validation](#programming).  
   
-4.  拡張機能をテストするには、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
+4.  To test the extension, see [Debugging Layer Validation](#debugging).  
   
     > [!NOTE]
-    >  メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
+    >  Your method will be called only in specific circumstances, and breakpoints will not work automatically. For more information, see [Debugging Layer Validation](#debugging).  
   
-5.  メイン インスタンスに、拡張機能をインストールする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイル**bin\\\***します。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
+5.  To install the extension in the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], or on another computer, find the **.vsix** file in **bin\\\***. Copy it to the computer where you want to install it, and then double-click it. To uninstall it, use **Extensions and Updates** on the **Tools** menu.  
   
-## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>レイヤー検証コントロールを別の VSIX に追加する  
- レイヤー検証コントロール、コマンド、および他の拡張機能を含む&1; つの VSIX を作成する場合は、VSIX を定義するプロジェクトとハンドラー用のプロジェクトを別にすることをお勧めします。 
+## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>Adding a Layer Validator to a Separate VSIX  
+ If you want to create one VSIX that contains layer validators, commands, and other extensions, we recommend that you create one project to define the VSIX, and separate projects for the handlers. 
   
-#### <a name="to-add-layer-validation-to-a-separate-vsix"></a>レイヤー検証を別の VSIX に追加するには  
+#### <a name="to-add-layer-validation-to-a-separate-vsix"></a>To add layer validation to a separate VSIX  
   
-1.  新規または既存の Visual Studio ソリューションでクラス ライブラリ プロジェクトを作成します。 **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C#]** をクリックし、 **[クラス ライブラリ]**をクリックします。 このプロジェクトには、レイヤー検証クラスが含められます。  
+1.  Create a Class Library project in a new or existing Visual Studio solution. In the **New Project** dialog box, click **Visual C#** and then click **Class Library**. This project will contain the layer validation class.  
   
-2.  ソリューションで VSIX プロジェクトを特定または作成します。 VSIX プロジェクトには、 **source.extension.vsixmanifest**という名前のファイルが含まれます。 VSIX プロジェクトを追加する必要がある場合は、以下の手順に従います。  
+2.  Identify or create a VSIX project in your solution. A VSIX project contains a file that is named **source.extension.vsixmanifest**. If you have to add a VSIX project, follow these steps:  
   
-    1.  **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C#]**、 **[機能拡張]**、 **[VSIX プロジェクト]**の順にクリックします。  
+    1.  In the **New Project** dialog box, choose **Visual C#**, **Extensibility**, **VSIX Project**.  
   
-    2.  **ソリューション エクスプローラー**で、VSIX プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]**をクリックします。  
+    2.  In **Solution Explorer**, on the shortcut menu of the VSIX project, **Set as Startup Project**.  
   
-3.  **source.extension.vsixmanifest**の **[アセット]**で、レイヤー検証プロジェクトを MEF コンポーネントとして追加します。  
+3.  In **source.extension.vsixmanifest**, under **Assets**, add the layer validation project as a MEF component:  
   
-    1.  **[新規作成]**をクリックします。  
+    1.  Choose **New**.  
   
-    2.  **[Add New Asset]** (新しいアセットの追加) ダイアログ ボックスで、次のように設定します。  
+    2.  In the **Add New Asset** dialog box, set:  
   
-         **[種類]** = **Microsoft.VisualStudio.MefComponent**  
+         **Type** = **Microsoft.VisualStudio.MefComponent**  
   
-         **[ソース]** = **現在のソリューション内のプロジェクト**  
+         **Source** = **A project in current solution**  
   
-         **[プロジェクト]** = *検証プロジェクト*  
+         **Project** = *your validator project*  
   
-4.  また、このプロジェクトをレイヤー検証として追加する必要があります。  
+4.  You must also add it as a layer validation:  
   
-    1.  **[新規作成]**をクリックします。  
+    1.  Choose **New**.  
   
-    2.  **[Add New Asset]** (新しいアセットの追加) ダイアログ ボックスで、次のように設定します。  
+    2.  In the **Add New Asset** dialog box, set:  
   
-         **型** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**します。 これは、ドロップダウン リストのオプションの&1; つではありません。 キーボードで入力する必要があります。  
+         **Type** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**. This is not one of the options in the drop-down list. You must enter it from the keyboard.  
   
-         **[ソース]** = **現在のソリューション内のプロジェクト**  
+         **Source** = **A project in current solution**  
   
-         **[プロジェクト]** = *検証プロジェクト*  
+         **Project** = *your validator project*  
   
-5.  レイヤー検証プロジェクトに戻り、次のプロジェクト参照を追加します。  
+5.  Return to the layer validation project, and add the following project references:  
   
-    |**参照**|**できる操作を行うには**|  
+    |**Reference**|**What this allows you to do**|  
     |-------------------|------------------------------------|  
-    |Microsoft.VisualStudio.GraphModel.dll|アーキテクチャ グラフを読み取る|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|レイヤーと関連付けられているコード DOM を読み取る|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|レイヤー モデルを読み取る|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|図形と図を読み取って更新する|  
-    |System.ComponentModel.Composition|MEF (Managed Extensibility Framework) を使用して検証コンポーネントを定義する|  
-    |Microsoft.VisualStudio.Modeling.Sdk.[バージョン]|モデリング拡張機能を定義する|  
+    |Microsoft.VisualStudio.GraphModel.dll|Read the architecture graph|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Read the code DOM associated with layers|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Read the Layer model|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Read and update shapes and diagrams.|  
+    |System.ComponentModel.Composition|Define the validation component using Managed Extensibility Framework (MEF)|  
+    |Microsoft.VisualStudio.Modeling.Sdk.[version]|Define modeling extensions|  
   
-6.  このトピックの最後にあるコード例を、検証ライブラリ プロジェクトのクラス ファイルにコピーして、検証のコードが含まれるようにします。 詳細については、「 [検証のプログラミング](#programming)」を参照してください。  
+6.  Copy the example code at the end of this topic into the class file in the validator library project to contain the code for your validation. For more information, see [Programming Validation](#programming).  
   
-7.  拡張機能をテストするには、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
+7.  To test the extension, see [Debugging Layer Validation](#debugging).  
   
     > [!NOTE]
-    >  メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
+    >  Your method will be called only in specific circumstances, and breakpoints will not work automatically. For more information, see [Debugging Layer Validation](#debugging).  
   
-8.  メイン インスタンスで、VSIX をインストールする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイルで、 **bin** VSIX プロジェクトのディレクトリ。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラーで、VSIX ファイルをダブルクリックします。 これは Windows 8 のエクスプローラーです。  
+8.  To install the VSIX in the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], or on another computer, find the **.vsix** file in the **bin** directory of the VSIX project. Copy it to the computer where you want to install the VSIX. Double-click the VSIX file in Windows Explorer. (File Explorer in Windows 8.)  
   
-     拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
+     To uninstall it, use **Extensions and Updates** on the **Tools** menu.  
   
-##  <a name="a-nameprogramminga-programming-validation"></a><a name="programming"></a>検証のプログラミング  
- レイヤー検証拡張機能を定義するには、以下の特性を備えたクラスを定義します。  
+##  <a name="programming"></a> Programming Validation  
+ To define a layer validation extension, you define a class that has the following characteristics:  
   
--   宣言の全体的な形式を次に示します。  
+-   The overall form of the declaration is as follows:  
   
     ```  
   
@@ -158,32 +159,31 @@ Visual Studio で、ユーザーは、ソース コードが依存関係ダイ�
       } }  
     ```  
   
--   エラーを検出したときは、 `LogValidationError()`を使用して報告できます。  
+-   When you discover an error, you can report it by using `LogValidationError()`.  
   
     > [!WARNING]
-    >  `LogValidationError`の省略可能なパラメーターを使用しないでください。  
+    >  Do not use the optional parameters of `LogValidationError`.  
   
- ユーザーが **[アーキテクチャの検証]** を実行すると、レイヤーのランタイム システムがレイヤーとその成果物を分析して、グラフを生成します。 グラフは&4; つの部分で構成されます。  
+ When the user invokes the **Validate Architecture** menu command, the layer runtime system analyses the layers and their artifacts to produce a graph. The graph has four parts:  
   
--   
-          [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションのレイヤー モデルは、グラフではノードとリンクとして表されます。  
+-   The layer models of the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution that are represented as nodes and links in the graph.  
   
--   ソリューションで定義されているコード、プロジェクト アイテム、および他の成果物は、ノードおよび分析システムによって検出された依存関係を示すリンクとして表されます。  
+-   The code, project items, and other artifacts that are defined in the solution and represented as nodes, and links that represent the dependencies discovered by the analysis process.  
   
--   レイヤー ノードからコード成果物ノードへのリンク。  
+-   Links from the layer nodes to the code artifact nodes.  
   
--   検証コントロールによって検出されたエラーを表すノード。  
+-   Nodes that represent errors discovered by the validator.  
   
- グラフが作成されると、標準の検証メソッドが呼び出されます。 これが完了すると、インストールされているすべての拡張検証メソッドが、不定の順序で呼び出されます。 グラフを渡された各 `ValidateArchitecture` メソッドは、グラフをスキャンし、検出したエラーを報告します。  
+ When the graph has been constructed, the standard validation method is called. When this is complete, any installed extension validation methods are called in unspecified order. The graph is passed to each `ValidateArchitecture` method, which can scan the graph and report any errors that it finds.  
   
 > [!NOTE]
->  これは、ドメイン固有言語で使用できる検証プロセスと同じです。  
+>  This is not the same as the validation process that can be used in domain-specific languages.  
   
- 検証メソッドでは、レイヤー モデルまたは検証対象のコードを変更することはできません。  
+ Validation methods should not change the layer model or the code that is being validated.  
   
- グラフ モデルは<xref:Microsoft.VisualStudio.GraphModel>。</xref:Microsoft.VisualStudio.GraphModel>で定義されています。 そのプリンシパル クラスは<xref:Microsoft.VisualStudio.GraphModel.GraphNode><xref:Microsoft.VisualStudio.GraphModel.GraphLink>.</xref:Microsoft.VisualStudio.GraphModel.GraphLink> </xref:Microsoft.VisualStudio.GraphModel.GraphNode>  
+ The graph model is defined in <xref:Microsoft.VisualStudio.GraphModel>. Its principal classes are <xref:Microsoft.VisualStudio.GraphModel.GraphNode> and <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.  
   
- 各ノードおよび各リンクには&1; つ以上のカテゴリがあり、それぞれが表す要素または関係の種類が指定されています。 標準的なグラフのノードには以下のカテゴリがあります。  
+ Each Node and each Link has one or more Categories which specify the type of element or relationship that it represents. The nodes of a typical graph have the following categories:  
   
 -   Dsl.LayerModel  
   
@@ -203,40 +203,38 @@ Visual Studio で、ユーザーは、ソース コードが依存関係ダイ�
   
 -   CodeSchema_Property  
   
- レイヤーからコード内の要素へのリンクのカテゴリは "Represents" です。  
+ Links from layers to elements in the code have the category "Represents".  
   
-##  <a name="a-namedebugginga-debugging-validation"></a><a name="debugging"></a>検証のデバッグ  
- レイヤー検証拡張機能をデバッグするには、Ctrl キーを押しながら F5 キーを押します。 
-          [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開きます。 このインスタンスで、レイヤー モデルを開くか作成します。 このモデルは、コードと関連付けられている必要があり、少なくとも&1; つの依存関係を含む必要があります。  
+##  <a name="debugging"></a> Debugging Validation  
+ To debug your layer validation extension, press CTRL+F5. An experimental instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] opens. In this instance, open or create a layer model. This model must be associated with code, and must have at least one dependency.  
   
-### <a name="test-with-a-solution-that-contains-dependencies"></a>依存関係を含むソリューションでのテスト  
- 以下の特性が存在していない限り、検証は実行されません。  
+### <a name="test-with-a-solution-that-contains-dependencies"></a>Test with a Solution that contains Dependencies  
+ Validation is not executed unless the following characteristics are present:  
   
--   依存関係のダイアグラムに少なくとも&1; つの依存関係リンクがあります。  
+-   There is at least one dependency link on the dependency diagram.  
   
--   コード要素と関連付けられたレイヤーがモデルに存在する。  
+-   There are layers in the model that are associated with code elements.  
   
- 初めて [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用インスタンスを起動して検証拡張機能をテストするときは、これらの特性を備えたソリューションを開くか作成します。  
+ The first time that you start an experimental instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] to test your validation extension, open or create a solution that has these characteristics.  
   
-### <a name="run-clean-solution-before-validate-architecture"></a>アーキテクチャを検証する前に [ソリューションのクリーン] を実行する  
- 検証コードを更新したときは常に、検証コマンドをテストする前に、実験用ソリューションで **[ビルド]** メニューの **[ソリューションのクリーン]** を使用します。 これは、検証の結果がキャッシュされているために必要です。 テストの依存関係図またはそのコードを更新していない場合、検証メソッドは実行されません。  
+### <a name="run-clean-solution-before-validate-architecture"></a>Run Clean Solution before Validate Architecture  
+ Whenever you update your validation code, use the **Clean Solution** command on the **Build** menu in the experimental solution, before you test the Validate command. This is necessary because the results of validation are cached. If you have not updated the test dependency diagram or its code, the validation methods will not be executed.  
   
-### <a name="launch-the-debugger-explicitly"></a>デバッガーを明示的に起動する  
- 検証は別のプロセスで実行されます。 したがって、検証メソッド内のブレークポイントはトリガーされません。 検証が開始したら、デバッガーをプロセスに明示的にアタッチする必要があります。  
+### <a name="launch-the-debugger-explicitly"></a>Launch the Debugger Explicitly  
+ Validation runs in a separate process. Therefore, the breakpoints in your validation method will not be triggered. You must attach the debugger to the process explicitly when validation has started.  
   
- デバッガーを検証プロセスにアタッチするには、検証メソッドの先頭に `System.Diagnostics.Debugger.Launch()` の呼び出しを挿入します。 デバッグ ダイアログ ボックスが表示されたら、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のメイン インスタンスを選択します。  
+ To attach the debugger to the validation process, insert a call to `System.Diagnostics.Debugger.Launch()` at the start of your validation method. When the debugging dialog box appears, select the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
- または、 `System.Windows.Forms.MessageBox.Show()`の呼び出しを挿入してもかまいません。 メイン インスタンスに移動するメッセージ ボックスが表示されたら、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]および、**デバッグ**ボタンをクリックし**プロセスにアタッチする**です。 **Graphcmd.exe**という名前のプロセスを選択します。  
+ Alternatively, you can insert a call to `System.Windows.Forms.MessageBox.Show()`. When the message box appears, go to the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] and on the **Debug** menu click **Attach to Process**. Select the process that is named **Graphcmd.exe**.  
   
- 常に、Ctrl キーを押しながら F5 キーを押して (**[デバッグなしで開始]**) 実験用インスタンスを起動します。  
+ Always start the experimental instance by pressing CTRL+F5 (**Start without Debugging**).  
   
-### <a name="deploying-a-validation-extension"></a>検証拡張機能を配置する  
- 適切なバージョンの Visual Studio がインストールされているコンピューターに検証拡張機能をインストールするには、対象のコンピューターで VSIX ファイルを開きます。 
-          [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] がインストールされているコンピューターにインストールするには、VSIX の内容を Extensions フォルダーに手動で抽出する必要があります。 詳細については、次を参照してください。[レイヤー モデル拡張機能を配置](../modeling/deploy-a-layer-model-extension.md)します。  
+### <a name="deploying-a-validation-extension"></a>Deploying a Validation Extension  
+ To install your validation extension on a computer on which a suitable version of Visual Studio is installed, open the VSIX file on the target computer. To install on a computer on which [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] is installed, you must manually extract the VSIX contents into an Extensions folder. For more information, see [Deploy a layer model extension](../modeling/deploy-a-layer-model-extension.md).  
   
-##  <a name="a-nameexamplea-example-code"></a><a name="example"></a>コード例  
+##  <a name="example"></a> Example code  
   
-```c#  
+```csharp  
 using System;  
 using System.ComponentModel.Composition;  
 using System.Globalization;  
@@ -295,6 +293,6 @@ namespace Validator3
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [依存関係図を拡張します。](../modeling/extend-layer-diagrams.md)
+## <a name="see-also"></a>See Also  
+ [Extend dependency diagrams](../modeling/extend-layer-diagrams.md)
 

@@ -1,53 +1,67 @@
 ---
-title: "チュートリアル: サイズの小さいサンプル データベースの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
+title: Create a SQL database by using a script | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 36f913c0-f5a7-4831-83a0-baba721ac95c
 caps.latest.revision: 14
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: bb7d40a3acba967b725676607dd852c0c3bb978d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル: サイズの小さいサンプル データベースの作成
-このチュートリアルでは、「[チュートリアル: ADO.NET を使用した単純なデータ アプリケーションの作成](../data-tools/create-a-simple-data-application-by-using-adonet.md)」のサンプル コードを含む小さなデータベースを作成するために Visual Studio を使用します。  
+# <a name="create-a-sql-database-by-using-a-script"></a>Create a SQL database by using a script
+In this walkthrough, you use Visual Studio to create a small database that contains the sample code for [Create a simple data application by using ADO.NET](../data-tools/create-a-simple-data-application-by-using-adonet.md).  
   
- **このトピックの内容**  
+ **In this topic**  
   
--   [データベース スキーマを含むスクリプトの作成](../data-tools/create-a-sql-database-by-using-a-script.md#CreateScript)  
+-   [Create a script that contains a database schema](../data-tools/create-a-sql-database-by-using-a-script.md#CreateScript)  
   
--   [データベース プロジェクトの作成とそのスキーマのインポート](../data-tools/create-a-sql-database-by-using-a-script.md#CreateProject)  
+-   [Create a database project and import a schema](../data-tools/create-a-sql-database-by-using-a-script.md#CreateProject)  
   
--   [データベースの配置](../data-tools/create-a-sql-database-by-using-a-script.md#DeployDatabase)  
+-   [Deploy the database](../data-tools/create-a-sql-database-by-using-a-script.md#DeployDatabase)  
   
-## 必須コンポーネント  
- このチュートリアルを完了するには、[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] がインストールされている必要があります。  データベースを作成、配置するアクセス許可がある、データベース サーバーまたは LocalDB データベースに、接続できる必要があります。  
+## <a name="prerequisites"></a>Prerequisites  
+ To complete this walkthrough, you must have SQL Server Express LocalDB, or another SQL database, installed.  
   
-##  <a name="CreateScript"></a> データベース スキーマを含むスクリプトの作成  
+##  <a name="CreateScript"></a> Create a script that contains a database schema  
   
-#### スキーマのインポートに使用するスクリプトを作成するには  
+#### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>To create a script from which you can import a schema  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で、メニュー バーの **\[ファイル\]**、**\[新規作成\]**、**\[ファイル\]** の順にクリックします。  
+1.  In [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], on the menu bar, select **File** > **New** > **File**.  
   
-     **\[新しいファイル\]** ダイアログ ボックスが表示されます。  
+     The **New File** dialog box appears.  
   
-2.  **\[カテゴリ\]** ボックスの一覧の **\[全般\]** をクリックします。  
+2.  In the **Categories** list, select **General**.  
   
-3.  **\[テンプレート\]** ボックスの一覧の **\[SQL ファイル\]**、**\[開く\]** の順にクリックします。  
+3.  In the **Templates** list, select **Sql File**, and then select the **Open** button.  
   
-     Transact\-SQL エディターが開きます。  
+     The Transact-SQL editor opens.  
   
-4.  次の Transact\-SQL コードをコピーし、Transact\-SQL エディターに貼り付けます。  
+4.  Copy the following Transact-SQL code, and then paste it into the Transact-SQL editor.  
   
     ```  
     PRINT N'Creating Sales...';  
@@ -209,62 +223,62 @@ manager: "ghogen"
     GO  
     ```  
   
-5.  メニュー バーで **\[ファイル\]**、**\[名前を付けて SqlQuery\_1.sql を保存\]** の順に選択します。  
+5.  On the menu bar, select **File** > **Save SqlQuery_1.sql As...**.  
   
-     **\[名前を付けてファイルを保存\]** ダイアログ ボックスが表示されます。  
+     The **Save File As** dialog box appears.  
   
-6.  **\[ファイル名\]** ボックスに「`SampleImportScript.sql`」と入力し、ファイルの保存場所を確認し、**\[保存\]** をクリックします。  
+6.  In the **File Name** box, enter `SampleImportScript.sql`, note the location where you'll save the file, and then select the **Save** button.  
   
-7.  メニュー バーで **\[ファイル\]**、**\[ソリューションを閉じる\]** の順に選択します。  
+7.  On the menu bar, select **File** > **Close Solution**.  
   
-     次に、データベース プロジェクトを作成し、作成したスクリプトからスキーマをインポートします。  
+     Next, create a database project, and then import the schema from the script that you've created.  
   
-##  <a name="CreateProject"></a> データベース プロジェクトの作成とそのスキーマのインポート  
+##  <a name="CreateProject"></a> Create a database project and import a schema  
   
-#### データベース プロジェクトを作成するには  
+#### <a name="to-create-a-database-project"></a>To create a database project  
   
-1.  メニュー バーで **\[ファイル\]**、**\[新規\]**、**\[プロジェクト\]** の順にクリックします。  
+1.  On the menu bar, select **File** > **New** > **Project**.  
   
-     **\[新しいプロジェクト\]** ダイアログ ボックスが表示されます。  
+     The **New Project** dialog box appears.  
   
-2.  **\[インストール済み\]** の下で **\[テンプレート\]** のノードを展開して **\[他の言語\]** のノードを展開し、**\[SQL Server\]** のカテゴリ、**SQL Server データベース プロジェクト** テンプレートの順に選択します。  
+2.  Under **Installed**, expand the **Templates** node, expand the **Other Languages** node, select the **SQL Server** category, and then select the **SQL Server Database Project** template.  
   
     > [!NOTE]
-    >  **\[他の言語\]** ノードは、Visual Studio のインストールに表示されないことがあります。  
+    >  The **Other Languages** node doesn't appear in all installations of Visual Studio.  
   
-3.  **\[名前\]** ボックスに「`Small Database`」と入力します。  
+3.  In the **Name** box, enter `Small Database`.  
   
-4.  **\[ソリューションのディレクトリを作成\]** チェック ボックスがオンになっていない場合はオンにします。  
+4.  Select the **Create directory for solution** check box if it isn't already selected.  
   
-5.  **\[ソース管理に追加\]** チェック ボックスがオフになっていない場合はオフにし、**\[OK\]** をクリックします。  
+5.  Clear the **Add to source control** check box if it isn't already cleared, and then select the **OK** button.  
   
-     データベース プロジェクトが作成され、**ソリューション エクスプローラー**に表示されます。  
+     The database project is created and appears in **Solution Explorer**.  
   
-     次に、スクリプトからデータベース スキーマをインポートします。  
+     Next, import the database schema from the script.  
   
-#### スクリプトからデータベース スキーマをインポートするには  
+#### <a name="to-import-a-database-schema-from-a-script"></a>To import a database schema from a script  
   
-1.  メニュー バーで **\[プロジェクト\]**、**\[インポート\]**、**\[スクリプト\]** の順に選択します。  
+1.  On the menu bar, select **Project** > **Import** > **Script**.  
   
-2.  \[ようこそ\] ページで、テキストを確認し、**\[次へ\]** をクリックします。  
+2.  On the **Welcome** page, review the text, and then select the **Next** button.  
   
-3.  **\[単一ファイル\]** をクリックし、**\[参照\]** をクリックします。  
+3.  Select the **Single File** option button, and then select the **Browse** button.  
   
-     **\[SQL スクリプトのインポート\]** ダイアログ ボックスが表示されます。  
+     The **Import SQL Script** dialog box appears.  
   
-4.  SampleImportScript.sql ファイルを保存したフォルダーを開いて選択し、**\[開く\]** をクリックします。  
+4.  Open the folder where you saved the SampleImportScript.sql file, select the file, and then select the **Open** button.  
   
-5.  **\[完了\]** をクリックして、**\[SQL スクリプトのインポート\]** ダイアログ ボックスを閉じます。  
+5.  Select the **Finish** button to close the **Import SQL Script** dialog box.  
   
-     スクリプトがインポートされ、このスクリプトで定義したオブジェクトがデータベース プロジェクトに追加されます。  
+     The script is imported, and the objects that the script defines are added to your database project.  
   
-6.  概要を確認した後、**\[完了\]** をクリックして **\[SQL スクリプト ファイルのインポート\]** ダイアログ ボックスを閉じます。  
+6.  Review the summary, and then click the **Finish** button to close the **Import SQL Script File** dialog box.  
   
-7.  **\[ソリューション エクスプローラー\]** で、プロジェクトの Sales、Scripts、および Security のフォルダーを展開し、.sql ファイルが含まれていることを確認します。  
+7.  In **Solution Explorer**, expand the Sales, Scripts, and Security folders of your project, and verify that they contain .sql files.  
   
-8.  **\[SQL Server オブジェクト エクスプローラー\]** で、データベースが **\[プロジェクト\]** ノードの下に表示されていることを確認します。  
+8.  In **SQL Server Object Explorer**, verify that the database appears under the **Projects** node.  
   
-     この時点で、データベースには、テーブル、ストアド プロシージャなどのシステム オブジェクトのみが格納されています。  データベースを配置した後に、スクリプトに定義されたユーザー テーブルとストアド プロシージャが含まれます。  
+     At this point, the database contains only system objects, such as tables and stored procedures. After you deploy the database, it will contain the user tables and stored procedures that the scripts define.  
   
-##  <a name="DeployDatabase"></a> データベースの配置  
- F5 キーを選択すると、データベースを既定で LocalDB のデータベースに配置 \(または発行\) します。  プロジェクトのプロパティ ページを開き、**\[デバッグ\]** をクリックして接続文字列を変更すると、データベースを別の場所に配置できます。
+##  <a name="DeployDatabase"></a> Deploy the database  
+ When you press the **F5** key, you deploy (or publish) the database to a LocalDB database by default. You can deploy the database to a different location by opening the properties page for the project, selecting the **Debug** tab, and then changing the connection string.

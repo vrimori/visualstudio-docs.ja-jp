@@ -1,82 +1,99 @@
 ---
-title: "FIELD_INFO_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FIELD_INFO_FIELDS"
-helpviewer_keywords: 
-  - "FIELD_INFO_FIELDS 列挙型"
+title: FIELD_INFO_FIELDS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- FIELD_INFO_FIELDS
+helpviewer_keywords:
+- FIELD_INFO_FIELDS enumeration
 ms.assetid: a69487d2-e701-4165-804a-8a011df9a3bd
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# FIELD_INFO_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: efb41f7bffeaa652c51af5623d4b38a8d826d2bf
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクトに関して取得する情報を指定します。  
+---
+# <a name="fieldinfofields"></a>FIELD_INFO_FIELDS
+Specifies what information to retrieve about an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-enum enum_FIELD_INFO_FIELDS {   
-   FIF_FULLNAME  = 0x0001,  
-   FIF_NAME      = 0x0002,  
-   FIF_TYPE      = 0x0004,  
-   FIF_MODIFIERS = 0x0008,  
-   FIF_ALL       = 0xffffffff,  
-   FIF_NONE      = 0x0000  
+```cpp  
+enum enum_FIELD_INFO_FIELDS {   
+   FIF_FULLNAME  = 0x0001,  
+   FIF_NAME      = 0x0002,  
+   FIF_TYPE      = 0x0004,  
+   FIF_MODIFIERS = 0x0008,  
+   FIF_ALL       = 0xffffffff,  
+   FIF_NONE      = 0x0000  
 };  
 typedef DWORD FIELD_INFO_FIELDS;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_FIELD_INFO_FIELDS {  
-   FIF_FULLNAME  = 0x0001,  
-   FIF_NAME      = 0x0002,  
-   FIF_TYPE      = 0x0004,  
-   FIF_MODIFIERS = 0x0008,  
-   FIF_ALL       = 0xffffffff,  
-   FIF_NONE      = 0x0000  
+   FIF_FULLNAME  = 0x0001,  
+   FIF_NAME      = 0x0002,  
+   FIF_TYPE      = 0x0004,  
+   FIF_MODIFIERS = 0x0008,  
+   FIF_ALL       = 0xffffffff,  
+   FIF_NONE      = 0x0000  
 };  
 ```  
   
-## メンバー  
- FIF\_FULLNAME  
- [FIELD\_INFO](../../../extensibility/debugger/reference/field-info.md) の構造体の初期化と `bstrFullName` のフィールドを使用します。  
+## <a name="members"></a>Members  
+ FIF_FULLNAME  
+ Initialize/use the `bstrFullName` field in the [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) structure.  
   
- FIF\_NAME  
- `FIELD_INFO` の構造体の初期化と `bstrName` のフィールドを使用します。  
+ FIF_NAME  
+ Initialize/use the `bstrName` field in the `FIELD_INFO` structure.  
   
- FIF\_TYPE  
- `FIELD_INFO` の構造体の初期化と `bstrType` のフィールドを使用します。  
+ FIF_TYPE  
+ Initialize/use the `bstrType` field in the `FIELD_INFO` structure.  
   
- FIF\_MODIFIERS  
- `FIELD_INFO` の構造体の初期化と `bstrModifiers` のフィールドを使用します。  
+ FIF_MODIFIERS  
+ Initialize/use the `bstrModifiers` field in the `FIELD_INFO` structure.  
   
-## 解説  
- [FIELD\_INFO](../../../extensibility/debugger/reference/field-info.md) の構造体のフィールドが初期化する方法を指定するには次の値も [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) ため引数のメソッドに渡されます。  
+## <a name="remarks"></a>Remarks  
+ These values are also passed as an argument to the [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) method to specify which fields of the [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) structure are to be initialized.  
   
- `FIELD_INFO` の構造体の `dwFields` のメンバーはこれらの値がどのフィールドが使用され有効かを示すために使用されます。  
+ These values are also used in the `dwFields` member of the `FIELD_INFO` structure to indicate which fields are used and valid.  
   
- これらのフラグはビットごと `OR` に組み合わせることがあります。  
+ These flags may be combined with a bitwise `OR`.  
   
-## 必要条件  
- ヘッダー : sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [FIELD\_INFO](../../../extensibility/debugger/reference/field-info.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)

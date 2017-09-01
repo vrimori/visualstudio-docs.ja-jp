@@ -1,175 +1,208 @@
 ---
-title: "デバッガーでのコード間の移動 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/08/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "hero-article"
-f1_keywords: 
-  - "vs.debug.execution"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "デバッグ [Visual Studio], execution コントロール"
-  - "実行, 制御 (デバッガーでの)"
-  - "ステップ実行"
+title: Navigate Code with the Debugger in Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 02/07/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.execution
+helpviewer_keywords:
+- stepping
+- debugging [Visual Studio], execution control
+- execution, controlling in debugger
 ms.assetid: 759072ba-4aaa-447e-8e51-0dd1456fe896
 caps.latest.revision: 42
-caps.handback.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# デバッガーでのコード間の移動
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 7ccde2740ba5216ca8e2a6258c283f655da8b06f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-デバッガーでコード内を移動するには多くの方法があります。メソッドへのステップ イン、メソッドのステップ オーバー、ブレークポイントまたは指定位置までの実行、自分のコードへのデバッグの制限を行ったり、外部コードのデバッグにシンボルを含めたりできます。  
+---
+# <a name="navigate-code-with-the-visual-studio-debugger"></a>Navigate Code with the Visual Studio Debugger
+Get familiar with commands and shortcuts to navigate code in the debugger and that will make it faster and easier to find and resolve issues in your app. While you navigate code in the debugger, you can inspect the state of your app or learn more about its execution flow.  
   
-##  <a name="BKMK_Step_into__over__or_out_of_the_code"></a> コードをステップ イン、ステップ オーバー、ステップ アウトする  
- 最も一般的なデバッグ手順の 1 つとして*ステップ実行*があります。 ステップ実行では、1 回に 1 行のコードを実行します。 実行を停止したら \(たとえばデバッガーをブレークポイントまで実行したら\)、**\[デバッグ\]** メニューの 3 つのコマンドを使用してコードをステップ実行できます。  
+## <a name="start-debugging"></a>Start debugging  
+ Often, you start a debugging session using **F5** (**Debug** > **Start Debugging**). This command starts your app with the debugger attached.  
   
-|メニュー コマンド|ショートカット キー|説明|  
-|---------------|----------------|--------|  
-|**\[ステップ イン\]**|**F11**|行に関数呼び出しが含まれている場合は、**\[ステップ イン\]** をクリックすると、呼び出しだけを実行した後、関数内の最初のコード行で停止します。 それ以外の場合、**\[ステップ イン\]** は次に実行されるステートメントに進みます。|  
-|**\[ステップ オーバー\]**|**F10**|行に関数呼び出しが含まれている場合は、**\[ステップ オーバー\]** をクリックすると、呼び出し先の関数を実行した後、呼び出し元の関数内の最初のコード行で停止します。 それ以外の場合、**\[ステップ イン\]** は次に実行されるステートメントに進みます。|  
-|**\[ステップ アウト\]**|**Shift\+F11**|**\[ステップ アウト\]** は、コードの実行を再開し、関数から値が返されると呼び出し元の関数内の値が返された位置で実行を中断します。|  
+ The green arrow also starts the debugger (same as **F5**).  
   
--   入れ子になった関数呼び出しの場合は、**\[ステップ イン\]** をクリックすると、一番内側にある入れ子になった関数にステップ インします。`Func1(Func2())` のような呼び出しに **\[ステップ イン\]** を使用すると、デバッガーは関数 `Func2` にステップ インします。  
+ ![DBG&#95;Basics&#95;Start&#95;Debugging](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
   
--   デバッガーは実際、物理的な行ではなくコード ステートメントをステップ実行します。 たとえば、`if` 句は 1 行で記述できます。  
+ A few other ways that you can start the app with the debugger attached include **F11** ([step into code](#BKMK_Step_into__over__or_out_of_the_code)),  **F10** ([step over code](#BKMK_Step_over_Step_out)), or by using **Run to Cursor**.  See the other sections in this topic for info on what these options do.  
   
-    ```c#  
+ When you debug, the yellow line shows you the code that will execute next.  
+  
+ ![DBG&#95;Basics&#95;Break&#95;Mode](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
+  
+ While debugging, you can switch between commands like **F5**, **F11** and use other features described in this topic (like breakpoints) to quickly get to the code you want to look at.  
+  
+ Most debugger features, such as viewing variable values in the Locals window or evaluating expressions in the Watch window, are available only while the debugger is paused (also called *break mode*). When the debugger is paused, your app state is suspended while functions, variables, and objects remain in memory. While in break mode, you can examine the elements' positions and states to look for violations or bugs. For some project types, you can also make adjustments to the app while in break mode. To watch a video showing these features, see [Getting Started with the Debugger](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6).
+  
+##  <a name="BKMK_Step_into__over__or_out_of_the_code"></a> Step into code, line by line  
+ To stop on each line of code (each statement) while debugging, use the **F11** keyboard shortcut (or **Debug** > **Step Into** on the menu).  
+  
+> [!TIP]
+>  As you execute each line of code, you can hover over variables to see their values, or use the [Locals](../debugger/autos-and-locals-windows.md) and [Watch](../debugger/autos-and-locals-windows.md) windows to watch their values change.  
+  
+ Here are some details about the behavior of **Step Into**:  
+  
+-   On a nested function call, **Step Into** steps into the most deeply nested function. If you use **Step Into** on a call like `Func1(Func2())`, the debugger steps into the function `Func2`.  
+  
+-   The debugger actually steps through code statements rather than physical lines. For example an `if` clause can be written on one line:  
+  
+    ```CSharp  
     int x = 42;  
     string s = "Not answered";  
     if( int x == 42) s = "Answered!";  
     ```  
   
-    ```vb  
-    Dim x As Integet = 42  
+    ```VB  
+    Dim x As Integer = 42  
     Dim s As String = "Not answered"  
     If x = 42 Then s = "Answered!"  
     ```  
   
-     この行にステップ インすると、デバッガーは条件を 1 つのステップとして、結果を別のステップとして扱います \(この例では条件は true\)。  
+     When you step into this line, the debugger treats the condition as one step and the consequence as another (In this example, the condition is true).  
   
- 関数へのステップ イン中に呼び出し履歴を視覚的にトレースするには、「[デバッグを行うときの呼び出し履歴に対するメソッドのマップ](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)」をご覧ください。  
+ To visually trace the call stack while stepping into functions, see [Map methods on the call stack while debugging](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).  
   
-##  <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> ブレークポイントまたは \[すべて中断\] を使用してコードを中断する  
- VS デバッガーでのデバッグ中は、アプリケーションは実行中か中断モードになっています。  
+##  <a name="BKMK_Step_over_Step_out"></a> Step through code, skipping functions  
+ When running code in the debugger, often you will realize that you don't need to see what happens in a particular function (you don't care about it or you know it works, like well-tested library code). Use these commands to skip through code (the functions still execute, of course, but the debugger skips over them).  
   
- デバッガーは、ブレークポイントに達するか例外が発生すると、アプリの実行を中断します。 また、実行はいつでも手動で中断できます。  
+|Keyboard Command|Menu Command|Description|  
+|----------------------|------------------|-----------------|  
+|**F10**|**Step Over**|If the current line contains a function call, **Step Over** runs the code then suspends execution at the first line of code after the called function returns.|  
+|**Shift+F11**|**Step Out**|**Step Out** continues running code and suspends execution when the current function returns (the debugger skips through the current function).|  
   
- "ブレークポイント" は、デバッガーに対して、特定の位置でアプリの実行を一時停止するように指示します。 ブレークポイントで実行が中断されると、プログラムは中断モードになります。 中断モードになっても、プログラムの実行は停止も終了もしません。いつでも実行を再開できます。  
+> [!TIP]
+>  If you need to find the entry point in your app, start with **F10** or **F11**. These commands are often helpful when you are inspecting your app state or trying to find out more about its execution flow.  
   
- \[ローカル\] ウィンドウでの変数値の表示や \[ウォッチ\] ウィンドウでの式の評価など、デバッガーのほとんどの機能は、中断モードでのみ使用できます。 アプリのすべての要素はそのままの状態です \(たとえば、関数、変数、およびオブジェクトはそのままメモリに残されます\) が、移動や動作は中断されます。 中断モードでは、要素の位置と状態を検証して、違反やバグを探すことができます。 アプリの調整も中断モードで行うことができます。  
+##  <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> Run to a specific location or function  
+ Often the preferred method of debugging code, these methods are useful when you know exactly what code you want to inspect, or at least you know where you want to start debugging.  
   
- 多くの条件に基づいて実行を中断するためのブレークポイントを構成できます。 「[ブレークポイントの使用](../debugger/using-breakpoints.md)」を参照してください。 このセクションでは、コードを中断するための 2 つの基本的な方法について説明しています。  
+-   **Set breakpoints in the code**  
   
-1.  **コードにブレークポイントを設定する**  
+     To set a simple breakpoint in your code, open the source file in the Visual Studio editor. Set the cursor at the line of code where you want to suspend execution, and then right-click in the code window to see the context menu and choose **Breakpoint > Insert Breakpoint** (or press **F9**). The debugger suspends execution right before the line is executed.  
   
-     コードに単純なブレークポイントを設定するには、Visual Studio エディターでソース ファイルを開きます。 中断するコード行にカーソルを置き、コンテキスト メニューで **\[ブレークポイント\]**、**\[ブレークポイントの挿入\]** の順にクリックします \(キーボード: **F9**\)。 その行が実行される直前でデバッガーは実行を中断します。  
+     ![Set a breakpoint](../debugger/media/dbg_basics_setbreakpoint.png "DBG_Basics_SetBreakpoint")  
   
-     ![ブレークポイントの設定](~/debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
+     Breakpoints in Visual Studio provide a rich set of additional functionality, such as conditional breakpoints and tracepoints. See [Using Breakpoints](../debugger/using-breakpoints.md).  
   
-     Visual Studio でのブレークポイントには、条件付きブレークポイントやトレースポイントなど、さまざまな追加の機能が用意されています。 「[ブレークポイントの使用](../debugger/using-breakpoints.md)」を参照してください。  
+-   **Run to the cursor location**  
   
-2.  **コードを手動で中断する**  
+     To run to the cursor location, place the cursor on an executable line of code in a source window. On the editor's context menu (right-click in the editor), choose **Run to Cursor**. This is like setting a temporary breakpoint.
+
+-   **Run to Click** 
+
+    To run to a point in your code while paused in the debugger, select the **Run execution to here** green arrow icon (you see the icon while hovering over a line of code). This eliminates the need to set temporary breakpoints.
+
+    ![Debugger's Run to Click](../debugger/media/dbg-run-to-click.png "DbgRunToClick") 
+
+    > [!NOTE]
+    > **Run to Click** is new in [!include[vs_dev15](../misc/includes/vs_dev15_md.md)].
   
-     実行中のアプリで次に実行されるコード行で実行を中断するには、**\[デバッグ\]**、**\[すべて中断\]** の順にクリックします \(キーボード: **Ctrl\+Alt\+Break**\)。  
+-   **Manually break into code**  
   
--   \[マイ コードのみ\] を有効にしてデバッグしている場合は、プロジェクトのコードの次の行で実行が中断されます。 「[ステップ実行をマイ コードのみに制限する](#BKMK_Restrict_stepping_to_Just_My_Code)」を参照してください。  
+     To break into the next available line of code in an executing app, choose **Debug**, **Break All** (keyboard: **Ctrl+Alt+Break**). 
   
--   複数のプログラムをデバッグしている場合、ブレークポイントまたは \[すべて中断\] は、既定では、デバッグ中のすべてのプログラムに影響します。 「[複数のプロセスの実行動作を構成する](../debugger/debug-multiple-processes.md#BKMK_Configure_the_execution_behavior_of_multiple_processes)」を参照してください。  
+     If you break while executing code without corresponding source or symbol (.pdb) files), the debugger displays a **Source Files Not Found** or a **Symbols Not Found** page that can help you find the appropriate files. See [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). If you can't access the supporting files, you can still debug the assembly instructions in the Disassembly window.  
   
--   対応付けられたソースまたはシンボル \(.pdb\) ファイルがないため、コードの実行が中断された場合は、デバッガーによって **\[ソース ファイルが見つかりません\]** または **\[シンボルが見つかりません\]** ページが表示され、該当するファイルを見つけるために役立ちます。 「[シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」を参照してください。  
+-   **Run to a function on the call stack**  
   
-     それらのサポート ファイルにアクセスできない場合は、\[逆アセンブル\] ウィンドウでアセンブリ命令をデバッグできます。  
+     In the **Call Stack** window (available while debugging), select the function, right-click and  choose **Run to Cursor**. To visually trace the call stack, see [Map methods on the call stack while debugging](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).  
   
-##  <a name="BKMK_Run_to_a_specified_location_or_function"></a> 指定した位置または関数まで実行する  
- コード内の特定の位置まで実行した後に実行を停止することが必要になる場合があります。 中断する位置にブレークポイントを設定した場合は、**\[デバッグ\]**、**\[デバッグ開始\]** の順にクリックするか \(デバッグをまだ開始していないとき\)、**\[デバッグ\]**、**\[続行\]** の順にクリックします  \(いずれの場合も **F5** キーがショートカット キー\)。 コードが実行されて、デバッガーは次のブレークポイントで停止します。 目的のブレークポイントに達するまで **\[デバッグ\]**、**\[続行\]** の順にクリックします。  
+-   **Run to a function specified by name**  
   
- コード エディターでカーソルを置いた位置まで実行することも、指定した関数まで実行することもできます。  
+     You can tell the debugger to run your application until it reaches a specified function. You can specify the function by name or you can choose it from the call stack.  
   
- **カーソル位置まで実行する**  
+     To specify a function by name, choose **Debug**, **New Breakpoint**, **Break at Function**, then enter the name of the function and other identifying information.  
   
- カーソル位置まで実行するには、ソース ウィンドウで実行可能なコード行にカーソルを置きます。 エディターのコンテキスト メニューの **\[カーソル行の前まで実行\]** をクリックします。  
+     ![New Breakpoint dialog box](../debugger/media/dbg_execution_newbreakpoint.png "DBG_Execution_NewBreakpoint")  
   
- **呼び出し履歴の関数まで実行する**  
+     If the function is overloaded or is in multiple namespace, you can choose the functions that you want in the **Choose Breakpoints** dialog box.  
   
- **\[呼び出し履歴\]** ウィンドウで関数を選択し、コンテキスト メニューの **\[カーソル行の前まで実行\]** をクリックします。 呼び出し履歴を視覚的にトレースするには、「[デバッグを行うときの呼び出し履歴に対するメソッドのマップ](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)」をご覧ください。  
+     ![Choose Breakpoints dialog box](../debugger/media/dbg_execution_overloadedbreakpoints.png "DBG_Execution_OverloadedBreakpoints")  
   
- **名前で指定した関数まで実行する**  
+##  <a name="BKMK_Set_the_next_statement_to_execute"></a> Move the pointer to change the execution flow  
+ While the debugger is paused, you can move the instruction pointer to set the next statement of code to be executed. A yellow arrowhead in the margin of a source or Disassembly window marks the location of the next statement to be executed. By moving this arrowhead, you can skip over a portion of code or return to a line previously executed. You can use this for situations such as skipping a section of code that contains a known bug.  
   
- デバッガーに対して、指定した関数に達するまでアプリケーションを実行するように指示できます。 関数は名前で指定することも、呼び出し履歴から選択することもできます。  
+ ![Moving the Pointer](../debugger/media/dbg_basics_example3.gif "DBG_Basics_Example3")
   
- 名前で関数を指定するには、**\[デバッグ\]**、**\[ブレークポイントの作成\]**、**\[関数でブレーク\]** の順にクリックし、関数の名前などの識別情報を入力します。  
+ To set the next statement to execute, use one of these procedures:  
   
- ![&#91;ブレークポイントの作成&#93; ダイアログ ボックス](../debugger/media/dbg_execution_newbreakpoint.png "DBG\_Execution\_NewBreakpoint")  
+-   In a source window, drag the yellow arrowhead to a location where you want to set the next statement in the same source file  
   
- 関数がオーバーロードされるか、複数の名前空間にある場合は、**\[ブレークポイントの選択\]** ダイアログ ボックスで目的の関数を選択できます。  
+-   In a source window, set the cursor on the line that you want to execute next, right-click and choose **Set Next Statement**.  
   
- ![&#91;ブレークポイントの選択&#93; ダイアログ ボックス](~/debugger/media/dbg_execution_overloadedbreakpoints.png "DBG\_Execution\_OverloadedBreakpoints")  
-  
-##  <a name="BKMK_Set_the_next_statement_to_execute"></a> 次に実行されるステートメントを設定する  
- デバッガーを中断した後、実行ポイントを移動して、コードの次に実行されるステートメントを設定できます。 ソース ウィンドウまたは \[逆アセンブル\] ウィンドウのマージンに表示される黄色の矢印は、次に実行されるステートメントの位置を示します。 この矢印を移動すると、コードの一部をスキップしたり、前に実行した行に戻ったりできます。 既知のバグを含むコードのセクションをスキップするなどの場合に利用できます。  
-  
- ![Example2](~/debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
-  
- 次に実行されるステートメントを設定するには、次のいずれかの手順を使用します。  
-  
--   ソース ウィンドウで、同じソース ファイル内の次に実行されるステートメントを設定する位置に黄色の矢印をドラッグします。  
-  
--   ソース ウィンドウで、次に実行される行にカーソルを置き、コンテキスト メニューの **\[次のステートメントの設定\]** をクリックします。  
-  
--   \[逆アセンブル\] ウィンドウで、次に実行するアセンブリ命令にカーソルを置き、コンテキスト メニューの **\[次のステートメントの設定\]** をクリックします。  
+-   In the Disassembly window, set the cursor on the assembly instruction that you want to execute next, right-click an and choose **Set Next Statement**.  
   
 > [!CAUTION]
->  次に実行するステートメントを設定すると、プログラム カウンターは新しい位置に直接ジャンプします。 このコマンドは慎重に使用する必要があります。  
+>  Setting the next statement causes the program counter to jump directly to the new location. Use this command with caution:  
 >   
->  -   前の実行ポイントから新しい実行ポイントまでの間の命令は実行されません。  
-> -   実行ポイントを後方に移動すると、その間の命令が実行されます。  
-> -   次に実行するステートメントを別の関数やスコープに移動すると、一般に呼び出し履歴が破損し、実行時エラーや例外が発生する原因になります。 次に実行するステートメントを別のスコープに移動しようとすると、デバッガーの警告ダイアログ ボックスが表示され、操作をキャンセルできます。 Visual Basic では、次に実行するステートメントを別のスコープや関数に移動できません。  
-> -   ネイティブ C\+\+ でランタイム チェックを有効にしている場合、次に実行されるステートメントを設定すると、実行がメソッドの最後に到達したときに例外がスローされる可能性があります。  
-> -   エディット コンティニュが有効になっている場合、エディット コンティニュが即座にマップし直すことができない編集が行われると、**\[次のステートメントの設定\]** でエラーが発生します。 これは、たとえば、catch ブロック内でコードを編集している場合に発生します。 このエラーが発生すると、その操作がサポートされていないことを知らせるエラー メッセージが表示されます。  
+>  -   Instructions between the old and new execution points are not executed.  
+> -   If you move the execution point backwards, intervening instructions are not undone.  
+> -   Moving the next statement to another function or scope usually results in call-stack corruption, causing a run-time error or exception. If you try moving the next statement to another scope, the debugger opens a dialog box with a warning and gives you a chance to cancel the operation. In Visual Basic, you cannot move the next statement to another scope or function.  
+> -   In native C++, if you have run-time checks enabled, setting the next statement can cause an exception to be thrown when execution reaches the end of the method.  
+> -   When Edit and Continue is enabled, **Set Next Statement** fails if you have made edits that Edit and Continue cannot remap immediately. This can occur, for example, if you have edited code inside a catch block. When this happens, you'll see an error message that tells you that the operation is not supported.  
   
 > [!NOTE]
->  マネージ コードでは、次に実行するステートメントは、以下の場合に移動できません。  
+>  In managed code, you cannot move the next statement under the following conditions:  
 >   
->  -   次のステートメントが現在のステートメントとは別のメソッドに含まれている場合。  
-> -   デバッグが、Just\-In\-Time デバッグを使用して開始された場合。  
-> -   呼び出し履歴のアンワインドが行われている場合。  
-> -   System.StackOverflowException 例外または System.Threading.ThreadAbortException 例外がスローされた場合。  
+>  -   The next statement is in a different method than the current statement.  
+> -   Debugging was started by using Just-In-Time debugging.  
+> -   A callstack unwind is in progress.  
+> -   A System.StackOverflowException or System.Threading.ThreadAbortException exception has been thrown.  
   
- アプリケーションの実行中は、次のステートメントを設定できません。 次に実行するステートメントの設定は、デバッガーの中断モード時に行う必要があります。  
+ You cannot set the next statement while your application is actively running. To set the next statement, the debugger must be in break mode.  
   
-##  <a name="BKMK_Restrict_stepping_to_Just_My_Code"></a> ステップ実行をマイ コードのみに制限する  
- デバッグ中に、自分で記述したコードのみを確認して、システム呼び出しなど他の呼び出しを無視したい場合があります。 この場合、"マイ コードのみ" デバッグを使用できます。 "マイ コードのみ" デバッグを使用すると、非ユーザー コードは非表示になり、デバッガー ウィンドウに表示されません。 ステップ実行すると、非ユーザー コードをステップ実行しますが、非ユーザー コード内では停止しません。 「[Just My Code](../debugger/just-my-code.md)」を参照してください。  
+## <a name="BKMK_Restrict_stepping_to_Just_My_Code"></a>Step into non-user code  
+ By default, the debugger tries to show you only your app code while debugging, which is determined by a debugger setting called *Just My Code*. (See [Just My Code](../debugger/just-my-code.md) to see how this works for different project types and languages and how you might customize the behavior.) However, sometimes while you are debugging, you might want to look at framework code, third-party library code, or calls to the operating system (system calls).  
+  
+ You can turn off Just My Code  by going to **Tools** > **Options** > **Debugging** and clear the **Enable Just My Code** checkbox.  
+  
+ When Just My Code is disabled, the debugger can step into non-user code and non-user code appears in the debugger windows.  
   
 > [!NOTE]
->  "マイ コードのみ" デバッグは、デバイス プロジェクトではサポートされません。  
+>  Just My Code is not supported for device projects.  
   
-##  <a name="BKMK_Step_into_system_calls"></a> システム コールにステップ インする  
- \[マイ コードのみ\] が有効でない状態でシステム コードのデバッグ シンボルを読み込んだ場合は、他の呼び出しと同様にシステム コールにステップ インできます。  
+ **Step into system calls**  
   
- Microsoft シンボル ファイルにアクセスするには、「[シンボル サーバーを使用してローカル コンピューター上にないシンボル ファイルを検索する](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine)」トピックの「[シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」をご覧ください。  
+ If you have loaded debugging symbols for system code and Just My Code is not enabled, you can step into a system call just as you can any other call.  
   
- デバッグ中に特定のシステム コンポーネントのシンボルを読み込むには:  
+ To access Microsoft symbol files, see [Use symbol servers to find symbol files not on your local machine](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine) in the [Specify Symbol (.pdb) and Source Files](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) topic.  
   
-1.  \[モジュール\] ウィンドウを開きます \(キーボード: **Ctrl\+Alt\+U**\)。  
+ To load symbols for a specific system component while you are debugging:  
   
-2.  シンボルを読み込むモジュールを選択します。  
+1.  Open the Modules window (keyboard: **Ctrl + Alt + U**).  
   
-     **\[シンボルの状態\]** 列により、シンボルが読み込まれたモジュールを確認できます。  
+2.  Select the module that you want to load symbols for.  
   
-3.  コンテキスト メニューの **\[シンボルの読み込み\]** をクリックします。  
+     You can tell which modules have symbols loaded by looking at the **Symbol Status** column.  
   
-##  <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> マネージ コード内のプロパティと演算子にステップ インする  
- デバッガーは既定ではマネージ コード内のプロパティと演算子をステップ オーバーします。 ほとんどの場合、これにより正しくデバッグを実行できます。 プロパティと演算子へのステップ インを有効にするには、**\[デバッグ\]**、**\[オプションと設定\]** の順にクリックします。**\[デバッグ\]**\/**\[全般\]** ページで、**\[プロパティおよび演算子をステップ オーバーする \(マネージのみ\)\]** チェック ボックスをオフにします。
+3.  Choose **Load Symbols** on the context menu.  
+  
+##  <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> Step into properties and operators in managed code  
+ The debugger steps over properties and operators in managed code by default. In most cases, this provides a better debugging experience. To enable stepping into properties or operators, choose **Debug** > **Options**. On the **Debugging** > **General** page, clear the **Step over properties and operators (Managed only)** check box

@@ -1,5 +1,5 @@
 ---
-title: "ユーザー設定ストアへの書き込み |Microsoft ドキュメント"
+title: Writing to the User Settings Store | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,51 +26,52 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 35ca397d57906a6316543325a08b118613fc2035
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 8be43438312773b2e02915f963b1c68fff61e889
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="writing-to-the-user-settings-store"></a>ユーザー設定ストアへの書き込み
-ユーザー設定が含まれていないような書き込み可能な設定、**ツール/オプション**ダイアログで、[プロパティ] ウィンドウ、およびその他の特定のダイアログ ボックス。 Visual Studio 拡張機能は、少量のデータの格納にこれらを使用できます。 このチュートリアルでは、ユーザー設定ストアへの書き込みから読み取りを外部ツールとして Visual Studio をメモ帳を追加する方法を示します。  
+# <a name="writing-to-the-user-settings-store"></a>Writing to the User Settings Store
+User settings are writeable settings like the ones in the **Tools / Options** dialog, properties windows, and certain other dialog boxes. Visual Studio extensions may use these to store small amounts of data. This walkthrough shows how to add Notepad to Visual Studio as an external tool by reading from and writing to the user settings store.  
   
-### <a name="backing-up-your-user-settings"></a>お客様のユーザー設定のバックアップ  
+### <a name="backing-up-your-user-settings"></a>Backing up Your User Settings  
   
-1.  デバッグし、手順を繰り返してとなるように、外部ツールの設定をリセットできる必要があります。 これを行うには、必要に応じてに復元できるように、元の設定を保存する必要があります。  
+1.  You must be able to reset the External Tools settings so that you can debug and repeat the procedure. To do this, you must save the original settings so that you can restore them as required.  
   
-2.  Regedit.exe を開きます。  
+2.  Open Regedit.exe.  
   
-3.  HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External ツールに移動\\します。  
+3.  Navigate to HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\\.  
   
     > [!NOTE]
-    >  \14.0Exp\ といない \14.0 を含むキーを検索するかどうかを確認\\します。 Visual Studio の実験用インスタンスを実行すると、ユーザーの設定はレジストリ ハイブ"14.0Exp"にです。  
+    >  Make sure that you are looking at the key that contains \14.0Exp\ and not \14.0\\. When you run the experimental instance of Visual Studio, your user settings are in the registry hive "14.0Exp".  
   
-4.  \External Tools\ サブキーを右クリックし、**エクスポート**します。 確認して**選択された部分**が選択されています。  
+4.  Right-click the \External Tools\ subkey, and then click **Export**. Make sure that **Selected branch** is selected.  
   
-5.  結果として得られる外部 Tools.reg ファイルを保存します。  
+5.  Save the resulting External Tools.reg file.  
   
-6.  その後、外部ツールの設定をリセットするには、HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External \ のレジストリ キーを選択し、クリックして**削除**コンテキスト メニューです。  
+6.  Later, when you want to reset the External Tools settings, select the HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\ registry key and click **Delete** on the context menu.  
   
-7.  ときに、**キーの削除の確認**をクリックしてダイアログ ボックスが表示されたら、**はい**します。  
+7.  When the **Confirm Key Delete** dialog box appears, click **Yes**.  
   
-8.  以前に保存した外部 Tools.reg ファイルを右クリックし、をクリックして**プログラムから開く**、クリックして**レジストリ エディター**します。  
+8.  Right-click the External Tools.reg file that you saved earlier, click **Open with**, and then click **Registry Editor**.  
   
-## <a name="writing-to-the-user-settings-store"></a>ユーザー設定ストアへの書き込み  
+## <a name="writing-to-the-user-settings-store"></a>Writing to the User Settings Store  
   
-1.  UserSettingsStoreExtension をという名前の VSIX プロジェクトを作成し、UserSettingsStoreCommand という名前のカスタム コマンドを追加します。 カスタム コマンドを作成する方法の詳細については、次を参照してください[メニュー コマンドを使用して拡張機能の作成。](../extensibility/creating-an-extension-with-a-menu-command.md)  
+1.  Create a VSIX project named UserSettingsStoreExtension and then add a custom command named UserSettingsStoreCommand. For more information about how to create a custom command, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md)  
   
-2.  次のコードを追加、UserSettingsStoreCommand.cs でステートメントを使用します。  
+2.  In UserSettingsStoreCommand.cs, add the following using statements:  
   
-    ```c#  
+    ```csharp  
     using System.Collections.Generic;  
     using Microsoft.VisualStudio.Settings;  
     using Microsoft.VisualStudio.Shell.Settings;  
     ```  
   
-3.  MenuItemCallback でメソッドの本体を削除し、設定の保存、次のようにユーザーを取得します。  
+3.  In MenuItemCallback, delete the body of the method and get the user settings store, as follows:  
   
-    ```c#  
+    ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
     {  
         SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);  
@@ -78,9 +79,9 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-4.  ここでは、メモ帳は、外部ツールとして既に設定されているかどうかを確認します。 ToolCmd 設定が"Notepad"を次のようがあるかどうかを判断するすべての外部ツールを反復処理する必要があります。  
+4.  Now find out whether Notepad is already set as an external tool. You need to iterate through all the external tools to determine whether the ToolCmd setting is "Notepad", as follows:  
   
-    ```c#  
+    ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
     {  
         SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);  
@@ -102,7 +103,7 @@ ms.lasthandoff: 02/22/2017
   
     ```  
   
-5.  メモ帳が、外部ツールとして設定されていない場合は、次のように設定します。  
+5.  If Notepad hasn't been set as an external tool, set it as follows:  
   
     ```vb  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -138,10 +139,10 @@ ms.lasthandoff: 02/22/2017
     }  
     ```  
   
-6.  コードをテストします。 あるとして追加され、メモ帳、外部ツールをロールバックしなければならない、レジストリをもう一度実行する前に、注意してください。  
+6.  Test the code. Remember that it adds Notepad as an External Tool, so you must roll back the registry before running it a second time.  
   
-7.  コードをビルドしてデバッグを開始します。  
+7.  Build the code and start debugging.  
   
-8.  **ツール** メニューのをクリックして**呼び出す UserSettingsStoreCommand**します。 これにより、メモ帳を追加、**ツール**メニュー。  
+8.  On the **Tools** menu, click **Invoke UserSettingsStoreCommand**. This will add Notepad to the **Tools** menu.  
   
-9. メモ帳をツールに表示されます、オプション メニューをクリックして**メモ帳**メモ帳のインスタンスを表示する必要があります。
+9. Now you should see Notepad on the Tools / Options menu, and clicking **Notepad** should bring up an instance of Notepad.

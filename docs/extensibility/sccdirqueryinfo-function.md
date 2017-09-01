@@ -1,31 +1,48 @@
 ---
-title: "SccDirQueryInfo 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccDirQueryInfo"
-helpviewer_keywords: 
-  - "SccDirQueryInfo 関数"
+title: SccDirQueryInfo Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccDirQueryInfo
+helpviewer_keywords:
+- SccDirQueryInfo function
 ms.assetid: 459e2d99-573d-47c4-b834-6d82c5e14162
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# SccDirQueryInfo 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e8e155075ebf6e619c6504b24381bd3349b1c48b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-この関数は、その現在の状態の完全修飾ディレクトリの一覧を調べます。  
+---
+# <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo Function
+This function examines a list of fully qualified directories for their current status.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccDirQueryInfo(  
 LPVOID  pContext,  
 LONG    nDirs,  
@@ -34,37 +51,37 @@ LPLONG  lpStatus
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  pContext  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in] The source control plug-in context structure.  
   
  nDirs  
- \[in\]照会する選択されているディレクトリの数。  
+ [in] The number of directories selected to be queried.  
   
  lpDirNames  
- \[in\]クエリを実行するディレクトリの完全修飾パスの配列。  
+ [in] An array of fully qualified paths of the directories to be queried.  
   
  lpStatus  
- \[入力、出力\]ソース管理の状態フラグを返すプラグインの配列構造体 \(を参照してください [ディレクトリの状態コード](../extensibility/directory-status-code-enumerator.md) 詳細\)。  
+ [in, out] An array structure for the source control plug-in to return the status flags (see [Directory Status Code](../extensibility/directory-status-code-enumerator.md) for details).  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|値|説明|  
-|-------|--------|  
-|SCC\_OK|クエリは成功しました。|  
-|SCC\_E\_OPNOTSUPPORTED|ソース コード管理システムでは、この操作はサポートされません。|  
-|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
-|SCC\_E\_NONSPECIFICERROR<br /><br /> SCC\_E\_UNKNOWNERROR|不特定のエラーです。|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|The query was successful.|  
+|SCC_E_OPNOTSUPPORTED|The source code control system does not support this operation.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nonspecific failure.|  
   
-## 解説  
- 戻り値の配列からビットのビットマスクを埋める、 `SCC_DIRSTATUS` ファミリ \(を参照してください [ディレクトリの状態コード](../extensibility/directory-status-code-enumerator.md)\)、指定されたディレクトリごとに 1 つのエントリ。 状態配列は、呼び出し元によって割り当てられます。  
+## <a name="remarks"></a>Remarks  
+ The function fills the return array with a bitmask of bits from the `SCC_DIRSTATUS` family (see [Directory Status Code](../extensibility/directory-status-code-enumerator.md)), one entry for each directory given. The status array is allocated by the caller.  
   
- IDE は、対応するプロジェクトがあるかどうかを照会することでディレクトリは、ソース管理下にあるかどうかをチェックするディレクトリの名前を変更する前に、この関数を使用します。 ディレクトリがソース管理下にない場合、IDE は、ユーザーに適切な警告を提供できます。  
+ The IDE uses this function before a directory is renamed to check whether the directory is under source control by querying whether it has a corresponding project. If the directory is not under source control, the IDE can provide the proper warning to the user.  
   
 > [!NOTE]
->  ソース管理プラグインのステータス値の 1 つ以上を実装しない場合、実装されていないビットが 0 に設定する必要があります。  
+>  If a source control plug-in chooses to not implement one or more of the status values, unimplemented bits should be set to zero.  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
- [ディレクトリの状態コード](../extensibility/directory-status-code-enumerator.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+ [Directory Status Code](../extensibility/directory-status-code-enumerator.md)

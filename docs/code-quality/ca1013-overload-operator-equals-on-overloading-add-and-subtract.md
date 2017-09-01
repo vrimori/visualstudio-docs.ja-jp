@@ -1,48 +1,65 @@
 ---
-title: "CA1013: オーバーロードする加算および減算で、演算子 equals をオーバーロードします | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OverrideOperatorEqualsOnOverridingAddAndSubtract"
-  - "OverrideOperatorEqualsOnOverloadingAddAndSubtract"
-  - "CA1013"
-  - "OverloadOperatorEqualsOnOverloadingAddAndSubtract"
-helpviewer_keywords: 
-  - "OverrideOperatorEqualsOnOverloadingAddAndSubtract"
-  - "OverrideOperatorEqualsOnOverridingAddAndSubtract"
-  - "CA1013"
-  - "OverloadOperatorEqualsOnOverloadingAddAndSubtract"
+title: 'CA1013: Overload operator equals on overloading add and subtract | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OverrideOperatorEqualsOnOverridingAddAndSubtract
+- OverrideOperatorEqualsOnOverloadingAddAndSubtract
+- CA1013
+- OverloadOperatorEqualsOnOverloadingAddAndSubtract
+helpviewer_keywords:
+- OverrideOperatorEqualsOnOverloadingAddAndSubtract
+- OverrideOperatorEqualsOnOverridingAddAndSubtract
+- CA1013
+- OverloadOperatorEqualsOnOverloadingAddAndSubtract
 ms.assetid: 5bd28d68-c179-49ff-af47-5250b8b18a10
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1013: オーバーロードする加算および減算で、演算子 equals をオーバーロードします
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 5d5f17ca16cc28e4b0c583755f87069836a9422b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: Overload operator equals on overloading add and subtract
 |||  
 |-|-|  
 |TypeName|OverloadOperatorEqualsOnOverloadingAddAndSubtract|  
 |CheckId|CA1013|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## 原因  
- パブリック型またはプロテクト型で、等値演算子を実装しないまま、加算演算子または減算演算子を実装しています。  
+## <a name="cause"></a>Cause  
+ A public or protected type implements the addition or subtraction operators without implementing the equality operator.  
   
-## 規則の説明  
- 加算や減算などの演算を使用して型のインスタンスを結合できる場合、同じ構成値を持つ任意の 2 つのインスタンスについて `true` を返すには、ほぼ常に等値性を定義する必要があります。  
+## <a name="rule-description"></a>Rule Description  
+ When instances of a type can be combined by using operations such as addition and subtraction, you should almost always define equality to return `true` for any two instances that have the same constituent values.  
   
- 等値演算子がオーバーロードされた実装では、既定の等値演算子は使用できません。  使用すると、スタック オーバーフローが発生します。  等値演算子を実装するには、Object.Equals メソッドを使用します。  次の例を参照してください。  
+ You cannot use the default equality operator in an overloaded implementation of the equality operator. Doing so will cause a stack overflow. To implement the equality operator, use the Object.Equals method in your implementation. See the following example.  
   
 ```vb  
 If (Object.ReferenceEquals(left, Nothing)) Then  
@@ -52,34 +69,34 @@ Else
 End If  
 ```  
   
-```c#  
+```csharp  
 if (Object.ReferenceEquals(left, null))   
     return Object.ReferenceEquals(right, null);  
 return left.Equals(right);  
 ```  
   
-## 違反の修正方法  
- この規則違反を修正するには、等値演算子を実装して、数学的に加算演算子および減算演算子と合わせます。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, implement the equality operator so that it is mathematically consistent with the addition and subtraction operators.  
   
-## 警告を抑制する状況  
- 既定の実装の等値演算子でも型が正しく機能する場合は、この規則による警告を抑制しても安全です。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule when the default implementation of the equality operator provides the correct behavior for the type.  
   
-## 使用例  
- この規則に違反する型 \(`BadAddableType`\) の定義を次の例に示します。  この型では、等値演算子を実装し、同じフィールドを持つ任意の 2 つのインスタンスについて、等値性の `true` をテストする必要があります。  型 `GoodAddableType` は、正しい実装例です。  この型では、非等値演算子も実装し、<xref:System.Object.Equals%2A> をオーバーライドしている点に注意してください。これは他の規則に適合するためです。  実際に使用する場合、<xref:System.Object.GetHashCode%2A> も実装します。  
+## <a name="example"></a>Example  
+ The following example defines a type (`BadAddableType`) that violates this rule. This type should implement the equality operator to make any two instances that have the same field values test `true` for equality. The type `GoodAddableType` shows the corrected implementation. Note that this type also implements the inequality operator and overrides <xref:System.Object.Equals%2A> to satisfy other rules. A complete implementation would also implement <xref:System.Object.GetHashCode%2A>.  
   
- [!code-cs[FxCop.Design.AddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_1.cs)]  
+ [!code-csharp[FxCop.Design.AddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_1.cs)]  
   
-## 使用例  
- 次の例では、上記で定義した型のインスタンスを使用して等値性をテストしています。これで、等値演算子の既定の動作と修正後の動作がわかります。  
+## <a name="example"></a>Example  
+ The following example tests for equality by using instances of the types that were previously defined in this topic to illustrate the default and correct behavior for the equality operator.  
   
- [!code-cs[FxCop.Design.TestAddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_2.cs)]  
+ [!code-csharp[FxCop.Design.TestAddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_2.cs)]  
   
- この例を実行すると、次の出力が生成されます。  
+ This example produces the following output.  
   
-  **Bad type:  {2,2} {2,2} are equal?  No**  
-**Good type: {3,3} {3,3} are equal?  Yes**  
-**Good type: {3,3} {3,3} are \=\= ?Yes**  
-**Bad type:  {2,2} {9,9} are equal?  No**  
-**Good type: {3,3} {9,9} are \=\= ?No**    
-## 参照  
- [等値演算子](../Topic/Equality%20Operators.md)
+ **Bad type:  {2,2} {2,2} are equal? No**  
+**Good type: {3,3} {3,3} are equal? Yes**  
+**Good type: {3,3} {3,3} are == ?   Yes**  
+**Bad type:  {2,2} {9,9} are equal? No**  
+**Good type: {3,3} {9,9} are == ?   No**   
+## <a name="see-also"></a>See Also  
+ [Equality Operators](/dotnet/standard/design-guidelines/equality-operators)

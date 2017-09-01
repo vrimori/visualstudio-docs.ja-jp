@@ -1,38 +1,25 @@
 ---
 title: "R Tools for Visual Studio のインストール | Microsoft Docs"
 ms.custom: 
-ms.date: 4/28/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
 ms.tgt_pltfrm: 
+ms.devlang: r
 ms.topic: article
 ms.assetid: 3ff60292-1b88-4ee9-b2b2-edd957f1a519
 caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
-ms.openlocfilehash: bc0b1112fe6f3acf2605101a863d831f41bb5f6d
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: 8e35c82a5f8583a609e9fccbacb0b27d9c3eac8f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 
@@ -50,22 +37,20 @@ ms.lasthandoff: 05/23/2017
 
 ## <a name="supported-versions-of-visual-studio"></a>サポートされている Visual Studio のバージョン
 
-R Tools for Visual Studio (RTVS) は、[Visual Studio 2015 Update 3 (以降)](http://go.microsoft.com/fwlink/?LinkId=691129) および [Visual Studio 2017](https://www.visualstudio.com/downloads/) の Community、Professional、および Enterprise の各エディションでサポートされています。 
+R Tools for Visual Studio (RTVS) は、[Visual Studio 2017](https://www.visualstudio.com/downloads/) および [Visual Studio 2015 Update 3 (以降)](http://go.microsoft.com/fwlink/?LinkId=691129) 両方の Community、Professional、および Enterprise の各エディションでサポートされています (直接ダウンロード)。 
 
-Visual Studio Test Professional や SQL Server Management Studio などの他の製品に含まれている Visual Studio Shell しかない場合、RTVS はインストールされません。 これは、Visual Studio Shell に RTVS に必要なコンポーネントがないためです。
+Visual Studio Test Professional や SQL Server Management Studio などの製品に含まれている Visual Studio Shell しかない場合、RTVS はインストールされません。 Visual Studio Shell には RTVS に必要なコンポーネントがありません。
 
 
 ## <a name="installing-rtvs-in-visual-studio-2017"></a>Visual Studio 2017 での RTVS のインストール
 
-> [!Important]
-> Windows 7 の Visual Studio 2017 での RTVS のインストールは、[GitHub の問題 #3561](https://github.com/Microsoft/RTVS/issues/3561) で説明されているように、現在ブロックされています。 これは、Visual Studio 2017 の 15.3 アップデートで解決される予定です。
+1. Visual Studio インストーラーを実行します。 (Visual Studio がまだインストールされていない場合は、「[ダウンロード](https://www.visualstudio.com/downloads/)」を参照してください)。Windows 7 の場合、Visual Studio バージョン *15.2 ビルド 26430.12* 以降を表示するには、インストーラーを更新する必要があります。
 
-1. Visual Studio インストーラーを実行します。
 2. [**データ サイエンスと分析のアプリケーション**] ワークロードを選択します。
 
-    ![VS2017 の [データ サイエンスと分析のアプリケーション] ワークロード](~/rtvs/media/installation-data-science-workload.png)
+    ![VS2017 の [データ サイエンスと分析のアプリケーション] ワークロード](media/installation-data-science-workload.png)
 
-3. 同じワークロード名で、右側にその他のオプションを設定します。 既定では、このワークロードには F# と Python のサポートが含まれていることに注意してください。 R の場合、少なくとも [**R 言語サポート**]、[**R 開発ツールのランタイム サポート**]、および [**Microsoft R クライアント**] を選択する必要があります。
+3. 同じワークロード名で、右側にその他のオプションを設定します。 既定では、このワークロードには F# と Python のサポートが含まれていることに注意してください。 R の場合、少なくとも **[R 言語サポート]**、**[R 開発ツールのランタイム サポート]**、および **[Microsoft R クライアント]** を選択する必要があります。
 
 RTVS は次の場所にインストールされます。 `%ProgramFiles(x86)%\Microsoft Visual Studio\<version>\<edition>Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio` ここで、`<version>` は、通常 `2017` で、`<edition>` は `Community`、`Professional`、または `Enterprise` です。
 
@@ -98,8 +83,9 @@ RTVS は次の場所にインストールされます。`%ProgramFiles(x86)%\Mic
     - [Visual Studio 2017](../install/create-an-offline-installation-of-visual-studio.md)
     - [Visual Studio 2015](https://msdn.microsoft.com/library/mt706497.aspx)
 
-1. オフライン インストーラーから Visual Studio をインストールします。
-1. [RTVS をダウンロード](https://aka.ms/rtvs-current)し、通常どおりにインストールします。
+1. オフラインの RTVS インストーラーは、[https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) と [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip) からダウンロードします。 
+
+1. オフライン インストーラーから Visual Studio と RTVS をインストールします。
 
 ## <a name="see-also"></a>関連項目
 

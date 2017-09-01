@@ -1,45 +1,62 @@
 ---
-title: "VSPackage で拡張機能を作成します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creating an Extension with a VSPackage | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c0cc5e08-4897-44f2-8309-e3478f1f999e
 caps.latest.revision: 5
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# VSPackage で拡張機能を作成します。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 938cdf3b4e23ee7a6f68d1219e3e89a19bcbcba5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-このチュートリアルでは、VSIX プロジェクトを作成し、VSPackage プロジェクト項目を追加する方法を示します。 メッセージ ボックスを表示するために、UI シェル サービスを取得するのに、VSPackage を使用します。  
+---
+# <a name="creating-an-extension-with-a-vspackage"></a>Creating an Extension with a VSPackage
+This walkthrough shows you how to create a VSIX project and add a VSPackage project item. We will use the VSPackage to get the UI Shell service in order to show a message box.  
   
-## 必要条件  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## VSPackage を作成します。  
+## <a name="creating-a-vspackage"></a>Creating a VSPackage  
   
-1.  という名前の VSIX プロジェクトを作成する **FirstPackage**します。 VSIX プロジェクトのテンプレートを見つけることができます、 **新しいプロジェクト** \] ダイアログ ボックス \[ **Visual c\#\/機能拡張**します。  
+1.  Create a VSIX project named **FirstPackage**. You can find the VSIX project template in the **New Project** dialog under **Visual C# / Extensibility**.  
   
-2.  プロジェクトを開いたら、という名前の Visual Studio パッケージ項目テンプレートを追加 **FirstPackage**します。**ソリューション エクスプ ローラー**, プロジェクト ノードを右クリックして、選択 **追加\/\[新しい項目の**します。**新しい項目の追加** ダイアログ ボックスに移動 **Visual c\#\/機能拡張** を選択して **Visual Studio パッケージ**します。**名** ウィンドウの下部にあるフィールドに、コマンド ファイルの名前を変更する **FirstPackage.cs**します。  
+2.  When the project opens, add a Visual Studio package item template named **FirstPackage**. In the **Solution Explorer**, right-click the project node and select **Add / New Item**. In the **Add New Item** dialog, go to **Visual C# / Extensibility** and select **Visual Studio Package**. In the **Name** field at the bottom of the window, change the command file name to **FirstPackage.cs**.  
   
-3.  プロジェクトをビルドし、デバッグを開始します。  
+3.  Build the project and start debugging.  
   
-     Visual Studio の実験用インスタンスが表示されます。 実験用インスタンスの詳細については、次を参照してください。 [実験用インスタンス](../extensibility/the-experimental-instance.md)します。  
+     The experimental instance of Visual Studio appears. For more information about the experimental instance, see [The Experimental Instance](../extensibility/the-experimental-instance.md).  
   
-4.  実験用インスタンスで開き、 **ツール\/拡張機能と更新プログラム** ウィンドウです。 確認する必要があります、 **FirstPackage** 拡張機能は、ここです。 \(開く場合 **拡張機能と更新プログラム** 、作業には、Visual Studio のインスタンスでは表示されません **FirstPackage**\)。  
+4.  In the experimental instance, open the **Tools / Extensions and Updates** window. You should see the **FirstPackage** extension here. (If you open **Extensions and Updates** in your working instance of Visual Studio, you won't see **FirstPackage**).  
   
-## VSPackage を読み込む  
- この時点で、拡張機能は、ために読み込めません原因となってを読み込むことはありません。 \(ツール ウィンドウを開き、メニュー コマンドをクリックすると、\)、UI または UI の特定のコンテキストで、VSPackage を読み込む必要がありますを指定して対話するときに一般的に、拡張機能を読み込むことができます。 Vspackage と UI のコンテキストの読み込み方法の詳細については、次を参照してください。 [Vspackage を読み込む](../extensibility/loading-vspackages.md)します。 ソリューションを開いている場合は、VSPackage を読み込む方法表示は、この手順でします。  
+## <a name="loading-the-vspackage"></a>Loading the VSPackage  
+ At this point the extension does not load, because there is nothing that causes it to load. You can generally load an extension when you interact with its UI (clicking a menu command, opening a tool window), or by specifying that the VSPackage should load in a specific UI context. For more information about loading VSPackages and UI contexts, see [Loading VSPackages](../extensibility/loading-vspackages.md). For this procedure, we'll show you how to load a VSPackage when a solution is open.  
   
-1.  FirstPackage.cs ファイルを開きます。 FirstPackage クラスの宣言を探します。 既存の属性を次に置き換えます。  
+1.  Open the FirstPackage.cs file. Look for the declaration of the FirstPackage class. Replace the existing attributes with following:  
   
-    ```c#  
+    ```csharp  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About  
     [ProvideAutoLoad(UIContextGuids80.SolutionExists)]  
@@ -47,9 +64,9 @@ caps.handback.revision: 5
     public sealed class FirstPackage : Package  
     ```  
   
-2.  VSPackage が読み込まれることを知らせるメッセージを追加してみましょう。 メソッドを使用して VSPackage の Initialize\(\)、これを行うため、VSPackage がコンテナーに配置した後にのみ、Visual Studio のサービスを取得できます。 \(サービスの取得の詳細については、次を参照してください [方法: サービスを取得](../Topic/How%20to:%20Get%20a%20Service.md)。\)。 FirstPackage の Initialize\(\) メソッドを取得するコードに置き換えます、 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> サービスを取得、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> インターフェイス、および呼び出し、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowMessageBox%2A> メソッドです。  
+2.  Let's add a message that lets us know that the VSPackage has loaded. We use the VSPackage's Initialize() method to do this, because you can get Visual Studio services only after the VSPackage has been sited. (For more information about getting services, see [How to: Get a Service](../extensibility/how-to-get-a-service.md).) Replace the Initialize() method of FirstPackage with code that gets the <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> service, gets the <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> interface, and calls its <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowMessageBox%2A> method.  
   
-    ```c#  
+    ```csharp  
     protected override void Initialize()  
     {  
         base.Initialize();  
@@ -72,6 +89,6 @@ caps.handback.revision: 5
     }  
     ```  
   
-3.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
+3.  Build the project and start debugging. The experimental instance appears.  
   
-4.  実験用インスタンスで、ソリューションを開きます。 示すメッセージ ボックスを表示する必要があります **最初のパッケージの内部 Initialize\(\)**します。
+4.  Open a solution in the experimental instance. You should see a message box that says **First Package Inside Initialize()**.

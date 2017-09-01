@@ -1,5 +1,5 @@
 ---
-title: "LAUNCH_FLAGS |Microsoft ドキュメント"
+title: LAUNCH_FLAGS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b516d251b9e8aed436c14deeaf6dba411a7c97e5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2f838e559d4c33a7bb807d5b0360a51ea7ff0d74
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="launchflags"></a>LAUNCH_FLAGS
-デバッグの起動フラグを指定します。  
+Specifies the debug launch flags.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_LAUNCH_FLAGS {   
    LAUNCH_DEBUG      = 0x0000,  
    LAUNCH_NODEBUG    = 0x0001,  
@@ -51,7 +52,7 @@ enum enum_LAUNCH_FLAGS {
 typedef DWORD LAUNCH_FLAGS;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_LAUNCH_FLAGS {   
    LAUNCH_DEBUG      = 0x0000,  
    LAUNCH_NODEBUG    = 0x0001,  
@@ -60,31 +61,31 @@ public enum enum_LAUNCH_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>メンバー  
+## <a name="members"></a>Members  
  LAUNCH_DEBUG  
- デバッグ プロセスを起動します。  
+ Launches the process for debugging.  
   
  LAUNCH_NODEBUG  
- デバッグを行わず、プロセスを起動します。  
+ Launches the process without debugging it.  
   
  LAUNCH_ENABLE_ENC  
- 推奨されておらず、使用しないでください。  
+ DEPRECATED, DO NOT USE.  
   
  LAUNCH_MERGE_ENV  
- プロセスを起動し、ホストを起動すると、環境をマージします。  
+ Launches the process and merges the environment with the launching host.  
   
-## <a name="remarks"></a>コメント  
- これらの値が引数として渡される、 [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ These values are passed as an argument to the [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) method.  
   
- これらのフラグは、演算と組み合わせることも`OR`です。  
+ These flags may be combined with a bitwise `OR`.  
   
-## <a name="requirements"></a>要件  
- ヘッダー: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
- [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)

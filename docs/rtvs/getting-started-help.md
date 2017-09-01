@@ -1,83 +1,71 @@
 ---
 title: "R Tools for Visual Studio のヘルプ ウィンドウ | Microsoft Docs"
 ms.custom: 
-ms.date: 4/26/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: get-started-article
 ms.assetid: ef9c04d4-0d5e-405a-842e-8d47fa0e8781
 caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: 6644ea68ae691e8467828ff699245fef4e485971
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: 2542682ecab54235a236a93c9906185547017c4c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 07/12/2017
 
 ---
-
 
 # <a name="help-in-r-tools-for-visual-studio"></a>R Tools for Visual Studio のヘルプ
 
 R のヘルプは、Visual Studio の対話型ウィンドウに直接統合されています。 `?` コマンド (`?mtcars` など) を使用する場合、R ドキュメントのヘルプが、Visual Studio ウィンドウに表示されます。
 
-![Visual Studio のヘルプ ウィンドウ](~/rtvs/media/help-window.png)
+![Visual Studio のヘルプ ウィンドウ](media/help-window.png)
 
 > [!Tip]
 > ヘルプ ウィンドウは、Visual Studio のその他すべてのウィンドウと同様に、好みに応じて配置およびドッキングすることができます。 「[Visual Studio のウィンドウ レイアウトをカスタマイズする](../ide/customizing-window-layouts-in-visual-studio.md)」を参照してください。
 >
-> また、**[R Tools] > [オプション]** メニューを選択して、**[R ヘルプ ブラウザー]** プロパティに `External` を設定し、代わりにブラウザーでヘルプの結果を開くこともできます。 [オプション](options.md)に関するページを参照してください。
+> また、**[R Tools] > [オプション]** メニューを選択して、**[R ヘルプ ブラウザー]** プロパティに `External` を設定し、ブラウザーでヘルプの結果を開くことができます。 [オプション](options.md)に関するページを参照してください。
 
-ヘルプを検索するには、スペースを含む場合は検索用語を引用符で囲い、`??` コマンドを使用します。
+ヘルプを検索するには、`??` に続けて検索用語を指定します。 検索用語にスペースが含まれる場合は、用語を引用符で囲みます。
 
 ```R
 ??"Motor Trend"
 ```
 
-![ヘルプの検索結果](~/rtvs/media/help-search1.png)
+![ヘルプの検索結果](media/help-search1.png)
 
 また、ヘルプ ウィンドウには、R ドキュメントの詳細な検索を直接実施できる、検索入力フィールドもあります。
 
-![入力フィールドを使用したヘルプの検索結果](~/rtvs/media/help-search2.png)
+![入力フィールドを使用したヘルプの検索結果](media/help-search2.png)
 
 ## <a name="integrated-help-lookup"></a>統合ヘルプの参照
 
-開発者は、関数名、データセット、およびその他の要素のヘルプを入手するために R ドキュメントを検索することが多いため、R Tools for Visual Studio では、ヘルプの参照をエディターおよび対話型ウィンドウに直接統合して、プロセスを効率化しています。
+開発者は、関数名、データセットなどの要素についてわからないことがあると、多くの場合は R ドキュメントを検索します。 R Tools for Visual Studio (RTVS) では、ヘルプの検索をエディターと対話型ウィンドウに直接統合することで、このプロセスを簡略化しています。
 
 - オート コンプリート操作中に F1 キーを押すと、サブ文字列に一致するヘルプの結果一覧が生成されます。
-- 検索用語 (関数など) を右クリックして、**[Help on]\(ヘルプの表示\)** を選択するか、F1 キーを押して、その関数のヘルプを開きます。 また、任意の選択に対して **[Help on]\(ヘルプの表示\)** を呼び出すこともできます。
+- 検索用語 (関数など) を右クリックして **[<用語> のヘルプ]** コマンドを選択すると、その関数のヘルプを開きます。 また、任意の選択に対して **[Help on]\(ヘルプの表示\)** を呼び出すこともできます。
 
-    ![コンテキスト メニューを右クリックしてヘルプを呼び出す](~/rtvs/media/help-right-click.png)
+    ![コンテキスト メニューを右クリックしてヘルプを呼び出す](media/help-right-click.png)
 
 > [!Tip]
 > ブラウザーで統合ヘルプを開くには、**[R Tools] > [オプション]** を選択して、**[F1 Web ブラウザー]** に `External` を設定します。 [オプション](options.md)に関するページを参照してください。
 
 ## <a name="integrated-stackoverflow-search"></a>StackOverflow 検索の統合
 
-R ドキュメントでの検索に加えて、開発者はコードを記述するときに StackOverflow を検索することが多いです。 RTVS では、このプロセスも効率化されます。 用語または選択を右クリックして、**[Search web for]\(Web で検索\)** を選択するか、Ctrl + F1 キーを押すと、Visual Studio ウィンドウ (または、**[F1 Web ブラウザー]** オプションを変更している場合はブラウザー) が開き、既定では StackOverflow を範囲とした用語の検索結果が表示されます。
+R ドキュメントでの検索に加えて、開発者はコードを記述するときに StackOverflow を検索することが多いです。 RTVS では、このプロセスも効率化されます。 用語または選択範囲を右クリックし、**[Web で <用語> を検索します]** コマンド (Ctrl + F1 キー) を選択すると、Visual Studio からウィンドウが開き、StackOverflow を対象に検索結果が表示されます。
 
-![Visual Studio の Web 検索結果](~/rtvs/media/help-web-search-results.png)
+![Visual Studio の Web 検索結果](media/help-web-search-results.png)
 
-**[R Tools] > [オプション] > [F1 Web 検索文字列]** オプションを使用して、追加された文字列 `R site:stackoverflow` を変更できます。
+**[R Tools] > [オプション] > [F1 Web 検索文字列]** オプションを使用して、追加されたスコープ文字列 `R site:stackoverflow` を変更できます。
 
-![[F1 Web 検索文字列] オプションを変更する](~/rtvs/media/options-dialog.png)
+![[F1 Web 検索文字列] オプションを変更する](media/options-dialog.png)
+
+ブラウザーで結果を表示するには、「[R Tools for Visual Studio オプション](options.md)」に従って **[F1 Web ブラウザー]** オプションを変更します。

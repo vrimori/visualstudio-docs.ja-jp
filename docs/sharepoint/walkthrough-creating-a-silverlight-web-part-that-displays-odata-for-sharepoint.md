@@ -1,113 +1,106 @@
 ---
-title: "チュートリアル: SharePoint の OData を表示する Silverlight Web パーツの作成"
-ms.custom: ""
-ms.date: "02/22/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.SPE.SilverlightWebPart"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: 'Walkthrough: Creating a Silverlight Web Part that Displays OData for SharePoint | Microsoft Docs'
+ms.custom: 
+ms.date: 02/22/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.SPE.SilverlightWebPart
+dev_langs:
+- VB
+- CSharp
 ms.assetid: 92d55e68-8f3f-4bf7-a21b-801c298b04c4
 caps.latest.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 20
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 04035e9c2925cdc2d7c329509e71b723369a3f8b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
+
 ---
-# チュートリアル: SharePoint の OData を表示する Silverlight Web パーツの作成
-  SharePoint 2010 は OData でリスト データを公開します。  SharePoint では、OData サービスは RESTful ListData.svc サービスによって実装されます。  このチュートリアルでは、Silverlight アプリケーションをホストする SharePoint Web パーツを作成する方法を示します。  Silverlight アプリケーションが ListData.svc を使用して、SharePoint のお知らせリスト情報が表示されます。  詳細については、[SharePoint Foundation 他のインターフェイス](http://go.microsoft.com/fwlink/?LinkId=225999) 参照します [Open Data Protocol](http://go.microsoft.com/fwlink/?LinkId=226000)。  
-  
- このチュートリアルでは、次のタスクについて説明します。  
-  
--   [Silverlight Web パーツとの Silverlight アプリケーションの作成](#BKMK_creatingSLApp)。  
-  
--   [Silverlight アプリケーションのカスタマイズ](#BKMK_customizeSLApp)。  
-  
--   [Silverlight アプリケーションのカスタマイズ](#BKMK_customizeSLApp)。  
-  
--   [Silverlight アプリケーションのカスタマイズ](#BKMK_customizeSLApp)。  
-  
--   [Silverlight Web パーツのテスト](#BKMK_testSLApp)。  
+# <a name="walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>Walkthrough: Creating a Silverlight Web Part that Displays OData for SharePoint
+  SharePoint 2010 exposes its list data by means of OData. In SharePoint, the OData service is implemented by the RESTful service ListData.svc. This walkthrough shows how to create a SharePoint web part that hosts a Silverlight application. The Silverlight application displays SharePoint Announcement list information by using ListData.svc. For more information, see [SharePoint Foundation REST Interface](http://go.microsoft.com/fwlink/?LinkId=225999) and [Open Data Protocol](http://go.microsoft.com/fwlink/?LinkId=226000).  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   サポート対象エディションの Microsoft Windows および SharePoint。  [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   Supported editions of Microsoft Windows and SharePoint. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
 -   [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)].  
   
-##  <a name="BKMK_creatingSLApp"></a> Silverlight Web パーツとの Silverlight アプリケーションの作成  
- まず、Visual Studio で Silverlight アプリケーションを作成します。  Silverlight アプリケーションで、お知らせが ListData.svc サービスを使用して表示する SharePoint からデータを取得します。  
+##  <a name="creating-a-silverlight-application-and-silverlight-web-part"></a>Creating a Silverlight Application and Silverlight Web Part  
+ First, create a Silverlight application in Visual Studio. The Silverlight application retrieves data from the SharePoint Announcements list by using the ListData.svc service.  
   
 > [!NOTE]  
->  4.0 のサポートの前の Silverlight のバージョンなしの SharePoint リスト データを参照するための要求インターフェイス。  
+>  No versions of Silverlight before 4.0 support the required interfaces for referencing SharePoint list data.  
   
-#### Silverlight アプリケーションおよび Silverlight Web プロジェクトを作成するには、パーツ  
+#### <a name="to-create-a-silverlight-application-and-silverlight-web-part"></a>To create a Silverlight Application and Silverlight web part  
   
-1.  メニュー バーで、**\[新しいプロジェクト\]** ダイアログ ボックスを表示するには、**\[新規作成\]**、**\[プロジェクト\]\[ファイル\]** をクリックします。  
+1.  On the menu bar, choose **File**, **New**, **Project** to display the **New Project** dialog box.  
   
-2.  **\[SharePoint\]** ノードを **\[Visual C\#\]** または **\[Visual Basic\]** で展開し、**2010** ノードを選択します。  
+2.  Expand the **SharePoint** node under either **Visual C#** or **Visual Basic**, and then choose the **2010** node.  
   
-3.  テンプレート ペインで、**\[SharePoint 2010 Silverlight Web パーツ\]** テンプレートを選択します。  
+3.  In the templates pane, choose the **SharePoint 2010 Silverlight Web Part** template.  
   
-4.  **\[名前\]** ボックスで、SLWebPartTest を入力し、**\[OK\]** ボタンをクリックします。  
+4.  In the **Name** box, enter **SLWebPartTest** and then choose the **OK** button.  
   
-     **\[SharePoint カスタマイズ ウィザード\]** ダイアログ ボックスが表示されます。  
+     The **SharePoint Customization Wizard** dialog box appears.  
   
-5.  **\[デバッグのサイトとセキュリティ レベルの指定\]** ページで、サイト定義をデバッグすると入力するか、既定の場所 \(http:\/\/*system name*\/\) を使用して、SharePoint サーバー サイトの URL を指定します。  
+5.  On the **Specify the site and security level for debugging** page, enter the URL for the SharePoint server site where you want to debug the site definition, or use the default location (http://*system name*/).  
   
-6.  **\[この SharePoint ソリューションの信頼レベル\]** セクションで **\[ファーム ソリューションとして配置する\]** を選択します。  
+6.  In the **What is the trust level for this SharePoint solution?** section, choose the **Deploy as a farm solution** option button.  
   
-     この例では、ファーム ソリューションを使用すると、Silverlight Web パーツ プロジェクトとは、ファームまたはサンドボックス ソリューション配置できます。  サンドボックス ソリューションとファーム ソリューションの違いの詳細については、「[サンドボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)」を参照してください。  
+     Although this example uses a farm solution, Silverlight web part projects can be deployed as either farm or sandboxed solutions. For more information about sandboxed solutions and farm solutions, see [Sandboxed Solution Considerations](../sharepoint/sandboxed-solution-considerations.md).  
   
-7.  **\[Silverlight 構成情報の指定\]** ページの **\[Silverlight Web パーツを関連付ける方法\]** セクションで、**\[新しい Silverlight プロジェクトを作成して Web パーツと関連付ける\]** のオプション ボタンを選択します。  
+7.  In the **How do you want to associate the Silverlight Web Part** section of the **Specify Silverlight Configuration Information** page, choose the **Create a new Silverlight project and associate it with the web part** option button.  
   
-8.  **\[名前\]** を SLApplication に変更し、**\[Visual Basic\]** または **\[Visual C\#\]** に **\[言語\]** を設定し、**\[Microsoft Silverlight 4.0\]** に **\[Silverlight バージョン\]** を設定します。  
+8.  Change the **Name** to **SLApplication**, set **Language** to either **Visual Basic** or **Visual C#**, and then set **Silverlight Version** to **Silverlight 4.0**.  
   
-9. **\[完了\]** をクリックします。  プロジェクトは **\[ソリューション エクスプローラー\]** に表示されます。  
+9. Choose the **Finish** button. The projects appear in **Solution Explorer**.  
   
-     ソリューションは、2 種類のプロジェクトが含まれています: Silverlight アプリケーションおよび Silverlight Web パーツは。  Silverlight アプリケーションが SharePoint リストからデータを取得し、表示し、Silverlight Web パーツは、Silverlight アプリケーションをホストし、SharePoint で調べることができます。  
+     The solution contains two projects: a Silverlight application and a Silverlight web part. The Silverlight application retrieves and displays the list data from SharePoint, and the Silverlight web part hosts the Silverlight application, enabling you to view it in SharePoint.  
   
-##  <a name="BKMK_customizeSLApp"></a> Silverlight アプリケーションのカスタマイズ  
- Silverlight アプリケーションにコードとデザイン要素を追加します。  
+##  <a name="customizing-the-silverlight-application"></a>Customizing the Silverlight Application  
+ Add code and design elements to the Silverlight application.  
   
-#### Silverlight アプリケーションをカスタマイズするには  
+#### <a name="to-customize-the-silverlight-application"></a>To customize the Silverlight Application  
   
-1.  Silverlight アプリケーションの System.Windows.Data アセンブリへの参照を追加します。  詳細については、「[方法: &#91;参照の追加&#93; ダイアログ ボックスを使用して参照を追加または削除する](http://msdn.microsoft.com/ja-jp/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)」を参照してください。  
+1.  Add an assembly reference to System.Windows.Data in the Silverlight application. For more information, see [NIB How to: Add or Remove References By Using the Add Reference Dialog Box](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).  
   
-2.  **\[ソリューション エクスプローラー\]** で、**\[参照\]** のショートカット メニューを開き、**\[サービス参照の追加\]** をクリックします。  
+2.  In **Solution Explorer**, open the shortcut menu for **References**, and then choose **Add Service Reference**.  
   
     > [!NOTE]  
-    >  Visual Basic を使用している場合は **\[ソリューション エクスプローラー\]** の上に **\[参照\]** ノードを表示するに **\[すべてのファイルを表示\]** アイコンを選択する必要があります。  
+    >  If you're using Visual Basic, you must choose the **Show All Files** icon at the top of **Solution Explorer** to display the **References** node.  
   
-3.  **\[サービス参照の追加\]** ダイアログ ボックスのアドレス ボックスに、SharePoint サイトの URL を、**http:\/\/MySPSite**"など\) を入力し、**\[移動\]** ボタンをクリックします。  
+3.  In the Address box of the **Add Service Reference** dialog box, enter the URL of your SharePoint site, such as **http://MySPSite**, and then choose the **Go** button.  
   
-     Silverlight は、SharePoint OData サービス ListData.svc を検出すると、完全サービス URL でアドレスを置き換えます。  この例では、http:\/\/myserver または http:\/\/myserver\/\_vti\_bin\/ListData.svc になります。  
+     When Silverlight locates the SharePoint OData service ListData.svc, it replaces the address with the full service URL. For this example, http://myserver becomes http://myserver/_vti_bin/ListData.svc.  
   
-4.  プロジェクトにサービス参照を追加するに **\[OK\]** ボタンをクリックして、既定のサービスの名前、ServiceReference1 を使用します。  
+4.  Choose the **OK** button to add the service reference to the project, and use the default service name, ServiceReference1.  
   
-5.  メニュー バーの **\[ビルド\]**、**\[ソリューションのビルド\]** の順にクリックします。  
+5.  On the menu bar, choose **Build**, **Build Solution**.  
   
-6.  SharePoint Services に基づいてプロジェクトに新しいデータ ソースを追加します。  これを行うには、メニュー バーにするには、**\[その他のウィンドウ\]**、**\[データ ソース\]\[表示\]** をクリックします。  
+6.  Add a new data source to the project based on the SharePoint service. To do this, on the menu bar, choose **View**, **Other Windows**, **Data Sources**.  
   
-     **\[データ ソース\]** ウィンドウはタスク、お知らせと予定表など、SharePoint で使用できるデータがすべて一覧表示されます。  
+     The **Data Sources** window shows all of the available SharePoint list data, such as Tasks, Announcements, and Calendar.  
   
-7.  Silverlight アプリケーションでのお知らせリスト データを追加します。  Silverlight デザイナーに **\[データ ソース\]** ウィンドウから「お知らせ」をドラッグできます。  
+7.  Add the Announcements list data to the Silverlight application. You can drag "Announcements" from the **Data Sources** window onto the Silverlight designer.  
   
-     これは、SharePoint サイトのお知らせリストにバインドされるグリッド コントロールを作成します。  
+     This creates a grid control bound to the SharePoint site's Announcements list.  
   
-8.  Silverlight ページに合わせてグリッド コントロールのサイズを変更します。  
+8.  Resize the grid control to fit the Silverlight page.  
   
-9. MainPage.xaml でファイル \(Visual C\# の MainPage.xaml.cs または Visual Basic の MainPage.xaml.vb\) を追加します。次の名前空間参照をコーディングする必要があります。  
+9. In the MainPage.xaml code file (MainPage.xaml.cs for Visual C# or MainPage.xaml.vb for Visual Basic), add the following namespace references.  
   
     ```vb  
     ' Add the following three Imports statements.  
@@ -123,9 +116,7 @@ caps.handback.revision: 20
     using System.Data.Services.Client;  
     ```  
   
-<!-- TODO: review snippet reference      [!CODE [SP_SLWebPart#1](SP_SLWebPart#1)]  -->  
-  
-10. クラスの先頭に次の変数を追加します。  
+10. Add the following variable declarations at the top of the class.  
   
     ```vb  
     Private context As TeamSiteDataContext  
@@ -138,10 +129,8 @@ caps.handback.revision: 20
     private CollectionViewSource myCollectionViewSource;  
     DataServiceCollection<AnnouncementsItem> announcements = new DataServiceCollection<AnnouncementsItem>();  
     ```  
-  
-<!-- TODO: review snippet reference      [!CODE [SP_SLWebPart#2](SP_SLWebPart#2)]  -->  
-  
-11. 次の `UserControl_Loaded` プロシージャを置き換えます。  
+   
+11. Replace the `UserControl_Loaded` procedure with the following.  
   
     ```vb  
     Private Sub UserControl_Loaded_1(sender As Object, e As RoutedEventArgs)  
@@ -177,12 +166,9 @@ caps.handback.revision: 20
         }  
     }  
     ```  
+     Be sure to replace the *ServerName* placeholder with the name of your server that's running SharePoint.  
   
-<!-- TODO: review snippet reference      [!CODE [SP_SLWebPart#3](SP_SLWebPart#3)]  -->  
-  
-     SharePoint を実行しているサーバーの名前と *ServerName* のプレースホルダーを置き換えることを確認してください。  
-  
-12. 次のエラー処理手順を追加します。  
+12. Add the following error-handling procedure.  
   
     ```vb  
     Private Sub announcements_LoadCompleted(sender As Object, e As LoadCompletedEventArgs)  
@@ -210,50 +196,49 @@ caps.handback.revision: 20
         }  
     }  
     ```  
+       
+## <a name="modifying-the-silverlight-web-part"></a>Modifying the Silverlight Web Part  
+ Change a property in the Silverlight web part project to enable Silverlight debugging.  
   
-<!-- TODO: review snippet reference      [!CODE [SP_SLWebPart#4](SP_SLWebPart#4)]  -->  
+#### <a name="to-modify-the-silverlight-web-part"></a>To modify the Silverlight web part  
   
-## Silverlight Web パーツの変更  
- Silverlight のデバッグを可能にする Silverlight Web パーツ プロジェクトのプロパティを変更します。  
+1.  Open the shortcut menu for the Silverlight web part project (**SLWebPartTest**), and then choose **Properties**.  
   
-#### Silverlight Web パーツを変更するには  
+2.  In the **Properties** window, choose the **SharePoint** tab.  
   
-1.  Silverlight Web パーツ プロジェクト \(**\[SLWebPartTest\]**\) のショートカット メニューを開き、**\[プロパティ\]** をクリックします。  
+3.  If it's not already selected, select the **Enable Silverlight debugging (instead of Script debugging)** check box.  
   
-2.  **\[プロパティ\]** ウィンドウで、**\[SharePoint\]** タブをクリックします。  
+4.  Save the project.  
   
-3.  これがまだ選択されていない場合 **\[Script デバッグの代わりに Silverlight デバッグを有効にする\]** チェック ボックスをオンにします。  
+##  <a name="testing-the-silverlight-web-part"></a>Testing the Silverlight Web Part  
+ Test the new Silverlight web part in SharePoint to ensure that it displays the SharePoint list data properly.  
   
-4.  プロジェクトを保存します。  
+#### <a name="to-test-the-silverlight-web-part"></a>To test the Silverlight web part  
   
-##  <a name="BKMK_testSLApp"></a> Silverlight Web パーツのテスト  
- SharePoint リスト データが正しく表示されることを確認するために、新しい SharePoint Silverlight Web パーツをテストします。  
+1.  Choose the F5 key to build and run the SharePoint solution.  
   
-#### Silverlight Web パーツをテストするには  
+2.  In SharePoint, on the **Site Actions** menu, choose **New Page**.  
   
-1.  SharePoint ソリューションをビルドして実行するには、F5 キーを押します。  
+3.  In the **New Page** dialog, enter a title, such as **SL Web Part Test**, and then choose the **Create** button.  
   
-2.  SharePoint では、**\[サイトの操作\]** メニューで、**\[新しいページ\]** をクリックします。  
+4.  In the page designer, on the **Editing Tools** tab, choose **Insert**.  
   
-3.  **\[新しいページ\]** ダイアログにタイトルを、SL Web パーツのテストなど\) を入力し、**\[作成\]** ボタンをクリックします。  
+5.  On the tab strip, choose **Web Part**.  
   
-4.  ページ デザイナーで、**\[編集ツール\]** タブで、**\[挿入\]** をクリックします。  
+6.  In the **Categories** box, choose the **Custom** folder.  
   
-5.  タブの削除で、**\[Web パーツ\]** をクリックします。  
+7.  In the **Web Parts** list, choose the Silverlight web part, and then choose the **Add** button to add the web part to the designer.  
   
-6.  **\[カテゴリ\]** ボックスで、**\[カスタム\]** フォルダーをクリックします。  
+8.  After you have made all of the additions to the web page that you want, choose the **Page** tab, and then choose the **Save & Close** button on the tool bar.  
   
-7.  **\[Web パーツ\]** の一覧で、Silverlight Web パーツを選択し、デザイナーに Web パーツを追加するに **\[追加\]** ボタンをクリックします。  
-  
-8.  使用する Web ページに加算のすべてを行った後で、**\[ページ\]** タブを選択し、ツール バーの **\[保存して閉じる & \]** ボタンをクリックします。  
-  
-     Silverlight Web パーツは、SharePoint サイトのお知らせデータが表示されます。  既定では SharePoint サイトにページで、ページ リストが格納されます。  
+     The Silverlight web part should now be displaying Announcement data from the SharePoint site. By default, the page is stored in the Site Pages list in SharePoint.  
   
     > [!NOTE]  
-    >  ドメイン間で Silverlight、Silverlight データへのアクセスが Web アプリケーションの開発に使用できるセキュリティ上の脆弱性を防止する場合。  Silverlight のリモート データにアクセスするときに問題が発生した場合 [サービスがドメインの境界を越えて使用できるようにします。](http://go.microsoft.com/fwlink/?LinkId=223276)、参照すれば。  
+    >  When accessing data in Silverlight across domains, Silverlight guards against security vulnerabilities that can be used to exploit web applications. If you encounter problems when accessing remote data in Silverlight, see [Making a Service Available Across Domain Boundaries](http://go.microsoft.com/fwlink/?LinkId=223276).  
   
-## 参照  
- [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)   
- [SharePoint ソリューションのパッケージの配置、発行、アップグレード](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)  
+## <a name="see-also"></a>See Also  
+ [Creating Web Parts for SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)   
+ [Deploying, Publishing, and Upgrading SharePoint Solution Packages](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)  
   
   
+

@@ -1,5 +1,5 @@
 ---
-title: "[プロジェクトおよびソリューション] の [オプション] ダイアログ ボックス | Microsoft Docs"
+title: Projects and Solutions, Options Dialog Box | Microsoft Docs
 ms.custom: 
 ms.date: 7/14/2017
 ms.reviewer: 
@@ -20,71 +20,71 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: dc7a0c10390de67b56a83d2824224bed24125db0
-ms.openlocfilehash: 9e34dc6bd0a876be15dccaff519d67a566022008
+ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
+ms.openlocfilehash: 2778964a6d5e4f478422727b02e15a058868e644
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="projects-and-solutions-options-dialog-box"></a>[プロジェクトおよびソリューション] の [オプション] ダイアログ ボックス
+# <a name="projects-and-solutions-options-dialog-box"></a>Projects and Solutions, Options Dialog Box
 
-プロジェクトおよびソリューションに関連する [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 動作を設定します。 これらのオプションにアクセスするには、**[ツール]、[オプション]** の順に選択し、**[プロジェクトおよびソリューション]** を展開し、**[全般]** をクリックします。
+Sets [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] behavior related to projects and solutions. To access these options, select **Tools > Options** expand **Projects and Solutions**, and click **General**.
 
-プロジェクトおよびテンプレート フォルダーの既定のパスは、同じダイアログ ボックスの **[場所]** タブで設定します。
+The default paths for project and template folders are set through the **Locations** tab in the same dialog box.
   
 > [!NOTE]
->  使用している設定またはエディションによっては、ダイアログ ボックスで使用可能なオプションや、メニュー コマンドの名前や位置がヘルプに記載されている内容と異なる場合があります。 このヘルプ ページは、**全般的な開発設定**を考慮して記述されています。 設定を表示または変更するには、[**ツール**] メニューの [**設定のインポートとエクスポート**] をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
+>  The options available in dialog boxes, and the names and locations of menu commands you see, might differ from what is described in Help depending on your active settings or edition. This Help page was written with the **General Development settings** in mind. To view or change your settings, choose **Import and Export Settings** on the **Tools** menu. For more information, see [Personalize the Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="general-tab-options"></a>[全般] タブのオプション  
+## <a name="general-tab-options"></a>General tab options  
  
-**[ライトウェイト ソリューション ロード]**: IDE で大規模なソリューションを読み込む場合に必要な時間とメモリの量を減らすことができます。 ライトウェイト ソリューション ロードを使用すると、多くの C#、Visual Basic、または C++ プロジェクトを含む大規模なソリューションのパフォーマンスが大幅に向上する可能性があります。
+**Lightweight Solution Load** Reduces the amount of time and memory required to load large solutions in the IDE. Large solutions containing many C#, Visual Basic, or C++ projects are likely to see a substantial performance benefit using lightweight solution load.
 
-- **[Let Visual Studio choose what's best for my solution]\(ソリューションに最適な機能を Visual Studio に選択させる\)**: Visual Studio は、ソリューションの特性に基づいてくライトウェイト ソリューション ロードを適用するかどうかを自動的に判断します。
-- **[有効]**: ソリューションを読み込むときに、常にライトウェイト ソリューション ロードが適用されます。
-- **[無効]**: ライトウェイト ソリューション ロードは適用されません。
+- **Let Visual Studio choose what's best for my solution**: Lets Visual Studio automatically determine whether to apply Lightweight solution load based on the characteristics of the solution.
+- **Enabled**: Always applies Lightweight solution load when loading solutions.
+- **Disabled**: Never applies Lightweight solution load.
 
-詳細については、[「Visual Studio の起動時間の最適化」](../optimize-visual-studio-startup-time.md#speed-up-solution-load) を参照してください。
+For more information, see [Optimize Visual Studio Startup Time](../optimize-visual-studio-startup-time.md#speed_up_solution_load)
 
-**ビルドがエラーで終了した場合には常にエラー一覧を表示する**  
-プロジェクトのビルドが失敗した場合にのみ、ビルドの完了時に [**エラー一覧**] ウィンドウを開きます。 ビルド処理中に発生したエラーが表示されます。 このオプションがオフの場合、エラーは引き続き発生しますが、ビルドの完了時にウィンドウは開きません。 既定では、このオプションは有効になっています。  
+**Always show Error List if build finishes with errors**  
+Opens the **Error List** window on build completion, only if a project failed to build. Errors that occur during the build process are displayed. When this option is cleared, the errors still occur but the window does not open when the build is complete. This option is enabled by default.  
 
-**ソリューション エクスプローラーでアクティブなアイテムを追跡する**  
-選択した場合、**ソリューション エクスプローラー**が自動的に開いて、アクティブな項目が選択されます。 選択される項目は、プロジェクトまたはソリューション内の別のファイルや、デザイナー内の異なるコンポーネントを処理の対象にすると変更されます。 このオプションがオフのとき、**ソリューション エクスプローラー**での選択内容は自動的に変更されません。 既定では、このオプションは有効になっています。  
+**Track Active Item in Solution Explorer**  
+When selected, **Solution Explorer** automatically opens and the active item is selected. The selected item changes as you work with different files in a project or solution, or different components in a designer. When this option is cleared, the selection in **Solution Explorer** does not change automatically. This option is enabled by default.  
 
-**ビルド構成の詳細を表示**  
-選択した場合、ビルドの構成オプションが [**プロジェクト プロパティ ページ**] ダイアログ ボックスおよび [**ソリューション プロパティ ページ**] ダイアログ ボックスに表示されます。 オフにすると、ビルドの構成オプションは、1 つの構成または 2 つの構成のデバッグとリリースを含む  **および**  プロジェクトのための、[**プロジェクト プロパティ ページ**] ダイアログ ボックスや [[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]ソリューション プロパティ ページ[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]] ダイアログ ボックスに表示されません。 プロジェクトにユーザー定義の構成がある場合、ビルドの構成オプションが表示されます。  
+**Show advanced build configurations**  
+When selected, the build configuration options appear on the **Project Property Pages** dialog box and the **Solution Property Pages** dialog box. When cleared, the build configuration options do not appear on the **Project Property Pages** dialog box and the **Solution Property Pages** dialog box for [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] and [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] projects that contain one configuration or the two configurations debug and release. If a project has a user-defined configuration, the build configuration options are shown.  
 
-オフの場合、[**ビルド**] メニューのコマンド ([**ソリューションのビルド**]、[**ソリューションのリビルド**]、[**ソリューションのクリーン**] など) はリリース構成で実行され、[**デバッグ**] メニューのコマンド ([**デバッグ開始**]、[**デバッグなしで開始**] など) はデバッグ構成で実行されます。  
+When unselected, the commands on the **Build** menu, such as **Build Solution**, **Rebuild Solution**, and **Clean Solution**, are performed on the Release configuration and the commands on the **Debug** menu, such as **Start Debugging** and **Start Without Debugging**, are performed on the Debug configuration.  
 
-**常にソリューションを表示**  
-選択した場合、ソリューションおよびソリューションで動作するすべてのコマンドが常に IDE に表示されます。 オフの場合、すべてのプロジェクトはスタンドアロン プロジェクトとして作成され、ソリューションに 1 つのプロジェクトだけが含まれている場合、ソリューション エクスプローラー内のソリューションや、IDE 内のソリューションで動作するコマンドは表示されません。  
+**Always show solution**  
+When selected, the solution and all commands that act on solutions are always shown in the IDE. When cleared, all projects are created as stand-alone projects and you do not see the solution in Solution Explorer or commands that act on solutions in the IDE if the solution contains only one project.  
 
-**新しいプロジェクトを作成時に保存する**  
-選択すると、[**新しいプロジェクト**] ダイアログ ボックスにプロジェクトの場所を指定できます。 オフの場合、すべての新しいプロジェクトは一時プロジェクトとして作成されます。 一時プロジェクトで作業する場合、ディスクの場所を指定しなくても、プロジェクトを作成して試してみることができます。  
+**Save new projects when created**  
+When selected, you can specify a location for your project in the **New Project** dialog box. When cleared, all new projects are created as temporary projects. When you are working with temporary projects, you can create and experiment with a project without having to specify a disk location.  
 
-**プロジェクトの場所が信頼されていないときにユーザーに警告**  
-完全に信頼されていない場所 (UNC パスの上や HTTP パスの上など) で、新しいプロジェクトの作成または既存のプロジェクトのオープンを試行すると、メッセージが表示されます。 このオプションを使用して、完全に信頼されていない場所でプロジェクトの作成またはオープンを試行するたびにメッセージを表示するかどうかを指定します。  
+**Warn user when the project location is not trusted**  
+If you attempt to create a new project or open an existing project in a location that is not fully trusted (for example, on a UNC path or an HTTP path), a message is displayed. Use this option to specify whether the message is displayed each time that you attempt to create or open a project in a location that is not fully trusted.  
 
-**ビルド開始時に出力ウィンドウを表示**  
-ソリューション ビルドの開始時に、IDE の出力ウィンドウを自動的に表示します。 詳細については、「[方法 : 出力ウィンドウを制御する](http://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858)」を参照してください。
+**Show Output window when build starts**  
+Automatically displays the Output Window in the IDE at the outset of solution builds. For more information, see [How to: Control the Output Window](http://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858).
 
-**ファイル名の変更時にシンボルの名前変更を求めるプロンプトを出す**  
-選択すると、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] がコード要素に対するプロジェクト内のすべての参照も名前変更するかどうかを確認する、メッセージ ボックスが表示されます。  
+**Prompt for symbolic renaming when renaming files**  
+When selected, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] displays a message box asking whether or not it should also rename all references in the project to the code element.  
 
-**[Prompt before moving files to a new location]\(新しい場所にファイルを移動する前にメッセージを表示する\)**  
-選択すると、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は、ソリューション エクスプ ローラーでの操作によってファイルの場所が変更される前に確認メッセージ ボックスを表示します。 
+**Prompt before moving files to a new location**  
+When selected, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] displays a confirmation message box before the locations of files are changed by actions in Solution Explorer. 
 
-## <a name="locations-tab-options"></a>[場所] タブのオプション
+## <a name="locations-tab-options"></a>Locations tab options
 
-**プロジェクトの場所**  
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] が新しいプロジェクトとソリューション フォルダーを作成する既定の場所を指定します。 複数のダイアログ ボックスも、このオプションで指定した場所をフォルダーの開始点として使用します。 たとえば、[プロジェクトを開く] ダイアログ ボックスは、この場所を [マイ プロジェクト] のショートカットのために使用します。  
+**Projects location**  
+Specifies the default location where [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] creates new projects and solution folders. Several dialog boxes also use the location set in this option for folder starting points. For example, the Open Project dialog box uses this location for the My Projects shortcut.  
 
-**ユーザー プロジェクト テンプレートの場所**  
-**[新しいプロジェクト]** ダイアログ ボックスで **[マイ テンプレート]** の一覧を作成するときに使用される既定の場所を指定します。 詳細については、「[方法 : プロジェクト テンプレートと項目テンプレートを配置して整理する](../../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。  
+**User project templates location**  
+Specifies the default location that the **New Project** dialog box uses to create the list of **My Templates**. For more information, see [How to: Locate and Organize Templates](../../ide/how-to-locate-and-organize-project-and-item-templates.md).  
 
-**ユーザー項目テンプレートの場所**  
-**[新しい項目の追加]** ダイアログ ボックスで **[マイ テンプレート]** の一覧を作成するときに使用される既定の場所を設定します。 詳細については、「[方法 : プロジェクト テンプレートと項目テンプレートを配置して整理する](../../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。 
+**User item templates location**  
+Specifies the default location that the **Add New Item** dialog box uses to create the list of **My Templates**. For more information, see [How to: Locate and Organize Templates](../../ide/how-to-locate-and-organize-project-and-item-templates.md). 
 
-## <a name="see-also"></a>関連項目  
-- [[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行]](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)
-- - [[Web プロジェクト] ([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション])](../../ide/reference/options-dialog-box-projects-and-solutions-web-projects.md)
+## <a name="see-also"></a>See Also  
+- [Options Dialog Box,  Projects and Solutions, Build and Run](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)
+- - [Options Dialog Box,  Projects and Solutions, Web Projects](../../ide/reference/options-dialog-box-projects-and-solutions-web-projects.md)

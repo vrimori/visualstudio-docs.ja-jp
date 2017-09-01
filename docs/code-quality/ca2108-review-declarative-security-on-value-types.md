@@ -1,64 +1,80 @@
 ---
-title: "CA2108: 値型での宣言セキュリティを確認します | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ReviewDeclarativeSecurityOnValueTypes"
-  - "CA2108"
-helpviewer_keywords: 
-  - "CA2108"
-  - "ReviewDeclarativeSecurityOnValueTypes"
+title: 'CA2108: Review declarative security on value types | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ReviewDeclarativeSecurityOnValueTypes
+- CA2108
+helpviewer_keywords:
+- ReviewDeclarativeSecurityOnValueTypes
+- CA2108
 ms.assetid: d62bffdd-3826-4d52-a708-1c646c5d48c2
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2108: 値型での宣言セキュリティを確認します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a4aa6fa02329c6d82800f3a45f8002bf8a4f10e7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: Review declarative security on value types
 |||  
 |-|-|  
 |TypeName|ReviewDeclarativeSecurityOnValueTypes|  
 |CheckId|CA2108|  
-|分類|Microsoft.Security|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Security|  
+|Breaking Change|Non Breaking|  
   
-## 原因  
- パブリックまたはプロテクトの値型が、[データとモデリング](../Topic/Data%20and%20Modeling%20in%20the%20.NET%20Framework.md)または[リンク確認要求](../Topic/Link%20Demands.md)で保護されています。  
+## <a name="cause"></a>Cause  
+ A public or protected value type is secured by a [Data and Modeling](/dotnet/framework/data/index) or [Link Demands](/dotnet/framework/misc/link-demands).  
   
-## 規則の説明  
- 値型は、既定のコンストラクターが割り当てて初期化してから、別のコンストラクターが実行します。  値型が Demand または LinkDemand によって保護され、呼び出し元にそのセキュリティ チェックに適合するアクセス許可がない場合、既定以外のコンストラクターは失敗し、セキュリティ例外がスローされます。  値型の領域は解放されません。既定のコンストラクターで設定された状態のままになります。  値型のインスタンスを渡す呼び出し元に、そのインスタンスの作成またはアクセスの許可があると仮定しないでください。  
+## <a name="rule-description"></a>Rule Description  
+ Value types are allocated and initialized by their default constructors before other constructors execute. If a value type is secured by a Demand or LinkDemand, and the caller does not have permissions that satisfy the security check, any constructor other than the default will fail, and a security exception will be thrown. The value type is not deallocated; it is left in the state set by its default constructor. Do not assume that a caller that passes an instance of the value type has permission to create or access the instance.  
   
-## 違反の修正方法  
- この規則違反を修正するには、型からセキュリティ チェックを取り除き、代わりにメソッド レベルのセキュリティ チェックを使用する必要があります。  この方法で違反を修正すると、適切なアクセス許可を持たない呼び出し元が、その値型のインスタンスを取得することを防ぐことはできません。  既定の状態にある値型のインスタンスによって機密情報が公開されないこと、不正な方法でそのインスタンスを使用できないことを確認します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ You cannot fix a violation of this rule unless you remove the security check from the type, and use method level security checks in its place. Note that fixing the violation in this manner will not prevent callers with inadequate permissions from obtaining instances of the value type. You must ensure that an instance of the value type, in its default state, does not expose sensitive information, and cannot be used in a harmful manner.  
   
-## 警告を抑制する状況  
- 呼び出し元が既定の状態にある値型のインスタンスを取得するときに、セキュリティ上の脅威がない場合は、この規則による警告を抑制できます。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ You can suppress a warning from this rule if any caller can obtain instances of the value type in its default state without posing a threat to security.  
   
-## 使用例  
- この規則に違反する値型を含むライブラリの例を次に示します。  `StructureManager` 型では、その値型のインスタンスを渡す呼び出し元に、そのインスタンスの作成またはアクセスの許可があると仮定しています。  
+## <a name="example"></a>Example  
+ The following example shows a library containing a value type that violates this rule. Note that the `StructureManager` type assumes that a caller that passes an instance of the value type has permission to create or access the instance.  
   
- [!code-cs[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]  
+ [!code-csharp[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]  
   
-## 使用例  
- ライブラリの弱点を説明するアプリケーション例を次に示します。  
+## <a name="example"></a>Example  
+ The following application demonstrates the library's weakness.  
   
- [!code-cs[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]  
+ [!code-csharp[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]  
   
- この例を実行すると、次の出力が生成されます。  
+ This example produces the following output.  
   
-  **Structure custom constructor: Request failed.**  
+ **Structure custom constructor: Request failed.**  
 **New values SecuredTypeStructure 100 100**  
 **New values SecuredTypeStructure 200 200**   
-## 参照  
- [リンク確認要求](../Topic/Link%20Demands.md)   
- [データとモデリング](../Topic/Data%20and%20Modeling%20in%20the%20.NET%20Framework.md)
+## <a name="see-also"></a>See Also  
+ [Link Demands](/dotnet/framework/misc/link-demands)   
+ [Data and Modeling](/dotnet/framework/data/index)

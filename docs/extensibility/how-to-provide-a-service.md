@@ -1,50 +1,67 @@
 ---
-title: "方法: サービスを提供 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "提供するサービス"
+title: 'How to: Provide a Service | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- services, providing
 ms.assetid: 12bc1f12-47b1-44f6-b8db-862aa88d50d1
 caps.latest.revision: 22
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# 方法: サービスを提供
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f624a2f2b030d775af0fc8f14c7541d28e84ca8e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-VSPackage では、その他の VSPackages に使用できるサービスを提供できます。 サービスを提供するには、VSPackage は Visual Studio でサービスを登録し、サービスを追加する必要があります。  
+---
+# <a name="how-to-provide-a-service"></a>How to: Provide a Service
+A VSPackage can provide services that other VSPackages can use. To provide a service, a VSPackage must register the service with Visual Studio and add the service.  
   
- <xref:Microsoft.VisualStudio.Shell.Package> クラスでは、両方を実装して <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> と <xref:System.ComponentModel.Design.IServiceContainer>です。<xref:System.ComponentModel.Design.IServiceContainer> 要求時にサービスを提供するコールバック メソッドが含まれています。  
+ The <xref:Microsoft.VisualStudio.Shell.Package> class implements both <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> and <xref:System.ComponentModel.Design.IServiceContainer>. <xref:System.ComponentModel.Design.IServiceContainer> contains callback methods that provide  services on demand.  
   
- サービスの詳細については、次を参照してください。 [サービスの基礎](../extensibility/internals/service-essentials.md) します。  
+ For more information about services, see [Service Essentials](../extensibility/internals/service-essentials.md) .  
   
 > [!NOTE]
->  VSPackage が読み込まれますが、Visual Studio は、VSPackage を提供するサービスのすべての要求が送信されたまでを待機します。 これらのサービスに対する新しい要求は許可しません。 明示的に呼び出す必要がありません、 <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A> をアンロードするときに、サービスを取り消す方法です。  
+>  When a VSPackage is about to be unloaded, Visual Studio waits until all requests for services that a VSPackage provides have been delivered. It does not allow new requests for these services. You should not explicitly call the <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A> method to revoke a service when unloading.  
   
-#### サービスを実装します。  
+#### <a name="implementing-a-service"></a>Implementing a service  
   
-1.  VSIX プロジェクトを作成する \(**ファイル\/\[新しい\/プロジェクト\/Visual c\#\/Extensiblity\/VSIX プロジェクト**\)。  
+1.  Create a VSIX project (**File / New / Project / Visual C# / Extensiblity / VSIX Project**).  
   
-2.  VSPackage をプロジェクトに追加します。 プロジェクト ノードを選択して、 **ソリューション エクスプ ローラー** \] をクリック **追加\/\[新しい項目\/Visual c\# アイテム\/機能拡張\/Visual Studio パッケージ**します。  
+2.  Add a VSPackage to the project. Select the project node in the **Solution Explorer** and click **Add / New item / Visual C# Items / Extensibility / Visual Studio Package**.  
   
-3.  サービスを実装するには、次の 3 つの種類を作成する必要があります。  
+3.  To implement a service, you need to create three types:  
   
-    -   サービスを記述したインターフェイスです。 これらのインターフェイスの多くは、空、つまりがないメソッド。  
+    -   An interface that describes the service. Many of these interfaces are empty, that is, they have no methods.  
   
-    -   サービス インターフェイスについて説明するインターフェイス。 このインターフェイスには、実装されるメソッドが含まれています。  
+    -   An interface that describes the service interface. This interface includes the methods to be implemented.  
   
-    -   サービスと、サービス インターフェイスの両方を実装するクラス。  
+    -   A class that implements both the service and the service interface.  
   
-     次の例では、次の 3 つの種類の非常に基本的な実装を示します。 サービス クラスのコンス トラクターは、サービス プロバイダーを設定する必要があります。  
+     The following example shows a very basic implementation of the three types. The constructor of the service class must set the service provider.  
   
-    ```c#  
+    ```csharp  
     public class MyService : SMyService, IMyService  
     {  
         private Microsoft.VisualStudio.OLE.Interop.IServiceProvider serviceProvider;  
@@ -75,11 +92,11 @@ VSPackage では、その他の VSPackages に使用できるサービスを提�
   
     ```  
   
-### サービスを登録します。  
+### <a name="registering-a-service"></a>Registering a service  
   
-1.  サービスを登録するには、追加、 <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> サービスを提供する VSPackage にします。 次に例を示します。  
+1.  To register a service, add the <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> to the VSPackage that provides the service. Here is an example:  
   
-    ```c#  
+    ```csharp  
     [ProvideService(typeof(SMyService))]  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
     [Guid(VSPackage1.PackageGuidString)]  
@@ -87,16 +104,16 @@ VSPackage では、その他の VSPackages に使用できるサービスを提�
     {. . . }  
     ```  
   
-     この属性を登録 `SMyService` Visual Studio を使用します。  
+     This attribute registers `SMyService` with Visual Studio.  
   
     > [!NOTE]
-    >  別のサービスを同じ名前に置き換え、サービスを登録するには、使用、 <xref:Microsoft.VisualStudio.Shell.ProvideServiceOverrideAttribute>です。 注サービスの 1 つだけそのオーバーライドを許可します。  
+    >  To register a service that replaces another service with the same name, use the <xref:Microsoft.VisualStudio.Shell.ProvideServiceOverrideAttribute>. Note that only one override of a service is allowed.  
   
-### サービスを追加します。  
+### <a name="adding-a-service"></a>Adding a Service  
   
-1.  1.	VSPackage 初期化子では、サービスを追加し、サービスを作成するコールバック メソッドを追加します。 ここでは、変更を <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> メソッド。  
+1.  In the VSPackage initializer, add the service and add a callback method to create the services. Here is the change to make to the <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> method:  
   
-    ```c#  
+    ```csharp  
     protected override void Initialize()  
     {  
         ServiceCreatorCallback callback =new ServiceCreatorCallback(CreateService);  
@@ -106,7 +123,7 @@ VSPackage では、その他の VSPackages に使用できるサービスを提�
     }  
     ```  
   
-2.  作成し、サービスを返すまたは作成できない場合は null にする必要がありますコールバック メソッドを実装します。  
+2.  Implement the callback method, which should create and return the service, or null if it cannot be created.  
   
     ```  
     private object CreateService(IServiceContainer container, Type serviceType)  
@@ -118,11 +135,11 @@ VSPackage では、その他の VSPackages に使用できるサービスを提�
     ```  
   
     > [!NOTE]
-    >  Visual Studio では、サービスを提供する要求を拒否できます。 では、サービスが別の VSPackage で提供されている場合。  
+    >  Visual Studio can reject a request to provide a service. It does so if another VSPackage already provides the service.  
   
-3.  今すぐサービスを取得し、そのメソッドを使用できます。 初期化子は、この説明しますが、サービスを使用する場合、サービス任意の場所を取得することができます。  
+3.  Now you can get the service and use its methods. We'll show this in the initializer, but you can get the service anywhere you want to use the service.  
   
-    ```c#  
+    ```csharp  
     protected override void Initialize()  
     {  
         ServiceCreatorCallback callback =new ServiceCreatorCallback(CreateService);  
@@ -137,9 +154,9 @@ VSPackage では、その他の VSPackages に使用できるサービスを提�
     }  
     ```  
   
-     値 `helloString` 「こんにちは」にする必要があります。  
+     The value of `helloString` should be "Hello".  
   
-## 参照  
- [方法: サービスを取得](../Topic/How%20to:%20Get%20a%20Service.md)   
- [使用して、サービスを提供します。](../extensibility/using-and-providing-services.md)   
- [サービスの基礎](../extensibility/internals/service-essentials.md)
+## <a name="see-also"></a>See Also  
+ [How to: Get a Service](../extensibility/how-to-get-a-service.md)   
+ [Using and Providing Services](../extensibility/using-and-providing-services.md)   
+ [Service Essentials](../extensibility/internals/service-essentials.md)

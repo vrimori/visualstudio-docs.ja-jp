@@ -1,5 +1,5 @@
 ---
-title: "IDebugThread2::GetLogicalThread |Microsoft ドキュメント"
+title: IDebugThread2::GetLogicalThread | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,40 +30,41 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d1591fab36316df8344d0602afaac0367b232c72
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: d7a5362aad3a8044ec484f70e71812e45e6a3a8d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugthread2getlogicalthread"></a>IDebugThread2::GetLogicalThread
-デバッグ エンジンは、このメソッドを実装していません。  
+Debug engines do not implement this method.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetLogicalThread(   
    IDebugStackFrame2*     pStackFrame,  
    IDebugLogicalThread2** ppLogicalThread  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetLogicalThread(   
    IDebugStackFrame2        pStackFrame,  
    out IDebugLogicalThread2 ppLogicalThread  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pStackFrame`  
- [in][IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)スタック フレームを表すオブジェクト。  
+ [in] An [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) object that represents the stack frame.  
   
  `ppLogicalThread`  
- [out]返します。、`IDebugLogicalThread2`関連付けられている論理スレッドを表すインターフェイスです。 デバッグ エンジンの実装は、null の値にこれを設定する必要があります。  
+ [out] Returns an `IDebugLogicalThread2` interface that represents the associated logical thread. A debug engine implementation should set this to a null value.  
   
-## <a name="return-value"></a>戻り値  
- デバッグ エンジンの実装は常に戻り`E_NOTIMPL`します。  
+## <a name="return-value"></a>Return Value  
+ Debug engine implementations always return `E_NOTIMPL`.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

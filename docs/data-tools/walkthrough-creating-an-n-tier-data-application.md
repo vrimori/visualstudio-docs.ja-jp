@@ -1,230 +1,246 @@
 ---
-title: "チュートリアル : n 層データ アプリケーションの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "n 層アプリケーション, 作成"
-  - "n 層アプリケーション, チュートリアル"
+title: 'Walkthrough: Creating an N-Tier Data Application | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- n-tier applications, creating
+- n-tier applications, walkthroughs
 ms.assetid: d15e4d31-2839-48d9-9e0e-2e73404d82a2
 caps.latest.revision: 48
-caps.handback.revision: 48
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: c3148acaacbd77d10c2729384130267a55d5231a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : n 層データ アプリケーションの作成
-*n 層*データ アプリケーションとは、データにアクセスするアプリケーションの中でも、複数の論理レイヤー、つまり*層*に分離されるアプリケーションです。  アプリケーション コンポーネントをこのように別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。  これは、ソリューション全体を再設計しなくても 1 つの層に適用できる、新しい技術を簡単に導入できるようにすることで実現されます。  n 層アーキテクチャには、プレゼンテーション層、中間層、およびデータ層が存在します。  通常、中間層には、データ アクセス層、ビジネス ロジック層、および認証や検証などの共有コンポーネントが含まれます。  データ層には、リレーショナル データベースが含まれます。  通常、n 層アプリケーションでは、機密情報が中間層のデータ アクセス層に格納され、プレゼンテーション層にアクセスするエンド ユーザーから分離されます。  詳細については、「[n 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)」を参照してください。  
+# <a name="walkthrough-creating-an-n-tier-data-application"></a>Walkthrough: Creating an N-Tier Data Application
+*N-tier* data applications are applications that access data and are separated into multiple logical layers, or *tiers*. Separating application components into discrete tiers increases the maintainability and scalability of the application. It does this by enabling easier adoption of new technologies that can be applied to a single tier without requiring you to redesign the whole solution. N-tier architecture includes a presentation tier, a middle-tier, and a data tier. The middle tier typically includes a data access layer, a business logic layer, and shared components such as authentication and validation. The data tier includes a relational database. N-tier applications usually store sensitive information in the data access layer of the middle-tier to maintain isolation from end users who access the presentation tier. For more information, see [N-Tier Data Applications Overview](../data-tools/n-tier-data-applications-overview.md).  
   
- n 層アプリケーションで各層を分離する 1 つの方法は、アプリケーションに組み込む層ごとに別個のプロジェクトを作成することです。  型指定されたデータセットには、生成されたデータセットと `TableAdapter` コードの格納先となるプロジェクトを決定する、`DataSet Project` プロパティが含まれています。  
+ One way to separate the various tiers in an n-tier application is to create discrete projects for each tier that you want to include in your application. Typed datasets contain a `DataSet Project` property that determines which projects the generated dataset and `TableAdapter` code should go into.  
   
- このチュートリアルでは、**データセット デザイナー**を使用して、別個のクラス ライブラリ プロジェクトにデータセットと `TableAdapter` コードを分離する方法を示します。  データセットと TableAdapter コードを分離したら、データ アクセス層を呼び出す [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) サービスを作成します。  最後に、プレゼンテーション層として Windows フォーム アプリケーションを作成します。  この層は、データ サービスからデータにアクセスします。  
+ This walkthrough demonstrates how to separate dataset and `TableAdapter` code into discrete class library projects by using the **Dataset Designer**. After you separate the dataset and TableAdapter code, you will create a [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) service to call into the data access tier. Finally, you will create a Windows Forms application as the presentation tier. This tier accesses data from the data service.  
   
- このチュートリアルでは、次の手順を実行します。  
+ During this walkthrough, you will perform the following steps:  
   
--   複数のプロジェクトを含む新しい n 層ソリューションを作成する。  
+-   Create a new n-tier solution that will contain multiple projects.  
   
--   この n 層ソリューションに 2 つのクラス ライブラリ プロジェクトを追加する。  
+-   Add two class library projects to the n-tier solution.  
   
--   **データ ソース構成ウィザード**を実行して、型指定されたデータセットを作成する。  
+-   Create a typed dataset by using the **Data Source Configuration Wizard**.  
   
--   生成された [TableAdapter](../Topic/TableAdapters.md) とデータセット コードを別々のプロジェクトに分離する。  
+-   Separate the generated [TableAdapters](create-and-configure-tableadapters.md) and dataset code into discrete projects.  
   
--   データ アクセス層を呼び出す Windows Communication Foundation \(WCF\) サービスを作成する。  
+-   Create a Windows Communication Foundation (WCF) service to call into the data access tier.  
   
--   このサービスに、データ アクセス層からデータを取得する関数を作成する。  
+-   Create functions in the service to retrieve data from the data access tier.  
   
--   プレゼンテーション層として機能する Windows フォーム アプリケーションを作成する。  
+-   Create a Windows Forms application to serve as the presentation tier.  
   
--   Windows フォーム コントロールを作成し、データ ソースにバインドする。  
+-   Create Windows Forms controls that are bound to the data source.  
   
--   データ テーブルにデータを読み込むコードを記述する。  
+-   Write code to populate the data tables.  
   
- ![ビデオへのリンク](~/data-tools/media/playvideo.gif "PlayVideo") このトピックのビデオ版については、「[ビデオ デモ: n 層データ アプリケーションの作成](http://go.microsoft.com/fwlink/?LinkId=115188)」を参照してください。  
+ ![link to video](../data-tools/media/playvideo.gif "PlayVideo") For a video version of this topic, see [Video How to: Creating an N-Tier Data Application](http://go.microsoft.com/fwlink/?LinkId=115188).  
   
-## 必須コンポーネント  
- このチュートリアルを完了するには、次の条件が必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ To complete this walkthrough, you need:  
   
--   Northwind サンプル データベースにアクセスします。  詳細については、「[方法 : サンプル データベースをインストールする](../data-tools/how-to-install-sample-databases.md)」を参照してください。  
+-   Access to the Northwind sample database. For more information, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
   
-## n 層ソリューションの作成とデータセットを保持するクラス ライブラリ \(DataEntityTier\) の作成  
- このチュートリアルでは、まず、1 つのソリューションと 2 つのクラス ライブラリ プロジェクトを作成します。  最初のクラス ライブラリは、データセット \(生成した型指定された DataSet クラスと、アプリケーションのデータを保持する DataTable\) を保持します。  このプロジェクトは、アプリケーションのデータ エンティティ層として使用され、通常は中間層に配置されます。  [型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)を使用して初期データセットを作成すると、コードが自動的に 2 つのクラス ライブラリに分離されます。  
+## <a name="creating-the-n-tier-solution-and-class-library-to-hold-the-dataset-dataentitytier"></a>Creating the N-Tier Solution and Class Library to Hold the Dataset (DataEntityTier)  
+ The first step of this walkthrough is to create a solution and two class library projects. The first class library will hold the dataset (the generated typed DataSet class and DataTables that will hold the application's data). This project is used as the data entity layer of the application and is typically located in the middle tier. The datasetis used to create the initial dataset and automatically separate the code into the two class libraries.  
   
 > [!NOTE]
->  **\[OK\]** をクリックする前に、必ずプロジェクトとソリューションに適切な名前を付けてください。  これにより、チュートリアルの完了が容易になります。  
+>  Be sure to name the project and solution correctly before you click **OK**. Doing so will make it easier for you to complete this walkthrough.  
   
-#### n 層ソリューションと DataEntityTier クラス ライブラリを作成するには  
+#### <a name="to-create-the-n-tier-solution-and-dataentitytier-class-library"></a>To create the n-tier solution and DataEntityTier class library  
   
-1.  **\[ファイル\]** メニューで新しいプロジェクトを作成します。  
+1.  From the **File** menu, create a new project.  
   
     > [!NOTE]
-    >  **データセット デザイナー**は、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] と C\# のプロジェクトでサポートされています。  新しいプロジェクトはこれらの言語のどちらかで作成してください。  
+    >  The **Dataset Designer** is supported in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] and C# projects. Create the new project in one of these languages.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[プロジェクトの種類\]** ペインの **\[Windows\]** をクリックします。  
+2.  In the **New Project** dialog box, in the **Project types** pane, click **Windows**.  
   
-3.  **\[クラス ライブラリ\]** テンプレートをクリックします。  
+3.  Click the **Class Library** template.  
   
-4.  プロジェクトに「DataEntityTier」という名前を付けます。  
+4.  Name the project **DataEntityTier**.  
   
-5.  ソリューションに「NTierWalkthrough」という名前を付けます。  
+5.  Name the solution **NTierWalkthrough**.  
   
-6.  **\[OK\]** をクリックします。  
+6.  Click **OK**.  
   
-     DataEntityTier プロジェクトを含む NTierWalkthrough ソリューションが作成され、**ソリューション エクスプローラー**に追加されます。  
+     An NTierWalkthrough solution that contains the DataEntityTier project is created and added to **Solution Explorer**.  
   
-## TableAdapter \(DataAccessTier\) を保持するクラス ライブラリの作成  
- DataEntityTier プロジェクトを作成したら、次に、クラス ライブラリ プロジェクトをもう 1 つ作成します。  このプロジェクトは、生成された `TableAdapter` を保持し、アプリケーションの*データ アクセス層*と呼ばれます。  データ アクセス層は、データベースへの接続に必要な情報を格納し、通常、中間層に置かれます。  
+## <a name="creating-the-class-library-to-hold-the-tableadapters-dataaccesstier"></a>Creating the Class Library to Hold the TableAdapters (DataAccessTier)  
+ The next step after you create the DataEntityTier project is to create another class library project. This project will hold the generated `TableAdapter`s and is called the *data access tier* of the application. The data access tier contains the information that is required to connect to the database and is typically located in the middle tier.  
   
-#### TableAdapter を保持する新しいクラス ライブラリを作成するには  
+#### <a name="to-create-the-new-class-library-for-the-tableadapters"></a>To create the new class library for the TableAdapters  
   
-1.  **\[ファイル\]** メニューから、NTierWalkthrough ソリューションに新しいプロジェクトを追加します。  
+1.  From the **File** menu, add a new project to the NTierWalkthrough solution.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[テンプレート\]** ペインの **\[クラス ライブラリ\]** をクリックします。  
+2.  In the **New Project** dialog box, in the **Templates** pane, click **Class Library**.  
   
-3.  プロジェクトに「DataAccessTier」という名前を付け、**\[OK\]** をクリックします。  
+3.  Name the project **DataAccessTier** and click **OK**.  
   
-     DataAccessTier プロジェクトが作成され、NTierWalkthrough ソリューションに追加されます。  
+     The DataAccessTier project is created and added to the NTierWalkthrough solution.  
   
-## データセットの作成  
- 次に、型指定されたデータセットを作成します。  型指定されたデータセットは、データセット クラス \(DataTable クラスを含む\) と `TableAdapter` クラスの両方を含む単一のプロジェクトとして作成されます   \(すべてのクラスが 1 つのファイルに生成されます\)。データセットと `TableAdapter` を別個のプロジェクトに分離すると、データセット クラスが別のプロジェクトに移動し、`TableAdapter` クラスは元のプロジェクトに残ります。  このため、最終的に `TableAdapter` が含まれるプロジェクト \(DataAccessTier プロジェクト\) にデータセットを作成します。  データセットは、**データ ソース構成ウィザード**を使用して作成します。  
+## <a name="creating-the-dataset"></a>Creating the Dataset  
+ The next step is to create a typed dataset. Typed datasets are created with both the dataset class (including DataTables classes) and the `TableAdapter` classes in a single project. (All classes are generated into a single file.) When you separate the dataset and `TableAdapter`s into different projects, it is the dataset class that is moved to the other project, leaving the `TableAdapter` classes in the original project. Therefore, create the dataset in the project that will ultimately contain the `TableAdapter`s (the DataAccessTier project). You will create the dataset by using the **Data Source Configuration Wizard**.  
   
 > [!NOTE]
->  接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。  Northwind サンプル データベースの設定方法については、「[方法 : サンプル データベースをインストールする](../data-tools/how-to-install-sample-databases.md)」を参照してください。  
+>  You must have access to the Northwind sample database to create the connection. For information about how to set up the Northwind sample database, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
   
-#### データセットを作成するには  
+#### <a name="to-create-the-dataset"></a>To create the dataset  
   
-1.  **ソリューション エクスプローラー**で、\[DataAccessTier\] をクリックします。  
+1.  Click DataAccessTier in **Solution Explorer**.  
   
-2.  **\[データ\]** メニューの **\[データ ソースの表示\]** をクリックします。  
+2.  On the **Data** menu, click **Show Data Sources**.  
   
-3.  **\[データ ソース\]** ウィンドウで、**\[新しいデータ ソースの追加\]** をクリックして**データ ソース構成ウィザード**を起動します。  
+3.  In the **Data Sources** window, click **Add New Data Source** to start the **Data Source Configuration Wizard**.  
   
-4.  **\[データ ソースの種類を選択\]** ページで、**\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
+4.  On the **Choose a Data Source Type** page, click **Database** and then click **Next**.  
   
-5.  **\[データ接続の選択\]** ページで、次のいずれかの操作を行います。  
+5.  On the **Choose Your Data Connection** page, perform one of the following actions:  
   
-     Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は、これをクリックします。  
+     If a data connection to the Northwind sample database is available in the drop-down list, click it.  
   
-     または  
+     -or-  
   
-     **\[新しい接続\]** をクリックして **\[接続の追加\]** ダイアログ ボックスを表示します。  
+     Click **New Connection** to open the **Add Connection** dialog box.  
   
-6.  データベースにパスワードが必要な場合は、該当するオプションを選択して重要情報を含め、**\[次へ\]** をクリックします。  
+6.  If the database requires a password, select the option to include sensitive data, and then click **Next**.  
   
     > [!NOTE]
-    >  SQL Server に接続するのではなく、ローカル データベース ファイルを選択した場合は、ファイルをプロジェクトに追加するかどうかをたずねるメッセージが表示されます。  **\[はい\]** をクリックして、データベース ファイルをプロジェクトに追加します。  
+    >  If you selected a local database file (instead of connecting to SQL Server) you might be asked if you want to add the file to the project. Click **Yes** to add the database file to the project.  
   
-7.  **\[アプリケーション構成ファイルへの接続文字列を保存\]** ページで、**\[次へ\]** をクリックします。  
+7.  Click **Next** on the **Save the Connection String to the Application Configuration File** page.  
   
-8.  **\[データベース オブジェクトの選択\]** ページの **\[テーブル\]** ノードを展開します。  
+8.  Expand the **Tables** node on the **Choose Your Database Objects** page.  
   
-9. **Customers** テーブルと **Orders** テーブルに該当するチェック ボックスをオンにし、**\[完了\]** をクリックします。  
+9. Click the check boxes for the **Customers** and **Orders** tables, and then click **Finish**.  
   
-     NorthwindDataSet が DataAccessTier プロジェクトに追加され、**\[データ ソース\]** ウィンドウに表示されます。  
+     NorthwindDataSet is added to the DataAccessTier project and appears in the **Data Sources** window.  
   
-## データセットと TableAdapter の分離  
- データセットを作成したら、生成されたデータセット クラスを TableAdapter から分離します。  これを行うには、**"DataSet プロジェクト"** プロパティを、分離されたデータセット クラスを格納するプロジェクトの名前に設定します。  
+## <a name="separating-the-tableadapters-from-the-dataset"></a>Separating the TableAdapters from the Dataset  
+ After you create the dataset, separate the generated dataset class from the TableAdapters. You do this by setting the **DataSet Project** property to the name of the project in which to store the separated out dataset class.  
   
-#### データセットと TableAdapter を分離するには  
+#### <a name="to-separate-the-tableadapters-from-the-dataset"></a>To separate the TableAdapters from the Dataset  
   
-1.  **ソリューション エクスプローラー**で **NorthwindDataSet.xsd** をダブルクリックして、このデータセットを**データセット デザイナー**で開きます。  
+1.  Double-click **NorthwindDataSet.xsd** in **Solution Explorer** to open the dataset in the **Dataset Designer**.  
   
-2.  デザイナーの空の領域をクリックします。  
+2.  Click an empty area on the designer.  
   
-3.  **\[プロパティ\]** ウィンドウで、**\[DataSet プロジェクト\]** ノードを見つけます。  
+3.  Locate the **DataSet Project** node in the **Properties** window.  
   
-4.  **\[DataSet プロジェクト\]** ボックスの一覧の **\[DataEntityTier\]** をクリックします。  
+4.  In the **DataSet Project** list, click **DataEntityTier**.  
   
-5.  **\[ビルド\]** メニューの **\[ソリューションのビルド\]** をクリックします。  
+5.  On the **Build** menu, click **Build Solution**.  
   
- データセットと TableAdapter が、2 つのクラス ライブラリ プロジェクトに分離されます。  最初にデータセット全体 \(DataAccessTier\) を含んでいたプロジェクトには、現在は TableAdapter しか含まれません。  **"DataSet プロジェクト"** プロパティで指定したプロジェクト \(DataEntityTier\) には、型指定されたデータセット \(NorthwindDataSet.Dataset.Designer.vb または NorthwindDataSet.Dataset.Designer.cs\) が含まれます。  
-  
-> [!NOTE]
->  **"DataSet プロジェクト"** プロパティを設定してデータセットと TableAdapter を分離する場合でも、プロジェクト内の既存のデータセット部分クラスは自動的には移動されません。  既存のデータセット部分クラスは、手動でデータセット プロジェクトに移動する必要があります。  
-  
-## 新しいサービス アプリケーションの作成  
- このチュートリアルでは WCF サービスを使用してデータ アクセス層にアクセスする方法を説明するので、新しい WCF サービス アプリケーションを作成します。  
-  
-#### 新しい WCF サービス アプリケーションを作成するには  
-  
-1.  **\[ファイル\]** メニューから、NTierWalkthrough ソリューションに新しいプロジェクトを追加します。  
-  
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[プロジェクトの種類\]** ペインの **\[WCF\]** をクリックします。  **\[テンプレート\]** ペインの **\[WCF サービス ライブラリ\]** をクリックします。  
-  
-3.  プロジェクトに「DataService」という名前を付け、**\[OK\]** をクリックします。  
-  
-     DataService プロジェクトが作成されて NTierWalkthrough ソリューションに追加されます。  
-  
-## Customers および Orders のデータを返すデータ アクセス層のメソッドの作成  
- データ サービスは、データ アクセス層の 2 つのメソッド \(GetCustomers および GetOrders\) を呼び出す必要があります。  これらのメソッドは、Northwind の Customers テーブルと Orders テーブルを返します。  GetCustomers メソッドと GetOrders メソッドは、DataAccessTier プロジェクトに作成します。  
-  
-#### Customers テーブルを返すメソッドをデータ アクセス層に作成するには  
-  
-1.  **ソリューション エクスプローラー**で NorthwindDataset.xsd をダブルクリックして、データセットを[型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)で開きます。  
-  
-2.  \[CustomersTableAdapter\] を右クリックし、**\[クエリの追加\]** をクリックして [TableAdapter クエリの構成ウィザード](../data-tools/editing-tableadapters.md)を開きます。  
-  
-3.  **\[コマンドの種類を選択します\]** ページで、**\[SQL ステートメントを使用する\]** の既定値を受け入れ、**\[次へ\]** をクリックします。  
-  
-4.  **\[クエリの種類の選択\]** ページで、**\[複数行を返す SELECT\]** の既定値を受け入れ、**\[次へ\]** をクリックします。  
-  
-5.  **\[SQL SELECT ステートメントの指定\]** ページで、既定のクエリを受け入れ、**\[次へ\]** をクリックします。  
-  
-6.  **\[生成するメソッドの選択\]** ページで、**\[DataTable を返す\]** セクションの **\[メソッド名\]** に「GetCustomers」と入力します。  
-  
-7.  **\[完了\]** をクリックします。  
-  
-#### Orders テーブルを返すメソッドをデータ アクセス層に作成するには  
-  
-1.  \[OrdersTableAdapter\] を右クリックし、**\[クエリの追加\]** をクリックします。  
-  
-2.  **\[コマンドの種類を選択します\]** ページで、**\[SQL ステートメントを使用する\]** の既定値を受け入れ、**\[次へ\]** をクリックします。  
-  
-3.  **\[クエリの種類の選択\]** ページで、**\[複数行を返す SELECT\]** の既定値を受け入れ、**\[次へ\]** をクリックします。  
-  
-4.  **\[SQL SELECT ステートメントの指定\]** ページで、既定のクエリを受け入れ、**\[次へ\]** をクリックします。  
-  
-5.  **\[生成するメソッドの選択\]** ページで、**\[DataTable を返す\]** セクションの **\[メソッド名\]** に「GetOrders」と入力します。  
-  
-6.  **\[完了\]** をクリックします。  
-  
-7.  **\[ビルド\]** メニューの **\[ソリューションのビルド\]** をクリックします。  
-  
-## データ サービスへの、データ エンティティ層およびデータ アクセス層への参照の追加  
- データ サービスはデータセットと TableAdapter の情報を必要とするため、DataEntityTier プロジェクトおよび DataAccessTier プロジェクトへの参照を追加します。  
-  
-#### データ サービスに参照を追加するには  
-  
-1.  **ソリューション エクスプローラー**で、\[DataService\] を右クリックし、**\[参照の追加\]** をクリックします。  
-  
-2.  **\[参照の追加\]** ダイアログ ボックスの **\[プロジェクト\]** タブをクリックします。  
-  
-3.  **\[DataAccessTier\]** プロジェクトと **\[DataEntityTier\]** プロジェクトの両方を選択します。  
-  
-4.  **\[OK\]** をクリックします。  
-  
-## データ アクセス層の GetCustomers メソッドおよび GetOrders メソッドを呼び出す関数のサービスへの追加  
- これで、データを返すメソッドをデータ アクセス層に含めることができました。次に、データ サービスにメソッドを作成して、データ アクセス層のメソッドを呼び出します。  
+ The dataset and TableAdapters are separated into the two class library projects. The project that originally contained the whole dataset (DataAccessTier) now contains only the TableAdapters. The project designated in the **DataSet Project** property (DataEntityTier) contains the typed dataset: NorthwindDataSet.Dataset.Designer.vb (or NorthwindDataSet.Dataset.Designer.cs).  
   
 > [!NOTE]
->  C\# プロジェクトの場合は、次のコードをコンパイルするために `System.Data.DataSetExtensions` アセンブリへの参照を追加する必要があります。  
+>  When you separate datasets and TableAdapters (by setting the **DataSet Project** property), existing partial dataset classes in the project will not be moved automatically. Existing dataset partial classes must be manually moved to the dataset project.  
   
-#### データ サービスに GetCustomers 関数と GetOrders 関数を作成するには  
+## <a name="creating-a-new-service-application"></a>Creating a New Service Application  
+ Because this walkthrough demonstrates how to access the data access tier by using a WCF service, create a new WCF service application.  
   
-1.  **DataService** プロジェクトで、IService1.vb または IService1.cs をダブルクリックします。  
+#### <a name="to-create-a-new-wcf-service-application"></a>To create a new WCF Service application  
   
-2.  **"Add your service operations here"** というコメントの下に、次のコードを追加します。  
+1.  From the **File** menu, add a new project to the NTierWalkthrough solution.  
   
-    ```vb#  
+2.  In the **New Project** dialog box, in the **Project types** pane, click **WCF**. In the **Templates** pane, click **WCF Service Library**.  
+  
+3.  Name the project **DataService** and click **OK**.  
+  
+     The DataService project is created and added to the NTierWalkthrough solution.  
+  
+## <a name="creating-methods-in-the-data-access-tier-to-return-the-customers-and-orders-data"></a>Creating Methods in the Data Access Tier to Return the Customers and Orders Data  
+ The data service has to call two methods in the data access tier: GetCustomers and GetOrders. These methods will return the Northwind Customers and Orders tables. Create the GetCustomers and GetOrders methods in the DataAccessTier project.  
+  
+#### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-customers-table"></a>To create a method in the data access tier that returns the Customers table  
+  
+1.  In **Solution Explorer**, double-click NorthwindDataset.xsd to open the dataset.
+  
+2.  Right-click CustomersTableAdapter and click **Add Query**.  
+  
+3.  On the **Choose a Command Type** page, leave the default value of **Use SQL statements** and click **Next**.  
+  
+4.  On the **Choose a Query Type** page, leave the default value of **SELECT which returns rows** and click **Next**.  
+  
+5.  On the **Specify a SQL SELECT statement** page, leave the default query and click **Next**.  
+  
+6.  On the **Choose Methods to Generate** page, type **GetCustomers** for the **Method name** in the **Return a DataTable** section.  
+  
+7.  Click **Finish**.  
+  
+#### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-orders-table"></a>To create a method in the data access tier that returns the Orders table  
+  
+1.  Right-click OrdersTableAdapter and click **Add Query**.  
+  
+2.  On the **Choose a Command Type** page, leave the default value of **Use SQL statements** and click **Next**.  
+  
+3.  On the **Choose a Query Type** page, leave the default value of **SELECT which returns rows** and click **Next**.  
+  
+4.  On the **Specify a SQL SELECT statement** page, leave the default query and click **Next**.  
+  
+5.  On the **Choose Methods to Generate** page, type **GetOrders** for the **Method name** in the **Return a DataTable** section.  
+  
+6.  Click **Finish**.  
+  
+7.  On the **Build** menu, click **Build Solution**.  
+  
+## <a name="adding-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>Adding a Reference to the Data Entity and Data Access Tiers to the Data Service  
+ Because the data service requires information from the dataset and TableAdapters, add references to the DataEntityTier and DataAccessTier projects.  
+  
+#### <a name="to-add-references-to-the-data-service"></a>To add references to the data service  
+  
+1.  Right-click DataService in **Solution Explorer** and click **Add Reference**.  
+  
+2.  Click the **Projects** tab in the **Add Reference** dialog box.  
+  
+3.  Select both the **DataAccessTier** and **DataEntityTier** projects.  
+  
+4.  Click **OK**.  
+  
+## <a name="adding-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>Adding Functions to the Service to Call the GetCustomers and GetOrders Methods in the Data Access Tier  
+ Now that the data access tier contains the methods to return data, create methods in the data service to call the methods in the data access tier.  
+  
+> [!NOTE]
+>  For C# projects, you must add a reference to the `System.Data.DataSetExtensions` assembly for the following code to compile.  
+  
+#### <a name="to-create-the-getcustomers-and-getorders-functions-in-the-data-service"></a>To create the GetCustomers and GetOrders functions in the data service  
+  
+1.  In the **DataService** project, double-click IService1.vb or IService1.cs.  
+  
+2.  Add the following code under the **Add your service operations here** comment:  
+  
+    ```vb  
     <OperationContract()> _  
     Function GetCustomers() As DataEntityTier.NorthwindDataSet.CustomersDataTable  
   
@@ -232,20 +248,19 @@ manager: "ghogen"
     Function GetOrders() As DataEntityTier.NorthwindDataSet.OrdersDataTable  
     ```  
   
-    ```c#  
+    ```csharp  
     [OperationContract]  
     DataEntityTier.NorthwindDataSet.CustomersDataTable GetCustomers();  
   
     [OperationContract]  
     DataEntityTier.NorthwindDataSet.OrdersDataTable GetOrders();  
-  
     ```  
   
-3.  DataService プロジェクトで、Service1.vb または Service1.cs をダブルクリックします。  
+3.  In the DataService project, double-click Service1.vb (or Service1.cs).  
   
-4.  Service1 クラスに次のコードを追加します。  
+4.  Add the following code to the Service1 class:  
   
-    ```vb#  
+    ```vb  
     Public Function GetCustomers() As DataEntityTier.NorthwindDataSet.CustomersDataTable Implements IService1.GetCustomers  
         Dim CustomersTableAdapter1 As New DataAccessTier.NorthwindDataSetTableAdapters.CustomersTableAdapter  
         Return CustomersTableAdapter1.GetCustomers()  
@@ -257,14 +272,13 @@ manager: "ghogen"
     End Function  
     ```  
   
-    ```c#  
+    ```csharp  
     public DataEntityTier.NorthwindDataSet.CustomersDataTable GetCustomers()  
     {  
         DataAccessTier.NorthwindDataSetTableAdapters.CustomersTableAdapter  
              CustomersTableAdapter1  
             = new DataAccessTier.NorthwindDataSetTableAdapters.CustomersTableAdapter();  
         return CustomersTableAdapter1.GetCustomers();  
-  
     }  
     public DataEntityTier.NorthwindDataSet.OrdersDataTable GetOrders()  
     {  
@@ -272,116 +286,114 @@ manager: "ghogen"
              OrdersTableAdapter1  
             = new DataAccessTier.NorthwindDataSetTableAdapters.OrdersTableAdapter();  
         return OrdersTableAdapter1.GetOrders();  
-  
     }  
     ```  
   
-5.  **\[ビルド\]** メニューの **\[ソリューションのビルド\]** をクリックします。  
+5.  On the **Build** menu, click **Build Solution**.  
   
-## データ サービスのデータを表示するプレゼンテーション層の作成  
- これで、データ アクセス層を呼び出すメソッドを持つデータ サービスをソリューションに含めることができました。次に、データ サービスを呼び出してデータをユーザーに表示する別のプロジェクトを作成します。  このチュートリアルでは、Windows フォーム アプリケーションを作成します。これは n 層アプリケーションのプレゼンテーション層です。  
+## <a name="creating-a-presentation-tier-to-display-data-from-the-data-service"></a>Creating a Presentation Tier to Display Data from the Data Service  
+ Now that the solution contains the data service that has methods that call into the data access tier, create another project that will call into the data service and present the data to users. For this walkthrough, create a Windows Forms application; this is the presentation tier of the n-tier application.  
   
-#### プレゼンテーション層プロジェクトを作成するには  
+#### <a name="to-create-the-presentation-tier-project"></a>To create the presentation tier project  
   
-1.  **\[ファイル\]** メニューから、NTierWalkthrough ソリューションに新しいプロジェクトを追加します。  
+1.  From the **File** menu, add a new project to the NTierWalkthrough solution.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[プロジェクトの種類\]** ペインの **\[Windows\]** をクリックします。  **\[テンプレート\]** ペインの **\[Windows フォーム アプリケーション\]** をクリックします。  
+2.  In the **New Project** dialog box, in the **Project types** pane, click **Windows**. In the **Templates** pane, click **Windows Forms Application**.  
   
-3.  プロジェクトに「PresentationTier」という名前を付け、**\[OK\]** をクリックします。  
+3.  Name the project **PresentationTier** and click **OK**.  
   
-4.  PresentationTier プロジェクトが作成され、NTierWalkthrough ソリューションに追加されます。  
+4.  The PresentationTier project is created and added to the NTierWalkthrough solution.  
   
-## スタートアップ プロジェクトとしての PresentationTier プロジェクトの設定  
- プレゼンテーション層は、データを提示して対話するために使用する実際のクライアント アプリケーションです。このため、PresentationTier プロジェクトをスタートアップ プロジェクトとして設定する必要があります。  
+## <a name="setting-the-presentationtier-project-as-the-startup-project"></a>Setting the PresentationTier Project as the Startup Project  
+ Because the presentation tier is the actual client application that is used to present and interact with the data, you must set the PresentationTier project to be the Startup project.  
   
-#### 新しいプレゼンテーション層プロジェクトをスタートアップ プロジェクトとして設定するには  
+#### <a name="to-set-the-new-presentation-tier-project-as-the-startup-project"></a>To set the new presentation tier project as the Startup project  
   
--   **ソリューション エクスプローラー**で、**\[PresentationTier\]** を右クリックし、**\[スタートアップ プロジェクトに設定\]** をクリックします。  
+-   In **Solution Explorer**, right-click **PresentationTier** and click **Set as StartUp Project**.  
   
-## プレゼンテーション層への参照の追加  
- クライアント アプリケーションである PresentationTier には、サービスのメソッドにアクセスできるように、データ サービスへのサービス参照が必要です。  また、WCF サービスによる型の共有を有効にするために、データセットへの参照も必要です。  データセット部分クラスに追加したコードは、データ サービスを介した型の共有を有効にするまで、プレゼンテーション層で使用することはできません。  通常は、データ テーブルの行と列の変更イベントに検証などのコードを追加するため、クライアントからこのコードにアクセスすることが必要になります。  
+## <a name="adding-references-to-the-presentation-tier"></a>Adding References to the Presentation Tier  
+ The client application PresentationTier requires a service reference to the data service in order to access the methods in the service. In addition, a reference to the dataset is required to enable type sharing by the WCF service. Until you enable type sharing through the data service, code added to the partial dataset class will not be available to the presentation tier. Because you typically add code such as validation to the row and column changing events of a data table, it is likely that you will want to access this code from the client.  
   
-#### プレゼンテーション層に参照を追加するには  
+#### <a name="to-add-a-reference-to-the-presentation-tier"></a>To add a reference to the presentation tier  
   
-1.  **ソリューション エクスプローラー**で、\[PresentationTier\] を右クリックし、**\[参照の追加\]** をクリックします。  
+1.  In **Solution Explorer**, right-click PresentationTier and click **Add Reference**.  
   
-2.  **\[参照の追加\]** ダイアログ ボックスの **\[プロジェクト\]** タブをクリックします。  
+2.  In the **Add Reference** dialog box, click the **Projects** tab.  
   
-3.  **\[DataEntityTier\]** を選択し、**\[OK\]** をクリックします。  
+3.  Select **DataEntityTier** and click **OK**.  
   
-#### プレゼンテーション層にサービス参照を追加するには  
+#### <a name="to-add-a-service-reference-to-the-presentation-tier"></a>To add a service reference to the presentation tier  
   
-1.  **ソリューション エクスプローラー**で、\[PresentationTier\] を右クリックし、**\[サービス参照の追加\]** をクリックします。  
+1.  In **Solution Explorer**, right-click PresentationTier and click **Add Service Reference**.  
   
-2.  **\[サービス参照の追加\]** ダイアログ ボックスで **\[探索\]** をクリックします。  
+2.  In the **Add Service Reference** dialog box, click **Discover**.  
   
-3.  **\[Service1\]** を選択し、**\[OK\]** をクリックします。  
+3.  Select **Service1** and click **OK**.  
   
     > [!NOTE]
-    >  現在のコンピューターに複数のサービスがある場合は、このチュートリアルで以前に作成したサービス \(GetCustomers メソッドおよび GetOrders メソッドを含むサービス\) を選択します。  
+    >  If you have multiple services on the current computer, select the service that you created previously in this walkthrough (the service that contains the GetCustomers and GetOrders methods).  
   
-## フォームへの DataGridView の追加とデータ サービスから返されたデータの表示  
- データ サービスへのサービス参照を追加すると、サービスによって返されたデータが **\[データ ソース\]** ウィンドウに自動的に読み込まれます。  
+## <a name="adding-datagridviews-to-the-form-to-display-the-data-returned-by-the-data-service"></a>Adding DataGridViews to the Form to Display the Data Returned by the Data Service  
+ After you add the service reference to the data service, the **Data Sources** window is automatically populated with the data that is returned by the service.  
   
-#### フォームに 2 つのデータ バインド DataGridView を追加するには  
+#### <a name="to-add-two-data-bound-datagridviews-to-the-form"></a>To add two data bound DataGridViews to the form  
   
-1.  **ソリューション エクスプローラー**で、PresentationTier プロジェクトを選択します。  
+1.  In **Solution Explorer**, select the PresentationTier project.  
   
-2.  **\[データ ソース\]** ウィンドウの **\[NorthwindDataSet\]** を展開し、**\[Customers\]** ノードを見つけます。  
+2.  In the **Data Sources** window, expand **NorthwindDataSet** and locate the **Customers** node.  
   
-3.  **\[Customers\]** ノードを Form1 にドラッグします。  
+3.  Drag the **Customers** node onto Form1.  
   
-4.  **\[データ ソース\]** ウィンドウの **\[Customers\]** ノードを展開し、関連する **\[Orders\]** ノード \(**\[Customers\]** ノードに入れ子になっている **\[Orders\]** ノード\) を見つけます。  
+4.  In the **Data Sources** window, expand the **Customers** node and locate the related **Orders** node (the **Orders** node nested in the **Customers** node).  
   
-5.  関連する **\[Orders\]** ノードを Form1 にドラッグします。  
+5.  Drag the related **Orders** node onto Form1.  
   
-6.  フォームの空の領域をダブルクリックして、`Form1_Load` イベント ハンドラーを作成します。  
+6.  Create a `Form1_Load` event handler by double-clicking an empty area of the form.  
   
-7.  `Form1_Load` イベント ハンドラーに次のコードを追加します。  
+7.  Add the following code to the `Form1_Load` event handler.  
   
-    ```vb#  
+    ```vb  
     Dim DataSvc As New ServiceReference1.Service1Client  
     NorthwindDataSet.Customers.Merge(DataSvc.GetCustomers)  
     NorthwindDataSet.Orders.Merge(DataSvc.GetOrders)  
     ```  
   
-    ```c#  
+    ```csharp  
     ServiceReference1.Service1Client DataSvc =   
         new ServiceReference1.Service1Client();  
     northwindDataSet.Customers.Merge(DataSvc.GetCustomers());  
     northwindDataSet.Orders.Merge(DataSvc.GetOrders());  
-  
     ```  
   
-## サービスで許可されるメッセージの最大サイズの増加  
- サービスは Customers テーブルと Orders テーブルからデータを返すため、maxReceivedMessageSize の既定値ではデータを保持するのに十分ではなく、この値を大きくする必要があります。  このチュートリアルでは、値を 6553600 に変更します。  クライアントで値を変更すると、サービス参照が自動的に更新されます。  
+## <a name="increasing-the-maximum-message-size-allowed-by-the-service"></a>Increasing the Maximum Message Size Allowed by the Service  
+ Because the service returns data from the Customers and Orders tables, the default value for maxReceivedMessageSize is not large enough to hold the data and must be increased. For this walkthrough, you will change the value to 6553600. You will change the value on the client, and this will automatically update the service reference.  
   
 > [!NOTE]
->  既定のサイズが低く設定されているのは、サービス拒否 \(DoS\) 攻撃を受けるリスクを低減するためです。  詳細については、「<xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>」を参照してください。  
+>  The lower default size is intended to limit exposure to denial of service (DoS) attacks. For more information, see <xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>.  
   
-#### maxReceivedMessageSize 値を増やすには  
+#### <a name="to-increase-the-maxreceivedmessagesize-value"></a>To increase the maxReceivedMessageSize value  
   
-1.  **ソリューション エクスプローラー**で、PresentationTier プロジェクトの app.config ファイルをダブルクリックします。  
+1.  In **Solution Explorer**, double-click the app.config file in the PresentationTier project.  
   
-2.  **maxReceivedMessage** サイズ属性を見つけ、値を「`6553600`」に変更します。  
+2.  Locate the **maxReceivedMessage** size attribute and change the value to `6553600`.  
   
-## アプリケーションのテスト  
- アプリケーションを実行します。  データがデータ サービスから取得され、フォームに表示されます。  
+## <a name="testing-the-application"></a>Testing the Application  
+ Run the application. The data is retrieved from the data service and displayed on the form.  
   
-#### アプリケーションをテストするには  
+#### <a name="to-test-the-application"></a>To test the application  
   
-1.  F5 キーを押します。  
+1.  Press F5.  
   
-2.  Customers テーブルと Orders テーブルのデータがデータ サービスから取得され、フォームに表示されます。  
+2.  The data from the Customers and Orders tables is retrieved from the data service and displayed on the form.  
   
-## 次の手順  
- Windows ベース アプリケーションに関連データを保存した後で、アプリケーションの要件によってはさらに操作を追加する必要があります。  たとえば、このアプリケーションに対して次のような拡張を行うことができます。  
+## <a name="next-steps"></a>Next Steps  
+ Depending on your application requirements, there are several steps that you may want to perform after you save related data in the Windows-based application. For example, you could make the following enhancements to this application:  
   
--   データセットへの検証の追加。  詳細については、「[チュートリアル : n 層データ アプリケーションへの検証の追加](../Topic/Walkthrough:%20Adding%20Validation%20to%20an%20N-Tier%20Data%20Application.md)」を参照してください。  
+-   Add validation to the dataset. 
   
--   サービスへの、データを更新してデータベースに戻す追加メソッドの追加。  
+-   Add additional methods to the service for updating data back to the database.  
   
-## 参照  
- [n 層アプリケーションでのデータセットの操作](../data-tools/work-with-datasets-in-n-tier-applications.md)   
- [階層更新](../data-tools/hierarchical-update.md)   
- [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [Work with datasets in n-tier applications](../data-tools/work-with-datasets-in-n-tier-applications.md)   
+ [Hierarchical update](../data-tools/hierarchical-update.md)   
+ [Accessing data in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)

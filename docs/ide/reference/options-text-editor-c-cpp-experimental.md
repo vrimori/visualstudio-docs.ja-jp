@@ -1,7 +1,7 @@
 ---
 title: "[オプション]、[テキスト エディター]、[C/C++]、[実験用] | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 08/02/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -30,11 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 77c4408fcd93a776468cf5fb23b3807a2b8d594d
+ms.translationtype: HT
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: 1677db7d5af93db8a378d598332e6a6d52f09bdd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/24/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="options-text-editor-cc-experimental"></a>[オプション]、[テキスト エディター]、[C/C++]、[実験用]
@@ -50,7 +50,8 @@ ms.lasthandoff: 05/24/2017
 ## <a name="enable-predictive-intellisense"></a>予測 IntelliSense を有効にする
 予測 IntelliSense は、コンテキストに関連のある結果のみが表示されるように、IntelliSense ドロップダウン リストに表示される結果の数を制限します。 たとえば、「<code>int x =</code>」と入力して IntelliSense ドロップダウン リストを呼び出すと、整数または整数を返す関数のみが表示されます。 予測 IntelliSense は既定ではオフになっています。
 
-## <a name="enable-faster-project-load"></a>プロジェクトの高速読み込みを有効にする
+## <a name="enable-faster-project-load"></a>プロジェクトの高速読み込みを有効にする 
+**Visual Studio 2017 バージョン 15.3 およびそれ以降**: この機能は現在、**プロジェクトのキャッシュを有効にする**と呼ばれており、[[VC++ プロジェクトの設定]](vcpp-project-settings-projects-and-solutions-options-dialog-box.md) プロパティ ページに移動しました。
 このオプションでは、Visual Studio がプロジェクト データをキャッシュすることで、次にプロジェクトを開いたときにプロジェクト ファイルから再計算せずにキャッシュされたデータを読み込めるようになります。 キャッシュされたデータを使用すると、プロジェクトの読み込み時間を大幅に短縮できます。  
 
 ## <a name="additional-features-in-the-visual-studio-gallery"></a>Visual Studio ギャラリーで追加された機能

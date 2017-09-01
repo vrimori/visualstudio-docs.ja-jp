@@ -37,12 +37,10 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/30/2017
 
 ---
-# アプリケーションの保護
-<a id="securing-applications" class="xliff"></a>
+# <a name="securing-applications"></a>アプリケーションの保護
 アプリケーションのセキュリティについては、ほとんどのアプリケーションに共通する問題もあれば、それぞれのアプリケーション ドメインに固有の問題もあります。  
   
-## セキュリティについての全般的な考慮事項
-<a id="general-security-considerations" class="xliff"></a>  
+## <a name="general-security-considerations"></a>セキュリティについての全般的な考慮事項  
  各言語にはそれぞれセキュリティに関する考慮事項と課題があります。  
   
  [セキュリティ推奨事項](/cpp/top/security-best-practices-for-cpp)  
@@ -51,8 +49,7 @@ ms.lasthandoff: 05/30/2017
  [ビルドに存在しません: セキュリティとプログラミング (C# および Visual Basic)](http://msdn.microsoft.com/en-us/227e2863-cf09-4c28-9611-bcd82be5e994)  
  Visual Basic および C# の開発者が考慮する必要のある、セキュリティに関する 3 つの最も重要な事項 (特権、Web アプリケーション、Visual Studio のセットアップ) について説明します。  
   
-## モバイル アプリケーションのセキュリティ
-<a id="securing-mobile-applications" class="xliff"></a>  
+## <a name="securing-mobile-applications"></a>モバイル アプリケーションのセキュリティ  
  モバイル デバイスの普及に伴って、こうしたデバイスの情報やデータのセキュリティの重要性も高まっています。  
   
  [デバイスのセキュリティに関する考慮事項](http://msdn.microsoft.com/en-us/45fab484-8718-452e-8210-04fda3c6cb87)  
@@ -64,8 +61,7 @@ ms.lasthandoff: 05/30/2017
  [セキュリティで保護されたモバイル Web フォーム ページのデザイン](http://msdn.microsoft.com/en-us/b69727c1-f81f-4221-a116-8f92f769365f)  
  ワイヤレス ネットワークやモバイル デバイスのセキュリティのプランニング、実装、およびサポートについて説明します。  
   
-## Web アプリケーションのセキュリティ
-<a id="securing-web-applications" class="xliff"></a>  
+## <a name="securing-web-applications"></a>Web アプリケーションのセキュリティ  
  Web ページに問題があると、サーバー全体、さらにはネットワーク全体の整合性やセキュリティが危険にさらされる可能性があります。 したがって、Web アプリケーションのプランを立てる際には、セキュリティについてよくレビューする必要があります。  
   
  [ASP.NET のセキュリティ アーキテクチャ](http://msdn.microsoft.com/Library/c34d6f4f-f64d-4697-bd32-02dd2ddf726f)  
@@ -80,13 +76,11 @@ ms.lasthandoff: 05/30/2017
  [方法: トランスポート セキュリティの使用](http://msdn.microsoft.com/en-us/16210e41-5492-4cc8-9002-7366b1fc7297)  
  WCF サービスへの接続時に、認証にトランスポート セキュリティを使用する方法について説明します。  
   
-## デスクトップ アプリケーションのセキュリティ
-<a id="securing-desktop-applications" class="xliff"></a>  
+## <a name="securing-desktop-applications"></a>デスクトップ アプリケーションのセキュリティ  
  デスクトップ アプリケーションのセキュリティのデザインは、アプリケーション開発に欠かせません。  
   
  [Windows フォームのセキュリティ](/dotnet/framework/winforms/windows-forms-security)  
  Windows フォームのセキュリティ実装の概要を説明します。  
   
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
  [セキュリティ](../ide/security-in-visual-studio.md)

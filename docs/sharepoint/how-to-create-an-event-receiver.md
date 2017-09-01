@@ -1,77 +1,81 @@
 ---
-title: "方法: イベント レシーバーを作成する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.SPE.EventReceiver"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "イベント レシーバー [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, イベント レシーバー"
+title: 'How to: Create an Event Receiver | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.SPE.EventReceiver
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, event receivers
+- event receivers [SharePoint development in Visual Studio]
 ms.assetid: 6f90cb48-eb8f-43c2-a3f7-ed4ce81aedf2
 caps.latest.revision: 20
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 19
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 69a1c53bd067b77838e133808f0c72ca153e4bc7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法: イベント レシーバーを作成する
-  *イベント レシーバー*を作成して、ユーザーがリストまたはリスト項目などの SharePoint アイテムと対話するときに応答できます。  たとえば、イベント レシーバーのコードは、ユーザーが変更カレンダー トリガーするか、連絡先リストから名前を削除します。  このトピックに従ってリスト インスタンスにイベント レシーバーを追加する方法について学習できます。  
+# <a name="how-to-create-an-event-receiver"></a>How to: Create an Event Receiver
+  By creating *event receivers*, you can respond when a user interacts with SharePoint items such as lists or list items. For example, the code in an event receiver can be triggered when a user changes the calendar or deletes a name from a contacts list. By following this topic, you can learn how to add an event receiver to a list instance.  
   
- これらの手順を完了するには、Windows と SharePoint [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] とサポートされているエディションをインストールしておく必要があります。  詳細については、「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  この例では、SharePoint プロジェクトを必要とするため、[チュートリアル: SharePoint のサイト列、コンテンツ タイプ、およびリストの作成](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)"の手順を終了している必要があります。  
+ To complete these steps, you must have installed [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] and supported editions of Windows and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md). Because this example requires a SharePoint project, you also must have completed the procedure in the topic [Walkthrough: Create a Site Column, Content Type, and List for SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md).  
   
-## イベント レシーバーの追加  
- ユーザーが [チュートリアル: SharePoint のサイト列、コンテンツ タイプ、およびリストの作成](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md) で作成したプロジェクトは、カスタム サイト内の列、カスタム リストおよびコンテンツ タイプが含まれています。  次の手順では、リストなどの SharePoint アイテムで発生するイベントを処理する方法を指定するには、リスト インスタンスに単純なイベント ハンドラー \(イベント レシーバー\) を追加することによって、このプロジェクトを展開します。  
+## <a name="adding-an-event-receiver"></a>Adding an Event Receiver  
+ The project that you created in [Walkthrough: Create a Site Column, Content Type, and List for SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md) includes custom site columns, a custom list, and a content type. In the following procedure, you'll expand this project by adding a simple event handler (an event receiver) to a list instance to show how to handle events that occur in SharePoint items such as lists.  
   
-#### リスト インスタンスにイベント レシーバーを追加するには  
+#### <a name="to-add-an-event-receiver-to-the-list-instance"></a>To add an event receiver to the list instance  
   
-1.  「[チュートリアル: SharePoint のサイト列、コンテンツ タイプ、およびリストの作成](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)」で作成したプロジェクトを開きます。  
+1.  Open the project that you created in [Walkthrough: Create a Site Column, Content Type, and List for SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md).  
   
-2.  **\[ソリューション エクスプローラー\]** で、**\[クリニック\]** という名前の SharePoint プロジェクト ノードをクリックします。  
+2.  In **Solution Explorer**, choose the SharePoint project node, which is named **Clinic**.  
   
-3.  メニュー バーで **\[プロジェクト\]**、**\[新しい項目の追加\]** の順に選択します。  
+3.  On the menu bar, choose **Project**, **Add New Item**.  
   
-4.  **\[Visual C\#\]** または **\[Visual Basic\]** で、**\[SharePoint\]** ノードを展開し、**2010** 項目を選択します。  
+4.  Under either **Visual C#** or **Visual Basic**, expand the **SharePoint** node, and then choose the **2010** item.  
   
-5.  **\[テンプレート\]** のペインで、**\[イベント レシーバー\]** をクリックします、" TestEventReceiver1 "という名前を付けて、**\[OK\]** ボタンをクリックします。  
+5.  In the **Templates** pane, choose **Event Receiver**, name it **TestEventReceiver1**, and then choose the **OK** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+     The **SharePoint Customization Wizard** appears.  
   
-6.  **\[使用するイベント レシーバーの種類\]** の一覧で、**\[リスト項目イベント\]** をクリックします。  
+6.  In the **What type of event receiver do you want?** list, choose **List Item Events**.  
   
-7.  **\[イベント ソースとなる項目\]** の一覧で、**\[患者 \(Clinic\\Patients\) \]** をクリックします。  
+7.  In the **What item should be the event source?** list, choose **Patients (Clinic\Patients)**.  
   
-8.  **\[次のイベントを処理\]** の一覧で、チェック ボックスを **\[項目が追加されました\]** の横にし、**\[完了\]** ボタンをクリックします。  
+8.  In the **Handle the following events** list, select the check box next to **An item was added**, and then choose the **Finish** button.  
   
-     新しいイベント レシーバーのコード ファイルが `ItemAdded`という名前のメソッドが一つ含まれています。  次の手順では、連絡先が Scott Brown とともに指定されるように、このメソッドにコードを追加します。  
+     The code file for the new event receiver contains a single method that's named `ItemAdded`. In the next step, you'll add code to this method so that every contact will be named Scott Brown by default.  
   
-9. `ItemAdded` の既存のメソッドを次のコードで置き換えて、F5 キーを押してする:  
+9. Replace the existing `ItemAdded` method with the following code, and then choose the F5 key:  
   
-     [!code-csharp[SP_EventReceiver#1](../snippets/csharp/VS_Snippets_OfficeSP/sp_eventreceiver/CS/CustomField1/TestEventReceiver1/TestEventReceiver1.cs#1)]
-     [!code-vb[SP_EventReceiver#1](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_eventreceiver/VB/CustomField1_VB/EventReceiver1/EventReceiver1.vb#1)]  
+     [!code-csharp[SP_EventReceiver#1](../sharepoint/codesnippet/CSharp/CustomField1/TestEventReceiver1/TestEventReceiver1.cs#1)]   [!code-vb[SP_EventReceiver#1](../sharepoint/codesnippet/VisualBasic/CustomField1_VB/EventReceiver1/EventReceiver1.vb#1)]  
   
-     コードが実行され、SharePoint サイトが Web ブラウザーに表示されます。  
+     The code runs, and the SharePoint site appears in the web browser.  
   
-10. クイック起動バーに、**\[患者\]** リンクを選択し、**\[新しいアイテムの追加\]** リンクをクリックします。  
+10. On the QuickLaunch bar, choose the **Patients** link, and then choose the **Add New Item** link.  
   
-     新しい項目の参加アプリケーションの記述が開きます。  
+     The entry form for new items opens.  
   
-11. フィールドにデータを入力し、**\[保存\]** ボタンをクリックします。  
+11. Enter data in the fields, and then choose the **Save** button.  
   
-     **\[保存\]** ボタンを選択したら、名前 Scott Brown に自動的に **\[Patient Name\]** 列の更新。  
+     After you choose the **Save** button, the **Patient Name** column automatically updates to the name Scott Brown.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
   
   

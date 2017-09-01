@@ -1,99 +1,113 @@
 ---
-title: "CA1060: P/Invoke を NativeMethods クラスに移動します | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MovePInvokesToNativeMethodsClass"
-  - "CA1060"
-helpviewer_keywords: 
-  - "CA1060"
-  - "MovePInvokesToNativeMethodsClass"
+title: 'CA1060: Move P-Invokes to NativeMethods class | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MovePInvokesToNativeMethodsClass
+- CA1060
+helpviewer_keywords:
+- MovePInvokesToNativeMethodsClass
+- CA1060
 ms.assetid: 06686c8c-6ad3-42f7-a355-cbaefa347cfc
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 21
----
-# CA1060: P/Invoke を NativeMethods クラスに移動します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6c876ce1a73dbc4be34202cf2e7a2b5f775d3d7d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060: Move P/Invokes to NativeMethods class
 |||  
 |-|-|  
 |TypeName|MovePInvokesToNativeMethodsClass|  
 |CheckId|CA1060|  
-|分類|Microsoft.Design|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Design|  
+|Breaking Change|Breaking|  
   
-## 原因  
- メソッドは、プラットフォーム呼び出しサービスを使用してアンマネージ コードにアクセスしていますが、**NativeMethods** クラスのいずれかのメンバーではありません。  
+## <a name="cause"></a>Cause  
+ A method uses Platform Invocation Services to access unmanaged code and is not a member of one of the **NativeMethods** classes.  
   
-## 規則の説明  
- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 属性を使用してマークされているメソッドなどのプラットフォーム呼び出しメソッド、または [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] で `Declare` キーワードを使用して定義されたメソッドが、アンマネージ コードにアクセスしています。  このメソッドは、次のクラスのいずれかに含まれる必要があります。  
+## <a name="rule-description"></a>Rule Description  
+ Platform Invocation methods, such as those that are marked by using the <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> attribute, or methods that are defined by using the `Declare` keyword in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], access unmanaged code. These methods should be in one of the following classes:  
   
--   **NativeMethods** \- このクラスは、アンマネージ コード アクセス許可のスタック ウォークを出力します \(<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> は、このクラスに適用しないでください\)。スタック ウォークを実行するため、このクラスは任意の場所で使用できるメソッドに適しています。  
+-   **NativeMethods** - This class does not suppress stack walks for unmanaged code permission. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> must not be applied to this class.) This class is for methods that can be used anywhere because a stack walk will be performed.  
   
--   **SafeNativeMethods** \- このクラスは、アンマネージ コード アクセス許可のスタック ウォークを出力しません \(<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> は、このクラスに適用されます\)。このクラスは、だれが呼び出しても安全なメソッドに適しています。  だれが呼び出しても安全性の面で問題のないメソッドであるため、このメソッドを呼び出す場合、安全に使用できるようにセキュリティの確認を完全に行う必要はありません。  
+-   **SafeNativeMethods** - This class suppresses stack walks for unmanaged code permission. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> is applied to this class.) This class is for methods that are safe for anyone to call. Callers of these methods are not required to perform a full security review to make sure that the usage is secure because the methods are harmless for any caller.  
   
--   **UnsafeNativeMethods** \- このクラスは、アンマネージ コード アクセス許可のスタック ウォークを出力しません \(<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> は、このクラスに適用されます\)。このクラスは、危険性のあるメソッドに適しています。  スタック ウォークは実行されないため、このメソッドを呼び出す場合、安全に使用できるようにセキュリティの確認を完全に行います。  
+-   **UnsafeNativeMethods** - This class suppresses stack walks for unmanaged code permission. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> is applied to this class.) This class is for methods that are potentially dangerous. Any caller of these methods must perform a full security review to make sure that the usage is secure because no stack walk will be performed.  
   
- このクラスを `internal` \(Visual Basic では `Friend`\) と宣言し、プライベート コンストラクターを宣言して、新しいインスタンスが作成されないようにします。  このクラスのメソッドは、`static` および `internal` \(Visual Basic では `Shared` および `Friend`\) にする必要があります。  
+ These classes are declared as `internal` (`Friend`, in Visual Basic) and declare a private constructor to prevent new instances from being created. The methods in these classes should be `static` and `internal` (`Shared` and `Friend` in Visual Basic).  
   
-## 違反の修正方法  
- この規則違反を修正するには、適切な **NativeMethods** クラスにメソッドを移動します。  ほとんどのアプリケーションでは、P\/Invoke を **NativeMethods** という名前の新しいクラスに移動すれば十分です。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, move the method to the appropriate **NativeMethods** class. For most applications, moving P/Invokes to a new class that is named **NativeMethods** is enough.  
   
- ただし、他のアプリケーションで使用するライブラリを開発している場合は、**SafeNativeMethods** と **UnsafeNativeMethods** という他の 2 つのクラスを定義することを検討する必要があります。  これらのクラスは **NativeMethods** クラスに類似していますが、**SuppressUnmanagedCodeSecurityAttribute** という特別な属性を使用してマークされています。  この属性が適用される場合、ランタイムで、すべての呼び出し元が **UnmanagedCode** アクセス許可を持つかどうかを確認するための完全なスタック ウォークが実行されません。  通常、ランタイムは起動時にこのアクセス許可をチェックします。  このチェックが実行されないため、これらのアンマネージ メソッドを呼び出す際のパフォーマンスが大幅に向上しています。また、アクセス許可が制限されているコードでこれらのメソッドを呼び出すこともできます。  
+ However, if you are developing libraries for use in other applications, you should consider defining two other classes that are called **SafeNativeMethods** and **UnsafeNativeMethods**. These classes resemble the **NativeMethods** class; however, they are marked by using a special attribute called **SuppressUnmanagedCodeSecurityAttribute**. When this attribute is applied, the runtime does not perform a full stack walk to make sure that all callers have the **UnmanagedCode** permission. The runtime ordinarily checks for this permission at startup. Because the check is not performed, it can greatly improve performance for calls to these unmanaged methods, It also enables code that has limited permissions to call these methods.  
   
- ただし、この属性を使用する場合は細心の注意が必要です。  正しく実装しないと、セキュリティに重大な影響を及ぼす可能性があります。  
+ However, you should use this attribute with great care. It can have serious security implications if it is implemented incorrectly..  
   
- メソッドを実装する方法については、**NativeMethods**、**SafeNativeMethods**、および **UnsafeNativeMethods** の各例を参照してください。  
+ For information about how to implement the methods, see the **NativeMethods** Example, **SafeNativeMethods** Example, and **UnsafeNativeMethods** Example.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 使用例  
- この規則に違反するメソッドの宣言例を次に示します。  違反を修正するには、**RemoveDirectory** P\/Invoke を、P\/Invoke のみの格納用に設計されている適切なクラスに移動する必要があります。  
+## <a name="example"></a>Example  
+ The following example declares a method that violates this rule. To correct the violation, the **RemoveDirectory** P/Invoke should be moved to an appropriate class that is designed to hold only P/Invokes.  
   
- [!code-vb[FxCop.Design.DllImportNativeMethods#1](../code-quality/codesnippet/VisualBasic/ca1060-move-p-invokes-to-nativemethods-class_1.vb)]
- [!code-cs[FxCop.Design.DllImportNativeMethods#1](../code-quality/codesnippet/CSharp/ca1060-move-p-invokes-to-nativemethods-class_1.cs)]  
+ [!code-vb[FxCop.Design.DllImportNativeMethods#1](../code-quality/codesnippet/VisualBasic/ca1060-move-p-invokes-to-nativemethods-class_1.vb)] [!code-csharp[FxCop.Design.DllImportNativeMethods#1](../code-quality/codesnippet/CSharp/ca1060-move-p-invokes-to-nativemethods-class_1.cs)]  
   
-## NativeMethods の例  
+## <a name="nativemethods-example"></a>NativeMethods Example  
   
-### 説明  
- **NativeMethods** クラスは **SuppressUnmanagedCodeSecurityAttribute** を使用してマークできないため、このクラスに配置されている P\/Invoke には **UnmanagedCode** アクセス許可が必要です。  ほとんどのアプリケーションはローカル コンピューターから完全信頼で実行されるため、通常、これは問題になりません。  ただし、再利用できるライブラリを開発している場合は、**SafeNativeMethods** クラスまたは **UnsafeNativeMethods** クラスを定義することを検討する必要があります。  
+### <a name="description"></a>Description  
+ Because the **NativeMethods** class should not be marked by using **SuppressUnmanagedCodeSecurityAttribute**, P/Invokes that are put in it will require **UnmanagedCode** permission. Because most applications run from the local computer and run together with full trust, this is usually not a problem. However, if you are developing reusable libraries, you should consider defining a **SafeNativeMethods** or **UnsafeNativeMethods** class.  
   
- user32.dll の **MessageBeep** 関数をラップする **Interaction.Beep** メソッドの例を次に示します。  **MessageBeep** P\/Invoke は **NativeMethods** クラスに配置されています。  
+ The following example shows an **Interaction.Beep** method that wraps the **MessageBeep** function from user32.dll. The **MessageBeep** P/Invoke is put in the **NativeMethods** class.  
   
-### コード  
- [!code-cs[FxCop.Design.NativeMethods#1](../code-quality/codesnippet/CSharp/ca1060-move-p-invokes-to-nativemethods-class_2.cs)]
- [!code-vb[FxCop.Design.NativeMethods#1](../code-quality/codesnippet/VisualBasic/ca1060-move-p-invokes-to-nativemethods-class_2.vb)]  
+### <a name="code"></a>Code  
+ [!code-csharp[FxCop.Design.NativeMethods#1](../code-quality/codesnippet/CSharp/ca1060-move-p-invokes-to-nativemethods-class_2.cs)] [!code-vb[FxCop.Design.NativeMethods#1](../code-quality/codesnippet/VisualBasic/ca1060-move-p-invokes-to-nativemethods-class_2.vb)]  
   
-## SafeNativeMethods の例  
+## <a name="safenativemethods-example"></a>SafeNativeMethods Example  
   
-### 説明  
- アプリケーションに公開しても安全で、副作用がない P\/Invoke メソッドは、**SafeNativeMethods** というクラスに配置する必要があります。  アクセス許可を要求する必要も、呼び出し元に多大な注意を払う必要もありません。  
+### <a name="description"></a>Description  
+ P/Invoke methods that can be safely exposed to any application and that do not have any side effects should be put in a class that is named **SafeNativeMethods**. You do not have to demand permissions and you do not have to pay much attention to where they are called from.  
   
- kernel32.dll の **GetTickCount** 関数をラップする **Environment.TickCount** プロパティの例を次に示します。  
+ The following example shows an **Environment.TickCount** property that wraps the **GetTickCount** function from kernel32.dll.  
   
-### コード  
- [!CODE [FxCop.Design.NativeMethodsSafe#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Design.NativeMethodsSafe#1)]  
+### <a name="code"></a>Code  
+ [!code-vb[FxCop.Design.NativeMethodsSafe#1](../code-quality/codesnippet/VisualBasic/ca1060-move-p-invokes-to-nativemethods-class_3.vb)] [!code-csharp[FxCop.Design.NativeMethodsSafe#1](../code-quality/codesnippet/CSharp/ca1060-move-p-invokes-to-nativemethods-class_3.cs)]  
   
-## UnsafeNativeMethods の例  
+## <a name="unsafenativemethods-example"></a>UnsafeNativeMethods Example  
   
-### 説明  
- 呼び出しが安全でなく、副作用が発生する可能性がある P\/Invoke メソッドは、**UnsafeNativeMethods** というクラスに配置する必要があります。  これらのメソッドは、誤ってユーザーに公開されないように厳密にチェックする必要があります。  これには、規則「[CA2118: SuppressUnmanagedCodeSecurityAttribute の使用法を再確認します](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md)」が役立ちます。  または、これらのメソッドを使用する場合に、**UnmanagedCode** ではなく、別のアクセス許可を要求する必要があります。  
+### <a name="description"></a>Description  
+ P/Invoke methods that cannot be safely called and that could cause side effects should be put in a class that is named **UnsafeNativeMethods**. These methods should be rigorously checked to make sure that they are not exposed to the user unintentionally. The rule [CA2118: Review SuppressUnmanagedCodeSecurityAttribute usage](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md) can help with this. Alternatively, the methods should have another permission that is demanded instead of **UnmanagedCode** when they use them.  
   
- user32.dll の **ShowCursor** 関数をラップする **Cursor.Hide** メソッドの例を次に示します。  
+ The following example shows a **Cursor.Hide** method that wraps the **ShowCursor** function from user32.dll.  
   
-### コード  
- [!code-vb[FxCop.Design.NativeMethodsUnsafe#1](../code-quality/codesnippet/VisualBasic/ca1060-move-p-invokes-to-nativemethods-class_3.vb)]
- [!code-cs[FxCop.Design.NativeMethodsUnsafe#1](../code-quality/codesnippet/CSharp/ca1060-move-p-invokes-to-nativemethods-class_3.cs)]  
+### <a name="code"></a>Code  
+ [!code-vb[FxCop.Design.NativeMethodsUnsafe#1](../code-quality/codesnippet/VisualBasic/ca1060-move-p-invokes-to-nativemethods-class_4.vb)] [!code-csharp[FxCop.Design.NativeMethodsUnsafe#1](../code-quality/codesnippet/CSharp/ca1060-move-p-invokes-to-nativemethods-class_4.cs)]  
   
-## 参照  
- [デザイン上の警告](../code-quality/design-warnings.md)
+## <a name="see-also"></a>See Also  
+ [Design Warnings](../code-quality/design-warnings.md)

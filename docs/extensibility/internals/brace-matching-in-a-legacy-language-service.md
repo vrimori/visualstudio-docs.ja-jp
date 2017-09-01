@@ -1,59 +1,76 @@
 ---
-title: "従来の言語サービスにおけるかっこの一致 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自動一致"
-  - "言語サービス [マネージ パッケージ フレームワーク] かっこの一致"
+title: Brace Matching in a Legacy Language Service | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- brace matching
+- language services [managed package framework], brace matching
 ms.assetid: 4e3d0a70-f22f-49dd-92d8-edf48ab62b52
 caps.latest.revision: 27
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# 従来の言語サービスにおけるかっこの一致
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: b4685246ee6e511b849f346fc080982afaec42a4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-かっこの一致には、かっこと中かっこなど同時に発生する必要がある言語要素の追跡、開発者ことができます。 右中かっこを入力すると、開発者は、左中かっこが強調表示されます。  
+---
+# <a name="brace-matching-in-a-legacy-language-service"></a>Brace Matching in a Legacy Language Service
+Brace matching helps the developer track language elements that need to occur together, such as parentheses and curly braces. When a developer enters a closing brace, the opening brace is highlighted.  
   
- 2 つまたは 3 つ同時発生すると呼ばれる要素のペアと組を照合することができます。 3 要素は、次の 3 つの同時発生する要素のセットです。 などで、C\# の場合、 `foreach` ステートメントは、3 つの要素をフォーム:"`foreach()`「,」`{`"、および"`}`"です。 右中かっこを入力すると、すべての 3 つの要素が強調表示されます。  
+ You can match two or three co-occurring elements, called pairs and triples. Triples are sets of three co-occurring elements. For example, in C#, the `foreach` statement forms a triple: "`foreach()`", "`{`", and "`}`". All three elements are highlighted when the closing brace is typed.  
   
- 従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は、MEF の拡張機能を使用します。 中かっこの一致を実装する新しい方法の詳細を参照してください [チュートリアル: 対応する中かっこの表示](../../extensibility/walkthrough-displaying-matching-braces.md)します。  
+ Legacy language services are implemented as part of a VSPackage, but the newer way to implement language service features is to use MEF extensions. To find out more about the new way to implement brace matching, see [Walkthrough: Displaying Matching Braces](../../extensibility/walkthrough-displaying-matching-braces.md).  
   
 > [!NOTE]
->  エディターを使用して、新しい API できるだけ早く始めることをお勧めします。 言語サービスのパフォーマンスを向上させる、エディターの新機能を活用できます。  
+>  We recommend that you begin to use the new editor API as soon as possible. This will improve the performance of your language service and let you take advantage of new editor features.  
   
- <xref:Microsoft.VisualStudio.Package.AuthoringSink> クラスは、2 つのペアをサポートしているしで 3 倍になり、 <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchPair%2A> と <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchTriple%2A> メソッドです。  
+ The <xref:Microsoft.VisualStudio.Package.AuthoringSink> class supports both pairs and triples with the <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchPair%2A> and <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchTriple%2A> methods.  
   
-## 実装  
- 言語サービスは、言語ですべての一致要素を識別し、すべての一致するペアを検索する必要があります。 実装することによってこれは通常 <xref:Microsoft.VisualStudio.Package.IScanner> かを検出、一致する言語を使用して、 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 要素に一致するメソッドです。  
+## <a name="implementation"></a>Implementation  
+ The language service needs to identify all matched elements in the language and then locate all matching pairs. This is typically accomplished by implementing <xref:Microsoft.VisualStudio.Package.IScanner> to detect a matched language and then using the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method to match the elements.  
   
- <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> メソッドは、スキャナー、行のトークンを作成し、キャレットの直前にトークンが返されます。 スキャナーは、言語要素のペアがのトークンのトリガー値を設定して見つかったことを示す <xref:Microsoft.VisualStudio.Package.TokenTriggers> 現在のトークンにします。<xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> メソッドの呼び出し、 <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> を順番に呼び出すメソッドは、 <xref:Microsoft.VisualStudio.Package.LanguageService.BeginParse%2A> の解析のための値を持つメソッド <xref:Microsoft.VisualStudio.Package.ParseReason> 一致する言語要素を検索します。 一致する言語要素が検出されると、両方の要素が強調表示されます。  
+ The <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> method calls the scanner to tokenize the line and return the token just before the caret. The scanner indicates that a language element pair has been found by setting a token trigger value of <xref:Microsoft.VisualStudio.Package.TokenTriggers> on the current token. The <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> method calls the <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> method that in turn calls the <xref:Microsoft.VisualStudio.Package.LanguageService.BeginParse%2A> method with the parse reason value of <xref:Microsoft.VisualStudio.Package.ParseReason> to locate the matching language element. When the matching language element is found, both elements are highlighted.  
   
- 中かっこの入力をトリガーする方法、中かっこの強調表示の詳細については、トピックで「解析操作の例」を参照してください [従来の言語サービス パーサーとスキャナー](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)します。  
+ For a complete description of how typing a brace triggers the brace highlighting, see the "Example Parse Operation" section in the topic [Legacy Language Service Parser and Scanner](../../extensibility/internals/legacy-language-service-parser-and-scanner.md).  
   
-## かっこの一致のサポートを有効にします。  
- <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> 属性を設定できる、 `MatchBraces`, 、`MatchBracesAtCaret`, と `ShowMatchingBrace` 名前付きパラメーターの対応するプロパティを設定する、 <xref:Microsoft.VisualStudio.Package.LanguagePreferences> クラスです。 言語の基本設定のプロパティは、ユーザーによっても設定できます。  
+## <a name="enabling-support-for-brace-matching"></a>Enabling Support for Brace Matching  
+ The <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> attribute can set the `MatchBraces`, `MatchBracesAtCaret`, and `ShowMatchingBrace` named parameters that set the corresponding properties of the <xref:Microsoft.VisualStudio.Package.LanguagePreferences> class. Language preference properties can also be set by the user.  
   
-|レジストリ エントリ|プロパティ|説明|  
-|----------------|-----------|--------|  
-|`MatchBraces`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBraces%2A>|有効に中かっこの一致|  
-|`MatchBracesAtCaret`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBracesAtCaret%2A>|キャレットとして有効にかっこの一致に移動します。|  
-|`ShowMatchingBrace`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>|対応する中かっこを強調表示されます。|  
+|Registry Entry|Property|Description|  
+|--------------------|--------------|-----------------|  
+|`MatchBraces`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBraces%2A>|Enables brace matching|  
+|`MatchBracesAtCaret`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBracesAtCaret%2A>|Enables brace matching as the caret moves.|  
+|`ShowMatchingBrace`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>|Highlights the matching brace.|  
   
-## 一致する条件付きステートメント  
- 条件付きステートメントをなどと一致できます `if`, 、`else if`, 、および `else`, 、または `#if`, 、`#elif`, 、`#else`, 、`#endif`, 、一致する区切り記号と同じようにします。 サブクラス化することができます、 <xref:Microsoft.VisualStudio.Package.AuthoringSink> クラスし、区切り文字に一致する要素の内部配列だけでなくにまたがるテキストを追加するメソッドを提供します。  
+## <a name="matching-conditional-statements"></a>Matching Conditional Statements  
+ You can match conditional statements, such as `if`, `else if`, and `else`, or `#if`, `#elif`, `#else`, `#endif`, in the same way as matching delimiters. You can subclass the <xref:Microsoft.VisualStudio.Package.AuthoringSink> class and provide a method that can add text spans as well as delimiters to the internal array of matching elements.  
   
-## トリガーの設定  
- 次の例では、対応するかっこ、中かっこと角かっこおよびスキャナーにして、トリガーの設定を検出する方法を示します。<xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> メソッドを <xref:Microsoft.VisualStudio.Package.Source> クラスは、トリガーを検出し、\(このトピックの「一致を検索する」を参照してください\) 一致するペアが検出するためパーサーを呼び出します。 この例では、説明の目的でのみです。 スキャナーにメソッドが含まれていると想定して `GetNextToken` を識別し、テキストの行からトークンを返します。  
+## <a name="setting-the-trigger"></a>Setting the Trigger  
+ The following example shows how to detect matching parentheses, curly braces and square braces, and setting the trigger for it in the scanner. The <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> method on the <xref:Microsoft.VisualStudio.Package.Source> class detects the trigger and calls the parser to find the matching pair (see the "Finding the Match" section in this topic). This example is for illustrative purposes only. It assumes that your scanner contains a method `GetNextToken` that identifies and returns tokens from a line of text.  
   
-```c#  
+```csharp  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -85,10 +102,10 @@ namespace TestLanguagePackage
         }  
 ```  
   
-## 中かっこに一致します。  
- 言語要素の {}、\(\)、およびで一致して、それらの範囲を追加するための簡単な例をここでは、 <xref:Microsoft.VisualStudio.Package.AuthoringSink> オブジェクトです。 この方法はソース コードを解析する方法をお勧めはできません。説明のためになります。  
+## <a name="matching-the-braces"></a>Matching the Braces  
+ Here is a simplified example for matching the language elements { }, ( ), and [ ], and adding their spans to the <xref:Microsoft.VisualStudio.Package.AuthoringSink> object. This approach is not a recommended approach to parsing source code; it is for illustrative purposes only.  
   
-```c#  
+```csharp  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -136,6 +153,6 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## 参照  
- [従来の言語サービスの機能](../../extensibility/internals/legacy-language-service-features1.md)   
- [従来の言語サービス パーサーとスキャナー](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)
+## <a name="see-also"></a>See Also  
+ [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md)   
+ [Legacy Language Service Parser and Scanner](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)

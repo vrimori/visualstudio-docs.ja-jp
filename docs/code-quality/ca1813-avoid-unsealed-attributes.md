@@ -1,59 +1,74 @@
 ---
-title: "CA1813: シールされていない属性を使用しません | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1813"
-  - "AvoidUnsealedAttributes"
-helpviewer_keywords: 
-  - "AvoidUnsealedAttributes"
-  - "CA1813"
+title: 'CA1813: Avoid unsealed attributes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1813
+- AvoidUnsealedAttributes
+helpviewer_keywords:
+- CA1813
+- AvoidUnsealedAttributes
 ms.assetid: f5e31b4c-9f8b-49e1-a2a8-bb5f1140729a
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1813: シールされていない属性を使用しません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 259be72c012a009d198ba96c17b56b3dd29e4a14
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1813-avoid-unsealed-attributes"></a>CA1813: Avoid unsealed attributes
 |||  
 |-|-|  
 |TypeName|AvoidUnsealedAttributes|  
 |CheckId|CA1813|  
-|分類|Microsoft.Performance|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Performance|  
+|Breaking Change|Breaking|  
   
-## 原因  
- <xref:System.Attribute?displayProperty=fullName> から継承されたパブリック型が抽象型ではなく、シールされていません \(Visual Basic では `NotInheritable`\)。  
+## <a name="cause"></a>Cause  
+ A public type inherits from <xref:System.Attribute?displayProperty=fullName>, is not abstract, and is not sealed (`NotInheritable` in Visual Basic).  
   
-## 規則の説明  
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] クラス ライブラリには、カスタム属性を取得するメソッドが用意されています。  既定で、このようなメソッドでは属性の継承階層が検索されます。たとえば、<xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> では、指定した属性型、または指定した属性型を拡張する属性型が検索されます。  属性をシールすると、継承階層の全体が検索されなくなるため、パフォーマンスが向上します。  
+## <a name="rule-description"></a>Rule Description  
+ The [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] class library provides methods for retrieving custom attributes. By default, these methods search the attribute inheritance hierarchy; for example <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> searches for the specified attribute type, or any attribute type that extends the specified attribute type. Sealing the attribute eliminates the search through the inheritance hierarchy, and can improve performance.  
   
-## 違反の修正方法  
- この規則違反を修正するには、属性型をシールするか、抽象型にします。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, seal the attribute type or make it abstract.  
   
-## 警告を抑制する状況  
- この規則による警告を抑制しても安全です。  属性の階層構造を定義していて属性をシールできない場合、または抽象型にできない場合にのみ、除外します。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule. You should do this only if you are defining an attribute hierarchy and cannot seal the attribute or make it abstract.  
   
-## 使用例  
- この規則に適合するカスタム属性を次の例に示します。  
+## <a name="example"></a>Example  
+ The following example shows a custom attribute that satisfies this rule.  
   
- [!code-cs[FxCop.Performance.AttributesSealed#1](../code-quality/codesnippet/CSharp/ca1813-avoid-unsealed-attributes_1.cs)]
- [!code-vb[FxCop.Performance.AttributesSealed#1](../code-quality/codesnippet/VisualBasic/ca1813-avoid-unsealed-attributes_1.vb)]  
+ [!code-csharp[FxCop.Performance.AttributesSealed#1](../code-quality/codesnippet/CSharp/ca1813-avoid-unsealed-attributes_1.cs)] [!code-vb[FxCop.Performance.AttributesSealed#1](../code-quality/codesnippet/VisualBasic/ca1813-avoid-unsealed-attributes_1.vb)]  
   
-## 関連規則  
- [CA1019: 属性引数にアクセサーを定義します](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1019: Define accessors for attribute arguments](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)  
   
- [CA1018: 属性を AttributeUsageAttribute に設定します](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)  
+ [CA1018: Mark attributes with AttributeUsageAttribute](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)  
   
-## 参照  
- [属性](../Topic/Attributes1.md)
+## <a name="see-also"></a>See Also  
+ [Attributes](/dotnet/standard/design-guidelines/attributes)

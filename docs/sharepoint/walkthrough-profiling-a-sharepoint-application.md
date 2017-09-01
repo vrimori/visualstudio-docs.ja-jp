@@ -1,86 +1,91 @@
 ---
-title: "Walkthrough: Profiling a SharePoint Application"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SharePoint development in Visual Studio, profiling"
-  - "performance testing [SharePoint development in Visual Studio]"
-  - "SharePoint development in Visual Studio, performance testing"
-  - "profiling [SharePoint development in Visual Studio]"
+title: 'Walkthrough: Profiling a SharePoint Application | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, profiling
+- performance testing [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, performance testing
+- profiling [SharePoint development in Visual Studio]
 ms.assetid: 0b19d4b7-5fcc-42a2-b411-96eccd00137f
 caps.latest.revision: 16
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 15
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: d5f13883367d68999df59647aba7cedeb48628e1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
+
 ---
-# Walkthrough: Profiling a SharePoint Application
-  このチュートリアルでは、Visual Studio のプロファイル ツールを使用し、SharePoint アプリケーションのパフォーマンスを最適化する方法について説明します。  アプリケーション例は SharePoint フィーチャー イベント レシーバーで、これにはフィーチャー イベント レシーバーのパフォーマンスを低下させるアイドル ループが含まれています。  Visual Studio プロファイラーを使用すると、*ホット パス*とも呼ばれるプロジェクトの最も負荷のかかる \(実行速度が最も遅い\) 部分を特定し、取り除くことができます。  
+# <a name="walkthrough-profiling-a-sharepoint-application"></a>Walkthrough: Profiling a SharePoint Application
+  This walkthrough shows how to use the profiling tools in Visual Studio to optimize the performance of a SharePoint application. The example application is a SharePoint feature event receiver that contains an idle loop that degrades the performance of the feature event receiver. The Visual Studio profiler enables you to locate and eliminate the most expensive (slowest-performing) part of the project, also known as the *hot path*.  
   
- このチュートリアルでは、次のタスクについて説明します。  
+ This walkthrough demonstrates the following tasks:  
   
--   [機能とフィーチャー イベント レシーバーの追加](#BKMK_AddFtrandFtrEvntReceiver)。  
+-   [Adding a Feature and Feature Event Receiver](#BKMK_AddFtrandFtrEvntReceiver).  
   
--   [SharePoint アプリケーションの構成と配置](#BKMK_ConfigSharePointApp)。  
+-   [Configuring and Deploying the SharePoint Application](#BKMK_ConfigSharePointApp).  
   
--   [SharePoint アプリケーションの実行](#BKMK_RunSPApp)。  
+-   [Running the SharePoint Application](#BKMK_RunSPApp).  
   
--   [プロファイル結果の表示と解釈](#BKMK_ViewResults)。  
+-   [Viewing and Interpreting the Profiling Results](#BKMK_ViewResults).  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   サポート対象エディションの Microsoft Windows および SharePoint。  [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)。  
+-   Supported editions of Microsoft Windows and SharePoint. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]。  
+-   [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)].  
   
-## SharePoint プロジェクトを作成する  
- まずは、SharePoint プロジェクトを作成します。  
+## <a name="creating-a-sharepoint-project"></a>Creating a SharePoint Project  
+ First, create a SharePoint project.  
   
-#### SharePoint プロジェクトを作成するには  
+#### <a name="to-create-a-sharepoint-project"></a>To create a SharePoint project  
   
-1.  メニュー バーで **\[ファイル\]**、**\[新規作成\]**、**\[プロジェクト\]** の順に選択して、**\[新しいプロジェクト\]** ダイアログ ボックスを表示します。  
+1.  On the menu bar, choose **File**, **New**, **Project** to display the **New Project** dialog box.  
   
-2.  **\[Visual C\#\]** または **\[Visual Basic\]** の **\[SharePoint\]** ノードを展開し、**\[2010\]** ノードをクリックします。  
+2.  Expand the **SharePoint** node under either **Visual C#** or **Visual Basic**, and then choose the **2010** node.  
   
-3.  \[テンプレート\] ペインで、**\[SharePoint 2010 プロジェクト\]** テンプレートをクリックします。  
+3.  In the templates pane, choose the **SharePoint 2010 Project** template.  
   
-4.  **\[名前\]** ボックスに「ProfileTest」と入力し、**\[OK\]** をクリックします。  
+4.  In the **Name** box, enter **ProfileTest**, and then choose the **OK** button.  
   
-     **SharePoint カスタマイズ ウィザード**が表示されます。  
+     The **SharePoint Customization Wizard** appears.  
   
-5.  **\[デバッグのサイトとセキュリティ レベルの指定\]** ページで、サイト定義をデバッグする SharePoint サーバー サイトの URL を入力するか、既定の場所 \(http:\/\/*システム名*\/\) を使用します。  
+5.  On the **Specify the site and security level for debugging** page, enter the URL for the SharePoint server site where you want to debug the site definition, or use the default location (http://*system name*/).  
   
-6.  **\[この SharePoint ソリューションの信頼レベル\]** セクションで **\[ファーム ソリューションとして配置する\]** を選択します。  
+6.  In the **What is the trust level for this SharePoint solution?** section, choose the **Deploy as a farm solution** option button.  
   
-     現時点では、ファーム ソリューションのプロファイルのみを実行できます。  サンドボックス ソリューションとファーム ソリューションの比較の詳細については、「[サンドボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)」を参照してください。  
+     Currently, you can only profile farm solutions. For more information about sandboxed solutions versus farm solutions, see [Sandboxed Solution Considerations](../sharepoint/sandboxed-solution-considerations.md).  
   
-7.  **\[完了\]** をクリックします。  **ソリューション エクスプローラー**にプロジェクトが表示されます。  
+7.  Choose the **Finish** button. The project appears in **Solution Explorer**.  
   
-##  <a name="BKMK_AddFtrandFtrEvntReceiver"></a> 機能とフィーチャー イベント レシーバーの追加  
- 次に、機能を、そのイベント レシーバーと共にプロジェクトに追加します。  このイベント レシーバーには、プロファイル対象のコードが含まれます。  
+##  <a name="BKMK_AddFtrandFtrEvntReceiver"></a> Adding a Feature and Feature Event Receiver  
+ Next, add a feature to the project along with an event receiver for the feature. This event receiver will contain the code to be profiled.  
   
-#### 機能とフィーチャー イベント レシーバーを追加するには  
+#### <a name="to-add-a-feature-and-feature-event-receiver"></a>To add a feature and feature event receiver  
   
-1.  **ソリューション エクスプローラー**で **\[フィーチャー\]** ノードのショートカット メニューを開き、**\[フィーチャーの追加\]** をクリックします。名前は既定値の **\[Feature1\]** のままにします。  
+1.  In **Solution Explorer**, open the shortcut menu for the **Features** node, choose **Add Feature**, and leave the name at the default value, **Feature1**.  
   
-2.  **ソリューション エクスプローラー**で **\[Feature1\]** のショートカット メニューを開き、**\[イベント レシーバーの追加\]** をクリックします。  
+2.  In **Solution Explorer**, open the shortcut menu for **Feature1**, and then choose **Add Event Receiver**.  
   
-     これにより、いくつかのコメント アウトされたイベント ハンドラーを持つコード ファイルが機能に追加され、編集のためにファイルが開かれます。  
+     This adds a code file to the feature with several commented-out event handlers and opens the file for editing.  
   
-3.  イベント レシーバー クラスに、次の変数宣言を追加します。  
+3.  In the event receiver class, add the following variable declarations.  
   
     ```vb  
     ' SharePoint site/subsite.  
@@ -94,7 +99,7 @@ caps.handback.revision: 15
     private string webUrl = "/";  
     ```  
   
-4.  `FeatureActivated` プロシージャを次のコードに置き換えます。  
+4.  Replace the `FeatureActivated` procedure with the following code.  
   
     ```vb  
     Public Overrides Sub FeatureActivated(properties As SPFeatureReceiverProperties)  
@@ -153,7 +158,7 @@ caps.handback.revision: 15
     }  
     ```  
   
-5.  次のプロシージャを `FeatureActivated` プロシージャの下に追加します。  
+5.  Add the following procedure below the `FeatureActivated`procedure.  
   
     ```vb  
   
@@ -180,104 +185,104 @@ caps.handback.revision: 15
     }  
     ```  
   
-6.  **ソリューション エクスプローラー**で、プロジェクト \(**ProfileTest**\) のショートカット メニューを開き、**\[プロパティ\]** をクリックします。  
+6.  In **Solution Explorer**, open the shortcut menu for the project (**ProfileTest**), and then choose **Properties**.  
   
-7.  **\[プロパティ\]** ダイアログ ボックスで、**\[SharePoint\]** タブをクリックします。  
+7.  In the **Properties** dialog box, choose the **SharePoint** tab.  
   
-8.  **\[アクティブな配置構成\]** ボックスの一覧の **\[アクティブ化なし\]** をクリックします。  
+8.  In the **Active Deployment Configuration** list, choose **No Activation**.  
   
-     この配置構成を選択することにより、後で SharePoint 内から手動で機能をアクティブ化できます。  
+     Selecting this deployment configuration enables you to manually activate the feature later in SharePoint.  
   
-9. プロジェクトを保存します。  
+9. Save the project.  
   
-##  <a name="BKMK_ConfigSharePointApp"></a> SharePoint アプリケーションの構成と配置  
- SharePoint プロジェクトの準備ができたので、それを構成し、SharePoint サーバーに配置します。  
+##  <a name="BKMK_ConfigSharePointApp"></a> Configuring and Deploying the SharePoint Application  
+ Now that the SharePoint project is ready, configure it and deploy it to the SharePoint server.  
   
-#### SharePoint アプリケーションを構成し、配置するには  
+#### <a name="to-configure-and-deploy-the-sharepoint-application"></a>To configure and deploy the SharePoint application  
   
-1.  **\[分析\]** メニューの **\[パフォーマンス ウィザードの起動\]** をクリックします。  
+1.  On the **Analyze** menu, choose **Launch Performance Wizard**.  
   
-2.  **パフォーマンス ウィザード**の最初のページで、プロファイル方法を **\[CPU サンプリング\]** のままにし、**\[次へ\]** をクリックします。  
+2.  On page one of the **Performance Wizard**, leave the method of profiling as **CPU sampling** and choose the **Next** button.  
   
-     他のプロファイル方法は、より高度なプロファイルを行う場合に使用できます。  詳細については、「[プロファイル方法について](../profiling/understanding-performance-collection-methods.md)」を参照してください。  
+     The other profiling methods can be used in more advanced profiling situations. For more information, see [Understanding Performance Collection Methods](/visualstudio/profiling/understanding-performance-collection-methods).  
   
-3.  **パフォーマンス ウィザード**の 2 ページ目で、プロファイルのターゲットを **\[ProfileTest\]** のままにし、**\[次へ\]** をクリックします。  
+3.  On page two of the **Performance Wizard**, leave the profile target as **ProfileTest** and choose the **Next** button.  
   
-     ソリューションに複数のプロジェクトがある場合は、この一覧に表示されます。  
+     If a solution has multiple projects, they appear in this list.  
   
-4.  **パフォーマンス ウィザード**の 3 ページ目で、**\[階層の相互作用のプロファイルを有効にする\]** チェック ボックスをオフにし、**\[次へ\]** をクリックします。  
+4.  On page three of the **Performance Wizard**, clear the **Enable Tier Interaction Profiling** check box, and then choose the **Next** button.  
   
-     階層の相互作用のプロファイル \(TIP\) 機能は、データベースを照会するアプリケーションのパフォーマンスの測定や、Web ページが要求された回数の表示に便利です。  そのようなデータはこの例では不要なため、この機能は有効にしません。  
+     The Tier Interaction Profiling (TIP) feature is useful for measuring the performance of applications that query databases and for showing you the number of times a web page is requested. Because that data is not required for this example, we will not enable this feature.  
   
-5.  **パフォーマンス ウィザード**の 4 ページ目で、**\[ウィザードの完了後にプロファイルを起動する\]** チェック ボックスをオンのままにし、**\[完了\]** をクリックします。  
+5.  On page four of the **Performance Wizard**, leave the **Launch profiling after the wizard finishes** check box selected, and then choose the **Finish** button.  
   
-     ウィザードによって、サーバーでのアプリケーションのプロファイルが有効になり、**\[パフォーマンス エクスプローラー\]** ウィンドウが表示され、SharePoint アプリケーションのビルド、配置、および実行が行われます。  
+     The wizard enables application profiling on the server, displays the **Performance Explorer** window, and then builds, deploys, and runs the SharePoint application.  
   
-##  <a name="BKMK_RunSPApp"></a> SharePoint アプリケーションの実行  
- `FeatureActivation` イベント コードの実行をトリガーし、SharePoint 内の機能をアクティブ化します。  
+##  <a name="BKMK_RunSPApp"></a> Running the SharePoint Application  
+ Activate the feature in SharePoint, triggering the `FeatureActivation` event code to run.  
   
-#### SharePoint アプリケーションを実行するには  
+#### <a name="to-run-the-sharepoint-application"></a>To run the SharePoint application  
   
-1.  SharePoint で、**\[サイトの操作\]** メニューを開き、**\[サイトの設定\]** をクリックします。  
+1.  In SharePoint, open the **Site Actions** menu, and then choose **Site Settings**.  
   
-2.  **\[サイトの操作\]** ボックスの一覧の **\[サイト機能の管理\]** をクリックします。  
+2.  In the **Site Actions** list, choose the **Manage site features** link.  
   
-3.  **\[機能\]** の一覧で、**ProfileTest Feature1** の横にある **\[アクティブ化\]** をクリックします。  
+3.  In the **Features** list, choose the **Activate** button next to **ProfileTest Feature1**.  
   
-     この操作を実行すると、`FeatureActivated` 関数内でアイドル ループが呼び出されることによって一時停止が発生します。  
+     There is a pause when you do this, due to the idle loop being called in the `FeatureActivated` function.  
   
-4.  **\[サイド リンク バー\]** の **\[リスト\]** をクリックし、**\[リスト\]** ボックスの一覧の **\[お知らせ\]** をクリックします。  
+4.  On the **Quick Launch** bar, choose **Lists** and then in the **Lists** list, choose **Announcements**.  
   
-     機能がアクティブになったことを示す新しいお知らせが一覧に追加されていることを確認します。  
+     Notice that a new announcement has been added to the list stating that the feature was activated.  
   
-5.  SharePoint サイトを閉じます。  
+5.  Close the SharePoint site.  
   
-     SharePoint を閉じると、プロファイラーによってサンプル プロファイル レポートが作成されて表示され、.vsp ファイルとして **ProfileTest** プロジェクトのフォルダーに保存されます。  
+     After you close SharePoint, the profiler creates and displays a Sample Profiling Report and saves it as a .vsp file in the **ProfileTest** project's folder.  
   
-##  <a name="BKMK_ViewResults"></a> プロファイル結果の表示と解釈  
- SharePoint アプリケーションを実行してプロファイルを行ったので、次はテスト結果を表示します。  
+##  <a name="BKMK_ViewResults"></a> Viewing and Interpreting the Profiling Results  
+ Now that you have run and profiled the SharePoint application, view the test results.  
   
-#### プロファイル結果を表示し、解釈するには  
+#### <a name="to-view-and-interpret-the-profiling-results"></a>To view and interpret the profiling results  
   
-1.  サンプル プロファイル レポートの **\[最も頻繁に個別の作業を実行している関数\]** セクションでは、`TimeCounter` が一覧の最上部近くにあります。  
+1.  In the **Functions Doing the Most Individual Work** section of the Sample Profiling Report, notice that `TimeCounter` is near the top of the list.  
   
-     この場所は、`TimeCounter` がサンプル数の最も多い関数の 1 つ、つまり、アプリケーション内で最大のパフォーマンス ボトルネックの 1 つであることを示しています。  ただし、これは驚くような状況はではありません。デモンストレーションのために、意図してこのようにデザインされたものであるからです。  
+     This location indicates that `TimeCounter` was one of the functions with the highest number of samples, meaning it's one of the biggest performance bottlenecks in the application. This situation isn't surprising, however, because it was purposely designed that way for demonstration purposes.  
   
-2.  **\[最も頻繁に個別の作業を実行している関数\]** セクションで `ProcessRequest` をクリックし、`ProcessRequest` 関数のコスト配分を表示します。  
+2.  In the **Functions Doing the Most Individual Work** section, choose the `ProcessRequest` link to display the cost distribution for the `ProcessRequest` function.  
   
-     `ProcessRequest` の **\[呼び出される関数\]** セクションに、**FeatureActiviated** 関数が最も負荷の高い、呼び出される関数として表示されます。  
+     In the **Called functions** section for `ProcessRequest`, notice that the **FeatureActiviated** function is listed as the most expensive called function.  
   
-3.  **\[呼び出される関数\]** セクションで、**\[FeatureActivated\]** をクリックします。  
+3.  In the **Called functions** section, choose the **FeatureActivated** button.  
   
-     **FeatureActivated** の **\[呼び出される関数\]** セクションに、`TimeCounter` 関数が最も負荷の高い、呼び出される関数として表示されます。  **\[関数コード ビュー\]** ペインの強調表示されたコード \(`TimeCounter`\) はホットスポットであり、修正が必要な場所を示しています。  
+     In the **Called functions** section for **FeatureActivated**, the `TimeCounter` function is listed as the most expensive called function. In the **Function Code View** pane, the highlighted code (`TimeCounter`) is the hotspot and indicates where the correction is needed.  
   
-4.  サンプル プロファイル レポートを閉じます。  
+4.  Close the Sample Profiling Report.  
   
-     レポートは、**\[パフォーマンス エクスプローラー\]** ウィンドウの .vsp ファイルを開くと、いつでも再確認できます。  
+     To view the report again at any time, open the .vsp file in the **Performance Explorer** window.  
   
-## コードの修正とアプリケーションの再プロファイル  
- SharePoint アプリケーション内のホットスポット関数を特定したので、次はこれを修正します。  
+## <a name="fixing-the-code-and-reprofiling-the-application"></a>Fixing the Code and Reprofiling the Application  
+ Now that hotspot function in the SharePoint application has been identified, fix it.  
   
-#### コードを修正し、アプリケーションを再プロファイルするには  
+#### <a name="to-fix-the-code-and-reprofile-the-application"></a>To fix the code and reprofile the application  
   
-1.  フィーチャー イベント レシーバーのコード内で、`FeatureActivated` の `TimeCounter` メソッドの呼び出しをコメント アウトし、これが呼び出されないようにします。  
+1.  In the feature event receiver code, comment out the `TimeCounter` method call in `FeatureActivated` to prevent it from being called.  
   
-2.  プロジェクトを保存します。  
+2.  Save the project.  
   
-3.  **\[パフォーマンス エクスプローラー\]** で \[ターゲット\] フォルダーを開き、**\[ProfileTest\]** ノードをクリックします。  
+3.  In **Performance Explorer**, open the Targets folder, and then choose the **ProfileTest** node.  
   
-4.  **\[アクション\]** タブの **\[パフォーマンス エクスプローラー\]** ツール バーで、**\[プロファイルの開始\]** をクリックします。  
+4.  On the **Performance Explorer** toolbar, in the **Actions** tab, choose the **Start Profiling** button.  
   
-     アプリケーションの再プロファイル前にいずれかのプロファイル プロパティを変更する場合は、代わりに **\[パフォーマンス ウィザードの起動\]** をクリックします。  
+     If you want to change any of the profiling properties prior to reprofiling the application, choose the **Launch Performance Wizard** button instead.  
   
-5.  このトピックで前述した「**SharePoint アプリケーションの実行**」セクションの手順に従います。  
+5.  Follow the instructions in the **Running the SharePoint Application** section, previously in this topic.  
   
-     これで、アイドル ループへの呼び出しが削除されたため、機能のアクティブ化がより高速になりました。  このことは、サンプル プロファイル レポートに反映されます。  
+     The feature should activate much faster now that the call to the idle loop has been eliminated. The Sample Profiling Report should reflect this.  
   
-## 参照  
- [プロファイリング ツールの使用](../profiling/performance-explorer.md)   
- [プロファイリング ツールのパフォーマンス セッションの概要](../profiling/performance-session-overview.md)   
- [パフォーマンス プロファイリングのビギナーズ ガイド](../profiling/beginners-guide-to-performance-profiling.md)   
- [Visual Studio プロファイラーでアプリケーションのボトルネックを見つける](http://go.microsoft.com/fwlink/?LinkID=137266)  
+## <a name="see-also"></a>See Also  
+ [Performance Explorer](/visualstudio/profiling/performance-explorer)   
+ [Performance Session Overview](/visualstudio/profiling/performance-session-overview)   
+ [Beginners Guide to Performance Profiling](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
+ [Find Application Bottlenecks with Visual Studio Profiler](http://go.microsoft.com/fwlink/?LinkID=137266)  
   
   

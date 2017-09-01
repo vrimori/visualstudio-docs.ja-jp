@@ -1,5 +1,5 @@
 ---
-title: "グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス | Microsoft Docs"
+title: Culture-Specific Classes for Global Windows Forms and Web Forms | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -44,22 +44,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 3fb3b66548077a2f92289f1a2f02cc8ae77544cc
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7eae24ec725509b2a2a6a276ad7f474a079bd952
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス
-各カルチャには、日付、時間、数、通貨などの情報を表示するさまざまな規約があります。 <xref:System.Globalization> 名前空間には、<xref:System.Globalization.DateTimeFormatInfo>、**Calendar**、<xref:System.Globalization.NumberFormatInfo> など、カルチャ固有の値の表示方法を変更するために使用できるクラスが含まれています。  
+# <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>Culture-Specific Classes for Global Windows Forms and Web Forms
+Each culture has different conventions for displaying dates, time, numbers, currency, and other information. The <xref:System.Globalization> namespace contains classes that can be used to modify how culture-specific values are displayed, such as <xref:System.Globalization.DateTimeFormatInfo>, **Calendar**, and <xref:System.Globalization.NumberFormatInfo>.  
   
-## <a name="using-the-culture-setting"></a>カルチャ設定の使用  
- ただし、ほとんどの場合、アプリケーションまたは **[地域のオプション]** コントロール パネルのどちらかに保存されているカルチャ設定を使用して、規約を実行時に自動で判別しそれに応じて情報の形式を設定できます。 カルチャの設定方法の詳細については、「[方法 : Windows フォームのグローバリゼーション用のカルチャおよび UI カルチャを設定する](http://msdn.microsoft.com/en-us/694e049f-0b91-474a-9789-d35124f248f0)」または「[方法: ASP.NET Web ページのグローバリゼーション用のカルチャおよび UI カルチャを設定する](http://msdn.microsoft.com/Library/76091f86-f967-4687-a40f-de87bd8cc9a0)を参照してください。 カルチャ設定に基づいて情報の形式を自動で設定するクラスは、カルチャ固有と呼ばれます。 カルチャ固有のメソッドには、<xref:System.IFormattable.ToString%2A?displayProperty=fullName>、<xref:System.Console.WriteLine%2A?displayProperty=fullName>、<xref:System.String.Format%2A?displayProperty=fullName> があります。 カルチャ固有の関数 (Visual Basic 言語) には、`MonthName` や `WeekDayName` などがあります。  
+## <a name="using-the-culture-setting"></a>Using the Culture Setting  
+ But most of the time you will use the culture setting, stored either in the application or in the **Regional Options** control panel, to automatically determine the conventions at run time and format the information accordingly. For more information on setting the culture, see [How to: Set the Culture and UI Culture for Windows Forms Globalization](http://msdn.microsoft.com/en-us/694e049f-0b91-474a-9789-d35124f248f0) or [How to: Set the Culture and UI Culture for ASP.NET Web Page Globalization](http://msdn.microsoft.com/Library/76091f86-f967-4687-a40f-de87bd8cc9a0). Classes that automatically format information according to the culture setting are called culture-specific. Some culture-specific methods are <xref:System.IFormattable.ToString%2A?displayProperty=fullName>, <xref:System.Console.WriteLine%2A?displayProperty=fullName>, and <xref:System.String.Format%2A?displayProperty=fullName>. Some culture-specific functions (in the Visual Basic language) are `MonthName` and `WeekDayName`.  
   
- 例として、次のコードに <xref:System.IFormattable.ToString%2A> メソッドを使用して、現在のカルチャで通貨の形式を設定する方法を示します。  
+ For example, the following code shows how you can use the <xref:System.IFormattable.ToString%2A> method to format currency for the current culture:  
   
-```vb#  
+```vb  
 ' Put the Imports statements at the beginning of the code module  
 Imports System.Threading  
 Imports System.Globalization  
@@ -69,7 +69,7 @@ Console.WriteLine(MyInt.ToString("C", Thread.CurrentThread.CurrentCulture))
   
 ```  
   
-```c#  
+```csharp  
 // Put the using statements at the beginning of the code module  
 using System.Threading;  
 using System.Globalization;  
@@ -78,19 +78,19 @@ int myInt = 100;
 Console.WriteLine(myInt.ToString("C", Thread.CurrentThread.CurrentCulture));  
 ```  
   
- カルチャが "fr-FR" に設定されている場合は、出力ウィンドウの表示は次のようになります。  
+ If the culture is set to "fr-FR", you will see this in the output window:  
   
  `100,00`  
   
- カルチャが "en-US" に設定されている場合は、出力ウィンドウの表示は次のようになります。  
+ If the culture is set to "en-US", you will see this in the output window:  
   
  `$100.00`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  <xref:System.IFormattable.ToString%2A?displayProperty=fullName>   
  <xref:System.Globalization.DateTimeFormatInfo>   
  <xref:System.Globalization.NumberFormatInfo>   
  <xref:System.Globalization.Calendar>   
  <xref:System.Console.WriteLine%2A?displayProperty=fullName>   
  <xref:System.String.Format%2A?displayProperty=fullName>   
- [アプリケーションのグローバライズとローカライズ](../ide/globalizing-and-localizing-applications.md)
+ [Globalizing and Localizing Applications](../ide/globalizing-and-localizing-applications.md)

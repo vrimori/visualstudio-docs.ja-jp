@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: b59b417eb16674ff8c6c5223d790ae174ba20e09
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a3c0f4d3bde8bb03d3766383eba01665e58458be
+ms.openlocfilehash: 18f1ea2f5ee76f4f8457b7254ff3dd3b7b3e4901
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>方法 : アプリケーション マニフェストおよび配置マニフェストに署名する
@@ -49,7 +50,7 @@ ClickOnce 配置を使用してアプリケーションを発行しようとす�
   
  .exe ベースのアプリケーションでは、ClickOnce マニフェストの署名を省略できます。 詳細については、このドキュメントの「未署名のマニフェストの生成」を参照してください。  
   
- キー ファイルの作成については、「[方法 : 公開キーと秘密キーのキー ペアを作成する](http://msdn.microsoft.com/Library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)」をご覧ください。  
+ キー ファイルの作成については、「[方法 : 公開キーと秘密キーのキー ペアを作成する](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)」をご覧ください。  
   
 > [!NOTE]
 >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、拡張子 .pfx を持つ Personal Information Exchange (PFX) キー ファイルだけがサポートされます。 ただし、プロジェクトのプロパティの **[署名]** ページにある **[ストアから選択]** をクリックすると、現在のユーザーの Windows 証明書ストアから、他の種類の証明書を選ぶことができます。  
@@ -100,7 +101,7 @@ ClickOnce 配置を使用してアプリケーションを発行しようとす�
 > [!IMPORTANT]
 >  未署名のマニフェストにより、アプリケーションの開発およびテストを簡略化できます。 しかし、未署名のマニフェストは、稼動環境に重大なセキュリティ上の問題を発生させます。 インターネットまたは他の悪意のあるコードの提供元から完全に分離されたイントラネット内のコンピューターで ClickOnce アプリケーションを実行する場合のみ、未署名のマニフェストの使用を検討してください。  
   
- 既定では、ClickOnce は、生成されるハッシュから&1; つ以上のファイルが除外されるよう指定されていない限り、自動的に署名付きマニフェストを生成します。 つまり、すべてのファイルがハッシュに含まれ、**[ClickOnce マニフェストに署名する]** チェック ボックスがオフの場合でも、アプリケーションの発行により署名付きマニフェストが生成されます。  
+ 既定では、ClickOnce は、生成されるハッシュから 1 つ以上のファイルが除外されるよう指定されていない限り、自動的に署名付きマニフェストを生成します。 つまり、すべてのファイルがハッシュに含まれ、**[ClickOnce マニフェストに署名する]** チェック ボックスがオフの場合でも、アプリケーションの発行により署名付きマニフェストが生成されます。  
   
 #### <a name="to-generate-unsigned-manifests-and-include-all-files-in-the-generated-hash"></a>未署名マニフェストを生成し、生成されるハッシュにすべてのファイルを含めるには  
   
@@ -108,11 +109,11 @@ ClickOnce 配置を使用してアプリケーションを発行しようとす�
   
 2.  **[署名]** ページの **[ClickOnce マニフェストに署名する]** チェック ボックスをオフにします。  
   
-3.  アプリケーションの&1; つのバージョンのみ使用できるように発行バージョンをリセットします。 既定では、アプリケーションを発行するたびに発行バージョンのリビジョン番号が自動的にインクリメントされます。 詳しくは、「[方法: ClickOnce の発行バージョンを設定する](../deployment/how-to-set-the-clickonce-publish-version.md)」をご覧ください。  
+3.  アプリケーションの 1 つのバージョンのみ使用できるように発行バージョンをリセットします。 既定では、アプリケーションを発行するたびに発行バージョンのリビジョン番号が自動的にインクリメントされます。 詳しくは、「[方法: ClickOnce の発行バージョンを設定する](../deployment/how-to-set-the-clickonce-publish-version.md)」をご覧ください。  
   
 4.  アプリケーションを発行します。  
   
-#### <a name="to-generate-unsigned-manifests-and-exclude-one-or-more-files-from-the-generated-hash"></a>未署名マニフェストを生成し、生成されるハッシュから&1; つ以上のファイルを除外するには  
+#### <a name="to-generate-unsigned-manifests-and-exclude-one-or-more-files-from-the-generated-hash"></a>未署名マニフェストを生成し、生成されるハッシュから 1 つ以上のファイルを除外するには  
   
 1.  **[署名]** ページの **[ClickOnce マニフェストに署名する]** チェック ボックスをオフにします。  
   
@@ -124,7 +125,7 @@ ClickOnce 配置を使用してアプリケーションを発行しようとす�
 3.  アプリケーションを発行します。  
   
 ## <a name="see-also"></a>関連項目  
- [厳密な名前付きアセンブリ](http://msdn.microsoft.com/Library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)   
- [方法 : 公開キーと秘密キーのキー ペアを作成する](http://msdn.microsoft.com/Library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)   
+ [厳密な名前付きアセンブリ](/dotnet/framework/app-domains/strong-named-assemblies)   
+ [方法 : 公開キーと秘密キーのキー ペアを作成する](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)   
  [[署名] ページ (プロジェクト デザイナー)](../ide/reference/signing-page-project-designer.md)   
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)

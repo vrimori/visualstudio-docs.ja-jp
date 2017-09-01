@@ -1,110 +1,115 @@
 ---
-title: "チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 1)"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SharePoint プロジェクト項目、定義 (独自の型を)"
-  - "プロジェクト項目 [Visual Studio での SharePoint 開発]、定義 (独自の型を)"
-  - "SharePoint プロジェクト、作成 (カスタム テンプレートを)"
-  - "Visual Studio での SharePoint 開発、定義 (新しいプロジェクト項目の種類を)"
+title: 'Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1 | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint project items, defining your own types
+- project items [SharePoint development in Visual Studio], defining your own types
+- SharePoint projects, creating custom templates
+- SharePoint development in Visual Studio, defining new project item types
 ms.assetid: b53d48d7-cbf2-45c2-9537-06a6819be397
 caps.latest.revision: 60
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 59
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: bdd07cb266972a638d064a802b7ec635f6813af8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 1)
-  SharePoint プロジェクトは、1 つ以上の SharePoint プロジェクト項目のコンテナーです。  独自の SharePoint プロジェクト項目の種類を作成し、それらをプロジェクト テンプレートと関連付けることで、Visual Studio で SharePoint プロジェクト システムを拡張できます。  このチュートリアルでは、サイト内の列を作成するためのプロジェクト項目の種類を定義し、サイト内の列プロジェクト項目が含まれる新しいプロジェクトの作成に使用できるプロジェクト テンプレートを作成します。  
+# <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1"></a>Walkthrough: Creating a Site Column Project Item with a Project Template, Part 1
+  SharePoint projects are containers for one or more SharePoint project items. You can extend the SharePoint project system in Visual Studio by creating your own SharePoint project item types and then associating them with a project template. In this walkthrough, you will define a project item type for creating a site column, and then you will create a project template that can be used to create a new project that contains a site column project item.  
   
- このチュートリアルでは、次のタスクについて説明します。  
+ This walkthrough demonstrates the following tasks:  
   
--   サイト内の列のための SharePoint プロジェクト項目の新しい種類を定義する Visual Studio 拡張機能の作成。  プロジェクト項目の種類には、**\[プロパティ\]** ウィンドウに表示される単純なカスタム プロパティが含まれます。  
+-   Creating a Visual Studio extension that defines a new type of SharePoint project item for a site column. The project item type includes a simple custom property that appears in the **Properties** window.  
   
--   対応するプロジェクト項目用の [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] プロジェクト テンプレートを作成する。  
+-   Creating a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] project template for the project item.  
   
--   プロジェクト テンプレートおよび拡張機能アセンブリを配置するための [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Extension \(VSIX\) パッケージを作成する。  
+-   Building a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Extension (VSIX) package to deploy the project template and the extension assembly.  
   
--   プロジェクト項目のデバッグとテストを行う。  
+-   Debugging and testing the project item.  
   
- これは、独立したチュートリアルです。  このチュートリアルを完了すると、プロジェクト テンプレートにウィザードを追加してプロジェクト項目を拡張できるようになります。  詳細については、「[チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 2&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)」を参照してください。  
+ This is a stand-alone walkthrough. After you complete this walkthrough, you can enhance the project item by adding a wizard to the project template. For more information, see [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md).  
   
 > [!NOTE]  
->  このチュートリアル用の完全なプロジェクト、コード、およびその他のファイルを含むサンプルは、[http:\/\/go.microsoft.com\/fwlink\/?LinkId\=191369](http://go.microsoft.com/fwlink/?LinkId=191369) からダウンロードできます。  
+>  You can download a sample that contains the completed projects, code, and other files for this walkthrough from the following location: [http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369).  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components on the development computer to complete this walkthrough:  
   
--   サポート対象エディションの Microsoft Windows および [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。  詳細については、「[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)」を参照してください。  
+-   Supported editions of Microsoft Windows, SharePoint and [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
--   [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。  このチュートリアルでは、SDK の **VSIX プロジェクト** テンプレートを使用して、プロジェクト項目を配置するための VSIX パッケージを作成します。  詳細については、「[Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)」を参照してください。  
+-   The [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]. This walkthrough uses the **VSIX Project** template in the SDK to create a VSIX package to deploy the project item. For more information, see [Extending the SharePoint Tools in Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).  
   
- 次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+ Knowledge of the following concept is helpful, but not required, to complete the walkthrough:  
   
--   SharePoint のサイト内の列。  詳細については、「[列](http://go.microsoft.com/fwlink/?LinkId=183547)」を参照してください。  
+-   Site columns in SharePoint. For more information, see [Columns](http://go.microsoft.com/fwlink/?LinkId=183547).  
   
--   Visual Studio のプロジェクト テンプレート。  詳細については、「[Visual Studio でのカスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)」を参照してください。  
+-   Project templates in Visual Studio. For more information, see [Creating Project and Item Templates](/visualstudio/ide/creating-project-and-item-templates).  
   
-## プロジェクトの作成  
- このチュートリアルを実行するには、3 つのプロジェクトを作成する必要があります。  
+## <a name="creating-the-projects"></a>Creating the Projects  
+ To complete this walkthrough, you need to create three projects:  
   
--   VSIX プロジェクト。  このプロジェクトは、サイト内の列プロジェクト項目とプロジェクト テンプレートを配置するための VSIX パッケージを作成します。  
+-   A VSIX project. This project creates the VSIX package to deploy the site column project item and the project template.  
   
--   プロジェクト テンプレート プロジェクト。  このプロジェクトは、サイト内の列プロジェクト項目が含まれる新しい SharePoint プロジェクトを作成するために使用できるプロジェクト テンプレートを作成します。  
+-   A project template project. This project creates a project template that can be used to create a new SharePoint project that contains the site column project item.  
   
--   クラス ライブラリ プロジェクト。  このプロジェクトは、サイト内の列プロジェクト項目の動作を定義する Visual Studio 拡張機能を実装します。  
+-   A class library project. This project that implements a Visual Studio extension that defines the behavior of the site column project item.  
   
- この 2 つのプロジェクトを作成することから始めます。  
+ Start the walkthrough by creating the projects.  
   
-#### VSIX プロジェクトを作成するには  
+#### <a name="to-create-the-vsix-project"></a>To create the VSIX project  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  メニュー バーで **\[ファイル\]**、**\[新規\]**、**\[プロジェクト\]** の順にクリックします。  
+2.  On the menu bar, choose **File**, **New**, **Project**.  
   
-3.  **\[新しいプロジェクト\]** ダイアログ ボックスの上部にある .NET Framework のバージョンの一覧で、**\[.NET Framework 4.5\]** が選択されていることを確認します。  
+3.  At the top of the **New Project** dialog box, make sure that **.NET Framework 4.5** is chosen in the list of versions of the .NET Framework.  
   
-4.  **\[Visual Basic\]** ノードまたは **\[Visual C\#\]** ノードを展開し、**\[機能拡張\]** ノードをクリックします。  
-  
-    > [!NOTE]  
-    >  **\[機能拡張\]** ノードは、Visual Studio SDK がインストールされている場合にのみ使用できます。  詳細については、このトピックで前に説明した「前提条件」を参照してください。  
-  
-5.  プロジェクト テンプレートの一覧で **\[VSIX プロジェクト\]** をクリックします。  
-  
-6.  **\[名前\]** ボックスに「**SiteColumnProjectItem**」と入力し、**\[OK\]** をクリックします。  
-  
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] の**ソリューション エクスプローラー**に **SiteColumnProjectItem** プロジェクトが追加されます。  
-  
-#### プロジェクト テンプレート プロジェクトを作成するには  
-  
-1.  **ソリューション エクスプローラー**でソリューション ノードのショートカット メニューを開き、**\[追加\]**、**\[新しいプロジェクト\]** の順にクリックします。  
+4.  Expand the **Visual Basic** or **Visual C#** nodes, and then choose the **Extensibility** node.  
   
     > [!NOTE]  
-    >  Visual Basic プロジェクトで**ソリューション エクスプローラー**にソリューション ノードが表示されるのは、[NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/ja-jp/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)の **\[常にソリューションを表示\]** チェック ボックスがオンになっている場合だけです。  
+    >  The **Extensibility** node is available only if you install the Visual Studio SDK. For more information, see the prerequisites section earlier in this topic.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスの上部にある .NET Framework のバージョンの一覧で、**\[.NET Framework 4.5\]** が選択されていることを確認します。  
+5.  In the list of project templates, choose **VSIX Project**.  
   
-3.  **\[Visual C\#\]** ノードまたは **\[Visual Basic\]** ノードを展開し、**\[機能拡張\]** ノードをクリックします。  
+6.  In the **Name** box, enter **SiteColumnProjectItem**, and then choose the **OK** button.  
   
-4.  プロジェクト テンプレートの一覧で **\[C\# プロジェクト テンプレート\]** または **\[Visual Basic プロジェクト テンプレート\]** テンプレートを選択します。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **SiteColumnProjectItem** project to **Solution Explorer**.  
   
-5.  **\[名前\]** ボックスに「**SiteColumnProjectTemplate**」と入力し、**\[OK\]** をクリックします。  
+#### <a name="to-create-the-project-template-project"></a>To create the project template project  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって **SiteColumnProjectTemplate** プロジェクトがソリューションに追加されます。  
+1.  In **Solution Explorer**, open the shortcut menu for the solution node, choose **Add**, and then choose **New Project**.  
   
-6.  Class1 コード ファイルをプロジェクトから削除します。  
+    > [!NOTE]  
+    >  In Visual Basic projects, the solution node appears in **Solution Explorer** only when the **Always show solution** check box is selected in the [NIB: General, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca).  
   
-7.  Visual Basic プロジェクトを作成した場合は、次のファイルもプロジェクトから削除します。  
+2.  At the top of the **New Project** dialog box, make sure that **.NET Framework 4.5** is chosen in the list of versions of the .NET Framework.  
+  
+3.  Expand the **Visual C#** or **Visual Basic** node, and then choose the **Extensibility** node.  
+  
+4.  In the list of project templates, choose the **C# Project Template** or **Visual Basic Project Template** template.  
+  
+5.  In the **Name** box, enter **SiteColumnProjectTemplate**, and then choose the **OK** button.  
+  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **SiteColumnProjectTemplate** project to the solution.  
+  
+6.  Delete the Class1 code file from the project.  
+  
+7.  If you created a Visual Basic project, also delete the following files from the project:  
   
     -   MyApplication.Designer.vb  
   
@@ -118,99 +123,98 @@ caps.handback.revision: 59
   
     -   Settings.settings  
   
-#### 拡張機能プロジェクトを作成するには  
+#### <a name="to-create-the-extension-project"></a>To create the extension project  
   
-1.  **ソリューション エクスプローラー**でソリューション ノードのショートカット メニューを開き、**\[追加\]**、**\[新しいプロジェクト\]** の順にクリックします。  
+1.  In **Solution Explorer**, open the shortcut menu for the solution node, choose **Add**, and then choose **New Project**.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスの上部にある .NET Framework のバージョンの一覧で、**\[.NET Framework 4.5\]** が選択されていることを確認します。  
+2.  At the top of the **New Project** dialog box, make sure that **.NET Framework 4.5** is chosen in the list of versions of the .NET Framework.  
   
-3.  **\[Visual C\#\]** ノードまたは **\[Visual Basic\]** ノードを展開し、**\[Windows\]** ノードをクリックして、**\[クラス ライブラリ\]** テンプレートを選択します。  
+3.  Expand the **Visual C#** or **Visual Basic** nodes, choose the **Windows** node, and then choose the **Class Library** template.  
   
-4.  **\[名前\]** ボックスに「**ProjectItemTypeDefinition**」と入力し、**\[OK\]** をクリックします。  
+4.  In the **Name** box, enter **ProjectItemTypeDefinition** and then choose the **OK** button.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって、**ProjectItemTypeDefinition** プロジェクトがソリューションに追加され、既定の Class1 コード ファイルが開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **ProjectItemTypeDefinition** project to the solution and opens the default Class1 code file.  
   
-5.  Class1 コード ファイルをプロジェクトから削除します。  
+5.  Delete the Class1 code file from the project.  
   
-## 拡張機能プロジェクトの構成  
- コード ファイルおよびアセンブリ参照を追加し、拡張機能プロジェクトを構成します。  
+## <a name="configuring-the-extension-project"></a>Configuring the Extension Project  
+ Add code files and assembly references to configure the extension project.  
   
-#### プロジェクトを構成するには  
+#### <a name="to-configure-the-project"></a>To configure the project  
   
-1.  ProjectItemTypeDefinition プロジェクトで、**SiteColumnProjectItemTypeProvider** という名前のコード ファイルを追加します。  
+1.  In the ProjectItemTypeDefinition project, add a code file that's named **SiteColumnProjectItemTypeProvider**.  
   
-2.  メニュー バーで、**\[プロジェクト\]**、**\[参照の追加\]** の順に選択します。  
+2.  On the menu bar, choose **Project**, **Add Reference**.  
   
-3.  **\[参照マネージャー \- ProjectItemTypeDefinition\]** ダイアログ ボックスで **\[アセンブリ\]** ノードを展開し、**\[フレームワーク\]** ノードをクリックして、\[System.ComponentModel.Composition\] チェック ボックスをオンにします。  
+3.  In the **Reference Manager - ProjectItemTypeDefinition** dialog box, expand the **Assemblies** node, choose the **Framework** node, and then select the System.ComponentModel.Composition check box.  
   
-4.  **\[拡張機能\]** ノードを選択し、Microsoft.VisualStudio.SharePoint アセンブリの横にあるチェック ボックスをオンにして、**\[OK\]** をクリックします。  
+4.  Choose the **Extensions** node, select the check box next to the Microsoft.VisualStudio.SharePoint assembly, and then choose the **OK** button.  
   
-## 新しい SharePoint プロジェクト項目の種類の定義  
- <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> インターフェイスを実装するクラスを作成して、新しいプロジェクト項目の種類の動作を定義します。  このインターフェイスは、新しい種類のプロジェクト項目を定義するたびに必ず実装します。  
+## <a name="defining-the-new-sharepoint-project-item-type"></a>Defining the New SharePoint Project Item Type  
+ Create a class that implements the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> interface to define the behavior of the new project item type. Implement this interface whenever you want to define a new type of project item.  
   
-#### 新しい SharePoint プロジェクト項目の種類を定義するには  
+#### <a name="to-define-the-new-sharepoint-project-item-type"></a>To define the new SharePoint project item type  
   
-1.  **SiteColumnProjectItemTypeProvider** コード ファイルで、既定のコードを次のコードに置き換え、ファイルを保存します。  
+1.  In the **SiteColumnProjectItemTypeProvider** code file, replace the default code with the following code, and then save the file.  
   
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#1](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/cs/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.cs#1)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#1](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectitem.sitecolumn/vb/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.vb#1)]  
+     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#1](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.cs#1)]  [!code-vb[SPExtensibility.ProjectItem.SiteColumn#1](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.vb#1)]  
   
-## Visual Studio プロジェクト テンプレートの作成  
- プロジェクト テンプレートを作成することにより、サイト内の列プロジェクト項目が含まれる SharePoint プロジェクトを他の開発者が作成できるようになります。  SharePoint プロジェクト テンプレートには、.csproj、.vbproj、.vstemplate など Visual Studio のすべてのプロジェクトで必要なファイルと、SharePoint プロジェクトに固有のファイルが含まれます。  詳細については、「[Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)」を参照してください。  
+## <a name="creating-a-visual-studio-project-template"></a>Creating a Visual Studio Project Template  
+ By creating a project template, you enable other developers to create SharePoint projects that contain site column project items. A SharePoint project template includes files that are required for all projects in Visual Studio, such as .csproj or .vbproj and .vstemplate files, and files that are specific to SharePoint projects. For more information, see [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).  
   
- この手順では、SharePoint プロジェクトに固有のファイルを生成する空の SharePoint プロジェクトを作成します。  次に、これらのファイルが SiteColumnProjectTemplate プロジェクトから生成されるテンプレートに含まれるように、このプロジェクトに追加します。  また、SiteColumnProjectTemplate プロジェクト ファイルを構成して、**\[新しいプロジェクト\]** ダイアログ ボックス内でプロジェクト テンプレートが表示される場所も指定します。  
+ In this procedure, you create an empty SharePoint project to generate the files that are specific to SharePoint projects. You then add these files to the SiteColumnProjectTemplate project so that they're included in the template that's generated from this project. You also configure the SiteColumnProjectTemplate project file to specify where the project template appears in the **New Project** dialog box.  
   
-#### プロジェクト テンプレートのファイルを作成するには  
+#### <a name="to-create-the-files-for-the-project-template"></a>To create the files for the project template  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] の 2 つ目のインスタンスを管理者の資格情報で起動します。  
+1.  Start a second instance of [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] with administrative credentials.  
   
-2.  **BaseSharePointProject** という名前の SharePoint 2010 プロジェクトを作成します。  
+2.  Create a SharePoint 2010 project that's named **BaseSharePointProject**.  
   
     > [!IMPORTANT]  
-    >  **SharePoint カスタマイズ ウィザード**では、**\[ファーム ソリューションとして配置する\]** を選択しないでください。  
+    >  In the **SharePoint Customization Wizard**, don't select the **Deploy as a farm solution** option button.  
   
-3.  空の要素項目をプロジェクトに追加し、その項目に「**Field1**」という名前を付けます。  
+3.  Add an Empty Element item to the project, and then name the item **Field1**.  
   
-4.  プロジェクトを保存し、2 つ目の [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] インスタンスを閉じます。  
+4.  Save the project, and then close the second instance of [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-5.  SiteColumnProjectItem ソリューションを開いている [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] インスタンスの**ソリューション エクスプローラー**で、**\[SiteColumnProjectTemplate\]** プロジェクト ノードのショートカット メニューを開き、**\[追加\]**、**\[既存の項目\]** の順にクリックします。  
+5.  In the instance of [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] that has the SiteColumnProjectItem solution open, in **Solution Explorer**, open the shortcut menu for the **SiteColumnProjectTemplate** project node, choose **Add**, and then choose **Existing Item**.  
   
-6.  **\[既存項目の追加\]** ダイアログ ボックスで、ファイル拡張子の一覧を開き、**\[すべてのファイル \(\*.\*\)\]** をクリックします。  
+6.  In the **Add Existing Item** dialog box, open the list of file extensions, and then choose **All Files (\*.\*)**.  
   
-7.  BaseSharePointProject プロジェクトが格納されているディレクトリで、key.snk ファイルを選択し、**\[追加\]** をクリックします。  
+7.  In the directory that contains the BaseSharePointProject project, select the key.snk file, and then choose the **Add** button.  
   
     > [!NOTE]  
-    >  このチュートリアルで作成するプロジェクト テンプレートでは、テンプレートを使用して作成される各プロジェクトに署名するために、同じ key.snk ファイルが使用されます。  このサンプルを拡張してプロジェクト インスタンスごとに別の key.snk ファイルを作成する方法については、「[チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 2&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)」を参照してください。  
+    >  In this walkthrough, the project template that you create uses the same key.snk file to sign each project that's created by using the template. To learn how to expand this sample to create a different key.snk file for each project instance, see [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md).  
   
-8.  手順 5. ～ 8. を繰り返して、BaseSharePointProject ディレクトリの指定されているサブフォルダーから次のファイルを追加します。  
+8.  Repeat steps 5-8 to add the following files from the specified subfolders in the BaseSharePointProject directory:  
   
-    -   \\Field1\\Elements.xml  
+    -   \Field1\Elements.xml  
   
-    -   \\Field1\\SharePointProjectItem.spdata  
+    -   \Field1\SharePointProjectItem.spdata  
   
-    -   \\Features\\Feature1\\Feature1.feature  
+    -   \Features\Feature1\Feature1.feature  
   
-    -   \\Features\\Feature1\\Feature1.Template.xml  
+    -   \Features\Feature1\Feature1.Template.xml  
   
-    -   \\Package\\Package.package  
+    -   \Package\Package.package  
   
-    -   \\Package\\Package.Template.xml  
+    -   \Package\Package.Template.xml  
   
-     これらのファイルは SiteColumnProjectTemplate プロジェクトに直接追加します。プロジェクト内に Field1、Features、または Package の各サブフォルダーを再作成しないでください。  これらのファイルの詳細については、「[Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)」を参照してください。  
+     Add these files directly to the SiteColumnProjectTemplate project; don't recreate the Field1, Features, or Package subfolders in the project. For more information about these files, see [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).  
   
-#### \[新しいプロジェクト\] ダイアログ ボックスでのプロジェクト テンプレートの表示方法を構成するには  
+#### <a name="to-configure-how-developers-discover-the-project-template-in-the-new-project-dialog-box"></a>To configure how developers discover the project template in the New Project dialog box  
   
-1.  **ソリューション エクスプローラー**で、**\[SiteColumnProjectTemplate\]** プロジェクト ノードのショートカット メニューを開き、**\[プロジェクトのアンロード\]** をクリックします。  ファイルの変更を保存するかどうかを確認するメッセージが表示されたら、**\[はい\]** をクリックします。  
+1.  In **Solution Explorer**, open the shortcut menu for the **SiteColumnProjectTemplate** project node, and then choose **Unload Project**. If you are prompted to save changes to any files, choose the **Yes** button.  
   
-2.  **\[SiteColumnProjectTemplate\]** ノードのショートカット メニューを再度開き、**\[SiteColumnProjectTemplate.csproj の編集\]** または **\[SiteColumnProjectTemplate.vbproj の編集\]** をクリックします。  
+2.  Open the shortcut menu for the **SiteColumnProjectTemplate** node again, and then choose **Edit SiteColumnProjectTemplate.csproj** or **Edit SiteColumnProjectTemplate.vbproj**.  
   
-3.  プロジェクト ファイル内で、次の `VSTemplate` 要素を見つけます。  
+3.  In the project file, locate the following `VSTemplate` element.  
   
     ```  
     <VSTemplate Include="SiteColumnProjectTemplate.vstemplate">  
     ```  
   
-4.  この要素を次の XML に置き換えます。  
+4.  Replace this element with the following XML.  
   
     ```  
     <VSTemplate Include="SiteColumnProjectTemplate.vstemplate">  
@@ -218,16 +222,16 @@ caps.handback.revision: 59
     </VSTemplate>  
     ```  
   
-     `OutputSubPath` 要素は、プロジェクトをビルドするとプロジェクト テンプレートが作成されるパス内の追加フォルダーを指定します。  ここで指定されたフォルダー内のプロジェクト テンプレートが使用可能になるのは、顧客が **\[新しいプロジェクト\]** ダイアログ ボックスを開き、**\[SharePoint\]** ノードを展開して、**\[2010\]** ノードを選択したときのみです。  
+     The `OutputSubPath` element specifies additional folders in the path under which the project template is created when you build the project. The folders specified here ensure that the project template will be available only when customers open the **New Project** dialog box, expand the **SharePoint** node, and then choose the **2010** node.  
   
-5.  ファイルを保存して閉じます。  
+5.  Save and close the file.  
   
-6.  **ソリューション エクスプローラー**で、**\[SiteColumnProjectTemplate\]** プロジェクトのショートカット メニューを開き、**\[プロジェクトの再読み込み\]** をクリックします。  
+6.  In **Solution Explorer**, open the shortcut menu for the **SiteColumnProjectTemplate** project, and then choose **Reload Project**.  
   
-## プロジェクト テンプレート ファイルの編集  
- SiteColumnProjectTemplate プロジェクトで次のファイルを編集して、プロジェクト テンプレートの動作を定義します。  
+## <a name="editing-the-project-template-files"></a>Editing the Project Template Files  
+ In the SiteColumnProjectTemplate project, edit the following files to define the behavior of the project template:  
   
--   AssemblyInfo.cs または AssemblyInfo.vb  
+-   AssemblyInfo.cs or AssemblyInfo.vb  
   
 -   Elements.xml  
   
@@ -239,13 +243,13 @@ caps.handback.revision: 59
   
 -   SiteColumnProjectTemplate.vstemplate  
   
--   ProjectTemplate.csproj または ProjectTemplate.vbproj  
+-   ProjectTemplate.csproj or ProjectTemplate.vbproj  
   
- 次の手順では、これらのファイルのいくつかに置き換え可能パラメーターを追加します。  置き換え可能パラメーターはトークンであり、先頭と末尾にはドル記号 \($\) が付いています。  ユーザーがこのプロジェクト テンプレートを使用してプロジェクトを作成するときに、Visual Studio によって自動的に新しいプロジェクト内のこれらのパラメーターが特定の値で置き換えられます。  詳細については、「[置き換え可能パラメーター](../sharepoint/replaceable-parameters.md)」を参照してください。  
+ In the following procedures, you'll add replaceable parameters to some of these files. A replaceable parameter is a token that starts and ends with the dollar sign ($) character. When a user uses this project template to create a project, Visual Studio automatically replaces these parameters in the new project with specific values. For more information, see [Replaceable Parameters](../sharepoint/replaceable-parameters.md).  
   
-#### AssemblyInfo.cs ファイルまたは AssemblyInfo.vb ファイルを編集するには  
+#### <a name="to-edit-the-assemblyinfocs-or-assemblyinfovb-file"></a>To edit the AssemblyInfo.cs or AssemblyInfo.vb file  
   
-1.  SiteColumnProjectTemplate プロジェクトで、AssemblyInfo.cs ファイルまたは AssemblyInfo.vb ファイルを開き、先頭に次のステートメントを追加します。  
+1.  In the SiteColumnProjectTemplate project, open the AssemblyInfo.cs or AssemblyInfo.vb file, and then add the following statement to the top of it:  
   
     ```vb  
     Imports System.Security  
@@ -255,16 +259,16 @@ caps.handback.revision: 59
     using System.Security;  
     ```  
   
-     SharePoint プロジェクトの **\[サンドボックス ソリューション\]** プロパティが **\[True\]** に設定されている場合、Visual Studio によって <xref:System.Security.AllowPartiallyTrustedCallersAttribute> が AssemblyInfo コード ファイルに追加されます。  ただし、プロジェクト テンプレートの AssemblyInfo コード ファイルは、既定では <xref:System.Security> 名前空間をインポートしません。  この **using** ステートメントまたは **Imports** ステートメントを追加して、コンパイル エラーが発生しないようにする必要があります。  
+     When the **Sandboxed Solution** property of a SharePoint project is set to **True**, Visual Studio adds the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> to the AssemblyInfo code file. However, the AssemblyInfo code file in the project template doesn't import the <xref:System.Security> namespace by default. You must add this **using** or **Imports** statement to prevent compile errors.  
   
-2.  ファイルを保存して閉じます。  
+2.  Save and close the file.  
   
-#### Elements.xml ファイルを編集するには  
+#### <a name="to-edit-the-elementsxml-file"></a>To edit the Elements.xml file  
   
-1.  SiteColumnProjectTemplate プロジェクトで、Elements.xml ファイルの内容を次の XML に置き換えます。  
+1.  In the SiteColumnProjectTemplate project, replace the contents of the Elements.xml file with the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
       <Field ID="{$guid5$}"   
           Name="$safeprojectname$"   
@@ -275,16 +279,16 @@ caps.handback.revision: 59
     </Elements>  
     ```  
   
-     新しい XML により、サイト内の列の名前、その基本型、およびギャラリーでサイト内の列が表示されるグループを定義する `Field` 要素が追加されます。  このファイルの内容の詳細については、「[フィールド定義](http://go.microsoft.com/fwlink/?LinkId=184290)」を参照してください。  
+     The new XML adds a `Field` element that defines the name of the site column, its base type, and the group in which to list the site column in the gallery. For more information about the contents of this file, see [Field Definition Schema](http://go.microsoft.com/fwlink/?LinkId=184290).  
   
-2.  ファイルを保存して閉じます。  
+2.  Save and close the file.  
   
-#### SharePointProjectItem.spdata ファイルを編集するには  
+#### <a name="to-edit-the-sharepointprojectitemspdata-file"></a>To edit the SharePointProjectItem.spdata file  
   
-1.  SiteColumnProjectTemplate プロジェクトで、SharePointProjectItem.spdata ファイルの内容を次の XML に置き換えます。  
+1.  In the SiteColumnProjectTemplate project, replace the contents of the SharePointProjectItem.spdata file with the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <ProjectItem Type="Contoso.SiteColumn" DefaultFile="Elements.xml"   
                  xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">  
       <Files>  
@@ -293,22 +297,22 @@ caps.handback.revision: 59
     </ProjectItem>  
     ```  
   
-     新しい XML により、ファイルは次のように変更されます。  
+     The new XML makes the following changes to the file:  
   
-    -   `ProjectItem` 要素の `Type` 属性は、プロジェクト項目定義 \(先ほど作成した `SiteColumnProjectItemTypeProvider` クラス\) の <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> に渡すものと同じ文字列に変更されます。  
+    -   Changes the `Type` attribute of the `ProjectItem` element to the same string that's passed to the <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> on the project item definition (the `SiteColumnProjectItemTypeProvider` class that you created earlier in this walkthrough).  
   
-    -   `SupportedTrustLevels` 属性と `SupportedDeploymentScopes` 属性が `ProjectItem` 要素から削除されます。  信頼レベルと配置のスコープは ProjectItemTypeDefinition プロジェクトの `SiteColumnProjectItemTypeProvider` クラスに指定されているため、これらの属性値は不要です。  
+    -   Removes the `SupportedTrustLevels` and `SupportedDeploymentScopes` attributes from the `ProjectItem` element. These attribute values are unnecessary because the trust levels and deployment scopes are specified in the `SiteColumnProjectItemTypeProvider` class in the ProjectItemTypeDefinition project.  
   
-     .spdata ファイルの内容の詳細については、「[SharePoint Project Item Schema Reference](../sharepoint/sharepoint-project-item-schema-reference.md)」を参照してください。  
+     For more information about the contents of .spdata files, see [SharePoint Project Item Schema Reference](../sharepoint/sharepoint-project-item-schema-reference.md).  
   
-2.  ファイルを保存して閉じます。  
+2.  Save and close the file.  
   
-#### Feature1.feature ファイルを編集するには  
+#### <a name="to-edit-the-feature1feature-file"></a>To edit the Feature1.feature file  
   
-1.  SiteColumnProjectTemplate プロジェクトで、Feature1.feature ファイルの内容を次の XML に置き換えます。  
+1.  In the SiteColumnProjectTemplate project, replace the contents of the Feature1.feature file with the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <feature xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="$guid4$" featureId="$guid4$"   
              imageUrl="" solutionId="00000000-0000-0000-0000-000000000000" title="Site Column Feature1" version=""  
              deploymentPath="$SharePoint.Project.FileNameWithoutExtension$_$SharePoint.Feature.FileNameWithoutExtension$"  
@@ -319,22 +323,22 @@ caps.handback.revision: 59
     </feature>  
     ```  
   
-     新しい XML により、ファイルは次のように変更されます。  
+     The new XML makes the following changes to the file:  
   
-    -   `feature` 要素の `Id` 属性と `featureId` 属性の値が `$guid4$` に変更されます。  
+    -   Changes the values of the `Id` and `featureId` attributes of the `feature` element to `$guid4$`.  
   
-    -   `projectItemReference` 要素の `itemId` 属性の値が `$guid2$` に変更されます。  
+    -   Changes the values of the `itemId` attribute of the `projectItemReference` element to `$guid2$`.  
   
-     .feature ファイルの詳細については、「[Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)」を参照してください。  
+     For more information about .feature files, see [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).  
   
-2.  ファイルを保存して閉じます。  
+2.  Save and close the file.  
   
-#### Package.package ファイルを編集するには  
+#### <a name="to-edit-the-packagepackage-file"></a>To edit the Package.package file  
   
-1.  SiteColumnProjectTemplate プロジェクトで、Package.package ファイルの内容を次の XML に置き換えます。  
+1.  In the SiteColumnProjectTemplate project, replace the contents of the Package.package file with the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0"   
              Id="$guid3$" solutionId="$guid3$" resetWebServer="false" name="$safeprojectname$"   
              xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">  
@@ -344,24 +348,24 @@ caps.handback.revision: 59
     </package>  
     ```  
   
-     新しい XML により、ファイルは次のように変更されます。  
+     The new XML makes the following changes to the file:  
   
-    -   `package` 要素の `Id` 属性と `solutionId` 属性の値が `$guid3$` に変更されます。  
+    -   Changes the values of the `Id` and `solutionId` attributes of the `package` element to `$guid3$`.  
   
-    -   `featureReference` 要素の `itemId` 属性の値が `$guid4$` に変更されます。  
+    -   Changes the values of the `itemId` attribute of the `featureReference` element to `$guid4$`.  
   
-     .package ファイルの詳細については、「[Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)」を参照してください。  
+     For more information about .package files, see [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).  
   
-2.  ファイルを保存して閉じます。  
+2.  Save and close the file.  
   
-#### SiteColumnProjectTemplate.vstemplate ファイルを編集するには  
+#### <a name="to-edit-the-sitecolumnprojecttemplatevstemplate-file"></a>To edit the SiteColumnProjectTemplate.vstemplate file  
   
-1.  SiteColumnProjectTemplate プロジェクトで、SiteColumnProjectTemplate.vstemplate ファイルの内容を、次に示す XML セクションのいずれかと置き換えます。  
+1.  In the SiteColumnProjectTemplate project, replace the contents of the SiteColumnProjectTemplate.vstemplate file with one of the following sections of XML.  
   
-    -   Visual C\# プロジェクト テンプレートを作成している場合は、次の XML を使用します。  
+    -   If you're creating a Visual C# project template, use the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">  
       <TemplateData>  
         <Name>Site Column</Name>  
@@ -394,10 +398,10 @@ caps.handback.revision: 59
     </VSTemplate>  
     ```  
   
-    -   Visual Basic プロジェクト テンプレートを作成している場合は、次の XML を使用します。  
+    -   If you're creating a Visual Basic project template, use the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">  
       <TemplateData>  
         <Name>Site Column</Name>  
@@ -430,26 +434,26 @@ caps.handback.revision: 59
     </VSTemplate>  
     ```  
   
-     新しい XML により、ファイルは次のように変更されます。  
+     The new XML makes the following changes to the file:  
   
-    -   `Name` 要素が **Site Column** という値に設定されます \(この名前は **\[新しいプロジェクト\]** ダイアログ ボックスに表示されます\)。  
+    -   Sets the `Name` element to the value **Site Column**. (This name appears in the **New Project** dialog box).  
   
-    -   各プロジェクト インスタンスに含まれているファイルごとに、`ProjectItem` 要素が追加されます。  
+    -   Adds `ProjectItem` elements for each filethat's included in each project instance.  
   
-    -   名前空間 "http:\/\/schemas.microsoft.com\/developer\/vstemplate\/2005" が使用されます。  このソリューション内の他のプロジェクト ファイルでは、"http:\/\/schemas.microsoft.com\/developer\/msbuild\/2003" 名前空間が使用されます。  このため、XML スキーマ警告メッセージが生成されますが、このチュートリアルでは、これらを無視できます。  
+    -   Uses the namespace "http://schemas.microsoft.com/developer/vstemplate/2005". Other project files in this solution use the "http://schemas.microsoft.com/developer/msbuild/2003" namespace. Therefore, XML schema warning messages will be generated, but you can disregard them in this walkthrough.  
   
-     .vstemplate ファイルの内容の詳細については、「[Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)」を参照してください。  
+     For more information about the contents of .vstemplate files, see [Visual Studio Template Schema Reference](/visualstudio/extensibility/visual-studio-template-schema-reference).  
   
-2.  ファイルを保存して閉じます。  
+2.  Save and close the file.  
   
-#### ProjectTemplate.csproj ファイルまたは ProjectTemplate.vbproj ファイルを編集するには  
+#### <a name="to-edit-the-projecttemplatecsproj-or-projecttemplatevbproj-file"></a>To edit the ProjectTemplate.csproj or ProjectTemplate.vbproj file  
   
-1.  SiteColumnProjectTemplate プロジェクトで、ProjectTemplate.csproj ファイルまたは ProjectTemplate.vbproj ファイルの内容を、次に示す XML セクションのいずれかと置き換えます。  
+1.  In the SiteColumnProjectTemplate project, replace the contents of the ProjectTemplate.csproj file or ProjectTemplate.vbproj file with one of the following sections of XML.  
   
-    -   Visual C\# プロジェクト テンプレートを作成している場合は、次の XML を使用します。  
+    -   If you're creating a Visual C# project template, use the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
       <PropertyGroup>  
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>  
@@ -526,10 +530,10 @@ caps.handback.revision: 59
     </Project>  
     ```  
   
-    1.  Visual Basic プロジェクト テンプレートを作成している場合は、次の XML を使用します。  
+    1.  If you're creating a Visual Basic project template, use the following XML.  
   
     ```  
-  
+    <?xml version="1.0" encoding="utf-8"?>  
     <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
       <PropertyGroup>  
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>  
@@ -625,140 +629,142 @@ caps.handback.revision: 59
     </Project>  
     ```  
   
-     新しい XML により、ファイルは次のように変更されます。  
+     The new XML makes the following changes to the file:  
   
-    -   `TargetFrameworkVersion` 要素を使用して、.NET Framework 3.5 \(4.5 ではない\) が指定されます。  
+    -   Uses the `TargetFrameworkVersion` element to specify the .NET Framework 3.5, not 4.5.  
   
-    -   プロジェクトの出力に署名するための `SignAssembly` 要素と `AssemblyOriginatorKeyFile` 要素が追加されます。  
+    -   Adds `SignAssembly` and `AssemblyOriginatorKeyFile` elements to sign the project output.  
   
-    -   SharePoint プロジェクトによって使用されるアセンブリ参照用の `Reference` 要素が追加されます。  
+    -   Adds `Reference` elements for assembly references that SharePoint projects use.  
   
-    -   Elements.xml や SharePointProjectItem.spdata など、プロジェクトの既定のファイルごとに要素が追加されます。  
+    -   Adds elements for each default file in the project, such as Elements.xml and SharePointProjectItem.spdata.  
   
-2.  ファイルを保存して閉じます。  
+2.  Save and close the file.  
   
-## プロジェクト テンプレートを配置するための VSIX パッケージの作成  
- 拡張機能を配置するには、**SiteColumnProjectItem** ソリューションの VSIX プロジェクトを使用して、VSIX パッケージを作成します。  まず、VSIX プロジェクトに含まれている source.extension.vsixmanifest ファイルを変更して、VSIX パッケージを構成します。  次に、ソリューションをビルドして VSIX パッケージを作成します。  
+## <a name="creating-a-vsix-package-to-deploy-the-project-template"></a>Creating a VSIX Package to Deploy the Project Template  
+ To deploy the extension, use the VSIX project in the **SiteColumnProjectItem** solution to create a VSIX package. First, configure the VSIX package by modifying the source.extension.vsixmanifest file that is included in the VSIX project. Then, create the VSIX package by building the solution.  
   
-#### VSIX パッケージを構成および作成するには  
+#### <a name="to-configure-and-create-the-vsix-package"></a>To configure and create the VSIX package  
   
-1.  **ソリューション エクスプローラー**で、**SiteColumnProjectItem** プロジェクトの source.extension.vsixmanifest ファイルをマニフェスト エディターで開きます。  
+1.  In **Solution Explorer**, in the **SiteColumnProjectItem** project, open the source.extension.vsixmanifest file in the manifest editor.  
   
-     source.extension.vsixmanifest ファイルが、すべての VSIX パッケージで必要になる extension.vsixmanifest ファイルの基礎となります。  このファイルの詳細については、「[VSIX 拡張機能のスキーマに関するリファレンス](http://msdn.microsoft.com/ja-jp/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)」を参照してください。  
+     The source.extension.vsixmanifest file is the basis for the extension.vsixmanifest file that all VSIX packages require. For more information about this file, see [VSIX Extension Schema 1.0 Reference](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b).  
   
-2.  **\[製品名\]** ボックスに、「**Site Column**」と入力します。  
+2.  In the **Product Name** box, enter **Site Column**.  
   
-3.  **\[作成者\]** ボックスに「**Contoso**」と入力します。  
+3.  In the **Author** box, enter **Contoso**.  
   
-4.  **\[説明\]** ボックスに、「**A SharePoint project for creating site columns**」と入力します。  
+4.  In the **Description** box, enter **A SharePoint project for creating site columns**.  
   
-5.  **\[アセット\]** タブをクリックし、**\[新規作成\]** をクリックします。  
+5.  Choose the **Assets** tab, and then choose the **New** button.  
   
-     **\[Add New Asset\]** \(新しいアセットの追加\) ダイアログ ボックスが表示されます。  
+     The **Add New Asset** dialog box opens.  
   
-6.  **\[種類\]** ボックスの一覧の **\[Microsoft.VisualStudio.ProjectTemplate\]** をクリックします。  
-  
-    > [!NOTE]  
-    >  この値は、extension.vsixmanifest ファイル内の `ProjectTemplate` 要素に対応します。  この要素は、プロジェクト テンプレートを格納する VSIX パッケージ内のサブフォルダーを示します。  詳細については、「[NIB: ProjectTemplate Element \(VSX Schema\)](http://msdn.microsoft.com/ja-jp/87add64c-9dcd-495f-8815-209dab182cb1)」を参照してください。  
-  
-7.  **\[ソース\]** ボックスの一覧で **\[A project in current solution\]** \(現在のソリューション内のプロジェクト\) を選択します。  
-  
-8.  **\[プロジェクト\]** ボックスの一覧の **\[SiteColumnProjectTemplate\]** をクリックし、**\[OK\]** をクリックします。  
-  
-9. **\[新規作成\]** を再度クリックします。  
-  
-     **\[Add New Asset\]** \(新しいアセットの追加\) ダイアログ ボックスが表示されます。  
-  
-10. **\[種類\]** ボックスの一覧で **\[Microsoft.VisualStudio.MefComponent\]** を選択します。  
+6.  In the **Type** list, choose **Microsoft.VisualStudio.ProjectTemplate**.  
   
     > [!NOTE]  
-    >  この値は、extension.vsixmanifest ファイル内の `MefComponent` 要素に対応します。  この要素は、VSIX パッケージ内の拡張機能アセンブリの名前を指定します。  詳細については、「[NIB: MEFComponent Element \(VSX Schema\)](http://msdn.microsoft.com/ja-jp/8a813141-8b73-44c9-b80b-ca85bbac9551)」を参照してください。  
+    >  This value corresponds to the `ProjectTemplate` element in the extension.vsixmanifest file. This element identifies the subfolder in the VSIX package that contains the project template. For more information, see [NIB: ProjectTemplate Element (VSX Schema)](http://msdn.microsoft.com/en-us/87add64c-9dcd-495f-8815-209dab182cb1).  
   
-11. **\[ソース\]** ボックスの一覧で **\[A project in current solution\]** \(現在のソリューション内のプロジェクト\) を選択します。  
+7.  In the **Source** list, choose **A project in current solution**.  
   
-12. **\[プロジェクト\]** ボックスの一覧の **\[ProjectItemTypeDefinition\]** をクリックし、**\[OK\]** をクリックします。  
+8.  In the **Project** list, and choose **SiteColumnProjectTemplate**, and then choose the **OK** button.  
   
-13. メニュー バーで **\[ビルド\]**、**\[ソリューションのビルド\]** の順にクリックし、プロジェクトがエラーなしでコンパイルされたことを確認します。  
+9. Choose the **New** button again.  
   
-## プロジェクト テンプレートのテスト  
- これで、プロジェクト テンプレートをテストする準備ができました。  まず、Visual Studio の実験用インスタンスで SiteColumnProjectItem ソリューションのデバッグを開始します。  次に、Visual Studio の実験用インスタンスで、**Site Column** プロジェクトをテストします。  最後に、SharePoint プロジェクトをビルドして実行し、サイト内の列が正常に機能することを確認します。  
+     The **Add New Asset** dialog box opens.  
   
-#### ソリューションのデバッグを開始するには  
-  
-1.  管理者の資格情報で Visual Studio を再起動し、SiteColumnProjectItem ソリューションを開きます。  
-  
-2.  SiteColumnProjectItemTypeProvider コード ファイルで、`InitializeType` メソッド内のコードの 1 行目にブレークポイントを追加し、**F5** キーを押してデバッグを開始します。  
-  
-     Visual Studio によって、拡張機能が %UserProfile%\\AppData\\Local\\Microsoft\\VisualStudio\\10.0Exp\\Extensions\\Contoso\\Site Column\\1.0 にインストールされ、Visual Studio の実験用インスタンスが開始されます。  このインスタンスの Visual Studio でプロジェクト項目をテストします。  
-  
-#### Visual Studio でプロジェクトをテストするには  
-  
-1.  Visual Studio の実験用インスタンスのメニュー バーで **\[ファイル\]**、**\[新規作成\]**、**\[プロジェクト\]** の順にクリックします。  
-  
-2.  \(プロジェクト テンプレートがサポートする言語に応じて\) **\[Visual C\#\]** ノードまたは **\[Visual Basic\]**  ノードを展開し、**\[SharePoint\]** ノードを展開して、**\[2010\]** ノードをクリックします。  
-  
-3.  プロジェクト テンプレートの一覧で、**\[Site Column\]** テンプレートをクリックします。  
-  
-4.  **\[名前\]** ボックスに「**SiteColumnTest**」と入力し、**\[OK\]** をクリックします。  
-  
-     **ソリューション エクスプローラー**に、**Field1** という名前のプロジェクト項目と共に新しいプロジェクトが表示されます。  
-  
-5.  Visual Studio のもう一方のインスタンスで、`InitializeType` メソッドの最初の方に設定したブレークポイントでコードが停止していることを確認し、**F5** キーを押して、プロジェクトのデバッグを続行します。  
-  
-6.  **ソリューション エクスプローラー**で、**\[Field1\]** ノードをクリックし、**F4** キーを押します。  
-  
-     **\[プロパティ\]** ウィンドウが開きます。  
-  
-7.  プロパティ一覧に **\[Example Property\]** というプロパティが表示されることを確認します。  
-  
-#### SharePoint でサイト内の列をテストするには  
-  
-1.  **ソリューション エクスプローラー**で、**\[SiteColumnTest\]** ノードをクリックします。  
-  
-2.  **\[プロパティ\]** ウィンドウで、**\[サイト URL\]** プロパティの横にあるテキスト ボックスをクリックし、「**http:\/\/localhost**」と入力します。  
-  
-     この手順により、デバッグに使用する開発用コンピューター上のローカル SharePoint サイトが指定されます。  
+10. In the **Type** list, choose **Microsoft.VisualStudio.MefComponent**.  
   
     > [!NOTE]  
-    >  既定では **\[サイト URL\]** プロパティは空です。これは、Site Column プロジェクト テンプレートに、プロジェクトを作成するときにこの値を収集するウィザードが用意されていないためです。  開発者にこの値を尋ね、新しいプロジェクトでこのプロパティを構成するウィザードを追加する方法については、「[チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 2&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)」を参照してください。  
+    >  This value corresponds to the `MefComponent` element in the extension.vsixmanifest file. This element specifies the name of an extension assembly in the VSIX package. For more information, see [NIB: MEFComponent Element (VSX Schema)](http://msdn.microsoft.com/en-us/8a813141-8b73-44c9-b80b-ca85bbac9551).  
   
-3.  **F5** キーを押します。  
+11. In the **Source** list, choose **A project in current solution**.  
   
-     サイト列がパッケージ化され、プロジェクトの **\[サイト URL\]** プロパティで指定された SharePoint サイトに配置されます。  Web ブラウザーには、このサイトの既定のページが表示されます。  
+12. In the **Project** list, choose **ProjectItemTypeDefinition**, and then choose the **OK** button.  
+  
+13. On the menu bar, choose **Build**, **Build Solution**, and then make sure that the project compiles without errors.  
+  
+## <a name="testing-the-project-template"></a>Testing the Project Template  
+ You are now ready to test the project template. First, start debugging the SiteColumnProjectItem solution in the experimental instance of Visual Studio. Then, test the **Site Column** project in the experimental instance of Visual Studio. Finally, build and run the SharePoint project to verify that the site column works as expected.  
+  
+#### <a name="to-start-debugging-the-solution"></a>To start debugging the solution  
+  
+1.  Restart Visual Studio with administrative credentials, and then open the SiteColumnProjectItem solution.  
+  
+2.  
+  
+3.  In the SiteColumnProjectItemTypeProvider code file, add a breakpoint to the first line of code in the `InitializeType` method, and then choose the **F5** key to start debugging.  
+  
+     Visual Studio installs the extension to %UserProfile%\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Contoso\Site Column\1.0 and starts an experimental instance of Visual Studio. You will test the project item in this instance of Visual Studio.  
+  
+#### <a name="to-test-the-project-in-visual-studio"></a>To test the project in Visual Studio  
+  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **File**, **New**, **Project**.  
+  
+2.  Expand the **Visual C#** or **Visual Basic** node (depending on the language that your project template supports), expand the **SharePoint** node, and then choose the **2010** node.  
+  
+3.  In the list of project templates, choose the **Site Column** template.  
+  
+4.  In the **Name** box, enter **SiteColumnTest** and then choose the **OK** button.  
+  
+     In **Solution Explorer**, a new project appears with a project item that's named **Field1**.  
+  
+5.  Verify that the code in the other instance of Visual Studio stops on the breakpoint that you set earlier in the `InitializeType` method, and then choose the **F5** key to continue to debug the project.  
+  
+6.  In **Solution Explorer**, choose the **Field1** node, and then choose the **F4** key.  
+  
+     The **Properties** window opens.  
+  
+7.  In the properties list, verify that the property **Example Property** appears.  
+  
+#### <a name="to-test-the-site-column-in-sharepoint"></a>To test the site column in SharePoint  
+  
+1.  In **Solution Explorer**, choose the **SiteColumnTest** node.  
+  
+2.  In the **Properties** window, in the text box that's next to the **Site URL** property, enter **http://localhost**.  
+  
+     This step specifies the local SharePoint site on the development computer that you want to use for debugging.  
   
     > [!NOTE]  
-    >  **\[スクリプト デバッグが無効\]** ダイアログ ボックスが表示された場合は、**\[はい\]** をクリックしてプロジェクトをデバッグします。  
+    >  The **Site URL** property is empty by default because the Site Column project template doesn't provide a wizard for collecting this value when the project is created. To learn how to add a wizard that asks the developer for this value and then configures this property in the new project, see [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md).  
   
-4.  **\[サイトの操作\]** メニューの **\[サイトの設定\]** をクリックします。  
+3.  Choose the **F5** key.  
   
-5.  **\[サイトの設定\]** ページの **\[ギャラリー\]** ボックスの一覧で **\[サイト列\]** リンクをクリックします。  
+     The site column is packaged and deployed to the SharePoint site that's specified in the **Site URL** property of the project. The web browser opens to the default page of this site.  
   
-6.  サイト内の列の一覧で、**\[SiteColumnTest\]** という名前の列を含む **\[Custom Columns\]** グループがあることを確認します。  
+    > [!NOTE]  
+    >  If the **Script Debugging Disabled** dialog box appears, choose the **Yes** button to continue to debug the project.  
   
-7.  Web ブラウザーを閉じます。  
+4.  On the **Site Actions** menu, choose **Site Settings**.  
   
-## 開発コンピューターのクリーンアップ  
- プロジェクトのテストが終わったら、プロジェクト テンプレートを Visual Studio の実験用インスタンスから削除します。  
+5.  On the **Site Settings** page, under the **Galleries** list, choose the **Site columns** link.  
   
-#### 開発コンピューターをクリーンアップするには  
+6.  In the list of site columns, verify that a **Custom Columns** group contains a column that's named **SiteColumnTest**.  
   
-1.  Visual Studio の実験用インスタンスのメニュー バーで **\[ツール\]**、**\[拡張機能と更新プログラム\]** の順にクリックします。  
+7.  Close the web browser.  
   
-     **\[拡張機能と更新プログラム\]** ダイアログ ボックスが表示されます。  
+## <a name="cleaning-up-the-development-computer"></a>Cleaning up the Development Computer  
+ After you finish testing the project, remove the project template from the experimental instance of Visual Studio.  
   
-2.  拡張機能の一覧で **\[Site Column\]** 拡張機能を選択し、**\[アンインストール\]** をクリックします。  
+#### <a name="to-clean-up-the-development-computer"></a>To clean up the development computer  
   
-3.  確認のダイアログ ボックスが表示されたら、**\[はい\]** をクリックして、拡張機能をアンインストールします。  
+1.  In the experimental instance of Visual Studio, on the menu bar, choose **Tools**, **Extensions and Updates**.  
   
-4.  **\[閉じる\]** をクリックするとアンインストールは完了です。  
+     The **Extensions and Updates** dialog box opens.  
   
-5.  Visual Studio の両方のインスタンス \(実験用インスタンスと SiteColumnProjectItem ソリューションを開いたインスタンス\) を閉じます。  
+2.  In the list of extensions, choose the **Site Column** extension, and then choose the **Uninstall** button.  
   
-## 次の手順  
- このチュートリアルを完了すると、プロジェクト テンプレートにウィザードを追加できるようになります。  ユーザーが Site Column プロジェクトを作成するときに、ウィザードが、デバッグに使用するサイトの URL と、新しいソリューションがサンドボックス ソリューションかどうかをユーザーに尋ね、この情報を使用して新しいプロジェクトを構成します。  また、ウィザードは、列に関する情報 \(基本型や、サイト内の列ギャラリーで列が表示されるグループなど\) を収集し、この情報を新しいプロジェクトの Elements.xml ファイルに追加します。  詳細については、「[チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 2&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)」を参照してください。  
+3.  In the dialog box that appears, choose the **Yes** button to confirm that you want to uninstall the extension.  
   
-## 参照  
- [チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 2&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)   
+4.  Choose the **Close** button to complete the uninstallation.  
+  
+5.  Close both instances of Visual Studio (the experimental instance and the instance of Visual Studio in which the SiteColumnProjectItem solution is open).  
+  
+## <a name="next-steps"></a>Next Steps  
+ After you complete this walkthrough, you can add a wizard to the project template. When a user creates a Site Column project, the wizard asks the user for the site URL to use for debugging and whether the new solution is sandboxed, and the wizard configures the new project with this information. The wizard also collects information about the column (such as the base type and the group in which to list the column in the site column gallery) and adds this information to the Elements.xml file in the new project. For more information, see [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md).  
+  
+## <a name="see-also"></a>See Also  
+ [Walkthrough: Creating a Site Column Project Item with a Project Template, Part 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)   
  [Defining Custom SharePoint Project Item Types](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
  [Saving Data in Extensions of the SharePoint Project System](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)   

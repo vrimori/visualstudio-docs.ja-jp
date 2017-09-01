@@ -1,122 +1,122 @@
 ---
-title: "チュートリアル : VSTO アドイン プロジェクトでサービスのデータをバインドする"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "データベース [Visual Studio での Office 開発]、スクロール (レコードを)"
-  - "レコード [Visual Studio での Office 開発]、スクロール"
-  - "データ [Visual Studio での Office 開発]、スクロール (データベース レコードを)"
+title: 'Walkthrough: Binding to Data from a Service in a VSTO add-in Project | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- databases [Office development in Visual Studio], scrolling records
+- records [Office development in Visual Studio], scrolling
+- data [Office development in Visual Studio], scrolling database records
 ms.assetid: 9b008be4-06a3-4ffc-9f02-79dd6cfe00ab
 caps.latest.revision: 38
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 37
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 7b5c4f8ec6023dbe58d319be5343010e8c1d6140
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : VSTO アドイン プロジェクトでサービスのデータをバインドする
-  VSTO アドイン プロジェクトでは、データをホスト コントロールにバインドできます。 このチュートリアルでは、実行時に Microsoft Office の Word ドキュメントにコントロールを追加し、それらのコントロールを MSDN コンテンツ サービスから取得されたデータにバインドして、イベントに応答する方法について説明します。  
+# <a name="walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project"></a>Walkthrough: Binding to Data from a Service in a VSTO add-in Project
+  You can bind data to host controls in VSTO Add-in projects. This walkthrough demonstrates how to add controls to a Microsoft Office Word document, bind the controls to data retrieved from the MSDN Content Service, and respond to events at run time.  
   
- **対象:** このトピックの情報は、Word 2010 のアプリケーション レベルのプロジェクトに適用されます。 詳細については、「[Office アプリケーションおよびプロジェクト タイプ別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
+ **Applies to:** The information in this topic applies to application-level projects for Word 2010. For more information, see [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md).  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   実行時にドキュメントに <xref:Microsoft.Office.Tools.Word.RichTextContentControl> コントロールを追加する  
+-   Adding a <xref:Microsoft.Office.Tools.Word.RichTextContentControl> control to a document at run time.  
   
--   <xref:Microsoft.Office.Tools.Word.RichTextContentControl> コントロールを Web サービスのデータにバインドする  
+-   Binding the <xref:Microsoft.Office.Tools.Word.RichTextContentControl> control to data from a Web service.  
   
--   <xref:Microsoft.Office.Tools.Word.RichTextContentControl> コントロールの <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> イベントに応答する  
+-   Responding to the <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> event of a <xref:Microsoft.Office.Tools.Word.RichTextContentControl> control.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] または [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]。  
+-   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] or [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].  
   
-## 新規プロジェクトの作成  
- まず、Word VSTO アドイン プロジェクトを作成します。  
+## <a name="creating-a-new-project"></a>Creating a New Project  
+ The first step is to create a Word VSTO Add-in project.  
   
-#### 新しいプロジェクトを作成するには  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
-1.  Visual Basic または C\# のいずれかを使用して、「**MTPS コンテンツ サービス**」という名前の Word VSTO アドイン プロジェクトを作成します。  
+1.  Create a Word VSTO Add-in project with the name **MTPS Content Service**, using either Visual Basic or C#.  
   
-     詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+     For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     `ThisAddIn.vb` または `ThisAddIn.cs` ファイルが Visual Studio で開かれ、プロジェクトが**ソリューション エクスプローラー**に追加されます。  
+     Visual Studio opens the `ThisAddIn.vb` or `ThisAddIn.cs` file and adds the project to **Solution Explorer**.  
   
-## Web サービスの追加  
- このチュートリアルでは、「MTPS コンテンツ サービス」という Web サービスを使用します。 この Web サービスは、指定された MSDN の記事を XML 文字列またはプレーンテキストの形式で返します。 返された情報をコンテンツ コントロールに表示する方法については、後の手順で説明します。  
+## <a name="adding-a-web-service"></a>Adding a Web Service  
+ For this walkthrough, use a Web service called the MTPS Content Service. This Web service returns information from a specified MSDN article in the form of an XML string or plain text. A later step shows how to display the returned information in a content control.  
   
-#### MTPS コンテンツ サービスをプロジェクトを追加するには  
+#### <a name="to-add-the-mtps-content-service-to-the-project"></a>To add the MTPS Content Service to the project  
   
-1.  **\[データ\]** メニューの **\[新しいデータ ソースの追加\]** をクリックします。  
+1.  On the **Data** menu, click **Add New Data Source**.  
   
-2.  **データ ソース構成ウィザード**で、**\[サービス\]** をクリックし、**\[次へ\]** をクリックします。  
+2.  In the **Data Source Configuration Wizard**, click **Service**, and then click **Next**.  
   
-3.  **\[アドレス\]** フィールドに、次の URL を入力します。  
+3.  In the **Address** field, type the following URL:  
   
-     **http:\/\/services.msdn.microsoft.com\/ContentServices\/ContentService.asmx**  
+     **http://services.msdn.microsoft.com/ContentServices/ContentService.asmx**  
   
-4.  **\[検索\]** をクリックします。  
+4.  Click **Go**.  
   
-5.  **\[名前空間\]** フィールドに「**ContentService**」と入力し、**\[OK\]** をクリックします。  
+5.  In the **Namespace** field, type **ContentService**, and click **OK**.  
   
-6.  **\[参照の追加ウィザード\]** ダイアログ ボックスで **\[完了\]** をクリックします。  
+6.  In the **Add Reference Wizard** dialog box, click **Finish**.  
   
-## 実行時のコンテンツ コントロールの追加とデータへのバインディング  
- VSTO アドイン プロジェクトでは、実行時にコントロールを追加してバインドします。 このチュートリアルでは、ユーザーがコントロールの内部をクリックしたときに Web サービスからデータを取得するようにコンテンツ コントロールを構成します。  
+## <a name="adding-a-content-control-and-binding-to-data-at-run-time"></a>Adding a Content Control and Binding to Data at Run Time  
+ In VSTO Add-in projects, you add and bind controls at run time. For this walkthrough, configure the content control to retrieve data from the Web service when a user clicks inside the control.  
   
-#### コンテンツ コントロールを追加してデータにバインドするには  
+#### <a name="to-add-a-content-control-and-bind-to-data"></a>To add a content control and bind to data  
   
-1.  `ThisAddIn` クラスで、MTPS コンテンツ サービス、コンテンツ コントロール、およびデータ バインディングのための変数を宣言します。  
+1.  In the `ThisAddIn` class, declare the variables for the MTPS Content Service, the content control, and the data binding.  
   
-     [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_WordAddIn_BindingDataToContentControl/CS/ThisAddIn.cs#2)]
-     [!code-vb[Trin_WordAddIn_BindingDataToContentControl#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordAddIn_BindingDataToContentControl/VB/ThisAddIn.vb#2)]  
+     [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#2](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#2)]  [!code-vb[Trin_WordAddIn_BindingDataToContentControl#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#2)]  
   
-2.  `ThisAddIn` クラスに次のメソッドを追加します。 このメソッドは、アクティブ ドキュメントの先頭に、コンテンツ コントロールを作成します。  
+2.  Add the following method to the `ThisAddIn` class. This method creates a content control at the beginning of the active document.  
   
-     [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#4](../snippets/csharp/VS_Snippets_OfficeSP/Trin_WordAddIn_BindingDataToContentControl/CS/ThisAddIn.cs#4)]
-     [!code-vb[Trin_WordAddIn_BindingDataToContentControl#4](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordAddIn_BindingDataToContentControl/VB/ThisAddIn.vb#4)]  
+     [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#4](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#4)]  [!code-vb[Trin_WordAddIn_BindingDataToContentControl#4](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#4)]  
   
-3.  `ThisAddIn` クラスに次のメソッドを追加します。 このメソッドは、要求を作成して Web サービスに送信するために必要なオブジェクトを初期化します。  
+3.  Add the following method to the `ThisAddIn` class. This method initializes the objects needed to create and send a request to the Web service.  
   
-     [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_WordAddIn_BindingDataToContentControl/CS/ThisAddIn.cs#6)]
-     [!code-vb[Trin_WordAddIn_BindingDataToContentControl#6](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordAddIn_BindingDataToContentControl/VB/ThisAddIn.vb#6)]  
+     [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#6](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#6)]  [!code-vb[Trin_WordAddIn_BindingDataToContentControl#6](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#6)]  
   
-4.  ユーザーがコンテンツ コントロールの内部をクリックしたときにコンテンツ コントロールに関する MSDN ライブラリ ドキュメントを取得し、そのデータをコンテンツ コントロールにバインドするイベント ハンドラーを作成します。  
+4.  Create an event handler to retrieve the MSDN Library document about content controls when a user clicks inside of the content control and bind the data to the content control.  
   
-     [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#5](../snippets/csharp/VS_Snippets_OfficeSP/Trin_WordAddIn_BindingDataToContentControl/CS/ThisAddIn.cs#5)]
-     [!code-vb[Trin_WordAddIn_BindingDataToContentControl#5](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordAddIn_BindingDataToContentControl/VB/ThisAddIn.vb#5)]  
+     [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#5](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#5)]  [!code-vb[Trin_WordAddIn_BindingDataToContentControl#5](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#5)]  
   
-5.  `ThisAddIn_Startup` メソッドから `AddRichTextControlAtRange` および `InitializeServiceObjects` メソッドを呼び出します。 C\# プログラマの場合は、イベント ハンドラーを追加します。  
+5.  Call the `AddRichTextControlAtRange` and `InitializeServiceObjects` methods from the `ThisAddIn_Startup` method. For C# programmers, add an event handler.  
   
-     [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_WordAddIn_BindingDataToContentControl/CS/ThisAddIn.cs#3)]
-     [!code-vb[Trin_WordAddIn_BindingDataToContentControl#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_WordAddIn_BindingDataToContentControl/VB/ThisAddIn.vb#3)]  
+     [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#3](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#3)]  [!code-vb[Trin_WordAddIn_BindingDataToContentControl#3](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#3)]  
   
-## アドインのテスト  
- Word を開くと、<xref:Microsoft.Office.Tools.Word.RichTextContentControl> コントロールが表示されます。 コントロールの内部をクリックすると、コントロールのテキストが変わります。  
+## <a name="testing-the-add-in"></a>Testing the Add-In  
+ When you open Word, the <xref:Microsoft.Office.Tools.Word.RichTextContentControl> control appears. The text in the control changes when you click inside it.  
   
-#### VSTO アドインをテストするには  
+#### <a name="to-test-the-vsto-add-in"></a>To test the VSTO Add-in  
   
-1.  **F5** キーを押します。  
+1.  Press **F5**.  
   
-2.  コンテンツ コントロールの内部をクリックします。  
+2.  Click inside of the content control.  
   
-     MTPS コンテンツ サービスから情報がダウンロードされて、コンテンツ コントロール内部に表示されます。  
+     Information is downloaded from the MTPS Content Service and displayed inside the content control.  
   
-## 参照  
- [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)  
   
   

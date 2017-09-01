@@ -1,109 +1,126 @@
 ---
-title: "DebuggerDisplay 属性を使用します | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "属性 [C#], デバッガー"
-  - "DebuggerDisplay 属性"
-  - "DebuggerDisplayAttribute クラス"
+title: Using the DebuggerDisplay Attribute | Microsoft Docs
+ms.custom: 
+ms.date: 08/09/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- attributes [C#], debugger
+- DebuggerDisplay attribute
+- DebuggerDisplayAttribute class
 ms.assetid: f4eb7c76-af4e-493b-9ab6-9cb05949d9b3
 caps.latest.revision: 47
-caps.handback.revision: 47
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# DebuggerDisplay 属性を使用します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 9c79cbf6f99ada07f84e54495ed492595f9b4ea0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/22/2017
 
-[DebuggerDisplayAttribute クラス](../Topic/DebuggerDisplayAttribute%20Class.md) は、デバッガー変数ウィンドウでのオブジェクト、プロパティ、フィールドの表示方法を制御します。 この属性は、型、デリゲート、プロパティ、フィールド、アセンブリに適用できます。  
+---
+# <a name="using-the-debuggerdisplay-attribute"></a>Using the DebuggerDisplay Attribute
+The [DebuggerDisplayAttribute Class](/dotnet/api/system.diagnostics.debuggerdisplayattribute) controls how an object, property, or field is displayed in the debugger variable windows. This attribute can be applied to types, delegates, properties, fields, and assemblies.  
   
- `DebuggerDisplay` 属性の引数は 1 つです。それは、型のインスタンスの値列に表示する文字列です。 この文字列には、中かっこ \(`{` と `}`\) を含めることができます。 かっこ内のテキストは、フィールド、プロパティ、メソッドとして評価されます。  
+ The `DebuggerDisplay` attribute has a single argument, which is a string to be displayed in the value column for instances of the type. This string can contain braces (`{` and `}`). Text within a pair of braces is evaluated as a field, property or method.  
   
- クラスに上書きされた `ToString()` メソッドがある場合、デバッガーは、既定の `{<typeName>}` の代わりに、上書きされたメソッドを使用します。 したがって、`ToString()` メソッドを上書きした場合、デバッガーは、既定の `{<typeName>}` の代わりに、上書きされたメソッドを使用し、`DebuggerDisplay` を使用する必要はありません。 両方を使用すると、`DebuggerDisplay` 属性は、上書きされた `ToString()` メソッドよりも優先されます。  
+ If a class has an overridden `ToString()` method, the debugger uses the overridden method instead of the default `{<typeName>}`. Thus, if you have overridden the `ToString()` method, the debugger uses the overridden method instead of the default`{<typeName>}`, and you do not have to use `DebuggerDisplay`. If you use both, the `DebuggerDisplay` attribute takes precedence over the  overridden `ToString()` method.  
   
- この暗黙的な `ToString()` 呼び出しがデバッガーで評価されるかどうかは、**\[ツール\] \/ \[オプション\] \/ \[デバッグ\]** ダイアログ ボックスのユーザー設定によって異なります。 Visual Basic は、この暗黙的な `ToString()` 評価を実装しません。  
+ Whether the debugger evaluates this implicit `ToString()` call depends on a user setting in the **Tools / Options / Debugging** dialog box . Visual Basic does not implement this implicit `ToString()` evaluation.  
   
 > [!IMPORTANT]
->  **\[ツール\] \/ \[オプション\] \/ \[デバッグ\]** ダイアログ ボックスで **\[オブジェクトの生の構造体を変数ウィンドウに表示する\]** チェック ボックスがオンになっている場合、`DebuggerDisplay` 属性は無視されます。  
+>  If the **Show raw structure of objects in variables windows** check box is selected in the **Tools /Options / Debugging** dialog box, then the `DebuggerDisplay` attribute is ignored.  
   
- 次の表に、`DebuggerDisplay` 属性の使用例と出力例を示します。  
+ The following table shows some possible uses of the `DebuggerDisplay` attribute and example outputs.  
   
-|属性|**\[値\]** 列に表示される出力|  
-|--------|-------------------------|  
-|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> `x` フィールドと `y` フィールドがある型で使用されます。|`x = 5 y = 18`|  
-|`[DebuggerDisplay("String value is {getString()}")]`パラメーターの構文は、言語によって異なります。 そのため、使用には注意が必要です。|`String value is [5, 6, 6]`|  
+|Attribute|Output appearing in the Value column|  
+|---------------|------------------------------------------------|  
+|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> Used on a type with fields `x` and `y`.|`x = 5 y = 18`|  
+|`[DebuggerDisplay("String value is {getString()}")]`Parameter syntax can vary between languages. Therefore, use it with care.|`String value is [5, 6, 6]`|  
   
- `DebuggerDisplay` には、名前付きパラメーターも使用できます。  
+ `DebuggerDisplay` can also accept named parameters.  
   
-|パラメーター|目的|  
-|------------|--------|  
-|`Name`, `Type`|このパラメーターは、変数ウィンドウの **\[名前\]** 列と **\[型\]** 列に影響があります  \(コンストラクターと同じ構文で、文字列に設定できます\)。このパラメーターを乱用したり、不適切に使用したりすると、出力を混乱させる可能性があります。|  
-|`Target`, `TargetTypeName`|属性がアセンブリ レベルで使用される場合に、対象の型を指定します。|  
+|Parameters|Purpose|  
+|----------------|-------------|  
+|`Name`, `Type`|These parameters affect the **Name** and **Type** columns of the variable windows. (They can be set to strings using the same syntax as the constructor.)Overusing these parameters, or using them incorrectly, can cause confusing output.|  
+|`Target`, `TargetTypeName`|Specifies the target type when the attribute is used at the assembly level.|  
   
- autoexp.cs ファイルは、DebuggerDisplay 属性をアセンブリ レベルで使用します。 autoexp.cs ファイルは、Visual Studio が .NET オブジェクトに対して使用する既定の展開を指定します。 DebuggerDisplay 属性の使用方法について autoexp.cs ファイルで確認したり、autoexp.cs ファイルを変更してコンパイルすることで既定の展開を変更したりできます。 変更する場合は、その前に autoexp.cs ファイルのバックアップを作成してください。  
+ The autoexp.cs file uses the DebuggerDisplay attribute at the assembly level. The autoexp.cs file determines the default expansions that Visual Studio uses for .NET objects. You can examine the autoexp.cs file for examples of how to use the DebuggerDisplay attribute, or you can modify and compile the autoexp.cs file to change the default expansions. Be sure to back up the autoexp.cs file before you modify it.  
   
- autoexp.cs をビルドするには、VS2015 の開発者コマンド プロンプトを開いて、次のコマンドを実行します  
+ To build autoexp.cs, open up a Developer Command Prompt for VS2015, and run the following commands  
   
 ```  
 cd <directory containing autoexp.cs>  
 csc /t:library autoexp.cs  
 ```  
   
- autoexp.dll への変更は、次のデバッグ セッションで取得されます。  
+ The changes to autoexp.dll will be picked up in the next debug session.  
   
-## DebuggerDisplay での式の使用  
- DebuggerDisplay 属性では、中かっこ内で一般的な式を使用できますが、この方法はお勧めしません。  
+## <a name="using-expressions-in-debuggerdisplay"></a>Using Expressions in DebuggerDisplay  
+ Although you can use a general expression between the braces in a DebuggerDisplay attribute, this practice is not recommended.  
   
- DebuggerDisplay で使用される一般的な式は、対象となる型の現在のインスタンスのみの `this` ポインターに暗黙的にアクセスします。 この式には、エイリアス、ローカル、またはポインターに対するアクセスはありません。 式からプロパティを参照しても、そのプロパティに関する属性は処理されません。 たとえば、C\# コード `[DebuggerDisplay("Object {count - 2}"`  では、フィールド `Object 6` が 8 の場合に `count` を表示します。  
+ A general expression in DebuggerDisplay has implicit access to the `this` pointer for the current instance of the target type only. The expression has no access to aliases, locals, or pointers. If the expression references properties, attributes on those properties are not processed. For example, the C# code `[DebuggerDisplay("Object {count - 2}"`  would display `Object 6` if the field `count` was 8.  
   
- DebuggerDisplay で式を使用すると、次のような問題が発生する可能性があります。  
+ Using expressions in DebuggerDisplay can lead to the following issues:  
   
--   式の評価はデバッガーで最も負荷のかかる操作であり、式は表示されるたびに評価されます。 これは、コードのステップ実行時にパフォーマンスを低下させる要因になります。 たとえば、コレクションまたは一覧内の値を表示するために使用される複合式は、要素数が多い場合に非常に低速になることがあります。  
+-   Evaluating expressions is the most expensive operation in the debugger and the expression is evaluated each time it is displayed. This can cause performance issues in stepping through code. For example, a complex expression that is used to display the values in a collection or list can be very slow when the number of elements is large.  
   
--   式は、その式が記述された言語の式エバリュエーターではなく、現在のスタック フレームの言語の式エバリュエーターによって評価されます。 これらの言語が異なる場合、予期しない結果が生じる可能性があります。  
+-   Expressions are evaluated by the expression evaluator of the language of the current stack frame and not by the evaluator of the language in which the expression was written. This can cause unpredictable results when the languages are different.  
   
--   式を評価することにより、アプリケーションの状態が変わる可能性があります。 たとえば、プロパティに値を設定する式は、実行するコード内のプロパティ値を変更します。  
+-   Evaluating an expression can change the state of the application. For example, an expression that sets the value of a property mutates the property value in the executing code.  
   
- 式の評価に関して考えられる問題を回避する方法の 1 つは、操作を実行して文字列を返すプライベート プロパティを作成することです。 これにより、DebuggerDisplay 属性は、そのプライベート プロパティの値を表示できます。 このパターンを実装する例を次に示します。  
+ One way to reduce the possible problems of expression evaluation is by creating a private property that performs the operation and returns a string. The DebuggerDisplay attribute can then display the value of that private property. The following example implements this pattern:  
   
-```c#  
+```CSharp  
 [DebuggerDisplay("{DebuggerDisplay,nq}")]  
 public sealed class MyClass   
-{      
-    public int count { get; set; }      
-    public bool flag { get; set; }      
+{      
+    public int count { get; set; }      
+    public bool flag { get; set; }      
     private string DebuggerDisplay  
-   {         
+   {         
         get  
         {  
              return string.Format("("Object {0}", count - 2);  
-        }      
+        }      
     }  
 }  
 ```  
   
-## 使用例  
- 次のコード例では、`DebuggerDisplay` を `DebuggerBrowseable` および `DebuggerTypeProxy` と組み合わせて使用する方法を示します。**\[ウォッチ\]** ウィンドウなど、デバッガーの変数ウィンドウに表示されると、次のように展開が作成されます。  
+## <a name="example"></a>Example  
+ The following code example shows how to use `DebuggerDisplay`, together with `DebuggerBrowseable` and `DebuggerTypeProxy`. When viewed in a debugger variables window, such as the **Watch** window, it produces an expansion that looks like this:  
   
-|**名前**|**値**|**型**|  
-|------------|-----------|-----------|  
-|キー|"three"|object {string}|  
-|値|3|object {int}|  
+|**Name**|**Value**|**Type**|  
+|--------------|---------------|--------------|  
+|Key|"three"|object {string}|  
+|Value|3|object {int}|  
   
-```c#  
+```CSharp  
 [DebuggerDisplay("{value}", Name = "{key}")]  
 internal class KeyValuePairs  
 {  
@@ -179,7 +196,8 @@ class MyHashtable
 }  
 ```  
   
-## 参照  
- [DebuggerTypeProxy 属性の使用](../debugger/using-debuggertypeproxy-attribute.md)   
- [カスタム データ型の表示](../debugger/create-custom-views-of-dot-managed-objects.md)   
- [Enhancing Debugging with the Debugger Display Attributes](../Topic/Enhancing%20Debugging%20with%20the%20Debugger%20Display%20Attributes.md)
+## <a name="see-also"></a>See Also  
+ [Using DebuggerTypeProxy Attribute](../debugger/using-debuggertypeproxy-attribute.md)   
+ [Create custom views of managed objects](../debugger/create-custom-views-of-dot-managed-objects.md)   
+ [Format specifiers in C#](../debugger/format-specifiers-in-csharp.md)   
+ [Enhancing Debugging with the Debugger Display Attributes](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

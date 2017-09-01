@@ -1,92 +1,109 @@
 ---
-title: "THREADPROPERTY_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "THREADPROPERTY_FIELDS"
-helpviewer_keywords: 
-  - "THREADPROPERTY_FIELDS 列挙型"
+title: THREADPROPERTY_FIELDS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- THREADPROPERTY_FIELDS
+helpviewer_keywords:
+- THREADPROPERTY_FIELDS enumeration
 ms.assetid: 5b88acb9-03ea-4c29-a788-f0087dccbe23
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# THREADPROPERTY_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f92f2e749cbba7431d1be2daa3ada0c26bd7157c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-スレッドに関してどの情報を取得するかを指定します。  
+---
+# <a name="threadpropertyfields"></a>THREADPROPERTY_FIELDS
+Specifies what information about a thread is to be retrieved.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-enum enum_THREADPROPERTY_FIELDS {   
-   TPF_ID           = 0x0001,  
-   TPF_SUSPENDCOUNT = 0x0002,  
-   TPF_STATE        = 0x0004,  
-   TPF_PRIORITY     = 0x0008,  
-   TPF_NAME         = 0x0010,  
-   TPF_LOCATION     = 0x0020,  
-   TPF_ALLFIELDS    = 0xffffffff  
+```cpp  
+enum enum_THREADPROPERTY_FIELDS {   
+   TPF_ID           = 0x0001,  
+   TPF_SUSPENDCOUNT = 0x0002,  
+   TPF_STATE        = 0x0004,  
+   TPF_PRIORITY     = 0x0008,  
+   TPF_NAME         = 0x0010,  
+   TPF_LOCATION     = 0x0020,  
+   TPF_ALLFIELDS    = 0xffffffff  
 };  
 typedef DWORD THREADPROPERTY_FIELDS;  
 ```  
   
-```c#  
-public enum enum_THREADPROPERTY_FIELDS {   
-   TPF_ID           = 0x0001,  
-   TPF_SUSPENDCOUNT = 0x0002,  
-   TPF_STATE        = 0x0004,  
-   TPF_PRIORITY     = 0x0008,  
-   TPF_NAME         = 0x0010,  
-   TPF_LOCATION     = 0x0020,  
-   TPF_ALLFIELDS    = 0xffffffff  
+```csharp  
+public enum enum_THREADPROPERTY_FIELDS {   
+   TPF_ID           = 0x0001,  
+   TPF_SUSPENDCOUNT = 0x0002,  
+   TPF_STATE        = 0x0004,  
+   TPF_PRIORITY     = 0x0008,  
+   TPF_NAME         = 0x0010,  
+   TPF_LOCATION     = 0x0020,  
+   TPF_ALLFIELDS    = 0xffffffff  
 };  
 ```  
   
-## メンバー  
- TPF\_ID  
- [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) の構造体の初期化と `dwThreadId` のフィールドを使用します。  
+## <a name="members"></a>Members  
+ TPF_ID  
+ Initialize/use the `dwThreadId` field of the [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) structure.  
   
- TPF\_SUSPENDCOUNT  
- `THREADPROPERTIE`S の構造体の初期化と `dwSuspendCount` のフィールドを使用します。  
+ TPF_SUSPENDCOUNT  
+ Initialize/use the `dwSuspendCount` field of the `THREADPROPERTIE`S structure.  
   
- TPF\_STATE  
- `THREADPROPERTIE`S の構造体の初期化と `dwThreadState` のフィールドを使用します。  
+ TPF_STATE  
+ Initialize/use the `dwThreadState` field of the `THREADPROPERTIE`S structure.  
   
- TPF\_PRIORITY  
- `THREADPROPERTIE`S の構造体の初期化と `bstrPriority` のフィールドを使用します。  
+ TPF_PRIORITY  
+ Initialize/use the `bstrPriority` field of the `THREADPROPERTIE`S structure.  
   
- TPF\_NAME  
- `THREADPROPERTIE`S の構造体の初期化と `bstrName` のフィールドを使用します。  
+ TPF_NAME  
+ Initialize/use the `bstrName` field of the `THREADPROPERTIE`S structure.  
   
- TPF\_LOCATION  
- `THREADPROPERTIE`S の構造体の初期化と `bstrLocation` のフィールドを使用します。  
+ TPF_LOCATION  
+ Initialize/use the `bstrLocation` field of the `THREADPROPERTIE`S structure.  
   
- TPF\_ALLFIELDS  
- すべてのフィールドを指定します。  
+ TPF_ALLFIELDS  
+ Specifies all fields.  
   
-## 解説  
- [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) の構造体のフィールドが初期化するかを示すためにこれらの値は引数 [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) のメソッドに渡されます。  
+## <a name="remarks"></a>Remarks  
+ These values are passed as an argument to the [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) method to indicate which fields of the [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) structure are to be initialized.  
   
- `THREADPROPERTIES` の構造体の `dwFields` のメンバーはこれらの値がどのフィールドが使用され有効かを示すために使用されます。  
+ These values are also used in `dwFields` member of the `THREADPROPERTIES` structure to indicate which fields are used and valid.  
   
- これらのフラグはビットごと `OR` に組み合わせることがあります。  
+ These flags may be combined with a bitwise `OR`.  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)   
  [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)

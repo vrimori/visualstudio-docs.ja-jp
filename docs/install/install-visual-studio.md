@@ -1,8 +1,8 @@
 ---
-title: "Visual Studio 2017 のインストール | Microsoft Docs"
-description: "Visual Studio をインストールする方法について、ステップ バイ ステップで説明します。"
+title: Install Visual Studio 2017 | Microsoft Docs
+description: Learn how to install Visual Studio, step-by-step.
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -21,104 +21,113 @@ ms.assetid: 8d4297e4-9f43-4f12-95ec-22e61154480e
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: 9f7c1d33191adf3fb54cf59cd98ae5fffe14eee4
+ms.translationtype: HT
+ms.sourcegitcommit: 7adecc638a0ea4b198501752930a5c92c9db282c
+ms.openlocfilehash: db6c415762bce85b2384358347310f93a056ec87
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
-ここでは、Visual Studio の新しいインストール方法について説明します。 最新バージョンでは、必要な機能のみをより簡単に選択してインストールできるようになりました。Visual Studio の最小フットプリントが縮小されたことにより、従来よりもさらにすばやくインストールでき、システムへの影響が小さくなります。
+# <a name="install-visual-studio-2017"></a>Install Visual Studio 2017
+Welcome to a new way to install Visual Studio! In our newest version, we've made it easier for you to select and install just the features you need. We've also reduced the minimum footprint of Visual Studio so that it installs more quickly and with less system impact than ever before.
 
-他の新機能については、 [リリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)を参照してください。 また、新しくなったインストール エクスペリエンスの詳細については、[Visual Studio インストーラーの処理速度と効率性の向上](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer/)および[影響の少ない Visual Studio インストールの詳細](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install/)に関するブログ投稿を参照してください。  
+Want to know more about what else is new in this version? See our [release notes](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes).   
 
-インストールの準備ができたら、 各ステップを順に実行していきます。
+Ready to install? We'll walk you through it, step-by-step.
 
-## <a name="check-system-requirements"></a>システム要件を確認する
-作業を始める前に、[システム要件](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs)をチェックして、コンピューターが Visual Studio 2017 をインストールできる状態であることを確認します。
+## <a name="step-1---make-sure-your-computer-is-ready-for-visual-studio"></a>Step 1 - Make sure your computer is ready for Visual Studio
+Before you begin installing Visual Studio
 
-## <a name="download-visual-studio"></a>Visual Studio をダウンロードする
-最初に、Visual Studio をダウンロードします。 これを行うには、次のボタンをクリックし、**[保存]**、**[フォルダーを開く]** の順にクリックします。
+1. Check the [system requirements](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs). This helps you know whether your computer supports Visual Studio 2017.
+2. Apply the latest Windows Updates. This ensures that your computer has both the latest security updates and the required system components for Visual Studio.
+3. Reboot. This ensures that any pending installs or updates don't hinder the Visual Studio install.
+4. Free up space. Remove unneeded files and applications from your %SystemDrive% by, for example, running the Disk Cleanup app.
+
+For questions about running previous versions of Visual Studio side-by-side with Visual Studio 2017, see the [Visual Studio compatibility details](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs#compatibility-with-previous-releases).
+
+## <a name="step-2---download-visual-studio"></a>Step 2 - Download Visual Studio
+Next, download the Visual Studio bootstrapper file. To do so, click the following button, select the edition of Visual Studio 2017 that you want, click **Save**, and then click **Open folder**.
 
  > [!div class="button"]
- > [Visual Studio 2017 をダウンロードする](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ > [Download Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+<br/>
 
-## <a name="install-the-installer"></a>インストーラーのインストール  
-Visual Studio 2017 をダウンロードして、ブートストラップ ファイルを取得します。このファイルを実行すると、新しいライトウェイト インストーラーがインストールされます。 この新しいインストーラーには、インストールのカスタマイズに必要なすべてのものが含まれています。  
 
-> [!IMPORTANT]
-> ご使用のコンピューターに Visual Studio 2017 のプレビュー リリースがインストールされている場合は、Visual Studio 2017 をインストールする前に削除するよう求められます。
+|         |         |
+|---------|---------|
+|  ![film icon for video](media/video-icon.png "Watch a video")  |    [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Download-the-Visual-Studio-Installer-GgrESHD6D_3311787171) on how to download the Visual Studio bootstrapper file and select the edition of Visual Studio that's right for you. |
 
-1.  **[ダウンロード]** フォルダーで、次のいずれかと一致する、または似ているブートストラップ ファイルをダブルクリックします。
+## <a name="step-3---install-the-visual-studio-installer"></a>Step 3 - Install the Visual Studio installer  
+Then, run the bootstrapper file to install the Visual Studio Installer. This new lightweight installer includes everything you need to both install and customize Visual Studio 2017.
 
-  * Visual Studio Enterprise の場合は **vs_enterprise.exe**
-  * Visual Studio Professional の場合は **vs_professional.exe**
-  * Visual Studio Community の場合は **vs_community.exe**  <br><br>
+1.  From your **Downloads** folder, double-click the bootstrapper that matches or is similar to one of the following files:
 
-  ユーザー アカウント制御の通知を受信する場合、**[はい]** をクリックします。  
+  * **vs_enterprise.exe** for Visual Studio Enterprise
+  * **vs_professional.exe** for Visual Studio Professional
+  * **vs_community.exe** for Visual Studio Community  <br><br>
 
-2.  Microsoft の[ライセンス条項](https://www.visualstudio.com/license-terms/)と[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=824704)の確認を求められます。 **[続行]**をクリックします。  
+  If you receive a User Account Control notice, click **Yes**.  
 
-   ![ライセンス条項とプライバシーに関する声明](~/install/media/vs2017-privacy-and-license-terms.PNG "Microsoft のライセンス条項とプライバシーに関する声明")  
+2.  We'll ask you to acknowledge the Microsoft [License Terms](https://www.visualstudio.com/license-terms/) and the Microsoft [Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=824704). Click **Continue**.  
 
-インストールの進行状況を示すいくつかのステータス画面が表示されます。 インストールが終了したら、次は、必要な機能セット (ワークロード) を選択します。
+   ![License Terms and Privacy Statement](media/vs2017-privacy-and-license-terms.PNG "Microsoft License Terms and Privacy Statement")
 
-## <a name="install-workloads"></a>ワークロードのインストール  
- ワークロードを使って、インストールをカスタマイズできます。 必要なワークロードを 1 つ以上選択します。各ワークロードには、好みのプログラミング言語またはプラットフォームに必要な機能が含まれています。  
+## <a name="step-4---select-workloads"></a>Step 4 - Select workloads
 
- 取得方法は次のとおりです。  
+After the installer is installed, you can use it to customize your installation by selecting the feature sets—or workloads—that you want. Here's how.
 
-1.  **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。  
+1.  Find the workload you want in the **Installing Visual Studio** screen.
 
-  ![Visual Studio 2017 セットアップ ダイアログ](~/install/media/vs2017-workloads.PNG "Visual Studio ワークロードのインストール")
+  ![Visual Studio 2017 setup dialog](media/vs2017-workloads.PNG "Install Visual Studio workloads")
 
-     たとえば、.NET デスクトップ開発ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。  
+     For example, choose the .NET desktop development workload. It comes with the default core editor, which includes basic code editing support for over 20 languages, the ability to open and edit code from any folder without requiring a project, and integrated source code control.  
 
-2.  必要なワークロード (複数可) を選択したら、**[インストール]** をクリックします。  
+2.  After you select the workload(s) you want, click **Install**.  
 
-    そうすると、ステータス画面が表示され、Visual Studio のインストール状況が示されます。
+    Next, status screens appear that show the progress of your Visual Studio installation.
 
-3.  新しいワークロードとコンポーネントがインストールされたら、**[起動]** をクリックします。
+3.  After the new workloads and components are installed, click **Launch**.
 
-## <a name="install-individual-components"></a>個々のコンポーネントのインストール
+|         |         |
+|---------|---------|
+|  ![film icon for video](media/video-icon.png "Watch a video")  |    [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Install-Workloads-in-Visual-Studio-2017-jHE19HD6D_1611787171) on how to install the Visual Studio Installer and then install a workload. |
 
-便利なワークロード機能を使わずに Visual Studio のインストールをカスタマイズする場合は、Visual Studio インストーラーで **[個々のコンポーネント]** オプションをクリックし、必要なものを選択して、画面の指示に従います。
+## <a name="step-5---select-individual-components-optional"></a>Step 5 - Select individual components (Optional)
 
-  ![Visual Studio 2017 - 個々のコンポーネントのインストール](~/install/media/vs2017-components.PNG "Visual Studio の個々のコンポーネントのインストール")
+If you don't want to use the Workloads feature to customize your Visual Studio installation, you can do so by installing individual components instead. To do this, click the **Individual components** option from the Visual Studio Installer, select what you want, and then follow the prompts.
 
-## <a name="install-language-packs"></a>言語パックのインストール
+  ![Visual Studio 2017 - Install individual components](media/vs2017-components.PNG "Install Visual Studio individual components")
 
-選択した言語で Visual Studio 2017 をインストールするには、Visual Studio インストーラーで **[言語パック]** オプションをクリックし、画面の指示に従います。
+  |         |         |
+  |---------|---------|
+  |  ![film icon for video](media/video-icon.png "Watch a video")  |   [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Install-Components-in-Visual-Studio-2017-ZMfaVID6D_7411787171) on how to install an individual component by using the Visual Studio Installer. |
 
-  ![Visual Studio 2017 - 言語パックのインストール](~/install/media/vs2017-languages.PNG "Visual Studio の言語パックのインストール")
+## <a name="step-6---install-language-packs-optional"></a>Step 6 - Install language packs (Optional)
 
-### <a name="change-the-installer-language"></a>インストーラーの言語の変更
+By default, the installer program tries to match the language of the operating system when it runs for the first time. To install Visual Studio 2017 in a language of your choosing, click the **Language packs** option from the Visual Studio Installer, and follow the prompts.
 
-既定では、インストーラー プログラムが、最初の実行時にオペレーティング システムの言語の照合を試みます。 インストーラーはこの設定を記憶します。 コマンド ラインからインストーラーを実行することで、この設定を変更できます。 たとえば、`vs_installer.exe --locale en-US` コマンドを実行して、インストーラーを英語で実行するように指定することができます。 この設定は、次回インストーラーを実行したときにも保持されています。 インストーラーでは、zh-CN、zh-TW、cs-CZ、en-US、fr-FR、de-DE、it-IT、ja-JP、ko-KR、pl-PL、pt-BR、ru-RU、es-ES、tr-TR という言語トークンがサポートされます。
+  ![Visual Studio 2017 - Install language packs](media/vs2017-languages.PNG "Install Visual Studio language packs")
 
-## <a name="get-support"></a>サポートを受ける
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング](troubleshooting-installation-issues.md)」ページにあるトラブルシューティングのヒントをご覧ください。
+  |         |         |
+  |---------|---------|
+  |  ![film icon for video](media/video-icon.png "Watch a video")  |   [Watch a video](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Install-Language-Packs-in-Visual-Studio-2017-ByT7yID6D_9011787171) on how to install a language pack by using the Visual Studio Installer. |
 
-## <a name="see-also"></a>関連項目  
-* [Visual Studio 2017 の変更](modify-visual-studio.md)
-* [Visual Studio 2017 の更新](update-visual-studio.md)
-* [Visual Studio 2017 のアンインストール](uninstall-visual-studio.md)
-* [Visual Studio 2017 管理者ガイド](visual-studio-administrator-guide.md)
-* [Visual Studio 2017 で問題を報告する方法](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+### <a name="change-the-installer-language-from-the-command-line"></a>Change the installer language from the command line
+
+Another way that you can change the default language is by running the installer from the command line. For example, you can force the installer to run in English by using the following command: `vs_installer.exe --locale en-US`. The installer will remember this setting when it is run the next time. The installer supports the following language tokens: zh-cn, zh-tw, cs-cz, en-us, es-es, fr-fr, de-de, it-it, ja-jp, ko-kr, pl-pl, pt-br, ru-ru, and tr-tr.
+
+## <a name="step-7---launch-visual-studio"></a>Step 7 - Launch Visual Studio
+
+After Visual Studio installation is complete, click the **Launch** button to [Get Started Developing with Visual Studio](../ide/get-started-developing-with-visual-studio.md).
+
+## <a name="get-support"></a>Get support
+Sometimes, things can go wrong. If your Visual Studio installation fails, see the [Troubleshooting Visual Studio 2017 installation and upgrade issues](troubleshooting-installation-issues.md) page for troubleshooting tips.
+
+## <a name="see-also"></a>See also  
+* [Modify Visual Studio 2017](modify-visual-studio.md)
+* [Update Visual Studio 2017](update-visual-studio.md)
+* [Uninstall Visual Studio 2017](uninstall-visual-studio.md)
+* [Visual Studio 2017 administrator guide](visual-studio-administrator-guide.md)
+  * [Use command-line parameters to install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)
+* [How to report a problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

@@ -1,69 +1,83 @@
 ---
-title: "方法 : データセットと TableAdapters を別々のプロジェクトに分離する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "n 層アプリケーション, 分離 (データセットと TableAdapters を)"
-  - "TableAdapter, n 層アプリケーション"
+title: Separate datasets and TableAdapters into different projects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TableAdapters, n-tier applications
+- n-tier applications, separating Datasets and TableAdapters
 ms.assetid: f66a3940-6227-46af-a930-9177f425f4fd
 caps.latest.revision: 18
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: afb7a5b527ba91d1e495d0c51653894bf4b861da
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法 : データセットと TableAdapters を別々のプロジェクトに分離する
-[TableAdapter](../Topic/TableAdapters.md) およびデータセット クラスを別々のプロジェクトに生成できるように、型指定されたデータセットが強化されました。  これにより、アプリケーション層を分離して、n 層データ アプリケーションをすばやく生成できるようになります。  
+# <a name="separate-datasets-and-tableadapters-into-different-projects"></a>Separate datasets and TableAdapters into different projects
+Typed datasets have been enhanced so that the [TableAdapters](create-and-configure-tableadapters.md) and dataset classes can be generated into separate projects. This enables you to quickly separate application layers and generate n-tier data applications.  
   
- 次の手順では、[型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)を使用して、生成された `TableAdapter` コードを含むプロジェクトとは別個のプロジェクトにデータセット コードを生成するプロセスについて説明します。  
+ The following procedure describes the process of using the **Dataset Designer** to generate dataset code into a project that is separate from the project that contains the generated TableAdapter code.  
   
-## データセットと TableAdapters の分離  
- `TableAdapter` コードからデータセット コードを分離する場合、データセット コードを含めるプロジェクトを現在のソリューションに配置する必要があります。  このプロジェクトが現在のソリューションに配置されていない場合、**\[プロパティ\]** ウィンドウの **\[DataSet プロジェクト\]** の一覧で使用できなくなります。  
+## <a name="separate-datasets-and-tableadapters"></a>Separate datasets and TableAdapters  
+When you separate dataset code from TableAdapter code, the project that  contains the dataset code must be located in the current solution. If this project is not located in the current solution, it won't be available in the **DataSet Project** list in the **Properties** window.  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-#### データセットを別のプロジェクトに分離するには  
+#### <a name="to-separate-the-dataset-into-a-different-project"></a>To separate the dataset into a different project  
   
-1.  データセット \(.xsd ファイル\) を含むソリューションを開きます。  
-  
-    > [!NOTE]
-    >  データセット コードの分離先のプロジェクトがソリューションに含まれていない場合は、プロジェクトを作成するか、既存のプロジェクトをソリューションに追加します。  
-  
-2.  **ソリューション エクスプローラー**で型指定されたデータセット ファイル \(.xsd ファイル\) をダブルクリックして、**データセット デザイナー**でデータセットを開きます。  
-  
-3.  **データセット デザイナー**の空の領域をクリックします。  
-  
-4.  **\[プロパティ\]** ウィンドウで、**\[DataSet プロジェクト\]** ノードを見つけます。  
-  
-5.  **\[DataSet プロジェクト\]** の一覧で、データセット コードを生成するプロジェクトの名前をクリックします。  
-  
-     データセット コードを生成するプロジェクトをクリックすると、**"DataSet ファイル"** プロパティに既定のファイル名が設定されます。  必要な場合はこの名前を変更できます。  さらに、データセット コードを特定のディレクトリに生成する場合は、**"プロジェクト フォルダー"** プロパティをフォルダーの名前に設定できます。  
+1.  Open a solution that contains a dataset (.xsd file).  
   
     > [!NOTE]
-    >  **"DataSet プロジェクト"** プロパティを設定してデータセットと TableAdapter を分離する場合でも、プロジェクト内の既存のデータセット部分クラスは自動的には移動されません。  既存のデータセット部分クラスは、手動でデータセット プロジェクトに移動する必要があります。  
+    >  If the solution does not contain the project into which you want to separate your dataset code, create the project, or add an existing project to the solution.  
   
-6.  データセットを保存します。  
+2.  Double-click a typed dataset file (an .xsd file) in **Solution Explorer** to open the dataset in the **Dataset Designer**.  
   
-     データセット コードが、**\[DataSet プロジェクト\]** プロパティで選択したプロジェクトに生成され、**TableAdapter** コードが現在のプロジェクトに生成されます。  
+3.  Select an empty area of the **Dataset Designer**.  
   
- 既定では、データセットと `TableAdapter` コードを分離すると、結果としてプロジェクトごとに別個のクラス ファイルが生成されます。  元のプロジェクトには、`TableAdapter` コードを含む DatasetName.Designer.vb \(または DatasetName.Designer.cs\) というファイルが存在します。  **"DataSet プロジェクト"** プロパティで指定したプロジェクトには、データセット コードを含む DatasetName.DataSet.Designer.vb \(または DatasetName.DataSet.Designer.cs\) というファイルが存在します。  
+4.  In the **Properties** window, locate the **DataSet Project** node.  
+  
+5.  In the **DataSet Project** list, select the name of the project into which you want to generate the dataset code.  
+  
+     After you select the project into which you want to generate the dataset code, the **DataSet File** property is populated with a default file name. You can change this name if necessary. Additionally, if you want to generate the dataset code into a specific directory, you can set the **Project Folder** property to the name of a folder.  
+  
+    > [!NOTE]
+    >  When you separate datasets and TableAdapters (by setting the **DataSet Project** property), existing partial dataset classes in the project won't be moved automatically. Existing partial dataset classes must be  moved manually to the dataset project.  
+  
+6.  Save the dataset.  
+  
+     The dataset code is generated into the selected project in the **DataSet Project** property, and the **TableAdapter** code is generated into the current project.  
+  
+ By default, after you separate the dataset and TableAdapter code, the result is a discrete class file in each project. The original project has a file  named DatasetName.Designer.vb (or DatasetName.Designer.cs) that contains the TableAdapter code. The project that's designated in the **Dataset Project** property has a file named DatasetName.DataSet.Designer.vb (or DatasetName.DataSet.Designer.cs) that contains the dataset code.  
   
 > [!NOTE]
->  データセットまたは `TableAdapter` プロジェクトを選択し、**ソリューション エクスプローラー**で **\[すべてのファイルを表示\]** をクリックして生成されたクラス ファイルを表示します。  
+>  To view the generated class file, select the dataset or TableAdapter project. Then, in **Solution Explorer**, select **Show All Files**.  
   
-## 参照  
- [n 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)   
- [チュートリアル : n 層データ アプリケーションの作成](../data-tools/walkthrough-creating-an-n-tier-data-application.md)   
- [階層更新](../data-tools/hierarchical-update.md)   
- [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)   
- [ADO.NET](../Topic/ADO.NET.md)
+## <a name="see-also"></a>See Also  
+ [N-Tier Data Applications Overview](../data-tools/n-tier-data-applications-overview.md)   
+ [Walkthrough: Creating an N-Tier Data Application](../data-tools/walkthrough-creating-an-n-tier-data-application.md)   
+ [Hierarchical update](../data-tools/hierarchical-update.md)   
+ [Accessing data in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)   
+ [ADO.NET](/dotnet/framework/data/adonet/index)

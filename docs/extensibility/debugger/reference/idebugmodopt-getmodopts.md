@@ -1,57 +1,74 @@
 ---
-title: "IDebugModOpt::GetModOpts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugModOpt::GetModOpts"
-  - "GetModOpts"
+title: IDebugModOpt::GetModOpts | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugModOpt::GetModOpts
+- GetModOpts
 ms.assetid: cb513fa9-d521-4a65-b968-f55f53a368df
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugModOpt::GetModOpts
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f182364816d6fcfd8e463993b05563310c7f6f9f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-オプションの修飾子の一覧を取得します。  
+---
+# <a name="idebugmodoptgetmodopts"></a>IDebugModOpt::GetModOpts
+Retrieves a list of optional modifiers.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetModOpts(  
-   ULONG  celt,  
-   BSTR*  rgelt,  
-   ULONG* pceltFetched  
+   ULONG  celt,  
+   BSTR*  rgelt,  
+   ULONG* pceltFetched  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetModOpts(  
-   uint         celt,  
-   out string[] rgelt,  
-   ref uint     pceltFetched  
+   uint         celt,  
+   out string[] rgelt,  
+   ref uint     pceltFetched  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `celt`  
- \[出力\] 返される要素の数。  
+ [in] Number of elements to be returned.  
   
  `rgelt`  
- \[入力\] オプションを含む配列を返します。  
+ [out] Returns an array that contains the options.  
   
  `pceltFetched`  
- \[入力出力\] 要素の数は `rgelt` の配列に返される。  
+ [in, out] Number of elements returned in the `rgelt` array.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugModOpt](../../../extensibility/debugger/reference/idebugmodopt.md)

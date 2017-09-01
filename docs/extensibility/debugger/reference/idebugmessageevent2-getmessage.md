@@ -1,5 +1,5 @@
 ---
-title: "IDebugMessageEvent2::GetMessage |Microsoft ドキュメント"
+title: IDebugMessageEvent2::GetMessage | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,18 +31,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a54fe55d214e23394783f92c6ce6311257d5ef5d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 190d4dab907e1c0934cb91f7fef6f87989569cad
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugmessageevent2getmessage"></a>IDebugMessageEvent2::GetMessage
-表示されるメッセージを取得します。  
+Gets the message to be displayed.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetMessage(   
    MESSAGETYPE* pMessageType,  
    BSTR*        pbstrMessage,  
@@ -52,7 +53,7 @@ HRESULT GetMessage(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetMessage(   
    out enum_MESSAGETYPE pMessageType,  
    out string           pbstrMessage,  
@@ -62,26 +63,26 @@ int GetMessage(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pMessageType`  
- [out]値を返す、 [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)メッセージの種類を表す列挙体です。  
+ [out] Returns a value from the [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) enumeration that describes the type of the message.  
   
  `pbstrMessage`  
- [out]メッセージを返します。  
+ [out] Returns the message.  
   
  `pdwType`  
- [out]Win32 の規則を使用して、メッセージの型を返す`MessageBox`関数です。 参照してください、 [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8)詳細関数です。  
+ [out] Returns the type of the message, using the conventions of the Win32 `MessageBox` function. See the [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8) function for details.  
   
  `pbstrHelpFileName`  
- [入力、出力]ヘルプ ファイルの名前を返します。 ヘルプ ファイルが存在しない場合、(C++) を null または空の (c#) 値を指定できます。  
+ [in, out] Returns the help file name. May be a null (C++) or empty (C#) value if there is no help file.  
   
  `pdwHelpId`  
- [入力、出力]ヘルプ識別子を返します。 ヘルプがない場合は 0 を関連付けられるこのメッセージです。  
+ [in, out] Returns the help identifier. May be 0 if there is no help associated with this message.  
   
-## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)   
- [メッセージの種類](../../../extensibility/debugger/reference/messagetype.md)   
+ [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)   
  [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8)

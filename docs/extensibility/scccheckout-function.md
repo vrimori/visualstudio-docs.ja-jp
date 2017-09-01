@@ -1,79 +1,96 @@
 ---
-title: "SccCheckout 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccCheckout"
-helpviewer_keywords: 
-  - "SccCheckout 関数"
+title: SccCheckout Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccCheckout
+helpviewer_keywords:
+- SccCheckout function
 ms.assetid: 06e9ecd7-fc09-40c1-9dd1-2b56c622c80b
 caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# SccCheckout 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 32349017e005654d269f9dca7bd7d29c0985bc78
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-完全修飾ファイル名のリストを指定するには、この関数はそれらローカル ドライブです。 コメントは、チェック アウトされているすべてのファイルに適用されます。 コメントの引数を指定できます、 `null` 文字列。  
+---
+# <a name="scccheckout-function"></a>SccCheckout Function
+Given a list of fully qualified file names, this function checks them out to the local drive. The comment applies to all files being checked out. The comment argument can be a `null` string.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccCheckout (  
-   LPVOID    pvContext,  
-   HWND      hWnd,  
-   LONG      nFiles,  
-   LPCSTR*   lpFileNames,  
-   LPCSTR    lpComment,  
-   LONG      fOptions,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pvContext,  
+   HWND      hWnd,  
+   LONG      nFiles,  
+   LPCSTR*   lpFileNames,  
+   LPCSTR    lpComment,  
+   LONG      fOptions,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in] The source control plug-in context structure.  
   
- hwnd の分離  
- \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
+ hWnd  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  nFiles  
- \[in\]選択したファイルをチェック アウトの数。  
+ [in] Number of files selected to be checked out.  
   
  lpFileNames  
- \[in\]チェック アウトするファイルの完全修飾パス名の配列。  
+ [in] Array of fully qualified local path names of files to be checked out.  
   
  lpComment  
- \[in\]これらのチェック アウトされている選択したファイルに適用されるコメントです。  
+ [in] Comment to be applied to each of the selected files being checked out.  
   
- される  
- \[in\]コマンドのフラグ \(を参照してください [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)\)。  
+ fOptions  
+ [in] Command flags (see [Bitflags Used by Specific Commands](../extensibility/bitflags-used-by-specific-commands.md)).  
   
  pvOptions  
- \[in\]ソース管理プラグインに固有のオプションです。  
+ [in] Source control plug-in-specific options.  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|値|説明|  
-|-------|--------|  
-|SCC\_OK|チェック アウトは成功しました。|  
-|SCC\_E\_FILENOTCONTROLLED|選択したファイルはソース コード管理下ではありません。|  
-|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
-|SCC\_E\_NOTAUTHORIZED|この操作を実行できません。|  
-|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。 が、ファイルをチェック アウトしません。|  
-|SCC\_E\_ALREADYCHECKEDOUT|ユーザーでは、チェック アウトされているファイルが既に存在します。|  
-|SCC\_E\_FILEISLOCKED|新しいバージョンの作成を禁止するファイルがロックされています。|  
-|SCC\_E\_FILEOUTEXCLUSIVE|別のユーザーには、このファイルの排他チェック アウトが行われます。|  
-|SCC\_I\_OPERATIONCANCELED|操作が完了する前に取り消されました。|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Check out was successful.|  
+|SCC_E_FILENOTCONTROLLED|The selected file is not under source code control.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure. The file was not checked out.|  
+|SCC_E_ALREADYCHECKEDOUT|The user already has the file checked out.|  
+|SCC_E_FILEISLOCKED|The file is locked, prohibiting the creation of new versions.|  
+|SCC_E_FILEOUTEXCLUSIVE|Another user has done an exclusive checkout on this file.|  
+|SCC_I_OPERATIONCANCELED|The operation was cancelled before completion.|  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
- [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+ [Bitflags Used by Specific Commands](../extensibility/bitflags-used-by-specific-commands.md)

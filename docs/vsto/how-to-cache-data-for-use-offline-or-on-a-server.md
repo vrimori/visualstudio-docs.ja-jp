@@ -1,71 +1,75 @@
 ---
-title: "方法 : オフラインで使用するデータまたはサーバー上で使用するデータをキャッシュする"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "データ [Visual Studio での Office 開発], キャッシュ"
-  - "データ キャッシュ [Visual Studio での Office 開発], オフライン使用"
-  - "データ キャッシュ [Visual Studio での Office 開発], サーバー使用"
-  - "データセット [Visual Studio での Office 開発], キャッシュ"
-  - "Office アプリケーション [Visual Studio での Office 開発], データ"
-  - "オフライン データ [Visual Studio での Office 開発]"
+title: 'How to: Cache Data for Use Offline or on a Server | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data caching [Office development in Visual Studio], server use
+- Office applications [Office development in Visual Studio], data
+- datasets [Office development in Visual Studio], caching
+- offline data [Office development in Visual Studio]
+- data [Office development in Visual Studio], caching
+- data caching [Office development in Visual Studio], offline use
 ms.assetid: 6246b187-9413-4336-821d-2259b1adec5a
 caps.latest.revision: 49
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 48
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 0958c4b94f6d0d1e5121ee3d153cf5a19ddfe42f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法 : オフラインで使用するデータまたはサーバー上で使用するデータをキャッシュする
-  ドキュメント内でキャッシュするデータ項目を指定して、オフラインで使用できます。  ドキュメントがサーバーに保存されているときに、他のコードからドキュメント内のデータを使用することもできます。  
+# <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>How to: Cache Data for Use Offline or on a Server
+  You can mark a data item to be cached in the document, so that it is available offline. This also makes it possible for the data in the document to be manipulated by other code when the document is stored on a server.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- キャッシュするデータ項目は、データ項目をコードで宣言するときに指定するか、<xref:System.Data.DataSet> を使用する場合は、**プロパティ** ウィンドウのプロパティを設定して指定します。  <xref:System.Data.DataSet> または <xref:System.Data.DataTable> ではないデータ項目をキャッシュする場合は、ドキュメントにキャッシュするための基準を満たすことを確認します。  詳細については、「[キャッシュされたデータ](../vsto/caching-data.md)」を参照してください。  
+ You can mark a data item to be cached when the data item is declared in your code, or, if you are using a <xref:System.Data.DataSet>, by setting a property in the **Properties** window. If you are caching a data item that is not a <xref:System.Data.DataSet> or <xref:System.Data.DataTable>, ensure that it meets the criteria for being cached in the document. For more information, see [Caching Data](../vsto/caching-data.md).  
   
 > [!NOTE]  
->  Visual Basic で **Cached** および **WithEvents** を指定して作成したデータセット \(**\[データ ソース\]** ウィンドウまたは**ツールボックス**からドラッグされ、**CacheInDocument** プロパティが **True** に設定されたデータセットを含む\) は、アンダースコアで始まる名前でキャッシュに格納されます。  たとえば、Customers という名前のデータセットを作成した場合、<xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> の名前はキャッシュ内では \_Customers です。  キャッシュされた項目へのアクセスに <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> を使用する場合、Customers ではなく \_Customers を指定する必要があります。  
+>  Datasets created using Visual Basic that are marked as **Cached** and **WithEvents** (including datasets that are dragged from the **Data Sources** window or **Toolbox** that have the **CacheInDocument** property set to **True**) have an underscore prefixed to their names in the cache. For example, if you create a dataset and name it **Customers**, the <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> name will be **_Customers** in the cache. When you use <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> to access this cached item, you must specify **_Customers** instead of **Customers**.  
   
-### コードを使用してドキュメント内のデータをキャッシュするには  
+### <a name="to-cache-data-in-the-document-using-code"></a>To cache data in the document using code  
   
-1.  データ項目のパブリック フィールドまたはプロパティを、プロジェクトのホスト項目クラス \(たとえば、Word プロジェクトの場合は `ThisDocument` クラス、Excel プロジェクトの場合は `ThisWorkbook` クラス\) のメンバーとして宣言します。  
+1.  Declare a public field or property for the data item as a member of a host item class in your project, such as the `ThisDocumen`t class in a Word project or the `ThisWorkbook` class in an Excel project.  
   
-2.  メンバーに <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 属性を適用し、データ項目がドキュメントのデータ キャッシュに格納されるように設定します。  次の例では、この属性を <xref:System.Data.DataSet> のフィールド宣言に適用しています。  
+2.  Apply the <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> attribute to the member to mark the data item to be stored in the document's data cache. The following example applies this attribute to a field declaration for a <xref:System.Data.DataSet>.  
   
-     [!code-csharp[Trin_VstcoreDataExcel#11](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/CS/Sheet1.cs#11)]
-     [!code-vb[Trin_VstcoreDataExcel#11](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDataExcel/VB/Sheet1.vb#11)]  
+     [!code-csharp[Trin_VstcoreDataExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#11)]  [!code-vb[Trin_VstcoreDataExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#11)]  
   
-3.  データ項目のインスタンスを作成し、\(該当する場合は\) データベースからそれを読み込むためのコードを追加します。  
+3.  Add code to create an instance of the data item and, if applicable, to load it from the database.  
   
-     データ項目が読み込まれるのは最初の作成時のみで、その後はキャッシュがドキュメント内に残されます。キャッシュの内容を更新するには他のコードを作成する必要があります。  
+     The data item is only loaded when it is first created; thereafter, the cache stays with the document and you must write other code to update it.  
   
-### プロパティ ウィンドウを使用してドキュメント内のデータセットをキャッシュするには  
+### <a name="to-cache-a-dataset-in-the-document-by-using-the-properties-window"></a>To cache a dataset in the document by using the Properties window  
   
-1.  Visual Studio デザイナーのツールを使用して、データセットをプロジェクトに追加します。たとえば、**\[データ ソース\]** ウィンドウを使用して、データ ソースをプロジェクトに追加します。  
+1.  Add the dataset to the project by using tools in the Visual Studio designer, for example, by adding a data source to your project using the **Data Sources** window.  
   
-2.  データセットのインスタンスをまだ作成してない場合は作成し、デザイナーでそのインスタンスを選択します。  
+2.  Create an instance of the dataset if you do not already have one, and select the instance in the designer.  
   
-3.  **\[プロパティ\]** ウィンドウで、**CacheInDocument** プロパティを **True** に設定します。  
+3.  In the **Properties** window, set the **CacheInDocument** property to **True**.  
   
-     詳細については、「[Office プロジェクトのプロパティ](../vsto/properties-in-office-projects.md)」を参照してください。  
+     For more information, see [Properties in Office Projects](../vsto/properties-in-office-projects.md).  
   
-4.  **\[プロパティ\]** ウィンドウで、**\[Modifiers\]** プロパティを **\[Public\]** \(既定では、**\[Internal\]**\) に設定します。  
+4.  In the **Properties** window, set the **Modifiers** property to **Public** (by default it is **Internal**).  
   
-## 参照  
- [キャッシュされたデータ](../vsto/caching-data.md)   
- [方法 : Office ドキュメント内のデータ ソースをプログラムでキャッシュする](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)   
- [方法 : パスワードで保護されたドキュメント内のデータをキャッシュする](../vsto/how-to-cache-data-in-a-password-protected-document.md)   
- [サーバー上のドキュメント内のデータへのアクセス](../vsto/accessing-data-in-documents-on-the-server.md)   
- [データの保存](../data-tools/saving-data.md)  
+## <a name="see-also"></a>See Also  
+ [Caching Data](../vsto/caching-data.md)   
+ [How to: Programmatically Cache a Data Source in an Office Document](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)   
+ [How to: Cache Data in a Password-Protected Document](../vsto/how-to-cache-data-in-a-password-protected-document.md)   
+ [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)   
+ [Saving Data](/visualstudio/data-tools/saving-data)  
   
   

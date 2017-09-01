@@ -1,254 +1,268 @@
 ---
-title: "Windows Communication Foundation Services and WCF Data Services in Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "services, WCF Data"
-  - "WCF services, binding to"
-  - "WCF services, asynchronous service methods"
-  - "service references [Visual Studio]"
-  - "WCF Data Services"
-  - "asynchronous calls"
-  - "service references [Visual Studio], type sharing"
-  - "endpoints [WCF]"
-  - "asynchronous service methods"
-  - "service references [Visual Studio] endpoints"
-  - "WCF services, type sharing"
-  - "Windows Communication Foundation, in Visual Studio"
-  - "services, WCF"
-  - "WCF service, Visual Studio"
-  - "data services, WCF"
-  - "services, in Visual Studio"
-  - "data binding [Visual Studio], WCF"
-  - "service endpoints [Visual Studio]"
-  - "service references [Visual Studio], asynchronous calls"
-  - "services, Windows Communication Foundation"
-  - "type sharing in WCF services"
-  - "WCF services, endpoints"
-  - "service method, called asynchronously[Visual Studio]"
+title: Windows Communication Foundation Services and WCF Data Services in Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- services, WCF Data
+- WCF services, binding to
+- WCF services, asynchronous service methods
+- service references [Visual Studio]
+- WCF Data Services
+- asynchronous calls
+- service references [Visual Studio], type sharing
+- endpoints [WCF]
+- asynchronous service methods
+- service references [Visual Studio] endpoints
+- WCF services, type sharing
+- Windows Communication Foundation, in Visual Studio
+- services, WCF
+- WCF service, Visual Studio
+- data services, WCF
+- services, in Visual Studio
+- data binding [Visual Studio], WCF
+- service endpoints [Visual Studio]
+- service references [Visual Studio], asynchronous calls
+- services, Windows Communication Foundation
+- type sharing in WCF services
+- WCF services, endpoints
+- service method, called asynchronously[Visual Studio]
 ms.assetid: d56f12cb-e139-4fec-b3e4-488383356642
 caps.latest.revision: 26
-caps.handback.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: bf4b2f765981d609ccb089e1bee8195dc9b0947d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# Windows Communication Foundation Services and WCF Data Services in Visual Studio
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 2008 には、分散アプリケーションを作成するための Microsoft のテクノロジである、Windows Communication Foundation \(WCF\) および [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]を扱うためのツールが用意されています。  ここでは、サービスの概要を [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の観点から説明します。  
+# <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Windows Communication Foundation Services and WCF Data Services in Visual Studio
+Visual Studio provides tools for working with Windows Communication Foundation (WCF) and [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], Microsoft technologies for creating distributed applications. This topic provides an introduction to services from a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] perspective. For the full documentation, see [WCF Data Services 4.5](/dotnet/framework/data/wcf/index).  
   
-## WCF とは  
- [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] は、セキュリティで保護され、信頼性が高く、トランザクション処理の対象となり、相互運用が可能な分散アプリケーションを作成するための統一されたフレームワークです。  以前のバージョンの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、アプリケーション間の通信に使用できる複数のテクノロジがありました。  
+## <a name="what-is-wcf"></a>What Is WCF?  
+ [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] is a unified framework for creating secure, reliable, transacted, and interoperable distributed applications. It replaces older interprocess communication technologies such as ASMX Web services, .NET Remoting, Enterprise Services (DCOM), and MSMQ. WCF brings together the functionality of all those technologies under a unified programming model. This simplifies the experience of developing distributed applications.  
   
- どのプラットフォームからでもアクセスできるような仕方で情報を共有したい場合は、Web サービス \(ASMX Web サービスとも呼ばれる\) を使用しました。  クライアントと、Windows オペレーティング システム上で実行されるサーバーとの間で単にデータを移動したい場合は、.NET リモート処理を使用しました。  トランザクション通信を行いたい場合は、Enterprise Services \(DCOM\) を使用し、キュー モデルを使用したい場合はメッセージ キュー \(MSMQ とも呼ばれる\) を使用しました。  
+#### <a name="what-are-wcf-data-services"></a>What are WCF Data Services  
+ [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] is an implementation of the Open Data (OData) Protocol standard.  WCF Data Services lets you expose tabular data as a set of REST APIs, allowing you to return data using standard HTTP verbs such as GET, POST, PUT or DELETE. On the server side, WCF Data Services are being superseded by [ASP.NET Web API](http://www.asp.net/web-api) for creating new OData services. The WCF Data Services client library continues to be a good choice for consuming OData services in a .NET application from Visual Studio (**Project &#124; Add Service Reference**) . For more information, see [WCF Data Services 4.5](http://go.microsoft.com/fwlink/?LinkID=119952).  
   
- WCF では、これらすべてのテクノロジの機能を、1 つのプログラミング モデルに統一しています。  これにより、分散アプリケーションの開発作業が簡略化されます。  
+### <a name="wcf-programming-model"></a>WCF Programming Model  
+ The WCF Programming model is based on communication between two entities: a WCF service and a WCF client. The programming model is encapsulated in the <xref:System.ServiceModel> namespace in the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
-#### WCF データ サービスとは  
- [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]はデータベースと直接対話するサービスで、標準的な HTTP 動詞 \(GET、POST、PUT、DELETE など\) を使用してデータを返すことができます。  一般に、[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]はデータベースでのレコードの作成、更新、または変更に使用されるアプリケーションに適しています。  詳細については、「[ADO.NET Data Services フレームワーク](http://go.microsoft.com/fwlink/?LinkID=119952)」を参照してください。  
+#### <a name="wcf-service"></a>WCF Service  
+ A WCF service is based on an interface that defines a contract between the service and the client. It is marked with a <xref:System.ServiceModel.ServiceContractAttribute> attribute, as shown in the following code:  
   
-### WCF のプログラミング モデル  
- WCF プログラミング モデルは、WCF サービスと WCF クライアントとの間の通信に基づいています。  このプログラミング モデルは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] の <xref:System.ServiceModel> 名前空間にカプセル化されています。  
+ [!code-csharp[WCFWalkthrough#6](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.cs)] [!code-vb[WCFWalkthrough#6](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.vb)]  
   
-#### WCF サービス  
- WCF サービスは、サービスとクライアントの間のコントラクトを定義するインターフェイスに基づいています。  次のコードに示すように、<xref:System.ServiceModel.ServiceContractAttribute> 属性で指定されます。  
+ [!code-csharp[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.cs)] [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.vb)]  
   
- [!code-cs[WCFWalkthrough#6](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.cs)]
- [!code-vb[WCFWalkthrough#6](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.vb)]  
+ You define functions or methods that are exposed by a WCF service by marking them with a <xref:System.ServiceModel.OperationContractAttribute> attribute. In addition, you can expose serialized data by marking a composite type with a <xref:System.Runtime.Serialization.DataContractAttribute> attribute. This enables data binding in a client.  
   
- [!code-cs[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.cs)]
- [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.vb)]  
+ After an interface and its methods are defined, they are encapsulated in a class that implements the interface. A single WCF service class can implement multiple service contracts.  
   
- WCF サービスによって公開される関数またはメソッドを定義するには、それらに <xref:System.ServiceModel.OperationContractAttribute> 属性を付けます。  また、<xref:System.Runtime.Serialization.DataContractAttribute> 属性で複合型を指定することにより、シリアル化されたデータを公開できます。  これにより、クライアントでデータ バインディングを使用できるようになります。  
+ A WCF service is exposed for consumption through what is known as an *endpoint*. The endpoint provides the only way to communicate with the service; you cannot access the service through a direct reference as you would with other classes.  
   
- インターフェイスとメソッドを定義すると、それらはインターフェイスを実装するクラスにカプセル化されます。  単一の WCF サービス クラスは、複数のサービス コントラクトを実装できます。  
+ An endpoint consists of an address, a binding, and a contract. The address defines where the service is located; this could be a URL, an FTP address, or a network or local path. A binding defines the way that you communicate with the service. WCF bindings provide a versatile model for specifying a protocol such as HTTP or FTP, a security mechanism such as Windows Authentication or user names and passwords, and much more. A contract includes the operations that are exposed by the WCF service class.  
   
- WCF サービスは、*エンドポイント*と呼ばれるものを使用して利用するように公開されます。  エンドポイントは、サービスと通信するための唯一の方法となります。つまり、他のクラスの場合のように直接参照を使用してサービスにアクセスすることはできません。  
+ Multiple endpoints can be exposed for a single WCF service. This enables different clients to communicate with the same service in different ways. For example, a banking service might provide one endpoint for employees and another for external customers, each using a different address, binding, and/or contract.  
   
- エンドポイントは、アドレス、バインディング、コントラクトで構成されます。  アドレスは、サービスのロケーションを定義します。ロケーションは、URL、FTP アドレス、ネットワーク パス、またはローカル パスで指定することができます。  バインディングは、サービスと通信する方法を定義します。  WCF バインディングは、HTTP や FTP といったプロトコル、Windows 認証やユーザー名とパスワードといったセキュリティ機構などを指定するための汎用的なモデルを提供します。  コントラクトには、WCF サービス クラスによって公開される操作が含まれます。  
+#### <a name="wcf-client"></a>WCF Client  
+ A WCF client consists of a *proxy* that enables an application to communicate with a WCF service, and an endpoint that matches an endpoint defined for the service. The proxy is generated on the client side in the app.config file and includes information about the types and methods that are exposed by the service. For services that expose multiple endpoints, the client can select the one that best fits its needs, for example, to communicate over HTTP and use Windows Authentication.  
   
- 複数のエンドポイントを単一の WCF サービスに対して公開することができます。  これにより、さまざまなクライアントが同一のサービスとさまざまな方法で通信することができます。  たとえば、銀行のサービスでは、従業員用に 1 つのエンドポイントを用意し、外部の顧客用に別のエンドポイントを用意するかもしれません。それぞれのエンドポイントでは、使用するアドレス、バインディング、コントラクトのいずれか \(あるいはすべて\) が異なります。  
+ After a WCF client has been created, you reference the service in your code just as you would any other object. For example, to call the `GetData` method shown earlier, you would write code that resembles the following:  
   
-#### WCF クライアント  
- WCF クライアントは、アプリケーションが WCF サービスと通信できるようにする*プロキシ*と、サービスに対して定義されているエンドポイントと対応するエンドポイントで構成されます。  プロキシは、クライアント側の app.config ファイルで生成されます。プロキシには、サービスによって公開される型とメソッドに関する情報が含まれます。  複数のエンドポイントを公開するサービスの場合は、クライアントがその必要に合った最適なものを選択することができます。たとえば、HTTP 経由で通信し Windows 認証を使用するというような必要に合わせて選択できます。  
+ [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.cs)] [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.vb)]  
   
- WCF クライアントの作成後は、他のオブジェクトの場合と同じように、コード内でサービスを参照します。  たとえば、前の例で示した `GetData` メソッドを呼び出すには、次のようなコードを記述できます。  
+## <a name="wcf-tools-in-visual-studio"></a>WCF Tools in Visual Studio  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] provides tools to help you create both WCF services and WCF clients. For a walkthrough that demonstrates the tools, see [Walkthrough: Creating a simple WCF Service in Windows Forms](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md).  
   
- [!code-cs[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.cs)]
- [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.vb)]  
+### <a name="creating-and-testing-wcf-services"></a>Creating and Testing WCF Services  
+ You can use the WCF [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] templates as a foundation to quickly create your own service. You can then use WCF Service Auto Host and WCF Test Client to debug and test the service. These tools together provide a fast and convenient debug and testing cycle, and eliminate the requirement to commit to a hosting model at an early stage.  
   
-## Visual Studio の WCF ツール  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 2008 には、WCF サービスと WCF クライアントの両方を作成するのに役立つツールが用意されています。  ツールを紹介するチュートリアルについては、「[Walkthrough: Creating and Accessing WCF Services](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md)」を参照してください。  
+#### <a name="wcf-templates"></a>WCF Templates  
+ WCF [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] templates provide a basic class structure for service development. Several WCF templates are available in the **Add New Project** dialog box. These include WCF Service Library projects, WCF Service Web Sites, and WCF Service Item templates.  
   
-### WCF サービスの作成とテスト  
- WCF [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] テンプレートを基にして、独自のサービスを短時間で作成できます。  その後、WCF Service Auto Host と WCF Test Client を使用してサービスをデバッグおよびテストできます。  これらのツールにより、迅速で簡単なデバッグおよびテスト サイクルが実現し、早い段階でホスト モデルにコミットする必要がなくなります。  
+ When you select a template, files are added for a service contract, a service implementation, and a service configuration. All necessary attributes are already added, creating a simple "Hello World" type of service, and you did not have to write any code. You will, of course, want to add code to provide functions and methods for your real world service, but the templates provide the basic foundation.  
   
-#### WCF テンプレート  
- WCF [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] テンプレートには、サービス開発のための基本的なクラス構造が用意されています。  いくつかの WCF テンプレートが **\[新しいプロジェクトの追加\]** ダイアログ ボックスで選択できます。  使用できるテンプレートには、WCF Service Library プロジェクト、WCF Service Web Sites、および WCF Service Item テンプレートがあります。  
+ To learn more about WCF templates, see [WCF Visual Studio Templates](/dotnet/framework/wcf/wcf-vs-templates).  
   
- テンプレートを選択すると、サービス コントラクト、サービス実装、サービス構成用にファイルが追加されます。  必要な属性は既に追加されており、コードを一切記述しなくても、単純な "Hello World" タイプのサービスが作成されます。  実際のサービス用には、関数とメソッドを提供するコードを追加する必要がありますが、テンプレートによって基本的な基盤が提供されます。  
+#### <a name="wcf-service-host"></a>WCF Service Host  
+ When you start the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] debugger (by pressing F5) for a WCF service project, the WCF Service Host tool is automatically started to host the service locally. WCF Service Host enumerates the services in a WCF service project, loads the project's configuration, and instantiates a host for each service that it finds.  
   
- WCF テンプレートの詳細については、「[WCF Visual Studio テンプレート](../Topic/WCF%20Visual%20Studio%20Templates.md)」を参照してください。  
+ By using WCF Service Host, you can test a WCF service without writing extra code or committing to a specific host during development.  
   
-#### WCF Service Host  
- WCF サービス プロジェクトに対して [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーを開始すると \(F5 を押す\)、WCF Service Host ツールがローカルでのサービスのホストを自動的に開始します。  WCF Service Host は、WCF サービス プロジェクト内のサービスを列挙し、プロジェクトの構成をロードし、検出された各サービスに対するホストをインスタンス化します。  
+ To learn more about WCF Service Host, see [WCF Service Host (WcfSvcHost.exe)](/dotnet/framework/wcf/wcf-service-host-wcfsvchost-exe).  
   
- WCF Service Host を使用することにより、開発中に追加のコードを記述したり、特定のホストにコミットしたりすることなく、WCF サービスをテストできます。  
+#### <a name="wcf-test-client"></a>WCF Test Client  
+ The WCF Test Client tool enables you to input test parameters, submit that input to a WCF service, and view the response that the service sends back. It provides a convenient service testing experience when you combine it with WCF Service Host. The tool can be found in the \Common7\IDE folder, which for Visual Studio 2015 installed in drive C: is here: **C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\\**.  
   
- WCF Service Host の詳細については、「[WCF サービス ホスト \(WcfSvcHost.exe\)](../Topic/WCF%20Service%20Host%20\(WcfSvcHost.exe\).md)」を参照してください。  
+ When you press F5 to debug a WCF service project, WCF Test Client opens and displays a list of service endpoints that are defined in the configuration file. You can test the parameters and start the service, and repeat this process to continuously test and validate your service.  
   
-#### WCF テスト クライアント  
- WCF Test Client ツールによって、テスト パラメーターを入力し、その入力を WCF サービスに送信し、サービスが送り返す応答を表示することができます。  WCF Service Host と組み合わせて使用すると、サービスのテスト作業が簡単になります。  
+ To learn more about WCF Test Client, see [WCF Test Client (WcfTestClient.exe)](/dotnet/framework/wcf/wcf-test-client-wcftestclient-exe).  
   
- F5 を押して WCF サービス プロジェクトをデバッグすると、WCF Test Client が開き、構成ファイルで定義されているサービス エンドポイントの一覧が表示されます。  パラメーターをテストしてサービスを開始し、このプロセスを繰り返すことによって、サービスのテストと検証を継続的に行えます。  
+### <a name="accessing-wcf-services-in-visual-studio"></a>Accessing WCF Services in Visual Studio  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] simplifies the task of creating WCF clients, automatically generating a proxy and an endpoint for services that you add by using the **Add Service Reference** dialog box. All necessary configuration information is added to the app.config file. Most of the time, all that you have to do is instantiate the service in order to use it.  
   
- WCF Test Client の詳細については、「[WCF のテスト用クライアント \(WcfTestClient.exe\)](../Topic/WCF%20Test%20Client%20\(WcfTestClient.exe\).md)」を参照してください。  
+ The **Add Service Reference** dialog box enables you to enter the address for a service or to search for a service that is defined in your solution. The dialog box returns a list of services and the operations provided by those services. It also enables you to define the namespace by which you will reference the services in code.  
   
-### Visual Studio での WCF サービスへのアクセス  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はWCF クライアントを作成するタスクを簡略化し自動的に\[ENT0ENT\] ダイアログ ボックスを使用して追加するサービスのプロキシとエンドポイントを生成します。  必要な構成情報はすべて app.config ファイルに追加されます。ほとんどの場合、必要な作業は、サービスを使用するためにインスタンス化することだけです。  
+ The **Configure Service References** dialog box enables you to customize the configuration for a service. You can change the address for a service, specify access level, asynchronous behavior, and message contract types, and configure type reuse.  
   
- **\[サービス参照の追加\]** ダイアログ ボックスでは、サービスのアドレスを入力するか、ソリューション内で定義されているサービスを検索することができます。  このダイアログ ボックスでは、サービスの一覧と、それらのサービスによって提供される操作の一覧が表示されます。  また、コード内でサービスを参照する際に使用する名前空間を定義することもできます。  
+## <a name="how-to-select-a-service-endpoint"></a>How to: Select a Service Endpoint  
+Some Windows Communication Foundation (WCF) services expose multiple endpoints through which a client may communicate with the service. For example, a service might expose one endpoint that uses an HTTP binding and user name / password security and a second endpoint that uses FTP and Windows Authentication. The first endpoint might be used by applications that access the service from outside a firewall, whereas the second might be used on an intranet.  
   
- **\[サービス参照の構成\]** ダイアログ ボックスでは、サービスの構成をカスタマイズできます。  サービスのアドレスの変更や、アクセス レベル、非同期動作、メッセージ コントラクト タイプの指定、型の再利用の構成を行うことができます。  
+In such a case, you can specify the `endpointConfigurationName` as a parameter to the constructor for a service reference.  
   
-## 方法 : サービス エンドポイントを選択します。  
- WCF \(Windows Communication Foundation\) サービスの中には、クライアントがサービスとの通信に使用できるエンドポイントを複数公開するものがあります。  たとえば、第 1 のエンドポイントでは HTTP バインディングおよびユーザー名とパスワードのセキュリティを使用し、第 2 のエンドポイントでは FTP および Windows 認証を使用するような場合です。  第 1 のエンドポイントはファイアウォールの外側からサービスにアクセスするアプリケーションが使用し、第 2 のエンドポイントはイントラネットで使用されます。  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
- このような場合は、サービス参照のコンストラクターに対するパラメーターとして `endpointConfigurationName` を指定できます。  
+#### <a name="to-select-a-service-endpoint"></a>To select a service endpoint  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+1.  Add a reference to a WCF service by right-clicking the project node in Solution Explorer and choosing **Add service reference**.
   
-#### サービスのエンドポイントを選択するには  
+2.  In the Code Editor, add a constructor for the service reference:  
   
-1.  WCF サービスへの参照を追加します。  詳細については、「[How to: Add, Update, or Remove a Service Reference](../Topic/How%20to:%20Add,%20Update,%20or%20Remove%20a%20Service%20Reference.md)」を参照してください。  
-  
-2.  コード エディターで、サービス参照のコンストラクターを追加します。  
-  
-    ```vb#  
+    ```vb  
     Dim proxy As New ServiceReference.Service1Client(  
     ```  
   
-    ```c#  
+    ```csharp  
     ServiceReference.Service1Client proxy = new ServiceReference.Service1Client(  
     ```  
   
     > [!NOTE]
-    >  *ServiceReference* をサービス参照の名前空間に置き換え、*Service1Client* をサービスの名前に置き換えます。  
+    >  Replace *ServiceReference* with the namespace for the service reference and replace *Service1Client* with the name of the service.  
   
-3.  IntelliSense リストに、コンストラクターのオーバーロードが表示されます。  `endpointConfigurationName As String` オーバーロードを選択します。  
+3.  An IntelliSense list will be displayed with the overloads for the constructor. Select the `endpointConfigurationName As String` overload.  
   
-4.  オーバーロードの後に「`=` *ConfigurationName*」と入力します。*ConfigurationName* は、使用するエンドポイントの名前です。  
+4.  Following the overload, type `=` *ConfigurationName*, where *ConfigurationName* is the name of the endpoint that you want to use.  
   
     > [!NOTE]
-    >  使用できるエンドポイントの名前がわからない場合は、app.config ファイルで検索できます。  
+    >  If you do not know the names of the available endpoints, you can find them in the app.config file.  
   
-#### WCF サービスで使用できるエンドポイントを検索するには  
+#### <a name="to-find-the-available-endpoints-for-a-wcf-service"></a>To find the available endpoints for a WCF service  
   
-1.  **ソリューション エクスプローラー**で、サービス参照を含むプロジェクトの app.config ファイルを右クリックし、**\[開く\]** をクリックします。  ファイルがコード エディターに表示されます。  
+1.  In **Solution Explorer**, right-click the app.config file for the project that contains the service reference and then click **Open**. The file will appear in the Code Editor.  
   
-2.  ファイルで `<Client>` タグを探します。  
+2.  Search for the `<Client>` tag in the file.  
   
-3.  `<Client>` タグの下で、`<Endpoint>` で始まるタグを探します。  
+3.  Search underneath the `<Client>` tag for a tag that starts with `<Endpoint>`.  
   
-     サービス参照が複数のエンドポイントを提供している場合は、複数の `<Endpoint` タグがあります。  
+     If the service reference provides multiple endpoints, there will be two or more `<Endpoint` tags.  
   
-4.  `<EndPoint>` タグの内部には、`name="`*SomeService*`"` パラメーターがあります \(*SomeService* はエンドポイント名を表します\)。  これが、サービス参照のコンストラクターの `endpointConfigurationName As String` オーバーロードに渡すことのできるエンドポイントの名前です。  
+4.  Inside the `<EndPoint>` tag you will find a `name="`*SomeService*`"` parameter (where *SomeService* represents an endpoint name). This is the name for the endpoint that can be passed to the `endpointConfigurationName As String` overload of a constructor for a service reference.  
   
-## 方法 : サービスのメソッドを非同期的に呼び出します  
- WCF \(Windows Communication Foundation\) のほとんどのメソッドは、同期的にも非同期でも呼び出すことができます。  メソッドを非同期で呼び出すと、アプリケーションが低速接続で実行しているときでも、メソッドの呼び出し中にアプリケーションの動作を継続できます。  
+## <a name="how-to-call-a-service-method-asynchronously"></a>How to: Call a Service Method Asynchronously  
+Most methods in Windows Communication Foundation (WCF) services may be called either synchronously or asynchronously. Calling a method asynchronously enables your application to continue to work while the method is being called when it operates over a slow connection.  
   
- 既定では、プロジェクトにサービス参照を追加すると、メソッドを同期的に呼び出すようにプロジェクトが構成されます。  **\[サービス参照の構成\]** ダイアログ ボックスで設定を変更することによって、メソッドを非同期で呼び出すように動作を変更できます。  
+By default, when a service reference is added to a project it is configured to call methods synchronously. You can change the behavior to call methods asynchronously by changing a setting in the **Configure Service Reference** dialog box.  
   
 > [!NOTE]
->  このオプションはサービスごとに設定されます。  サービスのメソッドの 1 つを非同期で呼び出す場合は、すべてのメソッドを非同期で呼び出す必要があります。  
+>  This option is set on a per-service basis. If one method for a service is called asynchronously, all methods must be called asynchronously.  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-#### サービス メソッドを非同期で呼び出すには  
+#### <a name="to-call-a-service-method-asynchronously"></a>To call a service method asynchronously  
   
-1.  **ソリューション エクスプローラー**で、サービス参照を選択します。  
+1.  In **Solution Explorer**, select the service reference.  
   
-2.  **\[プロジェクト\]** メニューの **\[サービス参照の構成\]** をクリックします。  
+2.  On the **Project** menu, click **Configure Service Reference**.  
   
-3.  **\[サービス参照の構成\]** ダイアログ ボックスで、**\[非同期操作の生成\]** チェック ボックスをオンにします。  
+3.  In the **Configure Service Reference** dialog box, select the **Generate asynchronous operations** check box.  
   
-## 方法 : サービスから返されたデータをバインドできます。  
- WCF \(Windows Communication Foundation\) サービスから返されたデータは、他のデータ ソースと同様に、コントロールにバインドできます。  WCF サービスへの参照を追加すると、データを返す複合型がサービスに含まれる場合、これらの型は **\[データ ソース\]** ウィンドウに自動的に追加されます。  
+## <a name="how-to-bind-data-returned-by-a-service"></a>How to: Bind Data Returned by a Service  
+You can bind data returned by a Windows Communication Foundation (WCF) service to a control just as you can bind any other data source to a control. When you add a reference to a WCF service, if the service contains composite types that return data, they are automatically added to the **Data Sources** window.  
   
-#### WCF サービスによって返された 1 つのデータ フィールドにコントロールをバインドするには  
+#### <a name="to-bind-a-control-to-single-data-field-returned-by-a-wcf-service"></a>To bind a control to single data field returned by a WCF service  
   
-1.  **\[データ\]** メニューの **\[データ ソースの表示\]** をクリックします。  **\[データ ソース\]** ウィンドウが表示されます。  
+1.  On the **Data** menu, click **Show Data Sources**. The **Data Sources** window will appear.  
   
-2.  **\[データ ソース\]** ウィンドウで、サービス参照についてのノードを展開します。  サービスから返される複合型があれば、すべて表示されます。  
+2.  In the **Data Sources** window, expand the node for your service reference. Any composite types returned by the service will be displayed.  
   
-3.  型についてのノードを展開します。  その型についてのデータ フィールドが表示されます。  
+3.  Expand a node for a type. The data fields for that type will be displayed.  
   
-4.  フィールドを選択してドロップダウン矢印をクリックすると、このデータ型に使用できるコントロールの一覧が表示されます。  
+4.  Select a field and click the drop-down arrow to display a list of controls that are available for the data type.  
   
-5.  バインド先となるコントロールの型をクリックします。  
+5.  Click the type of control that you want to bind to.  
   
-6.  フィールドをフォームにドラッグします。  コントロールが、<xref:System.Windows.Forms.BindingSource> コンポーネントおよび <xref:System.Windows.Forms.BindingNavigator> コンポーネントと共にフォームに追加されます。  
+6.  Drag the field onto a form. The control will be added to the form together with a <xref:System.Windows.Forms.BindingSource> component and a <xref:System.Windows.Forms.BindingNavigator> component.  
   
-7.  バインドする他のフィールドに対して、手順 4. ～ 6. を繰り返します。  
+7.  Repeat steps 4 though 6 for any other fields that you want to bind.  
   
-#### WCF サービスから返される複合型にコントロールをバインドするには  
+#### <a name="to-bind-a-control-to-composite-type-returned-by-a-wcf-service"></a>To bind a control to composite type returned by a WCF service  
   
-1.  **\[データ\]** メニューの **\[データ ソースの表示\]** をクリックします。  **\[データ ソース\]** ウィンドウが表示されます。  
+1.  On the **Data** menu, select **Show Data Sources**. The **Data Sources** window will appear.  
   
-2.  **\[データ ソース\]** ウィンドウで、サービス参照についてのノードを展開します。  サービスから返される複合型があれば、すべて表示されます。  
+2.  In the **Data Sources** window, expand the node for your service reference. Any composite types returned by the service will be displayed.  
   
-3.  型についてのノードを選択してドロップダウン矢印をクリックすると、使用できるオプションの一覧が表示されます。  
+3.  Select a node for a type and click the drop-down arrow to display a list of available options.  
   
-4.  **DataGridView** をクリックしてデータをグリッドで表示するか、**\[詳細\]** をクリックして個々のコントロールにデータを表示します。  
+4.  Click either **DataGridView** to display the data in a grid or **Details** to display the data in individual controls.  
   
-5.  ノードをフォームにドラッグします。  コントロールが、<xref:System.Windows.Forms.BindingSource> コンポーネントおよび <xref:System.Windows.Forms.BindingNavigator> コンポーネントと共にフォームに追加されます。  
+5.  Drag the node onto the form. The controls will be added to the form together with a <xref:System.Windows.Forms.BindingSource> component and a <xref:System.Windows.Forms.BindingNavigator> component.  
   
-## 方法 : サービスを既存の型を再利用するように構成します。  
- プロジェクトにサービス参照を追加すると、そのサービスで定義されている型がすべてローカル プロジェクトで生成されます。  この結果、共通の [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] の型がサービスで使用されていたり、型が共有ライブラリに定義されていたりすると、重複する型が作成されることがよくあります。  
+## <a name="how-to-configure-a-service-to-reuse-existing-types"></a>How to: Configure a Service to Reuse Existing Types  
+When a service reference is added to a project, any types defined in the service are generated in the local project. In many cases, this creates duplicate types when a service uses common [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] types or when types are defined in a shared library.  
   
- この問題を回避するために、参照されるアセンブリの型は既定で共有されます。  1 つ以上のアセンブリで型の共有を無効にするには、**\[サービス参照の構成\]** ダイアログ ボックスを使用します。  
+To avoid this problem, types in referenced assemblies are shared by default. If you want to disable type sharing for one or more assemblies, you can do so in the **Configure Service References** dialog box.  
   
-#### 1 つのアセンブリで型の共有を無効にするには  
+#### <a name="to-disable-type-sharing-in-a-single-assembly"></a>To disable type sharing in a single assembly  
   
-1.  **ソリューション エクスプローラー**で、サービス参照を選択します。  
+1.  In **Solution Explorer**, select the service reference.  
   
-2.  **\[プロジェクト\]** メニューの **\[サービス参照の構成\]** をクリックします。  
+2.  On the **Project** menu, click **Configure Service Reference**.  
   
-3.  **\[サービス参照の構成\]** ダイアログ ボックスで、**\[参照されたアセンブリを指定して型を再利用\]** をオンにします。  
+3.  In the **Configure Service References** dialog box, select **Reuse types in specified referenced assemblies**.  
   
-4.  型の共有を有効にするアセンブリごとに、チェック ボックスをオンにします。  アセンブリで型の共有を無効にするには、チェック ボックスをオフのままにします。  
+4.  Select the check box for each assembly in which you want to enable type sharing. To disable type sharing for an assembly, leave the check box cleared.  
   
-#### すべてのアセンブリで型の共有を無効にするには  
+#### <a name="to-disable-type-sharing-in-all-assemblies"></a>To disable type sharing in all assemblies  
   
-1.  **ソリューション エクスプローラー**で、サービス参照を選択します。  
+1.  In **Solution Explorer**, select the service reference.  
   
-2.  **\[プロジェクト\]** メニューの **\[サービス参照の構成\]** をクリックします。  
+2.  On the **Project** menu, click **Configure Service Reference**.  
   
-3.  **\[サービス参照の構成\]** ダイアログ ボックスで、**\[参照されたアセンブリで型を再利用\]** チェック ボックスをオフにします。  
+3.  In the **Configure Service References** dialog box, clear the **Reuse types in referenced assemblies** check box.  
   
-## 関連トピック  
+## <a name="related-topics"></a>Related Topics  
   
 |Title|Description|  
 |-----------|-----------------|  
-|[Walkthrough: Creating and Accessing WCF Services](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md)|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] での WCF サービスの作成と使用について順を追って説明します。|  
-|[Walkthrough: Creating and Accessing a WCF Data Service in Visual Studio](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md)|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] における [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]の作成と使用の手順を説明します。|  
-|[WCF 開発ツールの使用](../Topic/Using%20the%20WCF%20Development%20Tools.md)|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で WCF サービスを作成してテストする方法について説明します。|  
-|[How to: Add, Update, or Remove a Service Reference](../Topic/How%20to:%20Add,%20Update,%20or%20Remove%20a%20Service%20Reference.md)|プロジェクトに対して WCF サービスの追加、更新、および削除を行う方法について説明します。|  
-|[How to: Add, Update, or Remove a WCF Data Service Reference](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md)|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]を参照して使用する方法について説明します。|  
-|[How to: Add a Reference to a Web Service](../Topic/How%20to:%20Add%20a%20Reference%20to%20a%20Web%20Service.md)|XML \(ASMX\) Web サービスへの参照をプロジェクトに追加する方法について説明します。|  
-|[Troubleshooting Service References](../data-tools/troubleshooting-service-references.md)|サービス参照で発生することの多いエラーと、その回避方法を示します。|  
-|[WCF サービスのデバッグ](../debugger/debugging-wcf-services.md)|WCF サービスのデバッグ時に発生する一般的な問題、およびデバッグの手法について説明します。|  
-|[Windows Communication Foundation Authentication Service Overview](../Topic/Windows%20Communication%20Foundation%20Authentication%20Service%20Overview.md)|WCF を使用して Web サイトのロール サービスを提供する方法について説明します。|  
-|[Messaging in the .NET Compact Framework](http://msdn.microsoft.com/ja-jp/fb74d82c-f81e-46f9-aceb-f875c5c6be4f)|.NET Compact Framework の WCF メッセージング層のサポートについて説明します。|  
-|[チュートリアル : n 層データ アプリケーションの作成](../data-tools/walkthrough-creating-an-n-tier-data-application.md)|型指定されたデータセットを作成し、TableAdapter とデータセット コードを複数のプロジェクトに分離する方法の詳細な手順について説明します。|  
-|[Add Service Reference Dialog Box](../Topic/Add%20Service%20Reference%20Dialog%20Box.md)|**\[サービス参照の追加\]** ダイアログ ボックスのユーザー インターフェイス要素を説明します。|  
-|[\[サービス参照の構成\] ダイアログ ボックス](../Topic/Configure%20Service%20Reference%20Dialog%20Box.md)|**\[サービス参照の構成\]** ダイアログ ボックスのユーザー インターフェイス要素を説明します。|  
+|[Walkthrough: Creating a simple WCF Service in Windows Forms](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md)|Provides a step-by-step demonstration of creating and using WCF services in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|  
+|[Walkthrough: Creating a WCF Data Service with WPF and Entity Framework](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md)|Provides a step-by-step demonstration of how to create and use [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|  
+|[Using the WCF Development Tools](/dotnet/framework/wcf/using-the-wcf-development-tools)|Discusses how to create and test WCF services in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|  
+||[How to: Add, Update, or Remove a WCF Data Service Reference](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md)|Discusses how to reference and use [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|  
+|[Troubleshooting Service References](../data-tools/troubleshooting-service-references.md)|Presents some common errors that can occur with service references and how to prevent them.|  
+|[Debugging WCF Services](../debugger/debugging-wcf-services.md)|Describes common debugging problems and techniques you might encounter when debugging WCF services.|  
+|[Windows Communication Foundation Authentication Service Overview](http://msdn.microsoft.com/Library/6e121a28-89e8-4974-88a8-70aaa6a7d52b)|Describes how to use WCF to provide a role service for a Web site.|  
+|[Walkthrough: Creating an N-Tier Data Application](../data-tools/walkthrough-creating-an-n-tier-data-application.md)|Provides step-by-step instructions for creating a typed dataset and separating the TableAdapter and dataset code into multiple projects.|  
+|[Configure Service Reference Dialog Box](../data-tools/configure-service-reference-dialog-box.md)|Describes the user interface elements of the **Configure Service Reference** dialog box.|  
   
-## Reference  
+## <a name="reference"></a>Reference  
  <xref:System.ServiceModel>  
   
- <xref:System.Data.Services>
+ <xref:System.Data.Services>  
+  
+## <a name="see-also"></a>See Also  
+ [Visual Studio data tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)

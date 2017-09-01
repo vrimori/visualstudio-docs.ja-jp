@@ -40,8 +40,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/30/2017
 
 ---
-# XML コード コメントの追加
-<a id="supplying-xml-code-comments" class="xliff"></a>
+# <a name="supplying-xml-code-comments"></a>XML コード コメントの追加
 ソース コード ファイル内のコメントを IntelliSense として使用可能にすることができます。 Visual Basic、C#、または C++ コンパイラのコマンドラインに /doc スイッチを追加すると、IntelliSense ドキュメントのベースとして機能する .xml ファイルが生成されます。  
   
  Visual Basic でコードを文書化する詳細については、「[方法: XML ドキュメントを作成する](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation)」を参照してください。  
@@ -50,6 +49,5 @@ ms.lasthandoff: 05/30/2017
   
  C++ でコードを文書化する詳細については、「[C++ コメント](/cpp/cpp/comments-cpp)」と「[XML に関するドキュメント](/cpp/ide/xml-documentation-visual-cpp)」を参照してください。  
   
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
  [IntelliSense の使用](../ide/using-intellisense.md)

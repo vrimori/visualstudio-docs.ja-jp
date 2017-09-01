@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio での XAML デザイナーを使用した UI の作成 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 7/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,32 +18,17 @@ caps.latest.revision: 29
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 0b6b302637113be1fb2700100124cf4079c06298
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 0122714fa0c932a1fba849226e1200795ff20cfa
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="creating-a-ui-by-using-xaml-designer-in-visual-studio"></a>Visual Studio での XAML デザイナーを使用した UI の作成
-Visual Studio の XAML デザイナーは、XAML ベースの Windows ストア、Windows Phone、WPF、および Silverlight のアプリをデザインする際に役立つビジュアル インターフェイスを提供します。 アプリのユーザー インターフェイスを作成するには、 **[ツールボックス]** からコントロールをドラッグし、 **[プロパティ]** ウィンドウでプロパティを設定します。 また、XAML ビューで直接、XAML を編集することもできます。  
+Visual Studio の XAML デザイナーは、XAML ベースの Windows および Web アプリをデザインする際に役立つビジュアル インターフェイスを提供します。 アプリのユーザー インターフェイスを作成するには、 **[ツールボックス]** からコントロールをドラッグし、 **[プロパティ]** ウィンドウでプロパティを設定します。 また、XAML ビューで直接、XAML を編集することもできます。  
   
- アニメーションやビヘイビアーなどの高度な XAML デザイン タスクについては、 [Creating a UI by using Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)を参照してください。  
+ アニメーションやビヘイビアーなどの高度な XAML デザイン タスクについては、 [Creating a UI by using Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)を参照してください。 ツールの比較については、「[Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)」を参照してください。
   
 ## <a name="xaml-designer-workspace"></a>XAML デザイナーのワークスペース  
  XAML デザイナーのワークスペースは、いくつかのビジュアル インターフェイス要素で構成されています。 たとえば、アートボード、XAML エディター、[デバイス] ウィンドウ、[ドキュメント アウトライン] ウィンドウ、および [プロパティ] ウィンドウなどがあります。 XAML デザイナーを開くには、 **[ソリューション エクスプローラー]** で XAML ファイルを右クリックし、 **[デザイナーの表示]**を選択します。  
@@ -82,7 +67,7 @@ Visual Studio の XAML デザイナーは、XAML ベースの Windows ストア�
   
  デザイン ビューでは、画面の左下に次のように表示される追加のアートボード コマンドを使用できます。  
   
- ![デザイン ビュー コマンド](~/designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
+ ![デザイン ビュー コマンド](../designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
   
  このツール バーでは、次のコマンドを使用できます。  
   
@@ -109,7 +94,7 @@ Visual Studio の XAML デザイナーは、XAML ベースの Windows ストア�
  マークアップのズームを使用すると、XAML ビューのサイズを変更できます。 20% ～ 400% の範囲でズームできます。  
   
 ## <a name="device-window"></a>デバイス ウィンドウ  
- XAML デザイナーの [デバイス] ウィンドウを使用すると、Windows ストアまたは Windows Phone プロジェクトについて、さまざまなビュー、表示、表示オプションをデザイン時にシミュレートできます。 [デバイス] ウィンドウは、XAML デザイナーを使用しているときに **[デザイン]** メニューから使用できます。 次のように表示されます。  
+ XAML デザイナーの [デバイス] ウィンドウを使用すると、デザイン時にプロジェクトのさまざまなビュー、表示、および表示オプションをシミュレートできます。 [デバイス] ウィンドウは、XAML デザイナーを使用しているときに **[デザイン]** メニューから使用できます。 次のように表示されます。  
   
  ![[デバイス] ウィンドウ](../designers/media/xaml_editor_device_panel.png "xaml_editor_device_panel")  
   

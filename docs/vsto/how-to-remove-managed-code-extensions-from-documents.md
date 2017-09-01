@@ -1,62 +1,65 @@
 ---
-title: "方法: マネージ コード拡張をドキュメントから削除する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ドキュメント [Visual Studio での Office 開発], マネージ コード拡張機能"
-  - "マネージ コード拡張機能 [Visual Studio での Office 開発], 削除"
+title: 'How to: Remove Managed Code Extensions from Documents | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- managed code extensions [Office development in Visual Studio], removing
+- documents [Office development in Visual Studio], managed code extensions
 ms.assetid: e893d9a5-72a5-4087-b81b-04d4d3d9ebf8
 caps.latest.revision: 30
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 2a70cf3bffc46632eaa85e8b999cd3c366d1cde2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# 方法: マネージ コード拡張をドキュメントから削除する
-  Microsoft Office Word または Microsoft Office Excel のドキュメント レベルのカスタマイズの一部であるドキュメントまたはブックから、カスタマイズ アセンブリをプログラムによって削除することができます。  その後、ドキュメントを開き、内容を表示できますが、ドキュメントに追加されたどのカスタム ユーザー インターフェイス \(UI\) も表示されません。また、コードも実行されません。  
+# <a name="how-to-remove-managed-code-extensions-from-documents"></a>How to: Remove Managed Code Extensions from Documents
+  You can programmatically remove the customization assembly from a document or workbook that is part of a document-level customization for Microsoft Office Word or Microsoft Office Excel. Users can then open the documents and view the contents, but any custom user interface (UI) you add to the documents will not appear, and your code will not run.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- カスタマイズ アセンブリを削除するには、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] によって提供されるいずれかの RemoveCustomization メソッドを使用します。  使用するメソッドは、実行時にカスタマイズを削除する \(Word 文書または Excel ブックが開いているときにカスタマイズでコードを実行する\) か、閉じられたドキュメントまたは Microsoft Office がインストールされていないサーバー上にあるドキュメントからカスタマイズを削除するかによって異なります。  
+ You can remove the customization assembly by using one of the RemoveCustomization methods provided by the [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. Which method you use depends on whether you want to remove the customization at run time (that is, by running code in the customization while the Word document or Excel workbook is open), or if you want to remove the customization from a closed document or a document that is on a server that does not have Microsoft Office installed.  
   
- ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連のビデオ デモについては、「[How Do I: Attach or Detach a VSTO Assembly from a Word Document? \(操作方法: Word 文書から VSTO アセンブリをアタッチまたはデタッチする\)](http://go.microsoft.com/fwlink/?LinkId=136782)」を参照してください。  
+ ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Attach or Detach a VSTO Assembly from a Word Document?](http://go.microsoft.com/fwlink/?LinkId=136782).  
   
-### 実行時にカスタマイズ アセンブリを削除するには  
+### <a name="to-remove-the-customization-assembly-at-run-time"></a>To remove the customization assembly at run time  
   
-1.  カスタマイズ コードで、<xref:Microsoft.Office.Tools.Word.Document.RemoveCustomization%2A> メソッド \(Word の場合\) または <xref:Microsoft.Office.Tools.Excel.Workbook.RemoveCustomization%2A> メソッド \(Excel の場合\) を呼び出します。  このメソッドは、カスタマイズの必要がなくなった場合にのみ呼び出す必要があります。  
+1.  In your customization code, call the <xref:Microsoft.Office.Tools.Word.Document.RemoveCustomization%2A> method (for Word) or the <xref:Microsoft.Office.Tools.Excel.Workbook.RemoveCustomization%2A> method (for Excel). This method should be called only after the customization is no longer needed.  
   
-     コード内でこのメソッドを呼び出す場所は、カスタマイズが使用される状況によって異なります。  たとえば、\(カスタマイズではなく\) 文書自体を必要とする他のクライアントに文書を送信する準備が整うまで顧客がカスタマイズの機能を使用する場合は、顧客がクリックしたときに RemoveCustomization を呼び出す UI を提供できます。  または、文書が最初に開かれたときにカスタマイズによって文書のデータが設定され、顧客が直接アクセスする他の機能はカスタマイズでは提供されない場合、カスタマイズが文書の初期化を完了した直後に RemoveCustomization を呼び出すことができます。  
+     Where you call this method in your code depends on how your customization is used. For example, if customers use your customization's features until they are ready to send the document to other clients that only need to the document itself (not the customization), you can provide some UI that calls RemoveCustomization when the customer clicks it. Alternatively, if your customization populates the document with data when it is first opened, but the customization doesn't provide any other features that are accessed directly by customers, then you can call RemoveCustomization as soon as your customization finishes initializing the document.  
   
-### 閉じられたドキュメントまたはサーバー上にあるドキュメントからカスタマイズ アセンブリを削除するには  
+### <a name="to-remove-the-customization-assembly-from-a-closed-document-or-a-document-on-a-server"></a>To remove the customization assembly from a closed document or a document on a server  
   
-1.  Microsoft Officeを、コンソール アプリケーションやWindowsフォーム プロジェクトなど、必要としないプロジェクトでは、Microsoft.VisualStudio.Tools.Applications.ServerDocument.dllアセンブリへの参照を追加します。  
+1.  In a project that does not require Microsoft Office, such as a console application or Windows Forms project, add a reference to the Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll assembly.  
   
-2.  次の **Imports** ステートメントまたは **using** ステートメントをコード ファイルの先頭に追加します。  
+2.  Add the following **Imports** or **using** statement to the top of your code file.  
   
-     [!code-csharp[Trin_VstcoreDeployment#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDeployment/CS/Program.cs#1)]
-     [!code-vb[Trin_VstcoreDeployment#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDeployment/VB/Program.vb#1)]  
+     [!code-csharp[Trin_VstcoreDeployment#1](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#1)]  [!code-vb[Trin_VstcoreDeployment#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#1)]  
   
-3.  <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> クラスの静的な <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> メソッドを呼び出し、ソリューション ドキュメントのパスをパラメーターに指定します。  
+3.  Call the static <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> method of the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class, and specify the solution document path for the parameter.  
   
-     次のコード例では、デスクトップ上にある **WordDocument1.docx** という名前のドキュメントからカスタマイズを削除することを前提としています。  
+     The following code example assumes that you are removing the customization from a document named **WordDocument1.docx** that is on the desktop.  
   
-     [!code-csharp[Trin_VstcoreDeployment#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreDeployment/CS/Program.cs#2)]
-     [!code-vb[Trin_VstcoreDeployment#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreDeployment/VB/Program.vb#2)]  
+     [!code-csharp[Trin_VstcoreDeployment#2](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#2)]  [!code-vb[Trin_VstcoreDeployment#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#2)]  
   
-4.  カスタマイズを削除するコンピューターで、プロジェクトをビルドしてアプリケーションを実行します。  コンピューターにがインストールされているOffice RuntimeのVisual Studio 2010 Toolsをインストールする必要があります。  
+4.  Build the project and run the application on the computer where you want to remove the customization. The computer must have the Visual Studio 2010 Tools for Office Runtime installed.  
   
-## 参照  
- [ServerDocument クラスによるサーバー上のドキュメントの管理](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
- [方法: マネージ コード拡張機能をドキュメントにアタッチする](../vsto/how-to-attach-managed-code-extensions-to-documents.md)  
+## <a name="see-also"></a>See Also  
+ [Managing Documents on a Server by Using the ServerDocument Class](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
+ [How to: Attach Managed Code Extensions to Documents](../vsto/how-to-attach-managed-code-extensions-to-documents.md)  
   
   

@@ -1,56 +1,73 @@
 ---
-title: "IDebugPointerObject::Dereference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPointerObject::Dereference"
-helpviewer_keywords: 
-  - "IDebugPointerObject::Dereference メソッド"
+title: IDebugPointerObject::Dereference | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPointerObject::Dereference
+helpviewer_keywords:
+- IDebugPointerObject::Dereference method
 ms.assetid: 196ec2cc-8569-4780-b217-23b24e7f50ca
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugPointerObject::Dereference
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: d86b9e1f8352ff827bf6cc6919c048c60f17e890
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
-オブジェクトを指すに取得します。  
+---
+# <a name="idebugpointerobjectdereference"></a>IDebugPointerObject::Dereference
+Gets the object pointed to.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT DeReference(   
-   DWORD          dwIndex,  
-   IDebugObject** ppObject  
+HRESULT DeReference(   
+   DWORD          dwIndex,  
+   IDebugObject** ppObject  
 );  
 ```  
   
-```c#  
+```cs  
 int Dereference(  
-   uint             dwIndex,   
-   out IDebugObject ppObject  
+   uint             dwIndex,   
+   out IDebugObject ppObject  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `dwIndex`  
- \[入力\] オブジェクトの先頭から A の単純なバイト オフセットが指すします。  
+ [in] A simple byte offset from the beginning of the object pointed to.  
   
  `ppObject`  
- \[入力\] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) を表すオブジェクトをオフセットが指すオブジェクトにそれを返します。  
+ [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object representing the object pointed to, plus offset, if any.  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  このオブジェクトが他のオブジェクトを指していない場合は E\_FAIL を返します。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code. Returns E_FAIL if this object does not point to another object.  
   
-## 解説  
- 指すクラスや構造体などのプリミティブ型またはより複雑な型を指定できます。オブジェクト。  
+## <a name="remarks"></a>Remarks  
+ The object pointed to can be a primitive or a more complex type such as a class or structure.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)

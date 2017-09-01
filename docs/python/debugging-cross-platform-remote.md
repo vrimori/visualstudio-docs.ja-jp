@@ -1,12 +1,13 @@
 ---
 title: "Visual Studio での Python のクロスプラットフォーム リモート デバッグ | Microsoft Docs"
 ms.custom: 
-ms.date: 4/4/2017
+ms.date: 7/12/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa667357-763f-4ce6-8e47-48f9337658a8
@@ -14,41 +15,27 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: fa3d69cbb34a61a327d0b4c27430ff04b670a568
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: b18efd1fb488c0d07b9a0ffa41f9b4e3613ef17c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
-# <a name="remotely-debugging-python-code"></a>Python コードのリモート デバッグ
+# <a name="remotely-debugging-python-code-on-linux"></a>Linux 上の Python コードのリモート デバッグ
 
 Visual Studio は、Windows コンピューター上でローカルまたはリモートで Python アプリケーションを起動およびデバッグすることができます (「[Remote Debugging](../debugger/remote-debugging.md)」(リモート デバッグ) をご覧ください)。 また、別のオペレーティング システム、デバイス、または CPython 以外の Python 実装を [ptvsd ライブラリ](https://pypi.python.org/pypi/ptvsd)を使用してリモートでデバッグすることもできます。
 
-ptvsd を使用する場合、デバッグ対象の Python コードは Visual Studio がアタッチできるデバッグ サーバーをホストします。 そのためには、コードに小さな変更を加えてサーバーをインポートして有効にする必要があります。また、TCP 接続を許可するようにリモート コンピューター上でネットワークまたはファイアウォールを構成する必要が生じる場合があります。
+ptvsd を使用する場合、デバッグ対象の Python コードは Visual Studio がアタッチできるデバッグ サーバーをホストします。 このホストには、コードに小さな変更を加えてサーバーをインポートして有効にする必要があります。また、TCP 接続を許可するようにリモート コンピューター上でネットワークまたはファイアウォールを構成する必要が生じる場合があります。
 
 リモート デバッグの概要については、「[Deep Dive: Cross-Platform Remote Debugging](https://youtu.be/y1Qq7BrV6Cc)」(詳細情報: クロスプラットフォームのリモート デバッグ) (youtube.com、6 分 22 秒) をご覧ください。
 
 > [!VIDEO https://www.youtube.com/embed/y1Qq7BrV6Cc]
 
-## <a name="setting-up-a-linux-machine"></a>Linux コンピューターのセットアップ
+## <a name="setting-up-a-linux-computer"></a>Linux コンピューターのセットアップ
 
-このチュートリアルを実行するための要件は次のとおりです。
+このチュートリアルを実行するには、次の項目が必要です。
 
 - Mac OSX や Linux などのオペレーティング システムで Python を実行しているリモート コンピューター。
 - そのコンピューターのファイアウォールで開いているポート 5678 (受信)。これはリモート デバッグの既定値です。
@@ -104,22 +91,22 @@ Azure VM のファイアウォール ルールの作成方法については、�
 
 以下の手順では、リモート プロセスを停止する単純なブレークポイントを設定します。
 
-1. ローカル コンピューターでリモート ファイルのコピーを作成し、Visual Studio で開きます。 ファイルの場所は任意ですが、名前はアタッチ先となるリモート コンピューターのスクリプト名と一致している必要があります。
+1. ローカル コンピューターでリモート ファイルのコピーを作成し、Visual Studio で開きます。 ファイルの場所は任意ですが、名前はリモート コンピューターのスクリプト名と一致している必要があります。
 
 1. (省略可能) ローカル コンピューター上の ptvsd 用に IntelliSense を使用するには、ptvsd パッケージを Python 環境にインストールします。
 
 1. **[デバッグ]、[プロセスにアタッチ]** の順に選択します。
 
-1. 表示される **[プロセスにアタッチ]** ダイアログで、**[接続の種類]** を **[Python remote (ptvsd)]** (Python リモート (ptvsd)) に設定します (旧バージョンの Visual Studio では、**トランスポート**と **Python remote debugging** (Python リモート デバッグ) という名称でした)。
+1. 表示される **[プロセスにアタッチ]** ダイアログで、**[接続の種類]** を **[Python remote (ptvsd)]** (Python リモート (ptvsd)) に設定します (旧バージョンの Visual Studio では、これらのコマンドは **[トランスポート]**と **[Python リモート デバッグ]** という名称でした)。
 
-1. **[Connection Target]**(接続のターゲット) フィールド (旧バージョンでは **[修飾子]**) に「`tcp://<secret>@<ip_address>:5678`」と入力します。`<secret>` は Python コードで渡される文字列 `enable_attach` です。`<ip_address>` はリモート コンピューターの IP アドレスです (明示的なアドレスまたは myvm.cloudapp.net のような名前を指定できます)。`:5678` はリモート デバッグ ポート番号です。
+1. **[接続先]** フィールド (旧バージョンでは **[修飾子]**) に「`tcp://<secret>@<ip_address>:5678`」と入力します。`<secret>` は Python コードで渡される文字列 `enable_attach` です。`<ip_address>` はリモート コンピューターの IP アドレスです (明示的なアドレスまたは myvm.cloudapp.net のような名前を指定できます)。`:5678` はリモート デバッグ ポート番号です。
 
     > [!Warning]
     > パブリック インターネット経由で接続している場合は、代わりに `tcps` を使用し、以下の「[デバッガー接続の SSL によるセキュリティ保護](#securing-the-debugger-connection-with-ssl)」の指示に従ってください。
 
 1. Enter キーを押すと、そのコンピューターで使用できる ptvsd プロセスの一覧が生成されます。
 
-    ![接続のターゲットの入力とプロセスの一覧表示](~/python/media/remote-debugging-qualifier.png)
+    ![接続のターゲットの入力とプロセスの一覧表示](media/remote-debugging-qualifier.png)
 
     この一覧の生成後にリモート コンピューターで別のプログラムを起動する場合は、**[更新]** ボタンを選択します。
 
@@ -127,18 +114,16 @@ Azure VM のファイアウォール ルールの作成方法については、�
 
 1. Visual Studio はデバッグ モードに切り替わり、スクリプトは引き続きリモート コンピューターで実行され、通常の[デバッグ](debugging.md)機能もすべて使用できます。 たとえば、`if guess < number:` 行のブレークポイントを設定し、リモート コンピューターに切り替え、別の推測を入力します。 その後、ローカル コンピューターの Visual Studio はそのブレークポイントで停止し、ローカル変数などが表示されます。
 
-    ![ブレークポイントにヒットした状態](~/python/media/remote-debugging-breakpoint-hit.png)
+    ![ブレークポイントにヒットした状態](media/remote-debugging-breakpoint-hit.png)
 
 1. デバッグを停止すると、Visual Studio はプログラムからデタッチされますが、リモート コンピューターでは実行が継続されます。 また、ptvsd もデバッガーのアタッチを引き続きリッスンするので、いつでもプロセスに再アタッチできます。
-
-1. ただし、リモート プログラムを停止しても、デバッガーのデタッチは自動的には実行されません。 
 
 ### <a name="connection-troubleshooting"></a>接続のトラブルシューティング
 
 1. **[接続の種類]** で **[Python remote (ptvsd)]**(Python リモート (ptvsd)) (旧バージョンでは **[トランスポート]** の **[Python remote debugging]**(Python リモート デバッグ)) を選択していることを確認します。
 1. **[Connection Target]**(接続のターゲット) (または **[修飾子]**) のシークレットがリモート コードのシークレットと完全に一致することを確認します。
-1. **[Connection Target]**(接続のターゲット) (または **[修飾子]**) がリモート コンピューターと一致することを確認します。
-1. リモート コンピューターのリモート デバッグ ポートを開いていること、接続のターゲットに `:5678` などのポート サフィックスを含めていることを確認します。
+1. **[接続先]** (または **[修飾子]**) の IP アドレスがリモート コンピューターと一致することを確認します。
+1. リモート コンピューターのリモート デバッグ ポートを開いていること、接続先に `:5678` などのポート サフィックスを含めていることを確認します。
     - 別のポートを使用する必要がある場合は、`enable_attach` の呼び出しで `ptvsd.enable_attach(secret = 'my_secret', address = ('0.0.0.0', 8080))` のように `address` 引数を使用して指定できます。 この場合、ファイアウォールでもそのポートを開きます。
 1. `pip3 list` から返されたリモート コンピューターにインストールされている ptvsd のバージョンが、Visual Studio で使用している Python ツールのバージョンで使用されている ptvsd のバージョン (以下の表を参照してください) が一致することを確認します。 必要に応じて、リモート コンピューターの ptvsd を更新します。
 
@@ -174,7 +159,7 @@ ptvsd のリモート デバッグ サーバーへの接続は、既定で、シ
 
 1. リモート コンピューターで Python プログラムを再起動し、デバッグできる状態にします。
 
-1. Visual Studio がインストールされた Windows コンピューターの [信頼されたルート CA] にその証明書を追加して、チャンネルをセキュリティで保護します。
+1. Visual Studio がインストールされた Windows コンピューターの [信頼されたルート CA] にその証明書を追加して、チャネルをセキュリティで保護します。
 
     1. リモート コンピューターの証明書ファイルをローカル コンピューターにコピーします。
     1. コントロール パネルを開き、**[管理ツール] > [コンピューター証明書の管理]** に移動します。
@@ -183,19 +168,19 @@ ptvsd のリモート デバッグ サーバーへの接続は、既定で、シ
 
 1. 前述の手順で Visual Studio のアタッチ プロセスを繰り返します。今回は、**[Connection Target]**(接続のターゲット) (または **[修飾子]**) として `tcps://` を使用します。
 
-    ![SSL を使用するリモート デバッグ トランスポートの選択](~/python/media/remote-debugging-qualifier-ssl.png)
+    ![SSL を使用するリモート デバッグ トランスポートの選択](media/remote-debugging-qualifier-ssl.png)
 
 ### <a name="warnings"></a>警告
 
-後述のように、Visual Studio で SSL で接続するときに証明書の問題の可能性が表示されます。 この警告を無視して続行しても問題ありません。無視しても、man-in-the-middle 攻撃を受ける可能性がある傍受を防ぐために、チャンネルは暗号化されます。
+後述のように、Visual Studio で SSL で接続するときに証明書の問題の可能性が表示されます。 この警告を無視して続行しても問題ありません。無視しても、man-in-the-middle 攻撃を受ける可能性がある傍受を防ぐために、チャネルは暗号化されます。
 
 1. 以下の "リモート証明書は信頼されていません" という警告が表示される場合は、[信頼されたルート CA] に証明書が適切に追加されていないことを示します。 追加手順を確認して、もう一度試してください。
 
-    ![SSL 証明書の信頼の警告](~/python/media/remote-debugging-ssl-warning.png)
+    ![SSL 証明書の信頼の警告](media/remote-debugging-ssl-warning.png)
 
 1. 以下の "リモート証明書名がホスト名と一致しません" という警告が表示される場合は、証明書の作成時に **[共通名]** として正しいホスト名または IP アドレスを指定していないことを示します。
 
-    ![SSL 証明書のホスト名の警告](~/python/media/remote-debugging-ssl-warning2.png)
+    ![SSL 証明書のホスト名の警告](media/remote-debugging-ssl-warning2.png)
 
 > [!Warning]
 > 現在、これらの警告を無視すると、Visual Studio 2017 はハングします。 すべての問題を修正してから、接続を試行してください。

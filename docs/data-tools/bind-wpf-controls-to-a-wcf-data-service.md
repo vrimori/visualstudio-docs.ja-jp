@@ -1,190 +1,204 @@
 ---
-title: "チュートリアル: WCF Data Service への WPF コントロールのバインド | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "WPF データ バインド [Visual Studio], チュートリアル"
-  - "WPF デザイナー, データ バインド"
-  - "WPF, データ バインド (Visual Studio での)"
+title: Bind WPF controls to a WCF data service | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- WPF, data binding in Visual Studio
+- WPF data binding [Visual Studio], walkthroughs
+- WPF Designer, data binding
 ms.assetid: 8823537c-82f0-41f7-bf30-705f0e5e59fd
 caps.latest.revision: 40
-caps.handback.revision: 38
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 7286f0fd313a32a72b138de0926eaede74bc7002
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル: WCF Data Service への WPF コントロールのバインド
-このチュートリアルでは、データ バインド コントロールが含まれた WPF アプリケーションを作成します。  コントロールは、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] でカプセル化された顧客レコードにバインドされます。  また、顧客がレコードを表示および更新するために使用できるボタンも追加します。  
+# <a name="bind-wpf-controls-to-a-wcf-data-service"></a>Bind WPF controls to a WCF data service
+In this walkthrough, you will create a WPF application that contains data-bound controls. The controls are bound to customer records that are encapsulated in a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]. You will also add buttons that customers can use to view and update records.  
   
- このチュートリアルでは、次の作業について説明します。  
+ This walkthrough illustrates the following tasks:  
   
--   AdventureWorksLT サンプル データベースのデータから生成される Entity Data Model を作成する。  
+- Creating an Entity Data Model that is generated from data in the AdventureWorksLT sample database.  
   
--   WPF アプリケーションに Entity Data Model のデータを公開する [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] を作成する。  
+- Creating a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] that exposes the data in the Entity Data Model to a WPF application.  
   
--   **\[データ ソース\]** ウィンドウから WPF デザイナーに項目をドラッグして、一連のデータ バインド コントロールを作成する。  
+- Creating a set of data-bound controls by dragging items from the **Data Sources** window to the WPF designer.  
   
--   顧客レコード間を前後に移動するためのボタンを作成する。  
+- Creating buttons that navigate forward and backward through customer records.  
   
--   コントロールでのデータに対する変更を [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] および基になるデータ ソースに保存するボタンを作成する。  
+- Creating a button that saves changes to data in the controls to the [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] and the underlying data source.  
   
-     [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
   
--   AdventureWorksLT サンプル データベースが添付された、SQL Server または SQL Server Express の実行中のインスタンスへのアクセス権。  AdventureWorksLT データベースは [CodePlex Web サイト](http://go.microsoft.com/fwlink/?linkid=87843)からダウンロードできます。  
+-   Access to a running instance of SQL Server or SQL Server Express that has the AdventureWorksLT sample database attached to it. You can download the AdventureWorksLT database from the [CodePlex Web site](http://go.microsoft.com/fwlink/?linkid=87843).  
   
- 次の概念に関する知識があると役立ちますが、チュートリアルを実行するうえで必須というわけではありません。  
+ Prior knowledge of the following concepts is also helpful, but not required to complete the walkthrough:  
   
--   WCF Data Services。  詳細については、「[概要](../Topic/WCF%20Data%20Services%20Overview.md)」を参照してください。  
+-   WCF Data Services. For more information, see [Overview](/dotnet/framework/data/wcf/wcf-data-services-overview).  
   
--   [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] のデータ モデル。  
+-   Data models in [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)].  
   
--   Entity Data Model および ADO.NET Entity Framework。  詳細については、「[エンティティ フレームワークの概要](../Topic/Entity%20Framework%20Overview.md)」を参照してください。  
+-   Entity Data Models and the ADO.NET Entity Framework. For more information, see [Entity Framework Overview](/dotnet/framework/data/adonet/ef/overview).  
   
--   WPF デザイナーの操作。  詳細については、「[WPF および Silverlight デザイナーの概要](http://msdn.microsoft.com/ja-jp/570b7a5c-0c86-4326-a371-c9b63378fc62)」を参照してください。  
+-   Working with the WPF designer. For more information, see [WPF and Silverlight Designer Overview](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62).  
   
--   WPF データ バインディング。  詳細については、「[データ バインドの概要](../Topic/Data%20Binding%20Overview.md)」を参照してください。  
+-   WPF data binding. For more information, see [Data Binding Overview](/dotnet/framework/wpf/data/data-binding-overview).  
   
-## サービス プロジェクトの作成  
- このチュートリアルでは、まず [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] のプロジェクトを作成します。  
+## <a name="create-the-service-project"></a>Create the service project  
+ Start this walkthrough by creating a project for a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)].  
   
-#### サービス プロジェクトを作成するには  
+#### <a name="to-create-the-service-project"></a>To create the service project  
   
-1.  Visual Studio を起動します。  
+1.  Start Visual Studio.  
   
-2.  **\[ファイル\]** メニューの **\[新規作成\]** をポイントし、**\[プロジェクト\]** をクリックします。  
+2.  On the **File** menu, point to **New**, and then click **Project**.  
   
-3.  **\[Visual C\#\]** または **\[Visual Basic\]** を展開し、**\[Web\]** を選択します。  
+3.  Expand **Visual C#** or **Visual Basic**, and then select **Web**.  
   
-4.  **\[ASP.NET Web アプリケーション\]** プロジェクト テンプレートを選択します。  
+4.  Select the **ASP.NET Web Application** project template.  
   
-5.  **\[プロジェクト名\]** ボックスに「`AdventureWorksService`」と入力し、**\[OK\]** をクリックします。  
+5.  In the **Name** box, type `AdventureWorksService` and click **OK**.  
   
-     Visual Studio によって `AdventureWorksService` プロジェクトが作成されます。  
+     Visual Studio creates the `AdventureWorksService` project.  
   
-6.  **ソリューション エクスプローラー**で、**Default.aspx** を右クリックし、**\[削除\]** を選択します。  このファイルは、このチュートリアルでは必要ありません。  
+6.  In **Solution Explorer**, right-click **Default.aspx** and select **Delete**. This file is not necessary in this walkthrough.  
   
-## サービスの Entity Data Model の作成  
- [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] を使用してアプリケーションにデータを公開するには、サービスのデータ モデルを定義する必要があります。  [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] は、Entity Data Model とカスタム データ モデルの 2 種類のデータ モデルをサポートしています。これらは、<xref:System.Linq.IQueryable%601> インターフェイスを実装する共通言語ランタイム \(CLR: Common Language Runtime\) オブジェクトを使用して定義されます。  このチュートリアルでは、データ モデルとして Entity Data Model を作成します。  
+## <a name="create-an-entity-data-model-for-the-service"></a>Create an Entity Data Model for the service  
+ To expose data to an application by using a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)], you must define a data model for the service. The [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] supports two types of data models: Entity Data Models, and custom data models that are defined by using common language runtime (CLR) objects that implement the <xref:System.Linq.IQueryable%601> interface. In this walkthrough, you create an Entity Data Model for the data model.  
   
-#### Entity Data Model を作成するには  
+#### <a name="to-create-an-entity-data-model"></a>To create an Entity Data Model  
   
-1.  **\[プロジェクト\]** メニューの **\[新しい項目の追加\]** をクリックします。  
+1.  On the **Project** menu, click **Add New Item**.  
   
-2.  \[インストールされたテンプレート\] ボックスの一覧で、**\[データ\]** をクリックし、**\[ADO.NET エンティティ データ モデル\]** プロジェクト項目を選択します。  
+2.  In the Installed Templates list, click **Data**, and then select the **ADO.NET Entity Data Model** project item.  
   
-3.  名前を「`AdventureWorksModel.edmx`」に変更し、**\[追加\]** をクリックします。  
+3.  Change the name to `AdventureWorksModel.edmx`, and click **Add**.  
   
-     **Entity Data Model ウィザード**が開きます。  
+     The **Entity Data Model** wizard opens.  
   
-4.  **\[モデルのコンテンツの選択\]** ページで、**\[データベースから生成\]** をクリックし、**\[次へ\]** をクリックします。  
+4.  On the **Choose Model Contents** page, click **Generate from database**, and click **Next**.  
   
-5.  **\[データ接続の選択\]** ページで、次のいずれかのオプションを選択します。  
+5.  On the **Choose Your Data Connection** page, select one of the following options:  
   
-    -   AdventureWorksLT サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は、これを選択します。  
+    -   If a data connection to the AdventureWorksLT sample database is available in the drop-down list, select it.  
   
-         または  
+    -   Click **New Connection**, and create a connection to the AdventureWorksLT database.  
   
-    -   **\[新しい接続\]** をクリックして、AdventureWorksLT データベースへの接続を作成します。  
+6.  On the **Choose Your Data Connection** page, make sure that the **Save entity connection settings in App.Config as** option is selected, and then click **Next**.  
   
-6.  **\[データ接続の選択\]** ページで、**\[エンティティ接続設定に名前を付けて App.Config に保存\]** オプションが選択されていることを確認し、**\[次へ\]** をクリックします。  
+7.  On the **Choose Your Database Objects** page, expand **Tables**, and then select the **SalesOrderHeader** table.  
   
-7.  **\[データベース オブジェクトの選択\]** ページで、**\[テーブル\]** を展開し、**SalesOrderHeader** テーブルを選択します。  
+8.  Click **Finish**.  
   
-8.  **\[完了\]** をクリックします。  
+## <a name="create-the-service"></a>Create the service  
+ Create a [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] to expose the data in the Entity Data Model to a WPF application.  
   
-## サービスの作成  
- WPF アプリケーションに Entity Data Model のデータを公開する [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] を作成します。  
+#### <a name="to-create-the-service"></a>To create the service  
   
-#### サービスを作成するには  
+1.  On the **Project** menu, select **Add New Item**.  
   
-1.  **\[プロジェクト\]** メニューで **\[新しい項目の追加\]** を選択します。  
+2.  In the Installed Templates list, click **Web**, and then select the **WCF Data Service** project item.  
   
-2.  \[インストールされたテンプレート\] ボックスの一覧で、で、**\[Web\]** をクリックし、**\[WCF Data Service\]** プロジェクト項目を選択します。  
+3.  In the **Name** box, type `AdventureWorksService.svc`, and click **Add**.  
   
-3.  **\[プロジェクト名\]** ボックスに、「`AdventureWorksService.svc`」と入力し、**\[追加\]** をクリックします。  
+     Visual Studio adds the `AdventureWorksService.svc` to the project.  
   
-     Visual Studio によってプロジェクトに `AdventureWorksService.svc` が追加されます。  
+## <a name="configure-the-service"></a>Configure the service  
+ You must configure the service to operate on the Entity Data Model that you created.  
   
-## サービスの構成  
- 作成した Entity Data Model を操作するには、サービスを構成する必要があります。  
+#### <a name="to-configure-the-service"></a>To configure the service  
   
-#### サービスを構成するには  
+1.  In the `AdventureWorks.svc` code file, replace the `AdventureWorksService` class declaration with the following code.  
   
-1.  `AdventureWorks.svc` コード ファイルで、`AdventureWorksService` クラス宣言を次のコードで置き換えます。  
+     [!code-csharp[Data_WPFWCF#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_1.cs)]  [!code-vb[Data_WPFWCF#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_1.vb)]  
   
-     [!code-cs[Data_WPFWCF#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_1.cs)]
-     [!code-vb[Data_WPFWCF#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_1.vb)]  
+     This code updates the `AdventureWorksService` class, so that it derives from a <xref:System.Data.Services.DataService%601> that operates on the `AdventureWorksLTEntities` object context class in your Entity Data Model. It also updates the `InitializeService` method to allow clients of the service full read/write access to the `SalesOrderHeader` entity.  
   
-     このコードにより `AdventureWorksService` クラスが更新され、Entity Data Model の `AdventureWorksLTEntities` オブジェクト コンテキスト クラスを操作する <xref:System.Data.Services.DataService%601> の派生クラスになります。  また、`InitializeService` メソッドも更新され、`SalesOrderHeader` エンティティへの完全な読み取り\/書き込みアクセスがサービスのクライアントに許可されます。  
+2.  Build the project, and verify that it builds without errors.  
   
-2.  プロジェクトをビルドし、エラーが発生しないことを確認します。  
+## <a name="create-the-wpf-client-application"></a>Create the WPF client application  
+ To display the data from the [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)], create a new WPF application with a data source that is based on the service. Later in this walkthrough, you will add data-bound controls to the application.  
   
-## WPF クライアント アプリケーションの作成  
- [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] のデータを表示するには、サービスに基づくデータ ソースを使用して、新しい WPF アプリケーションを作成します。  このチュートリアルの後半で、データ バインド コントロールをアプリケーションに追加します。  
+#### <a name="to-create-the-wpf-client-application"></a>To create the WPF client application  
   
-#### WPF クライアント アプリケーションを作成するには  
+1.  In **Solution Explorer**, right-click the solution node, click **Add**, and select **New Project**.  
   
-1.  **ソリューション エクスプローラー**で、ソリューション ノードを右クリックし、**\[追加\]** をクリックして、**\[新しいプロジェクト\]** を選択します。  
+2.  In the **New Project** dialog, expand **Visual C#** or **Visual Basic**, and then select **Windows**.  
   
-2.  **\[新しいプロジェクト\]** ダイアログで、**\[Visual C\#\]** または **\[Visual Basic\]** を展開し、**\[Windows\]** を選択します。  
+3.  Select the **WPF Application** project template.  
   
-3.  **\[WPF アプリケーション\]** プロジェクト テンプレートを選択します。  
+4.  In the **Name** box, type `AdventureWorksSalesEditor`, and click **OK**.  
   
-4.  **\[プロジェクト名\]** ボックスに「`AdventureWorksSalesEditor`」と入力し、**\[OK\]** をクリックします。  
+     Visual Studio adds the `AdventureWorksSalesEditor` project to the solution.  
   
-     Visual Studio によってソリューションに `AdventureWorksSalesEditor` プロジェクトが追加されます。  
+5.  On the **Data** menu, click **Show Data Sources**.  
   
-5.  **\[データ\]** メニューの **\[データ ソースの表示\]** をクリックします。  
+     The **Data Sources** window opens.  
   
-     **\[データ ソース\]** ウィンドウが開きます。  
+6.  In the **Data Sources** window, click **Add New Data Source**.  
   
-6.  **\[データ ソース\]** ウィンドウで、**\[新しいデータ ソースの追加\]** をクリックします。  
+     The **Data Source Configuration** wizard opens.  
   
-     **データ ソース構成**ウィザードが開きます。  
+7.  In the **Choose a Data Source Type** page of the wizard, select **Service**, and then click **Next**.  
   
-7.  ウィザードの **\[データ ソースの種類を選択\]** ページで、**\[サービス\]** を選択し、**\[次へ\]** をクリックします。  
+8.  In the **Add Service Reference** dialog box, click **Discover**.  
   
-8.  **\[サービス参照の追加\]** ダイアログ ボックスで **\[探索\]** をクリックします。  
+     Visual Studio searches the current solution for available services, and adds `AdventureWorksService.svc` to the list of available services in the **Services** box.  
   
-     Visual Studio によって、使用できるサービスが現在のソリューションから検索され、**\[サービス\]** ボックスの使用できるサービスの一覧に `AdventureWorksService.svc` が追加されます。  
+9. In the **Namespace** box, type `AdventureWorksService`.  
   
-9. **\[名前空間\]** ボックスに「`AdventureWorksService`」と入力します。  
+10. In the **Services** box, click **AdventureWorksService.svc**, and then click **OK**.  
   
-10. **\[サービス\]** ボックスで **\[AdventureWorksService.svc\]** をクリックし、**\[OK\]** をクリックします。  
+     Visual Studio downloads the service information, and then returns to the **Data Source Configuration** wizard.  
   
-     Visual Studio によってサービス情報がダウンロードされ、**データ ソース構成ウィザード**に戻ります。  
+11. In the **Add Service Reference** page, click **Finish**.  
   
-11. **\[サービス参照の追加\]** ページで、**\[完了\]** をクリックします。  
+     Visual Studio adds nodes that represent the data returned by the service to the **Data Sources** window.  
   
-     Visual Studio によって、サービスから返されたデータを表すノードが **\[データ ソース\]** ウィンドウに追加されます。  
+## <a name="define-the-user-interface-of-the-window"></a>Define the user interface of the window  
+ Add several buttons to the window by modifying the XAML in the WPF designer. Later in this walkthrough, you will add code that enables users to view and update sales records by using these buttons.  
   
-## ウィンドウのユーザー インターフェイスの定義  
- WPF デザイナーで XAML を変更して、いくつかのボタンをウィンドウに追加します。  これらのボタンを使用して販売レコードを表示および更新できるようにするコードは、このチュートリアルで後で追加します。  
+#### <a name="to-create-the-window-layout"></a>To create the window layout  
   
-#### ウィンドウ レイアウトを作成するには  
+1.  In **Solution Explorer**, double-click **MainWindow.xaml**.  
   
-1.  **ソリューション エクスプローラー**で、MainWindow.xaml をダブルクリックします。  
+     The window opens in the WPF designer.  
   
-     WPF デザイナーでウィンドウが開きます。  
+2.  In the [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] view of the designer, add the following code between the `<Grid>` tags:  
   
-2.  デザイナーの [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] ビューで、`<Grid>` タグの間に次のコードを追加します。  
-  
-    ```  
+    ```xaml  
     <Grid.RowDefinitions>  
         <RowDefinition Height="75" />  
         <RowDefinition Height="525" />  
@@ -194,18 +208,18 @@ manager: "ghogen"
     <Button HorizontalAlignment="Right" Margin="0,21,46,24" Name="saveButton" Width="110">Save changes</Button>  
     ```  
   
-3.  プロジェクトをビルドします。  
+3.  Build the project.  
   
-## データ バインド コントロールの作成  
- 顧客レコードを表示するコントロールを作成するには、**\[データ ソース\]** ウィンドウからデザイナーに `[SalesOrderHeaders]` ノードをドラッグします。  
+## <a name="create-the-data-bound-controls"></a>Create the data-bound controls  
+ Create controls that display customer records by dragging the `SalesOrderHeaders` node from the **Data Sources** window to the designer.  
   
-#### データ バインディング コントロールを作成するには  
+#### <a name="to-create-the-data-bound-controls"></a>To create the data-bound controls  
   
-1.  **\[データ ソース\]** ウィンドウで、**\[SalesOrderHeaders\]** ノードのドロップダウン メニューをクリックし、**\[詳細\]** を選択します。  
+1.  In the **Data Sources** window, click the drop-down menu for the **SalesOrderHeaders** node, and select **Details**.  
   
-2.  **\[SalesOrderHeaders\]** ノードを展開します。  
+2.  Expand the **SalesOrderHeaders** node.  
   
-3.  この例ではいくつかのフィールドを非表示にするために、次のノードの横のドロップダウン メニューをクリックして **\[なし\]** を選択します。  
+3.  For this example, some fields will not be displayed, so click the drop-down menu next to the following nodes and select **None**:  
   
     -   **CreditCardApprovalCode**  
   
@@ -217,114 +231,110 @@ manager: "ghogen"
   
     -   **rowguid**  
   
-     この操作は、次の手順において、これらのノードに対応するデータ バインド コントロールが Visual Studio で作成されるのを防ぎます。  このチュートリアルでは、これらのデータをエンド ユーザーが参照する必要はありません。  
+     This action prevents Visual Studio from creating data-bound controls for these nodes in the next step. For this walkthrough, assume that the end user does not need to see this data.  
   
-4.  **\[データ ソース\]** ウィンドウから、ボタンのある行の下のグリッド行に **\[SalesOrderHeaders\]** ノードをドラッグします。  
+4.  From the **Data Sources** window, drag the **SalesOrderHeaders** node to the grid row under the row that contains the buttons.  
   
-     Visual Studio によって、**Product** テーブルのデータにバインドされるコントロール セットを作成する XAML とコードが生成されます。  生成される XAML およびコードの詳細については、「[Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)」を参照してください。  
+     Visual Studio generates XAML and code that creates a set of controls that are bound to data in the **Product** table. For more information about the generated XAML and code, see [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).  
   
-5.  デザイナーで、**\[Customer ID\]** ラベルの横のテキスト ボックスをクリックします。  
+5.  In the designer, click the text box next to the **Customer ID** label.  
   
-6.  **\[プロパティ\]** ウィンドウで、**IsReadOnly** プロパティの横のチェック ボックスをオンにします。  
+6.  In the **Properties** window, select the check box next to the **IsReadOnly** property.  
   
-7.  次の各テキスト ボックスに **IsReadOnly** プロパティを設定します。  
+7.  Set the **IsReadOnly** property for each of the following text boxes:  
   
-    -   **\[Purchase Order Number\]**  
+    -   **Purchase Order Number**  
   
-    -   **\[Sales Order ID\]**  
+    -   **Sales Order ID**  
   
-    -   **\[Sales Order Number\]**  
+    -   **Sales Order Number**  
   
-## サービスからのデータの読み込み  
- サービスから販売データを読み込むには、サービス プロキシ オブジェクトを使用します。その後、返されたデータを、WPF ウィンドウの <xref:System.Windows.Data.CollectionViewSource> のデータ ソースに割り当てます。  
+## <a name="load-the-data-from-the-service"></a>Load the data from the service  
+ Use the service proxy object to load sales data from the service. Then assign the returned data to the data source for the <xref:System.Windows.Data.CollectionViewSource> in the WPF window.  
   
-#### サービスからデータを読み込むには  
+#### <a name="to-load-the-data-from-the-service"></a>To load the data from the service  
   
-1.  デザイナーで、**MainWindow** というテキストをダブルクリックして、`Window_Loaded` イベント ハンドラーを作成します。  
+1.  In the designer, to create the `Window_Loaded` event handler, double-click the text that reads: **MainWindow**.  
   
-2.  イベント ハンドラーを次のコードで置き換えます。  このコードの *localhost* アドレスは、使用している開発コンピューターのローカル ホスト アドレスで置き換えてください。  
+2.  Replace the event handler with the following code. Make sure that you replace the *localhost* address in this code with the local host address on your development computer.  
   
-     [!code-cs[Data_WPFWCF#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_2.cs)]
-     [!code-vb[Data_WPFWCF#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_2.vb)]  
+     [!code-csharp[Data_WPFWCF#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_2.cs)]  [!code-vb[Data_WPFWCF#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_2.vb)]  
   
-## 販売レコード間の移動  
- ユーザーが **\[\<\]** ボタンと **\[\>\]** ボタンを使用して販売レコード間をスクロールできるようにするコードを追加します。  
+## <a name="navigate-sales-records"></a>Navigate sales records  
+ Add code that enables users to scroll through sales records by using the **\<** and **>** buttons.  
   
-#### ユーザーが販売レコード間を移動できるようにするには  
+#### <a name="to-enable-users-to-navigate-sales-records"></a>To enable users to navigate sales records  
   
-1.  デザイナーで、ウィンドウ サーフェイスの **\[\<\]** をダブルクリックします。  
+1.  In the designer, double-click the **<** button on the window surface.  
   
-     Visual Studio によって分離コード ファイルが開かれ、<xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントのために、新しい `backButton_Click` イベント ハンドラーが作成されます。  
+     Visual Studio opens the code-behind file, and creates a new `backButton_Click` event handler for the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.  
   
-2.  生成された `backButton_Click` イベント ハンドラーに次のコードを追加します。  
+2.  Add the following code to the generated `backButton_Click` event handler:  
   
-     [!code-cs[Data_WPFWCF#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_3.cs)]
-     [!code-vb[Data_WPFWCF#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_3.vb)]  
+     [!code-csharp[Data_WPFWCF#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_3.cs)]  [!code-vb[Data_WPFWCF#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_3.vb)]  
   
-3.  デザイナーに戻り、**\[\>\]** をダブルクリックします。  
+3.  Return to the designer, and double-click the **>** button.  
   
-     Visual Studio によって分離コード ファイルが開かれ、<xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントのために、新しい `nextButton_Click` イベント ハンドラーが作成されます。  
+     Visual Studio opens the code-behind file, and creates a new `nextButton_Click` event handler for the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.  
   
-4.  生成された `nextButton_Click` イベント ハンドラーに次のコードを追加します。  
+4.  Add the following code to the generated `nextButton_Click` event handler:  
   
-     [!code-cs[Data_WPFWCF#4](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_4.cs)]
-     [!code-vb[Data_WPFWCF#4](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_4.vb)]  
+     [!code-csharp[Data_WPFWCF#4](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_4.cs)]  [!code-vb[Data_WPFWCF#4](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_4.vb)]  
   
-## 販売レコードへの変更の保存  
- ユーザーが販売レコードを表示し、**\[変更の保存\]** ボタンを使用して変更を保存できるようにするコードを追加します。  
+## <a name="saving-changes-to-sales-records"></a>Saving changes to sales records  
+ Add code that enables users to both view and save changes to sales records by using the **Save changes** button.  
   
-#### 販売レコードへの変更を保存する機能を追加するには  
+#### <a name="to-add-the-ability-to-save-changes-to-sales-records"></a>To add the ability to save changes to sales records  
   
-1.  デザイナーで、**\[変更の保存\]** をダブルクリックします。  
+1.  In the designer, double-click the **Save Changes** button.  
   
-     Visual Studio によって分離コード ファイルが開かれ、<xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントのために、新しい `saveButton_Click` イベント ハンドラーが作成されます。  
+     Visual Studio opens the code-behind file, and creates a new `saveButton_Click` event handler for the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.  
   
-2.  `saveButton_Click` イベント ハンドラーに次のコードを追加します。  
+2.  Add the following code to the `saveButton_Click` event handler.  
   
-     [!code-cs[Data_WPFWCF#5](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_5.cs)]
-     [!code-vb[Data_WPFWCF#5](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_5.vb)]  
+     [!code-csharp[Data_WPFWCF#5](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_5.cs)]  [!code-vb[Data_WPFWCF#5](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_5.vb)]  
   
-## アプリケーションのテスト  
- アプリケーションをビルドして実行し、顧客レコードを表示および更新できることを確認します。  
+## <a name="testing-the-application"></a>Testing the application  
+ Build and run the application to verify that you can view and update customer records.  
   
-#### アプリケーションをテストするには  
+#### <a name="to-test-the-application"></a>To test the application  
   
-1.  **\[ビルド\]** メニューの **\[ソリューションのビルド\]** をクリックします。  ソリューションがエラーなしでビルドされることを確認します。  
+1.  On **Build** menu, click **Build Solution**. Verify that the solution builds without errors.  
   
-2.  **Ctrl キーを押しながら F5 キー**を押します。  
+2.  Press **Ctrl+F5**.  
   
-     Visual Studio によって、**AdventureWorksService** プロジェクトがデバッグなしで開始されます。  
+     Visual Studio starts the **AdventureWorksService** project, without debugging it.  
   
-3.  **ソリューション エクスプローラー**で、**AdventureWorksSalesEditor** プロジェクトを右クリックします。  
+3.  In **Solution Explorer**, right-click the **AdventureWorksSalesEditor** project.  
   
-4.  コンテキスト メニューの **\[デバッグ\]** で、**\[新しいインスタンスを開始\]** をクリックします。  
+4.  On the context menu, under **Debug**, click **Start new instance**.  
   
-     アプリケーションが実行されます。  次のことを検証します。  
+     The application runs. Verify the following:  
   
-    -   テキスト ボックスに、先頭の販売レコードの各種データ フィールドが表示されること。このレコードの販売注文 ID は **71774** です。  
+    -   The text boxes display different fields of data from the first sales record, which has the sales order ID **71774**.  
   
-    -   **\[\>\]** または **\[\<\]** をクリックして、他の販売レコードに移動できること。  
+    -   You can click the **>** or **<** buttons to navigate through other sales records.  
   
-5.  いずれかの販売レコードの **\[コメント\]** ボックスに任意のテキストを入力し、**\[変更の保存\]** をクリックします。  
+5.  In one of the sales records, type some text in the **Comment** box, and then click **Save changes**.  
   
-6.  アプリケーションを終了し、Visual Studio からもう一度アプリケーションを起動します。  
+6.  Close the application, and then start the application again from Visual Studio.  
   
-7.  変更した販売レコードに移動し、アプリケーションを終了して再起動した後でも変更が保持されていることを確認します。  
+7.  Navigate to the sales record that you changed, and verify that the change persists after you close and reopen the application.  
   
-8.  アプリケーションを終了します。  
+8.  Close the application.  
   
-## 次の手順  
- このチュートリアルを完了した後、関連する次のタスクを実行できます。  
+## <a name="next-steps"></a>Next Steps  
+ After completing this walkthrough, you can perform the following related tasks:  
   
--   Visual Studio の **\[データ ソース\]** ウィンドウを使用して、WPF コントロールをその他の種類のデータ ソースにバインドする方法について学習します。  詳細については、「[チュートリアル: データセットへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-a-dataset.md)」を参照してください。  
+-   Learn how to use the **Data Sources** window in Visual Studio to bind WPF controls to other types of data sources. For more information, see [Bind WPF controls to a dataset](../data-tools/bind-wpf-controls-to-a-dataset.md).  
   
--   Visual Studio の **\[データ ソース\]** ウィンドウを使用して、WPF コントロールでの関連するデータ \(つまり、親子関係にあるデータ\) を表示する方法について学習します。  詳細については、「[チュートリアル: WPF アプリケーションでの関連データの表示](../data-tools/walkthrough-displaying-related-data-in-a-wpf-application.md)」を参照してください。  
+-   Learn how to use the **Data Sources** window in Visual Studio to display related data (that is, data in a parent-child relationship) in WPF controls. For more information, see [Walkthrough: Displaying Related Data in a WPF Application](../data-tools/display-related-data-in-wpf-applications.md).  
   
-## 参照  
- [Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)   
- [方法: Visual Studio でデータに WPF コントロールをバインドする](../data-tools/bind-wpf-controls-to-data-in-visual-studio2.md)   
- [チュートリアル: データセットへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-a-dataset.md)   
- [概要](../Topic/WCF%20Data%20Services%20Overview.md)   
- [エンティティ フレームワークの概要](../Topic/Entity%20Framework%20Overview.md)   
- [WPF および Silverlight デザイナーの概要](http://msdn.microsoft.com/ja-jp/570b7a5c-0c86-4326-a371-c9b63378fc62)   
- [データ バインドの概要](../Topic/Data%20Binding%20Overview.md)
+## <a name="see-also"></a>See Also  
+ [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
+ [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
+ [Bind WPF controls to a dataset](../data-tools/bind-wpf-controls-to-a-dataset.md)   
+ [Overview](/dotnet/framework/data/wcf/wcf-data-services-overview)   
+ [Entity Framework Overview](/dotnet/framework/data/adonet/ef/overview)   
+ [WPF and Silverlight Designer Overview](http://msdn.microsoft.com/en-us/570b7a5c-0c86-4326-a371-c9b63378fc62)   
+ [Data Binding Overview](/dotnet/framework/wpf/data/data-binding-overview)

@@ -1,61 +1,78 @@
 ---
-title: "CA1800: 不必要にキャストしません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1800"
-  - "DoNotCastUnnecessarily"
-helpviewer_keywords: 
-  - "DoNotCastUnnecessarily"
-  - "CA1800"
+title: 'CA1800: Do not cast unnecessarily | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1800
+- DoNotCastUnnecessarily
+helpviewer_keywords:
+- DoNotCastUnnecessarily
+- CA1800
 ms.assetid: b79a010a-6627-421e-8955-6007e32fa808
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 17
----
-# CA1800: 不必要にキャストしません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: e2c0d1e5c21661d1a6cc61f7ba7307812bb6a98b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1800-do-not-cast-unnecessarily"></a>CA1800: Do not cast unnecessarily
 |||  
 |-|-|  
 |TypeName|DoNotCastUnnecessarily|  
 |CheckId|CA1800|  
-|分類|Microsoft.Performance|  
-|互換性に影響する変更点|なし|  
+|Category|Microsoft.Performance|  
+|Breaking Change|Non-breaking|  
   
-## 原因  
- メソッドで、引数またはローカル変数のいずれかについて二重のキャストを実行しました。  この規則違反を完全に解析するには、テスト対象のアセンブリをデバッグ情報を使用してビルドします。また、関連するプログラム データベース \(.pdb\) ファイルを使用できるようにします。  
+## <a name="cause"></a>Cause  
+ A method performs duplicate casts on one of its arguments or local variables. For complete analysis by this rule, the tested assembly must be built by using debugging information and the associated program database (.pdb) file must be available.  
   
-## 規則の説明  
- 二重のキャストがあるとパフォーマンスが低下します。特に、小さな繰り返しステートメントでキャストが実行される場合はそうです。  明示的に二重のキャストが必要な場合、二重にキャストするのではなく、ローカル変数にキャストの結果を格納し、ローカル変数を使用します。  
+## <a name="rule-description"></a>Rule Description  
+ Duplicate casts decrease performance, especially when the casts are performed in compact iteration statements. For explicit duplicate cast operations, store the result of the cast in a local variable and use the local variable instead of the duplicate cast operations.  
   
- 実際のキャストを実行する前に、C\# の `is` 演算子を使用してキャストが成功するかどうかをテストしている場合、代わりに `as` 演算子の結果をテストすることをお勧めします。  こうすると、`is` 演算子によって暗黙的にキャストが実行されず、同じ機能を実現できます。  
+ If the C# `is` operator is used to test whether the cast will succeed before the actual cast is performed, consider testing the result of the `as` operator instead. This provides the same functionality without the implicit cast operation that is performed by the `is` operator.  
   
-## 違反の修正方法  
- この規則違反を修正するには、キャスト操作の数を最小限に抑えるようにメソッドの実装を変更します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, modify the method implementation to minimize the number of cast operations.  
   
-## 警告を抑制する状況  
- パフォーマンスが重要ではない場合は、この規則による警告を抑制するか、この規則を完全に無視しても安全です。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule, or to ignore the rule completely, if performance is not a concern.  
   
-## 使用例  
- C\# の `is` 演算子を使用して、この規則に違反するメソッドを次の例に示します。  2 つ目のメソッドは、`is` 演算子を `as` 演算子の結果に対するテスト値で置き換えることで、この規則に適合しています。これによって、各繰り返しのキャスト操作の数が 2 つから 1 つに減ります。  
+## <a name="example"></a>Example  
+ The following example shows a method that violates the rule by using the C# `is` operator. A second method satisfies the rule by replacing the `is` operator with a test against the result of the `as` operator, which decreases the number of cast operations per iteration from two to one.  
   
- [!code-cs[FxCop.Performance.UnnecessaryCastsAsIs#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_1.cs)]  
+ [!code-csharp[FxCop.Performance.UnnecessaryCastsAsIs#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_1.cs)]  
   
-## 使用例  
- 次の例では、複数の明示的なキャストが重複しているメソッド `start_Click` を示します。このメソッドは規則違反です。一方、メソッド `reset_Click` は、キャストをローカル変数に保持することで規則に適合しています。  
+## <a name="example"></a>Example  
+ The following example shows a method, `start_Click`, that has multiple duplicate explicit casts, which violates the rule, and a method, `reset_Click`, which satisfies the rule by storing the cast in a local variable.  
   
- [!code-vb[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/VisualBasic/ca1800-do-not-cast-unnecessarily_2.vb)]
- [!code-cs[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_2.cs)]  
+ [!code-vb[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/VisualBasic/ca1800-do-not-cast-unnecessarily_2.vb)] [!code-csharp[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_2.cs)]  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [as](/dotnet/csharp/language-reference/keywords/as)   
  [is](/dotnet/csharp/language-reference/keywords/is)

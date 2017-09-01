@@ -1,63 +1,68 @@
 ---
-title: "Office プロジェクト内のオブジェクトへのグローバル アクセス"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ThisDocument_Shutdown"
-  - "ThisDocument_Startup"
-  - "Globals クラス、オブジェクトのグローバル アクセス"
-  - "ワークシート [Visual Studio での Office 開発]、グローバル アクセス"
-  - "ドキュメント [Visual Studio での Office 開発]、グローバル アクセス"
-  - "イベント ハンドラー [Visual Studio での Office 開発]"
-  - "ThisWorkbook_Startup"
-  - "アプリケーション レベルのアドイン [Visual Studio での Office 開発]"
-  - "アドイン [Visual Studio での Office 開発]、イベント"
-  - "ブック [Visual Studio での Office 開発]、グローバル アクセス"
-  - "ThisWorkbook_Shutdown"
-  - "ドキュメント レベルのカスタマイズ [Visual Studio での Office 開発]"
-  - "Startup イベント"
-  - "Shutdown イベント"
-  - "プロジェクト [Visual Studio での Office 開発]、グローバル アクセス"
-  - "Office ドキュメント [Visual Studio での Office 開発]、グローバル アクセス"
-  - "ThisAddin_Startup"
-  - "イベント [Visual Studio での Office 開発]"
-  - "ThisAddIn_Shutdown"
+title: Global Access to Objects in Office Projects | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- ThisDocument_Shutdown
+- ThisDocument_Startup
+- Globals class, object global access
+- worksheets [Office development in Visual Studio], global access
+- documents [Office development in Visual Studio], global access
+- event handlers [Office development in Visual Studio]
+- ThisWorkbook_Startup
+- application-level addins [Office development in Visual Studio]
+- addins [Office development in Visual Studio], events
+- workbooks [Office development in Visual Studio], global access
+- ThisWorkbook_Shutdown
+- document-level customizations [Office development in Visual Studio]
+- Startup event
+- Shutdown event
+- projects [Office development in Visual Studio], global access
+- Office documents [Office development in Visual Studio, global access
+- ThisAddin_Startup
+- events [Office development in Visual Studio]
+- ThisAddIn_Shutdown
 ms.assetid: f6a7f0ef-75d0-4a9b-9aec-be95ffa26adf
 caps.latest.revision: 55
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 54
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a166e8ce7dc6315d9e150e8c7a1a11d135fd5517
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# Office プロジェクト内のオブジェクトへのグローバル アクセス
-  Office プロジェクトを作成すると、Visual Studio は自動的に `Globals` という名前のクラスをプロジェクトに生成します。`Globals` クラスを使用して、プロジェクト内の任意のコードから実行時に異なる複数のプロジェクト項目にアクセスすることができます。  
+# <a name="global-access-to-objects-in-office-projects"></a>Global Access to Objects in Office Projects
+  When you create an Office project, Visual Studio automatically generates a class named `Globals` in the project. You can use the `Globals` class to access several different project items at run time from any code in the project.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## Globals クラスを使用する方法  
- `Globals` はプロジェクト内の特定の項目への参照を保持する静的クラスです。`Globals` クラスを使用することで、実行時にプロジェクト内の任意のコードから次の項目へとアクセスすることができます。  
+## <a name="how-to-use-the-globals-class"></a>How to Use the Globals Class  
+ `Globals` is a static class that keeps references to certain items in your project. By using the `Globals` class, you can access the following items from any code in the project at run time:  
   
--   Excel ブックまたはテンプレート プロジェクトの `ThisWorkbook` および `Sheet`*n* クラス。 これらのオブジェクトは、`Globals.ThisWorkbook` および `Sheet`*n* プロパティを使用してアクセスすることができます。  
+-   The `ThisWorkbook` and `Sheet`*n* classes in an Excel workbook or template project. You can access these objects by using the `Globals.ThisWorkbook` and `Sheet`*n* properties.  
   
--   Word 文書またはテンプレート プロジェクトの `ThisDocument` クラス。 このオブジェクトには、`Globals.ThisDocument` プロパティを使用してアクセスすることができます。  
+-   The `ThisDocument` class in a Word document or template project. You can access this object by using the `Globals.ThisDocument` property.  
   
--   VSTO アドイン プロジェクトの `ThisAddIn` クラス。 このオブジェクトには、`Globals.ThisAddIn` プロパティを使用してアクセスすることができます。  
+-   The `ThisAddIn` class in an VSTO Add-in project. You can access this object by using the `Globals.ThisAddIn` property.  
   
--   リボン デザイナーを使用してカスタマイズした、プロジェクト内のすべてのリボン。 リボンには、`Globals.Ribbons` プロパティを使用してアクセスすることができます。 詳細については、「[実行時のリボンへのアクセス](../vsto/accessing-the-ribbon-at-run-time.md)」を参照してください。  
+-   All Ribbons in your project that you customized by using the Ribbon Designer. You can access the Ribbons by using the `Globals.Ribbons` property. For more information, see [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md).  
   
--   Outlook VSTO アドイン プロジェクトのすべての Outlook フォーム領域。 フォーム領域には、`Globals.FormRegions` プロパティを使用してアクセスすることができます。 詳細については、「[実行時におけるフォーム領域へのアクセス](../vsto/accessing-a-form-region-at-run-time.md)」を参照してください。  
+-   All Outlook form regions in an Outlook VSTO Add-in project. You can access the form regions by using the `Globals.FormRegions` property. For more information, see [Accessing a Form Region at Run Time](../vsto/accessing-a-form-region-at-run-time.md).  
   
--   [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] をターゲットとするプロジェクトで実行時にリボン コントロールおよびホスト項目を作成できるようにするファクトリ オブジェクト。 このオブジェクトには、`Globals.Factory` プロパティを使用してアクセスすることができます。 このオブジェクトは、次のいずれかのインターフェイスを実装するクラスのインスタンスです。  
+-   A factory object that enables you to create Ribbon controls, and host items at run time in projects that target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] or the [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]. You can access this object by using the `Globals.Factory` property. This object is an instance of a class that implements one the following interfaces:  
   
     -   <xref:Microsoft.Office.Tools.Factory>  
   
@@ -67,24 +72,23 @@ caps.handback.revision: 54
   
     -   <xref:Microsoft.Office.Tools.Word.Factory>  
   
- たとえば、`Globals.Sheet1` プロパティを使用すると、Excel のドキュメントレベルのプロジェクトの操作ウィンドウでユーザーがボタンをクリックした場合に `Sheet1` の <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールにテキストを挿入することができます。  
+ For example, you can use the `Globals.Sheet1` property to insert text into a <xref:Microsoft.Office.Tools.Excel.NamedRange> control on `Sheet1` when a user clicks a button on the actions pane in a document-level project for Excel.  
   
- [!code-csharp[Trin_VstcoreProgramming#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgramming/CS/Sheet1.cs#1)]
- [!code-vb[Trin_VstcoreProgramming#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreProgramming/VB/Sheet1.vb#1)]  
+ [!code-vb[Trin_VstcoreProgramming#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#1)] [!code-csharp[Trin_VstcoreProgramming#1](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#1)]  
   
-## Globals クラスの初期化  
- ドキュメントまたは VSTO アドインが完全に初期化する前に `Globals` クラスの使用を試みるコードは、実行時の例外をスローする場合があります。 たとえば、クラス レベルの変数の宣言が `Globals` を使用することで失敗する場合があります。これは、宣言されたオブジェクトがインスタンス化される前に、`Globals` クラスがすべてのホスト項目への参照を使用して初期化されない可能性があるためです。  
+## <a name="initializing-the-globals-class"></a>Initializing the Globals Class  
+ Code that attempts to use the `Globals` class before the document or VSTO Add-in is completely initialized might throw a run time exception. For example, using `Globals` when declaring a class-level variable might fail because the `Globals` class might not be initialized with references to all of the host items before the declared object is instantiated.  
   
 > [!NOTE]  
->  `Globals` クラスは設計時に初期化されることはありませんが、コントロールのインスタンスがデザイナーによって作成されます。 これは、ユーザー コントロール クラス内から `Globals` クラスのプロパティを使用するユーザー コントロールを作成する場合、そのプロパティが返されたオブジェクトを使用しようとする前に **null** を返すかどうかを決定する必要があることを意味します。  
+>  The `Globals` class is never initialized at design time, but control instances are created by the designer. This means that if you create a user control that uses a property of the `Globals` class from inside a user control class, you must whether the property returns **null** before you try to use the returned object.  
   
-## 参照  
- [実行時のリボンへのアクセス](../vsto/accessing-the-ribbon-at-run-time.md)   
- [実行時におけるフォーム領域へのアクセス](../vsto/accessing-a-form-region-at-run-time.md)   
- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
- [Document ホスト項目](../vsto/document-host-item.md)   
- [Workbook ホスト項目](../vsto/workbook-host-item.md)   
- [Worksheet ホスト項目](../vsto/worksheet-host-item.md)   
- [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
+ [Accessing a Form Region at Run Time](../vsto/accessing-a-form-region-at-run-time.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [Document Host Item](../vsto/document-host-item.md)   
+ [Workbook Host Item](../vsto/workbook-host-item.md)   
+ [Worksheet Host Item](../vsto/worksheet-host-item.md)   
+ [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
   
   

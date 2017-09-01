@@ -1,12 +1,13 @@
 ---
 title: "Visual Studio での Python のインストール | Microsoft Docs"
 ms.custom: 
-ms.date: 5/8/2017
+ms.date: 7/13/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ce3d3656-7ba2-490d-92df-0bb3e3badf92
@@ -14,29 +15,15 @@ caps.latest.revision: 11
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: 9cdd87d81f0b0f4748a25c7bb87fb840e246854c
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 613af31a2e44cc447980b68de4b0b5642dde1262
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
-# <a name="installing-python-support-in-visual-studio"></a>Visual Studio での Python サポートのインストール
+# <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする
 
 Visual Studio 用の Python サポートをインストールするには、使用している Visual Studio のバージョンと一致するセクションの手順を実行します。
 
@@ -44,12 +31,15 @@ Visual Studio 用の Python サポートをインストールするには、使�
 - [Visual Studio 2015](#visual-studio-2015)
 - [Visual Studio 2013 以前](#visual-studio-2013-and-earlier)
 
-Visual Studio 2015 以前では、任意の Python インタープリターをインストールする必要があります。 詳細については、「[Python Environments (Python 環境)](python-environments.md)」を参照してください。
+Visual Studio 2015 以前では、任意の Python インタープリターをインストールする必要があります。 詳細については、「[Python 環境](python-environments.md)」を参照してください。
 
 インストール手順を実行した後、Python サポートを簡単にテストするには、Alt + I キーを押して Python の対話型ウィンドウを開き、`2+2` を入力します。 `4` という出力が表示されない場合は、手順を再確認してください。
 
 > [!Tip]
-> Python ワークロードには、テンプレートの検出、テンプレート オプションの入力、およびプロジェクトとファイルの作成を行うためのグラフィカル ユーザー インターフェイスを提供する、有用な Cookiecutter 拡張機能が含まれています。 詳細については、「[Using Cookiecutter (Cookiecutter の使用)](cookiecutter.md)」を参照してください。
+> Python ワークロードには、テンプレートの検出、テンプレート オプションの入力、およびプロジェクトとファイルの作成を行うためのグラフィカル ユーザー インターフェイスを提供する、有用な Cookiecutter 拡張機能が含まれています。 詳細については、「[Cookiecutter 拡張機能の使用](cookiecutter.md)」を参照してください。
+
+> [!Note]
+> 現在、Python のサポートは Visual Studio for Mac では使用できませんが、Visual Studio Code によって Mac と Linux でも使うことができます。 「[質問と回答](python-in-visual-studio.md#questions-and-answers)」を参照してください。
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
@@ -57,14 +47,16 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
 
 1. Visual Studio インストーラーで、**[Web & Cloud (Web とクラウド)]、[Python 開発]** ワークロードの順に選択します。
 
-    ![Visual Studio インストーラーの [Python 開発] ワークロード](~/python/media/installation-python-workload.png)
+    ![Visual Studio インストーラーの [Python 開発] ワークロード](media/installation-python-workload.png)
 
     > [!Note]
     > Python は、**[データ サイエンスと分析のアプリケーション]** ワークロードにも含まれています。
 
 1. インストーラーの右側で、インストールに含める Python インタープリターとその他の関連ツールを選択します。 たとえば、Python の C++ 拡張機能を開発する場合は、**[Python ネイティブ開発ツール]** オプションを含めます。
 
-    ![Visual Studio インストーラーの [Python 開発] のオプション](~/python/media/installation-python-options.png)
+    ![Visual Studio インストーラーの [Python 開発] のオプション](media/installation-python-options.png)
+
+1. コンピューターにインタープリターをインストール済みの場合は、「[既存インタープリター用の環境の作成](python-environments.md#creating-an-environment-for-an-existing-interpreter)」を参照してください。
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 
@@ -74,9 +66,9 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
 
 1. **[プログラミング言語] の [Python Tools for Visual Studio]** を選択し、**[次へ]** を選択します。
 
-    ![Visual Studio 2015 インストーラーの PTVS オプション](~/python/media/installation-vs2015.png)    
+    ![Visual Studio 2015 インストーラーの PTVS オプション](media/installation-vs2015.png)    
 
-1. Visual Studio のセットアップが完了したら、[任意の Python インタープリターをインストールします](python-environments.md#selecting-and-installing-python-interpreters)。
+1. Visual Studio のセットアップが完了したら、[任意の Python インタープリターをインストールします](python-environments.md#selecting-and-installing-python-interpreters)。 インタープリターをインストール済みの場合は、「[既存インタープリター用の環境の作成](python-environments.md#creating-an-environment-for-an-existing-interpreter)」を参照してください。
 
 ## <a name="visual-studio-2013-and-earlier"></a>Visual Studio 2013 以前
 
@@ -86,7 +78,7 @@ Visual Studio 2015 以前では、任意の Python インタープリターを�
     - Visual Studio 2012: [PTVS 2.1 for Visual Studio 2012](https://pytools.codeplex.com/downloads/get/920478)
     - Visual Studio 2010: [PTVS 2.1 for Visual Studio 2010](https://pytools.codeplex.com/downloads/get/920479)
 
-1. [任意の Python インタープリターをインストールします](python-environments.md#selecting-and-installing-python-interpreters)。
+1. [任意の Python インタープリターをインストールします](python-environments.md#selecting-and-installing-python-interpreters)。 インタープリターをインストール済みの場合は、「[既存インタープリター用の環境の作成](python-environments.md#creating-an-environment-for-an-existing-interpreter)」を参照してください。
 
 ## <a name="install-locations"></a>インストールする場所
 

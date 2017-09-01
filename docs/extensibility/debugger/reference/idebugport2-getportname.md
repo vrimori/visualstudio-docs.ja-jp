@@ -1,48 +1,65 @@
 ---
-title: "IDebugPort2::GetPortName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPort2::GetPortName"
-helpviewer_keywords: 
-  - "IDebugPort2::GetPortName"
+title: IDebugPort2::GetPortName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPort2::GetPortName
+helpviewer_keywords:
+- IDebugPort2::GetPortName
 ms.assetid: 4478b3d5-aa30-4105-8d05-e3bae2f8917a
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugPort2::GetPortName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2aee0b7f4686620f6b160e9277dfcd53b39a970c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-ポート名を取得します。  
+---
+# <a name="idebugport2getportname"></a>IDebugPort2::GetPortName
+Gets the port name.  
   
-## 構文  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetPortName(   
-   BSTR* pbstrName  
+```cpp  
+HRESULT GetPortName(   
+   BSTR* pbstrName  
 );  
 ```  
   
-```c#  
-int GetPortName(   
-   out string pbstrName  
+```csharp  
+int GetPortName(   
+   out string pbstrName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>Parameters  
  `pbstrName`  
- \[入力\] ポートの名前を返します。  
+ [out] Returns the name of the port.  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

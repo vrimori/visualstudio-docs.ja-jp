@@ -1,162 +1,179 @@
 ---
-title: "ローカル プロパティの取得 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "式の評価、ローカルのプロパティを取得します。"
-  - "[デバッグ SDK]、[ローカル プロパティのデバッグ"
-  - "式の評価、ローカルのプロパティ"
+title: Getting Local Properties | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expression evaluation, getting local properties
+- debugging [Debugging SDK], local properties
+- expression evaluation, local properties
 ms.assetid: 6c3a79e8-1ba1-4863-97c3-0216c3d9f092
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# ローカル プロパティの取得
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: db49db8d9b0f4918bcc4487fc5c1b0566d306654
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
+---
+# <a name="getting-local-properties"></a>Getting Local Properties
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されません。 CLR 式エバリュエーターの実装については、次を参照してください [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) と [マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
+>  In Visual Studio 2015, this way of implementing expression evaluators is deprecated. For information about implementing CLR expression evaluators, please see [CLR Expression Evaluators](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) and [Managed Expression Evaluator Sample](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Visual Studio 呼び出し [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) させることが、 [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) に表示されるすべてのローカル変数へのアクセスを提供するオブジェクト、 **ローカル** ウィンドウです。 Visual Studio を呼び出して [次へ](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) に表示される各ローカル情報を取得します。 この例では、クラスで `CEnumPropertyInfo` を実装して、 `IEnumDebugPropertyInfo2` インターフェイスです。  
+ Visual Studio calls [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) to obtain an [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) object that provides access to all the locals to be displayed in the **Locals** window. Visual Studio then calls [Next](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) to get the information to be displayed for each local. In this example, the class `CEnumPropertyInfo` implements the `IEnumDebugPropertyInfo2` interface.  
   
- この実装の `IEnumDebugPropertyInfo2::Next` 次のタスクを実行します。  
+ This implementation of `IEnumDebugPropertyInfo2::Next` performs the following tasks:  
   
-1.  情報が格納される配列をクリアします。  
+1.  Clears the array where the information is to be stored.  
   
-2.  呼び出し [次へ](../../extensibility/debugger/reference/ienumdebugfields-next.md) 返されたを格納する各ローカル [DEBUG\_PROPERTY\_INFO](../../extensibility/debugger/reference/debug-property-info.md) 返される配列にします。[IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md) オブジェクトが指定されたときにこの `CEnumPropertyInfo` クラスをインスタンス化します。  
+2.  Calls [Next](../../extensibility/debugger/reference/ienumdebugfields-next.md) for each local, storing the returned [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) in the array to be returned. The [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md) object was supplied when this `CEnumPropertyInfo` class was instantiated.  
   
-## マネージ コード  
- この例の実装を示しています。 `IEnumDebugPropertyInfo2::EnumChildren` マネージ コードでメソッドのローカル変数にします。  
+## <a name="managed-code"></a>Managed Code  
+ This example shows an implementation of `IEnumDebugPropertyInfo2::EnumChildren` for a method's locals in managed code.  
   
-```c#  
+```csharp  
 namespace EEMC  
 {  
-    public class CEnumMethodField : IEnumDebugFields  
-    {  
-        public HRESULT Next(  
-                uint                  count,  
-                DEBUG_PROPERTY_INFO[] properties,  
-            out uint                  fetched)  
-        {  
-            if (count > properties.Length)  
-                throw new COMException();  
+    public class CEnumMethodField : IEnumDebugFields  
+    {  
+        public HRESULT Next(  
+                uint                  count,  
+                DEBUG_PROPERTY_INFO[] properties,  
+            out uint                  fetched)  
+        {  
+            if (count > properties.Length)  
+                throw new COMException();  
   
-            // Zero out the array.  
-            for (int i= 0; i < count; i++)  
-            {  
-                properties[i].bstrFullName = "";  
-                properties[i].bstrName = "";  
-                properties[i].bstrType = "";  
-                properties[i].bstrValue = "";  
-                properties[i].dwAttrib = 0;  
-                properties[i].dwFields = 0;  
-                properties[i].pProperty = null;  
-            }  
-            fetched = 0;  
+            // Zero out the array.  
+            for (int i= 0; i < count; i++)  
+            {  
+                properties[i].bstrFullName = "";  
+                properties[i].bstrName = "";  
+                properties[i].bstrType = "";  
+                properties[i].bstrValue = "";  
+                properties[i].dwAttrib = 0;  
+                properties[i].dwFields = 0;  
+                properties[i].pProperty = null;  
+            }  
+            fetched = 0;  
   
-            // COM interop.  
-            HRESULT hr;  
-            uint innerFetched;  
-            IDebugField[] field = new IDebugField[1];  
+            // COM interop.  
+            HRESULT hr;  
+            uint innerFetched;  
+            IDebugField[] field = new IDebugField[1];  
   
-            while (fetched < count)  
-            {  
-                field[0] = null;  
-                innerFetched = 0;  
+            while (fetched < count)  
+            {  
+                field[0] = null;  
+                innerFetched = 0;  
   
-                // Get next field.  
-                if (fetched < fieldCount)  
-                    hr = fields.Next(1, field, ref innerFetched);  
-                // No more fields.  
-                else return COM.S_FALSE;  
+                // Get next field.  
+                if (fetched < fieldCount)  
+                    hr = fields.Next(1, field, ref innerFetched);  
+                // No more fields.  
+                else return COM.S_FALSE;  
   
-                if (hr != COM.S_OK || innerFetched != 1 || field[0] == null)  
-                    throw new COMException("CEnumPropertyInfo.Next");  
+                if (hr != COM.S_OK || innerFetched != 1 || field[0] == null)  
+                    throw new COMException("CEnumPropertyInfo.Next");  
   
-                // Get property from field.  
-                CFieldProperty fieldProperty =   
-                    new CFieldProperty(provider, address, binder, field[0]);  
+                // Get property from field.  
+                CFieldProperty fieldProperty =   
+                    new CFieldProperty(provider, address, binder, field[0]);  
   
-                DEBUG_PROPERTY_INFO[] property =  
-                                new DEBUG_PROPERTY_INFO[1];  
-                fieldProperty.GetPropertyInfo((uint) infoFlags, radix, 0, null, 0, property);  
-                properties[fetched++] = property[0];  
-            }  
-            return COM.S_OK;  
-        }  
-    }  
+                DEBUG_PROPERTY_INFO[] property =  
+                                new DEBUG_PROPERTY_INFO[1];  
+                fieldProperty.GetPropertyInfo((uint) infoFlags, radix, 0, null, 0, property);  
+                properties[fetched++] = property[0];  
+            }  
+            return COM.S_OK;  
+        }  
+    }  
 }  
 ```  
   
-## アンマネージ コード  
- この例の実装を示しています。 `IEnumDebugPropertyInfo2::EnumChildren` アンマネージ コードでメソッドのローカル変数にします。  
+## <a name="unmanaged-code"></a>Unmanaged Code  
+ This example shows an implementation of `IEnumDebugPropertyInfo2::EnumChildren` for a method's locals in unmanaged code.  
   
-```cpp#  
+```cpp  
 STDMETHODIMP CEnumPropertyInfo::Next(  
-    in  ULONG                count,  
-    out DEBUG_PROPERTY_INFO* pelements,   
-    out ULONG*               pfetched )  
+    in  ULONG                count,  
+    out DEBUG_PROPERTY_INFO* pelements,   
+    out ULONG*               pfetched )  
 {  
-    if (pfetched)  
-        *pfetched = 0;  
-    if (!pelements)  
-        return E_INVALIDARG;  
-    else  
-        memset( pelements, 0, count * sizeof(DEBUG_PROPERTY_INFO));  
+    if (pfetched)  
+        *pfetched = 0;  
+    if (!pelements)  
+        return E_INVALIDARG;  
+    else  
+        memset( pelements, 0, count * sizeof(DEBUG_PROPERTY_INFO));  
   
-    HRESULT hr  = S_OK;  
-    ULONG   idx = 0;  
-    while (idx < count)  
-    {  
-        ULONG        fetchedFields;  
-        IDebugField* pfield;  
+    HRESULT hr  = S_OK;  
+    ULONG   idx = 0;  
+    while (idx < count)  
+    {  
+        ULONG        fetchedFields;  
+        IDebugField* pfield;  
   
-        //get the next field  
-        hr = m_fields->Next( 1, &pfield, &fetchedFields );  
-        if (FAILED(hr))  
-            return hr;  
-        if (fetchedFields != 1)  
-            return E_FAIL;  
-        idx++;  
+        //get the next field  
+        hr = m_fields->Next( 1, &pfield, &fetchedFields );  
+        if (FAILED(hr))  
+            return hr;  
+        if (fetchedFields != 1)  
+            return E_FAIL;  
+        idx++;  
   
-        //create a CFieldProperty to retrieve the DEBUG_PROPERTY_INFO  
-        CFieldProperty* pproperty =  
-            new CFieldProperty( m_provider, m_address, m_binder, pfield );  
-        pfield->Release();  
-        if (!pproperty)  
-            return E_OUTOFMEMORY;  
+        //create a CFieldProperty to retrieve the DEBUG_PROPERTY_INFO  
+        CFieldProperty* pproperty =  
+            new CFieldProperty( m_provider, m_address, m_binder, pfield );  
+        pfield->Release();  
+        if (!pproperty)  
+            return E_OUTOFMEMORY;  
   
-        hr = pproperty->Init();  
-        if (FAILED(hr))  
-        {  
-            pproperty->Release();  
-            return hr;  
-        }  
+        hr = pproperty->Init();  
+        if (FAILED(hr))  
+        {  
+            pproperty->Release();  
+            return hr;  
+        }  
   
-        hr = pproperty->GetPropertyInfo( m_infoFlags,  
-                                         m_radix,  
-                                         0,  
-                                         NULL,  
-                                         0,  
-                                         pelements + idx - 1);  
-        pproperty->Release();  
-        if (FAILED(hr))  
-            return hr;  
-    }  
+        hr = pproperty->GetPropertyInfo( m_infoFlags,  
+                                         m_radix,  
+                                         0,  
+                                         NULL,  
+                                         0,  
+                                         pelements + idx - 1);  
+        pproperty->Release();  
+        if (FAILED(hr))  
+            return hr;  
+    }  
   
-    if (pfetched)  
-        *pfetched = idx;  
-    return hr;  
+    if (pfetched)  
+        *pfetched = idx;  
+    return hr;  
 }  
 ```  
   
-## 参照  
- [ローカル変数の実装のサンプル](../../extensibility/debugger/sample-implementation-of-locals.md)   
- [\[ローカル\] の列挙](../Topic/Enumerating%20Locals.md)
+## <a name="see-also"></a>See Also  
+ [Sample Implementation of Locals](../../extensibility/debugger/sample-implementation-of-locals.md)   
+ [Enumerating Locals](../../extensibility/debugger/enumerating-locals.md)

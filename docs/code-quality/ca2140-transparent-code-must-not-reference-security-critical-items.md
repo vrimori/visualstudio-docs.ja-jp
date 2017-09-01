@@ -1,78 +1,95 @@
 ---
-title: "CA2140: 透過的コードは、セキュリティ上重要な項目を参照してはならない | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2129"
-  - "SecurityTransparentCodeShouldNotReferenceNonpublicSecurityCriticalCode"
-  - "CA2140"
-helpviewer_keywords: 
-  - "CA2129"
-  - "CA2140"
-  - "SecurityTransparentCodeShouldNotReferenceNonpublicSecurityCriticalCode"
+title: 'CA2140: Transparent code must not reference security critical items | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2129
+- SecurityTransparentCodeShouldNotReferenceNonpublicSecurityCriticalCode
+- CA2140
+helpviewer_keywords:
+- CA2140
+- SecurityTransparentCodeShouldNotReferenceNonpublicSecurityCriticalCode
+- CA2129
 ms.assetid: 251a12da-0557-47f5-a4f7-0229d590ae7b
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 17
----
-# CA2140: 透過的コードは、セキュリティ上重要な項目を参照してはならない
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6cb8758ba9aa3408b40f7a468523c52925faf78d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2140-transparent-code-must-not-reference-security-critical-items"></a>CA2140: Transparent code must not reference security critical items
 |||  
 |-|-|  
 |TypeName|TransparentMethodsMustNotReferenceCriticalCode|  
 |CheckId|CA2140|  
-|分類|Microsoft.Security|  
-|互換性に影響する変更点|あり|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## 原因  
- 次のような透過的なメソッドです。  
+## <a name="cause"></a>Cause  
+ A transparent method:  
   
--   セキュリティ上重要なセキュリティ例外型を処理する。  
+-   handles a security critical security exception type  
   
--   セキュリティ上重要な型としてマークされたパラメーターを持つ。  
+-   has a parameter that is marked as a security critical type  
   
--   セキュリティ上重要な制約が指定されたジェネリック パラメーターを持つ。  
+-   has a generic parameter with a security critical constraints  
   
--   セキュリティ上重要な型のローカル変数を持つ。  
+-   has a local variable of a security critical type  
   
--   セキュリティ上重要としてマークされたデータ型を参照する。  
+-   references a type that is marked as security critical  
   
--   セキュリティ上重要としてマークされたメソッドを呼び出す。  
+-   calls a method that is marked as security critical  
   
--   セキュリティ上重要としてマークされたフィールドを参照する。  
+-   references a field that is marked as security critical  
   
--   セキュリティ上重要としてマークされたデータ型を返す。  
+-   returns a type that is marked as security critical  
   
-## 規則の説明  
- <xref:System.Security.SecurityCriticalAttribute> 属性が適用されたコード要素は、セキュリティ上重要になります。  透過的なメソッドでセキュリティ上重要な要素を使用することはできません。  透過データ型でセキュリティ上重要な型を使用しようとすると、<xref:System.TypeAccessException>、<xref:System.MethodAccessException>、<xref:System.FieldAccessException> のいずれかの例外が発生します。  
+## <a name="rule-description"></a>Rule Description  
+ A code element that is marked with the <xref:System.Security.SecurityCriticalAttribute> attribute is security critical. A transparent method cannot use a security critical element. If a transparent type attempts to use a security critical type a <xref:System.TypeAccessException>, <xref:System.MethodAccessException> , or <xref:System.FieldAccessException> is raised.  
   
-## 違反の修正方法  
- この規則違反を修正するには、次のいずれかの処理を実行します。  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, do one of the following:  
   
--   セキュリティ上重要なコードを使用するコード要素に <xref:System.Security.SecurityCriticalAttribute> 属性を適用する。  
+-   Mark the code element that uses the security critical code with the <xref:System.Security.SecurityCriticalAttribute> attribute  
   
-     または  
+     \- or -  
   
--   セキュリティ上重要としてマークされているコード要素から <xref:System.Security.SecurityCriticalAttribute> 属性を削除し、<xref:System.Security.SecuritySafeCriticalAttribute> 属性または <xref:System.Security.SecurityTransparentAttribute> 属性を適用する。  
+-   Remove the <xref:System.Security.SecurityCriticalAttribute> attribute from the code elements that are marked as security critical and instead mark them with the <xref:System.Security.SecuritySafeCriticalAttribute> or <xref:System.Security.SecurityTransparentAttribute> attribute.  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## 使用例  
- 次の例では、セキュリティ上重要なジェネリック コレクション、フィールド、およびメソッドを、透過的なメソッドで参照しています。  
+## <a name="example"></a>Example  
+ In the following examples, a transparent method attempts to reference a security critical generic collection, a security critical field, and a security critical method.  
   
- [!code-cs[FxCop.Security.CA2140.TransparentMethodsMustNotReferenceCriticalCode#1](../code-quality/codesnippet/CSharp/ca2140-transparent-code-must-not-reference-security-critical-items_1.cs)]  
+ [!code-csharp[FxCop.Security.CA2140.TransparentMethodsMustNotReferenceCriticalCode#1](../code-quality/codesnippet/CSharp/ca2140-transparent-code-must-not-reference-security-critical-items_1.cs)]  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  <xref:System.Security.SecurityTransparentAttribute>   
  <xref:System.Security.SecurityCriticalAttribute>   
  <xref:System.Security.SecurityTransparentAttribute>   

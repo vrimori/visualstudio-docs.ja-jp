@@ -1,38 +1,55 @@
 ---
-title: "チュートリアル: XAML デザイナーでデータにバインドする | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.XamlDesigner.DataBinding"
+title: 'Walkthrough: Binding to data in XAML Designer | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.XamlDesigner.DataBinding
 ms.assetid: 1a99aeae-c3ef-407d-ba79-b8055489a43d
 caps.latest.revision: 20
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# チュートリアル: XAML デザイナーでデータにバインドする
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: bcbe5e55c766a9e66af06590c86760173f32fbea
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/28/2017
 
-XAML デザイナーでは、アートボードと \[プロパティ\] ウィンドウを使用してデータ バインドのプロパティを設定できます。  このチュートリアルの例では、データをコントロールにバインドする方法を示します。  具体的には、`ItemCount` という名前の [DependencyProperty](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.aspx) を持つ簡単なショッピング カート クラスを作成し、`ItemCount` プロパティを [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) コントロールの **Text** プロパティにバインドします。  
+---
+# <a name="walkthrough-binding-to-data-in-xaml-designer"></a>Walkthrough: Binding to data in XAML Designer
+In XAML Designer, you can set data binding properties by using the artboard and the Properties window. The example in this walkthrough shows how to bind data to a control. Specifically, the walkthrough shows how to create a simple shopping cart class that has a [DependencyProperty](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.aspx) named `ItemCount`, and then bind the `ItemCount` property to the **Text** property of a [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) control.  
   
-### データ ソースとして使用するクラスを作成するには  
+### <a name="to-create-a-class-to-use-as-a-data-source"></a>To create a class to use as a data source  
   
-1.  **\[ファイル\]** メニューで、**\[新規\]**、**\[プロジェクト\]** をクリックします。  
+1.  On the **File** menu, choose **New**, **Project**.  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[Visual C\#\]** ノードまたは **\[Visual Basic\]** ノードを選択します。次に、**\[Windows デスクトップ\]** ノードを展開し、**\[WPF アプリケーション\]** テンプレートを選択します。  
+2.  In the **New Project** dialog box, choose either the **Visual C#** or **Visual Basic** node, expand the **Windows Desktop** node, and then choose the **WPF Application** template.  
   
-3.  プロジェクトに「BindingTest」という名前を付けて、**\[OK\]** をクリックします。  
+3.  Name the project **BindingTest**, and then choose the **OK** button.  
   
-4.  MainWindow.xaml.cs \(または MainWindow.xaml.vb\) ファイルを開き、次のコードを追加します。  C\# では、`BindingTest` 名前空間 \(ファイル内の最後の閉じかっこの前\) にコードを追加します。  Visual Basic の場合は、単に新しいクラスを追加します。  
+4.  Open the MainWindow.xaml.cs (or MainWindow.xaml.vb) file and add the following code. In C#, add the code in the `BindingTest` namespace (before the final closing parenthesis in the file). In Visual Basic, just add the new class.  
   
-    ```c#  
+    ```csharp  
     public class ShoppingCart : DependencyObject  
     {  
         public int ItemCount  
@@ -65,38 +82,38 @@ XAML デザイナーでは、アートボードと \[プロパティ\] ウィン
     End Class  
     ```  
   
-     このコードでは、[PropertyMetadata](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.propertymetadata.aspx) オブジェクトを使用して既定のアイテム数に値 0 を設定します。  
+     This code sets a value of 0 as the default item count by using the [PropertyMetadata](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.propertymetadata.aspx) object.  
   
-5.  **\[ファイル\]** メニューで、**\[ビルド\]**、**\[ソリューションのビルド\]** の順に選択します。  
+5.  On the **File** menu, choose **Build**, **Build Solution**.  
   
-### ItemCount プロパティを TextBlock コントロールにバインドするには  
+### <a name="to-bind-the-itemcount-property-to-a-textblock-control"></a>To bind the ItemCount property to a TextBlock control  
   
-1.  ソリューション エクスプローラーで、MainWindow.xaml のショートカット メニューを開き、**\[デザイナーの表示\]** を選択します。  
+1.  In Solution Explorer, open the shortcut menu for MainWindow.xaml and choose **View Designer**.  
   
-2.  \[ツールボックス\] で、\[[Grid](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx)\] コントロールを選択し、フォームに追加します。  
+2.  In the Toolbox, choose a [Grid](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) control and add it to the form.  
   
-3.  `Grid` を選択した状態で、\[プロパティ\] ウィンドウの **\[DataContext\]** プロパティの横にある **\[新規作成\]** ボタンをクリックします。  
+3.  With the `Grid` selected, in the Properties window, choose the **New** button next to the **DataContext** property.  
   
-4.  **\[オブジェクトの選択\]** ダイアログ ボックスで、**\[すべてのアセンブリを表示する\]** チェック ボックスがオフであることを確認し、**\[BindingTest\]** 名前空間の下にある **\[ShoppingCart\]** を選択し、**\[OK\]** をクリックします。  
+4.  In the **Select Object** dialog box, make sure that **Show all assemblies** checkbox is cleared, choose **ShoppingCart** under the **BindingTest** namespace, and then choose the **OK** button.  
   
-     次の図は、**\[オブジェクトの選択\]** ダイアログ ボックスで **\[ShoppingCart\]** 選択した状態を示しています。  
+     The following illustration shows the **Select Object** dialog box with **ShoppingCart** selected.  
   
-     ![&#91;オブジェクトの選択&#93; ダイアログ ボックス](../designers/media/blendselectobject.PNG "BlendSelectObject")  
+     ![The Select Object dialog box](../designers/media/blendselectobject.PNG "BlendSelectObject")  
   
-5.  **\[ツールボックス\]** で、`TextBlock` コントロールを選択してフォームに追加します。  
+5.  In the **Toolbox**, choose a `TextBlock` control to add it to the form.  
   
-6.  `TextBlock` コントロールを選択した状態で、\[プロパティ\] ウィンドウで **\[Text\]** プロパティの右側にあるプロパティ マーカーを選択してから、**\[データ バインディングの作成\]** を選択します。  \(プロパティ マーカーは小さいボックスのような外観です。\)  
+6.  With the `TextBlock` control selected, in the Properties window, choose the property marker to the right of the **Text** property, and then choose **Create Data Binding**. (The property marker looks like a small box.)  
   
-7.  \[データ バインディングを作成\] ダイアログ ボックスの **\[パス\]** ボックスで、**\[ItemCount: \(int32\)\]** プロパティを選択し、**\[OK\]** をクリックします。  
+7.  In the Create Data Binding dialog box, in the **Path** box, choose the **ItemCount : (int32)** property and then choose the **OK** button.  
   
-     次の図は、**\[データ バインディングを作成\]** ダイアログ ボックスで **\[ItemCount\]** プロパティを選択した状態を示しています。  
+     The following illustration shows the **Create Data Binding** dialog box with the **ItemCount** property selected.  
   
-     ![&#91;データ バインディングの作成&#93; ダイアログ ボックス](../designers/media/xaml_create_data_binding.png "xaml\_create\_data\_binding")  
+     ![Create Data Binding dialog box](../designers/media/xaml_create_data_binding.png "xaml_create_data_binding")  
   
-8.  F5 キーを押してアプリを実行します。  
+8.  Press F5 to run the app.  
   
-     `TextBlock` コントロールに、既定値の 0 がテキストとして表示されるはずです。  
+     The `TextBlock` control should show the default value of 0 as text.  
   
-## 参照  
- [XAML デザイナーを使用した UI の作成](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)   
- [NIB: Add Value Converter dialog box](http://msdn.microsoft.com/ja-jp/c5f3d110-a541-4b55-8bca-928f77778af8)
+## <a name="see-also"></a>See Also  
+ [Creating a UI by using XAML Designer](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)   
+ [NIB: Add Value Converter dialog box](http://msdn.microsoft.com/en-us/c5f3d110-a541-4b55-8bca-928f77778af8)

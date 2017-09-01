@@ -1,5 +1,5 @@
 ---
-title: "CONTEXT_INFO |Microsoft ドキュメント"
+title: CONTEXT_INFO | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9d2ecfdd70c2c299704b89de1cacec321f0ecdc1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 0ee47995c831528631e0fa88befd0731486fd727
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="contextinfo"></a>CONTEXT_INFO
-この構造体は、メモリ コンテキストまたはコードのコンテキストについて説明します。  
+This structure describes a memory context or code context.  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _tagCONTEXT_INFO {   
@@ -53,7 +54,7 @@ typedef struct _tagCONTEXT_INFO {
 } CONTEXT_INFO;  
 ```  
   
-```c#  
+```cs  
 public struct CONTEXT_INFO {  
    public uint          dwFields;  
    public string        bstrModuleUrl;  
@@ -65,42 +66,42 @@ public struct CONTEXT_INFO {
 };  
 ```  
   
-## <a name="members"></a>メンバー  
+## <a name="members"></a>Members  
  dwFields  
- 彼のフラグの組み合わせ[CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)のどのフィールドが入力されたかを指定する列挙体**します。**  
+ A combination of flags from he [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) enumeration that specifies which fields are filled out**.**  
   
  bstrModuleUrl  
- コンテキストがあるモジュールの名前。  
+ The name of the module where the context is located.  
   
  bstrFunction  
- コンテキストが存在する関数の名前。  
+ The function name where the context is located.  
   
  posFunctionOffset  
- A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)コード コンテキストに関連付けられている関数の行と列のオフセットを識別する構造体。  
+ A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) structure that identifies the line and column offset of the function associated with the code context.  
   
  bstrAddress  
- 指定されたコンテキストがあるコード内のアドレス。  
+ The address in code where the given context is located.  
   
  bstrAddressOffset  
- 指定されたコンテキストがあるコード内のアドレスのオフセット。  
+ The offset of the address in code where the given context is located.  
   
  bstrAddressAbsolute  
- 指定されたコンテキストがあるメモリ内の絶対アドレスです。  
+ The absolute address in memory where the given context is located.  
   
-## <a name="remarks"></a>コメント  
- この構造体がへの呼び出しから返される、 [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ This structure is returned from a call to the [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) method.  
   
- この構造体の一般的な使用方法は、のサポートには、**メモリ**デバッグ ウィンドウ。  
+ A typical use for this structure is in support of a **Memory** debug window.  
   
-## <a name="requirements"></a>要件  
- ヘッダー: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>関連項目  
- [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)   
  [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)   
  [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

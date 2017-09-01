@@ -1,169 +1,171 @@
 ---
-title: "チュートリアル : トランザクションのデータの保存 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Visual Studio], 保存 (トランザクションに)"
-  - "保存 (データを)"
-  - "System.Transactions 名前空間"
-  - "Transactions 名前空間"
-  - "トランザクション, 保存 (データを)"
+title: Save data in a transaction | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- System.Transactions namespace
+- data [Visual Studio], saving in a transaction
+- transactions, saving data
+- Transactions namespace
+- saving data
 ms.assetid: 80260118-08bc-4b37-bfe5-9422ee7a1e4e
 caps.latest.revision: 15
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 57d415109fe3d07930fa4302aed20de0e25c32fd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 08/30/2017
+
 ---
-# チュートリアル : トランザクションのデータの保存
-このチュートリアルでは、<xref:System.Transactions> 名前空間を使用してトランザクションのデータを保存する方法について説明します。  この例では、Northwind サンプル データベースの `Customers` テーブルと `Orders` テーブルを使用します。  
+# <a name="save-data-in-a-transaction"></a>Save data in a transaction
+This walkthrough demonstrates how to save data in a transaction by using the <xref:System.Transactions> namespace. This example uses the `Customers` and `Orders` tables from the Northwind sample database.  
   
-## 必須コンポーネント  
- このチュートリアルでは、Northwind サンプル データベースへのアクセスが必要です。  Northwind サンプル データベースのセットアップの詳細については、「[方法 : サンプル データベースをインストールする](../data-tools/how-to-install-sample-databases.md)」を参照してください。  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough requires access to the Northwind sample database. For information about setting up the Northwind sample database, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
   
-## Windows アプリケーションの作成  
- 最初に **Windows アプリケーション**を作成します。  
+## <a name="create-a-windows-application"></a>Create a Windows application  
+ The first step is to create a **Windows Application**.  
   
-#### 新しい Windows プロジェクトを作成するには  
+#### <a name="to-create-the-new-windows-project"></a>To create the new Windows project  
   
-1.  Visual Studio の **\[ファイル\]** メニューの **\[新しいプロジェクト\]** をクリックします。  
+1.  In Visual Studio, on the **File** menu, create a new **Project**.  
   
-2.  プロジェクトに SavingDataInATransactionWalkthrough という名前を付けます。  
+2.  Name the project **SavingDataInATransactionWalkthrough**.  
   
-3.  **\[Windows アプリケーション\]** をクリックし、**\[OK\]** をクリックします。  詳細については、「[クライアント アプリケーション](../Topic/Developing%20Client%20Applications%20with%20the%20.NET%20Framework.md)」を参照してください。  
+3.  Select **Windows Application**, and then select **OK**. For more information, see [Client Applications](/dotnet/framework/develop-client-apps).  
   
-     **SavingDataInATransactionWalkthrough** プロジェクトが作成されて**ソリューション エクスプローラー**に追加されます。  
+     The **SavingDataInATransactionWalkthrough** project is created and added to **Solution Explorer**.  
   
-## データベースのデータ ソースの作成  
- この手順では、[データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)を使用して、Northwind サンプル データベースの `Customers` テーブルと `Orders` テーブルに基づいてデータ ソースを作成します。  
+## <a name="create-a-database-data-source"></a>Create a database data source  
+ This step uses the [Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png) to create a data source based on the `Customers` and `Orders` tables in the Northwind sample database.  
   
-#### データ ソースを作成するには  
+#### <a name="to-create-the-data-source"></a>To create the data source  
   
-1.  **\[データ\]** メニューの **\[データ ソースの表示\]** をクリックします。  
+1.  On the **Data** menu, select**Show Data Sources**.  
   
-2.  **\[データ ソース\]** ウィンドウで、**\[新しいデータ ソースの追加\]** をクリックして**データ ソース構成ウィザード**を起動します。  
+2.  In the **Data Sources** window, select **Add New Data Source** to start the **Data Source Configuration Wizard**.  
   
-3.  **\[データソースの種類を選択\]** ページで、**\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
+3.  On the **Choose a Data Source Type**screen, select **Database**, and then select **Next**.  
   
-4.  **\[データ接続の選択\]** ページで、次のいずれかの操作を行います。  
+4.  On the **Choose your Data Connection** screen do one of the following:  
   
-    -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
+    -   If a data connection to the Northwind sample database is available in the drop-down list, select it.  
   
-         または  
+         -or-  
   
-    -   **\[新しい接続\]** を選択して **\[接続の追加\] または \[接続の変更\]** ダイアログ ボックスを表示し、Northwind データベースへの接続を作成します。  
+    -   Select **New Connection** to launch the **Add/Modify Connection** dialog box and create a connection to the Northwind database.  
   
-5.  データベースにパスワードが必要な場合は、該当するオプションを選択して重要情報を含め、**\[次へ\]** をクリックします。  
+5.  If your database requires a password, select the option to include sensitive data, and then select **Next**.  
   
-6.  **\[アプリケーション構成ファイルに接続文字列を保存\]** ページで、**\[次へ\]** をクリックします。  
+6.  On the **Save connection string to the Application Configuration file** screen, select **Next**.  
   
-7.  **\[データベース オブジェクトの選択\]** ページの **\[テーブル\]** ノードを展開します。  
+7.  On the **Choose your Database Objects** screen, expand the **Tables** node.  
   
-8.  `Customers` テーブルと `Orders` テーブルを選択し、**\[完了\]** をクリックします。  
+8.  Select the `Customers` and `Orders` tables, and then select **Finish**.  
   
-     プロジェクトに **NorthwindDataSet** が追加され、**\[データ ソース\]** ウィンドウに `Customers` テーブルと `Orders` テーブルが表示されます。  
+     The **NorthwindDataSet** is added to your project and the `Customers` and `Orders` tables appear in the **Data Sources** window.  
   
-## フォームへのコントロールの追加  
- **\[データ ソース\]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。  
+## <a name="addcontrols-to-the-form"></a>Addcontrols to the form  
+ You can create the data-bound controls by dragging items from the **Data Sources** window onto your form.  
   
-#### Windows フォームにデータ バインド コントロールを作成するには  
+#### <a name="to-create-data-bound-controls-on-the-windows-form"></a>To create data bound controls on the Windows form  
   
--   **\[データ ソース\]** ウィンドウの **\[Customers\]** ノードを展開します。  
+-   In the **Data Sources** window, expand the **Customers** node.  
   
--   **\[データ ソース\]** ウィンドウから **Form1** にメインの **\[Customers\]** ノードをドラッグします。  
+-   Drag the main **Customers** node from the **Data Sources** window onto **Form1**.  
   
-     レコード間をナビゲートするための <xref:System.Windows.Forms.DataGridView> コントロールとツール ストリップ \(<xref:System.Windows.Forms.BindingNavigator>\) がフォームに表示されます。  [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、[CustomersTableAdapter](../data-tools/tableadapter-overview.md)、<xref:System.Windows.Forms.BindingSource>、および <xref:System.Windows.Forms.BindingNavigator> がコンポーネント トレイに表示されます。  
+     A <xref:System.Windows.Forms.DataGridView> control and a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records appear on the form. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter`, <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.  
   
--   対応する **\[Orders\]** ノード \(メインの **\[Orders\]** ノードではなく、**\[Fax\]** 列の下の対応する子テーブル ノード\) を **CustomersDataGridView** の下のフォームにドラッグします。  
+-   Drag the related **Orders** node (not the main **Orders** node, but the related child-table node below the **Fax** column) onto the form below the **CustomersDataGridView**.  
   
-     <xref:System.Windows.Forms.DataGridView> がフォームに表示されます。  コンポーネント トレイに [OrdersTableAdapter](../data-tools/tableadapter-overview.md) と <xref:System.Windows.Forms.BindingSource> が表示されます。  
+     A <xref:System.Windows.Forms.DataGridView> appears on the form. An `OrdersTableAdapter` and <xref:System.Windows.Forms.BindingSource> appear in the component tray.  
   
-## System.Transactions アセンブリへの参照の追加  
- トランザクションは、<xref:System.Transactions> 名前空間を使用します。  System.Transactions アセンブリへのプロジェクト参照は既定で追加されないため、手動で追加する必要があります。  
+## <a name="add-a-reference-to-the-systemtransactions-assembly"></a>Add a reference to the System.Transactions assembly  
+ Transactions use the <xref:System.Transactions> namespace. A project reference to the system.transactions assembly is not added by default, so you need to manually add it.  
   
-#### System.Transactions の DLL ファイルへの参照を追加するには  
+#### <a name="to-add-a-reference-to-the-systemtransactions-dll-file"></a>To add a reference to the System.Transactions DLL file  
   
-1.  **\[プロジェクト\]** メニューから **\[参照の追加\]** を選択します。  
+1.  On the **Project** menu, select **Add Reference**.  
   
-2.  **\[.NET\]** タブの **System.Transactions** を選択し、**\[OK\]** をクリックします。  
+2.  Select **System.Transactions** (on the **.NET** tab), and then select **OK**.  
   
-     **System.Transactions** への参照がプロジェクトに追加されます。  
+     A reference to **System.Transactions** is added to the project.  
   
-## BindingNavigator の SaveItem ボタンのコードの変更  
- 既定では、フォームに最初にドロップされるテーブルのコードは、<xref:System.Windows.Forms.BindingNavigator> の保存ボタンの `click` イベントに追加されます。  追加テーブルを更新する場合は、手動でコードを追加する必要があります。  このチュートリアルでは、保存ボタンの click イベント ハンドラーから既存の保存コードをリファクタリングし、行を追加するか削除するかに応じて、指定された更新機能を提供するメソッドを作成します。  
+## <a name="modifythe-code-in-the-bindingnavigators-saveitem-button"></a>Modifythe code in the BindingNavigator's SaveItem button  
+ For the first table dropped onto your form, code is added by default to the `click` event of the save button on the <xref:System.Windows.Forms.BindingNavigator>. You need to manually add code to update any additional tables. For this walkthrough, we refactor the existing save code out of the save button's click event handler.We also create a few more methods to provide specific update functionality based on whether the row needs to be added or deleted.  
   
-#### 自動生成された保存コードを変更するには  
+#### <a name="to-modify-the-auto-generated-save-code"></a>To modify the auto-generated save code  
   
-1.  **CustomersBindingNavigator** の **\[保存\]** \(フロッピー ディスクのアイコンのボタン\) をダブルクリックします。  
+1.  Select the **Save** button on the **CustomersBindingNavigator** (the button with the floppy disk icon).  
   
-2.  `CustomersBindingNavigatorSaveItem_Click` メソッドを次のコードで置き換えます。  
+2.  Replace the `CustomersBindingNavigatorSaveItem_Click` method with the following code:  
   
-     [!code-vb[VbRaddataSaving#4](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_1.vb)]
-     [!code-cs[VbRaddataSaving#4](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_1.cs)]  
+     [!code-vb[VbRaddataSaving#4](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_1.vb)]  [!code-csharp[VbRaddataSaving#4](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_1.cs)]  
   
- 関連するデータへの変更を解決する順序は次のとおりです。  
+ The order for reconciling changes to related data is as follows:  
   
--   子レコードを削除します \(この場合は、`Orders` テーブルからレコードを削除します\)。  
+-   Delete child records. (In this case, delete records from the `Orders` table.)  
   
--   親レコードを削除します \(この場合は、`Customers` テーブルからレコードを削除します\)。  
+-   Delete parent records. (In this case, delete records from the `Customers` table.)  
   
--   親レコードを挿入します \(この場合は、`Customers` テーブルにレコードを挿入します\)。  
+-   Insert parent records.(In this case, insert records in the `Customers` table.)  
   
--   子レコードを挿入します \(この場合は、`Orders` テーブルにレコードを挿入します\)。  
+-   Insert child records. (In this case, insert records in the `Orders` table.)  
   
-#### 既存の注文を削除するには  
+#### <a name="to-delete-existing-orders"></a>To delete existing orders  
   
--   次の `DeleteOrders` メソッドを **Form1** に追加します。  
+-   Add the following `DeleteOrders` method to **Form1**:  
   
-     [!code-vb[VbRaddataSaving#5](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_2.vb)]
-     [!code-cs[VbRaddataSaving#5](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_2.cs)]  
+     [!code-vb[VbRaddataSaving#5](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_2.vb)]  [!code-csharp[VbRaddataSaving#5](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_2.cs)]  
   
-#### 既存の顧客を削除するには  
+#### <a name="to-delete-existing-customers"></a>To delete existing customers  
   
--   次の `DeleteCustomers` メソッドを **Form1** に追加します。  
+-   Add the following `DeleteCustomers` method to **Form1**:  
   
-     [!code-vb[VbRaddataSaving#6](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_3.vb)]
-     [!code-cs[VbRaddataSaving#6](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_3.cs)]  
+     [!code-vb[VbRaddataSaving#6](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_3.vb)]  [!code-csharp[VbRaddataSaving#6](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_3.cs)]  
   
-#### 新規顧客を追加するには  
+#### <a name="to-add-new-customers"></a>To add new customers  
   
--   次の `AddNewCustomers` メソッドを **Form1** に追加します。  
+-   Add the following `AddNewCustomers` method to **Form1**:  
   
-     [!code-vb[VbRaddataSaving#7](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_4.vb)]
-     [!code-cs[VbRaddataSaving#7](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_4.cs)]  
+     [!code-vb[VbRaddataSaving#7](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_4.vb)]  [!code-csharp[VbRaddataSaving#7](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_4.cs)]  
   
-#### 新規注文を追加するには  
+#### <a name="to-add-new-orders"></a>To add new orders  
   
--   次の `AddNewOrders` メソッドを **Form1** に追加します。  
+-   Add the following `AddNewOrders` method to **Form1**:  
   
-     [!code-vb[VbRaddataSaving#8](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_5.vb)]
-     [!code-cs[VbRaddataSaving#8](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_5.cs)]  
+     [!code-vb[VbRaddataSaving#8](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_5.vb)]  [!code-csharp[VbRaddataSaving#8](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_5.cs)]  
   
-## アプリケーションの実行  
+## <a name="run-the-application"></a>Run the application  
   
-#### アプリケーションを実行するには  
+#### <a name="to-run-the-application"></a>To run the application  
   
--   F5 キーを押してアプリケーションを実行します。  
+-   Select **F5** to run the application.  
   
-## 参照  
- [トランザクションと同時実行](../Topic/Transactions%20and%20Concurrency.md)   
- [Oracle 分散トランザクション](../Topic/Oracle%20Distributed%20Transactions.md)   
- [方法 : トランザクションを使用してデータを保存する](../data-tools/save-data-by-using-a-transaction.md)   
- [SQL Server と System.Transactions の統合](../Topic/System.Transactions%20Integration%20with%20SQL%20Server.md)   
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
- [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [アプリケーションへのデータのフェッチ](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
- [データの検証](../Topic/Validating%20Data.md)   
- [データの保存](../data-tools/saving-data.md)
+## <a name="see-also"></a>See Also  
+ [Save data back to the database](../data-tools/save-data-back-to-the-database.md)
