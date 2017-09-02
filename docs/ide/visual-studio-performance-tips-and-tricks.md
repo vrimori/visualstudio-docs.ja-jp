@@ -1,6 +1,6 @@
 ---
-title: "Visual Studio のパフォーマンスのヒントとテクニック | Microsoft Docs"
-ms.date: 08/07/2017
+title: Visual Studio Performance Tips and Tricks | Microsoft Docs
+ms.date: 08/31/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -30,126 +30,126 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: fe6d864baf518cba882cea8e985fdacbfdf5b8b2
-ms.openlocfilehash: 53c31da02b643114d9b152a0cde180ff5f6a5b7e
+ms.sourcegitcommit: 4306111cd49a5299bfa5d4e5e22b212bc7799fe2
+ms.openlocfilehash: fbaa543564506a99d3ed6833ec4d1f692fae43f7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/02/2017
 
 ---
-# <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio のパフォーマンスのヒントとテクニック
+# <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio Performance Tips and Tricks
 
-Visual Studio のパフォーマンスの推奨事項は、まれなケースで発生する可能性があるメモリ不足の状況を想定したものです。 これらの状況では、使っていない可能性がある特定の Visual Studio の機能を最適化できます。 以下のヒントは一般的な推奨事項を意図したものではありません。
+Visual Studio performance recommendations are intended for low memory situations, which may occur in rare cases. In these situations, you can optimize certain Visual Studio features that you may not be using. The following tips are not intended as general recommendations.
 
 > [!NOTE]
-> メモリの問題で製品の使用が困難な場合は、フィードバック ツールを使ってお知らせください。
+> If you’re having difficulty using the product because of memory issues, let us know through the feedback tool.
 
-## <a name="optimize-your-environment"></a>環境を最適化する
+## <a name="optimize-your-environment"></a>Optimize your environment
 
-- **64 ビット OS を使う**
+- **Use a 64bit OS**
 
-    システムを Windows の 32 ビット版から 64 ビット版にアップグレードすると、Visual Studio が使用できる仮想メモリの量が 2 GB から 4 GB に増えます。 これにより、Visual Studio は 32 ビット プロセスですが非常に大きいワークロードを処理できるようになります。
+    If you upgrade your system from a 32-bit version of Windows to a 64-bit version, you expand the amount of virtual memory available to Visual Studio from 2 GB to 4 GB. This enables Visual Studio to handle significantly larger workloads even though it is 32-bit process.
 
-    詳しくは、「[Memory limits](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366778(v=vs.85).aspx#memory_limits)」(メモリの制限) および「[Using /LARGEADDRESSAWARE on 64-bit Windows](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/)」(64 ビット Windows での /LARGEADDRESSAWARE の使用) をご覧ください。
+    For more information, see [Memory limits](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366778(v=vs.85).aspx#memory_limits) and [Using /LARGEADDRESSAWARE on 64-bit Windows](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/).
 
-## <a name="configure-solution-and-projects"></a>ソリューションとプロジェクトを構成する
+## <a name="configure-solution-and-projects"></a>Configure solution and projects
 
-多くのプロジェクトを含む非常に大きいソリューションがある場合、次の最適化を行うと効果がある可能性があります。
+If you have a very large solution with many projects, you may benefit by making the following optimizations:
 
-- **ライトウェイト ソリューション ロードを有効にする**
+- **Enable Lightweight Solution Load**
 
-    **ライトウェイト ソリューション ロード**を使うと、ソリューション内の一部のプロジェクトの読み込みが後回しにされるため、メモリおよび CPU のパフォーマンスが向上する場合があります。 この機能はソリューションごとに有効にすることもできます。 このオプションの既定値はオフです。
+    Using **Lightweight Solution Load** may improve memory and CPU performance by deferring the load of some projects within your solution. You can also enable this feature per-solution. This option is off by default.
 
-    **ライトウェイト ソリューション ロード**を有効にするには、**[ツール] > [オプション] > [プロジェクトおよびソリューション] > [ライトウェイト ソリューション ロード]** の順に選びます。
+    To enable **Lightweight Solution Load**, choose **Tools > Options > Projects and Solutions > Lightweight Solution Load**.
 
-    このモードでは一部の IDE 機能を使うことができません。 この選択が役立つかどうかを判断するには、「[Shorter solution load time](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/)」(ソリューションの読み込み時間の短縮) および「[Visual Studio の起動時間の最適化](https://docs.microsoft.com/en-us/visualstudio/ide/optimize-visual-studio-startup-time#speed-up-solution-load)」をご覧ください。
+    Some IDE features are not enabled in this mode. To determine whether this choice may help, see [Shorter solution load time](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/) and [Optimize solution loading](../ide/optimize-solution-loading-in-visual-studio).
 
-- **プロジェクトをアンロードする**
+- **Unload Projects**
 
-    ソリューション エクスプローラーの右クリック コンテキスト メニューを使って、使用頻度の低いプロジェクトを個別に手動でアンロードできます。
+    You can manually unload rarely used individual projects from Solution Explorer using the right-click context menu.
 
-- **ソリューションをリファクタリングする**
+- **Refactor the solution**
 
-    1 つのソリューションを、よく使われるプロジェクトを含む複数の小さいソリューション ファイルに分割できます。 このリファクタリングを行うと、ワークフローのメモリ使用量が大幅に減ります。 また、ソリューションが小さいほど読み込みも速くなります。
+    You can split your solution into several smaller solution files with commonly used projects. This refactoring should significantly reduce memory usage for your workflow. Smaller solutions also load faster.
 
-## <a name="configure-debugging-options"></a>デバッグ オプションを構成する
-一般にデバッグ セッション中は少ないメモリで実行している場合は、1 つまたは複数の構成を変更することでパフォーマンスを最適化できます。
+## <a name="configure-debugging-options"></a>Configure debugging options
+If you are typically running low on memory during debugging sessions, you can optimize performance by making one or more configuration changes.
 
-- **マイ コードのみを有効にする**
+- **Enable Just My Code**
 
-    最も簡単な最適化は、**マイ コードのみ**機能を有効にすることです。この機能は、ユーザーのプロジェクトのシンボルのみを読み込みます。 この機能を有効にすると、マネージ アプリケーション (.NET) のデバッグ用に大量のメモリを節約できます。 一部のプロジェクトの種類では、このオプションは既定で既に有効になっています。
+    The simplest optimization is to enable the **Just My Code** feature, which only loads symbols for your project. Enabling this feature can result in a significant memory saving for debugging managed applications (.NET). This option is already enabled by default in some project types.
 
-    **マイ コードのみ**を有効にするには、**[ツール] > [オプション] > [デバッグ] > [全般]** の順に選び、**[マイ コードのみを有効にする]** をオンにします。
+    To enable **Just My Code**, choose **Tools > Options > Debugging > General**, and then select **Enable Just My Code**.
 
-- **読み込むシンボルを指定する**
+- **Specify symbols to load**
 
-    ネイティブ デバッグでは、シンボル ファイル (.pdb) の読み込みには多くのメモリ リソースが必要です。 デバッガーのシンボル設定を構成することで、メモリを節約できます。 通常は、ユーザーのプロジェクトからのみモジュールを読み込むようにソリューションを構成します。
+    For native debugging, loading symbol files (.pdb) is expensive in terms of memory resources. You can configure your debugger symbol settings to conserve memory. Typically, you configure the solution to only load modules from your project.
 
-    シンボルの読み込みを指定するには、**[ツール] > [オプション] > [デバッグ] > [シンボル]** の順に選びます。
+    To specify symbol loading, choose **Tools > Options > Debugging > Symbols**.
 
-    オプションを **[すべてのモジュール]** ではなく **[指定したモジュールのみ]** に設定した後、読み込むモジュールを指定します。 デバッグ中に、**[モジュール]** ウィンドウで特定のモジュールを右クリックして、シンボルの読み込みにモジュールを明示的に含めることもできます  (デバッグ中にウィンドウを開くには、**[デバッグ] > [Windows] > [モジュール]** の順に選びます)。
+    Set the options to **Only specified modules** instead of **All modules** and then specify which modules you care to load. While debugging, you can also right-click specific modules in the **Modules** window to explicitly include a module in the symbol load. (To open the window while debugging, choose **Debug > Windows > Modules**.)
 
-    詳しくは、「[Understanding symbol files and Visual Studio’s symbol settings](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/)」(シンボル ファイルおよび Visual Studio のシンボルの設定について) をご覧ください。
+    For more information, see [Understanding symbol files](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/).
 
-- **診断ツールを無効にする**
+- **Disable Diagnostic Tools**
 
-    CPU プロファイルを使い終わったら無効にすることをお勧めします。 この機能は大量のリソースを使う場合があります。 CPU プロファイルを有効にすると、後続のデバッグ セッションを通してその状態が維持されるので、終了したら明示的にオフにする必要があります。 診断ツールで提供される機能が必要ない場合は、デバッグ中に診断ツールを無効にすることで、リソースを節約できる場合があります。
+    It is recommended that you disable CPU profiling after use. This feature can consume large amounts of resources. Once CPU profiling is enabled, this state is persisted across subsequent debug sessions, so it’s worth explicitly turning it off when done. You may save some resources by disabling the diagnostic tools while debugging if you do not need the provided features.
 
-    診断ツールを無効にするには、デバッグ セッションを開始し、**[ツール] > [オプション] > [デバッグ中に診断ツールを有効にする]** の順に選んで、オプションを無効にします。
+    To disable the Diagnostic Tools, start a debugging session, choose **Tools > Options > Enable Diagnostic Tools**, and deselect the option.
 
-    詳しくは、「[Visual Studio のプロファイリング機能ツアー](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)」をご覧ください。
+    For more information, see [Profiling Tools](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools).
 
-## <a name="disable-tools-and-extensions"></a>ツールと拡張機能を無効にする
-一部のツールや拡張機能を無効にすると、パフォーマンスが向上することがあります。
+## <a name="disable-tools-and-extensions"></a>Disable tools and extensions
+Some tools or extensions may to turned off to improve performance.
 
 > [!TIP]
-> 多くの場合、一度に 1 つの拡張機能を無効にしてパフォーマンスを再確認することで、パフォーマンスの問題を分離できます。
+> You can often isolate performance issues by turning off extensions one at a time and rechecking performance.
 
-### <a name="managed-language-services-roslyn"></a>マネージ言語サービス (Roslyn)
+### <a name="managed-language-services-roslyn"></a>Managed Language Services (Roslyn)
 
-Roslyn のパフォーマンスに関する考慮事項については、「[Performance considerations for large solutions](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)」(大きいソリューションでのパフォーマンスの考慮事項) をご覧ください。
+For information about Roslyn performance considerations, see [Performance considerations for large solutions] (https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
 
-- **完全なソリューション分析を無効にする**
+- **Disable Full Solution Analysis**
 
-    Visual Studio は、ビルドを呼び出す前にエラーに関する豊富なエクスペリエンスを提供するため、ソリューション全体に対して分析を実行します。 この機能は、可能な限り早くエラーを特定するのに役立ちます。 ただし、非常に大きいソリューションでは、この機能は大量のメモリ リソースを消費する場合があります。 メモリの不足状況や同様の問題が発生している場合は、このエクスペリエンスを無効にしてこれらのリソースを解放できます。 このオプションは、既定では、Visual Basic に対しては有効になり、C# に対しては無効になります。
+    Visual Studio performs analysis on your entire solution in order to provide a rich experience about errors before invoking a build. This feature is useful to identify errors as soon as possible. However, for very large solutions, this feature can consume significant memory resources. If you’re experiencing memory pressure or similar issues, you can disable this experience to free up these resources. By default, this option is enabled for Visual Basic and disabled for C#.
 
-    **完全なソリューション分析**を無効にするには、**[ツール] > [オプション] > [テキスト エディター] > [Visual Basic] または [C#]** の順に選びます。 **[詳細]** を選び、**[完全ソリューション解析を有効にする]** をオフにします。
+    To disable **Full Solution Analysis**, choose **Tools > Options > Text Editor > <Visual Basic or C#>**. Then choose **Advanced** and deselect **Enable full solution analysis**.
 
-- **CodeLens を無効にする**
+- **Disable CodeLens**
 
-    Visual Studio は、表示される各メソッドに対して**すべての参照を検索**タスクを実行します。 CodeLens は、参照数のインライン表示などの機能を提供します。 処理は別のプロセス (たとえば、ServiceHub.RoslynCodeAnalysisService32) で実行されます。 非常に大きなソリューションまたはリソースに制約があるシステムでは、この機能は、低い優先順位で実行してもパフォーマンスに大きく影響する可能性があります。 このプロセスの CPU 使用率が高い場合、またはメモリの問題が発生する場合は (たとえば、4 GB のコンピューターで大規模なソリューションを読み込むとき)、この機能を無効にしてリソースを解放できます。
+    Visual Studio performs a **Find All References** task on each method as it is displayed. CodeLens provides features such as the inline display of the number of references. The work is performed in a separate process (for example, ServiceHub.RoslynCodeAnalysisService32). In very large solutions or on resource constrained systems, this feature can have significant impact on performance even though it is run at a low priority. If you’re experiencing high CPU in this process, or memory issues (for example, when loading a large solution on a 4-GB machine), you can try disabling this feature to free up resources.
 
-    CodeLens を無効にするには、**[ツール] > [オプション] > [テキスト エディター] > [すべての言語] > [CodeLens]** の順に選んで、この機能をオフにします。
+    To disable CodeLens, choose **Tools > Options > Text Editor > All Languages > CodeLens**, and deselect the feature.
 
-    この機能は、Visual Studio Professional と Visual Studio Enterprise で使用できます。
+    This feature is available in Visual Studio Professional and Visual Studio Enterprise.
 
-### <a name="other-tools-and-extensions"></a>他のツールと拡張機能
+### <a name="other-tools-and-extensions"></a>Other tools and extensions
 
-- **拡張機能を無効にする**
+- **Disable Extensions**
 
-    拡張機能は Visual Studio に追加された追加ソフトウェア コンポーネントであり、新しい機能を提供したり、既存の機能を拡張したりします。 拡張機能がメモリ リソースの問題の原因になることがよくあります。 メモリ リソースの問題が発生する場合は、一度に 1 つの拡張機能を無効にして、シナリオまたはワークフローに与える影響を確認します。
+    Extensions are additional software components added to Visual Studio that provide new functionality or extend existing functionality. Extensions can often be a source of memory resource issues. If you’re experiencing memory resource problems, try disabling extensions one at a time to see how it impacts the scenario or workflow.
 
-    拡張機能を無効にするには、**[ツール] > [拡張機能と更新プログラム]** の順に選び、特定の拡張機能を無効にします。
+    To disable extensions, go to **Tools | Extensions and Updates**, and disable a particular extension.
 
-- **XAML デザイナーを無効にする**
+- **Disable XAML Designer**
 
-    XAML デザイナーは既定で有効にされますが、XAML ファイルを開いた場合にのみリソースを消費します。 XAML ファイルを使う場合でも、デザイナー機能が必要ないときは、この機能を無効にして、若干のメモリを解放できます。
+    The XAML designer is enabled by default, but only consumes resources if you open a .XAML file. If you work with XAML files but do not wish to use the designer functionality, disable this feature to free up some memory.
 
-    XAML デザイナーを無効にするには、**[ツール] > [オプション] > [XAML デザイナー] > [XAML デザイナーを有効にする]** の順に選んで、オプションをオフにします。
+    To disable XAML Designer, go to **Tools > Options > XAML Designer > Enable XAML Designer**, and deselect the option.
 
-- **ワークロードを削除する**
+- **Remove workloads**
 
-    Visual Studio インストーラーを使って、使われなくなったワークロードを削除できます。 このようにすると、不要になったパッケージとアセンブリをスキップして、起動時および実行時のコストを合理化できます。
+    You can use the Visual Studio Installer to remove workloads that are no longer used. This action can streamline the startup and runtime cost by skipping packages and assemblies that aren’t needed anymore.
 
-## <a name="force-a-garbage-collection"></a>ガベージ コレクションを強制する
+## <a name="force-a-garbage-collection"></a>Force a garbage collection
 
-CLR では、ガベージ コレクションのメモリ管理システムが使われます。 このシステムでは、不要になったオブジェクトによってメモリが使われることがあります。 この状態は一時的なものです。ガベージ コレクターは、そのパフォーマンスとリソース使用のヒューリスティックに基づいて、このメモリを解放します。 Visual Studio のホット キーを使って、CLR に未使用のメモリを強制的に回収させることができます。 膨大な量のガベージが収集を待っている場合に、ガベージ コレクションを強制すると、devenv.exe プロセスのメモリ使用量の低下をタスク マネージャーで確認できます。 この方法を使う必要はほとんどありません。 ただし、コストのかかる操作 (フル ビルド、デバッグ セッション、ソリューション オープン イベントなど) が完了した後は、プロセスによって実際に使われていたメモリの量を確認するのに役立ちます。 Visual Studio にはマネージとネイティブが混在しているので、ネイティブ アロケーターとガベージ コレクターの間での限られたメモリ リソースの競合が発生する可能性があります。 大量のメモリが使われている状況では、ガベージ コレクターを強制的に実行すると役に立つことがあります。
+The CLR uses a garbage collection memory management system. In this system, sometimes memory is used by objects that are no longer needed. This state is temporary; the garbage collector will release this memory based on its performance and resource usage heuristics. You can force the CLR to collect any unused memory by using a hotkey in Visual Studio. If there is a significant amount of garbage waiting for collection and you force a garbage collection, you should see the memory usage of the devenv.exe process drop in Task Manager. It’s rarely necessary to use this method. However, after an expensive operation has completed (such as a full build, debug session, or a solution open event), it can help you determine how much memory is really being used by the process. Because Visual Studio is mixed (managed & native), it’s occasionally possible for the native allocator and the garbage collector to compete for limited memory resources. Under conditions of high memory usage, it may help to force the garbage collector to run.
 
-ガベージ コレクションを強制的に行うには、ホット キー **Ctrl + Alt + Shift + F12**、**Ctrl + Alt + Shift + F12** (2 回押します) を使います。
+To force a garbage collection, use the hotkey: **Ctrl+Alt+Shift+F12**, **Ctrl+Alt+Shift+F12** (press it twice).
 
-ベージ コレクションを強制するとシナリオが確実に動くようになる場合、この動作はバグである可能性があるので、Visual Studio のフィードバック ツールを使ってレポートを提出してください。
+If forcing garbage collection reliably makes your scenario work, file a report through the Visual Studio feedback tool as this behavior is likely to be a bug.
 
-CLR ガベージ コレクターについて詳しくは、「[Fundamental of Garbage Collection](https://msdn.microsoft.com/en-us/library/ee787088(v=vs.110).aspx)」(ガベージ コレクションの基礎) をご覧ください。
+For a detailed description of the CLR garbage collector, see [Fundamental of Garbage Collection](https://msdn.microsoft.com/en-us/library/ee787088(v=vs.110).aspx).
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>See Also  
  [Visual Studio IDE](../ide/index.md)
 
