@@ -64,7 +64,7 @@ ms.lasthandoff: 05/13/2017
   
  参照元コードを表示するには、参照の上にマウス ポインターを合わせます。  
   
- ![CodeLens - 参照を確認する](~/ide/media/codelensviewreferencespeekreference.png "CodeLensViewReferencesPeekReference")  
+ ![CodeLens - 参照を確認する](../ide/media/codelensviewreferencespeekreference.png "CodeLensViewReferencesPeekReference")  
   
  参照を含むファイルを開くには、参照をダブルクリックします。  
   
@@ -85,34 +85,34 @@ ms.lasthandoff: 05/13/2017
   
  Team Foundation バージョン管理 (TFVC) または Git で格納されている Visual C# .NET または Visual Basic .NET コードでは、CodeLens の詳細をクラス レベルまたはメソッド レベルで取得します (*code-element-level* インジケーター)。 Git リポジトリが TfGit でホストされている場合、TFS 作業項目へのリンクも取得します。  
   
- ![コードの要素レベルのインジケーター](~/ide/media/codelenselementlevelindicators.png "CodeLensElementLevelIndicators")  
+ ![コードの要素レベルのインジケーター](../ide/media/codelenselementlevelindicators.png "CodeLensElementLevelIndicators")  
   
  Visual Studio エディターで開くことができる他のすべての種類のファイルについては、ウィンドウ下部の 1 個所でファイル全体の CodeLens の詳細を取得します (*file-level* インジケーター)。  
   
- ![ファイル レベルの CodeLens インジケーター](~/ide/media/almcodelensfilelevelindicators.png "ALMCodeLensFileLevelIndicators")  
+ ![ファイル レベルの CodeLens インジケーター](../ide/media/almcodelensfilelevelindicators.png "ALMCodeLensFileLevelIndicators")  
   
  キーボードを使用してインジケーターを選択するには、 **Alt** キーを押した状態を保ち、関連する数値キーを表示します。  
   
- ![Alt キーを押してキーボード アクセス番号を表示する](~/ide/media/codelensaltkeyindicators.png "CodeLensAltKeyIndicators")  
+ ![Alt キーを押してキーボード アクセス番号を表示する](../ide/media/codelensaltkeyindicators.png "CodeLensAltKeyIndicators")  
   
 ### <a name="find-changes-in-your-code"></a>コードに含まれる変更の検索  
  C# コードまたは Visual Basic コードを変更したユーザー、およびそのユーザーによって行われた変更を code-element-level インジケーターで探します。 これは、Team Foundation Server または Visual Studio Team Services で Team Foundation バージョン管理 (TFVC) を使用するときに行います。  
   
- ![CodeLens: TFVC で自分のコードの変更履歴を取得する](~/ide/media/codelenscodechanges.png "CodeLensCodeChanges")  
+ ![CodeLens: TFVC で自分のコードの変更履歴を取得する](../ide/media/codelenscodechanges.png "CodeLensCodeChanges")  
   
  既定の時間は直近 12 か月です。 Team Foundation Server にコードが格納される場合、 [TFSConfig コマンド](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62) および [/indexHistoryPeriod](../ide/codeindex-command.md) フラグを指定した **CodeIndex コマンド** を実行することにより、この制限を変更できます。  
   
  1 年以上前のものを含む、すべての変更の詳細な履歴を表示するには、 **[すべてのファイルの変更を表示する]**を選択します。  
   
- ![すべてのコード変更を表示する](~/ide/media/codelensshowsallchanges.png "CodeLensShowsAllChanges")  
+ ![すべてのコード変更を表示する](../ide/media/codelensshowsallchanges.png "CodeLensShowsAllChanges")  
   
  これで、変更セットの [履歴] ウィンドウが開きます。  
   
- ![すべてのコード変更の履歴ウィンドウ](~/ide/media/codelenscodechangeshistory.png "CodeLensCodeChangesHistory")  
+ ![すべてのコード変更の履歴ウィンドウ](../ide/media/codelenscodechangeshistory.png "CodeLensCodeChangesHistory")  
   
  ファイルが Git リポジトリにある場合に、code-element-level の変更インジケーターを選択すると、このように表示されます。  
   
- ![CodeLens: Git で自分のコードの変更履歴を取得する](~/ide/media/codelenscodechangesgit.png "CodeLensCodeChangesGit")  
+ ![CodeLens: Git で自分のコードの変更履歴を取得する](../ide/media/codelenscodechangesgit.png "CodeLensCodeChangesGit")  
   
  ウィンドウ下部の file-level インジケーターで、ファイル全体の変更を探します (C# ファイルと Visual Basic ファイルは除く)。  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 05/13/2017
   
  一定期間内にコードを変更したユーザーも表示されます。 これは、チームでの変更のパターンを見つけて影響を評価するために役立ちます。  
   
- ![CodeLens: コードの変更履歴をグラフで表示](~/ide/media/codelens.png "CodeLens")  
+ ![CodeLens: コードの変更履歴をグラフで表示](../ide/media/codelens.png "CodeLens")  
   
 #### <a name="find-changes-in-your-current-branch"></a>現在の分岐での変更の検索  
  安定したコードの状態を損なわせるリスクを軽減するために、チームが複数の分岐 (メイン分岐とその下位の開発分岐) で作業しているとします。  
@@ -139,7 +139,7 @@ ms.lasthandoff: 05/13/2017
  ![CodeLens: コードが分岐された時間を検索](../ide/media/codelensfirstbranchscreenshot.png "CodeLensFirstBranchScreenshot")  
   
 #### <a name="find-incoming-changes-from-other-branches"></a>他の分岐から追加される変更の検索  
- ![CodeLens: 別の分岐でのコード変更を検索](~/ide/media/codelensbranchchangecheckinconceptual.png "CodeLensBranchChangeCheckinConceptual")  
+ ![CodeLens: 別の分岐でのコード変更を検索](../ide/media/codelensbranchchangecheckinconceptual.png "CodeLensBranchChangeCheckinConceptual")  
   
  … Dev 分岐でのこのバグ修正を例に用います。  
   
@@ -167,14 +167,14 @@ ms.lasthandoff: 05/13/2017
   
 |**アイコン**|**変更の作成元**|  
 |--------------|-----------------------------------------|  
-|![CodeLens: [現在の分岐からの変更] アイコン](~/ide/media/codelensbranchcurrenticon.png "CodeLensBranchCurrentIcon")|現在の分岐|  
-|![CodeLens - [親分岐からの変更] アイコン](~/ide/media/codelensbranchparenticon.png "CodeLensBranchParentIcon")|親分岐|  
-|![CodeLens - [子分岐からの変更] アイコン](~/ide/media/codelensbranchchildicon.png "CodeLensBranchChildIcon")|子分岐|  
-|![CodeLens - [ピア分岐からの変更] アイコン](~/ide/media/codelensbranchpeericon.png "CodeLensBranchPeerIcon")|ピア分岐|  
-|![CodeLens - [遠くの分岐からの変更] アイコン](~/ide/media/codelensbranchfurtherawayicon.png "CodeLensBranchFurtherAwayIcon")|親、子、またはピアより遠い分岐|  
-|![CodeLens: [親からのマージ] アイコン](~/ide/media/codelensbranchmergefromparenticon.png "CodeLensBranchMergeFromParentIcon")|親分岐から子分岐へのマージ|  
-|![CodeLens: [子分岐からのマージ] アイコン](~/ide/media/codelensbranchmergefromchildicon.png "CodeLensBranchMergeFromChildIcon")|子分岐から親分岐へのマージ|  
-|![CodeLens: [関連付けられていない分岐からのマージ] アイコン](~/ide/media/codelensbranchmergefromunrelatedicon.png "CodeLensBranchMergeFromUnrelatedIcon")|無関係の分岐からのマージ (ベースレス マージ)|  
+|![CodeLens: [現在の分岐からの変更] アイコン](../ide/media/codelensbranchcurrenticon.png "CodeLensBranchCurrentIcon")|現在の分岐|  
+|![CodeLens - [親分岐からの変更] アイコン](../ide/media/codelensbranchparenticon.png "CodeLensBranchParentIcon")|親分岐|  
+|![CodeLens - [子分岐からの変更] アイコン](../ide/media/codelensbranchchildicon.png "CodeLensBranchChildIcon")|子分岐|  
+|![CodeLens - [ピア分岐からの変更] アイコン](../ide/media/codelensbranchpeericon.png "CodeLensBranchPeerIcon")|ピア分岐|  
+|![CodeLens - [遠くの分岐からの変更] アイコン](../ide/media/codelensbranchfurtherawayicon.png "CodeLensBranchFurtherAwayIcon")|親、子、またはピアより遠い分岐|  
+|![CodeLens: [親からのマージ] アイコン](../ide/media/codelensbranchmergefromparenticon.png "CodeLensBranchMergeFromParentIcon")|親分岐から子分岐へのマージ|  
+|![CodeLens: [子分岐からのマージ] アイコン](../ide/media/codelensbranchmergefromchildicon.png "CodeLensBranchMergeFromChildIcon")|子分岐から親分岐へのマージ|  
+|![CodeLens: [関連付けられていない分岐からのマージ] アイコン](../ide/media/codelensbranchmergefromunrelatedicon.png "CodeLensBranchMergeFromUnrelatedIcon")|無関係の分岐からのマージ (ベースレス マージ)|  
   
 ### <a name="find-linked-work-items"></a>リンクされた作業項目の検索  
  ![CodeLens - 特定のコードの作業項目を検出する](../ide/media/codelensworkitems.png "CodeLensWorkItems")  
@@ -186,11 +186,11 @@ ms.lasthandoff: 05/13/2017
  ![CodeLens - 変更セットにリンクされたバグを検出する](../ide/media/codelensbugschangesets.png "CodeLensBugsChangesets")  
   
 ### <a name="contact-the-owner-of-an-item"></a>項目の所有者に連絡する  
- ![項目の所有者に連絡する](~/ide/media/codelenscontactitemowner.png "CodeLensContactItemOwner")  
+ ![項目の所有者に連絡する](../ide/media/codelenscontactitemowner.png "CodeLensContactItemOwner")  
   
  連絡先のオプションを表示する項目のショートカット メニューを開きます。 Lync または Skype for Business がインストールされている場合は、次のオプションが表示されます。  
   
- ![項目の連絡先オプション](~/ide/media/codelensitemcontactmenu.png "CodeLensItemContactMenu")  
+ ![項目の連絡先オプション](../ide/media/codelensitemcontactmenu.png "CodeLensItemContactMenu")  
   
 ##  <a name="FindRunUnitTests"></a> コードの単体テストの検索  
  テスト エクスプ ローラーを開くことなく、ご使用のコード向けに存在する単体テストの詳細を確認します。 要件:  
@@ -207,7 +207,7 @@ ms.lasthandoff: 05/13/2017
   
      ![CodeLens - コード エディターでテスト状態を選択する](../ide/media/codelenschoosetestindicator.png "CodeLensChooseTestIndicator")  
   
-3.  ![CodeLens - 未実行の単体テストの警告](~/ide/media/codelenstestwarningicon.png "CodeLensTestWarningIcon") という警告アイコンが表示された場合、テストを実行します。  
+3.  ![CodeLens - 未実行の単体テストの警告](../ide/media/codelenstestwarningicon.png "CodeLensTestWarningIcon") という警告アイコンが表示された場合、テストを実行します。  
   
      ![CodeLens - コード エディターでテスト状態を選択する](../ide/media/codelenstestsnotyetrun.png "CodeLensTestsNotYetRun")  
   
@@ -215,7 +215,7 @@ ms.lasthandoff: 05/13/2017
   
      ![CodeLens - 単体テストの定義に移動する](../ide/media/codelensunittestdefinition.png "CodeLensUnitTestDefinition")  
   
-5.  テストの結果を確認します。 テスト状態インジケーターを選択するか (![CodeLens - 単体テスト失敗アイコン](~/ide/media/codelenstestfailedicon.png "CodeLensTestFailedIcon") または ![CodeLens - 単体テスト成功アイコン](~/ide/media/codelenstestpassedicon.png "CodeLensTestPassedIcon"))、**Alt + 1** を押します。  
+5.  テストの結果を確認します。 テスト状態インジケーターを選択するか (![CodeLens - 単体テスト失敗アイコン](../ide/media/codelenstestfailedicon.png "CodeLensTestFailedIcon") または ![CodeLens - 単体テスト成功アイコン](../ide/media/codelenstestpassedicon.png "CodeLensTestPassedIcon"))、**Alt + 1** を押します。  
   
      ![CodeLens - 単体テストの結果を表示する](../ide/media/codelensunittestresult.png "CodeLensUnitTestResult")  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 05/13/2017
   
  エディター ウィンドウの下部にあるシェブロン アイコンを使用して、CodeLens のファイル レベル インジケーターのオンとオフを切り替えます。  
   
- ![ファイル レベルのインジケーターのオンとオフを切り替える](~/ide/media/codelensfilelevelonandoff.png "CodeLensFileLevelOnAndOff")  
+ ![ファイル レベルのインジケーターのオンとオフを切り替える](../ide/media/codelensfilelevelonandoff.png "CodeLensFileLevelOnAndOff")  
   
 ###  <a name="NoIndicators"></a> Q: CodeLens はどこにありますか。  
  **A:** CodeLens は、メソッド、クラス、インデクサー、およびプロパティ レベルの Visual C# .NET および Visual Basic .NET のコードで表示されます。 それ以外の種類のファイルについては、ファイル レベルで CodeLens が表示されます。  
@@ -277,11 +277,11 @@ ms.lasthandoff: 05/13/2017
 4.  **Tab** キーを押して **[設定の表示]** の一覧に移動し、 **下方向** キーを押して **[CodeLens]**を選択します。  
   
 ### <a name="q-can-i-move-the-codelens-heads-up-display"></a>Q: CodeLens ヘッドアップ ディスプレイを移動できますか。  
- **A:** はい。![CodeLens - ウィンドウとしてドッキングする](~/ide/media/codelensdockwindow.png "CodeLensDockWindow") を選択し、CodeLens をウィンドウとしてドッキングします。  
+ **A:** はい。![CodeLens - ウィンドウとしてドッキングする](../ide/media/codelensdockwindow.png "CodeLensDockWindow") を選択し、CodeLens をウィンドウとしてドッキングします。  
   
- ![CodeLens インジケーター ウィンドウをドッキングする](~/ide/media/codelensselectdockwindow.png "CodeLensSelectDockWindow")  
+ ![CodeLens インジケーター ウィンドウをドッキングする](../ide/media/codelensselectdockwindow.png "CodeLensSelectDockWindow")  
   
- ![ドッキングされた CodeLens 参照ウィンドウ](~/ide/media/codelensreferencesdockedwindow.png "CodeLensReferencesDockedWindow")  
+ ![ドッキングされた CodeLens 参照ウィンドウ](../ide/media/codelensreferencesdockedwindow.png "CodeLensReferencesDockedWindow")  
   
 ### <a name="q-how-do-i-refresh-the-indicators"></a>Q: インジケーターを更新するにはどうすればよいですか。  
  **A:** 方法は、インジケーターによって異なります。  

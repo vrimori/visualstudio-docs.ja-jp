@@ -105,13 +105,13 @@ ms.lasthandoff: 05/30/2017
   
 3.  **[新しいソリューション構成]** ダイアログ ボックスで、新しい構成の名前として「`Test`」と入力し、既存のデバッグ構成から設定をコピーして、**[OK]** をクリックします。  
   
-     ![[新しいソリューション構成] ダイアログ ボックス](~/ide/media/buildwalk_newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")  
+     ![[新しいソリューション構成] ダイアログ ボックス](../ide/media/buildwalk_newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")  
   
 4.  **[アクティブ ソリューション プラットフォーム]** 一覧の **[新規作成]** をクリックします。  
   
 5.  **[新しいソリューション プラットフォーム]** ダイアログ ボックスで、**[x64]** を選択します。x86 プラットフォームの設定はコピーしません。  
   
-     ![[新しいソリューション プラットフォーム] ダイアログ ボックス](~/ide/media/buildwalk_newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
+     ![[新しいソリューション プラットフォーム] ダイアログ ボックス](../ide/media/buildwalk_newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
   
 6.  **[OK]** を選択します。  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 05/30/2017
   
  図 1: Visual Basic の警告  
   
- ![出力ウィンドウ、Visual Basic](~/ide/media/buildwalk_vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")  
+ ![出力ウィンドウ、Visual Basic](../ide/media/buildwalk_vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")  
   
  図 2: Visual C# の警告  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 05/30/2017
   
  **[出力]** ウィンドウには、ビルドの概要情報のみが表示されます。  
   
- ![出力ウィンドウ、Visual Basic のビルド警告](~/ide/media/buildwalk_visualbasicbuildwarnings.png "BuildWalk_VisualBasicBuildWarnings")  
+ ![出力ウィンドウ、Visual Basic のビルド警告](../ide/media/buildwalk_visualbasicbuildwarnings.png "BuildWalk_VisualBasicBuildWarnings")  
   
  詳細については、「[How to: Suppress Compiler Warnings](../ide/how-to-suppress-compiler-warnings.md)」(方法: コンパイラ警告を非表示にする) を参照してください。  
   

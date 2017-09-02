@@ -79,7 +79,7 @@ ms.lasthandoff: 05/24/2017
  [右端の折り返しの記号を表示する]  
  選択すると、長い行を折り返したとき、その位置に折り返し矢印インジケーターが表示されます。  
   
- ![LineBreakSymbol スクリーンショット](~/ide/reference/media/linebreak.gif "linebreak")  
+ ![LineBreakSymbol スクリーンショット](../../ide/reference/media/linebreak.gif "linebreak")  
   
  インジケーターを表示しない場合、このオプションをオフにします。  
   
