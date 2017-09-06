@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFrameInfo2::GetCount | Microsoft Docs
+title: "IEnumDebugFrameInfo2::GetCount |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,39 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: 9791cd7b2f9ef338bc473ab8e8a34f85ac7d60b4
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: db9186ca3ae4d7763b7ca2203513ebfa03c1efb2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="ienumdebugframeinfo2getcount"></a>IEnumDebugFrameInfo2::GetCount
-Returns the number of elements in the enumeration.  
+列挙に含まれる要素の数を返します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT GetCount(  
    ULONG* pcelt  
 );  
 ```  
   
-```cs  
+```csharp  
 int GetCount(  
    out uint pcelt  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `pcelt`  
- [out] Returns the number of elements in the enumeration.  
+ [out]列挙に含まれる要素の数を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- This method is not part of the customary COM enumeration interface which specifies that only the `Next`, `Clone`, `Skip`, and `Reset` methods need to be implemented.  
+## <a name="remarks"></a>コメント  
+ このメソッドはのみを指定する、よく使用される列挙型の COM インターフェイスの一部ではありません、 `Next`、 `Clone`、 `Skip`、および`Reset`メソッドを実装する必要があります。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)
