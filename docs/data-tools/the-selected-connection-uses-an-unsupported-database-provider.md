@@ -1,32 +1,50 @@
 ---
-title: "The selected connection uses an unsupported database provider | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: The selected connection uses an unsupported database provider | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d25dfa1-8fa4-4529-9b90-973bc2ec2993
 caps.latest.revision: 3
-caps.handback.revision: 1
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
+ms.openlocfilehash: 2c21e997f0d15960327d1f7eeeb7d9bfc46734f3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/07/2017
+
 ---
-# The selected connection uses an unsupported database provider
-このメッセージは、**サーバー エクスプローラー**または**データベース エクスプローラー**から、.NET Framework Data Provider for SQL Server を使用しない項目を[Object Relational Designer \(O\/R Designer\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md) にドラッグしたときに表示されます。  
+# <a name="the-selected-connection-uses-an-unsupported-database-provider"></a>The selected connection uses an unsupported database provider
+This message appears when you drag items that do not use the .NET Framework Data Provider for SQL Server from **Server Explorer**/**Database Explorer** onto the [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md).  
   
- [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]では、.NET Framework Provider for SQL Server を使用するデータ接続のみがサポートされます。有効な接続は、Microsoft SQL Server または Microsoft SQL Server データベース ファイルへの接続だけです。  
+ The [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] supports only data connections that use the .NET Framework Provider for SQL Server. Only connections to Microsoft SQL Server or Microsoft SQL Server Database File are valid.  
   
-### このエラーを解決するには  
+### <a name="to-correct-this-error"></a>To correct this error  
   
--   .NET Framework Data Provider for SQL Server を使用するデータ接続の項目のみを [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]に追加します。  
+-   Add only items from data connections that use the .NET Framework Data Provider for SQL Server to the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
   
-## 参照  
+## <a name="see-also"></a>See Also  
  <xref:System.Data.SqlClient>   
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
- [How to: Create Connections to SQL Server Databases](http://msdn.microsoft.com/ja-jp/360c340d-e5a6-4a7e-a569-e95d500be43d)   
- [.NET Framework データ プロバイダー](../Topic/.NET%20Framework%20Data%20Providers.md)   
- [Walkthrough: Creating LINQ to SQL Classes \(O\/R Designer\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
- [データ アプリケーションの作成](../data-tools/creating-data-applications.md)
+    
+ [.NET Framework Data Providers](/dotnet/framework/data/adonet/data-providers)   
+ [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
+

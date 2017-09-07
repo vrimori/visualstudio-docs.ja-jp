@@ -1,5 +1,5 @@
 ---
-title: Set a Unique Automation Property for Windows Store Controls for Testing | Microsoft Docs
+title: "テスト用に Windows ストア コントロールの一意のオートメーション プロパティを設定する | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,88 +30,88 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: e931c898147cb93683ae618f96eed53ae13607ea
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="set-a-unique-automation-property-for-windows-store-controls-for-testing"></a>Set a Unique Automation Property for Windows Store Controls for Testing
-If you want to run coded UI tests for your XAML-based Windows Store application, you must have a unique automation property that identifies each control.  
+# <a name="set-a-unique-automation-property-for-windows-store-controls-for-testing"></a>テスト用に Windows ストア コントロールの一意のオートメーション プロパティを設定する
+XAML ベースの Windows ストア アプリケーション用のコード化された UI テストを実行する場合は、各コントロールを識別する一意のオートメーション プロパティが必要です。  
   
- You can assign a unique automation property based on the type of XAML control in your application. Here's how to assign this unique automation property in the following situations:  
+ アプリケーションで XAML コントロールの種類に基づいて固有のオートメーション プロパティを割り当てることができます。 ここでは、次のような状況において、この一意のオートメーション プロパティを割り当てる方法について説明します。  
   
--   [Static XAML definition of controls](#UniquePropertyWindowsStoreControlsStaticXAML)  
+-   [コントロールの静的な XAML 定義](#UniquePropertyWindowsStoreControlsStaticXAML)  
   
--   [Assign unique automation properties using Visual Studio or Blend for Visual Studio](#UniquePropertyWindowsStoreControlsExpressionBlend)  
+-   [Visual Studio または Blend for Visual Studio を使用して一意のオートメーション プロパティを割り当てる](#UniquePropertyWindowsStoreControlsExpressionBlend)  
   
--   [Use a DataTemplate](#UniquePropertyWindowsStoreControlsDataTemplate)  
+-   [データ テンプレートを使用する](#UniquePropertyWindowsStoreControlsDataTemplate)  
   
--   [Use a control template](#UniquePropertyWindowsStoreControlsControlTemplate)  
+-   [コントロール テンプレートを使用する](#UniquePropertyWindowsStoreControlsControlTemplate)  
   
--   [Dynamic controls](#UniquePropertyWindowsStoreControlsDynamicControls)  
+-   [ダイナミック コントロール](#UniquePropertyWindowsStoreControlsDynamicControls)  
   
-## <a name="use-methods-to-assign-a-unique-automation-property"></a>Use methods to assign a unique automation property  
+## <a name="use-methods-to-assign-a-unique-automation-property"></a>いくつかの方法で一意のオートメーション プロパティを割り当てる  
   
-###  <a name="UniquePropertyWindowsStoreControlsStaticXAML"></a> Static XAML definition  
- To specify a unique automation property for a control that is defined in your XAML file, you can set the AutomationProperties.AutomationId or AutomationProperties.Name implicitly or explicitly, as shown in the following examples. Setting either of these values gives the control a unique automation property that can be used to identify the control when you create a coded UI test or action recording.  
+###  <a name="UniquePropertyWindowsStoreControlsStaticXAML"></a> 静的な XAML 定義  
+ XAML ファイルで定義されたコントロールに一意のオートメーション プロパティを指定するには、AutomationProperties.AutomationId または AutomationProperties.Name を暗黙的または明示的に設定します。次に例を示します。 これらの値のいずれかを設定すると、コントロールに一意のオートメーション プロパティが割り当てられ、コード化された UI テストまたは操作の記録を作成するとき、コントロールを識別するために使用できます。  
   
- **Set the property implicitly**  
+ **プロパティを暗黙的に設定する**  
   
- Set the AutomationProperties.AutomationId to **ButtonX** using the Name property in the XAML for the control.  
+ コントロールの XAML で Name プロパティを使用して、AutomationProperties.AutomationId を **ButtonX** に設定します。  
   
 ```xaml  
 <Button Name="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />  
   
 ```  
   
- Set the AutomationProperties.Name to **ButtonY** using the Content property in the XAML for the control.  
+ コントロールの XAML で Content プロパティを使用して、AutomationProperties.Name を **ButtonY** に設定します。  
   
 ```xaml  
 <Button Content="ButtonY" Height="31" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top" Width="140" Click="ButtonY_Click" />  
   
 ```  
   
- **Set the property explicitly**  
+ **プロパティを明示的に設定する**  
   
- Set the AutomationProperties.AutomationId to **ButtonX** explicitly in the XAML for the control.  
+ コントロールの XAML で AutomationProperties.AutomationId を **ButtonX** に明示的に設定します。  
   
 ```xaml  
 <Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />  
   
 ```  
   
- Set the AutomationProperties.Name to **ButtonY** explicitly in the XAML for the control.  
+ コントロールの XAML で AutomationProperties.Name を **ButtonY** に明示的に設定します。  
   
 ```  
 <Button AutomationProperties.Name="ButtonY" Height="31" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top" Width="140" Click="ButtonY_Click" />  
 ```  
   
-###  <a name="UniquePropertyWindowsStoreControlsExpressionBlend"></a> Assign unique automation properties using Visual Studio or Blend for Visual Studio  
- You can use Visual Studio or Blend for Visual Studio to assign unique names to interactive elements such as buttons, list boxes, combo boxes and text boxes. This gives the control a unique value for AutomationProperties.Name.  
+###  <a name="UniquePropertyWindowsStoreControlsExpressionBlend"></a> Visual Studio または Blend for Visual Studio を使用して一意のオートメーション プロパティを割り当てる  
+ Visual Studio または Blend for Visual Studio を使用して、ボタン、リスト ボックス、コンボ ボックス、テキスト ボックスなどの対話型要素に一意の名前を割り当てることができます。 これにより、コントロールの AutomationProperties.Name に一意の値が割り当てられます。  
   
- **Visual Studio:** On the **Tools** menu, point to **Options** and then choose **Text Editor**, then **XAML**, and finally **Miscellaneous**.  
+ **Visual Studio:** **[ツール]** メニューの **[オプション]** をポイントし、**[テキスト エディター]**、**[XAML]**、**[その他]** の順に選択します。  
   
- Select **Automatically name interactive elements on creation** and then choose **OK**.  
+ **[対話要素の作成時に自動的に名前を付ける]** を選択し、**[OK]** をクリックします。  
   
- ![XAML Miscellaneous options](../test/media/cuit_windowsstoreapp_b.png "CUIT_WindowsStoreApp_B")  
+ ![その他の XAML オプション](../test/media/cuit_windowsstoreapp_b.png "CUIT_WindowsStoreApp_B")  
   
- **Blend for Visual Studio:** Use one of the following methods to do this from Blend for Visual Studio.  
+ **Blend for Visual Studio:** これを Blend for Visual Studio から実行するには、次のいずれかの方法を使用します。  
   
 > [!NOTE]
->  You can only use this method for controls that are created statically using XAML.  
+>  この方法は、XAML を使用して静的に作成されたコントロールの場合のみ行うことができます。  
   
- **To give a unique name to existing controls**  
+ **既存のコントロールに一意の名前を付けるには**  
   
- On the **Tools** menu, choose **Name Interactive Elements**, as shown here:  
+ 次に示すように、**[ツール]** メニューの **[対話型要素に名前を付ける]** をクリックします。  
   
- ![Choose Name Interactive Elements from Tools menu](../test/media/cuit_windowsstoreproperty_blend_1.png "CUIT_WindowsStoreProperty_Blend_1")  
+ ![[ツール] メニューの [対話型要素に名前を付ける] をクリック](../test/media/cuit_windowsstoreproperty_blend_1.png "CUIT_WindowsStoreProperty_Blend_1")  
   
- **To automatically give a unique name to controls that you create**  
+ **作成されるコントロールに自動的に一意の名前を付けるには**  
   
- On the **Tools** menu, point to **Options**, and then choose **Project**. Select **Automatically name interactive elements on creation** and then choose **OK**, as shown here:  
+ **[ツール]** メニューの **[オプション]** をポイントし、**[プロジェクト]** をクリックします。 次に示すように、**[対話要素の作成時に自動的に名前を付ける]** を選択し、**[OK]** をクリックします。  
   
- ![Set project to name interactive elements](../test/media/cuit_windowsstoreproeprty_blend_2.png "CUIT_WindowsStoreProeprty_Blend_2")  
+ ![対話型要素に名前を付けるためプロジェクトを設定](../test/media/cuit_windowsstoreproeprty_blend_2.png "CUIT_WindowsStoreProeprty_Blend_2")  
   
-###  <a name="UniquePropertyWindowsStoreControlsDataTemplate"></a> Use a data template  
- You can define a simple template using ItemTemplate to bind the values in a list box to variables using the following XAML.  
+###  <a name="UniquePropertyWindowsStoreControlsDataTemplate"></a> データ テンプレートを使用する  
+ ItemTemplate を使用して簡単なテンプレートを定義すると、リスト ボックスの値を変数にバインドできます。次のような XAML を使用します。  
   
 ```xaml  
   
@@ -127,7 +127,7 @@ If you want to run coded UI tests for your XAML-based Windows Store application,
 </ListBox>  
 ```  
   
- You can also use a template with ItemContainerStyle to bind the values to variables by using the following XAML.  
+ ItemContainerStyle を含むテンプレートを使用して、値を変数にバインドすることもできます。次のような XAML を使用します。  
   
 ```xaml  
   
@@ -149,10 +149,10 @@ If you want to run coded UI tests for your XAML-based Windows Store application,
   
 ```  
   
- For both of these examples, you must then override the ToString() method of ItemSource, as shown using the following code. This code makes sure that the AutomationProperties.Name value is set and is unique, because you cannot set a unique automation property for each data bound list item using binding. Setting a unique value for the Automation Properties.Name is sufficient in this case.  
+ どちらの例でも、次に示すコードのように ItemSource の ToString() メソッドをオーバーライドする必要があります。 バインディングによって各データ バインド リスト項目に一意のオートメーション プロパティを設定することはできないため、このコードを使用して、AutomationProperties.Name 値を設定し、その値が確実に一意になるようにします。 この場合、Automation Properties.Name に一意の値を設定するだけで十分です。  
   
 > [!NOTE]
->  Using this approach, the inner contents of the list item can also be set to a string in the Employee class through binding. As shown in the example, the button control inside each list item is assigned a unique automation id which is the Employee ID.  
+>  この方法を使用すると、リスト項目の内部コンテンツをバインディングによって Employee クラスの文字列に設定することもできます。 この例に示されているように、各リスト項目内のボタン コントロールには、Employee ID を表す一意のオートメーション ID が割り当てられます。  
   
 ```  
   
@@ -173,8 +173,8 @@ public override string ToString()
   
 ```  
   
-###  <a name="UniquePropertyWindowsStoreControlsControlTemplate"></a> Use a control template  
- You can use a control template so that each instance of a specific type obtains a unique automation property when it is defined in the code. You must create the template so that the AutomationProperty binds to a unique ID in the control instance. The following XAML demonstrates one approach to create this binding with a control template.  
+###  <a name="UniquePropertyWindowsStoreControlsControlTemplate"></a> コントロール テンプレートを使用する  
+ コントロール テンプレートを使用すると、特定の型の各インスタンスがコードで定義されるときに、一意のオートメーション プロパティが与えられるようにすることができます。 AutomationProperty がコントロール インスタンスの一意の ID にバインドされるようにテンプレートを作成する必要があります。 次の XAML は、コントロール テンプレートを使用してこのバインディングを作成する方法を示しています。  
   
 ```xaml  
   
@@ -193,7 +193,7 @@ public override string ToString()
   
 ```  
   
- When you define two instances of a button using this control template, the automation id is set to the unique content string for the controls in the template, as shown in the following XAML.  
+ このコントロール テンプレートを使用して 1 つのボタンのインスタンスを 2 つ定義すると、テンプレート内のコントロールのオートメーション ID は一意のコンテンツ文字列に設定されます。このときの XAML を次に示します。  
   
 ```xaml  
   
@@ -201,8 +201,8 @@ public override string ToString()
 <Button Content="Button2" Style="{StaticResource MyButton}" Width="140"/>  
 ```  
   
-###  <a name="UniquePropertyWindowsStoreControlsDynamicControls"></a> Dynamic controls  
- If you have controls that are created dynamically from your code and not created statically or through templates in XAML files, you must set the Content or Name properties for the control. This makes sure that each dynamic control has a unique automation property. For example, if you have a check box that must be displayed when you select a list item, you can set these properties, as shown here:  
+###  <a name="UniquePropertyWindowsStoreControlsDynamicControls"></a> ダイナミック コントロール  
+ コードから動的に作成され、静的に、または XAML ファイルのテンプレートから作成されていないコントロールがある場合は、コントロールの Content プロパティまたは Name プロパティを設定する必要があります。 これにより、各ダイナミック コントロールに確実に一意のオートメーション プロパティが与えられるようにします。 たとえば、リスト項目を選択したときに表示するチェック ボックスがある場合は、次に示すようにこれらのプロパティを設定できます。  
   
 ```csharp  
   
@@ -218,6 +218,6 @@ private void CreateCheckBox(string txt, StackPanel panel)
   
 ```  
   
-## <a name="see-also"></a>See Also  
- [Test Windows UWP and 8.1 Store Apps with Coded UI Tests](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md)
+## <a name="see-also"></a>関連項目  
+ [コード化された UI テストを使用した Windows UWP および 8.1 のストア アプリのテスト](../test/test-windows-store-8-1-apps-with-coded-ui-tests.md)
 

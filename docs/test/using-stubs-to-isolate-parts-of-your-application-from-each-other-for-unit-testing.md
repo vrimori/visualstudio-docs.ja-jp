@@ -1,5 +1,5 @@
 ---
-title: Using stubs to isolate parts of your application from each other for unit testing | Microsoft Docs
+title: "スタブを使用して単体テストでアプリケーションの各部分を相互に分離する | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,62 +30,62 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 90351c8d5a492a5642568691893f61a7001861cb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Using stubs to isolate parts of your application from each other for unit testing
-*Stub types* are one of two technologies that the Microsoft Fakes framework provides to let you easily isolate a component you are testing from other components that it calls. A stub is a small piece of code that takes the place of another component during testing. The benefit of using a stub is that it returns consistent results, making the test easier to write. And you can run tests even if the other components are not working yet.  
+# <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>スタブを使用して単体テストでアプリケーションの各部分を相互に分離する
+*スタブ型*は、テスト対象のコンポーネントをそれが呼び出した他のコンポーネントから簡単に区別できるようにするために Microsoft Fakes フレームワークによって提供されている 2 つのテクノロジのうちの 1 つです。 スタブは、テスト中に別のコンポーネントの代わりをする短いコードです。 スタブを使用することの利点は、スタブによって一貫した結果が返され、テストを簡単に記述できることです。 また、他のコンポーネントがまだ動作しなくてもテストを実行できます。  
   
- For an overview and quick start guide to Fakes, see [Isolating Code Under Test with Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md).  
+ Fakes の概要とクイック スタート ガイドについては、「[Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)」を参照してください。  
   
- To use stubs, you have to write your component so that it uses only interfaces, not classes, to refer to other parts of the application. This is a good design practice because it makes changes in one part less likely to require changes in another. For testing, it allows you to substitute a stub for a real component.  
+ スタブを使用するには、アプリケーションの他の部分を参照する際に、クラスでなくインターフェイスだけを使用するようにコンポーネントを記述する必要があります。 1 つの部分で変更があったときに別の部分でも変更が必要になる可能性が低くなるため、これは優れたデザイン方法です。 テストでは、実際のコンポーネントをスタブに置き換えることができます。  
   
- In the diagram, the component StockAnalyzer is the one we want to test. It normally uses another component, RealStockFeed. But RealStockFeed returns different results every time its methods are called, making it difficult to test StockAnalyzer.  During testing, we replace it with a different class, StubStockFeed.  
+ 図では、StockAnalyzer というコンポーネントがテスト対象です。 これは通常、別のコンポーネントである RealStockFeed を使用します。 しかし、RealStockFeed はメソッドが呼び出されるたびに異なる結果を返すので、StockAnalyzer のテストが難しくなります。  そこで、テスト中は StubStockFeed という別のクラスに置き換えます。  
   
- ![Real and Stub classes conform to one interface.](../test/media/fakesinterfaces.png "FakesInterfaces")  
+ ![Real クラスと Stub クラスは 1 つのインターフェイスに準拠しています。](../test/media/fakesinterfaces.png "FakesInterfaces")  
   
- Because stubs rely on your being able to structure your code in this way, you typically use stubs to isolate one part of your application from another. To isolate it from other assemblies that are not under your control, such as System.dll, you would normally use shims. See [Using shims to isolate your application from other assemblies for unit testing](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).  
+ スタブは、コードをこのように構成できることに依存しているため、通常は自分が管理しているアプリケーションの 1 つの部分を他の部分から分離するために使用されます。 自分の管理下にない他のアセンブリ (System.dll など) から分離するには、通常は shim を使用します。 「[shim を使用して単体テストでアプリケーションを他のアセンブリから分離する](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)」を参照してください。  
   
  **Requirements**  
   
 -   Visual Studio Enterprise  
   
-## <a name="in-this-topic"></a>In this topic  
+## <a name="in-this-topic"></a>このトピックの内容  
   
--   [How to use stubs](#how)  
+-   [スタブの使用方法](#how)  
   
-    -   [Design for Dependency Injection](#Dependency)  
+    -   [依存関係の挿入のデザイン](#Dependency)  
   
-    -   [Generate Stubs](#GeneratingStubs)  
+    -   [スタブを生成する](#GeneratingStubs)  
   
-    -   [Write your Test with Stubs](#WriteTest)  
+    -   [スタブを使用してテストを作成する](#WriteTest)  
   
-    -   [Verifying Parameter Values](#mocks)  
+    -   [パラメーター値を確認する](#mocks)  
   
--   [Stubs for different kinds of type members](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Stub_basics)  
+-   [さまざまな種類の型メンバーのスタブ](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Stub_basics)  
   
-    -   [Methods](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Methods)  
+    -   [メソッド](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Methods)  
   
-    -   [Properties](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Properties)  
+    -   [プロパティ](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Properties)  
   
-    -   [Events](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Events)  
+    -   [イベント](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Events)  
   
-    -   [Generic methods](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Generic_methods)  
+    -   [ジェネリック メソッド](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Generic_methods)  
   
-    -   [Stubs of virtual classes](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Partial_stubs)  
+    -   [仮想クラスのスタブ](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Partial_stubs)  
   
--   [Debugging stubs](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Debugging_stubs)  
+-   [スタブをデバッグする](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Debugging_stubs)  
   
--   [Stub limitations](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Stub_limitation)  
+-   [スタブの制限事項](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Stub_limitation)  
   
--   [Changing the default behavior of stubs](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Changing_the_default_behavior_of_stubs)  
+-   [スタブの既定の動作を変更する](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Changing_the_default_behavior_of_stubs)  
   
-##  <a name="How"></a> How to use stubs  
+##  <a name="How"></a> スタブの使用方法  
   
-###  <a name="Dependency"></a> Design for dependency injection  
- To use stubs, your application has to be designed so that the different components are not dependent on each other, but only dependent on interface definitions. Instead of being coupled at compile time, components are connected at run time. This pattern helps to make software that is robust and easy to update, because changes tend not to propagate across component boundaries. We recommend following it even if you don't use stubs. If you are writing new code, it's easy to follow the [dependency injection](http://en.wikipedia.org/wiki/Dependency_injection) pattern. If you are writing tests for existing software, you might have to refactor it. If that would be impractical, you could consider using shims instead.  
+###  <a name="Dependency"></a> 依存関係の挿入のデザイン  
+ スタブを使用するには、各コンポーネントが互いに依存せず、インターフェイス定義だけに依存するようにアプリケーションをデザインする必要があります。 コンポーネントはコンパイル時には結合されず、実行時に接続されます。 このパターンでは、変更がコンポーネントの境界を越えて広がることが少ないので、堅牢で更新しやすいソフトウェアを作成できます。 スタブを使用しない場合でも、このパターンに従うことをお勧めします。 新しいコードを記述する場合は、[依存関係の挿入](http://en.wikipedia.org/wiki/Dependency_injection)パターンに簡単に準拠できます。 既存のソフトウェアのテストを作成する場合は、通常、ソフトウェアをリファクタリングする必要があります。 それが現実的でない場合は、代わりに shim を使用する方法もあります。  
   
- Let's start this discussion with a motivating example, the one in the diagram. The class StockAnalyzer reads share prices and generates some interesting results. It has some public methods, which we want to test. To keep things simple, let's just look at one of those methods, a very simple one that reports the current price of a particular share. We want to write a unit test of that method. Here's the first draft of a test:  
+ ここではまず、図に示されているような、スタブに適した例について説明します。 クラス StockAnalyzer は、株価を読み取り、興味深い結果を生成します。 いくつかのパブリック メソッドがあり、それらをテスト対象にします。 説明を簡単にするために、これらのメソッドのうちの 1 つに着目します。特定の株式の現在の価格を報告する単純なメソッドです。 このメソッドの単体テストを記述します。 テストの最初のドラフトは、次のようになります。  
   
 ```csharp  
 [TestMethod]  
@@ -111,9 +111,9 @@ public void TestMethod1()
 End Sub  
 ```  
   
- One problem with this test is immediately obvious: share prices vary, and so the assertion will usually fail.  
+ このテストの問題は、一見して明らかです。株価は変化するので、アサーションは通常は失敗します。  
   
- Another problem might be that the StockFeed component, which is used by the StockAnalyzer, is still under development. Here's the first draft of the code of the method under test:  
+ もう 1 つの問題は、StockAnalyzer によって使用される StockFeed コンポーネントがまだ開発中であることです。 テスト中のメソッドのコードは、最初のドラフトで、次のようになります。  
   
 ```csharp  
 public int GetContosoPrice()  
@@ -130,19 +130,19 @@ Public Function GetContosoPrice()
 End Function  
 ```  
   
- As it stands, this method might not compile or might throw an exception because work on the StockFeed class is not yet complete.  
+ 現時点では、StockFeed クラスの作業が完了していないため、このメソッドはコンパイルされないか、例外をスローする場合があります。  
   
- Interface injection addresses both of these problems.  
+ インターフェイス挿入は、両方の問題を解決します。  
   
- Interface injection applies the following rule:  
+ インターフェイス挿入では、次の規則が適用されます。  
   
--   The code of any component of your application should never explicitly refer to a class in another component, either in a declaration or in a `new` statement. Instead, variables and parameters should be declared with interfaces. Component instances should be created only by the component's container.  
+-   アプリケーションのすべてのコンポーネントのコードは、宣言内でも、`new` ステートメント内でも、他のコンポーネントのクラスを明示的に参照してはいけません。 代わりに、変数とパラメーターは、インターフェイス付きで宣言する必要があります。 コンポーネントのインスタンスは、コンポーネントのコンテナーのみで作成されます。  
   
-     By "component" in this case we mean a class, or a group of classes that you develop and update together. Typically, a component is the code in one Visual Studio project. It's less important to decouple classes within one component, because they are updated at the same time.  
+     ここでは、"コンポーネント" はクラス、または一緒に開発および更新するクラスのグループを意味します。 通常、コンポーネントは 1 つの Visual Studio プロジェクト内のコードです。 1 つのコンポーネント内の各クラスは同時に更新されるため、それらを分離することは、あまり重要ではありません。  
   
-     It is also not so important to decouple your components from the classes of a relatively stable platform such as System.dll. Writing interfaces for all these classes would clutter your code.  
+     System.dll などの比較的安定したプラットフォームのクラスからコンポーネントを分離することも、あまり重要ではありません。 これらのすべてのクラスのインターフェイスを記述したのでは、コードが煩雑になってしまいます。  
   
- The StockAnalyzer code can therefore be improved by decoupling it from the StockFeed by using an interface like this:  
+ StockAnalyzer のコードは、次のようにインターフェイスを使用して StockFeed から分離することによって、より良いコードにすることができます。  
   
 ```csharp  
 public interface IStockFeed  
@@ -182,32 +182,32 @@ End Class
   
 ```  
   
- In this example, StockAnalyzer is passed an implementation of an IStockFeed when it is constructed. In the completed application, the initialization code would perform the connection:  
+ この例では、StockAnalyzer が構築されるときに IStockFeed の実装が渡されます。 完成したアプリケーションでは、次のように、初期化コードによって接続が行われます。  
   
 ```  
 analyzer = new StockAnalyzer(new StockFeed())  
 ```  
   
- There are more flexible ways of performing this connection. For example, StockAnalyzer could accept a factory object that can instantiate different implementations of IStockFeed in different conditions.  
+ この接続を行うには、より柔軟な方法があります。 たとえば、StockAnalyzer は、さまざまな条件で IStockFeed のさまざまな実装をインスタンス化できるファクトリ オブジェクトを受け取ることができます。  
   
-###  <a name="GeneratingStubs"></a> Generate stubs  
- You've decoupled the class you want to test from the other components that it uses. As well as making the application more robust and flexible, the decoupling allows you to connect the component under test to stub implementations of the interfaces for test purposes.  
+###  <a name="GeneratingStubs"></a> スタブを生成する  
+ テスト対象のクラスを、それが使用する他のコンポーネントから分離しました。 分離することによって、アプリケーションの堅牢性と柔軟性を高めるだけでなく、テスト対象のコンポーネントをインターフェイスのスタブ実装にテスト用に接続することもできます。  
   
- You could simply write the stubs as classes in the usual way. But Microsoft Fakes provides you with a more dynamic way to create the most appropriate stub for every test.  
+ スタブは、単に通常の方法でクラスとして記述することもできます。 しかし、Microsoft Fakes では、各テストで最も適切なスタブを作成するための、より動的な手段が用意されています。  
   
- To use stubs, you must first generate stub types from the interface definitions.  
+ スタブを使用するには、まず、インターフェイス定義からスタブ型を生成する必要があります。  
   
-##### <a name="adding-a-fakes-assembly"></a>Adding a Fakes Assembly  
+##### <a name="adding-a-fakes-assembly"></a>Fakes アセンブリを追加する  
   
-1.  In Solution Explorer, expand your unit test project's **References**.  
+1.  ソリューション エクスプローラーで、単体テスト プロジェクトの **[参照設定]** を展開します。  
   
-    -   If you are working in Visual Basic, you must select **Show All Files** in the Solution Explorer toolbar, in order to see the References list.  
+    -   Visual Basic で作業している場合、参照一覧を表示するには、ソリューション エクスプローラー ツール バーの **[すべてのファイルを表示]** を選択する必要があります。  
   
-2.  Select the assembly that contains the interface definitions for which you want to create stubs.  
+2.  作成するスタブに対応するインターフェイス定義が含まれているアセンブリを選択します。  
   
-3.  On the shortcut menu, choose **Add Fakes Assembly**.  
+3.  ショートカット メニューで、**[Fakes アセンブリに追加]** を選択します。  
   
-###  <a name="WriteTest"></a> Write your test with stubs  
+###  <a name="WriteTest"></a> スタブを使用してテストを作成する  
   
 ```csharp  
 [TestClass]  
@@ -265,12 +265,12 @@ End Class
   
 ```  
   
- The special piece of magic here is the class `StubIStockFeed`. For every public type in the referenced assembly, the Microsoft Fakes mechanism generates a stub class. The name of the stub class is the derived from the name of the interface, with "`Fakes.Stub`" as a prefix, and the parameter type names appended.  
+ ここでの特殊なマジックは、`StubIStockFeed` クラスです。 参照アセンブリのそれぞれのパブリック型に対して、Microsoft Fakes のメカニズムによってスタブ クラスが生成されます。 スタブ クラスの名前はインターフェイスの名前から派生します。プレフィックスとして `Fakes.Stub` が付き、パラメーターの型名が加わります。  
   
- Stubs are also generated for the getters and setters of properties, for events, and for generic methods.  
+ また、イベントおよびジェネリック メソッドについて、プロパティの getter および setter に対してもスタブが生成されます。  
   
-###  <a name="mocks"></a> Verifying parameter values  
- You can verify that when your component makes a call to another component, it passes the correct values. You can either place an assertion in the stub, or you can store the value and verify it in the main body of the test. For example:  
+###  <a name="mocks"></a> パラメーター値を確認する  
+ 自分のコンポーネントが他のコンポーネントを呼び出すときに、適切な値が渡されることを検証できます。 スタブ内にアサーションを配置するか、値を保存して、テストの本体で検証できます。 例:  
   
 ```csharp  
 [TestClass]  
@@ -347,10 +347,10 @@ Class TestMyComponent
 End Class  
 ```  
   
-##  <a name="BKMK_Stub_basics"></a> Stubs for different kinds of type members  
+##  <a name="BKMK_Stub_basics"></a> さまざまな種類の型メンバーのスタブ  
   
-###  <a name="BKMK_Methods"></a> Methods  
- As described in the example, methods can be stubbed by attaching a delegate to an instance of the stub class. The name of the stub type is derived from the names of the method and parameters. For example, given the following `IMyInterface` interface and method `MyMethod`:  
+###  <a name="BKMK_Methods"></a> メソッド  
+ 例に示すように、スタブ クラスのインスタンスにデリゲートをアタッチすることによって、メソッドをスタブすることができます。 スタブ型の名前は、メソッドとパラメーターの名前から派生されます。 たとえば、`IMyInterface` というインターフェイスと `MyMethod` というメソッドがあるとします。  
   
 ```csharp  
 // application under test  
@@ -360,7 +360,7 @@ interface IMyInterface
 }  
 ```  
   
- We attach a stub to `MyMethod` that always returns 1:  
+ スタブを、常に 1 を返す `MyMethod` にアタッチします。  
   
 ```csharp  
 // unit test code  
@@ -369,10 +369,10 @@ interface IMyInterface
   
 ```  
   
- If you do not provide a stub for a function, Fakes will generate a function that returns the default value of the return type. For numbers, the default value is 0, and for class types it is `null` (C#) or `Nothing` (Visual Basic).  
+ 関数のスタブを指定しないと、戻り値の型の既定値を返す関数が Fakes によって生成されます。 数値の場合、既定値は 0 です。クラス型の場合は、`null` (C#) または `Nothing` (Visual Basic) です。  
   
-###  <a name="BKMK_Properties"></a> Properties  
- Property getters and setters are exposed as separate delegates and can be stubbed separately. For example, consider the `Value` property of `IMyInterface`:  
+###  <a name="BKMK_Properties"></a> プロパティ  
+ プロパティの getter と setter は、個別のデリゲートとして公開され、個別にスタブできます。 例として、`Value` の `IMyInterface` プロパティを考えます。  
   
 ```csharp  
 // code under test  
@@ -383,7 +383,7 @@ interface IMyInterface
   
 ```  
   
- We attach delegates to the getter and setter of `Value` to simulate an auto-property:  
+ 自動プロパティをシミュレートするために、`Value` の getter と setter にデリゲートをアタッチします。  
   
 ```csharp  
 // unit test code  
@@ -394,10 +394,10 @@ stub.ValueSet = (value) => i = value;
   
 ```  
   
- If you do not provide stub methods for either the setter or the getter of a property, Fakes will generate a stub that stores values, so that the stub property works like a simple variable.  
+ プロパティの setter または getter にスタブ メソッドを指定しないと、値を格納するスタブが Fakes によって生成されます。そのため、スタブ プロパティは単純な変数のように動作します。  
   
-###  <a name="BKMK_Events"></a> Events  
- Events are exposed as delegate fields. As a result, any stubbed event can be raised simply by invoking the event backing field. Let's consider the following interface to stub:  
+###  <a name="BKMK_Events"></a> イベント  
+ イベントは、デリゲート フィールドとして公開されます。 そのため、スタブされたイベントは、単にイベントのバッキング フィールドを呼び出すだけで発生させることができます。 次のようなインターフェイスをスタブするとします。  
   
 ```csharp  
 // code under test  
@@ -407,7 +407,7 @@ interface IWithEvents
 }  
 ```  
   
- To raise the `Changed` event, we simply invoke the backing delegate:  
+ `Changed` イベントを発生させるには、単にバッキング デリゲートを呼び出します。  
   
 ```csharp  
 // unit test code  
@@ -417,8 +417,8 @@ interface IWithEvents
   
 ```  
   
-###  <a name="BKMK_Generic_methods"></a> Generic methods  
- It's possible to stub generic methods by providing a delegate for each desired instantiation of the method. For example, given the following interface containing a generic method:  
+###  <a name="BKMK_Generic_methods"></a> ジェネリック メソッド  
+ メソッドに必要な各インスタンス化用のデリゲートを用意することによって、ジェネリック メソッドをスタブすることができます。 たとえば、次のような、ジェネリック メソッドを含むインターフェイスがあるとします。  
   
 ```csharp  
 // code under test  
@@ -428,7 +428,7 @@ interface IGenericMethod
 }  
 ```  
   
- you could write a test that stubs the `GetValue<int>` instantiation:  
+ `GetValue<int>` のインスタンス化をスタブするテストを、次のように記述できます。  
   
 ```csharp  
 // unit test code  
@@ -443,10 +443,10 @@ public void TestGetValue()
 }  
 ```  
   
- If the code were to call `GetValue<T>` with any other instantiation, the stub would simply call the behavior.  
+ コードが他のインスタンス化で `GetValue<T>` を呼び出す場合、スタブは単に動作を呼び出します。  
   
-###  <a name="BKMK_Partial_stubs"></a> Stubs of virtual classes  
- In the previous examples, the stubs have been generated from interfaces. You can also generate stubs from a class that has virtual or abstract members. For example:  
+###  <a name="BKMK_Partial_stubs"></a> 仮想クラスのスタブ  
+ これまでの例では、スタブはインターフェイスから生成されていました。 仮想メンバーまたは抽象メンバーを持つクラスからスタブを生成することもできます。 次に例を示します。  
   
 ```csharp  
 // Base class in application under test  
@@ -460,7 +460,7 @@ public void TestGetValue()
     }  
 ```  
   
- In the stub generated from this class, you can set delegate methods for DoAbstract() and DoVirtual(), but not DoConcrete().  
+ このクラスから生成されたスタブでは、DoAbstract() と DoVirtual() のデリゲート メソッドを設定できますが、DoConcrete() のデリゲート メソッドは設定できません。  
   
 ```csharp  
 // unit test  
@@ -470,7 +470,7 @@ public void TestGetValue()
   
 ```  
   
- If you do not provide a delegate for a virtual method, Fakes can either provide the default behavior, or it can call the method in the base class. To have the base method called, set the `CallBase` property:  
+ 仮想メソッドのデリゲートを指定しない場合、Fakes は既定の動作を提供するか、基底クラスのメソッドを呼び出すことができます。 基本メソッドが呼び出されるようにするには、次のように `CallBase` プロパティを設定します。  
   
 ```csharp  
 // unit test code  
@@ -484,19 +484,19 @@ stub.CallBase = true;
 Assert.AreEqual(43,stub.DoVirtual(1));  
 ```  
   
-##  <a name="BKMK_Debugging_stubs"></a> Debugging stubs  
- The stub types are designed to provide a smooth debugging experience. By default, the debugger is instructed to step over any generated code, so it should step directly into the custom member implementations that were attached to the stub.  
+##  <a name="BKMK_Debugging_stubs"></a> スタブをデバッグする  
+ スタブ型は、デバッグを円滑に行うことができるように設計されています。 既定では、デバッガーは生成されたすべてのコードをステップ オーバーするように設定されています。そのため、スタブにアタッチされたカスタム メンバー実装に直接ステップ インする必要があります。  
   
-##  <a name="BKMK_Stub_limitation"></a> Stub limitations  
+##  <a name="BKMK_Stub_limitation"></a> スタブの制限事項  
   
-1.  Method signatures with pointers aren't supported.  
+1.  ポインターを含むメソッド シグネチャはサポートされていません。  
   
-2.  Sealed classes or static methods can't be stubbed because stub types rely on virtual method dispatch. For such cases, use shim types as described in [Using shims to isolate your application from other assemblies for unit testing](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)  
+2.  スタブ型は仮想メソッド ディスパッチに依存しているため、シール クラスまたは静的メソッドはスタブできません。 そのような場合、「[shim を使用して単体テストでアプリケーションを他のアセンブリから分離する](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)」の説明にある shim 型を利用してください。  
   
-##  <a name="BKMK_Changing_the_default_behavior_of_stubs"></a> Changing the default behavior of stubs  
- Each generated stub type holds an instance of the `IStubBehavior` interface (through the `IStub.InstanceBehavior` property). The behavior is called whenever a client calls a member with no attached custom delegate. If the behavior has not been set, it will use the instance returned by the `StubsBehaviors.Current` property. By default, this property returns a behavior that throws a `NotImplementedException` exception.  
+##  <a name="BKMK_Changing_the_default_behavior_of_stubs"></a> スタブの既定の動作を変更する  
+ 生成された各スタブ型は、`IStubBehavior` インターフェイスのインスタンスを保持します (`IStub.InstanceBehavior` プロパティを通じて)。 この動作は、カスタム デリゲートをアタッチされていないメンバーをクライアントが呼び出すたびに呼び出されます。 動作が設定されていない場合は、`StubsBehaviors.Current` プロパティによって返されるインスタンスが使用されます。 既定では、このプロパティは `NotImplementedException` 例外をスローする動作を返します。  
   
- The behavior can be changed at any time by setting the `InstanceBehavior` property on any stub instance. For example, the following snippet changes a behavior that does nothing or returns the default value of the return type: `default(T)`:  
+ 動作は、任意のスタブ インスタンス上の `InstanceBehavior` プロパティを設定することによって、いつでも変更できます。 たとえば、次のスニペットは、何も行わないか、戻り値の型の既定値 (`default(T)`) を返す動作を変更します。  
   
 ```csharp  
 // unit test code  
@@ -505,7 +505,7 @@ var stub = new StubIFileSystem();
 stub.InstanceBehavior = StubsBehaviors.DefaultValue;  
 ```  
   
- The behavior can also be changed globally for all stub objects for which the behavior has not been set by setting the `StubsBehaviors.Current` property:  
+ `StubsBehaviors.Current` プロパティを設定することによって、動作が設定されていないすべてのスタブ オブジェクトの動作をグローバルに変更することもできます。  
   
 ```csharp  
 // unit test code  
@@ -515,11 +515,11 @@ StubBehaviors.Current =
     BehavedBehaviors.DefaultValue;  
 ```  
   
-## <a name="external-resources"></a>External resources  
+## <a name="external-resources"></a>外部リソース  
   
-### <a name="guidance"></a>Guidance  
- [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188)  
+### <a name="guidance"></a>ガイダンス  
+ [Visual Studio 2012 を使用した継続的配信のためのテスト - 第 2 章: 単体テスト: 内部のテスト](http://go.microsoft.com/fwlink/?LinkID=255188)  
   
-## <a name="see-also"></a>See Also  
- [Isolating Code Under Test with Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)
+## <a name="see-also"></a>関連項目  
+ [Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)
 

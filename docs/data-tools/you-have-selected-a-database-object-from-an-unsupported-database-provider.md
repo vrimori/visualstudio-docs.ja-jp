@@ -1,37 +1,56 @@
 ---
-title: "You have selected a database object from an unsupported database provider | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: You have selected a database object from an unsupported database provider | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c0f1298e-31aa-471e-ae19-1bafffd2ae40
 caps.latest.revision: 3
-caps.handback.revision: 1
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
+ms.openlocfilehash: 80fa49a711987b4f5c8f7542a5eeb8771de77f2c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/07/2017
+
 ---
-# You have selected a database object from an unsupported database provider
-[!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] \([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]\) では、.NET Framework Data Provider for SQL Server \(<xref:System.Data.SqlClient>\) のみがサポートされます。**\[OK\]** をクリックし、サポートされないデータベース プロバイダーからオブジェクトの処理を続行することもできますが、実行時に予期しない動作が発生することがあります。  
+# <a name="you-have-selected-a-database-object-from-an-unsupported-database-provider"></a>You have selected a database object from an unsupported database provider
+The [!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] ([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]) supports only the .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>). Although you can click **OK** and continue to work with objects from unsupported database providers, you may experience unexpected behavior at run time.  
   
 > [!NOTE]
->  .NET Framework Data Provider for SQL Server を使用するデータ接続のみがサポートされます。  
+>  Only data connections that use the .NET Framework Data Provider for SQL Server are supported.  
   
-### このエラーを解決するには  
+### <a name="to-correct-this-error"></a>To correct this error  
   
--   **\[OK\]** をクリックして、サポートされないデータベース プロバイダーを使用する接続にマップされるエンティティ クラスのデザインを続行します。サポートされないデータベース プロバイダーを使用すると、予期しない動作が発生することがあります。  
+-   Click **OK** to continue designing the entity classes that map to the connection that uses the unsupported database provider. You might experience unexpected behavior when you use unsupported database providers.  
   
-     または  
+     -or-  
   
--   **\[キャンセル\]** をクリックします。  
+-   Click **Cancel**.  
   
-     操作が停止されます。.NET Framework Provider for SQL Server を使用するデータ接続を作成または使用してください。  
+     The action is stopped. Create or use a data connection that uses the .NET Framework Provider for SQL Server.  
   
-## 参照  
- [Object Relational Designer \(O\/R Designer\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [.NET Framework データ プロバイダー](../Topic/.NET%20Framework%20Data%20Providers.md)   
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
+ [.NET Framework Data Providers](/dotnet/framework/data/adonet/data-providers)   
+ [Accessing data in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)
