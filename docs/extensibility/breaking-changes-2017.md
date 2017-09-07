@@ -1,5 +1,5 @@
 ---
-title: Breaking Changes in Visual Studio 2017 extensibility| Microsoft Docs
+title: "Visual Studio 2017 拡張機能における重大な変更 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/09/2016
 ms.reviewer: 
@@ -31,56 +31,56 @@ ms.translationtype: MT
 ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
 ms.openlocfilehash: ac7a99673eb4dc23dd53a46c3c93fd735325c255
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="changes-in-visual-studio-2017-extensibility"></a>Changes in Visual Studio 2017 extensibility
+# <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 機能拡張の変更
 
-With Visual Studio 2017, we're offering a [faster, lighter-weight Visual Studio installation experience](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer) that reduces the impact of Visual Studio on user systems, while giving users greater choice over the workloads and features that are installed. To support these improvements, we've made changes to the extensibility model, and have made some breaking changes to Visual Studio extensibility. This document will describe the technical details of these changes, and what can be done to address them. Please note that some information is point-in-time implementation details and may be changed later.
+Visual Studio 2017 とを提供して、[高速、軽量の Visual Studio インストール エクスペリエンス](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer)ワークロードと機能をより多くの選択肢をユーザーに提供中に Visual Studio のユーザーのシステムへの影響を減らすインストールされています。 これらの機能強化をサポートするには、機能拡張モデルに変更が加えられましたし、Visual Studio 拡張機能をいくつかの重大な変更を行ったです。 このドキュメントでは、これらの変更と対処できる新機能の技術的な詳細を説明します。 一部の情報が特定の時点の実装の詳細についてし、後で変更することがありますに注意してください。
 
-## <a name="changes-affecting-vsix-format-and-installation"></a>Changes Affecting VSIX Format and Installation
+## <a name="changes-affecting-vsix-format-and-installation"></a>VSIX 形式とインストールに影響する変更
 
-We're introducing the VSIX v3 (version 3) format to support the light-weight installation experience.
+VSIX v3 導入軽量インストール エクスペリエンスをサポートするために (バージョン 3) の形式です。
 
-Changes to the VSIX format include:
+VSIX 形式の変更は次のとおりです。
 
-* Declaration of setup prerequisites. To deliver on the promise of a lightweight, fast-installing Visual Studio, the installer now offers more configuration options to users. As a result, to ensure that the features and components required by an extension are installed, extensions will need to declare their dependencies.
-  * The Visual Studio 2017 installer will automatically offer to acquire and install the necessary components for the user as part of installing your extension.
-  * Users will also be warned when trying to install an extension that was not built using the new VSIX v3 format, even if they have been marked in their manifest as targeting version 15.0.
-* Enhanced capabilities for the VSIX format. To deliver on a [low-impact install](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install) of Visual Studio that also supports side-by-side installs, we no longer save most configuration data to the system registry and have moved Visual Studio-specific assemblies out of the GAC. We also increased the capabilities of the VSIX format and VSIX installation engine, allowing you to use it rather than an MSI or EXE to install your extensions for some installation types.
+* セットアップの前提条件の宣言。 今すぐインストーラーはを軽量な Visual Studio での高速インストールの約束を実現するには、ユーザーに他の構成オプションを提供します。 その結果、機能と拡張機能に必要なコンポーネントがインストールされていることを確認してくださいには、拡張機能はその依存関係を宣言する必要があります。
+  * Visual Studio 2017 インストーラーは、取得拡張機能のインストールの一部として、ユーザーに必要なコンポーネントをインストールして自動的に提供されます。
+  * 構築されませんでした、新しい VSIX v3 形式を使用して 15.0 のバージョンを対象とすると、マニフェストでマークされている場合でも拡張機能をインストールしようとするとき、ユーザーは警告も。
+* VSIX 形式の機能を強化します。 提供する、[影響の少ないインストール](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install)サイド バイ サイド インストールをサポートする Visual Studio でのお不要になったほとんどの構成データをシステム レジストリに保存、移動、GAC からアセンブリを Visual Studio に固有です。 増えました VSIX 形式と、VSIX のインストールのエンジンの機能または使用することではなく MSI EXE をいくつかのインストールの種類の拡張機能をインストールすることができます。
 
-  The new capabilities include:
+  新しい機能は次のとおりです。
 
-  * Registration into the specified Visual Studio instance.
-  * Installation outside the [extensions folder](set-install-root.md).
-  * Detection of processor architecture.
-  * Dependence on language-separated language packs.
-  * Installation with [NGEN support](ngen-support.md).
+  * 指定した Visual Studio インスタンスに登録します。
+  * 外部のインストール、[拡張機能フォルダー](set-install-root.md)です。
+  * プロセッサ アーキテクチャを検出します。
+  * 言語で区切られた言語パックに依存します。
+  * 使用したインストール[NGEN サポート](ngen-support.md)です。
 
-## <a name="building-an-extension-for-visual-studio-2017"></a>Building an extension for Visual Studio 2017
+## <a name="building-an-extension-for-visual-studio-2017"></a>Visual Studio 2017 用拡張機能の構築
 
-Designer tooling for authoring of the new VSIX v3 manifest format is now available in Visual Studio 2017. See the accompanying document [How to: Migrate Extensibility Projects to Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md) for details on using the designer tools or making manual updates to the project and manifest to develop VSIX v3 extensions.
+新しいの作成を行うためのツールをデザイナー VSIX v3 マニフェスト形式は、現在 Visual Studio 2017 で使用できます。 付属のドキュメントを参照してください[する方法: Visual Studio 2017 を機能拡張プロジェクトを移行](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)詳細については、デザイナーのツールを使用する、プロジェクトを手動で更新したことでと VSIX v3 の拡張機能を開発するマニフェスト。
 
-## <a name="change-visual-studio-user-data-path"></a>Change: Visual Studio user data path
+## <a name="change-visual-studio-user-data-path"></a>Visual Studio のユーザー データ パスを変更します。
 
-Previously, only one installation of each major release of Visual Studio could exist on each machine. To support side-by-side installations of Visual Studio 2017, multiple user data paths for Visual Studio may exist on the user's machine.
+以前は、Visual Studio の各メジャー リリースの 1 つだけインストールは、各コンピューターに存在可能性があります。 Visual Studio 2017 のサイド バイ サイド インストールをサポートするために、ユーザーのコンピューターで Visual Studio の複数のユーザー データ パスがあります。
 
-Code running inside the Visual Studio process should be updated to use the Visual Studio Settings Manager. Code running outside of the Visual Studio process can find the user path of a specific Visual Studio installation [by following the guidance here](locating-visual-studio.md).
+Visual Studio の設定マネージャーを使用して、Visual Studio プロセス内で実行中のコードを更新する必要があります。 Visual Studio プロセスの外部で実行されているコードは、特定の Visual Studio のインストールのユーザーのパスを検索できます[ここガイダンスに従って](locating-visual-studio.md)です。
 
-## <a name="change-global-assembly-cache-gac"></a>Change: Global Assembly Cache (GAC)
+## <a name="change-global-assembly-cache-gac"></a>変更: グローバル アセンブリ キャッシュ (GAC)
 
-Most Visual Studio core assemblies are no longer installed into the GAC. The following changes were made so that code running in Visual Studio process can still find required assemblies at runtime.
+ほとんどの Visual Studio コア アセンブリは GAC にインストールされません。 Visual Studio のプロセスで実行されるコードはまだ実行時に必要なアセンブリを検出できるように、次の変更が行われました。
 
 > [!NOTE]
-> [INSTALLDIR] below refers to the installation root directory of Visual Studio. VSIXInstaller.exe will automatically populate this, but to write custom deployment code, please read [locating Visual Studio](locating-visual-studio.md).
+> [INSTALLDIR] Visual Studio のインストールのルート ディレクトリを参照して次に示します。 自動的に、この設定が、展開のカスタム コードを記述するをお読みくださいは VSIXInstaller.exe [Visual Studio の検索](locating-visual-studio.md)です。
 
-* Assemblies that were only installed into the GAC:
-  * These assemblies are now installed under [INSTALLDIR]\Common7\IDE\, [INSTALLDIR]\Common7\IDE\PublicAssemblies or [INSTALLDIR]\Common7\IDE\PrivateAssemblies. These folders are part of the Visual Studio process's probing paths.
-* Assemblies that were installed into a non-probing path and into the GAC:
-  * The copy in the GAC was removed from setup.
-  * A .pkgdef file was added to specify a code base entry for the assembly.
+* アセンブリを GAC にインストールされただけの:
+  * [INSTALLDIR] \Common7\IDE にこれらのアセンブリがインストールされるようになりました\,[INSTALLDIR] \Common7\IDE\PublicAssemblies または [INSTALLDIR] \Common7\IDE\PrivateAssemblies です。 これらのフォルダーは、Visual Studio プロセスのプローブ パスの一部です。
+* 非プローブ パスに、GAC にインストールされたアセンブリの場合:
+  * GAC 内のコピーは、セットアップから削除されました。
+  * アセンブリのコードの基本エントリを指定する .pkgdef ファイルが追加されました。
 
-    For example:
+    例:
     
     ```xml
     [$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{UniqueGUID}]
@@ -89,42 +89,42 @@ Most Visual Studio core assemblies are no longer installed into the GAC. The fol
     "culture"="neutral"
     "version"=15.0.0.0
     ```
-    At runtime, the Visual Studio pkgdef subsystem will merge these entries into the Visual Studio process's runtime configuration file (under [VSAPPDATA]\devenv.exe.config) as [`<codeBase>`](https://msdn.microsoft.com/en-us/library/efs781xb(v=vs.110).aspx) elements. This is the recommended way to let the Visual Studio process find your assembly, because it avoids searching through probing paths.
+    実行時に、Visual Studio pkgdef サブシステムがマージされます ([VSAPPDATA]\devenv.exe.config) Visual Studio プロセスのランタイム構成ファイルにこれらのエントリとして[ `<codeBase>` ](https://msdn.microsoft.com/en-us/library/efs781xb(v=vs.110).aspx)要素。 これは、パスがプローブによる検索しないため、Visual Studio プロセスが、アセンブリを検索することをお勧めします。
 
-### <a name="reacting-to-this-breaking-change"></a>Reacting to this breaking change
+### <a name="reacting-to-this-breaking-change"></a>この重要な変更に反応します。
 
-* If your extension is running within the Visual Studio process:
-  * Your code will be able to find Visual Studio core assemblies.
-  * Consider using a .pkgdef file to specify a path to your assemblies if necessary.
-* If your extension is running outside the Visual Studio process:
-  * Consider looking for Visual Studio core assemblies under [INSTALLDIR]\Common7\IDE\, [INSTALLDIR]\Common7\IDE\PublicAssemblies or [INSTALLDIR]\Common7\IDE\PrivateAssemblies using configuration file or assembly resolver.
+* 場合は、拡張機能は、Visual Studio プロセス内で実行しています。
+  * コードは、Visual Studio コア アセンブリを検索することができます。
+  * 必要に応じて、アセンブリへのパスを指定する .pkgdef ファイルを使用してください。
+* 場合は、拡張機能は Visual Studio のプロセスの外部で実行しています。
+  * [INSTALLDIR] \Common7\IDE Visual Studio コア アセンブリを探してを検討してください\,[INSTALLDIR] \Common7\IDE\PublicAssemblies または構成ファイルまたはアセンブリの競合回避モジュールを使用して、[INSTALLDIR] \Common7\IDE\PrivateAssemblies です。
 
-## <a name="change-reduce-registry-impact"></a>Change: Reduce registry impact
+## <a name="change-reduce-registry-impact"></a>レジストリの影響の削減に変更します。
 
-### <a name="global-com-registration"></a>Global COM registration
+### <a name="global-com-registration"></a>グローバルの COM 登録
 
-* Previously, Visual Studio installed many registry keys into the HKEY_CLASSES_ROOT and HKEY_LOCAL_MACHINE hives to support native COM registration. To eliminate this impact, Visual Studio now uses [Registration-Free Activation for COM components](https://msdn.microsoft.com/en-us/library/ms973913.aspx).
-* As a result, most TLB / OLB / DLL files under %ProgramFiles(x86)%\Common Files\Microsoft Shared\MSEnv are no longer installed by default by Visual Studio. These files are now installed under [INSTALLDIR] with corresponding Registration-Free COM manifests used by the Visual Studio host process.
-* As a result, external code that relies on global COM registration for Visual Studio COM interfaces will no longer find these registrations. Code running inside Visual Studio process will not see a difference.
+* 以前は、Visual Studio は、ネイティブの COM 登録をサポートするために HKEY_CLASSES_ROOT および HKEY_LOCAL_MACHINE ハイブに多くのレジストリ キーをインストールします。 Visual Studio をこの影響を回避するのには今すぐ[COM コンポーネントの登録を必要としないアクティベーション](https://msdn.microsoft.com/en-us/library/ms973913.aspx)です。
+* その結果、ほとんどの TLB/OLB/、%programfiles (x86) %\Common files \microsoft Shared\MSEnv DLL ファイルは Visual Studio で既定ではインストールされません。 Visual Studio ホスト プロセスによって使用される対応する登録を必要としない COM マニフェストでは、[INSTALLDIR] の下でこれらのファイルはインストールされました。
+* その結果、Visual Studio の COM インターフェイスの COM 登録をグローバルに依存する外部のコードは不要になったこれらの登録を検索します。 Visual Studio プロセス内で実行中のコードでは、違いは表示されません。
 
-### <a name="visual-studio-registry"></a>Visual Studio registry
+### <a name="visual-studio-registry"></a>Visual Studio レジストリ
 
-* Previously, Visual Studio installed many registry keys into the system's HKEY_LOCAL_MACHINE and HKEY_CURRENT_USER hives under a Visual Studio-specific key:
-  * HKLM\Software\Microsoft\VisualStudio\\**Version**: Registry keys created by MSI installers and per-machine extensions.
-  * HKCU\Software\Microsoft\VisualStudio\\**Version**: Registry keys created by Visual Studio to store user-specific settings.
-  * HKCU\Software\Microsoft\VisualStudio\\**Version**_Config: A copy of Visual Studio HKLM key above, plus the registry keys merged from .pkgdef files by extensions.
-* To reduce the impact on the registry, Visual Studio now uses the [RegLoadAppKey](https://msdn.microsoft.com/en-us/library/windows/desktop/ms724886(v=vs.85).aspx) function to store registry keys in a private binary file under [VSAPPDATA]\privateregistry.bin. Only a very small number of Visual Studio-specific keys remain in the system registry.
-* Existing code running inside the Visual Studio process is not impacted. Visual Studio will redirect all registry operations under the HKCU Visual Studio-specific key to the private registry. Reading and writing to other registry locations will continue to use the system registry.
-* External code will need to load and read from this file for Visual Studio registry entries.
+* 以前は、Visual Studio は、Visual Studio 固有キーの下で、システムの HKEY_LOCAL_MACHINE、HKEY_CURRENT_USER ハイブに多くのレジストリ キーをインストールしました。
+  * HKLM\Software\Microsoft\VisualStudio\\**バージョン**: MSI インストーラーとコンピューターごとの拡張機能によって作成されたレジストリ キー。
+  * HKCU\Software\Microsoft\VisualStudio\\**バージョン**: ユーザーに固有の設定を格納する Visual Studio によって作成されたレジストリ キー。
+  * HKCU\Software\Microsoft\VisualStudio\\**バージョン**_Config: .pkgdef ファイルから拡張機能によって、上記の Visual Studio HKLM キーとレジストリ キーのコピーとマージします。
+* レジストリへの影響を減らすためには、Visual Studio を今すぐ使用して、 [RegLoadAppKey](https://msdn.microsoft.com/en-us/library/windows/desktop/ms724886(v=vs.85).aspx) [VSAPPDATA]\privateregistry.bin 下にあるプライベートのバイナリ ファイル内のレジストリ キーを格納する関数。 Visual Studio 固有のキーの数が非常に小さいだけは、システム レジストリに残ります。
+* 既存のコードを Visual Studio プロセス内で実行中は影響はありません。 Visual Studio は HKCU Visual Studio 固有のキーの下のすべてのレジストリ操作をプライベート レジストリにリダイレクトします。 読み取りと書き込みを他のレジストリの場所は、システム レジストリを使用し続けます。
+* 外部コードは、Visual Studio のレジストリ エントリに対して、このファイルから読み込んだりする必要があります。
 
-### <a name="reacting-to-this-breaking-change"></a>Reacting to this breaking change
+### <a name="reacting-to-this-breaking-change"></a>この重要な変更に反応します。
 
-* External code should be converted to use Registration-Free activation for COM components as well.
-* External components can find the Visual Studio location [by following the guidance here](https://blogs.msdn.microsoft.com/heaths/2016/09/15/changes-to-visual-studio-15-setup).
-* We recommend that external components use the [External Settings Manager](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.settings.externalsettingsmanager.aspx) instead of reading/writing directly to Visual Studio registry keys.
-* Check whether the components your extension is using may have implemented another technique for registration. For example, debugger extensions may be able to take advantage of the new [msvsmon JSON-file COM registration](migrate-debugger-COM-registration.md).
+* 同様に COM コンポーネントの登録を必要としないアクティベーションを使用する外部コードを変換する必要があります。
+* 外部コンポーネントは、Visual Studio の場所を見つけることができます[ここガイダンスに従って](https://blogs.msdn.microsoft.com/heaths/2016/09/15/changes-to-visual-studio-15-setup)です。
+* 外部コンポーネントが使用することをお勧め、[外部の設定マネージャー](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.settings.externalsettingsmanager.aspx) Visual Studio のレジストリ キーに直接読み取り/書き込みの代わりにします。
+* 登録のためのもう 1 つの方法は、拡張機能を使用してコンポーネントに実装がかどうかを確認してください。 たとえば、デバッガー拡張機能があります、新しい活用するために[msvsmon JSON ファイルの COM 登録](migrate-debugger-COM-registration.md)です。
 
-## <a name="change-lightweight-solution-load"></a>Change: Lightweight Solution Load
+## <a name="change-lightweight-solution-load"></a>変更: 軽量のソリューションの読み込み
 
-Lightweight Solution Load (LSL) reduces Solution load time by not fully loading projects until the user starts working with them. This may effect extensions which assume a project is completely loaded. See [Lightweight Solution Load](lightweight-solution-load-extension-impact.md) to learn whether your extension may be impacted and get guidance on updating your extension.
+軽量なソリューションを読み込む (LSL) には、完全には、ユーザーがそれらの作業を開始するまでプロジェクトを読み込むことによりソリューション ロード時間が短縮されます。 これは、プロジェクトが完全に読み込まれると想定される拡張機能に影響を与えます。 参照してください[ライトウェイト ソリューションの読み込み](lightweight-solution-load-extension-impact.md)を拡張機能が受ける可能性があり、拡張機能を更新する方法のガイダンスを入手するかどうかを参照してください。
 
