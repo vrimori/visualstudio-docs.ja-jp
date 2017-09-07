@@ -91,7 +91,7 @@ Visual Studio でアプリケーション、Web サイト、Web アプリ、ス�
 
  次の図は、プロジェクトとソリューションの関係、およびそれらに論理的に含まれる項目を示しています。  
 
- ![Visual Studio のプロジェクトとソリューション](~/ide/media/vside-project-diagram.png)  
+ ![Visual Studio のプロジェクトとソリューション](../ide/media/vside-project-diagram.png)  
 
  カスタム プロジェクトや項目テンプレートを作成することもできます。 詳細については、「[Creating Project and Item Templates](../ide/creating-project-and-item-templates.md)」 (プロジェクトと項目テンプレートの作成) をご覧ください。  
 
@@ -101,7 +101,7 @@ Visual Studio でアプリケーション、Web サイト、Web アプリ、ス�
 ## <a name="managing-projects-in-solution-explorer"></a>ソリューション エクスプローラーでのプロジェクトの管理  
  新しいプロジェクトを作成した後は、 **ソリューション エクスプローラー** を使用して、プロジェクト、ソリューション、およびそれらの関連項目を表示して管理します。 次の図に、2 つのプロジェクトを含む C# ソリューションが表示されたソリューション エクスプローラーを示します。  
 
- ![ソリューション エクスプ ローラー](~/ide/media/vs2015_solution_explorer.png "vs2015_solution_explorer")  
+ ![ソリューション エクスプ ローラー](../ide/media/vs2015_solution_explorer.png "vs2015_solution_explorer")  
 
 ## <a name="in-this-section"></a>このセクションの内容  
 

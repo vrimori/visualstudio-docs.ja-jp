@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFrameInfo2::Next | Microsoft Docs
+title: "IEnumDebugFrameInfo2::Next |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3e64a3142d95c04e1b6055643859fcb0e7bafd4c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ienumdebugframeinfo2next"></a>IEnumDebugFrameInfo2::Next
-Returns the next set of elements from the enumeration.  
+列挙体から次の要素のセットを返します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT Next(  
@@ -58,19 +58,19 @@ int Next(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `celt`  
- [in] The number of elements to retrieve. Also specifies the maximum size of the `rgelt` array.  
+ [in]取得する要素の数。 また、最大のサイズを指定、`rgelt`配列。  
   
  `rgelt`  
- [in, out] Array of [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) elements to be filled in.  
+ [入力、出力].配列[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)格納する要素。  
   
  `pceltFetched`  
- [out] Returns the number of elements actually returned in `rgelt`.  
+ [out]実際に返される要素の数を返します`rgelt`です。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`. Returns `S_FALSE` if fewer than the requested number of elements could be returned; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 返します`S_FALSE`要求された要素数より少ないは返されませんでした。 それ以外の場合、エラー コードを返します。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)   
  [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)

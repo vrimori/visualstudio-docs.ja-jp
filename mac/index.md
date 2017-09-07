@@ -1,5 +1,5 @@
 ---
-title: Introducing Visual Studio for Mac
+title: "Visual Studio for Mac の概要"
 description: 
 author: asb3993
 ms.author: amburns
@@ -10,118 +10,118 @@ ms.translationtype: HT
 ms.sourcegitcommit: f6c7e290f0abc2c32456e076420a7695ae868ba6
 ms.openlocfilehash: ffbd08a4a6765c2cc38329325e91f4aed12d88d5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 
-# <a name="introducing-visual-studio-for-mac"></a>Introducing Visual Studio for Mac
+# <a name="introducing-visual-studio-for-mac"></a>Visual Studio for Mac の概要
 
-Visual Studio for Mac is a modern, sophisticated IDE with many features for creating mobile, desktop, and web applications. It supports development of the following:
+Visual Studio for Mac は、モバイル、デスクトップ、および Web アプリケーションを作成するときに役立つ多くの機能が搭載された最新の高度な IDE です。 次の開発をサポートしています。
 
-* Mobile with .NET: Android, iOS, tvOS, watchOS
-* Mac desktop apps
-* .NET Core applications
-* ASP.NET Core Web applications
-* Cross-platform Unity games
+* モバイルと .NET: Android、iOS、tvOS、watchOS
+* Mac デスクトップ アプリ
+* .NET Core アプリケーション
+* ASP.NET Core Web アプリケーション
+* クロスプラットフォーム Unity ゲーム
 
-It includes a rich editor, debugging, native platform integration with iOS, Mac and Android, and integrated source control to name just a few of its many features.
+リッチ エディター、デバッグ、iOS、Mac、および Android とのネイティブ プラットフォーム統合、統合ソース制御などを含む、多数の機能があります。
 
-This topic surveys various sections of Visual Studio for Mac, providing a look at some of the features that make it a powerful tool for creating cross-platform applications.
+このトピックでは、Visual Studio for Mac の多様なセクションについて説明し、クロスプラットフォーム アプリケーションを作成する場合に強力なツールになる機能の一部を紹介します。
 
-## <a name="installation"></a>Installation
+## <a name="installation"></a>インストール
 
-Follow the steps in the [Installation](~/installation.md) guide to download and Install Visual Studio for Mac.
+[インストール](~/installation.md) ガイドの手順に従って Visual Studio for Mac をダウンロードしてインストールします。
 
-## <a name="language-support"></a>Language support
+## <a name="language-support"></a>言語サポート
 
-Visual Studio for Mac supports development in C# and F#, by default.
+Visual Studio for Mac は、既定で C# と F# での開発をサポートしています。
 
 ### <a name="c"></a>C#
 
-C# is the most commonly used language for creating cross-platform applications in Visual Studio for Mac. This includes full support for all C# 7 features.
+Visual Studio for Mac でクロスプラットフォーム アプリケーションを作成する場合、C# が最もよく使用される言語です。 すべての C# 7 機能の完全なサポートが含まれています。
 
 ### <a name="f"></a>F#
 
-F# is a strongly-typed functional programming language designed to run on .NET. It is available as a programming language to Visual Studio for Mac users on Android, Mac and iOS. For more information on using F# and to view samples created in the language, visit the [F#](https://developer.xamarin.com/guides/cross-platform/fsharp/) guides.
+F# は、.NET 上で実行するように設計されている、厳密に型指定されたプログラミング言語です。 Android、Mac、および iOS 上の Visual Studio for Mac ユーザーがプログラミング言語として使用できます。 F# の使用方法と F# で作成されたサンプルについては、[F#](https://developer.xamarin.com/guides/cross-platform/fsharp/) ガイドを参照してください。
 
-## <a name="platform-support"></a>Platform support
+## <a name="platform-support"></a>プラットフォームのサポート
 
 ## <a name="net-core"></a>.NET Core
 
-[.NET Core](https://www.microsoft.com/net/core#macos) is a platform for creating applications that run on Windows, Linux, and Mac. Visual Studio for Mac has support for loading, creating, running, and debugging .NET Core projects.
+[.NET Core](https://www.microsoft.com/net/core#macos) は、Windows、Linux、Mac で実行されるアプリケーションを作成するためのプラットフォームです。 Visual Studio for Mac では、.NET Core プロジェクトを読み込み、作成し、実行し、デバッグできます。
 
-To run .NET Core projects, the .NET Core SDK should be downloaded and installed.
+.NET Core プロジェクトを実行するには、.NET Core SDK をダウンロードし、インストールする必要があります。
 
-.NET Core support includes:
+.NET Core サポート:
 
-* C# and F# IntelliSense.
-* .NET Core project templates for console, library, and web applications.
-* Full debugging support, including breakpoints, call stack, watch window, etc.
-* NuGet PackageReferences and MSBuild-based restore.
-* Integrated unit testing support for running and debugging tests with the Visual Studio Test Platform that is included with the  .NET Core SDK.
-* Migration from the old project.json format.
+* C# と F# の IntelliSense。
+* コンソール、ライブラリ、Web アプリケーションのための .NET Core プロジェクト テンプレート。
+* ブレークポイント、コール スタック、ウォッチ ウィンドウなど、完全なデバッグ サポート。
+* NuGet PackageReferences と MSBuild ベースの復元。
+* .NET Core SDK に含まれる Visual Studio テスト プラットフォームでテストを実行し、デバッグするための統合単体テスト サポート。
+* 以前の project.json 形式からの以降。
 
-To get started, check out the ASP.NET Core web apps [hands-on lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started).
+まず ASP.NET Core Web アプリの[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)を確認してください。
 
 ## <a name="xamarin"></a>Xamarin
 
-First-class support for [Xamarin](https://developer.xamarin.com/) allows you to develop rich native experiences for Android, macOS, iOS, tvOS, and watchOS. Xamarin.Forms cross-platform applications help you share XAML-based UI code between Android, iOS, and macOS without limiting access to native functionality.
+[Xamarin](https://developer.xamarin.com/) のファーストクラス サポートにより、Android、macOS、iOS、tvOS、watchOS のために機能が豊富なネイティブ エクスペリエンスを開発できます。 Xamarin.Forms のクロスプラットフォーム アプリケーションにより、ネイティブ機能へのアクセスを制限することなく、Android、iOS、macOS 間で XAML ベースの UI コードを共有できます。
 
-To get started, check out the Mobile apps [hands-on lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Mobile/Getting-Started).
+まずモバイル アプリの[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Mobile/Getting-Started)を確認してください。
 
 ### <a name="android"></a>Android
 
-Visual Studio has its own integrated Android SDK manager.
+Visual Studio には、独自の統合 Android SDK マネージャーがあります。
 
-For Android applications, Visual Studio for Mac includes its own designer, which works with Android `.axml` files to visually construct user interfaces. Visual Studio for Mac will open these files in its Android designer, as shown below:
+Android アプリケーションの場合、Visual Studio for Mac には独自のデザイナーがあり、Android の `.axml` ファイルと連携してユーザー インターフェイスを視覚的に構築できます。 Visual Studio for Mac は次のように Android デザイナーでこれらのファイルを開きます。
 
 ![](media/intro-image31.png)
 
-For more information on the Android designer see the [Designer Overview](https://developer.xamarin.com/Android/Guides/User_Interface/Designer_Overview) document.
+Android デザイナーの詳細については、「[Designer Overview](https://developer.xamarin.com/Android/Guides/User_Interface/Designer_Overview)」(デザイナーの概要) ドキュメントを参照してください。
 
 ### <a name="ios"></a>iOS
 
-The iOS Designer is fully integrated with Visual Studio for Mac and enables visual editing of .xib and Storyboard files to create iOS, tvOS, and WatchOS UIs and transitions. The entire user interface can be built using drag-and-drop functionality between the Toolbox and Design Surface, while using an intuitive approach to handling events. The iOS Designer also supports [custom controls](https://developer.xamarin.com/guides/ios/user_interface/designer/ios_designable_controls_overview/) with the added benefit of design-time rendering.
+iOS Designer は Visual Studio for Mac と完全に統合されているので、.xib およびストーリーボード ファイルを視覚的に編集し、iOS、tvOS、および watchOS の UI と遷移を作成できます。 ツールボックスとデザイン サーフェイス間でドラッグ アンド ドロップ機能を使用してユーザー インターフェイス全体を構築できるだけでなく、直感的な方法でイベントを処理できます。 iOS Designer は、デザイン時のレンダリングにさらに役立つ[カスタム コントロール](https://developer.xamarin.com/guides/ios/user_interface/designer/ios_designable_controls_overview/)もサポートしています。
 
 ![](media/intro-image30.png)
 
-For more information on using the iOS Designer, refer to the [Designer](https://developer.xamarin.com/guides/ios/user_interface/designer) documents.
+iOS Designer の使用方法については、[Designer](https://developer.xamarin.com/guides/ios/user_interface/designer) のドキュメントを参照してください。
 
 ### <a name="mac"></a>Mac
 
-Xamarin provides native Mac API bindings allowing you to create beautiful Mac applications.
+Xamarin にはネイティブの Mac API バインディングが用意されているので、見栄えのよい Mac アプリケーションを作成できます。
 
-For more information on writing Mac applications with Visual Studio for Mac, refer to the [Xamarin.Mac](https://developer.xamarin.com/guides/#mac) documentation.
+Visual Studio for Mac で Mac アプリケーションを作成する方法の詳細については、[Xamarin.Mac](https://developer.xamarin.com/guides/#mac) ドキュメントを参照してください。
 
-## <a name="gaming"></a>Gaming
+## <a name="gaming"></a>ゲーム
 
-Visual Studio for Mac provides support for cross-platform games development with Unity 5.6.1.
+Visual Studio for Mac は、Unity 5.6.1 を使用したクロスプラットフォーム ゲーム開発のサポートを提供しています。
 
-To get started, check out the Unity [hands-on lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Unity/Getting-Started).
+まず Unity の[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Unity/Getting-Started)を確認してください。
 
-## <a name="enterprise-features"></a>Enterprise features
+## <a name="enterprise-features"></a>エンタープライズ機能
 
 > [!Note]
-> These products can only be used with a Visual Studio Enterprise subscription.
+> これらの製品は、Visual Studio Enterprise サブスクリプションでのみ使用できます。
 
-### <a name="profiler"></a>Profiler
+### <a name="profiler"></a>プロファイラー
 
-The Xamarin Profiler has three instruments available for profiling. The [Introduction to the Xamarin Profiler](https://developer.xamarin.com/guides/cross-platform/deployment,_testing,_and_metrics/xamarin-profiler/) guide explores what these instruments measure and how they analyze your application, and clarifies the meaning of the data presented on each screen.
+Xamarin Profiler には、プロファイルに使用できる 3 つのツールがあります。 「[Introduction to the Xamarin Profiler](https://developer.xamarin.com/guides/cross-platform/deployment,_testing,_and_metrics/xamarin-profiler/)」(Xamarin プロファイラー) ガイドでは、これらのインストルメントで測定する内容、アプリケーションの分析方法、各画面に表示されるデータの意味について説明します。
 
 ### <a name="inspector"></a>Inspector
 
-The Xamarin Inspector provides an interactive C# console with tools to users. It can be used as a debugging or diagnostics aid when inspecting live applications, as a teaching tool, as a documentation tool or an experimentation tool.
+Xamarin Inspector は、対話型 C# コンソールとツールをユーザーに提供しています。 ライブ アプリケーションを調査するときのデバッグまたは診断支援として、教育ツール、ドキュメント作成ツール、または実験ツールとして使用できます。
 
 ![](media/intro-inspector.png)
 
-It consists of a standalone application that provides a rich C# console that can target various programming platforms (Android, iOS, Mac and Windows) as well as integrating into the debugging workflow of your IDE.
+多様なプログラミング プラットフォーム (Android、iOS、Mac、および Windows) を対象にすることができる高機能な C# コンソールを提供するスタンドアロン アプリケーションと、IDE のデバッグ ワークフローへの統合から構成されます。
 
-For more information refer to the [Xamarin Inspector](https://developer.xamarin.com/guides/cross-platform/inspector/) guide.
+詳細については、[Xamarin Inspector](https://developer.xamarin.com/guides/cross-platform/inspector/) のガイドを参照してください。
 
-## <a name="next-steps"></a>Next steps
+## <a name="next-steps"></a>次のステップ
 
-* **Get the big picture** - To get an overview of many of the major features in Visual Studio for Mac, see the Visual Studio for Mac [IDE Tour](~/ide-tour.md).
-* **Setup** - To learn about how to download and install Visual Studio, see the [Installation](~/installation.md) guide.
-* **Xamarin Tutorials** - To learn more about how to develop code with Xamarin, go to the Xamarin [Developer Center](https://developer.xamarin.com).
-* **Videos** - To learn more about other features and aspects of Visual Studio for Mac, check out videos on the [Xamarin University](https://university.xamarin.com) website.
-* **Hands-on Labs** - To get started working with the various workloads included in Visual Studio for Mac, check out the [hands-on labs](https://github.com/Microsoft/vs4mac-labs).
+* **全体像の把握** - Visual Studio for Mac の数多くの主要な機能の概要について、[IDE ツアー](~/ide-tour.md)を参照してください。
+* **セットアップ** - Visual Studio をダウンロードしてインストールする方法については、「[インストール](~/installation.md)」ガイドを参照してください。
+* **Xamarin チュートリアル** - Xamarin を使用してコードを開発する詳細な方法については、Xamarin の [Developer Center](https://developer.xamarin.com) を参照してください。
+* **ビデオ** - Visual Studio for Mac の他の機能や側面の詳細については、[Xamarin University](https://university.xamarin.com) Web サイトのビデオをご覧ください。
+* **ハンズオン ラボ** - Visual Studio for Mac に含まれている多様なワークロードの基本的な使用方法については、[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs)を参照してください。

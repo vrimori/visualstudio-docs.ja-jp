@@ -1,5 +1,5 @@
 ---
-title: PROCESS_INFO | Microsoft Docs
+title: "PROCESS_INFO |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5d217a411e11ee0b2b5e372634be69bf9b84ac8b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="processinfo"></a>PROCESS_INFO
-Contains information about a process.  
+プロセスに関する情報が含まれています。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 typedef struct tagPROCESS_INFO {   
@@ -70,46 +70,46 @@ public struct PROCESS_INFO {
 };  
 ```  
   
-## <a name="members"></a>Members  
- Fields  
- A combination of flags from the [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) enumeration that specify which fields are filled out.  
+## <a name="members"></a>メンバー  
+ フィールド  
+ フラグの組み合わせ、 [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)のどのフィールドが埋められますを指定する列挙体です。  
   
  bstrFileName  
- The full path name of the process. Equivalent to calling the [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) method with the parameter `GN_FILENAME`.  
+ プロセスの完全なパス名。 呼び出すことと同等、 [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) 、パラメーターを持つメソッド`GN_FILENAME`です。  
   
  bstrBaseName  
- The file name and extension of the process. Equivalent to calling the `IDebugProcess2::Getname` method with the parameter `GN_BASENAME`.  
+ ファイル名とプロセスの拡張機能。 呼び出すことと同等、 `IDebugProcess2::Getname` 、パラメーターを持つメソッド`GN_BASENAME`です。  
   
  bstrTitle  
- The title of the process, if one exists. Equivalent to calling the `IDebugProcess2::Getname` method with the parameter `GN_TITLE`.  
+ 1 つが存在する場合は、プロセスのタイトル。 呼び出すことと同等、 `IDebugProcess2::Getname` 、パラメーターを持つメソッド`GN_TITLE`です。  
   
  ProcessId  
- The [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) structure that identifies the process. Equivalent to calling the [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) method.  
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)プロセスを識別する構造体。 呼び出すことと同等、 [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)メソッドです。  
   
  dwSessionId  
- The identifier of the debug session that this process is running in.  
+ このプロセスで実行されているデバッグ セッションの識別子。  
   
  bstrAttachedSessionName  
- The attached session name. Equivalent to calling the [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) method.  
+ 接続されているセッションの名前です。 呼び出すことと同等、 [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)メソッドです。  
   
  CreationTime  
- The time the process was created.  
+ プロセスが作成された時刻。  
   
- Flags  
- A combination of flags from the [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) enumeration that specify properties of the process.  
+ フラグ  
+ フラグの組み合わせ、 [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md)プロセスのプロパティを指定する列挙です。  
   
-## <a name="remarks"></a>Remarks  
- This structure is passed to the [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) method where it is filled in.  
+## <a name="remarks"></a>コメント  
+ この構造体に渡される、 [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)で塗り分けはメソッドです。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>関連項目  
+ [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)   
  [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)   

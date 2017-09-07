@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Displaying Light Bulb Suggestions | Microsoft Docs'
+title: "チュートリアル: 電球候補の表示 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,48 +30,48 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 1096b04fee06415e65a93b0ecd8a6257de64edfc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-displaying-light-bulb-suggestions"></a>Walkthrough: Displaying Light Bulb Suggestions
-Light bulbs are icons used in the Visual Studio editor that expand to display a set of actions, for example fixes for problems identified by the built-in code analyzers or code refactoring.  
+# <a name="walkthrough-displaying-light-bulb-suggestions"></a>チュートリアル: 電球候補を表示します。
+電球マークは、一連のアクションを表示するを展開し、組み込みのコード アナライザーまたはコードのリファクタリングによって特定した問題の修正例を Visual Studio エディターで使用されるアイコン。  
   
- In the Visual C# and Visual Basic editors, you can also use the .NET Compiler Platform ("Roslyn") to write and package your own code analyzers with actions that display light bulbs automatically. For more information, see:  
+ は、Visual c# および Visual Basic エディターを記述して、代わって電球が自動的に表示されるアクションがある場合は、独自コード アナライザーをパッケージ化する .NET コンパイラ プラットフォーム ("Roslyn") を使用することができます。 詳細については次を参照してください:  
   
--   [How To: Write a C# Diagnostic and Code Fix](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
+-   [方法: c# 診断と修正プログラムのコードを記述](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
   
--   [How To: Write a Visual Basic Diagnostic and Code Fix](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
+-   [方法: Visual Basic の診断と修正プログラムのコードを記述](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
   
- Other languages such as C++ also provide light bulbs for some quick actions, such as a suggestion to create a stub implementation of that function.  
+ C などの他の言語では、その関数のスタブ実装を作成する提案など、一部のクイック操作の代わって電球も提供します。  
   
- Here's what a light bulb looks like. In a Visual Basic or Visual C# project, a red squiggle appears under a variable name when it is invalid. When you mouse over the invalid identifier, a light bulb is displayed near the cursor.  
+ 電球の外観を次に示します。 赤の波線は、Visual Basic または Visual c# プロジェクトで無効である場合に変数の名前で表示されます。 無効な識別子にマウスを置くと、カーソルの近く電球が表示されます。  
   
- ![light bulb](../extensibility/media/lightbulb.png "LightBulb")  
+ ![電球](../extensibility/media/lightbulb.png "電球")  
   
- If you click the down arrow by the light bulb, a set of suggested actions is displayed, along with a preview of the selected action. In this case, it shows the changes that will be made to your code if you execute the action.  
+ 電球で下向きの矢印をクリックした場合、選択したアクションのプレビューと、一連の推奨される操作が表示されますがします。 この場合、アクションを実行する場合に、コードに加え、変更を示します。  
   
- ![light bulb preview](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
+ ![電球のプレビュー](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
   
- You can use light bulbs to provide your own suggested actions. For example, you could provide actions to move opening curly braces to a new line or move them to the end of the preceding line. The following walkthrough shows how to create a light bulb that appears on the current word and has two suggested actions: **Convert to upper case** and **Convert to lower case**.  
+ 電球を使用すると、推奨される操作を提供します。 たとえば、かっこが新しい行に移動するか、前の行の末尾に移動するアクションを指定できます。 次のチュートリアルでは、現在の単語に表示される電球を作成する方法とは 2 つの推奨アクション:**大文字に変換**と**小文字に変換**です。  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>必須コンポーネント  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
   
-## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Creating a Managed Extensibility Framework (MEF) Project  
+## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) プロジェクトの作成  
   
-1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `LightBulbTest`.  
+1.  C# の場合は、VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を付けます`LightBulbTest`です。  
   
-2.  Add an **Editor Classifier** item template to the project. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2.  追加、**エディター分類子**プロジェクト項目テンプレート。 詳細については、次を参照してください。[エディター項目テンプレートに、拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
-3.  Delete the existing class files.  
+3.  既存のクラス ファイルを削除します。  
   
-4.  Add the following reference to the project, and set **Copy Local** to `False`:  
+4.  プロジェクトに次の参照を追加し、設定**ローカル コピー**に`False`:  
   
      Microsoft.VisualStudio.Language.Intellisense  
   
-5.  Add a new class file and name it **LightBulbTest**.  
+5.  新しいクラス ファイルを追加し、名前**LightBulbTest**です。  
   
-6.  Add the following using statements:  
+6.  次の追加ステートメントを使用します。  
   
     ```csharp  
     using System;  
@@ -88,9 +88,9 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
   
     ```  
   
-## <a name="implementing-the-light-bulb-source-provider"></a>Implementing the Light Bulb Source Provider  
+## <a name="implementing-the-light-bulb-source-provider"></a>電球ソース プロバイダーの実装  
   
-1.  In the LightBulbTest.cs class file, delete the LightBulbTest class. Add a class named **TestSuggestedActionsSourceProvider** that implements <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>. Export it with a Name of **Test Suggested Actions** and a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> of "text".  
+1.  LightBulbTest.cs クラス ファイルでは、LightBulbTest クラスを削除します。 という名前のクラスを追加**TestSuggestedActionsSourceProvider**を実装する<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>です。 名前を持つエクスポート**テスト推奨アクション**と<xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>"text"です。  
   
     ```csharp  
     [Export(typeof(ISuggestedActionsSourceProvider))]  
@@ -99,14 +99,14 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     internal class TestSuggestedActionsSourceProvider : ISuggestedActionsSourceProvider  
     ```  
   
-2.  Inside the source provider class, import the <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> and add it as a property.  
+2.  ソース プロバイダー クラス内のインポート、<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>プロパティとして追加します。  
   
     ```csharp  
     [Import(typeof(ITextStructureNavigatorSelectorService))]  
     internal ITextStructureNavigatorSelectorService NavigatorService { get; set; }  
     ```  
   
-3.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider.CreateSuggestedActionsSource%2A> method to return an <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> object. We will discuss the source in the next section.  
+3.  実装、<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider.CreateSuggestedActionsSource%2A>を返すメソッドを<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>オブジェクト。 次のセクションで、ソースはについて説明します。  
   
     ```csharp  
     public ISuggestedActionsSource CreateSuggestedActionsSource(ITextView textView, ITextBuffer textBuffer)  
@@ -119,16 +119,16 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-## <a name="implementing-the-isuggestedactionsource"></a>Implementing the ISuggestedActionSource  
- The suggested action source is responsible for collecting the set of suggested actions and adding them in the right context. In this case the context is the current word and the suggested actions are **UpperCaseSuggestedAction** and **LowerCaseSuggestedAction**, which we will discuss in the following section.  
+## <a name="implementing-the-isuggestedactionsource"></a>ISuggestedActionSource を実装します。  
+ 推奨されるアクションのソースは、推奨されるアクションのセットを収集し、適切なコンテキストで追加することを担当します。 この場合、コンテキストには、現在の単語と推奨される操作は**UpperCaseSuggestedAction**と**LowerCaseSuggestedAction**を次のセクションで説明します。  
   
-1.  Add a class **TestSuggestedActionsSource** that implements <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>.  
+1.  クラスを追加**TestSuggestedActionsSource**を実装する<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>です。  
   
     ```csharp  
     internal class TestSuggestedActionsSource : ISuggestedActionsSource  
     ```  
   
-2.  Add private read-only fields for the suggested action source provider, the text buffer and the text view.  
+2.  テキスト バッファーとテキスト ビューでは、推奨されるアクション ソース プロバイダーの読み取り専用のプライベート フィールドを追加します。  
   
     ```csharp  
     private readonly TestSuggestedActionsSourceProvider m_factory;  
@@ -136,7 +136,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     private readonly ITextView m_textView;  
     ```  
   
-3.  Add a constructor that sets the private fields.  
+3.  プライベート フィールドを設定するコンス トラクターを追加します。  
   
     ```csharp  
     public TestSuggestedActionsSource(TestSuggestedActionsSourceProvider testSuggestedActionsSourceProvider, ITextView textView, ITextBuffer textBuffer)  
@@ -147,7 +147,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-4.  Add a private method that returns the word that is currently under the cursor. The following method looks at the current location of the cursor and asks the text structure navigator for the extent of the word. If the cursor is on a word, the <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> is returned in the out parameter; otherwise the `out` parameter is `null` and the method returns `false`.  
+4.  現在のカーソルの下にある単語を返すプライベート メソッドを追加します。 次のメソッドを使用して、カーソルの現在の場所を調べ、単語の範囲をテキスト構造ナビゲーターを要求します。 カーソルが単語の上にある場合、<xref:Microsoft.VisualStudio.Text.Operations.TextExtent>を out パラメーターで返します。 それ以外の場合、`out`パラメーターは`null`が返されます`false`です。  
   
     ```csharp  
     private bool TryGetWordUnderCaret(out TextExtent wordExtent)  
@@ -172,9 +172,9 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-5.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.HasSuggestedActionsAsync%2A> method. The editor calls this method to find out whether to display the light bulb. This call is made quite often, for example whenever the cursor moves from one line to another, or when the mouse hovers over an error squiggle. It is asynchronous in order to allow other UI operations to carry on while this method is working. In most cases this method needs to perform some parsing and analysis of the current line, so the processing may take some time.  
+5.  <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.HasSuggestedActionsAsync%2A> メソッドを実装します。 エディターでは、電球を表示するかどうかを確認するには、このメソッドを呼び出します。 例についてはこの呼び出しの実行が多くの場合、カーソルは、1 つの行から移動するたびに、またはエラー波線、マウスがポイントされたときになります。 このメソッドを作業中実行するには、その他の UI 操作を許可するために非同期であります。 ほとんどの場合にこのメソッドがいくつかの解析と現在の行の分析を実行する必要があるため、処理時間がかかる場合します。  
   
-     In our implementation it asynchronously gets the <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> and determines whether the extent is significant, i.e., whether it has some text other than whitespace.  
+     この実装でそれを非同期に取得、<xref:Microsoft.VisualStudio.Text.Operations.TextExtent>しかどうか、エクステントは重要では、つまり、空白以外のいくつかのテキストがあるかどうかを決定します。  
   
     ```csharp  
     public Task<bool> HasSuggestedActionsAsync(ISuggestedActionCategorySet requestedActionCategories, SnapshotSpan range, CancellationToken cancellationToken)  
@@ -192,10 +192,10 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-6.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.GetSuggestedActions%2A> method, which returns an array of <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> objects that contain the different <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> objects. This method is called when the light bulb is expanded.  
+6.  実装、<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.GetSuggestedActions%2A>の配列を返すメソッド<xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet>を含む、さまざまなオブジェクト<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction>オブジェクト。 電球が展開されている場合は、このメソッドが呼び出されます。  
   
     > [!WARNING]
-    >  You should make sure that the implementations of `HasSuggestedActionsAsync()` and `GetSuggestedActions()` are consistent; that is, if `HasSuggestedActionsAsync()` returns `true`, then `GetSuggestedActions()` should have some actions to display. In many cases `HasSuggestedActionsAsync()` is called just before `GetSuggestedActions()`, but this is not always the case. For example, if the user invokes the light bulb actions by pressing (CTRL + .) only `GetSuggestedActions()` is called.  
+    >  ことを確認の実装`HasSuggestedActionsAsync()`と`GetSuggestedActions()`が矛盾しています。 は場合、`HasSuggestedActionsAsync()`を返します`true`、し`GetSuggestedActions()`表示するいくつかのアクションを持つ必要があります。 多くの場合`HasSuggestedActionsAsync()`直前に呼び出されますが`GetSuggestedActions()`、これは常に大文字と小文字がします。 たとえば、ユーザーは、キーを押して、電球のアクションを呼び出します (CTRL +.) のみ`GetSuggestedActions()`と呼びます。  
   
     ```csharp  
     public IEnumerable<SuggestedActionSet> GetSuggestedActions(ISuggestedActionCategorySet requestedActionCategories, SnapshotSpan range, CancellationToken cancellationToken)  
@@ -212,13 +212,13 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }   
     ```  
   
-7.  Define a `SuggestedActionsChanged` event.  
+7.  定義、`SuggestedActionsChanged`イベント。  
   
     ```csharp  
     public event EventHandler<EventArgs> SuggestedActionsChanged;  
     ```  
   
-8.  To complete the implementation, add implementations for the `Dispose()` and `TryGetTelemetryId()` methods. We don't want to do telemetry, so just return false and set the GUID to Empty.  
+8.  完了するには、実装の実装を追加、`Dispose()`と`TryGetTelemetryId()`メソッドです。 製品利用統計情報、false を返すため、および GUID を空に設定したくありません。  
   
     ```csharp  
     public void Dispose()  
@@ -233,20 +233,20 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-## <a name="implementing-light-bulb-actions"></a>Implementing Light Bulb Actions  
+## <a name="implementing-light-bulb-actions"></a>電球のアクションを実装します。  
   
-1.  In the project, add a reference to Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll and set **Copy Local** to `False`.  
+1.  プロジェクトで、Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll とセットへの参照を追加**ローカル コピー**に`False`です。  
   
-2.  Create two classes, the first named `UpperCaseSuggestedAction` and the second named `LowerCaseSuggestedAction`. Both classes implement <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction>.  
+2.  2 つのクラスを作成する最初の名前付き`UpperCaseSuggestedAction`と 2 番目の名前付き`LowerCaseSuggestedAction`します。 これらのクラスは、どちらも <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> を実装しています。  
   
     ```csharp  
     internal class UpperCaseSuggestedAction : ISuggestedAction   
     internal class LowerCaseSuggestedAction : ISuggestedAction  
     ```  
   
-     Both classes are alike except that one calls <xref:System.String.ToUpper%2A> and the other calls <xref:System.String.ToLower%2A>. The following steps cover only the uppercase action class, but you must implement both classes. Use the steps for implementing the uppercase action as a pattern for implementing the lowercase action.  
+     呼び出されることを除き、両方のクラスは似ています<xref:System.String.ToUpper%2A>および他の呼び出し<xref:System.String.ToLower%2A>です。 次の手順では大文字操作クラスのみを対象にしていますが、両方のクラスを実装する必要があります。 小文字操作を実装するためのパターンとして、大文字操作を実装するための手順を使用します。  
   
-3.  Add the following using statements for these classes:  
+3.  次の追加ステートメントを使用して、これらのクラス。  
   
     ```csharp  
     using Microsoft.VisualStudio.Imaging.Interop;  
@@ -257,7 +257,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
   
     ```  
   
-4.  Declare a set of private fields.  
+4.  一連のプライベート フィールドを宣言します。  
   
     ```csharp  
     private ITrackingSpan m_span;  
@@ -266,7 +266,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     private ITextSnapshot m_snapshot;  
     ```  
   
-5.  Add a constructor that sets the fields.  
+5.  フィールドを設定するコンストラクターを追加します。  
   
     ```csharp  
     public UpperCaseSuggestedAction(ITrackingSpan span)  
@@ -278,7 +278,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-6.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetPreviewAsync%2A> method so that it displays the action preview.  
+6.  実装、<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetPreviewAsync%2A>メソッドがアクションのプレビューに表示できるようにします。  
   
     ```csharp  
     public Task<object> GetPreviewAsync(CancellationToken cancellationToken)  
@@ -290,7 +290,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-7.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetActionSetsAsync%2A> method so that it returns an empty <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> enumeration.  
+7.  実装、<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetActionSetsAsync%2A>メソッドが、空を返すように<xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet>列挙します。  
   
     ```csharp  
     public Task<IEnumerable<SuggestedActionSet>> GetActionSetsAsync(CancellationToken cancellationToken)  
@@ -299,7 +299,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-8.  Implement the properties as follows.  
+8.  次のようにプロパティを設定します。  
   
     ```csharp  
     public bool HasActionSets  
@@ -334,7 +334,7 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-9. Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A> method by replacing the text in the span with its uppercase equivalent.  
+9. 実装、<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A>等価な大文字を範囲内のテキストを置き換えることでメソッドです。  
   
     ```csharp  
     public void Invoke(CancellationToken cancellationToken)  
@@ -344,9 +344,9 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     ```  
   
     > [!WARNING]
-    >  The light bulb action **Invoke** method is not expected to show UI.  If your action does bring up new UI (for example a preview or selection dialog), do not display the UI directly from within the **Invoke** method but instead schedule to display your UI after returning from **Invoke**.  
+    >  電球アクション**Invoke**メソッドは、UI を表示する必要はありません。  アクションは、新しい UI (たとえばプレビューまたは選択ダイアログ) を呼び出すことは、表示されません、UI 内から直接、 **Invoke**メソッドから返された後、UI を表示する代わりにスケジュールしますが、 **Invoke**.  
   
-10. To complete the implementation, add the `Dispose()` and `TryGetTelemetryId()` methods.  
+10. 完了するには、実装を追加、`Dispose()`と`TryGetTelemetryId()`メソッドです。  
   
     ```csharp  
     public void Dispose()  
@@ -361,24 +361,24 @@ Light bulbs are icons used in the Visual Studio editor that expand to display a 
     }  
     ```  
   
-11. Don't forget to do the same thing for `LowerCaseSuggestedAction` changing the display text to "Convert '{0}' to lower case" and the call <xref:System.String.ToUpper%2A> to <xref:System.String.ToLower%2A>.  
+11. 同じことに注意してください`LowerCaseSuggestedAction`"' 0'} 小文字に変換"と呼び出しを表示するテキストを変更する<xref:System.String.ToUpper%2A>に<xref:System.String.ToLower%2A>です。  
   
-## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
- To test this code, build the LightBulbTest solution and run it in the Experimental instance.  
+## <a name="building-and-testing-the-code"></a>コードのビルドとテスト  
+ このコードをテストするには、LightBulbTest ソリューションをビルドし、実験用インスタンスで実行します。  
   
-1.  Build the solution.  
+1.  ソリューションをビルドします。  
   
-2.  When you run this project in the debugger, a second instance of Visual Studio is instantiated.  
+2.  デバッガーでこのプロジェクトを実行すると、Visual Studio の 2 つ目のインスタンスがインスタンス化されます。  
   
-3.  Create a text file and type some text. You should see a light bulb to the left of the text.  
+3.  テキスト ファイルを作成し、いくつかのテキストを入力します。 電球マークのテキストの左側にあるはずです。  
   
-     ![test the light bulb](../extensibility/media/testlightbulb.png "TestLIghtBulb")  
+     ![電球のテスト](../extensibility/media/testlightbulb.png "TestLIghtBulb")  
   
-4.  Point at the light bulb. You should see a down arrow.  
+4.  電球をポイントします。 下向きの矢印が表示されます。  
   
-5.  When you click the light bulb, two suggested actions should be displayed, along with the preview of the selected action.  
+5.  電球をクリックすると、2 つの推奨されるアクションが表示されます、と共に選択されたアクションのプレビューでは。  
   
-     ![test light bulb, expanded](../extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")  
+     ![拡大電球のテスト](../extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")  
   
-6.  If you click the first action, all the text in the current word should be converted to upper case. If you click the second action, all the text should be converted to lower case.  
+6.  最初の操作をクリックすると、現在の単語内のすべてのテキストが大文字に変換されます。 2 つ目の操作をクリックすると、すべてのテキストが小文字に変換されます。  
   

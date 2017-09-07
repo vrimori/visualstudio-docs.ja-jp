@@ -1,5 +1,5 @@
 ---
-title: Unit Test Basics | Microsoft Docs
+title: "単体テストの基本 | Microsoft Docs"
 ms.custom: 
 ms.date: 2016-01-07
 ms.reviewer: 
@@ -33,63 +33,63 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ff2a1dc934083bb237189a1ebdfa25d42612433e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="unit-test-basics"></a>Unit Test Basics
-Check that your code is working as expected by creating and running unit tests. It's called unit testing because you break down the functionality of your program into discrete testable behaviors that you can test as individual *units*. Visual Studio Test Explorer provides a flexible and efficient way to run your unit tests and view their results in Visual Studio. Visual Studio installs the Microsoft unit testing frameworks for managed and native code. Use a *unit testing framework* to create unit tests, run them, and report the results of these tests. Rerun unit tests when you make changes to test that your code is still working correctly. When you use Visual Studio Enterprise, you can run tests automatically after every build.  
+# <a name="unit-test-basics"></a>単体テストの基本
+コードが予想どおりに動作することを確認するには、単体テストを作成して実行します。 単体テストと呼ばれる理由は、プログラムの機能を、個々の *単体*としてテストできる独立したテスト可能な動作に分解するためです。 Visual Studio テスト エクスプローラーには、Visual Studio で単体テストを実行して結果を表示するための柔軟で効率的な方法が用意されています。 Visual Studio と共に、マネージ コードおよびネイティブ コード用の Microsoft 単体テスト フレームワークがインストールされます。 *単体テスト フレームワーク* を使用して、単体テストを作成して実行し、テストの結果を報告します。 変更を加えたときは単体テストを再実行し、コードが正しく機能するかテストします。 Visual Studio Enterprise を使用すると、ビルドの後でテストを自動的に実行できます。  
   
- Unit testing has the greatest effect on the quality of your code when it's an integral part of your software development workflow. As soon as you write a function or other block of application code, create unit tests that verify the behavior of the code in response to standard, boundary, and incorrect cases of input data, and that check any explicit or implicit assumptions made by the code. With *test driven development*, you create the unit tests before you write the code, so you use the unit tests as both design documentation and functional specifications.  
+ 単体テストは、ソフトウェア開発ワークフローの構成要素になったときに、コードの品質に最大の効果をもたらします。 関数またはその他のアプリケーション コードを記述したらすぐに、標準的な入力データ、境界上のデータ、および正しくないデータに対するコードの動作を検証し、コードによる明示的または暗黙的な前提を確認する単体テストを作成してください。 *テスト駆動開発*では、コードを記述する前に単体テストを作成することで、設計ドキュメントと機能仕様の両方として単体テストを使用します。  
   
- You can quickly generate test projects and test methods from your code, or manually create the tests as you need them. When you use IntelliTest to explore your .NET code, you can generate test data and a suite of unit tests. For every statement in the code, a test input is generated that will execute that statement. Find out how to [generate unit tests for your code](http://msdn.microsoft.com/library/dn823749.aspx).  
+ コードから簡単にテスト プロジェクトとテスト メソッドを生成したり、必要に応じて手動でテストを作成したりできます。 IntelliTest を使用して .NET コードを精査する際は、テスト データと単体テストのスイートを生成できます。 コードにある各ステートメントについて、そのステートメントを実行するテスト入力が生成されます。 [コードの単体テストを生成する](http://msdn.microsoft.com/library/dn823749.aspx)方法をご覧ください。  
   
- Test Explorer can also run third-party and open source unit test frameworks that have implemented Test Explorer add-on interfaces. You can add many of these frameworks through the Visual Studio Extension Manager and the Visual Studio gallery. See [Install third-party unit test frameworks](../test/install-third-party-unit-test-frameworks.md)  
+ テスト エクスプローラーは、テスト エクスプローラーのアドオン インターフェイスを実装した、サードパーティ製やオープン ソースの単体テスト フレームワークも実行できます。 Visual Studio 拡張機能マネージャーおよび Visual Studio ギャラリーを使用して、これらのフレームワークの多くを追加できます。 「[サードパーティ製の単体テスト フレームワークをインストールする](../test/install-third-party-unit-test-frameworks.md)」を参照してください。  
   
--   [Quick starts](#BKMK_Quick_starts)  
+-   [クイック スタート](#BKMK_Quick_starts)  
   
--   [The MyBank Solution example](#BKMK_The_MyBank_Solution_example)  
+-   [MyBank ソリューションの例](#BKMK_The_MyBank_Solution_example)  
   
--   [Create unit test projects and test methods](#BKMK_Creating_the_unit_test_projects)  
+-   [単体テスト プロジェクトとテスト メソッドを作成する](#BKMK_Creating_the_unit_test_projects)  
   
--   [Write your tests](#BKMK_Writing_your_tests)  
+-   [テストを作成する](#BKMK_Writing_your_tests)  
   
--   [Run tests in Test Explorer](#BKMK_Running_tests_in_Test_Explorer)  
+-   [テスト エクスプローラーでテストを実行する](#BKMK_Running_tests_in_Test_Explorer)  
   
--   [Run and view tests](#BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar)  
+-   [テストを実行して表示する](#BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar)  
   
-##  <a name="BKMK_Unit_testing_overview"></a> Unit testing overview  
+##  <a name="BKMK_Unit_testing_overview"></a> 単体テストの概要  
   
-###  <a name="BKMK_Quick_starts"></a> Quick starts  
- For an introduction to unit testing that takes you directly into coding, see one of these topics:  
+###  <a name="BKMK_Quick_starts"></a> クイック スタート  
+ コーディングに直接関係する単体テストの概要については、次のいずれかのトピックを参照してください。  
   
--   [Walkthrough: Creating and Running Unit Tests for Managed Code](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)  
+-   [チュートリアル: マネージ コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)  
   
--   [Quick Start: Test Driven Development with Test Explorer](../test/quick-start-test-driven-development-with-test-explorer.md)  
+-   [クイック スタート: テスト エクスプローラーによるテスト駆動開発](../test/quick-start-test-driven-development-with-test-explorer.md)  
   
--   [Unit testing native code with Test Explorer](http://msdn.microsoft.com/en-us/8a09d6d8-3613-49d8-9ffe-11375ac4736c)  
+-   [テスト エクスプローラーを使用したネイティブ コードの単体テスト](http://msdn.microsoft.com/en-us/8a09d6d8-3613-49d8-9ffe-11375ac4736c)  
   
-##  <a name="BKMK_The_MyBank_Solution_example"></a> The MyBank Solution example  
- In this topic, we use the development of a fictional application called `MyBank` as an example. You don't need the actual code to follow the explanations in this topic. Test methods are written in C# and presented by using the Microsoft Unit Testing Framework for Managed Code, However, the concepts are easily transferred to other languages and frameworks.  
+##  <a name="BKMK_The_MyBank_Solution_example"></a> MyBank ソリューションの例  
+ このトピックでは、例として `MyBank` という架空のアプリケーションの開発を使用します。 このトピックの説明は、実際のコードがなくても理解できます。 テスト メソッドは C# で記述され、マネージ コード用の Microsoft 単体テスト フレームワークを使用して示されますが、その概念は他の言語やフレームワークに容易に移行できます。  
   
- ![MyBank Solution](../test/media/ute_mybanksolution.png "UTE_MyBankSolution")  
+ ![MyBank ソリューション](../test/media/ute_mybanksolution.png "UTE_MyBankSolution")  
   
- Our first attempt at a design for the `MyBank` application includes an accounts component that represents an individual account and its transactions with the bank, and a database component that represents the functionality to aggregate and manage the individual accounts.  
+ `MyBank` アプリケーションのデザイン時の最初の計画には、個々のアカウントおよびアカウントの銀行との取引を表すアカウント コンポーネントと、個々のアカウントを集計および管理する機能を表すデータベース コンポーネントが含まれます。  
   
- We create a `MyBank` solution that contains two projects:  
+ 次の 2 つのプロジェクトを含む `MyBank` ソリューションを作成します。  
   
 -   `Accounts`  
   
 -   `BankDb`  
   
- Our first attempt at designing the `Accounts` project contain a class to hold basic information about an account, an interface that specifies the common functionality of any type of account, like depositing and withdrawing assets from the account, and a class derived from the interface that represents a checking account. We begin the Accounts projects by creating the following source files:  
+ `Accounts` プロジェクトのデザイン時の最初の計画には、アカウントに関する基本情報を保持するクラス、アカウントでの資産の預け入れや引き出しなど、任意の種類のアカウントの共通機能を指定するインターフェイス、および当座預金アカウントを表すインターフェイスから派生したクラスが含まれます。 次のソース ファイルを作成して、Accounts プロジェクトを開始します。  
   
--   `AccountInfo.cs` defines the basic information for an account.  
+-   `AccountInfo.cs` は、アカウントの基本情報を定義します。  
   
--   `IAccount.cs` defines a standard `IAccount` interface for an account, including methods to deposit and withdraw assets from an account and to retrieve the account balance.  
+-   `IAccount.cs` は、アカウントで資産の預け入れや引き出しを行うメソッドや、アカウントの残高を取得するメソッドを含む、アカウントの標準の `IAccount` インターフェイスを定義します。  
   
--   `CheckingAccount.cs` contains the `CheckingAccount` class that implements the `IAccounts` interface for a checking account.  
+-   `CheckingAccount.cs` には、当座預金アカウントの `CheckingAccount` インターフェイスを実装する `IAccounts` クラスが含まれています。  
   
- We know from experience that one thing a withdrawal from a checking account must do is to make sure that the amount withdrawn is less than the account balance. So we override the `IAccount.Withdaw` method in `CheckingAccount` with a method that checks for this condition. The method might look like this:  
+ 当座預金アカウントからの引き出しの際は、引き出される金額がアカウントの残高より少ないことを確認する必要があります。 そのため、この条件をチェックするメソッドで、 `IAccount.Withdaw` の `CheckingAccount` メソッドをオーバーライドします。 メソッドは次のようになります。  
   
 ```csharp  
   
@@ -107,70 +107,70 @@ public void Withdraw(double amount)
   
 ```  
   
- Now that we have some code, it's time for testing.  
+ 少しコードがあるので、テストしましょう。  
   
-##  <a name="BKMK_Creating_the_unit_test_projects"></a> Create unit test projects and test methods  
- It is often quicker to generate the unit test project and unit test stubs from your code. Or you can choose to create the unit test project and tests manually depending on your requirements.  
+##  <a name="BKMK_Creating_the_unit_test_projects"></a> 単体テスト プロジェクトとテスト メソッドを作成する  
+ ほとんどの場合、コードから単体テスト プロジェクトと単体テスト スタブを生成する方が手軽です。 また、必要に応じて単体テスト プロジェクトとテストを手動で作成することもできます。  
   
- **Generate unit test project and unit test stubs**  
+ **単体テスト プロジェクトと単体テスト スタブを生成する**  
   
-1.  From the code editor window, right-click and choose **Create Unit Tests** from the context menu.  
+1.  コード エディター ウィンドウで、右クリックしてコンテキスト メニューから **[単体テストの作成]** を選択します。  
   
-     ![From the editor window, view the context menu](../test/media/createunittestsrightclick.png "CreateUnitTestsRightClick")  
+     ![エディター ウィンドウで、コンテキスト メニューを表示](../test/media/createunittestsrightclick.png "CreateUnitTestsRightClick")  
   
-2.  Click OK to accept the defaults to create your unit tests, or change the values used to create and name the unit test project and the unit tests. You can select the code that is added by default to the unit test methods.  
+2.  [OK] をクリックして、既定値をそのまま使用して単体テストを作成するか、単体テスト プロジェクトと単体テストの作成と名前付けに使用される値を変更します。 単体テスト メソッドに既定で追加されるコードを選択することができます。  
   
-     ![Right&#45;click in editor and choose Create Unit Tests](../test/media/createunittestsdialog.png "CreateUnitTestsDialog")  
+     ![エディター内を右クリックし、[単体テストの作成] を選択](../test/media/createunittestsdialog.png "CreateUnitTestsDialog")  
   
-3.  The unit test stubs are created in a new unit test project for all the methods in the class.  
+3.  新しい単体テスト プロジェクトでは、クラス内のすべてのメソッドに単体テスト スタブが作成されます。  
   
-     ![The unit tests are created](../test/media/createunittestsstubs.png "CreateUnitTestsStubs")  
+     ![単体テストが作成済み](../test/media/createunittestsstubs.png "CreateUnitTestsStubs")  
   
-4.  Now jump ahead to learn how to [add code to the unit test methods](#BKMK_Writing_your_tests) to make your unit test meaningful, and any extra unit tests that you might want to add to thoroughly test your code.  
+4.  ここで、先に進み、単体テストを有意義なものにするための [コードを単体テスト メソッドに追加する](#BKMK_Writing_your_tests) 方法と、コードを徹底的にテストするために追加する追加の単体テストについて確認します。  
   
- **Create your unit test project and unit tests manually**  
+ **単体テスト プロジェクトと単体テストを手動で作成する**  
   
- A unit test project usually mirrors the structure of a single code project. In the MyBank example, you add two unit test projects named `AccountsTests` and `BankDbTests` to the `MyBanks` solution. The test project names are arbitrary, but adopting a standard naming convention is a good idea.  
+ 通常、単体テスト プロジェクトは 1 つのコード プロジェクトの構造を反映します。 MyBank の例で、2 つの単体テスト プロジェクト `AccountsTests` および `BankDbTests` を `MyBanks` ソリューションに追加します。 テスト プロジェクトの名前は任意ですが、標準の名前付け規則を採用することをお勧めします。  
   
- **To add a unit test project to a solution:**  
+ **単体テスト プロジェクトをソリューションに追加するには**  
   
-1.  On the **File** menu, choose **New** and then choose **Project** (Keyboard Ctrl + Shift + N).  
+1.  **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします (キーボード: Ctrl + Shift + N)。  
   
-2.  On the New Project dialog box, expand the **Installed** node, choose the language that you want to use for your test project, and then choose **Test**.  
+2.  [新しいプロジェクト] ダイアログ ボックスで、 **[インストール済み]** ノードを展開して、テスト プロジェクトで使用する言語を選択し、 **[テスト]**をクリックします。  
   
-3.  To use one of the Microsoft unit test frameworks, choose **Unit Test Project** from the list of project templates. Otherwise, choose the project template of the unit test framework that you want to use. To test the `Accounts` project of our example, you would name the project `AccountsTests`.  
+3.  Microsoft 単体テスト フレームワークの 1 つを使用するには、プロジェクト テンプレートの一覧から **[単体テスト プロジェクト]** を選択します。 それ以外の場合は、使用する単体テスト フレームワークのプロジェクト テンプレートを選択します。 この例の `Accounts` プロジェクトをテストするために、プロジェクトの名前を `AccountsTests`に設定します。  
   
     > [!WARNING]
-    >  Not all third-party and open source unit test frameworks provide a Visual Studio project template. Consult the framework document for information about creating a project.  
+    >  すべてのサードパーティ製およびオープン ソースの単体テスト フレームワークに、Visual Studio プロジェクトのテンプレートが用意されているわけではありません。 プロジェクトの作成については、フレームワークのドキュメントを参照してください。  
   
-4.  In your unit test project, add a reference to the code project under test, in our example to the Accounts project.  
+4.  この例の単体テスト プロジェクトで、テスト対象のコード プロジェクトへの参照を Accounts プロジェクトに追加します。  
   
-     To create the reference to the code project:  
+     コード プロジェクトへの参照を作成する方法は次のとおりです。  
   
-    1.  Select the project in Solution Explorer.  
+    1.  ソリューション エクスプローラーでプロジェクトを選択します。  
   
-    2.  On the **Project** menu, choose **Add Reference**.  
+    2.  **[プロジェクト]** メニューの **[参照の追加]**をクリックします。  
   
-    3.  On the Reference Manager dialog box, open the **Solution** node and choose **Projects**. Select the code project name and close the dialog box.  
+    3.  [参照マネージャー] ダイアログ ボックスで、 **[ソリューション]** ノードを開き、 **[プロジェクト]**を選択します。 コード プロジェクトの名前を選択し、ダイアログ ボックスを閉じます。  
   
- Each unit test project contains classes that mirror the names of the classes in the code project. In our example, the `AccountsTests` project would contain the following classes:  
+ 各単体テスト プロジェクトには、コード プロジェクト内のクラス名を反映したクラスが含まれています。 この例では、 `AccountsTests` プロジェクトに次のクラスが含まれています。  
   
--   `AccountInfoTests` class contains the unit test methods for the `AccountInfo` class in the `BankAccount` project  
+-   `AccountInfoTests` クラスには、 `AccountInfo` プロジェクトの `BankAccount` クラス用の単体テスト メソッドが含まれています。  
   
--   `CheckingAccountTests` class contains the unit test methods for `CheckingAccount` class.  
+-   `CheckingAccountTests` クラスには、 `CheckingAccount` クラス用の単体テスト メソッドが含まれています。  
   
-##  <a name="BKMK_Writing_your_tests"></a> Write your tests  
- The unit test framework that you use and Visual Studio IntelliSense will guide you through writing the code for your unit tests for a code project. To run in Test Explorer, most frameworks require that you add specific attributes to identify unit test methods. The frameworks also provide a way—usually through assert statements or method attributes—to indicate whether the test method has passed or failed. Other attributes identify optional setup methods that are at class initialization and before each test method and teardown methods that are run after each test method and before the class is destroyed.  
+##  <a name="BKMK_Writing_your_tests"></a> テストを作成する  
+ 使用する単体テスト フレームワークと Visual Studio IntelliSense に従って、コード プロジェクトの単体テスト用コードを記述していきます。 ほとんどのフレームワークでは、テスト エクスプローラーで実行するには、単体テスト メソッドを識別する特定の属性を追加する必要があります。 フレームワークには、テスト メソッドが成功したか失敗したかを示す手段も用意されています。通常は、Assert ステートメントまたはメソッドの属性を使用します。 他の属性は、各テスト メソッドの前でクラスの初期化時に実行される省略可能な設定メソッド、および各テスト メソッドの後でクラスが破棄される前に実行される終了処理メソッドを識別します。  
   
- The AAA (Arrange, Act, Assert) pattern is a common way of writing unit tests for a method under test.  
+ AAA (Arrange、Act、Assert) のパターンが、テスト対象のメソッドの単体テストを記述する一般的な方法です。  
   
--   The **Arrange** section of a unit test method initializes objects and sets the value of the data that is passed to the method under test.  
+-   単体テスト メソッドの **Arrange** セクションでは、オブジェクトを初期化し、テスト対象のメソッドに渡されるデータの値を設定します。  
   
--   The **Act** section invokes the method under test with the arranged parameters.  
+-   **Act** セクションでは、設定されたパラメーターでテスト対象のメソッドを呼び出します。  
   
--   The **Assert** section verifies that the action of the method under test behaves as expected.  
+-   **Assert** セクションでは、テスト対象のメソッドの操作が予測どおりに動作することを検証します。  
   
- To test the `CheckingAccount.Withdraw` method of our example, we can write two tests: one that verifies the standard behavior of the method, and one that verifies that a withdrawal of more than the balance will fail. In the `CheckingAccountTests` class, we add the following methods:  
+ この例の `CheckingAccount.Withdraw` メソッドをテストするために、2 つのテストを記述できます。メソッドの標準動作を検証するテストと、残高を超える引き出しが失敗することを検証するテストです。 `CheckingAccountTests` クラスで、次のメソッドを追加します。  
   
 ```csharp  
 [TestMethod]  
@@ -201,16 +201,16 @@ public void Withdraw_AmountMoreThanBalance_Throws()
   
 ```  
   
- Note that `Withdraw_ValidAmount_ChangesBalance` uses an explicit `Assert` statement to determine whether the test method passes or fails, while `Withdraw_AmountMoreThanBalance_Throws` uses the `ExpectedException` attribute to determine the success of the test method. Under the covers, a unit test framework wraps test methods in try/catch statements. In most cases, if an exception is caught, the test method fails and the exception is ignored. The `ExpectedException` attribute causes the test method to pass if the specified exception is thrown.  
+ `Withdraw_ValidAmount_ChangesBalance` は明示的な `Assert` ステートメントを使用してテスト メソッドの成功/失敗を判定し、 `Withdraw_AmountMoreThanBalance_Throws` は `ExpectedException` 属性を使用してテスト メソッドの成功を判定していることに注意してください。 表には出ませんが、単体テスト フレームワークは try/catch ステートメントでテスト メソッドをラップしています。 ほとんどの場合、例外がキャッチされると、テスト メソッドは失敗し、例外は無視されます。 指定された例外がスローされた場合、 `ExpectedException` 属性によってテスト メソッドは成功します。  
   
- For more information about the Microsoft Unit Testing Frameworks, see one of the following topics:  
+ Microsoft 単体テスト フレームワークの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Writing Unit Tests for the .NET Framework with the Microsoft Unit Test Framework for Managed Code](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)  
+-   [マネージ コード用の Microsoft 単体テスト フレームワークを使用した .NET Framework 用単体テストの記述](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)  
   
--   [Writing Unit tests for C/C++ with the Microsoft Unit Testing Framework for C++](../test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)  
+-   [C++ 用の Microsoft 単体テスト フレームワークを使用した C++ 用単体テストの記述](../test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)  
   
-## <a name="set-timeouts-for-unit-tests"></a>Set timeouts for unit tests  
- To set a timeout on an individual test method:  
+## <a name="set-timeouts-for-unit-tests"></a>単体テストのタイムアウトを設定する  
+ 個々のテスト メソッドで、タイムアウトを設定するには  
   
 ```csharp  
 [TestMethod]  
@@ -224,7 +224,7 @@ public void My_Test()
   
 ```  
   
- To set the timeout to the maximum allowed:  
+ 許容される最大のタイムアウトを設定するには  
   
 ```csharp  
 [TestMethod]  
@@ -234,74 +234,74 @@ public void My_Test ()
 }  
 ```  
   
-##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> Run tests in Test Explorer  
- When you build the test project, the tests appear in Test Explorer. If Test Explorer is not visible, choose **Test** on the Visual Studio menu, choose **Windows**, and then choose **Test Explorer**.  
+##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> テスト エクスプローラーでテストを実行する  
+ テスト プロジェクトをビルドすると、テストはテスト エクスプローラーに表示されます。 テスト エクスプローラーが表示されない場合は、Visual Studio メニューの **[テスト]** をクリックし、 **[Windows]**、 **[テスト エクスプローラー]**の順に選択します。  
   
- ![Unit Test Explorer](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![単体テスト エクスプローラー](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
- As you run, write, and rerun your tests, the default view of Test Explorer displays the results in groups of **Failed Tests**, **Passed Tests**, **Skipped Tests** and **Not Run Tests**. You can choose a group heading to open the view that displays all them tests in that group.  
+ テストを実行して、記述し、再実行すると、テスト エクスプローラーの既定のビューに **[失敗したテスト]**、 **[成功したテスト]**、 **[スキップされたテスト]** 、および **[テストを実行しない]**グループの結果が表示されます。 グループの見出しを選択して、そのグループ内のすべてのテストを表示するビューを開くことができます。  
   
- You can also filter the tests in any view by matching text in the search box at the global level or by selecting one of the pre-defined filters. You can run any selection of the tests at any time. The results of a test run are immediately apparent in the pass/fail bar at the top of the explorer window. Details of a test method result are displayed when you select the test.  
+ グローバル レベルで検索ボックスでテキストを照合して、または定義済みのフィルターの 1 つを選択して、任意のビューでテストにフィルターを適用することもできます。 任意に選択したテストをいつでも実行できます。 テスト実行の結果は、エクスプローラー ウィンドウの上部にある成功/失敗ステータス バーですぐにわかります。 テストを選択すると、そのテスト メソッドの結果の詳細が表示されます。  
   
-###  <a name="BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar"></a> Run and view tests  
- The Test Explorer toolbar helps you discover, organize, and run the tests that you are interested in.  
+###  <a name="BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar"></a> テストを実行して表示する  
+ テスト エクスプローラーのツール バーは、対象にするテストを検出、編成、実行するのに役立ちます。  
   
- ![Run tests from the Test Explorer toolbar](../test/media/ute_toolbar.png "UTE_ToolBar")  
+ ![テスト エクスプローラー ツールバーからテストを実行](../test/media/ute_toolbar.png "UTE_ToolBar")  
   
- You can choose **Run All** to run all your tests, or choose **Run** to choose a subset of tests to run. After you run a set of tests, a summary of the test run appears at the bottom of the Test Explorer window. Select a test to view the details of that test in the bottom pane. Choose **Open Test** from the context menu (Keyboard: F12) to display the source code for the selected test.  
+ **[すべて実行]** を選択してテストをすべて実行することも、 **[実行]** を選択してテストのサブセットを実行することもできます。 一連のテストを実行した後、テスト実行の概要がテスト エクスプローラー ウィンドウの下部に表示されます。 テストを選択すると、そのテストの詳細が下部のペインに表示されます。 コンテキスト メニューから **[テストを開く]** を選択すると (キーボード: F12)、選択したテストのソース コードが表示されます。  
   
- If individual tests have no dependencies that prevent them from being run in any order, turn on parallel test execution with the ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") toggle button on the toolbar. This can noticeably reduce the time taken to run all the tests.  
+ 個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。  
   
-###  <a name="BKMK_Running_tests_after_every_build"></a> Run tests after every build  
+###  <a name="BKMK_Running_tests_after_every_build"></a> 各ビルドの後にテストを実行する  
   
 > [!WARNING]
->  Running unit tests after every build is supported only in Visual Studio Enterprise.  
+>  各ビルドの後の単体テスト実行は、Visual Studio Enterprise でのみサポートされます。  
   
 |||  
 |-|-|  
-|![Run after build](../test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|To run your unit tests after each local build, choose **Test** on the standard menu, choose **Run Tests After Build** on the Test Explorer toolbar.|  
+|![ビルド後に実行](../test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|各ローカル ビルドの後で単体テストを実行するには、標準のメニューの **[テスト]** を選択し、テスト エクスプローラーのツール バーの **[ビルド後にテストを実行]** を選択します。|  
   
-###  <a name="BKMK_Filtering_and_grouping_the_test_list"></a> Filter and group the test list  
- When you have a large number of tests, you can Type in Test Explorer search box to filter the list by the specified string. You can restrict your filter event more by choosing from the filter list.  
+###  <a name="BKMK_Filtering_and_grouping_the_test_list"></a> テスト リストのフィルター処理とグループ化を実行する  
+ 多数のテストがある場合は、テスト エクスプローラーの検索ボックスに入力し、指定した文字列によって一覧をフィルター処理できます。 フィルターの一覧から選択することで、フィルター イベントをさらに制限できます。  
   
- ![Search filter categories](../test/media/ute_searchfilter.png "UTE_SearchFilter")  
+ ![検索フィルターのカテゴリ](../test/media/ute_searchfilter.png "UTE_SearchFilter")  
   
 |||  
 |-|-|  
-|![Test Explorer group button](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|To group your tests by category, choose the **Group By** button.|  
+|![テスト エクスプローラー グループ ボタン](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|カテゴリ別にテストをグループ化するには、 **[グループ化]** をクリックします。|  
   
- For more information, see [Run unit tests with Test Explorer](../test/run-unit-tests-with-test-explorer.md)  
+ 詳細については、「[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)」を参照してください。  
   
 ## <a name="qa"></a>Q&A  
- **Q: How do I debug unit tests?**  
+ **Q: 単体テストのデバッグ方法を教えてください。**  
   
- **A:** Use Test Explorer to start a debugging session for your tests. Stepping through your code with the Visual Studio debugger seamlessly takes you back and forth between the unit tests and the project under test. To start debugging:  
+ **A:** テスト エクスプローラーを使用して、テストのデバッグ セッションを開始します。 Visual Studio デバッガーを使用してコードをシームレスにステップ実行すると、テスト対象のプロジェクトと単体テストの間を切り替えることができます。 デバッグを開始するには:  
   
-1.  In the Visual Studio editor, set a breakpoint in one or more test methods that you want to debug.  
+1.  Visual Studio エディターで、デバッグする 1 つ以上のテスト メソッドにブレークポイントを設定します。  
   
     > [!NOTE]
-    >  Because test methods can run in any order, set breakpoints in all the test methods that you want to debug.  
+    >  テスト メソッドを任意の順序で実行できるため、デバッグするすべてのテスト メソッドにブレークポイントを設定します。  
   
-2.  In Test Explorer, select the test methods and then choose **Debug Selected Tests** from the shortcut menu.  
+2.  テスト エクスプローラーでテスト メソッドを選択し、ショートカット メニューから **[選択したテストのデバッグ]** を選択します。  
   
- Learn more details about [debugging unit tests](../debugger/debugging-in-visual-studio.md).  
+ [単体テストのデバッグ](../debugger/debugging-in-visual-studio.md)の詳細を確認してください。  
   
- **Q: If I'm using TDD, how do I generate code from my tests?**  
+ **Q: TDD を使用している場合にテストからコードを生成する方法を教えてください。**  
   
- **A:** Use IntelliSense to generate classes and methods in your project code. Write a statement in a test method that calls the class or method that you want to generate, then open the IntelliSense menu under the call. If the call is to a constructor of the new class, choose **Generate new type** from the menu and follow the wizard to insert the class in your code project. If the call is to a method, choose **Generate new method** from the IntelliSense menu.  
+ **A:** IntelliSense を使用して、プロジェクト コードにクラスとメソッドを生成します。 テスト メソッドに、生成するクラスまたはメソッドを呼び出すステートメントを記述し、その呼び出しの下で IntelliSense メニューを開きます。 新しいクラスのコンストラクターへの呼び出しの場合は、メニューから **[新しい型の生成]** を選択し、ウィザードに従ってコード プロジェクトにクラスを挿入します。 メソッドへの呼び出しの場合は、IntelliSense メニューから **[Generate new method (新しいメソッドの生成)]** を選択します。  
   
- ![Generate Method Stub Intellisense Menu](../test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")  
+ ![[メソッド スタブの生成] の Intellisense メニュー](../test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")  
   
- **Q: Can I create unit tests that take multiple sets of data as input to run the test?**  
+ **Q: テストを実行する入力値として複数のデータ セットを使用する単体テストを作成できますか。**  
   
- **A:** Yes. *Data-driven test methods* let you test a range of values with a single unit test method. Use a `DataSource` attribute for the test method that specifies the data source and table that contains the variable values that you want to test.  In the method body, you assign the row values to variables using the `TestContext.DataRow[`*ColumnName*`]` indexer.  
+ **A:** できます。 *データ ドリブン テスト メソッド* を使用すると、1 つの単体テスト メソッドである範囲の値をテストすることができます。 テストする変数の値が格納されているデータ ソースとデータ テーブルを指定する、テスト メソッドの `DataSource` 属性を使用します。  メソッドの本体で、 `TestContext.DataRow[`*ColumnName*`]` インデクサーを使用して変数に行の値を割り当てます。  
   
 > [!NOTE]
->  These procedures apply only to test methods that you write by using the Microsoft unit test framework for managed code. If you're using a different framework, consult the framework documentation for equivalent functionality.  
+>  ここに示すプロシージャは、マネージ コード用の Microsoft 単体テスト フレームワークを使用して記述したテスト メソッドにのみ適用できます。 別のフレームワークを使用している場合は、同等の機能についてフレームワークのドキュメントを参照してください。  
   
- For example, assume we add an unnecessary method to the `CheckingAccount` class that is named `AddIntegerHelper`. `AddIntegerHelper` adds two integers.  
+ たとえば、 `CheckingAccount` という名前の `AddIntegerHelper`クラスに不要なメソッドを追加するとします。 `AddIntegerHelper` は 2 つの整数を追加します。  
   
- To create a data-driven test for the `AddIntegerHelper` method, we first create an Access database named `AccountsTest.accdb` and a table named `AddIntegerHelperData`. The `AddIntegerHelperData` table defines columns to specify the first and second operands of the addition and a column to specify the expected result. We fill a number of rows with appropriate values.  
+ `AddIntegerHelper` メソッドのデータ ドリブン テストを作成するには、最初に `AccountsTest.accdb` という名前の Access データベースと `AddIntegerHelperData`という名前のテーブルを作成します。 `AddIntegerHelperData` テーブルは、追加の 1 番目と 2 番目のオペランドを指定する列、および予期される結果を指定する列を定義します。 多数の行に適切な値を入力します。  
   
 ```csharp  
   
@@ -322,43 +322,43 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
   
 ```  
   
- The attributed method runs once for each row in the table. Test Explorer reports a test failure for the method if any of the iterations fail. The test results detail pane for the method shows you the pass/fail status method for each row of data.  
+ 属性付きメソッドは、テーブル内の各行に対して 1 回実行されます。 イテレーションが失敗した場合、テスト エクスプローラーがメソッドのテスト失敗を報告します。 メソッドのテスト結果の詳細ペインに、データの行ごとにメソッドの成功/失敗の状態が表示されます。  
   
- Learn more about [data-driven unit tests](../test/how-to-create-a-data-driven-unit-test.md).  
+ [データ ドリブン単体テスト](../test/how-to-create-a-data-driven-unit-test.md)の詳細を確認してください。  
   
- **Q: Can I view how much of my code is tested by my unit tests?**  
+ **Q: 単体テストでテストするコードの量を確認できますか。**  
   
- **A:** Yes. You can determine the amount of your code that is actually being tested by your unit tests by using the Visual Studio code coverage tool. Native and managed languages and all unit test frameworks that can be run by the Unit Test Framework are supported.  
+ **A:** できます。 Visual Studio のコード カバレッジ ツールを使用して、単体テストで実際にテスト中のコードの量を確認できます。 単体テスト フレームワークによって実行できるネイティブ言語とマネージ言語、およびすべての単体テスト フレームワークがサポートされています。  
   
- You can run code coverage on selected tests or on all tests in a solution. The Code Coverage Results window displays the percentage of the blocks of product code that were exercised by line, function, class, namespace and module.  
+ 選択したテストまたはソリューションのすべてのテストのコード カバレッジを実行できます。 [コード カバレッジの結果] ウィンドウに、行、関数、クラス、名前空間、およびモジュールで実行された製品コードのブロックのパーセンテージが表示されます。  
   
- To run code coverage for test methods in a solution, choose **Tests** on the Visual Studio menu and then choose **Analyze code coverage**.  
+ ソリューション内のテスト メソッドのコード カバレッジを実行するには、Visual Studio のメニューで、 **[テスト]** 、 **[コード カバレッジの分析]**の順に選択します。  
   
- Coverage results appear in the Code Coverage Results window.  
+ カバレッジの結果は、[コード カバレッジの結果] ウィンドウに表示されます。  
   
- ![Code coverage results](../test/media/ute_codecoverageresults.png "UTE_CodeCoverageResults")  
+ ![コード カバレッジの結果](../test/media/ute_codecoverageresults.png "UTE_CodeCoverageResults")  
   
- Learn more about [code coverage](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md) .  
+ [コード カバレッジ](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)の詳細を確認してください。  
   
- **Q: How can I test methods in my code that have external dependencies?**  
+ **Q: 外部依存関係を含むコード内のメソッドをテストする方法を教えてください。**  
   
- **A:** Yes. If you have Visual Studio Enterprise, Microsoft Fakes can be used with test methods that you write by using unit test frameworks for managed code.  
+ **A:** できます。 Visual Studio Enterprise を使用している場合は、Microsoft Fakes は、マネージ コード用の単体テスト フレームワークを使用して記述したテスト メソッドで使用できます。  
   
- Microsoft Fakes uses two approaches to create substitute classes for external dependencies.  
+ Microsoft Fakes は、次の 2 つの方法で外部依存関係の代替クラスを作成します。  
   
-1.  *Stubs* generate substitute classes derived from the parent interface of the target dependency class. Stub methods can be substituted for public virtual methods of the target class.  
+1.  *スタブ* は、対象の依存関係クラスの親インターフェイスから派生した代替クラスを生成します。 スタブ メソッドは、対象クラスのパブリック仮想メソッドの代わりに使用できます。  
   
-2.  *Shims* use runtime instrumentation to divert calls to a target method to a substitute shim method for non-virtual methods.  
+2.  *Shim* は、ランタイム インストルメンテーションを使用して、対象メソッドへの呼び出しを仮想でないメソッドの代替 shim メソッドに転換します。  
   
- In both approaches, you use the generated delegates of calls to the dependency method to specify the behavior that you want in the test method.  
+ いずれの方法でも、依存関係メソッドへの呼び出しの生成されたデリゲートを使用して、テスト メソッド内の動作を指定します。  
   
- Learn more about [isolating unit test methods with Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md).  
+ 詳細については、「 [Microsoft Fakes で単体テスト メソッドを分離する](../test/isolating-code-under-test-with-microsoft-fakes.md)」を参照してください。  
   
- **Q: Can I use other unit test frameworks to create unit tests?**  
+ **Q: 他の単体テスト フレームワークを使用して単体テストを作成することはできますか。**  
   
- **A:** Yes, follow these steps to [find and install other frameworks](../test/install-third-party-unit-test-frameworks.md). After you restart Visual Studio, reopen your solution to create your unit tests, and then select your installed frameworks here:  
+ **A:** はい。以下の手順に従って、 [他のフレームワークを検索してインストール](../test/install-third-party-unit-test-frameworks.md)してください。 Visual Studio を再起動した後、単体テストを作成するためのソリューションをもう一度開き、インストールしたフレームワークを選びます。  
   
- ![Select other installed unit test framework](../test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
+ ![インストールされているその他の単体テスト フレームワークを選択する](../test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
   
- Your unit test stubs will be created using the selected framework.
+ 選んだフレームワークを使用して、単体テスト スタブが作成されます。
 

@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::ResolveAssemblyRef | Microsoft Docs
+title: "IPropertyProxyEESide::ResolveAssemblyRef |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: e71bb5aa2954c609cff4a3afbfba981bade3122c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ipropertyproxyeesideresolveassemblyref"></a>IPropertyProxyEESide::ResolveAssemblyRef
-Determines the location of the specified managed assembly reference.  
+指定したマネージ アセンブリ参照の場所を決定します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT ResolveAssemblyRef(  
@@ -62,29 +62,29 @@ int ResolveAssemblyRef(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `assemName`  
- [in] Name of the assembly to resolve.  
+ [in]解決するのには、アセンブリの名前です。  
   
  `assemBytes`  
- [out] Returns an [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) object containing the assembly bytes associated with the reference.  
+ [out]返します、 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)参照に関連付けられているアセンブリのバイト数を含むオブジェクト。  
   
  `assemPdb`  
- [out] Returns an `IEEDataStorage` object containing the symbol store data associated with this reference.  
+ [out]返します、`IEEDataStorage`シンボルを含むオブジェクトは、この参照に関連付けられているデータを格納します。  
   
  `assemLocation`  
- [out] Returns the path location of this reference.  
+ [out]この参照のパスの場所を返します。  
   
  `alr`  
- [out] Returns a value from the [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) enumeration indicating the location of this reference's assembly.  
+ [out]値を返します、 [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)この参照のアセンブリの場所を示す列挙値。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- This method is not typically implemented by a custom expression evaluator.  
+## <a name="remarks"></a>コメント  
+ 通常、このメソッドは、カスタム式エバリュエーターでは実装されません。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)

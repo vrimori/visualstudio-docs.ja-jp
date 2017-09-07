@@ -1,5 +1,5 @@
 ---
-title: Adding a Tracking Property to a Domain-Specific Language Definition | Microsoft Docs
+title: "ドメイン固有言語定義への追跡プロパティの追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,34 +33,34 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ef5f86cb3b41af6cc9e7432cdbfb7365471320b8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Adding a Tracking Property to a Domain-Specific Language Definition
-This walkthrough shows how to add a tracking property to a domain model.  
+# <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>ドメイン固有言語の定義への追跡プロパティの追加
+このチュートリアルでは、ドメイン モデルに追跡プロパティを追加する方法を示します。  
   
- A *tracking domain* property is a property that can be updated by the user but which has a default value that is calculated by using the values of other domain properties or elements.  
+ A*ドメインを追跡*プロパティは、ユーザーが更新できるが、その他のドメインのプロパティまたは要素の値を使用して計算される、既定値を持つプロパティです。  
   
- For example, in the Domain-Specific Language Tools (DSL Tools), the Display Name property of a domain class has a default value that is calculated by using the name of the domain class, but a user can change the value at design time or reset it to the calculated value.  
+ たとえば、ドメイン固有言語ツール (DSL ツール) のドメイン クラスは、ユーザーの名前を使用して計算される既定値を持つドメイン クラスのプロパティ表示名デザイン時に値を変更したり計算値にリセットできます。  
   
- In this walkthrough, you create a domain-specific language (DSL) that has a Namespace tracking property that has a default value based on the Default Namespace property of the model. For more information about tracking properties, see [Defining Tracking Properties](http://msdn.microsoft.com/en-us/0538b0e4-6221-4e7d-911a-b92cd622f0be).  
+ このチュートリアルでは、追跡、モデルの既定の Namespace プロパティに基づいて既定値を持つプロパティの Namespace を持つドメイン固有言語 (DSL) を作成します。 プロパティの追跡の詳細については、次を参照してください。[追跡プロパティを定義する](http://msdn.microsoft.com/en-us/0538b0e4-6221-4e7d-911a-b92cd622f0be)です。  
   
--   The DSL Tools support tracking property descriptors. However, the DSL designer cannot be used to add a tracking property to a language. Therefore, you must add custom code to define and implement the tracking property.  
+-   DSL ツールは、プロパティ記述子の追跡をサポートします。 ただし、DSL デザイナーは、追跡プロパティ、言語を追加するのには使用できません。 そのため、定義および追跡プロパティを実装するカスタム コードを追加する必要があります。  
   
- A tracking property has two states: tracking, and updated by the user. Tracking properties have the following features:  
+ 追跡プロパティが 2 つの状態: 追跡、およびユーザーによって更新されました。 追跡のプロパティでは、次の特徴があります。  
   
--   When in the tracking state, the value of the tracking property is calculated, and the value is updated as other properties in the model change.  
+-   追跡状態のときに追跡プロパティの値が計算され、モデルの変更時にその他のプロパティとして値が更新されます。  
   
--   When in the updated by user state, the value of the tracking property retains the value to which the user last set the property.  
+-   更新されたときに、ユーザー状態を追跡プロパティの値には、ユーザー最後設定されるプロパティ値が保持されます。  
   
--   In the **Properties** window, the **Reset** command for the tracking property is only enabled when the property is in the updated by user state. The **Reset** command sets the tracking property state to tracking.  
+-   **プロパティ**ウィンドウで、**リセット**コマンド プロパティは、更新されたときにのみ追跡プロパティが有効なユーザーの状態でします。 **リセット**コマンド追跡プロパティ設定を追跡する状態。  
   
--   In the **Properties** window, when the tracking property is in the tracking state, its value is displayed in a regular font.  
+-   **プロパティ**ウィンドウ、追跡プロパティが追跡の状態、その値が通常フォントで表示されます。  
   
--   In the **Properties** window, when the tracking property is in the updated by user state, its value is displayed in a bold font.  
+-   **プロパティ**ウィンドウで、追跡プロパティが更新されたとき、ユーザー状態では、その値が太字のフォントで表示されます。  
   
-## <a name="prerequisites"></a>Prerequisites  
- Before you can start this walkthrough, you must first install these components:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを開始する前に、これらのコンポーネントをまずインストールする必要があります。  
   
 |||  
 |-|-|  
@@ -68,122 +68,122 @@ This walkthrough shows how to add a tracking property to a domain model.
 |[!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580)|  
 |[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185581](http://go.microsoft.com/fwlink/?LinkID=185581)|  
   
-## <a name="creating-the-dsl-project"></a>Creating the DSL Project  
- Create the project for your domain-specific language.  
+## <a name="creating-the-dsl-project"></a>DSL プロジェクトを作成します。  
+ ドメイン固有言語のプロジェクトを作成します。  
   
-#### <a name="to-create-the-project"></a>To create the project  
+#### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
-1.  Create a Domain-Specific Language Designer project. Name it `TrackingPropertyDSL`.  
+1.  ドメイン固有言語デザイナー プロジェクトを作成します。 これに `TrackingPropertyDSL` という名前を付けます。  
   
-2.  In the **Domain-Specific Language Designer Wizard**, set the following options:  
+2.  **ドメイン固有言語デザイナー ウィザード**、次のオプションを設定します。  
   
-    1.  Select the **MinimalLanguage** template.  
+    1.  選択、 **MinimalLanguage**テンプレート。  
   
-    2.  Use the default name for the domain-specific language, `TrackingPropertyDSL`.  
+    2.  ドメイン固有言語の既定の名前を使用して`TrackingPropertyDSL`です。  
   
-    3.  Set the extension for model files to `trackingPropertyDsl`.  
+    3.  モデル ファイルの拡張機能設定`trackingPropertyDsl`です。  
   
-    4.  Use the default template icon for the model files.  
+    4.  モデル ファイルの既定のテンプレートのアイコンを使用します。  
   
-    5.  Set the name of the product to `Product Name`.  
+    5.  製品の名前を設定`Product Name`です。  
   
-    6.  Set the name of the company to `Company Name`.  
+    6.  会社の名前を設定`Company Name`です。  
   
-    7.  Use the default value for the root namespace for projects in the solution, `CompanyName.ProductName.TrackingPropertyDSL`.  
+    7.  既定値を使用して、ソリューション内のプロジェクトのルート名前空間の`CompanyName.ProductName.TrackingPropertyDSL`します。  
   
-    8.  Allow the wizard to create a strong name key file for your assemblies.  
+    8.  アセンブリの厳密な名前キー ファイルを作成するウィザードを許可します。  
   
-    9. Review the details of the solution, and then click **Finish** to create the DSL definition project.  
+    9. ソリューションの詳細を確認し、をクリックして**完了**DSL 定義プロジェクトを作成します。  
   
-## <a name="customizing-the-default-dsl-definition"></a>Customizing the Default DSL Definition  
- In this section, you customize the DSL definition to contain the following items:  
+## <a name="customizing-the-default-dsl-definition"></a>DSL の Default 定義をカスタマイズします。  
+ このセクションで、次の項目を含む DSL 定義をカスタマイズします。  
   
--   A Namespace tracking property for every element of the model.  
+-   モデルのすべての要素のプロパティを追跡 Namespace です。  
   
--   A Boolean IsNamespaceTracking property for every element of the model. This property will indicate whether the tracking property is in the tracking state or in the updated by user state.  
+-   モデルの各要素に対してブール IsNamespaceTracking プロパティです。 このプロパティは追跡プロパティが追跡状態または更新されたかどうかを指定してユーザー状態です。  
   
--   A Default Namespace property for the model. This property will be used to calculate the default value of the Namespace tracking property.  
+-   モデルの既定の Namespace プロパティです。 このプロパティは追跡プロパティ Namespace の既定値の計算に適用されます。  
   
--   A CustomElements calculated property for the model. This property will indicate the proportion of elements that have a custom namespace.  
+-   モデルの計算 CustomElements プロパティです。 このプロパティは、カスタム名前空間を持つ要素の割合で示されます。  
   
-#### <a name="to-add-the-domain-properties"></a>To add the domain properties  
+#### <a name="to-add-the-domain-properties"></a>ドメインのプロパティを追加するには  
   
-1.  In the DSL designer, right-click the **ExampleModel** domain class, point to **Add**, and then click **DomainProperty**.  
+1.  DSL デザイナー内を右クリックし、 **ExampleModel**ドメイン クラス、順にポイント**追加**、クリックして**DomainProperty**です。  
   
-    1.  Name the new property `DefaultNamespace`.  
+    1.  新しいプロパティの名前を付けます`DefaultNamespace`です。  
   
-    2.  In the **Properties** window for the new property, set **Default Value** to `DefaultNamespace`, and set **Type** to **String**.  
+    2.  **プロパティ**ウィンドウで、新しいプロパティの設定**既定値**に`DefaultNamespace`、設定と**型**に**文字列**です。  
   
-2.  To the **ExampleModel** domain class, add a domain property named `CustomElements`.  
+2.  **ExampleModel**ドメイン クラス、という名前のドメインのプロパティを追加`CustomElements`です。  
   
-     In the **Properties** window for the new property, set **Kind** to **Calculated**.  
+     **プロパティ**ウィンドウで、新しいプロパティの設定**種類**に**Calculated**です。  
   
-3.  To the **ExampleElement** domain class, add a domain property named `Namespace`.  
+3.  **ExampleElement**ドメイン クラス、という名前のドメインのプロパティを追加`Namespace`です。  
   
-     In the **Properties** window for the new property, set **Is Browsable** to **False**, and set **Kind** to **CustomStorage**.  
+     **プロパティ**ウィンドウで、新しいプロパティの設定**は参照可能な**に**False**、設定と**種類**に**CustomStorage**.  
   
-4.  To the **ExampleElement** domain class, add a domain property named `IsNamespaceTracking`.  
+4.  **ExampleElement**ドメイン クラス、という名前のドメインのプロパティを追加`IsNamespaceTracking`です。  
   
-     In the **Properties** window for the new property, set **Is Browsable** to **False**, set **Default Value** to `true`, and set **Type** to **Boolean**.  
+     **プロパティ**ウィンドウで、新しいプロパティの設定**は参照可能な**に**False**設定、**既定値**に`true`、し、設定**型**に**ブール**です。  
   
-#### <a name="to-update-the-diagram-elements-and-dsl-details"></a>To update the diagram elements and DSL details  
+#### <a name="to-update-the-diagram-elements-and-dsl-details"></a>図の要素と DSL 詳細を更新するには  
   
-1.  In the DSL designer, right-click the **ExampleShape** geometry shape, point to **Add**, and then click **Text Decorator**.  
+1.  DSL デザイナー内を右クリックし、 **ExampleShape** geometry 図形、順にポイント**追加**、クリックして**テキスト デコレータ**です。  
   
-    1.  Name the new text decorator `NamespaceDecorator`.  
+    1.  名前を新しいテキスト デコレータ`NamespaceDecorator`です。  
   
-    2.  In the **Properties** window for the text decorator, set **Position** to **InnerBottomLeft**.  
+    2.  **プロパティ** ウィンドウのテキスト デコレータ設定**位置**に**InnerBottomLeft**です。  
   
-2.  In the DSL designer, select the line that connects the **ExampleElement** class to the **ExampleShape** shape.  
+2.  DSL デザイナーで選択を結ぶ線、 **ExampleElement**クラスを**ExampleShape**図形です。  
   
-    1.  In the **DSL Details** window, select the **Decorator Maps** tab.  
+    1.  **DSL 詳細**ウィンドウで、**デコレータ マップ**タブです。  
   
-    2.  In the **Decorators** list, select **NamespaceDecorator**, select its check box and then on the **Display property** list, select **Namespace**.  
+    2.  **デコレーター**一覧で、 **NamespaceDecorator**、そのチェック ボックスをオンにし、**プロパティの表示**一覧で、 **Namespace**.  
   
-3.  In **DSL Explorer**, expand the **Domain Classes** folder, right-click the **ExampleElement** node, and then click **Add New Domain Type Descriptor**.  
+3.  **DSL のエクスプ ローラー**、展開、**ドメイン クラス**フォルダーを右クリックし、 **ExampleElement**ノードをクリックして**新しいドメインの型記述子の追加**.  
   
-    1.  Expand the **ExampleElement** node, and select the **Custom Type Descriptor (Domain Type Descriptor)** node.  
+    1.  展開して、 **ExampleElement**ノード、および選択、**カスタム型記述子 (ドメインの型記述子)**ノード。  
   
-    2.  In the **Properties** window for the domain type descriptor, set **Custom Coded** to **True**.  
+    2.  **プロパティ**ウィンドウで、ドメインの型記述子の設定**カスタム コード化された**に**True**です。  
   
-4.  In **DSL Explorer**, select the **Xml Serialization Behavior** node.  
+4.  **DSL のエクスプ ローラー**、select、 **Xml シリアル化の動作**ノード。  
   
-    1.  In the **Properties** window, set **Custom Post Load** to **True**.  
+    1.  **プロパティ**ウィンドウで、設定**カスタム Post ロード**に**True**です。  
   
-## <a name="transforming-templates"></a>Transforming Templates  
- Now that you have defined the domain classes and properties for your DSL, you can verify that the DSL definition can be transformed correctly to regenerate the code for your project.  
+## <a name="transforming-templates"></a>テンプレートを変換します。  
+ これで、DSL のドメイン クラスとプロパティを定義することができますを確認することをプロジェクトのコードを再生成する DSL 定義を正しく変換することができます。  
   
-#### <a name="to-transform-the-text-templates"></a>To transform the text templates  
+#### <a name="to-transform-the-text-templates"></a>テキスト テンプレートを変換するには  
   
-1.  On the **Solution Explorer** toolbar, click **Transform All Templates**.  
+1.  **ソリューション エクスプ ローラー**ツールバーで、をクリックして**すべてのテンプレートの変換**です。  
   
-2.  The system regenerates the code for the solution, and saves DslDefinition.dsl. For information about the XML format of definition files, see [The DslDefinition.dsl File](../modeling/the-dsldefinition-dsl-file.md).  
+2.  システムは、ソリューションのコードを再生成し、DslDefinition.dsl を保存します。 定義ファイルの XML 形式については、次を参照してください。 [DslDefinition.dsl ファイル](../modeling/the-dsldefinition-dsl-file.md)です。  
   
-## <a name="creating-files-for-custom-code"></a>Creating Files for Custom Code  
- When you transform all templates, the system generates the source code that defines your domain-specific language in the Dsl and DslPackage projects. So that you can avoid interfering with the generated text, write your custom code in files that are distinct from the generated code files.  
+## <a name="creating-files-for-custom-code"></a>カスタム コードのファイルの作成  
+ すべてのテンプレートを変換すると、システムは、Dsl および DslPackage プロジェクトで、ドメイン固有言語を定義するソース コードを生成します。 生成されたテキストに干渉することを回避することができるように、生成されたコード ファイルから個別のファイルで、カスタム コードを記述します。  
   
- You must provide code for maintaining the value and the state of your tracking property. To help you distinguish your custom code from the generated code, and to avoid file naming conflicts, put your custom code files in a separate subfolder.  
+ 値と、追跡プロパティの状態を維持するため、コードを記述する必要があります。 生成されたコードをカスタム コードを区別するために、ファイル名前付けの競合を回避するのには、サブフォルダーに個別に、カスタム コード ファイルを配置します。  
   
-#### <a name="to-create-the-code-files"></a>To create the code files  
+#### <a name="to-create-the-code-files"></a>コード ファイルを作成するには  
   
-1.  In **Solution Explorer**, right-click the **DSL** project, point to **Add**, and then click **New Folder**. Name the new folder `CustomCode`.  
+1.  **ソリューション エクスプ ローラー**を右クリックし、 **DSL**プロジェクトをポイントし、**追加**、クリックして**新しいフォルダー**です。 新しいフォルダーの名前を付けます`CustomCode`です。  
   
-2.  Right-click the new **CustomCode** folder, point to **Add**, and then click **New Item**.  
+2.  新しいを右クリックし**CustomCode**フォルダーを指す**追加**、順にクリック**新しい項目の**です。  
   
-3.  Select the **Code File** template, set the **Name** to `NamespaceTrackingProperty.cs`, and then click **OK**.  
+3.  選択、**コード ファイル**テンプレートの設定、**名前**に`NamespaceTrackingProperty.cs`、順にクリック**[ok]**です。  
   
-     The NamespaceTrackingProperty.cs file is created and opened for editing.  
+     NamespaceTrackingProperty.cs ファイルが作成され、編集用に開きます。  
   
-4.  In the folder, create the following code files: `ExampleModel.cs,``HelperClasses.cs`, `Serialization.cs`, and `TypeDescriptor.cs`.  
+4.  フォルダーで、次のコード ファイルを作成します: `ExampleModel.cs,``HelperClasses.cs`、 `Serialization.cs`、および`TypeDescriptor.cs`です。  
   
-5.  In the **DslPackage** project, also create a `CustomCode` folder, and add to it a `Package.cs` code file.  
+5.  **DslPackage**プロジェクト、作成も、`CustomCode`フォルダーを追加して、`Package.cs`コード ファイル。  
   
-## <a name="adding-helper-classes-to-support-tracking-properties"></a>Adding Helper Classes to Support Tracking Properties  
- To the HelperClasses.cs file, add the `TrackingHelper` and `CriticalException` classes as follows. You will reference these classes later in this walkthrough.  
+## <a name="adding-helper-classes-to-support-tracking-properties"></a>プロパティの追跡をサポートするヘルパー クラスを追加します。  
+ HelperClasses.cs ファイルに追加、`TrackingHelper`と`CriticalException`クラスの次のようにします。 このチュートリアルの後半でこれらのクラスを参照します。  
   
-#### <a name="to-add-the-helper-classes"></a>To add the helper classes  
+#### <a name="to-add-the-helper-classes"></a>ヘルパー クラスを追加するには  
   
-1.  Add the following code to the HelperClasses.cs file.  
+1.  HelperClasses.cs ファイルに次のコードを追加します。  
   
     ```csharp  
     using System;  
@@ -258,17 +258,17 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="adding-custom-code-for-the-custom-type-descriptor"></a>Adding Custom Code for the Custom Type Descriptor  
- Implement the `GetCustomProperties` method for the type descriptor for the `ExampleModel` domain class.  
+## <a name="adding-custom-code-for-the-custom-type-descriptor"></a>カスタム型記述子のカスタム コードを追加します。  
+ 実装、`GetCustomProperties`メソッドの型記述子を`ExampleModel`ドメイン クラスです。  
   
 > [!NOTE]
->  The code that the DSL Tools generate for the custom type descriptor for `ExampleModel` calls `GetCustomProperties`; however, the DSL Tools do not generate code that implements the method.  
+>  カスタム型記述子の DSL ツールを生成するコード`ExampleModel`呼び出し`GetCustomProperties`。 ただし、DSL ツールは、メソッドを実装するコードを生成できません。  
   
- Defining this method creates the tracking property descriptor for the Namespace tracking property. Also, providing attributes for the tracking property enables the **Properties** window to display the property correctly.  
+ このメソッドを定義する、追跡と作成のプロパティを追跡 Namespace プロパティ記述子。 さらに、追跡プロパティの属性を提供することによって、**プロパティ**プロパティを正しく表示するウィンドウです。  
   
-#### <a name="to-modify-the-type-descriptor-for-the-examplemodel-domain-class"></a>To modify the type descriptor for the ExampleModel domain class  
+#### <a name="to-modify-the-type-descriptor-for-the-examplemodel-domain-class"></a>ExampleModel ドメイン クラスの型記述子を変更するには  
   
-1.  Add the following code to the TypeDescriptor.cs file.  
+1.  TypeDescriptor.cs ファイルに次のコードを追加します。  
   
     ```csharp  
     using System;  
@@ -326,12 +326,12 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="adding-custom-code-for-the-package"></a>Adding Custom Code for the Package  
- The generated code defines a type description provider for the ExampleElement domain class; however, you must add code to instruct the DSL to use this type description provider.  
+## <a name="adding-custom-code-for-the-package"></a>パッケージのカスタム コードを追加します。  
+ 生成されたコード ExampleElement ドメイン クラスの型説明プロバイダーを定義します。ただし、この型説明プロバイダーを使用する DSL に指示するコードを追加する必要があります。  
   
-#### <a name="to-update-the-dsl-package-to-use-your-custom-type-descriptor"></a>To update the DSL package to use your custom type descriptor  
+#### <a name="to-update-the-dsl-package-to-use-your-custom-type-descriptor"></a>カスタム型記述子を使用する DSL パッケージを更新するには  
   
-1.  Add the following code to the Package.cs file.  
+1.  Package.cs ファイルに次のコードを追加します。  
   
     ```csharp  
     using System.ComponentModel;  
@@ -354,21 +354,21 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="adding-custom-code-for-the-model"></a>Adding Custom Code for the Model  
- Implement the `GetCustomElementsValue` method for the `ExampleModel` domain class.  
+## <a name="adding-custom-code-for-the-model"></a>モデルのカスタム コードを追加します。  
+ 実装、`GetCustomElementsValue`のメソッド、`ExampleModel`ドメイン クラスです。  
   
 > [!NOTE]
->  The code that the DSL Tools generate for `ExampleModel` calls `GetCustomElementsValue`; however, the DSL Tools do not generate code that implements the method.  
+>  DSL ツールを生成するコード`ExampleModel`呼び出し`GetCustomElementsValue`。 ただし、DSL ツールは、メソッドを実装するコードを生成できません。  
   
- Defining the `GetCustomElementsValue` method provides the logic for the CustomElements calculated property of `ExampleModel`. This method counts the number of `ExampleElement` domain classes that have a Namespace tracking property that has a user-updated value, and returns a string that represents this count as a proportion of the total elements in the model.  
+ 定義する、`GetCustomElementsValue`メソッドの計算 CustomElements プロパティのロジックを提供する`ExampleModel`です。 このメソッドの数をカウントする`ExampleElement`を追跡プロパティをユーザーが更新された値を持ち、モデル内の合計の要素の割合としてこの数を表す文字列を返しますの Namespace を持つドメイン クラスです。  
   
- In addition, add an `OnDefaultNamespaceChanged` method to `ExampleModel`, and override the `OnValueChanged` method of the `DefaultNamespacePropertyHandler` nested class of `ExampleModel` to call `OnDefaultNamespaceChanged`.  
+ さらに、追加、`OnDefaultNamespaceChanged`メソッドを`ExampleModel`、オーバーライド、`OnValueChanged`のメソッド、`DefaultNamespacePropertyHandler`のクラスを入れ子になった`ExampleModel`を呼び出す`OnDefaultNamespaceChanged`です。  
   
- Because the DefaultNamespace property is used to calculate the Namespace tracking property, `ExampleModel` must notify all `ExampleElement` domain classes that the value of DefaultNamespace has changed.  
+ 追跡プロパティ、Namespace を計算に使用するために DefaultNamespace プロパティ`ExampleModel`すべて通知する必要があります`ExampleElement`ドメイン クラスに DefaultNamespace の値が変更されたことです。  
   
-#### <a name="to-modify-the-property-handler-for-the-tracked-property"></a>To modify the property handler for the tracked property  
+#### <a name="to-modify-the-property-handler-for-the-tracked-property"></a>追跡対象のプロパティのプロパティのハンドラーを変更するには  
   
-1.  Add the following code to the ExampleModel.cs file.  
+1.  ExampleModel.cs ファイルに次のコードを追加します。  
   
     ```csharp  
     using System.Linq;  
@@ -431,19 +431,19 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="adding-custom-code-for-the-tracking-property"></a>Adding Custom Code for the Tracking Property  
- Add a `CalculateNamespace` method to the `ExampleElement` domain class.  
+## <a name="adding-custom-code-for-the-tracking-property"></a>追跡プロパティのカスタム コードを追加します。  
+ 追加、`CalculateNamespace`メソッドを`ExampleElement`ドメイン クラスです。  
   
- Defining this method provides the logic for the CustomElements calculated property of `ExampleModel`. This method counts the number of `ExampleElement` domain classes that have a Namespace tracking property that is in the updated by user state, and returns a string that represents this count as a proportion of the total elements in the model.  
+ 計算 CustomElements プロパティのロジックを提供するこのメソッドを定義する`ExampleModel`です。 このメソッドの数をカウントする`ExampleElement`を追跡は、更新されたプロパティの Namespace を持つドメイン クラスによって、ユーザー状態をモデル内の合計の要素の割合としてこの数を表す文字列を返します。  
   
- Also, add storage for, and methods to get and set, the Namespace custom storage property of the `ExampleElement` domain class.  
+ また、記憶域とを取得および設定を Namespace カスタム ストレージ プロパティのメソッドを追加、`ExampleElement`ドメイン クラスです。  
   
 > [!NOTE]
->  The code that the DSL Tools generate for `ExampleModel` calls the get and set methods; however, the DSL Tools do not generate code that implements the methods.  
+>  DSL ツールを生成するコード`ExampleModel`get を呼び出すメソッドと set メソッドです。 ただし、DSL ツールがメソッドを実装するコードを生成しません。  
   
-#### <a name="to-add-the-method-for-the-custom-type-descriptor"></a>To add the method for the custom type descriptor  
+#### <a name="to-add-the-method-for-the-custom-type-descriptor"></a>カスタム型記述子のメソッドを追加するには  
   
-1.  Add the following code to the NamespaceTrackingProperty.cs file.  
+1.  NamespaceTrackingProperty.cs ファイルに次のコードを追加します。  
   
     ```csharp  
     using System;  
@@ -601,15 +601,15 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="adding-custom-code-to-support-serialization"></a>Adding Custom Code to Support Serialization  
- Add code to support the custom post-load behavior for XML serialization.  
+## <a name="adding-custom-code-to-support-serialization"></a>シリアル化をサポートするためにカスタム コードを追加します。  
+ XML シリアル化のカスタムの読み込み後の動作をサポートするためにコードを追加します。  
   
 > [!NOTE]
->  The code that the DSL Tools generate calls the `OnPostLoadModel` and `OnPostLoadModelAndDiagram` methods; however, the DSL Tools do not generate code that implements these methods.  
+>  DSL ツールが呼び出しを生成するコード、`OnPostLoadModel`と`OnPostLoadModelAndDiagram`メソッドです。 ただし、DSL ツールがこれらのメソッドを実装するコードを生成しません。  
   
-#### <a name="to-add-code-to-support-the-custom-post-load-behavior"></a>To add code to support the custom post-load behavior  
+#### <a name="to-add-code-to-support-the-custom-post-load-behavior"></a>カスタムの読み込み後の動作をサポートするためにコードを追加するには  
   
-1.  Add the following code to the Serialization.cs file.  
+1.  Serialization.cs ファイルに次のコードを追加します。  
   
     ```csharp  
     using System;  
@@ -731,51 +731,51 @@ This walkthrough shows how to add a tracking property to a domain model.
     }  
     ```  
   
-## <a name="testing-the-language"></a>Testing the Language  
- The next step is to build and run the DSL designer in a new instance of [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] so that you can verify that the tracking property is working correctly.  
+## <a name="testing-the-language"></a>言語のテスト  
+ ビルドして実行 DSL デザイナーの新しいインスタンスを次の手順では[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]追跡プロパティが正しく動作していることを確認することができるようにします。  
   
-#### <a name="to-exercise-the-language"></a>To exercise the language  
+#### <a name="to-exercise-the-language"></a>言語を練習するには  
   
-1.  On the **Build** menu, click **Rebuild Solution**.  
+1.  **ビルド** メニューのをクリックして**ソリューションのリビルド**です。  
   
-2.  On the **Debug** menu, click **Start Debugging**.  
+2.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
-     The experimental build of [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] opens the **Debugging** solution, which contains an empty test file.  
+     試験的ビルド[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]開きます、**デバッグ**ソリューションで、空のテスト ファイルが含まれています。  
   
-3.  In **Solution Explorer**, double-click the Test.trackingPropertyDsl file to open it in the designer, and then click the design surface.  
+3.  **ソリューション エクスプ ローラー**デザイナーで開く Test.trackingPropertyDsl ファイルをダブルクリックし、デザイン画面をクリックします。  
   
-     Notice that in the **Properties** window for the diagram, the **Default Namespace** property is **DefaultNamespace**, and the **Custom Elements** property is **0/0**.  
+     注意、**プロパティ**の図では、ウィンドウ、 **Default Namespace**プロパティは**に DefaultNamespace**、および**カスタム要素**プロパティは**0/0**です。  
   
-4.  Drag an **ExampleElement** element from the **Toolbox** to the diagram surface.  
+4.  ドラッグ、 **ExampleElement**から要素を**ツールボックス**ダイアグラム サーフェイスにします。  
   
-5.  In the **Properties** window for the element, select the **Element Namespace** property, and change the value from **DefaultNamespace** to **OtherNamespace**.  
+5.  **プロパティ**、要素のウィンドウ、**要素 Namespace**プロパティから値を変更して**に DefaultNamespace**に**OtherNamespace**です。  
   
-     Notice that the value of **Element Namespace** is now shown in bold.  
+     注意して、値の**要素 Namespace**太字で表示されています。  
   
-6.  In the **Properties** window, right-click **Element Namespace**, and then click **Reset**.  
+6.  **プロパティ**ウィンドウを右クリックして**要素 Namespace**、クリックして**リセット**です。  
   
-     The value of the property is changed to **DefaultNamespace**, and the value is shown in a regular font.  
+     プロパティの値に変更されます**に DefaultNamespace**、し、値は通常フォントで表示されます。  
   
-     Right-click **Element Namespace** again. The **Reset** command is now disabled because the property is currently in its tracking state.  
+     右クリック**要素 Namespace**もう一度です。 **リセット**プロパティが現在の追跡の状態であるために、コマンドが無効になります。  
   
-7.  Drag another **ExampleElement** from the **Toolbox** to the diagram surface, and change its **Element Namespace** to **OtherNamespace**.  
+7.  別のドラッグ**ExampleElement**から、**ツールボックス**ダイアグラム領域で、変更をその**要素 Namespace**に**OtherNamespace**です。  
   
-8.  Click the design surface.  
+8.  デザイン画面をクリックします。  
   
-     In the **Properties** window for the diagram, the value of **Custom Elements** is now **1/2**.  
+     **プロパティ**ウィンドウ図では、値を**カスタム要素**現在**1/2**です。  
   
-9. Change **Default Namespace** for the diagram from **DefaultNamespace** to **NewNamespace**.  
+9. 変更**Default Namespace**からダイアグラムの**に DefaultNamespace**に**NewNamespace**です。  
   
-     The **Namespace** of the first element tracks the **Default Namespace** property, whereas the **Namespace** of the second element retains its user-updated value of **OtherNamespace**.  
+     **Namespace**の最初の要素の追跡、 **Default Namespace**プロパティ、一方、 **Namespace** 2 番目の要素値を保持する、ユーザーが更新されたの**OtherNamespace**です。  
   
-10. Save the solution, and then close the experimental build.  
+10. ソリューションを保存し、実験用のビルドを閉じます。  
   
-## <a name="next-steps"></a>Next Steps  
- If you plan to use more than one tracking property, or implement tracking properties in more than one DSL, you can create a text template to generate the common code for supporting each tracking property. For more information about text templates, see [Code Generation and T4 Text Templates](../modeling/code-generation-and-t4-text-templates.md).  
+## <a name="next-steps"></a>次の手順  
+ プロパティの 1 つ以上の追跡を使用するか、1 つ以上の DSL の追跡のプロパティを実装する場合は、各追跡プロパティをサポートするための一般的なコードを生成するテキスト テンプレートを作成することができます。 テキスト テンプレートの詳細については、次を参照してください。[コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)です。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Modeling.Design.TrackingPropertyDescriptor>   
  <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>   
- [How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md)   
- [How to: Create a Domain-Specific Language Solution](../modeling/how-to-create-a-domain-specific-language-solution.md)   
+ [ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)   
+ [方法: ドメイン固有言語ソリューションを作成する](../modeling/how-to-create-a-domain-specific-language-solution.md)   
 

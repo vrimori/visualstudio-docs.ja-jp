@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetReason | Microsoft Docs
+title: "IDebugCanStopEvent2::GetReason |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: b5d4c50b407406ea9a5d878decf859b8ab70863d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcanstopevent2getreason"></a>IDebugCanStopEvent2::GetReason
-Gets the reason why the debug engine (DE) wants to stop.  
+デバッグ エンジン (DE) が停止する理由の理由を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetReason(   
@@ -54,19 +54,19 @@ int GetReason(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `pcr`  
- [out] Returns a value from the [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md) enumeration that describes the reason for this event.  
+ [out]値を返します、 [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md)このイベントの理由を説明する列挙体です。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- This method is typically called before the [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) method so the caller can determine whether to pass non-zero (`TRUE`) to the `IDebugCanStopEvent2::CanStop` method.  
+## <a name="remarks"></a>コメント  
+ このメソッドと通常呼ばれる前に、 [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)メソッドの呼び出し元は、0 以外を渡すかどうかを特定できるように (`TRUE`) に、`IDebugCanStopEvent2::CanStop`メソッドです。  
   
- The reason for stopping can be either `CANSTOP_ENTRYPOINT`, which means the DE has reached an entry point, or `CANSTOP_STEPIN`, which means the DE has stepped into a function.  
+ 停止の理由には、いずれかを指定できます`CANSTOP_ENTRYPOINT`、エントリ ポイントに達して、DE つまりまたは`CANSTOP_STEPIN`関数にステップ インは、DE 意味します。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   
  [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md)   
  [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)

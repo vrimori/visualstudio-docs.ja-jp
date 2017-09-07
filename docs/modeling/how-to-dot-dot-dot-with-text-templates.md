@@ -1,5 +1,5 @@
 ---
-title: How to ... with Text Templates | Microsoft Docs
+title: "テキスト テンプレートを使用する方法 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,73 +29,73 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 6e6841e77556d9ae8b8ce76bff01537d5f45e855
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="how-to--with-text-templates"></a>How to ... with Text Templates
-Text templates in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] provide a useful way of generating text of any kind. You can use text templates to generate text at run time as part of your application and at design time to generate some of your project code. This topic summarizes the most frequently asked "How do I ...?" questions.  
+# <a name="how-to--with-text-templates"></a>方法: テキスト テンプレートを使用する
+テキスト テンプレートで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]任意の種類のテキストを生成する便利な方法を提供します。 テキスト テンプレートを使用すると、実行時に、アプリケーションの一部として、プロジェクト コードの一部を生成するのにデザイン時にテキストを生成します。 このトピックの内容をまとめたもの、最も頻繁に寄せられる「操作方法...」 問題があります。  
   
- In this topic, multiple answers that are preceded by bullets are alternative suggestions.  
+ このトピックでは、行頭に付けた複数の回答は、代替案の候補です。  
   
- For a general introduction to text templates, read [Code Generation and T4 Text Templates](../modeling/code-generation-and-t4-text-templates.md).  
+ テキスト テンプレートに一般的な概要については、読み取り[コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)です。  
   
-## <a name="how-to-"></a>How to ...  
+## <a name="how-to-"></a>操作方法。。。  
   
-### <a name="generate-part-of-my-application-code"></a>Generate part of my application code  
- I have a configuration or *model* in a file or a database. One or more parts of my code depend on that model.  
+### <a name="generate-part-of-my-application-code"></a>アプリケーション コードの一部を生成します。  
+ 構成があるか、*モデル*ファイルまたはデータベースにします。 マイ コードの 1 つまたは複数の部分は、そのモデルによって異なります。  
   
--   Generate some of your code files from text templates. For more information, see [Design-Time Code Generation by using T4 Text Templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md) and [What is the best way to start writing a template?](#starting).  
+-   テキスト テンプレートから、一部のコード ファイルを生成します。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用して、デザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)と[テンプレートの作成を開始する最善の方法は何ですか?](#starting)です。  
   
-### <a name="generate-files-at-run-time-passing-data-into-the-template"></a>Generate files at run time, passing data into the template  
- At run time, my application generates text files, such as reports, that contain a mixture of standard text and data. I want to avoid writing hundreds of `write` statements.  
+### <a name="generate-files-at-run-time-passing-data-into-the-template"></a>テンプレートにデータを渡して、実行時にファイルを生成します。  
+ 、実行時に、アプリケーションは、標準のテキストとデータの組み合わせを含む、レポートなどのテキスト ファイルを生成します。 何百もが書き込まれないようにしたい`write`ステートメントです。  
   
--   Add a runtime text template to your project. This template creates a class in your code, which you can instantiate and use to generate text. You can pass data to it in the constructor parameters. For more information, see [Run-Time Text Generation with T4 Text Templates](../modeling/run-time-text-generation-with-t4-text-templates.md).  
+-   実行時テキスト テンプレートをプロジェクトに追加します。 このテンプレートは、コードでインスタンスを作成および使用してテキストを生成することができるクラスを作成します。 コンス トラクターのパラメーターでにデータを渡すことができます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用して実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)です。  
   
--   If you want to generate from templates that are available only at run time, you can use standard text templates. If you are writing a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extension, you can invoke the text templating service. For more information, see [Invoking Text Transformation in a VS Extension](../modeling/invoking-text-transformation-in-a-vs-extension.md). In other contexts, you can use the text templating engine. For more information, see <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>.  
+-   実行時にのみ使用可能なテンプレートから生成する場合は、標準のテキスト テンプレートを使用できます。 作成している場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能では、テキスト テンプレート サービスを呼び出すことができます。 詳細については、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)です。 他のコンテキストでは、テキスト テンプレート エンジンを使用できます。 詳細については、「<xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>」を参照してください。  
   
-     Use the \<#@parameter#> directive to pass parameters to these templates. For more information, see [T4 Parameter Directive](../modeling/t4-parameter-directive.md).  
+     使用して、 \<#@parameter#> ディレクティブにこれらのテンプレート パラメーターを渡します。 詳細については、次を参照してください。 [T4 パラメーター ディレクティブ](../modeling/t4-parameter-directive.md)です。  
   
-### <a name="read-another-project-file-from-a-template"></a>Read another project file from a template  
- To read a file from the same [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project as the template:  
+### <a name="read-another-project-file-from-a-template"></a>テンプレートから別のプロジェクト ファイルを読み取り  
+ 同じファイルの読み取りに[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト テンプレートとして。  
   
--   Insert `hostSpecific="true"` into the `<#@template#>` directive.  
+-   `hostSpecific="true"` ディレクティブに `<#@template#>` を挿入します。  
   
-     In your code, use `this.Host.ResolvePath(filename)` to obtain the full path of the file.  
+     コードを使用して`this.Host.ResolvePath(filename)`ファイルの完全パスを取得します。  
   
-### <a name="invoke-methods-from-a-template"></a>Invoke methods from a template  
- If the methods already exist, for example, in standard [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] classes:  
+### <a name="invoke-methods-from-a-template"></a>テンプレートからメソッドを呼び出す  
+ メソッドに存在しない場合、たとえば、標準[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]クラス。  
   
--   Use the \<#@assembly#> directive to load the assembly, and use \<#@import#> to set the namespace context. For more information, see [T4 Import Directive](../modeling/t4-import-directive.md).  
+-   使用して、 \<#@assembly#> ディレクティブをアセンブリの読み込みし、使用\<#@import#> 名前空間コンテキストを設定します。 詳細については、次を参照してください。 [T4 インポート ディレクティブ](../modeling/t4-import-directive.md)です。  
   
-     If you frequently use the same set of assembly and import directives, consider writing a directive processor. In each template, you can invoke the directive processor, which can load the assemblies and the model files and set the namespace context. For more information, see [Creating Custom T4 Text Template Directive Processors](../modeling/creating-custom-t4-text-template-directive-processors.md).  
+     頻繁に同じアセンブリのセットを使用するディレクティブをインポートすると、ディレクティブ プロセッサの記述を検討してください。 各テンプレートでは、アセンブリとモデル ファイルの読み込みし、名前空間コンテキストを設定することができますが、ディレクティブ プロセッサを呼び出すことができます。 詳細については、次を参照してください。[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)です。  
   
- If you are writing the methods yourself:  
+ 作成する場合、メソッド自分で。  
   
--   If you are writing a runtime text template, write a partial class definition that has the same name as your runtime text template. Add the additional methods into this class.  
+-   実行時テキスト テンプレートを作成している場合は、実行時テキスト テンプレートと同じ名前のある部分クラス定義を作成します。 このクラスに追加のメソッドを追加します。  
   
--   Write a class feature control block `<#+ ... #>` in which you can declare methods, properties, and private classes. When the text template is compiled, it is transformed to a class. The standard control blocks `<#...#>` and text are transformed to a single method, and class feature blocks are inserted as separate members. For more information, see [Text Template Control Blocks](../modeling/text-template-control-blocks.md).  
+-   クラス機能コントロール ブロックを書き込む`<#+ ... #>`になることができますを宣言するメソッド、プロパティ、およびプライベート クラスです。 テキスト テンプレートのコンパイル時に、クラスに変換されます。 標準コントロール ブロック`<#...#>`とテキストが変換されて 1 つのメソッド、およびクラス機能ブロックは個別のメンバーとして挿入されます。 詳細については、次を参照してください。[テキスト テンプレートのコントロール ブロック](../modeling/text-template-control-blocks.md)です。  
   
-     Methods defined as class features can also include embedded text blocks.  
+     クラスの機能では、埋め込みのテキスト ブロックを含めることも、定義されているメソッド。  
   
-     Consider placing class features in a separate file which you can `<#@include#>` into one or more template files.  
+     クラスの機能をすることができますが、別のファイルに置くことを検討`<#@include#>`を 1 つまたは複数のテンプレート ファイルにします。  
   
--   Write the methods in a separate assembly (class library) and call them from your template. Use the `<#@assembly#>` directive to load the assembly, and `<#@import#>` to set the namespace context. Note that in order to rebuild the assembly while you are debugging it, you might have to stop and restart [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. For more information, see [T4 Text Template Directives](../modeling/t4-text-template-directives.md).  
+-   別のアセンブリ (クラス ライブラリ) に、メソッドを記述し、テンプレートからこれらを呼び出します。 使用して、`<#@assembly#>`ディレクティブをアセンブリの読み込みと`<#@import#>`名前空間コンテキストを設定します。 注でデバッグするときに、アセンブリを再構築、するためにする場合もあることを停止して再起動[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 詳細については、次を参照してください。 [T4 テキスト テンプレート ディレクティブ](../modeling/t4-text-template-directives.md)です。  
   
-### <a name="generate-many-files-from-one-model-schema"></a>Generate many files from one model schema  
- If you often generate files from models that have the same XML or database schema:  
+### <a name="generate-many-files-from-one-model-schema"></a>1 つのモデル スキーマから多数のファイルを生成します。  
+ 多くの場合、ファイルを生成するには、同じ XML フォーマット ファイルまたはデータベースのスキーマを持つモデルから: 場合  
   
--   Consider writing a directive processor. This enables you to replace multiple assembly statements and import statements in each template with a single custom directive. The directive processor can also load and parse the model file. For more information, see [Creating Custom T4 Text Template Directive Processors](../modeling/creating-custom-t4-text-template-directive-processors.md).  
+-   ディレクティブ プロセッサの作成を検討します。 これにより、アセンブリの複数のステートメントを置換し、1 つのカスタム ディレクティブでは、各テンプレート内のステートメントをインポートすることができます。 ディレクティブ プロセッサは読み込むし、モデル ファイルを解析できます。 詳細については、次を参照してください。[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)です。  
   
-### <a name="generate-files-from-a-complex-model"></a>Generate files from a complex model  
+### <a name="generate-files-from-a-complex-model"></a>複雑なモデルからファイルを生成します。  
   
--   Consider creating a domain-specific language (DSL) to represent the model. This makes it much easier to write the templates, because you use types and properties that reflect the names of the elements in your model. You do not have to parse the file or navigate XML nodes. For example:  
+-   ドメイン固有言語 (DSL) を表す、モデルを作成することを検討します。 これはより簡単、テンプレートを記述する型と、モデル内の要素の名前を反映するプロパティを使用するためです。 ファイルを解析するか、XML ノード間を移動する必要はありません。 例:  
   
      `foreach (Book book in this.Library) { ... }`  
   
-     For more information, see [Getting Started with Domain-Specific Languages](../modeling/getting-started-with-domain-specific-languages.md) and [Generating Code from a Domain-Specific Language](../modeling/generating-code-from-a-domain-specific-language.md).  
+     詳細については、次を参照してください。[ドメイン固有言語の使用を開始する](../modeling/getting-started-with-domain-specific-languages.md)と[ドメイン固有言語から、コードの生成](../modeling/generating-code-from-a-domain-specific-language.md)です。  
   
-### <a name="get-data-from-includevsprvscode-qualityincludesvsprvsmdmd"></a>Get data from [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
- To use services provided in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], by set the `hostSpecific` attribute and load the `EnvDTE` assembly. For example:  
+### <a name="get-data-from-includevsprvscode-qualityincludesvsprvsmdmd"></a>データを取得します。[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
+ 提供されるサービスを使用する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、セットで、`hostSpecific`属性と負荷、`EnvDTE`アセンブリ。 例:  
   
 ```csharp  
 <#@ template hostspecific="true" language="C#" #>  
@@ -110,36 +110,36 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
   
 ```  
   
-### <a name="execute-text-templates-in-the-build-process"></a>Execute text templates in the build process  
+### <a name="execute-text-templates-in-the-build-process"></a>ビルド プロセスでテキスト テンプレートを実行します。  
   
--   For more information, see [Code Generation in a Build Process](../modeling/code-generation-in-a-build-process.md).  
+-   詳細については、次を参照してください。[ビルド プロセスでのコード生成](../modeling/code-generation-in-a-build-process.md)です。  
   
-## <a name="more-general-questions"></a>More general questions  
+## <a name="more-general-questions"></a>一般的な質問  
   
-###  <a name="starting"></a> What is the best way to start writing a text template?  
+###  <a name="starting"></a>テキスト テンプレートの作成を開始する最善の方法とは何ですか。  
   
-1.  Write a specific example of the generated file.  
+1.  生成されたファイルの具体的な例を記述します。  
   
-2.  Turn it into a text template by inserting the `<#@template #>` directive, and the directives and code that are required to load the input file or model.  
+2.  挿入することで、テキスト テンプレートを変換すること、`<#@template #>`ディレクティブおよびディレクティブとコードを入力ファイルまたはモデルを読み込むために必要なです。  
   
-3.  Progressively replace parts of the file with expression and code blocks.  
+3.  式とコード ブロックで、ファイルの部分が徐々 に置き換えます。  
   
-### <a name="what-is-a-model"></a>What is a "model"?  
+### <a name="what-is-a-model"></a>「モデル」とは何ですか。  
   
--   The input read by your template. It could be in a file or in a database. It might be XML, or a Visio drawing, or a domain-specific language (DSL), or a UML model, or it could be plain text. It could be spread across several files. Typically more than one template reads one model.  
+-   テンプレートによって読み取られた入力します。 ファイルまたはデータベースがある可能性があります。 XML、または Visio 図面やドメイン固有言語 (DSL) または UML モデル、またはプレーン テキストがある可能性があります。 これは、いくつかのファイルに分散可能性があります。 通常 1 つ以上のテンプレートは、1 つのモデルを読み取ります。  
   
-     The implication of the term "model" is that it represents some aspect of your business more directly than the generated program code or other files. For example, it might represent the plan of a communications network that your generated software will supervise.  
+     用語「モデル」の意味は、ビジネスを生成するプログラム コードやその他のファイルよりも、直接の一部の側面を表すです。 たとえば、生成されるソフトウェアを管理する通信ネットワークの計画を表すことができます。  
   
-### <a name="what-is-the-benefit-of-using-text-templates"></a>What is the benefit of using text templates?  
- Typically, you generate multiple code or other files from one model. The model represents the requirements more directly than the generated code. It omits implementation detail and is written in terms of the requirements, rather than the code. When the requirements change - as they usually do - you can update the model more easily and more reliably than the different parts of the program code.  
+### <a name="what-is-the-benefit-of-using-text-templates"></a>テキスト テンプレートを使用する利点は何ですか。  
+ 通常、1 つのモデルから複数のコードまたはその他のファイルを生成します。 モデルでは、生成されたコードよりも直接の要件を表します。 実装の詳細を省略して、コードではなく、要件の観点から書き込まれます。 要件の変更 - のように通常の場合より簡単かつより、プログラム コードの異なる部分も確実にモデルを更新できます。  
   
- Code generation is therefore a valuable tool from the perspective of agile development methods.  
+ コードの生成は、アジャイル開発方法の観点から重要なツールではこのためです。  
   
-### <a name="what-best-practices-are-there-for-text-templates"></a>What "best practices" are there for text templates?  
+### <a name="what-best-practices-are-there-for-text-templates"></a>どのような「ベスト プラクティス」は、テキスト テンプレートにはありますか。  
   
--   For more information, see [Guidelines for Writing T4 Text Templates](../modeling/guidelines-for-writing-t4-text-templates.md).  
+-   詳細については、次を参照してください。 [T4 テキスト テンプレートの記述に関するガイドライン](../modeling/guidelines-for-writing-t4-text-templates.md)です。  
   
-### <a name="what-is-t4"></a>What is "T4"?  
+### <a name="what-is-t4"></a>"T4"とは何ですか。  
   
--   Another name for the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] text template capabilities described here. The previous version, which was not published, was an abbreviation for "Text Template Transformation".
+-   別の名前、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキスト テンプレートの機能がここで説明します。 パブリッシュされておらず、以前のバージョンでは、「テキスト テンプレート変換」の省略形はでした。
 

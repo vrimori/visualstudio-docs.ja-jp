@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::CanSetNextStatement | Microsoft Docs
+title: "IDebugThread2::CanSetNextStatement |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 8ffa88255d8f61e8908a6ec33e04e56a03ab6405
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugthread2cansetnextstatement"></a>IDebugThread2::CanSetNextStatement
-Determines whether the current instruction pointer can be set to the given stack frame.  
+特定のスタック フレームを現在の命令ポインターを設定できるかどうかを決定します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT CanSetNextStatement (   
@@ -56,20 +56,20 @@ int CanSetNextStatement (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `pStackFrame`  
- Reserved for future use; set to a null value. If this is a null value, use the current stack frame.  
+ 将来使用するために予約されていますnull 値に設定されます。 Null 値の場合は、現在のスタック フレームを使用します。  
   
  `pCodeContext`  
- [in] An [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) object that describes the code location about to be executed and its context.  
+ [in][IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)実行されるコードの場所を記述するオブジェクトとそのコンテキスト。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- If this method returns `S_OK`, then call the [SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md) method to actually set the next statement.  
+## <a name="remarks"></a>コメント  
+ このメソッドが戻る場合`S_OK`、まず、 [SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md)を実際には、次のステートメントを設定するメソッド。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   

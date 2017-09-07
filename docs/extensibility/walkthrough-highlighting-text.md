@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Highlighting Text | Microsoft Docs'
+title: "チュートリアル: テキストを強調表示 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,31 +32,31 @@ ms.translationtype: MT
 ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
 ms.openlocfilehash: 6d18e69f248f4c046c51dd2dd1189c46369a0f7e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-highlighting-text"></a>Walkthrough: Highlighting Text
-You can add different visual effects to the editor by creating Managed Extensibility Framework (MEF) component parts. This walkthrough shows how to highlight every occurrence of the current word in a text file. If a word occurs more than one time in a text file, and you position the caret in one occurrence, every occurrence is highlighted.  
+# <a name="walkthrough-highlighting-text"></a>チュートリアル: テキストを強調表示
+エディターにさまざまな視覚効果を追加するには、Managed Extensibility Framework (MEF) コンポーネント パーツを作成します。 このチュートリアルでは、テキスト ファイルの現在の単語のすべての出現箇所を強調表示する方法を示します。 Word では、テキスト ファイルの 1 つ以上の時間が 1 つにキャレットを配置する場合は、すべての出現箇所が強調表示されます。  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>必須コンポーネント  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
   
-## <a name="creating-a-mef-project"></a>Creating a MEF Project  
+## <a name="creating-a-mef-project"></a>MEF プロジェクトを作成します。  
   
-1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `HighlightWordTest`.  
+1.  C# の場合は、VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を付けます`HighlightWordTest`です。  
   
-2.  Add an Editor Classifier item template to the project. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2.  エディター分類子項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディター項目テンプレートに、拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
-3.  Delete the existing class files.  
+3.  既存のクラス ファイルを削除します。  
   
-## <a name="defining-a-textmarkertag"></a>Defining a TextMarkerTag  
- The first step in highlighting text is to subclass <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> and define its appearance.  
+## <a name="defining-a-textmarkertag"></a>TextMarkerTag を定義します。  
+ テキストを強調表示の最初の手順は、サブクラスに<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>し、その外観を定義します。  
   
-#### <a name="to-define-a-textmarkertag-and-a-markerformatdefinition"></a>To define a TextMarkerTag and a MarkerFormatDefinition  
+#### <a name="to-define-a-textmarkertag-and-a-markerformatdefinition"></a>TextMarkerTag および、MarkerFormatDefinition を定義するには  
   
-1.  Add a class file and name it **HighlightWordTag**.  
+1.  クラス ファイルを追加し、名前を付けます**HighlightWordTag**です。  
   
-2.  Add the following references:  
+2.  次の参照を追加します。  
   
     1.  Microsoft.VisualStudio.CoreUtility  
   
@@ -74,7 +74,7 @@ You can add different visual effects to the editor by creating Managed Extensibi
   
     8.  Presentation.Framework  
   
-3.  Import the following namespaces.  
+3.  次の名前空間をインポートします。  
   
     ```csharp  
     using System;  
@@ -91,7 +91,7 @@ You can add different visual effects to the editor by creating Managed Extensibi
     using System.Windows.Media;  
     ```  
   
-4.  Create a class that inherits from <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> and name it `HighlightWordTag`.  
+4.  継承するクラスを作成する<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>し名前を付けます`HighlightWordTag`です。  
   
     ```csharp  
     internal class HighlightWordTag : TextMarkerTag  
@@ -100,11 +100,11 @@ You can add different visual effects to the editor by creating Managed Extensibi
     }  
     ```  
   
-5.  Create a second class that inherits from <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition>, and name it HighlightWordFormatDefinition. In order to use this format definition for your tag, you must export it with the following attributes:  
+5.  継承する 2 番目のクラスを作成する<xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition>、HighlightWordFormatDefinition 名前を付けます。 で、タグをこの形式の定義を使用するためには、次の属性を持つエクスポートする必要があります。  
   
-    -   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: tags use this to reference this format  
+    -   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: タグを使用してこれをこの形式を参照するには  
   
-    -   <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: this causes the format to appear in the UI  
+    -   <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: これにより、UI に表示する形式  
   
     ```csharp  
   
@@ -117,7 +117,7 @@ You can add different visual effects to the editor by creating Managed Extensibi
     }  
     ```  
   
-6.  In the constructor for HighlightWordFormatDefinition, define its display name and appearance. The Background property defines the fill color, while the Foreground property defines the border color.  
+6.  HighlightWordFormatDefinition のコンス トラクターでは、その表示名と外観を定義します。 バック グラウンド プロパティは、前景色プロパティ境界線の色を定義するときに、塗りつぶしの色を定義します。  
   
     ```csharp  
     public HighlightWordFormatDefinition()  
@@ -129,18 +129,18 @@ You can add different visual effects to the editor by creating Managed Extensibi
     }  
     ```  
   
-7.  In the constructor for HighlightWordTag, pass in the name of the format definition you just created.  
+7.  HighlightWordTag のコンス トラクターで作成した形式の定義の名前を渡します。  
   
     ```  
     public HighlightWordTag() : base("MarkerFormatDefinition/HighlightWordFormatDefinition") { }  
     ```  
   
-## <a name="implementing-an-itagger"></a>Implementing an ITagger  
- The next step is to implement the <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> interface. This interface assigns, to a given text buffer, tags that provide text highlighting and other visual effects.  
+## <a name="implementing-an-itagger"></a>ITagger を実装します。  
+ 次の手順を実装するのには、<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>インターフェイスです。 このインターフェイスは、テキストを指定したバッファー、ストの強調表示を提供するタグやその他の視覚効果に割り当てます。  
   
-#### <a name="to-implement-a-tagger"></a>To implement a tagger  
+#### <a name="to-implement-a-tagger"></a>タガーを実装するには  
   
-1.  Create a class that implements <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> of type `HighlightWordTag`, and name it `HighlightWordTagger`.  
+1.  実装するクラスを作成する<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>型の`HighlightWordTag`、名前を付けます`HighlightWordTagger`です。  
   
     ```csharp  
     internal class HighlightWordTagger : ITagger<HighlightWordTag>  
@@ -149,23 +149,23 @@ You can add different visual effects to the editor by creating Managed Extensibi
     }  
     ```  
   
-2.  Add the following private fields and properties to the class:  
+2.  クラスに次のプライベート フィールドやプロパティを追加します。  
   
-    -   An <xref:Microsoft.VisualStudio.Text.Editor.ITextView>, which corresponds to the current text view.  
+    -   <xref:Microsoft.VisualStudio.Text.Editor.ITextView>、現在のテキスト ビューに対応します。  
   
-    -   An <xref:Microsoft.VisualStudio.Text.ITextBuffer>, which corresponds to the text buffer that underlies the text view.  
+    -   <xref:Microsoft.VisualStudio.Text.ITextBuffer>、テキスト ビューの基になるテキスト バッファーに対応します。  
   
-    -   An <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService>, which is used to find text.  
+    -   <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService>テキストを検索に使用されます。  
   
-    -   An <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>, which has methods for navigating within text spans.  
+    -   <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>を持つテキスト範囲内で移動するためのメソッドです。  
   
-    -   A <xref:Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection>, which contains the set of words to highlight.  
+    -   A<xref:Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection>単語を強調表示のセットが含まれています。  
   
-    -   A <xref:Microsoft.VisualStudio.Text.SnapshotSpan>, which corresponds to the current word.  
+    -   A <xref:Microsoft.VisualStudio.Text.SnapshotSpan>、これは、現在の単語に相当します。  
   
-    -   A <xref:Microsoft.VisualStudio.Text.SnapshotPoint>, which corresponds to the current position of the caret.  
+    -   A <xref:Microsoft.VisualStudio.Text.SnapshotPoint>、これは、そのキャレットの現在の位置に相当します。  
   
-    -   A lock object.  
+    -   ロック オブジェクトです。  
   
     ```csharp  
     ITextView View { get; set; }  
@@ -179,7 +179,7 @@ You can add different visual effects to the editor by creating Managed Extensibi
   
     ```  
   
-3.  Add a constructor that initializes the properties listed earlier and adds <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> and <xref:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged> event handlers.  
+3.  以前に一覧表示プロパティを初期化し、追加するコンス トラクターを追加<xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged>と<xref:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged>イベント ハンドラー。  
   
     ```csharp  
     public HighlightWordTagger(ITextView view, ITextBuffer sourceBuffer, ITextSearchService textSearchService,  
@@ -197,7 +197,7 @@ You can add different visual effects to the editor by creating Managed Extensibi
   
     ```  
   
-4.  The event handlers both call the `UpdateAtCaretPosition` method.  
+4.  両方を呼び出すイベント ハンドラー、`UpdateAtCaretPosition`メソッドです。  
   
     ```csharp  
     void ViewLayoutChanged(object sender, TextViewLayoutChangedEventArgs e)  
@@ -215,11 +215,11 @@ You can add different visual effects to the editor by creating Managed Extensibi
     }  
     ```  
   
-5.  You must also add a `TagsChanged` event that will be called by the update method.  
+5.  追加することも必要があります、`TagsChanged`更新メソッドが呼び出されるイベント。  
   
-     [!code-csharp[VSSDKHighlightWordTest#10](../extensibility/codesnippet/CSharp/walkthrough-highlighting-text_1.cs)]  [!code-vb[VSSDKHighlightWordTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-highlighting-text_1.vb)]  
+     [!code-csharp[VSSDKHighlightWordTest 10](../extensibility/codesnippet/CSharp/walkthrough-highlighting-text_1.cs)][!code-vb[VSSDKHighlightWordTest 10  ](../extensibility/codesnippet/VisualBasic/walkthrough-highlighting-text_1.vb)]  
   
-6.  The `UpdateAtCaretPosition()` method finds every word in the text buffer that is identical to the word where the cursor is positioned and constructs a list of <xref:Microsoft.VisualStudio.Text.SnapshotSpan> objects that correspond to the occurrences of the word. It then calls `SynchronousUpdate`, which raises the `TagsChanged` event.  
+6.  `UpdateAtCaretPosition()`メソッドは、カーソルが配置されの一覧の構築の単語と同じであるテキスト バッファー内のすべての単語を検索<xref:Microsoft.VisualStudio.Text.SnapshotSpan>単語の出現回数に対応するオブジェクト。 呼び出して`SynchronousUpdate`、どのが発生し、`TagsChanged`イベント。  
   
     ```csharp  
     void UpdateAtCaretPosition(CaretPosition caretPosition)  
@@ -301,7 +301,7 @@ You can add different visual effects to the editor by creating Managed Extensibi
   
     ```  
   
-7.  The `SynchronousUpdate` performs a synchronous update on the `WordSpans` and `CurrentWord` properties, and raises the `TagsChanged` event.  
+7.  `SynchronousUpdate`に対して同期更新を実行、`WordSpans`と`CurrentWord`プロパティ、およびが発生し、`TagsChanged`イベント。  
   
     ```vb  
     void SynchronousUpdate(SnapshotPoint currentRequest, NormalizedSnapshotSpanCollection newSpans, SnapshotSpan? newCurrentWord)  
@@ -321,11 +321,11 @@ You can add different visual effects to the editor by creating Managed Extensibi
     }  
     ```  
   
-8.  You must implement the <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> method. This method takes a collection of <xref:Microsoft.VisualStudio.Text.SnapshotSpan> objects and returns an enumeration of tag spans.  
+8.  実装する必要があります、<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A>メソッドです。 このメソッドのコレクションを受け取って<xref:Microsoft.VisualStudio.Text.SnapshotSpan>オブジェクトおよびタグの範囲の列挙を返します。  
   
-     In C#, implement this method as a yield iterator, which enables lazy evaluation (that is, evaluation of the set only when individual items are accessed) of the tags. In Visual Basic, add the tags to a list and return the list.  
+     C# の場合は、タグの yield 反復子は、により、レイジー評価 (つまり、個々 の項目にアクセスする場合にのみ、セットの評価) としてこのメソッドを実装します。 Visual basic では、一覧に、タグを追加し、一覧を返します。  
   
-     Here the method returns a <xref:Microsoft.VisualStudio.Text.Tagging.TagSpan%601> object that has a "blue" <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>, which provides a blue background.  
+     ここで、メソッドが返されます、 <xref:Microsoft.VisualStudio.Text.Tagging.TagSpan%601> "blue"を持つオブジェクト<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>、青色の背景を提供します。  
   
     ```csharp  
     public IEnumerable<ITagSpan<HighlightWordTag>> GetTags(NormalizedSnapshotSpanCollection spans)  
@@ -364,15 +364,15 @@ You can add different visual effects to the editor by creating Managed Extensibi
     }  
     ```  
   
-## <a name="creating-a-tagger-provider"></a>Creating a Tagger Provider  
- To create your tagger, you must implement a <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>. This class is a MEF component part, so you must set the correct attributes so that this extension is recognized.  
+## <a name="creating-a-tagger-provider"></a>タガー プロバイダーを作成します。  
+ 実装する必要があります、タガーを作成するには<xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>します。 このクラスは MEF コンポーネント パーツはため、この拡張機能が認識されるように、適切な属性を設定する必要があります。  
   
 > [!NOTE]
->  For more information about MEF, see [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).  
+>  MEF の詳細については、次を参照してください。 [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)です。  
   
-#### <a name="to-create-a-tagger-provider"></a>To create a tagger provider  
+#### <a name="to-create-a-tagger-provider"></a>タガー プロバイダーを作成するには  
   
-1.  Create a class named `HighlightWordTaggerProvider` that implements <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>, and export it with a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> of "text" and a <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> of <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>.  
+1.  という名前のクラスを作成`HighlightWordTaggerProvider`を実装する<xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>でエクスポートし、 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text"と<xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>の<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>します。  
   
     ```csharp  
     [Export(typeof(IViewTaggerProvider))]  
@@ -382,7 +382,7 @@ You can add different visual effects to the editor by creating Managed Extensibi
     { }  
     ```  
   
-2.  You must import two editor services, the <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService> and the <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, to instantiate the tagger.  
+2.  2 つのエディター サービスをインポートする必要があります、<xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService>と<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>のタガーのインスタンスを作成します。  
   
     ```csharp  
     [Import]  
@@ -393,7 +393,7 @@ You can add different visual effects to the editor by creating Managed Extensibi
   
     ```  
   
-3.  Implement the <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider.CreateTagger%2A> method to return an instance of `HighlightWordTagger`.  
+3.  実装、<xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider.CreateTagger%2A>のインスタンスを返すメソッドを`HighlightWordTagger`です。  
   
     ```csharp  
     public ITagger<T> CreateTagger<T>(ITextView textView, ITextBuffer buffer) where T : ITag  
@@ -409,18 +409,18 @@ You can add different visual effects to the editor by creating Managed Extensibi
     }  
     ```  
   
-## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
- To test this code, build the HighlightWordTest solution and run it in the experimental instance.  
+## <a name="building-and-testing-the-code"></a>コードのビルドとテスト  
+ このコードをテストするには、HighlightWordTest ソリューションをビルドし、実験用インスタンスで実行します。  
   
-#### <a name="to-build-and-test-the-highlightwordtest-solution"></a>To build and test the HighlightWordTest solution  
+#### <a name="to-build-and-test-the-highlightwordtest-solution"></a>ビルドし、HighlightWordTest ソリューションをテストするには  
   
-1.  Build the solution.  
+1.  ソリューションをビルドします。  
   
-2.  When you run this project in the debugger, a second instance of Visual Studio is instantiated.  
+2.  デバッガーでこのプロジェクトを実行すると、Visual Studio の 2 つ目のインスタンスがインスタンス化されます。  
   
-3.  Create a text file and type some text in which the words are repeated, for example, "hello hello hello".  
+3.  テキスト ファイルを作成し、たとえば、「こんにちはこんにちはこんにちは」で、単語が繰り返されるテキストを入力します。  
   
-4.  Position the cursor in one of the occurrences of "hello". Every occurrence should be highlighted in blue.  
+4.  「こんにちは」の出現回数は、のいずれかでカーソルを置きます。 すべての出現箇所は、青で強調表示する必要があります。  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: Linking a Content Type to a File Name Extension](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+## <a name="see-also"></a>関連項目  
+ [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

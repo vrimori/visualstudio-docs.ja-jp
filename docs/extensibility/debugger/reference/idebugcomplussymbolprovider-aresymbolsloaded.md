@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::AreSymbolsLoaded | Microsoft Docs
+title: "IDebugComPlusSymbolProvider::AreSymbolsLoaded |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 065a32112c65e9730c5c492e954de5c1415ad3b5
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcomplussymbolprovideraresymbolsloaded"></a>IDebugComPlusSymbolProvider::AreSymbolsLoaded
-Determines if the debug symbols are loaded for the specified module given the application domain identifier.  
+アプリケーション ドメイン id が指定された、指定されたモジュールのデバッグ シンボルが読み込まれるかどうかを判断します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT AreSymbolsLoaded (  
@@ -55,18 +55,18 @@ int AreSymbolsLoaded (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `ulAppDomainID`  
- [in] Identifier for the application domain.  
+ [in]アプリケーション ドメインの識別子。  
   
  `guidModule`  
- [in] Unique identifier for the module.  
+ [in]モジュールの一意の識別子。  
   
-## <a name="return-value"></a>Return Value  
- If the debug symbols are loaded, returns `S_OK`; otherwise, returns `S_FALSE`.  
+## <a name="return-value"></a>戻り値  
+ デバッグ シンボルが読み込まれ場合を返します`S_OK`、それ以外を返します`S_FALSE`です。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## <a name="example"></a>例  
+ 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスです。  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::AreSymbolsLoaded(  
@@ -88,5 +88,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

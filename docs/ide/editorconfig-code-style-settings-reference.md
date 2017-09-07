@@ -1,5 +1,5 @@
 ---
-title: .NET Coding Convention Settings For EditorConfig | Microsoft Docs
+title: "EditorConfig の .NET コーディング規則の設定 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/14/2016
 ms.reviewer: 
@@ -34,639 +34,639 @@ ms.translationtype: HT
 ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
 ms.openlocfilehash: ced437215b48c76e6df99699b4c6f9c916452d14
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 
-# <a name="net-coding-convention-settings-for-editorconfig"></a>.NET Coding Convention Settings For EditorConfig
-.NET coding conventions are configured using an [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options) file. EditorConfig files allow you to **enable/disable individual .NET coding conventions** and **configure the degree at which you want the convention enforced** (via a severity level). To learn more about how to use EditorConfig to enforce consistency on your codebase, read [this article](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options).
+# <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
+.NET コーディング規則は [EditorConfig](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options) ファイルを使用して構成します。 EditorConfig ファイルでは、**個々の .NET コーディング規則を有効化/無効化**し、(重要度レベルで) **規則を適用する程度を構成**することができます。 EditorConfig を使用して、コードベースに整合性を適用する方法の詳細については、[こちらの記事](https://docs.microsoft.com/en-us/visualstudio/ide/create-portable-custom-editor-options)を参照してください。
 
-There are three supported .NET coding convention categories:
-- **[Language Conventions](#language)** are rules pertaining to the C# or Visual Basic language, for example, `var`/explicit type, use expression-bodied member.
-- **[Formatting Rules](#formatting)** are rules regarding the layout and structure of your code in order to make it easier to read, for example, Allman braces, spaces in control blocks.
-- **[Naming Conventions](#naming)** are rules respecting the way objects are named, for example, `async` methods must end in "Async". 
+サポートされている .NET コーディング規則には次の 3 つのカテゴリがあります。
+- **[言語規則](#language)**: C# または Visual Basic 言語に関する規則です。たとえば、`var`/明示型、式形式メンバーを使用するなどです。
+- **[書式規則](#formatting)**: コードを読みやすくするためのレイアウトや構造に関する規則です。たとえば、制御ブロックの Allman スタイルの中かっこ、スペースなどです。
+- **[名前付け規則](#naming)**: オブジェクトに名前を付ける方法に関する規則です。たとえば、`async` メソッドは "Async" で終わる必要があるなどです。 
 
-# <a name="language"> Language Conventions </a>
-## <a name="overview"></a>Overview
-**Rule Format:**
+# <a name="language"> 言語規則</a>
+## <a name="overview"></a>概要
+**規則形式:**
 `options_name = false|true : none|suggestion|warning|error`
 
-For code style option, you must specify **true** (prefer this option) or **false** (do not prefer this option), a colon (`:`), and a severity (`none`, `silent`, `suggestion`, `warning`, or `error`). Severity means the level of enforcement for that style you want in your code base.
+コード スタイル オプションには、**true** (このオプションを使用する) または **false** (このオプションを使用しない)、コロン (`:`)、重要度 (`none`、`silent`、`suggestion`、`warning`、または `error`) を指定する必要があります。 重要度は、コード ベースでそのスタイルに適用する強制レベルを意味します。
 
-`none` and `silent` are synonymous and mean that no indication of any kind should be shown to the user. This has the effect of disabling this rule.
+`none` および `silent` は同義であり、ユーザーには何も表示されないことを意味します。 この規則を無効化する効果があります。
 
-Severity | effect
+重要度 | 効果
 ------------ | -------------
-none/silent | Do not show anything to the user when this style is not being followed, however code generation features generate in this style. 
-suggestion | When this style is not being followed, show it to the user as a suggestion (underlying dots on the first two characters).
-warning | When this style is not being followed, show a compiler warning.
-error | When this style is not being followed, show a compiler error.
+none/silent | このスタイルに準拠していないとき、ユーザーには何も表示されませんが、コード生成機能はこのスタイルで生成します。 
+修正候補 | このスタイルに準拠していないとき、修正候補としてユーザーに表示されます (最初の 2 文字の下に点線が付きます)。
+警告 | このスタイルに準拠していないとき、コンパイラの警告が表示されます。
+エラー | このスタイルに準拠していないとき、コンパイラ エラーが表示されます。
 
-## <a name="net-language-convention-options"></a>.NET Language Convention Options
+## <a name="net-language-convention-options"></a>.NET 言語規則のオプション
 
-- **[.NET Code Style Settings](#this_and_me)**
-    - ["This." and "Me." Qualification](#this_and_me)
-        - [Fields](#this_and_me_fields)
-        - [Properties](#this_and_me_properties)
-        - [Methods](#this_and_me_methods)
-        - [Events](#this_and_me_events)
-    - [Language keywords (int, string, etc.) vs framework type names for type references](#language_keywords)
-        - [Locals, parameters, and members](#language_keywords_variables)
-        - [Member access expressions](#language_keywords_member_access)
-    - [Expression-level Preferences](#expression_level)
-        - [Object initializers](#expression_level_object_initializers)
-        - [Collection initializers](#expression_level_collection_initializers)
-        - [Explicit tuple names](#expression_level_tuple_names)
-        - [Coalescing expressions in "null" checking](#expression_level_null_checking)
-        - [Null propagation in "null" checking](#expression_level_null_propogation)
-- **[CSharp Code Style Settings](#csharp_codestyle)**
+- **[.NET コード スタイルの設定](#this_and_me)**
+    - ["This." と "Me."修飾](#this_and_me)
+        - [フィールド](#this_and_me_fields)
+        - [プロパティ](#this_and_me_properties)
+        - [メソッド](#this_and_me_methods)
+        - [イベント](#this_and_me_events)
+    - [型参照のための言語キーワードの型名 (int や string など) とフレームワークの型名](#language_keywords)
+        - [ローカル、パラメーター、メンバー](#language_keywords_variables)
+        - [メンバー アクセス式](#language_keywords_member_access)
+    - [式レベル基本設定](#expression_level)
+        - [オブジェクト初期化子](#expression_level_object_initializers)
+        - [コレクション初期化子](#expression_level_collection_initializers)
+        - [明示的なタプル名](#expression_level_tuple_names)
+        - ["null" 検査の結合式](#expression_level_null_checking)
+        - ["null" 検査の Null 値反映](#expression_level_null_propogation)
+- **[CSharp コード スタイルの設定](#csharp_codestyle)**
     - ["var"](#var)
-        - ["var" for built-in types](#var_built_in)
-        - ["var" when type is apparent](#var_apparent)
-        - ["var" elsewhere](#var_elsewhere)
-    - [Expression-bodied members](#expression_body)
-        - [Methods](#expression_bodied_members_methods)
-        - [Constructors](#expression_bodied_members_constructors)
-        - [Operators](#expression_bodied_members_operators)
-        - [Properties](#expression_bodied_members_properties)
-        - [Indexers](#expression_bodied_members_indexers)
-        - [Accessors](#expression_bodied_members_accessors)
-    - [Pattern matching](#pattern_matching)
-        - ["is" with "cast" checking](#pattern_matching_is_cast)
-        - ["as" with "null" checking](#pattern_matching_as_null)
-    - [Inlined variable declarations](#inlined_variable_declarations)
-    - [Expression-level Preferences](#expression_level_csharp) -[Simplify `default` expressions](#expression_level_default)
-    - ["Null" Checking Preferences](#null_checking)
-        - [Throw-expressions](#null_checking_throw_expressions)
-        - [Conditional delegate calls](#null_checking_conditional_delegate_calls)
-    - [Code Block Preferences](#code_block)
-        - [Prefer braces](#prefer_braces)
+        - [組み込み型の "var"](#var_built_in)
+        - [型が明らかな場合の "var"](#var_apparent)
+        - [それ以外の場所の "var"](#var_elsewhere)
+    - [式形式のメンバー](#expression_body)
+        - [メソッド](#expression_bodied_members_methods)
+        - [コンストラクター](#expression_bodied_members_constructors)
+        - [演算子](#expression_bodied_members_operators)
+        - [プロパティ](#expression_bodied_members_properties)
+        - [インデクサー](#expression_bodied_members_indexers)
+        - [アクセサー](#expression_bodied_members_accessors)
+    - [パターン マッチング](#pattern_matching)
+        - ["cast" 検査の "is"](#pattern_matching_is_cast)
+        - ["null" 検査の "as"](#pattern_matching_as_null)
+    - [インライン変数宣言](#inlined_variable_declarations)
+    - [式レベルの基本設定](#expression_level_csharp) -[`default` 式の単純化](#expression_level_default)
+    - ["Null" 検査設定](#null_checking)
+        - [スロー式](#null_checking_throw_expressions)
+        - [条件付き代理呼び出し](#null_checking_conditional_delegate_calls)
+    - [コード ブロック基本設定](#code_block)
+        - [かっこを優先する](#prefer_braces)
 
-## <a name="this_and_me">"This." and "Me." Qualification</a>
-### <a name="this_and_me_fields">Fields (IDE0003/IDE0009)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="this_and_me">"This." と "Me."修飾</a>
+### <a name="this_and_me_fields">フィールド (IDE0003/IDE0009)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|  `dotnet_style_qualification_for_field` | C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|  `dotnet_style_qualification_for_field` | C# および Visual Basic | false:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer all non-static fields used in non-static methods to be prefaced with `this.` in C# or `Me.` in Visual Basic. | **C#:** <br>`this.capacity = 0;` <br><br> **Visual Basic:** <br> `Me.capacity = 0`
-| False | Prefer all non-static fields used in non-static methods to not be prefaced with `this.` in C# or `Me.` in Visual Basic. | **C#:** <br>`capacity = 0;` <br><br> **Visual Basic:** <br>`capacity = 0`
+| True | 非静的メソッドで使用されるすべての非静的フィールドに C# の場合に `this.` を、Visual Basic の場合に `Me.` を接頭辞として付けます。 | **C#:** <br>`this.capacity = 0;` <br><br> **Visual Basic:** <br> `Me.capacity = 0`
+| False | 非静的メソッドで使用されるすべての非静的フィールドに C# の場合に `this.` を、Visual Basic の場合に `Me.` を接頭辞として付けません。 | **C#:** <br>`capacity = 0;` <br><br> **Visual Basic:** <br>`capacity = 0`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_field = false:suggestion
 ```
 
-### <a name="this_and_me_properties">Properties (IDE0003/IDE0009) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="this_and_me_properties">プロパティ (IDE0003/IDE0009)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_qualification_for_property`| C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|`dotnet_style_qualification_for_property`| C# および Visual Basic | false:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer the all non-static properties used in non-static methods to be prefaced with `this.` in C# or `Me.` in Visual Basic.| **C#:** <br>`this.ID = 0;` <br><br> **Visual Basic:** <br>`Me.ID = 0`
-| False | Prefer all non-static properties used in non-static methods to *not* be prefaced with `this.` in C# or `Me.` in Visual Basic. | **C#:** <br>`ID = 0;` <br><br> **Visual Basic:** <br> `ID = 0`
+| True | 非静的メソッドで使用されるすべての非静的プロパティに C# の場合に `this.` を、Visual Basic の場合に `Me.` を接頭辞として付けます。| **C#:** <br>`this.ID = 0;` <br><br> **Visual Basic:** <br>`Me.ID = 0`
+| False | 非静的メソッドで使用されるすべての非静的プロパティに C# の場合に `this.` を、Visual Basic の場合に `Me.` を接頭辞として*付けません*。 | **C#:** <br>`ID = 0;` <br><br> **Visual Basic:** <br> `ID = 0`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_property = false:suggestion
 ```
 
-### <a name="this_and_me_methods">Methods (IDE0003/IDE0009) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="this_and_me_methods">メソッド (IDE0003/IDE0009)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_qualification_for_method`| C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|`dotnet_style_qualification_for_method`| C# および Visual Basic | false:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer all non-static methods called from within non-static methods to be prefaced with `this.` in C# and `Me.` in VB.| **C#:** <br>`this.Display();` <br><br> **Visual Basic:** <br> `Me.Display()`
-| False | Prefer all non-static methods called from within non-static methods to *not* be prefaced with `this.`in C# and `Me.` in VB. | **C#:** <br>`Display();` <br><br> **Visual Basic:** <br> `Display()`
+| True | 非静的メソッド内から呼び出されるすべての非静的フィールドに C# の場合に `this.` を、VB の場合に `Me.` を接頭辞として付けます。| **C#:** <br>`this.Display();` <br><br> **Visual Basic:** <br> `Me.Display()`
+| False | 非静的メソッド内から呼び出されるすべての非静的フィールドに C# の場合に `this.` を、VB の場合に `Me.` を接頭辞として*付けません*。 | **C#:** <br>`Display();` <br><br> **Visual Basic:** <br> `Display()`
 
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_method = false:suggestion
 ```
 
-### <a name="this_and_me_events">Events (IDE0003/IDE0009) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="this_and_me_events">イベント (IDE0003/IDE0009)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_qualification_for_event`| C# and Visual Basic | false:none | Visual Studio 2017 RTW |
+|`dotnet_style_qualification_for_event`| C# および Visual Basic | false:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer all non-static events referenced from within non-static methods to be prefaced with `this.` in C# and `Me.` in VB.| **C#:** <br>`this.Elapsed += Handler;` <br><br> **Visual Basic:** <br> `AddHandler Me.Elapsed, AddressOf Handler`
-| False | Prefer all non-static events referenced from within non-static methods to *not* be prefaced with `this.`in C# and `Me.` in VB. | **C#:** <br>`Elapsed += Handler;` <br><br> **Visual Basic:** <br>`AddHandler Elapsed, AddressOf Handler`
+| True | 非静的メソッド内から参照されるすべての非静的イベントに C# の場合に `this.` を、VB の場合に `Me.` を接頭辞として付けます。| **C#:** <br>`this.Elapsed += Handler;` <br><br> **Visual Basic:** <br> `AddHandler Me.Elapsed, AddressOf Handler`
+| False | 非静的メソッド内から参照されるすべての非静的イベントに C# の場合に `this.` を、VB の場合に `Me.` を接頭辞として*付けません*。 | **C#:** <br>`Elapsed += Handler;` <br><br> **Visual Basic:** <br>`AddHandler Elapsed, AddressOf Handler`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_qualification_for_event = false:suggestion
 ```
 
-## <a name="language_keywords">Language keywords (int, string, etc.) vs framework type names for type references </a>
-### <a name="language_keywords_variables"> Locals, parameters, and members (IDE0012/IDE0014)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="language_keywords">型参照のための言語キーワードの型名 (int や string など) とフレームワークの型名</a>
+### <a name="language_keywords_variables"> ローカル、パラメーター、メンバー (IDE0012/IDE0014)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_predefined_type_for_locals_parameters_members`| C# and Visual Basic | true:none | Visual Studio 2017 RTW |
+|`dotnet_style_predefined_type_for_locals_parameters_members`| C# および Visual Basic | true:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | For locals, parameters and type members, prefer types that have a language keyword to represent them (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`) to use the keyword instead of the type name (`Int32`, `Int64`, etc.).| **C#:** <br>`private int _member;` <br><br> **Visual Basic:** `Private _member As Integer`
-| False | For locals, parameters and type members, prefer types that have a language keyword to represent them (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`) to use the type name (`Int32`, `Int64`, etc.) instead of the keyword.  | **C#:** <br>`private Int32 _member;` <br><br> **Visual Basic:** <br> `Private _member As Int32`
+| True | ローカル、パラメーター、型メンバーの場合、型を表す言語キーワードを持つ型を使用し (`int`、`double`、`float`、`short`、`long`、`decimal`、`string`)、型名 (`Int32` や `Int64` など) の代わりにキーワードを使用します。| **C#:** <br>`private int _member;` <br><br> **Visual Basic:** `Private _member As Integer`
+| False | ローカル、パラメーター、型メンバーの場合、型を表す言語キーワードを持つ型を使用し (`int`、`double`、`float`、`short`、`long`、`decimal`、`string`)、キーワードの代わりに型名 (`Int32` や `Int64` など) を使用します。  | **C#:** <br>`private Int32 _member;` <br><br> **Visual Basic:** <br> `Private _member As Int32`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 ``` 
 
-### <a name="language_keywords_member_access">Member access expressions (IDE0013/IDE0015)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="language_keywords_member_access">メンバー アクセス式 (IDE0013/IDE0015)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_predefined_type_for_member_access`| C# and Visual Basic | true:none | Visual Studio 2017 RTW |
+|`dotnet_style_predefined_type_for_member_access`| C# および Visual Basic | true:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer the keyword whenever a member-access expression is used on a type with a keyword representation (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`).| **C#:** <br>`var local = int.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Integer.MaxValue`
-| False | Prefer the type name whenever a member access expression is used on a type with a keyword representation (`int`, `double`, `float`, `short`, `long`, `decimal`, `string`). | **C#:** <br>`var local = Int32.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Int32.MaxValue`
+| True | キーワード表現 (`int`、`double`、`float`、`short`、`long`、`decimal`、`string`) のある型でメンバー アクセス式が使用されるとき、キーワードを使用します。| **C#:** <br>`var local = int.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Integer.MaxValue`
+| False | キーワード表現 (`int`、`double`、`float`、`short`、`long`、`decimal`、`string`) のある型でメンバー アクセス式が使用されるとき、型名を使用します。 | **C#:** <br>`var local = Int32.MaxValue;` <br><br> **Visual Basic:** <br> `Dim local = Int32.MaxValue`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_predefined_type_for_member_access = true:suggestion
 ``` 
 
-## <a name="expression_level">Expression-level Preferences</a>
-### <a name="expression_level_object_initializers">Object initializers (IDE0017)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="expression_level">式レベル基本設定</a>
+### <a name="expression_level_object_initializers">オブジェクト初期化子 (IDE0017)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_object_initializer`| C# and Visual Basic | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_object_initializer`| C# および Visual Basic | true:提案 | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer objects to be initialized using object initializers when possible.| **C#:** <br>`var c = new Customer(){ Age = 21 };` <br><br> **Visual Basic:** <br> `Dim c = New Customer() With { .Age = 21 }`
-| False | Prefer objects to *not* be initialized using object initializers. | **C#:** <br>`var c = new Customer();`<br>`c.Age = 21;` <br><br> **Visual Basic:** <br>`Dim c = new Customer() `<br>`c.Age = 21`
+| True | 可能であれば、オブジェクト初期化子を使用し、オブジェクトを初期化します。| **C#:** <br>`var c = new Customer(){ Age = 21 };` <br><br> **Visual Basic:** <br> `Dim c = New Customer() With { .Age = 21 }`
+| False | オブジェクト初期化子でオブジェクトを初期化*しません*。 | **C#:** <br>`var c = new Customer();`<br>`c.Age = 21;` <br><br> **Visual Basic:** <br>`Dim c = new Customer() `<br>`c.Age = 21`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_object_initializer = true:suggestion
 ``` 
 
-### <a name="expression_level_collection_initializers">Collection initializers (IDE0028)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_collection_initializers">コレクション初期化子 (IDE0028)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_collection_initializer`| C# and Visual Basic | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_collection_initializer`| C# および Visual Basic | true:提案 | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer collections to be initialized using collection initializers when possible.| **C#:** <br>`var list = new List<int>{ 1, 2, 3 };` <br><br> **Visual Basic:** <br> `Dim list = new List(Of Integer) From { 1, 2, 3}`
-| False | Prefer objects to *not* be initialized using collection initializers. | **C#:** <br>`var list = new List<int>();`<br>`list.Add(1);`<br>`list.Add(2);`<br>`list.Add(3);` <br><br> **Visual Basic:** <br>`Dim list = new List(Of Integer)`<br>`list.Add(1)`<br>`list.Add(2)`<br>`list.Add(3)`
+| True | 可能であれば、コレクション初期化子を使用してコレクションを初期化します。| **C#:** <br>`var list = new List<int>{ 1, 2, 3 };` <br><br> **Visual Basic:** <br> `Dim list = new List(Of Integer) From { 1, 2, 3}`
+| False | オブジェクト初期化子でコレクションを初期化*しません*。 | **C#:** <br>`var list = new List<int>();`<br>`list.Add(1);`<br>`list.Add(2);`<br>`list.Add(3);` <br><br> **Visual Basic:** <br>`Dim list = new List(Of Integer)`<br>`list.Add(1)`<br>`list.Add(2)`<br>`list.Add(3)`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_collection_initializer = true:suggestion
 ```
 
-### <a name="expression_level_tuple_names">Explicit tuple names (IDE0033)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_tuple_names">明示的なタプル名 (IDE0033)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_explicit_tuple_names`| C# 7.0+ and Visual Basic 15+ | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_explicit_tuple_names`| C# 7.0+ および Visual Basic 15+ | true:提案 | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer tuple names to ItemX properties.| **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.name;` <br><br> **Visual Basic:** <br> `Dim customer As (name As String, age As Integer) = GetCustomer()`<br>`Dim name = customer.name`
-| False | Prefer ItemX properties to tuple names. | **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.Item1;` <br><br> **Visual Basic:** <br>`Dim customer As (name As String, age As Integer) = GetCustomer()`<br> `Dim name = customer.Item1`
+| True | ItemX プロパティではなくタプル名を使用します。| **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.name;` <br><br> **Visual Basic:** <br> `Dim customer As (name As String, age As Integer) = GetCustomer()`<br>`Dim name = customer.name`
+| False | タプル名ではなく ItemX プロパティを使用します。 | **C#:** <br>`(string name, int age) customer = GetCustomer();`<br>`var name = customer.Item1;` <br><br> **Visual Basic:** <br>`Dim customer As (name As String, age As Integer) = GetCustomer()`<br> `Dim name = customer.Item1`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_explicit_tuple_names = true:suggestion
 ``` 
 
-### <a name="expression_level_null_checking">Coalescing expressions in "null" checking (IDE0029)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_null_checking">"null" 検査の結合式 (IDE0029)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_coalesce_expression`| C# and Visual Basic | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_coalesce_expression`| C# および Visual Basic | true:提案 | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer null coalescing expression to ternary operator checking.| **C#:** <br>`var v = x ?? y;` <br><br> **Visual Basic:** <br> `Dim v = If(x, y)`
-| False | Prefer ternary operator checking to null coalescing expression. | **C#:** <br>`var v = x != null ? x : y; // or`<br>`var v = x == null ? y : x;` <br><br> **Visual Basic:** <br>`Dim v = If(x Is Nothing, y, x) ' or`<br> `Dim v = If(x IsNot Nothing, x, y)`
+| True | 三項演算子検査ではなく null 結合式を使用します。| **C#:** <br>`var v = x ?? y;` <br><br> **Visual Basic:** <br> `Dim v = If(x, y)`
+| False | null 結合式ではなく三項演算子検査を使用します。 | **C#:** <br>`var v = x != null ? x : y; // or`<br>`var v = x == null ? y : x;` <br><br> **Visual Basic:** <br>`Dim v = If(x Is Nothing, y, x) ' or`<br> `Dim v = If(x IsNot Nothing, x, y)`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_coalesce_expression = true:suggestion
 ``` 
 
-### <a name="expression_level_null_propogation">Null propagation in "null" checking (IDE0031)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_level_null_propogation">"null" 検査の null 値反映 (IDE0031)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_style_null_propagation`| C# 6.0+ and Visual Basic 14+ | true:suggestion | Visual Studio 2017 RTW |
+|`dotnet_style_null_propagation`| C# 6.0+ および Visual Basic 14+ | true:提案 | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer to use null-conditional operator where possible.| **C#:** <br>`var v = o?.ToString();` <br><br> **Visual Basic:** <br> `Dim v = o?.ToString()`
-| False | Prefer to use ternary null checking where possible. | **C#:** <br>`var v = o == null ? null : o.ToString(); // or`<br>`var v = o != null ? o.String() : null;` <br><br> **Visual Basic:** <br>`Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or`<br> `Dim v = If(o IsNot Nothing, o.ToString(), Nothing)`
+| True | 可能であれば、null 条件演算子を使用します。| **C#:** <br>`var v = o?.ToString();` <br><br> **Visual Basic:** <br> `Dim v = o?.ToString()`
+| False | 可能であれば、三項 null 検査を使用します。 | **C#:** <br>`var v = o == null ? null : o.ToString(); // or`<br>`var v = o != null ? o.String() : null;` <br><br> **Visual Basic:** <br>`Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or`<br> `Dim v = If(o IsNot Nothing, o.ToString(), Nothing)`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_null_propagation = true:suggestion
 ``` 
 
-# <a name="csharp_codestyle">CSharp Code Style Settings</a>
-## <a name="var">"var" and Explicit Types</a>
-### <a name="var_built_in">"var" for built-in types (IDE0007, IDE0008)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+# <a name="csharp_codestyle">CSharp コード スタイルの設定</a>
+## <a name="var">"var" と明示型</a>
+### <a name="var_built_in">組み込み型の "var" (IDE0007、IDE0008)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_var_for_built_in_types`| C# | true:none | Visual Studio 2017 RTW |
+|`csharp_style_var_for_built_in_types`| C# | true:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer `var` is used for built-in system types such as `int`.| **C#:** <br>`var x = 5;`
-| False | Prefer `var` not be used for built-in system types such as `int`. | **C#:** <br>`int x = 5;`
+| True | `int` などの組み込みシステム型に `var` を使用します。| **C#:** <br>`var x = 5;`
+| False | `int` などの組み込みシステム型に `var` を使用しません。 | **C#:** <br>`int x = 5;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_var_for_built_in_types = true:suggestion
 ``` 
 
-### <a name="var_apparent">"var" when type is apparent (IDE0007, IDE0008)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="var_apparent">型が明らかな場合の "var" (IDE0007、IDE0008)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_var_when_type_is_apparent`| C# | true:none | Visual Studio 2017 RTW |
+|`csharp_style_var_when_type_is_apparent`| C# | true:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer `var` when the type is already mentioned on the right-hand side of a declaration expression.| **C#:** <br>`var obj = new C();`
-| False | Prefer to not use `var` when the type is already mentioned on the right-hand side of a declaration expression. | **C#:** <br>`C obj = new C();`
+| True | 宣言式の右側で型が既に述べられているときに `var` を使用します。| **C#:** <br>`var obj = new C();`
+| False | 宣言式の右側で型が既に述べられているときに `var` を使用しません。 | **C#:** <br>`C obj = new C();`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_var_when_type_is_apparent = true:suggestion
 ``` 
 
-### <a name="var_elsewhere">"var" elsewhere (IDE0007, IDE0008) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="var_elsewhere">それ以外の場所の "var" (IDE0007、IDE0008) </a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_var_elsewhere`| C# | true:none | Visual Studio 2017 RTW |
+|`csharp_style_var_elsewhere`| C# | true:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer `var` in all cases unless overridden by another code style rule.| **C#:** <br>`var f = this.Init();`
-| False | Prefer to not use var in all cases unless overridden by another code style rule.| **C#:** <br>`bool f = this.Init();`
+| True | 別のコード スタイル ルールにより上書きされない限り、あらゆるケースで `var` を使用します。| **C#:** <br>`var f = this.Init();`
+| False | 別のコード スタイル ルールにより上書きされない限りあらゆるケースで var を使用することは望みません。| **C#:** <br>`bool f = this.Init();`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_var_elsewhere = true:suggestion
 ``` 
 
-##<a name="expression_bodied_members">Expression-bodied Members</a>
-### <a name="expression_bodied_members_methods">Methods (IDE0022)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+##<a name="expression_bodied_members">式形式のメンバー</a>
+### <a name="expression_bodied_members_methods">メソッド (IDE0022)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_expression_bodied_methods`| C# 6.0+ | false:none | Visual Studio 2017 RTW |
+|`csharp_style_expression_bodied_methods`| C# 6.0+ | false:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for methods.| **C#:** <br>`public int GetAge() => this.Age;`
-| False | Do not prefer expression-bodied members for methods.| **C#:** <br>`public int GetAge() { return this.Age; }`
+| True | メソッドに式形式メンバーを使用します。| **C#:** <br>`public int GetAge() => this.Age;`
+| False | メソッドに式形式メンバーを使用しません。| **C#:** <br>`public int GetAge() { return this.Age; }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_methods = false:none
 ``` 
 
-### <a name="expression_bodied_members_constructors">Constructors (IDE0021)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_constructors">コンストラクター (IDE0021)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_expression_bodied_constructors`| C# 7.0+ | false:none | Visual Studio 2017 RTW |
+|`csharp_style_expression_bodied_constructors`| C# 7.0+ | false:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for constructors.| **C#:** <br>`public Customer(int age) => Age = age;`
-| False | Do not prefer expression-bodied members for constructors.| **C#:** <br>`public Customer(int age) { Age = age; }`
+| True | コンストラクターに式形式メンバーを使用します。| **C#:** <br>`public Customer(int age) => Age = age;`
+| False | コンストラクターに式形式メンバーを使用しません。| **C#:** <br>`public Customer(int age) { Age = age; }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_constructors = false:none
 ``` 
 
-### <a name="expression_bodied_members_operators">Operators (IDE0023, IDE0024)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_operators">演算子 (IDE0023、IDE0024)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_expression_bodied_operators` | C# 7.0+ | false:none | Visual Studio 2017 RTW |
+|`csharp_style_expression_bodied_operators` | C# 7.0+ | false:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for operators.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`=> new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary);`
-| False | Do not prefer expression-bodied members for operators.| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`{ return new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary); }`
+| True | 演算子に式形式メンバーを使用します。| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`=> new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary);`
+| False | 演算子に式形式メンバーを使用しません。| **C#:** <br>`public static ComplexNumber operator +(ComplexNumber c1, ComplexNumber c2)`<br>`{ return new ComplexNumber(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary); }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_operators = false:none
 ``` 
 
-### <a name="expression_bodied_members_properties">Properties (IDE0025)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_properties">プロパティ (IDE0025)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_expression_bodied_properties` | C# 7.0+ | true:none | Visual Studio 2017 RTW |
+|`csharp_style_expression_bodied_properties` | C# 7.0+ | true:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for properties.| **C#:** <br>`public int Age => _age;`
-| False | Do not prefer expression-bodied members for properties.| **C#:** <br>`public int Age { get { return _age; }}`
+| True | プロパティに式形式メンバーを使用します。| **C#:** <br>`public int Age => _age;`
+| False | プロパティに式形式メンバーを使用しません。| **C#:** <br>`public int Age { get { return _age; }}`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_properties = true:none
 ``` 
 
-### <a name="expression_bodied_members_indexers">Indexers (IDE0026)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_indexers">インデクサー (IDE0026)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_expression_bodied_indexers` | C# 7.0+ | true:none | Visual Studio 2017 RTW |
+|`csharp_style_expression_bodied_indexers` | C# 7.0+ | true:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for indexers.| **C#:** <br>`public T this[int i] => _value[i];`
-| False | Do not prefer expression-bodied members for indexers.| **C#:** <br>`public T this[int i] { get { return _values[i]; } }`
+| True | インデクサーに式形式メンバーを使用します。| **C#:** <br>`public T this[int i] => _value[i];`
+| False | インデクサーに式形式メンバーを使用しません。| **C#:** <br>`public T this[int i] { get { return _values[i]; } }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_indexers = false:none
 ``` 
 
-### <a name="expression_bodied_members_accessors">Accessors (IDE0027)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="expression_bodied_members_accessors">アクセサー (IDE0027)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_expression_bodied_accessors` | C# 7.0+ | true:none | Visual Studio 2017 RTW |
+|`csharp_style_expression_bodied_accessors` | C# 7.0+ | true:なし | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer expression-bodied members for accessors.| **C#:** <br>`public int Age { get => _age; set => _age = value; }`
-| False | Do not prefer expression-bodied members for accessors.| **C#:** <br>`public int Age { get { return _age; } set { _age = value; } }`
+| True | アクセサーに式形式メンバーを使用します。| **C#:** <br>`public int Age { get => _age; set => _age = value; }`
+| False | アクセサーに式形式メンバーを使用しません。| **C#:** <br>`public int Age { get { return _age; } set { _age = value; } }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_expression_bodied_accessors = false:none
 ``` 
 
-## <a name="pattern_matching">Pattern matching</a>
-### <a name="pattern_matching_is_cast">"is" with "cast" checking (IDE0020)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="pattern_matching">パターン マッチング</a>
+### <a name="pattern_matching_is_cast">"cast" 検査の "is" (IDE0020)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_pattern_matching_over_is_with_cast_check` | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
+|`csharp_style_pattern_matching_over_is_with_cast_check` | C# 7.0+ | true:提案 | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer pattern matching instead of `is` expressions with type casts.| **C#:** <br>`if (o is int i) {...}`
-| False | Prefer `is` expressions with type casts instead of pattern matching.| **C#:** <br>`if (o is int) {var i = (int)o; ... }`
+| True | `is` 式と型キャストの代わりにパターン マッチングを使用します。| **C#:** <br>`if (o is int i) {...}`
+| False | パターン マッチングの代わりに `is` 式と型キャストを使用します。| **C#:** <br>`if (o is int) {var i = (int)o; ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 ```
 
-### <a name="pattern_matching_as_null">"as" with "null" checking (IDE0019)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="pattern_matching_as_null">"null" 検査の "as" (IDE0019)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_pattern_matching_over_as_with_null_check` | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
+|`csharp_style_pattern_matching_over_as_with_null_check` | C# 7.0+ | true:提案 | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer pattern matching instead of `as` expressions with null checks to determine if something is of a particular type.| **C#:** <br>`if (o is string s) {...}`
-| False | Prefer `as` expressions with null checks instead of pattern matching to determine if something is of a particular type.| **C#:** <br>`var s = o as string; if (s != null) {...}`
+| True | `as` 式と null 検査の代わりにパターン マッチングを使用し、何かが特定の型であるか判断します。| **C#:** <br>`if (o is string s) {...}`
+| False | パターン マッチングの代わりに `as` 式と null 検査を使用し、何かが特定の型であるか判断します。| **C#:** <br>`var s = o as string; if (s != null) {...}`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 ```
 
-### <a name="inlined_variable_declarations">Inlined variable declarations (IDE0018)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="inlined_variable_declarations">インライン変数宣言 (IDE0018)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_inlined_variable_declaration` | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
+|`csharp_style_inlined_variable_declaration` | C# 7.0+ | true:提案 | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer `out` variables to be declared inline when possible. | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
-| False | Prefer `out` variables to be declared explicitly.| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
+| True | 可能であれば、`out` 変数をインラインで宣言します。 | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
+| False | `out` 変数を明示的に宣言します。| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_inlined_variable_declaration = true:suggestion
 ```
-## <a name="expression_level_csharp">Expression-level Preferences</a>
-### <a name="expression_level_default">Simplify `default` expressions (IDE0034) </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="expression_level_csharp">式レベル基本設定</a>
+### <a name="expression_level_default">`default` 式の簡略化 (IDE0034) </a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_prefer_simple_default_expression` | C# 7.1+ | true:suggestion | Visual Studio 2017 v. 15.3 |
+|`csharp_prefer_simple_default_expression` | C# 7.1+ | true:提案 | Visual Studio 2017 v. 15.3 |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer `default` over `default(T)` | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default){ ... }`
-| False | Prefer. | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default(CancellationToken)){ ... }`
+| True | `default(T)` より `default` を優先 | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default){ ... }`
+| False | 優先。 | **C#:** <br>`void DoWork(CancellationToken cancellationToken = default(CancellationToken)){ ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_prefer_simple_default_expression = true:suggestion
 ``` 
 
-## <a name="null_checking">"Null" Checking Preferences</a>
-### <a name="null_checking_throw_expressions">Throw-expressions (IDE0016)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="null_checking">"Null" 検査設定</a>
+### <a name="null_checking_throw_expressions">スロー式 (IDE0016)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_throw_expression`  | C# 7.0+ | true:suggestion | Visual Studio 2017 RTW |
+|`csharp_style_throw_expression`  | C# 7.0+ | true:提案 | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer to use `throw` expressions instead of `throw` statements. | **C#:** <br>`this.s = ss ?? throw new ArgumentNullException(nameof(s));`
-| False | Prefer to use `throw` statements instead of `throw` expressions.| **C#:** <br>`if (s==null) {throw new ArgumentNullException(nameof(s));} this.s = s;`
+| True | `throw` ステートメントの代わりに `throw` 式を使用します。 | **C#:** <br>`this.s = ss ?? throw new ArgumentNullException(nameof(s));`
+| False | `throw` 式の代わりに `throw` ステートメントを使用します。| **C#:** <br>`if (s==null) {throw new ArgumentNullException(nameof(s));} this.s = s;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_throw_expression = true:suggestion
 ```
 
-### <a name="null_checking_conditional_delegate_calls">Prefer conditional delegate calls (IDE0041)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="null_checking_conditional_delegate_calls">条件付き代理呼び出しを使用する (IDE0041)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_style_conditional_delegate_call`  | C# 6.0+ | true:suggestion | Visual Studio 2017 RTW |
+|`csharp_style_conditional_delegate_call`  | C# 6.0+ | true:提案 | Visual Studio 2017 RTW |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer to use conditional coalescing operation (`?.`) when invoking a lambda instead of performing a null check. | **C#:** <br>`func?.Invoke(args);`
-| False | Prefer to perform a null check before invoking a lambda instead of using the conditional coalescing operator (`?.`).| **C#:** <br>`if (func!=null) { func(args); }`
+| True | null 検査を実行する代わりに lambda を呼び出すとき、条件付き結合演算 (`?.`) を使用します。 | **C#:** <br>`func?.Invoke(args);`
+| False | 条件付き結合演算 (`?.`) を使用する代わりに lambda を呼び出す前に null 検査を実行します。| **C#:** <br>`if (func!=null) { func(args); }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_style_conditional_delegate_call = false:suggestion
 ```
 
-## <a name="code_block">"Code Block Preferences</a>
-### <a name="prefer_braces">Prefer braces (IDE0011)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="code_block">"コード ブロック基本設定</a>
+### <a name="prefer_braces">かっこを優先する (IDE0011)</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_prefer_braces`  | C#  | true:none | Visual Studio 2017 v. 15.3 |
+|`csharp_prefer_braces`  | C#  | true:なし | Visual Studio 2017 v. 15.3 |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Prefer braces | **C#:** <br>`if (test) { this.Display(); }`
-| False | Prefer no braces when possible | **C#:** <br>`if (test) this.Display();`
+| True | かっこを優先する | **C#:** <br>`if (test) { this.Display(); }`
+| False | 可能な場合は、かっこを使用しない | **C#:** <br>`if (test) this.Display();`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp code style settings:
 [*.cs]
 csharp_prefer_braces = true:none
 ```
 
-# <a name="formatting"> Formatting Rules </a>
-## <a name="overview"></a>Overview
-**Rule Format:**
+# <a name="formatting"> 書式規則 </a>
+## <a name="overview"></a>概要
+**規則形式:**
 `options_name = false|true`
 
-For formatting options, you must specify **true** (prefer this option) or **false** (do not prefer this option) except in a couple cases where you must instead specify what conditions you want the rule applied to.
+書式オプションには、**true** (このオプションを使用する) または **false** (このオプションを使用しない) を指定する必要があります。ただし、規則を適用する条件を代わりに指定する必要があるいくつかのケースを除きます。
 
-## <a name="net-formatting-options"></a>.NET Formatting Options
+## <a name="net-formatting-options"></a>.NET 書式のオプション
 
-- **[.NET Formatting Settings](#usings)**
-    - [Organize Usings](#usings)
-        - [Sort System Directives First](#usings_sort_system_first)
-- **[C# Formatting Settings](#newline)**
-    - [Newline Options](#newline)
-        - [Newline Before Open Brace (`{`)](#newline_before_brace)
-        - [Newline Before `else`](#newline_before_else)
-        - [Newline Before `catch`](#newline_before_catch)
-        - [Newline Before `finally`](#newline_before_finally)
-        - [Newline Before Members in Object Initializers](#newline_before_object)
-        - [Newline Before Members in Anonymous Types](#newline_before_anonymous)
-        - [Newline Before Members in Query Expression Clauses](#newline_before_query)
-    - [Indentation Options](#indent)
-        - [Indent `switch` Case Contents](#indent_switch)
-        - [Indent `switch` Labels](#indent_switch_labels)
-        - [Label Positioning](#label)
-    - [Spacing Options](#spacing)
-        - [Space After Cast](#space_after_cast)
-        - [Space After Keywords in Control Flow Statements](#space_control_flow)
-        - [Space Between Method Declaration Parameter-List Parentheses](#space_parameter_list)
-        - [Space Within Parentheses for Method Call Argument List](#space_method_call)
-        - [Space Within Parentheses for Other Options](#space_other)
-    - [Wrapping Options](#wrapping)
-        - [Leave Statements and Member Declarations on the Same Line](#wrapping_statement)
-        - [Leave Block on Single Line](#wrapping_block)
+- **[.NET 書式設定](#usings)**
+    - [using の整理](#usings)
+        - [最初にシステム ディレクティブを並べ替える](#usings_sort_system_first)
+- **[C# 書式設定](#newline)**
+    - [改行オプション](#newline)
+        - [左中かっこ (`{`) の前の改行](#newline_before_brace)
+        - [`else` の前の改行](#newline_before_else)
+        - [`catch` の前の改行](#newline_before_catch)
+        - [`finally` の前の改行](#newline_before_finally)
+        - [オブジェクト初期化子のメンバーの前の改行](#newline_before_object)
+        - [匿名型のメンバーの前の改行](#newline_before_anonymous)
+        - [クエリ式の句のメンバーの前の改行](#newline_before_query)
+    - [インデント オプション](#indent)
+        - [`switch` ケース コンテンツにインデントを付ける](#indent_switch)
+        - [インデント`switch`ラベル](#indent_switch_labels)
+        - [ラベルの位置付け](#label)
+    - [スペース オプション](#spacing)
+        - [キャストの後のスペース](#space_after_cast)
+        - [制御フロー ステートメント内のキーワードの後のスペース](#space_control_flow)
+        - [メソッド宣言パラメーター リストのかっこの間のスペース](#space_parameter_list)
+        - [メソッド呼び出し引数リストのかっこ内のスペース](#space_method_call)
+        - [その他のオプションのかっこ内のスペース](#space_other)
+    - [折り返しオプション](#wrapping)
+        - [1 行に複数のステートメントとメンバー宣言を表示する](#wrapping_statement)
+        - [ブロックを単一行に配置する](#wrapping_block)
 
-## <a name="usings">Organize Usings</a>
-### <a name="usings_sort_system_first">Sort System Directives First</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="usings">using の整理</a>
+### <a name="usings_sort_system_first">最初にシステム ディレクティブを並べ替える</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`dotnet_sort_system_directives_first`  |  C# and Visual Basic | true | Visual Studio 2017 v. 15.3  |
+|`dotnet_sort_system_directives_first`  |  C# および Visual Basic | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied 
+| 値 | 説明 | 適用済み 
 | ------------- |:-------------|:-------------|
-| True | Sort System.* usings alphabetically and place them before other usings.| **C#:** <br>`using System.Collections.Generic;`<br> `using System.Threading.Tasks;`<br> `using Octokit;`
-| False | Have no requirements on the ordering of usings | **C#:** <br>`using System.Collections.Generic;`<br> `using Octokit;` <br> `using System.Threading.Tasks;`
+| True | System.* using をアルファベット順に並べ替え、他の using の前に配置します。| **C#:** <br>`using System.Collections.Generic;`<br> `using System.Threading.Tasks;`<br> `using Octokit;`
+| False | using の順序に関する要件はありません | **C#:** <br>`using System.Collections.Generic;`<br> `using Octokit;` <br> `using System.Threading.Tasks;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # .NET formatting settings:
 [*.{cs,vb}]
 dotnet_sort_system_directives_first = true
 ``` 
 
-# <a name="csharp_formatting">C# Formatting Settings</a>
-## <a name="newline">Newline Options</a>
-### <a name="newline_before_brace"> Newline Before Open Brace (`{`)</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+# <a name="csharp_formatting">C# 書式設定</a>
+## <a name="newline">改行オプション</a>
+### <a name="newline_before_brace"> 左中かっこ (`{`) の前の改行</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
-|`csharp_new_line_before_open_brace`  |  C#  | all | Visual Studio 2017 v. 15.3  |
+|`csharp_new_line_before_open_brace`  |  C#  | すべて | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 値 | 説明 
 | ------------- |:-------------|
-| accessors, anonymous_methods, anonymous_types, control_blocks, events, indexers, lambdas, local_functions, methods, object_collection, properties, types. (For multiple, separate with ','). | Require braces to be on a new line for the given expressions (Allman style) |
-| all | Require braces to be on a new line for all expressions (Allman) |
-| none | Require braces to be on the same line for all expressions (K&R) |
+| accessors、anonymous_methods、anonymous_types、control_blocks、events、indexers、lambdas、local_functions、methods、object_collection、properties、types  (複数の場合は、"," で区切ります)。 | 中かっこは指定された式の新しい行に配置する必要があります (Allman スタイル)。 |
+| すべて | 中かっこはすべての式の新しい行に配置する必要があります (Allman)。 |
+| none | 中かっこはすべての式の同じ行に配置する必要があります (K&R)。 |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>以下のように適用されます。
 ```csharp
 // csharp_new_line_before_open_brace = all
 void MyMethod() 
@@ -687,25 +687,25 @@ void MyMethod() {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_open_brace = methods, properties, control_blocks, types
 ``` 
 
-### <a name="newline_before_else"> Newline Before `else`</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_else"> `else` の前の改行</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_new_line_before_else` |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 値 | 説明 
 | ------------- |:-------------|
-| True | Place `else` statements on a new line.  |
-| False | Place `else` statements on the same line.  |
+| True | 新しい行に `else` ステートメントを配置します。  |
+| False | 同じ行に `else` ステートメントを配置します。  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>以下のように適用されます。
 ```csharp
 // csharp_new_line_before_else = true
 if (...) {
@@ -725,25 +725,25 @@ if (...) {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_else = true
 ``` 
 
-### <a name="newline_before_catch"> Newline Before `catch`</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_catch"> `catch` の前の改行</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_catch`|  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 値 | 説明 
 | ------------- |:-------------|
-| True | Place `catch` statements on a new line.  |
-| False | Place `catch` statements on the same line. |
+| True | 新しい行に `catch` ステートメントを配置します。  |
+| False | 同じ行に `catch` ステートメントを配置します。 |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>以下のように適用されます。
 ```csharp
 // csharp_new_line_before_catch = true
 try {
@@ -763,25 +763,25 @@ try {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_catch = true
 ``` 
 
-### <a name="newline_before_finally"> Newline Before `finally`</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_finally"> `finally` の前の改行</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_finally`|  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 値 | 説明 
 | ------------- |:-------------|
-| True | Require `finally` statements to be on a new line after the closing brace.  |
-| False | Require `finally` statements to be on the same line as the closing brace.  |
+| True | `finally` ステートメントを右中かっこの後の新しい行に配置する必要があります。  |
+| False | `finally` ステートメントを右中かっこと同じ行に配置する必要があります。  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>以下のように適用されます。
 ```csharp
 // csharp_new_line_before_finally = true
 try {
@@ -806,25 +806,25 @@ try {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_finally = true
 ``` 
 
-### <a name="newline_before_object"> Newline Before Members in Object Initializers</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_object">オブジェクト初期化子のメンバーの前の改行</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_members_in_object_initializers`|  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 値 | 説明 
 | ------------- |:-------------|
-| True | Require members of object intializers to be on separate lines.  |
-| False | Require members of object initializers to be on the same line.  |
+| True | オブジェクト初期化子のメンバーを別の行に配置する必要があります。  |
+| False | オブジェクト初期化子のメンバーを同じ行に配置する必要があります。  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>以下のように適用されます。
 ```csharp
 // csharp_new_line_before_members_in_object_initializers = true
 var z = new B()
@@ -842,25 +842,25 @@ var z = new B()
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_members_in_object_initializers = true
 ``` 
 
-### <a name="newline_before_anonymous"> Newline Before Members in Anonymous Types</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_anonymous"> 匿名型のメンバーの前の改行</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_new_line_before_members_in_anonymous_types` |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 値 | 説明 
 | ------------- |:-------------|
-| True | Require members of anonymous types to be on separate lines.  |
-| False | Require members of anonymous types to be on the same line.  |
+| True | 匿名型のメンバーを別の行に配置する必要があります。  |
+| False | 匿名型のメンバーを同じ行に配置する必要があります。  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>以下のように適用されます。
 ```csharp
 // csharp_new_line_before_members_in_anonymous_types = true
 var z = new
@@ -878,25 +878,25 @@ var z = new
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_before_members_in_anonymous_types = true
 ``` 
 
-### <a name="newline_before_query"> Newline Before Members in Query Expression Clauses</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="newline_before_query"> クエリ式の句のメンバーの前の改行</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_new_line_within_query_expression_clauses`  |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 値 | 説明 
 | ------------- |:-------------|
-| True | Require elements of query expression clauses to be on separate lines.  |
-| False | Require elements of query expression clauses to be on the same line.  |
+| True | クエリ式の句の要素を別の行に配置する必要があります。  |
+| False | クエリ式の句の要素を同じ行に配置する必要があります。  |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>以下のように適用されます。
 ```csharp
 // csharp_new_line_within_query_expression_clauses = true
 var q = from a in e
@@ -910,25 +910,25 @@ var q = from a in e from b in e
         select a * b;
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_new_line_within_query_expression_clauses = true
 ``` 
 
-## <a name="indent">Indentation Options</a>
-### <a name="indent_switch"> Indent `switch` Case Contents </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="indent">インデント オプション</a>
+### <a name="indent_switch"> `switch` ケース コンテンツにインデントを付ける </a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_indent_case_contents`  |  C#  | true | Visual Studio 2017 v. 15.3  |
 
-| Value | Description 
+| 値 | 説明 
 | ------------- |:-------------|
-| True | Indent `switch` case contents  |
-| False | Do not indent `switch` case contents |
+| True | `switch` ケース コンテンツにインデントを付けます  |
+| False | `switch` ケース コンテンツにインデントを付けません |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>以下のように適用されます。
 ```csharp
 // csharp_indent_case_contents = true
 switch(c) {
@@ -959,24 +959,24 @@ switch(c) {
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_indent_case_contents = true
 ``` 
 
-### <a name="indent_switch_labels"> Indent `switch` Labels </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="indent_switch_labels">インデント`switch`ラベル</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_indent_switch_labels`  |  C#  | true | Visual Studio 2017 v. 15.3  |
 
-| Value | Description 
+| 値 | 説明 
 | ------------- |:-------------|
-| True | Indent `switch` labels  |
-| False | Do not indent `switch` labels |
+| True | インデント`switch`ラベル  |
+| False | インデントされません`switch`ラベル |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>以下のように適用されます。
 ```csharp
 // csharp_indent_switch_labels = true
 switch(c) {
@@ -1007,25 +1007,25 @@ default:
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_indent_switch_labels = true
 ``` 
 
-### <a name="label">Label Positioning</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="label">ラベルの位置付け</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |`csharp_indent_labels`  |  C#  | one_less | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description 
+| 値 | 説明 
 | ------------- |:-------------|
-| one_less | Labels are placed at one less indent to the current context |
-| no_change | Labels are placed at the same indent as the current context |
+| one_less | ラベルは、現在のコンテキストのインデントを 1 つ減らした位置に配置されます |
+| no_change | ラベルは、現在のコンテキストと同じインデントで配置されます |
 
-#### <a name="applied"></a>Applied:
+#### <a name="applied"></a>以下のように適用されます。
 ```csharp
 // csharp_indent_labels = one_less
 private string MyMethod(...) 
@@ -1051,118 +1051,118 @@ private string MyMethod(...)
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_indent_labels = one_less
 ``` 
 
-## <a name="spacing">Spacing Options</a>
-### <a name="space_after_cast"> Space After Cast </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="spacing">スペース オプション</a>
+### <a name="space_after_cast"> キャストの後のスペース</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_space_after_cast` |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| 値 | 説明 | 適用済み |
 | ------------- |:-------------|:-------------|
-| True | Require a space between a cast and the value  | **C#:** <br>`int y = (int) x;`
-| False | Require no space between the cast and the value | **C#:** <br>`int y = (int)x;`
+| True | キャストと値の間にスペースが必要です  | **C#:** <br>`int y = (int) x;`
+| False | キャストと値の間にスペースは必要ありません | **C#:** <br>`int y = (int)x;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_after_cast = true
 ``` 
 
-### <a name="space_control_flow"> Space After Keywords in Control Flow Statements </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_control_flow"> 制御フロー ステートメント内のキーワードの後のスペース</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_space_after_keywords_in_control_flow_statements` |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| 値 | 説明 | 適用済み |
 | ------------- |:-------------|:-------------|
-| True | Require a space after a keyword | **C#:** <br>`for (int i;i<x;i++) { ... }`
-| False | Require no space after a keyword | **C#:** <br>`for(int i;i<x;i++) { ... }`
+| True | キーワードの後にスペースが必要です | **C#:** <br>`for (int i;i<x;i++) { ... }`
+| False | キーワードの後にスペースは必要ありません | **C#:** <br>`for(int i;i<x;i++) { ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_after_keywords_in_control_flow_statements = true
 ``` 
 
-### <a name="space_parameter_list"> Space Between Method Declaration Argument-List Parentheses </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_parameter_list"> メソッド宣言引数リストのかっこの間のスペース </a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | `csharp_space_between_method_declaration_parameter_list_parentheses` |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| 値 | 説明 | 適用済み |
 | ------------- |:-------------|:-------------|
-| True | Require a space after a keyword | **C#:** <br>`void Bark( int x ) { ... }`
-| False | Require no space after a keyword | **C#:** <br>`void Bark(int x) { ... }`
+| True | キーワードの後にスペースが必要です | **C#:** <br>`void Bark( int x ) { ... }`
+| False | キーワードの後にスペースは必要ありません | **C#:** <br>`void Bark(int x) { ... }`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_between_method_declaration_parameter_list_parentheses = true
 ```
 
-### <a name="space_method_call"> Space Within Parentheses for Method Call Argument List</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_method_call"> メソッド呼び出し引数リストのかっこ内のスペース</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |  `csharp_space_between_method_call_parameter_list_parentheses` |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| 値 | 説明 | 適用済み |
 | ------------- |:-------------|:-------------|
-| true | Place space between parentheses of control flow statements | **C#:** <br>`MyMethod( argument );`
-| false | Place space between parentheses of expressions | **C#:** <br>`MyMethod(argument);`
+| TRUE | 制御フロー ステートメントのかっこの間にスペースを配置します。 | **C#:** <br>`MyMethod( argument );`
+| false | 式のかっこの間にスペースを配置します。 | **C#:** <br>`MyMethod(argument);`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_between_method_call_parameter_list_parentheses = control_flow_statements, type_casts
 ```  
 
-### <a name="space_other"> Space Within Parentheses for Other Options </a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="space_other"> その他のオプションのかっこ内のスペース </a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |  `csharp_space_between_parentheses`  |  C#  | false | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description | Applied |
+| 値 | 説明 | 適用済み |
 | ------------- |:-------------|:-------------|
-| control_flow_statements | Place space between parentheses of control flow statements | **C#:** <br>`for( int i;i<x;i++ ) { ... }`
-| expressions | Place space between parentheses of expressions | **C#:** <br>`var z = ( x * y ) - ( ( y - x ) * 3);`
-| type_casts | Place space between parentheses in type casts | **C#:**<br>`int y = ( int )x;`
+| control_flow_statements | 制御フロー ステートメントのかっこの間にスペースを配置します。 | **C#:** <br>`for( int i;i<x;i++ ) { ... }`
+| 式 | 式のかっこの間にスペースを配置します。 | **C#:** <br>`var z = ( x * y ) - ( ( y - x ) * 3);`
+| type_casts | 型キャストのかっこの間にスペースを配置します。 | **C#:**<br>`int y = ( int )x;`
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_space_between_parentheses = control_flow_statements, type_casts
 ``` 
 
-## <a name="wrapping">Wrapping Options</a>
-### <a name="wrapping_statement">Leave Statements and Member Declarations on the Same Line</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+## <a name="wrapping">折り返しオプション</a>
+### <a name="wrapping_statement">1 行に複数のステートメントとメンバー宣言を表示する</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |  `csharp_preserve_single_line_statements`   |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description |
+| 値 | 説明 |
 | ------------- |:-------------|
-| True | Leave statements and member declarations on the same line  | 
-| False | Leave statements and member declarations on different lines | 
+| True | 1 行に複数のステートメントとメンバー宣言を表示する  | 
+| False | 別の行にステートメントとメンバー宣言を表示します。 | 
 
-#### <a name="applied"></a>Applied
+#### <a name="applied"></a>適用済み
 ```csharp
 //csharp_preserve_single_line_statements = true
 int i = 0; string name = "John";
@@ -1174,25 +1174,25 @@ int i = 0;
 string name = "John";
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_preserve_single_line_statements = true
 ``` 
 
-### <a name="wrapping_block">Leave Block on Single Line</a>
-| **Option Name** | **Applicable Languages** | **Visual Studio Default** | **Supported Version** |
+### <a name="wrapping_block">ブロックを単一行に配置する</a>
+| **オプション名** | **該当言語** | **Visual Studio の既定値** | **サポートされているバージョン** |
 | ----------- | -------------------- | ----------------------| ----------------  |
 |   `csharp_preserve_single_line_blocks`    |  C#  | true | Visual Studio 2017 v. 15.3  |
 
 
-| Value | Description |
+| 値 | 説明 |
 | ------------- |:-------------|
-| True | Leave block on single line | 
-| False | Leave block on separate lines | 
+| True | ブロックを単一行に配置します。 | 
+| False | ブロックを別の行に配置します。 | 
 
-#### <a name="applied"></a>Applied
+#### <a name="applied"></a>適用済み
 ```csharp
 //csharp_preserve_single_line_blocks = true
 public int Foo { get; set; }
@@ -1206,16 +1206,16 @@ public int MyProperty
 }
 ```
 
-#### <a name="example-editorconfig-file"></a>Example editorconfig file:
+#### <a name="example-editorconfig-file"></a>EditorConfig ファイルの例:
 ```
 # CSharp formatting settings:
 [*.cs]
 csharp_preserve_single_line_blocks = true
 ``` 
 
-# <a name="naming"> Naming Conventions </a>
-## <a name="overview"></a>Overview
-**Rule Format:**<br>
+# <a name="naming"> 名前付け規則 </a>
+## <a name="overview"></a>概要
+**規則形式:**<br>
 namingRuleTitle:<br>
 `dotnet_naming_rule.<namingRuleTitle>.symbols = <symbolTitle>`<br>
 `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>`<br>
@@ -1232,33 +1232,33 @@ styleTitle:<br>
 `dotnet_naming_style.<styleTitle>.required_suffix = string`<br>
 `dotnet_naming_style.<styleTitle>.word_separator = string`<br>
 
-## <a name="writing-a-naming-convention"></a>Writing a Naming Convention
-For naming conventions, you must specify **symbols**, **style**, and a **severity**. Naming conventions should be ordered from most-specific to least-specific. The first rule encountered that can be applied, is the only rule applied. 
+## <a name="writing-a-naming-convention"></a>名前付け規則の作成
+名前付け規則には、**シンボル**、**スタイル**、および**重要度**を指定する必要があります。 名前付け規則は、固有度の高いものから低いものの順に並べる必要があります。 適用可能な最初に検出された規則のみが適用されます。 
 
-### <a name="severity"></a>Severity
-The following are valid options for the severity of a naming style rule `none`, `silent`, `suggestion`, `warning`, `error`.
+### <a name="severity"></a>重要度
+名前付けスタイル規則の重要度の有効なオプションは、`none`、`silent`、`suggestion`、`warning`、`error` です。
 
- `none` and `silent` are synonymous and mean that no indication of any kind should be shown to the user. This has the effect of disabling this rule.
+ `none` および `silent` は同義であり、ユーザーには何も表示されないことを意味します。 この規則を無効化する効果があります。
 
- `suggestion` means that the user is shown the following in the Error List: and the following in the IDE. The `suggestion` severity allows the naming rule to run, but it doesn't cause the build to break.
+ `suggestion` は、IDE のエラー一覧でユーザーに以下が表示されることを意味します。 重要度が `suggestion` の場合、名前付け規則は実行されますが、ビルドは中断されません。
 
-Severity | effect
+重要度 | 効果
 ------------ | -------------
-none/silent | Do not show anything to the user when this style is not being followed, however code generation features generate in this style. 
-suggestion | When this style is not being followed, show it to the user as a suggestion (underlying dots on the first two characters).
-warning | When this style is not being followed, show a compiler warning.
-error | When this style is not being followed, show a compiler error.
+none/silent | このスタイルに準拠していないとき、ユーザーには何も表示されませんが、コード生成機能はこのスタイルで生成します。 
+修正候補 | このスタイルに準拠していないとき、修正候補としてユーザーに表示されます (最初の 2 文字の下に点線が付きます)。
+警告 | このスタイルに準拠していないとき、コンパイラの警告が表示されます。
+エラー | このスタイルに準拠していないとき、コンパイラ エラーが表示されます。
 
-### <a name="symbol-specification"></a>Symbol Specification
-Identify _what_ symbols _with which_ modifiers and _at what_ accessibility level the naming rule should apply to.
+### <a name="symbol-specification"></a>シンボル指定
+名前付け規則を適用する必要がある場合に、_どの_シンボルで_どの_修飾子と_どの_アクセシビリティ レベルを使用するかを指定します。
 
-|  Option Name | `dotnet_naming_rule.<namingRuleTitle>.symbols` |
+|  オプション名 | `dotnet_naming_rule.<namingRuleTitle>.symbols` |
 | ------------- |:-------------:|
 |  | `dotnet_naming_symbols.<symbolTitle>.applicable_kinds`
 |  | `dotnet_naming_symbols.<symbolTitle>.applicable_accessibilities`
 |  | `dotnet_naming_symbols.<symbolTitle>.required_modifiers`
 
-| Symbol | Accessibility | Modifiers
+| シンボル | ユーザー補助 | 修飾子
 | ------------- |------------- |------------- |
 | `*` | `*` |  `abstract` | 
 | `class` | `public` |  `must_inherit` | `async` | 
@@ -1272,10 +1272,10 @@ Identify _what_ symbols _with which_ modifiers and _at what_ accessibility level
 | `delegate` | | |
 
 
-### <a name="style-specification"></a>Style Specification
-Identify the naming style to apply to the symbols.
+### <a name="style-specification"></a>スタイル指定
+シンボルに適用する名前付けスタイルを指定します。
 
-|  Option Name | `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>` |
+|  オプション名 | `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>` |
 | ------------- |:-------------:|
 |  | `dotnet_naming_style.<styleTitle>.capitalization`|
 |  | `dotnet_naming_style.<styleTitle>.required_prefix`|
@@ -1283,15 +1283,15 @@ Identify the naming style to apply to the symbols.
 |  | `dotnet_naming_style.<styleTitle>.word_separator`|
 
 
-| Style | Description |
+| スタイル | 説明 |
 | ------------- |:-------------:|
-| Prefix | Required characters that must appear before the identifier. |
-| Suffix | Required characters that must appear after the identifier. |
-| Word Separator | Required separator between words in the identifier. |
-| Capitalization |`pascal_case`, `camel_case`, `first_word_upper`, `all_upper`, `all_lower` | 
+| プレフィックス | 識別子の前に配置する必要がある文字。 |
+| サフィックス | 識別子の後に配置する必要がある文字。 |
+| 単語の区切り記号 | 識別子の単語の間に必要な区切り記号。 |
+| [大文字/小文字の設定] |`pascal_case`, `camel_case`, `first_word_upper`, `all_upper`, `all_lower` | 
 
 
-### <a name="example-naming-convention"></a>Example Naming Convention
+### <a name="example-naming-convention"></a>名前付け規則の例
 ```
 # Dotnet Naming Conventions
 [*.{cs,vb}] 

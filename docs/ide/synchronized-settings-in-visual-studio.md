@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: cc949cae43fe524771f43fe7e9261de3b4325649
-ms.openlocfilehash: 8b8a7587687579e074d1b9ea1c9ae52a5f857fce
+ms.sourcegitcommit: 0387b9a656f97d9354f95f121cad8422e93a69bc
+ms.openlocfilehash: e48edfa02f059444539e0a3d8514366f94a1a1f1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="synchronize-your-settings-in-visual-studio"></a>Visual Studio での設定の同期
@@ -82,7 +82,7 @@ Visual Studio 15.3 およびそれ以降では、`%userprofile%\Documents\Visual
 **注:** 新しいインストールの設定を使用するには、新規インストールを完了する必要があります。 既存の Visual Studio 2017 インストールを最新の更新プログラムにアップグレードすると、既存の共有フォルダーが使用されます。 現在、Visual Studio 2017 がサイド バイ サイド インストールされているとき、アップグレードし、新しいインストールの設定ファイル用フォルダーを使用する場合、次の手順に従ってください。
 
 1. アップグレード後、インポート/エクスポートの設定ウィザードを利用し、すべての既存設定を `%localappdata%\Microsoft\VisualStudio\15.0_xxxxxxxx` フォルダーから別の場所にエクスポートします。
-2. アップグレードした Visual Studio インストールの **VS 2017 向け開発者コマンド プロンプト**を開き、そこから "run devenv resetuserdata" を実行します。
+2. アップグレードした Visual Studio で **VS 2017 用の開発者コマンド プロンプト**を開き、そこから `devenv /resetuserdata` を実行します。
 3. Visual Studio を起動し、エクスポートした設定ファイルから保存済みの設定をインポートします。
 
 ## <a name="see-also"></a>関連項目

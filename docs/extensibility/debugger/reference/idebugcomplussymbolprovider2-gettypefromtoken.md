@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::GetTypeFromToken | Microsoft Docs
+title: "IDebugComPlusSymbolProvider2::GetTypeFromToken |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: b8395849f002519d52ed1f547e92b67e35f6408e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcomplussymbolprovider2gettypefromtoken"></a>IDebugComPlusSymbolProvider2::GetTypeFromToken
-Retrieves a type given its token.  
+指定したトークンの種類を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetTypeFromToken(  
@@ -59,24 +59,24 @@ int GetTypeFromToken(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `appDomain`  
- [in] Identifier of the application domain.  
+ [in]アプリケーション ドメインの識別子。  
   
  `guidModule`  
- [in] Unique identifier of the module.  
+ [in]モジュールの一意の識別子。  
   
  `tdToken`  
- [in] Token of the type to be retrieved.  
+ [in]取得する型のトークンです。  
   
  `ppField`  
- [out] Returns the type that is represented by the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md).  
+ [out]によって表される型を返します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)です。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
+## <a name="example"></a>例  
+ 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)インターフェイスです。  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::GetTypeFromToken(  
@@ -104,5 +104,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

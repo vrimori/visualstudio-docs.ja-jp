@@ -1,5 +1,5 @@
 ---
-title: PARSEFLAGS | Microsoft Docs
+title: "PARSEFLAGS |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 86589a8f3886592ad1659b646b0a983a9f31f48b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="parseflags"></a>PARSEFLAGS
-Specifies how to parse an expression.  
+式を解析する方法を指定します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 enum enum_PARSEFLAGS {   
@@ -59,27 +59,27 @@ public enum enum_PARSEFLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>メンバー  
  PARSE_EXPRESSION  
- Indicates that the expression is not a statement.  
+ 式がステートメントでないことを示します。  
   
  PARSE_FUNCTION_AS_ADDRESS  
- Indicates that the expression is to be parsed (and later evaluated) as an address.  
+ 式が解析 (および後で評価) アドレスとしてのことを示します。  
   
  PARSE_DESIGN_TIME_EXPR_EVAL  
- Indicates that the expression is being parsed during design time (that is, when a designer is open).  
+ デザイン時に式が解析されていることを示します (つまり、デザイナーが開いているとき)。  
   
-## <a name="remarks"></a>Remarks  
- Passed as a parameter to the [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) and [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) methods.  
+## <a name="remarks"></a>コメント  
+ パラメーターとして渡される、 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)と[解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)メソッドです。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)   
- [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)
+ [解析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)

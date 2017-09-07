@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::LoadSymbols | Microsoft Docs
+title: "IDebugModule3::LoadSymbols |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 00b357a7c122de2788875632b770c4346963d975
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugmodule3loadsymbols"></a>IDebugModule3::LoadSymbols
-Loads the symbols for the current module.  
+現在のモジュールのシンボルを読み込みます。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT LoadSymbols(  
@@ -52,14 +52,14 @@ HRESULT LoadSymbols(
 int LoadSymbols();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- If the method succeeds, it returns `S_OK`. If it fails, it returns an error code.  
+## <a name="return-value"></a>戻り値  
+ メソッドが成功したかどうか、それを返します`S_OK`です。 失敗した場合、エラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- This method loads the symbols from the current search path (which can be altered by calling the [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md) method).  
+## <a name="remarks"></a>コメント  
+ このメソッドは、現在の検索パスからシンボルを読み込みます (を呼び出して変更することができますが、 [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)メソッド)。  
   
- This method is preferred over the [ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md) method.  
+ このメソッドは、優先、 [ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md)メソッドです。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)   
  [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)

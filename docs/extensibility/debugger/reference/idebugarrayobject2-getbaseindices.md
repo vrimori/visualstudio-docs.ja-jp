@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject2::GetBaseIndices | Microsoft Docs
+title: "IDebugArrayObject2::GetBaseIndices |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3aa9ad51de0f929083457eed86d69cf23f99d10d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugarrayobject2getbaseindices"></a>IDebugArrayObject2::GetBaseIndices
-Retrieves the base indices (lower bounds) for each index given the number of dimensions in the array.  
+配列の次元数を指定された各インデックスの基本のインデックス (下限) を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetBaseIndices (  
@@ -55,18 +55,18 @@ int GetBaseIndices (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `dwRank`  
- [in] The number of dimensions (rank) of the array.  
+ [in]配列の次元 (rank) の数。  
   
  `dwIndices`  
- [out] The base indices (lower bounds) for the array.  
+ [out]配列の基本インデックス (下限) です。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- As an example, this function would return '5' for the array created by the following C# code:  
+## <a name="remarks"></a>コメント  
+ たとえば、この関数に次の c# コードで作成された配列にある ' 5' と返されます。  
   
 ```  
 int[] lengths = { 12 };  
@@ -74,5 +74,5 @@ int[] lowerbounds = { 5 };
 Array.CreateInstance(typeof(int), lengths, lowerbounds);  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugArrayObject2](../../../extensibility/debugger/reference/idebugarrayobject2.md)

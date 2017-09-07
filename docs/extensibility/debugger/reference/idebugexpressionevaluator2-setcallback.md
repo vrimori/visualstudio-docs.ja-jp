@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::SetCallback | Microsoft Docs
+title: "IDebugExpressionEvaluator2::SetCallback |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: e5b9964dee0580fe0fbab6d817c4dc2abf56dad4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugexpressionevaluator2setcallback"></a>IDebugExpressionEvaluator2::SetCallback
-Enables the expression evaluator (EE) to specify the callback interface that the debugger engine (DE) will use to read metric settings.  
+デバッガー エンジン (DE) を使用してメトリックの設定を読み取るコールバック インターフェイスを指定するには、式エバリュエーター (EE) を有効にします。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT SetCallback (  
@@ -53,18 +53,18 @@ int SetCallback (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `pCallback`  
- [in] Interface to use for the settings callback.  
+ [in]設定のコールバックを使用するインターフェイスです。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- This method provides an interface to the session debug manager that an expression evaluator can use to read metric settings. It is useful in remote debugging to read metrics on the [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] computer.  
+## <a name="remarks"></a>コメント  
+ このメソッドは、式エバリュエーターは、メトリックの設定の読み取りに使用できるセッションのデバッグ マネージャーにインターフェイスを提供します。 メトリックを読み取れるリモート デバッグに便利ですが、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]コンピューター。  
   
-## <a name="example"></a>Example  
- The following examples shows how to implement this method for a **CEE** object that exposes the [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md) interface.  
+## <a name="example"></a>例  
+ 次の例に対して、このメソッドを実装する方法を示しています、 **CEE**を公開するオブジェクト、 [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)インターフェイスです。  
   
 ```cpp  
 HRESULT CEE::SetCallback(IDebugSettingsCallback2* in_pCallback)  
@@ -91,5 +91,5 @@ HRESULT CEE::SetCallback(IDebugSettingsCallback2* in_pCallback)
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

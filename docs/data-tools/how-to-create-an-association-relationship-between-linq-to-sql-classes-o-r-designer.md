@@ -1,52 +1,71 @@
 ---
-title: "How to: Create an Association (Relationship) Between LINQ to SQL Classes (O/R Designer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'How to: Create an association (relationship) between LINQ to SQL classes (O-R Designer) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56133e65-81f3-44c3-bc28-ffdd0671a0d2
 caps.latest.revision: 3
-caps.handback.revision: 1
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
+ms.openlocfilehash: 5d7e9a7e4552cccfddef0f3d7a0b110aa1baf3ec
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/07/2017
+
 ---
-# How to: Create an Association (Relationship) Between LINQ to SQL Classes (O/R Designer)
-[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] のエンティティ クラス間の関連付けは、データベース内のテーブル間の関連付けに似ています。**\[関連付けエディター\]** ダイアログ ボックスを使用することで、エンティティ クラス間の関連付けを作成できます。  
+# <a name="how-to-create-an-association-relationship-between-linq-to-sql-classes-or-designer"></a>How to: Create an association (relationship) between LINQ to SQL classes (O/R Designer)
+Associations between entity classes in [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] are analogous to relationships between tables in a database. You can create associations between entity classes by using the **Association Editor** dialog box.  
   
- **\[関連付けエディター\]** ダイアログ ボックスを使用して関連付けを作成するときは、親クラスと子クラスを選択する必要があります。親クラスは、主キーを含むエンティティ クラスであり、子クラスは、外部キーを含むエンティティ クラスです。たとえば、Northwind の Customers テーブルと Orders テーブルにマップされるエンティティ クラスが作成された場合は、Customer クラスが親クラスであり、Order クラスが子クラスです。  
+ You must select a parent class and child class when you use the **Association Editor** dialog box to create an association. The parent class is the entity class that contains the primary key; the child class is the entity class that contains the foreign-key. For example, if entity classes were created that map to the Northwind Customers and Orders tables, the Customer class would be the parent class and the Order class would be the child class.  
   
 > [!NOTE]
->  **サーバー エクスプローラー**または**データベース エクスプローラー**から[!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] \([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]\) にテーブルをドラッグすると、データベース内の既存の外部キー リレーションシップに基づいて関連付けが自動的に作成されます。  
+>  When you drag tables from **Server Explorer**/**Database Explorer** onto the [!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] ([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]), associations are automatically created based on the existing foreign-key relationships in the database.  
   
- 関連付けの作成後、O\/R デザイナーで関連付けを選択すると、**\[プロパティ\]** ウィンドウにいくつかの構成可能なプロパティが表示されます。関連付けは、関連クラス間の線で表されます。次の表は、関連付けのプロパティの説明を示しています。  
+ After you create an association, when you select the association in the O/R Designer, there are some configurable properties in the **Properties** window. (The association is the line between the related classes.) The following table provides descriptions for the properties of an association.  
   
-|プロパティ|説明|  
-|-----------|--------|  
-|**カーディナリティ**|関連付けが 1 対多と 1 対 1 のどちらであるかを制御します。|  
-|**子プロパティ**|コレクションのプロパティを親に作成するか、子レコードへの参照を関連付けの外部キー側に作成するかを指定します。たとえば、Customer と Order 間の関連付けでは、**"子プロパティ"** が **True** に設定され、Orders という名前のプロパティが親クラスに作成されます。|  
-|**親プロパティ**|関連付けられている親クラスを参照する子クラスのプロパティです。たとえば、Customer と Order の間の関連付けでは、注文に関連付けられている顧客を参照する Customer という名前のプロパティが Order クラスに作成されます。|  
-|**関与のプロパティ**|関連付けのプロパティを表示し、**\[関連付けエディター\]** ダイアログ ボックスを再び開く**省略記号**ボタン \(...\) が用意されています。|  
-|**ユニーク**|外部ターゲット列に一意性の制約があるかどうかを示します。|  
+|Property|Description|  
+|--------------|-----------------|  
+|**Cardinality**|Controls whether the association is one-to-many or one-to-one.|  
+|**Child Property**|Specifies whether to create a property on the parent that is a collection or reference to the child records on the foreign-key side of the association. For example, in the association between Customer and Order, if the **Child Property** is set to **True**, a property named Orders is created on the parent class.|  
+|**Parent Property**|The property on the child class that references the associated parent class. For example, in the association between Customer and Order, a property named Customer that references the associated customer for an order is created on the Order class.|  
+|**Participating Properties**|Displays the association properties and provides an **ellipsis** button (...) that re-opens the **Association Editor** dialog box.|  
+|**Unique**|Specifies whether the foreign target columns have a uniqueness constraint.|  
   
-### エンティティ クラス間に関連付けを作成するには  
+### <a name="to-create-an-association-between-entity-classes"></a>To create an association between entity classes  
   
-1.  関連付けの親クラスを表すエンティティ クラスを右クリックし、**\[追加\]** をポイントして、**\[関連付け\]** をクリックします。  
+1.  Right-click the entity class that represents the parent class in the association, point to **Add**, and then click **Association**.  
   
-2.  **\[関連付けエディター\]** ダイアログ ボックスで、正しい**親クラス**が選択されていることを確認します。  
+2.  Verify that the correct **Parent Class** is selected in the **Association Editor** dialog box.  
   
-3.  コンボ ボックスで**子クラス**を選択します。  
+3.  Select the **Child Class** in the combo box.  
   
-4.  クラスに関連する **\[関連付けのプロパティ\]** を選択します。通常、これはデータベースで定義されている外部キー リレーションシップにマップされます。たとえば、Customers と Orders の関連付けでは、**\[関連付けのプロパティ\]** は各クラスの CustomerID になります。  
+4.  Select the **Association Properties** that relate the classes. Typically, this maps to the foreign-key relationship defined in the database. For example, in the Customers and Orders association, the **Association Properties** are the CustomerID for each class.  
   
-5.  **\[OK\]** をクリックして、関連付けを作成します。  
+5.  Click **OK** to create the association.  
   
-## 参照  
- [O\/R Designer Overview](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio1.md)   
- [Walkthrough: Creating LINQ to SQL Classes \(O\/R Designer\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [DataContext Methods \(O\/R Designer\)](../data-tools/datacontext-methods-o-r-designer.md)   
- [How to: Represent Primary Keys](../Topic/How%20to:%20Represent%20Primary%20Keys.md)
+## <a name="see-also"></a>See Also  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
+ [DataContext Methods (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md)   
+ [How to: Represent Primary Keys](/dotnet/framework/data/adonet/sql/linq/how-to-represent-primary-keys)

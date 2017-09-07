@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Creating, Editing and Maintaining a Coded UI Test | Microsoft Docs'
+title: "チュートリアル: コード化された UI テストの作成、編集、および保守 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,54 +30,54 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 63dd3f809e472bea8f558bff15e17bbfa0421a2c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>Walkthrough: Creating, Editing and Maintaining a Coded UI Test
-In this walkthrough, you will create a simple Windows Presentation Foundation (WPF) application to demonstrate how to create, edit, and maintain a coded UI test. The walkthrough provides solutions for correcting tests that have been broken by various timing issues and control refactoring.  
+# <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>チュートリアル: コード化された UI テストの作成、編集、および保守
+このチュートリアルでは、簡単な Windows Presentation Foundation (WPF) アプリケーションを作成して、コード化された UI テストの作成、編集、および保守を行う方法について説明します。 また、さまざまなタイミングの問題やコントロールのリファクタリングによって機能が損なわれたテストを修正するための解決策を示します。  
   
-## <a name="prerequisites"></a>Prerequisites  
- For this walkthrough you will need:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルに必要な条件は次のとおりです。  
   
 -   Visual Studio Enterprise  
   
-### <a name="create-a-simple-wpf-application"></a>Create a Simple WPF Application  
+### <a name="create-a-simple-wpf-application"></a>簡単な WPF アプリケーションの作成  
   
-1.  On the **FILE** menu, point to **New**, and then select **Project**.  
+1.  **[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** を選択します。  
   
-     The **New Project** dialog box appears.  
+     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  In the **Installed** pane, expand **Visual C#**, and then select **Windows Desktop**.  
+2.  **[インストールされたテンプレート]** ペインで、**[Visual C#]** を展開し、**[Windows デスクトップ]** を選択します。  
   
-3.  Above the middle pane, verify that the target framework drop-down list is set to **.NET Framework 4.5**.  
+3.  中央のペインの上にあるターゲット フレームワーク ドロップダウン リストが **[.NET Framework 4.5]** に設定されていることを確認します。  
   
-4.  In the middle pane, select the **WPF Application** template.  
+4.  中央のペインで、**[WPF アプリケーション]** テンプレートを選択します。  
   
-5.  In the **Name** text box, type **SimpleWPFApp**.  
+5.  **[名前]** テキスト ボックスに「**SimpleWPFApp**」と入力します。  
   
-6.  Choose a folder where you will save the project. In the **Location** text box, type the name of the folder.  
+6.  プロジェクトの保存先のフォルダーを選択します。 **[場所]** テキスト ボックスにフォルダーの名前を入力します。  
   
-7.  Choose **OK**.  
+7.  **[OK]**をクリックします。  
   
-     The WPF Designer for Visual Studio opens and displays MainWindow of the project.  
+     Visual Studio の WPF デザイナーが開き、プロジェクトの MainWindow が表示されます。  
   
-8.  If the toolbox is not currently open, open it. Choose the **VIEW** menu, and then choose **Toolbox**.  
+8.  ツールボックスが現在開いていない場合は開きます。 **[表示]** メニューを選択し、**[ツールボックス]** を選択します。  
   
-9. Under the **All WPF Controls** section, drag a **Button**, **CheckBox** and **ProgressBar** control onto the MainWindow in the design surface.  
+9. **[すべての WPF コントロール]** セクションの **[Button]**、**[CheckBox]**、**[ProgressBar]** の各コントロールをデザイン サーフェイスの MainWindow にドラッグします。  
   
-10. Select the Button control. In the Properties window, change the value for the **Name** property from \<No Name> to button1. Then change the value for the **Content** property from Button to Start.  
+10. Button コントロールを選択します。 [プロパティ] ウィンドウで、**[名前]** プロパティの値を \<No Name> から button1 に変更します。 次に、**[コンテンツ]** プロパティの値を Button から Start に変更します。  
   
-11. Select the ProgressBar control. In the Properties window, change the value for the value for the **Name** property from \<No Name> to progressBar1. Then change the value for the **Maximum** property from **100** to **10000**.  
+11. ProgressBar コントロールを選択します。 [プロパティ] ウィンドウで、**[名前]** プロパティの値を \<No Name> から progressBar1 に変更します。 次に、**[最大値]** プロパティの値を **100** から **10000** に変更します。  
   
-12. Select the Checkbox control. In the Properties window, change the value for the **Name** property from \<No Name> to checkBox1 and clear the **IsEnabled** property.  
+12. Checkbox コントロールを選択します。 [プロパティ] ウィンドウで、**[名前]** プロパティの値を \<No Name> から checkBox1 に変更し、**[IsEnabled]** プロパティをクリアします。  
   
-     ![Simple WPF Application](../test/media/codedui_wpfapp.png "CodedUI_WPFApp")  
+     ![簡単な WPF アプリケーション](../test/media/codedui_wpfapp.png "CodedUI_WPFApp")  
   
-13. Double-click the button control to add a click event handler.  
+13. ボタン コントロールをダブルクリックしてクリック イベント ハンドラーを追加します。  
   
-     The MainWindow.xmal.cs is displayed in the Code Editor with the cursor in the new button1_Click method.  
+     コード エディターに MainWindow.xmal.cs が表示され、新しい button1_Click メソッドにカーソルが置かれます。  
   
-14. At the top of the MainWindow class, add a delegate. The delegate will be used for the progress bar. To add the delegate, add the following code:  
+14. MainWindow クラスの先頭にデリゲートを追加します。 このデリゲートはプログレス バーに使用されます。 デリゲートを追加するには、次のコードを追加します。  
   
     ```csharp  
     public partial class MainWindow : Window  
@@ -92,7 +92,7 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-15. In the button1_Click method, add the following code:  
+15. button1_Click メソッドに次のコードを追加します。  
   
     ```csharp  
     private void button1_Click(object sender, RoutedEventArgs e)  
@@ -118,97 +118,97 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-16. Save the file.  
+16. ファイルを保存します。  
   
-### <a name="verify-the-wpf-application-runs-correctly"></a>Verify the WPF Application Runs Correctly  
+### <a name="verify-the-wpf-application-runs-correctly"></a>WPF アプリケーションの動作の確認  
   
-1.  On the **DEBUG** menu, select **Start Debugging** or press **F5**.  
+1.  **[デバッグ]** メニューの **[デバッグ開始]** を選択するか、**F5** キーを押します。  
   
-2.  Notice that the check box control is disabled. Choose **Start**.  
+2.  チェック ボックス コントロールが無効にされることに注意してください。 **[開始]** を選択します。  
   
-     In a few seconds, the progress bar should be 100% complete.  
+     数秒でプログレス バーが 100% になります。  
   
-3.  You can now select the check box control.  
+3.  これで、チェック ボックス コントロールを選択できます。  
   
-4.  Close SimpleWPFApp.  
+4.  SimpleWPFApp を閉じます。  
   
-### <a name="create-and-run-a-coded-ui-test-for-simplewpfapp"></a>Create and Run a Coded UI Test for SimpleWPFApp  
+### <a name="create-and-run-a-coded-ui-test-for-simplewpfapp"></a>SimpleWPFApp のコード化された UI テストの作成と実行  
   
-1.  Locate the SimpleWPFApp application that you created earlier. By default, the application will be located at C:\Users\\<username\>\Documents\Visual Studio \<version>\Projects\SimpleWPFApp\SimpleWPFApp\bin\Debug\SimpleWPFApp.exe  
+1.  前に作成した SimpleWPFApp アプリケーションを見つけます。 既定では、アプリケーションは C:\Users\\<ユーザー名\>\Documents\Visual Studio \<バージョン>\Projects\SimpleWPFApp\SimpleWPFApp\bin\Debug\SimpleWPFApp.exe にあります。  
   
-2.  Create a desktop shortcut to the SimpleWPFApp application. Right-click SimpleWPFApp.exe and choose **Copy**. On your desktop, right-click and choose **Paste shortcut**.  
+2.  SimpleWPFApp アプリケーションのデスクトップ ショートカットを作成します。 SimpleWPFApp.exe を右クリックし、**[コピー]** を選択します。 デスクトップで右クリックし、**[ショートカットの貼り付け]** を選択します。  
   
     > [!TIP]
-    >  A shortcut to the application makes it easier to add or modify Coded UI tests for your application because it lets you start the application quickly.  
+    >  アプリケーションのショートカットを使用するとアプリケーションをすばやく起動できるため、アプリケーションのコード化された UI テストを追加または変更しやすくなります。  
   
-3.  In Solution Explorer, right-click the solution, choose **Add** and then select **New Project**.  
+3.  ソリューション エクスプローラーで、ソリューションを右クリックし、**[追加]** を選択して **[新しいプロジェクト]** を選択します。  
   
-     The **Add New Project** dialog box appears.  
+     **[新しいプロジェクトの追加]** ダイアログ ボックスが表示されます。  
   
-4.  In the **Installed** pane, expand **Visual C#**, and then select **Test**.  
+4.  **[インストールされたテンプレート]** ペインで、**[Visual C#]** を展開し、**[テスト]** を選択します。  
   
-5.  In the middle pane, select the **Coded UI Test Project** template.  
+5.  中央のペインで、**[コード化された UI テスト プロジェクト]** テンプレートを選択します。  
   
-6.  Choose **OK**.  
+6.  **[OK]**をクリックします。  
   
-     In Solution Explorer, the new coded UI test project named **CodedUITestProject1** is added to your solution.  
+     ソリューション エクスプローラーで、**CodedUITestProject1** という名前の新しいコード化された UI テスト プロジェクトがソリューションに追加されます。  
   
-     The **Generate Code for Coded UI Test** dialog box appears.  
+     **[コード化された UI テストのコードの生成]** ダイアログ ボックスが表示されます。  
   
-7.  Select the **Record actions, edit UI map or add assertions** option and choose **OK**.  
+7.  **[操作の記録、UI マップの編集、またはアサーションの追加]** オプションを選択し、**[OK]** を選択します。  
   
-     The UIMap - Coded UI Test Builder appears, and the Visual Studio window is minimized.  
+     [UIMap - コード化された UI テスト ビルダー] が表示され、Visual Studio ウィンドウは最小化されます。  
   
-     For more information about the options in the dialog box, see [Creating Coded UI Tests](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate).  
+     ダイアログ ボックスのオプションの詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)」を参照してください。  
   
-8.  Choose **Start Recording** on the UIMap - Coded UI Test Builder.  
+8.  [UIMap - コード化された UI テスト ビルダー] で **[記録の開始]** を選択します。  
   
-     ![Start recording](../test/media/cuit_builder_record.png "CUIT_Builder_Record")  
+     ![記録の開始](../test/media/cuit_builder_record.png "CUIT_Builder_Record")  
   
-     You can pause the recording if needed, for example if you have to deal with incoming mail.  
+     受信メールを処理する場合など、必要に応じて記録を一時停止できます。  
   
-     ![Pause the recording](../test/media/cuit_.png "CUIT_")  
+     ![レコーディングの一時停止](../test/media/cuit_.png "CUIT_")  
   
     > [!WARNING]
-    >  All actions performed on the desktop will be recorded. Pause the recording if you are performing actions that may lead to sensitive data being included in the recording.  
+    >  デスクトップ上で実行されるすべてのアクションが記録されます。 機密データが記録される可能性のあるアクションを実行する場合には、記録を一時停止します。  
   
-9. Launch the SimpleWPFApp using the desktop shortcut.  
+9. デスクトップ ショートカットを使用して、SimpleWPFApp を起動します。  
   
-     As before, notice that the check box control is disabled.  
+     前と同じく、チェック ボックス コントロールが無効にされることに注意してください。  
   
-10. On the SimpleWPFApp, choose **Start**.  
+10. SimpleWPFApp で **[開始]** を選択します。  
   
-     In a few seconds, the progress bar should be 100% complete.  
+     数秒でプログレス バーが 100% になります。  
   
-11. Check the check box control which is now enabled.  
+11. 有効になったチェック ボックス コントロールを確認します。  
   
-12. Close the SimpleWPFApp application.  
+12. SimpleWPFApp アプリケーションを閉じます。  
   
-13. On the UIMap - Coded UI Test Builder, choose **Generate Code**.  
+13. [UIMap - コード化された UI テスト ビルダー] で、**[コードの生成]** を選択します。  
   
-14. In the Method Name type **SimpleAppTest** and choose **Add and Generate**. In a few seconds, the Coded UI test appears and is added to the Solution.  
+14. [メソッド名] に「**SimpleAppTest**」と入力し、**[追加と生成]** を選択します。 数秒でコード化された UI テストが表示され、ソリューションに追加されます。  
   
-15. Close the UIMap - Coded UI Test Builder.  
+15. [UIMap - コード化された UI テスト ビルダー] を閉じます。  
   
-     The CodedUITest1.cs file appears in the Code Editor.  
+     コード エディターに CodedUITest1.cs ファイルが表示されます。  
   
-16. Save your project.  
+16. プロジェクトを保存します。  
   
-### <a name="run-the-coded-ui-test"></a>Run the Coded UI Test  
+### <a name="run-the-coded-ui-test"></a>コード化された UI テストの実行  
   
-1.  From the **TEST** menu, choose **Windows** and then choose **Test Explorer**.  
+1.  **[テスト]** メニューの **[ウィンドウ]** を選択し、**[テスト エクスプローラー]** を選択します。  
   
-2.  From the **BUILD** menu, choose **Build Solution**.  
+2.  **[ビルド]** メニューの **[ソリューションのビルド]** を選択します。  
   
-3.  In the CodedUITest1.cs file, locate the **CodedUITestMethod** method, right-click and select **Run Tests**, or run the test from Test Explorer.  
+3.  CodedUITest1.cs ファイルで、**CodedUITestMethod** メソッドを見つけて右クリックし、**[テストの実行]** を選択します。または、テスト エクスプローラーでテストを実行します。  
   
-     While the coded UI test runs, the SimpleWPFApp is visible. It conducts the steps that you did in the previous procedure. However, when the test tries to select the check box for the check box control, the Test Results window shows that the test failed. This is because the test tries to select the check box but is not aware that the check box control is disabled until the progress bar is 100% complete. You can correct this and similar issues by using the various `UITestControl.WaitForControlXXX()` methods that are available for coded UI testing. The next procedure will demonstrate using the `WaitForControlEnabled()` method to correct the issue that caused this test to fail. For more information, see [Making Coded UI Tests Wait For Specific Events During Playback](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).  
+     コード化された UI テストを実行すると、SimpleWPFApp が表示されます。 前の手順で実行した各ステップが実行されます。 ただし、テストで チェック ボックス コントロールのチェック ボックスをオンにしようとすると、[テスト結果] ウィンドウにテストが失敗したことが示されます。 チェック ボックス コントロールはプログレス バーが 100% になるまで無効化されています。テストではこの点が認識されておらず、まだ有効になっていないチェック ボックスをオンにしようとしたことが失敗の原因です。 コード化された UI テストで使用できるさまざまな `UITestControl.WaitForControlXXX()` メソッドを使用することで、この問題や同様の問題を解決できます。 次の手順では、`WaitForControlEnabled()` メソッドを使用して、このテストの失敗の原因となった問題を解決する方法を示します。 詳細については、「[再生中に特定のイベントを待機するようにコード化された UI テストを設定](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)」を参照してください。  
   
-### <a name="edit-and-rerun-the-coded-ui-test"></a>Edit and Rerun the Coded UI Test  
+### <a name="edit-and-rerun-the-coded-ui-test"></a>コード化された UI テストの編集と再実行  
   
-1.  In the Test Explorer window, select the failed test and in the **StackTrace** section, choose the first link to **UIMap.SimpleAppTest()**.  
+1.  テスト エクスプローラー ウィンドウで、失敗したテストを選択し、**[StackTrace]** セクションで **[UIMap.SimpleAppTest()]** の最初のリンクを選択します。  
   
-2.  The UIMap.Designer.cs file opens with the point of error highlighted in the code:  
+2.  UIMap.Designer.cs ファイルが開き、コードのエラー ポイントが強調表示されます。  
   
     ```csharp  
   
@@ -216,35 +216,35 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
     uICheckBoxCheckBox.Checked = this.SimpleAppTestParams.UICheckBoxCheckBoxChecked;  
     ```  
   
-3.  To correct this problem, you can make the coded UI test wait for the CheckBox control to be enabled before continuing on to this line using the `WaitForControlEnabled()` method.  
+3.  この問題を解決するには、`WaitForControlEnabled()` メソッドを使用して、コード化された UI テストで CheckBox コントロールが有効になるのを待ってからこの行に進むようにします。  
   
     > [!WARNING]
-    >  Do not modify the UIMap.Designer.cs file. Any code changes you make in the UIMapDesigner.cs file will be overwritten every time you generate code using the UIMap - Coded UI Test Builder. If you have to modify a recorded method, you must copy it to UIMap.cs file and rename it. The UIMap.cs file can be used to override methods and properties in the UIMapDesigner.cs file. You must remove the reference to the original method in the Coded UITest.cs file and replace it with the renamed method name.  
+    >  UIMap.Designer.cs ファイルは変更しないでください。 UIMapDesigner.cs ファイルでコードを変更しても、[UIMap - コード化された UI テスト ビルダー] を使用してコードを生成するたびに変更が上書きされます。 記録されたメソッドを変更する必要がある場合は、メソッドを UIMap.cs ファイルにコピーし、メソッド名を変更する必要があります。 UIMap.cs ファイルを使用すると、UIMapDesigner.cs ファイルのメソッドやプロパティをオーバーライドできます。 Coded UITest.cs ファイルの元のメソッドへの参照を削除し、変更したメソッド名に置き換える必要があります。  
   
-4.  In Solution Explorer, locate **UIMap.uitest** in your coded UI test project.  
+4.  ソリューション エクスプローラーで、コード化された UI テスト プロジェクトの **UIMap.uitest** を見つけます。  
   
-5.  Open the shortcut menu for **UIMap.uitest** and choose **Open**.  
+5.  **UIMap.uitest** のショートカット メニューを開き、**[開く]** を選択します。  
   
-     The coded UI test is displayed in the Coded UI Test Editor. You can now view and edit the coded UI test.  
+     コード化された UI テスト エディターに、コード化された UI テストが表示されます。 これで、コード化された UI テストを表示および編集できます。  
   
-6.  In the **UI Action** pane, select the test method (SimpleAppTest) that you want to move to the UIMap.cs or UIMap.vb file to facilitate custom code functionality which won't be overwritten when the test code is recompiled.  
+6.  **[UI 操作]** ペインで、UIMap.cs または UIMap.vb ファイルに移動するテスト メソッド (SimpleAppTest) を選択します。移動すると、カスタム コード機能は容易になり、テスト コードが再コンパイルされても上書きされません。  
   
-7.  Choose the **Move Code** button on the Coded UI Test Editor toolbar.  
+7.  コード化された UI テスト エディターのツール バーにある **[コードの移動]** ボタンを選択します。  
   
-8.  A Microsoft Visual Studio dialog box is displayed. It warns you that the method will be moved from the UIMap.uitest file to the UIMap.cs file and that you will no longer be able to edit the method using the Coded UI Test Editor. Choose **Yes**.  
+8.  Microsoft Visual Studio のダイアログ ボックスが表示されます。 警告で、メソッドが UIMap.uitest ファイルから UIMap.cs ファイルへ移動すること、およびコード化された UI テスト エディターを使用してメソッドを編集できなくなることが表示されます。 **[はい]**をクリックします。  
   
-     The test method is removed from the UIMap.uitest file and no longer is displayed in the UI Actions pane. To edit the moved test file, open the UIMap.cs file from Solution Explorer.  
+     テスト メソッドが UIMap.uitest ファイルから削除され、[UI Actions]\(UI 操作) ペインに表示されなくなります。 移動したテスト ファイルを編集するには、ソリューション エクスプローラーから UIMap.cs ファイルを開きます。  
   
-9. On the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] toolbar, choose **Save**.  
+9. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ツール バーの **[保存]** を選択します。  
   
-     The updates to the test method are saved in the UIMap.Designer file.  
+     テスト メソッドの更新内容が UIMap.Designer ファイルに保存されます。  
   
     > [!CAUTION]
-    >  Once you have moved the method, you can no longer edit it using the Coded UI Test Editor. You must add your custom code and maintain it using the Code Editor.  
+    >  メソッドを移動すると、コード化された UI テスト エディターを使用してそのメソッドを編集できなくなります。 カスタム コードを追加し、コード エディターを使って管理する必要があります。  
   
-10. Rename the method from `SimpleAppTest()` to `ModifiedSimpleAppTest()`  
+10. メソッド名を `SimpleAppTest()` から `ModifiedSimpleAppTest()` に変更します。  
   
-11. Add the following using statement to the file:  
+11. 次の using ステートメントをファイルに追加します。  
   
     ```csharp  
   
@@ -252,7 +252,7 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-12. Add the following `WaitForControlEnabled()` method before the offending line of code identified previously:  
+12. 確認済みの問題のコード行の前に、次の `WaitForControlEnabled()` メソッドを追加します。  
   
     ```csharp  
   
@@ -263,7 +263,7 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-13. In the CodedUITest1.cs file, locate the **CodedUITestMethod** method and either comment out or rename the reference to the original SimpleAppTest() method and then replace it with the new ModifiedSimpleAppTest():  
+13. CodedUITest1.cs ファイルで、**CodedUITestMethod** メソッドを見つけてコメントアウトするか、元の SimpleAppTest() メソッドへの参照の名前を変更し、新しい ModifiedSimpleAppTest() に置き換えます。  
   
     ```csharp  
     [TestMethod]  
@@ -277,27 +277,27 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-14. On the **BUILD** menu, choose **Build Solution**.  
+14. [**ビルド**] メニューの [**ソリューションのビルド**]をクリックします。  
   
-15. Right-click the **CodedUITestMethod** method and select **Run Tests**.  
+15. **CodedUITestMethod** メソッドを右クリックし、**[テストの実行]** を選択します。  
   
-16. This time the coded UI test successfully completes all the steps in the test and **Passed** is displayed in the Test Explorer window.  
+16. 今回は、コード化された UI テストでテストのすべてのステップが正常に完了し、テスト エクスプローラー ウィンドウに **[成功]** と表示されます。  
   
-### <a name="refactor-a-control-in-the-simplewpfapp"></a>Refactor a Control in the SimpleWPFApp  
+### <a name="refactor-a-control-in-the-simplewpfapp"></a>SimpleWPFApp のコントロールのリファクタリング  
   
-1.  In the MainWindow.xaml file, in the Designer, select the button control.  
+1.  MainWindow.xaml ファイルで、デザイナーのボタン コントロールを選択します。  
   
-2.  At the top of the Properties window, change the **Name** property value from button1 to buttonA.  
+2.  [プロパティ] ウィンドウの上部にある **[名前]** プロパティの値を button1 から buttonA に変更します。  
   
-3.  On the **BUILD** menu, choose **Build Solution**.  
+3.  [**ビルド**] メニューの [**ソリューションのビルド**]をクリックします。  
   
-4.  In Test Explorer, run **CodedUITestMethod1**.  
+4.  テスト エクスプローラーで、**CodedUITestMethod1** を実行します。  
   
-     The test fails because the coded UI test cannot locate the button control that was originally mapped in the UIMap as button1. Refactoring can impact coded UI tests in this manner.  
+     テストは失敗します。コード化された UI テストでは、UIMap で元は button1 としてマップされていたボタン コントロールを見つけることができないためです。 このように、リファクタリングがコード化された UI テストに影響を及ぼす場合があります。  
   
-5.  In the Test Explorer window, in the **StackTrace** section, choose the first link next to **UIMpa.ModifiedSimpleAppTest()**.  
+5.  [テスト エクスプローラー] ウィンドウの **[StackTrace]** セクションで、**[UIMpa.ModifiedSimpleAppTest()]** の横にある最初のリンクを選択します。  
   
-     The UIMap.cs file opens. The point of error is highlighted in the code:  
+     UIMap.cs ファイルが開きます。 コードでエラー ポイントが強調表示されます。  
   
     ```csharp  
   
@@ -305,43 +305,43 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
     Mouse.Click(uIStartButton, new Point(27, 10));  
     ```  
   
-     Notice that the line of code earlier in this procedure is using `UiStartButton`, which is the UIMap name before it was refactored.  
+     この手順の前半のコード行では `UiStartButton` を使用していることに注意してください。これがリファクタリング前の UIMap 名です。  
   
-     To correct the issue, you can add the refactored control to the UIMap by using the Coded UI Test Builder. You can update the test's code to use the code, as demonstrated in the next procedure.  
+     この問題を解決するには、コード化された UI テスト ビルダーを使用して、リファクタリングしたコントロールを UIMap に追加します。 次の手順に示すように、このコードを使用するようテストのコードを更新できます。  
   
-### <a name="map-refactored-control-and-edit-and-rerun-the-coded-ui-test"></a>Map Refactored Control and Edit and Rerun the Coded UI Test  
+### <a name="map-refactored-control-and-edit-and-rerun-the-coded-ui-test"></a>リファクタリングしたコントロールのマッピングおよびコード化された UI テストの編集と再実行  
   
-1.  In the CodedUITest1.cs file, in the **CodedUITestMethod1()** method, right-click, select **Generate Code for Coded UI Test** and then choose **Use Coded UI Test Builder**.  
+1.  CodedUITest1.cs ファイルで、**CodedUITestMethod1()** メソッドを右クリックし、**[コード化された UI テストのコードの生成]** を選択して、**[コード化された UI テスト ビルダーの使用]** を選択します。  
   
-     The UIMap - Coded UI Test Builder appears.  
+     [UIMap - コード化された UI テスト ビルダー] が表示されます。  
   
-2.  Using the desktop shortcut you created earlier, run the SimpleWPFApp application that you created earlier.  
+2.  前半で作成したデスクトップ ショートカットを使用して、作成済みの SimpleWPFApp アプリケーションを実行します。  
   
-3.  On the UIMap - Coded UI Test Builder, drag the crosshair tool to the **Start** button on the SimpleWPFApp.  
+3.  [UIMap - コード化された UI テスト ビルダー] で、十字ツールを SimpleWPFApp の **[開始]** ボタンまでドラッグします。  
   
-     The **Start** button is enclosed in a blue box and the Coded UI Test Builder takes a few seconds to process the data for the selected control and displays the controls properties. Notice that the **AutomationUId** is named **buttonA**.  
+     **[開始]** ボタンが青いボックスで囲まれます。コード化された UI テスト ビルダーによって、選択したコントロールのデータが数秒で処理され、コントロールのプロパティが表示されます。 **AutomationUId** の名前が **buttonA** になっていることに注意してください。  
   
-4.  In the properties for the control, choose the arrow at the upper-left corner to expand the UI Control Map. Notice that **UIStartButton1** is selected.  
+4.  コントロールのプロパティで、左上隅の矢印を選択して UI コントロール マップを展開します。 **UIStartButton1** が選択されていることを確認します。  
   
-5.  In the toolbar, choose the **Add control to UI Control Map**.  
+5.  ツール バーの **[コントロールの UI コントロール マップへの追加]** を選択します。  
   
-     The status at the bottom of the window verifies the action by displaying **Selected control has been added to the UI control map**.  
+     ウィンドウの下部のステータスに、**[選択されたコントロールが UI コントロール マップに追加されました]** と表示され、操作が確認されます。  
   
-6.  On the UIMap - Coded UI Test Builder, choose **Generate Code**.  
+6.  [UIMap - コード化された UI テスト ビルダー] で、**[コードの生成]** を選択します。  
   
-     The Coded UI Test Builder - Generate Code appears with a note indicating that no new method is required and that code will only be generated for the changes to the UI control map.  
+     [コード化された UI テスト ビルダー - コードの生成] が表示され、新しいメソッドは不要であり、UI コントロール マップの変更のみを目的としてコードが生成されることが通知されます。  
   
-7.  Choose **Generate**.  
+7.  **[生成]** を選択します。  
   
-8.  Close SimpleWPFApp.exe.  
+8.  SimpleWPFApp.exe を閉じます。  
   
-9. Close UIMap - Coded UI Test Builder.  
+9. [UIMap - コード化された UI テスト ビルダー] を閉じます。  
   
-     The UIMap - Coded UI Test Builder takes a few seconds to process the UI control map changes.  
+     [UIMap - コード化された UI テスト ビルダー] によって、数秒で UI コントロール マップの変更が処理されます。  
   
-10. In Solution Explorer, open the UIMap.Designer.cs file.  
+10. ソリューション エクスプローラーで、UIMap.Designer.cs ファイルを開きます。  
   
-11. In the UIMap.Designer.cs file, locate the UIStartButton1 property. Notice the `SearchProperties` is set to `"buttonA"`:  
+11. UIMap.Designer.cs ファイルで、UIStartButton1 プロパティを見つけます。 `SearchProperties` が `"buttonA"` に設定されていることを確認します。  
   
     ```csharp  
   
@@ -363,9 +363,9 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-     Now you can modify the coded UI test to use the newly mapped control. As pointed out in the previous procedure if you want to override any methods or properties in the coded UI test, you must do so in the UIMap.cs file.  
+     これで、コード化された UI テストを変更して、新しくマップされたコントロールを使用できます。 前の手順で説明したように、コード化された UI テストのメソッドまたはプロパティをオーバーライドする場合は、UIMap.cs ファイルで実行する必要があります。  
   
-12. In the UIMap.cs file, add a constructor and specify the `SearchProperties` property of the `UIStartButton` property to use the `AutomationID` property with a value of `"buttonA":`  
+12. UIMap.cs ファイルで、コンストラクターを追加し、値として `SearchProperties` を指定した `UIStartButton` プロパティを使用するように、`AutomationID` プロパティの `"buttonA":` プロパティを指定します。  
   
     ```csharp  
   
@@ -376,35 +376,35 @@ In this walkthrough, you will create a simple Windows Presentation Foundation (W
   
     ```  
   
-13. On the **BUILD** menu, choose **Build Solution**.  
+13. [**ビルド**] メニューの [**ソリューションのビルド**]をクリックします。  
   
-14. In Test Explorer, run CodedUITestMethod1.  
+14. テスト エクスプローラーで、CodedUITestMethod1 を実行します。  
   
-     This time, the coded UI test successfully completes all the steps in the test.  In the Test Results Window, you will see a status of **Passed**.  
+     今回は、コード化された UI テストでテストのすべてのステップが正常に完了します。  [テスト結果] ウィンドウに、**[成功]** というステータスが表示されます。  
   
-## <a name="external-resources"></a>External Resources  
+## <a name="external-resources"></a>外部リソース  
   
-### <a name="videos"></a>Videos  
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)  
+### <a name="videos"></a>ビデオ  
+ ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)  
   
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](http://go.microsoft.com/fwlink/?LinkID=230574)  
+ ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](http://go.microsoft.com/fwlink/?LinkID=230574)  
   
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](http://go.microsoft.com/fwlink/?LinkID=230575)  
+ ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](http://go.microsoft.com/fwlink/?LinkID=230575)  
   
-### <a name="hands-on-lab"></a>Hands on lab  
- [MSDN Virtual Lab: Introduction to Creating Coded UI Tests with Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=22508)  
+### <a name="hands-on-lab"></a>ハンズ オン ラボ  
+ [MSDN 仮想ラボ: Visual Studio 2010 でのコード化された UI テストの作成の概要](http://go.microsoft.com/fwlink/?LinkID=22508)  
   
 ### <a name="faq"></a>FAQ  
- [Coded UI Tests FAQ - 1](http://go.microsoft.com/fwlink/?LinkID=230576)  
+ [Coded UI Tests FAQ - 1 (コード化された UI テストの FAQ - 1)](http://go.microsoft.com/fwlink/?LinkID=230576)  
   
- [Coded UI Tests FAQ -2](http://go.microsoft.com/fwlink/?LinkID=230578)  
+ [Coded UI Tests FAQ - 2 (コード化された UI テストの FAQ - 2)](http://go.microsoft.com/fwlink/?LinkID=230578)  
   
-### <a name="forum"></a>Forum  
- [Visual Studio UI Automation Testing (includes CodedUI)](http://go.microsoft.com/fwlink/?LinkID=224497)  
+### <a name="forum"></a>フォーラム  
+ [Visual Studio の UI オートメーションのテスト (CodedUI を含む)](http://go.microsoft.com/fwlink/?LinkID=224497)  
   
-## <a name="see-also"></a>See Also  
- [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md)   
- [Getting Started with the WPF Designer](http://msdn.microsoft.com/en-us/18e61d03-b96a-4058-a166-8ec6b3f6116b)   
- [Supported Configurations and Platforms for Coded UI Tests and Action Recordings](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
- [Editing Coded UI Tests Using the Coded UI Test Editor](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)
+## <a name="see-also"></a>関連項目  
+ [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
+ [WPF デザイナーの使用を開始する](http://msdn.microsoft.com/en-us/18e61d03-b96a-4058-a166-8ec6b3f6116b)   
+ [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
+ [コード化された UI テスト エディターを使用したコード化された UI テストの編集](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)
 

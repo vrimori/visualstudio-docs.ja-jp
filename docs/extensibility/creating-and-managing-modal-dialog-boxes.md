@@ -1,5 +1,5 @@
 ---
-title: Creating and Managing Modal Dialog Boxes | Microsoft Docs
+title: "作成して、モーダル ダイアログ ボックスを管理する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,24 +29,24 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: 1e78bf1cabb01739a70ad9e742ae472b381b801b
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4da27f2be100df8e9f196f68b4371cbb8f474d27
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="creating-and-managing-modal-dialog-boxes"></a>Creating and Managing Modal Dialog Boxes
-When you create a modal dialog box inside Visual Studio, you must make sure that the parent window of the dialog box is disabled while the dialog box is displayed, then re-enable the parent window after the dialog box is closed. If you do not do so, you may receive the error: "Microsoft Visual Studio cannot shut down because a modal dialog is active. Close the active dialog and try again."  
+# <a name="creating-and-managing-modal-dialog-boxes"></a>作成して、モーダル ダイアログ ボックスを管理します。
+Visual Studio 内のモーダル ダイアログ ボックスを作成するときに、ダイアログ ボックスが表示されている間、ダイアログ ボックスの親ウィンドウが無効になっていることを確認し、ダイアログ ボックスを閉じた後に、親ウィンドウを再度有効にする必要があります。 これを行わないと、エラーが表示される可能性があります:"Microsoft Visual Studio をシャット ダウンできないモーダル ダイアログ ボックスがアクティブであるためです。 アクティブなダイアログを閉じてもう一度やり直してください。"  
   
- There are two ways of doing this. The recommended way, if you have a WPF dialog box, is to derive it from <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>, and then call <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow.ShowModal%2A> to display the dialog box. If you do this, you do not need to manage the modal state of the parent window.  
+ これを行う 2 つの方法はあります。 派生は、WPF ダイアログ ボックスがある場合、ことをお勧め<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>、まず<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow.ShowModal%2A>ダイアログ ボックスを表示します。 これを行う場合は、親ウィンドウのモーダル状態を管理する必要はありません。  
   
- If your dialog box is not WPF, or for some other reason you cannot derive your dialog box class from <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>, then you must get the parent of the dialog box by calling <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.GetDialogOwnerHwnd%2A> and manage the modal state yourself, by calling the <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.EnableModeless%2A> method with a parameter of 0 (false) before displaying the dialog box and calling the method again with a parameter of 1 (true) after closing the dialog box.  
+ ダイアログ ボックスが、WPF ではない場合や、その他の理由により、ダイアログ ボックスを派生させることはできませんクラス<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>を呼び出して、ダイアログ ボックスの親を取得する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.GetDialogOwnerHwnd%2A>呼び出すことによって、自分でモーダルの状態を管理し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.EnableModeless%2A>メソッドをダイアログ ボックスを表示し、ダイアログ ボックスを閉じた後 1 (true) のパラメーターを使用してメソッドを呼び出す前に 0 (false) のパラメーターです。  
   
-## <a name="creating-a-dialog-box-derived-from-dialogwindow"></a>Creating a dialog box derived from DialogWindow  
+## <a name="creating-a-dialog-box-derived-from-dialogwindow"></a>ダイアログ ウィンドウから派生したダイアログ ボックスの作成  
   
-1.  Create a VSIX project named **OpenDialogTest** and add a menu command named **OpenDialog**. For more information about how to do this, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md).  
+1.  という名前の VSIX プロジェクトを作成する**OpenDialogTest**という名前のメニュー コマンドを追加および**ダイアログ**です。 これを行う方法の詳細については、次を参照してください。[メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)です。  
   
-2.  To use the <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> class, you must add references to the following assemblies (in the Framework tab of the **Add Reference** dialog box):  
+2.  使用する、<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>クラスでは、次のアセンブリへの参照を追加する必要があります (のフレームワーク タブで、**参照の追加** ダイアログ ボックス)。  
   
     -   PresentationCore  
   
@@ -56,22 +56,22 @@ When you create a modal dialog box inside Visual Studio, you must make sure that
   
     -   System.Xaml  
   
-3.  In OpenDialog.cs, add the following `using` statement:  
+3.  次のコードを追加で OpenDialog.cs、`using`ステートメント。  
   
-    ```cs  
+    ```csharp  
     using Microsoft.VisualStudio.PlatformUI;  
     ```  
   
-4.  Declare a class named **TestDialogWindow** that derives from <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>:  
+4.  という名前のクラスを宣言**TestDialogWindow**から派生した<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>:  
   
-    ```cs  
+    ```csharp  
     class TestDialogWindow : DialogWindow  
     {. . .}  
     ```  
   
-5.  To be able to minimize and maximize the dialog box, set <xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMaximizeButton%2A> and <xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMinimizeButton%2A> to true:  
+5.  最小化し、ダイアログ ボックスを最大化するには、次のように設定します。<xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMaximizeButton%2A>と<xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMinimizeButton%2A>true に設定します。  
   
-    ```cs  
+    ```csharp  
     internal TestDialogWindow()  
     {  
         this.HasMaximizeButton = true;  
@@ -79,51 +79,51 @@ When you create a modal dialog box inside Visual Studio, you must make sure that
     }  
     ```  
   
-6.  In the **OpenDialog.ShowMessageBox** method, replace the existing code with the following:  
+6.  **OpenDialog.ShowMessageBox**メソッド、既存のコードを次に置き換えます。  
   
-    ```cs  
+    ```csharp  
     TestDialogWindow testDialog = new TestDialogWindow();  
     testDialog.ShowModal();  
     ```  
   
-7.  Build and run the application. The experimental instance of Visual Studio should appear. On the **Tools** menu of the experimental instance you should see a command named **Invoke OpenDialog**. When you click this command, you should see the dialog window. You should be able to minimize and maximize the window.  
+7.  アプリケーションをビルドして実行します。 Visual Studio の実験用インスタンスが表示されます。 **ツール**実験用インスタンスのメニューという名前のコマンドを表示する必要があります**呼び出すダイアログ**です。 このコマンドをクリックすると、ダイアログ ウィンドウが表示されます。 最小化し、ウィンドウを最大化できる必要があります。  
   
-## <a name="creating-and-managing-a-dialog-box-not-derived-from-dialogwindow"></a>Creating and managing a dialog box not derived from DialogWindow  
+## <a name="creating-and-managing-a-dialog-box-not-derived-from-dialogwindow"></a>作成と管理ダイアログ ウィンドウから派生していません ダイアログ ボックス  
   
-1.  For this procedure, you can use the **OpenDialogTest** solution you created in the previous procedure, with the same assembly references.  
+1.  この手順を使用することができます、 **OpenDialogTest**は同じアセンブリの参照に、前の手順で作成したソリューションです。  
   
-2.  Add the following `using` declarations:  
+2.  次の追加`using`宣言します。  
   
-    ```cs  
+    ```csharp  
     using System.Windows;  
     using Microsoft.Internal.VisualStudio.PlatformUI;  
     ```  
   
-3.  Create a class named **TestDialogWindow2** that derives from <xref:System.Windows.Window>:  
+3.  という名前のクラスを作成する**TestDialogWindow2**から派生した<xref:System.Windows.Window>:  
   
-    ```cs  
+    ```csharp  
     class TestDialogWindow2 : Window  
     {. . .}  
     ```  
   
-4.  Add a private reference to <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>:  
+4.  プライベートの参照を追加<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>:  
   
     ```  
     private IVsUIShell shell;  
     ```  
   
-5.  Add a constructor that sets the reference to <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>:  
+5.  参照に設定するコンス トラクターを追加<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>:  
   
-    ```cs  
+    ```csharp  
     public TestDialogWindow2(IVsUIShell uiShell)  
     {  
         shell = uiShell;  
     }  
     ```  
   
-6.  In the **OpenDialog.ShowMessageBox** method, replace the existing code with the following:  
+6.  **OpenDialog.ShowMessageBox**メソッド、既存のコードを次に置き換えます。  
   
-    ```cs  
+    ```csharp  
     IVsUIShell uiShell = (IVsUIShell)ServiceProvider.GetService(typeof(SVsUIShell));  
   
     TestDialogWindow2 testDialog2 = new TestDialogWindow2(uiShell);  
@@ -143,4 +143,4 @@ When you create a modal dialog box inside Visual Studio, you must make sure that
     }  
     ```  
   
-7.  Build and run the application. On the **Tools** menu you should see a command named **Invoke OpenDialog**. When you click this command, you should see the dialog window.
+7.  アプリケーションをビルドして実行します。 **ツール**メニューという名前のコマンドを表示する必要があります**呼び出すダイアログ**です。 このコマンドをクリックすると、ダイアログ ウィンドウが表示されます。

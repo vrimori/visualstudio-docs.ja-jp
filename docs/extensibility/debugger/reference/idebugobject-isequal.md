@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsEqual | Microsoft Docs
+title: "IDebugObject::IsEqual |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,43 +31,43 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: 4a715a24014a8edd753327cf2dcc40ec10591c06
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 9780a18ff72058a90739c421061fabd9ce8520e1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
-Compares an object with this object.  
+このオブジェクトを持つオブジェクトを比較します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT IsEqual(   
    IDebugObject* pObject,  
    BOOL*         pfIsEqual  
 );  
 ```  
   
-```cs  
+```csharp  
 int IsEqual(  
    IDebugObject pObject,  
    out int      pfIsEqual  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `pObject`  
- [in] An [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object representing the object to compare to.  
+ [in][IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)と比較するオブジェクトを表すオブジェクト。  
   
  `pfIsEqual`  
- [out] Returns non-zero (`TRUE`) if the values of the objects are equal; otherwise, returns zero (`FALSE`).  
+ [out]0 以外を返します (`TRUE`) のオブジェクトの値がそれ以外の場合は 0 を返します (`FALSE`)。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- Typically, this method can compare the addresses of the values represented by the `pObject` parameter and this [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object; if the addresses are equal, then the objects can be considered equal.  
+## <a name="remarks"></a>コメント  
+ 通常、このメソッドはによって表される値のアドレスを比較できます、`pObject`パラメーターが、これ[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)オブジェクト以外の場合は、アドレスが等しいか、し、オブジェクトが等しいと見なすかどうかです。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

@@ -1,4 +1,5 @@
 # [R Tools for Visual Studio](index.md)
+## [ データ サイエンスと分析のアプリケーション ワークロード](data-science-workload.md)
 ## [インストール](installation.md)
 ## [R の概要](getting-started-with-r.md)
 ### [サンプル](getting-started-samples.md)

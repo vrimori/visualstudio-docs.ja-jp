@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::GetPortSupplierId | Microsoft Docs
+title: "IDebugPortSupplier2::GetPortSupplierId |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 2201df4c73028583667dd100d2c068b26ff86271
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugportsupplier2getportsupplierid"></a>IDebugPortSupplier2::GetPortSupplierId
-Gets the port supplier identifier.  
+ポートのサプライヤーの識別子を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetPortSupplierId(   
@@ -54,12 +54,12 @@ HRESULT GetPortSupplierId(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `pguidPortSupplier`  
- [out] Returns the GUID of the port supplier.  
+ [out]ポートのサプライヤーの GUID を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

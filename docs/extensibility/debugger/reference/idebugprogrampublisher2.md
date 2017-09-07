@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2 | Microsoft Docs
+title: "IDebugProgramPublisher2 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,47 +34,47 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 242221c8cc3ffad51fa21f71d6209208b58ae6e6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
-This interface allows a debug engine (DE) or custom port suppliers to register programs for debugging.  
+このインターフェイスは、デバッグ エンジン (DE) またはデバッグするためのプログラムを登録するカスタム ポート納入業者を使用します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugProgramPublisher2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Notes for Implementers  
- Visual Studio implements this interface to register programs being debugged in order to make them visible for debugging across multiple processes.  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ Visual Studio では、複数のプロセスでデバッグするために表示されるようにするために、デバッグ中のプログラムを登録するには、このインターフェイスを実装します。  
   
-## <a name="notes-for-callers"></a>Notes for Callers  
- Call COM's `CoCreateInstance` function with `CLSID_ProgramPublisher` to obtain this interface (see the Example). A DE or a custom port supplier uses this interface to register program nodes that represent programs being debugged.  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ COM の呼び出し`CoCreateInstance`で機能`CLSID_ProgramPublisher`(この例を参照してください) このインターフェイスを取得します。 DE やカスタム ポートのサプライヤーは、このインターフェイスを使用して、デバッグ中のプログラムを表すプログラム ノードを登録します。  
   
-## <a name="methods-in-vtable-order"></a>Methods in Vtable order  
- This interface implements the following methods:  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ このインターフェイスでは、次のメソッドを実装します。  
   
-|Method|Description|  
+|メソッド|説明|  
 |------------|-----------------|  
-|[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)|Makes a program node available to DEs and the session debug manager (SDM).|  
-|[UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)|Removes a program node so that it is no longer available.|  
-|[PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)|Makes a program available to DEs and the SDM.|  
-|[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)|Removes a program so it is no longer available.|  
-|[SetDebuggerPresent](../../../extensibility/debugger/reference/idebugprogrampublisher2-setdebuggerpresent.md)|Sets a flag indicating that a debugger is present.|  
+|[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)|プログラムのノードを使用できるように DEs およびセッション デバッグ マネージャー (SDM)。|  
+|[UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)|使用できなくするようにプログラム ノードを削除します。|  
+|[PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)|プログラムはにより DEs および、SDM を使用できます。|  
+|[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)|使用可能なが不要になったように、プログラムを削除します。|  
+|[SetDebuggerPresent](../../../extensibility/debugger/reference/idebugprogrampublisher2-setdebuggerpresent.md)|デバッガーが存在することを示すフラグを設定します。|  
   
-## <a name="remarks"></a>Remarks  
- This interface makes programs and program nodes available (that is, "publishes" them) for use by DEs and the session debug manager (SDM). To access published programs and program nodes, use the [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) interface. This is the only way Visual Studio can recognize that a program is being debugged.  
+## <a name="remarks"></a>コメント  
+ このインターフェイスを使用可能プログラムとプログラムのノード (つまり、「パブリッシュ」して) DEs およびセッション デバッグ マネージャー (SDM) で使用します。 公開されたプログラムとプログラムのノードにアクセスするには、使用、 [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)インターフェイスです。 これは、Visual Studio は、プログラムをデバッグすることを認識できる唯一の方法です。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="example"></a>Example  
- This example shows how to instantiate the program publisher and register a program node. This is taken from the Tutorial, [Publishing the Program Node](http://msdn.microsoft.com/en-us/d0100e02-4e2b-4e72-9e90-f7bc11777bae).  
+## <a name="example"></a>例  
+ この例では、プログラムの発行元をインスタンス化し、[プログラム] ノードを登録する方法を示します。 これは、チュートリアルから取得[プログラム ノードを公開](http://msdn.microsoft.com/en-us/d0100e02-4e2b-4e72-9e90-f7bc11777bae)です。  
   
 ```cpp  
 // This is how m_srpProgramPublisher is defined in the class definition:  
@@ -107,6 +107,6 @@ void CProgram::Start(IDebugEngine2 * pEngine)
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Core Interfaces](../../../extensibility/debugger/reference/core-interfaces.md)   
+## <a name="see-also"></a>関連項目  
+ [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

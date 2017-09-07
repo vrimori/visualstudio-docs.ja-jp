@@ -1,5 +1,5 @@
 ---
-title: Version Numbers for Main and Localized Satellite Assemblies | Microsoft Docs
+title: "メイン アセンブリおよびローカライズされたサテライト アセンブリのバージョン番号 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,18 +37,18 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 19ca788264cd3e1075353f5986c365bcf2a57f67
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="version-numbers-for-main-and-localized-satellite-assemblies"></a>Version Numbers for Main and Localized Satellite Assemblies
-The <xref:System.Resources.SatelliteContractVersionAttribute> class provides versioning support for a main assembly that uses localized resources by means of the resource manager. Applying the <xref:System.Resources.SatelliteContractVersionAttribute> to an application's main assembly allows you to update and re-deploy the assembly without updating its satellite assemblies. For example, you can use the <xref:System.Resources.SatelliteContractVersionAttribute> class with a service pack that doesn't introduce new resources without rebuilding and redeploying your satellite assemblies. For your localized resources to be available, the satellite contract version of your main assembly must match the <xref:System.Reflection.AssemblyVersionAttribute> class of your satellite assemblies. You must specify an exact version number in the <xref:System.Resources.SatelliteContractVersionAttribute>; wildcard characters such as "*" are not allowed. For more information, see [Retrieving Resources](/dotnet/framework/resources/retrieving-resources-in-desktop-apps).  
+# <a name="version-numbers-for-main-and-localized-satellite-assemblies"></a>メイン アセンブリおよびローカライズされたサテライト アセンブリのバージョン番号
+<xref:System.Resources.SatelliteContractVersionAttribute> クラスは、リソース マネージャーでローカライズされたリソースを使用するメイン アセンブリのバージョン管理をサポートしています。 <xref:System.Resources.SatelliteContractVersionAttribute> をアプリケーションのメイン アセンブリに適用すると、サテライト アセンブリを更新することなくメイン アセンブリを更新および再展開することができます。 たとえば、新しいリソースを導入していない Service Pack でも、サテライト アセンブリをリビルドして再展開することなく <xref:System.Resources.SatelliteContractVersionAttribute> クラスを使用できます。 ローカライズされたリソースを使用できるようにするには、メイン アセンブリのサテライト コントラクト バージョンがサテライト アセンブリの <xref:System.Reflection.AssemblyVersionAttribute> クラスと一致する必要があります。 <xref:System.Resources.SatelliteContractVersionAttribute>に正確なバージョン番号を指定する必要があります。"*" などのワイルドカード文字は使用できません。 詳細については、「[デスクトップ アプリケーションのリソースの取得](/dotnet/framework/resources/retrieving-resources-in-desktop-apps)」を参照してください。  
   
-## <a name="updating-assemblies"></a>Updating Assemblies  
- The <xref:System.Resources.SatelliteContractVersionAttribute> class allows you to update a main assembly without having to update your satellite assembly, or vice versa. When the main assembly is updated, its assembly version number is changed. If you want to continue using the existing satellite assemblies, change the main assembly's version number but leave the satellite contract version number the same. For example, in your first release your main assembly version may be 1.0.0.0. The satellite contract version and the assembly version of the satellite assembly will also be 1.0.0.0. If you need to update your main assembly for a service pack, you can change the assembly version to 1.0.0.1, while keeping the satellite contract version and the satellite's assembly version as 1.0.0.0.  
+## <a name="updating-assemblies"></a>アセンブリを更新する  
+ <xref:System.Resources.SatelliteContractVersionAttribute> クラスを使用すると、サテライト アセンブリを更新することなくメイン アセンブリを更新し、メイン アセンブリを更新することなくサテライト アセンブリを更新できます。 メイン アセンブリを更新すると、メイン アセンブリのバージョン番号は変更されます。 既存のサテライト アセンブリを引き続き使用する場合は、メイン アセンブリのバージョン番号を変更し、サテライト コントラクト バージョン番号は同じままにします。 たとえば、最初のリリースで、メイン アセンブリのバージョンが 1.0.0.0 だとします。 サテライト アセンブリのサテライト コントラクト バージョンとアセンブリ バージョンはいずれも 1.0.0.0 です。 Service Pack に合わせてメイン アセンブリを更新する必要がある場合は、アセンブリのバージョンを 1.0.0.1 に変更し、サテライト コントラクト バージョンとサテライトのアセンブリ バージョンは 1.0.0.0 のままにすることができます。  
   
- If you need to update a satellite assembly but not your main assembly, you change the <xref:System.Reflection.AssemblyVersionAttribute> of the satellite assembly. Along with your satellite assembly, you will have to ship a policy assembly that states that your new satellite assembly is compatible with your old satellite assembly. For more information on policies, see [How the Runtime Locates Assemblies](/dotnet/framework/deployment/how-the-runtime-locates-assemblies).  
+ サテライト アセンブリを更新する必要があり、メイン アセンブリの更新は不要な場合は、サテライト アセンブリの <xref:System.Reflection.AssemblyVersionAttribute> を変更します。 サテライト アセンブリと共に、新しいサテライト アセンブリが古いサテライト アセンブリと互換性があることを示すポリシー アセンブリを含めて出荷する必要があります。 ポリシーの詳細については、「[ランタイムがアセンブリを検索する方法](/dotnet/framework/deployment/how-the-runtime-locates-assemblies)」を参照してください。  
   
- The following code shows how to set the satellite contract version. The code can be placed in either a build script or in the AssemblyInfo.vb or AssemblyInfo.cs file.  
+ 次のコードは、サテライト コントラクト バージョンを設定する方法を示しています。 このコードは、ビルド スクリプト、AssemblyInfo.vb または AssemblyInfo.cs に挿入できます。  
   
 ```vb  
 <Assembly: SatelliteContractVersionAttribute("4.3.2.1")>  
@@ -59,9 +59,9 @@ The <xref:System.Resources.SatelliteContractVersionAttribute> class provides ver
 [assembly: SatelliteContractVersionAttribute("4.3.2.1")]  
 ```  
   
-## <a name="see-also"></a>See Also  
- [How the Runtime Locates Assemblies](/dotnet/framework/deployment/how-the-runtime-locates-assemblies)   
- [Setting Assembly Attributes](/dotnet/framework/app-domains/set-assembly-attributes)   
- [Security and Localized Satellite Assemblies](../ide/security-and-localized-satellite-assemblies.md)   
- [Localizing Applications](../ide/localizing-applications.md)   
- [Globalizing and Localizing Applications](../ide/globalizing-and-localizing-applications.md)
+## <a name="see-also"></a>関連項目  
+ [ランタイムがアセンブリを検索する方法](/dotnet/framework/deployment/how-the-runtime-locates-assemblies)   
+ [アセンブリ属性の設定](/dotnet/framework/app-domains/set-assembly-attributes)   
+ [セキュリティおよびローカライズされたサテライト アセンブリ](../ide/security-and-localized-satellite-assemblies.md)   
+ [アプリケーションのローカライズ](../ide/localizing-applications.md)   
+ [アプリケーションのグローバライズとローカライズ](../ide/globalizing-and-localizing-applications.md)

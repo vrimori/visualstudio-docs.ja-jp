@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_PARAM | Microsoft Docs
+title: "METADATA_ADDRESS_PARAM |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: edca5da7e4d417f6578946c824ac601dea516270
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="metadataaddressparam"></a>METADATA_ADDRESS_PARAM
-This structure represents a parameter of a method or function.  
+この構造体は、メソッドまたは関数のパラメーターを表します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_PARAM {  
@@ -58,27 +58,27 @@ public struct METADATA_ADDRESS_PARAM {
 }  
 ```  
   
-## <a name="terms"></a>Terms  
+## <a name="terms"></a>用語  
  tokMethod  
- The ID of the method the parameter is part of.  
+ メソッドの ID、パラメーターは、一部です。  
   
  tokParam  
- The ID of the parameter.  
+ パラメーターの ID です。  
   
  dwIndex  
- The index of the parameter in a list of parameters.  
+ パラメーターの一覧で、パラメーターのインデックス。  
   
-## <a name="remarks"></a>Remarks  
- This structure is part of the union in the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure when the `dwKind` field of the `DEBUG_ADDRESS_UNION` structure is set to `ADDRESS_KIND_PARAM` (a value from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration).  
+## <a name="remarks"></a>コメント  
+ この構造体の共用体の一部である、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)ときに構造体、`dwKind`のフィールド、`DEBUG_ADDRESS_UNION`構造に設定されている`ADDRESS_KIND_PARAM`(から値、 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙体)。  
   
-## <a name="requirements"></a>Requirements  
- Header: sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>関連項目  
+ [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
  [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

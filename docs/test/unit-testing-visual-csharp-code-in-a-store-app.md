@@ -1,5 +1,5 @@
 ---
-title: Unit testing Visual C# code in a Store app | Microsoft Docs
+title: "ストア アプリの Visual C# コードの単体テスト | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,55 +30,55 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 768dd5253edac137c50ced5bf524bcc1fdd7f6da
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="unit-testing-visual-c-code-in-a-store-app"></a>Unit testing Visual C# code in a Store app
-This topic describes one way to create unit tests for a Visual C# class in a Windows Store app. The Rooter class demonstrates vague memories of limit theory from calculus by implementing a function that calculates an estimate of the square root of a given number. The Maths app can then use this function to show a user the fun things that can be done with math.  
+# <a name="unit-testing-visual-c-code-in-a-store-app"></a>ストア アプリの Visual C# コードの単体テスト
+このトピックでは、Windows ストア アプリの Visual C# クラスの単体テストを作成する方法の 1 つについて説明します。 Rooter クラスは、指定した数値の平方根の概数を計算する関数を実装することによって、微積分の限界理論の不明瞭なメモリを示します。 Maths アプリケーションではこの関数を使用して、数学で実行できる楽しいことをユーザーに示すことができます。  
   
- This topic demonstrates how to use unit testing as the first step in development. In this approach, you first write a test method that verifies a specific behavior in the system that you are testing and then you write the code that passes the test. By making changes in the order of the following procedures, you can reverse this strategy to first write the code that you want to test and then write the unit tests.  
+ このトピックでは、開発の第一歩として単体テストを使用する方法を示します。 この方法ではまず、テスト対象のシステムの特定の動作を検証するテスト メソッドを作成し、テストに合格するコードを記述します。 後述する手順の順序を変更することにより、この方法を逆にして、テストするコードを最初に記述し、単体テストを作成することができます。  
   
- This topic also creates a single Visual Studio solution and separate projects for the unit tests and the DLL that you want to test. You can also include the unit tests directly in the DLL project, or you can create separate solutions for the unit tests and the DLL.  
+ このトピックでは、テストする単体テストと DLL に 1 つの Visual Studio ソリューションと個別のプロジェクトも作成します。 また、DLL プロジェクトに単体テストを直接含めることも、単体テストと DLL ごとに個別のソリューションを作成することもできます。  
   
 > [!NOTE]
->  Visual Studio Community, Enterprise. and Professional provide additional features for unit testing.  
+>  Visual Studio Community、Enterprise、 および Professional には、単体テストの追加機能が備わっています。  
 >   
->  -   Use any third-party and open source unit test framework that has created an add-on adapter for the Microsoft Test Explorer. You can also analyze and display code coverage information for the tests.  
-> -   Run your tests after every build.  
-> -   VS Enterprise also contains Microsoft Fakes, an isolation framework for managed code that helps you to focus your tests on your own code by substituting test code for system and third-party functionality.  
+>  -   Microsoft テスト エクスプローラーのアドオン アダプターを作成したサードパーティおよびオープン ソースの単体テスト フレームワークを使用します。 また、テストのコード カバレッジ情報を分析して表示することもできます。  
+> -   ビルドの後に毎回テストを実行します。  
+> -   VS Enterprise には Microsoft Fakes も含まれています。これは、システムおよびサードパーティの機能をテスト コードに置き換えることにより、自分のコードにテストの重点を置くことができる、マネージ コードの分離フレームワークです。  
 >   
->  For more information, see [Verifying Code by Using Unit Tests](http://msdn.microsoft.com/library/dd264975.aspx) in the MSDN Library.  
+>  詳細については、MSDN ライブラリの「[単体テストを使用したコードの検証](http://msdn.microsoft.com/library/dd264975.aspx)」を参照してください。  
   
-##  <a name="BKMK_In_this_topic"></a> In this topic  
- [Create the solution and the unit test project](#BKMK_Create_the_solution_and_the_unit_test_project)  
+##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
+ [ソリューションと単体テスト プロジェクトを作成する](#BKMK_Create_the_solution_and_the_unit_test_project)  
   
- [Verify that the tests run in Test Explorer](#BKMK_Verify_that_the_tests_run_in_Test_Explorer)  
+ [テストがテスト エクスプ ローラーで実行されることを確認する](#BKMK_Verify_that_the_tests_run_in_Test_Explorer)  
   
- [Add the Rooter class to the Maths project](#BKMK_Add_the_Rooter_class_to_the_Maths_project)  
+ [Maths プロジェクトに Rooter クラスを追加します。](#BKMK_Add_the_Rooter_class_to_the_Maths_project)  
   
- [Couple the test project to the app project](#BKMK_Couple_the_test_project_to_the_app_project)  
+ [アプリケーション プロジェクトにテスト プロジェクトを結合する](#BKMK_Couple_the_test_project_to_the_app_project)  
   
- [Iteratively augment the tests and make them pass](#BKMK_Iteratively_augment_the_tests_and_make_them_pass)  
+ [テストを繰り返し増やして成功させる](#BKMK_Iteratively_augment_the_tests_and_make_them_pass)  
   
- [Debug a failing test](#BKMK_Debug_a_failing_test)  
+ [失敗したテストをデバッグする](#BKMK_Debug_a_failing_test)  
   
- [Refactor the code](#BKMK_Refactor_the_code_)  
+ [コードをリファクタリングする](#BKMK_Refactor_the_code_)  
   
-##  <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a> Create the solution and the unit test project  
+##  <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a> ソリューションと単体テスト プロジェクトを作成する  
   
-1.  On the **File** menu, choose **New**, and then choose **New Project**.  
+1.  **[ファイル]** メニューの **[新規作成]** をポイントし、**[新しいプロジェクト]** をクリックします。  
   
-2.  In the **New Project** dialog box, expand **Installed**, then expand **Visual C#** and choose **Windows Store**. Then choose **Blank App** from the list of project templates.  
+2.  **[新しいプロジェクト]** ダイアログ ボックスで **[インストール済み]**、**[Visual C#]** の順に展開し、**[Windows ストア]** をクリックします。 プロジェクト テンプレートの一覧の **[新しいアプリケーション]** をクリックします。  
   
-3.  Name the project `Maths` and make sure **Create directory for solution** is selected.  
+3.  プロジェクトに「`Maths`」という名前を付け、**[ソリューションのディレクトリを作成]** チェックボックスがオンになっていることを確認します。  
   
-4.  In Solution Explorer, choose the solution name, choose **Add** from the shortcut menu, and then choose **New Project**.  
+4.  ソリューション エクスプローラーでソリューション名をクリックし、ショートカット メニューの **[追加]** をクリックし、**[新しい項目]** をクリックします。  
   
-5.  In the **New Project** dialog box, expand **Installed**, then expand **Visual C#** and choose **Windows Store** . Then choose **Unit Test Library (Windows Store apps)** from the list of project templates.  
+5.  **[新しいプロジェクト]** ダイアログ ボックスで **[インストール済み]**、**[Visual C#]** の順に展開し、**[Windows ストア]** をクリックします。 プロジェクト テンプレートの一覧の **[単体テスト ライブラリ (Windows ストア アプリ)]** をクリックします。  
   
-     ![Create the unit test project](../test/media/ute_cs_windows_createunittestproject.png "UTE_Cs_windows_CreateUnitTestProject")  
+     ![単体テスト プロジェクトの作成](../test/media/ute_cs_windows_createunittestproject.png "UTE_Cs_windows_CreateUnitTestProject")  
   
-6.  Open UnitTest1.cs in the Visual Studio editor.  
+6.  Visual Studio エディターで UnitTest1.cs を開きます。  
   
     ```csharp  
   
@@ -102,19 +102,19 @@ This topic describes one way to create unit tests for a Visual C# class in a Win
   
     ```  
   
-     Note that:  
+     次の点に注意してください。  
   
-    1.  Each test is defined by using the `[TestMethod]`. A test method must return void and can't have any parameters.  
+    1.  各テストは `[TestMethod]` を使用して定義されます。 テスト メソッドは void を返す必要があり、パラメーターをとることはできません。  
   
-    2.  Test methods must be in a class decorated with the `[TestClass]` attribute.  
+    2.  テスト メソッドは `[TestClass]` の属性で装飾されたクラスに配置する必要があります。  
   
-         When the tests are run, an instance of each test class is created. The test methods are called in an unspecified order.  
+         テストの実行時に、各テスト クラスのインスタンスが作成されます。 テスト メソッドが呼び出される順序は決まっていません。  
   
-    3.  You can define special methods that are invoked before and after each module, class, or method. For more information, see [Using Microsoft.VisualStudio.TestTools.UnitTesting Members in Unit Tests](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md) in the MSDN Library.  
+    3.  各モジュール、クラス、またはメソッドの前後に呼び出される特殊なメソッドを定義することができます。 詳細については、MSDN ライブラリの「[単体テストでの Microsoft.VisualStudio.TestTools.UnitTesting のメンバーの使用](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)」を参照してください。  
   
-##  <a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a> Verify that the tests run in Test Explorer  
+##  <a name="BKMK_Verify_that_the_tests_run_in_Test_Explorer"></a> テストがテスト エクスプローラーで実行されることを確認する  
   
-1.  Insert some test code in `TestMethod1` of the **UnitTest1.cs** file:  
+1.  **UnitTest1.cs** ファイルの `TestMethod1` のテスト コードを挿入します。  
   
     ```csharp  
   
@@ -126,21 +126,21 @@ This topic describes one way to create unit tests for a Visual C# class in a Win
   
     ```  
   
-     Notice that the `Assert` class provides several static methods that you can use to verify results in test methods.  
+     `Assert` クラスは、テスト メソッドで結果を確認するために使用するいくつかの静的メソッドを提供することに注意してください。  
   
-2.  On the **Test** menu, choose **Run** and then choose **Run All**.  
+2.  **[テスト]** メニューの **[実行]** をポイントし、**[すべて実行]** をクリックします。  
   
-     The test project builds and runs. The Test Explorer window appears, and the test is listed under **Passed Tests**. The Summary pane at the bottom of the window provides additional details about the selected test.  
+     テスト プロジェクトがビルドされ、実行されます。 テスト エクスプローラーのウィンドウが表示され、テストが **[成功したテスト]** に表示されます。 ウィンドウの下部の [概要] ウィンドウに、選択したテストに関する詳細情報が表示されます。  
   
-     ![Test Explorer](../test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
+     ![テスト エクスプ ローラー](../test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
   
-##  <a name="BKMK_Add_the_Rooter_class_to_the_Maths_project"></a> Add the Rooter class to the Maths project  
+##  <a name="BKMK_Add_the_Rooter_class_to_the_Maths_project"></a> Maths プロジェクトに Rooter クラスを追加します。  
   
-1.  In Solution Explorer, choose the **Maths** project name. From the shortcut menu, choose **Add**, and then **Class**.  
+1.  ソリューション エクスプローラーでプロジェクト名の **[Maths]** を選択します。 ショートカット メニューの **[追加]** をポイントし、**[クラス]** をクリックします。  
   
-2.  Name the class file `Rooter.cs`  
+2.  クラス ファイルに `Rooter.cs` という名前を付けます。  
   
-3.  Add the following code to the Rooter class **Rooter.cs** file:  
+3.  Rooter クラスの **Rooter.cs** ファイルに次のコードを追加します。  
   
     ```csharp  
   
@@ -156,31 +156,31 @@ This topic describes one way to create unit tests for a Visual C# class in a Win
   
     ```  
   
-     The `Rooter` class declares a constructor and the `SqareRoot` estimator method.  
+     `Rooter` クラスは、コンストラクターと `SqareRoot` エスティメーターのメソッドを宣言します。  
   
-4.  The `SqareRoot` method is only a minimal implementation, just enough to test the basic structure of the testing setup.  
+4.  `SqareRoot` メソッドは、テスト設定の基本的な構造をテストするための必要最小限の実装にすぎません。  
   
-##  <a name="BKMK_Couple_the_test_project_to_the_app_project"></a> Couple the test project to the app project  
+##  <a name="BKMK_Couple_the_test_project_to_the_app_project"></a> アプリケーション プロジェクトにテスト プロジェクトを結合する  
   
-1.  Add a reference to the Maths app to the RooterTests project.  
+1.  RooterTests プロジェクトに Maths アプリケーションへの参照を追加します。  
   
-    1.  In Solution Explorer, choose the **RooterTests** project and then choose **Add Reference...** on the shortcut menu.  
+    1.  ソリューション エクスプローラーで、**RooterTests** プロジェクトを選択し、ショートカット メニューの **[参照の追加...]** をクリックします。  
   
-    2.  On the **Add Reference - RooterTests** dialog box, expand **Solution** and choose **Projects**. Then select the **Maths** item.  
+    2.  **[参照の追加 - RooterTests]** ダイアログ ボックスの **[ソリューション]** を展開し、**[プロジェクト]** をクリックします。 次に **[Maths]** 項目を選択します。  
   
-         ![Add a reference to the Maths project](../test/media/ute_cs_windows_addreference.png "UTE_Cs_windows_AddReference")  
+         ![Maths プロジェクトへの参照の追加](../test/media/ute_cs_windows_addreference.png "UTE_Cs_windows_AddReference")  
   
-2.  Add a using statement to the UnitTest1.cs file:  
+2.  使用するステートメントを UnitTest1.cs ファイルに追加します。  
   
-    1.  Open **UnitTest1.cs**.  
+    1.  **UnitTest1.cs** を開きます。  
   
-    2.  Add this code below the `using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;` line:  
+    2.  `using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;` 行の下に次のコードを追加します。  
   
         ```csharp  
         using Maths;  
         ```  
   
-3.  Add a test that uses the Rooter function. Add the following code to **UnitTest1.cpp**:  
+3.  Rooter 関数を使用するテストを追加します。 **UnitTest1.cpp** に次のコードを追加します。  
   
     ```csharp  
     [TestMethod]  
@@ -195,19 +195,19 @@ This topic describes one way to create unit tests for a Visual C# class in a Win
   
     ```  
   
-4.  Build the solution.  
+4.  ソリューションをビルドします。  
   
-     The new test appears in Test Explorer in the **Not Run Tests** node.  
+     新しいテストがテスト エクスプローラーの **[テストを実行しない]** ノードに表示されます。  
   
-5.  In Test Explorer, choose **Run All**.  
+5.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
   
-     ![Basic Test passed](../test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
+     ![基本テスト成功](../test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
   
- You have set up the test and the code projects, and verified that you can run tests that run functions in the code project. Now you can begin to write real tests and code.  
+ テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。  
   
-##  <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a> Iteratively augment the tests and make them pass  
+##  <a name="BKMK_Iteratively_augment_the_tests_and_make_them_pass"></a> テストを繰り返し増やして成功させる  
   
-1.  Add a new test:  
+1.  新しいテストを追加します。  
   
     ```csharp  
     [TestMethod]  
@@ -226,20 +226,20 @@ This topic describes one way to create unit tests for a Visual C# class in a Win
     ```  
   
     > [!TIP]
-    >  We recommend that you do not change tests that have passed. Instead, add a new test, update the code so that the test passes, and then add another test, and so on.  
+    >  合格したテスト内容を変更しないことをお勧めします。 代わりに、新しいテストを追加し、テストが合格するようにコードを更新してから別のテストを追加する、という過程を繰り返します。  
     >   
-    >  When your users change their requirements, disable the tests that are no longer correct. Write new tests and make them work one at a time, in the same incremental manner.  
+    >  ユーザーが要件を変更したら、正しくなくなったテストを無効にします。 新しいテストを作成し、一度に 1 つずつ、同じ増分方式で処理するようにします。  
   
-2.  In Test Explorer, choose **Run All**.  
+2.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
   
-3.  The test fails.  
+3.  テストが失敗します。  
   
-     ![The RangeTest fails](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")  
+     ![RangeTest 失敗](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")  
   
     > [!TIP]
-    >  Immediately after you have written it, verify that each test fails. This helps you avoid the easy mistake of writing a test that never fails.  
+    >  そのテストを作成した直後に、各テストが失敗することを検証します。 これは、絶対に失敗しないテストを記述するという簡単なミスを避けることに役立ちます。  
   
-4.  Enhance the code under test so that the new test passes. Change the `SqareRoot` function in **Rooter.cs** to this:  
+4.  新しいテストが成功するように、テスト対象のコードを増やします。 **Rooter.cs** の `SqareRoot` 関数を次のように変更します。  
   
     ```csharp  
     public double SquareRoot(double x)  
@@ -257,16 +257,16 @@ This topic describes one way to create unit tests for a Visual C# class in a Win
   
     ```  
   
-5.  Build the solution and then in Test Explorer, choose **Run All**.  
+5.  ソリューションをビルドし、テスト エクスプ ローラーで **[すべて実行]**を選択します。  
   
-     All three tests now pass.  
+     3 つのテストはすべて成功しました。  
   
 > [!TIP]
->  Develop code by adding tests one at a time. Make sure that all the tests pass after each iteration.  
+>  一度に 1 つのテストを追加してコードを開発します。 各反復処理の後にすべてのテストが合格することを確認します。  
   
-##  <a name="BKMK_Debug_a_failing_test"></a> Debug a failing test  
+##  <a name="BKMK_Debug_a_failing_test"></a> 失敗したテストをデバッグする  
   
-1.  Add another test to **UnitTest1.cs**:  
+1.  **UnitTest1.cs** に別のテストを追加します。  
   
     ```csharp  
     // Verify that negative inputs throw an exception.  
@@ -299,21 +299,21 @@ This topic describes one way to create unit tests for a Visual C# class in a Win
   
     ```  
   
-2.  In Test Explorer, choose **Run All**.  
+2.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
   
-     The test fails. Choose the test name in Test Explorer. The failed assertion is highlighted. The failure message is visible in the detail pane of Test Explorer.  
+     テストが失敗します。 テスト エクスプローラーでテスト名を選択します。 失敗したアサーションが強調表示されます。 エラー メッセージは、テスト エクスプ ローラーの [詳細] ウィンドウに表示されます。  
   
-     ![NegativeRangeTests failed](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
+     ![Negativerangetest 失敗](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")  
   
-3.  To see why the test fails, step through the function:  
+3.  テストが失敗した理由を表示するには、関数をステップ実行します。  
   
-    1.  Set a breakpoint at the start of the `SquareRoot` function.  
+    1.  `SquareRoot` 関数の先頭にブレークポイントを設定します。  
   
-    2.  On the shortcut menu of the failed test, choose **Debug Selected Tests**.  
+    2.  失敗したテストのショートカット メニューで **[選択したテストのデバッグ]**をクリックします。  
   
-         When the run stops at the breakpoint, step through the code.  
+         実行がブレークポイントで停止したら、コードをステップ実行します。  
   
-    3.  Add code to the Rooter method to catch the exception:  
+    3.  例外をキャッチするには、Rooter メソッドにコードを追加します。  
   
         ```csharp  
         public double SquareRoot(double x)  
@@ -325,16 +325,16 @@ This topic describes one way to create unit tests for a Visual C# class in a Win
   
         ```  
   
-    1.  In Test Explorer, choose **Run All** to test the corrected method and make sure that you haven't introduced a regression.  
+    1.  テスト エクスプローラーで **[すべて実行]** をクリックして、修正されたメソッドをテストし、回帰が生じていないことを確認します。  
   
- All tests now pass.  
+ 今回は、すべてのテストに合格します。  
   
- ![All tests pass](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
+ ![すべてのテストの成功](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")  
   
-##  <a name="BKMK_Refactor_the_code_"></a> Refactor the code  
- **Simplify the central calculation in the SquareRoot function.**  
+##  <a name="BKMK_Refactor_the_code_"></a> コードをリファクタリングする  
+ **SquareRoot 関数の中心的な計算を簡素化します。**  
   
-1.  Change the result implementation  
+1.  結果の実装を変更する  
   
     ```csharp  
     // old code  
@@ -344,16 +344,16 @@ This topic describes one way to create unit tests for a Visual C# class in a Win
   
     ```  
   
-2.  Choose **Run All** to test the refactored method and make sure that you haven't introduced a regression.  
+2.  **[すべて実行]** をクリックして、リファクタリングされたメソッドをテストし、回帰が生じていないことを確認します。  
   
 > [!TIP]
->  A stable set of good unit tests gives confidence that you have not introduced bugs when you change the code.  
+>  安定した一連の適切な単体テストを実行することで、コードを変更したときにバグが生じていないことを確信できます。  
   
- **Refactor the test code to eliminate duplicated code.**  
+ **テスト コードをリファクタリングして、重複したコードを削除します。**  
   
- Note that the `RangeTest` method hard codes the denominator of the tolerance variable that is used in the `Assert` method. If you plan to add additional tests that use the same tolerance calculation, the use of a hard-coded value in multiple locations could lead to errors.  
+ `RangeTest` メソッドでは、`Assert` メソッドで使用される許容変数の分母をハードコーディングします。 同じ許容値計算を使用するテストを追加する場合、ハードコーディングされた値を複数の場所で使用すると、エラーの原因となる可能性があります。  
   
-1.  Add a private method to the Unit1Test class to calculate the tolerance value and then call that method instead.  
+1.  代わりに、Unit1Test クラスにプライベート メソッドを追加して、許容値を計算し、そのメソッドを呼び出します。  
   
     ```csharp  
     private double ToleranceHelper(double expected)  
@@ -377,8 +377,8 @@ This topic describes one way to create unit tests for a Visual C# class in a Win
   
     ```  
   
-2.  Choose **Run All** to test the refactored method and make sure that you haven't introduced an error.  
+2.  **[すべて実行]** をクリックして、リファクタリングされたメソッドをテストし、エラーが生じていないことを確認します。  
   
 > [!NOTE]
->  To add a helper method to a test class, do not add the `[TestMethod]` attribute to the method. Test Explorer does not register the method to be run.
+>  テスト クラスにヘルパー メソッドを追加する場合に、メソッドに `[TestMethod]` 属性を追加しないでください。 テスト エクスプローラーでは、実行するメソッドが登録されません。
 

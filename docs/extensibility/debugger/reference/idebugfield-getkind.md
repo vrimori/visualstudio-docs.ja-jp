@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetKind | Microsoft Docs
+title: "IDebugField::GetKind |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: a4d5f5f96ee4d2121ed4fa8f7fc6f4504a418575
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugfieldgetkind"></a>IDebugField::GetKind
-This method gets the kind of field.  
+このメソッドは、フィールドの種類を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetKind(   
@@ -54,13 +54,13 @@ int GetKind(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `pdwKind`  
- [out] Returns the kind of field as a combination of [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) constants.  
+ [out]フィールドの種類を返しますの組み合わせとして[FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)定数。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)

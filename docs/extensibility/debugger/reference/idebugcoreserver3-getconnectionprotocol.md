@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::GetConnectionProtocol | Microsoft Docs
+title: "IDebugCoreServer3::GetConnectionProtocol |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 8901f9fff01ecdfe21e3731df8b2d155fe250ac2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # IDebugCoreServer3::GetConnectionProtocol
-Returns a value indicating the protocol that is being used to communicate between the server and the debug package.  
+サーバーとデバッグのパッケージ間の通信に使用されているプロトコルを示す値を返します。  
   
-## Syntax  
+## 構文  
   
 ```cpp  
 HRESULT GetConnectionProtocol(  
@@ -54,13 +54,13 @@ int GetConnectionProtocol(
 );  
 ```  
   
-#### Parameters  
+#### パラメーター  
  `pProtocol`  
- [out] Returns one of the values from the [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) enumeration.  
+ [out]値のいずれかを返します、 [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md)列挙します。  
   
-## Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## 戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## See Also  
+## 関連項目  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md)

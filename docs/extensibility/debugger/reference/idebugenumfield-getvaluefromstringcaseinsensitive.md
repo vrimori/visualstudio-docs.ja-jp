@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetValueFromStringCaseInsensitive | Microsoft Docs
+title: "IDebugEnumField::GetValueFromStringCaseInsensitive |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 68a5f199f389cb5bc24f0e648bb4719c1ad79545
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugenumfieldgetvaluefromstringcaseinsensitive"></a>IDebugEnumField::GetValueFromStringCaseInsensitive
-This method uses a case-insensitive search to return the value associated with the name of an enumeration constant.  
+このメソッドは、大文字と小文字の検索を使用して、列挙定数の名前に関連付けられている値を返します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetValueFromStringCaseInsensitive(  
@@ -56,19 +56,19 @@ int GetValueFromStringCaseInsensitive(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `pszValue`  
- [in] A string specifying the name for which to get the value. Note that for C++, this is a wide character string.  
+ [in]値を取得する対象の名前を指定する文字列。 C++ であるワイド文字の文字列に注意してください。  
   
  `pValue`  
- [out] Returns the associated numerical value.  
+ [out]関連付けられている数値を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns `S_FALSE`, if the name is not part of the enumeration, or an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`名前は、列挙体、またはエラー コードの一部ではない場合は、します。  
   
-## <a name="remarks"></a>Remarks  
- This method is case-insensitive. If a case-sensitive search is needed (for example, in a language such as C++ where names are case-sensitive), use [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md).  
+## <a name="remarks"></a>コメント  
+ このメソッドは区別されません。 大文字と小文字は (たとえば、名は大文字 C++ などの言語) で必要に応じて、使用[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)です。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
  [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)

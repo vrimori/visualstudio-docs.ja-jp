@@ -1,5 +1,5 @@
 ---
-title: FRAMEINFO_FLAGS | Microsoft Docs
+title: "FRAMEINFO_FLAGS |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: d0b9ae5b6b9139715cd28b40dd8eae2294c507a7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="frameinfoflags"></a>FRAMEINFO_FLAGS
-Specifies the information to retrieve about a stack frame object.  
+スタック フレーム オブジェクトは取得する情報を指定します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 enum enum_FRAMEINFO_FLAGS {  
@@ -115,114 +115,114 @@ public enum enum_FRAMEINFO_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>メンバー  
  FIF_FUNCNAME  
- Initialize/use the `m_bstrFuncName` field.  
+ 初期化/を使用して、`m_bstrFuncName`フィールドです。  
   
  FIF_RETURNTYPE  
- Initialize/use the `m_bstrReturnType` field.  
+ 初期化/を使用して、`m_bstrReturnType`フィールドです。  
   
  FIF_ARGS  
- Initialize/use the `m_bstrArgs` field.  
+ 初期化/を使用して、`m_bstrArgs`フィールドです。  
   
  FIF_LANGUAGE  
- Initialize/use the `m_bstrLanguage` field.  
+ 初期化/を使用して、`m_bstrLanguage`フィールドです。  
   
  FIF_MODULE  
- Initialize/use the `m_bstrModule` field.  
+ 初期化/を使用して、`m_bstrModule`フィールドです。  
   
  FIF_STACKRANGE  
- Initialize/use the `m_addrMin` and `m_addrMax` (stack range) fields.  
+ 初期化/を使用して、`m_addrMin`と`m_addrMax`(スタックの範囲) フィールドです。  
   
  FIF_FRAME  
- Initialize/use the `m_pFrame` field.  
+ 初期化/を使用して、`m_pFrame`フィールドです。  
   
  FIF_DEBUGINFO  
- Initialize/use the `m_fHasDebugInfo` field.  
+ 初期化/を使用して、`m_fHasDebugInfo`フィールドです。  
   
  FIF_STALECODE  
- Initialize/use the `m_fStaleCode` field.  
+ 初期化/を使用して、`m_fStaleCode`フィールドです。  
   
  FIF_ANNOTATEDFRAME  
- Initialize/use the `m_fAnnotatedFrame` field.  
+ 初期化/を使用して、`m_fAnnotatedFrame`フィールドです。  
   
  FIF_DEBUG_MODULEP  
- Initialize/use the `m_pModule` field.  
+ 初期化/を使用して、`m_pModule`フィールドです。  
   
  FIF_FUNCNAME_FORMAT  
- Formats the function name. The result is returned in the `m_bstrFunName` field and no other fields are filled out.  
+ 関数名の書式を設定します。 結果が返される、`m_bstrFunName`フィールドおよびないその他のフィールドに入力されます。  
   
  FIF_FUNCNAME_RETURNTYPE  
- Adds the return type to the `m_bstrFuncName` field.  
+ 戻り値の型を追加、`m_bstrFuncName`フィールドです。  
   
  FIF_FUNCNAME_ARGS  
- Adds the arguments to the `m_bstrFuncName` field.  
+ 引数を追加、`m_bstrFuncName`フィールドです。  
   
  FIF_FUNCNAME_LANGUAGE  
- Adds the language to the `m_bstrFuncName` field.  
+ 言語を追加、`m_bstrFuncName`フィールドです。  
   
  FIF_FUNCNAME_MODULE  
- Adds the module name to the `m_bstrFuncName` field.  
+ モジュール名を追加、`m_bstrFuncName`フィールドです。  
   
  FIF_FUNCNAME_LINES  
- Adds the number of lines to the `m_bstrFuncName` field.  
+ 追加する行の数、`m_bstrFuncName`フィールドです。  
   
  FIF_FUNCNAME_OFFSET  
- Adds to the `m_bstrFuncName` field the offset in bytes from the start of the line if `FIF_FUNCNAME_LINES` is specified. If `FIF_FUNCNAME_LINES` is not specified, or if line numbers are not available, adds the offset in bytes from the start of the function.  
+ 追加、`m_bstrFuncName`フィールドの行の先頭からのバイト オフセットに場合`FIF_FUNCNAME_LINES`が指定されています。 場合`FIF_FUNCNAME_LINES`が指定されていないか、行番号が使用できない場合は、追加のオフセット (バイト単位)、関数の先頭からです。  
   
  FIF_FUNCNAME_ARGS_TYPES  
- Adds the type of each function argument to the `m_bstrFuncName` field.  
+ 各関数の引数の型を追加、`m_bstrFuncName`フィールドです。  
   
  FIF_FUNCNAME_ARGS_NAMES  
- Adds the name of each function argument to the `m_bstrFuncName` field.  
+ 各関数の引数の名前を追加、`m_bstrFuncName`フィールドです。  
   
  FIF_FUNCNAME_ARGS_VALUES  
- Adds the value of each function argument to the `m_bstrFuncName` field.  
+ 各関数の引数の値を加算、`m_bstrFuncName`フィールドです。  
   
  FIF_FUNCNAME_ARGS_ALL  
- Adds the type, name, and value of all arguments to the `m_bstrFuncName` field.  
+ 型、名、およびすべての引数の値を追加、`m_bstrFuncName`フィールドです。  
   
  FIF_ARGS_TYPES  
- The argument types are retrieved and formatted.  
+ 引数の型が取得され、書式設定します。  
   
  FIF_ARGS_NAMES  
- The argument names are retrieved and formatted.  
+ 引数名が取得され、書式設定します。  
   
  FIF_ARGS_VALUES  
- The argument values are retrieved and formatted.  
+ 引数の値が取得され、書式設定します。  
   
  FIF_ARGS_ALL  
- Retrieve and format the type, name, and value of all arguments.  
+ 取得し、型、名、およびすべての引数の値の書式を設定します。  
   
  FIF_ARGS_NOFORMAT  
- Specifies that the arguments are not be formatted (for example, do not add opening and closing parentheses around the argument list nor add a separator between arguments).  
+ 引数がフォーマットされていないことを指定します (たとえば、かっこと右の引数リストを囲むかっこを追加もしない追加の引数間の区切り記号) です。  
   
  FIF_ARGS_NO_FUNC_EVAL  
- Specifies that function (property) evaluation should not be used when retrieving argument values.  
+ 引数の値を取得するときに関数 (プロパティ) の評価が使用しないことを指定します。  
   
  FIF_FILTER_NON_USER_CODE  
- The debug engine is to filter non-user code frames so they are not included.  
+ デバッグ エンジンは、含まれていないために、非ユーザー コード フレームをフィルター処理します。  
   
  FIF_ARGS_NO_TOSTRING  
- Do not allow `ToString()` function evaluation or formatting when returning function arguments.  
+ 許可しない`ToString()`関数の評価または関数の引数を返すときに書式設定します。  
   
  FIF_DESIGN_TIME_EXPR_EVAL  
- Frame information should be gotten from the hosted app-domain rather than the hosting process.  
+ フレームの情報は、ホスト プロセスではなく、ホストされているアプリケーション ドメインから取得する必要があります。  
   
-## <a name="remarks"></a>Remarks  
- These flags are passed to the [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) and [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) methods to indicate which fields are to be initialized in the [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) structure or structures.  
+## <a name="remarks"></a>コメント  
+ これらのフラグに渡される、 [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)と[GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md)メソッドで初期化するフィールドを示す、 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造体または構造体。  
   
- These flags are also used to indicate which fields of the [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) structure are used and valid when the structure is returned. These values may be combined with a bitwise `OR`.  
+ これらのフラグはのどのフィールドを示すためにも使用、 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造が返されるときに構造体が使用される、有効です。 これらの値は、ビットごとと組み合わせること`OR`です。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)   
  [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md)

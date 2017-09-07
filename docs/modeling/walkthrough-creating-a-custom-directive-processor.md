@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Creating a Custom Directive Processor | Microsoft Docs'
+title: "チュートリアル: カスタム ディレクティブ プロセッサの作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,39 +32,39 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 449a8d80eef26935251c265b526d8aacd471d147
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-creating-a-custom-directive-processor"></a>Walkthrough: Creating a Custom Directive Processor
-*Directive processors* work by adding code to the *generated transformation class*. If you call a *directive* from a *text template*, the rest of the code that you write in your text template can rely on the functionality that the directive provides.  
+# <a name="walkthrough-creating-a-custom-directive-processor"></a>チュートリアル: カスタム ディレクティブ プロセッサの作成
+*ディレクティブ プロセッサ*コードを追加して職場、*生成された変換クラス*です。 呼び出す場合は、*ディレクティブ*から、*テキスト テンプレート*、テキスト テンプレートに記述するコードの残りの部分は、ディレクティブによって提供される機能に依存できます。  
   
- You can write your own custom directive processors. This enables you to customize your text templates. To create a custom directive processor, you create a class that inherits from either <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> or <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>.  
+ 独自のカスタム ディレクティブ プロセッサを記述できます。 これにより、テキスト テンプレートをカスタマイズすることができます。 カスタム ディレクティブ プロセッサを作成するには、<xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> または <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> を継承するクラスを作成します。  
   
- Tasks that are illustrated in this walkthrough include the following:  
+ このチュートリアルでは、次のタスクについて説明します。  
   
--   Creating a custom directive processor  
+-   カスタム ディレクティブ プロセッサの作成  
   
--   Registering the directive processor  
+-   ディレクティブ プロセッサの登録  
   
--   Testing the directive processor  
+-   ディレクティブ プロセッサのテスト  
   
-## <a name="prerequisites"></a>Prerequisites  
- To complete this walkthrough, you will need:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを完了するための要件を次に示します。  
   
 -   Visual Studio 2010  
   
 -   Visual Studio 2010 SDK  
   
-## <a name="creating-a-custom-directive-processor"></a>Creating a Custom Directive Processor  
- In this walkthrough, you create a custom directive processor. You add a custom directive that reads an XML file, stores it in an <xref:System.Xml.XmlDocument> variable, and exposes it through a property. In the section "Testing the Directive Processor," you use this property in a text template to access the XML file.  
+## <a name="creating-a-custom-directive-processor"></a>カスタム ディレクティブ プロセッサの作成  
+ このチュートリアルでは、カスタム ディレクティブ プロセッサを作成します。 XML ファイルを読み取って <xref:System.Xml.XmlDocument> 変数に格納し、プロパティを通じてそれを公開するカスタム ディレクティブを追加します。 「ディレクティブ プロセッサのテスト」では、テキスト テンプレートでこのプロパティを使用して XML ファイルにアクセスします。  
   
- The call to your custom directive looks like the following:  
+ カスタム ディレクティブの呼び出しは、次のような形式で記述します。  
   
  `<#@ CoolDirective Processor="CustomDirectiveProcessor" FileName="<Your Path>DocFile.xml" #>`  
   
- The custom directive processor adds the variable and the property to the generated transformation class. The directive that you write uses the <xref:System.CodeDom> classes to create the code that the engine adds to the generated transformation class. The <xref:System.CodeDom> classes create code in either Visual C# or [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], depending on the language specified in the `language` parameter of the `template` directive. The language of the directive processor and the language of the text template that is accessing the directive processor do not have to match.  
+ カスタム ディレクティブ プロセッサは、生成された変換クラスに変数とプロパティを追加します。 これから記述するディレクティブでは、<xref:System.CodeDom> クラスを使用して、生成された変換クラスにエンジンによって追加されるコードを作成します。 <xref:System.CodeDom> クラスは、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ディレクティブの `language` パラメーターで指定された言語に応じて、Visual C# または `template` でコードを作成します。 ディレクティブ プロセッサの言語とディレクティブ プロセッサにアクセスするテキスト テンプレートの言語は、同じでなくてもかまいません。  
   
- The code that the directive creates looks like the following:  
+ ディレクティブによって作成されるコードは次のようになります。  
   
 ```csharp  
 private System.Xml.XmlDocument document0Value;  
@@ -95,20 +95,20 @@ Public Overridable ReadOnly Property Document0() As System.Xml.XmlDocument
 End Property  
 ```  
   
-#### <a name="to-create-a-custom-directive-processor"></a>To create a custom directive processor  
+#### <a name="to-create-a-custom-directive-processor"></a>カスタム ディレクティブ プロセッサを作成するには  
   
-1.  In Visual Studio, create a C# or a Visual Basic class library project named CustomDP.  
+1.  Visual Studio で、CustomDP という名前の C# クラス ライブラリ プロジェクトまたは Visual Basic クラス ライブラリ プロジェクトを作成します。  
   
     > [!NOTE]
-    >  If you want to install the directive processor on more than one computer, it is better to use a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension (VSIX) project and include a .pkgdef file in the extension. For more information, see [Deploying a Custom Directive Processor](../modeling/deploying-a-custom-directive-processor.md).  
+    >  複数のコンピューターにディレクティブ プロセッサをインストールする場合は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension (VSIX) プロジェクトを使用し、拡張機能に .pkgdef ファイルを追加することをお勧めします。 詳細については、次を参照してください。[カスタム ディレクティブ プロセッサの配置](../modeling/deploying-a-custom-directive-processor.md)です。  
   
-2.  Add  references to these assemblies:  
+2.  次のアセンブリへの参照を追加します。  
   
-    -   **Microsoft.VisualStudio.TextTemplating.\*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating です。\*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating.Interfaces です。\*.0**  
   
-3.  Replace the code in **Class1** with the following code. This code defines a CustomDirectiveProcessor class that inherits from the <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> class and implements the necessary methods.  
+3.  コードに置き換えます**Class1**を次のコード。 このコードによって、<xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> クラスを継承し、必要なメソッドを実装する CustomDirectiveProcessor クラスが定義されます。  
   
     ```csharp  
     using System;  
@@ -620,90 +620,90 @@ End Property
     End Namespace  
     ```  
   
-4.  For [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] only, open the **Project** menu, and click **CustomDP Properties**. On the **Application** tab, in **Root namespace**, delete the default value, `CustomDP`.  
+4.  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]のみ、開く、**プロジェクト** メニューをクリック**CustomDP プロパティ**です。 **アプリケーション**] タブの [**ルート名前空間**、既定値を削除`CustomDP`です。  
   
-5.  On the **File** menu, click **Save All**.  
+5.  **ファイル** メニューのをクリックして**すべて保存**です。  
   
-6.  On the **Build** menu, click **Build Solution**.  
+6.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
-### <a name="build-the-project"></a>Build the Project  
- Build the project. On the **Build** menu, click **Build Solution**.  
+### <a name="build-the-project"></a>プロジェクトのビルド  
+ プロジェクトをビルドします。 **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
-## <a name="registering-the-directive-processor"></a>Registering the Directive Processor  
- Before you can call a directive from a text template in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], you must add a registry key for the directive processor.  
+## <a name="registering-the-directive-processor"></a>ディレクティブ プロセッサの登録  
+ 内のテキスト テンプレートからディレクティブを呼び出す前に[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、ディレクティブ プロセッサのレジストリ キーを追加する必要があります。  
   
 > [!NOTE]
->  If you want to install the directive processor on more than one computer, it is better to define a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension (VSIX) that includes a .pkgdef file along with your assembly. For more information, see [Deploying a Custom Directive Processor](../modeling/deploying-a-custom-directive-processor.md).  
+>  複数のコンピューターにディレクティブ プロセッサをインストールする場合は、アセンブリと .pkgdef ファイルを含む [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension (VSIX) を定義することをお勧めします。 詳細については、次を参照してください。[カスタム ディレクティブ プロセッサの配置](../modeling/deploying-a-custom-directive-processor.md)です。  
   
- Keys for directive processors exist in the registry in the following location:  
+ ディレクティブ プロセッサのキーは次の場所のレジストリにあります。  
   
 ```  
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\*.0\TextTemplating\DirectiveProcessors  
 ```  
   
- For 64-bit systems, the registry location is:  
+ 64 ビット システムの場合、レジストリは次の場所にあります。  
   
 ```  
 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplating\DirectiveProcessors  
 ```  
   
- In this section, you add a key for your custom directive processor to the registry in the same location.  
+ ここでは、この場所にカスタム ディレクティブ プロセッサのキーを追加します。  
   
 > [!CAUTION]
->  Incorrectly editing the registry can severely damage your system. Before you make changes to the registry, back up any valuable data that is on the computer.  
+>  レジストリを誤って編集すると、システムに重大な障害が発生する場合があります。 レジストリを変更する前に、コンピューター上の重要なデータをすべてバックアップしてください。  
   
-#### <a name="to-add-a-registry-key-for-the-directive-processor"></a>To add a registry key for the directive processor  
+#### <a name="to-add-a-registry-key-for-the-directive-processor"></a>ディレクティブ プロセッサのレジストリ キーを追加するには  
   
-1.  Run the `regedit` command by using the Start menu or the command line.  
+1.  実行、`regedit`コマンドで、[スタート] メニューまたはコマンドラインを使用します。  
   
-2.  Browse to the location **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**, and click the node.  
+2.  場所を参照**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**ノードをクリックします。  
   
-     On 64-bit systems, use **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**  
+     64 ビット システムで使用して**HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**  
   
-3.  Add a new key named CustomDirectiveProcessor.  
+3.  CustomDirectiveProcessor という名前の新しいキーを追加します。  
   
     > [!NOTE]
-    >  This is the name that you will use in the Processor field of your custom directives. This name does not need to match the name of the directive, the name of the directive processor class, or the directive processor namespace.  
+    >  これは、カスタム ディレクティブの Processor フィールドで使用する名前です。 この名前は、ディレクティブの名前、ディレクティブ プロセッサ クラスの名前、またはディレクティブ プロセッサの名前空間と同じでなくてもかまいません。  
   
-4.  Add a new string value named Class that has a value CustomDP.CustomDirectiveProcessor for the name of the new string.  
+4.  Class という名前の新しい文字列値を追加し、その新しい文字列に CustomDP.CustomDirectiveProcessor という値を設定します。  
   
-5.  Add a new string value named CodeBase that has a value equal to the path of the CustomDP.dll that you created earlier in this walkthrough.  
+5.  CodeBase という名前の新しい文字列値を追加し、このチュートリアルで作成した CustomDP.dll のパスに一致する値を設定します。  
   
-     For example, the path might look like `C:\UserFiles\CustomDP\bin\Debug\CustomDP.dll`.  
+     たとえば、パスのようになります。`C:\UserFiles\CustomDP\bin\Debug\CustomDP.dll`です。  
   
-     Your registry key should have the following values:  
+     レジストリ キーの値は次のようになります。  
   
-    |Name|Type|Data|  
+    |名前|型|データ|  
     |----------|----------|----------|  
-    |(Default)|REG_SZ|(value not set)|  
-    |Class|REG_SZ|CustomDP.CustomDirectiveProcessor|  
-    |CodeBase|REG_SZ|**\<Path to Your Solution>**CustomDP\bin\Debug\CustomDP.dll|  
+    |(既定)|REG_SZ|(値が設定されていません)|  
+    |クラス|REG_SZ|CustomDP.CustomDirectiveProcessor|  
+    |CodeBase|REG_SZ|**\<ソリューションへのパス >**CustomDP\bin\Debug\CustomDP.dll|  
   
-     If you have put the assembly in the GAC, the values should look like the following:  
+     アセンブリを GAC に追加した場合は、値を次のように設定します。  
   
-    |Name|Type|Data|  
+    |名前|型|データ|  
     |----------|----------|----------|  
-    |(Default)|REG_SZ|(value not set)|  
-    |Class|REG_SZ|CustomDP.CustomDirectiveProcessor|  
+    |(既定)|REG_SZ|(値が設定されていません)|  
+    |クラス|REG_SZ|CustomDP.CustomDirectiveProcessor|  
     |Assembly|REG_SZ|CustomDP.dll|  
   
-6.  Restart Visual Studio.  
+6.  Visual Studio を再起動します。  
   
-## <a name="testing-the-directive-processor"></a>Testing the Directive Processor  
- To test the directive processor, you need to write a text template that calls it.  
+## <a name="testing-the-directive-processor"></a>ディレクティブ プロセッサのテスト  
+ ディレクティブ プロセッサをテストするには、それを呼び出すテキスト テンプレートを記述する必要があります。  
   
- In this example, the text template calls the directive and passes in the name of an XML file that contains documentation for a class file.
+ この例のテキスト テンプレートでは、ディレクティブを呼び出し、クラス ファイルのドキュメントを含む XML ファイルの名前を渡します。
   
- The text template then uses the <xref:System.Xml.XmlDocument> property that the directive creates to navigate the XML and print the documentation comments.  
+ テキスト テンプレートでは、次に、ディレクティブによって作成された <xref:System.Xml.XmlDocument> プロパティを使用して XML をナビゲートし、ドキュメントのコメントを出力します。  
   
-#### <a name="to-create-an-xml-file-for-use-in-testing-the-directive-processor"></a>To create an XML file for use in testing the directive processor  
+#### <a name="to-create-an-xml-file-for-use-in-testing-the-directive-processor"></a>ディレクティブ プロセッサのテストに使用する XML ファイルを作成するには  
   
-1.  Create a text file named `DocFile.xml` by using any text editor (for example, Notepad).  
+1.  という名前のテキスト ファイルを作成する`DocFile.xml`任意のテキスト エディター (メモ帳など) を使用しています。  
   
     > [!NOTE]
-    >  You can create this file in any location (for example, C:\Test\DocFile.xml).  
+    >  このファイルはどこに作成してもかまいません (C:\Test\DocFile.xml など)。  
   
-2.  Add the following to the text file:  
+2.  次の内容をテキスト ファイルに追加します。  
   
     ```  
     <?xml version="1.0"?>  
@@ -744,22 +744,22 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
     </doc>  
     ```  
   
-3.  Save and close the file.  
+3.  ファイルを保存して閉じます。  
   
-#### <a name="to-create-a-text-template-to-test-the-directive-processor"></a>To create a text template to test the directive processor  
+#### <a name="to-create-a-text-template-to-test-the-directive-processor"></a>テキスト テンプレートを作成してディレクティブ プロセッサをテストするには  
   
-1.  In Visual Studio, create a C# or Visual Basic class library project named TemplateTest.  
+1.  Visual Studio で、TemplateTest という名前の C# クラス ライブラリ プロジェクトまたは Visual Basic クラス ライブラリ プロジェクトを作成します。  
   
-2.  Add a new text template file named TestDP.tt.  
+2.  TestDP.tt という名前の新しいテキスト テンプレート ファイルを追加します。  
   
-3.  Make sure that the **Custom Tool** property of TestDP.tt is set to `TextTemplatingFileGenerator`.  
+3.  確認して、**カスタム ツール**TestDP.tt のプロパティに設定されて`TextTemplatingFileGenerator`です。  
   
-4.  Change the content of  TestDP.tt to the following text.  
+4.  TestDP.tt の内容を次のテキストに変更します。  
   
     > [!NOTE]
-    >  Make sure to replace the string <`YOUR PATH>` with the path to the DocFile.xml file.  
+    >  文字列を置換を確認してください <`YOUR PATH>` DocFile.xml ファイルのパスを使用します。  
   
-     The language of the text template does not have to match the language of the directive processor.  
+     テキスト テンプレートの言語は、ディレクティブ プロセッサの言語と同じでなくてもかまいません。  
   
     ```csharp  
     <#@ assembly name="System.Xml" #>  
@@ -844,19 +844,19 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
     ```  
   
     > [!NOTE]
-    >  In this example, the value of the `Processor` parameter is `CustomDirectiveProcessor`. The value of the `Processor` parameter must match the name of the processor's registry key.  
+    >  この例では、`Processor` パラメーターの値は `CustomDirectiveProcessor` です。 `Processor` パラメーターの値は、プロセッサのレジストリ キーの名前に一致する必要があります。  
   
-5.  On the **File** menu, click **Save All**.  
+5.  **ファイル** メニューのをクリックして**すべて保存**です。  
   
-#### <a name="to-test-the-directive-processor"></a>To test the directive processor  
+#### <a name="to-test-the-directive-processor"></a>ディレクティブ プロセッサをテストするには  
   
-1.  In **Solution Explorer**, right-click TestDP.tt and then click **Run Custom Tool**.  
+1.  **ソリューション エクスプ ローラー**TestDP.tt を右クリックし、クリックして**カスタム ツールの実行**です。  
   
-     For [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] users, TestDP.txt might not appear in **Solution Explorer** by default. To display all files assigned to the project, open the **Project** menu and click **Show All Files**.  
+     [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]ユーザー、TestDP.txt に表示されない場合**ソリューション エクスプ ローラー**既定です。 表示するには、プロジェクトに割り当てられているすべてのファイルを開く、**プロジェクト**メニューをクリックして**すべてのファイル**です。  
   
-2.  In **Solution Explorer**, expand the TestDP.txt node, and then double-click TestDP.txt to open it in the editor.  
+2.  **ソリューション エクスプ ローラー**、TestDP.txt ノードを展開し、TestDP.txt をエディターで開く をダブルクリックします。  
   
-     The generated text output appears. The output should look like the following:  
+     生成されたテキスト出力が表示されます。 出力の内容は次のようになります。  
   
     ```  
        Name:  T:SomeClass  
@@ -888,15 +888,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
       value:  A value tag is used to describe the property value  
     ```  
   
-## <a name="adding-html-to-generated-text"></a>Adding HTML to Generated Text  
- After you test your custom directive processor, you might want to add some HTML to your generated text.  
+## <a name="adding-html-to-generated-text"></a>生成されたテキストへの HTML の追加  
+ カスタム ディレクティブ プロセッサをテストした後は、生成されたテキストに HTML を追加できます。  
   
-#### <a name="to-add-html-to-the-generated-text"></a>To add HTML to the generated text  
+#### <a name="to-add-html-to-the-generated-text"></a>生成されたテキストに HTML を追加するには  
   
-1.  Replace the code in TestDP.tt with the following. The HTML is highlighted. Make sure to replace the string `YOUR PATH` with the path to the DocFile.xml file.  
+1.  TestDP.tt 内のコードを次のコードに置き換えます。 HTML は強調表示されています。 文字列を置換することを確認`YOUR PATH`DocFile.xml ファイルのパスを使用します。  
   
     > [!NOTE]
-    >  Additional open \<# and close #> tags separate the statement code from the HTML tags.  
+    >  追加の開始\<# および閉じる #> タグが HTML タグからステートメント コードを分離します。  
   
     ```csharp  
     <#@ assembly name="System.Xml" #>  
@@ -978,9 +978,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
     </body></html>  
     ```  
   
-2.  On the **File** menu, click **Save TestDP.txt**.  
+2.  **ファイル** メニューのをクリックして**TestDP.txt の保存**です。  
   
-3.  To view the output in a browser, in **Solution Explorer**, right-click TestDP.htm, and click **View In Browser**.  
+3.  ブラウザーで出力を表示する**ソリューション エクスプ ローラー**、TestDP.htm を右クリックし、クリックして**ブラウザーで表示**です。  
   
-     Your output should be the same as the original text except it should have the HTML format applied. Each item name should appear in bold.
+     HTML 形式が適用される点を除き、出力は元のテキストと同じです。 各項目名は太字で表示されます。
 

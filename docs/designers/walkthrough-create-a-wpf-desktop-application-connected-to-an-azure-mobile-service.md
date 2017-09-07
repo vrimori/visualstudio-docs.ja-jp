@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Create a WPF Desktop Application connected to an Azure Mobile Service | Microsoft Docs'
+title: "チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,72 +17,72 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5027ce1affd22c88af18301d51304958c819249a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>Walkthrough: Create a WPF Desktop Application connected to an Azure Mobile Service
-You can use Windows Presentation Foundation (WPF) to quickly create a modern desktop application that uses an Azure Mobile Service to store and provide data.  
+# <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>チュートリアル: Azure モバイル サービスに接続された WPF デスクトップ アプリケーションの作成
+Windows Presentation Foundation (WPF) を使用すれば、Azure モバイル サービスを利用してデータの格納および提供を行う、最新式のデスクトップ アプリケーションをすばやく作成することができます。  
   
-##  <a name="Requirements"></a> Prerequisites  
- You'll need the following to complete this walkthrough:  
+##  <a name="Requirements"></a> 必要条件  
+ このチュートリアルを完了させるための要件は次のとおりです。  
   
--   Visual Studio 2017 or any version that supports WPF development.  
+-   Visual Studio 2017 または WPF 開発をサポートする任意のバージョン。  
   
--   An active Microsoft Azure account.  
+-   アクティブな Microsoft Azure アカウント。  
   
-    -   You can sign up for a free trial account [here](http://azure.microsoft.com/en-us/pricing/free-trial/).  
+    -   無料試用版アカウントのサインアップを、 [ここ](http://azure.microsoft.com/en-us/pricing/free-trial/)で行うことができます。  
   
-    -   You can activate [MSDN subscriber benefits](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A261C142F). Your MSDN subscription gives you credits every month that you can use for paid Azure services.  
+    -   [MSDN サブスクライバー特典](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A261C142F)をアクティブにできます。 MSDN サブスクリプションでは、有料の Azure サービスに対して使用できるクレジットが毎月ユーザーに提供されます。  
   
-## <a name="create-a-project-and-add-references"></a>Create a project and add references  
- The first step is to create a WPF project and add a NuGet package that lets you connect to Azure Mobile Services.  
+## <a name="create-a-project-and-add-references"></a>プロジェクトを作成してソース ファイルを追加する  
+ 最初の手順では、WPF プロジェクトを作成し、Azure Mobile Services に接続できる NuGet パッケージを追加します。  
   
-#### <a name="to-create-the-project"></a>To create the project  
+#### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
-1.  On the menu bar, choose **File**, **New**, **Project**.  
+1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
   
-2.  In the **New Project** dialog, expand either the **Visual C#** or **Visual Basic** node and choose the **Windows** node, and then expand the **Windows** node and choose the **Classic Desktop** node.  
+2.  **[新しいプロジェクト]** ダイアログで、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードを展開し、 **[Windows]** ノードを選択して **[Windows]** ノードを展開してから **[従来の (クラシック) デスクトップ]** ノードを選択します。  
   
-3.  In the template list, choose the **WPF Application** template.  
+3.  テンプレートの一覧で、 **[WPF アプリケーション]** テンプレートを選択します。  
   
-4.  In the **Name** textbox enter `WPFQuickStart`, and then choose the **OK** button.  
+4.  **[名前]** ボックスに「 `WPFQuickStart`」と入力して、 **[OK]** を選択します。  
   
-     The project is created and the project files are added to **Solution Explorer**, and the designer for the default application window named **MainWindow.xaml** is displayed.  
+     プロジェクトが作成され、プロジェクト ファイルが **ソリューション エクスプローラー**に追加され、 **MainWindow.xaml** という名前の既定のアプリケーション ウィンドウのデザイナーが表示されます。  
   
-#### <a name="to-add-a-reference-to-the-windows-azure-mobile-services-sdk"></a>To add a reference to the Windows Azure Mobile Services SDK  
+#### <a name="to-add-a-reference-to-the-windows-azure-mobile-services-sdk"></a>Microsoft Azure Mobile Services SDK に参照を追加するには  
   
-1.  In **Solution Explorer**, open the shortcut menu for the **References** node and choose **Manage NuGet Packages**.  
+1.  **ソリューション エクスプローラー**で **[参照]** ノードのショートカット メニューを開き、 **[NuGet パッケージの管理]**を選択します。  
   
-2.  In the **NuGet Package Manager**, choose the **Search** field and enter `mobileservices`.  
+2.  **NuGet パッケージ マネージャー**で、**[検索]** フィールドを選択して「`mobileservices`」と入力します。  
   
-3.  In the left pane, choose **WindowsAzure.MobileServices**, and then in the right pane choose the **Install** button.  
-  
-    > [!NOTE]
-    >  If a **Preview** dialog appears, review the proposed changes and then choose the **OK** button.  
-  
-4.  In the **License Acceptance** dialog, review the license terms and then accept them by choosing the **I Accept** button.  
-  
-     The necessary references will be added to **Solution Explorer**.  
+3.  左ウィンドウで、 **WindowsAzure.MobileServices**を選択し、右ウィンドウで **[インストール]** ボタンをクリックします。  
   
     > [!NOTE]
-    >  If you don't agree with the license terms, choose the **I Decline** button. You won't be able to finish the rest of the walkthrough.  
+    >  **[プレビュー]** ダイアログが表示されたら、提示された変更を確認した後、 **[OK]** ボタンをクリックします。  
   
-## <a name="create-the-user-interface"></a>Create the user interface  
- The next step is to create the user interface for the application. First you'll create a reusable user control that displays a standard side-by-side two pane layout. You'll add the user control to the main application window and add controls to enter and display data, then write some code to define the interaction with the mobile service backend.  
+4.  **[ライセンスへの同意]** ダイアログで、各ライセンス条項を確認してから、 **[同意]** ボタンをクリックしてそれらに同意します。  
   
-#### <a name="to-add-a-user-control"></a>To add a user control  
+     必要な参照が **ソリューション エクスプローラー**に追加されます。  
   
-1.  In **Solution Explorer**, open the shortcut menu for the **WPFQuickStart** node and choose **Add**, **New Folder**.  
+    > [!NOTE]
+    >  ライセンス条項に同意しない場合は、**[同意しない]** ボタンをクリックします。 同意しない場合、このチュートリアルの残りの部分を完了させることはできません。  
   
-2.  Name the folder `Common`.  
+## <a name="create-the-user-interface"></a>ユーザー インターフェイスを作成する  
+ 次の手順では、アプリケーションのユーザー インターフェイスを作成します。 まず、標準の横並びの 2 つのウィンドウのレイアウトを表示する再利用可能なユーザー コントロールを作成します。 ユーザー コントロールをアプリケーションのメイン ウィンドウに追加し、データを入力および表示するためのコントロールを追加してから、モバイル サービスのバックエンドとの相互作用を定義するコードを記述します。  
   
-3.  Open the shortcut menu for the **Common** folder and choose **Add**, **User Control**.  
+#### <a name="to-add-a-user-control"></a>ユーザー コントロールを追加するには  
   
-4.  In the **Add New Item** dialog, choose the Name field and enter `QuickStartTask`, and then choose the **Add** button.  
+1.  **ソリューション エクスプローラー**で、 **[WPFQuickStart]** ノードのショートカット メニューを開き、 **[追加]**、 **[新しいフォルダー]**の順に選択します。  
   
-     The user control will be added to the project and the **QuickStartTask.xaml** file will open in the designer.  
+2.  フォルダーに「 `Common`で行うことができます。  
   
-5.  In the lower pane of the designer, select the `<Grid>` and `</Grid>` tags and replace them with the following XAML code:  
+3.  **[Common]** フォルダーのショートカット メニューを開き、 **[追加]**、 **[ユーザー コントロール]**の順に選択します。  
+  
+4.  **[新しい項目の追加]** ダイアログで、[名前] フィールドを選択して「 `QuickStartTask`」と入力して、 **[追加]** を選択します。  
+  
+     ユーザー コントロールがプロジェクトに追加され、 **[QuickStartTask.xaml]** ファイルがデザイナーで開きます。  
+  
+5.  デザイナーの下ウィンドウで、 `<Grid>` タグと `</Grid>` タグを選択してから、それらを次の XAML コードに置き換えます。  
   
     ```xaml  
     <Grid VerticalAlignment="Top">  
@@ -98,13 +98,13 @@ You can use Windows Presentation Foundation (WPF) to quickly create a modern des
         </Grid>  
     ```  
   
-     This XAML code creates a reusable layout with placeholders for number, title and description fields. At run time the placeholders can be replaced with text as shown in the following illustration.  
+     この XAML コードによって、番号、タイトル、および説明の各フィールドのプレース ホルダーの付いた再利用可能なレイアウトが作成されます。 これらのプレースホルダーは、実行時に次の図に示すテキストに置き換えることができます。  
   
-     ![The QuickStartTask user control](../designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
+     ![QuickStartTask ユーザー コントロール](../designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
   
-6.  In **Solution Explorer**, expand the **QuickStartTask.xaml** node and open the **QuickStartTask.xaml.cs** or **QuickStartTask.xaml.vb** file.  
+6.  **ソリューション エクスプローラー**で、 **[QuickStartTask.xaml]** ノードを展開して **[QuickStartTask.xaml.cs]** ファイルまたは **[QuickStartTask.xaml.vb]** ファイルを開きます。  
   
-7.  In the code editor, replace the `namespace WPFQuickStart.Common` (C#) namespace or the `Public Class QuickStartTask` (VB) method with the following code:  
+7.  コード エディターで、 `namespace WPFQuickStart.Common` (C#) 名前空間または `Public Class QuickStartTask` (VB) メソッドを次のコードに書き換えます。  
   
     ```csharp  
     namespace WPFQuickStart.Common  
@@ -200,29 +200,29 @@ You can use Windows Presentation Foundation (WPF) to quickly create a modern des
         End Class  
     ```  
   
-     This code uses dependency properties to set the values for the number, title and description fields at run time.  
+     このコードでは依存関係プロパティを使用して、実行時に、番号、タイトル、および説明の各フィールドの値を設定します。  
   
-8.  On the menu bar, choose **Build**, **Build WPFQuickStart** to build the user control.  
+8.  メニュー バーで、 **[ビルド]**、 **[WPFQuickStart のビルド]** の順に選択してユーザー コントロールをビルドします。  
   
-#### <a name="to-create-and-modify-the-main-window"></a>To create and modify the main window  
+#### <a name="to-create-and-modify-the-main-window"></a>メイン ウィンドウを作成および変更するには  
   
-1.  In **Solution Explorer**, open the **MainWindow.xaml** file.  
+1.  **ソリューション エクスプローラー**で、 **[MainWindow.xaml]** ファイルを開きます。  
   
-2.  **Important**. This step is for C# only. If you are using Visual Basic, skip to the next step. In the lower pane of the designer, locate the line `xmlns:local="clr-namespace:WPFQuickStart"` and replace it with the following XAML code:  
+2.  **重要**。 この手順は、C# の場合のみです。 Visual Basic を使用する場合は、次の手順に進んでください。 デザイナーの下ウィンドウで、 `xmlns:local="clr-namespace:WPFQuickStart"` という行を見つけてから、それを次の XAML コードに置き換えます。  
   
     ```xaml  
     xmlns:local="clr-namespace:WPFQuickStart.Common"  
     ```  
   
-3.  In the **Properties** window, expand the **Common** category node and choose the **Title** property, and then enter `WPF Todo List` and press the **Enter** key.  
+3.  **[プロパティ]** ウィンドウで、 **Common** カテゴリ ノードを展開し **[Title]** プロパティを選択してから、「 `WPF Todo List` 」と入力して **Enter** キーを押します。  
   
-     Notice that the **Title** element in the XAML window changes to match the new value. You can modify XAML properties in either the XAML window or the **Properties** window, and the changes are synchronized.  
+     [XAML] ウィンドウの **[Title]** 要素がこの新しい値と一致していることに注目してください。 XAML のプロパティは、[XAML] ウィンドウまたは **[プロパティ]** ウィンドウのいずれかで変更でき、それらの変更は同期されます。  
   
-4.  In the XAML window, set the value of the **Height** element to `768`, and set the value of the **Width** property to `1280`.  
+4.  [XAML] ウィンドウで **[Height]** 要素の値を `768`に設定し、 **[Width]** プロパティの値を `1280`で行うことができます。  
   
-     These elements correspond to the **Height** and **Width** properties, found in the **Layout** category in the **Properties** window.  
+     これらの要素は、 **[プロパティ]** ウィンドウの **[レイアウト]** カテゴリにある **[Height]** プロパティと **[Width]** プロパティに対応します。  
   
-5.  Select the `<Grid>` and `</Grid>` tags and replace them with the following XAML code:  
+5.  `<Grid>` タグと `</Grid>` タグを選択してから、それらを次の XAML コードに置き換えます。  
   
     ```xaml  
     <Grid>  
@@ -283,18 +283,18 @@ You can use Windows Presentation Foundation (WPF) to quickly create a modern des
         </Grid>  
     ```  
   
-     Notice that the changes are reflected in the Design window. Once again, you also could have defined the user interface by adding controls from the **Toolbox** window and setting properties in the **Properties** window. Anything that can be done in the designer can be done in XAML code, and vice versa.  
+     これらの変更が [デザイン] ウィンドウに反映されることに注意してください。 さらに、 **[ツールボックス]** ウィンドウでコントロールを追加し、 **[プロパティ]** ウィンドウでプロパティを設定すれば、ユーザー インターフェイスも定義できます。 デザイナーで実行できることは XAML コードでも実行でき、XAML コードで実行できることはデザイナーでも実行できます。  
   
-     At this point, the design should look like the following illustration.  
+     この時点で、デザインは次の図のようになっているはずです。  
   
-     ![The MainWindow in the designer](../designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
+     ![デザイナーの MainWindow](../designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
   
     > [!NOTE]
-    >  While following the next few procedures you might see errors in the **Error List** if it is open. Don't worry; these errors will go away once you complete the remaining procedures.  
+    >  **[エラー一覧]** を開いている場合、次のいくつかの手順の実行中にエラーが表示される可能性があります。 心配には及びません。これらのエラーは、残りの手順を完了すれば表示されなくなります。  
   
-6.  In **Solution Explorer**, expand the **MainWindow.xaml** node and open the **MainWindow.xaml.cs** or **MainWindow.xaml.vb** file.  
+6.  **ソリューション エクスプローラー**で、 **[MainWindow.xaml]** ノードを展開し、 **[MainWindow.xaml.cs]** ファイルまたは **[MainWindow.xaml.vb]** ファイルを開きます。  
   
-7.  In the Code Editor, add the following `using` or `Imports` directives to the top of the file:  
+7.  コード エディターで、ファイルの先頭に次の `using` ディレクティブまたは `Imports` ディレクティブを追加します。  
   
     ```csharp  
     using Microsoft.WindowsAzure.MobileServices;  
@@ -306,7 +306,7 @@ You can use Windows Presentation Foundation (WPF) to quickly create a modern des
     Imports Newtonsoft.Json  
     ```  
   
-8.  Replace all of the code in the **WPFQuickStart** namespace (C#) or **Class MainWindow** class (VB) with the following code:  
+8.  **[WPFQuickStart]** 名前空間 (C#) または **[Class MainWindow]** クラス (VB) 内のすべてのコードを次のコードに置き換えます。  
   
     ```csharp  
     namespace WPFQuickStart  
@@ -470,56 +470,56 @@ You can use Windows Presentation Foundation (WPF) to quickly create a modern des
     End Class  
     ```  
   
-     This code defines the interaction between the user interface and the database in the mobile service using asynchronous methods.  
+     このコードでは、非同期メソッドを使用して、ユーザー インターフェイスと、モバイル サービス内のデータベースと間の相互作用を定義しています。  
   
-## <a name="create-the-azure-mobile-service"></a>Create the Azure mobile service  
- The final step is to create a mobile service in Microsoft Azure, add a table to store your data, and then reference the service instance from your application.  
+## <a name="create-the-azure-mobile-service"></a>Azure モバイル サービスを作成する  
+ 最後の手順では、Microsoft Azure でモバイル サービスを作成し、データを格納するためのテーブルを追加した後、アプリケーションからサービス インスタンスを参照します。  
   
-#### <a name="to-create-a-mobile-service"></a>To create a mobile service  
+#### <a name="to-create-a-mobile-service"></a>モバイル サービスを作成するには  
   
-1.  Open a web browser and log in to your Microsoft Azure portal, and then choose the **MOBILE SERVICES** tab.  
+1.  Web ブラウザーを開いて Microsoft Azure ポータルにログインし、 **[Mobile Services]** タブをクリックします。  
   
-2.  Choose the **NEW** button, and in the pop up dialog choose **COMPUTE**, **MOBILE SERVICE,CREATE**.  
+2.  **[新規]** ボタンをクリックし、ポップアップ ダイアログで **[コンピューティング]**、**[モバイル サービス]、[作成]** の順に選択します。  
   
-3.  In the **NEW MOBILE SERVICE** dialog, choose the **URL** textbox and enter `wpfquickstart01`.  
-  
-    > [!NOTE]
-    >  You may need to change the numeric portion of the URL. Microsoft Azure requires a unique URL for each mobile service.  
-  
-     This sets the URL for the service to *https://wpfquickstart01.azure-mobile.net/*.  
-  
-4.  In the **DATABASE** list, choose a database option. Since this is an application that probably won't get a lot of usage, you might want to choose the **Create a free 20MB SQL database** option, or choose the free database already associated with your subscription.  
-  
-5.  In the **REGION** list, choose the data center where you want to deploy the mobile service, and then choose the **Next** (right arrow) button.  
+3.  **[新しいモバイル サービス]** ダイアログで、**[URL]** テキストボックスを選択して「`wpfquickstart01`」と入力します。  
   
     > [!NOTE]
-    >  For this service you will use the default **BACKEND** setting, **JavaScript**.  
+    >  URL の数字部分の変更が必要になる場合があります。 Microsoft Azure では、モバイル サービスごとに一意の URL が必要になります。  
   
-6.  If you are creating a new database, on the **Specify database settings** page, in the **SERVER** list choose **New SQL database server**, enter your **SQL LOGIN NAME** and **PASSWORD**, and then choose the **Complete** (checkmark) button.  
+     これにより、このサービスの URL が *https://wpfquickstart01.azure-mobile.net/*に設定されます。  
   
-7.  If you chose an existing database, on the **Database Settings** page, enter your **LOGIN PASSWORD** and then choose the **Complete** (checkmark) button.  
+4.  **[データベース]** 一覧で、データベース オプションを選択します。 このアプリケーションは、おそらく頻繁には使用されないアプリケーションであるため、**[無料の 20 MB の SQL データベースを作成する]** オプション、またはサブスクリプションに関連付けられている無料のデータベースを選択できます。  
   
-     The process of creating the mobile service will begin. Once the process is completed the status will change to **Ready** and you can move on to the next step.  
+5.  **[リージョン]** 一覧で、モバイル サービスをデプロイするデータ センターを選択してから、 **[次へ]** (右矢印) ボタンをクリックします。  
   
-8.  In the portal, select the newly created mobile service and then choose the **MANAGE KEYS** button.  
+    > [!NOTE]
+    >  このサービスの場合、既定の **[バックエンド]** 設定である **JavaScript**を使用します。  
   
-9. In the **Manage Access Keys** dialog, copy the **APPLICATION KEY**.  
+6.  新しいデータベースを作成する場合は、 **[データベースの設定の指定]** ページの **[サーバー]** 一覧で **[新しい SQL データベース サーバー]**を選択し、 **SQL ログイン名** と **パスワード**を入力して、 **[完了]** (チェックマーク) ボタンをクリックします。  
   
-     You'll use this in the next procedure.  
+7.  既存のデータベースを選択した場合は、 **[データベースの設定]** ページで、 **ログイン パスワード** を入力して、 **[完了]** (チェックマーク) ボタンをクリックします。  
   
-#### <a name="to-create-a-table"></a>To create a table  
+     モバイル サービスを作成する処理が開始されます。 この処理が完了すると、状態が **[準備完了]** に変わり、次の手順に進むことができます。  
   
-1.  In the Microsoft Azure portal, choose the right arrow next to the name of your mobile service, and on the menu bar, choose **DATA**, and then choose the **ADD A TABLE** link.  
+8.  ポータルで、新しく作成したモバイル サービスを選択して **[キーの管理]** ボタンをクリックします。  
   
-2.  In the **Create New Table** dialog, in the **TABLE NAME** text box enter `TodoItem`, and then choose the **Complete** (checkmark) button.  
+9. **[アクセス キーの管理]** ダイアログで、 **アプリケーション キー**をコピーします。  
   
-     Wait for the table to be created, and then move on to the final procedure.  
+     このキーは次の手順で使用します。  
   
-#### <a name="to-add-a-declaration-for-the-mobile-service"></a>To add a declaration for the mobile service  
+#### <a name="to-create-a-table"></a>テーブルを作成するには  
   
-1.  Return to Visual Studio. In **Solution Explorer**, expand the **App.xaml** (C#) or **Application.xaml** (Visual Basic) node and open the **App.xaml.cs** or **App.xaml.vb** file.  
+1.  Microsoft Azure ポータルで、モバイル サービスの名前の横にある右矢印をクリックし、メニュー バーで **[データ]**を選択してから、 **[テーブルの追加]** リンクを選択します。  
   
-2.  In the Code Editor, add the following `using` or **Imports** directives to the top of the file:  
+2.  **[新しいテーブルの作成]** ダイアログの **[テーブル名]** テキスト ボックスに「 `TodoItem`」と入力して、 **[完了]** (チェックマーク) ボタンをクリックします。  
+  
+     テーブルの作成が完了するのを待機してから、最後の手順に進みます。  
+  
+#### <a name="to-add-a-declaration-for-the-mobile-service"></a>モバイル サービスの宣言を追加するには  
+  
+1.  Visual Studio に戻ります。 **ソリューション エクスプローラー**で、 **[App.xaml]** (C#) ノードまたは **[Application.xaml]** (Visual Basic) ノードを展開して **[App.xaml.cs]** ファイルまたは **[App.xaml.vb]** ファイルを開きます。  
+  
+2.  コード エディターで、ファイルの先頭に次の `using` ディレクティブまたは **Imports** ディレクティブを追加します。  
   
     ```csharp  
     using Microsoft.WindowsAzure.MobileServices;  
@@ -529,7 +529,7 @@ You can use Windows Presentation Foundation (WPF) to quickly create a modern des
     Imports Microsoft.WindowsAzure.MobileServices  
     ```  
   
-3.  Add the following declaration to the class, replacing *YOUR-SERVICE_HERE* with the name of the URL for your service, and replacing *YOUR-KEY-HERE* with the application key that you copied in the previous procedure:  
+3.  次の宣言をクラスに追加し、作成したサービスの URL の名前で *YOUR-SERVICE_HERE* を置き換え、前の手順でコピーしたアプリケーション キーで *YOUR-KEY-HERE* を置き換えます。  
   
     ```csharp  
     public static MobileServiceClient MobileService = new MobileServiceClient(  
@@ -542,34 +542,34 @@ You can use Windows Presentation Foundation (WPF) to quickly create a modern des
     Public Shared MobileService As New MobileServiceClient("https://YOUR-SERVICE-HERE.azure-mobile.net/", "YOUR-KEY-HERE")  
     ```  
   
-     This code allows the application to access the mobile service running on Microsoft Azure.  
+     このコードによって、アプリケーションが、Microsoft Azure 上で実行されているモバイル サービスにアクセスすることが可能になります。  
   
-## <a name="test-the-application"></a>Test the application  
- That's it - you've created a WPF desktop application that accesses an Azure Mobile Service. Now all that's left is to run the application and see it in action.  
+## <a name="test-the-application"></a>アプリケーションをテストする  
+ これで、Azure モバイル サービスにアクセスする WPF デスクトップ アプリケーションの作成が完了しました。 あとは、アプリケーションを実行してその動作を確認するだけです。  
   
-#### <a name="to-run-the-application"></a>To run the application  
+#### <a name="to-run-the-application"></a>アプリケーションを実行するには  
   
-1.  On the menu bar, choose **Debug**, **Start Debugging** (or press F5).  
+1.  メニュー バーで、 **[デバッグ]**、 **[デバッグの開始]** の順に選択します (または F5 キーを押します)。  
   
-2.  In the **Insert a TodoItem** textbox, enter `Do something`, and then choose the **Save** button.  
+2.  **[Insert a TodoItem]** テキスト ボックスに「 `Do something`」と入力して、 **[Save]** を選択します。  
   
-3.  Enter `Do something else`, and then choose the **Save** button again.  
+3.  Enter `Do something else`」と入力して、 **[Save]** ボタンを再度クリックします。  
   
-     Notice that the two entries are added to the **Query and Update Data** list, as shown in the following illustration.  
+     次の図に示すように、2 つのエントリが **[Query and Update Data]** (データのクエリおよび更新) リストに追加されることに注意してください。  
   
-     ![The Todo items are added to the list.](../designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
+     ![TODO 項目が一覧に追加されます。](../designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
   
-4.  Select the checkbox for the **Do something else** entry in the list.  
+4.  一覧の **[Do something else]** エントリのチェックボックスをオンにします。  
   
-     This calls the **UpdateCheckedTodoItem** method and removes the item from both the list and the database.  
+     これにより、 **UpdateCheckedTodoItem** メソッドが呼び出され、リストとデータベースの両方から項目が削除されます。  
   
-## <a name="next-steps"></a>Next Steps  
- You've completed a fairly simplistic example of a WPF desktop application with an Azure backend. Of course, a real application is likely to be much more complex, but the same basic concepts apply. See [WPF in the .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx).  
+## <a name="next-steps"></a>次の手順  
+ Azure バックエンドを利用した、かなりシンプルな例の WPF デスクトップ アプリケーションの作成が完了しました。 もちろん、実際のアプリケーションははるかに複雑になる可能性がありますが、同じ基本的な概念が当てはまります。 「 [.NET Framework での WPF](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)」を参照してください。  
   
- You can make the user interface more appealing by adding color, shapes, graphics, and even animations. See [Creating a UI by using XAML Designer in Visual Studio](creating-a-ui-by-using-xaml-designer-in-visual-studio.md) and [Creating a UI by using Blend for Visual Studio](creating-a-ui-by-using-blend-for-visual-studio.md). For a comparison between the tools, see [Designing XAML in Visual Studio and Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md).  
+ ユーザー インターフェイスは、色、図形、グラフィックス、さらにアニメーションなどを追加することによって、視覚的により訴えかけるものにできます。 「[Visual Studio での XAML デザイナーを使用した UI の作成](creating-a-ui-by-using-xaml-designer-in-visual-studio.md)」および「[Blend for Visual Studio を使用して UI を作成する](creating-a-ui-by-using-blend-for-visual-studio.md)」をご覧ください。 ツールの比較については、「[Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)」をご覧ください。  
 
- You can connect to existing SQL databases or other sources of data using Azure Mobile Services. See [Mobile Services documentation](http://azure.microsoft.com/en-us/services/app-service/mobile/).  
+ Azure Mobile Services を使用して、既存の SQL データベースや他のデータ ソースに接続することができます。 「 [Mobile Services のドキュメント](http://azure.microsoft.com/en-us/services/app-service/mobile/)」を参照してください。  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: My First WPF Desktop Application](../designers/walkthrough-my-first-wpf-desktop-application2.md)   
- [Create Modern Desktop Applications with Windows Presentation Foundation](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
+## <a name="see-also"></a>関連項目  
+ [チュートリアル: 初めての WPF デスクトップ アプリケーション](../designers/walkthrough-my-first-wpf-desktop-application2.md)   
+ [Windows Presentation Foundation での最新のデスクトップ アプリケーションの作成](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)

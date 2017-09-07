@@ -36,7 +36,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="tabs-and-windows-environment-options-dialog-box"></a>[タブとウィンドウ] ([オプション] ダイアログ ボックス - [環境])
+# <a name="tabs-and-windows-environment-options-dialog-box"></a>[タブとウィンドウ]\ ([オプション] ダイアログ ボックス - [環境])
 このページを使用して、エディター ウィンドウでのタブ付きウィンドウの動作およびツール ウィンドウの動作に関するオプションを設定します。 詳細については、「[Visual Studio のウィンドウ レイアウトをカスタマイズする](../../ide/customizing-window-layouts-in-visual-studio.md)」を参照してください  
   
 ## <a name="see-also"></a>関連項目  

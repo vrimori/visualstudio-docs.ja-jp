@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::SetJustMyCodeState | Microsoft Docs
+title: "IDebugModule3::SetJustMyCodeState |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: dde5762e1f37b1690c3ffafb68b43380d8203cf2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugmodule3setjustmycodestate"></a>IDebugModule3::SetJustMyCodeState
-Marks the module as being user code or not.  
+モジュールがでは、かどうかをユーザー コードとしてのマークを付けます。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT SetJustMyCodeState(  
@@ -54,12 +54,12 @@ int SetJustMyCodeState(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `fIsUserCode`  
- [in] Nonzero (`TRUE`) if the module should be considered user code, zero (`FALSE`) if it should not.  
+ [in]0 以外 (`TRUE`) 場合、モジュールには、ユーザー コードを考慮する必要があります、0 (`FALSE`) が不要な場合です。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

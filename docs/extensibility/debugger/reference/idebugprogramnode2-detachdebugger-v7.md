@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::DetachDebugger_V7 | Microsoft Docs
+title: "IDebugProgramNode2::DetachDebugger_V7 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,13 +35,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: a281d92d93473dffeb8f488cd802a9cee4a779d7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugprogramnode2detachdebuggerv7"></a>IDebugProgramNode2::DetachDebugger_V7
-DEPRECATED. DO NOT USE.  
+推奨されなくなりました。 使用しないでください。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT DetachDebugger_V7 (   
@@ -53,15 +53,15 @@ HRESULT DetachDebugger_V7 (
 int DetachDebugger_V7 ();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- An implementation should always return `E_NOTIMPL`.  
+## <a name="return-value"></a>戻り値  
+ 実装を常に返します`E_NOTIMPL`です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!WARNING]
->  As of [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)], this method is no longer used and should always return `E_NOTIMPL`.  
+>  [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)]、このメソッドは使用されなくを常に返す必要があります`E_NOTIMPL`です。  
   
- This method is called when the debugger unexpectedly quits. When this method is called, the DE should resume the program as though the user detached from it. No more debug events should be sent. The program should be in a state where it is attachable from another instance of the debugger.  
+ このメソッドは、デバッガーが突然終了するときに呼び出されます。 このメソッドが呼び出されたときに、DE は必要があります、ユーザーがそこからデタッチされたものとしてプログラムを再開します。 これ以上のデバッグ イベントを送信する必要があります。 プログラムは、デバッガーの別のインスタンスからアタッチ可能な状態である必要があります。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

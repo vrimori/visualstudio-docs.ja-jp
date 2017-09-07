@@ -59,12 +59,12 @@ Visual Studio 2017 には、影響の少ない新しいインストール エク
 
 次のようにして、Visual Studio IDE から Dotfuscator CE をインストールすることができます。
 
-1. **クイック起動** (Ctrl キーを押しながら Q キーを押す) 検索バーで、「`dotfuscator`」と入力します。 <br/> <br/> ![](~/ide/dotfuscator/media/install_from_vs_12.png) <br/> <br/>
+1. **クイック起動** (Ctrl キーを押しながら Q キーを押す) 検索バーで、「`dotfuscator`」と入力します。 <br/> <br/> ![](media/install_from_vs_12.png) <br/> <br/>
 2. 表示されたクイック起動の結果の *[インストール]* 見出しで、**[PreEmptive Protection - Dotfuscator (個々のコンポーネント)]** を選択します。
   * または、*[メニュー]* 見出しで、**[ツール] > [PreEmptive Protection - Dotfuscator]** を選択します。この場合、Dotfuscator CE は既にインストールされています。 使用の詳細については、[Dotfuscator CE の完全なユーザー ガイドの概要ページ][get-started]を参照してください。
 3. Visual Studio のインストーラー ウィンドウが起動します。このウィンドウは Dotfuscator CE のインストール用に事前に構成されています。
   * 続行するには管理者の資格情報を提供する必要がある場合があります。
-4. Visual Studio IDE のすべてのインスタンスを閉じます。 <br/> <br/> ![](~/ide/dotfuscator/media/install_from_vs_345.png) <br/> <br/>
+4. Visual Studio IDE のすべてのインスタンスを閉じます。 <br/> <br/> ![](media/install_from_vs_345.png) <br/> <br/>
 5. Visual Studio インストーラー ウィンドウで、*[インストール]* をクリックします。
 
 インストールが完了したら、Dotfuscator CE の使用を開始できます。 詳細については、[Dotfuscator CE の完全なユーザー ガイドの概要ページ][get-started]を参照してください。
@@ -74,13 +74,13 @@ Visual Studio 2017 には、影響の少ない新しいインストール エク
 Visual Studio 2017 をまだインストールしていない場合は、[Visual Studio の Web サイト][2017-install]からインストーラーを取得できます。
 実行すると、選択した Visual Studio エディションのインストール オプションが表示されます。
 
-![](~/ide/dotfuscator/media/install_ui.png)
+![](media/install_ui.png)
 
 その後、次のように、Visual Studio 2017 の個々のコンポーネントとして Dotfuscator CE をインストールできます。
 
 1. **[個々のコンポーネント]** タブを選択します。
-2. *[コード ツール]* で、*[PreEmptive Protection - Dotfuscator]* 項目のチェック ボックスをオンにします。<br/> <br/> ![](~/ide/dotfuscator/media/install_individually_12.png) <br/> <br/>
-3. *[概要]* パネルの *[個々のコンポーネント]* セクションに *[PreEmptive Protection - Dotfuscator]* が表示されます。 <br/> <br/> ![](~/ide/dotfuscator/media/install_individually_3.png) <br/> <br/>
+2. *[コード ツール]* で、*[PreEmptive Protection - Dotfuscator]* 項目のチェック ボックスをオンにします。<br/> <br/> ![](media/install_individually_12.png) <br/> <br/>
+3. *[概要]* パネルの *[個々のコンポーネント]* セクションに *[PreEmptive Protection - Dotfuscator]* が表示されます。 <br/> <br/> ![](media/install_individually_3.png) <br/> <br/>
 4. 使用環境に合わせて、インストール設定をさらに構成します。
 5. Visual Studio をインストールする準備ができたら、*[インストール]* ボタンをクリックします。
 

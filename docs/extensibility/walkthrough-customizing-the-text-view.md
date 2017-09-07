@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Customizing the Text View | Microsoft Docs'
+title: "チュートリアル: テキスト ビューをカスタマイズする |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,78 +32,78 @@ ms.translationtype: MT
 ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
 ms.openlocfilehash: 3e70313d662d54b48823500a054b5aaa2a9401ae
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-customizing-the-text-view"></a>Walkthrough: Customizing the Text View
-You can customize a text view by modifying any of the following properties in its editor-format map:  
+# <a name="walkthrough-customizing-the-text-view"></a>チュートリアル: テキスト ビューをカスタマイズします。
+テキスト ビューをカスタマイズするには、そのエディター形式のマップでは、次のプロパティのいずれかの変更します。  
   
--   Indicator margin  
+-   インジケーター マージン  
   
--   Insertion caret  
+-   挿入記号  
   
--   Overwrite caret  
+-   カレットを上書き  
   
--   Selected text  
+-   選択したテキスト  
   
--   Inactive selected text (that is, selected text that has lost focus)  
+-   選択したテキストの非アクティブな (つまり、選択したテキストがフォーカスを失ったを)  
   
--   Visible whitespace  
+-   表示の空白文字  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>必須コンポーネント  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
   
-## <a name="creating-a-mef-project"></a>Creating a MEF Project  
+## <a name="creating-a-mef-project"></a>MEF プロジェクトを作成します。  
   
-1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `ViewPropertyTest`.  
+1.  C# の場合は、VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を付けます`ViewPropertyTest`です。  
   
-2.  Add an Editor Classifier item template to the project. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2.  エディター分類子項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディター項目テンプレートに、拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
-3.  Delete the existing class files.  
+3.  既存のクラス ファイルを削除します。  
   
-## <a name="defining-the-content-type"></a>Defining the Content Type  
+## <a name="defining-the-content-type"></a>コンテンツの種類を定義します。  
   
-1.  Add a class file and name it `ViewPropertyModifier`.  
+1.  クラス ファイルを追加し、名前を付けます`ViewPropertyModifier`です。  
   
-2.  Add the following `using` directives:  
+2.  次の追加`using`ディレクティブ。  
   
-     [!code-csharp[VSSDKViewPropertyTest#1](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_1.cs)]  [!code-vb[VSSDKViewPropertyTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_1.vb)]  
+     [!code-csharp[VSSDKViewPropertyTest 1](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_1.cs)][!code-vb[VSSDKViewPropertyTest 1  ](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_1.vb)]  
   
-3.  Declare a class named `TestViewCreationListener` that inherits from <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>. Export this class with the following attributes:  
+3.  という名前のクラスを宣言`TestViewCreationListener`から継承する<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>です。 次の属性を持つこのクラスをエクスポートします。  
   
-    -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> to specify the type of content to which this listener applies.  
+    -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>このリスナーを適用するコンテンツの種類を指定します。  
   
-    -   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> to specify the role of this listener.  
+    -   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>このリスナーのロールを指定します。  
   
-     [!code-csharp[VSSDKViewPropertyTest#2](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_2.cs)] [!code-vb[VSSDKViewPropertyTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_2.vb)]  
+     [!code-csharp[VSSDKViewPropertyTest 2](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_2.cs) ] [!code-vb [VSSDKViewPropertyTest 2](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_2.vb)]  
   
-4.  In this class, import the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>.  
+4.  このクラスでは、インポート、<xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>です。  
   
-     [!code-csharp[VSSDKViewPropertyTest#3](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_3.cs)]  [!code-vb[VSSDKViewPropertyTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_3.vb)]  
+     [!code-csharp[VSSDKViewPropertyTest 3](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_3.cs)][!code-vb[VSSDKViewPropertyTest 3  ](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_3.vb)]  
   
-## <a name="changing-the-view-properties"></a>Changing the View Properties  
+## <a name="changing-the-view-properties"></a>ビューのプロパティを変更します。  
   
-1.  Implement the <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> method so that the view properties are changed when the view is opened. To make the change, first find the <xref:System.Windows.ResourceDictionary> that corresponds to the aspect of the view you want to find. Then change the appropriate property in the resource dictionary and set the properties. Batch the calls to the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.SetProperties%2A> method by calling the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.BeginBatchUpdate%2A> method before you set the properties and then the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.EndBatchUpdate%2A> after you set the properties.  
+1.  実装、<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A>メソッド ビューを開いたときに、表示のプロパティが変更されるようにします。 変更を行うには、まず検索、<xref:System.Windows.ResourceDictionary>を検索するビューの縦横比に対応します。 リソース ディクショナリで適切なプロパティを変更し、プロパティを設定します。 呼び出しをバッチ処理、<xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.SetProperties%2A>メソッドを呼び出して、<xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.BeginBatchUpdate%2A>メソッド、プロパティを設定する前にし、<xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.EndBatchUpdate%2A>プロパティを設定した後です。  
   
-     [!code-csharp[VSSDKViewPropertyTest#4](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_4.cs)]  [!code-vb[VSSDKViewPropertyTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_4.vb)]  
+     [!code-csharp[VSSDKViewPropertyTest 4](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_4.cs)][!code-vb[VSSDKViewPropertyTest 4  ](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_4.vb)]  
   
-## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
+## <a name="building-and-testing-the-code"></a>コードのビルドとテスト  
   
-1.  Build the solution.  
+1.  ソリューションをビルドします。  
   
-     When you run this project in the debugger, a second instance of Visual Studio is instantiated.  
+     デバッガーでこのプロジェクトを実行すると、Visual Studio の 2 つ目のインスタンスがインスタンス化されます。  
   
-2.  Create a text file and type some text.  
+2.  テキスト ファイルを作成し、いくつかのテキストを入力します。  
   
-    -   The insertion caret should be magenta and the overwrite caret should be turquoise.  
+    -   挿入記号マゼンタ、上書きカレットは水色をする必要があります。  
   
-    -   The indicator margin (to the left of the text view) should be light green.  
+    -   光をする必要があります (テキスト ビューの左側) のインジケーター マージン緑です。  
   
-3.  Select the text you just typed. The color of the selected text should be light pink.  
+3.  入力したテキストを選択します。 選択したテキストの色が薄いをする必要がありますピンク色。  
   
-4.  While the text is selected, click anywhere outside the text window. The color of the selected text should be dark pink.  
+4.  テキストを選択しての外側をクリックして、[テキスト] ウィンドウ。 選択したテキストの色は、暗いピンクをする必要があります。  
   
-5.  Turn on visible whitespace. (On the **Edit** menu, point to **Advanced** and then click **View White Space**). Type some tabs in the text. Red arrows that represent the tabs should be displayed.  
+5.  表示スペースを入れます。 (上、**編集** メニューのをポイント**詳細設定**  をクリックし、**スペースの表示**)。 テキストの一部のタブを入力します。 タブを表す赤色の矢印が表示されます。  
   
-## <a name="see-also"></a>See Also  
- [Language Service and Editor Extension Points](../extensibility/language-service-and-editor-extension-points.md)
+## <a name="see-also"></a>関連項目  
+ [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

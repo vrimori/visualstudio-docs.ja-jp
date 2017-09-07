@@ -1,42 +1,61 @@
 ---
-title: "Changing the return type of a DataContext method cannot be undone | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Changing the return type of a DataContext method cannot be undone | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 76b161fc-5075-4192-8d94-f15b02e199e9
 caps.latest.revision: 3
-caps.handback.revision: 1
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
+ms.openlocfilehash: 0dbf3618bb92ed58a1ec57c14d59eadabcf4a734
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/07/2017
+
 ---
-# Changing the return type of a DataContext method cannot be undone
-DataContext メソッドの戻り値の型を変更すると、元に戻せなくなります。自動生成された型に戻すには、項目をサーバー エクスプローラー\/データベース エクスプローラーから O\/R デザイナーにもう一度ドラッグする必要があります。戻り値の型を変更してもよろしいですか?  
+# <a name="changing-the-return-type-of-a-datacontext-method-cannot-be-undone"></a>Changing the return type of a DataContext method cannot be undone
+Changing the return type of a DataContext method cannot be undone. To revert back to the automatically generated type, you must drag the item from Server Explorer/Database Explorer onto the O/R Designer again. Are you sure you want to change the return type?  
   
- <xref:System.Data.Linq.DataContext> メソッドの戻り値の型は、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]で項目をドロップする場所によって異なります。既存のエンティティ クラスに項目を直接ドロップすると、そのエンティティ クラスを戻り値の型とする <xref:System.Data.Linq.DataContext> メソッドが作成されます。[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]の空の領域に項目をドロップすると、自動生成された型を返す <xref:System.Data.Linq.DataContext> メソッドが作成されます。<xref:System.Data.Linq.DataContext> メソッドをメソッド ペインに追加した後に、その戻り値の型を変更できます。<xref:System.Data.Linq.DataContext> メソッドの戻り値の型を確認または変更するには、**\[プロパティ\]** ウィンドウでメソッドを選択し、**\[Return Type\]** プロパティをクリックします。  
+ The return type of a <xref:System.Data.Linq.DataContext> method differs depending on where you drop the item in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. If you drop an item directly onto an existing entity class, a <xref:System.Data.Linq.DataContext> method that has the return type of the entity class is created. If you drop an item onto an empty area of the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], a <xref:System.Data.Linq.DataContext> method that returns an automatically generated type is created. You can change the return type of a <xref:System.Data.Linq.DataContext> method after you add it to the methods pane. To inspect or change the return type of a <xref:System.Data.Linq.DataContext> method, select it and click the **Return Type** property in the **Properties** window.  
   
-### DataContext の戻り値の型を変更するには  
+### <a name="to-change-the-return-type-of-a-datacontext"></a>To change the return type of a DataContext  
   
--   **\[はい\]** をクリックします。  
+-   Click **Yes**.  
   
-### メッセージ ボックスを終了し、現在の戻り値の型を維持するには  
+### <a name="to-exit-the-message-box-and-leave-the-return-type-unchanged"></a>To exit the message box and leave the return type unchanged  
   
--   **\[いいえ\]** をクリックします。  
+-   Click **No**.  
   
-### 戻り値の型を変更した後で、元の戻り値の型に戻すには  
+### <a name="to-revert-to-the-original-return-type-after-changing-the-return-type"></a>To revert to the original return type after changing the return type  
   
-1.  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]で <xref:System.Data.Linq.DataContext> メソッドを選択し、削除します。  
+1.  Select the <xref:System.Data.Linq.DataContext> method on the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] and delete it.  
   
-2.  **サーバー エクスプローラー**またはデータベース エクスプローラーで項目を探し、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]にドラッグします。  
+2.  Locate the item in **Server Explorer/Database Explorer** and drag it onto the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
   
-     元の既定の戻り値の型で <xref:System.Data.Linq.DataContext> メソッドが作成されます。  
+     A <xref:System.Data.Linq.DataContext> method is created with the original default return type.  
   
-## 参照  
- [Object Relational Designer \(O\/R Designer\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [DataContext Methods \(O\/R Designer\)](../data-tools/datacontext-methods-o-r-designer.md)   
- [How to: Create DataContext Methods Mapped to Stored Procedures and Functions \(O\/R Designer\)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)
+## <a name="see-also"></a>See Also  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [DataContext Methods (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md)   
+ [How to: Create DataContext methods mapped to stored procedures and functions (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)   
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)

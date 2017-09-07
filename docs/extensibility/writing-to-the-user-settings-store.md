@@ -1,5 +1,5 @@
 ---
-title: Writing to the User Settings Store | Microsoft Docs
+title: "ユーザー設定ストアへの書き込み |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,38 +30,38 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 8be43438312773b2e02915f963b1c68fff61e889
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="writing-to-the-user-settings-store"></a>Writing to the User Settings Store
-User settings are writeable settings like the ones in the **Tools / Options** dialog, properties windows, and certain other dialog boxes. Visual Studio extensions may use these to store small amounts of data. This walkthrough shows how to add Notepad to Visual Studio as an external tool by reading from and writing to the user settings store.  
+# <a name="writing-to-the-user-settings-store"></a>ユーザー設定ストアへの書き込み
+ユーザー設定でのような書き込み可能な設定、**ツール/オプション**ダイアログ、プロパティ ウィンドウ、およびその他の特定のダイアログ ボックス。 Visual Studio 拡張機能は、これらを使用少量のデータを格納するのにことがあります。 このチュートリアルでは、ユーザー設定ストアへの書き込みから読み取りを外部ツールとしてメモ帳を Visual Studio に追加する方法を示します。  
   
-### <a name="backing-up-your-user-settings"></a>Backing up Your User Settings  
+### <a name="backing-up-your-user-settings"></a>自分のユーザー設定のバックアップ  
   
-1.  You must be able to reset the External Tools settings so that you can debug and repeat the procedure. To do this, you must save the original settings so that you can restore them as required.  
+1.  デバッグし、手順を繰り返して可能となるように、外部ツールの設定をリセットする必要があります。 これを行うには、必要に応じてそれらを復元できるように、元の設定を保存する必要があります。  
   
-2.  Open Regedit.exe.  
+2.  Regedit.exe を開きます。  
   
-3.  Navigate to HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\\.  
+3.  HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External ツールに移動\\です。  
   
     > [!NOTE]
-    >  Make sure that you are looking at the key that contains \14.0Exp\ and not \14.0\\. When you run the experimental instance of Visual Studio, your user settings are in the registry hive "14.0Exp".  
+    >  \14.0Exp\ といない \14.0 を含むキーで検索するかどうかを確認\\です。 Visual Studio の実験用インスタンスを実行すると、ユーザーの設定は、レジストリ ハイブ"14.0Exp"でです。  
   
-4.  Right-click the \External Tools\ subkey, and then click **Export**. Make sure that **Selected branch** is selected.  
+4.  \External Tools\ サブキーを右クリックし、をクリックして**エクスポート**です。 確認して**選択されたブランチ**が選択されています。  
   
-5.  Save the resulting External Tools.reg file.  
+5.  結果として得られる外部 Tools.reg ファイルを保存します。  
   
-6.  Later, when you want to reset the External Tools settings, select the HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\ registry key and click **Delete** on the context menu.  
+6.  後で、外部ツールの設定をリセットするには、HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External tools \ のレジストリ キーを選択し、をクリックして**削除**コンテキスト メニューの します。  
   
-7.  When the **Confirm Key Delete** dialog box appears, click **Yes**.  
+7.  ときに、**キーの削除の確認** ダイアログ ボックスが表示されたら、をクリックして**はい**です。  
   
-8.  Right-click the External Tools.reg file that you saved earlier, click **Open with**, and then click **Registry Editor**.  
+8.  以前に保存した外部 Tools.reg ファイルを右クリックし、をクリックして**で開く**、クリックして**レジストリ エディター**です。  
   
-## <a name="writing-to-the-user-settings-store"></a>Writing to the User Settings Store  
+## <a name="writing-to-the-user-settings-store"></a>ユーザー設定ストアへの書き込み  
   
-1.  Create a VSIX project named UserSettingsStoreExtension and then add a custom command named UserSettingsStoreCommand. For more information about how to create a custom command, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md)  
+1.  UserSettingsStoreExtension をという名前の VSIX プロジェクトを作成し、UserSettingsStoreCommand をという名前のカスタム コマンドを追加します。 カスタム コマンドを作成する方法の詳細については、次を参照してください[メニュー コマンドを使用して、拡張機能の作成。](../extensibility/creating-an-extension-with-a-menu-command.md)  
   
-2.  In UserSettingsStoreCommand.cs, add the following using statements:  
+2.  次のコードを追加、UserSettingsStoreCommand.cs でステートメントを使用します。  
   
     ```csharp  
     using System.Collections.Generic;  
@@ -69,7 +69,7 @@ User settings are writeable settings like the ones in the **Tools / Options** di
     using Microsoft.VisualStudio.Shell.Settings;  
     ```  
   
-3.  In MenuItemCallback, delete the body of the method and get the user settings store, as follows:  
+3.  MenuItemCallback では、メソッドの本体を削除し、設定を保存、次のようにユーザーを取得します。  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -79,7 +79,7 @@ User settings are writeable settings like the ones in the **Tools / Options** di
     }  
     ```  
   
-4.  Now find out whether Notepad is already set as an external tool. You need to iterate through all the external tools to determine whether the ToolCmd setting is "Notepad", as follows:  
+4.  メモ帳は、外部ツールとして既に設定されているかどうかを調べるようになりました。 ToolCmd 設定は、次のように"Notepad"をかどうかを決定するすべての外部ツールを反復処理する必要があります。  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -103,7 +103,7 @@ User settings are writeable settings like the ones in the **Tools / Options** di
   
     ```  
   
-5.  If Notepad hasn't been set as an external tool, set it as follows:  
+5.  メモ帳が外部ツールとして設定されていない場合は、よう設定します。  
   
     ```vb  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -139,10 +139,10 @@ User settings are writeable settings like the ones in the **Tools / Options** di
     }  
     ```  
   
-6.  Test the code. Remember that it adds Notepad as an External Tool, so you must roll back the registry before running it a second time.  
+6.  コードをテストします。 追加するメモ帳、外部ツールとしてロールバックしなければならない、レジストリをもう一度実行する前にので注意してください。  
   
-7.  Build the code and start debugging.  
+7.  コードをビルドし、デバッグを開始します。  
   
-8.  On the **Tools** menu, click **Invoke UserSettingsStoreCommand**. This will add Notepad to the **Tools** menu.  
+8.  **ツール** メニューのをクリックして**呼び出す UserSettingsStoreCommand**です。 メモ帳に追加されます、**ツール**メニュー。  
   
-9. Now you should see Notepad on the Tools / Options menu, and clicking **Notepad** should bring up an instance of Notepad.
+9. これで、メモ帳をツールに表示されます]/[オプション] メニューの [クリックして**メモ帳**メモ帳のインスタンスを表示する必要があります。

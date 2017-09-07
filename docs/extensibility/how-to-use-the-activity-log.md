@@ -1,5 +1,5 @@
 ---
-title: 'How to: Use the Activity Log | Microsoft Docs'
+title: "方法: アクティビティ ログを使用して |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,18 +33,18 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: a1ddf51d02d9e20f6806f8bc202f8a08166876d6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="how-to-use-the-activity-log"></a>How to: Use the Activity Log
-VSPackages can write messages to the activity log. This feature is especially useful for debugging VSPackages in retail environments.  
+# <a name="how-to-use-the-activity-log"></a>方法: アクティビティ ログを使用
+Vspackage は、メッセージを動作状況ログを書き込むことができます。 この機能は、小売環境で Vspackage をデバッグするため便利です。  
   
 > [!TIP]
->  The activity log is always turned on. Visual Studio keeps a rolling buffer of the last one hundred entries as well as the first ten entries, which have general configuration information.  
+>  アクティビティ ログは常にオンにします。 Visual Studio では、一般的な構成情報を持つ最初の 10 個のエントリと同様に、100 を最後のエントリのローリング バッファーが保持されます。  
   
-### <a name="to-write-an-entry-to-the-activity-log"></a>To write an entry to the activity log  
+### <a name="to-write-an-entry-to-the-activity-log"></a>アクティビティ ログにエントリを書き込む  
   
-1.  Insert this code in the <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> method or in any other method except the VSPackage constructor:  
+1.  このコードを挿入、<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>メソッドまたはコンス トラクターは、VSPackage を除く他のメソッドで。  
   
     ```csharp  
     IVsActivityLog log = GetService(typeof(SVsActivityLog)) as IVsActivityLog;  
@@ -56,28 +56,28 @@ VSPackages can write messages to the activity log. This feature is especially us
         "Called for: {0}", this.ToString()));  
     ```  
   
-     This code gets the <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> service and casts it to an <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> interface. <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A> writes an informational entry into the activity log using the current cultural context.  
+     このコードを取得、<xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog>サービスおよびにキャスト、<xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>インターフェイスです。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A>現在のカルチャ コンテキストを使用して、動作状況ログに情報のエントリを書き込みます。  
   
-2.  When the VSPackage is loaded (usually when a command is invoked or a window is opened), the text is written to the activity log.  
+2.  (通常コマンドが呼び出されるまたはウィンドウが開くとき)、VSPackage が読み込まれると、テキストが、動作状況ログに書き込まれます。  
   
-### <a name="to-examine-the-activity-log"></a>To examine the activity log  
+### <a name="to-examine-the-activity-log"></a>アクティビティのログを確認するには  
   
-1.  Find the activity log in the subfolder for  Visual Studio data: *%AppData%*\Microsoft\VisualStudio\15.0\ActivityLog.XML..  
+1.  Visual Studio のデータのサブフォルダーに、動作状況ログが見つかりません: *%appdata%*\Microsoft\VisualStudio\15.0\ActivityLog.XML.  
   
-2.  Open the activity log with any text editor. Here is a typical entry:  
+2.  任意のテキスト エディターで、動作状況ログを開きます。 一般的なエントリを次に示します。  
   
     ```  
     Called for: Company.MyApp.MyAppPackage ...  
     ```  
   
-## <a name="robust-programming"></a>Robust Programming  
- Because the activity log is a service, the activity log is unavailable in the VSPackage constructor.  
+## <a name="robust-programming"></a>信頼性の高いプログラミング  
+ アクティビティ ログは、サービスであるためには、動作状況ログは、VSPackage のコンス トラクターで使用できません。  
   
- You should obtain the activity log just before writing to it. Do not cache or save the activity log for future use.  
+ 記述する前に、動作状況ログを取得する必要があります。 キャッシュしたり、将来使用するためのアクティビティ ログを保存しないでください。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>   
  <xref:Microsoft.VisualStudio.Shell.Interop.__ACTIVITYLOG_ENTRYTYPE>   
- [Troubleshooting VSPackages](../extensibility/troubleshooting-vspackages.md)   
- [VSPackages](../extensibility/internals/vspackages.md)
+ [Vspackage のトラブルシューティング](../extensibility/troubleshooting-vspackages.md)   
+ [VSPackage](../extensibility/internals/vspackages.md)
 
