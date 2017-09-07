@@ -1,5 +1,5 @@
 ---
-title: SccGetProjPath Function | Microsoft Docs
+title: "SccGetProjPath 関数 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,19 +34,19 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: b45e9a9f33bd5f1b30ee0f300385ef984ce1bc0b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="sccgetprojpath-function"></a>SccGetProjPath Function
-This function prompts the user for a project path, which is a string that is meaningful only to the source control plug-in. It is called when the user is:  
+# <a name="sccgetprojpath-function"></a>SccGetProjPath 関数
+この関数には、ユーザーは、ソース管理プラグインにのみ意味のある文字列であるプロジェクト パスにメッセージが表示されます。 ユーザーがときに呼び出されます。  
   
--   Creating a new project  
+-   新しいプロジェクトを作成します。  
   
--   Adding an existing project to version control  
+-   バージョン管理への既存のプロジェクトの追加  
   
--   Attempting to find an existing version control project  
+-   既存のバージョン コントロール プロジェクトを検索しようとしています。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 SCCRTN SccGetProjPath (  
@@ -61,68 +61,68 @@ SCCRTN SccGetProjPath (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  pvContext  
- [in] The source control plug-in context structure.  
+ [in]ソース管理プラグイン コンテキスト構造体。  
   
  hWnd  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ [in]ソース管理プラグインで提供されるダイアログ ボックスをすべての親として使用できる IDE ウィンドウへのハンドル。  
   
  lpUser  
- [in, out] The user name (not to exceed SCC_USER_SIZE, including the NULL terminator)  
+ [入力、出力].ユーザー名 (を超過しない SCC_USER_SIZE、NULL 終端文字を含む)  
   
  lpProjName  
- [in, out] The name of the IDE project, project workspace, or makefile (not to exceed SCC_PRJPATH_SIZE, including the NULL terminator).  
+ [入力、出力].IDE のプロジェクト、プロジェクト ワークスペースまたはメイクファイル (を超過しない SCC_PRJPATH_SIZE、NULL 終端文字を含む) の名前。  
   
  lpLocalPath  
- [in, out] The project's working path. If `bAllowChangePath` is `TRUE`, the source control plug-in can modify this string (not to exceed _MAX_PATH, including the null-terminator).  
+ [入力、出力].プロジェクトの有効なパスです。 場合`bAllowChangePath`は`TRUE`、ソース管理プラグインは、この文字列 (を超過しない _MAX_PATH、null 終端文字を含む) を変更できます。  
   
  lpAuxProjPath  
- [in, out] A buffer for the returned project path (not to exceed SCC_PRJPATH_SIZE, including the NULL terminator).  
+ [入力、出力].返されるプロジェクトのパス (を超過しない SCC_PRJPATH_SIZE、NULL 終端文字を含む) のバッファーです。  
   
  bAllowChangePath  
- [in] If this is `TRUE`, the source control plug-in can prompt for and modify the `lpLocalPath` string.  
+ [in]これは、する場合`TRUE`、ソース管理プラグインの入力を求めるしたり変更したり、`lpLocalPath`文字列。  
   
  pbNew  
- [in, out] Value coming in indicates whether to create a new project. Value returned indicates success of creating a project:  
+ [入力、出力].受け取った値では、新しいプロジェクトを作成するかどうかを示します。 返される値は、プロジェクトの作成の成功を表します。  
   
-|Incoming|Interpretation|  
+|受信|解釈|  
 |--------------|--------------------|  
-|TRUE|The user may create a new project.|  
-|FALSE|The user may not create a new project.|  
+|true|ユーザーでは、新しいプロジェクトを作成します。|  
+|false|ユーザーは、新しいプロジェクトを作成しない場合があります。|  
   
-|Outgoing|Interpretation|  
+|発信|解釈|  
 |--------------|--------------------|  
-|TRUE|A new project was created.|  
-|FALSE|An existing project was selected.|  
+|true|新しいプロジェクトが作成されました。|  
+|false|既存のプロジェクトが選択されました。|  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## <a name="return-value"></a>戻り値  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
-|Value|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|SCC_OK|The project was successfully created or retrieved.|  
-|SCC_I_OPERATIONCANCELED|The operation was canceled.|  
-|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues.|  
-|SCC_E_CONNECTIONFAILURE|There was a problem trying to connect to the source control system.|  
-|SCC_E_NONSPECIFICERROR|An unspecified error occurred.|  
+|SCC_OK|プロジェクトを作成または取得に成功しました。|  
+|SCC_I_OPERATIONCANCELED|操作が取り消されました。|  
+|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークや競合の問題の可能性があるためのアクセスに関する問題が発生しました。|  
+|SCC_E_CONNECTIONFAILURE|ソース管理システムに接続しようとしています。 問題が発生しました。|  
+|SCC_E_NONSPECIFICERROR|未指定のエラーが発生しました。|  
   
-## <a name="remarks"></a>Remarks  
- The purpose of this function is for the IDE to acquire the parameters `lpProjName` and `lpAuxProjPath`. After the source control plug-in prompts the user for this information, it passes these two strings back to the IDE. The IDE persists these strings in its solution file and passes them to the [SccOpenProject](../extensibility/sccopenproject-function.md) whenever the user opens this project. These strings enable the plug-in to track information associated with a project.  
+## <a name="remarks"></a>コメント  
+ この関数の目的は、パラメーターを取得するための IDE`lpProjName`と`lpAuxProjPath`です。 ソース管理プラグインは、この情報はユーザーを要求、後に、IDE にこれら 2 つの文字列を渡します。 IDE がそのソリューション ファイルには、文字列が引き続き発生して、コマンドを渡し、 [SccOpenProject](../extensibility/sccopenproject-function.md)されるたびに、ユーザーがこのプロジェクトを開きます。 これらの文字列をプロジェクトに関連付けられている情報を追跡するプラグインを有効にします。  
   
- When the function is first called, `lpAuxProjPath` is set to an empty string. `lProjName` may also be empty, or it may contain the IDE project name, which the source control plug-in may use or ignore. When the function successfully returns, the plug-in returns the two corresponding strings. The IDE makes no assumptions about these strings, will not use them, and will not allow the user to modify them. If the user wants to change the settings, the IDE will call `SccGetProjPath` again, passing in the same values it had received the previous time. This gives the plug-in complete control over these two strings.  
+ 関数が最初に呼び出されたときに`lpAuxProjPath`が空の文字列に設定します。 `lProjName`空であることがあり、ソース管理プラグインを使用して無視 IDE、プロジェクト名を含めることがありますか。 関数が正常に返されるときに、プラグインを返します 2 つの対応する文字列。 IDE は、これらの文字列に関する仮定は行われません、使用するには、変更をユーザーができません。 IDE が呼び出す場合は、ユーザーの設定を変更する場合、`SccGetProjPath`ここでも、同じ値で渡すことが受信前の時間。 これにより、これら 2 つの文字列プラグイン、完全な制御。  
   
- For `lpUser`, the IDE may pass in a user name, or it may simply pass in a pointer to an empty string. If there is a user name, the source control plug-in should use it as a default. However, if no name was passed or if the login failed with the given name, the plug-in should prompt the user for a login and pass the name back in `lpUser` when it receives a valid login. Because the plug-in may change this string, the IDE will always allocate a buffer of size (`SCC_USER_LEN`+1).  
+ `lpUser`IDE を渡すことがユーザー名、またはポインターで空の文字列を渡すことがあります単にします。 ユーザー名がある場合、ソース管理プラグインとして使用してください、既定値です。 ただし、名前が渡されなかった場合、または指定した名前、ログインに失敗した場合は、プラグインする必要がありますユーザー入力を求める、ログイン名とパスの名前を再び`lpUser`有効なログインを受信するとします。 この文字列は、プラグインの場合に変更することがあります、ため、IDE が常にサイズのバッファーを割り当てる (`SCC_USER_LEN`+1)。  
   
 > [!NOTE]
->  The first action that the IDE performs may be a call to either the `SccOpenProject` function or the `SccGetProjPath` function. Hence, both of them have an identical `lpUser` parameter, which enables the source control plug-in to log the user in at either time. Even if the return from the function indicates a failure, the plug-in must fill this string with a valid login name.  
+>  IDE を実行する最初のアクションのいずれかへの呼び出し可能性があります、`SccOpenProject`関数または`SccGetProjPath`関数。 そのため、これらの両方のある同じ`lpUser`パラメーターで、ソース管理プラグインのいずれかの時にユーザーをログインできるようにします。 関数の戻り値には、エラーが示されている場合でも、プラグイン入力この文字列には、有効なログイン名ください。  
   
- `lpLocalPath` is the directory where the user keeps the project. It may be an empty string. If there is no directory currently defined (as in the case of a user attempting to download a project from the source control system) and if `bAllowChangePath` is `TRUE`, the source control plug-in can prompt the user for input or use some other method to place its own string into `lpLocalPath`. If `bAllowChangePath` is `FALSE`, the plug-in should not change the string, because the user is already working in the specified directory.  
+ `lpLocalPath`ユーザーが、プロジェクトを保持するディレクトリです。 空の文字列がある可能性があります。 (とユーザーの場合は、ソース管理システムからプロジェクトをダウンロードしようとしています) に現在定義されているディレクトリが存在しない場合、`bAllowChangePath`は`TRUE`、ソース管理プラグインが入力するプロンプトが表示または配置するその他の方法を使用して、文字列を所有`lpLocalPath`です。 場合`bAllowChangePath`は`FALSE`、プラグインが変わらないようにする、文字列、ユーザーが指定されたディレクトリで機能しているためです。  
   
- If the user creates a new project to be put under source control, the source control plug-in might not actually create it in the source control system at the time `SccGetProjPath` is called. Instead, it passes back the string along with a nonzero value for `pbNew`, indicating that the project will be created in the source control system.  
+ ユーザーは、ソース管理下に新しいプロジェクトを作成する場合、ソース管理プラグイン可能性があります実際に作成していないソース管理システムの時点で`SccGetProjPath`と呼びます。 代わりに、その渡すに沿って文字列以外の値を`pbNew`、ソース管理システムで、プロジェクトが作成されることを示すです。  
   
- For example, if a user in the **New Project** wizard in Visual Studio adds his or her project to source control, Visual Studio calls this function, and the plug-in determines if it is okay to create a new project in the source control system to contain the Visual Studio project. If the user clicks **Cancel** before completing the wizard, the project is never created. If the user clicks **OK**, Visual Studio calls `SccOpenProject`, passing in `SCC_OPT_CREATEIFNEW`, and the source controlled project is created at that time.  
+ たとえば、ユーザーがの場合、**新しいプロジェクト**Visual Studio のウィザードで自分のプロジェクトをソース管理に追加する、Visual Studio は、この関数を呼び出してを使用するソース管理システムで新しいプロジェクトを作成できるかどうかは、プラグインを決定Visual Studio プロジェクトが含まれてください。 ユーザーがクリックした場合**キャンセル**ウィザードを完了する前に、プロジェクトは作成されません。 ユーザーがクリックした場合**OK**、Visual Studio によって呼び出さ`SccOpenProject`を渡して、 `SCC_OPT_CREATEIFNEW`、され、その時点で、ソース管理されているプロジェクトを作成します。  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>関連項目  
+ [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)

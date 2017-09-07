@@ -1,5 +1,5 @@
 ---
-title: 'How to: Add a Drag-and-Drop Handler | Microsoft Docs'
+title: "方法: ドラッグ アンド ドロップのハンドラーを追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,30 +20,30 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: b773c9339949066c7d1837b7bc687403731e2bb8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="how-to-add-a-drag-and-drop-handler"></a>How to: Add a Drag-and-Drop Handler
-You can add handlers for drag-and-drop events to your DSL, so that users can drag items onto your diagram from other diagrams or from other parts of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. You can also add handlers for events such as double-clicks. Together, drag-and-drop and double-click handlers are known as *gesture handlers*.  
+# <a name="how-to-add-a-drag-and-drop-handler"></a>方法: ドラッグ アンド ドロップ ハンドラーを追加する
+ドラッグ アンド ドロップ イベントのハンドラーを DSL に追加し、ユーザーが他の図または [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の他の部分から項目を図の上にドラッグ可能にすることができます。 ダブルクリックなどのイベントのハンドラーを追加することもできます。 、ドラッグ アンド ドロップおよびダブルクリック ハンドラーと呼ばれる*ジェスチャ ハンドラー*です。  
   
- This topic discusses drag-and-drop gestures that originate on other diagrams. For move and copy events within a single diagram, consider the alternative of defining a subclass of `ElementOperations`. For more information, see [Customizing Copy Behavior](../modeling/customizing-copy-behavior.md). You might also be able to customize the DSL definition.  
+ このトピックでは他の図で発生するドラッグ アンド ドロップ ジェスチャを説明します。 単一の図内の移動イベントとコピー イベントについては、`ElementOperations` のサブクラスを定義するという代替策を検討してください。 詳細については、次を参照してください。[コピー動作のカスタマイズ](../modeling/customizing-copy-behavior.md)です。 DSL 定義をカスタマイズすることもできます。  
   
-## <a name="in-this-topic"></a>In this topic  
+## <a name="in-this-topic"></a>このトピックの内容  
   
--   The first two sections describe alternative methods of defining a gesture handler:  
+-   最初の 2 つのセクションでは、ジェスチャ ハンドラーを定義する代替方法を説明します。  
   
-    -   [Defining Gesture Handlers by Overriding ShapeElement methods](#overrideShapeElement). `OnDragDrop`, `OnDoubleClick`, `OnDragOver`, and other methods can be overridden.  
+    -   [メソッドをオーバーライドする ShapeElement してジェスチャ ハンドラーを定義する](#overrideShapeElement)です。 `OnDragDrop`、`OnDoubleClick`、`OnDragOver`、および他のメソッドはオーバーライドできます。  
   
-    -   [Defining Gesture Handlers by using MEF](#MEF). Use this method if you want third-party developers to be able to define their own handlers to your DSL. Users can choose to install the third-party extensions after they have installed your DSL.  
+    -   [MEF を使用してジェスチャ ハンドラーを定義する](#MEF)です。 使用する DSL に対してサードパーティの開発者が独自のハンドラーを定義可能にする場合、この方法を使用します。 ユーザーは DSL をインストールした後で、サードパーティの拡張機能を選択的にインストールできます。  
   
--   [How to Decode the Dragged Item](#extracting). Elements can be dragged from any window or from the desktop, as well as from a DSL.  
+-   [ドラッグしたアイテムをデコードする方法](#extracting)です。 要素は任意のウィンドウまたはデスクトップのほか、DSL からドラッグすることができます。  
   
--   [How to Get the Original Dragged Item](#getOriginal). If the dragged item is a DSL element, you can open the source model and access the element.  
+-   [元を取得する方法は、項目をドラッグ](#getOriginal)です。 ドラッグした項目が DSL 要素の場合、ソース モデルを開き、その要素にアクセスできます。  
   
--   [Using Mouse Actions: Dragging Compartment Items](#mouseActions). This sample demonstrates a lower-level handler that intercepts mouse actions on a shape's fields. The example lets the user re-order the items in a compartment by dragging with the mouse.  
+-   [マウス操作の使用: コンパートメントの項目をドラッグする](#mouseActions)です。 このサンプルでは、図形のフィールドでのマウス操作をインターセプトする下位のハンドラーを示します。 この例でユーザーはマウスを使用してドラッグすることで、コンパートメント内の項目を並べ替えることができます。  
   
-##  <a name="overrideShapeElement"></a> Defining Gesture Handlers by Overriding ShapeElement Methods  
- Add a new code file to your DSL project. For a gesture handler, you usually must have at least the following `using` statements:  
+##  <a name="overrideShapeElement"></a>ShapeElement メソッドをオーバーライドしてジェスチャ ハンドラーを定義します。  
+ 新しいコード ファイルを DSL プロジェクトに追加します。 ジェスチャ ハンドラーに対して、通常、少なくとも次の `using` ステートメントを含める必要があります。  
   
 ```csharp  
 using Microsoft.VisualStudio.Modeling;  
@@ -51,9 +51,9 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using System.Linq;  
 ```  
   
- In the new file, define a partial class for the shape or diagram class that should respond to the drag operation. Override the following methods:  
+ 新しいファイル内で、ドラッグ操作に応答する必要がある図形または図クラスの部分クラスを定義します。 次のメソッドをオーバーライドします。  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A>- This method is called when the mouse pointer enters the shape during a drag operation. Your method should inspect the item that the user is dragging, and set the Effect property to indicate whether the user can drop the item on this shape. The Effect property determines the appearance of the cursor while it is over this shape, and also determines whether `OnDragDrop()` will be called when the user releases the mouse button.  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A>- このメソッドは、ドラッグ操作時にマウス ポインターが図形の中に入ると呼び出されます。 メソッドはユーザーがドラッグしている項目を検査し、Effect プロパティを設定して、ユーザーがこの図形の上に項目をドロップできるかどうかを示す必要があります。 Effect プロパティは、カーソルがこの図形の上にある間の外観を決定するほか、ユーザーがマウス ボタンを離したときに `OnDragDrop()` が呼び出されるかどうかを決定します。  
   
     ```csharp  
     partial class MyShape // MyShape generated from DSL Definition.  
@@ -70,7 +70,7 @@ using System.Linq;
   
     ```  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> - This method is called if the user releases the mouse button while the mouse pointer rests over this shape or diagram, if `OnDragOver(DiagramDragEventArgs e)` previously set `e.Effect` to a value other than `None`.  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A>-このメソッドは、ユーザー、マウス ボタンを離したときに、マウス ポインターがこの図形または図では、上場合場合`OnDragOver(DiagramDragEventArgs e)`以前に設定された`e.Effect`以外の値を`None`です。  
   
     ```csharp  
     public override void OnDragDrop(DiagramDragEventArgs e)  
@@ -87,20 +87,20 @@ using System.Linq;
   
     ```  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> - This method is called when the user double-clicks the shape or diagram.  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A>-このメソッドは図形または図に、ユーザーがダブルクリックしたときに呼び出されます。  
   
-     For more information, see [How to: Intercept a Click on a Shape or Decorator](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).  
+     詳細については、次を参照してください。[する方法: 図形またはデコレーターのクリックをインターセプト](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)です。  
   
- Define `IsAcceptableDropItem(e)` to determine whether the dragged item is acceptable, and ProcessDragDropItem(e) to update your model when the item is dropped. These methods must first extract the item from the event arguments. For information about how to do that, see [How to get a reference to the dragged item](#extracting).  
+ `IsAcceptableDropItem(e)` を定義してドラッグした項目が受け入れられるかどうかを決定し、ProcessDragDropItem(e) を定義して項目がドロップされたときにモデルを更新します。 これらのメソッドは、最初にイベント引数から項目を抽出する必要があります。 実行する方法については、次を参照してください。[ドラッグされた項目への参照を取得する方法](#extracting)です。  
   
-##  <a name="MEF"></a> Defining Gesture Handlers by using MEF  
- MEF (Managed Extensibility Framework) lets you define components that can be installed with minimal configuration. For more information, see [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).  
+##  <a name="MEF"></a>MEF を使用してジェスチャ ハンドラーを定義します。  
+ MEF (Managed Extensibility Framework) を使用して、最小構成でインストール可能なコンポーネントを定義できます。 詳しくは、「[Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)」を参照してください。  
   
-#### <a name="to-define-a-mef-gesture-handler"></a>To define a MEF gesture handler  
+#### <a name="to-define-a-mef-gesture-handler"></a>MEF ジェスチャ ハンドラーを定義するには  
   
-1.  Add to your **Dsl** and **DslPackage** projects the **MefExtension** files that are described in [Extend your DSL by using MEF](../modeling/extend-your-dsl-by-using-mef.md).  
+1.  追加、 **Dsl**と**DslPackage**プロジェクト、 **MefExtension**ファイルで説明されている[MEF を使用して、DSL、拡張](../modeling/extend-your-dsl-by-using-mef.md)です。  
   
-2.  You can now define a gesture handler as a MEF component:  
+2.  次のようにジェスチャ ハンドラーを MEF コンポーネントとして定義できるようになります。  
   
     ```  
   
@@ -132,26 +132,26 @@ using System.Linq;
   
     ```  
   
-     You can create more than one gesture handler component, such as when you have different types of dragged objects.  
+     ドラッグしたオブジェクトの種類が複数ある場合などは、複数のジェスチャ ハンドラー コンポーネントを作成できます。  
   
-3.  Add partial class definitions for the target shape, connector or diagram classes, and define the methods `IsAcceptableDropItem()` and `ProcessDragDropItem()`. These methods must begin by extracting the dragged item from the event arguments. For more information, see [How to get a reference to the dragged item](#extracting).  
+3.  ターゲットの図形、コネクタ、または図クラスに対して部分クラス定義を追加し、`IsAcceptableDropItem()` メソッドおよび `ProcessDragDropItem()` メソッドを定義します。 これらのメソッドでは、最初にイベント引数からドラッグした項目を抽出する必要があります。 詳細については、次を参照してください。[ドラッグされた項目への参照を取得する方法](#extracting)です。  
   
-##  <a name="extracting"></a> How to decode the dragged item  
- When the user drags an item onto your diagram, or from one part of your diagram to another, information about the item that is being dragged is available in `DiagramDragEventArgs`. Because the drag operation could have started at any object on the screen, the data can be available in any one of a variety of formats. Your code must recognize the formats with which it is capable of dealing.  
+##  <a name="extracting"></a>ドラッグしたアイテムをデコードする方法  
+ ユーザーが項目を図にドラッグしたり、図のある部分から別の部分にドラッグしたりするとき、ドラッグしている項目に関する情報は `DiagramDragEventArgs` で使用可能です。 ドラッグ操作は画面上の任意のオブジェクトで始まる可能性があるので、データはさまざまな形式で使用できます。 作成するコードは処理可能な形式を認識する必要があります。  
   
- To discover the formats in which your drag source information is available, run your code in debugging mode, setting a breakpoint at the entry to `OnDragOver()` or `CanDragDrop()`. Inspect the values of the `DiagramDragEventArgs` parameter. The information is provided in two forms:  
+ ドラッグ ソース情報が使用可能な形式を見つけるには、コードをデバッグ モードで実行し、ブレークポイントを `OnDragOver()` または `CanDragDrop()` のエントリに設定します。 `DiagramDragEventArgs` パラメーターの値を確認します。 情報は次の 2 つの形式で提供されます。  
   
--   <xref:System.Windows.Forms.IDataObject>  `Data` - This property carries serialized versions of the source objects, usually in more than one format. Its most useful functions are:  
+-   <xref:System.Windows.Forms.IDataObject>  `Data`-このプロパティは、1 つ以上の形式で通常はソース オブジェクトのシリアル化されたバージョンを実行します。 最も有用な関数は次のとおりです。  
   
-    -   diagramEventArgs.Data.GetDataFormats() - Lists the formats in which you can decode the dragged object. For example, if the user drags a file from the desktop, the available formats include the file name ("`FileNameW`").  
+    -   diagramEventArgs.Data.GetDataFormats() - をドラッグしたオブジェクトをデコードできる形式を示します。 たとえば、ユーザーがデスクトップからファイルをドラッグした場合、使用可能な形式にはファイル名 ("`FileNameW`") が含まれます。  
   
-    -   `diagramEventArgs.Data.GetData(format)` - Decodes the dragged object in the specified format. Cast the object to the appropriate type. For example:  
+    -   `diagramEventArgs.Data.GetData(format)`-指定された形式でドラッグされたオブジェクトをデコードします。 オブジェクトを適切な型にキャストします。 次に例を示します。  
   
          `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`  
   
-         You can also transmit objects such as model bus references from the source in your own custom format. For more information, see [How to Send Model Bus References in a Drag and Drop](#mbr).  
+         ソースからモデル バス参照などのオブジェクトを独自のカスタム形式で転送することもできます。 詳細については、次を参照してください。[ドラッグ アンド ドロップのモデル バス参照を送信する方法](#mbr)です。  
   
--   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype` - Use this property if you want users to drag items from a DSL or a UML model. An element group prototype contains one or more objects, links, and their property values. It is also used in paste operations and when you are adding an element from the toolbox. In a prototype, objects and their types are identified by Guid. For example, this code allows the user to drag class elements from a UML diagram or UML Model Explorer:  
+-   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>`Prototype` -ユーザーが、DSL または UML モデルから項目をドラッグする場合は、このプロパティを使用します。 1 つの要素グループ プロトタイプには 1 つ以上のオブジェクト、リンク、およびそれらのプロパティ値が含まれます。 これは貼り付け操作やツールボックスから要素を追加する際にも使用されます。 プロトタイプ内のオブジェクトとそれらの種類は GUID により識別されます。 たとえば、次のコードを使用して、ユーザーはクラス要素を UML 図または UML モデル エクスプローラーからドラッグできます。  
   
     ```csharp  
     private bool IsAcceptableDropItem(DiagramDragEventArgs e)  
@@ -164,26 +164,26 @@ using System.Linq;
   
     ```  
   
-     To accept UML shapes, determine the Guids of the UML shape classes by experiment. Remember that there is usually more than one type of element on any diagram. Remember also that an object dragged from a DSL or UML diagram is the shape, not the model element.  
+     UML 図形を受け入れるには、テストを実行して UML 図形クラスの GUID を決定します。 通常、どの図でも要素の種類には複数あることに注意してください。 また、DSL または UML 図からドラッグするオブジェクトは図形であり、モデル要素ではありません。  
   
- `DiagramDragEventArgs` also has properties that indicate the current mouse pointer position and whether the user is pressing the CTRL, ALT, or SHIFT keys.  
+ `DiagramDragEventArgs` には、現在のマウス ポインターの位置およびユーザーが CTRL、ALT、SHIFT のうちどのキーを押したのかを示すプロパティも含まれます。  
   
-##  <a name="getOriginal"></a> How to get the original of a dragged element  
- The `Data` and `Prototype` properties of the event arguments contain only a reference to the dragged shape. Usually, if you want to create an object in the target DSL that is derived from the prototype in some way, you need to obtain access to the original, for example, reading the file contents, or navigating to the model element represented by a shape.  You can use Visual Studio Model Bus to help with this.  
+##  <a name="getOriginal"></a>ドラッグされた要素の元のファイルを取得する方法  
+ イベント引数の `Data` プロパティおよび `Prototype` プロパティはドラッグした図形への参照のみを含みます。 通常、いずれかの方法でプロトタイプから派生するオブジェクトをターゲット DSL で作成する場合、元の項目へのアクセス、たとえば、ファイル内容の読み取りまたは図形により表されるモデル要素への移動などを取得する必要があります。  この処理には Visual Studio モデル バスを使用できます。  
   
-### <a name="to-prepare-a-dsl-project-for-model-bus"></a>To prepare a DSL project for Model Bus  
+### <a name="to-prepare-a-dsl-project-for-model-bus"></a>モデル バス用の DSL プロジェクトを準備するには  
   
-1.  Make the source DSL accessible by [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Model Bus:  
+1.  以下の操作を実行して、ソース DSL が [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] モデル バスによりアクセス可能にします。  
   
-    1.  Download and install the Visual Studio Model Bus extension, if it is not already installed. For more information, see [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579).  
+    1.  Visual Studio モデル バス拡張機能をまだインストールしていない場合はダウンロードしてインストールします。 詳細については、次を参照してください。 [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)です。  
   
-    2.  Open the DSL definition file of the source DSL in DSL Designer. Right-click the design surface and then click **Enable Modelbus**. In the dialog box, choose one or both of the options.  Click **OK**. A new project "ModelBus" is added to the DSL solution.  
+    2.  DSL デザイナーでソース DSL の DSL 定義ファイルを開きます。 デザイン サーフェイスを右クリックし、をクリックして**を有効にする Modelbus**です。 ダイアログ ボックスで、オプションの片方または両方を選択します。  **[OK]** をクリックします。 新しいプロジェクト "ModelBus" が DSL ソリューションに追加されます。  
   
-    3.  Click **Transform All Templates** and rebuild the solution.  
+    3.  をクリックして**すべてのテンプレートの変換**ソリューションをリビルドします。  
   
-###  <a name="mbr"></a> To send an object from a source DSL  
+###  <a name="mbr"></a>DSL のソースからオブジェクトを送信するには  
   
-1.  In your ElementOperations subclass, override `Copy()` so that it encodes a Model Bus Reference (MBR) into the IDataObject. This method will be called when the user starts to drag from the source diagram. The encoded MBR will then be available in the IDataObject when the user drops in the target diagram.  
+1.  ElementOperations サブクラスで、`Copy()` をオーバーライドし、モデル バス参照 (MBR) を IDataObject にエンコードします。 このメソッドは、ユーザーがソース図からドラッグを開始するときに呼び出されます。 エンコードされた MBR は、ユーザーがターゲット図でドロップしたときに、IDataObject で使用可能になります。  
   
     ```  
   
@@ -223,15 +223,15 @@ using System.Linq;
   
     ```  
   
-### <a name="to-receive-a-model-bus-reference-from-a-dsl-in-a-target-dsl-or-uml-project"></a>To receive a Model Bus Reference from a DSL in a target DSL or UML project  
+### <a name="to-receive-a-model-bus-reference-from-a-dsl-in-a-target-dsl-or-uml-project"></a>ターゲット DSL または UML プロジェクトで DSL からモデル バス参照を受信するには  
   
-1.  In the target DSL project, add project references to:  
+1.  ターゲット DSL プロジェクトで、次の場所にプロジェクト参照を追加します。  
   
-    -   The source Dsl project.  
+    -   ソース Dsl プロジェクト。  
   
-    -   The source ModelBus project.  
+    -   ソース ModelBus プロジェクト。  
   
-2.  In the gesture handler code file, add the following namespace references:  
+2.  ジェスチャ ハンドラー コード ファイル内で、次の名前空間参照を追加します。  
   
     ```csharp  
     using Microsoft.VisualStudio.Modeling;  
@@ -244,7 +244,7 @@ using System.Linq;
   
     ```  
   
-3.  The following sample illustrates how to get access to the source model element:  
+3.  次のサンプルはソース モデル要素へのアクセスを取得する方法を示しています。  
   
     ```  
     partial class MyTargetShape // or diagram or connector   
@@ -290,9 +290,9 @@ using System.Linq;
   
     ```  
   
-### <a name="to-accept-an-element-sourced-from-a-uml-model"></a>To accept an element sourced from a UML model  
+### <a name="to-accept-an-element-sourced-from-a-uml-model"></a>ソースが UML モデルである要素を受け入れるには  
   
--   The following code sample accepts an object dropped from a UML diagram.  
+-   次のコード サンプルは UML 図からドロップされたオブジェクトを受け入れます。  
   
     ```csharp  
   
@@ -341,10 +341,10 @@ using System.Linq;
   
     ```  
   
-##  <a name="mouseActions"></a> Using Mouse Actions: Dragging Compartment Items  
- You can write a handler that intercepts mouse actions on a shape's fields. The following example lets the user re-order the items in a compartment by dragging with the mouse.  
+##  <a name="mouseActions"></a>コンパートメントの項目をドラッグするマウス操作を使用します。  
+ 図形のフィールドでのマウス操作を傍受したハンドラーを記述することができます。 次の例でユーザーはマウスを使用してドラッグすることで、コンパートメント内の項目を並べ替えることができます。  
   
- To build this example, create a solution by using the **Class Diagrams** solution template. Add a code file and add the following code. Adjust the namespace to be the same as your own.  
+ この例をビルドするを使用してソリューションを作成、**クラス ダイアグラム**ソリューション テンプレート。 コード ファイルを追加し、次のコードを追加します。 名前空間を調整して独自の名前空間と同じにします。  
   
 ```csharp  
 using Microsoft.VisualStudio.Modeling;  
@@ -592,9 +592,9 @@ namespace Company.CompartmentDrag  // EDIT.
   
 ```  
   
-## <a name="see-also"></a>See Also  
- [Customizing Copy Behavior](../modeling/customizing-copy-behavior.md)   
- [Deploying Domain-Specific Language Solutions](../modeling/deploying-domain-specific-language-solutions.md)
+## <a name="see-also"></a>関連項目  
+ [コピーの動作をカスタマイズします。](../modeling/customizing-copy-behavior.md)   
+ [ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)
  
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
  

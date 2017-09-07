@@ -1,5 +1,5 @@
 ---
-title: LAUNCH_FLAGS | Microsoft Docs
+title: "LAUNCH_FLAGS |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 2f838e559d4c33a7bb807d5b0360a51ea7ff0d74
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="launchflags"></a>LAUNCH_FLAGS
-Specifies the debug launch flags.  
+デバッグ起動フラグを指定します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 enum enum_LAUNCH_FLAGS {   
@@ -61,31 +61,31 @@ public enum enum_LAUNCH_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>メンバー  
  LAUNCH_DEBUG  
- Launches the process for debugging.  
+ デバッグ プロセスを起動します。  
   
  LAUNCH_NODEBUG  
- Launches the process without debugging it.  
+ デバッグを行わず、プロセスを起動します。  
   
  LAUNCH_ENABLE_ENC  
- DEPRECATED, DO NOT USE.  
+ 非推奨では使用しないでください。  
   
  LAUNCH_MERGE_ENV  
- Launches the process and merges the environment with the launching host.  
+ プロセスを起動し、起動中のホストと環境をマージします。  
   
-## <a name="remarks"></a>Remarks  
- These values are passed as an argument to the [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) method.  
+## <a name="remarks"></a>コメント  
+ これらの値が引数として渡される、 [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)メソッドです。  
   
- These flags may be combined with a bitwise `OR`.  
+ これらのフラグは、ビットごとと組み合わせること`OR`です。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)

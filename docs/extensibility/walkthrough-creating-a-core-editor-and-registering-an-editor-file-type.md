@@ -1,5 +1,5 @@
 ---
-title: Creating a Core Editor and Registering an Editor File Type | Microsoft Docs"
+title: "コア エディターを作成して、エディター ファイルの種類を登録する |Microsoft ドキュメント\""
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,37 +32,37 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: dec3e53df108377dacfc53ba308029933654b789
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>Walkthrough: Creating a Core Editor and Registering an Editor File Type
-This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] core editor when a file that has the .myext file name extension is loaded.  
+# <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>チュートリアル: コア エディターを作成して、エディター ファイルの種類を登録します。
+このチュートリアルを開始する VSPackage を作成する方法を示しています、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターと .myext ファイル名拡張子を持つファイルが読み込まれています。  
   
-## <a name="prerequisites"></a>Prerequisites  
- To follow this walkthrough, you must install the Visual Studio SDK. For more information, see [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
   
-## <a name="locations-for-the-visual-studio-package-project-template"></a>Locations for the Visual Studio Package Project template  
- The Visual Studio Package project template can be found in three different locations in the **New Project** dialog:  
+## <a name="locations-for-the-visual-studio-package-project-template"></a>Visual Studio パッケージ プロジェクト テンプレートの場所  
+ Visual Studio パッケージのプロジェクト テンプレートは、 **[新しいプロジェクト]** ダイアログの次の 3 つの場所にあります。  
   
-1.  Under Visual Basic Extensibility. The default language of the project is Visual Basic.  
+1.  Visual Basic の機能拡張の下。 プロジェクトの既定の言語は Visual Basic です。  
   
-2.  Under C# Extensibility. The default language of the project is C#.  
+2.  C# の機能拡張の下。 プロジェクトの既定の言語は C# です。  
   
-3.  Under Other Project Types Extensibility. The default language of the project is C++.  
+3.  その他のプロジェクトの種類の機能拡張の下。 プロジェクトの既定の言語は C++ です。  
   
-### <a name="to-create-the-vspackage"></a>To create the VSPackage  
+### <a name="to-create-the-vspackage"></a>VSPackage を作成するには  
   
--   Start [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] and create a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] VSPackage named `MyPackage`, as outlined in [Walkthrough: Creating a Menu Command VSPackage](http://msdn.microsoft.com/en-us/d699c149-5d1e-47ff-94c7-e1222af02c32).  
+-   開始[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を作成し、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]いう名前の VSPackage `MyPackage`」の説明に従って、[チュートリアル: メニュー コマンドの VSPackage を作成する](http://msdn.microsoft.com/en-us/d699c149-5d1e-47ff-94c7-e1222af02c32)です。  
   
-### <a name="to-add-the-editor-factory"></a>To add the editor factory  
+### <a name="to-add-the-editor-factory"></a>エディター ファクトリを追加するには  
   
-1.  Right-click the **MyPackage** project, point to **Add** and then click **Class**.  
+1.  右クリックし、 **MyPackage**プロジェクトをポイントし、**追加** をクリックし、**クラス**です。  
   
-2.  In the **Add New Item** dialog box, make sure the **Class** template is selected, type `EditorFactory.cs` for the name, and then click **Add** to add the class to your project.  
+2.  **新しい項目の追加** ダイアログ ボックスで確認、**クラス**テンプレートが選択されている型`EditorFactory.cs` をクリックし、名前の**追加**をプロジェクトにクラスを追加します。  
   
-     The EditorFactory.cs file should be automatically opened.  
+     EditorFactory.cs ファイルを自動的に開く必要があります。  
   
-3.  Reference the following assemblies from your code.  
+3.  コードから次のアセンブリを参照します。  
   
     ```vb  
     Imports System.Runtime.InteropServices  
@@ -85,9 +85,9 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
   
     ```  
   
-4.  Add a GUID to the `EditorFactory` class by adding the `Guid` attribute immediately before the class declaration.  
+4.  GUID の追加、`EditorFactory`クラスを追加して、`Guid`クラス宣言の直前の属性です。  
   
-     You can generate a new GUID by using the guidgen.exe program at the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] command prompt, or by clicking **Create GUID** on the **Tools** menu. The GUID used here is only an example; do not use it in your project.  
+     Guidgen.exe プログラムを使用して、新しい GUID を生成することができます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コマンド プロンプトでは、やをクリックして**GUID の作成**上、**ツール**メニュー。 ここで使用される GUID は一例です。プロジェクトでは使用しないでください。  
   
     ```vb  
     <Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")> _  
@@ -97,7 +97,7 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
     [Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")]   
     ```  
   
-5.  In the class definition, add two private variables to contain the parent package and a service provider.  
+5.  クラス定義では、親パッケージと、サービス プロバイダーを格納する 2 つのプライベート変数を追加します。  
   
     ```vb  
     Class EditorFactory  
@@ -114,7 +114,7 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
   
     ```  
   
-6.  Add a public class constructor that takes one parameter of type <xref:Microsoft.VisualStudio.Shell.Package>:  
+6.  型の 1 つのパラメーターを受け取るパブリック クラスのコンス トラクターを追加<xref:Microsoft.VisualStudio.Shell.Package>:  
   
     ```vb  
     Public Sub New(ByVal parentPackage As Package)  
@@ -129,7 +129,7 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
     }  
     ```  
   
-7.  Modify the `EditorFactory` class declaration to derive from the <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> interface.  
+7.  変更、`EditorFactory`クラスから派生する宣言、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイスです。  
   
     ```vb  
     Class EditorFactory Implements IVsEditorFacto  
@@ -140,11 +140,11 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
   
     ```  
   
-8.  Right-click <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>, click **Implement Interface**, and then click **Implement Interface Explicitly**.  
+8.  右クリック<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>をクリックして**インターフェイスの実装**、順にクリック**インターフェイスを明示的に実装**です。  
   
-     This adds the four methods that must be implemented in the <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> interface.  
+     これにより、追加で実装する必要がある 4 つのメソッド、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイスです。  
   
-9. Replace the contents of the `IVsEditorFactory.Close` method with the following code.  
+9. `IVsEditorFactory.Close` メソッドの内容を次のコードに置き換えます。  
   
     ```vb  
     Return VSConstants.S_OK  
@@ -154,7 +154,7 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
     return VSConstants.S_OK;  
     ```  
   
-10. Replace the contents of the `IVsEditorFactory.SetSite` with the following code.  
+10. 内容を置き換える、`IVsEditorFactory.SetSite`を次のコード。  
   
     ```vb  
     Me.serviceProvider = psp  
@@ -166,7 +166,7 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
     return VSConstants.S_OK;  
     ```  
   
-11. Replace the contents of the `IVsEditorFactory.MapLogicalView` method with the following code.  
+11. `IVsEditorFactory.MapLogicalView` メソッドの内容を次のコードに置き換えます。  
   
     ```vb  
     Dim retval As Integer = VSConstants.E_NOTIMPL  
@@ -189,7 +189,7 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
     return retval;  
     ```  
   
-12. Replace the contents of the `IVsEditorFactory.CreateEditorInstance` method with the following code.  
+12. `IVsEditorFactory.CreateEditorInstance` メソッドの内容を次のコードに置き換えます。  
   
     ```vb  
     Dim retval As Integer = VSConstants.E_FAIL          
@@ -332,24 +332,24 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
     return retval;   
     ```  
   
-13. Compile the project and make sure there are no errors.  
+13. プロジェクトをコンパイルし、エラーがないかどうかを確認します。  
   
-### <a name="to-register-the-editor-factory"></a>To register the editor factory  
+### <a name="to-register-the-editor-factory"></a>エディター ファクトリを登録するには  
   
-1.  In **Solution Explorer**, double-click the Resources.resx file to open it to the string table, in which the entry **String1 is** selected.  
+1.  **ソリューション エクスプ ローラー**、Resources.resx ファイルを文字列テーブルを開くことをダブルクリックしてエントリ**String1 が**選択します。  
   
-2.  Change the name of the identifier to `IDS_EDITORNAME` and the text to **MyPackage Editor.** This string will appear as the name of your editor.  
+2.  識別子の名前を変更`IDS_EDITORNAME`および**MyPackage エディターです。** この文字列は、エディターの名前として表示されます。  
   
-3.  Open the VSPackage.resx file and add a new string, set the name to **101** and the value to `IDS_EDITORNAME`. This provides the package with a resource ID to access the string you just created.  
+3.  VSPackage.resx ファイルを開き、新しい追加文字列の名前を設定します**101**し、値を`IDS_EDITORNAME`です。 これは、作成した文字列にアクセスするリソース ID を持つパッケージを提供します。  
   
     > [!NOTE]
-    >  If the VSPackage.resx file contains another string that the `name` attribute set to **101**, substitute another unique, numeric value, here and in the following steps.  
+    >  場合は、VSPackage.resx ファイルが含まれる別の文字列を`name`属性に設定**101**、セクションと、次の手順では、別の一意の数値の値を置き換えます。  
   
-4.  In **Solution Explorer**, open the MyPackagePackage.cs file.  
+4.  **ソリューション エクスプ ローラー**、MyPackagePackage.cs ファイルを開きます。  
   
-     This is the main package file.  
+     これは、メイン パッケージ ファイルです。  
   
-5.  Add the following user attributes just before the `Guid` attribute.  
+5.  直前に次のユーザー属性を追加、`Guid`属性。  
   
     ```vb  
     <ProvideEditorFactoryAttribute(GetType(EditorFactory), 101)> _  
@@ -363,9 +363,9 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
           ".myext", 32, NameResourceID = 101)]   
     ```  
   
-     The <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute> attribute associates the .myext file extension with your editor factory so that any time a file that has that extension is loaded, your editor factory is invoked.  
+     <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute>属性関連付けます .myext ファイル拡張子、エディター ファクトリを拡張機能が読み込まれ、エディター ファクトリが呼び出されるを持つファイルをいつでもできるようにします。  
   
-6.  Add a private variable to the `MyPackage` class, just before the constructor, and give it the type `EditorFactory`.  
+6.  プライベート変数の追加、`MyPackage`クラス、コンス トラクターの直前にし、型を付けます`EditorFactory`です。  
   
     ```vb  
     Private editorFactory As EditorFactory  
@@ -375,7 +375,7 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
     private EditorFactory editorFactory;  
     ```  
   
-7.  Find the `Initialize` method (you may have to open the `Package Members` hidden region) and add the following code after the call to `base.Initialize()`.  
+7.  検索、`Initialize`メソッド (を開く必要があります、`Package Members`非表示の領域) を呼び出した後、次のコードを追加および`base.Initialize()`です。  
   
     ```vb  
     'Create our editor factory and register it.   
@@ -390,27 +390,27 @@ This walkthrough demonstrates how to create a VSPackage that starts the [!INCLUD
   
     ```  
   
-8.  Compile the program and make sure there are no errors.  
+8.  プログラムをコンパイルして、エラーがないかどうかを確認します。  
   
-     This step registers the editor factory in the experimental registry hive for [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. If you are prompted to override the resource.h file, click **OK**.  
+     この手順では、エディター ファクトリを登録の実験用レジストリ ハイブ[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 Resource.h ファイルを上書きするメッセージが表示されたら、クリックして**OK**です。  
   
-9. Create a sample file named TextFile1.myext.  
+9. TextFile1.myext をという名前のサンプル ファイルを作成します。  
   
-10. Press **F5** to open an instance of the experimental [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+10. キーを押して**f5 キーを押して**の実験用インスタンスを開く[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
   
-11. In the experimental [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], on the **File** menu, point to **Open** and then click **File**.  
+11. 実験用[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]の**ファイル** メニューのをポイント**開く** をクリックし、**ファイル**です。  
   
-12. Find TextFile1.myext and then click **Open**.  
+12. TextFile1.myext を見つけてクリックして**開く**です。  
   
-     The file should now be loaded.  
+     ファイルを読み込むようになりました。  
   
-## <a name="robust-programming"></a>Robust Programming  
- The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] core editor handles a wide range of text-based file types and works closely with language services to provide a rich set of features such as syntax highlighting, brace matching, and IntelliSense word-completion and member-completion lists. If you are working with text-based files, then you can use the core editor together with a custom language service that supports your specific file types.  
+## <a name="robust-programming"></a>信頼性の高いプログラミング  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターは、さまざまなテキスト ベースのファイルの種類とかっこの照合、構文の強調表示などの機能の豊富なセットを提供する言語サービスと IntelliSense の単語補完とメンバー完了リストと密接に連携を処理します。 テキスト ベースのファイルで作業している場合、特定のファイルの種類をサポートするカスタム言語サービスと共にコア エディターを使用できます。  
   
- A VSPackage can invoke the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] core editor by supplying an editor factory. This editor factory is used any time a file that is associated with it is loaded. If the file is part of a project, then the core editor is automatically invoked unless overridden by your VSPackage. However, if the file is loaded outside of a project, then the core editor must be explicitly invoked by your VSPackage.  
+ VSPackage が呼び出すことができます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]エディター ファクトリを指定することによってコア エディターです。 このエディター ファクトリはそれに関連付けられているファイルが読み込まれるたびに使用します。 ファイルがプロジェクトの一部である場合は、コア エディターが自動的に呼び出され、VSPackage によってオーバーライドされない限り、します。 ただし、ファイルがプロジェクトの外側で読み込まれている場合、コア エディター必要があります明示的に呼び出す、VSPackage によってです。  
   
- For more information about the core editor, see [Inside the Core Editor](../extensibility/inside-the-core-editor.md).  
+ コア エディターの詳細については、次を参照してください。 [、コア エディター内](../extensibility/inside-the-core-editor.md)です。  
   
-## <a name="see-also"></a>See Also  
- [Inside the Core Editor](../extensibility/inside-the-core-editor.md)   
- [Instantiating the Core Editor By Using the Legacy API](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)
+## <a name="see-also"></a>関連項目  
+ [コア エディター内](../extensibility/inside-the-core-editor.md)   
+ [レガシ API を使用して、コア エディターをインスタンス化します。](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumBaseClasses | Microsoft Docs
+title: "IDebugClassField::EnumBaseClasses |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 21e2de0ff49be7b1ef25d2b9d5be81ef0aafc6dd
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugclassfieldenumbaseclasses"></a>IDebugClassField::EnumBaseClasses
-Creates an enumerator for the base classes of this class.  
+このクラスの基本クラスの列挙子を作成します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT EnumBaseClasses(   
@@ -54,15 +54,15 @@ int EnumBaseClasses(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `ppEnum`  
- [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object representing the list of base classes. Returns a null value if there are no base classes.  
+ [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)基底クラスのリストを表すオブジェクト。 基本クラスが存在しない場合は、null 値を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK, returns S_SH_NO_BASE_CLASSES if there are no base classes (and the `ppEnum` parameter is set to a null value); otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します、基底クラスがない場合は、S_SH_NO_BASE_CLASSES を返します (および`ppEnum`パラメーターが null 値に設定)、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- The base classes in the enumerator object are specified in order of the most immediate (or most derived) base class to the most remote base class. For example, given the C++ classes:  
+## <a name="remarks"></a>コメント  
+ 列挙子オブジェクトの基底クラスは、ほとんどのリモートの基本クラスに最もイミディ エイト (または最も派生) の基本クラスの順序で指定されます。 たとえば、C++ クラスを指定します。  
   
 ```  
 class Root { }  
@@ -71,8 +71,8 @@ class Level2 : Level1 { }
 class MyClass : Level2 { }  
 ```  
   
- The enumeration would return the base classes in the order `Level2`, `Level1`, `Root`.  
+ 列挙は順に基本クラスを返します`Level2`、 `Level1`、`Root`です。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

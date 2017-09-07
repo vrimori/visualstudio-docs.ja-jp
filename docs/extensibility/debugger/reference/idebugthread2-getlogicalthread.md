@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetLogicalThread | Microsoft Docs
+title: "IDebugThread2::GetLogicalThread |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: d7a5362aad3a8044ec484f70e71812e45e6a3a8d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugthread2getlogicalthread"></a>IDebugThread2::GetLogicalThread
-Debug engines do not implement this method.  
+デバッグ エンジンは、このメソッドを実装していません。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetLogicalThread(   
@@ -56,15 +56,15 @@ int GetLogicalThread(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `pStackFrame`  
- [in] An [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) object that represents the stack frame.  
+ [in][IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)スタック フレームを表すオブジェクト。  
   
  `ppLogicalThread`  
- [out] Returns an `IDebugLogicalThread2` interface that represents the associated logical thread. A debug engine implementation should set this to a null value.  
+ [out]返します、`IDebugLogicalThread2`関連付けられている論理スレッドを表すインターフェイスです。 デバッグ エンジン実装は、これを設定、null 値にする必要があります。  
   
-## <a name="return-value"></a>Return Value  
- Debug engine implementations always return `E_NOTIMPL`.  
+## <a name="return-value"></a>戻り値  
+ デバッグ エンジン実装を常に戻り`E_NOTIMPL`です。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

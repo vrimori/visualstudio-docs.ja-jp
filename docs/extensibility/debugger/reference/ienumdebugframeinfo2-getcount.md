@@ -30,15 +30,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: db9186ca3ae4d7763b7ca2203513ebfa03c1efb2
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: b667ae1825d5e55e99719e8b27449a8591551148
 ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ienumdebugframeinfo2getcount"></a>IEnumDebugFrameInfo2::GetCount
-列挙に含まれる要素の数を返します。  
+列挙体の要素の数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,13 +56,13 @@ int GetCount(
   
 #### <a name="parameters"></a>パラメーター  
  `pcelt`  
- [out]列挙に含まれる要素の数を返します。  
+ [out]列挙体の要素の数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="remarks"></a>コメント  
- このメソッドはのみを指定する、よく使用される列挙型の COM インターフェイスの一部ではありません、 `Next`、 `Clone`、 `Skip`、および`Reset`メソッドを実装する必要があります。  
+ このメソッドはだけを指定する、一般的な列挙型の COM インターフェイスの一部ではありません、 `Next`、 `Clone`、 `Skip`、および`Reset`メソッドを実装する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)

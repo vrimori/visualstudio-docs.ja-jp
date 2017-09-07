@@ -1,5 +1,5 @@
 ---
-title: Creating a Windows Forms-Based Domain-Specific Language | Microsoft Docs
+title: "Windows フォーム ベースのドメイン固有言語の作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,173 +15,173 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 17652a19df04d016db54429ab7bc7d407768df87
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="creating-a-windows-forms-based-domain-specific-language"></a>Creating a Windows Forms-Based Domain-Specific Language
-You can use Windows Forms to display the state of a domain-specific language (DSL) model, instead of using a DSL diagram. This topic walks you through binding a Windows Form to a DSL, using the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK.  
+# <a name="creating-a-windows-forms-based-domain-specific-language"></a>Windows フォームに基づくドメイン固有言語の作成
+Windows フォームを使用すると、DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの状態を表示します。 このトピックを紹介 DSL への Windows フォームのバインドを使用して、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK。  
   
- ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
-A DSL instance, showing a Windows Form UI and the model explorer.  
+ ![DSL &#45;Wpf &#45; 2.](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+Windows フォーム UI とモデル エクスプ ローラーを示す DSL インスタンス。  
   
-## <a name="creating-a-windows-forms-dsl"></a>Creating a Windows Forms DSL  
- The **Minimal WinForm Designer** DSL template creates a minimal DSL that you can modify to suit your own requirements.  
+## <a name="creating-a-windows-forms-dsl"></a>Windows フォーム DSL を作成します。  
+ **最小限 WinForm デザイナー** DSL テンプレートには、独自の要件に合わせて変更できる最小限に抑える DSL が作成されます。  
   
-#### <a name="to-create-a-minimal-winforms-dsl"></a>To create a minimal WinForms DSL  
+#### <a name="to-create-a-minimal-winforms-dsl"></a>最小 WinForms DSL を作成するには  
   
-1.  Create a DSL from the **Minimal WinForm Designer** template.  
+1.  DSL を作成、**最小限 WinForm デザイナー**テンプレート。  
   
-     In this walkthrough, the following names are assumed:  
+     このチュートリアルでは、次の名前が想定しています。  
   
     |||  
     |-|-|  
-    |Solution and DSL name|FarmApp|  
-    |Namespace|Company.FarmApp|  
+    |ソリューションと DSL の名前|FarmApp|  
+    |名前空間|Company.FarmApp|  
   
-2.  Experiment with the initial example that the template provides:  
+2.  テンプレートでは最初の例で実験します。  
   
-    1.  Transform All Templates.  
+    1.  すべてのテンプレートを変換します。  
   
-    2.  Build and run the sample (**CTRL+F5**).  
+    2.  ビルドおよび実行するサンプル (**ctrl キーを押しながら f5 キーを押して**)。  
   
-    3.  In the experimental instance of Visual Studio, open the `Sample` file in the debugging project.  
+    3.  Visual Studio の実験用インスタンスの開く、`Sample`デバッグ プロジェクト内のファイルです。  
   
-         Notice that it is displayed in a Windows Forms control.  
+         Windows フォーム コントロール内に表示されることに注意してください。  
   
-         You can also see the elements of the model displayed in the Explorer.  
+         エクスプ ローラーで表示されているモデルの要素を表示することもできます。  
   
-         Add some elements either in the form or the Explorer, and notice that they appear in the other display.  
+         フォームまたはエクスプ ローラーで、いくつかの要素を追加し、その他のディスプレイに表示されることに注意してください。  
   
- In the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], notice the following points about the DSL solution:  
+ メイン インスタンスで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、DSL ソリューションについて、次の点に注意してください。  
   
--   `DslDefinition.dsl` contains no diagram elements. This is because you will not use DSL diagrams to view instance models of this DSL. Instead, you will bind a Windows Form to the model, and the elements on the form will display the model.  
+-   `DslDefinition.dsl`図の要素は含まれません。 DSL 図この DSL のインスタンス モデルを表示する使用しないためにです。 Windows フォームは、モデルにバインドして、モデルをフォーム上の要素が表示されます。  
   
--   In addition to the `Dsl` and `DslPackage` projects, the solution contains a third project named `UI.`**UI** project contains the definition of a Windows Forms control. `DslPackage` depends on `UI`, and `UI` depends on `Dsl`.  
+-   加え、`Dsl`と`DslPackage`プロジェクト、ソリューションに含まれるという名前の 3 つ目のプロジェクト`UI.` **UI**プロジェクトには、Windows フォーム コントロールの定義が含まれています。 `DslPackage`異なります`UI`、および`UI`異なります`Dsl`です。  
   
--   In the `DslPackage` project, `UI\DocView.cs` contains the code that displays the Windows Forms control that is defined in the `UI` project.  
+-   `DslPackage`プロジェクト、`UI\DocView.cs`で定義されている Windows フォーム コントロールを表示するコードが含まれています、`UI`プロジェクト。  
   
--   The `UI` project contains a working sample of a form control bound to the DSL. However, it will not work when you have changed the DSL Definition. The `UI` project contains:  
+-   `UI`プロジェクトには、DSL にバインドされたフォーム コントロールの実際のサンプルが含まれています。 ただし、何も起こりません DSL 定義を変更したときにします。 `UI`プロジェクトが含まれています。  
   
-    -   A Windows Forms class named `ModelViewControl`.  
+    -   という名前の Windows フォーム クラス`ModelViewControl`です。  
   
-    -   A file named `DataBinding.cs` that contains an additional partial definition of `ModelViewControl`. To see its content, in **Solution Explorer**, open the shortcut menu for the file and choose **View Code**.  
+    -   という名前のファイル`DataBinding.cs`の他の部分定義を含む`ModelViewControl`です。 そのコンテンツを表示する**ソリューション エクスプ ローラー**ファイルのショートカット メニューを開き、選択**コードの表示**です。  
   
-### <a name="about-the-ui-project"></a>About the UI Project  
- When you update the DSL Definition file to define your own DSL, you will have to update the control in the `UI` project to display your DSL. Unlike the `Dsl` and `DslPackage` projects, the sample `UI` project is not generated from `DslDefinitionl.dsl`. You can add .tt files to generate the code if you want, although that is not covered in this walkthrough.  
+### <a name="about-the-ui-project"></a>UI プロジェクトについて  
+ DSL 定義ファイルを独自の DSL の定義を更新するときにコントロールを更新する必要が、 `UI` DSL を表示するプロジェクトです。 異なり、`Dsl`と`DslPackage`プロジェクト、サンプル`UI`からプロジェクトは生成されません`DslDefinitionl.dsl`です。 コードを生成する場合は、するは、このチュートリアルでは説明しませんが、.tt ファイルを追加することができます。  
   
-## <a name="updating-the-dsl-definition"></a>Updating the DSL Definition  
- The following the DSL definition is used in this walkthrough.  
+## <a name="updating-the-dsl-definition"></a>DSL 定義の更新  
+ DSL 定義は、このチュートリアルで使用します。  
   
- ![DSL&#45;Wpf&#45;1](../modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
+ ![DSL &#45;Wpf &#45; 1](../modeling/media/dsl-wpf-1.png "DSL-Wpf-1")  
   
-#### <a name="to-update-the-dsl-definition"></a>To update the DSL definition  
+#### <a name="to-update-the-dsl-definition"></a>DSL 定義を更新するには  
   
-1.  Open DslDefinition.dsl in the DSL designer.  
+1.  DSL デザイナーで DslDefinition.dsl を開きます。  
   
-2.  Delete **ExampleElement**  
+2.  削除**ExampleElement**  
   
-3.  Rename the **ExampleModel** domain class to `Farm`.  
+3.  名前を変更、 **ExampleModel**ドメイン クラス`Farm`です。  
   
-     Give it additional domain properties named `Size` of type **Int32**, and `IsOrganic` of type **Boolean**.  
+     追加のドメイン プロパティの名前を付けます`Size`型の**Int32**、および`IsOrganic`型の**ブール**です。  
   
     > [!NOTE]
-    >  If you delete the root domain class and then create a new root, you will have to reset the Editor Root Class property. In **DSL Explorer**, select **Editor**. Then in the Properties window, set **Root Class** to `Farm`.  
+    >  ルート ドメイン クラスを削除して、新しいルートを作成した場合、エディターのルート クラスのプロパティをリセットする必要があります。 **DSL のエクスプ ローラー****エディター**です。 [プロパティ] ウィンドウで次のように設定します。**ルート クラス**に`Farm`です。  
   
-4.  Use the **Named Domain Class** tool to create the following domain classes:  
+4.  使用して、**という名前のドメイン クラス**次のドメイン クラスを作成するツール。  
   
-    -   `Field` - Give this an additional domain property named `Size`.  
+    -   `Field`-付与このという追加のドメイン プロパティ`Size`です。  
   
-    -   `Animal` - In the Properties window, set **Inheritance Modifier** to **Abstract**.  
+    -   `Animal`[プロパティ] ウィンドウで次のように設定します。**継承修飾子**に**抽象**です。  
   
-5.  Use the **Domain Class** tool to create the following classes:  
+5.  使用して、**ドメイン クラス**次のクラスを作成するツール。  
   
     -   `Sheep`  
   
     -   `Goat`  
   
-6.  Use the **Inheritance** tool to make `Goat` and `Sheep` inherit from `Animal`.  
+6.  使用して、**継承**ツールを`Goat`と`Sheep`から継承`Animal`です。  
   
-7.  Use the **Embedding** tool to embed `Field` and `Animal` under `Farm`.  
+7.  使用して、 **Embedding**を埋め込むツール`Field`と`Animal``Farm`です。  
   
-8.  You might want to tidy the diagram. To reduce the number of duplicate elements, use the **Bring Subtree Here** command on the shortcut menu of leaf elements.  
+8.  ダイアグラムを整理することがあります。 重複する要素の数を減らすためを使用して、**サブツリーをここに表示**リーフ要素のショートカット メニューの コマンド。  
   
-9. **Transform All Templates** in the toolbar of Solution Explorer.  
+9. **すべてのテンプレートを変換**ソリューション エクスプ ローラーのツールバーにします。  
   
-10. Build the **Dsl** project.  
-  
-    > [!NOTE]
-    >  At this stage, the other projects will not build without errors. However, we want to build the Dsl project so that its assembly is available to the Data Source Wizard.  
-  
-## <a name="updating-the-ui-project"></a>Updating the UI Project  
- Now you can create a new user control that will display the information that is stored in the DSL model. The easiest way to connect the user control to the model is through data bindings. The data binding adaptor type named **ModelingBindingSource** is specifically designed to connect DSLs to non-VMSDK interfaces.  
-  
-#### <a name="to-define-your-dsl-model-as-a-data-source"></a>To define your DSL model as a data source  
-  
-1.  On the **Data** menu, choose **Show Data Sources**.  
-  
-     The **Data Sources** window opens.  
-  
-     Choose **Add New Data Source**. The **Data Source Configuration Wizard** opens.  
-  
-2.  Choose **Object**, **Next**.  
-  
-     Expand **Dsl**, **Company.FarmApp**, and select **Farm**, which is the root class of your model. Choose **Finish**.  
-  
-     In Solution Explorer, the **UI** project now contains **Properties\DataSources\Farm.datasource**  
-  
-     The properties and relationships of your model class appear in the Data Sources window.  
-  
-     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png "DslWpf-3")  
-  
-#### <a name="to-connect-your-model-to-a-form"></a>To connect your model to a form  
-  
-1.  In the **UI** project, delete all the existing .cs files.  
-  
-2.  Add a new **User Control** file named `FarmControl` to the **UI** project.  
-  
-3.  In the **Data Sources** window, on the drop-down menu on **Farm**, choose **Details**.  
-  
-     Leave the default settings for the other properties.  
-  
-4.  Open FarmControl.cs in the design view.  
-  
-     Drag **Farm** from the Data Sources window onto FarmControl.  
-  
-     A set of controls appears, one for each property. The relationship properties do not generate controls.  
-  
-5.  Delete **farmBindingNavigator**. This is also automatically generated in the `FarmControl` designer, but it is not useful for this application.  
-  
-6.  Using the toolbox, create two instances of **DataGridView**, and name them `AnimalGridView` and `FieldGridView`.  
+10. ビルド、 **Dsl**プロジェクト。  
   
     > [!NOTE]
-    >  An alternative step is to drag the Animals and Fields items from the Data Sources window onto the control. This action automatically creates data grids and bindings between the grid view and the data source. However, this binding does not work correctly for DSLs. Therefore it is better to create the data grids and bindings manually.  
+    >  エラーが発生しないが、この段階で、他のプロジェクトを構築できません。 ただし、そのアセンブリをデータ ソース ウィザードを使用できるように、Dsl プロジェクトをビルドします。  
   
-7.  If the Toolbox does not contain the **ModelingBindingSource** tool, add it. On the shortcut menu of the **Data** tab, choose **Choose Items**. In the **Choose Toolbox Items** dialog, select **ModelingBindingSource** from the **.NET Framework Tab**.  
+## <a name="updating-the-ui-project"></a>UI プロジェクトの更新  
+ ここで、DSL モデルに格納されている情報を表示する新しいユーザー コントロールを作成できます。 ユーザー コントロールをモデルに接続する最も簡単な方法はデータ バインドです。 データ バインディングという名前のアダプター型**ModelingBindingSource** Dsl を非 VMSDK インターフェイスに接続する専用です。  
   
-8.  Using the Toolbox, create two instances of **ModelingBindingSource**, and name them `AnimalBinding` and `FieldBinding`.  
+#### <a name="to-define-your-dsl-model-as-a-data-source"></a>データ ソースとして、DSL モデルを定義するには  
   
-9. Set the **DataSource** property of each **ModelingBindingSource** to **farmBindingSource**.  
+1.  **データ**] メニューの [選択**データ ソースの表示**です。  
   
-     Set the **DataMember** property to **Animals** or **Fields**.  
+     **データソース**ウィンドウが開きます。  
   
-10. Set the **DataSource** properties of `AnimalGridView` to `AnimalBinding`, and of  `FieldGridView` to `FieldBinding`.  
+     選択**新しいデータ ソースの追加**です。 **データ ソース構成ウィザード**が開きます。  
   
-11. Adjust the layout of the Farm control to your taste.  
+2.  選択**オブジェクト**、**次**です。  
   
- The **ModelingBindingSource** is an adapter that performs several functions that are specific to DSLs:  
+     展開**Dsl**、 **Company.FarmApp**を選択して**ファーム**、これは、モデルのルート クラスです。 選択**完了**です。  
   
--   It wraps updates in a VMSDK Store Transaction.  
+     ソリューション エクスプ ローラーで、 **UI**プロジェクトが含まれています**Properties\DataSources\Farm.datasource**  
   
-     For example, when the user deletes a row from the data view grid, a regular binding would result in a transaction exception.  
+     プロパティと、モデル クラスの関係は、データ ソース ウィンドウに表示されます。  
   
--   It ensures that, when the user selects a row, the Properties window displays the properties of the corresponding model element, instead of the data grid row.  
+     ![DslWpf &#45; 3](../modeling/media/dslwpf-3.png "DslWpf 3")  
+  
+#### <a name="to-connect-your-model-to-a-form"></a>フォームに、モデルを接続するには  
+  
+1.  **UI**プロジェクトで、既存のすべての .cs ファイルを削除します。  
+  
+2.  新しい**ユーザー コントロール**という名前のファイル`FarmControl`を**UI**プロジェクト。  
+  
+3.  **データソース**でドロップダウン メニューを開き、ウィンドウ**ファーム**、選択**詳細**です。  
+  
+     その他のプロパティの既定の設定のままにします。  
+  
+4.  デザイン ビューで FarmControl.cs を開きます。  
+  
+     ドラッグ**ファーム**FarmControl、データ ソース ウィンドウからです。  
+  
+     コントロールのセットが表示されたら、各プロパティのいずれか。 リレーションシップのプロパティでは、コントロールは生成されません。  
+  
+5.  削除**farmBindingNavigator**です。 これがも自動的に生成、`FarmControl`デザイナーがこのアプリケーションに便利ではありません。  
+  
+6.  2 つのインスタンスを作成、ツールボックスを使用して**DataGridView**、し名前を付ける`AnimalGridView`と`FieldGridView`です。  
+  
+    > [!NOTE]
+    >  代替の手順では、コントロールにデータ ソース ウィンドウから動物やフィールドの項目をドラッグします。 この操作は、データ グリッドとグリッド ビューとデータ ソース間のバインドに自動的に作成されます。 ただし、このバインディングは、Dsl は正しく機能しません。 したがって、データ グリッドとバインディングを作成する方は手動でします。  
+  
+7.  ツールボックスが含まれていない場合、 **ModelingBindingSource**ツール、それを追加します。 ショートカット メニューを開き、**データ** タブで、選択**アイテムの選択**です。 **ツールボックス アイテムの選択**ダイアログで、 **ModelingBindingSource**から、 **.NET Framework タブ**です。  
+  
+8.  2 つのインスタンスを作成、ツールボックスを使用して**ModelingBindingSource**、し名前を付ける`AnimalBinding`と`FieldBinding`です。  
+  
+9. 設定、**データソース**の各プロパティ**ModelingBindingSource**に**farmBindingSource**です。  
+  
+     設定、 **DataMember**プロパティを**動物**または**フィールド**です。  
+  
+10. 設定、**データソース**のプロパティ`AnimalGridView`に`AnimalBinding`、および`FieldGridView`に`FieldBinding`です。  
+  
+11. 任意で、ファームのコントロールのレイアウトを調整します。  
+  
+ **ModelingBindingSource** Dsl に固有のいくつかの機能を実行するアダプターします。  
+  
+-   VMSDK ストアのトランザクションで更新プログラムをラップします。  
+  
+     たとえば、ユーザーは、データ ビューのグリッドから行を削除、ときに、標準バインディングになりますトランザクション例外。  
+  
+-   これにより、ユーザーは、行を選択するときに、[プロパティ] ウィンドウが表示されるデータ グリッド行の代わりに、対応するモデル要素のプロパティ。  
   
  ![DslWpf4](../modeling/media/dslwpf4.png "DslWpf4")  
-Schema of links between data sources and views.  
+データ ソースとビュー間のリンクのスキーマです。  
   
-#### <a name="to-complete-the-bindings-to-the-dsl"></a>To complete the bindings to the DSL  
+#### <a name="to-complete-the-bindings-to-the-dsl"></a>DSL へのバインドを完了するには  
   
-1.  Add the following code in a separate code file in the **UI** project:  
+1.  別のコード ファイルに次のコードを追加、 **UI**プロジェクト。  
   
     ```csharp  
     using System.ComponentModel;  
@@ -207,57 +207,57 @@ Schema of links between data sources and views.
     }  
     ```  
   
-2.  In the **DslPackage** project, edit **DslPackage\DocView.tt** to update the following variable definition:  
+2.  **DslPackage**プロジェクト、編集**DslPackage\DocView.tt**を次の変数の定義を更新します。  
   
     ```csharp  
     string viewControlTypeName = "FarmControl";  
     ```  
   
-## <a name="testing-the-dsl"></a>Testing the DSL  
- The DSL solution can now build and run, although you might want to add further improvements later.  
+## <a name="testing-the-dsl"></a>DSL のテスト  
+ DSL ソリューションできますを作成および機能強化を後で追加することができますが、実行します。  
   
-#### <a name="to-test-the-dsl"></a>To test the DSL  
+#### <a name="to-test-the-dsl"></a>DSL をテストするには  
   
-1.  Build and run the solution.  
+1.  ソリューションをビルドして実行します。  
   
-2.  In the experimental instance of Visual Studio, open the **Sample** file.  
+2.  Visual Studio の実験用インスタンスの開く、**サンプル**ファイル。  
   
-3.  In the **FarmApp Explorer**, open the shortcut menu on the **Farm** root node, and choose **Add New Goat**.  
+3.  **FarmApp エクスプ ローラー**のショートカット メニューを開き、**ファーム**ルート ノード、および選択**追加新しい Goat**です。  
   
-     `Goat1` appears in the **Animals** view.  
+     `Goat1`表示されます、**動物**ビュー。  
   
     > [!WARNING]
-    >  You must use the shortcut menu on the **Farm** node, not the **Animals** node.  
+    >  ショートカット メニューを使用する必要があります、**ファーム**ノード、されません、**動物**ノード。  
   
-4.  Select the **Farm** root node and view its properties.  
+4.  選択、**ファーム**ルート ノードとそのプロパティを表示します。  
   
-     In the form view, change the **Name** or **Size** of the farm.  
+     フォーム ビューで、変更、**名前**または**サイズ**ファームのです。  
   
-     When you navigate away from each field in the form, the corresponding property changes in the Properties window.  
+     フォームで、[プロパティ] ウィンドウの対応するプロパティの変更には、各フィールドから移動するとします。  
   
-## <a name="enhancing-the-dsl"></a>Enhancing the DSL  
+## <a name="enhancing-the-dsl"></a>DSL の強化  
   
-#### <a name="to-make-the-properties-update-immediately"></a>To make the properties update immediately  
+#### <a name="to-make-the-properties-update-immediately"></a>プロパティをすぐに更新するには  
   
-1.  In the design view of FarmControl.cs, select a simple field such as Name, Size or IsOrganic.  
+1.  FarmControl.cs のデザイン ビューでは、名前、サイズまたは IsOrganic などの単純なフィールドを選択します。  
   
-2.  In the Properties window, expand **DataBindings** and open **(Advanced)**.  
+2.  プロパティ ウィンドウで  **DataBindings**開き**(詳細)**です。  
   
-     In the **Formatting and Advanced Binding** dialog, under **Data Source Update Mode**, choose **OnPropertyChanged**.  
+     **フォーマットと詳細バインド**ダイアログで、**データ ソース更新モード**、選択**OnPropertyChanged**です。  
   
-3.  Build and run the solution.  
+3.  ソリューションをビルドして実行します。  
   
-     Verify that when you change the content of the field, the corresponding property of the Farm model changes immediately.  
+     ファーム モデルの変更をすぐに対応するプロパティ、フィールドの内容を変更すると、ことを確認します。  
   
-#### <a name="to-provide-add-buttons"></a>To provide Add buttons  
+#### <a name="to-provide-add-buttons"></a>追加のボタンを提供するには  
   
-1.  In the design view of FarmControl.cs, use the toolbox to create a button on the form.  
+1.  FarmControl.cs のデザイン ビューで、ツールボックスを使用して、フォームにボタンを作成します。  
   
-     Edit the name and text of the button, for example to `New Sheep`.  
+     たとえば名前と、ボタンのテキストを編集`New Sheep`です。  
   
-2.  Open the code behind the button (for example by double-clicking it).  
+2.  ボタンの分離コード (たとえばダブルクリックして開きます)。  
   
-     Edit it as follows:  
+     次のように編集します。  
   
     ```csharp  
     private void NewSheepButton_Click(object sender, EventArgs e)  
@@ -290,7 +290,7 @@ Schema of links between data sources and views.
   
     ```  
   
-     You will also need to insert the following directive:  
+     次のディレクティブを挿入する必要がありますも。  
   
     ```csharp  
   
@@ -298,18 +298,18 @@ Schema of links between data sources and views.
   
     ```  
   
-3.  Add similar buttons for Goats and Fields.  
+3.  フィールドとしたのと同様のボタンを追加します。  
   
-4.  Build and run the solution.  
+4.  ソリューションをビルドして実行します。  
   
-5.  Verify that the new button adds an item. The new item should appear in both the FarmApp Explorer and in the appropriate data grid view.  
+5.  新しいボタンが項目を追加することを確認します。 FarmApp エクスプ ローラーで、適切なデータ グリッド ビューでは、新しい項目が表示されます。  
   
-     You should be able to edit the name of the element in the data grid view. You can also delete it from there.  
+     データ グリッド ビュー内の要素の名前を編集することができます。 そこから削除することもできます。  
   
- ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
+ ![DSL &#45;Wpf &#45; 2.](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")  
   
-### <a name="about-the-code-to-add-an-element"></a>About the code to add an element  
- For the new element buttons, the following alternative code is slightly simpler.  
+### <a name="about-the-code-to-add-an-element"></a>要素を追加するコードについて  
+ 新しい要素ボタンでは、次の代替コードは少し簡単なです。  
   
 ```csharp  
 private void NewSheepButton_Click(object sender, EventArgs e)  
@@ -323,11 +323,11 @@ private void NewSheepButton_Click(object sender, EventArgs e)
   
 ```  
   
- However, this code does not set a default name for the new item. It does not run any customized merge that you might have defined in the **Element Merge Directives** of the DSL, and it does not run any custom merge code that might have been defined.  
+ ただし、このコードは、新しい項目の既定の名前を設定できません。 定義した任意のカスタマイズされたマージは実行されません、**要素マージ ディレクティブ**DSL の定義されているすべてのカスタムのマージ コードは実行されません。  
   
- Therefore we recommend that you use <xref:Microsoft.VisualStudio.Modeling.ElementOperations> to create new elements. For more information, see [Customizing Element Creation and Movement](../modeling/customizing-element-creation-and-movement.md).  
+ そのためことをお勧めを使用すること<xref:Microsoft.VisualStudio.Modeling.ElementOperations>新しい要素を作成します。 詳細については、次を参照してください。[をカスタマイズする要素の作成および移動](../modeling/customizing-element-creation-and-movement.md)です。  
   
-## <a name="see-also"></a>See Also  
- [How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md)   
- [Writing Code to Customise a Domain-Specific Language](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
- [Modeling SDK for Visual Studio - Domain-Specific Languages](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
+## <a name="see-also"></a>関連項目  
+ [ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)   
+ [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
+ [Modeling SDK for Visual Studio - ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)

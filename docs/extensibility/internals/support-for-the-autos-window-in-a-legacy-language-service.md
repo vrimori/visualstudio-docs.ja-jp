@@ -1,5 +1,5 @@
 ---
-title: Support for the Autos Window in a Legacy Language Service | Microsoft Docs
+title: "従来の言語サービスで自動変数 ウィンドウのサポート |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,23 +33,23 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: b6e4f4783bd4d968ad7ab4784cdd6bb32ba2392a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>Support for the Autos Window in a Legacy Language Service
-The **Autos** window displays expressions such as variables and parameters that are in scope when the program being debugged is paused (either due to a breakpoint or an exception). The expressions can include variables, local or global, and parameters that have been changed in the local scope. The **Autos** window can also include instantiations of a class, structure, or some other type. Anything that an expression evaluator can evaluate can potentially be shown in the **Autos** window.  
+# <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>従来の言語サービスで自動変数 ウィンドウのサポート
+**自動変数**  ウィンドウに変数とスコープでは、デバッグ中のプログラムには、(いずれかにより、ブレークポイントまたは例外) が一時停止されてパラメーターなどの式が表示されます。 式には、変数、ローカルまたはグローバル、およびローカル スコープで変更されているパラメーターを含めることができます。 **自動変数**  ウィンドウでは、クラス、構造体、またはその他の種類のインスタンスを含めることもできます。 式エバリュエーターが評価できるものに可能性のある表示できる、 **[自動変数]**ウィンドウです。  
   
- The managed package framework (MPF) does not provide direct support for the **Autos** window. However, if you override the <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> method, you can return a list of expressions to be presented in the **Autos** window.  
+ Managed package framework (MPF) はの直接サポートを提供していない、 **[自動変数]**ウィンドウです。 ただし、オーバーライドする場合、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>メソッドで示される式のリストを返すことができます、 **[自動変数]**ウィンドウです。  
   
-## <a name="implementing-support-for-the-autos-window"></a>Implementing Support for the Autos Window  
- All you need to do to support the **Autos** window is to implement the <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> method in the <xref:Microsoft.VisualStudio.Package.LanguageService> class. Your implementation must decide, given a location in the source file, which expressions should appear in the **Autos** window. The method returns a list of strings in which each string represents a single expression. A return value of <xref:Microsoft.VisualStudio.VSConstants.S_OK> indicates that the list contains expressions, while <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> indicates that there are no expressions to show.  
+## <a name="implementing-support-for-the-autos-window"></a>[自動変数] ウィンドウのサポートを実装します。  
+ サポートするために必要な**[自動変数]**を実装するのには、ウィンドウ、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.LanguageService>クラスです。 指定の式のようにソース ファイルの場所に、実装を決定する必要があります、 **[自動変数]**ウィンドウです。 メソッドは、各文字列が 1 つの式を表す文字列の一覧を返します。 戻り値の<xref:Microsoft.VisualStudio.VSConstants.S_OK>一覧に、式が含まれていることを示します、<xref:Microsoft.VisualStudio.VSConstants.S_FALSE>を表示する式がないことを示します。  
   
- The actual expressions returned are the names of the variables or parameters that appear at that location in the code. These names are passed to the expression evaluator to obtain values and types that are then displayed in the **Autos** window.  
+ 実際に返される式は、変数やコード内の場所に表示されるパラメーターの名前です。 これらの名前は、値とで表示される、型を取得する、式エバリュエーターに渡される、 **[自動変数]**ウィンドウです。  
   
-### <a name="example"></a>Example  
- The following example shows an implementation of the <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> method that gets a list of expressions from the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method using the parse reason <xref:Microsoft.VisualStudio.Package.ParseReason>. Each of the expressions is wrapped as a `TestVsEnumBSTR` that implements the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsEnumBSTR> interface.  
+### <a name="example"></a>例  
+ 次の例の実装を示しています、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>から式のリストを取得するメソッド、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドを使用する解析理由<xref:Microsoft.VisualStudio.Package.ParseReason>です。 それぞれの式としてラップ、`TestVsEnumBSTR`を実装する、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsEnumBSTR>インターフェイスです。  
   
- Note that the `GetAutoExpressionsCount` and `GetAutoExpression` methods are custom methods on the `TestAuthoringSink` object and were added to support this example. They represent one way in which expressions added to the `TestAuthoringSink` object by the parser (by calling the <xref:Microsoft.VisualStudio.Package.AuthoringSink.AutoExpression%2A> method) can be accessed outside the parser.  
+ なお、`GetAutoExpressionsCount`と`GetAutoExpression`メソッドにカスタム メソッドは、`TestAuthoringSink`オブジェクトし、この例をサポートするために追加されました。 追加する式で 1 つの方法を表す、`TestAuthoringSink`パーサーによってオブジェクト (を呼び出して、<xref:Microsoft.VisualStudio.Package.AuthoringSink.AutoExpression%2A>メソッド) パーサーの外部アクセスできます。  
   
 ```csharp  
 using Microsoft.VisualStudio;  

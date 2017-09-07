@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetData | Microsoft Docs
+title: "IEEDataStorage::GetData |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: f9642911606d9bbd72382fa1209484cded9bdf74
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ieedatastoragegetdata"></a>IEEDataStorage::GetData
-Retrieves the specified number of bytes from the object.  
+オブジェクトから指定したバイト数を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetData(  
@@ -58,22 +58,22 @@ int GetData(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `dataSize`  
- [in] The number of bytes to retrieve (the `data` array must hold at least this number of bytes).  
+ [in]取得するバイト数 (、`data`配列が、少なくともこのバイト数で保持する必要があります)。  
   
  `sizeGotten`  
- [out] Returns the number of bytes actually retrieved.  
+ [out]実際に取得されるバイト数を返します。  
   
  `data`  
- [in, out] Array to be filled in with the requested data.  
+ [入力、出力].要求されたデータを使用して入力する配列。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- The recommended use of this method is to retrieve all the data bytes into a local array, since there is no way to skip over bytes in the retrieval process. In this case, the parameter `dataSize` should be the value returned by the [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md) method.  
+## <a name="remarks"></a>コメント  
+ 取得プロセス内のバイトをスキップする方法がないために、ローカルの配列にすべてのデータ バイトを取得するは、このメソッドを使用してください。 この場合は、パラメーター`dataSize`値によって返される、 [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)メソッドです。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::CanDetach | Microsoft Docs
+title: "IDebugProgram2::CanDetach |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 6508286e277eb72dd9f0cb0810146dccd8ec59ee
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugprogram2candetach"></a>IDebugProgram2::CanDetach
-Determines if a debug engine (DE) can detach from the program.  
+デバッグ エンジン (DE) が、プログラムから切り離すことができるかどうかを判断します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT CanDetach(  
@@ -52,8 +52,8 @@ HRESULT CanDetach(
 int CanDetach();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- If can detach, returns `S_OK`; otherwise, returns an error code. Returns `S_FALSE` if the DE cannot detach from the program.  
+## <a name="return-value"></a>戻り値  
+ 場合を返します、デタッチできます`S_OK`、それ以外のエラー コードを返します。 返します`S_FALSE`場合は、DE、プログラムからデタッチすることはできません。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

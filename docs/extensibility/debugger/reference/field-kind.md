@@ -1,5 +1,5 @@
 ---
-title: FIELD_KIND | Microsoft Docs
+title: "FIELD_KIND |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 533365fcdaa14a3178809cf04116a4358cd0ba51
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="fieldkind"></a>FIELD_KIND
-Specifies the kind of field contained in an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object.  
+含まれるフィールドの種類を指定します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 enum enum_FIELD_KIND {   
@@ -139,120 +139,120 @@ public enum enum_FIELD_KIND {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>メンバー  
  FIELD_KIND_TYPE  
- Indicates that the field is a type only.  
+ フィールドが、型のみであることを示します。  
   
  FIELD_KIND_SYMBOL  
- Indicates that the field is a symbol, with type, name, and other information.  
+ フィールドは、型、名、およびその他の情報を持つ、シンボルであることを示します。  
   
  FIELD_TYPE_PRIMITIVE  
- Indicates that the field is a primitive data type.  
+ フィールドは、プリミティブ データ型であることを示します。  
   
  FIELD_TYPE_STRUCT  
- Indicates that the field is a structure.  
+ フィールドは構造体であることを示します。  
   
  FIELD_TYPE_CLASS  
- Indicates that the field is a class.  
+ フィールドがクラスであることを示します。  
   
  FIELD_TYPE_INTERFACE  
- Indicates that the field is an interface.  
+ フィールドがインターフェイスであることを示します。  
   
  FIELD_TYPE_UNION  
- Indicates that the field is a union.  
+ フィールドが共用体であることを示します。  
   
  FIELD_TYPE_ARRAY  
- Indicates that the field is an array.  
+ フィールドが配列であることを示します。  
   
  FIELD_TYPE_METHOD  
- Indicates that the field is a method.  
+ フィールドがメソッドであることを示します。  
   
  FIELD_TYPE_BLOCK  
- Indicates that the field is a block.  
+ フィールドが、ブロックであることを示します。  
   
  FIELD_TYPE_POINTER  
- Indicates that the field is a pointer.  
+ フィールドがポインターであることを示します。  
   
  FIELD_TYPE_ENUM  
- Indicates that the field is an enumerated data type.  
+ フィールドが列挙型であることを示します。  
   
  FIELD_TYPE_LABEL  
- Indicates that the field is a label.  
+ フィールドがラベルであることを示します。  
   
  FIELD_TYPE_TYPEDEF  
- Indicates that the field is a typedef.  
+ フィールドが typedef であることを示します。  
   
  FIELD_TYPE_BITFIELD  
- Indicates that the field is a bitfield.  
+ フィールドがビット フィールドであることを示します。  
   
  FIELD_TYPE_NAMESPACE  
- Indicates that the field is a namespace.  
+ フィールドが、名前空間であることを示します。  
   
  FIELD_TYPE_MODULE  
- Indicates that the field is a module.  
+ フィールドがモジュールであることを示します。  
   
  FIELD_TYPE_DYNAMIC  
- Indicates that the field is dynamic.  
+ フィールドが動的であることを示します。  
   
  FIELD_TYPE_PROP  
- Indicates that the field is a property.  
+ フィールド、プロパティであることを示します。  
   
  FIELD_TYPE_INNERCLASS  
- Indicates that the field is an inner class.  
+ フィールドは、内部クラスであることを示します。  
   
  FIELD_TYPE_REFERENCE  
- Indicates that the field is a reference.  
+ フィールドが参照であることを示します。  
   
  FIELD_TYPE_EXTENDED  
- Reserved for future use.  
+ 将来使用するために予約されています。  
   
  FIELD_SYM_MEMBER  
- Indicates that the field is a member.  
+ フィールドがメンバーであることを示します。  
   
  FIELD_SYM_LOCAL  
- Indicates that the field is local.  
+ フィールドがローカルであることを示します。  
   
  FIELD_SYM_PARAMETER  
- Indicates that the field is a parameter.  
+ フィールドが、パラメーターであることを示します。  
   
  FIELD_SYM_THIS  
- Indicates that the field is the "this" pointer.  
+ フィールドが"this"ポインターであることを示します。  
   
  FIELD_SYM_GLOBAL  
- Indicates that the field is global.  
+ フィールドがグローバルであることを示します。  
   
  FIELD_SYM_PROP_GETTER  
- Indicates that the field retrieves properties.  
+ フィールドがプロパティを取得することを示します。  
   
  FIELD_SYM_PROP_SETTER  
- Indicates that the field sets properties.  
+ フィールドがプロパティを設定することを示します。  
   
  FIELD_SYM_EXTENDED  
- Reserved for future use.  
+ 将来使用するために予約されています。  
   
  FIELD_KIND_MASK  
- Indicates a mask for field kinds.  
+ フィールドの種類のマスクを示します。  
   
  FIELD_TYPE_MASK  
- Indicates a mask for field types.  
+ フィールドの種類のマスクを示します。  
   
  FIELD_SYM_MASK  
- Indicates a mask for symbol information.  
+ シンボル情報のマスクを示します。  
   
-## <a name="remarks"></a>Remarks  
- Returned from a call to the [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) method.  
+## <a name="remarks"></a>コメント  
+ 呼び出しから返される、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)メソッドです。  
   
- Depending on the kind of field, [QueryInterface](/cpp/atl/queryinterface) can be called on the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface for a more specific form of interface. For example, if [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) returns `FIELD_TYPE_METHOD`, you can then call `QueryInterface` on I`DebugField` to obtain the [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) interface.  
+ フィールドの種類に応じて[QueryInterface](/cpp/atl/queryinterface)で呼び出すことができます、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスの複数の特定のフォームのインターフェイスです。 たとえば場合、 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)を返します`FIELD_TYPE_METHOD`、し、呼び出すことができます`QueryInterface`i`DebugField`を取得する、 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)インターフェイスです。  
   
-## <a name="requirements"></a>Requirements  
- Header: sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)   
  [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

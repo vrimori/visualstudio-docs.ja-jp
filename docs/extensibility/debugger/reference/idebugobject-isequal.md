@@ -30,11 +30,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 35d65729a75d06cb8aefc330441cefb09c95bb04
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 9780a18ff72058a90739c421061fabd9ce8520e1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
@@ -61,13 +61,13 @@ int IsEqual(
  [in][IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)と比較するオブジェクトを表すオブジェクト。  
   
  `pfIsEqual`  
- [out]0 以外を返します (`TRUE`) のオブジェクトの値は同一です。 それ以外の場合、0 が返されます (`FALSE`)。  
+ [out]0 以外を返します (`TRUE`) のオブジェクトの値がそれ以外の場合は 0 を返します (`FALSE`)。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
 ## <a name="remarks"></a>コメント  
- 通常、このメソッドはによって表される値のアドレスを比較できます、`pObject`パラメーターと[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)オブジェクトは、アドレスが等しいか、オブジェクトと等しい言えます。  
+ 通常、このメソッドはによって表される値のアドレスを比較できます、`pObject`パラメーターが、これ[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)オブジェクト以外の場合は、アドレスが等しいか、し、オブジェクトが等しいと見なすかどうかです。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

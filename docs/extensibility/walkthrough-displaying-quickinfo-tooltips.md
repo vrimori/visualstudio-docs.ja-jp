@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Displaying QuickInfo Tooltips | Microsoft Docs'
+title: "チュートリアル: クイック ツールヒントの表示 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,147 +32,147 @@ ms.translationtype: MT
 ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
 ms.openlocfilehash: 7acb244077949ffb0a59018b24706fd3ccfefc14
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-displaying-quickinfo-tooltips"></a>Walkthrough: Displaying QuickInfo Tooltips
-QuickInfo is an IntelliSense feature that displays method signatures and descriptions when a user moves the pointer over a method name. You can implement language-based features such as QuickInfo by defining the identifiers for which you want to provide QuickInfo descriptions, and then creating a tooltip in which to display the content. You can define QuickInfo in the context of a language service, or you can define your own file name extension and content type and display the QuickInfo for just that type, or you can display QuickInfo for an existing content type (such as "text"). This walkthrough shows how to display QuickInfo for the "text" content type.  
+# <a name="walkthrough-displaying-quickinfo-tooltips"></a>チュートリアル: クイック ツールヒントの表示
+QuickInfo はメソッドのシグネチャを表示する IntelliSense 機能である場合、ユーザーの説明が、ポインターをメソッド名の上に移動します。 QuickInfo の説明を提供する識別子を定義して、コンテンツを表示するツールヒントを作成して QuickInfo などの機能の言語に基づくを実装できます。 QuickInfo を定義するには、言語サービスのコンテキストで独自ファイル名拡張子とコンテンツの種類を定義してその種類のクィック ヒントを表示またはクイック ヒントを表示するには、既存のコンテンツの種類 ("text") などの。 このチュートリアルでは、"text"コンテンツ タイプのクィック ヒントを表示する方法を示します。  
   
- The QuickInfo example in this walkthrough displays the tooltips when a user moves the pointer over a method name. This design requires you to implement these four interfaces:  
+ このチュートリアルで QuickInfo 例は、ユーザーがメソッド名の上、ポインターを移動したときに、ツールヒントを表示します。 この設計では、これら 4 つのインターフェイスを実装する必要があります。  
   
--   source interface  
+-   ソース インターフェイス  
   
--   source provider interface  
+-   ソース プロバイダー インターフェイス  
   
--   controller interface  
+-   コント ローラーのインターフェイス  
   
--   controller provider interface  
+-   コント ローラー プロバイダー インターフェイス  
   
- The source and controller providers are Managed Extensibility Framework (MEF) component parts, and are responsible for exporting the source and controller classes and importing services and brokers such as the <xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>, which creates the tooltip text buffer, and the <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>, which triggers the QuickInfo session.  
+ ソースとコント ローラーのプロバイダーは、Managed Extensibility Framework (MEF) コンポーネントの部分、ソースとコント ローラー クラスをエクスポートするのには、インポートするサービス ブローカーなど、<xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>ツールヒントのテキストを作成します。バッファー、および<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>、QuickInfo セッションをトリガーします。  
   
- In this example, the QuickInfo source uses a hard-coded list of method names and descriptions, but in full implementations, the language service and the language documentation are responsible for providing that content.  
+ この例では QuickInfo ソース リストを使用するハード コーディングされたメソッドの名前と説明については、が、完全な実装で、言語サービスと言語のドキュメントがそのコンテンツを提供することを担当します。  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>必須コンポーネント  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
   
-## <a name="creating-a-mef-project"></a>Creating a MEF Project  
+## <a name="creating-a-mef-project"></a>MEF プロジェクトを作成します。  
   
-#### <a name="to-create-a-mef-project"></a>To create a MEF project  
+#### <a name="to-create-a-mef-project"></a>MEF プロジェクトを作成するには  
   
-1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `QuickInfoTest`.  
+1.  C# の場合は、VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を付けます`QuickInfoTest`です。  
   
-2.  Add an Editor Classifier item template to the project. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2.  エディター分類子項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディター項目テンプレートに、拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
-3.  Delete the existing class files.  
+3.  既存のクラス ファイルを削除します。  
   
-## <a name="implementing-the-quickinfo-source"></a>Implementing the QuickInfo Source  
- The QuickInfo source is responsible for collecting the set of identifiers and their descriptions and adding the content to the tooltip text buffer when one of the identifiers is encountered. In this example, the identifiers and their descriptions are just added in the source constructor.  
+## <a name="implementing-the-quickinfo-source"></a>QuickInfo ソースの実装  
+ QuickInfo ソースは、識別子とその説明のセットを収集し、識別子のいずれかが発生したときにツールヒントのテキスト バッファーへのコンテンツの追加を担当します。 この例では、識別子とその説明はで追加ソース コンス トラクターです。  
   
-#### <a name="to-implement-the-quickinfo-source"></a>To implement the QuickInfo source  
+#### <a name="to-implement-the-quickinfo-source"></a>QuickInfo ソースを実装するには  
   
-1.  Add a class file and name it `TestQuickInfoSource`.  
+1.  クラス ファイルを追加し、名前を付けます`TestQuickInfoSource`です。  
   
-2.  Add a reference to Microsoft.VisualStudio.Language.IntelliSense.  
+2.  Microsoft.VisualStudio.Language.IntelliSense への参照を追加します。  
   
-3.  Add the following imports.  
+3.  次の imports を追加します。  
   
-     [!code-vb[VSSDKQuickInfoTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_1.vb)]  [!code-csharp[VSSDKQuickInfoTest#1](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_1.cs)]  
+     [!code-vb[VSSDKQuickInfoTest 1](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_1.vb)][!code-csharp[VSSDKQuickInfoTest 1  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_1.cs)]  
   
-4.  Declare a class that implements <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource>, and name it `TestQuickInfoSource`.  
+4.  実装するクラスを宣言<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource>、名前を付けます`TestQuickInfoSource`です。  
   
-     [!code-vb[VSSDKQuickInfoTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_2.vb)]  [!code-csharp[VSSDKQuickInfoTest#2](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_2.cs)]  
+     [!code-vb[VSSDKQuickInfoTest 2](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_2.vb)][!code-csharp[VSSDKQuickInfoTest 2  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_2.cs)]  
   
-5.  Add fields for the QuickInfo source provider, the text buffer, and a set of method names and method signatures. In this example, the method names and signatures are initialized in the `TestQuickInfoSource` constructor.  
+5.  テキスト バッファーと一連のメソッド名とメソッドのシグネチャでは、QuickInfo ソース プロバイダーのフィールドを追加します。 この例でメソッドの名前とシグネチャを初期化します。、`TestQuickInfoSource`コンス トラクターです。  
   
-     [!code-vb[VSSDKQuickInfoTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_3.vb)]  [!code-csharp[VSSDKQuickInfoTest#3](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_3.cs)]  
+     [!code-vb[VSSDKQuickInfoTest 3](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_3.vb)][!code-csharp[VSSDKQuickInfoTest 3  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_3.cs)]  
   
-6.  Add a constructor that sets the QuickInfo source provider and the text buffer, and populates the set of method names, and method signatures and descriptions.  
+6.  QuickInfo ソース プロバイダーとテキスト バッファーを設定し、メソッド名、およびメソッドのシグネチャと説明のセットを設定するコンス トラクターを追加します。  
   
-     [!code-vb[VSSDKQuickInfoTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_4.vb)]  [!code-csharp[VSSDKQuickInfoTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_4.cs)]  
+     [!code-vb[VSSDKQuickInfoTest 4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_4.vb)][!code-csharp[VSSDKQuickInfoTest 4  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_4.cs)]  
   
-7.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource.AugmentQuickInfoSession%2A> method. In this example, the method finds the current word, or the previous word if the cursor is at the end of a line or a text buffer. If the word is one of the method names, the description for that method name is added to the QuickInfo content.  
+7.  <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource.AugmentQuickInfoSession%2A> メソッドを実装します。 この例では、メソッドを検索、現在の単語または前の単語、またはテキスト バッファーの行の最後のカーソルがある場合。 単語が、メソッド名のいずれかの場合は、そのメソッド名の説明が QuickInfo コンテンツに追加されます。  
   
-     [!code-vb[VSSDKQuickInfoTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_5.vb)]  [!code-csharp[VSSDKQuickInfoTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_5.cs)]  
+     [!code-vb[VSSDKQuickInfoTest 5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_5.vb)][!code-csharp[VSSDKQuickInfoTest #5  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_5.cs)]  
   
-8.  You must also implement a Dispose() method, since <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource> implements <xref:System.IDisposable>:  
+8.  以降、Dispose() メソッドを実装することも必要があります<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource>実装<xref:System.IDisposable>:。  
   
-     [!code-vb[VSSDKQuickInfoTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_6.vb)]  [!code-csharp[VSSDKQuickInfoTest#6](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_6.cs)]  
+     [!code-vb[VSSDKQuickInfoTest 6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_6.vb)][!code-csharp[VSSDKQuickInfoTest 6  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_6.cs)]  
   
-## <a name="implementing-a-quickinfo-source-provider"></a>Implementing a QuickInfo Source Provider  
- The provider of the QuickInfo source serves primarily to export itself as a MEF component part and instantiate the QuickInfo source. Because it is a MEF component part, it can import other MEF component parts.  
+## <a name="implementing-a-quickinfo-source-provider"></a>QuickInfo ソース プロバイダーを実装します。  
+ QuickInfo ソースのプロバイダーは、MEF コンポーネント パーツとして自体をエクスポートおよび QuickInfo ソースをインスタンス化する、主に機能します。 MEF コンポーネント パーツになっているために、他の MEF コンポーネント パーツをインポートできます。  
   
-#### <a name="to-implement-a-quickinfo-source-provider"></a>To implement a QuickInfo source provider  
+#### <a name="to-implement-a-quickinfo-source-provider"></a>QuickInfo ソース プロバイダーを実装するには  
   
-1.  Declare a QuickInfo source provider named `TestQuickInfoSourceProvider` that implements <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider>, and export it with a <xref:Microsoft.VisualStudio.Utilities.NameAttribute> of "ToolTip QuickInfo Source", an <xref:Microsoft.VisualStudio.Utilities.OrderAttribute> of Before="default", and a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> of "text".  
+1.  という名前の QuickInfo ソース プロバイダーを宣言`TestQuickInfoSourceProvider`を実装する<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider>、およびエクスポートに、 <xref:Microsoft.VisualStudio.Utilities.NameAttribute> "ツールヒント QuickInfo Source"の<xref:Microsoft.VisualStudio.Utilities.OrderAttribute>の Before ="default"、および<xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>"text"のです。  
   
-     [!code-vb[VSSDKQuickInfoTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_7.vb)]  [!code-csharp[VSSDKQuickInfoTest#7](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_7.cs)]  
+     [!code-vb[VSSDKQuickInfoTest 7](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_7.vb)][!code-csharp[VSSDKQuickInfoTest 7  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_7.cs)]  
   
-2.  Import two editor services, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> and <xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>, as properties of `TestQuickInfoSourceProvider`.  
+2.  2 つのエディター サービスをインポート<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>と<xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>のプロパティとして`TestQuickInfoSourceProvider`です。  
   
-     [!code-vb[VSSDKQuickInfoTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_8.vb)]  [!code-csharp[VSSDKQuickInfoTest#8](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_8.cs)]  
+     [!code-vb[VSSDKQuickInfoTest 8](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_8.vb)][!code-csharp[VSSDKQuickInfoTest 8  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_8.cs)]  
   
-3.  Implement <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider.TryCreateQuickInfoSource%2A> to return a new `TestQuickInfoSource`.  
+3.  実装<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider.TryCreateQuickInfoSource%2A>を返す新しい`TestQuickInfoSource`です。  
   
-     [!code-vb[VSSDKQuickInfoTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_9.vb)]  [!code-csharp[VSSDKQuickInfoTest#9](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_9.cs)]  
+     [!code-vb[VSSDKQuickInfoTest 9](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_9.vb)][!code-csharp[VSSDKQuickInfoTest 9  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_9.cs)]  
   
-## <a name="implementing-a-quickinfo-controller"></a>Implementing a QuickInfo Controller  
- QuickInfo controllers determine when QuickInfo should be displayed. In this example, QuickInfo is displayed when the pointer is over a word that corresponds to one of the method names. The QuickInfo controller implements a mouse hover event handler that triggers a QuickInfo session.  
+## <a name="implementing-a-quickinfo-controller"></a>QuickInfo コント ローラーの実装  
+ QuickInfo コント ローラーは、クイック ヒントを表示するかを決定します。 この例では、ポインターが、メソッド名のいずれかに対応する word QuickInfo が表示されます。 QuickInfo コント ローラーでは、QuickInfo セッションをトリガーする、マウス ホバー イベント ハンドラーを実装します。  
   
-#### <a name="to-implement-a-quickinfo-controller"></a>To implement a QuickInfo controller  
+#### <a name="to-implement-a-quickinfo-controller"></a>QuickInfo コント ローラーを実装するには  
   
-1.  Declare a class that implements <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController>, and name it `TestQuickInfoController`.  
+1.  実装するクラスを宣言<xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController>、名前を付けます`TestQuickInfoController`です。  
   
-     [!code-vb[VSSDKQuickInfoTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_10.vb)]  [!code-csharp[VSSDKQuickInfoTest#10](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_10.cs)]  
+     [!code-vb[VSSDKQuickInfoTest 10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_10.vb)][!code-csharp[VSSDKQuickInfoTest 10  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_10.cs)]  
   
-2.  Add private fields for the text view, the text buffers represented in the text view, the QuickInfo session, and the QuickInfo controller provider.  
+2.  テキスト ビューのプライベート フィールドをテキスト ビュー、QuickInfo セッションおよび QuickInfo コント ローラーのプロバイダーで表されるテキスト バッファーを追加します。  
   
-     [!code-vb[VSSDKQuickInfoTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_11.vb)]  [!code-csharp[VSSDKQuickInfoTest#11](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_11.cs)]  
+     [!code-vb[VSSDKQuickInfoTest #11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_11.vb)][!code-csharp[VSSDKQuickInfoTest #11  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_11.cs)]  
   
-3.  Add a constructor that sets the fields and adds the mouse hover event handler.  
+3.  フィールドを設定し、マウス ホバー イベント ハンドラーを追加するコンス トラクターを追加します。  
   
-     [!code-vb[VSSDKQuickInfoTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_12.vb)]  [!code-csharp[VSSDKQuickInfoTest#12](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_12.cs)]  
+     [!code-vb[VSSDKQuickInfoTest #12](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_12.vb)][!code-csharp[VSSDKQuickInfoTest #12  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_12.cs)]  
   
-4.  Add the mouse hover event handler that triggers the QuickInfo session.  
+4.  QuickInfo セッションをトリガーする、マウス ホバー イベント ハンドラーを追加します。  
   
-     [!code-vb[VSSDKQuickInfoTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_13.vb)]  [!code-csharp[VSSDKQuickInfoTest#13](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_13.cs)]  
+     [!code-vb[VSSDKQuickInfoTest #13](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_13.vb)][!code-csharp[VSSDKQuickInfoTest #13  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_13.cs)]  
   
-5.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.Detach%2A> method so that it removes the mouse hover event handler when the controller is detached from the text view.  
+5.  実装、<xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.Detach%2A>メソッドため、コント ローラーがテキスト ビューからデタッチされると、it がマウス ホバー イベント ハンドラーを削除のします。  
   
-     [!code-vb[VSSDKQuickInfoTest#14](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_14.vb)]  [!code-csharp[VSSDKQuickInfoTest#14](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_14.cs)]  
+     [!code-vb[VSSDKQuickInfoTest #14](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_14.vb)][!code-csharp[VSSDKQuickInfoTest #14  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_14.cs)]  
   
-6.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.ConnectSubjectBuffer%2A> method and the <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.DisconnectSubjectBuffer%2A> method as empty methods for this example.  
+6.  実装、<xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.ConnectSubjectBuffer%2A>メソッドおよび<xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.DisconnectSubjectBuffer%2A>この例の空のメソッドとしてメソッドです。  
   
-     [!code-vb[VSSDKQuickInfoTest#15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_15.vb)]  [!code-csharp[VSSDKQuickInfoTest#15](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_15.cs)]  
+     [!code-vb[VSSDKQuickInfoTest #15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_15.vb)][!code-csharp[VSSDKQuickInfoTest #15  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_15.cs)]  
   
-## <a name="implementing-the-quickinfo-controller-provider"></a>Implementing the QuickInfo Controller Provider  
- The provider of the QuickInfo controller serves primarily to export itself as a MEF component part and instantiate the QuickInfo controller. Because it is a MEF component part, it can import other MEF component parts.  
+## <a name="implementing-the-quickinfo-controller-provider"></a>QuickInfo コント ローラーのプロバイダーの実装  
+ QuickInfo コント ローラーのプロバイダーは、MEF コンポーネント パーツとして自体をエクスポートおよび QuickInfo コント ローラーをインスタンス化する、主に機能します。 MEF コンポーネント パーツになっているために、他の MEF コンポーネント パーツをインポートできます。  
   
-#### <a name="to-implement-the-quickinfo-controller-provider"></a>To implement the QuickInfo controller provider  
+#### <a name="to-implement-the-quickinfo-controller-provider"></a>QuickInfo コント ローラーのプロバイダーを実装するには  
   
-1.  Declare a class named `TestQuickInfoControllerProvider` that implements <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseControllerProvider>, and export it with a <xref:Microsoft.VisualStudio.Utilities.NameAttribute> of "ToolTip QuickInfo Controller" and a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> of "text":  
+1.  という名前のクラスを宣言`TestQuickInfoControllerProvider`を実装する<xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseControllerProvider>、およびエクスポートして、 <xref:Microsoft.VisualStudio.Utilities.NameAttribute> "ツールヒント QuickInfo Controller"のおよび<xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>"text"。  
   
-     [!code-vb[VSSDKQuickInfoTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_16.vb)]  [!code-csharp[VSSDKQuickInfoTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_16.cs)]  
+     [!code-vb[VSSDKQuickInfoTest #16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_16.vb)][!code-csharp[VSSDKQuickInfoTest #16  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_16.cs)]  
   
-2.  Import the <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker> as a property.  
+2.  インポート、<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>プロパティとして。  
   
-     [!code-vb[VSSDKQuickInfoTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_17.vb)]  [!code-csharp[VSSDKQuickInfoTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_17.cs)]  
+     [!code-vb[VSSDKQuickInfoTest 17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_17.vb)][!code-csharp[VSSDKQuickInfoTest 17  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_17.cs)]  
   
-3.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseControllerProvider.TryCreateIntellisenseController%2A> method by instantiating the QuickInfo controller.  
+3.  実装、 <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseControllerProvider.TryCreateIntellisenseController%2A> QuickInfo コント ローラーをインスタンス化する方法です。  
   
-     [!code-vb[VSSDKQuickInfoTest#18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_18.vb)]  [!code-csharp[VSSDKQuickInfoTest#18](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_18.cs)]  
+     [!code-vb[VSSDKQuickInfoTest #18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_18.vb)][!code-csharp[VSSDKQuickInfoTest #18  ](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_18.cs)]  
   
-## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
- To test this code, build the QuickInfoTest solution and run it in the experimental instance.  
+## <a name="building-and-testing-the-code"></a>コードのビルドとテスト  
+ このコードをテストするには、QuickInfoTest ソリューションをビルドし、実験用インスタンスで実行します。  
   
-#### <a name="to-build-and-test-the-quickinfotest-solution"></a>To build and test the QuickInfoTest solution  
+#### <a name="to-build-and-test-the-quickinfotest-solution"></a>ビルドし、QuickInfoTest ソリューションをテストするには  
   
-1.  Build the solution.  
+1.  ソリューションをビルドします。  
   
-2.  When you run this project in the debugger, a second instance of Visual Studio is instantiated.  
+2.  デバッガーでこのプロジェクトを実行すると、Visual Studio の 2 つ目のインスタンスがインスタンス化されます。  
   
-3.  Create a text file and type some text that includes the words "add" and "subtract".  
+3.  テキスト ファイルと、単語を含むいくつかのテキストを「追加」の種類、および「減算」を作成します。  
   
-4.  Move the pointer over one of the occurrences of "add". The signature and the description of the `add` method should be displayed.  
+4.  ポインターは、「追加」の出現回数は、のいずれかの上に移動します。 署名との説明、`add`メソッドを表示する必要があります。  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: Linking a Content Type to a File Name Extension](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+## <a name="see-also"></a>関連項目  
+ [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

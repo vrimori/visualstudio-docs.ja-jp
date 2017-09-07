@@ -1,5 +1,5 @@
 ---
-title: CONNECTION_PROTOCOL | Microsoft Docs
+title: "CONNECTION_PROTOCOL |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 2be5678704e9a5899c4ce7f5caba8cec1d8a21e6
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # CONNECTION_PROTOCOL
-Indicates the protocol being used to communicate between a debug server and the debug package (DE).  
+デバッグ サーバーとデバッグ パッケージ (DE) 間の通信に使用されているプロトコルを示します。  
   
-## Syntax  
+## 構文  
   
 ```cpp  
 typedef enum tagCONNECTION_PROTOCOL {  
@@ -66,38 +66,38 @@ public enum CONNECTION_PROTOCOL {
 };  
 ```  
   
-#### Parameters  
+#### パラメーター  
  CONNECTION_NONE  
- No connection has been made to a server.  
+ サーバーに接続が確立したありません。  
   
  CONNECTION_UNKNOWN  
- A connection has been made, but it is of an unknown type.  
+ 接続が確立されましたが、不明な種類のします。  
   
  CONNECTION_LOCAL  
- Connection is to a local server.  
+ ローカル サーバーへの接続です。  
   
  CONNECTION_PIPE  
- Connection is through a named pipe.  
+ 名前付きパイプは接続です。  
   
  CONNECTION_TCPIP  
- Connection uses TCP/IP.  
+ 接続には、TCP/IP が使用されます。  
   
  CONNECTION_HTTP  
- Connection uses HTTP (through a Web server).  
+ 接続は、(Web サーバー) を介して、HTTP を使用します。  
   
  CONNECTION_OTHER  
- Some other type of connection has been established (this value is not currently used).  
+ その他の何らかの種類の接続が確立された (この値は現在使用されません)。  
   
-## Remarks  
- These values are returned from the [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) method.  
+## コメント  
+ これらの値から返される、 [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)メソッドです。  
   
-## Requirements  
- Header: msdbg.h  
+## 要件  
+ ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## 関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)

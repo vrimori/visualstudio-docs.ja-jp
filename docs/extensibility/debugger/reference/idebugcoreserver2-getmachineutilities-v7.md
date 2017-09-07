@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::GetMachineUtilities_V7 | Microsoft Docs
+title: "IDebugCoreServer2::GetMachineUtilities_V7 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,16 +34,16 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: c9441dc96ca5c090f246d4b27842afa6270e1ffb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcoreserver2getmachineutilitiesv7"></a>IDebugCoreServer2::GetMachineUtilities_V7
-This method gets the machine utilities for a server.  
+このメソッドは、サーバーのマシン ユーティリティを取得します。  
   
 > [!NOTE]
->  This method is obsolete: do not use ([!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] always returns `E_NOTIMPL` if this method is called). It is retained for historical reasons.  
+>  このメソッドは今後使用しません。 使用しないでください ([!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]は常に返します`E_NOTIMPL`このメソッドが呼び出された場合)。 歴史的な経緯によりは保持されます。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetMachineUtilities_V7(  
@@ -57,15 +57,15 @@ int GetMachineUtilities_V7(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `ppUtil`  
- [out] Returns an `IDebugMDMUtil2_V7` interface that represents the machine utilities information.  
+ [out]返します、`IDebugMDMUtil2_V7`マシン ユーティリティの情報を表すインターフェイスです。  
   
-## <a name="return-value"></a>Return Value  
- Always returns `E_NOTIMPL`, indicating that the method is not implemented.  
+## <a name="return-value"></a>戻り値  
+ 常に返します`E_NOTIMPL`を示すメソッドが実装されていません。  
   
-## <a name="remarks"></a>Remarks  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] always returns `E_NOTIMPL` if this method is called.  
+## <a name="remarks"></a>コメント  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]常に返します`E_NOTIMPL`場合、このメソッドが呼び出されます。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)
