@@ -1,5 +1,5 @@
 ---
-title: Build Loggers | Microsoft Docs
+title: "ビルド ロガー | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,70 +35,70 @@ ms.translationtype: HT
 ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
 ms.openlocfilehash: ee5db285c55dc3969bd21fe722d7e4bacdcb6f3c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="build-loggers"></a>Build Loggers
-Loggers provide a way for you to customize the output of your build and display messages, errors, or warnings in response to specific build events. Each logger is implemented as a .NET class that implements the <xref:Microsoft.Build.Framework.ILogger> interface, which is defined in the Microsoft.Build.Framework.dll assembly.  
+# <a name="build-loggers"></a>ビルド ロガー
+ロガーを使うと、ビルドの出力をカスタマイズして、特定のビルド イベントに対する応答のメッセージ、エラー、または警告を表示できます。 各ロガーは、Microsoft.Build.Framework.dll アセンブリで定義されている <xref:Microsoft.Build.Framework.ILogger> インターフェイスを実装する .NET クラスとして実装されます。  
   
- There are two approaches you can use when implementing a logger:  
+ ロガーを実装するには 2 つの方法があります。  
   
--   Implement the <xref:Microsoft.Build.Framework.ILogger> interface directly.  
+-   <xref:Microsoft.Build.Framework.ILogger> インターフェイスを直接実装します。  
   
--   Derive your class from the helper class, <xref:Microsoft.Build.Utilities.Logger>, which is defined in the Microsoft.Build.Utilities.dll assembly. <xref:Microsoft.Build.Utilities.Logger> implements <xref:Microsoft.Build.Framework.ILogger> and provides default implementations of some <xref:Microsoft.Build.Framework.ILogger> members.  
+-   Microsoft.Build.Utilities.dll アセンブリで定義されているヘルパー クラス <xref:Microsoft.Build.Utilities.Logger> からクラスを継承します。 <xref:Microsoft.Build.Utilities.Logger> は <xref:Microsoft.Build.Framework.ILogger> を実装し、一部の <xref:Microsoft.Build.Framework.ILogger> メンバーの既定の実装を提供します。  
   
- This topic will explain how to write a simple logger that derives from <xref:Microsoft.Build.Utilities.Logger>, and displays messages on the console in response to certain build events.  
+ このトピックでは、<xref:Microsoft.Build.Utilities.Logger> を継承し、特定のビルド イベントに対する応答のメッセージをコンソールに表示する簡単なロガーを作成する方法を説明します。  
   
-## <a name="registering-for-events"></a>Registering for Events  
- The purpose of a logger is to gather information on build progress as it is reported by the build engine, and then report that information in a useful way. All loggers must override the <xref:Microsoft.Build.Utilities.Logger.Initialize%2A> method, which is where the logger registers for events. In this example, the logger registers for the <xref:Microsoft.Build.Framework.IEventSource.TargetStarted>, <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>, and <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> events.  
+## <a name="registering-for-events"></a>イベントの登録  
+ ロガーの目的は、ビルド エンジンによって報告されたビルドの進行状況に関する情報を収集し、役に立つ方法でその情報を報告することです。 すべてのロガーは、イベントを登録する <xref:Microsoft.Build.Utilities.Logger.Initialize%2A> メソッドを無視する必要があります。 この例では、ロガーは <xref:Microsoft.Build.Framework.IEventSource.TargetStarted>、<xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>、<xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> イベントを登録しています。  
   
  [!code-csharp[msbuild_SimpleConsoleLogger#2](../msbuild/codesnippet/CSharp/build-loggers_1.cs)]  
   
-## <a name="responding-to-events"></a>Responding to Events  
- Now that the logger is registered for specific events, it needs to handle those events when they occur. For the <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>, and <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> events, the logger simply writes a short phrase and the name of the project file involved in the event. All messages from the logger are written to the console window.  
+## <a name="responding-to-events"></a>イベントへの応答  
+ 特定のイベントを登録したロガーは、発生したイベントを処理する必要があります。 <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted> と <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> イベントの場合、ロガーは短い語句と、イベントに関連するプロジェクト ファイルの名前を書き込むだけです。 ロガーからのすべてのメッセージは、コンソール ウィンドウに書き込まれます。  
   
  [!code-csharp[msbuild_SimpleConsoleLogger#3](../msbuild/codesnippet/CSharp/build-loggers_2.cs)]  
   
-## <a name="responding-to-logger-verbosity-values"></a>Responding to Logger Verbosity Values  
- In some cases, you may want to only log information from an event if the MSBuild.exe **/verbosity** switch contains a certain value. In this example, the <xref:Microsoft.Build.Framework.IEventSource.TargetStarted> event handler only logs a message if the <xref:Microsoft.Build.Utilities.Logger.Verbosity%2A> property, which is set by the **/verbosity** switch, is equal to <xref:Microsoft.Build.Framework.LoggerVerbosity>`Detailed`.  
+## <a name="responding-to-logger-verbosity-values"></a>ロガーの詳細値への応答  
+ MSBuild.exe の **/verbosity** スイッチに特定の値が含まれる場合にのみ、イベントから情報を記録したいことがあります。 次の例の <xref:Microsoft.Build.Framework.IEventSource.TargetStarted> イベント ハンドラーは、**/verbosity** スイッチによって設定される <xref:Microsoft.Build.Utilities.Logger.Verbosity%2A> プロパティが <xref:Microsoft.Build.Framework.LoggerVerbosity>`Detailed` に等しい場合にのみ、メッセージを記録します。  
   
  [!code-csharp[msbuild_SimpleConsoleLogger#4](../msbuild/codesnippet/CSharp/build-loggers_3.cs)]  
   
-## <a name="specifying-a-logger"></a>Specifying a Logger  
- Once the logger is compiled into an assembly, you need to tell [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] to use that logger during builds. This is done using the **/logger** switch with MSBuild.exe. For more information on the switches available for MSBuild.exe, see [Command-Line Reference](../msbuild/msbuild-command-line-reference.md).  
+## <a name="specifying-a-logger"></a>ロガーの指定  
+ ロガーがアセンブリにコンパイルされた後は、ビルドの間にそのロガーを使うように [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に指定する必要があります。 これは、MSBuild.exe で **/logger** スイッチを使って行います。 MSBuild.exe で使用可能なスイッチについて詳しくは、「[コマンド ライン リファレンス](../msbuild/msbuild-command-line-reference.md)」をご覧ください。  
   
- The following command line builds the project `MyProject.csproj` and uses the logger class implemented in `SimpleLogger.dll`. The **/nologo** switch hides the banner and copyright message and the **/noconsolelogger** switch disables the default [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] console logger.  
+ 次のコマンド ラインは、プロジェクト `MyProject.csproj` をビルドし、`SimpleLogger.dll` で実装されているロガー クラスを使います。 **/nologo** スイッチはバナーと著作権のメッセージを非表示にし、**/noconsolelogger** スイッチは既定の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] コンソール ロガーを無効にします。  
   
 ```  
 MSBuild /nologo /noconsolelogger /logger:SimpleLogger.dll  
 ```  
   
- The following command line builds the project with the same logger, but with a `Verbosity` level of `Detailed`.  
+ 次のコマンド ラインは同じロガーでプロジェクトをビルドしますが、`Verbosity` レベルは `Detailed` です。  
   
 ```  
 MSBuild /nologo /noconsolelogger /logger:SimpleLogger.dll /verbosity:Detailed  
 ```  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>例  
   
-### <a name="description"></a>Description  
- The following example contains the complete code for the logger.  
+### <a name="description"></a>説明  
+ 次の例には、ロガーの完全なコードが含まれます。  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>コード  
  [!code-csharp[msbuild_SimpleConsoleLogger#1](../msbuild/codesnippet/CSharp/build-loggers_4.cs)]  
   
-### <a name="comments"></a>Comments  
+### <a name="comments"></a>コメント  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>例  
   
-### <a name="description"></a>Description  
- The following example shows how to implement a logger that writes the log to a file rather than displaying it in the console window.  
+### <a name="description"></a>説明  
+ 次の例では、コンソール ウィンドウに表示するのではなくファイルにログを書き込むロガーを実装する方法を示します。  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>コード  
  [!code-csharp[msbuild_BasicLogger#1](../msbuild/codesnippet/CSharp/build-loggers_5.cs)]  
   
-### <a name="comments"></a>Comments  
+### <a name="comments"></a>コメント  
   
-## <a name="see-also"></a>See Also  
- [Obtaining Build Logs](../msbuild/obtaining-build-logs-with-msbuild.md)   
- [MSBuild Concepts](../msbuild/msbuild-concepts.md)
+## <a name="see-also"></a>関連項目  
+ [ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)   
+ [MSBuild の概念](../msbuild/msbuild-concepts.md)

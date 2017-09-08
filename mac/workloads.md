@@ -1,5 +1,5 @@
 ---
-title: Visual Studio for Mac Workloads
+title: "Visual Studio for Mac ワークロード"
 author: asb3993
 ms.author: amburns
 ms.date: 08/03/2017
@@ -9,35 +9,35 @@ ms.translationtype: HT
 ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
 ms.openlocfilehash: 8870c8fa0a521ed5ac6e31aa0465f1dbe8578f63
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 
-# <a name="visual-studio-for-mac-workloads"></a>Visual Studio for Mac Workloads
+# <a name="visual-studio-for-mac-workloads"></a>Visual Studio for Mac ワークロード
 
-Visual Studio for Mac comes pre-installed with workloads for the following:
+Visual Studio for Mac には、次のワークロードがプレインストールされています。
 
-* Cross-Platform Mobile apps with .NET: Android, iOS, tvOS, watchOS
-* Mac desktop apps
-* .NET Core applications
-* ASP.NET Core Web applications
-* Cross-platform Unity games
+* .NET を使用したクロス プラットフォーム モバイル アプリ: Android、iOS、tvOS、watchOS
+* Mac デスクトップ アプリ
+* .NET Core アプリケーション
+* ASP.NET Core Web アプリケーション
+* クロスプラットフォーム Unity ゲーム
 
 ## <a name="xamarin"></a>Xamarin
 
-Xamarin allows you to create cross-platform Mobile apps with .NET for Android, iOS, tvOS, watchOS, and Mac desktop apps.
+Xamarin では、.NET を使用して、Android、iOS、tvOS、watchOS、および Mac のデスクトップ アプリ用のクロスプラット フォーム モバイル アプリを作成することができます。
 
-For information on using Xamarin in Visual Studio for Mac, refer to the [Xamarin Developer Center](https://developer.xamarin.com/) and check out the Mobile apps [hands-on lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Mobile/Getting-Started).
+Visual Studio for Mac で Xamarin を使用する方法の詳細については、[Xamarin Developer Center](https://developer.xamarin.com/) を参照し、[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Mobile/Getting-Started)をチェックアウトしてください。
 
-## <a name="net-core-applications"></a>.NET Core applications
+## <a name="net-core-applications"></a>.NET Core アプリケーション
 
-For more information on using .NET Core, refer to the [documentation](https://docs.microsoft.com/en-us/dotnet/core/).
+.NET Core の使用方法の詳細については、[ドキュメント](https://docs.microsoft.com/en-us/dotnet/core/)を参照してください。
 
-## <a name="aspnet-core-web-applications"></a>ASP.NET Core Web Applications
+## <a name="aspnet-core-web-applications"></a>ASP.NET Core Web アプリケーション
 
-For information on getting started using ASP.NET Core in Visual Studio for Mac, refer to the [Getting Started with ASP.NET Core](~/asp-net-core.md) guide or check out the ASP.NET Core web apps [hands-on lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started).
+Visual Studio for Mac で ASP.NET Core の使用を開始するには、「[ASP.NET Core の概要](~/asp-net-core.md)」ガイド、または ASP.NET Core Web アプリの[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)をご覧ください。
 
-## <a name="cross-platform-unity-game-development"></a>Cross-platform Unity Game Development
+## <a name="cross-platform-unity-game-development"></a>クロスプラットフォーム Unity ゲームの開発
 
-To start building games with Unity, see the [Setup page](~/setup-vsmac-tools-unity.md) and the [guide to using Unity Tools](~/using-vsmac-tools-unity.md), or check out the Unity [hands-on lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Unity/Getting-Started).
+Unity でゲームの構築を開始するには、[セットアップ ページ](~/setup-vsmac-tools-unity.md) および [Unity ツールの使用ガイド](~/using-vsmac-tools-unity.md)を参照するか、Unity の[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Unity/Getting-Started)をチェックアウトしてください。
 

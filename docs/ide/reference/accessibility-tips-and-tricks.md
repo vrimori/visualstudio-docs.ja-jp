@@ -1,5 +1,5 @@
 ---
-title: Accessibility tips and tricks | Microsoft Docs
+title: "アクセシビリティのヒントとテクニック | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
 ms.reviewer: 
@@ -19,47 +19,47 @@ ms.translationtype: HT
 ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
 ms.openlocfilehash: 906e8c70df502245001f87795cab9f5efe808c83
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="accessibility-tips-and-tricks"></a>Accessibility tips and tricks
+# <a name="accessibility-tips-and-tricks"></a>アクセシビリティのヒントとテクニック
 > [!TIP]
-> To learn more about recent accessibility updates, see the [Accessibility improvements in Visual Studio 2017 version 15.3](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/) blog post.
+> 最近実施されたアクセシビリティの更新の詳細については、ブログ投稿の「[Accessibility improvements in Visual Studio 2017 version 15.3 (Visual Studio 2017 バージョン 15.3 でのアクセシビリティの機能強化)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/)」をご覧ください。
 
-Visual Studio includes built-in accessibility features so you can easily work from the keyboard and use screen readers or other assistive technology devices. The topic includes some suggestions for optimizing Visual Studio for accessibility as well as some useful shortcut key combinations. Shortcut key combinations enable you to perform tasks in Visual Studio by using the keyboard.
+Visual Studio にはアクセシビリティ機能が組み込まれているため、簡単にキーボードで作業したり、スクリーン リーダーやその他の支援技術デバイスを使用したりすることができます。 ここでは、便利なショートカット キーのいくつかの組み合わせのほか、Visual Studio のアクセシビリティを向上するために最適化する場合の推奨事項についてもいくつか示します。 ショートカット キーを組み合わせて使用すると、キーボードで Visual Studio のタスクを実行できます。
 
-## <a name="save-your-ide-settings"></a>Save your IDE settings  
- You can customize your IDE experience by saving your window layout, keyboard mapping scheme, and other preferences. For more information, see [Personalize the Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md).  
+## <a name="save-your-ide-settings"></a>IDE 設定を保存する  
+ ウィンドウのレイアウト、キーボード マップ スキーム、およびその他の設定を保存することにより、IDE エクスペリエンスをカスタマイズできます。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
 
-## <a name="accessing-toolbars"></a>Accessing toolbars
-The Visual Studio IDE has toolbars as do many tool windows. The following shortcut key combinations help you access them.
+## <a name="accessing-toolbars"></a>ツールバーへのアクセス
+Visual Studio IDE には、多くのツール ウィンドウと同様に機能するツールバーがあります。 次のショートカット キーの組み合わせを使用すると、それらのツールバーに容易にアクセスできます。
 
-|Feature|Description|Key Combination|  
+|機能|説明|キーの組み合わせ|  
 |-------------|-----------------|---------------------|  
-|IDE toolbars|Select the first button on the Standard toolbar.|**ALT**, **CTRL** + **TAB**|  
-|Tool window toolbars|Move focus to the toolbars in a tool window. <br> <br> **NOTE:** This works for most tool windows, but only when the focus is in a tool window. Also, you must choose the SHIFT key before the ALT key. In some tool windows, such as Team Explorer, you must hold the SHIFT key for a moment before choosing the ALT key.|**SHIFT** + **ALT**|
-|Toolbars|Go to the first item in the next toolbar (when a toolbar has focus).|**CTRL** + **TAB**|
+|IDE ツール バー|標準ツール バーの最初のボタンを選択します。|**ALT**、**CTRL** + **TAB**|  
+|ツール ウィンドウのツール バー|ツール ウィンドウのツール バーにフォーカスを移動します。 <br> <br> **注:** この操作はほとんどのツール ウィンドウで可能です。ただし、フォーカスがツール ウィンドウ内になければなりません。 また、Shift キーを押してから、Alt キーを押す必要があります。 チーム エクスプローラーなど、一部のツール ウィンドウでは、Shift キーをしばらく押したままにしてから、Alt キーを押す必要があります。|**Shift** + **Alt**|
+|ツールバー|次のツールバーの最初の項目に移動します (特定のツールバーにフォーカスが置かれている場合)。|**CTRL** + **TAB**|
 
-## <a name="other-useful-shortcut-key-combinations"></a>Other useful shortcut key combinations  
-Some other useful shortcut key combinations include the following.
+## <a name="other-useful-shortcut-key-combinations"></a>その他の便利なショートカット キーの組み合わせ  
+他にも便利なショートカット キーの組み合わせがあります。
 
-|Feature|Description|Key Combination|  
+|機能|説明|キーの組み合わせ|  
 |-------------|-----------------|---------------------|  
-|IDE|Switch High Contrast on and off. <br> <br> **NOTE:** Standard Windows shortcut|**Left ALT + Left SHIFT + PRINT SCREEN**|  
-|Dialog box|Select or clear the check box option in a dialog box. <br> <br> **NOTE:** Standard Windows shortcut|**SPACEBAR**|  
-|Context menus|Open a context (right-click) menu. <br> <br> **NOTE:** Standard Windows shortcut|**SHIFT** + **F10**|
-|Menus|Quickly access a menu item by using its accelerator keys. Choose the **ALT** key followed by the underlined letters in a menu to activate the command. For example, to view the Open Project dialog box in Visual Studio, you would choose **ALT** + **F** + **O** + **P**.  <br><br> **NOTE:** Standard Windows shortcut|**ALT** + **[letter]**|
-|Toolbox window|Move among Toolbox tabs.|**CTRL** + **UPARROW**<br /><br /> and<br /><br /> **CTRL** + **DOWNARROW**|  
-|Toolbox window|Add a control from the Toolbox to a form or designer.|**ENTER**|  
-|Keyboard, Environment, Options dialog box|Delete a key combination entered in the **Press shortcut keys** option.|**BACKSPACE**|  
+|IDE|ハイ コントラストのオンとオフを切り替えます。 <br> <br> **注:** Windows の標準的なショートカット|**左 Alt + 左 Shift + Print Screen**|  
+|ダイアログ ボックス|ダイアログ ボックスのチェック ボックス オプションをオンまたはオフにします。 <br> <br> **注:** Windows の標準的なショートカット|**Space キー**|  
+|コンテキスト メニュー|(右クリックして) コンテキスト メニューを開きます。 <br> <br> **注:** Windows の標準的なショートカット|**SHIFT** + **F10**|
+|メニュー|アクセラレータ キーを使用して、メニュー項目にすばやくアクセスします。 **Alt** キーを押してからメニュー内の下線付きの文字を選択して、コマンドをアクティブにします。 たとえば、Visual Studio の [プロジェクトを開く] ダイアログ ボックスを表示するには、**ALT** + **F** + **O** + **P** キーを押します。  <br><br> **注:** Windows の標準的なショートカット|**ALT** + **[文字]**|
+|[ツールボックス] ウィンドウ|[ツールボックス] のタブ間を移動します。|**Ctrl** + **↑**<br /><br /> と、呼び出し<br /><br /> **Ctrl** + **↓**|  
+|[ツールボックス] ウィンドウ|[ツールボックス] からフォームまたはデザイナーにコントロールを追加します。|**Enter**|  
+|[キーボード]\([オプション] ダイアログ ボックス - [環境])|**[ショートカット キー]** オプションに入力されたキーの組み合わせを削除します。|**Backspace**|  
 
 > [!NOTE]
->  The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。  
 
-## <a name="see-also"></a>See also  
- [Accessibility Features of Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio のユーザー補助機能](../../ide/reference/accessibility-features-of-visual-studio.md)
 
- [How to: Customize Menus and Toolbars in Visual Studio](../../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
+ [方法: Visual Studio でメニューおよびツール バーをカスタマイズする](../../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
 
- [Personalize the Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md)
+ [Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)
 

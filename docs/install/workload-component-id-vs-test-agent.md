@@ -1,6 +1,6 @@
 ---
-title: Visual Studio Test Agent 2017 workload and component IDs | Microsoft Docs
-description: Use Visual Studio workload and component IDs to run automated tests and load tests remotely
+title: "Visual Studio Test Agent 2017 のワークロードとコンポーネント ID | Microsoft Docs"
+description: "Visual Studio のワークロード ID とコンポーネント ID を使って、自動テストとロード テストをリモートで実行します"
 keywords: 
 author: TerryGLee
 ms.author: tglee
@@ -35,48 +35,48 @@ ms.translationtype: HT
 ms.sourcegitcommit: 96018963278cd1d53b226473baade41da1e98111
 ms.openlocfilehash: 78a656f32068055326567223b8ce6cd68095e647
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 
-# <a name="visual-studio-test-agent-2017-component-directory"></a>Visual Studio Test Agent 2017 component directory
+# <a name="visual-studio-test-agent-2017-component-directory"></a>Visual Studio Test Agent 2017 のコンポーネント ディレクトリ
 
-The tables on this page list the IDs that you can use to install Visual Studio by using the command line. Note that we will add additional components as we release updates to Visual Studio.
+このページの表では、コマンド ラインを使用して Visual Studio をインストールするために使用できる ID の一覧を示します。 Visual Studio の更新プログラムがリリースされる際には、さらにコンポーネントが追加される予定です。
 
-Also note the following about the page:
+また、このページに関して以下の点に注意してください。
 
-* Each workload has its own section, followed by the workload ID and a table of the components that are available for the workload.
-* By default, the **Required** components will be installed when you install the workload. If you choose to, you can also install the **Recommended** and **Optional** components.
-* We've also added a section that lists the additional components that are not affiliated with any workload.
+* 各ワークロードに個別のセクションがあり、ワークロード ID と、そのワークロードで利用できるコンポーネントの表が示されています。
+* 既定では、ワークロードをインストールすると**必須**コンポーネントがインストールされます。 選択した場合は、**推奨**コンポーネントと**オプション** コンポーネントもインストールできます。
+* どのワークロードにも関連付けられていない追加のコンポーネントの一覧を示したセクションも追加しました。
 
-For more information about how to use these IDs, see [Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) page. And, for a list of workload and component IDs for other products, see [Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md) page.
+これらの ID の使用方法の詳細については、「[Use Command-Line Parameters to Install Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md)」(コマンドライン パラメーターを使用して Visual Studio 2017 をインストールする) をご覧ください。 他の製品のワークロードとコンポーネント ID の一覧については、「[Visual Studio 2017 Workload and Component IDs](workload-and-component-ids.md)」(Visual Studio 2017 のワークロードとコンポーネント ID) をご覧ください。
 
 ## <a name="test-agent"></a>Test Agent
 
 **ID:** Microsoft.VisualStudio.Workload.TestAgent
 
-**Description:** Supports running automated tests and load tests remotely
+**説明:**自動テストとロード テストのリモートでの実行をサポートします
 
-### <a name="components-included-by-this-workload"></a>Components included by this workload
+### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 
-Component ID | Name | Version | Dependency type
+コンポーネント ID | 名前 | バージョン | 依存関係の種類
 --- | --- | --- | ---
-Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test Agent core features | 15.0.26606.0 | Required
+Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Test Agent のコア機能 | 15.0.26606.0 | 必須
 
-## <a name="unaffiliated-components"></a>Unaffiliated components
+## <a name="unaffiliated-components"></a>関連付けられていないコンポーネント
 
-These are components that are not included with any workload, but may be selected as an individual component.
+以下のコンポーネントはどのワークロードにも含まれていませんが、個別のコンポーネントとして選択できます。
 
-Component ID | Name | Version
+コンポーネント ID | 名前 | バージョン
 --- | --- | ---
-n/a | n/a | n/a
+適用なし | 該当なし | 適用なし
 
 
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>関連項目
 
-* [Visual Studio workload and component IDs](workload-and-component-ids.md)
-* [Visual Studio administrator guide](visual-studio-administrator-guide.md)
-* [Use command-line parameters to install Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
-  * [Command-line parameter examples](command-line-parameter-examples.md)
-* [Create an offline installation of Visual Studio](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio のワークロードとコンポーネント ID](workload-and-component-ids.md)
+* [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
+* [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)
+  * [コマンド ライン パラメーターの例](command-line-parameter-examples.md)
+* [Visual Studio のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
 

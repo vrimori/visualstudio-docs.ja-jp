@@ -1,5 +1,5 @@
 ---
-title: Analyze Memory Usage in Visual Studio | Microsoft Docs
+title: "Visual Studio でメモリ使用量を分析する | Microsoft Docs"
 ms.custom: H1Hack27Feb2017
 ms.date: 04/25/2017
 ms.reviewer: 
@@ -32,158 +32,158 @@ ms.translationtype: HT
 ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
 ms.openlocfilehash: 56ff9bcee976de7ae6be4bc410c275438f0f16ec
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="analyze-memory-usage"></a>Analyze Memory Usage
-Find memory leaks and inefficient memory while you're debugging with the debugger-integrated **Memory Usage** diagnostic tool. The Memory Usage tool lets you take one or more *snapshots* of the managed and native memory heap. You can collect snapshots of .NET, native, or mixed mode (.NET and native) apps.  
+# <a name="analyze-memory-usage"></a>メモリ使用量の分析
+デバッガーに統合された**メモリ使用量**診断ツールを使用したデバッグ中に、メモリ リークおよび非効率的なメモリを見つけます。 メモリ使用量ツールを使用すると、マネージ メモリ ヒープ、およびネイティブ メモリ ヒープの 1 つまたは複数の *スナップショット* を取得できます。 .NET アプリ、ネイティブ アプリ、または混在モード (.NET とネイティブ) アプリのスナップショットを収集できます。  
   
--   You can analyze a single snapshot to understand the relative impact of the object types on memory use, and to find code in your app that uses memory inefficiently.  
+-   単一のスナップショットを分析することにより、オブジェクト型のメモリ使用に対する相対的な影響を理解し、アプリ内でメモリが効率的に使用されていないコードを検出することができます。  
   
--   You can also compare (diff) two snapshots of an app to find areas in your code that cause the memory use to increase over time.  
+-   アプリの 2 つのスナップショットを比較 (diff) することにより、コード内で時間の経過に伴ってメモリ使用量が増加している箇所を検出することもできます。  
   
- The following graphic shows the **Diagnostic Tools** window (available in Visual Studio 2015 Update 1 and later versions):  
+ 次の図は、**[診断ツール]** ウィンドウ (Visual Studio 2015 Update 1 以降で利用可能) を示しています。  
   
  ![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")  
   
- Although you can collect memory snapshots at any time in the **Memory Usage** tool, you can use the Visual Studio debugger to control how your application executes while investigating performance issues. Setting breakpoints, stepping, Break All, and other debugger actions can help you focus your performance investigations on the code paths that are most relevant. Performing those actions while your app is running can eliminate the noise from the code that doesn't interest you and can significantly reduce the amount of time it takes you to diagnose an issue.  
+ **メモリ使用量** ツールでメモリのスナップショットをいつでも収集できますが、Visual Studio デバッガーを使用すると、パフォーマンスの問題を調査中にアプリケーションの実行方法を制御することができます。 ブレークポイントの設定、ステップ実行、すべて中断、その他のデバッガー アクションは、パフォーマンスの調査を最も関連性の高いコード パスに集中させるのに役立ちます。 アプリの実行中にこれらのアクションを実行することで、目的としていないコードからのノイズを除去することができ、問題の診断にかかる時間を大幅に短縮できます。  
   
- You can also use the memory tool outside of the debugger. See [Memory Usage without Debugging](../profiling/memory-usage-without-debugging2.md).  
+ さらに、デバッガーの外部のメモリ ツールも使用できます。 「 [Memory Usage without Debugging](../profiling/memory-usage-without-debugging2.md)」を参照してください。  
   
 > [!NOTE]
->  **Custom Allocator Support** The native memory profiler works by collecting allocation [ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) event data emitted by during runtime.  Allocators in the CRT and Windows SDK have been annotated at the source level so that their allocation data can be captured.  If you are writing your own allocators, then any functions that return a pointer to newly allocated heap memory can be decorated with [__declspec](/cpp/cpp/declspec)(allocator), as seen in this example for myMalloc:  
+>  **カスタム アロケーター サポート** ネイティブ メモリ プロファイラーは、実行時に生成された割り当て [ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) イベント データを収集して機能します。  CRT および Windows SDK のアロケーターには、割り当てデータをキャプチャできるように、ソース レベルで注釈が付けられています。  独自のアロケーターを作成する場合、新しく割り当てられたヒープ メモリへのポインターを返すすべての関数は、[__declspec](/cpp/cpp/declspec)(アロケーター) で修飾できます。myMalloc での例を次に示します。  
 >   
 >  `__declspec(allocator) void* myMalloc(size_t size)` 
 
-## <a name="collect-memory-usage-data"></a>Collect memory usage data
+## <a name="collect-memory-usage-data"></a>メモリ使用量データの収集
 
-1.  Open the project you want to debug in Visual Studio and set a breakpoint in your app at the point where you want to begin examining memory usage.
+1.  Visual Studio でデバッグするプロジェクトを開き、メモリ使用率を調べ始めるポイントでアプリのブレークポイントを設定します。
 
-    If you have an area where you suspect a memory issue, set the first breakpoint before the memory issue occurs.
+    メモリの問題があると疑われる領域がある場合は、メモリの問題が発生する前に、最初のブレークポイントを設定します。
 
     > [!TIP]
-    >  Because it can be challenging to capture the memory profile of an operation that interests you when your app frequently allocates and de-allocates memory, set breakpoints at the start and end of the operation (or step through the operation) to find the exact point that memory changed. 
+    >  アプリがメモリの割り当てと割り当て解除を頻繁に行う場合、目的とする操作のメモリ プロファイルを取得するのが容易ではないため、操作の最初と最後にブレークポイントを設定して (または操作をステップ実行して)、メモリが変更された正確なポイントを見つけます。 
 
-2.  Set a second breakpoint at the end of the function or region of code that you want to analyze (or after a suspected memory issue occurs).
+2.  分析するコードの関数またはリージョンの終わりに (または疑わしいメモリの問題が発生したあとに) 2 つ目のブレークポイントを設定します。
   
-3.  The **Diagnostic Tools** window appears automatically unless you have turned it off. To bring up the window again, click **Debug / Windows / Show Diagnostic Tools**.
+3.  **[診断ツール]** ウィンドウは、オフにしていない限り自動的に表示されます。 もう一度ウィンドウを表示するには、**[デバッグ] > [ウィンドウ] > [診断ツールの表示]** の順にクリックします。
 
-4.  Choose **Memory Usage** with the **Select Tools** setting on the toolbar.
+4.  ツールバーにある **[ツールの選択]** の設定で、**[メモリ使用量]** を選択します。
 
-     ![Show Diagnostics Tools](../profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
+     ![診断ツールを表示する](../profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
 
-5.  Click **Debug / Start Debugging** (or **Start** on the toolbar, or **F5**).
+5.  **[デバッグ]、[デバッグの開始]** の順にクリックします (あるいは、ツール バーの **[開始]** をクリックするか、**F5** を押します)。
 
-     When the app finishes loading, the Summary view of the Diagnostics Tools appears.
+     アプリケーションが読み込みを完了すると、診断ツールの概要ビューが表示されます。
 
-     ![Diagnostics Tools Summary Tab](../profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
+     ![診断ツールの概要タブ](../profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
 
      > [!NOTE]
-     >  Because collecting memory data can affect the debugging performance of your native or mixed-mode apps, memory snapshots are disabled by default. To enable snapshots in native or mixed-mode apps, start a debugging session (Shortcut key: **F5**). When the **Diagnostic Tools** window appears, choose the Memory Usage tab, and then choose **Heap Profiling**.  
+     >  メモリ データの収集はネイティブ アプリや混在モードのアプリのパフォーマンスに影響する可能性があるため、既定でメモリのスナップショットは無効になっています。 ネイティブ アプリや混在モードのアプリのスナップショットを有効にするには、デバッグ セッションを開始します (ショートカット キー: **F5**)。 **[診断ツール]** ウィンドウが表示されたら、[メモリ使用量] タブを選択して、**[ヒープのプロファイル]** を選択します。  
      >   
-     >  ![Enable snapshots](../profiling/media/dbgdiag_mem_mixedtoolbar_enablesnapshot.png "DBGDIAG_MEM_MixedToolbar_EnableSnapshot")  
+     >  ![スナップショットを有効にする](../profiling/media/dbgdiag_mem_mixedtoolbar_enablesnapshot.png "DBGDIAG_MEM_MixedToolbar_EnableSnapshot")  
      >   
-     >  Stop (Shortcut key: **Shift + F5**) and restart debugging.  
+     >  デバッグを停止 (ショートカット キー: **Shift + F5**) してから再開します。  
 
-6.  To take a snapshot at the start of your debugging session, choose **Take snapshot** on the **Memory Usage** summary toolbar. (It may help to set a breakpoint here as well.)
+6.  デバッグ セッションの開始時にスナップショットを取得するには、**[メモリ使用量]** 概要ツールバーで **[スナップショットの取得]** を選択します。 (ここにもブレークポイントを設定すると役に立つ場合があります。)
 
-    ![Take snapshot](../profiling/media/dbgdiag_mem_mixedtoolbar_takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot") 
+    ![スナップショットを取得する](../profiling/media/dbgdiag_mem_mixedtoolbar_takesnapshot.png "DBGDIAG_MEM_MixedToolbar_TakeSnapshot") 
      
      > [!TIP]
-     >  To create a baseline for memory comparisons, consider taking a snapshot at the start of your debugging session.  
+     >  メモリ比較のベースラインを作成するには、デバッグ セッションの開始時に、スナップショットを取得することを検討します。  
 
-6.  Run the scenario that will cause your first breakpoint to be hit.
+6.  最初のブレークポイントにヒットするシナリオを実行します。
 
-7.  While the debugger is paused at the first breakpoint, choose **Take snapshot** on the **Memory Usage** summary toolbar.  
+7.  デバッガーが最初のブレークポイントで一時停止している間に、**[メモリ使用量]** 概要ツールバーで **[スナップショットの取得]** を選択します。  
 
-8.  Hit F5 to run the app to your second breakpoint.
+8.  F5 キーを押すと、アプリケーションが 2 つ目のブレークポイントまで実行されます。
 
-9.  Now, take another snapshot.
+9.  次に、別のスナップショットを取得しましょう。
 
-     At this point, you can begin to analyze the data.    
+     この時点で、データの分析を開始できます。    
   
-## <a name="analyze-memory-usage-data"></a>Analyze memory usage data
-The rows of Memory Usage summary table lists the snapshots that you have taken during the debugging session and provides links to more detailed views.
+## <a name="analyze-memory-usage-data"></a>メモリ使用量データの分析
+メモリ使用量の概要テーブルの行には、デバッグ セッション中に取得したスナップショットが一覧表示され、より詳細なビューへのリンクが提供されています。
 
-![Memory summary table](../profiling/media/dbgdiag_mem_summarytable.png "DBGDIAG_MEM_SummaryTable")
+![メモリの概要テーブル](../profiling/media/dbgdiag_mem_summarytable.png "DBGDIAG_MEM_SummaryTable")
 
- The name of the columns depend on the debugging mode you choose in the project properties: .NET, native, or mixed (both .NET and native).  
+ 列の名前は、プロジェクトのプロパティで選択したデバッグ モード (.NET、ネイティブ、または混合 (.NET とネイティブの両方)) によって決まります。  
   
--   The **Objects (Diff)** and **Allocations (Diff)** columns display the number of objects in .NET and native memory when the snapshot was taken.  
+-   **[オブジェクト (相違)]** および **[割り当て (相違)]** 列には、スナップショット取得時の .NET メモリおよびネイティブ メモリ内のオブジェクト数が表示されます。  
   
--   The **Heap Size (Diff)** column displays the number of bytes in the .NET and native heaps 
+-   **[ヒープ サイズ (相違)]** 列には、.NET ヒープおよびネイティブ ヒープのバイト数が表示されます。 
 
-When you have taken multiple snapshots, the cells of the summary table include the change in the value between the row snapshot and the previous snapshot.  
+複数のスナップショットを取得した場合、概要テーブルのセルには、行のスナップショットと前のスナップショットの間の値の変化が含まれます。  
 
-To analyze memory usage, click one of the links that opens up a detailed report of memory usage:  
+メモリ使用量を分析するには、リンクを 1 つクリックして、メモリ使用量の詳細なレポートを開きます。  
 
--   To view details of the difference between the current snapshot and the previous snapshot, choose the change link to the left of the arrow (![Memory Usage Increase](../profiling/media/prof-tour-mem-usage-up-arrow.png "Memory Usage Increase")). A red arrow indicates an increase in memory usage, and a green arrow to indicates a decrease.
+-   現在のスナップショットと前のスナップショットの相違点の詳細を表示するには、矢印の左にある変更リンクを選択します (![メモリ使用量増加](../profiling/media/prof-tour-mem-usage-up-arrow.png "メモリ使用量増加"))。 赤い矢印はメモリ使用量が増加したことを示し、緑の矢印は減少したことを示しています。
 
     > [!TIP]
-    >  To help identify memory issues more quickly, the diff reports are sorted by object types that increased the most in overall number (click the change link in **Objects (Diff)** column) or that increased the most in overall heap size (click the change link in **Heap Size (Diff)** column).
+    >  より迅速にメモリの問題を識別するために、Diff レポートは、総数が最も増加したオブジェクト型の順 (**[オブジェクト (相違)]** 列の変更リンクをクリック) や、総ヒープ サイズが最も増加したオブジェクト型の順 (**[ヒープ サイズ (相違)]** 変更リンクをクリック) に並べ替えられています。
 
--   To view details of only the selected snapshot, click the non-change link. 
+-   選択したスナップショットのみの詳細を表示するには、変更リンクではないリンクをクリックします。 
   
- The report appears in a separate window.   
+ レポートが新しいウィンドウに表示されます。   
   
-### <a name="managed-types-reports"></a>Managed types reports  
- Choose the current link of a **Objects (Diff)** or **Allocations (Diff)** cell in the Memory Usage summary table.  
+### <a name="managed-types-reports"></a>マネージ型レポート  
+ メモリ使用量の概要テーブルで、**[オブジェクト (相違)]** または **[割り当て (相違)]** セルの現在のリンクを選択します。  
   
- ![Debugger managed type report &#45; Paths to Root](../profiling/media/dbgdiag_mem_managedtypesreport_pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")  
+ ![デバッガーのマネージ型のレポート &#45; ルートへのパス](../profiling/media/dbgdiag_mem_managedtypesreport_pathstoroot.png "DBGDIAG_MEM_ManagedTypesReport_PathsToRoot")  
   
- The top pane shows the count and size of the types in the snapshot, including the size of all objects that are referenced by the type (**Inclusive Size**).  
+ 上のウィンドウには、型で参照されているすべてのオブジェクトのサイズ (**包括サイズ**) を含む、スナップショット内の型の総数およびサイズが表示されます。  
   
- The **Paths to Root** tree in the bottom pane displays the objects that reference the type selected in the upper pane. The .NET Framework garbage collector cleans up the memory for an object only when the last type that references it has been released.  
+ 下のウィンドウの **[ルートのパス]** ツリーには、上ウィンドウで選択されている型を参照するオブジェクトが表示されます。 .NET Framework のガベージ コレクターがオブジェクトのメモリをクリーンアップするのは、そのオブジェクトを参照する最後の型が解放されたときに限られます。  
   
- The **Referenced Types** tree displays the references that are held by the type selected in the upper pane.  
+ **[参照される型]** ツリーには、上のウィンドウで選択されている型に保持されている参照が表示されます。  
   
- ![Managed eferenced types report view](../profiling/media/dbgdiag_mem_managedtypesreport_referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")  
+ ![マネージ参照型のレポート ビュー](../profiling/media/dbgdiag_mem_managedtypesreport_referencedtypes.png "DBGDIAG_MEM_ManagedTypesReport_ReferencedTypes")  
   
- To display the instances of a selected type in the upper pane, choose the ![Instance icon](../profiling/media/dbgdiag_mem_instanceicon.png "DBGDIAG_MEM_InstanceIcon") icon.  
+ 上のウィンドウで選択した型のインスタンスを表示するには、![[インスタンス] アイコン](../profiling/media/dbgdiag_mem_instanceicon.png "DBGDIAG_MEM_InstanceIcon") アイコンを選択します。  
   
- ![Instances view](../profiling/media/dbgdiag_mem_managedtypesreport_instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")  
+ ![インスタンス ビュー](../profiling/media/dbgdiag_mem_managedtypesreport_instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")  
   
- The **Instances** view displays the instances of the selected object in the snapshot in the upper pane. The Paths to Root and Referenced Types pane display the objects that reference the selected instance and the types that the selected instance references. When the debugger is stopped at the point where the snapshot was taken, you can hover over the Value cell to display the values of the object in a tool tip.  
+ **[インスタンス]** ビューには、上のウィンドウのスナップショットで選択されているインスタンスが表示されます。 [ルートのパス] および [参照された型] ウィンドウには、選択したインスタンスを参照するオブジェクトと、選択したインスタンスが参照する型が表示されます。 スナップショットが取得された時点でデバッガーを停止すると、[値] セルの上にマウス カーソルを移動して、ツール ヒントにオブジェクトの値を表示することができます。  
   
-### <a name="native-type-reports"></a>Native type reports  
- Choose the current link of a **Allocations (Diff)** or **Heap Size (Diff)** cell in the Memory Usage summary table of the **Diagnostic Tools** window.  
+### <a name="native-type-reports"></a>ネイティブ型のレポート  
+ **[診断ツール]** ウィンドウのメモリ使用量の概要テーブルで、**[割り当て (相違)]** または **[ヒープ サイズ (相違)]** セルの現在のリンクを選択します。  
   
- ![Native Type View](../profiling/media/dbgdiag_mem_native_typesview.png "DBGDIAG_MEM_Native_TypesView")  
+ ![ネイティブ型のビュー](../profiling/media/dbgdiag_mem_native_typesview.png "DBGDIAG_MEM_Native_TypesView")  
   
- The **Types View** displays the number and size of the types in the snapshot.  
+ **[型ビュー]** には、スナップショットの型の数およびサイズが表示されます。  
   
--   Choose the instances icon (![The instance icon in the Object Type column](../profiling/media/dbg_mma_instancesicon.png "DBG_MMA_InstancesIcon")) of a selected type to display information about the objects of the selected type in the snapshot.  
+-   選択した型のインスタンス アイコン (![[オブジェクト型] 列の [インスタンス] アイコン](../profiling/media/dbg_mma_instancesicon.png "DBG_MMA_InstancesIcon")) を選択し、スナップショットの選択した型のオブジェクトに関する情報を表示します。  
   
-     The **Instances** view displays each instance of the selected type. Selecting an instance displays the call stack that resulted in the creation of the instance in the **Allocation Call Stack** pane.  
+     **[インスタンス]** ビューには、選択した型の各インスタンスが表示されます。 インスタンスを選択すると呼び出し履歴が表示され、その結果、 **[割り当て呼び出し履歴]** ウィンドウにそのインスタンスが作成されます。  
   
-     ![Instances view](../profiling/media/dbgdiag_mem_native_instances.png "DBGDIAG_MEM_Native_Instances")  
+     ![インスタンス ビュー](../profiling/media/dbgdiag_mem_native_instances.png "DBGDIAG_MEM_Native_Instances")  
   
--   Choose **Stacks View** in the **View Mode** list to see the allocation stack for the selected type.  
+-   **[表示モード]** の一覧で **[スタック ビュー]** を選択し、選択した型の割り当て履歴を表示します。  
   
-     ![Stacks View](../profiling/media/dbgdiag_mem_native_stacksview.png "DBGDIAG_MEM_Native_StacksView")  
+     ![スタック ビュー](../profiling/media/dbgdiag_mem_native_stacksview.png "DBGDIAG_MEM_Native_StacksView")  
   
-### <a name="change-diff-reports"></a>Change (Diff) reports  
+### <a name="change-diff-reports"></a>変更 (Diff) レポート  
   
--   Choose the change link in a cell of the summary table of the **Memory Usage** tab on the **Diagnostic Tools** window.  
+-   **[診断ツール]** ウィンドウの **[メモリ使用量]** タブで、概要テーブルのセルにある変更リンクを選択します。  
   
-     ![Choose a change &#40;dif&#41;f report](../profiling/media/dbgdiag_mem_choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
+     ![変更 &#40;差分&#41; レポートの選択](../profiling/media/dbgdiag_mem_choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
   
--   Choose a snapshot in the **Compare To** list of a managed or native report.  
+-   マネージ レポート、もしくはネイティブ レポートの **[比較対象]** 一覧でスナップショットを選択します。  
   
-     ![Choose a snapshot from the Compare To list](../profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
+     ![比較対象の一覧からスナップショットを選択](../profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
   
- The change report adds columns (marked with **(Diff)**) to the base report that show the difference between the base snapshot value and the comparison snapshot. Here's how a Native Type View diff report might look:  
+ 変更レポートを実行すると、基本のスナップショット値と比較のスナップショットの差分を表示する列 ( **(Diff)**のマークが付けられる) が、基本レポートに追加されます。 ネイティブ型の差分レポート ビューは次のようになります。  
   
- ![Native Types Diff Veiw](../profiling/media/dbgdiag_mem_native_typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
+ ![ネイティブ型の差分ビュー](../profiling/media/dbgdiag_mem_native_typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
   
-## <a name="blogs-and-videos"></a>Blogs and videos  
- [Diagnostic Tools debugger window in Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015.aspx)  
+## <a name="blogs-and-videos"></a>ブログとビデオ  
+ [Visual Studio 2015 の診断ツール [デバッガー] ウィンドウ](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015.aspx)  
   
- [Blog: Memory Usage Tool while debugging in Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx)  
+ [ブログ: Visual Studio 2015 のデバッグ中のメモリ使用量ツール](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx)  
   
- [Visual C++ Blog: Native Memory Diagnostics in VS2015 Preview](http://blogs.msdn.com/b/vcblog/archive/2014/11/21/native-memory-diagnostics-in-vs2015-preview.aspx)  
+ [Visual C++ ブログ: VS2015 プレビューでのネイティブ メモリ診断](http://blogs.msdn.com/b/vcblog/archive/2014/11/21/native-memory-diagnostics-in-vs2015-preview.aspx)  
   
- [Visual C++ Blog: Native Memory Diagnostic Tools for Visual Studio 2015 CTP](http://blogs.msdn.com/b/vcblog/archive/2014/06/04/native-memory-diagnostic-tools-for-visual-studio-14-ctp1.aspx)
+ [Visual C++ ブログ: Visual Studio 2015 CTP のネイティブ メモリ診断ツール](http://blogs.msdn.com/b/vcblog/archive/2014/06/04/native-memory-diagnostic-tools-for-visual-studio-14-ctp1.aspx)
 
-## <a name="see-also"></a>See Also
- [Profiling in Visual Studio](../profiling/index.md) [Profiling Feature Tour](../profiling/profiling-feature-tour.md)
+## <a name="see-also"></a>関連項目
+ [Visual Studio のプロファイル](../profiling/index.md) [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

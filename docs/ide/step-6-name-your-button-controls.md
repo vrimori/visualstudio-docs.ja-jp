@@ -1,5 +1,5 @@
 ---
-title: 'Step 6: Name Your Button Controls | Microsoft Docs'
+title: "手順 6: ボタン コントロールの名前の設定 | Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,66 +32,66 @@ ms.translationtype: HT
 ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
 ms.openlocfilehash: 8bd8c04c9a9aba653f587d74b2c6e4fc7ce562f9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="step-6-name-your-button-controls"></a>Step 6: Name Your Button Controls
-There's only one PictureBox on your form. When you added it, the IDE automatically named it **pictureBox1**. There's only one CheckBox, which is named **checkBox1**. Soon, you will write some code, and that code will refer to the CheckBox and PictureBox. Because there's only one of each of these controls, you will know what it means when you see **pictureBox1** or **checkBox1** in your code.  
+# <a name="step-6-name-your-button-controls"></a>手順 6: ボタン コントロールの名前の設定
+PictureBox はフォームで 1 つだけ使用しています。 このコントロールには、追加したときに自動的に **pictureBox1**という名前が付けられています。 CheckBox も 1 つだけで、 **checkBox1**という名前が付けられています。 この後コードを記述しますが、そのコードでは CheckBox と PictureBox を参照します。 これらのコントロールについては、どちらも 1 つだけであるため、コードで **pictureBox1** または **checkBox1** となっていても何を指しているのかがわかります。  
   
 > [!NOTE]
->  In Visual Basic, the default first letter of any control name is initial cap, so the names are **PictureBox1**, **CheckBox1**, and so on.  
+>  Visual Basic の場合は、どのコントロールの名前も既定で先頭文字が大文字になるため、名前は **PictureBox1**、 **CheckBox1**のようになります。  
   
- There are four buttons on your form, and the IDE named them **button1**, **button2**, **button3**, and **button4**. By just looking at their current names, you don't know which button is the **Close** button and which one is the **Show a picture** button. That's why giving your button controls more informative names is helpful.  
+ ボタンはフォームに 4 つあり、 **button1**、 **button2**、 **button3**、および **button4**という名前が付けられています。 現在の名前を見ただけでは、どれが **[Close]** ボタンでどれが **[Show a picture]** ボタンなのかわかりません。 そのため、ボタン コントロールにもっとわかりやすい名前を付けると便利です。  
   
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 3](http://go.microsoft.com/fwlink/?LinkId=205213) or [Tutorial 1: Create a Picture Viewer in C# - Video 3](http://go.microsoft.com/fwlink/?LinkId=205202). These videos use an earlier version of Visual Studio, so there are slight differences in some menu commands and other user interface elements. However, the concepts and procedures work similarly in the current version of Visual Studio.  
+ ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 3](http://go.microsoft.com/fwlink/?LinkId=205213)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 3](http://go.microsoft.com/fwlink/?LinkId=205202)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
-### <a name="to-name-your-button-controls"></a>To name your button controls  
+### <a name="to-name-your-button-controls"></a>ボタン コントロールの名前を設定するには  
   
-1.  On the form, choose the **Close** button. (If you still have all the buttons selected, choose the ESC key to cancel the selection.) Scroll in the **Properties** window until you see the **(Name)** property. (The **(Name)** property is near the top when the properties are alphabetical.) Change the name to **closeButton**, as shown in the following picture.  
+1.  フォームで **[閉じる]** ボタンをクリックします (すべてのボタンが選択されたままになっている場合は、Esc キーを押して選択を取り消します)。**[プロパティ]** ウィンドウで、**(Name)** プロパティが表示されるまでスクロールします  (プロパティがアルファベット順になっている場合は、**(Name)** プロパティは上の方にあります)。次の図に示すように、名前を **closeButton** に変更します。  
   
-     ![Properties window with closeButton name](../ide/media/express_setnameproperty.png "Express_SetNameProperty")  
-Properties window with closeButton name  
+     ![closeButton という名前が表示された [プロパティ] ウィンドウ](../ide/media/express_setnameproperty.png "Express_SetNameProperty")  
+closeButton という名前が表示された [プロパティ] ウィンドウ  
   
     > [!NOTE]
-    >  If you try changing the name of your button to **closeButton**, with a space between the words close and Button, the IDE displays an error message: "Property value is not valid." Spaces (and a few other characters) are not allowed in control names.  
+    >  ボタンの名前を、close と Button の間に空白文字を含む「 **closeButton**」という名前に変更しようとすると、IDE で "プロパティの値が無効です" というエラー メッセージが表示されます。 空白文字 (およびその他のいくつかの文字) は、コントロール名に使用できません。  
   
-2.  Rename the other three buttons to **backgroundButton**, **clearButton**, and **showButton**. You can verify the names by choosing the control selector drop-down list in the **Properties** window. The new button names appear.  
+2.  他の 3 つのボタンの名前を **backgroundButton**、 **clearButton**、および **showButton**に変更します。 名前を確認するには、 **[プロパティ]** ウィンドウにあるコントロール セレクターのドロップダウン リストをクリックします。 新しいボタン名が表示されます。  
   
-3.  Double-click the **Show a picture** button on the form. As an alternative, choose the **Show a picture** button on the form, and then choose the ENTER key. When you do, the IDE opens an additional tab in the main window called **Form1.cs** (**Form1.vb** if you're using Visual Basic). This tab shows the code file behind the form, as shown in the following picture.  
+3.  フォームで **[Show a picture]** ボタンをダブルクリックします。 代わりに、フォームの **[Show a picture]** ボタンをクリックして、Enter キーを押すこともできます。 これを行うと、IDE では **[Form1.cs]** (Visual Basic を使用している場合は**[Form1.vb]** ) というメイン ウィンドウで追加のタブが開きます。 このタブは、次の図に示すように、フォームの背後にあるコード ファイルを示します。  
   
-     ![Form1.cs tab with Visual C&#35; code](../ide/media/express_showbuttoncode.png "Express_ShowButtonCode")  
-Form1.cs tab with Visual C# code  
+     ![Form1.cs タブの Visual C&#35; コード](../ide/media/express_showbuttoncode.png "Express_ShowButtonCode")  
+Visual C# コードが表示された [Form1.cs] タブ  
   
-4.  Focus on this part of the code. (Choose the **VB** tab below if you're using Visual Basic to view the Visual Basic version of the code.)  
+4.  コードの次の部分にフォーカスを設定します。 (Visual Basic を使用していてコードの Visual Basic バージョンを表示するには、次の **[VB]** タブをクリックします)。  
   
      [!code-vb[VbExpressTutorial1Step6#1](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_1.vb)]  [!code-csharp[VbExpressTutorial1Step6#1](../ide/codesnippet/CSharp/step-6-name-your-button-controls_1.cs)]  
   
-     You are looking at code called `showButton_Click()`. The IDE added this to the form's code when you opened the code file for the **showButton** button. At design-time, when you open the code file for a control in a form, code is generated for the control if it doesn't already exist. This code, known as a *method*, runs when you run your program and choose the control - in this case, the **Show a picture** button.  
+     `showButton_Click()`というコードが表示されています。 **[showButton]** ボタンのコード ファイルを開いたときに、これがフォームのコードに追加されます。 デザイン時に、フォームでコントロールのコード ファイルを開いて、コードが存在しない場合はコントロール用のコードが生成されます。 *メソッド*と呼ばれるこのコードは、プログラムを実行し、コントロール (この場合は、 **[Show a picture]** ) をクリックしたときに実行されます。  
   
     > [!NOTE]
-    >  In this tutorial, the Visual Basic code that's automatically generated has been simplified by removing everything between the parentheses, (). Whenever this occurs, you can remove the same code. Your program will work either way. For the remainder of the tutorials, any automatically generated code is simplified whenever possible.  
+    >  このチュートリアルでは、自動的に生成される Visual Basic コードのかっこ () で囲まれた部分をすべて削除して、コードを簡略化してあります。 このような場合は、コードの同じ部分を削除してかまいません。 いずれの場合もプログラムは正常に機能します。 チュートリアルの残りの部分では、自動的に生成されるコードについてはできる限り簡略化して示します。  
   
-5.  Choose the Windows Forms Designer tab again (**Form1.cs [Design]** in Visual C#, **Form1.vb [Design]** in Visual Basic) and then open the code file for the **Clear the picture** button to create a method for it in the form's code. Repeat this for the remaining two buttons. Each time, the IDE adds a new method to the form's code file.  
+5.  Windows フォーム デザイナーのタブ (Visual C# の場合は**[Form1.cs [デザイン]]** 、Visual Basic の場合は **[Form1.vb [デザイン]]** ) をもう一度クリックし、 **[Clear the picture]** ボタンのコード ファイルを開いてフォーム コード内のメソッドを作成します。 残りの 2 つのボタンについてもこの手順を繰り返します。 それぞれについて、フォームのコード ファイルに新しいメソッドが追加されます。  
   
-6.  To add one more method, open the code file for the CheckBox control in Windows Forms Designer to make the IDE add a `checkBox1_CheckedChanged()` method. That method is called whenever the user selects or clears the check box.  
+6.  メソッドをもう 1 つ追加するために、Windows フォーム デザイナーで CheckBox コントロールのコード ファイルを開きます。IDE で `checkBox1_CheckedChanged()` メソッドが追加されます。 このメソッドは、ユーザーがチェック ボックスのオンとオフを切り替えるたびに呼び出されます。  
   
     > [!NOTE]
-    >  When working on a program, you often move between the code editor and Windows Forms Designer. The IDE makes it easy to navigate in your project. Use **Solution Explorer** to open Windows Forms Designer by double-clicking **Form1.cs** in Visual C# or **Form1.vb** in Visual Basic, or on the menu bar, choose **View**, **Designer**.  
+    >  プログラムの作業を行うときは、コード エディターと Windows フォーム デザイナーを頻繁に切り替えることになりますが、 IDE ではプロジェクト内を簡単に移動することができます。 **ソリューション エクスプローラー** を使用して Windows フォーム デザイナーを開くには、Visual C# の場合は **[Form1.cs]** 、Visual Basic の場合は **[Form1.vb]** をダブルクリックします。または、メニュー バーで **[表示]**、 **[デザイナー]**の順にクリックします。  
   
-     The following shows the new code that you see in the code editor.  
+     コード エディターに表示される新しいコードを次に示します。  
   
      [!code-vb[VbExpressTutorial1Step6#2](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_2.vb)]  [!code-csharp[VbExpressTutorial1Step6#2](../ide/codesnippet/CSharp/step-6-name-your-button-controls_2.cs)]  
   
-     The five methods that you added are called *event handlers*, because your program calls them whenever an event (like a user choosing a button or selecting a box) happens.  
+     追加した 5 つのメソッドは、(ユーザーがボタンをクリックしたときやチェック ボックスをオンにしたときなど) イベントが発生するたびにプログラムで呼び出されることから、 *イベント ハンドラー*と呼ばれます。  
   
-     When you view the code for a control in the IDE at design time, Visual Studio adds an event handler method for the control if one isn't there. For example, when you double-click a button, the IDE adds an event handler for its Click event (which is called whenever the user chooses the button). When you double-click a check box, the IDE adds an event handler for its CheckedChanged event (which is called whenever the user selects or clears the box).  
+     デザイン時に IDE でコントロールのコードを表示して、イベント ハンドラー メソッドが見つからないと Visual Studio はコントロールのためにこれを追加します。 たとえば、ボタンをダブルクリックすると、そのボタンの Click イベントに対するイベント ハンドラー (ユーザーがボタンをクリックするたびに呼び出されるイベント ハンドラー) が追加されます。 チェック ボックスをダブルクリックすると、そのチェック ボックスの CheckedChanged イベントに対するイベント ハンドラー (ユーザーがチェック ボックスのオンとオフを切り替えるたびに呼び出されるイベント ハンドラー) が追加されます。  
   
-     After you add an event handler for a control, you can return to it at any time from Windows Forms Designer by double-clicking the control, or on the menu bar, choosing **View**, **Code**.  
+     コントロールのイベント ハンドラーを追加した後は、Windows フォーム デザイナーでコントロールをダブルクリックするか、またはメニュー バーで **[表示]**、 **[コード]**の順にクリックして、いつでもイベント ハンドラーに戻ることができます。  
   
-     Names are important when you build programs, and methods (including event handlers) can have any name that you want. When you add an event handler with the IDE, it creates a name based on the control's name and the event being handled. For example, the Click event for a button named **showButton** is called the `showButton_Click()` event handler method. Also, opening and closing parentheses () are usually added after the method name to indicate that methods are being discussed. If you decide you want to change a code variable name, right-click the variable in the code and then choose **Refactor**, **Rename**. All instances of that variable in the code are renamed. See [Rename Refactoring (C#)](../csharp-ide/refactoring/rename.md) or [Rename Refactoring (Visual Basic)](../vb-ide/refactoring/rename.md) for more information.
+     名前は、プログラムを作成するときに重要になります。メソッド (イベント ハンドラーを含む) には任意の名前を付けることができます。 IDE でイベント ハンドラーを追加した場合は、コントロールの名前と処理されるイベントに基づいて名前が作成されます。 たとえば、 **showButton** というボタンの Click イベントのイベント ハンドラー メソッドには `showButton_Click()` という名前が付けられます。 また、メソッドであることを示すために、通常はメソッド名の後に左かっこと右かっこ () が追加されます。 コード変数名を変更する場合は、コードの変数を右クリックし、 **[リファクター]**をクリックし、 **[名前の変更]**をクリックします。 コードのその変数のすべてのインスタンスの名前は変更されます。 詳細については、「[名前の変更リファクタリング (C#)](../csharp-ide/refactoring/rename.md)」または「[名前の変更リファクタリング (Visual Basic)](../vb-ide/refactoring/rename.md)」を参照してください。
   
-### <a name="to-continue-or-review"></a>To continue or review  
+### <a name="to-continue-or-review"></a>続行または確認するには  
   
--   To go to the next tutorial step, see [Step 7: Add Dialog Components to Your Form](../ide/step-7-add-dialog-components-to-your-form.md).  
+-   チュートリアルの次の手順に進むには、「[手順 7: フォームへのダイアログ コンポーネントの追加](../ide/step-7-add-dialog-components-to-your-form.md)」を参照してください。  
   
--   To return to the previous tutorial step, see [Step 5: Add Controls to Your Form](../ide/step-5-add-controls-to-your-form.md).
+-   チュートリアルの前の手順に戻るには、「[手順 5: フォームへのコントロールの追加](../ide/step-5-add-controls-to-your-form.md)」を参照してください。

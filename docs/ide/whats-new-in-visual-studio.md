@@ -1,5 +1,5 @@
 ---
-title: What's New in Visual Studio 2017 | Microsoft Docs
+title: "Visual Studio 2017 の新機能 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
 ms.reviewer: 
@@ -19,233 +19,233 @@ ms.translationtype: HT
 ms.sourcegitcommit: 3cd705d703b3d745c502290422e29b3c6da39ee5
 ms.openlocfilehash: 5bf00b7e5ed79f8679b837d0dcabf03550d2b849
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="what39s-new-in-visual-studio-2017"></a>What&#39;s New in Visual Studio 2017
-#### <a name="updated-for-the-153-release"></a>Updated for the 15.3 release
-Unparalleled productivity for any dev, any app, and any platform. Use Visual Studio 2017 to develop apps for Android, iOS, Windows, Linux, web, and cloud. Code fast, debug and diagnose with ease, test often, and release with confidence. You can also extend and customize Visual Studio by building your own extensions. Use version control, be agile, and collaborate efficiently with this release!
+# <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
+#### <a name="updated-for-the-153-release"></a>15.3 リリースの更新
+すべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性を実現します。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回のリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
 
-Here is a high-level recap of the changes we've made:
+変更を行った基本的な概要は、次のとおりです。
 
-* **Redefined fundamentals**. A new setup experience means that you can install more quickly and install what you want when you need it. Whether you want to load large solutions and projects, or work on folders of code, or even a single file of code, Visual Studio starts faster. And, Visual Studio helps you stay focused on the big picture, especially for teams embracing DevOps.
-* **Performance and productivity**. We have focused on new and modern mobile, cloud, and desktop development capabilities. And, we've also improved the overall acquisition, performance, and general developer productivity experiences. Visual Studio starts faster, is more responsive, and uses less memory than before.
-* **Cloud app development with Azure**. A built-in suite of Azure tools enable you to easily create cloud-first apps powered by Microsoft Azure. Visual Studio makes it easy to configure, build, debug, package, and deploy apps and services on Azure.
-* **Mobile app development**. In Visual Studio 2017, you can innovate and get results fast with Xamarin, which unifies your multi-platform mobile requirements by using one core codebase and set of skills. Go mobile with your existing teams, technology investments, and C# code to deliver consumer-grade experiences ahead of schedule and under budget. Accelerate every step of the mobile lifecycle to deliver world-class consumer experiences or a portfolio of productivity apps to empower your workforce.
-* **Cross-platform development** Seamlessly deliver software to any targeted platform. Extend DevOps processes to SQL Server through Redgate Data Tools and safely automate database deployments from Visual Studio. Develop and release multiplatform games by using Visual Studio Tools for Unity. Or, use .NET Core to write apps and libraries that run unmodified across Windows, Linux, and macOS operating systems. (And new in 15.3: Get side-by-side support for .NET Core 2.0 SDKs.)
+* **基本の再定義**。 新しいセットアップ エクスペリエンスにより、必要なものを必要なタイミングでより短い時間でインストールできるようになりました。 大規模なソリューションやプロジェクトを読み込む場合でも、コードのフォルダーや単一のコード ファイルを操作する場合でも、Visual Studio の起動がより高速になりました。 さらに Visual Studio は、特に DevOps を大事にするチームにとって、全体像を把握するのに役立ちます。
+* **パフォーマンスと生産性**。 Microsoft は、新しく、現代的なモバイル、クラウド、デスクトップの開発機能を導入することを中心に取り組んできました。 全体的な取得機能、パフォーマンス、全般的な開発者生産性も改善されています。 Visual Studio の起動が以前と比較してより高速になり、より応答性が向上し、メモリーの消費量が少なくなりました。
+* **Azure によるクラウド アプリの開発**。 Microsoft Azure を使用するクラウド ファーストのアプリを簡単に作成できる Azure ツールのビルトイン スイート。 Visual Studio を使用すれば、Azure でアプリとサービスを構成、ビルド、デバッグ、パッケージ化、デプロイするのが容易になります。
+* **モバイル アプリの開発**。 Visual Studio 2017 では Xamarin が導入されています。これにより、1 つのコア コードベースとスキル セットを使用することでマルチプラットフォームのモバイル要件が統合され、短期間で成果を出すことができます。 既存のチーム、テクノロジへの投資、C# コードをモバイル対応にして、コンシューマー グレードのエクスペリエンスを予定より早くかつ予算以内で提供します。 モバイル ライフサイクルのすべてのステップを加速させ、ワールドクラスのコンシューマー エクスペリエンスまたは従業員の生産性向上を支援するアプリのポートフォリオを提供します。
+* **クロスプラットフォーム開発** 対象となるプラットフォームにソフトウェアをシームレスに届けます。 Redgate Data Tools により DevOps プロセスを SQL Server に拡張し、Visual Studio からのデータベース配置を安全に自動化します。 Visual Studio Tools for Unity を利用し、マルチプラットフォーム ゲームを開発し、公開します。 あるいは、.NET Core を利用し、変更しなくても Windows、Linux、macOS オペレーティング システムをまたいで実行できるアプリやライブラリを作成します。 (15.3 の新機能: .NET Core 2.0 SDK の side-by-side サポート)
 
 > [!NOTE]
-> For a complete list of new features and functionality in Visual Studio 2017, see the [Release Notes](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes).
+> Visual Studio 2017 の新機能の一覧については、「[リリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)」をご覧ください。
 
-Here is more detailed information about some of the most notable improvements and new features in Visual Studio 2017.
+Visual Studio 2017 の最も重要な改善点と新機能について、そのいくつかの詳細を確認できます。
 
-## <a name="redefined-fundamentals"></a>Redefined fundamentals
-### <a name="a-new-setup-experience"></a>A new setup experience
+## <a name="redefined-fundamentals"></a>基本の再定義
+### <a name="a-new-setup-experience"></a>新しいセットアップ エクスペリエンス
 
-[Download Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) or [Check Visual Studio system requirements](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs)
+[Visual Studio 2017 をダウンロードする](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)または [Visual Studio のシステム要件を確認する](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs)
 
- Visual Studio makes it easier and faster to install just the features you need, when you need them. And, it uninstalls cleanly, too.
+ Visual Studio により、必要な機能だけを必要なタイミングでより簡単により短い時間でインストールできます。 また、アンインストールも正常に行われます。
 
- The most important change to note when you install Visual Studio is its new setup experience. On the **Workloads** tab, you'll see installation options that are grouped to represent common frameworks, languages, and platforms. It covers everything from .NET desktop development to C++ application development on Windows, Linux, and iOS.
+ Visual Studio をインストールするときに確認できる最も重要な変更は、新しいセットアップ エクスペリエンスです。 **[ワークロード]** タブには、共通のフレームワーク、言語、プラットフォーム別にグループ化されたインストール オプションが表示されます。 .NET デスクトップ開発から Windows、Linux、iOS での C++ アプリケーション開発まで、すべてを網羅します。
 
-Choose the workloads you need, and change them when you need to.
+必要なワークロードを選択し、必要に応じてそれらを変更します。
 
- ![Visual Studio 2017 setup dialog](../install/media/install-visual-studio-enterprise.png "Visual Studio 2017 setup screen")
+ ![Visual Studio 2017 のセットアップ ダイアログ](../install/media/install-visual-studio-enterprise.png "Visual Studio 2017 のセットアップ画面")
 
-Want to pick your own components instead of using workloads? Select the **Individual components** tab from the installer. Want to install Language Packs without also having to change the Windows language option? Choose the **Language packs** tab of the installer.  
+ワークロードを使用する代わりに、独自のコンポーネントを選択するには、 インストーラーから **[個別のコンポーネント]** タブを選択します。 また、Windows の言語オプションを変更することなく、言語パックをインストールする場合は、 インストーラーの **[言語パック]** タブを選択します。  
 
-To learn more about the new installation experience, including step-by-step instructions that walk you through it, see our [Install Visual Studio](../install/install-visual-studio.md) page.
+ステップ バイ ステップの手順を含む、新しいインストール エクスペリエンスについて詳しくは、マイクロソフトの [Visual Studio のインストール](../install/install-visual-studio.md)に関するページをご覧ください。
 
-## <a name="performance-and-productivity"></a>Performance and productivity
-### <a name="sign-in-across-multiple-accounts"></a>Sign in across multiple accounts  
-We've introduced a new identity service in Visual Studio that allows you to share user accounts across Team Explorer, Azure Tools, Windows Store publishing, and more.
+## <a name="performance-and-productivity"></a>パフォーマンスと生産性
+### <a name="sign-in-across-multiple-accounts"></a>複数のアカウント間のサインイン  
+チーム エクスプローラー、Azure Tools、Windows ストアでの発行で使用するユーザー アカウントを共有できるように、Visual Studio で新しい ID サービスを導入しました。
 
-You can stay signed in longer, too. Visual Studio won't ask you to sign in again every 12 hours. To learn more, see the [Fewer Visual Studio Sign-in Prompts](https://blogs.msdn.microsoft.com/visualstudio/2016/08/15/fewer-visual-studio-sign-in-prompts/) blog post.
+また、より長い時間サインインしたままにできます。 Visual Studio に 12 時間ごとにサインインを求められることはなくなりました。 詳細については、「[Fewer Visual Studio Sign-in Prompts](https://blogs.msdn.microsoft.com/visualstudio/2016/08/15/fewer-visual-studio-sign-in-prompts/)」 (Visual Studio のサインインの確認メッセージを減らす) のブログの投稿を参照してください。
 
-### <a name="start-visual-studio-faster"></a>Start Visual Studio faster
-The new Visual Studio Performance Center can help you optimize your IDE start-up time. The Performance Center lists all the extensions and tool windows that might slow down the IDE startup. You can use it to improve startup performance by determining when extensions start, or whether tool windows are open at startup.
+### <a name="start-visual-studio-faster"></a>Visual Studio の起動の高速化
+Visual Studio の新しいパフォーマンス センターは、IDE の起動時間を最適化するのに役立ちます。 パフォーマンス センターでは、IDE の起動を遅くしている可能性のある拡張機能やツール ウィンドウをすべて一覧表示します。 拡張機能を起動するタイミングや、ツール ウィンドウを起動時に開くかどうかを指定して、起動時のパフォーマンスを向上させるために使用することができます。
 
-### <a name="decrease-solution-load-time"></a>Decrease solution load time
-Working on solutions that contain large numbers of projects doesn't mean you have to work with all the files or projects at one time. Now you can edit and debug without waiting for Visual Studio to load every project. To try this out with managed projects, turn on the  **Lightweight Solution load** from Tools -> Options -> Projects and Solutions.
+### <a name="decrease-solution-load-time"></a>ソリューションの読み込み時間の短縮
+ソリューションに多数のプロジェクトが含まれていても、一度にすべてのファイルやプロジェクトを操作する必要があるとは限りません。 ここでは、Visual Studio がすべてのプロジェクトを読み込むのを待たずに、編集やデバッグを行えるようになりました。 マネージ プロジェクトでこれを試すには、[ツール]、[オプション]、[プロジェクトおよびソリューション] の順に選択して、**[Lightweight Solution load]** (ライトウェイト ソリューション ロード) をオンにします。
 
-  ![Options dialog box in Visual Studio 2017](../ide/media/vs2017ide-lightweight-solution-load.png "Visual Studio 2017 - Options dialog box - Lightweight solution load for all solutions")
+  ![Visual Studio 2017 の [オプション] ダイアログ ボックス](../ide/media/vs2017ide-lightweight-solution-load.png "Visual Studio 2017 - [オプション] ダイアログ ボックス - すべてのソリューションのライトウェイト ソリューション ロード")
 
-### <a name="faster-on-demand-loading-of-extensions"></a>Faster on-demand loading of extensions
-Visual Studio is moving its extensions (and working with third-party extensions too) so that they load on-demand, rather than at IDE startup. Curious about which extensions impact startup, solution load, and typing performance? You can see this information in Help -> Manage Visual Studio Performance.
+### <a name="faster-on-demand-loading-of-extensions"></a>拡張機能のオンデマンド読み込みの高速化
+Visual Studio では、独自およびサードパーティの拡張機能が IDE の起動時ではなく必要に応じて読み込まれるように取り組みを進めています。 どの拡張機能が起動、ソリューションの読み込み、および入力パフォーマンスに影響があるかについて関心をお持ちですか? この情報については、[ヘルプ]、[Visual Studio のパフォーマンスの管理] の順に選択して確認することができます。
 
-  ![Options dialog box in Visual Studio 2017](../ide/media/vs2017ide-manage-vs-perf.png "Visual Studio Help dialog box - Performance Management")
+  ![Visual Studio 2017 の [オプション] ダイアログ ボックス](../ide/media/vs2017ide-manage-vs-perf.png "Visual Studio 2017 の [ヘルプ] ダイアログ ボックス - パフォーマンス管理")
 
-#### <a name="manage-your-extensions-with-roaming-extensions-manager"></a>Manage your extensions with Roaming Extensions Manager
-It's easier to set up each development environment with your favorite extensions when you sign in to Visual Studio. The new Roaming Extension Manager keeps track of all your favorite extensions by creating a synchronized list in the cloud.  
+#### <a name="manage-your-extensions-with-roaming-extensions-manager"></a>[拡張機能マネージャーのローミング] で拡張機能を管理する
+Visual Studio にサインインすると、お気に入りの拡張機能を使用して、各開発環境を容易に設定できるようになりました。 新しい [拡張機能マネージャーのローミング] は、クラウドに同期されたリストを作成することで、お気に入りの拡張機能をすべて追跡します。  
 
-To see a list of your extensions in Visual Studio, click  Tools > Extensions & Updates, and then click the Roaming Extension Manager.
+Visual Studio の拡張機能の一覧を表示するには、[ツール]、[拡張機能と更新プログラム] の順にクリックし、[拡張機能マネージャーのローミング] をクリックします。
 
-![Visual Studio 2017 - Extensions and Updates dialog](../ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - Tools > Extensions and Updates dialog")
+![Visual Studio 2017 - [拡張機能と更新プログラム] ダイアログ](../ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - Tools > Extensions and Updates dialog")
 
-The Roaming Extension Manager tracks all the extensions you install, but you can choose which ones you want to add to your Roaming list.
+[拡張機能マネージャーのローミング] では、インストールするすべての拡張機能を追跡しますが、どの拡張機能をローミング リストに追加するかを選択することができます。
 
-![Visual Studio 2017 - Extensions and Updates dialog](../ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 - Roaming Extension Manager")
+![Visual Studio 2017 - [拡張機能と更新プログラム] ダイアログ](../ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 - Roaming Extension Manager")
 
-When you use the Roaming Extension Manager, there are three icon types on your list:
-* ![Roamed icon](../ide/media/vs2017ide-roamedicon.png "Roamed Icon") ***Roamed***: An extension that is part of this Roaming List, but not installed on your machine.
-  (You can install these by using the **Download** button.)
-* ![Roamed & Installed icon](../ide/media/vs2017ide-roamedinstalledicon.png "Roamed & Installed Icon") ***Roamed & Installed***: All extensions that are part of this Roaming List and installed in your dev environment.
-  (If you decide you do not want to roam, you can remove these by using the **Stop Roaming** button.)
-* ![Installed icon](../ide/media/vs2017ide-installedicon.png "Installed Icon") ***Installed***: All extensions that are installed in this environment, but are not part of your Roaming List.
-  (You can add extensions to the Roaming List by using the **Start Roaming** button.)
+[拡張機能マネージャーのローミング] を使用する場合、リストに次の 3 つの種類のアイコンが表示されます。
+* ![ローミング済みアイコン](../ide/media/vs2017ide-roamedicon.png "ローミング済みアイコン") "***ローミング済み***": ローミング リストにあり、このコンピューターにはインストールされていない拡張機能を示します。
+  (これらの拡張機能は、**[ダウンロード]** ボタンでインストールできます。)
+* ![ローミングおよびインストール済みアイコン](../ide/media/vs2017ide-roamedinstalledicon.png "ローミングおよびインストール済みアイコン") "***ローミングおよびインストール済み***": ローミング リストにあり、お使いの開発環境にインストールされているすべての拡張機能を示します。
+  (ローミングしない場合は、**[ローミングの停止]** ボタンで削除することができます。)
+* ![インストール済みアイコン](../ide/media/vs2017ide-installedicon.png "インストール済みアイコン") "***インストール済み***": この環境にインストールされ、ローミング リストにはないすべての拡張機能を示します。
+  (**[ローミングの開始]** ボタンを使用して、拡張機能をローミング リストに追加できます。)
 
-Any extension that you download while you are signed in is added to your list as **Roamed & Installed** and is part of your Roaming list, which gives you access to it from any machine.
+サインイン中にダウンロードした拡張機能は、**ローミングおよびインストール済み**としてリストに追加され、ローミング リストに表示されます。これにより、どのコンピューターからでもアクセスできるようになります。
 
-### <a name="experience-live-architecture-dependency-validation-and-live-unit-testing"></a>Experience live architecture dependency validation and live unit testing
-As you type code in the text editor, Visual Studio notifies you in real time of architectural dependency rule violations by using Dependency Validation diagrams (a.k.a. Layer diagrams).
+### <a name="experience-live-architecture-dependency-validation-and-live-unit-testing"></a>ライブ アーキテクチャの依存関係検証とライブ単体テストのエクスペリエンス
+Visual Studio では、テキスト エディターにコードを入力するとき、依存関係検証ダイアグラム (別名レイヤー ダイアグラム) を使用することで、リアルタイムでアーキテクチャの依存関係ルールの違反を 確認できるようになりました。
 
-Errors appear in the Error List and squiggles appear in the text editor showing you the precise location of the violation. You are now less likely to introduce unwanted dependencies.
+エラーは [エラー一覧] に表示され、テキスト エディターでは波線でこの違反の正確な場所が示されます。 これにより、不要な依存関係を導入する可能性を低減できます。
 
-![Live Architecture Validation](../ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "Live Architecture Dependency validation")
+![ライブ アーキテクチャの検証](../ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "Live Architecture Dependency validation")
 
 #### <a name="live-unit-testing"></a>Live unit testing
-In Visual Studio Enterprise 2017, live unit testing gives you live unit test results and code coverage in the editor while you are coding. It works with C# and Visual Basic projects for both the .NET Framework and .NET Core, and it supports three test frameworks of MSTest, xUnit, and NUnit.
+Visual Studio Enterprise 2017 では、ライブ単体テストを実行することで、コーディング中にエディターで単体テストの結果とコード カバレッジをライブで確認できます。 .NET Framework と .NET Core の両方で C# プロジェクトと Visual Basic プロジェクトと連動し、MSTest、xUnit、NUnit の 3 つのテスト フレームワークをサポートします。
 
-![Live Unit Testing](../ide/media/lut-codewindow.png "An example of our new Live Unit Testing feature in the Enterprise edition of Visual Studio")
+![ライブ単体テスト](../ide/media/lut-codewindow.png "Visual Studio の Enterprise エディションの新しいライブ単体テスト機能の例")
 
-For more information, see the [Live Unit Testing in Visual Studio 2017 Enterprise](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/) blog post.
+詳しくは、ブログの投稿「[Live Unit Testing in Visual Studio 2017 Enterprise](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/)」(Visual Studio 2017 Enterprise でのライブ単体テスト) をご覧ください。
 
-#### <a name="set-up-a-cicd-pipeline-to-run-automated-tests-efficiently"></a>Set up a CI/CD pipeline to run automated tests efficiently
-Automated testing is a key part of any DevOps pipeline. It allows you to consistently and reliably test and release your solution on much shorter cycles. CI/CD (Continuous Integration and Continuous Delivery) flows can help make the process more efficient.
+#### <a name="set-up-a-cicd-pipeline-to-run-automated-tests-efficiently"></a>自動化されたテストを効率的に実行する CI/CD パイプラインを設定する
+自動化されたテストは、DevOps パイプラインの重要な部分です。 短い周期で、一貫性と信頼性のある方法でソリューションをテストし、公開できます。 CI/CD (Continuous Integration and Continuous Delivery/継続的インテグレーションと継続的配信) フローにより、このプロセスがさらに効率的になります。
 
-For more information about automated tests, see the [CI/CD pipeline for automated tests in DevOps](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/20/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently/) blog post.
+自動化されたテストの詳細については、[DevOps の 自動化テストの CI/CD パイプライン](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/20/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently/)に関するブログ投稿をご覧ください。
 
-And, for more information about what's new in the [Continuous Delivery Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs extension, see the [Committing with Confidence: Commit Time Code Quality](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/) blog post.
+[Continuous Delivery Tools for Visual Studio (Visual Studio 用の継続的配信ツール)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 拡張の新機能の詳細については、「[Committing with Confidence: Commit Time Code Quality (自信を持ってコミットする: タイム コードの品質をコミットする)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/)」をご覧ください。
 
-### <a name="a-focus-on-accessibility"></a>A focus on accessibility
-In 15.3, we made over 1,700 targeted fixes to improve compatibility between Visual Studio and the assistive technologies that many of our customers use. There are dozens of scenarios that are more compatible with screen readers, high contrast themes, and other assistive technologies than ever before. The debugger, editor and shell have all gotten significant improvements, too.
+### <a name="a-focus-on-accessibility"></a>アクセシビリティに重点を置く
+15.3 では、Visual Studio と多くのユーザーが使用している支援技術との互換性を改善する、1,700 を超える変更を行いました。 スクリーン リーダーやハイ コントラスト テーマなどの支援技術との互換性を従来よりも改善するシナリオが、数多くあります。 デバッガー、エディター、シェルのすべてに重要な変更点があります。
 
-For more information, see the [Accessibility improvements in Visual Studio 2017 version 15.3](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/) blog post.
+詳細については、ブログ投稿の「[Accessibility improvements in Visual Studio 2017 version 15.3 (Visual Studio 2017 バージョン 15.3 でのアクセシビリティの機能強化)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/)」をご覧ください。
 
-### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE enhancements
-#### <a name="use-new-refactorings"></a>Use new refactorings
-In 15.3, we’ve added a handful of new refactorings, to include:
-*   Resolve merge conflict
-*   Add parameter (from CallSite)
-*   Generate overrides
-*   Add named argument
-*   Add null-check for parameters
-*   Insert digit-separators into literals
-*   Change base for numeric literals (for example, hex to binary)
-*   Convert if-to-switch
-*   Remove unused variable
+### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE の拡張機能
+#### <a name="use-new-refactorings"></a>新しいリファクタリングの使用
+15.3 では、次のような便利な新しいリファクタリングが追加されました。
+*   マージ競合を解決する
+*   パラメーターを追加する (CallSite から)
+*   オーバーライドを生成する
+*   名前付き引数を追加する
+*   パラメーターの null チェックを追加する
+*   リテラルに桁区切り記号を挿入する
+*   数値リテラルの基本を変更する (たとえば、16 進数を 2 進数に)
+*   if を switch に変換する
+*   未使用の変数を削除する
 
-For more information, see the [Refactoring, Code Generation, and Quick Actions in Visual Studio](refactoring-code-generation-quick-actions.md) page.
+詳細については、「[Visual Studio でのリファクタリング、コード生成、クイック アクション](refactoring-code-generation-quick-actions.md)」ページをご覧ください。
 
 
-#### <a name="interact-with-git"></a>Interact with Git
-When you are working with a project in Visual Studio, you can set up and quickly commit and publish your code to a Git service. You can also manage your Git repositories by using menu clicks from buttons in the bottom right-hand corner of the IDE.
+#### <a name="interact-with-git"></a>Git との連携
+Visual Studio でプロジェクトを操作する際に、コードを迅速にセットアップしてコミットし、Git サービスにコードを公開できます。 また、IDE の右下隅のボタンからメニュー クリックを使用して、Git リポジトリを管理することもできます。
 
-![Visual Studio 2017 interacts with the Git dialog](../ide/media/vsIDE-GitInteraction.png "Git tools in the Visual Studio IDE")
+![Visual Studio 2017 と Git ダイアログのやり取り](../ide/media/vsIDE-GitInteraction.png "Visual Studio IDE の Git ツール")
 
-#### <a name="view-and-navigate-code-with-structure-visualizer"></a>View and navigate code with Structure Visualizer
-The Structure Visualizer draws structure guide lines (a.k.a. indent guides) on your code. You can use them to visualize and discover what block of code you're in at any time without having to scroll. Hovering on the lines shows you the tooltips that let you see the opening of that block and its parents. It's  available for all the languages supported via TextMate grammars as well as C#, Visual Basic, and XAML.
+#### <a name="view-and-navigate-code-with-structure-visualizer"></a>構造ビジュアライザーを使用したコードの表示と移動
+構造ビジュアライザーは、構造のガイド線 (別名 インデント ガイド) をコードに描きます。 これを使用することで、スクロールすることなく現在作業しているコード ブロックを視覚化して検出できます。 行にカーソルを置くとツールチップが表示され、そのブロックの開始地点とその親を確認できます。 TextMate 文法を介してサポートされるすべての言語のほか、C#、Visual Basic、XAML で使用できます。
 
-![Visual Studio 2017 structure visualizer](../ide/media/vsIDE-StructureVisualizer.png "Structure visualizer in Visual Studio")
+![Visual Studio 2017 の構造ビジュアライザー](../ide/media/vsIDE-StructureVisualizer.png "Visual Studio の構造体ビジュアライザー")
 
-#### <a name="experience-improved-navigation-controls"></a>Experience improved navigation controls
-We've refreshed the navigation experience to help you get from A to B with greater confidence and fewer distractions.
+#### <a name="experience-improved-navigation-controls"></a>操作性が改善されたナビゲーション コントロール
+より確実に混乱なく A から B に移動できるようにナビゲーション エクスペリエンスを更新しました。
 
-* **Go To** (Ctrl+F12) &ndash; navigate from any base type or member to its various implementations.
+* **ジャンプ** (Ctrl + F12) &ndash; 任意の基本データ型やメンバーから各種実装に移動します。
 
-* **Go To All** (Ctrl+T or Ctrl+,) &ndash; navigate directly to any file/type/member/symbol declaration. You can filter your result list or use the query syntax (for example, "f searchTerm" for files, "t searchTerm" for types, etc.).
+* **すべてにジャンプ** (Ctrl + T または Ctrl + ,) &ndash; 任意のファイル/型/メンバー/シンボル宣言に直接移動します。 結果の一覧をフィルターしたり、クエリ構文 (例: ファイルは “f searchTerm”、型は “t searchTerm” など) を使用したりできます。
 
- ![Improved Go To All](../ide/media/vs2017ide-navigation-go-to.png "Example of the improved Go To All feature")
+ ![[すべてにジャンプ] の機能強化](../ide/media/vs2017ide-navigation-go-to.png "強化された [すべてにジャンプ] 機能")
 
-* **Find All References (Shift+F12)** &ndash; with syntax colorization, you can group Find All Reference results by a combination of project, definition, and path. You can also "lock" results so that you can continue to find other references without losing your original results.
+* **すべての参照の検索 (Shift+F12)** &ndash; 構文の色づけにより、[すべての参照の検索] の結果をプロジェクト、定義、パスの組み合わせでグループ化できます。 また、結果を "ロック" して元の結果を失うことなく別の参照を検索できます。
 
- ![New Find All References tool](../ide/media/vs2017ide-find-all-references.png "Example of the new Find All References tool")
+ ![新しい [すべての参照の検索] ツール](../ide/media/vs2017ide-find-all-references.png "新しい [すべての参照の検索] ツールの例")
 
-* **Indent Guides** &ndash; dotted, gray vertical lines act as landmarks in code to provide context within your frame of view. You may recognize them from the popular Productivity Power Tools.
+* **インデント ガイド** &ndash; 灰色の縦の点線がコード内のランドマークとしての役割を果たし、ビューのフレーム内のコンテキストを提供します。 おすすめの Productivity Power Tools で認識できます。
 
-For more information about our new productivity features, see the [Productivity in Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/productivity-in-visual-studio-2017-rc/) blog post by Mark Wilson-Thomas.
+新しい生産性向上機能について詳しくは、[Visual Studio 2017 での生産性向上](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/productivity-in-visual-studio-2017-rc/)に関する Mark Wilson-Thomas のブログ投稿をご覧ください。
 
 ### <a name="visual-c"></a>Visual C++
-You'll see several improvements in Visual Studio, such as distributing C++ Core Guidelines with Visual Studio, updating the compiler by adding enhanced support for C++11 and C++ features, and adding and updating functionality in the C++ libraries. We've also improved the performance of the C++ IDE, installation workloads, and more.
+Visual Studio には、C++ Core ガイドラインの配信、C++11 および C++ 機能の拡張サポートを追加することによるコンパイラの更新、C++ ライブラリへの機能の追加および更新など、いくつかの改善が加えられています。 また、C++ IDE やインストールのワークロードなどのパフォーマンスも改善しました。
 
-As well, we've fixed over 250 bugs and reported issues in the compiler and tools, many submitted by customers through [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect").
+同時に 250 以上のバグを修正し、コンパイラおよびツールの問題をレポートしてきました。その多くは [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect") を通じてお客様から寄せられたものです。
 
-For complete details, see our [What's New for Visual C++ in Visual 2017](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio) page.  
+詳しくは、[Visual 2017 での Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)に関するページをご覧ください。  
 
-### <a name="debugging-and-diagnostics"></a>Debugging and Diagnostics
-#### <a name="run-to-click"></a>Run to Click:
-Now, you can more easily skip ahead during debugging without setting a breakpoint to stop on the line you want. When you are stopped in the debugger, just click the icon that appears next to the line of code. Your code will run and stop on that line the next time it is hit in your code path.
+### <a name="debugging-and-diagnostics"></a>デバッグと診断
+#### <a name="run-to-click"></a>クリックで実行
+デバッグ中に必要な行に止まるためにブレークポイントを設定することなく、簡単に前方にスキップできるようになりました。 デバッガーが停止した場合は、コード行の横に表示されるアイコンをクリックします。 次にコード パスでその地点に到達すると、その行でコードが実行されて停止します。
 
-![Visual Studio 2017 debug - Run To Click](../ide/media/vs2017ide-RunToClick.png "Run To Click in Visual Studio debug & diagnostics")
+![Visual Studio 2017 のデバッグ - クリックで実行](../ide/media/vs2017ide-RunToClick.png "Visual Studio 2017 のデバッグと診断のクリックで実行")
 
-#### <a name="the-new-exception-helper"></a>The New Exception Helper:
-The new Exception Helper helps you view your exception information at-a-glance. The information is presented in a compact form with instant access to inner exceptions. When you diagnose a NullReferenceException, you can quickly see what was null right inside the Exception Helper.
+#### <a name="the-new-exception-helper"></a>新しい例外ヘルパー
+新しい例外ヘルパーを使用すると、例外情報を一目で確認できます。 情報はコンパクトな形式で表示され、内部の例外に簡単にアクセスできます。 NullReferenceException を診断するときに、例外ヘルパー内の null をすばやく確認できます。
 
-![The New Exception Helper dialog in Visual Studio](../ide/media/vs2017ide-ExceptionHelper.png "The New Exception Helper dialog")
+![新しい例外ヘルパー ダイアログ](../ide/media/vs2017ide-ExceptionHelper.png "新しい例外ヘルパー ダイアログ")
 
-For more information, see the [Using the New Exception Helper in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/) blog post.
+詳細については、「[Using the New Exception Helper in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/)」 (Visual Studio で新しい例外ヘルパーを使用する) のブログの投稿を参照してください。
 
-## <a name="cloud-app-development-with-azure"></a>Cloud app development with Azure
-### <a name="azure-functions-tools"></a>Azure Functions Tools
-As part of the "Azure development" workload, we've included tools to help you develop Azure functions by using pre-compiled C# class libraries. Now you can build, run, and debug on your local development machine and then publish directly to Azure from Visual Studio.
+## <a name="cloud-app-development-with-azure"></a>Azure によるクラウド アプリの開発
+### <a name="azure-functions-tools"></a>Azure Functions ツール
+"Azure 開発" ワークロードの一部として、コンパイル済みの C# クラス ライブラリを利用して Azure Functions を開発するためのツールを追加しました。 ローカルの開発マシンでビルドし、実行し、デバッグし、Visual Studio から Azure に直接公開できます。
 
-For more information, see the [Azure Functions Tools for Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-develop-vs) page.
+詳細については、「[Azure Functions Tools for Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-develop-vs)」 (Visual Studio の Azure Functions ツール) ページを参照してください。
 
-## <a name="mobile-app-development"></a>Mobile app development
+## <a name="mobile-app-development"></a>モバイル アプリの開発
 ### <a name="xamarin"></a>Xamarin
-As part of the "Mobile development with .NET" workload, developers familiar with C#, .NET, and Visual Studio can deliver native Android, iOS, and Windows apps by using Xamarin. Developers can enjoy the same the power and productivity when working with Xamarin for mobile apps, including remote debugging on Android, iOS, and Windows devices&mdash;without having to learn native coding languages like Objective-C or Java.
+".NET によるモバイル開発" ワークロードの一部として、C#、.NET、Visual Studio に詳しい開発者は Xamarin を利用し、Android、iOS、Windows のネイティブ アプリを開発できます。 開発者は、Android、iOS、および Windows デバイスでのリモート デバッグなど、モバイル アプリを Xamarin で開発する場合 &mdash; Objective-C または Java のようなネイティブのコーディング言語を習得しなくても、同じ機能と生産性を享受できます。
 
-For more information, see the [Visual Studio and Xamarin](../cross-platform/visual-studio-and-xamarin.md) page.
+詳細については、「[Visual Studio と Xamarin](../cross-platform/visual-studio-and-xamarin.md)」ページを参照してください。
 
-### <a name="entitlements-editor"></a>Entitlements editor
-**New in 15.3**: For your iOS development needs, we've added a stand-alone Entitlements editor. It includes a user-friendly UI that can be easily browsed. To launch it, double-click your entitlements.plist file.
+### <a name="entitlements-editor"></a>権利エディター
+**15.3 の新機能**: iOS 開発で必要になることから、スタンドアロンの権利エディターを追加しました。 使いやすい UI で簡単に閲覧できます。 entitlements.plist ファイルをダブルクリックすると起動します。
 
-![Entitlement editor for Xamarin](../ide/media/xamarin-entitlements-editor.png "Entitlement editor for Xamarin")
+![Xamarin の権利エディター](../ide/media/xamarin-entitlements-editor.png "Xamarin の権利エディター")
 
-## <a name="cross-platform-development"></a>Cross-platform development
+## <a name="cross-platform-development"></a>プラットフォーム間の開発
 ### <a name="redgate-data-tools"></a>Redgate Data Tools
-To extend DevOps capabilities to SQL Server database development, Redgate Data Tools are now available in the following editions of Visual Studio 2017.
+DevOps 機能を SQL Server データベース開発に拡張するために、Visual Studio 2017 の次のエディションで Redgate Data Tools が利用できるようになりました。
 
-Included with Visual Studio 2017 Enterprise:
-- [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs) helps you develop migration scripts, manage database changes using source control, and safely automate deployments of SQL Server database changes alongside applications changes.
-- [Redgate SQL Prompt Core](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs) helps you write SQL more quickly and accurately with the help of intelligent code completion. SQL Prompt autocompletes database and system objects and keywords, and offers column suggestions as you type. This results in cleaner code and fewer errors because you don't have to remember every column name or alias.
+Visual Studio 2017 Enterprise に付属:
+- [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs) は、移行スクリプトの開発、ソース管理によるデータベースの変更管理、アプリケーション変更と並行した SQL Server データベース変更の配置の安全な自動化に役立ちます。
+- [Redgate SQL Prompt Core](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs) を利用すると、インテリジェントなコード入力候補機能により、SQL を短時間で正確に記述できます。 SQL Prompt は、データベース、システム オブジェクト、キーワードをオートコンプリートし、入力と同時に列の入力候補を提案します。 列の名前やエイリアスを覚える必要がないため、結果として、間違いが少なく、読みやすいコードが完成します。
 
-Included with all editions of Visual Studio 2017:
-- [Redgate SQL Search](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs) increases your productivity by helping you quickly find SQL fragments and objects across multiple databases.
+Visual Studio 2017 のすべてのエディションに付属:
+- [Redgate SQL Search](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs) では、複数のデータベースから SQL のフラグメントやオブジェクトをすばやく見つけることができ、生産性が向上します。
 
-To learn more, see our [Redgate Data Tools in Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/) blog post.
+詳しくは、ブログの投稿「[Visual Studio 2017 Redgate Data Tools](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/)」をご覧ください。
 
 ### <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
-As part of the "Games development for Unity" workload, we've included tools to help you develop cross-platform to create 2D and 3D games and interactive content. Create once and publish to 21 platforms, including all mobile platforms, WebGL, Mac, PC and Linux desktop, web, or consoles by using Visual Studio 2017 and Unity 5.6.
+"Unity のゲーム開発" ワークロードの一部として、2D ゲーム、3D ゲーム、対話型コンテンツを開発するためのクロスプラットフォーム開発に役立つツールを追加しました。 Visual Studio 2017 と Unity 5.6 を利用することで、1 回作成するだけですべてのモバイル プラットフォーム、WebGL、Mac、PC、Linux デスクトップ、Web、コンソールなど、21 のプラットフォームに発行できます。
 
-For more information, see the [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) page.
+詳しくは、「[Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md)」 (Unity の Visual Studio ツール) をご覧ください。
 
 ### <a name="net-core"></a>.NET Core
-.NET Core is a general purpose, modular, cross-platform, and open source implementation of the .NET Standard and contains many of the same APIs as the .NET Framework.
+.NET Core は、モジュール形式のクロスプラットフォームかつオープン ソースを実装した汎用の .NET Standard です。.NET Framework と同じ API がたくさん含まれています。
 
-The .NET Core platform is made of several components, which include the managed compilers, the runtime, the base class libraries, and numerous application models, such as ASP.NET Core. .NET Core supports three main operating systems: Windows, Linux, and macOS. You can use .NET Core in device, cloud, and embedded/IoT scenarios.
+.NET Core プラットフォームは複数コンポーネントで構成され、マネージ コンパイラ、ランタイム、基本クラス ライブラリ、および ASP.NET Core などの多数のアプリケーション モデルが含まれます。 .NET Core は、Windows、Linux、macOS の 3 つの主要オペレーティング システムをサポートしています。 .NET Core は、デバイス、クラウド、埋め込み/IoT のシナリオで使用できます。
 
-And, it now includes Docker support
+Docker 対応にもなりました。
 
-**New in 15.3**: Visual Studio 2017 version 15.3 supports .NET Core 2.0 development. (In 15.3, using .NET Core 2.0 requires downloading and installing the .NET Core 2.0 SDK separately.)
+**15.3 の新機能**: Visual Studio 2017 バージョン 15.3 は .NET Core 2.0 開発に対応しています。 (15.3 では、.NET Core 2.0 を使用するには、.NET Core 2.0 SDK を別にダウンロードし、インストールする必要があります。)
 
-For more information, see the [.NET Core Guide](https://docs.microsoft.com/dotnet/core/index) page.
+詳細については、「[.NET Core ガイド](https://docs.microsoft.com/dotnet/core/index)」ページを参照してください。
 
-## <a name="talk-to-us"></a>Talk to us  
- Why send feedback to the Visual Studio team? Because we take customer feedback seriously: It drives much what we do.
+## <a name="talk-to-us"></a>ご意見  
+ Visual Studio チームにフィードバックを送ることにどんな意味があるのでしょうか? お客様からのフィードバックは、すべて真摯に受け止めており、チームの業務の支えにもなっています。
 
-If you want to make suggestion about how we can improve Visual Studio, or report a problem, please see the [Talk to Us](../ide/talk-to-us.md) page for more information.
+Visual Studio を向上させることができるご提案がある場合、または問題を報告する場合、詳しくは「[ご意見](../ide/talk-to-us.md)」ページを参照してください。
 
-### <a name="report-a-problem"></a>Report a problem  
- Sometimes, a message isn't enough to convey the full impact of a problem you've encountered. If you experience a hang, crash, or other performance issue, you can easily share repro steps and supporting files (such as screenshots and trace & heap dump files) with us by using the **Report a Problem** tool. For more information about how to use this tool, see the [How to Report a Problem](how-to-report-a-problem-with-visual-studio-2017.md) page.
+### <a name="report-a-problem"></a>問題を報告する  
+ メッセージは、発生した問題の影響をすべて表せていない場合があります。 ハング、クラッシュ、またはその他のパフォーマンスの問題が発生した場合、**[問題の報告]** ツールを使用すると、再現コードやサポート ファイル (スクリーン ショット、トレース ファイル、ヒープ ダンプ ファイルなど) を簡単に Microsoft と共有することができます。 このツールの使用方法については、[問題を報告する方法](how-to-report-a-problem-with-visual-studio-2017.md)に関するページを参照してください。
 
-### <a name="track-your-issue-in-connect"></a>Track your issue in Connect  
- If want to track the status of your Visual Studio feedback, go to [Connect](http://connect.microsoft.com/) and report the bug there. After you report it, you can return to Connect to track its status.
+### <a name="track-your-issue-in-connect"></a>問題点を Connect で追跡する  
+ Visual Studio に関するフィードバックの状況を追跡するには、 [Connect](http://connect.microsoft.com/) でバグ報告をしてください。 報告したら、Connect に戻って、その状態を追跡することができます。
 
-## <a name="see-also"></a>See Also
-* [Visual Studio 2017 Release Notes](https://www.visualstudio.com/news/vs2015-vs)
-* [What's New in Visual C++](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
-* [What's New in C#](https://docs.microsoft.com/dotnet/csharp/csharp-7)  
-* [What's New for Team Foundation Server](https://www.visualstudio.com/docs/whats-new)
-* [What's New in Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
+## <a name="see-also"></a>関連項目
+* [Visual Studio 2017 リリース ノート](https://www.visualstudio.com/news/vs2015-vs)
+* [Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
+* [C# の新機能](https://docs.microsoft.com/dotnet/csharp/csharp-7)  
+* [Team Foundation Server の新機能](https://www.visualstudio.com/docs/whats-new)
+* [Visual Studio for Mac の新機能](https://www.visualstudio.com/vs/visual-studio-mac/)
 
