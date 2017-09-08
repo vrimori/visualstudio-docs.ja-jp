@@ -1,13 +1,13 @@
 ---
 layout: HubPage
 hide_bc: true
-title: "Visual Studio ドキュメント"
-description: "Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。"
+title: Visual Studio Documentation
+description: Learn how to use Visual Studio 2017 to develop applications, services, and tools in the language of your choice, for your platforms and devices.
 ms.translationtype: HT
-ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
-ms.openlocfilehash: bcd55d1b7e1037a4442ce47fe6b96bf865dfbdfc
+ms.sourcegitcommit: f4b17810a2f59aeee8d6002059d65928882fd51f
+ms.openlocfilehash: 5b20d403d64825f519697b5069ec94eb46233c20
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 <div id="main" class="v2">
@@ -24,8 +24,8 @@ ms.lasthandoff: 09/06/2017
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>セットアップ &amp; インストール</h3>
-                                    <p>Visual Studio をインストールして設定する方法について説明します。</p>
+                                    <h3>Setup &amp; Installation</h3>
+                                    <p>Learn how to install and set up Visual Studio.</p>
                                 </div>
                             </div>
                         </div>
@@ -43,8 +43,8 @@ ms.lasthandoff: 09/06/2017
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Visual Studio 入門</h3>
-                                    <p>あらゆるアプリを、あらゆるプラットフォーム向けに開発します。</p>
+                                    <h3>Get Started with Visual Studio</h3>
+                                    <p>Develop any app for any platform.</p>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@ ms.lasthandoff: 09/06/2017
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Visual Studio 2017 の新機能</h3>
+                                    <h3>What's New in Visual Studio 2017</h3>
                                 </div>
                             </div>
                         </div>
@@ -72,17 +72,17 @@ ms.lasthandoff: 09/06/2017
         </ul>
     </div>
     <div class="container">
-        <h1>Visual Studio ドキュメント</h1>
+        <h1>Visual Studio Documentation</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">ワークロード</a>
+                <a href="#workloads">Workloads</a>
                 <ul id="workloads">
                     <li>
                         <a href="#windows">Windows</a>
                         <ul id="windows" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>Windows が動作するすべてのデバイスに対応するアプリやゲームを、Visual Studio を使って開発します。</p>
+                                    <p>Develop apps and games using Visual Studio to reach every device running Windows.</p>
                                 </div>
                             </li>
                             <li>
@@ -96,8 +96,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>ユニバーサル Windows プラットフォーム開発</h3>
-                                                    <p>Windows ユニバーサル プラットフォームと C#、VB、C++ を使って、Windows 10 用のアプリケーションを開発します。</p>
+                                                    <h3>Universal Windows Platform development</h3>
+                                                    <p>Develop applications for Windows 10 with the Windows Universal Platform and C#, VB, or C++.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -115,8 +115,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>.NET デスクトップ開発</h3>
-                                                    <p>.NET Framework を使って、WPF、Windows フォーム、コンソール アプリケーションを構築します。</p>
+                                                    <h3>.NET Desktop development</h3>
+                                                    <p>Build WPF, Windows Forms, and console applications using the .NET Framework.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -134,8 +134,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>C++ での Windows 開発</h3>
-                                                    <p>MFC、ATL、Microsoft C++ ツールセットの機能を使って、従来の Windows ベースのアプリケーションを構築します。</p>
+                                                    <h3>Windows development with C++</h3>
+                                                    <p>Build classic Windows-based applications using the power of MFC, ATL, and the Microsoft C++ toolset.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -145,11 +145,11 @@ ms.lasthandoff: 09/06/2017
                         </ul>
                     </li>
                     <li>
-                        <a href="#web">Web &amp; クラウド</a>
+                        <a href="#web">Web &amp; Cloud</a>
                         <ul id="web" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>Visual Studio と強力なオープン ツールを使って、最新の Web アプリを開発します。
+                                    <p>Develop modern web apps using Visual Studio and powerful open tools.
                                     </p>
                                 </div>
                             </li>
@@ -164,8 +164,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Web 開発</h3>
-                                                    <p>ASP.NET と、HTML、JavaScript、CSS のような標準ベースのテクノロジを使って Web アプリを構築します。</p>
+                                                    <h3>Web development</h3>
+                                                    <p>Build web apps with ASP.NET and standards-based technologies like HTML, JavaScript, and CSS.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -183,8 +183,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Azure 開発および管理</h3>
-                                                    <p>拡張性の高いアプリとサービスを Microsoft クラウド上で簡単にビルド、テスト、展開、管理します。</p>
+                                                    <h3>Azure development and management</h3>
+                                                    <p>Easily build, test, deploy, and manage scalable apps and services on the Microsoft cloud.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -203,7 +203,7 @@ ms.lasthandoff: 09/06/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Python</h3>
-                                                    <p>Django や Flask を含め、使い慣れたフレームワークを使って Python アプリを対話式に開発します。</p>
+                                                    <p>Interactive development for Python apps, using familiar frameworks including Django and Flask.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -222,7 +222,7 @@ ms.lasthandoff: 09/06/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Node.js</h3>
-                                                    <p>Node.js、非同期、イベント ドリブンの JavaScript ランタイムを使って拡張性の高いネットワーク アプリケーションを構築します。</p>
+                                                    <p>Build scalable network applications using Node.js, an asnchronous, event-driven JavaScript runtime.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,8 +240,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>データ ストレージとデータ処理</h3>
-                                                    <p>データベース開発者が SQL Server、Hadoop、Azure ML 向けのソリューションを作成するためのツールの完全なスイート。</p>
+                                                    <h3>Data storage and processing</h3>
+                                                    <p>A full suite of tools for database developers to create solutions for SQL Server, Hadoop, and Azure ML.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -259,8 +259,8 @@ ms.lasthandoff: 09/06/2017
                                         </div>
                                         </div>
                                           <div class="cardText">
-                                            <h3>データ サイエンスと分析のアプリケーション</h3>
-                                            <p>データ サイエンス アプリケーションを作成するための言語とツール (Python、R、F# が含まれます)。</p>
+                                            <h3>Data science and analytical applications</h3>
+                                            <p>Languages and tooling for creating data science applications, including Python, R, and F#.</p>
                                         </div>
                                       </div>
                                     </div>
@@ -278,8 +278,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Office/SharePoint 開発</h3>
-                                                    <p>Office および SharePoint のアドインやソリューションを、C#、Visual Basic、JavaScript を使って作成します。</p>
+                                                    <h3>Office/SharePoint development</h3>
+                                                    <p>Create Office and SharePoint add-ins and solutions using C#, Visual Basic, and JavaScript.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -289,11 +289,11 @@ ms.lasthandoff: 09/06/2017
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">モバイル &amp; ゲーム</a>
+                        <a href="#mobile">Mobile &amp; Gaming</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>Android、iOS、Windows を対象にしたネイティブまたはハイブリッドのモバイル アプリを作成します。</p>
+                                    <p>Create native or hybrid mobile apps that target Android, iOS, and Windows.</p>
                                 </div>
                             </li>
                             <li>
@@ -307,8 +307,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>.NET によるモバイル開発</h3>
-                                                    <p>iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、Xamarin を使って構築します。</p>
+                                                    <h3>Mobile development with .NET</h3>
+                                                    <p>Build cross-platform applications for iOS, Android, or Windows using Xamarin.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -326,8 +326,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Unity でのゲーム開発</h3>
-                                                    <p>強力なクロスプラットフォーム開発環境である Unity を使って、2D および 3D ゲームを作成します。</p>
+                                                    <h3>Game development with Unity</h3>
+                                                    <p>Create 2D and 3D games with unity, a powerful cross-platform development environment.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -345,8 +345,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>JavaScript でのモバイル開発</h3>
-                                                    <p>iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、Apache Cordova フレームワークを使って構築します。</p>
+                                                    <h3>Mobile development with JavaScript</h3>
+                                                    <p>Build cross-platform applications for iOS, Android, or Windows using the Apache Cordova framework.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -364,8 +364,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>C++ でのモバイル開発</h3>
-                                                    <p>iOS、Android、Windows 向けのクロスプラットフォーム アプリケーションを、C++ を使って構築します。</p>
+                                                    <h3>Mobile development with C++</h3>
+                                                    <p>Build cross-platform applications for iOS, Android, or Windows using C++.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -383,8 +383,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>C++ によるゲーム開発</h3>
-                                                    <p>C++ を最大限に活用して、DirectX、Unreal、Cocos2D を利用するプロフェッショナルなゲームを構築します。</p>
+                                                    <h3>Game development with C++</h3>
+                                                    <p>Use the full power of C++ to build professional games powered by DirectX, Unreal, or Cocos2D.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -394,7 +394,7 @@ ms.lasthandoff: 09/06/2017
                         </ul>
                     </li>
                     <li>
-                        <a href="#other">その他のツールセット</a>
+                        <a href="#other">Other Toolsets</a>
                         <ul id="other" class="cardsC">
                             <li>
                                 <a href="https://go.microsoft.com/fwlink/?linkid=834750">
@@ -407,8 +407,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Visual Studio 拡張機能の開発</h3>
-                                                    <p>コマンド、コード アナライザー、ツール ウィンドウなど、Visual Studio を拡張するアドオンを作成します。</p>
+                                                    <h3>Visual Studio extension development</h3>
+                                                    <p>Create add-ons that extend Visual Studio, such as commands, code analyzers, and tool windows.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -426,8 +426,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>C++ による Linux 開発</h3>
-                                                    <p>Linux 環境で実行するアプリケーションを作成およびデバッグします。</p>
+                                                    <h3>Linux development with C++</h3>
+                                                    <p>Create and debug applications running in a Linux environment.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -441,12 +441,12 @@ ms.lasthandoff: 09/06/2017
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1 cardScaleImage">
-                                                        <img data-scaleimage="./images/vs_web-1.svg" src="./images/vs_web-1.svg" alt="" />
+                                                        <img data-scaleimage="./images/vs_tools-3.svg" src="./images/vs_web-1.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>.NET Core クロスプラットフォームの開発</h3>
-                                                    <p>.NET Core、ASP.NET Core、HTML、JavaScript、コンテナー開発ツールを使用したクロスプラットフォーム アプリケーションを構築します。</p>
+                                                    <h3>.NET Core cross-platform development</h3>
+                                                    <p>Build cross-platform applications using .NET Core, ASP.NET Core, HTML, JavaScript, and container development tools.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -458,7 +458,7 @@ ms.lasthandoff: 09/06/2017
                 </ul>
             </li>
             <li>
-                <a href="#features">機能</a>
+                <a href="#features">Features</a>
                 <ul id="features">
                     <li>
                         <a href="#features1"> </a>
@@ -474,8 +474,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>開発</h3>
-                                                    <p>コード エディターを使ってコードを作成し、管理します。</p>
+                                                    <h3>Develop</h3>
+                                                    <p>Write and manage your code using the code editor.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -493,8 +493,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>ビルド</h3>
-                                                    <p>ソース コードをコンパイルし、ビルドします。</p>
+                                                    <h3>Build</h3>
+                                                    <p>Compile and build your source code.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -512,8 +512,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>デバッグ</h3>
-                                                    <p>コードの問題を調査し、修正します。</p>
+                                                    <h3>Debug</h3>
+                                                    <p>Investigate and fix problems with your code.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -531,8 +531,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>テスト</h3>
-                                                    <p>テストのプロセスを整理します。</p>
+                                                    <h3>Test</h3>
+                                                    <p>Organize your testing processes.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -550,8 +550,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>デプロイ</h3>
-                                                    <p>Web Deploy、InstallShield、継続的インテグレーションなどを使ってアプリを共有します。</p>
+                                                    <h3>Deploy</h3>
+                                                    <p>Share your apps using Web Deploy, InstallShield, and Continuous Integration, and more.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -569,8 +569,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>共同作業</h3>
-                                                    <p>Git や TFVC などのバージョン コントロール テクノロジを使ってコードを共有します。</p>
+                                                    <h3>Collaborate</h3>
+                                                    <p>Share code using version control technologies such as Git and TFVC.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -588,8 +588,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>パフォーマンスの向上</h3>
-                                                    <p>診断ツールを使ってボトルネックを特定し、コードのパフォーマンスを最適化します。
+                                                    <h3>Improve Performance</h3>
+                                                    <p>Identify bottlenecks and optimize code performance by using diagnostic tools.
                                                     </p>
                                                 </div>
                                             </div>
@@ -608,8 +608,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>拡張</h3>
-                                                    <p>開発エクスペリエンスを向上させる独自の機能を Visual Studio IDE に追加します。</p>
+                                                    <h3>Extend</h3>
+                                                    <p>Add your own functionality to the Visual Studio IDE to improve your development experience.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -627,8 +627,8 @@ ms.lasthandoff: 09/06/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>データ</h3>
-                                                    <p>任意のデータベースまたはサービス、および任意の場所 (ローカルまたはクラウド) に接続するデータ アプリを作成します。 </p>
+                                                    <h3>Data</h3>
+                                                    <p>Create data apps that connect to any database or service, and anywhere&#8212;local or cloud. </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -640,7 +640,7 @@ ms.lasthandoff: 09/06/2017
                 </ul>
             </li>
             <li>
-                <a href="#languages">言語</a>
+                <a href="#languages">Languages</a>
                 <ul id="languages">
                     <li>
                         <a href="#languages1"> </a>
@@ -657,7 +657,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833062">
                                                     <h3>C#</h3>
-                                                    <p>.NET プラットフォーム上のあらゆるアプリケーションを構築するための、関数型プログラミング機能を備えた最新のオブジェクト指向プログラミング言語。</p>
+                                                    <p>A modern object-oriented programming language with functional programming capabilities for building any application on the .NET platform.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -676,7 +676,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833060">
                                                     <h3>Visual Basic</h3>
-                                                    <p>Windows アプリケーションを簡単に作成することに重点を置いた、.NET プラットフォーム用の最新で学習が容易なオブジェクト指向プログラミング言語。</p>
+                                                    <p>A modern, easy to learn, object-oriented programming language for the .NET platform, focused on easily creating Windows applications.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -695,7 +695,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833063">
                                                     <h3>Visual C++</h3>
-                                                    <p>Windows、Linux、iOS、Android 向けのアプリケーションを作成するための、強力で柔軟なプログラミング言語および開発環境。</p>
+                                                    <p>A powerful and flexible programming language and development environment for creating applications for Windows, Linux, iOS, and Android.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -714,7 +714,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833067">
                                                     <h3>F#</h3>
-                                                    <p>あらゆるタスクに対して簡単に関数型プログラミングを行うことに重点を置いた、.NET プラットフォーム向けの、オブジェクト指向の機能を備えた最新の関数型プログラミング言語。</p>
+                                                    <p>A modern functional programming language with object-oriented capabilities for the .NET platform, focused on making Functional Programming easier for any task.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -733,7 +733,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833064">
                                                     <h3>JavaScript</h3>
-                                                    <p>Web ページの対話性を高めるためにしばしば使われる、軽量でクロスプラットフォームのスクリプト言語。</p>
+                                                    <p>A lightweight, cross-platform, scripting language often used to help make web pages more interactive.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -752,7 +752,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833066">
                                                     <h3>TypeScript</h3>
-                                                    <p>プレーンな JavaScript にコンパイルできる JavaScript のスーパーセットで、よりスケーラブルなコードを作成することができます。</p>
+                                                    <p>A superset of JavaScript that compiles to plain JavaScript and enables you to create more scalable code.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -771,7 +771,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833068">
                                                     <h3>Python</h3>
-                                                    <p>RAD (Rapid Application Development) のためにしばしば使われる、動的でオブジェクト指向の高水準プログラミング言語。</p>
+                                                    <p>A dynamic object-oriented, high-level programming language often used for rapid application development.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -790,7 +790,7 @@ ms.lasthandoff: 09/06/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833070">
                                                     <h3>R</h3>
-                                                    <p>通常、統計的な計算とグラフィックスのために使われる、拡張可能なプログラミング言語。</p>
+                                                    <p>An extensible programming language typically used for statistical computing and graphics.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -804,10 +804,10 @@ ms.lasthandoff: 09/06/2017
         </ul>
     </div>
     <div class="container centered pageFooter">
-        <h2>コミュニケーションを取るには</h2>
+        <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833100"> ブログ </a>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833100"> Blog </a>
             </li>
             <li>
                 <a href="https://go.microsoft.com/fwlink/?linkid=833101"> Twitter </a>
@@ -816,10 +816,10 @@ ms.lasthandoff: 09/06/2017
                 <a href="https://go.microsoft.com/fwlink/?linkid=833103"> Stack Overflow </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833104"> 問題点の報告 </a>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833104"> Issue Reporting </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833105"> ユーザーの声 </a>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833105"> User Voice </a>
             </li>
         </ul>
     </div>
