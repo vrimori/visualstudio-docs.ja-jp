@@ -1,5 +1,5 @@
 ---
-title: 'Step 6: Add a Timer | Microsoft Docs'
+title: "手順 6: タイマーの追加 |Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,47 +31,47 @@ ms.translationtype: HT
 ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
 ms.openlocfilehash: 0ab82e9962871d6dd5da724a7a72677c387e9a53
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="step-6-add-a-timer"></a>Step 6: Add a Timer
-Next, you add a **Timer** control to the matching game. A timer waits a specified number of milliseconds, and then fires an event, referred to as a *tick*. This is useful for starting an action, or repeating an action on a regular basis. In this case, you'll use a timer to enable players to choose two icons, and if the icons don't match, hide the two icons again after a short period of time.  
+# <a name="step-6-add-a-timer"></a>手順 6: タイマーの追加
+次に、絵合わせゲームに **Timer** コントロールを追加します。 タイマーは、指定されたミリ秒間待機してから、*ティック*と呼ばれるイベントを発生させます。 タイマーは、アクションを開始したり定期的に繰り返したりする場合に便利です。 ここではタイマーの使用例として、プレーヤーが 2 つのアイコンを選択し、アイコンが一致しない場合は、短時間の経過後にその 2 つのアイコンが再び非表示になるようにします。  
   
-### <a name="to-add-a-timer"></a>To add a timer  
+### <a name="to-add-a-timer"></a>タイマーを追加するには  
   
-1.  From the toolbox in Windows Forms Designer, choose **Timer** (in the **Components** category) and then choose the ENTER key, or double-click the timer to add a timer control to the form. The timer's icon, called **Timer1**, should appear in a space below the form, as shown in the following picture.  
+1.  Windows フォーム デザイナーのツール ボックスから、[**タイマー**]\([**コンポーネント**] カテゴリ内) を選択して Enter キーを押すか、タイマーをダブルクリックして、タイマー コントロールをフォームに追加します。 次の図に示しているように、タイマーのアイコンが [**Timer1**] という名前で、フォームの下の領域に表示されます。  
   
-     ![Timer](../ide/media/express_timer.png "Express_Timer")  
-Timer  
+     ![タイマー](../ide/media/express_timer.png "Express_Timer")  
+タイマー  
   
     > [!NOTE]
-    >  If the toolbox is empty, be sure to select the form designer, and not the code behind the form, before opening the toolbox.  
+    >  ツール ボックスが空の場合は、フォームのコードではなくフォーム デザイナーを選択してから、ツール ボックスを開いてください。  
   
-2.  Choose the **Timer1** icon to select the timer. In the **Properties** window, switch from viewing events to viewing properties. Then, set the timer's **Interval** property to **750**, but leave its **Enabled** property set to **False**. The **Interval** property tells the timer how long to wait between *ticks*, or when it triggers its Tick event. A value of 750 tells the timer to wait three quarters of a second (750 milliseconds) before it fires its Tick event. You'll call the `Start()` method to start the timer only after the player chooses the second label.  
+2.  [**Timer1**] アイコンをクリックしてタイマーを選択します。 [**プロパティ**] ウィンドウで、表示イベントから表示プロパティに切り替えます。 次に、タイマーの [**Interval**] プロパティを **750** に設定します。ただし、その [**Enabled**] プロパティは [**False**] のままにします。 [**Interval**] プロパティは、*ティック*間の待機時間 (Tick イベントのトリガーまでの待機時間) をタイマーに指示します。 このプロパティの値として 750 を指定すると、その Tick イベントを発生させるまでに 4 分の 3 秒 (750 ミリ秒) 待機するようタイマーに指示することになります。 `Start()` メソッドを呼び出して、プレーヤーが 2 つ目のラベルをクリックした後にのみタイマーが開始されるようにします。  
   
-3.  Choose the timer control icon in Windows Forms Designer and then choose the ENTER key, or double-click the timer, to add an empty **Tick** event handler. Either replace the code with the following code, or manually enter the following code into the event handler.  
+3.  Windows フォーム デザイナーでタイマー コントロール アイコンを選択して Enter キーを押すか、タイマーをダブルクリックして、空の **Tick** イベント ハンドラーを追加します。 次のコードを既存のコードと置き換えるか、手動でイベント ハンドラーに入力します。  
   
      [!code-csharp[VbExpressTutorial4Step6#7](../ide/codesnippet/CSharp/step-6-add-a-timer_1.cs)]  [!code-vb[VbExpressTutorial4Step6#7](../ide/codesnippet/VisualBasic/step-6-add-a-timer_1.vb)]  
   
-     The Tick event handler does three things: First, it makes sure the timer isn't running by calling the `Stop()` method. Then it uses two reference variables, `firstClicked` and `secondClicked`, to make the icons of the two labels that the player chose invisible again. Finally, it resets the `firstClicked` and `secondClicked` reference variables to `null` in Visual C# and `Nothing` in Visual Basic. This step is important because it's how the program resets itself. Now it's not keeping track of any `Label` controls, and it's ready for the player to choose a label again.  
+     Tick イベント ハンドラーは、3 つのことを実行します。まず、`Stop()` メソッドを呼び出してタイマーを停止します。 次に、2 つの参照変数 `firstClicked` および `secondClicked` を使用して、プレーヤーがクリックした 2 つのラベルを再び非表示にします。 最後に、`firstClicked` 参照変数と `secondClicked` 参照変数を `null` (Visual C# の場合) または `Nothing` (Visual Basic の場合) にリセットします。 この手順は、プログラム自体がリセットされるしくみであるため重要です。 この時点では、`Label` コントロールが追跡されておらず、プレーヤーはラベルを再びクリックできる状態になっています。  
   
     > [!NOTE]
-    >  A `Timer` object has a `Start()` method that starts the timer, and a `Stop()` method that stops it. When you set the timer's **Enabled** property to **True** in the **Properties** window, it starts ticking as soon as the program begins. But when you leave it set to **False**, it doesn't start ticking until its `Start()` method is called. Normally, a timer fires its Tick event over and over again, using the **Interval** property to determine how many milliseconds to wait between ticks. You may have noticed how the timer's `Stop()` method is called inside the Tick event. That puts the timer into *one shot mode*, meaning that when the `Start()` method is called, it waits for the specified interval, triggers a single Tick event, and then stops.  
+    >  `Timer` オブジェクトには、タイマーを開始する `Start()` メソッドと、タイマーを停止する `Stop()` メソッドがあります。 [**プロパティ**] ウィンドウでタイマーの [**Enabled**] プロパティを [**True**] に設定した場合、タイマーはプログラムが起動するとすぐに時間を刻み始めます。 一方、[**False**] に設定したままにした場合、その `Start()` メソッドが呼び出されるまでは時間の刻みは始まりません。 通常、タイマーは、**Interval** プロパティを使用して、次に時間を刻むまでに待機するミリ秒数を判断し、その Tick イベントを繰り返し発生させます。 ここでは、タイマーの `Stop()` メソッドが Tick イベント内で呼び出されるしくみになっています。 これにより、タイマーが*ワン ショット モード*になります。つまり、`Start()` メソッドが呼び出されると、タイマーは指定された間隔分の時間を待機し、Tick イベントを 1 回発生させた後に、停止するようになります。  
   
-4.  To see the new timer in action, go to the code editor and add the following code to the top and bottom of the `label_Click()` event handler method. (You're adding an `if` statement to the top, and three statements to the bottom; the rest of the method stays the same.)  
+4.  新しいタイマーの動作を確認するには、コード エディターに移動し、`label_Click()` イベント ハンドラー メソッドの上部と下部に次のコードを追加します  (`if` ステートメントを、上部に 1 つ追加し、下部に 3 つ追加することになります。メソッドの他の部分は同じです)。  
   
      [!code-csharp[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]  [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]  
   
-     The code at the top of the method checks whether the timer was started by checking the value of the **Enabled** property. That way, if the player chooses the first and second `Label` controls and the timer starts, choosing a third label won't do anything.  
+     メソッドの上部のコードは、**Enabled** プロパティの値をチェックして、タイマーが開始されているかどうかをチェックします。 これにより、プレーヤーが 1 つ目と 2 つ目の `Label` コントロールをクリックした場合はタイマーが開始され、3 つ目のラベルをクリックした場合は何も実行されません。  
   
-     The code at the bottom of the method sets the `secondClicked` reference variable to track the second `Label` control that the player chose, and then it sets that label's icon color to black to make it visible. Then, it starts the timer in one shot mode, so that it waits 750 milliseconds and then fires a single Tick event. The timer's Tick event handler hides the two icons and resets the `firstClicked` and `secondClicked` reference variables so the form is ready for the player to choose another pair of icons.  
+     メソッドの下部のコードは、プレーヤーがクリックした 2 つ目の `Label` コントロールを追跡し、そのラベルのアイコンの色を黒に設定してアイコンを表示するように、`secondClicked` 参照変数を設定します。 これにより、タイマーがワン ショット モードで開始され、750 ミリ秒待機してから、Tick イベントを 1 回発生させるようになります。 その後で、タイマーの Tick イベント ハンドラーが 2 つのアイコンを非表示にし、`firstClicked` 参照変数と `secondClicked` 参照変数をリセットします。この時点で、プレーヤーはフォーム上で別の 1 組のアイコンをクリックできる状態になります。  
   
-5.  Save and run your program. Choose an icon, and it becomes visible.  
+5.  プログラムを保存し、実行します。 アイコンをクリックすると、そのアイコンが表示されます。  
   
-6.  Choose another icon. It appears briefly, and then both icons disappear. Repeat this numerous times. The form now keeps track of the first and second icons that you choose, and uses the timer to pause before making the icons disappear.  
+6.  別のアイコンをクリックします。 そのアイコンが一時的に表示され、その後、両方のアイコンが非表示になります。 これを何度も繰り返します。 これで、フォームで、クリックした 1 つ目と 2 つ目のアイコンが追跡され、タイマーを使用して、少し時間をおいてからアイコンが非表示にされるようになりました。  
   
-### <a name="to-continue-or-review"></a>To continue or review  
+### <a name="to-continue-or-review"></a>続行または確認するには  
   
--   To go to the next tutorial step, see [Step 7: Keep Pairs Visible](../ide/step-7-keep-pairs-visible.md).  
+-   チュートリアルの次の手順に進むには、「[手順 7: ペアの表示の維持](../ide/step-7-keep-pairs-visible.md)」を参照してください。  
   
--   To return to the previous tutorial step, see [Step 5: Add Label References](../ide/step-5-add-label-references.md).
+-   チュートリアルの前の手順に戻るには、「[手順 5: ラベルの参照の追加](../ide/step-5-add-label-references.md)」を参照してください。

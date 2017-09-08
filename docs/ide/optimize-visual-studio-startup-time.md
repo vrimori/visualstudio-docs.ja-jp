@@ -1,5 +1,5 @@
 ---
-title: Optimize Visual Studio Startup Time | Microsoft Docs
+title: "Visual Studio の起動時間の最適化 | Microsoft Docs"
 ms.custom: 
 ms.date: 8/31/2017
 ms.reviewer: 
@@ -21,59 +21,59 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4306111cd49a5299bfa5d4e5e22b212bc7799fe2
 ms.openlocfilehash: 8e419de02104d30344b32e28174bd7de41f91677
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 
-# <a name="optimize-visual-studio-startup-time"></a>Optimize Visual Studio Startup Time
-Ideally, Visual Studio should always start up as quickly as possible. However, Visual Studio extensions and open tool windows can adversely affect startup time because they load automatically at startup. The **Manage Visual Studio Performance** window enables you see which extensions and features affect Visual Studio startup time and to control loading behavior of those extensions and features.
+# <a name="optimize-visual-studio-startup-time"></a>Visual Studio の起動時間の最適化
+Visual Studio は常に、可能な限り迅速に起動することが理想的です。 ただし、Visual Studio 拡張機能と開いているツール ウィンドウは、起動時に自動的に読み込まれるため、起動時間に悪影響を与える可能性があります。 **[Visual Studio のパフォーマンスの管理]** ウィンドウでは、Visual Studio の起動時間に影響する拡張機能と機能を確認できるだけでなく、それらの読み込み動作を制御することもできます。
 
-For more general tips on improving performance, see [Visual Studio Performance Tips and Tricks](../ide/visual-studio-performance-tips-and-tricks.md).
+パフォーマンスの向上に関するより一般的なヒントについては、「[Visual Studio のパフォーマンスのヒントとテクニック](../ide/visual-studio-performance-tips-and-tricks.md)」を参照してください。
 
-## <a name="control-startup-behavior"></a>Control startup behavior
+## <a name="control-startup-behavior"></a>起動の動作の制御
 
-To avoid extending startup time, Visual Studio 2017 avoids loading extensions during startup, using an on-demand-load approach. This behavior means that extensions don't open immediately after Visual Studio starts, but on an as-needed basis after startup. Also, because tool windows left open in a prior Visual Studio session can slow startup time, Visual Studio opens tool windows in a more intelligent way to avoid impacting startup time.
+起動時間が長くならないように、Visual Studio 2017 は、要求に応じて読み込む方法を使用して、起動時に拡張機能が読み込まれないようにします。 この動作は、Visual Studio の起動後すぐに拡張機能を開くのではなく、起動後、必要に応じて開くことを意味します。 また、前の Visual Studio セッションでツール ウィンドウが開いたままである場合、スタートアップ時間が長くなる可能性があるため、Visual Studio は起動時間に影響しないようにより合理的な方法でツール ウィンドウを開きます。
 
-If Visual Studio detects slow startup, a pop-up message appears, alerting you to the extension or tool window that's causing the slowdown. The message also provides a link to the **Manage Visual Studio Performance** dialog box. You can also open this window using the **Help > Manage Visual Studio Performance** menu command.
+Visual Studio で起動の遅延が検出されると、ポップアップ メッセージが表示され、拡張機能またはツール ウィンドウが原因で遅延が発生していることを警告します。 メッセージには **[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスへのリンクも表示されます。 このウィンドウは、メニュー コマンドの **[ヘルプ] > [Visual Studio のパフォーマンスの管理]** を使用して開くこともできます。
 
-![Manage Visual Studio Performance - popup reading 'We've noticed that extension ... is slowing Visual Studio'](../ide/media/vside_perfdialog_popup.png)
+![Visual Studio のパフォーマンスの管理 - "拡張機能...によって Visual Studio の速度が遅くなっていることを検出しました。" という内容のポップアップ](../ide/media/vside_perfdialog_popup.png)
 
-The dialog box lists the extensions and tools windows that are affecting startup performance. This dialog box enables you to change extension and tool window settings to improve startup performance.
+ダイアログ ボックスには、起動のパフォーマンスに影響している拡張機能とツール ウィンドウが一覧されます。 このダイアログ ボックスでは、起動時のパフォーマンスを向上させるために拡張機能とツール ウィンドウの設定を変更することができます。
 
-### <a name="change-extension-settings"></a>Change extension settings
+### <a name="change-extension-settings"></a>拡張機能の設定を変更する
 
-If an extension is slowing down Visual Studio startup, the extension appears in the **Manage Visual Studio Performance** dialog box when you choose one of the extension types. The dialog box shows which extensions affect performance at startup, when loading a solution, and when typing in the editor.
+拡張機能が Visual Studio の起動の遅延の原因となっている場合、いずれかの種類の拡張機能を選択したときに、**[Visual Studio のパフォーマンスを管理]** ダイアログ ボックスに拡張機能が表示されます。 このダイアログ ボックスには、起動時、ソリューションの読み込み時、エディターでの入力時のパフォーマンスに影響を及ぼす拡張機能が表示されます。
 
-![Manage Visual Studio Performance - extensions view](../ide/media/vside_perfdialog_extensions.png)
+![Visual Studio のパフォーマンスの管理 - 拡張機能の表示](../ide/media/vside_perfdialog_extensions.png)
 
-If the impact on startup, solution load, or typing time is unacceptably high, disable the extension for that scenario by selecting the **Disable** button. You can always re-enable the extension for future sessions by using the Extension Manager or the Manage Visual Studio Performance dialog box.
+起動、ソリューションの読み込み、または入力の時間のそれぞれに対する影響が許容範囲を超えている場合は、**[無効にする]** ボタンを選択し、シナリオに対して拡張機能を無効にします。 拡張機能マネージャーまたは [Visual Studio のパフォーマンスの管理] ダイアログ ボックスを使用すれば、今後のセッションでいつでも拡張機能を再度有効にすることができます。
 
-### <a name="change-tool-window-settings"></a>Change tool window settings
+### <a name="change-tool-window-settings"></a>ツール ウィンドウの設定を変更する
 
-If a tool window is slowing down Visual Studio startup and you wish to change the impact, you can override its behavior by choosing one of two options instead of **Use default behavior**:
+ツール ウィンドウが Visual Studio の起動の遅延の原因となっている場合は、**既定の動作を使用する**のではなく、次の 2 つのオプションのいずれかを選択して、動作を上書きすることができます。
 
-- **Do not show window at startup:** the specified tool window is always closed when you next open Visual Studio, even if left open in a previous session. You can open the tool window from the appropriate menu.
-- **Auto hide window at startup:** If a tool window was left open in a previous session, this option collapses the tool window's group at startup to avoid initializing the tool window. This option is a good choice if you use a tool window often, because the tool window is still available, but no longer negatively affects Visual Studio startup time.
+- **起動時にウィンドウを表示しない:** Visual Studio を次に開いたときに、指定したツール ウィンドウが常に閉じられます。前のセッションで開いたままの場合でも同じです。 ツール ウィンドウは対応するメニューから開くことができます。
+- **起動時にウィンドウを自動的に隠す:** ツール ウィンドウが前のセッションで開いたままの場合、このオプションを選択すると、起動時にツール ウィンドウのグループが折りたたまれ、ツール ウィンドウが初期化されないようになります。 このオプションは、ツール ウィンドウがまだ使用可能でも、Visual Studio の起動時間には悪影響しなくなるため、ツール ウィンドウを頻繁に使用する場合に適しています。
 
-![Manage Visual Studio Performance - tool windows view](../ide/media/vside_perfdialog_toolwindows.png)
+![Visual Studio のパフォーマンスの管理 - ツール ウィンドウの表示](../ide/media/vside_perfdialog_toolwindows.png)
 
-You can always return to this dialog box at any time to change the setting for any given tool window.
+いつでもこのダイアログ ボックスに戻って、特定のツール ウィンドウの設定を変更することができます。
 
-## <a name="speed_up_solution_load"></a>Load large solutions faster in Visual Studio 2017
+## <a name="speed_up_solution_load"></a>Visual Studio 2017 で大規模なソリューションを高速で読み込む
 
-Visual Studio 2017 introduces a new feature called lightweight solution load that reduces the amount of time and memory required to load large solutions in the IDE. If you have a large solution containing many C#, VB, or C++ projects, you are likely to see a substantial performance benefit if you enable lightweight solution load. For detailed information on how you might benefit by using this feature, see [Optimize solution loading](../ide/optimize-solution-loading-in-visual-studio).
+Visual Studio 2017 には、ライトウェイト ソリューション ロードという新しい機能が導入されています。これにより、IDE で大規模なソリューションを読み込む場合に必要な時間とメモリの量を減らすことができます。 多くの C#、VB、または C++ プロジェクトを含む大規模なソリューションがある場合に、ライトウェイト ソリューション ロードを有効にすると、パフォーマンスが大幅に向上する可能性があります。 この機能を使用するメリットの詳細については、[ソリューションの読み込みの最適化](../ide/optimize-solution-loading-in-visual-studio)に関する記事をご覧ください。
 
 > [!NOTE]
-> This content applies to Visual Studio 2017 Update 3.
+> このコンテンツは Visual Studio 2017 Update 3 に適用されます。
 
-### <a name="enable-or-disable-lightweight-solution-load"></a>Enable or disable lightweight solution load
+### <a name="enable-or-disable-lightweight-solution-load"></a>ライトウェイト ソリューション ロードを有効または無効にする
 
-You can right-click the solution name in Solution Explorer, and select **Enable Lightweight Solution Load**. After selecting the option, you need to close and reopen the solution to activate lightweight solution load.
+ソリューション エクスプローラーでソリューション名を右クリックし、**[ライトウェイト ソリューション ロードを有効にする]** を選択します。 オプションを選択した後、ライトウェイト ソリューション ロードをアクティブ化するには、ソリューションを閉じてもう一度開く必要があります。
 
-![Solution Explorer](../ide/media/VSIDE_LSL_Solution_Setting.png)
+![ソリューション エクスプローラー](../ide/media/VSIDE_LSL_Solution_Setting.png)
 
-To configure global settings for lightweight solution load, see [Optimize solution loading](../ide/optimize-solution-loading-in-visual-studio.md#global_solution_load_settings).
+ライトウェイト ソリューション ロードのグローバル設定を構成する方法については、[ソリューションの読み込みの最適化](../ide/optimize-solution-loading-in-visual-studio.md#global_solution_load_settings)に関する記事をご覧ください。
 
-## <a name="see-also"></a>See Also
-[Visual Studio Performance Tips and Tricks](../ide/visual-studio-performance-tips-and-tricks.md)
+## <a name="see-also"></a>関連項目
+[Visual Studio のパフォーマンスのヒントとテクニック](../ide/visual-studio-performance-tips-and-tricks.md)
 

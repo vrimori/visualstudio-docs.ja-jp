@@ -1,5 +1,5 @@
 ---
-title: Building Multiple Projects in Parallel with MSBuild | Microsoft Docs
+title: "MSBuild での複数のプロジェクトの並行ビルド | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,36 +35,36 @@ ms.translationtype: HT
 ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
 ms.openlocfilehash: 6aa02abdbfe8ea55b6e3434dbc859b5fa5d6a5e3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="building-multiple-projects-in-parallel-with-msbuild"></a>Building Multiple Projects in Parallel with MSBuild
-You can use MSBuild to build multiple projects faster by running them in parallel. To run builds in parallel, you use the following settings on a multi-core or multiple processor computer:  
+# <a name="building-multiple-projects-in-parallel-with-msbuild"></a>MSBuild での複数のプロジェクトの並行ビルド
+MSBuild では、複数のプロジェクトを並列に実行することによって、これらのプロジェクトをより速くビルドすることができます。 ビルドを並列で実行するには、マルチコア コンピューターまたはマルチプロセッサ コンピューターで次の設定を使用します。  
   
--   The `/maxcpucount` switch at a command prompt.  
+-   `/maxcpucount` スイッチをコマンド プロンプトで使用します。  
   
--   The <xref:Microsoft.Build.Tasks.MSBuild.BuildInParallel%2A> task parameter on an MSBuild task.  
+-   <xref:Microsoft.Build.Tasks.MSBuild.BuildInParallel%2A> タスク パラメーターを MSBuild タスクで使用します。  
   
 > [!NOTE]
->  The **/verbosity** (**/v**) switch in a command line can also affect build performance. Your build performance might decrease if the verbosity of your build log information is set to detailed or diagnostic, which are used for troubleshooting. For more information, see [Obtaining Build Logs](../msbuild/obtaining-build-logs-with-msbuild.md) and [Command-Line Reference](../msbuild/msbuild-command-line-reference.md).  
+>  コマンド ラインで **/verbosity** (**/v**) スイッチを使うと、ビルドのパフォーマンスが影響を受ける場合があります。 ビルド ログ情報の詳細レベルが、トラブルシューティングで使用するために "詳細" または "診断" に設定されている場合、ビルドのパフォーマンスが低下する可能性があります。 詳しくは、「[ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)」と「[コマンド ライン リファレンス](../msbuild/msbuild-command-line-reference.md)」をご覧ください。  
   
-## <a name="maxcpucount-switch"></a>/maxcpucount Switch  
- If you use the `/maxcpucount` switch, or `/m` for short, MSBuild can create the specified number of MSBuild.exe processes that may be run in parallel. These processes are also known as "worker processes." Each worker process uses a separate core or processor, if any are available, to build a project at the same time as other available processors may be building other projects. For example, setting this switch to a value of "4" causes MSBuild to create four worker processes to build the project.  
+## <a name="maxcpucount-switch"></a>/maxcpucount スイッチ  
+ `/maxcpucount` スイッチ (省略形は `/m`) を使用すると、MSBuild では、並列実行される可能性がある MSBuild.exe プロセスを指定された数だけ作成できます。 これらのプロセスは、"ワーカー プロセス" とも呼ばれます。 各ワーカー プロセスがそれぞれ別のコアまたはプロセッサを使用してプロジェクトをビルドするため、プロセッサごとに異なるプロジェクトを同時にビルドできます。 たとえば、このスイッチを "4" に設定すると、MSBuild では 4 つのワーカー プロセスを作成してプロジェクトをビルドします。  
   
- If you include the `/maxcpucount` switch without specifying a value, MSBuild will use up to the number of processors on the computer.  
+ 値を指定せずに `/maxcpucount` スイッチを追加すると、MSBuild では、コンピューター上のプロセッサの数まで使用します。  
   
- For more information about this switch, which was introduced in MSBuild 3.5, see [Command-Line Reference](../msbuild/msbuild-command-line-reference.md).  
+ MSBuild 3.5 で導入されたこのスイッチについて詳しくは、「[コマンド ライン リファレンス](../msbuild/msbuild-command-line-reference.md)」をご覧ください。  
   
- The following example instructs MSBuild to use three worker processes. If you use this configuration, MSBuild can build three projects at the same time.  
+ 次の例は、MSBuild で 3 つのワーカー プロセスを使用する方法を示しています。 この構成を使用すると、MSBuild では同時に 3 つのプロジェクトをビルドできます。  
   
 ```  
 msbuild.exe myproj.proj /maxcpucount:3  
 ```  
   
-## <a name="buildinparallel-task-parameter"></a>BuildInParallel Task Parameter  
- `BuildInParallel` is an optional boolean parameter on a [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] task. When `BuildInParallel` is set to `true` (its default value is `false`), multiple worker processes are generated to build as many projects at the same time as possible. For this to work correctly, the `/maxcpucount` switch must be set to a value greater than 1, and the system must be at least dual-core or have two or more processors.  
+## <a name="buildinparallel-task-parameter"></a>BuildInParallel タスク パラメーター  
+ `BuildInParallel` は、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のタスクに対する省略可能なブール値パラメーターです。 `BuildInParallel` を `true` (既定値は `false`) に設定すると、複数のワーカー プロセスが生成され、それと同じ数のプロジェクトを同時にビルドすることができます。 このようなビルドを行うためには、`/maxcpucount` スイッチが 1 より大きい値に設定され、システムが最低でもデュアルコアであるか 2 つ以上のプロセッサを搭載している必要があります。  
   
- The following is an example, taken from microsoft.common.targets, about how to set the `BuildInParallel` parameter.  
+ 次の例は、microsoft.common.targets の一部であり、`BuildInParallel` パラメーターの設定方法を示しています。  
   
 ```  
 <PropertyGroup>  
@@ -88,8 +88,8 @@ msbuild.exe myproj.proj /maxcpucount:3
 </MSBuild>  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Using Multiple Processors to Build Projects](../msbuild/using-multiple-processors-to-build-projects.md)   
- [Writing Multi-Processor-Aware Loggers](../msbuild/writing-multi-processor-aware-loggers.md)   
- [Tuning C++ Build Parallelism blog](http://go.microsoft.com/fwlink/?LinkId=251457)
+## <a name="see-also"></a>関連項目  
+ [複数のプロセッサを使用したプロジェクトのビルド](../msbuild/using-multiple-processors-to-build-projects.md)   
+ [マルチプロセッサ対応の logger の記述](../msbuild/writing-multi-processor-aware-loggers.md)   
+ [C++ での並列ビルドの調整に関するブログ](http://go.microsoft.com/fwlink/?LinkId=251457)
 

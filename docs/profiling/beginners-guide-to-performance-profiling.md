@@ -1,5 +1,5 @@
 ---
-title: Beginner's Guide to Performance Profiling in Visual Studio | Microsoft Docs
+title: "Visual Studio でのパフォーマンス プロファイルのビギナーズ ガイド | Microsoft Docs"
 ms.custom: H1Hack27Feb2017
 ms.date: 02/27/2017
 ms.reviewer: 
@@ -38,141 +38,141 @@ ms.translationtype: HT
 ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
 ms.openlocfilehash: a5eabb6a62e4b362d9355772621d27f574034ff1
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="beginners-guide-to-performance-profiling"></a>Beginner's Guide to Performance Profiling
-You can use Visual Studio profiling tools to analyze performance issues in your application. This procedure shows how to use **CPU Usage** tab of the Diagnostics Tools to obtain performance data for your app. The Diagnostics Tools are supported for .NET development in Visual Studio, including ASP.NET, and for native/C++ development.
+# <a name="beginners-guide-to-performance-profiling"></a>パフォーマンス プロファイルのビギナーズ ガイド
+Visual Studio プロファイリング ツールを使用して、アプリケーションでパフォーマンスの問題を分析することができます。 このガイドでは、診断ツールの [**CPU 使用率**] タブを使用し、アプリのパフォーマンス データを取得する方法について説明します。 診断ツールは Visual Studio の .NET 開発 (ASP.NET を含む) とネイティブ/C++ 開発で利用できます。
   
-When the debugger pauses, the **CPU Usage** tool collects information about the functions that are executing in your application. The tool lists the functions that were performing work, and provides a timeline graph you can use to focus on specific segments of the sampling session.
+デバッガーが一時停止すると、**CPU 使用率**ツールは、アプリケーションで実行されている関数に関する情報を収集します。 このツールは、作業を実行していた関数を一覧表示し、サンプリング セッションの特定のセグメントに焦点を当てるために使用できるタイムライン グラフを提供します。
 
-The Diagnostic hub offers you a lot of other options to run and manage your diagnostics session. If **CPU Usage** does not give you the data that you need, the [other profiling tools](../profiling/Profiling-Tools.md) provide different kinds of information that might be helpful to you. In many cases, the performance bottleneck of your application may be caused by something other than your CPU, such as memory, rendering UI, or network request time. The Diagnostics hub offers you a lot of other options to record and analyze this kind of data.
+診断ハブでは、診断セッションの実行と管理のために他の多くのオプションを提供しています。 **CPU 使用率**では必要なデータを得ることができない場合、[他のプロファイリング ツール](../profiling/Profiling-Tools.md)が別の種類の情報を提供します。その情報が役に立つ可能性があります。 多くの場合、アプリケーションのパフォーマンス上の問題は CPU 以外の何かが原因になります。メモリ、UI のレンダリング、ネットワークの要求時間などです。 診断ハブには、この種のデータを記録し、分析するためのオプションが他にもいろいろあります。
 
 |         |         |
 |---------|---------|
-| ![Watch a video](../install/media/video-icon.png "WatchVideo") | [Watch a video](#video) on using the diagnostics tools that shows how to analyze CPU usage and how to analyze memory usage. |
+| ![ビデオを見る](../install/media/video-icon.png "WatchVideo") | CPU 使用率の分析方法とメモリ使用率の分析方法については、診断ツールの使用に関する[こちらのビデオ](#video)をご覧ください。 |
 
-In this topic, we'll discuss analyzing CPU usage in your normal debugging workflow. You can also analyze CPU usage without a debugger attached or by targeting a running app - for more information see [Collect profiling data without debugging](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging) in [Run profiling tools with or without the debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+このトピックでは、通常のデバッグ ワークフローで CPU 使用率を分析する方法について説明します。 デバッガーをアタッチせずに、または実行中のアプリをターゲットにすることで、CPU 使用率を分析することもできます。詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」の「[デバッグなしでプロファイリング データを収集する](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)」をご覧ください。
   
-##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Step 1: Collect profiling data 
+##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 手順 1: プロファイリング データを収集する 
   
-1.  Open the project you want to debug in Visual Studio and set a breakpoint in your app at the point where you want to examine CPU usage.
+1.  Visual Studio でデバッグするプロジェクトを開き、CPU 使用率を調べるポイントでアプリのブレークポイントを設定します。
 
-2.  Set a second breakpoint at the end of the function or region of code that you want to analyze.
+2.  分析するコードの関数またはリージョンの終わりに 2 つ目のブレークポイントを設定します。
 
     > [!TIP]
-    > By setting two breakpoints, you can limit data collection to the parts of code that you want to analyze.
+    > 2 つのブレークポイントを設定することで、分析するコードの部分にデータ収集を限定できます。
   
-3.  The **Diagnostic Tools** window appears automatically unless you have turned it off. To bring up the window again, click **Debug / Windows / Show Diagnostic Tools**.
+3.  **[診断ツール]** ウィンドウは、オフにしていない限り自動的に表示されます。 もう一度ウィンドウを表示するには、**[デバッグ] > [ウィンドウ] > [診断ツールの表示]** の順にクリックします。
 
-4.  You can choose whether to see **CPU Usage**, [Memory Usage](../profiling/Memory-Usage.md), or both, with the **Select Tools** setting on the toolbar. If you are running Visual Studio Enterprise,  you can also enable or disable IntelliTrace in **Tools / Options / IntelliTrace**.
+4.  ツールバーにある **[ツールの選択]** の設定で、**CPU 使用率**、[メモリ使用率](../profiling/Memory-Usage.md)、またはその両方を表示するかどうかを選択できます。 Visual Studio Enterprise を実行している場合は、**[ツール]、[オプション]、[IntelliTrace]** で IntelliTrace を有効または無効にすることもできます。
 
-     ![Show Diagnostics Tools](../profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
+     ![診断ツールを表示する](../profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
 
-     We will mainly be looking at CPU utilization, so make sure that **CPU Usage** is enabled (it is enabled by default).
+     CPU 使用率を中心に観察します。**CPU 使用率**が有効になっていることを確認してください (既定では有効になっています)。
 
-5.  Click **Debug / Start Debugging** (or **Start** on the toolbar, or **F5**).
+5.  **[デバッグ]、[デバッグの開始]** の順にクリックします (あるいは、ツール バーの **[開始]** をクリックするか、**F5** を押します)。
 
-     When the app finishes loading, the Summary view of the Diagnostics Tools appears.
+     アプリケーションが読み込みを完了すると、診断ツールの概要ビューが表示されます。
 
-     ![Diagnostics Tools Summary Tab](../profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
+     ![診断ツールの概要タブ](../profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
 
-     For more information on the events, see [Searching and filtering the Events tab of the Diagnostic Tools window](http://blogs.msdn.com/b/visualstudioalm/archive/2015/11/12/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window.aspx)
+     イベントに関する詳細については、「[診断ツール ウィンドウの [イベント検索とフィルター処理] タブ](http://blogs.msdn.com/b/visualstudioalm/archive/2015/11/12/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window.aspx)」を参照してください。
 
-6.  Run the scenario that will cause your first breakpoint to be hit.
+6.  最初のブレークポイントにヒットするシナリオを実行します。
 
-7.  While the debugger is paused, enable the collection of the CPU Usage data and then open the **CPU Usage** tab.
+7.  デバッガーが一時停止になっているとき、CPU 使用率データの収集を有効にし、**[CPU 使用率]** タブを開きます。
 
-     ![Diagnostics Tools Enable CPU Profiling](../profiling/media/DiagToolsEnableCPUProfiling.png "DiagToolsEnableCPUProfiling")
+     ![診断ツールの [CPU プロファイルの有効化]](../profiling/media/DiagToolsEnableCPUProfiling.png "DiagToolsEnableCPUProfiling")
 
-     When you choose **Enable CPU Profiling**, Visual Studio will begin recording your functions and how much time they take to execute. You can only view this collected data when your application is halted at a breakpoint.
+     **[CPU プロファイルの有効化]** を選択すると、Visual Studio は関数とそれにかかる時間の記録を開始します。 アプリケーションがブレークポイントで停止したとき、この収集されたデータのみを表示できます。
 
-8.  Hit F5 to run the app to your second breakpoint.
+8.  F5 キーを押すと、アプリケーションが 2 つ目のブレークポイントまで実行されます。
 
-     Now, you now have performance data for your application specifically for the region of code that runs between the two breakpoints.
+     これで、2 つのブレークポイント間で実行されるコードのリージョンを対象に、アプリケーションのパフォーマンス データが得られました。
 
-9.  Select the region you're interested in analyzing in the CPU timeline (it must be a region that shows profiling data).
+9.  CPU タイムラインで、分析対象として関心のあるリージョンを選択します (プロファイル データを表示するリージョンにする必要があります)。
 
-     ![Diagnostics Tools Selecting a Time Segment](../profiling/media/DiagToolsSelectTimeSegment.png "DiagToolsSelectTimeSegment")
+     ![診断ツールで時間のセグメントを選択する](../profiling/media/DiagToolsSelectTimeSegment.png "DiagToolsSelectTimeSegment")
 
-     The profiler begins preparing thread data. Wait for it to finish.
+     プロファイラーがスレッド データの準備を開始します。 それが完了するまで待ちます。
 
-     ![Diagnostics Tools Preparing Threads](../profiling/media/DiagToolsPreparingThreads.png "DiagToolsPreparingThreads")
+     ![診断ツールのスレッド準備](../profiling/media/DiagToolsPreparingThreads.png "DiagToolsPreparingThreads")
   
-     The CPU Usage tool displays the report in the **CPU Usage** tab.
+     CPU 使用率ツールの **[CPU 使用率]** タブにレポートが表示されます。
   
-     ![Diagnostics Tools CPU Usage Tab](../profiling/media/DiagToolsCPUUsageTab.png "DiagToolsCPUUsageTab")
+     ![診断ツールの [CPU 使用率] タブ](../profiling/media/DiagToolsCPUUsageTab.png "DiagToolsCPUUsageTab")
 
-     At this point, you can begin to analyze the data.
+     この時点で、データの分析を開始できます。
 
-## <a name="Step2"></a> Step 2: Analyze CPU usage data
+## <a name="Step2"></a> 手順 2: CPU 使用率データの分析
 
-We recommend that you begin analyzing your data by examining the list of functions under CPU Usage, identifying the functions that are doing the most work, and then taking a closer look at each one.
+データの分析では、最初に CPU 使用率で関数の一覧を調べて最も多くの作業を行っている関数を特定し、それから個々の作業を詳しく調べることをお勧めします。
 
-1. In the function list, examine the functions that are doing the most work.
+1. 関数の一覧で、最も多くの作業を行っている関数を調べます。
 
-    ![Diagnostics Tools CPU Usage Function List](../profiling/media/DiagToolsCPUUsageFunctionList.png "DiagToolsCPUUsageFunctionList")
+    ![診断ツールの CPU 使用率の関数一覧](../profiling/media/DiagToolsCPUUsageFunctionList.png "DiagToolsCPUUsageFunctionList")
 
     > [!TIP]
-    > Functions are listed in order starting with those doing the most work (they're not in call order). This helps you quickly identify the longest running functions.
+    > 関数は、最も多くの作業を行っている順に一覧表示されます (呼び出し順ではありません)。 それにより、最も実行時間の長い関数を簡単に特定できます。
 
-2. In the function list, double-click one of your app functions that is doing a lot of work.
+2. 関数の一覧で、たくさんの作業を行っているアプリケーション関数の 1 つをダブルクリックします。
 
-    When you double-click a function, the **Caller/Callee** view opens in the left pane. 
+    関数をダブルクリックすると、左ウィンドウに **[呼び出し元/呼び出し先]** ビューが開きます。 
 
-    ![Diagnostics Tools Caller Callee View](../profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
+    ![診断ツールの [呼び出し元/呼び出し先] ビュー](../profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
 
-    In this view, the selected function shows up in the heading and in the **Current Function** box (GetNumber, in this example). The function that called the current function is shown on the left under **Calling Function**, and any functions called by the current function are shown in **Called Functions** box on the right. (You can select either box to change the current function.)
+    このビューでは、選択した関数が見出しと **[現在の関数]** ボックスに表示されます (この例では、GetNumber)。 現在の関数を呼び出した関数が左側の **[呼び出し元の関数]** に表示されます。現在の関数で呼び出された関数があれば、それは右側の **[呼び出される関数]** ボックスに表示されます。 (いずれかのボックスを選択し、現在の関数を変更できます。)
 
-    This view shows you the total time (ms) and the percentage of the overall app running time that the function has taken to complete.
+    このビューには、合計時間 (ms) と関数の完了にかかったアプリケーション実行時間全体のパーセンテージが表示されます。
 
-    **Function Body** also shows you the total amount of time (and the percentage of time) spent in the function body excluding time spent in calling and called functions. (In this example, 3713 out of 3729 ms were spent in the function body, and the remaining 16 ms were spent in external code called by this function).
+    また、**関数本体**に、呼び出し元の関数と呼び出される関数にかかった時間を除き、関数本体にかかった時間の合計 (と時間のパーセンテージ) が表示されます。 (この例では、3729 ms のうち 3713 ms が関数本体に使用され、残りの 16 ms がこの関数で呼び出された外部コードで使用されています。)
 
     > [!TIP]
-    > High values in **Function Body** may indicate a performance bottleneck within the function itself.
+    > **関数本体**の値が高い場合、関数自体の中でパフォーマンス上のボトルネックとなっている可能性があります。
 
-3. If you want to see a higher-level view showing the order in which the functions are called, select **Call Tree** from the drop-down list at the top of the pane.
+3. 関数の呼び出し順を示す上位レベルのビューを表示する場合、ウィンドウの上部にあるドロップダウンから **[コール ツリー]** を選択します。
  
-    Each numbered area in the figure relates to a step in the procedure.
+    図中の番号は、前に示した各手順に対応しています。
   
-    ![Diagnostics Tools Call Tree](../profiling/media/DiagToolsCallTree.png "DiagToolsCallTree")
+    ![診断ツールのコール ツリー](../profiling/media/DiagToolsCallTree.png "DiagToolsCallTree")
   
 |||
 |-|-|
-|![Step 1](../profiling/media/ProcGuid_1.png "ProcGuid_1")|The top-level node in CPU Usage call trees is a pseudo-node|  
-|![Step 2](../profiling/media/ProcGuid_2.png "ProcGuid_2")|In most apps, when the [Show External Code](#BKMK_External_Code) option is disabled, the second-level node is an **[External Code]** node that contains the system and framework code that starts and stops the app, draws the UI, controls thread scheduling, and provides other low-level services to the app.|  
-|![Step 3](../profiling/media/ProcGuid_3.png "ProcGuid_3")|The children of the second-level node are the user-code methods and asynchronous routines that are called or created by the second-level system and framework code.|
-|![Step 4](../profiling/media/ProcGuid_4.png "ProcGuid_4")|Child nodes of a method contain data only for the calls of the parent method. When **Show External Code** is disabled, app methods can also contain an **[External Code]** node.|
+|![手順 1](../profiling/media/ProcGuid_1.png "ProcGuid_1")|CPU 使用率コール ツリーのトップ レベルのノードは擬似ノードです。|  
+|![手順 2](../profiling/media/ProcGuid_2.png "ProcGuid_2")|ほとんどのアプリでは、 [[外部コードの表示]](#BKMK_External_Code) オプションをオフにすると、セカンド レベルのノードは **[外部コード]** ノードとなります。このノードに含まれるシステムおよびフレームワーク コードは、アプリの開始と停止、UI の描画、スレッド スケジュールの制御、およびアプリへの他の低レベル サービスの提供を行います。|  
+|![手順 3](../profiling/media/ProcGuid_3.png "ProcGuid_3")|セカンド レベル ノードの子はユーザー コード メソッドおよび非同期ルーチンで、セカンド レベル システムとフレームワーク コードによって呼び出される、または作成されます。|
+|![手順 4](../profiling/media/ProcGuid_4.png "ProcGuid_4")|メソッドの子ノードには、親メソッドの呼び出しのみのデータが含まれます。 [ **外部コードの表示** ] がオフのとき、アプリ メソッドには **[外部コード]** ノードが含まれる場合もあります。|
 
-Here is more information on the column values:
+列値の詳細は次のようになります。
 
-- **Total CPU** indicates how much work was done by the function and any functions called by it. High total CPU values point to the functions that are most expensive overall.
+- **[合計 CPU]** は、その関数、およびその関数によって呼び出された関数によって実行された作業の量を示します。 合計 CPU 値が高い関数は、全体的に見て最も負荷の高い関数です。
   
-- **Self CPU** indicates how much work was done by the code in the function body, excluding the work done by functions that were called by it. High **Self CPU** values may indicate a performance bottleneck within the function itself.
+- **[セルフ CPU]** は、関数本体内のコードによって実行された作業の量を示しますが、その関数から呼び出された関数によって実行された作業は含まれません。 **セルフ CPU 値**が高い部分は、関数自体の中でパフォーマンス上のボトルネックとなっている可能性があります。
 
-- **Modules** The name of the module containing the function, or the number of modules containing the functions in an [External Code] node.
+- **モジュール** 関数が含まれるモジュールの名前です。あるいは、[外部コード] ノード内の関数が含まれるモジュールの数です。
 
-## <a name="BKMK_External_Code"></a>View external code
+## <a name="BKMK_External_Code"></a>外部コードの表示
 
-External code are functions in system and framework components that executed by the code you write. External code include functions that start and stop the app, draw the UI, control threading, and provide other low-level services to the app. In most cases, you won't be interested in external code, and so the CPU Usage tool gathers the external functions of a user method into one **[External Code]** node.
+外部コードとは、作成したコードによって実行されるシステムおよびフレームワーク コンポーネント内の関数です。 外部コードには、アプリの開始と停止、UI の描画、スレッドの制御、およびアプリへの他の低レベル サービスの提供を行う関数が含まれます。 外部コードを確認することはほとんどないため、CPU 使用率ツールはユーザー メソッドの外部関数を 1 つの **[外部コード]** ノードにまとめます。
   
-If you want to view the call paths of external code, choose **Show External Code** from the **Filter view** list and then choose **Apply**.  
+外部コードのコール パスを表示する場合、 **[フィルター ビュー]** リストから **[外部コードの表示]** をクリックし、 **[適用]**をクリックします。  
   
-![Choose Filter View, then Show External Code](../profiling/media/DiagToolsShowExternalCode.png "DiagToolsShowExternalCode")  
+![[フィルター表示]、[外部コードの表示] の順に選択します](../profiling/media/DiagToolsShowExternalCode.png "DiagToolsShowExternalCode")  
   
-Be aware that many external code call chains are deeply nested, so that the width of the Function Name column can exceed the display width of all but the largest of computer monitors. When this happens, function names are shown as **[...]**.
+多くの外部コードの呼び出しチェーンは複雑な入れ子になっているため、関数名列の幅は、一部の大型コンピューター モニターを除いてディスプレイの幅に収まりきらない可能性があります。 その場合、関数名は **[...]** と表示されます。
   
-Use the search box to find a node that you are looking for, then use the horizontal scroll bar to bring the data into view.
+検索ボックスを使って目的のノードを探した後、水平スクロール バーを使ってデータを表示させます。
 
 > [!TIP]
-> If you profile external code that calls Windows functions, you should make sure that you have the most current .pdb files. Without these files, your report views will list Windows function names that are cryptic and difficult to understand. For more information about how to make sure that you have the files you need, see [Specify Symbol (.pdb) and Source Files in the Debugger](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+> Windows 関数を呼び出す外部コードをプロファイリングする場合は、最新の .pdb ファイルを入手しておく必要があります。 これらのファイルがない場合、レポート ビューに暗号のようなわかりにくい Windows 関数名が一覧表示されます。 必要なファイルがあることを確認する方法の詳細については、「[Specify Symbol (.pdb) and Source Files in the Debugger](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」 (デバッガーにシンボル (.pdb) とソース ファイルを指定する) を参照してください。
 
-## <a name="video"></a> Watch a video on using the diagnostics tools
+## <a name="video"></a> 診断ツールの使用方法のビデオを見る
 
 <div style="padding-top: 56.25%; position: relative; width: 100%;">
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Profiling-with-Diagnostics-Tools-in-Visual-Studio-2017-daHnzMD6D_9211787171" frameborder="0" allowfullscreen></iframe>
 </div>
   
-## <a name="see-also"></a>See Also  
- [[Memory Usage](../profiling/memory-usage.md) [CPU Usage](../profiling/cpu-usage.md) [Profiling in Visual Studio](../profiling/index.md) [Profiling Feature Tour](../profiling/profiling-feature-tour.md)
+## <a name="see-also"></a>関連項目  
+ [メモリ使用率](../profiling/memory-usage.md) [CPU 使用率](../profiling/cpu-usage.md) [Visual Studio のプロファイル](../profiling/index.md) [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
 
