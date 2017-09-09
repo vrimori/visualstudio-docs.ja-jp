@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio での Python 環境 |Microsoft Docs"
+title: Python Environments in Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 7/25/2017
 ms.prod: visual-studio-dev15
@@ -16,255 +16,255 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
-ms.openlocfilehash: fa8a7616fe88f024ab299e5d115b66f8656e7cb3
+ms.sourcegitcommit: 4013eb0b251985b0984d0cbf2a723175fe91aad5
+ms.openlocfilehash: 9c0a841bf7607baa78d79245713a1fd648228f2a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 
-# <a name="python-environments"></a>Python 環境
+# <a name="python-environments"></a>Python environments
 
-Visual Studio の Python は、複数の Python 環境の管理を容易にし、異なるプロジェクトで環境を簡単に切り替えられるようにします。 
+Python in Visual Studio makes it easy to manage multiple Python environments and easily switch between them for different projects. 
 
-注: Visual Studio の Python を初めて使う場合は、以下のトピックでこのトピックの基礎になっている情報を参照してください。
+Note: if you're new to Python in Visual Studio, see the following topics first as this present discussion relies upon them:
 
-- [Visual Studio での Python の使用](python-in-visual-studio.md)
-- [Visual Studio での Python サポートのインストール](installation.md)
+- [Working with Python in Visual Studio](python-in-visual-studio.md)
+- [Installing Python support in Visual Studio](installation.md)
 
-Python コードを常に実行する Python "*環境*" は、インタープリター、ライブラリ (通常は Python 標準ライブラリ)、およびインストールされているパッケージのセットで構成されています。 これらのコンポーネント全体により、有効な言語の構造と構文、アクセスできるオペレーティング システム機能、使うことができるパッケージが決まります。
+A Python *environment*, in which you always run Python code, consists of an interpreter, a library (typically the Python Standard Library), and a set of installed packages. Together these components determine which language constructs and syntax are valid, what operating-system functionality you can access, and which packages you can use.
 
-Visual Studio では、環境には環境のライブラリ用の IntelliSense データベースも含まれ、Visual studio エディターで `import` のようなステートメントを入力すると、使用可能なライブラリおよびそのライブラリ内のモジュールの一覧が自動的に表示されます。
+In Visual Studio, an environment also includes an IntelliSense database for an environment's libraries, such that typing a statement like `import` in the Visual Studio editor automatically displays a list of available libraries as well as the modules within those libraries.
 
-多くの場合、開発者は単一のグローバルな Python 環境のみを使います。 しかし、このトピックで説明するような、複数のグローバル環境、プロジェクト固有の環境、仮想環境の管理が必要になる場合もあります。
+Oftentimes, developers use only a single, global Python environment. Other developers, however, need to manage multiple global environments, project-specific environments, and virtual environments as explained in this topic:
 
-- [Python インタープリターの選択とインストール](#selecting-and-installing-python-interpreters)
-- [Visual Studio での Python 環境の管理](#managing-python-environments-in-visual-studio)
-- [グローバル環境](#global-environments)
-- [プロジェクト固有環境](#project-specific-environments)
-- [仮想環境](#virtual-environments)
-- [必要なパッケージの管理](#managing-required-packages)
-- [検索パス](#search-paths)
+- [Selecting and installing Python interpreters](#selecting-and-installing-python-interpreters)
+- [Managing Python environments in Visual Studio](#managing-python-environments-in-visual-studio)
+- [Global environments](#global-environments)
+- [Project-specific environments](#project-specific-environments)
+- [Virtual environments](#virtual-environments)
+- [Managing required packages](#managing-required-packages)
+- [Search paths](#search-paths)
 
-概要のビデオについては、「[Deep Dive: Python Interpreters](https://youtu.be/KY1GEOo3qy0)」(Deep Dive: Python インタープリター) (youtube.com、13 分 27 秒) をご覧ください。
+For a video introduction, see [Deep Dive: Python Interpreters](https://youtu.be/KY1GEOo3qy0) (youtube.com, 13m27s).
 
 > [!VIDEO https://www.youtube.com/embed/KY1GEOo3qy0]
 
-## <a name="selecting-and-installing-python-interpreters"></a>Python インタープリターの選択とインストール
+## <a name="selecting-and-installing-python-interpreters"></a>Selecting and installing Python interpreters
 
-Visual Studio 2017 を除き、Python のサポートに Python インタープリターは付属しないので、コードを実行するには次のいずれかをインストールする必要があります。 一般に、Visual Studio は新しくインストールされたインタープリターを自動的に検出し、それぞれの環境をセットアップします。 インストール済みの環境が検出されない場合は、「[既存インタープリター用の環境の作成](#creating-an-environment-for-an-existing-interpreter)」を参照してください。
+Except with Visual Studio 2017, Python support does not come with a Python interpreter, so you need to install one of the following to run your code. In general, Visual Studio automatically detects newly installed interpreters and sets up an environment for each. If it does not detect an installed environment, see [Creating an environment for an existing interpreter](#creating-an-environment-for-an-existing-interpreter).
 
-| インタープリター | 説明 | 
+| Interpreter | Description | 
 | --- | --- | 
-| [CPython](https://www.python.org/) | "ネイティブ" で最もよく使われるインタープリターであり、32 ビット バージョンと 64 ビット バージョンがあります (32 ビットを推奨)。 最新の言語機能、Python パッケージの最大限の互換性、完全なデバッグ サポート、および [IPython](http://ipython.org/) との相互運用性が含まれています。 「[Should I use Python 2 or Python 3?](http://wiki.python.org/moin/Python2orPython3)」(Python 2 と Python 3 のどちらを使うか) もご覧ください。 |
-| [IronPython](https://github.com/IronLanguages/main) | Python の .NET の実装であり (32 ビット バージョンと 64 ビット バージョン)、C#/F#/Visual Basic の相互運用機能、.NET API へのアクセス、標準 Python デバッグ (ただし、C++ 混合モードのデバッグはありません)、IronPython/C# の混合デバッグが提供されます。 ただし、IronPython は仮想環境をサポートしていません。 | 
-| [Anaconda](https://www.continuum.io) | Python を利用するオープン データ サイエンス プラットフォームであり、最新バージョンの CPython と、インストールが困難なパッケージのほとんどを含みます。 他のインタープリターに決定できない場合にお勧めします。 |
-| [PyPy](http://www.pypy.org/) | Python の高パフォーマンスなトレースの JIT 実装であり、実行時間の長いプログラム、およびパフォーマンスに問題があるが他の解決策が見つからない場合に、適しています。 Visual Studio で動作しますが、高度なデバッグ機能のサポートには制限があります。 |
-| [Jython](http://www.jython.org/) | Java 仮想マシン (JVM) での Python の実装です。 IronPython に似ており、Jython で実行されるコードは Java のクラスおよびライブラリとやり取りできますが、CPython 用の多くのライブラリは使用できない場合があります。 Visual Studio で動作しますが、高度なデバッグ機能のサポートには制限があります。 |
+| [CPython](https://www.python.org/) | The "native" and most commonly-used interpreter, available in 32-bit and 64-bit versions (32-bit recommended). Includes the latest language features, maximum Python package compatibility, full debugging support, and interop with [IPython](http://ipython.org/). See also: [Should I use Python 2 or Python 3?](http://wiki.python.org/moin/Python2orPython3). Note that Visual Studio 2015 and earlier do not support Python 3.6 and can give the error "Unsupported python version 3.6". Use Python 3.5 or earlier instead. |
+| [IronPython](https://github.com/IronLanguages/main) | A .NET implementation of Python, available in 32-bit and 64-bit versions, providing C#/F#/Visual Basic interop, access to .NET APIs, standard Python debugging (but not C++ mixed-mode debugging), and mixed IronPython/C# debugging. IronPython, however, does not support virtual environments. | 
+| [Anaconda](https://www.continuum.io) | An open data science platform powered by Python, and includes the latest version of CPython and most of the difficult-to-install packages. We recommend it if you can't otherwise decide. |
+| [PyPy](http://www.pypy.org/) | A high-performance tracing JIT implementation of Python that's good for long-running programs and situations where you identify performance issues but cannot find other resolutions. Works with Visual Studio but with limited support for advanced debugging features. |
+| [Jython](http://www.jython.org/) | An implementation of Python on the Java Virtual Machine (JVM). Similar to IronPython, code running in Jython can interact with Java classes and libraries, but may not be able to use many libraries intended for CPython. Works with Visual Studio but with limited support for advanced debugging features. |
 
-Python 環境用に新しい検出形式を提供したい開発者は、「[PTVS Environment Detection](https://github.com/Microsoft/PTVS/wiki/Extensibility-Environments)」(PTVS 環境の検出) (github.com) をご覧ください。
+Developers that want to provide new forms of detection for Python environments, see [PTVS Environment Detection](https://github.com/Microsoft/PTVS/wiki/Extensibility-Environments) (github.com).
 
-## <a name="managing-python-environments-in-visual-studio"></a>Visual Studio での Python 環境の管理
+## <a name="managing-python-environments-in-visual-studio"></a>Managing Python environments in Visual Studio
 
-[Python Environments (Python 環境)] ウィンドウを開くには、次のいずれかの操作を行います。
+To open the Python Environments window, do one of the following:
 
-1. **[表示] > [その他のウィンドウ] > [Python Environments (Python 環境)]** メニュー コマンドを選びます。
-1. ソリューション エクスプローラーでプロジェクトの **[Python Environments (Python 環境)]** を右クリックし、**[View All Python Environments (すべての Python 環境の表示)]** を選びます。
+1. Select the **View > Other Windows > Python Environments** menu command.
+1. Right-click the **Python Environments** for a project in Solution Explorer and select **View All Python Environments**:
 
-    ![ソリューション エクスプローラーの [View All Python Environments (すべての Python 環境の表示)] コマンド](media/environments-view-all.png)
+    ![View All Environments command in Solution Explorer](media/environments-view-all.png)
     
-いずれの場合も、[Python Environments (Python 環境)] ウィンドウはソリューション エクスプローラーの兄弟タブとして表示されます。
+In either case, the Python Environments window appears as a sibling tab to Solution Explorer:
 
-![[Python Environments (Python 環境)] ウィンドウ](media/environments-default-view.png)
+![Python Environments window](media/environments-default-view.png)
 
-上の例は、Python 3.4 (32 ビット CPython) と共に IronPython 2.7 の 32 ビットおよび 64 ビット バージョンがインストールされることを示しています。 この場合、太字で表示される既定の環境は Python 3.4 であり、すべての新しいプロジェクトに使われます。 環境が何も表示されない場合は、Visual Studio 2015 以降に Python Tools for Visual Studio はインストールされていますが、Python インタープリターはインストールされていないことを意味します (前の「[Python インタープリターの選択とインストール](#selecting-and-installing-python-interpreters)」を参照)。 
+The example above shows that Python 3.4 (32-bit CPython) is installed along with 32-bit and 64-bit versions of IronPython 2.7. In this case, the default environment in boldface is Python 3.4, which is used for any new projects. If you don't see any environments listed, it means that you've installed Python Tools for Visual Studio in Visual Studio 2015 or earlier, but haven't installed a Python interpreter (see [Selecting and installing Python interpreters](#selecting-and-installing-python-interpreters) above). 
 
 > [!Tip]
-> 上記のように、**[Python 環境]** ウィンドウの幅が狭いときは、環境が上部に一覧表示され、さまざまなタブは下部に表示されます。 ただし、ウィンドウを十分に広げた方が作業しやすくなります。
+> When the **Python Environments** window is narrow, as shown above, the environments are listed on the top and the various tabs on the bottom. Expanding the window enough, however, changes to a wide view that you may find more convenient to work with.
 >
-> ![[Python Environments (Python 環境)] ウィンドウを広げた表示](media/environments-expanded-view.png)
+> ![Python Environments window expanded view](media/environments-expanded-view.png)
 
 > [!Note]
-> Visual Studio はシステム サイト パッケージのオプションを尊重しますが、Visual Studio 内からそれを変更する方法は用意されていません。
+> Although Visual Studio respects the system-site-packages option, it doesn't provide a way to change it from within Visual Studio.
 
-### <a name="creating-an-environment-for-an-existing-interpreter"></a>既存インタープリター用の環境の作成
+### <a name="creating-an-environment-for-an-existing-interpreter"></a>Creating an environment for an existing interpreter
 
-Visual Studio では通常、(「[PEP 514 - Python registration in the Windows registry](https://www.python.org/dev/peps/pep-0514/)」 (PEP 514 - Windows レジストリでの Python の登録) に従って) レジストリをチェックして、インストールされている Python インタープリターを見つけます。 ただし、インタープリターが標準以外の方法でインストールされている場合は、Visual Studio で見つけられないことがあります。 そのような場合は、次のようにして Visual Studio にインタープリターを直接指定できます。
+Visual Studio normally locates an installed Python interpreter by checking the registry (following [PEP 514 - Python registration in the Windows registry](https://www.python.org/dev/peps/pep-0514/)). However, Visual Studio may not find it if the interpreter is installed in a non-standard fashion. In such cases, you can point Visual Studio directly to the interpreter as follows:
 
-1. [Python Environments (Python 環境)] ウィンドウで **[+ Custom... (+ カスタム...)]** を選びます。新しい環境が作成されて、[**[Configure (構成)]** タブ](#configure-tab)が開きます (後で説明します)。
+1. Select **+ Custom...** in the Environments Window, which creates a new environment and opens the [**Configure** tab](#configure-tab) described below.)
 
-    ![新しいカスタム環境の既定のビュー](media/environments-custom-1.png)
+    ![Default view for a new custom environment](media/environments-custom-1.png)
 
-1. **[Description (説明)]** フィールドに環境の名前を入力します。
-1. **[Prefix path (プレフィックスのパス)]** フィールドでは、インタープリターのパスを入力するか参照します。
-1. **[Auto Detect (自動検出)]** を選んで Visual Studio に残りのフィールドを設定させるか、または手動で設定します。
-1. **[Apply (適用)]** を選んで環境を保存します。
-1. 環境を削除する場合は、**[Configure (構成)]** タブの **[Remove (削除)]** コマンドを選びます。 自動検出された環境ではこのオプションは提供されません。 詳細については、次のセクションを参照してください。
+1. Enter a name for the environment in the **Description** field.
+1. Enter or browse to the path of the interpreter in the **Prefix path** field.
+1. Select **Auto Detect** to have Visual Studio complete the remaining fields, or complete them manually.
+1. Select **Apply** to save the environment.
+1. If you need to remove the environment, select the **Remove** command on the **Configure** tab. Auto-detected environments do not provide this option. See the next section for more information.
 
-### <a name="moving-an-existing-interpreter"></a>既存のインタープリターの移動
+### <a name="moving-an-existing-interpreter"></a>Moving an existing interpreter
 
-既存のインタープリターをファイル システム上の新しい場所に移動する場合、Visual Studio は変更を自動的に検出しません。 環境ウィンドウでリストを更新するには、手動の手順が必要になります。
+If you move an existing interpreter to a new location on the file system, Visual Studio doesn't automatically detect the change. Manual steps are necessary to update the list in the Environment window:
 
-- そのインタープリターの環境を最初に作成した場合は、新しい場所を指すようにその環境を編集します。
+- If you originally created an environment for that interpreter, edit that environment to point to the new location.
 
-- 環境が最初に自動検出された場合、Visual Studio で調べるレジストリ エントリを作成した別のインストーラー プログラムでコンピューターにインストールされています。 この場合は、まず、Python インタープリターを元の場所に復元します。 次に、インストーラーを使用してアンインストールします。これで、レジストリ エントリがクリアされます。 次に、目的の場所にインタープリターを再インストールします。 Visual Studio を再起動すると、新しい場所が自動検出されます。 このプロセスによって、確実にインストーラーの他の副作用が正しく適用されます。
+- If the environment was originally auto-detected, it was installed on the computer with a distinct installer program that created the registry entries that Visual Studio examines. In this case, first restore the Python interpreter to its original location. Then uninstall it using the installer, which clears the registry entries. Then reinstall the interpreter at the desired location. Restart Visual Studio and it should auto-detect the new location. This process ensures that any other side effects of the installer are properly applied.
 
-### <a name="overview-tab"></a>[Overview (概要)] タブ
+### <a name="overview-tab"></a>Overview tab
 
-環境の基本的な情報とコマンドを提供します。
+Provides basic information and commands for the environment:
 
-![[Python Environments (Python 環境)] の [Overview (概要)] タブ](media/environments-overview-tab.png)
+![Python Environments overview tab](media/environments-overview-tab.png)
 
-| コマンド | 説明 |
+| Command | Description |
 | --- | --- |
-| Make this environment the default for new projects (この環境を新しいプロジェクトの既定にする) | アクティブな環境を設定します。これにより、IntelliSense データベースが読み込まれる間、Visual Studio がしばらく応答しなくなる場合があります。 多くのパッケージがある環境では、長時間応答しなくなる可能性があります。 |
-| ディストリビューターの Web サイトに移動する | Python のディストリビューションで提供された URL をブラウザーで開きます。 たとえば、Python 3.x では python.org に移動します。 |
-| 対話型ウィンドウを開く | この環境用の[対話型 (REPL) ウィンドウ](interactive-repl.md)を Visual Studio 内で開き、すべての[スタートアップ スクリプト (後述)](#startup-scripts) を適用します。 |
-| IPython 対話モードを使用する | 設定すると、IPython では対話型ウィンドウが既定で開きます。 インライン プロットおよびヘルプを表示する `name?` やシェル コマンド用の `!command` などの拡張 IPython 構文が有効になります。 Anaconda ディストリビューションを使うときは、追加パッケージが必要なので、このオプションを使うことをお勧めします。 詳しくは、「[対話型ウィンドウでの IPython の使用](interactive-repl-ipython.md)」をご覧ください。 |
-| PowerShell で開く | PowerShell コマンド ウィンドウでインタープリターを開始します。 |
-| (フォルダー リンク) | 環境のインストール フォルダー、python.exe インタープリター、pythonw.exe インタープリターに簡単にアクセスできます。 インストール フォルダーはエクスプローラーで開き、2 つのインタープリターはコンソール ウィンドウが開きます。 |
+| Make this environment the default for new projects | Sets the active environment, which may cause Visual Studio to briefly become non-responsive while it loads the IntelliSense database. Environments with many packages may be non-responsive for longer. |
+| Visit the distributor's website | Opens a browser to the URL provided by the Python distribution. Python 3.x, for example, goes to python.org. |
+| Open interactive window | Opens the [interactive (REPL) window](interactive-repl.md) for this environment within Visual Studio, applying any [startup scripts (see below)](#startup-scripts). |
+| Use IPython interactive mode | When set, opens the interactive window with IPython by default. This enabled inline plots as well as the extended IPython syntax such as `name?` to view help and `!command` for shell commands. This option is recommended when using an Anaconda distribution, as it requires extra packages. For more information, see [Using IPython in the Interactive Window](interactive-repl-ipython.md). |
+| Open in PowerShell | Starts the interpreter in a PowerShell command window. |
+| (Folder links) | Provide you quick access to the environment's installation folder, the python.exe interpreter, and the pythonw.exe interpreter. The first opens in Windows Explorer, the latter two open a console window. |
 
-#### <a name="startup-scripts"></a>スタートアップ スクリプト
+#### <a name="startup-scripts"></a>Startup scripts
 
-日常のワークフローで対話型ウィンドウを使っていると、ヘルパー関数を作成して繰り返し使うことがあります。 たとえば、Excel でデータ フレームを開く関数を作成し、そのコードをスタートアップ スクリプトとして保存して、対話型ウィンドウでいつでも使えるようにするといった場合です。
+As you use interactive windows in your everyday workflow, you likely develop helper functions that you use regularly. For example, you may create a function that opens a DataFrame in Excel, and then save that code as a startup script so that it's always available in the interactive window.
 
-スタートアップ スクリプトにはインポート、関数定義、その他文字どおりどのようなコードでも含めることができ、対話型ウィンドウは自動的にそれを読み込んで実行します。 このようなスクリプトは、2 つの方法で参照されます。
+Startup scripts contain code that the interactive window loads and runs automatically, including imports, function definitions, and literally anything else. Such scripts are referenced in two ways:
 
-1. 環境をインストールすると、Visual Studio は `Documents\Visual Studio 2017\Python Scripts\<environment>` フォルダーを作成します。&lt;environment&gt; は、環境の名前と同じです。 **[対話型のスクリプトを確認する]** コマンドを使って、環境固有のフォルダーに簡単に移動できます。 その環境の対話型ウィンドウを開始すると、このフォルダーで見つかったすべての `.py` ファイルがアルファベット順に読み込まれて実行されます。
+1. When you install an environment, Visual Studio creates a folder `Documents\Visual Studio 2017\Python Scripts\<environment>` where &lt;environment&gt' matches the name of the environment. You can easily navigate to the environment-specific folder with the **Explore interactive scripts** command. When you start the interactive window for that environment, it loads and runs whatever `.py` files are found here in alphabetical order.
 
-1. **[ツール] > [オプション] > [Python ツール] > [対話型ウィンドウ]** タブ (「[対話型ウィンドウ オプション](options.md#interactive-windows-options)」を参照) の**[スクリプト]** コントロールでは、すべての環境で読み込まれて実行されるスタートアップ スクリプトの追加フォルダーを指定します。 ただし、この機能は現時点では機能しません。
+1. The **Scripts** control in **Tools > Options > Python Tools > Interactive Windows** tab (see [Interactive windows options](options.md#interactive-windows-options)) is intended to specify an additional folder for startup scripts that are loaded and run in all environments. However, this feature doesn't work at present.
 
 
-### <a name="configure-tab"></a>[Configure (構成)] タブ
+### <a name="configure-tab"></a>Configure tab
 
-次の表で説明するような詳細が表示されます。 このタブが存在しない場合は、Visual Studio がすべての詳細情報を自動的に管理していることを意味します。
+If shown, contains details as described in the table below. If this tab isn't present, it means that Visual Studio is managing all the details automatically.
 
-![[Python Environments (Python 環境)] の [Configure (構成)] タブ](media/environments-configure-tab.png)
+![Python Environments configure tab](media/environments-configure-tab.png)
 
-| フィールド | 説明 |
+| Field | Description |
 | --- | --- |
-| **説明** | 環境の名前です。 |
-| **Prefix path (プレフィックスのパス)** | インタープリターの基本フォルダーの場所です。 この値を入力して **[自動検出]** をクリックすると、Visual Studio が他のフィールドを設定します。 |
-| **Interpreter Path (インタープリターのパス)** | インタープリターの実行可能ファイルへのパスです。通常は、プレフィックスのパスの後に `python.exe` を付けたものです。 |
-| **Windowed interpreter (ウィンドウ形式のインタープリター)** | コンソールではない実行可能ファイルへのパスです。多くの場合、プレフィックスのパスの後に `pythonw.exe` を付けたものです。 |
-| **Library path (ライブラリのパス)** | 標準ライブラリのルートを指定します。ただし、Visual Studio がさらに正確なパスをインタープリターに要求できる場合、この値は無視される可能性があります。 |
-| **Language version (言語バージョン)** | ドロップダウン メニューから選びます。 |
-| **アーキテクチャ** | 通常は自動的に検出されて設定されます。されない場合は 32 ビットまたは 64 ビットを指定します。 |
-| **Path environment variable (パス環境変数)** | 検索パスを探すためにインタープリターが使う環境変数です。 Visual Studio は、Python を開始するとき、プロジェクトの検索パスが含まれるように変数の値を変更します。 通常、このプロパティは `PYTHONPATH` に設定する必要がありますが、一部のインタープリターでは別の値が使われます。 |
+| **Description** | The name to give the environment. |
+| **Prefix path** | The base folder location of the interpreter. By filling this value and clicking **Auto Detect**, Visual Studio attempts to fill in the other fields for you. |
+| **Interpreter path** | The path to the interpreter executable, commonly the prefix path followed by `python.exe` |
+| **Windowed interpreter** | The path to the non-console executable, often the prefix path followed by `pythonw.exe`. |
+| **Library path** | Specifies the root of the standard library, but this value may be ignored if Visual Studio is able to request a more accurate path from the interpreter. |
+| **Language version** | Selected from the drop-down menu. |
+| **Architecture** | Normally detected and filled in automatically, otherwise specifies 32-bit or 64-bit. |
+| **Path environment variable** | The environment variable that the interpreter uses to find search paths. Visual Studio changes the value of the variable when starting Python so that it contains the project's search paths. Typically this property should be set to `PYTHONPATH`, but some interpreters use a different value. |
 
-### <a name="pip-tab"></a>[pip] タブ
+### <a name="pip-tab"></a>pip tab
 
-環境にインストールされているパッケージを管理し、ユーザーが新しいパッケージ (すべての依存関係を含みます) を検索してインストールできるようにします。 検索機能は、現在インストールされているパッケージと [PyPI](https://pypi.python.org) をフィルター処理します。 検索ボックスに、`pip install` コマンドと `--user` や `--no-deps` などのフラグを直接入力することもできます。
+Manages the packages installed in the environment, allowing you also to and search for and install new ones (including any dependencies). Searching filters your currently installed packages and [PyPI](https://pypi.python.org). You can also directly enter any `pip install` command in the search box, including flags such as `--user` or `--no-deps`.
 
-![[Python Environments (Python 環境)] の [pip] タブ](media/environments-pip-tab.png)
+![Python environments pip tab](media/environments-pip-tab.png)
 
-パッケージをインストールすると、ファイル システム上の環境の `Lib` フォルダー内にサブフォルダーが作成されます。 たとえば、Python 3.6 を `c:\Python36` にインストールすると、パッケージは `c:\Python36\Lib` にインストールされます。Anaconda3 を `c:\Program Files\Anaconda3` にインストールすると、パッケージは `c:\Program Files\Anaconda3\Lib` にインストールされます。
+Installing a package creates subfolders within the environment's `Lib` folder on the file system. For example, if you have Python 3.6 installed in `c:\Python36`, packages are installed in `c:\Python36\Lib`; if you have Anaconda3 installed in `c:\Program Files\Anaconda3` then packages are installed in `c:\Program Files\Anaconda3\Lib`.
 
-後者の場合、ファイル システムの保護された領域 `c:\Program Files` に環境があるため、Visual Studio は、パッケージ サブフォルダーを作成できるように、管理者特権で `pip install` を実行する必要があります。 管理者特権への昇格が必要な場合、Visual Studio により "この環境でパッケージのインストール、更新、削除を行うには、管理者特権が必要な場合があります" というプロンプトが表示されます。
+In the latter case, because the environment is located in a protected area of the file system, `c:\Program Files`, Visual Studio must run `pip install` elevated to allow it to create package subfolders. When elevation is required, Visual Studio displays the prompt, "Administrator privileges may be required to install, update or remove packages for this environment":
 
-![パッケージ インストールのための昇格時のプロンプト](media/environments-pip-elevate.png)
+![Elevation prompt for package installation](media/environments-pip-elevate.png)
 
-**[今すぐ昇格]** を選ぶと、1 回の操作について pip に管理者特権が付与され、アクセス許可を求めるオペレーティング システムのプロンプトも対象になります。 **[管理者特権なしで続行]** を選ぶと、パッケージのインストールは試みられますが、pip がフォルダーを作成しようとすると、"エラー: 'C:\Program Files\Anaconda3\Lib\site-packages\png.py' を作成できませんでした: アクセス許可が拒否されました" のような出力で失敗します。
+**Elevate now** grants administrative privileges to pip for a single operation, subject also to any operating system prompts for permissions. Selecting **Continue without Administrator privileges** attempts to install the package, but pip fails when trying to create folders with output such as "error: could not create 'C:\Program Files\Anaconda3\Lib\site-packages\png.py': Permission denied."
 
-**[パッケージのインストール時か削除時に必ず昇格]** を選ぶと、対象の環境ではダイアログが表示されなくなります。 再びダイアログが表示されるようにするには、**[ツール] > [オプション] > [Python ツール] > [全般]** に移動し、**[永続的に表示されないすべてのダイアログをリセットする]** ボタンを選びます。 
+Selecting **Always elevate when installing or removing packages** prevents the dialog from appearing for the environment in question. To make the dialog appear again, go to **Tools > Options > Python Tools > General** and select the button, **Reset all permanently hidden dialogs**. 
 
-同じオプション タブでは、**[常に管理者として pip を実行する]** を選んで、すべての環境でダイアログを非表示にすることもできます。 「[Options - General tab](options.md#general-options)」([全般] タブのオプション) をご覧ください。
+In that same options tab, you can also select **Always run pip as administrator** to suppress the dialog for all environments. See [Options - General tab](options.md#general-options).
 
 
-### <a name="intellisense-tab"></a>[IntelliSense] タブ
+### <a name="intellisense-tab"></a>IntelliSense tab
 
-IntelliSense 入力候補データベースの現在の状態を示します。
+Shows the current status of the IntelliSense completion database:
 
-![[Python Environments (Python 環境)] の [IntelliSense] タブ](media/environments-intellisense-tab.png)
+![Python Environments IntelliSense tab](media/environments-intellisense-tab.png)
 
-データベースには環境内のすべてのライブラリのメタデータが含まれ、IntelliSense の速度が向上しメモリ使用量が減ります。 Visual Studio は新しい環境を検出すると (またはユーザーが追加すると)、ライブラリのソース ファイルを分析することで、データベースのコンパイルを自動的に開始します。 インストールされている内容により、この処理には 1 分から 1 時間以上かかることがあります (たとえば、Anaconda には多くのライブラリが付属しており、データベースのコンパイルに少し時間がかかります)。完了すると、詳細な IntelliSense が提供され、新しいライブラリをインストールするまでデータベースを再度更新する (**[Refresh DB]\(DB の更新\)** ボタンで) 必要はありません。
+The database contains metadata for all the environment's libraries and improves IntelliSense speed and reduces memory usage. When Visual Studio detects a new environment (or you add one), it automatically begins to compile the database by analyzing the library source files. This process can take anywhere from a minute to an hour or more depending on what's installed. (Anaconda, for example, comes with many libraries and takes some time to compile the database.) Once complete, you get detailed IntelliSense and don't need to refresh the database again (with the **Refresh DB** button) until you install more libraries.
 
-データがコンパイルされていないライブラリには、**!** が表示されます。環境のデータベースが完成していない場合は、**!** も メイン環境リストのライブラリの横に表示されます。
+Libraries for which data haven't been compiled are marked with a **!**; if an environment's database isn't complete, a **!** also appears next to it in the main environment list.
 
-## <a name="global-environments"></a>グローバル環境
+## <a name="global-environments"></a>Global environments
 
-グローバル (またはシステム全体) 環境は、コンピューターのすべてのプロジェクトで利用できます。 通常 Visual Studio はグローバル環境を自動的に検出し、[Python Environments (Python 環境)] ウィンドウで見ることができます。 表示されない場合は、前の「[Visual Studio での Python 環境の管理](#managing-python-environments-in-visual-studio)」で説明したように手動で環境を追加できます。
+Global (or system-wide) environments are available to all of your projects on a machine. Visual Studio usually detects global environments automatically, and they can be viewed in the Python Environments window. If not, you can add an environment manually as described earlier under [Managing Python environments in Visual Studio](#managing-python-environments-in-visual-studio).
 
-Visual Studio は、すべての新規プロジェクトの実行、デバッグ、構文チェック、インポート表示、メンバー入力候補、および環境を必要とするその他のタスクに、既定の環境を使います。 次に説明するように、既定の環境を変更すると、[プロジェクト固有環境](#project-specific-environments)が追加されていないすべてのプロジェクトに影響します。
+Visual Studio uses the default environment for all new projects for executing, debugging, checking syntax, displaying import and member completions, and any other tasks that require an environment. Changing the default environment affects all projects that have not had a [project-specific environment](#project-specific-environments) added, as described next.
 
-## <a name="project-specific-environments"></a>プロジェクト固有環境
+## <a name="project-specific-environments"></a>Project-specific environments
 
-プロジェクト固有環境を指定すると、プロジェクトは常にその特定の環境で実行され、既定のグローバル環境は無視されます。 たとえば、グローバル既定環境が CPython である場合に、IronPython と、グローバル環境にインストールされていない特定のライブラリがプロジェクトで必要なときは、プロジェクト固有環境が必要になります。
+Project-specific environments ensure that a project always runs in a particular environment, ignoring the default global environment. For example, if the global default environment is CPython but a project requires IronPython and certain libraries that aren't installed in the global environment, then a project-specific environment is necessary.
 
-プロジェクト環境は、ソリューション エクスプローラーの [Python Environments (Python 環境)] ノードに一覧表示されます。 太字のエントリは現在アクティブであり、デバッグ、インポートとメンバー入力候補、構文チェック、および環境を必要とするその他のタスクに使われます。
+Project environments are listed in Solution Explorer under the Python Environments node. The bold entry is currently active, and Visual Studio uses it for debugging, import and member completions, syntax checking, and any other tasks that require an environment:
 
-![ソリューション エクスプローラーに表示されたプロジェクト環境](media/environments-project.png)
+![Project environments displayed in Solution Explorer](media/environments-project.png)
 
-プロジェクトに対して別の環境をアクティブ化するには、その環境を右クリックして、**[Activate Environment (環境のアクティブ化)]** を選びます。
+To activate a different environment for the project, right-click that environment and select **Activate Environment**.
 
-**[Python Environments (Python 環境)]** を右クリックして **[Add/Remove Python Environments... (Python 環境の追加/削除...)]** を選ぶことで、任意のグローバル環境をプロジェクト環境として追加できます。 表示される一覧で、プロジェクトで使用可能な環境を選択または選択解除できます。
+Any global environment can be added as a project environment by right-clicking **Python Environments** and selecting **Add/Remove Python Environments...**. From the displayed list you can select or deselect those environments that are available in your project.
 
-![[Add/Remove Python Environments (Python 環境の追加/削除)] ダイアログ](media/environments-add-remove.png)
+![Add/Remove Python Environments dialog](media/environments-add-remove.png)
 
-ソリューション エクスプローラーでは、環境を展開して、インストールされているパッケージ (環境をアクティブにすると、コードでインポートして使用できるもの) を表示することもできます。
+In Solution Explorer, you can also expand the environment to show its installed packages (those you can import and use in your code when the environment is active):
 
-![ソリューション エクスプローラーでの環境の Python パッケージ](media/environments-installed-packages.png)
+![Python packages for an environment in Solution Explorer](media/environments-installed-packages.png)
 
-新しいパッケージをインストールするには、環境を右クリックし、**[Install Python Package... (Python パッケージのインストール...)]** を選んで、目的のパッケージの名前を入力します。 パッケージ (および依存関係) は [Python Package Index (PyPI)](https://pypi.python.org/pypi) からダウンロードされます。ここでパッケージを検索することもできます。 Visual Studio のステータス バーと出力ウィンドウには、インストールに関する情報が表示されます。 パッケージをアンインストールするには、パッケージを右クリックして **[Remove (削除)]** を選びます。
+To install new packages, right-click the environment, select **Install Python Package...**, and enter the name of the desired package. Packages (and dependencies) are downloaded from the [Python Package Index (PyPI)](https://pypi.python.org/pypi), where you can also search for available packages. Visual Studio's status bar and output window shows information about the install. To uninstall a package, right-click it select **Remove**.
 
 > [!Note]
-> Python のパッケージ管理サポートは、現在、Python のコア開発チームによって開発中です。 表示されるエントリは常に正確であるとは限らず、インストールとアンインストールが信頼できない場合、または使用できない場合があります。 Visual Studio は、使用可能な場合は pip パッケージ マネージャーを使い、必要な場合はダウンロードしてインストールします。 Visual Studio は、easy_install パッケージ マネージャーを使うこともできます。 コマンド ラインから pip または easy_install を使ってインストールされたパッケージも表示されます。
+> Python's package management support is currently under development by the core Python development team. The displayed entries may not always be accurate, and installation and uninstallation may not be reliable or available. Visual Studio uses the pip package manager if available, and downloads and installs it when required. Visual Studio can also use the easy_install package manager. Packages installed using pip or easy_install from the command line are also displayed.
 
 > [!Tip]
-> pip がパッケージのインストールに失敗する一般的な状況は、パッケージの `*.pyd` ファイルにネイティブ コンポーネントのソース コードが含まれる場合です。 必要なバージョンの Visual Studio がインストールされていない場合、pip はこれらのコンポーネントをコンパイルできません。 このような状況では、"`error: Unable to find vcvarsall.bat`" というエラー メッセージが表示されます。 多くの場合、`easy_install` ではコンパイル済みのバイナリをダウンロードでき、Python の古いバージョンに適したコンパイラは [http://aka.ms/VCPython27](http://aka.ms/VCPython27) からダウンロードできます。 詳しくは、Python Tools チーム ブログの「[How to deal with the pain of "unable to find vcvarsallbat"](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/)」("vcvarsallbat が見つからない" という問題への対処方法) をご覧ください。
+> A common situation where pip fails to install a package is when the package includes source code for native components in `*.pyd` files. Without the required version of Visual Studio installed, pip cannot compile these components. The error message displayed in this situation is `error: Unable to find vcvarsall.bat`. `easy_install` is often able to download pre-compiled binaries, and you can download a suitable compiler for older versions of Python from [http://aka.ms/VCPython27](http://aka.ms/VCPython27). For more details, see [How to deal with the pain of "unable to find vcvarsallbat"](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/) on the Python tools team blog.
 
 
-## <a name="virtual-environments"></a>仮想環境
+## <a name="virtual-environments"></a>Virtual Environments
 
-グローバル環境にインストールされたパッケージは、その環境を使うすべてのプロジェクトで使うことができるため、2 つのプロジェクトが、互換性のないパッケージまたは同じパッケージの異なるバージョンを必要とすると、競合が発生する可能性があります。 このような競合を避けるため、Visual Studio には "*仮想環境*" を作成する機能があります。通常、仮想環境はプロジェクトに固有です。
+Because packages installed into a global environment are available to all projects that use it, conflicts may occur when two projects require incompatible packages or different versions of the same package. To avoid such conflicts, Visual Studio provides the ability to create *virtual environments*, which are typically specific to a project.
 
-他の Python 環境と同様に、仮想環境も Python インタープリター、ライブラリ、およびパッケージのセットで構成されます。 ただし、この場合、仮想環境はインタープリターとライブラリはいずれかのグローバル環境のものを使いますが (ただし、仮想環境をサポートしている場合)、そのパッケージはグローバル環境および他のすべての仮想環境から独立して分離されています。 この分離により、競合が回避され、仮想環境のフットプリントはほぼそのパッケージのサイズと、最小限に抑えられます。 
+Like any other Python environment, a virtual environment consists of a Python interpreter, a library, and a set of packages. In this case, though, the virtual environment uses the interpreter and library from one of your global environments (provided it supports virtual environments), but its packages are separate and isolated from the global and all other virtual environments. This isolation again avoids conflicts and minimizes the virtual environment's footprint to the approximate size of its packages. 
 
-仮想環境を作成するには:
+To create a virtual environment:
 
-1. ソリューション エクスプローラーで **[Python Environments (Python 環境)]** を右クリックし、**[Add Virtual Environment... (仮想環境の追加...)]** を選びます。次のダイアログが表示されます。
+1. Right-click **Python Environments** in Solution Explorer and select **Add Virtual Environment...**, which brings up the following:
 
-    ![仮想環境の作成](media/environments-add-virtual-1.png)
+    ![Creating a virtual environment](media/environments-add-virtual-1.png)
 
-1. 名前を指定してプロジェクトのパスに仮想環境を作成するか、または完全なパスを指定して他の場所に作成します  (他のツールとの最大限の互換性を確保するには、名前ではアルファベットと数字のみを使います)。
+1. Specify a name to create the virtual environment in your project path, or a full path to create it elsewhere. (To ensure maximum compatibility with other tools, use only letters and numbers in the name.)
 
-1. 基本インタープリターとしてグローバル環境を選び、**[Create (作成)]** をクリックします。 `pip` と `virtualenv` または `venv` パッケージが使用できない場合は、ダウンロードされてインストールされます。
+1. Select a global environment as the base interpreter and click **Create**. If `pip` and `virtualenv` or `venv` packages are not available, they are downloaded and installed.
 
-    指定したパスが既存の仮想環境の場合は、基本インタープリターが検出されて、[作成] ボタンは **[追加]** に変わります。
+    If the provided path is an existing virtual environment, the base interpreter is detected and the create button changes to **Add**:
 
-    ![既存の仮想環境の追加](media/environments-add-virtual-2.png)
+    ![Adding an existing virtual environment](media/environments-add-virtual-2.png)
 
-ソリューション エクスプローラーで **[Python Environments (Python 環境)]** を右クリックし、**[Add Existing Virtual Environment... (既存の仮想環境の追加...)]** を選ぶことで、既存の仮想環境を追加することもできます。 Visual Studio は、環境の `lib` ディレクトリにある `orig-prefix.txt` ファイルを使って、基本インタープリターを自動的に検出します。
+An existing virtual environment can also be added by right-clicking **Python Environments** in Solution Explorer and selecting **Add Existing Virtual Environment...**. Visual Studio automatically detects the base interpreter using the `orig-prefix.txt` file in the environment's `lib` directory.
 
-プロジェクトに追加された仮想環境は **[Python Environments (Python 環境)]** ウィンドウに表示され、他の環境と同じように、アクティブ化してパッケージを管理できます。 仮想環境を右クリックして **[削除]** を選ぶと、環境への参照が削除されるか、または環境とディスク上のすべてのファイルが削除されます (ただし、基本インタープリターは削除されません)。
+Once a virtual environment is added to your project, it appears in the **Python Environments** window, you can activate it like any other environment, and you can manage its packages. Right-clicking it and selecting **Remove** either removes the reference to the environment, or deletes the environment and all its files on disk (but not the base interpreter).
 
-仮想環境の 1 つの欠点として、ハード コーディングされたファイルのパスを含むため、共有や他の開発用コンピューターへの転送が簡単ではないことに注意してください。 幸い、次のセクションで説明する `requirements.txt` ファイルを使うことができます。
+Note that one drawback to virtual environments is that they contain hard-coded file paths and thus cannot easily be shared or transported to other development machines. Fortunately, you can use the `requirements.txt` file as described in the next section.
 
-## <a name="managing-required-packages"></a>必要なパッケージの管理
+## <a name="managing-required-packages"></a>Managing required packages
 
-他のユーザーとプロジェクトを共有する場合、ビルド システムを使う場合、または [Microsoft Azure に発行する](template-azure-cloud-service.md)場合は、必要な外部パッケージを指定する必要があります。 推奨されるアプローチとしては、依存パッケージの必要なバージョンをインストールする pip のためのコマンド リストを含む [requirements.txt ファイル](http://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org) を使います。
+If you're sharing a project with others, using a build system, or plan to [publish it to Microsoft Azure](template-azure-cloud-service.md), you need to specify the external packages it requires. The recommended approach is to use a [requirements.txt file](http://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org) that contains a list of commands for pip that installs the required versions of dependent packages.
 
-技術的には、任意のファイル名を使って要件を追跡できますが (パッケージをインストールするときに `-r <full path to file>` を使って)、Visual Studio では `requirements.txt` に固有のサポートが用意されています。
+Technically, any filename may be used to track requirements (by using `-r <full path to file>` when installing a package), but Visual Studio provides specific support for `requirements.txt`:
 
-- `requirements.txt` を含むプロジェクトを読み込み、そのファイルに列記されているすべてのパッケージをインストールする場合は、プロジェクトを右クリックして、**[Install from requirements.txt (requirements.txt からインストールする)]** を選びます。
+- If you've loaded a project that contains `requirements.txt` and wish to install all the packages listed in that file, right-click the project and select **Install from requirements.txt**:
 
-    ![requirements.txt からインストールする](media/environments-requirements-txt-install.png)
+    ![Install from requirements.txt](media/environments-requirements-txt-install.png)
 
-- 必要なすべてのパッケージをプロジェクトにインストールするときに、ソリューション エクスプローラーでプロジェクトを右クリックして **[Generate requirements.txt (requirements.txt を生成する)]** を選ぶことで、必要なファイルを作成できます。 ファイルが既に存在する場合、更新方法の指定を求められます。
+- When you have all the necessary packages installed in a project, you can right-click the project in Solution Explorer and select **Generate requirements.txt** to create the necessary file. If the file already exists, a prompt appears for how to update it:
 
-    ![requirements.txt の更新オプション](media/environments-requirements-txt-replace.png)
+    ![Update requirements.txt options](media/environments-requirements-txt-replace.png)
 
-    - **[Replace entire file (ファイル全体を置き換える)]** は、存在するすべてのアイテム、コメント、オプションを削除します。
-    - **[既存のエントリを更新]** は、パッケージの要件を検出し、現在インストールされているバージョンと一致するようにバージョン指定子を更新します。
-    - **[Update and add entries (エントリを更新および追加する)]** は、検出されたすべての要件を更新し、他のすべてのパッケージをファイルの末尾に追加します。
+    - **Replace entire file** removes all items, comments, and options that exist.
+    - **Refresh existing entries** detects package requirements and updates the version specifiers to match the version you currently have installed.
+    - **Update and add entries** refreshes any requirements that are found, and adds all other packages to the end of the file.
 
-`requirements.txt` ファイルはプロジェクトの要件を固定するためのものなので、インストールされるすべてのパッケージが正確なバージョンと共に記述されています。 正確なバージョンを使うと、別のコンピューターに環境を簡単に再現できます。 バージョンの範囲、別のパッケージの依存関係、または pip 以外のインストーラーでインストールされたパッケージであってもも、含まれています。
+Because `requirements.txt` files are intended to freeze the requirements of your project, all installed packages are written with precise versions. Using precise versions ensures that you can easily reproduce your environment on another machine. Packages are included even if they were installed with a version range, as a dependency of another package, or with an installer other than pip.
 
-新しい仮想環境を追加するとき、` requirements.txt` ファイルが存在する場合は、**[仮想環境の追加]** ダイアログにパッケージを自動的にインストールするオプションが表示されるので、別のコンピューターに簡単に環境を再作成できます。
+If a` requirements.txt` file exists when adding a new virtual environment, the **Add Virtual Environment** dialog displays an option to install the packages automatically, making it easy to recreate an environment on another machine:
 
-![requirements.txt で仮想環境を作成する](media/environments-requirements-txt.png)
+![Create virtual environment with requirements.txt](media/environments-requirements-txt.png)
 
-pip でインストールできないパッケージが `requirements.txt` ファイルに出現する場合は、インストール全体が失敗します。 その場合は、ファイルを手動で編集してこのパッケージを除外するか、[pip のオプション](http://pip.readthedocs.org/en/latest/reference/pip_install.html#requirements-file-format)を使ってパッケージのインストール可能なバージョンを参照するようにします。 たとえば、[`pip wheel`](http://pip.readthedocs.org/en/latest/reference/pip_wheel.html) を使って依存関係をコンパイルし、`--find-links <path>` オプションを `requirements.txt` に追加することができます。
+If a package cannot be installed by pip and it appears in a `requirements.txt` file, the entire installation fails. In this case, manually edit the file to exclude this package or to use [pip's options](http://pip.readthedocs.org/en/latest/reference/pip_install.html#requirements-file-format) to refer to an installable version of the package. For example, you may prefer to use [`pip wheel`](http://pip.readthedocs.org/en/latest/reference/pip_wheel.html) to compile a dependency and add the `--find-links <path>` option to your `requirements.txt`:
 
 ```output
 C:\Project>pip wheel azure
@@ -291,20 +291,20 @@ Cleaning up...
     Removing temporary dir C:\Project\env\build...
 ```
 
-## <a name="search-paths"></a>検索パス
+## <a name="search-paths"></a>Search paths
 
-通常の Python の使用方法では、`PYTHONPATH` 環境変数 (または `IRONPYTHONPATH` など) がモジュール ファイルの既定の検索パスを提供します。 つまり、`import <name>` ステートメントを使うと、Python は最初に組み込みモジュールで一致する名前を検索し、次に実行中の Python コードが含まれるフォルダーを検索し、その後に該当する環境変数で定義されている "モジュールの検索パス" を検索します (Python のコア ドキュメントの「[The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)」(モジュール検索パス) および「[Environment variables](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH)」(環境変数) をご覧ください)。
+With typical Python usage, the `PYTHONPATH` environment variable (or `IRONPYTHONPATH`, etc.) provides the default search path for module files. That is, when you use an `import <name>` statement, Python first searches its built-in modules for a matching name, then searches folder containing the Python code you're running, then searches the "module search path" as defined by the applicable environment variable. (See [The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path) and [Environment variables](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH) in the core Python documentation.)
 
-ただし、検索パス環境変数は、システム全体が設定されている場合でも、Visual Studio によって無視されます。 実際はまさにシステム全体が設定されている "*ために*" 無視されるので、自動的には答えられないようなある種の疑問が発生します。参照されているモジュールは Python 2.7 または Python 3.3 のどちらか。 標準ライブラリ モジュールをオーバーライドするのか。 開発者はこの動作を認識しているのか、それとも悪意のあるハイジャックの試みか。
+The search path environment variable, however, is ignored by Visual Studio, even when it's been set for the entire system. It's ignored, in fact, precisely *because* it's set for the entire system and thus raises certain questions that cannot be answered automatically: Are the referenced modules meant for Python 2.7 or Python 3.3? Are they going to override standard library modules? Is the developer aware of this behavior or is it a malicious hijacking attempt?
 
-したがって、Visual Studio の Python サポートでは、環境とプロジェクトの両方で検索パスを直接指定するための手段が用意されています。 検索パスは、Visual Studio からスクリプトをデバッグまたは実行するときに、`PYTHONPATH` (またはそれと同等のもの) の値として渡されます。 検索パスを追加すると、Visual Studio はそれらの場所でライブラリを検査し、IntelliSense データベースを構築します (ライブラリの数によっては時間がかかります)。
+Python support in Visual Studio thus provides a means to specify search paths directly in both environments and projects. Search paths are passed as the value of `PYTHONPATH` (or equivalent) when you debug or execute your script from Visual Studio. By adding search paths, Visual Studio inspects the libraries in those locations and builds IntelliSense databases for them (constructing the database may take some time depending on the number of libraries).
 
-検索パスを追加するには、ソリューション エクスプローラーで **[Search Paths (検索パス)]** 項目を右クリックし、**[Add Folder to Search Path... (検索パスへのフォルダーの追加...)]** を選んで、含めるフォルダーを選びます。 このパスは、プロジェクトに関連付けられているすべての環境に使われます。
+To add a search path, right-click on the **Search Paths** item in Solution Explorer, select **Add Folder to Search Path...**, and select the folder to include. This path is used for any environment associated with the project.
 
-**[Add Zip Archive to Search Path... (検索パスへの Zip アーカイブの追加...)]** を選ぶことで、拡張子が `.zip` または `.egg` のファイルを検索パスとして追加することもできます。 フォルダーと同様に、これらのファイルの内容もスキャンされて、IntelliSense に利用されます。
+Files with a `.zip` or `.egg` extension can also be added as search paths by selecting **Add Zip Archive to Search Path...**. As with folders, the contents of these files are scanned and made available to IntelliSense.
 
 > [!Note]
-> Python 3.3 を使っている場合でも Python 2.7 モジュールへの検索パスを追加することができ、その結果としてエラーが発生する可能性があります。
+> It is possible to add a search path to Python 2.7 modules while you are using Python 3.3, and you may see errors as a result.
 
-常に同じ検索パスを使い、内容があまり変化しない場合は、サイトパッケージ フォルダーにインストールする方が効率的な場合があります。 そのサイトパッケージ フォルダーは分析されて IntelliSense データベースに格納され、常に意図された環境に関連付けられるので、プロジェクトごとに検索パスを追加する必要はありません。
+If you are regularly using the same search paths and the contents do not often change, it may be more efficient to install it into your site-packages folder. It's then be analyzed and stored in the IntelliSense database, is always be associated with the intended environment, and does not require a search path to be added for each project.
 

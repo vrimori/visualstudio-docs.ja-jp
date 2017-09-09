@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio での Python コードの編集 | Microsoft Docs"
+title: Editing Python Code in Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 7/10/2017
 ms.prod: visual-studio-dev15
@@ -16,148 +16,147 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: d16b8fcae5b7d1a14c8f6068dfd7103115cba291
+ms.sourcegitcommit: 4013eb0b251985b0984d0cbf2a723175fe91aad5
+ms.openlocfilehash: f4d594297359c0b79d1ad64bbc5682de916899b8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 
-# <a name="editing-python-code"></a>Python コードの編集
+# <a name="editing-python-code"></a>Editing Python code
 
-開発者は、コード エディターで多くの時間を費やすので、[Visual Studio での Python のサポート](installation.md)は、生産性を向上させる機能を提供します。 機能には、IntelliSense 構文の強調表示、オートコンプリート、署名ヘルプ、メソッドのオーバーライド、検索、ナビゲーションが含まれます。 
+Developers spend much of their time in the code editor, so [Python support in Visual Studio](installation.md) provides functionality to help you be more productive. Features include IntelliSense syntax highlighting, auto-completion, signature help, method overrides, search, and navigation. 
 
-このトピックの内容
+In this topic:
 
-- [IntelliSense](#intellisense) (入力候補、シグネチャ ヘルプ、クイック ヒント、コードの色分け表示)
-- [コード スニペット](#code-snippets)
-- [コードのナビゲーション](#navigating-your-code)
+- [IntelliSense](#intellisense) including completions, signature help, quick info, and code coloring.
+- [Code snippets](#code-snippets)
+- [Navigating your code](#navigating-your-code)
 
-Visual Studio でのコードの編集に関する全般的な説明については、「[コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)」をご覧ください。 また、コードの特定のセクションに注意を集中するのに役立つ [Visual Studio のアウトライン機能](../ide/outlining.md)についての記事もご覧ください。 Python のサポートには、Visual Studio オブジェクト ブラウザーの使用が含まれています (**[表示] > [その他のウィンドウ] > [オブジェクト ブラウザー]** を選択するか、Ctrl + W、J キーを押します)。各モジュールで定義されているクラスとそれらのクラスで定義されている関数を調べることができます。 
+For general documentation on editing code in Visual Studio, see [Writing Code in the Code and Text Editor](../ide/writing-code-in-the-code-and-text-editor.md). Also see [Outlining in Visual Studio](../ide/outlining.md), which helps you stay focused on particular sections of your code. Python support includes using the Visual Studio Object Browser (**View > Other Windows > Object Browser** or Ctrl+W,J) for inspecting classes defined in each module and the functions defined in those classes. 
 
-また、エディターは Visual Studio の対話型のウィンドウと統合され、この 2 つ間で容易にコードを交換できます。 詳細については、[Visual Studio での Python の概要 - 対話型 REPL ウィンドウを使用する])(getting-started.md#using-the-interactive-repl-window) および「[対話型ウィンドウの使用 - 対話型コマンドにコードを送信する](interactive-repl.md#send-code-to-interactive-command)」を参照してください。
+The editor is also integrated with the interactive window in Visual Studio, making it easy to exchange code between the two. See [Getting Started - Using the interactive REPL window](getting-started.md#using-the-interactive-repl-window) and [Using the interactive window - Send code to interactive command](interactive-repl.md#send-code-to-interactive-command) for details.
 
-Python コードの編集の概要については、「[Getting Started with Python in Visual Studio, Part 3: Editing](https://youtu.be/uZGZNEyyeKs?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)」(Visual Studio での Python の概要、パート 3: 編集) (youtube.com、3 分 48 秒) をご覧ください。
+For an introduction to editing Python code, see [Getting Started with Python in Visual Studio, Part 3: Editing](https://youtu.be/uZGZNEyyeKs?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff) (youtube.com, 3m48s):
 
 > [!VIDEO https://www.youtube.com/embed/uZGZNEyyeKs]
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense により、[入力候補](#completions)、[シグネチャ ヘルプ](#signature-help)、[クイック ヒント](#quick-info)、[コードの色分け表示](#code-coloring)が提供されます。 パフォーマンスを向上するために、IntelliSense はプロジェクト内の各 Python 環境に対して生成される入力候補データベースを使用します。 パッケージを追加、削除、更新した場合はデータベースの更新が必要になる可能性があります。 データベースの状態は、**[IntelliSense]** タブの **[Python Environments (Python 環境)]** ウィンドウ (ソリューション エクスプローラーの兄弟ウィンドウ) に表示されます (「[Python Environments](python-environments.md)」(Python 環境) を参照してください)。 
+IntelliSense provides [completions](#completions), [signature help](#signature-help), [quick info](#quick-info), and [code coloring](#code-coloring). To improve performance, IntelliSense depends on the completion database that's generated for each Python environment in your project. Databases may need refreshing if you add, remove, or update packages. Database status is shown in the **Python Environments** window (a sibling of Solution Explorer) on the **IntelliSense** tab (see [Python Environments](python-environments.md)). 
 
-### <a name="completions"></a>入力候補
+### <a name="completions"></a>Completions
 
-入力候補は、エディター内の現在の場所に入力するのに適している可能性があるステートメント、識別子、その他の単語として表示されます。 一覧に表示される項目はコンテキストに基づいており、誤った選択肢や不適切な選択肢を除くようにフィルター処理されています。 入力候補は別のステートメント (`import` など) や演算子 (ピリオドを含む) を入力したときによく表示されますが、Ctrl + J、Space キーを押すことでいつでも表示できます。
+Completions appear as statements, identifiers, and other words that may be appropriately entered at the current location in the editor. What's shown in the list is based on context and is filtered to omit incorrect or distracting options. Completions are often triggered by typing different statements (such as `import`) and operators (including a period), but you can have them appear at anytime by typing Ctrl-J, Space.
 
-![メンバー入力候補](media/code-editing-completions-simple.png)
+![Member completion](media/code-editing-completions-simple.png)
 
-入力候補一覧が開いたら、方向キーまたはマウスを使用するか、入力を続けることによって目的の入力候補を検索できます。 多くの文字を入力するほど一覧が絞り込まれ、可能性の高い入力候補が表示されます。 次のようなショートカットも使用できます。
+When a completion list is open, you can search for the completion you want using the arrow keys, the mouse, or by continuing to type. As you type more letters, the list is further filtered to show likely completions. You can also use shortcuts such as:
 
-- 名前の先頭ではない文字を入力する ('parse' を入力して 'argparse' を検索するなど)
-- 単語の先頭の数文字のみを入力する ('abc' を入力して 'AbstractBaseClass' を検索する、'air' を入力して 'as_integer_ratio' を検索するなど)
-- 文字をスキップする ('b64' を入力して 'base64' を検索するなど)
+- Typing letters that are not at the start of the name, such as 'parse' to find 'argparse'
+- Typing only letters that are at the start of words, such as 'abc' to find 'AbstractBaseClass' or 'air' to find 'as_integer_ratio'
+- Skipping letters, such as 'b64' to find 'base64'
 
-以下に、いくつかの例を示します。
+Some examples:
 
-![フィルター処理されたメンバー入力候補](media/code-editing-completion-filtering.png)
+![Member completion with filtering](media/code-editing-completion-filtering.png)
 
-変数または値の後にピリオドを入力するとメンバー入力候補が自動的に表示され、可能性がある型のメソッドと属性が表示されます。 複数の型の可能性がある変数の場合は、すべての型のすべての候補が一覧に表示され、各入力候補がどの型でサポートされるかを示した追加情報も表示されます。 入力候補がすべての型でサポートされる場合は、注釈なしで表示されます。
+Member completions appear automatically when you type a period after a variable or value, along with the methods and attributes of the potential types. If a variable could be more than one type, the list includes all possibilities from all types, with extra information to indicate which types support each completion. Where a completion is supported by all possible types, it is shown without annotation.
 
-![複数の型のメンバー入力候補](media/code-editing-completion-types.png)
+![Member completion on multiple types](media/code-editing-completion-types.png)
 
-既定では、"dunder" メンバー (先頭および末尾にダブル アンダースコアが付いたメンバー) は表示されません。 一般に、このようなメンバーに直接アクセスしてはいけません。 しかし、必要な場合は、先頭に二重アンダー スコアを入力すると、これらの入力候補が一覧に追加されます。
+By default, "dunder" members (members beginning and ending with a double underscore) are not shown. In general, such members should not be accessed directly. If you need one, however, typing the leading double underscore adds these completions to the list:
 
-![プライベートのメンバー入力候補](media/code-editing-completion-dunder.png)
+![Private member completion](media/code-editing-completion-dunder.png)
 
-`import` および `from ... import` ステートメントでは、インポートできるモジュールの一覧が表示されます。 `from ... import` を使用すると、一覧には指定したモジュールからインポートできるメンバーが含まれています。
+The `import` and `from ... import` statements display a list of modules that can be imported. With `from ... import`, the list includes members that can be imported from the specified module.
 
-![インポートの入力候補](media/code-editing-completion-import.png)
+![Import completion](media/code-editing-completion-import.png)
 
-`raise` および `except` ステートメントでは、エラーの種類として可能性があるクラスの一覧が表示されます。 この一覧にはすべてのユーザー定義例外は含まれていない可能性がありますが、入力に適した組み込みの例外をすばやく見つけるのに役立ちます。
+The `raise` and `except` statements display lists of classes likely to be error types. The list may not include all user-defined exceptions, but helps you find suitable built-in exceptions quickly:
 
-![例外の入力候補](media/code-editing-completion-exception.png)
+![Exception completion](media/code-editing-completion-exception.png)
 
-@ を入力するとデコレーターが開始され、可能性があるデコレーターが表示されます。 これらの項目の多くはデコレーターとして使用できないため、ライブラリのドキュメントを確認して、どれを使用するかを判断する必要があります。
+Typing @ starts a decorator and shows potential decorators. Many of these items aren't usable as decorators; check the library documentation to determine which to use.
 
-![デコレーターの入力候補](media/code-editing-completion-decorator.png)
-
-> [!Tip]
-> 入力候補の動作は、**[ツール] > [オプション] > [テキスト エディター] > [Python] > [詳細設定]** で構成できます。 この設定の **[Filter list based on search string (検索文字列に基づいて一覧をフィルター処理する)]** では、入力の際に入力候補がフィルター処理されます (既定ではオンになっています)。また、**[Member completion displays intersection of members (メンバー入力候補にメンバーの積集合を表示する)]** では、可能性のあるすべての型でサポートされている入力候補のみが表示されます (既定ではオフになっています)。 「[Options - completion results](options.md#completion-results)」(オプション - メンバー入力候補の結果) を参照してください。
-
-### <a name="signature-help"></a>シグネチャ ヘルプ
-
-関数を呼び出すコードの作成中に始め `(` を入力するとシグネチャ ヘルプが表示され、利用できるドキュメントとパラメーター情報が表示されます。 これは関数呼び出し内で Ctrl + Shift + Space キーを押して表示することもできます。 表示される情報は関数のソース コード内のドキュメント文字列によって異なりますが、すべての既定値が含まれます。
-
-![シグネチャ ヘルプ](media/code-editing-signature-help.png)
+![Decorator completion](media/code-editing-completion-decorator.png)
 
 > [!Tip]
-> シグネチャ ヘルプを無効にするには、**[ツール] > [オプション] > [テキスト エディター] > [Python] > [全般]** に移動し、**[ステートメント入力候補] > [パラメーター情報]** をオフにします。
+> You can configure the behavior of completions through **Tools > Options > Text Editor > Python > Advanced"**. Among these, **Filter list based on search string**: applies filtering of completion suggestions as you type (default is checked), and **Member completion displays intersection of members** shows only completions that are supported by all possible types (default is unchecked). See [Options - completion results](options.md#completion-results).
 
-### <a name="quick-info"></a>クイック ヒント
+### <a name="signature-help"></a>Signature help
 
-識別子にマウス ポインターを置くと、クイック ヒントが表示されます。 クイック ヒントには、識別子に応じて、可能性のある値または型、利用できるドキュメント、戻り値の型、定義の場所が表示されます。
+When writing code that calls a function, signature help appears when you type the opening `(` and displays available documentation and parameter information. You can also make it appear with Ctrl+Shift+Space inside a function call. The information displayed depends on the documentation strings in the function's source code, but includes any default values.
 
-![クイック ヒント](media/code-editing-quick-info.png)
-
-### <a name="code-coloring"></a>コードの色分け表示
-
-コードの色分け表示は、コード分析の情報を使用して、変数、ステートメント、その他のコード部分を色分けして示します。 たとえば、モジュールまたはクラスを参照する変数を関数やその他の値とは異なる色で表示したり、パラメーター名をローカル変数やグローバル変数とは異なる色で表示したりできます (既定では、関数は太字では表示されません)。
-
-![コードの色分け表示](media/code-editing-code-coloring.png)
-
-色をカスタマイズするには、**[ツール] > [オプション] > [環境] > [フォントおよび色]** に移動し、**[表示アイテム]** の一覧で Python のエントリを変更します。
-
-![[フォントおよび色] のオプション](media/code-editing-customize-colors.png)
+![Signature help](media/code-editing-signature-help.png)
 
 > [!Tip]
-> コードの色分け表示を無効にするには、**[ツール] > [オプション] > [テキスト エディター] > [Python] > [詳細設定]** に移動し、**[その他のオプション] > [Color names based on type (種類に基づく色の名前)]** をオフにします。 「[Options - Miscellaneous Options](options.md#miscellaneous-options)」(オプション ∸ その他のオプション) を参照してください。
+> To disable signature help, go to **Tools > Options > Text Editor > Python > General** and clear **Statement completion > Parameter information**.
 
+### <a name="quick-info"></a>Quick info
 
-## <a name="code-snippets"></a>コード スニペット
+Hovering the mouse pointer over an identifier displays a Quick Info tooltip. Depending on the identifier, Quick Info may display the potential values or types, any available documentation, return types and, definition locations:
 
-コード スニペットは、ショートカットを入力して Tab キーを押すか、**[編集] > [IntelliSense] > [コード スニペットの挿入]** **[ブロックの挿入]** コマンドを使用することでファイルに挿入できるコード フラグメントです。 たとえば、`class` を入力した後で Tab キーを押すと、クラスの残りの部分が生成されます。 強調表示されたフィールド間を Tab キーで移動して名前と基底クラスのリストを上書きし、Enter キーを押して本文の入力を開始できます。
+![Quick Info](media/code-editing-quick-info.png)
 
-![コード スニペット](media/code-editing-code-snippets.png)
+### <a name="code-coloring"></a>Code coloring
 
-利用可能なコード スニペットは、コード スニペット マネージャーで確認できます (**[ツール] > [コード スニペット マネージャー]**) を選択し、言語として **[Python]** を選択します。
+Code coloring uses information from code analysis to colors variables, statements, and other parts of your code. For example, variables that refer to modules or classes may be shown in a different color than functions or other values, and parameter names appear in a different color than local or global variables. (By default, functions are not shown in bold):
 
-![コード スニペット マネージャー](media/code-editing-code-snippets-manager.png)
+![Code coloring](media/code-editing-code-coloring.png)
 
-独自のスニペットの作成方法については、「[チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)」をご覧ください。
-[コード スニペットを作成](https://msdn.microsoft.com/library/ms165394.aspx)してインポートすることにより、コード スニペットをカスタマイズできます。 
+To customize the colors, go to **Tools > Options > Environment > Fonts and Colors** and modify the Python entries in the **Display items** list:
 
-便利なコード スニペットを作成したので共有したいとお考えの場合は、ぜひ gist に投稿して[マイクロソフトまでお知らせください](https://github.com/Microsoft/PTVS/issues)。 Visual Studio の将来のリリースに含めさせていただく可能性があります。
-
-
-## <a name="navigating-your-code"></a>コードのナビゲーション
-
-Visual Studio の Python のサポートとして、ソース コードが提供されているライブラリ、[ナビゲーション バー](#navigation-bar)、[[定義へ移動]](#go-to-definition)、[[移動]](#navigate-to)、[[すべての参照の検索]](#find-all-references) など、コード内のナビゲーションを迅速にするためのさまざまな手段が用意されています。 また、Visual Studio の[オブジェクト ブラウザー](../ide/viewing-the-structure-of-code.md#BKMK_ObjectBrowser)も使用できます。
-
-### <a name="navigation-bar"></a>[ナビゲーション バー]
-
-ナビゲーション バーは各エディター ウィンドウの上部に表示され、2 つのレベルの定義リストを含みます。 左側のドロップダウン リストには、現在のファイル内の最上位のクラスと関数の定義が表示されます。右側のドロップダウン リストには、左側に表示されているスコープ内の定義のリストが表示されます。 エディター内を移動するとこれらのリストが現在のコンテキストを示すように更新され、リストからエントリを選択してそのエントリに直接ジャンプすることもできます。
-
-![ナビゲーション バー](media/code-editing-navigation-bar.png)
+![Fonts and Colors options](media/code-editing-customize-colors.png)
 
 > [!Tip]
-> ナビゲーション バーを非表示にするには、**[ツール] > [オプション] > [テキスト エディター] > [Python] > [全般]** を選択し、**[設定] > [ナビゲーション バー]** をオフにします。
+> To disable code coloring, go to **Tools > Options > Text Editor > Python > Advanced** and clear **Miscellaneous Options > Color names based on type**. See [Options - Miscellaneous Options](options.md#miscellaneous-options).
 
-### <a name="go-to-definition"></a>[定義へ移動]
 
-**[定義へ移動]** を使用すると、識別子 (関数名、クラス、変数など) の使用場所から、その識別子が定義されているソース コードにすばやくジャンプできます。 これは、識別子を右クリックして **[定義へ移動]** を選択するか、識別子にキャレットを置いて F12 キーを押すと起動されます。 この機能は、ソース コードが利用可能ならばコードと外部ライブラリ全体で機能します。 ライブラリのソース コードを利用できない場合に **[定義へ移動]** を使用すると、モジュール参照の関連する `import` ステートメントにジャンプするか、エラーが表示されます。
+## <a name="code-snippets"></a>Code snippets
 
-![[定義へ移動]](media/code-editing-go-to-definition.png)
+Code snippets are fragments of code that can be inserted into your files by typing a shortcut and pressing Tab, or using the **Edit > IntelliSense > Insert Code Snippet** **Surround With** commands. For example, typing `class` followed by the Tab key generates the rest of the class. You can type over the name and bases list, moving between the highlighted fields with Tab, then press Enter to begin typing the body.
 
-### <a name="navigate-to"></a>[移動]
+![Code Snippets](media/code-editing-code-snippets.png)
 
-**[編集] > [移動]** コマンド (Ctrl + コンマ キー) を実行すると、エディター内に検索ボックスが表示されます。ボックスに任意の文字列を入力すると、その文字列を含む関数、クラス、変数を定義しているコード内の箇所が表示されます。 この機能は **[定義へ移動]** の機能と似ていますが、識別子の使用場所を探す必要がありません。
+You can see the available code snippets in the Code Snippets Manager (**Tools > Code Snippets Manager**), selecting **Python** as the language:
 
-任意の名前をダブルクリックするか、方向キーで選択して Enter キーを押すと、その識別子の定義に移動します。
+![Code Snippets Manager](media/code-editing-code-snippets-manager.png)
 
-![[移動]](media/code-editing-navigate-to.png)
+To create your own snippets, see [Walkthrough: Creating a Code Snippet](../ide/walkthrough-creating-a-code-snippet.md). 
 
-### <a name="find-all-references"></a>[すべての参照の検索]
+If you write a great code snippet that you'd like to share, feel free to post it in a gist and [let us know](https://github.com/Microsoft/PTVS/issues). We may be able to include it in a future release of Visual Studio.
 
-**[すべての参照の検索]**は、特定の識別子の定義場所と使用場所の両方 (インポートと代入を含む) を見つけるのに便利な方法です。 これは、識別子を右クリックして **[すべての参照の検索]** を選択するか、識別子にキャレットを置いて Shift + F12 キーを押すと起動されます。 一覧内の項目をダブルクリックすると、その場所に移動します。
 
-![[すべての参照の検索] の結果](media/code-editing-find-all-references.png)
+## <a name="navigating-your-code"></a>Navigating your code
+
+Python support in Visual Studio provides several means to quickly navigate within your code, including libraries for which source code is available: the [navigation bar](#navigation-bar), [Go To Definition](#go-to-definition), [Navigate To](#navigate-to), and [Find All References](#find-all-references). You can also use the Visual Studio [Object Browser](../ide/viewing-the-structure-of-code.md#BKMK_ObjectBrowser).
+
+### <a name="navigation-bar"></a>Navigation bar
+
+The navigation bar is displayed at the top of each editor window and includes a two-level list of definitions. The left drop-down contains top-level class and function definitions in the current file; the right drop-down displays a list of definitions within the scope shown in the left. As you move around in the editor, the lists update to show your current context, and you can also select an entry from these lists to jump directly to in.
+
+![Navigation Bar](media/code-editing-navigation-bar.png)
+
+> [!Tip]
+> To hide the navigation bar, go to **Tools > Options > Text Editor > Python > General** and clear **Settings > Navigation bar**.
+
+### <a name="go-to-definition"></a>Go To Definition
+
+**Go To Definition** quickly jumps from the use of an identifier (such as a function name, class, or variable), to the source code where it's defined. You invoke it by right-clicking an identifier and selecting **Go To Definition** or, by placing the caret in the identifier and pressing F12. It works across your code and external libraries provided that source code is available. If library source code is not available, **Go To Definition** jumps to the relevant `import` statement for a module reference, or display an error.
+
+![Go To Definition](media/code-editing-go-to-definition.png)
+
+### <a name="navigate-to"></a>Navigate To
+
+The **Edit > Navigate To...** command (Ctrl-comma) displays a search box in the editor where you can type any string and see possible matches in your code that defines a function, class, or variable containing that string. This feature provides a similar capability as **Go To Definition** but without having to locate a use of an identifier.
+
+Double-clicking any name, or selecting with arrow keys and Enter, navigates to the definition of that identifier.
+
+![Navigate To](media/code-editing-navigate-to.png)
+
+### <a name="find-all-references"></a>Find All References
+
+**Find All References** is a helpful way of discovering where any given identifier is both defined and used, including imports and assignments. You invoke it by right-clicking an identifier and selecting **Find All References**, or by placing the caret in the identifier and pressing Shift+F12. Double-clicking an item in the list navigates to its location.
+
+![Find All References results](media/code-editing-find-all-references.png)
