@@ -1,6 +1,6 @@
 ---
-title: "Visual Studio 2017 の更新 | Microsoft Docs"
-description: "Visual Studio を更新する方法について、ステップ バイ ステップで説明します。"
+title: Update Visual Studio 2017 | Microsoft Docs
+description: Learn how to update Visual Studio, step-by-step.
 ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
@@ -31,52 +31,53 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: d97358681ba486d75b30d59da1aba8b460c6f757
-ms.lasthandoff: 04/06/2017
+ms.translationtype: HT
+ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
+ms.openlocfilehash: 2b776e9567fd48bc91bf507cab5a1efb9d984a25
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="update-visual-studio-2017-to-the-most-recent-release"></a>Visual Studio 2017 を最新リリースに更新する
-Microsoft は、機能の拡張とお客様から報告された問題の修正のために、Visual Studio を頻繁に更新します。 [最適化された最新リリースの Visual Studio](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#release-history) を常に使用できるように、Visual Studio を更新してください。 ここではその方法を説明します。
+# <a name="update-visual-studio-2017-to-the-most-recent-release"></a>Update Visual Studio 2017 to the most recent release
+We update Visual Studio often to extend its functionality and to fix customer-reported issues. To make sure you have the most [current, optimized release of Visual Studio](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#release-history), you'll want to update it. Here's how.
 
-## <a name="update-by-using-the-notifications-hub"></a>通知ハブを使用して更新する
-1. 更新プログラムが存在する場合、Visual Studio に通知フラグが表示されます。
+## <a name="update-by-using-the-notifications-hub"></a>Update by using the Notifications hub
+1. When there are updates, you will see a notification flag in Visual Studio.
 
-  ![通知ハブを使用して Visual Studio 2017 を更新する](~/install/media/notification-flag.png "Visual Studio の通知フラグ")
+  ![Update Visual Studio 2017 by using the Notification hub](media/notification-flag.png "The Notification flag in Visual Studio")
 
-  通知ハブをクリックまたはタップして、**通知**ハブを開きます。
+  Click or tap the notification flag to open the **Notifications** hub.
 
-  ![通知ハブを使用して Visual Studio 2017 を更新する](~/install/media/notifications-hub.png "Visual Studio の通知ハブ")
+  ![Update Visual Studio 2017 by using the Notification hub](media/notifications-hub.png "The Notifications hub in Visual Studio")
 
-2. **["Visual Studio 更新プログラム" が使用可能です]** をクリックまたはタップして **[拡張機能と更新プログラム]** ダイアログ ボックスを開きます。
+2. Click or tap **"Visual Studio Update" is available**, which opens the **Extensions and Updates** dialog box.
 
-  ![通知ハブを使用して Visual Studio 2017 を更新する](~/install/media/notifications-hub-select.png "Visual Studio の通知ハブ")
+  ![Update Visual Studio 2017 by using the Notifications hub](media/notifications-hub-select.png "The Notifications hub in Visual Studio")
 
-3. **[拡張機能と更新プログラム]** ダイアログ ボックスで、**[更新]** ボタンをクリックまたはタップします。
+3. In the **Extensions and Updates** dialog box, click or tap the **Update** button.
 
-  ![通知ハブを使用して Visual Studio 2017 を更新する](~/install/media/notifications-extensions-and-updates.png "Visual Studio の [拡張機能と更新プログラム] ダイアログ")
+  ![Update Visual Studio 2017 by using the Notifications hub](media/notifications-extensions-and-updates.png "The Extensions and Updates dialog in Visual Studio")
 
-## <a name="update-by-using-the-visual-studio-installer"></a>Visual Studio インストーラーを使用して更新する
-1.    インストーラーを開きます。 続行する前に、インストーラーの更新が必要な場合があります。 更新が必要な場合は、更新するよう求められます。
+## <a name="update-by-using-the-visual-studio-installer"></a>Update by using the Visual Studio Installer
+1.  Open the installer. You might need to update the installer before continuing. If this is the case, you'll be prompted to do so.
  >[!NOTE]
- > Windows 10 を実行しているコンピューターの場合、**V** という文字の下に **Visual Studio インストーラー**と表示されるか、**M** という文字の下に **Microsoft Visual Studio インストーラー**と表示されます。
+ > On a computer running Windows 10, you'll find the installer under the letter **V** as the **Visual Studio Installer**, or under the letter **M** as the **Microsoft Visual Studio Installer**.
 
-2.    インストーラーの **[製品]** ページで、インストールされている Visual Studio のエディションを探します。
+2.  On the **Product** page in the installer, look for the edition of Visual Studio that you have installed.
 
-3.    更新プログラムが使用可能な場合は、**[更新]** ボタンが表示されます  (使用可能な更新プログラムがあるかどうかをインストーラーが判断するために数秒かかる場合があります)。
+3.  If an update is available, you'll see an **Update** button. (It might take a few seconds for the installer to determine whether an update is available.)
 
-  **[更新]** ボタンをクリックまたはタップして更新プログラムをインストールします。
+  Click or tap the **Update** button to install the updates.
 
-     ![Visual Studio インストーラーを使用して Visual Studio 2017 を更新する](~/install/media/update-visual-studio.png "Visual Studio インストーラーを使用して Visual Studio 2017 を更新する")
+     ![Update Visual Studio 2017 by using the Visual Studio Installer](media/update-visual-studio.png "Update Visual Studio 2017 by using the Visual Studio Installer")
 
-## <a name="get-support"></a>サポートを受ける
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、サポート技術情報の記事「[Visual Studio 2017 で発生するインストールおよびアップグレード エラーのトラブルシューティング](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures)」にあるトラブルシューティングのヒントを参照してください。
+## <a name="get-support"></a>Get support
+Sometimes, things can go wrong. If your Visual Studio installation fails, see the [Troubleshooting Visual Studio 2017 installation and upgrade failures](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) KB article for troubleshooting tips.
 
-## <a name="see-also"></a>関連項目
-* [Visual Studio 2017 のインストール](https://go.microsoft.com/fwlink/?linkid=833223)
-* [Visual Studio 2017 の変更](modify-visual-studio.md)
-* [Visual Studio 2017 のアンインストール](uninstall-visual-studio.md)
-* [Visual Studio 2017 の管理者ガイド](visual-studio-administrator-guide.md)
-* [Visual Studio 2017 で問題を報告する](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+## <a name="see-also"></a>See also
+* [Install Visual Studio 2017](install-visual-studio.md)
+* [Modify Visual Studio 2017](modify-visual-studio.md)
+* [Uninstall Visual Studio 2017](uninstall-visual-studio.md)
+* [Administrator guide for Visual Studio 2017](visual-studio-administrator-guide.md)
+* [Report a problem with Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 
