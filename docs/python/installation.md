@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio での Python のインストール | Microsoft Docs"
+title: Installation for Python in Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 7/13/2017
 ms.prod: visual-studio-dev15
@@ -16,95 +16,95 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 613af31a2e44cc447980b68de4b0b5642dde1262
+ms.sourcegitcommit: 4013eb0b251985b0984d0cbf2a723175fe91aad5
+ms.openlocfilehash: e686fd03e4700baf36af3b4e353be2e1382a9e24
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 
-# <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする
+# <a name="installing-python-support-in-visual-studio-on-windows"></a>Installing Python support in Visual Studio on Windows
 
-Visual Studio 用の Python サポートをインストールするには、使用している Visual Studio のバージョンと一致するセクションの手順を実行します。
+To install Python support for Visual Studio, follow the instructions in the section that matches your version of Visual Studio:
 
 - [Visual Studio 2017](#visual-studio-2017)
 - [Visual Studio 2015](#visual-studio-2015)
-- [Visual Studio 2013 以前](#visual-studio-2013-and-earlier)
+- [Visual Studio 2013 and earlier](#visual-studio-2013-and-earlier)
 
-Visual Studio 2015 以前では、任意の Python インタープリターをインストールする必要があります。 詳細については、「[Python 環境](python-environments.md)」を参照してください。
+For Visual Studio 2015 and earlier you also need to separately install a Python interpreter of your choice (Python  3.5 and earlier; 3.6 is not supported). For details, see [Python Environments](python-environments.md). The same page also contains instructions for adding an existing Python interpreter to Visual Studio 2017.
 
-インストール手順を実行した後、Python サポートを簡単にテストするには、Alt + I キーを押して Python の対話型ウィンドウを開き、`2+2` を入力します。 `4` という出力が表示されない場合は、手順を再確認してください。
+To quickly test Python support after following the installation steps, Open the Python Interactive window by pressing Alt-I and entering `2+2`. If you don't see the output of `4`, recheck your steps.
 
 > [!Tip]
-> Python ワークロードには、テンプレートの検出、テンプレート オプションの入力、およびプロジェクトとファイルの作成を行うためのグラフィカル ユーザー インターフェイスを提供する、有用な Cookiecutter 拡張機能が含まれています。 詳細については、「[Cookiecutter 拡張機能の使用](cookiecutter.md)」を参照してください。
+> The Python workload includes the helpful Cookiecutter extension that provides a graphical user interface to discover templates, input template options, and create projects and files. For details, see [Using Cookiecutter](cookiecutter.md).
 
 > [!Note]
-> 現在、Python のサポートは Visual Studio for Mac では使用できませんが、Visual Studio Code によって Mac と Linux でも使うことができます。 「[質問と回答](python-in-visual-studio.md#questions-and-answers)」を参照してください。
+> Python support is not presently available in Visual Studio for Mac, but is available on Mac and Linux through Visual Studio Code. See [Questions and answers](python-in-visual-studio.md#questions-and-answers).
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. [https://www.visualstudio.com/vs/](https://www.visualstudio.com/vs/) から Visual Studio 2017 をインストールします。
+1. Install the Visual Studio 2017 from [https://www.visualstudio.com/vs/](https://www.visualstudio.com/vs/).
 
-1. Visual Studio インストーラーで、**[Web & Cloud (Web とクラウド)]、[Python 開発]** ワークロードの順に選択します。
+1. In the Visual Studio installer, select the **Web & Cloud > Python Development**  workload.
 
-    ![Visual Studio インストーラーの [Python 開発] ワークロード](media/installation-python-workload.png)
+    ![Python development workload in the Visual Studio installer](media/installation-python-workload.png)
 
     > [!Note]
-    > Python は、**[データ サイエンスと分析のアプリケーション]** ワークロードにも含まれています。
+    > Python is also included in the **Data science and analytical applications** workload.
 
-1. インストーラーの右側で、インストールに含める Python インタープリターとその他の関連ツールを選択します。 たとえば、Python の C++ 拡張機能を開発する場合は、**[Python ネイティブ開発ツール]** オプションを含めます。
+1. On the right side of the installer, select the Python interpreters and other related tools you want to include. For example, if you plan on developing C++ extensions for Python, include the **Python native development tools** option.
 
-    ![Visual Studio インストーラーの [Python 開発] のオプション](media/installation-python-options.png)
+    ![Python development options in the Visual Studio installer](media/installation-python-options.png)
 
-1. コンピューターにインタープリターをインストール済みの場合は、「[既存インタープリター用の環境の作成](python-environments.md#creating-an-environment-for-an-existing-interpreter)」を参照してください。
+1. If you already have interpreters installed on your computer, see [Creating an environment for an existing interpreter](python-environments.md#creating-an-environment-for-an-existing-interpreter).
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 
-1. **[コントロール パネル] の [プログラムと機能]** から Visual Studio インストーラーを実行し、**[Microsoft Visual Studio 2015]** を選択した後、**[変更]** を選択します。
+1. Run the Visual Studio installer through **Control Panel > Programs and Features**, selecting **Microsoft Visual Studio 2015** and then **Change**.
 
-1. インストーラーで、**[変更]** を選択します。
+1. In the installer, select **Modify**.
 
-1. **[プログラミング言語] の [Python Tools for Visual Studio]** を選択し、**[次へ]** を選択します。
+1. Select **Programming Languages > Python Tools for Visual Studio** and then **Next**:
 
-    ![Visual Studio 2015 インストーラーの PTVS オプション](media/installation-vs2015.png)    
+    ![PTVS option in Visual Studio 2015 installer](media/installation-vs2015.png)    
 
-1. Visual Studio のセットアップが完了したら、[任意の Python インタープリターをインストールします](python-environments.md#selecting-and-installing-python-interpreters)。 インタープリターをインストール済みの場合は、「[既存インタープリター用の環境の作成](python-environments.md#creating-an-environment-for-an-existing-interpreter)」を参照してください。
+1. Once Visual Studio setup is complete, [install a Python interpreter of your choice](python-environments.md#selecting-and-installing-python-interpreters). If you already have an interpreter installed, see [Creating an environment for an existing interpreter](python-environments.md#creating-an-environment-for-an-existing-interpreter).
 
-## <a name="visual-studio-2013-and-earlier"></a>Visual Studio 2013 以前
+## <a name="visual-studio-2013-and-earlier"></a>Visual Studio 2013 and earlier
 
-1. 使用している Visual Studio のバージョンに適した Python Tools for Visual Studio のバージョンをインストールします。
+1. Install the appropriate version of Python Tools for Visual Studio for your version of Visual Studio:
 
-    - Visual Studio 2013: [PTVS 2.2 for Visual Studio 2013](https://github.com/Microsoft/PTVS/releases/v2.2)。 このプロセスのショートカットが、Visual Studio 2013 の **[ファイル] メニューの [新しいプロジェクト]** ダイアログにあります。
+    - Visual Studio 2013: [PTVS 2.2 for Visual Studio 2013](https://github.com/Microsoft/PTVS/releases/v2.2). The **File > New Project** dialog in Visual Studio 2013 gives you a shortcut for this process.
     - Visual Studio 2012: [PTVS 2.1 for Visual Studio 2012](https://pytools.codeplex.com/downloads/get/920478)
     - Visual Studio 2010: [PTVS 2.1 for Visual Studio 2010](https://pytools.codeplex.com/downloads/get/920479)
 
-1. [任意の Python インタープリターをインストールします](python-environments.md#selecting-and-installing-python-interpreters)。 インタープリターをインストール済みの場合は、「[既存インタープリター用の環境の作成](python-environments.md#creating-an-environment-for-an-existing-interpreter)」を参照してください。
+1. [Install a Python interpreter of your choice](python-environments.md#selecting-and-installing-python-interpreters). If you already have an interpreter installed, see [Creating an environment for an existing interpreter](python-environments.md#creating-an-environment-for-an-existing-interpreter).
 
-## <a name="install-locations"></a>インストールする場所
+## <a name="install-locations"></a>Install locations
 
-既定では、Python サポートは、コンピューター上のすべてのユーザーに対してインストールされます。
+By default, Python support is installed for all users on a computer.
 
-Visual Studio 2017 では、Python ワークロードは、`%ProgramFiles(x86)%\Microsoft Visual Studio\2017\<VS_edition>Common7\IDE\Extensions\Microsoft\Python` にインストールされます。&lt;VS_edition&gt; は、Community、Professional、または Enterprise です。
+For Visual Studio 2017, the Python workload is installed in `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\<VS_edition>Common7\IDE\Extensions\Microsoft\Python` where &lt;VS_edition&gt; is Community, Professional, or Enterprise.
 
-Visual Studio 2015 以前のインストール パスを次に示します。
+For Visual Studio 2015 and earlier, installation paths are as follows:
 
-- 32 ビット:
-  - パス: `%Program Files(x86)%\Microsoft Visual Studio <VS_ver>\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`
-  - パスのレジストリの場所: `HKEY_LOCAL_MACHINE\Software\Microsoft\PythonTools\<VS_ver>\InstallDir`
-- 64 ビット:
-  - パス: `%Program Files%\Microsoft Visual Studio <VS_ver>\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`
-  - パスのレジストリの場所: `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\PythonTools\<VS_ver>\InstallDir`
+- 32-bit:
+  - Path: `%Program Files(x86)%\Microsoft Visual Studio <VS_ver>\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`
+  - Registry location of path: `HKEY_LOCAL_MACHINE\Software\Microsoft\PythonTools\<VS_ver>\InstallDir`
+- 64-bit:
+  - Path: `%Program Files%\Microsoft Visual Studio <VS_ver>\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>`
+  - Registry location of path: `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\PythonTools\<VS_ver>\InstallDir`
 
-ここで、
+where:
 
-- &lt;VS_ver&gt; は、次のようになります。    
-    - Visual Studio 2015 では 14.0
-    - Visual Studio 2013 では 12.0
-    - Visual Studio 2012 では 11.0
-    - Visual Studio 2010 では 10.0
-- &lt;PTVS_ver&gt; はバージョン番号です (2.2、2.1、2.0、1.5、1.1、1.0 など)。
+- &lt;VS_ver&gt; is:    
+    - 14.0 for Visual Studio 2015
+    - 12.0 for Visual Studio 2013
+    - 11.0 for Visual Studio 2012
+    - 10.0 for Visual Studio 2010
+- &lt;PTVS_ver&gt; is a version number, such as 2.2, 2.1, 2.0, 1.5, 1.1, or 1.0.
 
-### <a name="user-specific-installations-15-and-earlier"></a>ユーザー固有のインストール (1.5 以前)
+### <a name="user-specific-installations-15-and-earlier"></a>User-specific installations (1.5 and earlier)
 
-Python Tools for Visual Studio 1.5 以前では、インストールは現在のユーザーのみに許可されます。この場合、インストール パスは `%LocalAppData%\Microsoft\VisualStudio\<VS_ver>\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>` になります。&lt;VS_ver&gt; と &lt;PTVS_ver &gt; は上記で説明したものと同じです。
+Python Tools for Visual Studio 1.5 and earlier allowed installation for the current user only, in which case the installation path is `%LocalAppData%\Microsoft\VisualStudio\<VS_ver>\Extensions\Microsoft\Python Tools for Visual Studio\<PTVS_ver>` where &lt;VS_ver&gt; and &lt;PTVS_ver&gt; are the same as described above.
 

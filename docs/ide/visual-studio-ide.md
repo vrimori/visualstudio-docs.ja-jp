@@ -133,7 +133,7 @@ Visual Studio を初めて起動する際には、Microsoft アカウント、�
 
   もちろん、今すぐに行う必要はありませんが、後で必要に応じて機能を追加できます。
 
-1. プログラムの実行を終了するには、ツールバーの [終了] (![[終了] ボタン](../ide/media/VSIDE_StopButton.png)) を選択して終了します。
+1. プログラムの実行を終了するには、ツールバーの [終了]\(![[終了] ボタン](../ide/media/VSIDE_StopButton.png)) を選択して終了します。
 
 ここまでを振り返ってみましょう。Visual Studio で新しい C# Windows ユニバーサル プロジェクトを作成し、そのコードを表示して、デザイナーにコントロールを追加しました。その後、XAML コードの一部を変更し、プロジェクトを実行しました。 この例のプロセスは簡略化されていますが、Visual Studio IDE で独自のアプリを開発するときに使用する共通部分の一部を示します。 この例についてさらに詳しくは、「["Hello, world" アプリを作成する (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)」をご覧ください。
 
