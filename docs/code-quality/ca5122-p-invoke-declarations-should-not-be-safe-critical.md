@@ -10,9 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f2581a6d-2a0e-40c1-b600-f5dc70909200
 caps.latest.revision: 4
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/23/2017
 ## <a name="cause"></a>Cause  
  A P/Invoke declaration has been marked with a <xref:System.Security.SecuritySafeCriticalAttribute>:  
   
-```cs  
+```csharp  
 [assembly: AllowPartiallyTrustedCallers]  
   
 // ...  
@@ -66,7 +66,7 @@ public class C
 ## <a name="how-to-fix-violations"></a>How to Fix Violations  
  To make a P/Invoke available to transparent code, expose a security safe critical wrapper method for it:  
   
-```cs  
+```csharp  
 [assembly: AllowPartiallyTrustedCallers  
   
 class C  
