@@ -1,86 +1,69 @@
 ---
-title: IDebugComPlusSymbolProvider::GetAttributedClassesinModule | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugComPlusSymbolProvider::GetAttributedClassesinModule
-- GetAttributedClassesinModule
+title: "IDebugComPlusSymbolProvider::GetAttributedClassesinModule | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugComPlusSymbolProvider::GetAttributedClassesinModule"
+  - "GetAttributedClassesinModule"
 ms.assetid: d8b087f3-1d32-4570-9eb0-7e0f7b051bc8
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 3dddd25c62033999e0a41b98870bae2cb69ed224
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugcomplussymbolprovidergetattributedclassesinmodule"></a>IDebugComPlusSymbolProvider::GetAttributedClassesinModule
-Retrieves the classes with the specified attribute in a given module.  
+# IDebugComPlusSymbolProvider::GetAttributedClassesinModule
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+指定したモジュール内の指定した属性クラスを取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
 ```  
 [C++]  
 HRESULT GetAttributedClassesinModule (  
-   ULONG32            ulAppDomainID,  
-   GUID               guidModule,  
-   LPOLESTR           pstrAttribute,  
-   IEnumDebugFields** ppEnum  
+   ULONG32            ulAppDomainID,  
+   GUID               guidModule,  
+   LPOLESTR           pstrAttribute,  
+   IEnumDebugFields** ppEnum  
 );  
 ```  
   
 ```  
 [C#]  
 int GetAttributedClassesinModule (  
-   uint                 ulAppDomainID,  
-   Guid                 guidModule,  
-   string               pstrAttribute,  
-   out IEnumDebugFields ppEnum  
+   uint                 ulAppDomainID,  
+   Guid                 guidModule,  
+   string               pstrAttribute,  
+   out IEnumDebugFields ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ulAppDomainID`  
- [in] Identifier of the application domain.  
+ \[出力\] アプリケーション ドメインの ID。  
   
  `guidModule`  
- [in] Unique identifier of the module.  
+ \[出力\] モジュールの一意の識別子。  
   
  `pstrAttribute`  
- [in] The attribute string.  
+ \[出力\] 属性の文字列。  
   
  `ppEnum`  
- [out] Returns an enumeration of the attributed classes.  
+ \[入力\] 属性付きクラスの列挙体を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## 使用例  
+ 次の例に [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider の**  オブジェクトに対してこのメソッドを実装する方法を示します。  
   
-```cpp  
+```cpp#  
 HRESULT CDebugSymbolProvider::GetAttributedClassesinModule(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -168,5 +151,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

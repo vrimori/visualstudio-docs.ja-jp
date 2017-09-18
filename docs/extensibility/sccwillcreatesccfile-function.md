@@ -1,81 +1,64 @@
 ---
-title: SccWillCreateSccFile Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccWillCreateSccFile
-helpviewer_keywords:
-- SccWillCreateSccFile function
+title: "SccWillCreateSccFile 関数 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccWillCreateSccFile"
+helpviewer_keywords: 
+  - "SccWillCreateSccFile 関数"
 ms.assetid: 0d7542f0-4351-41b3-b24c-960ab99c05a1
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d4b84f25d02710584913e7ade1fb673d1118fc4f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="sccwillcreatesccfile-function"></a>SccWillCreateSccFile Function
-This function determines whether the source control plug-in supports the creation of the MSSCCPRJ.SCC file for each of the given files.  
+# SccWillCreateSccFile 関数
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+この関数は、ソース管理プラグインが、MSSCCPRJ の作成をサポートするかどうかを決定します。指定されたファイルごとの SCC ファイルです。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 SCCRTN SccWillCreateSccFile(  
-   LPVOID  pContext,  
-   LONG    nFiles,  
-   LPCSTR* lpFileNames,  
-   LPBOOL  pbSccFiles  
+   LPVOID  pContext,  
+   LONG    nFiles,  
+   LPCSTR* lpFileNames,  
+   LPBOOL  pbSccFiles  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  pContext  
- [in] The source control plug-in context pointer.  
+ \[in\]ソース管理プラグインのコンテキストのポインター。  
   
  nFiles  
- [in] The number of file names included in the `lpFileNames` array as well as the length of the `pbSccFiles` array.  
+ \[in\]含まれるファイル名の数、 `lpFileNames` 配列の長さだけでなく、 `pbSccFiles` 配列。  
   
  lpFileNames  
- [in] An array of fully qualified file names to check (array must be allocated by caller).  
+ \[in\]チェックする完全修飾ファイル名の配列 \(配列は呼び出し元が割り当てた必要があります\)。  
   
  pbSccFiles  
- [in, out] Array in which to store the results.  
+ \[入力、出力\]結果を格納する配列。  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 戻り値  
+ この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Success.|  
-|SCC_E_INVALIDFILEPATH|One of the paths in the array is invalid.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
+|値|説明|  
+|-------|--------|  
+|SCC\_OK|成功。|  
+|SCC\_E\_INVALIDFILEPATH|配列内のパスの 1 つは有効です。|  
+|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。|  
   
-## <a name="remarks"></a>Remarks  
- This function is called with a list of files to determine if the source control plug-in provides support in the MSSCCPRJ.SCC file for each of the given files (for more information on the MSSCCPRJ.SCC file, see [MSSCCPRJ.SCC File](../extensibility/mssccprj-scc-file.md)). Source control plug-ins can declare whether they have the capability of creating MSSCCPRJ.SCC files by declaring `SCC_CAP_SCCFILE` during initialization. The plug-in returns `TRUE` or `FALSE` per file in the `pbSccFiles` array to indicate which of the given files have MSSCCPRJ.SCC support. If the plug-in returns a success code from the function, the values in the return array are honored. On failure, the array is ignored.  
+## 解説  
+ この関数はかどうかは、ソース管理プラグインで使用できるように、MSSCCPRJ を確認するファイルの一覧が呼び出されます。\(詳細について、MSSCCPRJ 指定されたファイルの各 SCC ファイル。SCC ファイルを参照してください [MSSCCPRJ します。SCC ファイル](../extensibility/mssccprj-scc-file.md)\)。 ソース管理プラグインでは、MSSCCPRJ を作成する機能があるかどうかを宣言できます。宣言することでファイルを SCC `SCC_CAP_SCCFILE` の初期化中にします。 プラグインの戻り値を `TRUE` または `FALSE` の 1 ファイルあたり、 `pbSccFiles` MSSCCPRJ がある特定のファイルのうちの配列。SCC のサポート。 プラグインの成功コードが関数から返された場合は、戻り値の配列内の値が無視されます。 失敗した場合、配列は無視されます。  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
- [MSSCCPRJ.SCC File](../extensibility/mssccprj-scc-file.md)
+## 参照  
+ [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+ [MSSCCPRJ します。SCC ファイル](../extensibility/mssccprj-scc-file.md)

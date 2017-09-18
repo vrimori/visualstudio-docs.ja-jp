@@ -1,123 +1,106 @@
 ---
-title: SccGet Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccGet
-helpviewer_keywords:
-- SccGet function
+title: "SccGet 関数 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccGet"
+helpviewer_keywords: 
+  - "SccGet 関数"
 ms.assetid: 09a18bd2-b788-411a-9da6-067d806e46f6
 caps.latest.revision: 14
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2c761f90eaf4882407122336827e2d95f3edf2ac
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 14
 ---
-# <a name="sccget-function"></a>SccGet Function
-This function retrieves a copy of one or more files for viewing and compiling but not for editing. In most systems, the files are tagged as read-only.  
+# SccGet 関数
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+この関数は、1 つまたは複数のファイルを表示して、コンパイルするだけのための編集のコピーを取得します。 ほとんどのシステムでは、ファイルが読み取り専用としてタグ付けされます。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 SCCRTN SccGet(  
-   LPVOID    pvContext,  
-   HWND      hWnd,  
-   LONG      nFiles,  
-   LPCSTR*   lpFileNames,  
-   LONG      fOptions,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pvContext,  
+   HWND      hWnd,  
+   LONG      nFiles,  
+   LPCSTR*   lpFileNames,  
+   LONG      fOptions,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  pvContext  
- [in] The context structure of the source control plug-in.  
+ \[in\]ソース管理プラグインの context 構造体。  
   
- hWnd  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ hwnd の分離  
+ \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
   
  nFiles  
- [in] Number of files specified in the `lpFileNames` array.  
+ \[in\]指定されたファイルの数、 `lpFileNames` 配列。  
   
  lpFileNames  
- [in] Array of fully qualified names of files to be retrieved.  
+ \[in\]取得するファイルの完全修飾名の配列。  
   
- fOptions  
- [in] Command flags (`SCC_GET_ALL`, `SCC_GET_RECURSIVE`).  
+ される  
+ \[in\]コマンドのフラグ \(`SCC_GET_ALL`, 、`SCC_GET_RECURSIVE`\)。  
   
  pvOptions  
- [in] Source control plug-in-specific options.  
+ \[in\]ソース管理プラグインに固有のオプションです。  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 戻り値  
+ この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Success of get operation.|  
-|SCC_E_FILENOTCONTROLLED|The file is not under source control.|  
-|SCC_E_OPNOTSUPPORTED|The source control system does not support this operation.|  
-|SCC_E_FILEISCHECKEDOUT|Cannot get the file that the user currently has checked out.|  
-|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
-|SCC_E_NOSPECIFIEDVERSION|Specified an invalid version or date/time.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure; file was not synchronized.|  
-|SCC_I_OPERATIONCANCELED|Operation cancelled before completion.|  
-|SCC_E_NOTAUTHORIZED|The user is not authorized to perform this operation.|  
+|値|説明|  
+|-------|--------|  
+|SCC\_OK|Get 操作が成功します。|  
+|SCC\_E\_FILENOTCONTROLLED|ファイルはソース管理されていません。|  
+|SCC\_E\_OPNOTSUPPORTED|ソース管理システムでは、この操作はサポートされません。|  
+|SCC\_E\_FILEISCHECKEDOUT|ユーザーがチェック アウトして現在のファイルを取得できません。|  
+|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
+|SCC\_E\_NOSPECIFIEDVERSION|無効なバージョンまたは日付\/時刻を指定します。|  
+|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。ファイルは同期されませんでした。|  
+|SCC\_I\_OPERATIONCANCELED|操作が完了する前に取り消されました。|  
+|SCC\_E\_NOTAUTHORIZED|ユーザーは、この操作を実行する権限がありません。|  
   
-## <a name="remarks"></a>Remarks  
- This function is called with a count and an array of names of the files to be retrieved. If the IDE passes the flag `SCC_GET_ALL`, this means that the items in `lpFileNames` are not files but directories, and that all files under source control in the given directories are to be retrieved.  
+## 解説  
+ この関数は、カウントを取得するファイルの名前の配列で呼び出されます。 IDE は、フラグを渡す場合 `SCC_GET_ALL`, 、つまり内の項目 `lpFileNames` はなく、ファイルが、ディレクトリを取得する指定されたディレクトリでソース管理下にあるすべてのファイルがあるとします。  
   
- The `SCC_GET_ALL` flag can be combined with the `SCC_GET_RECURSIVE` flag to retrieve all files in the given directories and all subdirectories as well.  
+ `SCC_GET_ALL` フラグと組み合わせることができます、 `SCC_GET_RECURSIVE` フラグを指定したディレクトリ内のすべてのファイルと同様に、すべてのサブディレクトリを取得します。  
   
 > [!NOTE]
->  `SCC_GET_RECURSIVE` should never be passed without `SCC_GET_ALL`. Also, note that if directories C:\A and C:\A\B are both passed on a recursive get, C:\A\B and all its subdirectories will actually be retrieved twice. It is the IDE's responsibility—and not the source control plug-in's—to make sure that duplicates such as this are kept out of the array.  
+>  `SCC_GET_RECURSIVE` せずに渡す必要があるは決して `SCC_GET_ALL`します。 また、C:\\A および C:\\A\\B ディレクトリが取得再帰的に渡される両方の場合 C:\\A\\B とそのすべてのサブディレクトリは実際に取得すること 2 回に注意してください。 IDE の役目です: プラグインのソースではなくを制御し、配列から重複が次のように格納されているかどうかを確認します。  
   
- Finally, even if a source control plug-in specified the `SCC_CAP_GET_NOUI` flag on initialization, indicating that it does not have a user interface for a Get command, this function may still be called by the IDE to retrieve files. The flag simply means that the IDE does not display a Get menu item and that the plug-in is not expected to provide any UI.  
+ 最後に、ソース管理プラグイン場合でも指定されている、 `SCC_CAP_GET_NOUI` の初期化、Get コマンドのユーザー インターフェイスがないことは、この関数は、ファイルを取得する IDE によっても呼び出されますことを示すフラグ。 フラグは、IDE で Get メニュー項目が表示されない、UI を提供する必要は、プラグインがないことを意味します。  
   
-## <a name="renaming-and-sccget"></a>Renaming and SccGet  
- Situation: a user checks out a file, for example, a.txt, and modifies it. Before a.txt can be checked in, a second user renames a.txt to b.txt in the source control database, checks out b.txt, makes some modifications to the file, and checks the file in. The first user wants the changes made by the second user so the first user renames their local version of a.txt file to b.txt and does a get on the file. However, the local cache that keeps track of version numbers still thinks the first version of a.txt is stored locally and so source control cannot resolve the differences.  
+## 名前を変更して SccGet  
+ 状況: ユーザーなどの a.txt ファイルをチェック アウトし、それを変更します。 チェックイン a.txt を前に 2 番目のユーザー a.txt をソース管理データベースに b.txt:」に名前を変更、b.txt: チェック\_アウト、いくつかの変更、ファイルには、およびファイルをチェックインします。 最初のユーザーには、最初のユーザーが「b.txt:」に a.txt ファイルのローカル バージョン名前を変更し、、ファイルに対して get をは、2 番目のユーザー行った変更が希望しています。 ただし、バージョン番号を追跡するローカル キャッシュもと認識 a.txt の最初のバージョンがローカルに格納されているし、ソース管理での相違点を解決できないようにします。  
   
- There are two ways to resolve this situation where the local cache of source control versions becomes out of sync with the source control database:  
+ ソース コントロールのバージョンのローカルのキャッシュがソース管理データベースとの同期になったこの状況を解決するのには 2 つの方法があります。  
   
-1.  Do not allow renaming a file in the source control database that is currently checked out.  
+1.  現在チェック アウトされているソース管理データベース内のファイルの名前を変更することはできません。  
   
-2.  Do the equivalent of "delete old" followed by "add new". The following algorithm is one way to accomplish this.  
+2.  "削除の古い"後に「新規追加」と同等の操作を行います。 次のアルゴリズムは、これを実現する 1 つの方法です。  
   
-    1.  Call the [SccQueryChanges](../extensibility/sccquerychanges-function.md) function to learn about the renaming of a.txt to b.txt in the source control database.  
+    1.  呼び出す、 [SccQueryChanges](../extensibility/sccquerychanges-function.md) 関数をソース管理データベースに b.txt:」に a.txt の名前の変更について説明します。  
   
-    2.  Rename the local a.txt to b.txt.  
+    2.  ローカルの a.txt の「b.txt:」名前を変更します。  
   
-    3.  Call the `SccGet` function for both a.txt and b.txt.  
+    3.  呼び出す、 `SccGet` a.txt と b.txt: の両方の関数です。  
   
-    4.  Because a.txt does not exist in the source control database, the local version cache is purged of the missing a.txt version information.  
+    4.  A.txt がソース管理データベースに存在しないために、不足している a.txt バージョン情報のローカル バージョンのキャッシュが消去されます。  
   
-    5.  The b.txt file being checked out is merged with the contents of the local b.txt file.  
+    5.  チェック アウトされている b.txt: ファイルは、ローカル b.txt: ファイルの内容に結合されます。  
   
-    6.  The updated b.txt file can now be checked in.  
+    6.  更新された b.txt: ファイル今すぐチェックインすることができます。  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
- [Bitflags Used by Specific Commands](../extensibility/bitflags-used-by-specific-commands.md)
+## 参照  
+ [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+ [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)

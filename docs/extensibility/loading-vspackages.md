@@ -1,80 +1,63 @@
 ---
-title: Loading VSPackages | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- VSPackages, autoloading
-- VSPackages, loading
+title: "Vspackage を読み込む | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Vspackage の自動読み込み"
+  - "VSPackage、読み込み"
 ms.assetid: f4c3dcea-5051-4065-898f-601269649d92
 caps.latest.revision: 17
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 9808bce5f41519f87499de0ace2eaa8350021f79
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 17
 ---
-# <a name="loading-vspackages"></a>Loading VSPackages
-VSPackages are loaded into Visual Studio only when their functionality is required. For example, a VSPackage is loaded when Visual Studio uses a project factory or a service that the VSPackage implements. This feature is called delayed loading, which is used whenever possible to improve performance.  
+# Vspackage を読み込む
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+VSPackages は、それらの機能が必要な場合にのみ、Visual Studio に読み込まれます。 たとえば、Visual Studio は、プロジェクトの工場出荷時や、VSPackage を実装するサービスを使用するときに VSPackage が読み込まれます。 この機能には、パフォーマンスを向上させるために可能な場合に使用される遅延読み込みは呼び出されます。  
   
 > [!NOTE]
->  Visual Studio can determine certain VSPackage information, such as the commands that a VSPackage offers, without loading the VSPackage.  
+>  Visual Studio では、VSPackage を読み込むことがなく、VSPackage を提供するコマンドなど、特定の vs パッケージ情報を確認できます。  
   
- VSPackages can be set to autoload in a particular user interface (UI) context, for example, when a solution is open. The <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> attribute sets this context.  
+ VSPackages に設定できます、特定のユーザー インターフェイス \(UI\) のコンテキストでの自動読み込みなど、ソリューションを開いている場合。<xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> 属性はこのコンテキストを設定します。  
   
-### <a name="autoloading-a-vspackage-in-a-specific-context"></a>Autoloading a VSPackage in a specific context  
+### 特定のコンテキストで VSPackage 自動読み込み  
   
--   Add the `ProvideAutoLoad` attribute to the VSPackage attributes:  
+-   追加、 `ProvideAutoLoad` VSPackage 属性に属性します。  
   
-    ```csharp  
+    ```c#  
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\14.0")]  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
     [ProvideAutoLoad(UIContextGuids80.SolutionExists)]  
     [Guid("00000000-0000-0000-0000-000000000000")] // your specific package GUID  
-    public class MyAutoloadedPackage : Package  
+    public class MyAutoloadedPackage : Package  
     {. . .}  
     ```  
   
-     See the enumerated fields of <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> for a list of the UI contexts and their GUID values.  
+     列挙型のフィールドを参照してください <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> UI コンテキストとその GUID 値のリスト。  
   
--   Set a breakpoint in the <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> method.  
+-   ブレークポイントを設定、 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> メソッドです。  
   
--   Build the VSPackage and start debugging.  
+-   VSPackage をビルドしてデバッグを開始します。  
   
--   Load a solution or create one.  
+-   ソリューションを読み込むか、1 つを作成します。  
   
-     The VSPackage loads and stops at the breakpoint.  
+     VSPackage を読み込んではブレークポイントで停止します。  
   
-## <a name="forcing-a-vspackage-to-load"></a>Forcing a VSPackage to load  
- Under some circumstances a VSPackage may have to force another VSPackage to be loaded. For example, a lightweight VSPackage might load a larger VSPackage in a context that is not available as a CMDUIContext.  
+## 強制的に VSPackage を読み込む  
+ 状況によっては、VSPackage を強制的に読み込まれる別の VSPackage 必要があります。 たとえば、軽量 VSPackage には、CMDUIContext として記載されていないコンテキストでより大きな VSPackage によって読み込まれます。  
   
- You can use the <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A> method to force a VSPackage to load.  
+ 使用することができます、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A> を読み込む VSPackage を強制する方法です。  
   
--   Insert this code into the <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> method of the VSPackage that forces another VSPackage to load:  
+-   このコードに挿入、 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> VSPackage を読み込む別 VSPackage を強制する方法。  
   
-    ```csharp  
+    ```c#  
     IVsShell shell = GetService(typeof(SVsShell)) as IVsShell;  
     if (shell == null) return;  
   
@@ -85,17 +68,17 @@ VSPackages are loaded into Visual Studio only when their functionality is requir
   
     ```  
   
-     When the VSPackage is initialized, it will force `PackageToBeLoaded` to load.  
+     強制的に VSPackage が初期化されると、 `PackageToBeLoaded` を読み込めません。  
   
-     Force loading should not be used for VSPackage communication. Use [Using and Providing Services](../extensibility/using-and-providing-services.md) instead.  
+     強制読み込みの VSPackage 通信を指定しないでください。 代わりに、[使用して、サービスを提供します。](../extensibility/using-and-providing-services.md) を使用してください。  
   
-## <a name="using-a-custom-attribute-to-register-a-vspackage"></a>Using a custom attribute to register a VSPackage  
- In certain cases you may need to create a new registration attribute for your extension. You can use registration attributes to add new registry keys or to add new values to existing keys. The new attribute must derive from <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>, and it must override the <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> and <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> methods.  
+## カスタム属性を使用して、VSPackage を登録するには  
+ 特定の場合に、拡張機能の新しい登録属性を作成する必要があります。 新しいレジストリ キーを追加したり既存のキーに新しい値を追加するには、登録属性を使用することができます。 新しい属性から派生する必要があります <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>, 、ファイルは上書きする必要があり、 <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> と <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> メソッドです。  
   
-## <a name="creating-a-registry-key"></a>Creating a Registry Key  
- In the following code, the custom attribute creates a **Custom** subkey under the key for the VSPackage that is being registered.  
+## レジストリ キーを作成します。  
+ 次のコードでは、カスタム属性を作成、 **カスタム** が登録されている VSPackage のキーの下のサブキーです。  
   
-```csharp  
+```c#  
 public override void Register(RegistrationAttribute.RegistrationContext context)  
 {  
     Key packageKey = null;  
@@ -118,10 +101,10 @@ public override void Unregister(RegistrationContext context)
   
 ```  
   
-## <a name="creating-a-new-value-under-an-existing-registry-key"></a>Creating a New Value Under an Existing Registry Key  
- You can add custom values to an existing key. The following code shows how to add a new value to a VSPackage registration key.  
+## 既存のレジストリ キーの下の新しい値を作成します。  
+ カスタム値は、既存のキーを追加できます。 次のコードは、VSPackage 登録キーを新しい値を追加する方法を示しています。  
   
-```csharp  
+```c#  
 public override void Register(RegistrationAttribute.RegistrationContext context)  
 {  
     Key packageKey = null;  
@@ -143,5 +126,5 @@ public override void Unregister(RegistrationContext context)
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [VSPackages](../extensibility/internals/vspackages.md)
+## 参照  
+ [Vspackages にあります。](../extensibility/internals/vspackages.md)

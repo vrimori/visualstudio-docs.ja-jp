@@ -1,58 +1,41 @@
 ---
-title: Adding a Submenu to a Menu | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- context menus
-- submenus, cascading
-- cascading submenus
-- menus, creating cascading submenus
+title: "メニューのサブメニューの追加 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "コンテキスト メニュー"
+  - "サブメニューには、カスケード"
+  - "カスケード サブメニュー"
+  - "メニュー、カスケード サブメニューを作成します。"
 ms.assetid: 692600cb-d052-40e2-bdae-4354ae7c6c84
 caps.latest.revision: 43
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 6492dd6f989337b55225a14dd7da4508a8de068b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 43
 ---
-# <a name="adding-a-submenu-to-a-menu"></a>Adding a Submenu to a Menu
-This walkthrough builds on the demonstration in [Adding a Menu to the Visual Studio Menu Bar](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) by showing how to add a submenu to the **TestMenu** menu.  
+# メニューのサブメニューの追加
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+このチュートリアルのデモに基づき [Visual Studio のメニュー バーにメニューを追加します。](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) にサブメニューを追加する方法を表示することによって、 **TestMenu** メニュー。  
   
- A submenu is a secondary menu that appears in another menu. A submenu can be identified by the arrow that follows its name. Clicking the name causes the submenu and its commands to be displayed.  
+ サブメニューは、別のメニューに表示されるセカンダリ メニューです。 サブメニューは、その名の後の矢印で識別できます。 名前をクリックすると、サブメニュー、および表示するコマンドとします。  
   
- This walkthrough creates a submenu in a menu on the Visual Studio menu bar and puts a new command on the submenu. The walkthrough also implements the new command.  
+ このチュートリアルでは、Visual Studio のメニュー バーのメニューのサブメニューを作成し、サブメニューで新しいコマンドを配置します。 このチュートリアルでは、新しいコマンドも実装します。  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## 必須コンポーネント  
+ Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
   
-## <a name="adding-a-submenu-to-a-menu"></a>Adding a Submenu to a Menu  
+## メニューのサブメニューの追加  
   
-1.  Follow the steps in [Adding a Menu to the Visual Studio Menu Bar](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) to create the project and menu item. The steps in this walkthrough assume that the name of the VSIX project is `TopLevelMenu`.  
+1.  手順に従います [Visual Studio のメニュー バーにメニューを追加します。](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) プロジェクトとメニュー項目を作成します。 このチュートリアルの手順では、VSIX プロジェクトの名前があると仮定 `TopLevelMenu`します。  
   
-2.  Open TestCommandPackage.vsct. In the `<Symbols>` section, add an `<IDSymbol>` element for the submenu, one for the submenu group, and one for the command, all in the `<GuidSymbol>` node named "guidTopLevelMenuCmdSet." This is the same node that contains the `<IDSymbol>` element for the top-level menu.  
+2.  TestCommandPackage.vsct を開きます。`<Symbols>` セクションで、追加、 `<IDSymbol>` サブメニュー グループとすべてのコマンドのサブメニュー要素、 `<GuidSymbol>` "guidTopLevelMenuCmdSet"という名前のノード これは同じノードを含む、 `<IDSymbol>` \] メニューの最上位の要素。  
   
     ```xml  
     <IDSymbol name="SubMenu" value="0x1100"/>  
@@ -60,7 +43,7 @@ This walkthrough builds on the demonstration in [Adding a Menu to the Visual Stu
     <IDSymbol name="cmdidTestSubCommand" value="0x0105"/>  
     ```  
   
-3.  Add the newly created submenu to the `<Menus>` section.  
+3.  新しく作成されたサブメニューを追加、 `<Menus>` セクションです。  
   
     ```xml  
     <Menu guid="guidTestCommandPackageCmdSet" id="SubMenu" priority="0x0100" type="Menu">  
@@ -72,9 +55,9 @@ This walkthrough builds on the demonstration in [Adding a Menu to the Visual Stu
     </Menu>  
     ```  
   
-     The GUID/ID pair of the parent specifies the menu group that was generated in [Adding a Menu to the Visual Studio Menu Bar](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md), and is a child of the top-level menu.  
+     親の GUID と ID のペアが生成されたメニュー グループを指定する [Visual Studio のメニュー バーにメニューを追加します。](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md), 、トップレベルのメニューの子であるとします。  
   
-4.  Add the menu group defined in step 2 to the `<Groups>` section and make it a child of the submenu.  
+4.  手順 2 で定義されているメニュー グループを追加、 `<Groups>` セクションし、サブメニューの子を作成します。  
   
     ```xml  
     <Group guid="guidTestCommandPackageCmdSet" id="SubMenuGroup" priority="0x0000">  
@@ -82,7 +65,7 @@ This walkthrough builds on the demonstration in [Adding a Menu to the Visual Stu
     </Group>  
     ```  
   
-5.  Add a new `<Button>` element to the `<Buttons>` section to define the command created in step 2 as an item on the submenu.  
+5.  新しい `<Button>` 要素を `<Buttons>` サブメニューの項目として、手順 2. で作成するコマンドを定義するセクションです。  
   
     ```xml  
     <Button guid="guidTestCommandPackageCmdSet" id="cmdidTestSubCommand" priority="0x0000" type="Button">  
@@ -95,21 +78,21 @@ This walkthrough builds on the demonstration in [Adding a Menu to the Visual Stu
     </Button>  
     ```  
   
-6.  Build the solution and start debugging. You should see the experimental instance.  
+6.  ソリューションをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-7.  Click **TestMenu** to see a new submenu named **Sub Menu**. Click **Sub Menu** to open the submenu and see a new command, **Test Sub Command**. Notice that clicking **Test Sub Command** does nothing.  
+7.  クリックして **TestMenu** という名前の新規作成\] サブメニューを表示する **サブメニュー**します。 をクリックして **サブメニュー** サブメニューを開き、新しいコマンドを表示する **Test Sub コマンド**します。 クリックすることを確認 **Test Sub コマンド** 何も行われません。  
   
-## <a name="adding-a-command"></a>Adding a Command  
+## コマンドの追加  
   
-1.  Open TestCommand.cs and add the following command ID after the existing command ID.  
+1.  TestCommand.cs を開き、既存のコマンド ID の後に次のコマンド ID を追加  
   
-    ```csharp  
-    public const int cmdidTestSubCmd = 0x105;  
+    ```c#  
+    public const int cmdidTestSubCmd = 0x105;  
     ```  
   
-2.  Add the sub-command. Find the command constructor. Add the following lines just after the call to the `AddCommand` method.  
+2.  コマンドを追加します。 コマンドのコンス トラクターを検索します。 呼び出しの直後に次の行を追加、 `AddCommand` メソッドです。  
   
-    ```csharp  
+    ```c#  
     CommandID subCommandID = new CommandID(CommandSet, (int)TestCommandPackageGuids.cmdidTestSubCmd);  
     MenuCommand subItem = new MenuCommand(  
         new EventHandler(SubItemCallback), subCommandID);  
@@ -117,9 +100,9 @@ This walkthrough builds on the demonstration in [Adding a Menu to the Visual Stu
   
     ```  
   
-     The `SubItemCallback` command handler will be defined later. The constructor should now look like this:  
+     `SubItemCallback` コマンド ハンドラーが後で定義されます。 コンス トラクターは、次のようになります。  
   
-    ```csharp  
+    ```c#  
     private TestCommand(Package package)  
             {  
                 if (package == null)  
@@ -142,9 +125,9 @@ This walkthrough builds on the demonstration in [Adding a Menu to the Visual Stu
                 }  
     ```  
   
-3.  Add SubItemCallback(). This is the method that is called when the new command in the submenu is clicked.  
+3.  SubItemCallback\(\) を追加します。 これは、サブメニューで新しいコマンドがクリックされたときに呼び出されるメソッドです。  
   
-    ```csharp  
+    ```c#  
     private void SubItemCallback(object sender, EventArgs e)  
     {  
         IVsUIShell uiShell = (IVsUIShell)this.ServiceProvider.GetService(  
@@ -168,10 +151,10 @@ This walkthrough builds on the demonstration in [Adding a Menu to the Visual Stu
     }  
     ```  
   
-4.  Build the project and start debugging. The experimental instance should appear.  
+4.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-5.  On the **TestMenu** menu, click **Sub Menu** and then click **Test Sub Command**. A message box should appear and display the text, "Test Command Inside TestCommand.SubItemCallback()".  
+5.  **TestMenu** \] メニューのをクリックして **サブメニュー** \] をクリックし、 **Test Sub コマンド**します。 メッセージ ボックスが表示され、"テスト コマンド内 TestCommand.SubItemCallback\(\)"のテキストを表示する必要があります。  
   
-## <a name="see-also"></a>See Also  
- [Adding a Menu to the Visual Studio Menu Bar](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)   
- [Commands, Menus, and Toolbars](../extensibility/internals/commands-menus-and-toolbars.md)
+## 参照  
+ [Visual Studio のメニュー バーにメニューを追加します。](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)   
+ [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)

@@ -1,73 +1,56 @@
 ---
-title: IDebugArrayObject::GetDimensions | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugArrayObject::GetDimensions
-helpviewer_keywords:
-- IDebugArrayObject::GetDimensions method
+title: "IDebugArrayObject::GetDimensions | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugArrayObject::GetDimensions"
+helpviewer_keywords: 
+  - "IDebugArrayObject::GetDimensions メソッド"
 ms.assetid: 113e0aff-9028-49d6-b104-9fe7be4772d7
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 05ff3521879afe821fbac681a89ad993f5a18000
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
-Gets the dimensions of the array.  
+# IDebugArrayObject::GetDimensions
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+配列の次元を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetDimensions(   
-   DWORD dwCount,  
-   DWORD dwDimensions[]  
+```cpp#  
+HRESULT GetDimensions(   
+   DWORD dwCount,  
+   DWORD dwDimensions[]  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetDimensions(  
-   [In] uint    dwCount,   
-   [Out] uint[] dwDimensions  
+   [In] uint    dwCount,   
+   [Out] uint[] dwDimensions  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `dwCount`  
- [in] The number of dimensions to retrieve.  
+ \[入力\] 取得する次元数。  
   
  `dwDimensions`  
- [in, out] An array that is filled in with the sizes of each dimension. `dwCount` specifies the maximum size of the `dwDimensions` array.  
+ \[入力出力\] の各次元のサイズが格納された配列。  `dwCount` は `dwDimensions` の配列の最大サイズを指定します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- A multi-dimensional array can have different sizes for each dimension. For example, given the three-dimensional array `myarray[3][2][6]`, this method would return 3, 2, and 6 in the `dwDimensions` parameter in that order.  
+## 解説  
+ 多次元配列はインデックスの異なったサイズを設定できます。  たとえば次元配列 `myarray[3][2][6]` はこのメソッドはその順序で `dwDimensions` パラメーターの 3 ビット2 ビットおよび 6 を返します。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

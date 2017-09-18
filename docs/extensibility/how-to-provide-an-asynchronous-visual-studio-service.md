@@ -1,73 +1,56 @@
 ---
-title: 'How to: Provide an Asynchronous Visual Studio Service | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "方法: Visual Studio の非同期サービスを提供 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 0448274c-d3d2-4e12-9d11-8aca78a1f3f5
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b96102a7f6a661d544ae6e82fcabb6eb6c38acb5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>How to: Provide an Asynchronous Visual Studio Service
-If you want to obtain a service without blocking the UI thread, you should create an asynchronous service and load the package on a background thread. For this purpose you can use an <xref:Microsoft.VisualStudio.Shell.AsyncPackage> rather than a <xref:Microsoft.VisualStudio.Shell.Package>, and add the service with the asynchronous package's special asynchronous methods  
+# 方法: Visual Studio の非同期サービスを提供
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+UI スレッドをブロックすることがなくサービスを取得する場合は、非同期サービスを作成し、バック グラウンド スレッドでパッケージを読み込むことです。 この目的で使用することができます、 <xref:Microsoft.VisualStudio.Shell.AsyncPackage> ではなく、 <xref:Microsoft.VisualStudio.Shell.Package>, 、非同期のパッケージの特別な非同期メソッドにより、サービスを追加  
   
- For information about providing synchronous Visual Studio services, see [How to: Provide a Service](../extensibility/how-to-provide-a-service.md).  
+ Visual Studio の同期サービスを提供する方法については、次を参照してください。 [方法: サービスを提供](../extensibility/how-to-provide-a-service.md)します。  
   
-## <a name="implementing-an-asynchronous-service"></a>Implementing an Asynchronous Service  
+## 非同期のサービスを実装します。  
   
-1.  Create a VSIX project (**File / New / Project / Visual C# / Extensiblity / VSIX Project**). Name the project **TestAsync**.  
+1.  VSIX プロジェクトを作成する \(**ファイル\/\[新しい\/プロジェクト\/Visual c\#\/Extensiblity\/VSIX プロジェクト**\)。 プロジェクトに名前を **TestAsync**します。  
   
-2.  Add a VSPackage to the project. Select the project node in the **Solution Explorer** and click **Add / New item / Visual C# Items / Extensibility / Visual Studio Package**. Name this file **TestAsyncPackage.cs**.  
+2.  VSPackage をプロジェクトに追加します。 プロジェクト ノードを選択して、 **ソリューション エクスプ ローラー** \] をクリック **追加\/\[新しい項目\/Visual c\# アイテム\/機能拡張\/Visual Studio パッケージ**します。 このファイルに名前 **TestAsyncPackage.cs**します。  
   
-3.  In TestAsyncPackage.cs, change the package to inherit from AsyncPackage rather than Package:  
+3.  TestAsyncPackage.cs では、パッケージではなく、AsyncPackage から継承するパッケージを変更します。  
   
-    ```csharp  
+    ```c#  
     public sealed class TestAsyncPackage : AsyncPackage  
     ```  
   
-4.  To implement a service, you need to create three types:  
+4.  サービスを実装するには、次の 3 つの種類を作成する必要があります。  
   
-    -   An interface that describes the service. Many of these interfaces are empty, that is, they have no methods.  
+    -   サービスを記述したインターフェイスです。 これらのインターフェイスの多くは、空、つまりがないメソッド。  
   
-    -   An interface that describes the service interface. This interface includes the methods to be implemented.  
+    -   サービス インターフェイスについて説明するインターフェイス。 このインターフェイスには、実装されるメソッドが含まれています。  
   
-    -   A class that implements both the service and the service interface.  
+    -   サービスと、サービス インターフェイスの両方を実装するクラス。  
   
-5.  The following example shows a very basic implementation of the three types. The constructor of the service class must set the service provider. In this example we'll just add the service to the package code file.  
+5.  次の例では、次の 3 つの種類の非常に基本的な実装を示します。 サービス クラスのコンス トラクターは、サービス プロバイダーを設定する必要があります。 この例では私たちだけ追加サービス パッケージのコード ファイルにします。  
   
-6.  Add the following using statements to the package file:  
+6.  次の追加 using ステートメントをパッケージ ファイル。  
   
-    ```csharp  
+    ```c#  
     using System.Threading;  
     using System.Threading.Tasks;  
     using System.Runtime.CompilerServices;  
     using System.IO;  
     ```  
   
-7.  Here's the asynchronous service implementation. Note that you need to set the asynchronous service provider rather than the synchronous service provider in the constructor:  
+7.  非同期のサービスの実装を次に示します。 コンス トラクターで、同期サービス プロバイダーではなく、非同期サービス プロバイダーを設定する必要があることに注意してください。  
   
     ```  
     public class TextWriterService : STextWriterService, ITextWriterService  
@@ -98,16 +81,16 @@ If you want to obtain a service without blocking the UI thread, you should creat
     }  
     ```  
   
-## <a name="registering-a-service"></a>Registering a Service  
- To register a service, add the <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> to the package that provides the service. There are two differences from registering a synchronous service:  
+## サービスを登録します。  
+ サービスを登録するには、追加、 <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> サービスを提供するパッケージにします。 同期サービスを登録するを 2 つの違いがあります。  
   
--   If you are autoloading the package, you must add the <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags> BackgroundLoad value to the attribute. For more information about autoloading VSPackages, see [Loading VSPackages](../extensibility/loading-vspackages.md).  
+-   自動読み込みする場合は、パッケージに追加する必要がありますが、 <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags> 属性に BackgroundLoad 値。 自動読み込み VSPackages に関する詳細については、次を参照してください。 [Vspackage を読み込む](../extensibility/loading-vspackages.md)します。  
   
--   You must add the **AllowsBackgroundLoading = true** field to the <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>. For more information about the PackageRegistrationAttribute, see [Registering and Unregistering VSPackages](../extensibility/registering-and-unregistering-vspackages.md).  
+-   追加する必要があります、 **AllowsBackgroundLoading \= true** フィールドを <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>です。 詳細については、PackageRegistrationAttribute を参照してください。 [Vspackage の登録と登録解除しています](../extensibility/registering-and-unregistering-vspackages.md)します。  
   
- Here is an example of an AsyncPackage with an asynchronous service registration::  
+ 非同期サービスの登録を使用する AsyncPackage の例を次に示します。  
   
-```csharp  
+```c#  
 [ProvideService((typeof(STextWriterService)), IsAsyncQueryable = true)]  
 [ProvideAutoLoad(UIContextGuids80.SolutionExists, PackageAutoLoadFlags.BackgroundLoad)]  
 [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]   
@@ -116,9 +99,9 @@ public sealed class TestAsyncPackage : AsyncPackage
 {. . . }  
 ```  
   
-## <a name="adding-a-service"></a>Adding a service  
+## サービスを追加します。  
   
-1.  In TestAsyncPackage.cs, remove the `Initialize()` method and override the `InitializeAsync()` method. Add the service, and add a callback method to create the services. Here is an example of the asynchronous initializer adding a service:  
+1.  TestAsyncPackage.cs で、削除、 `Initialize()` メソッドをオーバーライドして、 `InitializeAsync()` メソッドです。 サービスを追加し、サービスを作成するコールバック メソッドを追加します。 サービスを追加する非同期の初期化子の例を次に示します。  
   
     ```  
     protected override async System.Threading.Tasks.Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)  
@@ -130,11 +113,11 @@ public sealed class TestAsyncPackage : AsyncPackage
   
     ```  
   
-2.  Add a reference to Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll.  
+2.  Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll への参照を追加します。  
   
-3.  Implement the callback method as an asynchronous method that creates and returns the service.  
+3.  作成して、サービスを返す非同期メソッドとして、コールバック メソッドを実装します。  
   
-    ```csharp  
+    ```c#  
     public async System.Threading.Tasks.Task<object> CreateService(IAsyncServiceContainer container, CancellationToken cancellationToken, Type serviceType)  
     {  
         STextWriterService service = null;  
@@ -147,12 +130,12 @@ public sealed class TestAsyncPackage : AsyncPackage
   
     ```  
   
-## <a name="using-a-service"></a>Using a Service  
- Now you can get the service and use its methods.  
+## サービスを使用します。  
+ 今すぐサービスを取得し、そのメソッドを使用できます。  
   
-1.  We'll show this in the initializer, but you can get the service anywhere you want to use the service.  
+1.  初期化子は、この説明しますが、サービスを使用する場合、サービス任意の場所を取得することができます。  
   
-    ```csharp  
+    ```c#  
     protected override async System.Threading.Tasks.Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)  
     {  
         this.AddService(typeof(STextWriterService), CreateService);  
@@ -166,24 +149,24 @@ public sealed class TestAsyncPackage : AsyncPackage
   
     ```  
   
-     Don't forget to change *\<userpath>* to a filename and path that makes sense on your machine!  
+     変更することを忘れないでください *\< userpath \>* ファイル名やコンピューターに意味のあるパスに\!  
   
-2.  Build and run the code. When the experimental instance of Visual Studio appears, open a solution. This causes the AsyncPackage to autoload. When the initializer has run, you should find a file in the location you specified.  
+2.  ビルドして、コードを実行します。 Visual Studio の実験用インスタンスが表示されたら、ソリューションを開きます。 これにより、自動読み込みを AsyncPackage です。 初期化子が実行された場合、指定した場所にファイルが見つかるはずです。  
   
-## <a name="using-an-asynchronous-service-in-a-command-handler"></a>Using an Asynchronous Service in a Command Handler  
- Here's an example of how to use an asynchronous service in a menu command. You can use the procedure shown here to use the service in other non-asynchronous methods.  
+## コマンド ハンドラーで非同期のサービスの使用  
+ メニュー コマンドで非同期のサービスを使用する方法の例を次に示します。 他の非非同期メソッドで、サービスを使用するには、ここに示した手順を使用することができます。  
   
-1.  Add a menu command to your project. (In the **Solution Explorer**, select the project node, right-click, and select **Add / New Item / Extensibility / Custom Command**.) Name the command file **TestAsyncCommand.cs.**  
+1.  プロジェクトにメニュー コマンドを追加します。 \(で、 **ソリューション エクスプ ローラー**, 、選択、プロジェクト ノードを右クリックし、 **追加\/\[新しい項目の\/機能拡張\/カスタム コマンド**.\) コマンド ファイルの名前 **TestAsyncCommand.cs**。  
   
-2.  The custom command template re-adds the `Initialize()` method to the TestAsyncPackage.cs file in order to initialize the command. In the Initialize() method, copy the line that initializes the command. It should look like this:  
+2.  カスタム コマンドのテンプレートを再追加、 `Initialize()` コマンドを初期化するために TestAsyncPackage.cs ファイルへのメソッドです。 Initialize\(\) メソッドでは、コマンドを初期化する行をコピーします。 次のようになります。  
   
     ```  
     TestAsyncCommand.Initialize(this);  
     ```  
   
-     Move this line to the `InitializeAsync()` method in the AsyncPackageForService.cs file. Since this is in an asynchronous initialization, you must switch to the main thread before you initialize the command using <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>. It should now look like this:  
+     この行に移動する、 `InitializeAsync()` AsyncPackageForService.cs ファイル内のメソッドです。 これは、非同期初期化でに切り替える必要がありますをメイン スレッドを使用してコマンドを初期化する前に <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>します。 今すぐに次のようになります。  
   
-    ```csharp  
+    ```c#  
   
     protected override async System.Threading.Tasks.Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)  
     {  
@@ -202,31 +185,31 @@ public sealed class TestAsyncPackage : AsyncPackage
   
     ```  
   
-3.  Delete the `Initialize()` method.  
+3.  削除、 `Initialize()` メソッドです。  
   
-4.  In the TestAsyncCommand.cs file, find the `MenuItemCallback()` method. Delete the body of the method.  
+4.  TestAsyncCommand.cs ファイルの検索、 `MenuItemCallback()` メソッドです。 メソッドの本体を削除します。  
   
-5.  Add a using statement:  
+5.  使用して、追加のステートメント。  
   
     ```  
     using System.IO;  
     ```  
   
-6.  Add an asynchronous method named `GetAsyncService()`, which gets the service and uses its methods:  
+6.  という非同期メソッドを追加 `GetAsyncService()`, とそのメソッドを使用してサービスを取得します。  
   
-    ```csharp  
+    ```c#  
     private async System.Threading.Tasks.Task GetAsyncService()  
     {  
         ITextWriterService textService =   
            this.ServiceProvider.GetService(typeof(STextWriterService))  
               as ITextWriterService;  
-        // don't forget to change <userpath> to a local path  
+        // don’t forget to change <userpath> to a local path  
         await writer.WriteLineAsync((<userpath>),"this is a test");  
        }  
   
     ```  
   
-7.  Call this method from the `MenuItemCallback()` method:  
+7.  このメソッドを呼び出して、 `MenuItemCallback()` メソッド。  
   
     ```  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -236,7 +219,7 @@ public sealed class TestAsyncPackage : AsyncPackage
   
     ```  
   
-8.  Build the solution and start debugging. When the experimental instance of Visual Studio appears, go to the **Tools** menu and look for the **Invoke TestAsyncCommand** menu item. When you click it, the TextWriterService writes to the file you specified. (You don't need to open a solution, because invoking the command also causes the package to load.)  
+8.  ソリューションをビルドし、デバッグを開始します。 Visual Studio の実験用インスタンスが表示されたらに移動、 **ツール** メニューおよび \[検索対象の **呼び出す TestAsyncCommand** メニュー項目です。 をクリックすると、TextWriterService は、指定したファイルに書き込みます。 \(がなくても、ソリューションを開くに読み込むパッケージのコマンドを呼び出すもあるためです。\)  
   
-## <a name="see-also"></a>See Also  
- [Using and Providing Services](../extensibility/using-and-providing-services.md)
+## 参照  
+ [使用して、サービスを提供します。](../extensibility/using-and-providing-services.md)

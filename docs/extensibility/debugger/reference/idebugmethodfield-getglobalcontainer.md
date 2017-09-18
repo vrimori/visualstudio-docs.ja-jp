@@ -1,69 +1,52 @@
 ---
-title: IDebugMethodField::GetGlobalContainer | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugMethodField::GetGlobalContainer
-helpviewer_keywords:
-- IDebugMethodField::GetGlobalContainer method
+title: "IDebugMethodField::GetGlobalContainer | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugMethodField::GetGlobalContainer"
+helpviewer_keywords: 
+  - "IDebugMethodField::GetGlobalContainer メソッド"
 ms.assetid: 041ac5aa-0b80-4310-b9ae-b88f8e7e0e5f
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5399a96b003a8f41d180e180c59eb76ccd53cd0b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugmethodfieldgetglobalcontainer"></a>IDebugMethodField::GetGlobalContainer
-Gets the global container of the method.  
+# IDebugMethodField::GetGlobalContainer
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+メソッドのグローバルなコンテナーを取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT GetGlobalContainer(  
-   IDebugClassField** ppClass  
+   IDebugClassField** ppClass  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetGlobalContainer(  
-   out IDebugClassField ppClass  
+   out IDebugClassField ppClass  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ppClass`  
- [out] Returns an [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) representing the module in which this method is defined.  
+ \[出力\] このメソッドが定義されているモジュールを表す [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- The returned [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) object represents the entire module and is an artificial object, that is, the module itself does not have an actual class but it can be represented by an `IDebugClassField` object, allowing the various elements of the module to be enumerated and discovered.  
+## 解説  
+ [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) 返されたオブジェクトはモジュール全体を表し人為的なオブジェクトでありつまりモジュール自体は実際のクラスを備えなくて `IDebugClassField` のオブジェクトで表すことができます。列挙し検出されるとしてモジュールのさまざまな要素ができます。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

@@ -1,5 +1,5 @@
 ---
-title: Web Project Template for Python in Visual Studio | Microsoft Docs
+title: "Visual Studio での Python 用 Web プロジェクト テンプレート | Microsoft Docs"
 ms.custom: 
 ms.date: 7/13/2017
 ms.prod: visual-studio-dev15
@@ -16,116 +16,114 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 4013eb0b251985b0984d0cbf2a723175fe91aad5
-ms.openlocfilehash: 6a03b26b2ad01bedc4f1b0882c39ba3ad19e26d2
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: e46dd1012d220015b1840c0c50332dbe45e43a1e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
-# <a name="python-web-project-templates"></a>Python Web Project Templates
+# <a name="python-web-project-templates"></a>Python Web プロジェクト テンプレート
 
-Python in Visual Studio supports developing web projects in Bottle, Flask, and Django frameworks through project templates and a debug launcher that can be configured to handle various frameworks. You can also use the generic "Web Project" template for other frameworks such as Pyramid.
+Visual Studio の Python は、さまざまなフレームワークを処理するように構成できるプロジェクト テンプレートとデバッグ ランチャーにより、Bottle、Django、Flask などのフレームワークでの Web プロジェクトの開発をサポートします。 ただし、Visual Studio には、フレームワーク自体は含まれず、プロジェクトを右クリックして **[Python] > [Install/upgrade framework... (フレームワークのインストール/アップグレード...)]** を選択して別途インストールする必要があります。
 
-Visual Studio does not include the frameworks themselves. You must install frameworks separately by right-clicking the project and selecting **Python > Install/upgrade framework...**.
+各テンプレート (**[ファイル] > [新規] > [プロジェクト]** からアクセス) は、ランダムに選ばれたローカル ポートで Web サーバーを起動し、デバッグ時に既定のブラウザーを開き、[Microsoft Azure](http://www.azure.com) に直接発行できるようにします。 Bottle、Flask、Django 用のテンプレートが用意されており、Pyramid など他のフレームワークには汎用の "Web プロジェクト" テンプレートを使用できます。
 
-When run, a project created from a template (as accessed through **File > New > Project...**) launches a web server with a randomly selected local port, opens your default browser when debugging, and allows direct publishing to Microsoft Azure.
+![新しい Web プロジェクト テンプレート](media/template-web-new-project.png)
 
-![New Web Project templates](media/template-web-new-project.png)
+Bottle、Flask、Django の各テンプレートには、いくつかのページと静的ファイルがあるスターター サイトが含まれます。 このコードは、サーバーをローカルに実行およびデバッグするため (一部の設定は環境から取得する必要があります)、また Microsoft Azure にデプロイするため ([WSGI アプリ](http://www.python.org/dev/peps/pep-3333/) オブジェクトを提供する必要があります) に十分です。
 
-The Bottle, Flask, and Django templates each include a starter site with some pages and static files. This code is sufficient to run and debug the server locally (where some settings need to be obtained from the environment) and to deploy to Microsoft Azure (where a [WSGI app](http://www.python.org/dev/peps/pep-3333/) object needs to be provided).
+フレームワーク固有のテンプレートからプロジェクトを作成する場合、pip を使用して必要なパッケージをインストールするためのダイアログが表示されます。 Web プロジェクトの[仮想環境](python-environments.md#virtual-environments)を使用して、Web サイトのパブリッシュ時に正しい依存関係が含まれるようにすることもお勧めします。
 
-When creating a project from a framework-specific template, a dialog appears to help you install the necessary packages using pip. We also recommend using a [virtual environment](python-environments.md#virtual-environments) for web projects so that the correct dependencies are included when you publish your web site:
+![プロジェクト テンプレートに必要なパッケージをインストールするダイアログ](media/template-web-requirements-txt-wizard.png)
 
-![Dialog that installs needed packages for a project template](media/template-web-requirements-txt-wizard.png)
+Microsoft Azure App Service にデプロイする場合は、Python のバージョンとして[サイト拡張機能](https://aka.ms/PythonOnAppService)を選び、パッケージを手動でインストールします。 また、Azure App Service は、Visual Studio からデプロイされるときに `requirements.txt` ファイルからパッケージを自動的にインストール**しない**ため、[aka.ms/PythonOnAppService](https://aka.ms/PythonOnAppService) の構成の詳細に従ってください。
 
-When deploying to Microsoft Azure App Service, select a version of Python as a [site extension](https://aka.ms/PythonOnAppService) and manually install packages. Also, because Azure App Service does **not** automatically install packages from a `requirements.txt` file when deployed from Visual Studio, follow the configuration details on [aka.ms/PythonOnAppService](https://aka.ms/PythonOnAppService).
+Microsoft Azure クラウド サービスは `requirements.txt` ファイルをサポート "*します*"。 詳しくは、[Azure クラウド サービス プロジェクト](template-azure-cloud-service.md)に関する記事をご覧ください。
 
-Microsoft Azure Cloud Service *does* support the `requirements.txt` file. [Azure Cloud Service Projects](template-azure-cloud-service.md) for details.
-
-For an introduction to Python web projects, see [Getting Started with PTVS, Part 6: Web sites](https://youtu.be/FJx5mutt1uk?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff) (youtube.com, 3m10s).
+Python Web プロジェクトの概要については、「[Getting Started with PTVS, Part 6: Web sites](https://youtu.be/FJx5mutt1uk?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)」(PTVS の概要、パート 6: Web サイト) (youtube.com、3m10s) をご覧ください。
 
 > [!VIDEO https://www.youtube.com/embed/FJx5mutt1uk]
 
-## <a name="debugging"></a>Debugging
+## <a name="debugging"></a>デバッグ
 
-When a web project is started for debugging, Visual Studio starts the web server locally and opens your default browser to that address and port. To specify additional options, right-click the project, select **Properties**, and select the **Web Launcher** tab:
+Web プロジェクトのデバッグが開始されると、Visual Studio は Web サーバーをローカルで起動し、そのアドレスとポートを既定のブラウザーで開きます。 追加のオプションを指定するには、プロジェクトを右クリックし、**[プロパティ]** を選択し、**[Web ランチャー]** タブを選択します。
 
-  ![Web launcher properties for the generic web template](media/template-web-launcher-properties.png)
+  ![一般的な Web テンプレートの Web ランチャーのプロパティ](media/template-web-launcher-properties.png)
 
-In the **Debug** group:
+**[デバッグ]** グループで、次の操作を実行します。
 
-- **Search Paths**, **Script Arguments**, **Interpreter Arguments**, and **Interpreter Path**: these options are the same as for [normal debugging](debugging.md)
-- **Launch URL**: specifies the URL that is opened in your browser. It defaults to `localhost`.
-- **Port Number**: the port to use if none is specified in the URL (Visual Studio selects one automatically by default). This setting allows you to override the default value of the `SERVER_PORT` environment variable, which is used by the templates to configure the port the local debug server listens on.
+- **[検索パス]**、**[スクリプトの引数]**、**[インタープリターの引数]**、**[インタープリター パス]**: これらのオプションは、[通常のデバッグ](debugging.md)の場合と同じです
+- **[起動 URL]**: ブラウザーで開かれる URL を指定します。 既定値は `localhost` です。
+- **[ポート番号]**: URL に何も指定されなかった場合に使用するポート (Visual Studio によって既定で自動的に選択されます)。 この設定により、ローカル デバッグ サーバーがリッスンするポートを構成するためにテンプレートで使用される `SERVER_PORT` 環境変数の既定値を上書きできます。
 
-The properties in the **Run Server Command** and **Debug Server Command** groups (the latter is below what's show in the image) determine how the web server is launched. Because many frameworks require the use of a script outside of the current project, the script can be configured here and the name of the startup module can be passed as a parameter.
+**[Run Server Command (サーバー コマンドの実行)]** と **[Debug Server Command (サーバー コマンドのデバッグ)]** グループ (後者はイメージに表示されている内容の下にあります) のプロパティによって、Web サーバーの起動方法が決定されます。 多くのフレームワークでは、現在のプロジェクトの外部のスクリプトを使用する必要があるため、スクリプトをここで構成でき、スタートアップ モジュールの名前をパラメーターとして渡すことができます。
 
-- **Command**: can be a Python script (`*.py` file), a module name (as in, `python.exe -m module_name`), or a single line of code (as in, `python.exe -c "code"`). The value in the dropdown indicates which of these types is intended.
-- **Arguments**: these arguments are passed on the command line following the command.
-- **Environment**: a newline-separated list of `NAME=VALUE` pairs specifying environment variables. These variables are set after all properties that may modify the environment, such as the port number and search paths, and so may overwrite these values.
+- **[コマンド]**: Python スクリプト (`*.py` ファイル)、モジュール名 (`python.exe -m module_name` など)、または 1 行のコード (`python.exe -c "code"` など) にすることができます。 ドロップダウンの値は、これらの種類のどれが対象であるかを示します。
+- **[引数]**: これらの引数は、コマンド ラインでコマンドに続いて渡されます。
+- **[環境]**: 環境変数を指定する `NAME=VALUE` ペアの改行区切りリスト。 これらの変数は、ポート番号や検索パスなど、環境を変更できるすべてのプロパティの後に設定されるため、これらの値を上書きできます。
 
-Any project property or environment variable can be specified with MSBuild syntax, for example: `$(StartupFile) --port $(SERVER_PORT)`.
-`$(StartupFile)` is the relative path to the startup file and `{StartupModule}` is the importable name of the startup file. `$(SERVER_HOST)` and `$(SERVER_PORT)` are normal environment variables that are set by the **Launch URL** and **Port Number** properties, automatically, or by the **Environment** property.
+MSBuild 構文を使用して任意のプロジェクト プロパティまたは環境変数を指定できます。例: `$(StartupFile) --port $(SERVER_PORT)`。
+`$(StartupFile)` はスタートアップ ファイルの相対パスで、`{StartupModule}` はスタートアップ ファイルのインポート可能な名前です。 `$(SERVER_HOST)` と `$(SERVER_PORT)` は、**[起動 URL]** プロパティと **[ポート番号]** プロパティによって自動的に設定されるか、**[環境]** プロパティによって設定される通常の環境変数です。
 
 > [!Note]
-> Values in **Run Server Command** are used with the **Debug > Start Server** command or Ctrl-F5; values in the **Debug Server Command** group are used with the **Debug > Start Debug Server** command or F5.
+> **[Run Server Command (サーバー コマンドの実行)]** の値は、**[デバッグ] > [サーバーを起動します]** コマンドまたは Ctrl+F5 で使用されます。**[Debug Server Command (サーバー コマンドのデバッグ)]** グループは、**[デバッグ] > [Start Debug Server (デバッグ サーバーの起動)]** コマンドまたは F5 キーをで使用されます。
 
 
-### <a name="sample-bottle-configuration"></a>Sample Bottle configuration
+### <a name="sample-bottle-configuration"></a>サンプルの Bottle 構成
 
-The Bottle Web Project template includes boilerplate code that does the necessary configuration. An imported bottle app may not include this code, however, in which case the following settings launch the app using the installed `bottle` module:
+Bottle Web プロジェクト テンプレートには、必要な構成を実行する定型コードが含まれています。 ただし、インポートされた bottle アプリにはこのコードが含まれていない場合があります、その場合、次の設定はインストールされた `bottle` モジュールを使用してアプリを起動します。
 
-- **Run Server Command** group:
-    - **Command**: `bottle` (module)
-    - **Arguments**: `--bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
+- **[Run Server Command (サーバー コマンドの実行)]** グループ:
+    - **[コマンド]**: `bottle` (モジュール)
+    - **[引数]**: `--bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
-- **Debug Server Command** group:
-    - **Command**: `bottle` (module)
-    - **Arguments** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
+- **[Debug Server Command (サーバー コマンドのデバッグ)]** グループ:
+    - **[コマンド]**: `bottle` (モジュール)
+    - **[引数]** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
-The `--reload` option is not recommended when using Visual Studio for debugging.
+デバッグに Visual Studio を使用する場合、`--reload` オプションはお勧めしません。
 
-### <a name="sample-pyramid-configuration"></a>Sample Pyramid configuration
+### <a name="sample-pyramid-configuration"></a>サンプルの Pyramid 構成
 
-Pyramid apps are currently best created using the `pcreate` command-line tool. Once an app has been created, it can be imported using the [From Existing Python Code](python-projects.md#creating-a-project-from-existing-files) template. After doing so, select the **Generic Web Project** customization to configure the options. These settings assume that Pyramid is installed into a virtual environment at `..\env`.
+Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使用して作成するのが最適です。 アプリが作成されたら、[From Existing Python Code (既存の Python コードから)](python-projects.md#creating-a-project-from-existing-files) テンプレートを使用してインポートできます。 その後、**[汎用 Web プロジェクト]** カスタマイズを選択してオプションを構成します。 これらの設定は、Pyramid が `..\env` にある仮想環境にインストールされていることを想定しています。
 
-- **Debug** group:
-    - **Server Port**: 6543 (or whatever is configured in the .ini files)
+- **[デバッグ]** グループ:
+    - **[サーバー ポート]**: 6543 (または .ini ファイルで構成されているポート)
 
-- **Run Server Command** group:
-    - Command: `..\env\scripts\pserve-script.py` (script)
-    - Arguments: `Production.ini`
+- **[Run Server Command (サーバー コマンドの実行)]** グループ:
+    - [コマンド]: `..\env\scripts\pserve-script.py` (スクリプト)
+    - [引数]: `Production.ini`
 
-- **Debug Server Command** group:
-    - Command: `..\env\scripts\pserve-script.py` (script)
-    - Arguments: `Development.ini`
+- **[Debug Server Command (サーバー コマンドのデバッグ)]** グループ:
+    - [コマンド]: `..\env\scripts\pserve-script.py` (スクリプト)
+    - [引数]: `Development.ini`
 
 > [!Tip]
-> You'll likely need to configure the **Working Directory** property of your project because Pyramid apps are typically one directory level deeper than the top of the source tree.
+> Pyramid アプリは通常はソース ツリーの最上部より 1 ディレクトリ レベル深いため、プロジェクトの **[作業ディレクトリ]** プロパティを構成することが必要な場合があります。
 
 
-### <a name="other-configurations"></a>Other configurations
+### <a name="other-configurations"></a>その他の構成
 
-If you have settings for another framework that you would like to share, or if you'd like to request settings for another framework, open an [issue on GitHub](https://github.com/Microsoft/PTVS/issues).
+別のフレームワークの設定を共有する場合、または別のフレームワークの設定を要求する場合は、[GitHub で懸案事項](https://github.com/Microsoft/PTVS/issues)を開きます。
 
-## <a name="publishing-to-azure-app-service"></a>Publishing to Azure App Service
+## <a name="publishing-to-azure-app-service"></a>Azure App Service への発行
 
-There are two primary ways to publish to Azure App Service. First, deployment from source control can be used in the same way as for other languages, as described in the [Azure documentation](http://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/). To publish direct from Visual Studio, right-click the project and select **Publish**:
+Azure App Service に発行する主な方法は 2 つあります。 まず、ソース管理からのデプロイは、[Azure ドキュメント](http://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/)で説明しているように、他の言語と同じ方法で使用できます。 Visual Studio から直接発行するには、プロジェクトを右クリックして **[発行]** を選択します。
 
-![Publish command on a project's context menu](media/template-web-publish-command.png)
+![プロジェクトのコンテキスト メニューの [発行] コマンド](media/template-web-publish-command.png)
 
-After selecting the command, a wizard walks you through creating a web site or importing publish settings, previewing modified files, and publishing to a remote server.
+コマンドを選択した後、ウィザードの指示に従って Web サイトを作成するか発行の設定をインポートし、変更したファイルのプレビューを表示して、リモート サーバーに発行します。
 
-When you create a site on App Service, you need to install Python and any packages your site depends upon. You can publish your site first, but it won't run until you have configured Python.
+App Service にサイトを作成する場合は、Python と、サイトが依存するパッケージをインストールする必要があります。 最初にサイトを発行することもできますが、Python を構成するまでは実行されません。
 
-To install Python on App Service, we recommend using the [site extensions](http://www.siteextensions.net/packages?q=Tags%3A%22python%22) (siteextensions.net). These extensions are copies of the [official releases](https://www.python.org) of Python, optimized and repackaged for Azure App Service.
+App Service に Python をインストールするには、[サイト拡張機能](http://www.siteextensions.net/packages?q=Tags%3A%22python%22) (siteextensions.net) の使用をお勧めします。 これらの拡張機能は、Python の[公式リリース](https://www.python.org)のコピーで、Azure App Service 用に最適化されて再パッケージ化されています。
 
-A site extension can be deployed through the [Azure portal](https://portal.azure.com/). Select the **Development Tools > Extensions** blade for your App Service, select **Add**, and scroll the list to find the Python items:
+サイト拡張機能は、[Azure Portal](https://portal.azure.com/) でデプロイできます。 App Service の **[開発ツール] > [拡張機能]** ブレードを選び、**[追加]** を選んで、一覧をスクロールして Python の項目を見つけます。
 
-![Add Site Extension on the Azure portal](media/template-web-site-extensions.png)
+![Azure Portal へのサイト拡張機能の追加](media/template-web-site-extensions.png)
 
-If you are using JSON deployment templates, you can specify the site extension as a resource of your site:
+JSON デプロイ テンプレートを使用している場合は、サイトのリソースとしてサイト拡張機能を指定できます。
 
 ```json
 {
@@ -150,9 +148,9 @@ If you are using JSON deployment templates, you can specify the site extension a
 }
 ```
 
-Finally, you can log in through the [development console](https://github.com/projectkudu/kudu/wiki/Kudu-console) and install a site extension from there.
+最後に、[開発コンソール](https://github.com/projectkudu/kudu/wiki/Kudu-console)にログインし、そこからサイト拡張機能をインストールできます。
 
-Currently, the recommended way to install packages is to use the development console after installing the site extension and executing pip directly. Using the full path to Python is important, or you may execute the wrong one, and there is generally no need to use a virtual environment. For example:
+現時点では、パッケージをインストールするお勧めの方法は、サイト拡張機能をインストールして pip を直接実行した後に開発コンソールを使用することです。 Python の完全なパスを使用することが重要で、そうしないと間違ったものが実行されることがあります。一般に、仮想環境を使用する必要はありません。 例:
 
 ```
 c:\Python35\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt
@@ -160,24 +158,24 @@ c:\Python35\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt
 c:\Python27\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt
 ```
 
-When deployed to Azure App Service, your site runs behind Microsoft IIS. To enable your site to work with IIS, you need to add at least a `web.config` file. There are templates available for some common deployment targets available by right-clicking the project and selecting **Add > New Item...** (see dialog below), and these configurations can be easily modified for other uses. See the [IIS Configuration Reference](https://www.iis.net/configreference) for information about the available configuration settings.
+Azure App Service にデプロイされた場合、サイトは Microsoft IIS の背後で実行されます。 サイトを IIS と連携できるようにするには、少なくとも `web.config` ファイルを追加する必要があります。 いくつかの一般的なデプロイ ターゲットに対して利用可能なテンプレートがあります。これは、プロジェクトを右クリックし、**[追加] > [新しい項目...]** を選択することで使用可能で(下のダイアログを参照)、これらの構成は他で使用するために簡単に変更できます。 使用可能な構成設定について詳しくは、「[IIS Configuration Reference](https://www.iis.net/configreference)」(IIS 構成リファレンス) をご覧ください。
 
-![Azure Item Templates](media/template-web-azure-items.png)
+![Azure 項目テンプレート](media/template-web-azure-items.png)
 
-The available items include:
+使用可能な項目を以下に示します。
 
-- Azure web.config (FastCGI): adds a `web.config` file for when your app provides a [WSGI](https://wsgi.readthedocs.io/en/latest/) object to handle incoming connections.
-- Azure web.config (HttpPlatformHandler): adds a `web.config` file for when your app listens on a socket for incoming connections.
-- Azure Static files web.config: when you have one of the above `web.config` files, add the file to a subdirectory to exclude it from being handled by your app.
-- Azure Remote debugging web.config: adds the files necessary for remote debugging over WebSockets.
-- Web Role Support Files: contains the default deployment scripts for Cloud Service web roles.
-- Worker Role Support Files: contains the default deployment and launch scripts for Cloud Service worker roles.
+- [Azure web.config (FastCGI)]: アプリが着信接続を処理する [WSGI](https://wsgi.readthedocs.io/en/latest/) オブジェクトを提供する場合の `web.config` ファイルを追加します。
+- [Azure web.config (HttpPlatformHandler)]: アプリが着信接続をソケットでリッスンする場合の `web.config` ファイルを追加します。
+- [Azure 静的ファイルの web.config]: 上記のいずれかの `web.config` ファイルがある場合は、そのファイルをサブディレクトリに追加して、アプリで処理されないようにします。
+- [Azure Remote debugging web.config (Azure リモート デバッグ web.config)]: WebSocket 経由でのリモート デバッグに必要なファイルを追加します。
+- [Web Role Support Files (Web ロールのサポート ファイル)]: クラウド サービス Web ロールの既定のデプロイ スクリプトが含まれます。
+- [Worker Role Support Files (worker ロールのサポート ファイル)]: クラウド サービス worker ロールの既定のデプロイ スクリプトと起動スクリプトが含まれます。
 
-If you add the debugging `web.config` template to your project and plan to use Python remote debugging, you need to publish the site in "Debug" configuration. This setting is separate from the current active solution configuration and always defaults to "Release." To change it, open the **Settings** tab and use the **Configuration** combo box in the publish wizard (see the [Azure documentation](https://azure.microsoft.com/develop/python/) for more information on creating and deploying to Azure Web Apps):
+デバッグ `web.config` テンプレートをプロジェクトに追加し、Python リモート デバッグを使用する計画がある場合は、"デバッグ" 構成でサイトを発行する必要があります。 この設定は、現在アクティブなソリューション構成とは別であり、常に既定で "リリース" になります。 これを変更するには、**[設定]** タブを開き、発行ウィザードの **[構成]** コンボ ボックスを使用します (作成と Azure Web Apps へのデプロイについて詳しくは、[Azure ドキュメント](https://azure.microsoft.com/develop/python/)をご覧ください)。
 
-![Changing the publish configuration](media/template-web-publish-config.png)
+![発行構成の変更](media/template-web-publish-config.png)
 
-The **Convert to Microsoft Azure Cloud Service Project** command (image below) adds a Cloud Service project to your solution. This project includes the deployment settings and configuration for the virtual machines and services to be used. Use the **Publish** command on the cloud project to deploy to Cloud Service; the **Publish** command on the Python project still deploys to Web Sites. See [Azure Cloud Service Projects](template-azure-cloud-service.md) for more details.
+**[Microsoft Azure クラウド サービス プロジェクトに変換]** コマンド (下図) は、クラウド サービス プロジェクトをソリューションに追加します。 このプロジェクトには、使用する仮想マシンとサービスのデプロイ設定と構成が含まれています。 クラウド プロジェクトで **[発行]** コマンドを使用して、クラウド サービスにデプロイします。Python プロジェクトの **[発行]** コマンドでは、引き続き Web サイトにデプロイされます。 詳しくは、[Azure クラウド サービス プロジェクト](template-azure-cloud-service.md)に関する記事をご覧ください。
 
-![Convert to Microsoft Azure Cloud Service Project command](media/template-web-convert-menu.png)
+![[Microsoft Azure クラウド サービス プロジェクトに変換]コマンド](media/template-web-convert-menu.png)
 

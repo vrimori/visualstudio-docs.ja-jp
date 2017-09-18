@@ -1,75 +1,58 @@
 ---
-title: IDebugCustomAttribute::GetAttributeBytes | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugCustomAttribute::GetAttributeBytes
-helpviewer_keywords:
-- IDebugCustomAttribute::GetAttributeBytes
+title: "IDebugCustomAttribute::GetAttributeBytes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugCustomAttribute::GetAttributeBytes"
+helpviewer_keywords: 
+  - "IDebugCustomAttribute::GetAttributeBytes"
 ms.assetid: cf34583b-6530-4dcc-89f8-eb27e4e8d594
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0b153e2ee1f5e01f8016de8c45fc2ba45c431cbd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugcustomattributegetattributebytes"></a>IDebugCustomAttribute::GetAttributeBytes
-Gets the attribute information as a blob of bytes.  
+# IDebugCustomAttribute::GetAttributeBytes
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+バイトの BLOB として属性情報を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetAttributeBytes(   
-   BYTE*  ppBlob,  
-   DWORD* pdwLen  
+```cpp#  
+HRESULT GetAttributeBytes(   
+   BYTE*  ppBlob,  
+   DWORD* pdwLen  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetAttributeBytes(  
-   ref byte[] ppBlob,   
-   ref uint   pdwLen  
+   ref byte[] ppBlob,   
+   ref uint   pdwLen  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ppBlob`  
- [in, out] An array that is filled in with the attribute bytes.  
+ \[入力出力\] 属性のバイトが格納された配列。  
   
  `pdwLen`  
- [in, out] Specifies the maximum number of bytes to return in the `ppBlob` array and returns the number of bytes actually written to the array.  
+ \[入力出力\] 最大バイト数を `ppBlob` の配列で返されるように指定し配列に実際に書き込まれたバイト数を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- Set the `ppBlob` parameter to a null value to return the number of attributes bytes available. Then allocate an array and pass that array in for the `ppBlob` parameter.  
+## 解説  
+ 使用可能な属性のバイト数を返すように null 値を `ppBlob` のパラメーターを設定します。  は配列を割り当て`ppBlob` のパラメーターにその配列を渡します。  
   
- The attribute bytes represent the raw data of the custom attribute.  
+ 属性はカスタム属性のバイトの生データを表します。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

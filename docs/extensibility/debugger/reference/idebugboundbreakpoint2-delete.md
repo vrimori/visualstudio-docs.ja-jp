@@ -1,63 +1,46 @@
 ---
-title: IDebugBoundBreakpoint2::Delete | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugBoundBreakpoint2::Delete
-helpviewer_keywords:
-- Delete method
-- IDebugBoundBreakpoint2::Delete method
+title: "IDebugBoundBreakpoint2::Delete | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugBoundBreakpoint2::Delete"
+helpviewer_keywords: 
+  - "Delete メソッド"
+  - "IDebugBoundBreakpoint2::Delete メソッド"
 ms.assetid: 7088dc66-f24a-446f-a52a-397d02457a41
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a56a9c558d60edeca3521b3bb392fdd63b78185d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebugboundbreakpoint2delete"></a>IDebugBoundBreakpoint2::Delete
-Deletes the breakpoint.  
+# IDebugBoundBreakpoint2::Delete
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+ブレークポイントを削除します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT Delete(   
-   void   
+```cpp#  
+HRESULT Delete(   
+   void   
 );  
 ```  
   
-```csharp  
+```c#  
 int Delete();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the state of the bound breakpoint object is set to `BPS_DELETED` (part of the [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeration).  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  バインドされたブレークポイントのオブジェクトの状態が `BPS_DELETED` \([BP\_STATE](../../../extensibility/debugger/reference/bp-state.md) の列挙型の一部\) に設定されて `E_BP_DELETED` を返します。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CBoundBreakpoint` object that exposes the [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) interface.  
+## 使用例  
+ 次の例に [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) インターフェイスを公開する `CBoundBreakpoint` の単純なオブジェクトに対してこのメソッドを実装する方法を示します。  
   
 ```  
 HRESULT CBoundBreakpoint::Delete(void)    
@@ -83,6 +66,6 @@ HRESULT CBoundBreakpoint::Delete(void)
 }     
 ```  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
- [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)
+ [BP\_STATE](../../../extensibility/debugger/reference/bp-state.md)

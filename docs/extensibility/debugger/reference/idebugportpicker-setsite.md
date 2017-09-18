@@ -1,66 +1,49 @@
 ---
-title: IDebugPortPicker::SetSite | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugPortPicker::SetSite
+title: "IDebugPortPicker::SetSite | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugPortPicker::SetSite"
 ms.assetid: 7319e187-adfe-4b3f-aec9-521356fb5a8a
 caps.latest.revision: 6
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: dc499310ae51cd10f64cf39a1cb7396bc2423a76
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 6
 ---
-# <a name="idebugportpickersetsite"></a>IDebugPortPicker::SetSite
-Sets the service provider.  
+# IDebugPortPicker::SetSite
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+サービス プロバイダーを設定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT SetSite(  
-   IServiceProvider * pSP  
+   IServiceProvider * pSP  
 );  
 ```  
   
-```csharp  
+```c#  
 public int SetSite(  
-   IServiceProvider pSP  
+   IServiceProvider pSP  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pSP`  
- [in] Reference to the interface of the service provider.  
+ \[入力\] サービス プロバイダー インターフェイスへの参照。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- This method will be called before any other methods are called.  
+## 解説  
+ このメソッドは他のメソッドを呼び出す前に呼び出されます。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugPortPicker](../../../extensibility/debugger/reference/idebugportpicker.md)

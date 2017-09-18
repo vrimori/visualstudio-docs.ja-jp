@@ -1,65 +1,48 @@
 ---
-title: Saving Data | Microsoft Docs
-ms.custom: 
-ms.date: 10/19/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- DataRow.RowState
-- DataSet.GetChanges
-helpviewer_keywords:
-- DBDirect methods
-- updating data
-- data [Visual Studio], saving
-- TableAdapter DBDirect methods
-- databases, updating
-- TableAdapter.Update method
-- data [Visual Studio], updating
-- saving data
-- updating databases
+title: "データの保存 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "DataRow.RowState"
+  - "DataSet.GetChanges"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "データ [Visual Studio], 保存"
+  - "データ [Visual Studio], 更新"
+  - "データベース, 更新"
+  - "DBDirect メソッド"
+  - "保存 (データを)"
+  - "TableAdapter DBDirect メソッド"
+  - "TableAdapter.Update メソッド"
+  - "更新 (データを)"
+  - "更新 (データベースを)"
 ms.assetid: 21d2b115-62e4-4ac9-a873-dcbb535b8af8
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
-manager: ghogen
+caps.handback.revision: 13
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 robots: noindex,nofollow
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: be46f7044ca55841ae2fbbfed2e9ea334e263134
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
 ---
-# <a name="saving-data"></a>Saving Data
-Saving data is the process of persisting changed data in an application's data model back to the original data store, typically a relational database such as SQL Server.  
+# データの保存
+データ保存は、アプリケーションのデータ モデルで変更されたデータを元のデータ ストア \(通常は SQL Server などのリレーショナル データベース\) に戻して保持するプロセスです。  
   
- Updating a data source by means of a data model is typically a two-step process. The first step is to update the data model with new information — new records, changed records, or deleted records. The second step is to save the changes in your data model back to the database.  
+ データ モデルを介してデータ ソースを更新するには、2 段階のプロセスがあります。  第 1 段階のプロセスは、新しい情報 \(新しいレコード、変更されたレコード、または削除されたレコード\) によるデータ モデルの更新です。  第 2 段階のプロセスは、データ モデルの変更をデータベースに保存することです。  
   
- The following topics describe the concepts and tasks associated with saving data.  
+ 次のトピックでは、データの保存に関連する概念とタスクについて説明します。  
   
-## <a name="related-topics"></a>Related Topics  
-[Save data back to the database](../data-tools/save-data-back-to-the-database.md)  
- Provides an overview of how changes are made in a dataset and how the dataset tracks information about changes in order to save those changes to a database.  
+## 関連トピック  
+ [データセットのデータの保存](../data-tools/save-data-back-to-the-database.md)  
+ データセットで変更を加える方法と、データベースに変更内容を保存するためにデータセットが情報を追跡する方法の概要について説明します。  
   
-[How to: Add, Modify, and Delete Entities (WCF Data Services)](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)  
-Shows how to create, update, and delete entity data in a data service.  
-  
-[How to: Execute Data Service Queries (WCF Data Services)](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services)  
-Shows how to query a data service from a data service application.  
-
+ [エンティティ データの保存](../data-tools/saving-entity-data.md)  
+ [ADO.NET Entity Framework](../Topic/ADO.NET%20Entity%20Framework.md) アプリケーションおよび [WCF Data Services 4.5](../Topic/WCF%20Data%20Services%204.5.md) アプリケーションで変更を保存する方法について説明します。

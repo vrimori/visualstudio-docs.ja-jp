@@ -1,72 +1,55 @@
 ---
-title: User (VSPerfCmd) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "User (VSPerfCmd) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: ee1a478e-374d-4f30-ae28-d260b9d4723a
 caps.latest.revision: 7
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
-ms.openlocfilehash: 4fbb8ad36461f3f06abb9318e537868e26d55860
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/31/2017
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 7
 ---
-# <a name="user-vsperfcmd"></a>User (VSPerfCmd)
-The **User** option specifies the domain and user name of the account that owns the profiled process. This option is required only if the process is running as a user other than the logged on user. The process owner is listed in the User Name column on the Processes tab of Windows Task Manager.  
+# User (VSPerfCmd)
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+**User** オプションは、プロファイリングされるプロセスを所有するアカウントのドメインとユーザー名を指定します。  このオプションは、ログオンしているユーザーとは別のユーザーがプロセスを実行している場合にのみ指定する必要があります。  プロセスの所有者は、Windows タスク マネージャーの \[プロセス\] タブの \[ユーザー名\] 列に表示されます。  
   
- The **User** option can only be specified on a command line that also contains the **Start** option.  
+ **User** オプションは、**Start** オプションが含まれたコマンド ラインでのみ指定できます。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
 ```  
 VSPerfCmd.exe /Start:Method /Output:FileName /User:[Domain\]UserName [Options]  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `Domain`  
- The name of the user's domain.  
+ ユーザーのドメインの名前。  
   
  `UserName`  
- The name of the user.  
+ ユーザーの名前。  
   
-## <a name="required-options"></a>Required Options  
- The **User** option can only be used with the **Start** option.  
+## 必須のオプション  
+ **User** オプションと共に使用できるオプションは **Start** オプションのみです。  
   
  **Start:** `Method`  
- Initializes the profiler to the specified profiling method.  
+ 指定したプロファイル方法にプロファイラーを初期化します。  
   
-## <a name="example"></a>Example  
- The following example demonstrates the use of the **User** option.  
+## 使用例  
+ **User** オプションの使用例を次に示します。  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp /User:SYSTEM  
 ```  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Profiling Stand-Alone Applications](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profiling ASP.NET Web Applications](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Profiling Services](../profiling/command-line-profiling-of-services.md)
+ [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)

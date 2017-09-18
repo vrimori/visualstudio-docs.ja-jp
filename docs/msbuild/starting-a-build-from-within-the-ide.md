@@ -1,53 +1,36 @@
 ---
-title: Starting a Build from within the IDE | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- build
+title: "IDE 内からのビルドの開始 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "ビルド"
 ms.assetid: 936317aa-63b7-4eb0-b9db-b260a0306196
 caps.latest.revision: 5
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4480985bdbca5225703d5efafc87c553e02f4b22
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 5
 ---
-# <a name="starting-a-build-from-within-the-ide"></a>Starting a Build from within the IDE
-Custom project systems must use <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> to start builds. This topic describes the reasons for this and outlines the procedure.  
+# IDE 内からのビルドの開始
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+カスタムのプロジェクト システムでは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> を使用してビルドを開始する必要があります。  このトピックでは、その理由について説明し、プロシージャの概要を示します。  
   
-## <a name="parallel-builds-and-threads"></a>Parallel Builds and Threads  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] allows parallel builds which requires mediation for access to common resources. Project systems can run builds asynchronously, but such systems must not call build functions from within call backs is provided to the build manager.  
+## 並行ビルドとスレッド  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、共通リソースにアクセスするために仲介を必要とする並行ビルドを使用できます。  プロジェクト システムではビルドを非同期的に実行できますが、このようなシステムでは、ビルド マネージャーに提供されるコールバック内からビルド関数を呼び出すことはできません。  
   
- If the project system modifies environment variables, it must set the NodeAffinity of the build to OutOfProc. This means that you cannot use host objects, since they require the in-proc node.  
+ プロジェクト システムで環境変数を変更する場合は、ビルドの NodeAffinity を OutOfProc に設定する必要があります。  つまり、ホスト オブジェクトは、インプロセス ノードを必要とするので使用できません。  
   
-## <a name="using-ivsbuildmanageraccessor"></a>Using IVSBuildManagerAccessor  
- The code below outlines a method that a project system can use to start a build:  
+## IVSBuildManagerAccessor の使用  
+ 次のコードは、ビルドを開始するためにプロジェクト システムで使用できるメソッドの概要を示しています。  
   
-```csharp
+```  
   
 public bool Build(Project project, bool isDesignTimeBuild)  
 {  

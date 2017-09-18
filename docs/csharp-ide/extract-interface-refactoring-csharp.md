@@ -1,57 +1,42 @@
 ---
-redirect_url: /visualstudio/csharp-ide/refactoring/extract-interface
-title: Extract Interface Refactoring (C#) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- refactoring [C#], Extract Interface
-- Extract Interface refactoring operation [C#]
+title: "Extract Interface Refactoring (C#) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.csharp.refactoring.extractinterface"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "refactoring [C#], Extract Interface"
+  - "Extract Interface refactoring operation [C#]"
 ms.assetid: 7d0aa225-3b33-4331-9652-5a67cac6f3d0
 caps.latest.revision: 25
-author: BillWagner
-ms.author: wiwagn
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2976187778d144259b697b5253c78d4afe65b4ff
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+caps.handback.revision: 25
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
 ---
-# <a name="extract-interface-refactoring-c"></a>Extract Interface Refactoring (C#)
-Extract Interface is a refactoring operation that provides an easy way to create a new interface with members that originate from an existing class, struct, or interface.  
+# Extract Interface Refactoring (C#)
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+\[インターフェイスの抽出\] は、既存のクラス、構造体、またはインターフェイスに基づくメンバーを使用して新規インターフェイスを簡単に作成できるリファクタリング操作です。  
   
- When several clients use the same subset of members from a class, struct, or interface, or when multiple classes, structs, or interfaces have a subset of members in common, it can be useful to embody the subset of members in an interface. For more information about using interfaces, see [Interfaces](/dotnet/csharp/programming-guide/interfaces/index).  
+ 複数のクライアントで使用するクラス、構造体、またはインターフェイスのメンバーのサブセットが同じ場合、または複数のクラス、構造体、またはインターフェイスがメンバーのサブセットを共有する場合は、インターフェイスにメンバーのサブセットを組み入れることが便利なことがあります。  インターフェイスの使用の詳細については、「[インターフェイス](/dotnet/csharp/programming-guide/interfaces/index)」を参照してください。  
   
- Extract Interface generates an interface in a new file and positions the cursor at the beginning of the new file. You can specify which members to extract into the new interface, the name of the new interface, and the name of the generated file using the **Extract Interface** dialog box.  
+ \[インターフェイスの抽出\] では、新規ファイル内にインターフェイスが生成され、その新規ファイルの先頭にカーソルが移動します。  新規インターフェイスに対して抽出するメンバー、新規インターフェイスの名前、および生成されるファイルの名前は、**\[インターフェイスの抽出\]** ダイアログ ボックスを使用して指定できます。  
   
-### <a name="to-use-extract-interface"></a>To use Extract Interface  
+### \[インターフェイスの抽出\] を使用するには  
   
-1.  Create a console application named `ExtractInterface`, and then replace `Program` with the following code  
+1.  `ExtractInterface` という名前のコンソール アプリケーションを作成し、`Program` を次のコードで置き換えます。  
   
-    ```csharp  
+    ```c#  
     // Invoke Extract Interface on ProtoA.  
     // Note:  the extracted interface will be created in a new file.  
     class ProtoA  
@@ -60,21 +45,21 @@ Extract Interface is a refactoring operation that provides an easy way to create
     }  
     ```  
   
-2.  With the cursor positioned in `MethodB`, and click **Extract Interface** on the **Refactor** menu.  
+2.  カーソルを `MethodB` に移動し、**\[リファクター\]** メニューの **\[インターフェイスの抽出\]** をクリックします。  
   
-     The **Extract Interface** dialog box appears.  
+     **\[インターフェイスの抽出\]** ダイアログ ボックスが表示されます。  
   
-     You can also type the keyboard shortcut CTRL+R, I to display the **Extract Interface** dialog box.  
+     キーボード ショートカットとして Ctrl キーを押しながら R キーを押し、次に I キーを押すことでも、**\[インターフェイスの抽出\]** ダイアログ ボックスを表示できます。  
   
-     You can also right-click the mouse, point to **Refactor**, and then click **Extract Interface** to display the **Extract Interface** dialog box.  
+     **\[インターフェイスの抽出\]** ダイアログ ボックスを表示するには、マウスを右クリックし、**\[リファクター\]** をポイントし、**\[インターフェイスの抽出\]** をクリックする方法もあります。  
   
-3.  Click **Select All**.  
+3.  **\[すべて選択\]** をクリックします。  
   
-4.  Click **OK**.  
+4.  **\[OK\]** をクリックします。  
   
-     You see the new file, IProtoA.cs, and the following code:  
+     新規ファイル IProtoA.cs と次のコードが表示されます。  
   
-    ```csharp  
+    ```c#  
     using System;  
     namespace TopThreeRefactorings  
     {  
@@ -85,10 +70,10 @@ Extract Interface is a refactoring operation that provides an easy way to create
     }  
     ```  
   
-## <a name="remarks"></a>Remarks  
- This feature is only accessible when the cursor is positioned in the class, struct, or interface that contains the members that you would like to extract. When the cursor is in this position, invoke the Extract Interface refactoring operation.  
+## 解説  
+ この機能は、抽出するメンバーが含まれるクラス、構造体、またはインターフェイスにカーソルが位置しているときだけ利用できます。  カーソルがこの位置に置かれているときに、\[インターフェイスの抽出\] リファクタリング操作を呼び出してください。  
   
- When you invoke extract interface on a class or on a struct, the bases and interfaces list is modified to include the new interface name. When you invoke extract interface on an interface, the bases and interfaces list is not modified.  
+ クラスまたは構造体でインターフェイスの抽出を呼び出す場合、新規のインターフェイス名が含まれるように、ベースおよびインターフェイスの一覧が変更されます。  インターフェイスでインターフェイスの抽出を呼び出す場合、ベースおよびインターフェイスの一覧は変更されません。  
   
-## <a name="see-also"></a>See Also  
- [Refactoring (C#)](refactoring-csharp.md)
+## 参照  
+ [Refactoring \(C\#\)](../csharp-ide/refactoring-csharp.md)

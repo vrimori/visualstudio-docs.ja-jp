@@ -1,135 +1,119 @@
 ---
-title: 'How to: Instrument a Statically Compiled ASP.NET Web Application and Collect Memory Data by Using the Profiler Command Line | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "方法: プロファイラーのコマンド ラインを使用して静的にコンパイルされた ASP.NET Web アプリケーションをインストルメントし、メモリ データを収集する | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: ea1dcb7c-1dc3-49ff-9418-8795b5b3d3bc
 caps.latest.revision: 16
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
-ms.openlocfilehash: c8425115daa79062250fd6418496643005d1c703
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/31/2017
-
+caps.handback.revision: 16
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
 ---
-# <a name="how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>How to: Instrument a Statically Compiled ASP.NET Web Application and Collect Memory Data by Using the Profiler Command Line
-This topic describes how to use [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profiling Tools command-line tools to instrument a pre-compiled [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web component or Web site and collect .NET memory allocation, object lifetime, and detailed timing data.  
+# 方法: プロファイラーのコマンド ラインを使用して静的にコンパイルされた ASP.NET Web アプリケーションをインストルメントし、メモリ データを収集する
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用して、プリコンパイルされた [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web コンポーネントまたは Web サイトをインストルメントし、.NET メモリの割り当て、オブジェクトの有効期間、および詳細なタイミング データを収集する方法について説明します。  
   
 > [!NOTE]
->  Command-line tools of the Profiling Tools are located in the \Team Tools\Performance Tools subdirectory of the [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] installation directory. On 64 bit computers, both 64 bit and 32 bit versions of the tools are available. To use the profiler command-line tools, you must add the tools path to the PATH environment variable of the command prompt window or add it to the command itself. For more information, see [Specifying the Path to Command Line Tools](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
+>  プロファイリング ツールのコマンド ライン ツールは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] インストール ディレクトリの \\Team Tools\\Performance Tools サブディレクトリにあります。  64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。  プロファイラーのコマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。  詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」を参照してください。  
   
- To collect data from a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web component by using the instrumentation method, you use the [VSInstr.exe](../profiling/vsinstr.md) tool to generate an instrumented version of the component. On the computer that hosts the component, you replace the non-instrumented version of the component with the instrumented version. You then use the [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) tool to initialize the global profiling environment variables and restart the host computer. You then start the profiler.  
+ インストルメンテーション メソッドを使用して [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web コンポーネントからデータを収集するには、[VSInstr.exe](../profiling/vsinstr.md) ツールを使用して、コンポーネントのインストルメントされたバージョンを生成します。  コンポーネントをホストするコンピューターで、コンポーネントのインストルメントされていないバージョンをインストルメントされたバージョンに置き換えます。  [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) ツールを使用してグローバル プロファイリング環境変数を初期化し、ホスト コンピューターを再起動します。  次に、プロファイラーを起動します。  
   
- When the instrumented component is executed, timing data is automatically collected to a data file. You can pause and resume data collection during the profiling session.  
+ インストルメントされたコンポーネントを実行すると、タイミング データがデータ ファイルに自動的に収集されます。  プロファイル セッション中にデータ収集を一時停止および再開できます。  
   
- To end a profiling session, you close the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] worker process that hosts the component and then explicitly shut down the profiler. In most cases, we recommend clearing the profiling environment variables at the end of a session.  
+ プロファイル セッションを終了するには、コンポーネントをホストする [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスを終了し、プロファイラーを明示的に終了します。  ほとんどの場合、セッションの最後にプロファイル環境変数を消去することをお勧めします。  
   
-## <a name="starting-to-profile"></a>Starting to Profile  
+## プロファイリングの開始  
   
-#### <a name="to-instrument-an-aspnet-web-component-and-start-profiling"></a>To instrument an ASP.NET Web component and start profiling  
+#### ASP.NET Web コンポーネントをインストルメントしてプロファイリングを開始するには  
   
-1.  Use the **VSInstr** tool to generate an instrumented version of the target application. If necessary, replace the application binaries on the ASP.NET host computer with the instrumented binaries.  
+1.  **VSInstr** ツールを使用して、対象アプリケーションのインストルメントされたバージョンを生成します。  必要に応じて、ASP.NET ホスト コンピューター上のアプリケーション バイナリをインストルメントされたバイナリに置き換えます。  
   
-2.  Open a command prompt window  
+2.  コマンド プロンプト ウィンドウを開きます。  
   
-3.  Initialize the .NET profiling environment variables. In a command prompt window, type:  
+3.  .NET プロファイル環境変数を初期化します。  コマンド プロンプト ウィンドウで、次のように入力します。  
   
-     **VSPerfClrEnv /globaltracegc**  
+     **VSPerfClrEnv \/globaltracegc**  
   
-     -or-  
+     または  
   
-     **VSPerfClrEnv /globaltracegclife**  
+     **VSPerfClrEnv \/globaltracegclife**  
   
-    -   **/globaltracegc** collects .NET memory allocation and timing data.  
+    -   **\/globaltracegc** は、.NET メモリの割り当ておよびタイミング データを収集します。  
   
-    -   **/globaltracegclife** collects .NET memory allocation, object lifetime, and detailed timing data.  
+    -   **\/globaltracegclife** は、.NET メモリの割り当て、オブジェクトの有効期間、および詳細なタイミング データを収集します。  
   
-4.  Restart the computer.  
+4.  コンピューターを再起動します。  
   
-5.  Open a command prompt window.  
+5.  コマンド プロンプト ウィンドウを開きます。  
   
-6.  Start the profiler. In a command prompt window, type:  
+6.  プロファイラーを起動します。  コマンド プロンプト ウィンドウで、次のように入力します。  
   
-     **VSPerfCmd /start:trace /output:** `OutputFile` [`Options`]  
+     **VSPerfCmd \/start:trace \/output:**`OutputFile` \[`Options`\]  
   
-    -   The [/start](../profiling/start.md)**:trace** option initializes the profiler.  
+    -   [\/start](../profiling/start.md) **:trace** オプションによってプロファイラーが初期化されます。  
   
-    -   The [/output](../profiling/output.md)**:**`OutputFile` option is required with **/start**. `OutputFile` specifies the name and location of the profiling data (.vsp) file.  
+    -   **\/start** を使用する場合は [\/output](../profiling/output.md)**:**`OutputFile` オプションを指定する必要があります。  `OutputFile` には、プロファイル データ \(.vsp\) ファイルの名前と場所を指定します。  
   
-     You can use any of the following options with the **/start:trace** option.  
+     **\/start:trace** オプションを使用する場合は、次のうちいずれかのオプションを指定できます。  
   
     > [!NOTE]
-    >  The **/user** and **/crosssession** options are usually required for ASP.NET applications.  
+    >  **\/user** オプションと **\/crosssession** オプションは、通常、ASP.NET アプリケーションで必要です。  
   
-    |Option|Description|  
-    |------------|-----------------|  
-    |[/user](../profiling/user-vsperfcmd.md) **:**[`Domain`**\\**]`UserName`|Specifies the optional domain and user name of the account that owns the ASP.NET worker process. This option is required if the process is running as a user that is different than the logged on user.The name is listed in the User Name column on the Processes tab of Windows Task Manager.|  
-    |[/crosssession](../profiling/crosssession.md)|Enables profiling of processes in other sessions. This option is required if the application is running in a different session. The session id is listed in the Session ID column on the Processes tab of Windows Task Manager. **/CS** can be specified as an abbreviation for **/crosssession**.|  
-    |[/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|Specifies a Windows performance counter to be collected during profiling.|  
-    |[/automark](../profiling/automark.md) **:** `Interval`|Use with **/wincounter** only. Specifies the number of milliseconds between Windows performance counter collection events. Default is 500 ms.|  
-    |[/events](../profiling/events-vsperfcmd.md) **:** `Config`|Specifies an Event Tracing for Windows (ETW) event to be collected during profiling. ETW events are collected in a separate (.etl) file.|  
-    |[/globaloff](../profiling/globalon-and-globaloff.md)|To start the profiler with data collection paused, add the **/globaloff** option to the **/start** command line. Use **/globalon** to resume profiling.|  
+    |オプション|説明|  
+    |-----------|--------|  
+    |[\/user](../profiling/user-vsperfcmd.md) **:**\[`Domain`**\\**\]`UserName`|ASP.NET ワーカー プロセスを所有するアカウントのドメインおよびユーザー名を指定します \(省略可能\)。  このオプションは、ログオンしているユーザーとは別のユーザーがプロセスを実行している場合に指定する必要があります。この名前は、Windows タスク マネージャーの \[プロセス\] タブの \[ユーザー名\] 列に表示されます。|  
+    |[\/crosssession](../profiling/crosssession.md)|他のセッションにおけるプロセスのプロファイリングを有効にします。  このオプションは、アプリケーションが別のセッションで実行されている場合に必要です。  セッション ID は、Windows タスク マネージャーの \[プロセス\] タブの \[セッション ID\] 列に表示されます。  **\/crosssession** の省略形として、**\/CS** を指定することができます。|  
+    |[\/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|プロファイリング実行中に収集する Windows パフォーマンス カウンターを指定します。|  
+    |[\/automark](../profiling/automark.md) **:** `Interval`|**\/wincounter** と共にのみ使用します。  Windows パフォーマンス カウンター コレクション イベントの間隔をミリ秒単位で指定します。  既定値は 500 ミリ秒です。|  
+    |[\/events](../profiling/events-vsperfcmd.md) **:** `Config`|プロファイリング実行中に収集する ETW \(Event Tracing for Windows\) イベントを指定します。  ETW イベントは独立した \(.etl\) ファイルに収集されます。|  
+    |[\/globaloff](../profiling/globalon-and-globaloff.md)|データ収集を一時停止してプロファイラーを起動するには、**\/globaloff** オプションを **\/start** コマンド ラインに追加します。  プロファイリングを再開するには、**\/globalon** を使用します。|  
   
-7.  Open the Web site that contains the instrumented component.  
+7.  インストルメントされたコンポーネントを含む Web サイトを開きます。  
   
-## <a name="controlling-data-collection"></a>Controlling Data Collection  
- While the target application is running, you can control data collection by starting and stopping the writing of data to the file by using **VSPerfCmd.exe** options. Controlling data collection enables you to collect data for a specific part of program execution, such as starting or shutting down the application.  
+## データ収集の制御  
+ 対象アプリケーションの実行中は、**VSPerfCmd.exe** のオプションを使用してファイルへのデータ書き込みを開始および停止することにより、データ収集を制御できます。  データ収集を制御することにより、アプリケーションの起動や終了など、プログラム実行の特定の部分についてのデータ収集を行うことができます。  
   
-#### <a name="to-start-and-stop-data-collection"></a>To start and stop data collection  
+#### データ収集を開始および停止するには  
   
--   The following pairs of options start and stop data collection. Specify each option on a separate command line. You can turn data collection on and off multiple times.  
+-   次に示すオプションの組み合わせにより、データ収集を開始および停止します。  個別のコマンド ラインで各オプションを指定します。  データ収集のオンとオフは複数回切り替えることができます。  
   
-    |Option|Description|  
-    |------------|-----------------|  
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Starts (**/globalon**) or stops (**/globaloff**) data collection for all processes.|  
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Starts (**/processon**) or stops (**/processoff**) data collection for the process specified by the process ID (`PID`).|  
-    |[/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|Starts (**/threadon**) or stops (**/threadoff**) data collection for the thread specified by the thread ID (`TID`).|  
+    |オプション|説明|  
+    |-----------|--------|  
+    |[\/globalon \/globaloff](../profiling/globalon-and-globaloff.md)|すべてのプロセスのデータ収集を開始 \(**\/globalon**\) または停止 \(**\/globaloff**\) します。|  
+    |[\/processon](../profiling/processon-and-processoff.md) **:** `PID` [\/processoff](../profiling/processon-and-processoff.md)**:**`PID`|プロセス ID \(`PID`\) で指定されたプロセスのデータ収集を開始 \(**\/processon**\) または停止 \(**\/processoff**\) します。|  
+    |[\/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [\/threadoff](../profiling/threadon-and-threadoff.md)**:**`TID`|スレッド ID \(`TID`\) で指定されたスレッドのデータ収集を開始 \(**\/threadon**\) または停止 \(**\/threadoff**\) します。|  
   
-## <a name="ending-the-profiling-session"></a>Ending the Profiling Session  
- To end a profiling session, close the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web application, and then use the Internet Information Services (IIS) **IISReset** command to close the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] worker process. Call the **VSPerfCmd** [/shutdown](../profiling/shutdown.md) option to turn the profiler off and close the profiling data file. The **VSPerfClrEnv /globaloff** command clears the profiling environment variables. You must restart the computer for the new environment settings to be applied.  
+## プロファイル セッションの終了  
+ プロファイル セッションを終了するには、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションを終了し、インターネット インフォメーション サービス \(IIS: Internet Information Services\) の **IISReset** コマンドを使用して [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスを終了します。  次に、**VSPerfCmd** [\/shutdown](../profiling/shutdown.md) オプションを呼び出して、プロファイラーをオフにし、プロファイル データ ファイルを閉じます。  **VSPerfClrEnv \/globaloff** コマンドで、プロファイル環境変数を消去します。  新しい環境設定を適用するには、コンピューターを再起動する必要があります。  
   
-#### <a name="to-end-a-profiling-session"></a>To end a profiling session  
+#### プロファイル セッションを終了するには  
   
-1.  Close the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web application.  
+1.  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションを終了します。  
   
-2.  Close the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] worker process. Type:  
+2.  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセスを終了します。  Type:  
   
-     **IISReset /stop**  
+     **IISReset \/stop**  
   
-3.  Shut down the profiler. Type:  
+3.  プロファイラーをシャットダウンします。  Type:  
   
-     **VSPerfCmd /shutdown**  
+     **VSPerfCmd \/shutdown**  
   
-4.  (Optional). Clear the profiling environment variables. Type:  
+4.  \(省略可能\)   プロファイル環境変数を削除します。  Type:  
   
-     **VSPerfCmd /globaloff**  
+     **VSPerfCmd \/globaloff**  
   
-5.  Restart the computer. If necessary, restart IIS. Type:  
+5.  コンピューターを再起動します。  必要に応じて、IIS を再起動します。  Type:  
   
-     **IISReset /start**  
+     **IISReset \/start**  
   
-## <a name="see-also"></a>See Also  
- [Profiling ASP.NET Web Applications](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [.NET Memory Data Views](../profiling/dotnet-memory-data-views.md)
+## 参照  
+ [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [.NET メモリのデータ ビュー](../profiling/dotnet-memory-data-views.md)

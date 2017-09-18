@@ -1,80 +1,63 @@
 ---
-title: IDebugProcessQueryProperties::QueryProperties | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugProcessQueryProperties::QueryProperties
+title: "IDebugProcessQueryProperties::QueryProperties | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugProcessQueryProperties::QueryProperties"
 ms.assetid: 976a9962-b689-45bb-afb6-16b2c5dbc3b8
 caps.latest.revision: 5
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 047341e2254ff9ffd3e01d1086e5c51a1311a871
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 5
 ---
-# <a name="idebugprocessquerypropertiesqueryproperties"></a>IDebugProcessQueryProperties::QueryProperties
-This method queries for a specified property values of the debugging process.  
+# IDebugProcessQueryProperties::QueryProperties
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+のこのメソッドのクエリデバッグ プロセスのプロパティ値。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT QueryProperties(  
-   ULONG                  celt,  
-   PROCESS_PROPERTY_TYPE *rgdwPropTypes,  
-   VARIANT               *rgtPropValues);  
+   ULONG                  celt,  
+   PROCESS_PROPERTY_TYPE *rgdwPropTypes,  
+   VARIANT               *rgtPropValues);  
 ```  
   
-```csharp  
+```c#  
 int QueryProperties(  
-   uint                       celt,  
-   enum_PROCESS_PROPERTY_TYPE rgdwPropTypes,  
-   out object[ ]              rgtPropValues);  
+   uint                       celt,  
+   enum_PROCESS_PROPERTY_TYPE rgdwPropTypes,  
+   out object[ ]              rgtPropValues);  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `celt`  
- [in] Size of the arrays containing the property definitions and property values.  
+ \[入力\] プロパティの定義とプロパティ値を含む配列のサイズ。  
   
  `dwPropType`  
- [in] An array that contains definitions of the queried properties. The possible values are:  
+ \[出力\] 照会されたプロパティ定義を含む配列。  次の値を指定できます。  
   
--   PROCESS_PROPERTY_COMMAND_LINE = 1  
+-   PROCESS\_PROPERTY\_COMMAND\_LINE \= 1  
   
--   PROCESS_PROPERTY_CURRENT_DIRECTORY = 2  
+-   PROCESS\_PROPERTY\_CURRENT\_DIRECTORY \= 2  
   
--   PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3  
+-   PROCESS\_PROPERTY\_ENVIRONMENT\_VARIABLES \= 3  
   
  `pvarPropValue`  
- [out] An array containing the property values.  
+ \[入力\] 配列プロパティ値。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- This method is seldom used.  
+## 解説  
+ このメソッドはほとんど使用されません。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugProcessQueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties.md)

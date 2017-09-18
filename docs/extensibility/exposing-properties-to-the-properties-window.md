@@ -1,58 +1,41 @@
 ---
-title: Exposing Properties to the Properties Window | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- properties [Visual Studio SDK], exposing in Property Browser
-- properties [Visual Studio SDK]
-- Property Browser, exposing properties
+title: "[プロパティ] ウィンドウにプロパティを公開します。 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "プロパティ ブラウザーで公開するプロパティ [Visual Studio SDK]"
+  - "プロパティ [Visual Studio SDK]"
+  - "プロパティ ブラウザーでプロパティを公開します。"
 ms.assetid: 47f295b5-1ca5-4e7b-bb52-7b926b136622
 caps.latest.revision: 36
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 56c796cfaf556322254aaaa88d91940b042fe83b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 36
 ---
-# <a name="exposing-properties-to-the-properties-window"></a>Exposing Properties to the Properties Window
-This walkthrough exposes the public properties of an object to the **Properties** window. The changes you make to these properties are reflected in the **Properties** window.  
+# [プロパティ] ウィンドウにプロパティを公開します。
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+このチュートリアルは、オブジェクトのパブリック プロパティを公開、 **プロパティ** ウィンドウです。 これらのプロパティに加えた変更が反映されて、 **プロパティ** ウィンドウです。  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## 必須コンポーネント  
+ Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
   
-## <a name="exposing-properties-to-the-properties-window"></a>Exposing Properties to the Properties Window  
- In this section, you create a custom tool window and display the public properties of the associated window pane object in the **Properties** window.  
+## \[プロパティ\] ウィンドウにプロパティを公開します。  
+ ここでカスタム ツール ウィンドウを作成し、関連するウィンドウ ペイン内のオブジェクトのパブリック プロパティを表示、 **プロパティ** ウィンドウです。  
   
-#### <a name="to-expose-properties-to-the-properties-window"></a>To expose properties to the Properties window  
+#### \[プロパティ\] ウィンドウにプロパティを公開するには  
   
-1.  Every Visual Studio extension starts with a VSIX deployment project which will contain the extension assets. Create a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX project named `MyObjectPropertiesExtension`. You can find the VSIX project template in the **New Project** dialog under **Visual C# / Extensibility**.  
+1.  すべての Visual Studio 拡張機能は、拡張機能の資産を格納する VSIX 配置プロジェクトから開始します。 作成、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] という名前の VSIX プロジェクト `MyObjectPropertiesExtension`します。 VSIX プロジェクトのテンプレートを見つけることができます、 **新しいプロジェクト** \] ダイアログ ボックス \[ **Visual c\#\/機能拡張**します。  
   
-2.  Add a tool window by adding a Custom Tool Window item template named `MyToolWindow`. In the **Solution Explorer**, right-click the project node and select **Add / New Item**. In the **Add New Item dialog**, go to **Visual C# Items / Extensibility** and select **Custom Tool Window**. In the **Name** field at the bottom of the dialog, change the file name to `MyToolWindow.cs`. For more information about how to create a custom tool window, see [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md).  
+2.  ツール ウィンドウを追加するには、という名前のカスタム ツール ウィンドウの項目テンプレートを追加 `MyToolWindow`します。**ソリューション エクスプ ローラー**, プロジェクト ノードを右クリックして、選択 **追加\/\[新しい項目の**します。**新しい項目の追加\] ダイアログ ボックス**, には、 **Visual c\# アイテム\/機能拡張** 選択 **カスタム ツール ウィンドウ**します。**名** ダイアログの下部にあるフィールドに、ファイルの名前を変更する `MyToolWindow.cs`です。 カスタム ツール ウィンドウを作成する方法の詳細については、次を参照してください。 [ツール ウィンドウで、拡張機能を作成します。](../extensibility/creating-an-extension-with-a-tool-window.md)します。  
   
-3.  Open MyToolWindow.cs and add the following using statement:  
+3.  MyToolWindow.cs を開き、次を追加するステートメントを使用します。  
   
     ```  
     using System.Collections;  
@@ -60,17 +43,17 @@ This walkthrough exposes the public properties of an object to the **Properties*
     using Microsoft.VisualStudio.Shell.Interop;  
     ```  
   
-4.  Now add the following fields to the `MyToolWindow` class.  
+4.  今すぐに次のフィールドを追加、 `MyToolWindow` クラスです。  
   
-    ```csharp  
+    ```c#  
     private ITrackSelection trackSel;  
     private SelectionContainer selContainer;  
   
     ```  
   
-5.  Add the following code to the MyToolWindow class.  
+5.  MyToolWindow クラスに次のコードを追加します。  
   
-    ```csharp  
+    ```c#  
     private ITrackSelection TrackSelection  
     {  
         get  
@@ -82,14 +65,14 @@ This walkthrough exposes the public properties of an object to the **Properties*
         }  
     }  
   
-    public void UpdateSelection()  
+    public void UpdateSelection()  
     {  
         ITrackSelection track = TrackSelection;  
         if (track != null)  
             track.OnSelectChange((ISelectionContainer)selContainer);  
     }  
   
-    public void SelectList(ArrayList list)  
+    public void SelectList(ArrayList list)  
     {  
         selContainer = new SelectionContainer(true, false);  
         selContainer.SelectableObjects = list;  
@@ -97,7 +80,7 @@ This walkthrough exposes the public properties of an object to the **Properties*
         UpdateSelection();  
     }  
   
-    public override void OnToolWindowCreated()  
+    public override void OnToolWindowCreated()  
     {  
         ArrayList listObjects = new ArrayList();  
         listObjects.Add(this);  
@@ -105,34 +88,34 @@ This walkthrough exposes the public properties of an object to the **Properties*
     }  
     ```  
   
-     The `TrackSelection` property uses `GetService` to obtain an `STrackSelection` service, which provides an <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> interface. The `OnToolWindowCreated` event handler and `SelectList` method together create a list of selected objects that contains only the tool window pane object itself. The `UpdateSelection` method tells the **Properties** window to display the public properties of the tool window pane.  
+     `TrackSelection` プロパティで使用 `GetService` させることが、 `STrackSelection` が提供するサービス、 <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> インターフェイスです。`OnToolWindowCreated` イベント ハンドラーと `SelectList` メソッドが一緒にのみ、ツール ウィンドウ ペイン オブジェクト自体を含む選択したオブジェクトのリストを作成します。`UpdateSelection` 方法では、 **プロパティ** ツール ウィンドウのペインのパブリック プロパティを表示するウィンドウです。  
   
-6.  Build the project and start debugging. The experimental instance of Visual Studio should appear.  
+6.  プロジェクトをビルドし、デバッグを開始します。 Visual Studio の実験用インスタンスが表示されます。  
   
-7.  If the **Properties** window is not visible, open it by pressing F4.  
+7.  場合、 **プロパティ** ウィンドウが表示されない、F4 キーを押して開きます。  
   
-8.  Open the **MyToolWindow** window. You can find it in **View / Other Windows**.  
+8.  開いている、 **MyToolWindow** ウィンドウです。 これが見つかります **ビュー\/その他のウィンドウ**します。  
   
-     The window opens and the public properties of the window pane appear in the **Properties** window.  
+     ウィンドウが開き、ウィンドウ ペインのパブリック プロパティに表示されます、 **プロパティ** ウィンドウです。  
   
-9. Change the **Caption** property in the **Properties** window to **My Object Properties**.  
+9. 変更、 **キャプション** プロパティに、 **プロパティ** ウィンドウ **My のオブジェクト プロパティ**します。  
   
-     The MyToolWindow window caption changes accordingly.  
+     MyToolWindow ウィンドウのキャプションが適宜変更されます。  
   
-## <a name="exposing-tool-window-properties"></a>Exposing Tool Window Properties  
- In this section, you add a tool window and expose its properties. The changes you make to properties are reflected in the **Properties** window.  
+## ツール ウィンドウのプロパティを公開します。  
+ このセクションでは、ツール ウィンドウを追加し、そのプロパティを公開します。 プロパティに加えた変更が反映されて、 **プロパティ** ウィンドウです。  
   
-#### <a name="to-expose-tool-window-properties"></a>To expose tool window properties  
+#### ツール ウィンドウのプロパティを公開するには  
   
-1.  Open MyToolWindow.cs, and add the public boolean property IsChecked to the MyToolWindow class.  
+1.  MyToolWindow.cs を開き、MyToolWindow クラスにパブリック IsChecked ブール型のプロパティを追加します。  
   
-    ```csharp  
+    ```c#  
     [Category("My Properties")]  
     [Description("MyToolWindowControl properties")]  
-    public bool IsChecked  
+    public bool IsChecked  
     {  
         get {  
-            if (base.Content == null)  return false;  
+            if (base.Content == null)  return false;  
             return (bool)(( MyToolWindowControl) base.Content).checkBox.IsChecked;   
         }  
         set {  
@@ -141,9 +124,9 @@ This walkthrough exposes the public properties of an object to the **Properties*
     }  
     ```  
   
-     This property gets its state from the WPF checkbox you will create later.  
+     このプロパティは、後ほど作成する WPF のチェック ボックスからの状態を取得します。  
   
-2.  Open MyToolWindowControl.xaml.cs and replace the MyToolWindowControl constructor with the following code.  
+2.  MyToolWindowControl.xaml.cs を開き、MyToolWindowControl コンス トラクターを次のコードに置き換えます。  
   
     ```vb  
     private MyToolWindow pane;  
@@ -155,23 +138,23 @@ This walkthrough exposes the public properties of an object to the **Properties*
     }  
     ```  
   
-     This gives `MyToolWindowControl` access to the `MyToolWindow` pane.  
+     これにより、 `MyToolWindowControl` へのアクセスを `MyToolWindow` ウィンドウです。  
   
-3.  In MyToolWindow.cs, change the `MyToolWindow` constructor as follows:  
+3.  MyToolWindow.cs、変更、 `MyToolWindow` 次のようにコンス トラクター。  
   
-    ```csharp  
+    ```c#  
     base.Content = new MyToolWindowControl(this);  
     ```  
   
-4.  Change to the design view of MyToolWindowControl.  
+4.  MyToolWindowControl のデザイン ビューに変更します。  
   
-5.  Delete the button and add a check box from the **Toolbox** to the upper left corner.  
+5.  ボタンを削除してからチェック ボックスを追加、 **ツールボックス** 左上隅にします。  
   
-6.  Add the Checked and Unchecked events. Select the checkbox in the design view. In the **Properties** window, click the event handlers button (at the top right of the **Properties** window). Find **Checked** and type **checkbox_Checked** in the text box, then find **Unchecked** and type **checkbox_Unchecked** in the text box.  
+6.  オンおよびオフにした場合のイベントを追加します。 デザイン ビューで、チェック ボックスを選択します。**プロパティ** ウィンドウで、イベント ハンドラー\] ボタンをクリックして \(上部の右、 **プロパティ** ウィンドウ\)。 検索 **Checked** と種類 **checkbox\_Checked** テキスト ボックス内を検索し、 **オフにした場合** と種類 **checkbox\_Unchecked** 、テキスト ボックスにします。  
   
-7.  Add the check box event handlers:  
+7.  チェック ボックスをイベント ハンドラーを追加します。  
   
-    ```csharp  
+    ```c#  
     private void checkbox_Checked(object sender, RoutedEventArgs e)  
     {  
         pane.IsChecked = true;  
@@ -184,33 +167,33 @@ This walkthrough exposes the public properties of an object to the **Properties*
     }  
     ```  
   
-8.  Build the project and start debugging.  
+8.  プロジェクトをビルドし、デバッグを開始します。  
   
-9. In the experimental instance, open the **MyToolWindow** window.  
+9. 実験用インスタンスで開き、 **MyToolWindow** ウィンドウです。  
   
-     Look for the window's properties in the **Properties** window. The **IsChecked** property appears at the bottom of the window, under the **My Properties** category.  
+     ウィンドウのプロパティを検索、 **プロパティ** ウィンドウです。**IsChecked** プロパティが \[ウィンドウの下に表示される、 **マイ プロパティ** カテゴリ。  
   
-10. Check the check box in the **MyToolWindow** window. **IsChecked** in the **Properties** window changes to **True**. Clear the check box in the **MyToolWindow** window. **IsChecked** in the **Properties** window changes to **False**. Change the value of **IsChecked** in the **Properties** window. The check box in the **MyToolWindow** window changes to match the new value.  
+10. チェック ボックスをオン、 **MyToolWindow** ウィンドウです。**IsChecked** で、 **プロパティ** にウィンドウが変更された **True**します。 チェック ボックスをオフに、 **MyToolWindow** ウィンドウです。**IsChecked** で、 **プロパティ** にウィンドウが変更された **False**します。 値を変更 **IsChecked** で、 **プロパティ** ウィンドウです。 チェック ボックス、 **MyToolWindow** ウィンドウが新しい値に一致するように変更します。  
   
     > [!NOTE]
-    >  If you must dispose of an object that is displayed in the **Properties** window, call `OnSelectChange` with a `null` selection container first. After disposing the property or object, you can change to a selection container that has updated <xref:Microsoft.VisualStudio.Shell.SelectionContainer.SelectableObjects%2A> and <xref:Microsoft.VisualStudio.Shell.SelectionContainer.SelectedObjects%2A> lists.  
+    >  かどうかに表示されるオブジェクトを破棄する必要があります、 **プロパティ** ウィンドウで、呼び出し `OnSelectChange` で、 `null` 選択コンテナー最初です。 プロパティまたはオブジェクトを破棄した後に、更新の選択のコンテナーに変更できます <xref:Microsoft.VisualStudio.Shell.SelectionContainer.SelectableObjects%2A> と <xref:Microsoft.VisualStudio.Shell.SelectionContainer.SelectedObjects%2A> 一覧が表示されます。  
   
-## <a name="changing-selection-lists"></a>Changing Selection Lists  
- In this section, you add a selection list for a basic property class and use the tool window interface to choose which selection list to display.  
+## 選択リストの変更  
+ このセクションでは、基本的なプロパティのクラスの選択リストを追加しを表示するには、どの選択リストを選択するツール ウィンドウのインターフェイスを使用します。  
   
-#### <a name="to-change-selection-lists"></a>To change selection lists  
+#### 選択リストを変更するには  
   
-1.  Open MyToolWindow.cs and add a public class named `Simple`.  
+1.  MyToolWindow.cs を開き、という名前のパブリック クラスを追加 `Simple`します。  
   
-    ```csharp  
-    public class Simple  
+    ```c#  
+    public class Simple  
     {  
-        private string someText = "";  
+        private string someText = "";  
   
         [Category("My Properties")]  
         [Description("Simple Properties")]  
         [DisplayName("My Text")]  
-        public string SomeText  
+        public string SomeText  
         {  
             get { return someText; }  
             set { someText = value; }  
@@ -225,9 +208,9 @@ This walkthrough exposes the public properties of an object to the **Properties*
     }  
     ```  
   
-2.  Add a SimpleObject property to the MyToolWindow class, plus two methods to switch the **Properties** window selection between the window pane and the `Simple` object.  
+2.  SimpleObject プロパティ MyToolWindow クラスとを切り替える 2 つのメソッドを追加、 **プロパティ** ウィンドウ ペインのどちらかのウィンドウを選択し、 `Simple` オブジェクトです。  
   
-    ```csharp  
+    ```c#  
     private Simple simpleObject = null;  
     public Simple SimpleObject  
     {  
@@ -253,9 +236,9 @@ This walkthrough exposes the public properties of an object to the **Properties*
     }  
     ```  
   
-3.  In MyToolWindowControl.cs, replace the check box handlers with these lines of code:  
+3.  MyToolWindowControl.cs では、次の行のコードのチェック ボックスのハンドラーを置き換えます。  
   
-    ```csharp  
+    ```c#  
     private void checkbox_Checked(object sender, RoutedEventArgs e)  
      {  
         pane.IsChecked = true;  
@@ -270,19 +253,19 @@ This walkthrough exposes the public properties of an object to the **Properties*
     }  
     ```  
   
-4.  Build the project and start debugging.  
+4.  プロジェクトをビルドし、デバッグを開始します。  
   
-5.  In the experimental instance, open the **MyToolWindow** window.  
+5.  実験用インスタンスで開き、 **MyToolWindow** ウィンドウです。  
   
-6.  Select the check box in the **MyToolWindow** window. The **Properties** window displays the `Simple` object properties, **SomeText** and **ReadOnly**. Clear the check box. The public properties of the window appear in the **Properties** window.  
+6.  チェック ボックスをオン、 **MyToolWindow** ウィンドウです。**プロパティ** ウィンドウが表示されます、 `Simple` オブジェクトのプロパティ、 **しれません** と **ReadOnly**します。 チェック ボックスをオフにします。 ウィンドウのパブリック プロパティに表示されます、 **プロパティ** ウィンドウです。  
   
     > [!NOTE]
-    >  The display name of **SomeText** is **My Text**.  
+    >  表示名 **しれません** は **マイ テキスト**します。  
   
-## <a name="best-practice"></a>Best Practice  
- In this walkthrough, <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> is implemented so that the selectable object collection and the selected object collection are the same collection. Only the selected object appears in the Property Browser list. For a more complete ISelectionContainer implementation, see the Reference.ToolWindow samples.  
+## ベスト プラクティス  
+ このチュートリアルで <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> は選択可能オブジェクトのコレクションや選択したオブジェクトのコレクションは、同じコレクションに実装します。 プロパティ ブラウザーの一覧で選択したオブジェクトのみが表示されます。 詳細な ISelectionContainer 実装 Reference.ToolWindow サンプルを参照してください。  
   
- Visual Studio tool windows persist between Visual Studio sessions. For more information on persisting the tool window state, see <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>.  
+ Visual Studio のツール ウィンドウは、Visual Studio セッション間で保持します。 ツール ウィンドウの状態を永続化の詳細については、次を参照してください。 <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>します。  
   
-## <a name="see-also"></a>See Also  
- [Extending Properties and the Property Window](../extensibility/extending-properties-and-the-property-window.md)
+## 参照  
+ [プロパティと \[プロパティ\] ウィンドウの拡張](../Topic/Extending%20Properties%20and%20the%20Property%20Window.md)

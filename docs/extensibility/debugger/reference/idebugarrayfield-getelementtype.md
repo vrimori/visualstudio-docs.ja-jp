@@ -1,69 +1,52 @@
 ---
-title: IDebugArrayField::GetElementType | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugArrayField::GetElementType
-helpviewer_keywords:
-- IDebugArrayField::GetElementType method
+title: "IDebugArrayField::GetElementType | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugArrayField::GetElementType"
+helpviewer_keywords: 
+  - "IDebugArrayField::GetElementType メソッド"
 ms.assetid: c46bf625-0a48-4cbb-8f1f-286356f2c065
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4bea82f6a6f5e17661ab30ccd72efa3aa577c8c7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugarrayfieldgetelementtype"></a>IDebugArrayField::GetElementType
-Gets the type of element in the array.  
+# IDebugArrayField::GetElementType
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+配列の要素の型を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetElementType(   
-   IDebugField** ppType  
+```cpp#  
+HRESULT GetElementType(   
+   IDebugField** ppType  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetElementType(  
-   out IDebugField ppType  
+   out IDebugField ppType  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ppType`  
- [out] Returns an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object that describes the type of element.  
+ \[入力\] 要素の種類を示す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクトを返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- The [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md) object assumes that all elements of the array are the same type.  
+## 解説  
+ [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md) のオブジェクトは配列のすべての要素が同じ型であると想定されます。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

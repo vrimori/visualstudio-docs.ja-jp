@@ -1,132 +1,128 @@
 ---
-title: 'Walkthrough: Outlining | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- editors [Visual Studio SDK], new - outlining
+title: "チュートリアル: アウトラインの中止] | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "エディター [Visual Studio SDK] 新しい - アウトラインの中止]"
 ms.assetid: d75a44aa-265a-44d4-9c28-457f59c4ff9f
 caps.latest.revision: 30
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: a8288452954ee0969f2a358ccdcca9f5dc6b7b07
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 30
 ---
-# <a name="walkthrough-outlining"></a>Walkthrough: Outlining
-You can implement language-based features such as outlining by defining the kinds of text regions you want to expand or collapse. You can define regions in the context of a language service, or you can define your own file name extension and content type and apply the region definition to only that type, or you can apply the region definitions to an existing content type (such as "text"). This walkthrough shows how to define and display outlining regions.  
+# チュートリアル: アウトラインの中止]
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+展開または折りたたむテキスト領域の種類を定義することでアウトライン表示などの機能の言語に対応したを実装することができます。 領域を定義するには、言語サービスのコンテキストで、または独自ファイル名拡張子とコンテンツ タイプを定義し、その型だけに領域の定義を適用することができます。 または"text"\) などの既存のコンテンツ タイプに領域の定義を適用できます。 このチュートリアルでは、定義のアウトライン領域を表示する方法を示します。  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## 必須コンポーネント  
+ Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
   
-## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Creating a Managed Extensibility Framework (MEF) Project  
+## Managed Extensibility Framework \(MEF\) プロジェクトの作成  
   
-#### <a name="to-create-a-mef-project"></a>To create a MEF project  
+#### MEF プロジェクトを作成するには  
   
-1.  Create an VSIX project. Name the solution `OutlineRegionTest`.  
+1.  VSIX プロジェクトを作成します。 ソリューションの名前 `OutlineRegionTest`します。  
   
-2.  Add an Editor Classifier item template to the project. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2.  エディターの分類子の項目テンプレートをプロジェクトに追加します。 詳細については、「[エディター項目テンプレートを使用して拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)」を参照してください。  
   
-3.  Delete the existing class files.  
+3.  既存のクラス ファイルを削除します。  
   
-## <a name="implementing-an-outlining-tagger"></a>Implementing an Outlining Tagger  
- Outlining regions are marked by a kind of tag (<xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>). This tag provides the standard outlining behavior. The outlined region can be expanded or collapsed. The outlined region is marked by a PLUS SIGN if it is collapsed or a MINUS SIGN if it is expanded, and the expanded region is demarcated by a vertical line.  
+## アウトライン タガーを実装します。  
+ タグの種類でのアウトライン領域が示されます \(<xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>\)。 このタグは、標準の動作をアウトライン表示を提供します。 アウトライン表示の領域を展開または折りたたむことができます。 展開すると、その展開された領域が垂直線で区分、アウトライン表示の領域は折りたたまれている場合は、プラス記号またはマイナス記号でマークされます。  
   
- The following steps show how to define a tagger that creates outlining regions for all the regions that are delimited by "[" and "]".  
+ 次の手順で区切られたすべての地域のアウトライン領域を作成するタガーを定義する方法を説明する"\["および"\]"です。  
   
-#### <a name="to-implement-an-outlining-tagger"></a>To implement an outlining tagger  
+#### アウトライン タガーを実装するには  
   
-1.  Add a class file and name it `OutliningTagger`.  
+1.  クラス ファイルを追加し、名前 `OutliningTagger`します。  
   
-2.  Import the following namespaces.  
+2.  次の名前空間をインポートします。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#1](../extensibility/codesnippet/CSharp/walkthrough-outlining_1.cs)]  [!code-vb[VSSDKOutlineRegionTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_1.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#1](../extensibility/codesnippet/CSharp/walkthrough-outlining_1.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_1.vb)]  
   
-3.  Create a class named `OutliningTagger`, and have it implement <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>:  
+3.  という名前のクラスを作成する `OutliningTagger`, を実装して <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>:  
   
-     [!code-csharp[VSSDKOutlineRegionTest#2](../extensibility/codesnippet/CSharp/walkthrough-outlining_2.cs)]  [!code-vb[VSSDKOutlineRegionTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_2.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#2](../extensibility/codesnippet/CSharp/walkthrough-outlining_2.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_2.vb)]  
   
-4.  Add some fields to track the text buffer and snapshot and to accumulate the sets of lines that should be tagged as outlining regions. This code includes a list of Region objects (to be defined later) that represent the outlining regions.  
+4.  テキスト バッファーとスナップショットを追跡し、アウトライン領域としてタグ付けするかの行のセットを蓄積するいくつかのフィールドを追加します。 このコードには、\(後で定義\) にアウトライン領域を表す領域オブジェクトの一覧が含まれています。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#3](../extensibility/codesnippet/CSharp/walkthrough-outlining_3.cs)]  [!code-vb[VSSDKOutlineRegionTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_3.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#3](../extensibility/codesnippet/CSharp/walkthrough-outlining_3.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_3.vb)]  
   
-5.  Add a tagger constructor that initializes the fields, parses the buffer, and adds an event handler to the <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> event.  
+5.  バッファーを解析し、イベント ハンドラーを追加、フィールドを初期化するタガー コンス トラクターを追加、 <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> イベントです。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#4](../extensibility/codesnippet/CSharp/walkthrough-outlining_4.cs)]  [!code-vb[VSSDKOutlineRegionTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_4.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#4](../extensibility/codesnippet/CSharp/walkthrough-outlining_4.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_4.vb)]  
   
-6.  Implement the <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> method, which instantiates the tag spans. This example assumes that the spans in the <xref:Microsoft.VisualStudio.Text.NormalizedSpanCollection> passed in to the method are contiguous, although this may not always be the case. This method instantiates a new tag span for each of the outlining regions.  
+6.  実装、 <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> タグをインスタンス化するメソッドにわたます。 この例では、内の範囲、 <xref:Microsoft.VisualStudio.Text.NormalizedSpanCollection> 、メソッドに渡されるは隣接しており、常に大文字と小文字とは限りません。 このメソッドは、アウトラインの地域のそれぞれの新しいタグの範囲をインスタンス化します。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#5](../extensibility/codesnippet/CSharp/walkthrough-outlining_5.cs)]  [!code-vb[VSSDKOutlineRegionTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_5.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#5](../extensibility/codesnippet/CSharp/walkthrough-outlining_5.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_5.vb)]  
   
-7.  Declare a `TagsChanged` event handler.  
+7.  宣言、 `TagsChanged` イベント ハンドラーです。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#6](../extensibility/codesnippet/CSharp/walkthrough-outlining_6.cs)]  [!code-vb[VSSDKOutlineRegionTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_6.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#6](../extensibility/codesnippet/CSharp/walkthrough-outlining_6.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_6.vb)]  
   
-8.  Add a `BufferChanged` event handler that responds to <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> events by parsing the text buffer.  
+8.  追加、 `BufferChanged` に応答するイベント ハンドラー <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> イベント バッファーにテキストを解析しています。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#7](../extensibility/codesnippet/CSharp/walkthrough-outlining_7.cs)]  [!code-vb[VSSDKOutlineRegionTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_7.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#7](../extensibility/codesnippet/CSharp/walkthrough-outlining_7.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_7.vb)]  
   
-9. Add a method that parses the buffer. The example given here is for illustration only. It synchronously parses the buffer into nested outlining regions.  
+9. バッファーを解析するメソッドを追加します。 ここに示す例では、例示のみを目的です。 同期的にバッファーを入れ子になったのアウトライン領域に解析します。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#8](../extensibility/codesnippet/CSharp/walkthrough-outlining_8.cs)]   [!code-vb[VSSDKOutlineRegionTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_8.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#8](../extensibility/codesnippet/CSharp/walkthrough-outlining_8.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_8.vb)]  
   
-10. The following helper method gets an integer that represents the level of the outlining, such that 1 is the leftmost brace pair.  
+10. 次のヘルパー メソッドは、1 が一番左中かっこの対になるように、アウトラインのレベルを表す整数を取得します。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#9](../extensibility/codesnippet/CSharp/walkthrough-outlining_9.cs)]  [!code-vb[VSSDKOutlineRegionTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_9.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#9](../extensibility/codesnippet/CSharp/walkthrough-outlining_9.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_9.vb)]  
   
-11. The following helper method translates a Region (defined later in this topic) into a SnapshotSpan.  
+11. 次のヘルパー メソッドは、\(このトピックの後半で定義される\) の領域を SnapshotSpan に変換します。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#10](../extensibility/codesnippet/CSharp/walkthrough-outlining_10.cs)]  [!code-vb[VSSDKOutlineRegionTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_10.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#10](../extensibility/codesnippet/CSharp/walkthrough-outlining_10.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_10.vb)]  
   
-12. The following code is for illustration only. It defines a PartialRegion class that contains the line number and offset of the start of an outlining region, and also a reference to the parent region (if any). This enables the parser to set up nested outlining regions. A derived Region class contains a reference to the line number of the end of an outlining region.  
+12. 次のコードでは、例示のみを目的です。 行番号と、アウトライン領域とも \(存在する場合\) の親領域への参照の開始オフセットを含む PartialRegion クラスを定義します。 これにより、アウトライン領域を入れ子になったパーサーを設定できます。 派生 Region クラスには、アウトライン領域の最後の行番号への参照が含まれています。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#11](../extensibility/codesnippet/CSharp/walkthrough-outlining_11.cs)]  [!code-vb[VSSDKOutlineRegionTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_11.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#11](../extensibility/codesnippet/CSharp/walkthrough-outlining_11.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_11.vb)]  
   
-## <a name="implementing-a-tagger-provider"></a>Implementing a Tagger Provider  
- You must export a tagger provider for your tagger. The tagger provider creates an `OutliningTagger` for a buffer of the "text" content type, or else returns an `OutliningTagger` if the buffer already has one.  
+## タガー プロバイダーを実装します。  
+ タガーのタガー プロバイダーをエクスポートする必要があります。 タガー プロバイダーによって作成され、 `OutliningTagger` の「テキスト」コンテンツの種類または他の返品のバッファー、 `OutliningTagger` 1 つは、バッファーが既に存在する場合。  
   
-#### <a name="to-implement-a-tagger-provider"></a>To implement a tagger provider  
+#### タガー プロバイダーを実装するには  
   
-1.  Create a class named `OutliningTaggerProvider` that implements <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider>, and export it with the ContentType and TagType attributes.  
+1.  という名前のクラスを作成する `OutliningTaggerProvider` を実装する <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider>, 、エクスポートして、コンテンツ タイプおよび TagType 属性です。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#12](../extensibility/codesnippet/CSharp/walkthrough-outlining_12.cs)]  [!code-vb[VSSDKOutlineRegionTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_12.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#12](../extensibility/codesnippet/CSharp/walkthrough-outlining_12.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_12.vb)]  
   
-2.  Implement the <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider.CreateTagger%2A> method by adding an `OutliningTagger` to the properties of the buffer.  
+2.  実装、 <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider.CreateTagger%2A> メソッドを追加することで、 `OutliningTagger` バッファーのプロパティにします。  
   
-     [!code-csharp[VSSDKOutlineRegionTest#13](../extensibility/codesnippet/CSharp/walkthrough-outlining_13.cs)]  [!code-vb[VSSDKOutlineRegionTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_13.vb)]  
+     [!code-cs[VSSDKOutlineRegionTest#13](../extensibility/codesnippet/CSharp/walkthrough-outlining_13.cs)]
+     [!code-vb[VSSDKOutlineRegionTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_13.vb)]  
   
-## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
- To test this code, build the OutlineRegionTest solution and run it in the experimental instance.  
+## コードのビルドとテスト  
+ このコードをテストするには、OutlineRegionTest ソリューションをビルドし、実験用インスタンスで実行します。  
   
-#### <a name="to-build-and-test-the-outlineregiontest-solution"></a>To build and test the OutlineRegionTest solution  
+#### ビルドし、OutlineRegionTest ソリューションをテストするには  
   
-1.  Build the solution.  
+1.  ソリューションをビルドします。  
   
-2.  When you run this project in the debugger, a second instance of Visual Studio is instantiated.  
+2.  デバッガーでこのプロジェクトを実行すると、Visual Studio の 2 つ目のインスタンスがインスタンス化されます。  
   
-3.  Create a text file. Type some text that includes both the opening brace and the closing brace.  
+3.  テキスト ファイルを作成します。 左中かっこと右中かっこの両方を含む任意のテキストを入力します。  
   
     ```  
     [  
@@ -134,7 +130,7 @@ You can implement language-based features such as outlining by defining the kind
     ]  
     ```  
   
-4.  There should be an outlining region that includes both braces. You should be able to click the MINUS SIGN to the left of the open brace to collapse the outlining region. When the region is collapsed, the ellipsis symbol (...) should appear to the left of the collapsed region, and a popup containing the text **hover text** should appear when you move the pointer over the ellipsis.  
+4.  両方の中かっこを含むアウトライン領域を設定する必要があります。 アウトライン領域を折りたたむには、始め中かっこの左側にマイナス記号をクリックすることができます。 ときに、領域は折りたたまれ、省略記号 \(...\)、折りたたまれた領域とテキストを含むポップアップの左に記述する必要があります **ホバー テキスト** 、省略記号ボタン上にポインターを移動すると表示されます。  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: Linking a Content Type to a File Name Extension](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+## 参照  
+ [チュートリアル: ファイル名拡張子へのコンテンツの種類のリンク](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

@@ -1,388 +1,258 @@
 ---
-title: Installing an Isolated Shell Application | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Shell [Visual Studio], deploying shell-based applications
-- Visual Studio shell, deploying shell-based applications
+title: "分離シェル アプリケーションをインストールします。 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "シェル [Visual Studio] のシェル ベースのアプリケーションを展開します。"
+  - "Visual Studio shell。 シェル ベースのアプリケーションを展開します"
 ms.assetid: 33416226-9083-41b5-b153-10d2bf35c012
 caps.latest.revision: 40
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 9806a056eccaa0ad95c3ac62c8320d655d895796
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 40
 ---
-# <a name="installing-an-isolated-shell-application"></a>Installing an Isolated Shell Application
-To install a Shell app you must perform the following steps.  
+# 分離シェル アプリケーションをインストールします。
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+シェルのアプリをインストールするには、次の手順を実行する必要があります。  
   
--   Prepare your solution.  
+-   ソリューションを準備します。  
   
--   Create a Windows Installer (MSI) package for your application.  
+-   アプリケーションの Windows インストーラー \(MSI\) パッケージを作成します。  
   
--   Create a Setup bootstrapper.  
+-   セットアップ ブートス トラップを作成します。  
   
- All of the example code in this document comes from the [Shell Deployment Sample](http://go.microsoft.com/fwlink/?LinkId=262245), which you can download from the Code Gallery on the MSDN website. The sample shows the results of performing each of these steps.  
+ このドキュメントでのコード例のすべてに由来、 [シェルの展開サンプル](http://go.microsoft.com/fwlink/?LinkId=262245), 、MSDN web サイト コード ギャラリーからダウンロードできます。 このサンプルでは、これらの各手順の実行の結果を示します。  
   
-## <a name="prerequisites"></a>Prerequisites  
- To perform the procedures that this topic describes, the following tools must be installed on your computer.  
+## 前提条件  
+ このトピックで説明する手順を実行するには、コンピューターに、次のツールをインストールする必要があります。  
   
--   The Visual Studio SDK  
+-   Visual Studio SDK  
   
--   The [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=82720) version 3.6  
+-   [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=82720) バージョン 3.6  
   
- The sample also requires the Microsoft Visualization and Modeling SDK, which not all shells require.  
+ このサンプルは、Microsoft Visualization and Modeling SDK いないすべてのシェルが必要にも必要です。  
   
-## <a name="preparing-your-solution"></a>Preparing Your Solution  
- By default, Shell templates build to VSIX packages, but this behavior is intended primarily for debugging purposes. When you deploy a Shell application, you must use MSI packages to allow for registry access and for restarts during installation. To prepare your application for MSI deployment, perform the following steps.  
+## ソリューションを準備します。  
+ 既定では、VSIX パッケージへのシェルのテンプレートを作成が、この動作はデバッグのために、主に対象としています。 シェル アプリケーションを展開する場合は、インストール中に、レジストリへのアクセスと再起動を許可するように MSI パッケージを使用する必要があります。 MSI のデプロイ用のアプリケーションを準備するには、次の手順を実行します。  
   
-#### <a name="to-prepare-a-shell-application-for-msi-deployment"></a>To prepare a Shell application for MSI deployment  
+#### MSI 配置用のシェル アプリケーションを準備するには  
   
-1.  Edit each .vsixmanifest file in your solution.  
+1.  ソリューション内の各 .vsixmanifest ファイルを編集します。  
   
-     In the `Identifier` element, add an `InstalledByMSI` element and a `SystemComponent` element, and then set their values to `true`.  
+     `Identifier` 要素を追加、 `InstalledByMSI` 要素と `SystemComponent` 要素にその値を設定し、 `true`します。  
   
-     These elements prevent the VSIX installer from trying to install your components and the user from uninstalling them by using the **Extensions and Updates** dialog box.  
+     これらの要素を使用してアンインストールしてから、コンポーネントとユーザーをインストールしようとしていますから VSIX インストーラーを防ぐため、 **拡張機能と更新プログラム** \] ダイアログ ボックス。  
   
-2.  For each project that contains a VSIX manifest, edit the build tasks to output the content to the location from which your MSI will install. Include the VSIX manifest in the build output, but don't build a .vsix file.  
+2.  VSIX マニフェストを含むプロジェクトごとに、MSI のインストール元の場所にコンテンツを出力するビルド タスクを編集します。 ビルドの出力で VSIX マニフェストを含めるが、.vsix ファイルを作成しません。  
   
-## <a name="creating-an-msi-for-your-shell"></a>Creating an MSI for Your Shell  
- To build your MSI package, we recommend that you use the [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=82720) because it gives greater flexibility than a standard Setup project.  
+## シェルの MSI の作成  
+ MSI パッケージをビルドすることをお勧めを使用すること、 [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=82720) 標準セットアップ プロジェクトよりも高い柔軟性を提供するためです。  
   
- In your Product.wxs file, set detection blocks and the layout of Shell components.  
+ Product.wxs ファイルで検出ブロックとシェルのコンポーネントのレイアウトを設定します。  
   
- Then create Registry entries, both in the .reg file for your solution and in ApplicationRegistry.wxs.  
+ ソリューションの .reg ファイルと ApplicationRegistry.wxs の両方は、レジストリ エントリを作成します。  
   
-### <a name="detection-blocks"></a>Detection Blocks  
- A detection block consists of a `Property` element that specifies a prerequisite to detect and a `Condition` element that specifies a message to return if the prerequisite isn't present on the computer. For example, your Shell application will require the Microsoft Visual Studio Shell redistributable, and the detection block will resemble the following markup.  
+### 検出のブロック  
+ 検出ブロックで構成されます、 `Property` 検出するために必要な前提条件を指定する要素と `Condition` 、必須コンポーネントがコンピューターに存在しないかどうかに返されるメッセージを指定する要素。 たとえば、シェル アプリケーションが再頒布可能パッケージを Microsoft Visual Studio Shell を必要とし、検出ブロックには、次のマークアップはようになります。  
   
 ```xml  
-<Property Id="ISOSHELLSFX">  
-  <RegistrySearch Id="IsoShellSfx" Root="HKLM" Key="Software\Microsoft\DevDiv\vs\Servicing\\$(var.ShellVersion)\IsoShell\$(var.ProductLanguage)" Name="Install" Type="raw" />  
-</Property>  
-<Property Id="INTSHELLSFX">  
-  <RegistrySearch Id="IntShellSfx" Root="HKLM" Key="SOFTWARE\Microsoft\DevDiv\vs\Servicing\$(var.ShellVersion)\devenv\$(var.ProductLanguage)" Name="Install" Type="raw" />  
-</Property>  
-  
-<Condition Message="This application requires $(var.IsoShellName).  Please install $(var.IsoShellName) then run this installer again.">  
-  <![CDATA[Installed OR ISOSHELLSFX]]>  
-</Condition>  
-<Condition Message="This application requires $(var.IntShellName).  Please install $(var.IntShellName) then run this installer again.">  
-  <![CDATA[Installed OR INTSHELLSFX]]>  
-</Condition>  
+<Property Id="ISOSHELLSFX"> <RegistrySearch Id="IsoShellSfx" Root="HKLM" Key="Software\Microsoft\DevDiv\vs\Servicing\\$(var.ShellVersion)\IsoShell\$(var.ProductLanguage)" Name="Install" Type="raw" /> </Property> <Property Id="INTSHELLSFX"> <RegistrySearch Id="IntShellSfx" Root="HKLM" Key="SOFTWARE\Microsoft\DevDiv\vs\Servicing\$(var.ShellVersion)\devenv\$(var.ProductLanguage)" Name="Install" Type="raw" /> </Property> <Condition Message="This application requires $(var.IsoShellName).  Please install $(var.IsoShellName) then run this installer again."> <![CDATA[Installed OR ISOSHELLSFX]]> </Condition> <Condition Message="This application requires $(var.IntShellName).  Please install $(var.IntShellName) then run this installer again."> <![CDATA[Installed OR INTSHELLSFX]]> </Condition>  
   
 ```  
   
-### <a name="layout-of-shell-components"></a>Layout of Shell Components  
- You must add elements to identify the target directory structure and the components to install.  
+### シェルのコンポーネントのレイアウト  
+ 対象のディレクトリ構造およびインストールするコンポーネントを識別する要素を追加する必要があります。  
   
-##### <a name="to-set-the-layout-of-shell-components"></a>To set the layout of Shell components  
+##### シェルのコンポーネントのレイアウトを設定するには  
   
-1.  Create a hierarchy of `Directory` elements to represent all of the directories to create on the file system on the target computer, as the following example shows.  
+1.  階層を作成する `Directory` 要素を表すすべてのターゲット コンピューター上のファイル システムに次の例のようにを作成するディレクトリ。  
   
     ```xml  
-    <Directory Id="TARGETDIR" Name="SourceDir">  
-      <Directory Id="ProgramFilesFolder">  
-        <Directory Id="CompanyDirectory" Name="$(var.CompanyName)">  
-          <Directory Id="INSTALLDIR" Name="$(var.FullProductName)">  
-            <Directory Id="ExtensionsFolder" Name="Extensions" />  
-            <Directory Id="Folder1033" Name="1033" />  
-          </Directory>  
-        </Directory>  
-      </Directory>  
-      <Directory Id="ProgramMenuFolder">  
-        <Directory Id="ApplicationProgramsFolder" Name="$(var.FullProductName)"/>  
-      </Directory>  
-    </Directory>  
+    <Directory Id="TARGETDIR" Name="SourceDir"> <Directory Id="ProgramFilesFolder"> <Directory Id="CompanyDirectory" Name="$(var.CompanyName)"> <Directory Id="INSTALLDIR" Name="$(var.FullProductName)"> <Directory Id="ExtensionsFolder" Name="Extensions" /> <Directory Id="Folder1033" Name="1033" /> </Directory> </Directory> </Directory> <Directory Id="ProgramMenuFolder"> <Directory Id="ApplicationProgramsFolder" Name="$(var.FullProductName)"/> </Directory> </Directory>  
     ```  
   
-     These directories are referred to by `Id` when files that must be installed are specified.  
+     これらのディレクトリによって参照されて `Id` インストール必要があるファイルが指定されている場合。  
   
-2.  Identify the components that the Shell and your Shell application require, as the following example shows.  
+2.  シェルおよびシェル アプリケーションを必要とする、次の例のように、コンポーネントを識別します。  
   
     > [!NOTE]
-    >  Some elements may refer to definitions in other .wxs files.  
+    >  いくつかの要素は、その他のデコンパイルして .wxs ファイル内の定義を参照できます。  
   
     ```xml  
-    <Feature Id="ProductFeature" Title="$(var.ShortProductName)Shell" Level="1">  
-      <ComponentGroupRef Id="ApplicationGroup" />  
-      <ComponentGroupRef Id="HelpAboutPackage" />  
-      <ComponentRef Id="GeneralProfile" />  
-      <ComponentGroupRef Id="EditorAdornment"/>        
-      <ComponentGroupRef Id="SlideShowDesignerGroup"/>  
-  
-      <!-- Note: The following ComponentGroupRef is required to pull in generated authoring from project references. -->  
-      <ComponentGroupRef Id="Product.Generated" />  
-    </Feature>  
+    <Feature Id="ProductFeature" Title="$(var.ShortProductName)Shell" Level="1"> <ComponentGroupRef Id="ApplicationGroup" /> <ComponentGroupRef Id="HelpAboutPackage" /> <ComponentRef Id="GeneralProfile" /> <ComponentGroupRef Id="EditorAdornment"/> <ComponentGroupRef Id="SlideShowDesignerGroup"/> <!-- Note: The following ComponentGroupRef is required to pull in generated authoring from project references. --> <ComponentGroupRef Id="Product.Generated" /> </Feature>  
     ```  
   
-    1.  The `ComponentRef` element refers to another .wxs file that identifies files that the current component requires. For example, GeneralProfile has the following definition in HelpAbout.wxs.  
+    1.  `ComponentRef` 要素を現在のコンポーネントが必要なファイルを識別するもう 1 つのデコンパイルして .wxs ファイルを参照します。 たとえば、GeneralProfile は HelpAbout.wxs で次の定義を持ちます。  
   
         ```xml  
-        <Fragment Id="FragmentProfiles">  
-          <DirectoryRef Id="INSTALLDIR">  
-            <Directory Id="ProfilesFolder" Name="Profiles">  
-              <Component Id='GeneralProfile' Guid='*'>  
-                <File Id='GeneralProfile' Name='General.vssettings' DiskId='1' Source='$(var.BuildOutputDir)Profiles\General.vssettings' KeyPath='yes' />  
-              </Component>  
-            </Directory>  
-          </DirectoryRef>  
-        </Fragment>  
+        <Fragment Id="FragmentProfiles"> <DirectoryRef Id="INSTALLDIR"> <Directory Id="ProfilesFolder" Name="Profiles"> <Component Id='GeneralProfile' Guid='*'> <File Id='GeneralProfile' Name='General.vssettings' DiskId='1' Source='$(var.BuildOutputDir)Profiles\General.vssettings' KeyPath='yes' /> </Component> </Directory> </DirectoryRef> </Fragment>  
         ```  
   
-         The `DirectoryRef` element specifies where these files go on the user's computer. The `Directory` element specifies that it will be installed into a sub-directory, and each `File` element represents a file that's built or that exists as part of the solution and identifies where that file can be found when the MSI file is created.  
+         `DirectoryRef` 要素は、ユーザーのコンピューターにどこでこれらのファイルを指定します。`Directory` 要素を指定して、インストールすることがサブディレクトリに、各 `File` 要素が組み込まれているものかをソリューションの一部として存在し、そのファイルの場所を MSI ファイルの作成時に識別するファイルを表します。  
   
-    2.  The `ComponentGroupRef` element refers to a group of other components (or components and component groups). For instance, `ComponentGroupRef` under ApplicationGroup is defined as follows in Application.wxs.  
+    2.  `ComponentGroupRef` 要素は他のコンポーネント \(またはコンポーネントとコンポーネントのグループ\) のグループを参照します。 たとえば、 `ComponentGroupRef` ApplicationGroup の下で定義されて次のように Application.wxs します。  
   
         ```xml  
-        <ComponentGroup Id="ApplicationGroup">  
-          <ComponentGroupRef Id="DebuggerProxy" />  
-          <ComponentRef Id="MasterPkgDef" />  
-          <ComponentRef Id="SplashResource" />  
-          <ComponentRef Id="IconResource" />  
-          <ComponentRef Id="WinPrfResource" />  
-          <ComponentRef Id="AppExe" />  
-          <ComponentRef Id="AppConfig" />  
-          <ComponentRef Id="AppPkgDef" />  
-          <ComponentRef Id="AppPkgDefUndef" />  
-          <ComponentRef Id="$(var.ShortProductName)UI1033" />  
-          <ComponentRef Id="ApplicationShortcut"/>  
-          <ComponentRef Id="ApplicationRegistry"/>  
-        </ComponentGroup>  
+        <ComponentGroup Id="ApplicationGroup"> <ComponentGroupRef Id="DebuggerProxy" /> <ComponentRef Id="MasterPkgDef" /> <ComponentRef Id="SplashResource" /> <ComponentRef Id="IconResource" /> <ComponentRef Id="WinPrfResource" /> <ComponentRef Id="AppExe" /> <ComponentRef Id="AppConfig" /> <ComponentRef Id="AppPkgDef" /> <ComponentRef Id="AppPkgDefUndef" /> <ComponentRef Id="$(var.ShortProductName)UI1033" /> <ComponentRef Id="ApplicationShortcut"/> <ComponentRef Id="ApplicationRegistry"/> </ComponentGroup>  
         ```  
   
     > [!NOTE]
-    >  Required dependencies for Shell (Isolated) applications are: DebuggerProxy, MasterPkgDef, Resources (especially the .winprf file), Application, and PkgDefs.  
+    >  必須の Shell \(Isolated\) アプリケーションの依存関係: DebuggerProxy MasterPkgDef、リソース \(.winprf ファイルでは特に\)、アプリケーション、および PkgDefs です。  
   
-### <a name="registry-entries"></a>Registry Entries  
- The Shell (Isolated) project template includes a *ProjectName*.reg file for registry keys to merge on installation. These registry entries must be part of the MSI for both installation and cleanup purposes. You must also create matching registry blocks in ApplicationRegistry.wxs.  
+### レジストリ エントリ  
+ Shell \(Isolated\) プロジェクト テンプレートに含まれる、 *ProjectName*.reg ファイルのインストールでマージするレジストリ キーです。 これらのレジストリ エントリでは、MSI のインストールとクリーンアップのための両方を含める必要があります。 ApplicationRegistry.wxs で一致するレジストリのブロックを作成することも必要があります。  
   
-##### <a name="to-integrate-registry-entries-into-the-msi"></a>To integrate registry entries into the MSI  
+##### レジストリ エントリ、MSI を統合するには  
   
-1.  In the **Shell Customization** folder, open *ProjectName*.reg.  
+1.  **シェル カスタマイズ** フォルダーを開き、 *ProjectName*. 登録  
   
-2.  Replace all instances of the $RootFolder$ token with the path of the target installation directory.  
+2.  $RootFolder$ トークンのすべてのインスタンスをインストール先のディレクトリのパスに置き換えます。  
   
-3.  Add any other registry entries that your application requires.  
+3.  アプリケーションに必要な他のレジストリ エントリを追加します。  
   
-4.  Open ApplicationRegistry.wxs.  
+4.  ApplicationRegistry.wxs を開きます。  
   
-5.  For each registry entry in *ProjectName*.reg, add a corresponding registry block, as the following examples show.  
+5.  各レジストリ エントリで *ProjectName*.reg、次の例として、対応するレジストリ ブロックを追加します。  
   
     |*ProjectName*.reg|ApplicationRegisty.wxs|  
     |-----------------------|----------------------------|  
-    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @="PhotoStudio DTE Object"|\<RegistryKey Id='DteClsidRegKey' Root='HKCR' Key='$(var.DteClsidRegKey)' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='$(var.ShortProductName) DTE Object' /><br /><br /> \</RegistryKey>|  
-    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}\LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<RegistryKey Id='DteLocSrv32RegKey' Root='HKCR' Key='$(var.DteClsidRegKey)\LocalServer32' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='[INSTALLDIR]$(var.ShortProductName).exe' /><br /><br /> \</RegistryKey>|  
+    |\[{Bb431796\-a179\-4df7\-b65d\-c0df6bda7cc6} hkey\_classes\_root \\clsid\\\]<br /><br /> @\=「PhotoStudio DTE オブジェクト」|\< レジストリ キーの Id \= 'DteClsidRegKey' Root 'HKCR' キーを \= \=' $\(var です。DteClsidRegKey\)' 操作 'createAndRemoveOnUninstall' \= \><br /><br /> \< RegistryValue 型 \= 'string' Name \=' @' 値 \=' $\(var です。ShortProductName\) DTE オブジェクト"\/\><br /><br /> \<\/レジストリ キー \>|  
+    |\[Hkey\_classes\_root \\clsid\\ {bb431796\-a179\-4df7\-b65d\-c0df6bda7cc6} \\LocalServer32\]<br /><br /> @\="$RootFolder$\\PhotoStudio.exe"|\< レジストリ キーの Id \= 'DteLocSrv32RegKey' Root 'HKCR' キーを \= \=' $\(var です。DteClsidRegKey\) \\LocalServer32' 操作 'createAndRemoveOnUninstall' \= \><br /><br /> \< RegistryValue 型 \= 'string' Name \=' @' 値 \='\[INSTALLDIR\] $\(var です。ShortProductName\) .exe"\/\><br /><br /> \<\/レジストリ キー \>|  
   
-     In this example, Var.DteClsidRegKey resolves to the registry key in the top row. Var.ShortProductName resolves to `PhotoStudio`.  
+     この例では、Var.DteClsidRegKey は、先頭の行にレジストリ キーに解決されます。 解決される Var.ShortProductName `PhotoStudio`します。  
   
-## <a name="creating-a-setup-bootstrapper"></a>Creating a Setup Bootstrapper  
- Your completed MSI will install only if all the prerequisites are installed first. To ease the end user experience, create a Setup program that gathers and installs all prerequisites before it installs your application. To ensure a successful installation, perform these actions:  
+## セットアップ ブートス トラップの作成  
+ すべての前提条件が最初にインストールされている場合にのみ、完了した MSI がインストールされます。 エンド ユーザー エクスペリエンスを容易にするには、収集し、アプリケーションのインストール前に、すべての前提条件をインストールするセットアップ プログラムを作成します。 インストールの成功を確実には、これらのアクションを実行します。  
   
--   Enforce installation by Administrator.  
+-   管理者がインストールを強制実行します。  
   
--   Detect whether the Visual Studio Shell (Isolated) is installed.  
+-   Visual Studio Shell \(Isolated\) がインストールされているかどうかを検出します。  
   
--   Run one or both Shell installers in order.  
+-   順序で 1 つまたは両方のシェル インストーラーを実行します。  
   
--   Handle restart requests.  
+-   再起動要求を処理します。  
   
--   Run your MSI.  
+-   MSI を実行します。  
   
-### <a name="enforcing-installation-by-administrator"></a>Enforcing Installation by Administrator  
- This procedure is required to enable the Setup program to access required directories such as \Program Files\\.  
+### 管理者によってインストールの適用  
+ \\Program などの必要なディレクトリにアクセスするセットアップ プログラムを有効にするには、この手順が必要です。  
   
-##### <a name="to-enforce-installation-by-administrator"></a>To enforce installation by Administrator  
+##### 管理者がインストールを強制するには  
   
-1.  Open the shortcut menu for the Setup project, and then choose **Properties**.  
+1.  セットアップ プロジェクトのショートカット メニューを開きを選択し **プロパティ**します。  
   
-2.  Under **Configuration Properties/Linker/Manifest File**, set **UAC Execution Level** to **requireAdministrator**.  
+2.  **構成プロパティ\/リンカー\/マニフェスト ファイル**, 、 **UAC の実行レベル** に **requireAdministrator**します。  
   
-     This property puts the attribute that requires the program to be run as Administrator into the embedded manifest file.  
+     このプロパティは、埋め込みのマニフェスト ファイルに管理者として実行するプログラムを必要とする属性を配置します。  
   
-### <a name="detecting-shell-installations"></a>Detecting Shell Installations  
- To determine whether the Visual Studio Shell (Isolated) must be installed, first determine whether it's already installed by checking the registry value of HKLM\Software\Microsoft\DevDiv\vs\Servicing\ShellVersion\isoshell\LCID\Install.  
+### シェルのインストールを検出します。  
+ Visual Studio Shell \(Isolated\) をインストールする必要があるかどうかを決定するには、最初を特定のレジストリ値をチェックして既にインストールされているかどうか HKLM\\Software\\Microsoft\\DevDiv\\vs\\Servicing\\ShellVersion\\isoshell\\LCID\\Installします。  
   
 > [!NOTE]
->  These values are also read by the Shell detection block in Product.wxs.  
+>  これらの値は、ブロックを指定して、シェル検出 Product.wxs にも読み込まれます。  
   
- HKLM\Software\Microsoft\AppEnv\14.0\ShellFolder specifies the location where the Visual Studio Shell was installed, and you can check for files there.  
+ HKLM\\Software\\Microsoft\\AppEnv\\14.0\\ShellFolder ここで、Visual Studio Shell がインストールされ、そこにファイルをチェックすることができますの場所を指定します。  
   
- For an example of how to detect a Shell installation, see the `GetProductDirFromReg` function of Utilities.cpp in the Shell Deployment Sample.  
+ シェルのインストールを検出する方法の例は、次を参照してください。、 `GetProductDirFromReg` Utilities.cpp シェルの展開サンプル内の関数です。  
   
- If one or both of the Visual Studio Shells that your package requires isn't installed on the computer, you must add them to your list of components to install. For an example, see the `ComponentsPage::OnInitDialog` function of ComponentsPage.cpp in the Shell Deployment Sample.  
+ パッケージを必要とする Visual Studio シェルの一方または両方がコンピューターにインストールされていない場合は、インストールするコンポーネントの一覧に追加する必要があります。 例については、次を参照してください。、 `ComponentsPage::OnInitDialog` ComponentsPage.cpp シェルの展開サンプル内の関数です。  
   
-### <a name="running-the-shell-installers"></a>Running the Shell Installers  
- To run the Shell installers, call the Visual Studio Shell redistributables by using the correct command-line arguments. At a minimum, you must use the command-line arguments **/norestart /q** and watch for the return code to determine what should be done next. The following example runs the Shell (Isolated) redistributable.  
+### シェルのインストーラーを実行しています。  
+ シェルのインストーラーを実行するには、適切なコマンドライン引数を使用して Visual Studio Shell 再頒布可能パッケージを呼び出します。 少なくとも、コマンドライン引数を使用する必要があります **\/norestart \/q** 、どうすればよいの横を決定するリターン コードを確認します。 次の例では、シェル \(Isolated\) 再頒布可能パッケージを実行します。  
   
 ```  
 dwResult = ExecCmd("Vs_IsoShell.exe /norestart /q", TRUE);  
 ```  
   
-### <a name="running-the-shell-language-pack-installers"></a>Running the Shell Language Pack Installers  
- If you instead find that the shell or shells have been installed and just need a language pack, you can install the language packs as the following example shows.  
+### シェルの言語パック インストーラーを実行しています。  
+ 代わりに、シェルやシェルがインストールされてとを調べるだけ必要な言語パックの場合は、次の例のように、言語パックをインストールできます。  
   
 ```  
 dwResult = ExecCmd("Vs_IsoShellLP.exe /norestart /q", TRUE);  
   
 ```  
   
-### <a name="deciphering-return-values"></a>Deciphering Return Values  
- On some operating systems, the Visual Studio Shell (Isolated) installation will require a restart. This condition can be determined by the return code of the call to `ExecCmd`.  
+### 戻り値の解読  
+ Visual Studio Shell \(Isolated\) のインストールには、いくつかのオペレーティング システムで再起動が必要です。 呼び出しのリターン コードによってこの状態を判断できます `ExecCmd`します。  
   
-|Return Value|Description|  
-|------------------|-----------------|  
-|ERROR_SUCCESS|Installation completed. You can now install your application.|  
-|ERROR_SUCCESS_REBOOT_REQUIRED|Installation completed. You can install your application after the computer has been restarted.|  
-|3015|Installation is in progress. A computer restart is required to continue the installation.|  
+|戻り値|説明|  
+|---------|--------|  
+|ERROR\_SUCCESS を返します|インストールが完了します。 アプリケーションをインストールするようになりました。|  
+|ERROR\_SUCCESS\_REBOOT\_REQUIRED|インストールが完了します。 コンピューターの再起動後、アプリケーションをインストールすることができます。|  
+|3015|インストールが進行中です。 インストールを続行するには、コンピューターの再起動が必要です。|  
   
-### <a name="handling-restarts"></a>Handling Restarts  
- When you ran the Shell installer by using the **/norestart** argument, you specified that it wouldn't restart the computer or ask for the computer to be restarted. However, a restart might be required, and you must ensure that your installer continues after the computer is restarted.  
+### 再起動の処理  
+ 使用してシェル インストーラーを実行したときに、 **\/norestart** コンピューターを再起動またはコンピューターの再起動を要求しないというに指定した引数。 ただし、再起動が必要であるし、コンピューターが再起動された後、インストーラーを続行することを確認する必要があります。  
   
- To handle restarts correctly, make sure that only one Setup program is set to resume and that the resume process will be handled correctly.  
+ 再起動を正しく処理するには、その 1 つだけのセットアップ プログラムには、再開に設定され、再開プロセスを正しく処理されますを確認します。  
   
- If either ERROR_SUCCESS_REBOOT_REQUIRED or 3015 is returned, your code should restart the computer before the installation continues.  
+ ERROR\_SUCCESS\_REBOOT\_REQUIRED または 3015 のいずれかが返された場合、コードは、インストールを続行する前にコンピューターを再起動する必要があります。  
   
- To handle restarts, perform these actions:  
+ 再起動を処理するためには、これらのアクションを実行します。  
   
--   Set the registry to resume installation when Windows starts.  
+-   Windows の起動時に、インストールを再開するレジストリを設定します。  
   
--   Perform a double restart of the bootstrapper.  
+-   ブートス トラップの 2 つの再起動を実行します。  
   
--   Delete the Shell installer ResumeData key.  
+-   シェル インストーラー ResumeData キーを削除します。  
   
--   Restart Windows.  
+-   Windows を再起動します。  
   
--   Reset the start path of the MSI.  
+-   Msi ファイルの開始パスをリセットします。  
   
-### <a name="setting-the-registry-to-resume-setup-when-windows-starts"></a>Setting the Registry to Resume Setup When Windows Starts  
- The HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce\ registry key executes at system startup with administrative permissions and then is erased. HKEY_CURRENT_USER contains a similar key, but it runs as a normal user and isn't appropriate for installations. You can resume installation by putting a string value in the RunOnce key that calls your installer. However, we recommend that you call the installer by using a **/restart** or similar parameter to notify the application that it's resuming instead of starting. You can also include parameters to indicate where you are in the installation process, which is especially useful in installations that may require multiple restarts.  
+### Windows の起動時に、セットアップを再開するレジストリを設定  
+ HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\ レジストリ キーの管理権限のあるシステムの起動時に実行され、消去されます。HKEY\_CURRENT\_USER ようなキーが含まれていますが、標準ユーザーとして実行されるはインストールに適していません。 によって、インストーラーが呼び出さ RunOnce キーで文字列値を配置することで、インストールを再開できます。 ただし、推奨を使用して、インストーラーを呼び出すこと、 **\/restart** または開始する代わりにそれを再開してアプリケーションに通知するようなパラメーターです。 セットアップは何回か再起動が必要なインストールで特に便利であるかを示すためにパラメーターを含めることもできます。  
   
- The following example shows a RunOnce registry key value for resuming an installation.  
+ 次の例では、インストールを再開するに RunOnce レジストリ キーの値を示します。  
   
  `"c:\MyAppInstaller.exe /restart /SomeOtherDataFlag"`  
   
-### <a name="installing-double-restart-of-bootstrapper"></a>Installing Double Restart of Bootstrapper  
- If Setup is used directly from RunOnce, the desktop won't be able to load completely. To make the full user interface available, you must create another execution of Setup and end the RunOnce instance.  
+### ブートス トラップの 2 つの再起動をインストールします。  
+ セットアップは RunOnce から直接使用する場合、デスクトップを完全に読み込むことはできません。 完全なユーザー インターフェイスを使用できるようにするには、セットアップの別の実行を作成し、RunOnce インスタンスを終了する必要があります。  
   
- You must re-execute the Setup program so that it obtains the correct permissions, and you must give it enough information to know where you stopped before the restart, as the following example shows.  
+ できるように、適切なアクセス許可を取得し、次の例のように、再起動する前にしてを停止した位置を知るには、十分な情報を提供する必要があります、セットアップ プログラムを再実行する必要があります。  
   
 ```  
-if (_cmdLineInfo.IsRestart())  
-{  
-    TCHAR path[MAX_PATH]={0};  
-    GetModuleFileName(NULL, path, MAX_PATH * sizeof(TCHAR));      
-    ShellExecute( NULL, _T( "open" ), path, _T("/install"), 0, SW_SHOWNORMAL );  
-}  
+if (_cmdLineInfo.IsRestart()) { TCHAR path[MAX_PATH]={0}; GetModuleFileName(NULL, path, MAX_PATH * sizeof(TCHAR)); ShellExecute( NULL, _T( "open" ), path, _T("/install"), 0, SW_SHOWNORMAL ); }  
   
 ```  
   
-### <a name="deleting-the-shell-installer-resumedata-key"></a>Deleting the Shell Installer ResumeData Key  
- The Shell installer sets the HKLM\Software\Microsoft\VisualStudio\14.0\Setup\ResumeData registry key with data to resume Setup after restart. Because your application, not the Shell installer, is resuming, delete that registry key, as the following example shows.  
+### シェル インストーラー ResumeData キーを削除します。  
+ シェル インストーラーのセット、 HKLM\\Software\\Microsoft\\VisualStudio\\14.0\\Setup\\ResumeData レジストリ キーとデータを再起動した後にセットアップを再開します。 シェル インストーラーではなく、アプリケーションを再開するため、次の例のように、このレジストリ キーを削除します。  
   
 ```  
-CString resumeSetupPath(MAKEINTRESOURCE("SOFTWARE\\Microsoft\\VisualStudio\\14.0\\Setup\\ResumeData"));  
-RegDeleteKey(HKEY_LOCAL_MACHINE, resumeSetupPath);  
+CString resumeSetupPath(MAKEINTRESOURCE("SOFTWARE\\Microsoft\\VisualStudio\\14.0\\Setup\\ResumeData")); RegDeleteKey(HKEY_LOCAL_MACHINE, resumeSetupPath);  
 ```  
   
-### <a name="restarting-windows"></a>Restarting Windows  
- After you set the required registry keys, you can restart Windows. The following example invokes the restart commands for different Windows operating systems.  
+### Windows の再起動  
+ 必要なレジストリ キーを設定した後は、Windows を再起動することができます。 次の例では、さまざまな Windows オペレーティング システムの再起動のコマンドを呼び出します。  
   
 ```  
-OSVERSIONINFO ov;  
-HANDLE htoken ;  
-//Ask for the SE_SHUTDOWN_NAME token as this is needed by the thread calling for a system shutdown.  
-if (OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, &htoken))  
-{  
-    LUID luid ;  
-    LookupPrivilegeValue(NULL, SE_SHUTDOWN_NAME, &luid) ;  
-    TOKEN_PRIVILEGES    privs ;  
-    privs.Privileges[0].Luid = luid ;  
-    privs.PrivilegeCount = 1 ;  
-    privs.Privileges[0].Attributes = SE_PRIVILEGE_ENABLED ;  
-    AdjustTokenPrivileges(htoken, FALSE, &privs, 0, (PTOKEN_PRIVILEGES) NULL, 0) ;  
-}   
-  
-//Use InitiateSystemShutdownEx to avoid unexpected restart message box  
-try  
-{              
-    if ( (ov.dwMajorVersion > 5) || ( (ov.dwMajorVersion == 5) && (ov.dwMinorVersion  > 0) ))  
-    {  
-        bExitWindows = InitiateSystemShutdownEx(0, _T(""), 0, TRUE, TRUE, REASON_PLANNED_FLAG);  
-    }  
-    else  
-    {  
-#pragma prefast(suppress:380,"ignore warning about legacy api")  
-        bExitWindows = InitiateSystemShutdown(0, _T(""), 0, TRUE, TRUE);  
-    }  
-}  
-catch(...)  
-{  
-    //advapi32.dll call not available! Will not restart!  
-}  
+OSVERSIONINFO ov; HANDLE htoken ; //Ask for the SE_SHUTDOWN_NAME token as this is needed by the thread calling for a system shutdown. if (OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, &htoken)) { LUID luid ; LookupPrivilegeValue(NULL, SE_SHUTDOWN_NAME, &luid) ; TOKEN_PRIVILEGES    privs ; privs.Privileges[0].Luid = luid ; privs.PrivilegeCount = 1 ; privs.Privileges[0].Attributes = SE_PRIVILEGE_ENABLED ; AdjustTokenPrivileges(htoken, FALSE, &privs, 0, (PTOKEN_PRIVILEGES) NULL, 0) ; } //Use InitiateSystemShutdownEx to avoid unexpected restart message box try { if ( (ov.dwMajorVersion > 5) || ( (ov.dwMajorVersion == 5) && (ov.dwMinorVersion  > 0) )) { bExitWindows = InitiateSystemShutdownEx(0, _T(""), 0, TRUE, TRUE, REASON_PLANNED_FLAG); } else { #pragma prefast(suppress:380,"ignore warning about legacy api") bExitWindows = InitiateSystemShutdown(0, _T(""), 0, TRUE, TRUE); } } catch(...) { //advapi32.dll call not available! Will not restart! }  
   
 ```  
   
-### <a name="resetting-the-start-path-of-msi"></a>Resetting the Start Path of MSI  
- Before restart, the current directory is the location of your Setup program but, after restart, the location becomes the system32 directory. Your Setup program should reset the current directory before each MSI call, as the following example shows.  
+### MSI の開始パスをリセットします。  
+ 再起動する前に、現在のディレクトリは、セットアップ プログラムの場所が、場所は再起動後に、system32 ディレクトリになります。 セットアップ プログラムは、次の例のように MSI の各呼び出しの前に、現在のディレクトリをリセットする必要があります。  
   
 ```  
-CString GetSetupPath()  
-{  
-    TCHAR file[MAX_PATH];  
-    GetModuleFileName(NULL, file, MAX_PATH * sizeof(TCHAR));  
-    CString path(file);  
-    int fpos = path.ReverseFind('\\');  
-    if (fpos != -1)  
-    {  
-        path = path.Left(fpos + 1);  
-    }  
-  
-    return path;  
-}  
+CString GetSetupPath() { TCHAR file[MAX_PATH]; GetModuleFileName(NULL, file, MAX_PATH * sizeof(TCHAR)); CString path(file); int fpos = path.ReverseFind('\\'); if (fpos != -1) { path = path.Left(fpos + 1); } return path; }  
   
 ```  
   
-### <a name="running-the-application-msi"></a>Running the Application MSI  
- After the Visual Studio Shell installer returns ERROR_SUCCESS, you can run the MSI for your application. Because your Setup program is providing the user interface, start your MSI in quiet mode (**/q**) and with logging (**/L**), as the following example shows.  
+### アプリケーションの MSI を実行します。  
+ Visual Studio Shell のインストーラーには、error\_success を返しますが返された、後に、アプリケーションの MSI を実行できます。 セットアップ プログラムが提供するため、ユーザー インターフェイス、サイレント モードで、MSI を開始 \(**\/q**\) のログ出力を \(**\/L**\) 次の例を示します。  
   
-```cpp  
-TCHAR temp[MAX_PATH];  
-GetTempPath(MAX_PATH, temp);  
-  
-CString boutiqueInstallCmd, msi, log;  
-CString cmdLine(MAKEINTRESOURCE("msiexec /q /I %s /L*vx %s REBOOT=ReallySuppress"));  
-CString name(MAKEINTRESOURCE("PhotoStudioIntShell.msi"));  
-log.Format(_T("\"%s%s.log\""), temp, name);  
-msi.Format(_T("\"%s%s\""), GetSetupPath(), name);  
-boutiqueInstallCmd.Format(cmdLine, msi, log);  
-  
-//TODO: You can use MSI API to gather and present install progress feedback from your MSI.  
-dwResult = ExecCmd(boutiqueInstallCmd, FALSE);  
+```cpp#  
+TCHAR temp[MAX_PATH]; GetTempPath(MAX_PATH, temp); CString boutiqueInstallCmd, msi, log; CString cmdLine(MAKEINTRESOURCE("msiexec /q /I %s /L*vx %s REBOOT=ReallySuppress")); CString name(MAKEINTRESOURCE("PhotoStudioIntShell.msi")); log.Format(_T("\"%s%s.log\""), temp, name); msi.Format(_T("\"%s%s\""), GetSetupPath(), name); boutiqueInstallCmd.Format(cmdLine, msi, log); //TODO: You can use MSI API to gather and present install progress feedback from your MSI. dwResult = ExecCmd(boutiqueInstallCmd, FALSE);  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: Creating a Basic Isolated Shell Application](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md)
+## 参照  
+ [チュートリアル: 基本的な分離シェル アプリケーションを作成します。](../extensibility/walkthrough-creating-a-basic-isolated-shell-application.md)

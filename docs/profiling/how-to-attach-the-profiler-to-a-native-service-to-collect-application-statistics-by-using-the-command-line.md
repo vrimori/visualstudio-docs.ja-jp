@@ -1,127 +1,111 @@
 ---
-title: 'How to: Attach the Profiler to a Native Service to Collect Application Statistics by Using the Command Line | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "方法: コマンド ラインを使用してプロファイラーをネイティブ サービスにアタッチし、アプリケーションの統計情報を収集する | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: f783817f-77a0-4eb8-985b-ec3b77eadc42
 caps.latest.revision: 25
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
-ms.openlocfilehash: e2e07d92de6f9fa3f15a2ebe1b87b495c3f85515
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/31/2017
-
+caps.handback.revision: 25
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
 ---
-# <a name="how-to-attach-the-profiler-to-a-native-service-to-collect-application-statistics-by-using-the-command-line"></a>How to: Attach the Profiler to a Native Service to Collect Application Statistics by Using the Command Line
-This topic describes how to use the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profiling Tools command-line tools to attach the profiler to a native service and collect performance statistics by using the sampling method.  
+# 方法: コマンド ラインを使用してプロファイラーをネイティブ サービスにアタッチし、アプリケーションの統計情報を収集する
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用して、プロファイラーをネイティブ サービスにアタッチし、サンプリング メソッドによってパフォーマンスに関する統計情報を収集する方法について説明します。  
   
 > [!NOTE]
->  Enhanced security features in Windows 8 and Windows Server 2012 required significant changes in the way the Visual Studio profiler collects data on these platforms. Windows Store apps also require new collection techniques. See [Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+>  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。  Windows ストア アプリにも新しい収集手法が必要です。  「[Windows 8 および Windows Server 2012 アプリケーションのプロファイリング](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
 > [!NOTE]
->  Command-line tools of the Profiling Tools are located in the \Team Tools\Performance Tools subdirectory of the [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] installation directory. On 64 bit computers, both 64 bit and 32 bit versions of the tools are available. To use the profiler command-line tools, you must add the tools path to the PATH environment variable of the command prompt window or add it to the command itself. For more information, see [Specifying the Path to Command Line Tools](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
+>  プロファイリング ツールのコマンド ライン ツールは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] インストール ディレクトリの \\Team Tools\\Performance Tools サブディレクトリにあります。  64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。  プロファイラーのコマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。  詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」を参照してください。  
   
- While the profiler is attached to the service, you can pause and resume data collection.  
+ プロファイラーをサービスにアタッチしている間はデータ収集を一時停止し、完了後に再開できます。  
   
- To end a profiling session, the profiler must be detached from the service and the profiler must be explicitly shut down.  
+ プロファイル セッションを終了するには、プロファイラーをサービスからデタッチし、プロファイラーを明示的に終了する必要があります。  
   
-## <a name="starting-the-application-with-the-profiler"></a>Starting the Application with the Profiler  
- To attach the profiler to a native service, you use the **VSPerfCmd.exe**[/start](../profiling/start.md) and [/attach](../profiling/attach.md) options to initialize the profiler and attach it to the target application. You can specify **/start** and **/attach** and their respective options on a single command line. You can also add the [/globaloff](../profiling/globalon-and-globaloff.md) option to pause data collection at the start of the target application. You can then use [/globalon](../profiling/globalon-and-globaloff.md) to begin collecting data.  
+## プロファイラーによるアプリケーションの起動  
+ プロファイラーをネイティブ サービスにアタッチするには、**VSPerfCmd.exe** の [\/start](../profiling/start.md) オプションおよび [\/attach](../profiling/attach.md) オプションを使用して、プロファイラーを初期化し、ターゲット アプリケーションにアタッチします。  **\/start** と **\/attach**、およびそれぞれのオプションは、同じコマンド ライン上に指定できます。  [\/globaloff](../profiling/globalon-and-globaloff.md) オプションを追加して、対象アプリケーションの起動時にデータ収集を一時停止することもできます。  その後、[\/globalon](../profiling/globalon-and-globaloff.md) を使用してデータの収集を開始できます。  
   
-#### <a name="to-attach-the-profiler-to-a-native-service"></a>To attach the Profiler to a native service  
+#### プロファイラーをネイティブ サービスにアタッチするには  
   
-1.  If necessary, start the service.  
+1.  起動の必要なサービスがあれば起動します。  
   
-2.  Open a command prompt window.  
+2.  コマンド プロンプト ウィンドウを開きます。  
   
-3.  Start the profiler. Type:  
+3.  プロファイラーを起動します。  Type:  
   
-     **VSPerfCmd /start:sample**  [/output](../profiling/output.md) **:** `OutputFile` [`Options`]  
+     **VSPerfCmd \/start:sample**  [\/output](../profiling/output.md) **:** `OutputFile` \[`Options`\]  
   
-    -   The **/start:sample** option initializes the profiler.  
+    -   **\/start:sample** オプションによってプロファイラーが初期化されます。  
   
-    -   The **/output:**`OutputFile` option is required with **/start**. `OutputFile` specifies the name and location of the profiling data (.vsp) file.  
+    -   **\/start** を使用する場合は **\/output:**`OutputFile` オプションを指定する必要があります。  `OutputFile` には、プロファイル データ \(.vsp\) ファイルの名前と場所を指定します。  
   
-     You can use any of the following options with the **/start:sample** option.  
+     **\/start:sample** オプションを使用する場合は、次のうちいずれかのオプションを指定できます。  
   
     > [!NOTE]
-    >  The **/user** and **/crosssession** options are usually required for services.  
+    >  **\/user** オプションと **\/crosssession** オプションは、通常、サービスで必要です。  
   
-    |Option|Description|  
-    |------------|-----------------|  
-    |[/user](../profiling/user-vsperfcmd.md) **:**[`Domain`**\\**]`UserName`|Specifies the domain and user name of the account that owns the profiled process. This option is required only if the process is running as a user other than the logged on user. The process owner is listed in the User Name column on the Processes tab of Windows Task Manager.|  
-    |[/crosssession](../profiling/crosssession.md)|Enables profiling of processes in other sessions. This option is required if the application is running in a different session. The session id is listed in the Session ID column on the Processes tab of Windows Task Manager. **/CS** can be specified as an abbreviation for **/crosssession**.|  
-    |[/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|Specifies a Windows performance counter to be collected during profiling.|  
-    |[/automark](../profiling/automark.md) **:** `Interval`|Use with **/wincounter** only. Specifies the number of milliseconds between Windows performance counter collection events. Default is 500 ms.|  
-    |[/events](../profiling/events-vsperfcmd.md) **:** `Config`|Specifies an Event Tracing for Windows (ETW) event to be collected during profiling. ETW events are collected in a separate (.etl) file.|  
+    |オプション|説明|  
+    |-----------|--------|  
+    |[\/user](../profiling/user-vsperfcmd.md) **:**\[`Domain`**\\**\]`UserName`|プロファイリングされたプロセスを所有するアカウントのドメインおよびユーザー名を指定します。  このオプションは、ログオンしているユーザーとは別のユーザーがプロセスを実行している場合にのみ指定する必要があります。  プロセスの所有者は、Windows タスク マネージャーの \[プロセス\] タブの \[ユーザー名\] 列に表示されます。|  
+    |[\/crosssession](../profiling/crosssession.md)|他のセッションにおけるプロセスのプロファイリングを有効にします。  このオプションは、アプリケーションが別のセッションで実行されている場合に必要です。  セッション ID は、Windows タスク マネージャーの \[プロセス\] タブの \[セッション ID\] 列に表示されます。  **\/crosssession** の省略形として、**\/CS** を指定することができます。|  
+    |[\/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|プロファイリング実行中に収集する Windows パフォーマンス カウンターを指定します。|  
+    |[\/automark](../profiling/automark.md) **:** `Interval`|**\/wincounter** と共にのみ使用します。  Windows パフォーマンス カウンター コレクション イベントの間隔をミリ秒単位で指定します。  既定値は 500 ミリ秒です。|  
+    |[\/events](../profiling/events-vsperfcmd.md) **:** `Config`|プロファイリング実行中に収集する ETW \(Event Tracing for Windows\) イベントを指定します。  ETW イベントは独立した \(.etl\) ファイルに収集されます。|  
   
-4.  Attach the profiler to the service. Type:  
+4.  プロファイラーをサービスにアタッチします。  Type:  
   
-     **VSPerfCmd /attach:** `PID` [`Sample Event`]  
+     **VSPerfCmd \/attach:** `PID` \[`Sample Event`\]  
   
-     `PID` specifies the process ID of the target application. You can view the process IDs of all running processes in Windows Task Manager.  
+     `PID` には、対象アプリケーションのプロセス ID を指定します。  Windows タスク マネージャーで、実行中のすべてのプロセスのプロセス ID を参照できます。  
   
-     By default, performance data is sampled every 10,000,000 non-halted processor clock cycles. This is approximately once every 10 seconds on a 1GH processor. You can specify one of the following options to change the clock cycle interval or to specify a different sampling event.  
+     既定では、パフォーマンス データはプロセッサのクロック サイクル数 10,000,000 \(停止なし\) ごとにサンプリングされます。  このため、1 GHz のプロセッサでは 10 秒ごとに約 1 回です。  次のオプションのいずれかを指定すると、クロック サイクルの間隔の変更や、別のサンプリング イベントの指定ができます。  
   
-    |Sample Event|Description|  
-    |------------------|-----------------|  
-    |[/timer](../profiling/timer.md) **:** `Interval`|Changes the sampling interval to the number of non-halted clock cycles specified by `Interval`.|  
-    |[/pf](../profiling/pf.md)[**:**`Interval`]|Changes the sampling event to page faults. If `Interval` is specified, sets the number of page faults between samples. Default is 10.|  
-    |[/sys](../profiling/sys-vsperfcmd.md) [**:**`Interval`]|Changes the sampling event to system calls from the process to the operating system kernel (syscalls). If `Interval` is specified, sets the number of calls between samples. Default is 10.|  
-    |[/counter](../profiling/counter.md) **:** `Config`|Changes the sampling event and interval to the processor performance counter and interval specified in `Config`.|  
+    |サンプリング イベント|説明|  
+    |-----------------|--------|  
+    |[\/timer](../profiling/timer.md) **:** `Interval`|サンプリングの間隔を、`Interval` で指定された停止なしのクロック サイクル数に変更します。|  
+    |[\/pf](../profiling/pf.md)\[**:**`Interval`\]|サンプリング イベントをページ フォールトに変更します。  `Interval` を指定した場合は、サンプル間のページ フォールト数が設定されます。  既定値は 10 です。|  
+    |[\/sys](../profiling/sys-vsperfcmd.md) \[**:**`Interval`\]|サンプリング イベントを、プロセスからオペレーティング システムのカーネルへのシステム コール \(syscall\) に変更します。  `Interval` を指定した場合は、サンプル間の呼び出し回数が設定されます。  既定値は 10 です。|  
+    |[\/counter](../profiling/counter.md) **:** `Config`|サンプリング イベントと間隔を、プロセッサのパフォーマンス カウンターと、`Config` で指定した間隔に、それぞれ変更します。|  
   
-## <a name="controlling-data-collection"></a>Controlling Data Collection  
- While the target application is running, you can use **VSPerfCmd.exe** options to start and stop the writing of data to the profiler data file. Controlling data collection enables you to collect data for a specific part of program execution, such as starting or shutting down the application.  
+## データ収集の制御  
+ 対象アプリケーションの実行中に、**VSPerfCmd.exe** のオプションを使用して、プロファイラー データ ファイルへのデータの書き込みを開始および停止できます。  データ収集を制御することにより、アプリケーションの起動や終了など、プログラム実行の特定の部分についてのデータ収集を行うことができます。  
   
-#### <a name="to-start-and-stop-data-collection"></a>To start and stop data collection  
+#### データ収集を開始および停止するには  
   
--   The following pairs of **VSPerfCmd** options start and stop data collection. Specify each option on a separate command line. You can turn data collection on and off multiple times.  
+-   次に示す **VSPerfCmd** のオプションの組み合わせにより、データ収集を開始および停止します。  個別のコマンド ラインで各オプションを指定します。  データ収集のオンとオフは複数回切り替えることができます。  
   
-    |Option|Description|  
-    |------------|-----------------|  
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Starts (**/globalon**) or stops (**/globaloff**) data collection for all processes.|  
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Starts (**/processon**) or stops (**/processoff**) data collection for the process specified by the process ID (`PID`).|  
-    |**/attach:** {`PID`&#124;`ProcName`} [/detach](../profiling/detach.md)[:{`PID`&#124;`ProcName`}]|**/attach** starts to collect data for the process specified by the process ID or process name. **/detach** stops data collection for the specified process, or for all processes if a process is not specified.|  
+    |オプション|説明|  
+    |-----------|--------|  
+    |[\/globalon \/globaloff](../profiling/globalon-and-globaloff.md)|すべてのプロセスのデータ収集を開始 \(**\/globalon**\) または停止 \(**\/globaloff**\) します。|  
+    |[\/processon](../profiling/processon-and-processoff.md) **:** `PID` [\/processoff](../profiling/processon-and-processoff.md)**:**`PID`|プロセス ID \(`PID`\) で指定されたプロセスのデータ収集を開始 \(**\/processon**\) または停止 \(**\/processoff**\) します。|  
+    |**\/attach:** {`PID`&#124;`ProcName`} [\/detach](../profiling/detach.md)\[:{`PID`&#124;`ProcName`}\]|**\/attach** は、プロセス ID またはプロセス名で指定したプロセスのデータ収集を開始します。  **\/detach** は、指定されたプロセスのデータ収集を停止します。プロセスが指定されていない場合は、すべてのプロセスのデータ収集を停止します。|  
   
-## <a name="ending-the-profiling-session"></a>Ending the Profiling Session  
- To end a profiling session, the profiler must be detached from the service and then explicitly shut down. You can detach native service that is being profiled with the sampling method by stopping the service or by calling the **VSPerfCmd /detach** option. You then call the **VSPerfCmd** [/shutdown](../profiling/shutdown.md) option to turn the profiler off and close the profiling data file.  
+## プロファイル セッションの終了  
+ プロファイル セッションを終了するには、プロファイラーをサービスからデタッチし、明示的に終了する必要があります。  サービスを停止するか **VSPerfCmd \/detach** オプションを呼び出すことによって、サンプリング メソッドでプロファイリングが実行されているネイティブ サービスをデタッチできます。  次に、**VSPerfCmd** [\/shutdown](../profiling/shutdown.md) オプションを呼び出して、プロファイラーをオフにし、プロファイル データ ファイルを閉じます。  
   
-#### <a name="to-end-a-profiling-session"></a>To end a profiling session  
+#### プロファイル セッションを終了するには  
   
-1.  Do one of the following to detach the profiler from the target application:  
+1.  対象アプリケーションからプロファイラーをデタッチするには、次のいずれかの操作を行います。  
   
-    -   Stop the service.  
+    -   サービスを停止します。  
   
-         -or-  
+         または  
   
-    -   Type **VSPerfCmd /detach**  
+    -   「**VSPerfCmd \/detach**」と入力します。  
   
-2.  Shut down the profiler. Type:  
+2.  プロファイラーをシャットダウンします。  Type:  
   
-     **VSPerfCmd /shutdown**  
+     **VSPerfCmd \/shutdown**  
   
-## <a name="see-also"></a>See Also  
- [Profiling Services](../profiling/command-line-profiling-of-services.md)   
- [Sampling Method Data Views](../profiling/profiler-sampling-method-data-views.md)
+## 参照  
+ [プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)   
+ [サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)

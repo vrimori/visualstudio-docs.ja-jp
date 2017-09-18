@@ -1,64 +1,47 @@
 ---
-title: SccGetVersion Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccGetVersion
-helpviewer_keywords:
-- SccGetVersion function
+title: "SccGetVersion 関数 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccGetVersion"
+helpviewer_keywords: 
+  - "SccGetVersion 関数"
 ms.assetid: a6e786bf-744e-4272-9e21-0be44d23b1a1
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 10a9d2103684d28185f4c807cd0a65875360f8f7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="sccgetversion-function"></a>SccGetVersion Function
-This function gets the version number of the Source Control Plug-in API supported by the source control plug-in.  
+# SccGetVersion 関数
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+この関数は、ソース管理プラグインでサポートされているソース管理プラグインの API のバージョン番号を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 LONG SccGetVersion(void);  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- None.  
+#### パラメーター  
+ なし。  
   
-## <a name="return-value"></a>Return Value  
- A `LONG` data type that contains the version number of the supported Source Control Plug-in API:  
+## 戻り値  
+ A `LONG` をサポートされているソース管理プラグインの API のバージョン番号を含むデータ型。  
   
-|WORD|Description|  
-|----------|-----------------|  
-|HIWORD|Major version|  
-|LOWORD|Minor version|  
+|WORD|説明|  
+|----------|--------|  
+|HIWORD|メジャー バージョン|  
+|LOWORD|マイナー バージョン|  
   
-## <a name="remarks"></a>Remarks  
- For example, if a source control plug-in supports version 1.3 of the Source Control Plug-in API, this function would return 0x0103.  
+## 解説  
+ たとえば、ソース管理プラグインでは、ソース管理プラグインの API のバージョン 1.3 をサポートする場合、この関数は 0x0103 に返します。  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)
+## 参照  
+ [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

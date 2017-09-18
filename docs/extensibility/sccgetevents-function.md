@@ -1,83 +1,66 @@
 ---
-title: SccGetEvents Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccGetEvents
-helpviewer_keywords:
-- SccGetEvents function
+title: "SccGetEvents 関数 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccGetEvents"
+helpviewer_keywords: 
+  - "SccGetEvents 関数"
 ms.assetid: 32f8147d-6dcc-465e-b07b-42da5824f9b0
 caps.latest.revision: 13
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8db1e74d8529192408be12c9f87ca4f3ea086516
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
-# <a name="sccgetevents-function"></a>SccGetEvents Function
-This function retrieves a queued status event.  
+# SccGetEvents 関数
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+この関数は、キューに置かれた状態のイベントを取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 SCCRTN SccGetEvents (  
-   LPVOID pvContext,  
-   LPSTR  lpFileName,  
-   LPLONG lpStatus,  
-   LPLONG pnEventsRemaining  
+   LPVOID pvContext,  
+   LPSTR  lpFileName,  
+   LPLONG lpStatus,  
+   LPLONG pnEventsRemaining  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  pvContext  
- [in] The source control plug-in context structure.  
+ \[in\]ソース管理プラグイン コンテキスト構造体。  
   
  lpFileName  
- [in, out] Buffer where the source control plug-in puts the returned file name (up to _MAX_PATH characters).  
+ \[入力、出力\]ソース管理プラグインが返されたファイル名 \(最大 \_MAX\_PATH 文字\) を格納するバッファー。  
   
  lpStatus  
- [in, out] Returns status code (see [File Status Code](../extensibility/file-status-code-enumerator.md) for possible values).  
+ \[入力、出力\]ステータス コードを返します \(を参照してください [ファイルの状態コード](../extensibility/file-status-code-enumerator.md) 指定できる値について\)。  
   
  pnEventsRemaining  
- [in, out] Returns number of entries left in the queue after this call. If this number is large, the caller may decide to call the [SccQueryInfo](../extensibility/sccqueryinfo-function.md) to get all the information at once.  
+ \[入力、出力\]この呼び出しの後、キューに残してエントリの数を返します。 呼び出すことが、呼び出し元がこの数値が大きい場合、 [SccQueryInfo](../extensibility/sccqueryinfo-function.md) 情報を一度にすべてを取得します。  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 戻り値  
+ この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Get events succeeded.|  
-|SCC_E_OPNOTSUPPORTED|This function is not supported.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
+|値|説明|  
+|-------|--------|  
+|SCC\_OK|成功したイベントを取得します。|  
+|SCC\_E\_OPNOTSUPPORTED|この関数がサポートされていません。|  
+|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。|  
   
-## <a name="remarks"></a>Remarks  
- This function is called during idle processing to see if there have been any status updates for files under source control. The source control plug-in maintains status of all the files it knows about, and whenever a change of status is noted by the plug-in, the status and the associated file are stored in a queue. When `SccGetEvents` is called, the top element of the queue is retrieved and returned. This function is constrained to return only previously cached information and must have a very quick turnaround (that is, no reading of the disk or asking the source control system for status); otherwise the performance of the IDE may start to degrade.  
+## 解説  
+ この関数は加えられていないかどうか、ソース管理下にあるファイルのステータスの更新を表示するアイドル状態の処理中に呼び出されます。 ソース管理プラグインが知っているすべてのファイルのステータスを維持し、変更されるたびに状態がによって示されたプラグイン、状態と関連付けられているファイルは、キューに格納します。 ときに `SccGetEvents` が呼び出されると、一番上のキューの要素が取得され、返されます。 この関数は、以前にキャッシュされた唯一の情報を返す制約し、非常に短時間 \(つまり、なし、ディスクの読み取り、または状態にソース管理システムを要求すること\)。 必要があります。それ以外の場合、IDE のパフォーマンスが低下する開始できます。  
   
- If there is no status update to report, the source control plug-in stores an empty string in the buffer pointed to by `lpFileName`. Otherwise, the plug-in stores the full path name of the file for which the status information has changed and returns the appropriate status code (one of the values detailed in [File Status Code](../extensibility/file-status-code-enumerator.md)).  
+ ソース管理プラグインが指すバッファーに空の文字列を格納するレポートへのステータスの更新がない場合は、 `lpFileName`です。 それ以外の場合、プラグインを格納、ファイルの完全なパス名にステータス情報が変更された適切なステータス コードが返されます \(で詳細に説明値の 1 つ [ファイルの状態コード](../extensibility/file-status-code-enumerator.md)\)。  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
- [File Status Code](../extensibility/file-status-code-enumerator.md)
+## 参照  
+ [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+ [ファイルの状態コード](../extensibility/file-status-code-enumerator.md)

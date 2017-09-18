@@ -1,71 +1,54 @@
 ---
-title: IDebugEngine2::RemoveSetException | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugEngine2::RemoveSetException
-helpviewer_keywords:
-- IDebugEngine2::RemoveSetException
+title: "IDebugEngine2::RemoveSetException | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugEngine2::RemoveSetException"
+helpviewer_keywords: 
+  - "IDebugEngine2::RemoveSetException"
 ms.assetid: bdd25097-0e9d-4218-b417-0497ea48d2e8
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 93e7f3ca221460c0f29385249341f85f16299a45
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugengine2removesetexception"></a>IDebugEngine2::RemoveSetException
-Removes the specified exception so it is no longer handled by the debug engine.  
+# IDebugEngine2::RemoveSetException
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+指定した例外を削除します。デバッグ エンジンによって処理されなくなります。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT RemoveSetException(   
-   EXCEPTION_INFO* pException  
+```cpp#  
+HRESULT RemoveSetException(   
+   EXCEPTION_INFO* pException  
 );  
 ```  
   
-```csharp  
-int RemoveSetException(   
-   EXCEPTION_INFO[] pException  
+```c#  
+int RemoveSetException(   
+   EXCEPTION_INFO[] pException  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pException`  
- [in] An [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) structure that describes the exception to be removed.  
+ \[入力\] 例外を削除する [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md) 記述する構造体。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- The exception being removed must have been previously set by an earlier call to the [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) method.  
+## 解説  
+ 削除される例外は [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) のメソッドへの前の呼び出しによって設定する必要があります。  
   
- To remove all set exceptions at once, call the [RemoveAllSetExceptions](../../../extensibility/debugger/reference/idebugengine2-removeallsetexceptions.md) method.  
+ すべての例外をすぐに削除するには[RemoveAllSetExceptions](../Topic/IDebugEngine2::RemoveAllSetExceptions.md) のメソッドを呼び出します。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
- [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)
+ [EXCEPTION\_INFO](../../../extensibility/debugger/reference/exception-info.md)

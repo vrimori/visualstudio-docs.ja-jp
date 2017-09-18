@@ -1,96 +1,79 @@
 ---
-title: IDebugMemoryBytes2::ReadAt | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugMemoryBytes2::ReadAt
-helpviewer_keywords:
-- IDebugMemoryBytes2::ReadAt method
-- ReadAt method
+title: "IDebugMemoryBytes2::ReadAt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugMemoryBytes2::ReadAt"
+helpviewer_keywords: 
+  - "IDebugMemoryBytes2::ReadAt メソッド"
+  - "ReadAt メソッド"
 ms.assetid: b413684d-4155-4bd4-ae30-ffa512243b5f
 caps.latest.revision: 13
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2c92d1be776d3d8e9db23a3871f0f3775dd84397
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
-# <a name="idebugmemorybytes2readat"></a>IDebugMemoryBytes2::ReadAt
-Reads a sequence of bytes, starting at a given location.  
+# IDebugMemoryBytes2::ReadAt
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+指定された位置から開始してバイト シーケンスを読み取ります。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT ReadAt(   
-   IDebugMemoryContext2* pStartContext,  
-   DWORD                 dwCount,  
-   BYTE*                 rgbMemory,  
-   DWORD*                pdwRead,  
-   DWORD*                pdwUnreadable  
+```cpp#  
+HRESULT ReadAt(   
+   IDebugMemoryContext2* pStartContext,  
+   DWORD                 dwCount,  
+   BYTE*                 rgbMemory,  
+   DWORD*                pdwRead,  
+   DWORD*                pdwUnreadable  
 );  
 ```  
   
-```csharp  
+```c#  
 int ReadAt(  
-   IDebugMemoryContext2 pStartContext,  
-   uint                 dwCount,  
-   byte[]               rgbMemory,  
-   out uint             pdwRead,  
-   ref uint             pdwUnreadable  
+   IDebugMemoryContext2 pStartContext,  
+   uint                 dwCount,  
+   byte[]               rgbMemory,  
+   out uint             pdwRead,  
+   ref uint             pdwUnreadable  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pStartContext`  
- [in] The [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object that specifies where to start reading bytes.  
+ \[入力\] 読み取るバイトの場所で起動するかを指定する [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) のオブジェクト。  
   
  `dwCount`  
- [in] The number of bytes to read. Also specifies the length of the `rgbMemory` array.  
+ \[入力\] 読み取るバイト数。  または `rgbMemory` の配列の長さを指定します。  
   
  `rgbMemory`  
- [in, out] Array filled in with the bytes actually read.  
+ \[入力出力\] 実際にに読み取られたバイト数が格納された配列。  
   
  `pdwRead`  
- [out] Returns the number of contiguous bytes actually read.  
+ \[出力\] 実際に読み込まれる連続的なバイト数を返します。  
   
  `pdwUnreadable`  
- [in, out] Returns the number of unreadable bytes. May be a null value if the client is uninterested in the number of unreadable bytes.  
+ \[入力出力\] 不可能なバイト数を返します。  クライアントが不可能なバイト数で無関心の場合は null 値を指定できます。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- If 100 bytes are requested and the first 50 are readable, the next 20 are unreadable, and the remaining 30 are readable, this method returns:  
+## 解説  
+ 100 バイトが必要となり最初の 50 が読み取ることができる場合は次の 20 は不可能であり30 はわかりやすくこのメソッドはを返します。:  
   
- *`pdwRead` = 50  
+ \*`pdwRead` \= 50  
   
- *`pdwUnreadable` = 20  
+ \*`pdwUnreadable` \= 20  
   
- In this case, because `*pdwRead + *pdwUnreadable < dwCount`, the caller must make an additional call to read the remaining 30 bytes of the original 100 requested and the [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object passed in the `pStartContext` parameter must be advanced by 70.  
+ この場合呼び出し元 `*pdwRead + *pdwUnreadable < dwCount` 呼び出しを追加する必要があるため要求された 70 によって元の 100 の残りの 30 バイトと `pStartContext` のパラメーターで渡される [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) のオブジェクトを読み取るために進まなければ必要があります。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

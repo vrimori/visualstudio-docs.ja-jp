@@ -1,93 +1,76 @@
 ---
-title: IDebugFunctionObject::CreateArrayObject | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugFunctionObject::CreateArrayObject
-helpviewer_keywords:
-- IDebugFunctionObject::CreateArrayObject method
+title: "IDebugFunctionObject::CreateArrayObject | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugFunctionObject::CreateArrayObject"
+helpviewer_keywords: 
+  - "IDebugFunctionObject::CreateArrayObject メソッド"
 ms.assetid: a380e53c-15f1-401f-927f-f366eea789e6
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4b4bad39cd9ad636d64ec4c6ea04583dab801e89
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugfunctionobjectcreatearrayobject"></a>IDebugFunctionObject::CreateArrayObject
-Creates an array object. This array can contain either primitive or object instance values.  
+# IDebugFunctionObject::CreateArrayObject
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+配列オブジェクトを作成します。  この配列はプリミティブ型またはオブジェクト インスタンスの値を含むことができます。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT CreateArrayObject(   
-   OBJECT_TYPE    ot,  
-   IDebugField*   pClassField,  
-   DWORD          dwRank,  
-   DWORD          dwDims[],  
-   DWORD          dwLowBounds[],  
-   IDebugObject** ppObject  
+```cpp#  
+HRESULT CreateArrayObject(   
+   OBJECT_TYPE    ot,  
+   IDebugField*   pClassField,  
+   DWORD          dwRank,  
+   DWORD          dwDims[],  
+   DWORD          dwLowBounds[],  
+   IDebugObject** ppObject  
 );  
 ```  
   
-```csharp  
+```c#  
 int CreateArrayObject(  
-   enum_OBJECT_TYPE ot,   
-   IDebugField      pClassField,   
-   uint             dwRank,   
-   uint[]           dwDims,   
-   uint[]           dwLowBounds,   
-   out IDebugObject ppObject  
+   enum_OBJECT_TYPE ot,   
+   IDebugField      pClassField,   
+   uint             dwRank,   
+   uint[]           dwDims,   
+   uint[]           dwLowBounds,   
+   out IDebugObject ppObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ot`  
- [in] Specifies a value from the [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) enumeration indicating the type of the new array object.  
+ \[入力\] 新しい配列オブジェクトの種類を示す [OBJECT\_TYPE](../../../extensibility/debugger/reference/object-type.md) の列挙値を指定します。  
   
  `pClassField`  
- [in] An [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object representing the class of an object, if creating an array of object instance values. If creating an array of primitive objects, this parameter is a null value.  
+ \[入力\] オブジェクト インスタンスで配列を作成するときは[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) を表すオブジェクトのクラス。  基本的なオブジェクトの配列を作成する場合はこのパラメーターは null 値です。  
   
  `dwRank`  
- [in] The rank or number of dimensions of the array.  
+ \[入力\] 配列のランクまたは次元の数。  
   
  `dwDims`  
- [in] The sizes of each dimension of the array.  
+ \[入力\] 配列の各次元のサイズ。  
   
  `dwLowBounds`  
- [in] The origin of each dimension (typically 0 or 1).  
+ \[入力\] 各次元の原点 \(通常は 0 か 1\)。  
   
  `ppObject`  
- [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object representing the newly created array. This is actually an [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md) object.  
+ \[入力\] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) に新しく作成された配列を返します。  これは実際に [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md) のオブジェクトです。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- Call this method to create an object that represents an array parameter to the function which is represented by the [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface.  
+## 解説  
+ [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) のインターフェイスで表される関数への配列パラメーターを表すオブジェクトを作成するためにこのメソッドを呼び出します。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

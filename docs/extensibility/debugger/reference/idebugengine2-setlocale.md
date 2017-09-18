@@ -1,68 +1,51 @@
 ---
-title: IDebugEngine2::SetLocale | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugEngine2::SetLocale
-helpviewer_keywords:
-- IDebugEngine2::SetLocale
+title: "IDebugEngine2::SetLocale | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugEngine2::SetLocale"
+helpviewer_keywords: 
+  - "IDebugEngine2::SetLocale"
 ms.assetid: cd0d2cf1-2aac-43da-a830-4bb3d696c219
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 6b655d95dacbaf5142c6be70141420e553012d73
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugengine2setlocale"></a>IDebugEngine2::SetLocale
-Sets the locale of the debug engine (DE).  
+# IDebugEngine2::SetLocale
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+デバッグ エンジン \(DE\) のロケールを設定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT SetLocale(   
-   WORD wLangID  
+```cpp#  
+HRESULT SetLocale(   
+   WORD wLangID  
 );  
 ```  
   
-```csharp  
-int SetLocale(   
-   ushort wLangID  
+```c#  
+int SetLocale(   
+   ushort wLangID  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `wLangID`  
- [in] Specifies the language locale. For example, 1033 for English.  
+ \[出力\] 言語ロケールを指定します。  たとえば英語の場合は 1033。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- This method is called by the session debug manager (SDM) to propagate the locale settings of the IDE so that strings returned by the DE are properly localized.  
+## 解説  
+ このメソッドはデバッグ セッションのマネージャー \(SDM\) によって de\-DE によって返される文字列が適切にローカライズするように IDE の設定を反映するために呼び出されます。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

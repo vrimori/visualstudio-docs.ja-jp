@@ -1,147 +1,135 @@
 ---
-title: 'Walkthrough: Creating a Legacy Language Service | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- language services [managed package framework], creating
+title: "チュートリアル: 従来の言語サービスの作成 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "作成する言語サービス [マネージ パッケージ framework]"
 ms.assetid: 6a5dd2c2-261b-4efd-a3f4-8fb90b73dc82
 caps.latest.revision: 19
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 1322e22acf70d37e43e68edac4fe23ba96011317
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 19
 ---
-# <a name="walkthrough-creating-a-legacy-language-service"></a>Walkthrough: Creating a Legacy Language Service
-Using the managed package framework (MPF) language classes to implement a language service in [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] is straightforward. You need a VSPackage to host the language service, the language service itself, and a parser for your language.  
+# チュートリアル: 従来の言語サービスの作成
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+マネージ パッケージ フレームワーク \(MPF\) 言語のクラスを使用して、言語サービスを実装する [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] は簡単です。 言語サービス、言語サービス自体、および言語のパーサーをホストする VSPackage が必要です。  
   
-## <a name="prerequisites"></a>Prerequisites  
- To follow this walkthrough, you must install the Visual Studio SDK. For more information, see [Visual Studio SDK](../../extensibility/visual-studio-sdk.md).  
+## 必須コンポーネント  
+ このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、「[Visual Studio SDK](../../extensibility/visual-studio-sdk.md)」を参照してください。  
   
-## <a name="locations-for-the-visual-studio-package-project-template"></a>Locations for the Visual Studio Package Project Template  
- The Visual Studio Package Project Template can be found in three different template locations in the **New Project** dialog box:  
+## Visual Studio パッケージのプロジェクト テンプレートの場所  
+ 次の 3 つの異なるテンプレートの場所で、Visual Studio パッケージ プロジェクト テンプレートが見つかりません、 **新しいプロジェクト** \] ダイアログ ボックス。  
   
-1.  Under Visual Basic Extensibility. The default language of the project is Visual Basic.  
+1.  Visual Basic の機能拡張の下。 プロジェクトの既定の言語は Visual Basic です。  
   
-2.  Under C# Extensibility. The default language of the project is C#.  
+2.  C\# の機能拡張の下。 プロジェクトの既定の言語は C\# です。  
   
-3.  Under Other Project Types Extensibility. The default language of the project is C++.  
+3.  その他のプロジェクトの種類の機能拡張の下。 プロジェクトの既定の言語は C\+\+ です。  
   
-### <a name="create-a-vspackage"></a>Create a VSPackage  
+### VSPackage を作成します。  
   
-1.  Create a new VSPackage with the Visual Studio Package project template.  
+1.  Visual Studio パッケージ プロジェクト テンプレートを使用して新しい VSPackage を作成します。  
   
-     If you are adding a language service to an existing VSPackage, skip the following steps and go directly to the "Create the Language Service Class" procedure.  
+     言語サービスを既存の vs パッケージに追加する場合は、次の手順をスキップし、「言語サービス クラスを作成する」の手順に直接移動します。  
   
-2.  Enter MyLanguagePackage for the name of the project and click **OK**.  
+2.  MyLanguagePackage をプロジェクトの名前を入力し、クリックして **OK**します。  
   
-     You can use whatever name you want. These procedures detailed here assume MyLanguagePackage as the name.  
+     必要な任意の名前を使用することができます。 ここで詳しく説明するこれらの手順では、名前として MyLanguagePackage があるとします。  
   
-3.  Select [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] as the language and the option to generate a new key file. Click **Next**.  
+3.  選択 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] と言語の新しいキー ファイルを生成するオプションです。**\[次へ\]** をクリックします。  
   
-4.  Enter the appropriate company and package information. Click **Next**.  
+4.  適切な企業およびパッケージの情報を入力します。**\[次へ\]** をクリックします。  
   
-5.  Select **Menu Command**. Click **Next**.  
+5.  選択 **メニュー コマンド**します。**\[次へ\]** をクリックします。  
   
-     If you do not intend to support code snippets, you can just click Finish and ignore the next step.  
+     コード スニペットをサポートする予定がない場合はだけ完了\] をクリックし、次の手順を無視します。  
   
-6.  Enter **Insert Snippet** as the **Command Name** and `cmdidInsertSnippet` for the **Command ID**. Click **Finish**.  
+6.  入力 **スニペットを挿入** として、 **コマンド名** と `cmdidInsertSnippet` の **コマンド ID**します。**\[完了\]** をクリックします。  
   
-     The **Command Name** and **Command ID** can be whatever you want, these are just examples.  
+     **コマンド名** と **コマンド ID** 必要な値を指定できます、これらは単なる例です。  
   
-### <a name="create-the-language-service-class"></a>Create the Language Service Class  
+### 言語サービス クラスを作成します。  
   
-1.  In **Solution Explorer**, right-click on the MyLanguagePackage project, choose **Add**, **Reference**, and then choose the **Add New Reference** button.  
+1.  **ソリューション エクスプ ローラー**, MyLanguagePackage プロジェクトを右クリックしてで、 **追加**, 、**参照**, を選択し、 **新しい参照の追加** \] ボタンをクリックします。  
   
-2.  In the **Add Reference** dialog box, select **Microsoft.VisualStudio.Package.LanguageService** in the **.NET** tab and click **OK**.  
+2.  **参照の追加** ダイアログ ボックスで、 **Microsoft.VisualStudio.Package.LanguageService** で、 **.NET** \] タブでをクリックし、 **OK**します。  
   
-     This needs to be done only once for the language package project.  
+     これは、言語のプロジェクトのパッケージに 1 回だけ実行する必要があります。  
   
-3.  In **Solution Explorer**, right-click on the VSPackage project and select **Add**, **Class**.  
+3.  **ソリューション エクスプ ローラー**, VSPackage プロジェクトを右クリックして、選択 **追加**, 、**クラス**します。  
   
-4.  Make sure **Class** is selected in the templates list.  
+4.  確認 **クラス** がテンプレートの一覧で選択されています。  
   
-5.  Enter **MyLanguageService.cs** for the name of the class file and click **Add**.  
+5.  入力 **MyLanguageService.cs** のクラス ファイルをクリックして名前を **追加**します。  
   
-     You can use whatever name you want. These procedures detailed here assume `MyLanguageService` as the name.  
+     必要な任意の名前を使用することができます。 これらの手順をここで詳しく説明 `MyLanguageService` 名として。  
   
-6.  In the MyLanguageService.cs file, add the following `using` statements.  
+6.  MyLanguageService.cs ファイルに次のコードを追加 `using` ステートメントです。  
   
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_1.cs)]  [!code-vb[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_1.vb)]  
+     [!code-cs[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_1.cs)]
+     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_1.vb)]  
   
-7.  Modify the `MyLanguageService` class to derive from the <xref:Microsoft.VisualStudio.Package.LanguageService> class:  
+7.  変更、 `MyLanguageService` クラスから派生する、 <xref:Microsoft.VisualStudio.Package.LanguageService> クラス。  
   
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_2.cs)]  [!code-vb[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_2.vb)]  
+     [!code-cs[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_2.cs)]
+     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_2.vb)]  
   
-8.  Position the cursor on "LanguageService" and from the **Edit**, **IntelliSense** menu, select **Implement Abstract Class**. This adds the minimum necessary methods to implement a language service class.  
+8.  "LanguageService"上にカーソルを配置、 **編集**, 、**IntelliSense** メニューの \[ **抽象クラスの実装**します。 これは、言語サービス クラスを実装する場合は、最低限必要なメソッドを追加します。  
   
-9. Implement the abstract methods as described in [Implementing a Legacy Language Service](../../extensibility/internals/implementing-a-legacy-language-service2.md).  
+9. 抽象メソッドを実装する」の説明に従って [言語サービスを実装します。](../../extensibility/internals/implementing-a-legacy-language-service2.md)します。  
   
-### <a name="register-the-language-service"></a>Register the Language Service  
+### 言語サービスを登録します。  
   
-1.  Open the MyLanguagePackagePackage.cs file and add the following `using` statements:  
+1.  MyLanguagePackagePackage.cs ファイルを開き、次の追加 `using` ステートメント。  
   
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_3.vb)]  [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_3.cs)]  
+     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_3.vb)]
+     [!code-cs[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_3.cs)]  
   
-2.  Register your language service class as described in [Registering a Legacy Language Service](../../extensibility/internals/registering-a-legacy-language-service1.md). This includes the ProvideXX attributes and "Proffering the Language Service" sections. Use MyLanguageService where this topic uses TestLanguageService.  
+2.  」の説明に従って、言語サービス クラスを登録 [言語サービスを登録します。](../../extensibility/internals/registering-a-legacy-language-service1.md)します。 これには、ProvideXX 属性と「、言語サービス Proffering」セクションが含まれます。 このトピックが TestLanguageService を使用して MyLanguageService を使用します。  
   
-### <a name="the-parser-and-scanner"></a>The Parser and Scanner  
+### パーサーとスキャナー  
   
-1.  Implement a parser and scanner for your language as described in [Legacy Language Service Parser and Scanner](../../extensibility/internals/legacy-language-service-parser-and-scanner.md).  
+1.  説明するように、パーサーと、対象の言語のスキャナーを実装 [従来の言語サービス パーサーとスキャナー](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)します。  
   
-     How you implement your parser and scanner is entirely up to you and is beyond the scope of this topic.  
+     パーサーとスキャナーを実装する方法と、すべて開発者はあり、このトピックの範囲を超えてです。  
   
-## <a name="language-service-features"></a>Language Service Features  
- To implement each feature in the language service, you typically derive a class from the appropriate MPF language service class, implement any abstract methods as necessary, and override the appropriate methods. What classes you create and/or derive from is dependent on the features you intend to support. These features are discussed in detail in [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md). The following procedure is the general approach to deriving a class from the MPF classes.  
+## 言語サービスの機能  
+ 言語サービスでは、各機能を実装するに通常適切な MPF 言語サービス クラスから派生クラスを作成、必要に応じて、抽象メソッドを実装および適切なメソッドをオーバーライドします。 作成したりから派生するクラスは、機能依存をサポートする予定があります。 これらの機能の詳細に説明されている [従来の言語サービスの機能](../../extensibility/internals/legacy-language-service-features1.md)します。 次の手順は、MPF クラスからクラスを派生する一般的なアプローチです。  
   
-#### <a name="deriving-from-an-mpf-class"></a>Deriving From an MPF Class  
+#### MPF クラスから派生します。  
   
-1.  In **Solution Explorer**, right-click on the VSPackage project and select **Add**, **Class**.  
+1.  **ソリューション エクスプ ローラー**, VSPackage プロジェクトを右クリックして、選択 **追加**, 、**クラス**します。  
   
-2.  Make sure **Class** is selected in the templates list.  
+2.  確認 **クラス** がテンプレートの一覧で選択されています。  
   
-     Enter a suitable name for the class file and click **Add**.  
+     クラス ファイルの適切な名前を入力し、クリックして **追加**します。  
   
-3.  In the new class file, add the following `using` statements.  
+3.  新しいクラス ファイルで次のコードを追加 `using` ステートメントです。  
   
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_4.cs)]  [!code-vb[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_4.vb)]  
+     [!code-cs[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_4.cs)]
+     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_4.vb)]  
   
-4.  Modify the class to derive from the desired MPF class.  
+4.  目的の MPF クラスから派生するクラスを変更します。  
   
-5.  Add a class constructor that takes at least the same parameters as the base class's constructor and pass the constructor parameters on to the base class constructor.  
+5.  基本クラスのコンス トラクターと同じパラメーターを受け取るには、少なくともクラスのコンス トラクターを追加し、基本クラス コンス トラクターにコンス トラクターのパラメーターを渡します。  
   
-     For example, the constructor for a class derived from the <xref:Microsoft.VisualStudio.Package.Source> class might look like the following:  
+     たとえばから派生したクラスのコンス トラクター、 <xref:Microsoft.VisualStudio.Package.Source> クラスは、次のようになります。  
   
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_5.cs)]  [!code-vb[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_5.vb)]  
+     [!code-cs[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_5.cs)]
+     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_5.vb)]  
   
-6.  From the **Edit**, **IntelliSense** menu, select **Implement Abstract Class** if the base class has any abstract methods that must be implemented.  
+6.  **編集**, 、**IntelliSense** メニューの \[ **抽象クラスの実装** 場合は、基底クラスがある、抽象メソッドを実装する必要があります。  
   
-7.  Otherwise, position the caret inside the class and enter the method to be overridden.  
+7.  それ以外の場合、クラスの内側にキャレットを配置し、オーバーライドするメソッドを入力します。  
   
-     For example, type `public override` to see a list of all methods that can be overridden in that class.  
+     たとえば、「 `public override` そのクラスでオーバーライド可能なすべてメソッド一覧を表示します。  
   
-## <a name="see-also"></a>See Also  
- [Implementing a Legacy Language Service](../../extensibility/internals/implementing-a-legacy-language-service1.md)
+## 参照  
+ [従来の言語サービスを実装します。](../../extensibility/internals/implementing-a-legacy-language-service1.md)

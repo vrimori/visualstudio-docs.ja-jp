@@ -1,132 +1,136 @@
 ---
-title: 'Walkthrough: Creating a DataTable in the Dataset Designer | Microsoft Docs'
-ms.custom: 
-ms.date: 10/19/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- DataTable objects, creating
-- Dataset Designer, creating data tables
-- tables [Visual Studio], creating
-- data [Visual Studio], Dataset Designer
+title: "チュートリアル : データセット デザイナーでの DataTable の作成 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "データ [Visual Studio], データセット デザイナー"
+  - "データセット デザイナー, 作成 (データ テーブルを)"
+  - "DataTable オブジェクト, 作成"
+  - "テーブル [Visual Studio], 作成"
 ms.assetid: abf0a2b5-e4e5-422e-97ef-55a0e35a82df
 caps.latest.revision: 10
-author: gewarren
-ms.author: gewarren
-manager: ghogen
+caps.handback.revision: 10
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 robots: noindex,nofollow
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: f238249749a46879a50e315d03556756afe5983f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
-
 ---
-# <a name="walkthrough-creating-a-datatable-in-the-dataset-designer"></a>Walkthrough: Creating a DataTable in the Dataset Designer
-This walkthrough explains how to create a <xref:System.Data.DataTable> (without a TableAdapter) using the **Dataset Designer**. For information on creating data tables that include TableAdapters, see [Create and configure TableAdapters](../data-tools/create-and-configure-tableadapters.md).  
+# チュートリアル : データセット デザイナーでの DataTable の作成
+このチュートリアルでは、データセット デザイナーを使用して、TableAdapter がない <xref:System.Data.DataTable> を作成する方法を説明します。  TableAdapter を含むデータ テーブルの作成方法については、「[方法 : TableAdapter を作成する](../data-tools/create-and-configure-tableadapters.md)」を参照してください。  
   
- Tasks illustrated in this walkthrough include:  
+ このチュートリアルでは、以下のタスクを行います。  
   
--   Creating a new Windows Forms Application project  
+-   新しい Windows アプリケーション プロジェクトの作成  
   
--   Adding a new dataset to the application  
+-   アプリケーションへの新しいデータセットの追加  
   
--   Adding a new data table to the dataset  
+-   データセットへの新しいデータ テーブルの追加  
   
--   Adding columns to the data table  
+-   データ テーブルへの列の追加  
   
--   Setting the primary key for the table  
+-   テーブルの主キーの設定  
   
-## <a name="creating-a-new-windows-forms-application"></a>Creating a New Windows Forms Application  
+## 新しい Windows アプリケーションの作成  
   
-#### <a name="to-create-a-new-windows-forms-application-project"></a>To create a new Windows Forms Application project  
+#### 新しい Windows アプリケーション プロジェクトを作成するには  
   
-1. In Visual Studio, on the **File** menu, select **New**, **Project...**.  
+1.  **\[ファイル\]** メニューで新しいプロジェクトを作成します。  
   
-2. Expand either **Visual C#** or **Visual Basic** in the left-hand pane, then select **Windows Classic Desktop**.  
-
-3. In the middle pane, select the **Windows Forms App** project type.  
-
-4. Name the project **DataTableWalkthrough**, and then choose **OK**. 
+2.  **\[プロジェクトの種類\]** ペインでプログラミング言語を選択します。  
   
-     The **DataTableWalkthrough** project is created, and added to **Solution Explorer**.  
+3.  **\[テンプレート\]** ペインの **\[Windows アプリケーション\]** をクリックします。  
   
-## <a name="adding-a-new-dataset-to-the-application"></a>Adding a New Dataset to the Application  
+4.  プロジェクトに「`DataTableWalkthrough`」という名前を付け、**\[OK\]** をクリックします。  
   
-#### <a name="to-add-a-new-dataset-item-to-the-project"></a>To add a new dataset item to the project  
+     Visual Studio によってソリューション エクスプローラーにプロジェクトが追加され、デザイナーに **Form1** が表示されます。  
   
-1.  On the **Project** menu, click **Add New Item**.  
+## アプリケーションへの新しいデータセットの追加  
   
-     The Add New Item Dialog Box appears.  
+#### プロジェクトに新しいデータセット項目を追加するには  
   
-2.  In the **Templates** box, select **DataSet**.  
+1.  **\[プロジェクト\]** メニューの **\[新しい項目の追加\]** をクリックします。  
   
-3.  Click **Add**.  
+     \[新しい項目の追加\] ダイアログ ボックスが表示されます。  
   
-     Visual Studio will add a file called **DataSet1.xsd** to the project and open it in the **Dataset Designer**.  
+2.  **\[テンプレート\]** ボックスの **\[データセット\]** を選択します。  
   
-## <a name="adding-a-new-datatable-to-the-dataset"></a>Adding a New DataTable to the Dataset  
+3.  **\[追加\]** をクリックします。  
   
-#### <a name="to-add-a-new-data-table-to-the-dataset"></a>To add a new data table to the dataset  
+     Visual Studio によって **DataSet1.xsd** という名前のファイルがプロジェクトに追加され、データセット デザイナーで開かれます。  
   
-1.  Drag a **DataTable** from the **DataSet** tab of the **Toolbox** onto the **Dataset Designer**.  
+## データセットへの新しいデータ テーブルの追加  
   
-     A table named **DataTable1** is added to the dataset.  
-   
-2.  Click the title bar of **DataTable1** and rename it `Music`.  
+#### データセットに新しいデータ テーブルを追加するには  
   
-## <a name="adding-columns-to-the-data-table"></a>Adding Columns to the Data Table  
+1.  **ツールボックス**の **\[データセット\]** タブから**データセット デザイナー**に、**\[DataTable\]** をドラッグします。  
   
-#### <a name="to-add-columns-to-the-data-table"></a>To add columns to the data table  
+     **DataTable1** という名前のテーブルがデータセットに追加されます。  
   
-1.  Right-click the **Music** table. Point to **Add**, and then click **Column**.  
+    > [!NOTE]
+    >  TableAdapter を含むデータ テーブルの作成方法については、「[チュートリアル : 複数のクエリによる TableAdapter の作成](../data-tools/walkthrough-creating-a-tableadapter-with-multiple-queries.md)」を参照してください。  
   
-2.  Name the column `SongID`.  
+2.  **DataTable1** のタイトル バーをクリックし、「`Music`」に変更します。  
   
-3.  In the **Properties** window, set the <xref:System.Data.DataColumn.DataType%2A> property to <xref:System.Int16?displayProperty=fullName>.  
+## データ テーブルへの列の追加  
   
-4.  Repeat this process and add the following columns:  
+#### データ テーブルに列を追加するには  
   
-     `SongTitle`: <xref:System.String?displayProperty=fullName>  
+1.  **Music** テーブルを右クリックします。  **\[追加\]** をポイントし、**\[列\]** をクリックします。  
   
-     `Artist`: <xref:System.String?displayProperty=fullName>  
+2.  列に「`SongID`」という名前を付けます。  
   
-     `Genre`: <xref:System.String?displayProperty=fullName>  
+3.  **\[プロパティ\]** ウィンドウで、<xref:System.Data.DataColumn.DataType%2A> プロパティを <xref:System.Int16?displayProperty=fullName> に設定します。  
   
-## <a name="setting-the-primary-key-for-the-table"></a>Setting the Primary Key for the Table  
-All data tables should have a primary key. A primary key uniquely identifies a specific record in a data table.  
+4.  この手順を繰り返して、次の列を追加します。  
   
-#### <a name="to-set-the-primary-key-of-the-data-table"></a>To set the primary key of the data table  
+     `SongTitle` : <xref:System.String?displayProperty=fullName>  
   
--   Right-click the **SongID** column, and then click **Set Primary Key**.  
+     `Artist` : <xref:System.String?displayProperty=fullName>  
   
-     A key icon appears next to the **SongID** column.  
+     `Genre` : <xref:System.String?displayProperty=fullName>  
   
-## <a name="saving-your-project"></a>Saving Your Project  
+## テーブルの主キーの設定  
+ すべてのデータ テーブルには、主キーが必要です。  主キーは、データ テーブル内の特定のレコードを一意に識別します。  
   
-#### <a name="to-save-the-datatablewalkthrough-project"></a>To save the DataTableWalkthrough project  
+#### データ テーブルの主キーを設定するには  
   
--   On the **File** menu, click **Save All**.  
+-   **SongID** 列を右クリックし、**\[主キーの設定\]** をクリックします。  
   
-## <a name="see-also"></a>See Also  
-    
- [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Validating Data](validate-data-in-datasets.md)   
- [Saving Data](../data-tools/saving-data.md)   
-
+     キー アイコンが **SongID** 列の隣に表示されます。  
+  
+## プロジェクトの保存  
+  
+#### DataTableWalkthrough プロジェクトを保存するには  
+  
+-   **\[ファイル\]** メニューの **\[すべてを保存\]** をクリックします。  
+  
+## 次の手順  
+ テーブルを作成したので、次の操作を実行できます。  
+  
+|目的|参照項目|  
+|--------|----------|  
+|データ入力用フォームの作成|[チュートリアル: Windows フォームでのデータの表示](../data-tools/walkthrough-displaying-data-on-a-windows-form.md).|  
+|テーブルへのデータの追加|[DataTable へのデータの追加](../Topic/Adding%20Data%20to%20a%20DataTable.md).|  
+|テーブル内のデータの表示|[DataTable 内のデータの表示](../Topic/Viewing%20Data%20in%20a%20DataTable.md).|  
+|データの編集|[DataTable の編集](../Topic/DataTable%20Edits.md)|  
+|テーブルからの行の削除|[DataRow の削除](../Topic/DataRow%20Deletion.md)|  
+  
+## 参照  
+ [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
+ [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
+ [アプリケーションへのデータのフェッチ](../data-tools/fetching-data-into-your-application.md)   
+ [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
+ [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
+ [データの検証](../Topic/Validating%20Data.md)   
+ [データの保存](../data-tools/saving-data.md)   
+ [データに関するチュートリアル](../Topic/Data%20Walkthroughs.md)

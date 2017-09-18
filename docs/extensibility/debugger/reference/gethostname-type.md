@@ -1,79 +1,62 @@
 ---
-title: GETHOSTNAME_TYPE | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- GETHOSTNAME_TYPE
-helpviewer_keywords:
-- GETHOSTNAME_TYPE enumeration
+title: "GETHOSTNAME_TYPE | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "GETHOSTNAME_TYPE"
+helpviewer_keywords: 
+  - "GETHOSTNAME_TYPE 列挙型"
 ms.assetid: 2be92bea-8133-412b-9015-1833baf16e1b
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 103423e638e83954d7cfb44a49264dadd6729eb5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="gethostnametype"></a>GETHOSTNAME_TYPE
-Specifies the type of host name.  
+# GETHOSTNAME_TYPE
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+ホスト名の種類を指定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-enum enum_GETHOSTNAME_TYPE {   
-   GHN_FRIENDLY_NAME = 0,  
-   GHN_FILE_NAME     = 1  
+```cpp#  
+enum enum_GETHOSTNAME_TYPE {   
+   GHN_FRIENDLY_NAME = 0,  
+   GHN_FILE_NAME     = 1  
 };  
 typedef DWORD GETHOSTNAME_TYPE;  
 ```  
   
-```csharp  
-public enum enum_GETHOSTNAME_TYPE {   
-   GHN_FRIENDLY_NAME = 0,  
-   GHN_FILE_NAME     = 1  
+```c#  
+public enum enum_GETHOSTNAME_TYPE {   
+   GHN_FRIENDLY_NAME = 0,  
+   GHN_FILE_NAME     = 1  
 };  
 ```  
   
-## <a name="members"></a>Members  
- GHN_FRIENDLY_NAME  
- Specifies a friendly name of the host.  
+## メンバー  
+ GHN\_FRIENDLY\_NAME  
+ ホストの表示名を指定します。  
   
- GHN_FILE_NAME  
- Specifies a file name of the host.  
+ GHN\_FILE\_NAME  
+ ホストのファイル名を指定します。  
   
-## <a name="remarks"></a>Remarks  
- These values are passed as an argument to the [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) method to retrieve a host name in different formats.  
+## 解説  
+ 引数としてこれらの値は [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) のメソッドにさまざまな形式のホスト名を取得するために渡されます。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 必要条件  
+ ヘッダー : msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## 参照  
+ [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md)

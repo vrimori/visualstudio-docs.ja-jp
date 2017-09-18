@@ -1,82 +1,65 @@
 ---
-title: IDebugProgramEx2::Attach | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgramEx2::Attach
-helpviewer_keywords:
-- IDebugProgramEx2::Attach
+title: "IDebugProgramEx2::Attach | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgramEx2::Attach"
+helpviewer_keywords: 
+  - "IDebugProgramEx2::Attach"
 ms.assetid: 33b22b2f-431e-4205-9441-d28a9c928c97
 caps.latest.revision: 13
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f57c387b7d479b761c4336e3c3cefbe1608a8c3e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
-# <a name="idebugprogramex2attach"></a>IDebugProgramEx2::Attach
-Attach a session to a program.  
+# IDebugProgramEx2::Attach
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+プログラムでセッションを追加します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT Attach(   
-   IDebugEventCallback2* pCallback,  
-   DWORD                 dwReason,  
-   IDebugSession2*       pSession  
+```cpp#  
+HRESULT Attach(   
+   IDebugEventCallback2* pCallback,  
+   DWORD                 dwReason,  
+   IDebugSession2*       pSession  
 );  
 ```  
   
 ```  
 [C#]  
-int Attach(   
-   IDebugEventCallback2 pCallback,  
-   uint                 dwReason,  
-   IDebugSession2       pSession  
+int Attach(   
+   IDebugEventCallback2 pCallback,  
+   uint                 dwReason,  
+   IDebugSession2       pSession  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pCallback`  
- [in] An [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) object that represents the callback function that the attached debug engine sends events to.  
+ \[入力\] アタッチされたデバッグ エンジンはイベントを送信 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) コールバック関数を表すオブジェクト。  
   
  `dwReason`  
- [in] A value from the [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) enumeration that describes the reason for the attach operation.  
+ \[入力\] アタッチ操作の理由を説明する [ATTACH\_REASON](../../../extensibility/debugger/reference/attach-reason.md) の列挙体の値。  
   
  `pSession`  
- [in] A value that uniquely identifies the session that is attaching to the program.  
+ \[入力\] プログラムにアタッチしているセッションを識別する値。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns an error code. This method should return `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` if the program is already attached.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  このメソッドはプログラムが既にアタッチされている `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` を返す必要があります。  
   
-## <a name="remarks"></a>Remarks  
- The port that contains the program can use the value in `pSession` to determine which session is attempting to attach to the program. For example, if a port allows only one debug session to attach to a process at a time, the port can determine if the same session is already attached to other programs in the process.  
+## 解説  
+ プログラムを含むポートは `pSession` でのセッションがプログラムにアタッチするかを確認するには値を使用できます。  たとえばポートに 1 人のデバッグ セッションがプロセスにアタッチする一度に確保したポートは同じセッションのプロセスの他のプログラムに既にアタッチされているかどうかを確認できます。  
   
 > [!NOTE]
->  The interface passed in `pSession` is to be treated only as a cookie, a value that uniquely identifies the session debug manager attaching to this program; none of the methods on the supplied interface are functional.  
+>  渡されたインターフェイス`pSession`このプログラムにアタッチしているマネージャーのデバッグ セッションを識別する値として扱う必要があります。; 指定されたインターフェイスのメソッドが機能しません。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

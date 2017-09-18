@@ -1,68 +1,52 @@
 ---
-redirect_url: /visualstudio/csharp-ide/refactoring/extract-method
-title: Extract Method Refactoring (C#) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- refactoring [C#], Extract Method
-- Extract Method refactoring operation [C#]
+title: "メソッドの抽出リファクタリング (C#) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.csharp.refactoring.extractmethod"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "リファクタリング [C#], メソッドの抽出"
+  - "[メソッドの展開] リファクタリング操作 [C#]"
 ms.assetid: eeba11df-a815-4bec-9c21-8a831891b783
 caps.latest.revision: 29
-author: BillWagner
-ms.author: wiwagn
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d6c1bfe18f3fd2177efb31827340bff306ed7a9e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+caps.handback.revision: 29
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
 ---
-# <a name="extract-method-refactoring-c"></a>Extract Method Refactoring (C#)
-**Extract Method** is a refactoring operation that provides an easy way to create a new method from a code fragment in an existing member.  
+# メソッドの抽出リファクタリング (C#)
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+**\[メソッドの抽出\]** は、既存のメンバーのコード片から新規メソッドを簡単に作成できるリファクタリング操作です。  
   
- Using **Extract Method**, you can create a new method by extracting a selection of code from inside the code block of an existing member. The new, extracted method contains the selected code, and the selected code in the existing member is replaced with a call to the new method. Turning a fragment of code into its own method lets you quickly and accurately reorganize code for better reuse and readability.  
+ **\[メソッドの抽出\]** を使用すると、既存メンバーのコード ブロック内からコードの選択部分を抽出することで、新規メソッドを作成できます。  抽出された新しいメソッドには選択したコードが含められ、既存のメンバー内の選択したコードは、新規メソッドへの呼び出しに置き換えられます。  コード片を独立したメソッドにすることで、コードをすばやく正確に再構成でき、再利用性と読みやすさが向上します。  
   
- **Extract Method** has the following benefits:  
+ **\[メソッドの抽出\]** には、次の利点があります。  
   
--   Encourages best coding practices by emphasizing discrete, reusable methods.  
+-   メソッドの独立性と再利用可能性を重視することで、コーディングの推奨手順を遵守できる。  
   
--   Encourages self-documenting code through good organization.  
+-   適切に構成することで、コードを自己文書化できる。  
   
-     When descriptive names are used, high-level methods can read more like a series of comments.  
+     説明的な名前を使用すると、高水準のメソッドも一連のコメントのように読みやすくなる。  
   
--   Encourages the creation of finer-grained methods to simplify overriding.  
+-   オーバーライドを単純にするために、詳細なメソッドの作成が促進される。  
   
--   Reduces code duplication.  
+-   コードの重複を減らすことができる。  
   
-### <a name="to-use-extract-method"></a>To use Extract Method  
+### \[メソッドの展開\] を使用するには  
   
-1.  Create a console application named `ExtractMethod`, and then replace `Program` with the following example code.  
+1.  `ExtractMethod` という名前のコンソール アプリケーションを作成し、`Program` を次のプログラム例で置き換えます。  
   
-    ```csharp  
+    ```c#  
     class A  
     {  
         const double PI = 3.141592;  
@@ -84,43 +68,44 @@ ms.lasthandoff: 08/28/2017
     }  
     ```  
   
-2.  Select the code fragment you want to extract:  
+2.  抽出するコード片を選択します。  
   
-    ```csharp  
+    ```c#  
     double area = PI * radius * radius;  
+  
     ```  
   
-3.  On the **Refactor** menu, click **Extract Method**.  
+3.  **\[リファクター\]** メニューの **\[メソッドの展開\]** をクリックします。  
   
-     The **Extract Method** dialog box appears.  
+     **\[メソッドの抽出\]** ダイアログ ボックスが表示されます。  
   
-     Alternatively, you can also type the keyboard shortcut CTRL+R, M to display the **Extract Method** dialog box.  
+     または、キーボード ショートカットとして Ctrl キーを押しながら R キーを押し、次に M キーを押すことでも、**\[メソッドの展開\]** ダイアログ ボックスを表示できます。  
   
-     You can also right-click the selected code, point to **Refactor**, and then click **Extract Method** to display the **Extract Method** dialog box.  
+     **\[メソッドの展開\]** ダイアログ ボックスを表示するには、選択したコードを右クリックし、**\[リファクター\]** をポイントし、**\[メソッドの展開\]** をクリックする方法もあります。  
   
-4.  Specify a name for the new method, such as `CircleArea`, in the **New Method Name** box.  
+4.  **\[新しいメソッド名\]** ボックスに新規メソッドの名前 \(たとえば「`CircleArea`」\) を入力します。  
   
-     A preview of the new method signature displays under **Preview Method Signature**.  
+     新規メソッド シグネチャのプレビューが **\[メソッド シグネチャのプレビュー\]** に表示されます。  
   
-5.  Click **OK**.  
+5.  **\[OK\]** をクリックします。  
   
-## <a name="remarks"></a>Remarks  
- When you use the **Extract Method** command, the new method is inserted following the source member in the same class.  
+## 解説  
+ **\[メソッドの抽出\]** を使用すると、新規メソッドが同じクラスのソース メンバーの後に挿入されます。  
   
-## <a name="partial-types"></a>Partial Types  
- If the class is a partial type, then **Extract Method** generates the new method immediately following the source member. **Extract Method** determines the signature of the new method, creating a static method when no instance data is referenced by the code in the new method.  
+## 部分型  
+ クラスが部分型である場合は、**\[メソッドの抽出\]** によって新規メソッドがソース メンバーの直後に作成されます。  **\[メソッドの抽出\]** では、新規メソッドのシグネチャを決定し、新規メソッド内のコードでインスタンス データが参照されていない場合は静的メソッドを作成します。  
   
-## <a name="generic-type-parameters"></a>Generic Type Parameters  
- When you extract a method that has an unconstrained generic type parameter, the generated code will not add the `ref` modifier to that parameter unless a value is assigned to it. If the extracted method will support reference types as the generic type argument, then you should manually add the `ref` modifier to the parameter in the method signature.  
+## ジェネリック型パラメーター  
+ 制約のないジェネリック型パラメーターを持つメソッドを抽出する場合、生成されるコードでは、そのパラメーターに値が割り当てられない限り `ref` 修飾子は追加されません。  抽出されたメソッドでジェネリック型引数として参照型をサポートする場合は、メソッド シグネチャ内のパラメーターに手動で `ref` 修飾子を追加する必要があります。  
   
-## <a name="anonymous-methods"></a>Anonymous Methods  
- If you try to extract part of an anonymous method that includes a reference to a local variable that is either declared or referenced outside the anonymous method, then Visual Studio will warn you about potential semantic changes.  
+## 匿名メソッド  
+ 匿名メソッドにローカル変数への参照が含まれていて、そのローカル変数が匿名メソッドの外部で宣言または参照されている場合、匿名メソッドの一部を抽出しようとすると、セマンティクスが変更される可能性があるという警告が表示されます。  
   
- When an anonymous method uses the value of a local variable, the value is obtained at the moment the anonymous method is executed. When an anonymous method is extracted into another method, the value of the local variable is obtained at the moment of the call to the extracted method.  
+ 匿名メソッドでローカル変数の値を使用する場合、その値は匿名メソッドの実行時に取得されます。  匿名メソッドが別のメソッドに抽出される場合、ローカル変数の値は、抽出されたメソッドの呼び出し時に取得されます。  
   
- The following example illustrates this semantic change. If this code is executed, then **11** will be printed to the console. If you use **Extract Method** to extract the region of code that is marked by code comments into its own method and then execute the refactored code, then **10** will be printed to the console.  
+ このセマンティクスの変更について、次に例を示します。  このコードを実行すると、コンソールには "**11**" が出力されます。  **\[メソッドの抽出\]** を使用して、コード コメントでマークされているコードの一部を独自メソッドに抽出し、その後リファクタリングされたコードを実行すると、コンソールには "**10**" が出力されます。  
   
-```csharp  
+```c#  
 class Program  
 {  
     delegate void D();  
@@ -138,7 +123,7 @@ class Program
 }  
 ```  
   
- To work around this situation, make the local variables that are used in the anonymous method fields of the class.  
+ この問題を回避するには、匿名メソッドで使用されているローカル変数をクラスのフィールドにします。  
   
-## <a name="see-also"></a>See Also  
- [Refactoring (C#)](refactoring-csharp.md)
+## 参照  
+ [Refactoring \(C\#\)](../csharp-ide/refactoring-csharp.md)

@@ -1,99 +1,82 @@
 ---
-title: IDebugComPlusSymbolProvider::GetSymAttribute | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugComPlusSymbolProvider::GetSymAttribute
-- GetSymAttribute
+title: "IDebugComPlusSymbolProvider::GetSymAttribute | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugComPlusSymbolProvider::GetSymAttribute"
+  - "GetSymAttribute"
 ms.assetid: 6cbaac92-a60b-4165-a7f5-c34407770f3c
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0f4f2c9435ff4fd195aab7b0b3193c498841b5d5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugcomplussymbolprovidergetsymattribute"></a>IDebugComPlusSymbolProvider::GetSymAttribute
-Retrieves the debug symbols with the given parent attribute for the specified module.  
+# IDebugComPlusSymbolProvider::GetSymAttribute
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+指定したモジュールの特定の親の属性のデバッグ シンボルを取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT GetSymAttribute (  
-   ULONG32  ulAppDomainID,  
-   GUID     guidModule,  
-   _mdToken tokParent,  
-   LPOLESTR pstrName,  
-   ULONG32  cBuffer,  
-   ULONG32* pcBuffer,  
-   BYTE*    buffer  
+   ULONG32  ulAppDomainID,  
+   GUID     guidModule,  
+   _mdToken tokParent,  
+   LPOLESTR pstrName,  
+   ULONG32  cBuffer,  
+   ULONG32* pcBuffer,  
+   BYTE*    buffer  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetSymAttribute (  
-   uint      ulAppDomainID,  
-   Guid      guidModule,  
-   int       tokParent,  
-   string    pstrName,  
-   uint      cBuffer,  
-   out uint  pcBuffer,  
-   out int[] buffer  
+   uint      ulAppDomainID,  
+   Guid      guidModule,  
+   int       tokParent,  
+   string    pstrName,  
+   uint      cBuffer,  
+   out uint  pcBuffer,  
+   out int[] buffer  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ulAppDomainID`  
- [in] Identifier of the application domain.  
+ \[出力\] アプリケーション ドメインの ID。  
   
  `guidModule`  
- [in] Unique identifier of the module.  
+ \[出力\] モジュールの一意の識別子。  
   
  `tokParent`  
- [in] Token for the parent attribute.  
+ \[入力\] 親の属性のトークン。  
   
  `pstrName`  
- [in] Name of the module.  
+ \[出力\] モジュールの名前。  
   
  `cBuffer`  
- [in] Number of bytes required for the output `buffer`.  
+ \[出力\] `buffer` に必要なバイト数。  
   
  `pcBuffer`  
- [out] Length of the output `buffer`.  
+ \[出力\] `buffer` の長さ。  
   
  `buffer`  
- [out] Array that contains the symbols.  
+ \[出力\] 配列します。シンボルを格納する。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## 使用例  
+ 次の例に [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider の**  オブジェクトに対してこのメソッドを実装する方法を示します。  
   
-```cpp  
+```cpp#  
 HRESULT CDebugSymbolProvider::GetSymAttribute(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -121,5 +104,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

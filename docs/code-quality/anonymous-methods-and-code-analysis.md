@@ -1,69 +1,52 @@
 ---
-title: Anonymous Methods and Code Analysis | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- methods, anonymous
-- code analysis, anonymous methods
-- anonymous methods, code analysis
+title: "匿名メソッドとコード分析 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-devops-test"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "匿名メソッド, コード分析"
+  - "コード分析, 匿名メソッド"
+  - "メソッド, 匿名"
 ms.assetid: bf0a1a9b-b954-4d46-9c0b-cee65330ad00
 caps.latest.revision: 19
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 85a6bd427cf3bc5cada6bbec20b2b919e2a02d62
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+caps.handback.revision: 19
 ---
-# <a name="anonymous-methods-and-code-analysis"></a>Anonymous Methods and Code Analysis
-An *anonymous method* is a method that has no name. Anonymous methods are most frequently used to pass a code block as a delegate parameter.  
+# 匿名メソッドとコード分析
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+*匿名メソッド*は、名前を持たないメソッドです。  匿名メソッドは、コード ブロックをデリゲート パラメーターとして渡すために最も頻繁に使用されます。  
   
- This topic explains how Code Analysis handles warnings and metrics that are associated with anonymous methods.  
+ このトピックでは、匿名メソッドに関連付けられた警告やメトリックスがコード分析でどのように処理されるかについて説明します。  
   
-## <a name="anonymous-methods-declared-in-a-member"></a>Anonymous Methods Declared In a Member  
- Warnings and metrics for an anonymous method that is declared in a member, such as a method or accessor, are associated with the member that declares the method. They are not associated with the member that calls the method.  
+## メンバー内で宣言された匿名メソッド  
+ メソッドやアクセサーなど、メンバーで宣言されている匿名メソッドの警告やメトリックスは、メソッドを宣言するメンバーに関連付けられます。  メソッドを呼び出すメンバーには関連付けられません。  
   
- For example, in the following class, any warnings that are found in the declaration of **anonymousMethod** should be raised against **Method1** and not **Method2**.  
+ たとえば、次のクラスでは、**anonymousMethod** の宣言内にあるすべての警告は、**Method2** ではなく **Method1** に対して発生させる必要があります。  
   
-```vb  
+```vb#  
   
-      Delegate Function ADelegate(ByVal value As Integer) As Boolean  
+        Delegate Function ADelegate(ByVal value As Integer) As Boolean  
 Class AClass  
   
     Sub Method1()  
-        Dim anonymousMethod As ADelegate = Function(ByVal value As Integer) value > 5  
+        Dim anonymousMethod As ADelegate = Function(ByVal value As  Integer) value > 5  
         Method2(anonymousMethod)  
-    End SubSub Method2(ByVal anonymousMethod As ADelegate)  
+    End Sub Sub Method2(ByVal anonymousMethod As ADelegate)  
         anonymousMethod(10)  
-    End SubEnd Class  
+    End Sub End Class  
 ```  
   
-```csharp  
+```c#  
   
-      delegate void Delegate();  
+        delegate void Delegate();  
 class Class  
 {  
     void Method1()  
@@ -82,26 +65,26 @@ class Class
 }  
 ```  
   
-## <a name="inline-anonymous-methods"></a>Inline Anonymous Methods  
- Warnings and metrics for an anonymous method that is declared as an inline assignment to a field are associated with the constructor. If the field is declared as `static` (`Shared` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]), the warnings and metrics are associated with the class constructor; otherwise, they are associated with the instance constructor.  
+## インラインの匿名メソッド  
+ フィールドへのインラインの代入として宣言された匿名メソッドの警告やメトリックスは、コンストラクターに関連付けられます。  フィールドが `static` \([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 内の `Shared`\) として宣言されている場合、警告とメトリックスはクラス コンストラクターに関連付けらます。それ以外の場合は、インスタンス コンストラクターに関連付けられます。  
   
- For example, in the following class, any warnings that are found in the declaration of **anonymousMethod1** will be raised against the implicitly generated default constructor of **Class**. Whereas, those found in **anonymousMethod2** will be applied against the implicitly generated class constructor.  
+ たとえば、次のクラスでは、**anonymousMethod1** の宣言内にあるすべての警告は、暗黙的に生成された **Class** の既定のコンストラクターに対して発生します。  一方、**anonymousMethod2** 内にある警告は、暗黙的に生成されたクラス コンストラクターに対して適用されます。  
   
-```vb  
+```vb#  
   
-  Delegate Function ADelegate(ByVal value As Integer) As BooleanClass AClass  
-Dim anonymousMethod1 As ADelegate = Function(ByVal value As    Integer) value > 5  
-Shared anonymousMethod2 As ADelegate = Function(ByVal value As     Integer) value > 5  
+    Delegate Function ADelegate(ByVal value As Integer) As Boolean Class AClass  
+Dim anonymousMethod1 As ADelegate = Function(ByVal value As     Integer) value > 5  
+Shared anonymousMethod2 As ADelegate = Function(ByVal value As      Integer) value > 5  
   
 Sub Method1()  
     anonymousMethod1(10)  
     anonymousMethod2(10)  
-End SubEnd Class  
+End Sub End Class  
 ```  
   
-```csharp  
+```c#  
   
-      delegate void Delegate();  
+        delegate void Delegate();  
 class Class  
 {  
     Delegate anonymousMethod1 = delegate()   
@@ -122,27 +105,27 @@ class Class
 }  
 ```  
   
- A class could contain an inline anonymous method that assigns a value to a field that has multiple constructors. In this case, warnings and metrics are associated with all the constructors unless that constructor chains to another constructor in the same class.  
+ クラスには、複数のコンストラクターを持つフィールドに値を割り当てる、インラインの匿名メソッドが含まれることがあります。  この場合、そのコンストラクターが同じクラスの別のコンストラクターにチェーンしている限り、警告とメトリックスはすべてのコンストラクターに関連付けられます。  
   
- For example, in the following class, any warnings that are found in the declaration of **anonymousMethod** should be raised against **Class(int)** and **Class(string)** but not against **Class()**.  
+ たとえば、次のクラスでは、**anonymousMethod** の宣言内にあるすべての警告は、**Class\(int\)** および **Class\(string\)** に対して発生させる必要がありますが、**Class\(\)** に対して発生させる必要はありません。  
   
-```vb  
+```vb#  
   
-  Delegate Function ADelegate(ByVal value As Integer) As BooleanClass AClass  
+    Delegate Function ADelegate(ByVal value As Integer) As Boolean Class AClass  
   
 Dim anonymousMethod As ADelegate = Function(ByVal value As Integer)   
 value > 5  
   
-SubNew()  
+Sub New()  
     New(CStr(Nothing))  
-End SubSub New(ByVal a As Integer)  
-End SubSub New(ByVal a As String)  
-End SubEnd Class  
+End Sub Sub New(ByVal a As Integer)  
+End Sub Sub New(ByVal a As String)  
+End Sub End Class  
 ```  
   
-```csharp  
+```c#  
   
-      delegate void Delegate();  
+        delegate void Delegate();  
 class Class  
 {  
     Delegate anonymousMethod = delegate()   
@@ -164,9 +147,9 @@ class Class
 }  
 ```  
   
- Although this might seem unexpected, this occurs because the compiler outputs a unique method for every constructor that does not chain to another constructor. Because of this behavior, any violation that occurs in **anonymousMethod** must be suppressed separately. This also means that if a new constructor is introduced, warnings that were previously suppressed against **Class(int)** and **Class(string)** must also be suppressed against the new constructor.  
+ 予想外に思えるかもしれませんが、これは、コンパイラが別のコンストラクターにチェーンしていないすべてのコンストラクターに一意のメソッドを出力するために発生します。  この動作のため、**anonymousMethod** 内で発生するすべての違反は個別に抑制する必要があります。  また、新しいコンストラクターが導入された場合は、それまで **Class\(int\)** と **Class\(string\)** に対して抑制していた警告を、新しいコンストラクターに対しても抑制する必要があります。  
   
- You can work around this issue in one of two ways. You could declare **anonymousMethod** in a common constructor that all constructors chain. Or you could declare it in an initialization method that is called by all constructors.  
+ この問題は、2 つの方法のいずれかで回避することができます。  すべてのコンストラクターにチェーンしている共通のコンストラクター内に **anonymousMethod** を宣言します。  または、すべてのコンストラクターから呼び出される初期化メソッド内に宣言します。  
   
-## <a name="see-also"></a>See Also  
- [Analyzing Managed Code Quality](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)
+## 参照  
+ [マネージ コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)

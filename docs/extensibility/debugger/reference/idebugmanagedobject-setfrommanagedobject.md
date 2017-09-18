@@ -1,68 +1,51 @@
 ---
-title: IDebugManagedObject::SetFromManagedObject | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugManagedObject::SetFromManagedObject
-helpviewer_keywords:
-- IDebugManagedObject::SetFromManagedObject method
+title: "IDebugManagedObject::SetFromManagedObject | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugManagedObject::SetFromManagedObject"
+helpviewer_keywords: 
+  - "IDebugManagedObject::SetFromManagedObject メソッド"
 ms.assetid: 8700ee8d-2704-4580-bccc-046837a24edd
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d19df4fd8726ed3e59d57b314e19684b0a7f6a5e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugmanagedobjectsetfrommanagedobject"></a>IDebugManagedObject::SetFromManagedObject
-Sets the value of the instance of the value class object from the instance of the value class provided as a parameter.  
+# IDebugManagedObject::SetFromManagedObject
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+パラメーターとして指定される値クラスのインスタンスの値クラスのオブジェクト インスタンスの値を設定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT SetFromManagedObject(   
-   IUnknown* pManagedObject  
+```cpp#  
+HRESULT SetFromManagedObject(   
+   IUnknown* pManagedObject  
 );  
 ```  
   
-```csharp  
+```c#  
 int SetFromManagedObject(  
-   object pManagedObject  
+   object pManagedObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pManagedObject`  
- [in] An interface that represents the managed object containing the new value.  
+ \[入力\] 値が設定されているマネージ オブジェクトを表すインターフェイス。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- This method is used to change the managed object as represented by the [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) object.  
+## 解説  
+ このメソッドが [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) のオブジェクトによって表されるいるマネージ オブジェクトを変更するために使用されます。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

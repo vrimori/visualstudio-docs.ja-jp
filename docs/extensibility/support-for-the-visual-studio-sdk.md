@@ -1,5 +1,5 @@
 ---
-title: Support for the Visual Studio SDK | Microsoft Docs
+title: "Visual Studio SDK のサポート |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,55 +32,53 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: bc8f895d87b6d76e2894aad799d1e12e687fc80c
-ms.openlocfilehash: ea6ca9b6157c956e9471285d7010368f0dee86be
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: c8c6be06d59a3c7737c0f15bff86f627b4fb8827
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="support-for-the-visual-studio-sdk"></a>Support for the Visual Studio SDK
-Several support options are available for customers who have questions about how to extend the Visual Studio integrated development environment (IDE).  
+# <a name="support-for-the-visual-studio-sdk"></a>Visual Studio SDK のサポート
+いくつかのサポート オプションが Visual Studio 統合開発環境 (IDE) を拡張する方法についてご質問がある方のためにあります。  
   
-## <a name="free-support"></a>Free Support  
+## <a name="free-support"></a>無償サポート  
   
-### <a name="msdn-development-center"></a>MSDN Development Center  
- The [Visual Studio Extensibility Developer Center](http://go.microsoft.com/fwlink/?LinkID=84381) on MSDN contains resources that help answer questions about how to extend Visual Studio. For example, there are several links to VSIP developer blogs.  
+### <a name="msdn-development-center"></a>MSDN デベロッパー センター  
+ [Visual Studio Extensibility Developer Center](http://go.microsoft.com/fwlink/?LinkID=84381) MSDN の Visual Studio を拡張する方法についての質問に役立つリソースが含まれています。 たとえば、VSIP 開発者のブログをいくつかのリンクがあります。  
   
-### <a name="microsoft-newsgroups"></a>Microsoft Newsgroups  
- Members of the Visual Studio development team and other developers who extend Visual Studio often participate in the microsoft.public.vstudio.extensibility newsgroup. This newsgroup is a managed newsgroup. If you are an MSDN Universal Subscriber, make sure that you register a no-spam alias to make it possible for Microsoft to respond.  
+### <a name="microsoft-newsgroups"></a>マイクロソフトのニュースグループ  
+ Visual Studio 開発チームと多くの場合、Visual Studio を拡張するその他の開発者のメンバーは、microsoft.public.vstudio.extensibility ニュースグループに参加します。 このニュースグループは、管理ニュースグループです。 MSDN Universal サブスクリプション会員の場合は、応答を可能にするアンチ スパム エイリアスを登録することを確認します。  
   
-### <a name="msdn-forums"></a>MSDN Forums  
- The [MSDN Forums](http://go.microsoft.com/fwlink/?LinkID=76632) provide another way to chat with peers and experts. The graphical user interface (UI) of the forums is designed to make them easier to use than newsgroups. The [Visual Studio Extensibility Forum](http://go.microsoft.com/fwlink/?LinkID=121964) is a good place to start to search for answers to extensibility questions. Always search before you ask a question because someone else may already have asked the same question.  
+### <a name="msdn-forums"></a>MSDN フォーラム  
+ [MSDN フォーラム](http://go.microsoft.com/fwlink/?LinkID=76632)同僚や専門家とチャットする別の方法を提供します。 フォーラムのグラフィカル ユーザー インターフェイス (UI) はニュースグループよりも使いやすくために設計されています。 [Visual Studio 機能拡張フォーラム](http://go.microsoft.com/fwlink/?LinkID=121964)に対する機能拡張の質問に対する回答の検索を開始することをお勧めします。 他のユーザーが既にこのような同じ質問があるため、質問を投稿する前に、常に検索します。  
   
-### <a name="visual-studio-gallery"></a>Visual Studio Gallery  
- The [Visual Studio Gallery](http://visualstudiogallery.msdn.microsoft.com/) is the place for extensions and sample code. You can find tools that improve your productivity and user experience with Visual Studio, sample applications that show how to use VSPackages and the Managed Extensibility Framework (MEF), and other kinds of samples.  
+### <a name="visual-studio-gallery"></a>Visual Studio ギャラリー  
+ [Visual Studio ギャラリー](http://visualstudiogallery.msdn.microsoft.com/)拡張機能およびサンプル コードの場所です。 Visual Studio、Vspackage と Managed Extensibility Framework (MEF) およびその他のサンプルを使用する方法を示すサンプル アプリケーションで発生する高い生産性とユーザー ツールを検索できます。  
   
-### <a name="visual-studio-sdk-samples"></a>Visual Studio SDK Samples
-
-You can find open source examples of VS SDK extensions on GitHub at [Visual Studio Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples). This GitHub repository contains samples that illustrate various extensible features in Visual Studio.
-
-## <a name="included-support"></a>Included Support  
+### <a name="codeplex"></a>Codeplex  
+ [CodePlex](http://go.microsoft.com/fwlink/?LinkId=76627) Microsoft オープン ソース プロジェクト ホスト Web サイトです。 CodePlex を使用するには作成し、新しいプロジェクトを共有、既存のプロジェクトに関与またはサイトのアプリケーションの使用およびフィードバックを提供します。 以前のバージョンに含まれていたすべての Powertoy (とそのドキュメント)、[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]は CodePlex で提供されています。  
   
-### <a name="visual-studio-product-support"></a>Visual Studio Product Support  
- Some support is included with the purchase of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] products. For more information, see [Visual Studio Support](http://msdn.microsoft.com/vstudio/cc136615.aspx). Microsoft maintains a dedicated support team to answer questions about [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extensibility.  
+## <a name="included-support"></a>含まれるサポート  
   
-### <a name="msdn-subscription-support"></a>MSDN Subscription Support  
- MSDN subscription packages may also include some support. For more information, see [MSDN Subscriber Support](https://msdn.microsoft.com/subscriptions/aa718661.aspx).  
+### <a name="visual-studio-product-support"></a>Visual Studio 製品のサポート  
+ いくつかのサポートの購入時に含まれています[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]製品です。 詳細については、次を参照してください。 [Visual Studio のサポート](http://msdn.microsoft.com/vstudio/cc136615.aspx)します。 Microsoft では、専門のサポート チームに関する質問に答える[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張します。  
   
-## <a name="paid-support"></a>Paid Support  
+### <a name="msdn-subscription-support"></a>MSDN サブスクリプションのサポート  
+ MSDN サブスクリプション パッケージには、いくつかのサポートを含めることもできます。 詳細については、次を参照してください。 [MSDN サブスクリプション会員のサポート](https://msdn.microsoft.com/subscriptions/aa718661.aspx)します。  
   
-### <a name="developer-tools-support"></a>Developer Tools Support  
- Support can also be purchased. A variety of support offerings are available under the Developer Tools category at [Microsoft Help and Support Centers](http://go.microsoft.com/fwlink/?LinkID=82383).  
+## <a name="paid-support"></a>有料のサポート  
   
- Customers who want to use the [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] to develop complex packages can consider purchasing a Premier Support contract with Microsoft. For more information, see [Microsoft Premier Support](http://go.microsoft.com/fwlink/?LinkID=76660). For small companies, [Partner Advantage Support](http://www.microsoft.com/services/microsoftservices/srv_mspa.mspx) may be an attractive alternative to a traditional Premier Support offering.  
+### <a name="developer-tools-support"></a>開発者ツールのサポート  
+ サポートを購入することもできます。 さまざまなサポートの提供を開発者用ツール カテゴリの下で使用可能な[Microsoft ヘルプとサポート センター](http://go.microsoft.com/fwlink/?LinkID=82383)します。  
+  
+ 使用する顧客にとって、[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]複雑なパッケージを開発することを検討してくださいマイクロソフト プレミア サポート契約を購入します。 詳細については、次を参照してください。[マイクロソフト プレミア サポート](http://go.microsoft.com/fwlink/?LinkID=76660)します。 小規模企業に[パートナー利用サポート](http://www.microsoft.com/services/microsoftservices/srv_mspa.mspx)従来のプレミア サポートが提供する代わりに魅力的な場合があります。  
   
 > [!NOTE]
->  Standard support cannot be used for consultation or to obtain advice.  
+>  相談やアドバイスを得るには、標準のサポートを使用できません。  
   
- Questions about Premier Support offerings in conjunction with the VSIP program can be sent to [vsipsvs@microsoft.com](mailto:vsipsvs@microsoft.com). Questions about the new Partner Advantage program can be sent to [advantg@microsoft.com](mailto:advantg@microsoft.com).  
+ VSIP プログラムと共に、プレミア サポート製品に関する質問に送信できる[ vsipsvs@microsoft.com](mailto:vsipsvs@microsoft.com)します。 新しいパートナーのメリット プログラムに関する質問に送信できる[ advantg@microsoft.com](mailto:advantg@microsoft.com)します。  
   
- Information about individual support requests can be found at [Individual Support Requests](http://go.microsoft.com/fwlink/?LinkID=82385).  
+ 個別のサポートの要求に関する情報が掲載されて[個々 のサポートの要求](http://go.microsoft.com/fwlink/?LinkID=82385)します。  
   
-## <a name="see-also"></a>See Also  
- [Talk to Us](../ide/talk-to-us.md)
+## <a name="see-also"></a>関連項目  
+ [ご意見](../ide/talk-to-us.md)

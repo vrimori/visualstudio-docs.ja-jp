@@ -1,5 +1,5 @@
 ---
-title: DUMPTYPE | Microsoft Docs
+title: "DUMPTYPE |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: abc5a749caedabffcd06be93cef1a36a8e9ae3ed
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 8a64d0d3c074b1d0b852afbd492aaa7ec9d37609
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="dumptype"></a>DUMPTYPE
-Specifies how much of a program's state (such as running threads, stack frames, and current instruction address) to dump.  
+プログラムの状態 (実行中のスレッド、スタック フレームでは、現在の命令アドレスなど) の量を指定をダンプします。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
-```cpp  
+```cpp#  
 enum enum_DUMPTYPE {   
    DUMP_MINIDUMP = 0,  
    DUMP_FULLDUMP = 1  
@@ -50,30 +49,30 @@ enum enum_DUMPTYPE {
 typedef DWORD DUMPTYPE;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_DUMPTYPE {   
    DUMP_MINIDUMP = 0,  
    DUMP_FULLDUMP = 1  
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>メンバー  
  DUMP_MINIDUMP  
- Specifies a small, compact dump.  
+ 小規模かつコンパクトなダンプを指定します。  
   
  DUMP_FULLDUMP  
- Specifies a large, complete dump.  
+ 大規模な完全なダンプを指定します。  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md) method.  
+## <a name="remarks"></a>コメント  
+ 引数として渡される、 [WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md)メソッドです。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md)

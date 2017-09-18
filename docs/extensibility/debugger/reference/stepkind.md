@@ -1,89 +1,72 @@
 ---
-title: STEPKIND | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- STEPKIND
-helpviewer_keywords:
-- STEPKIND enumeration
+title: "STEPKIND | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "STEPKIND"
+helpviewer_keywords: 
+  - "STEPKIND 列挙型"
 ms.assetid: d3d8cf76-24bf-455e-803e-0e3e28f0b262
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f17bfba794d5b001b20c421210214a9f3ec0ef74
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="stepkind"></a>STEPKIND
-Specifies the step kind for stepping.  
+# STEPKIND
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+ステップについての種類を指定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-enum enum_STEPKIND {   
-   STEP_INTO      = 0,  
-   STEP_OVER      = 1,  
-   STEP_OUT       = 2,  
-   STEP_BACKWARDS = 3  
+```cpp#  
+enum enum_STEPKIND {   
+   STEP_INTO      = 0,  
+   STEP_OVER      = 1,  
+   STEP_OUT       = 2,  
+   STEP_BACKWARDS = 3  
 };  
 typedef DWORD STEPKIND;  
 ```  
   
-```csharp  
-public enum enum_STEPKIND {   
-   STEP_INTO      = 0,  
-   STEP_OVER      = 1,  
-   STEP_OUT       = 2,  
-   STEP_BACKWARDS = 3  
+```c#  
+public enum enum_STEPKIND {   
+   STEP_INTO      = 0,  
+   STEP_OVER      = 1,  
+   STEP_OUT       = 2,  
+   STEP_BACKWARDS = 3  
 };  
 ```  
   
-## <a name="members"></a>Members  
- STEP_INTO  
- Steps into a function.  
+## メンバー  
+ STEP\_INTO  
+ 関数にステップ インします。  
   
- STEP_OVER  
- Steps over a function.  
+ STEP\_OVER  
+ 関数をステップ オーバーします。  
   
- STEP_OUT  
- Steps out of a function.  
+ STEP\_OUT  
+ 関数にステップ インします。  
   
- STEP_BACKWARDS  
- Steps backward into a function.  
+ STEP\_BACKWARDS  
+ 逆方向の関数について。  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) method.  
+## 解説  
+ [ステップ](../../../extensibility/debugger/reference/idebugprocess3-step.md) のメソッドに引数として渡されます。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 必要条件  
+ ヘッダー : msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)
+## 参照  
+ [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [ステップ](../../../extensibility/debugger/reference/idebugprocess3-step.md)

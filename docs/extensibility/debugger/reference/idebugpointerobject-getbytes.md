@@ -1,84 +1,67 @@
 ---
-title: IDebugPointerObject::GetBytes | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugPointerObject::GetBytes
-helpviewer_keywords:
-- IDebugPointerObject::GetBytes method
+title: "IDebugPointerObject::GetBytes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugPointerObject::GetBytes"
+helpviewer_keywords: 
+  - "IDebugPointerObject::GetBytes メソッド"
 ms.assetid: e986c188-87fb-4b51-86e9-ee6a0035bdab
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: be7648362f250dfba00a244e3d21aff2824eb325
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugpointerobjectgetbytes"></a>IDebugPointerObject::GetBytes
-Gets the value pointed to as a series of consecutive bytes.  
+# IDebugPointerObject::GetBytes
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+一連の連続として参照される値を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetBytes(   
-   DWORD  dwStart,  
-   DWORD  dwCount,  
-   BYTE*  pBytes,  
-   DWORD* pdwBytes  
+```cpp#  
+HRESULT GetBytes(   
+   DWORD  dwStart,  
+   DWORD  dwCount,  
+   BYTE*  pBytes,  
+   DWORD* pdwBytes  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetBytes(  
-   uint       dwStart,   
-   uint       dwCount,   
-   out byte[] pBytes,   
-   out uint   pdwBytes  
+   uint       dwStart,   
+   uint       dwCount,   
+   out byte[] pBytes,   
+   out uint   pdwBytes  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `dwStart`  
- [in] An offset, in bytes, from the start of the object pointed to.  
+ \[入力\] オフセット指すオブジェクトのサイズ \(バイト単位\) として表示されます。  
   
  `dwCount`  
- [in] The number of bytes to retrieve.  
+ \[入力\] 取得するバイト数。  
   
  `pBytes`  
- [in, out] An array that is filled in with the value as a series of consecutive bytes, starting at the given offset from the object pointed to.  
+ \[入力出力\] 文字の連続として値が格納されたオブジェクトの指定したオフセット位置で開始する配列もをポイントします。  
   
  `pdwBytes`  
- [out] Returns the number of bytes actually retrieved.  
+ \[出力\] 実際に取得されるバイト数を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- This method is used if the pointer as represented by this [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) points to a primitive type or a simple array of primitive types (that is, an array that can be represented by a simple sequence of bytes).  
+## 解説  
+ このメソッドはプリミティブ型 \(単純なバイト シーケンスを表すことができる\) のプリミティブ型または単純な配列へのポインター [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) の配列を使用します。このによって表されるようにポインター。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)   
  [SetBytes](../../../extensibility/debugger/reference/idebugpointerobject-setbytes.md)

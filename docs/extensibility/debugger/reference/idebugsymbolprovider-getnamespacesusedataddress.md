@@ -1,74 +1,57 @@
 ---
-title: IDebugSymbolProvider::GetNamespacesUsedAtAddress | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugSymbolProvider::GetNamespacesUsedAtAddress
-helpviewer_keywords:
-- IDebugSymbolProvider::GetNamespacesUsedAtAddress method
+title: "IDebugSymbolProvider::GetNamespacesUsedAtAddress | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugSymbolProvider::GetNamespacesUsedAtAddress"
+helpviewer_keywords: 
+  - "IDebugSymbolProvider::GetNamespacesUsedAtAddress メソッド"
 ms.assetid: 392de54b-9af0-4567-953b-1b41acd1e05c
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2e40f549fe18dbdd8a91be2cb27fff121e6eace3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugsymbolprovidergetnamespacesusedataddress"></a>IDebugSymbolProvider::GetNamespacesUsedAtAddress
-This method creates an enumerator for namespaces associated with the debug address.  
+# IDebugSymbolProvider::GetNamespacesUsedAtAddress
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このメソッドはデバッグのアドレスに関連付けられている名前空間の列挙子を作成します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetNamespacesUsedAtAddress(   
-   IDebugAddress*     pAddress,  
-   IEnumDebugFields** ppEnum  
+```cpp#  
+HRESULT GetNamespacesUsedAtAddress(   
+   IDebugAddress*     pAddress,  
+   IEnumDebugFields** ppEnum  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetNamespacesUsedAtAddress(  
-   IDebugAddress        pAddress,  
-   out IEnumDebugFields ppEnum  
+   IDebugAddress        pAddress,  
+   out IEnumDebugFields ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pAddress`  
- [in] The debug address.  
+ \[入力\] デバッグのアドレス。  
   
  `ppEnum`  
- [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerator for the namespaces.  
+ \[出力\] 名前空間の [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) の列挙子を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- There may be several namespaces associated with a given debug address, for example, nested namespaces or multiple `using` statements.  
+## 解説  
+ 特定のデバッグのアドレスたとえば入れ子になった名前空間または `using` 複数のステートメントが関連付けられた複数の名前空間あります。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

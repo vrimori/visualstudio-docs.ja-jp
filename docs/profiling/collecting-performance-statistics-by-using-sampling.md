@@ -1,74 +1,56 @@
 ---
-title: Collecting Performance Statistics by Using Sampling | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Profiling Tools,sampling
-- sampling profiling method
+title: "サンプリングを使用したパフォーマンス統計情報の収集 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "プロファイリング ツール、サンプリング"
+  - "サンプリング プロファイル方法"
 ms.assetid: 8e36361b-bb3d-40c6-b286-0e68c0ecb915
 caps.latest.revision: 21
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
-ms.openlocfilehash: b70e791d001cee1ae49cf9561b914c0a72c862ae
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/31/2017
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 21
 ---
-# <a name="collecting-performance-statistics-by-using-sampling"></a>Collecting Performance Statistics by Using Sampling
-By default, the [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] Profiling Tools sampling method collects profiling information every 10,000,000 processor cycles (approximately every one-hundredth of a second on a 1 GHz computer). The sampling method is useful for finding processor utilization issues and is the suggested method for starting most performance investigations.  
+# サンプリングを使用したパフォーマンス統計情報の収集
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+既定では、[!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] プロファイリング ツールでサンプリング メソッドを使用すると、10,000,000 プロセッサ サイクル \(1 GH のコンピューターでは約 0.01 秒\) ごとにプロファイル情報が収集されます。  サンプリング メソッドはプロセッサ使用率の問題を検出するのに役立ち、ほとんどのパフォーマンス調査を開始するときに推奨される方法です。  
   
- **Requirements**  
+ **要件**  
   
 -   [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)], [!INCLUDE[vsPro](../code-quality/includes/vspro_md.md)]  
   
 > [!NOTE]
->  Enhanced security features in Windows 8 and Windows Server 2012 required significant changes in the way the Visual Studio profiler collects data on these platforms. Windows Store apps also require new collection techniques. See [Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+>  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。  Windows ストア アプリにも新しい収集手法が必要です。  「[Windows 8 および Windows Server 2012 アプリケーションのプロファイリング](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
- You can specify the sampling method by using one of the following procedures:  
+ サンプリング メソッドは、次のいずれかの手順で指定できます。  
   
--   On the first page of the Profiling Wizard, click **CPU Sampling (recommended)**.  
+-   プロファイル ウィザードの最初のページで、**\[CPU サンプリング \(推奨\)\]** をクリックします。  
   
--   On the **Performance Explorer** toolbar, in the **Method** list, click **Sampling**.  
+-   **パフォーマンス エクスプローラー**のツール バーで、**\[メソッド\]** ボックスの一覧の **\[サンプリング\]** をクリックします。  
   
--   On the **General** page of the properties dialog box for the performance session, click **Sampling**.  
+-   パフォーマンス セッションのプロパティ ダイアログ ボックスの **\[全般\]** ページで、**\[サンプリング\]** をクリックします。  
   
-## <a name="common-tasks"></a>Common Tasks  
- You can specify additional options in the *Performance Session***Property Pages** dialog box of the performance session. To open this dialog box:  
+## 一般的なタスク  
+ パフォーマンス セッションの *Performance Session***\[プロパティ ページ\]** ダイアログ ボックスで追加のオプションを指定できます。  このダイアログ ボックスを開くには、次の操作を行います。  
   
--   In **Performance Explorer**, right-click the performance session name, and then click **Properties**.  
+-   **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックし、**\[プロパティ\]** をクリックします。  
   
- The tasks in the following table describe options that you can specify in the *Performance Session***Property Pages** dialog box when you profile by using the sampling method.  
+ 次の表のタスクは、サンプリング メソッドを使用してプロファイリングを実行するときに *Performance Session***\[プロパティ ページ\]** ダイアログ ボックスで指定できるオプションについて説明します。  
   
-|Task|Related Content|  
-|----------|---------------------|  
-|On the **General** page, add .NET memory allocation and lifetime data collection, and specify naming details for the generated profiling data (.vsp) file.|-   [Collecting .NET Memory Allocation and Lifetime Data](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />-   [How to: Set Performance Data File Name Options](../profiling/how-to-set-performance-data-file-name-options.md)|  
-|On the **Sampling** page, change the sampling rate, change the sampling event from processor clock cycles to another processor performance counter, or change both..|-   [How to: Choose Sampling Events](../profiling/how-to-choose-sampling-events.md)|  
-|On the **Launch** page, specify the application to start and the start order if you have multiple .exe projects in your code solution.|-   [Collecting tier interaction data](../profiling/collecting-tier-interaction-data.md)|  
-|On the **Tier Interaction** page, add ADO.NET call information to the data collected in theprofiling run.|-   [Collecting tier interaction data](../profiling/collecting-tier-interaction-data.md)|  
-|On the **Windows Events** page, specify one or more Event Tracing for Windows (ETW) events to collect with the sampling data.|-   [How to: Collect Event Tracing for Windows (ETW) Data](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|  
-|On the **Windows Counters** page, specify one or more operating system performance counters to add to the profiling data as marks.|-   [How to: Collect Windows Counter Data](../profiling/how-to-collect-windows-counter-data.md)|  
-|On the **Advanced** page, specify the version of the .NET Framework runtime to profile if your application modules use multiple versions. By default, the first version loaded is profiled.|-   [How to: Specify the .NET Framework Runtime](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|
+|タスク|関連するコンテンツ|  
+|---------|---------------|  
+|**\[全般\]** ページで、.NET メモリ割り当ておよび有効期間データの収集を追加し、生成されるプロファイル データ \(.vsp\) ファイルの名前付けの詳細を指定します。|-   [.NET メモリの割り当ておよび有効期間データの収集](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />-   [方法: プロファイル データ ファイル名のオプションを設定する](../profiling/how-to-set-performance-data-file-name-options.md)|  
+|**\[サンプリング\]** ページで、サンプリング レートを変更するか、サンプリング イベントをプロセッサのクロック サイクルからプロセッサの別のパフォーマンス カウンターに変更するか、またはその両方を行います。|-   [方法 : サンプリング イベントを選択する](../Topic/How%20to:%20Choose%20Sampling%20Events.md)|  
+|コード ソリューション内に複数の .exe プロジェクトがある場合は、**\[起動\]** ページで、開始するアプリケーションおよび開始順序を指定します。|-   [階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)|  
+|**\[階層の相互作用\]** ページで、プロファイリング実行で収集されるデータに ADO.NET の呼び出しの情報を追加します。|-   [階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)|  
+|**\[Windows イベント\]** ページで、サンプリング データと共に収集する 1 つ以上の ETW \(Event Tracing for Windows\) イベントを指定します。|-   [方法: ETW \(Event Tracing for Windows\) データを収集する](../Topic/How%20to:%20Collect%20Event%20Tracing%20for%20Windows%20\(ETW\)%20Data.md)|  
+|**\[Windows カウンター\]** ページで、プロファイル データにマークとして追加するオペレーティング システムのパフォーマンス カウンターを 1 つ以上指定します。|-   [方法 : Windows カウンター データを収集する](../profiling/how-to-collect-windows-counter-data.md)|  
+|アプリケーション モジュールが複数バージョンの .NET Framework ランタイムを使用する場合、**\[詳細\]** ページで、プロファイルする .NET Framework ランタイム バージョンを指定します。  既定では、最初に読み込まれたバージョンがプロファイリングされます。|-   [方法: side\-by\-side 実行でプロファイリングするように .NET Framework ランタイムを指定する](../Topic/How%20to:%20Specify%20the%20.NET%20Framework%20Runtime.md)|

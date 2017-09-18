@@ -1,116 +1,99 @@
 ---
-title: Design-Time Code Generation by using T4 Text Templates | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- text templates, guidelines for code generation
-- text templates, data source model
-- TextTemplatingFileGenerator custom tool
-- Transform All Templates
-- text templates, getting started
-- Text Template project item
-- text templates, generating code for your application
+title: "T4 テキスト テンプレートを使用したデザイン時コード生成 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "テキスト テンプレート プロジェクト項目"
+  - "テキスト テンプレート, データ ソース モデル"
+  - "テキスト テンプレート, 生成 (アプリケーションのコードを)"
+  - "テキスト テンプレート, はじめに"
+  - "テキスト テンプレート, コード生成のガイドライン"
+  - "TextTemplatingFileGenerator カスタム ツール"
+  - "すべてのテンプレートの変換"
 ms.assetid: 2774b83d-1adb-4c66-a607-746e019b80c0
 caps.latest.revision: 38
-author: alancameronwills
-ms.author: awills
-manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8ff212816453d257829c7c1a802cf8669f0482c0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+author: "alancameronwills"
+ms.author: "awills"
+manager: "douge"
+caps.handback.revision: 38
 ---
-# <a name="design-time-code-generation-by-using-t4-text-templates"></a>Design-Time Code Generation by using T4 Text Templates
-Design-time T4 text templates let you generate program code and other files in your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project. Typically, you write the templates so that they vary the code that they generate according to data from a *model*. A model is a file or database that contains key information about your application's requirements.  
+# T4 テキスト テンプレートを使用したデザイン時コード生成
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+デザイン時 T4 テキスト テンプレートを使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトのプログラム コードや他のファイルを生成できます。  テンプレートを作成するときは、*モデル*のデータに応じて生成されるコードが変わるようにするのが一般的です。  モデルとは、アプリケーションの要件に関する重要な情報が含まれたファイルまたはデータベースのことです。  
   
- For example, you could have a model that defines a workflow, either as a table or a diagram. From the model, you can generate the software that executes the workflow. When your users' requirements change, it is easy to discuss the new workflow with the users. Regenerating the code from the workflow is more reliable than updating the code by hand.  
+ たとえば、ワークフローをテーブルまたは図として定義したモデルがあるとします。  このモデルから、ワークフローを実行するソフトウェアを生成できます。  ユーザーの要件が変わったときに、新しいワークフローについてユーザーと共に検討しやすくなります。  ワークフローからコードを再生成すると、コードを手動で更新するよりも信頼性が高まります。  
   
 > [!NOTE]
->  A *model* is a data source that describes a particular aspect of an application. It can be any form, in any kind of file or database. It does not have to be in any particular form, such as a UML model or Domain-Specific Language model. Typical models are in the form of tables or XML files.  
+>  *モデル*は、アプリケーションの特定の側面を記述したデータ ソースです。  モデルはどのような形式でもかまいません。あらゆる種類のファイルまたはデータベースを使用できます。  UML モデルやドメイン固有言語モデルなどの特定の形式である必要はありません。  標準的なモデルの形式は、テーブルまたは XML ファイルです。  
   
- You are probably already familiar with code generation. When you define resources in a **.resx** file in your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution, a set of classes and methods is generated automatically. The resources file makes it much easier and more reliable to edit the resources than it would be if you had to edit the classes and methods. With text templates, you can generate code in the same manner from a source of your own design.  
+ コード生成は決して新しい概念ではありません。  **.resx** ソリューションにある [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ファイルでリソースを定義すると、一連のクラスおよびメソッドが自動的に生成されます。  リソースの編集は、クラスやメソッドを直接編集するよりも、リソース ファイルで行った方がはるかに簡単で確実です。  同様に、テキスト テンプレートを使用すると、独自に設計したソースからコードを生成することができます。  
   
- A text template contains a mixture of the text that you want to generate, and program code that generates variable parts of the text. The program code and allows you to repeat or conditionally omit parts of the generated text. The generated text can itself be program code that will form part of your application.  
+ テキスト テンプレートには、生成するテキストと、テキストの可変部分を生成するプログラム コードの組み合わせが含まれます。  プログラム コードにより、生成されるテキストの一部を繰り返したり、条件に従って省略したりできるようになります。  生成されるテキスト自体を、アプリケーションの一部となるプログラム コードにすることもできます。  
   
-## <a name="creating-a-design-time-t4-text-template"></a>Creating a Design-Time T4 Text Template  
+## デザイン時 T4 テキスト テンプレートを作成する  
   
-#### <a name="to-create-a-design-time-t4-template-in-visual-studio"></a>To create a design-time T4 template in Visual Studio  
+#### Visual Studio でデザイン時 T4 テンプレートを作成するには  
   
-1.  Create a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project, or open an existing one.  
+1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトを作成するか、既存のプロジェクトを開きます。  
   
-     For example, on the **File** menu, choose **New**, **Project**.  
+     たとえば、**\[ファイル\]** メニューの **\[新規作成\]** をポイントし、**\[プロジェクト\]** をクリックします。  
   
-2.  Add a text template file to your project and give it a name that has the extension **.tt**.  
+2.  テキスト テンプレート ファイルをプロジェクトに追加し、ファイル名の拡張子を .tt にします。  
   
-     To do this, in **Solution Explorer**, on the shortcut menu of your project, choose **Add**, **New Item**. In the **Add New Item** dialog box select **Text Template** from the middle pane.  
+     そのために、**ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、**\[追加\]**、**\[新しい項目\]** の順にクリックします。  **\[新しい項目の追加\]** ダイアログ ボックスで、中央のペインの **\[テキスト テンプレート\]** を選択します。  
   
-     Notice that the **Custom Tool** property of the file is **TextTemplatingFileGenerator**.  
+     ファイルの **\[カスタム ツール\]** プロパティが **TextTemplatingFileGenerator** となっていることに注目してください。  
   
-3.  Open the file. It will already contain the following directives:  
+3.  ファイルを開きます。  既に次のディレクティブが指定されています。  
   
     ```  
     <#@ template hostspecific="false" language="C#" #>  
     <#@ output extension=".txt" #>  
     ```  
   
-     If you added the template to a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] project, the language attribute will be "`VB`".  
+     [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクトにテンプレートを追加した場合、言語属性は "`VB`" になります。  
   
-4.  Add some text at the end of the file. For example:  
+4.  ファイルの最後にテキストを追加します。  次に例を示します。  
   
     ```  
     Hello, world!  
     ```  
   
-5.  Save the file.  
+5.  ファイルを保存します。  
   
-     You might see a **Security Warning** message box that asks you to confirm that you want to run the template. Click **OK**.  
+     テンプレートを実行してよいか確認する **\[セキュリティ警告\]** メッセージ ボックスが表示されます。  **\[OK\]** をクリックします。  
   
-6.  In **Solution Explorer**, expand the template file node and you will find a file that has the extension **.txt**. The file contains the text generated from the template.  
+6.  **ソリューション エクスプローラー**で、テンプレート ファイル ノードを展開すると、拡張子が .txt のファイルが見つかります。  このファイルには、テンプレートから生成されたテキストが格納されています。  
   
     > [!NOTE]
-    >  If your project is a Visual Basic project, you must click **Show All Files** in order to see the output file.  
+    >  Visual Basic プロジェクトの場合は、**\[すべてのファイルを表示\]** をクリックしないと、出力ファイルが表示されません。  
   
-### <a name="regenerating-the-code"></a>Regenerating the code  
- A template will be executed, generating the subsidiary file, in any of the following cases:  
+### コードの再生成  
+ 次のいずれかの場合に、テンプレートが実行され、従属ファイルが生成されます。  
   
--   Edit the template and then change focus to a different [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] window.  
+-   テンプレートを編集した後、フォーカスを別の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ウィンドウに切り替えたとき。  
   
--   Save the template.  
+-   テンプレートを保存したとき。  
   
--   Click **Transform All Templates** in the **Build** menu. This will transform all the templates in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution.  
+-   **\[ビルド\]** メニューの **\[すべてのテンプレートの変換\]** をクリックしたとき。  この場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューション内のすべてのテンプレートが変換されます。  
   
--   In **Solution Explorer**, on the shortcut menu of any file, choose **Run Custom Tool**. Use this method to transform a selected subset of templates.  
+-   **ソリューション エクスプローラー**で、ファイルのショートカット メニューの **\[カスタム ツールの実行\]** をクリックしたとき。  この方法は、複数のテンプレートを選択して変換する場合に使用します。  
   
- You can also set up a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project so that the templates are executed when the data files that they read have changed. For more information, see [Regenerating the code automatically](#Regenerating).  
+ 読み取り先のデータ ファイルが変更されたときにテンプレートが実行されるよう、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトを設定することもできます。  詳細については、「[コードを自動的に再生成する](#Regenerating)」を参照してください。  
   
-## <a name="generating-variable-text"></a>Generating Variable Text  
- Text templates let you use program code to vary the content of the generated file.  
+## 可変テキストを生成する  
+ テキスト テンプレートから生成されるファイルのコンテンツは、プログラム コードを使用して変化させることができます。  
   
-#### <a name="to-generate-text-by-using-program-code"></a>To generate text by using program code  
+#### プログラム コードを使用してテキストを生成するには  
   
-1.  Change the content of the `.tt` file:  
+1.  `.tt` ファイルの内容を次のように変更します。  
   
-    ```csharp  
+    ```c#  
     <#@ template hostspecific="false" language="C#" #>  
     <#@ output extension=".txt" #>  
     <#int top = 10;  
@@ -121,7 +104,7 @@ Design-time T4 text templates let you generate program code and other files in y
     <# } #>  
     ```  
   
-    ```vb  
+    ```vb#  
     <#@ template hostspecific="false" language="VB" #>  
     <#@ output extension=".txt" #>  
     <#Dim top As Integer = 10  
@@ -135,55 +118,55 @@ Design-time T4 text templates let you generate program code and other files in y
   
     ```  
   
-2.  Save the .tt file, and inspect the generated .txt file again. It lists the squares of the numbers from 0 to 10.  
+2.  .tt ファイルを保存し、生成された .txt ファイルを再度確認します。  0 から 10 の数値を 2 乗した値が一覧表示されます。  
   
- Notice that statements are enclosed within `<#...#>`, and single expressions within `<#=...#>`. For more information, see [Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md).  
+ 複数のステートメントは `<#...#>` で囲まれており、単一の式は `<#=...#>` で囲まれていることに注意してください。  詳細については、「[T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)」を参照してください。  
   
- If you write the generating code in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], the `template` directive should contain `language="VB"`. `"C#"` is the default.  
+ [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] で生成コードを記述する場合は、`template` ディレクティブに `language="VB"` を含める必要があります。  `"C#"` が既定値です。  
   
-## <a name="debugging-a-design-time-t4-text-template"></a>Debugging a Design-Time T4 Text Template  
- To debug a text template:  
+## デザイン時 T4 テキスト テンプレートをデバッグする  
+ テキスト テンプレートをデバッグするには、以下を実行します。  
   
--   Insert `debug="true"` into the `template` directive. For example:  
+-   `debug="true"` ディレクティブに `template` を挿入します。  例:  
   
      `<#@ template debug="true" hostspecific="false" language="C#" #>`  
   
--   Set breakpoints in the template, in the same way that you would for ordinary code.  
+-   通常のコードと同じように、テンプレートにブレークポイントを設定します。  
   
--   Choose **Debug T4 Template** from the shortcut menu of the text template file in Solution Explorer.  
+-   ソリューション エクスプローラーで、テキスト テンプレート ファイルのショートカット メニューを開き **\[T4 テンプレートのデバッグ\]** をクリックします。  
   
- The template will run and stop at the breakpoints. You can examine variables and step through the code in the usual way.  
+ テンプレートが実行され、ブレークポイントで停止します。  通常の方法で、変数を調べコードのステップ実行ができます。  
   
 > [!TIP]
->  `debug="true"` makes the generated code map more accurately to the text template, by inserting more line numbering directives into the generated code. If you leave it out, breakpoints might stop the run in the wrong state.  
+>  `debug="true"` は、生成されたコードに行番号ディレクティブを多数挿入して、生成されたコードをテキスト テンプレートに正確に対応付けます。  これを省いた場合、ブレークポイントが間違った状態で実行を停止する可能性があります。  
 >   
->  But you can leave the clause in the template directive even when you are not debugging. This causes only a very small drop in performance.  
+>  ただし、デバッグしていないときでも、template ディレクティブにこれを残しておくことができます。  こうしても実行速度がほんのわずか低下するだけです。  
   
-## <a name="generating-code-or-resources-for-your-solution"></a>Generating Code or Resources for Your Solution  
- You can generate program files that vary, depending on a model. A model is an input such as a database, configuration file, UML model, DSL model, or other source. You usually generate several program files are from the same model. To achieve this, you create a template file for each generated program file, and have all the templates read the same model.  
+## ソリューションのコードまたはリソースを生成する  
+ 生成するプログラム ファイルは、モデルに応じて変化させることができます。  モデルは入力です。たとえば、データベース、構成ファイル、UML モデル、DSL モデルなど、各種のソースがそれに該当します。  プログラム ファイルは、同じモデルから複数生成するのが一般的です。  そのためには、生成するプログラム ファイルごとにテンプレート ファイルを作成し、すべてのテンプレートで同じモデルを読み取るようにします。  
   
-#### <a name="to-generate-program-code-or-resources"></a>To generate program code or resources  
+#### プログラム コードまたはリソースを生成するには  
   
-1.  Change the output directive to generate a file of the appropriate type, such as .cs, .vb, .resx, or .xml.  
+1.  適切な種類のファイル \(.cs、.vb、.resx、.xml など\) を生成するように output ディレクティブを変更します。  
   
-2.  Insert code that will generate the solution code that you require. For example, if you want to generate three integer field declarations in a class:  
+2.  必要なソリューション コードを生成するためのコードを挿入します。  たとえば、クラス内に整数型のフィールド宣言を 3 つ生成するには、次のようにします。  
   
-    ```csharp  
+    ```c#  
   
-              <#@ template debug="false" hostspecific="false" language="C#" #>  
+                      <#@ template debug="false" hostspecific="false" language="C#" #>  
     <#@ output extension=".cs" #>  
     <# var properties = new string [] {"P1", "P2", "P3"}; #>  
     // This is generated code:  
     class MyGeneratedClass {  
     <# // This code runs in the text template:  
-      foreach (string propertyName in properties)  { #>  
+      foreach (string propertyName in properties)   { #>  
       // Generated code:  
       private int <#= propertyName #> = 0;  
     <# } #>  
     }  
     ```  
   
-    ```vb  
+    ```vb#  
     <#@ template debug="false" hostspecific="false" language="VB" #>  
     <#@ output extension=".cs" #>  
     <# Dim properties = {"P1", "P2", "P3"} #>  
@@ -199,7 +182,7 @@ Design-time T4 text templates let you generate program code and other files in y
   
     ```  
   
-3.  Save the file and inspect the generated file, which now contains the following code:  
+3.  ファイルを保存し、生成されたファイルを調べると、次のコードが含まれていることがわかります。  
   
     ```  
     class MyGeneratedClass {  
@@ -209,26 +192,26 @@ Design-time T4 text templates let you generate program code and other files in y
     }  
     ```  
   
-### <a name="generating-code-and-generated-text"></a>Generating Code and Generated Text  
- When you generate program code, it is most important to avoid confusing the generating code that executes in your template, and the resulting generated code that becomes part of your solution. The two languages do not have to be the same.  
+### 生成コードと生成されたテキスト  
+ プログラム コードを生成する際に最も重要なことは、テンプレート内で実行されるコード生成機構 \(コードを生成するためのコード\) と、結果として生成されるコード \(ソリューションの一部になるコード\) とを混同しないことです。  2 つの言語が必ずしも一致している必要はありません。  
   
- The previous example has two versions. In one version, the generating code is in C#. In the other version, the generating code is Visual Basic. But the text generated by both of them is the same, and it is a C# class.  
+ 前の例は、2 つのバージョンで構成されています。  1 つ目のバージョンは C\# のコードで生成されます。  2 つ目のバージョンは、Visual Basic のコードで生成されます。  ただし、両方のコードで生成されるテキストは同じであり、C\# クラスです。  
   
- In the same way, you could use a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] template to generate code in any language. The generated text does not have to be in any particular language, and it does not have to be program code.  
+ 同様に、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] テンプレートは、どのような言語のコードでも生成できます。  生成されるテキストは、プログラム コードが含まれる固有の言語である必要はありません。  
   
-### <a name="structuring-text-templates"></a>Structuring text templates  
- As a matter of good practice, we tend to separate the template code into two parts:  
+### テキスト テンプレートの構成  
+ ここでは、テンプレート コードを次の 2 つの部分に分けています。  
   
--   A configuration or data-gathering part, which sets values in variables, but does not contain text blocks. In the previous example, this part is the initialization of `properties`.  
+-   構成またはデータ収集の部分。この部分では変数に値を設定しますが、テキスト ブロックは含まれません。  前の例では、`properties` の初期化の部分が該当します。  
   
-     This is sometimes called the "model" section, because it constructs an in-store model, and typically reads a model file.  
+     この部分はインストア モデルを構築し、通常はモデル ファイルを読み取るため、"モデル" セクションとも呼ばれます。  
   
--   The text-generation part (`foreach(...){...}` in the example), which uses the values of the variables.  
+-   テキスト生成部分 \(この例では、`foreach(...){...}`\)。この部分では変数の値を使用します。  
   
- This is not a necessary separation, but it is a style which makes it easier to read the template by reducing the complexity of the part that includes text.  
+ 必ずしもこのように分ける必要はありませんが、このように記述すると、テキストを含む部分の複雑さが軽減され、テンプレートが読みやすくなります。  
   
-## <a name="reading-files-or-other-sources"></a>Reading files or other sources  
- To access a model file or database, your template code can use assemblies such as System.XML. To gain access to these assemblies, you must insert directives such as these:  
+## ファイルなど各種ソースを読み取る  
+ モデル ファイルまたはモデル データベースにアクセスするために、テンプレート コードで System.XML などのアセンブリを使用できます。  これらのアセンブリにアクセスするためには、次のようなディレクティブを挿入する必要があります。  
   
 ```  
 <#@ assembly name="System.Xml.dll" #>  
@@ -236,36 +219,36 @@ Design-time T4 text templates let you generate program code and other files in y
 <#@ import namespace="System.IO" #>  
 ```  
   
- The `assembly` directive makes the specified assembly available to your template code, in the same manner as the References section of a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project. You do not need to include a reference to System.dll, which is referenced automatically. The `import` directive lets you use types without using their fully qualified names, in the same manner as the `using` directive in an ordinary program file.  
+ `assembly` ディレクティブでアセンブリを指定することによって、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトの \[参照設定\] セクションに表示されるアセンブリと同じように、指定されたアセンブリにテンプレート コードからアクセスすることができます。  System.dll への参照を含める必要はありません。System.dll は自動的に参照されます。  `import` ディレクティブの効果は、完全修飾名を使用せずに型を指定できるようになることです。通常のプログラム ファイルで `using` ディレクティブを使用した場合と同様です。  
   
- For example, after importing **System.IO**, you could write:  
+ たとえば、**System.IO** のインポート後に、次のようなコードを記述できます。  
   
-```csharp  
+```c#  
   
-      <# var properties = File.ReadLines("C:\\propertyList.txt");#>  
+          <# var properties = File.ReadLines("C:\\propertyList.txt");#>  
 ...  
 <# foreach (string propertyName in properties) { #>  
 ...  
 ```  
   
-```vb  
+```vb#  
 <# For Each propertyName As String In   
              File.ReadLines("C:\\propertyList.txt")  
 #>  
   
 ```  
   
-### <a name="opening-a-file-with-a-relative-pathname"></a>Opening a file with a relative pathname  
- To load a file from a location relative to the text template, you can use `this.Host.ResolvePath()`. To use this.Host, you must set `hostspecific="true"` in the `template`:  
+### 相対パス名を指定してファイルを開く  
+ テキスト テンプレートを基準とする場所からファイルを読み込むには、`this.Host.ResolvePath()` を使用します。  this.Host を使用するには、次のように `hostspecific="true"` で `template` を設定する必要があります。  
   
 ```  
 <#@ template debug="false" hostspecific="true" language="C#" #>  
   
 ```  
   
- Then you can write, for example:  
+ これで、次のようなコードを記述できるようになります。  
   
-```csharp  
+```c#  
 <# string fileName = this.Host.ResolvePath("filename.txt");  
   string [] properties = File.ReadLines(filename);  
 #>  
@@ -275,7 +258,7 @@ Design-time T4 text templates let you generate program code and other files in y
   
 ```  
   
-```vb  
+```vb#  
 <# Dim fileName = Me.Host.ResolvePath("propertyList.txt")  
    Dim properties = File.ReadLines(filename)  
 #>  
@@ -286,12 +269,12 @@ Design-time T4 text templates let you generate program code and other files in y
   
 ```  
   
- You can also use `this.Host.TemplateFile`, which identifies the name of the current template file.  
+ `this.Host.TemplateFile` を使用して、現在のテンプレート ファイルの名前を示すこともできます。  
   
- The type of `this.Host` (in VB, `Me.Host`) is `Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost`.  
+ `this.Host` \(VB の場合は `Me.Host`\) の型は、`Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost` です。  
   
-### <a name="getting-data-from-includevsprvscode-qualityincludesvsprvsmdmd"></a>Getting data from [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
- To use services provided in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], set the `hostSpecific` attribute and load the `EnvDTE` assembly. You can then use IServiceProvider.GetCOMService() to access DTE and other services. For example:  
+### [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] からデータを取得する  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で提供されるサービスを使用するには、`hostSpecific` 属性を設定し、`EnvDTE` アセンブリを読み込みます。  その後、IServiceProvider.GetCOMService\(\) を使用して、DTE などのサービスにアクセスできます。  次に例を示します。  
   
 ```scr  
 <#@ template hostspecific="true" language="C#" #>  
@@ -307,18 +290,14 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 ```  
   
 > [!TIP]
->  A text template runs in its own app domain, and services are accessed by marshaling. In this circumstance, GetCOMService() is more reliable than GetService().  
+>  テキスト テンプレートは独自のアプリ ドメインで実行され、サービスはマーシャリングによってアクセスされます。  この状況では、GetCOMService\(\) は GetService\(\) よりも信頼性が高くなります。  
   
-##  <a name="Regenerating"></a> Regenerating the code automatically  
- Typically, several files in a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution are generated with one input model. Each file is generated from its own template, but the templates all refer to the same model.  
+##  <a name="Regenerating"></a> コードを自動的に再生成する  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションには、1 つの入力モデルを使用して複数のファイルを生成するのが一般的です。  各ファイルはそれぞれ対応するテンプレートから生成されますが、すべてのテンプレートは同じモデルを参照します。  
   
- If the source model changes, you should re-run all the templates in the solution. To do this manually, choose **Transform All Templates** on the **Build** menu.  
+ ソース モデルが変更された場合は、ソリューションのすべてのテンプレートを再度実行する必要があります。  これを手動で行うには、**\[ビルド\]** メニューの **\[すべてのテンプレートの変換\]** をクリックします。  
   
- If you have installed [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK, you can have all the templates transformed automatically whenever you perform a build. To do this, edit your project file (.csproj or .vbproj) in a text editor and add the following lines near the end of the file, after any other `<import>` statements:  
-
-
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
-
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK がインストールされている場合は、ビルドを実行するたびにすべてのテンプレートが自動的に変換されるように設定できます。  そのためには、プロジェクト ファイル \(.csproj または .vbproj\) をテキスト エディターで編集し、ファイルの末尾付近の、他の `<import>` ステートメントよりも後に次のコード行を追加します。  
   
 ```  
 <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v11.0\TextTemplating\Microsoft.TextTemplating.targets" />  
@@ -328,66 +307,65 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 </PropertyGroup>  
 ```  
   
- For more information, see [Code Generation in a Build Process](../modeling/code-generation-in-a-build-process.md).  
+ 詳細については、「[ビルド処理でのコード生成](../modeling/code-generation-in-a-build-process.md)」を参照してください。  
   
-## <a name="error-reporting"></a>Error reporting  
- To place error and warning messages in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] error window, you can use these methods:  
+## エラー レポート  
+ エラー メッセージおよび警告メッセージを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のエラー ウィンドウに表示するには、次のメソッドを使用します。  
   
 ```  
 Error("An error message");  
 Warning("A warning message");  
 ```  
   
-##  <a name="Converting"></a> Converting an existing file to a template  
- A useful feature of templates is that they look very much like the files that they generate, together with some inserted program code. This suggests a useful method of creating a template. First create an ordinary file as a prototype, such as a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] file, and then gradually introduce generation code that varies the resulting file.  
+##  <a name="Converting"></a> 既存のファイルをテンプレートに変換する  
+ テンプレートには、見た目は生成されるファイルとよく似ていて、そこに、プログラム コードが挿入されているという特徴があります。  このことを利用すると、テンプレートを効率的に作成することができます。  最初に通常のファイル \([!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ファイルなど\) をプロトタイプとして作成し、その後、結果のファイルにバリエーションを持たせるための生成コードを徐々に適用していく方法です。  
   
-#### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>To convert an existing file to a design-time template  
+#### 既存のファイルをデザイン時テンプレートに変換するには  
   
-1.  To your [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project, add a file of the type that you want to generate, such as a `.cs`, `.vb`, or `.resx` file.  
+1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、`.cs`、`.vb` など、生成する種類のファイルを `.resx` プロジェクトに追加します。  
   
-2.  Test the new file to make sure that it works.  
+2.  この新しいファイルをテストして、ファイルが機能することを確認します。  
   
-3.  In Solution Explorer, change the file name extension to **.tt**.  
+3.  ソリューション エクスプローラーで、ファイル名拡張子を **.tt** に変更します。  
   
-4.  Verify the following properties of the **.tt** file:  
+4.  **.tt** ファイルの次のプロパティを確認します。  
   
     |||  
     |-|-|  
-    |**Custom Tool =**|**TextTemplatingFileGenerator**|  
-    |**Build Action =**|**None**|  
+    |**カスタム ツール \=**|**TextTemplatingFileGenerator**|  
+    |**ビルド アクション \=**|**なし**|  
   
-5.  Insert the following lines at the beginning of the file:  
+5.  ファイルの先頭に次の行を挿入します。  
   
     ```  
     <#@ template debug="false" hostspecific="false" language="C#" #>  
     <#@ output extension=".cs" #>  
     ```  
   
-     If you want to write the generating code of your template in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], set the `language` attribute to `"VB"` instead of `"C#"`.  
+     テンプレートのコード生成機構を [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] で記述する場合は、`language` 属性を `"VB"` ではなく、`"C#"` に設定してください。  
   
-     Set the `extension` attribute to the file name extension for the type of file that you want to generate, for example `.cs`, `.resx`, or `.xml`.  
+     `extension` 属性を、生成するファイルの種類のファイル名拡張子 \(`.cs`、`.resx`、`.xml` など\) に設定します。  
   
-6.  Save the file.  
+6.  ファイルを保存します。  
   
-     A subsidiary file is created, with the specified extension. Its properties are correct for the type of file. For example, the **Build Action** property of a .cs file would be **Compile**.  
+     指定された拡張子の従属ファイルが作成されます。  そのプロパティは、ファイルの種類に対応します。  たとえば、.cs ファイルの **\[ビルド アクション\]** プロパティは **\[コンパイル\]** になります。  
   
-     Verify that the generated file contains the same content as the original file.  
+     生成されたファイルのコンテンツが、元のファイルと同じであることを確認します。  
   
-7.  Identify a part of the file that you want to vary. For example, a part that appears only under certain conditions, or a part that is repeated, or where the specific values vary. Insert generating code. Save the file and verify that the subsidiary file is correctly generated. Repeat this step.  
+7.  ファイルの可変部分を見極めます。  たとえば、特定の条件を満たした場合にのみ出力する部分や、繰り返し出力する部分、特定の値をどこで変化させるかなどを決めます。  コードを生成するためのコードを挿入します。  ファイルを保存し、従属ファイルが正しく生成されたことを確認します。  この手順を繰り返します。  
   
-## <a name="guidelines-for-code-generation"></a>Guidelines for Code Generation  
- Please see [Guidelines for Writing T4 Text Templates](../modeling/guidelines-for-writing-t4-text-templates.md).  
+## コード生成のガイドライン  
+ 「[T4 テキスト テンプレートの記述に関するガイドライン](../modeling/guidelines-for-writing-t4-text-templates.md)」を参照してください。  
   
-## <a name="next-steps"></a>Next steps  
+## 次の手順  
   
-|Next step|Topic|  
-|---------------|-----------|  
-|Write and debug a more advanced text template, with code that uses auxiliary functions, included files, and external data.|[Writing a T4 Text Template](../modeling/writing-a-t4-text-template.md)|  
-|Generate documents from templates at run time.|[Run-Time Text Generation with T4 Text Templates](../modeling/run-time-text-generation-with-t4-text-templates.md)|  
-|Run text generation outside [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|[Generating Files with the TextTransform Utility](../modeling/generating-files-with-the-texttransform-utility.md)|  
-|Transform your data in the form of a domain-specific language.|[Generating Code from a Domain-Specific Language](../modeling/generating-code-from-a-domain-specific-language.md)|  
-|Write directive processors to transform your own data sources.|[Customizing T4 Text Transformation](../modeling/customizing-t4-text-transformation.md)|  
+|次の手順|トピック|  
+|----------|----------|  
+|補助的な関数、インクルード ファイル、外部データなどを使用したコードを組み合わせて、より高度なテキスト テンプレートを作成し、デバッグする。|[T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)|  
+|実行時にテンプレートからドキュメントを生成する。|[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)|  
+|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部でテキストの生成を行う。|[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)|  
+|ドメイン固有言語の形式でデータを変換する。|[ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)|  
+|独自のデータ ソースを変換するためのディレクティブ プロセッサを作成する。|[T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)|  
   
-## <a name="see-also"></a>See Also  
- [Guidelines for Writing T4 Text Templates](../modeling/guidelines-for-writing-t4-text-templates.md)
-
+## 参照  
+ [T4 テキスト テンプレートの記述に関するガイドライン](../modeling/guidelines-for-writing-t4-text-templates.md)

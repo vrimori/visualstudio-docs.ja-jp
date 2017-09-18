@@ -1,105 +1,88 @@
 ---
-title: THREADPROPERTIES | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- THREADPROPERTIES
-helpviewer_keywords:
-- THREADPROPERTIES structure
+title: "THREADPROPERTIES | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "THREADPROPERTIES"
+helpviewer_keywords: 
+  - "THREADPROPERTIES 構造体"
 ms.assetid: 7d397207-db03-4ec0-9f79-3794056ed89f
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a759b577e9b1af18773744dd2f391a570683876f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="threadproperties"></a>THREADPROPERTIES
-Describes the properties of a thread.  
+# THREADPROPERTIES
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+スレッドのプロパティについて説明します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-typedef struct _tagTHREADPROPERTIES {   
-   THREADPROPERTY_FIELDS dwFields;  
-   DWORD                 dwThreadId;  
-   DWORD                 dwSuspendCount;  
-   DWORD                 dwThreadState;  
-   BSTR                  bstrPriority;  
-   BSTR                  bstrName;  
-   BSTR                  bstrLocation;  
+```cpp#  
+typedef struct _tagTHREADPROPERTIES {   
+   THREADPROPERTY_FIELDS dwFields;  
+   DWORD                 dwThreadId;  
+   DWORD                 dwSuspendCount;  
+   DWORD                 dwThreadState;  
+   BSTR                  bstrPriority;  
+   BSTR                  bstrName;  
+   BSTR                  bstrLocation;  
 } THREADPROPERTIES;  
 ```  
   
-```csharp  
-public struct THREADPROPERTIES {   
-   public uint   dwFields;  
-   public uint   dwThreadId;  
-   public uint   dwSuspendCount;  
-   public uint   dwThreadState;  
-   public string bstrPriority;  
-   public string bstrName;  
-   public string bstrLocation;  
+```c#  
+public struct THREADPROPERTIES {   
+   public uint   dwFields;  
+   public uint   dwThreadId;  
+   public uint   dwSuspendCount;  
+   public uint   dwThreadState;  
+   public string bstrPriority;  
+   public string bstrName;  
+   public string bstrLocation;  
 };  
 ```  
   
-## <a name="members"></a>Members  
+## メンバー  
  dwFields  
- A combination of flags from the [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) enumeration, describing which fields in this structure are valid.  
+ 記述するこの構造体のフィールドに設定 [THREADPROPERTY\_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) の列挙体のフラグの組み合わせが有効です。  
   
  dwThreadId  
- The thread ID.  
+ スレッド ID  
   
  dwSuspendCount  
- The thread suspend count.  
+ スレッドの数を中断します。  
   
  dwThreadState  
- A value from the [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md) enumeration indicating the state of the operating thread.  
+ のスレッドのオペレーティング [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md) の状態を示す列挙体の値。  
   
  bstrPriority  
- A string specifying the thread priority; for example, "Above Normal", "Normal", or "Time Critical".  
+ 指定した文字スレッドの優先順位 ; たとえば「標準」重要な」normal 」または 「時間の先頭で。  
   
  bstName  
- The thread name.  
+ スレッドの名前。  
   
  bstrLocation  
- The thread location (usually the topmost stack frame), typically expressed as the name of the method where execution is currently halted.  
+ 通常実行が現在停止するメソッドの名前として表現されるスレッドの場所 \(通常は最上位のスタック フレーム\)。  
   
-## <a name="remarks"></a>Remarks  
- This structure is filled in by a call to the [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) method. The information so returned is typically used in populating the **Threads** window.  
+## 解説  
+ この構造は [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) メソッドの呼び出しによって格納されます。  返される情報は\[出力\] ウィンドウ ENT0ENT の設定で使用されます。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 必要条件  
+ ヘッダー : msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## 参照  
+ [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)   
- [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)   
+ [THREADPROPERTY\_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)   
  [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)

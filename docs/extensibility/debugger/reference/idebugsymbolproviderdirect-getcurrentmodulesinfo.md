@@ -1,84 +1,67 @@
 ---
-title: IDebugSymbolProviderDirect::GetCurrentModulesInfo | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugSymbolProviderDirect::GetCurrentModulesInfo
-- GetCurrentModulesInfo
+title: "IDebugSymbolProviderDirect::GetCurrentModulesInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugSymbolProviderDirect::GetCurrentModulesInfo"
+  - "GetCurrentModulesInfo"
 ms.assetid: b3b45ed2-ea4e-4389-b78a-11fc9796a6c1
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 25cbece11a4f00f1d70362a86269899ee6e93043
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugsymbolproviderdirectgetcurrentmodulesinfo"></a>IDebugSymbolProviderDirect::GetCurrentModulesInfo
-Retrieves information about the modules in the symbol group.  
+# IDebugSymbolProviderDirect::GetCurrentModulesInfo
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+シンボルのグループのモジュールについての情報を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT GetCurrentModulesInfo(  
-   unsigned long * pCount,  
-   GUID *          ppGuids,  
-   DWORD *         pADIds,  
-   DWORD *         pCurrentState,  
-   IUnknown **     ppCDModItfs  
+   unsigned long * pCount,  
+   GUID *          ppGuids,  
+   DWORD *         pADIds,  
+   DWORD *         pCurrentState,  
+   IUnknown **     ppCDModItfs  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetCurrentModulesInfo(  
-   uint       pCount,  
-   Guid       ppGuids,  
-   uint       pADIds,  
-   uint       pCurrentState,  
-   out object ppCDModItfs  
+   uint       pCount,  
+   Guid       ppGuids,  
+   uint       pADIds,  
+   uint       pCurrentState,  
+   out object ppCDModItfs  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pCount`  
- [in] Number of modules in the `ppGuids` array.  
+ \[入力\] 配列の `ppGuids` のモジュールの数。  
   
  `ppGuids`  
- [in] Array that contains the unique identifiers for the modules.  
+ \[入力\] 整列\] モジュールの一意識別子を含む。  
   
  `pADIds`  
- [in] Identifiers for the application domains.  
+ \[出力\] アプリケーション ドメインの ID。  
   
  `pCurrentState`  
- [in] Current state of the symbol group.  
+ \[入力\] シンボルのグループの現在の状態。  
   
  `ppCDModItfs`  
- [out] Returns an object that contains the modules in the symbol group.  
+ \[入力\] シンボルのグループでモジュールを含むオブジェクトを返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

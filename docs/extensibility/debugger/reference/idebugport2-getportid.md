@@ -1,65 +1,48 @@
 ---
-title: IDebugPort2::GetPortId | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugPort2::GetPortId
-helpviewer_keywords:
-- IDebugPort2::GetPortId
+title: "IDebugPort2::GetPortId | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugPort2::GetPortId"
+helpviewer_keywords: 
+  - "IDebugPort2::GetPortId"
 ms.assetid: 837cb924-c113-4224-aa86-3e02b33dfa70
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b6195c0bcafc0e02881ef7d8b727cb91c4461265
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugport2getportid"></a>IDebugPort2::GetPortId
-Gets the port identifier.  
+# IDebugPort2::GetPortId
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+ポートの識別子を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetPortId(   
-   GUID* pguidPort  
+```cpp#  
+HRESULT GetPortId(   
+   GUID* pguidPort  
 );  
 ```  
   
-```csharp  
-int GetPortId(   
-   out Guid pguidPort  
+```c#  
+int GetPortId(   
+   out Guid pguidPort  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pguidPort`  
- [out] Returns the GUID that identifies the port.  
+ \[入力\] ポートを識別する GUID を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

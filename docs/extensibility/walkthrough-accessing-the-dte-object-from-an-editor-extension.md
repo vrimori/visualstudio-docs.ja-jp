@@ -1,53 +1,36 @@
 ---
-title: 'Walkthrough: Accessing the DTE Object from an Editor Extension | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- editors [Visual Studio SDK], new - getting the DTE object
+title: "チュートリアル: エディター拡張機能から DTE オブジェクトにアクセスします。 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "エディター [Visual Studio SDK] 新しい - DTE オブジェクトを取得します。"
 ms.assetid: c1f40bab-c6ec-45b0-8333-ea5ceb02a39d
 caps.latest.revision: 22
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ff1db3071f5dc7117bf7b277ff2a4da3841e3202
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 22
 ---
-# <a name="walkthrough-accessing-the-dte-object-from-an-editor-extension"></a>Walkthrough: Accessing the DTE Object from an Editor Extension
-In VSPackages, you can get the DTE object by calling the <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> method with the type of the DTE object. In Managed Extensibility Framework (MEF) extensions, you can import <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> and then call the <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> method with a type of <xref:EnvDTE.DTE>.  
+# チュートリアル: エディター拡張機能から DTE オブジェクトにアクセスします。
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+Vspackages にあるを呼び出して、DTE オブジェクトを取得できる、 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> DTE オブジェクトの型を持つメソッドです。 Managed Extensibility Framework \(MEF\) 拡張機能でインポートできる <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> しを呼び出す、 <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> の型を持つメソッド <xref:EnvDTE.DTE>します。  
   
-## <a name="prerequisites"></a>Prerequisites  
- To follow this walkthrough, you must install the Visual Studio SDK. For more information, see [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
+## 必須コンポーネント  
+ このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、「[Visual Studio SDK](../extensibility/visual-studio-sdk.md)」を参照してください。  
   
-## <a name="getting-the-dte-object"></a>Getting the DTE Object  
+## DTE オブジェクトを取得します。  
   
-#### <a name="to-get-the-dte-object-from-the-serviceprovider"></a>To get the DTE object from the ServiceProvider  
+#### DTE オブジェクトをサービス プロバイダーから取得するには  
   
-1.  Create a C# VSIX project named `DTETest`. Add an Editor Classifier item template and name it `DTETest`. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+1.  という名前の C\# の場合は、VSIX プロジェクトを作成する `DTETest`です。 エディターの分類子の項目テンプレートを追加し、名前 `DTETest`します。 詳細については、「[エディター項目テンプレートを使用して拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)」を参照してください。  
   
-2.  Add the following assembly references to the project:  
+2.  プロジェクトには、次のアセンブリ参照を追加します。  
   
     -   EnvDTE  
   
@@ -55,31 +38,31 @@ In VSPackages, you can get the DTE object by calling the <xref:Microsoft.VisualS
   
     -   Microsoft.VisualStudio.Shell.Immutable.10.0  
   
-3.  Go to the DTETest.cs file, and add the following `using` directives:  
+3.  DTETest.cs ファイルを開き、次の追加 `using` ディレクティブ。  
   
-    ```csharp  
+    ```c#  
     using EnvDTE;  
     using EnvDTE80;  
     using Microsoft.VisualStudio.Shell;  
   
     ```  
   
-4.  In the `GetDTEProvider` class, import a <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>.  
+4.  `GetDTEProvider` クラスで、インポート、 <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>です。  
   
-    ```csharp  
+    ```c#  
     [Import]  
     internal SVsServiceProvider ServiceProvider = null;  
   
     ```  
   
-5.  In the `GetClassifier()` method, add the following code.  
+5.  `GetClassifier()` メソッドに次のコードを追加します。  
   
-    ```csharp  
+    ```c#  
     DTE dte = (DTE)ServiceProvider.GetService(typeof(DTE));  
   
     ```  
   
-6.  If you have to use the <xref:EnvDTE80.DTE2> interface, you can cast the DTE object to it.  
+6.  使用する必要がある場合、 <xref:EnvDTE80.DTE2> インターフェイス、して DTE オブジェクトをキャストすることができます。  
   
-## <a name="see-also"></a>See Also  
- [Language Service and Editor Extension Points](../extensibility/language-service-and-editor-extension-points.md)
+## 参照  
+ [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

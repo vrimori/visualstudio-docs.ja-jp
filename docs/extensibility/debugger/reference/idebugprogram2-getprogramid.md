@@ -1,70 +1,53 @@
 ---
-title: IDebugProgram2::GetProgramId | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgram2::GetProgramId
-helpviewer_keywords:
-- IDebugProgram2::GetProgramId
+title: "IDebugProgram2::GetProgramId | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgram2::GetProgramId"
+helpviewer_keywords: 
+  - "IDebugProgram2::GetProgramId"
 ms.assetid: 2c31c0aa-2b71-46c7-849c-356e237d26f8
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4de4120528f5ecfda0d3e0ef373582a98d511bc2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugprogram2getprogramid"></a>IDebugProgram2::GetProgramId
-Gets a GUID for this program.  
+# IDebugProgram2::GetProgramId
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このプログラムの GUID を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetProgramId(   
-   GUID* pguidProgramId  
+```cpp#  
+HRESULT GetProgramId(   
+   GUID* pguidProgramId  
 );  
 ```  
   
-```csharp  
-int GetProgramId(   
-   out Guid pguidProgramId  
+```c#  
+int GetProgramId(   
+   out Guid pguidProgramId  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pguidProgramId`  
- [out] Returns the `GUID` for this program.  
+ \[出力\] このプログラムの `GUID` を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- A debug engine (DE) must return the program identifier originally passed to the [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) or [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) methods. This allows identification of the program across debugger components.  
+## 解説  
+ デバッグ エンジンは \(DE\)最初に [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) または [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) のメソッドに渡されるプログラム ID を返す必要があります。  これにはデバッガー コンポーネント間でプログラムを識別できます。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)   
  [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)

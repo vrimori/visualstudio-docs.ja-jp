@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::GetManagedViewerCreationData | Microsoft Docs
+title: "IPropertyProxyEESide::GetManagedViewerCreationData |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,19 +30,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a20a02b948bb1ee15011f99fe7071ae6af7df6b5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 221d26b43f57c5519747ef04e9ccc17fc9fad10e
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="ipropertyproxyeesidegetmanagedviewercreationdata"></a>IPropertyProxyEESide::GetManagedViewerCreationData
-Retrieves information about the viewer for this property type in order to instantiate that viewer.  
+そのビューアーをインスタンス化するために、このプロパティの種類のビューアーに関する情報を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
-```cpp  
+```cpp#  
 HRESULT GetManagedViewerCreationData(  
    BSTR*                  assemName,  
    IEEDataStorage**       assemBytes,  
@@ -53,7 +52,7 @@ HRESULT GetManagedViewerCreationData(
 );  
 ```  
   
-```csharp  
+```c#  
 int GetManagedViewerCreationData(  
    out string                     assemName,  
    out IEEDataStorage             assemBytes,  
@@ -64,32 +63,32 @@ int GetManagedViewerCreationData(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `assemName`  
- [out] Returns the name of the assembly holding this object.  
+ [out]このオブジェクトを保持しているアセンブリの名前を返します。  
   
  `assemBytes`  
- [out] Returns an [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) object containing the assembly bytes of this object (this is a null value if no bytes are available).  
+ [out]返します。、 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) (これは、null 値バイトが使用できない場合)、このオブジェクトのアセンブリのバイト数を格納するオブジェクト。  
   
  `assemPdb`  
- [out] Returns an `IEEDataStorage` object containing the symbol store information for this object (this is a null value if no symbol store is available).  
+ [out]返します。、`IEEDataStorage`シンボルを含むオブジェクトがこのオブジェクトの情報を (これは、null 値のシンボル ストアが利用できない場合) を格納します。  
   
  `className`  
- [out] Returns the class name containing this object.  
+ [out]このオブジェクトを含むクラス名を返します。  
   
  `alr`  
- [out] Returns a value from the [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) enumeration indicating the location of the assembly.  
+ [out]値を返す、 [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)アセンブリの場所を示す列挙値。  
   
  `replacementOk`  
- [out] Returns nonzero (`TRUE`) if this object's value can be changed; zero (`FALSE`) if the object is read-only.  
+ [out]0 以外を返します (`TRUE`) このオブジェクトの値を変更できる場合は&0; (`FALSE`) 場合は、オブジェクトは読み取り専用です。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、返す`S_OK`。 そうしないと、エラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- This method is used by type visualizers to instantiate a managed viewer.  
+## <a name="remarks"></a>コメント  
+ 型のビジュアライザーはこのメソッドを使用して、管理されているビューアーをインスタンス化します。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   
  [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)   
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)

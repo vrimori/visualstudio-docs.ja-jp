@@ -1,70 +1,53 @@
 ---
-title: IDebugPropertyField::GetPropertyGetter | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugPropertyField::GetPropertyGetter
-helpviewer_keywords:
-- IDebugPropertyField::GetPropertyGetter method
+title: "IDebugPropertyField::GetPropertyGetter | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugPropertyField::GetPropertyGetter"
+helpviewer_keywords: 
+  - "IDebugPropertyField::GetPropertyGetter メソッド"
 ms.assetid: ab9f861a-42ad-4a82-9ae6-2606176f755a
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 7f74e410fb971d65cf6be0058028b149e31a418d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugpropertyfieldgetpropertygetter"></a>IDebugPropertyField::GetPropertyGetter
-Gets the method that gets the property.  
+# IDebugPropertyField::GetPropertyGetter
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+プロパティを取得するメソッドを取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetPropertyGetter(   
-   IDebugMethodField** ppField  
+```cpp#  
+HRESULT GetPropertyGetter(   
+   IDebugMethodField** ppField  
 );  
 ```  
   
-```cpp  
+```cpp#  
 int GetPropertyGetter(  
-   out IDebugMethodField ppField  
+   out IDebugMethodField ppField  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ppField`  
- [out] Returns an [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) object representing the method that gets the property.  
+ \[入力\] [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) 表すオブジェクトのプロパティを取得するメソッドを返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- To get the method that sets the property, [GetPropertySetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertysetter.md) call the method.  
+## 解説  
+ プロパティを設定するメソッドを取得するには[GetPropertySetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertysetter.md) のメソッドを呼び出します。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md)   
  [GetPropertySetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertysetter.md)   
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

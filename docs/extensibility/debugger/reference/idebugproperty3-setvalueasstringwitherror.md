@@ -1,88 +1,71 @@
 ---
-title: IDebugProperty3::SetValueAsStringWithError | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProperty3::SetValueAsStringWithError
-helpviewer_keywords:
-- IDebugProperty3::SetValueAsStringWithError
+title: "IDebugProperty3::SetValueAsStringWithError | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProperty3::SetValueAsStringWithError"
+helpviewer_keywords: 
+  - "IDebugProperty3::SetValueAsStringWithError"
 ms.assetid: b378368f-4a45-4b2f-8e3d-3bff7a18ab17
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: cec26257ab5c283c82846ff477b3e929e40194f1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
-Sets the value of this property and returns an error message, if necessary.  
+# IDebugProperty3::SetValueAsStringWithError
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このプロパティの値を設定しエラー メッセージを必要に応じて返します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
 ```cpp  
-HRESULT SetValueAsStringWithError(  
-   LPCOLESTR pszValue,  
-   DWORD     dwRadix,  
-   DWORD     dwTimeout,  
-   BSTR*     errorString  
+HRESULT SetValueAsStringWithError(  
+   LPCOLESTR pszValue,  
+   DWORD     dwRadix,  
+   DWORD     dwTimeout,  
+   BSTR*     errorString  
 );  
 ```  
   
-```csharp  
-int SetValueAsStringWithError(  
-   string     pszValue,  
-   uint       dwRadix,  
-   uint       dwTimeout,  
-   out string errorString  
+```c#  
+int SetValueAsStringWithError(  
+   string     pszValue,  
+   uint       dwRadix,  
+   uint       dwTimeout,  
+   out string errorString  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pszValue`  
- [in] Value to set.  
+ \[入力\] 設定する値。  
   
  `dwRadix`  
- [in] The radix of the value being set.  
+ \[入力\] 設定される値の基数。  
   
  `dwTimeout`  
- [in] The length of time to wait for the value to be set (`INFINITE` means wait forever).  
+ \[入力\] 値を設定するために待機する時間 \(`INFINITE` の方法では待機\)。  
   
  `errorString`  
- [out] If there was an error setting the value, this holds the reason for the failure.  
+ 値を設定する \[入力\] このエラーが発生した場合は失敗の理由を保持します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- The incoming value could be an expression to be evaluated.  
+## 解説  
+ 受信した値が評価される式を指定できます。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CProperty** object that exposes the [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) interface.  
+## 使用例  
+ 次の例に [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) インターフェイスを公開する **CProperty の**  オブジェクトに対してこのメソッドを実装する方法を示します。  
   
-```cpp  
+```cpp#  
 HRESULT CProperty::SetValueAsStringWithError(   
     LPCOLESTR in_szValue,  
     DWORD in_RADIX,  
@@ -184,5 +167,5 @@ HRESULT CProperty::SetValueAsStringWithError(
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)

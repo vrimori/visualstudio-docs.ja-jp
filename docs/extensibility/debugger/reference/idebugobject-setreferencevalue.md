@@ -1,69 +1,52 @@
 ---
-title: IDebugObject::SetReferenceValue | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugObject::SetReferenceValue
-helpviewer_keywords:
-- IDebugObject::SetReferenceValue method
+title: "IDebugObject::SetReferenceValue | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugObject::SetReferenceValue"
+helpviewer_keywords: 
+  - "IDebugObject::SetReferenceValue メソッド"
 ms.assetid: 08c78a4e-98eb-41cb-8b75-02a6a43d49f7
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e66a066d2f4d94585a84da4d41ffafe597d89ed3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugobjectsetreferencevalue"></a>IDebugObject::SetReferenceValue
-Sets the reference value of this object.  
+# IDebugObject::SetReferenceValue
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このオブジェクトの参照値を設定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT SetReferenceValue(   
-   IDebugObject* pObject  
+```cpp#  
+HRESULT SetReferenceValue(   
+   IDebugObject* pObject  
 );  
 ```  
   
-```csharp  
+```c#  
 int SetReferenceValue(  
-   [In] IDebugObject pObject  
+   [In] IDebugObject pObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pObject`  
- [in] An [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object representing the new reference value.  
+ \[入力\] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) に新しい参照値。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- This method makes this [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object a reference to the value of the object given in the `pObject` parameter, throwing away any previous reference. Note that this `IDebugObject` object must already be a reference type.  
+## 解説  
+ このメソッドは [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) でこのオブジェクトよりも前の参照を破棄 `pObject` のパラメーターの指定されたオブジェクトの値への参照を作成します。  `IDebugObject`このオブジェクトがまだ参照型である必要があることに注意してください。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)
