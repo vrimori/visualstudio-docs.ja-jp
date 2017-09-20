@@ -40,7 +40,7 @@ JavaScript では、ソース コードの特別なコメント フィールド�
   
 -   [\<returns\>](../ide/returns-javascript.md)  
   
--   [\<signature\>](../Topic/%3Csignature%3E%20\(JavaScript\).md)  
+-   [\<signature\>](../ide/signature-javascript.md)  
   
 -   [\<summary\>](../ide/summary-javascript.md)  
   
