@@ -1,5 +1,5 @@
 ---
-title: Tips and Tricks for Visual Studio | Microsoft Docs
+title: "Visual Studio のヒントとテクニック | Microsoft ドキュメント"
 ms.custom: 
 ms.date: 06/21/2017
 ms.reviewer: 
@@ -28,121 +28,122 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: 8413523efb6291b033447e5ea41eea824228f45f
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
+ms.openlocfilehash: 27dc4d56a0608ddf031b47775bd9aaef20e24194
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="tips-and-tricks-for-visual-studio"></a>Tips and Tricks for Visual Studio
-You can navigate in [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] more easily by using the shortcuts in this topic. This topic is only a subset of the available keyboard shortcuts. For a more complete list, see [Default Keyboard Shortcuts in Visual Studio](../ide/default-keyboard-shortcuts-in-visual-studio.md). For information about how to optimize Visual Studio for accessibility, see [Accessibility Tips and Tricks](../ide/reference/accessibility-tips-and-tricks.md).  
+# <a name="tips-and-tricks-for-visual-studio"></a>Visual Studio のヒントとテクニック
+[!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] では、このトピックのショートカットを使用してより簡単に移動できます。 このトピックは、使用できるキーボード ショートカットの一部にすぎません。 詳しくは、「[Visual Studio の既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。 ユーザー補助について Visual Studio を最適化する方法の詳細については、「[アクセシビリティのヒントとテクニック](../ide/reference/accessibility-tips-and-tricks.md)」を参照してください。  
 
-##  <a name="BKMK_WindowMgmt"></a> Window Management  
-
-|||  
-|-|-|  
-|Drag Off Floating Tab Wells|Ctrl+click for multi-select|  
-|Maximize Floating Window|Double-click on title bar|  
-|Re-dock Floating Window|Ctrl+double-click title bar|  
-|Close Active Document|Ctrl+F4|  
-|Show Open File List|Ctrl+Alt+Down|  
-|Show All Floating Windows|Ctrl+Shift+M|  
-
-##  <a name="BKMK_WindowShortcuts"></a> Window Shortcuts  
+##  <a name="BKMK_WindowMgmt"></a>ウィンドウ管理  
 
 |||  
 |-|-|  
-|Move/Dock Floating Windows|Win+Left / Win+Right|  
-|Maximize/Minimize Windows|Win+Up / Win+Down|  
-|Show Jump List|Win+Alt+n|  
-|Start New Instance|Win+Shift+n|  
-|Switch Between Windows|Win+n|  
+|フローティング タブ ウェルを外にドラッグ|複数選択は Ctrl キーを押しながらクリック|  
+|フローティング ウィンドウの最大化|タイトル バーをダブルクリック|  
+|フローティング ウィンドウの再ドッキング|Ctrl キーを押しながらタイトル バーをダブルクリック|  
+|アクティブなドキュメントを閉じる|Ctrl + F4|  
+|開いているファイル リストを表示|Ctrl + Alt + Down|  
+|すべてのフローティング ウィンドウを表示|Ctrl+Shift+M|  
 
-##  <a name="BKMK_Search"></a> Visual Studio Search  
-
-|||  
-|-|-|  
-|Solution Explorer Search|Ctrl+;|  
-|Place Focus in Search box in any tool window|Alt+` when the tool window has focus|  
-|Quick Launch|Ctrl+Q|  
-|Quick Launch Scope Results|-   @opt Options<br />-   @cmd Commands<br />-   @mru Most recently used<br />-   @doc Open documents|  
-|Search in Tools Options|Ctrl+E|  
-
-##  <a name="BKMK_EditorFind"></a> Editor Find  
+##  <a name="BKMK_WindowShortcuts"></a> ウィンドウのショートカット  
 
 |||  
 |-|-|  
-|Quick Find|Ctrl+F|  
-|Quick Find Next Result|Enter|  
-|Quick Find Previous Result|Shift+Enter|  
-|Quick Find Expand Drop Down|Alt+Down|  
-|Dismiss Find|Esc|  
-|Quick Replace|Ctrl+H|  
-|Quick Replace Replace Next|Alt+R|  
-|Quick Replace Replace All|Alt+A|  
-|Find in Files|Ctrl+Shift+F|  
-|Replace in Files|Ctrl+Shift+H|  
+|フローティング ウィンドウの移動またはドッキング|Win + Left / Win + Right|  
+|ウィンドウの最大化または最小化|Win + Up / Win + Down|  
+|ジャンプ リストを表示|Win + Alt + n|  
+|新しいインスタンスを開始|Win + Shift + n|  
+|ウィンドウの切り替え|Win + n|  
 
-##  <a name="BKMK_CodeEditor"></a> Code Editor  
+##  <a name="BKMK_Search"></a> Visual Studio での検索  
 
 |||  
 |-|-|  
-|IntelliSense Suggestion Mode|Ctrl+Alt+Space (Toggle)|  
-|Force Show IntelliSense|Ctrl+J|  
-|Smart Tags|Ctrl+.|  
-|Snippet Picker|Ctrl+K,X or ?,Tab (VB)|  
-|Surround With|Ctrl+K,S|  
-|Show Quick Info|Ctrl+K,I|  
-|Navigate To|Ctrl+,|  
-|Navigate Highlighted References|Ctrl+Shift+Up (Previous), Ctrl+Shift+Down (Next)|  
-|Editor Zoom|Ctrl+Shift+> (In), Ctrl+Shift+< (Out)|  
-|Block Selection|Hold Alt and drag mouse, Shift+Alt+Arrow Keys|  
-|Move Line Up/Down|Alt+Up / Alt+Down|  
-|Go To Definition|F12|  
-|Peek Definition|Alt+F12|  
-|Go To Definition Stack|Ctrl+Shift+8 (Back), Ctrl+Shift+7 (Forward)|  
-|Close the Peek Definition window|Esc|  
-|Promote the Peek Definition window to a regular document tab|Ctrl+Alt+Home|  
-|Navigate between multiple Peek Definition windows|Ctrl+Alt+- and Ctrl+Alt+=|  
-|Navigate between multiple Peek results|F8 and Shift+F8|  
-|Toggle between the code editor window and the Peek Definition window|Shift+Esc|  
+|ソリューション エクスプローラーの検索|Ctrl + ;|  
+|任意のツール ウィンドウの検索ボックスへのフォーカスの移動|ツール ウィンドウにフォーカスがあるときに Alt + `|  
+|クイック起動|Ctrl + Q|  
+|スコープ結果のクイック起動|-   @opt オプション<br />-   @cmd コマンド<br />-   @mru 直前に使用<br />-   @doc ドキュメントを開く|  
+|ツール オプションの検索|Ctrl+E|  
 
-##  <a name="BKMK_Toolbars"></a> Toolbars  
+##  <a name="BKMK_EditorFind"></a>エディター検索  
 
 |||  
 |-|-|  
-|Add Buttons|Click toolbar overflow button|  
-|Find Combo in Standard toolbar|Ctrl+D|  
-|Find Textbox Command Mode|Type ">"|  
-|Create new alias|>alias NewAlias Command|  
+|クイック検索|Ctrl + F|  
+|クイック検索の次の結果|Enter|  
+|クイック検索の前の結果|Shift + Enter|  
+|クイック検索でドロップダウンを展開|Alt + Down|  
+|検索を消去|Esc|  
+|[クイック置換]|Ctrl + H|  
+|クイック置換で次を置換|Alt + R|  
+|クイック置換ですべて置換|Alt+A|  
+|[フォルダーを指定して検索]|Ctrl + Shift + F|  
+|[フォルダーを指定して置換]|Ctrl + Shift + H|  
 
-##  <a name="BKMK_Debugging"></a> Debugging  
+##  <a name="BKMK_CodeEditor"></a> コード エディター  
 
 |||  
 |-|-|  
-|Start Debugging|F5|  
-|Stop Debugging|Shift+F5|  
-|Restart Debugging|Ctrl+Shift+F5|  
-|Step Over|F10|  
-|Step Into|F11|  
-|Step Out|Shift+F11|  
-|Run To Cursor|Ctrl+F10|  
-|Set Next Statement|Ctrl+Shift+F10|  
-|Set and Toggle Breakpoint|F9|  
-|Disable Breakpoint|Ctrl+F9|  
-|Immediate Window|Ctrl+Alt+I|  
-|Immediate Window Command Mode|Type ">"|  
-|Immediate Window Clear Buffer|>cls|  
-|Immediate Window Print Value|?varname|  
+|IntelliSense 候補提示モード|Ctrl + Alt + Space (切り替え)|  
+|IntelliSense の強制表示|Ctrl + J|  
+|スマート タグ|Ctrl + .|  
+|スニペットの選択|Ctrl + K、X、または ?、Tab (VB)|  
+|ブロックの挿入|Ctrl + K、S|  
+|クイック ヒントの表示|Ctrl + K、I|  
+|移動|Ctrl + ,|  
+|定義へ移動|F12|  
+|定義をここに表示|Alt + F12|  
+|定義スタックへ移動|Ctrl + Shift + 8 (戻る)、Ctrl +Shift + 7 (進む)|  
+|強調表示された参照間の移動|Ctrl + Shift + Up (前へ)、Ctrl + Shift + Down (次へ)|  
+|エディターのズーム|Ctrl + Shift + > (イン)、Ctrl + Shift + < (アウト)|  
+|ブロック選択|Alt を押したままマウスをドラッグ、Shift + Alt + 方向キー|  
+|行を上下に移動|Alt + Up / Alt + Down|  
+|定義をここに表示|Alt + F12|  
+|[ピークの定義] ウィンドウを閉じる|Esc|  
+|[ピークの定義] ウィンドウを通常のドキュメント タブに昇格する|Ctrl + Alt + Home|  
+|複数の [定義をここに表示] ウィンドウ間を移動する|Ctrl + Alt + マイナス記号 (-) と Ctrl + Alt + 等号 (=)|  
+|複数のピーク結果の間を移動する|F8 と Shift + F8|  
+|コード エディター ウィンドウと [定義をここに表示] ウィンドウの間で切り替える|Shift + Esc|  
 
-##  <a name="BKMK_ALM"></a> Application Lifecycle Management  
- See [Keyboard shortcuts: Visual Studio Online, TFS web portal, and Team Explorer](http://msdn.microsoft.com/en-us/35ea128b-7565-4ee3-8266-b9f0d32aecf4).  
+##  <a name="BKMK_Toolbars"></a> ツールバー  
 
-## <a name="see-also"></a>See Also  
- [Visual Studio Blog](http://blogs.msdn.com/b/visualstudio)   
- [Visual Studio Tips and Tricks Blog](http://blogs.msdn.com/b/zainnab)   
- [Visual Studio Toolbox on Channel 9](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)   
+|||  
+|-|-|  
+|ボタンを追加する|ツール バーのオーバーフロー ボタンをクリック|  
+|標準ツール バーのコンボの検索|Ctrl + D|  
+|テキストボックス コマンド モードの検索|「>」と入力|  
+|新しいエイリアスの作成|>alias NewAlias コマンド|  
+
+##  <a name="BKMK_Debugging"></a> デバッグ  
+
+|||  
+|-|-|  
+|デバッグの開始|F5|  
+|デバッグ中に診断ツールを有効にします|Shift + F5|  
+|デバッグの再起動|Ctrl + Shift + F5|  
+|[ステップ オーバー]|F10|  
+|[ステップ イン]|F11|  
+|[ステップ アウト]|Shift + F11|  
+|カーソル行の前まで実行|Ctrl + F10|  
+|次のステートメントの設定|Ctrl + Shift + F10|  
+|ブレークポイントの設定と切り替え|F9|  
+|ブレークポイントの無効化|Ctrl + F9|  
+|イミディエイト ウィンドウ|Ctrl + Alt + I|  
+|イミディエイト ウィンドウ コマンド モード|「>」と入力|  
+|イミディエイト ウィンドウのバッファーをクリア|>cls|  
+|イミディエイト ウィンドウの値の印刷|?varname|  
+
+##  <a name="BKMK_ALM"></a>アプリケーション ライフサイクル管理  
+ 「[キーボード ショートカット: Visual Studio Online、TFS Web ポータル、およびチーム エクスプローラー](http://msdn.microsoft.com/en-us/35ea128b-7565-4ee3-8266-b9f0d32aecf4)」を参照してください。  
+
+## <a name="see-also"></a>関連項目  
+ [Visual Studio ブログ](http://blogs.msdn.com/b/visualstudio)   
+ [Visual Studio のヒントとテクニックに関するブログ](http://blogs.msdn.com/b/zainnab)   
+ [Visual Studio ツールボックス (チャネル 9)](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)   
  [Visual Studio UserVoice](http://visualstudio.uservoice.com/forums/121579-visual-studio)   
- [Visual Studio Connect Bugs](http://connect.microsoft.com/VisualStudio)
+ [Visual Studio Connect のバグ](http://connect.microsoft.com/VisualStudio)
 
