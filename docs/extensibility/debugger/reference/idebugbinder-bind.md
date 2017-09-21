@@ -1,77 +1,60 @@
 ---
-title: IDebugBinder::Bind | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugBinder::Bind
-helpviewer_keywords:
-- IDebugBinder::Bind method
+title: "IDebugBinder::Bind | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugBinder::Bind"
+helpviewer_keywords: 
+  - "IDebugBinder::Bind メソッド"
 ms.assetid: 15a11ad7-0fcc-4e80-ae34-8a7dd7bae3c3
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 98eee69282ce74b6870404b86159e40007354b9d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="idebugbinderbind"></a>IDebugBinder::Bind
-This method gets the memory context or object that contains the symbol's current value.  
+# IDebugBinder::Bind
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このメソッドはシンボルの現在の値を格納するメモリのコンテキストを取得またはついて説明します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT Bind(   
-   IDebugObject*  pContainer,  
-   IDebugField*   pField,  
-   IDebugObject** ppObject  
+```cpp#  
+HRESULT Bind(   
+   IDebugObject*  pContainer,  
+   IDebugField*   pField,  
+   IDebugObject** ppObject  
 );  
 ```  
   
-```csharp  
+```c#  
 int Bind(  
-   IDebugObject     pContainer,  
-   IDebugField      pField,  
-   out IDebugObject ppObject  
+   IDebugObject     pContainer,  
+   IDebugField      pField,  
+   out IDebugObject ppObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pContainer`  
- [in] The [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) that contains the child referenced by `pField`.  
+ \[入力\] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) は `pField` して子を含む参照しました。  
   
  `pField`  
- [in] The [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) that represents the symbol.  
+ \[入力\] [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) シンボルを表します。  
   
  `ppObject`  
- [out] Returns the `IDebugObject` that represents the instance of the symbol.  
+ \[入力\] シンボルを返します `IDebugObject` のインスタンスを表します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

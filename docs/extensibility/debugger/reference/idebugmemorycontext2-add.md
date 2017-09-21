@@ -1,76 +1,59 @@
 ---
-title: IDebugMemoryContext2::Add | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugMemoryContext2::Add
-helpviewer_keywords:
-- IDebugMemoryContext2::Add method
-- Add method
+title: "IDebugMemoryContext2::Add | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugMemoryContext2::Add"
+helpviewer_keywords: 
+  - "IDebugMemoryContext2::Add メソッド"
+  - "Add メソッド"
 ms.assetid: 3c47e646-ce9e-4dd3-8f1a-6dbd3827d407
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 489dbaeb57edb9e0b47917223e98a8427bf4081c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="idebugmemorycontext2add"></a>IDebugMemoryContext2::Add
-Adds the specified value to the current context and returns a new context.  
+# IDebugMemoryContext2::Add
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+指定された値を現在のコンテキストに追加し新しいコンテキストを返します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT Add(   
-   UINT64                 dwCount,  
-   IDebugMemoryContext2** ppMemCxt  
+```cpp#  
+HRESULT Add(   
+   UINT64                 dwCount,  
+   IDebugMemoryContext2** ppMemCxt  
 );  
 ```  
   
-```csharp  
+```c#  
 int Add(  
-   ulong                    dwCount,   
-   out IDebugMemoryContext2 ppMemCxt  
+   ulong                    dwCount,   
+   out IDebugMemoryContext2 ppMemCxt  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `dwCount`  
- [in] The value to add to the current context.  
+ \[入力\] 現在のコンテキストに追加する値。  
   
  `ppMemCxt`  
- [out] Returns a new [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object.  
+ \[入力\] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) の新しいオブジェクトを返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- A memory context is an address, so adding a value to an address produces a new address that requires a new context interface.  
+## 解説  
+ メモリ アドレスのコンテキストはためアドレスに値を追加するには新しいコンテキストのインターフェイスが必要な新しいアドレスを生成します。  
   
- This method must always produce a new context, even if the resulting address is outside the memory space associated with this context. The only exception to this is if no memory can be allocated for the new context or if `ppMemCxt` is a null value (which is an error).  
+ このメソッドはアドレスがこのコンテキストに関連付けられているメモリ空間以外にも新しいコンテキストを常に作り出さなければ必要があります。  ただし唯一の例外はメモリが新しいコンテキストに割り当てることができないか`ppMemCxt` \(エラー\) null 値である場合です。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

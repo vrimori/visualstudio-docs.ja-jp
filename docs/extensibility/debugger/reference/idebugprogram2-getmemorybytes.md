@@ -1,69 +1,52 @@
 ---
-title: IDebugProgram2::GetMemoryBytes | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgram2::GetMemoryBytes
-helpviewer_keywords:
-- IDebugProgram2::GetMemoryBytes
+title: "IDebugProgram2::GetMemoryBytes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgram2::GetMemoryBytes"
+helpviewer_keywords: 
+  - "IDebugProgram2::GetMemoryBytes"
 ms.assetid: 1cdedb47-caf8-468e-aaf4-163f16afb403
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 78da58e71bea0bdbec5c85146b8123ae6c66295e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugprogram2getmemorybytes"></a>IDebugProgram2::GetMemoryBytes
-Retrieves the memory bytes occupied by the program.  
+# IDebugProgram2::GetMemoryBytes
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+プログラムによって占有されていたメモリのバイト数を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetMemoryBytes(   
-   IDebugMemoryBytes2** ppMemoryBytes  
+```cpp#  
+HRESULT GetMemoryBytes(   
+   IDebugMemoryBytes2** ppMemoryBytes  
 );  
 ```  
   
-```csharp  
-int GetMemoryBytes(   
-   out IDebugMemoryBytes2 ppMemoryBytes  
+```c#  
+int GetMemoryBytes(   
+   out IDebugMemoryBytes2 ppMemoryBytes  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ppMemoryBytes`  
- [out] Returns an [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) object that represents the memory bytes of the program.  
+ \[入力\] プログラムのメモリのバイト数を表す [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) のオブジェクトを返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- The memory bytes as represented by the [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) object is for the program's image in memory and not any memory that was allocated when the program was executed.  
+## 解説  
+ [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) のオブジェクトによって表されるためにメモリが割り当てられたメモリのバイトとメモリのプログラム イメージにプログラムが実行されたときにではありません。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)

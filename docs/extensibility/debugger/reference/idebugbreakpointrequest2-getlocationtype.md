@@ -1,68 +1,51 @@
 ---
-title: IDebugBreakpointRequest2::GetLocationType | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugBreakpointRequest2::GetLocationType
-helpviewer_keywords:
-- IDebugBreakpointRequest2::GetLocationType
+title: "IDebugBreakpointRequest2::GetLocationType | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugBreakpointRequest2::GetLocationType"
+helpviewer_keywords: 
+  - "IDebugBreakpointRequest2::GetLocationType"
 ms.assetid: b6d14c59-d3aa-48ff-8278-f6b5bba9c2f3
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8d29e0d8694a1e19ec9c2c602fa52212b591542e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="idebugbreakpointrequest2getlocationtype"></a>IDebugBreakpointRequest2::GetLocationType
-Gets the breakpoint location type of this breakpoint request.  
+# IDebugBreakpointRequest2::GetLocationType
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このブレークポイントの要求のブレークポイント位置の型を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetLocationType(   
-   BP_LOCATION_TYPE* pBPLocationType  
+```cpp#  
+HRESULT GetLocationType(   
+   BP_LOCATION_TYPE* pBPLocationType  
 );  
 ```  
   
-```csharp  
-int GetLocationType(   
-   out enum_BP_LOCATION_TYPE pBPLocationType  
+```c#  
+int GetLocationType(   
+   out enum_BP_LOCATION_TYPE pBPLocationType  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pBPLocationType`  
- [out] Returns a value from the [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) enumeration that describes the location of this breakpoint request.  
+ \[出力\] ブレークポイントの要求の場所を示す [BP\_LOCATION\_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) の列挙型の値を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_FAIL` if the `bpLocation` field in the associated [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) structure is not valid.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) に関連付けられた構造体の `bpLocation` のフィールドが無効な場合 `E_FAIL` を返します。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CDebugBreakpointRequest` object that exposes the[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) interface.  
+## 使用例  
+ 次の例に [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) インターフェイスを公開する `CDebugBreakpointRequest` の単純なオブジェクトに対してこのメソッドを実装する方法を示します。  
   
 ```  
 HRESULT CDebugBreakpointRequest::GetLocationType(BP_LOCATION_TYPE* pBPLocationType)    
@@ -95,8 +78,8 @@ HRESULT CDebugBreakpointRequest::GetLocationType(BP_LOCATION_TYPE* pBPLocationTy
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)   
- [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)   
- [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
- [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)
+ [BP\_LOCATION\_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)   
+ [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
+ [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)

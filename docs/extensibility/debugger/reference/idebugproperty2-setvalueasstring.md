@@ -1,80 +1,63 @@
 ---
-title: IDebugProperty2::SetValueAsString | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProperty2::SetValueAsString
-helpviewer_keywords:
-- IDebugProperty2::SetValueAsString
+title: "IDebugProperty2::SetValueAsString | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProperty2::SetValueAsString"
+helpviewer_keywords: 
+  - "IDebugProperty2::SetValueAsString"
 ms.assetid: 9e6a5054-41b7-4223-b509-b93689d366a5
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4a8fe4e1a40aa9ab33cd0cfdb925bbb4f0607fbd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugproperty2setvalueasstring"></a>IDebugProperty2::SetValueAsString
-Sets the value of a property from a given string.  
+# IDebugProperty2::SetValueAsString
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+指定された文字列からプロパティの値を設定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT SetValueAsString (   
-   LPCOLESTR pszValue,  
-   UINT      nRadix,  
-   DWORD     dwTimeout  
+```cpp#  
+HRESULT SetValueAsString (   
+   LPCOLESTR pszValue,  
+   UINT      nRadix,  
+   DWORD     dwTimeout  
 );  
 ```  
   
-```csharp  
-int SetValueAsString (   
-   string pszValue,  
-   uint   nRadix,  
-   uint   dwTimeout  
+```c#  
+int SetValueAsString (   
+   string pszValue,  
+   uint   nRadix,  
+   uint   dwTimeout  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pszValue`  
- [in] A string containing the value to be set.  
+ \[入力\] 文字列設定する値。  
   
  `nRadix`  
- [in] A radix to be used in interpreting any numerical information. This can be 0 to attempt to determine the radix automatically.  
+ \[入力\] 数値情報を解釈で使用される A の基数。  これは基数を自動的に決定する 0 です。  
   
  `dwTimeout`  
- [in] Specifies the maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
+ \[出力\] このメソッドから制御が戻るまで待機するミリ秒単位の最大時間を指定します。  無期限に待機するために `INFINITE` を使用します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns error code. The following table shows other possible values.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  次の表は他の値を示します。  
   
-|Value|Description|  
-|-----------|-----------------|  
-|`E_SETVALUE_VALUE_CANNOT_BE_SET`|The string could not be converted into a property value, or the property value could not be set.|  
-|`E_SETVALUE_VALUE_IS_READONLY`|The property is read-only.|  
+|値|Description|  
+|-------|-----------------|  
+|`E_SETVALUE_VALUE_CANNOT_BE_SET`|文字列はプロパティ値に変換できないかプロパティ値が設定されていることができませんでした。|  
+|`E_SETVALUE_VALUE_IS_READONLY`|プロパティは読み取り専用です。|  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

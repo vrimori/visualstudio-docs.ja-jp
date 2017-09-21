@@ -1,65 +1,48 @@
 ---
-title: SccEndBatch Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccEndBatch
-helpviewer_keywords:
-- SccEndBatch function
+title: "SccEndBatch 関数 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccEndBatch"
+helpviewer_keywords: 
+  - "SccEndBatch 関数"
 ms.assetid: 100e7833-fe0a-45c0-9fca-3e61fd1165b7
 caps.latest.revision: 13
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 9812491ac56c7a714dad200e4984afa348f564ed
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
-# <a name="sccendbatch-function"></a>SccEndBatch Function
-This function concludes a batch of source control operations. These batches may not be nested.  
+# SccEndBatch 関数
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+この関数は、ソース管理操作のバッチを終了します。 これらのバッチは、入れ子にできません。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 SCCRTN SccEndBatch(void);  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- None.  
+#### パラメーター  
+ なし。  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 戻り値  
+ この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Batch of operations successfully concluded.|  
-|SCC_E_UNKNOWNERROR|Nonspecific failure.|  
+|値|説明|  
+|-------|--------|  
+|SCC\_OK|操作のバッチは正常に終了しました。|  
+|SCC\_E\_UNKNOWNERROR|不特定のエラーです。|  
   
-## <a name="remarks"></a>Remarks  
- Source control batches are used to execute the same source control operations across multiple projects or multiple contexts. Batches can be used to eliminate redundant dialog boxes from the user experience during a batched operation. The [SccBeginBatch](../extensibility/sccbeginbatch-function.md) and the `SccEndBatch` function are used as a pair to indicate the beginning and end of an operation. They cannot be nested.  
+## 解説  
+ ソース コントロールのバッチは、複数のプロジェクトまたは複数のコンテキスト全体にわたって同じソース管理操作を実行に使用されます。 バッチ操作中に、ユーザー エクスペリエンスから冗長なダイアログ ボックスを排除するバッチを使用できます。[SccBeginBatch](../extensibility/sccbeginbatch-function.md) と `SccEndBatch` 関数として使用する 2 つを先頭と操作の終了を示します。 入れ子にできません。  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+## 参照  
+ [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccBeginBatch](../extensibility/sccbeginbatch-function.md)

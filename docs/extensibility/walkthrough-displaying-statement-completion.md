@@ -1,61 +1,44 @@
 ---
-title: 'Walkthrough: Displaying Statement Completion | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- editors [Visual Studio SDK], new - statement completion
+title: "チュートリアル: 候補の表示 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "エディター [Visual Studio SDK] - 新しいステートメント入力候補"
 ms.assetid: f3152c4e-7673-4047-a079-2326941d1c83
 caps.latest.revision: 36
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 4398bccf0f043871237a7b41a3454537bb08abd5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 36
 ---
-# <a name="walkthrough-displaying-statement-completion"></a>Walkthrough: Displaying Statement Completion
-You can implement language-based statement completion by defining the identifiers for which you want to provide completion and then triggering a completion session. You can define statement completion in the context of a language service, define your own file name extension and content type and then display completion for just that type, or you can trigger completion for an existing content type—for example, "plaintext". This walkthrough shows how to trigger statement completion for the "plaintext" content type, which is the content type of text files. The "text" content type is the ancestor of all other content types, including code and XML files.  
+# チュートリアル: 候補の表示
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+入力候補を提供する識別子を定義して、入力候補のセッションをトリガーして、言語に対応したステートメント入力候補を実装できます。 言語サービスのコンテキストでステートメント入力候補を定義、独自のファイル名拡張子とコンテンツの種類を定義およびその型だけの完了を表示できますか、既存のコンテンツの種類の完了を開始することができます\-たとえば、「プレーン テキスト」です。 このチュートリアルでは、テキスト ファイルのコンテンツ タイプは、「プレーン テキスト」コンテンツ タイプの入力候補をトリガーする方法を示します。 「テキスト」コンテンツの種類は、すべての他のコンテンツの種類、コードや XML ファイルなどの先祖です。  
   
- Statement completion is typically triggered by typing certain characters—for example, by typing the beginning of an identifier such as "using". It is typically dismissed by pressing the Spacebar, Tab, or Enter key to commit a selection. You can implement the IntelliSense features that are triggered by typing a character by using a command handler for the keystrokes (the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> interface) and a handler provider that implements the <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> interface. To create the completion source, which is the list of identifiers that participate in completion, implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> interface and a completion source provider (the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> interface). The providers are Managed Extensibility Framework (MEF) component parts. They are responsible for exporting the source and controller classes and importing services and brokers—for example, the <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, which enables navigation in the text buffer, and the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>, which triggers the completion session.  
+ ステートメント入力候補は、通常の特定の文字を入力してトリガー\-などによって、"using"のような識別子の先頭を入力します。 通常には選択範囲をコミットする space キーを押す、タブ、または Enter キーを押すと非表示です。 キー入力のコマンド ハンドラーを使用して文字を入力することによってトリガーされる IntelliSense 機能を実装することができます \(、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> インターフェイス\) およびハンドラー プロバイダーを実装する、 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> インターフェイスです。 完了に参加している id の一覧では、入力候補のソースを作成するには、実装、 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> インターフェイスと完了の同期元プロバイダー \(、 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> インターフェイス\)。 プロバイダーは、Managed Extensibility Framework \(MEF\) コンポーネントの部分です。 サービスとブローカー、ソースおよびコント ローラー クラスをエクスポートおよびインポートを担当しているなど、 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, 、テキスト バッファー内のナビゲーションを有効にして、 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>, 、入力候補のセッションをトリガーします。  
   
- This walkthrough shows how to implement statement completion for a hard-coded set of identifiers. In full implementations, the language service and the language documentation are responsible for providing that content.  
+ このチュートリアルでは、ハード コーディングされた一連の識別子の入力候補を実装する方法を示します。 完全な実装で、言語サービスと language のドキュメントがそのコンテンツを提供する担当します。  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## 必須コンポーネント  
+ Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
   
-## <a name="creating-a-mef-project"></a>Creating a MEF Project  
+## MEF プロジェクトを作成します。  
   
-#### <a name="to-create-a-mef-project"></a>To create a MEF project  
+#### MEF プロジェクトを作成するには  
   
-1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `CompletionTest`.  
+1.  C\# の場合は、VSIX プロジェクトを作成します。 \(で、 **新しいプロジェクト** ダイアログで、 **Visual c\#\/機能拡張**, 、し **VSIX プロジェクト**.\) ソリューションの名前 `CompletionTest`します。  
   
-2.  Add an Editor Classifier item template to the project. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2.  エディターの分類子の項目テンプレートをプロジェクトに追加します。 詳細については、「[エディター項目テンプレートを使用して拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)」を参照してください。  
   
-3.  Delete the existing class files.  
+3.  既存のクラス ファイルを削除します。  
   
-4.  Add the following references to the project and make sure that **CopyLocal** is set to `false`:  
+4.  次の参照をプロジェクトに追加し、そのことを確認して **CopyLocal** に設定されている `false`:  
   
      Microsoft.VisualStudio.Editor  
   
@@ -69,134 +52,155 @@ You can implement language-based statement completion by defining the identifier
   
      Microsoft.VisualStudio.TextManager.Interop  
   
-## <a name="implementing-the-completion-source"></a>Implementing the Completion Source  
- The completion source is responsible for collecting the set of identifiers and adding the content to the completion window when a user types a completion trigger, such as the first letters of an identifier. In this example, the identifiers and their descriptions are hard-coded in the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> method. In most real-world uses, you would use your language's parser to get the tokens to populate the completion list.  
+## 入力候補のソースの実装  
+ 入力候補のソースは、識別子のセットを収集し、ユーザーは、識別子の最初の文字などの補完トリガーを入力すると、補完ウィンドウに、コンテンツを追加します。 この例では、識別子とその説明はハード コードで、 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> メソッドです。 ほとんどの実際の用途では、入力候補一覧を設定するのにトークンを取得するのに、言語のパーサーを使用します。  
   
-#### <a name="to-implement-the-completion-source"></a>To implement the completion source  
+#### 入力候補のソースを実装するには  
   
-1.  Add a class file and name it `TestCompletionSource`.  
+1.  クラス ファイルを追加し、名前 `TestCompletionSource`します。  
   
-2.  Add these imports:  
+2.  これらのインポートを追加します。  
   
-     [!code-csharp[VSSDKCompletionTest#1](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_1.cs)]  [!code-vb[VSSDKCompletionTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_1.vb)]  
+     [!code-cs[VSSDKCompletionTest#1](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_1.cs)]
+     [!code-vb[VSSDKCompletionTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_1.vb)]  
   
-3.  Modify the class declaration for `TestCompletionSource` so that it implements <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>:  
+3.  クラス宣言を変更して `TestCompletionSource` を実装 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>:  
   
-     [!code-csharp[VSSDKCompletionTest#2](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_2.cs)]  [!code-vb[VSSDKCompletionTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_2.vb)]  
+     [!code-cs[VSSDKCompletionTest#2](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_2.cs)]
+     [!code-vb[VSSDKCompletionTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_2.vb)]  
   
-4.  Add private fields for the source provider, the text buffer, and a list of <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> objects (which correspond to the identifiers that will participate in the completion session):  
+4.  テキスト バッファーとの一覧では、ソース プロバイダーのプライベート フィールドを追加 <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> オブジェクト \(入力候補のセッションに参加する識別子に対応しています\)。  
   
-     [!code-csharp[VSSDKCompletionTest#3](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_3.cs)]  [!code-vb[VSSDKCompletionTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_3.vb)]  
+     [!code-cs[VSSDKCompletionTest#3](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_3.cs)]
+     [!code-vb[VSSDKCompletionTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_3.vb)]  
   
-5.  Add a constructor that sets the source provider and buffer. The `TestCompletionSourceProvider` class is defined in later steps:  
+5.  同期元プロバイダーとバッファーを設定するコンス トラクターを追加します。`TestCompletionSourceProvider` クラスは後の手順で定義します。  
   
-     [!code-csharp[VSSDKCompletionTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_4.cs)]  [!code-vb[VSSDKCompletionTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_4.vb)]  
+     [!code-cs[VSSDKCompletionTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_4.cs)]
+     [!code-vb[VSSDKCompletionTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_4.vb)]  
   
-6.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> method by adding a completion set that contains the completions you want to provide in the context. Each completion set contains a set of <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> completions, and corresponds to a tab of the completion window. (In Visual Basic projects, the completion window tabs are named **Common** and **All**.) The FindTokenSpanAtPosition method is defined in the next step.  
+6.  実装、 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A> コンテキストで提供するメソッドを入力候補を含む入力候補のセットを追加しています。 各入力候補のセットには一連の <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> 入力候補、補完ウィンドウのタブに対応しています。 \(Visual Basic プロジェクトでは、入力候補ウィンドウのタブの名前は **共通** と **すべて**.\) FindTokenSpanAtPosition メソッドは、次の手順で定義されます。  
   
-     [!code-csharp[VSSDKCompletionTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_5.cs)]  [!code-vb[VSSDKCompletionTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_5.vb)]  
+     [!code-cs[VSSDKCompletionTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_5.cs)]
+     [!code-vb[VSSDKCompletionTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_5.vb)]  
   
-7.  The following method is used to find the current word from the position of the cursor:  
+7.  次のメソッドを使用して、カーソルの位置から現在の単語を検索します。  
   
-     [!code-csharp[VSSDKCompletionTest#6](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_6.cs)]  [!code-vb[VSSDKCompletionTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_6.vb)]  
+     [!code-cs[VSSDKCompletionTest#6](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_6.cs)]
+     [!code-vb[VSSDKCompletionTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_6.vb)]  
   
-8.  Implement the `Dispose()` method:  
+8.  実装、 `Dispose()` メソッド。  
   
-     [!code-csharp[VSSDKCompletionTest#7](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_7.cs)]  [!code-vb[VSSDKCompletionTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_7.vb)]  
+     [!code-cs[VSSDKCompletionTest#7](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_7.cs)]
+     [!code-vb[VSSDKCompletionTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_7.vb)]  
   
-## <a name="implementing-the-completion-source-provider"></a>Implementing the Completion Source Provider  
- The completion source provider is the MEF component part that instantiates the completion source.  
+## 入力候補のソースのプロバイダーを実装します。  
+ 入力候補のソースのプロバイダーは、入力候補のソースをインスタンス化する MEF コンポーネント部分です。  
   
-#### <a name="to-implement-the-completion-source-provider"></a>To implement the completion source provider  
+#### 入力候補のソースのプロバイダーを実装するには  
   
-1.  Add a class named `TestCompletionSourceProvider` that implements <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider>. Export this class with a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> of "plaintext" and a <xref:Microsoft.VisualStudio.Utilities.NameAttribute> of "test completion".  
+1.  という名前のクラスを追加 `TestCompletionSourceProvider` を実装する <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider>です。 このクラスをエクスポート、 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> 「プレーン テキスト」の <xref:Microsoft.VisualStudio.Utilities.NameAttribute> 「テストの完了」のです。  
   
-     [!code-csharp[VSSDKCompletionTest#8](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_8.cs)]  [!code-vb[VSSDKCompletionTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_8.vb)]  
+     [!code-cs[VSSDKCompletionTest#8](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_8.cs)]
+     [!code-vb[VSSDKCompletionTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_8.vb)]  
   
-2.  Import a <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, which is used to find the current word in the completion source.  
+2.  インポート、 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>, を使用して、入力候補のソースの現在の単語を検索します。  
   
-     [!code-csharp[VSSDKCompletionTest#9](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_9.cs)]  [!code-vb[VSSDKCompletionTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_9.vb)]  
+     [!code-cs[VSSDKCompletionTest#9](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_9.cs)]
+     [!code-vb[VSSDKCompletionTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_9.vb)]  
   
-3.  Implement the <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider.TryCreateCompletionSource%2A> method to instantiate the completion source.  
+3.  実装、 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider.TryCreateCompletionSource%2A> 入力候補のソースをインスタンス化するメソッドです。  
   
-     [!code-csharp[VSSDKCompletionTest#10](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_10.cs)]  [!code-vb[VSSDKCompletionTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_10.vb)]  
+     [!code-cs[VSSDKCompletionTest#10](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_10.cs)]
+     [!code-vb[VSSDKCompletionTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_10.vb)]  
   
-## <a name="implementing-the-completion-command-handler-provider"></a>Implementing the Completion Command Handler Provider  
- The completion command handler provider is derived from a <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>, which listens for a text view creation event and converts the view from an <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>—which enables the addition of the command to the command chain of the Visual Studio shell—to an <xref:Microsoft.VisualStudio.Text.Editor.ITextView>. Because this class is a MEF export, you can also use it to import the services that are required by the command handler itself.  
+## 完了コマンド ハンドラーのプロバイダーを実装します。  
+ 完了コマンド ハンドラーのプロバイダーがから派生した、 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>, 、テキスト ビューの作成イベントをリスンし、ビューに変換する、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>\-Visual Studio シェルのコマンドのチェーンをコマンドの追加を有効にする: に、 <xref:Microsoft.VisualStudio.Text.Editor.ITextView>です。 このクラスは、MEF エクスポートであるためには、コマンド ハンドラー自体が必要とするサービスをインポートするのにも使用できます。  
   
-#### <a name="to-implement-the-completion-command-handler-provider"></a>To implement the completion command handler provider  
+#### 完了コマンド ハンドラーのプロバイダーを実装するには  
   
-1.  Add a file named `TestCompletionCommandHandler`.  
+1.  という名前のファイルを追加 `TestCompletionCommandHandler`します。  
   
-2.  Add these using statements:  
+2.  次の using ステートメントを追加します。  
   
-     [!code-csharp[VSSDKCompletionTest#11](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_11.cs)]  [!code-vb[VSSDKCompletionTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_11.vb)]  
+     [!code-cs[VSSDKCompletionTest#11](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_11.cs)]
+     [!code-vb[VSSDKCompletionTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_11.vb)]  
   
-3.  Add a class named `TestCompletionHandlerProvider` that implements <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>. Export this class with a <xref:Microsoft.VisualStudio.Utilities.NameAttribute> of "token completion handler", a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> of "plaintext", and a <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> of <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Editable>.  
+3.  という名前のクラスを追加 `TestCompletionHandlerProvider` を実装する <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>です。 このクラスをエクスポート、 <xref:Microsoft.VisualStudio.Utilities.NameAttribute> 「トークンの完了ハンドラー」の <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> 「プレーン テキスト」の <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> の <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Editable>です。  
   
-     [!code-csharp[VSSDKCompletionTest#12](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_12.cs)]  [!code-vb[VSSDKCompletionTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_12.vb)]  
+     [!code-cs[VSSDKCompletionTest#12](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_12.cs)]
+     [!code-vb[VSSDKCompletionTest#12](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_12.vb)]  
   
-4.  Import the <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>, which enables conversion from a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> to a <xref:Microsoft.VisualStudio.Text.Editor.ITextView>, a <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>, and a <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> that enables access to standard Visual Studio services.  
+4.  インポート、 <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService>, からの変換を有効にする、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> に、 <xref:Microsoft.VisualStudio.Text.Editor.ITextView>, 、 <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>, 、および <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> Visual Studio の標準のサービスにアクセスできるようにします。  
   
-     [!code-csharp[VSSDKCompletionTest#13](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_13.cs)]  [!code-vb[VSSDKCompletionTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_13.vb)]  
+     [!code-cs[VSSDKCompletionTest#13](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_13.cs)]
+     [!code-vb[VSSDKCompletionTest#13](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_13.vb)]  
   
-5.  Implement the <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener.VsTextViewCreated%2A> method to instantiate the command handler.  
+5.  実装、 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener.VsTextViewCreated%2A> コマンド ハンドラーのインスタンスを作成する方法です。  
   
-     [!code-csharp[VSSDKCompletionTest#14](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_14.cs)]  [!code-vb[VSSDKCompletionTest#14](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_14.vb)]  
+     [!code-cs[VSSDKCompletionTest#14](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_14.cs)]
+     [!code-vb[VSSDKCompletionTest#14](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_14.vb)]  
   
-## <a name="implementing-the-completion-command-handler"></a>Implementing the Completion Command Handler  
- Because statement completion is triggered by keystrokes, you must implement the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> interface to receive and process the keystrokes that trigger, commit, and dismiss the completion session.  
+## コマンドの完了ハンドラーを実装します。  
+ 実装する必要がありますので、ステートメント入力候補がキーストロークによってトリガーされると、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> インターフェイスを受け取り、トリガー、コミット、および入力候補のセッションを破棄するキーボード操作を処理します。  
   
-#### <a name="to-implement-the-completion-command-handler"></a>To implement the completion command handler  
+#### コマンドの完了ハンドラーを実装するには  
   
-1.  Add a class named `TestCompletionCommandHandler` that implements <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>:  
+1.  という名前のクラスを追加 `TestCompletionCommandHandler` を実装する <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>:  
   
-     [!code-csharp[VSSDKCompletionTest#15](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_15.cs)]  [!code-vb[VSSDKCompletionTest#15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_15.vb)]  
+     [!code-cs[VSSDKCompletionTest#15](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_15.cs)]
+     [!code-vb[VSSDKCompletionTest#15](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_15.vb)]  
   
-2.  Add private fields for the next command handler (to which you pass the command), the text view, the command handler provider (which enables access to various services), and a completion session:  
+2.  次のコマンド ハンドラーが \(これに合格するコマンドは、\)、テキスト ビュー、\(これにより、さまざまなサービスへのアクセス\)、コマンド ハンドラー プロバイダーには、プライベート フィールドを追加し、入力候補セッション。  
   
-     [!code-csharp[VSSDKCompletionTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_16.cs)]  [!code-vb[VSSDKCompletionTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_16.vb)]  
+     [!code-cs[VSSDKCompletionTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_16.cs)]
+     [!code-vb[VSSDKCompletionTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_16.vb)]  
   
-3.  Add a constructor that sets the text view and the provider fields, and adds the command to the command chain:  
+3.  テキスト ビューとプロバイダーのフィールドを設定し、コマンドのチェーンにコマンドを追加するコンス トラクターを追加します。  
   
-     [!code-csharp[VSSDKCompletionTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_17.cs)]  [!code-vb[VSSDKCompletionTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_17.vb)]  
+     [!code-cs[VSSDKCompletionTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_17.cs)]
+     [!code-vb[VSSDKCompletionTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_17.vb)]  
   
-4.  Implement the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> method by passing the command along:  
+4.  実装、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> に沿ってコマンドを渡すことによってメソッド。  
   
-     [!code-csharp[VSSDKCompletionTest#18](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_18.cs)]  [!code-vb[VSSDKCompletionTest#18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_18.vb)]  
+     [!code-cs[VSSDKCompletionTest#18](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_18.cs)]
+     [!code-vb[VSSDKCompletionTest#18](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_18.vb)]  
   
-5.  Implement the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> method. When this method receives a keystroke, it must do one of these things:  
+5.  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> メソッドを実装します。 このメソッドは、キー入力を受け取る、次のいずれかにください。  
   
-    -   Allow the character to be written to the buffer, and then trigger or filter completion. (Printing characters do this.)  
+    -   文字バッファーに書き込まれると、トリガー、または完了をフィルター処理を許可します。 \(印刷文字実行します。\)  
   
-    -   Commit the completion, but do not allow the character to be written to the buffer. (Whitespace, Tab, and Enter do this when a completion session is displayed.)  
+    -   完了すると、コミットしますが、バッファーに書き込まれる文字を許可されていません。 \(空白、タブ、および Enter そうときに入力候補のセッションが表示されます。\)  
   
-    -   Allow the command to be passed on to the next handler. (All other commands.)  
+    -   次のハンドラー渡されるコマンドを許可します。 \(その他のコマンドです。\)  
   
-     Because this method may display UI, call <xref:Microsoft.VisualStudio.Shell.VsShellUtilities.IsInAutomationFunction%2A> to make sure that it is not called in an automation context:  
+     このメソッドが UI を表示するために呼び出す <xref:Microsoft.VisualStudio.Shell.VsShellUtilities.IsInAutomationFunction%2A> automation コンテキストで呼び出されていないことを確認します。  
   
-     [!code-csharp[VSSDKCompletionTest#19](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_19.cs)] [!code-vb[VSSDKCompletionTest#19](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_19.vb)]  
+     [!code-cs[VSSDKCompletionTest#19](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_19.cs)]
+     [!code-vb[VSSDKCompletionTest#19](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_19.vb)]  
   
-6.  This code is a private method that triggers the completion session:  
+6.  このコードは、入力候補のセッションをトリガーするプライベート メソッドを示します。  
   
-     [!code-csharp[VSSDKCompletionTest#20](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_20.cs)]  [!code-vb[VSSDKCompletionTest#20](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_20.vb)]  
+     [!code-cs[VSSDKCompletionTest#20](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_20.cs)]
+     [!code-vb[VSSDKCompletionTest#20](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_20.vb)]  
   
-7.  The next example is a private method that unsubscribes from the <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Dismissed> event:  
+7.  次の例からアンサブスク ライブするプライベート メソッド、 <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Dismissed> イベント。  
   
-     [!code-csharp[VSSDKCompletionTest#21](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_21.cs)]  [!code-vb[VSSDKCompletionTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_21.vb)]  
+     [!code-cs[VSSDKCompletionTest#21](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_21.cs)]
+     [!code-vb[VSSDKCompletionTest#21](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_21.vb)]  
   
-## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
- To test this code, build the CompletionTest solution and run it in the experimental instance.  
+## コードのビルドとテスト  
+ このコードをテストするには、CompletionTest ソリューションをビルドし、実験用インスタンスで実行します。  
   
-#### <a name="to-build-and-test-the-completiontest-solution"></a>To build and test the CompletionTest solution  
+#### ビルドし、CompletionTest ソリューションをテストするには  
   
-1.  Build the solution.  
+1.  ソリューションをビルドします。  
   
-2.  When you run this project in the debugger, a second instance of Visual Studio is instantiated.  
+2.  デバッガーでこのプロジェクトを実行すると、Visual Studio の 2 つ目のインスタンスがインスタンス化されます。  
   
-3.  Create a text file and type some text that includes the word "add".  
+3.  テキスト ファイルを作成し、"add"という単語を含むいくつかのテキストを入力します。  
   
-4.  As you type first "a" and then "d", a list that contains "addition" and "adaptation" should be displayed. Notice that addition is selected. When you type another "d", the list should contain only "addition", which is now selected. You can commit "addition" by pressing the Spacebar, Tab, or Enter key, or dismiss the list by typing Esc or any other key.  
+4.  入力すると最初に"a"とし、"d"、"addition"と「適応」を含むリストが表示されます。 加算が選択されていることに注意してください。 もう 1 つの"d"を入力すると、この一覧はのみ"addition"、現在選択されているを含める必要があります。 Space キーを押す、タブ、または Enter キーを押す"addition"をコミットまたは esc キーまたはその他の任意のキーを入力して一覧を消すことができます。  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: Linking a Content Type to a File Name Extension](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+## 参照  
+ [チュートリアル: ファイル名拡張子へのコンテンツの種類のリンク](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

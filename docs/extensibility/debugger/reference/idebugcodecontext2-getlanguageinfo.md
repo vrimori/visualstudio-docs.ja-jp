@@ -1,73 +1,56 @@
 ---
-title: IDebugCodeContext2::GetLanguageInfo | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugCodeContext2::GetLanguageInfo
-helpviewer_keywords:
-- IDebugCodeContext2::GetLanguageInfo
+title: "IDebugCodeContext2::GetLanguageInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugCodeContext2::GetLanguageInfo"
+helpviewer_keywords: 
+  - "IDebugCodeContext2::GetLanguageInfo"
 ms.assetid: 03002ef1-9fe6-44b6-b23b-ef7b86b2b21b
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: cf86b37c40e103a61a08f7f34bd11dead7e2598e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugcodecontext2getlanguageinfo"></a>IDebugCodeContext2::GetLanguageInfo
-Gets the language information for this code context.  
+# IDebugCodeContext2::GetLanguageInfo
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このコード コンテキストの言語の情報を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetLanguageInfo(   
-   BSTR* pbstrLanguage,  
-   GUID* pguidLanguage  
+```cpp#  
+HRESULT GetLanguageInfo(   
+   BSTR* pbstrLanguage,  
+   GUID* pguidLanguage  
 );  
 ```  
   
-```csharp  
-int GetLanguageInfo(   
-   ref string pbstrLanguage,  
-   ref Guid pguidLanguage  
+```c#  
+int GetLanguageInfo(   
+   ref string pbstrLanguage,  
+   ref Guid pguidLanguage  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pbstrLanguage`  
- [in, out] Returns a string that contains the name of the language, such as "C++."  
+ \[入力出力\] 返される言語の名前を含む 「 C\+\+ などの文字列」を付けます。  
   
  `pguidLanguage`  
- [in, out] Returns the GUID for the language of the code context, for example, `guidCPPLang`.  
+ \[入力出力\] コード コンテキストの言語の GUIDたとえば`guidCPPLang` を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- At least one of the parameters must return a non-null value.  
+## 解説  
+ パラメーターのうち少なくとも 1 つが以外の値を返す必要があります。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

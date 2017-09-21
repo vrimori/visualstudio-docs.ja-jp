@@ -1,95 +1,78 @@
 ---
-title: SEEK_START | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SEEK_START
-helpviewer_keywords:
-- SEEK_START enumeration
+title: "SEEK_START | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SEEK_START"
+helpviewer_keywords: 
+  - "SEEK_START 列挙型"
 ms.assetid: 55bd8901-626e-428b-a263-23b14417f4c6
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 49e07797f38251fd5dc3d870b753c7a4df3c755b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="seekstart"></a>SEEK_START
-Specifies the position from which to start seeking in a disassembly stream.  
+# SEEK_START
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+構成ストリームの検索を開始する場所を指定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-enum enum_SEEK_START {   
-   SEEK_START_BEGIN       = 0x0001,  
-   SEEK_START_END         = 0x0002,  
-   SEEK_START_CURRENT     = 0x0003,  
-   SEEK_START_CODECONTEXT = 0x0004,  
-   SEEK_START_CODELOCID   = 0x0005  
+```cpp#  
+enum enum_SEEK_START {   
+   SEEK_START_BEGIN       = 0x0001,  
+   SEEK_START_END         = 0x0002,  
+   SEEK_START_CURRENT     = 0x0003,  
+   SEEK_START_CODECONTEXT = 0x0004,  
+   SEEK_START_CODELOCID   = 0x0005  
 };  
 typedef DWORD SEEK_START;  
 ```  
   
-```csharp  
-public enum enum_SEEK_START {   
-   SEEK_START_BEGIN       = 0x0001,  
-   SEEK_START_END         = 0x0002,  
-   SEEK_START_CURRENT     = 0x0003,  
-   SEEK_START_CODECONTEXT = 0x0004,  
-   SEEK_START_CODELOCID   = 0x0005  
+```c#  
+public enum enum_SEEK_START {   
+   SEEK_START_BEGIN       = 0x0001,  
+   SEEK_START_END         = 0x0002,  
+   SEEK_START_CURRENT     = 0x0003,  
+   SEEK_START_CODECONTEXT = 0x0004,  
+   SEEK_START_CODELOCID   = 0x0005  
 };  
 ```  
   
-## <a name="members"></a>Members  
- SEEK_START_BEGIN  
- Starts seeking at the beginning of the current document.  
+## メンバー  
+ SEEK\_START\_BEGIN  
+ 現在のドキュメントの先頭から検索を開始します。  
   
- SEEK_START_END  
- Starts seeking at the end of the current document.  
+ SEEK\_START\_END  
+ 現在のドキュメントの末尾に移動します。  
   
- SEEK_START_CURRENT  
- Starts seeking at the current position of the current document.  
+ SEEK\_START\_CURRENT  
+ 現在のドキュメント内の現在位置から検索を開始します。  
   
- SEEK_START_CODECONTEXT  
- Starts seeking at the given code context of the current document.  
+ SEEK\_START\_CODECONTEXT  
+ 現在のドキュメントのコード コンテキストで検索します。  
   
- SEEK_START_CODELOCID  
- Starts seeking at the given code location identifier. Code location identifiers are obtained by calling [GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md).  
+ SEEK\_START\_CODELOCID  
+ 特定のコード位置の識別子で検索します。  コード位置の識別子は [GetCurrentLocation](../Topic/IDebugDisassemblyStream2::GetCurrentLocation.md) を呼び出すことになります。  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) method.  
+## 解説  
+ [シーク](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) のメソッドに引数として渡されます。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 必要条件  
+ ヘッダー : msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)   
- [GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md)
+## 参照  
+ [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [シーク](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)   
+ [GetCurrentLocation](../Topic/IDebugDisassemblyStream2::GetCurrentLocation.md)

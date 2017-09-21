@@ -1,88 +1,71 @@
 ---
-title: IDebugProperty2::SetValueAsReference | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProperty2::SetValueAsReference
-helpviewer_keywords:
-- IDebugProperty2::SetValueAsReference method
+title: "IDebugProperty2::SetValueAsReference | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProperty2::SetValueAsReference"
+helpviewer_keywords: 
+  - "IDebugProperty2::SetValueAsReference メソッド"
 ms.assetid: 341b1b89-4ab8-4e1c-abe2-fb955df5c6b0
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 58cc520d773d65cc3eba0588c2b8763079019018
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugproperty2setvalueasreference"></a>IDebugProperty2::SetValueAsReference
-Sets the value of this property to the value of the given reference.  
+# IDebugProperty2::SetValueAsReference
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+指定された参照の値にこのプロパティの値を設定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT SetValueAsReference(  
-   IDebugReference2** rgpArgs,  
-   DWORD              dwArgCount,  
-   IDebugReference2*  pValue,  
-   DWORD              dwTimeout  
+   IDebugReference2** rgpArgs,  
+   DWORD              dwArgCount,  
+   IDebugReference2*  pValue,  
+   DWORD              dwTimeout  
 );  
 ```  
   
-```csharp  
+```c#  
 int SetValueAsReference(  
-   IDebugReference2[] rgpArgs,  
-   uint               dwArgCount,  
-   IDebugReference2   pValue,  
-   uint               dwTimeout  
+   IDebugReference2[] rgpArgs,  
+   uint               dwArgCount,  
+   IDebugReference2   pValue,  
+   uint               dwTimeout  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `rgpArgs`  
- [in] An array of arguments to pass to the managed code property setter. If the property setter does not take arguments or if this [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object does not refer to such a property setter, `rgpArgs` should be a null value. This parameter is typically a null value.  
+ \[入力\] マネージ コード内のプロパティの setter に渡す引数の配列。  プロパティの setter が引数を使用しないか[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)このオブジェクトがこのようなプロパティの setter を参照 `rgpArgs` はnull 値。  通常このパラメーターには null 値です。  
   
  `dwArgCount`  
- [in] The number of arguments in the `rgpArgs` array.  
+ \[入力\] `rgpArgs` の配列の引数の数。  
   
  `pValue`  
- [in] A reference, in the form of an [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object, to the value to use to set this property.  
+ \[入力\] 参照このプロパティを設定して使用する値への [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) のオブジェクトの形式で。  
   
  `dwTimeout`  
- [in] How long to take to set the value, in milliseconds. A typical value is `INFINITE`. This affects the length of time that any possible evaluation can take.  
+ \[入力\] ミリ秒の値を設定するために使用するのに要する。  一般的な値は `INFINITE` です。  これにより使用可能な評価ができる時間に影響します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns an error code, typically one of the following:  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合は通常次のいずれかを返します :  
   
-|Error|Description|  
-|-----------|-----------------|  
-|`E_SETVALUEASREFERENCE_NOTSUPPORTED`|Setting the value from a reference is not supported.|  
-|`E_SETVALUE_VALUE_CANNOT_BE_SET`|The value cannot be set, as this property refers to a method.|  
-|`E_SETVALUE_VALUE_IS_READONLY`|The value is read-only and cannot be set.|  
-|`E_NOTIMPL`|The method is not implemented.|  
+|エラー|Description|  
+|---------|-----------------|  
+|`E_SETVALUEASREFERENCE_NOTSUPPORTED`|参照から値を設定することはできません。|  
+|`E_SETVALUE_VALUE_CANNOT_BE_SET`|値はこのプロパティがメソッドを示すように設定することはできません。|  
+|`E_SETVALUE_VALUE_IS_READONLY`|値は読み取り専用で設定できません。|  
+|`E_NOTIMPL`|このメソッドは実装されていません。|  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

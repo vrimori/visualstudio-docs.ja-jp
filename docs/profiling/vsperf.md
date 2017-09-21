@@ -1,91 +1,73 @@
 ---
-title: VSPerf | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "VSPerf | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: b5854e62-279e-4850-bfeb-0c6ef82f4805
 caps.latest.revision: 6
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
-ms.openlocfilehash: d150336c336d046983d44afffc59c90cd30136af
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/31/2017
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 6
 ---
-# <a name="vsperf"></a>VSPerf
-Use the **VsPerf** command line tool to:  
+# VSPerf
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+**VsPerf** のコマンド ライン ツールを使用する:  
   
-1.  Profile Windows Store apps from the command line when Visual Studio is not installed on the device.  
+1.  プロファイルのウィンドウは、Visual Studio がデバイスにインストールされていない場合は、コマンド ラインからアプリケーションを保存します。  
   
-2.  Profile Windows 8 desktop applications and Windows Server 2012 applications using the sampling profiling method.  
+2.  サンプリング プロファイル方法を使用してデスクトップ アプリケーション、Windows 8 と Windows Server 2012 アプリケーションのプロファイリングを行います。  
   
- For more information about your profiling options, see [Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+ プロファイル オプションに関する詳細については、「[Windows 8 および Windows Server 2012 アプリケーションのプロファイリング](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
-##  <a name="BKMK_In_this_topic"></a> In this topic  
- This topic describes the options that you can use with the `vsperf.exe` command line tool. The topic contains the following sections:  
+##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
+ このトピックでは、`vsperf.exe` コマンド ライン ツールで使用できるオプションを示します。  このトピックは、次のセクションで構成されています。  
   
- [Windows Store apps only](#BKMK_windows_store_apps_only)  
+ [Windows ストア アプリケーションのみ](#BKMK_windows_store_apps_only)  
   
- [Windows 8 desktop applications and Windows Server 2012 applications only](#BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only)  
+ [Windows 8 デスクトップ アプリケーション、および Windows Server 2012 のアプリケーションのみ](#BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only)  
   
- [All applications](#BKMK_All_applications)  
+ [すべてのアプリケーション](#BKMK_All_applications)  
   
-##  <a name="BKMK_windows_store_apps_only"></a> Windows Store apps only  
- These options apply only to Windows Store apps.  
-  
-|||  
-|-|-|  
-|**/app:{AppName}**|Starts the profiler and waits for the specified app to be launched from the Start menu.<br /><br /> Run `vsperf /listapps` to view the app Name and PackageFullName of installed apps.|  
-|**/package:{PackageFullName}**|Starts the profiler and waits for the specified app to be launched from the Start menu.<br /><br /> Run `vsperf /listapps` to view the app Name and PackageFullName of installed apps.|  
-|**/js**|Required for profiling JavaScript apps.<br /><br /> Collect performance data from JavaScript apps.<br /><br /> Use only with /package or /attach.|  
-|**/noclr**|Optional. Do not collect CLR data.<br /><br /> Use only with /package or /attach.<br /><br /> Optimization, no managed symbols will resolve.|  
-|**/listapps**|List installed app Names and PackageFullNames.|  
-  
-##  <a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a> Windows 8 desktop applications and Windows Server 2012 applications only  
- These options do not work on Windows Store apps.  
+##  <a name="BKMK_windows_store_apps_only"></a> Windows ストア アプリケーションのみ  
+ これらのオプションは、Windows ストア アプリケーションにのみ適用されます。  
   
 |||  
 |-|-|  
-|**/launch:{Executable}**|Starts and begins profiling the specified executable file.|  
-|**/args:{ExecutableArguments}**|Specifies command line arguments to pass the **/launch** target.|  
-|**/console**|Runs the **/launch** target in a new command window.|  
+|**\/app:{AppName}**|スタート メニューから起動したアプリケーションのプロファイラーと待機を開始します。<br /><br /> インストール済みアプリケーションのアプリケーションの名前と PackageFullName を表示するに `vsperf /listapps` を実行します。|  
+|**\/package:{PackageFullName}**|スタート メニューから起動したアプリケーションのプロファイラーと待機を開始します。<br /><br /> インストール済みアプリケーションのアプリケーションの名前と PackageFullName を表示するに `vsperf /listapps` を実行します。|  
+|**\/js**|JavaScript のアプリケーションのプロファイリングを行うために必要です。<br /><br /> JavaScript のアプリケーションからパフォーマンス データを収集します。<br /><br /> \/package または \/attach でのみ使用します。|  
+|**\/noclr**|省略可能。  CLR データは収集しません。<br /><br /> \/package または \/attach でのみ使用します。<br /><br /> 最適化で、マネージ シンボルは解決されません。|  
+|**\/listapps**|インストール済みアプリケーションの名前と PackageFullNames を一覧表示します。|  
   
-##  <a name="BKMK_All_applications"></a> All applications  
- These option apply to any Windows 8 or Windows Server 2012 application.  
+##  <a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a> Windows 8 デスクトップ アプリケーション、および Windows Server 2012 のアプリケーションのみ  
+ これらのオプションは、Windows ストア アプリケーションでは実行されません。  
   
 |||  
 |-|-|  
-|**/attach:{PID&#124;ProcessName}[,PID&#124;ProcessName]...**|Collects data from the specified processes.<br /><br /> Use Task Manager to view the process id (PID) and process names of running apps.|  
-|**/file:{ReportName}**|Optional. Specifies output file (overwrites existing file).<br /><br /> Use only with /package or /attach.|  
-|**/pause**|Pause data collection.|  
-|**/resume**|Resume data collection.|  
-|**/stop**|Stop data collection and terminate target processes.|  
-|**/detach**|Stop data collection, but let target processes continue to run.|  
-|**/status**|Show profiler status.|  
+|**\/launch:{Executable}**|開始、指定した実行可能ファイルのプロファイリングを開始します。|  
+|**\/args:{ExecutableArguments}**|コマンド ライン引数を **\/launch** ターゲットを渡すように指定します。|  
+|**\/console**|新しいコマンド ウィンドウの **\/launch** ターゲットが実行されます。|  
   
-## <a name="see-also"></a>See Also  
- [Performance Tools on Windows 8 and Windows Server 2012 applications](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)   
- [Profiling from the Command-Line](../profiling/using-the-profiling-tools-from-the-command-line.md)
+##  <a name="BKMK_All_applications"></a> すべてのアプリケーション  
+ これらのオプションは、Windows 8 または Windows Server 2012 silent アプリケーションに適用されます。  
+  
+|||  
+|-|-|  
+|**\/attach:{PID&#124;ProcessName}\[,PID&#124;ProcessName\]...**|指定されたプロセスのデータが収集されます。<br /><br /> プロセス ID \(PID\) と実行中のなアプリケーションのプロセス名を表示 Use Task マネージャー。|  
+|**\/file:{ReportName}**|省略可能。  出力ファイル \(既存のファイルの上書き\) を指定します。<br /><br /> \/package または \/attach でのみ使用します。|  
+|**\/pause**|一時停止のデータ コレクション。|  
+|**\/resume**|データ収集の再開。|  
+|**\/stop**|データ収集を停止し、ターゲット プロセスを終了します。|  
+|**\/detach**|データ収集を停止しますが、ターゲット プロセスの実行を続けることができます。|  
+|**\/status**|プロファイラーの状態を表示します。|  
+  
+## 参照  
+ [Windows 8 および Windows Server 2012 アプリケーションのプロファイリング](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)   
+ [コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)

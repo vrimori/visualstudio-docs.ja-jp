@@ -1,66 +1,49 @@
 ---
-title: IDebugErrorBreakpoint2::GetPendingBreakpoint | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugErrorBreakpoint2::GetPendingBreakpoint
-helpviewer_keywords:
-- IDebugErrorBreakpoint2::GetPendingBreakpoint
+title: "IDebugErrorBreakpoint2::GetPendingBreakpoint | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugErrorBreakpoint2::GetPendingBreakpoint"
+helpviewer_keywords: 
+  - "IDebugErrorBreakpoint2::GetPendingBreakpoint"
 ms.assetid: 59d0defc-99fd-445c-bdac-8224d5dea3f9
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: cd0f917e71b9e83a467de7c7dcada5c243c55c2b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugerrorbreakpoint2getpendingbreakpoint"></a>IDebugErrorBreakpoint2::GetPendingBreakpoint
-Gets the pending breakpoint that caused the error.  
+# IDebugErrorBreakpoint2::GetPendingBreakpoint
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+エラーを起こした保留中のブレークポイントを取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetPendingBreakpoint (   
-   IDebugPendingBreakpoint2** ppPendingBreakpoint  
+```cpp#  
+HRESULT GetPendingBreakpoint (   
+   IDebugPendingBreakpoint2** ppPendingBreakpoint  
 );  
 ```  
   
-```csharp  
-int GetPendingBreakpoint (   
-   out IDebugPendingBreakpoint2 ppPendingBreakpoint  
+```c#  
+int GetPendingBreakpoint (   
+   out IDebugPendingBreakpoint2 ppPendingBreakpoint  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ppPendingBreakpoint`  
- [out] Returns an [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) object that represents the pending breakpoint that failed to be bound.  
+ \[入力\] バインドされていない保留中のブレークポイントを表す [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) のオブジェクトを返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)   
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

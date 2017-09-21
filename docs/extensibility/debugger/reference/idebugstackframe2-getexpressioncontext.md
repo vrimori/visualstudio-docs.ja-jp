@@ -1,70 +1,53 @@
 ---
-title: IDebugStackFrame2::GetExpressionContext | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugStackFrame2::GetExpressionContext
-helpviewer_keywords:
-- IDebugStackFrame2::GetExpressionContext
+title: "IDebugStackFrame2::GetExpressionContext | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugStackFrame2::GetExpressionContext"
+helpviewer_keywords: 
+  - "IDebugStackFrame2::GetExpressionContext"
 ms.assetid: a2604e6a-502d-473b-868f-b11ac64c7a35
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 812a436a36537c23344b9beb3d863f4d773509c4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugstackframe2getexpressioncontext"></a>IDebugStackFrame2::GetExpressionContext
-Gets an evaluation context for expression evaluation within the current context of a stack frame and thread.  
+# IDebugStackFrame2::GetExpressionContext
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+スタック フレームとスレッドの現在のコンテキスト内での式の評価コンテキストを取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetExpressionContext (   
-   IDebugExpressionContext2** ppExprCxt  
+```cpp#  
+HRESULT GetExpressionContext (   
+   IDebugExpressionContext2** ppExprCxt  
 );  
 ```  
   
-```csharp  
-int GetExpressionContext (   
-   out IDebugExpressionContext2 ppExprCxt  
+```c#  
+int GetExpressionContext (   
+   out IDebugExpressionContext2 ppExprCxt  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ppExprCxt`  
- [out] Returns an [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) object that represents a context for expression evaluation.  
+ \[入力\] 式の評価のコンテキストを表す [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) のオブジェクトを返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- Generally, an expression evaluation context can be thought of as a scope for performing expression evaluation. Call the [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) method to parse an expression and then call the resulting [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) or [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) methods to evaluate the parsed expression.  
+## 解説  
+ 通常式の評価のコンテキストは式の評価を実行するための範囲と考えることができます。  式を解析し解析された式を評価するために [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) または [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 結果のメソッドを呼び出すように [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) のメソッドを呼び出します。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)   
  [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)   

@@ -1,45 +1,28 @@
 ---
-title: 'How to: Generate Templates from Templates By Using Escape Sequences | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- text templates, generating templates from templates
+title: "方法: エスケープ シーケンスを使用してテンプレートからテンプレートを生成する | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "テキスト テンプレート, 生成 (テンプレートからテンプレートを)"
 ms.assetid: 4126156a-7cea-48b8-925e-7790806cfe6c
 caps.latest.revision: 35
-author: alancameronwills
-ms.author: awills
-manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: dc21bd9f67cf13948477e8bf08e3ab79d021f603
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+author: "alancameronwills"
+ms.author: "awills"
+manager: "douge"
+caps.handback.revision: 35
 ---
-# <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>How to: Generate Templates from Templates By Using Escape Sequences
-You can create a text template that creates another text template as its generated text output. To do this, you must use escape sequences to delineate the text template tags. If you do not use escape sequences, your generated text template will have a pre-defined meaning. For more information about using escape sequences in text templates, see [Using Escape Sequences in Text Templates](../modeling/using-escape-sequences-in-text-templates.md).  
+# 方法: エスケープ シーケンスを使用してテンプレートからテンプレートを生成する
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+生成されるテキスト出力として別のテキスト テンプレートを作成するテキスト テンプレートを作成できます。  そのためには、エスケープ シーケンスを使用してテキスト テンプレート タグを記述する必要があります。  エスケープ シーケンスを使用しないと、生成されたテキスト テンプレートは、定義済みの意味を持つことになります。  テキスト テンプレートにおけるエスケープ シーケンスの使用の詳細については、「[テキスト テンプレートでのエスケープ シーケンスの使用](../modeling/using-escape-sequences-in-text-templates.md)」を参照してください。  
   
-### <a name="to-generate-a-text-template-from-within-a-text-template"></a>To generate a text template from within a text template  
+### テキスト テンプレート内からテキスト テンプレートを生成するには  
   
--   Use the backslash (\\) as an escape character to produce the necessary markup tags within the text template for directives, statements, expressions, and class features in a separate text template file.  
+-   テキスト テンプレート内で、別のテキスト テンプレート ファイルのディレクティブ、ステートメント、式、およびクラス機能に必要なマークアップ タグを生成するには、エスケープ文字として円記号 \(\\\) を使用します。  
   
     ```  
     \<#@ directive \#>  
@@ -48,10 +31,10 @@ You can create a text template that creates another text template as its generat
     \<#+ classfeature \#>  
     ```  
   
-## <a name="example"></a>Example  
- The following example uses escape characters to produce a text template from a text template. The `output` directive sets the destination file type to the text template file type (.tt).  
+## 使用例  
+ 次の例では、エスケープ文字を使用して、テキスト テンプレートからテキスト テンプレートを生成します。  `output` ディレクティブによって、生成されるファイルの種類をテキスト テンプレートのファイル形式 \(.tt\) に設定します。  
   
-```csharp  
+```c#  
 \<#@ output extension=".tt" \#>  
 \<#@ assembly name="System.Xml.dll" \#>  
 \<#@ import namespace="System.Xml" \#>  
@@ -70,7 +53,7 @@ XmlDocument xDoc = new XmlDocument();
 \#>  
 ```  
   
- The generated text output is a text template.  
+ 生成されるテキスト出力はテキスト テンプレートです。  
   
 ```  
 <#@ output extension=".tt" #>  

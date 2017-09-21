@@ -1,69 +1,52 @@
 ---
-title: Dynamically Adding Menu Items | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- DYNAMICITEMSTART
-- menu items, adding dynamically
-- menus, adding dynamic items
+title: "メニュー項目を動的に追加します。 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "DYNAMICITEMSTART"
+  - "メニュー項目を動的に追加します。"
+  - "動的な項目の追加メニュー"
 ms.assetid: d281e9c9-b289-4d64-8d0a-094bac6c333c
 caps.latest.revision: 37
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0788c7cc5d659c1f0bbf1d4b0043b0c2f7181345
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 37
 ---
-# <a name="dynamically-adding-menu-items"></a>Dynamically Adding Menu Items
-You can add menu items at run time by specifying the `DynamicItemStart` command flag on a placeholder button definition in the Visual Studio command-table (.vsct) file, then defining (in code) the number of menu items to display and handling the command(s). When the VSPackage is loaded, the placeholder is replaced with the dynamic menu items.  
+# メニュー項目を動的に追加します。
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+指定して実行時にメニュー項目を追加することができます、 `DynamicItemStart` コマンドでは、コマンドの処理と表示項目\] メニューの数を \(コード\) で定義しを Visual Studio コマンド テーブル \(.vsct\) ファイル内のプレース ホルダー ボタン定義に対するフラグです。 VSPackage が読み込まれるときに、プレース ホルダーが動的メニュー項目に置き換えられます。  
   
- Visual Studio uses dynamic lists in the **Most Recently Used** (MRU) list, which displays the names of documents that have been opened recently, and the **Windows** list, which displays the names of windows that are currently open.   The `DynamicItemStart` flag on a command definition specifies that the command is a placeholder until the VSPackage is opened. When the VSPackage is opened, the placeholder is replaced with 0 or more commands that are created at run time and added to the dynamic list. You may not be able to see the position on the menu where the dynamic list appears until the VSPackage is opened.  To populate the dynamic list, Visual Studio asks the VSPackage to look for a command with an ID whose first characters are the same as the ID of the placeholder. When Visual Studio finds a matching command, it adds the name of the command  to the dynamic list. Then it increments the ID and looks for another matching command to add to the dynamic list until there are no more dynamic commands.  
+ Visual Studio での動的リストを使用、 **最近使用した** \(MRU\) の一覧は、最近開かれているドキュメントの名前を表示するには、および **Windows** 一覧で、現在開いているウィンドウの名前を表示します。`DynamicItemStart` コマンドは、VSPackage が開かれるまでプレース ホルダーをコマンド定義にフラグを指定します。 VSPackage を開いたときに、プレース ホルダーは、0 または実行時に作成および動的な一覧に追加される他のコマンドに置き換えられます。 VSPackage が開かれるまで、動的な一覧が表示されるメニューの位置を表示することはできません。 Visual Studio を動的な一覧を設定するには、コマンドの最初の文字は、プレース ホルダーの ID と同じ ID で検索する VSPackage を確認します。 Visual Studio には、対応するコマンドが検出されると、コマンドの名前を動的な一覧に追加します。 ID をインクリメントし、動的な一覧に追加して、それ以上ない動的コマンドに一致する別のコマンドを探します。  
   
- This walkthrough shows how to set the startup project in a Visual Studio solution with a command on the **Solution Explorer** toolbar. It uses a menu controller that has a dynamic dropdown list of the projects in the active solution. To keep this command from appearing when no solution is open or when the open solution has only one project, the VSPackage is loaded only when a solution has multiple projects.  
+ このチュートリアルでは、コマンドを使用して Visual Studio ソリューションのスタートアップ プロジェクトに設定する方法、 **ソリューション エクスプ ローラー** ツールバーです。 アクティブなソリューションで、プロジェクトの動的なドロップダウン リストを持つメニュー コント ローラーを使用します。 このコマンドがソリューションがないときに表示されることを防止するが開いているか、ソリューションに複数のプロジェクトがある場合にのみ VSPackage が読み込まれる、開いているソリューションに 1 つしかプロジェクトがある場合。  
   
- For more information about .vsct files, see [Visual Studio Command Table (.Vsct) Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).  
+ .Vsct ファイルの詳細については、次を参照してください。 [Visual Studio コマンド テーブル \(します。Vsct\) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)します。  
   
-## <a name="creating-an-extension-with-a-menu-command"></a>Creating an Extension with a Menu Command  
+## メニュー コマンドを使用して拡張機能の作成  
   
-1.  Create a VSIX project named `DynamicMenuItems`.  
+1.  という名前の VSIX プロジェクトを作成する `DynamicMenuItems`です。  
   
-2.  When the project opens, add a custom command item template and name it **DynamicMenu**. For more information, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md).  
+2.  カスタム コマンド項目テンプレートを追加し、名前のプロジェクトを開いたら、 **DynamicMenu**します。 詳細については、「[メニュー コマンドを使用して拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)」を参照してください。  
   
-## <a name="setting-up-the-elements-in-the-vsct-file"></a>Setting up the elements in the .vsct file  
- To create a menu controller with dynamic menu items on a toolbar, you specify the following elements:  
+## .Vsct ファイル内の要素の設定  
+ ツールバーにある動的メニュー項目を含む\] メニューの \[コント ローラーを作成するには、次の要素を指定します。  
   
--   Two command groups, one that contains the menu controller and another that contains the menu items in the dropdown  
+-   2 つのコマンドのグループ\] メニューの \[コント ローラーを含む 1 つをドロップダウン リストでのメニュー項目が含まれています  
   
--   One menu element of type `MenuController`  
+-   型の 1 つの menu 要素 `MenuController`  
   
--   Two buttons, one that acts as the placeholder for the menu items and another that supplies the icon and the tooltip on the toolbar.  
+-   2 つのボタン、アイコンおよびツールバーのツール ヒントを提供するメニュー項目と別のプレース ホルダーとして機能する 1 つです。  
   
-1.  In DynamicMenuPackage.vsct, define the command IDs. Go to the Symbols section and replace the IDSymbol elements in the **guidDynamicMenuPackageCmdSet** GuidSymbol block. You need to define IDSymbol elements for the two groups, the menu controller, the placeholder command, and the anchor command.  
+1.  DynamicMenuPackage.vsct では、コマンド Id を定義します。 Symbols セクションに移動し、IDSymbol の要素を置き換える、 **guidDynamicMenuPackageCmdSet** GuidSymbol ブロックします。 2 つのグループや\] メニューの \[コント ローラー、プレース ホルダー コマンド アンカー コマンド IDSymbol 要素を定義する必要があります。  
   
-    ```csharp  
+    ```c#  
     <GuidSymbol name="guidDynamicMenuPackageCmdSet" value="{ your GUID here }">  
         <IDSymbol name="MyToolbarItemGroup" value="0x1020" />  
         <IDSymbol name="MyMenuControllerGroup" value="0x1025" />  
@@ -76,7 +59,7 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     </GuidSymbol>    
     ```  
   
-2.  In the Groups section, delete the existing groups and add the two groups you just defined:  
+2.  Groups\] セクションでは、既存のグループを削除し、定義した 2 つのグループを追加します。  
   
     ```  
     <Groups>  
@@ -93,7 +76,7 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     </Groups>  
     ```  
   
-     Add the MenuController. Set the DynamicVisibility command flag, since it is not always visible. The ButtonText is not displayed.  
+     MenuController を追加します。 常に表示されていないため、DynamicVisibility コマンド フラグを設定します。 アドインは表示されません。  
   
     ```  
     <Menus>  
@@ -109,11 +92,11 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     </Menus>  
     ```  
   
-3.  Add two buttons, one as a placeholder for the dynamic menu items and one as an anchor for the MenuController.  
+3.  MenuController の動的メニュー項目のプレース ホルダーとして、アンカーとしての 2 つのボタンを追加します。  
   
-     The parent of the placeholder button is the **MyMenuControllerGroup**. Add the DynamicItemStart, DynamicVisibility, and TextChanges command flags to the placeholder button. The ButtonText is not displayed.  
+     プレース ホルダーのボタンの親は、 **MyMenuControllerGroup**します。 プレース ホルダーのボタンに DynamicItemStart、DynamicVisibility、および \[テキスト コマンドのフラグを追加します。 アドインは表示されません。  
   
-     The anchor button holds the icon and the tooltip text. The parent of the anchor button is also the **MyMenuControllerGroup**. You add the NoShowOnMenuController command flag to make sure the button doesn't actually appear in the menu controller dropdown, and the FixMenuController command flag to make it the permanent anchor.  
+     アンカー ボタンは、アイコンとツールヒントのテキストを保持します。 アンカー ボタンの親でも、 **MyMenuControllerGroup**します。 メニュー コント ローラーのドロップダウン ボタンが表示されない実際に確認する NoShowOnMenuController コマンド フラグと永続的なアンカーに FixMenuController コマンド フラグを追加します。  
   
     ```  
     <!-- The placeholder for the dynamic items that expand to N items at runtime. -->  
@@ -146,9 +129,9 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     </Buttons>  
     ```  
   
-4.  Add an icon to the project (in the Resources folder), and then add the reference to it in the .vsct file. In this walkthrough, we use the Arrows icon that's included in the project template.  
+4.  \(フォルダーにあるリソース\)、プロジェクトにアイコンを追加し、.vsct ファイルへの参照を追加します。 このチュートリアルでは、プロジェクト テンプレートに含まれている矢印アイコンを使用します。  
   
-5.  Add a VisibilityConstraints section outside the Commands section just before the Symbols section. (You may get a warning if you add it after Symbols.) This section makes sure that the menu controller appears only when a solution with multiple projects is loaded.  
+5.  Symbols セクションの直前のコマンド セクションの外側で VisibilityConstraints セクションを追加します。 \(シンボルの後に追加する場合、警告を表示に可能性があります。\) このセクションでは\] メニューの \[コント ローラーが複数のプロジェクトを含むソリューションが読み込まれるときにのみ表示されていることを確認します。  
   
     ```  
     <VisibilityConstraints>  
@@ -157,12 +140,12 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     </VisibilityConstraints>  
     ```  
   
-## <a name="implementing-the-dynamic-menu-command"></a>Implementing the dynamic menu command  
- You create a dynamic menu command class that inherits from <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>. In this implementation, the constructor specifies a predicate to be used for matching commands. You must override the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> method to use this predicate to set the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> property, which identifies the command to be invoked.  
+## 動的メニュー コマンドの実装  
+ 動的メニュー コマンド クラスから継承を作成する <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>です。 この実装では、コンス トラクターは、コマンドの照合に使用する述語を指定します。 オーバーライドする必要があります、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> この述語を使用して設定する方法、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> プロパティで、呼び出されるコマンドを指定します。  
   
-1.  Create a new C# class file named DynamicItemMenuCommand.cs, and add a class named **DynamicItemMenuCommand** that inherits from <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>:  
+1.  新しい c\# クラスという名前のファイル、DynamicItemMenuCommand.cs を作成し、という名前のクラスを追加 **DynamicItemMenuCommand** から継承する <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>:  
   
-    ```csharp  
+    ```c#  
     class DynamicItemMenuCommand : OleMenuCommand  
     {  
   
@@ -170,24 +153,24 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
   
     ```  
   
-2.  Add the following using statements:  
+2.  次の追加のステートメントを使用します。  
   
-    ```csharp  
+    ```c#  
     using Microsoft.VisualStudio.Shell;  
     using Microsoft.VisualStudio.Shell.Interop;  
     using System.ComponentModel.Design;  
     ```  
   
-3.  Add a private field to store the match predicate:  
+3.  一致する述語を格納するプライベート フィールドを追加します。  
   
-    ```csharp  
+    ```c#  
     private Predicate<int> matches;  
   
     ```  
   
-4.  Add a constructor that inherits from the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> constructor and specifies a command handler and a <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> handler. Add a predicate for matching the command:  
+4.  継承されたコンス トラクターを追加、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> コンス トラクター コマンド ハンドラーを指定し、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> ハンドラー。 コマンドに一致する述語を追加します。  
   
-    ```csharp  
+    ```c#  
     public DynamicItemMenuCommand(CommandID rootId, Predicate<int> matches, EventHandler invokeHandler, EventHandler beforeQueryStatusHandler)  
         : base(invokeHandler, null /*changeHandler*/, beforeQueryStatusHandler, rootId)  
     {  
@@ -200,9 +183,9 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-5.  Override the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> method so that it calls the matches predicate and sets the <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> property:  
+5.  オーバーライド、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A> メソッド it が述語とセットの一致項目を呼び出して、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> プロパティ。  
   
-    ```csharp  
+    ```c#  
     public override bool DynamicItemMatch(int cmdId)  
     {  
         // Call the supplied predicate to test whether the given cmdId is a match.  
@@ -220,39 +203,39 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-## <a name="adding-the-command"></a>Adding the command  
- The DynamicMenu constructor is where you set up menu commands, including dynamic menus and menu items.  
+## コマンドを追加します。  
+ DynamicMenu コンス トラクターは、メニュー コマンド、動的メニューおよびメニュー項目を設定する場所です。  
   
-1.  In DynamicMenuPackageGuids.cs, add the GUID of the command set and the command ID:  
+1.  DynamicMenuPackageGuids.cs、コマンド セットの GUID とコマンド ID を追加します。  
   
-    ```csharp  
+    ```c#  
     public const string guidDynamicMenuPackageCmdSet = "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file  
     public const uint cmdidMyCommand = 0x104;  
     ```  
   
-2.  In the DynamicMenu.cs file, add the following using statements:  
+2.  DynamicMenu.cs ファイルに次のコードを追加ステートメントを使用します。  
   
-    ```csharp  
+    ```c#  
     using EnvDTE;  
     using EnvDTE80;  
     using System.ComponentModel.Design;  
     ```  
   
-3.  In the DynamicMenu class, add a private field **dte2**.  
+3.  DynamicMenu クラスでプライベート フィールドを追加 **dte2**します。  
   
-    ```csharp  
+    ```c#  
     private DTE2 dte2;  
     ```  
   
-4.  Add a private rootItemId field:  
+4.  プライベート rootItemId フィールドを追加します。  
   
-    ```csharp  
+    ```c#  
     private int rootItemId = 0;  
     ```  
   
-5.  In the DynamicMenu constructor, add the menu command. In the next section we'll define the command handler, the `BeforeQueryStatus` event handler, and the match predicate.  
+5.  DynamicMenu コンス トラクターでは、メニュー コマンドを追加します。 次のセクションでは、コマンド ハンドラーを定義しましょう、 `BeforeQueryStatus` イベント ハンドラー、および一致する述語。  
   
-    ```csharp  
+    ```c#  
     private DynamicMenu(Package package)  
     {  
         if (package == null)  
@@ -278,16 +261,16 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-## <a name="implementing-the-handlers"></a>Implementing the handlers  
- To implement dynamic menu items on a menu controller, you must handle the command when a dynamic item is clicked. You must also implement the logic that sets the state of the menu item. Add the handlers to the DynamicMenu class.  
+## ハンドラーを実装します。  
+ メニューの \[コント ローラーで動的メニュー項目を実装するには、動的アイテムがクリックされたときにコマンドを行う必要があります。 また、メニュー項目の状態を設定するロジックを実装する必要があります。 DynamicMenu クラスに対応するハンドラーを追加します。  
   
-1.  To implement the **Set Startup Project** command, add the **OnInvokedDynamicItem** event handler. It looks for the project whose name is the same as the text of the command that has been invoked, and sets it as the startup project by setting its absolute path in the <xref:EnvDTE.SolutionBuild.StartupProjects%2A> property.  
+1.  実装する、 **スタートアップ プロジェクトとして設定** コマンドを追加、 **OnInvokedDynamicItem** イベント ハンドラーです。 これが呼び出されてでその絶対パスを設定してスタートアップ プロジェクトとして設定するコマンドのテキストと同じ名前のプロジェクトの検索、 <xref:EnvDTE.SolutionBuild.StartupProjects%2A> プロパティです。  
   
-    ```csharp  
+    ```c#  
     private void OnInvokedDynamicItem(object sender, EventArgs args)  
     {  
         DynamicItemMenuCommand invokedCommand = (DynamicItemMenuCommand)sender;  
-        // If the command is already checked, we don't need to do anything  
+        // If the command is already checked, we don’t need to do anything  
         if (invokedCommand.Checked)  
             return;  
   
@@ -304,9 +287,9 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-2.  Add the `OnBeforeQueryStatusDynamicItem` event handler. This is the handler called before a `QueryStatus` event. It determines whether the menu item is a "real" item, that is, not the placeholder item, and whether the item is already checked (meaning that the project is already set as the startup project).  
+2.  追加、 `OnBeforeQueryStatusDynamicItem` イベント ハンドラーです。 これは、前に呼び出されるハンドラー、 `QueryStatus` イベントです。 メニュー項目が、「実際」の項目は、プレース ホルダー アイテムではなくであるかどうかを決定するかどうか、項目が既にチェック \(つまり、プロジェクトがスタートアップ プロジェクトとして設定されて既にこと\) とします。  
   
-    ```csharp  
+    ```c#  
     private void OnBeforeQueryStatusDynamicItem(object sender, EventArgs args)  
     {  
         DynamicItemMenuCommand matchedCommand = (DynamicItemMenuCommand)sender;  
@@ -334,11 +317,11 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-## <a name="implementing-the-command-id-match-predicate"></a>Implementing the command ID match predicate  
+## コマンド ID の一致する述語を実装します。  
   
-1.  Now implement the match predicate. We need to determine two things: first, whether the command ID is valid (it is greater than or equal to the declared command ID), and second, whether it specifies a possible project (it is less than the number of projects in the solution).  
+1.  これで、一致する述語を実装します。 2 つのことを確認する必要があります。 まず、かどうか、コマンド ID が有効 \(それが宣言されたコマンド ID 以上\)、と 2 つ目は、\(これは、ソリューションにプロジェクトの数よりも少ない\) 可能なプロジェクトを指定するかどうか。  
   
-    ```csharp  
+    ```c#  
     private bool IsValidDynamicItem(int commandId)  
     {  
         // The match is valid if the command ID is >= the id of our root dynamic start item   
@@ -348,10 +331,10 @@ You can add menu items at run time by specifying the `DynamicItemStart` command 
     }  
     ```  
   
-## <a name="setting-the-vspackage-to-load-only-when-a-solution-has-multiple-projects"></a>Setting the VSPackage to load only when a solution has multiple projects  
- Because the **Set Startup Project** command doesn't make sense unless the active solution has more than one project, you can set your VSPackage to auto-load only in that case. You use <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> together with the UI context <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects>. In the DynamicMenuPackage.cs file add the following attributes to the DynamicMenuPackage class:  
+## ソリューションに複数のプロジェクトがある場合にのみを読み込む VSPackage を設定します。  
+ **スタートアップ プロジェクトとして設定** コマンドは、アクティブなソリューションに複数のプロジェクトが含まれていない、意味がないため、自動読み込みする場合にのみ、VSPackage を設定することができます。 使用する <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> UI コンテキストと共に <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects>します。 DynamicMenuPackage.cs ファイルでは、DynamicMenuPackage クラスに次の属性を追加します。  
   
-```csharp  
+```c#  
 [PackageRegistration(UseManagedResourcesOnly = true)]  
 [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]  
 [ProvideMenuResource("Menus.ctmenu", 1)]  
@@ -361,19 +344,19 @@ public sealed class DynamicMenuItemsPackage : Package
 {}  
 ```  
   
-## <a name="testing-the-set-startup-project-command"></a>Testing the Set Startup Project command  
- Now you can test your code.  
+## \[スタートアップ プロジェクトに設定\] コマンドをテストします。  
+ これで、コードをテストできます。  
   
-1.  Build the project and start debugging. The experimental instance should appear.  
+1.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-2.  In the experimental instance, open a solution that has more than one project.  
+2.  実験用インスタンスでは、複数のプロジェクトが含まれるソリューションを開きます。  
   
-     You should see the arrow icon on the **Solution Explorer** toolbar. When you expand it, menu items that represent the different projects in the solution should appear.  
+     矢印のアイコンが表示、 **ソリューション エクスプ ローラー** ツールバーです。 を展開すると、ソリューション内の別のプロジェクトを表すメニュー項目が表示されます。  
   
-3.  When you check one of the projects, it becomes the startup project.  
+3.  プロジェクトのいずれかをチェックすると、スタートアップ プロジェクトになります。  
   
-4.  When you close the solution, or open a solution that has only one project, the toolbar icon should disappear.  
+4.  ソリューションを閉じますか 1 つしかプロジェクトが含まれるソリューションを開くときにツール バー アイコンは表示されなくなります。  
   
-## <a name="see-also"></a>See Also  
- [Commands, Menus, and Toolbars](../extensibility/internals/commands-menus-and-toolbars.md)   
- [How VSPackages Add User Interface Elements](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+## 参照  
+ [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)   
+ [Vspackage でのユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)

@@ -1,94 +1,77 @@
 ---
-title: IDebugComPlusSymbolProvider::LoadSymbols | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- LoadSymbols
-- IDebugComPlusSymbolProvider::LoadSymbols
+title: "IDebugComPlusSymbolProvider::LoadSymbols | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "LoadSymbols"
+  - "IDebugComPlusSymbolProvider::LoadSymbols"
 ms.assetid: 3499680d-0b9a-4f20-8432-c89a41b29b87
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ff0bef4429c39dfc1847774dd7f9cc4c3858f9b6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugcomplussymbolproviderloadsymbols"></a>IDebugComPlusSymbolProvider::LoadSymbols
-Loads the specified debug symbols in memory.  
+# IDebugComPlusSymbolProvider::LoadSymbols
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+メモリの指定はデバッグ シンボルを読み込みます。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT LoadSymbols(  
-   ULONG32   ulAppDomainID,  
-   GUID      guidModule,  
-   ULONGLONG baseAddress,  
-   IUnknown* pUnkMetadataImport,  
-   BSTR      bstrModuleName,  
-   BSTR      bstrSymSearchPath  
+   ULONG32   ulAppDomainID,  
+   GUID      guidModule,  
+   ULONGLONG baseAddress,  
+   IUnknown* pUnkMetadataImport,  
+   BSTR      bstrModuleName,  
+   BSTR      bstrSymSearchPath  
 );  
 ```  
   
-```csharp  
+```c#  
 int LoadSymbols(  
-   uint   ulAppDomainID,  
-   Guid   guidModule,  
-   ulong  baseAddress,  
-   object pUnkMetadataImport,  
-   string bstrModuleName,  
-   string bstrSymSearchPath  
+   uint   ulAppDomainID,  
+   Guid   guidModule,  
+   ulong  baseAddress,  
+   object pUnkMetadataImport,  
+   string bstrModuleName,  
+   string bstrSymSearchPath  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ulAppDomainID`  
- [in] Identifier of the application domain.  
+ \[出力\] アプリケーション ドメインの ID。  
   
  `guidModule`  
- [in] Unique identifier of the mondule.  
+ \[入力\] mondule の一意の識別子。  
   
  `baseAddress`  
- [in] Base memory address.  
+ \[入力\] メモリのベース アドレス。  
   
  `pUnkMetadataImport`  
- [in] Object that contains the symbol metadata.  
+ \[入力\] オブジェクト。シンボルのメタデータを含む。  
   
  `bstrModuleName`  
- [in] Name of the module.  
+ \[出力\] モジュールの名前。  
   
  `bstrSymSearchPath`  
- [in] Path to search for the symbol file.  
+ \[入力\] シンボル ファイルを検索するパス。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## 使用例  
+ 次の例に [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider の**  オブジェクトに対してこのメソッドを実装する方法を示します。  
   
-```cpp  
+```cpp#  
 HRESULT CDebugSymbolProvider::LoadSymbols(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -101,5 +84,5 @@ HRESULT CDebugSymbolProvider::LoadSymbols(
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

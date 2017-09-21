@@ -1,5 +1,5 @@
 ---
-title: 'How to: Specify Build Events (Visual Basic) | Microsoft Docs'
+title: "方法 : ビルド イベントを指定する (Visual Basic) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,41 +33,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: d021d979067c5394843511682255a7b55c3007ae
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 595995a0369ff74c4223e7a585c913bc90aca411
+ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="how-to-specify-build-events-visual-basic"></a>How to: Specify Build Events (Visual Basic)
-Build events in Visual Basic can be used to run scripts, macros, or other actions as a part of the compilation process. Pre-build events occur before compilation; post-build events occur after compilation.  
+# <a name="how-to-specify-build-events-visual-basic"></a>方法 : ビルド イベントを指定する (Visual Basic)
+Visual Basic のビルド イベントを使用して、コンパイル処理の一部として、スクリプト、マクロ、またはその他のアクションを実行することができます。 コンパイル前のイベントはコンパイル前に発生し、ビルド後のイベントはコンパイル後に発生します。  
   
- Build events are specified in the **Build Events** dialog box, available from the **Compile** page of the **Project Designer**.  
+ ビルド イベントは、**プロジェクト デザイナー**の **[コンパイル]** ページから使用可能な **[ビルド イベント]** ダイアログ ボックスで指定されます。  
   
 > [!NOTE]
->  Visual Basic Express does not support entry of build events. This is supported only in the full Visual Studio product.  
+>  Visual Basic Express では、ビルド イベントのエントリはサポートされていません。 これは、完全な Visual Studio 製品でのみサポートされます。  
   
-## <a name="how-to-specify-pre-build-and-post-build-events"></a>How to Specify Pre-Build and Post-Build Events  
+## <a name="how-to-specify-pre-build-and-post-build-events"></a>ビルド前のイベントとビルド後のイベントを指定する方法  
   
-#### <a name="to-specify-a-build-event"></a>To specify a build event  
+#### <a name="to-specify-a-build-event"></a>ビルド イベントを指定するには  
   
-1.  With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**.  
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-2.  Click the **Compile** tab.  
+2.  **[コンパイル]** タブをクリックします。  
   
-3.  Click the **Build Events** button to open the **Build Events** dialog box.  
+3.  **[ビルド イベント]** ボタンをクリックして **[ビルド イベント]** ダイアログ ボックスを開きます。  
   
-4.  Enter the command-line arguments for your pre-build or post-build action, and then click **OK**.  
-  
-    > [!NOTE]
-    >  Add a `call` statement before all post-build commands that run .bat files. For example, `call C:\MyFile.bat` or `call C:\MyFile.bat call C:\MyFile2.bat`.  
+4.  ビルド前またはビルド後のアクションのコマンドライン引数を入力し、**[OK]** をクリックします。  
   
     > [!NOTE]
-    >  If your pre-build or post-build event does not complete successfully, you can terminate the build by having your event action exit with a code other than zero (0), which indicates a successful action.  
+    >  .bat ファイルを実行するすべてのビルド後コマンドの前に `call` ステートメントを追加します。 たとえば、`call C:\MyFile.bat` または `call C:\MyFile.bat call C:\MyFile2.bat` のようにします。  
   
-## <a name="example-how-to-change-manifest-information-using-a-post-build-event"></a>Example: How to Change Manifest Information Using a Post-Build Event  
- The following procedure shows how to set the minimum operating system version in the application manifest using an .exe command called from a post-build event (the .exe.manifest file in the project directory). The minimum operating system version is a four-part number such as 4.10.0.0. To do this, the command will change the `<dependentOS>` section of the manifest:  
+    > [!NOTE]
+    >  ビルド前またはビルド後イベントが正常に完了しない場合は、アクションの成功を示すゼロ (0) 以外のコードでイベント アクションを終了させて、ビルドを強制終了することができます。  
+  
+## <a name="example-how-to-change-manifest-information-using-a-post-build-event"></a>例: ビルド後のイベントを使用してマニフェスト情報を変更する方法  
+ 次の手順は、ビルド後のイベントから呼び出される .exe コマンドを使用して、アプリケーション マニフェスト (プロジェクト ディレクトリ内の .exe.manifest ファイル) 内にオペレーティング システムの最小バージョンを設定する方法を示しています。 オペレーティング システムの最小バージョンは、4.10.0.0 などの 4 つの部分に分かれた数字です。 これを行うには、次のように、コマンドでマニフェストの `<dependentOS>` セクションを変更します。  
   
 ```  
 <dependentOS>  
@@ -77,19 +76,19 @@ Build events in Visual Basic can be used to run scripts, macros, or other action
 </dependentOS>  
 ```  
   
-#### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>To create an .exe command to change the application manifest  
+#### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>アプリケーション マニフェストを変更する .exe コマンドを作成するには  
   
-1.  Create a console application for the command. From the **File** menu, click **New**, and then click **Project**.  
+1.  コマンド用のコンソール アプリケーションを作成します。 **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。  
   
-2.  In the **New Project** dialog box, in the **Visual Basic** node, select **Windows** and then the **Console Application** template. Name the project `ChangeOSVersionVB`.  
+2.  **[新しいプロジェクト]** ダイアログ ボックスの **[Visual Basic]** ノードで、**[Windows]**、**[コンソール アプリケーション]** テンプレートの順に選択します。 プロジェクトに `ChangeOSVersionVB` という名前を付けます。  
   
-3.  In Module1.vb, add the following line to the other `Imports` statements at the top of the file:  
+3.  Module1.vb で、ファイルの先頭にある他の `Imports` ステートメントに次の行を追加します。  
   
     ```  
     Imports System.Xml  
     ```  
   
-4.  Add the following code in `Sub Main`:  
+4.  `Sub Main` に次のコードを追加します。  
   
     ```  
     Sub Main()  
@@ -132,57 +131,57 @@ Build events in Visual Basic can be used to run scripts, macros, or other action
     End Sub  
     ```  
   
-     The command takes two arguments. The first argument is the path to the application manifest (that is, the folder in which the build process creates the manifest, typically Projectname.publish). The second argument is the new operating system version.  
+     このコマンドは&2; つの引数を受け取ります。 最初の引数はアプリケーション マニフェストへのパス (つまり、ビルド処理でマニフェストが作成されるフォルダー。通常は Projectname.publish) です。 2 番目の引数は新しいオペレーティング システムのバージョンです。  
   
-5.  On the **Build** menu, click **Build Solution**.  
+5.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
-6.  Copy the .exe file to a directory such as `C:\TEMP\ChangeOSVersionVB.exe`.  
+6.  `C:\TEMP\ChangeOSVersionVB.exe` などのディレクトリに .exe ファイルをコピーします。  
   
- Next, invoke this command in a post-build event to change the application manifest.  
+ 次に、ビルド後のイベントでこのコマンドを呼び出して、アプリケーション マニフェストを変更します。  
   
-#### <a name="to-invoke-a-post-build-event-to-change-the-application-manifest"></a>To invoke a post-build event to change the application manifest  
+#### <a name="to-invoke-a-post-build-event-to-change-the-application-manifest"></a>ビルド後のイベントを呼び出してアプリケーション マニフェストを変更するには  
   
-1.  Create a Windows application for the project to be published. From the **File** menu, click **New**, and then click **Project**.  
+1.  発行するプロジェクト用の Windows アプリケーションを作成します。 **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。  
   
-2.  In the **New Project** dialog box, in the **Visual Basic** node, select **Windows Classic Desktop** and then the **Windows Forms App** template. Name the project `VBWinApp`.  
+2.  **[新しいプロジェクト]** ダイアログ ボックスの **[Visual Basic]** ノードで、**[Windows]**、**[Windows アプリケーション]** テンプレートの順に選択します。 プロジェクトに `VBWinApp` という名前を付けます。  
   
-3.  With the project selected in **Solution Explorer**, on the **Project** menu, click **Properties**.  
+3.  **ソリューション エクスプローラー**でプロジェクトを選択し、**[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-4.  In the Project Designer, go to the **Publish** page and set **Publishing location** to `C:\TEMP\`.  
+4.  プロジェクト デザイナーで、**[発行]** ページに移動し、**[発行場所]** を `C:\TEMP\` に設定します。  
   
-5.  Publish the project by clicking **Publish Now**.  
+5.  **[今すぐ発行]** をクリックして、プロジェクトを発行します。  
   
-     The manifest file will be built and put in `C:\TEMP\VBWinApp_1_0_0_0\VBWinApp.exe.manifest`. To view the manifest, right-click the file and click **Open with**, then click **Select the program from a list**, and then click **Notepad**.  
+     マニフェスト ファイルがビルドされ、`C:\TEMP\VBWinApp_1_0_0_0\VBWinApp.exe.manifest` に配置されます。 マニフェストを表示するには、ファイルを右クリックし、**[プログラムから開く]**、**[一覧からプログラムを選択する]**、**[メモ帳]** の順にクリックします。  
   
-     Search in the file for the `<osVersionInfo>` element. For example, the version might be:  
+     ファイルで `<osVersionInfo>` 要素を探します。 たとえば、バージョンは次のように記述されています。  
   
     ```  
     <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />  
     ```  
   
-6.  In the Project Designer, go to the **Compile** tab and click the **Build Events** button to open the **Build Events** dialog box.  
+6.  プロジェクト デザイナーで、**[コンパイル]** タブに移動し、**[ビルド イベント]** ボタンをクリックして **[ビルド イベント]** ダイアログ ボックスを開きます。  
   
-7.  In the **Post-build Event Command Line** box, enter the following command:  
+7.  **[ビルド後に実行するコマンド ライン]** ボックスに次のコマンドを入力します。  
   
      `C:\TEMP\ChangeOSVersionVB.exe "$(TargetPath).manifest" 5.1.2600.0`  
   
-     When you build the project, this command will change the minimum operating system version in the application manifest to 5.1.2600.0.  
+     プロジェクトをビルドすると、このコマンドでアプリケーション マニフェストのオペレーティング システムの最小バージョンが 5.1.2600.0 に変更されます。  
   
-     The `$(TargetPath)` macro expresses the full path for the executable being created. Therefore, $(TargetPath).manifest will specify the application manifest created in the bin directory. Publishing will copy this manifest to the publishing location that you set earlier.  
+     `$(TargetPath)` マクロは、作成される実行可能ファイルの完全なパスを表します。 そのため、$(TargetPath).manifest と記述すると、bin ディレクトリに作成されるアプリケーション マニフェストが指定されます。 発行することにより、前に設定した発行場所にこのマニフェストがコピーされます。  
   
-8.  Publish the project again. Go to the **Publish** page and click **Publish Now**.  
+8.  プロジェクトを再び発行します。 **[発行]** ページに移動して、**[今すぐ発行]** をクリックします。  
   
-     View the manifest again. To view the manifest, go to the publish directory, right-click the file and click **Open with** and then **Select the program from a list**, and then click **Notepad**.  
+     マニフェストを再び表示します。 マニフェストを表示するには、発行ディレクトリに移動し、ファイルを右クリックして、**[プログラムから開く]**、**[一覧からプログラムを選択する]**、**[メモ帳]** の順にクリックします。  
   
-     The version should now read:  
+     これで、バージョンは次のように表示されます。  
   
     ```  
     <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />  
     ```  
   
-## <a name="see-also"></a>See Also  
- [Managing Compilation Properties](http://msdn.microsoft.com/en-us/94308881-f10f-4caf-a729-f1028e596a2c)   
- [Compile Page, Project Designer (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)   
- [Publish Page, Project Designer](../ide/reference/publish-page-project-designer.md)   
- [Pre-build Event/Post-build Event Command Line Dialog Box](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)   
- [How to: Specify Build Events (C#)](../ide/how-to-specify-build-events-csharp.md)
+## <a name="see-also"></a>関連項目  
+ [コンパイル プロパティの管理](http://msdn.microsoft.com/en-us/94308881-f10f-4caf-a729-f1028e596a2c)   
+ [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)   
+ [[発行] ページ (プロジェクト デザイナー)](../ide/reference/publish-page-project-designer.md)   
+ [[ビルド前に実行するコマンド ライン] / [ビルド後に実行するコマンド ライン] ダイアログ ボックス](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)   
+ [方法 : ビルド イベントを指定する (C#)](../ide/how-to-specify-build-events-csharp.md)

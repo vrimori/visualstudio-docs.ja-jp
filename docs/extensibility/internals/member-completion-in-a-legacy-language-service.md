@@ -1,83 +1,66 @@
 ---
-title: Member Completion in a Legacy Language Service | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IntelliSense, Member Completion tool tip
-- Member Completion, supporting in language services [managed package framework]
-- language services [managed package framework], IntelliSense Member Completion
+title: "従来の言語サービスでのメンバーの完了 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IntelliSense、ツール ヒントのメンバーの完了"
+  - "メンバー完了すると、言語サービス [マネージ パッケージ フレームワーク] でのサポート"
+  - "言語サービス [マネージ パッケージ フレームワーク] IntelliSense のメンバーの完了"
 ms.assetid: 500f718d-9028-49a4-8615-ba95cf47fc52
 caps.latest.revision: 21
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 36dcb076c0a7e1f8448eebf9a0ff18ff3c199183
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 21
 ---
-# <a name="member-completion-in-a-legacy-language-service"></a>Member Completion in a Legacy Language Service
-The IntelliSense Member Completion is a tool tip that displays a list of possible members of a particular scope such as a class, structure, enumeration, or namespace. For example, in C#, if the user types "this" followed by a period, a list of all members of the class or structure at the current scope is presented in a list from which the user can select.  
+# 従来の言語サービスでのメンバーの完了
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+IntelliSense のメンバーの完了は、クラス、構造体、列挙体、または名前空間などの特定のスコープの可能なメンバーの一覧を表示するツール ヒントです。 たとえば、C\# の場合は、ユーザーが"this"に続けて、ピリオドを入力した場合すると、クラスまたは現在のスコープで構造体のすべてのメンバーの一覧は、ユーザーが選択できるリスト表示で表示されます。  
   
- The managed package framework (MPF) provides support for the tool tip and managing the list in the tool tip; all that is needed is cooperation from the parser to supply the data that appears in the list.  
+ マネージ パッケージ フレームワーク \(MPF\) は、ツール ヒントとツールヒントの; リストの管理をサポート一覧に表示されるデータを提供するパーサーの協力が必要なことだけです。  
   
- Legacy language services are implemented as part of a VSPackage, but the newer way to implement language service features is to use MEF extensions. To find out more, see [Extending the Editor and Language Services](../../extensibility/extending-the-editor-and-language-services.md).  
+ 従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は、MEF の拡張機能を使用します。 詳細については、次を参照してください。 [エディターと言語サービスの拡張](../../extensibility/extending-the-editor-and-language-services.md)します。  
   
 > [!NOTE]
->  We recommend that you begin to use the new editor API as soon as possible. This will improve the performance of your language service and let you take advantage of new editor features.  
+>  エディターを使用して、新しい API できるだけ早く始めることをお勧めします。 言語サービスのパフォーマンスを向上させる、エディターの新機能を活用できます。  
   
-## <a name="how-it-works"></a>How It Works  
- The following are the two ways in which a member list is shown using the MPF classes:  
+## これは、しくみ  
+ MPF クラスを使用するメンバーの一覧が表示される 2 つの方法を次に示します。  
   
--   Positioning the caret on an identifier or after a member completion character and selecting **List Members** from the **IntelliSense** menu.  
+-   識別子の上またはメンバーの終了文字の後にキャレットを配置し、選択 **メンバーの一覧** から、 **IntelliSense** メニュー。  
   
--   The <xref:Microsoft.VisualStudio.Package.IScanner> scanner detects a member completion character and sets a token trigger of <xref:Microsoft.VisualStudio.Package.TokenTriggers> for that character.  
+-   <xref:Microsoft.VisualStudio.Package.IScanner> スキャナーがメンバーの終了文字を検出し、トークンのトリガーを設定 <xref:Microsoft.VisualStudio.Package.TokenTriggers> その文字にします。  
   
- A member completion character indicates that a member of a class, structure, or enumeration is to follow. For example, in C# or Visual Basic the member completion character is a `.`, while  in C++ the character is either a `.` or a `->`. The trigger value is set when the member select character is scanned.  
+ メンバーの補完機能文字は、クラス、構造体、列挙体のメンバーが次のことを示します。 たとえば、c\# または Visual Basic でメンバーの補完機能文字は、 `.`, 文字では C\+\+ では、いずれかになる一方で、 `.` または `->`です。 トリガー値は、メンバーの選択の文字をスキャンする場合は設定されます。  
   
-### <a name="the-intellisense-member-list-command"></a>The IntelliSense Member List Command  
- The <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> command initiates a call to the <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> method on the <xref:Microsoft.VisualStudio.Package.Source> class and the <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> method, in turn, calls the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method parser with the parse reason of <xref:Microsoft.VisualStudio.Package.ParseReason>.  
+### IntelliSense のメンバーの一覧表示コマンド  
+ <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> コマンドへの呼び出しを開始する、 <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> メソッドを <xref:Microsoft.VisualStudio.Package.Source> クラスおよび <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> メソッドの呼び出しを <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 解析理由が付いているメソッドのパーサー <xref:Microsoft.VisualStudio.Package.ParseReason>します。  
   
- The parser determines the context of the current position as well as the token under or immediately before the current position. Based on this token, a list of declarations is presented. For example, in C#, if you position the caret on a class member and select **List Members**, you get a list of all members of the class. If you position the caret after a period that follows an object variable, you get a list of all members of the class that object represents. Note that if the caret is positioned on a member when the member list is shown, selecting a member from the list replaces the member the caret is on with the one in the list.  
+ パーサーでは、現在の位置として、または現在の位置の直前に、トークンのコンテキストを決定します。 このトークンに基づき、宣言の一覧が表示されます。 たとえば、c\# でクラスのメンバーと選択にキャレットを配置する場合 **メンバーの一覧**, 、クラスのすべてのメンバーの一覧を取得します。 オブジェクト変数に続くピリオドの後にキャレットを配置する場合は、オブジェクトが表すクラスのすべてのメンバーの一覧を取得します。 メンバーの一覧が表示されているときにメンバーのキャレットが配置されている場合がキャレットの一覧でいずれかであるメンバーを置換する一覧からメンバーを選択することを確認します。  
   
-### <a name="the-token-trigger"></a>The Token Trigger  
- The <xref:Microsoft.VisualStudio.Package.TokenTriggers> trigger initiates a call to the <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> method on the <xref:Microsoft.VisualStudio.Package.Source> class and the <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> method, in turn, calls the parser with the parse reason of <xref:Microsoft.VisualStudio.Package.ParseReason> (if the token trigger also included the <xref:Microsoft.VisualStudio.Package.TokenTriggers> flag, the parse reason is <xref:Microsoft.VisualStudio.Package.ParseReason> which combines member selection and brace highlighting).  
+### トークンのトリガー  
+ <xref:Microsoft.VisualStudio.Package.TokenTriggers> トリガーへの呼び出しを開始する、 <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> メソッドを <xref:Microsoft.VisualStudio.Package.Source> クラスおよび <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> メソッドを呼び出す解析理由が付いているパーサー <xref:Microsoft.VisualStudio.Package.ParseReason> \(トークンのトリガーも含まれている場合、 <xref:Microsoft.VisualStudio.Package.TokenTriggers> フラグは、解析理由は、 <xref:Microsoft.VisualStudio.Package.ParseReason> 結合するメンバーの選択と中かっこが強調表示\)。  
   
- The parser determines the context of the current position as well as what has been typed before the member select character. From this information, the parser creates a list of all members of the requested scope. This list of declarations is stored in the <xref:Microsoft.VisualStudio.Package.AuthoringScope> object that is returned from the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method. If any declarations are returned, the member completion tool tip is displayed. The tool tip is managed by an instance of the <xref:Microsoft.VisualStudio.Package.CompletionSet> class.  
+ パーサーは、現在のコンテキストを判断、メンバーは、文字を選択する前にどのような入力されただけでなく配置します。 この情報からは、パーサーは、要求のスコープのすべてのメンバーの一覧を作成します。 この宣言の一覧に入っている、 <xref:Microsoft.VisualStudio.Package.AuthoringScope> から返されるオブジェクト、 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> メソッドです。 すべての宣言が返された場合は、メンバー完了ツール ヒントが表示されます。 ツール ヒントがのインスタンスによって管理されている、 <xref:Microsoft.VisualStudio.Package.CompletionSet> クラスです。  
   
-## <a name="enabling-support-for-member-completion"></a>Enabling Support for Member Completion  
- You must have the `CodeSense` registry entry set to 1 to support any IntelliSense operation. This registry entry can be set with a named parameter passed to the <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> user attribute associated with the language package. The language service classes read the value of this registry entry from the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> property on the <xref:Microsoft.VisualStudio.Package.LanguagePreferences> class.  
+## メンバーの完了のサポートを有効にします。  
+ 必要があります、 `CodeSense` 、IntelliSense の操作をサポートするために、レジストリ エントリが 1 に設定します。 渡された名前付きパラメーターでこのレジストリ エントリを設定できる、 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> 言語パッケージに関連付けられているユーザーの属性です。 言語サービス クラスからは、このレジストリ エントリの値の読み取り、 <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> プロパティを <xref:Microsoft.VisualStudio.Package.LanguagePreferences> クラスです。  
   
- If your scanner returns the token trigger of <xref:Microsoft.VisualStudio.Package.TokenTriggers>, and your parser returns a list of declarations, then the member completion list is displayed.  
+ スキャナーのトークンのトリガーが返された場合 <xref:Microsoft.VisualStudio.Package.TokenTriggers>, 、し、パーサーが宣言の一覧を返す、メンバーのコンプリート リストが表示されます。  
   
-## <a name="supporting-member-completion-in-the-scanner"></a>Supporting Member Completion in the Scanner  
- The scanner must be able to detect a member completion character and set the token trigger of <xref:Microsoft.VisualStudio.Package.TokenTriggers> when that character is parsed.  
+## スキャナーのメンバーの完了をサポートします。  
+ スキャナーは、メンバーの終了文字を検出し、トークンのトリガーを設定することである必要があります <xref:Microsoft.VisualStudio.Package.TokenTriggers> その文字の解析時です。  
   
-### <a name="example"></a>Example  
- Here is a simplified example of detecting the member completion character and setting the appropriate <xref:Microsoft.VisualStudio.Package.TokenTriggers> flag. This example is for illustrative purposes only. It assumes that your scanner contains a method `GetNextToken` that identifies and returns tokens from a line of text. The example code simply sets the trigger whenever it sees the right kind of character.  
+### 例  
+ メンバーの終了文字を検出し、適切な設定の簡単な例を次に示します <xref:Microsoft.VisualStudio.Package.TokenTriggers> フラグ。 この例では、説明の目的でのみです。 スキャナーにメソッドが含まれていると想定して `GetNextToken` を識別し、テキストの行からトークンを返します。 コード例は、適切な文字がときだけで、トリガーを設定します。  
   
-```csharp  
+```c#  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -108,17 +91,17 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="supporting-member-completion-in-the-parser"></a>Supporting Member Completion in the Parser  
- For member completion, the <xref:Microsoft.VisualStudio.Package.Source> class calls the <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> method. You must implement the list in a class that is derived from the <xref:Microsoft.VisualStudio.Package.Declarations> class. See the <xref:Microsoft.VisualStudio.Package.Declarations> class for details about the methods you must implement.  
+## パーサーでメンバーの完了をサポートします。  
+ メンバーの完了、 <xref:Microsoft.VisualStudio.Package.Source> クラスの呼び出し、 <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> メソッドです。 派生したクラスで、リストを実装する必要があります、 <xref:Microsoft.VisualStudio.Package.Declarations> クラスです。 参照してください、 <xref:Microsoft.VisualStudio.Package.Declarations> クラスの詳細についてはメソッドを実装する必要があります。  
   
- The parser is called with <xref:Microsoft.VisualStudio.Package.ParseReason> or <xref:Microsoft.VisualStudio.Package.ParseReason> when a member select character is typed. The location given in the <xref:Microsoft.VisualStudio.Package.ParseRequest> object is immediately after the member select character. The parser must collect the names of all members that can appear in a member list at that particular point in the source code. Then the parser must parse the current line to determine the scope the user wants associated with the member select character.  
+ パーサーが呼び出された <xref:Microsoft.VisualStudio.Package.ParseReason> または <xref:Microsoft.VisualStudio.Package.ParseReason> メンバーの選択の文字は型指定されています。 指定されている位置、 <xref:Microsoft.VisualStudio.Package.ParseRequest> メンバーは、文字を選択した後すぐにオブジェクトをします。 パーサーは、ソース コードで特定の時点のメンバー リストに表示されるすべてのメンバーの名前を収集する必要があります。 パーサーは、ユーザーがメンバー選択文字に関連付けられたスコープを決定するのには、現在の行を解析する必要があります。  
   
- This scope is based on the type of the identifier before the member select character. For example, in C#, given the member variable `languageService` that has a type of `LanguageService`, typing **languageService.** produces a list of all the members of the `LanguageService` class. Also in C#, typing **this.** produces a list of all the members of the class in the current scope.  
+ メンバーは、文字を選択する前に、このスコープは、識別子の型に基づきます。 たとえば、C\# の場合、メンバー変数を指定 `languageService` の型を持つ `LanguageService`, 入力、 **languageService。** のすべてのメンバーの一覧を作成、 `LanguageService` クラスです。 C\# でも」と入力 **この。** 、現在のスコープ内のクラスのすべてのメンバーの一覧を作成します。  
   
-### <a name="example"></a>Example  
- The following example shows one way to populate a <xref:Microsoft.VisualStudio.Package.Declarations> list. This code assumes that the parser constructs a declaration and adds it to the list by calling an `AddDeclaration` method on the `TestAuthoringScope` class.  
+### 例  
+ 次の例では、設定する方法の 1 つ、 <xref:Microsoft.VisualStudio.Package.Declarations> \] ボックスの一覧です。 このコードでは、パーサーが宣言を構築してを呼び出して、一覧に追加する、 `AddDeclaration` メソッドを `TestAuthoringScope` クラスです。  
   
-```csharp  
+```c#  
 using System.Collections;  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  

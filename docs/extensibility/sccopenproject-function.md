@@ -1,133 +1,116 @@
 ---
-title: SccOpenProject Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccOpenProject
-helpviewer_keywords:
-- SccOpenProject function
+title: "SccOpenProject 関数 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccOpenProject"
+helpviewer_keywords: 
+  - "SccOpenProject 関数"
 ms.assetid: d609510b-660a-46d7-b93d-2406df20434d
 caps.latest.revision: 16
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b3db4576b2c8a2f925ac19e1024d271843f6895d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 16
 ---
-# <a name="sccopenproject-function"></a>SccOpenProject Function
-This function opens an existing source control project or creates a new one.  
+# SccOpenProject 関数
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+この関数は、既存のソース管理プロジェクトを開くか、新しいものを再作成します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 SCCRTN SccOpenProject (  
-   LPVOID        pvContext,  
-   HWND          hWnd,  
-   LPSTR         lpUser,  
-   LPCSTR        lpProjName,  
-   LPCSTR        lpLocalProjPath,  
-   LPSTR         lpAuxProjPath,  
-   LPCSTR        lpComment,  
-   LPTEXTOUTPROC lpTextOutProc,  
-   LONG          dwFlags  
+   LPVOID        pvContext,  
+   HWND          hWnd,  
+   LPSTR         lpUser,  
+   LPCSTR        lpProjName,  
+   LPCSTR        lpLocalProjPath,  
+   LPSTR         lpAuxProjPath,  
+   LPCSTR        lpComment,  
+   LPTEXTOUTPROC lpTextOutProc,  
+   LONG          dwFlags  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  pvContext  
- [in] The source control plug-in context structure.  
+ \[in\]ソース管理プラグイン コンテキスト構造体。  
   
- hWnd  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ hwnd の分離  
+ \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
   
  lpUser  
- [in, out] The name of the user (not to exceed SCC_USER_SIZE, including the NULL terminator).  
+ \[入力、出力\]ユーザー \(not NULL 終端文字も含めて SCC\_USER\_SIZE を超える\) の名前。  
   
  lpProjName  
- [in] The string identifying the name of the project.  
+ \[in\]プロジェクトの名前を識別する文字列。  
   
  lpLocalProjPath  
- [in] The path to the working folder for the project.  
+ \[in\]プロジェクトの作業フォルダーへのパス。  
   
  lpAuxProjPath  
- [in, out]An optional auxiliary string identifying the project (not to exceed SCC_AUXPATH_SIZE, including the NULL terminator).  
+ \[入力、出力\]プロジェクト \(not NULL 終端文字も含めて SCC\_AUXPATH\_SIZE を超える\) を識別する、オプションの補助文字列。  
   
  lpComment  
- [in] Comment to a new project that is being created.  
+ \[in\]作成される新しいプロジェクトに対するコメントします。  
   
  lpTextOutProc  
- [in] An optional callback function to display text output from the source control plug-in.  
+ \[in\]プラグインのソース管理からの出力テキストを表示するオプションのコールバック関数。  
   
  dwFlags  
- [in] Signals whether a new project needs to be created if the project is unknown to the source control plug-in. Value can be a combination of `SCC_OP_CREATEIFNEW` and `SCC_OP_SILENTOPEN.`  
+ \[in\]信号をプロジェクトがソースに不明な場合に作成する新しいプロジェクトが必要かどうかを制御プラグインします。 値の組み合わせを指定できます `SCC_OP_CREATEIFNEW` と `SCC_OP_SILENTOPEN.`  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 戻り値  
+ この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Success in opening the project.|  
-|SCC_E_INITIALIZEFAILED|Project could not be initialized.|  
-|SCC_E_INVALIDUSER|The user could not log in to the source control system.|  
-|SCC_E_COULDNOTCREATEPROJECT|The project did not exist prior to the call;  the `SCC_OPT_CREATEIFNEW` flag was set, but the project could not be created.|  
-|SCC_E_PROJSYNTAXERR|Invalid project syntax.|  
-|SCC_E_UNKNOWNPROJECT|The project is unknown to the source control plug-in, and the `SCC_OPT_CREATEIFNEW` flag was not set.|  
-|SCC_E_INVALIDFILEPATH|Invalid or unusable file path.|  
-|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
-|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
-|SCC_E_NONSPECFICERROR|A nonspecific failure; the source control system was not initialized.|  
+|値|説明|  
+|-------|--------|  
+|SCC\_OK|プロジェクトを開くときに成功しました。|  
+|SCC\_E\_INITIALIZEFAILED|プロジェクトを初期化できませんでした。|  
+|SCC\_E\_INVALIDUSER|ユーザーは、ソース管理システム ログオンできませんでした。|  
+|SCC\_E\_COULDNOTCREATEPROJECT|呼び出しの前に、プロジェクトがありませんでした `SCC_OPT_CREATEIFNEW` フラグを設定したが、プロジェクトを作成できませんでした。|  
+|SCC\_E\_PROJSYNTAXERR|無効なプロジェクト構文があります。|  
+|SCC\_E\_UNKNOWNPROJECT|プロジェクトでは、ソース管理プラグイン、未知と `SCC_OPT_CREATEIFNEW` フラグが設定されませんでした。|  
+|SCC\_E\_INVALIDFILEPATH|無効であるか使用不可のファイルのパス。|  
+|SCC\_E\_NOTAUTHORIZED|この操作を実行できません。|  
+|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
+|SCC\_E\_NONSPECFICERROR|不特定のエラーです。ソース管理システムは初期化されませんでした。|  
   
-## <a name="remarks"></a>Remarks  
- The IDE may pass in a user name (`lpUser`), or it may simply pass in a pointer to an empty string. If there is a user name, the source control plug-in should use it as a default. However, if no name was passed, or if the login failed with the given name, the plug-in should prompt the user to log in and will return the valid name in `lpUser` when it receives a valid login`.` Because the plug-in may change the user name string, the IDE will always allocate a buffer of size (`SCC_USER_LEN`+1 or SCC_USER_SIZE, which includes space for the null terminator).  
-  
-> [!NOTE]
->  The first action the IDE may be required to perform may be a call to the `SccOpenProject` function or the [SccGetProjPath](../extensibility/sccgetprojpath-function.md). For this reason, both of them have an identical `lpUser` parameter.  
-  
- `lpAuxProjPath` and`lpProjName` are read from the solution file, or they are returned from a call to the `SccGetProjPath` function. These parameters contain the strings that the source control plug-in associates with the project and are meaningful only to the plug-in. If no such strings are in the solution file and the user has not been prompted to browse (which would return a string through the `SccGetProjPath` function), the IDE passes empty strings for both `lpAuxProjPath` and `lpProjName`, and expects these values to be updated by the plug-in when this function returns.  
-  
- `lpTextOutProc` is a pointer to a callback function provided by the IDE to the source control plug-in for the purpose of displaying command result output. This callback function is described in detail in [LPTEXTOUTPROC](../extensibility/lptextoutproc.md).  
+## 解説  
+ IDE がユーザー名を渡すことがあります \(`lpUser`\)、単に空の文字列にポインター パス可能性があります。 ユーザー名がある場合、ソース管理プラグイン使用してください、既定値として。 ただし、名が渡されなかった場合、または指定した名前、ログインに失敗した場合は、プラグインにログインを求める必要がありで有効な名前を返す `lpUser` 有効なログインを受信すると`.` プラグインがユーザー名の文字列を変更するため、IDE が常にサイズのバッファーを割り当てる \(`SCC_USER_LEN`\+1 または SCC\_USER\_SIZE で、null 終端文字用の領域が含まれています\)。  
   
 > [!NOTE]
->  If the source control plug-in intends to take advantage of this, it must have set the `SCC_CAP_TEXTOUT` flag in the [SccInitialize](../extensibility/sccinitialize-function.md). If that flag was not set, or if the IDE does not support this feature, `lpTextOutProc` will be `NULL`.  
+>  実行する必要があります、IDE の最初のアクションへの呼び出しがあります、 `SccOpenProject` 関数または [SccGetProjPath](../extensibility/sccgetprojpath-function.md)です。 このため、これらの両方に同一ある `lpUser` パラメーター。  
   
- The `dwFlags` parameter controls the outcome in the event that the project being opened does not currently exist. It consists of two bitflags, `SCC_OP_CREATEIFNEW` and `SCC_OP_SILENTOPEN`. If the project being opened already exists, the function simply opens the project and returns `SCC_OK`. If the project does not exist and if the `SCC_OP_CREATEIFNEW` flag is on, the source control plug-in can create the project in the source control system, open it, and return `SCC_OK`. If the project does not exist, and if the `SCC_OP_CREATEIFNEW` flag is off, the plug-in should then check for the `SCC_OP_SILENTOPEN` flag. If that flag is not on, the plug-in may prompt the user for a project name. If that flag is on, the plug-in should simply return `SCC_E_UNKNOWNPROJECT`.  
+ `lpAuxProjPath` `lpProjName` ソリューション ファイルから読み取られるへの呼び出しから返された、または、 `SccGetProjPath` 関数です。 これらのパラメーターをソース管理プラグインがプロジェクトに関連付ける文字列を含みプラグインにのみ意味のあります。 ソリューション ファイルにこのような文字列がないと、ユーザーが参照するように要求されていない場合 \(を介して文字列を返すよう、 `SccGetProjPath` 関数\)、IDE は、両方の空の文字列を渡して `lpAuxProjPath` と `lpProjName`, をこの関数が戻るときに、プラグインで更新するこれらの値を期待します。  
   
-## <a name="calling-order"></a>Calling Order  
- In the normal course of events, the [SccInitialize](../extensibility/sccinitialize-function.md) would be called first to open a source control session. A session may consist of a call to `SccOpenProject`, followed by other Source Control Plug-in API function calls, and will terminate with a call to the [SccCloseProject](../extensibility/scccloseproject-function.md). Such sessions may be repeated several times before the [SccUninitialize](../extensibility/sccuninitialize-function.md) is called.  
-  
- If the source control plug-in sets the `SCC_CAP_REENTRANT` bit in `SccInitialize`, then the above session sequence may be repeated many times in parallel. Different `pvContext` structures track the different sessions, in which each `pvContext` is associated with one open project at a time. Based on the`pvContext` parameter, the plug-in can determine which project is referenced in any particular call. If the capability bit `SCC_CAP_REENTRANT` is not set, nonreentrant source control plug-ins are limited in their ability to work with multiple projects.  
+ `lpTextOutProc` ソース管理プラグインをコマンドの出力結果を表示できるようにするための IDE によって提供されるコールバック関数へのポインターです。 このコールバック関数がで詳しく説明されている [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)します。  
   
 > [!NOTE]
->  The `SCC_CAP_REENTRANT` bit was introduced in version 1.1 of the Source Control Plug-in API. It is not set or is ignored in version 1.0, and all version 1.0 source control plug-ins are assumed to be nonreentrant.  
+>  ソース管理プラグインが活用しようとすると場合、これを設定している必要があります、 `SCC_CAP_TEXTOUT` フラグ、 [SccInitialize](../extensibility/sccinitialize-function.md)です。 このフラグが設定されていない場合、または IDE では、この機能をサポートしていない場合 `lpTextOutProc` は `NULL`です。  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+ `dwFlags` パラメーターは、開いているプロジェクトが現在存在しないことに、結果を制御します。 構成は次の 2 つのビットフラグ `SCC_OP_CREATEIFNEW` と `SCC_OP_SILENTOPEN`です。 この関数は、既に開いているプロジェクトが存在する場合は、単にプロジェクトが開きますして返します `SCC_OK`します。 プロジェクトが存在しない場合、および場合、 `SCC_OP_CREATEIFNEW` フラグがオン、ソース管理プラグインは、ソース管理システムで、プロジェクトを作成、開くには、および返す `SCC_OK`します。 プロジェクトが存在しない場合、および場合、 `SCC_OP_CREATEIFNEW` フラグがオフ、プラグインし、確認する、 `SCC_OP_SILENTOPEN` フラグ。 フラグがオンでない場合、プラグイン可能性があります、ユーザーに要求、プロジェクトの名前。 フラグがあるかどうか、プラグインする必要があります戻ります `SCC_E_UNKNOWNPROJECT`します。  
+  
+## 呼び出し順序  
+ 通常、イベントの [SccInitialize](../extensibility/sccinitialize-function.md) を開くには、ソース コントロール セッションを最初に呼び出すとします。 呼び出しは、セッションで構成される `SccOpenProject`, 、別のソース管理プラグインの API 関数呼び出しの後を呼び出して終了、 [SccCloseProject](../extensibility/scccloseproject-function.md)です。 このようなセッションを前に何度も繰り返すことがあります、 [SccUninitialize](../extensibility/sccuninitialize-function.md) が呼び出されます。  
+  
+ ソース管理プラグインを設定する場合、 `SCC_CAP_REENTRANT` 内のビット `SccInitialize`, 、上のセッションの順序は、並列で何度も繰り返し可能性があります使用し、します。 異なる `pvContext` 構造体は、各、別のセッションを追跡 `pvContext` は一度に 1 つの開いているプロジェクトに関連付けられています。 に基づいて、`pvContext` パラメーター、プラグインを特定するプロジェクトは、特定の呼び出しで参照されています。 機能ビットする場合 `SCC_CAP_REENTRANT` が設定されていない nonreentrant ソース管理プラグインは、複数のプロジェクトを操作する機能に制限されます。  
+  
+> [!NOTE]
+>  `SCC_CAP_REENTRANT` ビットは、ソース管理プラグインの API のバージョン 1.1 で導入されました。 設定されていないか、バージョン 1.0 では無視され、すべてのバージョン 1.0 ソース管理プラグインは nonreentrant と見なされます。  
+  
+## 参照  
+ [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccCloseProject](../extensibility/scccloseproject-function.md)   
  [SccGetProjPath](../extensibility/sccgetprojpath-function.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)   
  [SccUninitialize](../extensibility/sccuninitialize-function.md)   
- [Restrictions on String Lengths](../extensibility/restrictions-on-string-lengths.md)   
+ [文字列長の制限](../extensibility/restrictions-on-string-lengths.md)   
  [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)

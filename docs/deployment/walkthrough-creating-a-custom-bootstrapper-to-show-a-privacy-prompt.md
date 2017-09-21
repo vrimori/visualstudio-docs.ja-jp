@@ -1,182 +1,170 @@
 ---
-title: 'Walkthrough: Creating a Custom Bootstrapper to Show a Privacy Prompt | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- FSharp
-- VB
-- CSharp
-- C++
-helpviewer_keywords:
-- ClickOnce deployment, prerequisites
-- dependencies [.NET Framework], custom bootstrapper package
-- deploying applications [Visual Studio], custom prerequisites
-- Windows Installer deployment, prerequisites
-- prerequisites [.NET Framework], custom bootstrapper package
+title: "チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-deployment"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "FSharp"
+  - "VB"
+  - "CSharp"
+  - "C++"
+helpviewer_keywords: 
+  - "ClickOnce 配置, 必要条件"
+  - "依存関係 [.NET Framework], カスタム ブートストラップ パッケージ"
+  - "配置 (アプリケーションを) [Visual Studio], カスタムの必須コンポーネント"
+  - "必要条件 [.NET Framework], カスタム ブートストラップ パッケージ"
+  - "Windows インストーラーの配置, 必要条件"
 ms.assetid: 2f3edd6a-84d1-4864-a1ae-6a13c5732aae
 caps.latest.revision: 10
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 486c7e1469db328d6da1ba7ad30667a579385642
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+caps.handback.revision: 10
 ---
-# <a name="walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt"></a>Walkthrough: Creating a Custom Bootstrapper to Show a Privacy Prompt
-You can configure ClickOnce applications to automatically update when assemblies with newer file versions and assembly versions become available. To make sure that your customers consent to this behavior, you can display a privacy prompt to them. Then, they can choose whether to grant permission to the application to update automatically. If the application is not allowed to update automatically, it does not install.  
+# チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+ClickOnce アプリケーションは、アセンブリに含まれるファイルおよびアセンブリの新しいバージョンが利用できるようになったときに自動的に更新されるように構成できます。  この動作に同意することをユーザーに確認するには、プライバシー プロンプトを表示します。  このプロンプトで、ユーザーはアプリケーションの自動更新を許可するかどうかを選択できます。  アプリケーションの自動更新が許可されなかった場合、インストールは行われません。  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## 必須コンポーネント  
+ このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   Visual Studio 2010.  
+-   Visual Studio 2010  
   
-## <a name="creating-an-update-consent-dialog-box"></a>Creating an Update Consent Dialog Box  
- To display a privacy prompt, create an application that asks the reader to consent to automatic updates for the application.  
+## 更新の同意を求めるダイアログ ボックスを作成する  
+ プライバシー プロンプトを表示するには、アプリケーションの自動更新についてユーザーの同意を求めるアプリケーションを作成します。  
   
-#### <a name="to-create-a-consent-dialog-box"></a>To create a consent dialog box  
+#### 同意を求めるダイアログ ボックスを作成するには  
   
-1.  On the **File** menu, point to **New**, and then click **Project**.  
+1.  **\[ファイル\]** メニューの **\[新規作成\]** をポイントし、**\[プロジェクト\]** をクリックします。  
   
-2.  In the **New Project** dialog box, click **Windows**, and then click **WindowsFormsApplication**.  
+2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[ウィンドウ\]** をクリックし、**\[Windows フォーム アプリケーション\]** をクリックします。  
   
-3.  For the **Name**, type **ConsentDialog**, and then click **OK**.  
+3.  **\[名前\]** に「ConsentDialog」と入力し、**\[OK\]** をクリックします。  
   
-4.  In the designer, click the form.  
+4.  デザイナーでフォームをクリックします。  
   
-5.  In the **Properties** window, change the **Text** property to **Update Consent Dialog**.  
+5.  **\[プロパティ\]** ウィンドウで、**Text** プロパティを「Update Consent Dialog」に変更します。  
   
-6.  In the **Toolbox**, expand **All Windows Forms**, and drag a **Label** control to the form.  
+6.  **ツールボックス**で **\[すべての Windows フォーム\]** を展開し、**Label** コントロールをフォームにドラッグします。  
   
-7.  In the designer, click the label control.  
+7.  デザイナーでラベル コントロールをクリックします。  
   
-8.  In the **Properties** window, change the **Text** property under **Appearance** to the following:  
+8.  **\[プロパティ\]** ウィンドウで、**Appearance** の **Text** プロパティを次のように変更します。  
   
-     The application that you are about to install checks for the latest updates on the Web. By clicking on "I Agree", you authorize the application to check for and install updates automatically from the Internet.  
+     インストールしようとしているアプリケーションでは、Web で最新の更新プログラムがチェックされます。  \[同意する\] をクリックして承認すると、インターネットに接続して自動的に更新プログラムの確認とインストールが行われます。  
   
-9. In the **Toolbox**, drag a **Checkbox** control to the middle of the form.  
+9. **ツールボックス**の **Checkbox** コントロールをフォームの中央にドラッグします。  
   
-10. In the **Properties** window, change the **Text** property under **Layout** to **I Agree**.  
+10. **\[プロパティ\]** ウィンドウで、**Layout** の **Text** プロパティを「同意する」に変更します。  
   
-11. In the **Toolbox**, drag a **Button** control to the lower left of the form.  
+11. **ツールボックス**の **Button** コントロールをフォームの左下へドラッグします。  
   
-12. In the **Properties** window, change the **Text** property under **Layout** to **Proceed**.  
+12. **\[プロパティ\]** ウィンドウで、**Layout** の **Text** プロパティを「続行」に変更します。  
   
-13. In the **Properties** window, change the **(Name)** property under **Design** to **ProceedButton**.  
+13. **\[プロパティ\]** ウィンドウで、**Design** の **\(Name\)** プロパティを「ProceedButton」に変更します。  
   
-14. In the **Toolbox**, drag a **Button** control to the bottom right of the form.  
+14. **ツールボックス**の **Button** コントロールをフォームの右下へドラッグします。  
   
-15. In the **Properties** window, change the **Text** property under **Layout** to **Cancel**.  
+15. **\[プロパティ\]** ウィンドウで、**Layout** の **Text** プロパティを「キャンセル」に変更します。  
   
-16. In the **Properties** window, change the **(Name)** property under **Design** to **CancelButton**.  
+16. **\[プロパティ\]** ウィンドウで、**Design** の **\(Name\)** プロパティを「CancelButton」に変更します。  
   
-17. In the designer, double-click the **I Agree** checkbox to generate the CheckedChanged event handler.  
+17. デザイナーで、**\[同意する\]** チェック ボックスをダブルクリックして、CheckedChanged イベント ハンドラーを生成します。  
   
-18. In the Form1 code file, add the following code for the CheckedChanged event handler.  
+18. Form1 コード ファイルで、CheckedChanged イベント ハンドラーに次のコードを追加します。  
   
-     [!code-csharp[ConsentDialog#1](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_1.cs)]  [!code-vb[ConsentDialog#1](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_1.vb)]  
+     [!code-cs[ConsentDialog#1](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_1.cs)]
+     [!code-vb[ConsentDialog#1](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_1.vb)]  
   
-19. Update the class constructor to disable the **Proceed** button by default.  
+19. クラス コンストラクターを更新して、**\[続行\]** ボタンを既定で無効にします。  
   
-     [!code-csharp[ConsentDialog#6](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_2.cs)]  [!code-vb[ConsentDialog#6](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_2.vb)]  
+     [!code-cs[ConsentDialog#6](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_2.cs)]
+     [!code-vb[ConsentDialog#6](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_2.vb)]  
   
-20. In the Form1 code file, add the following code for a Boolean variable to track if the end user has consented to online updates.  
+20. Form1 コード ファイルで、エンド ユーザーがオンライン更新に同意したかどうかをブール変数で追跡するために次のコードを追加します。  
   
-     [!code-csharp[ConsentDialog#3](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_3.cs)]  [!code-vb[ConsentDialog#3](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_3.vb)]  
+     [!code-cs[ConsentDialog#3](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_3.cs)]
+     [!code-vb[ConsentDialog#3](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_3.vb)]  
   
-21. In the designer, double-click the **Proceed** button to generate the Click event handler.  
+21. デザイナーで、**\[続行\]** ボタンをダブルクリックして、Click イベント ハンドラーを生成します。  
   
-22. In the Form1 code file, add the following code to the Click event handler for the **Proceed** button.  
+22. Form1 コード ファイルで、**\[続行\]** ボタンの Click イベント ハンドラーに次のコードを追加します。  
   
-     [!code-csharp[ConsentDialog#2](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_4.cs)]  [!code-vb[ConsentDialog#2](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_4.vb)]  
+     [!code-cs[ConsentDialog#2](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_4.cs)]
+     [!code-vb[ConsentDialog#2](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_4.vb)]  
   
-23. In the designer, double-click the **Cancel** button to generate the Click event handler.  
+23. デザイナーで、**\[キャンセル\]** ボタンをダブルクリックして、Click イベント ハンドラーを生成します。  
   
-24. In the Form1 code file, add the following code for the Click event handler for the **Cancel** button.  
+24. Form1 コード ファイルで、**\[キャンセル\]** ボタンの Click イベント ハンドラーに次のコードを追加します。  
   
-     [!code-csharp[ConsentDialog#4](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_5.cs)]  [!code-vb[ConsentDialog#4](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_5.vb)]  
+     [!code-cs[ConsentDialog#4](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_5.cs)]
+     [!code-vb[ConsentDialog#4](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_5.vb)]  
   
-25. Update the application to return an error if the end user does not consent to online updates.  
+25. アプリケーションを更新して、エンド ユーザーがオンライン更新に同意しなかった場合にエラーを返すようにします。  
   
-     For Visual Basic developers only:  
+     Visual Basic 開発者用の手順は次のとおりです。  
   
-    1.  In **Solution Explorer**, click **ConsentDialog**.  
+    1.  **ソリューション エクスプローラー**で、**\[ConsentDialog\]** をクリックします。  
   
-    2.  On the **Project** menu, click **Add Module**, and then click **Add**.  
+    2.  **\[プロジェクト\]** メニューの **\[モジュールの追加\]** をクリックし、**\[追加\]** をクリックします。  
   
-    3.  In the Module1.vb code file, add the following code.  
+    3.  Module1.vb コード ファイルで、次のコードを追加します。  
   
          [!code-vb[ConsentDialog#7](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_6.vb)]  
   
-    4.  On the **Project** menu, click **ConsentDialog Properties**, and then click the **Application** tab.  
+    4.  **\[プロジェクト\]** メニューの **\[ConsentDialog のプロパティ\]** をクリックし、**\[アプリケーション\]** タブをクリックします。  
   
-    5.  Uncheck **Enable application framework**.  
+    5.  **\[アプリケーション フレームワークを有効にする\]** チェック ボックスをオフにします。  
   
-    6.  In the **Startup object** drop-down menu, select **Module1**.  
+    6.  **\[スタートアップ オブジェクト\]** ドロップダウン メニューの **\[Module1\]** を選択します。  
   
         > [!NOTE]
-        >  Disabling the application framework disables features such as Windows XP visual styles, application events, splash screen, single instance application, and more. For more information, see [Application Page, Project Designer (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md).  
+        >  アプリケーション フレームワークを無効にすると、Windows XP の視覚スタイル、アプリケーション イベント、スプラッシュ スクリーン、単一インスタンス アプリケーションなどの機能は無効になります。  詳細については、「[\[アプリケーション\] ページ \(プロジェクト デザイナー\) \(Visual Basic\)](../Topic/Application%20Page,%20Project%20Designer%20\(Visual%20Basic\).md)」を参照してください。  
   
-     For Visual C# developers only:  
+     C\# 開発者用の手順は次のとおりです。  
   
-     Open the Program.cs code file, and add the following code.  
+     Program.cs コード ファイルを開いて、次のコードを追加します。  
   
-     [!code-csharp[ConsentDialog#5](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_7.cs)]  
+     [!code-cs[ConsentDialog#5](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_7.cs)]  
   
-26. On the **Build** menu, click **BuildSolution**.  
+26. **\[ビルド\]** メニューの **\[ソリューションのビルド\]** をクリックします。  
   
-## <a name="creating-the-custom-bootstrapper-package"></a>Creating the Custom Bootstrapper Package  
- To show the privacy prompt to end users, you can create a custom bootstrapper package for the Update Consent Dialog application and include it as a prerequisite in all of your ClickOnce applications.  
+## カスタム ブートストラップ パッケージを作成する  
+ エンド ユーザーにプライバシー プロンプトを表示するには、更新の同意を求めるダイアログを表示するアプリケーションのカスタム ブートスラップ パッケージを作成し、必須コンポーネントとしてすべての ClickOnce アプリケーションに含めます。  
   
- This procedure demonstrates how to create a custom bootstrapper package by creating the following documents:  
+ ここでは、次のドキュメントを作成してカスタム ブートストラップ パッケージを作成する方法を示します。  
   
--   A product.xml manifest file to describe the contents of the bootstrapper.  
+-   ブートスラップの内容を記述した product.xml マニフェスト ファイル。  
   
--   A package.xml manifest file to list the localization-specific aspects of your package, such as strings and the software license terms.  
+-   パッケージのローカリゼーション固有の特性 \(文字列、ソフトウェア ライセンス条項など\) を記述した package.xml マニフェスト ファイル。  
   
--   A document for the software license terms.  
+-   ソフトウェア ライセンス条項のドキュメント。  
   
-#### <a name="step-1-to-create-the-bootstrapper-directory"></a>Step 1: To create the bootstrapper directory  
+#### 手順 1: ブートストラップ ディレクトリを作成するには  
   
-1.  Create a directory named **UpdateConsentDialog** in the %PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages.  
-  
-    > [!NOTE]
-    >  You may need administrative privileges to create this folder.  
-  
-2.  In the UpdateConsentDialog directory, create a subdirectory named en.  
+1.  UpdateConsentDialog という名前のディレクトリを %PROGRAMFILES%\\Microsoft SDKs\\Windows\\v7.0A\\Bootstrapper\\Packages に作成します。  
   
     > [!NOTE]
-    >  Create a new directory for each locale. For example, you can add subdirectories for the fr and de locales. These directories would contain the French and German strings and language packs, if necessary.  
+    >  このフォルダーを作成するには、管理特権が必要な場合があります。  
   
-#### <a name="step-2-to-create-the-productxml-manifest-file"></a>Step 2: To create the product.xml manifest file  
+2.  UpdateConsentDialog ディレクトリに「en」という名前のサブディレクトリを作成します。  
   
-1.  Create a text file called `product.xml`.  
+    > [!NOTE]
+    >  ロケールごとに新しいディレクトリを作成します。  たとえば、fr および de のロケールのサブディレクトリを作成し、  必要に応じて、フランス語とドイツ語の文字列や言語パックを含めることができます。  
   
-2.  In the product.xml file, add the following XML code. Make sure that you do not overwrite the existing XML code.  
+#### 手順 2: product.xml マニフェスト ファイルを作成するには  
+  
+1.  `product.xml` というテキスト ファイルを作成します。  
+  
+2.  product.xml ファイルに次の XML コードを追加します。  既存の XML コードは上書きしないように注意してください。  
   
     ```  
     <Product  
@@ -202,13 +190,13 @@ You can configure ClickOnce applications to automatically update when assemblies
     </Product>  
     ```  
   
-3.  Save the file to the UpdateConsentDialog bootstrapper directory.  
+3.  ファイルを UpdateConsentDialog ブートストラップ ディレクトリに保存します。  
   
-#### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>Step 3: To create the package.xml manifest file and the software license terms  
+#### 手順 3: package.xml マニフェスト ファイルとソフトウェア ライセンス条項を作成するには  
   
-1.  Create a text file called `package.xml`.  
+1.  `package.xml` というテキスト ファイルを作成します。  
   
-2.  In the package.xml file, add the following XML code to define the locale and include the software license terms. Make sure that you do not overwrite the existing XML code.  
+2.  package.xml ファイルに次の XML コードを追加して、ロケールを定義し、ソフトウェア ライセンス条項を含めます。  既存の XML コードは上書きしないように注意してください。  
   
     ```  
     <Package   
@@ -230,91 +218,91 @@ You can configure ClickOnce applications to automatically update when assemblies
     </Package>  
     ```  
   
-3.  Save the file to the en subdirectory in the UpdateConsentDialog bootstrapper directory.  
+3.  ファイルを UpdateConsentDialog ブートストラップ ディレクトリの en サブディレクトリに保存します。  
   
-4.  Create a document called eula.rtf for the software license terms.  
-  
-    > [!NOTE]
-    >  The software license terms should include information about licensing, warranties, liabilities, and local laws. These files should be locale-specific, so make sure that the file is saved in a format that supports MBCS or UNICODE characters. Consult your legal department about the content of the software license terms.  
-  
-5.  Save the document to the en subdirectory in the UpdateConsentDialog bootstrapper directory.  
-  
-6.  If necessary, create a new package.xml manifest file and a new eula.rtf document for the software license terms for each locale. For example, if you created subdirectories for the fr and de locales, create separate package.xml manifest files and software license terms and save them to the fr and de subdirectories.  
-  
-## <a name="setting-the-update-consent-application-as-a-prerequisite"></a>Setting the Update Consent Application as a Prerequisite  
- In Visual Studio, you can set the Update Consent application as a prerequisite.  
-  
-#### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>To set the Update Consent Application as a prerequisite  
-  
-1.  In **Solution Explorer**, click the name of your application that you want to deploy.  
-  
-2.  On the **Project** menu, click *ProjectName* **Properties**.  
-  
-3.  Click the **Publish** page, and then click **Prerequisites**.  
-  
-4.  Select **Update Consent Dialog**.  
+4.  eula.rtf というソフトウェア ライセンス条項のドキュメントを作成します。  
   
     > [!NOTE]
-    >  You may have to close and reopen Visual Studio to see the Update Consent Dialog in the Prerequisites Dialog Box.  
+    >  ソフトウェア ライセンス条項には、ライセンス、保証、責任、法律などに関する情報を含めます。  これらのファイルはロケール固有の内容にする必要があるため、MBCS または UNICODE の文字をサポートするファイル形式で保存します。  ソフトウェア ライセンス条項の内容については、法務部に確認してください。  
   
-5.  Click **OK**.  
+5.  ドキュメントを UpdateConsentDialog ブートストラップ ディレクトリの en サブディレクトリに保存します。  
   
-## <a name="creating-and-testing-the-setup-program"></a>Creating and Testing the Setup Program  
- After you set the Update Consent application as a prerequisite, you can generate the installer and bootstrapper for your application.  
+6.  必要に応じて、ロケールごとに新しい package.xml マニフェスト ファイルと新しいソフトウェア ライセンス条項の eula.rtf ドキュメントを作成します。  たとえば、fr と de のロケールのサブディレクトリを作成した場合、それぞれの package.xml マニフェスト ファイルとソフトウェア ライセンス条項を作成し、fr サブディレクトリと de サブディレクトリにそれぞれ保存します。  
   
-#### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>To create and test the Setup program by not clicking I agree  
+## 更新の同意を求めるアプリケーションを必須コンポーネントとして設定する  
+ Visual Studio で、更新の同意を求めるアプリケーションを必須コンポーネントとして設定できます。  
   
-1.  In **Solution Explorer**, click the name of your application that you want to deploy.  
+#### 更新の同意を求めるアプリケーションを必須コンポーネントとして設定するには  
   
-2.  On the **Project** menu, click *ProjectName* **Properties**.  
+1.  **ソリューション エクスプローラー**で、配置するアプリケーションの名前をクリックします。  
   
-3.  Click the **Publish** page, and then click **Publish Now**.  
+2.  **\[プロジェクト\]** メニューの **\[*プロジェクト名*のプロパティ\]** をクリックします。  
   
-4.  If the publish output does not open automatically, navigate to the publish output.  
+3.  **\[発行\]** ページをクリックし、**\[必須コンポーネント\]** をクリックします。  
   
-5.  Run the Setup.exe program.  
+4.  **\[Update Consent Dialog\]** を選択します。  
   
-     The Setup program shows the Update Consent Dialog software license agreement.  
+    > [!NOTE]
+    >  Visual Studio をいったん閉じて開き直さないと \[必須コンポーネント\] ダイアログ ボックスに Update Consent Dialog が表示されない場合があります。  
   
-6.  Read the software license agreement, and then click **Accept**.  
+5.  **\[OK\]** をクリックします。  
   
-     The Update Consent Dialog application appears and shows the following text: The application that you are about to install checks for the latest updates on the Web. By clicking on I Agree, you authorize the application to check for updates automatically on the Internet.  
+## セットアップ プログラムを作成してテストする  
+ 更新の同意を求めるアプリケーションを必須コンポーネントとして設定したら、アプリケーションのインストーラーとブートストラップを生成できます。  
   
-7.  Close the application or click Cancel.  
+#### セットアップ プログラムを作成して \[同意する\] をクリックしない場合の動作をテストするには  
   
-     The application shows an error: An error occurred while installing system components for *ApplicationName*. Setup cannot continue until all system components have been successfully installed.  
+1.  **ソリューション エクスプローラー**で、配置するアプリケーションの名前をクリックします。  
   
-8.  Click Details to show the following error message: Component Update Consent Dialog has failed to install with the following error message: "The automatic update agreement is not accepted." The following components failed to install: - Update Consent Dialog  
+2.  **\[プロジェクト\]** メニューの **\[*プロジェクト名*のプロパティ\]** をクリックします。  
   
-9. Click **Close**.  
+3.  **\[発行\]** ページをクリックし、**\[今すぐ発行\]** をクリックします。  
   
-#### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>To create and test the Setup program by clicking I agree  
+4.  発行の出力が自動的に開かない場合は発行の出力に移動します。  
   
-1.  In **Solution Explorer**, click the name of your application that you want to deploy.  
+5.  Setup.exe プログラムを実行します。  
   
-2.  On the **Project** menu, click *ProjectName* **Properties**.  
+     セットアップ プログラムで、Update Consent Dialog のソフトウェア ライセンス条項が表示されます。  
   
-3.  Click the **Publish** page, and then click **Publish Now**.  
+6.  ソフトウェア ライセンス条項を読み、**\[同意する\]** をクリックします。  
   
-4.  If the publish output does not open automatically, navigate to the publish output.  
+     Update Consent Dialog アプリケーションが表示され、"インストールしようとしているアプリケーションでは、Web で最新の更新プログラムがチェックされます。  \[同意する\] をクリックして承認すると、インターネットに接続して自動的に更新プログラムの確認とインストールが行われます。" というテキストが表示されます。  
   
-5.  Run the Setup.exe program.  
+7.  アプリケーションを閉じるか、\[キャンセル\] をクリックします。  
   
-     The Setup program shows the Update Consent Dialog software license agreement.  
+     アプリケーションで、"*ApplicationName* のシステム コンポーネントのインストール中にエラーが発生しました。  すべてのシステム コンポーネントが正常にインストールされるまで、セットアップは続行できません。" というエラーが表示されます。  
   
-6.  Read the software license agreement, and then click **Accept**.  
+8.  \[詳細\] をクリックします。"コンポーネント Update Consent Dialog のインストールに失敗し、次のエラー メッセージが生成されました: "The automatic update agreement is not accepted."次のコンポーネントをインストールできませんでした: \- Update Consent Dialog" というエラー メッセージが表示されます。  
   
-     The Update Consent Dialog application appears and shows the following text: The application that you are about to install checks for the latest updates on the Web. By clicking on I Agree, you authorize the application to check for updates automatically on the Internet.  
+9. **\[閉じる\]** をクリックします。  
   
-7.  Click **I Agree**, and then click **Proceed**.  
+#### セットアップ プログラムを作成して \[同意する\] をクリックした場合の動作をテストするには  
   
-     The application starts to install.  
+1.  **ソリューション エクスプローラー**で、配置するアプリケーションの名前をクリックします。  
   
-8.  If the Application Install dialog box appears, click **Install**.  
+2.  **\[プロジェクト\]** メニューの **\[*プロジェクト名*のプロパティ\]** をクリックします。  
   
-## <a name="see-also"></a>See Also  
- [Application Deployment Prerequisites](../deployment/application-deployment-prerequisites.md)   
- [Creating Bootstrapper Packages](../deployment/creating-bootstrapper-packages.md)   
- [How to: Create a Product Manifest](../deployment/how-to-create-a-product-manifest.md)   
- [How to: Create a Package Manifest](../deployment/how-to-create-a-package-manifest.md)   
- [Product and Package Schema Reference](../deployment/product-and-package-schema-reference.md)
+3.  **\[発行\]** ページをクリックし、**\[今すぐ発行\]** をクリックします。  
+  
+4.  発行の出力が自動的に開かない場合は発行の出力に移動します。  
+  
+5.  Setup.exe プログラムを実行します。  
+  
+     セットアップ プログラムで、Update Consent Dialog のソフトウェア ライセンス条項が表示されます。  
+  
+6.  ソフトウェア ライセンス条項を読み、**\[同意する\]** をクリックします。  
+  
+     Update Consent Dialog アプリケーションが表示され、"インストールしようとしているアプリケーションでは、Web で最新の更新プログラムがチェックされます。  \[同意する\] をクリックして承認すると、インターネットに接続して自動的に更新プログラムの確認とインストールが行われます。" というテキストが表示されます。  
+  
+7.  **\[同意する\]** をクリックし、**\[続行\]** をクリックします。  
+  
+     アプリケーションでインストールが開始されます。  
+  
+8.  \[アプリケーションのインストール\] ダイアログ ボックスで、**\[インストール\]** をクリックします。  
+  
+## 参照  
+ [アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)   
+ [ブートストラップ パッケージの作成](../deployment/creating-bootstrapper-packages.md)   
+ [方法: 製品マニフェストを作成する](../deployment/how-to-create-a-product-manifest.md)   
+ [方法: パッケージ マニフェストを作成する](../deployment/how-to-create-a-package-manifest.md)   
+ [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

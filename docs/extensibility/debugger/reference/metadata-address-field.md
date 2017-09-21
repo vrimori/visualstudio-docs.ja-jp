@@ -1,76 +1,59 @@
 ---
-title: METADATA_ADDRESS_FIELD | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- METADATA_ADDRESS_FIELD
-helpviewer_keywords:
-- METADATA_ADDRESS_FIELD structure
+title: "METADATA_ADDRESS_FIELD | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "METADATA_ADDRESS_FIELD"
+helpviewer_keywords: 
+  - "METADATA_ADDRESS_FIELD 構造体"
 ms.assetid: 15ab45fe-6b3b-4e09-880b-31b34f523607
 caps.latest.revision: 6
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4a1ab12443c1f5425a43d1a70ad58fa6a63a923f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 6
 ---
-# <a name="metadataaddressfield"></a>METADATA_ADDRESS_FIELD
-This structure represents the address of a field of a class or structure.  
+# METADATA_ADDRESS_FIELD
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+この構造体はクラスまたは構造体のフィールドのアドレスを表します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_FIELD {  
-   _mdToken tokField;  
+   _mdToken tokField;  
 } METADATA_ADDRESS_FIELD  
 ```  
   
-```csharp  
+```c#  
 public struct METADATA_ADDRESS_FIELD {  
-   public int tokField;  
+   public int tokField;  
 }  
 ```  
   
-## <a name="terms"></a>Terms  
+## 用語  
  tokField  
- The ID of the field token.  
+ フィールド トークンの ID。  
   
- [C++] `_mdToken` is a `typedef` for a 32-bit `int`.  
+ \[C\+\+\] `_mdToken` は32 ビット `int` の `typedef` です。  
   
-## <a name="remarks"></a>Remarks  
- This structure is part of the union in the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure when the `dwKind` field of the `DEBUG_ADDRESS_UNION` structure is set to `ADDRESS_KIND_FIELD` (a value from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration).  
+## 解説  
+ この構造は `DEBUG_ADDRESS_UNION` の構造体の `dwKind` のフィールドが `ADDRESS_KIND_FIELD` \([ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md) の列挙値\) に設定されている場合 [DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md) の構造の共用体の一部です。  
   
-## <a name="requirements"></a>Requirements  
- Header: sh.h  
+## 必要条件  
+ ヘッダー : sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
- [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)
+## 参照  
+ [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
+ [DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
+ [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md)

@@ -1,85 +1,84 @@
 ---
-title: Bind controls to data in Visual Studio | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- data, displaying
-- data sources, displaying data
-- Data Sources window
-- dislaying data
+title: "Visual Studio でのデータへのコントロールのバインド | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "[データ ソース] ウィンドウ"
+  - "データ ソース, 表示 (データを)"
+  - "データ, 表示"
+  - "表示 (データを)"
 ms.assetid: be8b6623-86a6-493e-ab7a-050de4661fd6
 caps.latest.revision: 40
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 9224ff42defaf4af0a2b0d6434e0673accae987f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 29
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="bind-controls-to-data-in-visual-studio"></a>Bind controls to data in Visual Studio
-You can display data to users of your application by binding data to controls. You can create these data-bound controls by dragging items from the **Data Sources** window onto a design surface or controls on a surface  in Visual Studio.  
+# Visual Studio でのデータへのコントロールのバインド
+データをコントロールにバインドすることで、アプリケーションのユーザーに対してデータを表示できます。  これらのデータ バインディング コントロールを作成するには、Visual Studio で **\[データ ソース\]** ウィンドウからデザイン サーフェイスに項目をドラッグします。  
   
- This topic describes the data sources you can use to create data-bound controls. It also describes some of the general tasks involved in data binding. For more specific details about how to create data-bound controls, see [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) and [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).  
+ ここでは、データ バインディング コントロールを作成するために使用できるデータ ソースについて説明します。  また、データ バインディングに関連する一般的なタスクについても説明します。  データ バインディング コントロールを作成する方法の詳細については、「[Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)」、「[Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)」、および「[Visual Studio でのデータへの Silverlight コントロールのバインド](../Topic/Binding%20Silverlight%20Controls%20to%20Data%20in%20Visual%20Studio.md)」を参照してください。  
   
-## <a name="data-sources"></a>Data sources  
- In the context of data binding, a data source represents the data in memory that can be bound to your user interface. In practical terms, a data source can be an Entity Framework class, a dataset, a service endpoint that is encapsulated in a .NET proxy object, a LINQ to SQL class, or any .NET object or collection. Some data sources enable you to create data-bound controls by dragging items from the **Data Sources** window, while other data sources do not. The following table shows which data sources are supported.  
+## データ ソース  
+ データ ソースは、アプリケーションで使用できるデータを表します。  データ ソースは、データベース、サービス、またはオブジェクトから作成できます。  詳細については、「[データ ソースの概要](../data-tools/add-new-data-sources.md)」を参照してください。  
   
-|Data source|Drag-and-drop support in **the Windows Forms Designer**|Drag-and-drop support in **the WPF Designer**|Drag-and-drop support in **the Silverlight Designer**|  
-|-----------------|---------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------|  
-|Dataset|Yes|Yes|No|  
-|Entity Data Model|Yes<sup>1</sup>|Yes|Yes|  
-|LINQ to SQL classes|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
-|Services (including [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], WCF services, and web services)|Yes|Yes|Yes|  
-|Object|Yes|Yes|Yes|  
-|SharePoint|Yes|Yes|Yes|  
+ 一部のデータ ソースでは、**\[データ ソース\]** ウィンドウから項目をドラッグすることによりデータ バインディング コントロールを作成できますが、その他のデータ ソースではできません。  サポートされるデータ ソースを次の表に示します。  
   
- 1. Generate the model using the **Entity Data Model** wizard, then drag those objects to the designer.  
+|データ ソース|**Windows フォーム デザイナー**でのドラッグ アンド ドロップのサポート|**WPF デザイナー**でのドラッグ アンド ドロップのサポート|**Silverlight デザイナー**でのドラッグ アンド ドロップのサポート|  
+|-------------|------------------------------------------------|---------------------------------------|-----------------------------------------------|  
+|データセット|○|○|Ｘ|  
+|エンティティ データ モデル|×<sup>1</sup>|○|○|  
+|LINQ to SQL クラス|×<sup>2</sup>|×<sup>2</sup>|×<sup>2</sup>|  
+|サービス \([!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF サービス、および Web サービスを含む\)|○|○|○|  
+|オブジェクト|○|○|○|  
+|SharePoint|○|○|○|  
   
- 2. LINQ to SQL classes do not appear in the **Data Sources** window. However, you can add a new object data source that is based on LINQ to SQL classes, and then drag those objects to the designer to create data-bound controls. For more information, see [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).  
+ 1.  Windows フォーム デザイナーが開いている場合、**\[データ ソース\]** ウィンドウ内のエンティティは読み取り専用であり、デザイナーにドラッグすることはできません。  ただし、Entity Data Model に基づく新しいオブジェクト データ ソースを追加し、それらのオブジェクトをデザイナーにドラッグすることで、データ バインディング コントロールを作成できます。  
   
-## <a name="data-sources-window"></a>Data Sources window  
- Data sources are available to your project as items in the **Data Sources** window. This window is visible, or is accessible from the **View** menu, when a form design surface is the active window in your project. You can drag items from this window to create controls that are bound to the underlying data, and you can also configure the data sources by right-clicking.  
+ 2.  LINQ to SQL クラスは、**\[データ ソース\]** ウィンドウに表示されません。  ただし、LINQ to SQL クラスに基づく新しいオブジェクト データ ソースを追加し、それらのオブジェクトをデザイナーにドラッグして、データ バインディング コントロールを作成できます。  詳細については、「[Walkthrough: Creating LINQ to SQL Classes \(O\/R Designer\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)」を参照してください。  
   
- ![Data Sources window](../data-tools/media/raddata-data-sources-window.png "raddata Data Sources window")  
+## データ ソース ウィンドウ  
+ データ ソースは、**\[データ ソース\]** ウィンドウ内の項目としてプロジェクトで利用できます。  このウィンドウから項目をドラッグして、基になるデータにバインドされるコントロールを作成できます。  詳細については、「[ウィンドウ](../Topic/Data%20Sources%20Window.md)」を参照してください。  
   
- For each data type that appears in the **Data Sources** window, a default control is created when you drag the item to the designer. Before you drag an item from the **Data Sources** window, you can change the control that will be created. For more information, see [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
+ **\[データ ソース\]** ウィンドウに表示されるデータ型ごとに、項目をデザイナーにドラッグしたときに既定のコントロールが作成されます。  **\[データ ソース\]** ウィンドウから項目をドラッグする前に、作成されるコントロールを変更できます。  詳細については、「[\[データ ソース\] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../Topic/Set%20the%20control%20to%20be%20created%20when%20dragging%20from%20the%20Data%20Sources%20window.md)」を参照してください。  
   
-## <a name="tasks-involved-in-binding-controls-to-data"></a>Tasks involved in binding controls to data  
- The following table lists some of the most common tasks you perform to bind controls to data.  
+## データへのコントロールのバインドに関連するタスク  
+ コントロールをデータにバインドするために実行する最も一般的なタスクを次の表に示します。  
   
-|Task|More information|  
-|----------|----------------------|  
-|Open the **Data Sources** window.|Open a design surface in the editor and choose **View** > **Data Sources**.|  
-|Add a data source to your project.|[Add new data sources](../data-tools/add-new-data-sources.md)|  
-|Set the control that is created when you drag an item from the **Data Sources** window to the designer.|[Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|  
-|Modify the list of controls that are associated with items in the **Data Sources** window.|[Add custom controls to the Data Sources window](../data-tools/add-custom-controls-to-the-data-sources-window.md)|  
-|Create data-bound controls.|[Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)<br /><br /> [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)|  
-|Bind to an object or collection.|[Bind objects in Visual Studio](../data-tools/bind-objects-in-visual-studio.md)|  
-|Filter data that appears in the UI.|[Filter and sort data in a Windows Forms application](../data-tools/filter-and-sort-data-in-a-windows-forms-application.md)|  
-|Customize captions for controls.|[Customize how Visual Studio creates captions for data-bound controls](../data-tools/customize-how-visual-studio-creates-captions-for-data-bound-controls.md)|  
+|タスク|詳細情報|  
+|---------|----------|  
+|**\[データ ソース\]** ウィンドウを開く。|[方法: \[データ ソース\] ウィンドウを開く](../Topic/How%20to:%20Open%20the%20data%20sources%20window.md)|  
+|プロジェクトにデータ ソースを追加する。|[方法 : データベース内のデータに接続する](../data-tools/how-to-connect-to-data-in-a-database.md)<br /><br /> [方法: オブジェクトのデータに接続する](../Topic/How%20to:%20Connect%20to%20Data%20in%20Objects.md)<br /><br /> [方法: サービスのデータに接続する](../data-tools/how-to-connect-to-data-in-a-service.md)|  
+|**\[データ ソース\]** ウィンドウからデザイナーに項目をドラッグしたときに作成されるコントロールを設定する。|[\[データ ソース\] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../Topic/Set%20the%20control%20to%20be%20created%20when%20dragging%20from%20the%20Data%20Sources%20window.md)|  
+|**\[データ ソース\]** ウィンドウの項目に関連付けられるコントロールのリストを変更する。|[\[データ ソース\] ウィンドウにカスタム コントロールを追加する](../Topic/Add%20custom%20controls%20to%20the%20Data%20Sources%20window.md)|  
+|データ バインディング コントロールを作成する。|[Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)<br /><br /> [Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)<br /><br /> [Visual Studio でのデータへの Silverlight コントロールのバインド](../Topic/Binding%20Silverlight%20Controls%20to%20Data%20in%20Visual%20Studio.md)|  
   
-## <a name="see-also"></a>See Also  
- [Visual Studio data tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)   
- [Windows Forms Data Binding](/dotnet/framework/winforms/windows-forms-data-binding)
+ データにバインドされるコントロールを作成したら、次のタスクのいずれかを実行できます。  
+  
+|タスク|参照項目|  
+|---------|----------|  
+|基になるデータ ソースのデータを編集する。|[アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)|  
+|データに加えられた変更を検証する。|[データの検証](../Topic/Validating%20Data.md)|  
+|更新されたデータをデータベースに保存する。|[データの保存](../data-tools/saving-data.md)|  
+  
+## 参照  
+ [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+ [Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)   
+ [Visual Studio でのデータへの Silverlight コントロールのバインド](../Topic/Binding%20Silverlight%20Controls%20to%20Data%20in%20Visual%20Studio.md)   
+ [方法: データベースの画像にコントロールをバインドする](../data-tools/bind-controls-to-pictures-from-a-database.md)   
+ [Visual Studio のデータ アプリケーションの概要](../data-tools/overview-of-data-applications-in-visual-studio.md)   
+ [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
+ [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
+ [データの検証](../Topic/Validating%20Data.md)   
+ [データの保存](../data-tools/saving-data.md)   
+ [Visual Studio でデータ ソースを操作するためのツール](../Topic/Tools%20for%20Working%20with%20Data%20Sources%20in%20Visual%20Studio.md)

@@ -1,116 +1,99 @@
 ---
-title: SccGetParentProjectPath Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccGetParentProjectPath
-helpviewer_keywords:
-- SccGetParentProjectPath function
+title: "SccGetParentProjectPath 関数 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccGetParentProjectPath"
+helpviewer_keywords: 
+  - "SccGetParentProjectPath 関数"
 ms.assetid: 62a71579-36b3-48b9-a1c8-04ab100efa08
 caps.latest.revision: 17
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 1f19c1787e16d8d8b0c7b5e52703f6f0d0660300
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 17
 ---
-# <a name="sccgetparentprojectpath-function"></a>SccGetParentProjectPath Function
-This function determines the parent project path of a specified project. This function is called when the user is adding a Visual Studio project to source control.  
+# SccGetParentProjectPath 関数
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+この関数は、指定したプロジェクトの親プロジェクトのパスを決定します。 ユーザーがソース管理に Visual Studio プロジェクトを追加する場合は、この関数が呼び出されます。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 SCCRTN SccGetParentProjectPath(  
-   LPVOID pContext,  
-   HWND   hWnd,  
-   LPSTR  lpUser,  
-   LPCSTR lpProjPath,  
-   LPSTR  lpAuxProjPath,  
-   LPSTR  lpParentProjPath  
+   LPVOID pContext,  
+   HWND   hWnd,  
+   LPSTR  lpUser,  
+   LPCSTR lpProjPath,  
+   LPSTR  lpAuxProjPath,  
+   LPSTR  lpParentProjPath  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  pContext  
- [in] The source control plug-in context pointer.  
+ \[in\]ソース管理プラグインのコンテキストのポインター。  
   
- hWnd  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ hwnd の分離  
+ \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
   
  lpUser  
- [in, out] The user name (up to SCC_USER_SIZE, including the NULL terminator).  
+ \[入力、出力\]\(最大 SCC\_USER\_SIZE、NULL 終端文字も含めて\) ユーザー名。  
   
  lpProjPath  
- [in] String identifying the project path (up to SCC_PRJPATH_SIZE, including the NULL terminator).  
+ \[in\]\(最大 SCC\_PRJPATH\_SIZE、NULL 終端文字も含めて\) プロジェクトのパスを識別する文字列。  
   
  lpAuxProjPath  
- [in, out] Auxiliary string identifying the project (up to SCC_PRJPATH_SIZE, including the NULL terminator).  
+ \[入力、出力\]\(最大 SCC\_PRJPATH\_SIZE、NULL 終端文字も含めて\) プロジェクトを識別する文字列を補助します。  
   
  lpParentProjPath  
- [in, out] Output string identifying the parent project path (up to SCC_PRJPATH_SIZE, including the NULL terminator).  
+ \[入力、出力\]\(最大 SCC\_PRJPATH\_SIZE、NULL 終端文字も含めて\)、親プロジェクトのパスを識別する文字列を出力します。  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 戻り値  
+ この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|Parent project path was successfully obtained.|  
-|SCC_E_INITIALIZEFAILED|Project could not be initialized.|  
-|SCC_E_INVALIDUSER|The user could not log in to the source control plug-in.|  
-|SCC_E_UNKNOWNPROJECT|Project is unknown to the source control plug-in.|  
-|SCC_E_INVALIDFILEPATH|Invalid or unusable file path.|  
-|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
-|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
-|SCC_E_PROJSYNTAXERR|Invalid project syntax.|  
-|SCC_E_CONNECTIONFAILURE|Store connection problem.|  
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nonspecific failure.|  
+|値|説明|  
+|-------|--------|  
+|SCC\_OK|親プロジェクト パスが正常に取得しました。|  
+|SCC\_E\_INITIALIZEFAILED|プロジェクトを初期化できませんでした。|  
+|SCC\_E\_INVALIDUSER|ユーザーは、ソース管理プラグイン ログオンできませんでした。|  
+|SCC\_E\_UNKNOWNPROJECT|プロジェクトは、ソース管理プラグインには不明です。|  
+|SCC\_E\_INVALIDFILEPATH|無効であるか使用不可のファイルのパス。|  
+|SCC\_E\_NOTAUTHORIZED|この操作を実行できません。|  
+|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
+|SCC\_E\_PROJSYNTAXERR|無効なプロジェクト構文があります。|  
+|SCC\_E\_CONNECTIONFAILURE|接続の問題を格納します。|  
+|SCC\_E\_NONSPECIFICERROR<br /><br /> SCC\_E\_UNKNOWNERROR|不特定のエラーです。|  
   
-## <a name="remarks"></a>Remarks  
- This function returns a success or failure code and, if successful, fills the variable `lpParentProjPath` with the full project path to the specified project.  
+## 解説  
+ この関数は、成功または失敗コードが返され、成功した場合、入力変数 `lpParentProjPath` 指定されたプロジェクトにプロジェクトの完全パスを使用します。  
   
- This function returns the parent project path of an existing project. For the root project, the function returns the project path that was passed in (that is, the same root project path). Note that a project path is a string that is meaningful only to the source control plug-in.  
+ この関数は、親の既存のプロジェクトのプロジェクトのパスを返します。 ルート プロジェクト関数に渡されたプロジェクト パスを返します \(つまり、同じルート プロジェクト パス\)。 プロジェクト パスは、ソース管理プラグインにとってのみ意味がある文字列であることに注意してください。  
   
- The IDE is prepared to accept changes to the `lpUser` and `lpAuxProjPath` parameters as well. The IDE will persist these strings and pass them to the [SccOpenProject](../extensibility/sccopenproject-function.md) when the user opens this project in the future. These strings, therefore, provide a way for the source control plug-in to track information it needs to associate with a project.  
+ IDE に変更を適用する準備ができて、 `lpUser` と `lpAuxProjPath` パラメーターも同様です。 IDE はこれらの文字列を永続化およびに渡したり、 [SccOpenProject](../extensibility/sccopenproject-function.md) 、ユーザーが開き、\[今後このプロジェクトです。 これらの文字列は、そのため、ソース管理プロジェクトに関連付ける必要な情報を追跡するプラグインの手段を提供します。  
   
- This function is similar to the [SccGetProjPath](../extensibility/sccgetprojpath-function.md), except that it does not prompt the user to select a project. It also never creates a new project but works only with an existing project.  
+ この関数は、 [SccGetProjPath](../extensibility/sccgetprojpath-function.md), 点が、プロジェクトを選択するユーザーから求められません。 既存のプロジェクトでのみが、新しいプロジェクトを作成します。  
   
- When `SccGetParentProjectPath` is called, `lpProjPath` and `lpAuxProjPath` will not be empty and will correspond to a valid project. These strings are usually received by the IDE from a previous call to the `SccGetProjPath` function.  
+ `SccGetParentProjectPath` が呼び出されると、 `lpProjPath` と `lpAuxProjPath` 空にならないし、は、有効なプロジェクトに対応します。 これらの文字列が前の呼び出しから IDE が受信した通常の `SccGetProjPath` 関数です。  
   
- The `lpUser` argument is the user name. The IDE will pass in the same user name that it had previously received from the `SccGetProjPath` function, and the source control plug-in should use the name as a default. If the user already has an open connection with the plug-in, then the plug-in should try to eliminate any prompts to make sure the function works silently. However, if the login fails, the plug-in should prompt the user for a login and, when it receives a valid login, pass the name back in `lpUser`. Because the plug-in may change this string, the IDE will always allocate a buffer of size (`SCC_USER_LEN`+1). If the string is changed, the new string must be a valid login name (at least as valid as the old string).  
+ `lpUser` 引数は、ユーザー名。 IDE はから既に受信していたのと同じユーザー名に適合、 `SccGetProjPath` 関数、およびソース管理プラグインは、既定値と名前を使用する必要があります。 ユーザーは、プラグインで開かれた接続を既に持っている場合、プラグインする必要がありますしようと、関数が何も行わずに動作を確認のプロンプトを行わないようにします。 ただし、ログインに失敗した場合、プラグインでメッセージを表示してユーザーをログインに対して、パスの名前がバックアップの有効なログインを受信すると `lpUser`です。 プラグインがこの文字列を変更するため、IDE が常にサイズのバッファーを割り当てる \(`SCC_USER_LEN`\+1\)。 文字列を変更すると、新しい文字列が有効なログイン名が \(少なくとも、古い文字列有効\) にあります。  
   
-## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>Technical Notes for SccCreateSubProject and SccGetParentProjectPath  
- Adding solutions and projects to source control has been simplified in Visual Studio to minimize the number of times a user is prompted to select locations in the source control system. These changes are activated by Visual Studio if a source control plug-in supports both of the new functions, the [SccCreateSubProject](../extensibility/scccreatesubproject-function.md) and the `SccGetParentProjectPath` function. However, the following registry entry can be used to disable these changes and revert to the previous Visual Studio (Source Control Plug-in API Version 1.1) behavior:  
+## テクニカル ノート SccCreateSubProject および SccGetParentProjectPath  
+ ソース管理システムで場所を選択を求める回数を最小限にする Visual Studio でソース管理へのソリューションとプロジェクトの追加を簡素化されています。 ソース管理プラグインでは、新しい関数の両方がサポートする場合、Visual Studio によってこれらの変更がアクティブ化、 [SccCreateSubProject](../extensibility/scccreatesubproject-function.md) と `SccGetParentProjectPath` 関数です。 ただし、次のレジストリ エントリは、これらの変更を無効にして、以前の Visual Studio \(ソース管理プラグインの API バージョン 1.1\) 動作に戻すには使用できます。  
   
- [HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl"=dword:00000001  
+ \[HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\8.0\\SourceControl\]"DoNotCreateSolutionRootFolderInSourceControl"\= dword:00000001  
   
- If this registry entry does not exist or is set to dword:00000000, Visual Studio attempts to use the new functions, `SccCreateSubProject`and`SccGetParentProjectPath`.  
+ Visual Studio が新しい関数を使用しようとした場合、このレジストリ エントリが存在しないか、dword:00000000 に設定されている、 `SccCreateSubProject`と`SccGetParentProjectPath`します。  
   
- If the registry entry is set to dword:00000001, Visual Studio does not attempt to use these new functions, and the operations of adding to source control work as they did in prior versions of Visual Studio.  
+ レジストリ エントリは、dword:00000001 に設定されている場合は、Visual Studio はこれらの新しい関数を使用しようとはしませんし、ソース管理に追加の操作が Visual Studio の以前のバージョンで同様に動作します。  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+## 参照  
+ [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccCreateSubProject](../extensibility/scccreatesubproject-function.md)   
  [SccGetProjPath](../extensibility/sccgetprojpath-function.md)

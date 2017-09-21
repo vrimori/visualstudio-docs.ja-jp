@@ -1,53 +1,39 @@
 ---
-title: 'Walkthrough: Creating a Code Snippet | Microsoft Docs'
-ms.custom: 
-ms.date: 09/11/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- code snippets, creating
-- code snippets, shortcut
-- code snippets, template
-- code snippets, replacements
-- code snippets, references
-- code snippets, imports
+title: "チュートリアル: コード スニペットを作成する | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "コード スニペット, 作成"
+  - "コード スニペット, インポート"
+  - "コード スニペット, 参照"
+  - "コード スニペット, 置換"
+  - "コード スニペット, ショートカット"
+  - "コード スニペット, テンプレート"
 ms.assetid: 0dcaae11-39cf-4463-9c90-2494321251c2
 caps.latest.revision: 21
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: bf9f2084ffcdce85a2f1bdb2617ae2c39c6d1e44
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 21
 ---
-# <a name="walkthrough-creating-a-code-snippet"></a>Walkthrough: Creating a Code Snippet
-You can create a code snippet with only a few steps. All you need to do is create an XML file, fill in the appropriate elements, and add your code to it. You can also add references and replacement parameters to your code. You can add the snippet to your Visual Studio installation by using the Import button on the Code Snippets Manager (**Tools**, **Code Snippets Manager...**).  
+# チュートリアル: コード スニペットを作成する
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+コード スニペットは、わずかな手順で作成できます。  必要な操作は、XML ファイルを作成し、適切な要素を指定して、コードを追加するだけです。  コードには、参照や置換パラメーターを追加することもできます。  Visual Studio インストールにスニペットを追加するには、コード スニペット マネージャー \(**\[ツール\]、\[コード スニペット マネージャー\]**\) の \[インポート\] を使用します。  
   
-## <a name="snippet-template"></a>Snippet Template  
- The following is the basic snippet template:  
+> [!TIP]
+>  コード スニペットをより簡単に作成する方法の詳細については、CodePlex の Web サイトで、[Snippet Editor](http://go.microsoft.com/fwlink/?LinkId=251033) などのコミュニティ ツールを検索してください。  
   
-```xml  
+## スニペット テンプレート  
+ 基本的なスニペット テンプレートを次に示します。  
+  
+```  
 <?xml version="1.0" encoding="utf-8"?>  
 <CodeSnippets  
     xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
@@ -65,52 +51,52 @@ You can create a code snippet with only a few steps. All you need to do is creat
   
 ```  
   
-### <a name="to-create-a-code-snippet"></a>To Create a Code Snippet  
+### コード スニペットを作成するには  
   
-1.  Create a new XML file in Visual Studio and add the template shown above.  
+1.  Visual Studio で新しい XML ファイルを作成し、上に示したテンプレートを追加します。  
   
-2.  Fill in the title of the snippet, e.g. "Hello World VB", in the Title element.  
+2.  Title 要素に、スニペットのタイトル \(「Hello World VB」など\) を指定します。  
   
-3.  Fill in the language of the snippet in the Languages attribute of the Code element. For this example, use "VB".  
+3.  Code 要素の Languages 属性に、スニペットの言語を指定します。  この例では、"VB" を使用します。  
   
-4.  Add some code in the CDATA section inside the Code element, for example:  
+4.  Code 要素内の CDATA セクションにコードを追加します。次に例を示します。  
   
-    ```xml  
+    ```  
     <Code Language="VB">  
         <![CDATA[Console.WriteLine("Hello, World!")]]>  
     </Code>  
   
     ```  
   
-5.  Save the snippet as VBCodeSnippet.snippet.  
+5.  VBCodeSnippet.snippet としてスニペットを保存します。  
   
-### <a name="to-add-a-code-snippet-to-visual-studio"></a>To Add a Code Snippet to Visual Studio  
+### コード スニペットを Visual Studio に追加するには  
   
-1.  You can add your own snippets to your Visual Studio installation by using the Code Snippets Manager. Open the Code Snippets Manager (**Tools**, **Code Snippets Manager...**).  
+1.  コード スニペット マネージャーを使用すると、独自のスニペットを Visual Studio インストールに追加できます。  コード スニペット マネージャーを開きます \(**\[ツール\]、\[コード スニペット マネージャー\]**\)。  
   
-2.  Click the **Import** button.  
+2.  **\[インポート\]** ボタンをクリックします。  
   
-3.  Go to the location where you saved the code snippet in the previous procedure, select it, and click **Open**.  
+3.  前の手順でコード スニペットを保存した場所に移動し、コード スニペットを選択して、**\[開く\]** をクリックします。  
   
-4.  The **Import Code Snippet** dialog opens, asking you to choose where to add the snippet from the choices in the right pane. One of the choices should be **My Code Snippets**. Select it and click **Finish**, then **OK**.  
+4.  **\[コード スニペットのインポート\]** ダイアログが開き、右ペインの選択肢からスニペットを追加するように求められます。  選択肢の 1 つに **\[マイ コード スニペット\]** があります。  これを選択し、**\[完了\]**、**\[OK\]** の順にクリックします。  
   
-5.  The snippet is copied to the following location:  
+5.  スニペットが次の場所にコピーされます。  
   
-     `%USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual Basic\My Code Snippets`  
+     `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippets`  
   
-6.  Test your snippet by opening a Visual Basic project and opening a code file. In the file click **Insert Snippet** on the context menu, then **My Code Snippets**. You should see a snippet named **My Visual Basic Code Snippet**. Double-click it.  
+6.  Visual Basic プロジェクトを開き、コード ファイルを開くことによって、スニペットをテストします。  ファイル内でコンテキスト メニューの **\[スニペットの挿入\]** をクリックし、**\[マイ コード スニペット\]** をクリックします。  **\[My Visual Basic Code Snippet\]** \(マイ Visual Basic コード スニペット\) という名前のスニペットが表示されます。  これをダブルクリックします。  
   
-7.  You should see `Console.WriteLine("Hello, World!")` inserted in the code.  
+7.  コード内に `Console.WriteLine("Hello, World!")` が挿入されます。  
   
-### <a name="adding-description-and-shortcut-fields"></a>Adding Description and Shortcut Fields  
+### Description フィールドと Shortcut フィールドの追加  
   
-1.  Description fields give more information about your code snippet when viewed in the Code Snippets Manager. The shortcut is a tag that users can type in order to insert your snippet. Edit the snippet you have added by opening the file `%USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet`.  
+1.  Description フィールドは、コード スニペット マネージャーに表示された際に、コード スニペットに関する詳しい情報を提供します。  ショートカットとは、スニペットを挿入するためにユーザーが入力できるタグです。  `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet` ファイルを開くことで、追加したスニペットを編集します。  
   
-2.  Add Author and Description elements to the Header element, and fill them in.  
+2.  Author 要素と Description 要素を Header 要素に追加し、情報を入力します。  
   
-3.  The Header element should look something like this:  
+3.  Header 要素は次のようになります。  
   
-    ```xml  
+    ```  
     <Header>  
         <Title>Hello World VB</Title>  
         <Author>Myself</Author>  
@@ -119,11 +105,11 @@ You can create a code snippet with only a few steps. All you need to do is creat
   
     ```  
   
-4.  Open the Code Snippets Manager and select your code snippet. In the right pane you should see that the Description and Author fields are now populated.  
+4.  コード スニペット マネージャーを開き、コード スニペットを開きます。  右ペインで、Description フィールドと Author フィールドが指定されていることを確認します。  
   
-5.  To add a shortcut, add a Shortcut element alongside the Author and Description element:  
+5.  ショートカットを追加するには、Author 要素および Description 要素と共に Shortcut 要素を追加します。  
   
-    ```xml  
+    ```  
     <Header>  
         <Title>Hello World VB</Title>  
         <Author>Myself</Author>  
@@ -133,19 +119,19 @@ You can create a code snippet with only a few steps. All you need to do is creat
   
     ```  
   
-6.  Save the snippet file again.  
+6.  スニペット ファイルを再度保存します。  
   
-7.  To test the shortcut, open a Visual Basic project and open a code file. Type `hello` in the file and press TAB. The snippet code should be inserted.  
+7.  ショートカットをテストするには、Visual Basic プロジェクトを開き、コード ファイルを開きます。  ファイル内で「`hello`」と入力し、Tab キーを押します。  スニペット コードが挿入されます。  
   
-### <a name="to-add-references-and-imports"></a>To Add References and Imports  
+### 参照とインポートを追加するには  
   
-1.  With Visual Basic snippets you can add a reference to a project by using the References element, and add an Imports declaration by using the Imports element. (Snippets in other languages do not have this feature.) For example, if you change `Console.WriteLine` in the code example to `MessageBox.Show`, you may need to add the System.Windows.Forms.dll assembly to the project.  
+1.  Visual Basic スニペットでは、References 要素を使用してプロジェクトに参照を追加し、Imports 要素を使用して Imports 宣言を追加することができます \(他の言語のスニペットに、この機能はありません\)。たとえば、コード例の `Console.WriteLine` を `MessageBox.Show` に変更する場合、プロジェクトに System.Windows.Forms.dll アセンブリの追加が必要になる場合があります。  
   
-2.  Open your snippet.  
+2.  スニペットを開きます。  
   
-3.  Add the References element under the Snippet element:  
+3.  Snippet 要素の下に References 要素を追加します。  
   
-    ```xml  
+    ```  
     <References>  
         <Reference>  
             <Assembly>System.Windows.Forms.dll</Assembly>  
@@ -154,9 +140,9 @@ You can create a code snippet with only a few steps. All you need to do is creat
   
     ```  
   
-4.  Add the Imports element under the Snippet element:  
+4.  Snippet 要素の下に Imports 要素を追加します。  
   
-    ```xml  
+    ```  
     <Imports>  
         <Import>  
            <Namespace>System.Windows.Forms</Namespace>  
@@ -165,34 +151,34 @@ You can create a code snippet with only a few steps. All you need to do is creat
   
     ```  
   
-5.  Change the CDATA section to the following:  
+5.  CDATA セクションを次のように変更します。  
   
-    ```xml  
+    ```  
     <![CDATA[MessageBox.Show("Hello, World!")]]>  
     ```  
   
-6.  Save the snippet.  
+6.  スニペットを保存します。  
   
-7.  Open a Visual Basic project and add the snippet.  
+7.  Visual Basic プロジェクトを開き、スニペットを追加します。  
   
-8.  You will see an Imports statement at the top of the code file:  
+8.  コード ファイルの先頭で、次の Imports ステートメントを確認できます。  
   
-    ```vb  
+    ```  
     Imports System.Windows.Forms  
   
     ```  
   
-9. Look at the project's properties. The References tab includes a reference to System.Windows.Forms.dll.  
+9. プロジェクトのプロパティを確認します。  References タブでには、System.Windows.Forms.dll への参照が含まれています。  
   
-### <a name="adding-replacements"></a>Adding Replacements  
+### 置換の追加  
   
-1.  You may want parts of your code snippets to be replaced by the user, for example if you add a variable and want the user to replace the variable with one in the current project. You can provide two types of replacements: literals and objects. Literals are strings of some type (string literals, variable names, or string representations of numeric values). Objects are instances of some type other than a string. In this procedure you will declare a literal replacement and an object replacement, and change the code to reference these replacements.  
+1.  コード スニペットの一部をユーザーが置換できるように指定することができます。たとえば、変数を追加しておき、ユーザーが現在のプロジェクト内の変数に置換できるようにする場合などです。  使用できる置換には、リテラル置換とオブジェクト置換の 2 種類があります。  リテラルは、いずれかの種類 \(文字列リテラル、変数名、数値の文字列形式\) の文字列です。  オブジェクトは、文字列以外の型のインスタンスです。  この手順では、リテラル置換およびオブジェクト置換を宣言し、これらの置換が参照されるようにコードを変更します。  
   
-2.  Open your snippet.  
+2.  スニペットを開きます。  
   
-3.  This example uses a SQL connection string, so you need to change the Imports and References elements to add the appropriate references:  
+3.  この例では、SQL 接続文字列を使用するため、Imports 要素と References 要素を変更して、適切な参照を追加する必要があります。  
   
-    ```xml  
+    ```  
     <References>  
         <Reference>  
             <Assembly>System.Data.dll</Assembly>  
@@ -212,9 +198,9 @@ You can create a code snippet with only a few steps. All you need to do is creat
   
     ```  
   
-4.  To declare a literal replacement for the SQL connection string, add a Declarations element under the Snippet element, and in it add a Literal element with subelements for the ID, the tooltip, and the default value for the replacement:  
+4.  SQL 接続文字列用のリテラル置換を宣言するには、Declarations 要素を Snippet 要素の下に追加し、その中に Literal 要素を追加します。さらにその中に、置換する ID、ツールヒント、および既定値を指定するためのサブ要素を追加します。  
   
-    ```xml  
+    ```  
     <Declarations>  
         <Literal>  
             <ID>SqlConnString</ID>  
@@ -225,9 +211,9 @@ You can create a code snippet with only a few steps. All you need to do is creat
   
     ```  
   
-5.  To declare an object replacement for the SQL connection, add an Object element inside the Declarations element, and add sub-elements for the ID, the type of the object, the tooltip, and the default value. The resulting Declarations element should look like this:  
+5.  SQL 接続用のオブジェクト置換を宣言するには、Object 要素を Declarations 要素内に追加し、ID、オブジェクトの型、ツールヒント、および既定値を指定するためのサブ要素を追加します。  その結果、Declarations 要素は次のようになります。  
   
-    ```xml  
+    ```  
     <Declarations>  
         <Literal>  
             <ID>SqlConnString</ID>  
@@ -243,9 +229,9 @@ You can create a code snippet with only a few steps. All you need to do is creat
     </Declarations>  
     ```  
   
-6.  In the code section, you reference the replacements with surrounding $ signs, for example `$replacement$`:  
+6.  Code セクションでは、置換項目を $ 記号で囲んで参照します \(例: `$replacement$`\)。  
   
-    ```xml  
+    ```  
     <Code Language="VB" Kind="method body">  
         <![CDATA[Dim daCustomers As SqlDataAdapter  
             Dim selectCommand As SqlCommand  
@@ -257,13 +243,13 @@ You can create a code snippet with only a few steps. All you need to do is creat
     </Code>  
     ```  
   
-7.  Save the snippet.  
+7.  スニペットを保存します。  
   
-8.  Open a Visual Basic project and add the snippet.  
+8.  Visual Basic プロジェクトを開き、スニペットを追加します。  
   
-9. The code should look like the following, where the replacements `SQL connection string` and `dcConnection` are highlighted in light orange. Press TAB to navigate from one to the other.  
+9. コードは次のようになります。置換項目 `SQL connection string` と `dcConnection` は明るいオレンジ色で強調表示されます。  項目間を移動するには、Tab キーを押します。  
   
-    ```vb  
+    ```  
     Dim daCustomers As SqlDataAdapter  
     Dim selectCommand As SqlCommand  
   
@@ -274,5 +260,5 @@ You can create a code snippet with only a few steps. All you need to do is creat
   
     ```  
   
-## <a name="see-also"></a>See Also  
- [Code Snippets Schema Reference](../ide/code-snippets-schema-reference.md)
+## 参照  
+ [コード スニペット スキーマ リファレンス](../ide/code-snippets-schema-reference.md)

@@ -1,77 +1,60 @@
 ---
-title: IDebugSymbolProvider::GetClassTypeByName | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugSymbolProvider::GetClassTypeByName
-helpviewer_keywords:
-- IDebugSymbolProvider::GetClassTypeByName method
+title: "IDebugSymbolProvider::GetClassTypeByName | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugSymbolProvider::GetClassTypeByName"
+helpviewer_keywords: 
+  - "IDebugSymbolProvider::GetClassTypeByName メソッド"
 ms.assetid: 2c748909-51dc-49b7-b193-19f96fca1138
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 38dcf07f2d41938f4e756f909006dffb90228ae5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugsymbolprovidergetclasstypebyname"></a>IDebugSymbolProvider::GetClassTypeByName
-This method gets the class field type representing a fully qualified class name.  
+# IDebugSymbolProvider::GetClassTypeByName
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このメソッドは完全修飾クラス名を表すクラスのフィールドの種類を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetClassTypeByName(   
-   LPCOLESTR          pszClassName,  
-   NAME_MATCH         nameMatch,  
-   IDebugClassField** ppField  
+```cpp#  
+HRESULT GetClassTypeByName(   
+   LPCOLESTR          pszClassName,  
+   NAME_MATCH         nameMatch,  
+   IDebugClassField** ppField  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetClassTypeByName(  
-   string               pszClassName,   
-   NAME_MATCH           nameMatch,   
-   out IDebugClassField ppField  
+   string               pszClassName,   
+   NAME_MATCH           nameMatch,   
+   out IDebugClassField ppField  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pszClassName`  
- [in] The class name.  
+ \[入力\] クラス名。  
   
  `nameMatch`  
- [in] Selects the type of match, for example, case-sensitive. A value from the [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) enumeration.  
+ \[出力\] 一致など大文字小文字の区別の種類を選択します。  [NAME\_MATCH](../../../extensibility/debugger/reference/name-match.md) 列挙体の値。  
   
  `ppField`  
- [out] Returns the class type as represented by the [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) interface.  
+ \[入力\] [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) のインターフェイスで表されるようにクラス型を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
- [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md)   
+ [NAME\_MATCH](../../../extensibility/debugger/reference/name-match.md)   
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

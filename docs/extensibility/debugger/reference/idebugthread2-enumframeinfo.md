@@ -1,81 +1,64 @@
 ---
-title: IDebugThread2::EnumFrameInfo | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugThread2::EnumFrameInfo
-helpviewer_keywords:
-- IDebugThread2::EnumFrameInfo
+title: "IDebugThread2::EnumFrameInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugThread2::EnumFrameInfo"
+helpviewer_keywords: 
+  - "IDebugThread2::EnumFrameInfo"
 ms.assetid: 17914a71-10ea-4b6f-8982-e364f87dca53
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 61433b3a56c0108bcd01da578ee31c06b7d25d8d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugthread2enumframeinfo"></a>IDebugThread2::EnumFrameInfo
-Retrieves a list of the stack frames for this thread.  
+# IDebugThread2::EnumFrameInfo
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このスレッドのスタック フレームの一覧を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT EnumFrameInfo (   
-   FRAMEINFO_FLAGS        dwFieldSpec,  
-   UINT                   nRadix,  
-   IEnumDebugFrameInfo2** ppEnum  
+```cpp#  
+HRESULT EnumFrameInfo (   
+   FRAMEINFO_FLAGS        dwFieldSpec,  
+   UINT                   nRadix,  
+   IEnumDebugFrameInfo2** ppEnum  
 );  
 ```  
   
-```csharp  
-int EnumFrameInfo (   
-   enum_FRAMEINFO_FLAGS     dwFieldSpec,  
-   uint                     nRadix,  
-   out IEnumDebugFrameInfo2 ppEnum  
+```c#  
+int EnumFrameInfo (   
+   enum_FRAMEINFO_FLAGS     dwFieldSpec,  
+   uint                     nRadix,  
+   out IEnumDebugFrameInfo2 ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `dwFieldSpec`  
- [in] A combination of flags from the [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) enumeration that specifies which fields of the [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) structures are to be filled out. Specify the `FIF_FUNCNAME_FORMAT` flag to format the function name into a single string.  
+ \[入力\] [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) の構造体のフィールドが設定方法を指定する [FRAMEINFO\_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) の列挙体のフラグの組み合わせ。  一つの文字列に関数名を書式設定する `FIF_FUNCNAME_FORMAT` フラグを指定します。  
   
  `nRadix`  
- [in] Radix used in formatting numerical information in the enumerator.  
+ \[入力\] 列挙子の数値情報の書式設定に使用された基数。  
   
  `ppEnum`  
- [out] Returns an [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) object that contains a list of [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) structures describing the stack frame.  
+ \[出力\] スタック フレームを示す [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) の構造体のリストを含む [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) のオブジェクトを返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- The thread's frames are enumerated in order, with the current frame enumerated first and the oldest frame enumerated last.  
+## 解説  
+ スレッドのフレームは最初に列挙されている現在のフレームと最後に列挙されて最も古いフレームの順序で列挙されます。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)   
+ [FRAMEINFO\_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)   
  [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)   
  [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)

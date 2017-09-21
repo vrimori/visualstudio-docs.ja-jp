@@ -1,133 +1,113 @@
 ---
-title: Managing Project Loading in a Solution | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- solutions, managing project loading
+title: "ソリューションにプロジェクトの読み込みを管理します。 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "ソリューション、プロジェクトの読み込みを管理します。"
 ms.assetid: 097c89d0-f76a-4aaf-ada9-9a778bd179a0
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c670d1026bf4f4d60322f90856ed0e8aa1a36f4b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="managing-project-loading-in-a-solution"></a>Managing Project Loading in a Solution
-Visual Studio solutions can contain a large number of projects. The default Visual Studio behavior is to load all the projects in a solution at the time the solution is opened, and not to allow the user to access any of the projects until all of them have finished loading. When the process of project loading will last more than two minutes, a progress bar is displayed showing the number of projects loaded and the total number of projects. The user can unload projects while working in a solution with multiple projects, but this procedure has some disadvantages: the unloaded projects are not built as part of a Rebuild Solution command, and IntelliSense descriptions of types and members of closed projects are not displayed.  
+# ソリューションにプロジェクトの読み込みを管理します。
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+Visual Studio ソリューションには、多数のプロジェクトを含めることができます。 Visual Studio の既定の動作は、ソリューションを開いた時に、ソリューション内のすべてのプロジェクトを読み込むと、ユーザーはそれらのすべての読み込みが終了するまで、プロジェクトのいずれかのアクセスを許可しないです。 プロジェクトの読み込みプロセスは、2 分以内に最後は、読み込まれているプロジェクトの数とプロジェクトの合計数を示す進行状況バーが表示されます。 ユーザーは複数のプロジェクトをソリューションで作業中にプロジェクトをアンロードすることができますが、この手順ではいくつかのデメリット: アンロードされたプロジェクトがソリューションのリビルド コマンドの一部としてビルドされていないと、IntelliSense 型の記述と閉じたプロジェクトのメンバーは表示されません。  
   
- Developers can reduce solution load times and manage project loading behavior by creating a solution load manager. The solution load manager can set different project loading priorities for specific projects or project types, make sure that projects are loaded before starting a background build, delay background loading until other background tasks are complete, and perform other project load management tasks.  
+ 開発者は、ソリューションの読み込み時間を削減し、プロジェクトがソリューションの読み込みのマネージャーを作成することで読み込み動作を管理できます。 ソリューション負荷マネージャーは、特定のプロジェクトまたはプロジェクトの種類の優先順位を読み込む別のプロジェクトを設定、バック グラウンドのビルドを開始する前に、プロジェクトが読み込まれているように、バック グラウンド読み込みの他のバック グラウンド タスクが完了するまでの遅延、および他のプロジェクトの読み込みの管理タスクを実行ことができます。  
   
-## <a name="project-loading-priorities"></a>Project loading priorities  
- Visual Studio defines four different project loading priorities:  
+## プロジェクトの優先順位の読み込み  
+ Visual Studio には、次の 4 つの別のプロジェクトの読み込みの優先順位が定義されています。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop._VSProjectLoadPriority> (the default): when a solution is opened, projects are loaded asynchronously. If this priority is set on an unloaded project after the solution is already open, the project will be loaded at the next idle point.  
+-   <xref:Microsoft.VisualStudio.Shell.Interop._VSProjectLoadPriority> \(既定値\): プロジェクトが非同期的に読み込まれて、ソリューションを開いたときです。 この優先順位は、ソリューションが開いている既にアンロードされたプロジェクトに設定されている場合は、次のアイドル ポイントで、プロジェクトが読み込まれます。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop._VSProjectLoadPriority>: when a solution is opened, projects are loaded in the background, allowing the user to access the projects as they are loaded without having to wait until all the projects are loaded.  
+-   <xref:Microsoft.VisualStudio.Shell.Interop._VSProjectLoadPriority>: ユーザーがすべてのプロジェクトが読み込まれるまで待機することがなく読み込まれると、プロジェクトにアクセスを許可するバック グラウンドでのプロジェクトが読み込まれて、ソリューションを開いたときです。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop._VSProjectLoadPriority>: projects are loaded when they are accessed. A project is accessed when the user expands the project node in the Solution Explorer, when a file belonging to the project is opened when the solution opens because it is in the open document list (persisted in the solution's user options file), or when another project that is being loaded has a dependency on the project. This type of project is not automatically loaded before starting a build process; the Solution Load Manager is responsible for ensuring that all the necessary projects are loaded. These projects should also be loaded before starting a Find/Replace in Files across the entire solution.  
+-   <xref:Microsoft.VisualStudio.Shell.Interop._VSProjectLoadPriority>: アクセス時にプロジェクトが読み込まれています。 ソリューションを開く \(ソリューションのユーザー オプション ファイルに保持されます\)、開いているドキュメントの一覧に表示されているため、プロジェクトに属するファイルを開いたときに、ユーザーがソリューション エクスプ ローラーでプロジェクト ノードを展開時に、プロジェクトがアクセスまたは別のプロジェクトに当てはまるは、プロジェクトに依存している読み込まれています。 ビルド プロセスを開始する前に、この種類のプロジェクトが自動的に読み込まれないソリューション負荷マネージャーは、必要なすべてのプロジェクトが読み込まれていることを防ぐ責任です。 これらのプロジェクトは、ソリューション全体のファイルの検索と置換を開始する前に読み込む必要があります。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop._VSProjectLoadPriority>: projects are not to be loaded unless the user explicitly requests it. This is the case when projects are explicitly unloaded.  
+-   <xref:Microsoft.VisualStudio.Shell.Interop._VSProjectLoadPriority>: プロジェクトは、ユーザーが明示的に要求しない限り読み込まれます。 これは、プロジェクトは、明示的に読み込まれたときに、大文字と小文字です。  
   
-## <a name="creating-a-solution-load-manager"></a>Creating a solution load manager  
- Developers can create a solution load manager by implementing <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager> and advising Visual Studio that the solution load manager is active.  
+## ソリューションの読み込みのマネージャーを作成します。  
+ 開発者マネージャーを作成できるソリューションの読み込みを実装して <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager> ソリューション負荷マネージャーがアクティブである Visual Studio をようアドバイスします。  
   
-#### <a name="activating-a-solution-load-manager"></a>Activating a solution load manager  
- Visual Studio allows only one solution load manager at a given time, so you must advise Visual Studio when you want to activate your solution load manager. If a second solution load manager is activated later on, your solution load manager will be disconnected.  
+#### ソリューションの負荷マネージャーのアクティブ化  
+ Visual Studio では、1 つだけのソリューション負荷マネージャー、特定の時点でためソリューションの読み込みを有効にする場合は、Visual Studio を通知する必要がありますマネージャー。 2 つ目のソリューション負荷マネージャーを後でアクティブな場合は、ソリューションの負荷マネージャーが切断されます。  
   
- You must get the <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution> service  and set the <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> property:  
+ 取得する必要があります、 <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution> サービスを提供し、設定、 <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> プロパティ。  
   
-```csharp  
-IVsSolution pSolution = GetService(typeof(SVsSolution)) as IVsSolution;  
-object objLoadMgr = this;   //the class that implements IVsSolutionManager  
-pSolution.SetProperty((int)__VSPROPID4.VSPROPID_ActiveSolutionLoadManager, objLoadMgr);  
+```c#  
+IVsSolution pSolution = GetService(typeof(SVsSolution)) as IVsSolution; object objLoadMgr = this;   //the class that implements IVsSolutionManager pSolution.SetProperty((int)__VSPROPID4.VSPROPID_ActiveSolutionLoadManager, objLoadMgr);  
 ```  
   
-#### <a name="implementing-ivssolutionloadmanager"></a>Implementing IVsSolutionLoadManager  
- The <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager.OnBeforeOpenProject%2A> method is called during the process of opening the solution. To implement this method, you use the <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManagerSupport> service to set the load priority for the type of project you wish to manage. For example, the following code sets C# project types to load in the background:  
+#### IVsSolutionLoadManager を実装します。  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager.OnBeforeOpenProject%2A> ソリューションを開くの処理中に呼び出されます。 このメソッドを実装するには、使用する、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManagerSupport> サービスに管理するプロジェクトの種類の読み込みの優先順位を設定します。 たとえば、次のコードは、c\# プロジェクトの種類をバック グラウンドで読み込むを設定します。  
   
-```csharp  
-Guid guidCSProjectType = new Guid("{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}");  
-pSLMgrSupport.SetProjectLoadPriority(guidProjectID, (uint)_VSProjectLoadPriority.PLP_BackgroundLoad);  
+```c#  
+Guid guidCSProjectType = new Guid("{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}"); pSLMgrSupport.SetProjectLoadPriority(guidProjectID, (uint)_VSProjectLoadPriority.PLP_BackgroundLoad);  
 ```  
   
- The <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager.OnDisconnect%2A> method is called either when Visual Studio is being shut down or when a different package has taken over as the active solution load manager by calling <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.SetProperty%2A> with the <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> property.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager.OnDisconnect%2A> Visual Studio がシャット ダウンされるとき、または別のパッケージに引き継がれたアクティブなソリューション負荷マネージャーとして呼び出すことによってときに、メソッドが呼び出されます <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.SetProperty%2A> で、 <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> プロパティです。  
   
-#### <a name="strategies-for-different-kinds-of-solution-load-manager"></a>Strategies for different kinds of solution load manager  
- You can implement solution load managers in different ways, depending on the types of solutions they are meant to manage.  
+#### さまざまな種類のソリューションのための戦略がマネージャーを読み込む  
+ 管理するものであるソリューションの種類に応じて、さまざまな方法では、ソリューションの負荷のマネージャーを実装できます。  
   
- If the solution load manager is meant to manage solution loading in general, it can be implemented as part of a VSPackage. The package should be set to autoload by adding the <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> on the VSPackage with a value of <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionOpening_guid>. The solution load manager can then be activated in the <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> method.  
-  
-> [!NOTE]
->  For more information about autoloading packages, see [Loading VSPackages](../extensibility/loading-vspackages.md).  
-  
- Since Visual Studio recognizes only the last solution load manager to be activated, general solution load managers should always detect whether there is an existing load manager before activating themselves. If calling GetProperty() on the solution service for <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> returns `null`, there is no active solution load manager. If it does not return null, check whether the object is the same as your solution load manager.  
-  
- If the solution load manager is meant to manage only a few types of solution, the VSPackage can subscribe to solution load events (by calling <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A>), and use the event handler for <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A> to activate the solution load manager.  
-  
- If the solution load manager is meant to manage only specific solutions, the activation information can be persisted as part of the solution file. To do this, call <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A> for the pre-solution section.  
-  
- Specific solution load managers should deactivate themselves in the <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents.OnAfterCloseSolution%2A> event handler, in order not to conflict with other solution load managers.  
-  
- If you need a solution load manager only to persist global project load priorities (for example, properties set on an Options page), you can activate the solution load manager in the <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> event handler, persist the setting in the solution properties, then deactivate the solution load manager.  
-  
-## <a name="handling-solution-load-events"></a>Handling solution load events  
- To subscribe to solution load events, call <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A> when you activate your solution load manager. If you implement <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents>, you can respond to events that relate to different project loading priorities.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A>: This is fired before a solution is opened. You can use it to change the project loading priority for the projects in the solution.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeBackgroundSolutionLoadBegins%2A>: This is fired after the solution is completely loaded, but before background project loading begins again. For example, a user might have accessed a project whose load priority is LoadIfNeeded, or the solution load manager might have changed a project load priority to BackgroundLoad, which would start a background load of that project.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterBackgroundSolutionLoadComplete%2A>: This is fired after a solution is initially fully loaded, whether or not there is a solution load manager. It is also fired after background load or demand load whenever the solution becomes fully loaded. At the same time, <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExistsAndFullyLoaded_guid> is reactivated.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnQueryBackgroundLoadProjectBatch%2A>: This is fired before the loading of a project (or projects). To ensure that other background processes are completed before the projects are loaded, set `pfShouldDelayLoadToNextIdle` to **true**.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeLoadProjectBatch%2A>: This is fired when a batch of projects is about to be loaded. If `fIsBackgroundIdleBatch` is true, the projects are to be loaded in the background; if `fIsBackgroundIdleBatch` is false, the projects are to be loaded synchronously as a result of a user request, for example if the user expands a pending project in Solution Explorer. You can implement this to do expensive work that otherwise would need to be done in <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A>.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterLoadProjectBatch%2A>: This is fired after a batch of projects has been loaded.  
-  
-## <a name="detecting-and-managing-solution-and-project-loading"></a>Detecting and managing solution and project loading  
- In order to detect the load state of projects and solutions, call <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProperty%2A> with the following values:  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` returns `true` if the solution and all its projects are loaded, otherwise `false`.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` returns `true` if a batch of projects are currently being loaded in the background, otherwise `false`.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` returns `true` if a batch of projects are currently being loaded synchronously as a result of a user command or other explicit load, otherwise `false`.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2>: `var` returns `true` if the solution is currently being closed, otherwise `false`.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID>: `var` returns `true` if a solution is currently being opened, otherwise `false`.  
-  
- You can also ensure that projects and solutions are loaded (no matter what the project load priorities are) by calling one of the following methods:  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureSolutionIsLoaded%2A>: calling this method forces the projects in a solution to load before the method returns.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectIsLoaded%2A>: calling this method forces the projects in `guidProject` to load before the method returns.  
-  
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectsAreLoaded%2A>: calling this method forces the project in `guidProjectID` to load before the method returns.  
+ ソリューション負荷マネージャーは、一般に読み込みソリューションを管理するものでは場合、は、VSPackage の一部として実装することができます。 パッケージは、追加することで autoload に設定する必要があります、 <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> 、値は VSPackage で <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionOpening_guid>します。 ソリューションの負荷の manager をアクティブ化できますし、 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> メソッドです。  
   
 > [!NOTE]
->  . By default only the projects that have the demand load and background load priorities are loaded, but if the <xref:Microsoft.VisualStudio.Shell.Interop.__VSBSLFLAGS> flag is passed in to the method, all projects will be loaded except for the ones that are marked to load explicitly.
+>  自動読み込みパッケージの詳細については、次を参照してください。 [Vspackage を読み込む](../extensibility/loading-vspackages.md)します。  
+  
+ Visual Studio では、前回ソリューション ロード マネージャーのみアクティブにするのには認識しているため汎用的なソリューション ロード マネージャー必要があります自体を起動する前に既存の負荷マネージャーがあるかどうか検出があります。 GetProperty\(\) サービスを呼び出すソリューションの場合 <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> 返します `null`, 、負荷マネージャーのアクティブなソリューションはありません。 Null は返しません場合、は、オブジェクトは、ソリューションの負荷マネージャーと同じかどうかを確認します。  
+  
+ ソリューション負荷マネージャーは、ソリューションのいくつかの種類のみを管理するものでは、VSPackage を購読ソリューションの読み込みイベント \(を呼び出して <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A>\)、対応するイベント ハンドラーを使用して <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A> ソリューション負荷マネージャーをアクティブ化します。  
+  
+ ソリューションの負荷マネージャーは、特定のソリューションを管理するものでは場合、は、ソリューション ファイルの一部としてアクティブ化の情報を永続化できます。 これを行うには、呼び出す <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A> ソリューションの前のセクションのです。  
+  
+ 具体的な解決策ロード マネージャーは自体を非アクティブ化する必要があります、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents.OnAfterCloseSolution%2A> イベント ハンドラー、他のソリューションの読み込みマネージャーと競合しないようにします。  
+  
+ グローバル プロジェクト読み込みの優先順位 \(プロパティのオプション ページの設定など\) を保持するためのソリューションの読み込みマネージャーは、アクティブ化することのみソリューション負荷マネージャーが必要な場合、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> イベント ハンドラーは、ソリューションのプロパティの設定を保持し、ソリューションの負荷マネージャーを非アクティブ化します。  
+  
+## ソリューションの読み込みイベントの処理  
+ ソリューションの読み込みイベントをサブスクライブする <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A> ソリューション ロード上司アクティブにするとします。 実装する場合 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents>, 、優先順位を読み込み、別のプロジェクトに関連するイベントに応答できます。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A>: これは、ソリューションが開かれる前に発生します。 ソリューション内のプロジェクトの優先順位を読み込み、プロジェクトを変更するのにには、それを使用できます。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeBackgroundSolutionLoadBegins%2A>: これは、解決するには完全に読み込まれるが、バック グラウンドの前にプロジェクトの読み込みを再開した後に発生します。 たとえば、ユーザーの読み込みの優先順位は LoadIfNeeded、プロジェクトがアクセスした可能性がありますか、ソリューション負荷マネージャーは、BackgroundLoad で、そのプロジェクトのバック グラウンド読み込みを開始するようにプロジェクトの読み込みの優先順位変更可能性がありますされました。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterBackgroundSolutionLoadComplete%2A>: このイベントが発生するソリューションは最初に完全に読み込まれるとソリューション負荷マネージャーがあるかどうか。 それは、ソリューションが完全に読み込まれるときに、バック グラウンド読み込みまたは要求が読み込まれた後にも発生します。 同時に <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExistsAndFullyLoaded_guid> が再アクティブ化します。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnQueryBackgroundLoadProjectBatch%2A>: これは、プロジェクト \(プロジェクト\) の読み込み前に発生します。 プロジェクトが読み込まれる前に、その他のバック グラウンド プロセスが完了したことを確認するには設定 `pfShouldDelayLoadToNextIdle` に **true**します。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeLoadProjectBatch%2A>: これは、プロジェクトのバッチが読み込まれるときに発生します。 場合 `fIsBackgroundIdleBatch` が true の場合、プロジェクトが読み込まれるバック グランドで場合 `fIsBackgroundIdleBatch` が false の場合、プロジェクトでは、ユーザーの要求の結果として同期的に読み込まれたなどのあるかどうか、ユーザーがソリューション エクスプ ローラーで保留中のプロジェクトを展開します。 これをそれ以外の場合は行う必要がある高価な作業を実装する <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterOpenProject%2A>です。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterLoadProjectBatch%2A>: これは、プロジェクトのバッチが読み込まれた後に発生します。  
+  
+## 検出して、ソリューションとプロジェクトの読み込みを管理します。  
+ プロジェクトおよびソリューションの読み込み状態を検出するために呼び出す <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProperty%2A> に次の値。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` 返します `true` ソリューションとそのすべてのプロジェクトが読み込まれている場合、それ以外の場合 `false`します。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` 返します `true` かどうかのプロジェクトのバッチ中に現在読み込まれて、バック グラウンドでは、それ以外の場合 `false`します。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` 返します `true` かどうかプロジェクトのバッチが現在読み込み中に同期的にユーザー コマンドまたはその他の明示的な読み込みの結果としてそれ以外の場合 `false`します。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2>: `var` 返します `true` 場合は、ソリューションが現在停止されて、それ以外の場合 `false`します。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID>: `var` 返します `true` ソリューションは、現在されて開かれている場合、それ以外の場合 `false`します。  
+  
+ また、\(プロジェクトの読み込みの優先度とは\) に関係なく、プロジェクトおよびソリューションが読み込まれているを呼び出して次のいずれかの。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureSolutionIsLoaded%2A>: このメソッドを呼び出して強制的に、メソッドが戻る前に、読み込むをソリューション内のプロジェクトです。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectIsLoaded%2A>: 強制的にプロジェクトにこのメソッドを呼び出す `guidProject` メソッドが戻る前に読み込めません。  
+  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectsAreLoaded%2A>: このメソッドを呼び出すことで、プロジェクトを強制的 `guidProjectID` メソッドが戻る前に読み込めません。  
+  
+> [!NOTE]
+>  . 既定では、デマンドが指定されているプロジェクトだけを読み込んで場合は、バック グラウンド読み込みの優先順位が読み込まれる、 <xref:Microsoft.VisualStudio.Shell.Interop.__VSBSLFLAGS> フラグがメソッドに渡されたを明示的に読み込むとマークされているものを除くすべてのプロジェクトが読み込まれます。

@@ -1,106 +1,89 @@
 ---
-title: IDebugExpressionEvaluator3::Parse2 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugExpressionEvaluator3::Parse2
+title: "IDebugExpressionEvaluator3::Parse2 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugExpressionEvaluator3::Parse2"
 ms.assetid: 78099628-d600-4f76-b7c8-ee07c864af1e
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5dec9c5ee5e58a7e9c4d4264a93597794c5beedc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugexpressionevaluator3parse2"></a>IDebugExpressionEvaluator3::Parse2
-Converts an expression string to a parsed expression given the symbol provider and the address of the evaluating frame.  
+# IDebugExpressionEvaluator3::Parse2
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+評価のフレームのシンボル プロバイダーと住所を持つ解析された式の式は文字列をに変換します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT Parse2 (  
-   LPCOLESTR                upstrExpression,  
-   PARSEFLAGS               dwFlags,  
-   UINT                     nRadix,  
-   IDebugSymbolProvider*    pSymbolProvider,  
-   IDebugAddress*           pAddress,  
-   BSTR*                    pbstrError,  
-   UINT*                    pichError,  
-   IDebugParsedExpression** ppParsedExpression  
+   LPCOLESTR                upstrExpression,  
+   PARSEFLAGS               dwFlags,  
+   UINT                     nRadix,  
+   IDebugSymbolProvider*    pSymbolProvider,  
+   IDebugAddress*           pAddress,  
+   BSTR*                    pbstrError,  
+   UINT*                    pichError,  
+   IDebugParsedExpression** ppParsedExpression  
 );  
 ```  
   
-```csharp  
+```c#  
 HRESULT Parse2 (  
-   string                     upstrExpression,  
-   enum_PARSEFLAGS            dwFlags,  
-   uint                       nRadix,  
-   IDebugSymbolProvider       pSymbolProvider,  
-   IDebugAddress              pAddress,  
-   out string                 pbstrError,  
-   out uint                   pichError,  
-   out IDebugParsedExpression ppParsedExpression  
+   string                     upstrExpression,  
+   enum_PARSEFLAGS            dwFlags,  
+   uint                       nRadix,  
+   IDebugSymbolProvider       pSymbolProvider,  
+   IDebugAddress              pAddress,  
+   out string                 pbstrError,  
+   out uint                   pichError,  
+   out IDebugParsedExpression ppParsedExpression  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `upstrExpression`  
- [in] The expression string to be parsed.  
+ \[入力\] 解析する文字列式。  
   
  `dwFlags`  
- [in] A collection of [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) constants that determine how the expression is to be parsed.  
+ \[入力\] 式を解析する方法を決定 [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) の定数のコレクション。  
   
  `nRadix`  
- [in] Radix to be used to interpret any numerical information.  
+ \[入力\] 数値情報を解釈するために使用する基数。  
   
  `pSymbolProvider`  
- [in] Interface of the symbol provider.  
+ \[入力\] シンボルのプロバイダー インターフェイス。  
   
  `pAddress`  
- [in] Address of the evaluating frame.  
+ \[入力\] 評価のフレームのアドレス。  
   
  `pbstrError`  
- [out] Returns the error as human-readable text.  
+ \[入力\] 人間が判読できるテキストとしてエラーを返します。  
   
  `pichError`  
- [out] Returns the character position of the start of the error in the expression string.  
+ \[入力\] エラーの文字列式の文字位置を返します。  
   
  `ppParsedExpression`  
- [out] Returns the parsed expression in an [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) object.  
+ \[入力\] [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) のオブジェクトの解析された式を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- This method produces a parsed expression, not an actual value. A parsed expression is ready to be evaluated, that is, converted to a value.  
+## 解説  
+ このメソッドは解析された式の値ではなくを生成します。  解析された式を計算する準備が整いました。つまり値に変換します。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CEE** object that exposes the [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) interface.  
+## 使用例  
+ 次の例 [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) インターフェイスを公開する **CEE の**  オブジェクトに対してこのメソッドを使用する方法を示します。  
   
-```cpp  
+```cpp#  
 HRESULT CEE::Parse2 ( LPCOLESTR in_szExprText,  
   PARSEFLAGS in_FLAGS,  
   UINT in_RADIX,  
@@ -152,5 +135,5 @@ HRESULT CEE::Parse2 ( LPCOLESTR in_szExprText,
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md)

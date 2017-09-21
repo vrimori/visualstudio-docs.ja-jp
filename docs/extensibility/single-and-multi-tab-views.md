@@ -1,81 +1,64 @@
 ---
-title: Single and Multi-tab Views | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- editors [Visual Studio SDK], custom - single and multi-tab views
+title: "単一および複数のタブ ビュー | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "エディター [Visual Studio SDK] カスタム - 単一および複数のタブ ビュー"
 ms.assetid: e3611704-349f-4323-b03c-f2b0a445d781
 caps.latest.revision: 22
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 94b10507be59b2ead785e8b03f12c71e33874407
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 22
 ---
-# <a name="single-and-multi-tab-views"></a>Single and Multi-tab Views
-An editor can create different types of views. One example is a code editor window, another is a forms designer.  
+# 単一および複数のタブ ビュー
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+エディターはビューの作成できます。  1 番目の例ではコード エディター ウィンドウ別のフォームです。  
   
- A multi-tabbed view is a view that has multiple tabs. For example, the HTML editor has two tabs at the bottom: **Design** and **Source**, each a logical view. The design view displays a rendered web page, while the other displays the HTML that comprises the web page.  
+ 複数のタブにフォーカスを移動したビューは複数のタブがあるビューです。  たとえばHTML エディターに下に 2 個のタブがあります : 各  **デザイン**  と  **ソース**  論理ビュー。  デザイン ビューではは Web ページを構成する HTML が表示されますがレンダリングされる Web ページが表示されます。  
   
-## <a name="accessing-physical-views"></a>Accessing Physical Views  
- Physical views host document view objects, each representing a view of data in the buffer, such as code or a form. Accordingly, each document view object has a physical view (identified by something known as a physical view string), and generally a single logical view.  
+## 物理ビューのアクセス  
+ 物理ホスト ビューのドキュメントのビュー オブジェクトコードやフォームのようなバッファーのデータのビューを表すされます。  したがって各ドキュメントのビュー オブジェクトに物理ビュー \(物理ビューの文字列と呼ばれるものによって識別される\)および共通に一つの論理ビューがあります。  
   
- In some cases, though, a physical view can have two or more logical views. Some examples are an editor that has a split window with side-by-side views, or a forms designer that has a GUI/design view and a code-behind-the-form view.  
+ 場合によっては物理ビューは複数の論理ビューを持つことができますが。  これには side\-by\-side の分割ウィンドウのビューを持つや GUI\/design のビューとコードの分離フォームのビューを持つフォーム エディターです。  
   
- To enable your editor to access all of the available physical views, you must create a unique physical view string for each type of document view object that your editor factory can create. For example, the [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] editor factory can create document view objects for a code window and a forms designer window.  
+ 使用可能な物理ビュー エディターのすべてにアクセスできるようにするためにエディターのファクトリを作成できるドキュメントのビュー オブジェクトの種類に固有の物理ビューの文字列を作成する必要があります。  たとえば[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ファクトリはコード エディター ウィンドウとフォーム デザイナー ウィンドウのドキュメントのビュー オブジェクトを作成できます。  
   
-## <a name="creating-multi-tabbed-views"></a>Creating Multi-Tabbed Views  
- Though a document view object must be associated with a physical view through a unique physical view string, you can place multiple tabs within the physical view to enable the viewing of data in different ways. In this multi-tabbed configuration, all tabs are associated with the same physical view string, but each tab is given a different logical view GUID.  
+## 複数のタブにフォーカスを移動したビューの作成  
+ さまざまな方法でデータの表示を有効にするには物理ビュー内の複数のタブを配置できますがドキュメントのビュー オブジェクトは一意の物理ビューの文字列を使用して物理ビューに関連付けられている必要があります。  この複数のタブにフォーカスを移動した構成ではすべてのタブが同じ物理ビューの文字列が関連付けられますが各タブは個別の論理ビューの GUID を指定します。  
   
- To create a multi-tabbed view for an editor, implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView> interface and then associate a different logical view GUID (<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID>) with each tab you create.  
+ エディターの複数のタブにフォーカスを移動したビューを作成するには<xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView> のインターフェイスを実装し作成した各タブに別の論理ビューの GUID \(<xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID>\) を関連付けます。  
   
- The Visual Studio HTML editor is an example of an editor with a multi-tab view. It has **Design** and **Source** tabs. To enable this, a different logical view is associated with each tab, `LOGICALVIEWID_TextView` for the **Design** tab and `LOGICALVIEWID_Code` for the **Source** tab.  
+ Visual Studio HTML エディターは複数のタブ ビュー エディターの例です。  これに  **デザイン**  と  **ソース**  のタブがあります。  これを実現するには別の論理ビューは ENT0ENT \[入力\] タブの \[タブ `LOGICALVIEWID_TextView`および ENT1ENT \[入力\] タブの `LOGICALVIEWID_Code` に関連付けられます。  
   
- By specifying the appropriate logical view, a VSPackage can access the view that corresponds to a particular purpose, such as designing a form, editing code, or debugging code. However, one of the windows must be identified by the NULL string and this must correspond to the primary logical view (`LOGVIEWID_Primary`).  
+ 適切な論理ビューを指定することでVSPackageフォームコードの編集デバッグ コードの設計図のような特定の目的に対応するビューにアクセスできます。  ただしウィンドウの 1 つが null 文字列で指定されていない場合主要な論理ビュー \(\)`LOGVIEWID_Primary` に対応する必要があります。  
   
- The following table lists the available logical view values and their use.  
+ 次の表は使用可能な論理ビューの値としてを示します。  
   
-|LOGVIEWID GUID|Recommended Use|  
-|--------------------|---------------------|  
-|`LOGVIEWID_Primary`|Default/primary view of the editor factory.<br /><br /> All editor factories must support this value. This view must use the NULL string as its physical view string. At least one logical view must be set to this value.|  
-|`LOGVIEWID_Debugging`|Debugging view. Typically, `LOGVIEWID_Debugging` maps to the same view as `LOGVIEWID_Code`.|  
-|`LOGVIEWID_Code`|View launched by the **View Code** command.|  
-|`LOGVIEWID_Designer`|View launched by the **View Form** command.|  
-|`LOGVIEWID_TextView`|Text editor view. This is the view that returns <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>, from which you can access <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>.|  
-|`LOGVIEWID_UserChooseView`|Prompts the user to choose which view to use.|  
-|`LOGVIEWID_ProjectSpecificEditor`|Passed by the **Open With** dialog box to<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> when the user chooses the "(Project default editor)" entry.|  
+|LOGVIEWID の GUID|推奨される使用法|  
+|----------------------|--------------|  
+|`LOGVIEWID_Primary`|エディターのファクトリの既定値と主要なビューです。<br /><br /> すべてのエディターのファクトリはこの値をサポートする必要があります。  このビューは物理ビューの null 文字列を使用する必要があります。  1 文字以上の論理ビューはこの値を設定する必要があります。|  
+|`LOGVIEWID_Debugging`|ビューをデバッグします。  通常同じへの `LOGVIEWID_Debugging` のマップは `LOGVIEWID_Code` として表示されます。|  
+|`LOGVIEWID_Code`|**コードの表示**  のコマンドで開始されます。|  
+|`LOGVIEWID_Designer`|**\*\*\* View Form \*\*\*** のコマンドで開始されます。|  
+|`LOGVIEWID_TextView`|テキスト エディター ビュー。  これは<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> にアクセスできる <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> を返すビューです。|  
+|`LOGVIEWID_UserChooseView`|ユーザーが選択できるように求められます使用するように表示できます。|  
+|`LOGVIEWID_ProjectSpecificEditor`|\[出力\] ダイアログ ボックスに ENT0ENT を渡す<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> ユーザーが \[プロジェクトの既定値エディター \(\) 」エントリを選択します。|  
   
- Although logical view GUIDs are extensible, you can use only the logical view GUIDs defined in your VSPackage.  
+ 論理ビューの GUID は拡張可能ですがVSPackage で定義された論理ビューの GUID のみ使用できます。  
   
- On shutdown, Visual Studio retains the GUID of the editor factory and the physical view strings associated with the document window so that it can be used to re-open document windows when the solution is re-opened. Only windows that are open when a solution is closed are persisted in the solution (.suo) file. These values correspond to the `VSFPROPID_guidEditorType` and `VSFPROPID_pszPhysicalView` values passed in the `propid` parameter in the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> method.  
+ シャットダウンではVisual Studio がソリューションを開き直すとドキュメント ウィンドウを再開するためにドキュメント ウィンドウに関連付けられているエディターのファクトリと物理ビューの文字列 GUID を保持します。  ソリューションが終了したときに現在開いているペインのみのソリューション ファイル \(.suo\) に保持されます。  これらの値は <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> のメソッドの `propid` のパラメーターで渡される `VSFPROPID_guidEditorType` と `VSFPROPID_pszPhysicalView` の値に対応します。  
   
-## <a name="example"></a>Example  
- This snippet illustrates how the <xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView> object is used to access a view that implements `IVsCodeWindow`. In this case, the <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument> service is used to call <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> and request `LOGVIEWID_TextView`, which obtains a pointer to a window frame. A pointer to the document view object is obtained by calling <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> and specifying a value of `VSFPROPID_DocView`. From the document view object, `QueryInterface` is called for `IVsCodeWindow`. The expectation in this case is that a text editor is returned, and so the document view object returned in the <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> method is a code window.  
+## 例  
+ このスニペットはビューへのアクセスに <xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView> のオブジェクトが実装 `IVsCodeWindow` どのように使用されるかについて説明します。  この場合ウィンドウ フレームへのポインターを取得 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument> サービスが <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> を呼び出し`LOGVIEWID_TextView` を要求するために使用されます。  ドキュメントのビュー オブジェクトへのポインターを <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> を呼び出し`VSFPROPID_DocView` の値を指定することになります。  ドキュメントのビュー オブジェクトから`QueryInterface` は `IVsCodeWindow` に対して呼び出されます。  この場合はテキスト エディターですが返されるため <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> のメソッドに返されるドキュメントのビュー オブジェクトはコード ウィンドウです。  
   
-```cpp  
+```cpp#  
 HRESULT CFindTool::GotoFileLocation(const WCHAR * szFile, long iLine, long iStart, long iLen)  
 {  
   HRESULT hr;  
@@ -130,7 +113,7 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Supporting Multiple Document Views](../extensibility/supporting-multiple-document-views.md)   
- [How to: Attach Views to Document Data](../extensibility/how-to-attach-views-to-document-data.md)   
- [Creating Custom Editors and Designers](../extensibility/creating-custom-editors-and-designers.md)
+## 参照  
+ [複数のドキュメント ビューをサポートします。](../extensibility/supporting-multiple-document-views.md)   
+ [方法: データを文書化するビューのアタッチ](../extensibility/how-to-attach-views-to-document-data.md)   
+ [カスタム エディターとデザイナーを作成します。](../extensibility/creating-custom-editors-and-designers.md)

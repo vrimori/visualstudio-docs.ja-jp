@@ -1,104 +1,87 @@
 ---
-title: DEBUG_ADDRESS | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- DEBUG_ADDRESS
-helpviewer_keywords:
-- DEBUG_ADDRESS structure
+title: "DEBUG_ADDRESS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "DEBUG_ADDRESS"
+helpviewer_keywords: 
+  - "DEBUG_ADDRESS 構造体"
 ms.assetid: 79f5e765-9aac-4b6e-82ef-bed88095e9ba
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: aa37858e7fc9c05a9ba86570a2df5891600399d9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="debugaddress"></a>DEBUG_ADDRESS
-This structure represents an address.  
+# DEBUG_ADDRESS
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+この構造体はアドレスを表します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
 ```cpp  
 typedef struct _tagDEBUG_ADDRESS {  
-   ULONG32             ulAppDomainID;  
-   GUID                guidModule;  
-   _mdToken            tokClass;  
-   DEBUG_ADDRESS_UNION addr;  
+   ULONG32             ulAppDomainID;  
+   GUID                guidModule;  
+   _mdToken            tokClass;  
+   DEBUG_ADDRESS_UNION addr;  
 } DEBUG_ADDRESS;  
 ```  
   
-```csharp  
+```c#  
 public struct DEBUG_ADDRESS {  
-   public uint                ulAppDomainID;  
-   public Guid                guidModule;  
-   public int                 tokClass;  
-   public DEBUG_ADDRESS_UNION addr;  
+   public uint                ulAppDomainID;  
+   public Guid                guidModule;  
+   public int                 tokClass;  
+   public DEBUG_ADDRESS_UNION addr;  
 }  
 ```  
   
-## <a name="terms"></a>Terms  
+## 用語  
  ulAppDomainID  
- The process ID.  
+ プロセス ID  
   
  guidModule  
- The GUID of the module that contains this address.  
+ このアドレスを含むモジュールの GUID。  
   
  tokClass  
- The token identifying the class or type of this address.  
+ このアドレスのクラスまたは型を識別するトークン。  
   
 > [!NOTE]
->  This value is specific to a symbol provider and therefore has no general meaning other than as an identifier for a class type.  
+>  この値はシンボルのプロバイダーに固有でクラス型の識別子としてではなく一般的な意味がありません。  
   
- addr  
- A [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure, which contains a union of structures that describe the individual address types. The value `addr`.`dwKind` comes from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration, which explains how to interpret the union.  
+ アドレス  
+ 個々のアドレスの種類を示す構造体の共用体を含む [DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md) の構造体。  値 `addr`。`dwKind` は共用体を解釈する方法を説明する [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md) の列挙体から取得されます。  
   
-## <a name="remarks"></a>Remarks  
- This structure is passed to the [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) method to be filled in.  
+## 解説  
+ この構造が表示される [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) のメソッドに渡されます。  
   
- **Warning [C++ only]**  
+ **警告のみ \[C\+\+\]**  
   
- If `addr.dwKind` is `ADDRESS_KIND_METADATA_LOCAL` and if `addr.addr.addrLocal.pLocal` is not a null value, then you must call `Release` on the token pointer:  
+ `addr.dwKind` が `ADDRESS_KIND_METADATA_LOCAL` で`addr.addr.addrLocal.pLocal` が null 値でない場合トークンのポインター `Release` を呼び出す必要があります :  
   
 ```  
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal != NULL)  
 {  
-    addr.addr.addrLocal.pLocal->Release();  
+    addr.addr.addrLocal.pLocal->Release();  
 }  
 ```  
   
-## <a name="requirements"></a>Requirements  
- Header: sh.h  
+## 必要条件  
+ ヘッダー : sh.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## 参照  
+ [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)   
- [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
- [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)
+ [DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
+ [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md)

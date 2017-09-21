@@ -1,112 +1,93 @@
 ---
-title: 'How to: Add, Update, or Remove a WCF Data Service Reference | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- service references [Visual Studio]
-- WCF Data Service reference
-- WCF data service references
-- ADO.NET service references
-- ADO.NET Data Service reference
+title: "How to: Add, Update, or Remove a WCF Data Service Reference | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "service references [Visual Studio]"
+  - "WCF Data Service reference"
+  - "WCF data service references"
+  - "ADO.NET service references"
+  - "ADO.NET Data Service reference"
 ms.assetid: 892ebf37-3af4-472e-8744-92837677d611
 caps.latest.revision: 11
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: ce2393f57e1d843682e48e931349747ac0e30e0a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 9
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>How to: Add, Update, or Remove a WCF Data Service Reference
-A *service reference* enables a project to access one or more [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]. Use the **Add Service Reference** dialog box to search for [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] in the current solution, locally, on a local area network, or on the Internet.  
+# How to: Add, Update, or Remove a WCF Data Service Reference
+*サービス参照*を使用すると、プロジェクトで 1 つ以上の [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] にアクセスできます。  [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] を検索するには、**\[サービス参照の追加\]** ダイアログ ボックスを使用します。ローカル エリア ネットワーク上にある現在のソリューションのサービスをローカルで検索することも、インターネット上のサービスを検索することもできます。  
   
-[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+ [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## <a name="adding-a-service-reference"></a>Adding a Service Reference  
+## サービス参照の追加  
   
-#### <a name="to-add-a-reference-to-an-external-service"></a>To add a reference to an external service  
+#### 外部サービスへの参照を追加するには  
   
-1.  In **Solution Explorer**, right-click the name of the project that you want to add the service to, and then click **Add Service Reference**.  
+1.  **ソリューション エクスプローラー**で、サービスを追加するプロジェクトの名前を右クリックし、**\[サービス参照の追加\]** をクリックします。  
   
-     The **Add Service Reference** dialog box appears.  
+     **\[サービス参照の追加\]** ダイアログ ボックスが表示されます。  
   
-2.  In the **Address** box, enter the URL for the service, and then click **Go** to search for the service. If the service implements user name and password security, you may be prompted for a user name and password.  
-  
-    > [!NOTE]
-    >  You should only reference services from a trusted source. Adding references from an untrusted source may compromise security.  
-  
-     You can also select the URL from the **Address** list, which stores the previous 15 URLs at which valid service metadata was found.  
-  
-     A progress bar is displayed when the search is being performed. You can stop the search at any time by clicking **Stop**.  
-  
-3.  In the **Services** list, expand the node for the service that you want to use and select an entity set.  
-  
-4.  In the **Namespace** box, enter the namespace that you want to use for the reference.  
-  
-5.  Click **OK** to add the reference to the project.  
-  
-     A service client (proxy) is generated, and metadata that describes the service is added to the app.config file.  
-  
-#### <a name="to-add-a-reference-to-a-service-in-the-current-solution"></a>To add a reference to a service in the current solution  
-  
-1.  In **Solution Explorer**, right-click the name of the project that you want to add the service to, and then click **Add Service Reference**.  
-  
-     The **Add Service Reference** dialog box appears.  
-  
-2.  Click **Discover**.  
-  
-     All services (both [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] and WCF services) in the current solution are added to the **Services** list.  
-  
-3.  In the **Services** list, expand the node for the service that you want to use and select an entity set.  
-  
-4.  In the **Namespace** box, enter the namespace that you want to use for the reference.  
-  
-5.  Click **OK** to add the reference to the project.  
-  
-     A service client (proxy) is generated, and metadata that describes the service is added to the app.config file.  
-  
-## <a name="updating-a-service-reference"></a>Updating a Service Reference  
- The Entity Data Model for a [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] will sometimes change. When this happens, the service reference must be updated.  
-  
-#### <a name="to-update-a-service-reference"></a>To update a service reference  
-  
--   In **Solution Explorer**, right-click the service reference and then click **Update Service Reference**.  
-  
-     A progress dialog box is displayed while the reference is updated from its original location, and the service client is regenerated to reflect any changes in the metadata.  
-  
-## <a name="removing-a-service-reference"></a>Removing a Service Reference  
- If a service reference is no longer being used, you can remove it from your solution.  
-  
-#### <a name="to-remove-a-service-reference"></a>To remove a service reference  
-  
--   In **Solution Explorer**, right-click the service reference and then click **Delete**.  
-  
-     The service client will be removed from the solution, and the metadata that describes the service will be removed from the app.config file.  
+2.  **\[アドレス\]** ボックスにサービスの URL を入力し、**\[移動\]** をクリックしてサービスを検索します。  サービスにユーザー名とパスワードによるセキュリティが実装されている場合は、ユーザー名とパスワードの入力を求められることがあります。  
   
     > [!NOTE]
-    >  Any code that references the service reference will have to be removed manually.  
+    >  参照するのは、信頼できる送信元からのサービスのみにしてください。  信頼関係のないソースからの参照を追加すると、セキュリティが損なわれる場合があります。  
   
-## <a name="see-also"></a>See Also  
- [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+     前回有効なサービス メタデータが見つかった 15 件の URL を含む **\[アドレス\]** リストから、URL を選択することもできます。  
+  
+     検索の実行中はプログレス バーが表示されます。  **\[停止\]**をクリックすると、検索をいつでも停止できます。  
+  
+3.  **\[サービス\]** ボックスで、使用するサービスのノードを展開し、エンティティ セットを選択します。  
+  
+4.  **\[名前空間\]** ボックスで、参照に使用する名前空間を入力します。  
+  
+5.  **\[OK\]** をクリックして、プロジェクトに参照を追加します。  
+  
+     サービス クライアント \(プロキシ\) が生成され、サービスを記述したメタデータが app.config ファイルに追加されます。  
+  
+#### 現在のソリューションのサービスへの参照を追加するには  
+  
+1.  **ソリューション エクスプローラー**で、サービスを追加するプロジェクトの名前を右クリックし、**\[サービス参照の追加\]** をクリックします。  
+  
+     **\[サービス参照の追加\]** ダイアログ ボックスが表示されます。  
+  
+2.  **\[探索\]** をクリックします。  
+  
+     **\[サービス\]** ボックスに、現在のソリューションに含まれるすべてのサービス \([!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] および WCF サービス\) が追加されます。  
+  
+3.  **\[サービス\]** ボックスで、使用するサービスのノードを展開し、エンティティ セットを選択します。  
+  
+4.  **\[名前空間\]** ボックスで、参照に使用する名前空間を入力します。  
+  
+5.  **\[OK\]** をクリックして、プロジェクトに参照を追加します。  
+  
+     サービス クライアント \(プロキシ\) が生成され、サービスを記述したメタデータが app.config ファイルに追加されます。  
+  
+## サービス参照の更新  
+ [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] の Entity Data Model は変更されることがあります。  そのような場合は、サービス参照を更新する必要があります。  
+  
+#### サービス参照を更新するには  
+  
+-   **ソリューション エクスプローラー**で、サービス参照を右クリックし、**\[サービス参照の更新\]** をクリックします。  
+  
+     参照が元の場所から更新されている間、プログレス ダイアログ ボックスが表示され、メタデータの変更を反映してサービス クライアントが再生成されます。  
+  
+## サービス参照の削除  
+ サービス参照が使用されなくなった場合は、ソリューションから削除できます。  
+  
+#### サービス参照を削除するには  
+  
+-   **ソリューション エクスプローラー**で、サービス参照を右クリックし、**\[削除\]** をクリックします。  
+  
+     ソリューションからサービス クライアントが削除され、サービスを記述したメタデータが app.config ファイルから削除されます。  
+  
+    > [!NOTE]
+    >  サービス参照を参照するコードがある場合は、手動で削除する必要があります。  
+  
+## 参照  
+ [Add Service Reference Dialog Box](../Topic/Add%20Service%20Reference%20Dialog%20Box.md)

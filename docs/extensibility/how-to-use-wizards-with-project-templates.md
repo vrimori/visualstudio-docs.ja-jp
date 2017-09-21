@@ -1,332 +1,299 @@
 ---
-title: 'How to: Use Wizards with Project Templates | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- project templates [Visual Studio], wizards
-- Visual Studio templates, wizards
-- wizards [Visual Studio], project templates
-- templates [Visual Studio], wizards
-- IWizard interface
+title: "方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IWizard インターフェイス"
+  - "プロジェクト テンプレート [Visual Studio], ウィザード"
+  - "テンプレート [Visual Studio], ウィザード"
+  - "Visual Studio のテンプレート, ウィザード"
+  - "ウィザード [Visual Studio], プロジェクト テンプレート"
 ms.assetid: 47ee26cf-67b7-4ff1-8a9d-ab11a725405c
 caps.latest.revision: 23
-ms.author: gregvanl
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4dbed51c294907c35d8b87640c7308082fba35d4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 23
 ---
-# <a name="how-to-use-wizards-with-project-templates"></a>How to: Use Wizards with Project Templates
-Visual Studio provides the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface that, when implemented, enables you to run custom code when a user creates a project from a template.  
+# 方法 : プロジェクト テンプレートを組み合わせたウィザードを使用する
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+Visual Studio には、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスが用意されています。このインターフェイスを実装すると、ユーザーがテンプレートからプロジェクトを作成する際にカスタム コードを実行できるようになります。  
   
- Project template customization can be used to display custom UI that collects user input to customize the template, add additional files to the template, or any other action allowed on a project.  
+ プロジェクト テンプレートのカスタマイズを使用すると、次の操作を実行できます。  
   
- The <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface methods are called at various times while the project is being created, starting as soon as a user clicks **OK** on the **New Project** dialog box. Each method of the interface is named to describe the point at which it is called. For example, Visual Studio calls <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> immediately when it starts to create the project, making it a good location to write custom code to collect user input.  
+-   ユーザー入力を収集してテンプレートをパラメーター化するカスタム UI を表示できます。  
   
-## <a name="creating-a-project-template-project-with-a-vsix-project"></a>Creating a Project Template Project with a VSIX Project  
- You start creating a custom template with the project template project., which is part of the Visual Studio SDK. In this procedure we will use a C# project template project, but there is also a Visual Basic project template project. Then you add a VSIX project to the solution that contains the project template project.  
+-   テンプレートで使用するパラメーター値を追加できます。  
   
-1.  Create a C# project template project (in Visual Studio, **File / New / Project / Visual C# / Extensibility / C# Project Template**). Name it **MyProjectTemplate**.  
+-   テンプレートに他のファイルを追加できます。  
   
-    > [!NOTE]
-    >  You may be asked to install the Visual Studio SDK. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+-   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] オートメーション オブジェクト モデルによって許可されたアクションを実際にプロジェクトで実行できます。  
   
-2.  Add a new VSIX project (**File / New / Project / Visual C# / Extensibility / VSIX Project**) in the same solution as the project template project (in the **Solution Explorer**, select the solution node, right-click, and select **Add / New Project**). Name it **MyProjectWizard.**  
+ <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイス メソッドは、プロジェクトの作成中にさまざまな時点で呼び出されます。プロジェクトの作成は、ユーザーが **\[新しいプロジェクト\]** ダイアログ ボックスの **\[OK\]** をクリックすると同時に開始されます。  インターフェイスの各メソッドには、そのメソッドが呼び出される時点を表す名前が付けられます。  たとえば、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、プロジェクトの作成の開始直後に <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> を呼び出します。この時点が、ユーザー入力を収集するためのカスタム コードの記述に適した場所になります。  
   
-3.  Set the VSIX project as the startup project. In the **Solution Explorer**, select the VSIX project node, right-click, and select **Set as Startup Project**.  
+ カスタム ウィザード用に記述するコードのほとんどでは、<xref:EnvDTE.DTE> オブジェクトを使用します。このオブジェクトは、プロジェクトをカスタマイズするための、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] オートメーション オブジェクト モデルの主要なオブジェクトです。  オートメーション オブジェクト モデルの詳細については、「[Extending the Visual Studio Environment](../Topic/Extending%20the%20Visual%20Studio%20Environment.md)」および「[Automation and Extensibility Reference](../Topic/Automation%20and%20Extensibility%20Reference.md)」を参照してください。  
   
-4.  Add the template project as an asset of the VSIX project. In the **Solution Explorer**, under the VSIX project node, find the **source.extension.vsixmanifest** file. Double-click it to open it in the manifest editor.  
+## カスタム テンプレート ウィザードの作成  
+ このトピックでは、プロジェクトを作成する前に Windows フォームを開くカスタム ウィザードを作成する方法を紹介します。  このフォームを使用すると、ユーザーは、プロジェクトの作成時にソース コードに後から追加されるカスタム パラメーター値を追加できます。  主な手順を次に示し、各手順の詳細について説明します。  
   
-5.  In the manifest editor, select the **Assets** tab on the left side of the window.  
+#### カスタム テンプレート ウィザードを作成するには  
   
-6.  In the **Assets** tab, select **New**. In the **Add New Asset** window, for the Type field, select **Microsoft.VisualStudio.ProjectTemplate**. In the **Source** field, select **A project in current solution**. In the **Project** field, select **MyProjectTemplate**. Then click **OK**.  
+1.  <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装するアセンブリを作成します。  
   
-7.  Build the solution and start debugging. A second instance of Visual Studio appears. (This may take a few minutes.)  
+2.  アセンブリをグローバル アセンブリ キャッシュにインストールします。  
   
-8.  In the second instance of Visual Studio, try to create a new project with your new template. (**File / New / Project / Visual C# / MyProject Template**). The new project should appear with a class named **Class1**. You have now created a custom project template! Stop debugging now.  
+3.  プロジェクトを作成し、**テンプレートのエクスポート** ウィザードを使用して、そのプロジェクトからテンプレートを作成します。  
   
-## <a name="creating-a-custom-template-wizard"></a>Creating a Custom Template Wizard  
- This topic shows how to create a custom wizard that opens a Windows Form before the project is created. The form allows users to add a custom parameter value that is added to the source code during project creation.  
+4.  テンプレートを変更します。ここでは、.vstemplate ファイルに `WizardExtension` 要素を追加し、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> を実装するアセンブリにテンプレートをリンクします。  
   
-1.  Set up the VSIX project to allow it to create an assembly.  
+5.  カスタム ウィザードを使用し、新しいプロジェクトを作成します。  
   
-2.  In the **Solution Explorer**, select the VSIX project node. Below the Solution Explorer, you should see the **Properties** window. If you do not, select **View / Properties Window**, or press **F4**. In the Properties window, select the following fields to `true`:  
+## IWizard の実装  
+ このプロセスでは、最初に、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> を実装するアセンブリを作成します。  このアセンブリは、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> メソッドを使用し、ユーザーがカスタム パラメーター値を追加できる Windows フォームを表示します。このパラメーター値は、プロジェクトの作成時に使用されます。  
   
-    -   **IncludeAssemblyInVSIXContainer**  
+> [!NOTE]
+>  この例では、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> の実装に [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] を使用していますが、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] を使用することもできます。  
   
-    -   **IncludeDebugSymbolsInVSIXContainer**  
+#### IWizard を実装するには  
   
-    -   **IncludeDebugSymbolsInLocalVSIXDeployment**  
+1.  新しいクラス ライブラリ プロジェクトを作成します。  
   
-3.  Add the assembly as an asset to the VSIX project. Open the source.extension.vsixmanifest file and select the **Assets** tab. In the **Add New Asset** window, for **Type** select **Microsoft.VisualStudio.Assembly**, for **Source** select **A project in current solution**, and for **Project** select **MyProjectWizard**.  
+2.  <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装するクラスを作成します。  完全に実装された <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスの [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] の例については、後述のコードを参照してください。  
   
-4.  Add the following references to the VSIX project. (In the **Solution Explorer**, under the VSIX project node select **References**, right-click, and select **Add Reference**.) In the **Add Reference** dialog,  in the **Framework** tab, find the **System.Windows Forms** assembly and select it. Now select the **Extensions** tab. find the **EnvDTE** assembly and select it. Also find the **Microsoft.VisualStudio.TemplateWizardInterface** assembly and select it. Click **OK**.  
+ この例には、2 つのコード ファイルが含まれています。1 つは、`IWizardImplementation` という、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装するクラスで、もう 1 つは、`UserInputForm` という、ユーザー入力用の Windows フォームです。  
   
-5.  Add a class for the wizard implementation to the VSIX project. (In the Solution Explorer, right-click the VSIX project node and select **Add**, then **New Item**, then **Class**.) Name the class **WizardImplementation**.  
+### IWizardImplementation クラス  
+ `IWizardImplementation` クラスには、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> のすべてのメンバーに対するメソッドの実装が含まれています。  この例では、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> メソッドだけがタスクを実行します。  他のすべてのメソッドは、何もしないか、`true` を返します。  
   
-6.  Replace the code in the **WizardImplementationClass.cs** file with the following code:  
+ <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> メソッドは、次の 4 つのパラメーターを受け取ります。  
   
-    ```csharp  
-    using System;  
-    using System.Collections.Generic;  
-    using Microsoft.VisualStudio.TemplateWizard;  
-    using System.Windows.Forms;  
-    using EnvDTE;  
+-   <xref:System.Object> パラメーター。プロジェクトをカスタマイズできるように、ルートの <xref:EnvDTE._DTE> オブジェクトにキャストできます。  
   
-    namespace MyProjectWizard  
+-   <xref:System.Collections.Generic.Dictionary%602> パラメーター。テンプレートで定義済みのすべてのパラメーターのコレクションが含まれます。  テンプレート パラメーターの詳細については、「[テンプレート名](../ide/template-parameters.md)」を参照してください。  
+  
+-   <xref:Microsoft.VisualStudio.TemplateWizard.WizardRunKind> パラメーター。使用されているテンプレートの種類に関する情報が含まれます。  
+  
+-   <xref:System.Object> 配列。[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によってウィザードに渡される一連のパラメーターが格納されます。  
+  
+ この例では、ユーザー入力フォームから <xref:System.Collections.Generic.Dictionary%602> パラメーターにパラメーター値を追加します。  プロジェクト内の `$custommessage$` パラメーターのすべてのインスタンスは、ユーザーが入力したテキストと置き換えられます。  以下のアセンブリをプロジェクトに追加する必要があります。  
+  
+1.  EnvDTE.dll  
+  
+2.  Microsoft.VisualStudio.TemplateWizardInterface.dll  
+  
+3.  System.Windows.Forms.dll  
+  
+> [!IMPORTANT]
+>  この例で使用されている UserInputForm は、次のセクションで定義されています。  
+  
+```c#  
+using System;  
+using System.Collections.Generic;  
+using Microsoft.VisualStudio.TemplateWizard;  
+using System.Windows.Forms;  
+using EnvDTE;  
+  
+namespace CustomWizard  
+{  
+    public class IWizardImplementation:IWizard  
     {  
-        public class WizardImplementation:IWizard  
+        private UserInputForm inputForm;  
+        private string customMessage;  
+  
+        // This method is called before opening any item that   
+        // has the OpenInEditor attribute.  
+        public void BeforeOpeningFile(ProjectItem projectItem)  
         {  
-            private UserInputForm inputForm;  
-            private string customMessage;  
-  
-            // This method is called before opening any item that   
-            // has the OpenInEditor attribute.  
-            public void BeforeOpeningFile(ProjectItem projectItem)  
-            {  
-            }  
-  
-            public void ProjectFinishedGenerating(Project project)  
-            {  
-            }  
-  
-            // This method is only called for item templates,  
-            // not for project templates.  
-            public void ProjectItemFinishedGenerating(ProjectItem   
-                projectItem)  
-            {  
-            }  
-  
-            // This method is called after the project is created.  
-            public void RunFinished()  
-            {  
-            }  
-  
-            public void RunStarted(object automationObject,  
-                Dictionary<string, string> replacementsDictionary,  
-                WizardRunKind runKind, object[] customParams)  
-            {  
-                try  
-                {  
-                    // Display a form to the user. The form collects   
-                    // input for the custom message.  
-                    inputForm = new UserInputForm();  
-                    inputForm.ShowDialog();  
-  
-                    customMessage = UserInputForm.CustomMessage;  
-  
-                    // Add custom parameters.  
-                    replacementsDictionary.Add("$custommessage$",   
-                        customMessage);  
-                }  
-                catch (Exception ex)  
-                {  
-                    MessageBox.Show(ex.ToString());  
-                }  
-            }  
-  
-            // This method is only called for item templates,  
-            // not for project templates.  
-            public bool ShouldAddProjectItem(string filePath)  
-            {  
-                return true;  
-            }          
         }  
+  
+        public void ProjectFinishedGenerating(Project project)  
+        {  
+        }  
+  
+        // This method is only called for item templates,  
+        // not for project templates.  
+        public void ProjectItemFinishedGenerating(ProjectItem   
+            projectItem)  
+        {  
+        }  
+  
+        // This method is called after the project is created.  
+        public void RunFinished()  
+        {  
+        }  
+  
+        public void RunStarted(object automationObject,  
+            Dictionary<string, string> replacementsDictionary,  
+            WizardRunKind runKind, object[] customParams)  
+        {  
+            try  
+            {  
+                // Display a form to the user. The form collects   
+                // input for the custom message.  
+                inputForm = new UserInputForm();  
+                inputForm.ShowDialog();  
+  
+                customMessage = inputForm.get_CustomMessage();  
+  
+                // Add custom parameters.  
+                replacementsDictionary.Add("$custommessage$",   
+                    customMessage);  
+            }  
+            catch (Exception ex)  
+            {  
+                MessageBox.Show(ex.ToString());  
+            }  
+        }  
+  
+        // This method is only called for item templates,  
+        // not for project templates.  
+        public bool ShouldAddProjectItem(string filePath)  
+        {  
+            return true;  
+        }          
     }  
-    ```  
+}  
+```  
   
-     The **UserInputForm** referenced in this code will be implemented later.  
+### ユーザー入力フォーム  
+ ユーザー入力フォームには、カスタム パラメーターを入力するための簡単なフォームが用意されています。  このフォームには、`textBox1` という名前のテキスト ボックスおよび `button1` という名前のボタンがあります。  このボタンをクリックすると、テキスト ボックスのテキストが `customMessage` パラメーターに格納されます。  
   
-     The `WizardImplementation` class contains method implementations for every member of <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>. In this example, only the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> method performs a task. All other methods either do nothing or return `true`.  
+##### Windows フォームをソリューションに追加するには  
   
-     The <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> method accepts four parameters:  
+1.  ウィザード実装が含まれるファイルに次のコードを追加します。  
   
-    -   An <xref:System.Object> parameter that can be cast to the root <xref:EnvDTE._DTE> object, to enable you to customize the project.  
+```c#  
+public partial class UserInputForm : Form  
+{  
+    private string customMessage;  
+    private TextBox textBox1;  
   
-    -   A <xref:System.Collections.Generic.Dictionary%602> parameter that contains a collection of all pre-defined parameters in the template. For more information on template parameters, see [Template Parameters](../ide/template-parameters.md).  
+    public UserInputForm()  
+    {   
+        textBox1 = new TextBox();  
+        this.Controls.Add(textBox1);  
+    }  
   
-    -   A <xref:Microsoft.VisualStudio.TemplateWizard.WizardRunKind> parameter that contains information about what kind of template is being used.  
+    public string get_CustomMessage()  
+    {  
+        return customMessage;  
+    }  
   
-    -   An <xref:System.Object> array that contains a set of parameters passed to the wizard by Visual Studio.  
+    private void textBox1_TextChanged(object sender, EventArgs e)  
+    {  
+        customMessage = textBox1.Text;  
+        this.Dispose();  
+    }  
+}  
+```  
   
-     This example adds a parameter value from the user input form to the <xref:System.Collections.Generic.Dictionary%602> parameter. Every instance of the `$custommessage$` parameter in the project will be replaced with the text entered by the user. You must add the following assemblies to your project: **System** and **System.Drawing**.
+## グローバル アセンブリ キャッシュへのアセンブリのインストール  
+ <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> を実装するアセンブリは、厳密な名前で署名して、グローバル アセンブリ キャッシュにインストールする必要があります。  
   
-7.  Now create the **UserInputForm**. In the **WizardImplementation.cs** file, add the following code after the end of the **WizardImplementation** class.  
+#### アセンブリをグローバル アセンブリ キャッシュにインストールするには  
   
-    ```csharp  
-    public partial class UserInputForm : Form  
-        {  
-            private static string customMessage;  
-            private TextBox textBox1;  
-            private Button button1;  
+1.  アセンブリに厳密な名前で署名します。  詳細については、「[方法 : 厳密な名前でアセンブリに署名する](../Topic/How%20to:%20Sign%20an%20Assembly%20with%20a%20Strong%20Name.md)」または「[How to: Sign an Assembly \(Visual Studio\)](http://msdn.microsoft.com/ja-jp/f468a7d3-234c-4353-924d-8e0ae5896564)」を参照してください。  
   
-            public UserInputForm()  
-            {  
-                this.Size = new System.Drawing.Size(155, 265);   
+2.  厳密な名前付きアセンブリをグローバル アセンブリ キャッシュにインストールします。  詳細については、「[方法 : グローバル アセンブリ キャッシュにアセンブリをインストールする](../Topic/How%20to:%20Install%20an%20Assembly%20into%20the%20Global%20Assembly%20Cache.md)」を参照してください。  
   
-                button1 = new Button();  
-                button1.Location = new System.Drawing.Point(90, 25);  
-                button1.Size = new System.Drawing.Size(50, 25);  
-                button1.Click += button1_Click;  
-                this.Controls.Add(button1);  
+## テンプレートとして使用するプロジェクトの作成  
+ この例でテンプレートとして使用されるプロジェクトは、カスタム ウィザードのユーザー入力フォームで指定されたメッセージを表示するコンソール アプリケーションです。  
   
-                textBox1 = new TextBox();  
-                textBox1.Location = new System.Drawing.Point(10, 25);  
-                textBox1.Size = new System.Drawing.Size(70, 20);  
-                this.Controls.Add(textBox1);  
-            }  
-            public static string CustomMessage  
-            {  
-                get  
-                {  
-                    return customMessage;  
-                }  
-                set  
-                {  
-                    customMessage = value;  
-                }     
-            }  
-            private void button1_Click(object sender, EventArgs e)  
-            {  
-                customMessage = textBox1.Text;  
-            }  
-        }  
-    ```  
+#### サンプル プロジェクトを作成するには  
   
-     The user input form provides a simple form for entering a custom parameter. The form contains a text box named `textBox1` and a button named `button1`. When the button is clicked, the text from the text box is stored in the `customMessage` parameter.  
+1.  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] コンソール アプリケーションを新しく作成します。  
   
-## <a name="connect-the-wizard-to-the-custom-template"></a>Connect the Wizard to the Custom Template  
- In order for your custom project template to use your custom wizard, you need to sign the wizard assembly and add some lines to your custom project template to let it know where to find the wizard implementation when a new project is created.  
-  
-1.  Sign the assembly. In the **Solution Explorer**, select the VSIX project, right-click, and select **Project Properties**.  
-  
-2.  In the **Project Properties** window, select the **Signing** tab. in the **Signing** tab, check **Sign the assembly**. In the **Choose a strong name key file** field, select **\<New>**. In the **Create Strong Name Key** window, in the **Key file name** field, type **key.snk**. Uncheck the **Protect my key file with a password** field.  
-  
-3.  In the **Solution Explorer**, select the VSIX project and find the **Properties** window.  
-  
-4.  Set the **Copy Build Output to Output Directory** field to **true**. This allows the assembly to be copied into the output directory when the solution is rebuilt. It is still contained in the .vsix file. You need to see the assembly in order to find out its signing key.  
-  
-5.  Rebuild the solution.  
-  
-6.  You can now find the key.snk file in the MyProjectWizard project directory (**\<your disk location>\MyProjectTemplate\MyProjectWizard\key.snk**). Copy the key.snk file.  
-  
-7.  Go to the output directory and find the assembly (**\<your disk location>\MyProjectTemplate/MyProjectWizard\bin\Debug\MyProjectWizard.dll**). Paste the key.snk file here. (This isn't absolutely necessary, but it will make the following steps easier.)  
-  
-8.  Open a command window, and change to the directory in which the assembly has been created.  
-  
-9. Find the **sn.exe** signing tool. For example, on a Windows 10 64-bit operating system, a typical path would be the following:  
-  
-     **C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools**  
-  
-     If you can't find the tool, try running **where /R .  sn.exe** in the command window. Make a note of the path.  
-  
-10. Extract the public key from the key.snk file. In the command window, type  
-  
-     **\<location of sn.exe>\sn.exe - p key.snk outfile.key.**  
-  
-     Don't forget to surround the path of sn.exe with quotation marks if there are spaces in the directory names!  
-  
-11. Get the public key token from the outfile:  
-  
-     **\<location of sn.exe>\sn.exe - t outfile.key.**  
-  
-     Again, don't forget the quotation marks. You should see a line in the output like this  
-  
-     **Public key token is <token>**  
-  
-     Make a note of this value.  
-  
-12. Add the reference to the custom wizard to the .vstemplate file of the project template. In the Solution Explorer, find the file named MyProjectTemplate.vstemplate, and open it. After the end of the \<TemplateContent> section, add the following section:  
-  
-    ```xml  
-    <WizardExtension>  
-        <Assembly>MyProjectWizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=token</Assembly>  
-        <FullClassName>MyProjectWizard.WizardImplementation</FullClassName>  
-    </WizardExtension>  
-    ```  
-  
-     Where **MyProjectWizard** is the name of the assembly, and **token** is the token you copied in the previous step.  
-  
-13. Save all the files in the project and rebuild.  
-  
-## <a name="adding-the-custom-parameter-to-the-template"></a>Adding the Custom Parameter to the Template  
- In this example, the project used as the template displays the message specified in the user input form of the custom wizard.  
-  
-1.  In the Solution Explorer, go to the **MyProjectTemplate** project and open **Class1.cs**.  
-  
-2.  In the `Main` method of the application, add the following line of code.  
+2.  アプリケーションの `Main` メソッドに次のコード行を追加します。  
   
     ```  
     Console.WriteLine("$custommessage$");  
     ```  
   
-     The parameter `$custommessage$` is replaced with the text entered in the user input form when a project is created from the template.  
+     `$custommessage$` パラメーターは、プロジェクトをテンプレートから作成する際にユーザー入力フォームに入力したテキストで置き換えられます。  
   
- Here is the full code file before it has been exported to a template.  
+3.  **\[ファイル\]** メニューの **\[テンプレートのエクスポート\]** をクリックします。  
   
-```csharp  
+4.  **テンプレートのエクスポート** ウィザードで、**\[プロジェクト テンプレート\]** をクリックし、適切なプロジェクトを選択して、**\[次へ\]** をクリックします。  
+  
+5.  **テンプレートのエクスポート** ウィザードで、テンプレートの説明情報を入力します。**\[テンプレートを自動的に Visual Studio にインポート\]** チェック ボックスをオンにし、**\[完了\]** をクリックします。  
+  
+     これで、テンプレートは **\[新しいプロジェクト\]** ダイアログ ボックスに表示されるようになりますが、カスタム ウィザードは使用しません。  
+  
+ テンプレートにエクスポートされる前のコード ファイル全体の例を次に示します。  
+  
+```c#  
 using System;  
 using System.Collections.Generic;  
-$if$ ($targetframeworkversion$ >= 3.5)using System.Linq;  
-$endif$using System.Text;  
+using System.Text;  
   
-namespace $safeprojectname$  
+namespace TemplateProject  
 {  
-    public class Class1  
+    class WriteMessage  
     {  
-          static void Main(string[] args)  
-          {  
-               Console.WriteLine("$custommessage$");  
-          }  
+        static void Main(string[] args)  
+        {  
+            Console.WriteLine("$custommessage$");  
+        }  
     }  
 }  
 ```  
   
-## <a name="using-the-custom-wizard"></a>Using the Custom Wizard  
- Now you can create a project from your template and use the custom wizard.  
+## テンプレートの変更  
+ テンプレートが作成され、**\[新しいプロジェクト\]** ダイアログ ボックスに表示されたら、前の手順で作成したアセンブリを使用するように、そのテンプレートを変更する必要があります。  
   
-1.  Rebuild the solution and start debugging. A second instance of Visual Studio should appear.  
+#### カスタム ウィザードをテンプレートに追加するには  
   
-2.  Create a new MyProjectTemplate project. (**File / New / Project / Visual C# / MyProjectTemplate**)  
+1.  テンプレートを含む .zip ファイルを探します。  
   
-3.  In the **New Project** dialog box, locate your template, type a name, and click **OK**.  
+    1.  **\[ツール\]** メニューの **\[オプション\]** をクリックします。  
   
-     The wizard user input form opens.  
+    2.  **\[プロジェクトおよびソリューション\]** をクリックします。  
   
-4.  Type a value for the custom parameter and click the button.  
+    3.  **\[Visual Studio ユーザー プロジェクト テンプレートの場所\]** ボックスを確認します。  
   
-     The wizard user input form closes, and a project is created from the template.  
+     既定の場所は、My Documents\\Visual Studio *Version*\\Templates\\ProjectTemplates です。  
   
-5.  In **Solution Explorer**, right-click the source code file and click **View Code**.  
+2.  .zip ファイルを展開します。  
   
-     Notice that `$custommessage$` has been replaced with the text entered in the wizard user input form.  
+3.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で .vstemplate ファイルを開きます。  
   
-## <a name="see-also"></a>See Also  
+4.  `TemplateContent` 要素の後に、カスタム ウィザード アセンブリの厳密な名前の付いた [WizardExtension 要素 \(Visual Studio テンプレート\)](../extensibility/wizardextension-element-visual-studio-templates.md) 要素を追加します。  アセンブリの厳密な名前を検索する方法の詳細については、「[方法 : グローバル アセンブリ キャッシュの内容を表示する](../Topic/How%20to:%20View%20the%20Contents%20of%20the%20Global%20Assembly%20Cache.md)」および「[方法 : 厳密な名前のアセンブリを参照する](../Topic/How%20to:%20Reference%20a%20Strong-Named%20Assembly.md)」を参照してください。  
+  
+     `WizardExtension` 要素の例を次に示します。  
+  
+    ```  
+    <WizardExtension>  
+        <Assembly>CustomWizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=fa3902f409bb6a3b</Assembly>  
+        <FullClassName>CustomWizard.IWizardImplementation</FullClassName>  
+    </WizardExtension>  
+    ```  
+  
+## カスタム ウィザードの使用  
+ これで、テンプレートからプロジェクトを作成し、カスタム ウィザードを使用できるようになりました。  
+  
+#### カスタム ウィザードを使用するには  
+  
+1.  **\[ファイル\]** メニューの **\[新しいプロジェクト\]** をクリックします。  
+  
+2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、テンプレートを指定し、名前を入力して、**\[OK\]** をクリックします。  
+  
+     ウィザードのユーザー入力フォームが開きます。  
+  
+3.  カスタム パラメーターの値を入力し、ボタンをクリックします。  
+  
+     ウィザードのユーザー入力フォームが終了し、プロジェクトがテンプレートから作成されます。  
+  
+4.  **ソリューション エクスプローラー**で、ソース コード ファイルを右クリックし、**\[コードの表示\]** をクリックします。  
+  
+     `$custommessage$` は、ウィザードのユーザー入力フォームに入力されたテキストで置き換えられています。  
+  
+## 参照  
  <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>   
- [Customizing Templates](../ide/customizing-project-and-item-templates.md)   
- [WizardExtension Element (Visual Studio Templates)](../extensibility/wizardextension-element-visual-studio-templates.md)
-
+ [テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)   
+ [WizardExtension 要素 \(Visual Studio テンプレート\)](../extensibility/wizardextension-element-visual-studio-templates.md)

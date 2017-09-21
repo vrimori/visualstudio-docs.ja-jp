@@ -1,81 +1,64 @@
 ---
-title: IDebugThread2::SetNextStatement | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugThread2::SetNextStatement
-helpviewer_keywords:
-- IDebugThread2::SetNextStatement
+title: "IDebugThread2::SetNextStatement | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugThread2::SetNextStatement"
+helpviewer_keywords: 
+  - "IDebugThread2::SetNextStatement"
 ms.assetid: 9e2834dd-4ecf-45af-8e6c-f9318ebdac06
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b97eda0bbd657af67563f4c72566462f55eb5774
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugthread2setnextstatement"></a>IDebugThread2::SetNextStatement
-Sets the current instruction pointer to the given code context.  
+# IDebugThread2::SetNextStatement
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+特定のコードのコンテキストに現在の命令ポインターを設定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT SetNextStatement (   
-   IDebugStackFrame2*  pStackFrame,  
-   IDebugCodeContext2* pCodeContext  
+```cpp#  
+HRESULT SetNextStatement (   
+   IDebugStackFrame2*  pStackFrame,  
+   IDebugCodeContext2* pCodeContext  
 );  
 ```  
   
-```csharp  
-int SetNextStatement (   
-   IDebugStackFrame2  pStackFrame,  
-   IDebugCodeContext2 pCodeContext  
+```c#  
+int SetNextStatement (   
+   IDebugStackFrame2  pStackFrame,  
+   IDebugCodeContext2 pCodeContext  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pStackFrame`  
- Reserved for future use; set to a null value.  
+ 将来使用するために予約されています ; null 値に設定します。  
   
  `pCodeContext`  
- [in] An [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) object that describes the code location about to be executed and its context.  
+ \[入力\] 実行するコードを記述する場所はコンテキスト [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) のオブジェクト。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. The following table shows other possible values.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  次の表は他の値を示します。  
   
-|Value|Description|  
-|-----------|-----------------|  
-|E_CANNOT_SET_NEXT_STATEMENT_ON_NONLEAF_FRAME|The next statement cannot be in a stack frame deeper on the frame stack.|  
-|E_CANNOT_SETIP_TO_DIFFERENT_FUNCTION|The next statement is not associated with any frame in the stack.|  
-|E_CANNOT_SET_NEXT_STATEMENT_ON_EXCEPTION|Some debug engines cannot set the next statement after an exception.|  
+|値|Description|  
+|-------|-----------------|  
+|E\_CAN のない \_SET\_NEXT\_STATEMENT\_ON\_NONLEAF\_FRAME|次のステートメントはフレームのスタック上でさらに深い位置にあるスタック フレームにすることはできません。|  
+|E\_CAN のない \_SETIP\_TO\_DIFFERENT\_FUNCTION|次のステートメントはスタック フレームに関連付けられません。|  
+|E\_CAN のない \_SET\_NEXT\_STATEMENT\_ON\_EXCEPTION|一部のデバッグ エンジンは例外の後に次のステートメントを設定できません。|  
   
-## <a name="remarks"></a>Remarks  
- The instruction pointer indicates the next instruction or statement to execute. This method is used to retry a line of source code or to force execution to continue in another function, for example.  
+## 解説  
+ 命令ポインターは次に実行する命令またはステートメントを示します。  このメソッドはソース・コードの行を再試行または別の関数に従うに実行を強制する場合などに使用されます。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

@@ -1,71 +1,54 @@
 ---
-title: 'How to: Register a Library with the Object Manager | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- libraries, registering with object manager
-- IVsLibrary2 interface, registering library with object manager
-- IVsSimpleLibrary2 interface, registering library with object manager
-- IVsObjectManager2 interface, registering library with object manager
-- libraries, symbol-browsing tools
+title: "方法: オブジェクト マネージャにライブラリを登録 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "ライブラリ、オブジェクト マネージャーに登録します。"
+  - "IVsLibrary2 インターフェイス、オブジェクト マネージャーでライブラリの登録"
+  - "IVsSimpleLibrary2 インターフェイス、オブジェクト マネージャーでライブラリの登録"
+  - "IVsObjectManager2 インターフェイス、オブジェクト マネージャーでライブラリの登録"
+  - "ライブラリ、ツールのシンボル参照"
 ms.assetid: f124dd05-cb0f-44ad-bb2a-7c0b34ef4038
 caps.latest.revision: 26
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0c9291dec5cf812f2cf2d8807263f1dc2b46e325
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 26
 ---
-# <a name="how-to-register-a-library-with-the-object-manager"></a>How to: Register a Library with the Object Manager
-Symbols-browsing tools, such as **Class View**, **Object Browser**, **Call Browser** and **Find Symbol Results**, enable you to view symbols in your project or in external components. The symbols include namespaces, classes, interfaces, methods, and other language elements. The libraries track these symbols and expose them to the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] object manager that populates the tools with the data.  
+# 方法: オブジェクト マネージャにライブラリを登録
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+ツール **クラス ビュー**  など **オブジェクト ブラウザー**  はシンボル参照して  **呼び出しブラウザー**  と  **シンボルの検索結果**  はプロジェクトまたは外部コンポーネントのシンボルを表示することができます。  シンボルは名前空間クラスインターフェイスメソッドおよびそのほかの言語要素が含まれます。  ライブラリはこれらのシンボルを追跡しデータ ツールの設定 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のオブジェクト マネージャーに公開します。  
   
- The object manager keeps track of all available libraries. Each library must register with the object manager before providing symbols for the symbol-browsing tools.  
+ オブジェクト マネージャーはすべての使用可能なライブラリを追跡します。  各ライブラリはオブジェクト マネージャーにシンボル参照がシンボルを提供する前に登録する必要があります。  
   
- Typically, you register a library when a VSPackage loads. However, it can be done at another time as needed. You unregister the library when the VSPackage shuts down.  
+ 通常VSPackage の読み込み時にライブラリを登録します。  ただし必要に応じて別の時点にできます。  VSPackage の終了時にライブラリの登録を解除します。  
   
- To register a library, use the <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterLibrary%2A> method. In the case of managed code library, use the <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> method.  
+ ライブラリを登録するには<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterLibrary%2A> のメソッドを使用します。  マネージ コード ライブラリの場合<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> のメソッドを使用します。  
   
- To unregister a library, use the <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> method.  
+ ライブラリの登録を解除するには<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> のメソッドを使用します。  
   
- To obtain a reference to the object manager, <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>, pass the <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> service ID to `GetService` method.  
+ オブジェクト マネージャーへの参照を <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> は`GetService` のメソッドに移動するには<xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> サービス ID を渡します。  
   
-## <a name="registering-and-unregistering-a-library-with-the-object-manager"></a>Registering and unregistering a Library with the Object Manager  
+## オブジェクト マネージャーを使用してライブラリを登録または登録解除します  
   
-#### <a name="to-register-a-library-with-the-object-manager"></a>To register a library with the object manager  
+#### オブジェクト マネージャーを使用してライブラリを登録するには  
   
-1.  Create a library.  
+1.  ライブラリを作成します。  
   
-    ```vb  
+    ```vb#  
     Private m_CallBrowserLibrary As CallBrowser.Library = Nothing  
     Private m_nLibraryCookie As UInteger = 0  
     ' Create Library.  
     m_CallBrowserLibrary = New CallBrowser.Library()  
     ```  
   
-    ```csharp  
+    ```c#  
     private CallBrowser.Library m_CallBrowserLibrary = null;  
     private uint m_nLibraryCookie = 0;  
     // Create Library.  
@@ -73,9 +56,9 @@ Symbols-browsing tools, such as **Class View**, **Object Browser**, **Call Brows
   
     ```  
   
-2.  Obtain a reference to an object of the <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> type and call the <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> method.  
+2.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> 型のオブジェクトへの参照を取得し<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> のメソッドを呼び出します。  
   
-    ```vb  
+    ```vb#  
     Private Sub RegisterLibrary()  
         If m_nLibraryCookie <> 0 Then  
             Throw New Exception("Library already registered with Object Manager")  
@@ -98,7 +81,7 @@ Symbols-browsing tools, such as **Class View**, **Object Browser**, **Call Brows
     End Sub  
     ```  
   
-    ```csharp  
+    ```c#  
     private void RegisterLibrary()  
     {  
         if (m_nLibraryCookie != 0)  
@@ -127,11 +110,11 @@ Symbols-browsing tools, such as **Class View**, **Object Browser**, **Call Brows
   
     ```  
   
-#### <a name="to-unregister-a-library-with-the-object-manager"></a>To unregister a library with the object manager  
+#### オブジェクト マネージャーを使用してライブラリの登録を解除します。  
   
-1.  Obtain a reference to an object of the <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> type and call the <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> method.  
+1.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> 型のオブジェクトへの参照を取得し<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> のメソッドを呼び出します。  
   
-    ```vb  
+    ```vb#  
     Private Sub UnregisterLibrary()  
         If m_nLibraryCookie <> 0 Then  
             ' Obtain a reference to IVsObjectManager2 type object.  
@@ -153,7 +136,7 @@ Symbols-browsing tools, such as **Class View**, **Object Browser**, **Call Brows
     End Sub  
     ```  
   
-    ```csharp  
+    ```c#  
     private void UnregisterLibrary()  
     {  
         if (m_nLibraryCookie != 0)  
@@ -182,7 +165,7 @@ Symbols-browsing tools, such as **Class View**, **Object Browser**, **Call Brows
   
     ```  
   
-## <a name="see-also"></a>See Also  
- [Legacy Language Service Extensibility](../../extensibility/internals/legacy-language-service-extensibility.md)   
- [Supporting Symbol-Browsing Tools](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
- [How to: Expose Lists of Symbols Provided by the Library to the Object Manager](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
+## 参照  
+ [従来の言語サービスの拡張機能](../../extensibility/internals/legacy-language-service-extensibility.md)   
+ [シンボル参照のツールのサポート](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
+ [方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

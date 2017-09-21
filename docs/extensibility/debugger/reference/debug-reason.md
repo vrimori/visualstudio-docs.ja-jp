@@ -1,94 +1,77 @@
 ---
-title: DEBUG_REASON | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- DEBUG_REASON
-helpviewer_keywords:
-- DEBUG_REASON enumeration
+title: "DEBUG_REASON | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "DEBUG_REASON"
+helpviewer_keywords: 
+  - "DEBUG_REASON 列挙型"
 ms.assetid: ad2ee898-8648-4671-9078-d32873862346
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e6d6e969b3829222043f789556d26843297d25db
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="debugreason"></a>DEBUG_REASON
-Specifies why the process was launched for debugging.  
+# DEBUG_REASON
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+プロセスはデバッグに開始理由を指定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-enum enum_DEBUG_REASON {  
-   DEBUG_REASON_ERROR         = 0,  
-   DEBUG_REASON_USER_LAUNCHED = 1,  
-   DEBUG_REASON_USER_ATTACHED = 2,  
-   DEBUG_REASON_AUTO_ATTACHED = 3,  
-   DEBUG_REASON_CAUSALITY     = 4  
+```cpp#  
+enum enum_DEBUG_REASON {  
+   DEBUG_REASON_ERROR         = 0,  
+   DEBUG_REASON_USER_LAUNCHED = 1,  
+   DEBUG_REASON_USER_ATTACHED = 2,  
+   DEBUG_REASON_AUTO_ATTACHED = 3,  
+   DEBUG_REASON_CAUSALITY     = 4  
 };  
-typedef DWORD DEBUG_REASON;  
+typedef DWORD DEBUG_REASON;  
 ```  
   
-```csharp  
-public enum enum_DEBUG_REASON {  
-   DEBUG_REASON_ERROR         = 0,  
-   DEBUG_REASON_USER_LAUNCHED = 1,  
-   DEBUG_REASON_USER_ATTACHED = 2,  
-   DEBUG_REASON_AUTO_ATTACHED = 3,  
-   DEBUG_REASON_CAUSALITY     = 4  
+```c#  
+public enum enum_DEBUG_REASON {  
+   DEBUG_REASON_ERROR         = 0,  
+   DEBUG_REASON_USER_LAUNCHED = 1,  
+   DEBUG_REASON_USER_ATTACHED = 2,  
+   DEBUG_REASON_AUTO_ATTACHED = 3,  
+   DEBUG_REASON_CAUSALITY     = 4  
 };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- DEBUG_REASON_ERROR  
- A non-specific error occurred (this is used as a default condition when none of the other reasons fit).  
+#### パラメーター  
+ DEBUG\_REASON\_ERROR  
+ 意図的にエラーが他の理由が収まらない場合\) 発生しました。これは既定の条件として使用されます。  
   
- DEBUG_REASON_USER_LAUNCHED  
- The process was launched at the user's request.  
+ DEBUG\_REASON\_USER\_LAUNCHED  
+ プロセスがユーザー要求で起動されます。  
   
- DEBUG_REASON_USER_ATTACHED  
- The already-running process was attached to by the user.  
+ DEBUG\_REASON\_USER\_ATTACHED  
+ 既に実行中のプロセスがユーザーによって追加されました。  
   
- DEBUG_REASON_AUTO_ATTACHED  
- The process was automatically attached to when it was launched.  
+ DEBUG\_REASON\_AUTO\_ATTACHED  
+ プロセスが自動的に起動時にアタッチされています。  
   
- DEBUG_REASON_CAUSALITY  
- The process was launched due to a *Just-In-Time* (JIT) debugging event.  
+ DEBUG\_REASON\_CAUSALITY  
+ プロセスは Just\-In\-Time デバッグ イベントが原因 \(JIT\) です。  
   
-## <a name="remarks"></a>Remarks  
- Returned from the [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) method.  
+## 解説  
+ [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) のメソッドから返される値。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 必要条件  
+ ヘッダー : msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## 参照  
+ [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)

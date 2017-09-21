@@ -1,83 +1,66 @@
 ---
-title: IDebugCoreServer3::EnableAutoAttach | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugCoreServer3::EnableAutoAttach
-helpviewer_keywords:
-- IDebugCoreServer3::EnableAutoAttach
+title: "IDebugCoreServer3::EnableAutoAttach | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugCoreServer3::EnableAutoAttach"
+helpviewer_keywords: 
+  - "IDebugCoreServer3::EnableAutoAttach"
 ms.assetid: 06aa633b-263b-4e08-8844-9a52d5120b94
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0d8bd772e752134a41de1edbb2888703c3ebf42d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugcoreserver3enableautoattach"></a>IDebugCoreServer3::EnableAutoAttach
-Enables automatic attaching for the specified debug engines.  
+# IDebugCoreServer3::EnableAutoAttach
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+指定のデバッグ エンジンの自動アタッチを有効にします。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT EnableAutoAttach(  
-   GUID*     rgguidSpecificEngines,  
-   DWORD     celtSpecificEngines,  
-   LPCOLESTR pszStartPageUrl,  
-   BSTR*     pbstrSessionId  
+```cpp#  
+HRESULT EnableAutoAttach(  
+   GUID*     rgguidSpecificEngines,  
+   DWORD     celtSpecificEngines,  
+   LPCOLESTR pszStartPageUrl,  
+   BSTR*     pbstrSessionId  
 );  
 ```  
   
-```csharp  
-int EnableAutoAttach(  
-   Guid[]     rgguidSpecificEngines,  
-   uint       celtSpecificEngines,  
-   string     pszStartPageUrl,  
-   out string pbstrSessionId  
+```c#  
+int EnableAutoAttach(  
+   Guid[]     rgguidSpecificEngines,  
+   uint       celtSpecificEngines,  
+   string     pszStartPageUrl,  
+   out string pbstrSessionId  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `rgguidSpecificEngines`  
- [in] Array of GUIDs for each debug engine to mark as auto-attaching.  
+ \[入力\] 自動アタッチしてマークする各デバッグ エンジンの GUID の配列。  
   
  `celtSpecificEngines`  
- [in] The number of engines specified in `rgguidSpecificEngines`.  
+ \[入力\] `rgguidSpecificEngines` で指定されたエンジンの数。  
   
  `pszStartPageUrl`  
- [in] The starting URL to use when auto-attaching.  
+ \[入力\] 自動アタッチするときに使用する開始 URL。  
   
  `pbstrSessionID`  
- [out] ID of the session that was auto-attached.  
+ \[入力\] 自動アタッチされたセッション ID。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns error code. One error code is `E_AUTO_ATTACH_NOT_REGISTERED`, which indicates that the auto-attach class factory has not been registered.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  示す自動アタッチのクラス ファクトリを登録されていないという 1 種類のエラー コードを `E_AUTO_ATTACH_NOT_REGISTERED` です。  
   
-## <a name="remarks"></a>Remarks  
- When a program associated with the specified URL is started, the specified debug engines are automatically started and attached.  
+## 解説  
+ 指定した URL に関連付けられているプログラムが起動されると指定されたデバッグ エンジンが自動的に開始され割り当てられます。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

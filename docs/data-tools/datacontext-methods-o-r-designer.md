@@ -1,73 +1,57 @@
 ---
-title: DataContext Methods (O-R Designer) | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "DataContext Methods (O/R Designer) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: c149f4e5-3b61-4c33-892e-3e26d47f3eeb
 caps.latest.revision: 5
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: f213884f8ad4c94eddd05566dc7cec36c6a16107
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 1
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="datacontext-methods-or-designer"></a>DataContext Methods (O/R Designer)
-<xref:System.Data.Linq.DataContext> methods (in the context of the [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)) are methods of the <xref:System.Data.Linq.DataContext> class that run stored procedures and functions in a database.  
+# DataContext Methods (O/R Designer)
+<xref:System.Data.Linq.DataContext> メソッド \([Object Relational Designer \(O\/R Designer\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md) のコンテキスト\) は、データベース内のストアド プロシージャおよび関数を実行する <xref:System.Data.Linq.DataContext> クラスのメソッドです。  
   
- The <xref:System.Data.Linq.DataContext> class is a [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] class that acts as a conduit between a SQL Server database and the [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] entity classes mapped to that database. The <xref:System.Data.Linq.DataContext> class contains the connection string information and the methods for connecting to a database and manipulating the data in the database. By default, the <xref:System.Data.Linq.DataContext> class contains several methods that you can call, such as the <xref:System.Data.Linq.DataContext.SubmitChanges%2A> method that sends updated data from [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] classes to the database. You can also create additional <xref:System.Data.Linq.DataContext> methods that map to stored procedures and functions. In other words, calling these custom methods will run the stored procedure or function in the database that the <xref:System.Data.Linq.DataContext> method is mapped to. You can add new methods to the <xref:System.Data.Linq.DataContext> class just as you would add methods to extend any class. However, in discussions about <xref:System.Data.Linq.DataContext> methods in the context of the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], it is the <xref:System.Data.Linq.DataContext> methods that map to stored procedures and functions that are being discussed.  
-  
-## <a name="methods-pane"></a>Methods Pane  
- <xref:System.Data.Linq.DataContext> methods that map to stored procedures and functions are displayed in the methods pane of the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. The methods pane is the pane along the side of the **Entities** pane (the main design surface). The methods pane lists all <xref:System.Data.Linq.DataContext> methods that you have created by using the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. By default, the methods pane is empty; drag stored procedures or functions from **Server Explorer**/**Database Explorer** onto the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] to create <xref:System.Data.Linq.DataContext> methods and populate the methods pane. For more information, see [How to: Create DataContext methods mapped to stored procedures and functions (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md).  
+ <xref:System.Data.Linq.DataContext> クラスは、SQL Server データベースと、そのデータベースにマップされる [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] エンティティ クラスの間のパイプ役として機能する [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] クラスです。<xref:System.Data.Linq.DataContext> クラスには、接続文字列の情報と、データベースへの接続およびデータベース内のデータの操作を行うメソッドが含まれています。既定では、<xref:System.Data.Linq.DataContext> クラスに、呼び出すことのできるいくつかのメソッドが含まれます。たとえば、更新されたデータを [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] クラスからデータベースに送信する <xref:System.Data.Linq.DataContext.SubmitChanges%2A> メソッドなどです。また、ストアド プロシージャおよび関数にマップされる追加の <xref:System.Data.Linq.DataContext> メソッドを作成することもできます。つまり、これらのカスタム メソッドを呼び出すと、<xref:System.Data.Linq.DataContext> メソッドのマップ先となっているデータベース内のストアド プロシージャまたは関数が実行されます。メソッドを追加して任意のクラスを拡張するのと同じように、<xref:System.Data.Linq.DataContext> クラスに新しいメソッドを追加できます。ただし、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]のコンテキストにおける <xref:System.Data.Linq.DataContext> メソッドの説明では、ストアド プロシージャおよび関数にマップされる <xref:System.Data.Linq.DataContext> メソッドを説明の対象としています。  
   
 > [!NOTE]
->  Open and close the methods pane by right-clicking the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] and then clicking **Hide Methods Pane** or **Show Methods Pane**, or use the keyboard shortcut CTRL+1.  
+>  [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] では、ストアド プロシージャと関数は同じ方法で処理され、両方とも同じ <xref:System.Data.Linq.StoredProcedureAttribute> を使用してエンティティ クラスにマップされます。[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] のコンテキストでは、ストアド プロシージャにマップされる <xref:System.Data.Linq.DataContext> メソッドは、関数にマップされるメソッドと同じです。  
   
-## <a name="two-types-of-datacontext-methods"></a>Two Types of DataContext Methods  
- DataContext methods are those methods that map to stored procedures and functions in the database. You can create and add DataContext methods on the methods pane of the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. There are two distinct types of <xref:System.Data.Linq.DataContext> methods; those that return one or more result sets, and those that do not:  
-  
--   <xref:System.Data.Linq.DataContext> methods that return one or more result sets:  
-  
-     Create this kind of <xref:System.Data.Linq.DataContext> method when your application just needs to run stored procedures and functions in the database and return the results. For more information, see [How to: Create DataContext methods mapped to stored procedures and functions (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md), System.Data.Linq.ISingleResult\<T>, and <xref:System.Data.Linq.IMultipleResults>.  
-  
--   <xref:System.Data.Linq.DataContext> methods that do not return result sets: such as Inserts, Updates, and Deletes for a specific entity class.  
-  
-     Create this kind of <xref:System.Data.Linq.DataContext> method when your application has to run stored procedures instead of using the default [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] behavior for saving modified data between an entity class and the database. For more information, see [How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).  
-  
-## <a name="return-types-of-datacontext-methods"></a>Return Types of DataContext Methods  
- When you drag stored procedures and functions from **Server Explorer**/**Database Explorer** onto the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], the return type of the generated <xref:System.Data.Linq.DataContext> method differs depending on where you drop the item. Dropping the items directly onto an existing entity class creates a <xref:System.Data.Linq.DataContext> method with the return type of the entity class; dropping items onto an empty area of the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] (in either pane) creates a <xref:System.Data.Linq.DataContext> method that returns an automatically generated type. The automatically generated type that is created has a name that matches the stored procedure or function name and properties that map to the fields returned by the stored procedure or function.  
+## メソッド ペイン  
+ ストアド プロシージャおよび関数にマップされる <xref:System.Data.Linq.DataContext> メソッドは、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]のメソッド ペインに表示されます。メソッド ペインは、**エンティティ** ペイン \(メインのデザイン サーフェイス\) の横に表示されているペインです。メソッド ペインには、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]を使用して作成されたすべての <xref:System.Data.Linq.DataContext> メソッドが表示されます。既定ではメソッド ペインは空です。<xref:System.Data.Linq.DataContext> メソッドを作成し、メソッド ペインにデータを設定するには、**サーバー エクスプローラー**または**データベース エクスプローラー**から、ストアド プロシージャまたは関数を [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]にドラッグします。詳細については、「[How to: Create DataContext Methods Mapped to Stored Procedures and Functions \(O\/R Designer\)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)」を参照してください。  
   
 > [!NOTE]
->  You can change the return type of a <xref:System.Data.Linq.DataContext> method after you add it to the methods pane. To inspect or change the return type of a <xref:System.Data.Linq.DataContext> method, select it and inspect the **Return Type** property in the **Properties** window. For more information, see [How to: Change the return type of a DataContext method (O/R Designer)](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md).  
+>  メソッド ペインを開いたり閉じたりするには、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]を右クリックし、**\[メソッド ペインの非表示\]** または **\[メソッド ペインの表示\]** をクリックするか、Ctrl \+ 1 のショートカット キーを使用します。  
   
- Objects you drag from the database onto the O/R Designer surface will be named automatically, based on the name of the objects in the database. If you drag the same object more than once, a number is appended to the end of the new name that differentiates the names. When database object names contain spaces, or characters not-supported in Visual Basic or C#, the space or invalid character is replaced with an underscore.  
+## 2 種類の DataContext メソッド  
+ DataContext メソッドは、データベース内のストアド プロシージャおよび関数にマップされるメソッドです。DataContext メソッドは、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]のメソッド ペインで作成および追加できます。<xref:System.Data.Linq.DataContext> メソッドには、1 つ以上の結果セットを返すものと結果セットを返さないものの 2 種類があります。  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
- [Stored Procedures](/dotnet/framework/data/adonet/sql/linq/stored-procedures)   
- [How to: Create DataContext methods mapped to stored procedures and functions (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)   
- [How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)   
- [Walkthrough: Customizing the insert, update, and delete behavior of entity classes](../data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes.md)   
- [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
+-   1 つ以上の結果セットを返す <xref:System.Data.Linq.DataContext> メソッド  
+  
+     この種類の <xref:System.Data.Linq.DataContext> メソッドは、アプリケーションでデータベース内のストアド プロシージャおよび関数を実行し、結果を返すことだけが必要な場合に作成します。詳細については、「[How to: Create DataContext Methods Mapped to Stored Procedures and Functions \(O\/R Designer\)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)」、「<xref:System.Data.Linq.ISingleResult%271>」、および「<xref:System.Data.Linq.IMultipleResults>」を参照してください。  
+  
+-   結果セットを返さない <xref:System.Data.Linq.DataContext> メソッド \(特定のエンティティ クラスの挿入、更新、削除など\)  
+  
+     この種類の <xref:System.Data.Linq.DataContext> メソッドは、エンティティ クラスとデータベース間で変更されたデータを保存するために、既定の [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] の動作を使用するのではなく、アプリケーションでストアド プロシージャを実行する必要がある場合に作成します。詳細については、「[How to: Assign Stored Procedures to Perform Updates, Inserts, and Deletes \(O\/R Designer\)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)」を参照してください。  
+  
+## DataContext メソッドの戻り値の型  
+ **サーバー エクスプローラー**または**データベース エクスプローラー**から [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]にストアド プロシージャまたは関数をドラッグする場合、生成される <xref:System.Data.Linq.DataContext> メソッドの戻り値の型は、項目をドロップする場所によって異なります。既存のエンティティ クラスに項目を直接ドロップすると、そのエンティティ クラスを戻り値の型とする <xref:System.Data.Linq.DataContext> メソッドが作成されます。[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]の空の領域 \(任意のペイン\) に項目をドロップすると、自動生成された型を返す <xref:System.Data.Linq.DataContext> メソッドが作成されます。作成される自動生成の型は、ストアド プロシージャ名または関数名に一致する名前と、そのストアド プロシージャまたは関数によって返される各フィールドにマップされるプロパティを持ちます。  
+  
+> [!NOTE]
+>  <xref:System.Data.Linq.DataContext> メソッドをメソッド ペインに追加した後に、その戻り値の型を変更できます。<xref:System.Data.Linq.DataContext> メソッドの戻り値の型を確認または変更するには、**\[プロパティ\]** ウィンドウでメソッドを選択し、**\[Return Type\]** プロパティを調べます。詳細については、「[How to: Change the Return Type of a DataContext Method \(O\/R Designer\)](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)」を参照してください。  
+  
+ データベースから O\/R デザイナー画面にドラッグしたオブジェクトには、データベース内のオブジェクトの名前に基づいて自動的に名前が付けられます。同じオブジェクトを複数回ドラッグすると、新しい名前の末尾に名前を区別する番号が付けられます。データベース オブジェクト名にスペースや Visual Basic または C\# でサポートされない文字が含まれている場合、そのスペースまたは無効な文字はアンダースコアに置き換えられます。  
+  
+## 参照  
+ [Object Relational Designer \(O\/R Designer\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
+ [Stored Procedures](../Topic/Stored%20Procedures.md)   
+ [How to: Create DataContext Methods Mapped to Stored Procedures and Functions \(O\/R Designer\)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)   
+ [How to: Assign Stored Procedures to Perform Updates, Inserts, and Deletes \(O\/R Designer\)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)   
+ [Walkthrough: Customizing the Insert, Update, and Delete Behavior of Entity Classes](../data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes.md)   
+ [Walkthrough: Creating LINQ to SQL Classes \(O\/R Designer\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)

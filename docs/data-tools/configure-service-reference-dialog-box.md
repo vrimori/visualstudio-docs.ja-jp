@@ -1,116 +1,99 @@
 ---
-title: Configure Service Reference Dialog Box | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- msvse_wcf.dlg.ConfigureServiceReference
-helpviewer_keywords:
-- WCF services, Configure Service Reference dialog box
-- service references [Visual Studio], configuring behavior
-- Configure Service Reference dialog box
+title: "[サービス参照の構成] ダイアログ ボックス | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "msvse_wcf.dlg.ConfigureServiceReference"
+helpviewer_keywords: 
+  - "WCF サービス、[サービス参照の構成] ダイアログ ボックス"
+  - "サービス参照 [Visual Studio]、動作の構成"
+  - "[サービス参照の構成] ダイアログ ボックス"
 ms.assetid: 25e4c36b-2db6-4e71-9010-b7068255d09d
 caps.latest.revision: 16
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: a4aaa6e00355cee8ea7700d9114d2c174700ba72
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 13
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="configure-service-reference-dialog-box"></a>Configure Service Reference Dialog Box
-The **Configure Service Reference** dialog box enables you to configure the behavior of [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] services.  
+# [サービス参照の構成] ダイアログ ボックス
+**\[サービス参照の構成\]** ダイアログ ボックスでは、[!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] サービスの動作を構成できます。  
   
 > [!NOTE]
->  The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition. To change your settings, choose Import and Export Settings on the Tools menu. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。  設定を変更するには、\[ツール\] メニューの \[設定のインポートとエクスポート\] をクリックします。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
- To access the **Configure Service Reference** dialog box, right-click a service reference in **Solution Explorer** and choose **Configure Service Reference**. You can also access the dialog box by clicking the **Advanced** button in the **Add Service Reference Dialog Box**.  
+ **\[サービス参照の構成\]** ダイアログ ボックスにアクセスするには、**ソリューション エクスプローラー** でサービス参照を右クリックし、**\[サービス参照の構成\]** を選択します。  [Add Service Reference Dialog Box](../Topic/Add%20Service%20Reference%20Dialog%20Box.md)で **\[詳細\]** ボタンをクリックしてダイアログ ボックスにアクセスすることもできます。  
   
-## <a name="task-list"></a>Task List  
+## タスク一覧  
   
--   To change the address where a WCF service is hosted, enter the new address in the **Address** field.  
+-   WCF サービスがホストされるアドレスを変更するには、**\[アドレス\]** フィールドに新しいアドレスを入力します。  
   
--   To change the access level for classes in a WCF client, select an access-level keyword in the **Access level for generated classes** list.  
+-   WCF クライアント内のクラスのアクセス レベルを変更するには、**\[生成されたクラスのアクセス レベル\]** リストでアクセス レベル キーワードを選択します。  
   
--   To call the methods of a WCF service asynchronously, select the **Generate asynchronous operations** check box.  
+-   WCF サービスのメソッドを非同期に呼び出すには、**\[非同期操作を生成する\]** チェック ボックスをオンにします。  
   
--   To generate message contract types in a WCF client, select the **Always generate message contracts** check box.  
+-   WCF クライアントでメッセージ コントラクト型を生成するには、**\[メッセージ コントラクトを常に生成\]** チェック ボックスをオンにします。  
   
--   To specify list or dictionary collection types for a WCF client, select the types from the **Collection type** and **Dictionary collection type** lists.  
+-   WCF クライアントのリストまたはディクショナリ コレクションの型を指定するには、**\[コレクション型\]** リストおよび **\[ディクショナリ コレクション型\]** リストから型を選択します。  
   
--   To disable type sharing, clear the **Reuse types in referenced assemblies** check box. To enable type sharing for a subset of referenced assemblies, select the **Reuse types in referenced assemblies** check box, select **Reuse types in specified referenced assemblies**, and select the desired references in the **Referenced assemblies list**.  
+-   型の共有を無効にするには、**\[参照されたアセンブリで型を再利用\]** チェック ボックスをオフにします。  参照されたアセンブリのサブセットで型の共有を有効にするには、**\[参照されたアセンブリで型を再利用\]** チェック ボックスをオンにし、**\[参照されたアセンブリを指定して型を再利用\]**チェック ボックスをオンにして、**\[Referenced assemblies list \(参照されたアセンブリ一覧\)\]** で必要な参照を選択します。  
   
-## <a name="uielement-list"></a>UIElement List  
+## UIElement の一覧  
  **Address**  
- Used to update the Web address where a service reference looks for a service. For example, during development the service may be hosted on a development server then later moved to a production server, necessitating an address change.  
+ サービス参照がサービスを検索する Web アドレスを更新するために使用されます。  たとえば、開発中のサービスは開発サーバーでホストされ、その後、運用サーバーに移されることがあり、アドレスの変更が必要になります。  
   
 > [!NOTE]
->  The Address element is not available when the **Configure Service Reference** dialog box is displayed from the **Add Service Reference Dialog Box**.  
+>  Address 要素は、**\[サービス参照の構成\]** ダイアログ ボックスが [Add Service Reference Dialog Box](../Topic/Add%20Service%20Reference%20Dialog%20Box.md)から表示された場合は使用できません。  
   
- **Access level for generated classes**  
- Determines the code access level for WCF client classes.  
-  
-> [!NOTE]
->  For Website projects, this option is always set to `Public` and cannot be changed. For more information, see [Troubleshooting Service References](../data-tools/troubleshooting-service-references.md).  
-  
- **Generate asynchronous operations**  
- Determines whether WCF service methods will be called synchronously (the default) or asynchronously.  
-  
- **Generate task-based operations**  
- When writing async code, this option allows you to take advantage of the Task Parallel Library (TPL) that was introduced with .Net 4. See [Task Parallel Library (TPL)](http://msdn.microsoft.com/library/dd460717.aspx).  
-  
- **Always generate message contracts**  
- Determines whether message contract types will be generated for a WCF client. For more information about message contracts, see [Using Message Contracts](/dotnet/framework/wcf/feature-details/using-message-contracts).  
-  
- **Collection type**  
- Specifies the list collection type for a WCF client. The default type is <xref:System.Array>.  
-  
- **Dictionary collection type**  
- Specifies the dictionary collection type for a WCF client. The default type is <xref:System.Collections.Generic.Dictionary%602>.  
-  
- **Reuse types in referenced assemblies**  
- Determines whether a WCF client will try to reuse that already exist in referenced assemblies instead of generating new types when a service is added or updated. By default, this option is checked.  
-  
- **Reuse types in all referenced assemblies**  
- When selected, all types in the **Referenced assemblies list** will be reused if possible. By default, this option is selected.  
-  
- **Reuse types in specified referenced assemblies**  
- When selected, only the selected types in the **Referenced assemblies list** will be reused.  
-  
- **Referenced assemblies list**  
- Contains a list of referenced assemblies for the project or Web site. When **Reuse types in specified referenced assemblies** is selected, individual assemblies can be selected or cleared.  
-  
- **Add Web Reference**  
- Displays the [NIB: Add Web Reference Dialog Box](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5).  
+ **\[生成されたクラスのアクセス レベル\]**  
+ WCF クライアント クラスのコード アクセス レベルを特定します。  
   
 > [!NOTE]
->  This option should be used only for projects that target version 2.0 of the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
+>  Web サイト プロジェクトの場合、このオプションは常に `Public` に設定され、変更できません。  詳細については、「[Troubleshooting Service References](../data-tools/troubleshooting-service-references.md)」を参照してください。  
+  
+ **\[非同期操作を生成する\]**  
+ WCF サービス メソッドの呼び出しが同期 \(既定\) または非同期のどちらであるかを指定します。  
+  
+ **\[タスク ベースの操作を生成する\]**  
+ 非同期コードを作成する場合、このオプションにより、.Net 4 で導入されたタスク並列ライブラリ \(TPL\) を利用できます。  「[タスク並列ライブラリ \(TPL\)](http://msdn.microsoft.com/library/dd460717.aspx)」を参照してください。  
+  
+ **\[メッセージ コントラクトを常に生成\]**  
+ WCF クライアント向けにメッセージ コントラクト型が生成されるかどうかを指定します。  メッセージ コントラクトの詳細については、「[メッセージ コントラクトの使用](../Topic/Using%20Message%20Contracts.md)」を参照してください。  
+  
+ **\[コレクション型\]**  
+ WCF クライアントのリスト コレクション型を指定します。  既定の型は <xref:System.Array> です。  
+  
+ **\[ディクショナリ コレクション型\]**  
+ WCF クライアントのディクショナリ コレクション型を指定します。  既定の型は <xref:System.Collections.Generic.Dictionary%602> です。  
+  
+ **\[参照されたアセンブリで型を再利用\]**  
+ サービスが追加または更新された場合、WCF クライアントが、新しい型を生成する代わりに、参照されたアセンブリ内の既存の型を再利用するかどうかを指定します。  既定では、このチェック ボックスはオンになっています。  
+  
+ **\[参照されたアセンブリすべてで型を再利用\]**  
+ オンになっている場合、**\[Referenced assemblies list \(参照されたアセンブリ一覧\)\]** 内のすべての型は可能であれば再利用されます。  既定では、このチェック ボックスはオンになっています。  
+  
+ **\[参照されたアセンブリを指定して型を再利用\]**  
+ オンになっている場合、**\[Referenced assemblies list \(参照されたアセンブリ一覧\)\]** 内の選択された型のみが再利用されます。  
+  
+ **\[Referenced assemblies list \(参照されたアセンブリ一覧\)\]**  
+ プロジェクトまたは Web サイトで参照されたアセンブリの一覧を含みます。  **\[参照されたアセンブリを指定して型を再利用\]** がオンになっている場合、個別のアセンブリを選択または選択解除できます。  
+  
+ **\[Web 参照の追加\]**  
+ [NIB: Add Web Reference Dialog Box](http://msdn.microsoft.com/ja-jp/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)を表示します。  
   
 > [!NOTE]
->  The **Add Web Reference** button is available only when the **Configure Service Reference** dialog box is displayed from the **Add Service Reference Dialog Box**.  
+>  このオプションは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョン 2.0 を対象にするプロジェクトでのみ使用する必要があります。  
   
-## <a name="see-also"></a>See Also  
-
- [How to: Add a Reference to a Web Service](how-to-add-update-or-remove-a-wcf-data-service-reference.md)   
- [Windows Communication Foundation Services and WCF Data Services](../data-tools/configure-service-reference-dialog-box.md)
+> [!NOTE]
+>  **\[Web 参照の追加\]** ボタンは、**\[サービス参照の構成\]** ダイアログ ボックスが [Add Service Reference Dialog Box](../Topic/Add%20Service%20Reference%20Dialog%20Box.md)から表示された場合にのみ使用できます。  
+  
+## 参照  
+ [Add Service Reference Dialog Box](../Topic/Add%20Service%20Reference%20Dialog%20Box.md)   
+ [How to: Add, Update, or Remove a Service Reference](../Topic/How%20to:%20Add,%20Update,%20or%20Remove%20a%20Service%20Reference.md)   
+ [How to: Add a Reference to a Web Service](../Topic/How%20to:%20Add%20a%20Reference%20to%20a%20Web%20Service.md)   
+ [Windows Communication Foundation サービスと WCF データ サービス](../data-tools/configure-service-reference-dialog-box.md)   
+ [ASMX サービスと WCF サービスを利用するサンプル](http://msdn.microsoft.com/ja-jp/788ddf2c-2ac1-416b-8789-2fbb1e29b8fe)

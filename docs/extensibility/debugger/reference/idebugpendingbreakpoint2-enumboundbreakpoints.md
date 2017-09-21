@@ -1,71 +1,54 @@
 ---
-title: IDebugPendingBreakpoint2::EnumBoundBreakpoints | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugPendingBreakpoint2::EnumBoundBreakpoints
-helpviewer_keywords:
-- EnumBoundBreakpoints method
-- IDebugPendingBreakpoint2::EnumBoundBreakpoints method
+title: "IDebugPendingBreakpoint2::EnumBoundBreakpoints | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugPendingBreakpoint2::EnumBoundBreakpoints"
+helpviewer_keywords: 
+  - "EnumBoundBreakpoints メソッド"
+  - "IDebugPendingBreakpoint2::EnumBoundBreakpoints メソッド"
 ms.assetid: 179c7c54-8446-462d-b099-e0f9cf06dc52
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ad5e8d527629cf03239dd338185ac6667270cdb4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugpendingbreakpoint2enumboundbreakpoints"></a>IDebugPendingBreakpoint2::EnumBoundBreakpoints
-Enumerates all breakpoints bound from this pending breakpoint.  
+# IDebugPendingBreakpoint2::EnumBoundBreakpoints
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+この保留中のブレークポイントからバインドされたすべてのブレークポイントを列挙します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT EnumBoundBreakpoints(   
-   IEnumDebugBoundBreakpoints2** ppEnum  
+```cpp#  
+HRESULT EnumBoundBreakpoints(   
+   IEnumDebugBoundBreakpoints2** ppEnum  
 );  
 ```  
   
-```csharp  
-int EnumBoundBreakpoints(   
-   out IEnumDebugBoundBreakpoints2 ppEnum  
+```c#  
+int EnumBoundBreakpoints(   
+   out IEnumDebugBoundBreakpoints2 ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ppEnum`  
- [out] Returns an [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) object that enumerates the bound breakpoints.  
+ \[入力\] バインド ブレークポイントを列挙する [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) のオブジェクトを返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the breakpoint has been deleted.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  ブレークポイントが削除された `E_BP_DELETED` を返します。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CPendingBreakpoint` object that exposes the [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interface.  
+## 使用例  
+ 次の例に [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) インターフェイスを公開する `CPendingBreakpoint` の単純なオブジェクトに対してこのメソッドを実装する方法を示します。  
   
-```cpp  
+```cpp#  
 HRESULT CPendingBreakpoint::EnumBoundBreakpoints(IEnumDebugBoundBreakpoints2** ppEnum)    
 {    
    HRESULT hr;    
@@ -135,6 +118,6 @@ HRESULT CPendingBreakpoint::EnumBoundBreakpoints(IEnumDebugBoundBreakpoints2** p
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md)

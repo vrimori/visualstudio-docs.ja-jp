@@ -1,145 +1,128 @@
 ---
-title: BPREQI_FIELDS | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- BPREQI_FIELDS
-helpviewer_keywords:
-- BPREQI_FIELDS enumeration
+title: "BPREQI_FIELDS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "BPREQI_FIELDS"
+helpviewer_keywords: 
+  - "BPREQI_FIELDS 列挙型"
 ms.assetid: 679e771e-4a79-484e-af37-f962ef4aa245
 caps.latest.revision: 14
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 76ff03498b0bb6953024f03a9535e47346da38b5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 14
 ---
-# <a name="bpreqifields"></a>BPREQI_FIELDS
-Specifies the information to be retrieved about a breakpoint request.  
+# BPREQI_FIELDS
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+ブレークポイントの要求に関して取得する情報を指定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
 ```cpp  
-enum enum_BPREQI_FIELDS {   
-   BPREQI_BPLOCATION   = 0x0001,  
-   BPREQI_LANGUAGE     = 0x0002,  
-   BPREQI_PROGRAM      = 0x0004,  
-   BPREQI_PROGRAMNAME  = 0x0008,  
-   BPREQI_THREAD       = 0x0010,  
-   BPREQI_THREADNAME   = 0x0020,  
-   BPREQI_PASSCOUNT    = 0x0040,  
-   BPREQI_CONDITION    = 0x0080,  
-   BPREQI_FLAGS        = 0x0100,  
-   BPREQI_ALLOLDFIELDS = 0x01ff  
-   BPREQI_VENDOR       = 0x0200,   // BP_REQUEST_INFO2 only  
-   BPREQI_CONSTRAINT   = 0x0400,   // BP_REQUEST_INFO2 only  
-   BPREQI_TRACEPOINT   = 0x0800,   // BP_REQUEST_INFO2 only  
-   BPREQI_ALLFIELDS    = 0x0fff    // BP_REQUEST_INFO2 only  
+enum enum_BPREQI_FIELDS {   
+   BPREQI_BPLOCATION   = 0x0001,  
+   BPREQI_LANGUAGE     = 0x0002,  
+   BPREQI_PROGRAM      = 0x0004,  
+   BPREQI_PROGRAMNAME  = 0x0008,  
+   BPREQI_THREAD       = 0x0010,  
+   BPREQI_THREADNAME   = 0x0020,  
+   BPREQI_PASSCOUNT    = 0x0040,  
+   BPREQI_CONDITION    = 0x0080,  
+   BPREQI_FLAGS        = 0x0100,  
+   BPREQI_ALLOLDFIELDS = 0x01ff  
+   BPREQI_VENDOR       = 0x0200,   // BP_REQUEST_INFO2 only  
+   BPREQI_CONSTRAINT   = 0x0400,   // BP_REQUEST_INFO2 only  
+   BPREQI_TRACEPOINT   = 0x0800,   // BP_REQUEST_INFO2 only  
+   BPREQI_ALLFIELDS    = 0x0fff    // BP_REQUEST_INFO2 only  
 };  
 typedef DWORD BPREQI_FIELDS;  
 ```  
   
-```csharp  
-public enum enum_BPREQI_FIELDS {   
-   BPREQI_BPLOCATION   = 0x0001,  
-   BPREQI_LANGUAGE     = 0x0002,  
-   BPREQI_PROGRAM      = 0x0004,  
-   BPREQI_PROGRAMNAME  = 0x0008,  
-   BPREQI_THREAD       = 0x0010,  
-   BPREQI_THREADNAME   = 0x0020,  
-   BPREQI_PASSCOUNT    = 0x0040,  
-   BPREQI_CONDITION    = 0x0080,  
-   BPREQI_FLAGS        = 0x0100,  
-   BPREQI_ALLOLDFIELDS = 0x01ff  
-   BPREQI_VENDOR       = 0x0200,   // BP_REQUEST_INFO2 only  
-   BPREQI_CONSTRAINT   = 0x0400,   // BP_REQUEST_INFO2 only  
-   BPREQI_TRACEPOINT   = 0x0800,   // BP_REQUEST_INFO2 only  
-   BPREQI_ALLFIELDS    = 0x0fff    // BP_REQUEST_INFO2 only  
+```c#  
+public enum enum_BPREQI_FIELDS {   
+   BPREQI_BPLOCATION   = 0x0001,  
+   BPREQI_LANGUAGE     = 0x0002,  
+   BPREQI_PROGRAM      = 0x0004,  
+   BPREQI_PROGRAMNAME  = 0x0008,  
+   BPREQI_THREAD       = 0x0010,  
+   BPREQI_THREADNAME   = 0x0020,  
+   BPREQI_PASSCOUNT    = 0x0040,  
+   BPREQI_CONDITION    = 0x0080,  
+   BPREQI_FLAGS        = 0x0100,  
+   BPREQI_ALLOLDFIELDS = 0x01ff  
+   BPREQI_VENDOR       = 0x0200,   // BP_REQUEST_INFO2 only  
+   BPREQI_CONSTRAINT   = 0x0400,   // BP_REQUEST_INFO2 only  
+   BPREQI_TRACEPOINT   = 0x0800,   // BP_REQUEST_INFO2 only  
+   BPREQI_ALLFIELDS    = 0x0fff    // BP_REQUEST_INFO2 only  
 };  
 ```  
   
-## <a name="members"></a>Members  
- BPREQI_BPLOCATION  
- Initialize/use the `bpLocation` (breakpoint location) field of the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) or [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) structure.  
+## メンバー  
+ BPREQI\_BPLOCATION  
+ [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) または [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) の構造体の `bpLocation` \(ブレークポイントの位置\) フィールドと初期化を使用します。  
   
- BPREQI_LANGUAGE  
- Initialize/use the `guidLanguage` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ BPREQI\_LANGUAGE  
+ `BP_REQUEST_INFO` または `BP_REQUEST_INFO2` の構造体の初期化と `guidLanguage` のフィールドを使用します。  
   
- BPREQI_PROGRAM  
- Initialize/use the `pProgram` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ BPREQI\_PROGRAM  
+ `BP_REQUEST_INFO` または `BP_REQUEST_INFO2` の構造体の初期化と `pProgram` のフィールドを使用します。  
   
- BPREQI_PROGRAMNAME  
- Initialize/use the `bstrProgramName` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ BPREQI\_PROGRAMNAME  
+ `BP_REQUEST_INFO` または `BP_REQUEST_INFO2` の構造体の初期化と `bstrProgramName` のフィールドを使用します。  
   
- BPREQI_THREAD  
- Initialize/use the `pThread` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ BPREQI\_THREAD  
+ `BP_REQUEST_INFO` または `BP_REQUEST_INFO2` の構造体の初期化と `pThread` のフィールドを使用します。  
   
- BPREQI_THREADNAME  
- Initialize/use the `bstrThreadName` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ BPREQI\_THREADNAME  
+ `BP_REQUEST_INFO` または `BP_REQUEST_INFO2` の構造体の初期化と `bstrThreadName` のフィールドを使用します。  
   
- BPREQI_PASSCOUNT  
- Initialize/use the `bpPassCount` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ BPREQI\_PASSCOUNT  
+ `BP_REQUEST_INFO` または `BP_REQUEST_INFO2` の構造体の初期化と `bpPassCount` のフィールドを使用します。  
   
- BPREQI_CONDITION  
- Initialize/use the `bpCondition` (breakpoint condition) field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ BPREQI\_CONDITION  
+ `BP_REQUEST_INFO` または `BP_REQUEST_INFO2` の構造体の `bpCondition` \(ブレークポイント条件\) フィールドと初期化を使用します。  
   
- BPREQI_FLAGS  
- Initialize/use the `dwFlags` field of the `BP_REQUEST_INFO` or `BP_REQUEST_INFO2` structure.  
+ BPREQI\_FLAGS  
+ `BP_REQUEST_INFO` または `BP_REQUEST_INFO2` の構造体の初期化と `dwFlags` のフィールドを使用します。  
   
- BPREQI_ALLOLDFIELDS  
- Initialize/use all fields for the of the `BP_REQUEST_INFO` structure.  
+ BPREQI\_ALLOLDFIELDS  
+ `BP_REQUEST_INFO` の構造体のすべてのフィールドと初期化を使用します。  
   
- BPREQI_VENDOR  
- Initialize/use the `guidVendor` field of `BP_REQUEST_INFO2` structure.  
+ BPREQI\_VENDOR  
+ `BP_REQUEST_INFO2` の構造体の初期化と `guidVendor` のフィールドを使用します。  
   
- BPREQI_CONSTRAINT  
- Initialize/use the `bstrConstraint` field of `BP_REQUEST_INFO2` structure.  
+ BPREQI\_CONSTRAINT  
+ `BP_REQUEST_INFO2` の構造体の初期化と `bstrConstraint` のフィールドを使用します。  
   
- BPREQI_TRACEPOINT  
- Initialize/use the `bstrTracepoint` field of `BP_REQUEST_INFO2` structure.  
+ BPREQI\_TRACEPOINT  
+ `BP_REQUEST_INFO2` の構造体の初期化と `bstrTracepoint` のフィールドを使用します。  
   
- BPREQI_ALLFIELDS  
- Specifies all fields for the `BP_REQUEST_INFO2` structure.  
+ BPREQI\_ALLFIELDS  
+ `BP_REQUEST_INFO2` の構造についてすべてのフィールドを指定します。  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) and [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) methods to specify which fields of the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) and [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) structures are to be initialized.  
+## 解説  
+ [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) と [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) のフィールドを構成する方法を指定するに [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) と [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) のメソッドに引数として渡されます初期化があります。  
   
- These flags are also used to indicate which fields of the `BP_REQUEST_INFO` and `BP_REQUEST_INFO2` structures are used and valid when each structure is returned.  
+ 各構造が返されるとこれらのフラグは `BP_REQUEST_INFO` と `BP_REQUEST_INFO2` の構造体のフィールドで使用される有効かを示すために使用されます。  
   
- These values may be combined with a bitwise `OR`.  
+ これらの値はビットごとの `OR` と組み合わせることがあります。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 必要条件  
+ ヘッダー : msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## 参照  
+ [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)   
- [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
- [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)
+ [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
+ [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)

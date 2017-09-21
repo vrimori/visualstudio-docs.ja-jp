@@ -1,77 +1,60 @@
 ---
-title: 'Walkthrough: Creating a Custom Text Template Host | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- walkthroughs [text templates], custom host
-- text templates, custom host walkthrough
+title: "チュートリアル: カスタム テキスト テンプレート ホストの作成 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "テキスト テンプレート, カスタム ホストのチュートリアル"
+  - "チュートリアル [テキスト テンプレート], カスタム ホスト"
 ms.assetid: d00bc366-65ed-4229-885a-196ef9625f05
 caps.latest.revision: 51
-author: alancameronwills
-ms.author: awills
-manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 6a14023a35884ed742535872a649927770e93072
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+author: "alancameronwills"
+ms.author: "awills"
+manager: "douge"
+caps.handback.revision: 51
 ---
-# <a name="walkthrough-creating-a-custom-text-template-host"></a>Walkthrough: Creating a Custom Text Template Host
-A *text template**host* provides an environment that enables the *text template transformation engine* to run. The host is responsible for managing the engine's interaction with the file system. The engine or *directive processor* that needs a file or an assembly can request a resource from the host. The host can then search directories and the global assembly cache to locate the requested resource. For more information, see [The Text Template Transformation Process](../modeling/the-text-template-transformation-process.md).  
+# チュートリアル: カスタム テキスト テンプレート ホストの作成
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+*テキスト テンプレート* *ホスト*は、*テキスト テンプレート変換エンジン*を実行できる環境を提供します。  ホストは、エンジンとファイル システムとの対話を管理します。  ファイルまたはアセンブリを必要とするエンジンまたは*ディレクティブ プロセッサ*は、ホストに対してリソースを要求できます。  ホストは、要求されたリソースをディレクトリとグローバル アセンブリ キャッシュ内で探すことができます。  詳細については、「[テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)」を参照してください。  
   
- You can write a custom host if you want to use the *text template transformation* functionality from outside [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] or if you want to integrate that functionality into custom tools. To create a custom host, you must create a class that inherits from <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>. For the documentation of the individual methods, see <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部から*テキスト テンプレート変換*機能を使用する場合、またはこの機能をカスタム ツールに統合する場合は、カスタム ホストを作成できます。  カスタム ホストを作成するには、<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> を継承するクラスを作成する必要があります。  個々のメソッドの説明については、「<xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>」を参照してください。  
   
 > [!WARNING]
->  If you are writing a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extension or package, consider using the text templating service instead of creating your own host. For more information, see [Invoking Text Transformation in a VS Extension](../modeling/invoking-text-transformation-in-a-vs-extension.md).  
+>  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の拡張機能またはパッケージを作成する場合は、独自のホストを作成するのではなく、テキスト テンプレート サービスを使用することを検討してください。  詳細については、「[VS 拡張機能内でのテキスト変換の呼び出し](../modeling/invoking-text-transformation-in-a-vs-extension.md)」を参照してください。  
   
- Tasks illustrated in this walkthrough include the following:  
+ このチュートリアルでは、以下のタスクを行います。  
   
--   Creating a custom text template host.  
+-   カスタム テキスト テンプレート ホストの作成。  
   
--   Testing the custom host.  
+-   カスタム ホストのテスト。  
   
-## <a name="prerequisites"></a>Prerequisites  
- To complete this walkthrough, you must have the following:  
+## 必須コンポーネント  
+ このチュートリアルを完了するには、次の製品が必要です。  
   
--   Visual Studio 2010 or later  
+-   Visual Studio 2010 以降  
   
 -   Visual Studio SDK  
   
-## <a name="creating-a-custom-text-template-host"></a>Creating a Custom Text Template Host  
- In this walkthrough, you create a custom host in an executable application that can be called from the command line. The application accepts a text template file as an argument, reads the template, calls the engine to transform the template, and displays any errors that occur in the command prompt window.  
+## カスタム テキスト テンプレート ホストの作成  
+ このチュートリアルでは、コマンド ラインから呼び出すことのできる実行可能なアプリケーションでカスタム ホストを作成します。  このアプリケーションは、テキスト テンプレート ファイルを引数として受け取り、テンプレートを読み取ります。さらに、エンジンを呼び出してテンプレートを変換し、発生したすべてのエラーをコマンド プロンプト ウィンドウに表示します。  
   
-#### <a name="to-create-a-custom-host"></a>To create a custom host  
+#### カスタム ホストを作成するには  
   
-1.  In Visual Studio, create a new Visual Basic or a C# console application named CustomHost.  
+1.  Visual Studio で、新しい Visual Basic コンソール アプリケーションまたは C\# コンソール アプリケーションを作成し、CustomHost という名前を付けます。  
   
-2.  Add references to the following assemblies:  
+2.  次のアセンブリへの参照を追加します。  
   
     -   **Microsoft.VisualStudio.TextTemplating.\*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 and later versions**  
+    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 以降のバージョン**  
   
-3.  Replace the code in the Program.cs or Module1.vb file with the following code:  
+3.  Program.cs ファイルまたは Module1.vb ファイル内のコードを次のコードに置き換えます。  
   
-    ```csharp  
+    ```c#  
     using System;  
     using System.IO;  
     using System.CodeDom.Compiler;  
@@ -421,7 +404,7 @@ A *text template**host* provides an environment that enables the *text template 
     }  
     ```  
   
-    ```vb  
+    ```vb#  
     Imports System  
     Imports System.IO  
     Imports System.CodeDom.Compiler  
@@ -728,27 +711,27 @@ A *text template**host* provides an environment that enables the *text template 
     End Namespace  
     ```  
   
-4.  For [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] only, open the **Project** menu, and click **CustomHost Properties**. In the **Startup object** list, click **CustomHost.Program**.  
+4.  [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] の場合にのみ、**\[プロジェクト\]** メニューの **\[CustomHost のプロパティ\]** をクリックします。  **\[スタートアップ オブジェクト\]** ボックスの一覧の **\[CustomHost.Program\]** をクリックします。  
   
-5.  On the **File** menu, click **Save All**.  
+5.  **\[ファイル\]** メニューの **\[すべてを保存\]** をクリックします。  
   
-6.  On the **Build** menu, click **Build Solution**.  
+6.  **\[ビルド\]** メニューの **\[ソリューションのビルド\]** をクリックします。  
   
-## <a name="testing-the-custom-host"></a>Testing the Custom Host  
- To test the custom host, you write a text template, then you run the custom host, pass it the name of the text template, and verify that the template is transformed.  
+## カスタム ホストのテスト  
+ カスタム ホストをテストするには、テキスト テンプレートを作成し、カスタム ホストを実行します。次に、テキスト テンプレートの名前をそのカスタム ホストに渡し、テンプレートが変換されることを確認します。  
   
-#### <a name="to-create-a-text-template-to-test-the-custom-host"></a>To create a text template to test the custom host  
+#### テキスト テンプレートを作成してカスタム ホストをテストするには  
   
-1.  Create a text file, and name it `TestTemplate.tt`.  
+1.  テキスト ファイルを作成し、`TestTemplate.tt` という名前を付けます。  
   
-     You can use any text editor (for example, Notepad) to create the file.  
+     ファイルの作成には、メモ帳など、任意のテキスト エディターを使用できます。  
   
-2.  Add the following to the file:  
+2.  ファイルに次のコードを追加します。  
   
     > [!NOTE]
-    >  The programming language of the text template does not have to match that of the custom host.  
+    >  テキスト テンプレートのプログラミング言語は、カスタム ホストのプログラミング言語と同じでなくてもかまいません。  
   
-    ```csharp  
+    ```c#  
     Text Template Host Test  
   
     <#@ template debug="true" #>  
@@ -766,7 +749,7 @@ A *text template**host* provides an environment that enables the *text template 
     #>  
     ```  
   
-    ```vb  
+    ```vb#  
     Text Template Host Test  
   
     <#@ template debug="true" language="VB"#>  
@@ -786,41 +769,41 @@ A *text template**host* provides an environment that enables the *text template 
   
     ```  
   
-3.  Save and close the file.  
+3.  ファイルを保存して閉じます。  
   
-#### <a name="to-test-the-custom-host"></a>To test the custom host  
+#### カスタム ホストをテストするには  
   
-1.  Open the Command Prompt window.  
+1.  コマンド プロンプト ウィンドウを開きます。  
   
-2.  Type the path of the executable file for the custom host, but do not press ENTER yet.  
+2.  カスタム ホストの実行可能ファイルのパスを入力します。ただし、Enter キーはまだ押さないでください。  
   
-     For example, type:  
+     たとえば、次のように入力します。  
   
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`  
   
     > [!NOTE]
-    >  Instead of typing the address, you can browse to the file CustomHost.exe in **Windows Explorer** and then drag the file into the Command Prompt window.  
+    >  アドレスを入力する代わりに、**Windows エクスプローラー**で CustomHost.exe ファイルを参照し、コマンド プロンプト ウィンドウにドラッグしてもかまいません。  
   
-3.  Type a space.  
+3.  空白を入力します。  
   
-4.  Type the path of the text template file, and then press ENTER.  
+4.  テキスト テンプレート ファイルのパスを入力し、Enter キーを押します。  
   
-     For example, type:  
+     たとえば、次のように入力します。  
   
      `C:\<YOUR PATH>TestTemplate.tt`  
   
     > [!NOTE]
-    >  Instead of typing the address, you can browse to the file TestTemplate.tt in **Windows Explorer** and then drag the file into the Command Prompt window.  
+    >  アドレスを入力する代わりに、**Windows エクスプローラー**で TestTemplate.tt ファイルを参照し、コマンド プロンプト ウィンドウにドラッグしてもかまいません。  
   
-     The custom host application runs and completes the text template transformation process.  
+     カスタム ホスト アプリケーションが実行され、テキスト テンプレート変換プロセスが完了します。  
   
-5.  In **Windows Explorer**, browse to the folder that contains the file TestTemplate.tt.  
+5.  **Windows エクスプローラー**で、TestTemplate.tt ファイルが格納されているフォルダーに移動します。  
   
-     That folder also contains the file TestTemplate1.txt.  
+     このフォルダーには、TestTemplate1.txt ファイルも含まれています。  
   
-6.  Open this file to see the results of the text template transformation.  
+6.  このファイルを開き、テキスト テンプレート変換の結果を確認します。  
   
-     The generated text output appears and looks like this:  
+     生成されたテキスト出力は、次のようになります。  
   
     ```  
     Text Template Host Test  
@@ -830,8 +813,8 @@ A *text template**host* provides an environment that enables the *text template 
     This is a test  
     ```  
   
-## <a name="next-steps"></a>Next Steps  
- In this walkthrough, you created a text template transformation host that supports the basic transformation functionality. You can expand your host to support text templates that call custom or generated directive processors. For more information, see [Walkthrough: Connecting a Host to a Generated Directive Processor](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md).  
+## 次の手順  
+ このチュートリアルでは、基本的な変換機能をサポートするテキスト テンプレート変換ホストを作成しました。  ホストの機能を拡張して、カスタム ディレクティブ プロセッサまたは生成されたディレクティブ プロセッサを呼び出すテキスト テンプレートをサポートすることもできます。  詳細については、「[チュートリアル: 生成済みディレクティブ プロセッサへのホストの接続](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)」を参照してください。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>

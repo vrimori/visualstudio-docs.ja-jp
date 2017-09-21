@@ -1,77 +1,60 @@
 ---
-title: IDebugStackFrame2::GetInfo | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugStackFrame2::GetInfo
-helpviewer_keywords:
-- IDebugStackFrame2::GetInfo
+title: "IDebugStackFrame2::GetInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugStackFrame2::GetInfo"
+helpviewer_keywords: 
+  - "IDebugStackFrame2::GetInfo"
 ms.assetid: 19c6870b-b94e-453c-bf19-82ce95b79d26
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e1a2257144eda1bf2951d5d6a7bbd946f7feb2d4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugstackframe2getinfo"></a>IDebugStackFrame2::GetInfo
-Gets a description of the stack frame.  
+# IDebugStackFrame2::GetInfo
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+スタック フレームの説明を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT GetInfo (   
-   FRAMEINFO_FLAGS dwFieldSpec,  
-   UINT            nRadix,  
-   FRAMEINFO*      pFrameInfo  
+```cpp#  
+HRESULT GetInfo (   
+   FRAMEINFO_FLAGS dwFieldSpec,  
+   UINT            nRadix,  
+   FRAMEINFO*      pFrameInfo  
 );  
 ```  
   
-```csharp  
-int GetInfo (   
-   enum_FRAMEINFO_FLAGS dwFieldSpec,  
-   uint                 nRadix,  
-   FRAMEINFO[]          pFrameInfo  
+```c#  
+int GetInfo (   
+   enum_FRAMEINFO_FLAGS dwFieldSpec,  
+   uint                 nRadix,  
+   FRAMEINFO[]          pFrameInfo  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `dwFieldSpec`  
- [in] A combination of flags from the [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) enumeration that specifies which fields of the `pFrameInfo` parameter are to be filled in.  
+ \[入力\] `pFrameInfo` のパラメーターのフィールドを表示するかを指定します [FRAMEINFO\_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) の列挙体のフラグの組み合わせ。  
   
  `nRadix`  
- [in] The radix to be used in formatting any numerical information.  
+ \[入力\] 情報を数値書式で使用する小数点。  
   
  `pFrameInfo`  
- [out] A [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) structure that is filled in with the description of the stack frame.  
+ \[入力\] スタック フレームの説明が格納されます [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) の構造体。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
- [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)   
+ [FRAMEINFO\_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)   
  [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)

@@ -1,47 +1,30 @@
 ---
-title: IDebugComPlusSymbolProvider2::GetTypesByName | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- GetTypesByName
-- IDebugComPlusSymbolProvider2::GetTypesByName
+title: "IDebugComPlusSymbolProvider2::GetTypesByName | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "GetTypesByName"
+  - "IDebugComPlusSymbolProvider2::GetTypesByName"
 ms.assetid: ef76b1a8-6910-48fe-b4af-d9045eefd23f
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: f98975b514ae00b8d029776f1cea0715247f7035
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugcomplussymbolprovider2gettypesbyname"></a>IDebugComPlusSymbolProvider2::GetTypesByName
-Retrieves a type given its name.  
+# IDebugComPlusSymbolProvider2::GetTypesByName
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+その名前を指定する型を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
-```cpp  
+```cpp#  
 HRESULT GetTypesByName(  
    LPCOLESTR          pszClassName,  
    NAME_MATCH         nameMatch,  
@@ -49,7 +32,7 @@ HRESULT GetTypesByName(
 );  
 ```  
   
-```csharp  
+```c#  
 int GetTypesByName(  
    string               pszClassName,  
    enum_ NAME_MATCH     nameMatch,  
@@ -57,26 +40,26 @@ int GetTypesByName(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `pszClassName`  
- [in] Name of the type.  
+ [in]型の名前。  
   
  `nameMatch`  
- [in] Selects the type of match, for example, case-sensitive. A value from the [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) enumeration.  
+ [in]たとえば、一致の大文字小文字の区別の種類を選択します。 値、 [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) 列挙します。  
   
  `ppEnum`  
- [out] An enumerator that contains the type or types with the given name.  
+ [out]型または指定した名前の型が含まれている列挙子。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、返す `S_OK`。 そうしないと、エラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- For generic types, the name to look up for 'List\<int>' or 'List\<int,int>' would be 'List'. If types of the same name appear in multiple modules, the `ppEnum` paramter will contain all copies. You have to use [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) and distinguish based on the `guidModule` parameter.  
+## <a name="remarks"></a>解説  
+ 検索する名、ジェネリック型の '一覧 \< int>' または 'List \< int、int >' は 'リスト' です。 複数のモジュールで同じ名前の種類が表示されない場合、 `ppEnum` パラメーターには、すべてのコピーが含まれることができます。 使用する必要がある [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) し、区別に基づいて、 `guidModule` パラメーター。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
+## <a name="example"></a>例  
+ 次の例では、このメソッドは実装する方法、 **CDebugSymbolProvider** を公開するオブジェクト、 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) インターフェイスです。  
   
-```cpp  
+```cpp#  
 HRESULT CDebugSymbolProvider::GetTypesByName(  
     LPCOLESTR pszClassName,  
     NAME_MATCH nameMatch,  
@@ -139,5 +122,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>参照  
  [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

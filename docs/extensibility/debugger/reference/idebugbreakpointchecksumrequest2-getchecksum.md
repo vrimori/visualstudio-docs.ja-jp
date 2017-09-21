@@ -1,73 +1,56 @@
 ---
-title: IDebugBreakpointChecksumRequest2::GetChecksum | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugBreakpointChecksumRequest2::GetChecksum
+title: "IDebugBreakpointChecksumRequest2::GetChecksum | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugBreakpointChecksumRequest2::GetChecksum"
 ms.assetid: ec434882-e5c0-4d76-a58b-22c260d8626e
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 32988f396d6fdb4433599edd651f79883013e55e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="idebugbreakpointchecksumrequest2getchecksum"></a>IDebugBreakpointChecksumRequest2::GetChecksum
-Retrieves the document checksum for a breakpoint request given the unique identifier of the checksum algorithm to use.  
+# IDebugBreakpointChecksumRequest2::GetChecksum
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+チェックサム アルゴリズムを使用して一意の識別子のブレークポイントの要求のドキュメントのチェックサムを取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT GetChecksum(   
-   REFGUID        guidAlgorithm,  
-   CHECKSUM_DATA *pChecksumData  
+   REFGUID        guidAlgorithm,  
+   CHECKSUM_DATA *pChecksumData  
 );  
 ```  
   
-```csharp  
+```c#  
 public int GetChecksum(   
-   ref Guid               guidAlgorithm,  
-   out enum_CHECKSUM_DATA pChecksumData  
+   ref Guid               guidAlgorithm,  
+   out enum_CHECKSUM_DATA pChecksumData  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `guidAlgorithm`  
- [in] Unique identifier of the checksum algorithm.  
+ \[出力\] チェックサム アルゴリズムの一意の識別子。  
   
  `pChecksumData`  
- [out] Document checksum for the breakpoint request.  
+ \[出力\] ブレークポイントの要求のチェックサムを文書化します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="example"></a>Example  
- The following example shows a function that checks whether the checksum of a document, which is about to be bound, matches one from the UI.  
+## 使用例  
+ 次の例ではバインドされるドキュメントのチェックサムを UI からの 1 に一致するかどうかを確認する関数を示しています。  
   
-```cpp  
+```cpp#  
 bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCodeContext *pContext)  
 {  
     bool fRet = false;  
@@ -119,5 +102,5 @@ bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCo
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugBreakpointChecksumRequest2](../../../extensibility/debugger/reference/idebugbreakpointchecksumrequest2.md)

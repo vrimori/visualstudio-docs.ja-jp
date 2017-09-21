@@ -1,64 +1,47 @@
 ---
-title: IDebugPrimitiveTypeField::GetPrimitiveType | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- GetPrimitiveType
-- IDebugPrimitiveTypeField::GetPrimitiveType
+title: "IDebugPrimitiveTypeField::GetPrimitiveType | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "GetPrimitiveType"
+  - "IDebugPrimitiveTypeField::GetPrimitiveType"
 ms.assetid: a186c922-bbfe-478c-a744-b21eb4672d8f
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 7c47a9fac269aff59846723bb05be514d857f85a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugprimitivetypefieldgetprimitivetype"></a>IDebugPrimitiveTypeField::GetPrimitiveType
-Retrieves the primitive type that is associated with this field.  
+# IDebugPrimitiveTypeField::GetPrimitiveType
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このフィールドに関連付けられているプリミティブ型を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
-```cpp  
+```cpp#  
 HRESULT GetPrimitiveType (  
    DWORD* pdwType  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetPrimitiveType (  
    out uint pdwType  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `pdwType`  
- [out] Value from the [CorElementType Enumeration](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) that represents the primitive type.  
+ [out]値、 [CorElementType 列挙型](CorElementType%20Enumeration.xml) プリミティブ型を表します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns `S_FALSE`.  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、返す `S_OK`、それ以外を返します `S_FALSE`します。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>参照  
  [IDebugPrimitiveTypeField](../../../extensibility/debugger/reference/idebugprimitivetypefield.md)

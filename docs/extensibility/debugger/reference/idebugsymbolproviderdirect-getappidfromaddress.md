@@ -1,69 +1,52 @@
 ---
-title: IDebugSymbolProviderDirect::GetAppIDFromAddress | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugSymbolProviderDirect::GetAppIDFromAddress
-- GetAppIDFromAddress
+title: "IDebugSymbolProviderDirect::GetAppIDFromAddress | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugSymbolProviderDirect::GetAppIDFromAddress"
+  - "GetAppIDFromAddress"
 ms.assetid: d76a0f36-79c4-4c58-9db3-880b00d11610
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: eb7c63a06b08a92afbba0571748a25245f5dd45f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebugsymbolproviderdirectgetappidfromaddress"></a>IDebugSymbolProviderDirect::GetAppIDFromAddress
-Retrieves the application domain identifier given the debug address.  
+# IDebugSymbolProviderDirect::GetAppIDFromAddress
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+デバッグのアドレスを持つアプリケーション ドメインの識別子を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT GetAppIDFromAddress(  
-   IDebugAddress* pAddress,  
-   DWORD*         pAppID  
+   IDebugAddress* pAddress,  
+   DWORD*         pAppID  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetAppIDFromAddress(  
-   IDebugAddress pAddress,  
-   out uint      pAppID  
+   IDebugAddress pAddress,  
+   out uint      pAppID  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pAddress`  
- [in] Debug address that is represented by the [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
+ \[入力\] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) のインターフェイスで表されるアドレスをデバッグします。  
   
  `pAppID`  
- [out] Identifier of the application domain.  
+ \[出力\] アプリケーション ドメインの ID。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

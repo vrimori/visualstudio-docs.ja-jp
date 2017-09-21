@@ -1,65 +1,48 @@
 ---
-title: IDebugMethodField::IsCustomAttributeDefined | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugMethodField::IsCustomAttributeDefined
-helpviewer_keywords:
-- IDebugMethodField::IsCustomAttributeDefined method
+title: "IDebugMethodField::IsCustomAttributeDefined | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugMethodField::IsCustomAttributeDefined"
+helpviewer_keywords: 
+  - "IDebugMethodField::IsCustomAttributeDefined メソッド"
 ms.assetid: 1b5d95a8-cc87-4acb-9e6a-3928f3632b7c
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 95a6058a5e63b4d43600bff7e567b91a1dbd964d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugmethodfieldiscustomattributedefined"></a>IDebugMethodField::IsCustomAttributeDefined
-Determines whether a specific custom attribute has been defined.  
+# IDebugMethodField::IsCustomAttributeDefined
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+特定のカスタム属性が定義されているかどうかを判定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT IsCustomAttributeDefined(   
-   LPCOLESTR pszCustomAttributeName  
+```cpp#  
+HRESULT IsCustomAttributeDefined(   
+   LPCOLESTR pszCustomAttributeName  
 );  
 ```  
   
-```csharp  
+```c#  
 int IsCustomAttributeDefined(  
-   [In] string pszCustomAttributeName  
+   [In] string pszCustomAttributeName  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pszCustomAttributeName`  
- [in] A string containing the name of the custom attribute to find.  
+ \[入力\] 文字列検索するカスタム属性の名前。  
   
-## <a name="return-value"></a>Return Value  
- Returns S_OK if the custom attribute is defined on this method, otherwise returns S_FALSE.  
+## 戻り値  
+ カスタム属性がこのメソッドで定義されている場合は S\_OK を返します。それ以外の場合は S\_FALSE を返します。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

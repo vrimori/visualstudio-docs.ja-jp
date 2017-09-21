@@ -1,58 +1,39 @@
 ---
-title: InvokeDelegate | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-f1_keywords:
-- InvokeDelegate Designer
-- System.Activities.Statements.InvokeDelegate.UI
+title: "InvokeDelegate | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "InvokeDelegate Designer"
+  - "System.Activities.Statements.InvokeDelegate.UI"
 ms.assetid: 289a7498-5127-453f-beb5-05f05b80d26f
 caps.latest.revision: 3
-ms.author: sdanie
-manager: erikre
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
-ms.openlocfilehash: 9ee20847f0ee80ce8aef2800fed1c5a120166cd6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.author: "sdanie"
+manager: "erikre"
+caps.handback.revision: 3
 ---
-# <a name="invokedelegate"></a>InvokeDelegate
-The **InvokeDelegate** designer is used to create and configure an <xref:System.Activities.Statements.InvokeDelegate> activity.  
+# InvokeDelegate
+**InvokeDelegate** デザイナーは、<xref:System.Activities.Statements.InvokeDelegate> アクティビティを作成および構成するために使用します。  
   
-## <a name="the-invokedelegate-activity"></a>The InvokeDelegate Activity  
- The <xref:System.Activities.Statements.InvokeDelegate> calls a public delegate.  
+## InvokeDelegate アクティビティ  
+ <xref:System.Activities.Statements.InvokeDelegate> はパブリック デリゲートを呼び出します。  
   
-### <a name="using-the-invokedelegate-activity-designer"></a>Using the InvokeDelegate Activity Designer  
- The **InvokeDelegate** activity designer can be found in the **Primitives** category of the **Toolbox**, which is accessed by clicking the **Toolbox** tab [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (Alternatively, select **Toolbar** from the **View** menu, or CRTL+ALT+X.)  
+### InvokeDelegate アクティビティ デザイナーの使用  
+ **InvokeDelegate** アクティビティ デザイナーは、**\[ツールボックス\]** の **\[プリミティブ\]** カテゴリにあります。\[ツールボックス\] にアクセスするには、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]の **\[ツールボックス\]** タブをクリックします \(または、**\[表示\]** メニューの **\[ツール バー\]** をクリックするか、Ctrl キーと Alt キーを押しながら X キーを押します\)。  
   
- The **InvokeDelegate** activity designer can be dragged from the **Toolbox** and dropped on to the [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] surface where ever activities are usually placed, such as inside a <xref:System.Activities.Statements.Sequence>. This creates an <xref:System.Activities.Statements.InvokeDelegate> activity with a default <xref:System.Activities.Activity.DisplayName%2A> of InvokeDelegate. The <xref:System.Activities.Activity.DisplayName%2A> can be edited in the header of the **InvokeDelegate** activity designer or in the **DisplayName** box of the property grid.  
+ **InvokeDelegate** アクティビティ デザイナーは、**\[ツールボックス\]** からドラッグして、アクティビティを通常配置している[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面の任意の場所 \(<xref:System.Activities.Statements.Sequence> 内など\) にドロップできます。この操作により、InvokeDelegate という既定の <xref:System.Activities.Activity.DisplayName%2A> を持つ <xref:System.Activities.Statements.InvokeDelegate> アクティビティが作成されます。<xref:System.Activities.Activity.DisplayName%2A> は、**InvokeDelegate** アクティビティ デザイナーのヘッダーか、プロパティ グリッドの **\[DisplayName\]** ボックスで編集できます。  
   
-### <a name="the-invokedelegate-properties"></a>The InvokeDelegate Properties  
- The following table shows the <xref:System.Activities.Statements.InvokeDelegate> properties and describes how they are used in the designer. These properties can be edited in property grid and some can be edited on [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]designer surface.  
+### InvokeDelegate プロパティ  
+ 次の表に、<xref:System.Activities.Statements.InvokeDelegate> のプロパティと、デザイナーでのその使用方法を示します。これらのプロパティは、プロパティ グリッドで編集できます。また、その一部は[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のデザイナー画面で編集できます。  
   
-|Property Name|Required|Usage|  
-|-------------------|--------------|-----------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|False|The friendly name of the <xref:System.Activities.Statements.InvokeDelegate> activity. The default value is InvokeDelegate.<br /><br /> Although the <xref:System.Activities.Activity.DisplayName%2A> is not strictly required, it is a best practice to use one.|  
-|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|True|The name of the <xref:System.Activities.ActivityDelegate> to be called when the activity executes. This property can be edited on designer surface. This is a mandatory property.|  
-|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|The argument collection of the called delegate. The keys are the names of the parameter objects on the <xref:System.Activities.ActivityDelegate> and the values are the arguments whose expressions are evaluated and assigned to the corresponding parameter objects. In the property grid, click the ellipsis button in the **DelegateArguments** field, it displays the **DelegateArguments** dialog to let you set this property. Click the **Create Argument** field to add the arguments.|  
+|プロパティ名|必須|使用法|  
+|------------|--------|---------|  
+|<xref:System.Activities.Activity.DisplayName%2A>|省略可|<xref:System.Activities.Statements.InvokeDelegate> アクティビティの表示名。既定値は InvokeDelegate です。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|  
+|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|True|アクティビティの実行時に呼び出す <xref:System.Activities.Statements.ActivityDelegate> の名前。このプロパティは、デザイナー画面で設定することもできます。これは必須プロパティです。|  
+|<xref:System.Activities.Statements.InvokeMethod.DelegateArguments%2A>|False|呼び出されたデリゲートの引数コレクション。キーは <xref:System.Activities.Statements.ActivityDelegate> の <xref:System.Activities.Statements.ActivityDelegateParameter> オブジェクトの名前であり、値は、式が評価され対応する <xref:System.Activities.Statements.ActivityDelegateParameter> オブジェクトに割り当てられる引数です。プロパティ グリッドで、**DelegateArguments** フィールド内の省略記号ボタンをクリックすると、このプロパティを設定できる **\[DelegateArguments\]** ダイアログが表示されます。**引数の作成**フィールドをクリックして引数を追加します。|  
   
-## <a name="see-also"></a>See Also  
- [How to: Define and consume activity delegates in the Workflow Designer](../workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer.md)
+## 参照  
+ [ワークフロー デザイナーでアクティビティ デリゲートを定義および使用する方法](../workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer.md)

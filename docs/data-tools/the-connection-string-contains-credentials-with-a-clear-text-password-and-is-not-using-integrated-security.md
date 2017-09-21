@@ -1,57 +1,39 @@
 ---
-title: The connection string contains credentials with a clear text password and is not using integrated security | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "The connection string contains credentials with a clear text password and is not using integrated security | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/24/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 501d85af-92e0-4471-b280-8a59c0688575
 caps.latest.revision: 3
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: f4981240d341aa1f2b8c0753b95d1f34e69cb031
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 1
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="the-connection-string-contains-credentials-with-a-clear-text-password-and-is-not-using-integrated-security"></a>The connection string contains credentials with a clear text password and is not using integrated security
-Do you want to save the connection string to the current DBML file and application configuration files with this sensitive information?  Click No to save the connection string without the sensitive information.  
+# The connection string contains credentials with a clear text password and is not using integrated security
+重要情報を含む接続文字列を現在の DBML ファイルとアプリケーション構成ファイルに保存しますか? 重要情報を含めずに接続文字列を保存する場合は、\[いいえ\] をクリックします。  
   
- When working with data connections that include sensitive information (passwords that are included in the connection string), you are given the option of saving the connection string into a project's DBML file and application configuration file with or without the sensitive information.  
+ 機密情報 \(接続文字列に含まれているパスワード\) を含むデータ接続を扱う場合は、接続文字列をプロジェクトの DBML ファイルおよびアプリケーション構成ファイルに保存するときに、機密情報を含めるかどうかを選択するオプションが提供されます。  
   
 > [!WARNING]
->  Explicitly setting the **Connection** properties **Application Settings** property to **False** will add the password to the DBML file.  
+>  **\[接続\]** プロパティの **\[アプリケーション設定\]** プロパティが明示的に **\[False\]** に設定されている場合、パスワードは DBML ファイルに追加されます。  
   
-### <a name="to-save-the-connection-string-with-the-sensitive-information-in-the-projects-application-settings"></a>To save the connection string with the sensitive information in the project's application settings  
+### 接続文字列を機密情報と共にプロジェクトのアプリケーション設定に保存するには  
   
--   Click **Yes**.  
+-   **\[はい\]** をクリックします。  
   
-     The connection string is stored as an application setting. The connection string includes the sensitive information in plain text. The DBML file does not contain the sensitive information.  
+     接続文字列がアプリケーション設定として格納されます。接続文字列には、プレーンテキストの機密情報が含まれます。DBML ファイルには機密情報は含まれません。  
   
-### <a name="to-save-the-connection-string-without-the-sensitive-information-in-the-projects-application-settings"></a>To save the connection string without the sensitive information in the project's application settings  
+### 機密情報を含めずに接続文字列をプロジェクトのアプリケーション設定に保存するには  
   
--   Click **No**.  
+-   **\[いいえ\]** をクリックします。  
   
-     The connection string is stored as an application setting, but the password is not included.  
+     接続文字列がアプリケーション設定として格納されますが、パスワードは含まれません。  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+## 参照  
+ [Object Relational Designer \(O\/R Designer\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)

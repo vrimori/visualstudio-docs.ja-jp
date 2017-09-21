@@ -1,77 +1,60 @@
 ---
-title: IDebugMethodField::EnumAllLocals | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugMethodField::EnumAllLocals
-helpviewer_keywords:
-- IDebugMethodField::EnumAllLocals method
+title: "IDebugMethodField::EnumAllLocals | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugMethodField::EnumAllLocals"
+helpviewer_keywords: 
+  - "IDebugMethodField::EnumAllLocals メソッド"
 ms.assetid: 0bc7cc13-2628-4bd8-8c06-4d2aa6755ea8
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 509586c2fc70e39195275becd417cffd1605df3e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugmethodfieldenumalllocals"></a>IDebugMethodField::EnumAllLocals
-Creates an enumerator for all local variables of the method, including those generated internally by a compiler.  
+# IDebugMethodField::EnumAllLocals
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+コンパイラによって内部的に生成されたものも含めてすべてのメソッドのローカル変数の列挙子を作成します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT EnumAllLocals(   
-   IDebugAddress*     pAddress,  
-   IEnumDebugFields** ppLocals  
+```cpp#  
+HRESULT EnumAllLocals(   
+   IDebugAddress*     pAddress,  
+   IEnumDebugFields** ppLocals  
 );  
 ```  
   
-```csharp  
+```c#  
 int EnumAllLocals(  
-   IDebugAddress        pAddress,   
-   out IEnumDebugFields ppLocals  
+   IDebugAddress        pAddress,   
+   out IEnumDebugFields ppLocals  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pAddress`  
- [in] An [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) object representing a debug address within the method, pointing to a particular scope or context.  
+ \[入力\] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) に特定のスコープまたはコンテキスト内にメソッドのデバッグのアドレスをポイントします。  
   
  `ppLocals`  
- [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object representing the list of all locals in the specified scope; otherwise, returns a null value indicating no locals.  
+ \[入力\] [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) を表すオブジェクトを指定されたスコープ内のすべてのローカルのリストを返します ; それ以外の場合はローカルを示さない場合は NULL。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK or returns S_FALSE if there are no locals. Otherwise, returns an error code.  
+## 戻り値  
+ S\_FALSEは S\_OK または成功している場合を返します。  それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- Only the variables defined within the block that contains the given debug address are enumerated. This method includes any compiler-generated locals. If all that is needed are the locals explicitly defined in the source, call the [EnumLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) method.  
+## 解説  
+ 特定のデバッグのアドレスを含むブロック内で定義されている変数のみを列挙します。  このメソッドはコンパイラが生成したローカルが含まれます。  必要なソースで明示的に定義されているすべてのローカル [EnumLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) のメソッドを呼び出します。  
   
- A method can contain multiple scoping contexts or blocks.  
+ メソッドのコンテキストまたはスコープは複数のブロックを含めることができます。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   

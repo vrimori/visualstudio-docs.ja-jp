@@ -1,78 +1,61 @@
 ---
-title: IDebugSettingsCallback2::GetEEMetricFile | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugSettingsCallback2::GetEEMetricFile
+title: "IDebugSettingsCallback2::GetEEMetricFile | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugSettingsCallback2::GetEEMetricFile"
 ms.assetid: 3a0bf9e5-bbd2-4d15-840d-8244732787fc
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 3e2d0ec99c2bb4e166b949a082aea6928ee5023d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebugsettingscallback2geteemetricfile"></a>IDebugSettingsCallback2::GetEEMetricFile
-Retrieves the expression evaluator metric file given the name or the metric.  
+# IDebugSettingsCallback2::GetEEMetricFile
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+名前やメトリックスを持つ式エバリュエーター メトリック ファイルを取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT GetEEMetricFile(  
-   REFGUID guidLang,  
-   REFGUID guidVendor,  
-   LPCWSTR pszMetric,  
-   BSTR*   pbstrValue  
+   REFGUID guidLang,  
+   REFGUID guidVendor,  
+   LPCWSTR pszMetric,  
+   BSTR*   pbstrValue  
 );  
 ```  
   
-```csharp  
+```c#  
 private int GetEEMetricFile(  
-   ref Guid   guidLang,  
-   ref Guid   guidVendor,  
-   string     pszMetric,  
-   out string pbstrValue  
+   ref Guid   guidLang,  
+   ref Guid   guidVendor,  
+   string     pszMetric,  
+   out string pbstrValue  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `guidLang`  
- [in] Unique identifier of the programming language.  
+ \[入力\] プログラミング言語の一意の識別子。  
   
  `guidVendor`  
- [in] Unique identifier of the vendor.  
+ \[入力\] 販売元の一意の識別子。  
   
  `pszMetric`  
- [in] Name of the metric.  
+ \[入力\] メトリックスの名前。  
   
  `pbstrValue`  
- [out] Returns the contents of the metric file as a string.  
+ \[入力\] 文字列として非常ファイルの内容を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

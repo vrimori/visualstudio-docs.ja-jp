@@ -1,68 +1,51 @@
 ---
-title: IDebugGenericParamField::GetOwner | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugGenericParamField::GetOwner
+title: "IDebugGenericParamField::GetOwner | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugGenericParamField::GetOwner"
 ms.assetid: c7f6d166-a69e-40c4-bd0b-1a1fdf9aaacf
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 50cb3a7374e800d6df4380001d9063564a248abc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebuggenericparamfieldgetowner"></a>IDebugGenericParamField::GetOwner
-Retrieves the type or method owner of this generic parameter.  
+# IDebugGenericParamField::GetOwner
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このジェネリック パラメーターの型またはメソッドの所有者を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT GetOwner(  
-   IDebugField** ppOwner  
+   IDebugField** ppOwner  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetOwner(  
-   out IDebugField ppOwner  
+   out IDebugField ppOwner  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ppOwner`  
- [out] Returns the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object that owns this generic parameter.  
+ \[出力\] このジェネリック パラメーターを [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 所有するオブジェクトを返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugGenericParamFieldType** object that exposes the [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
+## 使用例  
+ 次の例に [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) インターフェイスを公開する **CDebugGenericParamFieldType の**  オブジェクトに対してこのメソッドを実装する方法を示します。  
   
-```cpp  
+```cpp#  
 HRESULT CDebugGenericParamFieldType::GetOwner(IDebugField** ppOwner)  
 {  
     HRESULT hr = S_OK;  
@@ -110,5 +93,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

@@ -1,8 +1,8 @@
 ---
-title: Install on low bandwidth or unreliable network environments | Microsoft Docs
-description: Describes how the Visual Studio installer works in unreliable network conditions, and explains how to download install files before beginning the installation.
-ms.date: 08/30/2017
-ms.reviewer: tims
+title: "低帯域幅または信頼性の低いネットワーク環境にインストールする | Microsoft Docs"
+description: "信頼性の低いネットワーク環境における Visual Studio インストーラーの動作とインストールの開始前にインストール ファイルをダウンロードする方法について説明します。"
+ms.date: 04/14/2017
+ms.reviewer: 
 ms.suite: 
 ms.technology:
 - vs-ide-install
@@ -15,98 +15,109 @@ ms.assetid: 44DB1998-68CD-4560-870A-EE5B993DCF6E
 author: timsneath
 ms.author: tims
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 13659103061c6054698f4579b4b71d2669d2356d
-ms.openlocfilehash: 3113b25b90cf7a7cf4c67a01eeaeedd15f0793b2
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 9dbe70bce6c246416df64de304b06cd211320f2a
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 05/09/2017
 
 ---
 
-# <a name="install-visual-studio-2017-on-low-bandwidth-or-unreliable-network-environments"></a>Install Visual Studio 2017 on low bandwidth or unreliable network environments
+# <a name="install-visual-studio-2017-on-low-bandwidth-or-unreliable-network-environments"></a>低帯域幅または信頼性の低いネットワーク環境に Visual Studio 2017 をインストールする
+Visual Studio 2017 インストーラーは、さまざまなネットワーク環境またはさまざまなコンピューター環境で問題なく動作するように設計されています。
 
-We recommend that you try the Visual Studio web installer&mdash;we think you'll find it a good experience for most situations. 
+- Visual Studio のインストールに必要なファイルはグローバル配信ネットワークで配信されます。そのため、ローカル サーバーから届けられます。
+- インストール プロセス中、アンチウイルス/プロキシ ソフトウェアによる干渉を最小限に抑えるために、3 つの異なるダウンロード技術 (WebClient、BITS、WinInet) が試されます。
+- 新しいワークロード ベース モデルでは、旧バージョンの Visual Studio よりインストール回数が少なくなります。
 
- > [!div class="button"]
- > [Download Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocsOL)
-<br/>
+そのため、新しい Web インストーラーを推奨しています。その利便性を実感していただけるものと考えております。 しかしながら、インストール ファイルが正しくダウンロードされたことを確認してから Visual Studio のインストールを始めるのであれば、それも可能です。 コマンド ラインを利用して必要なファイルのローカル キャッシュを作成してからインストールを開始できます。
 
-However, if your internet connection is unavailable or unreliable, you can use the command line to create a local cache of the files you need to complete an offline install. Here's how.
+ここではその方法を説明します。
 
-> [!NOTE]
-> If you are an enterprise administrator who wants to perform a deployment of Visual Studio 2017 to a network of client workstations that are firewalled from the internet, see our [Create a network installation of Visual Studio 2017](../install/create-a-network-installation-of-visual-studio.md) and [Special considerations for installing Visual Studio in an offline environment](../install/install-visual-studio-in-offline-environment.md) pages.
+## <a name="download-the-visual-studio-bootstrapper"></a>Visual Studio ブートストラップをダウンロードする
+最初に、選択したエディションの Visual Studio の Visual Studio ブートストラップをダウンロードします。
 
-## <a name="step-1---download-the-visual-studio-bootstrapper"></a>Step 1 - Download the Visual Studio bootstrapper
+セットアップ ファイル&mdash; (具体的にはブートストラップ ファイル)&mdash; は、次のいずれかになります (あるいは同様のファイル)。
 
-Start by downloading the Visual Studio bootstrapper for your chosen edition of Visual Studio.
-
-Your setup file&mdash;or to be more specific, a bootstrapper file&mdash;will match or be similar to one of the following.
-
-| Edition                    | File                                                                    |
+| エディション                    | ファイル                                                                    |
 |----------------------------|-------------------------------------------------------------------------|
-| Visual Studio Community    | [vs_community.exe](https://aka.ms/vs/15/release/vs_community.exe)       |
+| Visual Studio コミュニティ    | [vs_community.exe](https://aka.ms/vs/15/release/vs_community.exe)       |
 | Visual Studio Professional | [vs_professional.exe](https://aka.ms/vs/15/release/vs_professional.exe) |
 | Visual Studio Enterprise   | [vs_enterprise.exe](https://aka.ms/vs/15/release/vs_enterprise.exe)     |
 
-## <a name="step-2---create-a-local-install-cache"></a>Step 2 - Create a local install cache
+## <a name="create-a-local-install-cache"></a>ローカル インストール キャッシュを作成する
+ローカル レイアウトを作成するには、コマンド プロンプトを開き、次の例にあるいずれかのコマンドを使用します。 この例では、Visual Studio Community ブートストラップをダウンロードしているものと想定しています。ご利用のエディションに合わせ、コマンドを適宜調整してください。
 
-To create a local layout, open a command prompt and use one of the commands from the following examples: The examples here assume that you're using the Community edition of Visual Studio; adjust the command as appropriate for your edition.
+- .NET Web と .NET デスクトップ開発の場合、次を実行します。
+  ```
+  vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
+  ```
+- .NET デスクトップと Office 開発の場合、次を実行します。
+  ```
+  vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Office --includeOptional --lang en-US
+  ```
+- C++ デスクトップ開発の場合、次を実行します。
+  ```
+  vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
+  ```
 
-- For .NET web and .NET desktop development, run:
+- すべての機能を備えた完全ローカル レイアウトを作成するには (これには時間がかかりますが、_たくさん_の機能があります)、次を実行します。
+  ```
+  vs_community.exe --layout c:\vs2017layout --lang en-US
+  ```
 
-   ```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US```
+英語以外の言語をインストールする場合、このページの下の一覧にあるロケールに `en-US` を変更します。 この[利用できるコンポーネントとワークロードの一覧](workload-and-component-ids.md)を利用し、必要に応じて、インストール キャッシュをさらにカスタマイズできます。
 
-- For .NET desktop and Office development, run:
+## <a name="install-from-the-local-cache"></a>ローカル キャッシュからインストールする
+ローカル インストール キャッシュから実行するとき、各ファイルのローカル バージョンを使用します。 ただし、インストール中、キャッシュにないコンポーネントを選択すると、インターネットからのダウンロードが試行されます。
 
-   ```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Office --includeOptional --lang en-US```
+ダウンロードしたファイルのみがインストールされるように、レイアウト キャッシュの作成に利用したものと同じコマンド ライン オプションを使用します。 たとえば、次のコマンドでレイアウト キャッシュを作成した場合、
 
-- For C++ desktop development, run:
+```
+vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
+```
 
-   ```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US```
+このコマンドを利用してインストールを実行します。
 
-- To create a complete local layout with all features (this will take a long time&mdash;we have _lots_ of features!), run:
+```
+c:\vs2017layout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional
+```
 
-   ```vs_community.exe --layout c:\vs2017layout --lang en-US```
+## <a name="list-of-language-locales"></a>言語ロケールの一覧
+| **言語ロケール** | **言語** |
+| ----------------------- | --------------- |  
+| cs-CZ | チェコ語 |
+| de-DE | ドイツ語 |
+| en-US | 英語 |
+| es-ES | スペイン語 |
+| fr-FR | フランス語 |
+| it-IT | イタリア語 |
+| ja-JP | 日本語 |
+| ko-KR | 韓国語 |
+| pl-PL | ポーランド語 |
+| pt-BR | ポルトガル語 - ブラジル |
+| ru-RU | ロシア語 |
+| tr-TR | トルコ語 |
+| zh-CN | 中国語 - 簡体字 |
+| zh-TW | 中国語 - 繁体字 |
 
-If you want to install a language other than English, change `en-US` to a locale from the list at the bottom of this page. Use this [list of the components and workloads available](workload-and-component-ids.md) to further customize your installation cache as necessary.
-
-## <a name="step-3---install-visual-studio-from-the-local-cache"></a>Step 3 - Install Visual Studio from the local cache
-
-> [!TIP]
-> When you run from a local install cache, setup uses the local versions of each of these files. But if you select components during installation that aren't in the cache, we attempt to download them from the internet.
-
-To ensure that you only install the files you've downloaded, use the same command-line options that you used to create the layout cache. For example, if you created a layout cache with the following command:
-
-```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US```
-
-use this command to run the installation:
-
-```c:\vs2017layout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional```
-
-> [!NOTE]
-> If you get an error that a signature is invalid, you must install updated certificates. Open the Certificates folder in your offline cache. Double-click each of the certificate files, and then click through the Certificate Manager wizard. If asked for a password, leave it blank.
-
-## <a name="list-of-language-locales"></a>List of language locales
-
-| **Language-locale** | **Language** |
-| ----------------------- | --------------- |
-| cs-CZ | Czech |
-| de-DE | German |
-| en-US | English |
-| es-ES | Spanish |
-| fr-FR | French |
-| it-IT | Italian |
-| ja-JP | Japanese |
-| ko-KR | Korean |
-| pl-PL | Polish |
-| pt-BR | Portuguese - Brazil |
-| ru-RU | Russian |
-| tr-TR | Turkish |
-| zh-CN | Chinese - Simplified |
-| zh-TW | Chinese - Traditional |
-
-## <a name="see-also"></a>See also
-* [Install Visual Studio](install-visual-studio.md)
-* [Visual Studio administrator guide](visual-studio-administrator-guide.md)
-* [Use command-line parameters to install Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+## <a name="see-also"></a>関連項目
+* [Visual Studio のインストール](install-visual-studio.md)
+* [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
+* [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)
 

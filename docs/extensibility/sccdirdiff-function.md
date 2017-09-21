@@ -1,102 +1,85 @@
 ---
-title: SccDirDiff Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccDirDiff
-helpviewer_keywords:
-- SccDirDiff function
+title: "SccDirDiff 関数 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccDirDiff"
+helpviewer_keywords: 
+  - "SccDirDiff 関数"
 ms.assetid: 26c9ba92-e3b9-4dd2-bd5e-76b17745e308
 caps.latest.revision: 15
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8dd2e57fc177f726cc08226df9f7e1e0a520b74b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 15
 ---
-# <a name="sccdirdiff-function"></a>SccDirDiff Function
-This function displays the differences between the current local directory on the client disk and the corresponding project under source control.  
+# SccDirDiff 関数
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+この関数は、クライアントのディスク上の現在のローカル ディレクトリと、対応するプロジェクトをソース管理の違いを表示します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 SCCRTN SccDirDiff(  
-   LPVOID    pContext,  
-   HWND      hWnd,  
-   LPCSTR    lpDirName,  
-   LONG      dwFlags,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pContext,  
+   HWND      hWnd,  
+   LPCSTR    lpDirName,  
+   LONG      dwFlags,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  pContext  
- [in] The source control plug-in context structure.  
+ \[in\]ソース管理プラグイン コンテキスト構造体。  
   
- hWnd  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ hwnd の分離  
+ \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
   
  lpDirName  
- [in] Fully qualified path to the local directory for which to show a visual difference.  
+ \[in\]視覚的な違いを表示対象のローカル ディレクトリへの完全修飾パス。  
   
  dwFlags  
- [in] Command flags (see Remarks section).  
+ \[in\]コマンドのフラグ \(「解説」を参照してください\] セクション\)。  
   
  pvOptions  
- [in] Source control plug-in-specific options.  
+ \[in\]ソース管理プラグインに固有のオプションです。  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 戻り値  
+ この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|The directory on disk is the same as the project in source code control.|  
-|SCC_I_FILESDIFFER|The directory on disk is different from the project in source code control.|  
-|SCC_I_RELOADFILE|A file or project needs to be reloaded.|  
-|SCC_E_FILENOTCONTROLLED|The directory is not under source code control.|  
-|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
-|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Nonspecific failure.|  
-|SCC_E_FILENOTEXIST|Local directory could not be found.|  
+|値|説明|  
+|-------|--------|  
+|SCC\_OK|ディスク上のディレクトリは、ソース コード管理のプロジェクトと同じです。|  
+|SCC\_I\_FILESDIFFER|ディスク上のディレクトリは、ソース コード管理で、プロジェクトと異なります。|  
+|SCC\_I\_RELOADFILE|ファイルまたはプロジェクトを再読み込みする必要があります。|  
+|SCC\_E\_FILENOTCONTROLLED|ディレクトリは、ソース コード管理下ではありません。|  
+|SCC\_E\_NOTAUTHORIZED|この操作を実行できません。|  
+|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
+|SCC\_E\_NONSPECIFICERROR<br /><br /> SCC\_E\_UNKNOWNERROR|不特定のエラーです。|  
+|SCC\_E\_FILENOTEXIST|ローカルのディレクトリが見つかりませんでした。|  
   
-## <a name="remarks"></a>Remarks  
- This function is used to instruct the source control plug-in to display to the user a list of changes to a specified directory. The plug-in opens its own window, in a format of its choice, to display the differences between the user's directory on disk and the corresponding project under version control.  
+## 解説  
+ この関数は、ソース管理ユーザーに指定したディレクトリへの変更の一覧を表示するプラグインに指示する使用されます。 プラグインは、ディスク上のユーザーのディレクトリと、対応するプロジェクトをバージョン管理の違いを表示する、任意の形式で、独自のウィンドウを開きます。  
   
- If a plug-in supports comparison of directories at all, it must support comparison of directories on a file-name basis even if the "quick-diff" options are not supported.  
+ 場合にすべてのディレクトリのプラグインがサポート比較では、「クイック比較」オプションがサポートされていない場合でも、ファイル名ごとにディレクトリの比較をサポートしてする必要があります。  
   
-|`dwFlags`|Interpretation|  
-|---------------|--------------------|  
-|SCC_DIFF_IGNORECASE|Case-insensitive comparison (may be used for either quick diff or visual).|  
-|SCC_DIFF_IGNORESPACE|Ignores white space (may be used for either quick-diff or visual).|  
-|SCC_DIFF_QD_CONTENTS|If supported by the source control plug-in, silently compares the directory, byte by byte.|  
-|SCC_DIFF_QD_CHECKSUM|If supported by plug-in, silently compares the directory via a checksum, or, if not supported, falls back to SCC_DIFF_QD_CONTENTS.|  
-|SCC_DIFF_QD_TIME|If supported by plug-in, silently compares the directory via its timestamp, or, if not supported, falls back on SCC_DIFF_QD_CHECKSUM or SCC_DIFF_QD_CONTENTS.|  
+|`dwFlags`|解釈|  
+|---------------|--------|  
+|SCC\_DIFF\_IGNORECASE|大文字と小文字は \(クイック diff またはビジュアルのいずれかの使用可能性があります\)。|  
+|SCC\_DIFF\_IGNORESPACE|\(クイック diff または visual 使用可能性があります\) の空白は無視されます。|  
+|SCC\_DIFF\_QD\_CONTENTS|ソース管理プラグインのサポートを何も行わずに、ディレクトリでは、1 バイトずつを比較します。|  
+|SCC\_DIFF\_QD\_CHECKSUM|プラグインでサポートされている、何も行わずに、チェックサムを使用してディレクトリを比較するか、サポートされていない場合はフォールバックして SCC\_DIFF\_QD\_CONTENTS 場合。|  
+|SCC\_DIFF\_QD\_TIME|プラグインでサポートされている、サイレント モードで、タイムスタンプを使用してディレクトリを比較するか、サポートされていない場合はフォールバック SCC\_DIFF\_QD\_CHECKSUM または SCC\_DIFF\_QD\_CONTENTS 場合。|  
   
 > [!NOTE]
->  This function uses the same command flags as the [SccDiff](../extensibility/sccdiff-function.md). However, a source control plug-in may choose to not support the "quick-diff" operation for directories.  
+>  この関数と同じコマンドのフラグを使用して、 [SccDiff](../extensibility/sccdiff-function.md)です。 ただし、ソース管理プラグインは、ディレクトリの「クイック比較」操作をサポートしていませんこともできます。  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)
+## 参照  
+ [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

@@ -1,57 +1,40 @@
 ---
-title: Custom Document Properties in a Legacy Language Service | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- custom document properties, language services [managed package framework]
-- document properties, custom
-- language services [managed package framework], custom document properties
+title: "従来の言語サービスでカスタム ドキュメント プロパティ | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "カスタム ドキュメント プロパティ、言語サービス [マネージ パッケージ framework]"
+  - "カスタム ドキュメント プロパティ"
+  - "言語サービス [マネージ パッケージ フレームワーク] カスタム ドキュメント プロパティ"
 ms.assetid: cc714a67-b33e-4440-9203-3c90f648bd9c
 caps.latest.revision: 18
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: a76851b183ead84dad32ed36ce22f677ae3f3c3d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 18
 ---
-# <a name="custom-document-properties-in-a-legacy-language-service"></a>Custom Document Properties in a Legacy Language Service
-Document properties can be displayed in the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Properties** window. Programming languages generally do not have properties associated with individual source files. However, XML supports document properties that affect the encoding, schema, and stylesheet.  
+# 従来の言語サービスでカスタム ドキュメント プロパティ
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+ドキュメントは ENT0ENT \[プロパティ\] ウィンドウの [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に表示できます。  プログラミング言語の一般に個別のソース ファイルに関連付けられているプロパティはありません。  ただしXML エンコーディングはスキーマやスタイル シートに影響するドキュメント プロパティをサポートします。  
   
-## <a name="discussion"></a>Discussion  
- If your language needs custom document properties, you must derive a class from the <xref:Microsoft.VisualStudio.Package.DocumentProperties> class and implement the necessary properties on your derived class.  
+## 説明  
+ 言語がカスタム ドキュメント プロパティが必要な場合は<xref:Microsoft.VisualStudio.Package.DocumentProperties> のクラスからクラスを派生し派生クラスで必要なプロパティを実装する必要があります。  
   
- In addition, document properties are typically stored in the source file itself. This requires the language service to parse the property information from the source file to display in the **Properties** window and to update the source file when a change is made to the document properties in the **Properties** window.  
+ またドキュメント プロパティはソース ファイル自体で一般的に保存されます。  これは\[出力\] ウィンドウ ENT4ENT のドキュメント プロパティを変更すると ENT3ENT \[出力\] ウィンドウに表示されソース ファイルを更新する言語サービスのソース ファイルからプロパティ情報を解析する必要があります。  
   
-## <a name="customizing-the-documentproperties-class"></a>Customizing the DocumentProperties Class  
- To support custom document properties, you must derive a class from the <xref:Microsoft.VisualStudio.Package.DocumentProperties> class and add as many properties as you need. You should also supply user attributes to organize them in the **Properties** window display. If a property has only a `get` accessor, it is shown as read-only in the **Properties** window. If a property has both `get` and `set` accessors, the property can also be updated in the **Properties** window.  
+## DocumentProperties クラスのカスタマイズ  
+ 必要なカスタム ドキュメント プロパティをサポートするには<xref:Microsoft.VisualStudio.Package.DocumentProperties> のクラスからクラスを派生しすべてのプロパティを追加します。  また\[出力\] ウィンドウ ENT1ENT な整理するユーザーに属性を指定する必要があります。  プロパティに `get` のアクセサーだけが表示されている場合は\[出力\] ウィンドウで ENT5ENT 読み取り専用として表示されます。  プロパティに `get` と `set` のアクセサーの両方がの場合プロパティは\[ENT9ENT\] ウィンドウで更新できます。  
   
-### <a name="example"></a>Example  
- Here is an example class derived from <xref:Microsoft.VisualStudio.Package.DocumentProperties>, showing two properties, Filename and Description. When a property is updated, a custom method on the <xref:Microsoft.VisualStudio.Package.LanguageService> class is called to write the property to the source file.  
+### 例  
+ 2 種類のプロパティファイル名および説明を表示 <xref:Microsoft.VisualStudio.Package.DocumentProperties> クラスから派生する例を次に示します。  プロパティが更新されるとソース ファイルにプロパティを記述する場合は<xref:Microsoft.VisualStudio.Package.LanguageService> クラスのカスタム メソッドが呼び出されます。  
   
-```csharp  
+```c#  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -138,12 +121,12 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="instantiating-the-custom-documentproperties-class"></a>Instantiating the Custom DocumentProperties class  
- To instantiate your custom document properties class, you must override the <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A> method in your version of the <xref:Microsoft.VisualStudio.Package.LanguageService> class to return a single instance of your <xref:Microsoft.VisualStudio.Package.DocumentProperties> class.  
+## DocumentProperties のカスタム クラスをインスタンス化できます。  
+ カスタム ドキュメント プロパティ クラスのインスタンスを作成するには<xref:Microsoft.VisualStudio.Package.DocumentProperties> クラスのインスタンスを返すように <xref:Microsoft.VisualStudio.Package.LanguageService> クラスのバージョンの <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A> のメソッドをオーバーライドする必要があります。  
   
-### <a name="example"></a>Example  
+### 例  
   
-```csharp  
+```c#  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -165,22 +148,22 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="properties-in-the-source-file"></a>Properties in the Source File  
- Since document properties are usually specific to the source file, the values are stored in the source file itself. This requires support from the language parser or scanner to define these properties. For example, the properties of an XML document are stored on the root node. The values on the root node are modified when the **Properties** window values are changed, and the root node is updated in the editor.  
+## ソース ファイルのプロパティ  
+ ドキュメント プロパティは通常ソース ファイル固有であるため値はソース ファイル自体に格納されます。  これは言語パーサーまたはスキャナーのサポートがこれらのプロパティを定義する必要があります。  たとえばXML ドキュメントのプロパティはルート ノードに格納されます。  ルート ノードの値には\[出力\] ウィンドウ ENT2ENT な値が変更されたルート ノードがエディターで更新された場合変更されます。  
   
-### <a name="example"></a>Example  
- This example stores the properties "Filename" and "Description" in the first two lines of the source file, embedded in a special comment header, as:  
+### 例  
+ この例では特殊なコメントのヘッダーに埋め込まれたソース ファイルの最初の 2 行のプロパティ 「ファイル名」および 「」を次のように保存されます :  
   
 ```  
 //!Filename = file.testext  
 //!Description = A sample file  
 ```  
   
- This example shows the two methods needed to get and set the document properties from the first two lines of the source file as well as how the properties are updated if the user modifies the source file directly. The `SetPropertyValue` method in the example shown here is the same one called from the `TestDocumentProperties` class as shown in the "Customizing the DocumentProperties class" section.  
+ この例ではユーザーがソース ファイルを直接変更するとプロパティの更新方法をソース ファイルの最初の 2 行からドキュメント プロパティを取得および設定するために必要な 2 とおりの方法も示します。  次に示す例の `SetPropertyValue` のメソッドは 「セクションで説明した DocumentProperties のクラス」カスタマイズする `TestDocumentProperties` のクラスから呼び出されるものと同じです。  
   
- This example uses the scanner to determine the type of tokens in the first two lines. This example is for illustrative purposes only. A more typical approach to this situation is to parse the source file into what is called a parse tree where each node of the tree contains information about a particular token. The root node would contain the document properties.  
+ この例では最初の 2 行のトークンの種類を判断するためにスキャナーを使用します。  この例では説明を目的としています。  この状況では通常はツリーの各ノードは特定のトークンに関する情報が含まれている場合に解析できます。パース ツリーと呼ばれるものにソース ファイルをです。  ルート ノードはドキュメント プロパティが含まれています。  
   
-```csharp  
+```c#  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -415,5 +398,5 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Legacy Language Service Features](../../extensibility/internals/legacy-language-service-features1.md)
+## 参照  
+ [従来の言語サービスの機能](../../extensibility/internals/legacy-language-service-features1.md)

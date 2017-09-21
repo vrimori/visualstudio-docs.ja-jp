@@ -1,86 +1,69 @@
 ---
-title: IDebugFunctionObject::CreateObject | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugFunctionObject::CreateObject
-helpviewer_keywords:
-- IDebugFunctionObject::CreateObject method
+title: "IDebugFunctionObject::CreateObject | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugFunctionObject::CreateObject"
+helpviewer_keywords: 
+  - "IDebugFunctionObject::CreateObject メソッド"
 ms.assetid: c4c99dd5-609a-4e7c-8f29-eb728f57e995
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 8f56e690a6c8189977061bb5f6d2647a9d94fa92
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugfunctionobjectcreateobject"></a>IDebugFunctionObject::CreateObject
-Creates an object using a constructor.  
+# IDebugFunctionObject::CreateObject
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+コンストラクターを使用してオブジェクトを作成します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT CreateObject(   
-   IDebugFunctionObject* pConstructor,  
-   DWORD                 dwArgs,  
-   IDebugObject*         pArgs[],  
-   IDebugObject**        ppObject  
+```cpp#  
+HRESULT CreateObject(   
+   IDebugFunctionObject* pConstructor,  
+   DWORD                 dwArgs,  
+   IDebugObject*         pArgs[],  
+   IDebugObject**        ppObject  
 );  
 ```  
   
-```csharp  
+```c#  
 int CreateObject(  
-   IDebugFunctionObject pConstructor,   
-   uint                 dwArgs,   
-   IDebugObject[]       pArgs,   
-   out IDebugObject     ppObject  
+   IDebugFunctionObject pConstructor,   
+   uint                 dwArgs,   
+   IDebugObject[]       pArgs,   
+   out IDebugObject     ppObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pConstructor`  
- [in] An [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) object representing the constructor of the object to be created.  
+ \[入力\] [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) に作成するオブジェクトのコンストラクター。  
   
  `dwArgs`  
- [in] The number of parameters in the `pArg` array. Represents the number of parameters passed to the constructor.  
+ \[入力\]`pArg` の配列パラメーターの数。  コンストラクターに渡されるパラメーターの数を表します。  
   
  `pArg`  
- [in] An array of [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objects representing the parameters passed to the constructor.  
+ \[入力\] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) を表すオブジェクトの配列コンストラクターに渡されるパラメーター。  
   
  `ppObject`  
- [out] Returns an `IDebugObject` representing the newly created object.  
+ \[出力\] 新しく作成されたオブジェクトを表す `IDebugObject` を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- Call this method to create an object that represents an instance of a class (or other complex type that requires a constructor) that is a parameter to the function which is represented by the [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface.  
+## 解説  
+ クラスを表すオブジェクトを作成するためにこのメソッドを呼び出します \(またはパラメーターが [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) のインターフェイスで表される関数になるコンストラクターを必要とする他の複合型のインスタンスを示します。  
   
- If the object parameter does not require a constructor, call the [CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md) method.  
+ オブジェクトはコンストラクターのパラメーターが必要な場合は[CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md) のメソッドを呼び出します。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)   
  [CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md)

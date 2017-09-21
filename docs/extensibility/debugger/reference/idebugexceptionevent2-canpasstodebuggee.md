@@ -1,63 +1,46 @@
 ---
-title: IDebugExceptionEvent2::CanPassToDebuggee | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugExceptionEvent2::CanPassToDebuggee
-helpviewer_keywords:
-- IDebugExceptionEvent2::CanPassToDebuggee
+title: "IDebugExceptionEvent2::CanPassToDebuggee | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugExceptionEvent2::CanPassToDebuggee"
+helpviewer_keywords: 
+  - "IDebugExceptionEvent2::CanPassToDebuggee"
 ms.assetid: ae4bbe0a-fbe1-49be-a310-ea64279a434b
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2e6505e1779c881141ca17f33ec0ad1ffcf7a42b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="idebugexceptionevent2canpasstodebuggee"></a>IDebugExceptionEvent2::CanPassToDebuggee
-Determines whether or not the debug engine (DE) supports the option of passing this exception to the program being debugged when execution resumes.  
+# IDebugExceptionEvent2::CanPassToDebuggee
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+実行を再開するとデバッグの \(DE\) デバッグ対象のプログラムにこの例外を渡す際のオプション エンジンをサポートするかどうかを指定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT CanPassToDebuggee(  
-   void  
+```cpp#  
+HRESULT CanPassToDebuggee(  
+   void  
 );  
 ```  
   
-```csharp  
-int CanPassToDebuggee();  
+```c#  
+int CanPassToDebuggee();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- Returns either `S_OK` (the exception can be passed to the program) or `S_FALSE` (the exception cannot be passed on).  
+## 戻り値  
+ `S_OK` \(例外はプログラムに渡すことができます\) または `S_FALSE` を返します。例外はできません。  
   
-## <a name="remarks"></a>Remarks  
- The DE must have a default action for passing to the debuggee. The IDE may receive the [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) event and call the [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md) method without calling the `CanPassToDebuggee` method. Therefore, the DE should have a default case for passing the exception on or not.  
+## 解説  
+ DEデバッグ対象に渡すことの既定のアクションが必要です。  IDE で [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) イベントを受け取り`CanPassToDebuggee` のメソッドを呼び出さないで [続行](../../../extensibility/debugger/reference/idebugprocess3-continue.md) メソッドを呼び出すことがあります。  したがってde\-DE は例外を渡す場合も既定のケースを持つ必要があります。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   
- [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)
+ [続行](../../../extensibility/debugger/reference/idebugprocess3-continue.md)

@@ -1,64 +1,47 @@
 ---
-title: IEnumDebugAddresses::Reset | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IEnumDebugAddresses::Reset
-helpviewer_keywords:
-- IEnumDebugAddresses::Reset method
+title: "IEnumDebugAddresses::Reset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IEnumDebugAddresses::Reset"
+helpviewer_keywords: 
+  - "IEnumDebugAddresses::Reset メソッド"
 ms.assetid: 3a9d7f20-5bc6-4e13-8e91-5af4092e092f
 caps.latest.revision: 5
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d015a331c794f173cd316a03c7d6bdd784d161f4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 5
 ---
-# <a name="ienumdebugaddressesreset"></a>IEnumDebugAddresses::Reset
-This method resets the enumeration to the first element.  
+# IEnumDebugAddresses::Reset
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このメソッドは最初の要素には列挙型をリセットします。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT Reset(void);  
 ```  
   
-```csharp  
+```c#  
 int Reset();  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- None  
+#### パラメーター  
+ なし  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- After this method is called, the next call to [Next](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md) returns the first element of the enumeration.  
+## 解説  
+ このメソッドが呼び出された後[次へ](../Topic/IEnumDebugAddresses::Next.md) への呼び出しは列挙型の最初の要素を返します。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)   
- [Next](../../../extensibility/debugger/reference/ienumdebugaddresses-next.md)
+ [次へ](../Topic/IEnumDebugAddresses::Next.md)

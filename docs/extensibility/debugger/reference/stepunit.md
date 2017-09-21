@@ -1,84 +1,67 @@
 ---
-title: STEPUNIT | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- STEPUNIT
-helpviewer_keywords:
-- STEPUNIT enumeration
+title: "STEPUNIT | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "STEPUNIT"
+helpviewer_keywords: 
+  - "STEPUNIT 列挙型"
 ms.assetid: cb8441f2-f744-4e73-acfe-ae8542df9649
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: dfa4ba22c8d56de8948c86fb6133f30e938564d8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="stepunit"></a>STEPUNIT
-Specifies the step unit for stepping.  
+# STEPUNIT
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+手順の増分単位を指定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-enum enum_STEPUNIT {   
-   STEP_STATEMENT   = 0,  
-   STEP_LINE        = 1,  
-   STEP_INSTRUCTION = 2  
+```cpp#  
+enum enum_STEPUNIT {   
+   STEP_STATEMENT   = 0,  
+   STEP_LINE        = 1,  
+   STEP_INSTRUCTION = 2  
 };  
 typedef DWORD STEPUNIT;  
 ```  
   
-```csharp  
-enum enum_STEPUNIT {   
-   STEP_STATEMENT   = 0,  
-   STEP_LINE        = 1,  
-   STEP_INSTRUCTION = 2  
+```c#  
+enum enum_STEPUNIT {   
+   STEP_STATEMENT   = 0,  
+   STEP_LINE        = 1,  
+   STEP_INSTRUCTION = 2  
 };  
 ```  
   
-## <a name="members"></a>Members  
- STEP_STATEMENT  
- Steps by statement.  
+## メンバー  
+ STEP\_STATEMENT  
+ ステートメントについて説明します。  
   
- STEP_LINE  
- Steps by line.  
+ STEP\_LINE  
+ 行について説明します。  
   
- STEP_INSTRUCTION  
- Steps by instruction.  
+ STEP\_INSTRUCTION  
+ 手順について説明します。  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) method.  
+## 解説  
+ [ステップ](../../../extensibility/debugger/reference/idebugprocess3-step.md) のメソッドに引数として渡されます。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 必要条件  
+ ヘッダー : msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)
+## 参照  
+ [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [ステップ](../../../extensibility/debugger/reference/idebugprocess3-step.md)

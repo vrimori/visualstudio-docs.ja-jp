@@ -1,69 +1,52 @@
 ---
-title: IEEVisualizerService::GetCustomViewerCount | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IEEVisualizerService::GetCustomViewerCount
-helpviewer_keywords:
-- IEEVisualizerService::GetCustomViewerCount method
+title: "IEEVisualizerService::GetCustomViewerCount | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IEEVisualizerService::GetCustomViewerCount"
+helpviewer_keywords: 
+  - "IEEVisualizerService::GetCustomViewerCount メソッド"
 ms.assetid: f7b095c2-e538-4352-8cad-d4c6d4f6bdbc
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4ed857941c2e6305a47269f4ad150e13116d8647
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="ieevisualizerservicegetcustomviewercount"></a>IEEVisualizerService::GetCustomViewerCount
-This method gets the number of type visualizers available from this service.  
+# IEEVisualizerService::GetCustomViewerCount
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+このメソッドはサービスから使用できる型のビジュアライザーの数を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
 ```cpp  
-HRESULT GetCustomViewerCount(  
-   ULONG* pcelt  
+HRESULT GetCustomViewerCount(  
+   ULONG* pcelt  
 );  
 ```  
   
-```csharp  
-int GetCustomViewerCount(  
-   out uint pcelt  
+```c#  
+int GetCustomViewerCount(  
+   out uint pcelt  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pcelt`  
- [out] Returns the number of type visualizers available.  
+ \[出力\] 使用できる型のビジュアライザーの数を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="remarks"></a>Remarks  
- [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) passes the request to this method in its support for type visualizers.  
+## 解説  
+ [GetCustomViewerCount](../Topic/IDebugProperty3::GetCustomViewerCount.md) は型のビジュアライザーのの要求をメソッドに渡します。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)   
- [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)
+ [GetCustomViewerCount](../Topic/IDebugProperty3::GetCustomViewerCount.md)

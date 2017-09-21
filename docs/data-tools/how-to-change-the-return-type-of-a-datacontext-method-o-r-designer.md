@@ -1,64 +1,45 @@
 ---
-title: 'How to: Change the return type of a DataContext method (O-R Designer) | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "How to: Change the Return Type of a DataContext Method (O/R Designer) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: c5b66bff-6dbb-43c0-bffa-317133ca5b9e
 caps.latest.revision: 2
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: b130e051a4c7a312b2be952c1ef27e97c101cd1b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 2
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="how-to-change-the-return-type-of-a-datacontext-method-or-designer"></a>How to: Change the return type of a DataContext method (O/R Designer)
-The return type of a <xref:System.Data.Linq.DataContext> method (created based on a stored procedure or function) differs depending on where you drop the stored procedure or function in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. If you drop an item directly onto an existing entity class, a <xref:System.Data.Linq.DataContext> method that has the return type of the entity class is created (if the schema of the data returned by the stored procedure or function matches the shape of the entity class). If you drop an item onto an empty area of the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], a <xref:System.Data.Linq.DataContext> method that returns an automatically generated type is created. You can change the return type of a <xref:System.Data.Linq.DataContext> method after you add it to the methods pane. To inspect or change the return type of a <xref:System.Data.Linq.DataContext> method, select it and click the **Return Type** property in the **Properties** window.  
+# How to: Change the Return Type of a DataContext Method (O/R Designer)
+ストアド プロシージャまたは関数に基づいて作成された <xref:System.Data.Linq.DataContext> メソッドの戻り値の型は、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]でストアド プロシージャまたは関数をドロップした場所に応じて異なります。既存のエンティティ クラスに項目を直接ドロップすると、そのエンティティ クラスを戻り値の型とする <xref:System.Data.Linq.DataContext> メソッドが作成されます \(ストアド プロシージャまたは関数によって返されるデータのスキーマがエンティティ クラスの形状と一致する場合\)。[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]の空の領域に項目をドロップすると、自動生成された型を返す <xref:System.Data.Linq.DataContext> メソッドが作成されます。<xref:System.Data.Linq.DataContext> メソッドをメソッド ペインに追加した後に、その戻り値の型を変更できます。<xref:System.Data.Linq.DataContext> メソッドの戻り値の型を確認または変更するには、**\[プロパティ\]** ウィンドウでメソッドを選択し、**\[Return Type\]** プロパティをクリックします。  
   
 > [!NOTE]
->  You cannot revert <xref:System.Data.Linq.DataContext> methods that have a return type set to an entity class to return the auto-generated type by using the **Properties** window. To revert a <xref:System.Data.Linq.DataContext> method to return an auto-generated type, you must drag the original database object onto the O/R Designer again.  
+>  **\[プロパティ\]** ウィンドウを使用しても、戻り値の型がエンティティ クラスに設定されている <xref:System.Data.Linq.DataContext> メソッドは、自動生成型を返すようには変更できません。自動生成型を返すように <xref:System.Data.Linq.DataContext> メソッドを戻すには、元のデータベース オブジェクトをもう一度 O\/R デザイナーにドラッグする必要があります。  
   
-[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+ [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-### <a name="to-change-the-return-type-of-a-datacontext-method-from-the-auto-generated-type-to-an-entity-class"></a>To change the return type of a DataContext method from the auto-generated type to an entity class  
+### DataContext メソッドの戻り値の型を、自動生成型からエンティティ クラスに変更するには  
   
-1.  Select the <xref:System.Data.Linq.DataContext> method in the methods pane.  
+1.  メソッド ペインで <xref:System.Data.Linq.DataContext> メソッドを選択します。  
   
-2.  Select **Return Type** in the **Properties** window and then select an available entity class in the **Return Type** list. If the desired entity class is not in the list, add it to or create it in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] to add it to the list.  
+2.  **\[プロパティ\]** ウィンドウの **\[Return Type\]** を選択し、**\[Return Type\]** の一覧で使用可能なエンティティ クラスを選択します。目的のエンティティ クラスが一覧にない場合は、そのエンティティ クラスを追加するか、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]で作成して一覧に追加します。  
   
-3.  Save the .dbml file.  
+3.  .dbml ファイルを保存します。  
   
-### <a name="to-change-the-return-type-of-a-datacontext-method-from-an-entity-class-back-to-the-auto-generated-type"></a>To change the return type of a DataContext method from an entity class back to the auto-generated type  
+### DataContext メソッドの戻り値の型を、エンティティ クラスから自動生成型に変更するには  
   
-1.  Select the <xref:System.Data.Linq.DataContext> method in the methods pane and delete it.  
+1.  メソッド ペインで <xref:System.Data.Linq.DataContext> メソッドを選択し、削除します。  
   
-2.  Drag the database object from **Server Explorer**/**Database Explorer** onto an empty area of the O/R Designer.  
+2.  **サーバー エクスプローラー**または**データベース エクスプローラー**から、データベース オブジェクトを O\/R デザイナーの空の領域にドラッグします。  
   
-3.  Save the .dbml file.  
+3.  .dbml ファイルを保存します。  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
- [DataContext Methods (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md)   
- [How to: Create DataContext methods mapped to stored procedures and functions (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)
+## 参照  
+ [Object Relational Designer \(O\/R Designer\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
+ [DataContext Methods \(O\/R Designer\)](../data-tools/datacontext-methods-o-r-designer.md)   
+ [How to: Create DataContext Methods Mapped to Stored Procedures and Functions \(O\/R Designer\)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)

@@ -1,76 +1,59 @@
 ---
-title: IEnumDebugCodeContexts2::Next | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IEnumDebugCodeContexts2::Next
-helpviewer_keywords:
-- IEnumDebugCodeContexts2::Next
+title: "IEnumDebugCodeContexts2::Next | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IEnumDebugCodeContexts2::Next"
+helpviewer_keywords: 
+  - "IEnumDebugCodeContexts2::Next"
 ms.assetid: 0d8aa2db-0994-4166-b364-2e25d936fffc
 caps.latest.revision: 13
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 41a9ddc34116fa4a037774a8d33432a1073a6b18
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
-# <a name="ienumdebugcodecontexts2next"></a>IEnumDebugCodeContexts2::Next
-Returns the next set of elements from the enumeration.  
+# IEnumDebugCodeContexts2::Next
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+列挙体の要素のセットを返します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT Next(  
-   ULONG                celt,  
-   IDebugCodeContext2** rgelt,  
-   ULONG*               pceltFetched  
+   ULONG                celt,  
+   IDebugCodeContext2** rgelt,  
+   ULONG*               pceltFetched  
 );  
 ```  
   
-```csharp  
+```c#  
 int Next(  
-   uint                 celt,  
-   IDebugCodeContext2[] rgelt,  
-   ref uint             pceltFetched  
+   uint                 celt,  
+   IDebugCodeContext2[] rgelt,  
+   ref uint             pceltFetched  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `celt`  
- [in] The number of elements to retrieve. Also specifies the maximum size of the `rgelt` array.  
+ \[入力\] 取得する要素の数。  または `rgelt` の配列の最大サイズを指定します。  
   
  `rgelt`  
- [in, out] Array of [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) elements to be filled in.  
+ \[入力出力\] 入力する [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) の要素の配列。  
   
  `pceltFetched`  
- [out] Returns the number of elements actually returned in `rgelt`.  
+ \[出力\] 実際に `rgelt` で返される要素の数を返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`. Returns `S_FALSE` if fewer than the requested number of elements could be returned; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK` 要求された要素の数より少ない数を返す場合はを返します `S_FALSE` ; それ以外の場合はエラー コード。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

@@ -1,57 +1,40 @@
 ---
-title: 'Walkthrough: Linking a Content Type to a File Name Extension | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- editors [Visual Studio SDK], new - link content type to file name extension
+title: "チュートリアル: ファイル名拡張子へのコンテンツの種類のリンク | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "エディター [Visual Studio SDK] ファイル名拡張子に新たなリンクのコンテンツの種類"
 ms.assetid: 21ee64ce-9afe-4b08-94a0-8389cc4dc67c
 caps.latest.revision: 24
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 1bebe89c0bc2785f85bf38949ea477d2da662cc9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 24
 ---
-# <a name="walkthrough-linking-a-content-type-to-a-file-name-extension"></a>Walkthrough: Linking a Content Type to a File Name Extension
-You can define your own content type and link a file name extension to it by using editor Managed Extensibility Framework (MEF) extensions. In some cases, the file name extension has already been defined by a language service; nevertheless, to use it with MEF you still must link it to a content type.  
+# チュートリアル: ファイル名拡張子へのコンテンツの種類のリンク
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+独自のコンテンツの種類を定義し、エディター Managed Extensibility Framework \(MEF\) の拡張機能を使用して、ファイル名拡張子をリンクできます。 場合によっては、ファイル名拡張子既にによって定義されている言語のサービスです。それにもかかわらず、MEF で使用する必要がありますリンクさせる、コンテンツ タイプにします。  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## 必須コンポーネント  
+ Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
   
-## <a name="creating-a-mef-project"></a>Creating a MEF Project  
+## MEF プロジェクトを作成します。  
   
-1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `ContentTypeTest`.  
+1.  C\# の場合は、VSIX プロジェクトを作成します。 \(で、 **新しいプロジェクト** ダイアログで、 **Visual c\#\/機能拡張**, 、し **VSIX プロジェクト**.\) ソリューションの名前 `ContentTypeTest`します。  
   
-2.  In the **source.extension.vsixmanifest** file, go to the **Assets** tab, and set the **Type** field to **Microsoft.VisualStudio.MefComponent**, the **Source** field to **A project in current solution**, and the **Project** field to the name of the project.  
+2.  **Source.extension.vsixmanifest** に移動して、ファイル、 **資産** タブをクリックし、設定、 **型** フィールドを **\[microsoft.visualstudio.mefcomponent\]**, 、 **ソース** フィールドを **現在のソリューション内のプロジェクト**, 、および **プロジェクト** フィールドをプロジェクトの名前にします。  
   
-## <a name="defining-the-content-type"></a>Defining the Content Type  
+## コンテンツの種類を定義します。  
   
-1.  Add a class file and name it `FileAndContentTypes`.  
+1.  クラス ファイルを追加し、名前 `FileAndContentTypes`します。  
   
-2.  Add references to the following assemblies:  
+2.  次のアセンブリへの参照を追加します。  
   
     1.  System.ComponentModel.Composition  
   
@@ -59,25 +42,25 @@ You can define your own content type and link a file name extension to it by usi
   
     3.  Microsoft.VisualStudio.CoreUtility  
   
-3.  Add the following `using` directives.  
+3.  次の追加 `using` ディレクティブです。  
   
-    ```csharp  
+    ```c#  
     using System.ComponentModel.Composition;  
     using Microsoft.VisualStudio.Text.Classification;  
     using Microsoft.VisualStudio.Utilities;  
   
     ```  
   
-4.  Declare a static class that contains the definitions.  
+4.  定義を格納する静的クラスを宣言します。  
   
-    ```csharp  
+    ```c#  
     internal static class FileAndContentTypeDefinitions  
     {. . .}  
     ```  
   
-5.  In this class, export a <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> named "hid" and declare its base definition to be "text".  
+5.  このクラスでは、エクスポート、 <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> "hid"という名前を"text"を使用する基本定義を宣言します。  
   
-    ```csharp  
+    ```c#  
     internal static class FileAndContentTypeDefinitions  
     {  
         [Export]  
@@ -87,11 +70,11 @@ You can define your own content type and link a file name extension to it by usi
     }  
     ```  
   
-## <a name="linking-a-file-name-extension-to-a-content-type"></a>Linking a File Name Extension to a Content Type  
+## ファイル名拡張子をコンテンツの種類にリンクします。  
   
--   To map this content type to a file name extension, export a <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> that has the extension ".hid" and the content type "hid".  
+-   ファイル名拡張子には、このコンテンツの種類をマップするには、エクスポート、 <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> ".hid"を拡張機能を持つし、コンテンツの種類"hid"です。  
   
-    ```csharp  
+    ```c#  
     internal static class FileAndContentTypeDefinitions  
     {  
          [Export]  
@@ -106,18 +89,18 @@ You can define your own content type and link a file name extension to it by usi
     }  
     ```  
   
-## <a name="adding-the-content-type-to-an-editor-export"></a>Adding the Content Type to an Editor Export  
+## エディターのエクスポートへのコンテンツの種類の追加  
   
-1.  Create an editor extension. For example, you can use the margin glyph extension described in [Walkthrough: Creating a Margin Glyph](../extensibility/walkthrough-creating-a-margin-glyph.md).  
+1.  エディター拡張機能を作成します。 たとえば、」に記載の余白のグリフの拡張機能を使用することができます [チュートリアル: 余白のグリフの作成](../extensibility/walkthrough-creating-a-margin-glyph.md)します。  
   
-2.  Add the class you defined in this procedure.  
+2.  この手順で定義したクラスを追加します。  
   
-3.  When you export the extension class, add a <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> of type "hid" to it.  
+3.  拡張機能クラスをエクスポートする場合は、追加、 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "\[NULL\] を非表示の種類のです。  
   
-    ```csharp  
+    ```c#  
     [Export]  
     [ContentType("hid")]  
     ```  
   
-## <a name="see-also"></a>See Also  
- [Language Service and Editor Extension Points](../extensibility/language-service-and-editor-extension-points.md)
+## 参照  
+ [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

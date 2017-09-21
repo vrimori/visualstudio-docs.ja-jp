@@ -1,85 +1,77 @@
 ---
-title: Set the control to be created when dragging from the Data Sources window | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Data Sources Window, select controls
-- Windows Forms, displaying data
-- data [Visual Studio], displaying on Windows Forms
-- data [Visual Studio], Data Sources window
+title: "[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する | Microsoft Docs"
+ms.custom: ""
+ms.date: "09/21/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "[データ ソース] ウィンドウ、コントロールの選択"
+  - "Windows フォーム、データの表示"
+  - "データ [Visual Studio]、Windows フォームでの表示"
+  - "データ [Visual Studio]、[データ ソース] ウィンドウ"
 ms.assetid: 20597ff8-0c98-43ec-8fb1-05376804ba48
 caps.latest.revision: 31
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 1d4298d60886d8fe8b402b59b1838a4171532ab1
-ms.openlocfilehash: d67fd06767fc8160a1a433f5e37826eeae5750fe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 28
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>Set the control to be created when dragging from the Data Sources window
-You can create data-bound controls by dragging items from the **Data Sources** window onto the WPF designer or Windows Forms designer. Each item in the **Data Sources** window has a default control that is created when you drag it to the designer. However, you can choose to create a different control.  
+# [データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する
+**\[データ ソース\]** ウィンドウから WPF デザイナーまたは Windows フォーム デザイナーに項目をドラッグすることにより、データ バインド コントロールを作成できます。  **\[データ ソース\]** ウィンドウの各項目には、その項目をデザイナーにドラッグしたときに作成される既定のコントロールが関連付けられています。  ただし、別のコントロールが作成されるようにすることもできます。  
   
-## <a name="set-the-controls-to-be-created-for-data-tables-or-objects"></a>Set the controls to be created for data tables or objects  
- Before you drag items that represent data tables or objects from the **Data Sources** window, you can choose to display all the data in one control, or to display each column or property in a separate control.  
+## データ テーブルまたはオブジェクトに対して作成されるコントロールの設定  
+ データ テーブルまたはオブジェクトを表す項目を **\[データ ソース\]** ウィンドウからドラッグする前に、すべてのデータを 1 つのコントロールに表示するか、それぞれの列またはプロパティを個別のコントロールに表示するかを選択できます。  
   
- In this context, the term *object* refers to a custom business object, an entity (in an Entity Data Model), or an object returned by a service.  
+ ここで、*オブジェクト*という用語は、カスタム ビジネス オブジェクト、エンティティ \(Entity Data Model のエンティティ\)、またはサービスによって返されるオブジェクトを意味します。  
   
-#### <a name="to-set-the-controls-to-be-created-for-data-tables-or-objects"></a>To set the controls to be created for data tables or objects  
+#### データ テーブルまたはオブジェクトに対して作成されるコントロールを設定するには  
   
-1.  Make sure that the WPF designer or the Windows Forms designer is open.  
+1.  WPF デザイナーまたは Windows フォーム デザイナーが開いていることを確認します。  
   
-2.  In the **Data Sources** window, select the item that represents the data table or object you want to set.  
+2.  **\[データ ソース\]** ウィンドウで、設定するデータ テーブルまたはオブジェクトを表す項目を選択します。  
   
-3.  Click the drop-down menu for the item, and then click one of the following items in the menu:  
+3.  項目のドロップダウン メニューをクリックし、メニューの次の項目のいずれかをクリックします。  
   
-    -   To display each data field in a separate control, click **Details**. When you drag the data item to the designer, this action will create a different data-bound control for each column or property of the parent data table or object, along with labels for each control.  
+    -   各データ フィールドを個別のコントロールに表示するには、**\[詳細\]** をクリックします。  データ項目をデザイナーにドラッグすると、このアクションにより、親のデータ テーブルまたはオブジェクトの列またはプロパティごとに異なるデータ バインド コントロールが作成され、各コントロールのラベルが作成されます。  
   
-    -   To display all of the data in a single control, select a different control in the list, such as **DataGrid** or **List** in a WPF application, or **DataGridView** in a Windows Forms application.  
+    -   すべてのデータを単一のコントロールに表示するには、リストで別のコントロールを選択します。たとえば、WPF アプリケーションでは **\[DataGrid\]** または **\[List\]** を選択し、Windows フォーム アプリケーションでは **\[DataGridView\]** を選択します。  
   
-     The list of available controls depends on which designer you have open, which version of the .NET Framework your project targets, and whether you have added custom controls that support data binding to the **Toolbox**. If the control you want to create is not in the list of available controls, you can add the control to the list. For more information, see [Add custom controls to the Data Sources window](../data-tools/add-custom-controls-to-the-data-sources-window.md).  
+     利用できるコントロールのリストは、開いたデザイナー、プロジェクトのターゲットである .NET Framework のバージョン、およびデータ バインディングをサポートするカスタム コントロールを**ツールボックス**に追加したかどうかによって異なります。  作成するコントロールが利用できるコントロールのリストに含まれている場合、コントロールをリストに追加できます。  詳細については、「[\[データ ソース\] ウィンドウにカスタム コントロールを追加する](../Topic/Add%20custom%20controls%20to%20the%20Data%20Sources%20window.md)」を参照してください。  
   
-     To learn how to create a custom Windows Forms control that can be added to the list of controls for data tables or objects in the **Data Sources** window, see [Create a Windows Forms user control that supports complex data binding](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).  
+     **\[データ ソース\]** ウィンドウのデータ テーブルまたはオブジェクトのコントロールのリストに追加できるカスタム Windows フォーム コントロールの作成方法については、「[チュートリアル: 複合データ バインドをサポートする Windows フォーム ユーザー コントロールの作成](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md)」を参照してください。  
   
-## <a name="set-the-controls-to-be-created-for-data-columns-or-properties"></a>Set the controls to be created for data columns or properties  
- Before you drag an item that represents a column or a property of an object from the **Data Sources** window to the designer, you can set the control to be created.  
+## データ列またはプロパティに対して作成されるコントロールの設定  
+ オブジェクトの列またはプロパティを表す項目を **\[データ ソース\]** ウィンドウからデザイナーにドラッグする前に、作成されるコントロールを設定できます。  
   
-#### <a name="to-set-the-controls-to-be-created-for-columns-or-properties"></a>To set the controls to be created for columns or properties  
+#### 列またはプロパティに対して作成されるコントロールを設定するには  
   
-1.  Make sure that the WPF designer or the Windows Forms designer is open.  
+1.  WPF デザイナーまたは Windows フォーム デザイナーが開いていることを確認します。  
   
-2.  In the **Data Sources** window, expand the desired table or object to display its columns or properties.  
+2.  **\[データ ソース\]** ウィンドウで、目的のテーブルまたはオブジェクトを展開してその列またはプロパティを表示します。  
   
-3.  Select each column or property for which you want to set the control to be created.  
+3.  作成されるコントロールを設定する各列または各プロパティを選択します。  
   
-4.  Click the drop-down menu for the column or property, and then select the control you want to create when the item is dragged to the designer.  
+4.  列またはプロパティのドロップダウン メニューをクリックし、項目をデザイナーにドラッグしたときに作成されるコントロールを選択します。  
   
-     The list of available controls depends on which designer you have open, which version of the .NET Framework your project targets, and which custom controls that support data binding you have added to the **Toolbox**. If the control you want to create is in the list of available controls, you can add the control to the list. For more information, see [Add custom controls to the Data Sources window](../data-tools/add-custom-controls-to-the-data-sources-window.md).  
+     利用できるコントロールのリストは、開いたデザイナー、プロジェクトのターゲットである .NET Framework のバージョン、および**ツールボックス**に追加したデータ バインディングをサポートするカスタム コントロールによって異なります。  作成するコントロールが利用できるコントロールのリストに含まれている場合、コントロールをリストに追加できます。  詳細については、「[\[データ ソース\] ウィンドウにカスタム コントロールを追加する](../Topic/Add%20custom%20controls%20to%20the%20Data%20Sources%20window.md)」を参照してください。  
   
-     To learn how to create a custom control that can be added to the list of controls for data columns or properties in the **Data Sources** window, see [Create a Windows Forms user control that supports simple data binding](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).  
+     **\[データ ソース\]** ウィンドウのデータ列またはプロパティのコントロールのリストに追加できるカスタム コントロールの作成方法については、「[チュートリアル: 単純データ バインドをサポートする Windows フォーム ユーザー コントロールの作成](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md)」を参照してください。  
   
-     If you don't want to create a control for the column or property, select **None** in the drop-down menu. This is useful if you want to drag the parent table or object to the designer, but you do not want to include the specific column or property.  
+     列またはプロパティのコントロールを作成しない場合は、ドロップダウン メニューの **\[なし\]** を選択します。  これは、親のテーブルまたはオブジェクトをデザイナーにドラッグする必要があり、かつ特定の列またはプロパティを含める必要がない場合に便利です。  
   
-## <a name="see-also"></a>See Also  
- [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)
+## 参照  
+ [データに関するチュートリアル](../Topic/Data%20Walkthroughs.md)   
+ [チュートリアル: Windows フォームでのデータの表示](../data-tools/walkthrough-displaying-data-on-a-windows-form.md)   
+ [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+ [型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)   
+ [データ ソースの概要](../data-tools/add-new-data-sources.md)   
+ [ウィンドウ](../Topic/Data%20Sources%20Window.md)   
+ [\[データ ソース\] ウィンドウにカスタム コントロールを追加する](../Topic/Add%20custom%20controls%20to%20the%20Data%20Sources%20window.md)

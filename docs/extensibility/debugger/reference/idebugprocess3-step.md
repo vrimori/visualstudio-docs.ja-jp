@@ -1,87 +1,70 @@
 ---
-title: IDebugProcess3::Step | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProcess3::Step
-helpviewer_keywords:
-- IDebugProcess3::Step
+title: "IDebugProcess3::Step | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProcess3::Step"
+helpviewer_keywords: 
+  - "IDebugProcess3::Step"
 ms.assetid: 6ad9094c-27cc-4927-8a7c-1b4d97b2e436
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5b527440083ea02890856892f9954a45cb726627
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugprocess3step"></a>IDebugProcess3::Step
-Causes the process to step one instruction or statement.  
+# IDebugProcess3::Step
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+手順 1 の命令またはステートメントにプロセスを指定します。  
   
 > [!NOTE]
->  This method should be used instead of [Step](../../../extensibility/debugger/reference/idebugprogram2-step.md).  
+>  このメソッドは [ステップ](../../../extensibility/debugger/reference/idebugprogram2-step.md) の代わりに使用されます。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
 ```cpp  
 HRESULT Step(  
-   IDebugThread2* pThread,  
-   STEPKIND       sk,  
-   STEPUNIT       step,  
+   IDebugThread2* pThread,  
+   STEPKIND       sk,  
+   STEPUNIT       step,  
 );  
 ```  
   
-```csharp  
+```c#  
 int Step(  
-   IDebugThread2 pThread,   
-   enum_STEPKIND sk,   
-   enum_STEPUNIT step  
+   IDebugThread2 pThread,   
+   enum_STEPKIND sk,   
+   enum_STEPUNIT step  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pThread`  
- [in] An [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object representing the thread being stepped.  
+ \[入力\] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) の実行スレッドを表すオブジェクト。  
   
  `sk`  
- [in] One of the [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) values.  
+ \[入力\] [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) 値のいずれか 1 つが。  
   
  `step`  
- [in] One of the [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) values.  
+ \[入力\] [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) 値のいずれか 1 つが。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise returns error code.  
+## 戻り値  
+ 成功した場合は S\_OK; それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>Remarks  
- In case there is any thread synchronization or communication between threads, other threads in the process should run when a particular thread is stepping.  
+## 解説  
+ スレッド間にスレッド同期または通信がある場合プロセス内のスレッドは特定のスレッドをステップ実行するときに実行する必要があります。  
   
- **Warning** Do not send a stopping event or an immediate (synchronous) event to [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) while handling this call; otherwise the debugger may hang.  
+ **警告**  は [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)この呼び出しを処理している停止のイベントまたは直接の同期イベントを送信しません \(\); デバッガーはハングする場合があります。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [STEPKIND](../../../extensibility/debugger/reference/stepkind.md)   
  [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md)   
- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

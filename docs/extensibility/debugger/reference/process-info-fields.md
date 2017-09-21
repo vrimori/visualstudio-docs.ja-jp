@@ -1,118 +1,101 @@
 ---
-title: PROCESS_INFO_FIELDS | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- PROCESS_INFO_FIELDS
-helpviewer_keywords:
-- PROCESS_INFO_FIELDS enumeration
+title: "PROCESS_INFO_FIELDS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "PROCESS_INFO_FIELDS"
+helpviewer_keywords: 
+  - "PROCESS_INFO_FIELDS 列挙型"
 ms.assetid: 0d9cc345-3d3a-44d8-ae15-a67acb97a828
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5d1033526178748573aadfb1ac538272c9605ac9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="processinfofields"></a>PROCESS_INFO_FIELDS
-Specified what kind of information to retrieve for a process.  
+# PROCESS_INFO_FIELDS
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+プロセスのために取得するような情報を指定します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-enum enum_PROCESS_INFO_FIELDS {   
-   PIF_FILE_NAME             = 0x00000001,  
-   PIF_BASE_NAME             = 0x00000002,  
-   PIF_TITLE                 = 0x00000004,  
-   PIF_PROCESS_ID            = 0x00000008,  
-   PIF_SESSION_ID            = 0x00000010,  
-   PIF_ATTACHED_SESSION_NAME = 0x00000020,  
-   PIF_CREATION_TIME         = 0x00000040,  
-   PIF_FLAGS                 = 0x00000080,  
-   PIF_ALL                   = 0x000000ff  
+```cpp#  
+enum enum_PROCESS_INFO_FIELDS {   
+   PIF_FILE_NAME             = 0x00000001,  
+   PIF_BASE_NAME             = 0x00000002,  
+   PIF_TITLE                 = 0x00000004,  
+   PIF_PROCESS_ID            = 0x00000008,  
+   PIF_SESSION_ID            = 0x00000010,  
+   PIF_ATTACHED_SESSION_NAME = 0x00000020,  
+   PIF_CREATION_TIME         = 0x00000040,  
+   PIF_FLAGS                 = 0x00000080,  
+   PIF_ALL                   = 0x000000ff  
 };  
 typedef DWORD PROCESS_INFO_FIELDS;  
 ```  
   
-```csharp  
-public enum enum_PROCESS_INFO_FIELDS {   
-   PIF_FILE_NAME             = 0x00000001,  
-   PIF_BASE_NAME             = 0x00000002,  
-   PIF_TITLE                 = 0x00000004,  
-   PIF_PROCESS_ID            = 0x00000008,  
-   PIF_SESSION_ID            = 0x00000010,  
-   PIF_ATTACHED_SESSION_NAME = 0x00000020,  
-   PIF_CREATION_TIME         = 0x00000040,  
-   PIF_FLAGS                 = 0x00000080,  
-   PIF_ALL                   = 0x000000ff  
+```c#  
+public enum enum_PROCESS_INFO_FIELDS {   
+   PIF_FILE_NAME             = 0x00000001,  
+   PIF_BASE_NAME             = 0x00000002,  
+   PIF_TITLE                 = 0x00000004,  
+   PIF_PROCESS_ID            = 0x00000008,  
+   PIF_SESSION_ID            = 0x00000010,  
+   PIF_ATTACHED_SESSION_NAME = 0x00000020,  
+   PIF_CREATION_TIME         = 0x00000040,  
+   PIF_FLAGS                 = 0x00000080,  
+   PIF_ALL                   = 0x000000ff  
 };  
 ```  
   
-## <a name="members"></a>Members  
- PIF_FILE_NAME  
- Initialize/use the `bstrFileName` field of the [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) structure.  
+## メンバー  
+ PIF\_FILE\_NAME  
+ [PROCESS\_INFO](../../../extensibility/debugger/reference/process-info.md) の構造体の初期化と `bstrFileName` のフィールドを使用します。  
   
- PIF_BASE_NAME  
- Initialize/use the `bstrBaseName` field of the `PROCESS_INFO` structure.  
+ PIF\_BASE\_NAME  
+ `PROCESS_INFO` の構造体の初期化と `bstrBaseName` のフィールドを使用します。  
   
- PIF_TITLE  
- Initialize/use the `bstrTitle` field of the `PROCESS_INFO` structure.  
+ PIF\_TITLE  
+ `PROCESS_INFO` の構造体の初期化と `bstrTitle` のフィールドを使用します。  
   
- PIF_PROCESS_ID  
- Initialize/use the `ProcessId` field of the `PROCESS_INFO` structure.  
+ PIF\_PROCESS\_ID  
+ `PROCESS_INFO` の構造体の初期化と `ProcessId` のフィールドを使用します。  
   
- PIF_SESSION_ID  
- Initialize/use the `dwSessionId` field of the `PROCESS_INFO` structure.  
+ PIF\_SESSION\_ID  
+ `PROCESS_INFO` の構造体の初期化と `dwSessionId` のフィールドを使用します。  
   
- PIF_ATTACHED_SESSION_NAME  
- Initialize/use the `bstrAttachedSessionName` field of the `PROCESS_INFO` structure.  
+ PIF\_ATTACHED\_SESSION\_NAME  
+ `PROCESS_INFO` の構造体の初期化と `bstrAttachedSessionName` のフィールドを使用します。  
   
- PIF_CREATION_TIME  
- Initialize/use the `CreationTime` field of the `PROCESS_INFO` structure.  
+ PIF\_CREATION\_TIME  
+ `PROCESS_INFO` の構造体の初期化と `CreationTime` のフィールドを使用します。  
   
- PIF_FLAGS  
- Initialize/use the `Flags` field of the `PROCESS_INFO` structure.  
+ PIF\_FLAGS  
+ `PROCESS_INFO` の構造体の初期化と `Flags` のフィールドを使用します。  
   
- PIF_ALL  
- Fills out all fields.  
+ PIF\_ALL  
+ すべてのフィールドに表示されます。  
   
-## <a name="remarks"></a>Remarks  
- Passed to the [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) method to indicate which fields of the [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) structure are to be initialized.  
+## 解説  
+ [PROCESS\_INFO](../../../extensibility/debugger/reference/process-info.md) の構造体のフィールドが初期化するかを示すためにメソッドを [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) に渡されます。  
   
- Also used in `Fields` field of the `PROCESS_INFO` structure to indicate which fields are used and valid.  
+ フィールドを使用して有効であることを示すために `PROCESS_INFO` の構造体の `Fields` のフィールドにも使用します。  
   
- These flags may be combined with a bitwise `OR`.  
+ これらのフラグはビットごと `OR` に組み合わせることがあります。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## 必要条件  
+ ヘッダー : msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)
+## 参照  
+ [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [PROCESS\_INFO](../../../extensibility/debugger/reference/process-info.md)

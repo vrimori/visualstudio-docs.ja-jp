@@ -1,65 +1,48 @@
 ---
-title: IDebugModule3::IsUserCode | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugModule3::IsUserCode
-helpviewer_keywords:
-- IDebugModule3::IsUserCode
+title: "IDebugModule3::IsUserCode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugModule3::IsUserCode"
+helpviewer_keywords: 
+  - "IDebugModule3::IsUserCode"
 ms.assetid: 77022946-bb8b-4114-aa81-614df6e54b13
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 3f5bffdc71d82883799b94f2433e3eb7bdb37a7b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugmodule3isusercode"></a>IDebugModule3::IsUserCode
-Retrieves information on whether the module represents user code or not.  
+# IDebugModule3::IsUserCode
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+モジュールがユーザー コードを表すかどうかなどの情報を取得します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
-HRESULT IsUserCode(  
-   BOOL* pfUser  
+```cpp#  
+HRESULT IsUserCode(  
+   BOOL* pfUser  
 );  
 ```  
   
-```csharp  
+```c#  
 int IsUserCode(  
-   out int pfUser  
+   out int pfUser  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `pfUser`  
- [out] Nonzero (`TRUE`) if module represents user code, zero (`FALSE`) if it does not.  
+ \[入力\] モジュールがユーザー コードを表す `TRUE`\(\)ゼロ ゼロ \(\) 以外 `FALSE`。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

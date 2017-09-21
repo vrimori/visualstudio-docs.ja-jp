@@ -1,115 +1,98 @@
 ---
-title: SccAdd Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccAdd
-helpviewer_keywords:
-- SccAdd function
+title: "SccAdd 関数 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccAdd"
+helpviewer_keywords: 
+  - "SccAdd 関数"
 ms.assetid: 545268f3-8e83-446a-a398-1a9db9e866e8
 caps.latest.revision: 17
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 25b3dbc61b4fb57471737e41d3904effa9ed87be
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 17
 ---
-# <a name="sccadd-function"></a>SccAdd Function
-This function adds new files to the source control system.  
+# SccAdd 関数
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+この関数は、新しいファイルをソース管理システムに追加されます。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 SCCRTN SccAdd(  
-   LPVOID    pvContext,  
-   HWND      hWnd,  
-   LONG      nFiles,  
-   LPCSTR*   lpFileNames,  
-   LPCSTR    lpComment,  
-   LONG*     pfOptions,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pvContext,  
+   HWND      hWnd,  
+   LONG      nFiles,  
+   LPCSTR*   lpFileNames,  
+   LPCSTR    lpComment,  
+   LONG*     pfOptions,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  pvContext  
- [in] The source control plug-in context structure.  
+ \[in\]ソース管理プラグイン コンテキスト構造体。  
   
- hWnd  
- [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
+ hwnd の分離  
+ \[in\]ソース管理プラグインは、それによって提供されるダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
   
  nFiles  
- [in] Number of files selected to be added to the current project as given in the `lpFileNames` array.  
+ \[in\]指定されている現在のプロジェクトに追加する選択したファイル数、 `lpFileNames` 配列。  
   
  lpFileNames  
- [in] Array of fully qualified local names of files to be added.  
+ \[in\]追加するファイルの完全修飾のローカル名の配列。  
   
  lpComment  
- [in] The comment to be applied to all of the files being added.  
+ \[in\]追加されているファイルのすべてに適用されるコメントです。  
   
  pfOptions  
- [in] Array of command flags, provided on a per-file basis.  
+ \[in\]ファイル単位で提供されているコマンドのフラグの配列。  
   
  pvOptions  
- [in] Source control plug-in-specific options.  
+ \[in\]ソース管理プラグインに固有のオプションです。  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## 戻り値  
+ この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|The add operation was successful.|  
-|SCC_E_FILEALREADYEXISTS|The selected file is already under source control.|  
-|SCC_E_TYPENOTSUPPORTED|The type of the file (for example, binary) is not supported by the source control system.|  
-|SCC_E_OPNOTSUPPORTED|The source control system does not support this operation.|  
-|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
-|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure; add not performed.|  
-|SCC_I_OPERATIONCANCELED|The operation was cancelled before completion.|  
-|SCC_I_RELOADFILE|A file or project needs to be reloaded.|  
-|SCC_E_FILENOTEXIST|Local file was not found.|  
+|値|説明|  
+|-------|--------|  
+|SCC\_OK|追加操作が正常に完了しました。|  
+|SCC\_E\_FILEALREADYEXISTS|選択したファイルは、既にソース管理下にあるいます。|  
+|SCC\_E\_TYPENOTSUPPORTED|ソース管理システムでは、\(たとえば、バイナリ\) ファイルの種類はサポートされていません。|  
+|SCC\_E\_OPNOTSUPPORTED|ソース管理システムでは、この操作はサポートされません。|  
+|SCC\_E\_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題が原因と思わのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
+|SCC\_E\_NOTAUTHORIZED|この操作を実行できません。|  
+|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。追加は実行されません。|  
+|SCC\_I\_OPERATIONCANCELED|操作が完了する前に取り消されました。|  
+|SCC\_I\_RELOADFILE|ファイルまたはプロジェクトを再読み込みする必要があります。|  
+|SCC\_E\_FILENOTEXIST|ローカル ファイルが見つかりませんでした。|  
   
-## <a name="remarks"></a>Remarks  
- The usual `fOptions` are replaced here by an array, `pfOptions`, with one `LONG` option specification per file. This is because the file type may vary from file to file.  
+## 解説  
+ 通常の `fOptions` 、配列では、ここが置き換えられます `pfOptions`, 、いずれかで `LONG` ファイルごとの仕様のオプションです。 これは、ファイルの種類はファイルごとに異なる場合がありますので。  
   
 > [!NOTE]
->  It is invalid to specify both `SCC_FILETYPE_TEXT` and `SCC_FILETYPE_BINARY` options for the same file, but it is valid to specify neither. Setting neither is the same as setting `SCC_FILETYPE_AUTO`, in which case the source control plug-in autodetects the file type.  
+>  両方を指定することはできません `SCC_FILETYPE_TEXT` と `SCC_FILETYPE_BINARY` が同じファイルのオプションはどちらも指定します。 どちらの設定は、設定と同じ `SCC_FILETYPE_AUTO`, 、ソースがプラグインの初回ファイルの種類を管理する場合。  
   
- Below is the list of flags used in the `pfOptions` array:  
+ 使用されているフラグの一覧を次に示します、 `pfOptions` 配列。  
   
-|Option|Value|Meaning|  
-|------------|-----------|-------------|  
-|SCC_FILETYPE_AUTO|0x00|The source control plug-in should detect the file type.|  
-|SCC_FILETYPE_TEXT|0x01|Indicates an ASCII text file.|  
-|SCC_FILETYPE_BINARY|0x02|Indicates a file type other than ASCII text.|  
-|SCC_ADD_STORELATEST|0x04|Stores only the latest copy of the file, no deltas.|  
-|SCC_FILETYPE_TEXT_ANSI|0x08|Treats the file as ANSI text.|  
-|SCC_FILETYPE_UTF8|0x10|Treats the file as Unicode text in UTF8 format.|  
-|SCC_FILETYPE_UTF16LE|0x20|Treats the file as Unicode text in UTF16 Little Endian format.|  
-|SCC_FILETYPE_UTF16BE|0x40|Treats the file as Unicode text in UTF16 Big Endian format.|  
+|オプション|値|説明|  
+|-----------|-------|--------|  
+|SCC\_FILETYPE\_AUTO|0x00|ソース管理プラグインでは、ファイルの種類を検出する必要があります。|  
+|SCC\_FILETYPE\_TEXT|0x01|ASCII テキスト ファイルを示します。|  
+|SCC\_FILETYPE\_BINARY|0x02|ASCII テキスト以外のファイルの種類を示します。|  
+|SCC\_ADD\_STORELATEST|0x04|デルタ ファイルの最新のコピーだけを格納しません。|  
+|SCC\_FILETYPE\_TEXT\_ANSI|0x08|ANSI テキストとしてファイルを処理します。|  
+|SCC\_FILETYPE\_UTF8|0x10|UTF8 形式での Unicode テキストとしてファイルを処理します。|  
+|SCC\_FILETYPE\_UTF16LE|0x20|UTF16 に Unicode テキストとしてリトル エンディアン形式のファイルを扱います。|  
+|SCC\_FILETYPE\_UTF16BE|0x40|UTF16 ビッグ エンディアン Unicode 文字列としてファイル形式を扱います。|  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)
+## 参照  
+ [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Specify Build Events (C#) | Microsoft Docs'
+title: "方法 : ビルド イベントを指定する (C#) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,51 +33,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: 7c99b10f4bb238e8aca1b96f6990307ee5eec640
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3058bf7c6714f18291353224a192218c1b59a480
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 05/13/2017
 
 ---
-# <a name="how-to-specify-build-events-c"></a>How to: Specify Build Events (C#)
-Use build events to specify commands that run before the build starts or after the build finishes. Build events are executed only if the build successfully reaches those points in the build process.  
+# <a name="how-to-specify-build-events-c"></a>方法 : ビルド イベントを指定する (C#)
+ビルド開始前またはビルド終了後に実行するコマンドを指定するには、ビルド イベントを使います。 ビルド イベントは、ビルド プロセスにおいてビルドがこれらのポイントに正常に達した場合にのみ実行されます。  
   
- When a project is built, pre-build events are added to a file that is named PreBuildEvent.bat and post-build events are added to a file that is named PostBuildEvent.bat. If you want to ensure error checking, add your own error-checking commands to the build steps.  
+ プロジェクトのビルド時に、ビルド前イベントは PreBuildEvent.bat というファイルに追加され、ビルド後イベントは PostBuildEvent.bat というファイルに追加されます。 エラー チェックを行う場合は、独自のエラー チェック コマンドをビルド ステップに追加します。  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## <a name="how-to-specify-pre-build-and-post-build-events"></a>How to Specify Pre-Build and Post-Build Events  
+## <a name="how-to-specify-pre-build-and-post-build-events"></a>ビルド前のイベントとビルド後のイベントを指定する方法  
   
-#### <a name="to-specify-a-build-event"></a>To specify a build event  
+#### <a name="to-specify-a-build-event"></a>ビルド イベントを指定するには  
   
-1.  In **Solution Explorer**, select the project for which you want to specify the build event.  
+1.  **ソリューション エクスプローラー**で、ビルド イベントを指定するプロジェクトを選択します。  
   
-2.  On the **Project** menu, click **Properties**.  
+2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-3.  Select the **Build Events** tab.  
+3.  **[ビルド イベント]** タブを選択します。  
   
-4.  In the **Pre-build event command line** box, specify the syntax of the build event.  
-  
-    > [!NOTE]
-    >  Pre-build events do not run if the project is up to date and no build is triggered.  
-  
-5.  In the **Post-build event command line** box, specify the syntax of the build event.  
+4.  **[ビルド前に実行するコマンド ライン]** ボックスで、ビルド イベントの構文を指定します。  
   
     > [!NOTE]
-    >  Add a `call` statement before all post-build commands that run .bat files. For example, `call C:\MyFile.bat` or `call C:\MyFile.bat call C:\MyFile2.bat`.  
+    >  プロジェクトが最新の状態で、ビルドがトリガーされない場合、ビルド前イベントは実行されません。  
   
-6.  In the **Run the post-build event** box, specify under what conditions to run the post-build event.  
+5.  **[ビルド後に実行するコマンド ライン]** ボックスで、ビルド イベントの構文を指定します。  
   
     > [!NOTE]
-    >  To add lengthy syntax, or to select any build macros from the [Pre-build Event/Post-build Event Command Line Dialog Box](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md), click the Ellipsis button (**...**) to display an edit box.  
+    >  .bat ファイルを実行するすべてのビルド後コマンドの前に `call` ステートメントを追加します。 たとえば、`call C:\MyFile.bat` または `call C:\MyFile.bat call C:\MyFile2.bat` のようにします。  
   
-     The build event syntax can include any command that is valid at a command prompt or in a .bat file. The name of a batch file should be preceded by `call` to ensure that all subsequent commands are executed.  
+6.  **[ビルド後イベントの実行]** ボックスで、ビルド後イベントを実行する条件を指定します。  
   
-     **Note** If your pre-build or post-build event does not complete successfully, you can terminate the build by having your event action exit with a code other than zero (0), which indicates a successful action.  
+    > [!NOTE]
+    >  長い構文を追加する場合、または [[ビルド前に実行するコマンド ライン]/[ビルド後に実行するコマンド ライン] ダイアログ ボックス](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)でビルド マクロを選択する場合は、省略記号 **[...]** ボタンをクリックして編集ボックスを表示します。  
   
-## <a name="example-how-to-change-manifest-information-by-using-a-post-build-event"></a>Example: How to Change Manifest Information by Using a Post-Build Event  
- The following procedure shows how to set the minimum operating system version in the application manifest by using an .exe command that is called from a post-build event (the .exe.manifest file in the project directory). The minimum operating system version is a four-part number such as 4.10.0.0. To do this, the command will change the `<dependentOS>` section of the manifest:  
+     ビルド イベントの構文では、コマンド プロンプトまたは .bat ファイルで有効な任意のコマンドを使うことができます。 後続のすべてのコマンドが確実に実行されるように、バッチ ファイルの名前の前には `call` を記述する必要があります。  
+  
+     **注** ビルド前またはビルド後イベントが正常に完了しない場合は、アクションの成功を示すゼロ (0) 以外のコードでイベント アクションを終了させて、ビルドを強制終了することができます。  
+  
+## <a name="example-how-to-change-manifest-information-by-using-a-post-build-event"></a>例: ビルド後イベントを使ってマニフェスト情報を変更する方法  
+ 次の手順は、ビルド後イベントから呼び出される .exe コマンドを使って、アプリケーション マニフェスト (プロジェクト ディレクトリ内の .exe.manifest ファイル) 内にオペレーティング システムの最小バージョンを設定する方法を示しています。 オペレーティング システムの最小バージョンは、4.10.0.0 などの 4 つの部分に分かれた数字です。 これを行うには、次のように、コマンドでマニフェストの `<dependentOS>` セクションを変更します。  
   
 ```  
 <dependentOS>  
@@ -87,19 +87,19 @@ Use build events to specify commands that run before the build starts or after t
 </dependentOS>  
 ```  
   
-#### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>To create an .exe command to change the application manifest  
+#### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>アプリケーション マニフェストを変更する .exe コマンドを作成するには  
   
-1.  Create a console application for the command. From the **File** menu, point to **New**, and then click **Project**.  
+1.  コマンド用のコンソール アプリケーションを作成します。 **[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。  
   
-2.  In the **New Project** dialog box, expand **Visual C#**, click **Windows**, and then click the **Console Application** template. Name the project `ChangeOSVersionCS`.  
+2.  **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C#]** を展開し、**[Windows]** をクリックして、**[コンソール アプリケーション]** テンプレートをクリックします。 プロジェクトに `ChangeOSVersionCS` という名前を付けます。  
   
-3.  In Program.cs, add the following line to the other `using` statements at the top of the file:  
+3.  Program.cs で、ファイルの先頭にある他の `using` ステートメントに次の行を追加します。  
   
     ```  
     using System.Xml;  
     ```  
   
-4.  In the `ChangeOSVersionCS` namespace, replace the `Program` class implementation with the following code:  
+4.  `ChangeOSVersionCS` 名前空間で、`Program` クラスの実装を次のコードに置き換えます。  
   
     ```  
     class Program  
@@ -151,56 +151,56 @@ Use build events to specify commands that run before the build starts or after t
     }  
     ```  
   
-     The command takes two arguments: the path of the application manifest (that is, the folder in which the build process creates the manifest, typically Projectname.publish), and the new operating system version.  
+     このコマンドは、2 つの引数を受け取ります。1 つはアプリケーション マニフェストへのパス (つまり、ビルド処理でマニフェストが作成されるフォルダーであり、通常は Projectname.publish)、もう 1 つは新しいオペレーティング システムのバージョンです。  
   
-5.  Build the project. On the **Build** menu, click **Build Solution**.  
+5.  プロジェクトをビルドします。 **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
-6.  Copy the .exe file to a directory such as `C:\TEMP\ChangeOSVersionVB.exe`.  
+6.  `C:\TEMP\ChangeOSVersionVB.exe` などのディレクトリに .exe ファイルをコピーします。  
   
- Next, invoke this command in a post-build event to modify the application manifest.  
+ 次に、ビルド後のイベントでこのコマンドを呼び出して、アプリケーション マニフェストを変更します。  
   
-#### <a name="to-invoke-a-post-build-event-to-modify-the-application-manifest"></a>To invoke a post-build event to modify the application manifest  
+#### <a name="to-invoke-a-post-build-event-to-modify-the-application-manifest"></a>ビルド後のイベントを呼び出してアプリケーション マニフェストを変更するには  
   
-1.  Create a Windows application for the project to be published. From the **File** menu, point to **New**, and then click **Project**.  
+1.  発行するプロジェクト用の Windows アプリケーションを作成します。 **[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。  
   
-2.  In the **New Project** dialog box, expand **Visual C#**, click **Windows Classic Desktop**, and then click the **Windows Forms App** template. Name the project `CSWinApp`.  
+2.  **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C#]** を展開し、**[Windows]** をクリックして、**[Windows フォーム アプリケーション]** テンプレートをクリックします。 プロジェクトに `CSWinApp` という名前を付けます。  
   
-3.  With the project selected in **Solution Explorer**, on the **Project** menu, click **Properties**.  
+3.  **ソリューション エクスプローラー**でプロジェクトを選択し、**[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-4.  In the Project Designer, locate the **Publish** page and set **Publishing location** to `C:\TEMP\`.  
+4.  プロジェクト デザイナーで、**[発行]** ページに移動し、**[発行場所]** を `C:\TEMP\` に設定します。  
   
-5.  Publish the project by clicking **Publish Now**.  
+5.  **[今すぐ発行]** をクリックして、プロジェクトを発行します。  
   
-     The manifest file will be built and put in `C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest`. To view the manifest, right-click the file, click **Open with**, select **Select the program from a list**, and then click **Notepad**.  
+     マニフェスト ファイルがビルドされ、`C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest` に配置されます。 マニフェストを表示するには、ファイルを右クリックし、**[プログラムから開く]**、**[一覧からプログラムを選択する]**、**[メモ帳]** の順にクリックします。  
   
-     Search in the file for the `<osVersionInfo>` element. For example, the version might be:  
+     ファイルで `<osVersionInfo>` 要素を探します。 たとえば、バージョンは次のように記述されています。  
   
     ```  
     <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />  
     ```  
   
-6.  In the Project Designer, click the **Build Events** tab and click the **Edit Post-build** button.  
+6.  プロジェクト デザイナーで、**[ビルド イベント]** タブをクリックし、**[ビルド後の編集]** をクリックします。  
   
-7.  In the **Post-build Event Command Line** box, type the following command:  
+7.  **[ビルド後に実行するコマンド ライン]** ボックスに次のコマンドを入力します。  
   
      `C:\TEMP\ChangeOSVersionCS.exe "$(TargetPath).manifest" 5.1.2600.0`  
   
-     When you build the project, this command will change the minimum operating system version in the application manifest to 5.1.2600.0.  
+     プロジェクトをビルドすると、このコマンドでアプリケーション マニフェストのオペレーティング システムの最小バージョンが 5.1.2600.0 に変更されます。  
   
-     Because the `$(TargetPath)` macro expresses the full path for the executable being created,  the `$(TargetPath)`.manifest will specify the application manifest created in the bin directory. Publishing will copy this manifest to the publishing location that you set earlier.  
+     `$(TargetPath)` マクロは作成される実行可能ファイルの完全なパスを表すので、`$(TargetPath)`.manifest は bin ディレクトリに作成されるアプリケーション マニフェストを指定します。 発行することにより、前に設定した発行場所にこのマニフェストがコピーされます。  
   
-8.  Publish the project again. Go to the **Publish** page and click **Publish Now**.  
+8.  プロジェクトを再び発行します。 **[発行]** ページに移動して、**[今すぐ発行]** をクリックします。  
   
-     View the manifest again. To view the manifest, open the publish directory, right-click the file, click **Open with**, select **Select the program from a list**, and then click **Notepad**.  
+     マニフェストを再び表示します。 マニフェストを表示するには、発行ディレクトリを開きし、ファイルを右クリックして、**[プログラムから開く]**、**[一覧からプログラムを選択する]**、**[メモ帳]** の順に選択します。  
   
-     The version should now read:  
+     これで、バージョンは次のように表示されます。  
   
     ```  
     <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />  
     ```  
   
-## <a name="see-also"></a>See Also  
- [Build Events Page, Project Designer (C#)](../ide/reference/build-events-page-project-designer-csharp.md)   
- [Pre-build Event/Post-build Event Command Line Dialog Box](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)   
- [How to: Specify Build Events (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)   
- [Compiling and Building](../ide/compiling-and-building-in-visual-studio.md)
+## <a name="see-also"></a>関連項目  
+ [[ビルド イベント] ページ (プロジェクト デザイナー) (C#)](../ide/reference/build-events-page-project-designer-csharp.md)   
+ [[ビルド前に実行するコマンド ライン] / [ビルド後に実行するコマンド ライン] ダイアログ ボックス](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)   
+ [方法 : ビルド イベントを指定する (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)   
+ [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)

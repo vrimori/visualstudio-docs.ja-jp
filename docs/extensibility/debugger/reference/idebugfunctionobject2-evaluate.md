@@ -1,83 +1,66 @@
 ---
-title: IDebugFunctionObject2::Evaluate | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugFunctionObject2::Evaluate
+title: "IDebugFunctionObject2::Evaluate | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugFunctionObject2::Evaluate"
 ms.assetid: bc54c652-904b-4297-a6db-faa329684881
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0e32d65e57e49cb4f7d76f7f44630f092c4c0cbb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebugfunctionobject2evaluate"></a>IDebugFunctionObject2::Evaluate
-Calls the function and returns the resulting value as an object.  
+# IDebugFunctionObject2::Evaluate
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+関数を呼び出してオブジェクトとして結果値を返します。  
   
-## <a name="syntax"></a>Syntax  
+## 構文  
   
-```cpp  
+```cpp#  
 HRESULT Evaluate (  
-   IDebugObject** ppParams,  
-   DWORD          dwParams,  
-   DWORD          dwEvalFlags,  
-   DWORD          dwTimeout,  
-   IDebugObject** ppResult  
+   IDebugObject** ppParams,  
+   DWORD          dwParams,  
+   DWORD          dwEvalFlags,  
+   DWORD          dwTimeout,  
+   IDebugObject** ppResult  
 );  
 ```  
   
-```csharp  
+```c#  
 int Evaluate (  
-   IDebugObject     ppParams,  
-   uint             dwParams,  
-   uint             dwEvalFlags,  
-   uint             dwTimeout,  
-   out IDebugObject ppResult  
+   IDebugObject     ppParams,  
+   uint             dwParams,  
+   uint             dwEvalFlags,  
+   uint             dwTimeout,  
+   out IDebugObject ppResult  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### パラメーター  
  `ppParams`  
- [in] An array of [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objects that represents the input parameters. Each of these parameters was created by using one of the Create methods in this interface.  
+ \[入力\] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) パラメーターを表すオブジェクトの配列。  このパラメーターにはこのインターフェイスの作成方法の 1 を使用して作成されています。  
   
  `dwParams`  
- [in] The number of parameters in the `ppParams` array.  
+ \[入力\] `ppParams` の配列パラメーターの数。  
   
  `dwEvalFlags`  
- [in] A combination of flags from the [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeration that specify how the evaluation is to be performed.  
+ \[入力\] 評価がどのように実行されるかを指定する [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) の列挙体のフラグの組み合わせ。  
   
  `dwTimeout`  
- [in] Specifies the maximum time, in milliseconds, to wait before returning from this method. Use **INFINITE** to wait indefinitely.  
+ \[出力\] このメソッドから制御が戻るまで待機するミリ秒単位の最大時間を指定します。  無期限に待機するために  **無限**  を使用します。  
   
  `ppResult`  
- [out] Returns an **IDebugObject** that represents the value of the function as an object.  
+ \[入力\] オブジェクトとして関数値を表す **IDebugObject を**  返します。  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## 戻り値  
+ 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
   
-## <a name="see-also"></a>See Also  
+## 参照  
  [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

@@ -12,6 +12,7 @@
 
 # [IDE のカスタマイズ](customizing-the-ide.md)
 ## [Visual Studio for Mac の拡張](extending-visual-studio-mac.md)
+### [Visual Studio for Mac チュートリアルの拡張](extending-visual-studio-mac-walkthrough.md)
 
 
 # [プロジェクトおよびソリューション](projects-and-solutions.md)
@@ -53,8 +54,6 @@
 ## [Unity によるゲーム開発](unity-tools.md)
 ### [セットアップ](setup-vsmac-tools-unity.md)
 ### [Unity ツールの使用](using-vsmac-tools-unity.md)
-
-# [ユーザー補助](accessibility.md)
 
 # [トラブルシューティング](troubleshooting.md)
 ## [問題を報告する](report-a-problem.md)

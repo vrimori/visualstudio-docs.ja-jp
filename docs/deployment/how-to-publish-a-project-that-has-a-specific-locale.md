@@ -1,68 +1,51 @@
 ---
-title: 'How to: Publish a Project That Has a Specific Locale | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-helpviewer_keywords:
-- publishing, localized projects
-- locales, publishing for
-- deploying applications [ClickOnce], localized projects
-- locales, deploying for
-- publishing localized projects
-- macros, deploying with
-- macros, publishing with
+title: "方法 : 特定のロケールを持つプロジェクトを発行する | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-deployment"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+helpviewer_keywords: 
+  - "配置 (アプリケーションを) [ClickOnce], ローカライズされたプロジェクト"
+  - "ロケール, 対応した配置"
+  - "ロケール, 対応した発行"
+  - "マクロ, 配置"
+  - "マクロ, 発行"
+  - "発行 (ローカライズされたプロジェクトを)"
+  - "発行, ローカライズされたプロジェクト"
 ms.assetid: 7c4cd83a-f985-4c85-9022-fadb5dbd2b39
 caps.latest.revision: 11
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: cd6d798da4699116a75a486e2aaeac5ff17e577b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
-
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+caps.handback.revision: 11
 ---
-# <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>How to: Publish a Project That Has a Specific Locale
-It is not uncommon for an application to contain components that have different locales. In this scenario, you would create a solution that has several projects, and then publish separate projects for each locale. This procedure shows how to use a macro to publish the first project in a solution by using the 'en' locale. If you want to try this procedure with a locale other than 'en', make sure to set `localeString` in the macro to match the locale that you are using (for example, 'de' or 'de-DE').  
+# 方法 : 特定のロケールを持つプロジェクトを発行する
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+1 つのアプリケーションに、ロケールの異なる複数のコンポーネントが含まれることも少なくありません。  その場合、複数のプロジェクトを持つソリューションを作成し、ロケールごとに個別のプロジェクトを発行することになります。  以降の手順では、マクロを使用して、ソリューションの 1 つ目のプロジェクトを 'en' ロケールを使用して発行する方法について説明しています。  この手順を 'en' 以外のロケールで実行する場合は、マクロ内の `localeString` を、使用するロケール \('de' や 'de\-DE' など\) に設定してください。  
   
 > [!NOTE]
->  When you use this macro, the Publish Location should be a valid URL or Universal Naming Convention (UNC) share. Also, Internet Information Services (IIS) has to be installed on your computer. To install IIS, on the **Start** menu, click **Control Panel**. Double-click **Add or Remove Programs**. In **Add or Remove Programs**, click **Add/Remove Windows Components**. In the **Windows Components Wizard**, select the **Internet Information Services (IIS)** check box in the **Components** list. Then click **Finish** to close the wizard.  
+>  このマクロを使用するには、\[発行場所\] に有効な URL または UNC \(Universal Naming Convention\) 共有を指定する必要があります。  また、コンピューターにインターネット インフォメーション サービス \(IIS: Internet Information Service\) がインストールされている必要があります。  IIS をインストールするには、**\[スタート\]** メニューの **\[コントロール パネル\]** をクリックします。  **\[プログラムの追加と削除\]** をダブルクリックします。  **\[プログラムの追加と削除\]** で **\[Windows コンポーネントの追加と削除\]** をクリックします。  **Windows コンポーネント ウィザード**に表示される **\[コンポーネント\]** の一覧で、**\[インターネット インフォメーション サービス \(IIS\)\]** チェック ボックスをオンにします。  次に、**\[完了\]** をクリックして、ウィザードを閉じます。  
   
-### <a name="to-create-the-publishing-macro"></a>To create the publishing macro  
+### 発行マクロを作成するには  
   
-1.  To open the Macro Explorer, on the **Tools** menu, point to **Macros**, and then click **Macro Explorer**.  
+1.  マクロ エクスプローラーを開くには、**\[ツール\]** メニューの **\[マクロ\]** をポイントし、**\[マクロ エクスプローラー\]** をクリックします。  
   
-2.  Create a new macro module. In the Macro Explorer, select **MyMacros**. On the **Tools** menu, point to **Macros**, and then click **New Macro Module**. Name the module **PublishSpecificCulture**.  
+2.  新しいマクロ モジュールを作成します。  マクロ エクスプローラーで **\[MyMacros\]** を選択します。  **\[ツール\]** メニューの **\[マクロ\]** をポイントし、**\[新しいマクロ モジュール\]** をクリックします。  モジュールに "PublishSpecificCulture" という名前を付けます。  
   
-3.  In the Macro Explorer, expand the **MyMacros** node, and then open the **PublishAllProjects** module by double-clicking it (or, from the **Tools** menu, point to **Macros**, and then click **Macros IDE**).  
+3.  マクロ エクスプローラーで **\[MyMacros\]** ノードを展開し、**\[PublishAllProjects\]** モジュールをダブルクリックして開きます。**\[ツール\]** メニューの **\[マクロ\]** をポイントし、**\[マクロ IDE\]** をクリックしてもかまいません。  
   
-4.  In the Macros IDE, add the following code to the module, after the `Import` statements:  
+4.  マクロ IDE で、モジュールの `Import` ステートメントに続けて次のコードを追加します。  
   
-    ```vb  
+    ```vb#  
     Module PublishSpecificCulture  
         Sub PublishProjectFirstProjectWithEnLocale()  
             ' Note: You should publish projects by using the IDE at least once  
@@ -154,34 +137,34 @@ It is not uncommon for an application to contain components that have different 
     End Module  
     ```  
   
-5.  Close the Macros IDE. The focus will return to Visual Studio.  
+5.  マクロ IDE を閉じます。  フォーカスが Visual Studio に戻ります。  
   
-### <a name="to-publish-a-project-for-a-specific-locale"></a>To publish a project for a specific locale  
+### 特定のロケールのプロジェクトを発行するには  
   
-1.  To create a Visual Basic Windows Application project, on the **File** menu, point to **New**, and then click **Project**.  
+1.  Visual Basic Windows アプリケーション プロジェクトを作成するには、**\[ファイル\]** メニューの **\[新規作成\]** をポイントし、**\[プロジェクト\]** をクリックします。  
   
-2.  In the **New Project** dialog box, select **Windows Application** from the **Visual Basic** node. Name the project **PublishLocales**.  
+2.  **\[新しいプロジェクト\]** ダイアログ ボックスの **\[Visual Basic\]** ノードで、**\[Windows アプリケーション\]** をクリックします。  プロジェクトに "PublishLocales" という名前を付けます。  
   
-3.  Click Form1. In the **Properties** window, under **Design**, change the **Language** property from **(Default)** to **English**. Change the **Text** property of the form to **MyForm**.  
+3.  Form1 をクリックします。  **\[プロパティ\]** ウィンドウの **\[デザイン\]** で、**\[Language\]** プロパティを **\[\(既定値\)\]** から **\[英語\]** に変更します。  フォームの **\[Text\]** プロパティを MyForm に変更します。  
   
-     Note that the localized resource DLLs are not created until they are needed. For example, they are created when you change the text of the form or one of its controls after you have specified the new locale.  
+     ローカライズされたリソース DLL は必要になるまで作成されません。  たとえば、新しいロケールを指定した後で、フォームやそのコントロールのテキストを変更した場合などに作成されます。  
   
-4.  Publish PublishLocales by using the Visual Studio IDE.  
+4.  Visual Studio IDE を使用して、PublishLocales を発行します。  
   
-     In **Solution Explorer**, select PublishLocales. On the **Project** menu, select **Properties**. In the Project Designer, on the **Publish** page, specify a publishing location of **http://localhost/PublishLocales**, and then click **Publish Now**.  
+     **ソリューション エクスプローラー** で PublishLocales を選択します。  **\[プロジェクト\]** メニューの **\[プロパティ\]** をクリックします。  プロジェクト デザイナーの **\[発行\]** ページで、発行場所として「http:\/\/localhost\/PublishLocales」を指定し、**\[今すぐ発行\]** をクリックします。  
   
-     When the publish Web page appears, close it. (For this step, you only have to publish the project; you do not have to install it.)  
+     発行 Web ページが表示されたら、そのページを終了します。  \(この手順では、プロジェクトを発行するだけで、インストールする必要はありません。\)  
   
-5.  Publish PublishLocales again by invoking the macro in the Visual Studio Command Prompt window. To view the Command Prompt window, on the **View** menu, point to **Other Windows** and then click **Command Window**, or press CTRL+ALT+A. In the Command Prompt window, type `macros`; auto-complete will provide a list of available macros. Select the following macro and press ENTER:  
+5.  \[Visual Studio コマンド プロンプト\] ウィンドウでマクロを呼び出し、PublishLocales をもう一度発行します。  コマンド プロンプト ウィンドウを表示するには、**\[表示\]** メニューの **\[その他のウィンドウ\]** をクリックし、**\[コマンド ウィンドウ\]** をクリックするか、Ctrl キーと Alt キーを押しながら A キーを押します。  コマンド プロンプト ウィンドウで「`macros`」と入力すると、使用可能なマクロがオートコンプリートによって一覧表示されます。  次のマクロを選択し、Enter キーを押します。  
   
      `Macros.MyMacros.PublishSpecificCulture.PublishProjectFirstProjectWithEnLocale`  
   
-6.  When the publish process succeeds, it will generate a message that says "Publish succeeded for PublishLocales\PublishLocales.vbproj. Publish language was 'en'." Click **OK** in the message box. When the publish Web page appears, click **Install**.  
+6.  発行プロセスが正常に完了すると、"PublishLocales\\PublishLocales.vbproj の発行は成功しました。  発行の言語は 'en' です。" というメッセージが表示されます。メッセージ ボックスの **\[OK\]** をクリックします。  発行 Web ページが表示されたら、**\[インストール\]** をクリックします。  
   
-7.  Look in C:\Inetpub\wwwroot\PublishLocales\en. You should see the installed files such as the manifests, setup.exe, and the publish Web page file, in addition to the localized resource DLL. (By default ClickOnce appends a .deploy extension on EXEs and DLLs; you can remove this extension after deployment.)  
+7.  C:\\Inetpub\\wwwroot\\PublishLocales\\en にアクセスします。  ローカライズされたリソース DLL のほかに、マニフェスト、setup.exe、発行 Web ページ ファイルなどのインストールされたファイルがあるはずです。  \(既定では、ClickOnce は EXE ファイルおよび DLL ファイルに .deploy という拡張子を追加します。この拡張子は展開後に削除できます。\)  
   
-## <a name="see-also"></a>See Also  
- [Publishing ClickOnce Applications](../deployment/publishing-clickonce-applications.md)   
- [Macros Development Environment](http://msdn.microsoft.com/en-us/d23105d8-34fe-4ad9-8278-fae2c660aeac)   
- [Macro Explorer Window](http://msdn.microsoft.com/en-us/762169e6-f83f-44b4-bffa-d0f107cae9a3)   
- [How to: Edit and Programmatically Create Macros](http://msdn.microsoft.com/en-us/6716f820-1feb-48ad-a718-27eb6b473c5a)
+## 参照  
+ [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
+ [Macros Development Environment](http://msdn.microsoft.com/ja-jp/d23105d8-34fe-4ad9-8278-fae2c660aeac)   
+ [Macro Explorer Window](http://msdn.microsoft.com/ja-jp/762169e6-f83f-44b4-bffa-d0f107cae9a3)   
+ [How to: Edit and Programmatically Create Macros](http://msdn.microsoft.com/ja-jp/6716f820-1feb-48ad-a718-27eb6b473c5a)
