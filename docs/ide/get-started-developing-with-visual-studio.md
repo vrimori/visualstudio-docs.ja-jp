@@ -1,21 +1,41 @@
 ---
-title: "Get Started Developing with Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Visual Studio で作業の開始"
+title: "Visual Studio で開発を始める | Microsoft Docs"
+ms.custom: 
+ms.date: 11/16/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-acquisition
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Visual Studio, getting started
 ms.assetid: 041ef726-f117-4a91-9c18-fef043bf2529
 caps.latest.revision: 65
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 65
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 4b2952b9233c7c4571ad4509cc7c4beda7ee2338
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="get-started-developing-with-visual-studio"></a>Get Started Developing with Visual Studio
 Visual Studio へようこそ。 製品を [ダウンロード](http://www.visualstudio.com/community) すると、コーディングを開始するのにこれらのページが役立ちます。  
@@ -65,9 +85,4 @@ Visual Studio へようこそ。 製品を [ダウンロード](http://www.visua
 |[Visual C# と Visual Basic の概要](../ide/getting-started-with-visual-csharp-and-visual-basic.md)|[JavaScript コードの記述](https://msdn.microsoft.com/library/cte3c772.aspx)|  
 |[クロス プラットフォーム モバイル開発のための Visual C++](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md)|[F# を使用した関数型プログラミングの概要](http://msdn.microsoft.com/library/vstudio/dd233147.aspx)|  
 |[C++ の概要](../ide/getting-started-with-cpp-in-visual-studio.md)|[Visual Studio のデバッグの概要](../ide/getting-started-with-debugging-in-visual-studio.md)|
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -29,8 +29,8 @@ helpviewer_keywords:
 - toolbars [Visual Studio], customizing in the IDE
 ms.assetid: b570ae2f-5302-45dc-9cc9-8d4d1ad50603
 caps.latest.revision: 28
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -46,9 +46,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 0ca0020fa9025e57df874f8fa8b5eb41e63a8c29
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -78,7 +79,7 @@ Visual Studio は、メニュー バーでツール バーやメニューを追�
   
     -   メニューを追加するには、**[新しいメニューの追加]** を選び、**[選択内容の編集]** ボタンを選んで、追加するメニューに名前を付けます。  
   
-         ![メニューの追加方法を表示するダイアログ ボックスをカスタマイズ](~/ide/media/addmenu.png "AddMenu")  
+         ![メニューの追加方法を表示するダイアログ ボックスをカスタマイズ](../ide/media/addmenu.png "AddMenu")  
   
     -   メニューを削除するには、**[コントロール]** の一覧で削除するメニューを選び、**[削除]** を選びます。  
   
@@ -94,7 +95,7 @@ Visual Studio は、メニュー バーでツール バーやメニューを追�
   
     -   ツール バーを追加するには、**[新規]** を選び、追加するツール バーの名前を指定して、**[OK]** ボタンを選びます。  
   
-         ![ツールバーの追加方法を表示するダイアログ ボックスをカスタマイズ](~/ide/media/addtoolbar.png "AddToolbar")  
+         ![ツールバーの追加方法を表示するダイアログ ボックスをカスタマイズ](../ide/media/addtoolbar.png "AddToolbar")  
   
     -   カスタム ツール バーを削除するには、**[ツール バー]** の一覧で削除するツール バーを選び、**[削除]** ボタンを選びます。  
   
@@ -122,7 +123,7 @@ Visual Studio は、メニュー バーでツール バーやメニューを追�
   
          **[コマンドの追加]** ダイアログ ボックスの **[カテゴリ]** の一覧で項目を選んだ後、**[コマンド]** の一覧で項目を選んで、**[OK]** ボタンを選びます。  
   
-         ![Visual Studio の [コマンドの追加] ダイアログ ボックス](~/ide/media/addcommand.png "AddCommand")  
+         ![Visual Studio の [コマンドの追加] ダイアログ ボックス](../ide/media/addcommand.png "AddCommand")  
   
     -   コマンドを削除するには、**[コントロール]** の一覧で削除するコマンドを選び、**[削除]** ボタンを選びます。  
   

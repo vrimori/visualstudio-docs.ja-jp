@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,12 +13,13 @@ f1_keywords:
 - vs.graphics.imageeditor
 ms.assetid: fc71d502-c548-4863-8afc-12a1d3ec90d4
 caps.latest.revision: 45
-author: BrianPeek
-ms.author: brpeek
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 0def4c66be3cf1bbd65c9cb0dea5e3366f65aae1
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -95,7 +96,7 @@ ms.lasthandoff: 02/22/2017
   
  **[イメージ エディターのモード]** ツール バーを次に示します。  
   
- ![イメージ エディターのモーダル ツール バー。](~/designers/media/digit-tre-modal-toolbar.png "Digit-TRE-Modal-Toolbar")  
+ ![イメージ エディターのモーダル ツール バー。](../designers/media/digit-tre-modal-toolbar.png "Digit-TRE-Modal-Toolbar")  
   
  次の表は、**[イメージ エディターのモード]** ツール バーに、左から右へ順に表示される項目を示します。  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 02/22/2017
   
  **[イメージ エディター]** ツール バーを次に示します。  
   
- ![イメージ エディターのツール バー](~/designers/media/digit-tre-toolbar.png "Digit-TRE-Toolbar")  
+ ![イメージ エディターのツール バー](../designers/media/digit-tre-toolbar.png "Digit-TRE-Toolbar")  
   
  次の表では、**[イメージ エディター]** ツール バーに、上から下へ順に表示される項目について説明します。  
   

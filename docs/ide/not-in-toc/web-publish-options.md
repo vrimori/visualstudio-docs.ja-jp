@@ -5,15 +5,15 @@ ms.date: 03/09/2017
 ms.reviewer: riande
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ASP.NET, web applications, deployment, publishing
 ms.assetid: 3A13F685-531C-457D-A98E-631888011E4B
 caps.latest.revision: 1
-author: kraigb
-ms.author: kraigb
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -29,14 +29,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5951e9c6b61e1cb868d792a5aee9389235cfef30
 ms.openlocfilehash: 6bc4d5116517402825317611c44d4b594ee79b2a
+ms.contentlocale: ja-jp
 ms.lasthandoff: 03/10/2017
 
 ---
 
-# <a name="what-publishing-options-are-right-for-me"></a>状況に適した発行オプション
+# 状況に適した発行オプション
 
 Visual Studio 内から、次のターゲットに Web アプリケーションを直接発行できます。
 
@@ -47,7 +48,7 @@ Visual Studio 内から、次のターゲットに Web アプリケーション�
 
 **[発行]** タブでは、既存の発行プロファイルを選んだり、既存の発行プロファイルをインポートしたり、ここで説明するオプションを使って新しい発行プロファイルを作成したりできます。
 
-## <a name="azure-app-service"></a>Azure App Service
+## Azure App Service
 
 [Azure App Service](https://azure.microsoft.com/documentation/articles/app-service-value-prop-what-is/) では、拡張性のあるさまざまな Web アプリケーションとサービスをすばやく作成でき、インフラストラクチャを保守する必要はありません。
 
@@ -57,7 +58,7 @@ App Service の[価格レベルまたはプラン](https://azure.microsoft.com/d
 
 App Service は Azure のクラウドでホストされる仮想マシン上で実行されますが、これらの仮想マシンはユーザーが管理します。 App Service の各 Web アプリには、\*.azurewebsites.net という一意の URL が割り当てられます。Free 以外のすべての価格レベルでは、カスタム ドメイン名をサイトに割り当てることもできます。
 
-### <a name="when-to-choose-azure-app-service"></a>Azure App Service を選ぶ状況
+### Azure App Service を選ぶ状況
 
 - インターネット経由でアクセスできる Web アプリケーションをデプロイしたい。
 - 再デプロイする必要なしに、需要に応じて Web アプリケーションを自動的に拡張したい。
@@ -68,7 +69,7 @@ App Service は Azure のクラウドでホストされる仮想マシン上で�
 > 自社のデータセンターまたは他のオンプレミス コンピューターで Azure App Service を使いたい場合は、[Azure Stack](https://azure.microsoft.com/overview/azure-stack/) を使って行うことができます。
 
 
-## <a name="azure-virtual-machines"></a>Azure Virtual Machines
+## Azure Virtual Machines
 
 [Azure Virtual Machines (VM)](https://azure.microsoft.com/documentation/services/virtual-machines/) を使うと、任意の数のコンピューティング リソースをクラウドに作成して管理できます。 VM 上のすべてのソフトウェアと更新プログラムについての責任を負うことにより、ユーザーは Web アプリケーションで必要なだけいくらでもカスタマイズできます。 また、ユーザーはリモート デスクトップを介して仮想マシンに直接アクセスでき、各マシンは必要な限り割り当てられた IP アドレスを保持します。
 
@@ -76,7 +77,7 @@ App Service は Azure のクラウドでホストされる仮想マシン上で�
 
 詳しくは、Visual Studio の [カスタム] オプションを使ってデプロイ ターゲットとして使うことができる Azure App Service、Azure Virtual Machines、他の Azure サービスの間の[詳細な違い](https://azure.microsoft.com/documentation/articles/choose-web-site-cloud-service-vm/)をご覧ください。
 
-### <a name="when-to-choose-azure-app-virtual-machines"></a>Azure Virtual Machines を選ぶ状況
+### Azure Virtual Machines を選ぶ状況
 
 - インターネット経由でアクセス可能な Web アプリケーションをデプロイし、割り当てられた IP アドレスの有効期間全体を通して完全に制御したい。
 - 専用データベース システムなどの追加ソフトウェア、特定のネットワーク構成、ディスク パーティションなど、サーバーでコンピューター レベルのカスタマイズが必要である。
@@ -86,7 +87,7 @@ App Service は Azure のクラウドでホストされる仮想マシン上で�
 > 自社のデータセンターまたは他のオンプレミス コンピューターで Azure Virtual Machines を使いたい場合は、[Azure Stack](https://azure.microsoft.com/overview/azure-stack/) を使って行うことができます。
 
 
-## <a name="file-system"></a>ファイル システム
+## ファイル システム
 
 ファイル システムへのデプロイとは、ユーザーが所有するコンピューターの特定のフォルダーに Web アプリケーションのファイルを単にコピーすることです。 この方法は、テスト目的で、またはコンピューターが Web サーバーも実行している場合に限られた数のユーザーが使うアプリケーションをデプロイする場合に、最もよく使われます。 ターゲット フォルダーがネットワークで共有されている場合、ファイル システムにデプロイすると、他のユーザーも Web アプリケーション ファイルを使用して特定のサーバーにデプロイできます。
 
@@ -94,7 +95,7 @@ App Service は Azure のクラウドでホストされる仮想マシン上で�
 
 何らかの理由で (コンピューターのアクセスなど) ユーザーが Azure App Service や Azure Virtual Machines などのクラウド サービスを使用できない場合、ユーザーは自社のデータセンターで [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) を使用できます。 Azure Stack を使うと、ユーザーは Azure App Service および Azure Virtual Machines によってコンピューティング リソースを管理および使用しながら、すべてのものをオンプレミスに保持できます。
 
-### <a name="when-to-choose-file-system-deployment"></a>ファイル システムのデプロイを選ぶ状況
+### ファイル システムのデプロイを選ぶ状況
 
 - ファイル共有にアプリケーションをデプロイし、他のユーザーがそれを別のサーバーにデプロイすることだけが必要である。
 - ローカル テスト デプロイのみが必要である。
@@ -102,7 +103,7 @@ App Service は Azure のクラウドでホストされる仮想マシン上で�
 
 
 
-## <a name="custom-targets"></a>カスタム ターゲット
+## カスタム ターゲット
 
 カスタム ターゲットを使うと、Azure App Service、Azure Virtual Machines、ローカル ファイル システム以外のターゲットに Web アプリケーションをデプロイできます。 アクセスできるファイル システムや他のサーバー (インターネットまたはイントラネット) にデプロイできます。他のクラウド サービスも含まれます。 Web デプロイ (ファイルまたは .ZIP) および FTP で使用できます。
 
@@ -115,7 +116,7 @@ App Service は Azure のクラウドでホストされる仮想マシン上で�
 
 Visual Studio では任意の数のカスタム デプロイ プロファイルを作成し、異なる設定でプロファイルを管理できます。
 
-### <a name="when-to-choose-custom-deployment"></a>カスタム デプロイを選ぶ状況
+### カスタム デプロイを選ぶ状況
 
 - URL でアクセスできる Azure 以外のクラウド サービスを使っている。
 - Visual Studio で使っている資格情報または Azure アカウントに直接結び付けられている資格情報とは異なる資格情報を使ってデプロイしたい。

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,8 +13,8 @@ f1_keywords:
 - vs.graphics.shaderdesigner
 ms.assetid: 5db09a16-b82c-4ba3-8ec9-630cdc109397
 caps.latest.revision: 32
-author: BrianPeek
-ms.author: brpeek
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -79,7 +79,7 @@ ms.lasthandoff: 05/13/2017
   
  **[シェーダー デザイナー モード]** ツール バーを以下に示します。  
   
- ![シェーダー デザイナーのモーダル ツールバー。](~/designers/media/digit-dsd-modal-toolbar.png "Digit-DSD-Modal-Toolbar")  
+ ![シェーダー デザイナーのモーダル ツールバー。](../designers/media/digit-dsd-modal-toolbar.png "Digit-DSD-Modal-Toolbar")  
   
  次の表では、**[シェーダー デザイナー モード]** ツール バーの各項目について、左から右へ表示される順序で説明します。  
   

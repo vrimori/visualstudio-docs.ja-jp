@@ -28,8 +28,8 @@ helpviewer_keywords:
 - code
 ms.assetid: cb53bb9b-5b76-4759-b9b8-7bf32298bcbb
 caps.latest.revision: 44
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -46,9 +46,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
 ms.openlocfilehash: 3a8be04b4d2c927dc296753420ff736b993343c9
+ms.contentlocale: ja-jp
 ms.lasthandoff: 03/07/2017
 
 ---
@@ -73,7 +74,7 @@ Visual Studio でコードを開く方法は、次のとおりです。
 1. 複製するリポジトリに移動します。
 1. リポジトリの GitHub ページで、**[複製またはダウンロード]** ボタンをクリックし、ドロップダウン メニューで **[クリップボードにコピー]** ボタンを選択して、GitHub サイトのセキュリティをコピーします。
 
-  ![GitHub の複製ボタン](~/ide/media/VSIDE_Code_Clone.png)
+  ![GitHub の複製ボタン](./media/VSIDE_Code_Clone.png)
 
     > [!NOTE]
     >  デスクトップでプロジェクトを開くこと、またはプロジェクトの .zip ファイルをダウンロードすることも選択できる場合、この例は、セキュリティで保護された URL メソッドを使用してリポジトリを複製する方法を示します。
@@ -81,12 +82,12 @@ Visual Studio でコードを開く方法は、次のとおりです。
 1. Visual Studio で、**[チーム エクスプローラー]** タブを選択し、チーム エクスプローラーを開きます。
 1. チーム エクスプローラーの **[ローカル Git リポジトリ]** セクションで **[複製]** コマンドを選択し、GitHub ページの URL をテキスト ボックスに貼り付けます。
 
-  ![プロジェクトの複製](~/ide/media/VSIDE_Code_Clone2.png)
+  ![プロジェクトの複製](./media/VSIDE_Code_Clone2.png)
 
 1. **[複製]** ボタンを選択して、プロジェクトのファイルをローカル Git リポジトリに複製します。 リポジトリのサイズによっては、この処理に数分かかることがあります。
 1. リポジトリがシステムに複製されたら、チーム エクスプローラーで、新しく複製されたプロジェクトのコンテキスト (右クリック) メニューで **[開く]** コマンドを選択します。
 
-  ![複製されたプロジェクト](~/ide/media/VSIDE_Code_Clone3.png)
+  ![複製されたプロジェクト](./media/VSIDE_Code_Clone3.png)
 
 1. **[フォルダー ビューの表示]** コマンドを選択して、ソリューション エクスプローラーでファイルを表示します。
 
@@ -94,7 +95,7 @@ Visual Studio でコードを開く方法は、次のとおりです。
 
   複製されたプロジェクトでフォルダーとファイルを参照したり、Visual Studio コード エディターでコードを表示/検索したり、構文の色付けなどの機能でコードを補完したりできるようになりました。
 
-    ![複製されたプロジェクト コードの検索](~/ide/media/VSIDE_Code_Clone4.png)
+    ![複製されたプロジェクト コードの検索](./media/VSIDE_Code_Clone4.png)
 
 
 ## <a name="debug-your-code"></a>コードをデバッグする
@@ -102,7 +103,7 @@ Visual Studio でコードをデバッグすることができます。 一部�
 
 ツールバーの [開始] ボタンの横にあるドロップダウン リスト ボックスに、Visual Studio によって検出されたすべてのスタートアップ アイテムと、フォルダーで特別に選択した項目が一覧表示されます。
 
-![ボタン](~/ide/media/VSIDE_Code_Run_Button.png)
+![ボタン](./media/VSIDE_Code_Run_Button.png)
 
 Visual Studio では、プロジェクトは自動的に認識されますが、スクリプト (Python、JavaScript など) はユーザーがスタートアップ アイテムとして明示的に選択して、一覧に表示させる必要があります。
 また、MSBuild および CMake などの一部のスタートアップ アイテムは複数のビルド構成を持つことができます。これらは、実行ボタンのドロップダウン リストに表示されます。
@@ -138,11 +139,11 @@ Visual Studio は多くのさまざまな言語を実行する方法を認識し
 
 1. タスクを必要とするソリューション エクスプローラーで、プロジェクトのファイルまたはフォルダーを選択し、ファイルまたはフォルダーのコンテキスト (右クリック) メニューで **[タスクの構成]** を選択します。
 
-  ![タスクの構成](~/ide/media/VSIDE_Code_Config_Task.png)
+  ![タスクの構成](./media/VSIDE_Code_Config_Task.png)
 
   **[タスクの構成]** を選択すると、tasks.vs.json というファイルが開きます。 このファイルが存在しない場合、自動的に作成されます。 このファイルには、選択したファイルまたはフォルダーのビルド タスクが含まれています。
 
-  ![tasks.vs.json ファイル](~/ide/media/VSIDE_Code_Tasks_JSON.png)
+  ![tasks.vs.json ファイル](./media/VSIDE_Code_Tasks_JSON.png)
 
 1. 次のビルド タスクを tasks.vs.json に追加します。 この例では、出力ウィンドウに選択したフォルダーのファイルおよびサブフォルダーを一覧表示する "List outputs" というシンプルなタスクを追加します。 (新しいタスクは、既存の "タスク" 配列内に追加されます。)
 
@@ -159,12 +160,12 @@ Visual Studio は多くのさまざまな言語を実行する方法を認識し
   ```
   完全なビルド タスクは、次のようになります。
 
-  ![任意のビルド タスク](~/ide/media/VSIDE_Code_Tasks_ArbTask.png)
+  ![任意のビルド タスク](./media/VSIDE_Code_Tasks_ArbTask.png)
 
 1. プロジェクトを保存します。
 1. 選択したフォルダーのコンテキスト メニューを開きます。 コンテキスト メニューの下部に新しい任意のビルド タスクが表示されます。
 
-  ![任意のビルド タスクのコマンド](~/ide/media/VSIDE_Code_Tasks_ArbTask2.png)
+  ![任意のビルド タスクのコマンド](./media/VSIDE_Code_Tasks_ArbTask2.png)
 
 1. 新しい **List outputs** コマンドを選択して、タスクを実行します。
 
@@ -174,7 +175,7 @@ Visual Studio は多くのさまざまな言語を実行する方法を認識し
 
 1. ソリューション エクスプローラーで、スタートアップ アイテムとして後で指定するプロジェクトのファイルを選択します。 ファイルのコンテキスト (右クリック) メニューで、**[タスクの構成]** を選択します。
 
-  ![カスタム ビルド タスクのコマンド](~/ide/media/VSIDE_Code_Tasks_CustTask1.png)
+  ![カスタム ビルド タスクのコマンド](./media/VSIDE_Code_Tasks_CustTask1.png)
 
 1. 次のビルド タスクを tasks.vs.json に追加します。 この例では、2 つのタスクを追加します。1 つは nMake コマンドを使用してプロジェクトをビルドする "makefile-build" と呼ばれるもので、もう&1; つは "clean" 引数により nMake コマンドを呼び出す makefile-clean と呼ばれるものです。 (これらのタスクは、既存の "タスク" 配列内に追加されます。) (これは、ビルド タスクのほんの一例です。 これらを実際に機能させるには、システムにインストールされた [nNake](https://docs.microsoft.com/en-us/cpp/build/nmake-reference) を含むワークロードが必要です。)
 
@@ -199,12 +200,12 @@ Visual Studio は多くのさまざまな言語を実行する方法を認識し
   ```
   完全なカスタム ビルド タスクは、次のようになります。
 
-  ![カスタム ビルド タスク](~/ide/media/VSIDE_Code_Tasks_CustTask2.png)
+  ![カスタム ビルド タスク](./media/VSIDE_Code_Tasks_CustTask2.png)
 
 1. プロジェクトを保存します。
 1. 選択したファイルのコンテキスト メニューを開きます。 新しいカスタム ビルド タスクが、コンテキスト メニューの中ほどに表示されます。
 
-  ![カスタム ビルド タスクのコマンド](~/ide/media/VSIDE_Code_Tasks_CustTask3.png)
+  ![カスタム ビルド タスクのコマンド](./media/VSIDE_Code_Tasks_CustTask3.png)
 
   > [!NOTE]
   > コマンドが、`contextType` 設定により **[タスクの構成]** コマンドの下に表示されます。"build" および "clean" はビルド コマンドであるため、コンテキスト メニューの中央のビルド セクションに表示されます。
@@ -213,11 +214,11 @@ Visual Studio は多くのさまざまな言語を実行する方法を認識し
 
 1. ファイルのコンテキスト メニューで、**[スタートアップ アイテムとして設定]** を選択します。
 
-  ![カスタム ビルド タスクのコマンド](~/ide/media/VSIDE_Code_Tasks_CustTask4.png)
+  ![カスタム ビルド タスクのコマンド](./media/VSIDE_Code_Tasks_CustTask4.png)
 
 1. ツールバーで、[開始] ボタンの横にあるドロップダウン矢印を選択します。 スタートアップ アイテムがオプションとして表示されます。
 
-  ![カスタム ビルド タスクのコマンド](~/ide/media/VSIDE_Code_Tasks_CustTask5.png)
+  ![カスタム ビルド タスクのコマンド](./media/VSIDE_Code_Tasks_CustTask5.png)
 
 これで、[開始] ボタンまたは F5 キーを押して、コードベースを実行できるようになりました。 Visual Studio でコードベースのビルド ツールが認識されない場合でも、Visual Studio でコードベースを編集およびデバッグすることができます。 ビルド タスクの出力は**出力**ウィンドウに表示され、ビルド エラーは**エラー一覧**に表示されます。 tasks.vs.json ビルド タスク ファイルは、Visual Studio の内部開発ループを、コードベースによって使用されるカスタム ビルド ツールに組み込みます。
 
@@ -237,7 +238,7 @@ Visual Studio では、tasks.vs.json のルートで VSCode `$variable` 代入�
 
 既定では、tasks.vs.json ファイルは、`.vs` という非表示フォルダーに配置されます。 Visual Studio で非表示ファイルを表示するには、ソリューション エクスプローラーのツールバーで **[すべてのファイルを表示]** ボタンを選択します。
 
-![任意のビルド タスクのコマンド](~/ide/media/VSIDE_Code_Tasks_FileLocation.png)
+![任意のビルド タスクのコマンド](./media/VSIDE_Code_Tasks_FileLocation.png)
 
 tasks.vs.json ファイルは、通常、ほとんどのユーザーがこれをソース管理にチェックインする必要がないため、非表示になっています。 ただし、これをソース管理にチェックインできるようにしたい場合は、表示されるプロジェクトのルートにファイルをドラッグします。
 

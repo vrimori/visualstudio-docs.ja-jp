@@ -1,13 +1,16 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
+author: gewarren
+ms.author: gewarren
 ms.topic: landing-page
 title: "Visual Studio ドキュメントを使用したコードの記述と管理"
 description: "Visual Studio でコード エディターなどの他のツールを使用して、コードを記述、移動、管理、および強化する方法について説明します。"
-translationtype: Human Translation
+ms.technology:
+- vs-ide-general
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
 ms.openlocfilehash: 041e8ca9989b88d4d237e1ae64a051483bc09fb2
+ms.contentlocale: ja-jp
 ms.lasthandoff: 03/08/2017
 
 ---
