@@ -3,7 +3,6 @@ title: "Visual Studio 管理者ガイド | Microsoft Docs"
 description: "エンタープライズ環境で Visual Studio を展開する方法について説明します。"
 ms.custom: 
 ms.date: 05/15/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

@@ -3,7 +3,6 @@ title: "ファイアウォールまたはプロキシ サーバーの内側に V
 description: 
 ms.custom: 
 ms.date: 08/01/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
