@@ -8,8 +8,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
 caps.latest.revision: 5
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -26,9 +26,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 138f318b84044a1ed8a92f9b2ee7b47b2211cdb7
+ms.contentlocale: ja-jp
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -47,7 +48,7 @@ ms.lasthandoff: 02/22/2017
   
  プロジェクト コードが無効になると、Visual Studio は、たとえば、データが使用できなくなったバインドのプロパティ名などのプレースホルダーや、実行されなくなったコントロールのプレースホルダーを表示します。  
   
- ![ハンドルされない例外のダイアログ](~/designers/media/xaml_unhandledexception.png "XAML_UnhandledException")  
+ ![ハンドルされない例外のダイアログ](../designers/media/xaml_unhandledexception.png "XAML_UnhandledException")  
   
 #### <a name="to-determine-if-project-code-is-causing-an-exception"></a>プロジェクト コードが例外の原因かどうかを判断するには  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 02/22/2017
   
 2.  Windows タスク マネージャーで、 **[タスクの終了]** ボタンを選び、現在実行している Visual Studio XAML デザイナーのすべてのインスタンスを閉じます。  
   
-     ![TaskManager の XAML デザイナー インスタンス](~/designers/media/xaml_taskmanager.png "XAML_TaskManager")  
+     ![TaskManager の XAML デザイナー インスタンス](../designers/media/xaml_taskmanager.png "XAML_TaskManager")  
   
 3.  Visual Studio で、デバッグするコードまたはコントロールを含む XAML ページを開きます。  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 02/22/2017
   
 7.  **[プロセスにアタッチ]** ダイアログの **[選択可能なプロセス]** 一覧で、 **XDesProc.exe**を選び、 **[アタッチ]** ボタンを選びます。  
   
-     ![XAML デザイナー プロセス](~/designers/media/xaml_attach.png "XAML_Attach")  
+     ![XAML デザイナー プロセス](../designers/media/xaml_attach.png "XAML_Attach")  
   
      これは、Visual Studio の最初のインスタンスの XAML デザイナーの手順です。  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 02/22/2017
   
 -   あるいは、XAML デザイナーのツール バーで、 **[プロジェクト コードを無効にする]** ボタンを選びます。  
   
-     ![[プロジェクト コードの無効化] ボタン](~/designers/media/xaml_disablecode.png "XAML_DisableCode")  
+     ![[プロジェクト コードの無効化] ボタン](../designers/media/xaml_disablecode.png "XAML_DisableCode")  
   
      もう一度ボタンを切り替えて、プロジェクト コードを再び有効にできます。  
   

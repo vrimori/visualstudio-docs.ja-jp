@@ -13,8 +13,8 @@ helpviewer_keywords:
 - projects [Visual Studio], user interface
 ms.assetid: eec49aec-5474-48a7-889d-709045b9a475
 caps.latest.revision: 18
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -57,8 +57,7 @@ ms.lasthandoff: 05/24/2017
 |[[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)](../../ide/reference/references-page-project-designer-visual-basic.md)|このページを使用して、プロジェクトで使用される参照を管理できます。|  
 |[[セキュリティ] ページ (プロジェクト デザイナー)](../../ide/reference/security-page-project-designer.md)|このページを使用して、[!INCLUDE[ndptecclick](../../deployment/includes/ndptecclick_md.md)] 配置によって配置されたアプリケーションのコード アクセス セキュリティの設定を構成できます。|  
 |[[署名] ページ (プロジェクト デザイナー)](../../ide/reference/signing-page-project-designer.md)|このページを使用して、アプリケーション マニフェストと配置マニフェストに署名し、アセンブリに署名できます。|  
-|||  
-|||  
   
 ## <a name="see-also"></a>関連項目  
  [ソリューションおよびプロジェクト](../../ide/solutions-and-projects-in-visual-studio.md)
+

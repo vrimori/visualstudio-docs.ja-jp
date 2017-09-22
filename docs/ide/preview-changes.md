@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e15c00f6-3e22-49b8-8269-69e4c8be8040
-author: BrianPeek
-ms.author: brpeek
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 f1_keywords:
 - vs.codefix.previewchanges
@@ -28,9 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 14e6961d6db557e77687eef17aae9b16f5a4d706
 ms.openlocfilehash: eb49815ed120ee4ff65dfc04764282f1ac6d1ff8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
 
 ---
 
@@ -38,7 +40,7 @@ ms.openlocfilehash: eb49815ed120ee4ff65dfc04764282f1ac6d1ff8
 
 Visual Studio でさまざまな*クイック アクション* ツールまたは*リファクタリング* ツールを使用すると、実施される変更を受け入れる前にプレビューできることがよくあります。  プレビューは、**[変更のプレビュー]** で行います。  たとえば、ここでは、C# プロジェクトにおける名前の変更リファクタリング中に変更される内容が **[変更のプレビュー]** に表示されています。
 
-![変更のプレビュー](~/ide/media/previewchanges.png)
+![変更のプレビュー](media/previewchanges.png)
 
 ウィンドウの上半分には、変更される特定の行が表示され、それぞれの行にチェックボックスが配置されています。  特定の行にのみ選択的にリファクタリングを適用する場合は、各チェック ボックスをオフまたはオフにします。
 
@@ -48,9 +50,4 @@ Visual Studio でさまざまな*クイック アクション* ツールまた�
 
 ## <a name="see-also"></a>関連項目  
 [Visual Studio でのリファクタリング](../ide/refactoring-in-visual-studio.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

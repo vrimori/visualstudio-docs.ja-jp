@@ -1,19 +1,39 @@
 ---
 title: "方法: 基本テクスチャを作成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-designers
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0222e8bf-d29f-421b-9b1f-123d500fa179
 caps.latest.revision: 15
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 15
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: e8455a68a2be88e177746433ad3b41e412c8de38
+ms.contentlocale: ja-jp
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="how-to-create-a-basic-texture"></a>方法: 基本テクスチャを作成する
 このドキュメントでは、イメージ エディターを使用した基本的なテクスチャの作成方法を示します。  
@@ -35,7 +55,7 @@ caps.handback.revision: 15
   
  次の手順は、"bullseye" ターゲットを表すテクスチャを作成する方法を示します。終了したら、テクスチャは次の絵のようになります。 テクスチャの透明度がわかりやすくなるために、イメージ エディターは、緑色の格子模様のパターンを使用して透明度を表示するように構成されています。  
   
- ![透明度が緑で表示された "Bullseye" ターゲット](~/designers/media/digit-bullseye-texture-in-editor.png "Digit-Bullseye-Texture-In-Editor")  
+ ![透明度が緑で表示された "Bullseye" ターゲット](../designers/media/digit-bullseye-texture-in-editor.png "Digit-Bullseye-Texture-In-Editor")  
   
  開始する前に、**[プロパティ]** ウィンドウが表示されていることを確認します。 作業中に、**[プロパティ]** ウィンドウを使用して、イメージのサイズを設定し、ツールのプロパティを変更し、色を指定します。  
   
@@ -83,14 +103,9 @@ caps.handback.revision: 15
   
  "bullseye" ターゲットのテクスチャが完成しました。 表示される最終的なイメージと透明度を次に示します。  
   
- !["bullseye" ターゲットのテクスチャ全体](~/designers/media/gfx_image_demo_bullseye.png "gfx_image_demo_bullseye")  
+ !["bullseye" ターゲットのテクスチャ全体](../designers/media/gfx_image_demo_bullseye.png "gfx_image_demo_bullseye")  
   
  次の手順では、このテクスチャの MIP レベルを生成できます。 詳細については、「[方法: MIP レベルを作成および変更する](../designers/how-to-create-and-modify-mip-levels.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [イメージ エディター](../designers/image-editor.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

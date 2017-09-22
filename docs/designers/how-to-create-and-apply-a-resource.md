@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- vs-ide-general
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,8 +13,8 @@ f1_keywords:
 - VS.XamlDesigner.EditResource
 ms.assetid: 3ff4006d-659d-4073-9a41-06ff85e6cfdf
 caps.latest.revision: 13
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -50,7 +50,7 @@ XAML デザイナーで、要素のスタイルとテンプレートは "リソ�
   
      選択したオブジェクトに適したダイログ ボックスが表示されます。 ブラシからリソースを作成するときには、次のダイアログ ボックスが表示されます。  
   
-     ![[リソースの作成] ダイアログ ボックス](~/designers/media/xaml_create_resource.png "xaml_create_resource")  
+     ![[リソースの作成] ダイアログ ボックス](../designers/media/xaml_create_resource.png "xaml_create_resource")  
   
 3.  **[名前 (キー)]** ボックスに、キー名を入力します。 これは、他の要素からリソースを参照するときに使用できる名前です。  
   

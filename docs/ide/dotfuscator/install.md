@@ -1,14 +1,13 @@
 ---
 title: "Dotfuscator Community Edition (CE) をインストールする | Microsoft Docs"
 ms.date: 2017-06-22
-ms.prod: visual-studio-dev15
 ms.devlang: dotnet
 ms.technology:
-- dotfuscator
+- vs-ide-general
 ms.topic: article
 keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, 難読化, .NET, 無料, Visual Studio 2017, インストール"
 helpviewer_keywords:
-- PreEmptive Protection - Dotfuscator
+- PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
 - Dotfuscator CE
 - Dotfuscator
