@@ -15,8 +15,8 @@ translation.priority.ht:
 - zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c771ebe5c28b56efad4147b2802342dbb9ba57c3
+ms.openlocfilehash: fa8443ce0c6ac3c1ccaaeb17ef670786d2e6bbc6
 ms.contentlocale: ja-jp
 
 ---
-Visual Studio 2010
+Windows Vista

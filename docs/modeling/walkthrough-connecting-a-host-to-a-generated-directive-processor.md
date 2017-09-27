@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5bfeb8ea94b457114d7ba6ab74b783972e64350c
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>チュートリアル: 生成済みディレクティブ プロセッサへのホストの接続
@@ -96,7 +96,7 @@ ms.lasthandoff: 09/06/2017
   
 1.  CustomHost ソリューションを開きます。  
   
-2.  **プロジェクト** メニューのをクリックして**参照の追加**です。  
+2.  **[プロジェクト]** メニューの **[参照の追加]** をクリックします。  
   
      **参照の追加** ダイアログ ボックスが開き、 **.NET**  タブが表示されます。  
   

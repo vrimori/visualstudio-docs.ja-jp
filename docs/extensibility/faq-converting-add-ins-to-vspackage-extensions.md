@@ -30,7 +30,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 8db7d203b599c11ce8fea07ed3647771c879a256
 ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="faq-converting-add-ins-to-vspackage-extensions"></a>FAQ: アドインを VSPackage 拡張に変換する
@@ -83,7 +83,7 @@ ms.lasthandoff: 09/06/2017
   
 1.  メニュー コマンドを含む VSPackage を作成します。 (詳細については、次を参照してください[メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)。)。  
   
-2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >*Package.cs)。  
+2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである* \<、プロジェクト名 >*Package.cs)。  
   
 3.  ファイルに次の `using` ステートメントを追加します。  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 09/06/2017
   
 1.  メニュー コマンド、としてする VSPackage を作成、 [VSIX 拡張機能の開発を開始する方法ですか?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping)セクションです。  
   
-2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >*Package.cs)。  
+2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである* \<、プロジェクト名 >*Package.cs)。  
   
 3.  次の `using` ステートメントを追加します。  
   
@@ -225,7 +225,7 @@ ms.lasthandoff: 09/06/2017
   
 1.  メニュー コマンド、としてする VSPackage を作成、 [VSIX 拡張機能の開発を開始する方法ですか?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping)セクションです。  
   
-2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >*Package.cs)。  
+2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである* \<、プロジェクト名 >*Package.cs)。  
   
 3.  次の `using` ステートメントを追加します。  
   

@@ -1,5 +1,5 @@
 ---
-title: Rules Propagate Changes Within the Model | Microsoft Docs
+title: "ルールは、モデル内の変更を反映 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,20 +29,20 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: 2892fc6257d07fe637eeb23c55e23c01759edf30
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: cbdf006fecb00139eda95cf3e9f2726430888ce7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="rules-propagate-changes-within-the-model"></a>Rules Propagate Changes Within the Model
-You can create a store rule to propagate a change from one element to another in Visualization and Modeling SDK (VMSDK). When a change occurs to any element in the Store, rules are scheduled to be executed, usually when the outermost transaction is committed. There are different types of rules for different kinds of events, such as adding an element, or deleting it. You can attach rules to specific types of elements, shapes, or diagrams. Many built-in features are defined by rules: for example, rules ensure that a diagram is updated when the model changes. You can customize your domain-specific language by adding your own rules.  
+# <a name="rules-propagate-changes-within-the-model"></a>規則によって変更内容がモデル内に反映される
+別の視覚化およびモデリング SDK (VMSDK) で 1 つの要素から変更を伝達するストア ルールを作成することができます。 変更された場合、ストア内の要素、ルールは、最も外側のトランザクションがコミットされるときに通常は、実行される予定です。 さまざまな種類の要素を追加または削除するなどのイベントのさまざまな種類のルールがあります。 ルールは、特定の種類の要素、図形、またはダイアグラムをアタッチできます。 多くの組み込み機能がルールによって定義されます。 など、ルールでは、モデルが変更されたときに、ダイアグラムが更新されることを確認します。 独自の規則を追加することで、ドメイン固有言語をカスタマイズできます。  
   
- Store rules are particularly useful for propagating changes inside the store - that is, changes to model elements, relationships, shapes or connectors, and their domain properties. Rules do not run when the user invokes the Undo or Redo commands. Instead, the transaction manager makes sure that the store contents are restored to the correct state. If you want to propagate changes to resources outside the store, use Store Events. For more information, see [Event Handlers Propagate Changes Outside the Model](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
+ ストアの規則は、プロパティをモデル要素をリレーションシップ、図形またはコネクタ、およびそのドメインに変更は、-、ストア内の変更を反映するのに特に役立ちます。 ルールは、ユーザーが元に戻す/やり直しのコマンドを呼び出したときに実行されません。 代わりに、トランザクション マネージャーは、ストアの内容が正しい状態に復元されたことを確認します。 ストアの外部リソースへの変更を反映する場合は、イベントの格納を使用します。 詳細については、次を参照してください。[イベント ハンドラー反映されるまで変更 Outside the モデル](../modeling/event-handlers-propagate-changes-outside-the-model.md)です。  
   
- For example, suppose that you want to specify that whenever the user (or your code) creates a new element of type ExampleDomainClass, an additional element of another type is created in another part of the model. You could write an AddRule and associate it with ExampleDomainClass. You would write code in the rule to create the additional element.  
+ たとえば、ユーザー (またはコード) は、型 ExampleDomainClass の新しい要素を作成するときに別の型の他の要素が作成されるモデルの別の部分を指定するとします。 AddRule を記述して ExampleDomainClass に関連付けます。 追加の要素を作成するルールにコードを記述します。  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -87,21 +87,21 @@ namespace ExampleNamespace
 ```  
   
 > [!NOTE]
->  The code of a rule should change the state only of elements inside the Store; that is, the rule should change only model elements, relationships, shapes, connectors, diagrams, or their properties. If you want to propagate changes to resources outside the store, define Store Events. For more information, see [Event Handlers Propagate Changes Outside the Model](../modeling/event-handlers-propagate-changes-outside-the-model.md)  
+>  ルールのコードは、ストア内の要素のみの状態を変更する必要があります。つまり、ルールでは、モデル要素をリレーションシップ、図形、コネクタ、図、またはそれらのプロパティのみを変更する必要があります。 ストアの外部リソースへの変更を反映する場合は、保存のイベントを定義します。 詳細については、次を参照してください[イベント ハンドラー反映されるまで変更 Outside the モデル。](../modeling/event-handlers-propagate-changes-outside-the-model.md)  
   
-### <a name="to-define-a-rule"></a>To define a rule  
+### <a name="to-define-a-rule"></a>ルールを定義するには  
   
-1.  Define the rule as a class prefixed with the `RuleOn` attribute. The attribute associates the rule with one of your domain classes, relationships, or diagram elements. The rule will be applied to every instance of this class, which may be abstract.  
+1.  クラスが付いて、ルールを定義、`RuleOn`属性。 属性は、ドメイン クラス、リレーションシップ、またはダイアグラム要素のいずれかのルールを関連付けます。 ルールは、このクラスは、抽象にすることがありますのすべてのインスタンスに適用されます。  
   
-2.  Register the rule by adding it to the set returned by `GetCustomDomainModelTypes()` in your domain model class.  
+2.  によって返されるセットに追加して、ルールを登録`GetCustomDomainModelTypes()`ドメイン モデル クラスのです。  
   
-3.  Derive the rule class from one of the abstract Rule classes, and write the code of the execution method.  
+3.  抽象の規則クラスのいずれかのルール クラスを派生し、実行メソッドのコードを記述します。  
   
- The following sections describe these steps in more detail.  
+ 次のセクションでは、これらの手順の詳細について説明します。  
   
-### <a name="to-define-a-rule-on-a-domain-class"></a>To define a rule on a domain class  
+### <a name="to-define-a-rule-on-a-domain-class"></a>ドメイン クラスにルールを定義するには  
   
--   In a custom code file, define a class and prefix it with the <xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute> attribute:  
+-   カスタム コード ファイルでクラスを定義し、プレフィックス、<xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute>属性。  
   
     ```  
     [RuleOn(typeof(ExampleElement),   
@@ -111,19 +111,19 @@ namespace ExampleNamespace
   
     ```  
   
--   The subject type in the first parameter can be a domain class, domain relationship, shape, connector, or diagram. Usually, you apply rules to domain classes and relationships.  
+-   最初のパラメーターでサブジェクトの種類には、ドメイン クラス、ドメインの関係、図形、コネクタまたはダイアグラムを指定できます。 通常、ドメイン クラスとのリレーションシップにルールを適用します。  
   
-     The `FireTime` is usually `TopLevelCommit`. This ensures that the rule is executed only after all the primary changes of the transaction have been made. The alternatives are Inline, which executes the rule soon after the change; and LocalCommit, which executes the rule at the end of the current transaction (which might not be the outermost). You can also set the priority of a rule to affect its ordering in the queue, but this is an unreliable method of achieving the result you require.  
+     `FireTime`は通常`TopLevelCommit`です。 これにより、トランザクションのすべての主な変更が加えられた後にのみ、ルールが実行されます。 選択肢は次のインラインで変更後すぐに、ルールを実行します。および LocalCommit で、(最も外側できない可能性があります) を現在のトランザクションの最後に規則を実行します。 キューの順序に影響するルールの優先順位を設定することもできますが、これは必要とする結果を実現するための信頼性の低いメソッド。  
   
--   You can specify an abstract class as the subject type.  
+-   抽象クラスは、サブジェクトの種類として指定できます。  
   
--   The rule applies to all instances of the subject class.  
+-   ルールは、サブジェクト クラスのすべてのインスタンスに適用されます。  
   
--   The default value for `FireTime` is TimeToFire.TopLevelCommit. This causes the rule to be executed when the outermost transaction is committed. An alternative is TimeToFire.Inline. This causes the rule to be executed soon after the triggering event.  
+-   既定値`FireTime`TimeToFire.TopLevelCommit がします。 これにより、最も外側のトランザクションがコミットされるときに実行されるルールです。 代わりには、TimeToFire.Inline です。 これにより、トリガー起動イベントの直後に実行されるルールです。  
   
-### <a name="to-register-the-rule"></a>To register the rule  
+### <a name="to-register-the-rule"></a>ルールを登録するには  
   
--   Add your rule class to the list of types returned by `GetCustomDomainModelTypes` in your domain model:  
+-   ルール クラスをによって返される型の一覧に追加`GetCustomDomainModelTypes`ドメイン モデルで。  
   
     ```  
     public partial class ExampleDomainModel  
@@ -139,51 +139,51 @@ namespace ExampleNamespace
   
     ```  
   
--   If you are not sure of the name of your domain model class, look inside the file **Dsl\GeneratedCode\DomainModel.cs**  
+-   ドメイン モデル クラスの名前のことを確認していない場合は、ファイル内で検索**Dsl\GeneratedCode\DomainModel.cs**  
   
--   Write this code in a custom code file in your DSL project.  
+-   DSL プロジェクトでカスタム コード ファイルでこのコードを記述します。  
   
-### <a name="to-write-the-code-of-the-rule"></a>To write the code of the rule  
+### <a name="to-write-the-code-of-the-rule"></a>ルールのコードを記述するには  
   
--   Derive the rule class from one of the following base classes:  
+-   次の基本クラスのいずれかのルール クラスを派生します。  
   
-    |Base class|Trigger|  
+    |基底クラス|トリガー|  
     |----------------|-------------|  
-    |<xref:Microsoft.VisualStudio.Modeling.AddRule>|An element, link, or shape is added.<br /><br /> Use this to detect new relationships, in addition to new elements.|  
-    |<xref:Microsoft.VisualStudio.Modeling.ChangeRule>|A domain property value is changed. The method argument provides the old and new values.<br /><br /> For shapes, this rule is triggered when the built-in `AbsoluteBounds` property changes, if the shape is moved.<br /><br /> In many cases, it is more convenient to override `OnValueChanged` or `OnValueChanging` in the property handler. These methods are called immediately before and after the change. By contrast, the rule usually runs at the end of the transaction. For more information, see [Domain Property Value Change Handlers](../modeling/domain-property-value-change-handlers.md). **Note:**  This rule is not triggered when a link is created or deleted. Instead, write an `AddRule` and a `DeleteRule` for the domain relationship.|  
-    |<xref:Microsoft.VisualStudio.Modeling.DeletingRule>|Triggered when an element or link is about to be deleted. The property ModelElement.IsDeleting is true until the end of the transaction.|  
-    |<xref:Microsoft.VisualStudio.Modeling.DeleteRule>|Performed when an element or link has been deleted. The rule is executed after all other rules have been executed, including DeletingRules. ModelElement.IsDeleting is false, and ModelElement.IsDeleted is true. To allow for a subsequent Undo, the element is not actually removed from the memory, but it is removed from Store.ElementDirectory.|  
-    |<xref:Microsoft.VisualStudio.Modeling.MoveRule>|An element is moved from one store partition to another.<br /><br /> (Notice that this is not related to the graphical position of a shape.)|  
-    |<xref:Microsoft.VisualStudio.Modeling.RolePlayerChangeRule>|This rule applies only to domain relationships. It is triggered if you explicitly assign a model element to either end of a link.|  
-    |<xref:Microsoft.VisualStudio.Modeling.RolePlayerPositionChangeRule>|Triggered when the ordering of links to or from an element is changed using the MoveBefore or MoveToIndex methods on a link.|  
-    |<xref:Microsoft.VisualStudio.Modeling.TransactionBeginningRule>|Executed when a transaction is created.|  
-    |<xref:Microsoft.VisualStudio.Modeling.TransactionCommittingRule>|Executed when the transaction is about to be committed.|  
-    |<xref:Microsoft.VisualStudio.Modeling.TransactionRollingBackRule>|Executed when the transaction is about to be rolled back.|  
+    |<xref:Microsoft.VisualStudio.Modeling.AddRule>|要素、リンク、または図形が追加されます。<br /><br /> これを使用して、新しい要素だけでなく、新しいリレーションシップを検出します。|  
+    |<xref:Microsoft.VisualStudio.Modeling.ChangeRule>|ドメイン プロパティの値を変更します。 このメソッドの引数は、新旧の値を提供します。<br /><br /> 図形は、このルールがトリガーされたときに、組み込み`AbsoluteBounds`プロパティが変更された、図形が移動された場合。<br /><br /> 多くの場合、オーバーライドする方が便利です`OnValueChanged`または`OnValueChanging`プロパティ ハンドラーでします。 これらのメソッドは、直前と直後に、変更と呼ばれます。 これに対し、通常、ルールが、トランザクションの最後に実行します。 詳細については、次を参照してください。[ドメイン プロパティ値変更ハンドラー](../modeling/domain-property-value-change-handlers.md)です。 **注:**のリンクを作成または削除されたときに、このルールはトリガーされません。 代わりに、書き込み、`AddRule`と`DeleteRule`ドメイン リレーションシップです。|  
+    |<xref:Microsoft.VisualStudio.Modeling.DeletingRule>|要素またはリンクが削除されようとしてがトリガーされます。 ModelElement.IsDeleting プロパティは、トランザクションが終了するまでは true です。|  
+    |<xref:Microsoft.VisualStudio.Modeling.DeleteRule>|要素またはリンクが削除されたときに実行されます。 その他のすべてのルールの実行後、DeletingRules を含め、ルールが実行されます。 ModelElement.IsDeleting が false になり、ModelElement.IsDeleted は true です。 後続の元に戻すには、要素は、実際に削除されませんをメモリからが Store.ElementDirectory から削除されます。|  
+    |<xref:Microsoft.VisualStudio.Modeling.MoveRule>|要素は、別のストアが 1 つのパーティションから移動されます。<br /><br /> (図形のグラフ上の位置にこの関連しないことに注意してください)。|  
+    |<xref:Microsoft.VisualStudio.Modeling.RolePlayerChangeRule>|このルールは、ドメイン リレーションシップにのみ適用されます。 リンクの両端をモデル要素を明示的に割り当てる場合にトリガーされます。|  
+    |<xref:Microsoft.VisualStudio.Modeling.RolePlayerPositionChangeRule>|要素の間のリンクの順序が変更リンク MoveBefore または MoveToIndex メソッドを使用すると発生します。|  
+    |<xref:Microsoft.VisualStudio.Modeling.TransactionBeginningRule>|トランザクションの作成時に実行します。|  
+    |<xref:Microsoft.VisualStudio.Modeling.TransactionCommittingRule>|トランザクションがコミットされるときに実行します。|  
+    |<xref:Microsoft.VisualStudio.Modeling.TransactionRollingBackRule>|トランザクションをロールバックするときに実行します。|  
   
--   Each class has a method that you override. Type `override` in your class to discover it. The parameter of this method identifies the element that is being changed.  
+-   各クラスには、オーバーライドするメソッドがあります。 型`override`検出には、クラスにします。 このメソッドのパラメーターは、変更する要素を識別します。  
   
- Notice the following points about rules:  
+ 規則に関する次の点に注意してください。  
   
-1.  The set of changes in a transaction might trigger many rules. Usually, the rules are executed when the outermost transaction is committed. They are executed in an unspecified order.  
+1.  一連の変更をトランザクションには、多数のルールをトリガー可能性があります。 通常、ルールは、最も外側のトランザクションがコミットされるときに実行されます。 不特定の順序で実行されます。  
   
-2.  A rule is always executed inside a transaction. Therefore, you do not have to create a new transaction to make changes.  
+2.  ルールは常に、トランザクションの内部実行します。 そのため、変更を加える新しいトランザクションを作成するはありません。  
   
-3.  Rules are not executed when a transaction is rolled back, or when the Undo or Redo operations are performed. These operations reset all the content of the Store to its previous state. Therefore, if your rule changes the state of anything outside the Store, it might not keep in synchronism with the Store content. To update state outside the Store, it is better to use Events. For more information, see [Event Handlers Propagate Changes Outside the Model](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
+3.  トランザクションがロールバックされたときに、または元に戻す/やり直しの操作が実行されたルールは実行されません。 これらの操作は、以前の状態ストアのすべてのコンテンツをリセットします。 そのため、ルールは、ストアの外部の状態を変更する場合に可能性があります保持しない synchronism をストアとのコンテンツ。 ストア以外の状態を更新するには、イベントを使用することをお勧めします。 詳細については、次を参照してください。[イベント ハンドラー反映されるまで変更 Outside the モデル](../modeling/event-handlers-propagate-changes-outside-the-model.md)です。  
   
-4.  Some rules are executed when a model is loaded from file. To determine whether loading or saving is in progress, use `store.TransactionManager.CurrentTransaction.IsSerializing`.  
+4.  一部のルールは、ファイルからモデルを読み込むときに実行されます。 読み込みまたは保存が進行中かどうかを確認するに`store.TransactionManager.CurrentTransaction.IsSerializing`です。  
   
-5.  If the code of your rule creates more rule triggers, they will be added to the end of the firing list, and will be executed before the transaction completes. DeletedRules are executed after all other rules. One rule can run many times in a transaction, one time for each change.  
+5.  ルールのコードでは、複数のルールのトリガーを作成する場合、起動リストの末尾に追加され、トランザクションが完了する前に実行されます。 DeletedRules は、その他のすべてのルールの後に実行されます。 1 つのルールは、各変更につき 1 回のトランザクションで何度もを実行できます。  
   
-6.  To pass information to and from rules, you can store information in the `TransactionContext`. This is just a dictionary that is maintained during the transaction. It is disposed when the transaction ends. The event arguments in each rule provide access to it. Remember that rules are not executed in a predictable order.  
+6.  ルールとの情報を渡すで情報を格納することができます、`TransactionContext`です。 これは、トランザクション中に保持されているディクショナリだけです。 トランザクションの終了時に、破棄されます。 各ルールでイベント引数へのアクセスを提供します。 ルールが、予測可能な順序でない実行されることに注意してください。  
   
-7.  Use rules after considering other alternatives. For example, if you want to update a property when a value changes, consider using a calculated property. If you want to constrain the size or location of a shape, use a `BoundsRule`. If you want to respond to a change in a property value, add an `OnValueChanged` handler to the property. For more information, see [Responding to and Propagating Changes](../modeling/responding-to-and-propagating-changes.md).  
+7.  その他のオルタナティブを考慮した後の規則を使用します。 値が変更されたときにプロパティを更新する場合は、たとえば、計算されるプロパティを使用します。 サイズや図形の場所を制限する場合は、使用、`BoundsRule`です。 プロパティ値の変更に応答する場合は、追加、`OnValueChanged`プロパティ ハンドラー。 詳細については、次を参照してください。[への応答と変更を反映する](../modeling/responding-to-and-propagating-changes.md)です。  
   
-## <a name="example"></a>Example  
- The following example updates a property when a domain relationship is instantiated to link two elements. The rule will be triggered not only when the user creates a link on a diagram, but also if program code creates a link.  
+## <a name="example"></a>例  
+ 次の例は、2 つの要素をリンクするドメインの関係がインスタンス化されるときにプロパティを更新します。 ルールがトリガーされますだけでなく、ユーザーのリンクを作成、ダイアグラムにもプログラム コードのリンクを作成する場合。  
   
- To test this example, create a DSL using the Task Flow solution template, and insert the following code in a file in the Dsl project. Build and run the solution, and open the Sample file in the Debugging project. Draw a Comment Link between a Comment shape and a flow element. The text in the comment changes to report on the most recent element that you have connected it to.  
+ この例をテストするには、テンプレートを使用して、タスク フロー ソリューション、DSL を作成し、Dsl プロジェクト内のファイルに次のコードを挿入します。 ビルドし、ソリューションを実行し、デバッグ プロジェクトでサンプル ファイルを開きます。 コメントの図形とフロー要素間にコメント リンクを描画します。 コメント内のテキストは、レポートに接続されている最新の要素を変更します。  
   
- In practice, you would usually write a DeleteRule for every AddRule.  
+ 実際には、通常すべて AddRule の DeleteRule を記述するとします。  
   
 ```  
 using System;  
@@ -227,6 +227,6 @@ namespace Company.TaskRuleExample
   
 ```  
   
-## <a name="see-also"></a>See Also  
- [Event Handlers Propagate Changes Outside the Model](../modeling/event-handlers-propagate-changes-outside-the-model.md)   
- [BoundsRules Constrain Shape Location and Size](../modeling/boundsrules-constrain-shape-location-and-size.md)
+## <a name="see-also"></a>関連項目  
+ [イベント ハンドラーには、モデルの外部で変更が反映されるまでください。](../modeling/event-handlers-propagate-changes-outside-the-model.md)   
+ [BoundsRules によってシェイプの位置とサイズが制限される](../modeling/boundsrules-constrain-shape-location-and-size.md)

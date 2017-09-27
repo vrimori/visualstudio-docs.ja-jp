@@ -1,51 +1,68 @@
 ---
-title: "IDebugObject2::IsEncOutdated | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject2::IsEncOutdated"
-helpviewer_keywords: 
-  - "IDebugObject2::IsEncOutdated メソッド"
+title: "IDebugObject2::IsEncOutdated |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject2::IsEncOutdated
+helpviewer_keywords:
+- IDebugObject2::IsEncOutdated method
 ms.assetid: d3a8c02d-895b-478c-9957-d663130f308e
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugObject2::IsEncOutdated
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7161f3e608390e5a513faf86b2e0b7ed2459deed
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/26/2017
 
-このメソッドはエディット コンティニュかどうか親コンテナーのこのオブジェクトの状態を引き続きまたは古い値です。  カスタムの式エバリュエーターはこのメソッドは常に実行せず`E_NOTIMPL` を返しません。  
+---
+# <a name="idebugobject2isencoutdated"></a>IDebugObject2::IsEncOutdated
+このメソッドは、またはこのオブジェクトの親コンテナーのエディット コンティニュの状態が最新かどうかを判断します。 カスタム式エバリュエーターではこのメソッドを常に返すを実装していません`E_NOTIMPL`です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT IsEncOutdated(  
-   BOOL* pfEncOutdated  
+HRESULT IsEncOutdated(  
+   BOOL* pfEncOutdated  
 );  
 ```  
   
-```c#  
-int IsEncOutdated(  
-   out int pfEncOutdated  
+```csharp  
+int IsEncOutdated(  
+   out int pfEncOutdated  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pfEncOutdated`  
- \[入力\]`TRUE`\(編集\) は状態を指定して古いにゼロ以外の値を返します。`FALSE`\)。  
+ [out]0 以外 (`TRUE`) 場合は、エディット コンティニュの状態は最新では、0 (`FALSE`) されていない場合。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
 > [!NOTE]
->  カスタムの式エバリュエーターは `E_NOTIMPL` を常に返す必要です。  
+>  カスタム式エバリュエーターを常に返します`E_NOTIMPL`です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

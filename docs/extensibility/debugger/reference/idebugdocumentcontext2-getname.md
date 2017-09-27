@@ -1,61 +1,78 @@
 ---
-title: "IDebugDocumentContext2::GetName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentContext2::GetName"
-helpviewer_keywords: 
-  - "IDebugDocumentContext2::GetName"
+title: "IDebugDocumentContext2::GetName |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentContext2::GetName
+helpviewer_keywords:
+- IDebugDocumentContext2::GetName
 ms.assetid: 546c5b2e-f166-4edb-9e61-57d797ca98a1
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugDocumentContext2::GetName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5d0edefb96d481de2dc7166f78767c2154f0d160
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/26/2017
 
-このドキュメントのコンテキストが含まれるドキュメントを表示できる名前を取得します。  
+---
+# <a name="idebugdocumentcontext2getname"></a>IDebugDocumentContext2::GetName
+このドキュメントのコンテキストを含むドキュメントの表示可能な名前を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetName(   
-   GETNAME_TYPE gnType,  
-   BSTR*        pbstrFileName  
+```cpp  
+HRESULT GetName(   
+   GETNAME_TYPE gnType,  
+   BSTR*        pbstrFileName  
 );  
 ```  
   
-```c#  
-int GetName(   
-   enum_GETNAME_TYPE  gnType,  
-   out string         pbstrFileName  
+```csharp  
+int GetName(   
+   enum_GETNAME_TYPE  gnType,  
+   out string         pbstrFileName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `gnType`  
- \[出力\] 返される名前の [GETNAME\_TYPE](../../../extensibility/debugger/reference/getname-type.md) の種類を指定する列挙体の値。  
+ [in]値、 [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)を返す名前の型を指定する列挙です。  
   
  `pbstrFileName`  
- \[出力\] ファイルの名前を返します。  
+ [out]ファイルの名前を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドは [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md) のメソッドに文書名自体を格納するドキュメントのコンテキストがいなければ呼び出しが転送されます \(例として\)。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、通常の呼び出しを転送、 [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md)メソッド名を格納する、ドキュメント自体 (、例に示します) としてドキュメントのコンテキストを書き込まれない限り、します。  
   
-## 使用例  
- 次の例に [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) インターフェイスを公開する `CDebugContext` の単純なオブジェクトに対してこのメソッドを実装する方法を示します。  
+## <a name="example"></a>例  
+ 次の例は、単純なは、このメソッドを実装する方法を示します`CDebugContext`を公開するオブジェクト、 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)インターフェイスです。  
   
-```cpp#  
+```cpp  
 HRESULT CDebugContext::GetName(GETNAME_TYPE gnType, BSTR* pbstrFileName)    
 {    
    HRESULT hr;    
@@ -92,6 +109,6 @@ HRESULT CDebugContext::GetName(GETNAME_TYPE gnType, BSTR* pbstrFileName)
 }    
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
- [GETNAME\_TYPE](../../../extensibility/debugger/reference/getname-type.md)
+ [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)

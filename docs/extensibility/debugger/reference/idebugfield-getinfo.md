@@ -1,54 +1,71 @@
 ---
-title: "IDebugField::GetInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugField::GetInfo"
-helpviewer_keywords: 
-  - "IDebugField::GetInfo メソッド"
+title: "IDebugField::GetInfo |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugField::GetInfo
+helpviewer_keywords:
+- IDebugField::GetInfo method
 ms.assetid: 7d508200-89ce-400f-a8ea-f28e7610cb2b
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugField::GetInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 60eb5889f197af894dc07478a08ede828090f8c2
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/26/2017
 
-このメソッドはフィールドに関する情報を表示できる情報を取得します。  
+---
+# <a name="idebugfieldgetinfo"></a>IDebugField::GetInfo
+このメソッドは、フィールドの表示可能な情報を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetInfo(   
-   FIELD_INFO_FIELDS dwFields,  
-   FIELD_INFO* pFieldInfo  
+```cpp  
+HRESULT GetInfo(   
+   FIELD_INFO_FIELDS dwFields,  
+   FIELD_INFO* pFieldInfo  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetInfo(  
-   enum_FIELD_INFO_FIELDS dwFields,  
-   FIELD_INFO[] pFieldInfo  
+   enum_FIELD_INFO_FIELDS dwFields,  
+   FIELD_INFO[] pFieldInfo  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwFields`  
- \[入力\] 表示される情報を選択する [FIELD\_INFO\_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) の定数の組み合わせ。  フィールドがシンボルを表す場合通常はシンボル名および型です。  
+ [in]組み合わせた[FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)を表示する情報を選択する定数。 フィールドを表す場合、シンボル、これは通常、シンボルの名前と種類です。  
   
  `pFieldInfo`  
- \[入力\] [FIELD\_INFO](../../../extensibility/debugger/reference/field-info.md)指定された構造で情報を返します。  
+ [out]提供された情報を返します[FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)構造体。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
- [FIELD\_INFO](../../../extensibility/debugger/reference/field-info.md)
+ [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)

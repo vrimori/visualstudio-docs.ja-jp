@@ -1,50 +1,67 @@
 ---
-title: "IDebugStackFrame2::GetLanguageInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugStackFrame2::GetLanguageInfo"
-helpviewer_keywords: 
-  - "IDebugStackFrame2::GetLanguageInfo"
+title: "IDebugStackFrame2::GetLanguageInfo |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugStackFrame2::GetLanguageInfo
+helpviewer_keywords:
+- IDebugStackFrame2::GetLanguageInfo
 ms.assetid: 0e12fd92-f155-46a7-8272-cda279388cfb
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugStackFrame2::GetLanguageInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 460979d28bfc9244726ea3345c8a435de87a6c29
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/26/2017
 
-言語をこのスタック フレームに関連付けられているを取得します。  
+---
+# <a name="idebugstackframe2getlanguageinfo"></a>IDebugStackFrame2::GetLanguageInfo
+このスタック フレームに関連する言語を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetLanguageInfo (   
-   BSTR* pbstrLanguage,  
-   GUID* pguidLanguage  
+```cpp  
+HRESULT GetLanguageInfo (   
+   BSTR* pbstrLanguage,  
+   GUID* pguidLanguage  
 );  
 ```  
   
-```c#  
-int GetLanguageInfo (   
-   ref string pbstrLanguage,  
-   ref Guid   pguidLanguage  
+```csharp  
+int GetLanguageInfo (   
+   ref string pbstrLanguage,  
+   ref Guid   pguidLanguage  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pbstrLanguage`  
- \[出力\] このスタック フレームに関連付けられたメソッドを実装する言語の名前を返します。  
+ [out]このスタック フレームに関連付けられているメソッドを実装する言語の名前を返します。  
   
  `pguidLanguage`  
- \[出力\] 言語の `GUID` を返します。  [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] の言語の場合たとえば次が返される可能性があります :  
+ [out]返します、`GUID`言語です。 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]言語、たとえば、次返すことのできます。  
   
 -   `guidVBScriptLang`  
   
@@ -58,8 +75,8 @@ int GetLanguageInfo ( 
   
 -   `guidScriptLang`  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

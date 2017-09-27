@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fe8f51fb1d5100fbefc0982157498f5772847c30
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3c1ce8a931ca8687056fcf161d78b7e40260e15f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="debugpropertyinfo"></a>DEBUG_PROPERTY_INFO
-デバッグ プロパティについてを説明します。  
+デバッグのプロパティに関する情報が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 typedef struct tagDEBUG_PROPERTY_INFO {   
    DEBUGPROP_INFO_FLAGS dwValidFields;  
    BSTR                 bstrFullName;  
@@ -53,7 +54,7 @@ typedef struct tagDEBUG_PROPERTY_INFO {
 } DEBUG_PROPERTY_INFO;  
 ```  
   
-```c#  
+```csharp  
 public struct DEBUG_PROPERTY_INFO {   
    public uint            dwValidFields;  
    public string          bstrFullName;  
@@ -67,7 +68,7 @@ public struct DEBUG_PROPERTY_INFO {
   
 ## <a name="members"></a>メンバー  
  dwValidFields  
- フラグの組み合わせ、 [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)どのフィールドが入力を指定する列挙体です。  
+ フラグの組み合わせ、 [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)のどのフィールドが入力を指定する列挙です。  
   
  bstrFullName  
  プロパティの完全名。  
@@ -85,12 +86,12 @@ public struct DEBUG_PROPERTY_INFO {
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)この構造体で記述するオブジェクト。  
   
  dwAttrib  
- フラグの組み合わせ、 [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)このプロパティの属性を記述する列挙です。  
+ フラグの組み合わせ、 [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)このプロパティの属性を説明する列挙です。  
   
 ## <a name="remarks"></a>コメント  
- プロパティは、階層的な性質を名前、型、および値を持つオブジェクトです。 たとえば、プロパティには、ローカル変数、パラメーター、変数のウォッチと式、およびレジスタを記述できます。  
+ プロパティは、名前、型、および値を持つ階層的な性質のオブジェクトです。 たとえば、プロパティには、ローカル変数、パラメーター、変数のウォッチと式、およびレジスタを記述できます。  
   
- この構造体は、 [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)メソッドでいっぱいになった場所。 この構造体がこの構造体からのリストの一部として返されるも、 [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)インターフェイスへの呼び出しから返される、順番を[EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)と[EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)メソッドです。  
+ この構造体に渡される、 [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)で塗り分けはメソッドです。 この構造体がこの構造体からのリストの一部としても返されます、 [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)インターフェイス、さらへの呼び出しから返される、 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)と[EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)メソッドです。  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
