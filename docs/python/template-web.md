@@ -105,7 +105,7 @@ Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使�
 
 ### <a name="other-configurations"></a>その他の構成
 
-別のフレームワークの設定を共有する場合、または別のフレームワークの設定を要求する場合は、[GitHub で懸案事項](https://github.com/Microsoft/PTVS/issues)を開きます。
+別のフレームワークの設定を共有する場合、または別のフレームワークの設定を要求する場合は、[GitHub で懸案事項](https://github.com/Microsoft/PTVS/issues)を作成します。
 
 ## <a name="publishing-to-azure-app-service"></a>Azure App Service への発行
 
