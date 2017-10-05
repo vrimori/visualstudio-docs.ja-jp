@@ -2,7 +2,6 @@
 title: "R Tools for Visual Studio でデータを視覚化する | Microsoft Docs"
 ms.custom: 
 ms.date: 6/29/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

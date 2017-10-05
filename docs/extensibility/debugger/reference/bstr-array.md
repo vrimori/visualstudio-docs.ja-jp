@@ -1,5 +1,5 @@
 ---
-title: BSTR_ARRAY | Microsoft Docs
+title: "BSTR_ARRAY |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,50 +31,50 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: 7a13903f0100080b3a9c57d11732da9334fa8ab7
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0e1d2b2228085505971102494522cdf9085d4a67
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="bstrarray"></a>BSTR_ARRAY
-A structure that describes an array of strings.  
+文字列の配列を記述する構造。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 typedef struct tagBSTR_ARRAY {  
    DWORD dwCount;  
    BSTR* Members;  
 } BSTR_ARRAY;  
 ```  
   
-```cs  
+```csharp  
 struct BSTR_ARRAY {  
    DWORD    dwCount;  
    string[] Members;  
 }  
 ```  
   
-## <a name="terms"></a>Terms  
+## <a name="terms"></a>用語  
  dwCount  
- Number of strings in `Members` array.  
+ 数値の文字列の`Members`配列。  
   
- Members  
- Array of strings.  
+ メンバー  
+ 文字列の配列。  
   
-## <a name="remarks"></a>Remarks  
- This structure is returned from the [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) method.  
+## <a name="remarks"></a>コメント  
+ この構造体から返される、 [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md)メソッドです。  
   
- [C++ only] Each individual string must be freed using `SysFreeString`, and the `Members` array must be freed with `CoTaskMemFree`.  
+ [C++ のみ]使用して各個々 の文字列を解放する必要があります`SysFreeString`、および`Members`配列を使用して解放する必要があります`CoTaskMemFree`です。  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>関連項目  
+ [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md)

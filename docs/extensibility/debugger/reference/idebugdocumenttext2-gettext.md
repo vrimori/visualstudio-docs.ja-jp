@@ -1,68 +1,85 @@
 ---
-title: "IDebugDocumentText2::GetText | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentText2::GetText"
-helpviewer_keywords: 
-  - "IDebugDocumentText2::GetText"
+title: "IDebugDocumentText2::GetText |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentText2::GetText
+helpviewer_keywords:
+- IDebugDocumentText2::GetText
 ms.assetid: f8c15a58-da77-473e-a721-7a094e306c63
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugDocumentText2::GetText
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: a7e950fbf8667ee85f992ab8406dfdd9d7442555
+ms.contentlocale: ja-jp
+ms.lasthandoff: 09/26/2017
 
-ドキュメント内の指定した位置からテキストを取得します。  
+---
+# <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
+ドキュメント内の指定位置からテキストを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetText(   
-   TEXT_POSITION pos,  
-   ULONG         cMaxChars,  
-   WCHAR*        pText,  
-   ULONG*        pcNumChars  
+```cpp  
+HRESULT GetText(   
+   TEXT_POSITION pos,  
+   ULONG         cMaxChars,  
+   WCHAR*        pText,  
+   ULONG*        pcNumChars  
 );  
 ```  
   
-```c#  
-int GetText(   
-   eumn_TEXT_POSITION pos,  
-   uint               cMaxChars,  
-   IntPtr             pText,  
-   out uint           pcNumChars  
+```csharp  
+int GetText(   
+   eumn_TEXT_POSITION pos,  
+   uint               cMaxChars,  
+   IntPtr             pText,  
+   out uint           pcNumChars  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pos`  
- \[入力\] 取得するテキストの位置を示す [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md) の構造体。  
+ [in]A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)構造体を取得するテキストの位置を示すです。  
   
  `cMaxChars`  
- \[入力\] 取得するテキスト文字の最大数。  
+ [in]取得するテキストの文字の最大数。  
   
  `pText`  
- \[入力出力\] 目的のテキストが格納されるバッファーへのポインター。  このバッファーはワイド文字の少なくとも `cMaxChars` の数を含めます必要があります。  
+ [入力、出力].目的のテキストを使用して入力をバッファーへのポインター。 このバッファーは、少なくともできる必要があります`cMaxChars`ワイド文字の数。  
   
  `pcNumChars`  
- \[出力\] 実際に取得される文字数を返します。  
+ [out]実際に取得される文字数を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 使用例  
- このメソッドはC\# から呼び出す方法を次の例に示します。  
+## <a name="example"></a>例  
+ この例では、このメソッドを呼び出す c# からする方法を示します。  
   
-```c#  
+```csharp  
 using System.Runtime.Interop.Services;  
 using Microsoft.VisualStudio;  
 using Microsoft.VisualStudio.Debugger.Interop;  
@@ -98,6 +115,6 @@ namespace Mynamespace
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)   
- [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md)
+ [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

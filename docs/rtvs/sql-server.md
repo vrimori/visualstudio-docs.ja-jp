@@ -2,7 +2,6 @@
 title: "SQL Server と R Tools for Visual Studio の統合 | Microsoft Docs"
 ms.custom: 
 ms.date: 6/30/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -25,7 +24,7 @@ ms.lasthandoff: 07/20/2017
 
 # <a name="working-with-sql-server-and-r"></a>SQL Server と R の使用
 
-Visual Studio の優れた SQL Server のサポートにより、データ サイエンティストは、SQL クエリを作成して実行する機能およびストアド プロシージャを処理する機能を利用して、R と SQL データベースを使用することができます。
+Visual Studio では SQL Server を強力にサポートしています。SQL クエリを作成して実行する機能およびストアド プロシージャを処理する機能を通して、データ サイエンティストによる R と SQL データベースの使用を支援します。
 
 > [!Note]
 > SQL と R を一緒に使用するためには、SQL Server Tools がインストールされている必要があります。
@@ -44,7 +43,7 @@ SQL クエリ ファイルを追加するには、ソリューション エク�
 
 ![SQL クエリ項目をプロジェクトに追加](media/sql-add-item.png)
 
-このコマンドにより、Visual Studio の Transact-SQL エディターでファイルが開き、SQL 用のフル機能 IntelliSense とクエリ実行機能を使用できます。 ただし、これらの機能が動作するためには、エディターのツール バーにある接続ボタンを使用してデータベースに接続するか、クエリの実行を試みる必要があります (Ctrl + Shift + E キーでも選択項目を操作できます)。 どちらの方法でも、次のような接続ダイアログが表示されます。
+このコマンドにより、Visual Studio の Transact-SQL エディターでファイルが開き、SQL 用のフル機能 IntelliSense とクエリ実行機能を使用できます。 これらの機能が動作するためには、エディターのツール バーにある接続ボタンを使用してデータベースに接続するか、クエリの実行を試みる必要があります (Ctrl + Shift + E キーでも選択項目を操作できます)。 どちらの方法でも、次のような接続ダイアログが表示されます。
 
 ![SQL 接続ダイアログ ボックス](media/sql-connection-dialog.png)
 
@@ -71,7 +70,7 @@ Transact-SQL エディターは他のさまざまな機能をサポートして�
 
 ### <a name="add-a-database-connection"></a>データベース接続の追加
 
-1. **[R Tools] > [データ] > [データベース接続の追加]** を選び、**[接続のプロパティ]** ダイアログを表示します。 ここで、データ ソース (この場合は SQL Server) の名前、サーバーの名前、認証モード、データベースの名前を指定します。 ダイアログ ボックスを閉じる前に **[テスト接続]** を選んで入力を確認します。
+1. **[R Tools] > [データ] > [データベース接続の追加]** を選び、**[接続のプロパティ]** ダイアログを表示します。 ここで、データ ソースの名前 (この場合は SQL Server)、サーバーの名前、認証モード、データベースの名前を指定します。 ダイアログ ボックスを閉じる前に **[テスト接続]** を選んで入力を確認します。
  
     ![SQL 接続ダイアログ ボックス](media/sql-connection-string-dialog.png)
 
@@ -152,7 +151,7 @@ WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 ### <a name="publish-a-sql-stored-procedure"></a>SQL ストアド プロシージャの公開
 
 1. **[R Tools] > [データ] > [Publish With Options]**\(オプションを使用してパブリッシュ\) メニュー コマンドを選択します。
-1. 表示されるダイアログ ボックスで、**[パブリッシュ先]** を **[データベース]** に変更し、ターゲットを指定して、**[パブリッシュ]** を選択します。RTVS でストアド プロシージャがビルドされ、パブリッシュされます。
+1. 表示されるダイアログ ボックスで、**[パブリッシュ先]** を **[データベース]** に変更し、ターゲットを指定して、**[パブリッシュ]** を選択します。RTVS でストアド プロシージャがビルドされ、公開されます。
 
     ![ストアド プロシージャの公開ダイアログ ボックス](media/sql-publish-with-options.png)
 

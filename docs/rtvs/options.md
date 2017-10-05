@@ -1,12 +1,12 @@
 ---
 title: "Visual Studio の R Tools オプション | Microsoft Docs"
 ms.custom: 
-ms.date: 4/26/2017
-ms.prod: visual-studio-dev15
+ms.date: 6/29/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
 f1_keywords:
 - vs.toolsoptionspages.r_tools
@@ -18,34 +18,19 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: 9b680c73d54c9809e3f4c46dc2841f1f320e4af9
+ms.translationtype: HT
+ms.sourcegitcommit: 1e017806ca7bf3d23410ba3a2f999dca0b78f240
+ms.openlocfilehash: 5777be7df1256d4fe4d34be41fb10eb546d4a0ac
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 09/26/2017
 
 ---
-
 
 # <a name="r-tools-for-visual-studio-options"></a>R Tools for Visual Studio オプション
  
 設定には **[R Tools]、[オプション]** メニューの順に選択してアクセスできます。あるいは、**[ツール]、[オプション]** の順に選択し、**[R Tools]** までスクロールしてください。
  
-  ![R Tools のオプション ダイアログ](~/rtvs/media/options-dialog.png)
+  ![R Tools のオプション ダイアログ](media/options-dialog.png)
 
 次のセクションでは、このページで利用できるさまざまなオプションについて説明します。
 
@@ -54,16 +39,16 @@ ms.lasthandoff: 05/12/2017
 
 <a name="data-scientist-layout"</a>
 
-**[R Tools] には、[データ サイエンスの設定]** という特別なメニュー項目もあります。データ サイエンティストのニーズに合わせて最適に作られたレイアウトで Visual Studio IDE が構成されます。 具体的には、このオプションで [[インタラクティブ]](interactive-repl.md)、[[変数エクスプローラー]](variable-explorer.md)、[[ワークスペース]](workspaces.md) というウィンドウが開きます。
+**[R Tools] には、[データ サイエンスの設定]** というメニュー項目もあります。この項目でも、データ サイエンティストのニーズに合わせて最適に作られたレイアウトで Visual Studio IDE を構成できます。 具体的には、このオプションで [[インタラクティブ]](interactive-repl.md)、[[変数エクスプローラー]](variable-explorer.md)、[[ワークスペース]](workspaces.md) というウィンドウが開きます。
 
-![Visual Studio のデータ サイエンティスト ウィンドウ レイアウト](~/rtvs/media/installation-data-scientist-layout-result.png)
+![Visual Studio のデータ サイエンティスト ウィンドウ レイアウト](media/installation-data-scientist-layout-result.png)
 
 > [!Important]      
 > 後で他の Visual Studio 設定に戻るには、最初に **[ツール]、[設定のインポートとエクスポート]** コマンドを使用します。**[選択された環境設定をエクスポート]** を選択し、ファイル名を指定します。 これらの設定を復元するには、同じコマンドを使用し、**[選択された環境設定をインポート]** を選択します。 データ サイエンティスト レイアウトを変更し、後でそれに戻る場合、同じコマンドを使用することもできます (**[データ サイエンスの設定]** コマンドを直接使用するのではなく)。
 
 ## <a name="debugging"></a>デバッグ
 
-これらのオプションにより、[変数エクスプローラー](variable-explorer.md)と、ウォッチやローカルのような、デバッガー ツール ウィンドウにおける値の処理方法が制御されます (「[デバッグ](debugging.md)」を参照してください)。
+これらのオプションにより、[変数エクスプローラー](variable-explorer.md)と、ウォッチやローカルのような、デバッガー ウィンドウにおける値の処理方法が制御されます (「[デバッグ](debugging.md)」を参照してください)。
 
 | オプション | 既定値 | 説明 | 
 | --- | --- | --- |
@@ -88,7 +73,7 @@ ms.lasthandoff: 05/12/2017
 
 | オプション | 既定値 | 説明 | 
 | --- | --- | --- |
-| 履歴を常に保存 | `True` | プロジェクトを閉じたとき、RTVS が作業ディレクトリの `.RHistory` ファイルにコマンド履歴を書き込むかどうかを制御します。 プロジェクトを保存せずに終了した場合にも履歴が書き込まれることにご注意ください。 |
+| 履歴を常に保存 | `True` | プロジェクトを閉じたとき、RTVS が作業ディレクトリの `.RHistory` ファイルにコマンド履歴を書き込むかどうかを制御します。 プロジェクトを保存せずに終了した場合にも履歴は保存されます。 |
 | 検索フィルターのリセット | `True` | R 履歴ダイアログのフィルター条件に部分文字列が一致するコマンドのみを表示するように履歴ウィンドウでコマンド履歴をフィルター処理できるかどうかを決定します。 この設定により、新しいコマンドを実行したとき、あるいは新しいプロジェクトに切り替え、別の `.RHistory` ファイルの読み込みをトリガーしたとき、履歴の検索フィルターをリセットするかどうかが決定されます。 既定の設定である `True` を指定した場合、フィルター セットを付けてコマンドを実行したとき、予想外の結果の表示が最小限に抑えられます。今しがた実行したコマンドが履歴に表示されないので、不思議に思うことになります。 |
 | 複数行選択を使用 | `True` | 履歴の複数行ステートメントを 1 回のクリックで選択できるかどうかを指定します。 また、インタラクティブな Windows で、行ではなくステートメントで上下矢印を動かすことができます。 |
 
@@ -115,7 +100,7 @@ ms.lasthandoff: 05/12/2017
 | オプション | 既定値 | 説明 | 
 | --- | --- | --- |
 | コード ページ | `(OS Default)` | R のコード ページ (ロケール) を設定します。既定では、オペレーティング システムの基礎ロケールが使用されます。 | 
-| CRAN ミラー | `(Use .Rprofile)` | パッケージ インストールに既定の CRAN ミラーを設定します。 既定の設定の `Use .Rprofile` の場合、`.RProfile` ファイルの CRAN ミラー設定を順守します。 ドロップダウン リストの CRAN ミラーの一覧から選択すれば、既定の設定をオーバーライドできます。 |
+| CRAN ミラー | `(Use .Rprofile)` | パッケージ インストールに既定の CRAN ミラーを設定します。 既定の設定の `Use .Rprofile` の場合、`.RProfile` ファイルの CRAN ミラー設定を順守します。 |
 | 作業ディレクトリ | ユーザー固有フォルダー | 現在の作業ディレクトリを設定します。通常、プロジェクトを開いたときに設定されます。 |
 
 ## <a name="workspace"></a>ワークスペース
@@ -127,3 +112,4 @@ ms.lasthandoff: 05/12/2017
 | プロジェクトを閉じるときにワークスペースを保存 | `No` | `Yes` に設定すると、プロジェクトを閉じたとき、`.RData` ファイルにグローバル環境が保存されます。 |
 | ワークスペースを切り替える前に確認ダイアログを表示する | `Yes` | `No` に設定すると、ワークスペースを切り替えるとき、ユーザーに確認が求められません。 「[ワークスペースの切り替え](workspaces.md#switching-between-workspaces)」をご覧ください。 |
  
+

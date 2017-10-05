@@ -2,14 +2,14 @@
 layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
-ms.prod: visual-studio-dev15
 ms.technology: vs-ide-sdk
 ms.topic: landing-page
 title: "Visual Studio 機能拡張ドキュメント"
 description: "Visual Studio 機能拡張の詳細についてはこちらをご覧ください。"
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 1f20a1f524efcd6f16b33ce6fd6887a6ed83c422
 ms.openlocfilehash: 814072a253d17466f270afa63629dd61d5868133
+ms.contentlocale: ja-jp
 ms.lasthandoff: 05/02/2017
 
 ---

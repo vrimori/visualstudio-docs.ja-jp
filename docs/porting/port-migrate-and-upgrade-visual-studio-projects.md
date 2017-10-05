@@ -2,7 +2,6 @@
 title: "Visual Studio プロジェクトのポート、移行、アップグレード | Microsoft Docs"
 ms.custom: 
 ms.date: 7/24/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

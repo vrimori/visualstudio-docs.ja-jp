@@ -1,5 +1,5 @@
 ---
-title: Get started debugging multithreaded applications | Microsoft Docs
+title: "マルチ スレッド アプリケーションのデバッグの開始 |Microsoft ドキュメント"
 ms.custom: H1HackMay2017
 ms.date: 06/02/2017
 ms.reviewer: 
@@ -36,46 +36,46 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: 5c5aa0df75451fe829b0d6849d8c9d1672e677b0
+ms.sourcegitcommit: 1d4298d60886d8fe8b402b59b1838a4171532ab1
+ms.openlocfilehash: 3ffb550707280d76756cbd144ed03f4143ce144b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Get started debugging a multithreaded application in Visual Studio
-Visual Studio provides several tools and user interface elements to help you debug multithreaded applications. This tutorial shows how to use conditional breakpoints and filter breakpoints, the **Parallel Stacks** window, and **Parallel Watch** window. This tutorial takes only a few minutes, but completing it will familiarize you with the features for debugging multithreaded applications.
+# <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Visual Studio でのマルチ スレッド アプリケーションのデバッグの開始します。
+Visual Studio には、いくつかのツールとマルチ スレッド アプリケーションをデバッグするためのユーザー インターフェイス要素が用意されています。 このチュートリアルでは、スレッド マーカーを使用する方法、**並列スタック** ウィンドウで、**並列ウォッチ**ウィンドウ、条件付きブレークポイントは、およびフィルターのブレークポイント。 このチュートリアルでは、わずか数分が完了することを理解するマルチ スレッド アプリケーションのデバッグの機能とします。
 
 |         |         |
 |---------|---------|
-| ![Watch a video](../install/media/video-icon.png "WatchVideo") | [Watch a video](#video) on multithreaded debugging that shows similar steps. |
+| ![ビデオを見る](../install/media/video-icon.png "WatchVideo") | [ビデオを見る](#video)で同様の手順を示しています。 マルチ スレッド デバッグします。 |
 
-Other topics provide additional information on using other multithreaded debugging tools:
+その他のトピックでは、その他のマルチ スレッド デバッグ ツールを使用してその他についてを説明します。
 
-- For a similar topic that shows how to use the **Debug Location** toolbar and the **Threads** window, see [Walkthrough: Debug a Multithreaded Application](../debugger/how-to-use-the-threads-window.md).
+- 使用する方法を示すようなトピックの**デバッグの場所**ツールバーと**スレッド**ウィンドウを参照してください[チュートリアル: マルチ スレッド アプリケーションをデバッグ](../debugger/how-to-use-the-threads-window.md)です。
 
-- For a similar topic with a sample that uses <xref:System.Threading.Tasks.Task> (managed code) and the concurrency runtime (C++), see [Walkthrough: Debugging a Parallel Application](../debugger/walkthrough-debugging-a-parallel-application.md). For general debugging tips that apply to most multithreaded application types, read both this topic and the linked topic.
+- 使用するサンプルのようなトピックの<xref:System.Threading.Tasks.Task>(マネージ コード) と、同時実行ランタイム (C++) を参照してください[チュートリアル: 並行アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)です。 最もマルチ スレッド アプリケーションの種類に適用される一般的なデバッグ ヒント、このトピックの内容とリンク先のトピックを参照します。
   
-To begin this tutorial, you need a multithreaded application project. Follow the steps listed here to create that project.  
+このチュートリアルを開始するには、マルチ スレッド アプリケーション プロジェクトが必要です。 次の手順に従って、このようなプロジェクトを作成します。  
   
-#### <a name="to-create-the-multithreaded-app-project"></a>To create the multithreaded app project  
+#### <a name="to-create-the-multithreaded-app-project"></a>マルチ スレッド アプリ プロジェクトを作成するには  
   
-1.  On the **File** menu, choose **New** and then click **Project**.  
+1.  **ファイル** メニューの 選択**新規** をクリックし、**プロジェクト**です。  
   
-     The **New Project** dialog box appears.  
+     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  In the **Project Type**s box, click the language of your choice: **Visual C#**, **Visual C++**, or **Visual Basic**.  
+2.  **プロジェクトの種類**s ボックスで、任意の言語 をクリックします。 **Visual c#**、 **Visual c**、または**Visual Basic**です。  
   
-3.  In the **Templates** box, choose **Console App**.  
+3.  **テンプレート**ボックスで、選択**コンソール アプリ**です。  
   
-4.  In the **Name** box, type the name MyThreadWalkthroughApp.  
+4.  **名前**ボックス名前 を入力します。  
   
-5.  Click **OK**.  
+5.  **[OK]** をクリックします。  
   
-     A new console project appears. When the project has been created, a source file appears. Depending on the language you have chosen, the source file might be called Program.cs, MyThreadWalkthroughApp.cpp, or Module1.vb.  
+     新しいコンソール プロジェクトが表示されます。 プロジェクトが作成されると、ソース ファイルが表示されます。 言語によっては、選択した Program.cs、MyThreadWalkthroughApp.cpp、または Module1.vb、ソース ファイルを呼び出すことがあります。  
   
-6.  Delete the code that appears in the source file and replace it with the example code shown here.
+6.  ソース ファイルに表示されるコードを削除し、次に示す例のコードに置き換えます。
 
-    ```C#
+    ```csharp
     using System;
     using System.Threading;
 
@@ -208,11 +208,11 @@ To begin this tutorial, you need a multithreaded application project. Follow the
     End Class
     ```
   
-7.  On the **File** menu, click **Save All**.  
+7.  **ファイル** メニューのをクリックして**すべて保存**です。  
   
-#### <a name="to-begin-the-tutorial"></a>To begin the tutorial  
+#### <a name="to-begin-the-tutorial"></a>このチュートリアルを開始するには  
   
--   In the source code editor, look for the following code: 
+-   ソース コード エディターで、次のコードを探します。 
   
     ```CSharp  
     Thread.Sleep(3000);  
@@ -228,20 +228,20 @@ To begin this tutorial, you need a multithreaded application project. Follow the
     Console.WriteLine()
     ```
   
-#### <a name="to-start-debugging"></a>To start debugging  
+#### <a name="to-start-debugging"></a>デバッグを開始するには  
   
-1.  Click in the left gutter of the `Thread.Sleep` or `Thread::Sleep` statement to insert a new breakpoint.  
+1.  左側の余白内をクリックして、`Thread.Sleep`または`Thread::Sleep`新しいブレークポイントを挿入するステートメント。  
   
-     In the gutter on the left side of the source code editor, a red circle appears. This indicates that a breakpoint is now set at this location. 
+     ソース コード エディターの左側の余白で、赤い円が表示されます。 これは、ブレークポイントがその場所に設定されていることを示します。 
   
-2.  On the **Debug** menu, click **Start Debugging** (**F5**).  
+2.  **デバッグ** メニューのをクリックして**デバッグの開始** (**f5 キーを押して**)。  
   
-     Visual Studio builds the solution, the app starts to run with the debugger attached, and then the app stops at the breakpoint.  
+     Visual Studio ソリューションをビルドする、アプリは、アタッチされたデバッガーの実行を開始し、アプリがブレークポイントで停止します。  
   
     > [!NOTE]
-    > If you switch focus to the console window, click in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] window to return focus to [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+    > コンソール ウィンドウにフォーカスを移動する場合にクリックして、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ウィンドウにフォーカスを戻す[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
   
-4.  In the source code editor, locate the line that contains the breakpoint:  
+4.  ソース コード エディターで、ブレークポイントを含む行を探します。  
   
     ```CSharp  
     Thread.Sleep(3000);  
@@ -255,153 +255,153 @@ To begin this tutorial, you need a multithreaded application project. Follow the
     Thread.Sleep(3000)
     ```    
   
-#### <a name="ShowThreadsInSource"></a>To discover the thread marker  
+#### <a name="ShowThreadsInSource"></a>スレッド マーカーを検出するには  
 
-1.  In the Debug Toolbar, click the **Show Threads in Source** button ![Show Threads in Source](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker").
+1.  [デバッグ] ツールバーで、をクリックして、**ソース内のスレッドを表示**ボタン![ソース内のスレッドを表示](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker")です。
 
-2. Press **F11** once to advance the debugger one line of code.
+2. キーを押して**F11**進める 1 行ずつデバッガーのコードを 1 回です。
   
-3.  Look at the gutter on the left side of the window. On this line, you will see a *thread marker* icon  ![Thread Marker](../debugger/media/dbg-thread-marker.png "ThreadMarker") that resembles two cloth threads. The thread marker indicates that a thread is stopped at this location.
+3.  ウィンドウ左端の余白に注目します。 この行に表示されます、*スレッド マーカー*アイコン![スレッド マーカー](../debugger/media/dbg-thread-marker.png "ThreadMarker")布の 2 つのスレッドと類似しています。 スレッド マーカーは、スレッドが停止している位置を示します。
 
-    Notice that a thread marker may be partially concealed by a breakpoint. 
+    スレッド マーカーを部分的にブレークポイントによって隠さ可能性がありますに注意してください。 
   
-4.  Hover the pointer over the thread marker. A DataTip appears. The DataTip tells you the name and thread ID number for each stopped thread. In this case, the name is probably `<noname>`. 
+4.  スレッド マーカーの上にポインターを置きます。 DataTip が表示されます。 データヒントは、停止したスレッドごとに名前とスレッド ID 番号を表示します。 名前がここでは、おそらくは`<noname>`します。 
   
-5.  Right-click the thread marker to see the available options on the shortcut menu.
+5.  ショートカット メニューの 利用可能なオプションを表示するスレッド マーカーを右クリックします。
     
-## <a name="ParallelStacks"></a>View the Location of Threads
+## <a name="ParallelStacks"></a>スレッドの場所を表示します。
 
-In the **Parallel Stacks** window, you can switch between a Threads view and (for task-based programming) Tasks view, and you can view call stack information for each thread. In this app, we can use the Threads view.
+**並列スタック** ウィンドウに切り替えることができますのタスク ビュー、およびするが各スレッドの呼び出し履歴情報を表示できますスレッド ビュー間および (タスク ベースのプログラミング)。 このアプリは、スレッド ビューを使用できます。
 
-1. Open the **Parallel Stacks** window by choosing **Debug > Windows > Parallel Stacks**. You should see something similar to this (the exact information will be different depending on the current location of each thread, your hardware, and your programming language).
+1. 開く、**並列スタック**ウィンドウを選択して**デバッグ > Windows > 並列スタック**です。 次のようなものが表示されます (正確な情報は各スレッド、ハードウェア、および使用するプログラミング言語の現在の場所によって異なるされます)。
 
-    ![Parallel Stacks Window](../debugger/media/dbg-multithreaded-parallel-stacks.png "ParallelStacksWindow")
+    ![並列スタック ウィンドウ](../debugger/media/dbg-multithreaded-parallel-stacks.png "ParallelStacksWindow")
 
-    In this example, from left to right we get this information:
+    この例では左から右へおこの情報を取得します。
     
-    - The Main thread (left side) has stopped on `Thread.Start` (the stop point is indicated by the thread marker icon ![Thread Marker](../debugger/media/dbg-thread-marker.png "ThreadMarker")).
-    - Two threads have entered the `ServerClass.InstanceMethod`, one of which is the current thread (yellow arrow), while the other thread has stopped in `Thread.Sleep`.
-    - A new thread (on the right) is also starting (stopped on `ThreadHelper.ThreadStart`).
+    - メイン スレッド (左側) が停止しました`Thread.Start`(停止ポイントがスレッド マーカーのアイコンによって示される![スレッド マーカー](../debugger/media/dbg-thread-marker.png "ThreadMarker"))。
+    - 2 つのスレッドが入力した、 `ServerClass.InstanceMethod`、うちの 1 つは、現在のスレッド (黄色の矢印) で、他のスレッドが停止している間`Thread.Sleep`です。
+    - (右側) で新しいスレッドを開始しても (で停止`ThreadHelper.ThreadStart`)。
 
-2.  Right-click entries in the **Parallel Stacks** window to see the available options on the shortcut menu.
+2.  内のエントリを右クリックし、**並列スタック**ショートカット メニューの 利用可能なオプションを表示するウィンドウです。
 
-    You can take various actions from these right-click menus, but for this tutorial we will show more of these details in the **Parallel Watch** window (next sections).
+    これらを右クリック メニューからさまざまなアクションを実行できますが、このチュートリアルお表示されますでこれらの詳細の**並列ウォッチ**ウィンドウ ([次へ] セクション)。
 
     > [!NOTE]
-    > If you are more interested in seeing a list view with information on each thread, use the **Threads** window instead. See [Walkthrough: Debug a Multithreaded Application](../debugger/how-to-use-the-threads-window.md).
+    > 各スレッドに関する情報を含むビューで使用して、一覧の確認興味のある場合、**スレッド**ウィンドウ代わりにします。 参照してください[チュートリアル: マルチ スレッド アプリケーションをデバッグ](../debugger/how-to-use-the-threads-window.md)です。
 
-## <a name="set-a-watch-on-a-variable"></a>Set a Watch on a Variable
+## <a name="set-a-watch-on-a-variable"></a>変数のウォッチを設定します。
 
-1. Open the **Parallel Watch** window by choosing **Debug > Windows > Parallel Watch > Parallel Watch 1**.
+1. 開く、**並列ウォッチ**ウィンドウを選択して**デバッグ > Windows > 並列ウォッチ > 並列ウォッチ 1**です。
 
-2. Click in the cell where you see the `<Add Watch>` text (or the empty header cell in the 4th column), type `data`, and press Enter.
+2. 表示されているセルをクリックして、`<Add Watch>`テキスト (または、4 番目の列の空のヘッダー セルは) 型`data`、Enter キーを押します。
 
-    The values for the data variable for each thread appear in the window.
+    スレッドごとに、データ変数の値は、ウィンドウに表示します。
 
-3. Click again in the cell where you see the `<Add Watch>` text (or the empty header cell in the 5th column), type `count`, and press Enter.
+3. 表示されているセルにもう一度クリックして、`<Add Watch>`テキスト (または 5 番目の列の空のヘッダー セルは) 型`count`、Enter キーを押します。
 
-    The values for the count variable for each thread appear in the window. (If you don't see this much information yet, try pressing F11 a few more times to advance the execution of the threads in the debugger.)
+    各スレッドの数の変数の値は、ウィンドウに表示します。 (まだ場合は、しないこの多くの情報を参照して、デバッガー内のスレッドの実行を進めるにさらに数回 f11 キーを押してしてください。)
 
-    ![Parallel Watch Window](../debugger/media/dbg-multithreaded-parallel-watch.png "ParallelWatchWindow")
+    ![[並列ウォッチ] ウィンドウ](../debugger/media/dbg-multithreaded-parallel-watch.png "ParallelWatchWindow")
 
-4. Right-click one of the rows in the window to see available options.
+4. 使用可能なオプションを表示するウィンドウ内の行の 1 つを右クリックします。
 
-## <a name="flagging-and-unflagging-threads"></a>Flagging and Unflagging Threads  
-You can flag threads that you want to give special attention. Flagging threads is a good way to keep track of important threads and to ignore threads that you do not care about.  
+## <a name="flagging-and-unflagging-threads"></a>スレッドに対するフラグの設定と設定解除  
+特に注目するスレッドのフラグを設定することができます。 スレッドに対するフラグの設定は、重要なスレッドを追跡しを気にせずスレッドを無視することをお勧めします。  
   
-#### <a name="to-flag-threads"></a>To flag threads  
+#### <a name="to-flag-threads"></a>スレッドにフラグを設定するには  
 
-1. In the **Parallel Watch** window, hold down the SHIFT key and select multiple rows.
+1. **並列ウォッチ**ウィンドウで、SHIFT キーを押しながら、複数の行を選択します。
 
-2. Right-click and choose **Flag**.
+2. 右クリックし、**フラグ**です。
 
-    Now, all the selected threads are flagged. Now, you can filter to show only flagged threads.
+    ここで、選択したすべてのスレッドがフラグが付けられます。 ここで、フラグが設定されたスレッドのみを表示するフィルター処理することができます。
   
-3.  In the **Parallel Watch** window, find the **Show Only Flagged Threads** button ![Show Flagged Threads](../debugger/media/dbg-threads-show-flagged.png "ThreadMarker").  
+3.  **並列ウォッチ**ウィンドウで、検索、**フラグが設定されたスレッドのみを表示する**ボタン![フラグが設定されたスレッドを表示する](../debugger/media/dbg-threads-show-flagged.png "ThreadMarker")です。  
   
-4.  Click the **Show Only Flagged Threads** button.  
+4.  クリックして、**フラグが設定されたスレッドのみを表示する**ボタンをクリックします。  
   
-    Only the flagged thread appears in the list now.
+    今度は、フラグが設定されたスレッドのみがボックスに表示されます。
 
     > [!TIP]
-    > When you have flagged some threads, you can right-click a line of code in the code editor and choose **Run Flagged Threads to Cursor** (make sure that you choose code that all flagged threads will reach). This will pause threads on the selected line of code, making it easier to control the order of execution by [freezing and thawing threads](#bkmk_freeze).
+    > いくつかのスレッドのフラグを設定したときに、コード エディター内のコード行を右クリックして選択**カーソルにフラグが設定されたスレッドの実行**(コードをすべてフラグが設定されたスレッドが到達に選択することを確認してください)。 これは上での実行の順序を制御しやすく、コードの選択された行のスレッドを一時停止[スレッドの凍結と凍結解除](#bkmk_freeze)です。
 
-5.  Click the **Show Only Flagged Threads** button to toggle back to **Show All Threads** mode.
+5.  をクリックして、**フラグが設定されたスレッドのみを表示する**に切り替わりますボタン**すべてのスレッド**モード。
     
-#### <a name="to-unflag-threads"></a>To unflag threads
+#### <a name="to-unflag-threads"></a>スレッドのフラグを解除するには
 
-To unflag threads, you can right-click one or more flagged threads in the **Parallel Watch** window and choose **Unflag**.
+スレッドのフラグ解除、内の 1 つまたは複数のフラグが設定されたスレッドを右クリックして、**並列ウォッチ**ウィンドウを選択して**フラグ解除**です。
 
-## <a name="bkmk_freeze"></a> Freezing and thawing thread execution 
+## <a name="bkmk_freeze"></a>スレッドの実行を凍結と凍結解除 
 
 > [!TIP]
-> You can freeze and thaw (suspend and resume) threads to control the order in which threads perform work. This can help you resolve concurrency issues such as deadlocks and race conditions.
+> 凍結および凍結解除することができます (中断および再開) スレッドのスレッドが作業を実行する順序を制御します。 デッドロックなどの同時実行の問題を解決するには、競合状態が役立ちます。
   
-#### <a name="to-freeze-and-unfreeze-threads"></a>To freeze and unfreeze threads  
+#### <a name="to-freeze-and-unfreeze-threads"></a>スレッドを凍結および凍結解除するには  
   
-1.  In the **Parallel Watch** window, with all the rows selected, right-click and select **Freeze**.
+1.  **並列ウォッチ**ウィンドウで、すべての行の選択すると、右クリックして選択**凍結**です。
 
-    In the second column, a pause icon now appears for each row. The pause icon indicates that the thread is frozen.
+    2 番目の列で一時停止アイコンが行ごとに表示されます。 一時停止アイコンは、スレッドが固定されていることを示します。
 
-2.  Deselect the rows by clicking one row only.
+2.  1 つの行をクリックして、行の選択を解除します。
 
-3.  Right-click a row and select **Thaw**.
+3.  行を右クリックし **凍結解除**です。
 
-    The pause icon goes away on this row, indicating that the thread is no longer frozen.
+    スレッドが不要になった固定されていることを示す、この行で一時停止アイコンはありません。
 
-4.  Switch to the code editor and click **F11**. Only the unfrozen thread runs.
+4.  コード エディターに切り替えるし、をクリックして**F11**です。 固定されていないスレッドのみを実行します。
 
-    The app may also instantiate some new threads. Notice that any new threads are unflagged and are not frozen.
+    アプリは、いくつかの新しいスレッドをインスタンス化も可能性があります。 すべての新しいスレッドはフラグが設定されたでありが固定されていないことに注意してください。
 
-## <a name="bkmk_follow_a_thread"></a> Follow a Single Thread by using Conditional Breakpoints
+## <a name="bkmk_follow_a_thread"></a>次の条件付きブレークポイントを使用して、1 つのスレッド
 
-Sometimes, it can be helpful to follow the execution of a single thread in the debugger. One way you can do that is by freezing threads that you are not interested in, but in some scenarios you may wish to follow a single thread without freezing other threads (to repro a particular bug, for example). To follow a thread without freezing other threads, you must avoid breaking into code except on the thread that you are interested in. You can do this by setting a [conditional breakpoint](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
+場合によっては、デバッガーで 1 つのスレッドの実行を追跡すると役立つができます。 固定するは、スレッドは、1 つの方法を行うことができますが、一部のシナリオで (特定のバグの再現) するには、他のスレッドを凍結することがなく 1 つのスレッドを以下にすることです。 スレッドは、他のスレッドを凍結しないでに従う、興味のあるスレッドで以外のコードに分割を回避する必要があります。 これを行うことができます、[条件付きブレークポイント](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)です。
 
-You can set breakpoints on different conditions, such as the thread name or the thread ID. Another method that may be helpful is to set the condition on data that you know will be unique to each thread. This is a common debugging scenario, in which you are more interested in some particular data value than in any particular thread.
+スレッド名またはスレッド ID などのさまざまな条件でブレークポイントを設定することができます。 スレッドごとに一意になることがわかっているデータに条件を設定する役に立つ別の方法です。 これは一部の特定のデータ値よりも、特定のスレッドで関心のあるが、一般的なデバッグ シナリオです。
 
-#### <a name="to-follow-a-single-thread"></a>To follow a single thread
+#### <a name="to-follow-a-single-thread"></a>1 つのスレッドを実行するには
 
-1. Right-click the breakpoint you previously created and choose **Conditions**.
+1. 以前に作成したブレークポイントを右クリックして選択**条件**です。
 
-2. In the **Breakpoint Settings** window, type `data == 5` for the conditional expression.
+2. **ブレークポイントの設定**ウィンドウで、「`data == 5`条件式にします。
 
-    ![Conditional Breakpoint](../debugger/media/dbg-multithreaded-conditional-breakpoint.png "ConditionalBreakpoint")
+    ![条件付きブレークポイント](../debugger/media/dbg-multithreaded-conditional-breakpoint.png "ConditionalBreakpoint")
 
     > [!TIP]
-    > If you are more interested in a specific thread, then use a thread name or thread ID for the condition. To do this in the **Breakpoint Settings** window, select **Filter** instead of **Conditional expression**, and follow the filter tips. You may want to name your threads in your app code (since threads IDs change when you restart the debugger).
+    > 特定のスレッドで必要な場合は、し、スレッド名またはスレッド ID 条件を使用します。 これを実行する、**ブレークポイントの設定**ウィンドウで、**フィルター**の代わりに**条件式**フィルターのヒントに従います。 (デバッガーを再起動すると、スレッド Id が変更) してから、アプリ コードで、スレッドの名前を付けることができます。
 
-3. Close the **Breakpoint Settings** window.
+3. 閉じる、**ブレークポイントの設定**ウィンドウです。
 
-4. Click the Restart ![Restart App](../debugger/media/dbg-tour-restart.png "RestartApp") button to restart your debugging session.
+4. [再起動] をクリックして![アプリの再起動](../debugger/media/dbg-tour-restart.png "RestartApp")デバッグ セッションを再開するボタンをクリックします。
 
-    You will break into code on the thread for which the data variable is 5. Look for the yellow arrow (current debugger context) in the **Parallel Watch** window to verify that.
+    データ変数の 5 スレッド上のコードに分割されます。 黄色の矢印 (現在のデバッガー コンテキスト) 内で検索、**並列ウォッチ**ことを確認するウィンドウです。
 
-5. Now, you can step over code (F10) and step into code (F11) and follow the execution of the single thread.
+5. ここで、コード (F10) をステップ (F11) コードにステップ インし、および 1 つのスレッドの実行を追跡できます。
 
-    As long as the breakpoint condition is unique to the thread, and the debugger doesn't hit any other breakpoints on other threads (you may need to disable them), you can step over code and step into code without switching to other threads.
+    ブレークポイント条件は、スレッドに一意であり、デバッガーが他のスレッドを (それらを無効にする必要があります) で他のブレークポイントにヒットしません、限りコードをステップ インし、他のスレッドを切り替えずにコードにステップ インできます。
 
     > [!NOTE]
-    > When you advance the debugger, all threads will run. However, the debugger won't break into code on other threads unless one of the other threads hits a breakpoint. 
+    > デバッガーが進むと、すべてのスレッドが実行されます。 ただし、他のスレッドの 1 つに、ブレークポイントにヒットしない限り、デバッガーが他のスレッドでコードを中断しません。 
   
-## <a name="more-about-the-multithreaded-debugging-windows"></a>More about the multithreaded debugging windows 
+## <a name="more-about-the-multithreaded-debugging-windows"></a>マルチ スレッド デバッグ ウィンドウについて 
 
-#### <a name="to-switch-to-another-thread"></a>To switch to another thread 
+#### <a name="to-switch-to-another-thread"></a>別のスレッドに切り替えるには 
 
-- To switch to another thread, see [How to: Switch to Another Thread While Debugging](../debugger/how-to-switch-to-another-thread-while-debugging.md) 
+- 別のスレッドに切り替えるを参照してください[する方法: 別のスレッド間のデバッグに切り替える。](../debugger/how-to-switch-to-another-thread-while-debugging.md) 
 
-## <a name="video"></a> Watch a video on multithreaded debugging
+## <a name="video"></a>マルチ スレッドのデバッグに関するビデオを見る
 
 <div style="padding-top: 56.25%; position: relative; width: 100%;">
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171" frameborder="0" allowfullscreen></iframe>
 </div>
 
-#### <a name="to-learn-more-about-the-parallel-stack-and-parallel-watch-windows"></a>To learn more about the Parallel Stack and Parallel Watch windows  
+#### <a name="to-learn-more-about-the-parallel-stack-and-parallel-watch-windows"></a>並列スタック ウィンドウや 並列ウォッチ ウィンドウの詳細について  
   
-- See [How to: Use the Parallel Stack Window](../debugger/using-the-parallel-stacks-window.md) 
+- 参照してください[する方法: 並列スタック ウィンドウの使用](../debugger/using-the-parallel-stacks-window.md) 
 
-- See [How to: Use the Parallel Watch Window](../debugger/how-to-use-the-parallel-watch-window.md) 
+- 参照してください[する方法: 並列ウォッチ ウィンドウの使用](../debugger/how-to-use-the-parallel-watch-window.md) 
   
-## <a name="see-also"></a>See Also  
- [Debug Multithreaded Applications](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [How to: Switch to Another Thread While Debugging](../debugger/how-to-switch-to-another-thread-while-debugging.md)
+## <a name="see-also"></a>関連項目  
+ [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [方法 : デバッグ中に別のスレッドに切り替える](../debugger/how-to-switch-to-another-thread-while-debugging.md)
 

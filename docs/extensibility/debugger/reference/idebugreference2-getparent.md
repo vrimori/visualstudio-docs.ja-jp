@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::GetParent | Microsoft Docs
+title: "IDebugReference2::GetParent |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,35 +31,35 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
-ms.openlocfilehash: 24d5acca0c507650528aa4e2d2b78c6349025c3b
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 6ad3a164eb6a214d0fa35cface5d157567d52eb7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="idebugreference2getparent"></a>IDebugReference2::GetParent
-Gets the parent reference of a reference. Reserved for future use.  
+参照の親参照を取得します。 将来使用するために予約されています。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT GetParent (   
    IDebugReference2** ppParent  
 );  
 ```  
   
-```cs  
+```csharp  
 int GetParent (   
    out IDebugReference2 ppParent  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>パラメーター  
  `ppParent`  
- [out] Returns an [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object that represents the parent of this property.  
+ [out]返します、 [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)をこのプロパティの親を表すオブジェクト。  
   
-## <a name="return-value"></a>Return Value  
- Always returns `E_NOTIMPL`.  
+## <a name="return-value"></a>戻り値  
+ 常に `E_NOTIMPL` を返します。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)
