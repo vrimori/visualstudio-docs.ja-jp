@@ -1,65 +1,9 @@
 ---
-title: "チュートリアル: グラフィックス情報のキャプチャ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 48f12f6e-57b4-48ec-a145-89fa71a42424
-caps.latest.revision: 19
-caps.handback.revision: 19
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# チュートリアル: グラフィックス情報のキャプチャ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+redirect_url: /visualstudio/debugger/graphics/walkthrough-capturing-graphics-information
+ms.translationtype: HT
+ms.sourcegitcommit: 9b332c2a5fdb1cd14b28a2280a5d0b109f2abc11
+ms.openlocfilehash: 416740cf370729d8eadc0510694c5f647f431a54
+ms.contentlocale: ja-jp
+ms.lasthandoff: 11/08/2017
 
-このチュートリアルでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のグラフィックス診断を使用して、Direct3D アプリケーションから手動でグラフィックス情報をキャプチャする方法を示します。  
-  
- このチュートリアルでは、次の作業について説明します。  
-  
--   グラフィックス診断をアプリケーションにフックする  
-  
--   グラフィックス情報をキャプチャする  
-  
-## グラフィックス情報をキャプチャする  
- グラフィックス診断ツールを使用するには、まず依存するグラフィックス情報をキャプチャする必要があります。 キャプチャを有効にするには、**\[診断の開始\]** を使用してアプリケーションの起動時にグラフィックス診断をフックします。  
-  
-#### プロジェクトまたはソリューションの読み込み後にグラフィックス情報のキャプチャを有効にするには  
-  
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で、グラフィックス情報をキャプチャするアプリケーションのプロジェクト ファイルまたはソリューション ファイルを読み込みます。  
-  
-2.  グラフィックス診断ツール バーで、**\[診断の開始\]** を選択します。  
-  
-#### プロジェクトまたはソリューションを読み込まずにグラフィックス情報のキャプチャを有効にするには  
-  
-1.  メニュー バーで **\[ファイル\]**、**\[開く\]**、**\[プロジェクト\/ソリューション\]** の順に選択します。**\[プロジェクトを開く\]** ダイアログ ボックスが表示されます。  
-  
-2.  プロジェクト ファイルまたはソリューション ファイルの代わりに、グラフィックス情報をキャプチャするアプリケーションの実行可能ファイルを指定し、**\[開く\]** を選択します。  
-  
-3.  メニュー バーで、**\[デバッグ\]**、**\[グラフィックス\]**、**\[診断の開始\]** の順に選択します。  
-  
- アプリを開始して、フレームがレンダリングされると、グラフィックス情報をキャプチャすることができます。  
-  
-#### グラフィックス情報をキャプチャするには  
-  
--   グラフィックス診断ツール バーで、**\[キャプチャ\]** ボタンをクリックします。![グラフィックス キャプチャ ボタン アイコン](~/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
-  
-     または  
-  
-     アプリケーションにフォーカスを置いた状態で、**PrintScreen** キーを押します。  
-  
- フレームに関する情報をキャプチャするたびに、グラフィックス診断は Direct3D イベントおよび関連付けられた状態を記録し、グラフィックス ログにデータを追加します。 グラフィックス ログは、グラフィックス診断のセッションごとに新しく作成されます。 グラフィックス ログについては、「[概要](../debugger/overview-of-visual-studio-graphics-diagnostics.md)」をご覧ください。  
-  
-## 次の手順  
- このチュートリアルでは、手動でグラフィックス情報をキャプチャする方法を示しました。 次の手順では、次のオプションを検討します。  
-  
--   グラフィックス診断ツールを使用してキャプチャされたグラフィックス情報を解析する方法について学習します。 「[概要](../debugger/overview-of-visual-studio-graphics-diagnostics.md)」を参照してください。  
-  
-## 参照  
- [グラフィックス情報のキャプチャ](../debugger/capturing-graphics-information.md)
+---

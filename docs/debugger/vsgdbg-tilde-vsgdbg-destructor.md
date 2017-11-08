@@ -1,31 +1,9 @@
 ---
-title: "VsgDbg::~VsgDbg (デストラクター) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 7a3b97fb-d344-4df7-b195-9347d1edfcf7
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# VsgDbg::~VsgDbg (デストラクター)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+redirect_url: /visualstudio/debugger/graphics/vsgdbg-tilde-vsgdbg-destructor
+ms.translationtype: HT
+ms.sourcegitcommit: 9b332c2a5fdb1cd14b28a2280a5d0b109f2abc11
+ms.openlocfilehash: 289bf3f2e0917ae79e6712729999a74abc3c9647
+ms.contentlocale: ja-jp
+ms.lasthandoff: 11/08/2017
 
-`VsgDbg` クラスのインスタンスを破棄します。  グラフィックス情報がアクティブに記録されている場合、グラフィック ログ ファイルは終了して閉じられ、グラフィックス情報がアクティブにキャプチャされているときに使用されたリソースが解放されます。  
-  
-## 構文  
-  
-```cpp  
-~VsgDbg();  
-```  
-  
-## 参照  
- [VsgDbg::VsgDbg \(コンストラクター\)](../Topic/VsgDbg::VsgDbg%20\(Constructor\).md)
+---
