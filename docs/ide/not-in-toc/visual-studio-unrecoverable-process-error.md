@@ -11,23 +11,20 @@ dev_langs:
 - CSharp
 - C++
 - aspx
-helpviewer_keywords:
-- editor
+helpviewer_keywords: editor
 ms.assetid: 2263956f-3ae0-4bdc-9d3a-4991dfaf4ddb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.technology:
-- vs-ide-general
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b5f39ea962f6b4dcc0e2c6947b2eeabf53d3329a
-ms.openlocfilehash: ba0a0aacc68e2eb9a5cd9b5b672808a71e8c09eb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 03/01/2017
-
+ms.technology: vs-ide-general
+ms.openlocfilehash: 8750d16a485de062e66041e66e28fa591e957efd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="visual-studio-unrecoverable-process-error"></a>Visual Studio の回復不能なプロセス エラー
+# Visual Studio の回復不能なプロセス エラー
 
 Visual Studio 2017 では、アウト プロセスのプロセスをいくつか利用し、ライブ単体テストやコード アナライザーなど、必要なバックグラウンド タスクを実行します。 このようなプロセスはアウト プロセスで実行され、Visual Studio のパフォーマンスを改善します。たとえば、リソースを集中的に使用するジョブを長時間実行するとき、Visual Studio の応答が速くなります。 また、Visual Studio は 32 ビット プロセスのため、プロセスをアウト プロセスで実行すると、メモリを集中的に使用する作業にたくさんのメモリ領域が与えられます。
 
@@ -37,7 +34,7 @@ Visual Studio 2017 では、アウト プロセスのプロセスをいくつか
 
 このメッセージが表示されたら、すぐに作業を保存し、Visual Studio を閉じ、再起動してください。 そうしないと、すぐに Visual Studio がクラッシュする可能性があります。
 
-## <a name="list-of-processes"></a>プロセスの一覧
+## プロセスの一覧
 
 次は、Visual Studio で使用されるアウト プロセス プロセスの一覧です。Visual Studio が適切に動作するために実行する必要があります。
 
@@ -53,4 +50,3 @@ Visual Studio 2017 では、アウト プロセスのプロセスをいくつか
 - WindowsAzureGuestAgent.exe
 - WindowsAzureTelemetryService.exe
 - WaAppAgent.exe
-

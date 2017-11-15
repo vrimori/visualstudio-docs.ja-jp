@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16bdbc7c-4129-411d-bace-f4a3e5375975
-caps.latest.revision: 20
-author: kempb
-ms.author: kempb
+caps.latest.revision: "20"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ca218a20f46bf1233602287b1ad374921f85428a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b7a7fc66913ff7cc4afc952f2f797781a6f90819
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="step-4-add-a-click-event-handler-to-each-label"></a>手順 4: 各ラベルへの Click イベント ハンドラーの追加
 絵合わせゲームは、次のように動作します。  
@@ -47,11 +31,11 @@ ms.lasthandoff: 09/06/2017
   
 ### <a name="to-add-a-click-event-handler-to-each-label"></a>各ラベルに Click イベント ハンドラーを追加するには  
   
-1.  Windows フォーム デザイナーでフォームを開きます。 ソリューション エクスプローラーで Form1.cs または Form1.vb を選択します。 メニュー バーで [**表示**]、[**デザイナー**] の順にクリックします。  
+1.  Windows フォーム デザイナーでフォームを開きます。 ソリューション エクスプローラーで Form1.cs または Form1.vb を選択します。 メニュー バーで **[表示]**、**[デザイナー]** の順にクリックします。  
   
 2.  最初のラベル コントロールをクリックして選択します。 次に、Ctrl キーを押しながら他のラベルを 1 つずつクリックして選択します。 すべてのラベルが選択されていることを確認します。  
   
-3.  [**プロパティ**] ウィンドウのツール バーにある [**イベント**] をクリックして、[**プロパティ**] ウィンドウに [**イベント**] ページを表示します。 **Click** イベントまで下へスクロールし、次の図に示すように、ボックスに「**label_Click**」と入力します。  
+3.  **[プロパティ]** ウィンドウのツール バーにある **[イベント]** をクリックして、**[プロパティ]** ウィンドウに **[イベント]** ページを表示します。 **Click** イベントまで下へスクロールし、次の図に示すように、ボックスに「**label_Click**」と入力します。  
   
      ![Click イベントが表示された [プロパティ] ウィンドウ](../ide/media/express_labelclick.png "Express_labelClick")  
 Click イベントが表示された [プロパティ] ウィンドウ  
@@ -60,7 +44,8 @@ Click イベントが表示された [プロパティ] ウィンドウ
   
 5.  コードの残りの部分を次のように入力します。  
   
-     [!code-csharp[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/CSharp/step-4-add-a-click-event-handler-to-each-label_1.cs)]  [!code-vb[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/VisualBasic/step-4-add-a-click-event-handler-to-each-label_1.vb)]  
+     [!code-csharp[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/CSharp/step-4-add-a-click-event-handler-to-each-label_1.cs)]
+     [!code-vb[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/VisualBasic/step-4-add-a-click-event-handler-to-each-label_1.vb)]  
   
     > [!NOTE]
     >  `label_Click()` コード ブロックを手動で入力せずにコピーして貼り付ける場合は、既存の `label_Click()` コードと置き換えてください。 置き換えないと、コード ブロックが重複することになります。  
@@ -70,7 +55,7 @@ Click イベントが表示された [プロパティ] ウィンドウ
   
      このメソッドは、最初に **clickedLabel** がオブジェクトからラベル コントロールに正常に変換 (キャスト) されたかどうかをチェックします。 正常に変換されなかった場合は、値が `null` (C#) または `Nothing` (Visual Basic) となり、メソッドの残りのコードは実行されません。 次に、メソッドはラベルの **ForeColor** プロパティを使用して、クリックされたラベルのテキストの色をチェックします。 ラベルのテキストの色が黒になっている場合は、アイコンが既にクリックされていて、メソッドは実行されています  (この場合、`return` ステートメントが、メソッドの実行を停止するようにプログラムに指示します)。アイコンがクリックされていない場合、プログラムはそのテキストの色を黒に変更します。  
   
-6.  メニュー バーで、[**ファイル**]、[**すべてを保存**] の順にクリックして、ここまでの進捗を保存したら、[**デバッグ**]、[**デバッグ開始**] の順にクリックしてプログラムを実行します。 青色の背景の空のフォームが表示されます。 フォーム内で任意のセルをクリックすると、いずれかのアイコンが表示されます。 フォーム内のさまざまな場所でクリックし続けます。 アイコンをクリックすると、そのアイコンが表示されます。  
+6.  メニュー バーで、**[ファイル]**、**[すべてを保存]** の順にクリックして、ここまでの進捗を保存したら、**[デバッグ]**、**[デバッグ開始]** の順にクリックしてプログラムを実行します。 青色の背景の空のフォームが表示されます。 フォーム内で任意のセルをクリックすると、いずれかのアイコンが表示されます。 フォーム内のさまざまな場所でクリックし続けます。 アイコンをクリックすると、そのアイコンが表示されます。  
   
 ### <a name="to-continue-or-review"></a>続行または確認するには  
   

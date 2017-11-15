@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,31 +12,17 @@ helpviewer_keywords:
 - unit tests, walkthrough
 - data sources, defining with configuration files
 ms.assetid: 95fa5214-b12e-4e1f-84e5-cc4c2d86b0d7
-caps.latest.revision: 32
+caps.latest.revision: "32"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 212b8bd6e6c6e695bcc7a4486cbcde59e7309446
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 3f7ea8032efa4b35603568afd8b17107c293f2e6
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>チュートリアル : データ ソースを定義するための構成ファイルの使用
-このチュートリアルでは、単体テスト用に app.config ファイルで定義されたデータ ソースを使用する方法について説明します。 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> クラスで使用できるデータ ソースを定義する app.config ファイルを作成する方法について説明します。 このチュートリアルでは、次のタスクについて説明します。  
+このチュートリアルでは、単体テスト用に app.config ファイルで定義されたデータ ソースを使用する方法について説明します。 ここでは、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> クラスで使用できるデータ ソースを定義する app.config ファイルの作成方法を学習します。 このチュートリアルでは、次のタスクについて説明します。  
   
 -   app.Config ファイルを作成する。  
   
@@ -47,7 +32,7 @@ ms.lasthandoff: 04/04/2017
   
 -   データ ソースを定義する。  
   
--   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> クラスを利用してデータ ソースにアクセスする。  
+-   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> クラスを使用してデータ ソースにアクセスする。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを完了するための要件を次に示します。  
@@ -127,7 +112,7 @@ ms.lasthandoff: 04/04/2017
 ## <a name="define-data-sources"></a>データ ソースを定義する  
  データ ソース セクションには、テスト エンジンがデータ ソースからデータを取得するために使用する 4 つの属性が含まれます。  
   
--   `name` は、使用するデータ ソースを指定するために <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> により使用される ID を定義します。  
+-   `name` は、使用するデータ ソースを指定するために <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> で使用される ID を定義します。  
   
 -   `connectionString` は、前の「接続文字列を定義する」セクションで作成した接続文字列を識別します。  
   
@@ -288,4 +273,3 @@ ms.lasthandoff: 04/04/2017
  [既存コードに対する単体テストの作成と実行](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)   
  [アプリケーションのテスト](/devops-test-docs/test/test-apps-early-and-often)   
  [方法: データ ドリブン単体テストを作成する](../test/how-to-create-a-data-driven-unit-test.md)
-

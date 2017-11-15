@@ -4,33 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d08de69-c32e-4f0b-89aa-75347b15fb82
-caps.latest.revision: 11
+caps.latest.revision: "11"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: badc5d3077ddfe8f76f24cbbf7a52869fde8f318
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 665e16720466faff5dd52635066198e36d58d117
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="unit-testing-existing-c-applications-with-test-explorer"></a>テスト エクスプローラーを使用した既存の C++ アプリケーションの単体テスト
 既存のアプリケーションを変更する場合は、単体テストでのカバレッジ率が十分であることを事前に確認しておくことをお勧めします。 これにより、変更がバグの原因になっていないことを確信できます。 アプリケーションに既存の単体テストがない場合は、このトピックに示されている手法を使用して追加できます。 このトピックでは、既存の Visual C++ コードに単体テストを追加する方法を説明します。コードのテスト方法を決定してから、テストを作成、記述、および実行します。  
@@ -182,4 +167,3 @@ ms.lasthandoff: 04/04/2017
 2.  テスト エクスプローラーで **[すべて実行]**をクリックします。  
   
  詳細については、「[クイック スタート: テスト エクスプローラーによるテスト駆動開発](../test/quick-start-test-driven-development-with-test-explorer.md)」を参照してください。
-

@@ -4,35 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7e9e4a2-5d01-4f78-b408-5be3892bd162
-caps.latest.revision: 25
+caps.latest.revision: "25"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a02ce3721b6eb96770c9fbf074179b7afefdb97b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
-ms.openlocfilehash: 4401606f97452de235b8a2d406451e5481518006
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>.runsettings ファイルを使用して単体テストを構成する
 Visual Studio の単体テストは、\*.runsettings ファイルを使用して構成できます。 (拡張子 runsettings を使用していればファイル名は自由です。) たとえば、テストが実行される .NET Framework、テスト結果が配信されるディレクトリ、テストの実行中に収集されるデータを変更できます。  
@@ -182,4 +165,3 @@ Visual Studio の単体テストは、\*.runsettings ファイルを使用して
 ## <a name="see-also"></a>関連項目  
  [コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)   
  [Visual Studio のテストにおけるテスト設定の指定](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)
-

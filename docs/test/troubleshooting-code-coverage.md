@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26de91b8-45e3-4976-a20e-a3bd1942ddcb
-caps.latest.revision: 11
+caps.latest.revision: "11"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: c435bb9e490e9a3c59de78f383632552c0ca4641
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/30/2017
-
+ms.openlocfilehash: c3e5410769ba10a905c8116677ae5d03d0df656e
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="troubleshooting-code-coverage"></a>トラブルシューティング コード カバレッジ
 Visual Studio のコード カバレッジ分析ツールは、ネイティブ アセンブリとマネージ アセンブリのデータを収集します (.dll または .exe ファイル)。 しかし、[コード カバレッジの結果] ウィンドウに "空の結果が生成されました: ...." のようなエラーが表示される場合があります。このエラーが発生する原因はいくつかあります。 このトピックは、これらの問題を解決することを目的にしています。  
@@ -163,4 +147,3 @@ Visual Studio のコード カバレッジ分析ツールは、ネイティブ �
   
 ## <a name="see-also"></a>関連項目  
  [コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
-

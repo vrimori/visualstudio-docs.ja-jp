@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0bfe50da-fd79-4e00-9458-bc667769b415
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 29eb97427c2c5a29ee9a66e8e2a85953fd797efd
 ms.openlocfilehash: 90b22d51a79bbf6252781a49e2ac6b1749d3674f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="reference-javascript-runtime"></a>リファレンス (JavaScript ランタイム)
 JavaScript ランタイムの (JsRT) API は、Windows で動作するデスクトップとサーバー側アプリケーションにスクリプト機能を追加します。  

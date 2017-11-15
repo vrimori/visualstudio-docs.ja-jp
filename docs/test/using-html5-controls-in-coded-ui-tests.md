@@ -4,33 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2000b214-ae92-4334-b549-aa0eb4f45fe1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 834f53c8d75a06de69f1afe682a0a0b1863dfde0
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 3e2e14748e27d965762b3245908382b278e6e132
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>コード化された UI テストでの HTML5 コントロールの使用
 コード化された UI テストには、Internet Explorer 9 と Internet Explorer 10 に含まれる HTML5 コントロールの一部のサポートが含まれます。  
@@ -59,7 +44,7 @@ ms.lasthandoff: 04/04/2017
 ###  <a name="UsingHTML5ControlsCodedUITestsAudio"></a> オーディオ コントロール  
  **オーディオ コントロール:** HTML5 オーディオ コントロールに対するアクションが正しく記録され再生されます。  
   
- ![HTML5 オーディオ コントロール](~/test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")  
+ ![HTML5 オーディオ コントロール](../test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")  
   
 |操作|記録中|生成されたコード|  
 |------------|---------------|--------------------|  
@@ -102,7 +87,7 @@ string Volume
 ###  <a name="UsingHTML5ControlsCodedUITestsVideo"></a> ビデオ コントロール  
  **ビデオ コントロール:** HTML5 ビデオ コントロールに対するアクションが正しく記録され再生されます。  
   
- ![HTML5 ビデオ コントロール](~/test/media/codedui_html5_video.png "CodedUI_HTML5_Video")  
+ ![HTML5 ビデオ コントロール](../test/media/codedui_html5_video.png "CodedUI_HTML5_Video")  
   
 |操作|記録中|生成されたコード|  
 |------------|---------------|--------------------|  
@@ -132,7 +117,7 @@ string VideoWidth
 ###  <a name="UsingHTML5ControlsCodedUITestsSlider"></a> スライダー  
  **スライダー コントロール:** HTML5 スライダー コントロールに対するアクションが正しく記録され再生されます。  
   
- ![HTML5 スライダー コントロール](~/test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")  
+ ![HTML5 スライダー コントロール](../test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")  
   
 |操作|記録中|生成されたコード|  
 |------------|---------------|--------------------|  
@@ -152,7 +137,7 @@ string ValueAsNumber
 ###  <a name="UsingHTML5ControlsCodedUITestsProgressbar"></a> ProgressBar  
  **ProgreesBar コントロール:** ProgressBar は、非対話型コントロールです。 このコントロールの `Value` プロパティと `Max` プロパティでアサーションを追加できます。  
   
- ![HTML5 ProgressBar コントロール](~/test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
+ ![HTML5 ProgressBar コントロール](../test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
   
 ## <a name="see-also"></a>関連項目  
  [HTML 要素](http://go.microsoft.com/fwlink/?LinkID=232441)   
@@ -160,4 +145,3 @@ string ValueAsNumber
  [コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
  [コード化された UI テストをカスタマイズする](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeCUITModify)   
  [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
-

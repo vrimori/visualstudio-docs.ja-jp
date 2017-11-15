@@ -5,14 +5,12 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 4C1B7952-CD45-4132-AD6B-01CF993D83F8
-ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
 ms.openlocfilehash: a00b4a38c0e1aeaf520ba84278109feb1758f2f0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="editor-themes"></a>エディターのテーマ
 エディターのテーマは、Visual Studio for Mac に既定で用意されているいずれかの配色に変更できます。変更するには、**[Visual Studio] > [ユーザー設定] > [テキスト エディター] > [配色テーマ]** メニュー オプションを選択します。
 
@@ -20,7 +18,7 @@ ms.lasthandoff: 08/11/2017
 
 ## <a name="adding-new-themes"></a>新しいテーマの追加
 
-サポートされる書式のいずれかであれば、新しい配色テーマを追加できます。 サポートされる書式は次のとおりです。
+サポートされる書式のいずれかであれば、新しい配色テーマを追加できます。 これらの数値は、次のとおりです。
 
 * Visual Studio (`.vssettings`)
 * Xamarin Studio (`.json`)
@@ -35,4 +33,3 @@ ms.lasthandoff: 08/11/2017
 2. ローカル コンピューターのテーマを参照し、**[開く]** を押します。
 3. プレインストールされているテーマ一覧の一番下にテーマが追加されます。 プレビューするには、テーマを選択します。 バックグラウンドでエディターが更新されます。![配色テーマのプレビュー](media/source-editor-image21.png)
 4. テーマを適用するには、**[OK]** ボタンを押します。 
-

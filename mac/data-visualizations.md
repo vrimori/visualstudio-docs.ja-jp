@@ -7,14 +7,12 @@ ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
-ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
 ms.openlocfilehash: 5f1eda5ccf6f308c626d525bbe7069a84ce3154b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="data-visualizations"></a>データの視覚化
 
 Visual Studio for Mac では、デバッガー用の UI がサポートされているため、デバッグ中に変数、フィールド、プロパティの値を視覚化できます。 これらのデータ ビジュアライザーには拡張されたバージョンのデータが表示され、color 構造体の色など、既知の構造を開発時に検査できます。
@@ -52,7 +50,7 @@ Rectangle/RectangleF (iOS と Mac では CGRect) は、ディメンションと�
 ![色の視覚化](media/data-visualizations-image14.png)
 
 
-## <a name="images"></a>画像
+## <a name="images"></a>イメージ
 
 メディアは、250 px の最大ディメンションまで拡大縮小してレンダリングされ、画像が 250 px を超える場合は 250 px に合わせて縮小表示されます。
 
@@ -66,7 +64,7 @@ Rectangle/RectangleF (iOS と Mac では CGRect) は、ディメンションと�
 ![ベジエ曲線の視覚化](media/data-visualizations-image16.png)
 
 
-## <a name="string"></a>文字列
+## <a name="string"></a>文字列型
 
 100 文字未満の文字列は、プレビューを使用せずに完全に表示されます。 100 文字以上の文字列は、プレビューで完全に表示されます。 文字列は編集可能で、ビジュアライザーには編集ボタンが表示されます。ボタンをクリックすると、以下のようにプレビューまたは文字列値エディターで文字列値を編集できます。
 
@@ -106,4 +104,3 @@ IEnumerable はすべての値を列挙します。各値は、**[値の表示]*
     *   クリック可能なハイパーリンクが表示されます。
 *   **IntPtr**
     *   IntPtr の 16 進表現が表示されます。
-

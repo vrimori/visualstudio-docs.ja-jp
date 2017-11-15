@@ -6,14 +6,12 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: CC1B72D6-12FF-4CCC-A9D4-00F2DC14589F
-ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
 ms.openlocfilehash: 0cce820d76660124838307cc231b379c449b58a7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="creating-and-editing-build-configurations"></a>ビルド構成の作成と編集
 
 ビルド構成は、個々のプロジェクトに対して作成するか、ソリューション全体に対して作成できます。 ビルド構成では、ビルドを正確に制御できます。
@@ -62,4 +60,3 @@ ms.lasthandoff: 08/11/2017
 **[名前の変更]** ボタンを選択します。
 
 ![[名前の変更] ダイアログ](media/create-and-edit-configurations-image5.png) 
-

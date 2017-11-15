@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7c25ba7-5c9c-455b-9242-701cda56f90c
-caps.latest.revision: 41
+caps.latest.revision: "41"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7c6e2ed36593a55548ec182c147f00ae447a500
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 63dd3f809e472bea8f558bff15e17bbfa0421a2c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>チュートリアル: コード化された UI テストの作成、編集、および保守
 このチュートリアルでは、簡単な Windows Presentation Foundation (WPF) アプリケーションを作成して、コード化された UI テストの作成、編集、および保守を行う方法について説明します。 また、さまざまなタイミングの問題やコントロールのリファクタリングによって機能が損なわれたテストを修正するための解決策を示します。  
@@ -277,7 +261,7 @@ ms.lasthandoff: 09/26/2017
   
     ```  
   
-14. [**ビルド**] メニューの [**ソリューションのビルド**]をクリックします。  
+14. **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
 15. **CodedUITestMethod** メソッドを右クリックし、**[テストの実行]** を選択します。  
   
@@ -289,7 +273,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  [プロパティ] ウィンドウの上部にある **[名前]** プロパティの値を button1 から buttonA に変更します。  
   
-3.  [**ビルド**] メニューの [**ソリューションのビルド**]をクリックします。  
+3.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
 4.  テスト エクスプローラーで、**CodedUITestMethod1** を実行します。  
   
@@ -376,7 +360,7 @@ ms.lasthandoff: 09/26/2017
   
     ```  
   
-13. [**ビルド**] メニューの [**ソリューションのビルド**]をクリックします。  
+13. **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
 14. テスト エクスプローラーで、CodedUITestMethod1 を実行します。  
   
@@ -407,4 +391,3 @@ ms.lasthandoff: 09/26/2017
  [WPF デザイナーの使用を開始する](http://msdn.microsoft.com/en-us/18e61d03-b96a-4058-a166-8ec6b3f6116b)   
  [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
  [コード化された UI テスト エディターを使用したコード化された UI テストの編集](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)
-

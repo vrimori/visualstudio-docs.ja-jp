@@ -5,14 +5,12 @@ ms.author: amburns
 ms.date: 07/13/2017
 ms.topic: article
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
+ms.openlocfilehash: b494128a26691f9916a0fe2380a5f403e61d21d4
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: 9e7d7314240688c1acbf064a53ba182b92833a60
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core の概要
 
  Visual Studio for Mac は最新の ASP.NET Core Web 開発プラットフォームをサポートしているため、アプリのサービスを簡単に開発できます。 ASP.NET Core は .NET Core (.NET Framework とランタイムの最新の進化) で実行されます。 ASP.NET Core は、パフォーマンスが高速になるように調整されています。また、インストール サイズが小さくなるように要素が細かく分かれているほか、Windows に加えて Linux と MacOS でも動作するようにイメージが再構成されています。
@@ -63,7 +61,7 @@ public static void Main(string[] args)
     host.Run();
 }
 ```
-ASP.NET Core アプリにより、その main メソッドで Web サーバーが作成されます。[`WebHostBuilder`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/hosting) のインスタンスを介してホストが構成され、起動されます。 このビルダーは、ホストの構成を可能にするメソッドを提供します。 テンプレート アプリで、次の構成が使用されます。
+ASP.NET Core アプリにより、その main メソッドで Web サーバーが作成されます。[`WebHostBuilder`](https://docs.microsoft.com/aspnet/core/fundamentals/hosting) のインスタンスを介してホストが構成され、起動されます。 このビルダーは、ホストの構成を可能にするメソッドを提供します。 テンプレート アプリで、次の構成が使用されます。
 
  * `UseKestrel`: Kestrel サーバーがアプリにより使用されることを指定します
  * `UseContentRoot(Directory.GetCurrentDirectory())`: アプリがこのフォルダーから起動されるとき、Web プロジェクトのルート フォルダーをアプリのコンテンツ ルートとして使用します
@@ -109,7 +107,7 @@ public class Startup
 
 `ConfigureServices` メソッドは、アプリで使用されるサービスを定義します。
 
-`Configure` により、[ミドルウェア](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware)を利用した要求パイプラインの作成が可能になります。 これは、要求と応答を処理するために ASP.NET アプリケーション パイプライン内で使用されるコンポーネントです。 HTTP パイプラインは、シーケンスで呼び出される、一連の要求デリゲートで構成されます。 各デリゲートは要求をそれ自体で処理するか、次のデリゲートに渡すことができます。
+`Configure` により、[ミドルウェア](https://docs.microsoft.com/aspnet/core/fundamentals/middleware)を利用した要求パイプラインの作成が可能になります。 これは、要求と応答を処理するために ASP.NET アプリケーション パイプライン内で使用されるコンポーネントです。 HTTP パイプラインは、シーケンスで呼び出される、一連の要求デリゲートで構成されます。 各デリゲートは要求をそれ自体で処理するか、次のデリゲートに渡すことができます。
 
 `IApplicationBuilder` で `Run`、`Map`、`Use` メソッドを使用することでデリゲートを構成できますが、`Run` メソッドは次のデリゲートを呼び出すことがありません。常にパイプラインの終わりで使用する必要があります。
 
@@ -135,7 +133,7 @@ ASP.NET Core アプリはモデル ビュー コントローラー (MVC) デザ�
 - **ビュー**: アプリのユーザー インターフェイス (多くの場合、モデル データ) を表示します。
 - **コント ローラー**: ブラウザー要求を処理し、ユーザー入力と繰り返しに応答するクラス。
 
-MVC の使用方法については、「[Overview of ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview)」 (ASP.NET Core MVC の概要) ガイドを参照してください。
+MVC の使用方法については、「[Overview of ASP.NET Core MVC](https://docs.microsoft.com/aspnet/core/mvc/overview)」 (ASP.NET Core MVC の概要) ガイドを参照してください。
 
 コントローラーは次のように追加します。
 
@@ -230,11 +228,10 @@ Mac OS 10.11 (El Capitan) 以降に .NET Core を手動インストールする�
 
 4 つすべての手順を完了し、.NET Core が正しくインストールされていることを確認します。
 
-## <a name="summary"></a>まとめ
+## <a name="summary"></a>概要
 
 このガイドでは、ASP.NET Core の概要を説明しました。 ASP.NET Core とは何か、それを利用する状況、Visual Studio for Mac で使用する場合について説明しました。
 ここから先の手順については、次のガイドを参照してください。
 - [ASP.NET Core](https://docs.microsoft.com/aspnet/core/#build-web-ui-and-web-apis-using-aspnet-core-mvc) ドキュメント。
 - [Creating Backend Services for Native Mobile Applications](https://docs.microsoft.com/aspnet/core/mobile/native-mobile-backend) (ネイティブ モバイル アプリケーションのバックエンド サービスを作成する)。ここでは、Xamarin.Forms アプリのために ASP.NET Core を利用して REST サービスをビルドする方法について解説しています。
 - [ASP.NET Core 実践ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)。
-

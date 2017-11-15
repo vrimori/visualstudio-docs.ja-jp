@@ -7,31 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d22b5186-9e03-4e85-afc9-7cbe28522a6d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: d428f340cd1c0c990ec196c3c9d84e6f22093805
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 157b900964afc33690b696a08f047c5dd1c2d70d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="learn-app-building-basics-with-xamarinforms-in-visual-studio"></a>Visual Studio での Xamarin Froms を使用したアプリ作成の基本事項
 [Setup and install](../cross-platform/setup-and-install.md) と [Verify your Xamarin environment](../cross-platform/verify-your-xamarin-environment.md)の手順を完了すると、このチュートリアルでは、Xamarin.Forms を使用して基本アプリ (下図) を構築する方法を示します。 Xamarin.Forms を使用して、すべての UI コードをポータブル クラス ライブラリ (PCL) に一度記述します。 そうすると、Xamarin では、ネイティブ UI コントロールが iOS、Android、Windows プラットフォームに対して自動的にレンダリングされます。 PCL オプションはすべてのターゲット プラットフォームでサポートされる特定の .NET API のみの使用を最も適切にサポートし、Xamarin.Forms ではプラットフォーム間で UI コードを共有できるため、この方法をお勧めします。  

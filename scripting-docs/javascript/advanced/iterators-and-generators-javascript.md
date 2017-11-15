@@ -5,8 +5,7 @@ ms.date: 01/18/2017
 ms.prod: windows-client-threshold
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-javascript
+ms.technology: devlang-javascript
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,16 +13,15 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 68ef5b2f-0349-492b-b557-73ff2a2f90cf
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
 ms.openlocfilehash: 85c27969609a38b87b15c727e9c8aef89ee77032
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="iterators-and-generators-javascript"></a>反復子とジェネレーター (JavaScript)
 反復子は、リストのようなコンテナー オブジェクトを走査するのに使用されるオブジェクトです。 JavaScript において、反復子オブジェクトは個別の組み込みオブジェクトではなく、`next` メソッドを実装することでコンテナー オブジェクト内の次の項目にアクセスするオブジェクトです。  
@@ -166,4 +164,3 @@ console.log(si3.next(100).value);
 ```  
   
  他の高度なジェネレーターで、ジェネレーターの `throw` メソッドを呼び出すことができます。 スローされたエラーは、ジェネレーターが一時停止したポイント (次の `yield` ステートメントの前) でスローされているように見えます。
-

@@ -7,31 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cfcad00-352c-4161-814c-f5ae32d8ada8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: d353d8a0a41ad487191b79aa68f26585cf9902b4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: dba101890bd2f27c85e8e6053944d8781fa03ed4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="setup-and-install"></a>セットアップとインストール
 Xamarin を使用して一般的な C#/.NET コード ベースからネイティブの iOS、Android、および Windows のアプリを作成するには、次の条件を満たす必要があります。  
@@ -74,13 +58,13 @@ Xamarin を使用して一般的な C#/.NET コード ベースからネイテ�
   
 2.  インストーラー内で **[起動]** の "_横にある_" **[その他の選択項目]** (横線 3 本のアイコン) ボタンをクリックし、**[変更]** を選択します。  
   
-     ![Visual Studio のインストールで [変更] オプションを選択する](~/cross-platform/media/cross-plat-xamarin-setup-1a.png "クロスプラットフォームの Xamarin セットアップ 1")  
+     ![Visual Studio のインストールで [変更] オプションを選択する](../cross-platform/media/cross-plat-xamarin-setup-1a.png "クロスプラットフォームの Xamarin セットアップ 1")  
   
 3.  次のチェック ボックスを選択します。  
   
     1.  **[Mobile & Gaming (モバイルとゲーム)] > [.NET によるモバイル開発]**。 これにより、[共通のツールとソフトウェア開発キット] の下のさまざまな Android ツールも自動的に選択されます。 このオプションでは、既存の Xamarin インストールも更新されるはずです。  
   
-         ![[Gaming and Mobile Development (ゲームとモバイル開発)] の [モバイル開発] オプションを選択する](~/cross-platform/media/cross-plat-xamarin-setup-2a.png "クロスプラットフォーム Xamarin セットアップ 2")  
+         ![[Gaming and Mobile Development (ゲームとモバイル開発)] の [モバイル開発] オプションを選択する](../cross-platform/media/cross-plat-xamarin-setup-2a.png "クロスプラットフォーム Xamarin セットアップ 2")  
   
     2. (省略可能) **[Windows] > [ユニバーサル Windows プラットフォーム開発]**。 これには、ダウンロードに時間がかかるエミュレーター イメージをインストールするためのオプションが含まれています。いつでも Visual Studio インストーラーに戻って後で追加できます。 
   

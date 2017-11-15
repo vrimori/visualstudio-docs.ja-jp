@@ -22,7 +22,7 @@
 # [予期しない量指定子です。(JavaScript)](unexpected-quantifier-javascript.md)
 # ['this' に割り当てることはできません。](cannot-assign-to-this.md)
 # [関数には、有効なプロトタイプ オブジェクトが存在しません。](function-does-not-have-a-valid-prototype-object.md)
-# [セッター関数には&1; つの引数が必要です](setter-functions-must-have-one-argument.md)
+# [セッター関数には 1 つの引数が必要です](setter-functions-must-have-one-argument.md)
 # [無効な文字です。(JavaScript)](invalid-character-javascript.md)
 # [例外がスローされ、キャッチされませんでした。](exception-thrown-and-not-caught.md)
 # [数字が必要です。](number-expected.md)

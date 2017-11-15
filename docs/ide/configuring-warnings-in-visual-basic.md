@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,31 +12,17 @@ helpviewer_keywords:
 - run-time errors, warnings
 - warnings, configuring
 ms.assetid: 99cf4781-bd4d-47b4-91b9-217933509f82
-caps.latest.revision: 35
-author: kempb
-ms.author: kempb
+caps.latest.revision: "35"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 89ce216f1273678adf9b97ff789c7d48f3130d77
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 4df81a0d5f6faee7a272abd13ca6e046681b045d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="configuring-warnings-in-visual-basic"></a>Configuring Warnings in Visual Basic
+# <a name="configuring-warnings-in-visual-basic"></a>Visual Basic での警告の構成
 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のコンパイラには、実行時エラーの原因になる可能性があるコードに関する警告のセットが用意されています。 その情報を使うと、よりきれいで、速く、優れたコードを、バグをほとんど含まずに記述することができます。 たとえば、代入されていないオブジェクト変数のメンバーを呼び出そうとしたり、戻り値を設定しないで関数から戻ろうとしたり、例外をキャッチするロジックでエラーのある `Try` ブロックを実行しようとしたりすると、コンパイラはエラーを生成します。  
   
  場合によって、コンパイラはユーザーの代わりに追加ロジックを提供し、ユーザーがエラーの可能性を考えることなく現在の作業に集中できるようにします。 以前のバージョンの [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] では、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] コンパイラが提供する追加ロジックを制限するために `Option Strict` が使われていました。 警告を構成すると、個々の警告のレベルでさらに詳細にこのロジックを制限することができます。  

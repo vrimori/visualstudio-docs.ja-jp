@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 05/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- configure test agents, test lab
+helpviewer_keywords: configure test agents, test lab
 ms.assetid: EBAA2E04-A97A-4047-B739-8DBA7F2D5074
-caps.latest.revision: 56
+caps.latest.revision: "56"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 45d36934cf1c46902cac566203cddf4a118b7fe4
-ms.openlocfilehash: b7a186778434bc07c169c9f80879c8bc3607bcde
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/02/2017
-
+ms.openlocfilehash: fdcca04c9dd06132496912f4df30e3d86d24d42a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="install-and-configure-test-agents"></a>テスト エージェントをインストールして構成する
 
@@ -107,4 +90,3 @@ A: すべての新しい自動テストシナリオでは Agents for Visual Stud
 ## <a name="see-also"></a>関連項目
 
 * [コンピューターの設定およびテストの設定を使用した診断情報の収集](https://msdn.microsoft.com/library/dd286743%28v=vs.140%29.aspx)
-

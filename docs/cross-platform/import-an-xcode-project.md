@@ -7,19 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa4b8161-d98f-4a1a-9db3-520133bfc82f
-caps.latest.revision: 7
-author: BrianPeek
-ms.author: brpeek
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 828aa9efccd636e517535947606a33322a3bbc4b
-
+ms.openlocfilehash: 07dc7d8eefb7ab1183d5e5532f13a5cfdac8de80
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="import-an-xcode-project"></a>XCode プロジェクトのインポート
 Microsoft Visual C++ for Cross-Platform Mobile Development には、XCode プロジェクトを Visual Studio に移動して、クロスプラットフォーム ライブラリを作成し、他のプロジェクトとコードを共有するためのサポートが含まれています。 [XCode からインポート] ウィザードを使うと、プロジェクトをインポートするプロセスと、C++ コードを分割して XCode ターゲットに取り込み、スタティック ライブラリまたは共有コード プロジェクトとして利用するプロセスが簡略化されます。 iOS 固有のコードを Visual Studio で管理しながらも、XCode を使ってストーリーボードとビルドを行うことができます。 Visual Studio と XCode の間でコードを双方向に簡単に移動する方法については、「Move Changes Between XCode and Visual Studio (XCode と Visual Studio 間の変更の移動)」を参照してください。  
@@ -31,11 +27,11 @@ Microsoft Visual C++ for Cross-Platform Mobile Development には、XCode プロ
   
 1.  **[ファイル]** メニューで、**[新規作成]**、**[インポート]**、**[XCode からインポートする]** の順に選択します。 これにより、**[XCode からインポート]** ウィザードが開始されてダイアログが表示されます。  
   
-     ![インポートする XCode ターゲット プロジェクトを選択](~/cross-platform/media/cppmdd_u2_importxcode_choose.PNG "CPPMDD_U2_ImportXCode_Choose")  
+     ![インポートする XCode ターゲット プロジェクトを選択](../cross-platform/media/cppmdd_u2_importxcode_choose.PNG "CPPMDD_U2_ImportXCode_Choose")  
   
 2.  **[プロジェクトを選択]** ウィンドウで、[参照] ボタンを選択して XCode の .pbxproj ファイルを選びます。 **[XCode プロジェクト ファイルの選択]** ダイアログでプロジェクト ファイルに移動し、**[開く]** を選択します。  
   
-     ![[XCode プロジェクト ファイルの選択] ダイアログでプロジェクト ファイルを選択](~/cross-platform/media/cppmdd_u2_importxcode_browse.PNG "CPPMDD_U2_ImportXCode_Browse")  
+     ![[XCode プロジェクト ファイルの選択] ダイアログでプロジェクト ファイルを選択](../cross-platform/media/cppmdd_u2_importxcode_browse.PNG "CPPMDD_U2_ImportXCode_Browse")  
   
      [XCode からインポート] ウィザードで、**[次へ]** を選択します。  
   
@@ -51,7 +47,7 @@ Microsoft Visual C++ for Cross-Platform Mobile Development には、XCode プロ
   
      ![[XCode からインポート] の [ライブラリ ターゲット] ウィンドウ](../cross-platform/media/cppmdd_u2_importxcode_library.jpg "CPPMDD_U2_ImportXCode_Library")  
   
-     共有コード プロジェクトは、Visual Studio のプロジェクトとの間でソース コード ファイルのセットを共有する&1; つの方法です。 コードは、それ専用のプロジェクトとしてではなく、コードが含まれているプロジェクトの一部としてビルドされます。 共有コードを含むプロジェクトはさまざまなアーキテクチャと構成を対象にしている場合があるため、これは、さまざまな種類のプラットフォーム向けにビルドするコードが含まれた&1; つのプロジェクトを提供するための最適な方法です。  
+     共有コード プロジェクトは、Visual Studio のプロジェクトとの間でソース コード ファイルのセットを共有する 1 つの方法です。 コードは、それ専用のプロジェクトとしてではなく、コードが含まれているプロジェクトの一部としてビルドされます。 共有コードを含むプロジェクトはさまざまなアーキテクチャと構成を対象にしている場合があるため、これは、さまざまな種類のプラットフォーム向けにビルドするコードが含まれた 1 つのプロジェクトを提供するための最適な方法です。  
   
      各プロジェクト内のファイルを適切に設定できたら、**[次へ]** を選択して、先へ進みます。  
   
@@ -80,8 +76,3 @@ Microsoft Visual C++ for Cross-Platform Mobile Development には、XCode プロ
      ウィザードの設定を使用して XCode プロジェクトをインポートするには、**[インポート]** を選択します。  
   
  [XCode からインポート] ウィザードによって、選択した XCode プロジェクト ターゲットに対応するプロジェクトが Visual Studio で作成されます。 他の C++ プロジェクトと共有できるコードは、別個の共有コード プロジェクトとスタティック ライブラリ プロジェクトに分割されます。 残りのコードは、iOS ライブラリ プロジェクトとアプリケーション プロジェクトに配置され、Visual Studio からリモートでビルドできます。 Visual Studio と XCode の間でコードを移動する方法の詳細については、「[XCode と Visual Studio 間の変更の同期](../cross-platform/sync-changes-between-xcode-and-visual-studio.md)」をご覧ください。
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35e766ad-269f-41e4-ba23-74a556c315f3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b4ed14f43316dc02ef8d039c590cd2f93b3060e5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 469a8298122abdc96c69f13ed96a893b02575fc9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>System requirements for the Visual Studio Emulator for Android
 Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして動作します。Hyper-V は Windows 8 以降のバージョンの仮想化テクノロジです。 エミュレーターを実行するには、このトピックで説明する Hyper-V の要件をコンピューターが満たしている必要があります。  
@@ -101,7 +84,7 @@ Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして�
   
  RAM と Windows の要件を確認するには、コントロール パネルで [システムとセキュリティ] を選択し、[システム] を選択します。  
   
- ![システム要件を確認する](~/cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")  
+ ![システム要件を確認する](../cross-platform/media/android_emu_system_requirements.png "Android_Emu_System_Requirements")  
   
 ##  <a name="Network"></a> ネットワーク要件  
  ネットワークは次の条件を満たしている必要があります。  
@@ -147,7 +130,7 @@ Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして�
 > [!IMPORTANT]
 >  グループに参加した場合は、変更を有効にするためにログオフするか、再起動します。  
   
- ![ Hyper&#45;V Administrators セキュリティ グループに参加する](~/cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")  
+ ![ Hyper&#45;V Administrators セキュリティ グループに参加する](../cross-platform/media/android_emu_hyperv_admin.png "Android_Emu_HyperV_Admin")  
   
  手動で自分をグループに追加するには、[ローカル ユーザーとグループ] スナップインを開きます。 詳細については、「 [ユーザー アカウントをグループに追加する](http://windows.microsoft.com/en-us/windows/add-user-account-to-group#1TC=windows-7)」を参照してください。 (この Windows 7 トピックは、Windows 8 にも適用できます)。  
   

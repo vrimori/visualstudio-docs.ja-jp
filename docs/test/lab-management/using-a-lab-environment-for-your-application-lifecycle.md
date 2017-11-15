@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 05/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- lab environment, test lab
+helpviewer_keywords: lab environment, test lab
 ms.assetid: b435eb39-dc7c-46fa-a91b-6e6dd614f01c
-caps.latest.revision: 56
+caps.latest.revision: "56"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 45d36934cf1c46902cac566203cddf4a118b7fe4
-ms.openlocfilehash: 29b1343159cb91d3d5e4b9769c4103cc3565f986
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/02/2017
-
+ms.openlocfilehash: 2eb863996b430c8473adb751851777c532fcfc89
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>DevOps でラボ環境を使用する
 
@@ -169,4 +152,3 @@ Visual Studio Lab Management で作成できるラボ環境には、**標準環�
 * [Visual Studio Lab Management Guide (Visual Studio ラボ管理ガイド)](http://go.microsoft.com/fwlink/?LinkID=230951)  
 * [テスト用のラボ環境の管理](http://go.microsoft.com/fwlink/?LinkID=252614)  
 * [Visual Studio devops + Team Foundation Server のブログ](http://go.microsoft.com/fwlink/?LinkID=254496)  
-

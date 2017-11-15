@@ -1,45 +1,12 @@
 ---
-title: "Visual Studio 入門 | Microsoft Docs"
-description: "Visual Studio の基本的な使い方について説明します。"
-ms.custom: 
-ms.date: 03/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Visual Studio, getting started
-ms.assetid: 38e90339-1da5-410c-8ba4-437fc556cba7
-caps.latest.revision: 65
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 078619c93e18fd25dfbc728d75835f5af58988fe
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+redirect_url: ../ide/visual-studio-ide
+ms.openlocfilehash: a615a3a6da289f265e350d529349f1fb6ba6865f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="get-started-with-visual-studio"></a>Visual Studio 入門
-
 Visual Studio は高性能のアプリ開発ツールです。 [Visual Studio](https://www.visualstudio.com/vs/) をまだインストールしていないのであれば、今すぐダウンロードし、インストールしてください。 Visual Studio をダウンロードし、設定する方法については、「[Getting Started with Visual Studio – Setting up your IDE](https://www.youtube.com/watch?v=xLCedknQkN0&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=1)」 (Visual Studio 入門 – IDE のセットアップ) という動画をご覧ください。
 
 ## <a name="visual-studio-tour"></a>Visual Studio ツアー
@@ -55,7 +22,6 @@ Visual Studio には、一連のツール ウィンドウ、メニュー、ツ�
 ソリューションの種類には、*フォーム*と呼ばれるウィンドウ (Windows Presentation Foundation (WPF) フォーム、Windows フォーム、Extensible Application Markup Language (XAML) フォームなど) などがあります。 その場合、この領域にはビジュアル デザイナーも表示されます。このデザイナーでは、アプリの実行時にボタンやリスト ボックスなどのコントロールを、ユーザーが操作するフォームにドロップ アンド ドロップできます。
 
 ### <a name="solution-explorer"></a>ソリューション エクスプローラー
-
 **ソリューション エクスプローラー**というツール ウィンドウには、コード ファイルが一覧表示されます。 ソリューション エクスプローラーを利用すれば、ファイルをソリューションやプロジェクトにまとめ、コードを整理できます。 太字のプロジェクトは*スタートアップ プロジェクト*と呼ばれています。 これは、ソリューションの開始時に実行される最初のコードです。 スタートアップ プロジェクトは変更できます。 詳細については、「[Getting Started with Visual Studio - Building blocks of the IDE](https://www.youtube.com/watch?v=JHc3_gsCmZg&index=2&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK)」 (Visual Studio 入門 - IDE の構成要素) という動画をご覧ください。
 
 ![ソリューション エクスプローラーの折りたたまれているノード](../ide/media/VSIDE_SolutionExplorer2_callouts.png)
@@ -100,7 +66,6 @@ Visual Studio には、一連のツール ウィンドウ、メニュー、ツ�
 - **動画** - Visual Studio の他の機能や側面については、YouTube の [Microsoft Visual Studio チャネル](https://www.youtube.com/user/VisualStudio/videos)の動画、[Channel 9](https://channel9.msdn.com/Tags/visual+studio) の Visual Studio 動画、または [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!jobf=Developer) をご覧ください。
 
 ## <a name="access-cloud-based-resources"></a>クラウドベース リソースにアクセスする
-
 アプリやゲームでクラウドベースのリソースを使用する場合、[Azure サービス](https://azure.microsoft.com/en-us/services/)を追加します。 新しい Visual Studio インストーラーを利用して **Azure 開発**ワークロードをインストールすると、Azure SDK for .NET がインストールされます。 インストールされるパッケージは、SDK の 2.9.5 バージョンと同じ機能レベルです。 このバージョンと将来のすべてのバージョンの Visual Studio では、Azure SDK for .NET は Visual Studio インストーラーからのみ取得できます。
 
 Azure 開発ワークロードをインストールすると、**Cloud Explorer** という名前の新しいツール ウィンドウを Visual Studio で利用できるようになります。 Cloud Explorer を利用すると、Visual Studio 内から Azure のアセットやリソースを参照し、管理できます。 特定の操作で Azure Portal が必要な場合、Cloud Explorer でリンクが提供されます。そのリンクから Azure Portal に移動できます。
@@ -118,4 +83,3 @@ Visual Studio をさらに便利に活用するためのショートカット、
 - [C++ デバッグのヒントとテクニック](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/C-Plus-Plus-Debugging-Tips-and-Tricks)
 - [Visual Studio の特に役立つ (ただし、十分に活用されていない) ヒント [Scott Hanselman のブログ]](https://www.hanselman.com/blog/VisualStudiosMostUsefulAndUnderusedTips.aspx)
 - [Visual Studio 入門 - Visual Studio 拡張機能のインストール](https://www.youtube.com/watch?v=MWLLQaknRZY&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=7)
-

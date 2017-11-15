@@ -7,19 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c71a4d7c-120e-4559-a114-3a99c4b860a9
-caps.latest.revision: 7
-author: BrianPeek
-ms.author: brpeek
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0bb84ea6c47764aa0429fdebf160dae0fd47e570
-
+ms.openlocfilehash: c2a665a397e89edf80f62d0150a98c1941afcd1d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="sync-changes-between-xcode-and-visual-studio"></a>XCode と Visual Studio 間の変更の同期
 Microsoft Visual C++ for Mobile Development コンポーネントには、PC と Mac 間で作業を同期するリモート機能が含まれます。 Visual Studio と Mac コンピューターがペアになっている場合、Visual Studio の iOS Application プロジェクトで新しいオプションを使用して、プロジェクトを XCode で開いたり、XCode と Visual Studio 間でコードを移動したり、一時 XCode プロジェクト ディレクトリを消去したりできます。  
@@ -36,7 +32,7 @@ Microsoft Visual C++ for Mobile Development コンポーネントには、PC と
 ### <a name="open-in-xcode"></a>XCode で開く  
  Visual Studio から XCode でプロジェクトを開くには、**[リモート コンピューター]** サブメニューで、**[XCode で開く]** を選択して、ペアになっているリモート コンピューターで、選択したプロジェクトを開きます。 vcremote サーバーを使用すると、XCode をお使いの Mac で開いて、プロジェクトのコピーを含む Mac で作成した一時ディレクトリに移動できます。 Visual Studio では、プロジェクトで使用した一時ディレクトリを表示するダイアログが表示されます。 リモート コンピューターで実行されるアクションも Visual Studio の**出力**ウィンドウに表示されます。 これを表示するため、**出力**ウィンドウの上部にある**[出力元の表示]** ドロップダウンで **[Visual C++ リモート コンピューター]** を選択する必要がある場合があります。  
   
- ![出力ウィンドウには、リモート コンピューターのアクションが表示されます。](~/cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
+ ![出力ウィンドウには、リモート コンピューターのアクションが表示されます。](../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
   
  Mac では、コードとリソース、ストーリーボード、アクションの編集に XCode のすべてのツールを使用できます。 Visual Studio では、iOS Application プロジェクトに "XCode で開かれました" という注釈が付けられ、リモート コンピューターで変更が加えられた可能性があることを示します。 編集が完了したら、[リモートからのプル] コマンドか [リモートからの増分プル] コマンドを使用して、Visual Studio プロジェクトに変更を適用します。  
   
@@ -54,8 +50,3 @@ Microsoft Visual C++ for Mobile Development コンポーネントには、PC と
  リモートの消去コマンドを使用すると、リモート コンピューター上の一時プロジェクト ディレクトリ内にあるファイルを消去できます。 ソース ファイルやビルド製品など、ディレクトリのコンテンツが Mac 上で削除されます。 リモートの消去コマンドを使用する前に、[リモートからのプル] か [リモートからの増分プル] を使用して、Visual Studio に適用する変更が同期されていることをご確認ください。  
   
  一時プロジェクト ディレクトリをリモート コンピューター上で消去するには、Visual Studio の**ソリューション エクスプローラー** ウィンドウで、iOS Application プロジェクトを右クリックしてコンテキスト メニューを開きます。 プロジェクト ディレクトリ ファイルを Mac から削除するには、**[リモート コンピューター]**、**[リモートの消去]** の順に選択します。
-
-
-<!--HONumber=Feb17_HO4-->
-
-

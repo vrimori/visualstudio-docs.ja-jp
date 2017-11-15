@@ -4,39 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vb.ProjectPropertiesMyExtensions
+f1_keywords: vb.ProjectPropertiesMyExtensions
 helpviewer_keywords:
 - Project Designer, My Extensions page
 - My Extensions page in Project Designer
 ms.assetid: 2f08494e-84c1-444b-872b-900fbbcf0364
-caps.latest.revision: 6
-author: kempb
-ms.author: kempb
+caps.latest.revision: "6"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f13e1fcd7a443d7179f474f9cfb6ef9b7febc639
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: b95a691f3246fd3745ce90bffa7967bd5ad52d31
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="my-extensions-page-project-designer-visual-basic"></a>[マイ拡張] ページ (プロジェクト デザイナー) (Visual Basic)
 **プロジェクト デザイナー**の **[マイ拡張]** ページを使用して、プロジェクトの `My` 名前空間拡張を管理します。 `My` 名前空間拡張を使用すれば、`My` 名前空間をカスタマイズして独自のカスタム メンバーに追加することができます。 カスタムの `My` 名前空間拡張の作成については、「[Visual Basic における My 名前空間の拡張](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace)」を参照してください。  
@@ -53,7 +37,7 @@ ms.lasthandoff: 02/22/2017
  インストールされた `My` 名前空間拡張をプロジェクトに追加する場合は、このボタンをクリックします。 使用可能なすべての `My` 名前空間拡張のリストが表示されます。 プロジェクトに追加する `My` 名前空間拡張を選択し、**[OK]** をクリックして追加します。  
   
  **拡張機能の削除**  
- **[マイ名前空間拡張]** リストで&1; つ以上の参照を選択し、このボタンをクリックして `My` 名前空間拡張をプロジェクトから削除します。  
+ **[マイ名前空間拡張]** リストで 1 つ以上の参照を選択し、このボタンをクリックして `My` 名前空間拡張をプロジェクトから削除します。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Basic における My 名前空間の拡張](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace)   

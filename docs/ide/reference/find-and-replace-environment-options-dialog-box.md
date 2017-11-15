@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,32 +14,17 @@ helpviewer_keywords:
 - Find and Replace, Options dialog box
 - Find and Replace, customizing
 ms.assetid: f804d6d5-6309-46e4-8294-b83e880b5ec9
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 64cee61bb8818dc8910d6fdb32293d03a9770ad3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 819ca48da96e2ff48479edfe94ee7378852be5f1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="find-and-replace-environment-options-dialog-box"></a>[検索と置換]\([オプション] ダイアログ ボックス - [環境])
+# <a name="find-and-replace-environment-options-dialog-box"></a>[検索と置換] ([オプション] ダイアログ ボックス - [環境])
 **[オプション]** ダイアログ ボックスのこのページを使用して、メッセージ ボックスと、検索と置換操作の他の側面を制御できます。 **[ツール]** からこのダイアログ ボックスにアクセスするには、**[オプション]** をクリックし、**[環境]** を展開し、**[検索と置換]** をクリックします。 このページが一覧に表示されない場合は、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** を選択します。  
   
 > [!NOTE]

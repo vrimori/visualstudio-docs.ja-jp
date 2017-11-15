@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a859595f-6517-43f2-9d61-c706cb55a388
-caps.latest.revision: 23
+caps.latest.revision: "23"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 28ce78165492b6f74cdd85ba79eae26e4d68d32c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 6c8e2cac9d6f2622bacae0b27cecc8f074ea3a15
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>コード化された UI テストでのさまざまな Web ブラウザーの使用
 コード化された UI テストでは、Internet Explorer を使用してテストを記録することによって、Web アプリケーションのテストを自動化できます。 その後、テストをカスタマイズし、Internet Explorer や Web アプリケーションに対応している他の種類のブラウザーを使用して再生できます。  
@@ -117,17 +101,17 @@ ms.lasthandoff: 05/13/2017
  *その他に知っておく必要があること*  
  **注**  
   
--   ![前提条件](~/test/media/prereq.png "Prereq") Apple Safari Web ブラウザーはサポートされていません。  
+-   ![前提条件](../test/media/prereq.png "Prereq") Apple Safari Web ブラウザーはサポートされていません。  
   
--   ![前提条件](~/test/media/prereq.png "Prereq") Web ブラウザーを起動する操作は、コード化された UI テストの一部である必要があります。  
+-   ![前提条件](../test/media/prereq.png "Prereq") Web ブラウザーを起動する操作は、コード化された UI テストの一部である必要があります。  
   
      既に Web ブラウザーが開かれていて、そこで手順を実行すると、Internet Explorer を使用していない場合は再生が失敗します。 そのため、コード化された UI テストの一部として Web ブラウザーの起動を含めることをお勧めします。  
   
--   ![前提条件](~/test/media/prereq.png "Prereq") 最大化、最小化、復元など、ブラウザー固有の UI 操作の自動化はサポートされていません。  
+-   ![前提条件](../test/media/prereq.png "Prereq") 最大化、最小化、復元など、ブラウザー固有の UI 操作の自動化はサポートされていません。  
   
  **ヒント**  
   
--   ![ヒント](~/test/media/tip.png "Tip") コード化された UI のログにスクリーン ショットを含めるように、出力を構成できます。 そのためには、QTAgent32.exe.config ファイルの一部の構成設定を設定する必要があります。 既定では、このファイルは次の場所にインストールされます。  
+-   ![ヒント](../test/media/tip.png "Tip") コード化された UI のログにスクリーン ショットを含めるように、出力を構成できます。 そのためには、QTAgent32.exe.config ファイルの一部の構成設定を設定する必要があります。 既定では、このファイルは次の場所にインストールされます。  
   
      **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**  
   
@@ -171,4 +155,3 @@ ms.lasthandoff: 05/13/2017
  [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)   
  [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
  [コード化された UI テスト ログを使用したコード化された UI テストの分析](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)
-

@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 05/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- automated testing, lab management, test lab
+helpviewer_keywords: automated testing, lab management, test lab
 ms.assetid: F34B0D19-B430-4C01-B402-62A861007E71
-caps.latest.revision: 56
+caps.latest.revision: "56"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 45d36934cf1c46902cac566203cddf4a118b7fe4
-ms.openlocfilehash: 77a0339e1aae3036990f0d9d133a1fcb68844486
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/02/2017
-
+ms.openlocfilehash: 8d843800666ae53a686a18fcab28d02eb4c16743
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="use-build-and-release-management-instead-of-lab-management-for-automated-testing"></a>テストの自動化に、Lab Management ではなくビルドとリリース管理を使用します。
 
@@ -102,4 +85,3 @@ XAML ビルドは、目的の達成に、ラボ環境、テスト スイート�
 * 複数のクローンの構成を簡単にすることが、ネットワークを分離する動機の 1 つでした。 各クローンは、元の完全なレプリカであり、コンピューター名と構成設定が同一であるため新しい環境を簡単に設定できます。 ただし、この同じ利点は、アプリケーションの最終的な配置方法が同じでないため (たとえば、実稼働の場合など) 以降のライフサイクルで問題となる場合があります。 **代わりに**実稼働環境を設定するのと同じ方法で新しい環境を設定することを検討し、ネットワークは分離しないでください。
 
 * テストには、[Microsoft Azure](https://azure.microsoft.com/) などのパブリック クラウド インフラストラクチャを使用してください。 プロキシまたは jumpbox のみでパブリック ネットワークに公開されている、プライベート ネットワークで接続される仮想マシンのグループを設定するには、[Azure Marketplace](https://azure.microsoft.com/marketplace/) の [Azure Resource Manager テンプレート](https://azure.microsoft.com/documentation/templates/)または[Azure クイック スタート テンプレート](https://azure.microsoft.com/documentation/templates/)を使用します。
-

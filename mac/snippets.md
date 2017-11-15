@@ -5,14 +5,12 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 0FE27C0C-A861-4133-A74E-8D0505CF5342
-ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
 ms.openlocfilehash: 1f2ee1d440ad1c7d8cd75ae9194c651f2fc16a41
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-
 # <a name="code-snippets"></a>コード スニペット 
 
 コード スニペット ("_コード テンプレート_" と呼ばれることがよくあります) を使うと、あらかじめ記述されているコード ブロックを挿入して編集できるので、効率的にプログラミングできます。 よく使うパターンを簡単に追加したり、構文をよく知らない新しいパターンを学習したりするときに特に便利です。 C#、F#、HTML、XML、Python、Razor のテンプレートが用意されています。
@@ -40,4 +38,3 @@ ms.lasthandoff: 08/11/2017
 さまざまな言語の多くの既存テンプレートを使って編集できますが、**[Visual Studio] > [ユーザー設定] > [テキスト エディター] > [コード スニペット]** で新しいテンプレートを追加することもできます。
 
 ![新しいテンプレートの挿入](media/source-editor-image12.png)
-

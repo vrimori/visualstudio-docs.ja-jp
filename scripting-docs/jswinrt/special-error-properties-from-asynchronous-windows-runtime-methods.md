@@ -5,21 +5,19 @@ ms.date: 01/18/2017
 ms.prod: windows-client-threshold
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- javascript
+ms.technology: javascript
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45155584-06d8-4e7f-93a6-8564a93f643d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
 ms.openlocfilehash: 120d8f699c8bedd0fe5762300203c5d5ec18e73e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="special-error-properties-from-asynchronous-windows-runtime-methods"></a>非同期 Windows ランタイム メソッドからの特別なエラー プロパティ
 呼び出し履歴の深い場所からエラーがスローされる可能性があるため、JavaScript で非同期の Windows ランタイム メソッドをデバッグするのは困難な場合があります。 JavaScript の `Error` オブジェクトには追加のプロパティがあり、これらはアプリがデバッグ モードで実行されているときに非同期の Windows ランタイム メソッドからエラーがスローされた場合にのみ表示されます。  
