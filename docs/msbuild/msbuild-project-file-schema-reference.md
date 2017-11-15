@@ -1,26 +1,28 @@
 ---
 title: "MSBuild プロジェクト ファイル スキーマ リファレンス | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MSBuild では、ファイルのスキーマ"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords: MSBuild, file schema
 ms.assetid: d9a68146-1f43-4621-ac78-2c8c3f400936
-caps.latest.revision: 19
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: a88962b87466a2345ac8dafa642d457a6fee5be0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-project-file-schema-reference"></a>MSBuild プロジェクト ファイル スキーマ リファレンス
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] XML スキーマのすべての要素と、使用可能な属性および子要素をまとめた表を提供します。  
@@ -59,8 +61,3 @@ caps.handback.revision: 19
  [条件](../msbuild/msbuild-conditions.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)  
  [MSBuild](../msbuild/msbuild.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

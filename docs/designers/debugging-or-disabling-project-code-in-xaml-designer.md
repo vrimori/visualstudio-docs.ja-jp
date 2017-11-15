@@ -7,31 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 138f318b84044a1ed8a92f9b2ee7b47b2211cdb7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 6bf9220205e35a0c72d3812e1943154c6fedeacd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="debugging-or-disabling-project-code-in-xaml-designer"></a>XAML デザイナーでプロジェクト コードをデバッグまたは無効化する
 ハンドルされない例外が XAML デザイナーで起こる原因の多くは、プロジェクト コードがアクセスしようとするプロパティまたはメソッドが、デザイナーでアプリケーションを実行するときに、返す値や動作方法が変わることにあります。 Visual Studio の別のインスタンスでプロジェクト コードをデバッグしてこれらの例外を解決するか、デザイナーでプロジェクトのコードを無効にして、一時的に例外を回避することができます。  
@@ -68,7 +52,7 @@ ms.lasthandoff: 02/22/2017
   
 3.  Visual Studio で、デバッグするコードまたはコントロールを含む XAML ページを開きます。  
   
-4.  Visual Studio の新しいインスタンスを開き、プロジェクトの&2; 番目のインスタンスを開きます。  
+4.  Visual Studio の新しいインスタンスを開き、プロジェクトの 2 番目のインスタンスを開きます。  
   
 5.  プロジェクト コードにブレークポイントを設定します。  
   

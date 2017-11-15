@@ -4,39 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-designers
+ms.technology: vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9fbc8fa-66d1-4055-8460-24d8b8fbe43e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 2cb4836ae868d56147a82fcefa0c5546bfcf8cad
-ms.contentlocale: ja-jp
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 92d133d688ad009dae1b4e518bdd8c749ebc329f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="working-with-textures-and-images"></a>テクスチャおよびイメージの使用
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のイメージ エディターを使用すると、テクスチャとイメージを作成したり、変更したりできます。 イメージ エディターは、DirectX アプリケーションの開発で使用されるものをはじめ、さまざまな形式のテクスチャとイメージをサポートしています。  
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のイメージ エディターを使用すると、テクスチャとイメージを作成および変更できます。 イメージ エディターは、DirectX アプリケーションの開発で使用されるものをはじめ、さまざまな形式のテクスチャとイメージをサポートしています。  
   
 > [!NOTE]
 >  イメージ エディターでは、アイコンやカーソルなどのローカラー イメージはサポートされていません。 これらのイメージを作成または変更するには、 [Image Editor for Icons](/cpp/windows/image-editor-for-icons)を使用します。  

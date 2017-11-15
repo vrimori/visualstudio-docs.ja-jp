@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9d7c6414-4e6c-4889-a74c-a6033795eccc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 555a0f9b39d28166c0f414b1bcbf81c2a137d0ff
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 88ef1657438cd2073b2f3219739c8236eb94bc2c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-c-intellisense"></a>Visual C# の IntelliSense
 Visual Studio 2015 では、単一コードのファイルおよびプロジェクト内のファイルに対して IntelliSense を利用できます。 クロスプラット フォーム プロジェクトでは、いくつかの IntelliSense 機能が、Android や iOS のコンテキスト内にいるときでも共有コード プロジェクト内の .cpp および .c ファイルで使用できます。  

@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92814100-392a-471d-96fd-e26f637d6cc2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ce1142acf4acb0e44e85b7e9ab313136d7ed7727
-ms.openlocfilehash: 0ef80ff90b0182405f72f9413de13b699aed971d
-ms.lasthandoff: 03/28/2017
-
+ms.openlocfilehash: 69669acc9cc0815dc8df0c88172213ad3e3698f9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>方法 : ターゲットとタスクを構成する
 一部の MSBuild タスクは、開発コンピューターの環境に関係なく、それがターゲットとする環境で実行されるように設定できます。 たとえば、64 ビット コンピューターを使用し、32 ビット アーキテクチャをターゲットとするアプリケーションを構築するとき、一部のタスクが 32 ビット プロセスで実行されます。  
@@ -127,4 +112,3 @@ ms.lasthandoff: 03/28/2017
   
 ## <a name="see-also"></a>関連項目  
  [ターゲットとタスクの構成](../msbuild/configuring-targets-and-tasks.md)
-

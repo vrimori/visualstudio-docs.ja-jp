@@ -1,23 +1,26 @@
 ---
 title: "DA0026: 過剰なカーネル CPU 処理時間。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.rules.DA0026"
-  - "vs.performance.DA0026"
-  - "vs.performance.26"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.rules.DA0026
+- vs.performance.DA0026
+- vs.performance.26
 ms.assetid: 4cfc8a29-b29b-4a72-b386-03d8856fdf8a
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 2c574d176ccb30c1518238a78472afa798230247
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="da0026-excessive-kernel-cpu-time-processing"></a>DA0026: 過剰なカーネル CPU 処理時間。
 |||  
@@ -38,8 +41,3 @@ caps.handback.revision: 7
   
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  アプリケーションが実行するシステム コールを調べるには、プロファイルを再度実行し、システム コールに基づいてサンプルを収集するオプションを選択します。 IDE 内でプロファイリング ツールを実行する場合の詳細については、「[方法 : サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)」を参照してください。 コマンド ラインからプロファイリング ツールを実行する場合の詳細については、コマンド ライン プロファイリング ツール リファレンスのトピック、「[VSPerfCmd](../profiling/vsperfcmd.md)」の「**サンプリング間隔オプション**」のセクションを参照してください。
-
-
-<!--HONumber=Feb17_HO4-->
-
-

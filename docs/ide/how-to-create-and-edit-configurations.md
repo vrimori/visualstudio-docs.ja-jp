@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,30 +18,15 @@ helpviewer_keywords:
 - project build configurations, creating
 - project build configurations, editing
 ms.assetid: 19be121c-148e-4ece-bbfc-d20b08cfc3f7
-caps.latest.revision: 15
-author: kempb
-ms.author: kempb
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
-ms.openlocfilehash: 9a2946de5561ef95ee199e4fd9b77c335b0bc4da
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: afa939c0b8a033930f5e8e7bcc525d6f33e55f86
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-create-and-edit-configurations"></a>方法 : 構成を作成および編集する
 ソリューションに対して、複数のビルド構成を作成することができます。 たとえば、問題を検出して修正するためにテスト担当者が使用できるデバッグ ビルドを構成できます。他にも、多様な顧客に配布できる多様な種類のビルドを構成できます。  
@@ -143,5 +127,4 @@ ms.lasthandoff: 06/23/2017
  [ビルド構成について](../ide/understanding-build-configurations.md)   
  [Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)   
  [プロジェクトおよびソリューションのプロパティの管理](managing-project-and-solution-properties.md)
-
 

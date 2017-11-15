@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 03/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#Import
+f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#Import
 dev_langs:
 - VB
 - CSharp
@@ -19,30 +17,15 @@ helpviewer_keywords:
 - Import element [MSBuild]
 - <Import> element [MSBuild]
 ms.assetid: 3bfecaf1-69fd-4008-b651-c9dafd4389d9
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
-ms.openlocfilehash: 507b5fc312ca1f3a8c3ab4e24d3c43fddd0398eb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5709fc2ea456a8cfa45d8ce01e97c0c79d256c38
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="import-element-msbuild"></a>Import 要素 (MSBuild)
 1 つのプロジェクト ファイルの内容を別のプロジェクト ファイルにインポートします。  
@@ -74,7 +57,7 @@ ms.lasthandoff: 03/13/2017
 
 |要素|説明|  
 |-------------|-----------------|  
-|[Project](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
+|[プロジェクト](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
 |[ImportGroup](../msbuild/importgroup-element.md)|オプションの条件下でグループ化された `Import` 要素のコレクションが格納されます。|  
 
 ## <a name="remarks"></a>コメント  
@@ -84,14 +67,14 @@ ms.lasthandoff: 03/13/2017
 
  インポートされるプロジェクト内の相対パスは、インポートする側のプロジェクトのディレクトリからの相対パスであると解釈されます。 したがって、あるプロジェクト ファイルを別々の場所に存在する複数のプロジェクト ファイルにインポートする場合、インポートされるプロジェクト ファイル内の相対パスは、インポートされるプロジェクトごとに異なって解釈されます。  
 
- `MSBuildProjectDirectory`、`MSBuildProjectFile` など、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] で予約されている全プロパティは、プロジェクト ファイルに関連し、インポートされるプロジェクトで参照されますが、これらにはインポートするプロジェクト ファイルに基づいた値が代入されます。  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 、 `MSBuildProjectDirectory` など、 `MSBuildProjectFile`で予約されている全プロパティは、プロジェクト ファイルに関連し、インポートされるプロジェクトで参照されますが、これらにはインポートするプロジェクト ファイルに基づいた値が代入されます。  
 
- インポートされるプロジェクトに `DefaultTargets` 属性がない場合は、インポートされる各プロジェクトがインポート順にチェックされ、最初に検出された `DefaultTargets` 属性の値が使用されます。 たとえば、ProjectA で ProjectB および ProjectC を順番にインポートし、ProjectB で ProjectD をインポートする場合、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、ProjectA、ProjectB、ProjectD、ProjectC の順に `DefaultTargets` を検索します。  
+ インポートされるプロジェクトに `DefaultTargets` 属性がない場合は、インポートされる各プロジェクトがインポート順にチェックされ、最初に検出された `DefaultTargets` 属性の値が使用されます。 たとえば、ProjectA で ProjectB および ProjectC を順番にインポートし、ProjectB で ProjectD をインポートする場合、 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、ProjectA、ProjectB、ProjectD、ProjectC の順に `DefaultTargets` を検索します。  
 
  インポートされるプロジェクトのスキーマは、標準プロジェクトのスキーマと同じです。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] で、インポートされるプロジェクトをビルドできる場合もありますが、インポートされるプロジェクトには、設定するプロパティやターゲットを実行する順序に関する情報が通常は含まれていないため、ビルドできる可能性は低くなります。 インポートされるプロジェクトのこれらの情報は、インポートするプロジェクトに依存します。  
 
 > [!NOTE]
->  条件付き import ステートメントがコマンド ライン MSBuilds で動作するときは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 統合開発環境 (IDE) の MSBuilds とは連携しません。 条件付きインポートは、プロジェクトを読み込むときに設定される構成およびプラットフォームの値を使用して評価されます。 その後、プロジェクト ファイルでの条件の再評価が必要となる変更 (プラットフォームの変更など) が加えられると、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はプロパティと項目の条件を再評価します。ただし、インポートの条件の再評価は行いません。 インポート条件は再評価されないため、インポートはスキップされます。  
+>  条件付き import ステートメントがコマンド ライン MSBuilds で動作するときは、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 統合開発環境 (IDE) の MSBuilds とは連携しません。 条件付きインポートは、プロジェクトを読み込むときに設定される構成およびプラットフォームの値を使用して評価されます。 その後、プロジェクト ファイルでの条件の再評価が必要となる変更 (プラットフォームの変更など) が加えられると、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はプロパティと項目の条件を再評価します。ただし、インポートの条件の再評価は行いません。 インポート条件は再評価されないため、インポートはスキップされます。  
 >   
 >  このような状況が発生することを回避するには、.targets ファイルに条件付き import ステートメントを配置するか、または [Choose Element (MSBuild)](../msbuild/choose-element-msbuild.md) ブロックなどの条件付きブロックにコードを配置します。  
 
@@ -133,4 +116,3 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>関連項目  
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
  [方法: 複数のプロジェクト ファイルで同じターゲットを使用する](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)
-

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ExportTemplateWizard
+f1_keywords: VS.ExportTemplateWizard
 helpviewer_keywords:
 - Visual Studio templates, creating project templates
 - project templates, metadata files
@@ -17,30 +15,15 @@ helpviewer_keywords:
 - project templates, custom template locations
 - project templates, creating
 ms.assetid: a1a6999d-a34c-48a8-b1cf-027eb5c76398
-caps.latest.revision: 19
-author: kempb
-ms.author: kempb
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: 279a123088308a54dccfa9abe0bfbcdb18e5aaf1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/31/2017
-
+ms.openlocfilehash: a473ac2be65acc9b08455fe687b52468f5ca9fa6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-create-project-templates"></a>方法 : プロジェクト テンプレートを作成する
 この手順に従うと、**[テンプレートのエクスポート]** ウィザードを使ってテンプレートを作成できます。テンプレートは .zip ファイルにパッケージ化されます。 また、テンプレートのエクスポート ウィザードの拡張機能を使って、または [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] に含まれるテンプレートで、配置が向上した VSIX ファイル形式でテンプレートを作成できます。または、テンプレートを手動で作成することもできます。  
@@ -75,4 +58,3 @@ ms.lasthandoff: 05/31/2017
 ## <a name="see-also"></a>関連項目  
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [方法 : 項目テンプレートを作成する](../ide/how-to-create-item-templates.md)
-

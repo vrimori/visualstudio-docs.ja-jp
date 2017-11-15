@@ -1,25 +1,27 @@
 ---
 title: "方法 : 追加のインストルメンテーション オプションを指定する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.property.advanced"
-helpviewer_keywords: 
-  - "インストルメンテーション、オプション"
-  - "プロファイリング ツール、セッションのオプション"
-  - "パフォーマンス セッション、オプション"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.performance.property.advanced
+helpviewer_keywords:
+- instrumentation, options
+- profiling tools, session options
+- performance sessions, options
 ms.assetid: 639afe26-8335-4bd4-8aa5-f2c607b81f07
-caps.latest.revision: 16
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 59bc7f5a03577c00d6c085ff1a6861e73eda2f71
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>方法 : 追加のインストルメンテーション オプションを指定する
 バイナリをインストルメントする方法には、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 統合開発環境 (IDE: Integrated Development Environment) から行う方法と、コマンド ライン ツールを使用する方法があります。 IDE 内からバイナリをインストルメント化する場合は、[VSInstr](../profiling/vsinstr.md) ツールに追加のインストルメンテーション オプションを指定することで、インストルメンテーション中に収集されるデータの量を制御できます。 これらのオプションは、セッション レベルまたはターゲット レベルで使用できます。 たとえば、インストルメンテーション プロセスにおいて特定の関数を含めたり除外したりするには、ターゲット レベルで追加のインストルメンテーション オプションを使用します。  
@@ -46,8 +48,3 @@ caps.handback.revision: 16
 ## <a name="see-also"></a>関連項目  
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
  [コマンドラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

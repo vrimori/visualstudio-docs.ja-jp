@@ -1,17 +1,16 @@
 ---
-title: "プロジェクト項目の追加と削除"
+title: "プロジェクト項目の追加と削除 | Microsoft Docs"
 description: "この文書では、Visual Studio for Mac でプロジェクト項目を追加する方法と削除する方法について説明します"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 4071689D-1C21-42D7-8963-550E7BCB4B67
+ms.openlocfilehash: 2a7211fe6989bd51e59a22a0905e29300c64503e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: ad2e7f50f9b45fda1006dc131439f532a613ddca
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="adding-and-removing-project-items"></a>プロジェクト項目の追加と削除
 
@@ -25,7 +24,7 @@ ms.lasthandoff: 08/11/2017
 
 ## <a name="adding-existing-files"></a>既存のファイルを追加する
 
-既存のファイルをプロジェクトに追加できます。プロジェクト ノードを右クリックし、**[追加]、[ファイルの追加...]** の順に選択します。 あるいは、フォルダー全体を追加するには、**[追加]、[既存のフォルダーの追加...]** の順に選択します。 これでファイル ブラウザーが表示されます。このブラウザーでシステム内を探し、追加する項目を見つけます。
+既存のファイルをプロジェクトに追加できます。プロジェクト ノードを右クリックし、**[追加]、[ファイルの追加...]** の順に選択します。あるいは、フォルダー全体を追加するには、**[追加]、[既存のフォルダーの追加...]** の順に選択します。これでファイル ブラウザーが表示されます。このブラウザーでシステム内を探し、追加する項目を見つけます。
 
 
 ## <a name="removing-items"></a>項目を削除する

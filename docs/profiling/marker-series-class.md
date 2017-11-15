@@ -1,60 +1,59 @@
 ---
 title: "marker_series クラス | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cvmarkersobj/Concurrency::diagnostic::marker_series"
-helpviewer_keywords: 
-  - "Concurrency::diagnostic::marker_series クラス"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cvmarkersobj/Concurrency::diagnostic::marker_series
+helpviewer_keywords: Concurrency::diagnostic::marker_series class
 ms.assetid: b8445ed0-c512-4f92-b6b4-3d05c044f939
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b326e88e18e3a7c5515cc11bfda7e5c35ae4a063
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# marker_series クラス
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-単一のプロバイダーによって生成されるイベントのシリアル チャネルを表します。  
+# <a name="markerseries-class"></a>marker_series クラス
+1 つのプロバイダーによって生成されたイベントのシリアル チャネルを表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 class marker_series;  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
   
-### パブリック コンストラクター  
-  
-|名前|説明|  
-|--------|--------|  
-|[marker\_series::marker\_series コンストラクター](../Topic/marker_series::marker_series%20Constructor.md)|`marker_series` クラスの新しいインスタンスを初期化します。|  
-|[marker\_series::~marker\_series デストラクター](../profiling/marker-series-tilde-marker-series-destructor.md)|破棄の marker\_series はすべて、割り当てられているリソースを解放します。|  
-  
-### パブリック メソッド  
+### <a name="public-constructors"></a>パブリック コンストラクター  
   
 |名前|説明|  
-|--------|--------|  
-|[marker\_series::is\_enabled メソッド](../Topic/marker_series::is_enabled%20Method.md)|すべてのセッションでプロバイダーを有効にするかどうかを判定します。|  
-|[marker\_series::write\_alert メソッド](../profiling/marker-series-write-alert-method.md)|同時実行ビジュアライザーのトレース ファイルに警告を書き込みます。|  
-|[marker\_series::write\_flag メソッド](../profiling/marker-series-write-flag-method.md)|同時実行ビジュアライザーのトレース ファイルにフラグを書き込みます。|  
-|[marker\_series::write\_message メソッド](../profiling/marker-series-write-message-method.md)|同時実行ビジュアライザーのトレース ファイルにメッセージを書き込みます。|  
+|----------|-----------------|  
+|[marker_series::marker_series コンストラクター](../profiling/marker-series-marker-series-constructor.md)|`marker_series` クラスの新しいインスタンスを初期化します。|  
+|[marker_series::~marker_series デストラクター](../profiling/marker-series-tilde-marker-series-destructor.md)|marker_series オブジェクトを破棄し、すべての割り当て済みリソースを開放します。|  
   
-## 継承階層  
+### <a name="public-methods"></a>パブリック メソッド  
+  
+|名前|説明|  
+|----------|-----------------|  
+|[marker_series::is_enabled メソッド](../profiling/marker-series-is-enabled-method.md)|任意のセッションでプロバイダーが有効にされているかどうかを調べます。|  
+|[marker_series::write_alert メソッド](../profiling/marker-series-write-alert-method.md)|同時実行ビジュアライザーのトレース ファイルにアラートを書き込みます。|  
+|[marker_series::write_flag メソッド](../profiling/marker-series-write-flag-method.md)|同時実行ビジュアライザーのトレース ファイルにフラグを書き込みます。|  
+|[marker_series::write_message メソッド](../profiling/marker-series-write-message-method.md)|同時実行ビジュアライザーのトレース ファイルにメッセージを書き込みます。|  
+  
+## <a name="inheritance-hierarchy"></a>継承階層  
  `marker_series`  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** cvmarkersobj.h  
   
  **名前空間:** Concurrency::diagnostic  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [diagnostic 名前空間](../profiling/diagnostic-namespace.md)

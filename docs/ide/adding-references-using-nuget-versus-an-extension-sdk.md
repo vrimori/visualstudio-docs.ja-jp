@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2175581e-83cb-444c-bb52-cc1fca8ea196
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5b67a4c254e2410302997dee5ec36a2243c6ed11
-ms.openlocfilehash: 29db26d6c885b297ff3b8c39776c9fe59ca3ea05
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/10/2017
-
+ms.openlocfilehash: 79e9c83f95184bb7de451f464b6b8fa02903f715
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>拡張 SDK と比較して NuGet を使用した参照の追加
 Visual Studio を対象とする NuGet 拡張機能、またはソフトウェア開発キット (SDK) を使用して、Visual Studio プロジェクト内で使用するためのパッケージを提供できます。 このトピックでは 2 つのメカニズムの類似点と相違点を説明し、特定のタスクにとって最善のメカニズムを選択しやすくなります。  

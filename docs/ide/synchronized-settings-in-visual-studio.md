@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 01/23/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Environment.RoamingSettings
+f1_keywords: VS.ToolsOptionsPages.Environment.RoamingSettings
 ms.assetid: a3d2ea29-be5d-4012-9820-44b06adbb7dd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9d9c163063cfa4e2a78f8a07ab74efbecb355448
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: 1882e191caa027e7a6e2b52c766135b240b309a1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="synchronize-your-settings-in-visual-studio"></a>Visual Studio での設定の同期
 
@@ -48,17 +31,17 @@ ms.lasthandoff: 09/26/2017
 
 - **[ツール &#124; オプション]** ページの次のオプション。
 
-    - [**環境**]、[**全般**] オプション ページの [**テーマ**] およびメニュー バー枠の設定
+    - **[環境]**、**[全般]** オプション ページの **[テーマ]** およびメニュー バー枠の設定
 
-    - [**環境**]、[**フォントおよび色**] オプション ページのすべての設定
+    - **[環境]**、**[フォントおよび色]** オプション ページのすべての設定
 
-    - [**環境**]、[**キーボード**] オプション ページのすべてのキーボード ショートカット
+    - **[環境]**、**[キーボード]** オプション ページのすべてのキーボード ショートカット
 
     - **[環境]、[タブ]、および [ウィンドウ]** オプション ページのすべての設定
 
-    - [**環境**]、[**スタートアップ**] オプション ページのすべての設定
+    - **[環境]**、**[スタートアップ]** オプション ページのすべての設定
 
-    - [**テキスト エディター**] オプション ページのすべての設定
+    - **[テキスト エディター]** オプション ページのすべての設定
 
     - **[XAML デザイナー]** オプション ページのすべての設定
 
@@ -87,4 +70,3 @@ Visual Studio 15.3 およびそれ以降では、`%userprofile%\Documents\Visual
 ## <a name="see-also"></a>関連項目
 
 [IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)
-

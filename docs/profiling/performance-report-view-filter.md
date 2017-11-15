@@ -1,22 +1,25 @@
 ---
-title: "プロファイリング ツールのレポート ビュー フィルター | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロファイル ツール、プロファイラー レポート ビュー フィルター"
-  - "プロファイラー レポート ビュー フィルター、プロファイル ツール"
+title: "パフォーマンス レポート ビュー フィルター | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- profiling tools, Profiler Report view filter
+- Profiler Report View filter, profiling tools
 ms.assetid: 35f89d86-4683-4db1-aa0c-ae0ce65fa524
-caps.latest.revision: 16
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8a7bee6cb18fee301dfab5e7c08c58521eac4e84
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="performance-report-view-filter"></a>パフォーマンス レポート ビュー フィルター
 [プロファイラー レポート ビュー フィルター] ウィンドウは [パフォーマンス レポート] ウィンドウの上部に表示されます。 このウィンドウが表示されない場合は、**[フィルターの表示]** ボタンをクリックします。  
@@ -39,8 +42,3 @@ caps.handback.revision: 16
 ## <a name="see-also"></a>関連項目  
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)   
  [VSPerfReport](../profiling/vsperfreport.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

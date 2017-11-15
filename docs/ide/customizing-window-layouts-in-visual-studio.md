@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 01/23/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,31 +23,15 @@ helpviewer_keywords:
 - debug mode
 - custom layouts
 ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
-caps.latest.revision: 27
-author: kempb
-ms.author: kempb
+caps.latest.revision: "27"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 8ab795965dc205cd783f469d134d64fb2b5dacf6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 85881bf35fb89f753eb4110d7b1128b4761a73a3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Visual Studio のウィンドウ レイアウトをカスタマイズする
 Visual Studio では、さまざまな開発ワークフローに最も適したウィンドウのレイアウトを作成するために、ウィンドウの位置、サイズ、および動作をカスタマイズできます。 レイアウトをカスタマイズすると、IDE はそれを記憶します。 たとえば、 **ソリューション エクスプローラー** のドッキング位置を変更した後で Visual Studio を閉じた場合、次回起動時には、別のコンピューターで作業していても、 **ソリューション エクスプローラー** が同じ位置にドッキングされます。 また、カスタム レイアウトに名前を付けて保存した後、1 つのコマンドでレイアウト間を切り替えることもできます。 たとえば、編集用のレイアウトとデバッグ用のレイアウトを作成し、**[ウィンドウ &#124; ウィンドウ レイアウトを適用]** メニュー コマンドを使用してそれらを切り替えることができます。  
@@ -56,7 +39,7 @@ Visual Studio では、さまざまな開発ワークフローに最も適した
 ## <a name="kinds-of-windows"></a>ウィンドウの種類  
 
 ### <a name="tool-and-document-windows"></a>ツール ウィンドウとドキュメント ウィンドウ  
- IDE には *ツール ウィンドウ* と *ドキュメント ウィンドウ*の 2 種類の基本的なウィンドウがあります。 ツール ウィンドウには、ソリューション エクスプ ローラー、サーバー エクスプ ローラー、出力ウィンドウ、エラー一覧、デザイナー、デバッガー ウィンドウなどがあります。 ドキュメント ウィンドウには、ソース コード ファイル、任意のテキスト ファイル、構成ファイルなどが含まれます。 ツール ウィンドウは、サイズを変更したり、タイトル バーでドラッグしたりできます。 ドキュメント ウィンドウはタブでドラッグできます。 ウィンドウに関するその他のオプションを設定するには、タブまたはタイトルバーを右クリックします。  
+ IDE には *ツール ウィンドウ* と *ドキュメント ウィンドウ*の 2 種類の基本的なウィンドウがあります。 ツール ウィンドウには、ソリューション エクスプ ローラー、サーバー エクスプ ローラー、出力ウィンドウ、エラー一覧、デザイナー、デバッガー ウィンドウなどがあります。 ドキュメント ウィンドウには、ソース コード ファイル、任意のテキスト ファイル、構成ファイルなどが含まれます。 ツール ウィンドウは、サイズを変更したり、タイトル バーでドラッグしたりできます。 ドキュメント ウィンドウはタブでドラッグできます。ウィンドウに関するその他のオプションを設定するには、タブまたはタイトルバーを右クリックします。  
 
  **[ウィンドウ]** メニューには、IDE でのウィンドウのドッキング、フローティング、および非表示のオプションが表示されます。 ウィンドウのタブまたはタイトル バーを右クリックすると、その特定のウィンドウのその他のオプションが表示されます。 特定のツール ウィンドウの複数のインスタンスを同時に表示できます。 たとえば、複数の Web ブラウザー ウィンドウを表示することができます。また、 **[ウィンドウ]** メニューの **[新規ウィンドウ]** を選択して、複数のツール ウィンドウの追加のインスタンスを作成できます。  
 
@@ -180,7 +163,7 @@ Visual Studio では、さまざまな開発ワークフローに最も適した
 
      仕事場ではマルチ モニターがセットアップされ、自宅にはシングル モニターのノート PC がある場合、それぞれのコンピューター向けに最適化されたレイアウトを作成できます。  
 
-     マルチモニターのレイアウトをシングルモニターのシステムに適用すると、2 台目のモニターに配置したフローティング ウィンドウが Visual Studio ウィンドウの背後に隠れるようになります。 Alt キーを押しながら Tab キーを押すと、背後にあるウィンドウを前に出すことができます。 後で Visual Studio を複数のモニターで開く場合、レイアウトを再度適用して、ウィンドウを指定された場所に復元してください。  
+     マルチモニターのレイアウトをシングルモニターのシステムに適用すると、2 台目のモニターに配置したフローティング ウィンドウが Visual Studio ウィンドウの背後に隠れるようになります。 Alt キーを押しながら Tab キーを押すと、背後にあるウィンドウを前に出すことができます。後で Visual Studio を複数のモニターで開く場合、レイアウトを再度適用して、ウィンドウを指定された場所に復元してください。  
 
 ##### <a name="manage-and-roam-your-layouts"></a>レイアウトの管理とローミング  
 
@@ -195,4 +178,3 @@ Visual Studio では、さまざまな開発ワークフローに最も適した
 ## <a name="related-topics"></a>関連トピック  
 
 [方法: IDE 内で移動する](../ide/how-to-move-around-in-the-visual-studio-ide.md)
-

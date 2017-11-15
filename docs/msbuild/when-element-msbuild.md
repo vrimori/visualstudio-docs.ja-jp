@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 03/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#When
+f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#When
 dev_langs:
 - VB
 - CSharp
@@ -19,30 +17,15 @@ helpviewer_keywords:
 - <When> Element [MSBuild]
 - When Element [MSBuild]
 ms.assetid: eb27de6f-4e71-4e87-87e2-d93f7bf5899c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 9c65869ebcb2cd531b91bca19beca7d0aefa630b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 58032ea7c1c15de794b5374017e84f07434d8310
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="when-element-msbuild"></a>When 要素 (MSBuild)
 `Choose` 要素で選ぶ対象のコード ブロックを指定します。  
@@ -145,4 +128,3 @@ ms.lasthandoff: 02/22/2017
 ## <a name="see-also"></a>関連項目  
  [条件構造](../msbuild/msbuild-conditional-constructs.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)
-

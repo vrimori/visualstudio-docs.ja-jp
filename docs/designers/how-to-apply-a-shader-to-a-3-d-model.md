@@ -1,48 +1,49 @@
 ---
 title: "方法: シェーダーを 3-D モデルに適用する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-designers
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a3877bd6-abd8-4a9d-842c-6848b6c2f335
-caps.latest.revision: 15
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: adec7e86fcb33985aa61b7e20b7e9ac16d2ad7b1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: シェーダーを 3-D モデルに適用する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-このドキュメントでは、3\-D モデルに Directed Graph Shader Language \(DGSL\) シェーダーを適用するには、モデル エディターを使用する方法を示します。  
+# <a name="how-to-apply-a-shader-to-a-3-d-model"></a>方法: シェーダーを 3-D モデルに適用する
+このドキュメントでは、モデル エディターを使用して、Directed Graph Shader Language (DGSL) シェーダーを 3-D モデルに適用する方法を説明します。  
   
- このドキュメントでは、このアクティビティについて説明します。  
+ このドキュメントでは、以下のアクティビティについて説明します。  
   
--   3\-D モデルへのシェーダーの適用  
+-   シェーダーを 3-D モデルに適用する  
   
-## 3\-D モデルへのシェーダーの適用  
- 3\-D モデルにシェーダー エフェクトを適用すると、3\-D モデルに魅力的な外観を持たせることができます。  
+## <a name="applying-a-shader-to-a-3-d-model"></a>シェーダーを 3-D モデルに適用する  
+ シェーダー効果を 3-D モデルに適用して、魅力的な外観にすることができます。  
   
- 開始する前に、**\[プロパティ\]** ウィンドウが表示されていることを確認します。  
+ 開始する前に、**[プロパティ]** ウィンドウが表示されていることを確認します。  
   
-#### 3\-D モデルにシェーダーを適用するには  
+#### <a name="to-apply-a-shader-to-a-3-d-model"></a>シェーダーを 3-D モデルに適用する方法  
   
-1.  一つ以上のモデルを含む 3\-D シーンから開始します。  適切な 3\-D シーンがない場合は、[方法: 基本 3\-D モデルを作成する](../Topic/How%20to:%20Create%20a%20Basic%203-D%20Model.md)"に説明されているように、1 種類を作成します。  また、モデルに適用できる DGSL シェーダーが必要です。  適切なシェーダーがない場合は、1 を [方法: 基本カラー シェーダーを作成する](../designers/how-to-create-a-basic-color-shader.md) "に説明されているように作成し、次の手順に進む前にファイルに保存されていることを確認します。  
+1.  まず 1 つ以上のモデルを含む 3-D シーンを使用します。 適切な 3-D シーンがない場合、「[方法: 基本 3-D モデルを作成する](../designers/how-to-create-a-basic-3-d-model.md)」に従って作成します。 また、モデルに適用できる DGSL シェーダーを使用する必要があります。 適切なシェーダーがない場合、「[方法: 基本カラー シェーダーを作成する](../designers/how-to-create-a-basic-color-shader.md)」に従って作成し、ファイルに保存してから続行してください。  
   
-2.  **\[選択\]** モードで、次にシェーダーを適用する **\[プロパティ\]** ウィンドウで、**\[効果\]** プロパティ グループの **\[Filename\]** のプロパティでモデルに適用する DGSL シェーダーを指定します。モデルを選択します。  
+2.  **選択**モードで、シェーダーを適用するモデルを選択します。その後、**[プロパティ]** ウィンドウを開き、**効果**プロパティ グループの **Filename** プロパティで、モデルに適用する DGSL シェーダーを指定します。  
   
- 適用される基本色の影響を及ぼすモデルがあります:  
+ 基本色の効果を適用したモデルはこちらです。  
   
- ![基本色の効果を表示する 3D シーン](../designers/media/digit-3d-model-effect.png "Digit\-3D\-Model\-Effect")  
+ ![基本色の効果を表示する 3&#45;D シーン](../designers/media/digit-3d-model-effect.png "Digit-3D-Model-Effect")  
   
- モデルにシェーダーを適用すると、モデルと**...**します。次に、省略記号 \(\) ボタンをクリックします **\[効果\]** プロパティ グループの **\[\(詳細\)\]** のプロパティの **\[プロパティ\]** ウィンドウでコマンドを選択して、シェーダー デザイナー、開くことができます。  
+ シェーダーをモデルに適用した後、それをシェーダー デザイナーで開くには、モデルを選択します。その後、**[プロパティ]** ウィンドウを開き、**効果** プロパティ グループの**(詳細設定)** プロパティで省略記号 (**...**) ボタンを選択します。  
   
-## 参照  
- [方法: 基本 3\-D モデルを作成する](../Topic/How%20to:%20Create%20a%20Basic%203-D%20Model.md)   
+## <a name="see-also"></a>関連項目  
+ [方法: 基本 3-D モデルを作成する](../designers/how-to-create-a-basic-3-d-model.md)   
  [方法: 基本カラー シェーダーを作成する](../designers/how-to-create-a-basic-color-shader.md)   
  [モデル エディター](../designers/model-editor.md)   
  [シェーダー デザイナー](../designers/shader-designer.md)

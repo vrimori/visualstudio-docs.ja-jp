@@ -4,35 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3a14d28-d811-4ff3-bd09-21dce14025ca
-caps.latest.revision: 5
-author: kempb
-ms.author: kempb
+caps.latest.revision: "5"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
-ms.openlocfilehash: fa857220def2da9b05f1bbed70e906034727b8af
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/30/2017
-
+ms.openlocfilehash: 82bce617eec0f5038499a2eed370efa33d817e20
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="getting-started-with-debugging-in-visual-studio"></a>Visual Studio のデバッグの概要
 Visual Studio は、プロジェクトのビルドとデバッグ ツールの強力な統合セットを提供します。 このトピックでは、デバッグ UI 機能の最も基本的なセットの使用を開始する方法が説明されます。  
@@ -75,7 +59,7 @@ Visual Studio は、プロジェクトのビルドとデバッグ ツールの�
  ![Visual Studio の成功したビルドの出力](../ide/media/vs_ide_gs_debug_success_build.PNG "vs_ide_gs_debug_success_build")  
 
 ### <a name="reviewing-the-error-list"></a>エラー一覧のレビュー  
- 前にコンパイルが成功したコードに変更を加えた場合、エラーが出ることが少なくありません。 コーディングに不慣れな場合には、その可能性が高くなります。 エラーは、単純な構文エラーや変数名の間違いのように分かりやすい場合もあれば、手引きとして暗号のようなコードしかないような分かりにくい場合もあります。 問題を見やすくするには、**[出力]** ウィンドウの下部に移動し、**[エラー一覧]** タブをクリックします。 これにより、プロジェクトのエラーと警告がより整理されて見やすくなり、いくつかの追加オプションも表示されます。  
+ 前にコンパイルが成功したコードに変更を加えた場合、エラーが出ることが少なくありません。 コーディングに不慣れな場合には、その可能性が高くなります。 エラーは、単純な構文エラーや変数名の間違いのように分かりやすい場合もあれば、手引きとして暗号のようなコードしかないような分かりにくい場合もあります。 問題を見やすくするには、**[出力]** ウィンドウの下部に移動し、**[エラー一覧]** タブをクリックします。これにより、プロジェクトのエラーと警告がより整理されて見やすくなり、いくつかの追加オプションも表示されます。  
 
  ![Visual Studio の出力とエラーの一覧](../ide/media/vs_ide_gs_debug_bad_build_error_list.PNG "Vs_ide_gs_debug_bad_build_error_list")  
 
@@ -210,4 +194,3 @@ Visual Studio は、プロジェクトのビルドとデバッグ ツールの�
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
  [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)
-

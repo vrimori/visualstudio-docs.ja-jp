@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.classdesigner.cpplimitation
+f1_keywords: vs.classdesigner.cpplimitation
 helpviewer_keywords:
 - Visual C++, Class Designer
 - Class Designer, Visual C++ support
@@ -19,30 +17,15 @@ helpviewer_keywords:
 - C++, class diagrams
 - C++, Class Designer
 ms.assetid: f5b40921-2ef7-4de0-b595-45b44c79ffa6
-caps.latest.revision: 23
-author: kempb
-ms.author: kempb
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
-ms.openlocfilehash: 0d974e9af7d22c5d02b1313cb2e46c873592f4d3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: ef75c8108b7d86367e69ab7eead8a3a282596560
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="working-with-visual-c-code-class-designer"></a>Visual C++ コードの使用 (クラス デザイナー)
 クラス デザイナーは、*クラス ダイアグラム*と呼ばれるビジュアル デザイン サーフェイスを表示します。クラス ダイアグラムは、プロジェクトのコード要素を視覚的に表現するものです。 クラス ダイアグラムを使用して、プロジェクト内のクラスおよびその他の型を設計し、視覚化できます。  
@@ -134,4 +117,3 @@ ms.lasthandoff: 06/23/2017
  [クラス デザイナーの Visual C++ 構造体](../ide/visual-cpp-structures-in-class-designer.md)   
  [クラス デザイナーの Visual C++ 列挙体](../ide/visual-cpp-enumerations-in-class-designer.md)   
  [クラス デザイナーにおける Visual C++ の typedef](../ide/visual-cpp-typedefs-in-class-designer.md)
-

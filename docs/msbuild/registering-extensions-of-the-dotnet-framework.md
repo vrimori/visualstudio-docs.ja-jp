@@ -1,38 +1,38 @@
 ---
 title: ".NET Framework の拡張機能の登録 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[参照の追加] ダイアログ ボックス、登録 (.NET Framework の拡張機能を)"
-  - "MSBuild、登録 (.NET Framework の拡張機能を)"
-  - ".NET Framework 拡張機能、登録"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Add References dialog box, registering extensions of the .NET Framework
+- MSBuild, registering extensions of the .NET Framework
+- .NET Framework extensions, registering
 ms.assetid: deee6f53-ea87-4b88-a120-bea589822e03
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: ccffad8637f032993c71efa2eca3ba7d14e6e88a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# .NET Framework の拡張機能の登録
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-.NET Framework の特定のバージョンを拡張するアセンブリを開発できます。  アセンブリが Visual Studio の **\[参照の追加\]** ダイアログ ボックスに表示されるようにするには、そのアセンブリを格納するフォルダーをシステム レジストリに追加する必要があります。  
+# <a name="registering-extensions-of-the-net-framework"></a>.NET Framework の拡張機能の登録
+.NET Framework の特定のバージョンを拡張するアセンブリを開発できます。 アセンブリが Visual Studio の **[参照の追加]** ダイアログ ボックスに表示されるようにするには、そのアセンブリを格納するフォルダーをシステム レジストリに追加する必要があります。  
   
- たとえば、Trey Research 社では、.NET Framework 4 を拡張するライブラリを開発しており、プロジェクトが .NET Framework 4 を対象とするときはそのライブラリ アセンブリが **\[参照の追加\]** ダイアログ ボックスに表示されるようにするとします。  また、アセンブリは、32 ビット コンピューター上で実行される 32 ビット アセンブリまたは 64 ビット コンピューター上で実行される 64 ビット アセンブリであり、C:\\TreyResearch\\Extensions4\\ フォルダーにインストールされるとします。  
+ たとえば、Trey Research 社では、.NET Framework 4 を拡張するライブラリを開発しており、プロジェクトが .NET Framework 4 を対象とするときはそのライブラリ アセンブリが **[参照の追加]** ダイアログ ボックスに表示されるようにするとします。 また、アセンブリは、32 ビット コンピューター上で実行される 32 ビット アセンブリまたは 64 ビット コンピューター上で実行される 64 ビット アセンブリであり、C:\TreyResearch\Extensions4\ フォルダーにインストールされるとします。  
   
- このフォルダーを登録するために使用するキーは、HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.21006\\AssemblyFoldersEx\\TreyResearch\\ です。  このキーに指定する既定値は、C:\\TreyResearch\\Extensions4 です。  
+ このフォルダーを登録するために使用するキーは、HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\v4.0.21006\AssemblyFoldersEx\TreyResearch\\ です。 このキーに指定する既定値は、C:\TreyResearch\Extensions4 です。  
   
 > [!NOTE]
 >  .NET Framework のビルド番号は異なる場合があります。  
   
- 32 ビット アセンブリを 64 ビット コンピューターに登録するには、Wow6432 ノードを使用します \(例: HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\.NETFramework\\v4.0.21006\\AssemblyFoldersEx\\TreyResearch\\\)。  
+ 32 ビット アセンブリを 64 ビット コンピューターに登録するには、Wow6432 ノードを使用します (例: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\v4.0.21006\AssemblyFoldersEx\TreyResearch\\)。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio の統合](../msbuild/visual-studio-integration-msbuild.md)

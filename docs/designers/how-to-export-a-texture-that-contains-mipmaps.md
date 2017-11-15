@@ -4,21 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-designers
+ms.technology: vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d1ad14b-44fb-4cf0-a995-5e2f60026524
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 2176086d813109a92f1e2467498d3f1ad4b18c5e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 04d150c517d4ac0b4f3c47c5e9e4758e24d697c5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-export-a-texture-that-contains-mipmaps"></a>方法: ミップマップを含むテクスチャをエクスポートする
 イメージ コンテンツ パイプラインは、プロジェクトのビルド フェーズ中にソース イメージから MIPMAP を生成できます。 各 MIPMAP レベルのイメージの内容を手動で指定する必要がない場合 (特定の効果を得るためになど)、ビルド時に MIPMAP を生成することで、MIPMAP の内容とソース テクスチャが確実に同期するようになります。また、実行時に MIPMAP を生成するためのパフォーマンス コストがゼロになります。  

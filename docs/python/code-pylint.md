@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio での PyLint の使用 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/12/2017
+ms.date: 07/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bc668a4b-10ae-4199-90b8-c984456b6003
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 70c119be4402b8f00d44a4fe2a9b5770b7f83694
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
-ms.openlocfilehash: 4b22d434b99bdd2648408b9191c5f050589883ae
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="using-pylint-to-check-python-code"></a>PyLint を使用した Python コードのチェック
 
 Visual Studio for Python プロジェクトには [PyLint](https://www.pylint.org/) が組み込まれています。これは広く用いられている Python コードのエラー チェックツールで、優れた Python のコード パターンを作成するのに役立ちます。
@@ -58,4 +55,3 @@ PyLint ドキュメントの[コマンド ライン オプション](https://pyl
 1. ファイルを編集のために開くと、操作できる各種の設定が表示されます。 警告を無効にするには、`[MESSAGES CONTROL]` セクションを探し、そのセクションの `disable` 設定を見つけます。 特定のメッセージからなる長い文字列が表示されます。ここに目的の警告を追加できます。 この例では、`,missing-docstring` (区切りコンマを含む) を追加します。
 
 1. `.pylintrc` ファイルを保存し、PyLint をもう一度実行して、警告が表示されなくなったことを確認します。
-

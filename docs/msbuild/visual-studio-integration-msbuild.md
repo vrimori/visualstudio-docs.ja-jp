@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,48 +18,33 @@ helpviewer_keywords:
 - MSBuild, in-process compilers
 - MSBuild, design-time target execution
 ms.assetid: 06cd6d7f-8dc1-4e49-8a72-cc9e331d7bca
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 0a5cf4b0d4d6bb3b66814554c349238ab63a4b41
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 5aff5914d9b278b206f81abd4f28ce9f4dfa409c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio の統合 (MSBuild)
-Visual Studio は、マネージ プロジェクトの読み込みとビルドを行う [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] をホストしています。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はプロジェクトに対応しているため、そのプロジェクトが他のツールで作成されていたり、ビルド処理がカスタマイズされていたりしても、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 形式のほとんどすべてのプロジェクトを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で問題なく使用できます。  
+Visual Studio は、マネージ プロジェクトの読み込みとビルドを行う [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] をホストしています。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はプロジェクトに対応しているため、そのプロジェクトが他のツールで作成されていたり、ビルド処理がカスタマイズされていたりしても、 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 形式のほとんどすべてのプロジェクトを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]で問題なく使用できます。  
   
- このトピックでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] に読み込んでビルドするプロジェクトおよび .targets ファイルをカスタマイズする際に考慮が必要な、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] による [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のホストに固有な事項について説明します。 これらの事項は、IntelliSense やデバッグなどの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の機能をカスタム プロジェクトに対して有効にするうえで役立ちます。  
+ このトピックでは、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]に読み込んでビルドするプロジェクトおよび .targets ファイルをカスタマイズする際に考慮が必要な、 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] による [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のホストに固有な事項について説明します。 これらの事項は、IntelliSense やデバッグなどの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の機能をカスタム プロジェクトに対して有効にするうえで役立ちます。  
   
- C++ プロジェクトの詳細については、「[プロジェクト ファイル](/cpp/ide/project-files)」を参照してください。  
+ C++ プロジェクトの詳細については、「 [Project Files](/cpp/ide/project-files)」を参照してください。  
   
 ## <a name="project-file-name-extensions"></a>プロジェクト ファイルの拡張子  
- MSBuild.exe は、.*proj のパターンに一致するすべてのプロジェクト ファイル拡張子を認識します。 ただし、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、プロジェクトを読み込む言語固有のプロジェクト システムを決定する、これらのプロジェクト ファイル拡張子のサブセットしか認識しません。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] には、言語に依存しない [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ベースのプロジェクト システムが備わっていないためです。  
+ MSBuild.exe は、.*proj のパターンに一致するすべてのプロジェクト ファイル拡張子を認識します。 ただし、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、プロジェクトを読み込む言語固有のプロジェクト システムを決定する、これらのプロジェクト ファイル拡張子のサブセットしか認識しません。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] には、言語に依存しない [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ベースのプロジェクト システムが備わっていないためです。  
   
- たとえば、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] のプロジェクト システムは .csproj ファイルを読み込みますが、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では .xxproj ファイルを読み込むことができません。 任意の言語のソース ファイル用のプロジェクト ファイルには、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] に読み込む [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] または [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクト ファイルと同じ拡張子を使用する必要があります。  
+ たとえば、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] のプロジェクト システムは .csproj ファイルを読み込みますが、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では .xxproj ファイルを読み込むことができません。 任意の言語のソース ファイル用のプロジェクト ファイルには、 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] に読み込む [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] または [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト ファイルと同じ拡張子を使用する必要があります。  
   
 ## <a name="well-known-target-names"></a>既知のターゲット名  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の **[ビルド]** をクリックすると、プロジェクトの既定のターゲットが実行されます。 このターゲットも `Build`という名前になっていることがよくあります。 **[リビルド]** または **[消去]** を選択すると、プロジェクト内の同じ名前のターゲットが実行されます。 **[発行]** をクリックすると、プロジェクト内の `PublishOnly` という名前のターゲットが実行されます。  
+ **の** [ビルド] [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] をクリックすると、プロジェクトの既定のターゲットが実行されます。 このターゲットも `Build`という名前になっていることがよくあります。 **[リビルド]** または **[消去]** を選択すると、プロジェクト内の同じ名前のターゲットが実行されます。 **[発行]** をクリックすると、プロジェクト内の `PublishOnly` という名前のターゲットが実行されます。  
   
 ## <a name="configurations-and-platforms"></a>構成とプラットフォーム  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトの構成は、`PropertyGroup` 属性を含む `Condition` 要素内にグループ化されているプロパティによって表されます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、表示するプロジェクト構成およびプラットフォームのリストを作成するために、これらの条件を確認します。 このリストを正常に抽出するには、条件の形式が次のようになっている必要があります。  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトの構成は、 `PropertyGroup` 属性を含む `Condition` 要素内にグループ化されているプロパティによって表されます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、表示するプロジェクト構成およびプラットフォームのリストを作成するために、これらの条件を確認します。 このリストを正常に抽出するには、条件の形式が次のようになっている必要があります。  
   
 ```  
 Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "  
@@ -68,10 +52,10 @@ Condition=" '$(Configuration)' == 'Release' "
 Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' "  
 ```  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はこの目的のために、`PropertyGroup`、`ItemGroup`、`Import`、プロパティ、および項目要素の条件を確認します。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はこの目的のために、 `PropertyGroup`、 `ItemGroup`、 `Import`、プロパティ、および項目要素の条件を確認します。  
   
 ## <a name="additional-build-actions"></a>その他のビルド アクション  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、[[ファイルのプロパティ]](http://msdn.microsoft.com/en-us/013c4aed-08d6-4dce-a124-ca807ca08959) ウィンドウの **[ビルド アクション]** プロパティを使用して、プロジェクト内のファイルの項目の種類名を変更できます。 `Compile`、`EmbeddedResource`、`Content`、`None` の各項目の種類名は、プロジェクト内に既に存在する他の項目の種類名と共に、常にこのメニューに表示されます。 このメニューにカスタムの項目の種類名すべてが常に表示されるようにするには、 `AvailableItemName`という項目の種類に名前を追加します。 たとえば、プロジェクト ファイルに次の内容を追加すると、このファイルをインポートするすべてのプロジェクトの当該メニューに、カスタム型 `JScript` が追加されます。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、 **[ファイルのプロパティ]** ウィンドウの [[ビルド アクション]](http://msdn.microsoft.com/en-us/013c4aed-08d6-4dce-a124-ca807ca08959) プロパティを使用して、プロジェクト内のファイルの項目の種類名を変更できます。 `Compile`、 `EmbeddedResource`、 `Content`、および `None` の各項目の種類名は、プロジェクト内に既に存在する他の項目の種類名と共に、常にこのメニューに表示されます。 このメニューにカスタムの項目の種類名すべてが常に表示されるようにするには、 `AvailableItemName`という項目の種類に名前を追加します。 たとえば、プロジェクト ファイルに次の内容を追加すると、このファイルをインポートするすべてのプロジェクトの当該メニューに、カスタム型 `JScript` が追加されます。  
   
 ```xml  
 <ItemGroup>  
@@ -90,7 +74,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 -   このタスクの `UseHostCompilerIfAvailable` パラメーターが true に設定されていること。  
   
 ## <a name="design-time-intellisense"></a>デザイン時における IntelliSense のサポート  
- ビルドによって出力アセンブリが生成される前に、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で IntelliSense がサポートされるようにするには、次の条件が満たされている必要があります。  
+ ビルドによって出力アセンブリが生成される前に、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で IntelliSense がサポートされるようにするには、次の条件が満たされている必要があります。  
   
 -   `Compile`という名前のターゲットが存在すること。  
   
@@ -101,9 +85,9 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 -   「インプロセス コンパイラ」のセクションに示した条件が満たされていること。  
   
 ## <a name="building-solutions"></a>ソリューションの構築  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内では、ソリューション ファイルおよびプロジェクトのビルドの順序は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 自体によって制御されます。 コマンド ラインで msbuild.exe を使用してソリューションをビルドする場合、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はソリューション ファイルを解析し、プロジェクトのビルドの順序を指定します。 どちらの場合も、プロジェクトは依存関係の順序で個別にビルドされ、プロジェクト間参照は走査されません。 逆に、msbuild.exe を使用して個々のプロジェクトをビルドする場合は、プロジェクト間参照が走査されます。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]内では、ソリューション ファイルおよびプロジェクトのビルドの順序は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 自体によって制御されます。 コマンド ラインで msbuild.exe を使用してソリューションをビルドする場合、 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はソリューション ファイルを解析し、プロジェクトのビルドの順序を指定します。 どちらの場合も、プロジェクトは依存関係の順序で個別にビルドされ、プロジェクト間参照は走査されません。 逆に、msbuild.exe を使用して個々のプロジェクトをビルドする場合は、プロジェクト間参照が走査されます。  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の内部でビルドする場合は、`$(BuildingInsideVisualStudio)` プロパティを `true` に設定します。 これをプロジェクトまたは .targets ファイル内で使用することにより、ビルドの動作を変更できます。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]の内部でビルドする場合は、 `$(BuildingInsideVisualStudio)` プロパティを `true`に設定します。 これをプロジェクトまたは .targets ファイル内で使用することにより、ビルドの動作を変更できます。  
   
 ## <a name="displaying-properties-and-items"></a>プロパティと項目の表示  
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、特定のプロパティ名とプロパティ値を認識します。 たとえば、プロジェクト内で次のプロパティを使用すると、 **プロジェクト デザイナー** の **[アプリケーションの種類]** ボックスに **Windows アプリケーション**が表示されます。  
@@ -116,7 +100,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
   
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は一部のプロパティの既定値を認識しています。 これらのプロパティは、既定値以外の値を持つ場合だけプロジェクト ファイルに保存されます。  
   
- 恣意的な名前のプロパティは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では表示されません。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で恣意的な名前のプロパティを変更するには、XML エディターでプロジェクト ファイルを開き、手動で編集する必要があります。 詳細については、このトピックで後述する「 [Editing Project Files in Visual Studio](#BKMK_EditingProjects) 」を参照してください。  
+ 恣意的な名前のプロパティは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]では表示されません。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]で恣意的な名前のプロパティを変更するには、XML エディターでプロジェクト ファイルを開き、手動で編集する必要があります。 詳細については、このトピックで後述する「 [Editing Project Files in Visual Studio](#BKMK_EditingProjects) 」を参照してください。  
   
  任意の項目の種類名を使用してプロジェクト内で定義された項目は、既定では、ソリューション エクスプローラーのプロジェクト ノードの下に表示されます。 項目が表示されないようにするには、 `Visible` メタデータを `false`に設定します。 たとえば、次の項目はビルド処理に参加しますが、ソリューション エクスプローラーには表示されません。  
   
@@ -133,17 +117,17 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 ## <a name="conditions-on-items-and-properties"></a>項目とプロパティの条件  
  ビルド時には、すべての条件が完全に遵守されます。  
   
- 表示するプロパティ値を決定する際、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] が、構成に依存すると見なすプロパティは、構成に依存しないと見なすプロパティとは評価方法が異なります。 構成に依存すると見なされるプロパティの場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は `Configuration` プロパティと `Platform` プロパティを適切に設定し、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に対しプロジェクトを再評価するように指示します。 構成に依存しないと見なされるプロパティの場合、条件の評価方法は不確定です。  
+ 表示するプロパティ値を決定する際、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] が、構成に依存すると見なすプロパティは、構成に依存しないと見なすプロパティとは評価方法が異なります。 構成に依存すると見なされるプロパティの場合、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は `Configuration` プロパティと `Platform` プロパティを適切に設定し、 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に対しプロジェクトを再評価するように指示します。 構成に依存しないと見なされるプロパティの場合、条件の評価方法は不確定です。  
   
  項目の条件式は、その項目をソリューション エクスプローラーに表示するかどうかを決めるという目的では常に無視されます。  
   
 ## <a name="debugging"></a>デバッグ  
- 出力アセンブリを見つけて起動し、デバッガーをアタッチするには、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、`OutputPath`、および `AssemblyName` の各プロパティが `OutputType` で正しく定義されている必要があります。 ビルド処理においてコンパイラが .pdb ファイルを生成しない場合、デバッガーはアタッチされません。  
+ 出力アセンブリを見つけて起動し、デバッガーをアタッチするには、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 、 `OutputPath`、および `AssemblyName`の各プロパティが `OutputType` で正しく定義されている必要があります。 ビルド処理においてコンパイラが .pdb ファイルを生成しない場合、デバッガーはアタッチされません。  
   
 ## <a name="design-time-target-execution"></a>デザイン時におけるターゲットの実行  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、プロジェクトを読み込む際に、特定の名前を持つターゲットを実行しようとします。 このようなターゲットとしては、`Compile`、`ResolveAssemblyReferences`、`ResolveCOMReferences`、`GetFrameworkPaths`、`CopyRunEnvironmentFiles` などがあります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はこれらのターゲットを実行することにより、IntelliSense が使用できるようにコンパイラを初期化し、デバッガーを初期化し、さらにソリューション エクスプローラーに表示される参照を解決します。 これらのターゲットが存在しない場合、プロジェクトは正常に読み込まれてビルドされますが、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のデザイン時環境は完全には機能しません。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、プロジェクトを読み込む際に、特定の名前を持つターゲットを実行しようとします。 このようなターゲットとしては、 `Compile`、 `ResolveAssemblyReferences`、 `ResolveCOMReferences`、 `GetFrameworkPaths`、 `CopyRunEnvironmentFiles`などがあります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はこれらのターゲットを実行することにより、IntelliSense が使用できるようにコンパイラを初期化し、デバッガーを初期化し、さらにソリューション エクスプローラーに表示される参照を解決します。 これらのターゲットが存在しない場合、プロジェクトは正常に読み込まれてビルドされますが、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のデザイン時環境は完全には機能しません。  
   
-##  <a name="BKMK_EditingProjects"></a> Visual Studio でプロジェクト ファイルを編集する  
+##  <a name="BKMK_EditingProjects"></a> Editing Project Files in Visual Studio  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトを直接編集するには、Visual Studio の XML エディターでプロジェクト ファイルを開きます。  
   
 #### <a name="to-unload-and-edit-a-project-file-in-visual-studio"></a>Visual Studio でプロジェクト ファイルをアンロードして編集するには  
@@ -169,20 +153,20 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、プロジェクト ファイルの内容やプロジェクト ファイルによってインポートしたファイルの内容をキャッシュします。 読み込んだプロジェクト ファイルを編集すると、プロジェクトを再読み込みして変更を有効にするように求めるメッセージが [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって自動的に表示されます。 ただし、読み込んだプロジェクトによってインポートされたファイルを編集した場合は、再読み込みを求めるメッセージが表示されないため、手動でプロジェクトのアンロードと再読み込みを行い、変更内容を有効にする必要があります。  
   
 ## <a name="output-groups"></a>出力グループ  
- Microsoft.Common.targets で定義したいくつかのターゲットの名前は、最後の部分が `OutputGroups` または `OutputGroupDependencies` となります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はこれらのターゲットを呼び出して、特定のプロジェクト出力のリストを取得します。 たとえば、`SatelliteDllsProjectOutputGroup` ターゲットを呼び出すと、ビルドが作成したすべてのサテライト アセンブリのリストが作成されます。 これらの出力グループは、発行、配置、およびプロジェクト間参照などの機能によって使用されます。 これらのターゲットを定義していなくても、プロジェクトは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] に読み込まれてビルドされますが、一部の機能が正常に動作しない場合があります。  
+ Microsoft.Common.targets で定義したいくつかのターゲットの名前は、最後の部分が `OutputGroups` または `OutputGroupDependencies`となります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はこれらのターゲットを呼び出して、特定のプロジェクト出力のリストを取得します。 たとえば、 `SatelliteDllsProjectOutputGroup` ターゲットを呼び出すと、ビルドが作成したすべてのサテライト アセンブリのリストが作成されます。 これらの出力グループは、発行、配置、およびプロジェクト間参照などの機能によって使用されます。 これらのターゲットを定義していなくても、プロジェクトは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]に読み込まれてビルドされますが、一部の機能が正常に動作しない場合があります。  
   
 ## <a name="reference-resolution"></a>参照の解決  
- 参照の解決とは、プロジェクト ファイルに格納されている参照項目を使用して、実際のアセンブリを検索する処理をいいます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、**[プロパティ]** ウィンドウに参照ごとに詳細なプロパティを表示するために、参照の解決を実行する必要があります。 次の一覧では、3 種類の参照とその解決方法について説明します。  
+ 参照の解決とは、プロジェクト ファイルに格納されている参照項目を使用して、実際のアセンブリを検索する処理をいいます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、 **[プロパティ]** ウィンドウに参照ごとに詳細なプロパティを表示するために、参照の解決を実行する必要があります。 次の一覧では、3 種類の参照とその解決方法について説明します。  
   
 -   アセンブリ参照  
   
      プロジェクト システムは、 `ResolveAssemblyReferences`という既知の名前を持つターゲットを呼び出します。 このターゲットは、 `ReferencePath`という項目の種類名を持つ項目を生成します。 これらの項目のそれぞれが、参照への完全パスを含む項目規定 (項目の `Include` 属性の値) を持ちます。 これらの項目には、以下の新しいメタデータに加え、入力項目のすべてのメタデータも渡されます。  
   
-    -   アセンブリを出力フォルダーにコピーするかどうかを示す `CopyLocal`。true または false に設定されます。  
+    -   アセンブリを出力フォルダーにコピーするかどうかを示す`CopyLocal`。true または false に設定されます。  
   
-    -   参照の元の項目規定を格納している `OriginalItemSpec`。  
+    -   参照の元の項目規定を格納している`OriginalItemSpec`。  
   
-    -   `ResolvedFrom` ディレクトリから解決された場合に "{TargetFrameworkDirectory}" に設定される [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]。  
+    -   `ResolvedFrom`ディレクトリから解決された場合に "{TargetFrameworkDirectory}" に設定される [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 。  
   
 -   COM 参照  
   

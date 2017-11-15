@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#AL
+f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#AL
 dev_langs:
 - VB
 - CSharp
@@ -19,30 +17,15 @@ helpviewer_keywords:
 - AL task [MSBuild]
 - MSBuild, AL task
 ms.assetid: 2ddefbf2-5662-4d55-99a6-ac383bf44560
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: 3b2427ae09beefcf1aca204815dd259eab0cde9a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/30/2017
-
+ms.openlocfilehash: 233946c0c46f9ee053f3497e7d6aa856315c3dfd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="al-assembly-linker-task"></a>AL (アセンブリ リンカー) タスク
 AL タスクは、[!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] と共に配布されるツールである AL.exe をラップします。 アセンブリ リンカー ツールは、モジュールまたはリソース ファイルである 1 つ以上のファイルから、マニフェストを含むアセンブリを作成するために使われます。 これらの機能はコンパイラおよび開発環境で既に提供されていることがあるので、ほとんどの場合、このタスクを直接使う必要はありません。 アセンブリ リンカーは、混合言語の開発から生成されるものなど、複数のコンポーネント ファイルから 1 つのアセンブリを作成する必要がある開発者に適しています。 このタスクでは、複数のモジュールが 1 つのアセンブリ ファイルに結合されることはありません。生成されたアセンブリを正しく読み込むためには、やはり個々のモジュールを配布して使用できるようにする必要があります。 AL.exe について詳しくは、「[Al.exe (アセンブリ リンカー)](/dotnet/framework/tools/al-exe-assembly-linker)」をご覧ください。  

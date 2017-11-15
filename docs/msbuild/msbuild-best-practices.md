@@ -4,38 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - best practices, MSBuild
 - MSBuild, best practices
 ms.assetid: 90ef8693-e921-410a-a377-fe4d13f58c48
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 881075ee32ccac155237035dbe1a2f6d17a82893
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
-ms.openlocfilehash: a48867456cd6ac60c5fc6ca53fcadbc4ad787711
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="msbuild-best-practices"></a>MSBuild のベスト プラクティス
 MSBuild スクリプトを記述するための次のベスト プラクティスを推奨します。  
@@ -52,4 +36,3 @@ MSBuild スクリプトを記述するための次のベスト プラクティ�
   
 ## <a name="see-also"></a>関連項目  
  [詳細な概念](../msbuild/msbuild-advanced-concepts.md)
-

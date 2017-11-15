@@ -1,27 +1,24 @@
 ---
 title: "R Code Visual Studio 用の IntelliSense | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d96e3677-e5ec-4e11-82a8-d914a93b1aa9
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 821f92f7a3cf0e5ca1d647890602ec17e580b36b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 4e96184aa9a7711a7c046eb886049563dd308433
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="intellisense"></a>IntelliSense
 
 Visual Studio の IntelliSense では、コードを入力するときに、呼び出すことのできる関数、オブジェクトのメンバー、関数の引数、[コード スニペット](code-snippets.md)に関する情報が、見える位置に表示されます。 また、入力に合わせて入力候補が表示され、Tab キーまたは Enter キーを押すと自動的に入力されます (**[詳細設定]** タブの[エディター オプション](code-editing.md#editor-options)を参照)。 IntelliSense は、エディターと[対話型ウィンドウ](interactive-repl.md)の両方で利用可能です。
@@ -69,4 +66,3 @@ IntelliSense は、同じファイルのユーザー定義関数に (名前 - �
 余白に電球 (スマート タグと呼ばれます) が表示されたときは、Visual Studio がよく使われるアクションに使用できるショートカットがあることを提案しています。 たとえば、エディターで `library` ステートメントを含む行をポイントすると、電球マークが表示されます。 電球を選択すると、使用可能なオプションが表示されます。
 
 ![エディターでの R のスマート タグ](media/intellisense-smart-tags.png)
-

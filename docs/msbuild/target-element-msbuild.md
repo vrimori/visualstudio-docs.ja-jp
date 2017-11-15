@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 03/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#Target
+f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#Target
 dev_langs:
 - VB
 - CSharp
@@ -19,31 +17,15 @@ helpviewer_keywords:
 - Target element [MSBuild]
 - <Target> element [MSBuild]
 ms.assetid: 350f6fc2-86b3-45f2-a31e-ece0e6bd4dca
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
-ms.openlocfilehash: 217f42db123e95557c2425b5678fb1ac9473c162
-ms.contentlocale: ja-jp
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ed3af7142d556c52fbed71f03d5cc53eb3025035
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="target-element-msbuild"></a>Target 要素 (MSBuild)
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] が順次実行するタスクのセットを格納します。  
@@ -102,7 +84,7 @@ ms.lasthandoff: 03/13/2017
 
 |要素|説明|  
 |-------------|-----------------|  
-|[Project](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
+|[プロジェクト](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
 
 ## <a name="remarks"></a>コメント  
  実行する最初のターゲットは実行時に指定されます。 各ターゲットは他のターゲットとの依存関係を持つ場合があります。 たとえば、展開用のターゲットはコンパイル用のターゲットに依存します。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] エンジンは `DependsOnTargets` 属性に出現する順序で、依存関係を左から右に実行します。 詳細については、「[ターゲット](../msbuild/msbuild-targets.md)」を参照してください。  
@@ -139,4 +121,3 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>関連項目  
  [ターゲット](../msbuild/msbuild-targets.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)
-
