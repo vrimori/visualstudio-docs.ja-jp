@@ -1,23 +1,26 @@
 ---
 title: "方法 : アプリケーション アイコンを指定する (Visual Basic、C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "アプリケーションのアイコン [Visual Studio]"
-  - "アプリケーションのプロパティ [Visual Studio] アイコン"
-  - "アプリケーション アイコン [Visual Studio]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- icons [Visual Studio], application
+- application properties [Visual Studio], icons
+- application icons [Visual Studio]
 ms.assetid: ad8e14ed-adc2-45b6-a0be-818b16d5616f
-caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 17cce04dd94829225823de676e286b7d0158abec
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-specify-an-application-icon-visual-basic-c"></a>方法 : アプリケーション アイコンを指定する (Visual Basic、C#)
 プロジェクトの `Icon` プロパティは、ファイル エクスプローラーと Windows タスク バーに表示されるコンパイルされたアプリケーションのアイコン ファイル (.ico) を指定します。  
@@ -37,15 +40,10 @@ caps.handback.revision: 18
   
 4.  **(Visual Basic)** **[アイコン]** 一覧で、アイコン (.ico) ファイルを選びます。  
   
-     **(C#)** **[アイコン]** 一覧の近くにある **[参照]** ボタンを選び、使うアイコン ファイルの場所を参照します。  
+     **(C#)** **[アイコン]** 一覧の近くにある **\<[参照]** ボタンを選び、使うアイコン ファイルの場所を参照します。  
   
 ## <a name="see-also"></a>関連項目  
  [[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)   
  [[アプリケーション] ページ (プロジェクト デザイナー) (C#)](../ide/reference/application-page-project-designer-csharp.md)   
  [アプリケーション プロパティの管理](../ide/application-properties.md)  
  [方法: リソースを追加または削除する](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

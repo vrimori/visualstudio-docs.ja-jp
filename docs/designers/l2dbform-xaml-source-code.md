@@ -4,74 +4,57 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 624e96d4-6d27-4195-8ac2-2f3835f6c57e
-caps.latest.revision: 2
-author: kempb
-ms.author: kempb
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b62eac5ab4b057e26ed4a0a34551655984449cf1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: c3ccc6fcfa8471d767356f1e30d1e5f8b0ed15d0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="l2dbformxaml-source-code"></a>L2DBForm.xaml ソース コード
-このトピックでは、「[LINQ to XML を使用した WPF のデータ バインドの例](../designers/wpf-data-binding-using-linq-to-xml-example.md)」の XAML ソース ファイル L2DBForm.xaml の内容を紹介し、説明します。  
+このトピックでは、「 [WPF Data Binding Using LINQ to XML Example](../designers/wpf-data-binding-using-linq-to-xml-example.md)」の XAML ソース ファイル L2DBForm.xaml の内容と説明を示します。  
   
 ## <a name="overall-ui-structure"></a>UI の全体的な構造  
- WPF プロジェクトで一般に見られるように、このファイルには親要素として <xref:System.Windows.Window> XML 要素が含まれており、この要素に `LinqToXmlDataBinding` 名前空間の派生クラス `L2XDBFrom` が関連付けられています。  
+ WPF プロジェクトで一般に見られるように、このファイルには親要素として <xref:System.Windows.Window> XML 要素が含まれており、この要素に `L2XDBFrom` 名前空間の派生クラス `LinqToXmlDataBinding` が関連付けられています。  
   
- クライアント領域は、明るい青色の背景の <xref:System.Windows.Controls.StackPanel> 内に表示されます。 このパネルには、4 つの <xref:System.Windows.Controls.DockPanel> UI セクションが <xref:System.Windows.Controls.Separator> バーで区切られて含まれています。 これらのセクションの目的については、[前のトピック](../designers/walkthrough-linqtoxmldatabinding-example.md)の「**解説**」で説明されています。  
+ クライアント領域は、背景が薄い青になっている <xref:System.Windows.Controls.StackPanel> に含まれています。 このパネルは、 <xref:System.Windows.Controls.DockPanel> バーで区切られた 4 つの <xref:System.Windows.Controls.Separator> UI セクションで構成されています。 これらのセクションの目的については、 **前のトピック** の「 [解説](../designers/walkthrough-linqtoxmldatabinding-example.md)」で説明されています。  
   
- 各セクションには、それぞれを識別するラベルが含まれています。 最初の 2 つのセクションでは、<xref:System.Windows.FrameworkElement.LayoutTransform%2A> を使用してこのラベルは 90 度回転されています。 セクションの残りの部分には、そのセクションの目的に適したテキスト ブロック、テキスト ボックス、ボタンなどの UI 要素が含まれています。 これらの子のコントロールを配置するために子の <xref:System.Windows.Controls.StackPanel> が使用されることがあります。  
+ 各セクションには、それぞれを識別するラベルが含まれています。 最初の 2 つのセクションでは、 <xref:System.Windows.FrameworkElement.LayoutTransform%2A>を使用してこのラベルを 90°回転させています。 セクションの残りの部分には、そのセクションの目的に適したテキスト ブロック、テキスト ボックス、ボタンなどの UI 要素が含まれています。 これらの子コントロールの配置には、子 <xref:System.Windows.Controls.StackPanel> が使用されている場合があります。  
   
 ## <a name="window-resource-section"></a>ウィンドウ リソース セクション  
  9 行目の `<Window.Resources>` 開始タグは、ウィンドウ リソース セクションの開始を示します。 このセクションは、35 行目の終了タグで終了します。  
   
- `<ObjectDataProvider>` タグ (11 ～ 25 行目) では、`LoadedBooks` という <xref:System.Windows.Data.ObjectDataProvider> を宣言しています。これはソースとして <xref:System.Xml.Linq.XElement> を使用します。 この <xref:System.Xml.Linq.XElement> は、埋め込みの XML ドキュメント (`CDATA` 要素) を解析して初期化されます。 組み込み XML ドキュメントの宣言時および解析時に、空白が保持されることに注意してください。 これは、生の XML の表示に使用されている <xref:System.Windows.Controls.TextBlock> コントロールに、XML の書式を設定する機能がないためです。  
+ 11 ～ 25 行目にわたる `<ObjectDataProvider>` タグでは、 <xref:System.Windows.Data.ObjectDataProvider>をソースとして使用する `LoadedBooks`という名前の <xref:System.Xml.Linq.XElement> が宣言されています。 この <xref:System.Xml.Linq.XElement> は、組み込み XML ドキュメント ( `CDATA` 要素) を解析することで初期化されます。 組み込み XML ドキュメントの宣言時および解析時に、空白が保持されることに注意してください。 これは、生の XML の表示に使用されている <xref:System.Windows.Controls.TextBlock> コントロールに、XML の書式を設定する機能がないためです。  
   
- 最後に、`BookTemplate` という <xref:System.Windows.DataTemplate> が 28 ～ 34 行目で宣言されます。 このテンプレートは、[**Book List**] UI セクションにエントリを表示するために使用されます。 ここでは、データ バインドおよび LINQ to XML の動的プロパティを使用し、次の代入を通じて書籍の ID と名前を取得します。  
+ 最後に、28 ～ 34 行目で <xref:System.Windows.DataTemplate> という名前の `BookTemplate` が定義されています。 このテンプレートは、**[Book List]** UI セクションにエントリを表示するために使用されます。 ここでは、データ バインドおよび LINQ to XML の動的プロパティを使用し、次の代入を通じて書籍の ID と名前を取得します。  
   
 ```  
 Text="{Binding Path=Attribute[id].Value}"Text="{Binding Path=Value}"  
 ```  
   
 ## <a name="data-binding-code"></a>データ バインド コード  
- このファイルでは、<xref:System.Windows.DataTemplate> 要素に加えて、データ バインドが各所で使用されています。  
+ このファイルでは、 <xref:System.Windows.DataTemplate> 要素に加えて、データ バインドが各所で使用されています。  
   
- 38 行目の始まりの `<StackPanel>` タグで、このパネルの <xref:System.Windows.FrameworkElement.DataContext%2A> プロパティは `LoadedBooks` データ プロバイダーに設定されています。  
+ 38 行目の `<StackPanel>` 開始タグでは、このパネルの <xref:System.Windows.FrameworkElement.DataContext%2A> プロパティが `LoadedBooks` データ プロバイダーに設定されています。  
   
 ```  
 DataContext="{Binding Source={StaticResource LoadedBooks}}  
 ```  
   
- これにより、このデータ プロバイダーの `Xml` プロパティにバインドして、`tbRawXml` という名前の <xref:System.Windows.Controls.TextBlock> に生の XML を表示できるようになります (46 行目)。  
+ これにより、このデータ プロバイダーの <xref:System.Windows.Controls.TextBlock> プロパティにバインドして、 `tbRawXml` という名前の `Xml` に生の XML を表示できるようになります (46 行目)。  
   
 ```  
 Text="{Binding Path=Xml}"   
 ```  
   
- 58 ～ 62 行目では、**[Book List]** UI セクションの <xref:System.Windows.Controls.ListBox> が、その表示アイテムのテンプレートをウィンドウ リソース セクションで定義された `BookTemplate` に設定しています。  
+ 58 ～ 62 行目では、 <xref:System.Windows.Controls.ListBox> [Book List] **UI セクションの** が、その表示項目のテンプレートをウィンドウ リソース セクションで定義された `BookTemplate` に設定しています。  
   
 ```  
 ItemTemplate ="{StaticResource BookTemplate}"   
@@ -85,7 +68,7 @@ ItemTemplate ="{StaticResource BookTemplate}"
 </ListBox.ItemsSource>  
 ```  
   
- 3 つ目の UI セクションの **[Edit Selected Book]** は、まず親 <xref:System.Windows.Controls.StackPanel> の <xref:System.Windows.FrameworkElement.DataContext%2A> を **[Book List]** UI セクション (82 行目) の現在選択されているアイテムにバインドします。  
+ 3 番目の UI セクション **[Edit Selected Book]**では、まず親 <xref:System.Windows.FrameworkElement.DataContext%2A> の <xref:System.Windows.Controls.StackPanel> が、 **[Book List]** UI セクション (82 行目) で現在選択されている項目にバインドされています。  
   
 ```  
 DataContext="{Binding ElementName=lbBooks, Path=SelectedItem}"  
@@ -97,7 +80,7 @@ DataContext="{Binding ElementName=lbBooks, Path=SelectedItem}"
 Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"  
 ```  
   
- 最後の UI セクション [**Add New Book**] では、XAML コード内でデータ バインドが使用されていません。代わりに、データ バインドに類似したコードが L2DBForm.xaml.cs ファイルのイベント処理コードに記述されています。  
+ 最後の UI セクション **[Add New Book]** では、XAML コード内でデータ バインドが使用されていません。代わりに、データ バインドに類似したコードが L2DBForm.xaml.cs ファイルのイベント処理コードに記述されています。  
   
 ## <a name="example"></a>例  
   

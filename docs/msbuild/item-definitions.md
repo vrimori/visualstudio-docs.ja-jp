@@ -4,36 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- msbuild, item definitions
+helpviewer_keywords: msbuild, item definitions
 ms.assetid: 8e3dc223-f9e5-4974-aa0e-5dc7967419cb
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: f9359f3828ab31c69e7c5db46a1136990ceeab67
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: b2cf0713a38187f27bfddd46b0ad32b592d397a0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="item-definitions"></a>項目定義
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0 では、[ItemGroup](../msbuild/itemgroup-element-msbuild.md) 要素を使用することにより、プロジェクト ファイルに項目を静的に宣言できます。 ただし、メタデータは、すべての項目に共通であっても項目単位でしか追加できません。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 以降には、この制限を克服する [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) という名前のプロジェクト要素が導入されました。 *ItemDefinitionGroup* を使用して一連の項目定義を定義すると、名前付きの項目の種類に含まれるすべての項目に既定のメタデータ値を追加できます。  
@@ -76,7 +60,7 @@ ms.lasthandoff: 02/22/2017
  この例では、項目 "i" ではメタデータ "m" が明示的に定義されていないため、既定のメタデータ "m" が項目 "i" に適用されます。 ただし、項目 "i" でメタデータ "n" が既に定義されているため、既定のメタデータ "n" は項目 "i" には適用されません。  
   
 > [!NOTE]
->  XML 要素名およびパラメーター名では、大文字と小文字が区別されます。 項目メタデータ名と項目/プロパティ名では、大文字と小文字は区別されません。 したがって、大文字と小文字のみが異なる名前の ItemDefinitionGroup 項目は同じ ItemGroup として扱う必要があります。  
+>  XML 要素名およびパラメーター名では、大文字と小文字が区別されます。 項目メタデータ名と項目\//プロパティ名では、大文字と小文字は区別されません。 したがって、大文字と小文字のみが異なる名前の ItemDefinitionGroup 項目は同じ ItemGroup として扱う必要があります。  
   
 ## <a name="value-sources"></a>値のソース  
  ItemDefinitionGroup に定義されたメタデータには、以下のさまざまなソースから値を割り当てることができます。  
@@ -271,4 +255,3 @@ ms.lasthandoff: 02/22/2017
   
 ## <a name="see-also"></a>関連項目  
  [バッチ処理](../msbuild/msbuild-batching.md)
-

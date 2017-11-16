@@ -4,37 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - automation [Visual Studio], controlling Tools Options
 - Tools Options settings, Environment node properties
 ms.assetid: 26dca41f-91fc-4ca7-9103-3da402baa1d5
-caps.latest.revision: 18
-author: kempb
-ms.author: kempb
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: ac450b7e414596632d56117813907ee4406ad69d
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: ae50f2d537836501ec4c9c29e50d86aa3e325661
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="options-page-environment-node-properties"></a>[環境] ノード プロパティ ([オプション] ページ)
 このドキュメントでは、**[オプション]** ダイアログ ボックスの **[環境]** カテゴリ (`DTE.Properties("Environment", <Property Page>)`) に関連付けられているページ (またはプロパティ コレクション) について説明します。 各サブセクションの見出しは、Properties コレクションにアクセスするための呼び出しです。その下の表では、コレクションのプロパティを示します。  
@@ -45,7 +30,7 @@ ms.lasthandoff: 02/22/2017
 |プロパティ項目名|値|説明|  
 |------------------------|-----------|-----------------|  
 |ShowStatusBar|Get/Set (Boolean)|ステータス バーを表示するかどうかを指定します。|  
-|WindowMenuContainsNItems|Get/Set (Short)|Windows メニューの&1; 番下にドキュメント ウィンドウを含める方法を指定します。|  
+|WindowMenuContainsNItems|Get/Set (Short)|Windows メニューの 1 番下にドキュメント ウィンドウを含める方法を指定します。|  
 |MRUListContainsNItems|Get/Set (Short)|"最近使用した" サブメニューに表示するファイルの数を指定します。|  
 |Animations|Get/Set (Boolean)|統合開発環境 (IDE: Integrated Development Environment) のステータス バーでアニメーションを使用するかどうかを指定します。|  
 |AnimationSpeed|Get/Set (Short)||  
@@ -78,7 +63,7 @@ ms.lasthandoff: 02/22/2017
 |SaveDocsAsUnicodeWhenDataLoss|Get/Set (Boolean)|コードページでデータが保存できない場合、Unicode でドキュメントを保存します。|  
 |DontShowGlobalUndoChangeLossDialog|Get/Set (Boolean)|全体的に元に戻す操作で他の編集したファイルが変更される場合、警告を表示します。|  
 |AllowEditingReadOnlyFiles|Get/Set (Boolean)|読み取り専用ファイルの編集を有効にしますが、その保存時に警告を表示します。|  
-|DocumentDockPreference|Get/Set (Enum)|<xref:EnvDTE100.vsDocumentDockPreferenceOptions>。 開かれたドキュメントを挿入するタブ内の位置です。|  
+|DocumentDockPreference|Get/Set (Enum)|<xref:EnvDTE100.vsDocumentDockPreferenceOptions>. 開かれたドキュメントを挿入するタブ内の位置です。|  
   
 ## <a name="extension-manager"></a>拡張機能マネージャー  
  `DTE.Properties("Environment", "ExtensionManager")`  
@@ -150,7 +135,7 @@ ms.lasthandoff: 02/22/2017
   
 |プロパティ項目名|値|説明|  
 |------------------------|-----------|-----------------|  
-|OnStartUp|Get/Set (Enum)|起動時に実行するアクションです。<xref:EnvDTE.vsStartUp> から取得され、次のように 0 から 5 の値で示されます。<br /><br /> -   0: ホーム ページを開く<br />-   1: 最後に読み込んだソリューション<br />-   2: **[プロジェクトを開く]** ダイアログ ボックスの表示<br />-   3: **[新しいプロジェクト]** ダイアログ ボックスの表示<br />-   4: 空の環境の表示<br />-   5: スタート ページの表示|  
+|OnStartUp|Get/Set (Enum)|起動時に実行するアクションです。<xref:EnvDTE.vsStartUp> から取得され、0 ～ 5 の値で示されます。<br /><br /> -   0: ホーム ページを開く<br />-   1: 最後に読み込んだソリューション<br />-   2: **[プロジェクトを開く]** ダイアログ ボックスの表示<br />-   3: **[新しいプロジェクト]** ダイアログ ボックスの表示<br />-   4: 空の環境の表示<br />-   5: スタート ページの表示|  
 |StartPageRSSUrl|Get/Set (String)|起動時に使用する RSS フィードの URL です。|  
 |StartPageRefreshDownloadedContent|Get/Set (Boolean)|StartPageRefreshInterval で指定された間隔が経過するたびにスタート ページを更新します。|  
 |StartPageRefreshInterval|Get/Set (Short)|スタート ページを更新する間隔 (分単位) です。|  
@@ -172,7 +157,7 @@ ms.lasthandoff: 02/22/2017
 |------------------------|-----------|-----------------|  
 |HomePage|Get/Set (String)|ホーム ページの URL を表します。|  
 |SearchPage|Get/Set (String)|検索ページの URL を表します。|  
-|ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (Source、Design、External)。|  
+|ViewSourceIn|Get/Set (Enum)|<xref:EnvDTE.vsBrowserViewSource> (Source、Design、External) です。|  
 |ViewSourceExternalProgram|Get/Set (String)|外部ソース ビューアーのパスです。|  
   
 ## <a name="see-also"></a>関連項目  
