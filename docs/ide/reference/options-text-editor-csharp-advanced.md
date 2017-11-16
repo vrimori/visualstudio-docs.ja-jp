@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,33 +19,18 @@ helpviewer_keywords:
 - outlining options [J#]
 - XML documentation, creating
 ms.assetid: 947f9d9a-b0f3-408d-9866-d82895bcee31
-caps.latest.revision: 22
-author: kempb
-ms.author: kempb
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 61a061b6a58b18451fc53c8d53f77889cc1ea253
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 7537b4fc3fec90808c6bdc4a982fe3b7ff37a1d5
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="options-text-editor-c-advanced"></a>[オプション]、[テキスト エディター]、[C#]、[詳細]
-このダイアログ ボックスを使用して、Visual C# のエディターの書式設定、コードのリファクタリング、および XML ドキュメントのコメントの設定を変更します。 このダイアログ ボックスを表示するには、[**ツール**] メニューの [**オプション**] をクリックし、[**テキスト エディター**] フォルダー、[**C#**] を順に展開し、[**詳細設定**] をクリックします。  
+このダイアログ ボックスを使用して、Visual C# のエディターの書式設定、コードのリファクタリング、および XML ドキュメントのコメントの設定を変更します。 このダイアログ ボックスを表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[テキスト エディター]** フォルダー、**[C#]** を順に展開し、**[詳細設定]** をクリックします。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
@@ -67,17 +51,17 @@ ms.lasthandoff: 05/24/2017
   
 -   紫は無効な[エディット コンティニュ](../../debugger/edit-and-continue.md)の編集内容です。  
   
- 下線付きのコード セグメントの上にマウス ポインターを置いて、ヒントでエラーに関する情報を確認してください。  
+下線付きのコード セグメントの上にマウス ポインターを置いて、ヒントでエラーに関する情報を確認してください。  
   
- 有効なセマンティック エラーを表示する  
- 明示的なコンパイルのない特定のコンパイル エラー (たとえば、不明な型を宣言して使用したり、不明なプロパティを参照したりする) を特定します。  
+有効なセマンティック エラーを表示する  
+明示的なコンパイルのない特定のコンパイル エラー (たとえば、不明な型を宣言して使用したり、不明なプロパティを参照したりする) を特定します。  
   
- カーソルの下にあるシンボルへの参照をハイライトする  
- シンボル内にカーソルを置いたり、シンボルをクリックしたりすると、コード ファイル内のそのシンボルのすべてのインスタンスが強調表示されます。  
+カーソルの下にあるシンボルへの参照をハイライトする  
+シンボル内にカーソルを置いたり、シンボルをクリックしたりすると、コード ファイル内のそのシンボルのすべてのインスタンスが強調表示されます。  
   
 ## <a name="refactoring"></a>リファクタリング  
  リファクタリングの結果を確認する  
- ビルド エラーを含むコードをリファクタリングする場合、またはリファクタリングによってコード参照が元のバインドとは別のものにバインドされる場合に、[**検証結果**] ダイアログ ボックスが表示されます。  
+ ビルド エラーを含むコードをリファクタリングする場合、またはリファクタリングによってコード参照が元のバインドとは別のものにバインドされる場合に、**[検証結果]** ダイアログ ボックスが表示されます。  
   
  メンバーにコンパイラが生成した参照が指定されているときに警告する  
  コンパイラによって生成された参照と同じ名前を持つメンバーをリファクタリングすると、警告ダイアログ ボックスが表示されます。  

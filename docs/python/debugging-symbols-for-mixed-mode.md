@@ -1,33 +1,29 @@
 ---
 title: "Visual Studio での混合モード Python/C++ デバッグのシンボル | Microsoft Docs"
 ms.custom: 
-ms.date: 7/12/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be5fdf2f-b55f-488a-9772-58adfe07a7ab
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 365131bf30f57c90715bd04cded0f7c4c5761797
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 1be4e28055f0501433f85325870654671c12f961
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="installing-debugging-symbols-for-python-interpreters"></a>Python インタープリターのデバッグ シンボルのインストール
 
 完全なデバッグ エクスペリエンスを提供するため、Visual Studio の[混合モードの Python デバッガー](debugging-mixed-mode.md)では、多数の内部データ構造を解析するために、Python インタープリターのデバッグ シンボルを使用する必要があります。 たとえば、python27.dll の場合、対応するシンボル ファイルは python27.pdb です。python36.dll の場合、シンボル ファイルは python36.pdb です。 また、各バージョンのインタープリターは、多様なモジュールに合わせてシンボル ファイルを用意しています。
 
-Visual Studio 2017 の "Python 3" および "Anaconda 3" インタープリターの場合、それぞれのシンボルが自動的にインストールされ、Visual Studio で自動的に検出されます。 Visual Studio 2015 以前の場合、または他のインタープリターを使用している場合は、シンボルを別にダウンロードし、Visual Studio の **[デバッグ] > [シンボル]** タブの **[ツール] > [オプション]** でシンボルの場所を設定する必要があります。 これらの手順については、以下のセクションで詳しく説明します。
+Visual Studio 2017 の "Python 3" および "Anaconda 3" インタープリターの場合、それぞれのシンボルが自動的にインストールされ、Visual Studio で自動的に検出されます。 Visual Studio 2015 以前の場合、または他のインタープリターを使用している場合は、シンボルを別にダウンロードし、Visual Studio の **[デバッグ] > [シンボル]** タブの **[ツール] > [オプション]** でシンボルの場所を設定する必要があります。これらの手順については、以下のセクションで詳しく説明します。
 
 Visual Studio でシンボルが必要なとき、通常は混合モードのデバッグ セッションを開始したときに、プロンプトが表示されることがあります。 この場合、ダイアログで 2 つの選択肢が示されます。
 

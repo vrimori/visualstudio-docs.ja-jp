@@ -1,27 +1,24 @@
 ---
 title: "R Tools for Visual Studio のサンプル プロジェクト | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa52ed0e-cdb5-4fb2-814c-c94cac2ffc6f
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 6ceedfff067f245de4b159728bd34a3a849fe9dc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: ec9862f9e7fcbd084d5e12c0467c8b608a5b4956
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="r-tools-for-visual-studio-sample-projects"></a>R Tools for Visual Studio のサンプル プロジェクト
 
 次のサンプル コレクションを使用して、R、R Tools for Visual Studio (RTVS)、Microsoft R Server の使用を開始できます。
@@ -93,4 +90,3 @@ MRO および MRS を使用した R の技術的な比較については、[Lixu
 次の図では、ロジスティック回帰モデルの構築時に使用される経過時間 (秒) を比較して、15 分を超える航空便の遅延を予測しています。  CRAN R で使われた経過時間は、行が少し増えると大幅に増加しますが、MRS では約 2 倍のみ増加しています。 このベンチマークの詳細については、`Benchmarks/rxGlm_benchmark.R` の例を確認してください。
 
 ![rxGlm のベンチマーク](media/samples-rxGLM-benchmark.png)
-

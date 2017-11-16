@@ -3,38 +3,20 @@ title: "Visual Studio のパフォーマンスのヒントとテクニック | M
 ms.date: 08/31/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- debugger
+helpviewer_keywords: debugger
 ms.assetid: 2fbcb59e-e981-4b40-8b7a-c1140d31ec4b
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 173811a4f2d9974755e2432822c801388403ab7c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 4306111cd49a5299bfa5d4e5e22b212bc7799fe2
-ms.openlocfilehash: fbaa543564506a99d3ed6833ec4d1f692fae43f7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio のパフォーマンスのヒントとテクニック
 
@@ -61,7 +43,7 @@ Visual Studio のパフォーマンスの推奨事項は、まれなケースで
 
     **ライトウェイト ソリューション ロード**を有効にするには、**[ツール] > [オプション] > [プロジェクトおよびソリューション] > [ライトウェイト ソリューション ロード]** の順に選びます。
 
-    このモードでは一部の IDE 機能を使うことができません。 この選択が役立つかどうかを判断するには、[ソリューションの読み込み時間の短縮](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/)と、[ソリューションの読み込みの最適化](../ide/optimize-solution-loading-in-visual-studio)に関する記事をご覧ください。
+    このモードでは一部の IDE 機能を使うことができません。 この選択が役立つかどうかを判断するには、[ソリューションの読み込み時間の短縮](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/)と、[ソリューションの読み込みの最適化](../ide/optimize-solution-loading-in-visual-studio.md)に関する記事をご覧ください。
 
 - **プロジェクトをアンロードする**
 
@@ -152,4 +134,3 @@ CLR ガベージ コレクターについて詳しくは、「[Fundamental of Ga
 
 ## <a name="see-also"></a>関連項目  
  [Visual Studio IDE](../ide/index.md)
-

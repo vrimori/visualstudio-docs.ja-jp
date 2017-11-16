@@ -1,27 +1,24 @@
 ---
 title: "R Tools for Visual Studio でのデバッグ | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cb5fe5f8-03bc-42bf-8346-c845036a9c6c
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 7927e897a63b8b06cda9670701f44bc59296fd01
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: e4b8d7fb27407bf8ef4463524e9da66bac591ff4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="debugging-r-in-visual-studio"></a>Visual Studio での R のデバッグ
 
 R Tools for Visual Studio (RTVS) は、Visual Studio の全デバッグ機能と統合されています (「[Feature Tour of the Visual Studio Debugger](../debugger/debugging-in-visual-studio.md)」(Visual Studio デバッガーの機能ツアー) を参照してください)。 このサポートには、ブレークポイント、実行中のプロセスへのアタッチ、変数の検査と監視、コール スタックの検査が含まれます。 このトピックでは、R および RTVS に固有のデバッグの機能について説明します。
@@ -73,4 +70,3 @@ add <- function(x, y) {
 | &lt;expr&gt; | *expr* の式を評価します。 |
 
 ![対話型ウィンドウの環境ブラウザー](media/debugger-environment-browser.png)
-

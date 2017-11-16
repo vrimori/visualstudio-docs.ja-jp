@@ -1,27 +1,24 @@
 ---
 title: "R Tools for Visual Studio の変数エクスプローラー | Microsoft Docs"
 ms.custom: 
-ms.date: 6/30/2017
+ms.date: 06/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c669434-40d8-4970-92cc-502a98c8b5ab
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 1d86bca24d9e8d4d1bde8d62cd0be25c485b9253
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 92396808161886cf3b15f7e8e0ab23a0a35e26b9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="variable-explorer"></a>変数エクスプローラー
 
 **変数エクスプローラー** ウィンドウは、**[R Tools] > [ウィンドウ] > [変数エクスプローラー]** (または、 **[R Tools] > [データ サイエンスの設定]** を使用した場合は Ctrl + 8 キー) を使用して開きます。このウィンドウには、現在の R セッションでの特定のスコープにあるすべての変数が表示されます。 たとえば、変数エクスプローラーを開いて[対話型ウィンドウ](interactive-repl.md)に以下の行を入力したとします。
@@ -82,4 +79,3 @@ n <- c(1,2,3,5,8,13)
 インポートする CSV ファイルを指定すると、Visual Studio の **[データセットのインポート]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、データ ファイルの解析方法 (つまり、フィールド区切り記号は何か、引用符をどう扱うかなど) を制御するオプションを指定します。 インポートしたデータ フレームのプレビューと元のデータ ファイルを表示することもできます。
 
 ![[データセットのインポート] ダイアログ ボックス](media/variable-explorer-import-dataset-dialog.png)
-

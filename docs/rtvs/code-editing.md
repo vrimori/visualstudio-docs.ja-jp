@@ -1,28 +1,24 @@
 ---
 title: "R Tools for Visual Studio でのコードの編集 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
-ms.prod: visual-studio-dev15
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a198ccc3-5506-48e7-b3b2-9399661b80d5
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 5c856bb02ca33f999273fd6da782226be5f0f2d2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 261cced8583b751d74701a8903a10a4584928940
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="editing-r-code-in-visual-studio"></a>Visual Studio で R のコードを編集する
  
 R Tools for Visual Studio (RTVS) により、Visual Studio の編集エクスペリエンスは R 用に変わりますが、拡張機能を使用するすべての機能は維持されます (たとえば、VIM キー バインドを使いたい場合は、無料の [VsVim 拡張機能](https://visualstudiogallery.msdn.microsoft.com/59ca71b3-a4a3-46ca-8fe1-0e90e3f79329)を Visual Studio ギャラリーからインストールできます)。
@@ -112,7 +108,7 @@ f <- function(a) { return(a + 1) }
 
 自動書式設定は取り消すことができる独立した操作です。 たとえば、エディターにコードを貼り付け、エディターが書式を適用した後、**[編集] > [元に戻す]** を選ぶか Ctrl + Z キーを押すと、1 回目で書式設定が取り消され、2 回目で貼り付け自体が元に戻ります。
  
-書式をオフにするなどの書式オプションは、**[テキスト エディター] > [R] > [詳細設定]** タブの **[ツール] > [オプション]** で設定されます。 **[R ツール] > [エディターのオプション]** コマンドを使用するか、エディターで右クリックし、**[書式オプション]**  を選択して、このページに直接移動することができます。 詳細については、「[エディター オプション](#editor-options)」セクションを参照してください。
+書式をオフにするなどの書式オプションは、**[テキスト エディター] > [R] > [詳細設定]** タブの **[ツール] > [オプション]** で設定されます。**[R ツール] > [エディターのオプション]** コマンドを使用するか、エディターで右クリックし、**[書式オプション]**  を選択して、このページに直接移動することができます。詳細については、「[エディター オプション](#editor-options)」セクションを参照してください。
  
 ## <a name="inserting-roxygen-comments"></a>Roxygen コメントの挿入
 
@@ -150,4 +146,3 @@ RTVS には、関数のパラメーター名を使って [Roxygen](http://roxyge
 | 対話型ウィンドウ | R コンソールにおける構文チェック | オフ | 対話型ウィンドウで構文チェックを適用します。 複数行のステートメントでは、構文チェックが正しく機能しないことがあります。 | 
 | アウトライン | コードのアウトライン表示 | オン | 複数行ステートメントなどの部分に折りたたみ可能な領域を自動的に作成します。 | 
 | 構文チェック | [構文エラーの表示] | オン | コードの自動構文チェックを有効にします。 |
-

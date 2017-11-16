@@ -4,47 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.performance.view.functiondetails
+f1_keywords: vs.performance.view.functiondetails
 helpviewer_keywords:
 - Function Details view
 - Profiling Tools, Function Details view
 ms.assetid: 8806954f-cf28-48d5-81b2-d722ceaf7d27
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c45571132fb06a63a8193d21941bbd50ccad4f42
-ms.contentlocale: ja-jp
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: ff4c94b079d58cab51ec0539e17ada8696ebca89
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="function-details-view"></a>関数の詳細ビュー
 **[関数の詳細ビュー]** ウィンドウには、次の情報が表示されます。  
   
 -   選択した関数とそれを実行した呼び出し元関数の間の関係、および選択した関数とそれが呼び出している関数の間の関係を表示する **[コスト配分]** 棒グラフ。  
   
--   指定した関数のプロファイル データの概要を表示する [**関数のパフォーマンスの詳細**] 表。  
+-   指定した関数のプロファイル データの概要を表示する **[関数のパフォーマンスの詳細]** 表。  
   
 -   コードが使用可能な場合に関数コードを表示する **[関数コード ビュー]** ウィンドウ。  
   

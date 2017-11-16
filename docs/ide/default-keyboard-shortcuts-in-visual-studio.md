@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 06/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,31 +14,15 @@ helpviewer_keywords:
 - keyboard shortcuts [Visual Studio], keyboard binding schemes
 - keyboard shortcuts
 ms.assetid: c2c64648-00f8-4e48-a8a0-96c67cfd968c
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
-ms.openlocfilehash: b94ea904245695667a72eeaec251b3e85d37f691
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/30/2017
-
+ms.openlocfilehash: 2926543ca041ac2b2cc25bc178b99bbafd2407db
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio の既定のキーボード ショートカット
 キーボードのアクセシビリティの詳細については、[「アクセシビリティのヒントとテクニック」](../ide/reference/accessibility-tips-and-tricks.md) および [「方法: キーボード主体で操作する」](../ide/reference/how-to-use-the-keyboard-exclusively.md) を参照してください。
@@ -1186,4 +1169,3 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
 ## <a name="see-also"></a>関連項目  
  [アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)   
  [IntelliSense の使用](../ide/using-intellisense.md)
-

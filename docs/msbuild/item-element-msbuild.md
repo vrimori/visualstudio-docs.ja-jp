@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 03/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,30 +16,15 @@ helpviewer_keywords:
 - Item Element [MSBuild]
 - <Item> Element [MSBuild]
 ms.assetid: dcef5f91-0613-4bfc-8ee9-d7004bb6d3a9
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
-ms.openlocfilehash: 2430531e4ddb3a5ef40cd773327311fa7b85ce48
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: 922c68ee927d05579ab2566e03b8acc0d9a56608
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="item-element-msbuild"></a>Item 要素 (MSBuild)
 ユーザー定義のアイテムおよびそのメタデータが含まれます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトで使用されるすべてのアイテムが、`ItemGroup` 要素の子として指定されている必要があります。  
@@ -143,4 +127,3 @@ MSBuild 15.1 以降では、現行の属性リストと競合しない名前の�
  [項目](../msbuild/msbuild-items.md)   
  [MSBuild プロパティ](../msbuild/msbuild-properties.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)
-

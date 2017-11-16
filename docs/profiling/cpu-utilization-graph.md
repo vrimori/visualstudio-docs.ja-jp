@@ -1,39 +1,38 @@
 ---
 title: "CPU 使用状況グラフ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.cpu.graph"
-helpviewer_keywords: 
-  - "CPU 使用状況グラフ (同時実行ビジュアライザー)、CPU 使用状況グラフ"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.cv.cpu.graph
+helpviewer_keywords: CPU Utilization GraphConcurrency Visualizer, CPU Utilization Graph
 ms.assetid: 5332fd38-622d-47a3-874f-8c2fd7a30f95
-caps.latest.revision: 14
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 852779620ec1d070da5aaabb0b5a9df8dafda359
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CPU 使用状況グラフ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-CPU 使用状況グラフは、アプリケーションで使用率のレベルが時間の経過とともに表示されます。  X 軸はトレースの時間を表し、Y 軸はシステムの論理コアの数を表します。  グラフには、任意の時点にどのコアがアクティブであるかは表示されません。  たとえば、2 個のコアが特定の長さの容量 50 に各実行されている場合、このビューは使用されている一つの論理コア 1。  
+# <a name="cpu-utilization-graph"></a>CPU 使用状況グラフ
+CPU 使用状況グラフは、時間経過に対するアプリの使用状況のレベルを示します。 X 軸はトレースの期間を表し、Y 軸はシステム上の論理コアの数を表します。 任意の時点にどのコアがアクティブかは表示されません。 たとえば、2 つのコアが特定の期間それぞれ最大利用可能時間の 50% 実行されている場合、このビューには使用されている 1 つの論理コアが表示されます。  
   
-## CPU 使用状況グラフの色  
+## <a name="cpu-utilization-graph-colors"></a>CPU 使用状況グラフの色  
   
--   緑色は、現在のプロセスによってシステムの論理コアの使用量を示します。  
+-   緑は、現在のプロセスによるシステムの論理コアの使用状況を示します。  
   
--   明るい灰色は、システム上の他のプロセスによる論理コアの使用量を示します。  CPU グラフの明るい灰色の高い割合は、システムが他のプロセスによって頻繁に読み込まれること、およびプロセスが高く、によって占有することを示します。  他のプロセスによる論理コアの使用量を減らすには、システム上で実行されている他のプロセスの数を減らします。  
+-   明るいグレーは、システム上の他のプロセスによる論理コアの使用状況を示します。 CPU グラフの明るいグレーの割合が高い場合は、他のプロセスによってシステムの負荷が高く、自分のプロセスよりそれらが優先されていることを示します。 他のプロセスによる論理コアの消費量を減らすには、システム上で実行される他のプロセスの数を減らします。  
   
--   濃い灰色は、システム プロセスによる論理コアの使用量を示します。  これを直接制御できませんが、プロセスの論理コアの使用可能状況に影響する可能性があるため、発生しているかを確認できると便利です。  
+-   濃いグレーは、システム プロセスによる論理コアの使用量を示します。 これを直接制御することはできませんが、プロセスが論理コアを使用できるかどうかに影響する場合があるので、いつ発生するのかを知っておくと役に立ちます。  
   
--   白はシステムの未使用の論理コアの使用可能状況を示します。  並列化の機会を増やすことができれば、プロセスに使用できる論理コアが増えます。  
+-   白は、システム上の未使用の論理コアを使用できるかどうかを示します。 これらのコアは、並列処理の機会があれば、プロセスで使用できます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [使用状況ビュー](../profiling/utilization-view.md)   
  [平均 CPU 使用状況](../profiling/average-cpu-utilization.md)

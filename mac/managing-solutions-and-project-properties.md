@@ -1,20 +1,19 @@
 ---
-title: "プロジェクトおよびソリューションのプロパティの管理"
+title: "プロジェクトおよびソリューションのプロパティの管理 | Microsoft Docs"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 75247EB8-323A-4AFD-A451-6703A03D5D1F
+ms.openlocfilehash: 8871ab002a94a9c0bbc0063a25b4dea9cb271142
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: e2b7ff9126e1cc38ac2e58d6be339b656a024e7f
-ms.openlocfilehash: fefb6c5e67b21907150611b3639cc16c05812e1a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="managing-project-and-solution-properties"></a>プロジェクトおよびソリューションのプロパティの管理
 
-## <a name="project-options"></a>プロジェクト オプション 
+## <a name="project-options"></a>プロジェクト オプション
 
 プロジェクト オプションは各プロジェクトに固有の設定で、プロジェクトの作成、ビルド、実行に影響があります。 これは、Visual Studio for Mac のユーザー固有のオプションを設定するユーザー設定や、ソリューション全体のオプションを設定するソリューション オプションとは対照的です。 プロジェクト オプションはプロジェクト ファイル (.csproj) に保存されるので、他の開発者がプロジェクトを正しくビルドし、実行することができます。 また、多数の開発者が正しいファイルの書式で同じドキュメントを編集できます。
 
@@ -45,4 +44,3 @@ Xamarin.iOS には、バンドルの署名に関連するオプション (使用
 ソリューション オプションは、プロジェクト オプションと似ていますが、スコープはソリューション全体です。 ソリューション オプションでは、作成者情報、ビルド設定、コードの書式スタイル、バージョン管理を設定できます。また、ソリューションのスタートアップ プロジェクトを割り当てることもできます。  [ソリューション オプション] ダイアログには、**[プロジェクト] > [ソリューション オプション]** メニュー項目、ソリューション パッドの [ソリューション] のコンテキスト メニュー項目である **[オプション]**、または Solution Pad の [ソリューション] のダブルクリックでアクセスできます。
 
  ![ソリューション オプション](media/projects-and-solutions-image7.png)
-

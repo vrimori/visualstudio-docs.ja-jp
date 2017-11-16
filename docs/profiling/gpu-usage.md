@@ -4,42 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 957fed3c-4ded-4e05-87c6-ccc33de65349
-caps.latest.revision: 4
-author: BrianPeek
-ms.author: brpeek
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 795bf9746c4ae48ac04141a05ba56462ecb90482
-ms.openlocfilehash: 7b69cc5d96a1b51a3d58f688a53bb0156ec3b713
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: f2c265fde65ae20012e2846d99b86c71254d5b44
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="gpu-usage"></a>GPU 使用率
 Visual Studio のパフォーマンスおよび診断ハブに含まれる GPU 使用率ツールを使用すると、Direct3D アプリのハードウェア利用状況の概要を適切に把握できます。 このツールを使用すると、アプリのパフォーマンスが CPU バインドまたは GPU バインドのどちらであるかを判断し、プラットフォームのハードウェアをより効率的に使用する方法について洞察を得ることができます。 GPU 使用率ツールは、Direct3D 12、Direct3D 11、および Direct3D 10 を使用するアプリをサポートします。その他のグラフィックス API (Direct2D や OpenGL など) はサポートしていません。  
   
  **[GPU 使用率レポート]** ウィンドウを次に示します。  
   
- ![GPU 使用率レポート、CPU タイムラインと GPU タイムラインあり](~/profiling/media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
+ ![GPU 使用率レポート、CPU タイムラインと GPU タイムラインあり](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
   
 ## <a name="requirements"></a>要件  
  グラフィックス診断の要件以外の、GPU 使用率ツールを使用するための追加要件を次に示します。  
@@ -60,7 +44,7 @@ Visual Studio のパフォーマンスおよび診断ハブに含まれる GPU �
   
 2.  [パフォーマンスと診断] ハブで、**[GPU 使用率]** の横にあるチェック ボックスをオンにします。 必要に応じて、調査するその他のツールの横のチェック ボックスをオンにします。 複数の [パフォーマンスと診断] ツールを同時に実行して、アプリのパフォーマンスをさらに多面的に把握することもできます。  
   
-     ![使用する診断ツールを選択します。](~/profiling/media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")  
+     ![使用する診断ツールを選択します。](media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")  
   
     > [!NOTE]
     >  すべての [パフォーマンスと診断] ツールを同時に使用することはできません。  
@@ -79,15 +63,15 @@ Visual Studio のパフォーマンスおよび診断ハブに含まれる GPU �
   
 1.  [診断セッション] ウィンドウの下部で **[コレクションの停止]** リンクを選ぶか、左上隅の **[停止]** をクリックします。  
   
-     ![GPU と CPU のタイミング情報を収集します。](~/profiling/media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")  
+     ![GPU と CPU のタイミング情報を収集します。](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")  
   
 2.  レポートの上部で、調査対象の問題を示している範囲をいずれか 1 つのグラフから選択します。 選択できる範囲は最大 3 秒間までです。それより長い範囲は、先頭に向かって切り捨てられます。  
   
-     ![収集後、詳細を表示する範囲を選ぶ](~/profiling/media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")  
+     ![収集後、詳細を表示する範囲を選ぶ](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")  
   
 3.  レポートの下部で、**[その範囲の GPU 使用率の詳細が表示されます]** というメッセージにある **[詳細の表示]** リンクをクリックして、選択した範囲のタイムラインの詳細を表示します。  
   
-     ![収集後、範囲を選択した状態](~/profiling/media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")  
+     ![収集後、範囲を選択した状態](media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")  
   
  新しいタブ付きのドキュメントが開いて、レポートが表示されます。 GPU 使用率レポートは、グラフィックス イベントが CPU 上で始まった時点と、それが GPU に到達した時点と、それを GPU で実行するのに要した時間の長さを調べるために役立ちます。 この情報を利用して、コードのボトルネックと、並列処理を増やす機会を識別します。  
 
@@ -95,7 +79,7 @@ Visual Studio のパフォーマンスおよび診断ハブに含まれる GPU �
 ## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>GPUView または Windows Performance Analyzer にエクスポートする
 Visual Studio 2017 以降では、診断セッションの右下にある **[GpuView で開く]** または **[WPA で開く]** リンクをクリックすると、このデータを [GPUView](/windows-hardware/drivers/display/using-gpuview) および [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) で開くことができます。
 
-![... で開く](~/profiling/media/gfx_diag_open_in.png)
+![... で開く](media/gfx_diag_open_in.png)
 <!-- /VERSIONLESS -->
 
 ## <a name="using-the-gpu-usage-report"></a>GPU 使用率レポートの使用方法  
@@ -105,7 +89,7 @@ Visual Studio 2017 以降では、診断セッションの右下にある **[Gpu
   
  **[GPU 使用率レポート]** ウィンドウを次に示します。  
   
- ![GPU 使用率レポート、CPU タイムラインと GPU タイムラインあり](~/profiling/media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
+ ![GPU 使用率レポート、CPU タイムラインと GPU タイムラインあり](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
   
  レポートの下部で 1 つのイベントを選択すると、該当するタイムラインの対応するイベントにマーカーが表示されます。通常、CPU スレッドの 1 つのイベントは API 呼び出しを表し、GPU タイムラインの 1 つにあるもう 1 つのイベントは、GPU がタスクを完了した時点を表します。 同様に、タイムラインでイベントのいずれかを選択すると、レポートの下部で対応するイベントが強調表示されます。レポートの上部でタイムラインをズームアウトすると、最も時間のかかるイベントのみが表示されます。 持続期間の短いイベントを表示するには、タイムラインをズームインします。Ctrl キーを押しながらポインティング デバイスのホイールを回すか、上のパネルの左下隅にある拡大/縮小コントロールを使用してください。 また、タイムライン パネルの内容をドラッグして、記録されたイベントに移動することもできます。  
   
@@ -146,7 +130,7 @@ Visual Studio 2017 以降では、診断セッションの右下にある **[Gpu
   
 3.  **[GPU プロファイリングの構成]** の **[全般]** プロパティ ページで、**[アプリの起動時にプロファイリングを開始]** チェック ボックスをオフにして、プロファイリングを延期します。  
   
-     ![GPU 使用率の収集の開始時に構成する](~/profiling/media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")  
+     ![GPU 使用率の収集の開始時に構成する](media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")  
   
 > [!IMPORTANT]
 >  プロファイリングの延期は、Direct3D 12 アプリに対しては現在サポートされていません。  

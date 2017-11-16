@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,30 +13,15 @@ helpviewer_keywords:
 - solutions [Visual Studio], multi-targeting
 - projects [Visual Studio], multi-targeting
 ms.assetid: 91e77ad4-4da3-419d-85fb-9036f0e5c330
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: 45e9bb684e7f1f83c41b04dd4b9e9b3218df8358
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/30/2017
-
+ms.openlocfilehash: 2b4c985671abddb294351a2f66a24ef00e2d44e1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="targeting-a-specific-net-framework-version"></a>対象となる特定の .NET Framework バージョンの指定
 Visual Studio では、プロジェクトの対象となる .NET Framework のバージョンまたはプロファイルを指定できます。 別のコンピューター上で実行するアプリケーションについては、アプリケーションが対象とする .NET Framework バージョンが、コンピューターにインストールされている .NET Framework バージョンとの互換性を持っている必要があります。  
@@ -56,10 +40,10 @@ Visual Studio では、プロジェクトの対象となる .NET Framework の�
  このバージョンの Visual Studio を使用して、以前のバージョンの .NET Framework で動作する Web アプリケーションを開発する方法を説明します。  
   
  [[アプリケーション] ページ (プロジェクト デザイナー) (C#)](../ide/reference/application-page-project-designer-csharp.md)  
- [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクト用のプロジェクト デザイナーの [**対象のフレームワーク**] コントロールについて説明します。  
+ [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] プロジェクト用のプロジェクト デザイナーの **[対象のフレームワーク]** コントロールについて説明します。  
   
  [[アプリケーション] ページ (プロジェクト デザイナー)](../ide/reference/application-page-project-designer-visual-basic.md)  
- [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクト用のプロジェクト デザイナーの [**対象のフレームワーク**] コントロールについて説明します。  
+ [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクト用のプロジェクト デザイナーの **[対象のフレームワーク]** コントロールについて説明します。  
   
  [方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)  
  別のバージョンの .NET Framework を対象とし、別のプラットフォームのツールセットを使用するように Visual C++ プロジェクトの設定を変更する方法について説明します。

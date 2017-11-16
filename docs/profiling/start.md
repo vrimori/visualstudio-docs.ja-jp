@@ -1,80 +1,81 @@
 ---
-title: "開始 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Start | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b85d0fe9-f67a-4b7c-8d48-7eecf3f2dfe9
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f7da3855a699ae350c24646386d3b1a7e39520b4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 開始
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**Start** オプションは、プロファイラーを指定したプロファイル方法に初期化する VSPerfCmd.exe のオプションです。  
+# <a name="start"></a>[開始]
+**Start** オプションは、指定されたプロファイリング方法にプロファイラーを初期化する VSPerfCmd.exe オプションです。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 VSPerfCmd.exe /Start:Method /Output:FileName [Options]  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `Method`  
  次のいずれかのキーワードを指定する必要があります。  
   
--   **TRACE** \- インストルメンテーション メソッドを指定します。  
+-   **TRACE** - インストルメンテーション メソッドを指定します。  
   
--   **SAMPLE** \- サンプリング メソッドを指定します。  
+-   **SAMPLE** - サンプリング方法を指定します。  
   
--   **COVERAGE** \- コード カバレッジを指定します。  
+-   **COVERAGE** - コード カバレッジを指定します。  
   
--   **CONCURRENCY** \-リソース競合メソッドを指定します。  
+-   **CONCURRENCY** - リソースの競合メソッドを指定します。  
   
-## 必須のオプション  
- **Start** をコマンド ラインで指定する場合は、**Output** オプションを指定する必要があります。  
+## <a name="required-options"></a>必須オプション  
+ **Output** オプションは、コマンド ラインで **Start** が指定されている場合に指定する必要があります。  
   
  **Output:** `filename`  
  出力ファイル名を指定します。  
   
-## 排他的オプション  
- 次のオプションは、コマンド ラインで **Start** オプションを使用する場合にのみ使用できます。  
+## <a name="exclusive-options"></a>排他的なオプション  
+ 次のオプションは、コマンド ラインで **Start** とともにのみ使用できます。  
   
  **CrossSession**&#124;**CS**  
- プロセス間プロファイリングを有効にします。  オプション名 **CrossSession** と **CS** は、両方ともサポートされます。  
+ プロセス間のプロファイリングを有効にします。 オプション名 **CrossSession** と **CS** は両方ともサポートされています。  
   
- **User:**\[`domain\`\]`username`  
- 指定したアカウントからモニターへのクライアント アクセスを有効にします。  
+ **User:**[`domain\`]`username`  
+ 指定されたアカウントからモニターへのクライアント アクセスを有効にします。  
   
- **WinCounter:** `Path` \[**Automark**:`n`\]  
- **WinCounter** プロファイル データ ファイルにマークとして含まれる Windows パフォーマンス カウンターを指定します。  **AutoMark** は、データ ファイルの収集間隔をミリ秒単位で指定します。  
+ **WinCounter:** `Path` [**Automark**:`n`]  
+ **WinCounter** は、プロファイリング データ ファイル内にマークとして含める Windows パフォーマンス カウンターを指定します。 **AutoMark** は、データ ファイルのコレクション間の間隔をミリ秒単位で指定します。  
   
-## 無効なオプション  
- 次のオプションは、コマンド ラインで **Start** オプションと共に使用できません。  
+## <a name="invalid-options"></a>無効なオプション  
+ 次のオプションは、コマンド ラインで **Start** オプションとともに使用することができません。  
   
  **Status**  
- **Status** は、プロファイリングされるプロセスに適用されます。  プロセスとスレッド、およびそれらの現在のプロファイル状態 \(オン\/オフ\) が表示されます。  たとえば、プロセスが停止された場合、**Status** はこれをレポートに表示しません。  **Status** はプロセスがプロファイリングされるかどうかを示します。  
+ **Status** は、プロファイリングされるプロセスに適用されます。 プロセスとスレッドが現在のプロファイル状態 (オン/オフ) とともに一覧表示されます。 たとえば、プロセスが停止されても、**Status** はこのプロセスをレポートに記録しません。 **Status** は、プロセスがプロファイリングされているかどうかを示します。  
   
- **Shutdown**\[**:**`Timeout`\]  
+ **Shutdown**[**:**`Timeout`]  
  プロファイラーをオフにします。  
   
-## 使用例  
- VSPerfCmd.exe の **Start** オプションを使用して、プロファイラーを初期化する方法を次の例に示します。  
+## <a name="example"></a>例  
+ 次の例では、VSPerfCmd.exe の **Start** オプションを使用してプロファイラーを初期化する方法を示します。  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング \(サービスの\)](../profiling/command-line-profiling-of-services.md)
+ [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)

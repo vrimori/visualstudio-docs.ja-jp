@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio の Python 用 CookieCutter 拡張機能 | Microsoft Docs"
 ms.custom: 
-ms.date: 7/12/2017
+ms.date: 07/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 783da5fd-726c-4716-994e-aa04d6b75896
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: da14e15713e7c02dbd99bc0595e6ca19217a5cbb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 6db7e2efc54414dcb72899ab3238a9b7a0390921
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="using-the-cookiecutter-extension"></a>Cookiecutter 拡張機能の使用
 
 [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) は、テンプレートの検出、テンプレート オプションの入力、プロジェクトとファイルの作成を行うためのグラフィカル ユーザー インターフェイスを提供します。 Cookiecutter は Visual Studio 2017 に付属しており、Visual Studio の以前のバージョンにも個別にインストールできます。
@@ -228,4 +225,3 @@ Cookiecutter には、ファイルの生成後に任意の Python コードを�
 バッシュの使用 (致命的ではない)
 
 - **openstack-dev/cookiecutter**
-

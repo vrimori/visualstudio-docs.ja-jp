@@ -1,24 +1,27 @@
 ---
 title: "DA0012: リフレクションが頻繁に実行されています | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.rules.DAReflection"
-  - "vs.performance.12"
-  - "vs.performance.rules.DA0012"
-  - "vs.performance.DA0011"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.rules.DAReflection
+- vs.performance.12
+- vs.performance.rules.DA0012
+- vs.performance.DA0011
 ms.assetid: c92a1d76-21fa-426e-8b1b-a3c08e9bcbca
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 971b12e3f14848e5f30420da0994f231f8299491
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="da0012-significant-amount-of-reflection"></a>DA0012: リフレクションが頻繁に実行されています
 |||  
@@ -39,8 +42,3 @@ caps.handback.revision: 13
   
 ## <a name="how-to-investigate-a-warning"></a>警告の調査方法  
  [エラー一覧] ウィンドウに表示されたメッセージをダブルクリックして、プロファイル データの[関数の詳細ビュー](../profiling/function-details-view.md)に移動します。 System.Type メソッドまたは System.Reflection メソッドの呼び出し関数を調べ、.NET リフレクション API を最も頻繁に使用するプログラムのセクションを見つけます。 メタデータを返すメソッドは使用しないでください。 アプリケーションのパフォーマンスが重大である場合、状況によっては遅延バインディングの使用と、実行時の動的な型の作成を行わないようにする必要があります。
-
-
-<!--HONumber=Feb17_HO4-->
-
-

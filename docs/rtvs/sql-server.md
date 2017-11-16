@@ -1,30 +1,27 @@
 ---
 title: "SQL Server と R Tools for Visual Studio の統合 | Microsoft Docs"
 ms.custom: 
-ms.date: 6/30/2017
+ms.date: 06/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 919dfc34-234a-489e-91bf-74a4cefae26c
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: dfccd737ae7017823fdf7f2a5112fd05c8900559
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
-ms.sourcegitcommit: fa4f6a27eeacd2f016a248daa74074392b1137f2
-ms.openlocfilehash: b7afc0b2e62245e30814a0bc00d455400ae1b2d8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/20/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/15/2017
 ---
-
 # <a name="working-with-sql-server-and-r"></a>SQL Server と R の使用
 
-Visual Studio では SQL Server を強力にサポートしています。SQL クエリを作成して実行する機能およびストアド プロシージャを処理する機能を通して、データ サイエンティストによる R と SQL データベースの使用を支援します。
+Visual Studio の優れた SQL Server のサポートにより、データ サイエンティストは、SQL クエリを作成して実行する機能およびストアド プロシージャを処理する機能を利用して、R と SQL データベースを使用することができます。
 
 > [!Note]
 > SQL と R を一緒に使用するためには、SQL Server Tools がインストールされている必要があります。
@@ -43,7 +40,7 @@ SQL クエリ ファイルを追加するには、ソリューション エク�
 
 ![SQL クエリ項目をプロジェクトに追加](media/sql-add-item.png)
 
-このコマンドにより、Visual Studio の Transact-SQL エディターでファイルが開き、SQL 用のフル機能 IntelliSense とクエリ実行機能を使用できます。 これらの機能が動作するためには、エディターのツール バーにある接続ボタンを使用してデータベースに接続するか、クエリの実行を試みる必要があります (Ctrl + Shift + E キーでも選択項目を操作できます)。 どちらの方法でも、次のような接続ダイアログが表示されます。
+このコマンドにより、Visual Studio の Transact-SQL エディターでファイルが開き、SQL 用のフル機能 IntelliSense とクエリ実行機能を使用できます。 ただし、これらの機能が動作するためには、エディターのツール バーにある接続ボタンを使用してデータベースに接続するか、クエリの実行を試みる必要があります (Ctrl + Shift + E キーでも選択項目を操作できます)。 どちらの方法でも、次のような接続ダイアログが表示されます。
 
 ![SQL 接続ダイアログ ボックス](media/sql-connection-dialog.png)
 
@@ -70,8 +67,8 @@ Transact-SQL エディターは他のさまざまな機能をサポートして�
 
 ### <a name="add-a-database-connection"></a>データベース接続の追加
 
-1. **[R Tools] > [データ] > [データベース接続の追加]** を選び、**[接続のプロパティ]** ダイアログを表示します。 ここで、データ ソースの名前 (この場合は SQL Server)、サーバーの名前、認証モード、データベースの名前を指定します。 ダイアログ ボックスを閉じる前に **[テスト接続]** を選んで入力を確認します。
- 
+1. **[R Tools] > [データ] > [データベース接続の追加]** を選び、**[接続のプロパティ]** ダイアログを表示します。 ここで、データ ソース (この場合は SQL Server) の名前、サーバーの名前、認証モード、データベースの名前を指定します。 ダイアログ ボックスを閉じる前に **[テスト接続]** を選んで入力を確認します。
+
     ![SQL 接続ダイアログ ボックス](media/sql-connection-string-dialog.png)
 
 1. 有効な接続で **[OK]** を選択すると、Visual Studio で新しい `settings.R` ファイル内に `dbConnection` という有効な接続が生成されます。 このファイルが RTVS で自動的にソースとして実行され、R スクリプトから接続をすぐに使用できるようになります。
@@ -81,7 +78,7 @@ Transact-SQL エディターは他のさまざまな機能をサポートして�
 ### <a name="write-and-test-a-sql-stored-procedure"></a>SQL ストアド プロシージャの作成とテスト
 
 新しい SQL ストアド プロシージャを追加するには、プロジェクトを右クリックして **[追加] > [新しい項目]** を選択し、テンプレートの一覧から **[R を使用した SQL ストアド プロシージャ]** を選択して、ファイルに名前 (この例では `StoredProcedure.R`) を付けた後、**[OK]** を選択します。
- 
+
 RTVS ではストアド プロシージャとして 3 種類のファイルが作成されます。R コードの `.R` ファイル、SQL コードの `.Query.sql` ファイル、2 つを組み合わせた `.Template.sql` ファイルの 3 つです。 後の 2 つはソリューション エクスプローラーで `.R` ファイルの子として表示されます。
 
 ![R と SQL ストアド プロシージャが表示されたソリューション エクスプローラーの展開ビュー](media/sql-solution-explorer-expanded.png)
@@ -151,7 +148,7 @@ WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 ### <a name="publish-a-sql-stored-procedure"></a>SQL ストアド プロシージャの公開
 
 1. **[R Tools] > [データ] > [Publish With Options]**\(オプションを使用してパブリッシュ\) メニュー コマンドを選択します。
-1. 表示されるダイアログ ボックスで、**[パブリッシュ先]** を **[データベース]** に変更し、ターゲットを指定して、**[パブリッシュ]** を選択します。RTVS でストアド プロシージャがビルドされ、公開されます。
+1. 表示されるダイアログ ボックスで、**[パブリッシュ先]** を **[データベース]** に変更し、ターゲットを指定して、**[パブリッシュ]** を選択します。RTVS でストアド プロシージャがビルドされ、パブリッシュされます。
 
     ![ストアド プロシージャの公開ダイアログ ボックス](media/sql-publish-with-options.png)
 
@@ -159,4 +156,3 @@ WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 
 > [!Tip]
 > Visual Studio で SQL Server オブジェクト エクスプローラーを開いている場合、公開したストアド プロシージャはデータベースの **[プログラミング] > [ストアド プロシージャ]** フォルダーに表示されます。 また、オブジェクト エクスプローラーから実行することもできます。そのためには、右クリックして **[プロシージャの実行]** を選ぶか、`.sql` クエリ ウィンドウから対話形式でプロシージャを呼び出します。
-

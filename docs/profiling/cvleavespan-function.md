@@ -1,30 +1,29 @@
 ---
 title: "CvLeaveSpan 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cvmarkers/CvLeaveSpan"
-helpviewer_keywords: 
-  - "CvLeaveSpan メソッド"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cvmarkers/CvLeaveSpan
+helpviewer_keywords: CvLeaveSpan method
 ms.assetid: 3bf65fdf-a471-4efd-ac7a-03e701bbae5d
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 1886858cfedbb3651a394b9f739feadd6c77d1a4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CvLeaveSpan 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-範囲の末尾をマークします。  
+# <a name="cvleavespan-function"></a>CvLeaveSpan 関数
+スパンの終了を示します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT CvLeaveSpan(  
@@ -32,15 +31,15 @@ HRESULT CvLeaveSpan(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pSpan`  
- 前の呼び出しによって返される CvEnterSpan\* への範囲オブジェクト。  NULL にすることはできません。  
+ CvEnterSpan* を以前に呼び出したときに返されたスパン オブジェクト。 Nll は指定できません。  
   
-## 戻り値  
- メッセージが正常に作成された場合は、S\_OK を返します。  エラーがある場合はエラー コード。  エラー条件をチェックするために SUCCEEDED\/FAILED マクロを使用します。  
+## <a name="return-value"></a>戻り値  
+ メッセージが書き込まれると S_OK を返します。 エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** cvmarkers.h  
   
-## 参照  
- [C\+\+ ライブラリ リファレンス](../profiling/cpp-library-reference.md)
+## <a name="see-also"></a>関連項目  
+ [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)

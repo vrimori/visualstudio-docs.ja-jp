@@ -1,27 +1,30 @@
 ---
-title: "方法 : プロジェクト ファイルの名前または場所を参照する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "参照の場所"
-  - "位置"
-  - "MSBuildProjectName プロパティ"
-  - "MSBuild プロジェクト ファイルを参照します。"
-  - "参照している名前"
-  - "予約済みのプロパティ"
-  - "プロジェクト ファイルを参照します。"
+title: "方法: プロジェクト ファイルの名前または場所を参照する | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- locations, referencing
+- locations
+- MSBuildProjectName property
+- MSBuild, referencing the project file
+- names, referencing
+- reserved properties
+- project files, referencing
 ms.assetid: c8fcc594-5d37-4e2e-b070-4d9c012043b5
-caps.latest.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 9186b98b482b101254e70def9285d9bbad2ca254
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>方法 : プロジェクト ファイルの名前または場所を参照する
 独自のプロパティを作成することなく、プロジェクト ファイル自体のプロジェクトの名前または場所を使用できます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、プロジェクトのファイル名とプロジェクトに関連するその他のプロパティを参照する、予約済みのプロパティを提供します。 予約済みのプロパティの詳細については、「[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)」を参照してください。  
@@ -75,8 +78,3 @@ caps.handback.revision: 13
 ## <a name="see-also"></a>関連項目  
 [MSBuild](../msbuild/msbuild.md)  
  [MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

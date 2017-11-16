@@ -1,22 +1,25 @@
 ---
-title: "プロファイリング ツール データ ファイルの比較 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロファイリング ツール、比較 (プロファイリング ツールのレポート ファイルを)"
-  - "プロファイリング ツールのレポート、比較"
+title: "パフォーマンス データ ファイルの比較 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- profiling tools, comparing profiling tools report files
+- profiling tools reports, comparing
 ms.assetid: e6fda144-f21d-4912-9d16-1b8d3555a210
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 586665565126dc67fe3fbeb7d3eda3e7061e4650
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="comparing-performance-data-files"></a>パフォーマンス データ ファイルの比較
 プロファイリング ツールのデータ ファイルの比較機能を使用すると、2 つのレポート ファイル (.VSP または .VSPS) を選択し、2 つのプロファイリング セッション間の違い、パフォーマンスの低下、および改善を示すレポートを生成できます。  
@@ -33,8 +36,3 @@ caps.handback.revision: 12
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: パフォーマンス データ ファイルを比較する](../profiling/how-to-compare-performance-data-files.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

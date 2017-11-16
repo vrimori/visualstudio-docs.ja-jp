@@ -4,39 +4,24 @@ ms.custom:
 ms.date: 03/02/2017
 ms.reviewer: 
 ms.suite: 
+ms.technology:
+- vs-ide-general
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- msdnstart
+f1_keywords: msdnstart
 helpviewer_keywords:
 - Visual Studio
 - Visual Studio 2017
 ms.assetid: ba237712-f8c4-4d13-854b-ab4a16afa309
-caps.latest.revision: 125
-author: kempb
-ms.author: kempb
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
-ms.openlocfilehash: 2cf7d1e79ccf79b652dbb730e7ac7fd6a9c984b5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/26/2017
-
+ms.openlocfilehash: 81942228cd8ee30ac8ea990af072ace0ce626c5b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="welcome-to-visual-studio-2017"></a>Visual Studio 2017 へようこそ
 デバイスまたはデスクトップで機能する Web およびクラウド向けの優れたアプリを作成するのに必要なものがすべて揃っています。 iOS、Android、Linux、Windows、その他用のコードを 1 つの統合開発環境 (IDE) で記述してください。 便利な対話型コード ヘルプ (*IntelliSense*)、簡単なコード ナビゲーションとデバッグ、高速なビルド、すばやいデプロイをご利用ください。 Visual Studio なら生産性が向上し、単独での作業も、より大きなチームの一員としての作業も容易になります。  
@@ -120,4 +105,3 @@ Visual Studio 機能拡張ツール (VS SDK) の最新バージョンを検索�
 .NET コンパイラ プラットフォーム (Roslyn) を使用して、独自のコード アナライザーとコード ジェネレーターを記述することができます。 必要なものはすべて [Roslyn](https://github.com/dotnet/Roslyn)に揃っています。  
 
 Microsoft 開発者や開発コミュニティが作成した [VS IDE の既存の拡張機能](https://visualstudiogallery.msdn.microsoft.com/) を検索してください。  
-

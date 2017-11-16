@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,30 +19,15 @@ helpviewer_keywords:
 - line numbers
 - virtual space
 ms.assetid: 49ee7306-9d46-4170-850f-a1716171752d
-caps.latest.revision: 20
-author: kempb
-ms.author: kempb
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 00829d499ae9d5a52e94094eed15b1ae39894075
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 61b3ab54929cdd7e6a584737f8963302335c4fd1
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="options-text-editor-all-languages"></a>[オプション]、[テキスト エディター]、[すべての言語]
 このダイアログ ボックスでは、コード エディターの既定の動作を変更できます。 設定は、HTML デザイナーのソース ビューなど、コード エディターに基づいて他のエディターにも適用されます。 このダイアログ ボックスを開くには、**[ツール]** メニューから **[オプション]** を選択します。 **[テキスト エディター]** フォルダー内で **[すべての言語]** サブフォルダーを展開し、**[全般]** を選択します。  
@@ -93,7 +77,7 @@ ms.lasthandoff: 05/24/2017
   
 -   このオプションが選択されていないとき、[切り取り] コマンドを使用すると、空白行が削除されます。 ただし、クリップボードのデータは保持されます。 そのため、その後に貼り付けコマンドを実行すると、最後にクリップボードにコピーされた内容が貼り付けられます。 前にコピーされた内容がない場合、貼り付けは行われません。  
   
- この設定は、行が空白でない場合には、コピーや切り取りに何の影響も与えません。 何も選択されていない場合は、行全体のコピーまたは切り取りが行われます。 その後に貼り付けを行うと、行全体のテキストとその行末文字の貼り付けが行われます。  
+この設定は、行が空白でない場合には、コピーや切り取りに何の影響も与えません。 何も選択されていない場合は、行全体のコピーまたは切り取りが行われます。 その後に貼り付けを行うと、行全体のテキストとその行末文字の貼り付けが行われます。  
   
 > [!TIP]
 >  空白、タブ、および行末のインジケーターを表示し、インデントの設定された行と、空白行とを区別できるようにするには、**[編集]** メニューの **[詳細]** をクリックし、**[スペースの表示]** を選択します。  

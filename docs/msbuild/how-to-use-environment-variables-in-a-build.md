@@ -1,23 +1,26 @@
 ---
-title: "方法 : ビルドで環境変数を使用する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "環境変数を参照します。"
-  - "プロジェクト [.NET Framework] 環境変数"
-  - "MSBuild では、環境変数"
+title: "方法: ビルドで環境変数を使用する | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- environment variables, referencing
+- projects [.NET Framework], environment variables
+- MSBuild, environment variables
 ms.assetid: 7f9e4469-8865-4b59-aab3-3ff26bd36e77
-caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.openlocfilehash: 50a513bcc34a77d3dece1ed1824fbee35d8272ec
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-use-environment-variables-in-a-build"></a>方法 : ビルドで環境変数を使用する
 プロジェクトをビルドするとき、プロジェクト ファイルまたはプロジェクトを構成するファイルに含まれていない情報を使用してビルド オプションを設定する必要がある場合があります。 通常、この情報は環境変数に格納されます。  
@@ -66,8 +69,3 @@ caps.handback.revision: 15
     [MSBuild ](../msbuild/msbuild.md)
     [MSBuild Properties](../msbuild/msbuild-properties.md)
  [方法: 同じソース ファイルを異なるオプションでビルドする](../msbuild/how-to-build-the-same-source-files-with-different-options.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

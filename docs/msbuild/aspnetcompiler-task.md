@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/msbuild/2003#AspNetCompiler
+f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#AspNetCompiler
 dev_langs:
 - VB
 - CSharp
@@ -19,29 +17,15 @@ helpviewer_keywords:
 - MSBuild, AspNetCompiler task
 - AspNetCompiler task [MSBuild]
 ms.assetid: f811c019-a67b-4d54-82e6-e29549496f6e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 26c3d46033a59f88e70b6afde25a25c1ef5e77e8
-ms.openlocfilehash: 0227d24dda3ca6a94092361f70c7e699c2c79c71
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 4cb7e3ab70fb2820ed2ecdb38b5876c5daf956fd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="aspnetcompiler-task"></a>AspNetCompiler タスク
 `AspNetCompiler` タスクは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションをプリコンパイルするためのユーティリティである aspnet_compiler.exe をラップします。  
@@ -67,7 +51,7 @@ ms.lasthandoff: 02/22/2017
 |`VirtualPath`|省略可能な `String` 型のパラメーターです。<br /><br /> コンパイル対象のアプリケーションの仮想パス。 `PhysicalPath` を指定すると、アプリケーションの場所の指定に物理パスが使われます。 それ以外の場合は IIS メタベースが使われ、アプリケーションは既定のサイトにあるものと想定されます。 このパラメーターは、aspnet_compiler.exe の **-v** スイッチに対応します。|  
   
 ## <a name="remarks"></a>コメント  
- このタスクでは、上記のパラメーター以外に、<xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承し、このクラス自体は <xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次のコード例では、`AspNetCompiler` タスクを使って [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションをプリコンパイルします。  
@@ -89,4 +73,3 @@ ms.lasthandoff: 02/22/2017
 ## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
-

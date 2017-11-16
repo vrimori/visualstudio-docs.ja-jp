@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 03/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,30 +14,15 @@ helpviewer_keywords:
 - referencing files from projects
 - referencing components, troubleshooting
 ms.assetid: 00a9ade9-652e-40de-8ada-85f63cd183ee
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: 61a074110e0a3730c971c319f98498324868067d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/30/2017
-
+ms.openlocfilehash: 7a6216f70f6e9eab3887439dee2f35aa59de37c0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="troubleshoot-broken-references"></a>壊れた参照のトラブルシューティング
 アプリケーションが、壊れている参照を使用しようとすると例外エラーが生成されます。 エラーの主なトリガーは参照先のコンポーネントを見つけられないことですが、参照が壊れていると考えられるいくつかの状況があります。 これらの例を次のリストに示します。  
@@ -63,22 +47,22 @@ ms.lasthandoff: 05/30/2017
 
  プロジェクトを開くと、参照パスで指定したディレクトリ内を検索して、これらの参照先のコンポーネント ファイルを検索しようとします。 コンポーネントを D:\MyComponents\\ などの別のディレクトリに格納しているコンピューターでプロジェクトを開くと、参照が見つらず、[タスク一覧] にエラーが表示されます。  
 
- この問題を解決するには、壊れている参照を削除し、[参照の追加] ダイアログ ボックスを使用してこれを置き換えます。 別の解決策は、プロジェクトのプロパティ ページで [**参照パス**] 項目を使用して、一覧内のフォルダーを適切な場所を指すように変更することです。 [**参照パス**] プロパティは、各コンピューターのユーザーごとに保持されます。 したがって、参照パスを変更しても、プロジェクトの他のユーザーには影響しません。  
+ この問題を解決するには、壊れている参照を削除し、[参照の追加] ダイアログ ボックスを使用してこれを置き換えます。 別の解決策は、プロジェクトのプロパティ ページで **[参照パス]** 項目を使用して、一覧内のフォルダーを適切な場所を指すように変更することです。 **[参照パス]** プロパティは、各コンピューターのユーザーごとに保持されます。 したがって、参照パスを変更しても、プロジェクトの他のユーザーには影響しません。  
 
 > [!TIP]
 >  プロジェクト間参照には、これらの問題はありません。 このため、可能であれば、ファイル参照の代わりにプロジェクト間参照を使用します。  
 
 #### <a name="to-fix-a-broken-project-reference-by-correcting-the-reference-path"></a>参照パスを修正して壊れたプロジェクト参照を修正するには  
 
-1.  **ソリューション エクスプローラー**で、プロジェクト ノードを右クリックし、[**プロパティ**] をクリックします。  
+1.  **ソリューション エクスプローラー**で、プロジェクト ノードを右クリックし、**[プロパティ]** をクリックします。  
 
 2.  **プロジェクト デザイナー**が表示されます。  
 
-3.  Visual Basic を使用している場合は、[**参照**] ページを選択し、[**参照パス**] ボタンをクリックします。 [**参照パス**] ダイアログ ボックスで、参照する項目を含むフォルダーのパスを [**フォルダー**] フィールドに入力し、[**フォルダーの追加**] ボタンをクリックします。  
+3.  Visual Basic を使用している場合は、**[参照]** ページを選択し、**[参照パス]** ボタンをクリックします。 **[参照パス]** ダイアログ ボックスで、参照する項目を含むフォルダーのパスを **[フォルダー]** フィールドに入力し、**[フォルダーの追加]** ボタンをクリックします。  
 
      または  
 
-     Visual C# を使用している場合は、[**参照パス**] ページを選択します。 参照する項目を含むフォルダーのパスを [**フォルダー**] フィールドに入力し、[**フォルダーの追加**] ボタンをクリックします。  
+     Visual C# を使用している場合は、**[参照パス]** ページを選択します。 参照する項目を含むフォルダーのパスを **[フォルダー]** フィールドに入力し、**[フォルダーの追加]** ボタンをクリックします。  
 
 ## <a name="referenced-file-has-been-deleted"></a>参照先ファイルが削除されている  
  参照されているファイルが削除されたため、ドライブに存在しません。  
@@ -106,4 +90,3 @@ ms.lasthandoff: 05/30/2017
 
 ## <a name="see-also"></a>関連項目  
  [[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)   
-

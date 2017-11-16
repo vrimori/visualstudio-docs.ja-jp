@@ -11,33 +11,16 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C%2FC%2B%2B.Experimental
 - VS.ToolsOptionsPages.Text_Editor.C\C++.Experimental
 ms.assetid: b9e9dda2-350c-460d-b368-37d6c5342eee
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
+ms.openlocfilehash: d67907a99851e09bf384c96b6ff6b87b4882cd30
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: faa37f88995f232f1198d3738ac5fba99d2970bd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="options-text-editor-cc-experimental"></a>[オプション]、[テキスト エディター]、[C/C++]、[実験用]
 これらのオプションを変更することによって、C または C++ でプログラミングを行うときに、IntelliSense に関連する動作と参照データベースを変更できます。 これらの機能は完全に実験用であり、Visual Studio の将来のリリースでは変更または削除される可能性があります。 このトピックでは、Visual Studio 2017 のオプションについて説明します。 Visual Studio 2015 の詳細については、「[[オプション]、[テキスト エディター]、[C/C++]、[実験用]](https://msdn.microsoft.com/library/mt591979.aspx)」を参照してください。 
@@ -67,9 +50,8 @@ Visual Studio ギャラリーのその他のテキスト エディター機能�
   
 -   **MSDN ヘルプ** - MSDN を検索して、エラー メッセージを調べます  
   
- 波線の上にカーソルを合わせて電球マークを表示させるか、Ctrl キーを押しながらドットを押すだけです (Ctrl+.、既定のキーボード ショートカット)。 キーボード ショートカットでは、キャレットを特定のエラーやトークンの位置に置く必要はありません。エラーが出た同じ行にカーソルがあれば、行の上の何らかのものに対して解決策が提示されます。  
+波線の上にカーソルを合わせて電球マークを表示させるか、Ctrl キーを押しながらドットを押すだけです (Ctrl+.、既定のキーボード ショートカット)。 キーボード ショートカットでは、キャレットを特定のエラーやトークンの位置に置く必要はありません。エラーが出た同じ行にカーソルがあれば、行の上の何らかのものに対して解決策が提示されます。  
   
 ## <a name="see-also"></a>関連項目  
  [言語固有のエディター オプションの設定](../../ide/reference/setting-language-specific-editor-options.md)   
  [C++ でのリファクタリング (VC のブログ)](http://blogs.msdn.com/b/vcblog/archive/2014/11/14/all-about-c-refactoring-in-visual-studio-2015-preview.aspx)
-

@@ -1,27 +1,24 @@
 ---
 title: "Visual Studio の IPython REPL | Microsoft Docs"
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c9bd06b0-2021-4e55-b933-8346476224a8
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: fce859ff47d28a7de44c63f5dd4e52cfb58478f1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 9553aa4944f652c7b8505b0d99d5c2b88167f872
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="using-ipython-in-the-interactive-window"></a>対話型ウィンドウでの IPython の使用
 
 Visual Studio の IPython モードの対話型ウィンドウは、対話型の並列コンピューティング機能を備えた高度で使いやすい対話形式の開発環境です。 このトピックでは、Visual Studio の対話型ウィンドウで IPython を使用する手順について説明します。IPython でも、通常の[対話型ウィンドウ](interactive-repl.md)機能をすべて使用できます。
@@ -87,4 +84,3 @@ IPython には、システム シェルのエスケープ、変数の代入、�
 - Jupyter をインストールせずに簡単に使用するには、無料の [Azure Notebooks ホスト サービス](https://notebooks.azure.com/)を試してください。ノートブックを保存し、他のユーザーと共有することができます。
 
 - また、Jupyter (旧 IPython) は、Azure 上の自分の Windows または Linux 仮想マシンでも実行できます。 詳細については、「[Azure 上で Azure VM を作成し、Jupyter をインストールして、Jupyter Notebook を実行する](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-jupyter-notebook)」を参照してください。
-

@@ -1,27 +1,24 @@
 ---
 title: "R Tools for Visual Studio の使用を開始する | Microsoft Docs"
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 39228cf0-8d21-43bb-a2ce-5e5fdc81ec41
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 616b39cdd355e6a795a4b4e2929586ba233ab8da
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: b9fb38bf7e21924d7fbece72978e99d298a42b74
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="getting-started-with-r-tools-for-visual-studio"></a>R Tools for Visual Studio の使用を開始する
 
 R Tools for Visual Studio (RTVS) をインストールすると ([インストール](installation.md)に関するページを参照してください)、ツールが提供するエクスペリエンスをすばやく確認できます。 次のセクションでは、簡単なツアーを紹介します。
@@ -183,4 +180,3 @@ Visual Studio の主な強みの 1 つは、デバッグ UI です。 RTVS は�
 - [デバッグ](debugging.md)
 - [ワークスペース](workspaces.md)
 - [データの視覚化](visualizing-data.md)
-

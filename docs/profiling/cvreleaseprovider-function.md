@@ -1,30 +1,29 @@
 ---
 title: "CvReleaseProvider 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cvmarkers/CvReleaseProvider"
-helpviewer_keywords: 
-  - "CvReleaseProvider メソッド"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cvmarkers/CvReleaseProvider
+helpviewer_keywords: CvReleaseProvider method
 ms.assetid: 8d74379e-295d-452b-bd5f-0769df387d4f
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6a6adcdd1be3b14ec4dbb9462ebddd82d9835e4e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CvReleaseProvider 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-マーカーのプロバイダーを解放します。  マーカーのプロバイダーを解放すると、前に作成したマーカーの一連のこのプロバイダーには影響しません。  マーカーのシリーズの呼び出しは CvReleaseMarkerSeries してリリースである必要があります。  プロバイダーの原因を解放できないメモリ リーク。  
+# <a name="cvreleaseprovider-function"></a>CvReleaseProvider 関数
+マーカー プロバイダーをリリースします。 マーカー プロバイダーをリリースしても、このプロバイダーの以前に作成したマーカー系列には影響がありません。 マーカー系列は、CvReleaseMarkerSeries を呼び出すことで個別にリリースする必要があります。 プロバイダーのリリースに失敗すると、メモリ漏れが発生します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT CvReleaseProvider(  
@@ -32,15 +31,15 @@ HRESULT CvReleaseProvider(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pProvider`  
- プロバイダーのコンテキスト。  NULL にすることはできません。  
+ プロバイダー コンテキスト。 Null は指定できません。  
   
-## 戻り値  
- エラーが発生したプロバイダーが正常に解放またはエラー コードの場合は S\_OK を返します。  エラー条件をチェックするために SUCCEEDED\/FAILED マクロを使用します。  
+## <a name="return-value"></a>戻り値  
+ プロバイダーがリリースされると S_OK を、エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** cvmarkers.h  
   
-## 参照  
- [C\+\+ ライブラリ リファレンス](../profiling/cpp-library-reference.md)
+## <a name="see-also"></a>関連項目  
+ [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)

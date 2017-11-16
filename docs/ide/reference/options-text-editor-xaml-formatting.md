@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 01/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,33 +30,18 @@ helpviewer_keywords:
 - WPF Designer, XAML formatting
 - XAML view settings, attribute spacing
 ms.assetid: ad3820b1-0d94-4807-a74c-c3467ed973a2
-caps.latest.revision: 15
-author: kempb
-ms.author: kempb
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: 0d087d735f3db1f1d8fa7f37f049b6208e5242c0
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/30/2017
-
+ms.openlocfilehash: 978a2709fb95a0ade74f5c67d5dc774823ded6a3
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="options-text-editor-xaml-formatting"></a>[オプション]、[テキスト エディター]、[XAML]、[書式設定]
-[**書式設定**] プロパティ ページを使用して、XAML ドキュメントで要素と属性をどのように書式設定するかを指定します。 [**オプション**] ダイアログ ボックスを開くには、[**ツール**] メニューをクリックし、[**オプション**] をクリックします。 [**書式設定**] プロパティ ページにアクセスするには、[**テキスト エディター**]、[**XAML**]、[**書式設定**] ノードを展開します。  
+**[書式設定]** プロパティ ページを使用して、XAML ドキュメントで要素と属性をどのように書式設定するかを指定します。 **[オプション]** ダイアログ ボックスを開くには、**[ツール]** メニューをクリックし、**[オプション]** をクリックします。 **[書式設定]** プロパティ ページにアクセスするには、**[テキスト エディター]**、**[XAML]**、**[書式設定]** ノードを展開します。  
 
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
@@ -73,7 +57,7 @@ ms.lasthandoff: 05/30/2017
 
 -   キーボード コマンドの書式設定  
 
- 自動フォーマットが発生するイベントを指定することができます。  
+自動フォーマットが発生するイベントを指定することができます。  
 
 |||  
 |-|-|  
@@ -96,7 +80,7 @@ ms.lasthandoff: 05/30/2017
 
 |||  
 |-|-|  
-|**指定の長さを超えたタグを折り返す**|[**長さ**] で指定された行の長さで行を折り返すかどうかを指定します。|  
+|**指定の長さを超えたタグを折り返す**|**[長さ]** で指定された行の長さで行を折り返すかどうかを指定します。|  
 |**長さ**|1 行に含めることができる文字数です。 一部の XAML 行は、必要に応じて指定した行の長さを超えることができます。|  
 
 ## <a name="attribute-spacing"></a>属性間のスペース  
@@ -132,4 +116,3 @@ ms.lasthandoff: 05/30/2017
  [WPF の XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)   
  [方法 : XAML ビュー設定を変更する](http://msdn.microsoft.com/en-us/aee87c79-ca01-4f84-8fb7-a9e47048ee47)   
  [XAML とコードのチュートリアル](http://msdn.microsoft.com/en-us/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)
-

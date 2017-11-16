@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 02/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
-caps.latest.revision: 8
-author: BrianPeek
-ms.author: brpeek
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
 manager: ghogen
-dev_langs:
-- C++
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+dev_langs: C++
+ms.openlocfilehash: 10d4ab630132d8ce4191978de669436ca7ba5852
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
-ms.openlocfilehash: f2a659347823fee4b933463011c0b69c07fa937f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="custom-native-etw-heap-events"></a>カスタム ネイティブ ETW ヒープ イベント
 
 Visual Studio には、[プロファイリングと診断](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)のためのさまざまなツールがあります。その 1 つがネイティブ メモリ プロファイラーです。  このプロファイラーはヒープ プロバイダーから [ETW イベント](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-)をフックし、メモリの割り当て状況と使用状況を分析します。  既定では、このツールは、標準の Windows ヒープから行われた割り当てのみを分析できます。このネイティブ ヒープ外の割り当ては表示されません。
@@ -176,6 +158,5 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 > Visual Studio の**パフォーマンス プロファイリング** ツールセットにも**メモリ使用量**ツールがあります。**[デバッグ]、[パフォーマンス プロファイラー]** の順に選択するか、キーボード ショートカットの **Alt + F2** を押してください。  この機能にはヒープ追跡がありません。ここの説明のようにカスタム ヒープが表示されることはありません。  この機能があるのは **[診断ツール]** ウィンドウだけです。**[デバッグ]、[Windows]、[診断ツールの表示]** の順に選択するか、キーボード ショートカットの **Ctrl+Alt+F2** を押してください。
 
 ## <a name="see-also"></a>関連項目
-* [プロファイリング ツール](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)
-* [メモリ使用量](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)
-
+[プロファイリング ツール](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)  
+[メモリ使用量](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage)

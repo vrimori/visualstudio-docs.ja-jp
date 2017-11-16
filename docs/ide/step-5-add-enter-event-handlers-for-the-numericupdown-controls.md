@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45a99a5d-c881-4298-b74d-adb481dec5ee
-caps.latest.revision: 18
-author: kempb
-ms.author: kempb
+caps.latest.revision: "18"
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f3cf117116f5da70391f5252e3d1bde4e2416b69
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b5f12c71a894937ad452a31bf53e19e4fbb2d7a2
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加
 このチュートリアルの第 5 部では、クイズ問題の解答の入力が少し楽になるように Enter イベント ハンドラーを追加します。 このコードは、クイズの受け手が選択して別の値の入力を開始するとすぐに、各 NumericUpDown コントロールの現在の値を選択し、クリアします。  
@@ -70,7 +53,8 @@ ms.lasthandoff: 09/06/2017
   
 3.  **answer_Enter** イベント ハンドラーのメソッドに、次のコードを追加します。  
   
-     [!code-vb[VbExpressTutorial3Step5_6#11](../ide/codesnippet/VisualBasic/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.vb)]  [!code-csharp[VbExpressTutorial3Step5_6#11](../ide/codesnippet/CSharp/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.cs)]  
+     [!code-vb[VbExpressTutorial3Step5_6#11](../ide/codesnippet/VisualBasic/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.vb)]
+     [!code-csharp[VbExpressTutorial3Step5_6#11](../ide/codesnippet/CSharp/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.cs)]  
   
      このコードは複雑に見えますが、順番に見ていけば理解できます。 まず、メソッドの先頭の部分 (C# の場合は `object sender`、Visual Basic の場合は `sender As System.Object`) を見てください。 このパラメーターは、sender と呼ばれる、イベントが発生しているオブジェクトを参照します。 この場合、sender オブジェクトは NumericUpDown コントロールです。 したがって、メソッドの 1 行目で、sender が汎用オブジェクトではなく、具体的に NumericUpDown コントロールであると指定します。 (NumericUpDown コントロールはいずれもオブジェクトですが、オブジェクトがすべて NumericUpDown コントロールであるとは限りません)。NumericUpDown コントロールはこのメソッドで **answerBox** と名付けられます。これは、sum NumericUpDown コントロールだけではなく、フォームのすべての NumericUpDown コントロールに使用されるためです。 このメソッドで answerBox 変数を宣言するため、そのスコープはこのメソッドにのみ適用されます。 つまり、変数はこのメソッド内でのみ使用できます。  
   
