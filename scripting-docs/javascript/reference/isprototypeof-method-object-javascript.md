@@ -1,53 +1,54 @@
 ---
-title: "isPrototypeOf メソッド (Object) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "isPrototypeOf"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "isPrototypeOf メソッド"
+title: "isPrototypeOf メソッド (Object) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: isPrototypeOf
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: isPrototypeOf method
 ms.assetid: 9c821319-c208-480f-915e-565ef6e017b6
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 47ce97faecfade089bbf0b7a725a02ee73b54718
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# isPrototypeOf メソッド (Object) (JavaScript)
+# <a name="isprototypeof-method-object-javascript"></a>isPrototypeOf メソッド (Object) (JavaScript)
 オブジェクトが別のオブジェクトのプロトタイプ チェーンに存在するかどうかを判定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 prototype.isPrototypeOf(object)  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `prototype`  
- 必須。  オブジェクトのプロトタイプ。  
+ 必須です。 オブジェクトのプロトタイプ。  
   
  `object`  
- 必須。  プロトタイプ チェーンをチェックする別のオブジェクト。  
+ 必須です。 プロトタイプ チェーンをチェックする別のオブジェクト。  
   
-## 解説  
- `object` のプロトタイプ チェーンに `prototype` がある場合、`isPrototypeOf` メソッドは `true` を返します。  プロトタイプ チェインは、同じオブジェクト型のインスタンス間で機能を共有するときに使用します。  `object` がオブジェクトではない場合、または `prototype` が `object` のプロトタイプ チェーンに存在しない場合、`isPrototypeOf` メソッドは `false` を返します。  
+## <a name="remarks"></a>コメント  
+ `isPrototypeOf` のプロトタイプ チェーンに `true` がある場合、`object` メソッドは `prototype` を返します。 プロトタイプ チェインは、同じオブジェクト型のインスタンス間で機能を共有するときに使用します。 `isPrototypeOf` がオブジェクトではない場合、または `false` が `object` のプロトタイプ チェーンに存在しない場合、`prototype` メソッドは `object` を返します。  
   
-## 使用例  
+## <a name="example"></a>例  
  `isPrototypeOf` メソッドの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 function Rectangle() {  
 }  
   
@@ -58,8 +59,8 @@ document.write(Rectangle.prototype.isPrototypeOf(rec));
 // Output: true  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
-## 参照  
- [prototype プロパティ \(Object\)](../../javascript/reference/prototype-property-object-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [prototype プロパティ (Object)](../../javascript/reference/prototype-property-object-javascript.md)

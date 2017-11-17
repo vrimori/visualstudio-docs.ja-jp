@@ -1,48 +1,47 @@
 ---
-title: "方法: ASP.NET Web アプリケーション用にコード分析を構成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.codeanalysis.propertypages.asp"
+title: "方法: ASP.NET Web アプリケーションのコード分析を構成する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.codeanalysis.propertypages.asp
 ms.assetid: b3000b31-fd9d-489e-81a2-a4bee49453ba
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: dbc2ba8f78cc8f38bce62adbd3d91604875bffa3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: ASP.NET Web アプリケーション用にコード分析を構成する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] および [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)] では、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションに適用するコード分析*規則セット*を一覧から選択できます。  既定の規則セットは Microsoft 最小推奨規則です。  Web サイトに適用する別の規則セットを選択することもできます。  
+# <a name="how-to-configure-code-analysis-for-an-aspnet-web-application"></a>方法: ASP.NET Web アプリケーション用にコード分析を構成する
+[!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)]と[!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)]コード分析の一覧から選択できます*ルール セット*に適用する[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]Web アプリケーションです。 既定の規則セットは、Microsoft Mininimum 推奨規則です。 Web サイトに適用する別のルールを選択することができます。  
   
-### ASP.NET ページ フレームワーク プロジェクトの規則セットを構成するには  
+### <a name="to-configure-a-rule-set-for-an-aspnet-page-framework-project"></a>ASP.NET ページ フレームワーク プロジェクトの規則セットを構成するには  
   
-1.  **ソリューション エクスプローラー**で Web サイトを選択します。  
+1.  Web サイトを選択して**ソリューション エクスプ ローラー**です。  
   
-2.  **\[分析\]** メニューの **\[Web サイトのコード分析を構成する\]** をクリックします。  
+2.  **分析** メニューのをクリックして**Web サイトのコード分析を構成する**です。  
   
-3.  ソリューションを選択し、そのソリューションに複数のプロジェクトが含まれている場合、**\[構成\]** ボックスの一覧と **\[プラットフォーム\]** ボックスの一覧からビルド構成とターゲット オペレーティング システムを選択します。  
+3.  ソリューションを選択し、このソリューションに複数のプロジェクトは場合からのビルドの構成とターゲットのオペレーティング システムを選択して、**構成**と**プラットフォーム**を一覧表示します。  
   
-4.  ソリューション内のプロジェクトごとに、**\[ルール セット\]** 列をクリックし、実行する規則セットの名前をクリックします。  
+4.  ソリューション内の各プロジェクトをクリックして、**ルール セット**列、および実行するセットのルールの名前をクリックします。  
   
-5.  既定では、コード分析はソリューション内のすべてのプロジェクトで実行されます。  特定のプロジェクトでコード分析を無効または有効にするには、次の手順を実行します。  
+5.  既定では、ソリューション内のすべてのプロジェクトでコード分析を実行します。 特定のプロジェクトのコード分析を有効または無効に、これらの手順に従います。  
   
-    1.  プロジェクト名を右クリックし、\[プロパティ\] をクリックします。  
+    1.  プロジェクト名を右クリックし、[プロパティ] をクリックします。  
   
-    2.  **\[コード分析を有効にする\]** チェック ボックスをオンまたはオフにします。  **\[分析\]** メニューの **\[コード分析を Web サイトで実行\]** をクリックして、コード分析を手動で実行することもできます。  
+    2.  オンまたはオフ、**コード分析の有効化**チェック ボックスをオンします。 手動では選択してもコード分析を実行することができます**Web サイトでコード分析を実行**から、**分析**メニュー。  
   
-6.  **\[この規則セットを実行\]** ドロップダウン リストで、次の手順を実行します。  
+6.  **この規則セットを実行**ドロップダウン リストで、これらの手順に従います。  
   
-    -   使用する規則セットをクリックします。  
+    -   使用する規則セットを選択します。  
   
-    -   セットの一覧にない、既存のカスタム規則を指定するに **\[\<参照\>\]** を選択します。  
+    -   選択**\<参照 >**既存のカスタム規則セットを指定ではありません、ボックスの一覧です。  
   
-    -   カスタム規則セットを定義します。  詳細については、「[カスタム規則セットの作成](../code-quality/creating-custom-code-analysis-rule-sets.md)」を参照してください。
+    -   カスタム規則セットを定義します。 詳細については、次を参照してください。[カスタム規則セットの作成](../code-quality/creating-custom-code-analysis-rule-sets.md)です。

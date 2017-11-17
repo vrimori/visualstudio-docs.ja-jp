@@ -1,54 +1,55 @@
 ---
-title: "call メソッド (Function) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "call"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "call メソッド"
+title: "call メソッド (Function) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: call
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: call method
 ms.assetid: fa356dec-48e6-4f75-8bf3-c1814a76818f
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 2ef871f85459ad875a747ae79c7c054b30a82e55
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# call メソッド (Function) (JavaScript)
+# <a name="call-method-function-javascript"></a>call メソッド (Function) (JavaScript)
 現在のオブジェクトの代わりに、他のオブジェクトを使用してメソッドを呼び出します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 call([thisObj[, arg1[, arg2[,  [, argN]]]]])  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `thisObj`  
- 省略可能です。  現在のオブジェクトとして使用するオブジェクトを指定します。  
+ 省略可能です。 現在のオブジェクトとして使用するオブジェクトを指定します。  
   
  `arg1, arg2, , argN`  
- 省略可能です。  メソッドに渡す引数のリストです。  
+ 省略可能です。 メソッドに渡す引数のリストです。  
   
-## 解説  
- 別のオブジェクトに代わってメソッドを呼び出すときに `call` メソッドを使用します。  このメソッドを使用すると、関数の `this` オブジェクトを元のコンテキストから `thisObj` で指定した新しいオブジェクトに変更できます。  
+## <a name="remarks"></a>コメント  
+ 別のオブジェクトに代わってメソッドを呼び出すときに `call` メソッドを使用します。 このメソッドを使用すると、関数の `this` オブジェクトを元のコンテキストから `thisObj` で指定した新しいオブジェクトに変更できます。  
   
  `thisObj` を指定しない場合は、`global` オブジェクトが `thisObj` として使用されます。  
   
-## 使用例  
+## <a name="example"></a>例  
  `call` メソッドの使用例を次のコードに示します。  
   
-```javascript  
+```JavaScript  
 function callMe(arg1, arg2){  
     var s = "";  
   
@@ -81,9 +82,9 @@ document.write(callMe.call(3, 4, 5));
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Function オブジェクト](../../javascript/reference/function-object-javascript.md)   
- [apply メソッド \(Function\)](../../javascript/reference/apply-method-function-javascript.md)
+ [apply メソッド (Function)](../../javascript/reference/apply-method-function-javascript.md)

@@ -1,73 +1,74 @@
 ---
-title: "チュートリアル : ClickOnce 配置 API を使用して必要に応じてアセンブリをダウンロードする | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "アセンブリ, ダウンロード [ClickOnce]"
-  - "ClickOnce 配置, オンデマンド ダウンロード"
-  - "オンデマンド アセンブリ, ClickOnce"
+title: "チュートリアル: ClickOnce 配置 API で必要に応じてアセンブリをダウンロードする |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- assemblies, downloading [ClickOnce]
+- ClickOnce deployment, on-demand download
+- on-demand assemblies, ClickOnce
 ms.assetid: d20e2789-8621-4806-b5b7-841122da1456
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: f84d1cfa2208dc8a8b9d279a46ecf52676c0ae62
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# チュートリアル : ClickOnce 配置 API を使用して必要に応じてアセンブリをダウンロードする
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-既定では、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの最初の実行時に、そのアプリケーションに含まれるすべてのアセンブリがダウンロードされます。  一方、アプリケーションには、一部のユーザーだけが使用する機能が含まれている場合があります。  この場合は、そのような機能を使用するときにだけ、対応するアセンブリがダウンロードされるようにすることができます。  以下のチュートリアルでは、アプリケーション内の特定のアセンブリを "オプション" としてマークを付ける方法、および、共通言語ランタイム \(CLR: Common Language Runtime\) によって要求されたときに、<xref:System.Deployment.Application> 名前空間にあるクラスを使用して、それらのアセンブリをダウンロードする方法を説明します。  
+# <a name="walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api"></a>チュートリアル : ClickOnce 配置 API を使用して必要に応じてアセンブリをダウンロードする
+既定では、すべてのアセンブリに含める、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションの初回実行時にアプリケーションをダウンロードします。 ただし、少数のユーザーによって使用されているアプリケーションの部分があります。 その場合は、そのような型を作成するときにだけアセンブリをダウンロードすることができます。 次のチュートリアルでは、"optional"、として、アプリケーション内の特定のアセンブリをマークする方法と、クラスを使用してダウンロードする方法、<xref:System.Deployment.Application>共通言語ランタイム (CLR) を要求するときに名前空間。  
   
 > [!NOTE]
->  この手順を使用するには、アプリケーションが完全信頼で実行される必要があります。  
+>  これを行うには、アプリケーションが完全な信頼で実行する必要があります。  
   
-## 必須コンポーネント  
- このチュートリアルを実行するには、次のいずれかのコンポーネントが必要です。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを実行する次のコンポーネントの 1 つ必要になります。  
   
--   Windows SDK。  Windows SDK は、Microsoft ダウンロード センターからダウンロードできます。  
+-   Windows SDK。 Windows SDK は、Microsoft ダウンロード センターからダウンロードできます。  
   
 -   Visual Studio  
   
-## プロジェクトの作成  
+## <a name="creating-the-projects"></a>プロジェクトの作成  
   
-#### オンデマンド アセンブリを使用するプロジェクトを作成するには  
+#### <a name="to-create-a-project-that-uses-an-on-demand-assembly"></a>オンデマンドでアセンブリを使用するプロジェクトを作成するには  
   
-1.  ClickOnceOnDemand という名前のディレクトリを作成します。  
+1.  任意のという名前のディレクトリを作成します。  
   
-2.  Windows SDK コマンド プロンプトまたは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] コマンド プロンプトを開きます。  
+2.  Windows SDK コマンド プロンプトを開き、または[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コマンド プロンプトです。  
   
-3.  ClickOnceOnDemand ディレクトリに移動します。  
+3.  任意のディレクトリに移動します。  
   
-4.  次のコマンドを使用して、公開キーと秘密キーのペアを生成します。  
+4.  次のコマンドを使用して公開/秘密キー ペアを生成します。  
   
     ```  
     sn -k TestKey.snk  
     ```  
   
-5.  メモ帳などのテキスト エディターを使用して、`Message` という名前のプロパティ 1 つを持つ `DynamicClass` クラスを定義します。  
+5.  メモ帳または別のテキスト エディターを使用して、という名前のクラスを定義`DynamicClass`という名前の単一プロパティを持つ`Message`します。  
   
      [!code-vb[ClickOnceLibrary#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.vb)]
-     [!code-cs[ClickOnceLibrary#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]  
+     [!code-csharp[ClickOnceLibrary#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]  
   
-6.  このテキストを、使用しているプログラミング言語に応じて `ClickOnceLibrary.cs` または `ClickOnceLibrary.vb` というファイル名で、ClickOnceOnDemand ディレクトリに保存します。  
+6.  テキストをという名前のファイルとして保存`ClickOnceLibrary.cs`または`ClickOnceLibrary.vb`任意のディレクトリに、使用する言語によって異なります。  
   
 7.  ファイルをアセンブリにコンパイルします。  
   
-    ```c#  
+    ```csharp  
     csc /target:library /keyfile:TestKey.snk ClickOnceLibrary.cs  
     ```  
   
-    ```vb#  
+    ```vb  
     vbc /target:library /keyfile:TestKey.snk ClickOnceLibrary.vb  
     ```  
   
@@ -77,56 +78,56 @@ caps.handback.revision: 16
     sn -T ClickOnceLibrary.dll  
     ```  
   
-9. テキスト エディターを使用して新しいファイルを作成し、次のコードを入力します。  このコードは、必要なときに ClickOnceLibrary アセンブリをダウンロードする Windows フォーム アプリケーションを作成します。  
+9. エディター、テキストを使用して新しいファイルを作成し、次のコードを入力します。 このコードでは、必要な場合に、ClickOnceLibrary アセンブリをダウンロードする Windows フォーム アプリケーションを作成します。  
   
-     [!code-cs[ClickOnceOnDemandCmdLine#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_2.cs)]
+     [!code-csharp[ClickOnceOnDemandCmdLine#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_2.cs)]
      [!code-vb[ClickOnceOnDemandCmdLine#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_2.vb)]  
   
-10. コード内で <xref:System.Reflection.Assembly.LoadFile%2A> の呼び出しを見つけます。  
+10. コードへの呼び出しを見つける<xref:System.Reflection.Assembly.LoadFile%2A>です。  
   
-11. `PublicKeyToken` を、先に取得しておいた値に設定します。  
+11. 設定`PublicKeyToken`以前に取得した値にします。  
   
-12. ファイルに `Form1.cs` または `Form1.vb` の名前を付けて保存します。  
+12. いずれかとして保存`Form1.cs`または`Form1.vb`です。  
   
-13. これを、次のコマンドを使用して実行可能ファイルにコンパイルします。  
+13. 次のコマンドを使用して実行可能ファイルにコンパイルします。  
   
-    ```c#  
+    ```csharp  
     csc /target:exe /reference:ClickOnceLibrary.dll Form1.cs  
     ```  
   
-    ```vb#  
+    ```vb  
     vbc /target:exe /reference:ClickOnceLibrary.dll Form1.vb  
     ```  
   
-## アセンブリをオプションとしてマークするには  
+## <a name="marking-assemblies-as-optional"></a>アセンブリをオプションとしてマークする  
   
-#### MageUI.exe を使用して ClickOnce アプリケーション内のアセンブリをオプションとしてマークするには  
+#### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-mageuiexe"></a>MageUI.exe を使用して ClickOnce アプリケーションでは省略可能としてアセンブリをマークするには  
   
-1.  MageUI.exe を使用して、「[チュートリアル : ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)」の説明に従ってアプリケーション マニフェストを作成します。  アプリケーション マニフェストに、次の設定を行います。  
+1.  」の説明に従って、アプリケーション マニフェストを作成、MageUI.exe を使用して[チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)です。 アプリケーション マニフェストの次の設定を使用します。  
   
-    -   アプリケーション マニフェストに `ClickOnceOnDemand` という名前を付けます。  
+    -   アプリケーション マニフェストの名前を付けます`ClickOnceOnDemand`です。  
   
-    -   **\[Files\]** ページで、ClickOnceLibrary.dll 行の **\[File Type\]** 列を **\[None\]** に設定します。  
+    -   **ファイル** ページで、ClickOnceLibrary.dll 行で、設定、**ファイルの種類**列を**なし**です。  
   
-    -   **\[Files\]** ページで、ClickOnceLibrary.dll 行の **\[Group\]** 列に「`ClickOnceLibrary.dll`」と入力します。  
+    -   **ファイル**ClickOnceLibrary.dll 行で、型のページ`ClickOnceLibrary.dll`で、**グループ**列です。  
   
-2.  MageUI.exe を使用して、「[チュートリアル : ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)」の説明に従って配置マニフェストを作成します。  配置マニフェストに、以下の設定を使用します。  
+2.  説明に従って、配置マニフェストを作成、MageUI.exe を使用して[チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)です。 配置マニフェストに、次の設定を使用します。  
   
-    -   配置マニフェストに `ClickOnceOnDemand` という名前を付けます。  
+    -   配置マニフェストの名前を付けます`ClickOnceOnDemand`です。  
   
-## 新しいアセンブリのテスト  
+## <a name="testing-the-new-assembly"></a>新しいアセンブリをテストする  
   
-#### オンデマンド アセンブリをテストするには  
+#### <a name="to-test-your-on-demand-assembly"></a>オンデマンド アセンブリをテストするには  
   
-1.  作成した [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置を Web サーバーにアップロードします。  
+1.  アップロード、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Web サーバーに配置します。  
   
-2.  配置マニフェストの URL を Web ブラウザーに入力して、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] で配置したアプリケーションを Web ブラウザーから起動します。  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの名前が `ClickOnceOnDemand` であり、そのアップロード先が adatum.com のルート ディレクトリの場合、入力する URL は次のようになります。  
+2.  展開されているアプリケーションを起動[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェストへの URL を入力して、Web ブラウザーからです。 呼び出す場合は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション`ClickOnceOnDemand`adatum.com のルート ディレクトリにアップロードして、URL は次のようになります。  
   
     ```  
     http://www.adatum.com/ClickOnceOnDemand/ClickOnceOnDemand.application  
     ```  
   
-3.  メイン フォームが表示されたら、<xref:System.Windows.Forms.Button> をクリックします。  "Hello, World\!" と書かれたメッセージ ボックスが表示されます。  
+3.  メイン フォームが表示されたら、 <xref:System.Windows.Forms.Button>をクリックします。 「こんにちは, World!」というメッセージ ボックス ウィンドウに文字列が表示されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Deployment.Application.ApplicationDeployment>

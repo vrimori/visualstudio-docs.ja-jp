@@ -1,58 +1,58 @@
 ---
-title: "CA1702: 複合語では、大文字と小文字が正しく区別されなければなりません | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1702"
-  - "CompoundWordsShouldBeCasedCorrectly"
-helpviewer_keywords: 
-  - "CA1702"
-  - "CompoundWordsShouldBeCasedCorrectly"
+title: "Ca 1702: 複合語を正しく使い分ける |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1702
+- CompoundWordsShouldBeCasedCorrectly
+helpviewer_keywords:
+- CA1702
+- CompoundWordsShouldBeCasedCorrectly
 ms.assetid: 05481245-7ad8-48c3-a456-3aa44b6160a6
-caps.latest.revision: 20
-caps.handback.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 9c8606656b7ffe5f64c4c162b85d24bdbd9b1de0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1702: 複合語では、大文字と小文字が正しく区別されなければなりません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702: 複合語では、大文字と小文字が正しく区別されなければなりません
 |||  
 |-|-|  
 |TypeName|CompoundWordsShouldBeCasedCorrectly|  
 |CheckId|CA1702|  
-|分類|Microsoft.Naming|  
-|互換性に影響する変更点|あり – アセンブリで発生した場合。<br /><br /> なし – 型パラメーター上で発生した場合。|  
+|カテゴリ|Microsoft.Naming|  
+|互換性に影響する変更点|互換性に影響する場合に、アセンブリに発生します。<br /><br /> 改行の型パラメーターで発生した場合。|  
   
-## 原因  
- 識別子の名前に複数の語が含まれており、大文字と小文字が正しく使い分けられていない複合語が 1 つ以上あります。  
+## <a name="cause"></a>原因  
+ 識別子の名前には、複数の単語が含まれています。 され、正しく大文字と小文字いない複合語である単語の少なくとも 1 つ表示されます。  
   
-## 規則の説明  
- 識別子の名前は大文字と小文字に基づく単語に分割されます。  Microsoft のスペル チェック ライブラリは、連続する 2 つの単語をチェックします。  それが認識されると、その識別子はこの規則への違反となります。  違反となる複合語の例として、"CheckSum" や "MultiPart" があります。それぞれの正しい表記は、"Checksum" および "Multipart" です。  以前は広く使用されていたことから、この規則にはいくつかの例外が含まれており、単一の語でありながら 2 つの語となるように大文字と小文字を使い分ける必要がある場合もあります \(この場合は "ToolBar" と "FileName"\)。  
+## <a name="rule-description"></a>規則の説明  
+ 識別子の名前は、大文字小文字の区別に基づいて単語に分割されます。 Microsoft スペル チェック ライブラリでは、隣接する 2 つの単語の組み合わせがチェックされます。 認識される場合、識別子には、規則の違反が生成されます。 違反を引き起こす複合語には、"CheckSum"と「マルチパート」は、使い分ける"Checksum"および「マルチパート」としてそれぞれがあります。 以前の一般的な使用法によりいくつかの例外は、ルールに構築され、1 つの単語がいくつかのフラグが立てられて"Toolbar"、"Filename"などを使い分ける (ここでは、"ToolBar"、"FileName") の 2 つの語として。  
   
- 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。  これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージ コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。  
+ 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。 これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージ コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。  
   
-## 違反の修正方法  
- 名前の大文字と小文字を正しく記述します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ 大文字と小文字を正しく区別できるように、名前を変更します。  
   
-## 警告を抑制する状況  
- 複合語を構成する 2 つの語がいずれもスペル チェック用の辞書によって認識され、その 2 つの語を意図的に使用する場合は、この規則による警告を抑制しても安全です。  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 複合語の両方の部分は、辞書によって認識され、その目的は 2 つの単語を使用する場合は、この規則による警告を抑制しても安全です。  
   
-## 関連規則  
- [CA1701: リソース文字列の複合語は、大文字と小文字を正しく区別しなければなりません](../Topic/CA1701:%20Resource%20string%20compound%20words%20should%20be%20cased%20correctly.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1701: リソース文字列の複合語は、大文字と小文字を正しく区別しなければなりません](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)  
   
  [CA1709: 識別子では、大文字と小文字が正しく区別されなければなりません](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)  
   
  [CA1708: 識別子は、大文字と小文字の区別以外にも相違していなければなりません](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)  
   
-## 参照  
- [名前付けのガイドライン](../Topic/Naming%20Guidelines.md)   
- [大文字と小文字の表記規則](../Topic/Capitalization%20Conventions.md)
+## <a name="see-also"></a>関連項目  
+ [名前付けのガイドライン](/dotnet/standard/design-guidelines/naming-guidelines)   
+ [大文字と小文字の表記規則](/dotnet/standard/design-guidelines/capitalization-conventions)

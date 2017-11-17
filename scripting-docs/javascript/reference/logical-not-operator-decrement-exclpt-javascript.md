@@ -1,74 +1,76 @@
 ---
-title: "論理 NOT 演算子 (!)(JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "!"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "! 演算子"
-  - "! 演算子, 概要 (! 演算子の)"
-  - "論理 NOT 演算子"
+title: "論理 NOT 演算子 (!)(JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: '!'
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- Logical NOT operator
+- '! operator'
+- '! operator, about ! operator'
 ms.assetid: 68c3dc71-ae95-4293-9155-67405846d71d
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 29c27b9cd670989eb2112de5067e68bd09d76903
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 論理 NOT 演算子 (!)(JavaScript)
-式で指定された値の論理否定を求めます。  
+# <a name="logical-not-operator--javascript"></a>論理 NOT 演算子 (!)(JavaScript)
+2 つの式に対して論理否定を実行します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 result = !expression  
 ```  
   
-## パラメーター  
- *result*  
- 任意の変数を指定します。  
+## <a name="parameters"></a>パラメーター  
+ *結果*  
+ 任意の変数。  
   
- *expression*  
- 任意の式を指定します。  
+ *式*  
+ 任意の式。  
   
-## 解説  
- *result* がどのように決定されるかを次の表に示します。  
+## <a name="remarks"></a>コメント  
+ 次に示す方法*結果*決定されます。  
   
-|`expression` の値|`result` の値|  
-|---------------------|-----------------|  
+|場合`expression`は|`result`は|  
+|------------------------|----------------------|  
 |True|False|  
 |False|True|  
   
- **\!** 演算子などの単項演算子での式の評価はすべて次のように行われます。  
+ すべての単項演算子など、 **!** 演算子は、次のように式を評価します。  
   
--   undefined または `null` を持つ式を指定すると、ランタイム エラーが発生します。  
+-   未定義に適用される場合または`null`式、実行時エラーが発生します。  
   
--   オブジェクトは文字列に変換されます。  
+-   オブジェクトは、文字列に変換されます。  
   
--   文字列は、数値に変換されます。  数値に変換できない場合は、実行時エラーが発生します。  
+-   文字列は、可能な場合は数値に変換されます。 それ以外の場合は、実行時エラーが発生しました。  
   
--   ブール値は数値として扱われます \(偽の場合は 0、真の場合は 1\)。  
+-   ブール値は、数字 (0 false の場合、true の場合は 1) として扱われます。  
   
- 演算子は、結果として導かれた数値に適用されます。  
+ 演算子は、結果の数に適用されます。  
   
- **\!** 演算子では、*expression* が 0 以外の値の場合、*result* は 0 になります。  *expression* が 0 の場合、*result* は 1 になります。  
+ **!** 演算子場合、*式*がゼロ以外、*結果*は 0 です。 場合*式*ゼロ、*結果*は 1 です。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 参照  
- [ビットごとの NOT 演算子 \(~\)](../../javascript/reference/bitwise-not-operator-decrement-tilde-javascript.md)   
+## <a name="see-also"></a>関連項目  
+ [ビットごとの NOT 演算子 (~)](../../javascript/reference/bitwise-not-operator-decrement-tilde-javascript.md)   
  [演算子の優先順位](../../javascript/operator-subtractprecedence-javascript.md)   
- [演算子の一覧 \(JavaScript\)](../../javascript/misc/operator-subtractsummary-javascript.md)
+ [演算子の一覧 (JavaScript)](../../javascript/misc/operator-subtractsummary-javascript.md)

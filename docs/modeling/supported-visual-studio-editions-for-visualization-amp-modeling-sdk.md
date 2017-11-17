@@ -1,40 +1,25 @@
 ---
-title: "視覚エフェクトに対してサポートされている Visual Studio エディション&amp;Modeling SDK |Microsoft ドキュメント"
+title: "視覚エフェクトに対してサポートされている Visual Studio エディション&amp;モデリング SDK |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Domain-Specific Language Tools, supported Visual Studio editions
+helpviewer_keywords: Domain-Specific Language Tools, supported Visual Studio editions
 ms.assetid: 7c313ba0-031d-45b8-8220-eead61754747
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3d07f82ea737449fee6dfa04a61e195654ba35fa
-ms.openlocfilehash: 600cdcfffdef7a73f3232c169af464df03601e8b
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 185e513f1d9733c071ecacb65f67f2530e43cdc3
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>視覚エフェクトに対してサポートされている Visual Studio エディション&amp;Modeling SDK
-サポートされている Visual Studio のエディションの一覧を以下に[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]の作成と配置環境にします。 これらのエディションの詳細については、Microsoft を参照してください。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=75628)します。  
+# <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>視覚エフェクトに対してサポートされている Visual Studio エディション&amp;モデリング SDK
+サポートされている Visual Studio のエディションの一覧は、次のとおり[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]オーサリングとデプロイ環境でします。 これらのエディションの詳細については、Microsoft を参照してください。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=75628)です。  
   
 ## <a name="authoring-edition"></a>作成エディション  
  DSL を定義するには、以下のコンポーネントをインストールしておく必要があります。  
@@ -54,13 +39,12 @@ ms.lasthandoff: 02/22/2017
   
 -   Visual Studio Professional  
   
--   Visual Studio Shell (統合モード) 再頒布可能パッケージの再頒布可能パッケージ  
+-   Visual Studio Shell (integrated mode) 再頒布可能パッケージの再頒布可能パッケージ  
   
 -   Visual Studio Shell (分離モード) 再頒布可能パッケージ  
   
 > [!NOTE]
->  DSL を Shell 製品上で実行することをするためには、設定する必要があります、**サポートされている VS エディション**フィールド、拡張機能マニフェストにします。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)します。  
+>  DSL シェル製品を実行することをするためには、設定する必要があります、 **VS エディションのサポートされている**拡張機能マニフェスト内のフィールドです。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。  
   
 ## <a name="see-also"></a>関連項目  
  [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
-

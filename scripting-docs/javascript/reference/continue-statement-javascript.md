@@ -1,55 +1,57 @@
 ---
-title: "continue ステートメント (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "continue_JavaScriptKeyword"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "continue ステートメント"
-  - "do...while ステートメント"
-  - "ループ構造, continue ステートメント"
+title: "continue ステートメント (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: continue_JavaScriptKeyword
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- do...while statement
+- continue statement
+- loop structures, continue statement
 ms.assetid: f8a30d9f-e2de-4e1f-8668-4e4cf95f7df9
-caps.latest.revision: 21
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 391f919c4d06a6c529bfee34e21ca7238b3c63b7
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# continue ステートメント (JavaScript)
+# <a name="continue-statement-javascript"></a>continue ステートメント (JavaScript)
 ループの現在の反復の実行を中止し、次の反復の実行を開始します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 continue [label];  
 ```  
   
-## 解説  
- `label` 引数は省略可能で、`continue` を適用するステートメントを指定します。  
+## <a name="remarks"></a>コメント  
+ 省略可能な`label`引数を指定するステートメント`continue`適用されます。  
   
- `continue` ステートメントは、`while` ループ、`do...while` ループ、**for** ループ、または `for...in` ループの中だけで使用できます。  `continue` ステートメントを実行すると、ループの現在の反復の実行が中止され、プログラムの実行はループの先頭から続行されます。  このステートメントの動作は、次のようにループの種類により少しずつ異なります。  
+ 使用することができます、`continue`ステートメント内でのみ、 `while`、 `do...while`、**の**、または`for...in`ループします。 実行する、`continue`ステートメントは、ループの現在のイテレーションを停止し、ループの先頭でプログラム フローが続行されます。 これは、さまざまな種類のループに次の影響があります。  
   
--   `while` ループと `do...while` ループでは、条件が評価され、その結果が true の場合はループの実行が繰り返されます。  
+-   `while`および`do...while`ループがその条件をテストし、true の場合、ループをもう一度実行します。  
   
--   `for` ループでは、最初にインクリメント式が実行され、次に条件式が true の場合はループの実行が繰り返されます。  
+-   `for`ループは、それらのインクリメント式を実行し、テスト式が true の場合、ループをもう一度実行します。  
   
--   `for...in` ループでは、指定された変数の次のフィールドに進み、ループの実行が繰り返されます。  
+-   `for...in`ループを使用して、指定された変数の次のフィールドに進みます、ループをもう一度実行します。  
   
-## 例  
- ループを 1 ～ 9 まで繰り返す例を次に示します。  `(i < 5)` 式と共に `continue` ステートメントが使用されているため、`continue` から `for` 本体の最後までのステートメントはスキップされます。  
+## <a name="examples"></a>例  
+ この例では 1 ~ 9、ループが反復処理します。 間にあるステートメント`continue`との終了、`for`を使用するための本文はスキップされます、`continue`式と共にステートメント`(i < 5)`です。  
   
-```javascript  
+```JavaScript  
 for (var i = 1; i < 10; i++) {  
     if (i < 5) {  
         continue;  
@@ -61,9 +63,9 @@ for (var i = 1; i < 10; i++) {
 // Output: 5 6 7 8 9  
 ```  
   
- 次のコードでは、`continue` ステートメントは、`Inner:` ラベルが前に付いている `for` ループを参照します。  `j` が 24 に達すると、`continue` ステートメントによって `for` ループが次の反復処理に移ります。  各行には 21 ～ 23 と 25 ～ 30 の数字が出力されます。  
+ 次のコードで、`continue`ステートメントを参照して、`for`前がループ、`Inner:`ラベル。 ときに`j`、24、`continue`ステートメントを`for`ループを使用して、次のイテレーションに移動します。 行ごとに 21 ~ 23 および 25 ~ 30 の数字を印刷します。  
   
-```javascript  
+```JavaScript  
 Outer:  
 for (var i = 1; i <= 10; i++) {  
     document.write ("<br />");  
@@ -92,13 +94,13 @@ Inner:
 //i: 10 j: 21 22 23 25 26 27 28 29 30  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [break ステートメント](../../javascript/reference/break-statement-javascript.md)   
  [do...while ステートメント](../../javascript/reference/do-dot-dot-dot-while-statement-javascript.md)   
  [for ステートメント](../../javascript/reference/for-statement-javascript.md)   
- [for...in ステートメント](../../javascript/reference/for-dot-dot-dot-in-statement-javascript.md)   
+ [データ型… ステートメントで](../../javascript/reference/for-dot-dot-dot-in-statement-javascript.md)   
  [ラベル付きステートメント](../../javascript/reference/labeled-statement-javascript.md)   
  [while ステートメント](../../javascript/reference/while-statement-javascript.md)

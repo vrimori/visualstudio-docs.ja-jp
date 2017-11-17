@@ -20,39 +20,25 @@ helpviewer_keywords:
 - graph documents, grouping nodes
 - dependency graphs, assigning categories and properties
 ms.assetid: a2e141f4-4fd8-4611-b236-6b9e7bc54fc1
-caps.latest.revision: 93
+caps.latest.revision: "93"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: fd26c504273cae739ccbeef5e406891def732985
-ms.openlocfilehash: 40444a707b6c7a013429777f2f8b6cb508e2db81
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: f270966c5c91dab1a492a775faca3da220a98d6c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# <a name="customize-code-maps-by-editing-the-dgml-files"></a>Customize code maps by editing the DGML files
-コード マップをカスタマイズするには、マップの Directed Graph Markup Language (.dgml) ファイルを編集できます。 たとえば、要素を編集してカスタム スタイルを指定したり、コード要素とリンクにプロパティおよびカテゴリを割り当てたり、コード要素やリンクにドキュメントや URL をリンクしたりすることができます。 DGML 要素の詳細については、次を参照してください。[向け Graph Markup Language (DGML) リファレンス](../modeling/directed-graph-markup-language-dgml-reference.md)します。  
+# <a name="customize-code-maps-by-editing-the-dgml-files"></a>DGML ファイルを編集してコード マップをカスタマイズする
+コード マップをカスタマイズするには、マップの Directed Graph Markup Language (.dgml) ファイルを編集できます。 たとえば、要素を編集してカスタム スタイルを指定したり、コード要素とリンクにプロパティおよびカテゴリを割り当てたり、コード要素やリンクにドキュメントや URL をリンクしたりすることができます。 DGML 要素の詳細については、次を参照してください。[向け Graph Markup Language (DGML) リファレンス](../modeling/directed-graph-markup-language-dgml-reference.md)です。  
   
- テキスト エディターまたは XML エディターで、コード マップの .dgml ファイルを編集します。 マップが Visual Studio ソリューションの一部である場合は、選択で**ソリューション エクスプ ローラー**ショートカット メニューを開き、選択**ファイルを開く**、 **XML (テキスト) エディター**します。  
+ テキスト エディターまたは XML エディターで、コード マップの .dgml ファイルを編集します。 マップが、Visual Studio ソリューションの一部である場合で選択して**ソリューション エクスプ ローラー**ショートカット メニューを開き、選択**ファイルを開く**、 **XML (テキスト) エディター**です。  
   
 > [!NOTE]
 >  コード マップを作成するには、Visual Studio Enterprise が必要です。 Visual Studio でコード マップを編集する場合、.dgml ファイルを保存すると、未使用の DGML 要素および属性が削除されクリーンアップされます。 また、新しいリンクを手動で追加すると、コード要素が自動的に作成されます。 .dgml ファイルを保存すると、要素に追加した属性によって、自身がアルファベット順に並べ替えられる場合があります。  
   
-##  <a name="a-nameorganizenodesa-group-code-elements"></a><a name="OrganizeNodes"></a>コード要素をグループ化  
+##  <a name="OrganizeNodes"></a>コード要素をグループ化  
  新しいグループを追加したり、既存のノードをグループに変換したりすることができます。  
   
 1.  テキスト エディターまたは XML エディターで、.dgml ファイルを開きます。  
@@ -63,8 +49,7 @@ ms.lasthandoff: 02/22/2017
   
      新しいグループを追加するには、`<Nodes>` セクションを見つけます。 新しい `<Node/>` 要素を追加します。  
   
-3.  
-          `<Node/>` 要素に、`Group` 属性を追加して、グループを展開した状態で表示するか、折りたたんだ状態で表示するかを指定します。 例:  
+3.  `<Node/>` 要素に、`Group` 属性を追加して、グループを展開した状態で表示するか、折りたたんだ状態で表示するかを指定します。 例:  
   
     ```xml  
     <Nodes>  
@@ -73,8 +58,7 @@ ms.lasthandoff: 02/22/2017
     </Nodes>  
     ```  
   
-4.  
-          `<Links>` セクションで、次の属性を持つ `<Link/>` 要素が、グループ コード要素とその子コード要素の間のリレーションシップごとに存在することを確認します。  
+4.  `<Links>` セクションで、次の属性を持つ `<Link/>` 要素が、グループ コード要素とその子コード要素の間のリレーションシップごとに存在することを確認します。  
   
     -   グループ コード要素を指定する `Source` 属性  
   
@@ -93,15 +77,14 @@ ms.lasthandoff: 02/22/2017
     </Links>  
     ```  
   
-     詳細については、`Category`属性は、「[コード要素およびリンクにカテゴリを割り当てる](#AssignCategories)します。  
+     詳細については、`Category`属性は、「[コード要素とリンク カテゴリを割り当てる](#AssignCategories)です。  
   
-##  <a name="a-namechangegraphstylea-change-the-style-of-the-map"></a><a name="ChangeGraphStyle"></a>マップのスタイルを変更します。  
- マップの .dgml ファイルを編集することで、マップの背景色および境界線の色を変更できます。 コード要素およびリンクのスタイルを変更するを参照してください。[コード要素およびリンクのスタイルを変更](#Highlight)します。  
+##  <a name="ChangeGraphStyle"></a>マップのスタイルを変更します。  
+ マップの .dgml ファイルを編集することで、マップの背景色および境界線の色を変更できます。 コード要素とのリンクのスタイルを変更するを参照してください。[コード要素とのリンクのスタイルを変更](#Highlight)です。  
   
 1.  テキスト エディターまたは XML エディターで、.dgml ファイルを開きます。  
   
-2.  
-          `<DirectedGraph>` 要素に次の任意の属性を追加して、グラフのスタイルを変更します。  
+2.  `<DirectedGraph>` 要素に次の任意の属性を追加して、グラフのスタイルを変更します。  
   
      背景色  
   
@@ -124,7 +107,7 @@ ms.lasthandoff: 02/22/2017
     </DirectedGraph>  
     ```  
   
-##  <a name="a-namehighlighta-change-the-style-of-code-elements-and-links"></a><a name="Highlight"></a>コード要素およびリンクのスタイルを変更します。  
+##  <a name="Highlight"></a>コード要素とリンクのスタイルを変更します。  
   
 ###  <a name="CreateCustomStyles"></a>   
  次のコード要素にカスタム スタイルを適用できます。  
@@ -136,7 +119,7 @@ ms.lasthandoff: 02/22/2017
 -   特定の条件に基づくコード要素およびリンクのグループ  
   
 > [!TIP]
->  多くのコード要素またはリンクで繰り返し使用するスタイルがある場合は、これらのコード要素またはリンクにカテゴリを適用し、そのカテゴリにスタイルを適用することも検討できます。 詳細については、次を参照してください。[コード要素およびリンクにカテゴリを割り当てる](#AssignCategories)と[コード要素およびリンク プロパティを割り当てる](#AssignProperties)します。  
+>  多くのコード要素またはリンクで繰り返し使用するスタイルがある場合は、これらのコード要素またはリンクにカテゴリを適用し、そのカテゴリにスタイルを適用することも検討できます。 詳細については、次を参照してください。[コード要素およびリンク カテゴリを割り当てる](#AssignCategories)と[プロパティ コード要素とのリンクを割り当てる](#AssignProperties)です。  
   
 ##### <a name="to-apply-a-custom-style-to-a-single-code-element"></a>単一のコード要素にカスタム スタイルを適用するには  
   
@@ -235,8 +218,7 @@ ms.lasthandoff: 02/22/2017
   
 2.  ソース コード要素とターゲット コード要素の両方の名前を含む `<Link/>` 要素を探します。  
   
-3.  
-          `<Link/>` 要素に次の属性を追加して、スタイルをカスタマイズします。  
+3.  `<Link/>` 要素に次の属性を追加して、スタイルをカスタマイズします。  
   
      外枠と矢じりの色  
   
@@ -268,11 +250,9 @@ ms.lasthandoff: 02/22/2017
   
 1.  テキスト エディターまたは XML エディターで、.dgml ファイルを開きます。  
   
-2.  
-          `<Styles></Styles>` 要素が存在しない場合、`<DirectedGraph></DirectedGraph>` 要素の後の `<Links></Links>` 要素の下位に、この要素を追加します。  
+2.  `<Styles></Styles>` 要素が存在しない場合、`<DirectedGraph></DirectedGraph>` 要素の後の `<Links></Links>` 要素の下位に、この要素を追加します。  
   
-3.  
-          `<Styles></Styles>` 要素で、`<Style/>` 要素の下位に次の属性を指定します。  
+3.  `<Styles></Styles>` 要素で、`<Style/>` 要素の下位に次の属性を指定します。  
   
     -   `TargetType="Node` &#124; `Link | Graph"`  
   
@@ -286,8 +266,7 @@ ms.lasthandoff: 02/22/2017
   
 1.  テキスト エディターまたは XML エディターで、.dgml ファイルを開きます。  
   
-2.  
-          `<Style/>` 要素に、`<Condition/>` 属性を含む `Expression` 要素を追加して、ブール値を返す式を指定します。  
+2.  `<Style/>` 要素に、`<Condition/>` 属性を含む `Expression` 要素を追加して、ブール値を返す式を指定します。  
   
      例:  
   
@@ -315,7 +294,7 @@ ms.lasthandoff: 02/22/2017
   
      <UnaryExpression> ::= "!" <Expression> &#124; "+" <Expression> &#124; "-" <Expression>  
   
-     <Operator>::= "<" |=""></">\<=" |"=" |">=" |">" |"!=" |「または」|「と」|"+" |"*" |"/" |"-"  
+     <Operator>: ="<"&#124;です。"\<="&#124;です。「=」&#124;です。"> ="&#124;です。">"&#124;です。"! ="&#124;です。「または」&#124;です。「と」&#124;です。「+」&#124;です。"*"(& m); #124「/」&#124;です。"-"  
   
      <MemberBindings> ::= <MemberBindings> &#124; <MemberBinding> "." <MemberBinding>  
   
@@ -333,10 +312,9 @@ ms.lasthandoff: 02/22/2017
   
      <Number>: = オプションで小数点と桁の文字列  
   
-     複数を指定した`<Condition/>`要素で、必要がありますがすべて true で、スタイルを適用します。  
+     複数を指定することができます`<Condition/>`要素で、すべて必要があります、スタイルを適用する場合は true です。  
   
-3.  
-          `<Condition/>` 要素の次の行に、1 つ以上の `<Setter/>` 要素を追加して、条件を満たすマップ、コード要素、またはリンクに適用する `Property` 属性と、固定の `Value` 属性または計算される `Expression` 属性を指定します。  
+3.  `<Condition/>` 要素の次の行に、1 つ以上の `<Setter/>` 要素を追加して、条件を満たすマップ、コード要素、またはリンクに適用する `Property` 属性と、固定の `Value` 属性または計算される `Expression` 属性を指定します。  
   
      例:  
   
@@ -393,16 +371,13 @@ ms.lasthandoff: 02/22/2017
 </DirectedGraph>  
 ```  
   
- 
-          `Coverage` プロパティに基づいて、コード要素の背景色を設定する。 スタイルは、`if-else` ステートメントと同様に、出現する順番で評価されます。  
+ `Coverage` プロパティに基づいて、コード要素の背景色を設定する。 スタイルは、`if-else` ステートメントと同様に、出現する順番で評価されます。  
   
  この例では、次のように記述されています。  
   
-1.  
-          `Coverage`> 80 の場合、`Background` プロパティを緑色に設定します。  
+1.  `Coverage`&gt; 80 の場合、`Background` プロパティを緑色に設定します。  
   
-2.  
-          `Coverage`> 50 の場合、`Background` プロパティの値に基づいて、`Coverage` プロパティをオレンジ色の網かけに設定します。  
+2.  `Coverage`&gt; 50 の場合、`Background` プロパティの値に基づいて、`Coverage` プロパティをオレンジ色の網かけに設定します。  
   
 3.  それ以外の場合、`Background` プロパティの値に基づいて、`Coverage` プロパティを赤色の網かけに設定します。  
   
@@ -433,9 +408,7 @@ ms.lasthandoff: 02/22/2017
 </DirectedGraph>  
 ```  
   
- 
-          `Shape` プロパティを `None` に設定して、図形をアイコンで置き換える。 
-          `Icon` プロパティを使用して、アイコンの場所を指定します。  
+ `Shape` プロパティを `None` に設定して、図形をアイコンで置き換える。 `Icon` プロパティを使用して、アイコンの場所を指定します。  
   
 ```xml  
 <DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">  
@@ -464,7 +437,7 @@ ms.lasthandoff: 02/22/2017
 </DirectedGraph>  
 ```  
   
-##  <a name="a-nameassignpropertiesa-assign-properties-to-code-elements-and-links"></a><a name="AssignProperties"></a>コード要素およびリンクにプロパティを割り当てる  
+##  <a name="AssignProperties"></a>コード要素とのリンクにプロパティを割り当てる  
  コード要素およびリンクにプロパティを割り当てることで、コード要素およびリンクを編成できます。 たとえば、特定のプロパティを持つコード要素を選択して、それらのグループ化、スタイルの変更、または非表示化を実行できます。  
   
 #### <a name="to-assign-a-property-to-a-code-element"></a>コード要素にプロパティを割り当てるには  
@@ -479,8 +452,7 @@ ms.lasthandoff: 02/22/2017
     </Nodes>  
     ```  
   
-3.  
-          `<Property/>` 要素を `<Properties>` セクションに追加して、属性 (要素の表示名、データ型など) を指定します。  
+3.  `<Property/>` 要素を `<Properties>` セクションに追加して、属性 (要素の表示名、データ型など) を指定します。  
   
     ```xml  
     <Properties>  
@@ -494,8 +466,7 @@ ms.lasthandoff: 02/22/2017
   
 2.  ソース コード要素とターゲット コード要素の両方の名前を含む `<Link/>` 要素を探します。  
   
-3.  
-          `<Node/>` 要素で、プロパティの名前とその値を指定します。 例:  
+3.  `<Node/>` 要素で、プロパティの名前とその値を指定します。 例:  
   
     ```xml  
     <Links>  
@@ -503,8 +474,7 @@ ms.lasthandoff: 02/22/2017
     </Links>  
     ```  
   
-4.  
-          `<Property/>` 要素を `<Properties>` セクションに追加して、属性 (要素の表示名、データ型など) を指定します。  
+4.  `<Property/>` 要素を `<Properties>` セクションに追加して、属性 (要素の表示名、データ型など) を指定します。  
   
     ```xml  
     <Properties>  
@@ -512,7 +482,7 @@ ms.lasthandoff: 02/22/2017
     </Properties>  
     ```  
   
-##  <a name="a-nameassigncategoriesa-assign-categories-to-code-elements-and-links"></a><a name="AssignCategories"></a>コード要素およびリンクにカテゴリを割り当てる  
+##  <a name="AssignCategories"></a>コード要素とのリンクにカテゴリを割り当てる  
  次のセクションでは、コード要素にカテゴリを割り当てることでコード要素を整理する方法と、コード要素を編成したり子カテゴリに属性を追加したりするのに役立つ階層カテゴリを継承を使用して作成する方法について説明します。  
   
 #### <a name="to-assign-a-category-to-a-code-element"></a>コード要素にカテゴリを割り当てるには  
@@ -521,8 +491,7 @@ ms.lasthandoff: 02/22/2017
   
 -   目的のコード要素の `<Node/>` 要素を見つけます。  
   
--   
-          `<Node/>` 要素に `Category` 属性を追加して、カテゴリの名前を指定します。 例:  
+-   `<Node/>` 要素に `Category` 属性を追加して、カテゴリの名前を指定します。 例:  
   
     ```xml  
     <Nodes>  
@@ -530,8 +499,7 @@ ms.lasthandoff: 02/22/2017
     </Nodes>  
     ```  
   
-     
-          `<Category/>` セクションに `<Categories>` 要素を追加することで、`Label` 属性を使用してそのカテゴリの表示テキストを指定できます。  
+     `<Category/>` セクションに `<Categories>` 要素を追加することで、`Label` 属性を使用してそのカテゴリの表示テキストを指定できます。  
   
     ```xml  
     <Categories>  
@@ -545,8 +513,7 @@ ms.lasthandoff: 02/22/2017
   
 2.  ソース コード要素とターゲット コード要素の両方の名前を含む `<Link/>` 要素を探します。  
   
-3.  
-          `<Link/>` 要素に `Category` 属性を追加して、カテゴリの名前を指定します。 例:  
+3.  `<Link/>` 要素に `Category` 属性を追加して、カテゴリの名前を指定します。 例:  
   
     ```xml  
     <Links>  
@@ -554,8 +521,7 @@ ms.lasthandoff: 02/22/2017
     </Links>  
     ```  
   
-4.  
-          `<Category/>` セクションに `<Categories>` 要素を追加することで、`Label` 属性を使用してそのカテゴリの表示テキストを指定できます。  
+4.  `<Category/>` セクションに `<Categories>` 要素を追加することで、`Label` 属性を使用してそのカテゴリの表示テキストを指定できます。  
   
     ```xml  
     <Categories>  
@@ -587,9 +553,8 @@ ms.lasthandoff: 02/22/2017
   
      この例では、`MyFirstNode` の背景は緑色になります。これは、その `Category` 属性が `Background` の `MyParentCategory` 属性を継承するためです。  
   
-##  <a name="a-nameaddreferencesa-link-documents-or-urls-to-code-elements-and-links"></a><a name="AddReferences"></a>コード要素およびリンクにドキュメントまたは Url をリンクします。  
- マップの .dgml ファイルを編集したり `Reference` 属性をコード要素の `<Node/>` 要素またはリンクの `<Link/>` 要素に追加することで、ドキュメントまたは URL をコード要素またはリンクに対してリンク付けできます。 これで、そのコンテンツをコード要素またはリンクから開いて参照できるようになります。 
-          `Reference` 属性では、そのコンテンツのパスを指定します。 これには、.dgml ファイルの場所に対する相対パス、または絶対パスを使用できます。  
+##  <a name="AddReferences"></a>ドキュメントのリンクまたはコード要素とリンクする Url  
+ マップの .dgml ファイルを編集したり `Reference` 属性をコード要素の `<Node/>` 要素またはリンクの `<Link/>` 要素に追加することで、ドキュメントまたは URL をコード要素またはリンクに対してリンク付けできます。 これで、そのコンテンツをコード要素またはリンクから開いて参照できるようになります。 `Reference` 属性では、そのコンテンツのパスを指定します。 これには、.dgml ファイルの場所に対する相対パス、または絶対パスを使用できます。  
   
 > [!CAUTION]
 >  相対パスを使用し、.dgml ファイルが別の位置に移動された場合、それらのパスは解決しません。 リンクされたコンテンツを開いて参照しようとした場合、コンテンツを表示できないことを示すエラーが発生します。  
@@ -598,11 +563,11 @@ ms.lasthandoff: 02/22/2017
   
 -   クラスに対する変更を示すために、クラスを示すコード要素に、作業コード要素、ドキュメント、または別の .dgml ファイルの URL をリンクすることができます。  
   
--   ソフトウェアの論理アーキテクチャのレイヤーを表すグループ コード要素に依存関係図をリンクすることがあります。  
+-   論理アーキテクチャでは、ソフトウェアの層を表すグループ コード要素に依存関係ダイアグラムをリンクする可能性があります。  
   
 -   インターフェイスを公開するコンポーネントに関する詳細情報を表示するために、そのインターフェイスを示すコード要素にコンポーネント図をリンクすることができます。  
   
--   コード要素を Team Foundation Server 作業項目やバグ、またはコード要素に関連付けられているその他のいくつかの情報にリンクします。  
+-   コード要素を Team Foundation Server 作業項目またはバグ、またはコードの要素に関連付けられているその他のいくつかの情報にリンクします。  
   
 #### <a name="to-link-a-document-or-url-to-a-code-element"></a>ドキュメントまたは URL をコード要素にリンクするには  
   
@@ -614,11 +579,10 @@ ms.lasthandoff: 02/22/2017
   
      単一のコード要素  
   
-    -   
-          `<Node/>` 要素または `<Link/>` 要素で、`Reference` 属性を追加してコード要素の場所を指定します。  
+    -   `<Node/>` 要素または `<Link/>` 要素で、`Reference` 属性を追加してコード要素の場所を指定します。  
   
         > [!NOTE]
-        >  1 つの要素に対して&1; つの `Reference` 属性のみを使用できます。  
+        >  1 つの要素に対して 1 つの `Reference` 属性のみを使用できます。  
   
      例:  
   
@@ -633,17 +597,15 @@ ms.lasthandoff: 02/22/2017
   
      複数のコード要素  
   
-    1.  
-          `<Node/>` 要素または `<Link/>` 要素で、各参照の場所を指定する新しい属性を追加します。  
+    1.  `<Node/>` 要素または `<Link/>` 要素で、各参照の場所を指定する新しい属性を追加します。  
   
-    2.  
-          `<Properties>` セクションで、次の操作を行います。  
+    2.  `<Properties>` セクションで、次の操作を行います。  
   
         1.  新しい種類の参照ごとに `<Property/>` 要素を追加します。  
   
         2.  新しい参照属性の名前に `Id` 属性を設定します。  
   
-        3.  追加、`IsReference`属性に設定`True`コード要素の上に表示される参照を行う**参照へジャンプ**ショートカット メニュー。  
+        3.  追加、`IsReference`属性に設定し、`True`参照コード要素の表示を行う**参照へジャンプ**ショートカット メニュー。  
   
         4.  使用して、`Label`コード要素の上の表示テキストを指定する属性**参照へジャンプ**ショートカット メニュー。  
   
@@ -663,8 +625,7 @@ ms.lasthandoff: 02/22/2017
   
 4.  参照で文字列を繰り返し使用する代わりに、`ReferenceTemplate` 属性を使用して、複数の参照で使用する共通の文字列 (URL など) を指定します。  
   
-     
-          `ReferenceTemplate` 属性では、参照の値のプレースホルダーを指定します。 次の例では、`{0}` 属性の `ReferenceTemplate` プレースホルダーは、 `MyFirstReference` 要素の `MySecondReference` 属性と `<Node/>` 属性の値に置換され、完全なパスが生成されます。  
+     `ReferenceTemplate` 属性では、参照の値のプレースホルダーを指定します。 次の例では、`{0}` 属性の `ReferenceTemplate` プレースホルダーは、 `MyFirstReference` 要素の `MySecondReference` 属性と `<Node/>` 属性の値に置換され、完全なパスが生成されます。  
   
     ```xml  
     <Nodes>  
@@ -677,12 +638,11 @@ ms.lasthandoff: 02/22/2017
     </Properties>  
     ```  
   
-5.  マップから参照先のコード要素を表示するには、コード要素またはリンクのショートカット メニューを開きます。 選択**参照へジャンプ**およびからコード要素。  
+5.  マップから参照先のコード要素を表示するには、コード要素またはリンクのショートカット メニューを開きます。 選択**参照へジャンプ**とし、コード要素です。  
   
 ## <a name="see-also"></a>関連項目  
- [複数のソリューション間の依存関係を対応します。](../modeling/map-dependencies-across-your-solutions.md)   
- [コード マップを使ったアプリケーションのデバッグ](../modeling/use-code-maps-to-debug-your-applications.md)   
- [コード マップ アナライザーを使った潜在的な問題を検索します。](../modeling/find-potential-problems-using-code-map-analyzers.md)   
+ [ソリューション間の依存関係をマップします。](../modeling/map-dependencies-across-your-solutions.md)   
+ [コード マップを使用してアプリケーションをデバッグするには](../modeling/use-code-maps-to-debug-your-applications.md)   
+ [コード マップ アナライザーを使用して潜在的な問題を検索します。](../modeling/find-potential-problems-using-code-map-analyzers.md)   
  [参照およびコード マップを再配置](../modeling/browse-and-rearrange-code-maps.md)   
  [Directed Graph Markup Language (DGML) リファレンス](../modeling/directed-graph-markup-language-dgml-reference.md)
-

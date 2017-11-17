@@ -1,50 +1,52 @@
 ---
-title: "break ステートメント (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "break_JavaScriptKeyword"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "break ステートメント"
-  - "do...while ステートメント"
+title: "break ステートメント (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: break_JavaScriptKeyword
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- do...while statement
+- break statement
 ms.assetid: 5be0f2a8-5fe7-4a6c-89af-ca20a925ce87
-caps.latest.revision: 23
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 5f085a4e51309bf9a060e9ffa352c6ae85924237
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# break ステートメント (JavaScript)
-現在のループを終了します。または、`label` が指定されている場合は、関連するステートメントを終了します。  
+# <a name="break-statement-javascript"></a>break ステートメント (JavaScript)
+終了、現在のループまたはと組み合わせて、 `label`、関連するステートメントを終了します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 break [label];  
 ```  
   
-## 解説  
- 省略可能な `label` 引数で、終了するステートメントのラベルを指定します。  
+## <a name="remarks"></a>コメント  
+ 省略可能な`label`引数は、ステートメントから切断されることのラベルを指定します。  
   
- 通常、`break` ステートメントは、`switch` ステートメント、`while` ループ、`for` ループ、`for...in` ループ、または `do...while` ループの中で使用します。  `label` 引数は、`switch` ステートメントの中で頻繁に使用しますが、単純なステートメントや複合ステートメントなど任意のステートメントの中でも使用できます。  
+ 通常使用する、`break`ステートメントで`switch`ステートメントと`while`、 `for`、 `for...in`、または`do...while`ループします。 最も頻繁に使用する、`label`引数`switch`がステートメントで使用できます、ステートメントはすべて単純型または複合かどうか。  
   
- `break` ステートメントを実行すると、現在のループまたはステートメントの実行が終了し、直後のステートメントからスクリプトの実行が開始されます。  
+ 実行する、`break`ステートメントは、現在のループまたはステートメントから終了し、直後のステートメントでスクリプトの実行を開始します。  
   
-## 例  
- この例では、カウンターは 1 から 99 までカウントするように設定されています。ただし、`break` ステートメントによってループは 14 回で終了します。  
+## <a name="examples"></a>例  
+ この例では、カウンターは設定 1 から 99 までカウントするにはただし、`break`ステートメント 14 カウント、ループを終了します。  
   
-```javascript  
+```JavaScript  
 for (var i = 1; i < 100; i++) {  
     if (i == 15) {  
         break;  
@@ -56,9 +58,9 @@ for (var i = 1; i < 100; i++) {
 // Output: 1234567891011121314  
 ```  
   
- 次のコードでは、`break` ステートメントは、`Inner:` ステートメントが前に付いた `for` ループを参照しています。  `j` が 24 に達すると、`break` ステートメントが実行され、そのループが終了します。  各行には 21 ～ 23 の数字が出力されます。  
+ 次のコードで、`break`ステートメントを参照して、`for`前がループ、`Inner:`ステートメントです。 ときに`j`24、等しく、`break`ステートメントにより、プログラム フローをループを終了します。 行ごとに 21 ~ 23 の数値を印刷します。  
   
-```javascript  
+```JavaScript  
 Outer:  
 for (var i = 1; i <= 10; i++) {  
     document.write ("<br />");  
@@ -87,13 +89,13 @@ Inner:
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [continue ステートメント](../../javascript/reference/continue-statement-javascript.md)   
  [do...while ステートメント](../../javascript/reference/do-dot-dot-dot-while-statement-javascript.md)   
  [for ステートメント](../../javascript/reference/for-statement-javascript.md)   
- [for...in ステートメント](../../javascript/reference/for-dot-dot-dot-in-statement-javascript.md)   
+ [データ型… ステートメントで](../../javascript/reference/for-dot-dot-dot-in-statement-javascript.md)   
  [ラベル付きステートメント](../../javascript/reference/labeled-statement-javascript.md)   
  [while ステートメント](../../javascript/reference/while-statement-javascript.md)

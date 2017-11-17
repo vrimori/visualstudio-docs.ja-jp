@@ -1,52 +1,54 @@
 ---
-title: "length プロパティ (Array) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "length Property"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Array オブジェクト"
-  - "Length プロパティ"
-  - "length プロパティ (array)"
+title: "length プロパティ (Array) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: length Property
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- Array object
+- Length property
+- length property (array)
 ms.assetid: e1c6377c-2e84-440a-9660-f1f512e4a938
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6e69fd5387b1d7430491b1693dec07581f165cc9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# length プロパティ (Array) (JavaScript)
-配列の長さを取得または設定します。  これは配列内で定義されている最後の要素のインデックスより 1 だけ大きい数値です。  
+# <a name="length-property-array-javascript"></a>length プロパティ (Array) (JavaScript)
+配列の長さを取得または設定します。 これは配列内で定義されている最後の要素のインデックスより 1 だけ大きい数値です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 numVar = arrayObj.length   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `numVar`  
- 必須です。  任意の数値です。  
+ 必須です。 任意の数値です。  
   
  `arrayObj`  
- 必須です。  任意の `Array` オブジェクトを指定します。  
+ 必須です。 任意の `Array` オブジェクトを指定します。  
   
-## 解説  
- JavaScript では配列は疎であり、配列内の要素が連続している必要はありません。  `length` プロパティは、必ずしも配列内の要素の数ではありません。  たとえば、次の配列定義で、`my_array.length` には 2 ではなく 7 が含まれています。  
+## <a name="remarks"></a>コメント  
+ JavaScript では配列は疎であり、配列内の要素が連続している必要はありません。 `length` プロパティは、必ずしも配列内の要素の数ではありません。 たとえば、次の配列定義で、`my_array.length` には 2 ではなく 7 が含まれています。  
   
-```javascript  
+```JavaScript  
 var my_array = new Array( );  
 my_array[0] = "Test";  
 my_array[6] = "Another Test";  
@@ -58,7 +60,7 @@ my_array[6] = "Another Test";
   
  `length` プロパティの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 var a;  
 a = new Array(0,1,2,3,4);  
 document.write(a.length);  
@@ -68,7 +70,7 @@ document.write(a.length);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv2](../../javascript/reference/includes/jsv2-md.md)]  
   
 > [!NOTE]

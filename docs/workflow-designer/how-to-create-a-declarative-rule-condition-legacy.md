@@ -1,26 +1,30 @@
 ---
-title: "方法: 宣言的ルール条件を作成する (レガシ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "条件ステートメント, 宣言的ルール条件"
-  - "宣言的ルール条件"
-  - "[ルール条件エディター] ダイアログ ボックス"
+title: "方法: 宣言的ルール条件 (レガシ) を作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- declarative rule conditions
+- condition statements, declarative rule conditions
+- Rule Condition Editor dialog box
 ms.assetid: 804b6129-c433-408f-a424-46987967730c
-caps.latest.revision: 5
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 736c36df419d601c27998d8d34bde9abe5976a17
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 方法: 宣言的ルール条件を作成する (レガシ)
-このトピックでは、[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする従来の [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]を使用してルール条件を宣言する方法について説明します。  
+# <a name="how-to-create-a-declarative-rule-condition-legacy"></a>方法: 宣言的ルール条件を作成する (レガシ)
+このトピックでは、[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする従来の [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用してルール条件を宣言する方法について説明します。  
   
- 条件ステートメントは、**True** または **False** として評価されます。宣言的ルール条件とは、[\[ルール条件エディター\] ダイアログ ボックス \(レガシ\)](../Topic/Rule%20Condition%20Editor%20Dialog%20Box%20\(Legacy\).md)を使って作成され、XML としてワークフローと共に保存される条件ステートメントです。複数の述語を結合したブール値演算とワークフロー ステートとを比較する述語を含めることができます。  
+ 条件ステートメントの評価が**True**または**False**です。 宣言的ルール条件は、条件ステートメントを使用して作成される、[ルール条件エディター ダイアログ ボックス (レガシ)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md)ワークフローに XML として格納されているとします。 複数の述語を結合したブール値演算とワークフロー ステートとを比較する述語を含めることができます。  
   
  宣言的ルール条件は、次のような Windows Workflow Foundation 事前定義アクティビティで使用されます。  
   
@@ -36,36 +40,36 @@ caps.handback.revision: 5
   
 -   [StateMachineWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65045)  
   
-### ルール条件エディタを使って宣言的ルール条件を作成するには  
+### <a name="to-create-a-declarative-rule-condition-using-the-rule-condition-editor"></a>ルール条件エディタを使って宣言的ルール条件を作成するには  
   
-1.  アクティビティの **\[プロパティ\]** ウィンドウで、アクティビティに応じて **\[Condition\]** プロパティまたは **\[UntilCondition\]** プロパティをクリックします。  
+1.  アクティビティの**プロパティ**ウィンドウで、をクリックして、**条件**プロパティまたは**UntilCondition**アクティビティに応じてプロパティです。  
   
-2.  プロパティの一覧から **\[宣言型のルール条件\]** を選択します。  
+2.  選択**宣言的ルール条件**プロパティの一覧からです。  
   
-3.  **\[Condition\]** または **\[UntilCondition\]** プロパティを展開します。  
+3.  展開して、**条件**または**UntilCondition**プロパティです。  
   
-4.  **\[ConditionName\]** プロパティをクリックします。  
+4.  クリックして、 **ConditionName**プロパティです。  
   
-5.  **\[ConditionName\]** の **\[...\]** をクリックすると、**\[条件の選択\]** ダイアログ ボックスが開きます。  
+5.  クリックして、 **ConditionName**省略記号**[...]**を開くには、 **[条件の**] ダイアログ ボックス。  
   
-6.  **\[新しい条件\]** をクリックして **\[ルール条件エディター\]** ダイアログ ボックスを表示します。  
+6.  をクリックして**新しい条件**を開くには、**ルール条件エディター**  ダイアログ ボックス。  
   
-7.  条件式を **\[条件\]** ボックスに入力します。  
+7.  条件の式を入力、**条件**テキスト ボックス。  
   
-     条件式を作成する方法については、「[\[ルール条件エディター\] ダイアログ ボックス \(レガシ\)](../Topic/Rule%20Condition%20Editor%20Dialog%20Box%20\(Legacy\).md)」を参照してください。  
+     条件式を作成する方法については、次を参照してください。[ルール条件エディター ダイアログ ボックス (レガシ)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md)です。  
   
-8.  条件式の作成が終わったら、**\[OK\]** をクリックすると、ダイアログ ボックスが閉じて指定した名前のルール条件が作成されます。  
+8.  条件式の作成が完了したら、をクリックして**OK**  ダイアログ ボックスを閉じ、割り当てられた名前を持つルールの条件を作成します。  
   
-     **\[条件の選択\]** ダイアログ ボックスが開きます。  
+     **[条件の**] ダイアログ ボックスが表示されます。  
   
-     **\[条件の選択\]** ダイアログ ボックスの使用方法については、「[\[条件の選択\] ダイアログ ボックス \(レガシ\)](../Topic/Select%20Condition%20Dialog%20Box%20\(Legacy\).md)」を参照してください。  
+     使用する方法については、 **[条件の**ダイアログ ボックスを参照してください[選択条件] ダイアログ ボックス (レガシ)](../workflow-designer/select-condition-dialog-box-legacy.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [従来のワークフロー アクティビティ](../workflow-designer/legacy-workflow-activities.md)   
- [ConditionedActivityGroup の使用](http://go.microsoft.com/fwlink?LinkID=65066)   
+ [ConditionedActivityGroup を使用します。](http://go.microsoft.com/fwlink?LinkID=65066)   
  [IfElseBranchActivity アクティビティの使用](http://go.microsoft.com/fwlink?LinkID=65075)   
- [Replicator アクティビティの使用](http://go.microsoft.com/fwlink?LinkID=65080)   
- [While アクティビティの使用](http://go.microsoft.com/fwlink?LinkID=65091)   
- [\[ルール条件エディター\] ダイアログ ボックス \(レガシ\)](../Topic/Rule%20Condition%20Editor%20Dialog%20Box%20\(Legacy\).md)   
- [\[条件の選択\] ダイアログ ボックス \(レガシ\)](../Topic/Select%20Condition%20Dialog%20Box%20\(Legacy\).md)   
- [ワークフロー内での条件の使用](http://go.microsoft.com/fwlink?LinkID=65009)
+ [レプリケーター アクティビティの使用](http://go.microsoft.com/fwlink?LinkID=65080)   
+ [While を使用してアクティビティ](http://go.microsoft.com/fwlink?LinkID=65091)   
+ [ルール条件エディター ダイアログ ボックス (レガシ)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md)   
+ [条件の選択 ダイアログ ボックス (レガシ)](../workflow-designer/select-condition-dialog-box-legacy.md)   
+ [ワークフローでの条件の使用](http://go.microsoft.com/fwlink?LinkID=65009)

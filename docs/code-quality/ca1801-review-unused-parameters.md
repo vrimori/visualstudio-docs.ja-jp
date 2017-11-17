@@ -1,11 +1,10 @@
 ---
-title: 'CA1801: Review unused parameters | Microsoft Docs'
+title: "Ca 1801: 使用されていないパラメーターを確認する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,73 +15,58 @@ helpviewer_keywords:
 - CA1801
 - ReviewUnusedParameters
 ms.assetid: 5d73545c-e153-4b7c-a7b2-be6bf5aca5be
-caps.latest.revision: 30
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 3c640bad82bd7e84cafe1dcab69f565a9e6222c4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "30"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 1bb8c38d1436ca687664f92bfe0ba6db1ccf68ea
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1801-review-unused-parameters"></a>CA1801: Review unused parameters
+# <a name="ca1801-review-unused-parameters"></a>CA1801: 使用されていないパラメーターをレビューします
 |||  
 |-|-|  
 |TypeName|ReviewUnusedParameters|  
 |CheckId|CA1801|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking - If the member is not visible outside the assembly, regardless of the change you make.<br /><br /> Non Breaking - If you change the member to use the parameter within its body.<br /><br /> Breaking - If you remove the parameter and it is visible outside the assembly.|  
+|カテゴリ|Microsoft.Usage|  
+|互換性に影響する変更点|なし - メンバーが変更に関係なく、アセンブリの外側に表示されていない場合。<br /><br /> なし - の本体にあるパラメーターを使用するメンバーを変更する場合。<br /><br /> 互換性に影響する - パラメーターを削除して、アセンブリ外部から参照である場合。|  
   
-## <a name="cause"></a>Cause  
- A method signature includes a parameter that is not used in the method body. This rule does not examine the following methods:  
+## <a name="cause"></a>原因  
+ メソッドのシグネチャに、メソッドの本体で使用されていないパラメーターがあります。 このルールは、次の方法を確認していません。  
   
--   Methods referenced by a delegate.  
+-   デリゲートによって参照されるメソッド。  
   
--   Methods used as event handlers.  
+-   イベント ハンドラーとして使用されるメソッド。  
   
--   Methods declared with the `abstract` (`MustOverride` in Visual Basic) modifier.  
+-   宣言されたメソッド、 `abstract` (`MustOverride` Visual basic) 修飾子。  
   
--   Methods declared with the `virtual` (`Overridable` in Visual Basic) modifier.  
+-   宣言されたメソッド、 `virtual` (`Overridable` Visual basic) 修飾子。  
   
--   Methods declared with the `override` (`Overrides` in Visual Basic) modifier.  
+-   宣言されたメソッド、 `override` (`Overrides` Visual basic) 修飾子。  
   
--   Methods declared with the `extern` (`Declare` statement in Visual Basic) modifier.  
+-   宣言されたメソッド、 `extern` (`Declare` Visual Basic でのステートメント) 修飾子。  
   
-## <a name="rule-description"></a>Rule Description  
- Review parameters in non-virtual methods that are not used in the method body to make sure no correctness exists around failure to access them. Unused parameters incur maintenance and performance costs.  
+## <a name="rule-description"></a>規則の説明  
+ アクセス エラー関連の正確性が存在しないかどうかを確認するメソッドの本体で使用されていない非仮想メソッドのパラメーターを確認します。 使用されていないパラメーターには、メンテナンスとパフォーマンスのコストが発生します。  
   
- Sometimes a violation of this rule can point to an implementation bug in the method. For example, the parameter should have been used in the method body. Suppress warnings of this rule if the parameter has to exist because of backward compatibility.  
+ この規則違反場合があります、メソッドの実装に関するバグにポイントされます。 たとえば、パラメーターがメソッドの本体で使用されてが必要があります。 パラメーターに旧バージョンと互換性のために存在する場合は、この規則の警告を抑制します。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, remove the unused parameter (a breaking change) or use the parameter in the method body (a non-breaking change).  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、未使用のパラメーター (重大な変更) を削除またはメソッドの本体 (改行なしの変更) でパラメーターを使用します。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule for previously shipped code for which the fix would be a breaking change.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 修正プログラムは、重大な変更になりますが、以前にリリース済みコードのこの規則による警告を抑制しても安全です。  
   
-## <a name="example"></a>Example  
- The following example shows two methods. One method violates the rule and the other method satisfies the rule.  
+## <a name="example"></a>例  
+ 次の例では、2 つの方法を示します。 規則に違反する 1 つのメソッドと、ルールに適合するその他のメソッドです。  
   
  [!code-csharp[FxCop.Usage.ReviewUnusedParameters#1](../code-quality/codesnippet/CSharp/ca1801-review-unused-parameters_1.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1811: Avoid uncalled private code](../code-quality/ca1811-avoid-uncalled-private-code.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1811: 呼び出されていないプライベート コードを使用しません](../code-quality/ca1811-avoid-uncalled-private-code.md)  
   
- [CA1812: Avoid uninstantiated internal classes](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)  
+ [CA1812: インスタンス化されていない内部クラスを使用しないでください](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)  
   
- [CA1804: Remove unused locals](../code-quality/ca1804-remove-unused-locals.md)
+ [CA1804: 使用されていないローカルを削除します](../code-quality/ca1804-remove-unused-locals.md)

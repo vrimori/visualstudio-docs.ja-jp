@@ -1,58 +1,61 @@
 ---
-title: "filter メソッド (Array) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "配列 [JavaScript], filter メソッド"
-  - "filter メソッド [JavaScript]"
+title: "filter メソッド (Array) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- arrays [JavaScript], filter method
+- filter method [JavaScript]
 ms.assetid: 1d260370-9e6e-43fc-870f-2d35850db7ee
-caps.latest.revision: 32
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 32
+caps.latest.revision: "32"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 33a08fdba38de558dabc749a634fb9b69c52c98a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# filter メソッド (Array) (JavaScript)
-コールバック関数で指定された条件を満たす配列の要素を返します。  
+# <a name="filter-method-array-javascript"></a>filter メソッド (Array) (JavaScript)
+コールバック関数で指定された条件を満たす、配列の要素を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 array1.filter(callbackfn[, thisArg])  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
   
 |パラメーター|定義|  
-|------------|--------|  
-|`array1`|必須です。  配列オブジェクト。|  
-|`callbackfn`|必須です。  引数を 3 つまで受け取る関数。  `filter` メソッドは、配列内の各要素に対して `callbackfn` 関数を 1 回呼び出します。|  
-|`thisArg`|省略可能です。  `this` のキーワードが `callbackfn` 関数内で参照できるオブジェクト。  `thisArg` を省略すると、`undefined` が `this` 値として使用されます。|  
+|---------------|----------------|  
+|`array1`|必須です。 配列オブジェクト。|  
+|`callbackfn`|必須です。 3 つまでの引数を受け取る関数。 `filter` メソッドは、配列内の各要素に対して `callbackfn` 関数を 1 回呼び出します。|  
+|`thisArg`|省略可能です。 `this` のキーワードが `callbackfn` 関数内で参照できるオブジェクト。 `thisArg` を省略すると、`undefined` が `this` 値として使用されます。|  
   
-## 戻り値  
- コールバック関数が `true` を返すすべての値を格納する新しい配列。  コールバック関数が `array1` のすべての要素に対して `false` を返した場合、新しい配列の長さは 0 です。  
+## <a name="return-value"></a>戻り値  
+ コールバック関数を返す対象のすべての値を格納する新しい配列`true`です。 コールバック関数を返した場合`false`のすべての要素の`array1`、新しい配列の長さが 0 です。  
   
-## 例外  
+## <a name="exceptions"></a>例外  
  `callbackfn` 引数が関数オブジェクトではない場合は、`TypeError` 例外がスローされます。  
   
-## 解説  
- `filter` メソッドは、配列の各要素に対してインデックスの昇順に `callbackfn` 関数を 1 回呼び出します。  配列内で欠落している要素に対しては、コールバック関数は呼び出されません。  
+## <a name="remarks"></a>コメント  
+ `filter` メソッドは、配列の各要素に対してインデックスの昇順に `callbackfn` 関数を 1 回呼び出します。 配列内で欠落している要素に対しては、コールバック関数は呼び出されません。  
   
- 配列オブジェクトに加えて、`filter` メソッドは `length` プロパティを持つオブジェクトおよび数値インデックス付きプロパティ名を持つオブジェクトで使用できます。  
+ 配列オブジェクトに加えて、`filter` メソッドは、`length` プロパティを持つオブジェクトおよび数値インデックス付きプロパティ名を持つオブジェクトで使用できます。  
   
-## コールバック関数の構文  
+## <a name="callback-function-syntax"></a>コールバック関数の構文  
  コールバック関数の構文は次のとおりです。  
   
  `function callbackfn(value, index, array1)`  
@@ -61,26 +64,26 @@ array1.filter(callbackfn[, thisArg])
   
  コールバック関数パラメーターの一覧を次の表に示します。  
   
-|コールバックの引数|定義|  
-|---------------|--------|  
+|コールバック引数|定義|  
+|-----------------------|----------------|  
 |`value`|配列の要素の値。|  
 |`index`|配列要素の数値インデックス。|  
 |`array1`|要素を格納している配列オブジェクト。|  
   
-## 配列オブジェクトの変更  
- `filter` メソッドが元の配列を直接変更することはありませんが、コールバック関数が変更することはあります。  `filter` メソッドの開始後に配列オブジェクトを変更した結果を次の表に示します。  
+## <a name="modifying-the-array-object"></a>配列オブジェクトの変更  
+ `filter` メソッドが元の配列を直接変更することはありませんが、コールバック関数が変更することはあります。 `filter` メソッドの開始後に配列オブジェクトを変更した結果を次の表に示します。  
   
 |`filter` メソッドの開始後の条件|要素がコールバック関数に渡されるか?|  
-|--------------------------|------------------------|  
+|------------------------------------------------|------------------------------------------|  
 |要素が配列の元の長さを越えて追加されている。|いいえ。|  
-|要素はが、配列内の欠落した要素を補うために追加されている。|はい \(そのインデックスがまだコールバック関数に渡されていない場合\)。|  
-|要素が変更されている。|はい \(その要素がまだコールバック関数に渡されていない場合\)。|  
-|要素が配列から削除されている。|いいえ \(その要素が既にコールバック関数に渡されている場合を除く\)。|  
+|要素はが、配列内の欠落した要素を補うために追加されている。|はい (そのインデックスがまだコールバック関数に渡されていない場合)。|  
+|要素が変更されている。|はい (その要素がまだコールバック関数に渡されていない場合)。|  
+|要素が配列から削除されている。|いいえ (その要素が既にコールバック関数に渡されている場合を除く)。|  
   
-## 使用例  
+## <a name="example"></a>例  
  `filter` メソッドを使用する方法の例を次に示します。  
   
-```javascript  
+```JavaScript  
 // Define a callback function.  
 function CheckIfPrime(value, index, ar) {  
     high = Math.floor(Math.sqrt(value)) + 1;  
@@ -103,10 +106,10 @@ document.write(primes);
 // Output: 31,37,41,43,47,53  
 ```  
   
-## 使用例  
- 次の例では、`callbackfn` 引数に、コールバック関数のコードが含まれています。  
+## <a name="example"></a>例  
+ 次の例では、コールバック関数のコードが `callbackfn` 引数に含まれています。  
   
-```javascript  
+```JavaScript  
 // Create the original array.  
 var arr = [5, "element", 10, "the", true];  
   
@@ -122,10 +125,10 @@ document.write(result);
 // Output: element, the  
 ```  
   
-## 使用例  
- `window` DOM オブジェクトの、文字 css で始まるプロパティの名前を表示する例を次に示します。  
+## <a name="example"></a>例  
+ 次の例は、先頭に文字"css"プロパティの名前を表示、 `window` DOM オブジェクト。  
   
-```javascript  
+```JavaScript  
 var filteredNames = Object.getOwnPropertyNames(window).filter(IsC);  
   
     for (i in filteredNames)  
@@ -154,10 +157,10 @@ function IsC(value) {
   
 ```  
   
-## 使用例  
- `this` キーワードで参照できるオブジェクトを指定する `thisArg` 引数の使用例を次に示します。  
+## <a name="example"></a>例  
+ `thisArg` キーワードで参照できるオブジェクトを指定する `this` 引数の使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 var checkNumericRange = function(value) {  
     if (typeof value !== 'number')  
         return false;  
@@ -178,10 +181,10 @@ document.write(result);
   
 ```  
   
-## 使用例  
- `filter` メソッドは、配列の代わりに文字列に適用できます。  その方法を次の例に示します。  
+## <a name="example"></a>例  
+ `filter`メソッドは、配列の代わりに、文字列に適用できます。 その方法を次の例に示します。  
   
-```javascript  
+```JavaScript  
 // Define a callback function that returns true  
 // if the current array element follows a space  
 // or is the first character.  
@@ -193,7 +196,7 @@ function CheckValue(value, index, ar) {
 }  
   
 // Create a string.  
-var sentence = "The quick brown fox jumps over the lazy dog.";   
+var sentence = "The quick brown fox jumps over the lazy dog.";   
   
 // Create an array that contains all characters that follow a space.  
 var subset = [].filter.call(sentence, CheckValue);   
@@ -206,11 +209,11 @@ document.write(subset);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv9](../../javascript/includes/jsv9-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Array オブジェクト](../../javascript/reference/array-object-javascript.md)   
  [配列の使用](../../javascript/advanced/using-arrays-javascript.md)   
- [map メソッド \(Array\)](../../javascript/reference/map-method-array-javascript.md)   
- [forEach メソッド \(Array\)](../../javascript/reference/foreach-method-array-javascript.md)
+ [map メソッド (Array)](../../javascript/reference/map-method-array-javascript.md)   
+ [forEach メソッド (Array)](../../javascript/reference/foreach-method-array-javascript.md)

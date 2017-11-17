@@ -1,38 +1,40 @@
 ---
-title: "置換引数が無効です | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.WebClient.Help.SCRIPT5035"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "無効な置換関数の引数 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.WebClient.Help.SCRIPT5035
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: 4727186f-facd-4aa6-9447-bbefbae83f07
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 588909bae9c5cf198d3108490111b36d5a2d182b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 置換引数が無効です
-無効な引数で `JSON.stringify` を呼び出そうとしました。  `replacer` 引数には、関数または配列を指定する必要があります。  
+# <a name="invalid-replacer-argument"></a>置換関数の引数が無効です。
+呼び出しが試行されて`JSON.stringify`引数が無効です。 `replacer`関数または配列を引数として使用することがあります。  
   
-### このエラーを解決するには  
+### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   `replacer` 引数を関数または配列に変更してください。  
+-   変更、`replacer`関数または配列に渡す引数。  
   
-## 使用例  
- この例のコードでは、`memberfilter` が関数または配列ではなくオブジェクトであるため、ランタイム エラーが発生します。  
+## <a name="example"></a>例  
+ に、この例では、コードによって、ランタイム エラーが発生`memberfilter`関数または配列ではなくオブジェクトです。  
   
-```javascript  
+```JavaScript  
 var contact = new Object();  
 contact.firstname = "Jesper";  
 contact.surname = "Aaberg";  
@@ -44,7 +46,7 @@ var memberfilter = new Object();
 var jsontext = JSON.stringify(contact, memberfilter, "\t");  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [JSON オブジェクト](../../javascript/reference/json-object-javascript.md)   
  [JSON.parse 関数](../../javascript/reference/json-parse-function-javascript.md)   
  [JavaScript ランタイム エラー](../../javascript/reference/javascript-run-time-errors.md)

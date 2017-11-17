@@ -1,48 +1,51 @@
 ---
-title: "add メソッド (WeakSet) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "add メソッド (WeakSet) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: d35d0287-6b33-4720-b9d7-8954c428ce4e
-caps.latest.revision: 2
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 3ab486beaba4a26c73930b5ceaee927f73aa077a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# add メソッド (WeakSet) (JavaScript)
+# <a name="add-method-weakset-javascript"></a>add メソッド (WeakSet) (JavaScript)
 `WeakSet` オブジェクトに新しい要素を追加します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```javascript  
+```JavaScript  
 weaksetObj.add(obj)  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `weaksetObj`  
- 必須。  `WeakSet` オブジェクト。  
+ 必須です。 `WeakSet` オブジェクト。  
   
  `obj`  
- 必須。  `WeakSet` の新しい要素を指定します。  
+ 必須です。 `WeakSet` の新しい要素を指定します。  
   
-## 解説  
- 新しい要素は、任意の値ではなくオブジェクトで、なおかつ一意でなければなりません。  `WeakSet` に一意でない要素を追加する場合、新しい要素はコレクションに追加されません。  
+## <a name="remarks"></a>コメント  
+ 新しい要素は、任意の値ではなくオブジェクトで、なおかつ一意でなければなりません。 `WeakSet` に一意でない要素を追加する場合、新しい要素はコレクションに追加されません。  
   
-## 使用例  
+## <a name="example"></a>例  
  次の例は、メンバーをセットに追加し、その後、メンバーが追加されたことを確認する方法を示しています。  
   
-```javascript  
+```JavaScript  
 var ws = new WeakSet();  
   
 var str = new String("Thomas Jefferson");  
@@ -61,8 +64,7 @@ console.log(ws.has(str));
 // true  
 // true  
 // false  
-  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv12](../../javascript/reference/includes/jsv12-md.md)]

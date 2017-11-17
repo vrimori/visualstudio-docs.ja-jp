@@ -1,35 +1,40 @@
 ---
-title: "set メソッド (Uint8ClampedArray) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "set メソッド (Uint8ClampedArray) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: 1298443d-5c4c-4329-9ad2-35e213dca157
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ed7635559e615746c577560f1a9266b26acd959d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# set メソッド (Uint8ClampedArray)
+# <a name="set-method-uint8clampedarray"></a>set メソッド (Uint8ClampedArray)
 値または値の配列を設定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```javascript  
-uint8ClampedArray.set(index, value); uint8ClampedArray.set(array, offset);   
+```JavaScript  
+uint8ClampedArray.set(index, value);  
+uint8ClampedArray.set(array, offset);  
+  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `index`  
  設定する位置のインデックス。  
   
@@ -42,15 +47,15 @@ uint8ClampedArray.set(index, value); uint8ClampedArray.set(array, offset);
  `offset`  
  現在の配列内で値が書き込まれる位置のインデックス。  
   
-## 解説  
- 入力配列が、型指定された配列の場合、2 種類の配列で基になる [ArrayBuffer](../../javascript/reference/arraybuffer-object.md) は同一のものが使用されることがあります。  この場合は、すべてのデータが最初にどちらの配列とも重複しない一時バッファーにコピーされ、そこからデータが現在の配列にコピーされたかのように値が設定されます。  
+## <a name="remarks"></a>コメント  
+ 入力配列が型指定された配列の場合は、2 つの配列が、同じ基になるを使用することがあります[ArrayBuffer](../../javascript/reference/arraybuffer-object.md)です。 この場合は、すべてのデータが最初にどちらの配列とも重複しない一時バッファーにコピーされ、そこからデータが現在の配列にコピーされたかのように値が設定されます。  
   
  オフセットと指定された配列の長さを加算すると現在の型指定された配列の範囲外になる場合は、例外が発生します。  
   
-## 使用例  
+## <a name="example"></a>例  
  次の例は、配列の先頭の要素の設定方法を示します。  
   
-```javascript  
+```JavaScript  
 var req = new XMLHttpRequest();  
     req.open('GET', "http://www.example.com");  
     req.responseType = "arraybuffer";  
@@ -67,9 +72,9 @@ var req = new XMLHttpRequest();
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv11_winonly](../../javascript/reference/includes/jsv11-winonly-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ArrayBuffer オブジェクト](../../javascript/reference/arraybuffer-object.md)   
  [Uint8ClampedArray オブジェクト](../../javascript/reference/uint8clampedarray-object-javascript.md)

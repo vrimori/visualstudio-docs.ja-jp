@@ -1,66 +1,70 @@
 ---
-title: "DSL ライブラリによる DSL 間でのクラスの共有 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DSL ライブラリを使用して、Dsl の間でクラスの共有 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 509bd96b-3e66-47f4-8642-771421d0d0d5
-caps.latest.revision: 7
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: ed225f315c92cf9276eb97fcb78e1730250ecd4c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# DSL ライブラリによる DSL 間でのクラスの共有
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の Visualization and Modeling SDK で別のユース ケースにインポートできる不完全な DSL 定義を作成できます。  これは類似したモデルの共通部分を考慮することができます。  
+# <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>DSL ライブラリによる DSL 間でのクラスの共有
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK は、別の DSL にインポートすることができます不完全な DSL 定義を作成することができます。 これにより、類似したモデルの共通部分を考慮することができます。  
   
-## DSL ライブラリを作成して使用します。  
+## <a name="creating-and-using-dsl-libraries"></a>作成して、DSL ライブラリを使用します。  
   
-#### DSL ライブラリを作成するには  
+#### <a name="to-create-a-dsl-library"></a>DSL ライブラリを作成するには  
   
-1.  DSL 新しいプロジェクトを作成しDSL ライブラリのソリューション テンプレートを選択します。  
+1.  新しい DSL プロジェクトを作成し、DSL ライブラリ ソリューション テンプレートを選択します。  
   
-     単一の DSL のプロジェクトは空のモデルによって作成されます。  
+     DSL の単一のプロジェクトは、空のモデルで作成されます。  
   
-2.  ドメイン クラスリレーションシップ図形を追加できます。  
+2.  ドメイン クラス、リレーションシップ、図形に追加することができます。  
   
-     ライブラリの要素は一つの埋め込みツリーを形成する必要はありません。  
+     ライブラリ内の要素は、1 つの埋め込みツリーを形成する必要はありません。  
   
-     インポーターが使用できる関係を定義するには2 種類のドメイン クラスを作成しその間のリレーションシップを作成します。  
+     インポーターが使用できるリレーションシップを定義するのには、2 つのドメイン クラスを作成し、それらの間のリレーションシップを作成します。  
   
-     `Abstract` ドメインにクラスの  **継承修飾子**  を設定することをお勧めします。  
+     設定を検討してください、**継承修飾子**ドメイン クラスの`Abstract`します。  
   
-3.  DSL のエクスプローラーで定義する接続ビルダーの要素を追加できます。  
+3.  接続ビルダーなどの DSL のエクスプ ローラーで定義する要素を追加することができます。  
   
-4.  追加のコードが必要な検証制約のようなカスタマイズを追加できます。  
+4.  検証制約など、追加のコードを必要とするカスタマイズを追加することができます。  
   
-5.  \[ENT3ENT\] をクリックします。  
+5.  をクリックして**すべてのテンプレートを変換**です。  
   
 6.  プロジェクトをビルドします。  
   
-7.  使用する他のユーザーの DSL を配布するときにコンパイル済みアセンブリ \(DLL\) とファイルの両方 `DslDefinition.dsl` を指定する必要があります。  `Dsl\bin\*` の下のフォルダーにコンパイル済みアセンブリを検索できます。  
+7.  DSL を使用するには、他のユーザーを配布するときに、コンパイルされたアセンブリ (DLL) とファイルの両方を指定する必要があります`DslDefinition.dsl`です。 下のフォルダーにコンパイルされたアセンブリを見つけることができます。`Dsl\bin\*`  
   
-#### DSL ライブラリをインポートするには  
+#### <a name="to-import-a-dsl-library"></a>DSL ライブラリをインポートするには  
   
-1.  別の DSL の定義では**\*\*\* DSL Explorer \*\*\*** でを右クリックしDSL のルートのクラスENT1ENT \[\] をクリックします。  
+1.  別の DSL 定義内で**DSL のエクスプ ローラー**、DSL のルート クラスを右クリックし、クリックして**新しい DslLibrary インポートの追加**。  
   
-2.  \[プロパティ\] ウィンドウでライブラリ  **ファイル パス**  を設定します。  相対パスまたは絶対パスを使用できます。  
+2.  [プロパティ] ウィンドウで、設定、**ファイル パス**ライブラリのです。 相対パスまたは絶対パスのいずれかを使用することができます。  
   
-     インポート ライブラリは読み取り専用モードの DSL のエクスプローラーに表示されます。  
+     インポートされたライブラリは、読み取り専用モードには、DSL のエクスプ ローラーで表示されます。  
   
-3.  基本クラスとクラスを使用してインポートできます。  DSL インポートと \[プロパティ\] ウィンドウのドメイン クラスを設定します  **基本クラス**  にインポートするクラスを作成します。  
+3.  インポートされたクラスは、基本クラスとして使用できます。 インポートの DSL のドメイン クラスを作成し、プロパティ ウィンドウで、設定**基本クラスの**をインポートするクラス。  
   
-4.  すべてのテンプレート変換をクリックします。  
+4.  すべてのテンプレートの変換 をクリックします。  
   
-5.  DSL のプロジェクトに追加 DSL ライブラリ プロジェクトによってビルドされたアセンブリ \(DLL\) への参照。  
+5.  DSL プロジェクトに、DSL ライブラリ プロジェクトによってビルドされたアセンブリ (DLL) への参照を追加します。  
   
 6.  ソリューションをビルドします。  
   
- DSL ライブラリは他のライブラリをインポートできます。  ライブラリをインポートするとインポートはDSL のエクスプローラーに自動的に表示されます。  
+ DSL ライブラリは、その他のライブラリをインポートできます。 ライブラリをインポートすると、そのインポートも自動的に DSL のエクスプ ローラーに表示されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)
+ 
+[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

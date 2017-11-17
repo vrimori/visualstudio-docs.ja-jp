@@ -1,65 +1,66 @@
 ---
-title: "方法: 現在の選択項目を表示および制限する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ドメイン固有言語, アクセス (現在の選択項目に)"
+title: "方法: アクセスし、現在の選択範囲を制限する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Domain-Specific Language, accessing the current selection
 ms.assetid: 2990981e-dfae-416f-b0d0-7197f1242dfa
-caps.latest.revision: 14
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 870a8d1c08a8ca0fa72cabf47c8e1087a39e70f9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 方法: 現在の選択項目を表示および制限する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ドメイン固有言語のコマンドまたはジェスチャ ハンドラーを記述する場合は、ユーザーが右クリック、どのような要素を指定できます。 選択されている一部のシェイプまたはフィールドを防ぐことができます。 たとえば、ユーザーには、アイコン デコレータがクリックすると、それを含んでいる図形が選択されている代わりに配置できます。 この方法の選択内容の制約を定義すると、ハンドラーを記述する必要があるの回数が減ります。 簡単ことがユーザーのデコレータを回避することがなく、図形内をクリックできます。  
+# <a name="how-to-access-and-constrain-the-current-selection"></a>方法: 現在の選択項目を表示および制限する
+ドメイン固有言語のコマンドまたはジェスチャ ハンドラーを記述するときに、ユーザーを右クリックした要素を指定できます。 一部のシェイプまたはフィールドも選択されないようにできます。 たとえば、ユーザーには、アイコン デコレータがクリックすると、それを含む図形が選択されている代わりに配置できます。 この方法の選択内容を制限すると、ハンドラーを記述する必要があるの回数が減ります。 またやすく、ユーザーに、デコレータを回避することがなく、図形内をクリックできます。  
   
-## コマンド ハンドラーから現在の選択項目にアクセスします。  
- ドメイン固有言語のコマンド セット クラスには、カスタムのコマンドに対するコマンド ハンドラーが含まれています。<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> 、ドメイン固有言語のコマンド セット クラスの派生元のクラスは、現在の選択項目にアクセスするため、いくつかのメンバーを提供します。  
+## <a name="accessing-the-current-selection-from-a-command-handler"></a>コマンド ハンドラーから現在の選択範囲にアクセスします。  
+ ドメイン固有言語のコマンド セット クラスには、カスタム コマンドのコマンド ハンドラーが含まれています。 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> 、ドメイン固有言語のコマンド セット クラスの派生元のクラスは、現在の選択範囲にアクセスするため、いくつかのメンバーを提供します。  
   
- コマンド ハンドラーは、コマンドによって、モデル デザイナー、モデル エクスプ ローラーで、またはアクティブなウィンドウで選択したを必要があります。  
+ コマンド ハンドラーは、コマンドによって、モデル デザイナー、モデル エクスプ ローラーで、または作業中のウィンドウで選択を必要があります。  
   
-#### 選択範囲の情報にアクセスするには  
+#### <a name="to-access-selection-information"></a>選択範囲の情報にアクセスするには  
   
-1.  <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> クラスは、現在の選択項目にアクセスするために使用する次のメンバーを定義します。  
+1.  <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>クラスは、現在の選択範囲にアクセスするために使用する次のメンバーを定義します。  
   
     |メンバー|説明|  
-    |----------|--------|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> メソッド|返します。 `true` コンパートメント シェイプ; は、モデル デザイナーで選択した要素のいずれかの場合は、それ以外の場合、 `false`です。|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> メソッド|返します。 `true` 場合は、ダイアグラムで、モデル デザイナーで選択されているそれ以外の場合、 `false`です。|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A> メソッド|返します。 `true` 場合、1 個の要素は、モデル デザイナーで選択されているそれ以外の場合、 `false`です。|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A> メソッド|返します。 `true` 場合は 1 個の要素は、アクティブなウィンドウで選択されているそれ以外の場合、 `false`です。|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> プロパティ|モデル デザイナーで選択した要素の読み取り専用コレクションを取得します。|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> プロパティ|作業中のウィンドウで選択した要素の読み取り専用コレクションを取得します。|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> プロパティ|モデル デザイナーでは、選択範囲の主要な要素を取得します。|  
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> プロパティ|アクティブ ウィンドウで、選択範囲の主要な要素を取得します。|  
+    |------------|-----------------|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> メソッド|返します`true`場合は、モデル デザイナーで選択した要素のいずれかのコンパートメントの図形です。 それ以外の場合、`false`です。|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> メソッド|返します`true`ダイアグラムがモデル デザイナーで選択されている、それ以外の場合`false`です。|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A> メソッド|返します`true`1 つの要素がモデル デザイナーで選択されている、それ以外の場合は`false`します。|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A> メソッド|返します`true`1 つの要素が作業中のウィンドウで選択されている、それ以外の場合は`false`します。|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> プロパティ|モデル デザイナーで選択されている要素の読み取り専用コレクションを取得します。|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> プロパティ|作業中のウィンドウで選択されている要素の読み取り専用コレクションを取得します。|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> プロパティ|モデル デザイナーで、選択範囲の主な要素を取得します。|  
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> プロパティ|アクティブ ウィンドウで、選択範囲の主な要素を取得します。|  
   
-2.  <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A> のプロパティ、 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> クラスへのアクセスを提供する、 <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> モデル デザイナー ウィンドウを表し、モデル デザイナーで選択した要素に追加のアクセスを提供するオブジェクト。  
+2.  <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A>のプロパティ、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>クラスへのアクセスを提供する、<xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView>モデル デザイナー ウィンドウを表し、モデル デザイナーで選択した要素に追加のアクセスを提供するオブジェクト。  
   
-3.  さらに、生成されたコードは、エクスプ ローラーのツール ウィンドウのプロパティを定義し、コマンドでエクスプ ローラー選択プロパティは、ドメイン固有言語のクラスを設定します。  
+3.  さらに、生成されたコードは、エクスプ ローラー ツール ウィンドウのプロパティを定義し、コマンドで、エクスプ ローラーの選択のプロパティは、ドメイン固有言語のクラスを設定します。  
   
-    -   エクスプ ローラーのツール ウィンドウのプロパティでは、ドメイン固有言語エクスプ ローラー ツールのウィンドウ クラスのインスタンスを返します。 エクスプ ローラー ツールのウィンドウ クラスの派生元の <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow> クラスし、ドメイン固有言語のモデル エクスプ ローラーを表します。  
+    -   エクスプ ローラー ツール ウィンドウのプロパティは、ドメイン固有言語のエクスプ ローラー ツール ウィンドウ クラスのインスタンスを返します。 エクスプ ローラー ツール ウィンドウ クラスの派生元の<xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow>クラスし、ドメイン固有言語モデル エクスプ ローラーを表します。  
   
-    -   `ExplorerSelection` プロパティは、ドメイン固有言語モデル エクスプ ローラーで選択した要素を返します。  
+    -   `ExplorerSelection`プロパティは、ドメイン固有言語モデル エクスプ ローラー ウィンドウで選択した要素を返します。  
   
-## どのウィンドウがアクティブなを決定します。  
- <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> インターフェイスには、シェルでは、現在の選択状態へのアクセスを提供するメンバーを定義します。 取得できます、 <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> パッケージ クラスまたはから、ドメイン固有言語のコマンド セット クラスのいずれかからオブジェクトを `MonitorSelection` プロパティそれぞれの基本クラスで定義します。 パッケージ クラスの派生元の <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage> クラス、およびコマンド セット クラスから派生した、 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> クラスです。  
+## <a name="determining-which-window-is-active"></a>どのウィンドウがアクティブなを確認します。  
+ <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>インターフェイスには、シェルで現在選択状態へのアクセスを提供するメンバーを定義します。 取得することができます、<xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>オブジェクトから、パッケージ クラスか、コマンド セットのクラスを通じてドメイン固有言語、`MonitorSelection`の各基本クラスで定義されたプロパティ。 パッケージ クラスの派生元の<xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage>から派生したクラス、およびコマンドの set クラス、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>クラスです。  
   
-#### コマンド ハンドラーを判別するのにはどのようなウィンドウの種類がアクティブ  
+#### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>コマンド ハンドラーを判別するのにはどのような種類のウィンドウがアクティブ  
   
-1.  <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A> のプロパティ、 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> クラスを返します。、 <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> シェルでは、現在の選択状態へのアクセスを提供するオブジェクト。  
+1.  <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A>のプロパティ、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>クラスを返します、<xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>シェルで現在選択状態へのアクセスを提供するオブジェクト。  
   
-2.  <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A> のプロパティ、 <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> インターフェイスはアクティブなウィンドウと異なるものになる可能性がアクティブな選択範囲のコンテナーを取得します。  
+2.  <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A>のプロパティ、<xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>インターフェイスは、アクティブなウィンドウから異なる可能性があるアクティブな選択コンテナーを取得します。  
   
-3.  コマンドには、次のプロパティを設定クラスのアクティブ ウィンドウの種類を確認するドメイン固有言語を追加します。  
+3.  コマンドを次のプロパティを設定クラスをアクティブなウィンドウの種類を決定するドメイン固有言語を追加します。  
   
-    ```c#  
+    ```csharp  
     // using Microsoft.VisualStudio.Modeling.Shell;  
   
     // Returns true if the model designer is the active selection container;  
@@ -85,29 +86,29 @@ caps.handback.revision: 14
     }  
     ```  
   
-## 選択範囲を制限します。  
- 選択ルールを追加すると、ユーザーがモデルの要素を選択したときにどの要素が選択されてを制御できます。 たとえば、要素の数を 1 つの単位として処理するユーザーを許可するのには、選択ルールを使用できます。  
+## <a name="constraining-the-selection"></a>選択範囲を制限します。  
+ 選択ルールを追加すると、ユーザーがモデルの要素を選択したときにどの要素が選択を制御できます。 たとえば、要素の数を 1 つの単位として処理するユーザーを許可するのには、選択ルールを使用できます。  
   
-#### 選択ルールを作成するには  
+#### <a name="to-create-a-selection-rule"></a>選択ルールを作成するには  
   
 1.  DSL プロジェクトでカスタム コード ファイルを作成します。  
   
-2.  派生した選択ルール クラスを定義、 <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules> クラスです。  
+2.  派生した選択ルール クラスを定義、<xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules>クラスです。  
   
-3.  オーバーライド、 <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A> 選択条件を適用する、選択ルール クラスのメソッドです。  
+3.  上書き、<xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A>クラスのメソッド、選択ルールの選択条件を適用します。  
   
-4.  カスタム コード ファイルに ClassDiagram クラスの部分クラス定義を追加します。  
+4.  ClassDiagram クラスの部分クラス定義をカスタム コード ファイルに追加します。  
   
-     `ClassDiagram` クラスから派生する、 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> クラスし、は、生成されたコード ファイルを Diagram.cs、DSL プロジェクト内で定義されています。  
+     `ClassDiagram`クラスから派生します<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>クラスし、は、生成されたコード ファイル、Diagram.cs、DSL プロジェクト内で定義されています。  
   
-5.  オーバーライド、 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> のプロパティ、 `ClassDiagram` カスタム選択ルールを返すためにします。  
+5.  上書き、<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A>のプロパティ、`ClassDiagram`カスタム選択ルールを返すためにします。  
   
-     既定の実装、 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> プロパティは、選択範囲を変更しない選択ルール オブジェクトを取得します。  
+     既定の実装、<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A>プロパティが選択範囲を変更しない選択規則オブジェクトを取得します。  
   
-### 例  
+### <a name="example"></a>例  
  次のコード ファイルでは、最初に選択したドメインの図形のそれぞれのインスタンスをすべて選択範囲が広がる選択ルールを作成します。  
   
-```c#  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using Microsoft.VisualStudio.Modeling;  
@@ -205,7 +206,7 @@ namespace CompanyName.ProductName.GroupingDsl
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>   
  <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage>   
  <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView>   

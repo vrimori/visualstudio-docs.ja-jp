@@ -1,35 +1,37 @@
 ---
-title: "do...while ステートメント (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "do_JavaScriptKeyword"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "do...while ステートメント"
-  - "終了 (ループを)"
-  - "ループ構造、do と do-while"
+title: "do...while ステートメント (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: do_JavaScriptKeyword
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- do...while statement
+- terminating loops
+- loop structures, do and do-while
 ms.assetid: 8b7782ba-fbad-48cd-9639-193566da6ae5
-caps.latest.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 895d98a3de3a6691ce60bf0456bb838403619f88
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# do...while ステートメント (JavaScript)
-ステートメント ブロックを一度実行し、その後、条件式の評価が `false` になるまでループ実行を繰り返します。  
+# <a name="dowhile-statement-javascript"></a>do...while ステートメント (JavaScript)
+1 回、ステートメント ブロックを実行し、条件式に評価されるまで、ループの実行を繰り返す`false`です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 do {  
@@ -38,22 +40,22 @@ do {
 while (expression) ;   
 ```  
   
-## Parameters  
+## <a name="parameters"></a>パラメーター  
  `statement`  
- Required.  `expression` が `true` の場合に実行するステートメントを指定します。  複合ステートメントを指定することもできます。  
+ 必須です。 場合に実行されるステートメント`expression`は`true`します。 複合ステートメントにすることもできます。  
   
  `expression`  
- Required.  `true` または `false` のブール値に強制変換できる式を指定します。  `expression` が `true` の場合、ループが再び実行されます。  `expression` が `false` の場合、ループ処理は終了します。  
+ 必須です。 ブール値に変換できる式`true`または`false`です。 場合`expression`は`true`ループがもう一度実行します。 場合`expression`は`false`ループは終了します。  
   
-## 解説  
- `while` ステートメントとは異なり、`do...while` ループは条件式が評価される前に 1 回実行されます。  
+## <a name="remarks"></a>コメント  
+ 異なり、`while`ステートメント、`do...while`ループの条件付きの式が評価される前に 1 回実行します。  
   
- `do…while` ブロック内の任意の行で、`break` ステートメントを使用してループから抜けることができます。同様に、任意の行で `continue` ステートメントを使用して、`while` 式に直接移ることができます。  
+ 任意の行、`do...while`ブロックを使用することができます、`break`プログラム フローを終了するか、ループが発生するステートメントを使用できます、`continue`ステートメントに直接移動する、`while`式。  
   
-## 使用例  
- 次の例では、変数 `i` が 10 未満である限り、`do...while` ループ内のステートメントが実行されます。  
+## <a name="example"></a>例  
+ 次の例では、内のステートメントで、`do...while`ループ継続して実行している間、変数`i`10 未満です。  
   
-```javascript  
+```JavaScript  
 var i = 0;  
 do {  
     document.write(i + " ");  
@@ -63,10 +65,10 @@ do {
 // Output: 0 1 2 3 4 5 6 7 8 9   
 ```  
   
-## 使用例  
- 次の例では、条件が満たされない場合でもループ内のステートメントが 1 回実行されます。  
+## <a name="example"></a>例  
+ 次の例では、ループ内のステートメントは、条件が満たされない場合でも 1 回実行されます。  
   
-```javascript  
+```JavaScript  
 var i = 10;  
 do {  
     document.write(i + " ");  
@@ -76,13 +78,13 @@ do {
 // Output: 10  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [break ステートメント](../../javascript/reference/break-statement-javascript.md)   
  [continue ステートメント](../../javascript/reference/continue-statement-javascript.md)   
  [for ステートメント](../../javascript/reference/for-statement-javascript.md)   
- [for...in ステートメント](../../javascript/reference/for-dot-dot-dot-in-statement-javascript.md)   
+ [データ型… ステートメントで](../../javascript/reference/for-dot-dot-dot-in-statement-javascript.md)   
  [while ステートメント](../../javascript/reference/while-statement-javascript.md)   
  [ラベル付きステートメント](../../javascript/reference/labeled-statement-javascript.md)

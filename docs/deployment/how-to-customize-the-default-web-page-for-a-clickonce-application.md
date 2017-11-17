@@ -1,56 +1,57 @@
 ---
-title: "方法 : ClickOnce アプリケーションの既定の Web ページをカスタマイズする | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Publish.htm Web ページ"
-  - "ClickOnce 配置の既定の Web ページ"
-  - "アプリケーションの配置 [ClickOnce]、発行"
-  - "発行、ClickOnce"
+title: "方法: ClickOnce アプリケーションの既定の Web ページをカスタマイズする |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- Publish.htm Web page
+- ClickOnce deployment default Web page
+- deploying applications [ClickOnce], publishing
+- publishing, ClickOnce
 ms.assetid: 418de18c-bee9-4f24-9cd9-0252d175070d
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: fefafa0f9ea04a62d6ae79bd18834e36a1480f29
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 方法 : ClickOnce アプリケーションの既定の Web ページをカスタマイズする
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ClickOnce アプリケーションを Web に発行するとき、Web ページが自動的に生成され、アプリケーションと共に発行されます。  既定のページには、アプリケーションの名前に加えて、アプリケーションのインストール、必須コンポーネントのインストール、または MSDN のヘルプへのアクセスを実行するためのリンクが表示されます。  
+# <a name="how-to-customize-the-default-web-page-for-a-clickonce-application"></a>方法 : ClickOnce アプリケーションの既定の Web ページをカスタマイズする
+Web への ClickOnce アプリケーションを発行するときに、Web ページが自動的に生成され、アプリケーションと共に発行します。 既定のページには、アプリケーションと、アプリケーションのインストール、インストールの前提条件、または MSDN のヘルプにアクセスするリンクの名前が含まれています。  
   
 > [!NOTE]
->  実際にページに表示されるリンクは、ページを表示するコンピューターと、必須コンポーネントの内容によって異なります。  
+>  ページに表示される実際のリンクは、ページが表示されているコンピューターと新機能によって異なります。 前提条件が含まれています。  
   
- Web ページの既定の名前は Publish.htm ですが、**プロジェクト デザイナー**で名前を変更できます。  詳細については、「[方法 : ClickOnce アプリケーションの発行ページを指定する](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md)」を参照してください。  
+ Web ページの既定の名前は Publish.htm です。内の名前を変更することができます、**プロジェクト デザイナー**です。 詳細については、次を参照してください。[する方法: ClickOnce アプリケーションの発行ページを指定](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md)です。  
   
- Publish.htm Web ページは、より新しいバージョンが検出されない場合にのみ発行されます。  
+ Publish.htm Web ページを公開するは、新しいバージョンが検出された場合にのみです。  
   
 > [!NOTE]
->  **\[発行\]** の設定を変更しても、Publish.htm ページには影響を及ぼしません。ただし例外として、最初に発行した後で必須コンポーネントを追加または削除した場合は、必須コンポーネントの一覧が正しくなくなります。  必須コンポーネントへのリンクのテキストを編集して、変更を反映する必要があります。  
+>  対して行った変更、**発行**設定は、Publish.htm ページで、1 つの例外: 追加の前提条件を最初に発行後に削除するか、前提条件の一覧が不要になった正確になります。 変更を反映するように前提条件のリンクのテキストを編集する必要があります。  
   
-### 発行 Web ページをカスタマイズするには  
+### <a name="to-customize-the-publish-web-page"></a>発行 Web ページをカスタマイズするには  
   
-1.  ClickOnce アプリケーションを Web 上の場所に発行します。  詳細については、「[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../Topic/How%20to:%20Publish%20a%20ClickOnce%20Application%20using%20the%20Publish%20Wizard.md)」を参照してください。  
+1.  Web 上の場所に、ClickOnce アプリケーションを発行します。 詳細については、次を参照してください。[する方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)です。  
   
-2.  Web サーバー上で、Visual Web Designer か他の HTML エディターで Publish.htm ファイルを開きます。  
+2.  Web サーバー上には、ビジュアル Web デザイナーまたは他の HTML エディターで Publish.htm ファイルを開きます。  
   
-3.  必要に応じてページをカスタマイズし、保存します。  
+3.  必要に応じて、ページをカスタマイズし、保存します。  
   
-4.  省略可能。  カスタマイズした発行 Web ページが Visual Studio で上書きされないようにするには、\[発行オプション\] ダイアログ ボックスの **\[発行後に毎回配置 Web ページを自動的に生成する\]** チェック ボックスをオフにします。  
+4.  省略可能です。 Visual Studio のカスタマイズした発行 Web ページの上書きを防ぐためにオフにして**後に配置された web ページを自動的に生成すべて発行**発行オプション ダイアログ ボックス。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
- [方法 : ClickOnce アプリケーションと共に必須コンポーネントをインストールする](../Topic/How%20to:%20Install%20Prerequisites%20with%20a%20ClickOnce%20Application.md)   
- [方法 : ClickOnce アプリケーションの発行ページを指定する](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md)
+ [方法: ClickOnce アプリケーションと共に必須コンポーネントをインストール](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
+ [方法: ClickOnce アプリケーションの発行ページを指定する](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md)

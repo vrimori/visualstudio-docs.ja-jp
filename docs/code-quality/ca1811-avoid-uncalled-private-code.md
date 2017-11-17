@@ -1,61 +1,62 @@
 ---
-title: "CA1811: 呼び出されていないプライベート コードを使用しません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AvoidUncalledPrivateCode"
-  - "CA1811"
-helpviewer_keywords: 
-  - "CA1811"
-  - "AvoidUncalledPrivateCode"
+title: ": Ca 1811 呼び出されていないプライベート コード |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- AvoidUncalledPrivateCode
+- CA1811
+helpviewer_keywords:
+- CA1811
+- AvoidUncalledPrivateCode
 ms.assetid: aadbba74-7821-475f-8980-34d17c0a0a8b
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: fc7bac9804c42cb7910df6b6d89ad766b09ee0d9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1811: 呼び出されていないプライベート コードを使用しません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1811-avoid-uncalled-private-code"></a>CA1811: 呼び出されていないプライベート コードを使用しません
 |||  
 |-|-|  
 |TypeName|AvoidUncalledPrivateCode|  
 |CheckId|CA1811|  
-|分類|Microsoft.Performance|  
+|カテゴリ|Microsoft.Performance|  
 |互換性に影響する変更点|なし|  
   
-## 原因  
- プライベート メンバーまたは内部 \(アセンブリ レベル\) メンバーは、アセンブリ内、共通言語ランタイム、およびデリゲートのいずれからも呼び出されていません。  次のメンバーは、この規則でチェックされません。  
+## <a name="cause"></a>原因  
+ プライベートまたは内部 (アセンブリ レベル) メンバーが呼び出し元アセンブリは、共通言語ランタイムによって呼び出されて、およびデリゲートでは呼び出されません。 次のメンバーは、このルールによってはチェックされません。  
   
--   明示的なインターフェイス メンバー  
+-   明示的なインターフェイス メンバー。  
   
--   静的コンストラクター  
+-   静的コンス トラクターです。  
   
--   シリアル化コンストラクター  
+-   シリアル化コンス トラクターです。  
   
--   <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> または <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> でマークされたメソッド  
+-   マークされたメソッド<xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName>または<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName>です。  
   
--   オーバーライドのメンバー  
+-   オーバーライドであるメンバー。  
   
-## 規則の説明  
- この規則では、規則の論理で識別できないエントリ ポイントがある場合、誤って規則違反が報告されることがあります。  また、コンパイラによって、呼び出すことができないコードがアセンブリに挿入されることもあります。  
+## <a name="rule-description"></a>規則の説明  
+ このルールは、偽陽性のエントリ ポイントが発生した場合は、現在、規則のロジックによって識別されないレポートできます。 また、コンパイラは、アセンブリに noncallable コードを生成する可能性があります。  
   
-## 違反の修正方法  
- この規則違反を修正するには、呼び出すことのできないコードを削除するか、そのコードを呼び出すコードを追加します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、noncallable コードを削除またはそれを呼び出すコードを追加します。  
   
-## 警告を抑制する状況  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  この規則による警告を抑制しても安全です。  
   
-## 関連規則  
- [CA1812: インスタンス化されていない内部クラスを使用しないでください](../Topic/CA1812:%20Avoid%20uninstantiated%20internal%20classes.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1812: インスタンス化されていない内部クラスを使用しないでください](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)  
   
- [CA1801: 使用されていないパラメーターを再確認します](../Topic/CA1801:%20Review%20unused%20parameters.md)  
+ [CA1801: 使用されていないパラメーターをレビューします](../code-quality/ca1801-review-unused-parameters.md)  
   
  [CA1804: 使用されていないローカルを削除します](../code-quality/ca1804-remove-unused-locals.md)

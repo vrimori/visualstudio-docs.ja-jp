@@ -1,68 +1,70 @@
 ---
-title: "setUTCHours メソッド (Date) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "setUTCHours"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "日付, UTC"
-  - "setUTCHours メソッド"
-  - "UTC 時刻, 設定"
+title: "setUTCHours メソッド (Date) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: setUTCHours
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- dates, UTC
+- UTC times, setting
+- setUTCHours method
 ms.assetid: 257e36fd-fb06-4a4d-8634-d66a020a1511
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 9fe83735028f86d38ef270beac6c44dfa4caae7f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# setUTCHours メソッド (Date) (JavaScript)
-`Date` オブジェクトの時刻の時の部分を世界協定時刻 \(UTC\) で設定します。  
+# <a name="setutchours-method-date-javascript"></a>setUTCHours メソッド (Date) (JavaScript)
+時間値を設定、`Date`オブジェクト世界協定時刻 (UTC) を使用します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 dateObj.setUTCHours(numHours[, numMin[, numSec[, numMilli]]])   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dateObj`  
- 必須です。  任意の `Date` オブジェクトを指定します。  
+ 必須です。 任意の `Date` オブジェクトを指定します。  
   
  `numHours`  
- 必須です。  設定する時を表す数値を指定します。  
+ 必須です。 時間の値に等しい数値の値です。  
   
  `numMin`  
- 省略可能です。  設定する分を表す数値を指定します。  `numSec` または `numMilli` を使用する場合は、この引数を指定する必要があります。  
+ 省略可能です。 分の値に等しい数値の値です。 いずれかを指定する必要があります`numSec`または`numMilli`使用されます。  
   
  `numSec`  
- 省略可能です。  設定する秒を表す数値を指定します。  `numMilli` 引数を使用する場合は、この引数を指定する必要があります。  
+ 省略可能です。 秒の値に等しい数値の値です。 場合を指定する必要があります`numMilli`引数を使用します。  
   
  `numMilli`  
- 省略可能です。  設定するミリ秒を表す数値を指定します。  
+ 省略可能です。 ミリ秒の値に等しい数値の値です。  
   
-## 解説  
- 省略可能な引数を指定せずに、**set** で始まる名前の各メソッドを使用した場合、省略した設定の部分には対応する **get** で始まる名前のメソッドで返される値が設定されます。  たとえば、`numMin` 引数を指定しなかった場合、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] では、`getUTCMinutes` メソッドで返される値が使用されます。  
+## <a name="remarks"></a>コメント  
+ すべて**設定**対応から返される値を使用する省略可能な引数を取るメソッド**取得**メソッド、省略可能な引数が指定されていない場合。 たとえば場合、`numMin`引数が指定されていない[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]から返される値を使用して、`getUTCMinutes`メソッドです。  
   
- 時の設定を現地時刻で行うには、`setHours` メソッドを使用してください。  
+ 時間値を現地時刻を設定するには、使用、`setHours`メソッドです。  
   
- 引数に有効範囲を超える値や負の値を指定すると、値に応じて格納される他の値が変更されます。  たとえば、格納されている日付が "Jan 5, 1996 00:00:00.00" の場合に **setUTCHours\(30\)** メソッドが呼び出されると、日付は "Jan 6, 1996 06:00:00.00" に変更されます。  
+ 引数の値の範囲を超える値や負の数をに応じて他の格納された値が変更されます。 たとえば、格納されている日付は「1996 年 1 月 5 日 00:00:00.00」と**setUTCHours(30)**が呼び出されると、日付を変更する「1996 年 1 月 6 日 06:00:00.00」。  
   
-## 使用例  
+## <a name="example"></a>例  
  `setUTCHours` メソッドの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 function SetUTCHoursDemo(nhr, nmin, nsec){     
    var d, s;                        // Declare variables.  
    d = new Date();                  // Create Date object.  
@@ -72,12 +74,12 @@ function SetUTCHoursDemo(nhr, nmin, nsec){
 }  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
- **対象**: [Date オブジェクト](../../javascript/reference/date-object-javascript.md)  
+ **適用対象**: [Date Object](../../javascript/reference/date-object-javascript.md)  
   
-## 参照  
- [getHours メソッド \(Date\)](../../javascript/reference/gethours-method-date-javascript.md)   
- [getUTCHours メソッド \(Date\)](../../javascript/reference/getutchours-method-date-javascript.md)   
- [setHours メソッド \(Date\)](../../javascript/reference/sethours-method-date-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [getHours メソッド (Date)](../../javascript/reference/gethours-method-date-javascript.md)   
+ [getUTCHours メソッド (Date)](../../javascript/reference/getutchours-method-date-javascript.md)   
+ [setHours メソッド (Date)](../../javascript/reference/sethours-method-date-javascript.md)

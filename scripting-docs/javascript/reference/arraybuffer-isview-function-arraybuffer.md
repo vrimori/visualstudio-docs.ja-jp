@@ -1,40 +1,43 @@
 ---
-title: "ArrayBuffer.isView 関数 (ArrayBuffer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "ArrayBuffer.isView 関数 (ArrayBuffer) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: 1887324f-892b-4fcd-ad33-748ba9517a06
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 5aaae2acb38aa2f8c4b5e49ea203e86665315700
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# ArrayBuffer.isView 関数 (ArrayBuffer)
+# <a name="arraybufferisview-function-arraybuffer"></a>ArrayBuffer.isView 関数 (ArrayBuffer)
 オブジェクトがバッファーのビューを提供するかどうかを決定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```javascript  
+```JavaScript  
 ArrayBuffer.isView(object)  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `object`  
- 必ず指定します。  テストするオブジェクト。  
+ 必須です。 テストするオブジェクト。  
   
-## 戻り値  
- `true` \(後続のどちらかが真の場合\):  
+## <a name="return-value"></a>戻り値  
+ `true` (後続のどちらかが真の場合):  
   
 -   `object` は `DataView` オブジェクト。  
   
@@ -42,12 +45,12 @@ ArrayBuffer.isView(object)
   
  それ以外の場合、メソッドは `false` を返します。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 使用例  
+## <a name="example"></a>例  
  次の例では、`isView` 機能を使用した、型指定された配列と`DataView` オブジェクトのテストを説明します。  
   
-```javascript  
+```JavaScript  
 var uint = new UInt8ClampedArray(10);  
   
 if(console && console.log) {  
@@ -60,8 +63,8 @@ if(console && console.log) {
 }  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv11_winonly](../../javascript/reference/includes/jsv11-winonly-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Uint8ClampedArray オブジェクト](../../javascript/reference/uint8clampedarray-object-javascript.md)

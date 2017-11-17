@@ -1,33 +1,34 @@
 ---
-title: "number プロパティ (Error) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Number"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Number プロパティ"
+title: "number プロパティ (Error) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: Number
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: Number property
 ms.assetid: 8697e20b-a2b0-4e26-85c0-ab07ddfe8281
-caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: bbc229e7d0572e1a3dbed056b344da7ff9ce7292
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# number プロパティ (Error) (JavaScript)
-特定のエラーに関連付けられている数値を設定または取得します。  `Error` オブジェクトの既定のプロパティは **number** です。  
+# <a name="number-property-error-javascript"></a>number プロパティ (Error) (JavaScript)
+特定のエラーと関連付けられた数値を設定したり、この数値を取得したりします。 `Error`オブジェクトの既定のプロパティは**数**です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -35,20 +36,20 @@ object
 .number [= errorNumber]  
 ```  
   
-## パラメーター  
- *Object*  
- `Error` オブジェクトの任意のインスタンスを指定します。  
+## <a name="parameters"></a>パラメーター  
+ *オブジェクト*  
+ 任意のインスタンス、`Error`オブジェクト。  
   
- *errorNumber*  
- エラーを表す整数を指定します。  
+ *エラー番号*  
+ エラーを表す整数。  
   
-## 解説  
- エラー番号は 32 ビット値です。  上位の 16 ビット ワードは機能識別符号で、下位のワードはエラー コードです。  エラー コードを確認するには、`&` \(ビットごとの And\) 演算子を使用して、number プロパティと 16 進数の `0xFFFF` を組み合わせます。  
+## <a name="remarks"></a>コメント  
+ エラー番号は 32 ビット値です。 上位 16 ビット ワードは機能コードで、下位のワードはエラー コードです。 エラー コードを調べるを使用して、 `&` (ビットごとと) と 16 進数の数値プロパティを結合する演算子`0xFFFF`です。  
   
-## 使用例  
- 例外をスローさせ、エラー番号から派生したエラー コードを表示する例を次に示します。  
+## <a name="example"></a>例  
+ 次の例がスローされる例外が発生し、エラーの数から派生したエラー コードが表示されます。  
   
-```javascript  
+```JavaScript  
 try  
     {  
     // Cause an error.  
@@ -69,21 +70,21 @@ catch(e)
     }  
 ```  
   
-## 使用例  
- このコードによって、次のような出力が生成されます。  
+## <a name="example"></a>例  
+ このコードによる出力は次のとおりです。  
   
-```javascript  
+```JavaScript  
 Error Code: 5009  
 Facility Code: 10  
 Error Message: 'y' is undefined  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv5](../../javascript/reference/includes/jsv5-md.md)]  
   
- **対象**: [Error オブジェクト](../../javascript/reference/error-object-javascript.md)  
+ **適用されます**: [Error オブジェクト](../../javascript/reference/error-object-javascript.md)  
   
-## 参照  
- [description プロパティ \(Error\)](../../javascript/reference/description-property-error-javascript.md)   
- [message プロパティ \(Error\)](../../javascript/reference/message-property-error-javascript.md)   
- [name プロパティ \(Error\)](../../javascript/reference/name-property-error-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [description プロパティ (Error)](../../javascript/reference/description-property-error-javascript.md)   
+ [message プロパティ (Error)](../../javascript/reference/message-property-error-javascript.md)   
+ [name プロパティ (Error)](../../javascript/reference/name-property-error-javascript.md)

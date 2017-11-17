@@ -1,11 +1,10 @@
 ---
-title: 'CA1410: COM registration methods should be matched | Microsoft Docs'
+title: "Ca 1410: COM 登録メソッドは一致する必要があります |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,61 +14,46 @@ helpviewer_keywords:
 - CA1410
 - ComRegistrationMethodsShouldBeMatched
 ms.assetid: f3b2e62d-fd66-4093-9f0c-dba01ad995fd
-caps.latest.revision: 16
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 7f38792d72d431a35b797ec73c0abdadfc2dd4f1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 65c6191aff1433d050c1f7b50097c88d1d3cf2a0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1410-com-registration-methods-should-be-matched"></a>CA1410: COM registration methods should be matched
+# <a name="ca1410-com-registration-methods-should-be-matched"></a>CA1410: COM 登録メソッドは一致しなければなりません
 |||  
 |-|-|  
 |TypeName|ComRegistrationMethodsShouldBeMatched|  
 |CheckId|CA1410|  
-|Category|Microsoft.Interoperability|  
-|Breaking Change|Non-breaking|  
+|カテゴリ|Microsoft.Interoperability|  
+|互換性に影響する変更点|なし|  
   
-## <a name="cause"></a>Cause  
- A type declares a method that is marked with the <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> attribute but does not declare a method that is marked with the <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> attribute, or vice versa.  
+## <a name="cause"></a>原因  
+ マークされているメソッドを宣言する型、<xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName>属性でマークされているメソッドを宣言しません、<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName>属性、またはその逆です。  
   
-## <a name="rule-description"></a>Rule Description  
- For Component Object Model (COM) clients to create a [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] type, the type must first be registered. If it is available, a method that is marked with the <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> attribute is called during the registration process to run user-specified code. A corresponding method that is marked with the <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> attribute is called during the unregistration process to reverse the operations of the registration method.  
+## <a name="rule-description"></a>規則の説明  
+ コンポーネント オブジェクト モデル (COM) クライアントを作成する、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]型、型は最初に登録されている必要があります。 可能な場合でマークされているメソッド、<xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>属性は、ユーザー指定のコードを実行する登録プロセス中に呼び出されます。 マークされている対応するメソッド、<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>属性が、解除プロセス登録メソッドの操作中に呼び出されます。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, add the corresponding registration or unregistration method.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、対応する登録または登録解除メソッドを追加します。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。  
   
-## <a name="example"></a>Example  
- The following example shows a type that violates the rule. The commented code shows the fix for the violation.  
+## <a name="example"></a>例  
+ 次の例は、規則に違反する型を示しています。 コード内のコメントは、違反の修正方法を示します。  
   
- [!code-csharp[FxCop.Interoperability.ComRegistration#1](../code-quality/codesnippet/CSharp/ca1410-com-registration-methods-should-be-matched_1.cs)] [!code-vb[FxCop.Interoperability.ComRegistration#1](../code-quality/codesnippet/VisualBasic/ca1410-com-registration-methods-should-be-matched_1.vb)]  
+ [!code-csharp[FxCop.Interoperability.ComRegistration#1](../code-quality/codesnippet/CSharp/ca1410-com-registration-methods-should-be-matched_1.cs)]
+ [!code-vb[FxCop.Interoperability.ComRegistration#1](../code-quality/codesnippet/VisualBasic/ca1410-com-registration-methods-should-be-matched_1.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1411: COM registration methods should not be visible](../code-quality/ca1411-com-registration-methods-should-not-be-visible.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1411: COM 登録メソッドは参照可能であることはできません](../code-quality/ca1411-com-registration-methods-should-not-be-visible.md)  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.Runtime.InteropServices.RegistrationServices?displayProperty=fullName>   
- [Registering Assemblies with COM](/dotnet/framework/interop/registering-assemblies-with-com)   
- [Regasm.exe (Assembly Registration Tool)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)
+ [COM へのアセンブリの登録](/dotnet/framework/interop/registering-assemblies-with-com)   
+ [Regasm.exe (アセンブリ登録ツール)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)

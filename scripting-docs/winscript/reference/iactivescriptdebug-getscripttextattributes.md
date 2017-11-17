@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptDebug::GetScriptTextAttributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptDebug::GetScriptTextAttributes |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptDebug.GetScriptTextAttributes
 apilocation: jscript.dll
-helpviewer_keywords: 
-  - "IActiveScriptDebug::GetScriptTextAttributes"
+helpviewer_keywords: IActiveScriptDebug::GetScriptTextAttributes
 ms.assetid: 2e8bda34-db0c-4b2e-a17f-82c4e0dbbc8c
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c8e9cd76da3e754eabce836b386893043dcd0622
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptDebug::GetScriptTextAttributes
-スクリプトの任意のテキスト ブロックのテキスト属性を返します。  
+# <a name="iactivescriptdebuggetscripttextattributes"></a>IActiveScriptDebug::GetScriptTextAttributes
+スクリプトのテキストの任意のブロックのテキスト属性を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetScriptTextAttributes(  
@@ -33,43 +36,43 @@ HRESULT GetScriptTextAttributes(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pstrCode`  
- \[入力\]スクリプト ブロックのテキスト。  この終了する文字列が null である必要はありません。  
+ [in]スクリプト ブロックのテキスト。 この文字列は、されません null 終端である必要があります。  
   
  `uNumCodeChars`  
- \[入力\]スクリプト ブロック内のテキストの文字数。  
+ [in]スクリプト ブロックのテキスト内の文字の数。  
   
  `pstrDelimiter`  
- \[入力\]終わりのスクリプト ブロックの区切り記号のアドレス。  `pstrCode` がテキスト ストリームから解析されると、通常ホストは、スクリプト ブロックの末尾を検出する 2 つ単一引用符などの区切り記号を、\(」\) を使用します。  このパラメーターは、使用するホスト区切り記号を指定します。条件付きのプリミティブな前処理を提供するためにスクリプト エンジンができます \(たとえば、単一引用符を「\[入力\]区切り記号として使用する単一引用符を 2 つに置き換えてください。  は、スクリプト エンジンが連携をこの情報は、スクリプト エンジンによって異なります \(および\)。  スクリプト ブロックの末尾を示したためにホストが区切り記号を使用しない場合は無効にするには、このパラメーターをに設定します。  
+ [in]最後のスクリプト ブロックの区切り記号のアドレスです。 ときに`pstrCode`解析は、テキストのストリームからホスト通常などの使用、区切り記号、2 つの単一引用符 (")、スクリプト ブロックの終わりを検出します。 このパラメーターには、ホストが使用する区切り文字を指定します。それにより、スクリプト エンジンで何らかの条件付きのプリミティブな前処理が可能になります (単一引用符 (') を区切り文字として使用するために 2 つの単一引用符に置き換えるなど)。 正確に (および場合)、スクリプト エンジン使用してこの情報は、スクリプト エンジンによって異なります。 ホストでは、スクリプト ブロックの末尾を示すため、区切り記号を使用しなかった場合は、このパラメーターを NULL に設定します。  
   
  `dwFlags`  
- \[入力\]フラグは、スクリプト ブロックに関連付けられた  これらの値の組み合わせがあります:  
+ [in]スクリプト ブロックに関連付けられるフラグ。 次の値の組み合わせが可能です。  
   
 |定数|値|説明|  
-|--------|-------|--------|  
-|GETATTRTYPE\_DEPSCAN|0x0001|識別子とドット演算子を SOURCETEXT\_ATTR\_IDENTIFIER で識別される必要があり、SOURCETEXT\_ATTR\_MEMBERLOOKUP がフラグを設定するには、に示します。|  
-|GETATTRFLAG\_THIS|0x0100|現在のオブジェクトの識別子が SOURCETEXT\_ATTR\_THIS フラグによって識別されることを示します。|  
-|GETATTRFLAG\_HUMANTEXT|0x8000|SOURCETEXT\_ATTR\_HUMANTEXT フラグを使用して文字列の内容とコメント テキストが識別されることを示します。|  
+|--------------|-----------|-----------------|  
+|GETATTRTYPE_DEPSCAN|0x0001|識別子およびドット演算子必要がありますを特定できる SOURCETEXT_ATTR_IDENTIFIER と SOURCETEXT_ATTR_MEMBERLOOKUP フラグでそれぞれを示します。|  
+|GETATTRFLAG_THIS|0x0100|SOURCETEXT_ATTR_THIS フラグで、現在のオブジェクトの識別子を特定する必要があることを示します。|  
+|GETATTRFLAG_HUMANTEXT|0x8000|SOURCETEXT_ATTR_HUMANTEXT フラグで文字列のコンテンツとコメントのテキストを特定する必要があることを示します。|  
   
  `pattr`  
- \[入力、出力\]返される属性を含むバッファー。  
+ [入力、出力].返される属性を格納するバッファー。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- `IDebugDocumentText` のインターフェイスを実装するスマート `IDebugDocumentText::GetText` ホストは、メソッドの呼び出しに代行させるには、このメソッドを使用できます。  
+## <a name="remarks"></a>コメント  
+ 実装するスマート ホスト`IDebugDocumentText`インターフェイスはこのメソッドを使用して、委任への呼び出し、`IDebugDocumentText::GetText`メソッドです。  
   
- スクリプト ブロックに対してこのメソッド; `GetScriptletTextAttributes` のメソッドはスクリプトレット用です。  
+ このメソッドのスクリプト ブロックです。`GetScriptletTextAttributes`方法は、スクリプトレットにします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScriptDebug インターフェイス](../../winscript/reference/iactivescriptdebug-interface.md)   
  [IActiveScriptDebug::GetScriptletTextAttributes](../../winscript/reference/iactivescriptdebug-getscriptlettextattributes.md)   
  [IDebugDocumentText インターフェイス](../../winscript/reference/idebugdocumenttext-interface.md)   
  [IDebugDocumentText::GetText](../../winscript/reference/idebugdocumenttext-gettext.md)   
- [SOURCE\_TEXT\_ATTR 列挙型](../../winscript/reference/source-text-attr-enumeration.md)
+ [SOURCE_TEXT_ATTR 列挙型](../../winscript/reference/source-text-attr-enumeration.md)

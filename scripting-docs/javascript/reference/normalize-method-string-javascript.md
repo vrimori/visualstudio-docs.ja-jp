@@ -1,56 +1,59 @@
 ---
-title: "normalize メソッド (String) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "normalize メソッド (String) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: d50077c1-b5fa-4e7a-9c9d-dc66cfc423ac
-caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: aece38339ea1ce8924f404938b2d35d07504d539
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# normalize メソッド (String) (JavaScript)
+# <a name="normalize-method-string-javascript"></a>normalize メソッド (String) (JavaScript)
 指定した文字列の Unicode 正規化形式を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 stringObj.normalize([form]);  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `stringObj`  
- 必須。  テスト対象の String オブジェクト。  
+ 必須です。 テスト対象の String オブジェクト。  
   
  `form`  
- 省略可能です。  Unicode 正規化形式の値。  
+ 省略可能です。 Unicode 正規化形式の値。  
   
-## 戻り値  
+## <a name="return-value"></a>戻り値  
  指定した文字列の Unicode 正規化形式。  
   
-## 例外  
+## <a name="exceptions"></a>例外  
  `form` がサポートされていない値の場合は、`RangeError` がスローされます。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  `stringObj` が文字列ではない場合、まず文字列に変換してから、メソッドは文字列の Unicode 正規化形式を返そうとします。  
   
- `form` は、[Unicode Standard Annex \#15](http://www.unicode.org/reports/tr15/) で指定されている値に対応する "NFC"、"NFD"、"NFKC"、"NFKD" のいずれかの Unicode 正規化形式の値でなければなりません。  `form` の既定値は "NFC" です。  
+ `form`指定した値に対応する"NFC"、"NFD"、"NFKC"、"NFKD"、または Unicode 正規化形式の値指定する必要があります[Unicode Standard Annex #15](http://www.unicode.org/reports/tr15/)です。 `form` の既定値は "NFC" です。  
   
-## 使用例  
+## <a name="example"></a>例  
  次のコード例は、`normalize` メソッドの使用法を示しています。  
   
-```javascript  
+```JavaScript  
 // ANGSTORM SIGN and LATIN CAPITAL A WITH RING ABOVE is canonically equivalent  
 "\u212b".normalize("NFC") === "\u00c5";  
   
@@ -71,5 +74,5 @@ stringObj.normalize([form]);
 "fi".normalize("NFKC") === "fi";  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv12](../../javascript/reference/includes/jsv12-md.md)]

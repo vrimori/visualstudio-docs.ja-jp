@@ -1,11 +1,10 @@
 ---
-title: 'CA1816: Call GC.SuppressFinalize correctly | Microsoft Docs'
+title: "Ca 1816: では、Gc が発生します。SuppressFinalize 正しく |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,78 +14,65 @@ helpviewer_keywords:
 - DisposeMethodsShouldCallSuppressFinalize
 - CA1816
 ms.assetid: 47915fbb-103f-4333-b157-1da16bf49660
-caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 43f0cf6749b6ad7a329f814aa9fbb19658912af9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 5e99f722d211b2e1bd548f1bf22c995246f3e0b4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1816-call-gcsuppressfinalize-correctly"></a>CA1816: Call GC.SuppressFinalize correctly
+# <a name="ca1816-call-gcsuppressfinalize-correctly"></a>CA1816: GC.SuppressFinalize を正しく呼び出します
 |||  
 |-|-|  
 |TypeName|CallGCSuppressFinalizeCorrectly|  
 |CheckId|CA1816|  
-|Category|Microsoft. Usage|  
-|Breaking Change|Non Breaking|  
+|カテゴリ|Microsoft です。 使用方法|  
+|互換性に影響する変更点|中断なし|  
   
-## <a name="cause"></a>Cause  
+## <a name="cause"></a>原因  
   
--   A method that is an implementation of <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> does not call <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
+-   メソッドの実装である<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>呼び出しません<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>です。  
   
--   A method that is not an implementation of <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> calls <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
+-   メソッドの実装ではない<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>呼び出し<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>です。  
   
--   A method calls <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> and passes something other than this (Me in Visual Basic).  
+-   メソッドを呼び出す<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>し、この (Visual Basic で Me) 以外のものを渡します。  
   
-## <a name="rule-description"></a>Rule Description  
- The <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> method lets users release resources at any time before the object becoming available for garbage collection. If the <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> method is called, it frees resources of the object. This makes finalization unnecessary. <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> should call <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> so the garbage collector does not call the finalizer of the object.  
+## <a name="rule-description"></a>規則の説明  
+ <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>メソッドにより、ユーザーはいつでもはガベージ コレクションの対象になるオブジェクトの前にリソースを解放します。 場合、<xref:System.IDisposable.Dispose%2A?displayProperty=fullName>メソッドが呼び出されると、オブジェクトのリソースを解放します。 これにより、終了処理が不要なにします。 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>呼び出す必要があります<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>ガベージ コレクターがオブジェクトのファイナライザーを呼び出さないようにします。  
   
- To prevent derived types with finalizers from having to re-implement <xref:System.IDisposable> and to call it, unsealed types without finalizers should still call <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
+ 派生型にファイナライザーが再実装することがないようにする<xref:System.IDisposable>に呼び出し、ファイナライザーせず unsealed 型は呼び出す必要がありますと<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>です。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule:  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには。  
   
- If the method is an implementation of <xref:System.IDisposable.Dispose%2A>, add a call to <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
+ メソッドの実装が場合<xref:System.IDisposable.Dispose%2A>、呼び出しを追加して<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>です。  
   
- If the method is not an implementation of <xref:System.IDisposable.Dispose%2A>, either remove the call to <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> or move it to the type's <xref:System.IDisposable.Dispose%2A> implementation.  
+ メソッドの実装ではない場合<xref:System.IDisposable.Dispose%2A>への呼び出しを削除するか<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>または型への移動<xref:System.IDisposable.Dispose%2A>実装します。  
   
- Change all calls to <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> to pass this (Me in Visual Basic).  
+ すべての呼び出しを変更する<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>に渡すこの (Visual Basic で Me) です。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Only suppress a warning from this rule if you are deliberating using <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> to control the lifetime of other objects. Do not suppress a warning from this rule if an implementation of <xref:System.IDisposable.Dispose%2A> does not call <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>. In this situation, failing to suppress finalization degrades performance and provide no benefits.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 使用してを deliberating いる場合のみこの規則による警告は抑制<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>を他のオブジェクトの有効期間を制御します。 実装は、この規則による警告を抑制しないでください<xref:System.IDisposable.Dispose%2A>呼び出しません<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>です。 このような状況で終了処理を非表示に失敗するパフォーマンスの低下、利点がありません。  
   
-## <a name="example"></a>Example  
- The following example shows a method that incorrectly calls <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
+## <a name="example"></a>例  
+ 次の例はいないメソッドを正しく呼び出す<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>です。  
   
- [!code-vb[FxCop.Usage.CallGCSuppressFinalizeCorrectly#1](../code-quality/codesnippet/VisualBasic/ca1816-call-gc-suppressfinalize-correctly_1.vb)] [!code-csharp[FxCop.Usage.CallGCSuppressFinalizeCorrectly#1](../code-quality/codesnippet/CSharp/ca1816-call-gc-suppressfinalize-correctly_1.cs)]  
+ [!code-vb[FxCop.Usage.CallGCSuppressFinalizeCorrectly#1](../code-quality/codesnippet/VisualBasic/ca1816-call-gc-suppressfinalize-correctly_1.vb)]
+ [!code-csharp[FxCop.Usage.CallGCSuppressFinalizeCorrectly#1](../code-quality/codesnippet/CSharp/ca1816-call-gc-suppressfinalize-correctly_1.cs)]  
   
-## <a name="example"></a>Example  
- The following example shows a method that correctly calls <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>.  
+## <a name="example"></a>例  
+ 次の例は、メソッドを正しく呼び出す<xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>です。  
   
- [!code-vb[FxCop.Usage.CallGCSuppressFinalizeCorrectly2#1](../code-quality/codesnippet/VisualBasic/ca1816-call-gc-suppressfinalize-correctly_2.vb)] [!code-csharp[FxCop.Usage.CallGCSuppressFinalizeCorrectly2#1](../code-quality/codesnippet/CSharp/ca1816-call-gc-suppressfinalize-correctly_2.cs)]  
+ [!code-vb[FxCop.Usage.CallGCSuppressFinalizeCorrectly2#1](../code-quality/codesnippet/VisualBasic/ca1816-call-gc-suppressfinalize-correctly_2.vb)]
+ [!code-csharp[FxCop.Usage.CallGCSuppressFinalizeCorrectly2#1](../code-quality/codesnippet/CSharp/ca1816-call-gc-suppressfinalize-correctly_2.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2215: Dispose methods should call base class dispose](../code-quality/ca2215-dispose-methods-should-call-base-class-dispose.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA2215: Dispose メソッドから基本クラスの破棄を呼び出します](../code-quality/ca2215-dispose-methods-should-call-base-class-dispose.md)  
   
- [CA2216: Disposable types should declare finalizer](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)  
+ [CA2216: 破棄できる型ではファイナライザーを宣言します](../code-quality/ca2216-disposable-types-should-declare-finalizer.md)  
   
-## <a name="see-also"></a>See Also  
- [Dispose Pattern](/dotnet/standard/design-guidelines/dispose-pattern)
+## <a name="see-also"></a>関連項目  
+ [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)

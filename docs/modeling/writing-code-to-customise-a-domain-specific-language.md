@@ -1,44 +1,45 @@
 ---
-title: "ドメイン固有言語をカスタマイズするコードの記述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ドメイン固有言語のプログラミング"
+title: "ドメイン固有言語をカスタマイズするコードの記述 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Domain-Specific Language, programming
 ms.assetid: a4a17f5b-9c97-4575-b2d1-3182c1896b72
-caps.latest.revision: 29
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 2d456f84078e54694deb11fda0082ac40d278dd2
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# ドメイン固有言語をカスタマイズするコードの記述
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ここではドメイン固有言語モデルにアクセスしたり変更または作成するカスタム コードを使用する方法を示します。  
+# <a name="writing-code-to-customise-a-domain-specific-language"></a>ドメイン固有言語をカスタマイズするコードの記述
+このセクションでは、カスタム コードを使用して、アクセス、変更、またはドメイン固有言語でモデルを作成する方法を示しています。  
   
- DSL を使用するコードを作成できる複数のコンテキストがあります :  
+ DSL で動作するコードを記述できるいくつかのコンテキストがあります。  
   
--   **カスタム コマンド。**ユーザーが図上で右クリックして呼び出すことができるモデルを変更できます。コマンドを作成できます。  詳細については、「[方法: ショートカット メニューにコマンドを追加する](../Topic/How%20to:%20Add%20a%20Command%20to%20the%20Shortcut%20Menu.md)」を参照してください。  
+-   **カスタム コマンド。** ダイアグラムを右クリックしてユーザーが呼び出すことができます、モデルを変更するコマンドを作成することができます。 詳細については、次を参照してください。[する方法: ショートカット メニューにコマンドを追加](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)です。  
   
--   **検証。**モデルは正しい状態であることを検証するコードを記述できます。  詳細については、「[ドメイン固有言語における検証](../modeling/validation-in-a-domain-specific-language.md)」を参照してください。  
+-   **検証します。** モデルが正しい状態であることを検証するコードを記述することができます。 詳細については、次を参照してください。[ドメイン固有言語で検証](../modeling/validation-in-a-domain-specific-language.md)です。  
   
--   **既定の動作をオーバーライドします。**DslDefinition.dsl から生成されたコードのさまざまな側面を変更できます。  詳細については、「[生成済みクラスのオーバーライドおよび拡張](../modeling/overriding-and-extending-the-generated-classes.md)」を参照してください。  
+-   **既定の動作をオーバーライドします。** DslDefinition.dsl から生成されるコードの多くの側面を変更することができます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。  
   
--   **テキスト変換します。**プログラム コードを生成するにはたとえばモデルにアクセスしテキスト ファイルを生成するコードを含むテキスト テンプレートを作成できます。  詳細については、「[ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)」を参照してください。  
+-   **テキスト変換します。** モデルにアクセスし、プログラム コードを生成する例については、テキスト ファイルを生成するコードを含むテキスト テンプレートを記述することができます。 詳細については、次を参照してください。[ドメイン固有言語から、コードの生成](../modeling/generating-code-from-a-domain-specific-language.md)です。  
   
--   **他の Visual Studio 拡張機能。**モデルを読み取って変更する別の VSIX 拡張機能を作成できます。  詳細については、「[方法: プログラム コード内のファイルからモデルを開く](../modeling/how-to-open-a-model-from-file-in-program-code.md)」を参照してください。  
+-   **他の Visual Studio 拡張機能です。** 読み取りし、モデルの変更を別の VSIX 拡張機能を記述することができます。 詳細については、次を参照してください[する方法: プログラム コード内のファイルからモデルを開く。](../modeling/how-to-open-a-model-from-file-in-program-code.md)  
   
- DslDefinition.dsl で定義したクラスのインスタンスはメモリ  *ストア \(IMS\)*またはストアと呼ばれるデータ構造に格納されます *。* でDSL を定義するクラスは引数としてコンストラクターにストアを常に書き込みます。  たとえばDSL が Example という名前のクラスを定義する場合 :  
+ DslDefinition.dsl で定義するクラスのインスタンスと呼ばれるデータ構造が保持されており、*メモリ内ストア*(IMS) または*ストア*です。 DSL で常に定義したクラスは、コンス トラクターに引数としてストアを取得します。 たとえば、DSL の例と呼ばれるクラスを定義するとします。  
   
  `Example element = new Example (theStore);`  
   
- ストアにはオブジェクトを保持すること \(ではなく通常のオブジェクト\) いくつかの利点があります。  
+ (単に通常のオブジェクト) ではなく、ストア内のオブジェクトを保存すると、いくつかの利点が提供します。  
   
--   **トランザクション** 。  トランザクションに関連する一連の変更をグループ化できます :  
+-   **トランザクション**です。 一連のトランザクションに関連する変更をグループ化することができます。  
   
      `using (Transaction t = store.TransactionManager.BeginTransaction("updates"))`  
   
@@ -50,27 +51,27 @@ caps.handback.revision: 29
   
      `}`  
   
-     例外が変更中に発生すると最後のコミット \(\) が実行されないようにストアは前の状態にリセットされます。  これはエラーが矛盾した状態にモデルを継続することを確認できます。  詳細については、「[プログラム コードにおけるモデル内の移動およびモデルの更新](../modeling/navigating-and-updating-a-model-in-program-code.md)」を参照してください。  
+     最終的な Commit() が実行されないように、変更中に例外が発生する場合、ストアが前の状態にリセットされます。 これにより、エラーが残されていないモデルを矛盾した状態になっていることを確認できます。 詳細については、次を参照してください。[を移動すると、プログラム コードでモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)です。  
   
--   **バイナリ関係** 。  2 個のクラス間の関係を定義する場合は両端のインスタンスに他の末尾に移動するプロパティがあります。  2 種類の末尾は常に同期されます。  たとえばParents とその子という名前のロールの親子関係の関係を定義して記述できます。:  
+-   **二項関係**です。 2 つのクラス間のリレーションシップを定義する場合、両方の端をインスタンスはもう一方の端に移動するプロパティを持ちます。 2 つの端は、常に同期します。 たとえば、親と子をという名前のロールの親のリレーションシップを定義した場合は、次のでしたに記述します。  
   
      `John.Children.Add(Mary)`  
   
-     次の式の両方で同様です :  
+     次の式の両方に該当するようになりました。  
   
      `John.Children.Contains(Mary)`  
   
      `Mary.Parents.Contains(John)`  
   
-     また記述して同じ効果を実現できます :  
+     記述して、同じ効果を得ることができますも。  
   
      `Mary.Parents.Add(John)`  
   
-     詳細については、「[プログラム コードにおけるモデル内の移動およびモデルの更新](../modeling/navigating-and-updating-a-model-in-program-code.md)」を参照してください。  
+     詳細については、次を参照してください。[を移動すると、プログラム コードでモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)です。  
   
--   **イベントと規則** 。  指定した変更が発生するたびに発生する規則を定義できます。  規則はダイアグラムの図形を最新表示してモデル要素として使用されます。  詳細については、「[変更内容への対応および変更内容の反映](../modeling/responding-to-and-propagating-changes.md)」を参照してください。  
+-   **ルールとイベント**です。 指定された変更が加えられるたびに発生するルールを定義できます。 ルールは、たとえば、ダイアグラムでの図形提示することがモデル要素を持つ最新の状態に保つを使用します。 詳細については、次を参照してください。[への応答と変更を反映する](../modeling/responding-to-and-propagating-changes.md)です。  
   
--   **シリアル化** 。  ストアはファイルに含めるオブジェクトをシリアル化する標準的な方法を提供します。  シリアル化および逆シリアル化する規則をカスタマイズできます。  詳細については、「[ファイル格納処理および XML シリアル化処理のカスタマイズ](../modeling/customizing-file-storage-and-xml-serialization.md)」を参照してください。  
+-   **シリアル化**です。 ストアは、標準的なファイルが含まれているオブジェクトをシリアル化する方法を提供します。 シリアル化と逆シリアル化のルールをカスタマイズすることができます。 詳細については、次を参照してください。[ファイル記憶域のカスタマイズと XML シリアル化](../modeling/customizing-file-storage-and-xml-serialization.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ドメイン固有言語のカスタマイズおよび拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)

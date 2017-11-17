@@ -1,57 +1,58 @@
 ---
-title: "toLocaleString メソッド (Object) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "toLocaleString"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "toLocaleString メソッド"
+title: "toLocaleString メソッド (Object) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: toLocaleString
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: toLocaleString method
 ms.assetid: 0901afcb-126b-4ed7-bd6a-2301d50e2326
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 3f88e1c702cd8a7d702630ae90ef840c4af88f30
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# toLocaleString メソッド (Object) (JavaScript)
-現在のロケールでの既定の書式を使用して、日付データを文字列に変換します。  
+# <a name="tolocalestring-method-object-javascript"></a>toLocaleString メソッド (Object) (JavaScript)
+特定の日付を返しますが、現在のロケールを使用して文字列に変換します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 dateObj.toLocaleString()   
 ```  
   
-## 解説  
- `dateObj` は必須で、任意の `Date` のオブジェクトを指定します。  
+## <a name="remarks"></a>コメント  
+ 必要な`dateObj`は any`Date`オブジェクト。  
   
- `toLocaleString` メソッドは、現在のロケールの長い既定形式に日付データを変換し、`String` オブジェクトに書き込んで返します。  
+ `toLocaleString`メソッドを返します、`String`を現在のロケールの長い既定形式で書き込まれた日付を含むオブジェクト。  
   
--   西暦 1601 から 1999 年の場合、日付はユーザーのコントロール パネルの地域設定に基づいた形式になります。  
+-   1999 西暦 1601 から日の日付は、ユーザーのコントロール パネルの地域設定に従って書式設定されました。  
   
--   この範囲以外の日付の場合、**toString** メソッドの既定の形式が使用されます。  
+-   既定の形式をこの範囲外の日付の**toString**メソッドを使用します。  
   
- たとえば、米国の場合、`toLocaleString` は、1 月 5 日の日付データに対して "01\/05\/96 00:00:00" を返します。  ヨーロッパの場合は、通常、月より日が前になるので、同じ日に対して "05\/01\/96 00:00:00" を返します。  
+ たとえば、米国の州、`toLocaleString`を返します"01/05/96 00時 00分: 00"の 1 月 5 日です。 返します、ヨーロッパで"96 01/05/00時 00分: 00"の同じの日付では、ヨーロッパの規則としては、日の前の月に、です。  
   
 > [!NOTE]
->  `toLocaleString` メソッドは、ユーザーに結果を表示する目的だけで使用してください。この関数の結果はコンピューターによって異なるため、スクリプト内での処理の基準としては使用しないでください。  
+>  `toLocaleString`結果を表示するユーザーに対してのみ使用する必要があります。ことはありません使用してください、基準として計算スクリプト内での返された結果はコンピューター固有。  
   
-## 使用例  
+## <a name="example"></a>例  
  `toLocaleString` メソッドの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 function toLocaleStrDemo(){     
    var d, s;                      //Declare variables.  
    d = new Date();                //Create Date object.  
@@ -61,10 +62,10 @@ function toLocaleStrDemo(){
 }  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [Array オブジェクト](../../javascript/reference/array-object-javascript.md)&#124; [Date オブジェクト](../../javascript/reference/date-object-javascript.md)&#124; [Number オブジェクト](../../javascript/reference/number-object-javascript.md)&#124; [Object オブジェクト](../../javascript/reference/object-object-javascript.md)  
+ **適用されます**:[オブジェクトの配列](../../javascript/reference/array-object-javascript.md)&#124;です。[オブジェクトの日付](../../javascript/reference/date-object-javascript.md)&#124;です。[オブジェクト番号](../../javascript/reference/number-object-javascript.md)&#124;です。[オブジェクトはオブジェクト](../../javascript/reference/object-object-javascript.md)  
   
-## 参照  
- [toLocaleDateString メソッド \(Date\)](../../javascript/reference/tolocaledatestring-method-date-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [toLocaleDateString メソッド (Date)](../../javascript/reference/tolocaledatestring-method-date-javascript.md)

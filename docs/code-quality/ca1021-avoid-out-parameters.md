@@ -1,11 +1,10 @@
 ---
-title: 'CA1021: Avoid out parameters | Microsoft Docs'
+title: ": Ca 1021 out パラメーター |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,96 +14,81 @@ helpviewer_keywords:
 - AvoidOutParameters
 - CA1021
 ms.assetid: 970f2304-842c-4fb7-9734-f3871da8d479
-caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: c2d981d71613b94c7c1142d40fc0ef8e4a6d0a5c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: dbefcb83efbcea76fec889b520f0cd0dd181bf9e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1021-avoid-out-parameters"></a>CA1021: Avoid out parameters
+# <a name="ca1021-avoid-out-parameters"></a>CA1021: out パラメーターを使用しません
 |||  
 |-|-|  
 |TypeName|AvoidOutParameters|  
 |CheckId|CA1021|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A public or protected method in a public type has an `out` parameter.  
+## <a name="cause"></a>原因  
+ パブリック型のパブリックまたはプロテクト メソッドには、`out`パラメーター。  
   
-## <a name="rule-description"></a>Rule Description  
- Passing types by reference (using `out` or `ref`) requires experience with pointers, understanding how value types and reference types differ, and handling methods with multiple return values. Also, the difference between `out` and `ref` parameters is not widely understood.  
+## <a name="rule-description"></a>規則の説明  
+ 型の参照渡し (を使用して`out`または`ref`) ポインターを値型と参照型の違いの理解、および複数の戻り値を持つメソッドの処理の使用経験が必要です。 また、違い`out`と`ref`パラメーターはあまり理解されていません。  
   
- When a reference type is passed "by reference," the method intends to use the parameter to return a different instance of the object. Passing a reference type by reference is also known as using a double pointer, pointer to a pointer, or double indirection. By using the default calling convention, which is pass "by value," a parameter that takes a reference type already receives a pointer to the object. The pointer, not the object to which it points, is passed by value. Pass by value means that the method cannot change the pointer to have it point to a new instance of the reference type. However, it can change the contents of the object to which it points. For most applications this is sufficient and yields the desired behavior.  
+ 参照型が"参照"によって渡されると、メソッドは、オブジェクトの別のインスタンスを返す、パラメーターを使用する予定です。 参照型の参照渡しは double 型のポインター、ポインター、または二重の間接参照へのポインターを使用する場合とも呼ばれます。 呼び出し規約は、"値"渡しですが、既定値を使用して、既に参照型を受け取るパラメーターは、オブジェクトへのポインターを受け取ります。 ポインターを指しているオブジェクトではなくは、値によって渡されます。 メソッドは、ポインターの参照型の新しいインスタンスをポイントを変更できない値の意味を渡します。 ただし、これが指すオブジェクトの内容を変更することができます。 ほとんどのアプリケーションが十分では、目的の動作が生成されます。  
   
- If a method must return a different instance, use the return value of the method to accomplish this. See the <xref:System.String?displayProperty=fullName> class for a variety of methods that operate on strings and return a new instance of a string. When this model is used, the caller must decide whether the original object is preserved.  
+ メソッドは、別のインスタンスを返す必要があります、これを実現するのに、メソッドの戻り値を使用します。 参照してください、<xref:System.String?displayProperty=fullName>文字列に対して機能し、文字列の新しいインスタンスを返すメソッドのさまざまなクラスです。 このモデルを使用すると、呼び出し元が元のオブジェクトが保存されているかどうかを決定する必要があります。  
   
- Although return values are commonplace and heavily used, the correct application of `out` and `ref` parameters requires intermediate design and coding skills. Library architects who design for a general audience should not expect users to master working with `out` or `ref` parameters.  
+ 戻り値は一般的であり使用頻度の高いの適切なアプリケーションが`out`と`ref`パラメーターは、中間の設計とコーディングのスキルが必要です。 設計には一般的なユーザーではユーザー扱い方を習得することは期待しないでライブラリ アーキテクト`out`または`ref`パラメーター。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule that is caused by a value type, have the method return the object as its return value. If the method must return multiple values, redesign it to return a single instance of an object that holds the values.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ 値の型によって引き起こされるこの規則違反を修正するには、その戻り値としてオブジェクトを返すメソッドがあります。 メソッドは、複数の値を返す必要があります、値を保持するオブジェクトの 1 つのインスタンスが返されるまで設計し直します。  
   
- To fix a violation of this rule that is caused by a reference type, make sure that the desired behavior is to return a new instance of the reference. If it is, the method should use its return value to do this.  
+ 参照型によって引き起こされるこの規則違反を修正するには、目的の動作が、参照の新しいインスタンスを返すことを確認します。 である場合、メソッドは、これを行うその戻り値を使用する必要があります。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule. However, this design could cause usability issues.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告を抑制しても安全です。 ただし、この設計では、ユーザビリティの問題を可能性があります。  
   
-## <a name="example"></a>Example  
- The following library shows two implementations of a class that generates responses to the feedback of a user. The first implementation (`BadRefAndOut`) forces the library user to manage three return values. The second implementation (`RedesignedRefAndOut`) simplifies the user experience by returning an instance of a container class (`ReplyData`) that manages the data as a single unit.  
+## <a name="example"></a>例  
+ 次のライブラリは、ユーザーのフィードバックに応答を生成するクラスの 2 つの実装を示しています。 最初の実装 (`BadRefAndOut`) ライブラリが 3 つの戻り値の管理を強制します。 2 番目の実装では、(`RedesignedRefAndOut`) コンテナー クラスのインスタンスを返すことによって、ユーザー エクスペリエンスを簡略化 (`ReplyData`) 1 つの単位としてデータを管理します。  
   
  [!code-csharp[FxCop.Design.NoRefOrOut#1](../code-quality/codesnippet/CSharp/ca1021-avoid-out-parameters_1.cs)]  
   
-## <a name="example"></a>Example  
- The following application illustrates the experience of the user. The call to the redesigned library (`UseTheSimplifiedClass` method) is more straightforward, and the information returned by the method is easily managed. The output from the two methods is identical.  
+## <a name="example"></a>例  
+ 次のアプリケーションは、ユーザーのエクスペリエンスを示しています。 再設計されたライブラリへの呼び出し (`UseTheSimplifiedClass`メソッド) より単純ですが、メソッドによって返される情報が簡単に管理されているとします。 2 つのメソッドからの出力と同じです。  
   
  [!code-csharp[FxCop.Design.TestNoRefOrOut#1](../code-quality/codesnippet/CSharp/ca1021-avoid-out-parameters_2.cs)]  
   
-## <a name="example"></a>Example  
- The following example library illustrates how `ref` parameters for reference types are used and shows a better way to implement this functionality.  
+## <a name="example"></a>例  
+ 次のライブラリの例を示して 方法`ref`参照型のパラメーターを使用し、この機能を実装する優れた方法を示しています。  
   
  [!code-csharp[FxCop.Design.RefByRefNo#1](../code-quality/codesnippet/CSharp/ca1021-avoid-out-parameters_3.cs)]  
   
-## <a name="example"></a>Example  
- The following application calls each method in the library to demonstrate the behavior.  
+## <a name="example"></a>例  
+ 次のアプリケーションは、動作を示すライブラリ内の各メソッドを呼び出します。  
   
  [!code-csharp[FxCop.Design.TestRefByRefNo#1](../code-quality/codesnippet/CSharp/ca1021-avoid-out-parameters_4.cs)]  
   
- This example produces the following output.  
+ この例を実行すると、次の出力が生成されます。  
   
- **Changing pointer - passed by value:**  
+ **ポインターの値渡しを変更するには。**  
 **12345**  
 **12345**  
-**Changing pointer - passed by reference:**  
+**ポインターの参照渡しを変更するには。**  
 **12345**  
 **12345 ABCDE**  
-**Passing by return value:**  
+**戻り値を渡し。**  
 **12345 ABCDE**   
-## <a name="try-pattern-methods"></a>Try pattern methods  
+## <a name="try-pattern-methods"></a>パターンのメソッドを実行してください。  
   
-### <a name="description"></a>Description  
- Methods that implement the **Try\<Something>** pattern, such as <xref:System.Int32.TryParse%2A?displayProperty=fullName>, do not raise this violation. The following example shows a structure (value type) that implements the <xref:System.Int32.TryParse%2A?displayProperty=fullName> method.  
+### <a name="description"></a>説明  
+ 実装するメソッド、**再試行\<もの >**パターンなど<xref:System.Int32.TryParse%2A?displayProperty=fullName>、この違反を発生させません。 次の例は、構造体 (値型) を実装する、<xref:System.Int32.TryParse%2A?displayProperty=fullName>メソッドです。  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>コード  
  [!code-csharp[FxCop.Design.TryPattern#1](../code-quality/codesnippet/CSharp/ca1021-avoid-out-parameters_5.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1045: Do not pass types by reference](../code-quality/ca1045-do-not-pass-types-by-reference.md)
+## <a name="related-rules"></a>関連規則  
+ [CA1045: 型を参照によって渡しません](../code-quality/ca1045-do-not-pass-types-by-reference.md)

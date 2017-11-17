@@ -1,60 +1,61 @@
 ---
-title: "lastIndex プロパティ (RegExp) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "lastIndex"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "lastIndex プロパティ"
+title: "lastIndex プロパティ (RegExp) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: lastIndex
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: lastIndex property
 ms.assetid: c8ae2a13-6dff-4cbe-b662-aca3d66c2a7f
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d5e24fe14d335e1494b13518543f56025625de0b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# lastIndex プロパティ (RegExp) (JavaScript)
-検索文字列内で次に文字が一致する位置を返します。  
+# <a name="lastindex-property-regexp-javascript"></a>lastIndex プロパティ (RegExp) (JavaScript)
+検索した文字列では、次の一致の開始文字位置を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 RegExp.lastIndex  
 ```  
   
-## 解説  
- このプロパティに関連付けられるオブジェクトは、常にグローバルな `RegExp` オブジェクトです。  
+## <a name="remarks"></a>コメント  
+ このプロパティに関連付けられているオブジェクトは、常にグローバル`RegExp`オブジェクト。  
   
- `lastIndex` プロパティの値は、文字列の先頭位置の 0 を基にしています。  初期値は –1 です。  この値は、検索が成功するたびに変更されます。  
+ `lastIndex`プロパティが 0 から始まる場合、その最初の文字のインデックスは 0 です。 その初期値は-1 です。 その値が変更されるは、一致が加えられるたびにします。  
   
- `lastIndex` プロパティは、`RegExp` オブジェクトの `exec` メソッドと **test** メソッド、および `String` オブジェクトの `match` メソッド、**replace** メソッド、および **split** メソッドによって変更されます。  
+ `lastIndex`によってプロパティが変更された、`exec`と**テスト**のメソッド、`RegExp`オブジェクト、および`match`、**置換**、および**を分割**のメソッド、`String`オブジェクト。  
   
- `lastIndex` プロパティの値には、次の規則が適用されます。  
+ 値に、次の規則が適用される`lastIndex`:  
   
--   一致する文字列がない場合、`lastIndex` は \-1 に設定されます。  
+-   一致が存在しない場合`lastIndex`が-1 に設定します。  
   
--   `lastIndex` プロパティの値を文字列よりも長く設定してから **test** メソッドまたは `exec` メソッドを実行すると、メソッドの実行は失敗し、`lastIndex` プロパティに \-1 が設定されます。  
+-   場合`lastIndex`が、文字列の長さより大きい**テスト**と`exec`失敗および`lastIndex`が-1 に設定します。  
   
--   `lastIndex` プロパティの値が文字列の長さと等しい場合、パターンが空の文字列であれば、正規表現パターンが一致します。  それ以外の場合、検索は失敗し、`lastIndex` プロパティに \-1 が再設定されます。  
+-   場合`lastIndex`が正規表現の一致パターンが空の文字列と一致する場合、文字列の長さと等しい。 それ以外の場合、照合は失敗し、`lastIndex`が-1 にリセットします。  
   
--   上記以外の場合、`lastIndex` プロパティは、パターンに一致する最後に見つかった文字列の直後の位置を示す値が設定されます。  
+-   それ以外の場合、`lastIndex`が一致する最後の直後の位置に設定します。  
   
-## 使用例  
- `lastIndex` プロパティの使用例を次に示します。  この関数は、文字列の検索を繰り返し、文字列内にある各文字の **index** 値および `lastIndex` 値を出力します。  
+## <a name="example"></a>例  
+ 次の例では、使用、`lastIndex`プロパティです。 この関数は、検索文字列を反復処理し、出力、**インデックス**と`lastIndex`文字列内の各単語の値。  
   
-```javascript  
+```JavaScript  
 function RegExpTest()  
 {  
    var ver = Number(ScriptEngineMajorVersion() + "." + ScriptEngineMinorVersion())  
@@ -81,10 +82,10 @@ function RegExpTest()
 }  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
- **対象**: [RegExp オブジェクト](../../javascript/reference/regexp-object-javascript.md)  
+ **適用されます**: [RegExp オブジェクト](../../javascript/reference/regexp-object-javascript.md)  
   
-## 参照  
- [Regular Expression Syntax \(JavaScript\)](http://msdn.microsoft.com/ja-jp/ab0766e1-7037-45ed-aa23-706f58358c0e)
+## <a name="see-also"></a>関連項目  
+ [正規表現の構文 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)

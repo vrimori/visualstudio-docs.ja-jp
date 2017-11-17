@@ -1,29 +1,32 @@
 ---
-title: "Spread 演算子 (...) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "Spread 演算子 (...)(JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: 10263a4c-bd27-4d87-9917-fb4b6bf373db
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a07d480360441906c445faa196f6d7771f97d75d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Spread 演算子 (...) (JavaScript)
-配列リテラルの一部を \(別の配列リテラルなどの\) 反復可能な式から初期化したり、式を \(関数呼び出しで\) 複数の引数に拡張したりできます。  
+# <a name="spread-operator--javascript"></a>Spread 演算子 (...) (JavaScript)
+配列リテラルの一部を (別の配列リテラルなどの) 反復可能な式から初期化したり、式を (関数呼び出しで) 複数の引数に拡張したりできます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 var array = [[arg0ToN ,] ...iterable [, arg0ToN]]  
@@ -31,23 +34,23 @@ func([args ,] ...iterable [, args | ...iterable])
   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `iterable`  
- 必須。  反復可能オブジェクト。  
+ 必須です。 反復可能オブジェクト。  
   
  `arg0ToN`  
- 省略可能です。  配列リテラルの 1 つ以上の要素。  
+ 省略可能です。 配列リテラルの 1 つ以上の要素。  
   
  `args`  
- 省略可能です。  関数への 1 つ以上の引数。  
+ 省略可能です。 関数への 1 つ以上の引数。  
   
-## 解説  
- 反復子について詳しくは、「[反復子とジェネレーター](../../javascript/advanced/iterators-and-generators-javascript.md)」を参照してください。  rest パラメーターとして spread 演算子を使用する方法について詳しくは、「[関数](../../javascript/functions-javascript.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ 反復子の詳細については、次を参照してください。[反復子とジェネレーター](../../javascript/advanced/iterators-and-generators-javascript.md)です。 Rest パラメーターとして spread 演算子を使用する方法については、次を参照してください。[関数](../../javascript/functions-javascript.md)です。  
   
-## 使用例  
+## <a name="example"></a>例  
  次のコード例では、spread 演算子と `concat` メソッドの使用法が対比されています。  
   
-```javascript  
+```JavaScript  
 var a, b, c, d, e;  
 a = [1,2,3];  
 b = "dog";  
@@ -67,10 +70,10 @@ console.log(e);
 // 1, 2, 3, "dog", 42, "cat"  
 ```  
   
-## 使用例  
- 次のコード例は、関数呼び出しで spread 演算子を使用する方法について示しています。  この例では 2 つの配列リテラルが、spread 演算子を使用する関数に渡され、配列が複数の引数に拡張されます。  
+## <a name="example"></a>例  
+ 次のコード例は、関数呼び出しで spread 演算子を使用する方法について示しています。 この例では 2 つの配列リテラルが、spread 演算子を使用する関数に渡され、配列が複数の引数に拡張されます。  
   
-```javascript  
+```JavaScript  
 function f(a, b, c, x, y, z) {  
   return a + b + c + x + y + z;  
 }  
@@ -83,10 +86,10 @@ console.log(f(...args, 4, ...[5, 6]));
   
 ```  
   
-## 使用例  
+## <a name="example"></a>例  
  spread 演算子を使用すると、これまでは `apply` を使用する必要があったコードを簡略化できます。  
   
-```javascript  
+```JavaScript  
 function f(x, y, z) {  
     return x + y + z;  
 }  
@@ -94,15 +97,15 @@ function f(x, y, z) {
 var args = [1, 2, 3];  
   
 // Old method  
-func.apply(this, args);  
+f.apply(this, args);  
 // New method  
-func(...args);  
+f(...args);  
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv12](../../javascript/reference/includes/jsv12-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位](../../javascript/operator-subtractprecedence-javascript.md)   
- [演算子の一覧 \(JavaScript\)](../../javascript/misc/operator-subtractsummary-javascript.md)
+ [演算子の一覧 (JavaScript)](../../javascript/misc/operator-subtractsummary-javascript.md)

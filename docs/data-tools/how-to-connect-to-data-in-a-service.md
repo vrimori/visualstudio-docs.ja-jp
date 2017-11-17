@@ -1,68 +1,66 @@
 ---
-title: "方法: サービスのデータに接続する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Visual Studio], 接続 (Web サービスに)"
-  - "データ [Visual Studio], 読み取り (Web サービスから)"
-  - "データ ソース, 作成 (Web サービスから)"
-  - "読み取り (データを), Web サービスから"
-  - "Web サービス, データ ソースとして"
-  - "Web サービス, 接続"
-  - "Web サービス, 読み取り (データを)"
+title: "方法: データ サービスに接続 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Visual Studio], connecting to Web services
+- data sources, creating from Web services
+- data [Visual Studio], reading from Web services
+- reading data, from Web services
+- Web services, reading data
+- Web services, as data sources
+- Web services, connecting
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
-caps.latest.revision: 32
-caps.handback.revision: 30
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "32"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.technology: vs-data-tools
+ms.openlocfilehash: 334f31dcd68e031bfb25b4e0dcd6ce55b9d2f20c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: サービスのデータに接続する
-サービスから返されたデータにアプリケーションを接続するには、[データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)を実行し、**\[データ ソースの種類を選択\]** ページの **\[サービス\]** をクリックします。  
+# <a name="how-to-connect-to-data-in-a-service"></a>方法: サービスのデータに接続する
+アプリケーションを実行して、サービスから返されたデータを接続する、[データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)を選択して**サービス**上、 **データソースの種類を選択して**ページ。  
   
- ウィザードを完了すると、プロジェクトにサービス参照が追加され、[ウィンドウ](../Topic/Data%20Sources%20Window.md)ですぐに使用できるようになります。  
+ 完了すると、ウィザードのサービス参照がプロジェクトに追加されですぐに使用できるは、[データ ソース ウィンドウ](add-new-data-sources.md)します。  
   
 > [!NOTE]
->  **\[データ ソース\]** ウィンドウに表示される項目は、サービスから返される情報に応じて異なります。  サービスによっては、**データ ソース構成ウィザード**でバインドできるオブジェクトを作成するための十分な情報を提供しないものもあります。  たとえば、サービスから型指定されていないデータセットが返される場合、ウィザードを完了しても **\[データ ソース\]** ウィンドウには項目が表示されません。  これは、型指定されていないデータセットからはスキーマが提供されず、したがってウィザードでデータ ソースを作成するための十分な情報が得られないためです。  
+>  表示される項目、**データソース**ウィンドウは、サービスから返される情報に依存します。 一部のサービス可能性がありますのに十分な情報を提供していない、**データ ソース構成ウィザード**バインド可能なオブジェクトを作成します。 たとえば場合、サービスでは、型指定されていないデータセットを返します、し、項目も表示されません、**データ ソース ウィンドウ**ウィザードを完了するとします。 これは、型指定されていないデータセット提供しないので、スキーマ、ウィザードでは、データ ソースを作成するための十分な情報は必要がありません。  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-### アプリケーションをサービスに接続するには  
+### <a name="to-connect-your-application-to-a-service"></a>アプリケーションをサービスに接続するには  
   
-1.  **\[データ\]** メニューの **\[新しいデータ ソースの追加\]** をクリックします。  
+1.  **[データ]** メニューの **[新しいデータ ソースの追加]**をクリックします。  
   
-2.  **\[データ ソースの種類を選択\]** ページで **\[サービス\]** をクリックし、**\[次へ\]** をクリックします。  
+2.  選択**サービス**上、**データ ソースの種類を選択** ページで、クリックして**次へ**です。  
   
-3.  使用するサービスのアドレスを入力するか、**\[探索\]** をクリックして現在のソリューション内のサービスを検索し、**\[移動\]** をクリックします。  
+3.  使用して、またはをクリックする、サービスのアドレスを入力**Discover**を現在のソリューション内でサービスを検索し、をクリックして**移動**です。  
   
-4.  必要に応じて、既定値の代わりに新しい**名前空間**を入力できます。  
+4.  必要に応じて、新しい**Namespace**既定値の代わりに型指定することができます。  
   
     > [!NOTE]
-    >  **\[詳細設定\]** をクリックして [\[サービス参照の構成\] ダイアログ ボックス](../Topic/Configure%20Service%20Reference%20Dialog%20Box.md)を開きます。  
+    >  をクリックして**詳細**を開くには、[サービス参照の構成 ダイアログ ボックス](../data-tools/configure-service-reference-dialog-box.md)です。  
   
-5.  **\[OK\]** をクリックして、プロジェクトにサービス参照を追加します。  
+5.  をクリックして**OK**サービス参照をプロジェクトに追加します。  
   
-6.  **\[完了\]** をクリックします。  
+6.  **[完了]**をクリックします。  
   
-     **\[データ ソース\]** ウィンドウにデータ ソースが追加されます。  
+     データ ソースを追加、**データソース**ウィンドウです。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
   
-#### アプリケーションに機能を追加するには  
+#### <a name="to-add-functionality-to-your-application"></a>アプリケーションに機能を追加するには  
   
--   **\[データ ソース\]** ウィンドウ内の項目を選択し、フォームにドラッグして、バインド コントロールを作成します。  詳細については、「[Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)」を参照してください。  
+-   内の項目を選択して、**データ ソース**ウィンドウし、バインドされたコントロールを作成するフォームにドラッグします。 詳細については、次を参照してください。 [Visual Studio でのデータにコントロールをバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)です。  
   
-## 参照  
- [チュートリアル: WCF Data Service への WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)   
- [チュートリアル: WCF Data Service への Silverlight コントロールのバインド](../Topic/Walkthrough:%20Binding%20Silverlight%20Controls%20to%20a%20WCF%20Data%20Service.md)   
- [Windows Communication Foundation Services and WCF Data Services in Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+## <a name="see-also"></a>関連項目  
+ [WCF data service への WPF コントロールをバインドします。](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)   
+ [Visual Studio での Windows Communication Foundation サービスと WCF データ サービス](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

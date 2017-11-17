@@ -1,64 +1,47 @@
 ---
-title: 'CA2142: Transparent code should not be protected with LinkDemands | Microsoft Docs'
+title: "Ca 2142: 透過的なコード保護されてはならないために LinkDemands を |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- CA2142
+f1_keywords: CA2142
 ms.assetid: 6dc59053-5dd9-4583-bf10-5f339107e59f
-caps.latest.revision: 10
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 79889b3b9829c590162271677fafe6846147246c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "10"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 6d0b9712ec0ed9d5ecd8e76b1ecf208505f07623
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2142-transparent-code-should-not-be-protected-with-linkdemands"></a>CA2142: Transparent code should not be protected with LinkDemands
+# <a name="ca2142-transparent-code-should-not-be-protected-with-linkdemands"></a>CA2142: 透過的コードは、LinkDemand を使用して保護されてはならない
 |||  
 |-|-|  
 |TypeName|TransparentMethodsShouldNotBeProtectedWithLinkDemands|  
 |CheckId|CA2142|  
-|Category|Microsoft.Security|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Security|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A transparent method requires a <xref:System.Security.Permissions.SecurityAction> or other security demand.  
+## <a name="cause"></a>原因  
+ 透過的なメソッドが必要な<xref:System.Security.Permissions.SecurityAction>またはその他のセキュリティ確認要求します。  
   
-## <a name="rule-description"></a>Rule Description  
- This rule fires on transparent methods which require LinkDemands to access them. Security transparent code should not be responsible for verifying the security of an operation, and therefore should not demand permissions. Because transparent methods are supposed to be security neutral, they should not be making any security decisions. Additionally, safe critical code, which does make security decisions, should not be relying on transparent code to have previously made such a decision.  
+## <a name="rule-description"></a>規則の説明  
+ この規則は、アクセスするために LinkDemands を要求する透過的メソッドに対して適用されます。 透過的セキュリティ コードでは、操作のセキュリティ検証を行うことができないため、アクセス許可を要求できません。 透過的メソッドはセキュリティに中立的になっている、ので、行うことができません、セキュリティ上の決定します。 さらに、セキュリティ上の決定を行う、セーフ クリティカル コードはこのような意志決定を行いましたが以前に透過的なコードに依存しない必要があります。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, remove the link demand on the transparent method or mark the method with <xref:System.Security.SecuritySafeCriticalAttribute> attribute if it is performing security checks, such as security demands.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正する透過的メソッドに対して、リンク確認要求を削除するかを使用してメソッドをマーク<xref:System.Security.SecuritySafeCriticalAttribute>セキュリティ確認要求など、セキュリティを実行している場合、属性を確認します。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。  
   
-## <a name="example"></a>Example  
- In the following example, the rule fires on the method because the method is transparent and is marked with a LinkDemand <xref:System.Security.PermissionSet> that contains an <xref:System.Security.Permissions.SecurityAction>.  
+## <a name="example"></a>例  
+ 次の例で、規則は、メソッドのメソッドは透過的であり、LinkDemand でマークされているため<xref:System.Security.PermissionSet>を格納している、<xref:System.Security.Permissions.SecurityAction>です。  
   
  [!code-csharp[FxCop.Security.CA2142.TransparentMethodsShouldNotBeProtectedWithLinkDemands#1](../code-quality/codesnippet/CSharp/ca2142-transparent-code-should-not-be-protected-with-linkdemands_1.cs)]  
   
- Do not suppress a warning from this rule.
+ この規則による警告は抑制しないでください。

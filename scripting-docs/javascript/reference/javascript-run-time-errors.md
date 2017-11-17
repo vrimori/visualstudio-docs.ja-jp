@@ -1,60 +1,63 @@
 ---
-title: "JavaScript ランタイム エラー | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "VS.WebClient.Help.SCRIPT-32725"
-  - "VS.WebClient.Help.SCRIPT7002"
-  - "VS.WebClient.Help.SCRIPT1001"
-  - "VS.WebClient.Help.SCRIPT16389"
-  - "VS.WebClient.HelpSCRIPT50"
-  - "VS.WebClient.HelpSCRIPT70"
-  - "VS.WebClient.HelpSCRIPT87"
-  - "VS.WebClient.HelpSCRIPT65535"
-  - "VS.WebClient.HelpSCRIPT445"
-  - "VS.WebClient.HelpSCRIPT600"
-  - "VS.WebClient.HelpSCRIPT2343"
-  - "VS.WebClient.HelpSCRIPT122"
-  - "VS.WebClient.HelpSCRIPT28"
-  - "VS.WebClient.HelpSCRIPT16386"
-  - "VS.WebClient.HelpSCRIPT7015"
-  - "VS.WebClient.HelpSCRIPT3"
-  - "VS.WebClient.HelpSCRIPT16388"
-  - "VS.WebClient.HelpSCRIPT14"
-  - "VS.WebClient.HelpSCRIPT12030"
-  - "VS.WebClient.HelpSCRIPT12029"
-  - "VS.WebClient.HelpSCRIPT1001"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "エラー [JavaScript]"
-  - "ランタイム エラー, JavaScript"
+title: "JavaScript ランタイム エラー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VS.WebClient.Help.SCRIPT-32725
+- VS.WebClient.Help.SCRIPT7002
+- VS.WebClient.Help.SCRIPT1001
+- VS.WebClient.Help.SCRIPT16389
+- VS.WebClient.HelpSCRIPT50
+- VS.WebClient.HelpSCRIPT70
+- VS.WebClient.HelpSCRIPT87
+- VS.WebClient.HelpSCRIPT65535
+- VS.WebClient.HelpSCRIPT445
+- VS.WebClient.HelpSCRIPT600
+- VS.WebClient.HelpSCRIPT2343
+- VS.WebClient.HelpSCRIPT122
+- VS.WebClient.HelpSCRIPT28
+- VS.WebClient.HelpSCRIPT16386
+- VS.WebClient.HelpSCRIPT7015
+- VS.WebClient.HelpSCRIPT3
+- VS.WebClient.HelpSCRIPT16388
+- VS.WebClient.HelpSCRIPT14
+- VS.WebClient.HelpSCRIPT12030
+- VS.WebClient.HelpSCRIPT12029
+- VS.WebClient.HelpSCRIPT1001
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- errors [JavaScript]
+- run-time errors, JavaScript
 ms.assetid: c111469d-8f31-4bde-9d46-16d58775db7d
-caps.latest.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: fb75c59fae32911c3dd3a7468439a198d7191755
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# JavaScript ランタイム エラー
+# <a name="javascript-run-time-errors"></a>JavaScript ランタイム エラー
 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] ランタイム エラーは、システムでは実行できないアクションを、スクリプトが実行しようとしたときに発生するエラーです。 ランタイム エラーは、可変式を評価しているときやメモリを割り当てているときに発生することがあります。  
   
-## Windows ランタイム エラー  
+## <a name="windows-runtime-errors"></a>Windows ランタイム エラー  
  [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリで Windows ランタイム API を使用している場合、Windows ランタイムの HRESULT から変換された JavaScript エラーが発生する場合があります。 下位ビットの 16 進数値を取得して 10 進数に変換することによって、0x80070000 の範囲にある Windows ランタイムの HRESULT が JavaScript エラーに変換されます。 たとえば、HRESULT 0x80070032 は 10 進数値 50 に変換され、JavaScript エラーは SCRIPT50 となります。 HRESULT 0x80074005 は 10 進数値 16389 に変換され、JavaScript エラーは SCRIPT16389 となります。  
   
-## エラー  
+## <a name="errors"></a>エラー  
   
 |エラー番号|説明|  
-|-----------|--------|  
+|------------------|-----------------|  
 |5|[アクセスが拒否されました](../../javascript/misc/access-is-denied.md)|  
 |438|[オブジェクトは、このプロパティまたはメソッドをサポートしていません。](../../javascript/misc/object-doesn-t-support-this-property-or-method.md)|  
 |1001|メモリ不足|  
@@ -68,8 +71,8 @@ caps.handback.revision: 20
 |5006|[データ オブジェクトが必要です。](../../javascript/misc/date-object-expected.md)|  
 |5015|[列挙子オブジェクトが必要です。](../../javascript/misc/enumerator-object-expected.md)|  
 |5022|[例外がスローされ、キャッチされませんでした。](../../javascript/misc/exception-thrown-and-not-caught.md)|  
-|5020|[正規表現の中に '\)' が必要です。](../../javascript/misc/expected-right-parenthesis-in-regular-expression-javascript.md)|  
-|5019|[正規表現の中に '&#93;' が必要です。](../../javascript/misc/expected-right-square-bracket-in-regular-expression-javascript.md)|  
+|5020|[正規表現の中に ')' が必要です。](../../javascript/misc/expected-right-parenthesis-in-regular-expression-javascript.md)|  
+|5019|[予想 ' &#93;' で正規表現で](../../javascript/misc/expected-right-square-bracket-in-regular-expression-javascript.md)|  
 |5023|[関数には、有効なプロトタイプ オブジェクトが存在しません。](../../javascript/misc/function-does-not-have-a-valid-prototype-object.md)|  
 |5002|[関数が必要です。](../../javascript/misc/function-expected.md)|  
 |5008|[無効な代入です。](../../javascript/misc/illegal-assignment-javascript.md)|  
@@ -90,5 +93,5 @@ caps.handback.revision: 20
 |5018|[予期しない量指定子です。](../../javascript/misc/unexpected-quantifier-javascript.md)|  
 |5013|[VBArray が必要です。](../../javascript/misc/vbarray-expected.md)|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [JavaScript 構文エラー](../../javascript/reference/javascript-syntax-errors.md)

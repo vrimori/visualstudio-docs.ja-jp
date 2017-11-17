@@ -1,58 +1,61 @@
 ---
-title: "Object.keys 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "keys メソッド [JavaScript]"
-  - "Object.keys メソッド [JavaScript]"
+title: "Object.keys 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- Object.keys method [JavaScript]
+- keys method [JavaScript]
 ms.assetid: cf4a7daf-cf28-4467-bc6b-f7f106ec3876
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0e725c3ab7206b04d9a900cb614b57c37dfc4351
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Object.keys 関数 (JavaScript)
+# <a name="objectkeys-function-javascript"></a>Object.keys 関数 (JavaScript)
 オブジェクトの列挙可能なプロパティおよびメソッドの名前を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```javascript  
+```JavaScript  
 Object.keys(object)  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
   
 |パラメーター|定義|  
-|------------|--------|  
-|`object`|必須です。  プロパティとメソッドを含むオブジェクトを指定します。  これには、作成したオブジェクトまたは既存のドキュメント オブジェクト モデル \(DOM\) オブジェクトを使用できます。|  
+|---------------|----------------|  
+|`object`|必須です。 プロパティとメソッドを格納するオブジェクト。 これには、作成したオブジェクトまたは既存のドキュメント オブジェクト モデル (DOM) オブジェクトを指定できます。|  
   
-## 戻り値  
- オブジェクトの列挙可能なプロパティとメソッドの名前を含む配列。  
+## <a name="return-value"></a>戻り値  
+ 列挙可能なプロパティの名前と、オブジェクトのメソッドを格納する配列。  
   
-## 例外  
- `object` 引数に指定された値がオブジェクトの名前ではない場合、`TypeError` 例外がスローされます。  
+## <a name="exceptions"></a>例外  
+ 値が指定した場合、`object`引数が、オブジェクトの名前ではありません、`TypeError`例外がスローされます。  
   
-## 解説  
- `keys` メソッドは、列挙可能なプロパティとメソッドの名前のみを返します。  列挙可能および列挙可能でないプロパティとメソッドの名前を返す場合は、[Object.getOwnPropertyNames 関数](../../javascript/reference/object-getownpropertynames-function-javascript.md) を使用します。  
+## <a name="remarks"></a>コメント  
+ `keys`メソッドが列挙可能なプロパティとメソッドの名前のみを返します。 列挙可能でない列挙可能なプロパティとメソッドの両方の名前を返すを使用することができます[Object.getOwnPropertyNames 関数](../../javascript/reference/object-getownpropertynames-function-javascript.md)です。  
   
- プロパティの `enumerable` 属性の詳細については、「[Object.defineProperty 関数](../../javascript/reference/object-defineproperty-function-javascript.md)」および「[Object.getOwnPropertyDescriptor 関数](../../javascript/reference/object-getownpropertydescriptor-function-javascript.md)」を参照してください。  
+ については、`enumerable`属性、プロパティの次を参照してください。 [Object.defineProperty 関数](../../javascript/reference/object-defineproperty-function-javascript.md)と[Object.getOwnPropertyDescriptor 関数](../../javascript/reference/object-getownpropertydescriptor-function-javascript.md)です。  
   
-## 使用例  
- 次の例では、3 種類のプロパティおよびメソッドを持つオブジェクトを作成します。  次に、`keys` メソッドを使用して、オブジェクトのプロパティとメソッドを取得します。  
+## <a name="example"></a>例  
+ 次の例では、3 つのプロパティとメソッドを持つオブジェクトを作成します。 次を使用して、`keys`プロパティと、オブジェクトのメソッドを取得します。  
   
-```javascript  
+```JavaScript  
 // Create a constructor function.  
 function Pasta(grain, width, shape) {  
     this.grain = grain;  
@@ -76,10 +79,10 @@ document.write (arr);
 // grain,width,shape,toString  
 ```  
   
-## 使用例  
- Pasta オブジェクトで文字 "g" で始まるすべての列挙可能プロパティの名前を表示する例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、"g"パスタ オブジェクト内の文字で始まるすべての列挙可能なプロパティの名前を表示します。  
   
-```javascript  
+```JavaScript  
 // Create a constructor function.  
 function Pasta(grain, width, shape) {  
     this.grain = grain;  
@@ -105,8 +108,8 @@ function CheckKey(value) {
 // grain  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv9](../../javascript/includes/jsv9-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Object.getOwnPropertyNames 関数](../../javascript/reference/object-getownpropertynames-function-javascript.md)

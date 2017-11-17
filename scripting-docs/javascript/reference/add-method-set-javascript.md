@@ -1,55 +1,58 @@
 ---
-title: "add メソッド (Set) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "add メソッド (Set) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: b4eea447-fd5b-4380-978e-1b95f6dbc438
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 287dbfb6480289ed57edc26d41e9900e4a76c27b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# add メソッド (Set) (JavaScript)
+# <a name="add-method-set-javascript"></a>add メソッド (Set) (JavaScript)
 セットに新しい要素を追加します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```javascript  
+```JavaScript  
 setObj.add(value)  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `setObj`  
- 必須です。  `Set` オブジェクト。  
+ 必須です。 `Set` オブジェクト。  
   
  `value`  
- 必須です。  `Set` の新しい要素を指定します。  
+ 必須です。 `Set` の新しい要素を指定します。  
   
-## 解説  
- 新しい要素は、任意の型で、一意である必要があります。  `Set` に一意でない要素を追加する場合、新しい要素はコレクションに追加されません。  
+## <a name="remarks"></a>コメント  
+ 新しい要素は、任意の型で、一意である必要があります。 `Set` に一意でない要素を追加する場合、新しい要素はコレクションに追加されません。  
   
-## 使用例  
+## <a name="example"></a>例  
  次の例は、メンバーをセットに追加して取得する方法を示します。  
   
-```javascript  
+```JavaScript  
 var s = new Set();  
 s.add("Thomas Jefferson");  
 s.add(1776);  
 s.add("founding father");  
   
 s.forEach(function (item) {  
-    document.write(item.toString() + ", ");  
+    document.write(item.toString() + ", ");  
 });  
   
 // Output:  
@@ -57,5 +60,5 @@ s.forEach(function (item) {
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv11](../../javascript/reference/includes/jsv11-md.md)]

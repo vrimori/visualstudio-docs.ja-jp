@@ -1,51 +1,52 @@
 ---
-title: "moveFirst メソッド (Enumerator) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "moveFirst"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "MoveFirst メソッド"
+title: "moveFirst メソッド (Enumerator) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: moveFirst
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: MoveFirst method
 ms.assetid: 96eedc66-7974-443c-b0cd-55373a7c0e59
-caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: af8c59194a5655730e8509b43533f699aeef51d2
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# moveFirst メソッド (Enumerator) (JavaScript)
+# <a name="movefirst-method-enumerator-javascript"></a>moveFirst メソッド (Enumerator) (JavaScript)
 コレクション内の現在の項目を最初の項目にリセットします。  
   
 > [!WARNING]
 >  このオブジェクトは、Internet Explorer でのみサポートされます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
-enumObj.moveFirst( )  
+enumObj.moveFirst( )   
 ```  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  必要な *enumObj* 参照は任意の `Enumerator` オブジェクトです。  
   
  コレクション内に項目がない場合は、現在の項目が未定義に設定されます。  
   
-## 使用例  
- 次の例では、リストの先頭から `Drives` コレクションのメンバーを評価するために `moveFirst` メソッドが使用されています。  
+## <a name="example"></a>例  
+ 次の例では、リストの先頭から `moveFirst` コレクションのメンバーを評価するために `Drives` メソッドが使用されています。  
   
-```javascript  
+```JavaScript  
 function ShowDrives()  
 {  
     var s = "";  
@@ -82,12 +83,12 @@ function ShowDrives()
 }  
 ```  
   
-## 必要条件  
- Quirks、Internet Explorer 6 標準、Internet Explorer 7 標準、Internet Explorer 8 標準、Internet Explorer 9 標準、Internet Explorer 10 標準の各ドキュメント モードでサポートされます。[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリではサポートされていません。 「[バージョン情報](../../javascript/reference/javascript-version-information.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ Quirks、Internet Explorer 6 標準、Internet Explorer 7 標準、Internet Explorer 8 標準、Internet Explorer 9 標準、Internet Explorer 10 標準の各ドキュメント モードでサポートされます。 [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリではサポートされていません。 「 [バージョン情報](../../javascript/reference/javascript-version-information.md)」を参照してください。  
   
- **適用対象**: [Enumerator オブジェクト](../../javascript/reference/enumerator-object-javascript.md)  
+ **適用対象**: [Enumerator Object](../../javascript/reference/enumerator-object-javascript.md)  
   
-## 参照  
- [atEnd メソッド \(Enumerator\)](../../javascript/reference/atend-method-enumerator-javascript.md)   
- [item メソッド \(Enumerator\)](../../javascript/reference/item-method-enumerator-javascript.md)   
- [moveNext メソッド \(Enumerator\)](../../javascript/reference/movenext-method-enumerator-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [atEnd メソッド (Enumerator)](../../javascript/reference/atend-method-enumerator-javascript.md)   
+ [item メソッド (Enumerator)](../../javascript/reference/item-method-enumerator-javascript.md)   
+ [moveNext メソッド (Enumerator)](../../javascript/reference/movenext-method-enumerator-javascript.md)

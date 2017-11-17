@@ -1,58 +1,60 @@
 ---
-title: "setDate メソッド (Date) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "setDate"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "setDate メソッド"
-  - "日付、設定"
+title: "setDate メソッド (Date) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: setDate
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- setDate method
+- dates, setting
 ms.assetid: a84b9b01-a6d0-489f-8a13-e7af9e9630b2
-caps.latest.revision: 16
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8d74340287b3a7348419d302f79775eb610c6983
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# setDate メソッド (Date) (JavaScript)
-ローカル時刻を使用して `Date` のオブジェクトの数値日の月の値を設定します。  
+# <a name="setdate-method-date-javascript"></a>setDate メソッド (Date) (JavaScript)
+日付の数値を設定、`Date`オブジェクトのローカル時刻を使用します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 dateObj.setDate(numDate)   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dateObj`  
- 必須。  任意の `Date` オブジェクトを指定します。  
+ 必須です。 任意の `Date` オブジェクトを指定します。  
   
  `numDate`  
- 必須。  設定する月の日付と等しい数値を指定します。  
+ 必須です。 数値を指定する月の日です。  
   
-## 解説  
- 4 Z 対象を使用して日の月の値を設定すると、時間 \(UTC\) を使用します `setUTCDate` 方法を調整します。  
+## <a name="remarks"></a>コメント  
+ 世界協定時刻 (UTC) を使用して日付の値を設定するには、使用、`setUTCDate`メソッドです。  
   
- `numDate` の値を月の日数、この日付は以降の月、または年にロールのオーバーします。  たとえば `setDate(32)` 保存されている日付が 1 年 3 月 5 日で、1996 年 1、1996 年から 2 年 12 月 1 日までの日付の変更と呼ばれます。  `numDate` が負の場合、日付よりも前の月または年にロールバックされます。  たとえば `setDate(-32)` 保存されている日付が 1 年 3 月 5 日で、1996 年 1、1995 年から 11 年 12 月 29 日までの日付の変更と呼ばれます。  
+ 場合の値`numDate`月の日数を以降の月または年を日付ロールバックの数よりも大きいです。 たとえば、格納されている日付は 1996 年 1 月 5 日と`setDate(32)`が呼び出されると、1996 年 2 月 1 日の日付変更します。 場合`numDate`負の数値、以前の月または年に日付ロールバックします。 たとえば、格納されている日付は 1996 年 1 月 5 日と`setDate(-32)`が呼び出されると、1995 年 11 月 29 日の日付変更します。  
   
- [setFullYear メソッド \(Date\)](../../javascript/reference/setfullyear-method-date-javascript.md) が年、月、日を設定するために使用できます。  
+ [SetFullYear メソッド (Date)](../../javascript/reference/setfullyear-method-date-javascript.md)年、月、および月の日を設定するために使用できます。  
   
-## 使用例  
+## <a name="example"></a>例  
  `setDate` メソッドを使用する方法の例を次に示します。  
   
-```javascript  
+```JavaScript  
 var date = new Date("12/15/1990");  
 date.setDate(30);  
 document.write(date);  
@@ -61,13 +63,13 @@ document.write(date);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
- :**Applies To**[Date オブジェクト](../../javascript/reference/date-object-javascript.md)  
+ **適用対象**: [Date Object](../../javascript/reference/date-object-javascript.md)  
   
-## 参照  
- [getDate メソッド \(Date\)](../../javascript/reference/getdate-method-date-javascript.md)   
- [setFullYear メソッド \(Date\)](../../javascript/reference/setfullyear-method-date-javascript.md)   
- [setMonth メソッド \(Date\)](../../javascript/reference/setmonth-method-date-javascript.md)   
- [setUTCDate メソッド \(Date\)](../../javascript/reference/setutcdate-method-date-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [getDate メソッド (Date)](../../javascript/reference/getdate-method-date-javascript.md)   
+ [setFullYear メソッド (Date)](../../javascript/reference/setfullyear-method-date-javascript.md)   
+ [setMonth メソッド (Date)](../../javascript/reference/setmonth-method-date-javascript.md)   
+ [setUTCDate メソッド (Date)](../../javascript/reference/setutcdate-method-date-javascript.md)

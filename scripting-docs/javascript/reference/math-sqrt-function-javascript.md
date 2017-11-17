@@ -1,34 +1,36 @@
 ---
-title: "Math.sqrt 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "sqrt"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Math オブジェクト"
-  - "sqrt メソッド"
+title: "Math.sqrt 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: sqrt
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- sqrt method
+- Math object
 ms.assetid: 6c5438f5-ab03-4e50-969e-1da2330afc04
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b8bf249bcce700b05e17df82fc98b8a701afae01
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Math.sqrt 関数 (JavaScript)
-指定された数値の平方根を返します。  
+# <a name="mathsqrt-function-javascript"></a>Math.sqrt 関数 (JavaScript)
+平方根を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -37,15 +39,15 @@ number
 )   
 ```  
   
-## 解説  
- `number` 引数は必須で、数式を指定します。  
+## <a name="remarks"></a>コメント  
+ 必要な `number` 引数は、数値式です。  
   
- `number` 引数に負の値を指定すると、戻り値は `NaN` になります。  
+ 場合`number`は負の場合、戻り値は`NaN`します。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [Math オブジェクト](../../javascript/reference/math-object-javascript.md)  
+ **適用されます**: [Math オブジェクト](../../javascript/reference/math-object-javascript.md)  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [数値演算定数](../../javascript/reference/math-constants-javascript.md)

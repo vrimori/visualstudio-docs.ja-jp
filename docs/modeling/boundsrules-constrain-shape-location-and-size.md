@@ -1,28 +1,29 @@
 ---
-title: "BoundsRules によってシェイプの位置とサイズが制限される | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ドメイン固有言語, イベント"
+title: "BoundsRules 図形の位置とサイズを制限する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Domain-Specific Language, events
 ms.assetid: 4d08e541-fc67-4e68-bf31-30d346aa2aa0
-caps.latest.revision: 18
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 8a611bd18cb06b712f671d370bfc26d4dc8cf4f3
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# BoundsRules によってシェイプの位置とサイズが制限される
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-*境界の規則は* 図形のサイズと位置の制限を定義するクラスです。  ユーザーは形状または図形の角は側のドラッグ中に繰り返し呼び出すメソッドを提供します。  
+# <a name="boundsrules-constrain-shape-location-and-size"></a>BoundsRules によってシェイプの位置とサイズが制限される
+A*境界ルール*図形の位置とサイズの制限を定義するクラスです。 図形または角また図形のユーザーがドラッグするときに繰り返し呼び出されるメソッドを提供します。  
   
- 次の例は固定サイズのバーとして図形の四角形を水平または垂直抑制します。  ユーザーが側または角をドラッグするとアウトラインは高さと幅の 2 種類の構成時に使用できる反転させます。  
+ 次の例では、固定サイズを水平方向または垂直のバーにするのには、次の四角形を制約します。 ドラッグすると、ユーザー、角また、高さの 2 つの許可されている構成と幅のアウトラインが反転します。  
   
- 境界の規則は <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules> から派生したクラスです。  規則のインスタンスは図形に作成されます :  
+ 境界のルールがから派生したクラス<xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>です。 ルールのインスタンスは、図形で作成されます。  
   
 ```  
 using Microsoft.VisualStudio.Modeling.Diagrams; ...  
@@ -62,8 +63,8 @@ public class BarBoundsRule: BoundsRules
 } } }  
 ```  
   
- は位置とサイズを抑制できることに注意してください。  
+ 場所とサイズ制約でく場合に注意してください。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>   
  [変更内容への対応および変更内容の反映](../modeling/responding-to-and-propagating-changes.md)

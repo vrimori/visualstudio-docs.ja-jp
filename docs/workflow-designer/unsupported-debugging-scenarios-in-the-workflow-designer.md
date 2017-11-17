@@ -1,25 +1,29 @@
 ---
-title: "ワークフロー デザイナーでサポートされていないデバッグ シナリオ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "デバッグする場合、ワークフロー デザイナーでサポートされていない |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 6adbe379-41d0-4681-9cd0-b91f187c3c2c
-caps.latest.revision: 4
-ms.author: "sdanie"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+ms.author: sdanie
+manager: erikre
+ms.openlocfilehash: e442c47611edbc207b3a9ba7c8f10363cd020d10
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# ワークフロー デザイナーでサポートされていないデバッグ シナリオ
-[!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)] のワークフロー デザイナーには多くの新機能が追加されていますが、いくつかサポートされていないデバッグ シナリオがあります。このドキュメントでは、サポートされていないワークフロー デザイナーのデバッグ シナリオについて詳しく説明します。  
+# <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>ワークフロー デザイナーでサポートされていないデバッグ シナリオ
+[!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)] のワークフロー デザイナーには多くの新機能が追加されていますが、いくつかサポートされていないデバッグ シナリオがあります。 このドキュメントでは、サポートされていないワークフロー デザイナーのデバッグ シナリオについて詳しく説明します。  
   
 -   コードを編集した後では実行を続行できません。  
   
--   ワークフローの任意の場所から実行を続行することはできません \(次の設定\)。  
+-   ワークフローの任意の場所から実行を続行することはできません (次の設定)。  
   
--   カーソルが到達するまで実行を続行できません \(カーソル行の前まで実行\)。  
+-   カーソルが到達するまで実行を続行できません (カーソル行の前まで実行)。  
   
 -   デザイナーを使用せずにコード内に作成されたワークフローをデバッグするためにワークフロー デザイナーを使用することはできません。  
   
@@ -33,15 +37,15 @@ caps.handback.revision: 4
   
 -   ワークフローのブレークポイントを呼び出し履歴ウィンドウに設定することはできません。  
   
--   デザイナーでブレークポイントを作成する場合、**\[ブレークポイントの作成\]** ダイアログの **\[行\]** および **\[文字\]** 設定は使用されません。  
+-   デザイナーでブレークポイントを作成するときに、**行**と**文字**の設定、**新しいブレークポイント** ダイアログ ボックスは使用されません。  
   
--   \[ブレークポイント\] ウィンドウまたはショートカット メニューは、ワークフローのデバッグで、次の列またはオプションをサポートしていません。  
+-   [ブレークポイント] ウィンドウまたはショートカット メニューは、ワークフローのデバッグで、次の列またはオプションをサポートしていません。  
   
-    -   条件  
+    -   状態  
   
     -   ヒット カウント  
   
-    -   ヒット時  
+    -   ヒット時   
   
     -   関数  
   

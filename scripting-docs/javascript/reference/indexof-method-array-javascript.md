@@ -1,62 +1,65 @@
 ---
-title: "indexOf メソッド (Array) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "配列 [JavaScript], indexOf メソッド"
-  - "indexOf メソッド [JavaScript]"
+title: "indexOf メソッド (Array) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- arrays [JavaScript], indexOf method
+- indexOf method [JavaScript]
 ms.assetid: 5bee31ae-aaf1-4466-8cfd-ed287e3cdf17
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 63685219faf42991da6b798493c58b356ab97279
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# indexOf メソッド (Array) (JavaScript)
+# <a name="indexof-method-array-javascript"></a>indexOf メソッド (Array) (JavaScript)
 ある値が配列内で最初に見つかった位置のインデックスを返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 array1.indexOf(searchElement[, fromIndex])  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
   
 |パラメーター|定義|  
-|------------|--------|  
-|`array1`|必須です。  配列オブジェクト。|  
-|`searchElement`|必須です。  `array1` 内で検索される値。|  
-|`fromIndex`|省略可能です。  検索の開始位置を示す配列インデックス。  `fromIndex` を省略すると、検索はインデックス 0 から開始されます。|  
+|---------------|----------------|  
+|`array1`|必須です。 配列オブジェクト。|  
+|`searchElement`|必須です。 内で検索する値`array1`です。|  
+|`fromIndex`|省略可能です。 検索を開始する位置を示す配列のインデックス。 場合`fromIndex`は省略すると、検索はインデックス 0 から開始します。|  
   
-## 戻り値  
- `searchElement` が配列内で最初に見つかった位置のインデックス。`searchElement` が見つからなかった場合は \-1。  
+## <a name="return-value"></a>戻り値  
+ 最初に見つかった位置のインデックス`searchElement`、配列の場合は-1`searchElement`が見つかりません。  
   
-## 解説  
- `indexOf` メソッドは、指定された値を配列で検索します。  メソッドは、最初に見つかった位置のインデックスを返します。指定された値が見つからない場合は \-1 を返します。  
+## <a name="remarks"></a>コメント  
+ `indexOf`メソッドは、指定した値の配列を検索します。 メソッドは、指定した値が見つからない場合に、最初に見つかった位置のインデックスを返します。  
   
- インデックスの昇順に検索します。  
+ 検索は、インデックスの昇順で発生します。  
   
- 配列要素は `===` 演算子のような厳密等価で `searchElement` 値と比較されます。  詳細については、「[比較演算子](../../javascript/reference/comparison-operators-javascript.md)」を参照してください。  
+ 配列要素を比較する、`searchElement`値厳密等価に似ていますが、`===`演算子。 詳細については、次を参照してください。[比較演算子](../../javascript/reference/comparison-operators-javascript.md)です。  
   
- 省略可能な `fromIndex` 引数には、検索を開始する配列インデックスを指定します。  `fromIndex` が配列の長さ以上である場合は、\-1 が返されます。  `fromIndex` が負の場合、検索は配列の長さに `fromIndex` を加えた位置から開始されます。  
+ 省略可能な`fromIndex`引数は、検索を開始する位置を示す配列インデックスを指定します。 場合`fromIndex`がより大きいまたは等しい、配列の長さ、-1 が返されます。 場合`fromIndex`はプラスの配列の長さに負の場合、検索開始`fromIndex`です。  
   
-## 使用例  
- `indexOf` メソッドの使用例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、使用、`indexOf`メソッドです。  
   
-```javascript  
+```JavaScript  
 // Create an array. (The elements start at index 0.)  
 var ar = ["ab", "cd", "ef", "ab", "cd"];  
   
@@ -82,10 +85,10 @@ document.write (ar.indexOf("ab", -2) + "<br/>");
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv9](../../javascript/includes/jsv9-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [JavaScript メソッド](../../javascript/reference/javascript-methods.md)   
  [Array オブジェクト](../../javascript/reference/array-object-javascript.md)   
  [配列の使用](../../javascript/advanced/using-arrays-javascript.md)

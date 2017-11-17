@@ -1,33 +1,35 @@
 ---
-title: "要素ツールのカスタマイズ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "要素のツールをカスタマイズする |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6dac48b6-db68-4bcd-8aa2-422c2ad5d28b
-caps.latest.revision: 6
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 2555fe2be42ed58482cdacf174a6cb035a8d7bd5
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 要素ツールのカスタマイズ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-一部の DSL 定義では、要素のグループとして 1 つの概念を表します。 たとえば、コンポーネントが固定ポートのセットを持つモデルを作成する場合する場合に、親コンポーネントと同時に作成するポート。 そのため、1 つだけでなく、要素のグループが作成されるように要素の作成ツールをカスタマイズする必要があります。 これを実現するのには、要素の作成ツールを初期化する方法をカスタマイズできます。  
+# <a name="customizing-element-tools"></a>要素ツールのカスタマイズ
+一部の DSL 定義では、要素のグループとして 1 つの概念を表します。 たとえば、コンポーネントが固定ポートのセットを含むでモデルを作成すると、常に場合、親コンポーネントと同時に作成するポートします。 そのため、1 つだけではなく要素のグループを作成する、要素の作成ツールをカスタマイズする必要があります。 これを実現するには、要素の作成ツールを初期化する方法をカスタマイズできます。  
   
- また、ツールは、図または要素にドラッグされるときの動作をオーバーライドすることができます。  
+ ツールが、図または要素にドラッグされたときの動作を上書きすることもできます。  
   
-## 要素ツールの内容をカスタマイズします。  
- 各要素ツールのインスタンスを格納する、 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> \(EGP\) を含むモデル要素およびリンクの 1 つまたは複数のシリアル化されたバージョンです。 既定では、要素ツールの EGP には、このツールの指定したクラスの 1 つのインスタンスが含まれています。 これを変更するにはオーバーライドすることで *YourLanguage*`ToolboxHelper.CreateElementToolPrototype`します。 DSL パッケージが読み込まれるときに、このメソッドが呼び出されます。  
+## <a name="customizing-the-content-of-an-element-tool"></a>要素ツールの内容をカスタマイズします。  
+ 各要素のツールのインスタンスを格納する、 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP) を含むモデル要素とリンクの 1 つまたは複数のシリアル化されたバージョンです。 既定では、要素ツールの EGP には、このツールの指定したクラスの 1 つのインスタンスが含まれています。 これを変更するにはオーバーライドすることで*YourLanguage*`ToolboxHelper.CreateElementToolPrototype`です。 DSL パッケージが読み込まれるときに、このメソッドが呼び出されます。  
   
- メソッドのパラメーターは、DSL 定義で指定したクラスの ID です。 興味のあるクラスを使用して、メソッドが呼び出されると、EGP に余分な要素を追加できます。  
+ メソッドのパラメーターは、DSL 定義で指定したクラスの ID です。 興味のあるクラスにメソッドが呼び出されると、EGP に余分な要素を追加できます。  
   
- EGP では、1 つの主要な要素に付属の要素へのリンクの埋め込みを含める必要があります。 参照リンクを含めることもできます。  
+ EGP では、1 つの主な要素から下位の要素へのリンクの埋め込みを含める必要があります。 参照先のリンクを含めることもできます。  
   
- 次の例では、主要な要素と埋め込まれた 2 つの要素を作成します。 メイン クラスには抵抗が呼び出され、ターミナルをという名前の要素を 2 つの埋め込みリレーションシップがあります。 埋め込みのロールのプロパティの名前は Terminal1 Terminal2、いて両方 1..1 の多重度です。  
+ 次の例では、主な要素と埋め込みの 2 つの要素を作成します。 ターミナルをという名前の要素を 2 つの埋め込みリレーションシップがあるし、メイン クラスを抵抗と呼びます。 埋め込みのロールのプロパティの名前は Terminal1 Terminal2、いて両方 1..1 の多重度。  
   
 ```  
 using Microsoft.VisualStudio.Modeling; ...    
@@ -59,5 +61,5 @@ public partial class CircuitDiagramToolboxHelper
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [要素作成処理および要素移動処理のカスタマイズ](../modeling/customizing-element-creation-and-movement.md)

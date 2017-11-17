@@ -1,24 +1,27 @@
 ---
-title: "[.NET 型の参照と選択] ダイアログ ボックス | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/20/2016"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "TypeBrowser.UI"
-  - "ActivityTypeResolver.UI"
+title: "参照して .NET の種類 ダイアログ ボックスの選択 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- TypeBrowser.UI
+- ActivityTypeResolver.UI
 ms.assetid: 864b60b6-a070-4e5c-aa5b-a25341b57ea6
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
+caps.latest.revision: "13"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ac184805803e92758e1de93400c957d00e8ebda6
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# [.NET 型の参照と選択] ダイアログ ボックス
-**\[プロパティ\]** ウィンドウ、ダイアログ ボックス、または変数デザイナーなどのデザイナーで、データ型の一覧から **\[型の参照\]** を選択すると、**\[.NET 型の参照と選択\]** ダイアログ ボックス \(省略形で "型ブラウザー" と呼ばれます\) が開きます。このダイアログ ボックスでは、アセンブリとプロジェクトのツリー表示から型を選択できます。  
+# <a name="browse-and-select-a-net-type-dialog-box"></a>[.NET 型の参照と選択] ダイアログ ボックス
+**プロパティ**ウィンドウ、ダイアログ ボックス、またはを選択すると、変数デザイナーなどのデザイナー**型を参照しています.**データ型の一覧からは、**を参照して .NET 型を選択** ダイアログ ボックス (「型ブラウザー」と省略形で呼ばれます)。 このダイアログ ボックスでは、アセンブリとプロジェクトのツリー表示から型を選択できます。  
   
  このダイアログ ボックスは、次のようなさまざなユーザー シナリオで使用されます。  
   
@@ -29,44 +32,44 @@ manager: "erikre"
 -   <xref:System.Activities.Statements.TryCatch> アクティビティに catch を追加する。  
   
 > [!NOTE]
->  型ブラウザーは、多次元配列型ではなく Visual Basic ジャグ配列型を表示できます。詳細については、[ジャグ配列](http://go.microsoft.com/fwlink/?LinkId=195226)および[多次元配列](http://go.microsoft.com/fwlink/?LinkId=195227)を参照してください。  
+>  型ブラウザーは、多次元配列型ではなく Visual Basic ジャグ配列型を表示できます。 参照してください[ジャグ配列](http://go.microsoft.com/fwlink/?LinkId=195226)と[多次元配列](http://go.microsoft.com/fwlink/?LinkId=195227)詳細についてはします。  
   
-## 型ブラウザーでの値型または参照型の選択  
+## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>型ブラウザーでの値型または参照型の選択  
   
-#### 型ブラウザーで値型または参照型を選択するには  
+#### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>型ブラウザーで値型または参照型を選択するには  
   
-1.  **\[型名\]** ボックスに、使用する型の名前を入力します。  
+1.  **型名**ボックスを使用する型の名前を入力します。  
   
-2.  以下のいずれかを実行します。  
+2.  次のいずれかの操作を行います。  
   
-    -   使用する型の名前が **\[型名\]** ボックスのツリーに表示されたら、その型をダブルクリックして選択します。  
+    -   ツリーに使用する型の名前が表示されたら、**型名**ボックスをオンにする型をダブルクリックします。  
   
-    -   **\[型名\]** ボックスに、使用する型を一意に識別できるだけの文字を入力してから、Enter キーを押して、その型を選択します。  
+    -   ための十分な文字を入力して、**型名**ボックスを使用して、enter キーを押し、種類を選択する型を一意に識別するには  
   
-#### 型ブラウザーでジェネリック型を選択するには  
+#### <a name="to-select-a-generic-type-from-the-type-browser"></a>型ブラウザーでジェネリック型を選択するには  
   
-1.  **\[型名\]** ボックスに、使用する型の名前を入力します。  
+1.  **型名**ボックスで使用する型の名前を入力します。  
   
-2.  使用する型の名前が **\[型名\]** ボックスのツリーに表示されたら、その型をダブルクリックして選択します。この操作により、ドロップダウン ボックスが表示されます。  
+2.  ツリーに使用する型の名前が表示されたら、**型名**ボックスで、表示により、ドロップ ダウン ボックスをオンにする をクリックします。  
   
-     ジェネリック型を閉じるために使用する型をドロップダウン ボックスから選択し、**\[OK\]** をクリックします。  
+     ドロップダウン ボックスから、ジェネリックを閉じ をクリックしを使用する場合の種類を選択**OK**です。  
   
-## 型ブラウザーに表示される型  
- 型ブラウザーに表示される型は、型ブラウザーを起動した方法に応じて変わる場合があります。**vs2010** 内のワークフロー プロジェクトから型ブラウザーを起動した場合、既定では、参照アセンブリおよび参照プロジェクトのすべての型が表示されます。**vs2010** プロジェクト システムの外部 \(再ホストされたワークフロー アプリケーション、スタンドアロンのワークフロー ファイルなど\) から型ブラウザーを起動した場合、既定では、AppDomain に読み込まれているすべてのアセンブリの型が表示されます。  
+## <a name="types-displayed-in-the-type-browser"></a>型ブラウザーに表示される型  
+ 型ブラウザーに表示される型は、型ブラウザーを起動した方法に応じて変わる場合があります。 内のワークフロー プロジェクトから型ブラウザーを起動したかどうかは**vs2010**、既定ですべての参照されたアセンブリで型および参照先のプロジェクトが表示されます。 外部から型ブラウザーを起動した場合、 **vs2010**プロジェクト (このような再ホストされたワークフロー アプリケーションやスタンドアロンのワークフロー ファイル)、システムの既定ではすべての AppDomain に読み込まれたアセンブリから型を表示し、.  
   
- アクティビティ デザイナーの開発者は、型ブラウザーの型をフィルター処理できます。どのアクティビティでも、表示されるのは型のサブセットのみです。たとえば、<xref:System.Activities.Statements.TryCatch> アクティビティでは、<xref:System.Exception> から派生した型のみが型ブラウザーに表示されます。  
+ アクティビティ デザイナーの開発者は、型ブラウザーの型をフィルター処理できます。 どのアクティビティでも、表示されるのは型のサブセットのみです。 たとえば、<xref:System.Activities.Statements.TryCatch> アクティビティでは、<xref:System.Exception> から派生した型のみが型ブラウザーに表示されます。  
   
-## 型ブラウザーでの検索結果のフィルター処理  
- **\[型名\]** ボックスの型の一覧は、検索する文字を入力した分だけ短くなります。フィルター処理された一覧には、入力した文字列で完全修飾名が始まる型、または、入力した文字列で始まる短い名前を持つ型のみが表示されます。  
+## <a name="filtering-search-results-in-the-type-browser"></a>型ブラウザーでの検索結果のフィルター処理  
+ 内の型の一覧、**型名**ボックスが一致するものを検索する文字を入力するように短くを取得します。 フィルター処理された一覧には、入力した文字列で完全修飾名が始まる型、または、入力した文字列で始まる短い名前を持つ型のみが表示されます。  
   
- 次に例を示します。  
+ 例:  
   
-1.  「**Operation**」と入力すると、<xref:System.OperationCanceledException> とは一致しますが、<xref:System.InvalidOperationException> とは一致しません。<xref:System.InvalidOperationException> と一致するためには、「System.I」または「Invalid」と入力します。  
+1.  入力**操作**と一致する<xref:System.OperationCanceledException>ではなく<xref:System.InvalidOperationException>です。 <xref:System.InvalidOperationException> と一致するためには、「System.I」または「Invalid」と入力します。  
   
-2.  「**Generic**」と入力すると、<xref:System.GenericUriParser> とは一致しますが、<xref:System.Collections.Generic> 名前空間の型とは一致しません。<xref:System.Collections.Generic> 名前空間の型を検索するには、その名前空間の完全修飾名を入力します。  
+2.  入力**ジェネリック**と一致する<xref:System.GenericUriParser>でない型しますが、<xref:System.Collections.Generic>名前空間。 <xref:System.Collections.Generic> 名前空間の型を検索するには、その名前空間の完全修飾名を入力します。  
   
-## 型ブラウザー ダイアログを使用したサービス コントラクトの選択  
+## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>型ブラウザー ダイアログを使用したサービス コントラクトの選択  
  サービス コントラクト型を選択すると、型ブラウザーは <xref:System.ServiceModel.ServiceContractAttribute> 属性を持つ型だけを表示します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [アクティビティ デザイナーの使用](../workflow-designer/using-the-activity-designers.md)

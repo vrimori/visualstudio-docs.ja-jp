@@ -1,62 +1,63 @@
 ---
-title: "CA1005: ジェネリック型でパラメーターを使用しすぎないでください | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AvoidExcessiveParametersOnGenericTypes"
-  - "CA1005"
-helpviewer_keywords: 
-  - "AvoidExcessiveParametersOnGenericTypes"
-  - "CA1005"
+title: "CA1005: ジェネリック型でパラメーターを避けるため |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- AvoidExcessiveParametersOnGenericTypes
+- CA1005
+helpviewer_keywords:
+- AvoidExcessiveParametersOnGenericTypes
+- CA1005
 ms.assetid: 372b2f28-5c59-4815-9753-6c65b2bb3589
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: b5fad132dfdda0ef12e6d74c503c5d27024a8382
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1005: ジェネリック型でパラメーターを使用しすぎないでください
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1005-avoid-excessive-parameters-on-generic-types"></a>CA1005: ジェネリック型でパラメーターを使用しすぎないでください
 |||  
 |-|-|  
 |TypeName|AvoidExcessiveParametersOnGenericTypes|  
 |CheckId|CA1005|  
-|分類|Microsoft.Design|  
+|カテゴリ|Microsoft.Design|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
- 外部から参照可能なジェネリック型に、3 つ以上の型パラメーターがあります。  
+## <a name="cause"></a>原因  
+ 外部から参照できるジェネリック型では、3 つ以上の型パラメーターを持ちます。  
   
-## 規則の説明  
- ジェネリック型に含まれる型パラメーターが増えれば増えるほど、それぞれの型パラメーターが表す意味を調べることや覚えることが難しくなります。  通常、`List<T>` のように型パラメーターが 1 つの場合や、`Dictionary<TKey, TValue>` のように型パラメーターが 2 つの場合、意味は明確です。  型パラメーターが 3 つ以上になると、ほとんどのユーザーには意味を把握することが困難になります \(たとえば、C\# では `TooManyTypeParameters<T, K, V>`、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] では `TooManyTypeParameters(Of T, K, V)` のような場合\)。  
+## <a name="rule-description"></a>規則の説明  
+ ジェネリック型に含まれる型パラメーターが増えれば増えるほど、それぞれの型パラメーターが表す意味を調べることや覚えることが難しくなります。 通常意味は明確に示すように、1 つの型パラメーターを持つです`List<T>`、および場合によってに示すように、2 つの型パラメーターを持つ`Dictionary<TKey, TValue>`します。 3 つ以上の型パラメーターが存在する場合は難易度がほとんどのユーザーに過剰になります (たとえば、 `TooManyTypeParameters<T, K, V>` (C#) または`TooManyTypeParameters(Of T, K, V)`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])。  
   
-## 違反の修正方法  
- この規則違反を修正するには、3 つ以上の型パラメーターを使用しないようにデザインを変更します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するのには 2 つの型パラメーターを使用してデザインを変更します。  
   
-## 警告を抑制する状況  
- デザインで 3 つ以上の型パラメーターが絶対に必要な場合を除き、この規則による警告を抑制しないでください。  理解しやすく使いやすい構文でジェネリック型を指定することで、習得に必要な時間が短縮され、新しいライブラリの採用率が向上します。  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 設計は、3 つ以上の型パラメーターを絶対に必要な場合を除き、この規則による警告は抑制しないでください。 新しいライブラリの導入速度になり習得に必要な時間が短縮を簡単に理解し、使用する構文でジェネリック型を提供することです。  
   
-## 関連規則  
+## <a name="related-rules"></a>関連規則  
  [CA1010: コレクションは、ジェネリック インターフェイスを実装しなければなりません](../code-quality/ca1010-collections-should-implement-generic-interface.md)  
   
  [CA1000: ジェネリック型の静的メンバーを宣言しません](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)  
   
- [CA1002: ジェネリック リストを公開しません](../Topic/CA1002:%20Do%20not%20expose%20generic%20lists.md)  
+ [CA1002: ジェネリック リストを公開しません](../code-quality/ca1002-do-not-expose-generic-lists.md)  
   
  [CA1006: ジェネリック型をメンバー シグネチャ内で入れ子にしません](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)  
   
  [CA1004: ジェネリック メソッドは型パラメーターを指定しなければなりません](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)  
   
- [CA1003: 汎用イベント ハンドラーのインスタンスを使用します](../Topic/CA1003:%20Use%20generic%20event%20handler%20instances.md)  
+ [CA1003: 汎用イベント ハンドラーのインスタンスを使用します](../code-quality/ca1003-use-generic-event-handler-instances.md)  
   
  [CA1007: 適切な場所にジェネリックを使用します](../code-quality/ca1007-use-generics-where-appropriate.md)  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ジェネリック](/dotnet/csharp/programming-guide/generics/index)

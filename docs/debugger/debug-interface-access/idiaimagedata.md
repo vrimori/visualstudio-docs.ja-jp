@@ -1,54 +1,53 @@
 ---
-title: "IDiaImageData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaImageData インターフェイス"
+title: "IDiaImageData |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaImageData interface
 ms.assetid: b696f350-fc08-4352-9287-a15e87512c1e
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c76a173f137ede589b870f5119153a4233bcd730
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaImageData
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-モジュールまたはイメージの基本とメモリ位置のオフセット情報を公開します。  
+# <a name="idiaimagedata"></a>IDiaImageData
+モジュールまたはイメージの基本場所とメモリのオフセットの詳細情報を公開します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
-IDiaImageData : IUnknown  
+IDiaImageData : IUnknown  
 ```  
   
-## Vtable の順序でメソッド  
- 次の表は `IDiaImageData` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDiaImageData`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[IDiaImageData::get\_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|アプリケーションに関連するモジュールの仮想メモリの位置を取得します。|  
-|[IDiaImageData::get\_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|イメージの仮想メモリの位置を取得します。|  
-|[IDiaImageData::get\_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|イメージの基になる必要があるメモリ位置を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|アプリケーションを基準とモジュールの仮想メモリの場所を取得します。|  
+|[IDiaImageData::get_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|イメージの仮想メモリの場所を取得します。|  
+|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|イメージが基づいているメモリ位置を取得します。|  
   
-## 解説  
- されるものとストリーム \(XDATA および PDATA\) が含まれている場合やイメージに格納されているデータのコピーをデバッグします。  これらのストリーム データは `IDiaImageData` オブジェクトのインターフェイスを照会できます。  詳細についてはこのトピックの 「呼び出し元の注意」セクションを参照してください。  
+## <a name="remarks"></a>コメント  
+ (XDATA、PDATA) の一部のデバッグ ストリームは、イメージにも格納されているデータのコピーを保持します。 これらのストリーム データをオブジェクトを照会することができます、`IDiaImageData`インターフェイスです。 詳細については、このトピックでは、「ノートの呼び出し元」を参照してください。  
   
-## 呼び出し元のメモ  
- [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) のオブジェクトの `QueryInterface` を呼び出してこのインターフェイスを取得します。  すべてのデバッグ出力ストリームが `IDiaImageData` のインターフェイスをサポートしないことに注意してください。  たとえば現在 XDATA および PDATA だけストリームは `IDiaImageData` のインターフェイスをサポートします。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ このインターフェイスを呼び出すことによって取得`QueryInterface`上、 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)オブジェクト。 すべてのデバッグをストリームのサポート、`IDiaImageData`インターフェイスです。 例については、現在 XDATA および PDATA ストリームのみをサポート、`IDiaImageData`インターフェイスです。  
   
-## 使用例  
- この例では `IDiaImageData` のインターフェイスをサポートするストリームをデバッグするストリームをすべて検索します。  このようなストリームがある場合そのストリームに関する情報が表示されます。  
+## <a name="example"></a>例  
+ この例では、すべてのデバッグ ストリームをサポートするすべてのストリームの検索、`IDiaImageData`インターフェイスです。 このようなストリームが見つかった場合、そのストリームに関する情報が表示されます。  
   
-```cpp#  
+```C++  
 void ShowImageData(IDiaSession *pSession)  
 {  
     if (pSession != NULL)  
@@ -112,13 +111,13 @@ void ShowImageData(IDiaSession *pSession)
 }  
 ```  
   
-## 必要条件  
- ヘッダー : Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Dia2.h  
   
- ライブラリ : diaguids.lib  
+ ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## 参照  
- [インターフェイス \(Debug Interface Access SDK\)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+## <a name="see-also"></a>関連項目  
+ [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

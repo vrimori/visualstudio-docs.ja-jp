@@ -1,54 +1,55 @@
 ---
-title: "propertyIsEnumerable メソッド (Object) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "propertyIsEnumerable"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "propertyIsEnumerable プロパティ"
+title: "propertyIsEnumerable メソッド (Object) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: propertyIsEnumerable
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: propertyIsEnumerable property
 ms.assetid: d90c7c2e-ea23-4710-a957-9aefbbd1f68b
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 5664732db6a311586f11eb13eee4407fdf81410f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# propertyIsEnumerable メソッド (Object) (JavaScript)
-指定したオブジェクトが列挙可能かどうかを判定します。  
+# <a name="propertyisenumerable-method-object-javascript"></a>propertyIsEnumerable メソッド (Object) (JavaScript)
+指定したプロパティが列挙可能かどうかを判断します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 object. propertyIsEnumerable(proName)  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `object`  
- 必須です。  オブジェクトのインスタンスを指定します。  
+ 必須です。 オブジェクトのインスタンスを指定します。  
   
  `proName`  
- 必須です。  プロパティ名の文字列値を指定します。  
+ 必須です。 プロパティ名の文字列値を指定します。  
   
-## 解説  
- `proName` が `object` に存在し、`For` のループを使用して列挙できる場合、`propertyIsEnumerable` メソッドは `true` を返します。  `propertyIsEnumerable` メソッドは、指定した名前のプロパティが `object` にない場合、または指定したプロパティが列挙可能ではない場合に `false` を返します。  一般に、定義済みのプロパティは列挙可能ではありませんが、ユーザー定義のプロパティは常に列挙可能です。  
+## <a name="remarks"></a>コメント  
+ `propertyIsEnumerable`メソッドを返します。`true`場合`proName`内に存在する`object`を使用して列挙すると、`For`ループします。 `propertyIsEnumerable`メソッドを返します。`false`場合`object`は指定した名前のプロパティがありません、または指定したプロパティは、列挙可能な場合です。 通常、定義済みのプロパティはありませんが、列挙可能なユーザー定義プロパティ常に列挙可能です。  
   
- `propertyIsEnumerable` メソッドは、プロトタイプ チェインのオブジェクトを考慮しません。  
+ `propertyIsEnumerable`メソッドは、プロトタイプ チェーン内のオブジェクトと見なしません。  
   
-## 使用例  
+## <a name="example"></a>例  
   
-```javascript  
+```JavaScript  
 var a = new Array("apple", "banana", "cactus");  
 document.write(a.propertyIsEnumerable(1));  
   
@@ -56,8 +57,8 @@ document.write(a.propertyIsEnumerable(1));
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
-## 参照  
- [prototype プロパティ \(Object\)](../../javascript/reference/prototype-property-object-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [prototype プロパティ (Object)](../../javascript/reference/prototype-property-object-javascript.md)

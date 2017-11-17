@@ -1,34 +1,36 @@
 ---
-title: "substring メソッド (String) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "substring"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "部分文字列"
-  - "substring メソッド"
+title: "substring メソッド (String) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: substring
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- substrings
+- substring method
 ms.assetid: 9cf9a005-cbe3-42fd-828b-57a39f54224c
-caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 15ebaadc7b24fa97f531a22f6deb1453ff52b3e7
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# substring メソッド (String) (JavaScript)
-`String` オブジェクトに格納されている文字列内の指定された位置にある部分文字列を返します。  
+# <a name="substring-method-string-javascript"></a>substring メソッド (String) (JavaScript)
+内の指定位置にある部分文字列を返します、`String`オブジェクト。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -36,28 +38,28 @@ caps.handback.revision: 18
 "String Literal".substring(start [, end])   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `start`  
- 必須です。  取得する部分文字列の先頭文字の位置を 0 から始まる値で指定します。  
+ 必須です。 部分文字列の先頭を示す 0 から始まるインデックスの整数です。  
   
  `end`  
- 省略可能です。  必ず指定します。取得する文字列の終了文字の位置を 0 から始まる値で指定します。  部分文字列には、`end` で指定された文字の 1 つ前の文字までが含まれます。  
+ 省略可能です。 部分文字列の末尾を示す 0 から始まるインデックスの整数。 最大の部分文字列に文字が含まれていますを含めないことで示される文字`end`です。  
   
- `end` を省略すると、`start` から元の文字列の末尾の文字までが返されます。  
+ 場合`end`を省略すると、文字から成る`start`元の文字列の末尾までが返されます。  
   
-## 解説  
- `substring` メソッドは、`start` から `end` の前の文字までの部分文字列を返します。  
+## <a name="remarks"></a>コメント  
+ `substring`メソッドから部分文字列を含む文字列を返します`start`までを含めず`end`です。  
   
- **substring** メソッドでは、引数 `start` と引数 `end` のうち値の小さい方が取得する文字列の先頭位置になります。  たとえば、strvar.substring\(0, 3**\)** と strvar.substring\(3, 0\) は同じ部分文字列を返します。  
+ **Substring**メソッドの下限値を使用して`start`と`end`サブスト リングの開始点として。 たとえば、strvar.substring (0, 3**)** strvar.substring (3, 0) が、同じサブ文字列を返すとします。  
   
- 引数 `start` または `end` のいずれかが `NaN` または負である場合は、0 に置き換えられます。  
+ いずれか`start`または`end`は`NaN`または負の値に置き換えられます 0 です。  
   
- 取得した文字列の長さは、`start` と `end` の2 つの引数の差の絶対値になります。  たとえば、strvar.substring\(0, 3\) メソッドと strvar.substring\(3, 0\) で返される部分文字列の長さは 3 になります。  
+ 部分文字列の長さが値の差の絶対値と等しい`start`と`end`です。 たとえば、strvar.substring (0, 3) で返される部分文字列の長さと strvar.substring (3, 0) は 3 です。  
   
-## 使用例  
- **substring** メソッドの使用例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、使用、 **substring**メソッドです。  
   
-```javascript  
+```JavaScript  
 var s = "The quick brown fox jumps over the lazy dog.";  
 var ss = s.substring(10, 15);  
 document.write(ss);  
@@ -67,8 +69,8 @@ document.write(ss);
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 参照  
- [substr メソッド \(String\)](../../javascript/reference/substr-method-string-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [substr メソッド (String)](../../javascript/reference/substr-method-string-javascript.md)

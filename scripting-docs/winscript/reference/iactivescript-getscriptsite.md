@@ -1,27 +1,30 @@
 ---
-title: "IActiveScript::GetScriptSite | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScript::GetScriptSite |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScript.GetScriptSite
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScript_GetScriptSite"
+helpviewer_keywords: IActiveScript_GetScriptSite
 ms.assetid: 83a2a89d-93d0-4cbd-9244-91a730cb406b
-caps.latest.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 961483d45c72018bc216306d6c1aba0400a367ad
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScript::GetScriptSite
-Windows のスクリプト エンジンに関連付けられたサイトのオブジェクトを取得します。  
+# <a name="iactivescriptgetscriptsite"></a>IActiveScript::GetScriptSite
+Windows スクリプト エンジンに関連付けられているサイト オブジェクトを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetScriptSite(  
@@ -30,23 +33,23 @@ HRESULT GetScriptSite(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `iid`  
- \[入力\]要求されたインターフェイスの識別子。  
+ [in]要求されたインターフェイスの識別子。  
   
  `ppvSiteObject`  
- \[出力\]ホスト サイトのオブジェクトへのインターフェイス ポインターを受け取る場所のアドレス。  
+ [out]ホストのサイト オブジェクトへのインターフェイス ポインターを受け取る場所のアドレスです。  
   
-## 戻り値  
- 次の値の場合: 1  
+## <a name="return-value"></a>戻り値  
+ 次のいずれかの値を返します。  
   
 |戻り値|説明|  
-|---------|--------|  
+|------------------|-------------|  
 |`S_OK`|成功。|  
 |`E_INVALIDARG`|引数が無効です。|  
-|`E_NOINTERFACE`|特定のインターフェイスはサポートされていません。|  
+|`E_NOINTERFACE`|指定されたインターフェイスがサポートされていません。|  
 |`E_POINTER`|無効なポインターが指定されました。|  
-|`S_FALSE`|サイトが設定された; `ppvSiteObject` のパラメーターは `NULL`に設定されます。|  
+|`S_FALSE`|サイトが設定されていません。`ppvSiteObject`にパラメーターが設定されている`NULL`です。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScript](../../winscript/reference/iactivescript.md)

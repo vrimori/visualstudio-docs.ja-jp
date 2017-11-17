@@ -1,33 +1,34 @@
 ---
-title: "&lt;fileAssociation&gt; 要素 (ClickOnce アプリケーション) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<fileAssociation> 要素 [ClickOnce アプリケーション マニフェスト]"
-  - "マニフェスト [ClickOnce], fileAssociation 要素"
+title: "&lt;fileAssociation&gt;要素 (ClickOnce アプリケーション) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- <fileAssociation> element [ClickOnce application manifest]
+- manifests [ClickOnce], fileAssociation element
 ms.assetid: 8f951b4f-54f9-412e-a9e5-af4e379fcf08
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 1b5040f6de578a6436f16c1a1c81d9cef4f789ee
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;fileAssociation&gt; 要素 (ClickOnce アプリケーション)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-アプリケーションに関連付ける拡張子を指定します。  
+# <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;fileAssociation&gt;要素 (ClickOnce アプリケーション)
+アプリケーションに関連付けるファイル拡張子を識別します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 <fileAssociation  
@@ -39,23 +40,23 @@ caps.handback.revision: 8
 />  
 ```  
   
-## 要素と属性  
- `fileAssociation` 要素は省略可能です。  この要素には、次の属性があります。  
+## <a name="elements-and-attributes"></a>要素と属性  
+ `fileAssociation` 要素は省略可能です。 要素には、次の属性があります。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`extension`|必ず指定します。  アプリケーションに関連付ける拡張子を指定します。|  
-|`description`|必ず指定します。  ファイルの種類の説明です。シェルで使用されます。|  
-|`progid`|必ず指定します。  ファイルの種類を一意に識別する名前です。|  
-|`defaultIcon`|必ず指定します。  この拡張子を持つファイルに使用するアイコンを指定します。  アイコン ファイルは、この要素が存在する [\<assembly\> 要素](../deployment/assembly-element-clickonce-application.md)内に、[\<file\> 要素](../Topic/%3Cfile%3E%20Element%20\(ClickOnce%20Application\).md)を使って指定する必要があります。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`extension`|必須です。 アプリケーションに関連付けるファイル拡張子。|  
+|`description`|必須です。 シェルで使用するため、ファイルの種類の説明です。|  
+|`progid`|必須です。 ファイルの種類を一意に識別する名前です。|  
+|`defaultIcon`|必須です。 この拡張機能を持つファイルを使用するアイコンを指定します。 使用してアイコン ファイルを指定する必要があります、 [\<ファイル > 要素](../deployment/file-element-clickonce-application.md)内で、 [\<アセンブリ > 要素](../deployment/assembly-element-clickonce-application.md)この要素を格納しています。|  
   
-## 解説  
- この要素は、"urn:schemas\-microsoft\-com:clickonce.v1" の XML 名前空間参照を含んでいる必要があります。  使用する場合、`<fileAssociation>` 要素は、親 [\<assembly\> 要素](../deployment/assembly-element-clickonce-application.md)内の `<application>` 要素の後に記述する必要があります。  
+## <a name="remarks"></a>コメント  
+ この要素は、XML 名前空間参照を含める必要があります"urn: スキーマ-microsoft-com:clickonce.v1"です。 場合、`<fileAssociation>`要素を使用すると、後に続く必要がありますが、`<application>`では親要素[\<アセンブリ > 要素](../deployment/assembly-element-clickonce-application.md)です。  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では、既存のファイルの関連付けは上書きされません。  ただし、ClickOnce アプリケーションは現在のユーザーのファイル拡張子のみオーバーライドできます。  その ClickOnce アプリケーションをアンインストールすると、ユーザーのファイルの関連付けが削除され、コンピューターごとの関連付けが再びアクティブになります。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]既存のファイルの関連付けは上書きされません。 ただし、ClickOnce アプリケーションでは、現在のユーザーのみのファイル拡張子を上書きできます。 ClickOnce アプリケーションをアンインストールしたら、ClickOnce は、ユーザーのファイルの関連付けを削除し、コンピューターごとの関連付けが再度アクティブです。  
   
-## 使用例  
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] を使用して配置されるテキスト エディター アプリケーションの、アプリケーション マニフェスト内の `fileAssociation` 要素を示すコード例を次に示します。  このコード例には、`defaultIcon` 属性に必要な [\<file\> 要素](../Topic/%3Cfile%3E%20Element%20\(ClickOnce%20Application\).md)も含まれています。  
+## <a name="example"></a>例  
+ 次のコード例を示しています`fileAssociation`アプリケーション内の要素を使用して展開されているテキスト エディターのアプリケーションのマニフェストの[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]します。 このコード例も含まれています、 [\<ファイル > 要素](../deployment/file-element-clickonce-application.md)で必要な`defaultIcon`属性。  
   
 ```  
 <file name="text.ico" size="4286">  
@@ -80,5 +81,5 @@ caps.handback.revision: 8
 <fileAssociation xmlns="urn:schemas-microsoft-com:clickonce.v1" extension=".writing" description="Writings (ClickOnce)" progid="Writing.Document" defaultIcon="writing.ico" />  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

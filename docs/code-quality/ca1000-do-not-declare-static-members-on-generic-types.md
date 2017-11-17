@@ -1,41 +1,42 @@
 ---
-title: "CA1000: ジェネリック型の静的メンバーを宣言しません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1000"
-  - "DoNotDeclareStaticMembersOnGenericTypes"
-helpviewer_keywords: 
-  - "CA1000"
-  - "DoNotDeclareStaticMembersOnGenericTypes"
+title: "Ca 1000: ジェネリック型で静的メンバーを宣言しません |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1000
+- DoNotDeclareStaticMembersOnGenericTypes
+helpviewer_keywords:
+- DoNotDeclareStaticMembersOnGenericTypes
+- CA1000
 ms.assetid: 5c0da594-f8d0-4f40-953d-56bf7fbd2087
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 24d46fc6817f4d13ea5502ada707e2abbcdbfda9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1000: ジェネリック型の静的メンバーを宣言しません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1000-do-not-declare-static-members-on-generic-types"></a>CA1000: ジェネリック型の静的メンバーを宣言しません
 |||  
 |-|-|  
 |TypeName|DoNotDeclareStaticMembersOnGenericTypes|  
 |CheckId|CA1000|  
-|分類|Microsoft.Design|  
+|カテゴリ|Microsoft.Design|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
- 外部から参照可能なジェネリック型に、`static` \(Visual Basic では `Shared`\) メンバーが含まれています。  
+## <a name="cause"></a>原因  
+ 外部から参照できるジェネリック型が含まれています、 `static` (`Shared` Visual Basic で) メンバー。  
   
-## 規則の説明  
- ジェネリック型の `static` メンバーを呼び出すときには、その型の型引数も指定する必要があります。  推論をサポートしないジェネリック インスタンス メンバーを呼び出すときには、そのメンバーに型引数を指定する必要があります。  この 2 つの場合で、型引数を指定するときに使用される構文は異なりますが、混同される可能性があります。次に呼び出しの例を示します。  
+## <a name="rule-description"></a>規則の説明  
+ ときに、`static`ジェネリック型のメンバーが呼び出されると、型の型引数を指定する必要があります。 推論をサポートしないジェネリック インスタンス メンバーを呼び出すときには、そのメンバーに型引数を指定する必要があります。 これら 2 つの場合、型引数を指定する構文は異なりますが、混同、次の呼び出しが示すようにします。  
   
 ```vb  
 ' Shared method in a generic type.  
@@ -45,7 +46,7 @@ GenericType(Of Integer).SharedMethod()
 someObject.GenericMethod(Of Integer)()  
 ```  
   
-```c#  
+```csharp  
 // Static method in a generic type.  
 GenericType<int>.StaticMethod();  
   
@@ -53,28 +54,28 @@ GenericType<int>.StaticMethod();
 someObject.GenericMethod<int>();  
 ```  
   
- 一般的に、メンバーが呼び出されたときに型引数を指定する必要がないように、前者の宣言はどちらも避ける必要があります。  その結果、ジェネリック型のメンバーを呼び出す構文がジェネリック型以外の構文と同じになります。  詳細については、「[CA1004: ジェネリック メソッドは型パラメーターを指定しなければなりません](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)」を参照してください。  
+ 一般に、型引数が、メンバーが呼び出されたときに指定する必要があるないように、この前の宣言の両方を避ける必要があります。 これは、結果、構文では、非ジェネリックの構文と同じジェネリック型のメンバーを呼び出す。 詳細については、次を参照してください。 [ca 1004: ジェネリック メソッドが型パラメーターを指定する必要があります](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)です。  
   
-## 違反の修正方法  
- このルールの違反を修正するには、静的メンバーを削除するか、インスタンス メンバーに変更します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、静的メンバーを削除またはインスタンス メンバーを変更します。  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  理解しやすく使いやすい構文でジェネリック型を指定することで、習得に必要な時間が短縮され、新しいライブラリの採用率が向上します。  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。 新しいライブラリの導入速度になり習得に必要な時間が短縮を簡単に理解し、使用する構文でジェネリック型を提供することです。  
   
-## 関連規則  
+## <a name="related-rules"></a>関連規則  
  [CA1005: ジェネリック型でパラメーターを使用しすぎないでください](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)  
   
  [CA1010: コレクションは、ジェネリック インターフェイスを実装しなければなりません](../code-quality/ca1010-collections-should-implement-generic-interface.md)  
   
- [CA1002: ジェネリック リストを公開しません](../Topic/CA1002:%20Do%20not%20expose%20generic%20lists.md)  
+ [CA1002: ジェネリック リストを公開しません](../code-quality/ca1002-do-not-expose-generic-lists.md)  
   
  [CA1006: ジェネリック型をメンバー シグネチャ内で入れ子にしません](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)  
   
  [CA1004: ジェネリック メソッドは型パラメーターを指定しなければなりません](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)  
   
- [CA1003: 汎用イベント ハンドラーのインスタンスを使用します](../Topic/CA1003:%20Use%20generic%20event%20handler%20instances.md)  
+ [CA1003: 汎用イベント ハンドラーのインスタンスを使用します](../code-quality/ca1003-use-generic-event-handler-instances.md)  
   
  [CA1007: 適切な場所にジェネリックを使用します](../code-quality/ca1007-use-generics-where-appropriate.md)  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ジェネリック](/dotnet/csharp/programming-guide/generics/index)

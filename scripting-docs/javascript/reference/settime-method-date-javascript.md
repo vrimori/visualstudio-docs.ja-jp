@@ -1,56 +1,58 @@
 ---
-title: "setTime メソッド (Date) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "setTime"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "SetTime メソッド"
-  - "time メソッド"
+title: "setTime メソッド (Date) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: setTime
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- SetTime method
+- time method
 ms.assetid: 86584748-7219-495b-bf56-e27f5782778c
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e66b1fbf5d668330eb727e8bfc50ee9d11a28be3
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# setTime メソッド (Date) (JavaScript)
+# <a name="settime-method-date-javascript"></a>setTime メソッド (Date) (JavaScript)
 `Date` オブジェクトの日付と時刻の値を設定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 dateObj.setTime(milliseconds)   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dateObj`  
- 必須です。  任意の `Date` オブジェクトを指定します。  
+ 必須です。 任意の `Date` オブジェクトを指定します。  
   
- *milliseconds*  
- 必須です。  グリニッジ標準時の 1970 年 1 月 1 日 0 時 0 分 0 秒から経過したミリ秒数単位の数値を指定します。  
+ *(ミリ秒)*  
+ 必須です。 GMT 1970 年 1 月 1 日の深夜から経過したミリ秒数を表す数値を指定します。  
   
-## 解説  
- *milliseconds* 引数に負の値を指定すると、1970 年以前の日付になります。  有効な日付の範囲は、1970 年の前後の約 285,616 年です。  
+## <a name="remarks"></a>コメント  
+ 場合*ミリ秒*は 1970 年より前に、の日付を示す、負の値。 使用可能な日付の範囲は、1970 年の約 285,616 年です。  
   
- `setTime` メソッドを使用して日付と時刻を設定する場合は、指定する値はタイムゾーンに依存しません。  
+ 日付と時刻を設定、`setTime`メソッドは、タイム ゾーンに依存しません。  
   
-## 使用例  
+## <a name="example"></a>例  
  `setTime` メソッドの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 function SetTimeTest(newtime){  
    var d, s;                  //Declare variables.  
    d = new Date();            //Create Date object.  
@@ -61,10 +63,10 @@ function SetTimeTest(newtime){
 }  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [Date オブジェクト](../../javascript/reference/date-object-javascript.md)  
+ **適用対象**: [Date Object](../../javascript/reference/date-object-javascript.md)  
   
-## 参照  
- [getTime メソッド \(Date\)](../../javascript/reference/gettime-method-date-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [getTime メソッド (Date)](../../javascript/reference/gettime-method-date-javascript.md)

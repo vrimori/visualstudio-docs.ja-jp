@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptAuthor::GetEventHandler | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptAuthor::GetEventHandler |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptAuthor.GetEventHandler
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScriptAuthor::GetEventHandler"
+helpviewer_keywords: IActiveScriptAuthor::GetEventHandler
 ms.assetid: 87c7a71d-46b9-448c-b34d-394105e20982
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 2b09f900162b6dba82696c946b53ab131691530c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptAuthor::GetEventHandler
-指定した属性を持つスクリプトレットを返します。  
+# <a name="iactivescriptauthorgeteventhandler"></a>IActiveScriptAuthor::GetEventHandler
+指定された属性を持つスクリプトレットを返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetEventHandler(  
@@ -33,31 +36,31 @@ HRESULT GetEventHandler(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pdisp`  
- \[入力\]スクリプトレットがアタッチされている `NamedItem` に対応する `IDispatch` のオブジェクト。  
+ [in]`IDispatch`オブジェクトに対応する、`NamedItem`スクリプトレットが関連付けられています。  
   
  `pszItem`  
- \[出力\]ホストの完全修飾名スクリプトレットのトップレベルの識別子のバッファーのアドレス。  
+ [in]ホストで完全修飾スクリプトレットの名前を最上位レベルの識別子のバッファーのアドレス。  
   
  `pszSubItem`  
- \[出力\]ホストの完全修飾名スクリプトレットの 2 番目のレベルの識別子のバッファーのアドレス。  名前に 1 レベルのみの場合に無効にする。  
+ [in]ホストで完全修飾スクリプトレットの名前の第 2 レベルの識別子のバッファーのアドレス。 名前に 1 つだけのレベルがある場合は、NULL に設定します。  
   
  `pszEvent`  
- \[入力\]イベント名を含むバッファーのアドレス。  スクリプトレットは、このイベントのイベント ハンドラーです。  
+ [in]イベントの名前を格納するバッファーのアドレス。 スクリプトレットは、このイベントのイベント ハンドラーです。  
   
  `ppse`  
- \[出力\]指定した属性を持つスクリプトレットの `IScriptEntry` のインターフェイスへのポインターを受け取る変数のアドレス。  
+ [out]ポインターを受け取る変数のアドレス、`IScriptEntry`を指定された属性を持つスクリプトレットのインターフェイスです。  
   
-## 戻り値  
- `HRESULT`。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ `HRESULT`。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScriptAuthor インターフェイス](../../winscript/reference/iactivescriptauthor-interface.md)   
  [IScriptEntry インターフェイス](../../winscript/reference/iscriptentry-interface.md)

@@ -1,64 +1,66 @@
 ---
-title: "Object.defineProperties 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Object.defineProperties 関数 [JavaScript]"
+title: "Object.defineProperties 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: Object.defineProperties function [JavaScript]
 ms.assetid: 2dae6658-a1c9-495f-bf06-bb3e964e6762
-caps.latest.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 65f4f5817a105283a26c971bd98869d000ca0bc2
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Object.defineProperties 関数 (JavaScript)
+# <a name="objectdefineproperties-function-javascript"></a>Object.defineProperties 関数 (JavaScript)
 1 つ以上のプロパティをオブジェクトに追加したり既存のプロパティの属性を変更したります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 object.defineProperties(object, descriptors)  
 ```  
   
-## Parameters  
+## <a name="parameters"></a>パラメーター  
  `object`  
- Required.  プロパティを追加または変更するオブジェクトを指定します。  これは [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] のネイティブ オブジェクトまたは DOM オブジェクトです。  
+ 必須です。 追加またはプロパティを変更する対象となるオブジェクト。 これは、ネイティブ[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]オブジェクトや DOM オブジェクト。  
   
  `descriptors`  
- Required.  1 つ以上の記述子オブジェクトを含む [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] オブジェクトを指定します。  各記述子オブジェクトは、データ プロパティまたはアクセサー プロパティについて記述します。  
+ 必須です。 A[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]を 1 つまたは複数の記述子オブジェクトを含むオブジェクト。 各記述子オブジェクトは、データ プロパティまたはアクセサー プロパティについて説明します。  
   
-## 戻り値  
+## <a name="return-value"></a>戻り値  
  関数に渡されたオブジェクト。  
   
-## 解説  
- `descriptors` 引数は、1 つ以上の記述子オブジェクトを含むオブジェクトです。  
+## <a name="remarks"></a>コメント  
+ `descriptors`引数は、1 つまたは複数の記述子オブジェクトを含むオブジェクト。  
   
- *データ プロパティ*は、値を格納および取得できるプロパティです。  データ プロパティ記述子には、`value` 属性、`writable` 属性、またはその両方が含まれます。  詳細については、「[データ プロパティとアクセサー プロパティ](../../javascript/advanced/data-properties-and-accessor-properties.md)」を参照してください。  
+ A*データ プロパティ*格納したり、値を取得できるプロパティです。 データ プロパティ記述子が含まれています、 `value` 、属性、`writable`属性、またはその両方です。 詳細については、次を参照してください。[データ プロパティとアクセサー プロパティ](../../javascript/advanced/data-properties-and-accessor-properties.md)です。  
   
- *アクセサー プロパティ*は、プロパティ値が設定または取得されるたびにユーザーが指定した関数を呼び出します。  アクセサー プロパティ記述子には、`set` 属性、`get` 属性、またはその両方が含まれます。  
+ *アクセサー プロパティ*プロパティの値を設定または取得するたびに、ユーザー指定の関数を呼び出します。 アクセサー プロパティ記述子には、`set` 属性、`get` 属性、またはその両方が含まれます。  
   
- オブジェクトに既に指定された名前のプロパティがある場合は、プロパティの属性が変更されます。  詳細については、「[Object.defineProperty 関数](../../javascript/reference/object-defineproperty-function-javascript.md)」を参照してください。  
+ オブジェクトは、指定した名前を持つプロパティを既に持っている場合は、プロパティの属性が変更されます。 詳細については、次を参照してください。 [Object.defineProperty 関数](../../javascript/reference/object-defineproperty-function-javascript.md)です。  
   
- オブジェクトを作成し、新しいオブジェクトにプロパティを追加するには、[Object.create 関数](../../javascript/reference/object-create-function-javascript.md) を使用できます。  
+ オブジェクトを作成して、新しいオブジェクトにプロパティを追加、使用することができます、 [Object.create 関数](../../javascript/reference/object-create-function-javascript.md)です。  
   
-## プロパティの追加  
- ユーザー定義オブジェクトにデータ プロパティとアクセサー プロパティを追加する `Object.defineProperties` 関数の例を次に示します。  
+## <a name="adding-properties"></a>プロパティを追加する  
+ 次の例で、`Object.defineProperties`関数は、ユーザー定義オブジェクトにデータ プロパティとアクセサー プロパティを追加します。  
   
- 例では、オブジェクト リテラルを使用して、`newDataProperty` 記述子オブジェクトと `newAccessorProperty` 記述子オブジェクトを含む `descriptors` オブジェクトを作成します。  
+ 例では、オブジェクト リテラルを使用して、作成、`descriptors`オブジェクトを`newDataProperty`と`newAccessorProperty`記述子オブジェクト。  
   
-```javascript  
+```JavaScript  
 var newLine = "<br />";  
   
 var obj = {};  
@@ -93,9 +95,9 @@ document.write ("newAccessorProperty value: " + obj.newAccessorProperty + newLin
   
 ```  
   
- 前の例のように、次の例は、オブジェクトのリテラルではなくプロパティを動的に追加します。  
+ 前の例のようには、次の例は、オブジェクト リテラルに動的の代わりにプロパティを追加します。  
   
-```javascript  
+```JavaScript  
   
 var newLine = "<br />";  
   
@@ -137,8 +139,8 @@ document.write ("newAccessorProperty value: " + obj.newAccessorProperty + newLin
   
 ```  
   
-## プロパティの変更  
- オブジェクトのプロパティ属性を変更するには、次のコードを追加します。  `Object.defineProperties` 関数は、`newDataProperty` の `writable` の属性を変更し、`newAccessorProperty` の `enumerable` の属性を変更します。  オブジェクトにプロパティ名 `anotherDataProperty` が存在しないので、それをオブジェクトに追加します。  
+## <a name="modifying-properties"></a>プロパティを変更する  
+ オブジェクトのプロパティの属性を変更するには、次のコードを追加します。 `Object.defineProperties`関数を変更、`writable`の属性`newDataProperty`、し、変更、`enumerable`の属性`newAccessorProperty`です。 追加`anotherDataProperty`オブジェクトにプロパティ名が既に存在しないためです。  
   
 ```  
 Object.defineProperties(obj, {  
@@ -148,10 +150,10 @@ Object.defineProperties(obj, {
 });  
 ```  
   
-## 必要条件  
- Internet Explorer 9 標準モード、Internet Explorer 10 標準モード、および [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリでサポートされています。  Internet Explorer 8 では、DOM オブジェクトのみサポートされていますが、それ以外はサポートされていません。  
+## <a name="requirements"></a>要件  
+ Internet Explorer 9 標準、Internet Explorer 10 標準でサポートされていると[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)]アプリ。 それ以外の場合はサポートされていません DOM オブジェクトに対してのみ、Internet Explorer の 8 でサポートされます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Object.getOwnPropertyDescriptor 関数](../../javascript/reference/object-getownpropertydescriptor-function-javascript.md)   
  [Object.getOwnPropertyNames 関数](../../javascript/reference/object-getownpropertynames-function-javascript.md)   
  [Object.defineProperty 関数](../../javascript/reference/object-defineproperty-function-javascript.md)   

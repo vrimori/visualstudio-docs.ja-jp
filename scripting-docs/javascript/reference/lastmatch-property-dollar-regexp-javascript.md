@@ -1,49 +1,51 @@
 ---
-title: "lastMatch プロパティ ($&amp;) (RegExp) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "$&"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "lastMatch プロパティ ($%)"
-  - "lastMatch プロパティ ($&)"
+title: "lastMatch プロパティ ($&amp;) (RegExp) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: $&
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- lastMatch property ($%)
+- lastMatch property ($&)
 ms.assetid: d223836d-5235-48a5-a926-d20764ad3f14
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 25991bf5b577d785fc4f7d8c6b2af14b93486000
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# lastMatch プロパティ ($&amp;) (RegExp) (JavaScript)
-正規表現による検索で最後に一致した文字を返します。  読み取り専用です。  
+# <a name="lastmatch-property-amp-regexp-javascript"></a>lastMatch プロパティ ($&amp;) (RegExp) (JavaScript)
+正規表現による検索で最後に一致した文字を返します。 読み取り専用です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 RegExp.lastMatch  
 ```  
   
-## 解説  
- このプロパティに関連付けられるオブジェクトは、常にグローバルな `RegExp` オブジェクトです。  
+## <a name="remarks"></a>コメント  
+ このプロパティに関連付けられているオブジェクトは、常にグローバル`RegExp`オブジェクト。  
   
- `lastMatch` プロパティの初期値は空の文字列です。  `lastMatch` プロパティの値は、検索が成功するたびに変更されます。  
+ 初期値、`lastMatch`プロパティは、空の文字列。 値、`lastMatch`プロパティが、一致するたびに変更します。  
   
-## 使用例  
+## <a name="example"></a>例  
  `lastMatch` プロパティの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 // Create the regular expression pattern.  
 var re = new RegExp("d(b+)(d)","ig");  
 var str = "cdbBdbsbdbdz";  
@@ -65,16 +67,16 @@ s += "lastParen: " + RegExp.lastParen + "<br />";
 document.write(s);  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
- **対象**: [RegExp オブジェクト](../../javascript/reference/regexp-object-javascript.md)  
+ **適用されます**: [RegExp オブジェクト](../../javascript/reference/regexp-object-javascript.md)  
   
-## 参照  
- [$1...$9 プロパティ \(RegExp\)](../../javascript/reference/dollar-1-dot-dot-dot-dollar-9-properties-regexp-javascript.md)   
- [index プロパティ \(RegExp\)](../../javascript/reference/index-property-regexp-javascript.md)   
- [input プロパティ \($\_\) \(RegExp\)](../../javascript/reference/input-property-dollar-regexp-javascript.md)   
- [lastIndex プロパティ \(RegExp\)](../../javascript/reference/lastindex-property-regexp-javascript.md)   
- [lastParen プロパティ \($\+\) \(RegExp\)](../../javascript/reference/lastparen-property-dollar-regexp-javascript.md)   
- [leftContext プロパティ \($\`\) \(RegExp\)](../../javascript/reference/leftcontext-property-dollar-grave-regexp-javascript.md)   
- [rightContext プロパティ \($'\) \(RegExp\)](../../javascript/reference/rightcontext-property-dollar-regexp-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [$1... 9 ドル プロパティ (RegExp)](../../javascript/reference/dollar-1-dot-dot-dot-dollar-9-properties-regexp-javascript.md)   
+ [index プロパティ (RegExp)](../../javascript/reference/index-property-regexp-javascript.md)   
+ [input プロパティ ($_) (RegExp)](../../javascript/reference/input-property-dollar-regexp-javascript.md)   
+ [lastIndex プロパティ (RegExp)](../../javascript/reference/lastindex-property-regexp-javascript.md)   
+ [lastParen プロパティ ($ +) (RegExp)](../../javascript/reference/lastparen-property-dollar-regexp-javascript.md)   
+ [leftContext プロパティ ($') (RegExp)](../../javascript/reference/leftcontext-property-dollar-grave-regexp-javascript.md)   
+ [rightContext プロパティ ($') (RegExp)](../../javascript/reference/rightcontext-property-dollar-regexp-javascript.md)

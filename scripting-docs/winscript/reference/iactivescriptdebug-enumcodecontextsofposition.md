@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptDebug::EnumCodeContextsOfPosition | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptDebug::EnumCodeContextsOfPosition |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptDebug.EnumCodeContextsOfPosition
 apilocation: jscript.dll
-helpviewer_keywords: 
-  - "IActiveScriptDebug::EnumCodeContextsOfPosition"
+helpviewer_keywords: IActiveScriptDebug::EnumCodeContextsOfPosition
 ms.assetid: 19f44420-bcc8-4c10-8c38-378d96044117
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 40fd8e2d19d3949ff26811956ae3d203871e5510
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptDebug::EnumCodeContextsOfPosition
-`IDebugDocumentContext::EnumCodeContexts`のメソッドに代行させるには、スマート ホストによって使用されます。  
+# <a name="iactivescriptdebugenumcodecontextsofposition"></a>IActiveScriptDebug::EnumCodeContextsOfPosition
+委任スマート ホストで使用される、`IDebugDocumentContext::EnumCodeContexts`メソッドです。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT EnumCodeContextsOfPosition(  
@@ -32,29 +35,29 @@ HRESULT EnumCodeContextsOfPosition(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwSourceContext`  
- \[入力\] `IActiveScriptParse::ParseScriptText` または `IActiveScriptParse::AddScriptlet`へのソースのコンテキストそのまま。  
+ [in]元のコンテキストに提供される`IActiveScriptParse::ParseScriptText`または`IActiveScriptParse::AddScriptlet`です。  
   
  `uCharacterOffset`  
- \[入力\]スクリプトのテキスト文字のオフセットの相対的な開始。  
+ [in]スクリプトのテキストの先頭からのオフセットの文字。  
   
  `uNumChars`  
- \[出力\]このコンテキストの文字数。  
+ [in]このコンテキストでの文字数。  
   
  `ppescc`  
- \[出力\]指定した範囲コードのコンテキストの列挙子。  
+ [out]指定した範囲内のコードのコンテキストの列挙子。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- スマート ホストは `IDebugDocumentContext::EnumCodeContexts` のメソッドをデリゲートにこのメソッドを使用します。  
+## <a name="remarks"></a>コメント  
+ スマート ホストでは、このメソッドを使用して、委任、`IDebugDocumentContext::EnumCodeContexts`メソッドです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScriptDebug インターフェイス](../../winscript/reference/iactivescriptdebug-interface.md)   
  [IDebugDocumentContext::EnumCodeContexts](../../winscript/reference/idebugdocumentcontext-enumcodecontexts.md)

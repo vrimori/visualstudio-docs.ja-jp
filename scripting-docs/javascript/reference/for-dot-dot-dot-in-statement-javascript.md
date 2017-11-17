@@ -1,32 +1,35 @@
 ---
-title: "for...in ステートメント (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "繰り返しステートメント, for...in ステートメント"
-  - "ループ構造, for...in ステートメント"
+title: "データ型.. ステートメント (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- iteration statements, for...in statement
+- loop structures, for...in statements
 ms.assetid: 1b51a0ce-89f7-4a69-88ed-017b47dc398f
-caps.latest.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a9c3ce78def6ab91256ff724a4acc87b7cf19ba2
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# for...in ステートメント (JavaScript)
-オブジェクトの各プロパティ、または配列の各要素に対して、1 つ以上のステートメントを実行します。  
+# <a name="forin-statement-javascript"></a>for...in ステートメント (JavaScript)
+オブジェクトの各プロパティまたは配列の各要素に対して 1 つまたは複数のステートメントを実行します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 for (variable in [object | array]) {  
@@ -34,27 +37,27 @@ for (variable in [object | array]) {
 }  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `variable`  
- 必須です。  `object` の任意のプロパティ名、または `array` の任意の要素インデックスを格納するために使用する変数を指定します。  
+ 必須です。 任意のプロパティ名の使用可能な変数`object`または任意の要素のインデックス、`array`です。  
   
  `object`, `array`  
- 省略可能です。  反復処理するオブジェクトまたは配列を指定します。  
+ 省略可能です。 オブジェクトまたは配列を反復処理します。  
   
  `statements`  
- 省略可能です。  `object` のプロパティ、または `array` の各要素に対して実行する 1 つ以上のステートメントを指定します。  複合ステートメントを指定することもできます。  
+ 省略可能です。 各プロパティに対して実行されるステートメントを 1 つまたは複数`object`またはの各要素`array`です。 複合ステートメントにすることもできます。  
   
-## 解説  
- ループの各イテレーションを開始する前の `variable` の値は、`object` の次のプロパティ名、または `array` の次の要素インデックスです。  その後、ループ内の任意のステートメントで `variable` を使用して、`object` のプロパティまたは `array` の要素を参照できます。  
+## <a name="remarks"></a>コメント  
+ 値、ループの各イテレーションの開始時`variable`の次のプロパティ名は、`object`の次の要素のインデックスまたは`array`です。 使用してできます`variable`のプロパティを参照する、ループ内のステートメントのいずれかで`object`または要素の`array`します。  
   
- オブジェクトのプロパティは、決まった方法では代入されません。  特定のプロパティを、そのインデックスで、プロパティの名前によってのみ指定することはできません。  
+ オブジェクトのプロパティは、確定的に割り当てられていません。 プロパティの名前のみで、インデックスを使用して特定のプロパティを指定できません。  
   
- 配列の反復処理は、要素の順序、つまり、0、1、2 の順に実行されます。  
+ 配列を反復処理するは、0、1、2 は、要素の順序で実行されます。  
   
-## 使用例  
- 次のコードは、オブジェクトを連想配列として使用した `for...in` ステートメントの使用例です。  
+## <a name="example"></a>例  
+ 次の例では、使用、`for...in`ステートメントで、連想配列として使用します。  
   
-```javascript  
+```JavaScript  
 // Initialize object.  
 a = {"a" : "Athens" , "b" : "Belgrade", "c" : "Cairo"}  
   
@@ -72,10 +75,10 @@ document.write (s);
 // c: Cairo  
 ```  
   
-## 使用例  
- expando プロパティを含む `Array` オブジェクトを反復処理する `for ... in` ステートメントを使用する例を次に示します。  
+## <a name="example"></a>例  
+ この例での使用、`for ... in`ステートメントを反復処理する場合、 `Array` expando プロパティを持つオブジェクト。  
   
-```javascript  
+```JavaScript  
 // Initialize the array.  
 var arr = new Array("zero","one","two");  
   
@@ -101,11 +104,11 @@ document.write (s);
 ```  
   
 > [!NOTE]
->  `Enumerator` オブジェクトを使用して、コレクションのメンバーを反復処理します。  
+>  使用して、`Enumerator`コレクションのメンバーを反復処理するオブジェクト。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv5](../../javascript/reference/includes/jsv5-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [for ステートメント](../../javascript/reference/for-statement-javascript.md)   
  [while ステートメント](../../javascript/reference/while-statement-javascript.md)

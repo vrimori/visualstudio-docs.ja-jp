@@ -1,46 +1,49 @@
 ---
-title: "Interop アクティビティ デザイナー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "System.Activities.Statements.Interop.UI"
+title: "Interop アクティビティ デザイナー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: System.Activities.Statements.Interop.UI
 ms.assetid: 800a3403-ba86-41c4-8de1-c4fee9703eb1
-caps.latest.revision: 6
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3adc99e0a09d2d82049dcbe816f14b24ab48a55d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Interop アクティビティ デザイナー
-**Interop** アクティビティ デザイナーは、<xref:System.Activities.Statements.Interop> アクティビティを作成および構成するために使用します。  
+# <a name="interop-activity-designer"></a>Interop アクティビティ デザイナー
+**相互運用機能**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.Interop>アクティビティ。  
   
-## Interop アクティビティ  
+## <a name="the-interop-activity"></a>Interop アクティビティ  
  <xref:System.Activities.Statements.Interop> アクティビティでは、ワークフロー内の <xref:System.Workflow.ComponentModel.Activity?displayProperty=fullName> から派生する型の実行を管理します。  
   
-### Interop アクティビティ デザイナーの使用  
- **Interop** アクティビティ デザイナーは、**\[ツールボックス\]** の **\[移行\]** カテゴリにあります。\[ツールボックス\] にアクセスするには、**\[ツールボックス\]** タブをクリックします \(または、**\[表示\]** メニューの **\[ツールボックス\]** をクリックするか、Ctrl キーと Alt キーを押しながら X キーを押します\)。  
+### <a name="using-the-interop-activity-designer"></a>Interop アクティビティ デザイナーの使用  
+ **相互運用機能**アクティビティ デザイナーは含まれて、**移行**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス** タブ (または、選択**ツールボックス**から、**ビュー**メニューまたは CTRL + ALT + X です)。  
   
- プロジェクトの対象が完全版の [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)] である場合は、**\[ツールボックス\]** に、<xref:System.Activities.Statements.Interop> アクティビティを含む [移行](../workflow-designer/migration-activity-designers.md) カテゴリのみが表示されます。  
+ [移行](../workflow-designer/migration-activity-designers.md)含まれているカテゴリ、<xref:System.Activities.Statements.Interop>アクティビティのみに表示、**ツールボックス**場合は、プロジェクトのすべてのターゲット[!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)]です。  
   
- C\# プロジェクトの場合、完全版の [!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)] を使用するようにプロジェクトのターゲットを再指定するには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、**\[プロパティ\]** を選択します。**\[アプリケーション\]** タブの **\[ターゲット フレームワーク\]** で、**\[.NET Framework 4\]** オプションを選択します。この変更の確認を求めるために表示された **\[ターゲット フレームワークの変更\]** ダイアログ ボックスで、**\[はい\]** ボタンをクリックします。  
+ C# プロジェクトの場合、完全を使用するプロジェクトをターゲットするを再[!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)]でプロジェクトを右クリックして、**ソリューション エクスプ ローラー**を選択して**プロパティ**です。 **アプリケーション**] タブで、[、 **NET Framework 4**オプション、**ターゲット フレームワーク**です。 選択、 **[はい]**ボタンをクリックして、**ターゲット フレームワークの変更**ダイアログがこの変更の確認を求めるを表示します。  
   
- VB プロジェクトの場合、完全版の [!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)] を使用するようにプロジェクトのターゲットを再指定するには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、**\[プロパティ\]** を選択します。**\[コンパイル\]** タブで、**\[詳細コンパイル オプション\]** をクリックします。**\[ターゲット フレームワークの一覧\]** で、**\[.Net Framework 4\]** を選択し、**\[OK\]** をクリックします。この変更の確認を求めるために表示された **\[ターゲット フレームワークの変更\]** ダイアログ ボックスで、**\[はい\]** ボタンをクリックします。  
+ VB プロジェクトの場合、完全を使用するプロジェクトをターゲットするを再[!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)]でプロジェクトを右クリックして、**ソリューション エクスプ ローラー**を選択して**プロパティ**です。 **コンパイル**タブをクリックし、**詳細コンパイル オプション**ボタンをクリックします。 選択**.Net Framework 4**から、**対象のフレームワーク リスト** をクリックし、 **ok**です。 クリックして、**はい**ボタンをクリックして、**ターゲット フレームワークの変更**すると、この変更の確認を求めるために表示されるダイアログ。  
   
- **Interop** アクティビティ デザイナーは、**\[ツールボックス\]** からドラッグして、アクティビティを通常配置している[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面の任意の場所 \(<xref:System.Activities.Statements.Sequence> 内など\) にドロップできます。この操作により、Interop という既定の **DisplayName** を持つ <xref:System.Activities.Statements.Interop> アクティビティが作成されます。<xref:System.Activities.Activity.DisplayName%2A> は、**Interop** アクティビティ デザイナーのヘッダーか、プロパティ グリッドの **\[DisplayName\]** ボックスで編集できます。  
+ **相互運用機能**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]サーフェス任意の場所、アクティビティを通常配置など内、<xref:System.Activities.Statements.Sequence>です。 これを作成、 <xref:System.Activities.Statements.Interop> 、既定値を持つアクティビティ**DisplayName**の相互運用機能します。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、**相互運用機能**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。  
   
- **Interop** アクティビティ デザイナーまたはプロパティ グリッドで、**\[ActivityType\]** ボックスの **\[クリックして参照\]** というテキストをクリックして、**\[.NET 型の参照と選択\]** ダイアログ ボックスを表示します。ワークフロー 3.0 またはワークフロー 3.5 のアクティビティの型のみ \(つまり、<xref:System.Workflow.ComponentModel.Activity> から派生した型のみ\) が表示されます。このダイアログ ボックスを使用して型を指定する方法[!INCLUDE[crabout](../test/includes/crabout_md.md)]、「[\[.NET 型の参照と選択\] ダイアログ ボックス](../Topic/Browse%20and%20Select%20a%20.NET%20Type%20Dialog%20Box.md)」を参照してください。  
+ クリックして、 **[参照] をクリックしています.**内のテキスト、 **ActivityType**ボックスで、いずれかで、**相互運用機能**アクティビティ デザイナーまたはプロパティ グリッドを呼び出すことで、**型の参照と選択 .Net**ダイアログ ボックス。 ワークフロー 3.0 またはワークフロー 3.5 のアクティビティの型のみ (つまり、<xref:System.Workflow.ComponentModel.Activity> から派生した型のみ) が表示されます。 [!INCLUDE[crabout](../test/includes/crabout_md.md)]このボックスを使用して、型を指定するを参照してください、[参照し、.NET の種類 ダイアログ ボックスをオンに](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box.md)トピックです。  
   
-### Interop のプロパティ  
- 次の表に、<xref:System.Activities.Statements.Interop> のプロパティと、デザイナーでのその使用方法を示します。これらのプロパティは、プロパティ グリッドまたは[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面で編集できます。  
+### <a name="the-interop-properties"></a>Interop のプロパティ  
+ 次の表に、<xref:System.Activities.Statements.Interop> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドまたは[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面で編集できます。  
   
-|プロパティ名|必須|使用法|  
-|------------|--------|---------|  
-|<xref:System.Activities.Activity.DisplayName%2A>|省略可|<xref:System.Activities.Statements.Interop> アクティビティの表示名。既定値は Interop です。表示名は必須ではありませんが、使用することをお勧めします。|  
-|<xref:System.Activities.Statements.Interop.ActivityType%2A>|必須|<xref:System.Activities.Statements.Interop> アクティビティに含まれているアクティビティの型を指定します。指定されたこの型は、<xref:System.Workflow.ComponentModel.Activity> から派生していることが必要です。|  
+|プロパティ名|必須|使用方法|  
+|-------------------|--------------|-----------|  
+|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Interop> アクティビティの表示名。 既定値は Interop です。 表示名は必須ではありませんが、使用することをお勧めします。|  
+|<xref:System.Activities.Statements.Interop.ActivityType%2A>|True|<xref:System.Activities.Statements.Interop> アクティビティに含まれているアクティビティの型を指定します。 指定されたこの型は、<xref:System.Workflow.ComponentModel.Activity> から派生していることが必要です。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [移行](../workflow-designer/migration-activity-designers.md)

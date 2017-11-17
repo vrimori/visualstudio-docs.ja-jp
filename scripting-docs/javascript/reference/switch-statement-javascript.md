@@ -1,35 +1,37 @@
 ---
-title: "switch ステートメント (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "switch_JavaScriptKeyword"
-  - "default_JavaScriptKeyword"
-  - "case_JavaScriptKeyword"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "switch ステートメント"
+title: "switch ステートメント (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- switch_JavaScriptKeyword
+- default_JavaScriptKeyword
+- case_JavaScriptKeyword
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: switch statement
 ms.assetid: 61f80e8b-3739-4146-a893-c2832d92b28c
-caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a301fc8bcc72b48c6ba8e999c0ebb70fe9d92b41
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# switch ステートメント (JavaScript)
+# <a name="switch-statement-javascript"></a>switch ステートメント (JavaScript)
 指定した式の値がラベルと一致したときに 1 つ以上のステートメントを実行する機能を提供します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 switch (expression) {  
@@ -41,37 +43,37 @@ switch (expression) {
 }   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `expression`  
- 評価される式を指定します。  
+ 評価される式。  
   
  `label`  
- `expression` と照合される識別子を指定します。  `label` が `expression` である場合は、コロンの直後の `statementlist` の実行が開始され、`break` ステートメント \(省略可能です\) が見つかった箇所か、`switch` ステートメントの最後まで実行されます。  
+ 識別子と照合する`expression`です。 場合`label`は、 `expression`、実行が始まる、 `statementlist` 、コロンの後すぐにし、いずれかを検出するまで、`break`ステートメントでは、これは省略可能なまたは末尾の`switch`ステートメントです。  
   
  `statementlist`  
  実行する 1 つ以上のステートメントを指定します。  
   
-## 解説  
- どのラベルの値も `expression` の値と一致しなかった場合に実行するステートメントを指定するには、`default` 句を使用します。  これは、`switch` コード ブロック内のどこでも記述できます。  
+## <a name="remarks"></a>コメント  
+ 使用して、`default`句なしのラベルの値の一致する場合に実行されるステートメントの提供を`expression`です。 任意の場所内で使用できます、`switch`コード ブロック。  
   
- `label` で指定するブロックの数に制限はありません。  `expression` の値がどの `label` の値にも一致せず、`default` 句も指定していなかった場合は、ステートメントは実行されません。  
+ 0 個以上`label`ブロックを指定することがあります。 ない場合は`label`の値に一致`expression`、および`default`ケースが指定されていない、ステートメントは実行されません。  
   
- `switch` ステートメントでの実行の流れは次のようになります。  
+ 実行を経由して流れます、`switch`次のようにステートメント。  
   
--   `expression` が評価され、この式に一致するものが見つかるまで、順序どおりに `label` が評価されます。  
+-   評価`expression`を見ます`label`一致が見つかるまでの順序で。  
   
--   `label` 値が `expression` と等しい場合は、その直後に記述された `statementlist` が実行されます。  
+-   場合、 `label` equals を値`expression`、それに付随する実行`statementlist`です。  
   
-     実行は、`break` ステートメントが実行されるか、`switch` ステートメントが終了するまで続行されます。  つまり、`break` ステートメントを記述しない場合は、複数の `label` ブロックが実行されます。  
+     までの実行を継続、`break`ステートメントが検出された、または`switch`ステートメントが終了します。 つまり、その複数`label`ブロックが実行された場合、`break`ステートメントは使用されません。  
   
--   `expression` と等しい `label` がまったくない場合は、`default` 句に進みます。  `default` 句がない場合は、最後のステップに進みます。  
+-   ない場合は`label`equals`expression`に移動して、`default`ケース。 ある場合ありません`default`場合は、最後の手順に進みます。  
   
--   `switch` コード ブロックの末尾の次のステートメントから実行を続けます。  
+-   末尾の次のステートメントの実行を継続して、`switch`コード ブロック。  
   
-## 使用例  
- オブジェクトの型を調べる例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、その型のオブジェクトをテストします。  
   
-```javascript  
+```JavaScript  
 function MyObjectType(obj) {  
     switch (obj.constructor) {  
         case Date:  
@@ -102,10 +104,10 @@ function MyObjectType(obj) {
   
 ```  
   
-## 使用例  
- `break` ステートメントを使用しない場合に実行される処理を次のコードに示します。  
+## <a name="example"></a>例  
+ 次のコードを使用しない場合は、`break`ステートメントです。  
   
-```javascript  
+```JavaScript  
 function MyObjectType(obj) {  
     switch (obj.constructor) {  
         case Date:  
@@ -133,9 +135,9 @@ function MyObjectType(obj) {
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv3](../../javascript/reference/includes/jsv3-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [break ステートメント](../../javascript/reference/break-statement-javascript.md)   
  [if...else ステートメント](../../javascript/reference/if-dot-dot-dot-else-statement-javascript.md)

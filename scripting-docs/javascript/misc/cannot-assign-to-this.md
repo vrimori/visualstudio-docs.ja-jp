@@ -1,45 +1,47 @@
 ---
-title: "&#39;this&#39; に割り当てることはできません。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.WebClient.Help.SCRIPT5000"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "できませんへの割り当て &#39; この &#39; |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.WebClient.Help.SCRIPT5000
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: ba2b0a2b-f0f8-4698-b335-a4ab6c166671
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c164b9b7d2989076a9dc0ef0bafba6159bc08885
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# &#39;this&#39; に割り当てることはできません。
-**this** に値を代入しようとしました。  **this**  は、次のいずれかを参照する [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] キーワードです:  
+# <a name="cannot-assign-to-39this39"></a>できませんへの割り当て &#39; この &#39;
+値を代入しようとしています。**この**です。 **この**は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]いずれかを示すキーワード。  
   
--   現在メソッドを実行しているオブジェクト  
+-   現在、メソッドの実行オブジェクト  
   
--   現在のメソッドがない場合 \(またはメソッドが他のどのオブジェクトにも属していない場合\) はグローバル オブジェクト  
+-   現在のメソッドはありません (またはメソッドが、他のオブジェクトに属していない) 場合は、グローバル オブジェクトです。  
   
- メソッドは、オブジェクトによって呼び出された [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 関数です。  メソッド内部では、**this** キーワードは、メソッドの呼び出し元のオブジェクトへの参照で、**new** 演算子を使用して呼び出したクラス コンストラクターによって作成されたオブジェクトに対する参照でもあります。  
+ メソッドは、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]オブジェクトを介して呼び出される関数。 メソッドは、内部、**これ**キーワードによって、メソッドが呼び出されたオブジェクトへの参照は、(動作は、クラス コンス トラクターを呼び出すことによって作成されたオブジェクトである、**新しい**演算子)。  
   
- メソッド内部では、**this** を使用して現在のオブジェクトを参照できますが、**this** に新しい値を代入することはできません。  
+ 使用することができます、メソッドの内部**この**が、現在のオブジェクトを参照するために新しい値を割り当てることはできません**これ**です。  
   
-### このエラーを解決するには  
+### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   **this** に値を代入しないでください。  インスタンス化されたオブジェクトのプロパティまたはメソッドにアクセスするには、ドット演算子を使用します \(circle**.**radius など\)。  
+-   割り当てるしないで**この**です。 プロパティまたはオブジェクトのインスタンスのメソッドにアクセスするには、ドット演算子を使用して (例: circle**.**半径)。  
   
     > [!NOTE]
-    >  ユーザーが作成した変数に [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] の予約語である **this** という名前を付けることはできません。  
+    >  ユーザーが作成した変数の名前を付けられません**この**; は、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]予約語です。  
   
-## 参照  
- [this ステートメント](../../javascript/reference/this-statement-javascript.md)   
- [JScript スクリプトのトラブルシューティング](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [このステートメント](../../javascript/reference/this-statement-javascript.md)   
+ [スクリプトのトラブルシューティング](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)

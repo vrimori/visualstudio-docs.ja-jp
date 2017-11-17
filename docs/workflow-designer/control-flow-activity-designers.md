@@ -1,53 +1,57 @@
 ---
-title: "制御フロー アクティビティ デザイナー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "制御フロー アクティビティ デザイナー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
-caps.latest.revision: 7
-author: "ErikRe"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ErikRe
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 45ffc19d3ede7af9d32e4599f17ecde9bd097bb7
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 制御フロー アクティビティ デザイナー
-[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]には、システムによって提供されるさまざまなアクティビティが用意されており、これらを、ワークフローの構築時に使用できます。このセクションでは、ワークフロー内のフローの制御を目的とした、システムによって提供されるアクティビティを紹介します。次のトピックでは、これらのアクティビティについて説明し、その使用方法についてのガイドラインを示します。  
+# <a name="control-flow-activity-designers"></a>制御フロー アクティビティ デザイナー
+[!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]には、システムによって提供されるさまざまなアクティビティが用意されており、これらを、ワークフローの構築時に使用できます。 このセクションでは、ワークフロー内のフローの制御を目的とした、システムによって提供されるアクティビティを紹介します。 次のトピックでは、これらのアクティビティについて説明し、その使用方法についてのガイドラインを示します。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [DoWhile](../workflow-designer/dowhile-activity-designer.md)  
- 指定した条件が **true** に評価されるまで、本文に含まれるアクティビティを 1 回以上実行します。  
+ 本文に含まれる、少なくとも 1 回に、指定した条件が評価されるまで、アクティビティ実行**true**です。  
   
- [ForEach\<T\>](http://msdn.microsoft.com/ja-jp/a680cddd-2760-497a-b27b-c023fcbc6f33)  
+ [ForEach\<T >](http://msdn.microsoft.com/en-us/a680cddd-2760-497a-b27b-c023fcbc6f33)  
  指定したコレクション内の各項目に対して、本文に含まれるアクティビティを実行します。  
   
  [If](../workflow-designer/if-activity-designer.md)  
  条件を評価し、その評価の結果に応じてアクティビティを実行します。  
   
- [Parallel](../workflow-designer/parallel-activity-designer.md)  
+ [並列](../workflow-designer/parallel-activity-designer.md)  
  一連の子アクティビティを同時に実行します。  
   
- [ParallelForEach\<T\>](../workflow-designer/parallelforeach-t-activity-designer.md)  
+ [ParallelForEach\<T >](../workflow-designer/parallelforeach-t-activity-designer.md)  
  コレクションの要素を列挙し、コレクションの各要素に対して埋め込みステートメントを並列実行します。  
   
- [Pick](../workflow-designer/pick-activity-designer.md)  
+ [選択](../workflow-designer/pick-activity-designer.md)  
  イベント ベースのフロー制御を提供するイベントに応答して、複数の分岐の 1 つを実行します。  
   
  [PickBranch](../workflow-designer/pickbranch-activity-designer.md)  
  <xref:System.Activities.Statements.Pick> アクティビティ内で実行パスを提供します。  
   
- [Sequence](../workflow-designer/sequence-activity-designer.md)  
+ [シーケンス](../workflow-designer/sequence-activity-designer.md)  
  順番に実行される、子アクティビティの順序付きコレクションが含まれます。  
   
- [Switch\<T\>](http://msdn.microsoft.com/ja-jp/ce1aa634-c4db-4475-a1c8-a88478a57212)  
+ [スイッチ\<T >](http://msdn.microsoft.com/en-us/ce1aa634-c4db-4475-a1c8-a88478a57212)  
  指定した式を評価し、その評価から得られた値と一致する関連付けられたキーを持つアクティビティのコレクションから、特定のアクティビティを実行します。  
   
  [While](../workflow-designer/while-activity-designer.md)  
- 指定した条件が **true** に評価される場合に、本文に含まれるアクティビティを実行します。  
+ 指定した条件が評価される場合に、本文に含まれているアクティビティ実行**true**です。  
   
-## 関連項目  
+## <a name="reference"></a>参照  
  <xref:System.Activities.Activity>  
   
  <xref:System.Activities.Statements.DoWhile>  
@@ -70,7 +74,7 @@ caps.handback.revision: 7
   
  <xref:System.Activities.Statements.While>  
   
-## 関連項目  
+## <a name="related-sections"></a>関連項目  
  他の種類のアクティビティ デザイナーについては、次のトピックを参照してください。  
   
  [アクティビティ デザイナーの使用](../workflow-designer/using-the-activity-designers.md)  
@@ -81,7 +85,7 @@ caps.handback.revision: 7
   
  [ランタイム](../workflow-designer/runtime-activity-designers.md)  
   
- [プリミティブ](../workflow-designer/primitives-activity-designers.md)  
+ [Primitives](../workflow-designer/primitives-activity-designers.md)  
   
  [トランザクション](../workflow-designer/transaction-activity-designers.md)  
   
@@ -89,5 +93,5 @@ caps.handback.revision: 7
   
  [エラー処理](../workflow-designer/error-handling-activity-designers.md)  
   
-## 外部リソース  
+## <a name="external-resources"></a>外部リソース  
  [アクティビティ デザイナーの使用](../workflow-designer/using-the-activity-designers.md)

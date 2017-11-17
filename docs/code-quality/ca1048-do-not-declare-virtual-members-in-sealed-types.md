@@ -1,51 +1,52 @@
 ---
-title: "CA1048: Sealed 型の仮想メンバーを宣言しません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DoNotDeclareVirtualMembersInSealedTypes"
-  - "CA1048"
-helpviewer_keywords: 
-  - "CA1048"
-  - "DoNotDeclareVirtualMembersInSealedTypes"
+title: "Ca 1048: sealed 型の仮想メンバーを宣言しません |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DoNotDeclareVirtualMembersInSealedTypes
+- CA1048
+helpviewer_keywords:
+- DoNotDeclareVirtualMembersInSealedTypes
+- CA1048
 ms.assetid: 5dcf4a30-6f98-48a8-b8cc-7b89ea757262
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: f1f4456a65eb78ce64ad4c5bbfb4695ba0da3e64
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1048: Sealed 型の仮想メンバーを宣言しません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1048-do-not-declare-virtual-members-in-sealed-types"></a>CA1048: Sealed 型の仮想メンバーを宣言しません
 |||  
 |-|-|  
 |TypeName|DoNotDeclareVirtualMembersInSealedTypes|  
 |CheckId|CA1048|  
-|分類|Microsoft.Design|  
+|カテゴリ|Microsoft.Design|  
 |互換性に影響する変更点|あり|  
   
-## 原因  
- シールされているパブリック型に、`virtual` \(Visual Basic では `Overridable`\) であり final ではないメソッドが宣言されています。  デリゲート型の場合、このパターンに従いますが、この規則による違反はレポートされません。  
+## <a name="cause"></a>原因  
+ パブリック型は封印されており、両方であるメソッドを宣言`virtual`(`Overridable` Visual Basic で) と最終されません。 このルールでは、デリゲートの型は、このパターンに従う必要がありますの違反は報告されません。  
   
-## 規則の説明  
- 型でメソッドを仮想と宣言するのは、継承する型が仮想メソッドの実装をオーバーライドできるようにするためです。  定義によってシールされた型から継承することはできません。シールされた型の仮想メソッドの意味がなくなります。  
+## <a name="rule-description"></a>規則の説明  
+ 型でメソッドを仮想と宣言するのは、継承する型が仮想メソッドの実装をオーバーライドできるようにするためです。 定義上には、シールされた型で仮想メソッドを意味のないようにする、シールされた型から継承することはできません。  
   
- Visual Basic .NET と C\# の各コンパイラでは、この規則に違反する型は許容されていません。  
+ Visual Basic .NET と c# コンパイラでは、この規則に違反する型は許可されません。  
   
-## 違反の修正方法  
- この規則違反を修正するには、メソッドを非仮想にするか、型を継承できるようにします。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、非仮想メソッドを作成または、型を継承できるようにします。  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  型を現在のままにすると保守の問題が発生し、何も利点はありません。  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。 現在の状態で、型のままメンテナンスの問題が発生することができ、利点は提供されません。  
   
-## 使用例  
- この規則に違反する型を次の例に示します。  
+## <a name="example"></a>例  
+ 次の例は、この規則に違反する型を示しています。  
   
- [!CODE [FxCop.Design.SealedVirtual#1](../CodeSnippet/VS_Snippets_CodeAnalysis/FxCop.Design.SealedVirtual#1)]
+ [!code-cpp[FxCop.Design.SealedVirtual#1](../code-quality/codesnippet/CPP/ca1048-do-not-declare-virtual-members-in-sealed-types_1.cpp)]

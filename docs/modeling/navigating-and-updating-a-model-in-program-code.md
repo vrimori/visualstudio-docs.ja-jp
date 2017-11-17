@@ -6,33 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Domain-Specific Language, programming domain models
+helpviewer_keywords: Domain-Specific Language, programming domain models
 ms.assetid: 1427ae91-be8a-4ce7-85df-00038faa2cbb
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5c7571cbb4950f91c1b69ae88241c799577f79da
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 40f3a1d56019a8bcab4a11ffaf3aa7d37b02d262
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="navigating-and-updating-a-model-in-program-code"></a>プログラム コードにおけるモデル内の移動およびモデルの更新
 作成およびモデル要素を削除、プロパティの設定、および作成、要素間のリンクを削除するコードを記述することができます。 トランザクション内ですべての変更を加える必要があります。 要素は、ダイアグラムで表示され場合の図は、「修正されます」自動的に、トランザクションの終了時。  
@@ -537,4 +521,3 @@ partial class MyDiagram
  [方法: トランザクションを使用してモデルを更新します。](../modeling/how-to-use-transactions-to-update-the-model.md)   
  [Visual Studio Modelbus を使用してモデルを統合します。](../modeling/integrating-models-by-using-visual-studio-modelbus.md)   
  [変更内容への対応および変更内容の反映](../modeling/responding-to-and-propagating-changes.md)
-

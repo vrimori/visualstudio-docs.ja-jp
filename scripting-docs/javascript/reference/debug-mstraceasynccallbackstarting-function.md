@@ -1,39 +1,42 @@
 ---
-title: "Debug.msTraceAsyncCallbackStarting 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "Debug.msTraceAsyncCallbackStarting 関数 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: 0e2ca7c4-103c-44f2-b76c-102fb1e42543
-caps.latest.revision: 6
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 49203cdf16e7cbd74493c882d9cf17b7629da79a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# Debug.msTraceAsyncCallbackStarting 関数
+# <a name="debugmstraceasynccallbackstarting-function"></a>Debug.msTraceAsyncCallbackStarting 関数
 以前に指定された非同期操作とコールバックのスタックを関連付けます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 Debug.msTraceAsyncCallbackStarting(asyncOperationId)  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `asyncOperationId`  
- 必ず指定します。  非同期操作に関連付けられた ID。  
+ 必須です。 非同期操作に関連付けられた ID。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  `Debug.msTraceAsyncOperationCompleted` を呼び出した後に、非同期操作のコールバック関数で、この関数を呼び出します。  
   
 > [!NOTE]
@@ -41,10 +44,10 @@ Debug.msTraceAsyncCallbackStarting(asyncOperationId)
   
  `asyncOperationId` は、`Debug.msTraceAsyncOperationStarting` から以前に返された操作の名前に対応する必要があります。  
   
-## 使用例  
+## <a name="example"></a>例  
  次のコードは [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリケーションの非同期呼び出しのトレースの例を示します。  
   
-```javascript  
+```JavaScript  
 function asyncWrapperFunction() {  
     var opID = Debug.msTraceAsyncOperationStarting('async trace');  
     doSomethingAsync().then(function (result) {  
@@ -66,5 +69,5 @@ function doSomethingAsync() {
 asyncWrapperFunction();  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv11](../../javascript/reference/includes/jsv11-md.md)]

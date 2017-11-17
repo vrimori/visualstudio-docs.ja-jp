@@ -1,33 +1,33 @@
 ---
-title: "&lt;Package&gt; 要素 (ブートストラップ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "<package> 要素 [ブートストラップ]"
+title: "&lt;パッケージ&gt;要素 (ブートス トラップ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords: <package> element [bootstrapper]
 ms.assetid: ecd06658-ad02-4440-bccd-88437b7fb816
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 469024d48b1c145210aa518f10647d04315a0471
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# &lt;Package&gt; 要素 (ブートストラップ)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-`Package` 要素は、パッケージ ファイル内のトップ レベルの XML 要素です。  
+# <a name="ltpackagegt-element-bootstrapper"></a>&lt;パッケージ&gt;要素 (ブートス トラップ)
+`Package`要素は、パッケージ ファイル内で最上位の XML 要素です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 <Package  
@@ -142,17 +142,17 @@ caps.handback.revision: 9
 </Package>  
 ```  
   
-## 要素と属性  
- `Package` 要素は必須です。  次の属性を持ちます。  
+## <a name="elements-and-attributes"></a>要素と属性  
+ `Package`要素が必要です。 次の属性があります。  
   
-|属性|Description|  
-|--------|-----------------|  
-|`Culture`|必ず指定します。  このパッケージのカルチャを定義します。カルチャによって使用する言語が決まります。  この属性は、インストールで使用する、カルチャ固有の製品名文字列やエラー メッセージ文字列がリストアップされている `Strings` 要素のキーになります。|  
-|`Name`|必ず指定します。  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] などのツールで開発者に表示されるパッケージの名前です。  この属性は、`Strings` 要素のキーになります。この要素は、`Package` の `Name` プロパティおよび `Culture` プロパティに一致する、`Name` プロパティおよび `Culture` プロパティが設定された `String` 要素を持ちます。|  
-|`LicenseAgreement`|省略可能です。  配布パッケージ内のファイルのうち、エンド ユーザー使用許諾契約書 \(EULA: End\-User License Agreement\) が含まれているファイルの名前を指定します。  このファイルとして、プレーンテキスト \(.txt\) またはリッチ テキスト形式   \(.rtf\) が可能です。|  
+|属性|説明|  
+|---------------|-----------------|  
+|`Culture`|必須です。 このパッケージは、使用する言語を特定のカルチャを定義します。 この属性はキーに、`Strings`要素は、インストール中に製品名とエラー メッセージ用のカルチャに固有の文字列を一覧表示します。|  
+|`Name`|必須です。 などのツールで開発者に表示されるパッケージの名前[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 この属性はキーに、`Strings`要素が含まれている、`String`を持つ要素、`Name`と`Culture`プロパティが一致するように設定、`Name`と`Culture`のプロパティ`Package`です。|  
+|`LicenseAgreement`|省略可能です。 ライセンス契約 (EULA) を含む配布パッケージで、ファイルの名前を指定します。  このファイルは、プレーン テキスト (.txt) またはリッチ テキスト形式のいずれかにできます。 式 (.rtf)|  
   
-## 使用例  
- 次のコード例は、[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] を再配布するための完全なパッケージ ファイルを示しています。  
+## <a name="example"></a>例  
+ 次のコード例は、再配布するための完全なパッケージ ファイルを示しています、[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]です。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -189,5 +189,5 @@ caps.handback.revision: 9
 </Package>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

@@ -1,63 +1,65 @@
 ---
-title: "setYear メソッド (Date) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "setYear"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "setYear メソッド"
-  - "Year メソッド"
+title: "setYear メソッド (Date) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: setYear
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- Year method
+- setYear method
 ms.assetid: 36431050-e0ec-45ee-830d-0d7c20e207ea
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 5a9318de4a9420e0518dcd7f00a51c7161a8f92c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# setYear メソッド (Date) (JavaScript)
-`Date` オブジェクトの日付の年の部分を設定します。  
+# <a name="setyear-method-date-javascript"></a>setYear メソッド (Date) (JavaScript)
+の年の値の設定、`Date`オブジェクト。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 dateObj.setYear(numYear)   
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dateObj`  
- 必須です。  任意の `Date` オブジェクトを指定します。  
+ 必須です。 任意の `Date` オブジェクトを指定します。  
   
  `numYear`  
- 必須です。  1900 ～ 1999 年の場合は、年から 1900 を引いた数値を指定します。  この範囲に含まれない年の場合は、4 桁の数値を指定します。  
+ 必須です。 1900 ~ 1999 年、これは数値から 1900 を引いた年と同じです。 日付の範囲内に、これは、4 桁の数値です。  
   
-## 解説  
- このメソッドは廃止されました。現在、以前のバージョンとの互換性のためだけに残されています。  代わりに、`setFullYear` メソッドを使用してください。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、廃止されておりを保持する下位互換性を維持します。 代わりに、`setFullYear` メソッドを使用してください。  
   
- `Date` オブジェクトに 1997 年を設定するには、**setYear\(97\)** メソッドを実行します。  また、2010 年を設定するには、**setYear\(2010\)** メソッドを実行します。  0 ～ 99 の範囲で年を設定するには、`setFullYear` メソッドを使用します。  
+ 年を設定する、 `Date` 1997 年にオブジェクト呼び出し**setYear(97)**です。 2010 年を設定するには、呼び出す**setYear(2010)**です。 最後に、0 ~ 99 の範囲内で 1 年、年を設定する次のように使用します。、`setFullYear`メソッドです。  
   
 > [!NOTE]
->  [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] バージョン 1.0 では、`setYear` メソッドは、年を表す値にかかわらず `numYear` に指定した値に 1900 を加算した結果を使用します。  たとえば、1899 年に設定するときは `numYear` に \-1 を指定し、2000 年に設定するときは `numYear` に 100 を指定します。  
+>  [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] Version 1.0、`setYear`によって提供される年の値を 1900 年の加算の結果となる値を使用して`numYear`年の値に関係なく、します。 たとえば、1899 年を設定する`numYear`-1 は、2000 年に設定して`numYear`100 です。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
- **対象**: [Date オブジェクト](../../javascript/reference/date-object-javascript.md)  
+ **適用対象**: [Date Object](../../javascript/reference/date-object-javascript.md)  
   
-## 参照  
- [getFullYear メソッド \(Date\)](../../javascript/reference/getfullyear-method-date-javascript.md)   
- [getUTCFullYear メソッド \(Date\)](../../javascript/reference/getutcfullyear-method-date-javascript.md)   
- [GetYear メソッド \(Date\)](../../javascript/reference/getyear-method-date-javascript.md)   
- [setFullYear メソッド \(Date\)](../../javascript/reference/setfullyear-method-date-javascript.md)   
- [setUTCFullYear メソッド \(Date\)](../../javascript/reference/setutcfullyear-method-date-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [getFullYear メソッド (Date)](../../javascript/reference/getfullyear-method-date-javascript.md)   
+ [getUTCFullYear メソッド (Date)](../../javascript/reference/getutcfullyear-method-date-javascript.md)   
+ [getYear メソッド (Date)](../../javascript/reference/getyear-method-date-javascript.md)   
+ [setFullYear メソッド (Date)](../../javascript/reference/setfullyear-method-date-javascript.md)   
+ [setUTCFullYear メソッド (Date)](../../javascript/reference/setutcfullyear-method-date-javascript.md)

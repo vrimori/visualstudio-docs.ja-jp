@@ -1,31 +1,33 @@
 ---
-title: "T4 テキスト テンプレートを使用した実行時テキスト生成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "前処理されたテキスト テンプレート プロジェクト項目"
-  - "テキスト テンプレート, 生成 (ファイルを実行時に)"
-  - "テキスト テンプレート, TransformText() メソッド"
-  - "TextTemplatingFilePreprocessor カスタム ツール"
+title: "T4 テキスト テンプレートを使用して実行時テキスト生成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Preprocessed Text Template project item
+- TextTemplatingFilePreprocessor custom tool
+- text templates, TransformText() method
+- text templates, generating files at run time
 ms.assetid: 79b4b3c6-a9a7-4446-b6fd-e2388fc6b05f
-caps.latest.revision: 22
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 9dfcba23b9c8df3bbd62a0ef4dd0c4d98f578514
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# T4 テキスト テンプレートを使用した実行時テキスト生成
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-使用して、アプリケーション実行時の文字列を生成できます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキスト テンプレートの実行時。  アプリケーションを実行するコンピューターに [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がインストールされている必要はありません。  コンパイル時に、テンプレートを実行時に実行されるコードが生成されますので実行時のテンプレート「テキスト テンプレートを前処理」呼ばれます。  
+# <a name="run-time-text-generation-with-t4-text-templates"></a>T4 テキスト テンプレートを使用した実行時テキスト生成
+実行時に、アプリケーションで使用して、テキスト文字列を生成することができます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実行時テキスト テンプレートです。 アプリケーションが実行されるコンピューターを持っていなくて[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 実行時テンプレートとも呼ばれる「前処理されたテキスト テンプレート」テンプレートは、コンパイル時に実行時に実行されるコードを生成するためです。  
   
- 各テンプレートは、生成される文字列に表示されるテキストとプログラム コードのフラグメントを組み合わせたものです。  プログラムのフラグメントでは、文字列の可変部分の値を提供すると共に、条件付きの部分と繰り返し部分を制御します。  
+ 各テンプレートは、テキストの組み合わせ、生成された文字列は、およびプログラム コードのフラグメントに表示されます。 プログラムのフラグメントは、文字列の変数部分の値を指定しも条件付きおよび繰り返される部分を制御します。  
   
- たとえば、HTML レポートを作成するアプリケーションでは、次のテンプレートを使用できます。  
+ たとえば、次のテンプレートは、HTML レポートを作成するアプリケーションで使用可能性があります。  
   
 ```  
 <#@ template language="C#" #>  
@@ -42,26 +44,26 @@ This report is Company Confidential.
 </body></html>  
 ```  
   
- このテンプレートは、可変部分がプログラム コードに置き換えられた HTML ページであることに注意してください。  このようなページをデザインするには、まず、HTML ページの静的プロトタイプを作成します。  その後、テーブルや他の可変部分を、状況に応じて変化するコンテンツを生成するプログラム コードに置き換えます。  
+ テンプレートは、プログラム コードに置き換えられました変数部分を HTML ページであることを確認します。 静的な HTML ページのプロトタイプを記述して、このようなページのデザインを開始する可能性があります。 何度で 1 つから、次に変化するコンテンツを生成するプログラム コードで、テーブルとその他の変数部分を置換でした。  
   
- アプリケーションでテンプレートを使用すると、一連の Write ステートメントなどに比べ、出力の最終的な形式を確認しやすくなります。  出力の形式の変更が容易になり、信頼性も高まります。  
+ テンプレートを使用して、アプリケーションでは出力の最終的な形式をたとえば、長い一連の書き込みステートメントよりもわかりやすくします。 簡単かつ確実には、出力の形式に変更を加えるです。  
   
-## 任意のアプリケーションでの実行時テキスト テンプレートの作成  
+## <a name="creating-a-run-time-text-template-in-any-application"></a>任意のアプリケーションで実行時テキスト テンプレートの作成  
   
-#### 実行時テキスト テンプレートを作成するには  
+#### <a name="to-create-a-run-time-text-template"></a>実行時テキスト テンプレートを作成するには  
   
-1.  ソリューション エクスプ ローラーで、プロジェクトのショートカット メニューを選択**追加**、 **新しい項目**。  
+1.  ソリューション エクスプ ローラーで、プロジェクトのショートカット メニューを選択**追加**、**新しい項目の**します。  
   
-2.  **\[新しい項目の追加** ダイアログ ボックスで、 **ランタイム テキスト テンプレート**。  \([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] の場合は、**\[共通項目\] \- \[全般\]** にあります。\)  
+2.  **新しい項目の追加**ダイアログ ボックスで、**実行時テキスト テンプレート**です。 (で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]調べます**共通 Items\General**)。  
   
 3.  テンプレート ファイルの名前を入力します。  
   
     > [!NOTE]
-    >  このテンプレート ファイル名は、生成されたコードでクラス名として使用されます。  そのため、スペースと区切り記号は使用しないでください。  
+    >  テンプレート ファイルの名前は、生成されたコード内のクラス名として使用されます。 そのため、その必要はありませんスペースまたは句読点。  
   
-4.  選択**追加**。  
+4.  **[追加]** をクリックします。  
   
-     **.tt** という拡張子を持つ新しいファイルが作成されます。  その "**カスタム ツール**" プロパティは **TextTemplatingFilePreprocessor** に設定されます。  これは、次の行が含まれます。  
+     新しいファイルが作成された拡張子を持つ**.tt**です。 その**カスタム ツール**プロパティに設定されている**TextTemplatingFilePreprocessor**です。 次の行が含まれています。  
   
     ```  
     <#@ template language="C#" #>  
@@ -71,37 +73,37 @@ This report is Company Confidential.
     <#@ import namespace="System.Collections.Generic" #>  
     ```  
   
-## 既存のファイルから実行時テンプレートへの変換  
- テンプレートを作成する場合は、既存の出力例を変換することをお勧めします。  たとえば、HTML ファイルを生成するアプリケーションの場合は、まずプレーン HTML ファイルを作成します。  このファイルが正しく機能することと、その表示形式が適切であることを確認してください。  その後で、このファイルを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトに追加し、テンプレートに変換します。  
+## <a name="converting-an-existing-file-to-a-run-time-template"></a>既存のファイルを実行時テンプレートに変換します。  
+ テンプレートを作成することをお勧めは、既存の出力の例を変換します。 たとえば、アプリケーションは HTML ファイルを生成する場合は、プレーン HTML ファイルを作成することで開始できます。 正常に動作して、外観が正しいことを確認してください。 含める、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクトおよびテンプレートに変換します。  
   
-#### 既存のテキスト ファイルを実行時テンプレートに変換するには  
+#### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>実行時テンプレートに既存のテキスト ファイルを変換するには  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトにファイルを追加します。  ソリューション エクスプ ローラーで、プロジェクトのショートカット メニューを選択**追加**、 **既存アイテム**。  
+1.  ファイルをインクルードして[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト。 ソリューション エクスプ ローラーで、プロジェクトのショートカット メニューを選択**追加**、**既存項目の**します。  
   
-2.  ファイルの **\[カスタム ツール\]** プロパティを **TextTemplatingFilePreprocessor** に設定します。  ソリューション エクスプ ローラーで、ファイルのショートカット メニューを選択する**のプロパティ**。  
+2.  ファイルの設定**カスタム ツール**プロパティを**TextTemplatingFilePreprocessor**です。 ソリューション エクスプ ローラーで、ファイルのショートカット メニューを選択**プロパティ**です。  
   
     > [!NOTE]
-    >  プロパティが既に設定されている場合は、**TextTemplatingFileGenerator** ではなく **TextTemplatingFilePreprocessor** になっていることを確認してください。  この状況は、拡張子が **.tt** のファイルを追加した場合に発生することがあります。  
+    >  プロパティは既に設定されている場合であることを確認してください**TextTemplatingFilePreprocessor**および not **TextTemplatingFileGenerator**です。 これは、既に拡張子を持つファイルを含める場合に発生することができます**.tt**です。  
   
-3.  ファイル名拡張子を **.tt** に変更します。  この手順は省略できますが、このようにすると、ファイルが不適切なエディターで開かれるのを防ぐことができます。  
+3.  ファイル名拡張子を変更する**.tt**です。 この手順はオプションですが、これを回避できます不適切なエディターでファイルを開きます。  
   
-4.  ファイル名のメインの部分からスペースと区切り記号を削除します。  たとえば、"My Web Page.tt" ではなく "MyWebPage.tt" が正しい形式です。  このファイル名は、生成されたコードでクラス名として使用されます。  
+4.  ファイル名の本体からスペースや句読点を削除します。 たとえば"My Web Page.tt"がない、正しいであっても"MyWebPage.tt"が正しくです。 ファイル名は、生成されたコード内のクラス名として使用されます。  
   
-5.  ファイルの先頭に次の行を挿入します。  Visual Basic プロジェクトで作業している場合は、"C\#" を "VB" に置き換えます。  
+5.  ファイルの先頭に次の行を挿入します。 Visual Basic プロジェクトで作業している場合交換して"c#""VB"を使用してください。  
   
      `<#@ template language="C#" #>`  
   
-## 実行時テンプレートのコンテンツ  
+## <a name="the-content-of-the-run-time-template"></a>実行時テンプレートの内容  
   
-### template ディレクティブ  
- 次のように、テンプレートの先頭行はファイル作成時の状態のままにしておきます。  
+### <a name="template-directive"></a>Template ディレクティブ  
+ ファイルを作成した時とは、テンプレートの最初の行をしてください。  
   
  `<#@ template language="C#" #>`  
   
- 言語のパラメーターは、プロジェクトの言語によって変わります。  
+ Language パラメーターは、プロジェクトの言語によって異なります。  
   
-### プレーン コンテンツ  
- **.tt** ファイルを編集し、アプリケーションで生成するテキストを追加します。  次に例を示します。  
+### <a name="plain-content"></a>プレーン コンテンツ  
+ 編集、 **.tt**アプリケーションを生成するテキストを格納するファイル。 例:  
   
 ```  
 <html><body>  
@@ -111,10 +113,10 @@ This report is Company Confidential.
 </body></html>  
 ```  
   
-### 埋め込みプログラム コード  
- `<#` と `#>` の間には、プログラム コードを挿入できます。  次に例を示します。  
+### <a name="embedded-program-code"></a>埋め込まれたプログラム コード  
+ 間でのプログラム コードを挿入する`<#`と`#>`です。 例:  
   
-```c#  
+```csharp  
 <table>  
     <# for (int i = 1; i <= 10; i++)  
        { #>  
@@ -124,7 +126,7 @@ This report is Company Confidential.
  </table>  
 ```  
   
-```vb#  
+```vb  
 <table>  
 <#  
     For i As Integer = 1 To 10  
@@ -138,54 +140,54 @@ This report is Company Confidential.
   
 ```  
   
- ステートメントは `<# ... #>` の間に挿入され、式は `<#= ... #>` の間に挿入されていることに注意してください。  詳細については、「[T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)」を参照してください。  
+ 間、ステートメントが挿入されることに注意してください。`<# ... #>`は式に挿入し`<#= ... #>`です。 詳細については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)です。  
   
-## テンプレートの使用  
+## <a name="using-the-template"></a>テンプレートの使用  
   
-### テンプレートからビルドされるコード  
- **.tt** ファイルを保存するたびに、従属する **.cs** ファイルまたは **.vb** ファイルが生成されます。  このファイルをソリューション エクスプローラーで表示するには、**.tt** ファイルのノードを展開します。  Visual Basic プロジェクトの場合、このノードを展開するには、先にソリューション エクスプローラーのツール バーの **\[すべてのファイルを表示\]** をクリックする必要があります。  
+### <a name="the-code-built-from-the-template"></a>テンプレートから構築されたコード  
+ 保存するたびに、 **.tt**ファイル、子会社**.cs**または**.vb**ファイルが生成されます。 ソリューション エクスプ ローラーでこのファイルを表示する展開、 **.tt**ファイル ノード。 Visual Basic プロジェクトでことができますをクリックした後にノードを展開する**すべてのファイル**ソリューション エクスプ ローラーのツールバー。  
   
- この従属ファイルには、`TransformText()` というメソッドを含む部分クラスが含まれます。  このメソッドは、アプリケーションから呼び出すことができます。  
+ この従属ファイルが呼び出されるメソッドを格納する部分クラスが含まれている通知`TransformText()`です。 このメソッドは、アプリケーションから呼び出すことができます。  
   
-### 実行時のテキストの生成  
- アプリケーション コードでは、次のような呼び出しを使用してテンプレートのコンテンツを生成できます。  
+### <a name="generating-text-at-run-time"></a>実行時にテキストを生成します。  
+ アプリケーション コードでは、次のような呼び出しを使用して、テンプレートのコンテンツを生成できます。  
   
-```c#  
+```csharp  
 MyWebPage page = new MyWebPage();  
 String pageContent = page.TransformText();  
 System.IO.File.WriteAllText("outputPage.html", pageContent);  
   
 ```  
   
-```vb#  
+```vb  
 Dim page = New My.Templates.MyWebPage  
 Dim pageContent = page.TransformText()  
 System.IO.File.WriteAllText("outputPage.html", pageContent)  
   
 ```  
   
- 生成されたクラスを特定の名前空間に配置するには、テキスト テンプレート ファイルの **"カスタム ツールの名前空間"** プロパティを設定します。  
+ 特定の名前空間で生成されたクラスを配置するには設定、**カスタム ツール Namespace**テキスト テンプレート ファイルのプロパティです。  
   
-### ランタイム テキスト テンプレートのデバッグ  
- デバッグし、通常のコードと同じようにランタイム テキスト テンプレートをテストします。  
+### <a name="debugging-runtime-text-templates"></a>デバッグの実行時テキスト テンプレート  
+ デバッグし、通常のコードと同じ方法で実行時テキスト テンプレートをテストします。  
   
- テキスト テンプレートでは、ブレークポイントを設定できます。  Visual Studio からのデバッグ モードでアプリケーションを起動する場合は、コードをステップ実行し、通常の方法で \[ウォッチ式の評価することができます。  
+ テキスト テンプレートでは、ブレークポイントを設定できます。 Visual Studio からのデバッグ モードでアプリケーションを起動する場合、コードをステップ実行し、通常の方法でウォッチ式を評価できます。  
   
-### コンストラクターへのパラメーターの引き渡し  
- 通常、テンプレートでは、アプリケーションの他の部分からデータをインポートする必要があります。  この処理を容易にするため、テンプレートによってビルドされるコードは部分クラスになります。  同じクラスの別の部分をプロジェクトの別のファイルに作成できます。  そのファイルには、テンプレートに埋め込まれたコードとアプリケーションの残りの部分の両方からアクセスできるパラメーター、プロパティ、および関数を持つコンストラクターを含めることができます。  
+### <a name="passing-parameters-in-the-constructor"></a>コンス トラクターにパラメーターの引き渡し  
+ 通常、テンプレートでは、アプリケーションの他の部分から一部のデータをインポートする必要があります。 簡単にするには、テンプレートに組み込まれているコードは、部分クラスです。 プロジェクトで、別のファイルで、同じクラスの別の部分を作成できます。 そのファイルには、パラメーター、プロパティ、およびテンプレートに埋め込まれているコードと、アプリケーションの残りの部分の両方にアクセスできる関数を持つコンス トラクターを含めることができます。  
   
- たとえば、**MyWebPageCode.cs** というファイルを別に作成できます。  
+ たとえば、別のファイルを作成できます**MyWebPageCode.cs**:  
   
-```c#  
+```csharp  
 partial class MyWebPage  
 {  
     private MyData m_data;  
     public MyWebPage(MyData data) { this.m_data = data; }}  
 ```  
   
- テンプレート ファイルの **MyWebPage.tt** では、次のように記述できます。  
+ テンプレートは、ファイルで**MyWebPage.tt**、記述できます。  
   
-```c#  
+```csharp  
 <h2>Sales figures</h2>  
 <table>  
 <# foreach (MyDataItem item in m_data.Items)   
@@ -198,19 +200,19 @@ partial class MyWebPage
 </table>  
 ```  
   
- このテンプレートをアプリケーションで使用するには、次のように記述します。  
+ アプリケーションでこのテンプレートを使用します。  
   
-```c#  
+```csharp  
 MyData data = ...;  
 MyWebPage page = new MyWebPage(data);  
 String pageContent = page.TransformText();  
 System.IO.File.WriteAllText("outputPage.html", pageContent);  
 ```  
   
-#### Visual Basic のコンストラクター パラメーター  
- [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] では、**MyWebPageCode.vb** という別のファイルに次のコードが含まれています。  
+#### <a name="constructor-parameters-in-visual-basic"></a>Visual Basic でコンス トラクターのパラメーター  
+ [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]、別のファイル**MyWebPageCode.vb**が含まれています。  
   
-```vb#  
+```vb  
 Namespace My.Templates  
   Partial Public Class MyWebPage  
     Private m_data As MyData  
@@ -221,9 +223,9 @@ Namespace My.Templates
 End Namespace  
 ```  
   
- テンプレート ファイルに次のコードを含めることができます。  
+ テンプレート ファイルを含む可能性があります。  
   
-```vb#  
+```vb  
 <#@ template language="VB" #>  
 <html><body>  
 <h1>Sales for January</h2>  
@@ -242,9 +244,9 @@ This report is Company Confidential.
   
 ```  
   
- パラメーターをコンストラクターに渡すことによってテンプレートが呼び出されます。  
+ コンス トラクターにパラメーターを渡すことによって呼び出されるテンプレート。  
   
-```vb#  
+```vb  
 Dim data = New My.Templates.MyData  
     ' Add data values here ....  
 Dim page = New My.Templates.MyWebPage(data)  
@@ -253,55 +255,55 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
   
 ```  
   
-#### テンプレートのプロパティへのデータの引き渡し  
- データをテンプレートに渡す方法として、部分クラス定義でパブリック プロパティをテンプレート クラスに追加する方法もあります。  アプリケーションで、`TransformText()` を呼び出す前にこれらのプロパティを設定できます。  
+#### <a name="passing-data-in-template-properties"></a>テンプレートのプロパティでデータの受け渡し  
+ テンプレートにデータを渡す場合の代替方法では、部分クラス定義内のテンプレート クラスにパブリック プロパティを追加します。 呼び出す前に、アプリケーションが、プロパティを設定できます`TransformText()`です。  
   
- また、部分定義でテンプレート クラスにフィールドを追加することもできます。  この場合、テンプレートの連続的な実行の間でデータを渡すことができます。  
+ 部分定義で、テンプレート クラスにフィールドを追加することもできます。 これは、結果、テンプレートの連続的に実行の間でデータを渡すことができます。  
   
-### コードでの部分クラスの使用  
- 多くの開発者は、テンプレートにコードの大きな本体を記述するのは望ましくないと考えています。  代わりに、テンプレート ファイルと同じ名前の部分クラスにメソッドを定義します。  テンプレートからこれらのメソッドを呼び出します。  このようにすると、テンプレートによって対象の出力文字列の表示状態がより明確に示されるようになります。  結果の表示状態を、表示されるデータの作成ロジックから切り離して検討できます。  
+### <a name="use-partial-classes-for-code"></a>コードの部分クラスを使用します。  
+ 多くの開発者は、テンプレートで、大量のコードを記述しないでを優先します。 代わりに、テンプレート ファイルと同じ名前を持つ部分クラスにメソッドを定義します。 テンプレートからこれらのメソッドを呼び出します。 この方法でテンプレートを示していますがより明確にどのようなターゲット出力文字列のようになります。 結果の外観に関するディスカッションは、表示されるデータの作成のロジックから分離できます。  
   
-### アセンブリと参照  
- テンプレート コードで .NET やその他のアセンブリ \(**System.Xml.dll** など\) を参照する場合は、通常の方法でプロジェクトの **\[参照設定\]** に追加する必要があります。  
+### <a name="assemblies-and-references"></a>アセンブリと参照  
+ 場合は、テンプレート コードなど、.NET またはその他のアセンブリの参照を**System.Xml.dll**、プロジェクトに追加する必要があります**参照**通常の方法でします。  
   
- `using` ステートメントと同じ方法で名前空間をインポートする場合は、`import` ディレクティブを使用できます。  
+ 同じ方法で名前空間をインポートするかどうか、`using`ステートメントでは、これを行うと、`import`ディレクティブ。  
   
 ```  
 <#@ import namespace="System.Xml" #>  
 ```  
   
- これらのディレクティブは、ファイルの先頭 \(`<#@template` ディレクティブの直後\) に記述する必要があります。  
+ これらのディレクティブは、後すぐに、ファイルの先頭に配置する必要があります、`<#@template`ディレクティブです。  
   
-### 共有コンテンツ  
- 複数のテンプレートで共有するテキストがある場合は、そのテキストを独立したファイルに記述し、テキストを使用する各ファイルでそのファイルをインクルードできます。  
+### <a name="shared-content"></a>共有コンテンツ  
+ 複数のテンプレート間で共有されるテキストがあれば、別のファイルに配置およびを表示する各ファイルに含めるようにできます。  
   
 ```  
 <#@include file="CommonHeader.txt" #>  
 ```  
   
- インクルードするコンテンツには、プログラム コードとプレーンテキストの組み合わせを含めることができます。また、他の include ディレクティブやその他のディレクティブを含めることもできます。  
+ 含まれるコンテンツは、プログラム コードおよびテキストの形式の任意の組み合わせを含めることができ、その他を含めることができます、include ディレクティブや他のディレクティブ。  
   
- include ディレクティブは、テンプレート ファイルまたはインクルード ファイルのテキスト内の任意の場所で使用できます。  
+ Include ディレクティブは、テンプレート ファイルまたはインクルード ファイルのテキスト内の任意の場所で使用できます。  
   
-### 実行時テキスト テンプレート間での継承  
- 基本クラス テンプレートを作成することで、実行時テンプレート間でコンテンツを共有できます。テンプレートは、抽象基本クラス テンプレートでもかまいません。  使用、 `inherits`のパラメーター、 `<@#template#>`別のランタイムのテンプレート クラスを参照するディレクティブ。  
+### <a name="inheritance-between-run-time-text-templates"></a>実行時テキスト テンプレート間の継承  
+ 抽象にすることで、基底クラス テンプレートを記述して実行時テンプレート間でコンテンツを共有することができます。 使用して、`inherits`のパラメーター、`<@#template#>`別の実行時テンプレート クラスを参照するディレクティブ。  
   
-#### 継承パターン: 基本メソッド内のフラグメント  
- 次の例で使用しているパターンでは、以下の点に注目してください。  
+#### <a name="inheritance-pattern-fragments-in-base-methods"></a>継承のパターン: 基本メソッド内の断片化  
+ パターンでは、次の例で使用される、次の点に注意してください。  
   
--   `SharedFragments` 基本クラスでは、クラス機能ブロック \(`<#+ ... #>`\) 内でメソッドを定義しています。  
+-   基本クラス`SharedFragments`クラス機能ブロック内でメソッドを定義`<#+ ... #>`です。  
   
--   基本クラスには、フリーテキストは含まれていません。  代わりに、クラス機能メソッド内にすべてのテキスト ブロックが含まれています。  
+-   基本クラスには、フリー テキストが含まれていません。 代わりに、すべてのテキスト ブロックは、クラス機能メソッドの中に発生します。  
   
--   `SharedFragments` で定義されたメソッドを派生クラスで呼び出しています。  
+-   派生クラスで定義されているメソッドを呼び出します`SharedFragments`です。  
   
--   アプリケーションでは、派生クラスの `TextTransform()` メソッドを呼び出していますが、`SharedFragments` 基本クラスは変換していません。  
+-   アプリケーションの呼び出し、 `TextTransform()` 、派生クラスのメソッドの基本クラスを変換しませんが、`SharedFragments`です。  
   
--   ランタイム テキスト テンプレートの基本と派生クラスの両方は：、 **カスタム ツール** でプロパティを設定  **TextTemplatingFilePreprocessor**。  
+-   両方の基本クラスと派生クラスは、実行時テキスト テンプレート: つまり、**カスタム ツール**プロパティに設定されている**TextTemplatingFilePreprocessor**です。  
   
  **SharedFragments.tt:**  
   
-```c#  
+```csharp  
 <#@ template language="C#" #>  
 <#+  
 protected void SharedText(int n)  
@@ -317,7 +319,7 @@ protected void SharedText(int n)
   
  **MyTextTemplate1.tt:**  
   
-```c#  
+```csharp  
 <#@ template language="C#" inherits="SharedFragments" #>  
 begin 1  
    <# SharedText(2); #>  
@@ -327,14 +329,14 @@ end 1
   
  **MyProgram.cs:**  
   
-```c#  
+```csharp  
 ...   
 MyTextTemplate1 t1  = new MyTextTemplate1();  
 string result = t1.TransformText();  
 Console.WriteLine(result);  
 ```  
   
- **結果の出力:**  
+ **結果として得られる出力:**  
   
 ```  
 begin 1  
@@ -342,12 +344,12 @@ begin 1
 end 1  
 ```  
   
-#### 継承パターン: 基本本体内のテキスト  
- テンプレートの継承を使用するもう 1 つの方法では、テキストの大半を基本テンプレートに定義します。  派生テンプレートでは、基本コンテンツに組み込むデータとテキスト フラグメントを提供します。  
+#### <a name="inheritance-pattern-text-in-base-body"></a>基本の本文にテキストを継承のパターン:  
+ テンプレートの継承を使用する他の方法でテキストの大部分は、基本テンプレートで定義されます。 派生テンプレートがデータを提供し、テキスト フラグメントを基本コンテンツに適合します。  
   
  **AbstractBaseTemplate1.tt:**  
   
-```c#  
+```csharp  
 <#@ template language="C#" #>  
   
 Here is the description for this derived template:  
@@ -371,7 +373,7 @@ End of common template.
   
  **DerivedTemplate1.tt:**  
   
-```c#  
+```csharp  
 <#@ template language="C#" inherits="AbstractBaseTemplate1" #>  
 <#   
   // Set the base template properties:  
@@ -396,16 +398,16 @@ protected override void SpecificFragment(int n)
   
 ```  
   
- **アプリケーション コード:**  
+ **アプリケーション コードに示します。**  
   
-```c#  
+```csharp  
 ...   
 DerivedTemplate1 t1 = new DerivedTemplate1();  
 string result = t1.TransformText();  
 Console.WriteLine(result);  
 ```  
   
- **結果の出力:**  
+ **結果の出力。**  
   
 ```  
 Here is the description for this derived template:  
@@ -417,12 +419,12 @@ End of common template.
 End material for DerivedTemplate1.  
 ```  
   
-## 関連トピック  
- デザイン時テンプレート: テンプレートを使用してアプリケーションの一部になるコードを生成する場合は、「[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)」を参照してください。  
+## <a name="related-topics"></a>関連トピック  
+ デザイン時テンプレート: コードを生成するテンプレートを使用する場合になります、アプリケーションの一部を参照してください[T4 テキスト テンプレートを使用して、デザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)です。  
   
- テンプレートとその内容がコンパイル時に決定されると、任意のアプリケーションで実行時のテンプレートを使用できます。  ただし、実行時に変更されるテンプレートからテキストを生成する [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 拡張機能を作成する場合は、「[VS 拡張機能内でのテキスト変換の呼び出し](../modeling/invoking-text-transformation-in-a-vs-extension.md)」を参照してください。  
+ 実行時テンプレートは、コンパイル時にテンプレートおよびその内容を特定のアプリケーションで使用できます。 記述する場合は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]実行時に、「テンプレートからテキストを生成する拡張[VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)です。  
   
-## 参照  
- [コード生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)   
+## <a name="see-also"></a>関連項目  
+ [コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)   
  [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)   
- [T4 の理解: oleg が Sych によってテキスト テンプレートを前処理](http://www.olegsych.com/2009/09/t4-preprocessed-text-templates/)
+ [Oleg Sych によって理解 T4: 前処理されたテキスト テンプレート](http://www.olegsych.com/2009/09/t4-preprocessed-text-templates/)

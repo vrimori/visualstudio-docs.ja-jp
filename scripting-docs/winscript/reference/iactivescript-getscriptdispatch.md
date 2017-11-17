@@ -1,27 +1,30 @@
 ---
-title: "IActiveScript::GetScriptDispatch | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScript::GetScriptDispatch |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScript.GetScriptDispatch
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScript_GetScriptDispatch"
+helpviewer_keywords: IActiveScript_GetScriptDispatch
 ms.assetid: 2092ccd4-1f4c-493a-b5b7-077a70ce95ca
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 5b2f09934cf6d2bb28f7dae93d0bf49c8dc7437d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScript::GetScriptDispatch
-現在実行中のスクリプトに関連付けられているメソッドとプロパティの `IDispatch` のインターフェイスを取得します。  
+# <a name="iactivescriptgetscriptdispatch"></a>IActiveScript::GetScriptDispatch
+取得、`IDispatch`メソッドおよびプロパティが現在実行中のスクリプトに関連付けられているためのインターフェイスです。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetScriptDispatch(  
@@ -30,26 +33,26 @@ HRESULT GetScriptDispatch(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pstrItemName`  
- \[入力\]呼び出し元が関連付けられたディスパッチ オブジェクトを必要とする項目の名前を含むバッファーのアドレス。  このパラメーターがの場合、ディスパッチ `NULL`オブジェクトはスクリプトで定義されているグローバル メソッドとプロパティのすべてのメンバーとして格納されます。  `IDispatch` のインターフェイスと `ITypeInfo` の関連インターフェイスを通じて、ホストはスクリプト メソッドまたはビューを起動し、スクリプトの変数を変更できます。  
+ [in]呼び出し元が関連付けられているディスパッチ オブジェクト必要がある項目の名前を格納するバッファーのアドレスです。 このパラメーターが場合`NULL`、ディスパッチ オブジェクトがスクリプトによって定義されたすべてのグローバル メソッドとプロパティのメンバーとして含まれています。 を介して、`IDispatch`インターフェイスと関連付けられている`ITypeInfo`インターフェイス、ホストは、スクリプト メソッドまたはビューを起動およびスクリプト変数を変更できます。  
   
  `ppdisp`  
- \[入力\]オブジェクトへのポインターを受け取る変数のアドレスはスクリプトのグローバル メソッドとプロパティに関連付けられています。  スクリプト エンジンがこのようなオブジェクトをサポートしていない場合、`NULL` が返されます。  
+ [out]スクリプトのグローバル メソッドとプロパティに関連付けられているオブジェクトへのポインターを受け取る変数のアドレスです。 スクリプト エンジンが、このようなオブジェクトをサポートしていない場合`NULL`が返されます。  
   
-## 戻り値  
- 次の値の場合: 1  
+## <a name="return-value"></a>戻り値  
+ 次のいずれかの値を返します。  
   
 |戻り値|説明|  
-|---------|--------|  
+|------------------|-------------|  
 |`S_OK`|成功。|  
 |`E_INVALIDARG`|引数が無効です。|  
 |`E_POINTER`|無効なポインターが指定されました。|  
-|`E_UNEXPECTED`|呼び出しが想定されていません \(たとえば、スクリプト エンジンはまだ読み込まれていないか、初期化されていません\)。|  
-|`S_FALSE`|スクリプト エンジンはディスパッチ オブジェクトをサポートしていません; `ppdisp` のパラメーターが null 値に設定されます。|  
+|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、スクリプト エンジンがされていないされて読み込まれたまたは初期化) します。|  
+|`S_FALSE`|スクリプト エンジンがディスパッチ オブジェクト; をサポートしていません`ppdisp`パラメーターが NULL に設定します。|  
   
-## 解説  
- メソッドとプロパティが [IActiveScriptParse](../../winscript/reference/iactivescriptparse.md) のインターフェイスを呼び出すことで追加できるため、返される `IDispatch` のインターフェイスは、このメソッドによって動的に新しいメソッドおよびプロパティをサポートできます。  同様に、`IDispatch::GetTypeInfo` のメソッドはメソッドとプロパティが追加されたときに `ITypeInfo` の新しい一意なインターフェイスを返す必要があります。  ただし、言語のエンジンが `ITypeInfo` の前のインターフェイスと互換性がない方法で `IDispatch` のインターフェイスを変更してはならない点に注意が返されました。  これは DISPID が、再利用されていないこと、たとえば意味します。  
+## <a name="remarks"></a>コメント  
+ メソッドとプロパティを呼び出すことによって追加できるため、 [IActiveScriptParse](../../winscript/reference/iactivescriptparse.md) 、インターフェイス、`IDispatch`このメソッドによって返されるインターフェイスは、動的に新しいメソッドとプロパティをサポートできます。 同様に、`IDispatch::GetTypeInfo`メソッドが返す、新しい一意`ITypeInfo`インターフェイスのメソッドとプロパティが追加されるとします。 ただし、言語エンジンが変更する必要があります、 `IDispatch` 、方法と互換性のないいずれかのインターフェイス以前`ITypeInfo`インターフェイスが返されます。 意味するなどを Dispid は決して再利用されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScript](../../winscript/reference/iactivescript.md)

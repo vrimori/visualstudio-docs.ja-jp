@@ -1,56 +1,59 @@
 ---
-title: "左シフト代入演算子 (=) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "="
-  - "Assign"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "= 演算子、= 演算子の概要"
-  - "= 演算子、代入演算子"
-  - "= 演算子"
-  - "代入演算子、JavaScript"
+title: "代入演算子 (=) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- =
+- Assign
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- = operator, about = operator
+- = operator, assignment operators
+- = operator
+- assignment operators, JavaScript
 ms.assetid: 1c46a560-ec8d-41c5-a806-30c4843789c4
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b1b89e444d55f5a0a05cbb444b182dac27627d9b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 左シフト代入演算子 (=) (JavaScript)
+# <a name="assignment-operator--javascript"></a>左シフト代入演算子 (=) (JavaScript)
 値を変数に代入します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 result = expression  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `result`  
- 任意の変数を指定します。  
+ 任意の変数。  
   
  `expression`  
- 任意の数式を指定します。  
+ 任意の数式。  
   
-## 解説  
- \= 演算子は他の演算子と同様に動作するため、それを含む式は値を持ちます。  このため、代入演算子で次のような使い方をすることもできます。`j = k = l = 0` この場合、`j`、`k`、`l` は 0 です。  
+## <a name="remarks"></a>コメント  
+ = 演算子は、それを含む式が値を持つように他の演算子のように動作します。 つまり、代入演算子を次のように連鎖できます:`j = k = l = 0`です。 ここでは`j`、 `k`、および`l`ゼロです。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv1](../../javascript/misc/includes/jsv1-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位](../../javascript/operator-subtractprecedence-javascript.md)   
- [演算子の一覧 \(JavaScript\)](../../javascript/misc/operator-subtractsummary-javascript.md)
+ [演算子の一覧 (JavaScript)](../../javascript/misc/operator-subtractsummary-javascript.md)

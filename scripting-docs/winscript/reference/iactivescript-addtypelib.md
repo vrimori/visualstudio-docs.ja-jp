@@ -1,27 +1,30 @@
 ---
-title: "IActiveScript::AddTypeLib | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScript::AddTypeLib |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScript.AddTypeLib
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScript_AddTypeLib"
+helpviewer_keywords: IActiveScript_AddTypeLib
 ms.assetid: 8e507ea8-c80a-471c-b482-ae753c6e8595
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a2be7cf033b4b5dd4d99b19a3b71ed53e32af855
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScript::AddTypeLib
-スクリプトの名前空間にタイプ ライブラリを追加します。  これは、C\/C\+\+ の `#include` ディレクティブに似ています。  これは、一連のクラス定義 `typedefs`、およびスクリプトへの実行時環境で使用できるに追加する名前付き定数などの定義済みの項目ができます。  
+# <a name="iactivescriptaddtypelib"></a>IActiveScript::AddTypeLib
+スクリプトの名前空間をタイプ ライブラリを追加します。 これがに似ていますが、 `#include` C/C++ のディレクティブ。 これにより、一連のクラス定義などの定義済みの項目`typedefs`、名前付き定数をスクリプトに使用可能なランタイム環境に追加するとします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT AddTypeLib(  
@@ -32,32 +35,32 @@ HRESULT AddTypeLib(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `guidTypeLib`  
- \[入力\]追加するタイプ ライブラリの CLSID。  
+ [in]追加するタイプ ライブラリの CLSID。  
   
  `dwMaj`  
- \[入力\]メジャー バージョン番号。  
+ [in]メジャー バージョン番号。  
   
  `dwMin`  
- \[入力\]マイナー バージョン番号。  
+ [in]マイナー バージョン番号。  
   
  `dwFlags`  
- \[入力\]オプション フラグ。  次は、の場合もあります:  
+ [in]オプションのフラグです。 以下を指定できます。  
   
 |値|説明|  
-|-------|--------|  
-|SCRIPTTYPELIB\_ISCONTROL|タイプ ライブラリは、ホストによって使用される ActiveX コントロールについて説明します。|  
+|-----------|-------------|  
+|SCRIPTTYPELIB_ISCONTROL|タイプ ライブラリでは、ホストによって使用される ActiveX コントロールについて説明します。|  
   
-## 戻り値  
- 次の値の場合: 1  
+## <a name="return-value"></a>戻り値  
+ 次のいずれかの値を返します。  
   
 |戻り値|説明|  
-|---------|--------|  
+|------------------|-------------|  
 |`S_OK`|成功。|  
 |`E_INVALIDARG`|引数が無効です。|  
-|`E_UNEXPECTED`|呼び出しが想定されていません \(たとえば、スクリプト エンジンはまだ読み込まれていないか、初期化されていません\)。|  
-|`TYPE_E_CANTLOADLIBRARY`|指定されたタイプ ライブラリを読み込むことができませんでした。|  
+|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、スクリプト エンジンがされていないされて読み込まれたまたは初期化) します。|  
+|`TYPE_E_CANTLOADLIBRARY`|指定したタイプ ライブラリを読み込むことができませんでした。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScript](../../winscript/reference/iactivescript.md)

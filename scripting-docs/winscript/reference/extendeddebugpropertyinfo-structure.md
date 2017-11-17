@@ -1,85 +1,88 @@
 ---
-title: "ExtendedDebugPropertyInfo 構造体 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "ExtendedDebugPropertyInfo 構造体 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: ExtendedDebugPropertyInfo
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "ExtendedDebugPropertyInfo 構造体"
+helpviewer_keywords: ExtendedDebugPropertyInfo structure
 ms.assetid: f2cf6477-454b-4d13-95da-ae4c90daa175
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ee06b0ace93f068e0530a3aa62b8c28d11069f44
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# ExtendedDebugPropertyInfo 構造体
-追加のメンバーを持つ `DebugPropertyInfo` の構造を拡張プロパティを設定する場合は、機能拡張します。  
+# <a name="extendeddebugpropertyinfo-structure"></a>ExtendedDebugPropertyInfo 構造体
+拡張、`DebugPropertyInfo`構造体メンバーを追加して拡張プロパティを設定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 typedef struct ExtendedDebugPropertyInfo{  
-   DBGPROP_INFO_FLAGS  dwValidFields;  
-   LPOLESTR  bstrName;  
-   LPOLESTR  bstrType;  
-   LPOLESTR  bstrValue;  
-   LPOLESTR  bstrFullName;  
-   DBGPROP_ATTRIB_FLAGS  dwAttrib;  
-   IDebugProperty*  pDebugProp;  
-   DWORD  nDISPID;  
-   DWORD  nType;  
-   VARIANT  varValue;  
-   ILockBytes*  plbValue;  
-   IDebugExtendedProperty*  pDebugExtProp;  
+   DBGPROP_INFO_FLAGS  dwValidFields;  
+   LPOLESTR  bstrName;  
+   LPOLESTR  bstrType;  
+   LPOLESTR  bstrValue;  
+   LPOLESTR  bstrFullName;  
+   DBGPROP_ATTRIB_FLAGS  dwAttrib;  
+   IDebugProperty*  pDebugProp;  
+   DWORD  nDISPID;  
+   DWORD  nType;  
+   VARIANT  varValue;  
+   ILockBytes*  plbValue;  
+   IDebugExtendedProperty*  pDebugExtProp;  
 };  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
  `dwValidFields`  
- フィールドが初期化される場所を指定する列挙型。  
+ 列挙型のフィールドが初期化されますを指定するために使用します。  
   
  `bstrName`  
- コンテキスト内のプロパティ名。  
+ コンテキスト内でプロパティ名。  
   
  `bstrType`  
- 書式設定された文字列としてプロパティ型。  
+ プロパティは、書式設定された文字列として入力します。  
   
  `bstrValue`  
- 書式設定された文字列としてプロパティ値。  
+ 書式設定された文字列としてプロパティ値です。  
   
  `bstrFullName`  
  プロパティの完全名。  
   
  `dwAttrib`  
- デバッグ プロパティのフラグを指定する列挙種別です。  
+ デバッグ プロパティの属性のフラグを指定する列挙です。  
   
  `pDebugProp`  
- この `ExtendedDebugPropertyInfo`に対応する`IDebugProperty` のオブジェクト。  
+ `IDebugProperty`これに対応するオブジェクト`ExtendedDebugPropertyInfo`です。  
   
  `nDISPID`  
- ディスパッチ ID  
+ ディスパッチ id。  
   
  `nType`  
- 拡張プロパティ型。  
+ 拡張プロパティの型。  
   
  `varValue`  
- バリアントで行うことができる拡張プロパティ値。  
+ バリアント型に収まる場合は、拡張プロパティ値です。  
   
  `plbValue`  
- プロパティ値の実際のバイト データ。  
+ プロパティの値の実際のデータのバイト数。  
   
  `pDebugExtProp`  
- この `ExtendedDebugPropertyInfo`に対応する`IDebugExtendedProperty` のオブジェクト。  
+ `IDebugExtendedProperty`これに対応するオブジェクト`ExtendedDebugPropertyInfo`です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [DebugPropertyInfo 構造体](../../winscript/reference/debugpropertyinfo-structure.md)   
  [IDebugProperty インターフェイス](../../winscript/reference/idebugproperty-interface.md)   
  [IDebugExtendedProperty インターフェイス](../../winscript/reference/idebugextendedproperty-interface.md)   
- [DBGPROP\_ATTRIB\_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
- [DBGPROP\_INFO\_FLAGS](../../winscript/reference/dbgprop-info-flags.md)
+ [DBGPROP_ATTRIB_FLAGS](../../winscript/reference/dbgprop-attrib-flags.md)   
+ [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)

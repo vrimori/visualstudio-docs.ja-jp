@@ -1,98 +1,99 @@
 ---
-title: "GetObject 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "GetObject"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "GetObject 関数"
+title: "GetObject 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: GetObject
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: GetObject function
 ms.assetid: 62efcdbc-8b86-491d-9000-ef38aa9942a9
-caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0d8bad127a0f260395a1ec19f44ff2d495006024
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# GetObject 関数 (JavaScript)
-ファイルのオートメーション オブジェクトへの参照を返します。  
+# <a name="getobject-function-javascript"></a>GetObject 関数 (JavaScript)
+ファイルからオートメーション オブジェクトへの参照を返します。  
   
 > [!NOTE]
->  この関数は、Internet Explorer 9 \(標準モード\) 以降ではサポートされていません。  
+>  Internet Explorer 9 (標準モードの場合) またはそれ以降は、この関数はサポートされていません。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 GetObject([pathname] [, class])  
 ```  
   
-## Parameters  
+## <a name="parameters"></a>パラメーター  
  `pathname`  
- Optional.  オブジェクトが含まれているファイル名までの完全パスを指定します。  `pathname` を省略した場合、`class` が必須になります。  
+ 省略可能です。 完全なパスと取得するオブジェクトを含むファイルの名前。 場合`pathname`を省略すると、`class`が必要です。  
   
  `class`  
- Optional.  オブジェクトのクラスを指定します。  
+ 省略可能です。 オブジェクトのクラスです。  
   
- `class` 引数は、`appname.objectype` 構文を使用します。各部を次に示します。  
+ `class`引数の構文を使用する`appname.objectype`おり、これらの部分。  
   
  `appname`  
- Required.  オブジェクトを提供するアプリケーションの名前です。  
+ 必須です。 オブジェクトを提供するアプリケーションの名前。  
   
  `objectype`  
- Required.  作成するオブジェクトの型またはクラスです。  
+ 必須です。 型またはオブジェクトのクラスを作成します。  
   
-## 解説  
- `GetObject` 関数は、[!INCLUDE[jsv9text](../../javascript/includes/jsv9text-md.md)] 以降ではサポートされていません。  
+## <a name="remarks"></a>コメント  
+ `GetObject`でサポートされない関数[!INCLUDE[jsv9text](../../javascript/includes/jsv9text-md.md)]またはそれ以降。  
   
- ファイルのオートメーション オブジェクトにアクセスし、オブジェクトをオブジェクト変数に代入するには、`GetObject` 関数を使用します。  `GetObject` 関数で返されるオブジェクトへの参照をオブジェクト変数に代入します。  次に例を示します。  
+ 使用して、`GetObject`ファイルからオートメーション オブジェクトにアクセスする関数。 によって返されるオブジェクトを割り当てる`GetObject`オブジェクト変数にします。 例:  
   
-```javascript  
+```JavaScript  
 var CADObject;  
 CADObject = GetObject("C:\\CAD\\SCHEMA.CAD");  
 ```  
   
- このコード例が実行されると、指定された引数 `pathname` に対応するアプリケーションが起動し、指定されたファイルのオブジェクトがアクティブになります。  `GetObject` は、引数 `pathname` に長さ 0 の文字列 \(""\) が指定されると、指定した型の新しいオブジェクト インスタンスを返します。  引数 `pathname` を省略すると、`GetObject` は、指定した型の現在アクティブなオブジェクトを返します。  指定した種類のオブジェクトが存在しない場合はエラーが発生します。  
+ このコードを実行すると、指定したに関連付けられたアプリケーション`pathname`開始されると、指定したファイル内のオブジェクトがアクティブ化します。 場合`pathname`は長さ 0 の文字列 ("")、`GetObject`指定した型の新しいオブジェクト インスタンスを返します。 場合、`pathname`引数を省略すると、`GetObject`指定した型の現在アクティブなオブジェクトを返します。 指定した型のオブジェクトが存在しない場合、エラーが発生します。  
   
- アプリケーションによっては、ファイルの一部をアクティブにできる場合もあります。  ファイル名の最後に感嘆符 \(\!\) を付け、続けてアクティブにするファイルの部分を表す文字列を指定します。  この文字列を作成する方法については、オブジェクトを作成したアプリケーションのドキュメントを参照してください。  
+ 一部のアプリケーションでは、ファイルの一部をアクティブ化を行うことができます。 これを行うは、ファイル名の末尾に感嘆符 (!) を追加し、その後、アクティブ化するファイルの一部を識別する文字列にします。 この文字列を作成する方法については、オブジェクトを作成したアプリケーションのマニュアルを参照してください。  
   
- たとえば、描画アプリケーションでファイルに格納されている画像に複数のレイヤーが含まれているとします。  次のコードを使用すると、`SCHEMA.CAD` という描画ファイルの 1 つのレイヤーをアクティブにできます。  
+ たとえば、描画アプリケーションでは、複数のレイヤーにファイルに格納されている描画があります。 次のコードを使用して記述すると、レイヤーをアクティブにでした`SCHEMA.CAD`:  
   
-```javascript  
+```JavaScript  
 var LayerObject = GetObject("C:\\CAD\\SCHEMA.CAD!Layer3");  
 ```  
   
- オブジェクトのクラスが指定されていない場合は、指定されたファイル名を基に、オートメーションは起動するアプリケーションとアクティブにするオブジェクトを決定します。  ただし、ファイルによっては、複数のオブジェクトのクラスをサポートしている場合もあります。  たとえば、1 つの描画で Application オブジェクト、Drawing オブジェクト、および Toolbar オブジェクトという 3 つの異なる種類のオブジェクトを同一ファイルの構成要素としてサポートすることもあります。  ファイルのどのオブジェクトをアクティブにするかは、引数 `class` で指定します。  次に例を示します。  
+ オブジェクトのクラスを指定しない場合オートメーションどのアプリケーションを開始して、アクティブにするオブジェクトに基づいて決定、ファイル名を入力します。 ただし、一部のファイルでは、オブジェクトの 1 つ以上のクラスをサポートして可能性があります。 たとえば、図面は次の 3 つの異なる種類のオブジェクトをサポート可能性があります: アプリケーション オブジェクト、描画オブジェクトの場合、および同じファイルの一部であるすべてのツールバーのオブジェクト。 使用してアクティブ化するファイルのどのオブジェクトを指定する省略可能な`class`引数。 例:  
   
-```javascript  
+```JavaScript  
 var MyObject;  
 MyObject = GetObject("C:\\DRAWINGS\\SAMPLE.DRW", "FIGMENT.DRAWING");  
 ```  
   
- このコード例では、`FIGMENT` が描画のアプリケーションの名前で、`DRAWING` がそのアプリケーションによってサポートされるオブジェクトの種類です。  アクティブになったオブジェクトをコードで参照するには、定義したオブジェクト変数を使います。  上の例では、オブジェクト変数 `MyObject` を使って新規オブジェクトのプロパティとメソッドにアクセスします。  次に例を示します。  
+ 前の例で`FIGMENT`描画アプリケーションの名前を指定し、`DRAWING`はこれをサポートしているオブジェクトの種類の 1 つです。 オブジェクトがアクティブになると、参照するにはコードを定義して、オブジェクト変数を使用します。 オブジェクト変数を使用して新しいオブジェクトのプロパティおよびメソッドにアクセスする前の例で`MyObject`です。 例:  
   
-```javascript  
+```JavaScript  
 MyObject.Line(9, 90);  
 MyObject.InsertText(9, 100, "Hello, world.");  
 MyObject.SaveAs("C:\\DRAWINGS\\SAMPLE.DRW");  
 ```  
   
 > [!NOTE]
->  `GetObject` 関数は、オブジェクトの現在のインスタンスがある場合や、既に読み込んだファイルからオブジェクトを作成する場合に使います。  現在のインスタンスがない場合、または読み込み済みのファイルからオブジェクトを起動しない場合は、`ActiveXObject` オブジェクトを使います。  
+>  使用して、`GetObject`オブジェクトの現在のインスタンスがあるし、ファイルが既に読み込まれてを持つオブジェクトを作成する場合に機能します。 ファイルが読み込まれた現在のインスタンスがないと、オブジェクトの使用を開始したくない場合は、使用して、`ActiveXObject`オブジェクト。  
   
- 複数のインスタンスを作成できないオブジェクトの場合は、何度 `ActiveXObject` 関数を実行しても、そのオブジェクトのインスタンスは 1 つしか作成されません。  単一インスタンス オブジェクトの場合、引数に長さ 0 の文字列 \(""\) を指定して `GetObject` を呼び出すと、常に同じインスタンスを返します。また、引数 `pathname` を省略すると、エラーになります。  
+ オブジェクトがそれ自体を単独のオブジェクトとして登録している場合、オブジェクトの 1 つだけのインスタンスが作成、方法に関係なく何度も`ActiveXObject`を実行します。 単一インスタンス オブジェクトは、`GetObject`常に長さ 0 の文字列で呼び出されたときに、同じインスタンスを返します ("") 構文、およびその場合はエラーが発生、`pathname`引数を省略します。  
   
-## 必要条件  
- Quirks、Internet Explorer 6 標準、Internet Explorer 7 標準、Internet Explorer 8 標準の各ドキュメント モードでサポートされます。  「[バージョン情報](../../javascript/reference/javascript-version-information.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ 各ドキュメント モードでサポートされる: Quirks、Internet Explorer 6 標準、Internet Explorer 7 標準、および Internet Explorer 8 標準です。 「 [バージョン情報](../../javascript/reference/javascript-version-information.md)」を参照してください。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ActiveXObject オブジェクト](../../javascript/reference/activexobject-object-javascript.md)

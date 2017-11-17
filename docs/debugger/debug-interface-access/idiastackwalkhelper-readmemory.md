@@ -1,60 +1,59 @@
 ---
-title: "IDiaStackWalkHelper::readMemory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalkHelper2::readMemory メソッド"
+title: "IDiaStackWalkHelper::readMemory |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalkHelper2::readMemory method
 ms.assetid: e1eb90aa-49b7-476c-9e70-7e8f08994cbe
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: cccec7df8428db0a1e7c1fe2274475c2b723d760
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalkHelper::readMemory
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-メモリの実行可能ファイルのイメージのデータのブロックを読み取ります。  
+# <a name="idiastackwalkhelperreadmemory"></a>IDiaStackWalkHelper::readMemory
+メモリ内で実行可能ファイルのイメージからのデータ ブロックを読み取ります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT readMemory(   
-   enum MemoryTypeEnum type,  
-   ULONGLONG           va,  
-   DWORD               cbData,  
-   DWORD*              pcbData,  
-   BYTE*               pbData  
+```C++  
+HRESULT readMemory(   
+   enum MemoryTypeEnum type,  
+   ULONGLONG           va,  
+   DWORD               cbData,  
+   DWORD*              pcbData,  
+   BYTE*               pbData  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `type`  
- \[入力\] 読み取るためのメモリの [MemoryTypeEnum 列挙型](../../debugger/debug-interface-access/memorytypeenum.md) の種類を指定する列挙体の値。  
+ [in]値、 [MemoryTypeEnum 列挙型](../../debugger/debug-interface-access/memorytypeenum.md)読み取るためのメモリの種類を指定する列挙です。  
   
- VA  
- \[入力\] イメージの読み上げを開始する仮想アドレス。  
+ va  
+ [in]読み取りを開始位置を示すイメージ内の仮想アドレス。  
   
  `cbData`  
- byte \[入力\] バッファーのサイズ。  
+ [in]データ バッファーのサイズ (バイト単位)。  
   
  `pcbData`  
- \[出力\] 実際に読み込まれるバイト数を返します。  `pbData` が `NULL` である場合はデータの合計バイト数です。  
+ [out]実際に読み取られたバイト数を返します。 場合`pbData`は`NULL`、これは、使用可能なデータのバイトの総数。  
   
  `pbData`  
- \[入力出力\] 読み込まれたメモリが格納されるバッファー。  
+ [入力、出力].メモリの読み取りが入力バッファー。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [MemoryTypeEnum 列挙型](../../debugger/debug-interface-access/memorytypeenum.md)

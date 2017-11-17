@@ -1,52 +1,53 @@
 ---
-title: "ignoreCase プロパティ (Regular Expression) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "ignoreCase"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "IgnoreCase プロパティ"
+title: "ignoreCase プロパティ (Regular Expression) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: ignoreCase
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: IgnoreCase property
 ms.assetid: 816f0df5-5a82-44a5-a4ab-dbc91fa76e61
-caps.latest.revision: 17
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ae9fee8e6303fb944f59c11c173f9e8b7f7cc75a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# ignoreCase プロパティ (Regular Expression) (JavaScript)
-正規表現で使用する ignoreCase フラグ \(**i**\) の状態を表すブール値を返します。  既定値は **false** です。  読み取り専用です。  
+# <a name="ignorecase-property-regular-expression-javascript"></a>ignoreCase プロパティ (Regular Expression) (JavaScript)
+IgnoreCase フラグの状態を示すブール値を返します (**すれば**) 正規表現で使用します。 既定値は**false**です。 読み取り専用です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 rgExp.ignoreCase  
 ```  
   
-## 解説  
- `rgExp` の必須の参照は、`RegExp` オブジェクトのインスタンスです。  
+## <a name="remarks"></a>コメント  
+ 必要な`rgExp`参照がのインスタンス、`RegExp`オブジェクト。  
   
- **ignoreCase** プロパティは、正規表現の ignoreCase フラグが設定されている場合は **true** を返し、設定されていない場合は **false** を返します。  
+ **IgnoreCase**プロパティから返される**true**する ignoreCase フラグが、正規表現に設定されているしを返すかどうか**false**されていない場合。  
   
- ignoreCase フラグを使用すると、検索文字列内のパターンをマッチングさせるときに、大文字小文字の区別をしません。  
+ IgnoreCase フラグを使用する場合は、検索を検索した文字列内のパターンを照合するときに大文字小文字の区別を無視するようにを示します。  
   
-## 使用例  
- **ignoreCase** プロパティの使用例を次に示します。  以下の関数に "gi" を渡すと、先頭の "The" も含めて "the" という単語のすべてのインスタンスが "a" に置換されます。  これは、ignoreCase フラグが設定されていると、検索時に大文字と小文字の区別が無視されるためです。  したがって、"T" はマッチングにおいて "t" と同じです。  
+## <a name="example"></a>例  
+ 次の例では、使用、 **ignoreCase**プロパティです。 "ある gi"でを以下の関数に渡す場合、word のすべてのインスタンス「、」に置換されます、word 初期を含む"a"、"The"です。 これは、ignoreCase フラグを設定して、検索には、大文字小文字の区別が無視されるためです。 したがって"T"は"t"と同じ照合のためです。  
   
- この関数は、設定可能な **g**、**i**、および **m** の各正規表現フラグの状態を示すブール値を返します。  すべての置換が適用された文字列も返します。  
+ この関数は許容される正規表現フラグの状態を示すブール値を返します**g**、**すれば**、および**m**です。 また、関数は、行われたすべての置換文字列を返します。  
   
-```javascript  
+```JavaScript  
 function RegExpPropDemo(flag){  
     // The flag parameter is a string that contains  
     // g, i, or m. The flags can be combined.  
@@ -83,10 +84,10 @@ document.write(RegExpPropDemo("gi"));
 document.write(RegExpPropDemo("g"));  
 ```  
   
-## 使用例  
- 出力結果は次のようになります。  
+## <a name="example"></a>例  
+ 結果の出力を次に示します。  
   
-```javascript  
+```JavaScript  
 global: true  
 ignoreCase: true  
 multiline: false  
@@ -98,12 +99,12 @@ multiline: false
 Resulting String: The batter hit a ball with a bat and a fielder caught a ball with a glove.  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
- **対象**: [Regular Expression オブジェクト](../../javascript/reference/regular-expression-object-javascript.md)  
+ **適用されます**: [Regular Expression オブジェクト](../../javascript/reference/regular-expression-object-javascript.md)  
   
-## 参照  
- [global プロパティ \(Regular Expression\)](../../javascript/reference/global-property-regular-expression-javascript.md)   
- [multiline プロパティ \(Regular Expression\)](../../javascript/reference/multiline-property-regular-expression-javascript.md)   
- [Regular Expression Syntax \(JavaScript\)](http://msdn.microsoft.com/ja-jp/ab0766e1-7037-45ed-aa23-706f58358c0e)
+## <a name="see-also"></a>関連項目  
+ [global プロパティ (Regular Expression)](../../javascript/reference/global-property-regular-expression-javascript.md)   
+ [multiline プロパティ (Regular Expression)](../../javascript/reference/multiline-property-regular-expression-javascript.md)   
+ [正規表現の構文 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)

@@ -1,55 +1,56 @@
 ---
-title: "push メソッド (Array) (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "push"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "Push メソッド"
+title: "push メソッド (Array) (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: push
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: Push method
 ms.assetid: fa6e5799-dabe-4b3d-bd1f-0afc68c77134
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ddb49f310eaff51fe9e9ba584281fdf07bc2e818
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# push メソッド (Array) (JavaScript)
+# <a name="push-method-array-javascript"></a>push メソッド (Array) (JavaScript)
 配列に新しい要素を追加し、その要素を追加した後の配列の長さを返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 arrayObj.push([item1 [item2 [. . . [itemN ]]]])  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `arrayObj`  
- 必須です。  `Array` オブジェクト。  
+ 必須です。 `Array` オブジェクト。  
   
  `item, item2,. . ., itemN`  
- 省略可能です。  `Array` の新しい要素を指定します。  
+ 省略可能です。 新しい要素の`Array`です。  
   
-## 解説  
- `push` メソッドと `pop` メソッドでは後入れおよび先出しスタックをシミュレートすることができます。  
+## <a name="remarks"></a>コメント  
+ `push`と`pop`スタックを最初に、最後のシミュレーションを行うメソッドを使用します。  
   
- `push` メソッドでは、引数に指定された順序で要素を追加します。  引数の 1 つが配列である場合は、1 つの要素として追加します。  複数の配列の要素を連結する場合は `concat` メソッドを使用します。  
+ `push`メソッドが表示される順序で要素を追加します。 配列引数のいずれかの場合は、単一の要素として追加されます。 使用して、`concat`メソッドを 2 つ以上の配列の要素を連結します。  
   
-## 使用例  
+## <a name="example"></a>例  
  `push` メソッドの使用例を次に示します。  
   
-```javascript  
+```JavaScript  
 var number;  
 var my_array = new Array();  
   
@@ -67,9 +68,9 @@ while (number != undefined)
 // 9 8 7 6 5  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
-## 参照  
- [concat メソッド \(Array\)](../../javascript/reference/concat-method-array-javascript.md)   
- [pop メソッド \(Array\)](../../javascript/reference/pop-method-array-javascript.md)
+## <a name="see-also"></a>関連項目  
+ [concat メソッド (Array)](../../javascript/reference/concat-method-array-javascript.md)   
+ [pop メソッド (Array)](../../javascript/reference/pop-method-array-javascript.md)

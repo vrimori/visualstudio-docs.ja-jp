@@ -1,47 +1,48 @@
 ---
-title: "encodeURIComponent 関数 (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "encodeURIComponent"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "encodeURIComponent メソッド"
+title: "encodeURIComponent 関数 (JavaScript) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: encodeURIComponent
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: encodeURIComponent method
 ms.assetid: 8202bce6-1342-40dc-a5ef-ac6d210a7d15
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 56680e9bcfe1de61d8a1eabd0ff8d2eced01d603
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# encodeURIComponent 関数 (JavaScript)
-文字列を有効な URI \(Uniform Resource Identifier\) にエンコードします。  
+# <a name="encodeuricomponent-function-javascript"></a>encodeURIComponent 関数 (JavaScript)
+有効なコンポーネントの識別子 URI (Uniform Resource) としてテキスト文字列をエンコードします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 encodeURIComponent(encodedURIString)  
 ```  
   
-## 解説  
- `encodedURIString` 引数は必須で、エンコードされた URI コンポーネントを表す値を指定します。  
+## <a name="remarks"></a>コメント  
+ 必要な`encodedURIString`引数には、エンコードされた URI コンポーネントを表す値です。  
   
- `encodeURIComponent` 関数はエンコードした URI を返します。  結果を `decodeURIComponent` に渡すと、元の文字列が返されます。  `encodeURIComponent` 関数では、すべての文字がエンコードされるので、\/folder1\/folder2\/default.html などのパスを表す文字列には注意が必要です。  スラッシュ \(\/\) もエンコードされるので、Web サーバーへの要求として送信する場合は無効になります。  文字列に URI コンポーネントが複数含まれる場合は、`encodeURI` 関数を使用します。  
+ `encodeURIComponent`関数は、エンコードされた URI を返します。 結果を渡した場合`decodeURIComponent`、元の文字列が返されます。 `encodeURIComponent`関数は、すべての文字をエンコード、文字列などのパスを表す場合は注意**/folder1/folder2/default.html**です。 スラッシュ文字では、エンコードはされ、web サーバーに要求として送信された場合は無効になります。 使用して、`encodeURI`文字列が 1 つの URI コンポーネントよりも多く含まれている場合に機能します。  
   
-## 使用例  
- 次のコードでは、URI コンポーネントをエンコードしてからデコードしています。  
+## <a name="example"></a>例  
+ 次のコードでは、まず URI コンポーネントをエンコードし、デコードされます。  
   
-```javascript  
+```JavaScript  
 var uriEncode = encodeURIComponent ("www.Not a URL.com");  
 var uriDecode = decodeURIComponent(uriEncode);  
   
@@ -54,9 +55,9 @@ document.write(uriDecode);
 // www.Not a URL.com  
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv55](../../javascript/reference/includes/jsv55-md.md)]  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [decodeURI 関数](../../javascript/reference/decodeuri-function-javascript.md)   
  [decodeURIComponent 関数](../../javascript/reference/decodeuricomponent-function-javascript.md)

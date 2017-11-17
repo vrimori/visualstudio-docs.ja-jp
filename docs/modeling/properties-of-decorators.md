@@ -1,69 +1,70 @@
 ---
-title: "デコレーターのプロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ドメイン固有言語, デコレーター"
+title: "プロパティ デコレーターの |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Domain-Specific Language, decorators
 ms.assetid: f6322fe5-dc08-4d32-a6b3-0bd18879136d
-caps.latest.revision: 23
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 23288d1afe9b9c0a181a5d978b1956071b683218
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# デコレーターのプロパティ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-デコレータアイコンテキストまたは図のシェイプまたはコネクタに表示できる縮小シェブロン展開します。  次の表はデコレータの 3 種類のプロパティが表示されます。  プロパティの一部はシェイプまたはコネクタにデコレータ デコレータにのみ表示されます。  
+# <a name="properties-of-decorators"></a>デコレーターのプロパティ
+デコレーターは、アイコン、テキスト、または図形またはコネクタ図上に表示される可能性が展開/折りたたみの山かっこです。 次の表は、デコレーターの 3 種類のプロパティを表示します。 一部のプロパティには、図形デコレーターでのみ、またはコネクタ デコレーターでのみが表示されます。  
   
- 詳細については、「[方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)」を参照してください。  これらのプロパティを使用する方法の詳細については[ドメイン固有言語のカスタマイズおよび拡張](../modeling/customizing-and-extending-a-domain-specific-language.md) を参照してください。  
+ 詳細については、次を参照してください。[ドメイン固有言語の定義方法](../modeling/how-to-define-a-domain-specific-language.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。  
   
-## デコレータ折りたたみ \/ 展開します。  
+## <a name="expandcollapse-decorator"></a>デコレーターの展開/折りたたみ  
   
-|プロパティ|Description|既定値|  
-|-----------|-----------------|---------|  
-|DisplayName|生成されたデザイナーに表示されるデコレータの名前。|折りたたみデコレータを展開します。|  
+|プロパティ|説明|既定値|  
+|--------------|-----------------|-------------|  
+|DisplayName|生成されたデザイナーで表示されるデコレーターの名前です。|折りたたみデコレーターを展開します。|  
 |名前|デコレータの名前。|ExpandCollapseDecorator|  
-|説明|このデコレータに関連付けられている単純に注意してください。|なし|  
-|HorizontalOffset|インチ デコレータの既定の場所に関連する水平オフセット。  図形 \(のみ\)|0|  
-|VerticalOffset|インチ デコレータの既定の場所に関連する垂直オフセット。  図形 \(のみ\)|0|  
-|OffsetFromLine|行からデコレータのオフセット \(インチの既定の位置を基準にします。  コネクタ \(のみ\)|0|  
-|OffsetFromShape|図形からデコレータのオフセット \(インチの既定の位置を基準にします。  コネクタ \(のみ\)|0|  
-|\[位置\]|デコレータの既定の場所です。|SourceTop|  
+|メモ|このデコレータに関連付けられている非公式なノートです。|\<なし >|  
+|HorizontalOffset|水平方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
+|VerticalOffset|垂直方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
+|OffsetFromLine|デコレータ インチで、既定の位置に対して、行からのオフセット。 (コネクタののみ。)|0|  
+|OffsetFromShape|デコレータ インチで、既定の位置に対しての形状からのオフセット。 (コネクタののみ。)|0|  
+|位置|デコレータの既定の位置。|SourceTop|  
   
-## デコレータ アイコン  
+## <a name="icon-decorator"></a>アイコンの Decorator  
   
-|プロパティ|Description|既定値|  
-|-----------|-----------------|---------|  
-|DefaultIcon|表示されるアイコンまたはイメージ ファイルのパス。|なし|  
-|DisplayName|生成されたデザイナーに表示するデコレータの名前。|デコレータ アイコン|  
+|プロパティ|説明|既定値|  
+|--------------|-----------------|-------------|  
+|DefaultIcon|表示されるアイコンまたはイメージ ファイルのパス。|\<なし >|  
+|DisplayName|生成された、デザイナーに表示されるデコレーターの名前です。|アイコンの Decorator|  
 |名前|デコレータの名前。|IconDecorator|  
-|説明|デコレータに関連付けられている単純に注意してください。|なし|  
-|HorizontalOffset|インチ デコレータの既定の場所に関連する水平オフセット。  図形 \(のみ\)|0|  
-|VerticalOffset|インチ デコレータの既定の場所に関連する垂直オフセット。  図形 \(のみ\)|0|  
-|OffsetFromLine|行からデコレータのオフセット \(インチの既定の位置を基準にします。  コネクタ \(のみ\)|0|  
-|OffsetFromShape|図形からデコレータのオフセット \(インチの既定の位置を基準にします。  コネクタ \(のみ\)|0|  
-|\[位置\]|デコレータの既定の場所です。|SourceTop|  
+|メモ|デコレータに関連付けられている非公式なノートです。|\<なし >|  
+|HorizontalOffset|水平方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
+|VerticalOffset|垂直方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
+|OffsetFromLine|デコレータ インチで、既定の位置に対して、行からのオフセット。 (コネクタののみ。)|0|  
+|OffsetFromShape|デコレータ インチで、既定の位置に対しての形状からのオフセット。 (コネクタののみ。)|0|  
+|位置|デコレータの既定の位置。|SourceTop|  
   
-## TextDecorator  
+## <a name="textdecorator"></a>TextDecorator  
   
-|プロパティ|Description|既定値|  
-|-----------|-----------------|---------|  
-|DefaultText|表示される既定のテキスト。|Label|  
-|DisplayName|生成されたデザイナーに表示するデコレータの名前。|Label|  
+|プロパティ|説明|既定値|  
+|--------------|-----------------|-------------|  
+|は|表示される既定のテキスト。|group1|  
+|DisplayName|生成された、デザイナーに表示されるデコレーターの名前です。|group1|  
 |FontSize|デコレータに表示されるテキストのフォント サイズ。|8|  
 |FontStyle|デコレータに表示されるテキストのフォント スタイル。|Regular|  
-|名前|デコレータの名前。|Label|  
-|説明|デコレータに関連付けられている単純に注意してください。|なし|  
-|HorizontalOffset|インチ デコレータの既定の場所に関連する水平オフセット。  図形 \(のみ\)|0|  
-|VerticalOffset|インチ デコレータの既定の場所に関連する垂直オフセット。  図形 \(のみ\)|0|  
-|OffsetFromLine|行からデコレータのオフセット \(インチの既定の位置を基準にします。  コネクタ \(のみ\)|0|  
-|OffsetFromShape|図形からデコレータのオフセット \(インチの既定の位置を基準にします。  コネクタ \(のみ\)|0|  
-|\[位置\]|デコレータの既定の場所です。|TargetBottom|  
+|名前|デコレータの名前。|group1|  
+|メモ|デコレータに関連付けられている非公式なノートです。|\<なし >|  
+|HorizontalOffset|水平方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
+|VerticalOffset|垂直方向のオフセットをインチで、デコレーターの既定の位置に対して相対的です。 (図形上のみです。)|0|  
+|OffsetFromLine|デコレータ インチで、既定の位置に対して、行からのオフセット。 (コネクタののみ。)|0|  
+|OffsetFromShape|デコレータ インチで、既定の位置に対しての形状からのオフセット。 (コネクタののみ。)|0|  
+|位置|デコレータの既定の位置。|TargetBottom|  
   
-## 参照  
- [Domain\-Specific Language Tools Glossary](http://msdn.microsoft.com/ja-jp/ca5e84cb-a315-465c-be24-76aa3df276aa)
+## <a name="see-also"></a>関連項目  
+ [ドメイン固有言語ツールの用語集](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)

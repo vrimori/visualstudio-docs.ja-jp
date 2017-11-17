@@ -1,88 +1,91 @@
 ---
-title: "方法 : ClickOnce アプリケーションにデータ ファイルを含める | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce 配置, データ"
-  - "データ アクセス, ClickOnce アプリケーション"
-  - "配置 (アプリケーションを) [ClickOnce], データ ファイル"
+title: "方法: ClickOnce アプリケーションにデータ ファイルを含める |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce deployment, data
+- deploying applications [ClickOnce], data files
+- data access, ClickOnce applications
 ms.assetid: 89ee46ef-bc8c-4ab0-a2ac-1220f9da06fc
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: b03083ce6e9fe7fcebdad0b82373bee41221bbb5
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# 方法 : ClickOnce アプリケーションにデータ ファイルを含める
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-インストールする各 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションには、そのアプリケーションの独自のデータを管理するためのディレクトリが、インストール先コンピューターのローカル ディスクに作成されます。  テキスト ファイルや XML ファイルだけでなく、Microsoft Access データベース \(.mdb\) ファイルなど任意の種類のファイルをデータ ファイルとして扱うことができます。  任意の種類のデータ ファイルを [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに追加するための手順を次に示します。  
+# <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>方法 : ClickOnce アプリケーションにデータ ファイルを含める
+各[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションをインストールするには、アプリケーションが、独自のデータを管理できます先のコンピューターのローカル ディスク上のデータ ディレクトリが割り当てられます。 データ ファイルは、任意の種類のファイルを含めることができます。 テキスト ファイル、XML ファイル、または Microsoft Access データベース (.mdb) ファイルのであってもです。 以下の手順は、任意の種類のデータ ファイルを追加する方法を示して、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
   
-### Mage.exe を使用してデータ ファイルをアプリケーションに含めるには  
+### <a name="to-include-a-data-file-by-using-mageexe"></a>Mage.exe を使用して、データ ファイルを追加するには  
   
-1.  アプリケーションの他のファイルと共にデータ ファイルをアプリケーション ディレクトリに格納します。  
+1.  データ ファイルをアプリケーションのファイルの残りの部分で、アプリケーション ディレクトリに追加します。  
   
-     一般に、このアプリケーション ディレクトリは、v1.0.0.0 などの配置の現在のバージョン名が付けられたディレクトリです。  
+     通常、アプリケーション ディレクトリ ディレクトリとなる、現在のバージョンの配置のラベルが付いた — v1.0.0.0 などです。  
   
-2.  データ ファイルを一覧に含めるために、アプリケーション マニフェストを更新します。  
+2.  データ ファイルの一覧に、アプリケーション マニフェストを更新します。  
   
-     **mage \-u v1.0.0.0\\Application.manifest \-FromDirectory v1.0.0.0**  
+     **mage-u v1.0.0.0\Application.manifest - FromDirectory v1.0.0.0**  
   
-     このタスクを実行すると、アプリケーション マニフェストのファイル一覧が再作成され、ハッシュ署名が自動生成されます。  
+     このタスクを実行すると、アプリケーション マニフェストでファイルの一覧を再作成しも自動的にハッシュ署名を生成します。  
   
-3.  任意のテキスト エディターまたは XML エディターで、アプリケーション マニフェストを開き、先ほど追加したファイルの `file` 要素を探します。  
+3.  任意のテキスト エディターまたは XML エディターで、アプリケーション マニフェストを開き、検索、`file`最近追加されたファイルの要素。  
   
-     `Data.xml` という XML ファイルを追加している場合は、次のコード例のようなファイルになります。  
+     という XML ファイルを追加する場合は`Data.xml`ファイルは次のコード例のようになります。  
   
  `<file name="Data.xml" hash="23454C18A2DC1D23E5B391FEE299B1F235067C59" hashalg="SHA1" asmv2:size="39500" />`  
   
-1.  この要素に `type` 属性を追加し、この属性の値に `data` を設定します。  
+1.  属性を追加`type`をこの要素の値を指定して`data`です。  
   
  `<file name="Data.xml" writeableType="applicationData" hash="23454C18A2DC1D23E5B391FEE299B1F235067C59" hashalg="SHA1" asmv2:size="39500" />`  
   
-1.  キー ペアまたは証明書を使用してアプリケーション マニフェストに再署名し、次に配置マニフェストに再署名します。  
+1.  キー ペアまたは証明書を使用して、アプリケーション マニフェストに再署名してから、配置マニフェストを再度署名します。  
   
-     配置マニフェストは、アプリケーション マニフェストのハッシュが変更されているため、再署名する必要があります。  
+     アプリケーション マニフェストのハッシュが変更されたため、配置マニフェストを再署名する必要があります。  
   
-     **mage \-s app manifest \-cf cert\_file \-pwd password**  
+     **mage-s アプリケーション マニフェストの cf cert_file-pwd パスワード**  
   
-     **mage \-u deployment manifest \-appm app manifest**  
+     **mage-u 配置マニフェスト appm アプリ マニフェスト**  
   
-     **mage \-s deployment manifest \-cf certfile \-pwd password**  
+     **mage-s 配置マニフェストは cf certfile-pwd パスワード**  
   
-### MageUI.exe を使用してデータ ファイルをアプリケーションに含めるには  
+2.  
   
-1.  アプリケーションの他のファイルと共にデータ ファイルをアプリケーション ディレクトリに格納します。  
+### <a name="to-include-a-data-file-by-using-mageuiexe"></a>MageUI.exe を使用して、データ ファイルを追加するには  
   
-2.  一般に、このアプリケーション ディレクトリは、v1.0.0.0 などの配置の現在のバージョン名が付けられたディレクトリです。  
+1.  データ ファイルをアプリケーションのファイルの残りの部分で、アプリケーション ディレクトリに追加します。  
   
-3.  **\[File\]** メニューの **\[Open\]** をクリックし、アプリケーション マニフェストを開きます。  
+2.  通常、アプリケーション ディレクトリ ディレクトリとなる、現在のバージョンの配置のラベルが付いた — v1.0.0.0 などです。  
   
-4.  **\[Files\]** タブをクリックします。  
+3.  **ファイル** メニューのをクリックして**開く**を開くには、アプリケーション マニフェスト。  
   
-5.  ページの先頭にあるボックスに、アプリケーションのファイルが格納してあるディレクトリを入力し、**\[Populate\]** をクリックします。  
+4.  選択、**ファイル**タブです。  
   
-     データ ファイルがグリッドに表示されます。  
+5.  タブの上部にあるテキスト ボックスで、アプリケーションのファイルを格納するディレクトリを入力し、クリックして**Populate**です。  
   
-6.  データ ファイルの **\[File Type\]** 値を **\[データ\]** に設定します。  
+     データ ファイルは、グリッドに表示されます。  
   
-7.  アプリケーション マニフェストを保存してからファイルに再署名します。  
+6.  設定、**ファイルの種類**データ ファイルの値**データ**です。  
   
-     MageUI.exe から、ファイルに署名し直すように求めるメッセージが表示されます。  
+7.  アプリケーション マニフェストを保存し、ファイルを再署名します。  
+  
+     MageUI.exe は、ファイルを再度署名することを求められます。  
   
 8.  配置マニフェストに再署名します。  
   
-     配置マニフェストは、アプリケーション マニフェストのハッシュが変更されているため、再署名する必要があります。  
+     アプリケーション マニフェストのハッシュが変更されたため、配置マニフェストを再署名する必要があります。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)

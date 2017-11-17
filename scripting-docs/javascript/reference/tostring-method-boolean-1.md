@@ -1,48 +1,51 @@
 ---
-title: "toString メソッド (Boolean) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "toString メソッド (Boolean) 1 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: c46b43c0-6946-407a-b0e0-49cba90e226a
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 17dd9503e4e09aafca3d153662bf7487538cda3d
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# toString メソッド (Boolean)
+# <a name="tostring-method-boolean-1"></a>toString メソッド (Boolean) 1
 オブジェクトの値を表す文字列を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 boolean.toString()  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  `boolean`  
- 必須です。  文字列表現を取得するオブジェクトを指定します。  
+ 必須です。 文字列形式を取得する対象のオブジェクト。  
   
-## 戻り値  
- ブール値が `true` の場合、"true" という文字列を返します。  それ以外の場合は、"false" を返します。  
+## <a name="return-value"></a>戻り値  
+ ブール値が場合`true`、"true"を返します。 それ以外の場合、"false"を返します。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 使用例  
- **toString** メソッドの使用例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、使用、 **toString**メソッドです。  
   
-```javascript  
+```JavaScript  
 var s = new Boolean(0);  
 document.write(s.toString());  
   
@@ -50,5 +53,5 @@ document.write(s.toString());
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv2](../../javascript/reference/includes/jsv2-md.md)]

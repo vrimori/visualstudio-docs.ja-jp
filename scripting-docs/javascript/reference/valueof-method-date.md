@@ -1,45 +1,48 @@
 ---
-title: "valueOf メソッド (日付) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
+title: "valueOf メソッド (Date) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
 ms.assetid: 39a1f96e-14b0-4db2-b53d-cdfd67cbb208
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 87c5e6ea3c3e28d866f7cabf92dc97b81703b5b1
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# valueOf メソッド (日付)
-世界協定時刻 \(UTC\) の 1970 年 1 月 1 日 0 時 0 分 0 秒からの経過時間を表すミリ秒単位の時刻値を返します。  
+# <a name="valueof-method-date"></a>valueOf メソッド (日付)
+午前 0 時、1970 年 1 月 1 日 (utc) からミリ秒単位で格納されている時刻の値を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
   
 date.valueOf()  
 ```  
   
-#### パラメーター  
- `date` オブジェクトは、Date の任意のインスタンスです。  
+#### <a name="parameters"></a>パラメーター  
+ `date`オブジェクトは、日付の任意のインスタンス。  
   
-## 戻り値  
- 世界協定時刻 \(UTC\) の 1970 年 1 月 1 日 0 時 0 分 0 秒からの経過時間を表すミリ秒単位の時刻値。  これは、`getTime` と同じ値です。  
+## <a name="return-value"></a>戻り値  
+ 午前 0 時、1970 年 1 月 1 日 (utc) 以降のミリ秒数で格納されている時刻の値。 これは、値と同じ`getTime`です。  
   
-## 使用例  
- 日付を指定した `valueOf` メソッドの使用例を次に示します。  
+## <a name="example"></a>例  
+ 次の例では、使用、`valueOf`日付を持つメソッドです。  
   
-```javascript  
+```JavaScript  
 var myDate = new Date();  
 myDate.setFullYear(2100, 5, 5);  
 if (myDate.getTime() == myDate.valueOf())  
@@ -51,5 +54,5 @@ else
   
 ```  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  [!INCLUDE[jsv2](../../javascript/reference/includes/jsv2-md.md)]
