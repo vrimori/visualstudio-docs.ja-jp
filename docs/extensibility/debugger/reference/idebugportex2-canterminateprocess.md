@@ -1,49 +1,49 @@
 ---
-title: "IDebugPortEx2::CanTerminateProcess | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortEx2::CanTerminateProcess"
-helpviewer_keywords: 
-  - "IDebugPortEx2::CanTerminateProcess"
+title: "IDebugPortEx2::CanTerminateProcess |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugPortEx2::CanTerminateProcess
+helpviewer_keywords: IDebugPortEx2::CanTerminateProcess
 ms.assetid: 111f65d8-5a1a-42b3-9de3-dd9bb03a33fd
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 1b256be2c354f680fe4ce4d898a3d60107956d80
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPortEx2::CanTerminateProcess
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プロセスを終了できるかどうかを判定します。  
+# <a name="idebugportex2canterminateprocess"></a>IDebugPortEx2::CanTerminateProcess
+プロセスを終了できるかどうかを判断します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT CanTerminateProcess(   
-   IDebugProcess2* pPortProcess  
+```cpp  
+HRESULT CanTerminateProcess(   
+   IDebugProcess2* pPortProcess  
 );  
 ```  
   
-```c#  
-HRESULT CanTerminateProcess(   
-   IDebugProcess2 pPortProcess  
+```csharp  
+HRESULT CanTerminateProcess(   
+   IDebugProcess2 pPortProcess  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pPortProcess`  
- \[入力\] [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) に終了するプロセス。  
+ [in][IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)終了するプロセスを表すオブジェクト。  
   
-## 戻り値  
- プロセスが終了した場合はを返します `S_OK` ; それ以外の場合戻り `S_FALSE`。  
+## <a name="return-value"></a>戻り値  
+ 返します`S_OK`プロセスを終了する場合を返しますそれ以外の場合、`S_FALSE`です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

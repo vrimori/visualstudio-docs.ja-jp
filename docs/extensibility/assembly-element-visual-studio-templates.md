@@ -1,56 +1,63 @@
 ---
-title: "Assembly 要素 (Visual Studio テンプレート) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#Assembly"
-helpviewer_keywords: 
-  - "Assembly 要素 [Visual Studio テンプレート]"
-  - "<Assembly> 要素 [Visual Studio テンプレート]"
+title: "Assembly 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#Assembly
+helpviewer_keywords:
+- Assembly element [Visual Studio templates]
+- <Assembly> element [Visual Studio templates]
 ms.assetid: 9242f76a-1273-4b8a-8f26-6606f91829ef
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 9032fa397e8fb4cb443d0209853ba4cfe7a5e53f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Assembly 要素 (Visual Studio テンプレート)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-アセンブリに関する情報を指定します。テンプレートがプロジェクトへアセンブリ参照を追加するときに、テンプレートによって使用されます。  
+# <a name="assembly-element-visual-studio-templates"></a>Assembly 要素 (Visual Studio テンプレート)
+そのアセンブリの参照をプロジェクトに追加するテンプレートを使用して、アセンブリに関する情報を指定します。  
   
-## 構文  
+ \<VSTemplate >  
+ \<TemplateContent >  
+ \<参照 >  
+ \<参照 >  
+ \<アセンブリ >  
+  
+## <a name="syntax"></a>構文  
   
 ```  
 <Assembly> AssemblyName </Assembly>  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
  なし。  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
  なし。  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
-|[参照](../extensibility/reference-element-visual-studio-templates.md)|プロジェクトにアイテムを追加するときに、追加するアセンブリ参照を指定します。|  
+|-------------|-----------------|  
+|[参照](../extensibility/reference-element-visual-studio-templates.md)|項目がプロジェクトに追加されたときに追加するアセンブリ参照を指定します。|  
   
-## テキスト値  
+## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- 項目テンプレートがインスタンス化されるときにプロジェクトに追加されるアセンブリを指定します。  このアセンブリ名は、次のいずれかの方法で指定する必要があります。  
+ このテキストは、項目テンプレートがインスタンス化されるときに、プロジェクトに追加するアセンブリを指定します。 次の方法のいずれかでは、このアセンブリ名を指定する必要があります。  
   
--   完全なアセンブリ名を指定します。  以下はその例です。  
+-   アセンブリの完全名。 例:  
   
     ```  
     <Assembly>  
@@ -58,19 +65,19 @@ caps.handback.revision: 10
     </Assembly>  
     ```  
   
--   簡易テキスト参照を指定します。  以下はその例です。  
+-   単純なテキストの参照。 例:  
   
     ```  
     <Assembly> System </Assembly>  
     ```  
   
-## 解説  
- `Assembly` は、`Reference` に必須の子要素です。  
+## <a name="remarks"></a>コメント  
+ `Assembly` は `Reference` に必須の子要素です。  
   
- `Reference` 要素、`References,` 要素、および `Assembly` 要素は、`Type` 属性に `Item` の値が付いている .vstemplate ファイルだけで使用できます。  
+ `Reference`、`References,`と`Assembly`要素は、.vstemplate ファイルでのみ使用できます、`Type`属性の値の`Item`します。  
   
-## 使用例  
- 項目テンプレートの `TemplateContent` 要素の例を次に示します。  この XML では、System.dll アセンブリおよび System.Data.dll アセンブリへの参照を追加します。  
+## <a name="example"></a>例  
+ 次の例を示しています、`TemplateContent`項目テンプレートの要素。 この XML は、System.dll および System.Data.dll アセンブリへの参照を追加します。  
   
 ```  
 <TemplateContent>  
@@ -90,6 +97,6 @@ caps.handback.revision: 10
 </TemplateContent>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [カスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

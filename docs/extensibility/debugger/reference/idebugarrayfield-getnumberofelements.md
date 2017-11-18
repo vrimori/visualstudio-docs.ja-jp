@@ -1,51 +1,51 @@
 ---
-title: "IDebugArrayField::GetNumberOfElements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugArrayField::GetNumberOfElements"
-helpviewer_keywords: 
-  - "IDebugArrayField::GetNumberOfElements メソッド"
+title: "IDebugArrayField::GetNumberOfElements |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugArrayField::GetNumberOfElements
+helpviewer_keywords: IDebugArrayField::GetNumberOfElements method
 ms.assetid: a1961ef3-d69d-4022-b8c9-b9cfb9811345
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 30b85f22a433a457eb9813790eb0456ba7275c0b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugArrayField::GetNumberOfElements
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-配列の要素の数を取得します。  
+# <a name="idebugarrayfieldgetnumberofelements"></a>IDebugArrayField::GetNumberOfElements
+配列内の要素の数を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetNumberOfElements(   
-   DWORD* pdwNumElements  
+```cpp  
+HRESULT GetNumberOfElements(   
+   DWORD* pdwNumElements  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetNumberOfElements(  
-   out uint pdwNumElements  
+   out uint pdwNumElements  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pdwNumElements`  
- \[入力\] 配列の要素数を返します。  
+ [out]配列内の要素の数を返します。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- 返される値は次元数に関係なく配列の要素の総数です。  
+## <a name="remarks"></a>コメント  
+ 返される値は、ディメンションの数に関係なく、配列内の要素の合計数です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)

@@ -1,201 +1,200 @@
 ---
-title: "SymTagEnum | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SymTagEnum 列挙型"
+title: "SymTagEnum |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: SymTagEnum enumeration
 ms.assetid: 528a50cf-e13d-46ec-a98c-323d5d047de9
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4ffafd105a6e492f4ce1dc1837137c6020be7dc2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# SymTagEnum
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-シンボルの種類を指定します。  
+# <a name="symtagenum"></a>SymTagEnum
+記号の種類を指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum SymTagEnum {   
-   SymTagNull,  
-   SymTagExe,  
-   SymTagCompiland,  
-   SymTagCompilandDetails,  
-   SymTagCompilandEnv,  
-   SymTagFunction,  
-   SymTagBlock,  
-   SymTagData,  
-   SymTagAnnotation,  
-   SymTagLabel,  
-   SymTagPublicSymbol,  
-   SymTagUDT,  
-   SymTagEnum,  
-   SymTagFunctionType,  
-   SymTagPointerType,  
-   SymTagArrayType,   
-   SymTagBaseType,   
-   SymTagTypedef,   
-   SymTagBaseClass,  
-   SymTagFriend,  
-   SymTagFunctionArgType,   
-   SymTagFuncDebugStart,   
-   SymTagFuncDebugEnd,  
-   SymTagUsingNamespace,   
-   SymTagVTableShape,  
-   SymTagVTable,  
-   SymTagCustom,  
-   SymTagThunk,  
-   SymTagCustomType,  
-   SymTagManagedType,  
-   SymTagDimension,  
-   SymTagCallSite,  
-   SymTagInlineSite,  
-   SymTagBaseInterface,  
-   SymTagVectorType,  
-   SymTagMatrixType,  
-   SymTagHLSLType  
+```C++  
+enum SymTagEnum {   
+   SymTagNull,  
+   SymTagExe,  
+   SymTagCompiland,  
+   SymTagCompilandDetails,  
+   SymTagCompilandEnv,  
+   SymTagFunction,  
+   SymTagBlock,  
+   SymTagData,  
+   SymTagAnnotation,  
+   SymTagLabel,  
+   SymTagPublicSymbol,  
+   SymTagUDT,  
+   SymTagEnum,  
+   SymTagFunctionType,  
+   SymTagPointerType,  
+   SymTagArrayType,   
+   SymTagBaseType,   
+   SymTagTypedef,   
+   SymTagBaseClass,  
+   SymTagFriend,  
+   SymTagFunctionArgType,   
+   SymTagFuncDebugStart,   
+   SymTagFuncDebugEnd,  
+   SymTagUsingNamespace,   
+   SymTagVTableShape,  
+   SymTagVTable,  
+   SymTagCustom,  
+   SymTagThunk,  
+   SymTagCustomType,  
+   SymTagManagedType,  
+   SymTagDimension,  
+   SymTagCallSite,  
+   SymTagInlineSite,  
+   SymTagBaseInterface,  
+   SymTagVectorType,  
+   SymTagMatrixType,  
+   SymTagHLSLType  
 };  
 ```  
   
-## Elements  
+## <a name="elements"></a>Elements  
  `SymTagNull`  
- シンボルが種類を持っていないことを示します。  
+ シンボルに型が含まれていないことを示します。  
   
  `SymTagExe`  
- .Exe ファイルのシンボルであることを示します。  1 つしかない`SymTagExe`シンボルをシンボル ストアごと。  グローバル スコープとして機能し、構文の親はありません。  
+ シンボルが .exe ファイルであることを示します。 1 つだけを使用する必要がある`SymTagExe`シンボル ストアごとのシンボルです。 これにより、グローバル スコープとして機能しは構文上の親がありません。  
   
  `SymTagCompiland`  
- 各コンパイル コンポーネントのシンボル ストアのコンパイル シンボルを指定します。  ネイティブ アプリケーション用`SymTagCompiland`記号を対応するイメージにリンクされたオブジェクトファイルにします。  Microsoft 中間言語 \(MSIL\) のイメージの種類によっては、各クラスの 1 つのコンパイルがありません。  
+ コンパイル単位シンボルをシンボル ストアの各コンポーネントのコンパイル単位を示します。 ネイティブ アプリケーションは、`SymTagCompiland`シンボルが、イメージにリンクされたオブジェクト ファイルに対応します。 Microsoft Intermediate Language (MSIL) のイメージの一部の種類の場合は、クラスごとの 1 つのコンパイル単位です。  
   
  `SymTagCompilandDetails`  
- シンボルにするコンパイル単位内の拡張属性が含まれていることを示します。  これらのプロパティを取得するコンパイル シンボルをロードする必要があります。  
+ シンボルが、コンパイル単位の拡張属性が含まれていることを示します。 これらのプロパティを取得するには、コンパイル単位シンボルを読み込む必要があります。  
   
  `SymTagCompilandEnv`  
- コンパイル単位内で定義された環境文字列のシンボルであることを示します。  
+ シンボルが、コンパイル単位に対して定義されている環境文字列であることを示します。  
   
  `SymTagFunction`  
- シンボル関数であることを示します。  
+ シンボルが関数であることを示します。  
   
  `SymTagBlock`  
- 入れ子になったブロックのシンボルであることを示します。  
+ シンボルが入れ子になったブロックであることを示します。  
   
  `SymTagData`  
- データのシンボルであることを示します。  
+ シンボルがデータであることを示します。  
   
  `SymTagAnnotation`  
- シンボルはコードのコメントをであることを示します。  この記号の子は、定数のデータ文字列 \(`SymTagData`、 `LocIsConstant`、 `DataIsConstant`\)。  ほとんどのクライアントは、この記号を無視します。  
+ コードの注釈のシンボルであることを示します。 このシンボルの子が定数のデータの文字列 (`SymTagData`、 `LocIsConstant`、 `DataIsConstant`)。 ほとんどのクライアントは、このシンボルを無視します。  
   
  `SymTagLabel`  
  シンボルはラベルであることを示します。  
   
  `SymTagPublicSymbol`  
- パブリック シンボルのシンボルであることを示します。  ネイティブ アプリケーションでは、このシンボルは、イメージをリンクする際に発生した、COFF 外部記号です。  
+ シンボルは、パブリック シンボルであることを示します。 ネイティブ アプリケーションは、このシンボルは、イメージをリンクする際に発生した COFF 外部シンボルです。  
   
  `SymTagUDT`  
- シンボルがユーザー定義型 \(構造体、クラス、または共用体\) であることを示します。  
+ シンボルが、ユーザー定義型 (構造体、クラス、または和集合) であることを示します。  
   
  `SymTagEnum`  
- 列挙型のシンボルであることを示します。  
+ シンボルが列挙型であることを示します。  
   
  `SymTagFunctionType`  
- シンボル関数シグネチャの一種であることを示します。  
+ シンボルが関数のシグネチャの型であることを示します。  
   
  `SymTagPointerType`  
  シンボルがポインター型であることを示します。  
   
  `SymTagArrayType`  
- 配列型のシンボルであることを示します。  
+ シンボルが配列型であることを示します。  
   
  `SymTagBaseType`  
- 基本型のシンボルであることを示します。  
+ シンボルが基本型であることを示します。  
   
  `SymTagTypedef`  
- シンボルであることを示す、 `typedef`、つまり、別の種類の別名。  
+ シンボルがあることを示します、 `typedef`、つまり、別の型のエイリアスです。  
   
  `SymTagBaseClass`  
- シンボルがユーザー定義型の基本クラスであることを示します。  
+ シンボルがユーザー定義型の基底クラスであることを示します。  
   
  `SymTagFriend`  
  シンボルがユーザー定義型のフレンドであることを示します。  
   
  `SymTagFunctionArgType`  
- シンボルは、関数の引数であることを示します。  
+ シンボルが関数の引数であることを示します。  
   
  `SymTagFuncDebugStart`  
- 記号が、関数のプロローグ コードの終了位置であることを示します。  
+ シンボルが関数のプロローグ コードの終了位置であることを示します。  
   
  `SymTagFuncDebugEnd`  
- シンボル関数のエピローグ コードの開始位置であることを示します。  
+ シンボルが関数のエピローグ コードの開始位置であることを示します。  
   
  `SymTagUsingNamespace`  
- 名前空間名、現在のスコープで有効なシンボルであることを示します。  
+ シンボルが、現在のスコープでアクティブな名前空間の名前であることを示します。  
   
  `SymTagVTableShape`  
- 仮想テーブルの説明のシンボルであることを示します。  
+ シンボルが仮想テーブルの説明であることを示します。  
   
  `SymTagVTable`  
- シンボルは、仮想テーブル ポインターことを示します。  
+ シンボルが仮想テーブルへのポインターであることを示します。  
   
  `SymTagCustom`  
- シンボルは、カスタムのシンボルであり、中で解釈されないことを示しています。  
+ シンボルがカスタム シンボルであり、DIA. で解釈されないことを示します  
   
  `SymTagThunk`  
- シンボル、サンクの 16 と 32 ビット コード間でデータを共有するために使用されることを示します。  
+ シンボルがサンクを 16、32 ビット コードの間でデータを共有するために使用されることを示します。  
   
  `SymTagCustomType`  
- カスタム コンパイラのシンボルのシンボルであることを示します。  
+ シンボルがカスタム コンパイラ シンボルであることを示します。  
   
  `SymTagManagedType`  
- メタデータ内のシンボルであることを示します。  
+ シンボルがメタデータであることを示します。  
   
  `SymTagDimension`  
- シンボルは、FORTRAN の多次元配列であることを示します。  
+ シンボルが、FORTRAN 多次元配列であることを示します。  
   
  `SymTagCallSite`  
- シンボルの呼び出しサイトを表すことを示します。  
+ シンボルが呼び出しサイトを表すことを示します。  
   
  `SymTagInlineSite`  
- シンボルが、インラインのサイトを表すことを示します。  
+ シンボルがインライン サイトを表すことを示します。  
   
  `SymTagBaseInterface`  
  シンボルは、基本インターフェイスであることを示します。  
   
  `SymTagVectorType`  
- シンボルは、ベクター型であることを示します。  
+ シンボルがベクトルの型であることを示します。  
   
  `SymTagMatrixType`  
- シンボルは、\[マトリックス\] 種類であることを示します。  
+ シンボルがマトリックス型であることを示します。  
   
  `SymTagHLSLType`  
- シンボルは、高レベル シェーダー言語の一種であることを示します。  
+ シンボルが高レベルのシェーダー言語の型であることを示します。  
   
-## 解説  
- デバッグ ファイル内のすべてのシンボルは、シンボルのタイプを指定しますを識別するタグがあります。  
+## <a name="remarks"></a>コメント  
+ デバッグ ファイル内のすべてのシンボルでは、シンボルの型を指定する識別タグがあります。  
   
- この列挙体の値への呼び出しによって返される、 [IDiaSymbol::get\_symTag](../Topic/IDiaSymbol::get_symTag.md)メソッド。  
+ この列挙体の値がへの呼び出しによって返される、 [idiasymbol::get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)メソッドです。  
   
- この列挙体の値を検索するには、シンボルの特定の種類の範囲を制限するには、次の方法で渡されます。  
+ この列挙体の値は、特定の記号の型への検索のスコープを制限する次のメソッドに渡されます。  
   
 -   [IDiaSession::findSymbolByAddr](../../debugger/debug-interface-access/idiasession-findsymbolbyaddr.md)  
   
--   [IDiaSession::findSymbolByRVA](../Topic/IDiaSession::findSymbolByRVA.md)  
+-   [IDiaSession::findSymbolByRVA](../../debugger/debug-interface-access/idiasession-findsymbolbyrva.md)  
   
 -   [IDiaSession::findSymbolByRVAEx](../../debugger/debug-interface-access/idiasession-findsymbolbyrvaex.md)  
   
 -   [IDiaSession::findSymbolByToken](../../debugger/debug-interface-access/idiasession-findsymbolbytoken.md)  
   
--   [IDiaSession::findSymbolByVA](../Topic/IDiaSession::findSymbolByVA.md)  
+-   [IDiaSession::findSymbolByVA](../../debugger/debug-interface-access/idiasession-findsymbolbyva.md)  
   
 -   [IDiaSession::findSymbolByVAEx](../../debugger/debug-interface-access/idiasession-findsymbolbyvaex.md)  
   
@@ -203,17 +202,17 @@ enum SymTagEnum { 
   
 -   [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: cvconst.h  
   
-## 参照  
- [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   
- [IDiaSession::findSymbolByAddr](../../debugger/debug-interface-access/idiasession-findsymbolbyaddr.md)   
- [IDiaSession::findSymbolByRVA](../Topic/IDiaSession::findSymbolByRVA.md)   
- [IDiaSession::findSymbolByRVAEx](../../debugger/debug-interface-access/idiasession-findsymbolbyrvaex.md)   
- [IDiaSession::findSymbolByToken](../../debugger/debug-interface-access/idiasession-findsymbolbytoken.md)   
- [IDiaSession::findSymbolByVA](../Topic/IDiaSession::findSymbolByVA.md)   
- [IDiaSession::findSymbolByVAEx](../../debugger/debug-interface-access/idiasession-findsymbolbyvaex.md)   
- [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
+ [Idiasession::findsymbolbyaddr](../../debugger/debug-interface-access/idiasession-findsymbolbyaddr.md)   
+ [Idiasession::findsymbolbyrva](../../debugger/debug-interface-access/idiasession-findsymbolbyrva.md)   
+ [Idiasession::findsymbolbyrvaex](../../debugger/debug-interface-access/idiasession-findsymbolbyrvaex.md)   
+ [Idiasession::findsymbolbytoken](../../debugger/debug-interface-access/idiasession-findsymbolbytoken.md)   
+ [Idiasession::findsymbolbyva](../../debugger/debug-interface-access/idiasession-findsymbolbyva.md)   
+ [Idiasession::findsymbolbyvaex](../../debugger/debug-interface-access/idiasession-findsymbolbyvaex.md)   
+ [Idiasession::findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
  [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)

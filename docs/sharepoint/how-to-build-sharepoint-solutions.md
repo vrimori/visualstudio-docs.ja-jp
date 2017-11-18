@@ -1,40 +1,41 @@
 ---
-title: "方法: SharePoint ソリューションをビルドする"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, ビルド"
+title: "方法: SharePoint ソリューションのビルド |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, building
 ms.assetid: 7ded93e6-fba2-4e7f-8865-62841fd2b04b
-caps.latest.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 5e198cce23f29cc00079c2bd60077ade3663bc8b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: SharePoint ソリューションをビルドする
-  SharePoint ソリューションをビルドする方法は、Visual Studio で他のアプリケーションをビルドする場合とまったく変わりません。  アプリケーションのビルドの詳細については、「[Visual Studio でのアプリケーションのビルド](../ide/compiling-and-building-in-visual-studio.md)」を参照してください。  SharePoint ソリューションに固有の考慮事項については、「[方法: SharePoint ソリューションをローカルの SharePoint サイトに配置および発行する](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)」を参照してください。  
+# <a name="how-to-build-sharepoint-solutions"></a>方法: SharePoint ソリューションをビルドする
+  SharePoint ソリューションのビルドは、Visual Studio での他のアプリケーションを構築するよりも変わりません。 アプリケーションの構築に関する詳細については、次を参照してください。[をコンパイルすると、Visual Studio でのビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)です。 SharePoint ソリューションに固有のいくつかの考慮事項の詳細については、次を参照してください。[する方法: 展開と SharePoint ソリューションをローカル SharePoint サイトにパブリッシュ](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)です。  
   
-### SharePoint ソリューションをビルドするには  
+### <a name="to-build-sharepoint-solutions"></a>SharePoint ソリューションをビルドするには  
   
-1.  デバッグ ビルドとリリース ビルドのどちらを作成するかを決めます。  詳細については、「[デバッガーに関連するプロジェクト設定](../debugger/debugger-project-settings.md)」を参照してください。  
+1.  デバッグとリリース ビルドを作成するかどうかを決定します。 詳細については、次を参照してください。[デバッガー プロジェクト設定](/visualstudio/debugger/debugger-project-settings)です。  
   
-2.  ソリューションまたはプロジェクトをビルドまたは再ビルドするための適切なオプションを選択します。  詳細については、「[Visual Studio でのアプリケーションのビルド](../ide/compiling-and-building-in-visual-studio.md)」を参照してください。  
+2.  構築や、ソリューションまたはプロジェクトを再構築に適したオプションを選択します。 詳細については、次を参照してください。[をコンパイルすると、Visual Studio でのビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)です。  
   
-3.  メニュー バーの **\[ビルド\]**、**\[ソリューションのビルド\]** の順にクリックします。  
+3.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   
   

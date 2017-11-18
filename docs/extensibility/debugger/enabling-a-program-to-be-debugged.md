@@ -1,58 +1,43 @@
 ---
-title: "デバッグするプログラムを有効にする |Microsoft ドキュメント"
+title: "デバッグするプログラムを有効化 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- debugging [Debugging SDK], enabling for programs
+helpviewer_keywords: debugging [Debugging SDK], enabling for programs
 ms.assetid: 61d24820-0cd9-48b6-8674-6813f7493237
-caps.latest.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 66daff038c7556a693964d5dabc4de054990d791
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: f1c38c110e9499936a24c33432180adf18209bf7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="enabling-a-program-to-be-debugged"></a>デバッグするプログラムを有効にします。
-デバッグ エンジン (DE) がプログラムをデバッグする前にまず、DE を開始したり、既存のプログラムにアタッチする必要があります。  
+デバッグ エンジン (DE) は、プログラムをデバッグできます、前にするには、DE を起動か、既存のプログラムにアタッチします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ポートを取得します。](../../extensibility/debugger/getting-a-port.md)  
- デバッグするプログラムを有効にするための第一歩として、ポートを取得する方法について説明します。  
+ [ポートの取得](../../extensibility/debugger/getting-a-port.md)  
+ デバッグするプログラムを有効にする最初のステップとしてポートを取得する方法について説明します。  
   
- [プログラムを登録します。](../../extensibility/debugger/registering-the-program.md)  
- 次に、デバッグするプログラムを有効にする方法について説明します。 ポートに登録します。 プログラムをデバッグできる登録されると、接続するか、ジャスト イン タイム (JIT) デバッグのプロセスでいずれかです。  
+ [プログラムの登録](../../extensibility/debugger/registering-the-program.md)  
+ デバッグするプログラムを有効にするのには、次の手順について説明します。 ポートに登録することです。 プログラムをデバッグできる登録されると、アタッチまたはジャスト イン タイム (JIT) デバッグのプロセスでいずれか。  
   
  [プログラムへのアタッチ](../../extensibility/debugger/attaching-to-the-program.md)  
- 次の手順を説明します。 プログラムにデバッガーをアタッチします。  
+ 次の手順について説明します。 プログラムにデバッガーをアタッチします。  
   
  [起動ベースのアタッチ](../../extensibility/debugger/launch-based-attachment.md)  
- 添付ファイルで自動起動すると、SDM であるプログラムを起動ベースについて説明します。  
+ プログラムは、によって、SDM の起動時に自動的に起動ベースの添付ファイルについて説明します。  
   
- [必要なイベントを送信します。](../../extensibility/debugger/sending-the-required-events.md)  
- デバッグ エンジン (DE) を作成するときに、必要なイベントの手順を説明し、プログラムにアタッチします。  
+ [必要なイベントの送信](../../extensibility/debugger/sending-the-required-events.md)  
+ デバッグ エンジン (DE) を作成するときに、必要なイベントと手順を説明して、プログラムにアタッチします。  
   
 ## <a name="related-sections"></a>関連項目  
- [カスタム デバッグ エンジンを作成します。](../../extensibility/debugger/creating-a-custom-debug-engine.md)  
- デバッグ エンジン (DE) を定義し、DE インターフェイスとどのように引き起こす可能性がある別の操作モード間の遷移にデバッガーによって実装され、サービスについて説明します。
+ [カスタム デバッグ エンジンの作成](../../extensibility/debugger/creating-a-custom-debug-engine.md)  
+ デバッグ エンジン (DE) を定義し、DE インターフェイスと別の操作モード間の遷移にデバッガーを生じる方法で実装するサービスについて説明します。

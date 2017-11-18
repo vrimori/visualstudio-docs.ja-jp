@@ -1,51 +1,52 @@
 ---
-title: "デバッガー コンテキスト | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[デバッグ SDK] コンテキストのデバッグ"
+title: "デバッガーのコンテキスト |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: debugging [Debugging SDK], contexts
 ms.assetid: 79808036-b680-4e4c-9c61-4ed43aa11323
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 809f0f50ace62253371d4fd14425bb870a3be633
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# デバッガー コンテキスト
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-デバッグ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ではデバッグ エンジンは \(DE\)個別のコンテキスト内で次のように同時に実行されます :  
+# <a name="debugger-contexts"></a>デバッガー コンテキスト
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッグは、デバッグ エンジン (DE) 操作に同時にいくつかの異なるコンテキスト内で次のようにします。  
   
--   プログラム実行ストリーム内の現在の位置を表すコード コンテキスト。  
+-   プログラムの実行のストリームの現在の場所を記述するコードのコンテキスト。  
   
--   ソース ドキュメント内の現在位置を記述する場所またはドキュメントのコンテキスト。  
+-   ドキュメントのコンテキストまたは位置で、ソース ドキュメント内の現在位置をについて説明します。  
   
--   式の評価がのコンテキストを記述する式の評価のコンテキスト。  
+-   式の評価は行わコンテキストを記述する式の評価のコンテキスト。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [コード コンテキスト](../../extensibility/debugger/code-context.md)  
- 現在のランタイム アーキテクチャでプログラム命令ストリームでアドレスとしてコード コンテキストとコードが命令によって表されるそのほかの手段ついて説明します。従来とは異なり言語。  
+ ここでコードが表現できない手順については、他の方法で、従来とは異なる言語ではなく現在の実行時のアーキテクチャでプログラムの命令ストリーム内のアドレスとして、コードのコンテキストについて説明します。  
   
- [ドキュメントの場所](../../extensibility/debugger/document-position.md)  
- IDE で認識されるようにソース ファイルの場所の抽象化して Visual Studio のデバッグに関連するドキュメントの場所を定義します。  
+ [ドキュメントの位置](../../extensibility/debugger/document-position.md)  
+ Visual Studio の IDE に認識されているソース ファイル内の位置の抽象化を使用してデバッグにドキュメントの位置を定義します。  
   
  [ドキュメントのコンテキスト](../../extensibility/debugger/document-context.md)  
- どのドキュメントのコンテキストはソース ファイルに関連する Visual Studio のデバッグで表すかについて説明します。  またシンボル ハンドラーがドキュメントのコンテキストにコード コンテキストをどのようにマップするかについて説明します。  
+ 説明で Visual Studio のデバッグ ソース ファイルに関連してどのようなドキュメントのコンテキストを表します。 シンボル ハンドラーがドキュメントのコンテキストに、コードのコンテキストをどのようにマップする方法についても説明します。  
   
  [式の評価のコンテキスト](../../extensibility/debugger/expression-evaluation-context.md)  
- Visual Studio の式の評価のコンテキストについて説明します。  たとえばスタック フレームに関連付けられた式の評価のコンテキストが評価のローカル変数メソッドのパラメーターおよびクラス メンバーのコンテキストを用意します。  
+ Visual Studio での式の評価コンテキストに関する情報を提供します。 たとえば、スタック フレームに関連付けられている式の評価コンテキストは、ローカル変数、メソッドのパラメーター、およびクラス メンバーを評価するためのコンテキストを提供します。  
   
-## 関連項目  
+## <a name="related-sections"></a>関連項目  
  [デバッグの概念](../../extensibility/debugger/debugger-concepts.md)  
- デバッグの主要なアーキテクチャの概念について説明します。  
+ デバッグ アーキテクチャ、主要な概念をについて説明します。  
   
- [デバッグ コンポーネント](../../extensibility/debugger/debugger-components.md)  
- デバッグ エンジン \(DE\)式エバリュエーターとシンボル ハンドラーを含む Visual Studio のデバッグ コンポーネントの \(EE\) 概要を説明します。\(SH\)  
+ [コンポーネントのデバッグ](../../extensibility/debugger/debugger-components.md)  
+ デバッグ エンジン (DE)、式エバリュエーター (EE) およびシンボル ハンドラー (SH) を含む Visual Studio デバッグ コンポーネントの概要を示します。  
   
- [デバッグ タスク](../../extensibility/debugger/debugging-tasks.md)  
- プログラムを起動し式を評価などのさまざまなデバッグ タスクへのリンクが含まれます。
+ [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)  
+ プログラムを起動して、式を評価するなど、さまざまなデバッグ タスクへのリンクが含まれています。

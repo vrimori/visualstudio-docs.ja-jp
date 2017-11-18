@@ -1,55 +1,57 @@
 ---
-title: "方法: Office ソリューションに署名する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "証明書 [Visual Studio での Office 開発], Office ソリューション"
-  - "セキュリティ [Visual Studio での Office 開発], 署名 (Office ソリューションに)"
-  - "署名 (マニフェストに) [Visual Studio での Office 開発]"
+title: "方法: Office ソリューションの署名 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- certificates [Office development in Visual Studio], Office solutions
+- security [Office development in Visual Studio], signing Office solutions
+- signing manifests [Office development in Visual Studio]
 ms.assetid: d3df5ee6-f1b7-47ed-b7ee-8985679ee3af
-caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 12a367b6051f7ed1ca1f51e0c9d7e8ada4be4ba6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: Office ソリューションに署名する
-  ソリューションに署名する場合は、証明書を証拠として使用し、ソリューションに信頼を付与することができます。  複数のソリューションに対して同じ証明書を使用できます。この場合、すべてのソリューションはセキュリティ ポリシーを更新することなく信頼されます。  
+# <a name="how-to-sign-office-solutions"></a>方法: Office ソリューションに署名する
+  ソリューションに署名する場合は、証拠として、証明書を使用してソリューションに信頼を付与できます。 複数のソリューションに対して、同じ証明書を使用してによる追加のセキュリティ ポリシー更新のないすべてのソリューションが信頼されます。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- マニフェストの生成および編集ツール \(mage.exe および mageui.exe\) を使用してアプリケーション マニフェストと配置マニフェストを手動で編集する場合、これらのマニフェストを使用するには、事前にマニフェストに再署名することが必要です。  詳細については、「[方法: アプリケーション マニフェストおよび配置マニフェストに再署名する](../Topic/How%20to:%20Re-sign%20Application%20and%20Deployment%20Manifests.md)」を参照してください。  
+ アプリケーションを手動で編集すると、配置マニフェストの生成および編集ツール (mage.exe および mageui.exe) を使用してマニフェストに、使用できるようにマニフェストに再署名する必要があります。 詳細については、「 [How to: Re-sign Application and Deployment Manifests](/visualstudio/deployment/how-to-re-sign-application-and-deployment-manifests)」を参照してください。  
   
-## 証明書を使用した署名  
- 証明書は 1 つのファイルで、一意のキーと、ソリューションの発行者の ID が格納されています。  証明書は、証明機関から購入するか、開発者自身の証明書を作成して証明機関の署名を受けます。  
+## <a name="signing-by-using-a-certificate"></a>証明書を使用して署名  
+ 証明書は、一意のキーとソリューションの発行元の id を含むファイルです。 証明機関から証明書を購入または独自の証明書を作成し、証明機関の署名があることがことができます。  
   
- Visual Studio では、デバッグできるように、一時的な証明書を使用して Office ソリューションに署名します。  配置するソリューションでは、一時的な証明書を証拠としては使用しないでください。  
+ Visual Studio は、Office ソリューションのデバッグを有効に一時的な証明書で署名します。 証拠として配置されるソリューションで一時的な証明書を使用する必要がありますされません。  
   
-#### 証明書を使用して Office ソリューションに署名するには  
+#### <a name="to-sign-an-office-solution-by-using-a-certificate"></a>証明書を使用して Office ソリューションを署名するには  
   
-1.  **\[プロジェクト\]** メニューの **\[*SolutionName* のプロパティ\]** をクリックします。  
+1.  **プロジェクト** メニューのをクリックして*SolutionName***プロパティ**です。  
   
-2.  **\[署名\]** タブをクリックします。  
+2.  **[署名]** タブをクリックします。  
   
-3.  **\[ClickOnce マニフェストに署名する\]** を選択します。  
+3.  選択**ClickOnce マニフェストに署名**です。  
   
-4.  **\[ストアから選択\]** または **\[ファイルから選択\]** をクリックして証明書を探し、証明書の位置まで移動します。  
+4.  クリックして、証明書を探します**ストアから選択**または**ファイルから選択**し、証明書に移動します。  
   
-5.  正しい証明書が使用されていることを確認するには、**\[詳細情報\]** をクリックし、証明書情報を表示します。  
+5.  適切な証明書を使用していることを確認する をクリックして**詳細**証明書情報を表示します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
  [Office ソリューションへの信頼の付与](../vsto/granting-trust-to-office-solutions.md)   
- [ページ &#40;プロジェクト デザイナー&#41;](../ide/reference/signing-page-project-designer.md)  
+ [[署名] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/signing-page-project-designer)  
   
   

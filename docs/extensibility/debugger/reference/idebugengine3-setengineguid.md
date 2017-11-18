@@ -1,49 +1,49 @@
 ---
-title: "IDebugEngine3::SetEngineGuid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine3::SetEngineGuid"
-helpviewer_keywords: 
-  - "IDebugEngine3::SetEngineGuid"
+title: "IDebugEngine3::SetEngineGuid |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEngine3::SetEngineGuid
+helpviewer_keywords: IDebugEngine3::SetEngineGuid
 ms.assetid: 8bdfa05d-feb7-4d98-abac-77825a04c50f
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: f31bc27cdfe197a118d1b696225ea332fc0026ca
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEngine3::SetEngineGuid
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドはデバッグ エンジン \(DE\) の `GUID` を設定します。  
+# <a name="idebugengine3setengineguid"></a>IDebugEngine3::SetEngineGuid
+このメソッドは、デバッグ エンジンの (DE) を設定`GUID`です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT SetEngineGuid(  
-   GUID* guidEngine  
+HRESULT SetEngineGuid(  
+   GUID* guidEngine  
 );  
 ```  
   
 ```  
 [C#]  
 int SetEngineGuid(  
-   ref Guid guidEngine  
+   ref Guid guidEngine  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `guidEngine`  
- \[入力\] エンジンの `GUID`。  
+ [in]`GUID`エンジンのです。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

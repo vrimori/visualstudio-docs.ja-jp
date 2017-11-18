@@ -1,60 +1,59 @@
 ---
-title: "IDiaStackWalkHelper::pdataForVA | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalkHelper2::pdataByVA メソッド"
+title: "IDiaStackWalkHelper::pdataForVA |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalkHelper2::pdataByVA method
 ms.assetid: fafc38fe-74dc-4726-9a51-eebf3a673d7f
-caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4925a4a37395dd53fabb1d8d7ba7f80bc5cc6c93
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalkHelper::pdataForVA
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-仮想アドレスに関連付けられた PDATA のデータ ブロックを返します。  
+# <a name="idiastackwalkhelperpdataforva"></a>IDiaStackWalkHelper::pdataForVA
+仮想アドレスに関連付けられている PDATA データ ブロックを返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT pdataForVA(   
-   ULONGLONG  va,  
-   DWORD      cbData,  
-   DWORD*     pcbData,  
-   BYTE*      pbData  
+```C++  
+HRESULT pdataForVA(   
+   ULONGLONG  va,  
+   DWORD      cbData,  
+   DWORD*     pcbData,  
+   BYTE*      pbData  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `va`  
- \[入力\] データの仮想アドレスを取得するように指定します。  
+ [in]取得するデータの仮想アドレスを指定します。  
   
  `cbData`  
- \[入力\] 取得するバイト データのサイズ。  
+ [in]取得するバイトのデータのサイズ。  
   
  `pcbData`  
- \[出力\] 取得されたバイト データの実際のサイズを返します。  
+ [out]取得されたバイト数では、データの実際のサイズを返します。  
   
  `pbData`  
- \[入力出力\] 要求されたデータが格納されるバッファー。  `NULL` にすることはできません。  
+ [入力、出力].要求されたデータが入力バッファー。 ことはできません`NULL`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK` 指定したアドレスの PDATA がある `S_FALSE` を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 返します`S_FALSE`指定されたアドレスの PDATA がない場合。 それ以外の場合はエラー コードを返します。  
   
-## 解説  
- コンパイル単位 \(.pdata PDATA 「」というセクション\) は関数の例外処理に関する情報が含まれます。  
+## <a name="remarks"></a>コメント  
+ PDATA (".pdata"という名前の部分)、コンパイル単位の関数の例外処理に関する情報が含まれています。  
   
- 呼び出し元はデータの量を呼び出す必要があるデータの量を返す必要があるので呼び出し元はないかを確認します。  したがって `pbData` のパラメーターが `NULL` 場合このメソッドは実装がエラーを返すことを指定できます。  
+ 呼び出し元は、データの量が、呼び出し元には、データの量は利用できるように依頼する必要があるないために返されるを認識します。 したがって、エラーを返す場合はこのメソッドを実装するための許容は、`pbData`パラメーターは`NULL`します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

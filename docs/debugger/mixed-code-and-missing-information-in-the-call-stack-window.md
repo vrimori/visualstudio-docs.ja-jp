@@ -1,48 +1,46 @@
 ---
-title: "[呼び出し履歴] ウィンドウの混合コードと不足情報 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "SQL"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "マネージ コード、ステップ実行"
-  - "[呼び出し履歴] ウィンドウ、混合モード デバッグ"
-  - "[呼び出し履歴] ウィンドウ、トラブルシューティング"
-  - "ネイティブ フレーム"
-  - "マネージ呼び出し履歴"
-  - "混合モード デバッグ、呼び出し履歴"
-  - "ステップ実行、マネージ コード外"
+title: "混合コードと呼び出し履歴 ウィンドウで不足している情報 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+- SQL
+helpviewer_keywords:
+- managed code, stepping
+- Call Stack window, mixed-mode debugging
+- Call Stack window, troubleshooting
+- native frames
+- managed call stacks
+- mixed-mode debugging, call stack
+- stepping, out of managed code
 ms.assetid: dd628427-e8d6-4fc2-b524-9d6393ea5376
-caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 97c7cd3588edbb7b07c5eaed25df07c882805d73
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# [呼び出し履歴] ウィンドウの混合コードと不足情報
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-マネージ コードとネイティブ コードの呼び出し履歴には違いがあるため、コードの種類が混在する場合、呼び出し履歴にすべてを表示できるとは限りません。  ネイティブ コードがマネージ コードを呼び出すと、**\[呼び出し履歴\]** ウィンドウで以下の不具合が生じます。  
+# <a name="mixed-code-and-missing-information-in-the-call-stack-window"></a>[呼び出し履歴] ウィンドウの混合コードと不足情報
+マネージ コードとネイティブ コードの呼び出し履歴には違いがあるため、コードの種類が混在する場合、呼び出し履歴にすべてを表示できるとは限りません。 以下の不具合に気付くかもしれませんネイティブ コードがマネージ コードを呼び出すと、**呼び出し履歴**ウィンドウ。  
   
--   マネージ コードのすぐ上にあるネイティブ フレームが、**\[呼び出し履歴\]** ウィンドウに表示されない場合があります。  詳細については、「[方法 : ネイティブ フレームが \[呼び出し履歴\] ウィンドウに見つからないときにマネージ コードからステップ アウトする](../Topic/How%20to:%20Step%20out%20of%20Managed%20Code%20when%20Native%20Frames%20are%20Missing%20from%20the%20Call%20Stack%20Window.md)」を参照してください。  
+-   マネージ コードのすぐ上にあるネイティブ フレームがない可能性があります、**呼び出し履歴**ウィンドウです。 詳細については、次を参照してください。[する方法: ネイティブ フレームが呼び出し履歴 ウィンドウから不足ときにマネージ コードからステップ](../debugger/how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window.md)です。  
   
--   デバッガーの外部で起動された混合モード アプリケーションでは、**\[呼び出し履歴\]** ウィンドウにマネージ コードだけが表示され、ネイティブ フレームがまったく表示されない場合があります。  
+-   デバッガーの外部で起動された混合モード アプリケーション、**呼び出し履歴**ウィンドウがマネージ コードのみを表示し、いずれかのネイティブ フレームが表示されます。  
   
- 上の 2 つの不具合はめったに発生しません。  ネイティブ コードによるマネージ コードの呼び出しでは、ほとんどの場合、正しい呼び出し履歴が表示されます。  
+ 上の 2 つの不具合はめったに発生しません。 ネイティブ コードによるマネージ コードの呼び出しでは、ほとんどの場合、正しい呼び出し履歴が表示されます。  
   
-## 参照  
- [方法 : \[呼び出し履歴\] ウィンドウを使用する](../Topic/How%20to:%20Use%20the%20Call%20Stack%20Window.md)
+## <a name="see-also"></a>関連項目  
+ [方法 : [呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md)

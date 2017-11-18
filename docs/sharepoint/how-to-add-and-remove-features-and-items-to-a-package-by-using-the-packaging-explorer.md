@@ -1,72 +1,72 @@
 ---
-title: "方法: パッケージング エクスプローラーを使用してパッケージのフィーチャーおよび項目を追加および削除する | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.RAD.PackagingExplorer"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, パッケージ"
+title: "方法: して追加および削除のフィーチャーおよび項目をパッケージにパッケージング エクスプ ローラーを使用して |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.SharePointTools.RAD.PackagingExplorer
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, packages
 ms.assetid: 549d5848-f0c9-42c6-b7f5-bc1e626a30e6
-caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: bafa2a4310a77f9f5a9f061e378ac05f2896d4ab
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: パッケージング エクスプローラーを使用してパッケージのフィーチャーおよび項目を追加および削除する
-  SharePoint アイテムおよびフィーチャーを配置するためのパッケージを構成するには、パッケージング エクスプローラーを使用します。  .wsp ファイルに含める SharePoint のプロジェクト項目およびフィーチャーは適宜調整できます。  
+# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>方法: パッケージング エクスプローラーを使用してパッケージのフィーチャーおよび項目を追加および削除する
+  SharePoint プロジェクト項目およびフィーチャーを配置するためのパッケージを構成するのには、パッケージング エクスプ ローラーを使用することができます。 .Wsp ファイル内では、SharePoint プロジェクト項目と機能を調整できます。  
   
- また、パッケージ デザイナーを使用してフィーチャーを表示し、並べ替えることで、アクティブ化の順序を変更することもできます。  詳細については、「[方法: パッケージ デザイナーを使用してパッケージのフィーチャーおよび項目を追加および削除する](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)」を参照してください。  
+ または、パッケージ デザイナーを使用して、表示およびアクティブ化順序を変更する機能の順序を変更することができます。 詳細については、次を参照してください。[する方法: して追加および削除のフィーチャーおよび項目をパッケージにパッケージ デザイナーを使用して](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)です。  
   
-## パッケージング エクスプローラーを開く  
- Visual Studio ソリューションに SharePoint プロジェクトが少なくとも 1 つ含まれている場合、パッケージング エクスプローラーは次の手順で開くことができます。  また、パッケージング エクスプローラーは、フィーチャー デザイナーまたはパッケージ デザイナーを表示すると自動的に開きます。  フィーチャー デザイナーとパッケージ デザイナーをすべて閉じると、パッケージング エクスプローラーも閉じます。  
+## <a name="opening-the-packaging-explorer"></a>パッケージング エクスプ ローラーを開く  
+ Visual Studio ソリューションに 1 つ以上の SharePoint プロジェクト場合は、パッケージ エクスプ ローラーを開き、次の手順を使用できます。 または、パッケージング エクスプ ローラーが自動的に開きますフィーチャーまたはパッケージ デザイナーを表示するとします。 すべての機能およびパッケージ デザイナーを閉じると後もパッケージング エクスプ ローラーを閉じます。  
   
-#### パッケージング エクスプローラーを開くには  
+#### <a name="to-open-the-packaging-explorer"></a>パッケージ エクスプ ローラーを開く  
   
-1.  メニュー バーで、**\[その他のウィンドウ\]**、**\[パッケージング エクスプローラー\]\[表示\]** をクリックします。  
+1.  メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、**パッケージング エクスプ ローラー**です。  
   
-     **\[パッケージング エクスプローラー\]** は **\[ツールボックス\]** に表示されます。  
+     **パッケージング エクスプ ローラー**に表示されます、**ツールボックス**です。  
   
-## パッケージにフィーチャーを追加する  
- パッケージング エクスプローラーを使用して、新しいフィーチャーおよび既存のフィーチャーをパッケージに追加できます。  
+## <a name="adding-a-feature-to-a-package"></a>パッケージに機能の追加  
+ パッケージング エクスプ ローラーを使用して、パッケージに新規および既存の機能を追加できます。  
   
-#### SharePoint フィーチャーを追加するには  
+#### <a name="to-add-a-sharepoint-feature"></a>SharePoint 機能を追加するには  
   
-1.  **\[パッケージング エクスプローラー\]** を開き、プロジェクトのショートカット メニューを開き、**\[フィーチャーの追加\(F\)\]** をクリックします。  
+1.  開く、**パッケージング エクスプ ローラー**、プロジェクトのショートカット メニューを開きを選択し、**フィーチャーの追加**です。  
   
-#### 既存の SharePoint フィーチャーを移動するには  
+#### <a name="to-move-an-existing-sharepoint-feature"></a>既存の SharePoint フィーチャーを移動するには  
   
-1.  **\[パッケージング エクスプローラー\]** を開き、次の手順の実行: 1  
+1.  開く、**パッケージング エクスプ ローラー**、次の手順のいずれかを実行します。  
   
-    -   1 種類のプロジェクトから別のプロジェクトに **\[フィーチャー\]** をドラッグします。  
+    -   ドラッグ、**機能**別のプロジェクトに 1 つのプロジェクトからです。  
   
-    -   機能のショートカット メニューを開き、**\[切り取り\]** をクリックします、機能を移動先を開き、**\[貼り付け\]** をクリックしますプロジェクトのショートカット メニューを。  
+    -   機能のショートカット メニューを開き、選択**切り取り**、クリックして、この機能を移動するプロジェクトのショートカット メニューを開いて**貼り付け**です。  
   
     > [!NOTE]  
-    >  ソリューション内に複数の SharePoint プロジェクトがある場合は、この手順を使用してください。  
+    >  ソリューションに複数の SharePoint プロジェクトがある場合は、この手順を使用します。  
   
-## フィーチャーまたはパッケージを検証する  
- SharePoint のフィーチャーおよびパッケージに存在する可能性のある問題は、ファイルを検証することによって特定できます。  警告およびエラーは出力ウィンドウおよび \[エラー一覧\] ウィンドウに表示されます。  
+## <a name="validating-a-feature-or-package"></a>機能またはパッケージの検証  
+ ファイルを検証することによって、SharePoint のフィーチャーおよびパッケージ内の潜在的な問題を識別できます。 警告とエラーは、エラー一覧 ウィンドウと出力ウィンドウに表示されます。  
   
-#### SharePoint のフィーチャーまたはパッケージを検証するには  
+#### <a name="to-validate-a-sharepoint-feature-or-package"></a>SharePoint フィーチャーまたはパッケージを検証するには  
   
-1.  **\[パッケージング エクスプローラー\]** を開きます。  
+1.  開く、**パッケージング エクスプ ローラー**です。  
   
-2.  フィーチャー デザイナーまたはパッケージのショートカット メニューを開き、**\[検証\(V\)\]** をクリックします。  
+2.  機能またはパッケージのショートカット メニューを開き、選択**検証**です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

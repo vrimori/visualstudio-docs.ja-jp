@@ -1,53 +1,52 @@
 ---
-title: "IDiaSymbol::get_thunkOrdinal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_thunkOrdinal メソッド"
+title: "Idiasymbol::get_thunkordinal |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_thunkOrdinal method
 ms.assetid: 4b28d78a-1974-4d8a-8bb7-781bf630f2f4
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d9eb23f90ea960f927ab8561ff215968134bc30e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_thunkOrdinal
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-関数のサンクの種類を取得します。  
+# <a name="idiasymbolgetthunkordinal"></a>IDiaSymbol::get_thunkOrdinal
+関数のサンクの型を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_thunkOrdinal (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_thunkOrdinal (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] 関数のサンクの型を指定する [THUNK\_ORDINAL 列挙型](../../debugger/debug-interface-access/thunk-ordinal.md) の列挙型の値を返します。  
+ [out]値を返します、 [THUNK_ORDINAL 列挙型](../../debugger/debug-interface-access/thunk-ordinal.md)関数のサンクの型を指定する列挙です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 解説  
- このプロパティは `SymTagThunk` の [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md) の値としている場合のみシンボルです。  
+## <a name="remarks"></a>コメント  
+ このプロパティは、有効な場合にのみ、記号として、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の値`SymTagThunk`です。  
   
- サンク 「」では32 ビットのメモリ アドレス空間 \(またはフラット アドレス空間\) と 16 ビット アドレス空間の間で変換を行うコード \(ように分割されたアドレス空間\) がわかっている。  
+ 「サンク」は、32 ビット メモリ アドレス空間 (フラットのアドレス空間とも呼ばれます) と (セグメント化されたアドレス空間と呼ばれます) の 16 ビット アドレス空間の間で変換するコードです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [THUNK\_ORDINAL 列挙型](../../debugger/debug-interface-access/thunk-ordinal.md)   
+ [THUNK_ORDINAL 列挙型](../../debugger/debug-interface-access/thunk-ordinal.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)

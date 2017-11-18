@@ -1,54 +1,53 @@
 ---
-title: "IDiaSymbol::get_typeIds | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_typeIds メソッド"
+title: "Idiasymbol::get_typeids |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_typeIds method
 ms.assetid: 5166e647-fde5-4efe-92bf-77f8ae3fbc9b
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 7ed742971a75d15eccfd6765dbaf242f0afc7890
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_typeIds
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-このシンボル用のコンパイラ固有の型 ID 値の配列を取得します。  
+# <a name="idiasymbolgettypeids"></a>IDiaSymbol::get_typeIds
+このシンボルにコンパイラ固有の型識別子の値の配列を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_typeIds (   
-   DWORD  cTypeIds,  
-   DWORD* pcTypeIds,  
-   DWORD  typeIds[]  
+```C++  
+HRESULT get_typeIds (   
+   DWORD  cTypeIds,  
+   DWORD* pcTypeIds,  
+   DWORD  typeIds[]  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `cTypeIds`  
- \[入力\] データを保持するバッファーのサイズ。  
+ [in]データを保持するバッファーのサイズ。  
   
  `pcTypeIds`  
- \[入力\] `typeIds` が `NULL` 場合でも`typeIds` の数を利用可能なタイプ ID の総数を返します。  
+ [out]数を返します`typeIds`書き込まれると、または、`typeIds`は`NULL`、し、型識別子が利用可能な数の合計。  
   
  `typeIds[]`  
- \[入力\] タイプ ID によって格納される配列。  
+ [out]型識別子を使用する入力となる配列。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

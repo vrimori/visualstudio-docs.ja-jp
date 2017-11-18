@@ -1,27 +1,30 @@
 ---
-title: "IDebugApplicationNodeEvents::onRemoveChild | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDebugApplicationNodeEvents::onRemoveChild |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugApplicationNodeEvents.onRemoveChild
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IDebugApplicationNodeEvents::onRemoveChild"
+helpviewer_keywords: IDebugApplicationNodeEvents::onRemoveChild
 ms.assetid: 2e025d29-b8c0-4793-a2d3-c20d548d6386
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4a62f187286f66f8adff8acda339e02a02bc6225
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugApplicationNodeEvents::onRemoveChild
-子ノードがデバッグのアプリケーション ノード オブジェクトから削除されたときにイベントを処理します。  
+# <a name="idebugapplicationnodeeventsonremovechild"></a>IDebugApplicationNodeEvents::onRemoveChild
+アプリケーションのデバッグ ノード オブジェクトから子ノードが削除されたときにイベントを処理します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT onRemoveChild(  
@@ -29,23 +32,23 @@ HRESULT onRemoveChild(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `prddpChild`  
- \[入力\]削除された子アプリケーションのノード。  
+ [in]削除された子アプリケーション ノード。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- このメソッドは、子ノードがデバッグのアプリケーション ノード オブジェクトから削除されたときにイベントを処理します。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、デバッグ アプリケーション ノード オブジェクトから子ノードが削除されたときにイベントを処理します。  
   
- `IDebugApplicationNode` のインターフェイスの実装では、このイベントを発生させます。  
+ 実装、`IDebugApplicationNode`インターフェイスは、このイベントを発生させます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugApplicationNodeEvents インターフェイス](../../winscript/reference/idebugapplicationnodeevents-interface.md)   
  [IDebugApplicationNodeEvents::onAddChild](../../winscript/reference/idebugapplicationnodeevents-onaddchild.md)   
  [IDebugApplicationNode インターフェイス](../../winscript/reference/idebugapplicationnode-interface.md)

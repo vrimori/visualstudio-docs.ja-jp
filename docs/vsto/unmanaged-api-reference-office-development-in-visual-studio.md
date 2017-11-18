@@ -1,32 +1,37 @@
 ---
-title: "アンマネージ API リファレンス (Visual Studio での Office 開発)"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での Office 開発、リファレンス"
-  - "Visual Studio での Office 開発、アンマネージ API リファレンス"
+title: "アンマネージ API リファレンス (Visual Studio での Office 開発) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office development in Visual Studio, reference
+- Office development in Visual Studio, unmanaged API reference
 ms.assetid: cdbc70b1-1f98-43dc-a619-07d805e53dce
-caps.latest.revision: 12
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 34bcfaf84f5e1258410e383e4a049403e77e5950
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# アンマネージ API リファレンス (Visual Studio での Office 開発)
-  2007 Microsoft Office システム以降の Office アプリケーションは、[IManagedAddin インターフェイス](../vsto/imanagedaddin-interface.md) インターフェイスを使用して、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] に付属している VSTO アドイン ローダー コンポーネントを呼び出します。 このコンポーネントは、VSTO マネージ アドインの読み込みに使用されます。 このインターフェイスを実装することで、独自の VSTO アドイン ローダー コンポーネントを作成できます。  
+# <a name="unmanaged-api-reference-office-development-in-visual-studio"></a>アンマネージ API リファレンス (Visual Studio での Office 開発)
+  2007 Microsoft Office system 以降では、Office アプリケーションを使用して、 [IManagedAddin インターフェイス](../vsto/imanagedaddin-interface.md)に VSTO アドイン ローダー コンポーネントに含まれている呼び出しへのインターフェイス、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。 このコンポーネントは、VSTO マネージ アドインの読み込みに使用されます。このインターフェイスを実装することで、独自の VSTO アドイン ローダー コンポーネントを作成できます。  
   
-## このセクションの内容  
- [IManagedAddin インターフェイス](../vsto/imanagedaddin-interface.md)  
+> [!NOTE]  
+>  間での Office エクスペリエンスを拡張するソリューションの開発に関心のある[複数のプラットフォーム](https://dev.office.com/add-in-availability)しますか? チェック アウト新しい[Office アドイン モデル](https://dev.office.com/docs/add-ins/overview/office-add-ins)です。 Office アドインは VSTO アドインやソリューションと比較して、小さなフット プリントを持ち、ほぼすべての web プログラミング HTML5、JavaScript、CSS3、XML などのテクノロジを使用してそれらをビルドすることができます。  
+  
+## <a name="in-this-section"></a>このセクションの内容  
+ [IManagedAddin Interface](../vsto/imanagedaddin-interface.md)  
  Office アプリケーションでマネージ VSTO アドインの読み込みやアンロードを行うために実装できる COM インターフェイスです。  
   
   

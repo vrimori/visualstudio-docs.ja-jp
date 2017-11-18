@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptStringCompare::StrComp | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptStringCompare::StrComp |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptStringCompare.StrComp
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "StrComp メソッド, IActiveScriptStringCompare インターフェイス"
+helpviewer_keywords: StrComp method, IActiveScriptStringCompare interface
 ms.assetid: 124d1281-8037-4766-a2a1-61244ac1f114
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 1b92b29f4e40f5e8de567337957aabbcb3c057fd
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptStringCompare::StrComp
-スクリプト エンジンの文字列比較メソッドを定義します。  
+# <a name="iactivescriptstringcomparestrcomp"></a>IActiveScriptStringCompare::StrComp
+スクリプト エンジンに対する文字列比較メソッドを定義します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT StrComp(  
@@ -34,7 +37,7 @@ HRESULT StrComp(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `bszStr1`  
  第 1 文字列。  
   
@@ -42,22 +45,22 @@ HRESULT StrComp(
  第 2 文字列。  
   
  `iRet`  
- 比較の結果。  0 if `bszStr1` and `bszStr2`are identical; \-1 if `bszStr1` \< `bszStr2`; 1 if `bszStr1` \> `bszStr2`.  
+ 比較の結果。 場合は 0`bszStr1`と`bszStr2`は同一以外の場合は-1 `bszStr1`  <  `bszStr2`; 場合は、1 `bszStr1`  > `bszStr2`です。  
   
-## 戻り値  
- 次の値の場合: 1  
+## <a name="return-value"></a>戻り値  
+ 次のいずれかの値を返します。  
   
 |戻り値|説明|  
-|---------|--------|  
+|------------------|-------------|  
 |`S_OK`|成功。|  
-|`E_INVALIDARG`|引数が無効です。|  
-|`E_UNEXPECTED`|呼び出しが想定されていません \(たとえば、スクリプト エンジンはまだ読み込まれていないか、初期化されていません\)。|  
+|`E_INVALIDARG`|引数が有効ではありません。|  
+|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、スクリプト エンジンがされていないされて読み込まれたまたは初期化) します。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  このメソッドは、文字列比較を実行するたびに呼び出されます。  
   
-## 使用例  
- 次の例では、文字列比較関数をオーバーロードする方法を示します。  オーバーロードは SCRIPTPROP\_STRINGCOMPAREINSTANCE を設定するに [IActiveScriptProperty::SetProperty](../../winscript/reference/iactivescriptproperty-setproperty.md) を使用するときには使用されます。  
+## <a name="example"></a>例  
+ 次の例では、文字列比較関数をオーバー ロードする方法を示します。 使用する場合は、オーバー ロードが許可[IActiveScriptProperty::SetProperty](../../winscript/reference/iactivescriptproperty-setproperty.md) SCRIPTPROP_STRINGCOMPAREINSTANCE を設定します。  
   
 ```cpp#  
 cpp_quote("// {58562769-ED52-42f7-8403-4963514E1F11}")  
@@ -94,5 +97,5 @@ interface IActiveScriptStringCompare : IUnknown
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScriptStringCompare インターフェイス](../../winscript/reference/iactivescriptstringcompare-interface.md)

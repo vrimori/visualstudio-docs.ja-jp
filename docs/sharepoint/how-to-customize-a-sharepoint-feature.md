@@ -1,99 +1,100 @@
 ---
-title: "方法: SharePoint フィーチャーをカスタマイズする"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.RAD.FeatureDesigner.SwitchView"
-  - "VS.SharePointTools.RAD.featureDesigner.Manifest"
-  - "VS.SharePointTools.RAD.FeatureDesignerProperties"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, 機能"
+title: "方法: SharePoint フィーチャーをカスタマイズ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.RAD.FeatureDesigner.SwitchView
+- VS.SharePointTools.RAD.featureDesigner.Manifest
+- VS.SharePointTools.RAD.FeatureDesignerProperties
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, features
 ms.assetid: e624c546-564b-4c73-9f1b-dc3675e76a55
-caps.latest.revision: 23
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: d81a65a8030fd77ead1362602b0e16f474ef410c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: SharePoint フィーチャーをカスタマイズする
-  SharePoint フィーチャーの作成とカスタマイズには、Visual Studio のフィーチャー デザイナーを使用できます。  たとえば、フィーチャーのスコープを設定したり、他のフィーチャーを依存関係として追加したりすることができます。  ソリューション エクスプローラーまたは SharePoint パッケージ エクスプローラーで新しいフィーチャーを追加すると、既定でフィーチャー デザイナーが開きます。  
+# <a name="how-to-customize-a-sharepoint-feature"></a>方法: SharePoint フィーチャーをカスタマイズする
+  作成し、Visual Studio で、フィーチャー デザイナーを使用して、SharePoint の機能をカスタマイズできます。 たとえば、フィーチャーのスコープを設定でき、依存関係として他の機能を追加できます。 既定では、ソリューション エクスプ ローラーまたは SharePoint の パッケージ エクスプ ローラーで、新しい機能を追加するときに、フィーチャー デザイナーが開きます。  
   
-## フィーチャー デザイナーを開く  
- SharePoint プロジェクト項目は、フィーチャー デザイナーを使用して、フィーチャーに追加したりフィーチャーから削除したりすることができます。  
+## <a name="opening-the-feature-designer"></a>フィーチャー デザイナーを開く  
+ 追加するか、フィーチャー デザイナーを使用して機能を SharePoint プロジェクト項目を削除します。  
   
-#### フィーチャー デザイナーを開くには  
+#### <a name="to-open-the-feature-designer"></a>開くには、フィーチャー デザイナー  
   
-1.  **ソリューション エクスプローラー**で、**\[フィーチャー\]** を展開します。  
+1.  **ソリューション エクスプ ローラー**、展開**機能**します。  
   
-2.  *Feature1* 項目をダブルクリックするか、*Feature1* 項目のショートカット メニューを開き、**\[デザイナーの表示\]** をクリックします。  
+2.  ダブルクリックして、 *Feature1*アイテム、または、ショートカット メニューを開き、 *Feature1*項目し、**ビュー デザイナー**です。  
   
-## パッケージ マニフェスト ファイルの表示  
- フィーチャーのパッケージ マニフェスト ファイル \(feature.xml\) は、フィーチャー デザイナーを使用して変更したり生成したりすることができます。  さらに、そのファイルの XML コードを Visual Studio で表示することができます。  
+## <a name="viewing-the-packaged-manifest-file"></a>パッケージ マニフェスト ファイルを表示します。  
+ フィーチャー デザイナーを使用して、変更および機能 (feature.xml) のパッケージ マニフェスト ファイルを生成することができます。 次に、Visual Studio でこのファイルの XML コードを表示できます。  
   
-#### パッケージ マニフェスト ファイルを表示するには  
+#### <a name="to-view-the-packaged-manifest-file"></a>パッケージ マニフェスト ファイルを表示するには  
   
-1.  **\[フィー チャー デザイナー\]** で、**\[マニフェスト\]** タブをクリックします。  
+1.  **フィーチャー デザイナー**、選択、**マニフェスト**タブです。  
   
-#### ソリューション エクスプローラーを使用してパッケージ マニフェスト ファイルを表示するには  
+#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>ソリューション エクスプ ローラーを使用してパッケージのマニフェスト ファイルを表示するには  
   
-1.  **\[ソリューション エクスプローラー\]** で、**\[すべてのファイルを表示\]** アイコンをクリックします。  
+1.  **ソリューション エクスプ ローラー**、選択、 **すべてのファイル**アイコン。  
   
-2.  機能を拡張し、FeatureName を展開し、FeatureName.feature を展開し、*FeatureName*を開きます。Template.xml ファイル。  
+2.  機能を展開、展開、FeatureName.feature を展開し、開きます、 *FeatureName*です。Template.xml ファイルです。  
   
     > [!NOTE]  
-    >  フィーチャー テンプレートのマニフェスト XML ファイルを開くと、ファイルが自動的に検証されます。\[エラー一覧\] ウィンドウに警告が表示されますが、無視してかまいません。  
+    >  機能テンプレート マニフェスト XML ファイルを開くし、ファイルは自動的に検証エラー一覧 ウィンドウに表示される警告を無視することができます。  
   
-## マニフェスト テンプレートの変更  
- フィーチャー マニフェスト ファイルの XML コードには、Visual Studio の XML エディターまたは \[マニフェスト テンプレート\] ペインで変更を加えることができます。  XML コードに対する変更は、フィーチャーのパッケージ マニフェスト ファイルにマージされます。  たとえば、マニフェスト テンプレートに変更を加えることによって、フィーチャーのプロパティをカスタマイズすることができます。  
+## <a name="changing-the-manifest-template"></a>マニフェスト テンプレートの変更  
+ Visual Studio XML エディターまたはマニフェスト テンプレート ペインでフィーチャー マニフェスト ファイルの XML コードを変更することができます。 XML コードを変更するは、機能のパッケージ マニフェスト ファイルにマージされます。 たとえば、フィーチャーのプロパティをカスタマイズするマニフェスト テンプレートを変更することがあります。  
   
-#### XML エディターを使用してマニフェスト テンプレートに変更を加えるには  
+#### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>XML エディターを使用して、マニフェスト テンプレートを変更するには  
   
-1.  **\[フィー チャー デザイナー\]** で、**\[マニフェスト\]** タブを選択し、**\[編集オプション\]** ノードを展開し、**\[XML エディターで開く\]** リンクをクリックします。  
+1.  **フィーチャー デザイナー**、選択、**マニフェスト** タブで、展開、**オプションの編集** ノードを選択し、 **XML エディターで開いている**リンクします。  
   
-     XML に対する変更がパッケージ マニフェスト ファイルにマージされます。  
+     XML への変更は、パッケージ マニフェスト ファイルにマージされます。  
   
-#### \[マニフェスト テンプレート\] ペインを使用してマニフェスト テンプレートに変更を加えるには  
+#### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>マニフェスト テンプレート ペインを使用して、マニフェスト テンプレートを変更するには  
   
-1.  **\[フィー チャー デザイナー\]** で、**\[マニフェスト\]** タブを選択し、**\[編集オプション\]** ノードを展開し、マニフェスト テンプレート ペインに表示された XML を変更します。  
+1.  **フィーチャー デザイナー**、選択、**マニフェスト** タブで、展開、**編集オプション**ノードを展開し、マニフェスト テンプレート ペインに表示する XML を変更します。  
   
-     XML に対する変更が **\[パッケージ化されたマニフェストのプレビュー\]** ペインに表示されます。  
+     XML への変更が表示される、**プレビューのパッケージ化されたマニフェスト**ウィンドウです。  
   
-## パッケージ マニフェスト ファイルの上書き  
- フィーチャー デザイナーを無効にして、手動で feature.xml ファイルを作成することができます。  この手順を初めて実行するときに、フィーチャー デザイナーの現在の設定が、フィーチャーのテンプレート XML ファイルに保存されます。  その後で、XML コードを変更または上書きすることができます。  
+## <a name="overwriting-the-packaged-manifest-file"></a>パッケージ マニフェスト ファイルを上書きします。  
+ フィーチャー デザイナーを無効にし、feature.xml ファイルを手動で作成できます。 この手順を実行する最初に、フィーチャー デザイナーの現在の設定は、機能のテンプレート XML ファイルに保存されます。 次に、変更したり、XML コードを上書きします。  
   
 > [!NOTE]  
->  フィーチャー デザイナーを無効にしたまま、XML ファイルで SharePoint プロジェクト項目を追加または削除した場合、それらのプロジェクト項目はパッケージ化されません。  
+>  追加またはフィーチャー デザイナーが無効になっているときに、XML ファイルの SharePoint プロジェクト項目を削除した場合、それらのプロジェクト項目はパッケージ化されません。  
   
-#### デザイナーを無効にしてパッケージ マニフェスト ファイルを上書きするには  
+#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>デザイナーを無効にすると、パッケージ マニフェスト ファイルを上書きするには  
   
-1.  **\[フィー チャー デザイナー\]** で、**\[マニフェスト\]** タブをクリックします。  
+1.  **フィーチャー デザイナー**、選択、**マニフェスト**タブです。  
   
-2.  **\[編集オプション\]** ノードを展開し、**\[生成された XML を上書きし、XML エディターでマニフェストを編集します\]** リンクを選択し、**\[はい\]** ボタンをクリックします。  
+2.  展開、**編集オプション** ノードを選択、**上書き生成された XML と編集、XML エディターでマニフェスト**リンクをクリックして、 **はい**ボタンをクリックします。  
   
-     現在のパッケージ マニフェスト ファイルでテンプレートが更新されます。  
+     テンプレートは、現在のパッケージ マニフェスト ファイルで更新されます。  
   
-## フィーチャー デザイナーの有効化  
- フィーチャー デザイナーを再度有効にして、feature.xml ファイルをカスタマイズすることができます。  
+## <a name="enabling-the-feature-designer"></a>フィーチャー デザイナーを有効にします。  
+ Feature.xml ファイルをカスタマイズするフィーチャー デザイナーを再度有効にすることができます。  
   
-#### デザイナーを再度有効にするには  
+#### <a name="to-re-enable-the-designer"></a>デザイナーを再度有効にするには  
   
-1.  **\[フィー チャー デザイナー\]** で、**\[破棄のマニフェストはデザイナーを編集し、再び有効にします。\]** リンクを選択し、**\[はい\]** ボタンをクリックします。  
+1.  **フィーチャー デザイナー**、選択、**マニフェストの編集を破棄してデザイナーを再度有効に**リンクをクリックして、**はい**ボタンをクリックします。  
   
-2.  テンプレートが元のテキストで更新され、XML に対するすべての変更が失われます。  
+2.  元のテキストで、テンプレートが更新され、XML に変更は失われます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

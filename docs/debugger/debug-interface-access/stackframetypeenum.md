@@ -1,67 +1,66 @@
 ---
-title: "StackFrameTypeEnum | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "StackFrameTypeEnum 列挙型"
+title: "StackFrameTypeEnum |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: StackFrameTypeEnum enumeration
 ms.assetid: 61e40163-eee0-4c1f-af47-cef3771bdc41
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 37d8e960d256b8746781668068978aa72f45155c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# StackFrameTypeEnum
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="stackframetypeenum"></a>StackFrameTypeEnum
 スタック フレームの種類を指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp  
+```C++  
 enum StackFrameTypeEnum {  
-   FrameTypeFPO,  
-   FrameTypeTrap,  
-   FrameTypeTSS,  
-   FrameTypeStandard,  
-   FrameTypeFrameData,  
-   FrameTypeUnknown = -1  
+   FrameTypeFPO,  
+   FrameTypeTrap,  
+   FrameTypeTSS,  
+   FrameTypeStandard,  
+   FrameTypeFrameData,  
+   FrameTypeUnknown = -1  
 };  
 ```  
   
-## Elements  
+## <a name="elements"></a>Elements  
  `FrameTypeFPO`  
- フレーム ポインターを省略します ; FPO の情報を使用できます。  
+ フレーム ポインターを指定します。FPO 情報は利用可能です。  
   
  `FrameTypeTrap`  
- カーネルの点のフレーム。  
+ カーネル トラップ フレームです。  
   
  `FrameTypeTSS`  
- カーネルの点のフレーム。  
+ カーネル トラップ フレームです。  
   
  `FrameTypeStandard`  
- は標準のスタック フレーム。  
+ 標準的な EBP スタック フレーム。  
   
  `FrameTypeFrameData`  
- フレーム ポインターを省略します ; フレームのデータヒントで使用できます。  
+ フレーム ポインターを指定します。フレーム データ情報は利用可能です。  
   
  `FrameTypeUnknown`  
- 構築します。デバッグ情報がありません。  
+ デバッグ情報がないフレームです。  
   
-## 解説  
- この列挙体の値は [IDiaStackFrame::get\_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) メソッドの呼び出しによって返されます。  
+## <a name="remarks"></a>コメント  
+ この列挙体の値がへの呼び出しによって返される、 [idiastackframe::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)メソッドです。  
   
-## 必要条件  
- ヘッダー : cvconst.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: cvconst.h  
   
-## 参照  
- [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [IDiaStackFrame::get\_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)
+## <a name="see-also"></a>関連項目  
+ [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+ [IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)

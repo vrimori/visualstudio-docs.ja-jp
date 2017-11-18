@@ -1,53 +1,54 @@
 ---
-title: "IDebugBoundBreakpoint2::GetHitCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBoundBreakpoint2::GetHitCount"
-helpviewer_keywords: 
-  - "GetHitCount メソッド"
-  - "IDebugBoundBreakpoint2::GetHitCount メソッド"
+title: "IDebugBoundBreakpoint2::GetHitCount |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugBoundBreakpoint2::GetHitCount
+helpviewer_keywords:
+- GetHitCount method
+- IDebugBoundBreakpoint2::GetHitCount method
 ms.assetid: 23481f37-047c-41d2-8286-4da1f4084961
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5341a6c953a91d34f83421b620a7078a2250864d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugBoundBreakpoint2::GetHitCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このの現在のヒット カウントを割り当てられたブレークポイントを取得します。  
+# <a name="idebugboundbreakpoint2gethitcount"></a>IDebugBoundBreakpoint2::GetHitCount
+このバインドされたブレークポイントの現在のヒット カウントを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetHitCount(   
-   DWORD* pdwHitCount  
+```cpp  
+HRESULT GetHitCount(   
+   DWORD* pdwHitCount  
 );  
 ```  
   
-```c#  
-int GetHitCount(   
-   out uint pdwHitCount  
+```csharp  
+int GetHitCount(   
+   out uint pdwHitCount  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pdwHitCount`  
- \[入力\] ヒット カウントを返します。  
+ [out]ヒット カウントを返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  バインドされたブレークポイントのオブジェクトの状態が `BPS_DELETED` \([BP\_STATE](../../../extensibility/debugger/reference/bp-state.md) の列挙型の一部\) に設定されて `E_BP_DELETED` を返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`バインドされたブレークポイント オブジェクトの状態は に設定されているかどうかは`BPS_DELETED`(の一部、 [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙型)。  
   
-## 解説  
- このブレークポイントがヒット カウントはセッションの現在の実行中に発生した回数です。  
+## <a name="remarks"></a>コメント  
+ ヒット カウントは、セッションの現在の実行中にこのブレークポイントが発生した回数です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
- [BP\_STATE](../../../extensibility/debugger/reference/bp-state.md)
+ [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

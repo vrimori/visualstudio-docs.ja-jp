@@ -1,30 +1,31 @@
 ---
-title: "ProjectOutputFile Element"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ProjectOutputFile element"
+title: "ProjectOutputFile 要素 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: ProjectOutputFile element
 ms.assetid: 52a017bf-e19c-49e4-bb8f-cbe6958195c2
-caps.latest.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: a397648dd81ead8134777c8b36982fa6b65b687b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ProjectOutputFile Element
-  プロジェクト項目が SharePoint に配置されるときに一緒に含まれる個別のプロジェクトの出力を表します。  
+# <a name="projectoutputfile-element"></a>ProjectOutputFile 要素
+  SharePoint に配置されるときに、プロジェクト項目に含める別のプロジェクトの出力を表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 <ProjectOutputFile ProjectId = "GUID of the project"  
@@ -33,45 +34,45 @@ caps.handback.revision: 12
     Type = "Type of deployment for the project output" />  
 ```  
   
-## 型  
+## <a name="type"></a>型  
  **ProjectOutputFileType**  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
   
-|属性|Description|  
-|--------|-----------------|  
-|**ProjectId**|必須の **xs:string** 属性です。<br /><br /> 依存プロジェクトの GUID。この依存プロジェクトの出力が含まれます。  この値は、依存プロジェクト ファイル内の **ProjectGuid** 要素に対応します。|  
-|**ProjectPath**|必須の **xs:string** 属性です。<br /><br /> 依存プロジェクトの相対パス \(プロジェクト ファイル名を含む\)。この依存プロジェクトの出力が含まれます。  このパスは、SharePoint プロジェクト項目が含まれる SharePoint プロジェクトのルート フォルダーを基準とする相対パスです。|  
-|**Target**|省略可能な **xs:string** 属性です。<br /><br /> 依存プロジェクトの出力が配置される SharePoint サーバー上のパス。配置ルート フォルダーを基準とする相対パスです。  配置ルート フォルダーは、**Type** 属性で指定されている配置タイプによって決まります。<br /><br /> 詳細については、「[Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)」の SharePoint プロジェクト項目の **Deployment Path** プロパティおよび **Deployment Root** プロパティに関する説明を参照してください。|  
-|**Type**|必須の **xs:string** 属性です。<br /><br /> 依存プロジェクトの出力に使用する配置のタイプ。  使用できる値の詳細については、「[Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)」の SharePoint プロジェクト項目の **Deployment Type** プロパティに関する説明を参照してください。|  
+|属性|説明|  
+|---------------|-----------------|  
+|**ProjectId**|必要な**xs:string**属性。<br /><br /> 追加する出力を持つ依存プロジェクトの GUID です。 これに対応して、 **ProjectGuid**依存プロジェクト ファイル内の要素。|  
+|**ProjectPath**|必要な**xs:string**属性。<br /><br /> 相対パスをプロジェクト ファイル名を含めて、依存プロジェクトに含める出力を持ちます。 このパスを SharePoint プロジェクト項目を含む SharePoint プロジェクトのルート フォルダーに対する相対パスです。|  
+|**Target**|省略可能な**xs:string**属性。<br /><br /> 依存プロジェクトの出力が配置ルート フォルダーを基準とした、SharePoint サーバーに配置するパス。 配置ルート フォルダーがで指定された展開の種類によって決まりますが、**型**属性。<br /><br /> 詳細については、の説明を参照してください、**配置パス**と**配置ルート**SharePoint のプロパティ内の項目をプロジェクト[SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md).|  
+|**Type**|必要な**xs:string**属性。<br /><br /> 依存プロジェクトの出力に使用する展開の種類。 使用可能な値の詳細については、の説明を参照して、**展開の種類**の SharePoint プロジェクト項目のプロパティ[SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)です。|  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
  なし。  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
-|--------|-----------------|  
-|[&#91;ファイル&#93;](../sharepoint/files-element.md)|SharePoint プロジェクト項目が SharePoint に配置されるときに一緒に含まれるファイルを指定します。|  
+|要素|説明|  
+|-------------|-----------------|  
+|[ファイル](../sharepoint/files-element.md)|SharePoint に配置されるときに、SharePoint プロジェクト項目に含めるファイルを指定します。|  
   
-## 解説  
- SharePoint プロジェクト項目の配置にプロジェクトの出力を含めるには、**ProjectOutputFile** 要素を使用します。  別のプロジェクトを指定することも、プロジェクト項目を含むプロジェクトと同じプロジェクトを指定することもできます。  詳細については、「[プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ 使用して、 **ProjectOutputFile**にプロジェクトの出力を SharePoint プロジェクト項目の展開に含める要素。 別のプロジェクトまたはプロジェクト項目が含まれる同じプロジェクトを指定することができます。 詳細については、次を参照してください。[を提供するパッケージとプロジェクト項目での展開情報](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)です。  
   
-## 要素情報  
+## <a name="element-information"></a>要素情報  
   
 |||  
 |-|-|  
-|**名前空間**|http:\/\/schemas.microsoft.com\/VisualStudio\/2010\/SharePointTools\/SharePointProjectItemModel|  
-|**スキーマ名**|SharePoint プロジェクト項目スキーマ|  
+|**Namespace**|http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel|  
+|**スキーマ名**|SharePoint プロジェクト項目のスキーマ|  
 |**検証ファイル**|ProjectItemModelSchema.xsd|  
-|**空も使用できる**|Ｘ|  
+|**空にすることができます。**|いいえ|  
   
-## 参照  
- [SharePoint Project Item Schema Reference](../sharepoint/sharepoint-project-item-schema-reference.md)   
- [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
- [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
+## <a name="see-also"></a>関連項目  
+ [SharePoint プロジェクト項目のスキーマ リファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)   
+ [パッケージとプロジェクト アイテムの展開情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   
   

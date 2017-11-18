@@ -1,34 +1,36 @@
 ---
-title: "AsyncTaskMethodBuilder &lt; TResult &gt; 構造体の内部メンバー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "AsyncTaskMethodBuilder < TResult > 構造体 [.NET Framework のデバッグ エンジン]"
-  - "デバッグ エンジンは、AsyncTaskMethodBuilder < TResult > 構造体 [.NET Framework]"
+title: "AsyncTaskMethodBuilder&lt;TResult&gt;構造体の内部メンバー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AsyncTaskMethodBuilder<TResult> structure [.NET Framework debug engines]
+- debug engines, AsyncTaskMethodBuilder<TResult> structure [.NET Framework]
 ms.assetid: 17ebc340-8170-4aff-bf54-dc4548c83632
-caps.latest.revision: 4
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d6956cf1150a1a30d062201080a97dae7d231a75
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# AsyncTaskMethodBuilder &lt; TResult &gt; 構造体の内部メンバー
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-このトピックの内部メンバーの説明、 <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> クラスです。 このクラスの概要については、次を参照してください。、 <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> リファレンス トピックです。  
+# <a name="asynctaskmethodbuilderlttresultgt-structure---internal-members"></a>AsyncTaskMethodBuilder&lt;TResult&gt;構造体の内部メンバー
+このトピックの内容の内部のメンバーの説明、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>クラスです。 このクラスの概要については、次を参照してください。、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>リファレンス トピックを参照します。  
   
- **名前空間:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ **Namespace:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **アセンブリ:** \(mscorlib.dll\) の mscorlib  
+ **アセンブリ:** (mscorlib.dll) の mscorlib  
   
- .NET Framework からこれらの内部メンバーにアクセスできないため、次の構文は共通中間言語 \(CIL\) に提供されます。  
+ .NET Framework からこれらの内部のメンバーにアクセスすることはできません、ため、次の構文は共通中間言語 (CIL) に提供されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 .class public sequential ansi sealed beforefieldinit System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<TResult>  
@@ -36,13 +38,13 @@ caps.handback.revision: 4
        implements System.Runtime.CompilerServices.IAsyncMethodBuilder  
 ```  
   
-## 内部のメンバー  
+## <a name="internal-members"></a>内部メンバー  
   
 |名前|説明|  
-|--------|--------|  
-|[ObjectIdForDebugger プロパティ](../../extensibility/debugger/asynctaskmethodbuilder-tresult-objectidfordebugger-property.md)|デバッガーには、このビルダーを一意に識別するために使用がオブジェクトを取得します。|  
-|[m\_task フィールド](../../extensibility/debugger/asynctaskmethodbuilder-tresult-m-task-field.md)|遅れて初期化されるタスクの構築を表します。|  
+|----------|-----------------|  
+|[ObjectIdForDebugger プロパティ](../../extensibility/debugger/asynctaskmethodbuilder-tresult-objectidfordebugger-property.md)|デバッガーには、このビルダーを一意に識別するために使用するオブジェクトを取得します。|  
+|[m_task フィールド](../../extensibility/debugger/asynctaskmethodbuilder-tresult-m-task-field.md)|遅れて初期化されるビルド タスクを表します。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>   
  [.NET Framework の並列拡張機能の内部](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

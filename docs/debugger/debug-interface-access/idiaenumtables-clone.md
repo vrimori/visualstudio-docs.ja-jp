@@ -1,43 +1,42 @@
 ---
-title: "IDiaEnumTables::Clone | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumTables::Clone メソッド"
+title: "Idiaenumtables::clone |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumTables::Clone method
 ms.assetid: beb21109-b12c-44d8-8c1f-a332216b3713
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6d5c7ee825404586c039fa9e42a9d4f13721443f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumTables::Clone
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-現在の列挙子と同じ列挙状態を含む列挙子を作成します。  
+# <a name="idiaenumtablesclone"></a>IDiaEnumTables::Clone
+現在の列挙子と同じ列挙の状態を含む列挙子を作成します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Clone (   
-   IDiaEnumTables** ppenum  
+```C++  
+HRESULT Clone (   
+   IDiaEnumTables** ppenum  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppenum`  
- \[入力\] 列挙子の複製を含む [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md) のオブジェクトを返します。  テーブルは列挙子だけ複製。  
+ [out]返します、 [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)列挙子の重複を含むオブジェクトです。 テーブルが重複していない、列挙子。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

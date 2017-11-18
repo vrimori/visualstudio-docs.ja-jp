@@ -1,55 +1,54 @@
 ---
-title: "IDiaSymbol::get_liveRangeStartRelativeVirtualAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_liveRangeStartRelativeVirtualAddress"
+title: "IDiaSymbol::get_liveRangeStartRelativeVirtualAddress |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_liveRangeStartRelativeVirtualAddress
 ms.assetid: 1da52539-9872-4c20-8eaa-74b6cb5f3b02
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 7fe43b99ce430e1e06683494fdeb1c5716b30cea
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_liveRangeStartRelativeVirtualAddress
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ローカル シンボルが有効であるアドレス範囲の開始位置を返します。  
+# <a name="idiasymbolgetliverangestartrelativevirtualaddress"></a>IDiaSymbol::get_liveRangeStartRelativeVirtualAddress
+ローカル シンボルが有効で、アドレスの範囲の先頭を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_liveRangeStartRelativeVirtualAddress (   
-   DWORD* address  
+```C++  
+HRESULT get_liveRangeStartRelativeVirtualAddress (   
+   DWORD* address  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `address`  
- \[入力\] アドレス範囲の開始を返します。  
+ [out]アドレス範囲の開始日を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  返される相対仮想アドレスはシンボルが有効範囲の先頭。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返される相対仮想アドレスは、シンボルの有効範囲の先頭です。  
   
 > [!NOTE]
->  返されるエラー コードはシンボルに有効な範囲の情報がないことを示します。  
+>  返されたエラー コードは、シンボルにライブの範囲の情報がないことを意味します。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 必要条件  
- ヘッダー : Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Dia2.h  
   
- ライブラリ : diaguids.lib  
+ ライブラリ: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,51 +1,51 @@
 ---
-title: "IDebugAddress::GetAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugAddress::GetAddress"
-helpviewer_keywords: 
-  - "IDebugAddress:GetAddress メソッド"
+title: "IDebugAddress::GetAddress |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugAddress::GetAddress
+helpviewer_keywords: IDebugAddress:GetAddress method
 ms.assetid: 2590387b-5d36-4116-9a75-737957b8898e
-caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3ed14b69dbc116514b191aadf58d209b4d39e458
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugAddress::GetAddress
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-範囲またはコンテナー内のオブジェクトと位置を示す構造体を返します。  
+# <a name="idebugaddressgetaddress"></a>IDebugAddress::GetAddress
+オブジェクトとそのスコープまたはコンテナー内でその場所を記述する構造体を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetAddress (  
-   DEBUG_ADDRESS * pAddress  
+   DEBUG_ADDRESS * pAddress  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetAddress(  
-   DEBUG_ADDRESS[] pAddress  
+   DEBUG_ADDRESS[] pAddress  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pAddress`  
- \[入力出力\] このメソッドによって設定された [DEBUG\_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) の構造体。  
+ [入力、出力].A [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)にこのメソッドによって入力される構造です。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- [DEBUG\_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) の構造は適切な情報を入力するとこのメソッドに渡されます。  この情報がどのように解釈されるかどうかは返される情報をシンボル ハンドラーの型自体によって。  詳細については、「[DEBUG\_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)このメソッドは、適切な情報を使用して格納する構造体が渡されます。 この情報を解釈する方法は、返される情報およびシンボル ハンドラー自体の種類によって異なります。 参照してください[DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)詳細についてはします。  
   
-## 参照  
- [DEBUG\_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)
+## <a name="see-also"></a>関連項目  
+ [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)

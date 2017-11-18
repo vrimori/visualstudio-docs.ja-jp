@@ -1,123 +1,123 @@
 ---
-title: "DISASSEMBLY_STREAM_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DISASSEMBLY_STREAM_FIELDS"
-helpviewer_keywords: 
-  - "DISASSEMBLY_STREAM_FIELDS 列挙型"
+title: "DISASSEMBLY_STREAM_FIELDS |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DISASSEMBLY_STREAM_FIELDS
+helpviewer_keywords: DISASSEMBLY_STREAM_FIELDS enumeration
 ms.assetid: cfc9b4de-c756-4844-bea7-d9f186a51d1b
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d268b9056c53eb21ff9fb0e6ed408245880b55ad
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# DISASSEMBLY_STREAM_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-アセンブリのフィールドに関して取得する情報を指定します。  
+# <a name="disassemblystreamfields"></a>DISASSEMBLY_STREAM_FIELDS
+[逆アセンブル] フィールドの詳細を取得するには、どのような情報を指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum enum_DISASSEMBLY_STREAM_FIELDS {   
-   DSF_ADDRESS          = 0x00000001,  
-   DSF_ADDRESSOFFSET    = 0x00000002,  
-   DSF_CODEBYTES        = 0x00000004,  
-   DSF_OPCODE           = 0x00000008,  
-   DSF_OPERANDS         = 0x00000010,  
-   DSF_SYMBOL           = 0x00000020,  
-   DSF_CODELOCATIONID   = 0x00000040,  
-   DSF_POSITION         = 0x00000080,  
-   DSF_DOCUMENTURL      = 0x00000100,  
-   DSF_BYTEOFFSET       = 0x00000200,  
-   DSF_FLAGS            = 0x00000400,  
-   DSF_OPERANDS_SYMBOLS = 0x00010000,  
-   DSF_ALL              = 0x000107ff  
+```cpp  
+enum enum_DISASSEMBLY_STREAM_FIELDS {   
+   DSF_ADDRESS          = 0x00000001,  
+   DSF_ADDRESSOFFSET    = 0x00000002,  
+   DSF_CODEBYTES        = 0x00000004,  
+   DSF_OPCODE           = 0x00000008,  
+   DSF_OPERANDS         = 0x00000010,  
+   DSF_SYMBOL           = 0x00000020,  
+   DSF_CODELOCATIONID   = 0x00000040,  
+   DSF_POSITION         = 0x00000080,  
+   DSF_DOCUMENTURL      = 0x00000100,  
+   DSF_BYTEOFFSET       = 0x00000200,  
+   DSF_FLAGS            = 0x00000400,  
+   DSF_OPERANDS_SYMBOLS = 0x00010000,  
+   DSF_ALL              = 0x000107ff  
 };  
 typedef DWORD DISASSEMBLY_STREAM_FIELDS;  
 ```  
   
-```c#  
-public enum enum_DISASSEMBLY_STREAM_FIELDS {   
-   DSF_ADDRESS          = 0x00000001,  
-   DSF_ADDRESSOFFSET    = 0x00000002,  
-   DSF_CODEBYTES        = 0x00000004,  
-   DSF_OPCODE           = 0x00000008,  
-   DSF_OPERANDS         = 0x00000010,  
-   DSF_SYMBOL           = 0x00000020,  
-   DSF_CODELOCATIONID   = 0x00000040,  
-   DSF_POSITION         = 0x00000080,  
-   DSF_DOCUMENTURL      = 0x00000100,  
-   DSF_BYTEOFFSET       = 0x00000200,  
-   DSF_FLAGS            = 0x00000400,  
-   DSF_OPERANDS_SYMBOLS = 0x00010000,  
-   DSF_ALL              = 0x000107ff  
+```csharp  
+public enum enum_DISASSEMBLY_STREAM_FIELDS {   
+   DSF_ADDRESS          = 0x00000001,  
+   DSF_ADDRESSOFFSET    = 0x00000002,  
+   DSF_CODEBYTES        = 0x00000004,  
+   DSF_OPCODE           = 0x00000008,  
+   DSF_OPERANDS         = 0x00000010,  
+   DSF_SYMBOL           = 0x00000020,  
+   DSF_CODELOCATIONID   = 0x00000040,  
+   DSF_POSITION         = 0x00000080,  
+   DSF_DOCUMENTURL      = 0x00000100,  
+   DSF_BYTEOFFSET       = 0x00000200,  
+   DSF_FLAGS            = 0x00000400,  
+   DSF_OPERANDS_SYMBOLS = 0x00010000,  
+   DSF_ALL              = 0x000107ff  
 };  
 ```  
   
-## メンバー  
- DSF\_ADDRESS  
- `bstrAddress` フィールドの初期化とを使用します。  
+## <a name="members"></a>メンバー  
+ DSF_ADDRESS  
+ 初期化/を使用して、`bstrAddress`フィールドです。  
   
- DSF\_ADDRESSOFFSET  
- `bstrAddressOffset` フィールドの初期化とを使用します。  
+ DSF_ADDRESSOFFSET  
+ 初期化/を使用して、`bstrAddressOffset`フィールドです。  
   
- DSF\_CODEBYTES  
- `bstrCodeBytes` フィールドの初期化とを使用します。  
+ DSF_CODEBYTES  
+ 初期化/を使用して、`bstrCodeBytes`フィールドです。  
   
- DSF\_OPCODE  
- `bstrOpCode` フィールドの初期化とを使用します。  
+ DSF_OPCODE  
+ 初期化/を使用して、`bstrOpCode`フィールドです。  
   
- DSF\_OPERANDS  
- `bstrOperands` フィールドの初期化とを使用します。  
+ DSF_OPERANDS  
+ 初期化/を使用して、`bstrOperands`フィールドです。  
   
- DSF\_SYMBOL  
- `bstrSymbol` フィールドの初期化とを使用します。  
+ DSF_SYMBOL  
+ 初期化/を使用して、`bstrSymbol`フィールドです。  
   
- DSF\_CODELOCATIONID  
- `uCodeLocationId` フィールドの初期化とを使用します。  
+ DSF_CODELOCATIONID  
+ 初期化/を使用して、`uCodeLocationId`フィールドです。  
   
- DSF\_POSITION  
- `posBeg` と `posEnd` フィールドの初期化とを使用します。  
+ DSF_POSITION  
+ 初期化/を使用して、`posBeg`と`posEnd`フィールドです。  
   
- DSF\_DOCUMENTURL  
- `bstrDocumentUrl` フィールドの初期化とを使用します。  
+ DSF_DOCUMENTURL  
+ 初期化/を使用して、`bstrDocumentUrl`フィールドです。  
   
- DSF\_BYTEOFFSET  
- `dwByteOffset` フィールドの初期化とを使用します。  
+ DSF_BYTEOFFSET  
+ 初期化/を使用して、`dwByteOffset`フィールドです。  
   
- DSF\_FLAGS  
- `dwFlags` \(\)[DISASSEMBLY\_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md) フィールドの初期化とを使用します。  
+ DSF_FLAGS  
+ 初期化/を使用して、 `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) フィールドです。  
   
- DSF\_OPERANDS\_SYMBOLS  
- `bstrOperands` のフィールドのシンボル名を含めます。  
+ DSF_OPERANDS_SYMBOLS  
+ シンボル名を含む、`bstrOperands`フィールドです。  
   
- DSF\_ALL  
- 構成ストリームの場合すべてのフィールドを指定します。  
+ DSF_ALL  
+ [逆アセンブル] ストリームのすべてのフィールドを指定します。  
   
-## 解説  
- [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) の構造体のフィールドが初期化する必要があるかのようにパラメーター [読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) のメソッドに渡されます。  
+## <a name="remarks"></a>コメント  
+ パラメーターとして渡される、[読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)メソッドのどのフィールドを示すために、 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)構造が初期化するのには。  
   
- 構造体が戻るときにフィールドを使用して有効かを示すために `DisassemblyData` の構造体のメンバー `dwFields` に使用されます。  
+ 使用、`dwFields`のメンバー、`DisassemblyData`を示すためにどのフィールドに使用されると有効な構造が返される構造体。  
   
- これらの値はビットごとの `OR` と組み合わせることがあります。  
+ これらの値は、ビットごとと組み合わせること`OR`です。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
  [読み取り](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)   
- [DISASSEMBLY\_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)
+ [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)

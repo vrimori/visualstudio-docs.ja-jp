@@ -1,82 +1,83 @@
 ---
-title: "方法: エンティティ間に関連付けを作成する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AssociationGroupTool"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "BDC [Visual Studio での SharePoint 開発], 関連付け (外部コンテンツ タイプを)"
-  - "BDC [Visual Studio での SharePoint 開発], 関連付け (エンティティ間の)"
-  - "BDC [Visual Studio での SharePoint 開発], 作成 (関連付けを)"
-  - "BDC [Visual Studio での SharePoint 開発], 関連付け (エンティティを)"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], 関連付け (外部コンテンツ タイプを)"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], 関連付け (エンティティ間の)"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], 作成 (関連付けを)"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], 関連付け (エンティティを)"
+title: "方法: エンティティ間の関連付けを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: AssociationGroupTool
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- BDC [SharePoint development in Visual Studio], create an assocation
+- Business Data Connectivity service [SharePoint development in Visual Studio], associations between entities
+- BDC [SharePoint development in Visual Studio], associations between entities
+- Business Data Connectivity service [SharePoint development in Visual Studio], create an assocation
+- Business Data Connectivity service [SharePoint development in Visual Studio], associate external content types
+- Business Data Connectivity service [SharePoint development in Visual Studio], relate entities
+- BDC [SharePoint development in Visual Studio], relate entities
+- BDC [SharePoint development in Visual Studio], associate external content types
 ms.assetid: 0c095df8-1f40-4c4d-9fed-e125a8429724
-caps.latest.revision: 17
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 92c8643a87a6226e03e8726910a459168e8b4c5d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: エンティティ間に関連付けを作成する
-  関連付けを作成することで、ビジネス データ接続 \(BDC\) モデルのエンティティ間の関連性を定義できます。  Visual Studio では、モデルの使用者に各関連付けに関する情報を提供するメソッドが生成されます。  これらのメソッドは、SharePoint Web パーツ、またはカスタム アプリケーションでユーザー インターフェイス \(UI\) データ リレーションシップを表示するために使用できます。  
+# <a name="how-to-create-an-association-between-entities"></a>方法: エンティティ間に関連付けを作成する
+  関連付けを作成することで、ビジネス データ接続 (BDC) モデルのエンティティ間のリレーションシップを定義することができます。 Visual Studio では、各アソシエーションに関する情報をモデルのコンシューマーに提供するメソッドを生成します。 これらのメソッドは、SharePoint web パーツ、リスト、またはユーザー インターフェイス (UI) でデータ間の関係を表示するカスタム アプリケーションで使用できます。  
   
- BDC デザイナーでは、外部キーに基づく関連付けと外部キーなしの関連付けという 2 種類の関連付けを作成できます。  詳細については、「[エンティティ間の関連付けの作成](../sharepoint/creating-an-association-between-entities.md)」を参照してください。  
+ BDC デザイナーでの関連付けの 2 つの種類を作成することができます。 外部キーに基づくアソシエーションとキーを使用しない外部のアソシエーション。 詳細については、次を参照してください。[アソシエーション間でエンティティを作成する](../sharepoint/creating-an-association-between-entities.md)です。  
   
-### エンティティ間に関連付けを作成するには  
+### <a name="to-create-an-association-between-entities"></a>エンティティ間の関連付けを作成するには  
   
-1.  **\[ツールボックス\]** の **\[BusinessDataConnectivity\]** タブで、**\[関連付け\]** 項目を選択します。  
+1.  **BusinessDataConnectivity**のタブ、**ツールボックス**、選択、**アソシエーション**項目。  
   
-2.  BDC デザイナーで、ソース エンティティを選択し、ターゲット エンティティを選択します。  
+2.  BDC デザイナーで、ソース エンティティを選択し、転送先エンティティを選択します。  
   
-     **関連付けエディター** が表示されます。  
+     **関連付けエディター**が表示されます。  
   
-3.  外部キーに基づく関連付けを作成する場合、**\[外部キーの関連付けである\]** チェック ボックスをオンにします。  
+3.  外部キーに基づく関連付けを作成する場合は、選択、**外部キーの関連付け**チェック ボックスをオンします。  
   
-    1.  **\[識別子のマッピング\]** テーブルの **\[ソース ID\]** の列で、**\[フィールド\]** の列の一致する各型記述子の横にある識別子を選択します。  
+    1.  **ソース ID**の列、**識別子のマッピング**テーブルに表示される各一致する型記述子の横にある識別子を選択、**フィールド**列です。  
   
-         たとえば、**\[ソース ID\]** 列で、`ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` 型記述子と `ReadItem.salesOrder.SalesOrder.ContactID` 型記述子の横にある `ContactID` を選択します。  
+         など、**ソース ID**列で、選択`ContactID` の横に、`ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID`記述子を入力し、`ReadItem.salesOrder.SalesOrder.ContactID`記述子を入力します。  
   
-4.  外部キーなしの関連付けを作成する場合、**\[外部キーの関連付けである\]** チェック ボックスをオフにします。  
+4.  外部キーを使用しない関連付けを作成する場合は、オフ、**外部キーの関連付け**チェック ボックスをオンします。  
   
-5.  **\[OK\]** を選択します。  
+5.  **[OK]** を選択します。  
   
-6.  BDC デザイナーのソース エンティティとターゲット エンティティ間に、関連付けを示す行が表示されます。  
+6.  BDC デザイナーでは、ソース エンティティと転送先エンティティの間の関連付けを表す線が表示されます。  
   
-     Visual Studio では、ターゲット エンティティのサービス クラスとソース エンティティのサービス クラスに Association Navigator メソッドを追加しています。  Association Navigation のメソッドに関する詳細については、参照します [サポートされていない操作](http://go.microsoft.com/fwlink/?LinkId=169286)。  
+     Visual Studio では、転送先エンティティのサービス クラスとソース エンティティのサービス クラスに、アソシエーション ナビゲーター メソッドを追加します。 アソシエーションのナビゲーション方法の詳細については、次を参照してください。[サポートされている操作](http://go.microsoft.com/fwlink/?LinkId=169286)です。  
   
-7.  ソース エンティティの Association Navigator メソッドに、ターゲット エンティティのコレクションを返すコードを追加します。  
+7.  ソース エンティティの関連付けナビゲーター メソッドでは、移行先のエンティティのコレクションを返すコードを追加します。  
   
-8.  ターゲット エンティティの Association Navigator メソッドに、関連するソース エンティティを返すコードを追加します。  
+8.  転送先エンティティの関連付けナビゲーター メソッドでは、関連するソース エンティティを返すコードを追加します。  
   
-     Association Navigator メソッドの例については、「[エンティティ間の関連付けの作成](../sharepoint/creating-an-association-between-entities.md)」を参照してください。  
+     ナビゲーターの関連付けの方法の例については、次を参照してください。[アソシエーション間でエンティティを作成する](../sharepoint/creating-an-association-between-entities.md)です。  
   
-## 参照  
- [エンティティ間の関連付けの作成](../sharepoint/creating-an-association-between-entities.md)   
- [Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [方法: Finder メソッドを追加する](../sharepoint/how-to-add-a-finder-method.md)   
- [方法: SpecificFinder メソッドを追加する](../sharepoint/how-to-add-a-specific-finder-method.md)   
- [方法: Creator メソッドを追加する](../sharepoint/how-to-add-a-creator-method.md)   
- [方法: Deleter メソッドを追加する](../sharepoint/how-to-add-a-deleter-method.md)   
- [方法: Updater メソッドを追加する](../sharepoint/how-to-add-an-updater-method.md)   
+## <a name="see-also"></a>関連項目  
+ [エンティティ間の関連付けを作成します。](../sharepoint/creating-an-association-between-entities.md)   
+ [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: Specificfinder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   
+ [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
+ [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
+ [方法: Updater メソッドを追加](../sharepoint/how-to-add-an-updater-method.md)   
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
- [方法 : メソッドにパラメーターを追加する](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [方法: メソッド インスタンスを定義する](../sharepoint/how-to-define-a-method-instance.md)   
- [How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
+ [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [方法: メソッド インスタンスの定義](../sharepoint/how-to-define-a-method-instance.md)   
+ [方法: パラメーターの型記述子を定義します。](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
  [チュートリアル: ビジネス データを使用した SharePoint での外部リストの作成](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)  
   
   

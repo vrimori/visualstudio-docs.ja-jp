@@ -1,56 +1,55 @@
 ---
-title: "方法 : エディット コンティニュを使用する (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "エディット コンティニュ [C#], エディット コンティニュの概要"
+title: "方法: エディット コンティニュを使用 (c#) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords: Edit and Continue [C#], about Edit and Continue
 ms.assetid: 40e136d8-a08c-43bd-b313-fb821c55eb3c
-caps.latest.revision: 19
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ec66bd21eb119c348391f191f23570e66119122f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : エディット コンティニュを使用する (C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-C\# のエディット コンティニュを使用すると、デバッグ中に中断モードでコードに変更を加えることができます。  デバッグ セッションを停止したり再開したりしなくても、変更を適用できます。  
+# <a name="how-to-use-edit-and-continue-c"></a>方法 : エディット コンティニュを使用する (C#)
+C# のエディット コンティニュを使用すると、デバッグ中に中断モードでコードに変更を加えることができます。 デバッグ セッションを停止したり再開したりしなくても、変更を適用できます。  
   
- エディット コンティニュは、中断モードで変更を行うと自動的に呼び出されます。その後、**\[続行\]**、**\[ステップ\]**、**\[次のステートメントの設定\]** などのデバッガー実行コマンドを選択するか、デバッガー ウィンドウに表示された関数を評価します。  
+ エディット コンティニュは自動的に呼び出される、中断モードで変更を行い、デバッガーの実行を選択するときにコマンドなど、**続行**、**ステップ**、または**次のステートメントの設定**、か、デバッガー ウィンドウで関数を評価します。  
   
 > [!NOTE]
->  Compact Framework、最適化されたコード、ネイティブ コードとマネージ コードの混合コード、または SQL Server の共通言語ランタイム \(CLR: Common Language Runtime\) との統合コードのデバッグ時は、エディット コンティニュはサポートされません。  これらのシナリオのいずれかでコード変更を適用しようとすると、エディット コンティニュがサポートされないことを説明するダイアログ ボックスが表示されます。  
+>  最適化されたコード、ネイティブ/マネージ混合コード、または SQL Server 共通言語ランタイム (CLR) 統合コードをデバッグするときに、エディット コンティニュのサポートはされていません。 サポートされていないその他のシナリオについては、次を参照してください。 [(c# および Visual Basic) のサポートされているコード変更](../debugger/supported-code-changes-csharp.md)です。 これらのシナリオでは、デバッガーが表示されますが、ダイアログ ボックスについて詳しく説明するエディット コンティニュはサポートされていませんのいずれかでコード変更を適用しようとするとします。  
   
-### エディット コンティニュを自動的に呼び出すには  
+### <a name="to-invoke-edit-and-continue-automatically"></a>エディット コンティニュを自動的に呼び出すには  
   
 1.  中断モードで、ソース コードを変更します。  
   
-2.  **\[デバッグ\]** メニューの **\[続行\]**、**\[ステップ\]**、または **\[次のステートメントの設定\]** をクリックするか、デバッガー ウィンドウに表示された関数を評価します。  
+2.  **デバッグ** メニューのをクリックして**続行**、**ステップ**、または**次のステートメントの設定**か、デバッガー ウィンドウで関数を評価します。  
   
-     新しいコードがコンパイルされ、その新しいコードでデバッグが続行されます。  エディット コンティニュでサポートされない変更もあります。  詳細については、「[サポートされているコード変更 \(C\#\)](../debugger/supported-code-changes-csharp.md)」を参照してください。  
+     新しいコードがコンパイルされ、その新しいコードでデバッグが続行されます。 エディット コンティニュでサポートされない変更もあります。 詳細については、次を参照してください。 [(c# および Visual Basic) のサポートされているコード変更](../debugger/supported-code-changes-csharp.md)です。  
   
-### \[エディット コンティニュ\] を有効または無効にするには  
+### <a name="to-enabledisable-edit-and-continue"></a>[エディット コンティニュ] を有効または無効にするには  
   
-1.  **\[ツール\]** メニューの **\[オプション\]** をクリックします。  
+1.  **[ツール]** メニューの **[オプション]**をクリックします。  
   
-2.  **\[オプション\]** ダイアログ ボックスで、**\[デバッグ\]** ノードを展開し、**\[エディット コンティニュ\]** をクリックします。  
+2.  **オプション** ダイアログ ボックスで、展開、**デバッグ**ノード、および選択**エディット コンティニュ**です。  
   
-3.  **\[オプション\]** ダイアログ ボックスの **\[エディット コンティニュ\]** ページで、**\[エディット コンティニュを有効にする\]** チェック ボックスをオンまたはオフにします。  
+3.  **オプション**] ダイアログ ボックス**エディット コンティニュ**ページ、オンまたはオフ、 **[エディット コンティニュ**チェック ボックスをオンします。  
   
      デバッグ セッションを再開すると、この設定が有効になります。  
   
-## 参照  
- [エディット コンティニュ \(Visual C\#\)](../debugger/edit-and-continue-visual-csharp.md)   
- [サポートされているコード変更 \(C\#\)](../debugger/supported-code-changes-csharp.md)   
- [エディット コンティニュのエラーと警告 \(C\#\)](../misc/edit-and-continue-errors-and-warnings-csharp.md)
+## <a name="see-also"></a>関連項目  
+ [エディット コンティニュ (Visual c#)](../debugger/edit-and-continue-visual-csharp.md)   
+ [サポートされているコード変更 (c# および Visual Basic)](../debugger/supported-code-changes-csharp.md)   

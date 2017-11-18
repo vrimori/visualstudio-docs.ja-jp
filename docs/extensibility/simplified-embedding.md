@@ -1,41 +1,42 @@
 ---
-title: "簡略化された埋め込み | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "埋め込みエディター [Visual Studio SDK] カスタム - 単純な表示します。"
+title: "埋め込みを簡略化 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], custom - simple view embedding
 ms.assetid: f1292478-a57d-48ec-8c9e-88a23f04ffe5
-caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d4315a55b74d938576572b0630f5dca553643a24
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 簡略化された埋め込み
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-単純埋め込むとエディターでドキュメントのビュー オブジェクトは浮き出た \(つまり子に実装されます\) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] または <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> のインターフェイスはウィンドウでコマンドを処理すると有効になります。  簡体字エディターを埋め込むとアクティブなコントロールをホストできません。  単純埋め込みのエディターを作成するために使用されるオブジェクトを次の図に示します。  
+# <a name="simplified-embedding"></a>埋め込み簡素化されます。
+簡略化された埋め込みが有効になって、エディターでそのドキュメント ビュー オブジェクトの親 (つまり、実行の子) になれるとき[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、および<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>そのウィンドウのコマンドを処理するインターフェイスを実装します。 簡略化された埋め込みエディターには、アクティブなコントロールをホストできません。 簡略化された埋め込みエディターを作成するために使用オブジェクトは、次の図に表示されます。  
   
- ![簡略化された埋め込みエディター グラフィック](~/extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
-単純埋め込みのエディター  
+ ![簡略化された埋め込みエディター グラフィック](../extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
+簡略化された埋め込みエディター  
   
 > [!NOTE]
->  この図のオブジェクトの`CYourEditorFactory` のオブジェクトだけ標準ファイル ベースのエディターを作成する必要があります。  カスタム エディターを作成するとエディターに独自のプライベート永続化機能があるため <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> を実行する必要はありません。  ただしカスタムのエディターで実行する必要があります。  
+>  のみ、この図では、オブジェクトの`CYourEditorFactory`標準のファイル ベースのエディターを作成するオブジェクトが必要です。 カスタム エディターを作成する場合は、実装する必要はありません<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>エディター、独自のプライベートの永続化メカニズムがないため、します。 非カスタム エディターに対し、ただし、行う必要がありますようにします。  
   
- 単純埋め込みのエディターを作成するために実行されたすべてのインターフェイスは `CYourEditorDocument` のオブジェクトに含まれています。  ただしドキュメント データのビューをサポートするように次の表に示すように独立したデータにインターフェイスとビュー オブジェクトを分割します。  
+ すべてのインターフェイスを簡素化された埋め込みエディターを作成するために実装が含まれている、`CYourEditorDocument`オブジェクト。 ただし、ドキュメント データの複数のビューをサポートするために分割データとビューの個別のオブジェクトに、インターフェイス、次の表に記載されています。  
   
-|Interface|インターフェイスの場所|\[条件\]|  
-|---------------|-----------------|------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|ビュー|親ウィンドウへの接続を指定します。|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|ビュー|コマンドのハンドル。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|ビュー|有効なステータス バーを更新します。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|ビュー|**ツールボックス**  の項目を有効にします。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEvents>|Data|ファイルの変更時に通知を送信します。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|Data|ファイルの種類の名前を付けて保存機能を有効にします。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>|Data|ドキュメントの永続性を有効にします。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl>|Data|トリガーの読み込みなどのファイルの変更イベントの抑制を許可します。|
+|インターフェイス|インターフェイスの場所|用途|  
+|---------------|---------------------------|---------|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|表示|親ウィンドウへの接続を提供します。|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|表示|コマンドを処理します。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|表示|ステータス バーを更新できるようにします。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|表示|により、**ツールボックス**項目。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEvents>|データ|ファイルが変更されたときに、通知を送信します。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|データ|ファイルの種類の名前を付けて保存機能を有効にします。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>|データ|ドキュメントの永続性を有効にします。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl>|データ|再読み込みをトリガーするなど、ファイルの変更イベントの抑制を使用できます。|

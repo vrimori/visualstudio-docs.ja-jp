@@ -1,51 +1,51 @@
 ---
-title: "IDebugClassField::GetEnclosingClass | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugClassField::GetEnclosingClass"
-helpviewer_keywords: 
-  - "IDebugClassField::GetEnclosingClass メソッド"
+title: "IDebugClassField::GetEnclosingClass |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugClassField::GetEnclosingClass
+helpviewer_keywords: IDebugClassField::GetEnclosingClass method
 ms.assetid: a0c12e3c-9ea0-4dfb-9e45-8cea18725022
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: fbec5ac48280cf10bc89e73faca0779384bf3549
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugClassField::GetEnclosingClass
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このクラスを囲むクラスを取得します。  
+# <a name="idebugclassfieldgetenclosingclass"></a>IDebugClassField::GetEnclosingClass
+このクラスの外側のクラスを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetEnclosingClass(   
-   IDebugClassField** ppClassField  
+```cpp  
+HRESULT GetEnclosingClass(   
+   IDebugClassField** ppClassField  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetEnclosingClass(  
-   out IDebugClassField ppClassField  
+   out IDebugClassField ppClassField  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppClassField`  
- \[入力\] [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) 外側のクラスを表すオブジェクトを返します。  外側のクラスが存在しない場合は null を返します。  
+ [out]返します、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)包含を表すオブジェクトのクラスです。 外側のクラスが存在しない場合は、null 値を返します。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)このオブジェクトによって表されるクラスが入れ子になったクラスで`ppClassField` のパラメーターは `IDebugClassField` 外側のクラスを表すオブジェクトを返します。  たとえばこのクラスを定義する :  
+## <a name="remarks"></a>コメント  
+ このクラスが表されている場合[IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)オブジェクトは、入れ子になったクラス、`ppClassField`パラメーターを返します、`IDebugClassField`包含を表すオブジェクトのクラスです。 たとえば、次のクラス定義を考えてみます。  
   
 ```  
 class RootClass {  
@@ -53,7 +53,7 @@ class RootClass {
 };  
 ```  
   
- `IDebugClassField` を表すオブジェクトの `GetEnclosingClass` のメソッドを `NestedClass` クラスのという `IDebugClassField` のクラス `RootClass` 表すオブジェクトを返します。  
+ 呼び出す、`GetEnclosingClass`メソッドを`IDebugClassField`オブジェクトを表す、`NestedClass`クラスを返します、`IDebugClassField`クラスを表すオブジェクトを`RootClass`です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

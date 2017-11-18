@@ -1,28 +1,29 @@
 ---
-title: "イベント ソース (Visual Studio SDK) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[デバッグ SDK] イベント ソースのデバッグ"
+title: "イベント ソース (Visual Studio SDK) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: debugging [Debugging SDK], event sources
 ms.assetid: b9ba0908-ae4c-4a64-aab1-bee453dd7a22
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: dcd2b8457854817f84272420a42872a1b947e6c2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# イベント ソース (Visual Studio SDK)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-イベントの 2 種類のソースがあります : デバッグ エンジン \(DE\) とセッションはマネージャーを \(SDM\) デバッグします。  SDM から送られたイベントにはエンジンがありますがde\-DE から送られたイベントに null 以外のエンジンがあります。  
+# <a name="event-sources-visual-studio-sdk"></a>イベント ソース (Visual Studio SDK)
+イベントの 2 つのソースがあります。 デバッグ エンジン (DE) と、セッションは、マネージャー (SDM) をデバッグします。 DE から送信されるイベント NULL 以外では、エンジンを持ち、SDM から送信されたイベントが NULL エンジンを持ちます。  
   
-## 例  
- 次の例では de\-DE から SDM に **IDebugProgramCreateEvent2** を送信する方法を示しています。  
+## <a name="example"></a>例  
+ 次の例は、送信する方法を示しています、 **IDebugProgramCreateEvent2** DE、SDM するからです。  
   
 ```  
 CDebugProgramCreateEvent* pProgramCreateEvent = new CDebugProgramCreateEvent();  
@@ -73,5 +74,5 @@ HRESULT CEvent::SendAsynchronousEvent(IDebugEventCallback2 *pCallback, IDebugEng
   
 ```  
   
-## 参照  
- [イベントを送信します。](../../extensibility/debugger/sending-events.md)
+## <a name="see-also"></a>関連項目  
+ [イベントの送信](../../extensibility/debugger/sending-events.md)

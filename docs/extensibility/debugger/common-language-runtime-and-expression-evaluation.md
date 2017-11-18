@@ -1,40 +1,42 @@
 ---
-title: "共通言語ランタイムおよび式の評価 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[デバッグ SDK] の式の評価のデバッグ"
-  - "式の評価、および共通言語ランタイム"
+title: "共通言語ランタイムおよび式の評価 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- debugging [Debugging SDK], expression evaluation
+- expression evaluation, and common language runtime
 ms.assetid: b36c1eb5-1aaf-48a6-b287-ee7a273d2b1c
-caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ba9a9a6b406ad5a94cced7820e6b4581db56eb2b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 共通言語ランタイムおよび式の評価
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="common-language-runtime-and-expression-evaluation"></a>共通言語ランタイムおよび式の評価
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されません。 CLR 式エバリュエーターの実装については、次を参照してください [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) と [マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
+>  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
   
- コンパイラでは、Visual Basic および C\# の場合 \(C シャープと発音\)、共通言語ランタイム \(CLR\) を対象とする Microsoft 中間言語 \(MSIL\)、後でが生成などは、ネイティブ コードにコンパイルします。 CLR では、結果として得られるコードをデバッグするには、\(DE\) のデバッグ エンジンを提供します。 独自のプログラミング言語を Visual Studio IDE に統合する場合は、MSIL にコンパイル時に選択でき、そのため、独自の DE を記述する必要はありません。 ただし、使用するプログラミング言語のコンテキスト内で式を評価できる式エバリュエーター \(EE\) を記述する必要があります。  
+ コンパイラは、Visual Basic および C# の場合 (c-sharp と発音)、共通言語ランタイム (CLR) を対象とする Microsoft Intermediate Language (MSIL)、後でが生成などは、ネイティブ コードにコンパイルします。 CLR では、結果として得られるコードをデバッグするには、(DE) のデバッグ エンジンを提供します。 独自のプログラミング言語を Visual Studio IDE に統合する場合は、MSIL にコンパイルすることもでき、そのため、独自の DE を記述する必要はありません。 ただし、使用するプログラミング言語のコンテキスト内で式を評価できる式エバリュエーター (EE) を記述する必要があります。  
   
-## 説明  
- コンピューター言語の式は、一般に、データ オブジェクトのセットと、それらを操作するために使用する演算子のセットを生成する解析されます。 たとえば、"A"と"B"別のデータ オブジェクトの処理が式の"A \+ B"は、データに加算演算子 \(\+\) を適用するために解析可能性がありますがオブジェクトです。 データ オブジェクト、演算子、およびそれらの関連の合計セットは、最も多くの場合、プログラムではツリーのノードにある演算子と、分岐でのデータ オブジェクトのツリーとして表されます。 ツリー形式に分割されている式は、解析ツリーと呼ばれます。  
+## <a name="discussion"></a>説明  
+ コンピューターの言語の式は、一連のデータ オブジェクトとそれらの操作に使用される演算子のセットを生成するために一般的に解析されます。 たとえば、"A B"は、データに、加算演算子 (+) を適用する解析可能性があります式は、"A"と"B"可能性のある別のデータ オブジェクトの結果として得られるオブジェクトです。 データ オブジェクト、演算子、およびその関連性が一連の合計は、ツリーのノードにある演算子と、分岐でのデータ オブジェクトのツリーとしてほとんどの場合、プログラムで表現されます。 ツリー形式に分割されている式は、解析ツリーと呼ばれます。  
   
- 式が解析されている各データ オブジェクトを評価するシンボル プロバイダー \(SP\) が呼び出されます。 たとえば、"A"には、複数のメソッド、質問の両方が定義されている"どの A?" A の値を確定する前に応答する必要があります。 SP によって返される応答は、「5 番目のスタック フレーム上の 3 番目の項目」のようなもの、または「静的メモリの先頭を越える 50 バイトは、A は、このメソッドに割り当てられた」です。  
+ 式が解析されて、各データ オブジェクトを評価するシンボル プロバイダー (SP) が呼び出されます。 たとえば、"A"には、複数のメソッドは、その質問の両方が定義されている"どの A?" A の値を確認する前に応答する必要があります。 SP によって返される応答は、「5 番目のスタック フレームの 3 番目の項目」のようなもの、または「静的メモリの開始を超える 50 バイトである A は、このメソッドに割り当てられた」です。  
   
- MSIL を生成して、プログラム自体、以外では、CLR のコンパイラは、プログラム データベース \(.pdb\) ファイルに書き込まれる非常にわかりやすくのデバッグ情報も生成します。 独自の言語コンパイラは、CLR コンパイラと同じ形式でのデバッグ情報を生成している限り、CLR の SP は言語のという名前のデータ オブジェクトを識別することです。 名前付きのデータ オブジェクトが識別されると、EE は、そのオブジェクトの値を保持するメモリ領域にデータ オブジェクトを関連付けます \(またはバインド\) にバインダー オブジェクトを使用します。 デは、取得、またはデータ オブジェクトの新しい値を設定します。  
+ プログラム自体の MSIL を生成する、だけでなく、CLR コンパイラは、プログラム データベース (.pdb) ファイルに書き込まれるわかりにくいのデバッグ情報も生成できます。 独自の言語コンパイラでは、CLR コンパイラと同じ形式でのデバッグ情報を生成、限り、CLR の SP は言語のという名前のデータ オブジェクトを識別できます。 名前付きのデータ オブジェクトを特定したら、EE オブジェクトを使用してバインダーへデータ オブジェクトを関連付ける (またはバインド) にメモリ領域にそのオブジェクトの値を保持します。 デは、取得、またはデータ オブジェクトの新しい値を設定します。  
   
- 独自のコンパイラが CLR を呼び出すことによってデバッグ情報を提供、 `ISymbolWriter` インターフェイス \(名前空間に .NET Framework で定義されている `System.Diagnostics.SymbolStore`\)。 CLR DE と SP を MSIL にコンパイルし、これらのインターフェイスを使用してデバッグ情報を記述、独自のコンパイラが使用することができます。 これには、独自の言語を Visual Studio IDE に統合する大幅に簡略化します。  
+ 専用のコンパイラが CLR を呼び出してデバッグ情報を提供できます、`ISymbolWriter`インターフェイス (名前空間での .NET Framework で定義されている`System.Diagnostics.SymbolStore`)。 CLR DE と SP を MSIL にコンパイルし、これらのインターフェイスを使用してデバッグ情報を記述、専用のコンパイラが使用することができます。 これには、独自の言語を Visual Studio IDE に統合することが大幅に簡略化します。  
   
- CLR DE が式を評価する独自の EE を呼び出すと、DE、SP およびバインダー オブジェクトへのインターフェイスと EE を提供します。 したがって、CLR ベースのデバッグ エンジンの手段を記述する必要があるのみインターフェイスを実装する、適切な式エバリュエーター。バインディングと処理の符号の CLR によって行われます。  
+ CLR DE 式を評価する独自の EE を呼び出すときに、DE、SP およびバインダー オブジェクトへのインターフェイスで EE を提供します。 したがって、CLR ベースのデバッグ エンジン手段を書き込む必要があるインターフェイスだけを実装する、適切な式エバリュエーター。バインディングと、処理するシンボルの CLR によって行われます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

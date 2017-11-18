@@ -1,72 +1,72 @@
 ---
-title: "BP_UNBOUND_REASON | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_UNBOUND_REASON"
-helpviewer_keywords: 
-  - "BP_UNBOUND_REASON 列挙型"
+title: "BP_UNBOUND_REASON |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BP_UNBOUND_REASON
+helpviewer_keywords: BP_UNBOUND_REASON enumeration
 ms.assetid: 939b6f9c-113b-471d-9f30-b03871af6285
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: dfa3ab5ee6d38da45bd69cf4a9e49a86035d1252
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# BP_UNBOUND_REASON
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ブレークポイントが解放された理由を示します。  
+# <a name="bpunboundreason"></a>BP_UNBOUND_REASON
+ブレークポイントがバインドできなかった理由を説明します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum enum_BP_UNBOUND_REASON {   
-   BPUR_UNKNOWN           = 0x0000,  
-   BPUR_CODE_UNLOADED     = 0x0002,  
-   BPUR_BREAKPOINT_REBIND = 0x0003,  
-   BPUR_BREAKPOINT_ERROR  = 0x0004  
+```cpp  
+enum enum_BP_UNBOUND_REASON {   
+   BPUR_UNKNOWN           = 0x0000,  
+   BPUR_CODE_UNLOADED     = 0x0002,  
+   BPUR_BREAKPOINT_REBIND = 0x0003,  
+   BPUR_BREAKPOINT_ERROR  = 0x0004  
 };  
 typedef DWORD BP_UNBOUND_REASON;  
 ```  
   
-```c#  
-public enum enum_BP_UNBOUND_REASON {   
-   BPUR_UNKNOWN           = 0x0000,  
-   BPUR_CODE_UNLOADED     = 0x0002,  
-   BPUR_BREAKPOINT_REBIND = 0x0003,  
-   BPUR_BREAKPOINT_ERROR  = 0x0004  
+```csharp  
+public enum enum_BP_UNBOUND_REASON {   
+   BPUR_UNKNOWN           = 0x0000,  
+   BPUR_CODE_UNLOADED     = 0x0002,  
+   BPUR_BREAKPOINT_REBIND = 0x0003,  
+   BPUR_BREAKPOINT_ERROR  = 0x0004  
 };  
 ```  
   
-## メンバー  
- BPUR\_UNKNOWN  
- 原因は不明です。  
+## <a name="members"></a>メンバー  
+ BPUR_UNKNOWN  
+ 不明な理由です。  
   
- BPUR\_CODE\_UNLOADED  
- ブレークポイントが含まれるコードはアンロードを下されました。  
+ BPUR_CODE_UNLOADED  
+ ブレークポイントを含むコードがアンロードされました。  
   
- BPUR\_BREAKPOINT\_REBIND  
- ブレークポイントは別の場所に反動です。  これはブレークポイントが移動したりブレークポイントは有効ではなくなるパスを使用してファイルにバインドされると編集後に発生することができる操作を継続します。  
+ BPUR_BREAKPOINT_REBIND  
+ 別の場所にブレークポイントを再バインドするとします。 編集の後に発生するでき、ブレークポイントに移動したとき、またはパスが無効になっているファイルにブレークポイントがバインドされている場合は、操作を続行できます。  
   
- BPUR\_ BREAKPOINT\_ERROR  
- ブレークポイントはバインドした後間違うに決まります。  これは条件が有効ではなくマネージのブレークポイントに発生します。  
+ BPUR_ BREAKPOINT_ERROR  
+ ブレークポイントがバインドされている後にエラーが発生すると判断されます。 これはマネージ ブレークポイントの条件が無効になっています。  
   
-## 解説  
- [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) のメソッドによって返される。  
+## <a name="remarks"></a>コメント  
+ によって返される、 [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)メソッドです。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)

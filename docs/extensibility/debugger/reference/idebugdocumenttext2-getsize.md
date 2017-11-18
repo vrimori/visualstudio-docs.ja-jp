@@ -1,58 +1,58 @@
 ---
-title: "IDebugDocumentText2::GetSize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentText2::GetSize"
-helpviewer_keywords: 
-  - "IDebugDocumentText2::GetSize"
+title: "IDebugDocumentText2::GetSize |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDocumentText2::GetSize
+helpviewer_keywords: IDebugDocumentText2::GetSize
 ms.assetid: bf515a8f-dcee-4004-8f81-543d547ceaae
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 25bf0a7c570c2c11e09c9e6d98d1f4be05d7adb5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDocumentText2::GetSize
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ドキュメントのこの位置にあるテキストのサイズを取得します。  
+# <a name="idebugdocumenttext2getsize"></a>IDebugDocumentText2::GetSize
+ドキュメントのこの位置でテキストのサイズを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetSize(   
-   ULONG* pcNumLines,  
-   ULONG* pcNumChars  
+```cpp  
+HRESULT GetSize(   
+   ULONG* pcNumLines,  
+   ULONG* pcNumChars  
 );  
 ```  
   
-```c#  
-int GetSize(   
-   ref uint pcNumLines,  
-   ref uint pcNumChars  
+```csharp  
+int GetSize(   
+   ref uint pcNumLines,  
+   ref uint pcNumChars  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pcNumLines`  
- \[入力\] テキストの行数を返します。  
+ [out]テキスト行の数を返します。  
   
  `pcNumChars`  
- \[入力\] テキストの文字数を返します。  
+ [out]テキストの文字数を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 特定の値が必要でない場合は\[C\+\+\] パラメーターに NULL を渡します。  
+## <a name="remarks"></a>コメント  
+ [C++ のみ]特定の値が必要ない場合は、パラメーターに NULL を渡します。  
   
- C\# の場合のみ \[入力\] パラメーターも指定する必要があります。  
+ [C# の場合のみ]両方のパラメーターを指定する必要があります。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)

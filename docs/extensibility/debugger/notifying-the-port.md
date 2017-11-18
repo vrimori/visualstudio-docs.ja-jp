@@ -1,51 +1,52 @@
 ---
-title: "ポートへの通知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "通知のポート"
+title: "ポートへの通知 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ports, notification
 ms.assetid: f9fce48e-7d4e-4627-a0fb-77b75428146a
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 91bedf387fe86c2bf2fefb34e643e581a37c15bf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ポートへの通知
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-プログラムが起動したらポートは次のとおり知らせられなければがあります :  
+# <a name="notifying-the-port"></a>ポートを通知します。
+プログラムを開始した後に、ポート必要がありますには通知とおり。  
   
-1.  ポートは新しいプログラムのノードを受け取るとデバッグ セッションにプログラムの作成イベントを返します。  イベントとはプログラムを表すインターフェイスを行います。  
+1.  ポートは、新しいプログラム ノードを受信すると、デバッグ セッションに戻るプログラム作成イベントを送信します。 イベントは、それにプログラムを表すインターフェイスを実行します。  
   
-2.  デバッグ セッションをアタッチできるデバッグ エンジン \(DE\) ID のプログラムを呼び出します。  
+2.  デバッグ セッションは、デバッグ エンジン (DE) にアタッチできるの識別子のプログラムを照会します。  
   
-3.  デバッグ セッションは機能しますがプログラムに使用可能な DEs の一覧にあるかどうかを確認します。  デバッグ セッションは最初にデバッグのパッケージ渡されたソリューションのアクティブなプログラムの設定をこのリストを取得します。  
+3.  デバッグ セッションは、DE が許容される DEs でそのプログラムの一覧にかどうかを確認します。 デバッグ セッションは、デバッグ パッケージによってを最初に渡されたソリューションのアクティブなプログラムの設定から、この一覧を取得します。  
   
-     DE が有効なリストです。しますがプログラムにアタッチされません。  
+     許可のリストにする必要があります、DE しない場合、DE、プログラムにアタッチされません。  
   
- ポートは最初に新しいプログラムのノードを受け取るとプログラムによってプログラムを表すために [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) のインターフェイスを作成します。  
+ プログラムでは、ポート最初に受信すると、新しいプログラム ノードを作成、 [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)プログラムを表すインターフェイス。  
   
 > [!NOTE]
->  これはデバッグ エンジン \(DE\) により後に作成された `IDebugProgram2` インターフェイスと混同しないようにしてください。  
+>  これがないと混同しないでください、`IDebugProgram2`デバッグ エンジン (DE) によって後で作成されるインターフェイス。  
   
- ポートはCOM `IConnectionPoint` のインターフェイスによってデバッグ セッションのマネージャー \(SDM\) に [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) プログラムの作成イベントを返します。  
+ ポートの送信、 [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) COM を使用してセッション デバッグ マネージャー (SDM) にプログラムの作成イベント`IConnectionPoint`インターフェイスです。  
   
 > [!NOTE]
->  これはde\-DE に後で送信 `IDebugProgramCreateEvent2` インターフェイスと混同しないようにしてください。  
+>  これがないと混同しないでください、`IDebugProgramCreateEvent2`デによって後で送信されるインターフェイス。  
   
- イベント インターフェイス自体とともにポートの [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)[IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md) を送信しポートを表す [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) のインターフェイスを処理しそれぞれをお勧めします。  SDM でプログラムをデバッグできる DE の GUID を取得するに [IDebugProgram2:: GetEngineInfo](../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md) を呼び出します。  GUID は最初に [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) インターフェイスから派生しています。  
+ ポートの送信イベント インターフェイス自体と共に、 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)、 [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)、および[IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)インターフェイスで、ポートを表す、処理、およびプログラム、それぞれします。 SDM 呼び出し[IDebugProgram2::GetEngineInfo](../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md)プログラムをデバッグできる DE の GUID を取得します。 GUID がから最初に取得された、 [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)インターフェイスです。  
   
- SDM は機能しますが有効な DEs の一覧にあるかどうかを確認します。  SDM は最初にデバッグのパッケージ渡されたソリューションのアクティブなプログラムの設定をこのリストを取得します。  DE が有効なリストであるかまたはプログラムにアタッチされません。  
+ SDM はかどうか、DE は許容 DEs の一覧を確認します。 SDM は、デバッグ パッケージによってを最初に渡されたソリューションのアクティブなプログラムの設定から、この一覧を取得します。 デが、許可リストにする必要があります。 追加しないプログラムにアタッチされません。  
   
- 一度に DE ID はSDM プログラムにアタッチする準備が整いました。呼ばれます。  
+ デの id が認識されたら、SDM はプログラムにアタッチする準備ができてです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [プログラムの起動](../../extensibility/debugger/launching-a-program.md)   
- [起動した後にアタッチします。](../../extensibility/debugger/attaching-after-a-launch.md)   
+ [起動後にアタッチします。](../../extensibility/debugger/attaching-after-a-launch.md)   
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)

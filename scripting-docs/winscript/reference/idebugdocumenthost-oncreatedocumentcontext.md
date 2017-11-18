@@ -1,27 +1,30 @@
 ---
-title: "IDebugDocumentHost::OnCreateDocumentContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDebugDocumentHost::OnCreateDocumentContext |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugDocumentHost.OnCreateDocumentContext
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IDebugDocumentHost::OnCreateDocumentContext"
+helpviewer_keywords: IDebugDocumentHost::OnCreateDocumentContext
 ms.assetid: 080c8604-cfd7-484e-a337-15040870e683
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 55598a4191d421d3aea01d27cc7991b70bd6a019
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugDocumentHost::OnCreateDocumentContext
-新しいドキュメントのコンテキストが作成される通知し、ホストが必要に応じて新しいコンテキストの制御のワイルドカードを返すことをホストできます。  
+# <a name="idebugdocumenthostoncreatedocumentcontext"></a>IDebugDocumentHost::OnCreateDocumentContext
+新しいドキュメントのコンテキストが作成されると、必要に応じて、新しいコンテキストの不明な制御を戻すをホストできるように、ホストに通知します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT OnCreateDocumentContext(  
@@ -29,20 +32,20 @@ HRESULT OnCreateDocumentContext(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppunkOuter`  
- \[入力\]オブジェクトは、コントロール新しいコンテキスト。  
+ [out]新しいコンテキストを制御するオブジェクト。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
-|`E_NOTIMPL`|ホストは、コントロール オブジェクトを提供しません。|  
+|`E_NOTIMPL`|ホストでは、コントロール オブジェクトは提供されません。|  
   
-## 解説  
- このメソッドは、ホストが指定されたヘルパー ドキュメントのコンテキストをに新しい機能を追加します。  このメソッドは、呼び出し元がコンテキストの作成を担当する **E\_NOTIMPL** または null の外部オブジェクトを返すことがあります。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、新しい機能をヘルパーに用意されているドキュメントのコンテキストに追加するホストを許可します。 このメソッドが返す可能性があります**E_NOTIMPL**または null 外部オブジェクトで、呼び出し元の場合は、コンテキストの作成を担当します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocumentHost インターフェイス](../../winscript/reference/idebugdocumenthost-interface.md)

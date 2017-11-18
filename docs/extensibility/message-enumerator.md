@@ -1,73 +1,75 @@
 ---
-title: "メッセージの列挙子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メッセージの列挙子"
-  - "ソース管理プラグインをメッセージの列挙"
+title: "列挙子をメッセージ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- message enumerator
+- source control plug-ins, message enumeration
 ms.assetid: 4a4faa0d-d352-40ea-a21d-c09ea286a8e1
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 000b853c1f25d8b68ccdda87e6c0496aeeaaca0e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# メッセージの列挙子
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-次のフラグを使用しての `TEXTOUTPROC` 関数を呼び出すときに IDE で提供するコールバック関数、 [SccOpenProject](../extensibility/sccopenproject-function.md) \(を参照してください [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) 詳細については、コールバック関数で\)。  
+# <a name="message-enumerator"></a>メッセージの列挙子
+次のフラグの使用、`TEXTOUTPROC`関数を呼び出すときに IDE が提供するコールバック関数、 [SccOpenProject](../extensibility/sccopenproject-function.md) (を参照してください[LPTEXTOUTPROC](../extensibility/lptextoutproc.md)詳細については、コールバックで関数の場合)。  
   
- IDE の処理を取り消すことが確認された場合はそこはキャンセル メッセージのいずれかを取得することがあります。 ソースがプラグインで使用を管理する場合は、 `SCC_MSG_STARTCANCEL` を表示するための IDE を確認する、 **キャンセル** \] ボタンをクリックします。 その後、通常のメッセージのセットを送信できます。 これらの返される結果のいずれかの場合 `SCC_MSG_RTN_CANCEL`, 、プラグイン、操作を終了するし、返されます。 プラグインもポーリング `SCC_MSG_DOCANCEL` 定期的に更新して、ユーザーが操作の取り消しかどうかを判断します。 すべての操作が完了すると、またはユーザーがキャンセルされた場合、プラグインが送信時に `SCC_MSG_STOPCANCEL`します。`SCC_MSG_INFO`, 、SCC\_MSG\_WARNING、SCC\_MSG\_ERROR 型は、メッセージの一覧に表示されているメッセージに使用されます。`SCC_MSG_STATUS` ステータス バーまたは一時的な表示領域にテキストが表示されることを示す特殊な型です。 維持されない永続的に、一覧にします。  
+ プロセスをキャンセルする IDE が要求された場合では [キャンセル] メッセージのいずれかを取得する可能性があります。 この場合、ソースがプラグインで使用を制御`SCC_MSG_STARTCANCEL`に表示するための IDE を確認してください、**キャンセル**ボタンをクリックします。 その後、通常のメッセージの任意のセットを送信できます。 これらを返しますのいずれかの`SCC_MSG_RTN_CANCEL`、プラグインは、操作を終了し、返します、。 プラグインもポーリング`SCC_MSG_DOCANCEL`かどうか、ユーザーが操作の取り消しを確認するには、定期的にします。 すべての操作が完了したら、またはユーザーがキャンセルされた場合、プラグインは送信時に`SCC_MSG_STOPCANCEL`です。 `SCC_MSG_INFO`SCC_MSG_WARNING、SCC_MSG_ERROR 型は、メッセージの一覧に表示される取得されるメッセージに使用されます。 `SCC_MSG_STATUS`特殊な型を示すテキストがステータス バーまたは一時的な表示領域で現れる必要があります。 存在しません永続的に、一覧にします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
-enum {   
-   SCC_MSG_RTN_CANCEL = -1,   
-   SCC_MSG_RTN_OK = 0,   
-   SCC_MSG_INFO = 1   
-   SCC_MSG_WARNING,   
-   SCC_MSG_ERROR,   
-   SCC_MSG_STATUS,   
-   SCC_MSG_DOCANCEL,   
-   SCC_MSG_STARTCANCEL,   
-   SCC_MSG_STOPCANCEL   
+enum {   
+   SCC_MSG_RTN_CANCEL = -1,   
+   SCC_MSG_RTN_OK = 0,   
+   SCC_MSG_INFO = 1   
+   SCC_MSG_WARNING,   
+   SCC_MSG_ERROR,   
+   SCC_MSG_STATUS,   
+   SCC_MSG_DOCANCEL,   
+   SCC_MSG_STARTCANCEL,   
+   SCC_MSG_STOPCANCEL   
 };  
 ```  
   
-## メンバー  
- SCC\_MSG\_RTN\_CANCEL  
- \[キャンセル\] を示すためにコールバックから戻る  
+## <a name="members"></a>メンバー  
+ SCC_MSG_RTN_CANCEL  
+ [キャンセル] を示すためにコールバックから戻る  
   
- SCC\_MSG\_RTN\_OK  
- コールバックを続行するかを返します。  
+ SCC_MSG_RTN_OK  
+ 続行するコールバックから戻る  
   
- SCC\_MSG\_INFO  
+ SCC_MSG_INFO  
  情報メッセージです。  
   
- SCC\_MSG\_WARNING  
+ SCC_MSG_WARNING  
  メッセージは警告です。  
   
- SCC\_MSG\_ERROR  
+ SCC_MSG_ERROR  
  メッセージは、エラーです。  
   
- SCC\_MSG\_STATUS  
- ステータス バーのメッセージが用意されています。  
+ SCC_MSG_STATUS  
+ メッセージは、ステータス バーのものです。  
   
- SCC\_MSG\_DOCANCEL  
- テキストがないです。IDE が返す `SCC_MSG_RTN_OK` または `SCC_MSG_RTN_CANCEL`です。  
+ SCC_MSG_DOCANCEL  
+ テキストはありません。IDE を返します`SCC_MSG_RTN_OK`または`SCC_MSG_RTN_CANCEL`です。  
   
- SCC\_MSG\_STARTCANCEL  
- \[キャンセル\] ループを開始します。  
+ SCC_MSG_STARTCANCEL  
+ [キャンセル] ループを開始します。  
   
- SCC\_MSG\_STOPCANCEL  
- \[キャンセル\] ループを停止します。  
+ SCC_MSG_STOPCANCEL  
+ [キャンセル] ループを停止します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
  [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)

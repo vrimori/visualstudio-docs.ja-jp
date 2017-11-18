@@ -1,65 +1,64 @@
 ---
-title: "IDiaSession::findSymbolByRVAEx | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSession::findSymbolByRVAEx メソッド"
+title: "Idiasession::findsymbolbyrvaex |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSession::findSymbolByRVAEx method
 ms.assetid: 61344966-fed4-4c02-9e27-20356ec2ef7c
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 3d95043be0c44ddfd5e05054e72e0370a60e84a9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSession::findSymbolByRVAEx
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-含む取得し最も近いは指定した相対仮想アドレスのオフセットが指定 \(RVA\) されたシンボルの型。  
+# <a name="idiasessionfindsymbolbyrvaex"></a>IDiaSession::findSymbolByRVAEx
+が含まれているか、指定された相対仮想アドレス (RVA) とのオフセットに最も近いを指定した記号の型を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT findSymbolByRVAEx (   
-   DWORD        rva,  
-   SymTagEnum   symtag,  
-   IDiaSymbol** ppSymbol,  
-   LONG*        displacement  
+```C++  
+HRESULT findSymbolByRVAEx (   
+   DWORD        rva,  
+   SymTagEnum   symtag,  
+   IDiaSymbol** ppSymbol,  
+   LONG*        displacement  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `rva`  
- \[出力\] RVA を指定します。  
+ [in]RVA を指定します。  
   
  `symtag`  
- \[入力\] 検索するシンボルの型。  値は [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md) の列挙体から取得されます。  
+ [in]検索する記号の型。 値から取得されますが、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)列挙します。  
   
  `ppSymbol`  
- \[出力\] 取得されたシンボル [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) を表すオブジェクトを返します。  
+ [out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)シンボルを表すオブジェクトを取得します。  
   
  `displacement`  
- \[入力\] 相対仮想アドレスのオフセットを `rva` で指定した示す値を返します。  
+ [out]指定された相対仮想アドレスからのオフセットを指定する値を返します`rva`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 使用例  
+## <a name="example"></a>例  
   
-```cpp#  
+```C++  
 IDiaSymbol* pFunc;  
 LONG disp = 0;  
 pSession->findSymbolByRVAEx( rva, SymTagFunction, &pFunc, &disp );  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)

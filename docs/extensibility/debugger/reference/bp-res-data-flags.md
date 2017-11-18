@@ -1,57 +1,57 @@
 ---
-title: "BP_RES_DATA_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_RES_DATA_FLAGS"
-helpviewer_keywords: 
-  - "BP_RES_DATA_FLAGS 列挙型"
+title: "BP_RES_DATA_FLAGS |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BP_RES_DATA_FLAGS
+helpviewer_keywords: BP_RES_DATA_FLAGS enumeration
 ms.assetid: d97611e2-def6-45a9-ad7d-eedf2ad4c82b
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 89bfe7f92e1260c83803136eeed1bf921c8913c8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# BP_RES_DATA_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-データ ブレークポイントはハードウェアでエミュレートされるか実行されるかどうかを指定します。  
+# <a name="bpresdataflags"></a>BP_RES_DATA_FLAGS
+データ ブレークポイントがエミュレートされるかどうか、または実装されているハードウェアを指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum enum_BP_RES_DATA_FLAGS {   
-   BP_RES_DATA_EMULATED = 0x0001  
+```cpp  
+enum enum_BP_RES_DATA_FLAGS {   
+   BP_RES_DATA_EMULATED = 0x0001  
 };  
 typedef DWORD BP_RES_DATA_FLAGS;  
 ```  
   
-```c#  
-public enum enum_BP_RES_DATA_FLAGS {   
-   BP_RES_DATA_EMULATED = 0x0001  
+```csharp  
+public enum enum_BP_RES_DATA_FLAGS {   
+   BP_RES_DATA_EMULATED = 0x0001  
 };  
 ```  
   
-## メンバー  
- BP\_RES\_DATA\_EMULATED  
- データ ブレークポイントをエミュレートすることを指定します。  
+## <a name="members"></a>メンバー  
+ BP_RES_DATA_EMULATED  
+ データ ブレークポイントをエミュレートされていることを指定します。  
   
-## 解説  
- [BP\_RESOLUTION\_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) の構造体のメンバー `dwFlags` に使用されます。  
+## <a name="remarks"></a>コメント  
+ 使用、`dwFlags`のメンバー、 [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)構造体。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [BP\_RESOLUTION\_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)
