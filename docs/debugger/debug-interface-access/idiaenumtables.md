@@ -1,57 +1,56 @@
 ---
-title: "IDiaEnumTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumTables インターフェイス"
+title: "IDiaEnumTables |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumTables interface
 ms.assetid: 016190c5-09e4-48f2-bf60-9b02603a03e0
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 913fdcefc4e90ea09030e416cb6a300e50855478
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumTables
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idiaenumtables"></a>IDiaEnumTables
 データ ソースに含まれるさまざまなテーブルを列挙します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
-IDiaEnumTables : IUnknown  
+IDiaEnumTables : IUnknown  
 ```  
   
-## Vtable の順序でメソッド  
- 次の表は `IDiaEnumTables` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDiaEnumTables`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[IDiaEnumTables::get\_\_NewEnum](../../debugger/debug-interface-access/idiaenumtables-get-newenum.md)|この列挙子の [IEnumVARIANT Interface](http://msdn.microsoft.com/ja-jp/139e3c93-faef-4003-9079-e0e94494db3e) のバージョンを取得します。|  
-|[IDiaEnumTables::get\_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md)|テーブルの数を取得します。|  
-|[IDiaEnumTables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md)|インデックスまたは名前でテーブルを取得します。|  
-|[IDiaEnumTables::Next](../Topic/IDiaEnumTables::Next.md)|列挙体シーケンス内のテーブルの指定した数を取得します。|  
-|[IDiaEnumTables::Skip](../../debugger/debug-interface-access/idiaenumtables-skip.md)|列挙体シーケンス内のテーブルの指定した数の要素をスキップします。|  
-|[IDiaEnumTables::Reset](../Topic/IDiaEnumTables::Reset.md)|列挙体シーケンスを先頭にリセットします。|  
-|[IDiaEnumTables::Clone](../../debugger/debug-interface-access/idiaenumtables-clone.md)|現在の列挙子と同じ列挙状態を含む列挙子を作成します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[IDiaEnumTables::get__NewEnum](../../debugger/debug-interface-access/idiaenumtables-get-newenum.md)|取得、 [IEnumVARIANT インターフェイス](http://msdn.microsoft.com/en-us/139e3c93-faef-4003-9079-e0e94494db3e)この列挙子のバージョン。|  
+|[IDiaEnumTables::get_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md)|テーブルの数を取得します。|  
+|[IDiaEnumTables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md)|インデックスまたは名前を使用してテーブルを取得します。|  
+|[IDiaEnumTables::Next](../../debugger/debug-interface-access/idiaenumtables-next.md)|列挙のシーケンス内のテーブルの指定した数を取得します。|  
+|[IDiaEnumTables::Skip](../../debugger/debug-interface-access/idiaenumtables-skip.md)|列挙のシーケンス内のテーブルの指定した数をスキップします。|  
+|[IDiaEnumTables::Reset](../../debugger/debug-interface-access/idiaenumtables-reset.md)|列挙のシーケンスを先頭にリセットします。|  
+|[IDiaEnumTables::Clone](../../debugger/debug-interface-access/idiaenumtables-clone.md)|現在の列挙子と同じ列挙の状態を含む列挙子を作成します。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 呼び出し元のメモ  
- [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) のメソッドを呼び出してこのインターフェイスを取得します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ このインターフェイスを呼び出すことによって取得、 [idiasession::getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)メソッドです。  
   
-## 使用例  
- この例ではセッションで `IDiaEnumTables` のインターフェイスを取得する方法を示します。  テーブルを使用するコード例については[IDiaTable](../../debugger/debug-interface-access/idiatable.md) のインターフェイスを参照してください。  
+## <a name="example"></a>例  
+ この例は、取得する方法を示します、`IDiaEnumTables`セッションからのインターフェイスです。 テーブルを使用するより詳細な例については、 [IDiaTable](../../debugger/debug-interface-access/idiatable.md)インターフェイスです。  
   
-```cpp#  
+```C++  
 void ShowTableNames(IDiaSession *pSession)  
 {  
     CComPtr<IDiaEnumTables> pTables;  
@@ -63,13 +62,13 @@ void ShowTableNames(IDiaSession *pSession)
 }  
 ```  
   
-## 必要条件  
- ヘッダー : Dia2.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Dia2.h  
   
- ライブラリ : diaguids.lib  
+ ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## 参照  
- [インターフェイス \(Debug Interface Access SDK\)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+## <a name="see-also"></a>関連項目  
+ [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)

@@ -1,11 +1,10 @@
 ---
-title: 'CA2205: Use managed equivalents of Win32 API | Microsoft Docs'
+title: "CA2205: マネージ対応する Win32 API の使用 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,63 +14,49 @@ helpviewer_keywords:
 - UseManagedEquivalentsOfWin32Api
 - CA2205
 ms.assetid: 1c65ab59-3e50-4488-a727-3969c7f6cbe4
-caps.latest.revision: 13
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 16fdf2a733c4c41af35aae5c69a9e2e715501ab9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: cbdc02843d0a2982a129dafd5948a4c1ab287427
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205: Use managed equivalents of Win32 API
+# <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205: Win32 API に相当するマネージ API を使用します
 |||  
 |-|-|  
 |TypeName|UseManagedEquivalentsOfWin32Api|  
 |CheckId|CA2205|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non Breaking|  
+|カテゴリ|Microsoft.Usage|  
+|互換性に影響する変更点|中断なし|  
   
-## <a name="cause"></a>Cause  
- A platform invoke method is defined and a method with the equivalent functionality exists in the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] class library.  
+## <a name="cause"></a>原因  
+ プラットフォーム呼び出しメソッドが定義されているし、に、同等の機能を持つメソッドが存在する、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]クラス ライブラリです。  
   
-## <a name="rule-description"></a>Rule Description  
- A platform invoke method is used to call an unmanaged DLL function and is defined using the <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> attribute, or the `Declare` keyword in Visual Basic. An incorrectly defined platform invoke method can lead to runtime exceptions because of issues such as a misnamed function, faulty mapping of parameter and return value data types, and incorrect field specifications, such as the calling convention and character set. If available, it is generally simpler and less error prone to call the equivalent managed method than to define and call the unmanaged method directly. Calling a platform invoke method can also lead to additional security issues that need to be addressed.  
+## <a name="rule-description"></a>規則の説明  
+ プラットフォーム呼び出しメソッド アンマネージ DLL 関数の呼び出しに使用され、定義を使用して、<xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>属性、または`Declare`Visual Basic のキーワードです。 正しく定義されているプラットフォーム呼び出しメソッド、パラメーターと戻り値のデータ型と呼び出し規約、および文字などの正しくないフィールド仕様のマッピングの問題のある不適切な名前の関数などの問題があるため実行時に例外が生じることが設定します。 利用できる場合、通常は簡単なミスも少なくを定義およびアンマネージ メソッドを直接呼び出すよりも同等のマネージ メソッドを呼び出します。 プラットフォーム呼び出しメソッド対処する必要がある追加のセキュリティの問題につながることができますも。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, replace the call to the unmanaged function with a call to its managed equivalent.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、同等のマネージへの呼び出しでアンマネージ関数の呼び出しを置き換えます。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Suppress a warning from this rule if the suggested replacement method does not provide the needed functionality.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 推奨される置換メソッドが必要な機能を提供しない場合は、この規則による警告を抑制します。  
   
-## <a name="example"></a>Example  
- The following example shows a platform invoke method definition that violates the rule. In addition, the calls to the platform invoke method and the equivalent managed method are shown.  
+## <a name="example"></a>例  
+ プラットフォームが次の例では、規則に違反するメソッドの定義を呼び出します。 また、プラットフォームへの呼び出しがメソッドを呼び出すし、同等のマネージ メソッドが表示されます。  
   
- [!code-csharp[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/CSharp/ca2205-use-managed-equivalents-of-win32-api_1.cs)] [!code-vb[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/VisualBasic/ca2205-use-managed-equivalents-of-win32-api_1.vb)]  
+ [!code-csharp[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/CSharp/ca2205-use-managed-equivalents-of-win32-api_1.cs)]
+ [!code-vb[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/VisualBasic/ca2205-use-managed-equivalents-of-win32-api_1.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1404: Call GetLastError immediately after P/Invoke](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)  
+## <a name="related-rules"></a>関連規則  
+ [Ca 1404: P/invoke の直後に GetLastError を呼び出します](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)  
   
- [CA1060: Move P/Invokes to NativeMethods class](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)  
+ [CA1060: 移動 P/invoke を NativeMethods クラス](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)  
   
- [CA1400: P/Invoke entry points should exist](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)  
+ [1400: P/invoke エントリ ポイントが存在する必要があります。](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)  
   
- [CA1401: P/Invokes should not be visible](../code-quality/ca1401-p-invokes-should-not-be-visible.md)  
+ [Ca 1401: P/invoke になりません](../code-quality/ca1401-p-invokes-should-not-be-visible.md)  
   
- [CA2101: Specify marshaling for P/Invoke string arguments](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)
+ [Ca 2101: P/invoke 文字列引数に対してマーシャ リングを指定します。](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)

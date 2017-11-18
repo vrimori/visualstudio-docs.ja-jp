@@ -1,62 +1,65 @@
 ---
-title: "エディット コンティニュ エラー メッセージ ダイアログ ボックス | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.ENC.SupportedButNotAvaiable"
-  - "vs.debug.ENC.CannotEditWhileException"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "[エディット コンティニュ エラー メッセージ] ダイアログ ボックス"
+title: "エディット コンティニュのエラー メッセージ ダイアログ ボックス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 06/22/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.ENC.SupportedButNotAvaiable
+- vs.debug.ENC.CannotEditWhileException
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords: Edit and Continue Error Message dialog box
 ms.assetid: f98c91c0-447a-4533-85b6-87170a0dc4c3
-caps.latest.revision: 12
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 21d72c5bb4bacaed0324d688d96c663e3153b6a1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# エディット コンティニュ エラー メッセージ ダイアログ ボックス
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+# <a name="edit-and-continue-error-message-dialog-box"></a>エディット コンティニュ エラー メッセージ ダイアログ ボックス
+エディット コンティニュをサポートする言語でデバッグしているときに、このダイアログ ボックスが表示されますが、**エディット コンティニュ**は行ったコード変更の種類を使用できません。 ダイアログ ボックス内のエラー メッセージに、より詳しい説明が示されます。 このダイアログ ボックスが表示される原因としては、次のことが考えられます。  
 
-このダイアログ ボックスは、エディット コンティニュをサポートする言語でのデバッグ時に、行ったコード変更に対して**エディット コンティニュ**を使用できない場合に表示されます。  ダイアログ ボックス内のエラー メッセージに、より詳しい説明が示されます。  このダイアログ ボックスが表示される原因としては、次のことが考えられます。  
+-   SQL Server コードを編集しようとした。
+
+-   最適化されたコードを編集しようとした。 (デバッグ ビルドでは、リリース ビルドから切り替える必要があります)。
+
+-   実行中にコードを編集しようとしました。 (の代わりに、デバッガーで一時停止中に)。 再試行[ブレークポイントを設定する](../debugger/using-breakpoints.md)および一時停止中にコードを編集します。
+
+-   アンマネージ デバッグを有効にしているときに、マネージ コードを編集しようとした。 エディット コンティニュでは機能しません[混合モード デバッグ](../debugger/how-to-debug-in-mixed-mode.md)です。
+
+-   行ったコードの変更、プログラミング言語で、エディット コンティニュでサポートされていません。 詳細については、サポートされていないコードの変更についてのトピックを参照してください。 [c#](../debugger/supported-code-changes-csharp.md)、 [Visual Basic](../debugger/unsupported-edits-in-visual-basic-edit-and-continue.md)、および[C++](../debugger/supported-code-changes-cpp.md)です。
   
--   アンマネージ デバッグを有効にしているときに、マネージ コードを編集しようとした。  混合モード デバッグを実行している場合は、エディット コンティニュを使用できません。  
+-   関連付けられているからではなく、プログラムでコードを編集しようとした、**デバッグ**メニュー。  
   
--   SQL Server コードを編集しようとした。  
+-   ワトソン博士のダンプをデバッグしているときに、デバッグ  
   
--   ワトソン博士のダンプをデバッグしているときに、  コードを編集しようとした。  
+-   未処理の例外が発生した後のコードとオプションを編集しようとしました。"**未処理の例外で呼び出し履歴をアンワインド**"が選択されていません。  
   
--   未処理の例外が発生した後、**\[ハンドルされていない例外で呼び出し履歴をアンワインドする\]** オプションがオンでないときにコードを編集しようとした。  
+-   埋め込まれたランタイム アプリケーションをデバッグしているときに、コードを編集しようとした。
   
--   埋め込まれたランタイム アプリケーションをデバッグしているときに、コードを編集しようとした。  
-  
--   **\[デバッグ\]** メニューから起動する代わりに、アタッチしたプログラムのコードを編集しようとした。  
-  
--   最適化されたコードを編集しようとした。  
-  
--   デバッグ対象が 64 ビット アプリケーションである場合に、マネージ コードをデバッグしようとした。  エディット コンティニュを使用する場合は、デバッグ対象を x86 に設定する必要があります  \(**\[*Project* のプロパティ\]** の **\[コンパイル\]** タブにある **\[コンパイラの詳細設定\]**\)。  
+-   4.5.1、前に .NET Framework のバージョンを使用してマネージ コードを編集しようとして、対象が 64 ビット アプリケーションです。 エディット コンティニュを使用する場合は、デバッグ対象を x86 に設定する必要があります  (*projectname* **プロパティ**、**コンパイル** タブで、**コンパイラの高度な**設定します。)。  
   
 -   デバッグ中に変更され、再読み込みされたアセンブリのコードを編集しようとした。  
   
 -   読み込まれていないアセンブリのコードを編集しようとした。  
   
--   新しいバージョンでビルド エラーが発生したため、古いバージョンでアプリケーションのデバッグを開始した。  
+-   新しいバージョンでビルド エラーが発生したため、古いバージョンでアプリケーションのデバッグを開始した。
   
--   実行中のコードを編集しようとした。  
-  
-## UIElement の一覧  
- **\[OK\]**  
+## <a name="uielement-list"></a>UIElement の一覧  
+ **わかりました**  
  ダイアログ ボックスを閉じ、直前の編集操作をキャンセルします。  
   
-## 参照  
- [サポートされているコードの変更と制限事項 \(C\+\+\)](../debugger/supported-code-changes-cpp.md)
+## <a name="see-also"></a>関連項目  
+ [C++ の編集と続行ブログを投稿します。](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/)  
+ [サポートされているコード変更 (C++)](../debugger/supported-code-changes-cpp.md)

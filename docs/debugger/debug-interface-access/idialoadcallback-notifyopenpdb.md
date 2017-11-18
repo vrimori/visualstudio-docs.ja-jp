@@ -1,47 +1,46 @@
 ---
-title: "IDiaLoadCallback::NotifyOpenPDB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaLoadCallback::NotifyOpenPDB メソッド"
+title: "Idialoadcallback::notifyopenpdb |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaLoadCallback::NotifyOpenPDB method
 ms.assetid: c0547f99-8468-4e57-82ca-9ef7d6707c8a
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0767be9a51c0d5c3395df9586c5c646a41b78e7e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaLoadCallback::NotifyOpenPDB
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-候補の .pdb ファイルを開くときに呼び出されます。  
+# <a name="idialoadcallbacknotifyopenpdb"></a>IDiaLoadCallback::NotifyOpenPDB
+候補の .pdb ファイルが開かれたときに呼び出されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT NotifyOpenPDB (   
-   LPCOLESTR pdbPath,  
-   HRESULT   resultCode  
+```C++  
+HRESULT NotifyOpenPDB (   
+   LPCOLESTR pdbPath,  
+   HRESULT   resultCode  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pdbPath`  
- \[入力\] .pdb ファイルの完全パス。  
+ [in].Pdb ファイルの完全パス。  
   
  `resultCode`  
- \[入力\] コード。このファイルに適用される （`S_OK`成功）または読み込みエラーを示します。  
+ [in]成功を示すコード (`S_OK`) またはこのファイルに適用されると、負荷の失敗します。  
   
-## 戻り値  
- が`S_OK`成功すると; それ以外の場合はエラー コード。  リターン コードは通常は無視されます。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 通常、リターン コードは無視されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

@@ -1,47 +1,46 @@
 ---
-title: "IDiaStackWalkHelper::imageForVA | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalkHelper::imageForVA メソッド"
+title: "Idiastackwalkhelper::imageforva |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalkHelper::imageForVA method
 ms.assetid: 8d4edabf-3c01-4fef-8b61-4779f3371067
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: df2b5f938d136a3013c3128f3e32c583c109708e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalkHelper::imageForVA
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-実行可能ファイルのメモリ空間で仮想アドレスが別の場所にあるメモリの実行可能ファイルのイメージの開始を返します。  
+# <a name="idiastackwalkhelperimageforva"></a>IDiaStackWalkHelper::imageForVA
+実行可能ファイルのメモリ領域で仮想アドレスを任意の場所を指定されたメモリ内には、実行可能ファイルのイメージの開始を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```C++  
 HRESULT imageForVA(  
-   ULONGLONG  vaContext,  
-   ULONGLONG *pvaImageStart  
+   ULONGLONG  vaContext,  
+   ULONGLONG *pvaImageStart  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `vaContext`  
- \[入力\] 実行可能ファイルの領域にある仮想アドレス。  
+ [in]実行可能ファイルの領域に任意の場所に存在する仮想アドレス。  
   
  `pvaImageStart`  
- \[入力\] 実行可能ファイルのイメージの開始仮想アドレスを返します。  
+ [out]実行可能ファイルのイメージの開始仮想アドレスを返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

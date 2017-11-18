@@ -1,57 +1,56 @@
 ---
-title: "IDiaSession::symbolById | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSession::symbolById メソッド"
+title: "Idiasession::symbolbyid |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSession::symbolById method
 ms.assetid: 062e4b5a-9c4d-4703-88da-ec13102c2b66
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 70139b7bf3286e7c4527bd71cf78b4ba86aeac1e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSession::symbolById
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-一意識別子によってシンボルを取得します。  
+# <a name="idiasessionsymbolbyid"></a>IDiaSession::symbolById
+一意の識別子、シンボルを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT symbolById (   
-   DWORD        id,  
-   IDiaSymbol** ppSymbol  
+```C++  
+HRESULT symbolById (   
+   DWORD        id,  
+   IDiaSymbol** ppSymbol  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `id`  
- \[入力\] 一意の識別子。  
+ [in]一意の識別子。  
   
  `ppSymbol`  
- \[出力\] 取得されたシンボル [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) を表すオブジェクトを返します。  
+ [out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)シンボルを表すオブジェクトを取得します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 指定された識別子はすべてのシンボルを一意にするために DIA SDK によって内部的に使用される一意の値です。  
+## <a name="remarks"></a>コメント  
+ 指定した識別子が、一意の値がすべてのシンボルを一意にする、DIA SDK によって内部的に使用します。  
   
- このメソッドが別のシンボルの型を表すシンボルを取得するにはを使用できます \(例を参照\)。  
+ このメソッドで使用できますなど、他の記号の種類を表すシンボルを取得する (この例を参照してください)。  
   
-## 使用例  
- この例では他のシンボルの型を表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) を取得します。  この例はセッションで `symbolById` のメソッドを使用する方法を示します。  より簡単な方法は型のシンボルを直接取得するに [IDiaSymbol::get\_type](../../debugger/debug-interface-access/idiasymbol-get-type.md) のメソッドを呼び出します。  
+## <a name="example"></a>例  
+ この例では、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)他の記号の種類を表すです。 この例を使用する方法を示しています、`symbolById`セッション内のメソッドです。 簡単な方法が呼び出されて、 [idiasymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)型のシンボルを直接取得する方法です。  
   
-```cpp#  
+```C++  
 IDiaSymbol *GetSymbolType(IDiaSymbol *pSymbol, IDiaSession *pSession)  
 {  
     IDiaSymbol *pTypeSymbol = NULL;  
@@ -65,7 +64,7 @@ IDiaSymbol *GetSymbolType(IDiaSymbol *pSymbol, IDiaSession *pSession)
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [IDiaSymbol::get\_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)
+ [IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)

@@ -1,60 +1,65 @@
 ---
-title: "CreateInPlace (Visual Studio テンプレート) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#CreateInPlace"
-helpviewer_keywords: 
-  - "<CreateInPlace> 要素 [Visual Studio テンプレート]"
-  - "CreateInPlace 要素 [Visual Studio テンプレート]"
+title: "CreateInPlace (Visual Studio テンプレート) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#CreateInPlace
+helpviewer_keywords:
+- CreateInPlace element [Visual Studio Templates]
+- <CreateInPlace> element [Visual Studio Templates]
 ms.assetid: 420d46ea-2470-4da9-ad8e-95165588a920
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ce445dec4ca7d09f2fb8822fa9b5632356950042
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CreateInPlace (Visual Studio テンプレート)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-プロジェクトを作成するか、指定の場所でパラメーターを置換するか、または一時的な場所でパラメーターを置換してプロジェクトを指定の場所に保存するかを指定します。  
+# <a name="createinplace-visual-studio-templates"></a>CreateInPlace (Visual Studio テンプレート)
+プロジェクトを作成し、指定した場所にパラメーター置換を実行または一時的な場所でパラメーター置換を実行し、指定した場所にプロジェクトを保存するかどうかを指定します。  
   
-## 構文  
+ \<VSTemplate >  
+ \<TemplateData >  
+ \<CreateInPlace >  
+  
+## <a name="syntax"></a>構文  
   
 ```  
 <CreateInPlace> true/false </CreateInPlace>  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
  なし。  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
  なし。  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|テンプレートをカテゴリに分類し、**\[新しいプロジェクト\]** ダイアログ ボックス、または **\[新しい項目の追加\]** ダイアログ ボックスでどのように表示させるかを定義します。|  
+|-------------|-----------------|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|  
   
-## テキスト値  
+## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- `true` または `false` のいずれかを設定する必要があります。  `true` の場合は、**\[新しいプロジェクト\]** ダイアログ ボックスで指定された場所でパラメーターの置換が行われます。  `false` の場合は、一時的な場所でパラメーターの置換が行われてから、指定の場所へプロジェクトがコピーされます。  
+ テキストは、`true` または `false` である必要があります。 場合`true`、プロジェクトが作成されで指定した場所にパラメーターの置換が実行される、**新しいプロジェクト** ダイアログ ボックス。 場合`false`一時的な場所でパラメーター置換を実行、およびプロジェクトが、指定した場所にコピーされます。  
   
-## 解説  
- `CreateInPlace` は、省略可能な要素です。  既定値は `true` です。  
+## <a name="remarks"></a>コメント  
+ `CreateInPlace` は、省略可能な要素です。 既定値は `true` です。  
   
-## 使用例  
- [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] テンプレートでのメタデータの例を次に示します。  
+## <a name="example"></a>例  
+ [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] テンプレートのメタデータの例を次に示します。  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -81,6 +86,6 @@ caps.handback.revision: 7
 </VSTemplate>  
 ```  
   
-## 参照  
- [カスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
+## <a name="see-also"></a>関連項目  
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

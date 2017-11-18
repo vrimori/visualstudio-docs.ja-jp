@@ -1,51 +1,50 @@
 ---
-title: "IDiaStackWalkHelper::put_registerValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalkHelper2::put_registerValue メソッド"
+title: "IDiaStackWalkHelper::put_registerValue |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalkHelper2::put_registerValue method
 ms.assetid: 8f02ce54-ef59-455f-8aa6-dc26761c7aff
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8abfd209e5c2f59a0c55128eb235fda868f4bfd5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalkHelper::put_registerValue
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idiastackwalkhelperputregistervalue"></a>IDiaStackWalkHelper::put_registerValue
 レジスタの値を設定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT put_registerValue (   
-   DWORD     index,  
-   ULONGLONG NewVal  
+```C++  
+HRESULT put_registerValue (   
+   DWORD     index,  
+   ULONGLONG NewVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `index`  
- \[入力\] に書き込むに [CV\_HREG\_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md) のレジスタを指定する列挙体の値。  
+ [in]値、 [CV_HREG_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)に書き込むレジスタを指定する列挙です。  
   
  `NewVal`  
- \[入力\] 新しいレジスタの値。  
+ [in]新しい値を登録します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 値のサイズにかかわらず実装は登録が保持するものだけを格納する必要があります。  たとえば8 ビット レジスタが指定した値から最小 8bit のみを保持します。  
+## <a name="remarks"></a>コメント  
+ 値のサイズに関係なく、実装はだけ何レジスタは、通常を保持を保存する必要があります。 たとえば、8 ビット レジスタのみ、最下位 8 ビットの指定した値を保持します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
- [CV\_HREG\_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)
+ [CV_HREG_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)

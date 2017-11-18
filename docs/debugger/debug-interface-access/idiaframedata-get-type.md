@@ -1,44 +1,43 @@
 ---
-title: "IDiaFrameData::get_type | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaFrameData::get_type メソッド"
+title: "Idiaframedata::get_type |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaFrameData::get_type method
 ms.assetid: efca38b5-c479-4d0a-a164-f903f25c5509
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 127b1314b2d56d39595843895dee795c2db6abce
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaFrameData::get_type
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-コンパイラ固有のフレームのタイプを取得します。  
+# <a name="idiaframedatagettype"></a>IDiaFrameData::get_type
+コンパイラに固有のフレームの種類を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_type (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_type (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] コンパイラ固有のフレーム [StackFrameTypeEnum 列挙型](../../debugger/debug-interface-access/stackframetypeenum.md) の型を示す列挙体の値を返します。  
+ [out]値を返します、 [StackFrameTypeEnum 列挙型](../../debugger/debug-interface-access/stackframetypeenum.md)をコンパイラに固有のフレームの種類を示す列挙体です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK` このプロパティをサポートする必要 `S_FALSE` を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)   
  [StackFrameTypeEnum 列挙型](../../debugger/debug-interface-access/stackframetypeenum.md)

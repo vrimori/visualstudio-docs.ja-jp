@@ -1,51 +1,52 @@
 ---
-title: "API リファレンス (Visual Studio のデバッグ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[デバッグの SDK] のデバッグ、API リファレンス"
+title: "API リファレンス (Visual Studio のデバッグ) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: debugging [Debugging SDK], API reference
 ms.assetid: e4e429da-3667-41f7-9158-a8207d13e91a
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 8ead1571856fa04e10103fbf2274dc0e22295154
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# API リファレンス (Visual Studio のデバッグ)
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-参照セクションにはAPIすべての API 要素の構文と使用方法を示しさまざまなコード例が含まれますガイドの概念について説明します。  すべての参照はカテゴリ別にアルファベット順に表示されます。  
+# <a name="api-reference-visual-studio-debugging"></a>API リファレンス (Visual Studio のデバッグ)
+参照セクションにには、API、構文と、すべての API 要素の使用方法を示すガイドの概念の概要およびさまざまなコード例が含まれます。 すべての参照は、カテゴリでアルファベット順に一覧表示されます。  
   
- 次の表にメソッド`HRESULT`から返された共通の値を示します。  
+ 次の表は、一般的な`HRESULT`メソッドによって返される値。  
   
-|名前|Description|値|  
-|--------|-----------------|-------|  
-|S\_OK|成功。|0x00000000|  
-|E\_UNEXPECTED|予期しないエラー。|0x8000FFFF|  
-|E\_NOTIMPL|実装されていません。|0x80004001|  
-|E\_OUTOFMEMORY|操作を完了する十分なメモリ。|0x8007000E|  
-|E\_INVALIDARG|1 つ以上の引数が無効です。|0x80070057|  
-|E\_NOINTERFACE|サポートされるなどのインターフェイスはありません。|0x80004002|  
-|E\_POINTER|無効なポインター。|0x80004003|  
-|E\_HANDLE|無効なハンドル。|0x80070006|  
-|E\_ABORT|中止操作。|0x80004004|  
-|E\_FAIL|予期しないエラー。|0x80004005|  
-|E\_ACCESSDENIED|一般的なアクセス拒否エラー。|0x80070005|  
+|名前|説明|値|  
+|----------|-----------------|-----------|  
+|S_OK|成功。|0x00000000|  
+|E_UNEXPECTED|予期しないエラーです。|0x8000FFFF|  
+|E_NOTIMPL|実装されていません。|0x80004001|  
+|E_OUTOFMEMORY|メモリ不足のため、操作を完了できません。|0x8007000E|  
+|E_INVALIDARG|1 つまたは複数の引数が無効です。|0x80070057|  
+|E_NOINTERFACE|インターフェイスがサポートされています。|0x80004002|  
+|E_POINTER|ポインターが無効です。|0x80004003|  
+|E_HANDLE|ハンドルが無効です。|0x80070006|  
+|E_ABORT|操作が中止されました。|0x80004004|  
+|E_FAIL|予期しないエラーです。|0x80004005|  
+|E_ACCESSDENIED|一般的なアクセス拒否エラーが発生します。|0x80070005|  
   
 > [!NOTE]
->  すべてのパラメーターはポインターであることつまりメソッドの戻り `S_OK` でデバッグ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] が想定される場合パラメーターのポインターで `S_OK` が戻るとされません。  
+>  ときに、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]メソッドのデバッグを返します`S_OK`、パラメーターのポインターが有効なすべては、検証が実施予定がないで out パラメーターのポインターであると見なされますと`S_OK`が返されます。  
   
 > [!NOTE]
->  無効な場合は `NULL` \[入力\] パラメーターがIDE がクラッシュする可能性があります。  
+>  無効なまたは`NULL`[out] パラメーターがあります、IDE がクラッシュします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [インターフェイス](../../../extensibility/debugger/reference/interfaces-visual-studio-debugging.md)   
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [デバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
  [Visual Studio デバッガーの拡張性](../../../extensibility/debugger/visual-studio-debugger-extensibility.md)

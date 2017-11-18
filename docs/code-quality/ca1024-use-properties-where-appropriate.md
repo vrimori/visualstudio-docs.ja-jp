@@ -1,11 +1,10 @@
 ---
-title: 'CA1024: Use properties where appropriate | Microsoft Docs'
+title: "Ca 1024: 適切な場所にプロパティを使用して |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,75 +14,60 @@ helpviewer_keywords:
 - CA1024
 - UsePropertiesWhereAppropriate
 ms.assetid: 3a04f765-af7c-4872-87ad-9cc29e8e657f
-caps.latest.revision: 21
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 1a7ce15f3b5fbdb759733250467a928715f6fedf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "21"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 42fb569dbf469ed91f96b25818b717353d53bf0b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Use properties where appropriate
+# <a name="ca1024-use-properties-where-appropriate"></a>CA1024: 適切な場所にプロパティを使用します
 |||  
 |-|-|  
 |TypeName|UsePropertiesWhereAppropriate|  
 |CheckId|CA1024|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A public or protected method has a name that starts with `Get`, takes no parameters, and returns a value that is not an array.  
+## <a name="cause"></a>原因  
+ パブリックまたはプロテクト メソッドで始まる名前が指定されて`Get`パラメーターを受け取らず、および配列ではない値を返します。  
   
-## <a name="rule-description"></a>Rule Description  
- In most cases, properties represent data and methods perform actions. Properties are accessed like fields, which makes them easier to use. A method is a good candidate to become a property if one of these conditions is present:  
+## <a name="rule-description"></a>規則の説明  
+ ほとんどの場合、プロパティを表すデータとメソッドが操作を実行します。 プロパティを使用しやすいように、フィールドのようにアクセスします。 メソッドは、これらの条件のいずれかが存在する場合、プロパティに適した候補です。  
   
--   Takes no arguments and returns the state information of an object.  
+-   引数を使用しないと、オブジェクトの状態情報を返します。  
   
--   Accepts a single argument to set some part of the state of an object.  
+-   オブジェクトの状態の一部を設定する単一の引数を受け入れます。  
   
- Properties should behave as if they are fields; if the method cannot, it should not be changed to a property. Methods are better than properties in the following situations:  
+ プロパティがフィールドはかのように動作する必要があります。メソッドには、することはできません。 プロパティに変更されません必要があります。 メソッドは、次の状況でプロパティより優れています。  
   
--   The method performs a time-consuming operation. The method is perceivably slower than the time that is required to set or get the value of a field.  
+-   メソッドでは、時間のかかる操作を実行します。 メソッドでは、フィールドの値を取得または設定する必要がある時間より明らかに長くかかります。  
   
--   The method performs a conversion. Accessing a field does not return a converted version of the data that it stores.  
+-   メソッドでは、変換を実行します。 フィールドへのアクセスは、格納されるデータの変換後のバージョンは返されません。  
   
--   The Get method has an observable side effect. Retrieving the value of a field does not produce any side effects.  
+-   Get メソッドでは、監視可能な副作用が発生します。 フィールドの値を取得する場合は、副作用は生成されません。  
   
--   The order of execution is important. Setting the value of a field does not rely on the occurrence of other operations.  
+-   実行の順序が重要です。 フィールドの値の設定は、その他の操作が発生するときに依存しません。  
   
--   Calling the method two times in succession creates different results.  
+-   メソッドを呼び出すこと、2 回連続して、異なる結果を作成します。  
   
--   The method is static but returns an object that can be changed by the caller. Retrieving the value of a field does not allow the caller to change the data that is stored by the field.  
+-   メソッドは静的だが、呼び出し元が変更可能なオブジェクトを返します。 フィールドの値を取得する場合は、フィールドに格納されるデータを変更する呼び出し元は許可されません。  
   
--   The method returns an array.  
+-   メソッドは、配列を返します。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, change the method to a property.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、プロパティに、メソッドを変更します。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Suppress a warning from this rule if the method meets at least one of the previously listed criteria.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ メソッドが、上記の条件の少なくとも 1 つを満たしている場合は、この規則による警告を抑制します。  
   
-## <a name="controlling-property-expansion-in-the-debugger"></a>Controlling Property Expansion in the Debugger  
- One reason programmers avoid using a property is because they do not want the debugger to auto-expand it. For example, the property might involve allocating a large object or calling a P/Invoke, but it might not actually have any observable side effects.  
+## <a name="controlling-property-expansion-in-the-debugger"></a>デバッガーでのプロパティの展開を制御します。  
+ プログラマは、プロパティは使用しないでください 1 つの理由を自動展開デバッガーを使用しないためにです。 たとえば、プロパティには、大きなオブジェクトの割り当てや、P/invoke を呼び出すことが含まれますがいる可能性がありますいない実際には、監視可能な副作用です。  
   
- You can prevent the debugger from auto-expanding properties by applying <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>. The following example shows this attribute being applied to an instance property.  
+ デバッガーは、自動拡張されないようにできますプロパティを適用して<xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>です。 次の例では、インスタンス プロパティに適用されているこの属性を示します。  
   
 ```vb  
 Imports System   
@@ -132,7 +116,7 @@ namespace Microsoft.Samples
 }  
 ```  
   
-## <a name="example"></a>Example  
- The following example contains several methods that should be converted to properties, and several that should not because they do not behave like fields.  
+## <a name="example"></a>例  
+ 次の例では、いくつかのメソッド、プロパティを変換する必要があり、フィールドと同様に動作しないために必要がありますをいくつか含まれています。  
   
  [!code-csharp[FxCop.Design.MethodsProperties#1](../code-quality/codesnippet/CSharp/ca1024-use-properties-where-appropriate_1.cs)]

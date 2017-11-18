@@ -1,58 +1,58 @@
 ---
-title: "IDiaSession::findSymbolsByRVAForAcceleratorPointerTag | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "IDiaSession::findSymbolsByRVAForAcceleratorPointerTag |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a073cc45-0c7b-417e-b5fc-a3b08beccdbc
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ebeb2ae079845c55c1903afdbcef381a5b4d379c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSession::findSymbolsByRVAForAcceleratorPointerTag
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-対応するタグの値の場合、このメソッドは、指定した相対仮想アドレスの指定した親のアクセラレータのスタブの関数に含まれるシンボルの列挙体を返します。  
+# <a name="idiasessionfindsymbolsbyrvaforacceleratorpointertag"></a>IDiaSession::findSymbolsByRVAForAcceleratorPointerTag
+対応するタグの値を指定するには、このメソッドは、指定された相対仮想アドレスでは、指定した親アクセラレータ スタブ関数に含まれている記号の列挙を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT findSymbolsByRVAForAcceleratorPointerTag (   
-   IDiaSymbol*           parent,  
+```C++  
+HRESULT findSymbolsByRVAForAcceleratorPointerTag (   
+   IDiaSymbol*           parent,  
    DWORD                 tagValue,  
    DWORD                 rva,  
-   IDiaEnumSymbols**     ppResult  
+   IDiaEnumSymbols**     ppResult  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `parent`  
- \[入力\] `IDiaSymbol` 検索するアクセラレータのスタブの関数に対応します。  
+ [in]`IDiaSymbol`検索するアクセラレータのスタブ関数に対応します。  
   
  `tagValue`  
- \[入力\] ポインターのタグの値。  
+ [in]ポインターのタグ値。  
   
  `rva`  
- \[入力\] 相対仮想アドレス。  
+ [in]相対仮想アドレス。  
   
  `ppResult`  
- \[入力\] 結果で初期化される `IDiaEnumSymbols` のインターフェイス ポインターへのポインター。  
+ [out]ポインター、`IDiaEnumSymbols`結果で初期化されたインターフェイス ポインター。  
   
-## 戻り値  
- 成功した場合は `S_OK` を返し、それ以外の場合はエラー コードを返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- アクセラレータのスタブの関数に対応する `IDiaSymbol` のインターフェイスのみ、このメソッドを呼び出します。  
+## <a name="remarks"></a>コメント  
+ のみこのメソッドを呼び出して、`IDiaSymbol`アクセラレータ スタブ関数に対応するインターフェイスです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

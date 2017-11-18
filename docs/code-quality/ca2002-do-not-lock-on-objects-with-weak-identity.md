@@ -1,11 +1,10 @@
 ---
-title: 'CA2002: Do not lock on objects with weak identity | Microsoft Docs'
+title: "2002 ca: はロック id が不十分なオブジェクトに対する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,45 +14,29 @@ helpviewer_keywords:
 - CA2002
 - DoNotLockOnObjectsWithWeakIdentity
 ms.assetid: 16100b39-c6fc-452b-8fca-8b459a26c286
-caps.latest.revision: 16
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 15e189741636255f83086e1877abad80fb3da57b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 54a7693f5e2921b7cab60278c870c456084c56f2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2002-do-not-lock-on-objects-with-weak-identity"></a>CA2002: Do not lock on objects with weak identity
+# <a name="ca2002-do-not-lock-on-objects-with-weak-identity"></a>CA2002: ID が不十分なオブジェクトをロックしないでください
 |||  
 |-|-|  
 |TypeName|DoNotLockOnObjectsWithWeakIdentity|  
 |CheckId|CA2002|  
-|Category|Microsoft.Reliability|  
-|Breaking Change|Non-breaking|  
+|カテゴリ|Microsoft.Reliability|  
+|互換性に影響する変更点|なし|  
   
-## <a name="cause"></a>Cause  
- A thread attempts to acquire a lock on an object that has a weak identity.  
+## <a name="cause"></a>原因  
+ スレッドは、id が不十分なオブジェクトのロックの取得を試みます。  
   
-## <a name="rule-description"></a>Rule Description  
- An object is said to have a weak identity when it can be directly accessed across application domain boundaries. A thread that tries to acquire a lock on an object that has a weak identity can be blocked by a second thread in a different application domain that has a lock on the same object. The following types have a weak identity and are flagged by the rule:  
+## <a name="rule-description"></a>規則の説明  
+ アプリケーション ドメインの境界を越えてオブジェクトに直接アクセスできる場合、そのオブジェクトの ID は不十分と表現されます。 スレッドで ID が不十分なオブジェクトをロックしようとすると、ブロックされることがあります。たとえば、異なるアプリケーション ドメインの別スレッドで、既に同じオブジェクトがロックされている場合です。 次の種類は、id は不十分と、ルールによってフラグが付けられます。  
   
 -   <xref:System.MarshalByRefObject>  
   
@@ -71,22 +54,23 @@ ms.lasthandoff: 08/30/2017
   
 -   <xref:System.Threading.Thread>  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, use an object from a type that is not in the list in the Description section.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、[説明] セクションで、一覧に含まれていない型からオブジェクトを使用します。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Do not suppress a warning from this rule.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2213: Disposable fields should be disposed](../code-quality/ca2213-disposable-fields-should-be-disposed.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA2213: 破棄可能なフィールドは破棄されなければなりません](../code-quality/ca2213-disposable-fields-should-be-disposed.md)  
   
-## <a name="example"></a>Example  
- The following example shows some object locks that violate the rule.  
+## <a name="example"></a>例  
+ 次の例は、ルールに違反しているオブジェクトのロックを示しています。  
   
- [!code-vb[FxCop.Reliability.LockWeakObjects#1](../code-quality/codesnippet/VisualBasic/ca2002-do-not-lock-on-objects-with-weak-identity_1.vb)] [!code-csharp[FxCop.Reliability.LockWeakObjects#1](../code-quality/codesnippet/CSharp/ca2002-do-not-lock-on-objects-with-weak-identity_1.cs)]  
+ [!code-vb[FxCop.Reliability.LockWeakObjects#1](../code-quality/codesnippet/VisualBasic/ca2002-do-not-lock-on-objects-with-weak-identity_1.vb)]
+ [!code-csharp[FxCop.Reliability.LockWeakObjects#1](../code-quality/codesnippet/CSharp/ca2002-do-not-lock-on-objects-with-weak-identity_1.cs)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.Threading.Monitor>   
  <xref:System.AppDomain>   
- [lock Statement](/dotnet/csharp/language-reference/keywords/lock-statement)   
- [SyncLock Statement](/dotnet/visual-basic/language-reference/statements/synclock-statement)
+ [lock ステートメント](/dotnet/csharp/language-reference/keywords/lock-statement)   
+ [SyncLock ステートメント](/dotnet/visual-basic/language-reference/statements/synclock-statement)

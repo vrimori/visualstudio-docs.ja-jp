@@ -1,49 +1,48 @@
 ---
-title: "IDiaSymbol::get_upperBoundId | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_upperBoundId メソッド"
+title: "Idiasymbol::get_upperboundid |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_upperBoundId method
 ms.assetid: ddfa1617-bd0f-4187-ba77-a225bab93a95
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a08f0d6052fcdb6346faef4080f971e9c18ac51b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_upperBoundId
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-FORTRAN 配列の次元の上限のシンボル ID を取得します。  
+# <a name="idiasymbolgetupperboundid"></a>IDiaSymbol::get_upperBoundId
+FORTRAN 配列の次元の上限のシンボル id を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_upperBoundId (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_upperBoundId (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- FORTRAN \[入力\] 配列の次元の上限を表すシンボル ID を返します。  
+ [出力].FORTRAN 配列の次元の上限を表す記号の ID を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 解説  
- 識別子が重複しないようにすべてのシンボルをマークする DIA SDK によって作成される一意の値です。  
+## <a name="remarks"></a>コメント  
+ 識別子は、一意としてすべてのシンボルをマークする DIA SDK によって作成された一意の値です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

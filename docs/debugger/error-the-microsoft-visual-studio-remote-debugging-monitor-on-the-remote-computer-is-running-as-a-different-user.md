@@ -1,54 +1,49 @@
 ---
-title: "エラー : リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターは、別のユーザーで実行しています。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "anyuser オプション"
-  - "-anyuser オプション"
-  - "msvsmon.exe"
-  - "リモート デバッグ モニター"
-  - "リモート デバッグ, リモート デバッグ モニター"
+title: "エラー: 別のユーザーとして、Microsoft Visual Studio リモート デバッグ モニター、リモート コンピューターでが実行されている |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- -anyuser option
+- anyuser option
+- Remote Debugging Monitor
+- remote debugging, Remote Debugging Monitor
+- msvsmon.exe
 ms.assetid: e5b18734-2daf-4c58-b5de-24ae1295703e
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 5f3f2c9e0b3f88734d21ae06f1af48409c58766a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# エラー : リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターは、別のユーザーで実行しています。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user"></a>エラー : リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターは、別のユーザーで実行しています。
 リモート デバッグを行おうとすると、次のエラー メッセージが表示される場合があります。  
   
  リモート コンピューター上の Microsoft Visual Studio リモート デバッグ モニターは、別のユーザーで実行しています。  
   
-## 原因  
+## <a name="cause"></a>原因  
  このメッセージは、認証なしモードでのデバッグ中に、msvsmon を起動したユーザーが Visual Studio を実行中のユーザーと一致しない場合に発生します。  
   
-## 解決方法  
- 最も安全で適切な解決策は、Visual Studio と同じユーザー アカウントでリモート デバッグ モニター \(msvsmon.exe\) を実行することです。  これができない場合は、リモート デバッグ モニターの **\[オプション\]** ダイアログ ボックスの **\[すべてのユーザーにデバッグを許可する\]** をオンにして他のアカウントでリモート デバッグ モニターを実行します。  
+## <a name="solution"></a>ソリューション  
+ 最も安全で適切な解決策は、Visual Studio と同じユーザー アカウントでリモート デバッグ モニター (msvsmon.exe) を実行することです。 他のアカウントでリモート デバッグ モニターを実行することができますができない場合、**任意のユーザーにデバッグを許可する**、リモート デバッグ モニターで選択したオプション**オプション** ダイアログ ボックス。  
   
 > [!CAUTION]
->  他のユーザーに接続する許可を与えると、誤ったリモート デバッグ セッションに接続してしまう可能性があります。  **認証なし**モードでのデバッグは決して安全ではなく、使用には注意が必要です。  
+>  他のユーザーに接続する許可を与えると、誤ったリモート デバッグ セッションに接続してしまう可能性があります。 デバッグ**認証なし**モードがセキュリティで保護することはありませんし、注意して使用する必要があります。
   
- 詳細については、「[リモート デバッグ モニターの起動](../Topic/Start%20%20the%20Remote%20Debugging%20Monitor.md)」を参照してください。  
-  
-## 参照  
+## <a name="see-also"></a>関連項目  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   
- [リモート デバッグ](../debugger/remote-debugging.md)
+ [Remote Debugging](../debugger/remote-debugging.md)

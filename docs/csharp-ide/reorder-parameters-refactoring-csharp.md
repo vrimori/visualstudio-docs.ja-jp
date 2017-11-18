@@ -1,43 +1,42 @@
 ---
-title: "Reorder Parameters Refactoring (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.csharp.refactoring.reorder"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "refactoring [C#], Reorder Parameters"
-  - "Reorder Parameters refactoring [C#]"
+redirect_url: /visualstudio/csharp-ide/refactoring/change-method-signature
+title: "リファクタリング (c#) パラメーターを並べ替える |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.csharp.refactoring.reorder
+dev_langs: CSharp
+helpviewer_keywords:
+- refactoring [C#], Reorder Parameters
+- Reorder Parameters refactoring [C#]
 ms.assetid: 4dabf21a-a9f0-41e9-b11b-55760cf2bd90
-caps.latest.revision: 26
-caps.handback.revision: 26
-author: "BillWagner"
-ms.author: "wiwagn"
-manager: "wpickett"
+caps.latest.revision: "26"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3469e9ae7101c9e180fba5558fce389c6dfcc72d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Reorder Parameters Refactoring (C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-`Reorder Parameters` は、メソッド、インデクサー、およびデリゲートのパラメーターの順序を簡単に変更できる Visual C\# リファクタリング操作です。  `Reorder Parameters` によって宣言が変更され、メンバーが呼び出されるすべての場所で、パラメーターが新しい順序を反映するように再配置されます。  
+# <a name="reorder-parameters-refactoring-c"></a>パラメーター順序の再変更リファクタリング (C#)
+`Reorder Parameters`Visual c# リファクタリング操作メソッド、インデクサー、およびデリゲートのパラメーターの順序を変更する簡単な方法です。 `Reorder Parameters`宣言を変更し、任意の場所は、メンバーが呼び出された場合、パラメーターが新しい順序を反映するように再配置します。  
   
- `Reorder Parameters` の操作を実行するには、メソッド、インデクサー、またはデリゲートの上か横にカーソルを移動します。  カーソルを移動したら、ショートカット キーを使用するか、またはショートカット メニューのコマンドをクリックして、`Reorder Parameters` を呼び出します。  
+ 実行する、`Reorder Parameters`またはメソッド、インデクサー、またはデリゲートの横にある操作にカーソルを置きます。 カーソルの位置がある場合を呼び出して、`Reorder Parameters`操作をショートカット キーを押すか、ショートカット メニューからコマンドをクリックします。  
   
 > [!NOTE]
 >  拡張メソッドの最初のパラメーターの順序を変更することはできません。  
   
-### パラメーターを並べ替えるには  
+### <a name="to-reorder-parameters"></a>パラメーターの順序を変更するには  
   
-1.  `ReorderParameters` という名前のクラス ライブラリを作成し、`Class1` を次のプログラム例で置き換えます。  
+1.  という名前のクラス ライブラリを作成する`ReorderParameters`、し、置き換えます`Class1`次のコード例を使用します。  
   
-    ```c#  
+    ```csharp  
     class ProtoClassA  
     {  
         // Invoke on 'MethodB'.  
@@ -56,26 +55,26 @@ manager: "wpickett"
     }  
     ```  
   
-2.  メソッド宣言またはメソッド呼び出しで、`MethodB` にカーソルを移動します。  
+2.  カーソルを置き`MethodB`メソッドの宣言またはメソッドの呼び出しのいずれか。  
   
-3.  **\[リファクター\]** メニューの **\[パラメーター順序の再変更\]** をクリックします。  
+3.  **リファクター**  メニューのをクリックして**パラメーターの順序を変更**です。  
   
-     **\[パラメーターの順番の再変更\]** ダイアログ ボックスが表示されます。  
+     **パラメーターの順序を変更** ダイアログ ボックスが表示されます。  
   
-4.  **\[パラメーター順序の再変更\]** ダイアログ ボックスの **\[パラメーター\]** ボックスで \[`int i`\] を選択し、ダウン ボタンをクリックします。  
+4.  **パラメーターの順序を変更**ダイアログ ボックスで、`int i`で、**パラメーター**一覧、および下矢印ボタンをクリックします。  
   
-     または、**\[パラメーター\]** ボックスで \[`bool b`\] の後の \[`int i`\] をドラッグする方法もあります。  
+     ドラッグする代わりに、`int i`後`bool b`で、**パラメーター**  ボックスの一覧です。  
   
-5.  **\[パラメーター順序の再変更\]** ダイアログ ボックスで、**\[OK\]** をクリックします。  
+5.  **パラメーターの順序を変更**ダイアログ ボックスで、をクリックして**OK**です。  
   
-     **\[パラメーター順序の再変更\]** ダイアログ ボックスの **\[参照の変更のプレビュー\]** チェック ボックスがオンの場合は、**\[変更のプレビュー \- パラメーターの順番の再変更\]** ダイアログ ボックスが表示されます。  メソッド シグネチャとメソッド呼び出しの両方における `MethodB` のパラメーター リストの変更がプレビューされます。  
+     場合、**参照の変更のプレビュー**オプションがオン、**パラメーターの順序を変更** ダイアログ ボックスで、**変更のプレビューのパラメーターの順序を変更** ダイアログ ボックスが表示されます。 パラメーター リストの変更のプレビュー提供`MethodB`シグネチャとメソッドの呼び出しの両方でします。  
   
-    1.  **\[変更のプレビュー \- パラメーターの順番の再変更\]** ダイアログ ボックスが表示された場合は、**\[適用\]** をクリックします。  
+    1.  場合、**プレビューの変更 - [パラメーター順序**] ダイアログ ボックスが表示されたら、をクリックして**適用**です。  
   
-         この例では、`MethodB` のメソッド宣言とすべてのメソッド呼び出しサイトが更新されます。  
+         この例では、メソッドの宣言とすべてのメソッド呼び出しのサイト`MethodB`更新されます。  
   
-## 解説  
- メソッド宣言またはメソッド呼び出しからパラメーターの順序を変更できます。  カーソルはメソッドまたはデリゲートの宣言の上か横に移動し、コードの本体には移動しないでください。  
+## <a name="remarks"></a>コメント  
+ メソッドの宣言またはメソッドの呼び出しからのパラメーターの順序を変更することができます。 メソッドまたはデリゲートの宣言の横にある、または本文ではなくでカーソルを置きます。  
   
-## 参照  
- [Refactoring \(C\#\)](../csharp-ide/refactoring-csharp.md)
+## <a name="see-also"></a>関連項目  
+ [リファクタリング (C#)](refactoring-csharp.md)

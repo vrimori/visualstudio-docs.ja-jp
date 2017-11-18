@@ -1,63 +1,63 @@
 ---
-title: "方法 : コード メトリックス データを生成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "コード メトリックスの結果"
-  - "コード メトリックスの結果, 生成"
-  - "生成 (コード メトリックスの結果を)"
+title: "方法: コード メトリックス データの生成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- code metrics results, generate
+- code metrics results
+- generate code metrics results
 ms.assetid: 7bd2c906-ee9c-484a-9550-4cddecc8f042
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "erickson-doug"
-ms.author: "douge"
-manager: "douge"
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3a6b1868f8b71233fac14294c83eddc38bace891
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : コード メトリックス データを生成する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-ソリューション全体または選択したプロジェクトのコード メトリックスの結果を生成できます。  
+# <a name="how-to-generate-code-metrics-data"></a>方法 : コード メトリックス データを生成する
+ソリューション全体または選択したプロジェクトのいずれかのコード メトリックスの結果を生成することもできます。  
   
- **要件**  
+ **Requirements**  
   
- 最終的な Visual Studio 2012 と Visual Studio 2012 の事項  
+ Visual Studio Enterprise  
   
-### ソリューション全体のコード メトリックスの結果を生成するには  
+### <a name="to-generate-code-metrics-results-for-an-entire-solution"></a>ソリューション全体のコード メトリックスの結果を生成するには  
   
--   **\[分析\]** メニューの **\[ソリューションのコード メトリックスを計算\]** をクリックします。  
+-   をクリックして**分析 メニュー**、順にクリック**ソリューションの CalculateCode メトリックス**です。  
   
-     または  
+     \- または  
   
--   **ソリューション エクスプローラー**で、ソリューションを右クリックし、**\[コード メトリックスを計算する\]** をクリックします。  
+-   **ソリューション エクスプ ローラー**ソリューションを右クリックし、クリックして**CalculateCode メトリック**です。  
   
-     または  
+     \- または  
   
--   **\[コード メトリックスの結果\]** ウィンドウで、**\[ソリューションのコード メトリックスを計算\]** をクリックします。  
+-   **コード メトリックスの結果**ウィンドウで、をクリックして、**ソリューションの CalculateCode メトリックス**ボタンをクリックします。  
   
-     結果が生成され、**\[コード メトリックスの結果\]** ウィンドウが表示されます。  
+     結果が生成され、**コード メトリックスの結果**ウィンドウが表示されます。  
   
-### 選択した 1 つ以上のプロジェクトのコード メトリックスの結果を生成するには  
+### <a name="to-generate-code-metrics-results-for-one-or-more-selected-projects"></a>選択したプロジェクトを 1 つまたは複数のコード メトリックスの結果を生成するには  
   
-1.  **ソリューション エクスプローラー**で、1 つ以上のプロジェクトを選択します。  
+1.  **ソリューション エクスプ ローラー**、1 つまたは複数のプロジェクトを選択します。  
   
-2.  **\[分析\]** をクリックし、**\[選択したプロジェクトのコード メトリックスを生成\]** をクリックします。  
+2.  をクリックして**分析**、クリックして**(s) 選択されたプロジェクトのコード メトリックス**です。  
   
-     または  
+     \- または  
   
-     ソリューションを右クリックし、**\[コード メトリックスを計算する\]** をクリックします。  
+     選択内容を右クリックし、をクリックして**CalculateCode メトリック**です。  
   
- 結果が生成され、**\[コード メトリックスの結果\]** ウィンドウが表示されます。  
+ 結果が生成され、**コード メトリックスの結果**ウィンドウが表示されます。  
   
-### 結果の詳細を表示するには  
+### <a name="to-view-the-results-details"></a>結果の詳細を表示するには  
   
--   **\[階層\]** 列のツリーを展開します。  
+-   ツリーを展開し、**階層**列です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [マネージ コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

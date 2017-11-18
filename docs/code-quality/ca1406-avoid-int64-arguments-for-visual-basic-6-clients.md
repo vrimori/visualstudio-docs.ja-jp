@@ -1,11 +1,10 @@
 ---
-title: 'CA1406: Avoid Int64 arguments for Visual Basic 6 clients | Microsoft Docs'
+title: ": Ca 1406 Visual Basic 6 クライアントに対しては Int64 引数 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,66 +14,51 @@ helpviewer_keywords:
 - AvoidInt64ArgumentsForVB6Clients
 - CA1406
 ms.assetid: d5d0d3fc-f105-43da-be5b-923ab023309c
-caps.latest.revision: 14
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: bb911c21bba0c56c0cdf0a6ef16c59bdc4177986
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 10b02338b16dc3bd1c67e3ab11cdd02d3d1ef1be
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1406-avoid-int64-arguments-for-visual-basic-6-clients"></a>CA1406: Avoid Int64 arguments for Visual Basic 6 clients
+# <a name="ca1406-avoid-int64-arguments-for-visual-basic-6-clients"></a>CA1406: Visual Basic 6 クライアントに対しては Int64 引数を使用しません
 |||  
 |-|-|  
 |TypeName|AvoidInt64ArgumentsForVB6Clients|  
 |CheckId|CA1406|  
-|Category|Microsoft.Interoperability|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Interoperability|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A type that is specifically marked as visible to Component Object Model (COM) declares a member that takes a <xref:System.Int64?displayProperty=fullName> argument.  
+## <a name="cause"></a>原因  
+ コンポーネント オブジェクト モデル (COM) を参照できると明確にマークされている型はメンバーを行うためにかかる宣言、<xref:System.Int64?displayProperty=fullName>引数。  
   
-## <a name="rule-description"></a>Rule Description  
- Visual Basic 6 COM clients cannot access 64-bit integers.  
+## <a name="rule-description"></a>規則の説明  
+ Visual Basic 6 COM クライアントは、64 ビット整数値にアクセスできません。  
   
- By default, the following are visible to COM: assemblies, public types, public instance members in public types, and all members of public value types. However, to reduce false positives, this rule requires the COM visibility of the type to be explicitly stated; the containing assembly must be marked with the <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> set to `false` and the type must be marked with the <xref:System.Runtime.InteropServices.ComVisibleAttribute> set to `true`.  
+ 既定では、次が COM 参照可能な: アセンブリ、パブリックな型、パブリック型は、パブリック インスタンス メンバーおよびパブリック値型のすべてのメンバーです。 ただし、偽陽性を減らすためには、この規則が必要、COM 型の可視性、明示的に指定します。格納しているアセンブリをマークする必要があります、 <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> 'éý'`false`で型をマークする必要がありますと、 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 'éý'`true`です。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule for a parameter whose value can always be expressed as a 32-bit integral, change the parameter type to <xref:System.Int32?displayProperty=fullName>. If the value of the parameter might be larger than can be expressed as a 32-bit integral, change the parameter type to <xref:System.Decimal?displayProperty=fullName>. Note that both <xref:System.Single?displayProperty=fullName> and <xref:System.Double?displayProperty=fullName> lose precision at the upper ranges of the <xref:System.Int64> data type. If the member is not meant to be visible to COM, mark it with the <xref:System.Runtime.InteropServices.ComVisibleAttribute> set to `false`.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ パラメーターの値を持つを 32 ビット整数として表すことが常にこの規則違反を修正するには、変更するパラメーターの型を<xref:System.Int32?displayProperty=fullName>です。 パラメーターの型を変更する場合は、パラメーターの値は、32 ビット整数として表現できるよりも大きい場合がある、<xref:System.Decimal?displayProperty=fullName>です。 なお両方<xref:System.Single?displayProperty=fullName>と<xref:System.Double?displayProperty=fullName>の範囲の上限で精度が失われる、<xref:System.Int64>データ型。 場合は、メンバーは、COM から参照できるものではありません、使用してマークする、 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 'éý'`false`です。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if it is certain that Visual Basic 6 COM clients will not access the type.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ Visual Basic 6 COM クライアントは、型をアクセスしていないことが確実である場合にこの規則による警告を抑制しても安全です。  
   
-## <a name="example"></a>Example  
- The following example shows a type that violates the rule.  
+## <a name="example"></a>例  
+ 次の例は、規則に違反する型を示しています。  
   
- [!code-csharp[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/CSharp/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.cs)] [!code-vb[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/VisualBasic/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.vb)]  
+ [!code-csharp[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/CSharp/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.cs)]
+ [!code-vb[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/VisualBasic/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1413: Avoid non-public fields in COM visible value types](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1413: Com 参照可能な値型ではパブリックでないフィールドを使用しません](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)  
   
- [CA1407: Avoid static members in COM visible types](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)  
+ [CA1407: Com 参照可能な型で静的メンバーを使用しません](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)  
   
- [CA1017: Mark assemblies with ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)  
+ [CA1017: アセンブリに ComVisibleAttribute を設定します](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)  
   
-## <a name="see-also"></a>See Also  
- [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)   
- [Long Data Type](/dotnet/visual-basic/language-reference/data-types/long-data-type)
+## <a name="see-also"></a>関連項目  
+ [アンマネージ コードとの相互運用](/dotnet/framework/interop/index)   
+ [Long データ型](/dotnet/visual-basic/language-reference/data-types/long-data-type)

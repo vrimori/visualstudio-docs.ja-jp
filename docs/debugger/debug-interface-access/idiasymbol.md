@@ -1,0 +1,353 @@
+---
+title: "IDiaSymbol |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol interface
+ms.assetid: 01ad328a-736c-4933-a9f8-c2ded19ddd8c
+caps.latest.revision: "30"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8e4954c691795f71704aab7493ef8df3dbb3f958
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
+---
+# <a name="idiasymbol"></a>IDiaSymbol
+シンボルのインスタンスのプロパティについて説明します。  
+  
+## <a name="syntax"></a>構文  
+  
+```  
+IDiaSymbol : IUnknown  
+```  
+  
+## <a name="methods-in-alphabetical-order"></a>アルファベット順の順序のメソッド  
+ 次の表は、メソッドの`IDiaSymbol`します。  
+  
+> [!NOTE]
+>  シンボルはシンボルの種類に応じて、これらのメソッドの一部でのみ意味のあるデータを返します。 メソッドから返された場合`S_OK`、そのメソッドには意味のあるデータが返されます。  
+  
+|メソッド|説明|  
+|------------|-----------------|  
+|[IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)|シンボルのすべての子を取得します。|  
+|[IDiaSymbol::findChildrenEx](../../debugger/debug-interface-access/idiasymbol-findchildrenex.md)|シンボルの子を取得します。 このメソッドは、拡張のバージョンの[idiasymbol::findchildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)です。|  
+|[IDiaSymbol::findChildrenExByAddr](../../debugger/debug-interface-access/idiasymbol-findchildrenexbyaddr.md)|指定したアドレスに有効なシンボルの子を取得します。|  
+|[IDiaSymbol::findChildrenExByRVA](../../debugger/debug-interface-access/idiasymbol-findchildrenexbyrva.md)|指定された相対仮想アドレス (RVA) で有効なシンボルの子を取得します。|  
+|[IDiaSymbol::findChildrenExByVA](../../debugger/debug-interface-access/idiasymbol-findchildrenexbyva.md)|指定された仮想アドレスで有効なシンボルの子を取得します。|  
+|[IDiaSymbol::findInlineFramesByAddr](../../debugger/debug-interface-access/idiasymbol-findinlineframesbyaddr.md)|すべての指定したアドレスのインライン フレームを反復処理するクライアントを許可する列挙体を取得します。|  
+|[IDiaSymbol::findInlineFramesByRVA](../../debugger/debug-interface-access/idiasymbol-findinlineframesbyrva.md)|すべての指定された相対仮想アドレス (RVA) でのインライン フレームを反復処理するクライアントを許可する列挙体を取得します。|  
+|[IDiaSymbol::findInlineFramesByVA](../../debugger/debug-interface-access/idiasymbol-findinlineframesbyva.md)|指定された仮想アドレス (VA) 上のインライン フレームのすべての反復処理にクライアントを許可する列挙体を取得します。|  
+|[IDiaSymbol::findInlineeLines](../../debugger/debug-interface-access/idiasymbol-findinlineelines.md)|すべての関数はインライン展開を直接または間接的に、このシンボルでの行番号情報を反復処理するクライアントを許可する列挙体を取得します。|  
+|[IDiaSymbol::findInlineeLinesByAddr](../../debugger/debug-interface-access/idiasymbol-findinlineelinesbyaddr.md)|すべての関数のインライン展開され、直接または間接的に含まれていない、指定したアドレスの範囲内でこのシンボル、行番号の情報を反復処理するクライアントを許可する列挙体を取得します。|  
+|[IDiaSymbol::findInlineeLinesByRVA](../../debugger/debug-interface-access/idiasymbol-findinlineelinesbyrva.md)|クライアントはインライン展開を直接または間接的に、指定された相対仮想アドレス (RVA) 内でこのシンボルのすべての関数の行番号情報を反復処理を可能にする列挙体を取得します。|  
+|[IDiaSymbol::findInlineeLinesByVA](../../debugger/debug-interface-access/idiasymbol-findinlineelinesbyva.md)|クライアントはインライン展開を直接または間接的に、指定された仮想アドレス (VA) 内でこのシンボルのすべての関数の行番号情報を反復処理を可能にする列挙体を取得します。|  
+|[IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasymbol-findsymbolsbyrvaforacceleratorpointertag.md)|対応するタグの値を指定するには、このメソッドは、指定の相対仮想アドレスにある場合は、このスタブ関数に含まれている記号の列挙を返します。|  
+|[IDiaSymbol::findSymbolsForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasymbol-findsymbolsforacceleratorpointertag.md)|C++ AMP のスタブ関数では、アクセラレータのポインターのタグの数を返します。|  
+|[IDiaSymbol::get_acceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-acceleratorpointertags.md)|C++ AMP のアクセラレータのスタブ関数に対応するすべてのアクセラレータ ポインター タグ値を返します。|  
+|[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|クラスのメンバーのアクセス修飾子を取得します。|  
+|[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|アドレス場所のオフセットの部分を取得します。|  
+|[IDiaSymbol::get_addressSection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)|アドレス場所のセクションの一部を取得します。|  
+|[IDiaSymbol::get_addressTaken](../../debugger/debug-interface-access/idiasymbol-get-addresstaken.md)|別のシンボルがこのアドレスを参照するかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_age](../../debugger/debug-interface-access/idiasymbol-get-age.md)|プログラム データベースの有効期間値を取得します。|  
+|[IDiaSymbol::get_arrayIndexType](../../debugger/debug-interface-access/idiasymbol-get-arrayindextype.md)|配列インデックスの種類のシンボル id を取得します。|  
+|[IDiaSymbol::get_arrayIndexTypeId](../../debugger/debug-interface-access/idiasymbol-get-arrayindextypeid.md)|シンボルの配列インデックス型の識別子を取得します。|  
+|[IDiaSymbol::get_backEndMajor](../../debugger/debug-interface-access/idiasymbol-get-backendmajor.md)|バックエンドのメジャー バージョン番号を取得します。|  
+|[IDiaSymbol::get_backEndMinor](../../debugger/debug-interface-access/idiasymbol-get-backendminor.md)|バックエンドのマイナー バージョン番号を取得します。|  
+|[IDiaSymbol::get_backEndBuild](../../debugger/debug-interface-access/idiasymbol-get-backendbuild.md)|バックエンドのビルド番号を取得します。|  
+|[IDiaSymbol::get_baseDataOffset](../../debugger/debug-interface-access/idiasymbol-get-basedataoffset.md)|基本データ オフセットを取得します。|  
+|[IDiaSymbol::get_baseDataSlot](../../debugger/debug-interface-access/idiasymbol-get-basedataslot.md)|基本のデータ スロットを取得します。|  
+|[IDiaSymbol::get_baseSymbol](../../debugger/debug-interface-access/idiasymbol-get-basesymbol.md)|マウス ポインターを基づいて、シンボルを取得します。|  
+|[IDiaSymbol::get_baseSymbolId](../../debugger/debug-interface-access/idiasymbol-get-basesymbolid.md)|マウス ポインターを基づいてシンボル ID を取得します。|  
+|[IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)|単純型の型のタグを取得します。|  
+|[IDiaSymbol::get_bitPosition](../../debugger/debug-interface-access/idiasymbol-get-bitposition.md)|位置のビット位置を取得します。|  
+|[IDiaSymbol::get_builtInKind](../../debugger/debug-interface-access/idiasymbol-get-builtinkind.md)|HLSL 型の組み込みの種類を取得します。|  
+|[IDiaSymbol::get_callingConvention](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md)|メソッドの呼び出し規約のインジケーターを返します。|  
+|[IDiaSymbol::get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)|シンボルのクラスの親への参照を取得します。|  
+|[IDiaSymbol::get_classParentId](../../debugger/debug-interface-access/idiasymbol-get-classparentid.md)|シンボルのクラスの親識別子を取得します。|  
+|[IDiaSymbol::get_code](../../debugger/debug-interface-access/idiasymbol-get-code.md)|コード アドレスをシンボルが参照するかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_compilerGenerated](../../debugger/debug-interface-access/idiasymbol-get-compilergenerated.md)|コンパイラが生成したシンボルであったかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_compilerName](../../debugger/debug-interface-access/idiasymbol-get-compilername.md)|作成するために使用するコンパイラの名前を取得、[コンパイル単位](../../debugger/debug-interface-access/compiland.md)です。|  
+|[IDiaSymbol::get_constructor](../../debugger/debug-interface-access/idiasymbol-get-constructor.md)|ユーザー定義データ型がコンス トラクターを持つかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_container](../../debugger/debug-interface-access/idiasymbol-get-container.md)|この記号の含まれているシンボルを取得します。|  
+|[IDiaSymbol::get_constType](../../debugger/debug-interface-access/idiasymbol-get-consttype.md)|ユーザー定義データ型は定数であるかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_count](../../debugger/debug-interface-access/idiasymbol-get-count.md)|リストまたは配列内の項目数を取得します。|  
+|[IDiaSymbol::get_countLiveRanges](../../debugger/debug-interface-access/idiasymbol-get-countliveranges.md)|ローカル シンボルに関連付けられている有効なアドレス範囲の数を取得します。|  
+|[IDiaSymbol::get_customCallingConvention](../../debugger/debug-interface-access/idiasymbol-get-customcallingconvention.md)|関数が、カスタムの呼び出し規約を使用するかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_dataBytes](../../debugger/debug-interface-access/idiasymbol-get-databytes.md)|OEM 記号のデータ バイトを取得します。|  
+|[IDiaSymbol::get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)|データ シンボルの変数の分類を取得します。|  
+|[IDiaSymbol::get_editAndContinueEnabled](../../debugger/debug-interface-access/idiasymbol-get-editandcontinueenabled.md)|コンパイル済みのプログラムまたは単位のエディット コンティニュ機能を記述するフラグを取得します。|  
+|[IDiaSymbol::get_farReturn](../../debugger/debug-interface-access/idiasymbol-get-farreturn.md)|関数ははるかに戻り値を使用するかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_frontEndMajor](../../debugger/debug-interface-access/idiasymbol-get-frontendmajor.md)|フロント エンドのメジャー バージョン番号を取得します。|  
+|[IDiaSymbol::get_frontEndMinor](../../debugger/debug-interface-access/idiasymbol-get-frontendminor.md)|フロント エンドのマイナー バージョン番号を取得します。|  
+|[IDiaSymbol::get_frontEndBuild](../../debugger/debug-interface-access/idiasymbol-get-frontendbuild.md)|フロント エンドのビルド番号を取得します。|  
+|[IDiaSymbol::get_function](../../debugger/debug-interface-access/idiasymbol-get-function.md)|パブリック シンボルが関数を参照するかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_guid](../../debugger/debug-interface-access/idiasymbol-get-guid.md)|シンボルの GUID を取得します。|  
+|[IDiaSymbol::get_hasAlloca](../../debugger/debug-interface-access/idiasymbol-get-hasalloca.md)|関数への呼び出しが含まれるかどうかを示すフラグを取得`alloca`です。|  
+|[IDiaSymbol::get_hasAssignmentOperator](../../debugger/debug-interface-access/idiasymbol-get-hasassignmentoperator.md)|ユーザー定義データ型が定義されている任意の代入演算子を持つかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_hasCastOperator](../../debugger/debug-interface-access/idiasymbol-get-hascastoperator.md)|ユーザー定義データ型が定義されているすべてのキャスト演算子を持つかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_hasDebugInfo](../../debugger/debug-interface-access/idiasymbol-get-hasdebuginfo.md)|コンパイル単位がデバッグ情報を格納しているかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_hasEH](../../debugger/debug-interface-access/idiasymbol-get-haseh.md)|関数が C++ スタイル例外ハンドラーを持つかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_hasEHa](../../debugger/debug-interface-access/idiasymbol-get-haseha.md)|関数が非同期の例外ハンドラーを持つかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_hasInlAsm](../../debugger/debug-interface-access/idiasymbol-get-hasinlasm.md)|関数がインライン アセンブリであるかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_hasLongJump](../../debugger/debug-interface-access/idiasymbol-get-haslongjump.md)|Longjmp コマンド (C スタイル例外の処理の一部) が関数に含まれるかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_hasManagedCode](../../debugger/debug-interface-access/idiasymbol-get-hasmanagedcode.md)|モジュールにマネージ コードが含まれるかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_hasNestedTypes](../../debugger/debug-interface-access/idiasymbol-get-hasnestedtypes.md)|ユーザー定義データ型が型定義を入れ子にするかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_hasSecurityChecks](../../debugger/debug-interface-access/idiasymbol-get-hassecuritychecks.md)|関数またはコンパイル単位にコンパイルされるセキュリティ チェックがあるかどうかを示すフラグを取得します (を使用して、 [/GS (バッファー セキュリティ チェック)](/cpp/build/reference/gs-buffer-security-check)コンパイラ スイッチ)。|  
+|[IDiaSymbol::get_hasSEH](../../debugger/debug-interface-access/idiasymbol-get-hasseh.md)|関数では、Win32 スタイルの構造化例外処理があるかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_hasSetJump](../../debugger/debug-interface-access/idiasymbol-get-hassetjump.md)|Setjmp コマンドが関数に含まれるかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_indirectVirtualBaseClass](../../debugger/debug-interface-access/idiasymbol-get-indirectvirtualbaseclass.md)|ユーザー定義データ型が間接仮想基底クラスかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_InlSpec](../../debugger/debug-interface-access/idiasymbol-get-inlspec.md)|関数をインライン属性でマークされているかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_interruptReturn](../../debugger/debug-interface-access/idiasymbol-get-interruptreturn.md)|関数に割り込み命令からの戻り値があるかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_intro](../../debugger/debug-interface-access/idiasymbol-get-intro.md)|関数が基底クラスの仮想関数であるかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_isAcceleratorGroupSharedLocal](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorgroupsharedlocal.md)|C++ AMP のアクセラレータのコンパイルされたコードでグループの共有ローカル変数にシンボルが対応しているかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_isAcceleratorPointerTagLiveRange](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorpointertagliverange.md)|シンボルに対応しているかどうかを示すフラグを取得、*定義範囲シンボル*C++ AMP のアクセラレータのコンパイルされたコードでポインター変数のタグ コンポーネントです。 定義の範囲のシンボルは、アドレスの範囲変数の場所です。|  
+|[IDiaSymbol::get_isAcceleratorStubFunction](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorstubfunction.md)|シンボルに対応するアクセラレータ用にコンパイルされたシェーダーのトップレベルの関数シンボルに対応するかどうかを示します、`parallel_for_each`呼び出します。|  
+|[IDiaSymbol::get_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md)|データ シンボルの数の集計の一部であるかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_isCTypes](../../debugger/debug-interface-access/idiasymbol-get-isctypes.md)|シンボル ファイルが C の型を含むかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_isCVTCIL](../../debugger/debug-interface-access/idiasymbol-get-iscvtcil.md)|モジュールが共通中間言語 (CIL) からをネイティブ コードに変換されたかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_isDataAligned](../../debugger/debug-interface-access/idiasymbol-get-isdataaligned.md)|ユーザー定義データ型の要素を特定の境界に配置するかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_isHLSLData](../../debugger/debug-interface-access/idiasymbol-get-ishlsldata.md)|このシンボルが高レベル シェーダー言語 (HLSL) データを表すかどうかを指定します。|  
+|[IDiaSymbol::get_isHotpatchable](../../debugger/debug-interface-access/idiasymbol-get-ishotpatchable.md)|モジュールをコンパイルしたかどうかを示すフラグを取得、 [/hotpatch (ホットパッチ可能なイメージの作成)](/cpp/build/reference/hotpatch-create-hotpatchable-image)コンパイラ スイッチ。|  
+|[IDiaSymbol::get_isLTCG](../../debugger/debug-interface-access/idiasymbol-get-isltcg.md)|管理対象のコンパイル単位がリンカーの LTCG にリンクされているかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_isMatrixRowMajor](../../debugger/debug-interface-access/idiasymbol-get-ismatrixrowmajor.md)|マトリックスが主要な行であるかどうかを指定します。|  
+|[IDiaSymbol::get_isMSILNetmodule](../../debugger/debug-interface-access/idiasymbol-get-ismsilnetmodule.md)|管理対象のコンパイル単位が .netmodule (メタデータのみを含む) であるかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_isMultipleInheritance](../../debugger/debug-interface-access/idiasymbol-get-ismultipleinheritance.md)|指定するかどうか、`this`多重継承を持つデータ メンバーを指すポインターです。|  
+|[IDiaSymbol::get_isNaked](../../debugger/debug-interface-access/idiasymbol-get-isnaked.md)|関数があるかどうかを示すフラグを取得、 [naked](/cpp/cpp/naked-cpp)属性。|  
+|[IDiaSymbol::get_isOptimizedAway](../../debugger/debug-interface-access/idiasymbol-get-isoptimizedaway.md)|変数が最適化に機能しているかどうかを指定します。|  
+|[IDiaSymbol::get_isPointerBasedOnSymbolValue](../../debugger/debug-interface-access/idiasymbol-get-ispointerbasedonsymbolvalue.md)|指定するかどうか、`this`ポインターがシンボル値に基づきます。|  
+|[IDiaSymbol::get_isPointerToDataMember](../../debugger/debug-interface-access/idiasymbol-get-ispointertodatamember.md)|このシンボルがデータ メンバーへのポインターであるかどうかを指定します。|  
+|[IDiaSymbol::get_isPointerToMemberFunction](../../debugger/debug-interface-access/idiasymbol-get-ispointertomemberfunction.md)|このシンボルがメンバー関数へのポインターであるかどうかを指定します。|  
+|[IDiaSymbol::get_isReturnValue](../../debugger/debug-interface-access/idiasymbol-get-isreturnvalue.md)|変数が戻り値を実行するかどうかを指定します。|  
+|[IDiaSymbol::get_isSdl](../../debugger/debug-interface-access/idiasymbol-get-issdl.md)|/SDL オプションを使用して、モジュールをコンパイルするかどうかを指定します。|  
+|[IDiaSymbol::get_isSingleInheritance](../../debugger/debug-interface-access/idiasymbol-get-issingleinheritance.md)|指定するかどうか、`this`単一継承を持つデータ メンバーを指すポインターです。|  
+|[IDiaSymbol::get_isSplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md)|データを個別のシンボルの集計に分割されているかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_isStatic](../../debugger/debug-interface-access/idiasymbol-get-isstatic.md)|関数またはサンクのレイヤーが静的かどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_isStripped](../../debugger/debug-interface-access/idiasymbol-get-isstripped.md)|プライベート シンボルをシンボル ファイルから取り除かれているかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_isVirtualInheritance](../../debugger/debug-interface-access/idiasymbol-get-isvirtualinheritance.md)|指定するかどうか、`this`仮想継承を持つデータ メンバーを指すポインターです。|  
+|[IDiaSymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)|ソースの言語を取得します。|  
+|[IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)|この記号によって表されるオブジェクトによって使用されるメモリのバイト数を取得します。|  
+|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|シンボルの構文上の親への参照を取得します。|  
+|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|シンボルの構文上の親識別子を取得します。|  
+|[IDiaSymbol::get_libraryName](../../debugger/debug-interface-access/idiasymbol-get-libraryname.md)|オブジェクトの読み込み元のライブラリまたはオブジェクトのファイルのファイル名を取得します。|  
+|[IDiaSymbol::get_liveRangeLength](../../debugger/debug-interface-access/idiasymbol-get-liverangelength.md)|ローカル シンボルの有効なアドレスの範囲の長さを返します。|  
+|[IDiaSymbol::get_liveRangeStartAddressSection](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddresssection.md)|ローカル シンボルの有効開始アドレスの範囲のセクションの一部を返します。|  
+|[IDiaSymbol::get_liveRangeStartAddressOffset](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddressoffset.md)|ローカル シンボルの有効開始アドレスの範囲のオフセットの部分を返します。|  
+|[IDiaSymbol::get_liveRangeStartRelativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-liverangestartrelativevirtualaddress.md)|ローカル シンボルの有効なアドレス範囲の開始日を返します。|  
+|[IDiaSymbol::get_locationType](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)|データ シンボルの場所の種類を取得します。|  
+|[IDiaSymbol::get_lowerBound](../../debugger/debug-interface-access/idiasymbol-get-lowerbound.md)|FORTRAN 配列の次元の下限値を取得します。|  
+|[IDiaSymbol::get_lowerBoundId](../../debugger/debug-interface-access/idiasymbol-get-lowerboundid.md)|FORTRAN 配列の次元の下限値のシンボル id を取得します。|  
+|[IDiaSymbol::get_machineType](../../debugger/debug-interface-access/idiasymbol-get-machinetype.md)|ターゲット CPU の種類を取得します。|  
+|[IDiaSymbol::get_managed](../../debugger/debug-interface-access/idiasymbol-get-managed.md)|マネージ シンボルを参照するかどうかを示すコードを使用するフラグを取得します。|  
+|[IDiaSymbol::get_memorySpaceKind](../../debugger/debug-interface-access/idiasymbol-get-memoryspacekind.md)|メモリ領域の種類を取得します。|  
+|[IDiaSymbol::get_msil](../../debugger/debug-interface-access/idiasymbol-get-msil.md)|シンボルは、Microsoft Intermediate Language (MSIL) コードを参照するかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|シンボルの名前を取得します。|  
+|[IDiaSymbol::get_nested](../../debugger/debug-interface-access/idiasymbol-get-nested.md)|ユーザー定義データ型が入れ子になったかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_noInline](../../debugger/debug-interface-access/idiasymbol-get-noinline.md)|関数をマークするかどうかを示すフラグを取得、 [noinline](/cpp/cpp/noinline)属性。|  
+|[IDiaSymbol::get_noReturn](../../debugger/debug-interface-access/idiasymbol-get-noreturn.md)|関数が宣言されているかどうかを示すフラグを取得、 [noreturn](/cpp/cpp/noreturn)属性。|  
+|[IDiaSymbol::get_noStackOrdering](../../debugger/debug-interface-access/idiasymbol-get-nostackordering.md)|スタックの順序付けでしたを実行できるかスタック バッファーのチェックの一部としてを示すフラグを取得しません。|  
+|[IDiaSymbol::get_notReached](../../debugger/debug-interface-access/idiasymbol-get-notreached.md)|関数またはラベルに到達しないかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_numberOfAcceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-numberofacceleratorpointertags.md)|C++ AMP のスタブ関数では、アクセラレータのポインターのタグの数を返します。|  
+|[IDiaSymbol::get_numberOfModifiers](../../debugger/debug-interface-access/idiasymbol-get-numberofmodifiers.md)|元の型に適用されている修飾子の数を取得します。|  
+|[IDiaSymbol::get_numberOfRegisterIndices](../../debugger/debug-interface-access/idiasymbol-get-numberofregisterindices.md)|レジスタのインデックスの数を取得します。|  
+|[IDiaSymbol::get_numberOfRows](../../debugger/debug-interface-access/idiasymbol-get-numberofrows.md)|マトリックス内の行の数を取得します。|  
+|[IDiaSymbol::get_numberOfColumns](../../debugger/debug-interface-access/idiasymbol-get-numberofcolumns.md)|マトリックスの列の数を取得します。|  
+|[IDiaSymbol::get_objectFileName](../../debugger/debug-interface-access/idiasymbol-get-objectfilename.md)|オブジェクト ファイルの名前を取得します。|  
+|[IDiaSymbol::get_objectPointerType](../../debugger/debug-interface-access/idiasymbol-get-objectpointertype.md)|クラスのメソッドのオブジェクトへのポインターの種類を取得します。|  
+|[IDiaSymbol::get_oemId](../../debugger/debug-interface-access/idiasymbol-get-oemid.md)|シンボルの取得`oemId`値。|  
+|[IDiaSymbol::get_oemSymbolId](../../debugger/debug-interface-access/idiasymbol-get-oemsymbolid.md)|シンボルの取得`oemSymbolId`値。|  
+|[IDiaSymbol::get_offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md)|シンボルの場所のオフセットを取得します。|  
+|[IDiaSymbol::get_optimizedCodeDebugInfo](../../debugger/debug-interface-access/idiasymbol-get-optimizedcodedebuginfo.md)|関数またはラベルに最適化されたコードが含まれているかどうかを示すフラグを取得も同様のデバッグ情報。|  
+|[IDiaSymbol::get_overloadedOperator](../../debugger/debug-interface-access/idiasymbol-get-overloadedoperator.md)|ユーザー定義データ型が演算子をオーバー ロードするかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_packed](../../debugger/debug-interface-access/idiasymbol-get-packed.md)|ユーザー定義データ型がパックされているかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md)|対象のコンパイル単位、プログラムがコンパイルされたプラットフォームの種類を取得します。|  
+|[IDiaSymbol::get_pure](../../debugger/debug-interface-access/idiasymbol-get-pure.md)|関数が純粋なかどうかを示すフラグを取得する仮想です。|  
+|[IDiaSymbol::get_rank](../../debugger/debug-interface-access/idiasymbol-get-rank.md)|FORTRAN 多次元配列のランクを取得します。|  
+|[IDiaSymbol::get_reference](../../debugger/debug-interface-access/idiasymbol-get-reference.md)|ポインター型が参照するかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_registerId](../../debugger/debug-interface-access/idiasymbol-get-registerid.md)|場所のレジスタ指定子を取得します。|  
+|[IDiaSymbol::get_registerType](../../debugger/debug-interface-access/idiasymbol-get-registertype.md)|登録の種類を取得します。|  
+|[IDiaSymbol::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-relativevirtualaddress.md)|場所の相対仮想アドレス (RVA) を取得します。|  
+|[IDiaSymbol::get_restrictedType](../../debugger/debug-interface-access/idiasymbol-get-restrictedtype.md)|指定するかどうか、`this`ポインターがフラグが設定された制限付きとします。|  
+|[IDiaSymbol::get_samplerSlot](../../debugger/debug-interface-access/idiasymbol-get-samplerslot.md)|サンプラー スロットを取得します。|  
+|[IDiaSymbol::get_scoped](../../debugger/debug-interface-access/idiasymbol-get-scoped.md)|ユーザー定義データ型がの構文のスコープを非表示かどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_signature](../../debugger/debug-interface-access/idiasymbol-get-signature.md)|シンボルの署名の値を取得します。|  
+|[IDiaSymbol::get_sizeInUdt](../../debugger/debug-interface-access/idiasymbol-get-sizeinudt.md)|ユーザー定義型のメンバーのサイズを取得します。|  
+|[IDiaSymbol::get_slot](../../debugger/debug-interface-access/idiasymbol-get-slot.md)|場所のスロット番号を取得します。|  
+|[IDiaSymbol::get_sourceFileName](../../debugger/debug-interface-access/idiasymbol-get-sourcefilename.md)|ソース ファイルのファイル名を取得します。|  
+|[IDiaSymbol::getSrcLineOnTypeDefn](../../debugger/debug-interface-access/idiasymbol-getsrclineontypedefn.md)|指定されたユーザー定義型が定義されているかを示すソース ファイルと行番号を取得します。|  
+|[IDiaSymbol::get_stride](../../debugger/debug-interface-access/idiasymbol-get-stride.md)|マトリックスまたは strided 配列のストライドを取得します。|  
+|[IDiaSymbol::get_subType](../../debugger/debug-interface-access/idiasymbol-get-subtype.md)|Sub 型を取得します。|  
+|[IDiaSymbol::get_subTypeId](../../debugger/debug-interface-access/idiasymbol-get-subtypeid.md)|サブ型 ID を取得します|  
+|[IDiaSymbol::get_symbolsFileName](../../debugger/debug-interface-access/idiasymbol-get-symbolsfilename.md)|シンボルの読み込み元ファイルの名前を取得します。|  
+|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|シンボルの一意の識別子を取得します。|  
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|シンボル型の分類子を取得します。|  
+|[IDiaSymbol::get_targetOffset](../../debugger/debug-interface-access/idiasymbol-get-targetoffset.md)|サンク ターゲットのオフセットのセクションを取得します。|  
+|[IDiaSymbol::get_targetRelativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-targetrelativevirtualaddress.md)|サンク ターゲットの相対仮想アドレス (RVA) を取得します。|  
+|[IDiaSymbol::get_targetSection](../../debugger/debug-interface-access/idiasymbol-get-targetsection.md)|サンク ターゲットの [アドレス] セクションを取得します。|  
+|[IDiaSymbol::get_targetVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-targetvirtualaddress.md)|サンク ターゲットの仮想アドレス (VA) を取得します。|  
+|[IDiaSymbol::get_textureSlot](../../debugger/debug-interface-access/idiasymbol-get-textureslot.md)|テクスチャのスロットを取得します。|  
+|[IDiaSymbol::get_thisAdjust](../../debugger/debug-interface-access/idiasymbol-get-thisadjust.md)|論理取得`this`メソッドの調整権限を保持します。|  
+|[IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)|関数のサンクの型を取得します。|  
+|[IDiaSymbol::get_timeStamp](../../debugger/debug-interface-access/idiasymbol-get-timestamp.md)|基になる実行可能ファイルのタイムスタンプを取得します。|  
+|[IDiaSymbol::get_token](../../debugger/debug-interface-access/idiasymbol-get-token.md)|マネージ関数または変数のメタデータ トークンを取得します。|  
+|[IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)|関数のシグネチャへの参照を取得します。|  
+|[IDiaSymbol::get_typeId](../../debugger/debug-interface-access/idiasymbol-get-typeid.md)|シンボルの型の識別子を取得します。|  
+|[IDiaSymbol::get_types](../../debugger/debug-interface-access/idiasymbol-get-types.md)|このシンボルにコンパイラ固有の型の値の配列を取得します。|  
+|[IDiaSymbol::get_typeIds](../../debugger/debug-interface-access/idiasymbol-get-typeids.md)|このシンボルにコンパイラ固有の型識別子の値の配列を取得します。|  
+|[IDiaSymbol::get_uavSlot](../../debugger/debug-interface-access/idiasymbol-get-uavslot.md)|再びスロットを取得します。|  
+|[IDiaSymbol::get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)|さまざまなユーザー定義型 (UDT) を取得します。|  
+|[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|ユーザー定義データ型が整列されていないかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_undecoratedName](../../debugger/debug-interface-access/idiasymbol-get-undecoratedname.md)|C++ の装飾、またはリンケージ、名前の非装飾名を取得します。|  
+|[IDiaSymbol::get_undecoratedNameEx](../../debugger/debug-interface-access/idiasymbol-get-undecoratednameex.md)|拡張機能、`get_undecoratedName`拡張フィールドの値に基づいて非装飾名を取得するメソッド。|  
+|[IDiaSymbol::get_unmodifiedTypeId](../../debugger/debug-interface-access/idiasymbol-get-unmodifiedtypeid.md)|元の (変更なし) 型の ID を取得します。|  
+|[IDiaSymbol::get_upperBound](../../debugger/debug-interface-access/idiasymbol-get-upperbound.md)|FORTRAN 配列の次元の上限値を取得します。|  
+|[IDiaSymbol::get_upperBoundId](../../debugger/debug-interface-access/idiasymbol-get-upperboundid.md)|FORTRAN 配列の次元の上限のシンボル id を取得します。|  
+|[IDiaSymbol::get_value](../../debugger/debug-interface-access/idiasymbol-get-value.md)|定数の値を取得します。|  
+|[IDiaSymbol::get_virtual](../../debugger/debug-interface-access/idiasymbol-get-virtual.md)|関数は仮想であるかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|場所の仮想アドレス (VA) を取得します。|  
+|[IDiaSymbol::get_virtualBaseClass](../../debugger/debug-interface-access/idiasymbol-get-virtualbaseclass.md)|ユーザー定義データ型が仮想基底クラスかどうかを示すフラグを取得します。|  
+|[IDiaSymbol::get_virtualBaseDispIndex](../../debugger/debug-interface-access/idiasymbol-get-virtualbasedispindex.md)|仮想基本転置テーブルにインデックスを取得します。|  
+|[IDiaSymbol::get_virtualBaseOffset](../../debugger/debug-interface-access/idiasymbol-get-virtualbaseoffset.md)|仮想関数の仮想関数テーブル内のオフセットを取得します。|  
+|[IDiaSymbol::get_virtualBasePointerOffset](../../debugger/debug-interface-access/idiasymbol-get-virtualbasepointeroffset.md)|仮想基底ポインターのオフセットを取得します。|  
+|[IDiaSymbol::get_virtualBaseTableType](../../debugger/debug-interface-access/idiasymbol-get-virtualbasetabletype.md)|仮想ベース テーブルへのポインターの種類を取得します。|  
+|[IDiaSymbol::get_virtualTableShape](../../debugger/debug-interface-access/idiasymbol-get-virtualtableshape.md)|ユーザー定義型の仮想テーブルの種類のシンボルのインターフェイスを取得します。|  
+|[IDiaSymbol::get_virtualTableShapeId](../../debugger/debug-interface-access/idiasymbol-get-virtualtableshapeid.md)|シンボルの仮想テーブル図形識別子を取得します。|  
+|[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|ユーザー定義データ型が volatile かどうかを示すフラグを取得します。|  
+  
+## <a name="remarks"></a>コメント  
+  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 次の方法の 1 つを呼び出してこのインターフェイスを取得します。  
+  
+-   [IDiaEnumSymbols::Item](../../debugger/debug-interface-access/idiaenumsymbols-item.md)  
+  
+-   [IDiaEnumSymbols::Next](../../debugger/debug-interface-access/idiaenumsymbols-next.md)  
+  
+-   [IDiaEnumSymbolsByAddr::Next](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-next.md)  
+  
+-   [IDiaEnumSymbolsByAddr::Prev](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-prev.md)  
+  
+-   [IDiaEnumSymbolsByAddr::symbolByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyaddr.md)  
+  
+-   [IDiaEnumSymbolsByAddr::symbolByRVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyrva.md)  
+  
+-   [IDiaEnumSymbolsByAddr::symbolByVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)  
+  
+-   [IDiaSession::findSymbolByAddr](../../debugger/debug-interface-access/idiasession-findsymbolbyaddr.md)  
+  
+-   [IDiaSession::findSymbolByRVA](../../debugger/debug-interface-access/idiasession-findsymbolbyrva.md)  
+  
+-   [IDiaSession::findSymbolByRVAEx](../../debugger/debug-interface-access/idiasession-findsymbolbyrvaex.md)  
+  
+-   [IDiaSession::findSymbolByVA](../../debugger/debug-interface-access/idiasession-findsymbolbyva.md)  
+  
+-   [IDiaSession::findSymbolByVAEx](../../debugger/debug-interface-access/idiasession-findsymbolbyvaex.md)  
+  
+-   [IDiaSession::findSymbolByToken](../../debugger/debug-interface-access/idiasession-findsymbolbytoken.md)  
+  
+-   [IDiaSession::symbolById](../../debugger/debug-interface-access/idiasession-symbolbyid.md)  
+  
+-   [IDiaStackWalkHelper::symbolForVA](../../debugger/debug-interface-access/idiastackwalkhelper-symbolforva.md)  
+  
+-   [IDiaSymbol::get_types](../../debugger/debug-interface-access/idiasymbol-get-types.md)  
+  
+## <a name="example"></a>例  
+ この例では、指定の相対仮想アドレスに関数のローカル変数を表示する方法を示します。 また、さまざまな種類のシンボルが相互に関連する方法を示します。  
+  
+> [!NOTE]
+>  `CDiaBSTR`ラップするクラスには、`BSTR`し、自動的に処理をインスタンス化がスコープ外に出るときに、文字列を解放します。  
+  
+```C++  
+void DumpLocalVars( DWORD rva, IDiaSession *pSession )  
+{  
+    CComPtr< IDiaSymbol > pBlock;  
+    if ( FAILED( psession->findSymbolByRVA( rva, SymTagBlock, &pBlock ) ) )  
+    {  
+        Fatal( "Failed to find symbols by RVA" );  
+    }  
+    CComPtr< IDiaSymbol > pscope;  
+    for ( ; pBlock != NULL; )  
+    {  
+        CComPtr< IDiaEnumSymbols > pEnum;  
+        // local data search  
+        if ( FAILED( pBlock->findChildren( SymTagNull, NULL, nsNone, &pEnum ) ) )  
+        {  
+            Fatal( "Local scope findChildren failed" );  
+        }  
+        CComPtr< IDiaSymbol > pSymbol;  
+        DWORD tag;  
+        DWORD celt;  
+        while ( pEnum != NULL &&  
+                SUCCEEDED( pEnum->Next( 1, &pSymbol, &celt ) ) &&  
+                celt == 1)  
+        {  
+            pSymbol->get_symTag( &tag );  
+            if ( tag == SymTagData )  
+            {  
+                CDiaBSTR name;  
+                DWORD    kind;  
+                pSymbol->get_name( &name );  
+                pSymbol->get_dataKind( &kind );  
+                if ( name != NULL )  
+                    wprintf_s( L"\t%s (%s)\n", name, szDataKinds[ kind ] );  
+            }  
+            else if ( tag == SymTagAnnotation )  
+            {  
+                CComPtr< IDiaEnumSymbols > pValues;  
+                // local data search  
+                wprintf_s( L"\tAnnotation:\n" );  
+                if ( FAILED( pSymbol->findChildren( SymTagNull, NULL, nsNone, &pValues ) ) )  
+                    Fatal( "Annotation findChildren failed" );  
+                pSymbol = NULL;  
+                while ( pValues != NULL &&  
+                        SUCCEEDED( pValues->Next( 1, &pSymbol, &celt ) ) &&  
+                        celt == 1 )  
+                {  
+                    CComVariant value;  
+                    if ( pSymbol->get_value( &value ) != S_OK )  
+                        Fatal( "No value for annotation data." );  
+                    wprintf_s( L"\t\t%ws\n", value.bstrVal );  
+                    pSymbol = NULL;  
+                }  
+            }  
+            pSymbol = NULL;  
+        }  
+        pBlock->get_symTag( &tag );   
+        if ( tag == SymTagFunction )    // stop when at function scope  
+            break;  
+        // move to lexical parent  
+        CComPtr< IDiaSymbol > pParent;  
+        if ( SUCCEEDED( pBlock->get_lexicalParent( &pParent ) )  
+            && pParent != NULL ) {  
+            pBlock = pParent;  
+        }  
+        else  
+        {  
+            Fatal( "Finding lexical parent failed." );  
+        }  
+    };  
+}  
+```  
+  
+## <a name="requirements"></a>要件  
+ `Header:`Dia2.h  
+  
+ ライブラリ: diaguids.lib  
+  
+ DLL: msdia80.dll  
+  
+## <a name="see-also"></a>関連項目  
+ [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+ [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
+ [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   
+ [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
+ [シンボル型のクラス階層](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)   
+ [シンボルとシンボル タグ](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)   
+ [コンパイル単位](../../debugger/debug-interface-access/compiland.md)

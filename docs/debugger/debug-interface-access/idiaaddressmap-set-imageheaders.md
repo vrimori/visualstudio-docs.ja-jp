@@ -1,59 +1,58 @@
 ---
-title: "IDiaAddressMap::set_imageHeaders | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaAddressMap::set_imageHeaders メソッド"
+title: "Idiaaddressmap::set_imageheaders |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaAddressMap::set_imageHeaders method
 ms.assetid: a46b9d0e-43e6-433f-b2c7-aa203981e4e4
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4ee1fc286b162ff7a0649c5cc651884b927b5857
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaAddressMap::set_imageHeaders
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-イメージのヘッダーを相対仮想アドレスの移動を有効にするように設定します。  
+# <a name="idiaaddressmapsetimageheaders"></a>IDiaAddressMap::set_imageHeaders
+セットのイメージの相対仮想アドレス変換を有効にするヘッダー。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT set_imageHeaders (   
-   DWORD cbData,  
-   BYTE  data[],  
-   BOOL  originalHeaders  
+```C++  
+HRESULT set_imageHeaders (   
+   DWORD cbData,  
+   BYTE  data[],  
+   BOOL  originalHeaders  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  cbData  
- \[入力\] ヘッダー データのバイト数。  `n` が実行可能ファイルのセクション ヘッダーの番号です。`n*sizeof(IMAGE_SECTION_HEADER)` にする必要があります。  
+ [in]ヘッダーのデータのバイト数。 必要があります`n*sizeof(IMAGE_SECTION_HEADER)`場所`n`実行可能ファイルでセクション ヘッダーの数です。  
   
- \[データ\]  
- \[入力\] イメージのヘッダーとして使用する `IMAGE_SECTION_HEADER` の構造体の配列。  
+ データ  
+ [in]配列`IMAGE_SECTION_HEADER`イメージ ヘッダーとして使用する構造体。  
   
  originalHeaders  
- \[入力\] アップグレード前に元のイメージを反映するイメージのヘッダーが新しいイメージの場合 `FALSE``TRUE` に設定します。  通常これは [IDiaAddressMap::set\_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) のメソッドの呼び出しと組み合わせてのみ `TRUE` に設定されます。  
+ [in]設定`FALSE`イメージ ヘッダーから返される場合、新しいイメージ`TRUE`アップグレードする前に、元のイメージが反映される場合。 通常、これに設定する`TRUE`への呼び出しとの組み合わせでのみ、 [idiaaddressmap::set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)メソッドです。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- `IMAGE_SECTION_HEADER` の構造はWinnt.h で宣言され実行可能イメージのヘッダー ファイルのセクションの書式を表します。  
+## <a name="remarks"></a>コメント  
+ `IMAGE_SECTION_HEADER`構造は、Winnt.h で宣言されているし、実行可能ファイルのイメージ セクション ヘッダーの形式を表します。  
   
- 相対仮想アドレスの計算は `IMAGE_SECTION_HEADER` の値によって異なります。  通常DIAプログラム データベース \(.pdb\) ファイルでこれらを取得します。  これらの値がない場合DIA は相対仮想アドレスと [IDiaAddressMap::get\_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md) のメソッド `FALSE` を計算することはできません。  クライアントはイメージから足りないイメージのヘッダー自体を入力したら相対仮想アドレスの計算を有効にするに [IDiaAddressMap::put\_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md) のメソッドを呼び出す必要があります。  
+ 相対仮想アドレスの計算によって異なります、`IMAGE_SECTION_HEADER`値。 通常、DIA では、これらのプログラム データベース (.pdb) ファイルから取得します。 これらの値が存在しない、DIA ができない場合は相対仮想アドレスを計算して、 [idiaaddressmap::get_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)メソッドを返します。`FALSE`です。 クライアントが呼び出す必要がありますし、 [idiaaddressmap::put_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)メソッドを提供すると、不足しているイメージからヘッダー イメージ自体の相対仮想アドレス計算を有効にします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
- [IDiaAddressMap::set\_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)   
- [IDiaAddressMap::get\_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)   
- [IDiaAddressMap::put\_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)
+ [Idiaaddressmap::set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)   
+ [Idiaaddressmap::get_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)   
+ [IDiaAddressMap::put_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)

@@ -1,50 +1,49 @@
 ---
-title: "IDiaPropertyStorage::ReadULONGLONG | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaPropertyStorage::ReadULONGLONG"
+title: "IDiaPropertyStorage::ReadULONGLONG |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaPropertyStorage::ReadULONGLONG
 ms.assetid: f80a2e24-5744-4fec-bab0-3ed51aef6e58
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 997efbd4528312a18563a6cc606516692f7ca9ee
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaPropertyStorage::ReadULONGLONG
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-プロパティの `ULONGLONG` の値を読み取ります。  
+# <a name="idiapropertystoragereadulonglong"></a>IDiaPropertyStorage::ReadULONGLONG
+読み取り`ULONGLONG`プロパティ セット内の値。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT ReadULONGLONG (   
-   PROPID     id,  
-   ULONGLONG* pValue  
+```C++  
+HRESULT ReadULONGLONG (   
+   PROPID     id,  
+   ULONGLONG* pValue  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `id`  
- \[入力\] 読み込まれるプロパティ識別子 \(`PROPID` は `ULONG` と WTypes.h で定義されます\)。  
+ [in]読み込まれるプロパティの識別子 (`PROPID`として WTypes.h で定義された、 `ULONG`)。  
   
  `pValue`  
- \[入力\] プロパティ値を返します。  
+ [out]プロパティ値を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  プロパティは型である `ULONGLONG``E_INVALIDARG` を返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 それ以外の場合はエラー コードを返します。 返します`E_INVALIDARG`場合は、プロパティの型ではありません`ULONGLONG`です。  
   
-## 解説  
- `ULONGLONG` は 64 ビットの符号なし整数と Windows によって定義されます。  
+## <a name="remarks"></a>コメント  
+ A `ULONGLONG` 64 ビット符号なし整数としての Windows によって定義されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

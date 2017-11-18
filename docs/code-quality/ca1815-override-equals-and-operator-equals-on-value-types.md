@@ -1,11 +1,10 @@
 ---
-title: 'CA1815: Override equals and operator equals on value types | Microsoft Docs'
+title: "Ca 1815: 上書き equals および operator equals を値型で |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,74 +14,58 @@ helpviewer_keywords:
 - OverrideEqualsAndOperatorEqualsOnValueTypes
 - CA1815
 ms.assetid: 0a8ab3a3-ee8e-46f7-985d-dcf00c89363b
-caps.latest.revision: 17
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 9b4cd8ddc4d5029a81e35460fa19373e69e33330
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 20b31e4ea20fd3d1a4ec254507962bf4e8946bb4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1815-override-equals-and-operator-equals-on-value-types"></a>CA1815: Override equals and operator equals on value types
+# <a name="ca1815-override-equals-and-operator-equals-on-value-types"></a>CA1815: equals および operator equals を値型でオーバーライドします
 |||  
 |-|-|  
 |TypeName|OverrideEqualsAndOperatorEqualsOnValueTypes|  
 |CheckId|CA1815|  
-|Category|Microsoft.Performance|  
-|Breaking Change|Non-breaking|  
+|カテゴリ|Microsoft.Performance|  
+|互換性に影響する変更点|なし|  
   
-## <a name="cause"></a>Cause  
- A public value type does not override <xref:System.Object.Equals%2A?displayProperty=fullName>, or does not implement the equality operator (==). This rule does not check enumerations.  
+## <a name="cause"></a>原因  
+ パブリックの値の型をオーバーライドしません<xref:System.Object.Equals%2A?displayProperty=fullName>、等値演算子 (= =) を実装していませんか。 このルールでは、列挙型はチェックされません。  
   
-## <a name="rule-description"></a>Rule Description  
- For value types, the inherited implementation of <xref:System.Object.Equals%2A> uses the Reflection library, and compares the contents of all fields. Reflection is computationally expensive, and comparing every field for equality might be unnecessary. If you expect users to compare or sort instances, or use them as hash table keys, your value type should implement <xref:System.Object.Equals%2A>. If your programming language supports operator overloading, you should also provide an implementation of the equality and inequality operators.  
+## <a name="rule-description"></a>規則の説明  
+ 値型、継承した実装の<xref:System.Object.Equals%2A>Reflection ライブラリを使用し、すべてのフィールドの内容を比較します。 Reflection は計算コストが高いため、場合によってはすべてのフィールドで等値性を比較する必要はありません。 値の型を実装する必要があります比較または並べ替えのインスタンスにユーザーを想定してハッシュ テーブル キーとして使用するか、<xref:System.Object.Equals%2A>です。 使用するプログラミング言語では、演算子のオーバー ロードをサポートする場合は、等値演算子および非等値演算子の実装も用意する必要があります。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, provide an implementation of <xref:System.Object.Equals%2A>. If you can, implement the equality operator.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、実装を提供<xref:System.Object.Equals%2A>です。 場合は、等値演算子を実装することができます。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule if instances of the value type will not be compared to each other.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 値の型のインスタンスは互いに比較しない場合は、この規則による警告を抑制するのには安全です。  
   
-## <a name="example-of-a-violation"></a>Example of a Violation  
+## <a name="example-of-a-violation"></a>違反の例  
   
-### <a name="description"></a>Description  
- The following example shows a structure (value type) that violates this rule.  
+### <a name="description"></a>説明  
+ 次の例では、この規則に違反する構造体 (値型) を示します。  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>コード  
  [!code-csharp[FxCop.Performance.OverrideEqualsViolation#1](../code-quality/codesnippet/CSharp/ca1815-override-equals-and-operator-equals-on-value-types_1.cs)]  
   
-## <a name="example-of-how-to-fix"></a>Example of How to Fix  
+## <a name="example-of-how-to-fix"></a>修正する方法の例  
   
-### <a name="description"></a>Description  
- The following example fixes the previous violation by overriding <xref:System.ValueType.Equals%2A?displayProperty=fullName> and implementing the equality operators (==, !=).  
+### <a name="description"></a>説明  
+ 次の例は、オーバーライドすることで以前の違反を修正<xref:System.ValueType.Equals%2A?displayProperty=fullName>と実装の等値演算子 (= =、! =)。  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>コード  
  [!code-csharp[FxCop.Performance.OverrideEqualsFixed#1](../code-quality/codesnippet/CSharp/ca1815-override-equals-and-operator-equals-on-value-types_2.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA2224: Override equals on overloading operator equals](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA2224: オーバーロードする演算子 equals で Equals をオーバーライドします](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)  
   
- [CA2231: Overload operator equals on overriding ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)  
+ [CA2231: ValueType.Equals のオーバーライドで、演算子 equals をオーバーロードします](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)  
   
- [CA2226: Operators should have symmetrical overloads](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
+ [CA2226: 演算子は対称型オーバーロードを含まなければなりません](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.Object.Equals%2A?displayProperty=fullName>

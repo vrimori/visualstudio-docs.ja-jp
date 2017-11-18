@@ -1,11 +1,10 @@
 ---
-title: 'CA1039: Lists are strongly typed | Microsoft Docs'
+title: "CA1039: リストは厳密に型指定 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,41 +14,26 @@ helpviewer_keywords:
 - CA1039
 - ListsAreStronglyTyped
 ms.assetid: 5ac366c4-fd87-4d5c-95d5-f755510c8e5c
-caps.latest.revision: 15
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b6063c818995f2b0c7c4d181ee3b6203f2c1f66a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 57bbb053c39680d8064fb757679ffadb3c87aeeb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1039-lists-are-strongly-typed"></a>CA1039: Lists are strongly typed
+# <a name="ca1039-lists-are-strongly-typed"></a>CA1039: リストは厳密に型指定されています
 |||  
 |-|-|  
 |TypeName|ListsAreStronglyTyped|  
 |CheckId|CA1039|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- The public or protected type implements <xref:System.Collections.IList?displayProperty=fullName> but does not provide a strongly typed method for one or more of the following:  
+## <a name="cause"></a>原因  
+ パブリックまたはプロテクト型を実装して<xref:System.Collections.IList?displayProperty=fullName>は、次の 1 つ以上の厳密に型指定されたメソッドは提供しません。  
   
 -   IList.Item  
   
@@ -63,30 +47,30 @@ ms.lasthandoff: 08/30/2017
   
 -   IList.Remove  
   
-## <a name="rule-description"></a>Rule Description  
- This rule requires <xref:System.Collections.IList> implementations to provide strongly typed members so that users are not required to cast arguments to the <xref:System.Object?displayProperty=fullName> type when they use the functionality that is provided by the interface. The <xref:System.Collections.IList> interface is implemented by collections of objects that can be accessed by index. This rule assumes that the type that implements <xref:System.Collections.IList> does this to manage a collection of instances of a type that is stronger than <xref:System.Object>.  
+## <a name="rule-description"></a>規則の説明  
+ この規則で<xref:System.Collections.IList>強く指定を実装する型指定されたメンバー ユーザーは引数をキャストする必要がないように、<xref:System.Object?displayProperty=fullName>インターフェイスによって提供される機能を使用するときに入力します。 <xref:System.Collections.IList>インターフェイス インデックスによってアクセスできるオブジェクトのコレクションによって実装されます。 このルールは、ある型を実装する前提としています。<xref:System.Collections.IList>はこれよりも厳密な型のインスタンスのコレクションを管理する<xref:System.Object>です。  
   
- <xref:System.Collections.IList> implements the <xref:System.Collections.ICollection?displayProperty=fullName> and <xref:System.Collections.IEnumerable?displayProperty=fullName> interfaces. If you implement <xref:System.Collections.IList>, you must provide the required strongly typed members for <xref:System.Collections.ICollection>. If the objects in the collection extend <xref:System.ValueType?displayProperty=fullName>, you must provide a strongly typed member for <xref:System.Collections.IEnumerable.GetEnumerator%2A> to avoid the decrease in performance that is caused by boxing; this is not required when the objects of the collection are a reference type.  
+ <xref:System.Collections.IList>実装する、<xref:System.Collections.ICollection?displayProperty=fullName>と<xref:System.Collections.IEnumerable?displayProperty=fullName>インターフェイスです。 実装する場合<xref:System.Collections.IList>の必須の厳密に型指定されたメンバーを指定する必要があります<xref:System.Collections.ICollection>です。 場合は、コレクション内のオブジェクトを拡張<xref:System.ValueType?displayProperty=fullName>の厳密に型指定されたメンバーを指定する必要があります<xref:System.Collections.IEnumerable.GetEnumerator%2A>パフォーマンスの低下を避けるためにボックス化によって発生した以外の場合は、コレクションのオブジェクトが参照型の場合必要はありません。  
   
- To comply with this rule, implement the interface members explicitly by using names in the form InterfaceName.InterfaceMemberName, such as <xref:System.Collections.IList.Add%2A>. The explicit interface members use the data types that are declared by the interface. Implement the strongly typed members by using the interface member name, such as `Add`. Declare the strongly typed members as public, and declare parameters and return values to be of the strong type that is managed by the collection. The strong types replace weaker types such as <xref:System.Object> and <xref:System.Array> that are declared by the interface.  
+ この規則に準拠、インターフェイスのメンバーを明示的に実装など InterfaceName.InterfaceMemberName、フォームの名前を使用して<xref:System.Collections.IList.Add%2A>です。 明示的なインターフェイス メンバーは、インターフェイスで宣言されているデータ型を使用します。 インターフェイス メンバーの名前を使用して、厳密に型指定されたメンバーを実装する`Add`です。 Public として厳密に型指定されたメンバーを宣言し、パラメーターを宣言し、コレクションで管理されている厳密な型の値を返します。 厳密な型がなど弱い種類を置き換える<xref:System.Object>と<xref:System.Array>インターフェイスで宣言されています。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, explicitly implement <xref:System.Collections.IList> members and provide strongly typed alternatives for the members that were noted previously. For code that correctly implements the <xref:System.Collections.IList> interface and provides the required strongly typed members, see the following example.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、明示的に実装<xref:System.Collections.IList>メンバーし、前述のメンバーの厳密に型指定の代替手段を提供します。 正しく実装するコードを<xref:System.Collections.IList>インターフェイスし、必要なは、厳密に型指定されたメンバーは、次の例を参照してください。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Suppress a warning from this rule when you implement a new object-based collection, such as a linked list, where types that extend the new collection determine the strong type. These types should comply with this rule and expose strongly typed members.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 新しいオブジェクトに基づくなど、コレクション、新しいコレクションを拡張する型が厳密な型を判断、リンク リストを実装する場合は、この規則による警告を抑制します。 これらの型は、このルールに準拠し、厳密に型指定されたメンバーを公開する必要があります。  
   
-## <a name="example"></a>Example  
- In the following example, the type `YourType` extends <xref:System.Collections.CollectionBase?displayProperty=fullName>, as should all strongly typed collections. Note that <xref:System.Collections.CollectionBase> provides the explicit implementation of the <xref:System.Collections.IList> interface for you. Therefore, you must only provide the strongly typed members for <xref:System.Collections.IList> and <xref:System.Collections.ICollection>.  
+## <a name="example"></a>例  
+ 次の例では、型`YourType`拡張<xref:System.Collections.CollectionBase?displayProperty=fullName>すべて厳密に型指定されたコレクションと同様、します。 なお<xref:System.Collections.CollectionBase>の明示的な実装を提供、<xref:System.Collections.IList>のためのインターフェイスです。 したがって、のみを指定してください、厳密に型指定されたメンバーの<xref:System.Collections.IList>と<xref:System.Collections.ICollection>です。  
   
  [!code-csharp[FxCop.Design.IListStrongTypes#1](../code-quality/codesnippet/CSharp/ca1039-lists-are-strongly-typed_1.cs)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1035: ICollection implementations have strongly typed members](../code-quality/ca1035-icollection-implementations-have-strongly-typed-members.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1035: ICollection の実装は、厳密に型指定されたメンバーを含んでいます](../code-quality/ca1035-icollection-implementations-have-strongly-typed-members.md)  
   
- [CA1038: Enumerators should be strongly typed](../code-quality/ca1038-enumerators-should-be-strongly-typed.md)  
+ [CA1038: 列挙子は厳密に型指定されていなければなりません](../code-quality/ca1038-enumerators-should-be-strongly-typed.md)  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.Collections.CollectionBase?displayProperty=fullName>   
  <xref:System.Collections.ICollection?displayProperty=fullName>   
  <xref:System.Collections.IEnumerable?displayProperty=fullName>   

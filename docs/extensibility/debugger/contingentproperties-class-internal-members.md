@@ -1,50 +1,52 @@
 ---
-title: "ContingentProperties クラスの内部メンバー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ContingentProperties クラス [.NET Framework のデバッグ エンジン]"
-  - "デバッグ エンジンは、ContingentProperties クラス [.NET Framework]"
+title: "ContingentProperties クラスの内部メンバー |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ContingentProperties class [.NET Framework debug engines]
+- debug engines, ContingentProperties class [.NET Framework]
 ms.assetid: c49d1362-ab1c-4b6d-9950-fcae40e0e66b
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3d5d929f41a40d986aafa8150e68fadcb46f3469
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ContingentProperties クラスの内部メンバー
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-その他のプロパティを含む、 <xref:System.Threading.Tasks.Task> オブジェクトです。  
+# <a name="contingentproperties-class---internal-members"></a>ContingentProperties クラスの内部メンバー
+追加のプロパティを含む、<xref:System.Threading.Tasks.Task>オブジェクト。  
   
- **名前空間:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **アセンブリ:** \(mscorlib.dll\) の mscorlib  
+ **アセンブリ:** (mscorlib.dll) の mscorlib  
   
- .NET Framework からこれらの内部メンバーにアクセスできないため、次の構文は共通中間言語 \(CIL\) に提供されます。  
+ .NET Framework からこれらの内部のメンバーにアクセスすることはできません、ため、次の構文は共通中間言語 (CIL) に提供されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 .class auto ansi nested assembly beforefieldinit ContingentProperties  
        extends System.Object  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
   
-### フィールド  
+### <a name="fields"></a>フィールド  
   
 |名前|説明|  
-|--------|--------|  
-|[m\_children](../../extensibility/debugger/m-children-field.md)|このタスクに登録されている子タスクの一覧。|  
+|----------|-----------------|  
+|[m_children](../../extensibility/debugger/m-children-field.md)|このタスクに登録されている子タスクの一覧。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  .NET Framework は、必要な場合にのみ、このクラスのフィールドを初期化します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [.NET Framework の並列拡張機能の内部](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

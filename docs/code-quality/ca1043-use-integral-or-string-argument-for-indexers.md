@@ -1,11 +1,10 @@
 ---
-title: 'CA1043: Use integral or string argument for indexers | Microsoft Docs'
+title: "Ca 1043: インデクサーには整数または文字列引数を使用して |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,57 +14,44 @@ helpviewer_keywords:
 - CA1043
 - UseIntegralOrStringArgumentForIndexers
 ms.assetid: d7f14b9e-2220-4f80-b6b8-48c655a05701
-caps.latest.revision: 14
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b0b5e3e6e7b81b481da439fd596e7f5e7488de05
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: aeaaf07dd3590e4dd703cfa239c48cb7e86b7f43
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1043-use-integral-or-string-argument-for-indexers"></a>CA1043: Use integral or string argument for indexers
+# <a name="ca1043-use-integral-or-string-argument-for-indexers"></a>CA1043: インデクサーには整数または文字列引数を使用します
 |||  
 |-|-|  
 |TypeName|UseIntegralOrStringArgumentForIndexers|  
 |CheckId|CA1043|  
-|Category|Microsoft.Design|  
-|Breaking Change|Breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|あり|  
   
-## <a name="cause"></a>Cause  
- A public or protected type contains a public or protected indexer that uses an index type other than <xref:System.Int32?displayProperty=fullName>, <xref:System.Int64?displayProperty=fullName>, <xref:System.Object?displayProperty=fullName>, or <xref:System.String?displayProperty=fullName>.  
+## <a name="cause"></a>原因  
+ パブリックまたはプロテクト型には、以外のインデックスの種類を使用して、パブリックまたはプロテクトのインデクサーが含まれています。 <xref:System.Int32?displayProperty=fullName>、 <xref:System.Int64?displayProperty=fullName>、 <xref:System.Object?displayProperty=fullName>、または<xref:System.String?displayProperty=fullName>です。  
   
-## <a name="rule-description"></a>Rule Description  
- Indexers, that is, indexed properties, should use integer or string types for the index. These types are typically used for indexing data structures and increase the usability of the library. Use of the <xref:System.Object> type should be restricted to those cases where the specific integer or string type cannot be specified at design time. If the design requires other types for the index, reconsider whether the type represents a logical data store. If it does not represent a logical data store, use a method.  
+## <a name="rule-description"></a>規則の説明  
+ インデクサー、つまり、インデックス付きプロパティは、インデックスに整数型または文字列型を使用する必要があります。 これらの型は、通常のデータ構造のインデックス作成に使用され、ライブラリの使いやすさを向上します。 使用、<xref:System.Object>型は、デザイン時に特定の整数型または文字列型を指定することはできない場合に限定する必要があります。 設計では、インデックスの他の種類が必要とする場合は、型の論理データ ストアを表しているかどうかを再確認します。 論理データ ストアを表さない場合は、メソッドを使用します。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, change the index to an integer or string type, or use a method instead of the indexer.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、整数または文字列型では、インデックスを変更またはインデクサーではなく、メソッドを使用します。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- Suppress a warning from this rule only after carefully considering the need for the nonstandard indexer.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 非標準のインデクサーの必要性を慎重に検討した後にのみこの規則による警告は抑制されます。  
   
-## <a name="example"></a>Example  
- The following example shows an indexer that uses an <xref:System.Int32> index.  
+## <a name="example"></a>例  
+ 次の例では、インデクサーを使用する、<xref:System.Int32>インデックス。  
   
- [!code-csharp[FxCop.Design.IntegralOrStringIndexers#1](../code-quality/codesnippet/CSharp/ca1043-use-integral-or-string-argument-for-indexers_1.cs)] [!code-cpp[FxCop.Design.IntegralOrStringIndexers#1](../code-quality/codesnippet/CPP/ca1043-use-integral-or-string-argument-for-indexers_1.cpp)] [!code-vb[FxCop.Design.IntegralOrStringIndexers#1](../code-quality/codesnippet/VisualBasic/ca1043-use-integral-or-string-argument-for-indexers_1.vb)]  
+ [!code-csharp[FxCop.Design.IntegralOrStringIndexers#1](../code-quality/codesnippet/CSharp/ca1043-use-integral-or-string-argument-for-indexers_1.cs)]
+ [!code-cpp[FxCop.Design.IntegralOrStringIndexers#1](../code-quality/codesnippet/CPP/ca1043-use-integral-or-string-argument-for-indexers_1.cpp)]
+ [!code-vb[FxCop.Design.IntegralOrStringIndexers#1](../code-quality/codesnippet/VisualBasic/ca1043-use-integral-or-string-argument-for-indexers_1.vb)]  
   
-## <a name="related-rules"></a>Related Rules  
- [CA1023: Indexers should not be multidimensional](../code-quality/ca1023-indexers-should-not-be-multidimensional.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1023: インデクサーを多次元にすることはできません](../code-quality/ca1023-indexers-should-not-be-multidimensional.md)  
   
- [CA1024: Use properties where appropriate](../code-quality/ca1024-use-properties-where-appropriate.md)
+ [CA1024: 適切な場所にプロパティを使用します](../code-quality/ca1024-use-properties-where-appropriate.md)

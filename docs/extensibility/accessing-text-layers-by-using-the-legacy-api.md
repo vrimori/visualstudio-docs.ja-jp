@@ -1,52 +1,53 @@
 ---
-title: "レガシ API を使用してテキスト レイヤーにアクセスします。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エディター [Visual Studio SDK] レガシー - テキスト レイヤー"
+title: "レガシ API を使用してテキストのレイヤーにアクセスする |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], legacy - text layers
 ms.assetid: 2258fcdd-38d1-479d-b8f8-1d4e6525f72c
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 54a981a57605ccb93062ac0678b1e8b5673c6d1a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# レガシ API を使用してテキスト レイヤーにアクセスします。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-テキスト レイヤーは通常テキスト レイアウト機能をカプセル化します。  たとえば「一」のレイヤーの表示はキャレット \(テキスト挿入ポイント\) を含む関数の前後に短いメッセージを送信します。  
+# <a name="accessing-text-layers-by-using-the-legacy-api"></a>レガシ API を使用してテキストのレイヤーにアクセスします。
+通常、テキストのレイヤーには、テキスト レイアウトの一部の側面がカプセル化します。 「関数での a のタイム」レイヤーでは、キャレット (テキスト挿入ポイント) を含む関数の前後に、テキストを非表示にします。  
   
- テキスト レイヤーはバッファーとビューの間に存在しビューがバッファーのコンテンツの外観を変更します。  
+ バッファーと、ビューのテキストのレイヤーが存在して、ビュー バッファーの内容を表示する方法を変更します。  
   
-## レイヤーの情報をショートサーキット メッセージを送信します。  
- 次の一覧はテキスト レイヤーが [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でどのように動作するかを示しています :  
+## <a name="text-layer-information"></a>レイヤーのテキスト情報  
+ 次の一覧のテキストのレイヤーの動作について説明します[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]:  
   
--   テキスト レイヤーのテキストは構文の色指定とマーカーで装飾することができます。  
+-   レイヤーのテキスト内のテキストは、構文の色分けやマーカーを装飾できます。  
   
--   現在独自のレイヤーを実行できません。  
+-   現在、独自のレイヤーを実装できません。  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> から派生したレイヤーは <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLayer> を公開します。  テキスト バッファー自体は基になるレイヤーを polymorphically 処理を可能にするビューがレイヤーとして実装されます。  
+-   レイヤーを公開<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLayer>から派生した<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines>です。 文字列バッファー自体は、基になるレイヤーをポリモーフィックに対処するためのビューを使用する、レイヤーとしても実装されます。  
   
--   レイヤーをいくつでもビューとバッファーになる場合があります。  各レイヤーはでレイヤーを取扱いのみビューの最上位の層を主として処理されます。  \(ビューにバッファーに関する情報があります\)。  
+-   複数のレイヤーは、ビューと、バッファー間に可能性があります。 各レイヤーが、下の層のみを処理し、ビューが最上位のレイヤーをほとんど処理します。 (ビューには、バッファーに関する情報。)  
   
--   レイヤーはの下にあるレイヤーだけ影響を及ぼすことがあります。  これは標準イベントの発生を越えてその上のレイヤーには影響しません。  
+-   レイヤーより下にレイヤーだけに影響を与えることができます。 元の標準的なイベントを超える上にあるレイヤーに影響ことはできません。  
   
--   エディターで非表示のテキスト全体的なテキストとワード ラップがレイヤーとして実装されます。  レイヤーと直接対話に非表示にし全体的なテキストを実行できます。  詳細については、「[従来の言語サービスでのアウトライン](../extensibility/internals/outlining-in-a-legacy-language-service.md)」および「<xref:Microsoft.VisualStudio.TextManager.Interop.IVsSyntheticTextSession>」を参照してください。  
+-   エディターで、非表示テキスト、代理テキスト、およびワード ラップがレイヤーとして実装されます。 レイヤーと直接対話することがなく、統合表示と非テキストを実装できます。 詳細については、次を参照してください。[レガシ言語サービスでのアウトライン](../extensibility/internals/outlining-in-a-legacy-language-service.md)と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsSyntheticTextSession>です。  
   
--   各テキスト レイヤーは <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLayer> のインターフェイスを通じて公開される独自のローカル座標系があります。  行の折り返しのレイヤーは基になるテキスト バッファーが 1 行だけが含まれることもありますが2 行が含まれることがあります。  
+-   各テキスト レイヤーが独自ローカル座標系によって公開される、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLayer>インターフェイスです。 行の折り返しレイヤーなどがあります 2 本の線基になるテキスト バッファーが 1 行のみを含めること。  
   
--   ビューは <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView> のインターフェイスを通じて層と通信します。  バッファーの座標のビューの座標を解決するにはこのインターフェイスを使用します。  
+-   によるレイヤーと通信する、ビュー、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView>インターフェイスです。 このインターフェイスを使用して、バッファーの座標を使用してビューの座標を調整します。  
   
--   テキストが生じる全体的なテキスト レイヤーなどすべてのレイヤーが <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLayer.CreateTrackingPoint%2A> のローカル実装を提供する必要があります。  
+-   いずれかのレイヤーのテキストの発生元代理テキスト レイヤーは、ローカルの実装を提供する必要がありますなど<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLayer.CreateTrackingPoint%2A>です。  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLayer> でなくテキスト レイヤーは <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> を実行し<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLinesEvents> のイベントを発生させるインターフェイス。  
+-   それに<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLayer>、レイヤーのテキストを実装する必要があります<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>でイベントを発生させると、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLinesEvents>インターフェイスです。  
   
-## 参照  
- [構文のカスタム エディターの色指定](../extensibility/syntax-coloring-in-custom-editors.md)   
- [レガシ API でテキストのマーカーの使用](../extensibility/using-text-markers-with-the-legacy-api.md)   
- [レガシ API を使用して、エディター コントロールとメニューをカスタマイズします。](../extensibility/customizing-editor-controls-and-menus-by-using-the-legacy-api.md)
+## <a name="see-also"></a>関連項目  
+ [カスタム エディターの構文の色分け](../extensibility/syntax-coloring-in-custom-editors.md)   
+ [レガシ API でテキスト マーカーの使用](../extensibility/using-text-markers-with-the-legacy-api.md)   
+ [レガシ API を使用して、エディター コントロールやメニューをカスタマイズします。](../extensibility/customizing-editor-controls-and-menus-by-using-the-legacy-api.md)

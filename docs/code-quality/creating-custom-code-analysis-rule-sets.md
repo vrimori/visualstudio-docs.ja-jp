@@ -1,35 +1,36 @@
 ---
-title: "カスタム コード分析規則セットの作成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "カスタム コード分析規則セットの作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88db3a0a-1b92-496d-9fae-b2bb980f5933
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: a38494b21c87e249317b0a55fbdffa95702404cd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# カスタム コード分析規則セットの作成
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-コード分析規則をマネージ コード プロジェクトに適用するには、1 つ以上の規則を含む規則セットを指定します。  Microsoft の標準の規則セットには、機能別および深度別にまとめられた規則のグループが用意されています。  たとえば、Microsoft 基本デザイン ガイドライン規則と Microsoft 拡張デザイン ガイドライン規則には、使用可能性と保守容易性に関する問題に焦点を当てた規則が含まれていて、さらに拡張規則セットでは命名規則が強調されています。  
+# <a name="creating-custom-code-analysis-rule-sets"></a>カスタム コード分析規則セットの作成
+マネージ コード プロジェクトにコード分析規則を適用するには、1 つまたは複数のルールが含まれる規則セットを指定します。 Microsoft の標準規則セットは、関数と深さにより分類された規則のグループを提供します。 たとえば、Microsoft 基本デザイン ガイドライン規則と、Microsoft 拡張デザイン ガイドライン規則は、拡張規則セットの名前付け規則に追加された重点を置いて使いやすさと保守容易性の問題に焦点を当てた規則を含めます。  
   
- 複数の標準規則セットを組み合わせたカスタム規則セットを作成することも、1 つ以上の規則を指定してカスタム規則セットを作成することもできます。  カスタム規則セットを .ruleset ファイルに保存し、それを複数のコード プロジェクトで指定できます。  
+ 結合したカスタム規則セットを作成することもできます。 または、標準または規則セットを 1 つまたは複数の標準規則セット内の規則を指定します。 .Ruleset ファイル、設定を保存するカスタム ルールと、複数のコード プロジェクトで指定することができます。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [方法: カスタム規則セットを作成する](../code-quality/how-to-create-a-custom-rule-set.md)  
- 1 つ以上の標準規則セットを変更することで、カスタム規則セットを作成する方法を説明します。  
+ カスタム規則を 1 つまたは複数の標準規則セットの変更セットを作成する方法について説明します。  
   
- [規則セット エディターでの作業](../code-quality/working-in-the-code-analysis-rule-set-editor.md)  
- 規則セット エディターを使用して、カスタム規則セット内のコード分析規則のグループ化、並べ替え、フィルター処理、および変更を行う方法を説明します。  
+ [ルールでの作業セット エディター](../code-quality/working-in-the-code-analysis-rule-set-editor.md)  
+ エディターを使用して、ルール セットにグループ化、並べ替え、フィルター、およびカスタム規則セットでコード分析規則を変更する方法について説明します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コード分析規則セットの参照](../code-quality/code-analysis-rule-set-reference.md)   
  [マネージ コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)   
- [C\/C\+\+ コードの品質の分析](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md)
+ [コード分析を使用した C/C++ コードの品質の分析](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md)

@@ -1,11 +1,10 @@
 ---
-title: 'CA1025: Replace repetitive arguments with params array | Microsoft Docs'
+title: "Ca 1025: 反復的な引数を params 配列置換 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,53 +14,37 @@ helpviewer_keywords:
 - ReplaceRepetitiveArgumentsWithParamsArray
 - CA1025
 ms.assetid: f009b340-dea3-4459-8fe1-2143aa8b5d0b
-caps.latest.revision: 14
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 149d34bcf1192fa93e6ee5416c8003e965f6fc3f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 910be06a7d9897f306b6bb2b89ca99b733623faf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025: Replace repetitive arguments with params array
+# <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025: 反復する引数を params 配列で置き換えます
 |||  
 |-|-|  
 |TypeName|ReplaceRepetitiveArgumentsWithParamsArray|  
 |CheckId|CA1025|  
-|Category|Microsoft.Design|  
-|Breaking Change|Non-breaking|  
+|カテゴリ|Microsoft.Design|  
+|互換性に影響する変更点|なし|  
   
-## <a name="cause"></a>Cause  
- A public or protected method in a public type has more than three parameters, and its last three parameters are the same type.  
+## <a name="cause"></a>原因  
+ パブリック型のパブリックまたはプロテクト メソッドは複数の 3 つのパラメーターを持ちの最後の 3 つのパラメーターは、同じ型です。  
   
-## <a name="rule-description"></a>Rule Description  
- Use a parameter array instead of repeated arguments when the exact number of arguments is unknown and the variable arguments are the same type, or can be passed as the same type. For example, the <xref:System.Console.WriteLine%2A> method provides a general-purpose overload that uses a parameter array to accept any number of <xref:System.Object> arguments.  
+## <a name="rule-description"></a>規則の説明  
+ 引数の正確な数が不明と、可変個の引数は、同じ型では、または同じ型で渡すことができる場合、引数を繰り返すのではなく、パラメーター配列を使用します。 たとえば、<xref:System.Console.WriteLine%2A>メソッドを任意の数を受け入れるように、パラメーター配列を使用する汎用のオーバー ロードを提供する<xref:System.Object>引数。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, replace the repeated arguments with a parameter array.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、パラメーター配列で引数を繰り返すを置き換えます。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is always safe to suppress a warning from this rule; however, this design might cause usability issues.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告を抑制しても安全では常にただし、この設計では、利便性の問題が発生します。  
   
-## <a name="example"></a>Example  
- The following example shows a type that violates this rule.  
+## <a name="example"></a>例  
+ 次の例は、この規則に違反する型を示しています。  
   
  [!code-csharp[FxCop.Design.RepeatArgs#1](../code-quality/codesnippet/CSharp/ca1025-replace-repetitive-arguments-with-params-array_1.cs)]

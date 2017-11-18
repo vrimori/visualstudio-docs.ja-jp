@@ -1,27 +1,30 @@
 ---
-title: "IActiveScript::SetScriptSite | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScript::SetScriptSite |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScript.SetScriptSite
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScript_SetScriptSite"
+helpviewer_keywords: IActiveScript_SetScriptSite
 ms.assetid: 47d94c32-09f8-4539-ac56-0236026f627b
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 11fa9003abb03c42adcbf3a548bb5b90d763a344
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScript::SetScriptSite
-ホストによって提供される [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md) のインターフェイスのサイトをスクリプト エンジンに通知します。  他の [IActiveScript](../../winscript/reference/iactivescript.md) のインターフェイス メソッドが使用する前にこのメソッドを呼び出します。  
+# <a name="iactivescriptsetscriptsite"></a>IActiveScript::SetScriptSite
+スクリプト エンジンに通知、 [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)インターフェイス サイトにホストによって提供されます。 その他の前にこのメソッドを呼び出す[IActiveScript](../../winscript/reference/iactivescript.md)インターフェイス メソッドを使用します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT SetScriptSite(  
@@ -29,20 +32,20 @@ HRESULT SetScriptSite(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pScriptSite`  
- \[出力\]このスクリプト エンジンのインスタンスに関連付けられるホストから提供されるスクリプトのサイトのアドレス。  サイトは、このスクリプト エンジンのインスタンスに固有に割り当てられている; そのほかのスクリプト エンジンによって共有できません。  
+ [in]スクリプト エンジンのこのインスタンスと関連するスクリプトのホストが指定したサイトのアドレスです。 サイトをこのスクリプト エンジンのインスタンスを一意に割り当てる必要があります。他のスクリプト エンジンと共有することはできません。  
   
-## 戻り値  
- 次の値の場合: 1  
+## <a name="return-value"></a>戻り値  
+ 次のいずれかの値を返します。  
   
 |戻り値|説明|  
-|---------|--------|  
+|------------------|-------------|  
 |`S_OK`|成功。|  
-|`E_FAIL`|未定義のエラーが発生しました; スクリプト エンジンは、サイトの初期化を完了のできませんでした。|  
+|`E_FAIL`|不明なエラーが発生しました。スクリプト エンジンは、サイトの初期化を終了できませんでした。|  
 |`E_INVALIDARG`|引数が無効です。|  
 |`E_POINTER`|無効なポインターが指定されました。|  
-|`E_UNEXPECTED`|呼び出しが想定されていません \(たとえば、サイトが既に設定されています\)。|  
+|`E_UNEXPECTED`|呼び出しが予期されていませんでした (たとえば、サイトは既に設定されて) います。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScript](../../winscript/reference/iactivescript.md)

@@ -1,36 +1,39 @@
 ---
-title: "IDebugApplicationThread110::IsThreadCallable | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IDebugApplicationThread110::IsThreadCallable"
+title: "IDebugApplicationThread110::IsThreadCallable |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords: IDebugApplicationThread110::IsThreadCallable
 ms.assetid: 2a75a366-801d-47e0-bba3-51aa669e03a7
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b34e2c45d7e94c72ade62780f46f4b5c7c22405e
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugApplicationThread110::IsThreadCallable
-このスレッドが PDM のスレッドの切り替え機構を使用して行われた呼び出しを処理する SynchronousCallInThread のような状態にあるかどうかを判定します。  
+# <a name="idebugapplicationthread110isthreadcallable"></a>IDebugApplicationThread110::IsThreadCallable
+このスレッドが SynchronousCallInThread などのメカニズムを切り替え PDM のスレッドを使用して呼び出しを処理できる状態になるかどうかを判断します。  
   
 > [!IMPORTANT]
->  [IDebugApplicationThread110 インターフェイス](../../winscript/reference/idebugapplicationthread110-interface.md) は PDM v11.0 を超えるによって実装されます。  activdbg100.h.である。  
+>  [IDebugApplicationThread110 インターフェイス](../../winscript/reference/idebugapplicationthread110-interface.md)は、PDM v11.0 以降によって実装されている値を超えています。 activdbg100.h にあります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT IsThreadCallable([out, annotation("_Out_")] BOOL * pfIsCallable);  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pfIsCallable`  
- \[入力\]スレッドがアクセスできる場合 `true`、それ `false`。  
+ [out]`true`場合は、スレッドがそれ以外の場合、呼び出し可能`false`です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugApplicationThread110 インターフェイス](../../winscript/reference/idebugapplicationthread110-interface.md)

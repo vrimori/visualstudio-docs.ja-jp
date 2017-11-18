@@ -1,69 +1,59 @@
 ---
-title: "方法 : ASP.NET プロセスの名前を見つける | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ASP.NET のデバッグ, ASP.NET プロセス"
-  - "ASP.NET プロセス"
+title: "方法: ASP.NET プロセスの名前を見つける |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- ASP.NET debugging, ASP.NET process
+- ASP.NET process
 ms.assetid: 931a7597-b0f0-4a28-931d-46e63344435f
-caps.latest.revision: 29
-caps.handback.revision: 29
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "29"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 03ae4956f0e16a4fb9267266ebc6b6c335c95eac
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : ASP.NET プロセスの名前を見つける
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="how-to-find-the-name-of-the-aspnet-process"></a>方法 : ASP.NET プロセスの名前を見つける
 実行中の [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションにアタッチする場合、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセスの名前を把握している必要があります。  
+
+-   IIS または iis Express で ASP.NET Core を実行している場合は、dotnet.exe は、プロセス名です。
+
+-   IIS 6.0 で ASP.NET を後で実行している場合、名前は w3wp.exe です。  
   
--   IIS 6.0 または IIS 7.0 を実行している場合、プロセスの名前は w3wp.exe です。  
+-   以前のバージョンの IIS で ASP.NET を実行している場合、名前は aspnet_wp.exe です。
+
+-   Iis Express で ASP.NET を実行している場合は、iisexpress.exe は名前です。
   
--   6.0 よりも前のバージョンの IIS を実行している場合、プロセスの名前は aspnet\_wp.exe です。  
+Visual Studio、Visual Studio 2012 より前のバージョンを使用してビルドされたアプリケーション、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]コードをファイル システム上におよび、テスト サーバー WebDev.WebServer.exe または WebDev.WebServer40.exe の下で実行できます。 その場合は、WebDev.WebServer.exe またはの代わりに WebDev.WebServer40.exe にアタッチする必要があります、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]プロセスです。 ただし、これは、ローカル デバッグだけに当てはまります。
   
- [!INCLUDE[vsprvslong](../code-quality/includes/vsprvslong_md.md)] またはそれ以降のバージョンを使用してビルドされたアプリケーションでは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] コードはファイル システムに存在し、テスト サーバー WebDev.WebServer.exe の下で実行できます。  この場合、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] プロセスの代わりに WebDev.WebServer.exe にアタッチする必要があります。  ただし、これは、ローカル デバッグだけに当てはまります。  
+古いバージョンの ASP アプリケーションは、インプロセスで実行する場合、IIS プロセス inetinfo.exe 内で実行します。  
+
+### <a name="to-determine-the-iis-version-under-which-the-application-is-running"></a>アプリケーションが実行されている IIS のバージョンを判断するには  
+
+1.  アプリケーションが実行されているかどうかを確認し、その後、Visual Studio から、次のように使用します。、[プロセスにアタッチする](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)コマンド。
+
+2.  W3wp.exe プロセスをすばやく検索するように、プロセス名の最初の文字を入力、**選択可能なプロセス** ボックスの一覧です。
+
+    このトピックの一覧から選択可能なプロセスは、IIS のバージョンが利用可能なおよびアプリケーションを実行しているどのプロセスで示されます。
+
+    > [!NOTE]
+    > Visual Studio 2017 以降、検索ボックスを使用して、プロセス名を検索します。
   
- 古いバージョンの ASP アプリケーションは、インプロセスで実行する場合、IIS プロセス inetinfo.exe 内で実行します。  
-  
-> [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。  設定を変更するには、**\[ツール\]** メニューの **\[設定のインポートとエクスポート\]** をクリックします。  詳細については、「[Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ja-jp/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
-  
-### プロジェクト コードがファイル システムと IIS のどちらに存在するかを判断するには  
-  
-1.  Visual Studio で、**ソリューション エクスプローラー**が開いていない場合は、開きます。  
-  
-2.  アプリケーション名を含む最上位のノードを選択します。  
-  
-3.  **\[プロパティ\]** ウィンドウのタイトルにファイル パスが含まれる場合、アプリケーション コードはファイル システムに存在します。  
-  
-     それ以外の場合は、**\[プロパティ\]** ウィンドウのタイトルに Web サイト名が含まれます。  
-  
-### アプリケーションが実行されている IIS のバージョンを判断するには  
-  
-1.  **\[管理ツール\]** を検索し、実行します。  オペレーティング システムによって異なりますが、**\[コントロール パネル\]** にアイコンがある場合や、**\[スタート\]** ボタンをクリックしたときにメニュー項目として表示される場合があります。  
-  
-     Windows XP の場合、**\[コントロール パネル\]** は、カテゴリの表示またはクラシック表示のいずれかで表示できます。  カテゴリの表示の場合、**\[クラシック表示に切り替える\]** または **\[パフォーマンスとメンテナンス\]** をクリックして、**\[管理ツール\]** アイコンを表示します。  
-  
-2.  **\[管理ツール\]** のインターネット インフォメーション サービスを実行します。  MMC ダイアログ ボックスが表示されます。  
-  
-3.  左側のペインに複数のコンピューターが表示される場合、アプリケーション コードが存在するコンピューターを選択します。  
-  
-4.  IIS のバージョンは、右側のペインの **\[バージョン\]** 列に表示されます。  
-  
-## 参照  
- [Prerequistes for Remote Debugging Web Applications \(方法 : リモート サーバーで Web アプリケーションをデバッグする\)](../debugger/prerequistes-for-remote-debugging-web-applications.md)   
+## <a name="see-also"></a>関連項目  
+ [実行中のプロセスにアタッチする](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)  
+ [リモートの Web アプリケーションのデバッグの前提](../debugger/prerequistes-for-remote-debugging-web-applications.md)   
  [システム要件](../debugger/aspnet-debugging-system-requirements.md)   
- [ASP.NET のデバッグの準備](../debugger/preparing-to-debug-aspnet.md)   
- [Web アプリケーションとスクリプトのデバッグ](../debugger/debugging-web-applications-and-script.md)
+ [ASP.NET アプリケーションをデバッグします。](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

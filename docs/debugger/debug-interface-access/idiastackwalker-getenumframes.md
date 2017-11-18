@@ -1,52 +1,51 @@
 ---
-title: "IDiaStackWalker::getEnumFrames | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalker2::getEnumFrames メソッド"
+title: "IDiaStackWalker::getEnumFrames |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalker2::getEnumFrames method
 ms.assetid: f9f09729-4c34-441c-989c-e0b7339ee32c
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 05c588350d4a378cfea650fb97582e37e74015fe
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalker::getEnumFrames
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-x86 プラットフォームのスタック フレームの列挙子を取得します。  
+# <a name="idiastackwalkergetenumframes"></a>IDiaStackWalker::getEnumFrames
+X86 用のスタック フレームの列挙子を取得プラットフォームです。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT getEnumFrames(   
-   IDiaStackWalkHelper*   pHelper,  
-   IDiaEnumStackFrames**  ppEnum  
+```C++  
+HRESULT getEnumFrames(   
+   IDiaStackWalkHelper*   pHelper,  
+   IDiaEnumStackFrames**  ppEnum  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pHelper`  
- \[入力\] ヘルパー [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) のオブジェクト。  
+ [in]ヘルパー [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)オブジェクト。  
   
  `ppEnum`  
- \[入力\] [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) オブジェクトのリストを含む [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) のオブジェクトを返します。  
+ [out]返します、 [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)オブジェクトの一覧を含む[IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)オブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 他のプラットフォームのスタック フレームのリストを取得するには[IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) のメソッドを呼び出します。  
+## <a name="remarks"></a>コメント  
+ その他の任意のプラットフォームでスタック フレームの一覧を取得する、 [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)メソッドです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)   
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)   

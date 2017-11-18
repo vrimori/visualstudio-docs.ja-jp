@@ -1,46 +1,45 @@
 ---
-title: "IDiaSectionContrib::get_comdat | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSectionContrib::get_comdat メソッド"
+title: "Idiasectioncontrib::get_comdat |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSectionContrib::get_comdat method
 ms.assetid: 8bd9be8d-59ee-4698-b055-daba354b8dcc
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d3797f60e9ca6e97da3b7b6e44c89f802b086d13
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSectionContrib::get_comdat
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-セクションは COMDAT の記録中であるかどうかを示すフラグを取得します。  
+# <a name="idiasectioncontribgetcomdat"></a>IDiaSectionContrib::get_comdat
+セクションが COMDAT レコードであるかどうかを示すフラグを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_comdat (   
-   BOOL* pRetVal  
+```C++  
+HRESULT get_comdat (   
+   BOOL* pRetVal  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- \[入力\] セクションが COMDAT のレコードの場合はを返します `TRUE` ; それ以外の場合戻り `FALSE`。  
+ [out]返します`TRUE`セクションが COMDAT レコード以外の場合、それを返します`FALSE`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK` このプロパティをサポートする必要 `S_FALSE` を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## 解説  
- COMDAT のレコードはパッケージ化された関数を \(COFF\) リンカーに表示するCOFF \(Common Object File Format\) レコードです。  
+## <a name="remarks"></a>コメント  
+ COMDAT レコードは、パッケージ化された関数は、リンカーに表示されるオブジェクト ファイル形式 COFF (Common) レコードです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

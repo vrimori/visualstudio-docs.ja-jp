@@ -1,48 +1,47 @@
 ---
-title: "IDiaStackWalkHelper::frameForVA | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalkHelper2::frameForVA メソッド"
+title: "IDiaStackWalkHelper::frameForVA |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalkHelper2::frameForVA method
 ms.assetid: f35fc61b-f8dd-473a-b583-82c304059422
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f2ea7272c3a01680e1776c15f945e2d10ed973a9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalkHelper::frameForVA
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-指定された仮想アドレスを格納するスタック フレームを取得します。  
+# <a name="idiastackwalkhelperframeforva"></a>IDiaStackWalkHelper::frameForVA
+指定された仮想アドレスを含むスタック フレームを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT frameForVA(   
-   ULONGLONG        va,  
-   IDiaFrameData**  ppFrame  
+```C++  
+HRESULT frameForVA(   
+   ULONGLONG        va,  
+   IDiaFrameData**  ppFrame  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `va`  
- \[入力\] フレームのデータの仮想アドレス。  
+ [in]フレーム データの仮想アドレス。  
   
  `ppFrame`  
- \[出力\] 指定したアドレスにあるスタック フレームを表すオブジェクトの [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)。  
+ [out][IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)を指定したアドレスにスタック フレームを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -1,54 +1,53 @@
 ---
-title: "IDiaSymbol::get_types | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_types メソッド"
+title: "Idiasymbol::get_types |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_types method
 ms.assetid: 5f056e0c-e15b-4e00-8f78-aadc8574f7ea
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: c53a8866856288aa039c0e23b6244da80184285d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_types
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-このシンボル用のコンパイラ固有の型の配列を取得します。  
+# <a name="idiasymbolgettypes"></a>IDiaSymbol::get_types
+このシンボルにコンパイラに固有の型の配列を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT get_types (   
-   DWORD       cTypes,  
-   DWORD*      pcTypes,  
-   IDiaSymbol* types[]  
+```C++  
+HRESULT get_types (   
+   DWORD       cTypes,  
+   DWORD*      pcTypes,  
+   IDiaSymbol* types[]  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `cTypes`  
- \[入力\] データを保持するバッファーのサイズ。  
+ [in]データを保持するバッファーのサイズ。  
   
  `pcTypes`  
- \[出力\] でも型の数 `types` のパラメーターが `NULL` 場合使用できる型の総数を返します。  
+ [out]記述された、型の数を返しますまたはの場合、`types`パラメーターは`NULL`、使用可能な型の合計数、します。  
   
  `types[]`  
- \[出力\] このシンボルのすべての型を表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) のオブジェクトが格納された配列。  
+ [out]格納するのには配列を[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)このシンボルのすべての型を表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合戻り `S_FALSE` またはエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  `S_FALSE` の戻り値はプロパティのシンボルで使用できないことを意味します。  
+>  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

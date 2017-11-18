@@ -1,44 +1,45 @@
 ---
-title: "CA1504: 紛らわしいフィールド名を確認します | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ReviewMisleadingFieldNames"
-  - "CA1504"
-helpviewer_keywords: 
-  - "CA1504"
-  - "ReviewMisleadingFieldNames"
+title: "Ca 1504: 紛らわしいフィールド名を確認する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ReviewMisleadingFieldNames
+- CA1504
+helpviewer_keywords:
+- CA1504
+- ReviewMisleadingFieldNames
 ms.assetid: 94136ff1-4aaf-4dc2-9170-48c171ab7499
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: d03c07b48b2cfbfc19fcb9aa2ac4353ddf87a8a6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA1504: 紛らわしいフィールド名を確認します
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca1504-review-misleading-field-names"></a>CA1504: 紛らわしいフィールド名を確認します
 |||  
 |-|-|  
 |TypeName|ReviewMisleadingFieldNames|  
 |CheckId|CA1504|  
-|分類|Microsoft.Maintainability|  
+|カテゴリ|Microsoft.Maintainability|  
 |互換性に影響する変更点|なし|  
   
-## 原因  
- インスタンス フィールドの名前が "s\_" で始まっているか、`static` \([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] では `Shared`\) フィールドの名前が "m\_" で始まっています。  
+## <a name="cause"></a>原因  
+ インスタンス フィールドの名前が「s _」またはの名前で始まる、 `static` (`Shared`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) フィールドが「m _」で開始します。  
   
-## 規則の説明  
- 多くのユーザーは、"s\_" で始まるフィールド名からは静的データを連想し、  "m\_" で始まるフィールド名からはインスタンス \(メンバー\) データを連想します。  コードの保守を容易にするために、一般的な規則に従って名前を付けてください。  
+## <a name="rule-description"></a>規則の説明  
+ 「S _」で始まるフィールド名は、多数のユーザーによる静的データに関連付けられます。 同様に、「m _」で始まるフィールド名は、インスタンス (メンバー) のデータに関連付けられます。 保守が簡単なコードは、名は、一般的に使用される規則に従う必要があります。  
   
-## 違反の修正方法  
- この規則違反を修正するには、フィールド名のプレフィックスを適切に変更します。  または、`static` 修飾子の追加または削除により、現在のサフィックスに合致するフィールドに変更します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、適切なプレフィックスを使用してフィールドを変更します。 または、追加または削除して、現在のサフィックスに合致するフィールドを変更、`static`修飾子です。  
   
-## 警告を抑制する状況  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  この規則による警告は抑制しないでください。

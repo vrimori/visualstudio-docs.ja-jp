@@ -1,61 +1,61 @@
 ---
-title: "IDebugExpressionContext2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExpressionContext2"
-helpviewer_keywords: 
-  - "IDebugExpressionContext2 インターフェイス"
+title: "IDebugExpressionContext2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugExpressionContext2
+helpviewer_keywords: IDebugExpressionContext2 interface
 ms.assetid: 577fdaae-4b2d-4112-9839-ab899535fa6f
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: cfeede9a99a31acefb5fdf34afd8d6258c9f1019
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugExpressionContext2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスは式の評価のコンテキストを表します。  
+# <a name="idebugexpressioncontext2"></a>IDebugExpressionContext2
+このインターフェイスは、式の評価のコンテキストを表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugExpressionContext2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- デバッグ エンジンは \(DE\)式を評価できるコンテキストを表すためこのインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デバッグ エンジン (DE) では、式が評価されるコンテキストを表すためにこのインターフェイスを実装します。  
   
-## 呼び出し元のメモ  
- [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) の呼び出しはこのインターフェイスを返します。  このインターフェイスはプログラムのデバッグを停止スタック フレームが使用できる場合にのみアクセスできます。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 呼び出し[GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) this を返しますインターフェイスです。 このインターフェイスは、デバッグ中のプログラムが一時停止されているし、スタック フレームは、使用可能な場合にのみアクセスできます。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugExpressionContext2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugExpressionContext2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetName](../Topic/IDebugExpressionContext2::GetName.md)|評価コンテキストの名前を取得します。|  
-|[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)|評価のテキスト ベースの式を解析します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetName](../../../extensibility/debugger/reference/idebugexpressioncontext2-getname.md)|評価コンテキストの名前を取得します。|  
+|[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)|評価のためのテキスト ベースの式を解析します。|  
   
-## 解説  
- コンテキストは評価式の評価を実行するための範囲と考えることができます。  
+## <a name="remarks"></a>コメント  
+ 評価コンテキストは、式の評価を実行するためのスコープと考えることができます。  
   
- プログラムが終了するとデバッグ セッション マネージャーは \(SDM\) を呼び出してからします [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) にスタック フレームを取得します。  SDM は`IDebugExpressionContext2` のインターフェイスを取得するに [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) を呼び出します。  これは [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) の呼び出しに評価できる状態となります。解析された式を表す [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) のインターフェイスを作成するように指定します。  
+ セッションのデバッグ マネージャー (SDM) がへの呼び出しに DE からスタック フレームを取得するプログラムが停止されると、 [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)です。 SDM を呼び出して[GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md)を取得する、`IDebugExpressionContext2`インターフェイスです。 これがへの呼び出しに続く[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)を作成する、 [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)を評価する準備が解析された式を表すインターフェイス。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md)   
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)

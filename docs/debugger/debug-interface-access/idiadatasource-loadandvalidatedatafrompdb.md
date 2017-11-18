@@ -1,77 +1,76 @@
 ---
-title: "IDiaDataSource::loadAndValidateDataFromPdb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaDataSource::loadAndValidateDataFromPdb メソッド"
+title: "Idiadatasource::loadandvalidatedatafrompdb |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaDataSource::loadAndValidateDataFromPdb method
 ms.assetid: d66712dd-6c24-4192-919a-cce262066f0e
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: bb140470e45f49806087941127638f56ce5d7150
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaDataSource::loadAndValidateDataFromPdb
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-開きプログラム データベース \(.pdb\) ファイルが提供されている定義の情報と一致することを確認しデバッグ データ ソースとして .pdb ファイルを準備します。  
+# <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
+開きますと、プログラム データベース (.pdb) ファイルと一致する、提供された署名情報を確認し、デバッグ データ ソースとしての .pdb ファイルを準備します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT loadAndValidateDataFromPdb (   
-   LPCOLESTR pdbPath,  
-   GUID*     pcsig70,  
-   DWORD     sig,  
-   DWORD     age  
+```C++  
+HRESULT loadAndValidateDataFromPdb (   
+   LPCOLESTR pdbPath,  
+   GUID*     pcsig70,  
+   DWORD     sig,  
+   DWORD     age  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pdbPath`  
- \[入力\] .pdb ファイルへのパス。  
+ [in].Pdb ファイルへのパス。  
   
  `pcsig70`  
- \[入力\] .pdb ファイルの定義に対して検証する GUID の定義。  [!INCLUDE[vcprvc](../../debugger/includes/vcprvc_md.md)] の .pdb ファイルは後で GUID の定義があります。  
+ [in].Pdb ファイルの署名を検証する GUID の署名。 ファイルを .pdb のみ[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]GUID の署名を後であるとします。  
   
  `sig`  
- \[入力\] .pdb ファイルの定義に対して検証する 32 ビットの定義。  
+ [in]32 ビット署名を検証します .pdb ファイルの署名を照合します。  
   
  `age`  
- \[入力\] 検証する値を期日を経過してください。  期間は既知の時刻値必ずしも使用して.pdb ファイルが対応する .exe ファイルと同期するかどうかを確認するために対応しません。  
+ [in]値を確認する期間を表します。 保存期間は必ずしも対応しません既知の時刻値には、.pdb ファイルが対応する .exe ファイルとの同期であるかを判断するために使用されます。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  次の表はこのメソッドの有効な戻り値を示します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 次の表は、このメソッドの戻り値を示します。  
   
-|値|Description|  
-|-------|-----------------|  
-|E\_PDB\_NOT\_FOUND|ファイルを開きますいないかファイルに無効な書式指定があります。|  
-|E\_PDB\_FORMAT|旧式の形式のファイルにアクセスしようとしました。|  
-|E\_PDB\_INVALID\_SIG|シグネチャが一致しません。|  
-|E\_PDB\_INVALID\_AGE|年齢が一致しません。|  
-|E\_INVALIDARG|無効なパラメーター。|  
-|E\_UNEXPECTED|データ ソースが既に用意されています。|  
+|値|説明|  
+|-----------|-----------------|  
+|E_PDB_NOT_FOUND|開くには、ファイルが失敗したか、ファイルに形式が無効です。|  
+|E_PDB_FORMAT|旧形式のファイルにアクセスしようとしています。|  
+|E_PDB_INVALID_SIG|署名が一致しません。|  
+|E_PDB_INVALID_AGE|有効期間は一致しません。|  
+|E_INVALIDARG|無効なパラメーター。|  
+|E_UNEXPECTED|データ ソースは、既に準備されています。|  
   
-## 解説  
- .pdb ファイルは定義と時間の値の両方が含まれます。  これらの値は.pdb ファイルを検索する .dll ファイルまたは .exe にレプリケートされます。  データ ソースを準備する前にこのメソッドはという名前の .pdb ファイルの定義と期間が指定された値と一致することを確認します。  
+## <a name="remarks"></a>コメント  
+ .Pdb ファイルには、署名と有効期間の両方の値が含まれています。 これらの値は、.pdb ファイルに対応する .exe または .dll ファイルでレプリケートされます。 データ ソースを準備する前に、このメソッドは、名前付きの .pdb ファイルの署名と経過日数が指定された値を一致を確認します。  
   
- 検証せずに .pdb ファイルを読み込むには[IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) のメソッドを使用します。  
+ 検証を伴わない .pdb ファイルを読み込むを使用して、 [idiadatasource::loaddatafrompdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)メソッドです。  
   
- データの読み込みプロセスにアクセスするにはコールバック機構を通じて[IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) のメソッドを使用します。  
+ アクセスするデータの読み込みプロセス (コールバック機構) を通じてを使用して、 [idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)メソッドです。  
   
- メモリの .pdb ファイルを直接読み込むには[IDiaDataSource::loadDataFromIStream](../Topic/IDiaDataSource::loadDataFromIStream.md) のメソッドを使用します。  
+ メモリから直接読み込む .pdb ファイルを使用して、 [idiadatasource::loaddatafromistream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)メソッドです。  
   
-## 使用例  
+## <a name="example"></a>例  
   
-```cpp#  
+```C++  
 IDiaDataSource* pSource;  // Previously created data source.  
 DEFINE_GUID(expectedGUIDSignature,0x1234,0x5678,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08);  
 DWORD expectedFileSignature = 0x12345678;  
@@ -89,8 +88,8 @@ if (FAILED(hr))
   
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)   
- [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
- [IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)   
- [IDiaDataSource::loadDataFromIStream](../Topic/IDiaDataSource::loadDataFromIStream.md)
+ [Idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
+ [Idiadatasource::loaddatafrompdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)   
+ [IDiaDataSource::loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)

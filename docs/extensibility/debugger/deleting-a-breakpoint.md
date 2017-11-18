@@ -1,32 +1,34 @@
 ---
-title: "ブレークポイントを削除します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ブレークポイントを削除します。"
-  - "[デバッグの SDK] のデバッグ、ブレークポイントを削除します。"
+title: "ブレークポイントの削除 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- breakpoints, deleting
+- debugging [Debugging SDK], deleting breakpoints
 ms.assetid: 75a046cc-d20a-4c79-ad2d-1f18426ac5d0
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2789fd46942a9b54ca3d6efb082a6b21511969ca
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ブレークポイントを削除します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-次に保留中のブレークポイントを削除するときにプロセスを示しています :  
+# <a name="deleting-a-breakpoint"></a>ブレークポイントの削除
+次のプロセスについて説明します、保留中のブレークポイントを削除するときに。  
   
-## 削除する手順  
- デバッグ セッションのマネージャーは \(SDM\)バインドされているコントロールから保留中のブレークポイントとすべてのバインド ブレークポイントを削除するに [IDebugPendingBreakpoint2:: 削除](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md) のメソッドを呼び出します。  
+## <a name="deletion-process"></a>削除プロセス  
+ セッションのデバッグ マネージャー (SDM) を呼び出す、 [IDebugPendingBreakpoint2::Delete](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)からバインドされた保留中のブレークポイントとバインドされたすべてのブレークポイントを削除するメソッド。  
   
 > [!NOTE]
->  単一のバインド ブレークポイントは[IDebugBoundBreakpoint2:: 削除](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md) の呼び出しによって削除できます。  
+>  呼び出しによって単一のバインドされたブレークポイントを削除することも[IDebugBoundBreakpoint2::Delete](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)です。  
   
-## 参照  
- [デバッガー イベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)
+## <a name="see-also"></a>関連項目  
+ [デバッガーのイベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)

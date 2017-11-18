@@ -1,51 +1,51 @@
 ---
-title: "CA2221: ファイナライザーは保護されなければなりません | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2221"
-  - "FinalizersShouldBeProtected"
-helpviewer_keywords: 
-  - "CA2221"
-  - "FinalizersShouldBeProtected"
+title: "Ca 2221: ファイナライザーは保護する必要があります |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2221
+- FinalizersShouldBeProtected
+helpviewer_keywords:
+- FinalizersShouldBeProtected
+- CA2221
 ms.assetid: bda03aee-4cce-45d3-907d-17f4ee030acc
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 8ff2d5cd64a77f09437a07b446f486e1c2dd5024
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA2221: ファイナライザーは保護されなければなりません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca2221-finalizers-should-be-protected"></a>CA2221: ファイナライザーは保護されなければなりません
 |||  
 |-|-|  
 |TypeName|FinalizersShouldBeProtected|  
 |CheckId|CA2221|  
-|分類|Microsoft.Usage|  
-|互換性に影響する変更点|なし|  
+|カテゴリ|Microsoft.Usage|  
+|互換性に影響する変更点|中断なし|  
   
-## 原因  
- パブリック型で、ファミリ \(保護された\) アクセスを指定していないファイナライザーを実装しています。  
+## <a name="cause"></a>原因  
+ パブリック型では、ファミリ (保護) アクセスが指定されていませんが、不要なファイナライザーを実装します。  
   
-## 規則の説明  
- ファイナライザーは、ファミリ アクセス修飾子を使用する必要があります。  この規則は、C\#、Visual Basic、および Visual C\+\+ コンパイラで必須です。  
+## <a name="rule-description"></a>規則の説明  
+ ファイナライザーは、ファミリ アクセス修飾子を使用する必要があります。 このルールは、c#、Visual Basic および Visual C コンパイラによって強制されます。  
   
-## 違反の修正方法  
- この規則違反を修正するには、ファイナライザーをファミリ アクセスできるように変更します。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、ファミリ アクセスできるように、ファイナライザーを変更します。  
   
-## 警告を抑制する状況  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
  この規則による警告は抑制しないでください。  
   
-## 使用例  
- 高水準の .NET 言語でこの規則違反は発生しません。Microsoft Intermediate Language \(MSIL\) を記述している場合は、発生することがあります。  
+## <a name="example"></a>例  
+ 高度な .NET 言語でこの規則に違反することはできません。Microsoft Intermediate Language を作成している場合は、違反することができます。  
   
 ```  
 // =============== CLASS MEMBERS DECLARATION ===================  
@@ -80,5 +80,5 @@ manager: "wpickett"
 } // end of namespace  
 ```  
   
-## 参照  
- [Dispose パターン](../Topic/Dispose%20Pattern.md)
+## <a name="see-also"></a>関連項目  
+ [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)

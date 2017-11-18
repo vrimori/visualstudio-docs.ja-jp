@@ -1,29 +1,29 @@
 ---
-title: "How to: Display Window Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "window properties"
+title: "方法: ウィンドウのプロパティの表示 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: window properties
 ms.assetid: 4c2f52de-bd91-42cf-9028-67aa75f8bd26
-caps.latest.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f4a25eeee8eceaf5ee94a4c7217f72fd8e9841c7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# How to: Display Window Properties
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[ウィンドウ ビュー](../debugger/windows-view.md)に一覧表示されているウィンドウの詳細を確認するには、[&#91;ウィンドウ プロパティ&#93; ダイアログ ボックス](../debugger/window-properties-dialog-box.md)を使用します。  
+# <a name="how-to-display-window-properties"></a>方法: ウィンドウのプロパティを表示する
+表示されるウィンドウに関する詳細を確認する[ウィンドウ ビュー](../debugger/windows-view.md)を使用して、[ウィンドウのプロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)です。  
   
-### \[ウィンドウ プロパティ\] ダイアログ ボックスを表示するには  
+### <a name="to-open-the-window-properties-dialog-box"></a>ウィンドウのプロパティ ダイアログ ボックスを開く  
   
-1.  項目を選択し、\[表示\] メニューの \[プロパティ\] をクリックします。  
+1.  アイテムを選択し、**プロパティ**から、**ビュー**メニュー。  
   
- プロパティ ダイアログ ボックスはモーダルではありません。  ビュー ウィンドウ内で項目を順にクリックすると、選択された各項目の情報を基に、ダイアログ ボックスは自動的に更新されます。
+ プロパティ ダイアログ ボックスがモーダルではありません。 表示ウィンドウの項目から項目をクリックすると、ダイアログ ボックスは自動的に選択された各項目に関する情報を含む更新されます。

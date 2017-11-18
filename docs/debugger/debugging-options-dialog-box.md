@@ -1,50 +1,48 @@
 ---
-title: "[デバッグ] ([オプション] ダイアログ ボックス) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "SQL"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "デバッガー、設定"
-  - "オプション、デバッグ オプションの設定"
-  - "デバッガー、オプション"
-  - "[オプション] ダイアログ ボックス、デバッグ"
-  - "デバッグ [Visual Studio]、設定と準備"
+title: "オプション ダイアログ ボックスのデバッグ、|Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+- SQL
+helpviewer_keywords:
+- debugger, settings
+- options, setting debugging options
+- debugger, options
+- Options dialog box, debugging
+- debugging [Visual Studio], settings and preparation
 ms.assetid: 9450589a-42ea-45bf-b128-89447225cca6
-caps.latest.revision: 14
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f0394d23cb2d81b821152391984127b6ff19be0d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# [デバッグ] ([オプション] ダイアログ ボックス)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**\[オプション\]** ダイアログ ボックス \(**\[ツール\]** メニュー\) の **\[デバッグ\]** フォルダーには、以下のページがあります。これらのページを使ってデバッガー ツールのオプションを指定できます。  
+# <a name="debugging-options-dialog-box"></a>[デバッグ] ([オプション] ダイアログ ボックス)
+**デバッグ**フォルダーで、**オプション** ダイアログ ボックスで、**ツール** メニューの は、次のページは、デバッガーを指定することを有効にするツール オプションを提供します。  
   
--   [\[全般\] \(\[オプション\] ダイアログ ボックス \- \[デバッグ\]\)](../Topic/General,%20Debugging,%20Options%20Dialog%20Box.md)  
+-   [[全般] ([オプション] ダイアログ ボックス - [デバッグ])](../debugger/general-debugging-options-dialog-box.md)  
   
--   [\[Just\-In\-Time\] \(\[オプション\] ダイアログ ボックス \- \[デバッグ\]\)](../Topic/Just-In-Time,%20Debugging,%20Options%20Dialog%20Box.md)  
+-   [[Just-In-Time] ([オプション] ダイアログ ボックス - [デバッグ])](../debugger/just-in-time-debugging-options-dialog-box.md)  
   
--   [出力ウィンドウ \(\[オプション\] ダイアログ ボックス \- \[デバッグ\]\)](../Topic/Output%20Window,%20Debugging,%20Options%20Dialog%20Box.md)  
+-   [出力ウィンドウ ([オプション] ダイアログ ボックス - [デバッグ])](../debugger/output-window-debugging-options-dialog-box.md)  
   
--   [&#91;シンボル&#93; \(&#91;オプション&#93; ダイアログ ボックス \- &#91;デバッグ&#93;\)](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
+-   [[シンボル] ダイアログ ボックスのオプション](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
-## 参照  
- [デバッガーのセキュリティ](../debugger/debugger-security.md)   
- [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)   
+## <a name="see-also"></a>関連項目  
+ [デバッガーのセキュリティ](../debugger/debugger-security.md) [Visual Studio でのデバッグ](../debugger/index.md)  
+ [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
  [デバッグ用ユーザー インターフェイス リファレンス](../debugger/debugging-user-interface-reference.md)

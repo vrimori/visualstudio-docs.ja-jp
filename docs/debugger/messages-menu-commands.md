@@ -1,32 +1,32 @@
 ---
-title: "[メッセージ] メニューのコマンド | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "[メッセージ] メニューのコマンド"
+title: "メニュー コマンドのメッセージ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Messages menu commands
 ms.assetid: 8ffcee99-7950-41af-906e-661e19e3257a
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 0538410ce5e3879d15a583cbf896ed623f0a5370
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# [メッセージ] メニューのコマンド
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-\[メッセージ\] メニューには、メッセージ ビューを制御するためのコマンドが用意されています。  
+# <a name="messages-menu-commands"></a>[メッセージ] メニューのコマンド
+**メッセージ**メニューは、メッセージ ビューを制御するためのコマンドを提供します。  
   
- **\[ログ開始\] または \[ログ終了\]**  
- メッセージ ビューを起動または終了します。  
+ **ログ記録の開始/停止**  
+ 開始またはメッセージの表示を停止します。  
   
- **\[ログ オプション\]**  
- \[メッセージ オプション\] ダイアログ ボックスを開きます。このダイアログ ボックスでは、メッセージの検索条件を指定できます。  
+ **ログ オプション**  
+ 開く、**メッセージ** ダイアログ ボックス、メッセージの検索条件を指定できます。  
   
- **\[ログの消去\]**  
+ **ログの消去**  
  アクティブなメッセージ ビューの内容を消去します。

@@ -1,56 +1,55 @@
 ---
-title: "IDiaReadExeAtOffsetCallback::ReadExecutableAt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaReadExeAtOffsetCallback::ReadExecutableAt メソッド"
+title: "Idiareadexeatoffsetcallback::readexecutableat |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaReadExeAtOffsetCallback::ReadExecutableAt method
 ms.assetid: 30b1cef0-b366-4712-8e89-d21f640964f8
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8cb9ff60968d806cfdee0201746a02483895b0af
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaReadExeAtOffsetCallback::ReadExecutableAt
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-実行可能ファイルの指定したオフセット位置から開始して指定したバイト数を読み取ります。  
+# <a name="idiareadexeatoffsetcallbackreadexecutableat"></a>IDiaReadExeAtOffsetCallback::ReadExecutableAt
+指定した実行可能ファイルから指定したオフセットで始まるバイト数を読み取ります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT ReadExecutableAt (   
-   DWORDLONG fileOffset,  
-   DWORD     cbData,  
-   DWORD*    pcbData,  
-   BYTE      data[]  
+```C++  
+HRESULT ReadExecutableAt (   
+   DWORDLONG fileOffset,  
+   DWORD     cbData,  
+   DWORD*    pcbData,  
+   BYTE      data[]  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  fileOffset  
- \[入力\] 読み上げを開始する実行可能ファイルのオフセット。  
+ [in]読み取りを開始する実行可能ファイル内のオフセット。  
   
  cbData  
- \[入力\] 読み取るバイト数。  
+ [in]読み取るバイト数。  
   
  pcbData  
- \[入力\] 読み取るバイト数を返します。  
+ [out]読み取られたバイト数を返します。  
   
- \[データ\]  
- \[入力出力\] のバイト数が格納された配列はファイルから読み取った。  
+ データ  
+ [入力、出力].ファイルから読み取られたバイトに設定している配列。  
   
-## 解説  
- このメソッドは絶対ファイルのオフセットを使用して実行可能ファイルからデータを読み込むバイトの DIA のサポート コードによって呼び出されます。  このメソッドは [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) ためのメソッドが呼び出されます。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、絶対ファイル オフセットを使用して実行可能ファイルからデータのバイト数を読み込む DIA サポート コードによって呼び出されます。 サポートにこのメソッドは、 [idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)メソッドです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)   
  [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)

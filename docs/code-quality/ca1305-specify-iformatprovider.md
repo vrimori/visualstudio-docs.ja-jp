@@ -1,11 +1,10 @@
 ---
-title: 'CA1305: Specify IFormatProvider | Microsoft Docs'
+title: "Ca 1305: IFormatProvider を指定する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,42 +14,26 @@ helpviewer_keywords:
 - CA1305
 - SpecifyIFormatProvider
 ms.assetid: fb34ed9a-4eab-47cc-8eef-3068a4a1397e
-caps.latest.revision: 22
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 5c72a04c3fe0fb25777749c7b765464f440a0c9c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 3bb11846ed204ee15525266a750b218295c8d662
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca1305-specify-iformatprovider"></a>CA1305: Specify IFormatProvider
+# <a name="ca1305-specify-iformatprovider"></a>CA1305: IFormatProvider を指定します
 |||  
 |-|-|  
 |TypeName|SpecifyIFormatProvider|  
 |CheckId|CA1305|  
-|Category|Microsoft.Globalization|  
-|Breaking Change|Non-breaking|  
+|カテゴリ|Microsoft.Globalization|  
+|互換性に影響する変更点|なし|  
   
-## <a name="cause"></a>Cause  
- A method or constructor calls one or more members that have overloads that accept a <xref:System.IFormatProvider?displayProperty=fullName> parameter, and the method or constructor does not call the overload that takes the <xref:System.IFormatProvider> parameter. This rule ignores calls to [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] methods that are documented as ignoring the <xref:System.IFormatProvider> parameter and additionally the following methods:  
+## <a name="cause"></a>原因  
+ メソッドまたはコンス トラクターを受け入れるオーバー ロードを持つ 1 つまたは複数のメンバーを呼び出して、<xref:System.IFormatProvider?displayProperty=fullName>パラメーター、およびメソッドまたはコンス トラクターは使用するオーバー ロードを呼び出しません、<xref:System.IFormatProvider>パラメーター。 この規則への呼び出し[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]無視として記載されているメソッド、<xref:System.IFormatProvider>パラメーターと、さらに、次の方法。  
   
 -   <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>  
   
@@ -58,41 +41,41 @@ ms.lasthandoff: 08/30/2017
   
 -   <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>  
   
-## <a name="rule-description"></a>Rule Description  
- When a <xref:System.Globalization.CultureInfo?displayProperty=fullName> or <xref:System.IFormatProvider> object is not supplied, the default value that is supplied by the overloaded member might not have the effect that you want in all locales. Also, [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] members choose default culture and formatting based on assumptions that might not be correct for your code. To make sure that the code works as expected for your scenarios, you should supply culture-specific information according to the following guidelines:  
+## <a name="rule-description"></a>規則の説明  
+ ときに、<xref:System.Globalization.CultureInfo?displayProperty=fullName>または<xref:System.IFormatProvider>オブジェクトが指定されていない、オーバー ロードされたメンバーから提示された既定値を目的の効果をすべてのロケールでない可能性があります。 また、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]メンバーの既定のカルチャを選択して、コードに対して正しいことができない可能性がある前提条件に基づく書式設定します。 コードが自分のシナリオを想定どおりに動作することを確認するには、次のガイドラインに従ってカルチャに固有の情報を指定する必要があります。  
   
--   If the value will be displayed to the user, use the current culture. See <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>.  
+-   場合は、値は、ユーザーに表示されますが、現在のカルチャを使用します。 「<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>」を参照してください。  
   
--   If the value will be stored and accessed by software (persisted to a file or database), use the invariant culture. See <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>.  
+-   値が格納され、(ファイルまたはデータベースに保持される) ソフトウェアによってアクセスされる場合、は、インバリアント カルチャを使用します。 「<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>」を参照してください。  
   
--   If you do not know the destination of the value, have the data consumer or provider specify the culture.  
+-   値のコピー先がわからない場合は、データ コンシューマーがあるか、プロバイダーがカルチャを指定します。  
   
- Note that <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> is used only to retrieve localized resources by using an instance of the <xref:System.Resources.ResourceManager?displayProperty=fullName> class.  
+ なお<xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>のインスタンスを使用して、ローカライズされたリソースを取得する場合のみ使用される、<xref:System.Resources.ResourceManager?displayProperty=fullName>クラスです。  
   
- Even if the default behavior of the overloaded member is appropriate for your needs, it is better to explicitly call the culture-specific overload so that your code is self-documenting and more easily maintained.  
+ オーバー ロードされたメンバーの既定の動作がニーズに適した場合でも、コードが自己文書化し、保守を容易にするために、カルチャに固有のオーバー ロードを明示的に呼び出すことをお勧めします。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, use the overload that takes a <xref:System.Globalization.CultureInfo> or <xref:System.IFormatProvider> and specify the argument according to the guidelines that were listed earlier.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、使用するオーバー ロードを使用して、<xref:System.Globalization.CultureInfo>または<xref:System.IFormatProvider>し、以前に一覧表示するガイドラインに従って引数を指定します。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- It is safe to suppress a warning from this rule when it is certain that the default culture/format provider is the correct choice and where code maintainability is not an important development priority.  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ 既定のカルチャまたは書式プロバイダーが正しく選択されていてコードの保守性が重要な開発の優先順位ではないことが確実であるときにこの規則による警告を抑制しても安全です。  
   
-## <a name="example"></a>Example  
- In the following example, `BadMethod` causes two violations of this rule. `GoodMethod` corrects the first violation by passing the invariant culture to <xref:System.String.Compare%2A>, and corrects the second violation by passing the current culture to <xref:System.String.ToLower%2A> because `string3` is displayed to the user.  
+## <a name="example"></a>例  
+ 次の例では、`BadMethod`によりこの規則の 2 つ違反が発生します。 `GoodMethod`インバリアント カルチャを渡すことによって、最初の違反を修正<xref:System.String.Compare%2A>には、現在のカルチャを渡すことによって、2 番目の違反を修正して<xref:System.String.ToLower%2A>ため`string3`がユーザーに表示されます。  
   
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../code-quality/codesnippet/CSharp/ca1305-specify-iformatprovider_1.cs)]  
   
-## <a name="example"></a>Example  
- The following example shows the effect of current culture on the default <xref:System.IFormatProvider> that is selected by the <xref:System.DateTime> type.  
+## <a name="example"></a>例  
+ 次の例は、既定の現在のカルチャの効果を示します<xref:System.IFormatProvider>で選択されている、<xref:System.DateTime>型です。  
   
  [!code-csharp[FxCop.Globalization.IFormatProvider#1](../code-quality/codesnippet/CSharp/ca1305-specify-iformatprovider_2.cs)]  
   
- This example produces the following output.  
+ この例を実行すると、次の出力が生成されます。  
   
- **6/4/1900 12:15:12 PM**  
+ **1900 年 6 月 4 日 12時 15分: 12 PM**  
 **06/04/1900 12:15:12**   
-## <a name="related-rules"></a>Related Rules  
- [CA1304: Specify CultureInfo](../code-quality/ca1304-specify-cultureinfo.md)  
+## <a name="related-rules"></a>関連規則  
+ [CA1304: CultureInfo を指定します](../code-quality/ca1304-specify-cultureinfo.md)  
   
-## <a name="see-also"></a>See Also  
- [NIB: Using the CultureInfo Class](http://msdn.microsoft.com/en-us/d4329e34-64c3-4d1e-8c73-5b0ee626ba7a)
+## <a name="see-also"></a>関連項目  
+[CultureInfo クラスを使用します。](/dotnet/standard/globalization-localization/globalization#Cultures)  

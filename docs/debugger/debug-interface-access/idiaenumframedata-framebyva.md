@@ -1,48 +1,47 @@
 ---
-title: "IDiaEnumFrameData::frameByVA | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumFrameData::frameByVA メソッド"
+title: "Idiaenumframedata::framebyva |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumFrameData::frameByVA method
 ms.assetid: 0b1e441b-710a-46d8-8060-bed39071c834
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 51d526c1ba187720952208b9b015ca7bfc2776d3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumFrameData::frameByVA
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-仮想アドレスでフレームを返します \(VA\)。  
+# <a name="idiaenumframedataframebyva"></a>IDiaEnumFrameData::frameByVA
+仮想アドレス (VA) でフレームを返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT frameByVA(   
-   ULONGLONG       virtualAddress,  
-   IDiaFrameData** frame  
+```C++  
+HRESULT frameByVA(   
+   ULONGLONG       virtualAddress,  
+   IDiaFrameData** frame  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  virtualAddress  
- \[入力\] 対象のフレームの VA。  
+ [in]関心のあるフレームの VA です。  
   
  フレーム  
- \[出力\] 指定したアドレスを含むフレームを表す [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) のオブジェクトを返します。  
+ [out]返します、 [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)を指定されたアドレスを含むフレームを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK` フレームのデータが指定したアドレスに一致する `S_FALSE` を返します。  それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 返します`S_FALSE`フレーム データに指定されたアドレスが一致しない場合。 それ以外の場合はエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

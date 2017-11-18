@@ -1,39 +1,40 @@
 ---
-title: "プロジェクトの優先順位 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロジェクト [Visual Studio SDK] 項目を開く"
+title: "プロジェクトの優先度 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: projects [Visual Studio SDK], opening items
 ms.assetid: 9f707592-2fb6-4f75-9269-f6d4700a998e
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 51ed8cd351a306c3992b4b6c9fcc2231a90085f3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# プロジェクトの優先順位
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-プロジェクト項目はソリューションの 1 種類のプロジェクトのメンバーです。  したがって簡単に項目を開くとそのプロジェクトが使用されているかを調べることができます。  ただし項目が複数のプロジェクトのメンバーである場合項目を開くための最善のプロジェクトを決定優先度の設定を使用します。  
+# <a name="project-priority"></a>プロジェクトの優先度
+プロジェクト項目は、通常、ソリューション内の 1 つだけのプロジェクトのメンバーです。 そのため、IDE を容易に判別するプロジェクトを使用して、項目を開きます。 ただし、項目が 1 つ以上のプロジェクトのメンバーである場合は、IDE は、最適なプロジェクトの項目を開くことを確認するに優先順位スキームを使用しています。  
   
- 次の一覧はプロジェクトの優先順位の設定を示しています :  
+ 次に、プロジェクトの優先順位のスキームを示します。  
   
--   IDE でソリューション内の各プロジェクトの <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A> のメソッドを文書がプロジェクトのメンバーかどうかを判断します。  
+-   IDE の呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A>ドキュメントがそのプロジェクトのメンバーであるかどうかを確認するようにソリューション内の各プロジェクトのメソッドです。  
   
--   ドキュメントがプロジェクトのメンバーである場合プロジェクトはそのドキュメントの処理に割り当てた優先順位に従って応答します。  たとえば言語のプロジェクトでは言語のソース ファイル用の優先順位と応答しますがビルド処理の一部として使用されない認識されないファイルの種類の低い優先順位で応答します。  
+-   このドキュメントは、プロジェクトのメンバーは、プロジェクトを応答優先度の割り当てがそのドキュメントの処理に従ってします。 たとえば、言語プロジェクトその言語のソース ファイルの優先度の高い応答応答しますが、そのビルド プロセスの一部として使用されていない、認識されないファイルの種類の優先度の低い。  
   
--   文書にカスタムプロジェクト固有のエディターまたはデザイナーを提供するプロジェクトは優先順位が表示されます。  
+-   ドキュメントのプロジェクト固有のカスタム エディターやデザイナーを提供するプロジェクトでは、優先度の高いも表示されます。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> の列挙はドキュメントの優先順位値を指定します。  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>列挙は、ドキュメントの優先順位の値を提供します。  
   
--   優先順位を指定するプロジェクトがドキュメントを開くコンテキストが与えられます。  2 つのプロジェクトが同じ優先順位値を返すとアクティブなプロジェクトが優先されます。  文書を開くことができるソリューションのプロジェクトが応答しない IDE でそのほかのファイル プロジェクトにドキュメントを配置します。  詳細については、「[その他のファイル プロジェクト](../../extensibility/internals/miscellaneous-files-project.md)」を参照してください。  
+-   最高の優先順位を指定するプロジェクトには、ドキュメントを開くコンテキストが割り当てられます。 2 つのプロジェクトは同じ優先順位の値を返す場合、アクティブなプロジェクトをお勧めします。 ソリューション内のプロジェクトが返されない、ドキュメントを開くことができますが、その他のファイル プロジェクトにドキュメントが挿入されます。 詳細については、次を参照してください。 [Miscellaneous Files プロジェクト](../../extensibility/internals/miscellaneous-files-project.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [その他のファイル プロジェクト](../../extensibility/internals/miscellaneous-files-project.md)   
  [方法: 開いているドキュメントのエディターを開く](../../extensibility/how-to-open-editors-for-open-documents.md)   
- [プロジェクトとプロジェクト項目テンプレートを追加します。](../../extensibility/internals/adding-project-and-project-item-templates.md)
+ [プロジェクト テンプレートとプロジェクト項目テンプレートの追加](../../extensibility/internals/adding-project-and-project-item-templates.md)

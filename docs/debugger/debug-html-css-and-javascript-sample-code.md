@@ -1,34 +1,35 @@
 ---
-title: "HTML、CSS、および JavaScript サンプル コードのデバッグ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "HTML、CSS、および JavaScript サンプル コードをデバッグ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: 51893967-98c8-4141-ba40-03646f221760
-caps.latest.revision: 13
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 762caca321cdda941fd295306fdfdf73e03b0aae
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# HTML、CSS、および JavaScript サンプル コードのデバッグ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-![Windows と Windows Phone に適用されます](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+# <a name="debug-html-css-and-javascript-sample-code"></a>HTML、CSS、および JavaScript サンプル コードのデバッグ
+![Windows と Windows Phone に適用](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- このトピックのコードは、以下のサンプル ファイルです。[クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md).  クイック スタートの設計上のエラーは、このバージョンのコードで修正されています。  
+ このトピックのコードのサンプル ファイルは、[クイック スタート: HTML のデバッグと CSS](../debugger/quickstart-debug-html-and-css.md)です。 クイック スタートの設計上のエラーは、このバージョンのコードで修正されています。  
   
-## サンプル コード  
- 次の HTML コードは、クイック スタートの \<body\> タグで使用します。  
+## <a name="sample-code"></a>サンプル コード  
+ 次の HTML コードが使用される、\<本文 > クイック スタートのタグ。  
   
 ```html  
 <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
@@ -52,7 +53,7 @@ caps.handback.revision: 13
 }  
 ```  
   
- 次のコード例は、default.js の JavaScript コード全体を示しています。  このコードの WinJS 名前空間への参照は、テンプレートの default.html ファイル内にあります。  
+ 次のコード例は、default.js の JavaScript コード全体を示しています。 このコードの WinJS 名前空間への参照は、テンプレートの default.html ファイルではします。  
   
 ```javascript  
 (function () {  
@@ -103,5 +104,5 @@ caps.handback.revision: 13
 })();  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)

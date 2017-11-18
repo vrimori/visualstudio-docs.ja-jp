@@ -1,78 +1,80 @@
 ---
-title: "JavaScript のバージョン情報 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "JavaScript, バージョン情報"
+title: "JavaScript のバージョン情報 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords: JavaScript, version information
 ms.assetid: 440f4924-f7a9-48e0-873e-bd599a93b437
-caps.latest.revision: 93
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 93
+caps.latest.revision: "93"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b0503abb3d62e9fd61149b884a7b58a685fbc62c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# JavaScript のバージョン情報
-JavaScript のバージョンごとに、サポートされている JavaScript 要素は異なります。[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリがサポートしている機能は、Internet Explorer とはわずかに異なります。  
+# <a name="javascript-version-information"></a>JavaScript のバージョン情報
+JavaScript のバージョンごとに、サポートされている JavaScript 要素は異なります。 [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリがサポートしている機能は、Internet Explorer とはわずかに異なります。  
   
 > [!IMPORTANT]
->  [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリは、[!INCLUDE[win8](../../javascript/includes/win8-md.md)] デバイスで実行する新しい種類のアプリケーションです。[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリの詳細については、「[What's a Windows Store app?](http://msdn.microsoft.com/ja-jp/231c1fba-9f87-468e-94aa-45dd57edcc70)」を参照してください。  
+>  [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリは、 [!INCLUDE[win8](../../javascript/includes/win8-md.md)] デバイスで実行する新しい種類のアプリケーションです。 について詳しく調べます[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)]アプリを参照してください[Windows ストア アプリは何ですか。](http://msdn.microsoft.com/en-us/231c1fba-9f87-468e-94aa-45dd57edcc70)  
   
- 標準モード \(`<!doctype>` ディレクティブがある場合に Internet Explorer 11 までの Internet Explorer のすべてのバージョンで使用されるモード\) では、Quirks モード \(`<!doctype>` ディレクティブがない場合に使用されるモード\) とは異なる要素がサポートされています。 バージョン管理の詳細については、「[ドキュメントの互換性の定義](http://go.microsoft.com/fwlink/?LinkId=208537)」を参照してください。  
+ 標準モード ( `<!doctype>` ディレクティブがある場合に Internet Explorer 11 までの Internet Explorer のすべてのバージョンで使用されるモード) では、Quirks モード ( `<!doctype>` ディレクティブがない場合に使用されるモード) とは異なる要素がサポートされています。 バージョン管理の詳細については、「 [ドキュメントの互換性の定義](http://go.microsoft.com/fwlink/?LinkId=208537)」を参照してください。  
   
- 次の表は、特定の言語要素をサポートしている Internet Explorer のドキュメント モード \(および、[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] と [!INCLUDE[winphone_appname](../../javascript/reference/includes/winphone-appname-md.md)] を表すストア アプリ\) を示しています。 指定された要素をサポートするドキュメント モードは、**Y** という文字で示されています。また、指定された要素をサポートしていないドキュメント モードは、**N** という文字で示されています。  
+ 次の表は、特定の言語要素をサポートしている Internet Explorer のドキュメント モード (および、 [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] と [!INCLUDE[winphone_appname](../../javascript/reference/includes/winphone-appname-md.md)]を表すストア アプリ) を示しています。 指定された要素をサポートするドキュメント モードは、 **Y**という文字で示されています。また、指定された要素をサポートしていないドキュメント モードは、 **N**という文字で示されています。  
   
 > [!IMPORTANT]
->  [!INCLUDE[jsv12text](../../javascript/includes/jsv12text-md.md)] \(Windows 10 の Microsoft Edge ブラウザー\) には、レガシ ドキュメント モードのサポートが含まれていません。[!INCLUDE[winphone_appname](../../javascript/reference/includes/winphone-appname-md.md)] アプリは Windows Phone 8.1 以降でサポートされます。 実験用の機能 \(about:flags\) は"Exp"で示されます。  
+>  [!INCLUDE[jsv12text](../../javascript/includes/jsv12text-md.md)] (Windows 10 の Edge ブラウザー) には、レガシ ドキュメント モードのサポートが含まれていません。 [!INCLUDE[winphone_appname](../../javascript/reference/includes/winphone-appname-md.md)] アプリは Windows Phone 8.1 以降でサポートされます。 試験段階の機能 (に関する: フラグ) は"Exp"で示されます  
   
  表には概要情報が含まれています。 より具体的な情報は、言語要素のドキュメントを参照してください。  
   
 |言語要素|互換捻出、Internet Explorer 6 標準、Internet Explorer 7 標準|Internet Explorer 8 標準|Internet Explorer 9 標準|Internet Explorer 10 標準|Internet Explorer 11 標準|エッジ|ストア アプリ|  
-|----------|--------------------------------------------------------|----------------------------|----------------------------|-----------------------------|-----------------------------|---------|-------------|  
-|[\_\_proto\_\_ プロパティ \(Object\)](../../javascript/reference/proto-property-object-javascript.md)|N|N|N|N|Y|Y|v8 \(Win\): N<br />v8.1 \(Win\): Y<br />v8.1 \(Phone\): Y|  
-|[$1...$9 プロパティ \(RegExp\)](../../javascript/reference/dollar-1-dot-dot-dot-dollar-9-properties-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|----------------------|--------------------------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------------------|------------------------------------|----------|----------------|  
+|[__proto\_ \_プロパティ (Object)](../../javascript/reference/proto-property-object-javascript.md)|N|N|N|N|Y|Y|v8 (Win): N<br />v8.1 (Win): Y<br />v8.1 (Phone): Y|  
+|[$1...$9 プロパティ (RegExp)](../../javascript/reference/dollar-1-dot-dot-dot-dollar-9-properties-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[On プロパティ](../../javascript/reference/0-dot-dot-dot-n-properties-arguments-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[abs 関数](../../javascript/reference/math-abs-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[acos 関数](../../javascript/reference/math-acos-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[acosh 関数](../../javascript/reference/math-acosh-function-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
 |[ActiveXObject オブジェクト](../../javascript/reference/activexobject-object-javascript.md)|Y|Y|Y|Y|Y|Y|N|  
-|[加算代入演算子 \(\+\=\)](../../javascript/reference/addition-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[加算演算子 \(\+\)](../../javascript/reference/addition-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[加算代入演算子 (+=)](../../javascript/reference/addition-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[加算演算子 (+)](../../javascript/reference/addition-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[apply メソッド](../../javascript/reference/apply-method-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[arguments オブジェクト](../../javascript/reference/arguments-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[arguments プロパティ](../../javascript/reference/arguments-property-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[Array オブジェクト](../../javascript/reference/array-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[Array.from 関数](../../javascript/reference/array-from-function-array-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
+|[Array.from 関数 (Array)](../../javascript/reference/array-from-function-array-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
 |[Array.isArray 関数](../../javascript/reference/array-isarray-function-javascript.md)|N|N|Y|Y|Y|Y|Y|  
-|[Array.of 関数 \(Array\)](../../javascript/reference/array-of-function-array-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
+|[Array.of 関数 (Array)](../../javascript/reference/array-of-function-array-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
 |[ArrayBuffer オブジェクト](../../javascript/reference/arraybuffer-object.md)|N|N|N|Y|Y|Y|Y|  
 |[関数](../../javascript/functions-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
 |[asin 関数](../../javascript/reference/math-asin-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[Object.assign 関数 \(Object\)](../../javascript/reference/object-assign-function-object-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
-|[代入演算子 \(\=\)](../../javascript/reference/assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[Object.assign 関数 (Object)](../../javascript/reference/object-assign-function-object-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
+|[代入演算子 (=)](../../javascript/reference/assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[atan 関数](../../javascript/reference/math-atan-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[atan2 関数](../../javascript/reference/math-atan2-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[atEnd メソッド](../../javascript/reference/atend-method-enumerator-javascript.md)|Y|Y|Y|Y|Y|Y|N|  
 |[bind メソッド](../../javascript/reference/bind-method-function-javascript.md)|N|N|Y|Y|Y|Y|Y|  
-|[ビットごとの AND 代入演算子 \(&\=\)](../../javascript/reference/bitwise-and-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[ビットごとの AND 演算子 \(&\)](../../javascript/reference/bitwise-and-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[ビットごとの左シフト演算子 \(\<\<\)](../../javascript/reference/bitwise-left-shift-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[ビットごとの NOT 演算子 \(~\)](../../javascript/reference/bitwise-not-operator-decrement-tilde-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[ビットごとの OR 代入演算子 \(&#124;\=\)](../../javascript/reference/bitwise-or-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[ビットごとの OR 演算子 \(&#124;\)](../../javascript/reference/bitwise-or-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[ビットごとの右シフト演算子 \(\>\>\)](../../javascript/reference/bitwise-right-shift-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[ビットごとの YOR 代入演算子 \(^\=\)](../../javascript/reference/bitwise-xor-assignment-operator-decrement-hat-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[ビットごとの YOR 演算子 \(^\)](../../javascript/reference/bitwise-xor-operator-decrement-hat-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[ビットごとの AND 代入演算子 (&=)](../../javascript/reference/bitwise-and-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[ビットごとの AND 演算子 (&)](../../javascript/reference/bitwise-and-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[ビットごとの左シフト演算子 (<\<)](../../javascript/reference/bitwise-left-shift-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[ビットごとの NOT 演算子 (~)](../../javascript/reference/bitwise-not-operator-decrement-tilde-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[ビット演算子 OR 代入演算子 (&#124; =)](../../javascript/reference/bitwise-or-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[ビットごとの OR 演算子 (&#124;)](../../javascript/reference/bitwise-or-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[ビットごとの右シフト演算子 (>>)](../../javascript/reference/bitwise-right-shift-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[ビットごとの YOR 代入演算子 (^=)](../../javascript/reference/bitwise-xor-assignment-operator-decrement-hat-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[ビットごとの YOR 演算子 (^)](../../javascript/reference/bitwise-xor-operator-decrement-hat-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[blink メソッド](../../javascript/reference/html-tag-methods-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[bold メソッド](../../javascript/reference/html-tag-methods-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[Boolean オブジェクト](../../javascript/reference/boolean-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -84,20 +86,20 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[ceil 関数](../../javascript/reference/math-ceil-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[charAt メソッド](../../javascript/reference/charat-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[charCodeAt メソッド](../../javascript/reference/charcodeat-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[class ステートメント](../../javascript/reference/class-statement-javascript.md)|N|N|N|N|N|\[exp\]|v8.1: N<br />v10: Exp.|  
-|[codePointAt メソッド \(String\)](../../javascript/reference/codepointat-method-string-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
-|[コンマ演算子 \(,\)](../../javascript/reference/comma-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[\/\/ \(単一行のコメント ステートメント\)](../../javascript/reference/comment-statements-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[\/\*..\*\/ \(複数行のコメント ステートメント\)](../../javascript/reference/comment-statements-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[class ステートメント](../../javascript/reference/class-statement-javascript.md)|N|N|N|N|N|[exp]|v8.1: N<br />v10: Exp.|  
+|[codePointAt メソッド (String)](../../javascript/reference/codepointat-method-string-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
+|[コンマ演算子 (,)](../../javascript/reference/comma-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[// (単一行のコメント ステートメント)](../../javascript/reference/comment-statements-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[/*..\*(複数行のコメント ステートメント)](../../javascript/reference/comment-statements-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[比較演算子](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[compile メソッド](../../javascript/reference/compile-method-regular-expression-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[concat メソッド \(Array\)](../../javascript/reference/concat-method-array-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[concat メソッド \(String\)](../../javascript/reference/concat-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[concat メソッド (Array)](../../javascript/reference/concat-method-array-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[concat メソッド (String)](../../javascript/reference/concat-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[条件付きコンパイル](../../javascript/advanced/conditional-compilation-javascript.md)|Y|Y|Y|Y|N|N|N|  
 |[条件付きコンパイル変数](../../javascript/advanced/conditional-compilation-variables-javascript.md)|Y|Y|Y|Y|N|N|N|  
-|[条件 \(三項\) 演算子 \(?:\)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[条件 (三項) 演算子 (?:)](../../javascript/reference/conditional-ternary-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[constructor プロパティ](../../javascript/reference/constructor-property-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[const ステートメント](../../javascript/reference/const-statement-javascript.md)|N|N|N|N|Y|Y|v8 \(Win\): N<br />v8.1 \(Win\): Y<br />v8.1 \(Phone\): Y|  
+|[const ステートメント](../../javascript/reference/const-statement-javascript.md)|N|N|N|N|Y|Y|v8 (Win): N<br />v8.1 (Win): Y<br />v8.1 (Phone): Y|  
 |[continue ステートメント](../../javascript/reference/continue-statement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[cos 関数](../../javascript/reference/math-cos-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[create 関数](../../javascript/reference/object-create-function-javascript.md)|N|N|Y|Y|Y|Y|Y|  
@@ -109,35 +111,35 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[debugger ステートメント](../../javascript/reference/debugger-statement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[decodeURI 関数](../../javascript/reference/decodeuri-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[DecodeURIComponent 関数](../../javascript/reference/decodeuricomponent-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[デクリメント演算子 \(\-\-\)](../../javascript/reference/increment-and-decrement-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[関数](../../javascript/functions-javascript.md)|N|N|N|N|N|\[exp\]|v8.1: N<br />v10: Exp.|  
-|[defineProperties 関数](../../javascript/reference/object-defineproperties-function-javascript.md)|N|Y\*|Y|Y|Y|Y|Y|  
-|[defineProperty 関数](../../javascript/reference/object-defineproperty-function-javascript.md)|N|Y\*|Y|Y|Y|Y|Y|  
+|[デクリメント演算子 (--)](../../javascript/reference/increment-and-decrement-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[関数](../../javascript/functions-javascript.md)|N|N|N|N|N|[exp]|v8.1: N<br />v10: Exp.|  
+|[defineProperties 関数](../../javascript/reference/object-defineproperties-function-javascript.md)|N|Y*|Y|Y|Y|Y|Y|  
+|[defineProperty 関数](../../javascript/reference/object-defineproperty-function-javascript.md)|N|Y*|Y|Y|Y|Y|Y|  
 |[delete 演算子](../../javascript/reference/delete-operator-decrementjavascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[description プロパティ](../../javascript/reference/description-property-error-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[dimensions メソッド](../../javascript/reference/dimensions-method-vbarray-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[除算代入演算子 \(\/\=\)](../../javascript/reference/division-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[除算演算子 \(\/\)](../../javascript/reference/division-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[除算代入演算子 (/=)](../../javascript/reference/division-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[除算演算子 (/)](../../javascript/reference/division-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[do...while ステートメント](../../javascript/reference/do-dot-dot-dot-while-statement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[定数 E](../../javascript/reference/math-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[encodeURI 関数](../../javascript/reference/encodeuri-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[encodeURI Component 関数](../../javascript/reference/encodeuricomponent-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[entries メソッド \(Array\)](../../javascript/reference/entries-method-array-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
+|[entries メソッド (Array)](../../javascript/reference/entries-method-array-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
 |[Enumerator オブジェクト](../../javascript/reference/enumerator-object-javascript.md)|Y|Y|Y|Y|Y|Y|N|  
 |[Number 定数](../../javascript/reference/number-constants-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
-|[等値演算子 \(\=\=\)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[等値演算子 (==)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[Error オブジェクト](../../javascript/reference/error-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[stack プロパティ \(Error\)](../../javascript/reference/stack-property-error-javascript.md)|N|N|N|Y|Y|Y|Y|  
-|[stackTraceLimit プロパティ \(Error\)](../../javascript/reference/stacktracelimit-property-error-javascript.md)|N|N|N|Y|Y|Y|Y|  
+|[stack プロパティ (Error)](../../javascript/reference/stack-property-error-javascript.md)|N|N|N|Y|Y|Y|Y|  
+|[stackTraceLimit プロパティ (Error)](../../javascript/reference/stacktracelimit-property-error-javascript.md)|N|N|N|Y|Y|Y|Y|  
 |[escape 関数](../../javascript/reference/escape-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[eval 関数](../../javascript/reference/eval-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[exec メソッド](../../javascript/reference/exec-method-regular-expression-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[every メソッド](../../javascript/reference/every-method-array-javascript.md)|N|N|Y|Y|Y|Y|Y|  
 |[exp 関数](../../javascript/reference/math-exp-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[slice メソッド \(Array\)](../../javascript/reference/fill-method-array-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
+|[fill メソッド (Array)](../../javascript/reference/fill-method-array-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
 |[filter メソッド](../../javascript/reference/filter-method-array-javascript.md)|N|N|Y|Y|Y|Y|Y|  
 |[finally ステートメント](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[findIndex メソッド \(Array\)](../../javascript/reference/findindex-method-array-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
+|[findIndex メソッド (Array)](../../javascript/reference/findindex-method-array-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
 |[fixed メソッド](../../javascript/reference/html-tag-methods-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[Float32Array オブジェクト](../../javascript/reference/float32array-object.md)|N|N|N|Y|Y|Y|Y|  
 |[Float64Array オブジェクト](../../javascript/reference/float64array-object.md)|N|N|N|Y|Y|Y|Y|  
@@ -153,7 +155,7 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[fromCodePoint 関数](../../javascript/reference/string-fromcodepoint-function-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
 |[Function オブジェクト](../../javascript/reference/function-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[function ステートメント](../../javascript/reference/function-statement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[ジェネレーター](../../javascript/advanced/iterators-and-generators-javascript.md)|N|N|N|N|N|\[exp\]|v8.1: N<br />v10: Exp.|  
+|[ジェネレーター](../../javascript/advanced/iterators-and-generators-javascript.md)|N|N|N|N|N|[exp]|v8.1: N<br />v10: Exp.|  
 |[getDate メソッド](../../javascript/reference/getdate-method-date-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[getDay メソッド](../../javascript/reference/getday-method-date-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[getFullYear メソッド](../../javascript/reference/getfullyear-method-date-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -163,7 +165,7 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[getMinutes メソッド](../../javascript/reference/getminutes-method-date-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[getMonth メソッド](../../javascript/reference/getmonth-method-date-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[GetObject 関数](../../javascript/reference/getobject-function-javascript.md)|Y|Y|N|N|N|N|N|  
-|[getOwnPropertyDescriptor 関数](../../javascript/reference/object-getownpropertydescriptor-function-javascript.md)|N|Y\*|Y|Y|Y|Y|Y|  
+|[getOwnPropertyDescriptor 関数](../../javascript/reference/object-getownpropertydescriptor-function-javascript.md)|N|Y*|Y|Y|Y|Y|Y|  
 |[getOwnPropertyNames 関数](../../javascript/reference/object-getownpropertynames-function-javascript.md)|N|N|Y|Y|Y|Y|Y|  
 |[getPrototypeOf 関数](../../javascript/reference/object-getprototypeof-function-javascript.md)|N|N|Y|Y|Y|Y|Y|  
 |[getSeconds メソッド](../../javascript/reference/getseconds-method-date-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -181,29 +183,29 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[getYear メソッド](../../javascript/reference/getyear-method-date-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[Global オブジェクト](../../javascript/reference/global-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[global プロパティ](../../javascript/reference/global-property-regular-expression-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[大なり演算子 \(\>\)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[以上演算子 \(\>\=\)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[大なり演算子 (>)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[以上演算子 (>=)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[hasOwnProperty メソッド](../../javascript/reference/hasownproperty-method-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[HTML Tag メソッド](../../javascript/reference/html-tag-methods-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[HTML タグ メソッド](../../javascript/reference/html-tag-methods-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[hypot 関数](../../javascript/reference/math-hypot-function-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
-|[同値演算子 \(\=\=\=\)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[同値演算子 (===)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[if...else ステートメント](../../javascript/reference/if-dot-dot-dot-else-statement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[ignoreCase プロパティ](../../javascript/reference/ignorecase-property-regular-expression-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[imul 関数](../../javascript/reference/math-imul-function-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
 |[In 演算子](../../javascript/reference/in-operator-decrementjavascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[includes メソッド \(String\)](../../javascript/reference/includes-method-string-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
-|[インクリメント演算子 \(\+\+\)](../../javascript/reference/increment-and-decrement-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[includes メソッド (String)](../../javascript/reference/includes-method-string-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
+|[インクリメント演算子 (++)](../../javascript/reference/increment-and-decrement-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[index プロパティ](../../javascript/reference/index-property-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[indexOf メソッド \(Array\)](../../javascript/reference/indexof-method-array-javascript.md)|N|N|Y|Y|Y|Y|Y|  
-|[indexOf メソッド \(String\)](../../javascript/reference/indexof-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[非等値演算子 \(\!\=\)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[indexOf メソッド (Array)](../../javascript/reference/indexof-method-array-javascript.md)|N|N|Y|Y|Y|Y|Y|  
+|[indexOf メソッド (String)](../../javascript/reference/indexof-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[非等値演算子 (!=)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[定数 Infinity](../../javascript/reference/infinity-constant-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[input プロパティ \($\_\)](../../javascript/reference/input-property-dollar-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[input プロパティ ($_)](../../javascript/reference/input-property-dollar-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[instanceof 演算子](../../javascript/reference/instanceof-operator-decrementjavascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[Int8Array オブジェクト](../../javascript/reference/int8array-object.md)|N|N|N|Y|Y|Y|Y|  
 |[Int16Array オブジェクト](../../javascript/reference/int16array-object.md)|N|N|N|Y|Y|Y|Y|  
 |[Int32Array オブジェクト](../../javascript/reference/int32array-object.md)|N|N|N|Y|Y|Y|Y|  
-|[Intl.Collator オブジェクト](../../javascript/reference/intl-collator-object-javascript.md)|N|N|N|N|Y|Y|v8 \(Win\): N<br />v8.1 \(Win\): Y<br />v8.1 \(Phone\): Y|  
+|[Intl.Collator オブジェクト](../../javascript/reference/intl-collator-object-javascript.md)|N|N|N|N|Y|Y|v8 (Win): N<br />v8.1 (Win): Y<br />v8.1 (Phone): Y|  
 |[Intl.DateTimeFormat オブジェクト](../../javascript/reference/intl-datetimeformat-object-javascript.md)|N|N|N|N|Y|Y|v8: N<br />v8.1: Y|  
 |[Intl.NumberFormat オブジェクト](../../javascript/reference/intl-numberformat-object-javascript.md)|N|N|N|N|Y|Y|v8: N<br />v8.1: Y|  
 |[isFinite 関数](../../javascript/reference/isfinite-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -212,7 +214,7 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[isFrozen 関数](../../javascript/reference/object-isfrozen-function-javascript.md)|N|N|Y|Y|Y|Y|Y|  
 |[isInteger 関数](../../javascript/reference/number-isinteger-function-number-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
 |[isNaN 関数](../../javascript/reference/isnan-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[isNaN 関数 \(Number\)](../../javascript/reference/number-isnan-function-number-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
+|[isNaN 関数 (Number)](../../javascript/reference/number-isnan-function-number-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
 |[ISO 日付形式](../../javascript/date-and-time-strings-javascript.md)|N|N|Y|Y|Y|Y|Y|  
 |[IsPrototypeOf メソッド](../../javascript/reference/isprototypeof-method-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[isSealed 関数](../../javascript/reference/object-issealed-function-javascript.md)|N|N|Y|Y|Y|Y|Y|  
@@ -222,22 +224,22 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[join メソッド](../../javascript/reference/join-method-array-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[JSON オブジェクト](../../javascript/reference/json-object-javascript.md)|N|Y|Y|Y|Y|Y|Y|  
 |[keys 関数](../../javascript/reference/object-keys-function-javascript.md)|N|N|Y|Y|Y|Y|Y|  
-|[keys メソッド \(Array\)](../../javascript/reference/keys-method-array-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
+|[keys メソッド (Array)](../../javascript/reference/keys-method-array-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
 |[ラベル付きステートメント](../../javascript/reference/labeled-statement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[lastIndex プロパティ](../../javascript/reference/lastindex-property-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[lastIndexOf メソッド \(Array\)](../../javascript/reference/lastindexof-method-array-javascript.md)|N|N|Y|Y|Y|Y|Y|  
-|[lastIndexOf メソッド \(String\)](../../javascript/reference/lastindexof-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[lastMatch プロパティ \($&\)](../../javascript/reference/lastmatch-property-dollar-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[lastParen プロパティ \($\+\)](../../javascript/reference/lastparen-property-dollar-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[lastIndexOf メソッド (Array)](../../javascript/reference/lastindexof-method-array-javascript.md)|N|N|Y|Y|Y|Y|Y|  
+|[lastIndexOf メソッド (String)](../../javascript/reference/lastindexof-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[lastMatch プロパティ ($&)](../../javascript/reference/lastmatch-property-dollar-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[lastParen プロパティ ($+)](../../javascript/reference/lastparen-property-dollar-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[lbound メソッド](../../javascript/reference/lbound-method-vbarray-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[leftContext プロパティ \($'\)](../../javascript/reference/leftcontext-property-dollar-grave-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[左シフト代入演算子 \(\<\<\=\)](../../javascript/reference/left-shift-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[length プロパティ \(Arguments\)](../../javascript/reference/length-property-arguments-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[length プロパティ \(Array\)](../../javascript/reference/length-property-array-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[length プロパティ \(Function\)](../../javascript/reference/length-property-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[length プロパティ \(String\)](../../javascript/reference/length-property-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[小なり演算子 \(\<\)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[以下演算子 \(\<\=\)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[leftContext プロパティ ($')](../../javascript/reference/leftcontext-property-dollar-grave-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[左シフト代入演算子 (<<=)](../../javascript/reference/left-shift-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[length プロパティ (Arguments)](../../javascript/reference/length-property-arguments-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[length プロパティ (Array)](../../javascript/reference/length-property-array-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[length プロパティ (Function)](../../javascript/reference/length-property-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[length プロパティ (String)](../../javascript/reference/length-property-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[小なり演算子 (<)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[以下演算子 (<=)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[let ステートメント](../../javascript/reference/let-statement-javascript.md)|N|N|N|N|Y|Y|v8: N<br />v8.1: Y|  
 |[link メソッド](../../javascript/reference/html-tag-methods-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[定数 LN2](../../javascript/reference/math-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -246,31 +248,31 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[log 関数](../../javascript/reference/math-log-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[定数 LOG2E](../../javascript/reference/math-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[定数 LOG10E](../../javascript/reference/math-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[論理 AND 演算子 \(&&\)](../../javascript/reference/logical-and-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[論理 NOT 演算子 \(\!\)](../../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[論理 OR 演算子 \(&#124;&#124;\)](../../javascript/reference/logical-or-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[論理 AND 演算子 (&&)](../../javascript/reference/logical-and-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[論理 NOT 演算子 (!)](../../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[論理 OR 演算子 (&#124; &#124;)](../../javascript/reference/logical-or-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[map メソッド](../../javascript/reference/map-method-array-javascript.md)|N|N|Y|Y|Y|Y|Y|  
 |[マップ オブジェクト](../../javascript/reference/map-object-javascript.md)|N|N|N|N|Y|Y|v8: N<br />v8.1: Y|  
 |[match メソッド](../../javascript/reference/match-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[Math オブジェクト](../../javascript/reference/math-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[max 関数](../../javascript/reference/math-max-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[定数 MAX\_VALUE](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[定数 MAX_VALUE](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[message プロパティ](../../javascript/reference/message-property-error-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[min 関数](../../javascript/reference/math-min-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[定数 MIN\_VALUE](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[剰余代入演算子 \(%\=\)](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[剰余演算子 \(%\)](../../javascript/reference/modulus-operator-decrementjavascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[定数 MIN_VALUE](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[剰余代入演算子 (%=)](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[剰余演算子 (%)](../../javascript/reference/modulus-operator-decrementjavascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[moveFirst メソッド](../../javascript/reference/movefirst-method-enumerator-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[moveNext メソッド](../../javascript/reference/movenext-method-enumerator-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[multiline プロパティ](../../javascript/reference/multiline-property-regular-expression-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[乗算代入演算子 \(\*\=\)](../../javascript/reference/multiplication-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[乗算演算子 \(\*\)](../../javascript/reference/multiplication-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[乗算代入演算子 (*=)](../../javascript/reference/multiplication-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[乗算演算子 (*)](../../javascript/reference/multiplication-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[name プロパティ](../../javascript/reference/name-property-error-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[定数 NaN \(Global\)](../../javascript/reference/nan-constant-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[定数 NaN \(Number\)](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[定数 NEGATIVE\_INFINITY](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[定数 NaN (Global)](../../javascript/reference/nan-constant-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[定数 NaN (Number)](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[定数 NEGATIVE_INFINITY](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[new 演算子](../../javascript/reference/new-operator-decrementjavascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[非一致演算子 \(\!\=\=\)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[非一致演算子 (!==)](../../javascript/reference/comparison-operators-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[now 関数](../../javascript/reference/date-now-function-javascript.md)|N|N|Y|Y|Y|Y|Y|  
 |[Number オブジェクト](../../javascript/reference/number-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[number プロパティ](../../javascript/reference/number-property-error-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -282,7 +284,7 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[parseInt 関数](../../javascript/reference/parseint-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[定数 PI](../../javascript/reference/math-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[pop メソッド](../../javascript/reference/pop-method-array-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[定数 POSITIVE\_INFINITY](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[定数 POSITIVE_INFINITY](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[pow 関数](../../javascript/reference/math-pow-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[preventExtensions 関数](../../javascript/reference/object-preventextensions-function-javascript.md)|N|N|Y|Y|Y|Y|Y|  
 |[Promise オブジェクト](../../javascript/reference/promise-object-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
@@ -296,15 +298,15 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[reduceRight メソッド](../../javascript/reference/reduceright-method-array-javascript.md)|N|N|Y|Y|Y|Y|Y|  
 |[RegExp オブジェクト](../../javascript/reference/regexp-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[Regular Expression オブジェクト](../../javascript/reference/regular-expression-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[正規表現の構文](http://msdn.microsoft.com/ja-jp/ab0766e1-7037-45ed-aa23-706f58358c0e)|Y|Y|Y|Y|Y|Y|Y|  
-|[正規表現の \/y フラグ](../../javascript/reference/regular-expression-object-javascript.md)|N|N|N|N|N|\[exp\]|v8.1: N<br />v10: Exp.|  
-|[repeat メソッド \(String\)](../../javascript/reference/repeat-method-string-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
+|[正規表現の構文](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)|Y|Y|Y|Y|Y|Y|Y|  
+|[正規表現の /y フラグ](../../javascript/reference/regular-expression-object-javascript.md)|N|N|N|N|N|[exp]|v8.1: N<br />v10: Exp.|  
+|[repeat メソッド (String)](../../javascript/reference/repeat-method-string-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
 |[replace メソッド](../../javascript/reference/replace-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[関数](../../javascript/functions-javascript.md)|N|N|N|N|N|N|v8.1: N<br />v10: Y|  
 |[return ステートメント](../../javascript/reference/return-statement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[reverse メソッド](../../javascript/reference/reverse-method-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[rightContext プロパティ \($'\)](../../javascript/reference/rightcontext-property-dollar-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[右シフト代入演算子 \(\>\>\=\)](../../javascript/reference/right-shift-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[rightContext プロパティ ($')](../../javascript/reference/rightcontext-property-dollar-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[右シフト代入演算子 (>>=)](../../javascript/reference/right-shift-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[round 関数](../../javascript/reference/math-round-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[ScriptEngine 関数](../../javascript/reference/scriptengine-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[ScriptEngineBuildVersion 関数](../../javascript/reference/scriptenginebuildversion-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -331,8 +333,8 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[setYear メソッド](../../javascript/reference/setyear-method-date-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[shift メソッド](../../javascript/reference/shift-method-array-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[sin 関数](../../javascript/reference/math-sin-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[slice メソッド \(Array\)](../../javascript/reference/slice-method-array-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[slice メソッド \(String\)](../../javascript/reference/slice-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[slice メソッド (Array)](../../javascript/reference/slice-method-array-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[slice メソッド (String)](../../javascript/reference/slice-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[small メソッド](../../javascript/reference/html-tag-methods-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[some メソッド](../../javascript/reference/some-method-array-javascript.md)|N|N|Y|Y|Y|Y|Y|  
 |[sort メソッド](../../javascript/reference/sort-method-array-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -341,7 +343,7 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[split メソッド](../../javascript/reference/split-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[関数](../../javascript/functions-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
 |[sqrt 関数](../../javascript/reference/math-sqrt-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[定数 SQRT1\_2](../../javascript/reference/math-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[定数 SQRT1_2](../../javascript/reference/math-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[定数 SQRT2](../../javascript/reference/math-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[use strict ディレクティブ](../../javascript/reference/use-strict-directive.md)|N|N|N|Y|Y|Y|Y|  
 |[strike メソッド](../../javascript/reference/html-tag-methods-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -350,8 +352,8 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[sub メソッド](../../javascript/reference/html-tag-methods-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[substr メソッド](../../javascript/reference/substr-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[substring メソッド](../../javascript/reference/substring-method-string-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[減算代入演算子 \(\-\=\)](../../javascript/reference/subtraction-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[減算演算子 \(\-\)](../../javascript/reference/subtraction-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[減算代入演算子 (-=)](../../javascript/reference/subtraction-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[減算演算子 (-)](../../javascript/reference/subtraction-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[sup メソッド](../../javascript/reference/html-tag-methods-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[switch ステートメント](../../javascript/reference/switch-statement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[Symbol オブジェクト](../../javascript/reference/symbol-object-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
@@ -385,18 +387,18 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[Uint8Array オブジェクト](../../javascript/reference/uint8array-object.md)|N|N|N|Y|Y|Y|Y|  
 |[Uint16Array オブジェクト](../../javascript/reference/uint16array-object.md)|N|N|N|Y|Y|Y|Y|  
 |[Uint32Array オブジェクト](../../javascript/reference/uint32array-object.md)|N|N|N|Y|Y|Y|Y|  
-|[Uint8ClampedArray オブジェクト](../../javascript/reference/uint8clampedarray-object-javascript.md)|N|N|N|N|Y|Y|v8: No<br />v8.1 \(Win\): Yes<br />v8.1 \(Phone\): No<br />v10: Y|  
-|[単項マイナス符号演算子 \(\-\)](../../javascript/reference/subtraction-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[Uint8ClampedArray オブジェクト](../../javascript/reference/uint8clampedarray-object-javascript.md)|N|N|N|N|Y|Y|v8: No<br />v8.1 (Win): Yes<br />v8.1 (Phone): No<br />v10: Y|  
+|[単項マイナス符号演算子 (-)](../../javascript/reference/subtraction-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[定数 undefined](../../javascript/reference/undefined-constant-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[unescape 関数](../../javascript/reference/unescape-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[Unicode コード ポイントのエスケープ文字](../../javascript/advanced/special-characters-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
 |[unshift メソッド](../../javascript/reference/unshift-method-array-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[符号なし右シフト代入演算子 \(\>\>\>\=\)](../../javascript/reference/unsigned-right-shift-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[符号なし右シフト演算子 \(\>\>\>\)](../../javascript/reference/unsigned-right-shift-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[符号なし右シフト代入演算子 (>>>=)](../../javascript/reference/unsigned-right-shift-assignment-operator-decrement-equal-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[符号なし右シフト演算子 (>>>)](../../javascript/reference/unsigned-right-shift-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[use strict ディレクティブ](../../javascript/reference/use-strict-directive.md)|N|N|N|Y|Y|Y|Y|  
 |[UTC 関数](../../javascript/reference/date-utc-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[valueOf メソッド](../../javascript/reference/valueof-method-object-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[values メソッド \(Array\)](../../javascript/reference/values-method-array-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
+|[values メソッド (Array)](../../javascript/reference/values-method-array-javascript.md)|N|N|N|N|N|Y|v8.1: N<br />v10: Y|  
 |[var ステートメント](../../javascript/reference/var-statement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[VBArray オブジェクト](../../javascript/reference/vbarray-object-javascript.md)|Y|Y|Y|Y|Y|Y|N|  
 |[void 演算子](../../javascript/reference/void-operator-decrementjavascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -408,7 +410,7 @@ JavaScript のバージョンごとに、サポートされている JavaScript 
 |[write 関数](../../javascript/reference/debug-write-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[writeln 関数](../../javascript/reference/debug-writeln-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
   
- \* DOM オブジェクトをサポートしますが、ユーザー定義オブジェクトはサポートされません。`enumerable` 属性と `configurable` 属性は、指定できますが使用されません。  
+ \*ユーザー定義のオブジェクトは DOM オブジェクトをサポートしています。 `enumerable` 属性と `configurable` 属性は、指定できますが使用されません。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ドキュメントの互換性の定義](http://go.microsoft.com/fwlink/?LinkId=208537)

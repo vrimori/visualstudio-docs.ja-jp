@@ -1,59 +1,59 @@
 ---
-title: "CA2204: リテラルは正しく入力されていなければなりません | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Literals should be spelled correctly"
-  - "CA2204"
-  - "LiteralsShouldBeSpelledCorrectly"
-helpviewer_keywords: 
-  - "CA2204"
+title: "CA2204: リテラル正しく入力されなければなりません |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Literals should be spelled correctly
+- CA2204
+- LiteralsShouldBeSpelledCorrectly
+helpviewer_keywords: CA2204
 ms.assetid: b0bbcbb6-c92d-4c14-8ef7-9c8b38c791a6
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 7fca8484b3231a92ab3a425c4661229236833642
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# CA2204: リテラルは正しく入力されていなければなりません
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca2204-literals-should-be-spelled-correctly"></a>CA2204: リテラルは正しく入力されていなければなりません
 |||  
 |-|-|  
 |TypeName|LiteralsShouldBeSpelledCorrectly|  
 |CheckId|CA2204|  
-|分類|Microsoft.Usage|  
-|互換性に影響する変更点|なし|  
+|カテゴリ|Microsoft.Usage|  
+|互換性に影響する変更点|中断なし|  
   
-## 原因  
- メソッドはローカライズされた文字列を必要とするパラメーターまたはプロパティにリテラル文字列を渡しますが、そのリテラル文字列に、Microsoft スペル チェック ライブラリで認識されない単語が 1 つ以上含まれています。  
+## <a name="cause"></a>原因  
+ パラメーターまたはローカライズされた文字列とリテラル文字列が必要なプロパティをリテラル文字列が使用されるメソッドのパスには、Microsoft スペル チェック ライブラリで認識されない語が 1 つ以上が含まれています。  
   
-## 規則の説明  
- この規則では、次の条件に 1 つ以上に該当する場合に、値としてパラメーターまたはプロパティに渡されるリテラル文字列がチェックされます。  
+## <a name="rule-description"></a>規則の説明  
+ このルールは、パラメーターまたはいずれかのプロパティに値として渡されたリテラル文字列をチェックまたは true は、次の場合の詳細。  
   
--   パラメーターまたはプロパティの <xref:System.ComponentModel.LocalizableAttribute> 属性が true に設定されている。  
+-   <xref:System.ComponentModel.LocalizableAttribute>パラメーターまたはプロパティの属性が設定を true にします。  
   
--   パラメーターまたはプロパティの名前に、"Text"、"Message"、または "Caption" という文字列が含まれている。  
+-   パラメーターまたはプロパティ名には、"Text"、「メッセージ」または「キャプション」が含まれています。  
   
--   Console.Write メソッドまたは Console.WriteLine メソッドに渡される文字列パラメーターの名前が、"value" または "format" である。  
+-   Console.Write または Console.WriteLine メソッドに渡される文字列パラメーターの名前は"value"か"format"。  
   
- この規則では、リテラル文字列を複合語のトークン化によって単語に分割し、個々の単語 \(トークン\) のスペルをチェックします。  解析アルゴリズムについては、「[CA1704: 識別子は正しく入力されなければなりません](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)」を参照してください。  
+ このルールは、複合語をトークン化の単語にリテラル文字列を解析し、各単語/トークンのスペルをチェックします。 解析のアルゴリズムについては、次を参照してください。 [ca 1704: 識別子は正しく入力されなければなりません](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)です。  
   
- 既定では、スペル チェック機能の英語 \(en\) バージョンが使用されます。  
+ 既定では、スペル チェックの英語 (en) バージョンを使用します。  
   
-## 違反の修正方法  
- この規則違反を修正するには、単語のスペルを修正するか、違反とされた単語をカスタム辞書に追加します。  カスタム辞書を使用する方法については、「[方法 : コード分析辞書をカスタマイズする](../Topic/How%20to:%20Customize%20the%20Code%20Analysis%20Dictionary.md)」を参照してください。  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、単語のスペルを訂正またはカスタム辞書に単語を追加します。 ユーザー辞書を使用する方法については、次を参照してください。[する方法: コード分析辞書をカスタマイズ](../code-quality/how-to-customize-the-code-analysis-dictionary.md)です。  
   
-## 警告を抑制する状況  
- この規則による警告は抑制しないでください。  正しいスペルの単語を使用すると、新しいソフトウェア ライブラリの習得に要する時間を短縮できます。  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則による警告は抑制しないでください。 正しく単語のスペルを減らすために必要な新しいソフトウェア ライブラリを習得するまで時間。  
   
-## 関連規則  
+## <a name="related-rules"></a>関連規則  
  [CA1704: 識別子は正しく入力されなければなりません](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)  
   
  [CA1703: リソース文字列は正しく入力されなければなりません](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)

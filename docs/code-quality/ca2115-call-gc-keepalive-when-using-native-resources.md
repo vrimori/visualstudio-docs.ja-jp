@@ -1,11 +1,10 @@
 ---
-title: 'CA2115: Call GC.KeepAlive when using native resources | Microsoft Docs'
+title: "Ca 2115: では、Gc が発生します。ネイティブ リソースを使用するときにキープア ライブ |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,71 +14,55 @@ helpviewer_keywords:
 - CA2115
 - CallGCKeepAliveWhenUsingNativeResources
 ms.assetid: f00a59a7-2c6a-4bbe-a1b3-7bf77d366f34
-caps.latest.revision: 18
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: f4ca0b7ce757b4a4b616015b7341f3bfa9ee7a86
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 98833f1feccd70c3bdf140b4d2be7a4ad1a5d6bf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: Call GC.KeepAlive when using native resources
+# <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: ネイティブ リソースを使用しているときには GC.KeepAlive を呼び出します
 |||  
 |-|-|  
 |TypeName|CallGCKeepAliveWhenUsingNativeResources|  
 |CheckId|CA2115|  
-|Category|Microsoft.Security|  
-|Breaking Change|Non Breaking|  
+|カテゴリ|Microsoft.Security|  
+|互換性に影響する変更点|中断なし|  
   
-## <a name="cause"></a>Cause  
- A method declared in a type with a finalizer references a <xref:System.IntPtr?displayProperty=fullName> or <xref:System.UIntPtr?displayProperty=fullName> field, but does not call <xref:System.GC.KeepAlive%2A?displayProperty=fullName>.  
+## <a name="cause"></a>原因  
+ ファイナライザーを含む型で宣言されたメソッドを参照して、<xref:System.IntPtr?displayProperty=fullName>または<xref:System.UIntPtr?displayProperty=fullName>フィールドでは呼び出しません<xref:System.GC.KeepAlive%2A?displayProperty=fullName>です。  
   
-## <a name="rule-description"></a>Rule Description  
- Garbage collection finalizes an object if there are no more references to it in managed code. Unmanaged references to objects do not prevent garbage collection. This rule detects errors that might occur because an unmanaged resource is being finalized while it is still being used in unmanaged code.  
+## <a name="rule-description"></a>規則の説明  
+ ガベージ コレクションは、マネージ コードで参照がある場合、オブジェクトを終了しません。 アンマネージ オブジェクトへの参照は、ガベージ コレクションを阻止しません。 この規則では、アンマネージ コードでまだ使用されているのに、アンマネージ リソースが終了されたときに発生する可能性のあるエラーを検出します。  
   
- This rule assumes that <xref:System.IntPtr> and <xref:System.UIntPtr> fields store pointers to unmanaged resources. Because the purpose of a finalizer is to free unmanaged resources, the rule assumes that the finalizer will free the unmanaged resource pointed to by the pointer fields. This rule also assumes that the method is referencing the pointer field to pass the unmanaged resource to unmanaged code.  
+ このルールでは<xref:System.IntPtr>と<xref:System.UIntPtr>フィールドは、アンマネージ リソースへのポインターを保存します。 ファイナライザーの目的は、アンマネージ リソースを解放はであるため、ルールでは、ポインターのフィールドによって示されるアンマネージ リソースをファイナライザーが解放される想定しています。 このルールでは、メソッドがアンマネージ コードにアンマネージ リソースを渡すポインター フィールドを参照していることも前提とします。  
   
-## <a name="how-to-fix-violations"></a>How to Fix Violations  
- To fix a violation of this rule, add a call to <xref:System.GC.KeepAlive%2A> to the method, passing the current instance (`this` in C# and C++) as the argument. Position the call after the last line of code where the object must be protected from garbage collection. Immediately after the call to <xref:System.GC.KeepAlive%2A>, the object is again considered ready for garbage collection assuming that there are no managed references to it.  
+## <a name="how-to-fix-violations"></a>違反の修正方法  
+ この規則違反を修正するには、呼び出しを追加して<xref:System.GC.KeepAlive%2A>、メソッドに渡して、現在のインスタンス (`this` c# および C++ で) の引数として。 ガベージ コレクションからオブジェクトを保護する必要があるコードの最後の行の後に呼び出しを配置します。 呼び出しの直後に<xref:System.GC.KeepAlive%2A>オブジェクトへの参照がマネージはないと想定されるガベージ コレクションの準備完了と見なされますもう一度です。  
   
-## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
- This rule makes some assumptions that can lead to false positives. You can safely suppress a warning from this rule if:  
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
+ この規則は、偽陽性につながる可能性があるいくつかの前提条件を使用します。 場合は、安全にこの規則による警告を抑制することができます。  
   
--   The finalizer does not free the contents of the <xref:System.IntPtr> or <xref:System.UIntPtr> field referenced by the method.  
+-   ファイナライザーの内容を確保できない、<xref:System.IntPtr>または<xref:System.UIntPtr>メソッドによって参照されるフィールドです。  
   
--   The method does not pass the <xref:System.IntPtr> or <xref:System.UIntPtr> field to unmanaged code.  
+-   メソッドは渡さないようにして、<xref:System.IntPtr>または<xref:System.UIntPtr>フィールドをアンマネージ コードにします。  
   
- Carefully review other messages before excluding them. This rule detects errors that are difficult to reproduce and debug.  
+ 慎重に除外する前に他のメッセージを確認します。 このルールは、再生やデバッグが困難なエラーを検出します。  
   
-## <a name="example"></a>Example  
- In the following example, `BadMethod` does not include a call to `GC.KeepAlive` and therefore violates the rule. `GoodMethod` contains the corrected code.  
+## <a name="example"></a>例  
+ 次の例では、`BadMethod`への呼び出しを含まない`GC.KeepAlive`し、そのため、規則に違反します。 `GoodMethod`修正後のコードが含まれています。  
   
 > [!NOTE]
->  This example is pseudo-code Although the code compiles and runs, the warning is not fired because an unmanaged resource is not created or freed.  
+>  この例では、コードをコンパイルして実行、擬似コード、アンマネージ リソースの作成または解放されていないために、この警告は発生しません。  
   
  [!code-csharp[FxCop.Security.IntptrAndFinalize#1](../code-quality/codesnippet/CSharp/ca2115-call-gc-keepalive-when-using-native-resources_1.cs)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  <xref:System.GC.KeepAlive%2A?displayProperty=fullName>   
  <xref:System.IntPtr?displayProperty=fullName>   
  <xref:System.Object.Finalize%2A?displayProperty=fullName>   
  <xref:System.UIntPtr?displayProperty=fullName>   
- [Dispose Pattern](/dotnet/standard/design-guidelines/dispose-pattern)
+ [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)
