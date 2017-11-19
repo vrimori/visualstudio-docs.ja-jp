@@ -1,44 +1,46 @@
 ---
-title: "方法: Office ソリューションを開発できるようにコンピューターを構成する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での Office 開発, インストール (ツールの)"
-  - "必要条件 [Visual Studio での Office 開発]"
+title: "方法: Office ソリューションを開発コンピューターの構成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- prerequisites [Office development in Visual Studio]
+- Office development in Visual Studio, installing tools
 ms.assetid: 76b463dc-43f0-47a1-845b-fe0a5e14bd80
-caps.latest.revision: 130
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 129
+caps.latest.revision: "130"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: e3fec17bdde7f559cafa3d12833585ffa0c03ab7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: Office ソリューションを開発できるようにコンピューターを構成する
-  Visual Studio の Microsoft Office Developer Tools を使用できるように開発コンピューターを構成するには、次のトピックの手順を実行します。  これらの手順を実行するには、開発コンピューターの管理特権を保持している必要があります。  
+# <a name="how-to-configure-a-computer-to-develop-office-solutions"></a>方法: Office ソリューションを開発できるようにコンピューターを構成する
+  Visual Studio の Microsoft Office Developer Tools を使用できるように開発コンピューターを構成するには、次のトピックの手順を実行します。 これらの手順を実行するには、開発コンピューターの管理特権を保持している必要があります。  
   
-### 開発コンピューターを構成するには  
+### <a name="to-configure-the-development-computer"></a>開発コンピューターを構成するには  
   
-1.  Office Developer Tools が含まれているバージョンの Visual Studio をインストールします。  Office 開発者ツールは既定でインストールされます。  インストールする機能を選択して Visual Studio のインストールをカスタマイズする場合は、セットアップ時に **\[Microsoft Office Developer Tools\]** を選択していることを確認してください。 Office Developer Tools が含まれているバージョンの Visual Studio の詳細については、「[Office ソリューションを開発できるようにコンピューターを構成する](../vsto/configuring-a-computer-to-develop-office-solutions.md)」を参照してください。  
+1.  Office Developer Tools が含まれているバージョンの Visual Studio をインストールします。 Office 開発者ツールは既定でインストールされます。 インストールする機能を選択すると、Visual Studio のインストールをカスタマイズする場合、以下のことを確認**Microsoft Office Developer Tools**はセットアップ中に選択します。 Office developer tools を含む Visual Studio のバージョンの詳細については、次を参照してください。 [Office ソリューションの開発コンピューターを構成する](../vsto/configuring-a-computer-to-develop-office-solutions.md)です。  
   
-2.  Visual Studio の Office Developer Tools によってサポートされているバージョンの Office をインストールします。  詳細については、「[Office ソリューションを開発できるようにコンピューターを構成する](../vsto/configuring-a-computer-to-develop-office-solutions.md)」を参照してください。  
+2.  Visual Studio の Office Developer Tools によってサポートされているバージョンの Office をインストールします。 詳細については、「 [Configuring a Computer to Develop Office Solutions](../vsto/configuring-a-computer-to-develop-office-solutions.md)」を参照してください。  
   
-     インストールするバージョンの Office の PIA もインストールされることを確認してください。  PIA は、既定では Office と共にインストールされます。  Office セットアップを変更する場合は、対象とするアプリケーションに対して **.NET プログラミング サポート**機能が選択されていることを確認します。  
+     インストールするバージョンの Office の PIA もインストールされることを確認してください。 PIA は、既定では Office と共にインストールされます。 Office セットアップを変更する場合、以下のことを確認、 **.NET プログラミング サポート**を対象とアプリケーションに対してこの機能を選択します。  
   
-3.  Windows の言語を英語以外に設定している状態で英語版の Visual Studio を使用する場合は、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] の Language Pack をインストールすることにより、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] のメッセージを Windows と同じ言語で表示できます。  英語版以外の Visual Studio では、この言語パックが自動的にインストールされます。  言語パックは、「[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=140386)」から入手できます。  
+3.  英語バージョンの Visual Studio ですが英語以外の設定を使用して、Windows の場合は、インストール、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]を表示する言語パック[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Windows と同じ言語でのメッセージ。 英語版以外の Visual Studio では、この言語パックが自動的にインストールされます。 言語パックがから利用可能な[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=140386)です。  
   
-## 参照  
- [Office 開発の新機能](http://msdn.microsoft.com/ja-jp/bf054af2-c896-4723-aa15-6381145b14bb)   
- [はじめに &#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
- [方法: Visual Studio Tools for Office の再頒布可能なランタイムをインストールする](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)   
- [方法 : Office のプライマリ相互運用機能アセンブリをインストールする](../vsto/how-to-install-office-primary-interop-assemblies.md)  
+## <a name="see-also"></a>関連項目  
+ [Office 開発の新機能](http://msdn.microsoft.com/en-us/bf054af2-c896-4723-aa15-6381145b14bb)   
+ [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [方法: for Office Runtime の再頒布可能パッケージ、Visual Studio Tools をインストール](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)   
+ [方法: Office のプライマリ相互運用機能アセンブリをインストールする](../vsto/how-to-install-office-primary-interop-assemblies.md)  
   
   

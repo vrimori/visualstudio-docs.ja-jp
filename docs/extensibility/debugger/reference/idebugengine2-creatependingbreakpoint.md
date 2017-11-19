@@ -1,63 +1,63 @@
 ---
-title: "IDebugEngine2::CreatePendingBreakpoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine2::CreatePendingBreakpoint"
-helpviewer_keywords: 
-  - "IDebugEngine2::CreatePendingBreakpoint"
+title: "IDebugEngine2::CreatePendingBreakpoint |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEngine2::CreatePendingBreakpoint
+helpviewer_keywords: IDebugEngine2::CreatePendingBreakpoint
 ms.assetid: 92e85b90-a931-48d9-89a7-a6edcb83ae5a
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: fdc73a2245390ec04cc3adc2b3a4ac4f5ced3f51
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEngine2::CreatePendingBreakpoint
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-デバッグ エンジン \(DE\) の保留中のブレークポイントを作成します。  
+# <a name="idebugengine2creatependingbreakpoint"></a>IDebugEngine2::CreatePendingBreakpoint
+デバッグ エンジン (DE) で保留中のブレークポイントを作成します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT CreatePendingBreakpoint(   
-   IDebugBreakpointRequest2*  pBPRequest,  
-   IDebugPendingBreakpoint2** ppPendingBP  
+```cpp  
+HRESULT CreatePendingBreakpoint(   
+   IDebugBreakpointRequest2*  pBPRequest,  
+   IDebugPendingBreakpoint2** ppPendingBP  
 );  
 ```  
   
-```c#  
-int CreatePendingBreakpoint(   
-   IDebugBreakpointRequest2     pBPRequest,  
-   out IDebugPendingBreakpoint2 ppPendingBP  
+```csharp  
+int CreatePendingBreakpoint(   
+   IDebugBreakpointRequest2     pBPRequest,  
+   out IDebugPendingBreakpoint2 ppPendingBP  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pBPRequest`  
- \[入力\] 作成する保留中のブレークポイントを表すオブジェクトの [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)。  
+ [in][IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)作成保留中のブレークポイントを記述するオブジェクト。  
   
  `ppPendingBP`  
- \[入力\] 保留中のブレークポイントを表す [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) のオブジェクトを返します。  
+ [out]返します、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)保留中のブレークポイントを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  通常 `pBPRequest` のパラメーターが無効または不完全な場合は `pBPRequest` のパラメーターが DE のでサポートされる言語と一致する `E_FAIL` を返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します通常`E_FAIL`場合、`pBPRequest`パラメーターがの場合は DE でサポートされている任意の言語と一致しません、`pBPRequest`パラメーターが無効か不完全です。  
   
-## 解説  
- 保留中のブレークポイントは主にコードにブレークポイントをバインドするために必要なすべての情報のコレクションです。  このメソッドから返される保留中のブレークポイントはコードに [バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) のメソッドが呼び出されるまでバインドされません。  
+## <a name="remarks"></a>コメント  
+ 保留中のブレークポイントは、本質的にコードにブレークポイントをバインドするために必要なすべての情報のコレクションです。 までのコードにこのメソッドから返される保留中のブレークポイントがバインドされていない、[バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)メソッドが呼び出されます。  
   
- それぞれの保留中のブレークポイントに設定してデバッグ セッションごとにアタッチされた DE マネージャー \(SDM\) でこのメソッドを呼び出します。  これはブレークポイントがde\-DE 上で動作するプログラムに対して有効であることを確認するかどうかを決定します。  
+ 各保留中のブレークポイントのユーザー セット セッション デバッグ マネージャー (SDM) このメソッドを呼び出します接続されている各 DE でします。 ブレークポイントがその DE で実行されているプログラムに対して有効であることを確認する DE の責任です。  
   
- ユーザーがコード行にブレークポイントがde\-DE このコードに対応するドキュメントに最も近いシーケンス ポイントの行にブレークポイントのバインディングを自由になります。  これはすべてのコードはデバッグ情報で属性を使用する場合\) はユーザーが複数行ステートメントの最初の行にブレークポイントを設定したを最後の行のようにバインドする。  
+ ユーザーは、コードの行にブレークポイントを設定、ときに、DE は無料でこのコードに対応するドキュメント内の最も近い行にブレークポイントをバインドします。 これにより、ユーザーが複数行のステートメントの最初の行にブレークポイントを設定が、(すべてのコードはデバッグ情報の属性) の最後の行にバインドします。  
   
-## 使用例  
- 次の例に `CProgram` の単純なオブジェクトに対してこのメソッドを実装する方法を示します。  DE の `IDebugEngine2::CreatePendingBreakpoint` の実装では各プログラムでこのメソッドの実装にすべての呼び出しを転送できます。  
+## <a name="example"></a>例  
+ 次の例は、単純なは、このメソッドを実装する方法を示します`CProgram`オブジェクト。 DE の実装、`IDebugEngine2::CreatePendingBreakpoint`各プログラムでメソッドのこの実装にすべての呼び出しを転送します。  
   
 ```  
 HRESULT CProgram::CreatePendingBreakpoint(IDebugBreakpointRequest2* pBPRequest, IDebugPendingBreakpoint2** ppPendingBP)     
@@ -71,7 +71,7 @@ HRESULT CProgram::CreatePendingBreakpoint(IDebugBreakpointRequest2* pBPRequest, 
 }    
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [バインド](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)   
  [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)   

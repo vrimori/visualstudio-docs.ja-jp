@@ -1,58 +1,58 @@
 ---
-title: "IDebugProgramNode2::GetHostName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramNode2::GetHostName"
-helpviewer_keywords: 
-  - "IDebugProgramNode2::GetHostName"
+title: "IDebugProgramNode2::GetHostName |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramNode2::GetHostName
+helpviewer_keywords: IDebugProgramNode2::GetHostName
 ms.assetid: 16aad1ff-ad34-4394-a2e4-5621374a7729
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 35414810e32e55775f6774ed25625d253c0480fe
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramNode2::GetHostName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プロセスホスティングの名前にプログラムを取得します。  
+# <a name="idebugprogramnode2gethostname"></a>IDebugProgramNode2::GetHostName
+プログラムをホストしているプロセスの名前を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetHostName (   
-   GETHOSTNAME_TYPE dwHostNameType,  
-   BSTR*            pbstrHostName  
+```cpp  
+HRESULT GetHostName (   
+   GETHOSTNAME_TYPE dwHostNameType,  
+   BSTR*            pbstrHostName  
 );  
 ```  
   
-```c#  
-int GetHostName (   
-   enum_GETHOSTNAME_TYPE dwHostNameType,  
-   out string            pbstrHostName  
+```csharp  
+int GetHostName (   
+   enum_GETHOSTNAME_TYPE dwHostNameType,  
+   out string            pbstrHostName  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwHostNameType`  
- \[出力\] 返される名前の [GETHOSTNAME\_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) の種類を指定する列挙体の値。  
+ [in]値、 [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md)を返す名前の型を指定する列挙です。  
   
  `pbstrHostName`  
- \[入力\] ホスティングプロセスの名前を返します。  
+ [out]ホスト プロセスの名前を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 使用例  
- 次の例に [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) インターフェイスを公開する `CProgram` の単純なオブジェクトに対してこのメソッドを実装する方法を示します。  この例ではモジュールのファイル パスの基本名から選択されるように `dwHostNameType` のパラメーターと戻り値をプログラムの名前だけを無視します。  
+## <a name="example"></a>例  
+ 次の例は、単純なは、このメソッドを実装する方法を示します`CProgram`を公開するオブジェクト、 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)インターフェイスです。 この例では無視、`dwHostNameType`パラメーターをモジュールのファイル パスのベース名から取得したように、プログラムの名前のみを返します。  
   
-```cpp#  
+```cpp  
 HRESULT CProgram::GetHostName(DWORD dwHostNameType, BSTR* pbstrHostName) {    
    // Check for valid argument.    
    if (pbstrHostName)    
@@ -94,7 +94,7 @@ HRESULT CProgram::GetHostName(DWORD dwHostNameType, BSTR* pbstrHostName) {
 }    
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
- [GETHOSTNAME\_TYPE](../../../extensibility/debugger/reference/gethostname-type.md)   
+ [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

@@ -1,58 +1,58 @@
 ---
-title: "IDebugProgram2::Continue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::Continue"
-helpviewer_keywords: 
-  - "IDebugProgram2::Continue"
+title: "IDebugProgram2::Continue |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgram2::Continue
+helpviewer_keywords: IDebugProgram2::Continue
 ms.assetid: e5a6e02a-d21b-4a03-a034-e8de1f71ce2e
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 81a8bf23ee0272f448c49b6d58d194d3ba261509
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram2::Continue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-停止状態からこのプログラムを実行する Continues。  の実行前の状態 \(ステップなど\) を再実行するプログラムの開始時に保持されます。  
+# <a name="idebugprogram2continue"></a>IDebugProgram2::Continue
+停止状態からこのプログラムの実行が続行されます。 (ステップ) など、以前の実行状態が保持されます、しを再度実行して、プログラムを開始します。  
   
 > [!NOTE]
->  このメソッドの使用は推奨されていません。  代わりに、[続行](../../../extensibility/debugger/reference/idebugprocess3-continue.md) メソッドを使用してください。  
+>  このメソッドは推奨されません。 使用して、[続行](../../../extensibility/debugger/reference/idebugprocess3-continue.md)メソッド代わりにします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Continue(   
-   IDebugThread2* pThread  
+```cpp  
+HRESULT Continue(   
+   IDebugThread2* pThread  
 );  
 ```  
   
-```c#  
-int Continue(   
-   IDebugThread2 pThread  
+```csharp  
+int Continue(   
+   IDebugThread2 pThread  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pThread`  
- \[入力\] スレッドを表すオブジェクトの [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)。  
+ [in][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)スレッドを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドはに関係なくプログラムをデバッグまたはプログラムが停止のイベントが生成されたかこのプログラムで呼び出されます。  実装では実行前を実行する前に停止しないように前回実行状態 \(ステップなど\) は実行を続ける必要があります。  つまり停止した他のプログラムやこのメソッドが呼び出されるためプログラムのスレッドが操作手順にして終了するとプログラムは元の操作手順を実行する必要があります。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、デバッグ中のプログラムの数、またはプログラムは stopping イベントの生成に関係なく、このプログラムで呼び出されます。 実装では、(ステップ) などの以前の実行状態を維持することはありませんが、以前の実行を完了する前に停止したかのように実行を続行します。 このプログラムにスレッドが、ステップ オーバー操作を行っていた動作、他のプログラムによって停止し、し、このメソッドが呼び出されたために、停止されましたには、プログラムは元のステップ オーバー操作を完了する必要があります。  
   
 > [!WARNING]
->  この呼び出しを処理している [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) に停止のイベントまたは直接の同期イベント \(\) を送信します ; デバッガーはハングする場合があります。  
+>  停止イベントまたは直接 (同期) イベントを送信しない[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)です。 この呼び出しを処理中にそれ以外の場合、デバッガーがハングアップします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   
- [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

@@ -1,52 +1,53 @@
 ---
-title: "IDebugPendingBreakpoint2::Bind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPendingBreakpoint2::Bind"
-helpviewer_keywords: 
-  - "Bind メソッド"
-  - "IDebugPendingBreakpoint2::Bind メソッド"
+title: "IDebugPendingBreakpoint2::Bind |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugPendingBreakpoint2::Bind
+helpviewer_keywords:
+- Bind method
+- IDebugPendingBreakpoint2::Bind method
 ms.assetid: 46e3f307-219d-40cd-a929-d41399c60ecf
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: de0efa5d070943f9cdface4f9864f2d95660c0ea
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPendingBreakpoint2::Bind
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-一つ以上のコード位置にこの保留中のブレークポイントをバインドします。  
+# <a name="idebugpendingbreakpoint2bind"></a>IDebugPendingBreakpoint2::Bind
+1 つまたは複数のコードの場所にこの保留中のブレークポイントをバインドします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Bind(   
-   void   
+```cpp  
+HRESULT Bind(   
+   void   
 );  
 ```  
   
-```c#  
+```csharp  
 int Bind();  
 ```  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  ブレークポイントが削除された `E_BP_DELETED` を返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`場合は、ブレークポイントが削除されました。  
   
-## 解説  
- このメソッドが呼び出されるとデバッグ エンジンは一致する \(DE\) すべてのコード位置にこの保留中のブレークポイントをバインドするようにする必要があります。  
+## <a name="remarks"></a>コメント  
+ このメソッドが呼び出されると、デバッグ エンジン (DE) する必要がありますに一致するすべてのコードの場所にこの保留中のブレークポイントをバインドしようとします。  
   
- こののメソッドから制御が戻った後呼び出し元または列挙 [EnumErrorBreakpoints](../Topic/IDebugPendingBreakpoint2::EnumErrorBreakpoints.md).methods がすべての境界またはエラーのブレークポイントを保留中のブレークポイントにバインドするか[EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) に呼び出して見なす前に誤っていることを示す各イベントを待機する必要があります。  
+ このメソッドが戻る後、呼び出し元が保留中のブレークポイントがバインドされていることを示すと想定するまでエラーはイベントへの呼び出しを待機する必要があります、 [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)または[EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md).methods では、バインドまたはエラーですべてのブレークポイントをそれぞれ列挙されます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md)   
  [IDebugBreakpointErrorEvent2](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)   
  [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)   
- [EnumErrorBreakpoints](../Topic/IDebugPendingBreakpoint2::EnumErrorBreakpoints.md)
+ [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)

@@ -1,52 +1,52 @@
 ---
-title: "IDebugMethodField::GetThis | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMethodField::GetThis"
-helpviewer_keywords: 
-  - "IDebugMethodField::GetThis メソッド"
+title: "IDebugMethodField::GetThis |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugMethodField::GetThis
+helpviewer_keywords: IDebugMethodField::GetThis method
 ms.assetid: cc235bea-e909-4d8c-ab54-936736c803fc
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 91c4e2b693ffcca1a88cde1372197026758eb7d3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugMethodField::GetThis
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-含むオブジェクトの `this` \([!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] の `Me`\) にメソッドのポインターを取得します。  
+# <a name="idebugmethodfieldgetthis"></a>IDebugMethodField::GetThis
+取得、 `this` (`Me`で[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]) メソッドを含むオブジェクトのポインター。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetThis(   
-   IDebugClassField** ppClass  
+```cpp  
+HRESULT GetThis(   
+   IDebugClassField** ppClass  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetThis(  
-   out IDebugClassField ppClass  
+   out IDebugClassField ppClass  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppClass`  
- \[入力\] [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) に「」ポインターを返します。  
+ [out]返します、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) "this"ポインターを表すオブジェクト。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- オブジェクト指向言語ではクラスの現在のインスタンス化に暗黙的なポインターでは通常です。  これは C\#\/C\+\+ の `this` と [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] の `Me` と呼ばれます。  
+## <a name="remarks"></a>コメント  
+ オブジェクト指向言語では通常、クラスの現在のインスタンス化への暗黙のポインターです。 これと呼ばれます`this`(C#)/C++ として`Me`で[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

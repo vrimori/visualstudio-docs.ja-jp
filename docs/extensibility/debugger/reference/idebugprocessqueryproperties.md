@@ -1,53 +1,54 @@
 ---
-title: "IDebugProcessQueryProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugProcessQueryProperties"
+title: "IDebugProcessQueryProperties |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugProcessQueryProperties
 ms.assetid: ce29a248-81a0-42c0-99a7-1606e8c548ec
-caps.latest.revision: 4
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2c3d9436ed82f7dc036e43df4c87d52a30210e08
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProcessQueryProperties
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスは [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) の実装によって実装される機能拡張インターフェイスです。  モデルは実装がデバッグ プロセスの環境情報を取得するようにします。  
+# <a name="idebugprocessqueryproperties"></a>IDebugProcessQueryProperties
+このインターフェイスはによって実装される拡張機能インターフェイス[IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)実装します。 これにより、デバッグ プロセス環境に関する情報を取得する実行者できます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugProcessQueryProperties: IUnknown  
 ```  
   
-## 実装についてのメモ  
- デバッグ プロセスの実行環境情報を取得するにはこのインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デバッグ プロセスの実行環境に関する情報を取得するには、このインターフェイスを実装します。  
   
-## Vtable の順序でメソッド  
- 次の表は `IDebugProcessQueryProperties` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IDebugProcessQueryProperties`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[QueryProperty](../Topic/IDebugProcessQueryProperties::QueryProperty.md)|プロパティ値を照会します。|  
-|[QueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperties.md)|プロパティ値を照会します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[QueryProperty](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperty.md)|プロパティの値を照会します。|  
+|[QueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperties.md)|プロパティの値を照会します。|  
   
-## 解説  
- このインターフェイスは実装されていません。  
+## <a name="remarks"></a>コメント  
+ このインターフェイスは実装はほとんどありません。  
   
-## 必要条件  
- ヘッダー : Portpriv.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Portpriv.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

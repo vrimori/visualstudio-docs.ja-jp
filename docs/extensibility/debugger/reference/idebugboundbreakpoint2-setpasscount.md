@@ -1,57 +1,58 @@
 ---
-title: "IDebugBoundBreakpoint2::SetPassCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBoundBreakpoint2::SetPassCount"
-helpviewer_keywords: 
-  - "SetPassCount メソッド"
-  - "IDebugBoundBreakpoint2::SetPassCount メソッド"
+title: "IDebugBoundBreakpoint2::SetPassCount |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugBoundBreakpoint2::SetPassCount
+helpviewer_keywords:
+- SetPassCount method
+- IDebugBoundBreakpoint2::SetPassCount method
 ms.assetid: b32c12f9-b34d-43bd-a1b9-61af6cf8e51b
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4bc3ca953a6a0eacb20862627d2cbc39f11d404b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugBoundBreakpoint2::SetPassCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-パスの数がこのバインド ブレークポイントに関連付けられている変更または設定します。  
+# <a name="idebugboundbreakpoint2setpasscount"></a>IDebugBoundBreakpoint2::SetPassCount
+設定またはこのバインドされたブレークポイントに関連付けられたパスの数を変更します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT SetPassCount(   
-   BP_PASSCOUNT bpPassCount  
+```cpp  
+HRESULT SetPassCount(   
+   BP_PASSCOUNT bpPassCount  
 );  
 ```  
   
-```c#  
-int SetPassCount(   
-   BP_PASSCOUNT bpPassCount  
+```csharp  
+int SetPassCount(   
+   BP_PASSCOUNT bpPassCount  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `bpPassCount`  
- \[入力\] パスの数を指定する [BP\_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) の構造体。  
+ [in][BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)をパスの数を指定します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  バインドされたブレークポイントのオブジェクトの状態が `BPS_DELETED` \([BP\_STATE](../../../extensibility/debugger/reference/bp-state.md) の列挙型の一部\) に設定されて `E_BP_DELETED` を返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`バインドされたブレークポイント オブジェクトの状態は に設定されているかどうかは`BPS_DELETED`(の一部、 [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙型)。  
   
-## 解説  
- パスの数はブレークポイントに発生するかを指定します。  現在のパスまたはヒット カウントが [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md) のメソッドを呼び出して取得できます。  
+## <a name="remarks"></a>コメント  
+ パスの数は、ブレークポイントの発生タイミングを決定します。 現在のパスまたはヒット カウントを呼び出すことによって取得することができます、 [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md)メソッドです。  
   
- このブレークポイントが関連付けられているパスの数は失われます。  
+ 以前このブレークポイントに関連付けられていたパスの数が失われます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
  [GetHitCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-gethitcount.md)   
- [BP\_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
- [BP\_STATE](../../../extensibility/debugger/reference/bp-state.md)
+ [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
+ [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

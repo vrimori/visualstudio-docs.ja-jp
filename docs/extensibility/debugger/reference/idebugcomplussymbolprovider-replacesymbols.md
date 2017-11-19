@@ -1,62 +1,64 @@
 ---
-title: "IDebugComPlusSymbolProvider::ReplaceSymbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ReplaceSymbols"
-  - "IDebugComPlusSymbolProvider::ReplaceSymbols"
+title: "IDebugComPlusSymbolProvider::ReplaceSymbols |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ReplaceSymbols
+- IDebugComPlusSymbolProvider::ReplaceSymbols
 ms.assetid: 82fbc8db-c4b1-432f-bec9-1a9dc09570be
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: f4afd217521e19468db984d085fc55b568e891ce
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugComPlusSymbolProvider::ReplaceSymbols
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-指定されたデータ ストリームの要素と現在のデバッグ シンボルを置き換えます。  
+# <a name="idebugcomplussymbolproviderreplacesymbols"></a>IDebugComPlusSymbolProvider::ReplaceSymbols
+指定したデータ ストリーム内の現在のデバッグ シンボルを置換します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT ReplaceSymbols(  
-   ULONG32  ulAppDomainID,  
-   GUID     guidModule,  
-   IStream* pStream  
+   ULONG32  ulAppDomainID,  
+   GUID     guidModule,  
+   IStream* pStream  
 );  
 ```  
   
-```c#  
+```csharp  
 int ReplaceSymbols(  
-   uint    ulAppDomainID,  
-   Guid    guidModule,  
-   IStream pStream  
+   uint    ulAppDomainID,  
+   Guid    guidModule,  
+   IStream pStream  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ulAppDomainID`  
- \[出力\] アプリケーション ドメインの ID。  
+ [in]アプリケーション ドメインの識別子。  
   
  `guidModule`  
- \[出力\] モジュールの一意の識別子。  
+ [in]モジュールの一意の識別子。  
   
  `pStream`  
- \[入力\] 新しいシンボルを含むデータ ストリーム。  
+ [in]新しいシンボルを格納するデータ ストリーム。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 使用例  
- 次の例に [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider の**  オブジェクトに対してこのメソッドを実装する方法を示します。  
+## <a name="example"></a>例  
+ 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスです。  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::ReplaceSymbols(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -79,5 +81,5 @@ Error:
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

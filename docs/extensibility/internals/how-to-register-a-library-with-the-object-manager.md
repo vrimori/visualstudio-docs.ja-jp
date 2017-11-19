@@ -1,54 +1,56 @@
 ---
-title: "方法: オブジェクト マネージャにライブラリを登録 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ライブラリ、オブジェクト マネージャーに登録します。"
-  - "IVsLibrary2 インターフェイス、オブジェクト マネージャーでライブラリの登録"
-  - "IVsSimpleLibrary2 インターフェイス、オブジェクト マネージャーでライブラリの登録"
-  - "IVsObjectManager2 インターフェイス、オブジェクト マネージャーでライブラリの登録"
-  - "ライブラリ、ツールのシンボル参照"
+title: "方法: オブジェクト マネージャーにライブラリを登録 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- libraries, registering with object manager
+- IVsLibrary2 interface, registering library with object manager
+- IVsSimpleLibrary2 interface, registering library with object manager
+- IVsObjectManager2 interface, registering library with object manager
+- libraries, symbol-browsing tools
 ms.assetid: f124dd05-cb0f-44ad-bb2a-7c0b34ef4038
-caps.latest.revision: 26
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 6782e1cb84f4fbbe63a0e69a5c684d44ec7ccd21
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: オブジェクト マネージャにライブラリを登録
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ツール **クラス ビュー**  など **オブジェクト ブラウザー**  はシンボル参照して  **呼び出しブラウザー**  と  **シンボルの検索結果**  はプロジェクトまたは外部コンポーネントのシンボルを表示することができます。  シンボルは名前空間クラスインターフェイスメソッドおよびそのほかの言語要素が含まれます。  ライブラリはこれらのシンボルを追跡しデータ ツールの設定 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のオブジェクト マネージャーに公開します。  
+# <a name="how-to-register-a-library-with-the-object-manager"></a>方法: オブジェクト マネージャーにライブラリを登録
+シンボル参照などのツール、**クラス ビュー**、**オブジェクト ブラウザー**、**呼び出しブラウザー**と**シンボルの検索結果**、表示します。または外部コンポーネントで、プロジェクト内の記号。 シンボルには、名前空間、クラス、インターフェイス、メソッド、およびその他の言語要素が含まれます。 ライブラリには、これらのシンボルを追跡しには公開、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]オブジェクト マネージャーでデータ ツールは、メンバーを追加します。  
   
- オブジェクト マネージャーはすべての使用可能なライブラリを追跡します。  各ライブラリはオブジェクト マネージャーにシンボル参照がシンボルを提供する前に登録する必要があります。  
+ オブジェクト マネージャーは、使用可能なすべてのライブラリを追跡します。 各ライブラリは、シンボル参照のツールのシンボルを提供する前に、オブジェクト マネージャーを登録する必要があります。  
   
- 通常VSPackage の読み込み時にライブラリを登録します。  ただし必要に応じて別の時点にできます。  VSPackage の終了時にライブラリの登録を解除します。  
+ 通常、VSPackage を読み込むときに、ライブラリを登録します。 ただし、その実行できます別の時に必要に応じて。 VSPackage がシャット ダウンすると、ライブラリが登録解除します。  
   
- ライブラリを登録するには<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterLibrary%2A> のメソッドを使用します。  マネージ コード ライブラリの場合<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> のメソッドを使用します。  
+ ライブラリを登録するには、使用、<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterLibrary%2A>メソッドです。 マネージ コード ライブラリを使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>メソッドです。  
   
- ライブラリの登録を解除するには<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> のメソッドを使用します。  
+ ライブラリの登録を解除するを使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A>メソッドです。  
   
- オブジェクト マネージャーへの参照を <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> は`GetService` のメソッドに移動するには<xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> サービス ID を渡します。  
+ オブジェクト マネージャーへの参照を取得する<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>、渡す、<xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager>サービス ID に`GetService`メソッドです。  
   
-## オブジェクト マネージャーを使用してライブラリを登録または登録解除します  
+## <a name="registering-and-unregistering-a-library-with-the-object-manager"></a>登録と、オブジェクト マネージャーにライブラリを登録解除  
   
-#### オブジェクト マネージャーを使用してライブラリを登録するには  
+#### <a name="to-register-a-library-with-the-object-manager"></a>オブジェクト マネージャーにライブラリを登録するには  
   
 1.  ライブラリを作成します。  
   
-    ```vb#  
+    ```vb  
     Private m_CallBrowserLibrary As CallBrowser.Library = Nothing  
     Private m_nLibraryCookie As UInteger = 0  
     ' Create Library.  
     m_CallBrowserLibrary = New CallBrowser.Library()  
     ```  
   
-    ```c#  
+    ```csharp  
     private CallBrowser.Library m_CallBrowserLibrary = null;  
     private uint m_nLibraryCookie = 0;  
     // Create Library.  
@@ -56,9 +58,9 @@ caps.handback.revision: 26
   
     ```  
   
-2.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> 型のオブジェクトへの参照を取得し<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> のメソッドを呼び出します。  
+2.  オブジェクトへの参照を取得、<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>を入力し、呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>メソッドです。  
   
-    ```vb#  
+    ```vb  
     Private Sub RegisterLibrary()  
         If m_nLibraryCookie <> 0 Then  
             Throw New Exception("Library already registered with Object Manager")  
@@ -81,7 +83,7 @@ caps.handback.revision: 26
     End Sub  
     ```  
   
-    ```c#  
+    ```csharp  
     private void RegisterLibrary()  
     {  
         if (m_nLibraryCookie != 0)  
@@ -110,11 +112,11 @@ caps.handback.revision: 26
   
     ```  
   
-#### オブジェクト マネージャーを使用してライブラリの登録を解除します。  
+#### <a name="to-unregister-a-library-with-the-object-manager"></a>オブジェクト マネージャーで、ライブラリの登録を解除するには  
   
-1.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> 型のオブジェクトへの参照を取得し<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> のメソッドを呼び出します。  
+1.  オブジェクトへの参照を取得、<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>を入力し、呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A>メソッドです。  
   
-    ```vb#  
+    ```vb  
     Private Sub UnregisterLibrary()  
         If m_nLibraryCookie <> 0 Then  
             ' Obtain a reference to IVsObjectManager2 type object.  
@@ -136,7 +138,7 @@ caps.handback.revision: 26
     End Sub  
     ```  
   
-    ```c#  
+    ```csharp  
     private void UnregisterLibrary()  
     {  
         if (m_nLibraryCookie != 0)  
@@ -165,7 +167,7 @@ caps.handback.revision: 26
   
     ```  
   
-## 参照  
- [従来の言語サービスの拡張機能](../../extensibility/internals/legacy-language-service-extensibility.md)   
+## <a name="see-also"></a>関連項目  
+ [レガシ言語サービスの機能拡張](../../extensibility/internals/legacy-language-service-extensibility.md)   
  [シンボル参照のツールのサポート](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
- [方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
+ [方法: ライブラリによって提供されるシンボルのリストをオブジェクト マネージャーに公開する](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

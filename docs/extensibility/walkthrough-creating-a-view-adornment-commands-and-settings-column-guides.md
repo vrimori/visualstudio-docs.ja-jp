@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a2df0a3-42da-4f7b-996f-ee16a35ac922
-caps.latest.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3db7dea958fb3d80a109c021ffb20260f0748bba
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c1836489b1845bca9e57daf83fc97bafeaf9da72
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="walkthrough-creating-a-view-adornment-commands-and-settings-column-guides"></a>チュートリアル: 作成ビュー装飾、コマンド、および設定 (列ガイド)
 コマンドのエフェクトの表示と Visual Studio テキストまたはコード エディターを拡張することができます。  このトピックでは、人気のある拡張機能、列ガイドを開始する方法を示します。  列ガイドは、コードを特定の列の幅を管理するために、テキスト エディターのビューに描画される線を視覚的に明るいできます。  具体的には書式設定されたコードは、ドキュメント、ブログの投稿に含めるか、バグのレポートのサンプルについては重要でもあります。  
@@ -68,13 +53,13 @@ ms.lasthandoff: 09/26/2017
   
 -   `ColumnGuideCommands` .Vsct ファイルで宣言されているユーザーのコマンドを実装して、コマンドのコマンド ハンドラーをフックするオブジェクト。  
   
- **VSIX**です。  使用して**ファイル & #124 です。新機能。。。**プロジェクトを作成するコマンド。  左側のナビゲーション ウィンドウで c# の機能拡張ノードを選択して、 **VSIX プロジェクト**右側のウィンドウでします。  ColumnGuides の名前を入力し、選択**OK**プロジェクトを作成します。  
+ **VSIX**です。  使用して**ファイル &#124;です。新機能。。。**プロジェクトを作成するコマンド。  左側のナビゲーション ウィンドウで c# の機能拡張ノードを選択して、 **VSIX プロジェクト**右側のウィンドウでします。  ColumnGuides の名前を入力し、選択**OK**プロジェクトを作成します。  
   
- **表示要素の表示**です。  ソリューション エクスプ ローラーでプロジェクト ノードを右のポインター ボタンを押します。  選択、**追加 & #124 です。新しい項目は.**新しいビュー装飾項目を追加するコマンド。  選択**Extensibility & #124 です。エディター**左側のナビゲーション ウィンドウで選択および**エディター ビューポートの表示要素**右側のウィンドウでします。  項目名として ColumnGuideAdornment 名前を入力し、選択**追加**に追加します。  
+ **表示要素の表示**です。  ソリューション エクスプ ローラーでプロジェクト ノードを右のポインター ボタンを押します。  選択、**追加 &#124;です。新しい項目は.**新しいビュー装飾項目を追加するコマンド。  選択**Extensibility &#124;です。エディター**左側のナビゲーション ウィンドウで選択および**エディター ビューポートの表示要素**右側のウィンドウでします。  項目名として ColumnGuideAdornment 名前を入力し、選択**追加**に追加します。  
   
  この項目テンプレート プロジェクト (だけでなく参照およびなど) に 2 つのファイルを追加するを参照してください: ColumnGuideAdornment.cs と ColumnGuideAdornmentTextViewCreationListener.cs です。  テンプレートは、ビュー上だけ紫の四角形を描画します。  以下、いくつかのビューの作成のリスナーに行を変更して ColumnGuideAdornment.cs の内容に置き換えます。  
   
- **コマンド**です。  ソリューション エクスプ ローラーでプロジェクト ノードを右のポインター ボタンを押します。  選択、**追加 & #124 です。新しい項目は.**新しいビュー装飾項目を追加するコマンド。  選択**Extensibility & #124 です。VSPackage**左側のナビゲーション ウィンドウで選択および**にカスタム コマンド**右側のウィンドウでします。  項目名として ColumnGuideCommands 名前を入力し、選択**追加**に追加します。  いくつかの参照に加えて ColumnGuideCommands.cs、ColumnGuideCommandsPackage.cs、および ColumnGuideCommandsPackage.vsct コマンドとパッケージを追加する追加されます。  以下を定義し、コマンドの実装の最初と最後のファイルの内容が置き換わります。  
+ **コマンド**です。  ソリューション エクスプ ローラーでプロジェクト ノードを右のポインター ボタンを押します。  選択、**追加 &#124;です。新しい項目は.**新しいビュー装飾項目を追加するコマンド。  選択**Extensibility &#124;です。VSPackage**左側のナビゲーション ウィンドウで選択および**にカスタム コマンド**右側のウィンドウでします。  項目名として ColumnGuideCommands 名前を入力し、選択**追加**に追加します。  いくつかの参照に加えて ColumnGuideCommands.cs、ColumnGuideCommandsPackage.cs、および ColumnGuideCommandsPackage.vsct コマンドとパッケージを追加する追加されます。  以下を定義し、コマンドの実装の最初と最後のファイルの内容が置き換わります。  
   
 ## <a name="setting-up-the-text-view-creation-listener"></a>テキスト ビューの作成のリスナーを設定します。  
  ColumnGuideAdornmentTextViewCreationListener.cs をエディターで開きます。  このコードは、for Visual Studio でのテキスト ビューを作成するときにハンドラーを実装します。  ビューの特性に応じて、ハンドラーが呼び出されたときを制御する属性があります。  
@@ -1302,7 +1287,7 @@ private static int GetCaretColumn(IWpfTextView textView)
  現在の列を持つ取り掛かるユーザーがクリックした場合、コードだけ呼び出しを追加または削除、列の設定マネージャーでします。  設定マネージャーがすべてにイベントを発生させる`ColumnGuideAdornment`オブジェクトをリッスンします。  イベントが発生したとき、これらのオブジェクトは、新しい列ガイドの設定で、関連付けられているテキスト ビューを更新します。  
   
 ## <a name="invoking-command-from-the-command-window"></a>コマンド ウィンドウからコマンドを呼び出し  
- 列ガイド サンプルでは、機能拡張の形式としてコマンド ウィンドウから次の 2 つのコマンドを呼び出すことができます。  使用する場合、**ビュー & #124 です。その他の Windows & #124 です。コマンド ウィンドウ**コマンド、コマンド ウィンドウを確認できます。  「編集」を入力して、コマンド ウィンドウと対話でき、コマンド名の補完機能と 120 の引数を指定することは、次があります。  
+ 列ガイド サンプルでは、機能拡張の形式としてコマンド ウィンドウから次の 2 つのコマンドを呼び出すことができます。  使用する場合、**ビュー &#124;です。その他の Windows &#124;です。コマンド ウィンドウ**コマンド、コマンド ウィンドウを確認できます。  「編集」を入力して、コマンド ウィンドウと対話でき、コマンド名の補完機能と 120 の引数を指定することは、次があります。  
   
 ```  
 > Edit.AddColumnGuide 120  

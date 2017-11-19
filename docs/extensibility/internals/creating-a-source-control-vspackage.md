@@ -1,45 +1,47 @@
 ---
-title: "ソース コントロール VSPackage を作成します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ソース管理パッケージを作成するソース管理 [Visual Studio SDK]"
-  - "ソース管理パッケージ"
+title: "ソース コントロールの VSPackage の作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- source control [Visual Studio SDK], creating source control packages
+- source control packages
 ms.assetid: cca0a9ed-48ff-409f-8036-ed8db0f7533e
-caps.latest.revision: 23
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4c3d414f1fcf6a7f4cd4155eb04e3696fb39740a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ソース コントロール VSPackage を作成します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ここでは統合されたソース管理パッケージ アーキテクチャの概要に [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]実装されるインターフェイスおよび実行するサービスによって定義された単純なソース管理パッケージの実装を示すサンプルが含まれています\) を持つリンクを示します。  
+# <a name="creating-a-source-control-vspackage"></a>ソース コントロールの VSPackage の作成
+このドキュメントには、統合されたソース管理パッケージのアーキテクチャの概要へのリンクが含まれています[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、実装するインターフェイスとを使用するサービスで定義されている API と簡単なソースを示すサンプル。パッケージの実装を制御します。  
   
- ソース管理 VSPackage を使用すると[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を使用すると統合するにはソース コントロールの内側の統合のパスを作成できます。  これは [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] でバイパスしプロジェクトのソース管理システムからの要求にホストし既定のソース コントロールの UI を  **ソリューション エクスプローラー**  などの [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のコンポーネントとやり取りするためのパッケージができます。  [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] はサービスのモデルを使用して [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] と統合する VSPackage を作成する機能を持つ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のパートナーにアクセス許可を与えます。  
+ ソース管理で VSPackage をソース管理と統合するための緊密な統合パスを作成できます[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 これにより、パッケージを既定のソース管理でホストされている UI をバイパスする[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクト システムからのソース制御要求に応答、および対話[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]などのコンポーネント**ソリューション エクスプ ローラー**です。 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]支援[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]と統合できる VSPackage を作成するメカニズムと提携して[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]サービス モデルを使用します。  
   
-## このセクションの内容  
- [作業の開始](../../extensibility/internals/getting-started-with-source-control-vspackages.md)  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のソース管理機能を実装するためのソース管理プラグインに高度な方法とソース管理パッケージについて説明します。  
+## <a name="in-this-section"></a>このセクションの内容  
+ [はじめに](../../extensibility/internals/getting-started-with-source-control-vspackages.md)  
+ ソース管理プラグインでソース管理機能を実装するために代わるより高度な手段であるソース管理パッケージについて説明します[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
   
  [アーキテクチャ](../../extensibility/internals/source-control-vspackage-architecture.md)  
- 図を示しソース管理パッケージ コンポーネントについて説明します。  
+ ダイアグラムを表示し、ソース管理パッケージのコンポーネントについて説明します。  
   
- [フィーチャー](../../extensibility/internals/source-control-vspackage-features.md)  
- パッケージ ソース管理のさまざまな機能について説明します。  
+ [機能](../../extensibility/internals/source-control-vspackage-features.md)  
+ ソース管理パッケージのさまざまな機能をについて説明します。  
   
  [デザイン要素](../../extensibility/internals/source-control-vspackage-design-elements.md)  
- パッケージのソース管理統合するために実行する必要のある VSPackage の構造体について説明します。  
+ ソース管理パッケージを緊密な統合を実装する必要があります、VSPackage の構造について説明します。  
   
-## 関連項目  
+## <a name="related-sections"></a>関連項目  
  [ソース管理プラグインの作成](../../extensibility/internals/creating-a-source-control-plug-in.md)  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のソース管理のユーザー インターフェイスのソース管理プラグインをそのためのソース管理機能作成する方法について \(UI\) 説明します。  
+ ソース管理機能を提供するソース管理プラグインを作成する方法について説明します、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース制御ユーザー インターフェイス (UI)。  
   
  [ソース管理](../../extensibility/internals/source-control.md)  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の統合機能としてソース管理を実装するためのオプションについて説明します。
+ 統合の機能としてソース管理を実装するためのオプションについて説明[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。

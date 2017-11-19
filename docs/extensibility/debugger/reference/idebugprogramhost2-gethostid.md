@@ -1,49 +1,49 @@
 ---
-title: "IDebugProgramHost2::GetHostId | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramHost2::GetHostId"
-helpviewer_keywords: 
-  - "IDebugProgramHost2::GetHostId"
+title: "IDebugProgramHost2::GetHostId |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramHost2::GetHostId
+helpviewer_keywords: IDebugProgramHost2::GetHostId
 ms.assetid: 7702e221-feb1-446b-a224-cb46c420987e
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: af778ce0f2b5d14a952426abe6d068e7b8ff6b30
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramHost2::GetHostId
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プロセスホスティングのプロセス識別子にこのプログラムを取得します。  
+# <a name="idebugprogramhost2gethostid"></a>IDebugProgramHost2::GetHostId
+このプログラムをホストしているプロセスのプロセス id を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetHostId(   
-   AD_PROCESS_ID* pdwId  
+```cpp  
+HRESULT GetHostId(   
+   AD_PROCESS_ID* pdwId  
 );  
 ```  
   
-```c#  
-int GetHostId(   
-   AD_PROCESS_ID[] pdwId  
+```csharp  
+int GetHostId(   
+   AD_PROCESS_ID[] pdwId  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pdwId`  
- \[入力出力\] プロセス ID 情報が格納されます [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md) の構造体。  
+ [入力、出力].[AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)プロセス id 情報が入力構造です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)   
- [AD\_PROCESS\_ID](../../../extensibility/debugger/reference/ad-process-id.md)
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

@@ -1,70 +1,70 @@
 ---
-title: "IDebugProcess3::Step | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcess3::Step"
-helpviewer_keywords: 
-  - "IDebugProcess3::Step"
+title: "IDebugProcess3::Step |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProcess3::Step
+helpviewer_keywords: IDebugProcess3::Step
 ms.assetid: 6ad9094c-27cc-4927-8a7c-1b4d97b2e436
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d7bd62bc141e3c5c63a887f683b7e252d466ea83
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProcess3::Step
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-手順 1 の命令またはステートメントにプロセスを指定します。  
+# <a name="idebugprocess3step"></a>IDebugProcess3::Step
+1 つの命令またはステートメントにステップ イン プロセスをさせます。  
   
 > [!NOTE]
->  このメソッドは [ステップ](../../../extensibility/debugger/reference/idebugprogram2-step.md) の代わりに使用されます。  
+>  このメソッドは、の代わりに使用する必要があります[ステップ](../../../extensibility/debugger/reference/idebugprogram2-step.md)です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT Step(  
-   IDebugThread2* pThread,  
-   STEPKIND       sk,  
-   STEPUNIT       step,  
+   IDebugThread2* pThread,  
+   STEPKIND       sk,  
+   STEPUNIT       step,  
 );  
 ```  
   
-```c#  
+```csharp  
 int Step(  
-   IDebugThread2 pThread,   
-   enum_STEPKIND sk,   
-   enum_STEPUNIT step  
+   IDebugThread2 pThread,   
+   enum_STEPKIND sk,   
+   enum_STEPUNIT step  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pThread`  
- \[入力\] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) の実行スレッドを表すオブジェクト。  
+ [in][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)ステップが実行されているスレッドを表すオブジェクト。  
   
  `sk`  
- \[入力\] [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) 値のいずれか 1 つが。  
+ [in]1 つ、 [STEPKIND](../../../extensibility/debugger/reference/stepkind.md)値。  
   
  `step`  
- \[入力\] [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) 値のいずれか 1 つが。  
+ [in]1 つ、 [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md)値。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コードを返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。エラー コードを返しますそれ以外の場合。  
   
-## 解説  
- スレッド間にスレッド同期または通信がある場合プロセス内のスレッドは特定のスレッドをステップ実行するときに実行する必要があります。  
+## <a name="remarks"></a>コメント  
+ 任意のスレッドの同期またはスレッド間の通信が、特定のスレッドがステップ実行時プロセスの他のスレッドを実行します。  
   
- **警告**  は [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)この呼び出しを処理している停止のイベントまたは直接の同期イベントを送信しません \(\); デバッガーはハングする場合があります。  
+ **警告**停止イベントまたは直接 (同期) イベントを送信しない[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)です。 この呼び出しを処理中にそれ以外の場合、デバッガーがハングアップします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [STEPKIND](../../../extensibility/debugger/reference/stepkind.md)   
  [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md)   
- [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

@@ -1,27 +1,30 @@
 ---
-title: "IApplicationDebugger::onDebuggerEvent | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IApplicationDebugger::onDebuggerEvent |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IApplicationDebugger.onDebuggerEvent
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IApplicationDebugger::onDebuggerEvent"
+helpviewer_keywords: IApplicationDebugger::onDebuggerEvent
 ms.assetid: 82a5faaa-1222-4bf1-8569-10439dbdf16d
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 754c56b8474a5e21a05c1399540391197c373118
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IApplicationDebugger::onDebuggerEvent
+# <a name="iapplicationdebuggerondebuggerevent"></a>IApplicationDebugger::onDebuggerEvent
 カスタム アプリケーションのイベントを処理します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT onDebuggerEvent(  
@@ -30,28 +33,28 @@ HRESULT onDebuggerEvent(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `riid`  
- \[入力\]オブジェクトのインターフェイス ID。  
+ [in]オブジェクトのインターフェイスの識別子です。  
   
  `punk`  
- \[入力\]インターフェイスを実装するイベント オブジェクト、`riid`で定義されています。  
+ [in]によって定義されたインターフェイスを実装するイベント オブジェクト`riid`です。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
-|`E_NOTIMPL`|メソッドは、現在実行されません。|  
+|`E_NOTIMPL`|メソッドは現在実装されていません。|  
   
-## 解説  
- `IUnknown` のセマンティクスは完全に定義されたアプリケーションとデバッガーがあります。  
+## <a name="remarks"></a>コメント  
+ セマンティクス、`IUnknown`は完全に定義されているアプリケーション/デバッガーです。  
   
- このメソッドは、デバッガーのモデル カスタム拡張を可能にします; これは、現在実行されません。  
+ この方法により、デバッガー モデルのカスタム拡張機能現在実装されていません。  
   
- このメソッドは `IDebugApplication::FireDebuggerEvent` が呼び出されたときに呼び出されます。  
+ このメソッドが呼び出されます`IDebugApplication::FireDebuggerEvent`と呼びます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IApplicationDebugger インターフェイス](../../winscript/reference/iapplicationdebugger-interface.md)   
  [IDebugApplication::FireDebuggerEvent](../../winscript/reference/idebugapplication-firedebuggerevent.md)

@@ -1,49 +1,49 @@
 ---
-title: "IDebugProgramEx2::GetProgramNode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramEx2::Attach"
-helpviewer_keywords: 
-  - "IDebugProgramEx2::Attach"
+title: "IDebugProgramEx2::GetProgramNode |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgramEx2::Attach
+helpviewer_keywords: IDebugProgramEx2::Attach
 ms.assetid: 1545ffbf-1422-4b5d-9bb9-314ba8665041
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 363526a29e3ad490b3041149c2c2186bbe94738a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramEx2::GetProgramNode
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プログラムのノードをプログラムに関連付けられているを取得します。  
+# <a name="idebugprogramex2getprogramnode"></a>IDebugProgramEx2::GetProgramNode
+プログラムに関連付けられているプログラムのノードを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetProgramNode(   
-   IDebugProgramNode2** ppProgramNode  
+```cpp  
+HRESULT GetProgramNode(   
+   IDebugProgramNode2** ppProgramNode  
 );  
 ```  
   
-```c#  
-int GetProgramNode(   
-   out IDebugProgramNode2 ppProgramNode  
+```csharp  
+int GetProgramNode(   
+   out IDebugProgramNode2 ppProgramNode  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppProgramNode`  
- \[出力\] このプログラムに関連付けられたプログラムのノードを表す [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) のオブジェクトを返します。  
+ [out]返します、 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)をこのプログラムに関連付けられているプログラムのノードを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

@@ -1,60 +1,62 @@
 ---
-title: "方法: リソース ファイルを使用して、ローカライズした名前、プロパティ、およびアクセス許可を指定する | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "BDC [Visual Studio での SharePoint 開発], ローカライズ (文字列を)"
-  - "BDC [Visual Studio での SharePoint 開発], プロパティ"
-  - "BDC [Visual Studio での SharePoint 開発], リソース ファイル"
-  - "BDC [Visual Studio での SharePoint 開発], リソース文字列"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], ローカライズ (文字列を)"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], プロパティ"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], リソース ファイル"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], リソース文字列"
+title: "方法: リソース ファイルを使用して、ローカライズされた名前、プロパティ、およびアクセス許可 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- Business Data Connectivity service [SharePoint development in Visual Studio], localize strings
+- BDC [SharePoint development in Visual Studio], localize strings
+- BDC [SharePoint development in Visual Studio], resource file
+- Business Data Connectivity service [SharePoint development in Visual Studio], resource strings
+- BDC [SharePoint development in Visual Studio], properties
+- Business Data Connectivity service [SharePoint development in Visual Studio], properties
+- Business Data Connectivity service [SharePoint development in Visual Studio], resource file
+- BDC [SharePoint development in Visual Studio], resource strings
 ms.assetid: 72bb744d-818b-4e5a-9da2-295412025680
-caps.latest.revision: 16
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 6a8b61477ae3b588b2aeadf1c9d99618151825f8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: リソース ファイルを使用して、ローカライズした名前、プロパティ、およびアクセス許可を指定する
-  リソース ファイルを使用して、ローカライズされた名前を指定し、プロパティを定義し、Business Data Connectivity \(BDC\) モデルで定義されているアクセス許可の岩山オブジェクトを適用できます。  この情報を指定するには、**\[ビジネス データ接続モデル\]** 項目を含むプロジェクトに **\[ビジネス データ接続リソース項目\]** 項目を追加します。  次に、リソース ファイルの XML を編集して、名前、プロパティ、およびアクセス許可を指定します。  
+# <a name="how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions"></a>方法: リソース ファイルを使用して、ローカライズした名前、プロパティ、およびアクセス許可を指定する
+  リソース ファイルを使用すると、ローカライズされた名前を指定、プロパティを定義でき、ビジネス データ接続 (BDC) モデルで定義されているアクセス許可 tor オブジェクトに適用できます。 この情報を指定するを追加する、**ビジネス データ接続リソース**項目を含むプロジェクトを**ビジネス データ接続モデル**項目。 次のリソース ファイルの XML を編集して名、プロパティ、およびアクセス許可を指定します。  
   
-### SharePoint プロジェクトに BDC リソース ファイルを追加するには  
+### <a name="to-add-a-bdc-resource-file-to-a-sharepoint-project"></a>BDC リソース ファイルを SharePoint プロジェクトに追加するには  
   
-1.  **\[ソリューション エクスプローラー\]** で、SharePoint プロジェクトのフォルダーを展開し、BDC モデルを含むフォルダーを選択します。  
+1.  **ソリューション エクスプ ローラー**、SharePoint プロジェクトのフォルダーを展開し、BDC モデルを含むフォルダーを選択します。  
   
-2.  メニュー バーで **\[プロジェクト\]**、**\[新しい項目の追加\]** の順に選択します。  
+2.  メニュー バーで、次のように選択します。**プロジェクト**、**新しい項目の追加**です。  
   
-3.  **\[SharePoint\]** ノードを展開し、**2010** ノードを選択します。  
+3.  展開して、 **SharePoint**  ノードを選択し、 **2010**ノード。  
   
-4.  **\[新しいアイテムの追加\]** ダイアログ ボックスで、**\[ビジネス データ接続リソース項目\]** をクリックします。  
+4.  **新しい項目の追加** ダイアログ ボックスで、選択**ビジネス データ接続リソース項目**です。  
   
-5.  **\[名前\]** ボックスで、リソース ファイルの名前を指定し、**\[追加\]** ボタンをクリックします。  
+5.  **名前**ボックス、リソース ファイルの名前を指定し、選択、**追加**ボタンをクリックします。  
   
-     拡張子が .bdcr のリソース ファイルがプロジェクトに追加され、編集用に開きます。  
+     .Bdcr 拡張子を持つリソース ファイルがプロジェクトに追加され、編集用に開きます。  
   
-6.  BDC モデルに適用するローカライズされた名前、プロパティ、およびアクセス許可を定義する XML を追加します。  
+6.  ローカライズされた名前、プロパティ、および、BDC モデルを適用するアクセス許可を定義する XML を追加します。  
   
-     これらの要素を定義する方法の詳細については、"参照してください [モデルとリソース ファイル](http://go.microsoft.com/fwlink/?LinkID=169283)。  
+     これらの要素を定義する方法については、次を参照してください。[モデル ファイルとリソース ファイル](http://go.microsoft.com/fwlink/?LinkID=169283)です。  
   
-## 参照  
- [方法: 既存の BDC モデル ファイルを SharePoint プロジェクトに追加する](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)   
- [ビジネス データ接続モデルの作成](../sharepoint/creating-a-business-data-connectivity-model.md)   
- [方法: BDC モデルを作成する](../sharepoint/how-to-create-a-bdc-model.md)   
+## <a name="see-also"></a>関連項目  
+ [方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)   
+ [ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)   
+ [方法: BDC モデルを作成](../sharepoint/how-to-create-a-bdc-model.md)   
  [方法: BDC 機能にカスタム アセンブリを含める](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)   
  [SharePoint へのビジネス データの統合](../sharepoint/integrating-business-data-into-sharepoint.md)  
   

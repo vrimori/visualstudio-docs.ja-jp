@@ -1,45 +1,46 @@
 ---
-title: "IDebugWindowsComputerPort2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugWindowsComputerPort2 インターフェイス"
+title: "IDebugWindowsComputerPort2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugWindowsComputerPort2 interface
 ms.assetid: 25f327b8-0303-4268-88d1-74df630436aa
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2be6dfa5b5946c2da92becd7b1699b203c8a170e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugWindowsComputerPort2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ターゲット コンピューターに関する情報の問い合わせに使用できます。  
+# <a name="idebugwindowscomputerport2"></a>IDebugWindowsComputerPort2
+対象のコンピュータに関する情報の照会を許可します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugWindowsComputerPort2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- このインターフェイスはデバッグ セッションのマネージャーのポートのオブジェクトによって実装されます。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ このインターフェイスは、セッションのデバッグ マネージャーのポート オブジェクトによって実装されます。  
   
-## メソッド  
- 次の表は `IDebugWindowsComputerPort2` のメソッドを示します。  
+## <a name="methods"></a>メソッド  
+ 次の表は、メソッドの`IDebugWindowsComputerPort2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)|デバッガーを実行するコンピューターに関する情報を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)|コンピューターに関する情報を取得、デバッガーで実行します。|  
   
-## 必要条件  
- ヘッダー : Msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll

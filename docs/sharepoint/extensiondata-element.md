@@ -1,30 +1,31 @@
 ---
-title: "ExtensionData Element"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ExtensionData element"
+title: "ExtensionData 要素 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: ExtensionData element
 ms.assetid: caf6843b-dcf5-4688-a9eb-a424aae1beab
-caps.latest.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 07369e6fb3b083acaeb4f617b0923a088e2a076b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ExtensionData Element
-  SharePoint プロジェクト項目に関連付けられているカスタム データ項目のコレクションを表します。  
+# <a name="extensiondata-element"></a>ExtensionData 要素
+  SharePoint プロジェクト アイテムに関連付けられているカスタム データ項目のコレクションを表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 <ExtensionData>  
@@ -32,37 +33,37 @@ caps.handback.revision: 10
 </ExtensionData>  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
  なし。  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
-|--------|-----------------|  
-|[ExtensionDataItem](../sharepoint/extensiondataitem-element.md)|省略可能な要素です。<br /><br /> SharePoint プロジェクト項目に関連付けられているカスタム データ項目のコレクションを、キー\/値の形式で表します。  キーと値は両方とも文字列である必要があります。|  
+|要素|説明|  
+|-------------|-----------------|  
+|[ExtensionDataItem](../sharepoint/extensiondataitem-element.md)|省略可能な要素です。<br /><br /> キー/値の形式で、SharePoint プロジェクト項目に関連付けられているカスタム データ項目を表します。 キーと値の両方には、文字列がある場合があります。|  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
-|--------|-----------------|  
-|[ProjectItem](../sharepoint/projectitem-element.md)|SharePoint プロジェクト項目を表します。  .spdata ファイルの必須のルート要素です。|  
+|要素|説明|  
+|-------------|-----------------|  
+|[ProjectItem](../sharepoint/projectitem-element.md)|SharePoint プロジェクト項目を表します。 .Spdata ファイルの必要なルート要素です。|  
   
-## 解説  
- <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> オブジェクトの <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> プロパティを使用してカスタム データを SharePoint プロジェクト項目に関連付けると、そのデータは、プロジェクト項目の .spdata ファイルの **ExtensionData** 要素に保存されます。  詳細については、「[Saving Data in Extensions of the SharePoint Project System](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ ときにするデータを関連付けるカスタム SharePoint プロジェクト項目を使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A>のプロパティ、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem>オブジェクト、Visual Studio に保存するデータを**ExtensionData**プロジェクト項目の .spdata ファイル内の要素。 詳細については、次を参照してください。 [SharePoint プロジェクト システムの拡張機能でのデータの保存](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)です。  
   
-## 要素情報  
+## <a name="element-information"></a>要素情報  
   
 |||  
 |-|-|  
-|**名前空間**|http:\/\/schemas.microsoft.com\/VisualStudio\/2010\/SharePointTools\/SharePointProjectItemModel|  
-|**スキーマ名**|SharePoint プロジェクト項目スキーマ|  
+|**Namespace**|http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel|  
+|**スキーマ名**|SharePoint プロジェクト項目のスキーマ|  
 |**検証ファイル**|ProjectItemModelSchema.xsd|  
-|**空も使用できる**|Ｘ|  
+|**空にすることができます。**|いいえ|  
   
-## 参照  
- [SharePoint Project Item Schema Reference](../sharepoint/sharepoint-project-item-schema-reference.md)  
+## <a name="see-also"></a>関連項目  
+ [SharePoint プロジェクト項目スキーマのリファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)  
   
   

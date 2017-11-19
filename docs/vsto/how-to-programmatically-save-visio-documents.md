@@ -1,12 +1,10 @@
 ---
-title: 'How to: Programmatically Save Visio Documents | Microsoft Docs'
+title: "方法: プログラムによって Visio 図面を保存 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,74 +14,76 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], saving Visio documents
 - Visio [Office development in Visual Studio], saving Visio documents
 ms.assetid: 1a29ac7e-1da4-4c7a-87a5-d3d16897fe7c
-caps.latest.revision: 20
-author: kempb
-ms.author: kempb
+caps.latest.revision: "20"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 148409aa0f4489c2eb8e7a1637cb5ac294d49aa6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: a100a573f26a774c58083cb82b07c50792908f45
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-programmatically-save-visio-documents"></a>How to: Programmatically Save Visio Documents
-  There are several ways to save Microsoft Office Visio documents:  
+# <a name="how-to-programmatically-save-visio-documents"></a>方法: プログラムによって Visio 図面を保存する
+  Microsoft Office Visio 図面を保存するには、次のようないくつかの方法があります。  
   
--   Save changes in an existing document.  
+-   既存の図面に変更を保存する。  
   
--   Save a new document, or save a document with a new name.  
+-   新しい図面を保存するか、または新しい名前を付けて図面を保存する。  
   
--   Save a document with specified arguments.  
+-   引数を指定して図面を保存する。  
   
- For more information, see the VBA reference documentation for the [Microsoft.Office.Interop.Visio.Document.Save](https://msdn.microsoft.com/library/office/ff766478.aspx) method, [Microsoft.Office.Interop.Visio.Document.SaveAs](https://msdn.microsoft.com/library/office/ff765824.aspx) method, and [Microsoft.Office.Interop.Visio.Document.SaveAsEx](https://msdn.microsoft.com/library/office/ff768149.aspx) method.  
+ 詳細については、 [Microsoft.Office.Interop.Visio.Document.Save](https://msdn.microsoft.com/library/office/ff766478.aspx) メソッド、 [Microsoft.Office.Interop.Visio.Document.SaveAs](https://msdn.microsoft.com/library/office/ff765824.aspx) メソッド、および [Microsoft.Office.Interop.Visio.Document.SaveAsEx](https://msdn.microsoft.com/library/office/ff768149.aspx) メソッドの VBA リファレンス ドキュメントを参照してください。  
   
-## <a name="saving-an-existing-document"></a>Saving an Existing Document  
+## <a name="saving-an-existing-document"></a>既存の図面を保存する  
   
-#### <a name="to-save-a-document"></a>To save a document  
+#### <a name="to-save-a-document"></a>図面を保存するには  
   
--   Call the Microsoft.Office.Interop.Visio.Document.Save method of the Microsoft.Office.Tools.Visio.Document class of a document that has been previously saved.  
+-   以前に保存されたドキュメントの Microsoft.Office.Tools.Visio.Document クラスの Microsoft.Office.Interop.Visio.Document.Save メソッドを呼び出します。  
   
-     To use this code example, run it from the `ThisAddIn` class in your project.  
+     このコード例を使用するには、プロジェクトの `ThisAddIn` クラスからコードを実行します。  
   
     > [!NOTE]  
-    >  The Microsoft.Office.Interop.Visio.Document.Save method throws an exception if a new Visio document has not yet been saved.  
+    >  Microsoft.Office.Interop.Visio.Document.Save メソッドは、新しい Visio ドキュメントが保存されていない場合に、例外をスローします。  
   
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#11)]  [!code-vb[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#11)]  
+     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#11)]
+     [!code-vb[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#11)]  
   
-## <a name="saving-a-document-with-a-new-name"></a>Saving a Document with a New Name  
- Use the Microsoft.Office.Interop.Visio.Document.SaveAs method to save a new document, or a document that has a new name. This method requires that you specify the new file name.  
+## <a name="saving-a-document-with-a-new-name"></a>新しい名前を付けて図面を保存する  
+ Microsoft.Office.Interop.Visio.Document.SaveAs メソッドを使用して、新しいドキュメント、または新しい名前を持つドキュメントを保存します。 このメソッドでは、新しいファイル名を指定する必要があります。  
   
-#### <a name="to-save-the-active-visio-document-with-a-new-name"></a>To save the active Visio document with a new name  
+#### <a name="to-save-the-active-visio-document-with-a-new-name"></a>作業中の Visio 図面に新しい名前を付けて保存するには  
   
--   Call the Microsoft.Office.Interop.Visio.Document.SaveAs method of the Microsoft.Office.Tools.Visio.Document that you want to save, by using a fully qualified path including a file name. If a file by that name already exists in that folder, it is silently overwritten.  
+-   ファイル名を含む完全修飾パスを使用して、保存する Microsoft.Office.Tools.Visio.Document の Microsoft.Office.Interop.Visio.Document.SaveAs メソッドを呼び出します。 指定した名前のファイルが既に対象のフォルダー内に存在する場合、そのファイルは警告なしで上書きされます。  
   
-     To use this code example, run it from the `ThisAddIn` class in your project.  
+     このコード例を使用するには、プロジェクトの `ThisAddIn` クラスからコードを実行します。  
   
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#10)]  [!code-vb[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#10)]  
+     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#10)]
+     [!code-vb[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#10)]  
   
-## <a name="saving-a-document-with-a-new-name-and-specified-arguments"></a>Saving a Document with a New Name and Specified Arguments  
- Use the Microsoft.Office.Interop.Visio.Document.SaveAsEx method to save a document with a new name, and specify any applicable arguments to apply to the document.  
+## <a name="saving-a-document-with-a-new-name-and-specified-arguments"></a>新しい名前および指定した引数を使用して図面を保存する  
+ Microsoft.Office.Interop.Visio.Document.SaveAsEx メソッドを使用して、新しい名前を持つドキュメントを保存して、ドキュメントに適用する適用可能な引数を指定します。  
   
-#### <a name="to-save-document-with-a-new-name-and-specified-arguments"></a>To save document with a new name and specified arguments  
+#### <a name="to-save-document-with-a-new-name-and-specified-arguments"></a>新しい名前および指定した引数を使用して図面を保存するには  
   
--   Call the Microsoft.Office.Interop.Visio.Document.SaveAsEx method of the Microsoft.Office.Tools.Visio.Document that you want to save, by using a fully qualified path including a file name. If a file by that name already exists in that folder, an exception is thrown.  
+-   ファイル名を含む完全修飾パスを使用して、保存する Microsoft.Office.Tools.Visio.Document の Microsoft.Office.Interop.Visio.Document.SaveAsEx メソッドを呼び出します。 指定した名前のファイルが既に対象のフォルダー内に存在する場合、例外がスローされます。  
   
-     The following code example saves the active document with a new name, marks the document as read-only, and shows the document in the Most Recently Used list of documents. To use this code example, run it from the `ThisAddIn` class in your project.  
+     次のコード例では、作業中の図面を新しい名前で保存し、その図面を読み取り専用としてマークし、[直前に使用] の図面一覧にその図面を表示しています。 このコード例を使用するには、プロジェクトの `ThisAddIn` クラスからコードを実行します。  
   
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#12)]  [!code-vb[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#12)]  
+     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#12)]
+     [!code-vb[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#12)]  
   
-## <a name="compiling-the-code"></a>Compiling the Code  
- This code example requires the following:  
+## <a name="compiling-the-code"></a>コードのコンパイル  
+ このコード例で必要な要素は次のとおりです。  
   
--   To save a document that has a new name, a directory named `Test` must be located in the My Documents folder (for Windows XP and earlier) or the Documents folder (for Windows Vista).  
+-   図面に新しい名前を付けて保存するには、[マイ ドキュメント] フォルダー (Windows XP 以前の場合) または [ドキュメント] フォルダー (Windows Vista の場合) 内に `Test` という名前のディレクトリが存在している必要があります。  
   
-## <a name="see-also"></a>See Also  
- [Visio Solutions](../vsto/visio-solutions.md)   
- [Visio Object Model Overview](../vsto/visio-object-model-overview.md)   
- [How to: Programmatically Create New Visio Documents](../vsto/how-to-programmatically-create-new-visio-documents.md)   
- [How to: Programmatically Open Visio Documents](../vsto/how-to-programmatically-open-visio-documents.md)   
- [How to: Programmatically Close Visio Documents](../vsto/how-to-programmatically-close-visio-documents.md)   
- [How to: Programmatically Print Visio Documents](../vsto/how-to-programmatically-print-visio-documents.md)  
+## <a name="see-also"></a>関連項目  
+ [Visio ソリューション](../vsto/visio-solutions.md)   
+ [Visio オブジェクト モデルの概要](../vsto/visio-object-model-overview.md)   
+ [方法: プログラムによって新しい Visio 図面を作成します。](../vsto/how-to-programmatically-create-new-visio-documents.md)   
+ [方法: プログラムによって Visio 図面を開く](../vsto/how-to-programmatically-open-visio-documents.md)   
+ [方法: プログラムによって Visio 図面を閉じる](../vsto/how-to-programmatically-close-visio-documents.md)   
+ [方法: プログラムによって Visio 図面を印刷する](../vsto/how-to-programmatically-print-visio-documents.md)  
   
   

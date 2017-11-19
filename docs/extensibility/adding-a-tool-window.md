@@ -1,66 +1,68 @@
 ---
-title: "ツール ウィンドウを追加します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "チュートリアル"
-  - "ツール ウィンドウ"
+title: "ツール ウィンドウを追加する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tutorials
+- tool windows
 ms.assetid: 8e16c381-03c8-404e-92ef-3614cdf3150a
-caps.latest.revision: 52
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 52
+caps.latest.revision: "52"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5f160fb123a52fef7215d4f365ffa28a6cae451e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ツール ウィンドウを追加します。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-このチュートリアルでは、ツール ウィンドウを作成し、次の方法で Visual Studio に統合する方法を学習します。  
+# <a name="adding-a-tool-window"></a>ツール ウィンドウを追加します。
+このチュートリアルでは、ツール ウィンドウを作成し、次のように Visual Studio に統合する方法を学習します。  
   
--   ツール ウィンドウに、コントロールを追加します。  
+-   ツール ウィンドウにコントロールを追加します。  
   
--   ツール ウィンドウには、ツールバーを追加します。  
+-   ツール ウィンドウにツールバーを追加します。  
   
--   ツールバーにコマンドを追加します。  
+-   コマンドは、ツールバーを追加します。  
   
 -   コマンドを実装します。  
   
 -   ツール ウィンドウの既定の位置を設定します。  
   
-## 必須コンポーネント  
- Visual Studio 2015 以降、インストールしない、Visual Studio SDK ダウンロード センターからです。 Visual Studio のセットアップのオプション機能として含まれます。 後で、VS SDK をインストールすることもできます。 詳細については、「[Visual Studio SDK をインストールします。](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
   
-## ツール ウィンドウを作成します。  
+## <a name="creating-a-tool-window"></a>ツール ウィンドウを作成します。  
   
-1.  という名前のプロジェクトを作成する **FirstToolWin** VSIX のテンプレートを使用し、という名前のカスタム ツール ウィンドウの項目テンプレートを追加 **FirstToolWindow**します。  
+1.  という名前のプロジェクトを作成する**FirstToolWin** VSIX テンプレートを使用して、という名前のカスタム ツール ウィンドウの項目テンプレートの追加**FirstToolWindow**です。  
   
     > [!NOTE]
-    >  ツール ウィンドウで拡張機能の作成の詳細については、次を参照してください。 [ツール ウィンドウで、拡張機能を作成します。](../extensibility/creating-an-extension-with-a-tool-window.md)します。  
+    >  ツール ウィンドウで、拡張機能の作成の詳細については、次を参照してください。[ツール ウィンドウで、拡張機能の作成](../extensibility/creating-an-extension-with-a-tool-window.md)です。  
   
-## ツール ウィンドウにコントロールを追加します。  
+## <a name="add-a-control-to-the-tool-window"></a>ツール ウィンドウにコントロールを追加します。  
   
-1.  既定のコントロールを削除します。 FirstToolWindowControl.xaml を開き、削除、 **Click Me\!** \] ボタンをクリックします。  
+1.  既定のコントロールを削除します。 FirstToolWindowControl.xaml を開き、削除、 **Click Me!** ボタンをクリックします。  
   
-2.  **ツールボックス**, 、展開、 **すべての WPF コントロール** セクションし、ドラッグ、 **メディア要素** への制御、 **FirstToolWindowControl** フォームです。 コントロールを選択し、\[、 **プロパティ** ウィンドウで、この要素名を指定 **mediaElement1**します。  
+2.  **ツールボックス**、展開、**すべての WPF コントロール**セクションし、ドラッグ、**メディア要素**コントロールを**FirstToolWindowControl**フォーム。 コントロールを選択し、、**プロパティ**ウィンドウで、この要素の名前を付けます**mediaElement1**です。  
   
-## ツール ウィンドウにツールバーを追加します。  
- ツールバーを追加すると次のように、そのグラデーションと色が IDE の残りの部分と一致するを保証します。  
+## <a name="add-a-toolbar-to-the-tool-window"></a>ツール ウィンドウにツールバーを追加します。  
+ ツールバーを追加すると、次のように、色、グラデーションが IDE の残りの部分と一貫性のあることを保証します。  
   
-1.  **ソリューション エクスプ ローラー**, 、FirstToolWindowPackage.vsct を開きます。 .Vsct ファイルは、XML を使用して、ツール ウィンドウで、グラフィカル ユーザー インターフェイス \(GUI\) の要素を定義します。  
+1.  **ソリューション エクスプ ローラー**FirstToolWindowPackage.vsct を開きます。 .Vsct ファイルでは、XML を使用して、ツール ウィンドウで、グラフィカル ユーザー インターフェイス (GUI) 要素を定義します。  
   
-2.  `<Symbols>` セクションで、検索、 `<GuidSymbol>` ノードが `name` 属性は `guidFirstToolWindowPackageCmdSet`です。 次の 2 つの追加 `<IDSymbol>` のリストに対して要素 `<IDSymbol>` ツールバーとツールバーのグループを定義するには、このノード内の要素。  
+2.  `<Symbols>`セクションで、検索、`<GuidSymbol>`ノードが`name`属性は`guidFirstToolWindowPackageCmdSet`します。 次の 2 つの追加`<IDSymbol>`要素の一覧を`<IDSymbol>`ツールバーとツール バー グループを定義するには、このノード内の要素。  
   
     ```xml  
     <IDSymbol name="ToolbarID" value="0x1000" />  
     <IDSymbol name="ToolbarGroupID" value="0x1001" />  
     ```  
   
-3.  すぐ上、 `<Buttons>` セクションで、作成、 `<Menus>` セクションを次のようにします。  
+3.  すぐ上、`<Buttons>`セクションで、作成、`<Menus>`これに似たセクション。  
   
     ```xml  
     <Menus>  
@@ -74,11 +76,11 @@ caps.handback.revision: 52
     </Menus>  
     ```  
   
-     メニューのいくつかの異なる種類があります。 このメニューで定義されているツール ウィンドウのツールバーは、その `type` 属性です。`guid` と  `id` 設定は、ツールバーの完全修飾 ID を構成します。 通常、 `<Parent>` メニューが含まれるグループです。 ただし、ツールバーは、自身の親として定義されます。 したがってに同じ識別子を使用、 `<Menu>` と `<Parent>` 要素。`priority` 属性は、同じ ' 0' です。  
+     メニューのさまざまな種類があります。 このメニューで定義されているツール ウィンドウのツールバーは、その`type`属性。 `guid`と`id`設定は、ツールバーの完全修飾 ID を構成します。 通常、`<Parent>`メニューは、含んでいるグループ。 ただし、ツールバーは、自身の親として定義されます。 このため、同じ識別子は、使用、`<Menu>`と`<Parent>`要素。 `priority`属性がだけ ' 0' です。  
   
-4.  ツールバーには、さまざまな方法でメニューに似ています。 たとえば、メニュー コマンドのグループがある場合がありますと同様、ツールバーではグループの一部こともできます。 \(メニューのコマンド グループを指定する水平の線。 ツールバーのグループで区切られていない visual 区分線です。\)  
+4.  ツールバーには、さまざまな方法でメニューがようになります。 たとえば、メニュー コマンドのグループがある可能性がありますと同様、ツールバーではグループの一部こともできます。 (メニューのコマンド グループを指定する水平の線。 ツールバーのグループによって分離されていない visual 仕切り。)  
   
-     追加、 `<Groups>` を格納するセクション、 `<Group>` 要素。 これにより、グループ定義で宣言されている ID を持つ、 `<Symbols>` セクションです。 追加、 `<Groups>` セクションの直後に、 `<Menus>` セクションです。  
+     追加、`<Groups>`を格納するセクション、`<Group>`要素。 宣言されている ID を持つグループの定義、`<Symbols>`セクションです。 追加、`<Groups>`直後セクション、`<Menus>`セクションです。  
   
     ```xml  
     <Groups>  
@@ -88,19 +90,19 @@ caps.handback.revision: 52
     </Groups>  
     ```  
   
-     親の GUID と ID を GUID と、ツールバーの ID に設定\] ツールバーに、グループを追加します。  
+     親の GUID と ID を GUID と、ツールバーの ID に設定して、ツールバーに、グループを追加します。  
   
-## ツールバーにコマンドを追加します。  
- ボタンとして表示されるツールバーにコマンドを追加します。  
+## <a name="add-a-command-to-the-toolbar"></a>コマンド、ツールバーを追加します。  
+ コマンドは、ボタンとして表示される、ツールバーを追加します。  
   
-1.  `<Symbols>` セクションで、グループの宣言と、ツールバーとツールバーの直後に次の IDSymbol 要素を宣言します。  
+1.  `<Symbols>`セクションで、グループの宣言、ツールバーとツールバーの直後に、次の IDSymbol 要素を宣言します。  
   
     ```xml  
     <IDSymbol name="cmdidWindowsMedia" value="0x0100" />  
     <IDSymbol name="cmdidWindowsMediaOpen" value="0x132" />  
     ```  
   
-2.  内のボタン要素を追加、 `<Buttons>` セクションです。 この要素は、\[ツール\] ウィンドウの検索 \(虫眼鏡\) アイコンがツールバーに表示されます。  
+2.  内のボタンの要素を追加、`<Buttons>`セクションです。 この要素は、検索 (虫眼鏡) アイコンの付いた、ツール ウィンドウのツールバーに表示されます。  
   
     ```xml  
     <Button guid="guidFirstToolWindowPackageCmdSet" id="cmdidWindowsMediaOpen" priority="0x0101" type="Button">  
@@ -113,35 +115,35 @@ caps.handback.revision: 52
     </Button>  
     ```  
   
-3.  FirstToolWindowCommand.cs を開き、既存のフィールドの直後に、クラスで、次の行を追加します。  
+3.  FirstToolWindowCommand.cs を開き、クラス内の既存のフィールドの直後に次の行を追加します。  
   
-    ```c#  
+    ```csharp  
     public const string guidFirstToolWindowPackageCmdSet = "00000000-0000-0000-0000-0000";  // get the GUID from the .vsct file  
     public const uint cmdidWindowsMedia =        0x100;   
     public const int cmdidWindowsMediaOpen = 0x132;  
     public const int ToolbarID = 0x1000;  
     ```  
   
-     これとは、コマンドがコードで使用可能にします。  
+     これにより、コマンドをコードで使用できます。  
   
-## FirstToolWindowControl に MediaPlayer プロパティを追加します。  
- コードは、ツール バー コントロールのイベント ハンドラーから FirstToolWindowControl クラスの子である Media Player コントロールにアクセスできる必要があります。  
+## <a name="add-a-mediaplayer-property-to-firsttoolwindowcontrol"></a>Media Player プロパティ FirstToolWindowControl を追加します。  
+ ツール バー コントロールのイベント ハンドラーからコードは、FirstToolWindowControl クラスの子である Media Player コントロールにアクセスできる必要があります。  
   
- **ソリューション エクスプ ローラー**, を FirstToolWindowControl.xaml を右クリックして、 **コードの表示**, 、FirstToolWindowControl クラスに次のコードを追加します。  
+ **ソリューション エクスプ ローラー**FirstToolWindowControl.xaml を右クリックしをクリックして**コードの表示**、FirstToolWindowControl クラスに次のコードを追加します。  
   
-```c#  
+```csharp  
 public System.Windows.Controls.MediaElement MediaPlayer  
 {  
     get { return mediaElement1; }  
 }  
 ```  
   
-## ツール ウィンドウとツールバーを作成します。  
- 追加のツールバーとメニュー コマンドを呼び出す、 **ファイルを開く** ダイアログし、選択したメディア ファイルを再生します。  
+## <a name="instantiate-the-tool-window-and-toolbar"></a>ツールバーとツール ウィンドウをインスタンス化します。  
+ ツールバーとメニュー コマンドを呼び出す追加、**ファイルを開く**ダイアログと、選択したメディア ファイルを再生します。  
   
-1.  FirstToolWindow.cs を開き、次の追加 `using` ステートメントです。  
+1.  FirstToolWindow.cs を開き、次の追加`using`ステートメントです。  
   
-    ```c#  
+    ```csharp  
     using System.ComponentModel.Design;  
     using System.Windows.Forms;  
     using Microsoft.VisualStudio.Shell.Interop;   
@@ -149,20 +151,20 @@ public System.Windows.Controls.MediaElement MediaPlayer
   
 2.  FirstToolWindow クラス内には、FirstToolWindowControl コントロールへのパブリックの参照を追加します。  
   
-    ```c#  
+    ```csharp  
     public FirstToolWindowControl control;  
     ```  
   
-3.  コンス トラクターの末尾には、このコントロール変数を新しく作成されたコントロールに設定します。  
+3.  コンス トラクターの最後には、新しく作成されたコントロールにこのコントロール変数を設定します。  
   
-    ```c#  
+    ```csharp  
     control = new FirstToolWindowControl();   
     base.Content = control;  
     ```  
   
-4.  コンス トラクター内のツールバーのインスタンスを作成します。  
+4.  コンス トラクター内部ツールバーのインスタンスを作成します。  
   
-    ```c#  
+    ```csharp  
     this.ToolBar = new CommandID(new Guid(FirstToolWindowCommand.guidFirstToolWindowPackageCmdSet),   
         FirstToolWindowCommand.ToolbarID);  
     this.ToolBarLocation = (int)VSTWT_LOCATION.VSTWT_TOP;  
@@ -170,7 +172,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
   
 5.  この時点で FirstToolWindow コンス トラクターは、次のようになります。  
   
-    ```c#  
+    ```csharp  
     public FirstToolWindow() : base(null)  
     {  
         this.Caption = "FirstToolWindow";  
@@ -184,15 +186,15 @@ public System.Windows.Controls.MediaElement MediaPlayer
     }  
     ```  
   
-6.  メニュー コマンド、ツールバーに追加します。 次のコードを追加 FirstToolWindowCommand.cs クラスでステートメントを使用します。  
+6.  ツールバーにメニュー コマンドを追加します。 次のコードを追加 FirstToolWindowCommand.cs クラスでステートメントを使用します。  
   
-    ```c#  
+    ```csharp  
     using System.Windows.Forms;  
     ```  
   
-7.  FirstToolWindowCommand クラスでは、ShowToolWindow\(\) メソッドの最後に、次のコードを追加します。 ButtonHandler コマンドは、次のセクションで実装されます。  
+7.  FirstToolWindowCommand クラスでは、ShowToolWindow() メソッドの最後に、次のコードを追加します。 ButtonHandler コマンドは、次のセクションで実装されます。  
   
-    ```c#  
+    ```csharp  
     // Create the handles for the toolbar command.   
     var mcs = this.ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;  
     var toolbarbtnCmdID = new CommandID(new Guid(FirstToolWindowCommand.guidFirstToolWindowPackageCmdSet),  
@@ -202,19 +204,19 @@ public System.Windows.Controls.MediaElement MediaPlayer
     mcs.AddCommand(menuItem);  
     ```  
   
-#### ツール ウィンドウにメニュー コマンドを実装するには  
+#### <a name="to-implement-a-menu-command-in-the-tool-window"></a>ツール ウィンドウにメニュー コマンドを実装するには  
   
-1.  FirstToolWindowCommand クラスを呼び出す ButtonHandler メソッドを追加、 **ファイルを開く** ダイアログ。 ファイルを選択すると、メディア ファイルを再生します。  
+1.  FirstToolWindowCommand クラスでを呼び出す ButtonHandler メソッドを追加、**ファイルを開く**ダイアログ。 ファイルを選択すると、メディア ファイルを再生します。  
   
-2.  FirstToolWindowCommand クラスでは、FindToolWindow\(\) メソッドで作成される FirstToolWindow ウィンドウへのプライベート参照を追加します。  
+2.  FirstToolWindowCommand クラスでは、FindToolWindow() メソッドで作成される FirstToolWindow ウィンドウへのプライベートの参照を追加します。  
   
-    ```c#  
+    ```csharp  
     private FirstToolWindow window;  
     ```  
   
-3.  \(そう ButtonHandler コマンド ハンドラーは、ウィンドウのコントロールにアクセスできます上記で定義したウィンドウを設定する ShowToolWindow\(\) 方法を変更します。 完全な ShowToolWindow\(\) メソッドを次に示します。  
+3.  ShowToolWindow() メソッド (ように ButtonHandler コマンド ハンドラーは、ウィンドウ コントロールにアクセスできます上で定義するウィンドウの設定を変更します。 ShowToolWindow() メソッド全体を次に示します。  
   
-    ```c#  
+    ```csharp  
     private void ShowToolWindow(object sender, EventArgs e)  
     {  
         window = (FirstToolWindow) this.package.FindToolWindow(typeof(FirstToolWindow), 0, true);  
@@ -235,9 +237,9 @@ public System.Windows.Controls.MediaElement MediaPlayer
     }  
     ```  
   
-4.  ButtonHandler メソッドを追加します。 ユーザーを再生するメディア ファイルを指定するため、OpenFileDialog が作成され、選択したファイルを再生します。  
+4.  ButtonHandler メソッドを追加します。 OpenFileDialog を再生するメディア ファイルを指定するユーザーが作成され、選択したファイルを再生します。  
   
-    ```c#  
+    ```csharp  
     private void ButtonHandler(object sender, EventArgs arguments)  
     {  
         OpenFileDialog openFileDialog = new OpenFileDialog();  
@@ -249,33 +251,33 @@ public System.Windows.Controls.MediaElement MediaPlayer
     }  
     ```  
   
-## ツール ウィンドウの既定の位置を設定します。  
- 次に、ツール ウィンドウの IDE で、既定の場所を指定します。 ツール ウィンドウの構成情報は、FirstToolWindowPackage.cs ファイルです。  
+## <a name="set-the-default-position-for-the-tool-window"></a>ツール ウィンドウの既定の位置を設定します。  
+ 次に、ツール ウィンドウを IDE の既定の場所を指定します。 ツール ウィンドウの構成情報は、FirstToolWindowPackage.cs ファイルです。  
   
-1.  FirstToolWindowPackage.cs を検索、 <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> 属性を `FirstToolWindowPackage` FirstToolWindow 型コンス トラクターに渡しても、クラスです。 既定の位置を指定するには、コンス トラクターの使用例を次に多くのパラメーターを追加する必要があります。  
+1.  FirstToolWindowPackage.cs、検索、<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>属性を`FirstToolWindowPackage`FirstToolWindow 型コンス トラクターに渡しても、クラスです。 既定の位置を指定するには、コンス トラクターは、次の例に以上のパラメーターを追加する必要があります。  
   
-    ```c#  
+    ```csharp  
     [ProvideToolWindow(typeof(FirstToolWindow),  
         Style = Microsoft.VisualStudio.Shell.VsDockStyle.Tabbed,  
         Window = "3ae79031-e1bc-11d0-8f78-00a0c9110057")]  
     ```  
   
-     最初の名前付きパラメーターは `Style` 、値は `Tabbed`, 、ウィンドウは、既存のウィンドウのタブにあることを意味します。 固定位置が指定された、 `Window` パラメーターには、この場合は、n の GUID、 **ソリューション エクスプ ローラー**します。  
+     最初の名前付きパラメーターは`Style`とその値は`Tabbed`、つまり、ウィンドウが、既存のウィンドウのタブになります。 ドッキング位置がで指定された、`Window`パラメーターでは、この場合は、n の GUID、**ソリューション エクスプ ローラー**です。  
   
     > [!NOTE]
-    >  IDE でのウィンドウの種類の詳細については、次を参照してください。 <xref:EnvDTE.vsWindowType>します。  
+    >  IDE のウィンドウの種類の詳細については、次を参照してください。<xref:EnvDTE.vsWindowType>です。  
   
-## テスト ツール ウィンドウ  
+## <a name="testing-the-tool-window"></a>ツール ウィンドウのテスト  
   
-1.  F5 キーを押して Visual Studio の実験用の新しいインスタンスを開くを構築します。  
+1.  Visual Studio の実験用の新しいインスタンスを開くに f5 キーを押してビルドします。  
   
-2.  **ビュー** \] メニューをポイント **その他のウィンドウ** \] をクリックし、 **最初のツール ウィンドウ**します。  
+2.  **ビュー**  メニューのをポイント**その他のウィンドウ** をクリックし、**最初のツール ウィンドウ**します。  
   
-     同じ位置でメディア プレーヤーのツール ウィンドウを開く必要があります **ソリューション エクスプ ローラー**します。 まだ前に、と同じ位置にある場合は、ウィンドウ レイアウトをリセット \(**ウィンドウ\/ウィンドウ レイアウトのリセット**\)。  
+     同じ位置でメディア プレーヤーのツール ウィンドウを開いてください**ソリューション エクスプ ローラー**です。 前に、と同じ位置に表示されて、ウィンドウのレイアウトをリセット (**ウィンドウ/ウィンドウ レイアウトのリセット**)。  
   
-3.  \[ツール\] ウィンドウには、\(検索アイコンを持つ\) ボタンをクリックします。 選択、サポートされているサウンドやビデオ ファイルなどの C:\\windows\\media\\chimes.wav キーを押します **開く**します。  
+3.  ツール ウィンドウには、(、検索アイコンが) ボタンをクリックします。 サポートされているサウンドやビデオ ファイルを選択 C:\windows\media\chimes.wav など、キーを押します**開く**です。  
   
      チャイム音を聞く必要があります。  
   
-## 参照  
- [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
+## <a name="see-also"></a>関連項目  
+ [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

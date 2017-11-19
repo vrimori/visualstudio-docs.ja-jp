@@ -1,52 +1,52 @@
 ---
-title: "IDebugCustomAttribute::GetAttributeTypeField | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttribute::GetAttributeTypeField"
-helpviewer_keywords: 
-  - "IDebugCustomAttribute::GetAttributeTypeField"
+title: "IDebugCustomAttribute::GetAttributeTypeField |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCustomAttribute::GetAttributeTypeField
+helpviewer_keywords: IDebugCustomAttribute::GetAttributeTypeField
 ms.assetid: d6ce26d5-42ba-44c1-8659-0516db5bc82d
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: fa26c30c89d5af317bd1b63848ac4ca71287d123
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCustomAttribute::GetAttributeTypeField
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-カスタム属性クラス型を取得します。  
+# <a name="idebugcustomattributegetattributetypefield"></a>IDebugCustomAttribute::GetAttributeTypeField
+カスタム属性クラスの型を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetAttributeTypeField(   
-   IDebugClassField** ppCAType  
+```cpp  
+HRESULT GetAttributeTypeField(   
+   IDebugClassField** ppCAType  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetAttributeTypeField(  
-   out IDebugClassField ppCAType  
+   out IDebugClassField ppCAType  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppCAType`  
- \[入力\] カスタム属性がインスタンスであるクラスを表す [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) のオブジェクトを返します。  
+ [out]返します、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)カスタム属性がインスタンスであるクラスを表すオブジェクト。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- カスタム属性クラスは常にです。  このメソッドはそのクラスを記述する [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) のオブジェクトへのアクセスを提供します。  
+## <a name="remarks"></a>コメント  
+ カスタム属性は、常にクラスです。 このメソッドへのアクセスを提供する、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)をそのクラスを記述するオブジェクト。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)   
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

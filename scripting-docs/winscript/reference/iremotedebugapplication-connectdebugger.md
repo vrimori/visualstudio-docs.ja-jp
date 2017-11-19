@@ -1,27 +1,30 @@
 ---
-title: "IRemoteDebugApplication::ConnectDebugger | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IRemoteDebugApplication::ConnectDebugger |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IRemoteDebugApplication.ConnectDebugger
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IRemoteDebugApplication::ConnectDebugger"
+helpviewer_keywords: IRemoteDebugApplication::ConnectDebugger
 ms.assetid: ded94101-7efe-466f-aa70-b3e30a38c4d8
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 538b7a3f76e6026297839e4a7a37e6c21a72d7d0
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IRemoteDebugApplication::ConnectDebugger
+# <a name="iremotedebugapplicationconnectdebugger"></a>IRemoteDebugApplication::ConnectDebugger
 このアプリケーションにデバッガーを接続します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT ConnectDebugger(  
@@ -29,21 +32,21 @@ HRESULT ConnectDebugger(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pad`  
- \[出力\]このアプリケーションにアタッチするデバッガー。  
+ [in]デバッガーをこのアプリケーションにアタッチします。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
-|`E_FAIL`|デバッガーはこのアプリケーションに接続されます。|  
+|`E_FAIL`|デバッガーは、既にこのアプリケーションに接続されています。|  
   
-## 解説  
- アプリケーションは、一度に接続する 1 人のデバッガーだけを指定できます。  このメソッドは、デバッガーが既に接続されている場合は失敗します。  
+## <a name="remarks"></a>コメント  
+ アプリケーションでは、一度に接続されている 1 つだけのデバッガーを持つことができます。 このメソッドは、デバッガーが既に接続されている場合に失敗します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IRemoteDebugApplication::GetDebugger](../../winscript/reference/iremotedebugapplication-getdebugger.md)   
  [IRemoteDebugApplication インターフェイス](../../winscript/reference/iremotedebugapplication-interface.md)

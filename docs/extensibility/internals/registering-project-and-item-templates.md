@@ -1,34 +1,36 @@
 ---
-title: "プロジェクトおよび項目テンプレートを登録します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロジェクト [Visual Studio SDK] 項目を追加します。"
-  - "レジストリ、新しい項目の追加] ダイアログ ボックス"
-  - "[新しい項目の追加] ダイアログ ボックス"
-  - "新しいプロジェクト] ダイアログ ボックスを追加します。"
-  - "レジストリ [新しいプロジェクト] ダイアログ ボックス"
+title: "プロジェクトと項目テンプレートの登録 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- projects [Visual Studio SDK], adding items
+- registry, Add New Item dialog box
+- Add New Item dialog box
+- Add New Project dialog box
+- registry, Add New Project dialog box
 ms.assetid: 6b909f93-d7f5-4aec-81c6-ee9ff0f31638
-caps.latest.revision: 27
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5c1cb9e31384822dddcdd3668bfb3a54bc2782d6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# プロジェクトおよび項目テンプレートを登録します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-プロジェクトの種類には、それらのプロジェクトとプロジェクト項目テンプレートが置かれているディレクトリを登録する必要があります。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 表示を決定するようにプロジェクトの種類に関連付けられている登録情報を使用して、 **新しいプロジェクトの追加** と **新しい項目の追加** ダイアログ ボックス。  
+# <a name="registering-project-and-item-templates"></a>プロジェクトと項目テンプレートの登録
+プロジェクトの種類は、そのプロジェクトとプロジェクト項目テンプレートが配置されているディレクトリを登録する必要があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]表示するものを決定する、プロジェクトの種類に関連付けられている登録情報を使用して、**新しいプロジェクトの追加**と**新しい項目の追加** ダイアログ ボックス。  
   
- テンプレートの詳細については、次を参照してください。 [プロジェクトとプロジェクト項目テンプレートを追加します。](../../extensibility/internals/adding-project-and-project-item-templates.md)します。  
+ テンプレートの詳細については、次を参照してください。[プロジェクトに追加するとプロジェクト項目テンプレート](../../extensibility/internals/adding-project-and-project-item-templates.md)です。  
   
-## プロジェクトのレジストリ エントリ  
- 次の例では、HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\VisualStudio\\ の下にレジストリ エントリを表示する \<*バージョン*\> です。 関連するテーブルでは、例で使用される要素について説明します。  
+## <a name="registry-entries-for-projects"></a>プロジェクトのレジストリ エントリ  
+ 次の例では、HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio の下のレジストリ エントリ\\<*バージョン*>。 付随するテーブルでは、例で使用される要素について説明します。  
   
 ```  
 [Projects\{ProjectGUID}]  
@@ -39,13 +41,13 @@ caps.handback.revision: 27
 ```  
   
 |名前|種類|説明|  
-|--------|--------|--------|  
-|@|REG\_SZ|この種類のプロジェクトの既定の名前。|  
-|DisplayName|REG\_SZ|\[パッケージ サテライト DLL から取得する名前のリソース ID が登録されます。|  
-|パッケージ|REG\_SZ|パッケージの下に登録したパッケージのクラス ID。|  
-|ProjectTemplatesDir|REG\_SZ|プロジェクト テンプレート ファイルの既定のパスです。 プロジェクト テンプレート ファイルは表示、 **新しいプロジェクト** テンプレートです。|  
+|----------|----------|-----------------|  
+|@|REG_SZ|この種類のプロジェクトの既定の名前。|  
+|DisplayName|REG_SZ|パッケージ サテライト DLL から取得する名前のリソース ID が登録されています。|  
+|Package|REG_SZ|パッケージの下に登録パッケージのクラス ID。|  
+|ProjectTemplatesDir|REG_SZ|プロジェクト テンプレート ファイルの既定のパス。 プロジェクト テンプレートのファイルが表示されます、**新しいプロジェクト**テンプレート。|  
   
-### 項目テンプレートを登録します。  
+### <a name="registering-item-templates"></a>項目テンプレートの登録  
  項目テンプレートを保存するディレクトリを登録する必要があります。  
   
 ```  
@@ -57,20 +59,20 @@ caps.handback.revision: 27
 ```  
   
 |名前|種類|説明|  
-|--------|--------|--------|  
-|@|REG\_SZ|項目の追加テンプレートのリソース ID です。|  
-|TemplatesDir|REG\_SZ|ダイアログ ボックスに表示されるプロジェクト項目のパス、 **新しい項目の追加** ウィザード。|  
-|TemplatesLocalizedSubDir|REG\_SZ|TemplatesDir のサブディレクトリの名前を示す文字列のリソース ID は、ローカライズされたテンプレートを保持します。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 負荷文字列リソースからサテライト Dll に存在する場合、各サテライト DLL は、別のローカライズされたサブディレクトリの名前を含めることができます。|  
-|SortPriority|REG\_DWORD|テンプレートの表示順序を制御する SortPriority の設定、 **新しい項目の追加** \] ダイアログ ボックス。 テンプレートの一覧の前より大きな SortPriority の値が表示されます。|  
+|----------|----------|-----------------|  
+|@|REG_SZ|項目の追加テンプレートのリソース ID です。|  
+|TemplatesDir|REG_SZ|ダイアログ ボックスに表示されるプロジェクト アイテムのパス、**新しい項目の追加**ウィザード。|  
+|TemplatesLocalizedSubDir|REG_SZ|TemplatesDir のサブディレクトリの名前を示す文字列のリソース ID では、ローカライズされたテンプレートを保持します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]読み込み、文字列リソースをサテライト Dll に存在する場合、各サテライト DLL が別のローカライズされたサブディレクトリ名を含めることができます。|  
+|SortPriority|REG_DWORD|テンプレートが表示される順序を制御するために SortPriority の設定、**新しい項目の追加** ダイアログ ボックス。 テンプレートの一覧の前半 SortPriority のより大きな値が表示されます。|  
   
-### ファイル フィルターを登録します。  
- フィルターを登録する必要に応じてを [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ファイル名を要求するときに使用します。 たとえば、 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] のフィルター処理、 **ファイルを開く** ダイアログ ボックスは。  
+### <a name="registering-file-filters"></a>ファイルのフィルターを登録します。  
+ 必要に応じて、フィルターを登録することができますを[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ファイル名を要求するときに使用します。 たとえば、[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]のフィルター処理、**ファイルを開く** ダイアログ ボックスは。  
   
- **Visual c\# ファイル \(\*.cs、\*.resx、\*.settings、\*.xsd、\*.wsdl\); \*.cs、\*.resx、\*.settings、\*.xsd、\*.wsdl\)**  
+ **Visual c# ファイル (\*.cs、\*.resx、\*.settings、\*.xsd、\*.wsdl);\*です。cs、\*.resx、\*.settings、\*.xsd、\*.wsdl)**  
   
- 独自のサブキー HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\VisualStudio\\ の下に複数のフィルターの登録をサポートするために各フィルターが登録されている \<*バージョン*\> \\Projects\\ {\<*ProjectGUID*\>} \\Filters\\ \<*サブキー*\> です。 サブキーの名前は任意です。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] サブキーの名前を無視し、その値だけを使用します。  
+ 独自のサブキー HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio の下で複数のフィルターの登録をサポートする各フィルターが登録されている\\<*バージョン*> \Projects\\{\< *ProjectGUID*>} \Filters\\<*サブキー*>。 サブキーの名前は任意です。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]サブキーの名前を無視され、その値だけを使用します。  
   
- 次の表に示すようにフラグを設定して、フィルターが使用されるコンテキストを制御できます。 フィルターがフラグを設定しない場合の一般的なフィルターの後に表示されます、 **既存項目の追加** \] ダイアログ ボックスおよび **ファイルを開く** ダイアログ ボックスで、それはでは使用しないで、 **ファイル内の検索** \] ダイアログ ボックス。  
+ 次の表に示すようにフラグを設定して、フィルターを使用しているコンテキストを制御できます。 フィルターでは、フラグを設定することはない場合の一般的なフィルターの後に表示されます、**既存項目の追加** ダイアログ ボックスおよび**ファイルを開く** ダイアログ ボックスがないで使用される、**ファイル内の検索**  ダイアログ ボックス。  
   
 ```  
 [Projects\{ProjectGUID}\Filters\MyLanguageFilter]  
@@ -84,41 +86,41 @@ caps.handback.revision: 27
 ```  
   
 |名前|種類|説明|  
-|--------|--------|--------|  
-|CommonFindFilesFilter|REG\_DWORD|一般的なフィルターのいずれかのフィルターは、 **ファイル内の検索** \] ダイアログ ボックス。 一般的なフィルターは、共通としてマークされていないフィルターの前に、フィルター一覧に表示されます。|  
-|CommonOpenFilesFilter|REG\_DWORD|一般的なフィルターのいずれかのフィルターは、 **ファイルを開く** \] ダイアログ ボックス。 一般的なフィルターは、共通としてマークされていないフィルターの前に、フィルター一覧に表示されます。|  
-|FindInFilesFilter|REG\_DWORD|一般的なフィルターの後にフィルターを一覧表示、 **ファイル内の検索** \] ダイアログ ボックス。|  
-|NotOpenFileFilter|REG\_DWORD|フィルターを使用しないことを示す、 **ファイルを開く** \] ダイアログ ボックス。|  
-|NotAddExistingItemFilter|REG\_DWORD|フィルターを使用しないことを示す、 **既存項目の追加** \] ダイアログ ボックス。|  
-|SortPriority|REG\_DWORD|フィルターの表示順序を制御する SortPriority を設定します。 フィルター一覧の前、SortPriority のより大きな値が表示されます。|  
+|----------|----------|-----------------|  
+|CommonFindFilesFilter|REG_DWORD|一般的なフィルターのいずれかのフィルターは、**ファイル内の検索** ダイアログ ボックス。 一般的なフィルターは、一般的でマークされていないフィルターの前に、フィルター一覧に表示されます。|  
+|CommonOpenFilesFilter|REG_DWORD|一般的なフィルターのいずれかのフィルターは、**ファイルを開く** ダイアログ ボックス。 一般的なフィルターは、一般的でマークされていないフィルターの前に、フィルター一覧に表示されます。|  
+|FindInFilesFilter|REG_DWORD|一般的なフィルターの後にフィルターを一覧表示、**ファイル内の検索** ダイアログ ボックス。|  
+|NotOpenFileFilter|REG_DWORD|フィルターを使用しないことを示す、**ファイルを開く** ダイアログ ボックス。|  
+|NotAddExistingItemFilter|REG_DWORD|フィルターを使用しないことを示す、**既存項目の追加** ダイアログ ボックス。|  
+|SortPriority|REG_DWORD|フィルターが表示される順序を制御するために SortPriority を設定します。 フィルター一覧の前、SortPriority のより大きな値が表示されます。|  
   
-## ディレクトリ構造  
- VSPackages を置くテンプレート ファイルとフォルダー任意の場所、ローカルまたはリモート ディスク統合開発環境 \(IDE\) を通して、場所を登録している限り、されます。 ただし、組織のため、製品のインストール パスでは、次のディレクトリ構造を勧めします。  
+## <a name="directory-structure"></a>ディレクトリ構造  
+ Vspackage に配置できるテンプレート ファイルとフォルダー任意の場所ローカルまたはリモート ディスクでは、統合開発環境 (IDE) を通して、場所を登録している限り、します。 ただし、組織の容易にするため、製品のインストール パスでは、次のディレクトリ構造お勧めします。  
   
- \\Templates  
+ \Templates  
   
- \\Projects \(プロジェクト テンプレートが含まれています\)  
+ \Projects (プロジェクト テンプレートが含まれています)  
   
- \\Applications  
+ \Applications  
   
- \\Components  
+ \Components  
   
- \\ ...  
+ \ ...  
   
- \\ProjectItems \(プロジェクト項目が含まれています\)  
+ \ProjectItems (プロジェクト項目が含まれています)  
   
- \\Class  
+ \Class  
   
- \\Form  
+ \Form  
   
- \\Web ページ  
+ \Web ページ  
   
- \\HelperFiles \(複数のファイル プロジェクト項目で使用されるファイルが含まれています\)  
+ \HelperFiles (複数のファイル プロジェクト項目で使用されるファイルが含まれています)  
   
- \\WizardFiles  
+ \WizardFiles  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクトとプロジェクト項目テンプレートを追加します。](../../extensibility/internals/adding-project-and-project-item-templates.md)   
  [ウィザード](../../extensibility/internals/wizards.md)   
  [アプリケーションのローカライズ](../../ide/localizing-applications.md)   
- [通常、プロジェクトの拡張に使用されるオブジェクトの Catid](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)
+ [プロジェクトの拡張に通常使用されるオブジェクトの CATID](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)

@@ -1,74 +1,74 @@
 ---
-title: "PROCESS_INFO_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROCESS_INFO_FLAGS"
-helpviewer_keywords: 
-  - "PROCESS_INFO_FLAGS 列挙型"
+title: "PROCESS_INFO_FLAGS |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROCESS_INFO_FLAGS
+helpviewer_keywords: PROCESS_INFO_FLAGS enumeration
 ms.assetid: 696951ce-701a-40c2-ac8c-b897f3aae6e2
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 228b2d3286ad0b69a2eb813e18b8837ec038f28f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# PROCESS_INFO_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プロセスのプロパティを記述したり指定します。  
+# <a name="processinfoflags"></a>PROCESS_INFO_FLAGS
+説明またはプロセスのプロパティを指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-enum enum_PROCESS_INFO_FLAGS {   
-   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
-   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
-   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
-   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
+```cpp  
+enum enum_PROCESS_INFO_FLAGS {   
+   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
+   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
+   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
+   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
 };  
 typedef DWORD PROCESS_INFO_FLAGS;  
 ```  
   
-```c#  
-enum enum_PROCESS_INFO_FLAGS {   
-   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
-   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
-   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
-   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
+```csharp  
+enum enum_PROCESS_INFO_FLAGS {   
+   PIFLAG_SYSTEM_PROCESS    = 0x00000001,  
+   PIFLAG_DEBUGGER_ATTACHED = 0x00000002,  
+   PIFLAG_PROCESS_STOPPED   = 0x00000004,  
+   PIFLAG_PROCESS_RUNNING   = 0x00000008,  
 };  
 ```  
   
-## メンバー  
- PIFLAG\_SYSTEM\_PROCESS  
+## <a name="members"></a>メンバー  
+ PIFLAG_SYSTEM_PROCESS  
  プロセスがシステム プロセスであることを示します。  
   
- PIFLAG\_DEBUGGER\_ATTACHED  
- プロセスにデバッガーを使用してデバッグことを示します。  これは [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] のデバッガーであるかは他のデバッガーなど読み込まれた WinDbg である場合があります。  
+ PIFLAG_DEBUGGER_ATTACHED  
+ プロセスは、デバッガーによってデバッグされていることを示します。 ある可能性があります、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]デバッガー、またはそれにいくつか他のデバッガー、WinDbg などの可能性があります。  
   
- PIFLAG\_PROCESS\_STOPPED  
- プロセスが停止していることを示します。  `PIFLAG_DEBUGGER_ATTACHED` は指定した場合にのみ有効です。  の以降で使用できます [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)]。  
+ PIFLAG_PROCESS_STOPPED  
+ プロセスが停止していることを示します。 有効な場合にのみ`PIFLAG_DEBUGGER_ATTACHED`も指定されています。 使用できる[!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)]およびそれ以降。  
   
- PIFLAG\_PROCESS\_RUNNING  
- プロセスが実行されていることを示します。  `PIFLAG_DEBUGGER_ATTACHED` は指定した場合にのみ有効です。  の以降で使用できます [!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)]。  
+ PIFLAG_PROCESS_RUNNING  
+ プロセスが実行されていることを示します。 有効な場合にのみ`PIFLAG_DEBUGGER_ATTACHED`も指定されています。 使用できる[!INCLUDE[vsprvslong](../../../code-quality/includes/vsprvslong_md.md)]およびそれ以降。  
   
-## 解説  
- [PROCESS\_INFO](../../../extensibility/debugger/reference/process-info.md) の構造体のメンバー `Flags` に使用されます。  
+## <a name="remarks"></a>コメント  
+ 使用、`Flags`のメンバー、 [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)構造体。  
   
- これらのフラグはビットごと `OR` に組み合わせることがあります。  
+ これらのフラグは、ビットごとと組み合わせること`OR`です。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [PROCESS\_INFO](../../../extensibility/debugger/reference/process-info.md)
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

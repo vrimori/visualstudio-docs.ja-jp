@@ -1,70 +1,70 @@
 ---
-title: "IDebugCustomViewer::DisplayValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomViewer::DisplayValue"
-helpviewer_keywords: 
-  - "IDebugCustomViewer::DisplayValue"
+title: "IDebugCustomViewer::DisplayValue |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCustomViewer::DisplayValue
+helpviewer_keywords: IDebugCustomViewer::DisplayValue
 ms.assetid: 7a538248-5ced-450e-97cd-13fabe35fb1c
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 701c5e33273dc6d00156e554e1abaa9a003568eb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCustomViewer::DisplayValue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドは指定された値を表示します。  
+# <a name="idebugcustomviewerdisplayvalue"></a>IDebugCustomViewer::DisplayValue
+このメソッドは、指定された値を表示します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT DisplayValue(  
-   HWND             hwnd,  
-   DWORD            dwID,  
-   IUnknown *       pHostServices,  
-   IDebugProperty3* pDebugProperty);  
+   HWND             hwnd,  
+   DWORD            dwID,  
+   IUnknown *       pHostServices,  
+   IDebugProperty3* pDebugProperty);  
 );  
 ```  
   
-```c#  
+```csharp  
 int DisplayValue(  
-   IntPtr          hwnd,   
-   uint            dwID,   
-   object          pHostServices,   
-   IDebugProperty3 pDebugProperty  
+   IntPtr          hwnd,   
+   uint            dwID,   
+   object          pHostServices,   
+   IDebugProperty3 pDebugProperty  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `hwnd`  
- \[入力\] 親ウィンドウ  
+ [in]親ウィンドウ  
   
  `dwID`  
- \[入力\] 複数の型をサポートするカスタム ビューアーの ID。  
+ [in]複数の種類をサポートしているカスタム ビューアーの ID。  
   
  `pHostServices`  
- \[入力\] 予約されています。  null 値は常に設定します。  
+ [in]予約されています。 常に設定を null にします。  
   
  `pDebugProperty`  
- \[入力\] インターフェイス。表示される値を取得するために使用できます。  
+ [in]表示される値を取得するために使用するインターフェイスです。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。  
   
-## 解説  
- にこのメソッドを必要なウィンドウを作成しその値を表示入力を待ちウィンドウが閉じて呼び出し元に戻す前に 「」すべてモーダルです。  これはメソッドがウィンドウの破棄は待機作成したユーザー入力にすべての要素の属性値を出力のウィンドウで処理することを意味します。  
+## <a name="remarks"></a>コメント  
+ 表示は、このメソッドは、必要なウィンドウを作成、値を表示、入力には、待機し、ウィンドウを閉じて、呼び出し元に戻す前にすべて「モーダル」です。 つまり、メソッドは、ウィンドウを破棄するためのユーザー入力を待機しているため、出力のウィンドウの作成から、プロパティの値を表示するすべての側面を処理する必要があります。  
   
- —文字列値を表すことができます [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) の特定のオブジェクト値の変更をサポートするには[SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) のメソッドを使用できます。  は同じオブジェクト メソッドのこの `DisplayValue` を実行する式エバリュエーターに対してカスタム インターフェイスを作成する必要が `IDebugProperty3` 実装するインターフェイスです。  このカスタム インターフェイスは任意のサイズや複雑さのデータを変更するためのメソッドを提供します。  
+ 値の変更をサポートするために、指定された[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)オブジェクトを使用する、 [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)メソッド — 場合は、値を文字列として表現できます。 以外の場合は、カスタム インターフェイスを作成するために必要な — これを実装する、式エバリュエーターに限定`DisplayValue`メソッド — を実装する、同じオブジェクトに対して、`IDebugProperty3`インターフェイスです。 このカスタム インターフェイスを任意のサイズや複雑さのデータを変更する方法を指定します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugCustomViewer](../../../extensibility/debugger/reference/idebugcustomviewer.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)

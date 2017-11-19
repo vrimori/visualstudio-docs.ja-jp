@@ -1,27 +1,30 @@
 ---
-title: "IMachineDebugManagerEvents::onAddApplication | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IMachineDebugManagerEvents::onAddApplication |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IMachineDebugManagerEvents.onAddApplication
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IMachineDebugManagerEvents::onAddApplication"
+helpviewer_keywords: IMachineDebugManagerEvents::onAddApplication
 ms.assetid: 00a54b91-36d5-430d-b654-5e2abe5300cd
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 887ce7f723713c335d72a6353c20765c7b695031
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IMachineDebugManagerEvents::onAddApplication
-アプリケーションが実行中のアプリケーションのリストに追加されたときにイベントを処理します。  
+# <a name="imachinedebugmanagereventsonaddapplication"></a>IMachineDebugManagerEvents::onAddApplication
+アプリケーションが実行に追加されたときにイベントを処理するアプリケーションの一覧です。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT onAddApplication(  
@@ -30,23 +33,23 @@ HRESULT onAddApplication(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pda`  
- \[入力\]実行中のアプリケーションのリストに追加されたアプリケーション。  
+ [in]アプリケーションの実行に追加されているアプリケーションの一覧です。  
   
  `dwAppCookie`  
- \[出力\]アプリケーションがアプリケーションの一覧に追加されたときに提供されるクッキー。  
+ [in]アプリケーションは、アプリケーションの一覧に追加したときに提供されるクッキー。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- このメソッドは、アプリケーションが実行中のアプリケーションのリストに追加されたことを示します。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、実行中にアプリケーションが追加されたことを示すアプリケーションの一覧です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IMachineDebugManagerEvents インターフェイス](../../winscript/reference/imachinedebugmanagerevents-interface.md)   
  [IMachineDebugManagerEvents::onRemoveApplication](../../winscript/reference/imachinedebugmanagerevents-onremoveapplication.md)

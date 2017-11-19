@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptSite::GetDocVersionString | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptSite::GetDocVersionString |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptSite.GetDocVersionString
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScriptSite_GetDocVersionString"
+helpviewer_keywords: IActiveScriptSite_GetDocVersionString
 ms.assetid: ab3f892d-06d3-4cb5-9ea5-20c4a1e518cd
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b4b009c9eb40b2935a5b1aeca0d551819462bafc
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptSite::GetDocVersionString
-現在のドキュメントのバージョンを区別するホスト定義の文字列を取得します。  関連するドキュメントに Windows スクリプトのスコープ外で HTML ページ \(の場合は\) 変更した場合は、メモ帳編集すると、スクリプト エンジンは、再コンパイルを強制的に実行する保持された状態とともにスクリプトが読み込まれたときにこれを保存できます。  
+# <a name="iactivescriptsitegetdocversionstring"></a>IActiveScriptSite::GetDocVersionString
+現在のドキュメントのバージョンを一意に識別するホスト定義の文字列を取得します。 (メモ帳で編集されている HTML ページの場合) のようにスクリプトを Windows のスコープ外に関連するドキュメントを変更した場合、スクリプト エンジンで保存できますこのと共に強制的に再コンパイル次に、スクリプトが読み込まれるとき、永続化された状態。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetDocVersionString(  
@@ -29,15 +32,15 @@ HRESULT GetDocVersionString(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pstrVersionString`  
- \[出力\]ホスト定義されたドキュメントのバージョン文字列のアドレス。  
+ [out]ホストが定義するドキュメントのバージョン文字列のアドレス。  
   
-## 戻り値  
- このメソッドがサポートされていない場合、または `E_NOTIMPL` が成功した場合 `S_OK` 返します。  
+## <a name="return-value"></a>戻り値  
+ 返します`S_OK`成功した場合、または`E_NOTIMPL`場合、このメソッドはサポートされていません。  
   
-## 解説  
- `E_NOTIMPL` がを返した場合、スクリプト エンジンは、スクリプトをドキュメントと ASPX することを想定する必要があります。  
+## <a name="remarks"></a>コメント  
+ 場合`E_NOTIMPL`返されるか、スクリプト エンジンがスクリプトがドキュメントとの同期を想定する必要があります。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)

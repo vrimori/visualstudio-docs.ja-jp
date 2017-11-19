@@ -1,41 +1,43 @@
 ---
-title: "VSPackage 構造 (ソース コントロールの vs パッケージ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Vspackages にある、構造体"
-  - "ソース管理パッケージ、VSPackage の概要"
+title: "VSPackage の構造 (ソース コントロール VSPackage) |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- VSPackages, structure
+- source control packages, VSPackage overview
 ms.assetid: 92722be7-b397-48c3-a7a7-0b931a341961
-caps.latest.revision: 26
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4f8422e4333c1f1ccffc928ce9a43e4afa53cc7a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# VSPackage 構造 (ソース コントロールの vs パッケージ)
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ソース コントロール パッケージ SDK VSPackage を作成するためのガイドラインにより、ソースのコントロール実装側で自分のソース管理機能を統合するには、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 環境です。 VSPackage が COM コンポーネントからの要求時に読み込まれた通常、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 統合開発環境 \(IDE\) が、レジストリ エントリのパッケージによって提供されているサービスに基づいています。 すべての VSPackage を実装する必要があります、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>です。 VSPackage が通常によって提供されるサービスを利用する、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE proffers 独自の一部のサービスとします。  
+# <a name="vspackage-structure-source-control-vspackage"></a>VSPackage の構造 (ソース コントロール VSPackage)
+ソース コントロールのパッケージの SDK を提供する VSPackage を作成するためのガイドラインと自分のソース管理機能を統合するソース コントロールの実行者を許可する、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]環境。 VSPackage は、COM コンポーネントによって、要求時に読み込まれた通常、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) は、そのレジストリ エントリで、パッケージによって提供されているサービスに基づいています。 すべての VSPackage を実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>です。 VSPackage によって提供されるサービスを通常使用する、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE proffers、独自のいくつかのサービスとします。  
   
- VSPackage では、そのメニュー項目を宣言し、.vsct ファイルを使用して既定の項目の状態を確立します。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE では、VSPackage が読み込まれるまでこの状態でメニュー項目を表示します。 その後は、VSPackage の実装、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> を有効にする、またはメニュー項目を無効にするメソッドが呼び出されます。  
+ VSPackage では、そのメニュー項目を宣言し、.vsct ファイルを使用して既定の項目の状態を確立します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE では、VSPackage が読み込まれるまでこの状態のメニュー項目を表示します。 後で、VSPackage の実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>有効にするにまたはメニュー項目を無効にするメソッドが呼び出されます。  
   
-## ソース コントロールのパッケージ特性  
- VSPackage が密接に統合されたソース管理 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
+## <a name="source-control-package-characteristics"></a>ソース コントロールのパッケージの特性  
+ VSPackage が密接に統合されたソース管理[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
   
  VSPackage のセマンティクスは次のとおりです。  
   
--   ある VSPackage ことによって実装されるインターフェイス \(、 `IVsPackage` インターフェイス\)  
+-   VSPackage によって実装されるインターフェイス (、`IVsPackage`インターフェイス)  
   
--   UI コマンドの実装 \(.vsct ファイルとの実装、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> インターフェイス\)  
+-   UI コマンドの実装 (.vsct ファイルとの実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイス)  
   
--   VSPackage での登録 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
+-   VSPackage の登録[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
   
- ソース管理 VSPackage と通信しなければならないこれら他の [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] エンティティ。  
+ ソース管理 VSPackage と通信する必要これら他の[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]エンティティ。  
   
 -   プロジェクト  
   
@@ -47,7 +49,7 @@ caps.handback.revision: 26
   
 -   実行中のドキュメント テーブル  
   
-### Visual Studio 環境のサービス利用できる場合があります。  
+### <a name="visual-studio-environment-services-that-may-be-consumed"></a>Visual Studio 環境のサービス利用できる可能性があります。  
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>  
@@ -64,15 +66,15 @@ caps.handback.revision: 26
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>  
   
-### VSIP インターフェイスを実装およびと呼ばれる  
- ソース管理パッケージは、VSPackage とために登録されているその他の VSPackages に直接対話できます [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 広範なソース管理機能を提供するためにソース管理 VSPackage に対処できるプロジェクトまたはシェルによって提供されるインターフェイスです。  
+### <a name="vsip-interfaces-implemented-and-called"></a>VSIP インターフェイス実装され、呼び出されます  
+ ソース管理パッケージは、VSPackage とそのために登録されているその他の Vspackage と直接対話できます[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 広範なソース管理機能を提供するために、ソース管理 VSPackage 対処できるプロジェクトまたはシェルによって提供されるインターフェイス。  
   
- すべてのプロジェクトに [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を実装する必要があります、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> 内のプロジェクトとして認識されるように、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE です。 ただし、このインターフェイスに特化されていないソース管理は十分です。 ソースの下にあると予想されるプロジェクト管理の実装、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>です。 その内容にプロジェクトを照会し、グリフとバインディング情報 \(サーバーの場所とソース管理下にあるプロジェクトのディスク上の場所間の接続を確立するために必要な情報\) を提供するソース管理の VSPackage によってこのインターフェイスが使用されます。  
+ すべてのプロジェクトで[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>内のプロジェクトとして認識されるように、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE です。 このインターフェイスがない特殊なただし、ソース管理に十分なです。 ソースの下に必要なプロジェクト管理の実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>です。 そのコンテンツのプロジェクトのクエリを実行して、グリフとバインディング情報 (必要な情報、サーバーの場所とディスクの場所の下にあるプロジェクトの間の接続を確立するために提供することをソース コントロール VSPackage によってこのインターフェイスを使用します。ソース コントロールの場合)。  
   
- VSPackage を実装するソース管理、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>, 、それによってプロジェクトをソース管理のために登録して、そのステータス グリフを取得します。  
+ VSPackage の実装、ソース管理、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>、それによってプロジェクトをソース管理に登録し、そのステータス グリフを取得します。  
   
- ソース管理 VSPackage が考慮する必要があるインターフェイスの一覧については、次を参照してください。 [関連するサービスとインターフェイス](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)します。  
+ ソース管理 VSPackage に考慮する必要がありますのあるインターフェイスの一覧については、次を参照してください。[関連サービスとインターフェイス](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [デザイン要素](../../extensibility/internals/source-control-vspackage-design-elements.md)   
  [関連するサービスとインターフェイス](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)

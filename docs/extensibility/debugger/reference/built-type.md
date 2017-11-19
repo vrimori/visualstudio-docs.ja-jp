@@ -1,68 +1,68 @@
 ---
-title: "BUILT_TYPE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BUILT_TYPE"
-helpviewer_keywords: 
-  - "BUILT_TYPE 構造体"
+title: "BUILT_TYPE |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BUILT_TYPE
+helpviewer_keywords: BUILT_TYPE structure
 ms.assetid: cc02c32c-0f65-4210-ad25-a9b1899066e8
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: bd8536f48d2204d79398000cb8503d7e03191af8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# BUILT_TYPE
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-この構造体はメタデータから取得したフィールドの種類についての情報を指定します。  
+# <a name="builttype"></a>BUILT_TYPE
+この構造体では、メタデータから取得されたフィールドの種類に関する情報を指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 typedef struct _tagTYPE_BUILT {  
-   ULONG32      ulAppDomainID;  
-   GUID         guidModule;  
-   IDebugField* pUnderlyingField;  
+   ULONG32      ulAppDomainID;  
+   GUID         guidModule;  
+   IDebugField* pUnderlyingField;  
 } BUILT_TYPE;  
 ```  
   
-```c#  
+```csharp  
 public struct BUILT_TYPE {  
-   public uint        ulAppDomainID;  
-   public Guid        guidModule;  
-   public IDebugField pUnderlyingField;  
+   public uint        ulAppDomainID;  
+   public Guid        guidModule;  
+   public IDebugField pUnderlyingField;  
 };  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  ulAppDomainID  
- シンボルがアプリケーションの ID。  これはアプリケーションのインスタンスを識別するために使用されます。  
+ シンボルが元のアプリケーションの ID。 これについては、アプリケーションのインスタンスを一意に識別に使用します。  
   
  guidModule  
- このフィールドを含むモジュールの GUID。  
+ このフィールドを含むモジュールの GUID です。  
   
  pUnderlyingField  
- この組み込みフィールドに関連付けられている基になるフィールドを指定する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクト。  
+ [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)この組み込みのフィールドに関連付けられている基になるフィールドを識別するオブジェクト。  
   
-## 解説  
- この構造は [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md) の構造の共用体の一部として `TYPE_INFO` の構造体の `dwKind` のフィールドが `TYPE_KIND_BUILT` \([dwTYPE\_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) の列挙値\) に設定すると表示されます。  
+## <a name="remarks"></a>コメント  
+ この構造体がの共用体の一部として表示されます、 [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)ときに構造体、`dwKind`のフィールド、`TYPE_INFO`構造に設定されている`TYPE_KIND_BUILT`(から値、 [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)列挙体)。  
   
-## 必要条件  
- ヘッダー : sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [TYPE\_INFO](../../../extensibility/debugger/reference/type-info.md)   
- [dwTYPE\_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)   
+ [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)   
+ [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

@@ -1,57 +1,59 @@
 ---
-title: "IDebugComPlusSymbolProvider::UnloadSymbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UnloadSymbols"
-  - "IDebugComPlusSymbolProvider::UnloadSymbols"
+title: "IDebugComPlusSymbolProvider::UnloadSymbols |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UnloadSymbols
+- IDebugComPlusSymbolProvider::UnloadSymbols
 ms.assetid: 53e3ddc1-ab47-4097-8fef-b26e5504b37a
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4a49e23f2c62e391fe483f05b13f3d4db272027e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugComPlusSymbolProvider::UnloadSymbols
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-指定したメモリの指定したモジュールのデバッグ シンボルをアンロードします。  
+# <a name="idebugcomplussymbolproviderunloadsymbols"></a>IDebugComPlusSymbolProvider::UnloadSymbols
+メモリから指定されたモジュールのデバッグ シンボルをアンロードします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT UnloadSymbols(  
-   ULONG32 ulAppDomainID,  
-   GUID    guidModule  
+   ULONG32 ulAppDomainID,  
+   GUID    guidModule  
 );  
 ```  
   
-```c#  
+```csharp  
 int UnloadSymbols(  
-   uint ulAppDomainID,  
-   Guid guidModule  
+   uint ulAppDomainID,  
+   Guid guidModule  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ulAppDomainID`  
- \[出力\] アプリケーション ドメインの ID。  
+ [in]アプリケーション ドメインの識別子。  
   
  `guidModule`  
- \[出力\] モジュールの一意の識別子。  
+ [in]モジュールの一意の識別子。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 使用例  
- 次の例 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider の**  オブジェクトに対してこのメソッドを使用する方法を示します。  
+## <a name="example"></a>例  
+ 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスです。  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::UnloadSymbols(  
     ULONG32 ulAppDomainID,  
     GUID guidModule  
@@ -90,5 +92,5 @@ Error:
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

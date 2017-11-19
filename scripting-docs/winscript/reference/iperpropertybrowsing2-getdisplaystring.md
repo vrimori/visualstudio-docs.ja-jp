@@ -1,47 +1,50 @@
 ---
-title: "IPerPropertyBrowsing2::GetDisplayString | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IPerPropertyBrowsing2::GetDisplayString |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IPerPropertyBrowsing2.GetDisplayString
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IPerPropertyBrowsing2::GetDisplayString"
+helpviewer_keywords: IPerPropertyBrowsing2::GetDisplayString
 ms.assetid: 8f75c6a9-86a9-4e2d-8cb4-74e7b1c0a524
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: be6f665d1f63966b3828868f4fb8fbf1cae002e9
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IPerPropertyBrowsing2::GetDisplayString
-本質的に見ることができない返されたテキスト、プロパティを説明する名前、呼び出し元のユーザー インターフェイスに表示できる、表示型に文字列を取得します。  
+# <a name="iperpropertybrowsing2getdisplaystring"></a>IPerPropertyBrowsing2::GetDisplayString
+取得型は、本質的に表示できませんが、返されるテキストを表示する文字列、名、プロパティを記述するであり、呼び出し元のユーザー インターフェイスに表示されることができます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetDisplayString(  
-   DISPID  dispid,  
-   BSTR*  pBstr  
+   DISPID  dispid,  
+   BSTR*  pBstr  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dispid`  
- \[入力\]表示名が必要なプロパティの識別子をディスパッチします。  
+ [in]表示名が要求されたプロパティの識別子をディスパッチします。  
   
  `pBstr`  
- \[入力\] `dispID`で指定されるプロパティの表示名を含む `BSTR` へのポインター。  
+ [out]ポインター、`BSTR`によって識別されたプロパティの表示名を含む`dispID`です。  
   
-## 戻り値  
- 有効な `HRESULT`、通常 `S_OK`を返します。  
+## <a name="return-value"></a>戻り値  
+ 有効な返します`HRESULT`通常`S_OK`です。  
   
-## 解説  
- 返される文字列は、プロパティの有効値ではありません。  また、プロパティの、文字列表示です。  
+## <a name="remarks"></a>コメント  
+ 返される文字列は、プロパティの有効な値ではありません。 プロパティの文字列の表示だけです。  
   
-## 参照  
- [IPerPropertyBrowsing2 インターフェイス](../../winscript/reference/iperpropertybrowsing2-interface-1.md)
+## <a name="see-also"></a>関連項目  
+ [IPerPropertyBrowsing2 インターフェイス 1](../../winscript/reference/iperpropertybrowsing2-interface-1.md)

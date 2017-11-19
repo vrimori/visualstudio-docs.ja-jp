@@ -1,44 +1,45 @@
 ---
-title: "IDebugGenericFieldDefinition | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugGenericFieldDefinition インターフェイス"
+title: "IDebugGenericFieldDefinition |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugGenericFieldDefinition interface
 ms.assetid: b5a853b7-221e-4d62-8948-07423089d75d
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5e0dd0b65b8b658f58f475e306cac42a118b8423
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugGenericFieldDefinition
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebuggenericfielddefinition"></a>IDebugGenericFieldDefinition
 マネージ コードのジェネリック型のフィールドの定義を表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugGenericFieldDefinition : IUnknown  
 ```  
   
-## メソッド  
- このインターフェイスは以下のメソッドを実行します :  
+## <a name="methods"></a>メソッド  
+ このインターフェイスでは、次のメソッドを実装します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[ConstructInstantiation](../../../extensibility/debugger/reference/idebuggenericfielddefinition-constructinstantiation.md)|型引数の配列を持つフィールドのインスタンスを構築します。|  
-|[GetFormalTypeParams](../../../extensibility/debugger/reference/idebuggenericfielddefinition-getformaltypeparams.md)|パラメーターの値は型パラメーターを取得します。|  
-|[TypeParamCount](../../../extensibility/debugger/reference/idebuggenericfielddefinition-typeparamcount.md)|一般的なフィールドに関連付けられた型パラメーターの数を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[ConstructInstantiation](../../../extensibility/debugger/reference/idebuggenericfielddefinition-constructinstantiation.md)|型引数の配列を指定したフィールドのインスタンスを構築します。|  
+|[GetFormalTypeParams](../../../extensibility/debugger/reference/idebuggenericfielddefinition-getformaltypeparams.md)|パラメーターの数を指定された型パラメーターを取得します。|  
+|[TypeParamCount](../../../extensibility/debugger/reference/idebuggenericfielddefinition-typeparamcount.md)|[標準] フィールドに関連付けられている型パラメーターの数を取得します。|  
   
-## 必要条件  
- ヘッダー : Sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll

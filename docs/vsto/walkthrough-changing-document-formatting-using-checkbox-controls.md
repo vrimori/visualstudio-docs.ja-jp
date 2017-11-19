@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Changing Document Formatting Using CheckBox Controls | Microsoft Docs'
+title: "チュートリアル: CheckBox コントロールを使用したドキュメント書式の変更 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,153 +17,155 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], check box controls
 - controls [Office development in Visual Studio], adding to documents
 ms.assetid: 3740e41d-a57e-43bb-87e7-6e5481ef290b
-caps.latest.revision: 70
-author: kempb
-ms.author: kempb
+caps.latest.revision: "70"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 69edcb6d683c910d02e4224ec44590c288fefefa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: cf214f2ffc55cf0846373fcaa226253f276e3d69
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-changing-document-formatting-using-checkbox-controls"></a>Walkthrough: Changing Document Formatting Using CheckBox Controls
-  This walkthrough demonstrates how to use Windows Forms controls in a document-level customization for Microsoft Office Word to change text formatting.  
+# <a name="walkthrough-changing-document-formatting-using-checkbox-controls"></a>チュートリアル : CheckBox コントロールを使用したドキュメント書式の変更
+  このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでの Windows フォーム コントロールを使用して、テキストの書式設定を変更する方法を示します。  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- This walkthrough illustrates the following tasks:  
+ このチュートリアルでは、次の作業について説明します。  
   
--   Adding text and a control to the document in a document-level project at design time.  
+-   デザイン時にドキュメント レベルのプロジェクトの文書にテキストとコントロールを追加します。  
   
--   Formatting the text when an option is selected.  
+-   オプションを選択すると、テキストの書式を設定します。  
   
- To see the result as a completed sample, see the Word Controls Sample at [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md).  
+ 完成したサンプルの結果を参照してくださいで Word コントロールのサンプルを参照してください。 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)です。  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] or [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].  
+-   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] または [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]。  
   
-## <a name="creating-the-project"></a>Creating the Project  
- The first step is to create a Word Document project.  
+## <a name="creating-the-project"></a>プロジェクトの作成  
+ 最初に、Word 文書のプロジェクトを作成します。  
   
-#### <a name="to-create-a-new-project"></a>To create a new project  
+#### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  Create a Word Document project with the name **My Word Formatting**. In the wizard, select **Create a new document**.  
+1.  名前の Word 文書プロジェクトを作成**My Word 書式**です。 ウィザードで、次のように選択します。**新しいドキュメントを作成する**です。  
   
-     For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+     詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
   
-     Visual Studio opens the new Word document in the designer and adds the **My Word Formatting** project to **Solution Explorer**.  
+     デザイナーで新しい Word 文書を開き、 **My Word 書式**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
-## <a name="adding-text-and-controls-to-the-word-document"></a>Adding Text and Controls to the Word Document  
- For this walkthrough, add three check boxes and some text in a <xref:Microsoft.Office.Tools.Word.Bookmark> control to the Word document. The check boxes will present options to the user for formatting the text.  
+## <a name="adding-text-and-controls-to-the-word-document"></a>Word 文書にテキストとコントロールの追加  
+ このチュートリアルでは、次の 3 つのチェック ボックスとテキストを追加、 <xref:Microsoft.Office.Tools.Word.Bookmark> Word 文書にコントロールできます。 チェック ボックス オプションが表示されます、ユーザーにテキストの書式設定します。  
   
-#### <a name="to-add-three-check-boxes"></a>To add three check boxes  
+#### <a name="to-add-three-check-boxes"></a>次の 3 つのチェック ボックスを追加するには  
   
-1.  Verify that the document is open in the Visual Studio designer.  
+1.  Visual Studio デザイナーで文書が開いていることを確認します。  
   
-2.  From the **Common Controls** tab of the **Toolbox**, drag the first <xref:Microsoft.Office.Tools.Word.Controls.CheckBox> control to the document.  
+2.  **コモン コントロール**のタブ、**ツールボックス**、最初にドラッグ<xref:Microsoft.Office.Tools.Word.Controls.CheckBox>コントロールをドキュメント。  
   
-3.  In the **Properties** window, change the following properties.  
+3.  **[プロパティ]** ウィンドウで、次のプロパティを変更します。  
   
-    |Property|Value|  
+    |プロパティ|値|  
     |--------------|-----------|  
-    |**Name**|**applyBoldFont**|  
-    |**Text**|**Bold**|  
+    |**名前**|**applyBoldFont**|  
+    |**[テキスト]**|**太字**|  
   
-4.  Press **Enter** to move the insertion point below the first check box.  
+4.  キーを押して**Enter**最初のチェック ボックスの下にカーソルを移動します。  
   
-5.  Add a second check box to the document below the `ApplyBoldFont` check box and change the following properties.  
+5.  次のドキュメントに 2 つ目のチェック ボックスを追加、`ApplyBoldFont`チェック ボックスをオンし、次のプロパティを変更します。  
   
-    |Property|Value|  
+    |プロパティ|値|  
     |--------------|-----------|  
-    |**Name**|**applyItalicFont**|  
-    |**Text**|**Italic**|  
+    |**名前**|**applyItalicFont**|  
+    |**[テキスト]**|**斜体**|  
   
-6.  Press **Enter** to move the insertion point below the second check box.  
+6.  キーを押して**Enter** 2 番目のチェック ボックスの下にカーソルを移動します。  
   
-7.  Add a third check box to the document below the `ApplyItalicFont` check box and change the following properties.  
+7.  3 番目のチェック ボックスを次のドキュメントに追加、`ApplyItalicFont`チェック ボックスをオンし、次のプロパティを変更します。  
   
-    |Property|Value|  
+    |プロパティ|値|  
     |--------------|-----------|  
-    |**Name**|**applyUnderlineFont**|  
-    |**Text**|**Underline**|  
+    |**名前**|**applyUnderlineFont**|  
+    |**[テキスト]**|**下線**|  
   
-#### <a name="to-add-text-and-a-bookmark-control"></a>To add text and a Bookmark control  
+#### <a name="to-add-text-and-a-bookmark-control"></a>テキストおよびブックマーク コントロールを追加するには  
   
-1.  Move the insertion point below the check box controls and type the following text:  
+1.  チェック ボックス コントロールの下にカーソルを移動し、次のテキストを入力します。  
   
-     **Click a check box to change the formatting of this text.**  
+     **このテキストの書式を変更する チェック ボックスをクリックします。**  
   
-2.  From the **Word Controls** tab of the **Toolbox**, drag a <xref:Microsoft.Office.Tools.Word.Bookmark> control to the document.  
+2.  **Word コントロール**のタブ、**ツールボックス**、ドラッグ、<xref:Microsoft.Office.Tools.Word.Bookmark>コントロールをドキュメント。  
   
-     The **Add Bookmark Control** dialog box appears.  
+     **ブックマーク コントロールの追加** ダイアログ ボックスが表示されます。  
   
-3.  Select the text you added to the document and click **OK**.  
+3.  ドキュメントに追加するテキストを選択し、クリックして**OK**です。  
   
-     A <xref:Microsoft.Office.Tools.Word.Bookmark> control named **Bookmark1** is added to the selected text in the document.  
+     A<xref:Microsoft.Office.Tools.Word.Bookmark>という名前のコントロール**Bookmark1**がドキュメントで選択したテキストに追加します。  
   
-4.  In the **Properties** window, change the value of the **(Name)** property to **fontText.**  
+4.  **プロパティ** ウィンドウの値を変更、 **(名)**プロパティを**fontText です。**  
   
- Next, write the code to format the text when a check box is checked or cleared.  
+ 次に、チェック ボックスをオンまたはオフのときにテキストの書式を設定するコードを記述します。  
   
-## <a name="formatting-the-text-when-a-check-box-is-checked-or-cleared"></a>Formatting the Text When a Check box is Checked or Cleared  
- When the user selects a formatting option, change the format of the text in the document.  
+## <a name="formatting-the-text-when-a-check-box-is-checked-or-cleared"></a>オンまたはオフには、テキストと、チェック ボックスを書式設定  
+ ユーザーが書式設定オプションを選択すると、ドキュメント内のテキストの書式を変更します。  
   
-#### <a name="to-change-formatting-when-a-check-box-is-selected"></a>To change formatting when a check box is selected  
+#### <a name="to-change-formatting-when-a-check-box-is-selected"></a>チェック ボックスを書式設定を変更するのには、選択されています。  
   
-1.  Right-click `ThisDocument` in **Solution Explorer**, and then click **View Code** on the shortcut menu.  
+1.  右クリック`ThisDocument`で**ソリューション エクスプ ローラー**、クリックして**コードの表示**ショートカット メニューの します。  
   
-2.  For C# only, add the following constants to the **ThisDocument** class.  
+2.  C# の場合のみ、定数の追加、次に、 **ThisDocument**クラスです。  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#2)]  
   
-3.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyBoldFont` check box.  
+3.  次のコードを追加、<xref:System.Windows.Forms.Control.Click>のイベント ハンドラー、`applyBoldFont`チェック ボックスをオンします。  
   
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#3](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#3)]  [!code-csharp[Trin_VstcoreProgrammingControlsWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#3)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsWord#3](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#3)]
+     [!code-csharp[Trin_VstcoreProgrammingControlsWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#3)]  
   
-4.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyItalicFont` check box.  
+4.  次のコードを追加、<xref:System.Windows.Forms.Control.Click>のイベント ハンドラー、`applyItalicFont`チェック ボックスをオンします。  
   
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#4](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#4)]  [!code-csharp[Trin_VstcoreProgrammingControlsWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#4)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsWord#4](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#4)]
+     [!code-csharp[Trin_VstcoreProgrammingControlsWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#4)]  
   
-5.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the `applyUnderlineFont` check box.  
+5.  次のコードを追加、<xref:System.Windows.Forms.Control.Click>のイベント ハンドラー、`applyUnderlineFont`チェック ボックスをオンします。  
   
-     [!code-vb[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#5)]  [!code-csharp[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#5)]  
+     [!code-vb[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#5)]
+     [!code-csharp[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#5)]  
   
-6.  In C#, you must add event handlers for the text boxes to the <xref:Microsoft.Office.Tools.Word.Document.Startup> event. For information about how to create event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
+6.  C# の場合にあるテキスト ボックスのイベント ハンドラーを追加する必要があります、<xref:Microsoft.Office.Tools.Word.Document.Startup>イベント。 イベント ハンドラーを作成する方法については、次を参照してください。[する方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)です。  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#6)]  
   
-## <a name="testing-the-application"></a>Testing the Application  
- You can now test your document to verify that the text is formatted correctly when you select or clear a check box.  
+## <a name="testing-the-application"></a>アプリケーションのテスト  
+ 選択またはチェック ボックスをオフにするときに、テキストの書式が正しく設定することを確認する文書をテストできます。  
   
-#### <a name="to-test-your-document"></a>To test your document  
+#### <a name="to-test-your-document"></a>文書をテストするには  
   
-1.  Press F5 to run your project.  
+1.  F5 キーを押してプロジェクトを実行します。  
   
-2.  Select or clear a check box.  
+2.  選択またはチェック ボックスをオフにします。  
   
-3.  Confirm that the text is formatted correctly.  
+3.  テキストの形式が正しいことを確認します。  
   
-## <a name="next-steps"></a>Next Steps  
- This walkthrough shows the basics of using check boxes and programmatically changing text formatting on Word documents. Here are some tasks that might come next:  
+## <a name="next-steps"></a>次の手順  
+ このチュートリアルでは、チェック ボックスを使用して、プログラムによって Word 文書で書式設定テキストの変更の基礎を説明します。 ここでは、次の作業を行います。  
   
--   Use a button to populate a text box. For more information, see [Walkthrough: Displaying Text in a Text Box in a Document Using a Button](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md).  
+-   ボタンを使用して、テキスト ボックスに入力します。 詳細については、次を参照してください。[チュートリアル: ボタンを使用してドキュメント内のテキスト ボックスに表示するテキスト](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)です。  
   
--   Using radio buttons to select chart styles. For more information, see [Walkthrough: Updating a Chart in a Document Using Radio Buttons](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md).  
+-   オプション ボタンを使用してグラフのスタイルを選択する。 詳細については、次を参照してください。[チュートリアル: グラフを更新するラジオ ボタンを使用してドキュメントで](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)です。  
   
 -  
   
-## <a name="see-also"></a>See Also  
- [Walkthroughs Using Word](../vsto/walkthroughs-using-word.md)   
- [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md)   
- [NamedRange Control](../vsto/namedrange-control.md)   
- [Limitations of Windows Forms Controls on Office Documents](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
+## <a name="see-also"></a>関連項目  
+ [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
+ [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
+ [NamedRange コントロール](../vsto/namedrange-control.md)   
+ [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
   
   

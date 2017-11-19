@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Creating Your First VSTO Add-in for Project | Microsoft Docs'
+title: "チュートリアル: は、初めて VSTO アドイン プロジェクトの作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,128 +16,128 @@ helpviewer_keywords:
 - Project [Office development in Visual Studio], creating your first project
 - add-ins [Office development in Visual Studio], creating your first project
 ms.assetid: da2b727e-6db8-4853-bf00-7afe0ef13213
-caps.latest.revision: 28
-author: kempb
-ms.author: kempb
+caps.latest.revision: "28"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 466f63c2c93b9ada7218469df3a0abe586becd94
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 324d5e07ed2c1515036282abe12336f90225993f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-creating-your-first-vsto-add-in-for-project"></a>Walkthrough: Creating Your First VSTO Add-in for Project
-  This walkthrough shows you how to create an VSTO Add-in for Microsoft Office Project. The features that you create in this kind of solution are available to the application itself, regardless of which projects are open. For more information, see [Office Solutions Development Overview &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).  
+# <a name="walkthrough-creating-your-first-vsto-add-in-for-project"></a>チュートリアル: 初めての Project 用 VSTO アドインの作成
+  このチュートリアルでは Microsoft Office Project 用の VSTO アドインを作成する方法を示します。 この種のソリューションに作成した機能は、どのプロジェクトが開いているかにかかわらず、アプリケーション自体に対して使用できます。 詳細については、次を参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md).  
   
  [!INCLUDE[appliesto_projallapp](../vsto/includes/appliesto-projallapp-md.md)]  
   
- This walkthrough illustrates the following tasks:  
+ このチュートリアルでは、次の作業について説明します。  
   
--   Creating a Project VSTO Add-in project.  
+-   Project VSTO アドイン プロジェクトを作成する。  
   
--   Writing code that uses the object model of Project to add a task to a new project.  
+-   Project のオブジェクト モデルを使用して、新しいプロジェクトにタスクを追加するコードを記述する。  
   
--   Building and running the project to test it.  
+-   プロジェクトをビルドし、実行してテストする。  
   
--   Cleaning up the completed project so that the VSTO Add-in no longer runs automatically on your development computer.  
+-   完成したプロジェクトをクリーンアップして、開発用コンピューターでこの VSTO アドインが自動的に実行されないようにする。  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Project_15_short](../vsto/includes/project-15-short-md.md)] or [!INCLUDE[Project_14_short](../vsto/includes/project-14-short-md.md)].  
+-   [!INCLUDE[Project_15_short](../vsto/includes/project-15-short-md.md)] または [!INCLUDE[Project_14_short](../vsto/includes/project-14-short-md.md)]。  
   
-## <a name="creating-the-project"></a>Creating the Project  
+## <a name="creating-the-project"></a>プロジェクトの作成  
   
-#### <a name="to-create-a-new-project-in-visual-studio"></a>To create a new project in Visual Studio  
+#### <a name="to-create-a-new-project-in-visual-studio"></a>Visual Studio で新しいプロジェクトを作成するには  
   
-1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を起動します。  
   
-2.  On the **File** menu, point to **New**, and then click **Project**.  
+2.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
   
-3.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then expand **Office/SharePoint**.  
+3.  テンプレート ペインで、 **[Visual C#]** または **[Visual Basic]**を展開してから、 **[Office/SharePoint]**を展開します。  
   
-4.  Under the expanded **Office/SharePoint** node, select the **Office Add-ins** node.  
+4.  展開した **[Office/SharePoint]** ノードの下で、 **[Office Add-ins]** ノードを選択します。  
   
-5.  In the list of project templates, select **Project 2010 Add-in** or **Project 2013 Add-in**.  
+5.  プロジェクト テンプレートの一覧で、 **[Project 2010 アドイン]** または **[Project 2013 アドイン]**を選びます。  
   
-6.  In the **Name** box, type **FirstProjectAddIn**.  
+6.  **[名前]** ボックスに「 **FirstProjectAddIn**」と入力します。  
   
-7.  Click **OK**.  
+7.  **[OK]**をクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] creates the **FirstProjectAddIn** project and opens the **ThisAddIn** code file in the editor.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] により **FirstProjectAddIn** プロジェクトが作成され、 **ThisAddIn** コード ファイルがエディターで開かれます。  
   
-## <a name="writing-code-that-adds-a-new-task-to-a-project"></a>Writing Code that Adds a New Task to a Project  
- Next, add code to the ThisAddIn code file. The new code uses the object model of Project to add a new task to a project. By default, the ThisAddIn code file contains the following generated code:  
+## <a name="writing-code-that-adds-a-new-task-to-a-project"></a>プロジェクトに新しいタスクを追加するコードの記述  
+ 次に、ThisAddIn コード ファイルにコードを追加します。 新しいコードでは、Project のオブジェクト モデルを使用して、プロジェクトに新しいタスクを追加します。 ThisAddIn コード ファイルには、次の生成コードが既定で含まれています。  
   
--   A partial definition of the `ThisAddIn` class. This class provides an entry point for your code and provides access to the object model of Project. For more information, see [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md). The remainder of the `ThisAddIn` class is defined in a hidden code file that you should not modify.  
+-   `ThisAddIn` クラスの部分定義。 このクラスは、コードのエントリ ポイントを提供し、Project のオブジェクト モデルへのアクセスを提供します。 詳細については、「 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)」を参照してください。`ThisAddIn` クラスの残りの部分は、変更することができない非表示のコード ファイルに定義されています。  
   
--   The `ThisAddIn_Startup` and `ThisAddIn_Shutdown` event handlers. These event handlers are called when Project loads and unloads your VSTO Add-in. Use these event handlers to initialize your VSTO Add-in when it is loaded, and to clean up resources used by your VSTO Add-in when it is unloaded. For more information, see [Events in Office Projects](../vsto/events-in-office-projects.md).  
+-   `ThisAddIn_Startup` および `ThisAddIn_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、Project が VSTO アドインを読み込むときとアンロードするときに呼び出されます。 これらのイベント ハンドラーを使用して、VSTO アドインを読み込むときに初期化し、VSTO アドインがアンロードされるときには使用したリソースをクリーンアップします。 詳細については、「 [Events in Office Projects](../vsto/events-in-office-projects.md)」を参照してください。  
   
-#### <a name="to-add-a-task-to-a-new-project"></a>To add a task to a new project  
+#### <a name="to-add-a-task-to-a-new-project"></a>新しいプロジェクトにタスクを追加するには  
   
-1.  In the ThisAddIn code file, add the following code to the `ThisAddIn` class. This code defines an event handler for the NewProject event of the Microsoft.Office.Interop.MSProject.Application class.  
+1.  ThisAddIn コード ファイルで、次のコードを `ThisAddIn` クラスに追加します。 このコードでは、Microsoft.Office.Interop.MSProject.Application クラスの新しいプロジェクトのイベントのイベント ハンドラーを定義します。  
   
-     When the user creates a new project, this event handler adds a task to the project.  
+     ユーザーが新しいプロジェクトを作成すると、このイベント ハンドラーによってタスクがプロジェクトに追加されます。  
   
-     [!code-vb[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb#1)]  [!code-csharp[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#1)]  
+     [!code-vb[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb#1)]
+     [!code-csharp[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#1)]  
   
- To modify the project, this code example use the following objects:  
+ プロジェクトを変更するため、このコード例では次のオブジェクトを使用しています。  
   
--   The `Application` field of the `ThisAddIn` class. The `Application` field returns an Microsoft.Office.Interop.MSProject.Application object, which represents the current instance of Project.  
+-   `Application` クラスの `ThisAddIn` フィールド。 `Application`フィールドは、プロジェクトの現在のインスタンスを表す Microsoft.Office.Interop.MSProject.Application オブジェクトを返します。  
   
--   The `pj` parameter of the event handler for the NewProject event. The `pj` parameter is a Microsoft.Office.Interop.MSProject.Project object, which represents the project. For more information, see [Project Solutions](../vsto/project-solutions.md).  
+-   `pj`プロジェクトに新しいイベントのイベント ハンドラーのパラメーターです。 `pj`パラメーターは、Microsoft.Office.Interop.MSProject.Project オブジェクト、プロジェクトを表します。 詳細については、「 [Project Solutions](../vsto/project-solutions.md)」を参照してください。  
   
-1.  If you are using C#, add the following code to the `ThisAddIn_Startup` event handler. This code connects the `Application_Newproject` event handler with the NewProject event.  
+1.  C# を使用する場合は、次のコードを `ThisAddIn_Startup` イベント ハンドラーに追加します。 このコードでは接続、`Application_Newproject`プロジェクトに新しいイベントにイベント ハンドラー。  
   
      [!code-csharp[Trin_ProjectAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#2)]  
   
 -  
   
-## <a name="testing-the-project"></a>Testing the Project  
- When you build and run the project, verify that the new task appears in the resulting new project.  
+## <a name="testing-the-project"></a>プロジェクトのテスト  
+ プロジェクトをビルドして実行し、新しいプロジェクトに新しいタスクが表示されることを確認します。  
   
-#### <a name="to-test-the-project"></a>To test the project  
+#### <a name="to-test-the-project"></a>プロジェクトをテストするには  
   
-1.  Press **F5** to build and run your project. Microsoft Project starts and automatically opens a new blank project.  
+1.  **F5** キーを押して、プロジェクトをビルドおよび実行します。 Microsoft Project が起動し、新しい空のプロジェクトが自動的に開きます。  
   
-     When you build the project, the code is compiled into an assembly that is included in the build output folder for the project. Visual Studio also creates a set of registry entries that enable Project to discover and load the VSTO Add-in, and it configures the security settings on the development computer to enable the VSTO Add-in to run. For more information, see [Office Solution Build Process Overview](http://msdn.microsoft.com/en-us/a9d12e4f-c9ea-4a62-a841-c42b91f831ee).  
+     プロジェクトをビルドすると、プロジェクトのビルド出力フォルダーに含まれるアセンブリにコードがコンパイルされます。 さらに Visual Studio は、Project が VSTO アドインを検出して読み込めるようにする一連のレジストリ エントリを作成し、VSTO アドインを実行できるように開発用コンピューター上のセキュリティを設定します。 詳細については、「 [Office ソリューション ビルド処理の概要](http://msdn.microsoft.com/en-us/a9d12e4f-c9ea-4a62-a841-c42b91f831ee)」を参照してください。  
   
-2.  Verify that a new task is added to the blank project.  
+2.  新しいタスクが空のプロジェクトに追加されることを確認します。  
   
-3.  Verify that the following text appears in the **Task Name** field of the task.  
+3.  次のテキストがタスクの **[タスク名]** フィールドに表示されることを確認します。  
   
      **This text was added by using code.**  
   
-4.  Close Microsoft Project.  
+4.  Microsoft Project を閉じます。  
   
-## <a name="cleaning-up-the-project"></a>Cleaning up the Project  
- When you finish developing a project, remove the VSTO Add-in assembly, registry entries, and security settings from your development computer. Otherwise, the VSTO Add-in will run every time you open Microsoft Project on the development computer.  
+## <a name="cleaning-up-the-project"></a>プロジェクトのクリーンアップ  
+ プロジェクトの開発が完了したら、VSTO アドイン アセンブリ、レジストリ エントリ、およびセキュリティ設定を開発用コンピューターから削除します。 この操作を行わないと、開発用コンピューター上で Microsoft Project を起動するたびに VSTO アドインが実行されます。  
   
-#### <a name="to-clean-up-your-project"></a>To clean up your project  
+#### <a name="to-clean-up-your-project"></a>プロジェクトをクリーンアップするには  
   
-1.  In Visual Studio, on the **Build** menu, click **Clean Solution**.  
+1.  Visual Studio で、 **[ビルド]** メニューの **[ソリューションのクリーン]**をクリックします。  
   
-## <a name="next-steps"></a>Next Steps  
- Now that you have created a basic VSTO Add-in for Project, you can learn more about how to develop VSTO Add-ins from these topics:  
+## <a name="next-steps"></a>次の手順  
+ これで Project 用の基本的な VSTO アドインの作成が完了しました。VSTO アドインの開発方法について詳しくは、次に示すトピックをご覧ください。  
   
--   General programming tasks that you can perform in VSTO Add-ins for Project: [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md).  
+-   Project 用の VSTO アドインで実行できる一般的なプログラミング タスク: [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)  
   
--   Using the object model of Project: [Project Solutions](../vsto/project-solutions.md).  
+-   Project のオブジェクト モデルの使用法: [Project Solutions](../vsto/project-solutions.md)  
   
--   Building and debugging VSTO Add-ins for Project: [Building Office Solutions](../vsto/building-office-solutions.md).  
+-   ビルドとは、VSTO アドイン プロジェクトのデバッグ: [Office ソリューションのビルド](../vsto/building-office-solutions.md)です。  
   
--   Deploying VSTO Add-ins for Project: [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
+-   Project 用の VSTO アドインを配置: [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)です。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
- [Project Solutions](../vsto/project-solutions.md)   
- [Building Office Solutions](../vsto/building-office-solutions.md)   
- [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)   
- [Office Project Templates Overview](../vsto/office-project-templates-overview.md)  
+ [プロジェクトから成るソリューション](../vsto/project-solutions.md)   
+ [Office ソリューションのビルド](../vsto/building-office-solutions.md)   
+ [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
+ [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)  
   
   

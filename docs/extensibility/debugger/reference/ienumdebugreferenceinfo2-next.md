@@ -1,59 +1,59 @@
 ---
-title: "IEnumDebugReferenceInfo2::Next | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugReferenceInfo2::Next"
-helpviewer_keywords: 
-  - "IEnumDebugReferenceInfo2::Next"
+title: "IEnumDebugReferenceInfo2::Next |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugReferenceInfo2::Next
+helpviewer_keywords: IEnumDebugReferenceInfo2::Next
 ms.assetid: 70b31a57-1701-4757-9e7e-63ec60a71b3c
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 08726689f2bdf9c0411e2637d4dc5a08e82d79dd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugReferenceInfo2::Next
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-列挙体の要素のセットを返します。  
+# <a name="ienumdebugreferenceinfo2next"></a>IEnumDebugReferenceInfo2::Next
+列挙体から次の要素のセットを返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT Next(  
-   ULONG                   celt,  
-   DEBUG_REFERENCE_INFO ** rgelt,  
-   ULONG*                  pceltFetched  
+   ULONG                   celt,  
+   DEBUG_REFERENCE_INFO ** rgelt,  
+   ULONG*                  pceltFetched  
 );  
 ```  
   
-```c#  
+```csharp  
 int Next(  
-   uint                   celt,  
-   DEBUG_REFERENCE_INFO[] rgelt,  
-   ref uint               pceltFetched  
+   uint                   celt,  
+   DEBUG_REFERENCE_INFO[] rgelt,  
+   ref uint               pceltFetched  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `celt`  
- \[入力\] 取得する要素の数。  または `rgelt` の配列の最大サイズを指定します。  
+ [in]取得する要素の数。 また、最大のサイズを指定、`rgelt`配列。  
   
  `rgelt`  
- \[入力出力\] 入力する [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) の要素の配列。  
+ [入力、出力].配列[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)格納する要素。  
   
  `pceltFetched`  
- \[出力\] 実際に `rgelt` で返される要素の数を返します。  
+ [out]実際に返される要素の数を返します`rgelt`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK` 要求された要素の数より少ない数を返す場合はを返します `S_FALSE` ; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`です。 返します`S_FALSE`要求された要素数より少ないは返されませんでした。 それ以外の場合、エラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)   
- [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)
+ [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)

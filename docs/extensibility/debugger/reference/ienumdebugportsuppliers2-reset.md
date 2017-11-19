@@ -1,45 +1,45 @@
 ---
-title: "IEnumDebugPortSuppliers2::Reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugPortSuppliers2::Next"
-helpviewer_keywords: 
-  - "IEnumDebugPortSuppliers2::Next"
+title: "IEnumDebugPortSuppliers2::Reset |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugPortSuppliers2::Next
+helpviewer_keywords: IEnumDebugPortSuppliers2::Next
 ms.assetid: f69cbacf-da9d-4b22-b8a2-abd9b8c131f2
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4a8b615656e9e42c1f907f3782533b02529f8eeb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugPortSuppliers2::Reset
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-最初の要素には列挙型をリセットします。  
+# <a name="ienumdebugportsuppliers2reset"></a>IEnumDebugPortSuppliers2::Reset
+最初の要素に列挙体をリセットします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT Reset(  
-   void  
+   void  
 );  
 ```  
   
-```c#  
+```csharp  
 int Reset();  
 ```  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドが呼び出された後[次へ](../Topic/IEnumDebugPortSuppliers2::Next.md) のメソッドの回復列挙型の最初の要素。  
+## <a name="remarks"></a>コメント  
+ このメソッドが呼び出された後、次の呼び出し、[次](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-next.md)メソッドが列挙体の最初の要素を返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)

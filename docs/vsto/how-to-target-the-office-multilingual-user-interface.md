@@ -1,12 +1,10 @@
 ---
-title: 'How to: Target the Office Multilingual User Interface | Microsoft Docs'
+title: "方法: Office Multilingual User Interface をターゲット |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -20,32 +18,32 @@ helpviewer_keywords:
 - localization [Office development in Visual Studio], user interface targeting
 - Office applications [Office development in Visual Studio], globalization
 ms.assetid: b1f03164-f0cf-42e3-942b-8cf90c242ffb
-caps.latest.revision: 30
-author: kempb
-ms.author: kempb
+caps.latest.revision: "30"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 424211704500cb93b37a78a799ddbe06872559b5
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 3ee88cbcde2a25a13b4c4432afe5a5b1397ab727
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-target-the-office-multilingual-user-interface"></a>How to: Target the Office Multilingual User Interface
-  The Multilingual User Interface (MUI) is a Microsoft Office feature that gives the end user the ability to change the language of the user interface (UI). For example, an end user working with an English UI can change the language of the UI to Spanish.  
+# <a name="how-to-target-the-office-multilingual-user-interface"></a>方法 : Office Multilingual User Interface を使用する
+  Multilingual User Interface (MUI) は、エンドユーザーのユーザー インターフェイス (UI) の言語を変更する機能を提供する Microsoft Office 機能です。 たとえば、英語の UI で作業している、エンドユーザーは、スペイン語に、UI の言語を変更できます。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- If your application will be used by people who use multiple languages of Office, you can add code to automatically change the language of your UI strings to match the language being used by Office on the user's computer (if the user has the correct resources installed).  
+ Office の複数の言語を使用するユーザー、アプリケーションを使用する場合は、自動的に UI (ユーザーにインストールされている正しいリソースがある場合)、ユーザーのコンピューターで Office で使用されている言語と一致する文字列の言語を変更するコードを追加できます。  
   
-### <a name="to-check-the-current-office-ui-setting"></a>To check the current Office UI setting  
+### <a name="to-check-the-current-office-ui-setting"></a>Office UI の現在の設定を確認するには  
   
-1.  Use the <xref:System.Threading.Thread.CurrentUICulture%2A> property of the current thread. Set the language of your UI strings to match the language being used by the version of Office currently running on the user's computer.  
+1.  使用して、<xref:System.Threading.Thread.CurrentUICulture%2A>現在のスレッドのプロパティです。 ユーザーのコンピューターで現在実行されている Office のバージョンで使用されている言語に合わせての UI 文字列の言語を設定します。  
   
-     [!code-vb[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#10)]  [!code-csharp[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#10)]  
+     [!code-vb[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#10)]
+     [!code-csharp[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#10)]  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
- [Late Binding in Office Solutions](../vsto/late-binding-in-office-solutions.md)  
+ [Office ソリューションの遅延バインディング](../vsto/late-binding-in-office-solutions.md)  
   
   

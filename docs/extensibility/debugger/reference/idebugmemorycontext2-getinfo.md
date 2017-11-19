@@ -1,56 +1,57 @@
 ---
-title: "IDebugMemoryContext2::GetInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMemoryContext2::GetInfo"
-helpviewer_keywords: 
-  - "GetInfo メソッド"
-  - "IDebugMemoryContext2::GetInfo メソッド"
+title: "IDebugMemoryContext2::GetInfo |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugMemoryContext2::GetInfo
+helpviewer_keywords:
+- GetInfo method
+- IDebugMemoryContext2::GetInfo method
 ms.assetid: 08c7f091-1816-4d64-8834-f9ecaac5c58d
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c5e095f8c3d786319cbdcdcc1a2b60369c0304f8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugMemoryContext2::GetInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-コンテキストを記述する [CONTEXT\_INFO](../../../extensibility/debugger/reference/context-info.md) の構造体を取得します。  
+# <a name="idebugmemorycontext2getinfo"></a>IDebugMemoryContext2::GetInfo
+取得、 [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)コンテキストを記述する構造体。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetInfo(   
-   CONTEXT_INFO_FIELDS dwFields,  
-   CONTEXT_INFO*       pInfo  
+```cpp  
+HRESULT GetInfo(   
+   CONTEXT_INFO_FIELDS dwFields,  
+   CONTEXT_INFO*       pInfo  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetInfo(  
-   enum_CONTEXT_INFO_FIELDS dwFields,   
-   CONTEXT_INFO[]           pinfo  
+   enum_CONTEXT_INFO_FIELDS dwFields,   
+   CONTEXT_INFO[]           pinfo  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwFields`  
- \[入力\] [CONTEXT\_INFO](../../../extensibility/debugger/reference/context-info.md) の構造体のフィールドあることを示す [CONTEXT\_INFO\_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) の列挙体のフラグの組み合わせが表示されます。  
+ [in]フラグの組み合わせ、 [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)のどのフィールドを示す列挙体、 [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)構造体には、されるを入力します。  
   
  `pInfo`  
- \[入力出力\] 入力された `CONTEXT_INFO` の構造体。  
+ [入力、出力].`CONTEXT_INFO`に入力される構造です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)   
- [CONTEXT\_INFO\_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)   
- [CONTEXT\_INFO](../../../extensibility/debugger/reference/context-info.md)
+ [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)   
+ [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)

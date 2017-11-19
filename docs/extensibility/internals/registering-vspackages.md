@@ -1,33 +1,32 @@
 ---
-title: "Vspackage を登録します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "マネージ VSPackages、登録します。"
-  - "登録には、マネージ VSPackages"
+title: "Vspackage を登録する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- managed VSPackages, registering
+- registration, managed VSPackages
 ms.assetid: 79b9424e-7e9b-4fc8-9b9f-00212674573c
-caps.latest.revision: 20
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2d580d3d74d8648b7181ac1ca384d3232fa8225b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Vspackage を登録します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は.pkgdef ファイルについて説明しVSPackage を検索します。  .pkgdef ファイルへの書き込みは。それ以外の場合は追加されたすべての登録情報が含まれています。  マネージ VSPackage は属性をソース・コードに追加し.pkgdef ファイルを生成するために生成されるアセンブリの [CreatePkgDef ユーティリティ](../../extensibility/internals/createpkgdef-utility.md) を実行して登録されます。  
+# <a name="registering-vspackages"></a>Vspackage を登録します。
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]説明し、VSPackage を検索する .pkgdef ファイルに依存します。 .Pkgdef ファイルには、それ以外の場合は、システム レジストリに追加するすべての登録情報が含まれています。 マネージ Vspackage が、ソース コードに属性を追加しを実行して登録されている、 [CreatePkgDef ユーティリティ](../../extensibility/internals/createpkgdef-utility.md).pkgdef ファイルを生成する結果として得られるアセンブリ。  
   
-## このセクションの内容  
- [VS Shell VSPackage ファイルの場所を指定します。](../../extensibility/internals/specifying-vspackage-file-location-to-the-vs-shell.md)  
- VSPackage の読み込みのパスについて説明します。  
+## <a name="in-this-section"></a>このセクションの内容  
+ [VSPackage ファイルの場所を VS Shell に指定する](../../extensibility/internals/specifying-vspackage-file-location-to-the-vs-shell.md)  
+ Vspackage の読み込みパスを説明します。  
   
- [Vspackage の登録と登録解除しています](../../extensibility/registering-and-unregistering-vspackages.md)  
+ [VSPackage の登録と登録解除](../../extensibility/registering-and-unregistering-vspackages.md)  
  VSPackage を登録する方法について説明します。  
-  
- [カスタム登録属性を使用した拡張機能の登録](/visual-cpp/misc/using-a-custom-registration-attribute-to-register-an-extension)  
- マネージ VSPackage を配置するために使用できるレジスタのマニフェストを作成する方法について説明します。

@@ -1,56 +1,58 @@
 ---
-title: "Defining Custom SharePoint Project Item Types"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SharePoint project items, defining your own types"
-  - "project items [SharePoint development in Visual Studio], defining your own types"
-  - "SharePoint development in Visual Studio, defining new project item types"
+title: "カスタム SharePoint プロジェクト項目の種類の定義 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint project items, defining your own types
+- project items [SharePoint development in Visual Studio], defining your own types
+- SharePoint development in Visual Studio, defining new project item types
 ms.assetid: be300c24-fd1b-4fc7-a4e9-a5df1d81d3fc
-caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 980712e717df294a4d390eb66ed2f1740ba2c3f4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Defining Custom SharePoint Project Item Types
-  新しい種類の SharePoint プロジェクト項目を作成する必要がある場合は、新しい SharePoint プロジェクト項目の種類を定義します。  たとえば、Visual Studio には、SharePoint サイトにフィールドまたはカスタム動作を追加するための SharePoint プロジェクト項目は含まれていません。  フィールド、カスタム動作、またはその他の種類の SharePoint コンポーネントを作成するための SharePoint プロジェクト項目の独自の種類を定義できます。  
+# <a name="defining-custom-sharepoint-project-item-types"></a>SharePoint プロジェクト項目の種類の定義
+  新しい SharePoint プロジェクト項目の種類を作成するときに、新しい SharePoint プロジェクト項目の種類を定義します。 たとえば、Visual Studio では、フィールドの追加または SharePoint サイトにカスタム アクションの SharePoint プロジェクト項目は含まれません。 SharePoint プロジェクト項目のフィールド、カスタム アクション、またはその他の種類の SharePoint コンポーネントを作成するための独自の型を定義することができます。  
   
-## SharePoint プロジェクト項目の種類を定義するためのタスク  
- カスタム プロジェクト項目を定義するには、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> インターフェイスを実装する Visual Studio 拡張機能アセンブリを構築します。  詳細については、「[How to: Define a SharePoint Project Item Type](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)」を参照してください。  
+## <a name="tasks-for-defining-sharepoint-project-item-types"></a>SharePoint プロジェクト項目の種類を定義するためのタスク  
+ カスタム プロジェクト項目の種類を定義するアセンブリをビルドする Visual Studio 拡張機能を実装する、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>インターフェイスです。 詳細については、次を参照してください。[する方法: SharePoint プロジェクト項目の種類を定義する](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)です。  
   
- カスタム プロジェクト項目の種類を定義する場合は、プロジェクト項目に次の機能も追加できます。  
+ カスタム プロジェクト項目の種類を定義するときは、プロジェクト項目に、次の機能を追加することもできます。  
   
--   ショートカット メニュー項目をプロジェクト項目の種類に追加する。  メニュー項目は、を選択し、Shift \+ F10キーをかを選択できます。プロジェクト項目を右クリックするか、によって **\[ソリューション エクスプローラー\]** プロジェクト項目に対するショートカット メニューを開いたときに表示されます。  詳細については、「[How to: Add a Shortcut Menu Item to a Custom SharePoint Project Item Type](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md)」を参照してください。  
+-   プロジェクト項目にショートカット メニュー項目を追加します。 プロジェクト項目のショートカット メニューを開くと、メニュー項目が表示される**ソリューション エクスプ ローラー**キーをプロジェクト項目を右クリックするか選択し、shift キーを押しながら F10 を選択します。 詳細については、次を参照してください。[する方法: カスタム SharePoint プロジェクト項目の種類へのショートカット メニュー項目の追加](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md)です。  
   
--   プロジェクト項目にカスタム プロパティを追加する。  プロパティは **\[プロパティ\]** のウィンドウで **\[ソリューション エクスプローラー\]**のプロジェクト項目を選択するときに表示されます。  詳細については、「[How to: Add a Property to a Custom SharePoint Project Item Type](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)」を参照してください。  
+-   プロジェクト項目にカスタム プロパティを追加します。 このプロパティを表示、**プロパティ**でプロジェクト項目を選択するときにウィンドウ**ソリューション エクスプ ローラー**です。 詳細については、次を参照してください。[する方法: カスタム SharePoint プロジェクト項目の種類にプロパティを追加](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)です。  
   
- 自分が作成したプロジェクト項目を、他の開発者が Visual Studio で使用できるようにするには、.spdata ファイルを作成し、プロジェクト項目に関連する項目テンプレートまたはプロジェクト テンプレートを作成します。  詳細については、「[Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)」を参照してください。  
+ その他の開発者が Visual Studio でプロジェクト項目を使用するには、.spdata ファイルを作成し、項目テンプレートまたはプロジェクト項目に関連付けられているプロジェクト テンプレートを作成します。 詳細については、次を参照してください。[項目テンプレートを作成し、SharePoint プロジェクト項目用のプロジェクト テンプレート](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)です。  
   
-## プロジェクト項目の種類とプロジェクト項目のインスタンスとの関係について  
- SharePoint プロジェクト項目の種類を定義するときに、関連付けられている種類のプロジェクト項目が SharePoint プロジェクトに追加されると、Visual Studio によって拡張機能が読み込まれます。  たとえば、新しい**カスタム アクション** プロジェクト項目の種類を定義する場合は、ユーザーがプロジェクトに**カスタム アクション** プロジェクト項目を追加したときに、Visual Studio によって拡張機能が読み込まれます。  Visual Studio は、関連付けられているプロジェクト項目の種類のすべてのインスタンスの拡張機能と同一のインスタンスを読み込みます。  前の例では、ユーザーがプロジェクトに 2 つ目の**カスタム アクション** プロジェクト項目を追加すると、拡張機能の同一インスタンスを使用し、2 つ目のプロジェクト項目がカスタマイズされます。  
+## <a name="understanding-the-relationship-between-project-item-types-and-project-item-instances"></a>プロジェクト項目の種類とプロジェクト項目のインスタンス間の関係を理解します。  
+ SharePoint プロジェクト項目の種類を定義するときに、Visual Studio は、関連付けられている型のプロジェクト アイテムが SharePoint プロジェクトに追加されたときに、拡張機能を読み込みます。 新しいを定義する場合など、**カスタム アクション**プロジェクト項目の種類、ユーザーを追加すると、Visual Studio は拡張機能を読み込む、**カスタム アクション**プロジェクトにプロジェクト項目です。 Visual Studio では、関連付けられているプロジェクト項目の種類のすべてのインスタンスの拡張機能の同じインスタンスを使用します。 ユーザーが、2 番目を追加する場合、前の例で**カスタム アクション**プロジェクト項目をプロジェクトには、2 つ目のプロジェクト アイテムをカスタマイズする、拡張機能の同じインスタンスを使用します。  
   
- プロジェクト項目の種類の特定のインスタンスにアクセスするには、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> メソッドの実装で、*projectItemTypeDefinition* パラメーターの <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> イベントの 1 つを処理します。  たとえば、独自の種類のプロジェクト項目がどの時点でプロジェクトに追加されるかを判断するには、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded> イベントを処理します。  詳細については、「[How to: Define a SharePoint Project Item Type](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)」を参照してください。  
+ プロジェクト項目の種類の特定のインスタンスにアクセスするのいずれかの処理、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents>のイベント、 *projectItemTypeDefinition*の実装でのパラメーター、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A>メソッドです。 たとえば、調べるには、カスタム型のプロジェクト アイテムをプロジェクトに追加するときに、処理、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded>イベント。 詳細については、次を参照してください。[する方法: SharePoint プロジェクト項目の種類を定義する](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)です。  
   
-## 参照  
- [How to: Define a SharePoint Project Item Type](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)   
- [How to: Add a Property to a Custom SharePoint Project Item Type](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)   
- [How to: Add a Shortcut Menu Item to a Custom SharePoint Project Item Type](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md)   
- [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
- [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
- [チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 1&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)   
- [Walkthrough: Creating a Custom Action Project Item with an Item Template, Part 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)   
- [チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 &#40;パート 2&#41;](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)   
- [Deploying Extensions for the SharePoint Tools in Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
+## <a name="see-also"></a>関連項目  
+ [方法: SharePoint プロジェクト項目の種類の定義](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)   
+ [方法: カスタム SharePoint プロジェクト項目の種類にプロパティを追加](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)   
+ [方法: カスタム SharePoint プロジェクト項目の種類へのショートカット メニュー項目の追加](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md)   
+ [SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートを作成します。](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
+ [チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
+ [チュートリアル: プロジェクト テンプレート、第 1 部に基づくサイト列プロジェクト項目の作成](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)   
+ [チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)   
+ [チュートリアル: プロジェクト テンプレート、第 2 部に基づくサイト列プロジェクト項目の作成](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)   
+ [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
   
   

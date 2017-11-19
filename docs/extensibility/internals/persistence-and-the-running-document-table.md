@@ -1,34 +1,36 @@
 ---
-title: "永続化と実行中の Document テーブル | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "永続化ストアを管理します。"
-  - "IVsPersistHierarchyItem インターフェイスを実装します。"
-  - "アーキテクチャでは、永続化"
-  - "実行中の document テーブル (RDT) アーキテクチャ"
+title: "永続化され、実行されているテーブルを文書化 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- persistence, managing
+- IVsPersistHierarchyItem interface, implementing
+- architecture, persistence
+- running document table (RDT), architecture
 ms.assetid: 27117eae-6c58-4189-a61a-1397a43b5ecf
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 062c623ec1de779733e41a8abcad8ca478155dba
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 永続化と実行中の Document テーブル
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE、プロジェクトは、完全にサービスを使用しているためには、自分のプロジェクト項目の永続性の管理を担当 <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>します。 ドキュメントは、Visual Studio 環境での永続化の基本単位です。 プロジェクトでは、開く、保存、および実行されている document テーブル \(RDT\) はすべての開いているドキュメントの状態を追跡するリソースを持つドキュメントの名前の変更を調整します。  
+# <a name="persistence-and-the-running-document-table"></a>永続化と実行中のドキュメント テーブル
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE、プロジェクトは、完全にサービスを使用しているためには、プロジェクト項目を取得するには、持続性の管理を担当<xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>です。 ドキュメントは、永続化では、Visual Studio 環境の基本単位です。 プロジェクトでは、開いたり、保存、および実行中のドキュメント テーブル (RDT) すべての開いているドキュメントの状態を追跡するリソースを持つドキュメントの名前の変更を調整します。  
   
-## 持続性の管理  
- プロジェクト管理環境の永続性サービスの実装することによって、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem> インターフェイスです。 環境には、ドキュメント自体を永続化を直接要求する、中にドキュメントを保存する所有元のプロジェクト \(または階層\) を確認します。 これにより、ローカル ファイル、リモート ファイル、データベース、リポジトリ、またはその他のメディアに、プロジェクト項目のデータを保存するプロジェクト。  
+## <a name="managing-persistence"></a>持続性の管理  
+ プロジェクト管理環境の永続性サービスの実装することによって、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem>インターフェイスです。 環境には、ドキュメント自体を永続化を直接要求する、ときに、所有しているプロジェクト (または階層) ドキュメントを保存するように求めます。 これにより、そのプロジェクト項目のデータをローカル ファイル、リモート ファイル、データベースを repository、またはその他のメディアに保存するプロジェクトです。  
   
- グローバル環境では、RDT を保持します。 環境は、すべての開いているウィンドウのエントリを維持し、やすいことが RDT 内のドキュメントが、ソリューションを閉じたときなど、特殊な通知を受信します。 さらに、RDT これにより、環境の対応するノードを追跡するために **ソリューション エクスプ ローラー**します。 RDT では、プロジェクト ファイルとプロジェクト項目ドキュメントの両方を含む、オープンで永続化できるオブジェクトごとの 1 つのレコードを保持します。  
+ グローバル環境は、RDT を保持します。 環境は、すべての開いているウィンドウのエントリを維持しにできるように、RDT 内のドキュメントは、ソリューションが閉じられるタイミングなどの特別な通知を受信します。 さらに、RDT できるようになりますで、対応するノードを追跡するために、環境の**ソリューション エクスプ ローラー**です。 RDT は、プロジェクト ファイルとプロジェクト項目ドキュメントの両方を含む、開く、永続化できるオブジェクトごとの 1 つのレコードを保持します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [実行中のドキュメント テーブル](../../extensibility/internals/running-document-table.md)   
- [選択と、IDE 内の通貨](../../extensibility/internals/selection-and-currency-in-the-ide.md)
+ [IDE での選択と通貨](../../extensibility/internals/selection-and-currency-in-the-ide.md)

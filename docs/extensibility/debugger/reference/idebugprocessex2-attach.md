@@ -1,51 +1,51 @@
 ---
-title: "IDebugProcessEx2::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcessEx2::Attach"
-helpviewer_keywords: 
-  - "IDebugProcessEx2::Attach メソッド"
+title: "IDebugProcessEx2::Attach |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProcessEx2::Attach
+helpviewer_keywords: IDebugProcessEx2::Attach method
 ms.assetid: f3334ed7-39bf-4d02-a338-36f567b9b287
-caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 111895b73ee9685b9608be9812452d04d84cd48c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProcessEx2::Attach
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドはセッションはプロセスをデバッグするプロセスを通知します。  
+# <a name="idebugprocessex2attach"></a>IDebugProcessEx2::Attach
+このメソッドは、セッションが今すぐ、プロセスをデバッグしているプロセスに通知します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Attach(   
-   IDebugSession2* pSession  
+```cpp  
+HRESULT Attach(   
+   IDebugSession2* pSession  
 );  
 ```  
   
-```c#  
+```csharp  
 int Attach(  
-   IDebugSession2 pSession  
+   IDebugSession2 pSession  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pSession`  
- \[出力\] このプロセスにアタッチされているセッションを識別する値。  
+ [in]このプロセスにアタッチするセッションを一意に識別する値。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- `pSession` に渡されるインターフェイスこのプロセスにアタッチされているマネージャーのデバッグ セッションを識別する値として扱う必要があります。; 指定されたインターフェイスのメソッドが機能しません。  
+## <a name="remarks"></a>コメント  
+ インターフェイスが渡される`pSession`cookie です。 このプロセスにアタッチするセッションのデバッグ マネージャーを一意に識別する値としてのみ処理されますが、指定されたインターフェイスのメソッドのいずれも機能します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

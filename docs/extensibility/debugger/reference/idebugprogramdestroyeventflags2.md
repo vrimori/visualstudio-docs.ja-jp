@@ -1,48 +1,49 @@
 ---
-title: "IDebugProgramDestroyEventFlags2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugProgramDestroyEventFlags2 インターフェイス"
+title: "IDebugProgramDestroyEventFlags2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugProgramDestroyEventFlags2 interface
 ms.assetid: d384ff71-dc71-40b9-a871-801f8b6a3418
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: bee4fe04f22bd9afbff8e2d26ef9d699b0226241
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgramDestroyEventFlags2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-デバッグ セッションを終了時にデバッグ エンジンは [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] の UI  の既定の動作をオーバーライドできます。  
+# <a name="idebugprogramdestroyeventflags2"></a>IDebugProgramDestroyEventFlags2
+既定の動作をオーバーライドするデバッグ エンジンを有効に、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] UI デバッグ セッションを終了するとします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugProgramDestroyEventFlags2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- このインターフェイスはデバッグ エンジンによって実装されます。  これはプロセスの有効期間にわたって複数のプログラムの作成と破棄する可能性のあるホストで役立ちます。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ このインターフェイスは、デバッグ エンジンによって実装されます。 ホストを作成し、プロセスの有効期間にわたって複数のプログラムを破棄すると便利です。  
   
-## メソッド  
- 次の表は `IDebugProgramDestroyEventFlags2` のメソッドを示します。  
+## <a name="methods"></a>メソッド  
+ 次の表は、メソッドの`IDebugProgramDestroyEventFlags2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md)|プログラムの破棄フラグを取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md)|プログラムを取得するフラグを破棄します。|  
   
-## 解説  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] の UI  の既定の動作ではすべてのプログラムはプログラムの破棄イベントを送信しデザイン モードに戻ることです。  このインターフェイスは動作の変更はデバッグ エンジンができます。  
+## <a name="remarks"></a>コメント  
+ 既定の動作、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] UI がすべてのプログラムは、プログラムを送信した後に、デザイン モードに戻るにはイベントを破棄します。 このインターフェイスは、その動作を変更するデバッグ エンジンを使用します。  
   
-## 必要条件  
- ヘッダー : Msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll

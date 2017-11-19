@@ -1,100 +1,102 @@
 ---
-title: "ソース管理プラグインのテストのガイド | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プラグインをソース管理"
-  - "プラグインをテストするソース管理 [Visual Studio SDK]"
-  - "テストでは、ソース管理プラグイン"
-  - "テスト、ソース管理プラグインを"
-  - "ソース管理プラグインをテスト ガイド"
+title: "テスト ソース管理プラグインのガイド |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plug-ins, source control
+- source control [Visual Studio SDK], testing plug-ins
+- tests, source control plug-ins
+- testing, source control plug-ins
+- source control plug-ins, test guide
 ms.assetid: 13b74765-0b7c-418e-8cd9-5f2e8db51ae5
-caps.latest.revision: 26
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 55783b604e929d2e5d4cdc613befa2fbec42aec4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ソース管理プラグインのテストのガイド
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ここでは [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] をソース管理プラグインをテストするための指針を示します。  一般的なテスト区分の広範な概要問題となる可能性のある複雑な領域の一部が用意されています。  この概要はテスト ケースのすべて網羅したものであるためのものではありません。  
+# <a name="test-guide-for-source-control-plug-ins"></a>テスト ソース管理プラグインのガイド
+このセクションでは、ソース管理のプラグインをテストするためのガイダンスを提供[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 広範な概要、最も一般的なテスト領域と同様の問題がある可能性があるより複雑な領域の一部が表示されます。 この概要はテスト_ケースの網羅するものではありません。  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の最新の IDE にあるバグの修正と機能強化を見つけられなかった前にソース管理プラグインに問題が見つかる場合があります [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の以前のバージョンを使用しているとき。  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の以前のバージョンからプラグインが変更されたいなくても列挙した領域にはこのセクションの既存のソース管理プラグインをテストすることを強くお勧めします。  
+>  いくつかのバグ修正と最新の機能強化[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]既存ソース管理プラグインがないの以前のバージョンを使用しているときに発生した以前の問題が明らかに IDE[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 変更されていませんプラグインに以前のバージョンから場合でも、既存のソース管理プラグインのこのセクションに列挙された領域をテストすることを強くお勧め[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
   
-## 共通の準備  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] コンピューターとインストール対象のソース管理プラグインが必要です。  同様に設定される 2 番目のコンピューターはソース管理からテストが開きますの一部に使用できます。  
+## <a name="common-preparation"></a>共通の準備  
+ 使用したマシン[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]対象のソース管理プラグインがインストールされている、必要とします。 同様に構成されている 2 つ目のコンピューターは、テストのソース管理から開く の一部で使用できます。  
   
-## 用語の定義  
- このテストのガイドで次の用語の定義を使用するには :  
+## <a name="definition-of-terms"></a>用語の定義  
+ このテスト ガイドするために、次の用語の定義を使用します。  
   
  クライアント プロジェクト  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のプロジェクトの種類で使用できるソース管理の統合をサポートする \([!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)][!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]または [!INCLUDE[vcprvc](../../debugger/includes/vcprvc_md.md)]\)。  
+ いずれかのプロジェクトで使用できる型[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ソース管理の統合をサポートしている (たとえば、 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]、または[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)])。  
   
  Web プロジェクト  
- Web プロジェクトには 4 種類あります : ファイル システムローカル IIS サイトとリモート サイトFTP。  
+ Web プロジェクトの 4 つの種類があります。 ファイル システム、ローカル IIS、リモートのサイトおよび FTP です。  
   
--   ローカル パスにファイル システムのプロジェクトは作成されますがUNC パスでインストールされるように \(IIS\) 内部的にアクセス要求せずソース管理下に IDE 内からクライアント プロジェクトと同じように配置するときにインターネット インフォメーション サービス \(IIS\) が。  
+-   ローカル パスにファイル システムのプロジェクトが作成されますが、インターネット インフォメーション サービス (IIS)、UNC パスを使用して内部的にアクセスされ、クライアント プロジェクトと同様に、IDE 内からのソース管理下に配置することができますをインストールするのには必要ありません。  
   
--   同じコンピューターにインストールされローカル コンピューターを指す URL でアクセスできる IIS のローカルの IIS プロジェクトで動作します。  
+-   ローカル IIS プロジェクトの場合は、ローカル コンピューターを指す URL に IIS が同じコンピューターにインストールされている、アクセスされるで動作します。  
   
--   リモート サイト プロジェクトはIIS のサービスの下に作成されますがIIS サーバー コンピューターに存在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 内からソース管理下に配置されます。  
+-   リモート サイトのプロジェクトは、IIS サービスも作成されますが、IIS サーバー コンピューター上およびからではなく、ソース管理下に置かれた、内部、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE です。  
   
--   FTP のプロジェクトによってFTP サーバーがありソース管理下に置くことはできません。  
+-   FTP のプロジェクトは、リモートの FTP サーバーからアクセスしますが、ソース管理下に配置することはできません。  
   
- 登録  
- ソリューションの用語またはソース管理プロジェクト。  
+ 参加リスト  
+ ソリューションまたはプロジェクトをソース管理の他の語句。  
   
- ストア バージョン  
- ソース管理プラグイン API を使用してアクセス ソース管理データベース。  
+ バージョン ストア  
+ ソース管理プラグイン API を通じてアクセスされているソース管理データベース。  
   
-## このセクションで説明されているテスト区分  
+## <a name="test-areas-covered-in-this-section"></a>このセクションで取り上げたテスト区分  
   
--   [テスト領域 1: ソース管理から開く\/を追加します。](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)  
+-   [テスト範囲 1: ソース管理からに/開いてを追加します。](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)  
   
-    -   1a 場合 : ソリューションをソース管理に追加  
+    -   ケース 1 a: ソース管理にソリューションを追加  
   
-    -   1b 場合 : ソース管理からソリューションを開く  
+    -   ケース 1 b: ソース管理からソリューションを開く  
   
-    -   1c 場合 : ソース管理からソリューションの追加  
+    -   ケース 1 c: ソース管理からソリューションを追加  
   
--   [ソース管理からのテスト領域 2: Get](../../extensibility/internals/test-area-2-get-from-source-control.md)  
+-   [テスト領域 2: ソース管理からの取得](../../extensibility/internals/test-area-2-get-from-source-control.md)  
   
--   [テスト領域 3: チェック アウト\]、\[チェック アウトを元に戻す](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)  
+-   [テストの領域 3: チェック アウト/チェック アウトを元に戻す](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)  
   
-    -   ケース 3: チェック アウトと元のチェック アウト  
+    -   ケース 3: チェック アウト/チェック アウトを元に戻す  
   
-    -   3a 場合 : チェックアウト  
+    -   ケース 3 a: チェック アウト  
   
-    -   3b 場合 : 切断されたチェック アウト  
+    -   ケース 3 b: チェック アウトの切断  
   
-    -   3c 場合 : クエリおよびクエリの編集の保存 \(QEQS\)  
+    -   ケース 3 c: クエリの編集/クエリを保存 (QEQS)  
   
-    -   3D 場合 : サイレント チェック アウト  
+    -   サイレント チェック アウトの 3d を大文字:  
   
-    -   ケース 3e: チェックアウトの取り消し  
+    -   ケース 3 e: チェック アウトを元に戻す  
   
--   [テスト領域 4: で確認してください。](../../extensibility/internals/test-area-4-check-in.md)  
+-   [テスト領域 4: チェックイン](../../extensibility/internals/test-area-4-check-in.md)  
   
-    -   4a 場合 : 変更された項目  
+    -   ケース 4 a: 項目を変更  
   
-    -   フィルター場合 : ファイルの追加  
+    -   4b の場合: ファイルを追加します。  
   
-    -   : した場合プロジェクトの追加  
+    -   ケース 4 c: プロジェクトの追加  
   
 -   [テスト領域 5: ソース管理の変更](../../extensibility/internals/test-area-5-change-source-control.md)  
   
-    -   5a 場合 : バインド  
+    -   Case 5a: バインド  
   
-    -   5b 場合 : バインドの解除  
+    -   Case 5b: バインド解除  
   
-    -   5c 場合 : 再バインドされます  
+    -   場合は 5 c: 再バインド  
   
 -   [テスト領域 6: 削除](../../extensibility/internals/test-area-6-delete.md)  
   
@@ -102,9 +104,9 @@ caps.handback.revision: 26
   
 -   [テスト領域 8: プラグインの切り替え](../../extensibility/internals/test-area-8-plug-in-switching.md)  
   
-    -   ケース 8a: 自動変更  
+    -   8 a の場合: 自動変更  
   
-    -   ケース 8b: ソリューション ベースの変更  
+    -   Case 8b: ソリューションに基づく変更  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン](../../extensibility/source-control-plug-ins.md)

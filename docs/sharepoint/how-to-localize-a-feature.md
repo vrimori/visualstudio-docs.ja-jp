@@ -1,70 +1,72 @@
 ---
-title: "方法: フィーチャーをローカライズする"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "フィーチャー [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, ローカライズ"
+title: "方法: フィーチャーをローカライズ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- features [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, localizing
 ms.assetid: 66a0b389-1f71-421f-9817-a19840765d83
-caps.latest.revision: 17
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 53dbaa806ae3b65314d5aeed8df9338905a946cc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: フィーチャーをローカライズする
-  既定では、フィーチャーのタイトルと説明にはハードコーディングされた文字列値が使用されます。  フィーチャーのタイトルと説明をローカライズするには、それらの文字列を、ローカライズされたリソースを参照する式に置き換えます。  
+# <a name="how-to-localize-a-feature"></a>方法: フィーチャーをローカライズする
+  フィーチャーのタイトルと説明は、既定では、ハード コーディングされた文字列値を使用します。 フィーチャーのタイトルと説明をローカライズするには、ローカライズされたリソースを参照する式で、文字列を置き換えます。  
   
-## フィーチャーのローカライズ  
+## <a name="localizing-a-feature"></a>フィーチャーのローカライズ  
   
-#### フィーチャーをローカライズするには  
+#### <a name="to-localize-a-feature"></a>フィーチャーをローカライズするには  
   
-1.  **\[ソリューション エクスプローラー\]** で、**\[Feature1\]** ノードのショートカット メニューを開き、**\[フィーチャー リソースの追加\]** をクリックします。  
+1.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **Feature1**  ノードを選択し**フィーチャー リソースの追加**です。  
   
-2.  **\[リソースの追加\]** ダイアログ ボックスでは、既定のフィーチャー リソース ファイルのカルチャとしてリストから **\[ロケールに依存しない言語\]** をクリックします。  
+2.  **リソースの追加** ダイアログ ボックスで、選択**インバリアント言語**既定の言語機能のリソース ファイルのカルチャに応じて、リストからです。  
   
-3.  ローカライズされたフィーチャー リソース ファイルの選択の言語を選択して各ローカライズ言語について前の手順を繰り返します。  
+3.  ローカライズされたフィーチャーの任意の言語のリソース ファイルを選択しながら、ローカライズされた言語ごとに、前の手順を繰り返します。  
   
-     別のフィーチャー リソース ファイルを作成する: 既定の言語の 1 と、サポートする各ローカライズ言語の場合は 1。  
+     別のフィーチャー リソース ファイルが作成されます。 既定の言語と各ローカライズをサポートする言語。  
   
-4.  リソース エディターで各リソース ファイルを開いて、次に文字列の ID と値をすべて入力します。  
+4.  リソース エディターで、各リソース ファイルを開くし、すべての文字列 Id とその値を入力します。  
   
-     たとえば、既定のフィーチャー リソース ファイルで、My 機能タイトルの値のタイトルの文字列 ID、My 機能説明の値の説明の 2 番目の文字列 ID を入力します。  各ローカライズ リソース ファイルでは、既定のフィーチャー リソースで使用したのと同じ文字列 ID を使用し、その値をローカライズした文字列を入力します。  
+     たとえば、既定のフィーチャー リソース ファイル内の文字列 ID を入力**タイトル**の値を持つ**マイ フィーチャーのタイトル**、2 つ目の文字列 ID と**説明**の値を持つ**機能説明**です。 各ローカライズされたリソース ファイル、文字列と同じ既定のフィーチャー リソースで使用される Id を使用しますが、ローカライズされた文字列値を入力します。  
   
-5.  すべてのリソース値を入力すると、フィーチャーのショートカット メニュー \(Feature1.feature など\) を開き、フィーチャー デザイナーの機能を開くに **\[デザイナーの表示\]** をクリックします。  
+5.  機能 (たとえば、Feature1.feature) のショートカット メニューを開き、すべてのリソースの値を入力すると後、順に選択**ビュー デザイナー**を開くには、フィーチャー デザイナーで機能します。  
   
-6.  機能の **\[タイトル\]** と **\[説明\]** フィールドをローカライズするには、ボックスに値を入力するには、次の形式を使用する:  
+6.  ローカライズする、**タイトル**と**説明**機能では、フィールドでは、次の形式を使用して、そのボックスに値を入力します。  
   
-     `$Resources:` *String ID*  
+     `$Resources:`*文字列 ID*  
   
-     たとえば、**\[フィーチャー タイトル\]** ボックスに「$Resources:Title」と入力し、**\[フィーチャーの説明\]** ボックスに「$Resources:Description」と入力します。  
+     たとえば、$Resources を入力:**タイトル**で、**フィーチャーのタイトル**ボックス、および $Resources:**説明**で、**機能の説明**ボックス.  
   
-     文字列の ID がリソース ファイルで使用されている ID と一致する必要があります。  
+     文字列 Id は、リソース ファイルで使用されていると一致する必要があります。  
   
 7.  F5 キーを押してアプリケーションをビルドし、実行します。  
   
-8.  SharePoint では、**\[サイトの操作\]** メニューを、**\[サイトの設定\]** をクリックします開き、次に、**\[サイトの操作\]** セクションで **\[サイト機能の管理\]** リンクをクリックします。  
+8.  SharePoint では、開く、**サイトの操作** メニューの 選択**サイト設定**、、**サイトの操作**セクションを選択、 **サイト機能の管理**リンクします。  
   
 9. SharePoint で、表示言語を既定の言語から変更します。  
   
-     ローカライズされたフィーチャーのタイトルと説明がアプリケーションに表示されます。  ローカライズされたリソースを表示するには、リソース ファイルのカルチャに対応する Language Pack が SharePoint サーバーにインストールされている必要があります。  
+     アプリケーションでは、ローカライズされたフィーチャーのタイトルと説明が表示されます。 ローカライズされたリソースを表示するには、リソース ファイルのカルチャに対応する Language Pack が SharePoint サーバーにインストールされている必要があります。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)   
- [方法: リソース ファイルを追加する](../sharepoint/how-to-add-a-resource-file.md)   
- [方法: ASPX マークアップをローカライズする](../sharepoint/how-to-localize-aspx-markup.md)   
+ [方法: リソース ファイルを追加](../sharepoint/how-to-add-a-resource-file.md)   
+ [方法: ASPX マークアップのローカライズ](../sharepoint/how-to-localize-aspx-markup.md)   
  [方法: コードをローカライズする](../sharepoint/how-to-localize-code.md)  
   
   

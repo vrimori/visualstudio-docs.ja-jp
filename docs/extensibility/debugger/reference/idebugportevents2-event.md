@@ -1,67 +1,67 @@
 ---
-title: "IDebugPortEvents2::Event | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortEvents2::Event"
-helpviewer_keywords: 
-  - "IDebugPortEvents2::Event"
+title: "IDebugPortEvents2::Event |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugPortEvents2::Event
+helpviewer_keywords: IDebugPortEvents2::Event
 ms.assetid: 5cc813f7-04a1-4462-9ea7-fbddcf0e0143
-caps.latest.revision: 18
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 82ea7d2c4a32bb224c8377a2980c944b3389da2b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPortEvents2::Event
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドはポートのプロセスとプログラムの作成と破棄を示すイベントを送信します。  
+# <a name="idebugportevents2event"></a>IDebugPortEvents2::Event
+このメソッドは、作成とプロセスと、ポート上のプログラムの破棄を示すイベントを送信します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT Event(  
-   IDebugCoreServer2* pServer,  
-   IDebugPort2*       pPort,  
-   IDebugProcess2*    pProcess,  
-   IDebugProgram2*    pProgram,  
-   IDebugEvent2*      pEvent,  
-   REFIID             riidEvent  
+   IDebugCoreServer2* pServer,  
+   IDebugPort2*       pPort,  
+   IDebugProcess2*    pProcess,  
+   IDebugProgram2*    pProgram,  
+   IDebugEvent2*      pEvent,  
+   REFIID             riidEvent  
 );  
 ```  
   
-```c#  
+```csharp  
 int Event(  
-   IDebugCoreServer2 pServer,   
-   IDebugPort2       pPort,   
-   IDebugProcess2    pProcess,   
-   IDebugProgram2    pProgram,   
-   IDebugEvent2      pEvent,   
-   ref Guid          riidEvent  
+   IDebugCoreServer2 pServer,   
+   IDebugPort2       pPort,   
+   IDebugProcess2    pProcess,   
+   IDebugProgram2    pProgram,   
+   IDebugEvent2      pEvent,   
+   ref Guid          riidEvent  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pMachine`  
- \[入力\] デバッグ サーバーを表す [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) のオブジェクト \(一つのイベントが発生した [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] のインスタンスごとに 1 回です。  
+ [in][IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)デバッグ サーバーを表すオブジェクト (1 つのすべてのインスタンスを使用する必要がある[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]) でイベントが発生しました。  
   
  `pPort`  
- \[入力\] イベントが発生した [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) のポートを表すオブジェクト。  
+ [in][IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)イベントが発生したポートを表すオブジェクト。  
   
  `pProcess`  
- \[入力\] イベントが発生したプロセスを表すオブジェクトの [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)。  
+ [in][IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)イベントが発生したプロセスを表すオブジェクト。  
   
  `pProgram`  
- \[入力\] イベントが発生した [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) プログラムを表すオブジェクト。  
+ [in][IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)イベントが発生したプログラムを表すオブジェクト。  
   
  `pEvent`  
- \[入力\] イベントを識別する [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) のオブジェクト。  できるイベントは次のとおりです。:  
+ [in][IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)イベントを識別するオブジェクト。 可能なイベントは次のとおりです。  
   
 -   [IDebugProcessCreateEvent2](../../../extensibility/debugger/reference/idebugprocesscreateevent2.md)  
   
@@ -72,12 +72,12 @@ int Event(
 -   [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)  
   
  `riidEvent`  
- \[入力\] イベントの GUID。  イベントがこのメソッドを呼び出す前に [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) にキャストされるためこの識別子はのイベントが送信されるかを確認しやすくなります。  
+ [in]イベントの GUID です。 イベントにキャストされるので[IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)このメソッドを呼び出す前にこの識別子しやすくイベントが送信されるかを判断します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md)   
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)   
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   

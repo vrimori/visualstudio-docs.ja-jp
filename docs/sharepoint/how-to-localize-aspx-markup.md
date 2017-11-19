@@ -1,62 +1,64 @@
 ---
-title: "方法: ASPX マークアップをローカライズする"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ローカライズ (XML を) [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, ローカライズ"
+title: "方法: ASPX マークアップのローカライズ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- localizing XML [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, localizing
 ms.assetid: 9559a1d1-6558-4c24-a51e-c6ee79432778
-caps.latest.revision: 16
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 39d72d4807f61adcab1321b6471c2bea31f048a8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: ASPX マークアップをローカライズする
-  [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] \(.aspx\) ページでは、通常、ハードコーディングされた文字列値が使用されています。  それらの文字列をローカライズするには、ローカライズされたリソースを参照する式に置き換えます。  
+# <a name="how-to-localize-aspx-markup"></a>方法: ASPX マークアップをローカライズする
+  [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)](.aspx) ページは、通常の文字列をハードコード値を使用します。 これらの文字列をローカライズするには、ローカライズされたリソースを参照する式にそれらを置き換えます。  
   
-## ASPX マークアップのローカライズ  
+## <a name="localizing-aspx-markup"></a>ASPX マークアップのローカライズ  
   
-#### ASPX マークアップをローカライズするには  
+#### <a name="to-localize-aspx-markup"></a>ASPX マークアップをローカライズするには  
   
-1.  既定の言語用と各ローカライズ言語用の個別のリソース ファイルを追加します。  
+1.  別のリソース ファイルを追加します。 既定の言語と各ローカライズ言語。  
   
-     ローカライズするのはマークアップだけで、コードはローカライズしない場合は、グローバル リソース ファイル プロジェクト項目を追加します。  コードとマークアップをローカライズする場合は、リソース ファイル プロジェクト項目を追加します。  
+     マークアップおよびコードではなくだけをローカライズする場合は、グローバル リソース ファイル プロジェクト項目を追加します。 コードとマークアップをローカライズする場合は、リソース ファイル プロジェクト項目を追加します。  
   
-    1.  追加するには、グローバル リソースは、**\[ソリューション エクスプローラー\]** で開き、SharePoint のプロジェクト項目のショートカット メニューをクリックし、**\[追加\]** をクリックします、**\[新しいアイテム\]** を格納します。  SharePoint **2010** ノードで、**\[グローバル リソース ファイル\]** テンプレートを選択します。  
+    1.  グローバル リソース ファイルを追加する**ソリューション エクスプ ローラー**、SharePoint プロジェクト項目のショートカット メニューを開きを選択し、**追加**、**新しい項目の**します。 SharePoint で**2010**  ノードを選択して、**グローバル リソース ファイル**テンプレート。  
   
-    2.  リソース ファイルを、**\[ソリューション エクスプローラー\]** に追加するには、SharePoint プロジェクト項目のショートカット メニューを開き、**\[新しいアイテム\]**、**\[追加\]** をクリックします。  **\[Visual Basic\]** または **\[Visual C\#\]** ノードで、**\[アセンブリ リソース ファイル\]** テンプレートを選択します。  
+    2.  リソース ファイルを追加する**ソリューション エクスプ ローラー**、SharePoint プロジェクト項目のショートカット メニューを開きを選択し、**追加**、**新しい項目の**します。 いずれかで、 **Visual Basic**または**Visual c#**  ノードを選択して、**リソース ファイル**テンプレート。  
   
     > [!NOTE]  
-    >  \[配置タイプ\] プロパティを使用できるように、SharePoint プロジェクト項目にリソース ファイルを必ず追加します。  このプロパティは、後で必要になります。  ソリューションに SharePoint プロジェクト項目がない場合は、空の SharePoint プロジェクトを追加し、既定の Elements.xml ファイルを削除できます。  
+    >  展開の種類プロパティを有効にする SharePoint プロジェクト項目にリソース ファイルを追加することを確認します。 このプロパティは、後で必要になります。 ソリューションが SharePoint プロジェクト項目を持たない場合は、空の SharePoint プロジェクトを追加し、その既定の Elements.xml ファイルを削除することができます。  
   
-2.  既定の言語のリソース ファイルには、.resx 拡張子が付いた任意の名前を付けます \(MyAppResources.resx など\)。  同じ基本名を各ローカライズ リソース ファイルで使用します。ただし、カルチャ [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]を追加します。  \(ドイツ語の場合は MyAppResources.de\-DE.resx など\)。  
+2.  既定の言語のリソース ファイルには、.resx 拡張子が付いた任意の名前を付けます (MyAppResources.resx など)。 ローカライズされたリソース ファイルごとに、同じ基本名の使用がカルチャを追加[!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]です。 (ドイツ語の場合は MyAppResources.de-DE.resx など)。  
   
-3.  、サーバーの App\_GlobalResources フォルダーに配置されるように **\[AppGlobalResource\]** に各リソース ファイルの **\[配置タイプ\]** のプロパティの値を変更します。  
+3.  値を変更、**展開の種類**するには、各リソース ファイルのプロパティ**AppGlobalResource**させると、サーバーの App_GlobalResources フォルダーに配置します。  
   
-4.  ASPX マークアップだけでなくコードのローカライズしたらにリソースを使用する場合 **\[埋め込みリソース\]** として各ファイルの **\[ビルド アクション\]** のプロパティの値をそのまま使用します。  リソース ファイルをマークアップのローカライズのみに使用する場合は、ファイルのプロパティ値を **\[コンテンツ\]** に変更することもできます。  詳細については、「[SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)」を参照してください。  
+4.  ASPX マークアップに加えてコードをローカライズするリソースを使用している場合は、値を受け入れ、**ビルド アクション**として各ファイルのプロパティ**埋め込まれたリソース**です。 マークアップのローカライズにのみ、リソース ファイルを使用する場合は、ファイルのプロパティの値を必要に応じて変更できます**コンテンツ**です。 詳細については、次を参照してください。 [SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)です。  
   
-5.  各リソース ファイルを開いて、ローカライズされた文字列を追加します。その際には、各ファイルで同じ文字列 ID を使用します。  
+5.  各リソース ファイルを開き、各ファイルに同じ文字列 Id を使用する、ローカライズされた文字列を追加します。  
   
-6.  ASPX ページまたは ASPX コントロールの [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] マークアップで、ハードコーディングされた文字列を次の形式の値に置き換えます。  
+6.  [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ASPX ページまたはコントロールのマークアップをハードコーディングされた文字列値を置き換えて、次の形式を使用します。  
   
     ```  
     <%$Resources:Resource File Name, String ID%>  
     ```  
   
-     アプリケーション ページのラベル コントロールのテキストをローカライズする場合の例を次に示します。  
+     たとえば、アプリケーション ページ上のラベル コントロールのテキストをローカライズするには、次のように変更。  
   
     ```  
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">  
@@ -76,12 +78,12 @@ caps.handback.revision: 15
   
 8.  SharePoint で、表示言語を既定の言語から変更します。  
   
-     ローカライズされた文字列がアプリケーションに表示されます。  ローカライズされたリソースを表示するには、リソース ファイルのカルチャに対応する Language Pack が SharePoint サーバーにインストールされている必要があります。  
+     ローカライズされた文字列がアプリケーションに表示されます。 ローカライズされたリソースを表示するには、リソース ファイルのカルチャに対応する Language Pack が SharePoint サーバーにインストールされている必要があります。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)   
- [方法: フィーチャーをローカライズする](../sharepoint/how-to-localize-a-feature.md)   
- [方法: リソース ファイルを追加する](../sharepoint/how-to-add-a-resource-file.md)   
+ [方法: フィーチャーをローカライズ](../sharepoint/how-to-localize-a-feature.md)   
+ [方法: リソース ファイルを追加](../sharepoint/how-to-add-a-resource-file.md)   
  [方法: コードをローカライズする](../sharepoint/how-to-localize-code.md)  
   
   

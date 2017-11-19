@@ -1,31 +1,31 @@
 ---
-title: "ソース コントロールからの情報の削除。Proj とします。Sln ファイル | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ソース管理プラグイン、.sln および .proj ファイル"
+title: "ソース管理情報の削除。Proj とします。Sln ファイル |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: source control plug-ins, .sln and .proj files
 ms.assetid: 7b06883f-35de-41e2-9a9e-d3edba236f17
-caps.latest.revision: 14
-caps.handback.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 73ea933a7e9efc08347ea107b089101f1e5d5459
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ソース コントロールからの情報の削除。Proj とします。Sln ファイル
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ソース管理プラグイン API Version 1.2 で SCC 情報は MSSCCPRJ.SCC ファイルに格納されます。  MSSCCPRJ.SCC ファイルの利点があります SCC 情報がソース コントロールではないことです.proj .sln ファイルに変換する可能性があります。  
+# <a name="removal-of-source-control-information-from-proj-and-sln-files"></a>ソース管理情報の削除。Proj とします。Sln ファイル
+バージョン 1.2 のソース管理プラグイン API、SCC は、情報は、MSSCCPRJ に格納されます。SCC ファイルです。 MSSCCPRJ 利点です。SCC ファイルは、SCC 情報がないソースに - .proj および .sln ファイル内にあるように、制御します。  
   
-## バージョン 1.2 の変更  
- ソース管理プラグイン API のバージョン 1.1 に基づいているソース管理プラグインではソース管理に関する情報はプロジェクト \(.proj\) とソリューション ファイル \(.sln\) に格納されます。  ソース管理データベースの位置情報は AuxPath によって指定されデータベース内の特定の位置は ProjName によって指定されます。  この動作は分岐の後に ProjName がこれらの操作のいずれかの後に無効になるため問題が発生する分岐または操作をコピーできます。  
+## <a name="version-12-changes"></a>バージョン 1.2 の変更  
+ ソース管理プラグインで、ソース管理プラグイン API バージョン 1.1 に基づいた、ソース コントロールの概要については、プロジェクト (.proj) とソリューション (.sln) ファイルに格納されます。 AuxPath でソース管理情報のデータベースの場所を指定し、ProjName によって、データベース内で特定の場所を指定します。 この動作できます問題が発生する分岐、分岐、またはコピー操作の後に、ProjName 通常無効になります。 これらの操作の後にあるためです。  
   
- ソース管理プラグイン API Version 1.1 ではプラグインがソース管理の情報を格納する MSSCCPRJ.SCC のメソッドをサポートするかどうかを確認するために ~SAK ファイルを使用します。  ソース管理プラグイン API のバージョン 1.2 は MSSCCPRJ.SCC ファイルのサポートを検出するに ~SAK ファイルを使用せずに新しい機能を提供します。  詳細については、「[削除する ~ SAK ファイル](../../extensibility/internals/elimination-of-tilde-sak-files.md)」を参照してください。  
+ ソース管理プラグイン API 使用されているバージョン 1.1 では、IDE で ~ されているかどうか、プラグインのサポート、MSSCCPRJ を検出するために SAK ファイル。ソース管理情報を格納する SCC メソッドです。 ソース管理プラグイン API バージョン 1.2 では、MSSCCPRJ のサポートを検出するための新機能を提供します。SCC ファイルを使用せず、~ SAK ファイル。 詳細については、次を参照してください。[の排除 ~ SAK ファイル](../../extensibility/internals/elimination-of-tilde-sak-files.md)です。  
   
-## 参照  
- [ソース管理プラグイン API バージョン 1.2 の新機能します。](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)
+## <a name="see-also"></a>関連項目  
+ [ソース管理プラグイン API バージョン 1.2 の新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

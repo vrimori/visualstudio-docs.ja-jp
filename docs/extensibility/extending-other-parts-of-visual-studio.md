@@ -1,41 +1,42 @@
 ---
-title: "Visual Studio の他の部分を拡張します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ユーザー インターフェイス"
+title: "Visual Studio の他の部分を拡張 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: user interfaces
 ms.assetid: 27d2f1e1-2503-4aca-9cfc-707abd07ccf0
-caps.latest.revision: 22
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 9a8617c4d6c5ac4a224a97f6a6311a5526151599
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Visual Studio の他の部分を拡張します。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-拡張する Visual Studio の UI の多くの複数の部分があります。 ここで説明する、ほんのします。  
+# <a name="extending-other-parts-of-visual-studio"></a>Visual Studio の他の部分を拡張します。
+拡張可能な Visual Studio の UI の多くの複数の部分があります。 ここでは説明するほんの一例です。  
   
-## VSPackage を作成します。  
- VSPackages を Visual Studio 機能拡張の基本的な構成要素にです。  VSPackage を追加する方法について説明します。 [VSPackage で拡張機能を作成します。](../extensibility/creating-an-extension-with-a-vspackage.md)  
+## <a name="creating-a-vspackage"></a>VSPackage の作成  
+ Visual Studio 機能拡張の基本的なビルド ブロックでは、Vspackage です。  VSPackage を追加する方法について: [VSPackage の拡張機能の作成](../extensibility/creating-an-extension-with-a-vspackage.md)  
   
-## ツールボックスの拡張  
- ツールボックスに新しいコントロールおよびその他の項目を追加する方法と、ツールボックスの機能を使用する方法について説明します。  
+## <a name="extending-the-toolbox"></a>ツールボックスの拡張  
+ [ツールボックス] 機能を使用する方法と、ツールボックスに新しいコントロールおよびその他の項目を追加する方法を学習します。  
   
--   [WPF ツールボックス コントロールを作成します。](../extensibility/creating-a-wpf-toolbox-control.md)  
+-   [WPF ツールボックス コントロールの作成](../extensibility/creating-a-wpf-toolbox-control.md)  
   
--   [Windows フォームのツールボックス コントロールの作成](../extensibility/creating-a-windows-forms-toolbox-control.md)  
+-   [Windows フォーム ツールボックス コントロールの作成](../extensibility/creating-a-windows-forms-toolbox-control.md)  
   
-## ステータス バーの拡張  
- アニメーションやその他の UI を提供する方法と、ステータス バーおよび進行状況バーを読み書きする方法について説明します。 [ステータス バーの拡張](../extensibility/extending-the-status-bar.md)します。  
+## <a name="extending-the-status-bar"></a>ステータス バーの拡張  
+ ステータス バー、進行状況バーを読み書きする方法、およびアニメーションやその他の UI を提供する方法を説明します。[ステータス バーの拡張](../extensibility/extending-the-status-bar.md)です。  
   
-## カスタム スタート ページを作成します。  
- 独自のスタート ページを最初から、またはダウンロード可能なスタート ページのサンプルからを作成する方法について説明します。 [カスタム スタート ページを作成します。](../extensibility/creating-a-custom-start-page.md)します。  
+## <a name="creating-custom-start-pages"></a>カスタム スタート ページを作成します。  
+ 最初から、またはダウンロード可能な開始ページのサンプルから、独自スタート ページを作成する方法について説明します。[カスタム スタート ページを作成する](../extensibility/creating-a-custom-start-page.md)です。  
   
-## アクティビティ ログに書き込む  
- アクティビティ ログに書き込む方法について説明します。 [方法: 動作状況ログの使用](../extensibility/how-to-use-the-activity-log.md)します。
+## <a name="write-to-the-activity-log"></a>アクティビティ ログに書き込む  
+ アクティビティ ログに書き込む方法を学習:[する方法: アクティビティ ログを使用して](../extensibility/how-to-use-the-activity-log.md)です。

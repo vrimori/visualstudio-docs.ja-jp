@@ -1,52 +1,52 @@
 ---
-title: "IDebugProcess2::GetServer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcess2::GetServer"
-helpviewer_keywords: 
-  - "IDebugProcess2::GetServer"
+title: "IDebugProcess2::GetServer |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProcess2::GetServer
+helpviewer_keywords: IDebugProcess2::GetServer
 ms.assetid: 8f73c530-cceb-4f1f-8c63-1cc0ccd4a310
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 4605e5e56021b223b4ab067b26c7c44d75cba9a8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProcess2::GetServer
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このプロセスを実行しているサーバーを取得します。  
+# <a name="idebugprocess2getserver"></a>IDebugProcess2::GetServer
+このプロセスで実行されているサーバーを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetServer(   
-   IDebugCoreServer2** ppServer  
+```cpp  
+HRESULT GetServer(   
+   IDebugCoreServer2** ppServer  
 );  
 ```  
   
-```c#  
-int GetServer(   
-   out IDebugCoreServer2 ppServer  
+```csharp  
+int GetServer(   
+   out IDebugCoreServer2 ppServer  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppServer`  
- \[出力\] このプロセスを実行しているサーバー [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) を表すオブジェクトを返します。  
+ [out]返します、 [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)このプロセスが実行されているサーバーを表すオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 複数のサーバーが一つのコンピューターで実行できます。  
+## <a name="remarks"></a>コメント  
+ 複数のサーバーは、1 台のコンピューターで実行されていることができます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

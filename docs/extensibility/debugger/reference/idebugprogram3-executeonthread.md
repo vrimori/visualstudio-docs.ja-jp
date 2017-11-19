@@ -1,57 +1,58 @@
 ---
-title: "IDebugProgram3::ExecuteOnThread | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugProgram3::ExecuteOnThread"
+title: "IDebugProgram3::ExecuteOnThread |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugProgram3::ExecuteOnThread
 ms.assetid: 2f5211e3-7a3f-47bf-9595-dfc8b4895d0d
-caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b75ee8c7b53e751f322ba41bc3f93e2542e192ef
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram3::ExecuteOnThread
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-デバッガーでプログラムを実行します。  スレッドはデバッガーにスレッドがユーザーとプログラムを実行する表示する情報を提供するために戻ります。  
+# <a name="idebugprogram3executeonthread"></a>IDebugProgram3::ExecuteOnThread
+デバッガーのプログラムを実行します。 どのスレッドで、ユーザーが表示プログラムを実行するときにデバッガーの情報を提供し、スレッドが返されます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT ExecuteOnThread(  
-   [in] IDebugThread2* pThread)  
+   [in] IDebugThread2* pThread)  
 ```  
   
-```c#  
+```csharp  
 int ExecuteOnThread(  
-   IDebugThread2 pThread  
+   IDebugThread2 pThread  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pThread`  
- \[入力\] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) のオブジェクト。  
+ [in][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)オブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- デバッガーが停止した後で実行を再開するには3 とおりの方法があります :  
+## <a name="remarks"></a>コメント  
+ これには、デバッガーが停止後に実行を再開できます 3 つの異なる方法があります。  
   
--   : 実行します。前の手順をキャンセルするには次のブレークポイントまでの実行します。  
+-   実行します。 は、前の手順をキャンセルしに、次のブレークポイントまで実行します。  
   
--   ステップ : 古いステップをキャンセルし新しいステップが完了するまで実行します。  
+-   手順: は、いずれかの古い手順をキャンセルし、新しい手順が完了するまで実行します。  
   
--   continue: 再度実行し前の手順でアクティブのままにします。  
+-   続行: を再度実行し、いずれかの古い手順のアクティブなままにします。  
   
- `ExecuteOnThread` に渡されたスレッドはキャンセルする手順を決定する場合に便利です。  スレッドがわからない場合はキャンセルを実行するすべてのステップ実行します。  スレッドの知識によってのみアクティブなスレッドの手順を取り消す必要があります。  
+ 渡されるスレッド`ExecuteOnThread`をキャンセルする手順を決定する場合に便利です。 実行している実行スレッドがわからない場合は、すべてのステップをキャンセルします。 スレッドの知識さえあれば、のみ、アクティブなスレッドでの手順をキャンセルする必要があります。  
   
-## 参照  
- [実行](../../../extensibility/debugger/reference/idebugprogram2-execute.md)   
+## <a name="see-also"></a>関連項目  
+ [実行します。](../../../extensibility/debugger/reference/idebugprogram2-execute.md)   
  [IDebugProgram3](../../../extensibility/debugger/reference/idebugprogram3.md)

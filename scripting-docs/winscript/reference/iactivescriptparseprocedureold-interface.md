@@ -1,35 +1,38 @@
 ---
-title: "IActiveScriptParseProcedureOld インターフェイス | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptParseProcedureOld インターフェイス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptParseProcedureOld
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScriptParseProcedureOld インターフェイス"
+helpviewer_keywords: IActiveScriptParseProcedureOld interface
 ms.assetid: d94b391e-4c24-46da-a01f-2c134ca4f041
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 99cff9cd4d04c5d25489b6cc4c9b9af93792dc2a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptParseProcedureOld インターフェイス
-プロシージャのソース・コード テキストのスクリプトに追加できます。  独立した編集環境が、VBScript などのスクリプト言語のない解釈されるため、名前空間、スクリプトのプロシージャを追加するために別の機構を `IActiveScriptParse` \(または `IPersist*`以外\) が用意されています。  
+# <a name="iactivescriptparseprocedureold-interface"></a>IActiveScriptParseProcedureOld インターフェイス
+スクリプトに追加する手順については、ソース コードのテキストを使用できます。 これにより、VBScript などの独立した作成環境がない変換のスクリプト言語の代替手段 (以外の`IActiveScriptParse`または`IPersist*`) スクリプト プロシージャを名前空間に追加するのにします。  
   
 > [!NOTE]
->  このインターフェイスは、インターフェイスを `IActiveScriptParseProcedure` の使用は推奨されません。  
+>  代わりにこのインターフェイスは推奨されません、`IActiveScriptParseProcedure`インターフェイスです。  
   
-## メソッド  
- `IUnknown` から継承するメソッドに加え、`IActiveScriptParseProcedureOld` インターフェイスは次のメソッドを公開します。  
+## <a name="methods"></a>メソッド  
+ 継承されたメソッドだけでなく`IUnknown`、`IActiveScriptParseProcedureOld`インターフェイスは、次のメソッドを公開します。  
   
 |メソッド|説明|  
-|----------|--------|  
-|[IActiveScriptParseProcedureOld::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedureold-parseproceduretext.md)|特定のプロシージャ コードを分析し、名前空間にプロシージャを追加します。|  
+|------------|-----------------|  
+|[IActiveScriptParseProcedureOld::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedureold-parseproceduretext.md)|指定したコードのプロシージャを解析し、プロシージャを名前空間に追加します。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScriptParseProcedure](../../winscript/reference/iactivescriptparseprocedure.md)

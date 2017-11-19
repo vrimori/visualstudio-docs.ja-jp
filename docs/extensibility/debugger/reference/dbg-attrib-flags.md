@@ -1,31 +1,31 @@
 ---
-title: "DBG_ATTRIB_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DBG_ATTRIB_FLAGS"
-helpviewer_keywords: 
-  - "DBGPROP_ATTRIB_FLAGS 列挙型"
+title: "DBG_ATTRIB_FLAGS |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DBG_ATTRIB_FLAGS
+helpviewer_keywords: DBGPROP_ATTRIB_FLAGS enumerations
 ms.assetid: 2f13e601-dadc-476e-a8ec-01c4515082e7
-caps.latest.revision: 17
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 0b1522f1b036efbedb62f625847d0ef1d60a95a4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# DBG_ATTRIB_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) または [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) インターフェイスのさまざまな属性を記述します。  [DEBUG\_PROPERTY\_INFO](../../../extensibility/debugger/reference/debug-property-info.md) の構造体のメンバー。  
+# <a name="dbgattribflags"></a>DBG_ATTRIB_FLAGS
+さまざまな属性について説明します、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)または[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)インターフェイスです。 メンバー、 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)構造体。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 #define DBG_ATTRIB_NONE                 0x0000000000000000,  
 #define DBG_ATTRIB_ALL                  0x00000000ffffffff,  
   
@@ -95,7 +95,7 @@ caps.handback.revision: 17
 typedef UINT64 DBG_ATTRIB_FLAGS;  
 ```  
   
-```c#  
+```csharp  
 public const int DBG_ATTRIB_NONE                 = 0x0000000000000000,  
 public const int DBG_ATTRIB_ALL                  = 0x00000000ffffffff,  
   
@@ -163,158 +163,158 @@ public const int DBG_ATTRIB_CHILD_ALL            = 0x0000ff0000000000,
 public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000  
 ```  
   
-## メンバー  
- DBG\_ATTRIB\_NONE  
- 属性は表示されません。  
+## <a name="members"></a>メンバー  
+ DBG_ATTRIB_NONE  
+ 属性がないことを示します。  
   
- DBG\_ATTRIB\_ALL  
- すべての属性が表示されます。  
+ DBG_ATTRIB_ALL  
+ すべての属性を示します。  
   
- DBG\_ATTRIB\_OBJ\_IS\_EXPANDABLE  
- 参照またはプロパティは子があることを示します。  
+ DBG_ATTRIB_OBJ_IS_EXPANDABLE  
+ 参照またはプロパティが子を持つことを示します。  
   
- DBG\_ATTRIB\_OBJ\_HAS\_ID  
- このオブジェクトの ID が作成されたことを示します。  
+ DBG_ATTRIB_OBJ_HAS_ID  
+ このオブジェクトの ID が作成されていることを示します。  
   
- DBG\_ATTRIB\_OBJ\_CAN\_HAVE\_ID  
- このオブジェクトの ID を作成できることを示します。  
+ DBG_ATTRIB_OBJ_CAN_HAVE_ID  
+ このオブジェクトの ID を作成することを示します。  
   
- DBG\_ATTRIB\_VALUE\_READONLY  
- 値は読み取り専用であることを示します。  
+ DBG_ATTRIB_VALUE_READONLY  
+ 値が読み取り専用であることを示します。  
   
- DBG\_ATTRIB\_VALUE\_ERROR  
- 値はエラーであることを示します。  
+ DBG_ATTRIB_VALUE_ERROR  
+ 値がエラーであることを示します。  
   
- DBG\_ATTRIB\_VALUE\_SIDE\_EFFECT  
- 評価が副作用を導入したことを示します。  
+ DBG_ATTRIB_VALUE_SIDE_EFFECT  
+ 評価に副作用があったことを示します。  
   
- DBG\_ATTRIB\_OVERLOADED\_CONTAINER  
- このプロパティがオーバーロードのコンテナーであることを示します。  
+ DBG_ATTRIB_OVERLOADED_CONTAINER  
+ このプロパティが実際にオーバー ロードのコンテナーを示します。  
   
- DBG\_ATTRIB\_VALUE\_BOOLEAN  
- `DEBUG_PROPERTY_INFO::bstrValue` の値がブール値であることを示します。  
+ DBG_ATTRIB_VALUE_BOOLEAN  
+ 示します値`DEBUG_PROPERTY_INFO::bstrValue`はブール値。  
   
- DBG\_ATTRIB\_VALUE\_BOOLEAN\_TRUE  
- `DEBUG_PROPERTY_INFO::bstrValue` の値がブール型`TRUE` であることを示します。  
+ DBG_ATTRIB_VALUE_BOOLEAN_TRUE  
+ 示します値`DEBUG_PROPERTY_INFO::bstrValue`はブール値と`TRUE`です。  
   
- DBG\_ATTRIB\_VALUE\_INVALID  
- `DEBUG_PROPERTY_INFO::bstrValue` の値が無効であることを示します。  
+ DBG_ATTRIB_VALUE_INVALID  
+ `DEBUG_PROPERTY_INFO::bstrValue` 内の値が無効であることを示します。  
   
- DBG\_ATTRIB\_VALUE\_NAT  
- `DEBUG_PROPERTY_INFO::bstrValue` の値が 「  *実行しない*  」であることを示します \(NAT\)。  \[NAT は 64 ビット Intel プロセッサで遅延段階的な例外を示すフラグの登録について説明します。  
+ DBG_ATTRIB_VALUE_NAT  
+ 示します値`DEBUG_PROPERTY_INFO::bstrValue`は"*物ではなく*"(NAT)。 NAT では、遅延予測の例外を示す Intel 64 ビット プロセッサのレジスタ フラグについて説明します。  
   
- DBG\_ATTRIB\_VALUE\_AUTOEXPANDED  
- `DEBUG_PROPERTY_INFO::bstrValue` の値が自動配置されたことを示しています。  
+ DBG_ATTRIB_VALUE_AUTOEXPANDED  
+ 示します値`DEBUG_PROPERTY_INFO::bstrValue`自動拡張がされている可能性があります。  
   
- DBG\_ATTRIB\_VALUE\_TIMEOUT  
- 評価に指定されていることを示します。  
+ DBG_ATTRIB_VALUE_TIMEOUT  
+ 評価がタイムアウトになったことを示します。  
   
- DBG\_ATTRIB\_VALUE\_RAW\_STRING  
- `DEBUG_PROPERTY_INFO::bstrValue` の値が元の文字列で表現できることを示します。  
+ DBG_ATTRIB_VALUE_RAW_STRING  
+ 示します値`DEBUG_PROPERTY_INFO::bstrValue`未加工の文字列で表すことができます。  
   
- DBG\_ATTRIB\_VALUE\_CUSTOM\_VIEWER  
- このプロパティに関連付けられた 1 文字以上のカスタム ビューアーがあることを示します。  
+ DBG_ATTRIB_VALUE_CUSTOM_VIEWER  
+ このプロパティに関連付けられている、少なくとも 1 つのカスタム ビューアーがあることを示します。  
   
- DBG\_ATTRIB\_ACCESS\_NONE  
- `public` も`private``protected` の種類のアクセスはなくオブジェクトが表示されます。  
+ DBG_ATTRIB_ACCESS_NONE  
+ どちらを持つオブジェクトを示す`public`、`private`も`protected`アクセスと入力します。  
   
- DBG\_ATTRIB\_ACCESS\_PUBLIC  
- パブリック アクセスできるオブジェクトが表示されます。  
+ DBG_ATTRIB_ACCESS_PUBLIC  
+ パブリック アクセスを持つオブジェクトであることを示します。  
   
- DBG\_ATTRIB\_ACCESS\_PRIVATE  
- プライベート アクセスできるオブジェクトが表示されます。  
+ DBG_ATTRIB_ACCESS_PRIVATE  
+ プライベート アクセスを持つオブジェクトであることを示します。  
   
- DBG\_ATTRIB\_ACCESS\_PROTECTED  
- アクセスを保護してオブジェクトを示します。  
+ DBG_ATTRIB_ACCESS_PROTECTED  
+ 保護されたアクセスを持つオブジェクトであることを示します。  
   
- DBG\_ATTRIB\_ACCESS\_FINAL  
- 最終的にアクセスできるオブジェクトが表示されます。  
+ DBG_ATTRIB_ACCESS_FINAL  
+ 最終的なアクセスを持つオブジェクトであることを示します。  
   
- DBG\_ATTRIB\_ACCESS\_ALL  
- `DBG_ATTRIB_FLAGS` のアクセスの属性を抽出するマスク。  
+ DBG_ATTRIB_ACCESS_ALL  
+ アクセスの属性を抽出するマスク`DBG_ATTRIB_FLAGS`です。  
   
- DBG\_ATTRIB\_STORAGE\_NONE  
+ DBG_ATTRIB_STORAGE_NONE  
  指定されたストレージ型がないことを示します。  
   
- DBG\_ATTRIB\_STORAGE\_GLOBAL  
- グローバルなストレージを示します。  
+ DBG_ATTRIB_STORAGE_GLOBAL  
+ グローバル ストレージであることを示します。  
   
- DBG\_ATTRIB\_STORAGE\_STATIC  
- 静的ストレージを示します。  
+ DBG_ATTRIB_STORAGE_STATIC  
+ 静的ストレージであることを示します。  
   
- DBG\_ATTRIB\_STORAGE\_REGISTER  
- 登録のストレージを示します。  
+ DBG_ATTRIB_STORAGE_REGISTER  
+ レジスタの記憶域を示します。  
   
- DBG\_ATTRIB\_STORAGE\_ALL  
- `DBG_ATTRIB_FLAGS` のストレージ属性を抽出するマスク。  
+ DBG_ATTRIB_STORAGE_ALL  
+ 記憶域の属性を抽出するマスク`DBG_ATTRIB_FLAGS`です。  
   
- DBG\_ATTRIB\_TYPE\_NONE  
+ DBG_ATTRIB_TYPE_NONE  
  型修飾子がないことを示します。  
   
- DBG\_ATTRIB\_TYPE\_VIRTUAL  
+ DBG_ATTRIB_TYPE_VIRTUAL  
  オブジェクトの型が仮想であることを示します。  
   
- DBG\_ATTRIB\_TYPE\_CONSTANT  
- オブジェクトの型が設定されていることを示します。  
+ DBG_ATTRIB_TYPE_CONSTANT  
+ オブジェクトの型が定数であることを示します。  
   
- DBG\_ATTRIB\_TYPE\_SYNCHRONIZED  
+ DBG_ATTRIB_TYPE_SYNCHRONIZED  
  オブジェクトの型が同期されていることを示します。  
   
- DBG\_ATTRIB\_TYPE\_VOLATILE  
+ DBG_ATTRIB_TYPE_VOLATILE  
  オブジェクトの型が volatile であることを示します。  
   
- DBG\_ATTRIB\_TYPE\_ALL  
- `DBG_ATTRIB_FLAGS` 型から属性を抽出するマスク。  
+ DBG_ATTRIB_TYPE_ALL  
+ 型の属性を抽出するマスク`DBG_ATTRIB_FLAGS`です。  
   
- DBG\_ATTRIB\_DATA  
- このオブジェクトはデータ フィールドであることを示します。  
+ DBG_ATTRIB_DATA  
+ このオブジェクトがデータ フィールドであることを示します。  
   
- DBG\_ATTRIB\_METHOD  
- このオブジェクトはメソッドであることを示します。  
+ DBG_ATTRIB_METHOD  
+ このオブジェクトがメソッドであることを示します。  
   
- DBG\_ATTRIB\_PROPERTY  
- このオブジェクトはプロパティであることを示します。  
+ DBG_ATTRIB_PROPERTY  
+ このオブジェクトがプロパティであることを示します。  
   
- DBG\_ATTRIB\_CLASS  
- このオブジェクトはクラスであることを示します。  
+ DBG_ATTRIB_CLASS  
+ このオブジェクトが、クラスであることを示します。  
   
- DBG\_ATTRIB\_BASECLASS  
- このオブジェクトは基本クラスであることを示します。  
+ DBG_ATTRIB_BASECLASS  
+ このオブジェクトが、基底クラスであることを示します。  
   
- DBG\_ATTRIB\_INTERFACE  
+ DBG_ATTRIB_INTERFACE  
  このオブジェクトがインターフェイスであることを示します。  
   
- DBG\_ATTRIB\_INNERCLASS  
+ DBG_ATTRIB_INNERCLASS  
  このオブジェクトが内部クラスであることを示します。  
   
- DBG\_ATTRIB\_MOSTDERIVED  
- このオブジェクトは「 most\-derived であることを示します。  用語にはオブジェクトの実際の型参照のない型を 「  *」*  *最も* 。  
+ DBG_ATTRIB_MOSTDERIVED  
+ このオブジェクトがあることを示します '*最も多く派生*' です。 用語"*最も多く派生*"オブジェクトの実際の型とその参照の型ではありません。  
   
- DBG\_ATTRIB\_CHILD\_ALL  
- `DBG_ATTRIB_MOSTDERIVED` によって `DBG_ATTRIB_DATA` マスクが表示されます。  
+ DBG_ATTRIB_CHILD_ALL  
+ マスクを示す`DBG_ATTRIB_DATA`を通じて`DBG_ATTRIB_MOSTDERIVED`です。  
   
- DBG\_ATTRIB\_MULTI\_CUSTOM\_VIEWERS  
+ DBG_ATTRIB_MULTI_CUSTOM_VIEWERS  
  オブジェクトに関連付けられている複数のカスタム ビューアーがあることを示します。  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  この列挙体の値はC\# のアセンブリで実際に定義されていません。  代わりにソース ファイルの定義をコピーする必要があります。  
+>  この列挙体の値は、c# のアセンブリに実際に定義されていません。 代わりに、ソース ファイルに定義をコピーする必要があります。  
   
- 引数として渡された場合これらのフラグは [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) オブジェクトの子を使用するとたとえばフィルター処理することができます。  値はビットごと `OR` に組み合わせることがあります。  
+ これらのフラグはへの引数として渡されるときに、オブジェクトの子オブジェクトをフィルター処理にも使用[EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)です。 値は、ビットごとと組み合わせること`OR`です。  
   
- `DBG_ATTRIB_VALUE_CUSTOM_VIEWER` フラグは [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] に [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) のインターフェイスから [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) インターフェイスを取得しカスタム ビューアーの一覧の [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) を呼び出す示します。  
+ `DBG_ATTRIB_VALUE_CUSTOM_VIEWER`フラグを示す値を[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]を取得する、 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)からインターフェイス、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)インターフェイスと呼び出し[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)カスタム ビューアーの一覧についてはします。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   
- [DEBUG\_PROPERTY\_INFO](../../../extensibility/debugger/reference/debug-property-info.md)
+ [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)

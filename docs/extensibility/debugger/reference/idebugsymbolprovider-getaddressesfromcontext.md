@@ -1,70 +1,70 @@
 ---
-title: "IDebugSymbolProvider::GetAddressesFromContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugSymbolProvider::GetAddressesFromContext"
-helpviewer_keywords: 
-  - "IDebugSymbolProvider::GetAddressesFromContext メソッド"
+title: "IDebugSymbolProvider::GetAddressesFromContext |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugSymbolProvider::GetAddressesFromContext
+helpviewer_keywords: IDebugSymbolProvider::GetAddressesFromContext method
 ms.assetid: a3124883-a255-4543-a5ec-e1c7a97beb69
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d2499fb1cca7dcbbf278d00c0aac205774d3cb75
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugSymbolProvider::GetAddressesFromContext
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドはデバッグのアドレスの配列にドキュメントのコンテキストをマップします。  
+# <a name="idebugsymbolprovidergetaddressesfromcontext"></a>IDebugSymbolProvider::GetAddressesFromContext
+このメソッドは、ドキュメントのコンテキストをデバッグ アドレスの配列にマップします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetAddressesFromContext(   
-   IDebugDocumentContext2* pDocContext,  
-   BOOL                    fStatmentOnly,  
-   IEnumDebugAddresses**   ppEnumBegAddresses,  
-   IEnumDebugAddresses**   ppEnumEndAddresses  
+```cpp  
+HRESULT GetAddressesFromContext(   
+   IDebugDocumentContext2* pDocContext,  
+   BOOL                    fStatmentOnly,  
+   IEnumDebugAddresses**   ppEnumBegAddresses,  
+   IEnumDebugAddresses**   ppEnumEndAddresses  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetAddressesFromContext(  
-   IDebugDocumentContext2  pDocContext,  
-   bool                    fStatmentOnly,  
-   out IEnumDebugAddresses ppEnumBegAddresses,  
-   out IEnumDebugAddresses ppEnumEndAddresses  
+   IDebugDocumentContext2  pDocContext,  
+   bool                    fStatmentOnly,  
+   out IEnumDebugAddresses ppEnumBegAddresses,  
+   out IEnumDebugAddresses ppEnumEndAddresses  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pDocContext`  
- \[入力\] ドキュメントのコンテキスト。  
+ [in]ドキュメントのコンテキスト。  
   
  `fStatmentOnly`  
- true の場合デバッグが単一のステートメントに制限 \[入力\] アドレス。  
+ [in]TRUE の場合は、1 つのステートメントにデバッグ アドレスを制限します。  
   
  `ppEnumBegAddresses`  
- \[出力\] このステートメントまたは行に関連付けられたデバッグの開始アドレス用の列挙子を返します。  
+ [out]このステートメントまたは行に関連付けられている開始デバッグ アドレスの列挙子を返します。  
   
  `ppEnumEndAddresses`  
- \[出力\] このステートメントまたは行に関連付けられた終了デバッグのアドレスの [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) の列挙子を返します。  
+ [out]返します、 [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)このステートメントまたは行に関連付けられている終了デバッグ アドレスの列挙子。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- ドキュメントのコンテキストはソース行の範囲を示します。  このメソッドはこれに関連付けられたデバッグの開始および終了アドレスを指定します。  一部の言語ではの範囲のステートメントを複数行または行使用して複数のステートメントが含まれています。  このメソッドは単一のステートメントにデバッグのアドレスを制限するにはフラグを提供します。  
+## <a name="remarks"></a>コメント  
+ ドキュメントのコンテキストは、通常、ソース行の範囲を示します。 このメソッドは、開始し、これらの行に関連付けられているアドレスのデバッグを終了します。 一部の言語では、ステートメントで複数の行または複数のステートメントを含む行にまたがるできるようにします。 このメソッドは、1 つのステートメントにデバッグ アドレスを制限するためのフラグを提供します。  
   
- 単一のステートメントがテンプレートの場合のように複数のデバッグのアドレスを配置することもできます。  
+ テンプレートの場合と同様に、デバッグの複数のアドレスを 1 つのステートメントのことができます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
- [GetAddressesFromPosition](../Topic/IDebugSymbolProvider::GetAddressesFromPosition.md)   
+ [GetAddressesFromPosition](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromposition.md)   
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

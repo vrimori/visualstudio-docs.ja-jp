@@ -1,55 +1,55 @@
 ---
-title: "IDebugBinder::ResolveDynamicType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBinder::ResolveDynamicType"
-helpviewer_keywords: 
-  - "IDebugBinder::ResolveDynamicType メソッド"
+title: "IDebugBinder::ResolveDynamicType |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugBinder::ResolveDynamicType
+helpviewer_keywords: IDebugBinder::ResolveDynamicType method
 ms.assetid: 2c36ef92-5b44-4cfd-988e-54a2e5a6710c
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 3dcd4b946e5b8c2d4cd7c3d77c77140e66699cef
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugBinder::ResolveDynamicType
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドから制御変数の厳密な型。  
+# <a name="idebugbinderresolvedynamictype"></a>IDebugBinder::ResolveDynamicType
+このメソッドは、変数の正確な型を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT ResolveDynamicType (  
-   IDebugDynamicField *pDynamic,  
-   IDebugField       **ppResolved  
+   IDebugDynamicField *pDynamic,  
+   IDebugField       **ppResolved  
 );  
 ```  
   
-```c#  
+```csharp  
 int ResolveDynamicType(  
-   IDebugDynamicField pDynamic,   
-   out IDebugField    ppResolved  
+   IDebugDynamicField pDynamic,   
+   out IDebugField    ppResolved  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pDynamic`  
- \[入力\] 変数の型を表す [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md)。  
+ [in][IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md)変数の型を表すです。  
   
  `ppResolved`  
- \[入力\] 変数の型に関する特定の情報を提供する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) を返します。  
+ [out]返します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)変数の型に関する特定の情報を提供します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md)

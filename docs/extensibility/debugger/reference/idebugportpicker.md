@@ -1,46 +1,47 @@
 ---
-title: "IDebugPortPicker | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugPortPicker インターフェイス"
+title: "IDebugPortPicker |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugPortPicker interface
 ms.assetid: 8b7f6685-a3c5-4355-b706-c1b574f6ff84
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ee5b500f0ba42f7aa3b56439d34f88294b3b3717
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPortPicker
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ポートを選択するためのカスタマイズした UI を表します。  
+# <a name="idebugportpicker"></a>IDebugPortPicker
+ポートを選択するためには、カスタマイズした UI を表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugPortPicker : IUnknown  
 ```  
   
-## 実装についてのメモ  
- このインターフェイスはポートの仕入先によって実装されます。  ポートの業者はCLSID とそれを公開し公開された CLSID を `metricPortPickerCLSID` メトリックをポイントしてポートの指定を定義します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ このインターフェイスは、ポート サプライヤーによって実装されます。 ポートのサプライヤー CLSID として公開することをポイントして、ポートの選択を定義する、`metricPortPickerCLSID`で公開されている CLSID メトリック。  
   
-## メソッド  
- 次の表は `IDebugPortPicker` のメソッドを示します。  
+## <a name="methods"></a>メソッド  
+ 次の表は、メソッドの`IDebugPortPicker`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[DisplayPortPicker](../../../extensibility/debugger/reference/idebugportpicker-displayportpicker.md)|ポートをユーザーが選択できるように指定するダイアログ ボックスが表示されます。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[DisplayPortPicker](../../../extensibility/debugger/reference/idebugportpicker-displayportpicker.md)|ユーザーがポートを選択できる指定されたダイアログ ボックスが表示されます。|  
 |[SetSite](../../../extensibility/debugger/reference/idebugportpicker-setsite.md)|サービス プロバイダーを設定します。|  
   
-## 必要条件  
- ヘッダー : Msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll

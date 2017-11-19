@@ -1,49 +1,51 @@
 ---
-title: "IDebugExpressionEvaluator2::Terminate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "終了"
-  - "IDebugExpressionEvaluator2::Terminate"
+title: "IDebugExpressionEvaluator2::Terminate |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Terminate
+- IDebugExpressionEvaluator2::Terminate
 ms.assetid: 38265100-4d80-4902-833a-07bb569f9ba8
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: f7aa5a8c9ad212beeb031e24fc2e16d010d0359d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugExpressionEvaluator2::Terminate
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-停止は式エバリュエーターをクリーンアップします。  
+# <a name="idebugexpressionevaluator2terminate"></a>IDebugExpressionEvaluator2::Terminate
+停止し、式エバリュエーターをクリーンアップします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT Terminate (  
-    void  
+    void  
 );  
 ```  
   
-```c#  
+```csharp  
 int Terminate ();  
 ```  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- これをクリーンアップすると式エバリュエーターに指定します。  
+## <a name="remarks"></a>コメント  
+ ときにクリーンアップ中に、式エバリュエーターを指示します。  
   
-## 使用例  
- 次の例に [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) インターフェイスを公開する **ExpressionEvaluatorPackage の**  オブジェクトに対してこのメソッドを実装する方法を示します。  
+## <a name="example"></a>例  
+ 次の例に対して、このメソッドを実装する方法を示しています、 **ExpressionEvaluatorPackage**を公開するオブジェクト、 [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)インターフェイスです。  
   
-```cpp#  
+```cpp  
 STDMETHODIMP ExpressionEvaluatorPackage::Terminate(void)  
 {  
     // scan the namespaces contained and delete  
@@ -57,5 +59,5 @@ STDMETHODIMP ExpressionEvaluatorPackage::Terminate(void)
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

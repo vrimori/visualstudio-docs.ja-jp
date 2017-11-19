@@ -1,12 +1,10 @@
 ---
-title: 'How to: Add NamedRange Controls to Worksheets | Microsoft Docs'
+title: "方法: ワークシートに NamedRange コントロールを追加する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,94 +15,95 @@ helpviewer_keywords:
 - NamedRange control, adding to worksheets
 - controls [Office development in Visual Studio], adding to worksheets
 ms.assetid: da7ec48f-92cb-4fa3-b3e2-447c238d17a8
-caps.latest.revision: 54
-author: kempb
-ms.author: kempb
+caps.latest.revision: "54"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 45fb2c6d6950ea462101f0c60ed2642fedec6510
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 44aefbbce0d910efc6e92f2acb75993598f098ab
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-add-namedrange-controls-to-worksheets"></a>How to: Add NamedRange Controls to Worksheets
-  You can add <xref:Microsoft.Office.Tools.Excel.NamedRange> controls to a Microsoft Office Excel worksheet at design time and at run time in document-level projects.  
+# <a name="how-to-add-namedrange-controls-to-worksheets"></a>方法 : ワークシートに NamedRange コントロールを追加する
+  ドキュメント レベルのプロジェクトでは、デザイン時および実行時に、 <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを Microsoft Office Excel ワークシートに追加できます。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- You can also add <xref:Microsoft.Office.Tools.Excel.NamedRange> controls at run time in VSTO Add-in projects.  
+ VSTO アドイン プロジェクトでも、実行時に <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを追加できます。  
   
- This topic describes the following tasks:  
+ このトピックでは、次のタスクについて説明します。  
   
--   [Adding NamedRange controls at design time](#designtime)  
+-   [デザイン時に NamedRange コントロールを追加する](#designtime)  
   
--   [Adding NamedRange controls at run time in a document-level project](#runtimedoclevel)  
+-   [実行時にドキュメント レベルのプロジェクトの NamedRange コントロールを追加する](#runtimedoclevel)  
   
--   [Adding NamedRange controls at run time in an VSTO Add-in project](#runtimeaddin)  
+-   [実行時に VSTO アドイン プロジェクトの NamedRange コントロールを追加する](#runtimeaddin)  
   
- For more information about <xref:Microsoft.Office.Tools.Excel.NamedRange> controls, see [NamedRange Control](../vsto/namedrange-control.md).  
+ 詳細については<xref:Microsoft.Office.Tools.Excel.NamedRange>コントロールを参照してください[NamedRange コントロール](../vsto/namedrange-control.md)です。  
   
 ##  <a name="designtime"></a> Adding NamedRange Controls at Design Time  
- There are several ways to add <xref:Microsoft.Office.Tools.Excel.NamedRange> controls to a worksheet in a document-level project at design time: from within Excel, from the Visual Studio **Toolbox**, and from the **Data Sources** window.  
+ デザイン時にドキュメント レベルのプロジェクトのワークシートに <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを追加する方法として、Excel から行う方法、Visual Studio の **ツールボックス**から行う方法、 **[データ ソース]** ウィンドウから行う方法があります。  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-#### <a name="to-add-a-namedrange-control-to-a-worksheet-using-the-name-box-in-excel"></a>To add a NamedRange control to a worksheet using the Name Box in Excel  
+#### <a name="to-add-a-namedrange-control-to-a-worksheet-using-the-name-box-in-excel"></a>Excel で [名前ボックス] を使用してワークシートに NamedRange コントロールを追加するには  
   
-1.  Select the cell or cells you want to include in the named range.  
+1.  名前付き範囲に含める 1 つ以上のセルを選びます。  
   
-2.  In the **Name Box**, type a name for the range and press ENTER.  
+2.  **[名前ボックス]**に範囲の名前を入力し、Enter キーを押します。  
   
-     The **Name Box** is located beside the formula bar, just above column **A** of the worksheet.  
+     **[名前ボックス]** は、数式バーの横、ワークシートの列 **A** の真上にあります。  
   
-#### <a name="to-add-a-namedrange-control-to-a-worksheet-using-the-toolbox"></a>To add a NamedRange control to a worksheet using the Toolbox  
+#### <a name="to-add-a-namedrange-control-to-a-worksheet-using-the-toolbox"></a>ツールボックスを使用してワークシートに NamedRange コントロールを追加するには  
   
-1.  Open the **Toolbox** and click the **Excel Controls** tab.  
+1.  **ツールボックス** を開き、 **[Excel コントロール]** タブをクリックします。  
   
-2.  Click <xref:Microsoft.Office.Tools.Excel.NamedRange> and drag it to a worksheet.  
+2.  <xref:Microsoft.Office.Tools.Excel.NamedRange> をクリックし、ワークシートにドラッグします。  
   
-     The **Add Named Range** dialog box appears.  
+     **[NamedRange コントロールの追加]** ダイアログ ボックスが表示されます。  
   
-3.  Select the cell or cells you want to include in the named range.  
+3.  名前付き範囲に含める 1 つ以上のセルを選びます。  
   
-4.  Click **OK**.  
+4.  **[OK]**をクリックします。  
   
-     If you do not want the default name that is given to the control, you can change the name in the **Properties** window.  
+     コントロールに既定の名前を付けない場合は、 **[プロパティ]** ウィンドウで名前を変更します。  
   
-#### <a name="to-add-a-namedrange-control-to-a-worksheet-using-the-data-sources-window"></a>To add a NamedRange control to a worksheet using the Data Sources window  
+#### <a name="to-add-a-namedrange-control-to-a-worksheet-using-the-data-sources-window"></a>[データ ソース] ウィンドウを使用してワークシートに NamedRange コントロールを追加するには  
   
-1.  Open the **Data Sources** window and create a data source for your project. For more information, see [Add new connections](../data-tools/add-new-connections.md).  
+1.  **[データ ソース]** ウィンドウを開いて、プロジェクトのデータ ソースを作成します。 詳細については、次を参照してください。[新しい接続を追加](../data-tools/add-new-connections.md)です。  
   
-2.  Drag a single field from the **Data Sources** window to your worksheet.  
+2.  **[データ ソース]** ウィンドウからワークシートにフィールドを 1 つドラッグします。  
   
-     A data-bound <xref:Microsoft.Office.Tools.Excel.NamedRange> control is added to the worksheet. For more information, see [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms).  
+     データがバインドされた <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールがワークシートに追加されます。 詳細については、「 [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)」を参照してください。  
   
 ##  <a name="runtimedoclevel"></a> Adding NamedRange Controls at Run Time in a Document-Level Project  
- You can add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control programmatically to your worksheet at run time. This enables you to create the host controls in response to events. Dynamically created named ranges are not persisted in the worksheet as host controls when the worksheet is closed. For more information, see [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md).  
+ <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールは、実行時にプログラムによってワークシートに追加できます。 この方法を使用すると、イベントに応答してホスト コントロールを作成できます。 動的に作成された名前付き範囲は、ワークシートを閉じたときに、ホスト コントロールとしてワークシートに保持されません。 詳細については、「 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
   
-#### <a name="to-add-a-namedrange-control-to-a-worksheet-programmatically"></a>To add a NamedRange control to a worksheet programmatically  
+#### <a name="to-add-a-namedrange-control-to-a-worksheet-programmatically"></a>プログラムによってワークシートに NamedRange コントロールを追加するには  
   
-1.  In the <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> event handler of `Sheet1`, insert the following code to add the <xref:Microsoft.Office.Tools.Excel.NamedRange> control to cell **A1** and set its <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> property to `Hello world!`  
+1.  <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> の `Sheet1`イベント ハンドラーに、以下のコードを挿入します。このコードでは、 <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをセル **A1** に追加して、その <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> プロパティを `Hello world!`に設定します。  
   
-     [!code-csharp[Trin_VstcoreHostControlsExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#3)]  [!code-vb[Trin_VstcoreHostControlsExcel#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#3)]  
+     [!code-csharp[Trin_VstcoreHostControlsExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#3)]
+     [!code-vb[Trin_VstcoreHostControlsExcel#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#3)]  
   
 ##  <a name="runtimeaddin"></a> Adding NamedRange Controls at Run Time in an VSTO Add-in project  
- You can add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control programmatically to any open worksheet in an VSTO Add-in project. Dynamically created named ranges are not persisted in the worksheet as host controls when the worksheet is closed. For more information, see [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
+ プログラムによって <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを VSTO アドイン プロジェクトの任意の開いているワークシートに追加できます。 動的に作成された名前付き範囲は、ワークシートを閉じたときに、ホスト コントロールとしてワークシートに保持されません。 詳細については、「 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)」を参照してください。  
   
-#### <a name="to-add-a-namedrange-control-to-a-worksheet-programmatically"></a>To add a NamedRange control to a worksheet programmatically  
+#### <a name="to-add-a-namedrange-control-to-a-worksheet-programmatically"></a>プログラムによってワークシートに NamedRange コントロールを追加するには  
   
-1.  The following code generates a worksheet host item that is based on the open worksheet, and then adds a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to cell **A1** and sets its <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> property to `Hello world`.  
+1.  次のコードでは、開いているワークシートに基づいたワークシート ホスト項目を生成し、 <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをセル **A1** に追加して、その <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> プロパティを `Hello world`に設定します。  
   
-     [!code-csharp[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#7)]  [!code-vb[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#7)]  
+     [!code-csharp[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#7)]
+     [!code-vb[Trin_Excel_Dynamic_Controls#7](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#7)]  
   
-## <a name="see-also"></a>See Also  
- [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
- [Controls on Office Documents](../vsto/controls-on-office-documents.md)   
- [NamedRange Control](../vsto/namedrange-control.md)   
- [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)   
+## <a name="see-also"></a>関連項目  
+ [実行時の Word 文書と VSTO アドイン内の Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
+ [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
+ [NamedRange コントロール](../vsto/namedrange-control.md)   
+ [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
  [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
- [How to: Resize NamedRange Controls](../vsto/how-to-resize-namedrange-controls.md)   
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
+ [方法: NamedRange コントロールのサイズを変更します。](../vsto/how-to-resize-namedrange-controls.md)   
+ [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
   
   

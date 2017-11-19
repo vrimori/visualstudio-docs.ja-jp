@@ -1,46 +1,47 @@
 ---
-title: "ドキュメント ウィンドウ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Visual Studio SDK には、ドキュメント ウィンドウ"
+title: "ドキュメント ウィンドウ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Visual Studio SDK, document windows
 ms.assetid: 50081d48-987f-43db-8bf9-51b7cf76e9c0
-caps.latest.revision: 17
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 63cbb04310dba0bddea4f6730a6ae5095cbe2612
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ドキュメント ウィンドウ
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-Visual Studio で、 *ドキュメント ウィンドウ* マルチ ドキュメント インターフェイス \(MDI\) ウィンドウに関連付けられているフレームを使用した子ウィンドウです。 ドキュメント ウィンドウは、通常、表示やソース コードまたはテキストの変更を使用しますが、他の機能の種類をホストすることもできます。 ドキュメント ウィンドウ:  
+# <a name="document-windows"></a>ドキュメント ウィンドウ
+Visual Studio で、*ドキュメント ウィンドウ*マルチ ドキュメント インターフェイス (MDI) ウィンドウに関連付けられているフレームを使用した子ウィンドウします。 ドキュメント ウィンドウは、通常、ディスプレイとソース コードまたはテキストの変更の使用が、他の機能の種類をホストすることもできます。 ドキュメント ウィンドウ:  
   
--   同時に複数のファイルを表示できるように、MDI 親の水平または垂直の別のタブ グループに整理できます。  
+-   同時に複数のファイルを表示できるように、MDI 親の別個の水平または垂直タブ グループに編成できます。  
   
 -   MDI 親の任意の順序でドッキングできます。  
   
--   自由にフロートすることができます。  
+-   自由にフロートことができます。  
   
 -   その他の MDI ウィンドウのタブ オーダー内でリンクされています。  
   
- グループ化のためのコマンドのフローティングとドッキング、ご覧 \[ウィンドウ\] タブのドキュメントのショートカット メニュー。  
+ グループ化のため、コマンド、ドッキングとフローティングにありますドキュメント ウィンドウ タブのショートカット メニュー。  
   
- Visual Studio でウィンドウの動作の詳細については、次を参照してください。 [ウィンドウ レイアウトをカスタマイズする](../../ide/customizing-window-layouts-in-visual-studio.md)します。  
+ Visual Studio でのウィンドウの動作の詳細については、次を参照してください。[ウィンドウ レイアウトをカスタマイズする](../../ide/customizing-window-layouts-in-visual-studio.md)です。  
   
-## ドキュメント ウィンドウの実装  
- ドキュメント ウィンドウを作成するには、エディターを実装します。<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> インターフェイスは、エディターのインスタンス化の一部としてドキュメント ウィンドウを作成します。 詳細については、「[エディターでのレガシー インターフェイス](../../extensibility/legacy-interfaces-in-the-editor.md)」を参照してください。  
+## <a name="document-window-implementation"></a>ドキュメント ウィンドウの実装  
+ ドキュメント ウィンドウは、エディターの実装によって作成されます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイスは、エディターのインスタンス化の一部としてドキュメント ウィンドウを作成します。 詳細については、次を参照してください。[エディターでのレガシ インターフェイス](../../extensibility/legacy-interfaces-in-the-editor.md)です。  
   
 > [!NOTE]
->  逆方向に提供をウィンドウのナビゲーションのポイントの転送は、実装、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBackForwardNavigation> インターフェイスです。 テキスト エディターでは、ドキュメント内ナビゲーションのポイントを識別するためにテキストのマーカーが使用されます。  
+>  逆方向に提供し、ウィンドウのナビゲーション指し示す前方、実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBackForwardNavigation>インターフェイスです。 テキスト エディターでは、ドキュメント内のナビゲーションの点を識別するのにテキスト マーカーが使用されます。  
   
-## 実行中の Document テーブル  
- IDE では、実行中のドキュメント テーブル \(RDT\) を使用して、すべてのドキュメント ウィンドウの状態を追跡します。 RDT は、どのドキュメントを windows が、ソリューションを閉じたときなど、またはファイルを編集するときに、イベントの通知メカニズムです。 詳細については、「[実行中のドキュメント テーブル](../../extensibility/internals/running-document-table.md)」を参照してください。  
+## <a name="the-running-document-table"></a>実行中のドキュメント テーブル  
+ IDE では、すべてのドキュメント ウィンドウのステータスを追跡するために実行中のドキュメント テーブル (RDT) を使用します。 RDT は、どのドキュメントを windows にソリューションが閉じている場合など、または、ファイルが編集されているときに、イベントの通知メカニズムです。 詳細については、次を参照してください。[を実行しているドキュメント テーブル](../../extensibility/internals/running-document-table.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ドキュメントの読み込みの遅延](../../extensibility/internals/delayed-document-loading.md)

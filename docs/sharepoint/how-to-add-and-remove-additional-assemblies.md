@@ -1,121 +1,120 @@
 ---
-title: "方法: アセンブリを追加および削除する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.RAD.CustomAssembly"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発、パッケージ"
+title: "方法: 追加およびその他のアセンブリを削除する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.SharePointTools.RAD.CustomAssembly
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, packages
 ms.assetid: d9d1e8db-9df2-4e07-ac8d-59ef05d24090
-caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 7b7859738ac1fe70bdca4cdca5d2dff1220a22b5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: アセンブリを追加および削除する
-  SharePoint パッケージが機能またはデータについて他のアセンブリに依存している場合、そのアセンブリをソリューション パッケージ \(.wsp\) に追加できます。  パッケージをインストールする際は、カスタム アセンブリがインストールされているかどうかが、SharePoint サーバーによって確認されます。  
+# <a name="how-to-add-and-remove-additional-assemblies"></a>方法: アセンブリを追加および削除する
+  SharePoint パッケージが機能またはデータについて他のアセンブリに依存している場合、そのアセンブリをソリューション パッケージ (.wsp) に追加できます。 パッケージをインストールする際は、カスタム アセンブリがインストールされているかどうかが、SharePoint サーバーによって確認されます。  
   
  アセンブリに関連付けられているセーフ コントロールやクラス リソース ファイルを追加および変更することもできます。  
   
-## アセンブリ、セーフ コントロール、およびクラス リソースの追加  
- SharePoint ソリューション パッケージにアセンブリを追加できます。  サンドボックス ソリューションの追加アセンブリは、グローバル アセンブリ キャッシュに配置されますが、サンドボックス ソリューションの SharePoint プロジェクト項目はコンテンツ データベースに追加されます。  これらの追加アセンブリにセーフ コントロールやクラス リソースを追加することもできます。  安全なコントロールの詳細については、「[プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」または「[SharePoint Foundation で Web パーツを展開する](http://go.microsoft.com/fwlink/?LinkId=245505)」の「SafeControl エントリの作成」を参照してください。  
+## <a name="adding-additional-assemblies-safe-controls-and-class-resources"></a>アセンブリ、セーフ コントロール、およびクラス リソースの追加  
+ SharePoint ソリューション パッケージにアセンブリを追加できます。 サンドボックス ソリューションの追加アセンブリは、グローバル アセンブリ キャッシュに配置されますが、サンドボックス ソリューションの SharePoint プロジェクト項目はコンテンツ データベースに追加されます。 これらの追加アセンブリにセーフ コントロールやクラス リソースを追加することもできます。 安全なコントロールの詳細については、次を参照してください。[を提供するパッケージとプロジェクト項目での展開情報](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)または"を作成する、SafeControl エントリ"で[SharePoint Foundation の Web パーツを配置する](http://go.microsoft.com/fwlink/?LinkId=245505)です。  
   
-#### 既存のアセンブリを追加するには  
+#### <a name="to-add-an-existing-assembly"></a>既存のアセンブリを追加するには  
   
-1.  **パッケージ デザイナー**を開きます。  詳細については、「[方法: SharePoint ソリューション パッケージをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)」を参照してください。  
+1.  開く、**パッケージ デザイナー**です。 詳細については、次を参照してください。[する方法: SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)です。  
   
-2.  **\[詳細設定\]** タブをクリックします。  
+2.  選択、**詳細**タブです。  
   
-3.  **\[追加\]** をクリックし、一覧の **\[既存のアセンブリの追加\]** をクリックします。  
+3.  選択、**追加**ボタンをクリックし、**既存のアセンブリの追加**一覧からです。  
   
-     **\[既存のアセンブリの追加\]** ダイアログ ボックスが表示されます。  
+     **既存のアセンブリの追加** ダイアログ ボックスが表示されます。  
   
-4.  省略記号 \(![ASP.NET モバイル デザイナー楕円](~/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")\) をクリックし、追加するアセンブリを選択します。  移植性を考慮して、選択したアセンブリへの相対パスを使用することをお勧めします。  
+4.  省略記号ボタンを選択 (![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円"))、追加するアセンブリを選択します。 移植性を考慮して、選択したアセンブリへの相対パスを使用することをお勧めします。  
   
-5.  **\[配置ターゲット\]** で、グローバル アセンブリ キャッシュにアセンブリを配置する場合は **\[GlobalAssemblyCache\]** をクリックし、SharePoint を実行するサーバーの WebApplication フォルダーにアセンブリを配置する場合は **\[WebApplication\]** をクリックします。  
+5.  **配置ターゲット**、選択、 **GlobalAssemblyCache** 、グローバル アセンブリ キャッシュにアセンブリを配置またはを選択するオプション ボタン、 **WebApplication**オプションSharePoint を実行しているサーバーの WebApplication フォルダーにアセンブリを配置するボタンをクリックします。  
   
-#### プロジェクトの出力からアセンブリを追加するには  
+#### <a name="to-add-an-assembly-from-project-output"></a>プロジェクトの出力からアセンブリを追加するには  
   
-1.  **パッケージ デザイナー**を開きます。  
+1.  開く、**パッケージ デザイナー**です。  
   
-     詳細については、「[方法: SharePoint ソリューション パッケージをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)」を参照してください。  
+     詳細については、次を参照してください。[する方法: SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)です。  
   
-2.  **\[詳細設定\]** タブをクリックします。  
+2.  選択、**詳細**タブです。  
   
-3.  **\[追加\]** をクリックし、一覧の **\[プロジェクト出力からアセンブリを追加\]** をクリックします。  
+3.  選択、**追加**ボタンをクリックし、**プロジェクト出力からアセンブリを追加**一覧からです。  
   
-     **\[プロジェクト出力からアセンブリを追加\]** ダイアログ ボックスが表示されます。  
+     **プロジェクト出力からアセンブリを追加** ダイアログ ボックスが表示されます。  
   
-4.  **\[ソース プロジェクト\]** の一覧で、追加するソース プロジェクトを選択します。  
+4.  **ソース プロジェクト**一覧、および追加するソース プロジェクトを選択します。  
   
-5.  **\[配置ターゲット\]** で、グローバル アセンブリ キャッシュにアセンブリを配置する場合は **\[GlobalAssemblyCache\]** をクリックし、SharePoint を実行するサーバーの WebApplication フォルダーにアセンブリを配置する場合は **\[WebApplication\]** をクリックします。  
+5.  **配置ターゲット**、選択、 **GlobalAssemblyCache** 、グローバル アセンブリ キャッシュにアセンブリを配置またはを選択するオプション ボタン、 **WebApplication**オプションSharePoint を実行しているサーバーの WebApplication フォルダーにアセンブリを配置するボタンをクリックします。  
   
-#### セーフ コントロールを追加するには  
+#### <a name="to-add-a-safe-control"></a>セーフ コントロールを追加するには  
   
-1.  **\[既存のアセンブリの編集\]** ダイアログ ボックスを開きます。  これには、パッケージ デザイナーを開いて **\[詳細設定\]** タブをクリックし、アセンブリを選択して、**\[編集\]** をクリックします。  
+1.  開く、**既存のアセンブリの編集** ダイアログ ボックス。 これを実現する、パッケージ デザイナーを開き、選択、 **詳細設定**  タブで、アセンブリを選択しを選択し、**編集**ボタンをクリックします。  
   
-2.  **\[安全なコントロール\]** ペインで、**\[新しい項目を追加するにはここをクリックします\]** をクリックします。  
+2.  **安全なコントロール** ウィンドウで、選択、**ここをクリックして、新しい項目を追加する**ボタンをクリックします。  
   
-3.  **\[アセンブリ名\]** 列に、アセンブリの名前を入力します。  
+3.  **アセンブリ名**列アセンブリの名前を入力します。  
   
-4.  **\[名前空間\]** 列に、安全なコントロールの名前空間の名前を入力します。  
+4.  **Namespace**列で、安全なコントロールの名前空間の名前を入力します。  
   
-5.  **\[型の名前\]** 列に、型の名前を入力します。  
+5.  **型名**列で、型の名前を入力します。  
   
-#### クラス リソースを追加するには  
+#### <a name="to-add-a-class-resource"></a>クラス リソースを追加するには  
   
-1.  **\[既存のアセンブリの編集\]** ダイアログ ボックスを開きます。  これには、パッケージ デザイナーを開いて **\[詳細設定\]** タブをクリックし、アセンブリを選択して、**\[編集\]** をクリックします。  
+1.  開く、**既存のアセンブリの編集** ダイアログ ボックス。 これを実現する、パッケージ デザイナーを開き、選択、 **詳細設定**  タブで、アセンブリを選択しを選択し、**編集**ボタンをクリックします。  
   
-2.  **\[クラス リソース\]** ペインで、**\[新しい項目を追加するにはここをクリックします\]** をクリックします。  
+2.  **クラス リソース** ウィンドウで、選択、**ここをクリックして、新しい項目を追加する**ボタンをクリックします。  
   
-3.  **\[ファイル名\]** 列の省略記号 \(![ASP.NET モバイル デザイナー楕円](~/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")\) をクリックし、追加するクラス リソースを選択します。  
+3.  **ファイル名**列で、選択、省略記号 (![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円"))、クラス リソースを追加するを選択するとします。  
   
-## カスタム アセンブリの削除  
+## <a name="deleting-custom-assemblies"></a>カスタム アセンブリの削除  
  SharePoint パッケージからアセンブリを削除したり、既存のアセンブリからセーフ コントロールやクラス リソースを削除することもできます。  
   
-#### 既存のアセンブリを削除するには  
+#### <a name="to-delete-an-existing-assembly"></a>既存のアセンブリを削除するには  
   
-1.  **パッケージ デザイナー**を開きます。  詳細については、「[方法: SharePoint ソリューション パッケージをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)」を参照してください。  
+1.  開く、**パッケージ デザイナー**です。 詳細については、次を参照してください。[する方法: SharePoint ソリューション パッケージをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)です。  
   
-2.  **\[詳細設定\]** タブをクリックします。  
+2.  選択、**詳細**タブです。  
   
-3.  **\[追加アセンブリ\]** ペインで、削除するカスタム アセンブリをクリックします。  
+3.  **追加アセンブリ** ウィンドウで、削除するカスタム アセンブリを選択します。  
   
-4.  **\[削除\]** をクリックします。  
+4.  選択、**削除**ボタンをクリックします。  
   
-#### アセンブリの安全なコントロールを削除するには  
+#### <a name="to-delete-a-safe-control-for-an-assembly"></a>アセンブリの安全なコントロールを削除するには  
   
-1.  **\[既存のアセンブリの編集\]** ダイアログ ボックスを開きます。  これには、パッケージ デザイナーを開いて **\[詳細設定\]** タブをクリックし、アセンブリを選択して、**\[編集\]** をクリックします。  
+1.  開く、**既存のアセンブリの編集** ダイアログ ボックス。 これを実現する、パッケージ デザイナーを開き、選択、 **詳細設定**  タブで、アセンブリを選択しを選択し、**編集**ボタンをクリックします。  
   
 2.  削除する安全なコントロールをクリックします。  
   
 3.  Del キーを押します。  
   
-#### アセンブリのクラス リソースを削除するには  
+#### <a name="to-delete-a-class-resource-for-an-assembly"></a>アセンブリのクラス リソースを削除するには  
   
-1.  **\[既存のアセンブリの編集\]** ダイアログ ボックスを開きます。  これには、パッケージ デザイナーを開いて **\[詳細設定\]** タブをクリックし、アセンブリを選択して、**\[編集\]** をクリックします。  
+1.  開く、**既存のアセンブリの編集** ダイアログ ボックス。 これを実現する、パッケージ デザイナーを開き、選択、 **詳細設定**  タブで、アセンブリを選択しを選択し、**編集**ボタンをクリックします。  
   
 2.  削除するクラス リソースをクリックします。  
   
 3.  Del キーを押します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint フィーチャーの作成](../sharepoint/creating-sharepoint-features.md)   
- [方法: SharePoint フィーチャーをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-feature.md)   
+ [方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)   
  [方法: SharePoint フィーチャーの項目を追加および削除する](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)   
- [NIB: Building SharePoint Solutions with Team Foundation Server](http://msdn.microsoft.com/ja-jp/700a570a-e98e-4425-aadd-34c014868d43)  
   
   

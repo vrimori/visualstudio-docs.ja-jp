@@ -1,54 +1,56 @@
 ---
-title: "IDSymbol 要素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDSymbol 要素 (VSCT XML スキーマ)"
-  - "IDSymbol、VSCT XML スキーマ要素"
+title: "IDSymbol 要素 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDSymbol element (VSCT XML schema)
+- VSCT XML schema elements, IDSymbol
 ms.assetid: 760cfd20-3c06-422c-9103-98bfa1f387f8
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 734d05dd013be9a3d6c4a173a5c7abc7a01ef2d8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDSymbol 要素
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-`IDSymbol` 要素には、メニューのグループ、またはコマンドを表す GUID:ID ペアの ID が含まれています。 GUID は、親から `GuidSymbol` 要素。`IDSymbol` 要素には、 `name` 属性に含まれている ID のフレンドリ名を提供する、 `value` 属性です。  
+# <a name="idsymbol-element"></a>IDSymbol 要素
+`IDSymbol`要素には、メニューのグループ、またはコマンドを表す GUID:ID のペアの ID が含まれています。 GUID は、親から取得`GuidSymbol`要素。 `IDSymbol`要素には、`name`に含まれていると、ID のフレンドリ名を提供する属性、`value`属性。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 <IDSymbol name=ElementName value="0x0010" />  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
   
 |属性|説明|  
-|--------|--------|  
+|---------------|-----------------|  
 |name|必須です。 ID シンボルの名前です。|  
 |値|必須です。 ID シンボルの数値の ID 値です。|  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
  なし。  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
-|[GuidSymbol 要素](../extensibility/guidsymbol-element.md)|メニューのグループ、またはコマンドを表す GUID:ID ペアの GUID が含まれています。 複数の `IDSymbol` 要素をグループ化します。|  
+|-------------|-----------------|  
+|[GuidSymbol 要素](../extensibility/guidsymbol-element.md)|メニューのグループ、またはコマンドを表す GUID:ID のペアの GUID が含まれています。 複数の `IDSymbol` 要素をグループ化します。|  
   
-## 解説  
- すべて `IDSymbol` 内の要素を指定した `GuidSymbol` 要素の一意な名前が `value`です。 ただし、 `IDSymbol` と同じ値を持つ要素は、別の親を持っていれば、パッケージに存在できます。  
+## <a name="remarks"></a>コメント  
+ 各`IDSymbol`内の要素を指定した`GuidSymbol`要素は、一意でなければなりません`value`です。 ただし、`IDSymbol`別の親を持っていれば、パッケージで同じ値を持つ要素が存在できます。  
   
-## 参照  
- [Visual Studio コマンド テーブル \(します。Vsct\) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

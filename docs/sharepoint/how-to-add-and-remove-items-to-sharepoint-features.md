@@ -1,62 +1,62 @@
 ---
-title: "方法: SharePoint フィーチャーの項目を追加および削除する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.RAD.FeatureDesigner"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, 機能"
+title: "方法: 追加および SharePoint フィーチャーの項目を削除する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.SharePointTools.RAD.FeatureDesigner
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, features
 ms.assetid: 5957d04f-f832-40de-af08-3f23fb8e2e14
-caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: c925cc1cf8b1a5c70dfc1e650151d79945828935
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: SharePoint フィーチャーの項目を追加および削除する
-  SharePoint ソリューションを作成すると、既定の SharePoint プロジェクト項目が自動的にフィーチャーに追加されます。  配置前であれば、SharePoint プロジェクト項目を追加または削除することによって、SharePoint フィーチャーを変更できます。  
+# <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>方法: SharePoint フィーチャーの項目を追加および削除する
+  SharePoint ソリューションを作成するときに、Visual Studio は、機能に既定の SharePoint プロジェクト項目を追加します。 展開する前に、追加し、SharePoint の機能を変更する SharePoint プロジェクト項目を削除できます。  
   
-## フィーチャーへの SharePoint プロジェクト項目の追加  
+## <a name="adding-sharepoint-project-items-to-a-feature"></a>機能への SharePoint プロジェクト項目の追加  
   
-#### フィーチャー デザイナーを使用して SharePoint プロジェクト項目を追加するには  
+#### <a name="to-add-sharepoint-project-items-with-the-feature-designer"></a>フィーチャー デザイナーでの SharePoint プロジェクト項目を追加するには  
   
 1.  フィーチャー デザイナーを開きます。  
   
-     詳細については、「[方法: SharePoint フィーチャーをカスタマイズする](../sharepoint/how-to-customize-a-sharepoint-feature.md)」を参照してください。  
+     詳細については、次を参照してください。[する方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)です。  
   
-2.  次の手順の一つまたは複数を実行して、**\[ソリューション内の項目\]** の一覧から **\[フィーチャー内の項目\]** の一覧で一つ以上の項目を追加する:  
+2.  1 つまたは複数の項目を追加、**ソリューション内の項目**の一覧を表示、**フィーチャー内の項目**1 つ以上の次の手順を実行することによってリスト。  
   
-    -   追加する各アイテムをダブルクリックします。  
+    -   追加する各項目をダブルクリックします。  
   
-    -   追加するカウンターを選択し、**\[追加\]** をクリックして、項目 \(\>\)。  
+    -   クリックして、追加する項目を選択して、**追加**ボタン (>)。  
   
-    -   **\[すべて追加\]** をクリックします \(\>\>\)。  
+    -   選択、**すべて追加**ボタン (>>)。  
   
-     **\[機能内の項目\]** ボックスの一覧に SharePoint プロジェクト項目が表示されます。  
+     SharePoint プロジェクト項目に表示されます、**フィーチャー内の項目** ボックスの一覧です。  
   
-## フィーチャーからの SharePoint プロジェクト項目の削除  
+## <a name="removing-sharepoint-project-items-from-a-feature"></a>機能から SharePoint プロジェクト アイテムの削除  
   
-#### フィーチャー デザイナーを使用して SharePoint アイテムを削除するには  
+#### <a name="to-remove-sharepoint-items-with-the-feature-designer"></a>フィーチャー デザイナーと SharePoint の項目を削除するには  
   
-1.  **\[フィーチャー内の項目\]** の一覧で一つ以上の項目を選択します。  
+1.  内の 1 つまたは複数の項目を選択して、**フィーチャー内の項目** ボックスの一覧です。  
   
-2.  1 一度に一つの項目を削除するに **\[削除\]** ボタン \(\<\) をクリックし、すべての項目を削除するに **\[すべて削除\]** ボタン \(\<\<\) をクリックします。  
+2.  選択、**削除**、一度に 1 つの項目を削除するかを選択するボタン (<)、**すべて削除**ボタン (<<) すべての項目を削除します。  
   
-     **\[ソリューション内の項目\]** ボックスの一覧に SharePoint プロジェクト項目が表示されます。  
+     SharePoint プロジェクト項目に表示されます、**ソリューション内の項目** ボックスの一覧です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint フィーチャーの作成](../sharepoint/creating-sharepoint-features.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   

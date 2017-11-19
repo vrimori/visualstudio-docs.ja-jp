@@ -1,77 +1,77 @@
 ---
-title: "IDebugErrorEvent2::GetErrorMessage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugErrorEvent2::GetErrorMessage"
-helpviewer_keywords: 
-  - "IDebugErrorEvent2::GetErrorMessage"
+title: "IDebugErrorEvent2::GetErrorMessage |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugErrorEvent2::GetErrorMessage
+helpviewer_keywords: IDebugErrorEvent2::GetErrorMessage
 ms.assetid: 9e3b0d74-a2dd-4eaa-bd95-21b2f9c79409
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 0b8a4e4c2ca938d8c600d3fd9ef0e615aa847fd9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugErrorEvent2::GetErrorMessage
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-情報をユーザーが認識できるエラー メッセージの構築を利用できる返します。  
+# <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
+人間が判読できるエラー メッセージの作成を許可する情報を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetErrorMessage(  
-   MESSAGETYPE* pMessageType,  
-   BSTR*        pbstrErrorFormat,  
-   HRESULT*     hrErrorReason,  
-   DWORD*       pdwType,  
-   BSTR*        pbstrHelpFileName,  
-   DWORD*       pdwHelpId  
+```cpp  
+HRESULT GetErrorMessage(  
+   MESSAGETYPE* pMessageType,  
+   BSTR*        pbstrErrorFormat,  
+   HRESULT*     hrErrorReason,  
+   DWORD*       pdwType,  
+   BSTR*        pbstrHelpFileName,  
+   DWORD*       pdwHelpId  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetErrorMessage(  
-   out enum_MESSAGETYPE   pMessageType,  
-   out string             pbstrErrorFormat,  
-   out int                phrErrorReason,  
-   out uint               pdwType,  
-   out string             pbstrHelpFileName,  
-   out uint               pdwHelpId  
+   out enum_MESSAGETYPE   pMessageType,  
+   out string             pbstrErrorFormat,  
+   out int                phrErrorReason,  
+   out uint               pdwType,  
+   out string             pbstrHelpFileName,  
+   out uint               pdwHelpId  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pMessageType`  
- \[入力\] メッセージの種類を示す [メッセージの種類](../../../extensibility/debugger/reference/messagetype.md) の列挙型の値を返します。  
+ [out]値を返します、 [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)メッセージの種類を説明する列挙です。  
   
  `pbstrErrorFormat`  
- \[入力\] ユーザーに最終的なメッセージの形式 \(詳細については「解説」を参照してください\)。  
+ [out]ユーザーに最後のメッセージの形式 (詳細については、「解説」を参照してください)。  
   
  `hrErrorReason`  
- \[入力\] エラー コードはメッセージ通知します。  
+ [out]エラー コード、メッセージは、に関するです。  
   
  `pdwType`  
- \[入力\] エラーの重大度レベル \(`MessageBox` に MB\_XXX の定数を使用してください ; たとえば`MB_EXCLAMATION` または `MB_WARNING`\)。  
+ [out]エラーの重大度レベル (の MB_XXX 定数を使用して`MessageBox`。 たとえば、`MB_EXCLAMATION`または`MB_WARNING`)。  
   
  `pbstrHelpFileName`  
- \[入力\] ヘルプ ファイルがない場合はヘルプ ファイルへのパス \(null 値に設定します。  
+ [out]ヘルプ ファイル (ヘルプ ファイルがない場合は null 値に設定) へのパス。  
   
  `pdwHelpId`  
- \[入力\] ヘルプ トピックがある\) 表示するヘルプ トピック ID \(0 に設定します。  
+ [out](ヘルプ トピックがない場合は 0 に設定) を表示するヘルプ トピックの ID。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- エラー メッセージが `"What I was doing. %1"` に従って書式指定する必要があります。  `"%1"` \(`hrErrorReason` でエラー メッセージが呼び出し元によって返されるエラー コードから派生\) に置き換えられます。  `pMessageType` のパラメーターは最終的なエラー メッセージを表示するかを呼び出し元に通知します。  
+## <a name="remarks"></a>コメント  
+ エラー メッセージの書式はの線に沿った`"What I was doing.  %1"`です。 `"%1"`とエラー コードから派生した、エラー メッセージ、呼び出し元によって置き換えられますし (で返される`hrErrorReason`)。 `pMessageType`パラメーターは、最終的なエラー メッセージの表示方法を呼び出し元に通知します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)   
- [メッセージの種類](../../../extensibility/debugger/reference/messagetype.md)
+ [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)

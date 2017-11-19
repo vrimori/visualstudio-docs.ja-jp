@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59730063-cc29-4dae-baff-2234ad8d0c8f
-caps.latest.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c246c8be1d10893b018d5d0c5727d4af42efdc6b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 21fcc9388b40baa9e003b4beb876ba2f0f23fbaf
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-managing-multiple-threads-in-managed-code"></a>方法: マネージ コードの複数のスレッドを管理します。
 非同期メソッドを呼び出すか、Visual Studio の UI スレッド以外のスレッドで実行される操作するマネージ VSPackage 拡張機能があれば、以下のガイドラインに従ってください。 おくと、UI スレッド応答性の高い作業を完了する別のスレッドで待機する必要がないためです。 ことができます、コードをより効率的なスタック領域を占有する追加のスレッドがないためより信頼性が高く、デッドロックやハングを回避するため、デバッグを簡単に行うことができます。  

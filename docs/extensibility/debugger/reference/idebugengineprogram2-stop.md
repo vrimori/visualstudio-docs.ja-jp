@@ -1,48 +1,48 @@
 ---
-title: "IDebugEngineProgram2::Stop | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngineProgram2::Stop"
-helpviewer_keywords: 
-  - "IDebugEngineProgram2::Stop"
+title: "IDebugEngineProgram2::Stop |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEngineProgram2::Stop
+helpviewer_keywords: IDebugEngineProgram2::Stop
 ms.assetid: 6e1c3d56-fb67-4a5b-80f9-8ee5131972bf
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 21dd14e1cc4d4e8c6b65b5285763a680a5f327f7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEngineProgram2::Stop
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このプログラムで実行しているすべてのスレッドを中断します。  
+# <a name="idebugengineprogram2stop"></a>IDebugEngineProgram2::Stop
+このプログラムで実行されているすべてのスレッドを停止します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Stop(   
-   void   
+```cpp  
+HRESULT Stop(   
+   void   
 );  
 ```  
   
-```c#  
+```csharp  
 int Stop();  
 ```  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- このメソッドはこのプログラムが複数のプログラミング環境でデバッグするときに呼び出されます。  ほかのプログラムからの停止のイベントを受け取るとこのメソッドはプログラムで呼び出されます。  このメソッドの実装では非同期 ; 必要があります。つまりメソッドはすべてのスレッドがこのの前に終了する必要があります。  このメソッドの実装ではことができます。このプログラムの [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) のメソッドを呼び出して簡単です。  
+## <a name="remarks"></a>コメント  
+ 複数のプログラムの環境でこのプログラムをデバッグするときに、このメソッドが呼び出されます。 他のプログラムから停止イベントを受信すると、このプログラムにこのメソッドが呼び出されます。 このメソッドの実装が非同期; する必要があります。つまり、いないすべてのスレッドは、このメソッドが戻る前に停止する必要する必要があります。 このメソッドの実装を呼び出すなどの単純な可能性があります、 [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)このプログラムのメソッドです。  
   
- デバッグ イベントをこのメソッドに対して送信されません。  
+ このメソッドへの応答では、デバッグ イベントは送信されません。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   
  [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)

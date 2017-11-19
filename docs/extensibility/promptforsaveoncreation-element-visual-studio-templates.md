@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- http://schemas.microsoft.com/developer/vstemplate/2005#PromptForSaveOnCreation
-helpviewer_keywords:
-- PromptForSaveOnCreation element [Visual Studio project templates]
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#PromptForSaveOnCreation
+helpviewer_keywords: PromptForSaveOnCreation element [Visual Studio project templates]
 ms.assetid: 75174674-0c3c-4b57-b2fd-6ea8e817b67d
-caps.latest.revision: 18
+caps.latest.revision: "18"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6d39ad8e236ef2b9ea9fbf29fbe0d11d08e5643c
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 8ce7e73801b34542bcf1c6be35d950b1fabdc7c3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="promptforsaveoncreation-element-visual-studio-templates"></a>PromptForSaveOnCreation 要素 (Visual Studio テンプレート)
-プロジェクトの保存場所を使用して、ユーザーが確認するかどうかを指定、**新しいプロジェクト**ダイアログ ボックスのプロジェクトを作成するとします。 この要素が `true` に設定されている場合、ユーザーは保存場所の入力を求められます。`false` に設定されている場合は、入力を求められません  (つまり、一時プロジェクトが作成されます)。  
+プロジェクトの保存場所を使用して、ユーザーが求めるかどうかを指定します、**新しいプロジェクト** ダイアログ ボックスのプロジェクトを作成するときにします。 この要素が `true` に設定されている場合、ユーザーは保存場所の入力を求められます。`false` に設定されている場合は、入力を求められません  (つまり、一時プロジェクトが作成されます)。  
   
  \<VSTemplate >  
  \<TemplateData >  
@@ -72,7 +56,7 @@ ms.lasthandoff: 02/22/2017
 ## <a name="remarks"></a>コメント  
  `PromptForSaveOnCreation` は、省略可能な要素です。 既定値は `false` です。  
   
- 一時プロジェクトは、プロジェクトの内容を保存しないで作成および変更できるプロジェクトです。 詳細については、次を参照してください。 [NIB 一時プロジェクト](http://msdn.microsoft.com/en-us/9cf1944c-7045-44cc-8701-7b0eb4099f2b)します。  
+ 一時プロジェクトは、プロジェクトの内容を保存しないで作成および変更できるプロジェクトです。 詳細については、次を参照してください。 [NIB 一時プロジェクト](http://msdn.microsoft.com/en-us/9cf1944c-7045-44cc-8701-7b0eb4099f2b)です。  
   
 ## <a name="example"></a>例  
  `PromptForSaveOnCreation` の値を `false` に設定する方法を次に示します。この設定により、プロジェクトは一時プロジェクトとして作成されるようになります。  

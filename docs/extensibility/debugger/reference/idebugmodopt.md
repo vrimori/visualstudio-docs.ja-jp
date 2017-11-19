@@ -1,45 +1,46 @@
 ---
-title: "IDebugModOpt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugModOpt インターフェイス"
+title: "IDebugModOpt |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugModOpt interface
 ms.assetid: ebd525e3-d140-4071-9d8c-41871de4125e
-caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: fa4416bbb2a4b37ba986bb0d57b32dfa5aa319cf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugModOpt
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-デバッグのオプション修飾子を表します。  
+# <a name="idebugmodopt"></a>IDebugModOpt
+デバッグ オプションの修飾子を表します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugModOpt : IUnknown  
 ```  
   
-## 呼び出し元のメモ  
- クラスまたはメソッドを表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のオブジェクトから派生します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ 取得した、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)クラスまたはメソッドを表すオブジェクト。  
   
-## メソッド  
- このインターフェイスは以下のメソッドを実行します :  
+## <a name="methods"></a>メソッド  
+ このインターフェイスでは、次のメソッドを実装します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[GetModOpts](../../../extensibility/debugger/reference/idebugmodopt-getmodopts.md)|オプションの修飾子の一覧を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[GetModOpts](../../../extensibility/debugger/reference/idebugmodopt-getmodopts.md)|省略可能な修飾子の一覧を取得します。|  
   
-## 必要条件  
- ヘッダー : Sh.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: Sh.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll

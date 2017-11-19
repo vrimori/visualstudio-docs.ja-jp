@@ -1,40 +1,42 @@
 ---
-title: "従来の言語サービスでカスタム ドキュメント プロパティ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "カスタム ドキュメント プロパティ、言語サービス [マネージ パッケージ framework]"
-  - "カスタム ドキュメント プロパティ"
-  - "言語サービス [マネージ パッケージ フレームワーク] カスタム ドキュメント プロパティ"
+title: "従来の言語サービスのカスタム ドキュメント プロパティの |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom document properties, language services [managed package framework]
+- document properties, custom
+- language services [managed package framework], custom document properties
 ms.assetid: cc714a67-b33e-4440-9203-3c90f648bd9c
-caps.latest.revision: 18
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: c82476b9d6fd632ed67acbeeab147743ea16cb40
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 従来の言語サービスでカスタム ドキュメント プロパティ
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-ドキュメントは ENT0ENT \[プロパティ\] ウィンドウの [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に表示できます。  プログラミング言語の一般に個別のソース ファイルに関連付けられているプロパティはありません。  ただしXML エンコーディングはスキーマやスタイル シートに影響するドキュメント プロパティをサポートします。  
+# <a name="custom-document-properties-in-a-legacy-language-service"></a>従来の言語サービスのカスタム ドキュメント プロパティ
+ドキュメントのプロパティを表示できる、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **プロパティ**ウィンドウです。 一般に、プログラミング言語には、個々 のソース ファイルに関連付けられているプロパティはありません。 ただし、XML では、エンコード、スキーマ、およびスタイル シートに影響するドキュメント プロパティをサポートしています。  
   
-## 説明  
- 言語がカスタム ドキュメント プロパティが必要な場合は<xref:Microsoft.VisualStudio.Package.DocumentProperties> のクラスからクラスを派生し派生クラスで必要なプロパティを実装する必要があります。  
+## <a name="discussion"></a>説明  
+ クラスを派生する必要があります、言語は、カスタム ドキュメント プロパティを必要とする場合、<xref:Microsoft.VisualStudio.Package.DocumentProperties>クラスし、派生クラスで必要なプロパティを実装します。  
   
- またドキュメント プロパティはソース ファイル自体で一般的に保存されます。  これは\[出力\] ウィンドウ ENT4ENT のドキュメント プロパティを変更すると ENT3ENT \[出力\] ウィンドウに表示されソース ファイルを更新する言語サービスのソース ファイルからプロパティ情報を解析する必要があります。  
+ さらに、ドキュメントのプロパティは、通常、ソース ファイル自体に格納されます。 言語サービスに表示するソース ファイルのプロパティ情報を解析する必要があります、**プロパティ** ウィンドウで、ドキュメント プロパティに変更が行われたときに、ソース ファイルを更新して、 **プロパティ**ウィンドウです。  
   
-## DocumentProperties クラスのカスタマイズ  
- 必要なカスタム ドキュメント プロパティをサポートするには<xref:Microsoft.VisualStudio.Package.DocumentProperties> のクラスからクラスを派生しすべてのプロパティを追加します。  また\[出力\] ウィンドウ ENT1ENT な整理するユーザーに属性を指定する必要があります。  プロパティに `get` のアクセサーだけが表示されている場合は\[出力\] ウィンドウで ENT5ENT 読み取り専用として表示されます。  プロパティに `get` と `set` のアクセサーの両方がの場合プロパティは\[ENT9ENT\] ウィンドウで更新できます。  
+## <a name="customizing-the-documentproperties-class"></a>オートメーション クラスをカスタマイズします。  
+ カスタム ドキュメント プロパティをサポートするにはからクラスを派生する必要があります、<xref:Microsoft.VisualStudio.Package.DocumentProperties>クラスし、必要な数だけプロパティを追加します。 またで整理するためのユーザー属性を指定する必要があります、**プロパティ** ウィンドウの表示。 プロパティにのみがある場合、`get`アクセサー、読み取り専用と内に表示される、**プロパティ**ウィンドウです。 プロパティは、両方を持つ場合`get`と`set`アクセサー、プロパティも更新するのには、**プロパティ**ウィンドウです。  
   
-### 例  
- 2 種類のプロパティファイル名および説明を表示 <xref:Microsoft.VisualStudio.Package.DocumentProperties> クラスから派生する例を次に示します。  プロパティが更新されるとソース ファイルにプロパティを記述する場合は<xref:Microsoft.VisualStudio.Package.LanguageService> クラスのカスタム メソッドが呼び出されます。  
+### <a name="example"></a>例  
+ 派生したクラスの例を次に示します<xref:Microsoft.VisualStudio.Package.DocumentProperties>、2 つのプロパティ、ファイル名と説明を表示します。 プロパティを更新するときに、カスタム メソッドを<xref:Microsoft.VisualStudio.Package.LanguageService>ソース ファイルにプロパティを記述するクラスが呼び出されます。  
   
-```c#  
+```csharp  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -121,12 +123,12 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## DocumentProperties のカスタム クラスをインスタンス化できます。  
- カスタム ドキュメント プロパティ クラスのインスタンスを作成するには<xref:Microsoft.VisualStudio.Package.DocumentProperties> クラスのインスタンスを返すように <xref:Microsoft.VisualStudio.Package.LanguageService> クラスのバージョンの <xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A> のメソッドをオーバーライドする必要があります。  
+## <a name="instantiating-the-custom-documentproperties-class"></a>カスタム DocumentProperties クラスをインスタンス化します。  
+ オーバーライドする必要があります、カスタム ドキュメント プロパティ クラスをインスタンス化する、<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A>のバージョンのメソッド、<xref:Microsoft.VisualStudio.Package.LanguageService>の 1 つのインスタンスを返すために、<xref:Microsoft.VisualStudio.Package.DocumentProperties>クラスです。  
   
-### 例  
+### <a name="example"></a>例  
   
-```c#  
+```csharp  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -148,22 +150,22 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## ソース ファイルのプロパティ  
- ドキュメント プロパティは通常ソース ファイル固有であるため値はソース ファイル自体に格納されます。  これは言語パーサーまたはスキャナーのサポートがこれらのプロパティを定義する必要があります。  たとえばXML ドキュメントのプロパティはルート ノードに格納されます。  ルート ノードの値には\[出力\] ウィンドウ ENT2ENT な値が変更されたルート ノードがエディターで更新された場合変更されます。  
+## <a name="properties-in-the-source-file"></a>ソース ファイル内のプロパティ  
+ ドキュメントのプロパティは、通常、ソース ファイルに固有にあるため、値は、ソース ファイル自体に格納されます。 これには、言語パーサーやこれらのプロパティを定義するスキャナーからのサポートが必要です。 たとえば、XML ドキュメントのプロパティは、ルート ノードに格納されます。 ルート ノードの値が変更されたときに、**プロパティ**ウィンドウの値を変更し、エディターで、ルート ノードを更新します。  
   
-### 例  
- この例では特殊なコメントのヘッダーに埋め込まれたソース ファイルの最初の 2 行のプロパティ 「ファイル名」および 「」を次のように保存されます :  
+### <a name="example"></a>例  
+ この例では、"Filename"と"Description"ソース ファイルの最初の 2 つの行のヘッダーに埋め込まれ、特別なコメント、としてプロパティを格納します。  
   
 ```  
 //!Filename = file.testext  
 //!Description = A sample file  
 ```  
   
- この例ではユーザーがソース ファイルを直接変更するとプロパティの更新方法をソース ファイルの最初の 2 行からドキュメント プロパティを取得および設定するために必要な 2 とおりの方法も示します。  次に示す例の `SetPropertyValue` のメソッドは 「セクションで説明した DocumentProperties のクラス」カスタマイズする `TestDocumentProperties` のクラスから呼び出されるものと同じです。  
+ この例では、取得および方法、プロパティが更新されますが、ユーザーがソース ファイルを直接変更する場合、同様に、ソース ファイルの最初の 2 つの行からドキュメント プロパティを設定するために必要な 2 つの方法を示します。 `SetPropertyValue`から呼び出すいずれかの例では、ここでは、同じメソッド、`TestDocumentProperties`クラスの「DocumentProperties クラスをカスタマイズする」セクションで示すようにします。  
   
- この例では最初の 2 行のトークンの種類を判断するためにスキャナーを使用します。  この例では説明を目的としています。  この状況では通常はツリーの各ノードは特定のトークンに関する情報が含まれている場合に解析できます。パース ツリーと呼ばれるものにソース ファイルをです。  ルート ノードはドキュメント プロパティが含まれています。  
+ この例では、スキャナーを使用して、最初の 2 つの行でトークンの種類を決定します。 この例では、わかりやすくするためだけです。 このような状況をより一般的な方法と呼ばれるもの解析ツリー、ツリーの各ノードが特定のトークンに関する情報を格納する場所にソース ファイルの解析を開始します。 ルート ノードには、ドキュメントのプロパティが含まれます。  
   
-```c#  
+```csharp  
 using System.ComponentModel;  
 using Microsoft.VisualStudio.Package;  
   
@@ -398,5 +400,5 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## 参照  
- [従来の言語サービスの機能](../../extensibility/internals/legacy-language-service-features1.md)
+## <a name="see-also"></a>関連項目  
+ [レガシ言語サービス機能](../../extensibility/internals/legacy-language-service-features1.md)

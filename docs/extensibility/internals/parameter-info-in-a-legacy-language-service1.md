@@ -1,48 +1,50 @@
 ---
-title: "レガシ言語 Service1 でパラメーター情報 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "言語サービス、メソッドのヒント"
-  - "メソッドのヒント"
-  - "言語サービスでは、パラメーター ヒント]"
-  - "IVsMethodData インターフェイス"
-  - "パラメーター ヒント (IntelliSense)"
+title: "レガシ言語 Service1 のパラメーター ヒント |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- language services, method tips
+- method tips
+- language services, parameter info tooltip
+- IVsMethodData interface
+- Parameter Info (IntelliSense)
 ms.assetid: f367295e-45b6-45d2-9ec8-77481743beef
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 8f3fd29f46f0edb184b3e0cd5e6ddc766ffc94de
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 従来の言語サービスでパラメーター情報
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-IntelliSense パラメーター ヒントでは、言語構成要素にいるについてのヒントを持つユーザーを提供します。  
+# <a name="parameter-info-in-a-legacy-language-service"></a>従来の言語サービスでのパラメーター ヒント
+IntelliSense パラメーター ヒントでは、言語コンストラクトにいる場所に関するヒントを使用してユーザーを提供します。  
   
- 従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は、MEF の拡張機能を使用します。 詳細については、次を参照してください。 [エディターと言語サービスの拡張](../../extensibility/extending-the-editor-and-language-services.md)します。  
+ レガシ言語サービスは、VSPackage の一部として実装されますが、MEF 拡張機能を使用する言語サービスの機能を実装する新しい方法です。 詳細については、次を参照してください。[エディターと言語サービスの拡張](../../extensibility/extending-the-editor-and-language-services.md)です。  
   
 > [!NOTE]
->  エディターを使用して、新しい API できるだけ早く始めることをお勧めします。 言語サービスのパフォーマンスを向上させる、エディターの新機能を活用できます。  
+>  エディターを使用して、新しい API できるだけ早く開始することをお勧めします。 言語サービスのパフォーマンスを向上させる、エディターの新機能を活用できます。  
   
-## パラメーター ヒントのツールヒントのしくみ  
- エディターでステートメントを入力すると、VSPackage には、入力中のステートメントの定義を含む小さいツールヒント ウィンドウが表示されます。 たとえば、Microsoft Foundation Classes \(MFC\) ステートメントを入力する場合 \(よう `pMainFrame ->UpdateWindow`\) し、開きかっこは、パラメーターの定義を表示するメソッドのヒントが表示される一覧を作成するキーを押します、 `UpdateWindow` メソッドです。  
+## <a name="how-parameter-info-tooltips-work"></a>パラメーター ヒントのツールヒントが機能するしくみ  
+ エディターでステートメントを入力すると、VSPackage に型指定されているステートメントの定義を含む小さいツールヒント ウィンドウが表示されます。 たとえば、Microsoft Foundation Classes (MFC) ステートメントを入力する場合 (など`pMainFrame ->UpdateWindow`) と始めかっこが、パラメーターの定義を表示するメソッドのヒントが表示される一覧を作成するキーを押して、`UpdateWindow`メソッドです。  
   
- パラメーター ヒントのツールヒントは、通常、ステートメント入力候補と組み合わせて使用します。 パラメーターまたはメソッド名またはキーワードの後の書式設定されたその他の情報を持つ言語の最も便利です。  
+ パラメーター ヒントのツールヒントは通常、ステートメント入力候補と組み合わせて使用されます。 これらは、パラメーターまたはメソッド名またはキーワードの後に書式設定された他の情報を持つ言語の最も役立ちます。  
   
- パラメーター ヒントのツールヒントは、コマンドのインターセプト言語サービスによって開始されます。 ユーザーは、文字を傍受する言語サービス オブジェクトを実装する必要があります、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> インターフェイスし、テキスト ビューへのポインターを渡す、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 実装を呼び出すことによって、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> メソッドで、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> インターフェイスです。 コマンドのフィルターは、コード ウィンドウに入力したコマンドを受け取ります。 ユーザーにパラメーター情報を表示するタイミングを認識するコマンドの情報を監視します。 ステートメント入力候補、エラー マーカーなどの同じコマンド フィルターを使用することができます。  
+ パラメーター ヒントのツールヒントは、コマンド インターセプト言語サービスによって開始されます。 ユーザーの文字を傍受する言語サービス オブジェクトを実装する必要があります、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイスし、テキスト ビューへのポインターを渡す、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>実装では、呼び出すことによって、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A>メソッドで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイスです。 コマンドのフィルターは、コード ウィンドウに入力したコマンドを受け取ります。 ユーザーにパラメーター情報を表示するタイミングを調べるコマンド情報を監視します。 ステートメント入力候補、エラー マーカーなどの同じコマンド フィルターを使用することができます。  
   
- 言語サービスがヒントを提供できるキーワードを入力すると、言語サービスを作成、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> オブジェクトと呼び出し、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> メソッドで、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> にヒントを表示するための IDE を通知するインターフェイスです。 作成、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> オブジェクトを使用して `VSLocalCreateInstance` コクラスを指定して `CLSID_VsMethodTipWindow`です。`VsLocalCreateInstance` 呼び出すヘッダー ファイル vsdoc.h で定義された関数は、 `QueryService` ローカル レジストリおよび呼び出し `CreateInstance` 用には、このオブジェクトで、 `CLSID_VsMethodTipWindow`です。  
+ 言語サービスがヒントを提供できるキーワードを入力すると、言語サービスを作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow>オブジェクトと呼び出し、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A>メソッドで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>ヒントを表示するための IDE に通知するインターフェイスです。 作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow>オブジェクトを使用して`VSLocalCreateInstance`コクラスを指定して`CLSID_VsMethodTipWindow`です。 `VsLocalCreateInstance`呼び出すヘッダー ファイル vsdoc.h で定義された関数は、`QueryService`ローカル レジストリおよび呼び出し`CreateInstance`このオブジェクトに対して、`CLSID_VsMethodTipWindow`です。  
   
-## メソッドのヒントを提供します。  
- メソッドのヒントを提供するには、呼び出し、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> メソッドに、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> インターフェイスの実装を渡して、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> インターフェイスです。  
+## <a name="providing-a-method-tip"></a>メソッドのヒントを提供します。  
+ メソッドのヒントを提供するには、呼び出し、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A>メソッドで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow>インターフェイスの実装を渡して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>インターフェイスです。  
   
- ときに、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> クラスが呼び出される、そのメソッドは、次の順序で呼び出されます。  
+ ときに、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>クラスが呼び出される、そのメソッドは、次の順序で呼び出されます。  
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetContextStream%2A>  
   
@@ -50,15 +52,15 @@ IntelliSense パラメーター ヒントでは、言語構成要素にいるに
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetCurMethod%2A>  
   
-     最初に表示するメソッドの数 \(0 から始まるインデックス\) を返します。 たとえば、0 を返した場合、最初のオーバー ロードされたメソッドが最初に表示されます。  
+     最初に表示するメソッドの数 (0 から始まるインデックス) を返します。 たとえば、0 を返した場合、最初のオーバー ロードされたメソッドが最初に表示されます。  
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetOverloadCount%2A>  
   
-     現在のコンテキストに適用されるオーバー ロードされたメソッドの数を返します。 値をこのメソッドの 1 より大きい返す場合、テキスト ビューは、するために上矢印および表示されます。 下向きの矢印をクリックすると、IDE を呼び出す、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.NextMethod%2A> メソッドです。 上向きの矢印をクリックすると、IDE を呼び出す、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.PrevMethod%2A> メソッドです。  
+     現在のコンテキストに適用できるオーバー ロードされたメソッドの数を返します。 値を返す場合このメソッドの 1 より大きい、し、テキスト ビューは、するのに上矢印および下矢表示されます。 IDE を呼び出す場合は、下矢印をクリックして、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.NextMethod%2A>メソッドです。 上向きの矢印をクリックすると、IDE を呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.PrevMethod%2A>メソッドです。  
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetMethodText%2A>  
   
-     パラメーター ヒントのツールヒントのテキストは、いくつかの呼び出し時に構築された、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetMethodText%2A> と <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetParameterText%2A> メソッドです。  
+     パラメーター ヒントのツールヒントのテキストがいくつかの呼び出し時に構築された、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetMethodText%2A>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetParameterText%2A>メソッドです。  
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetParameterCount%2A>  
   
@@ -66,11 +68,11 @@ IntelliSense パラメーター ヒントでは、言語構成要素にいるに
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetParameterText%2A>  
   
-     表示するオーバー ロードに対応するメソッドの数を返す場合は、このメソッドが呼び出された後への呼び出しによって、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.UpdateView%2A> メソッドです。  
+     表示する、オーバー ロードに対応するメソッドの数を返す場合このメソッドが呼び出された後への呼び出しによって、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.UpdateView%2A>メソッドです。  
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.UpdateView%2A>  
   
-     メソッドのヒントが表示されるときに、エディターを更新する、言語サービスに通知します。<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.UpdateView%2A> メソッドを次の呼び出します。  
+     メソッドのヒントが表示されるときに、エディターを更新するように言語サービスに通知します。 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.UpdateView%2A>メソッド、次を呼び出します。  
   
     ```  
     <pTxWin> ->UpdateTipWindow(<pTip>, UTW_CONTENTCHANGED | UTW_CONTEXTCHANGED).  
@@ -78,4 +80,4 @@ IntelliSense パラメーター ヒントでは、言語構成要素にいるに
   
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A>  
   
-     呼び出しが表示されたら、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> メソッド ヒントのウィンドウを閉じるときのメソッドです。
+     呼び出しが表示されたら、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A>メソッド メソッド ヒント ウィンドウを閉じるとき。

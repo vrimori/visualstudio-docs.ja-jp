@@ -1,61 +1,61 @@
 ---
-title: "方法: SharePoint の配置構成を編集する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.Project.DeploymentConfig"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, 配置"
+title: "方法: SharePoint の配置構成を編集 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.SharePointTools.Project.DeploymentConfig
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords: SharePoint development in Visual Studio, deploying
 ms.assetid: bff1895b-d3fe-4ec0-ba91-f8884dc35957
-caps.latest.revision: 14
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 287618def7897cd2c91a63db9d8272c919190dfa
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: SharePoint の配置構成を編集する
-  配置構成は、新たに作成できるだけではなく、既存の配置構成に変更を加えることもできます。  たとえば、配置プロセスの 1 つの手順だけを実行したり、手順の順序を変更したりすることができます。  組み込みの構成やプログラムによって追加された構成は変更できないため、配置構成の作成または変更が必要になる場合があります。  
+# <a name="how-to-edit-a-sharepoint-deployment-configuration"></a>方法: SharePoint の配置構成を編集する
+  展開構成の作成または既存の展開構成を変更することができます。 たとえば、1 つの手順を実行または展開プロセスの手順の順序を変更することができます。 作成または組み込みとプログラムで追加の構成を変更できないために、展開の構成を変更することがあります。  
   
-## SharePoint の配置構成の作成  
+## <a name="creating-a-sharepoint-deployment-configuration"></a>SharePoint の配置構成を作成します。  
   
-#### SharePoint の配置構成を作成するには  
+#### <a name="to-create-a-sharepoint-deployment-configuration"></a>SharePoint の配置構成を作成するには  
   
-1.  次に **\[ソリューション エクスプローラー\]** で、SharePoint プロジェクトを選択し、メニュー バーで、**\[プロジェクト\]** をクリックします、*ProjectName***\[プロパティ\]** を選択します。  
+1.  **ソリューション エクスプ ローラー**、SharePoint プロジェクトを選択し、次に、メニュー バーで、次のように選択します。**プロジェクト**、 *ProjectName***プロパティ**です。  
   
-2.  **\[SharePoint\]** タブで、**\[新規作成\]** ボタンをクリックします。  
+2.  **SharePoint**  タブで、選択、**新規**ボタンをクリックします。  
   
-     **\[新しい配置構成の追加\]** ダイアログ ボックスが表示されます。  
+     **新しい配置構成の追加** ダイアログ ボックスが表示されます。  
   
-3.  **\[名前\]** のテキスト ボックスに、配置構成の名前を入力します。  
+3.  **名前**テキスト ボックスで、展開構成の名前を入力します。  
   
-4.  **\[使用可能な配置手順\]** のペインで、配置構成に追加する手順を選択し \(**\[\>\]**\) ボタンをクリックし、次へをクリックします **\[OK\]** ボタンをクリックします。  
+4.  **使用可能な展開手順** ウィンドウで、展開の構成に追加するを選択する手順を選択、(**>**) ボタンをクリックしを選択し、 **ok**ボタンをクリックします。  
   
     > [!NOTE]  
-    >  配置前コマンドまたは配置後コマンドが構成されている場合、これらの手順は、カスタマイズした配置構成に追加した場合にのみ実行されます。  
+    >  配置前コマンドまたは配置後のコマンドを構成した場合、これらの手順は、カスタマイズされた展開の構成に追加する場合にのみを実行します。  
   
-## アクティブな配置構成の変更  
+## <a name="changing-the-active-deployment-configuration"></a>アクティブな配置構成を変更します。  
   
-#### アクティブな配置構成を変更するには  
+#### <a name="to-change-the-active-deployment-configuration"></a>アクティブな配置構成を変更するには  
   
-1.  次に **\[ソリューション エクスプローラー\]** で、SharePoint プロジェクトを選択し、メニュー バーで、**\[プロジェクト\]** をクリックします、*ProjectName***\[プロパティ\]** を選択します。  
+1.  **ソリューション エクスプ ローラー**、SharePoint プロジェクトを選択し、次に、メニュー バーで、次のように選択します。**プロジェクト**、 *ProjectName***プロパティ**です。  
   
-2.  **\[SharePoint\]** タブをクリックします。  
+2.  選択、 **SharePoint**タブです。  
   
-3.  **\[アクティブな配置構成\]** ボックスの一覧で、使用する配置構成の名前をクリックします。  
+3.  **アクティブな配置構成**ボックスの一覧を使用する配置構成の名前を選択します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

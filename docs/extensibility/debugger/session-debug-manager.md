@@ -1,43 +1,45 @@
 ---
-title: "セッションのデバッグ マネージャー | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "セッションのデバッグのマネージャー、セッションのビューを統合すること"
-  - "デバッグのセッション マネージャーでのブロードキャスト"
-  - "デバッグ セッション デバッグ マネージャーの [デバッグ SDK]"
-  - "セッションのデバッグ マネージャー"
-  - "デバッグのセッション マネージャーでのデバッグ エンジンの多重化"
-  - "デバッグのセッション マネージャーでの委任"
+title: "セッション マネージャーのデバッグ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- session debug manager, unifying session views
+- session debug manager, broadcasting
+- debugging [Debugging SDK], session debug manager
+- session debug manager
+- session debug manager, debug engine multiplexing
+- session debug manager, delegating
 ms.assetid: fbb1928d-dddc-43d1-98a4-e23b0ecbae09
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 8100c43578c11ae73f26764df74aa17caccc3611
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# セッションのデバッグ マネージャー
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-マシンの複数の \(SDM\) 複数のプロセスのプログラムの任意のデバッグ セッションのデバッグ マネージャーはデバッグ エンジン \(DE\) のものを管理します。  デバッグ エンジンのマルチプレクサーであるだけでなくSDM はIDE でデバッグ セッションの統一されたビューが用意されています。  
+# <a name="session-debug-manager"></a>セッションのデバッグ マネージャー
+セッションのデバッグ マネージャー (SDM) は、任意の数の任意の数のマシンの数にかかわらず複数のプロセスでプログラムをデバッグするデバッグ エンジン (DE) を管理します。 マルチプレクサー デバッグ エンジンだけでなく、SDM は IDE に、デバッグ セッションの統一されたビューを提供します。  
   
-## デバッグ セッションのマネージャーの操作  
- デバッグ セッションのマネージャーは \(SDM\) de\-DE を管理します。  コンピューターで同時に実行する複数のデバッグ エンジンがあります。  DEs の型にするにはSDM には一つのインターフェイスとして IDE に DEs からのインターフェイスも公開します。  
+## <a name="session-debug-manager-operation"></a>セッションのデバッグ マネージャーの操作  
+ セッションのデバッグ マネージャー (SDM) は、DE を管理します。 同時に、マシンで実行されている 1 つ以上のデバッグ エンジンである可能性があります。 DEs を多重送信するには、は、SDM は、DEs からインターフェイスの数をラップし、それらを 1 つのインターフェイスとして IDE に公開します。  
   
- パフォーマンスを向上させるインターフェイスで多重化ではありません。  代わりにde\-DE から直接使用されこれらのインターフェイスの呼び出しは SDM によってされます。  たとえば使用されるメモリコードおよびドキュメントのコンテキストのインターフェイスを指定しますがデバッグ特定のプログラムを特にメモリまたはドキュメントを示すため多重化ではありません。  他の de\-DE の通信はそのレベルに関連する必要はありません。  
+ パフォーマンスを向上させるには、一部のインターフェイスはいない多重化されます。 代わりに、DE から直接使用して、これらのインターフェイスへの呼び出しが、SDM を通過しません。 たとえば、メモリ、コード、およびドキュメントのコンテキストで使用するインターフェイスは多重化されない、特定の命令、メモリ、または特定 DE では、デバッグ、特定のプログラムでドキュメントを参照しているためです。 その他の DE をそのレベルの通信に関与する必要はありません。  
   
- これはすべてのコンテキストのコントロールではありません。  式の評価のコンテキストのインターフェイスの呼び出しは SDM によって行われます。  式の評価中にSDM は式を評価すると複数の DEs が含まれる可能性があるためIDE に与える [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) のインターフェイスをラップして同じスレッドで実行されることがある同じプロセスでプログラムをデバッグします。  
+ これは、すべてのコンテキストの該当しません。 式の評価コンテキストのインターフェイスを呼び出し、SDM を通過します。 式の評価中に、SDM のラップ、 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)する可能性のある、同じプロセス内のプログラムのデバッグは、複数の DEs が生じる可能性がありますその式が評価されるときにあるため、IDE をすることで、インターフェイス同じスレッドで実行されています。  
   
- SDM はデリゲートの機能としては機能しブロードキャスト機構として機能する可能性があります。  たとえば式の評価中にすべての DEs に通知するために指定したスレッドのコードを実行できることSDM はブロードキャスト機構として機能します。  同様にSDM が停止のイベントを受け取ると実行を停止する必要があるすべてのプログラムにブロードキャストされます。  ステップが呼び出されるとSDM は実行を継続できるすべてのプログラムにブロードキャストされます。  ブレークポイントはすべてのにブロードキャストします。  
+ 委任メカニズムとして、SDM が通常は機能が、ブロードキャスト機構を果たす場合があります。 たとえば、式の評価中に指定されたスレッドでコードを実行できることをすべて DEs を通知する、ブロードキャスト機構として、SDM は機能します。 同様に、SDM 停止イベントを受信すると、それらを停止することを実行しているすべてのプログラムにブロードキャストします。 ステップが呼び出されたときに、SDM にブロードキャストするすべてのプログラム実行を続行することができます。 ブレークポイントはもすべて DE にブロードキャストされます。  
   
- SDM は現在のプログラムスレッドまたはスタック フレームは追跡されません。  プロセスおよびスレッドのプログラムのデバッグ情報が特定のイベントとともに SDM に送信されます。  
+ 現在のプログラム、スレッド、またはスタック フレーム、SDM を追跡しません。 プロセス、プログラム、およびスレッド情報が特定のデバッグ イベントと共に SDM に送信します。  
   
-## 参照  
- [エンジンをデバッグします。](../../extensibility/debugger/debug-engine.md)   
- [デバッガーのコンポーネント](../../extensibility/debugger/debugger-components.md)   
+## <a name="see-also"></a>関連項目  
+ [デバッグ エンジン](../../extensibility/debugger/debug-engine.md)   
+ [デバッガー コンポーネント](../../extensibility/debugger/debugger-components.md)   
  [デバッガー コンテキスト](../../extensibility/debugger/debugger-contexts.md)

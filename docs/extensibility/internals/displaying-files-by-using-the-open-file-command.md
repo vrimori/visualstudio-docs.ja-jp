@@ -1,59 +1,61 @@
 ---
-title: "ファイルを開くコマンドを使用してファイルを表示します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ファイルを開くコマンドをサポートするプロジェクトの種類"
-  - "ファイルを開くコマンド"
-  - "永続化、ファイルを開くコマンドをサポートします。"
+title: "ファイルを開くコマンドを使用してファイルを表示する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- project types, supporting Open File command
+- Open File command
+- persistence, supporting Open File command
 ms.assetid: 4fff0576-b2f3-4f17-9769-930f926f273c
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: f2cbcb6e6239552ae32c817601634587a2fe3a41
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ファイルを開くコマンドを使用してファイルを表示します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-次の手順はIDE に [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] で ENT1ENT \[入力\] メニューで使用できる  **ファイルを開く**  のコマンドの処理方法について説明します。  この手順はプロジェクトがコマンドから送信された呼び出しに対してどのように応答するかについて説明します。  
+# <a name="displaying-files-by-using-the-open-file-command"></a>ファイルを開くコマンドを使用してファイルを表示します。
+次の手順では、IDE を処理する方法について説明する、**ファイルを開く**で使用できるコマンド、**ファイル**でメニュー[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 手順では、プロジェクトがこのコマンドからの呼び出しに応答する方法についても説明します。  
   
- ユーザーが \[ENT1ENT\] メニューの  **ファイルを開く**  のコマンドをクリックし\[ENT2ENT\] ダイアログ ボックスからファイルを選択すると次の処理が実行されます。  
+ ユーザーがクリックしたとき、**ファイルを開く**コマンドを**ファイル** メニューからファイルを選択して、**ファイルを開く**ダイアログ ボックスで、次の処理が行われます。  
   
-1.  実行中のドキュメントの表を使用してファイルがプロジェクトで既に開いているかどうかを判定します。  
+1.  実行中のドキュメント テーブルを使用して、IDE は、ファイルが既にプロジェクトで開いているかどうかを判断します。  
   
-    -   ファイルが開くとウィンドウに新しい表紙を付けます。  
+    -   ファイルが開いている場合は、IDE は、ウィンドウを resurfaces です。  
   
-    -   ファイルが開いていない場合はそのプロジェクトがファイルを開くことができるかを決定する各プロジェクトを照会するに <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> を呼び出します。  
+    -   ファイルが開いていない場合、IDE によって呼び出さ<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A>するプロジェクトは、ファイルを開くことができますを決定するには、各プロジェクトのクエリを実行します。  
   
         > [!NOTE]
-        >  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> プロジェクトの実装ではプロジェクトでファイルを開く優先度レベルを示す値を指定します。  優先順位値は <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> の列挙型に設定されます。  
+        >  プロジェクトの実装で<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A>プロジェクトがファイルを開きますレベルを示す優先順位値を指定します。 優先順位の値がで提供される、<xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>列挙します。  
   
-2.  各プロジェクトにはプロジェクト ファイルを開くことによって重要度を示す優先順位に応答します。  
+2.  各プロジェクトは、優先度レベルを示す重要度で応答ファイルをプロジェクトに配置します。  
   
-3.  IDE ではプロジェクトでファイルを開くかを確認するには次の条件が使用されています :  
+3.  IDE では、次の条件を使って、どのプロジェクトが、ファイルを開きを決定します。  
   
-    -   優先順位とするプロジェクト \(DP\_Intrinsic\) ファイルを開きます。  複数のプロジェクトがこの優先度をクリックして応答したりする最初のプロジェクト ファイルを開きます。  
+    -   優先順位が高い (DP_Intrinsic) に応答するプロジェクトでは、ファイルが開きます。 複数のプロジェクトは、この優先順位で応答する場合、応答する最初のプロジェクトはファイルを開きます。  
   
-    -   プロジェクトの優先順位 \(\) DP\_Intrinsic 応答がすべてのプロジェクトが同じをクリックしアクティブ プロジェクトのファイルが低い優先順位。  プロジェクトがアクティブではない場合応答最初のプロジェクト ファイルを開きます。  
+    -   優先順位が高い (DP_Intrinsic) がないプロジェクトの応答が、同じ、低い優先順位で応答するすべてのプロジェクト、作業中のプロジェクトは、ファイルを開きます。 アクティブなプロジェクトがない場合は、初めてのプロジェクトを応答には、ファイルを開きます。  
   
-    -   プロジェクトのファイル \(DP\_Unsupported\) の所有権を要求しない場合そのファイルはプロジェクト ファイルを開きます。  
+    -   ファイル (DP_Unsupported) の所有権を要求しているプロジェクトはありません、その他のファイル プロジェクトでは、ファイルが開きます。  
   
-         そのほかのファイル プロジェクトのインスタンスを作成するとプロジェクトは値 DP\_CanAddAsExternal が常に応答します。  この値はプロジェクトでファイルを開くことができることを示します。  このプロジェクトは他のプロジェクトにも開いているファイルを格納するために使用されます。  このプロジェクト項目の一覧は失われます ; このプロジェクトではファイルを開く機能を使用する場合にのみ  **ソリューション エクスプローラー**  に表示されます。  
+         その他のファイル プロジェクトのインスタンスを作成すると、プロジェクトは常に DP_CanAddAsExternal 値を返します。 この値は、プロジェクト ファイルを開けることを示します。 このプロジェクトは、他のプロジェクトに含まれていない、開いているファイルの格納に使用されます。 このプロジェクト内の項目の一覧は保存されません。このプロジェクトは**ソリューション エクスプ ローラー**のみ使用する場合、ファイルを開きます。  
   
-         ファイルを開くことができることをそのほかのファイル プロジェクトを示すプロジェクトのインスタンスは作成されませんでした。  この場合IDE でそのほかのファイルのインスタンスを示すプロジェクトとファイルを開くプロジェクトを作成します。  
+         その他のファイル プロジェクトが、ファイルが開かれることを示していない場合、プロジェクトのインスタンスは作成されていません。 ここでは、IDE は、その他のファイル プロジェクトのインスタンスを作成し、ファイルをプロジェクトに指示します。  
   
-4.  すべてのプロジェクトでファイルを開くまたは IDE をとそのプロジェクトの <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> のメソッドを呼び出します。  
+4.  IDE で認識するプロジェクト ファイルを開きとすぐに呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A>そのプロジェクトでのメソッドです。  
   
-5.  プロジェクトプロジェクトに固有のエディターまたは標準エディターを使用してファイルを開くかどうかを選択できます。  詳細については、「[方法: プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)」および「[方法: 標準のエディターを開く](../../extensibility/how-to-open-standard-editors.md)」をそれぞれ参照してください。  
+5.  プロジェクトには、し、プロジェクト固有のエディターまたは標準のエディターを使用して、ファイルを開くためのオプションがあります。 詳細については、次を参照してください。[する方法: 開いているプロジェクトに固有のエディター](../../extensibility/how-to-open-project-specific-editors.md)と[する方法: 開いている標準エディター](../../extensibility/how-to-open-standard-editors.md)、それぞれします。  
   
-## 参照  
- [コマンドを開く\] を使用してファイルを表示します。](../Topic/Displaying%20Files%20By%20Using%20the%20Open%20With%20Command.md)   
- [開く、プロジェクト項目を保存します。](../../extensibility/internals/opening-and-saving-project-items.md)   
+## <a name="see-also"></a>関連項目  
+ [コマンドで開く を使用してファイルを表示します。](../../extensibility/internals/displaying-files-by-using-the-open-with-command.md)   
+ [開くと、プロジェクト項目の保存](../../extensibility/internals/opening-and-saving-project-items.md)   
  [方法: プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)   
  [方法: 標準のエディターを開く](../../extensibility/how-to-open-standard-editors.md)

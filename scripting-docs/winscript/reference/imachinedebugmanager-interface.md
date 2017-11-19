@@ -1,33 +1,36 @@
 ---
-title: "IMachineDebugManager インターフェイス | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IMachineDebugManager インターフェイス"
+title: "IMachineDebugManager インターフェイス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords: IMachineDebugManager interface
 ms.assetid: 0b7133bb-5a52-4036-b4db-d69260790db7
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 74c092edc4ed437926c28c19bd331b3b50f8cd4b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IMachineDebugManager インターフェイス
-コンピューターのデバッグ マネージャーへの主要なインターフェイス。  このインターフェイスは `IMachineDebugManagerCookie` のインターフェイスに似ています。  
+# <a name="imachinedebugmanager-interface"></a>IMachineDebugManager インターフェイス
+プライマリ マシン デバッグ Manager インターフェイス。 このインターフェイスがに似ていますが、`IMachineDebugManagerCookie`インターフェイスです。  
   
- `IUnknown` から継承するメソッドに加え、`IMachineDebugManager` インターフェイスは次のメソッドを公開します。  
+ 継承されたメソッドだけでなく`IUnknown`、`IMachineDebugManager`インターフェイスは、次のメソッドを公開します。  
   
-## Vtable 順序のメソッド  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
   
 |メソッド|説明|  
-|----------|--------|  
-|[IMachineDebugManager::AddApplication](../../winscript/reference/imachinedebugmanager-addapplication.md)|実行中のアプリケーションのリストにアプリケーションが追加されます。|  
-|[IMachineDebugManager::RemoveApplication](../../winscript/reference/imachinedebugmanager-removeapplication.md)|実行中のアプリケーションの一覧からアプリケーションを削除します。|  
-|[IMachineDebugManager::EnumApplications](../../winscript/reference/imachinedebugmanager-enumapplications.md)|実行中のアプリケーションの現在のリストの列挙子を返します。|  
+|------------|-----------------|  
+|[IMachineDebugManager::AddApplication](../../winscript/reference/imachinedebugmanager-addapplication.md)|実行にアプリケーションを追加するアプリケーションの一覧です。|  
+|[IMachineDebugManager::RemoveApplication](../../winscript/reference/imachinedebugmanager-removeapplication.md)|実行中からアプリケーションを削除するアプリケーションの一覧です。|  
+|[IMachineDebugManager::EnumApplications](../../winscript/reference/imachinedebugmanager-enumapplications.md)|現在実行されているアプリケーションの一覧の列挙子を返します。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IMachineDebugManagerCookie インターフェイス](../../winscript/reference/imachinedebugmanagercookie-interface.md)

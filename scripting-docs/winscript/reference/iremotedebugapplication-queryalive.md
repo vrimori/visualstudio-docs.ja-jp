@@ -1,46 +1,49 @@
 ---
-title: "IRemoteDebugApplication::QueryAlive | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IRemoteDebugApplication::QueryAlive |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IRemoteDebugApplication.QueryAlive
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IRemoteDebugApplication::QueryAlive"
+helpviewer_keywords: IRemoteDebugApplication::QueryAlive
 ms.assetid: 08e49d3b-6fb3-4438-960e-f05395ba9b17
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 3f938ad30562cd1131e8a50077106002d33cea2b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IRemoteDebugApplication::QueryAlive
-アプリケーションが依存するかどうかを示します。  
+# <a name="iremotedebugapplicationqueryalive"></a>IRemoteDebugApplication::QueryAlive
+アプリケーションが応答してかどうかを示します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT QueryAlive();  
 ```  
   
-#### パラメーター  
- このメソッドは、パラメーターを受け取りません。  
+#### <a name="parameters"></a>パラメーター  
+ このメソッドには、パラメーターはありません。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- このメソッドは、アプリケーションが依存するかどうかを示します。  このメソッドの実装では `S_OK`を常に返す必要です。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、アプリケーションが応答してかどうかを示します。 このメソッドの実装を常に返します`S_OK`です。  
   
- アプリケーションが予期せずに終了した場合は、COM 呼び出しのマーシャリング プロキシからこのメソッドにエラーを返します。  
+ アプリケーションのプロセスが突然終了した場合、COM は、このメソッドの呼び出しをマーシャ リングのプロキシからエラーを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IRemoteDebugApplication インターフェイス](../../winscript/reference/iremotedebugapplication-interface.md)

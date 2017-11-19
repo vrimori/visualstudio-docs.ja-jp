@@ -1,51 +1,52 @@
 ---
-title: "IDebugAlias2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugAlias2 インターフェイス"
+title: "IDebugAlias2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IDebugAlias2 interface
 ms.assetid: 5252dcbb-8bfe-4d8a-a8e5-b022b194df19
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e77f4fed0bee4451b12463787bc2dd491ffc09c9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugAlias2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugalias2"></a>IDebugAlias2
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されません。 CLR 式エバリュエーターの実装については、次を参照してください [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) と [マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
+>  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
   
- 変数の numeric エイリアスを表し、式エバリュエーター エイリアスのアプリケーション ドメインを取得するには、\(EE\) できるようにします。  
+ 変数に対して数値のエイリアスを表し、式エバリュエーターの別名をアプリケーション ドメインを取得するには、(EE) できるようにします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugAlias2 : IDebugAlias  
 ```  
   
-## 実装についてのメモ  
- このインターフェイスは、マネージ デバッグ エンジン \(DE\) によって実装されます。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ このインターフェイスは、マネージ デバッグ エンジン (DE) によって実装されます。  
   
-## メソッド  
- 上のメソッドだけでなく、 [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) インターフェイス、このインターフェイスは、次のメソッドを実装します。  
+## <a name="methods"></a>メソッド  
+ メソッドだけでなく、 [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)インターフェイス、このインターフェイスは、次のメソッドを実装します。  
   
 |メソッド|説明|  
-|----------|--------|  
+|------------|-----------------|  
 |[GetAppDomainId](../../../extensibility/debugger/reference/idebugalias2-getappdomainid.md)|アプリケーション ドメインの識別子を取得します。|  
   
-## 解説  
- エイリアスは、後に \# 文字、1001 \# などの文字列形式の 10 進数です。  
+## <a name="remarks"></a>コメント  
+ エイリアスは、後に # 文字、&#1001; などで文字列形式の 10 進数です。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: Ee.h  
   
- 名前空間: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll

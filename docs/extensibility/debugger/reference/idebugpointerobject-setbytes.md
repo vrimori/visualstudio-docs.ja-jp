@@ -1,67 +1,67 @@
 ---
-title: "IDebugPointerObject::SetBytes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPointerObject::SetBytes"
-helpviewer_keywords: 
-  - "IDebugPointerObject::SetBytes メソッド"
+title: "IDebugPointerObject::SetBytes |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugPointerObject::SetBytes
+helpviewer_keywords: IDebugPointerObject::SetBytes method
 ms.assetid: 8c578b38-38d7-46f3-bb2e-8a730fccd334
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 91e11f0e321e286eaf669b50d2fa564fa29df314
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugPointerObject::SetBytes
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-値を一連の連続から参照されるように設定します。  
+# <a name="idebugpointerobjectsetbytes"></a>IDebugPointerObject::SetBytes
+一連の連続するバイトを指す値を設定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT SetBytes(   
-   DWORD  dwStart,  
-   DWORD  dwCount,  
-   BYTE*  pBytes,  
-   DWORD* pdwBytes  
+```cpp  
+HRESULT SetBytes(   
+   DWORD  dwStart,  
+   DWORD  dwCount,  
+   BYTE*  pBytes,  
+   DWORD* pdwBytes  
 );  
 ```  
   
-```c#  
+```csharp  
 int SetBytes(  
-   uint     dwStart,   
-   uint     dwCount,   
-   byte[]   pBytes,   
-   out uint pdwBytes  
+   uint     dwStart,   
+   uint     dwCount,   
+   byte[]   pBytes,   
+   out uint pdwBytes  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwStart`  
- \[入力\] オフセットはオブジェクトのサイズ \(バイト単位\) としてが指す。  
+ [in]指されるオブジェクトの先頭からのバイト単位のオフセット。  
   
  `dwCount`  
- \[入力\] 設定するバイト数。  
+ [in]設定するバイト数。  
   
  `pBytes`  
- \[入力\] 新しい値を表すバイトの配列。  この値は指定したオフセット位置で呼び出すオブジェクトに格納されます。  
+ [in]新しい値を表すバイトの配列。 この値は、指定されたオフセットから始まる、オブジェクトに格納されます。  
   
  `pdwBytes`  
- \[入力\] 設定に実際のバイト数を返します。  
+ [out]実際のバイト数の設定を返します。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- このメソッドはプリミティブ型 \(単純なバイト シーケンスを表すことができる\) のプリミティブ型または単純な配列へのポインター [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) の配列を使用します。このによって表されるようにポインター。  `IDebugPointerObject` でこのオブジェクトはnull 参照 \(メモリのアドレスを指す必要があります\) にすることはできません。  
+## <a name="remarks"></a>コメント  
+ 場合、このメソッドは使用これによって表されるポインター [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)プリミティブ型またはプリミティブ型 (つまり、単純なバイト シーケンスによって表すことができる配列) の単純な配列を指します。 これは、`IDebugPointerObject`オブジェクトが null 参照 (メモリ内のアドレスを指している必要があります) にすることはできません。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [GetBytes](../../../extensibility/debugger/reference/idebugpointerobject-getbytes.md)   
  [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)

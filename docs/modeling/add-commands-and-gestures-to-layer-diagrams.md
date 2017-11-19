@@ -10,41 +10,26 @@ helpviewer_keywords:
 - dependency diagrams, adding custom commands
 - dependency diagrams, adding custom gestures
 ms.assetid: ac9c417b-0b40-4a90-86f5-ee3cbdce030b
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: fd26c504273cae739ccbeef5e406891def732985
-ms.openlocfilehash: 6f833612aaa1859c312a5343fe12a209780e3ee3
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 40bad32ef38fb99032690804d572f630bb60ac6d
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
-# <a name="add-commands-and-gestures-to-dependency-diagrams"></a>依存関係図にコマンドおよびジェスチャを追加します。
+# <a name="add-commands-and-gestures-to-dependency-diagrams"></a>依存関係の図にコマンドおよびジェスチャを追加します。
 コンテキスト メニューのコマンドを定義し、ジェスチャ ハンドラーを Visual Studio での依存関係図できます。 これらの拡張機能を Visual Studio Integration Extension (VSIX) にパッケージ化し、他の Visual Studio ユーザーに配布できます。  
   
- 必要に応じて、複数のコマンドおよびジェスチャ ハンドラーを同じ Visual Studio プロジェクトで定義できます。 また、複数のプロジェクトを組み合わせて&1; つの VSIX に含めることもできます。 たとえば、レイヤー コマンド、およびドメイン固有言語を含む単一の VSIX を定義できます。  
+ 必要に応じて、複数のコマンドおよびジェスチャ ハンドラーを同じ Visual Studio プロジェクトで定義できます。 また、複数のプロジェクトを組み合わせて 1 つの VSIX に含めることもできます。 たとえば、レイヤー コマンド、およびドメイン固有言語を含む単一の VSIX を定義できます。  
   
 > [!NOTE]
->  どのユーザーのソース コードは、依存関係図と比較、アーキテクチャの検証をカスタマイズすることもできます。 アーキテクチャの検証は、別の Visual Studio プロジェクトで定義する必要があります。 それを他の拡張機能と同じ VSIX に追加できます。 詳細については、次を参照してください。[依存関係ダイアグラムへのカスタム アーキテクチャ検証の追加](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)します。  
+>  依存関係のダイアグラムのどのユーザーのソース コードと比較して、アーキテクチャの検証をカスタマイズすることもできます。 アーキテクチャの検証は、別の Visual Studio プロジェクトで定義する必要があります。 それを他の拡張機能と同じ VSIX に追加できます。 詳細については、次を参照してください。[カスタム アーキテクチャ検証を図に追加の依存関係](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)です。  
   
 ## <a name="requirements"></a>要件  
- 参照してください[要件](../modeling/extend-layer-diagrams.md#prereqs)します。  
+ 「 [要件](../modeling/extend-layer-diagrams.md#prereqs)」を参照してください。  
   
 ## <a name="defining-a-command-or-gesture-in-a-new-vsix"></a>新しい VSIX でコマンドまたはジェスチャを定義する  
  最も簡単に拡張機能を作成するには、プロジェクト テンプレートを使用します。 この方法では、コードと VSIX マニフェストが同じプロジェクトに配置されます。  
@@ -59,27 +44,27 @@ ms.lasthandoff: 02/22/2017
   
 3.  拡張機能をテストするには、 **Ctrl キーを押しながら F5** キーを押すか、 **F5**キーを押します。  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開始します。 このインスタンスでは、依存関係のダイアグラムを作成します。 独自のコマンドまたはジェスチャ拡張機能が、この図で動作します。  
+     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開始します。 このインスタンスでは、依存関係ダイアグラムを作成します。 独自のコマンドまたはジェスチャ拡張機能が、この図で動作します。  
   
-4.  実験用のインスタンスを閉じて、サンプル コードを変更します。 詳細については、次を参照してください。[ナビゲートおよび更新プログラムは、プログラム コードでモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)します。  
+4.  実験用のインスタンスを閉じて、サンプル コードを変更します。 詳細については、次を参照してください。[移動し、更新プログラムは、プログラム コード内のモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)です。  
   
 5.  同じプロジェクトに、さらにコマンドまたはジェスチャ ハンドラーを追加できます。 詳細については、以下のセクションを参照してください。  
   
-     [メニュー コマンドを定義します。](#command)  
+     [メニュー コマンドを定義する](#command)  
   
-     [ジェスチャ ハンドラーを定義します。](#gesture)  
+     [ジェスチャ ハンドラーを定義する](#gesture)  
   
-6.  メイン インスタンスに、拡張機能をインストールする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイル**bin\\\***します。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
+6.  メイン インスタンスに拡張機能をインストールする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイル**bin\\\***です。 このファイルをインストール先のコンピューターにコピーして、ダブルクリックします。 拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
   
 ## <a name="adding-a-command-or-gesture-to-a-separate-vsix"></a>別の VSIX にコマンドまたはジェスチャを追加する  
- コマンド、レイヤー検証コントロール、および他の拡張機能を含む&1; つの VSIX を作成する場合は、VSIX を定義するプロジェクトとハンドラー用のプロジェクトを分けることをお勧めします。
+ コマンド、レイヤー検証コントロール、および他の拡張機能を含む 1 つの VSIX を作成する場合は、VSIX を定義するプロジェクトとハンドラー用のプロジェクトを分けることをお勧めします。
   
 #### <a name="to-add-layer-extensions-to-a-separate-vsix"></a>レイヤー拡張機能を別の VSIX に追加するには  
   
 1.  新規または既存の Visual Studio ソリューションでクラス ライブラリ プロジェクトを作成します。 **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C#]** をクリックし、 **[クラス ライブラリ]**をクリックします。 このプロジェクトに、コマンドまたはジェスチャ ハンドラーのクラスを格納します。  
   
     > [!NOTE]
-    >  コマンドまたはジェスチャ ハンドラーのクラスは&1; つのクラス ライブラリに複数定義できますが、レイヤー検証クラスは別のクラス ライブラリで定義する必要があります。  
+    >  コマンドまたはジェスチャ ハンドラーのクラスは 1 つのクラス ライブラリに複数定義できますが、レイヤー検証クラスは別のクラス ライブラリで定義する必要があります。  
   
 2.  ソリューションで VSIX プロジェクトを特定または作成します。 VSIX プロジェクトには、 **source.extension.vsixmanifest**という名前のファイルが含まれます。 VSIX プロジェクトを追加するには:  
   
@@ -101,7 +86,7 @@ ms.lasthandoff: 02/22/2017
   
 4.  コマンドまたはジェスチャ ハンドラーのプロジェクトに戻り、以下のプロジェクト参照を追加します。  
   
-|**参照**|**できる操作を行うには**|  
+|**参照**|**実行できる操作**|  
 |-------------------|------------------------------------|  
 |Program Files\Microsoft Visual Studio [バージョン]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|レイヤーを作成および編集する|  
 |Microsoft.VisualStudio.Uml.Interfaces|レイヤーを作成および編集する|  
@@ -112,20 +97,19 @@ ms.lasthandoff: 02/22/2017
   
 1.  拡張機能のコードを含むように、C# クラス ライブラリ プロジェクトのクラス ファイルを編集します。 詳細については、以下のセクションを参照してください。  
   
-     [メニュー コマンドを定義します。](#command)  
+     [メニュー コマンドを定義する](#command)  
   
-     [ジェスチャ ハンドラーを定義します。](#gesture)  
+     [ジェスチャ ハンドラーを定義する](#gesture)  
   
-     関連項目[ナビゲートおよび更新プログラムは、プログラム コードでモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)します。  
+     関連項目[移動し、更新プログラムは、プログラム コード内のモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)です。  
   
-2.  機能をテストするには、Ctrl キーを押しながら F5 キーを押すか、または F5 キーを押します。 
-          [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開きます。 このインスタンスで作成するか、依存関係図を開きます。  
+2.  機能をテストするには、Ctrl キーを押しながら F5 キーを押すか、または F5 キーを押します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開きます。 このインスタンスで作成するか、依存関係図を開きます。  
   
-3.  メイン インスタンスで、VSIX をインストールする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイルで、 **bin** VSIX プロジェクトのディレクトリ。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラー (Windows 8 のエクスプローラー) で VSIX ファイルをダブルクリックします。  
+3.  メイン インスタンスで、VSIX をインストールする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、別のコンピューターで次のように検索します。 または、 **.vsix**ファイルを、 **bin** 、VSIX プロジェクトのディレクトリ。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラー (Windows 8 のエクスプローラー) で VSIX ファイルをダブルクリックします。  
   
      拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
   
-##  <a name="a-namecommanda-defining-a-menu-command"></a><a name="command"></a>メニュー コマンドを定義します。  
+##  <a name="command"></a> メニュー コマンドを定義する  
  ジェスチャまたはコマンドの既存のプロジェクトに、さらにメニュー コマンド定義を追加できます。 各コマンドは、次のような特徴を持つクラスによって定義されます。  
   
 -   クラスは次のように宣言されます。  
@@ -138,14 +122,13 @@ ms.lasthandoff: 02/22/2017
   
 -   クラスの名前空間と名前は重要ではありません。  
   
--   
-          `ICommandExtension` を実装するメソッドは次のとおりです。  
+-   `ICommandExtension` を実装するメソッドは次のとおりです。  
   
-    -   `string Text {get;}`: メニューに表示されるラベルです。  
+    -   `string Text {get;}` : メニューに表示されるラベルです。  
   
-    -   `void QueryStatus(IMenuCommand command)`: ユーザーが図を右クリックすると呼び出され、ユーザーの現在の選択に対してコマンドを表示して有効にする必要があるかどうかを判定します。  
+    -   `void QueryStatus(IMenuCommand command)` : ユーザーが図を右クリックすると呼び出され、ユーザーの現在の選択に対してコマンドを表示して有効にする必要があるかどうかを判定します。  
   
-    -   `void Execute(IMenuCommand command)`: ユーザーがコマンドを選択すると呼び出されます。  
+    -   `void Execute(IMenuCommand command)` : ユーザーがコマンドを選択すると呼び出されます。  
   
 -   現在の選択項目を特定するには、 `IDiagramContext`をインポートします。  
   
@@ -157,7 +140,7 @@ ms.lasthandoff: 02/22/2017
   
      `DiagramContext.CurrentDiagram.SelectedShapes.Count()...`  
   
- 詳細については、次を参照してください。[ナビゲートおよび更新プログラムは、プログラム コードでモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)します。  
+ 詳細については、次を参照してください。[移動し、更新プログラムは、プログラム コード内のモデルをレイヤー](../modeling/navigate-and-update-layer-models-in-program-code.md)です。  
   
  新しいコマンドを追加するには、以下のサンプルを含む新しいコード ファイルを作成します。 その後、テストして編集します。  
   
@@ -231,8 +214,8 @@ namespace MyLayerExtension // Change to your preference.
 }  
 ```  
   
-##  <a name="a-namegesturea-defining-a-gesture-handler"></a><a name="gesture"></a>ジェスチャ ハンドラーを定義します。  
- ジェスチャ ハンドラーは、ユーザーは、依存関係図に項目をドラッグしたときと、ユーザーが図の任意の場所をダブルクリックしたときに応答します。  
+##  <a name="gesture"></a> ジェスチャ ハンドラーを定義する  
+ ジェスチャ ハンドラーは、ユーザーは、依存関係図に項目をドラッグしたときに、ユーザーが図の任意の場所をダブルクリックしたときに応答します。  
   
  コマンドまたはジェスチャ ハンドラーの既存の VSIX プロジェクトに対し、ジェスチャ ハンドラーが定義されているコード ファイルを追加できます。  
   
@@ -276,12 +259,9 @@ namespace MyLayerExtensions // change to your preference
     }  
     ```  
   
--   ドラッグされるアイテムの種類によっては、ハンドラーが既に定義されています。 たとえば、ユーザーは、依存関係図に、ソリューション エクスプ ローラーからアイテムをドラッグことができます。 このような種類のアイテムに対しては、ドラッグ ハンドラーを定義できません。 その場合、 `DragDrop` メソッドは呼び出されません。  
+-   ドラッグされるアイテムの種類によっては、ハンドラーが既に定義されています。 たとえば、ユーザーは、依存関係の図に、ソリューション エクスプ ローラーからアイテムをドラッグできます。 このような種類のアイテムに対しては、ドラッグ ハンドラーを定義できません。 その場合、 `DragDrop` メソッドは呼び出されません。  
   
- 図にドラッグされるときに、その他のアイテムをデコードする方法の詳細については、次を参照してください。[モデリング図にジェスチャ ハンドラーを定義](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [ナビゲートおよび更新プログラム コードにおけるレイヤー モデル](../modeling/navigate-and-update-layer-models-in-program-code.md)   
- [依存関係ダイアグラムへのカスタム アーキテクチャ検証を追加します。](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   
- [モデリング拡張機能を定義およびインストールする](../modeling/define-and-install-a-modeling-extension.md)
-
+ [移動し、プログラム コードでレイヤー モデルを更新](../modeling/navigate-and-update-layer-models-in-program-code.md)   
+ [カスタム アーキテクチャ検証を依存関係図に追加する](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)   

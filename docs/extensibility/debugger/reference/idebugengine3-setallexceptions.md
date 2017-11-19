@@ -1,49 +1,49 @@
 ---
-title: "IDebugEngine3::SetAllExceptions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine3::SetAllExceptions"
-helpviewer_keywords: 
-  - "IDebugEngine3::SetAllExceptions"
+title: "IDebugEngine3::SetAllExceptions |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEngine3::SetAllExceptions
+helpviewer_keywords: IDebugEngine3::SetAllExceptions
 ms.assetid: 8f03a6ac-a854-42f7-933c-a2df1b351975
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 33801c7228e9f4b43c76ef3f29f26631bdad5edf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEngine3::SetAllExceptions
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このメソッドはすべての重要な例外の状態を設定します。  
+# <a name="idebugengine3setallexceptions"></a>IDebugEngine3::SetAllExceptions
+このメソッドは、すべての未処理の例外の状態を設定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT SetAllExceptions(  
-   EXCEPTION_STATE dwState  
+HRESULT SetAllExceptions(  
+   EXCEPTION_STATE dwState  
 );  
 ```  
   
-```c#  
+```csharp  
 int SetAllExceptions(  
-   enum_EXCEPTION_STATE dwState  
+   enum_EXCEPTION_STATE dwState  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwState`  
- \[入力\] [EXCEPTION\_STATE](../../../extensibility/debugger/reference/exception-state.md) 値のいずれか 1 つが。  
+ [in]1 つ、 [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)値。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)   
- [EXCEPTION\_STATE](../../../extensibility/debugger/reference/exception-state.md)
+ [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)

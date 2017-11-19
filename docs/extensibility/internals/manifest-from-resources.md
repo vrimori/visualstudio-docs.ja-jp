@@ -1,88 +1,163 @@
 ---
-title: "マニフェスト リソースから | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "リソースからマニフェスト |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
-caps.latest.revision: 4
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 297d9535a8e9655ed87230d4f947faeb29e08487
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# マニフェスト リソースから
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-リソースのツールからマニフェストをイメージ リソース \(.png または .xaml ファイル\) の一覧を取得し、Visual Studio イメージのサービスで使用するそれらのイメージをできるようにする .imagemanifest ファイルを生成するコンソール アプリケーションだけです。 さらに、このツールを使用して、既存 .imagemanifest にイメージを追加することができます。 このツールは、高解像度およびテーマの適用を Visual Studio 拡張機能にイメージのサポートを追加するのに便利です。 生成された .imagemanifest ファイルをインクルードして Visual Studio 拡張機能 \(.vsix\) の一部として展開する必要があります。  
+# <a name="manifest-from-resources"></a>リソースからマニフェスト
+リソースのツールからマニフェストをイメージ リソース (.png または .xaml ファイル) の一覧を取得し、Visual Studio イメージ サービスで使用するそれらのイメージをできるようにする .imagemanifest ファイルを生成するコンソール アプリケーションだけです。 さらに、このツールを使用して、既存 .imagemanifest にイメージを追加することができます。 このツールは、高 DPI、テーマを Visual Studio 拡張機能へのイメージのサポートを追加するために役立ちます。 生成された .imagemanifest ファイルに含まれ、Visual Studio 拡張機能 (.vsix) の一部として展開する必要があります。  
   
-## ツールを使用する方法  
+## <a name="how-to-use-the-tool"></a>ツールを使用する方法  
  **構文**  
   
- ManifestFromResources\/resources: \< Dir1 \>; \< Img1 \>\/assembly: \< AssemblyName \>\< 省略可能な引数 \>  
+ ManifestFromResources/resources:\<dir 1 >;\<Img1 >/assembly:\<AssemblyName >\<省略可能な Args >  
   
  **引数**  
   
 ||||  
 |-|-|-|  
-|**スイッチの名前**|**ノート**|**必須またはオプション**|  
-|\/resources|イメージまたはディレクトリのセミコロン区切りの一覧です。 この一覧は、マニフェストに含まれるイメージの完全な一覧を常に格納する必要があります。 だけ一部のみが指定した場合、含まれていないエントリが失われます。<br /><br /> 特定のリソース ファイルがイメージ ストリップにある場合、ツールは各サブイメージをマニフェストに追加する前に個別の画像に分割します。<br /><br /> ツールがイメージの属性の右側に入力できるように、次のように名前が書式設定、イメージが .png ファイルである場合は、お勧めします。 \< 名前 \>。 \< 幅 \>。 \< 高さ \> .png です。|必須|  
-|\/assembly|\(拡張子を除いた\)、マネージ アセンブリまたは \(マニフェストの実行時の場所\) との間のリソースをホストするネイティブ アセンブリのランタイムのパスの名前。|必要|  
-|"\/manifest"|生成された .imagemanifest ファイルに付ける名前です。 別の場所にファイルを作成するの絶対パスまたは相対パスを含めることもできます。 既定の名前では、アセンブリ名と一致します。<br /><br /> 既定値: \< 現在のディレクトリ \> \\ \< アセンブリ \> .imagemanifest|省略可能|  
-|\/guidName|生成されるマニフェスト内のイメージのすべての GUID のシンボルに付ける名前。<br /><br /> 既定値: AssetsGuid|省略可能|  
-|\/rootPath|マネージ リソースの Uri を作成する前にから除去される必要があるルートのパス。 \(このフラグに役立つ、ツール、相対パスを取得 URI が、リソース読み込みに失敗の原因の場合は\)。<br /><br /> 既定値: \< 現在のディレクトリ \>|省略可能|  
-|チェックイン|このフラグを設定する再帰的にツールに指示\/resources 引数のすべてのディレクトリを検索します。 このフラグを省略すると、ディレクトリの top level 専用の検索が発生します。|省略可能|  
-|\/isNative|アセンブリの引数がネイティブ アセンブリのパスである場合は、このフラグを設定します。 このフラグは、次のアセンブリの引数は、マネージ アセンブリの名前で省略されます。 \(このフラグの詳細については、ノートのセクションを参照してください\)。|省略可能|  
-|\/newGuids|既存のマニフェストから 1 つのマージではなく GUID シンボルのイメージの新しい値を作成するツールに指示このフラグを設定します。|省略可能|  
-|\/newIds|このフラグを設定値を既存のマニフェストからマージすることではなく、すべてのイメージの新しい ID のシンボル値を作成するツールに指示します。|省略可能|  
-|\/noLogo|印刷の製品と著作権情報を停止するこのフラグを設定します。|省略可能|  
-|\/?|ヘルプ情報を出力します。|省略可能|  
-|\/help|ヘルプ情報を出力します。|省略可能|  
+|**スイッチの名前**|**注**|**必須またはオプション**|  
+|/resources|イメージまたはディレクトリのセミコロンで区切った一覧。 この一覧は、マニフェストに含まれる画像の完全な一覧を常に含める必要があります。 部分的な一覧を指定すると、専用の場合、エントリが含まれていない内容が失われます。<br /><br /> 指定されたリソース ファイルがイメージ ストリップの場合は、ツールは各サブイメージをマニフェストに追加する前に別のイメージに分割します。<br /><br /> イメージが .png ファイルである場合は、ことをお勧め、ツール、イメージの属性の右側に入力できるように、次のように名前が書式設定:\<名 >.\<幅 >。\<高さ > .png です。|必須|  
+|/assembly|マネージ アセンブリを拡張子を除いた、)、または (マニフェストのランタイムの場所) への相対リソースをホストするネイティブ アセンブリのランタイム パスの名前。|必須|  
+|/manifest|生成された .imagemanifest ファイルに指定する名前。 別の場所にファイルを作成への絶対パスまたは相対パスを含めることもできます。 既定の名前では、アセンブリ名と一致します。<br /><br /> 既定値:\<現在のディレクトリ >\\< アセンブリ\>.imagemanifest|Optional|  
+|/guidName|生成されるマニフェストでイメージのすべてのシンボルは GUID に指定する名前。<br /><br /> 既定値: AssetsGuid|Optional|  
+|/rootPath|マネージ リソースの Uri を作成する前に削除する必要があるルートのパス。 (このフラグは、ここで、ツール、相対パスを取得 URI 間違った、リソースを読み込みに失敗の原因の場合に役立てるためには)。<br /><br /> 既定値:\<現在のディレクトリ >|Optional|  
+|/recursive|このフラグの設定を再帰的にツールに指示/resources 引数のすべてのディレクトリを検索します。 このフラグを省略すると、ディレクトリの top level のみ検索が発生します。|Optional|  
+|/isNative|アセンブリの引数がネイティブ アセンブリのパスである場合は、このフラグを設定します。 アセンブリの引数がマネージ アセンブリの名前である場合は、このフラグを省略します。 (このフラグの詳細については、ノートのセクションを参照してください)。|Optional|  
+|/newGuids|既存のマニフェストから 1 つの結合ではなく、イメージの GUID のシンボル用の新しい値を作成するツールに指示このフラグを設定します。|Optional|  
+|/newIds|このフラグの設定を既存のマニフェストから値を結合ではなく、すべてのイメージの新しい ID のシンボル値を作成するツールに指示します。|Optional|  
+|/noLogo|このフラグを設定、印刷の製品および著作権情報が停止します。|Optional|  
+|/?|ヘルプ情報を出力します。|Optional|  
+|/help|ヘルプ情報を出力します。|Optional|  
   
  **例**  
   
--   ManifestFromResources\/resources:D:\\Images\/assembly:My.Assembly.Name\/isNative  
+-   ManifestFromResources/resources:D:\Images/assembly:My.Assembly.Name/isNative  
   
--   ManifestFromResources\/resources:D:\\Images\\Image1.png;D:\\Images\\Image1.xaml\/assembly:My.Assembly.Name\/manifest:MyImageManifest.imagemanifest  
+-   ManifestFromResources/resources:D:\Images\Image1.png;D:\Images\Image1.xaml/assembly:My.Assembly.Name/manifest:MyImageManifest.imagemanifest  
   
--   ManifestFromResources\/resources:D:\\Images\\Image1.png;D:\\Images\\Image1.xaml\/assembly:My.Assembly.Name\/guidName:MyImages\/newGuids\/newIds  
+-   ManifestFromResources/resources:D:\Images\Image1.png;D:\Images\Image1.xaml/assembly:My.Assembly.Name/guidName:MyImages/newGuids/newIds  
   
-## ノート  
+## <a name="notes"></a>メモ  
   
--   ツールは、.png、.xaml ファイルのみをサポートします。 その他のイメージまたはファイルの種類は無視されます。 リソースの解析中に検出されたすべてのサポートされていない型の警告が生成されます。 サポートされていませんイメージが検出場合は、ツールが終了すると、リソースの解析エラーが生成されます  
+-   ツールは、.png、.xaml ファイルだけをサポートします。 その他のイメージまたはファイルの種類は無視されます。 リソースの解析中に検出されたすべてのサポートされていない型の警告が生成されます。 サポートされていませんイメージが検出場合は、ツールが終了すると、リソース、解析エラーが生成されます  
   
--   .Png 画像に対して推奨される形式では、イメージの実際のサイズとは異なる場合でも、ツールは、書式指定のサイズに、.png のサイズ\/ディメンション値を設定します。  
+-   .Png 画像に対して推奨される形式では、イメージの実際のサイズと異なる場合でも、ツールは、形式が指定したサイズの、.png のサイズ/ディメンション値を設定します。  
   
--   幅と高さの形式は .png イメージでは省略できますが、ツールは、イメージの実際の幅と高さを読み取り、イメージのサイズ\/ディメンションの値を使用します。  
+-   幅/高さ形式は .png イメージは、省略できますが、ツールでは、イメージの実際の幅と高さを読み取るし、イメージのサイズとディメンションの値のものを使用します。  
   
--   ツールはスタンドアロン画像イメージ ストリップに分割し、既存のマニフェストに追加しようとするための同じ .imagemanifest に何度も同じイメージ ストリップでこのツールを実行しているがマニフェスト エントリが重複発生します。  
+-   ツールは、スタンドアロンの画像イメージ ストリップに分割し、既存のマニフェストに追加しようとするので複数回の同じ .imagemanifest 同じイメージ ストリップでこのツールを実行しているが重複するマニフェスト エントリで発生します。  
   
--   マージ \(\/newGuids または\/newIds を省略\) は、ツールで生成されるマニフェストののみ行ってください。 またはカスタマイズされた他の手段によって生成されるマニフェストを正しく結合しない場合もあります。  
+-   マージ (/newGuids または/newIds を省略) ツールで生成されたマニフェストを行う必要がありますのみです。 カスタマイズされたまたは他の手段で生成されたマニフェストを正しくマージされません可能性があります。  
   
--   ネイティブ アセンブリに対して生成されるマニフェストは、リソース、ネイティブ アセンブリの .rc ファイルからの Id と一致する ID のシンボルを生成後の手作業で編集をする必要があります。  
+-   ネイティブ アセンブリに対して生成されるマニフェストは、ネイティブ アセンブリの .rc ファイルから Id のリソースと一致する ID のシンボルを生成後に手動で編集をする必要があります。  
   
-## 出力例  
- **シンプルなイメージのマニフェスト**  
+## <a name="sample-output"></a>出力例  
+ **単純なイメージ マニフェスト**  
   
  イメージ マニフェストは、この .xml ファイルのようになります。  
   
 ```xml  
-<?xml version="1.0" encoding="utf-8"?> <!-- This file was generated by the ManifestFromResources tool.--> <!-- Version: 14.0.15197 --> <ImageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/VisualStudio/ImageManifestSchema/2014"> <Symbols> <String Name="Resources" Value="/My.Assembly.Name;Component/Resources/Images" /> <Guid Name="AssetsGuid" Value="{fb41b7ef-6587-480c-aa27-5b559d42cfc9}" /> <ID Name="MyImage" Value="0" /> </Symbols> <Images> <Image Guid="$(AssetsGuid)" ID="$(MyImage)"> <Source Uri="$(Resources)/Xaml/MyImage.xaml" /> <Source Uri="$(Resources)/Png/MyImage.16.16.png"> <Size Value="16" /> </Source> </Image> </Images> <ImageLists /> </ImageManifest>  
+<?xml version="1.0" encoding="utf-8"?>  
+<!-- This file was generated by the ManifestFromResources tool.-->  
+<!-- Version: 14.0.15197 -->  
+<ImageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/VisualStudio/ImageManifestSchema/2014">  
+  <Symbols>  
+    <String Name="Resources" Value="/My.Assembly.Name;Component/Resources/Images" />  
+    <Guid Name="AssetsGuid" Value="{fb41b7ef-6587-480c-aa27-5b559d42cfc9}" />  
+    <ID Name="MyImage" Value="0" />  
+  </Symbols>  
+  <Images>  
+    <Image Guid="$(AssetsGuid)" ID="$(MyImage)">  
+      <Source Uri="$(Resources)/Xaml/MyImage.xaml" />  
+      <Source Uri="$(Resources)/Png/MyImage.16.16.png">  
+        <Size Value="16" />  
+      </Source>  
+    </Image>  
+  </Images>  
+  <ImageLists />  
+</ImageManifest>  
 ```  
   
- **イメージ ストリップの画像のマニフェスト**  
+ **イメージ ストリップのイメージ マニフェスト**  
   
- イメージ ストリップ イメージ、マニフェストは、この .xml ファイルのようになります。  
+ イメージ ストリップのイメージ マニフェストは、この .xml ファイルのようになります。  
   
 ```xml  
-<?xml version="1.0" encoding="utf-8"?> <!-- This file was generated by the ManifestFromResources tool.--> <!-- Version: 14.0.15197 --> <ImageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/VisualStudio/ImageManifestSchema/2014"> <Symbols> <String Name="Resources" Value="/My.Assembly.Name;Component/Resources/ImageStrip" /> <Guid Name="AssetsGuid" Value="{fb41b7ef-6587-480c-aa27-5b559d42cfc9}" /> <ID Name="MyImageStrip_0" Value="1" /> <ID Name="MyImageStrip_1" Value="2" /> <ID Name="MyImageStrip" Value="3" /> </Symbols> <Images> <Image Guid="$(AssetsGuid)" ID="$(MyImageStrip_0)"> <Source Uri="$(Resources)/MyImageStrip_0.png"> <Size Value="16" /> </Source> </Image> <Image Guid="$(AssetsGuid)" ID="$(MyImageStrip_1)"> <Source Uri="$(Resources)/MyImageStrip_1.png"> <Size Value="16" /> </Source> </Image> </Images> <ImageLists> <ImageList Guid="$(AssetsGuid)" ID="$(MyImageStrip)"> <ContainedImage Guid="$(AssetsGuid)" ID="$(MyImageStrip_0)" /> <ContainedImage Guid="$(AssetsGuid)" ID="$(MyImageStrip_1)" /> </ImageList> </ImageLists> </ImageManifest>  
+<?xml version="1.0" encoding="utf-8"?>  
+<!-- This file was generated by the ManifestFromResources tool.-->  
+<!-- Version: 14.0.15197 -->  
+<ImageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/VisualStudio/ImageManifestSchema/2014">  
+  <Symbols>  
+    <String Name="Resources" Value="/My.Assembly.Name;Component/Resources/ImageStrip" />  
+    <Guid Name="AssetsGuid" Value="{fb41b7ef-6587-480c-aa27-5b559d42cfc9}" />  
+    <ID Name="MyImageStrip_0" Value="1" />  
+    <ID Name="MyImageStrip_1" Value="2" />  
+    <ID Name="MyImageStrip" Value="3" />  
+  </Symbols>  
+  <Images>  
+    <Image Guid="$(AssetsGuid)" ID="$(MyImageStrip_0)">  
+      <Source Uri="$(Resources)/MyImageStrip_0.png">  
+        <Size Value="16" />  
+      </Source>  
+    </Image>  
+    <Image Guid="$(AssetsGuid)" ID="$(MyImageStrip_1)">  
+      <Source Uri="$(Resources)/MyImageStrip_1.png">  
+        <Size Value="16" />  
+      </Source>  
+    </Image>  
+  </Images>  
+  <ImageLists>  
+    <ImageList Guid="$(AssetsGuid)" ID="$(MyImageStrip)">  
+      <ContainedImage Guid="$(AssetsGuid)" ID="$(MyImageStrip_0)" />  
+      <ContainedImage Guid="$(AssetsGuid)" ID="$(MyImageStrip_1)" />  
+    </ImageList>  
+  </ImageLists>  
+</ImageManifest>  
 ```  
   
- **イメージ リソース マニフェストのアセンブリのネイティブ イメージ**  
+ **イメージ マニフェストのアセンブリのネイティブ イメージ リソース**  
   
- ネイティブ イメージ、イメージ マニフェストは、この .xml ファイルのようになります。  
+ ネイティブ イメージのイメージ マニフェストは、この .xml ファイルのようになります。  
   
 ```xml  
-<?xml version="1.0" encoding="utf-8"?> <!-- This file was generated by the ManifestFromResources tool.--> <!-- Version: 14.0.15198 --> <ImageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/VisualStudio/ImageManifestSchema/2014"> <Symbols> <String Name="Resources" Value="..\Assembly\Folder\My.Assembly.Name" /> <Guid Name="AssetsGuid" Value="{442d8739-efde-46a4-8f29-e3a1e5e7f8b4}" /> <ID Name="MyImage1" Value="0" /> <ID Name="MyImage2" Value="1" /> </Symbols> <Images> <Image Guid="$(AssetsGuid)" ID="$(MyImage1)"> <Source Uri="$(Resources)"> <Size Value="16" /> <NativeResource ID="$(MyImage1)" Type="PNG" /> </Source> </Image> <Image Guid="$(AssetsGuid)" ID="$(MyImage2)"> <Source Uri="$(Resources)"> <Size Value="16" /> <NativeResource ID="$(MyImage2)" Type="PNG" /> </Source> </Image> </Images> <ImageLists /> </ImageManifest>  
+<?xml version="1.0" encoding="utf-8"?>  
+<!-- This file was generated by the ManifestFromResources tool.-->  
+<!-- Version: 14.0.15198 -->  
+<ImageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/VisualStudio/ImageManifestSchema/2014">  
+  <Symbols>  
+    <String Name="Resources" Value="..\Assembly\Folder\My.Assembly.Name" />  
+    <Guid Name="AssetsGuid" Value="{442d8739-efde-46a4-8f29-e3a1e5e7f8b4}" />  
+    <ID Name="MyImage1" Value="0" />  
+    <ID Name="MyImage2" Value="1" />  
+  </Symbols>  
+  <Images>  
+    <Image Guid="$(AssetsGuid)" ID="$(MyImage1)">  
+      <Source Uri="$(Resources)">  
+        <Size Value="16" />  
+        <NativeResource ID="$(MyImage1)" Type="PNG" />  
+      </Source>  
+    </Image>  
+    <Image Guid="$(AssetsGuid)" ID="$(MyImage2)">  
+      <Source Uri="$(Resources)">  
+        <Size Value="16" />  
+        <NativeResource ID="$(MyImage2)" Type="PNG" />  
+      </Source>  
+    </Image>  
+  </Images>  
+  <ImageLists />  
+</ImageManifest>  
 ```

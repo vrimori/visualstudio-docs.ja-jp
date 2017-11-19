@@ -1,12 +1,10 @@
 ---
-title: 'How to: Add a Specific Finder Method | Microsoft Docs'
+title: "方法: Specificfinder メソッドを追加する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -22,85 +20,85 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], Specific Finder
 - Business Data Connectivity service [SharePoint development in Visual Studio], get an entity
 ms.assetid: 7bbc5986-2828-4755-96fa-9f1dc0f8dc75
-caps.latest.revision: 30
-author: kempb
-ms.author: kempb
+caps.latest.revision: "30"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: f079dd28ede8bcb5720bd1af0f2194528ce0d986
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: c7b2277d725259fb5f95c186825773b5460ec17d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-add-a-specific-finder-method"></a>How to: Add a Specific Finder Method
-  You can return a single entity instance by creating a *Specific Finder* method. The Business Data Connectivity (BDC) service executes the Specific Finder method when a user chooses an entity in a business data web part or external list. For more information, see [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md).  
+# <a name="how-to-add-a-specific-finder-method"></a>方法: SpecificFinder メソッドを追加する
+  作成することで、1 つのエンティティのインスタンスを返すことができます、 *Specific Finder*メソッドです。 ビジネス データ接続 (BDC) サービスは、ユーザーがビジネス データ web パーツまたは外部の一覧でエンティティを選択すると、Specific Finder メソッドを実行します。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
-### <a name="to-create-a-specific-finder-method"></a>To create a Specific Finder method  
+### <a name="to-create-a-specific-finder-method"></a>Specificfinder メソッドを作成するには  
   
-1.  On the BDC designer, choose an entity.  
+1.  BDC デザイナーでは、エンティティを選択します。  
   
-     For information about how to add an entity to the BDC designer in Visual Studio, see [How to: Add an Entity to a Model](../sharepoint/how-to-add-an-entity-to-a-model.md).  
+     Visual Studio で BDC デザイナーにエンティティを追加する方法については、次を参照してください。[する方法: エンティティをモデルに追加](../sharepoint/how-to-add-an-entity-to-a-model.md)です。  
   
-2.  On the menu bar, choose **View**, **Other Windows**, **BDC Method Details**.  
+2.  メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、 **BDC メソッドの詳細**です。  
   
-     The **BDC Method Details** window opens. For more information about that window, see [BDC Model Design Tools Overview](../sharepoint/bdc-model-design-tools-overview.md).  
+     **BDC メソッドの詳細**ウィンドウが開きます。 そのウィンドウの詳細については、次を参照してください。 [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)です。  
   
-3.  In the **Add a Method** list, choose **Create Specific Finder Method**.  
+3.  **メソッドを追加**一覧で、選択**特定 Finder メソッドの作成**です。  
   
-     Visual Studio adds the following elements to the model. These elements appear in the **BDC Method Details** window.  
+     Visual Studio では、モデルに、次の要素を追加します。 これらの要素の表示で、 **BDC メソッドの詳細**ウィンドウです。  
   
-    -   A method.  
+    -   メソッド。  
   
-    -   An input parameter for the method.  
+    -   メソッドの入力パラメーター。  
   
-    -   A return parameter for the method.  
+    -   メソッドの戻り値のパラメーターです。  
   
-    -   A type descriptor for each parameter.  
+    -   各パラメーターの型記述子。  
   
-    -   A method instance for the method.  
+    -   メソッドのメソッドのインスタンス。  
   
-     For more information, see [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md).  
+     詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
-4.  Open the Visual Studio **Properties** window.  
+4.  Visual Studio を開き、**プロパティ**ウィンドウです。  
   
-5.  Configure the type descriptor of the return parameter as an entity type descriptor. For information about how to create an entity type descriptor, see [How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).  
-  
-    > [!NOTE]  
-    >  You don't have to perform this step if you have added a Finder method to the entity. Visual Studio uses the type descriptor that you defined in the Finder method.  
+5.  エンティティ型記述子として戻り値パラメーターの型記述子を構成します。 エンティティ型記述子を作成する方法については、次を参照してください。[する方法: パラメーターの型記述子を定義する](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)です。  
   
     > [!NOTE]  
-    >  If the identifier field of the entity type represents a field in a database table that's automatically generated, set the **Read-only** property of the identifier field to **True**.  
-  
-6.  In the **Method Details** window, choose the method instance of the method.  
-  
-7.  In the **Properties Window**, set the **Return Parameter Name** property to the name of the return parameter of the method. For more information about method instance properties, see [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282).  
-  
-8.  In **Solution Explorer**, open the shortcut menu of the service code file that was generated for the entity, and then choose **View Code**.  
-  
-     The entity service code file opens in the Code Editor. For more information about the entity service code file, see [Creating a Business Data Connectivity Model](../sharepoint/creating-a-business-data-connectivity-model.md).  
-  
-9. Add code to the Specific Finder method. This code performs the following tasks:  
-  
-    -   Retrieves a record from a data source.  
-  
-    -   Returns an entity to the BDC service.  
-  
-     The following example returns a contact from the AdventureWorks sample database for SQL Server.  
+    >  Finder メソッドは、エンティティに追加した場合、この手順を実行する必要はありません。 Visual Studio では、Finder メソッドで定義されている型記述子を使用します。  
   
     > [!NOTE]  
-    >  Replace the value of the `ServerName` field with the name of your server.  
+    >  エンティティ型の識別子フィールドが自動的に生成されるデータベース テーブル内のフィールドである場合は、設定、**読み取り専用**プロパティ識別子フィールドの**True**です。  
   
-     [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]   [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]  
+6.  **メソッドの詳細**ウィンドウで、メソッドのメソッドのインスタンスを選択します。  
   
-## <a name="see-also"></a>See Also  
- [Designing a Business Data Connectivity Model](../sharepoint/designing-a-business-data-connectivity-model.md)   
- [How to: Add a Finder Method](../sharepoint/how-to-add-a-finder-method.md)   
- [How to: Add a Creator Method](../sharepoint/how-to-add-a-creator-method.md)   
- [How to: Add a Deleter Method](../sharepoint/how-to-add-a-deleter-method.md)   
- [How to: Add an Updater Method](../sharepoint/how-to-add-an-updater-method.md)   
- [BDC Model Design Tools Overview](../sharepoint/bdc-model-design-tools-overview.md)   
- [How to: Add a Parameter to a Method](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [How to: Define a Method Instance](../sharepoint/how-to-define-a-method-instance.md)  
+7.  **プロパティ ウィンドウ**、設定、**パラメーター名を返す**プロパティ、メソッドの戻り値パラメーターの名前をします。 メソッド インスタンスのプロパティの詳細については、次を参照してください。 [MethodInstance](http://go.microsoft.com/fwlink/?LinkID=169282)です。  
+  
+8.  **ソリューション エクスプ ローラー**エンティティには、生成されたサービス コード ファイルのショートカット メニューを開きを選択し、**コードの表示**です。  
+  
+     エンティティ サービス コード ファイルでは、コード エディターで開きます。 エンティティ サービス コード ファイルの詳細については、次を参照してください。[ビジネス データ接続モデルを作成する](../sharepoint/creating-a-business-data-connectivity-model.md)です。  
+  
+9. Specific Finder メソッドにコードを追加します。 このコードは次のタスクを実行します。  
+  
+    -   データ ソースからレコードを取得します。  
+  
+    -   BDC サービスにエンティティを返します。  
+  
+     次の例では、SQL Server の AdventureWorks サンプル データベースから連絡先を返します。  
+  
+    > [!NOTE]  
+    >  値を置き換える、`ServerName`フィールドに、サーバーの名前。  
+  
+     [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
+     [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]  
+  
+## <a name="see-also"></a>関連項目  
+ [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
+ [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
+ [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
+ [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
+ [方法: Updater メソッドを追加](../sharepoint/how-to-add-an-updater-method.md)   
+ [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
+ [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
+ [方法: メソッド インスタンスを定義する](../sharepoint/how-to-define-a-method-instance.md)  
   
   

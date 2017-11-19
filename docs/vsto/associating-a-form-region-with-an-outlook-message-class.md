@@ -1,16 +1,13 @@
 ---
-title: Associating a Form Region with an Outlook Message Class | Microsoft Docs
+title: "フォーム領域を Outlook メッセージ クラスに関連付ける |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VSTO.NewFormRegionWizard.InvalidMessageClassName
+f1_keywords: VSTO.NewFormRegionWizard.InvalidMessageClassName
 dev_langs:
 - VB
 - CSharp
@@ -18,103 +15,103 @@ helpviewer_keywords:
 - FormRegionMessageClassAttribute
 - form regions [Office development in Visual Studio], message classes
 ms.assetid: e2db8d61-fd5f-4059-beec-33b66970f520
-caps.latest.revision: 43
-author: kempb
-ms.author: kempb
+caps.latest.revision: "43"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 40eede2ae16f16b75b29d9e1b25ec76856ac2ae9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 3346b5cf096c523c9eb2c066d87a85e0d57efd94
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="associating-a-form-region-with-an-outlook-message-class"></a>Associating a Form Region with an Outlook Message Class
-  You can specify which Microsoft Office Outlook items display a form region by associating the form region with the message class of each item. For example, if you want to append a form region to the bottom of a mail item, you can associate the form region with the IPM.Note message class.  
+# <a name="associating-a-form-region-with-an-outlook-message-class"></a>フォーム領域の Outlook メッセージ クラスへの関連付け
+  Microsoft Office Outlook アイテムは、各アイテムのメッセージ クラスとフォーム領域を関連付けることによって、フォーム領域を表示を指定することができます。 たとえば、メール アイテムの下部にフォーム領域を追加する場合、ipm フォーム領域を関連付けることができます。メッセージ クラスに注意してください。  
   
- To associate a form region with a message class, specify the message class name in the **New Outlook Form Region** wizard or apply an attribute to the form region factory class.  
+ メッセージ クラスとフォーム領域を関連付ける、内のメッセージ クラス名を指定、**新しい Outlook フォーム領域**ウィザードまたはフォーム領域ファクトリ クラスに属性を適用します。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## <a name="understanding-outlook-message-classes"></a>Understanding Outlook Message Classes  
- An Outlook message class identifies a type of Outlook item. The following table lists these eight standard types of items and their message class names.  
+## <a name="understanding-outlook-message-classes"></a>Outlook メッセージ クラスをについてください。  
+ Outlook メッセージ クラスは、Outlook アイテムの種類を識別します。 次の表では、8 種類の標準項目とのメッセージ クラス名の一覧表示します。  
   
-|Outlook Item Type|Message Class Name|  
+|Outlook アイテムの種類|メッセージ クラス名|  
 |-----------------------|------------------------|  
-|AppointmentItem|IPM.Appointment|  
-|ContactItem|IPM.Contact|  
-|DistListItem|IPM.DistList|  
-|JournalItem|IPM.Activity|  
-|MailItem|IPM.Note|  
-|PostItem|IPM.Post or IPM.Post.RSS|  
-|TaskItem|IPM.Task|  
+|AppointmentItem|IPM です。予定|  
+|ContactItem|IPM です。お問い合わせください。|  
+|配布リスト|IPM です。配布リスト|  
+|JournalItem|IPM です。アクティビティ|  
+|MailItem|IPM です。注意してください。|  
+|PostItem|IPM です。Post、または IPM です。Post.RSS|  
+|TaskItem|IPM です。タスク|  
   
- You can also specify the names of custom message classes. Custom message classes identify custom forms that you define in Outlook.  
-  
-> [!NOTE]  
->  For replacement and replace-all form regions, you can specify a new custom message class name. You do not need to use the message class name of an existing custom form. The name of the custom message class must be unique. One way to ensure that the name is unique is to use a naming convention similar to the following: \<*StandardMessageClassName*>.\<*Company*>.\<*MessageClassName*> (for example: IPM.Note.Contoso.MyMessageClass).  
-  
-## <a name="associating-a-form-region-with-an-outlook-message-class"></a>Associating a Form Region with an Outlook Message Class  
- There are two ways to associate a form region with a message class:  
-  
--   Use the **New Outlook Form Region** wizard.  
-  
--   Apply class attributes.  
-  
-### <a name="using-the-new-outlook-form-region-wizard"></a>Using the New Outlook Form Region Wizard  
- On the final page of the **New Outlook Form Region** wizard, you can select standard message classes and type the names of custom message classes that you want to associate with the form region.  
-  
- The standard message classes are not available if the form region is designed to replace the whole form or the default page of a form. You can specify standard message class names only for forms that add a new page to a form or that are appended to the bottom of a form. For more information, see [How to: Add a Form Region to an Outlook Add-in Project](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md).  
-  
- To include one or more custom message classes, type their names in the **Which custom message classes will display this form region?** box.  
-  
- The names that you type must comply with the following guidelines:  
-  
--   Use the fully qualified message class name (for example: "IPM.Note.Contoso").  
-  
--   Use semicolons to separate multiple message class names.  
-  
--   Do not include standard Outlook message classes, such as "IPM.Note" or "IPM.Contact". Only include custom message classes, such as "IPM.Note.Contoso".  
-  
--   Do not specify the base message class by itself (for example: "IPM").  
-  
--   Do not exceed 256 characters for each message class name.  
-  
- The **New Outlook Form Region** wizard validates the format of your input when you click **Finish**.  
+ カスタム メッセージ クラスの名前を指定することもできます。 カスタム メッセージ クラスは、Outlook で定義したカスタムのフォームを識別します。  
   
 > [!NOTE]  
->  The **New Outlook Form Region** wizard does not verify that the message class names that you provide are correct or valid.  
+>  置換およびすべて置換フォーム領域は、新しいカスタム メッセージ クラス名を指定することができます。 既存のカスタム フォームのメッセージ クラス名を使用する必要はありません。 カスタム メッセージ クラスの名前は一意である必要があります。 次のような名前付け規則を使用するには名前が一意であることを確認する方法: \< *StandardMessageClassName*>.\<*会社*>.\<*MessageClassName*> (例: IPM です。Note.Contoso.MyMessageClass)。  
   
- When you complete the wizard, the **New Outlook Form Region** wizard applies attributes to the form region class that contain the specified message class names. You can also apply these attributes manually.  
+## <a name="associating-a-form-region-with-an-outlook-message-class"></a>フォーム領域の Outlook メッセージ クラスへの関連付け  
+ メッセージ クラスとフォーム領域を関連付けるには 2 つの方法があります。  
   
-### <a name="applying-class-attributes"></a>Applying Class Attributes  
- You can associate a form region with an Outlook message class after you complete the **New Outlook Form Region** wizard. To do this, apply attributes to the form region factory class.  
+-   使用して、**新しい Outlook フォーム領域**ウィザード。  
   
- The following example shows two <xref:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute> attributes that have been applied to a form region factory class named `myFormRegion`. The first attribute associates the form region with a standard message class for a mail message form. The second attribute associates the form region with a custom message class named `IPM.Task.Contoso`.  
+-   クラスの属性を適用します。  
   
- [!code-vb[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Attributes/FormRegion1.vb#1)] [!code-csharp[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Attributes/FormRegion1.cs#1)]  
+### <a name="using-the-new-outlook-form-region-wizard"></a>新しい Outlook フォーム領域ウィザードを使用します。  
+ 最後のページで、**新しい Outlook フォーム領域**ウィザードで、標準のメッセージ クラスを選択し、フォーム領域に関連付けるカスタム メッセージ クラスの名前を入力することができます。  
   
- Attributes must comply with the following guidelines:  
+ 標準のメッセージ クラスは、フォーム領域を全体のフォームまたはフォームの既定のページを置換する場合はご利用いただけません。 フォームをフォームに新しいページを追加するか、フォームの下部に追加されるは標準のメッセージ クラス名を指定できます。 詳細については、次を参照してください。[する方法: フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)です。  
   
--   For custom message classes, use the fully qualified message class name (for example: "IPM.Note.Contoso").  
+ 1 つまたは複数のカスタム メッセージ クラスを含めるには、その名前を入力、**このフォーム領域を表示するカスタム メッセージ クラス?**ボックス。  
   
--   Do not specify the base message class by itself (for example: "IPM").  
+ 入力した名前は、以下のガイドラインに従う必要があります。  
   
--   Do not exceed 256 characters for each message class name.  
+-   メッセージの完全修飾クラス名を使用して (例:"IPM です。Note.Contoso") です。  
   
--   Do not include the names of standard message classes if the form region replaces the whole form or the default page of a form. You can specify standard message class names only for forms that add a new page to a form or that are appended to the bottom of a form. For more information, see [How to: Add a Form Region to an Outlook Add-in Project](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md).  
+-   セミコロンを使用して、複数のメッセージ クラス名を区切ります。  
   
- Visual Studio validates the format of the message class names when you build the project.  
+-   "IPM など、標準の Outlook メッセージ クラスを含めないでください。注"または"IPM です。Contact"です。 "IPM などのカスタム メッセージ クラスのみを含める.Note.Contoso"です。  
+  
+-   単独で、基本メッセージ クラスを指定して (例:"IPM") です。  
+  
+-   各メッセージ クラス名は、256 文字をを超えてはなりません。  
+  
+ **新しい Outlook フォーム領域**をクリックすると、ウィザードは、入力の形式を検証**完了**です。  
   
 > [!NOTE]  
->  Visual Studio does not verify that the message class names that you provide are correct or valid.  
+>  **新しい Outlook フォーム領域**ウィザードが提供するメッセージ クラス名が正しいか、有効なことを確認していません。  
   
-## <a name="see-also"></a>See Also  
- [Accessing a Form Region at Run Time](../vsto/accessing-a-form-region-at-run-time.md)   
- [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md)   
- [Walkthrough: Designing an Outlook Form Region](../vsto/walkthrough-designing-an-outlook-form-region.md)   
- [Guidelines for Creating Outlook Form Regions](../vsto/guidelines-for-creating-outlook-form-regions.md)   
- [Form Name and Message Class Overview](http://msdn.microsoft.com/library/office/ff867629.aspx)   
- [How Outlook forms and items work together](http://msdn.microsoft.com/library/office/ff869706.aspx)  
+ ウィザードを完了したときに、**新しい Outlook フォーム領域**ウィザードでは、指定されたメッセージ クラス名を含むフォーム領域クラスに属性が適用されます。 これらの属性を手動で適用することもできます。  
+  
+### <a name="applying-class-attributes"></a>クラスの属性を適用します。  
+ 完了した後、Outlook メッセージ クラスとフォーム領域を関連付けることができます、**新しい Outlook フォーム領域**ウィザード。 これを行うには、フォーム領域ファクトリ クラスに属性を適用します。  
+  
+ 次の例は 2 つ<xref:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute>という名前のフォーム領域ファクトリ クラスに適用されている属性`myFormRegion`です。 最初の属性は、フォーム領域をメール メッセージの形式の標準的なメッセージ クラスに関連付けます。 2 番目の属性は、という名前のカスタム メッセージ クラスをフォーム領域を関連付けます`IPM.Task.Contoso`です。  
+  
+ [!code-vb[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Attributes/FormRegion1.vb#1)]
+ [!code-csharp[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Attributes/FormRegion1.cs#1)]  
+  
+ 属性は、次のガイドラインに準拠する必要があります。  
+  
+-   カスタム メッセージ クラスの完全修飾クラス名を使用して (例:"IPM です。Note.Contoso") です。  
+  
+-   単独で、基本メッセージ クラスを指定して (例:"IPM") です。  
+  
+-   各メッセージ クラス名は、256 文字をを超えてはなりません。  
+  
+-   全体のフォームまたはフォームの既定のページ、フォーム領域が置き換えられた場合は、標準のメッセージ クラスの名前を含めないでください。 フォームをフォームに新しいページを追加するか、フォームの下部に追加されるは標準のメッセージ クラス名を指定できます。 詳細については、次を参照してください。[する方法: フォーム領域を Outlook アドイン プロジェクトに追加](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)です。  
+  
+ Visual Studio は、プロジェクトをビルドするときに、メッセージ クラス名の形式を検証します。  
+  
+> [!NOTE]  
+>  Visual Studio では、提供するメッセージ クラス名が正しいか、有効なことは検証されません。  
+  
+## <a name="see-also"></a>関連項目  
+ [実行時にフォーム領域へのアクセス](../vsto/accessing-a-form-region-at-run-time.md)   
+ [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
+ [チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)   
+ [Outlook フォーム領域の作成に関するガイドライン](../vsto/guidelines-for-creating-outlook-form-regions.md)   
+ [フォームの名前とメッセージ クラスの概要](http://msdn.microsoft.com/library/office/ff867629.aspx)   
+ [Outlook フォームと項目を連携させる方法](http://msdn.microsoft.com/library/office/ff869706.aspx)  
   
   

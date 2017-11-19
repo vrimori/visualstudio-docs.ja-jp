@@ -1,56 +1,56 @@
 ---
-title: "IDebugCodeContext2::GetLanguageInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCodeContext2::GetLanguageInfo"
-helpviewer_keywords: 
-  - "IDebugCodeContext2::GetLanguageInfo"
+title: "IDebugCodeContext2::GetLanguageInfo |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCodeContext2::GetLanguageInfo
+helpviewer_keywords: IDebugCodeContext2::GetLanguageInfo
 ms.assetid: 03002ef1-9fe6-44b6-b23b-ef7b86b2b21b
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b2b2f6f49b7ee8ebdf356a25bc2531aa2b8b9cf8
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCodeContext2::GetLanguageInfo
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このコード コンテキストの言語の情報を取得します。  
+# <a name="idebugcodecontext2getlanguageinfo"></a>IDebugCodeContext2::GetLanguageInfo
+このコードのコンテキストの言語情報を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT GetLanguageInfo(   
-   BSTR* pbstrLanguage,  
-   GUID* pguidLanguage  
+```cpp  
+HRESULT GetLanguageInfo(   
+   BSTR* pbstrLanguage,  
+   GUID* pguidLanguage  
 );  
 ```  
   
-```c#  
-int GetLanguageInfo(   
-   ref string pbstrLanguage,  
-   ref Guid pguidLanguage  
+```csharp  
+int GetLanguageInfo(   
+   ref string pbstrLanguage,  
+   ref Guid pguidLanguage  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pbstrLanguage`  
- \[入力出力\] 返される言語の名前を含む 「 C\+\+ などの文字列」を付けます。  
+ [入力、出力]."C++"など、言語の名前を表す文字列を返します  
   
  `pguidLanguage`  
- \[入力出力\] コード コンテキストの言語の GUIDたとえば`guidCPPLang` を返します。  
+ [入力、出力].たとえば、コードのコンテキストの言語の GUID を返します`guidCPPLang`です。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- パラメーターのうち少なくとも 1 つが以外の値を返す必要があります。  
+## <a name="remarks"></a>コメント  
+ Null 以外の値を返す、パラメーターの少なくとも 1 つ必要があります。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

@@ -1,75 +1,77 @@
 ---
-title: "IDebugFunctionObject2::CreateObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugFunctionObject2::CreateObject"
-  - "CreateObject"
+title: "IDebugFunctionObject2::CreateObject |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugFunctionObject2::CreateObject
+- CreateObject
 ms.assetid: 148de615-941e-4b64-ab11-75b692aae465
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 08ae477758aabb2b65b5823a37a9c07d61d4083b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugFunctionObject2::CreateObject
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-評価のフラグの設定およびタイムアウト値を持つコンストラクターを使用してオブジェクトを作成します。  
+# <a name="idebugfunctionobject2createobject"></a>IDebugFunctionObject2::CreateObject
+評価のフラグ設定、およびタイムアウト値を指定されたコンス トラクターを使用するオブジェクトを作成します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT CreateObject (  
-   IDebugFunctionObject* pConstructor,  
-   DWORD                 dwArgs,  
-   IDebugObject*         pArgs[],  
-   DWORD                 dwEvalFlags,  
-   DWORD                 dwTimeout,  
-   IDebugObject**        ppObject  
+   IDebugFunctionObject* pConstructor,  
+   DWORD                 dwArgs,  
+   IDebugObject*         pArgs[],  
+   DWORD                 dwEvalFlags,  
+   DWORD                 dwTimeout,  
+   IDebugObject**        ppObject  
 );  
 ```  
   
-```c#  
+```csharp  
 int CreateObject (  
-   IDebugFunctionObject pConstructor,  
-   uint                 dwArgs,  
-   IDebugObject[]       pArgs,  
-   uint                 dwEvalFlags,  
-   uint                 dwTimeout,  
-   out IDebugObject**   ppObject  
+   IDebugFunctionObject pConstructor,  
+   uint                 dwArgs,  
+   IDebugObject[]       pArgs,  
+   uint                 dwEvalFlags,  
+   uint                 dwTimeout,  
+   out IDebugObject**   ppObject  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pConstructor`  
- \[入力\] 作成されるオブジェクトのコンストラクターを表すオブジェクトの [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)。  
+ [in][IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)を作成するオブジェクトのコンス トラクターを表すオブジェクト。  
   
  `dwArgs`  
- \[入力\] `pArg` の配列パラメーターの数。  コンストラクターに渡されるパラメーターの数を表します。  
+ [in]パラメーターの数、`pArg`配列。 コンス トラクターに渡されるパラメーターの数を表します。  
   
  `pArgs`  
- \[入力\] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) パラメーターを表すオブジェクトの配列はコンストラクターに渡されました。  
+ [in]配列[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)コンス トラクターに渡されるパラメーターを表すオブジェクト。  
   
  `dwEvalFlags`  
- \[入力\] 評価がどのように実行されるかを指定する [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) の列挙体のフラグの組み合わせ。  
+ [in]フラグの組み合わせ、 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)評価を実行する方法を指定する列挙体です。  
   
  `dwTimeout`  
- \[出力\] このメソッドから制御が戻るまで待機する最大時間 \(ミリ秒単位\)。  無期限に待機するために  **無限**  を使用します。  
+ [in]このメソッドから戻る前に待機するミリ秒単位の最大時間。 使用して**無限**無制限に待機します。  
   
  `ppObject`  
- \[出力\] 新しく作成されたオブジェクトを表す **IDebugObject を**  返します。  
+ [out]返します、 **IDebugObject**新しく作成されたオブジェクトを表すです。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- クラスのインスタンスを表すパラメーターでありコンストラクターを必要とする他の複合型を呼び出してオブジェクトを作成するにはこのメソッドを示します。  
+## <a name="remarks"></a>コメント  
+ クラス、またはその他の複合型のパラメーターであるコンス トラクターを必要とするインスタンスを表すオブジェクトを作成するには、このメソッドを呼び出します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

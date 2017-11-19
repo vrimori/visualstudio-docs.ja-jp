@@ -1,89 +1,89 @@
 ---
-title: "SccPopulateList 関数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccPopulateList"
-helpviewer_keywords: 
-  - "SccPopulateList 関数"
+title: "SccPopulateList 関数 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SccPopulateList
+helpviewer_keywords: SccPopulateList function
 ms.assetid: 7416e781-c571-4a7f-8af3-a089ce8be662
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 60f22174ac217a66f860415de898240d41d9a631
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# SccPopulateList 関数
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-この関数は、特定のソース管理コマンドのファイルのリストを更新し、指定されたすべてのファイルに対してソース管理ステータスを提供します。  
+# <a name="sccpopulatelist-function"></a>SccPopulateList 関数
+この関数は、特定のソース管理コマンドのファイルの一覧を更新し、指定されたすべてのファイルのソース管理の状態を提供します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 SCCRTN SccPopulateList (  
-   LPVOID          pvContext,  
-   enum SCCCOMMAND nCommand,  
-   LONG            nFiles,  
-   LPCSTR*         lpFileNames,  
-   POPLISTFUNC     pfnPopulate,  
-   LPVOID          pvCallerData,  
-   LPLONG          lpStatus,  
-   LONG            fOptions  
+   LPVOID          pvContext,  
+   enum SCCCOMMAND nCommand,  
+   LONG            nFiles,  
+   LPCSTR*         lpFileNames,  
+   POPLISTFUNC     pfnPopulate,  
+   LPVOID          pvCallerData,  
+   LPLONG          lpStatus,  
+   LONG            fOptions  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  pvContext  
- \[in\]ソース管理プラグイン コンテキスト構造体。  
+ [in]ソース管理プラグイン コンテキスト構造体。  
   
  %t%7  
- \[in\]ソース管理のコマンドですべてのファイルに適用される、 `lpFileNames` 配列 \(を参照してください [コマンドのコード](../extensibility/command-code-enumerator.md) 可能なコマンドの一覧については\)。  
+ [in]ソース管理コマンドのすべてのファイルに適用される、`lpFileNames`配列 (を参照してください[コマンド コード](../extensibility/command-code-enumerator.md)可能なコマンドの一覧については)。  
   
  nFiles  
- \[in\]内のファイルの数、 `lpFileNames` 配列。  
+ [in]内のファイルの数、`lpFileNames`配列。  
   
  lpFileNames  
- \[in\]IDE に認識されているファイルの名前の配列。  
+ [in]IDE に既知のファイル名の配列。  
   
  pfnPopulate  
- \[in\]IDE のコールバック関数を追加し、ファイルを削除するために呼び出す \(を参照してください [POPLISTFUNC](../extensibility/poplistfunc.md) 詳細\)。  
+ [in]ファイル追加および削除するために呼び出す IDE コールバック関数 (を参照してください[POPLISTFUNC](../extensibility/poplistfunc.md)詳細)。  
   
  pvCallerData  
- \[in\]コールバック関数に渡される値は変更されません。  
+ [in]コールバック関数に渡される値が変更されません。  
   
  lpStatus  
- \[入力、出力\]ソース管理を各ファイルのステータスのフラグを返すプラグインの配列。  
+ [入力、出力].ソース管理プラグインの各ファイルの状態フラグを返すの配列。  
   
- される  
- \[in\]コマンドのフラグ \(の"PopulateList flag"を参照してください [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md) 詳細\)。  
+ foptions の   
+ [in]コマンドのフラグ (の「PopulateList フラグ」セクションを参照して[ビットフラグが特定のコマンドで使用される](../extensibility/bitflags-used-by-specific-commands.md)詳細については)。  
   
-## 戻り値  
- この関数のソース コントロールのプラグインの実装は、次の値のいずれかを返す期待される結果します。  
+## <a name="return-value"></a>戻り値  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
   
 |値|説明|  
-|-------|--------|  
-|SCC\_OK|成功。|  
-|SCC\_E\_NONSPECIFICERROR|不特定のエラーです。|  
+|-----------|-----------------|  
+|SCC_OK|成功。|  
+|SCC_E_NONSPECIFICERROR|不特定のエラーです。|  
   
-## 解説  
- この関数は、現在の状態のファイルの一覧を調べます。 使用して、 `pfnPopulate` ファイルに使用される条件に一致しない場合、呼び出し元に通知するコールバック関数、 `nCommand`です。 たとえば、次のコマンドは `SCC_COMMAND_CHECKIN` リスト内のファイルがチェック アウトできませんし、呼び出し元に通知するコールバックを使用します。 場合によっては、ソース管理プラグインには、コマンドの一部である可能性があり、追加する他のファイルがあります。 これにより、たとえば、Visual Basic のユーザーが自分のプロジェクトで使用される Visual Basic プロジェクト ファイルにない .bmp ファイルをチェック アウトできます。 ユーザーが選択、 **取得** IDE でコマンドです。 IDE が発生することができますと思われるすべてのファイルの一覧を表示、ボックスの一覧を表示すると、前に、 `SccPopulateList` 関数が呼び出されて表示される一覧が最新の状態かどうかを確認します。  
+## <a name="remarks"></a>コメント  
+ この関数は、現在の状態のファイルの一覧を調べます。 使用して、`pfnPopulate`ファイルに使用される条件に一致しない場合、呼び出し元に通知するコールバック関数、`nCommand`です。 たとえば、次のコマンドは`SCC_COMMAND_CHECKIN`リスト内のファイルがチェック アウトされませんし、呼び出し元に通知するコールバックを使用します。 場合によっては、ソース管理プラグインはでしたコマンドの一部にして、それらを追加する他のファイルを見つける可能性があります。 これにより、たとえば、Visual Basic のユーザーが自分のプロジェクトで使用される Visual Basic プロジェクト ファイルにない .bmp ファイルをチェック アウトできます。 ユーザーが選択、**取得**IDE でコマンド。 IDE が発生することができますと思われるすべてのファイルの一覧に表示されますが、一覧が表示される前に、`SccPopulateList`関数が呼び出されて表示される一覧が最新の状態かどうかを確認します。  
   
-## 例  
- IDE では、ユーザーを取得できると思われるファイルの一覧を作成します。 この一覧が表示される前に呼び出し、 `SccPopulateList` 関数を追加し、一覧からファイルを削除する機会に、ソース管理プラグインを提供します。 プラグインに指定されたコールバック関数を呼び出すことによってリストを変更 \(表示 [POPLISTFUNC](../extensibility/poplistfunc.md) 詳細については\)。  
+## <a name="example"></a>例  
+ IDE では、ユーザーが取得できると思われるファイルの一覧を構築します。 この一覧が表示されます、前に呼び出し、`SccPopulateList`関数は、ソース管理プラグインする機会を与える追加ファイルを一覧から削除します。 プラグインに指定されたコールバック関数を呼び出すことによって、一覧を変更 (を参照してください[POPLISTFUNC](../extensibility/poplistfunc.md)詳細)。  
   
- プラグインの継続を呼び出す、 `pfnPopulate` 関数が追加されから戻りますを終了するまで、ファイルが削除、 `SccPopulateList` 関数です。 IDE では、その一覧を表示できます。`lpStatus` 配列は、IDE から渡された元のリストのすべてのファイルを表します。 プラグインの塗りつぶしに取り組んでこれらのファイルさらにすべての状態では、コールバック関数の使用します。  
+ プラグインは引き続き呼び出し、`pfnPopulate`関数では、追加され、ファイルを削除が終了してから戻りますまで、`SccPopulateList`関数。 IDE は、その一覧を表示できます。 `lpStatus`配列は、IDE によって渡された元のリストのすべてのファイルを表します。 プラグインの塗りつぶしに取り組んでこれらのファイルまたすべての状態では、コールバック関数の使用します。  
   
 > [!NOTE]
->  ソース管理プラグインには、常に、単にすぐに、一覧のままであるため、この関数から返すようにオプションがあります。 プラグインは、この関数を実装する場合、分かりますこれを設定して、 `SCC_CAP_POPULATELIST` 機能ビットフラグ最初の呼び出しで、 [SccInitialize](../extensibility/sccinitialize-function.md)です。 既定では、プラグイン、常に想定してくださいに渡されるすべての項目にファイルがあること。 ただし、IDE を設定する場合、 `SCC_PL_DIR` フラグ、 `fOptions` パラメーターに渡されるすべての項目が見なされるディレクトリです。 プラグインに追加します属しているすべてのファイルのディレクトリ。 IDE は、ファイルとディレクトリの組み合わせで渡してください。  
+>  ソース管理プラグインでは、単にすぐには、一覧のまま、この関数から返されるオプションが常にあります。 プラグインは、この関数を実装する場合を示しますこの設定によって、`SCC_CAP_POPULATELIST`最初の呼び出しで機能フラグ、 [SccInitialize](../extensibility/sccinitialize-function.md)です。 既定では、プラグイン常に想定してくださいで渡されるすべての項目がファイルであること。 ただし、IDE 設定する場合、`SCC_PL_DIR`フラグ、`fOptions`ディレクトリと見なされるパラメーターに渡されるすべての項目はします。 プラグイン ファイルを追加するすべて、属しているディレクトリにします。 ファイルとディレクトリの組み合わせは IDE を渡すことはありません。  
   
-## 参照  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>関連項目  
+ [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)   
  [POPLISTFUNC](../extensibility/poplistfunc.md)   
  [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)   

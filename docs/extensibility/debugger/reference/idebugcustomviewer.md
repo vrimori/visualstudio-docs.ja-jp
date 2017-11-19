@@ -1,67 +1,67 @@
 ---
-title: "IDebugCustomViewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomViewer"
-helpviewer_keywords: 
-  - "IDebugCustomViewer インターフェイス"
+title: "IDebugCustomViewer |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugCustomViewer
+helpviewer_keywords: IDebugCustomViewer interface
 ms.assetid: 7aca27d3-c7b8-470f-b42c-d1e9d9115edd
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2b7d32746fa42dc270497252065c3ac117a59547
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCustomViewer
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスは形式が必要 \(EE\) な属性値を表示するには式エバリュエーターができます。  
+# <a name="idebugcustomviewer"></a>IDebugCustomViewer
+このインターフェイスは、式エバリュエーターにどのような形式が必要なプロパティの値を表示するには、(EE) を使用します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IDebugCustomViewer : IUknown  
 ```  
   
-## 実装についてのメモ  
- EE ではカスタム書式の属性値を表示するにはこのインターフェイスを実装します。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ EE は、カスタムの形式で、プロパティの値を表示するには、このインターフェイスを実装します。  
   
-## 呼び出し元のメモ  
- COM `CoCreateInstance` の関数を呼び出してこのインターフェイスのインスタンスを作成します。  `CoCreateInstance` に渡される `CLSID` はレジストリから派生します。  [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) の呼び出しはレジストリの位置を取得します。  詳細および例については" 解説 " を参照してください。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ COM の呼び出し`CoCreateInstance`関数は、このインターフェイスをインスタンス化します。 `CLSID`に渡される`CoCreateInstance`レジストリから取得します。 呼び出し[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)レジストリの場所を取得します。 詳細と例では、「解説」を参照してください。  
   
-## Vtable の順序でメソッド  
- このインターフェイスは以下のメソッドを実行します :  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ このインターフェイスでは、次のメソッドを実装します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[値](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md)|指定された値の表示に必要な数とは関係なくします。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[値](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md)|指定された値を表示するために必要なことすべてを実行します。|  
   
-## 解説  
- このインターフェイスには属性値がデータ テーブルなどの複雑なプロパティ型の例は規格によって表示できない場合に使用されます。  `IDebugCustomViewer` のインターフェイスで表されるするカスタム ビューアーはEE に関係なく特定の種類のデータを表示するための外部プログラムである型のビジュアライザーが異なる場合があります。  EE はEE に固有のカスタム ビューアーを実行します。  型のビジュアライザーまたはカスタム ビューアーに応じて使用するビジュアライザーのユーザー型を選択します。  手順の詳細については [視覚化して、データを表示します。](../../../extensibility/debugger/visualizing-and-viewing-data.md) を参照してください。  
+## <a name="remarks"></a>コメント  
+ プロパティの値は、通常の方法で表示できない場合、このインターフェイスは使用-データ テーブルまたは別の複雑なプロパティの型となどです。 によって表されるとしてのカスタム ビューアー、`IDebugCustomViewer`インターフェイスでは、外部プログラムの EE に関係なく、特定の種類のデータを表示するには、型のビジュアライザーとは異なる。 EE は、その EE に固有であるカスタム ビューアーを実装します。 ユーザーは、型のビジュアライザーまたはカスタム ビューアーを使用するビジュアライザーの種類を選択します。 参照してください[Visualizing とデータの表示](../../../extensibility/debugger/visualizing-and-viewing-data.md)詳細についてはこのプロセスにします。  
   
- したがってカスタム ビューアーは EE と同じ方法で登録されGUID と言語の販売元の GUID が必要です。  正確なメトリック \(またはレジストリ エントリの名前 EE にのみ\) と呼ばれます。  このメトリックは [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) の呼び出しによって返される [DEBUG\_CUSTOM\_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) の構造体にを返します。  COM `CoCreateInstance` 関数に渡されるメトリックスの値を `CLSID` です \(例を参照\)。  
+ カスタム ビューアーは、EE と同じ方法で登録され、そのため、言語の GUID と仕入先の GUID が必要です。 正確なメトリック (またはレジストリ エントリ名) のみが知っている EE です。 このメトリックが返されます、 [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) 、構造体への呼び出しによって返される順番[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)です。 メトリックに格納されている値は、 `CLSID` COM に渡される`CoCreateInstance`関数 (例を参照してください)。  
   
- [デバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) の関数`SetEEMetric` がカスタム ビューアーを登録するために使用できます。  特定のレジストリ キーについては 「」 `Debugging SDK Helpers` の式エバリュエーターのレジストリのセクションをカスタム ビューアーの要件 " " を参照してください。  カスタム ビューアーは式エバリュエーターが複数の定義済みのメトリックを必要とする場合 \(EE の実装によって定義されている1\) で実現できることに注意してください。  
+ [をデバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)関数、 `SetEEMetric`、カスタム ビューアーを登録するために使用できます。 参照してください「の式エバリュエーター」レジストリの`Debugging SDK Helpers`カスタム ビューアーが必要な特定のレジストリ キーです。 カスタム ビューアーでは、式エバリュエーターには、いくつかの定義済みのメトリックが必要ですが、(EE の担当者によって定義されます) を 1 つだけのメトリックが必要があることに注意してください。  
   
- 通常はカスタム ビューアーは [値](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md) に指定された [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) のインターフェイスに文字列として以外のプロパティ値を変更するためのメソッドがないためデータの読み取り専用のビューを提供します。  データの任意のブロックの変更をサポートするにはEE同じオブジェクトのカスタム インターフェイスを実装する `IDebugProperty3` のインターフェイスを実装します。  このカスタム インターフェイスはデータの任意のブロックを変更するために必要なメソッドを提供します。  
+ 通常、カスタム ビューアーには、データの読み取り専用ビューので、 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)に指定されたインターフェイス[値](../../../extensibility/debugger/reference/idebugcustomviewer-displayvalue.md)を除く文字列としてのプロパティの値を変更する方法がありません。 任意のブロックのデータの変更をサポートするために、EE は同じオブジェクトを実装するカスタム インターフェイスを実装して、`IDebugProperty3`インターフェイスです。 このカスタム インターフェイスは、任意のデータのブロックを変更するためのメソッドになります。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 使用例  
- そのプロパティにカスタム ビューアーの場合この例ではプロパティから最初のカスタム ビューアーを取得する方法を示します。  
+## <a name="example"></a>例  
+ この例では、そのプロパティに任意のカスタム ビューアーがある場合、最初のカスタム ビューアーをプロパティから取得する方法を示します。  
   
-```cpp#  
+```cpp  
 IDebugCustomViewer *GetFirstCustomViewer(IDebugProperty2 *pProperty)  
 {  
     // This string is typically defined globally.  For this example, it  
@@ -105,7 +105,7 @@ IDebugCustomViewer *GetFirstCustomViewer(IDebugProperty2 *pProperty)
 }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)   
  [デバッグ用の SDK ヘルパー](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   

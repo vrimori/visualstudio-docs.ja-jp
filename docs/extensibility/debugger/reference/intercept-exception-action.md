@@ -1,59 +1,59 @@
 ---
-title: "INTERCEPT_EXCEPTION_ACTION | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "INTERCEPT_EXCEPTION_ACTION"
-helpviewer_keywords: 
-  - "INTERCEPT_EXCEPTION_ACTION 列挙型"
+title: "INTERCEPT_EXCEPTION_ACTION |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: INTERCEPT_EXCEPTION_ACTION
+helpviewer_keywords: INTERCEPT_EXCEPTION_ACTION enumeration
 ms.assetid: e647f1eb-2932-4447-8c78-3b0d706fb972
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a6804e4991c8707e619c96d6945d120b2fb37ffb
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# INTERCEPT_EXCEPTION_ACTION
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-例外を受け取るときに実行するアクションを指定します。  
+# <a name="interceptexceptionaction"></a>INTERCEPT_EXCEPTION_ACTION
+例外をインターセプトするときに実行するアクションを指定します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 enum enum_INTERCEPT_EXCEPTION_ACTION  
 {  
-   IEA_INTERCEPT = 0x0001  
+   IEA_INTERCEPT = 0x0001  
 }  
 typedef DWORD INTERCEPT_EXCEPTION_ACTION;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_INTERCEPT_EXCEPTION_ACTION  
 {  
-   IEA_INTERCEPT = 0x0001  
+   IEA_INTERCEPT = 0x0001  
 }  
 ```  
   
-#### パラメーター  
- IEA\_INTERCEPT  
- 現在の例外を受け取ることができます。  これは現在サポートされている値で指定する必要があります。  
+#### <a name="parameters"></a>パラメーター  
+ IEA_INTERCEPT  
+ 現在の例外をインターセプトし、有効にします。 これは現時点ではサポートされている唯一の値であり、指定する必要があります。  
   
-## 解説  
- これらの値は [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) のメソッドに渡されます。  
+## <a name="remarks"></a>コメント  
+ これらの値に渡される、 [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)メソッドです。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
- [列挙](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>関連項目  
+ [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)

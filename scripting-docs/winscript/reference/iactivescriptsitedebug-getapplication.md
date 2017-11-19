@@ -1,27 +1,30 @@
 ---
-title: "IActiveScriptSiteDebug::GetApplication | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IActiveScriptSiteDebug::GetApplication |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IActiveScriptSiteDebug.GetApplication
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IActiveScriptSiteDebug::GetApplication"
+helpviewer_keywords: IActiveScriptSiteDebug::GetApplication
 ms.assetid: 4400f1b1-3108-4a71-b1f1-43586fe1227c
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: e33bf254d2e688451f1b69a3b3eb1b676a9e9b1a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IActiveScriptSiteDebug::GetApplication
-このスクリプトのサイトに関連付けられたデバッグ アプリケーション オブジェクトを返します。  
+# <a name="iactivescriptsitedebuggetapplication"></a>IActiveScriptSiteDebug::GetApplication
+このスクリプトのサイトに関連付けられているデバッグ アプリケーションのオブジェクトを返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetApplication(  
@@ -29,21 +32,21 @@ HRESULT GetApplication(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppda`  
- \[入力\]スクリプトのサイトに関連付けられたデバッグ アプリケーション オブジェクトへのポインター。  
+ [out]スクリプトのサイトに関連付けられているデバッグ アプリケーションのオブジェクトへのポインター。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
-|`E_NOTIMPL`|ホストはデバッグを直接サポートしていません。|  
+|`E_NOTIMPL`|ホストによって直接サポートされないデバッグします。|  
   
-## 解説  
- `GetApplication` のメソッドは、スマート ホストする方法を各スクリプトが属するアプリケーション オブジェクトを定義できます。  スクリプト エンジンは、これが失敗した場合に `IProcessDebugManager::GetDefaultApplication` 含むアプリケーションとリゾートを取得するときにこのメソッドを呼び出すようにする必要があります。  
+## <a name="remarks"></a>コメント  
+ `GetApplication`メソッドは、各スクリプトが所属するアプリケーション オブジェクトを定義するスマート ホスト方法を提供します。 含む、アプリケーションを取得しを使用するには、このメソッドを呼び出すべきではスクリプト エンジン`IProcessDebugManager::GetDefaultApplication`これが失敗した場合。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IActiveScriptSiteDebug インターフェイス](../../winscript/reference/iactivescriptsitedebug-interface.md)   
  [IProcessDebugManager::GetDefaultApplication](../../winscript/reference/iprocessdebugmanager-getdefaultapplication.md)

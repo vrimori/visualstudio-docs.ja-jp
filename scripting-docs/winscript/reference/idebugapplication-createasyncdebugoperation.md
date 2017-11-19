@@ -1,27 +1,30 @@
 ---
-title: "IDebugApplication::CreateAsyncDebugOperation | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDebugApplication::CreateAsyncDebugOperation |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugApplication.CreateAsyncDebugOperation
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IDebugApplication::CreateAsyncDebugOperation"
+helpviewer_keywords: IDebugApplication::CreateAsyncDebugOperation
 ms.assetid: bc32b101-6364-4498-8458-bd5f3ab5ad94
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 8714f4401249d73cf09d241ebf4c2b2115911d6b
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugApplication::CreateAsyncDebugOperation
-特定の同期デバッグの非同期操作へのアクセスを提供します。  
+# <a name="idebugapplicationcreateasyncdebugoperation"></a>IDebugApplication::CreateAsyncDebugOperation
+指定された同期デバッグ操作への非同期アクセスを提供します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT CreateAsyncDebugOperation(  
@@ -30,24 +33,24 @@ HRESULT CreateAsyncDebugOperation(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `psdo`  
- \[入力\]デバッグ操作の同期オブジェクト。  
+ [in]同期のデバッグ操作オブジェクト。  
   
  `ppado`  
- \[入力\]デバッグ非同期操作のオブジェクト。  
+ [out]非同期のデバッグ操作オブジェクト。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- このメソッドは、言語のエンジンがデバッガーのスレッドに明示的に同期で式を非同期的に評価するようにします。  詳細については、「[IDebugSyncOperation インターフェイス](../../winscript/reference/idebugsyncoperation-interface.md)」および「[IDebugAsyncOperation インターフェイス](../../winscript/reference/idebugasyncoperation-interface.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、デバッガー スレッドに明示的に同期せずに非同期的に式の評価に言語エンジンを使用します。 詳細については、次を参照してください。 [IDebugSyncOperation インターフェイス](../../winscript/reference/idebugsyncoperation-interface.md)と[IDebugAsyncOperation インターフェイス](../../winscript/reference/idebugasyncoperation-interface.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugApplication インターフェイス](../../winscript/reference/idebugapplication-interface.md)   
  [IDebugSyncOperation インターフェイス](../../winscript/reference/idebugsyncoperation-interface.md)   
  [IDebugAsyncOperation インターフェイス](../../winscript/reference/idebugasyncoperation-interface.md)

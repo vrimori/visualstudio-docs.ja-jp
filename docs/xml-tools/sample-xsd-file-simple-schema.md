@@ -1,24 +1,25 @@
 ---
-title: "サンプル XSD ファイル: シンプルなスキーマ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "サンプル XSD ファイル: 単純なスキーマ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f7e1dde1-b4f6-4371-add4-935b68ec77d7
-caps.latest.revision: 4
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: b0178c64c72584ad2a3fe4692294a4877990423e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# サンプル XSD ファイル: シンプルなスキーマ
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-次の XSD ファイルは、XSD スキーマ デザイナーのドキュメントのさまざまな例で使用されます。このファイルは、シンプルな購買発注書のスキーマです。  
+# <a name="sample-xsd-file-simple-schema"></a>サンプル XSD ファイル: シンプルなスキーマ
+次の XSD ファイルは、XSD スキーマ デザイナーのドキュメントのさまざまな例で使用されます。 このファイルは、シンプルな購買発注書のスキーマです。  
   
 ```xml  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

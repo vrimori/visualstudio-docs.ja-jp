@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Updating the Controls on a Ribbon at Run Time | Microsoft Docs'
+title: "チュートリアル: 実行時にリボン コントロールの更新 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -20,284 +18,291 @@ helpviewer_keywords:
 - dynamic menus [Office development in Visual Studio]
 - Ribbon [Office development in Visual Studio], updating
 ms.assetid: ed80790f-3f95-47e4-8a41-872588a8ca07
-caps.latest.revision: 51
-author: kempb
-ms.author: kempb
+caps.latest.revision: "51"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: cc34acd219401610dcb936f9dbca59620aab7d71
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: bf9e63423a094d4aa574be1d952702ff077aa627
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-updating-the-controls-on-a-ribbon-at-run-time"></a>Walkthrough: Updating the Controls on a Ribbon at Run Time
-  This walkthrough demonstrates how to use the Ribbon object model to update the controls on a Ribbon after the Ribbon is loaded into the Office application.  
+# <a name="walkthrough-updating-the-controls-on-a-ribbon-at-run-time"></a>チュートリアル : 実行時のリボン コントロールの更新
+  このチュートリアルでは、Office アプリケーションにリボンを読み込んだ後でリボン オブジェクト モデルを使用してリボン上のコントロールを更新する方法について説明します。  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
- The example pulls data from the Northwind sample database to populate a combo box and menu in Microsoft Office Outlook. Items that you select in these controls automatically populate fields such as **To** and **Subject** in an e-mail message.  
+ この例では、Northwind サンプル データベースからデータを取得し、Microsoft Office Outlook のコンボ ボックスとメニューに読み込みます。 これらのコントロールで自動的に選択したアイテムがなどのフィールドを設定**に**と**サブジェクト**電子メールのメッセージ。  
   
- This walkthrough illustrates the following tasks:  
+ このチュートリアルでは、次の作業について説明します。  
   
--   Creating a new Outlook VSTO Add-in project.  
+-   新しい Outlook VSTO アドイン プロジェクトの作成。  
   
--   Designing a custom Ribbon group.  
+-   カスタム リボン グループのデザイン。  
   
--   Adding the custom group to a built-in tab.  
+-   組み込みタブへのカスタム グループの追加。  
   
--   Updating controls on the Ribbon at run time.  
+-   実行時のリボン コントロールの更新。  
   
 > [!NOTE]  
->  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   Microsoft Outlook  
   
-## <a name="creating-a-new-outlook-vsto-add-in-project"></a>Creating a New Outlook VSTO Add-in Project  
- First, create an Outlook VSTO Add-in project.  
+## <a name="creating-a-new-outlook-vsto-add-in-project"></a>新しい Outlook VSTO アドイン プロジェクトの作成  
+ まず、Outlook VSTO アドイン プロジェクトを作成します。  
   
-#### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>To create a new Outlook VSTO Add-in project  
+#### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>新しい Outlook VSTO アドイン プロジェクトを作成するには  
   
-1.  In [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], create an Outlook VSTO Add-in project with the name **Ribbon_Update_At_Runtime**.  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、名前の Outlook VSTO アドイン プロジェクトを作成**Ribbon_Update_At_Runtime**です。  
   
-2.  In the **New Project** dialog box, select **Create directory for solution**.  
+2.  **[新しいプロジェクト]** ダイアログ ボックスの **[ソリューションのディレクトリを作成]**チェック ボックスをオンにします。  
   
-3.  Save the project to the default project directory.  
+3.  プロジェクトを既定のプロジェクト ディレクトリに保存します。  
   
-     For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+     詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
   
-## <a name="designing-a-custom-ribbon-group"></a>Designing a Custom Ribbon Group  
- The Ribbon for this example will appear when a user composes a new mail message. To create a custom group for the Ribbon, first add a Ribbon item to your project, and then design the group in the Ribbon Designer. This custom group will help you generate follow-up e-mail messages to customers by pulling names and order histories from a database.  
+## <a name="designing-a-custom-ribbon-group"></a>カスタム リボン グループのデザイン  
+ この例のリボンは、ユーザーが新しいメール メッセージを作成するときに表示されます。 リボンのカスタム グループを作成するには、最初にプロジェクトにリボン項目を追加し、次にリボン デザイナーでグループをデザインします。 このカスタム グループを使用して、データベースから顧客名と注文履歴を取得し、顧客へのフォローアップ電子メール メッセージを作成できます。  
   
-#### <a name="to-design-a-custom-group"></a>To design a custom group  
+#### <a name="to-design-a-custom-group"></a>カスタム グループをデザインするには  
   
-1.  On the **Project** menu, click **Add New Item**.  
+1.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
   
-2.  In the **Add New Item** dialog box, select **Ribbon (Visual Designer)**.  
+2.  **[新しい項目の追加]** ダイアログ ボックスで、 **[リボン (ビジュアル デザイナー)]**をクリックします。  
   
-3.  Change the name of the new Ribbon to **CustomerRibbon**, and then click **Add**.  
+3.  新しいリボンの名前を変更**CustomerRibbon**、クリックして**追加**です。  
   
-     The **CustomerRibbon.cs** or **CustomerRibbon.vb** file opens in the Ribbon Designer and displays a default tab and group.  
+     **CustomerRibbon.cs**または**CustomerRibbon.vb**ファイルがリボン デザイナーで開き、既定のタブとグループが表示されます。  
   
-4.  Click the Ribbon Designer to select it.  
+4.  リボン デザイナーをクリックして選択します。  
   
-5.  In the **Properties** window, click the drop-down arrow next to the **RibbonType** property, and then click **Microsoft.Outlook.Mail.Compose**.  
+5.  **プロパティ**ウィンドウで、横にドロップダウン矢印をクリックして、 **[ribbontype]**プロパティ、およびクリック**[microsoft.outlook.mail.compose]**です。  
   
-     This enables the Ribbon to appear when the user composes a new mail message in Outlook.  
+     これにより、ユーザーが Outlook で新しいメール メッセージを作成するときにリボンが表示されます。  
   
-6.  In the Ribbon Designer, click **Group1** to select it.  
+6.  リボン デザイナーでクリックして**Group1**をオンにします。  
   
-7.  In the **Properties** window, set **Label** to **Customer Purchases**.  
+7.  **プロパティ**ウィンドウで、設定**ラベル**に**Customer Purchases**です。  
   
-8.  From the **Office Ribbon Controls** tab of the **Toolbox**, drag a **ComboBox** onto the **Customer Purchases** group.  
+8.  **Office リボン コントロール**のタブ、**ツールボックス**、ドラッグ、 **ComboBox**上に、 **Customer Purchases**グループ。  
   
-9. Click **ComboBox1** to select it.  
+9. をクリックして**ComboBox1**をオンにします。  
   
-10. In the **Properties** window, set **Label** to **Customers**.  
+10. **プロパティ**ウィンドウで、設定**ラベル**に**顧客**です。  
   
-11. From the **Office Ribbon Controls** tab of the **Toolbox**, drag a **Menu** onto the **Customer Purchases** group.  
+11. **Office リボン コントロール**のタブ、**ツールボックス**、ドラッグ、**メニュー**上に、 **Customer Purchases**グループ。  
   
-12. In the **Properties** window, set **Label** to **Product Purchased**.  
+12. **プロパティ**ウィンドウで、設定**ラベル**に**製品を購入**です。  
   
-13. Set **Dynamic** to **true**.  
+13. 設定**動的**に**true**です。  
   
-     This enables you to add and remove controls on the menu at run time after the Ribbon is loaded into the Office application.  
+     これにより、実行時にリボンが Office アプリケーションに読み込まれた後で、メニュー上のコントロールを追加および削除できます。  
   
-## <a name="adding-the-custom-group-to-a-built-in-tab"></a>Adding the Custom Group to a Built-in Tab  
- A built-in tab is a tab that is already on the Ribbon of an Outlook Explorer or Inspector. In this procedure, you will add the custom group to a built-in tab, and then specify the position of the custom group on the tab.  
+## <a name="adding-the-custom-group-to-a-built-in-tab"></a>組み込みタブへのカスタム グループの追加  
+ 組み込みタブは、Outlook エクスプローラーまたはインスペクターのリボンに始めから含まれているタブです。 この手順では、組み込みタブにカスタム グループを追加し、タブ上のカスタム グループの位置を指定します。  
   
-#### <a name="to-add-the-custom-group-to-a-built-in-tab"></a>To add the custom group to a built-in tab  
+#### <a name="to-add-the-custom-group-to-a-built-in-tab"></a>組み込みタブにカスタム グループを追加するには  
   
-1.  Click the **TabAddins (Built-In)** tab to select it.  
+1.  クリックして、 **TabAddins (ビルトイン)**  タブを選択します。  
   
-2.  In the **Properties** window, expand the **ControlId** property, and then set **OfficeId** to **TabNewMailMessage**.  
+2.  **プロパティ**ウィンドウで、展開、 **ControlId**プロパティ、および設定**OfficeId**に**「tabnewmailmessage」**です。  
   
-     This adds the **Customer Purchases** group to the **Messages** tab of the Ribbon that appears in a new mail message.  
+     これを追加、 **Customer Purchases**グループに、**メッセージ**新しいメール メッセージに表示されるリボンのタブです。  
   
-3.  Click the **Customer Purchases** group to select it.  
+3.  クリックして、 **Customer Purchases**グループを選択します。  
   
-4.  In the **Properties** window, expand the **Position** property, click the drop-down arrow next to the **PositionType** property, and then click **BeforeOfficeId**.  
+4.  **プロパティ**ウィンドウで、展開、**位置**プロパティの横のドロップダウン矢印をクリックして、 **PositionType**プロパティ、およびクリック**[Beforeofficeid]**です。  
   
-5.  Set the **OfficeId** property to **GroupClipboard**.  
+5.  設定、 **OfficeId**プロパティを**「groupclipboard」**です。  
   
-     This positions the **Customer Purchases** group before the **Clipboard** group of the **Messages** tab.  
+     配置、 **Customer Purchases**する前にグループ化、**クリップボード**のグループ、**メッセージ**タブです。  
   
-## <a name="creating-the-data-source"></a>Creating the Data Source  
- Use the **Data Sources** window to add a typed dataset to your project.  
+## <a name="creating-the-data-source"></a>データ ソースの作成  
+ **[データ ソース]** ウィンドウを使用して、型指定されたデータセットをプロジェクトに追加します。  
   
-#### <a name="to-create-the-data-source"></a>To create the data source  
+#### <a name="to-create-the-data-source"></a>データ ソースを作成するには  
   
-1.  On the **Data** menu, click **Add New Data Source**.  
+1.  **[データ]** メニューの **[新しいデータ ソースの追加]**をクリックします。  
   
-     This starts the **Data Source Configuration Wizard**.  
+     起動、**データ ソース構成ウィザード**です。  
   
-2.  Select **Database**, and then click **Next**.  
+2.  選択**データベース**、順にクリック**次**です。  
   
-3.  Select **Dataset**, and then click **Next**.  
+3.  選択**データセット**、順にクリック**次**です。  
   
-4.  Select a data connection to the Northwind sample Microsoft SQL Server Compact 4.0 database, or add a new connection by using the **New Connection** button.  
+4.  Northwind サンプルの Microsoft SQL Server Compact 4.0 データベースへのデータ接続を選択するかを使用して新しい接続を追加、**新しい接続**ボタンをクリックします。  
   
-5.  After a connection has been selected or created, click **Next**.  
+5.  接続を選択または作成した後にをクリックして**次**です。  
   
-6.  Click **Next** to save the connection string.  
+6.  をクリックして**次**を接続文字列を保存します。  
   
-7.  On the **Choose Your Database Objects** page, expand **Tables**.  
+7.  **データベース オブジェクトの選択** ページで、展開**テーブル**です。  
   
-8.  Select the check box next to each of the following tables:  
+8.  次の各テーブルの横にあるチェック ボックスをオンにします。  
   
-    1.  **Customers**  
+    1.  **顧客**  
   
-    2.  **Order Details**  
+    2.  **注文の詳細**  
   
-    3.  **Orders**  
+    3.  **注文**  
   
-    4.  **Products**  
+    4.  **製品**  
   
-9. Click **Finish**.  
+9. **[完了]**をクリックします。  
   
-## <a name="updating-controls-in-the-custom-group-at-run-time"></a>Updating Controls in the Custom Group at Run Time  
- Use the Ribbon object model to perform the following tasks:  
+## <a name="updating-controls-in-the-custom-group-at-run-time"></a>実行時のカスタム グループ内のコントロールの更新  
+ リボン オブジェクト モデルを使用して、以下のタスクを実行します。  
   
--   Add customer names to the **Customers** combo box.  
+-   顧客名を追加、**顧客**コンボ ボックス。  
   
--   Add menu and button controls to the **Products Purchased** menu that represent sales orders and products sold.  
+-   メニューおよびボタン コントロールを追加、 **Products Purchased**販売注文および製品を表すメニュー販売します。  
   
--   Populate the To, Subject, and Body fields of new mail messages by using data from the **Customers** combo box and **Products Purchased** menu.  
+-   設定に、件名、および本文からデータを使用して、新しいメール メッセージのフィールド、**顧客**コンボ ボックスと**の製品を購入**メニュー。  
   
-#### <a name="to-update-controls-in-the-custom-group-by-using-the-ribbon-object-model"></a>To update controls in the custom group by using the Ribbon object model  
+#### <a name="to-update-controls-in-the-custom-group-by-using-the-ribbon-object-model"></a>リボン オブジェクト モデルを使用してカスタム グループのコントロールを更新するには  
   
-1.  On the **Project** menu, click **Add Reference**.  
+1.  **[プロジェクト]** メニューの **[参照の追加]** をクリックします。  
   
-2.  In the **Add Reference** dialog box, click the **.NET** tab, select the **System.Data.Linq** assembly, and then click **OK**.  
+2.  **参照の追加**ダイアログ ボックスで、をクリックして、 **.NET** ] タブで、[、 **System.Data.Linq**アセンブリ、およびクリック**[ok]**です。  
   
-     This assembly contains classes for using Language-Integrated Queries (LINQ). You will use LINQ to populate controls in the custom group with data from the Northwind database.  
+     このアセンブリには、統合言語クエリ (LINQ) を使用するためのクラスが含まれています。 ここでは、LINQ を使用して Northwind データベースから取得したデータをカスタム グループのコントロールに読み込みます。  
   
-3.  In **Solution Explorer**, click **CustomerRibbon.cs** or **CustomerRibbon.vb** to select it.  
+3.  **ソリューション エクスプ ローラー**をクリックして**CustomerRibbon.cs**または**CustomerRibbon.vb**をオンにします。  
   
-4.  On the **View** menu, click **Code**.  
+4.  **ビュー**  メニューのをクリックして**コード**です。  
   
-     The Ribbon code file opens in the Code Editor.  
+     コード エディターでリボン コード ファイルが開きます。  
   
-5.  Add the following statements to the top of the Ribbon code file. These statements provide easy access to LINQ namespaces and to the namespace of the Outlook primary interop assembly (PIA).  
+5.  リボン コード ファイルの先頭に次のステートメントを追加します。 これらのステートメントによって、LINQ 名前空間や Outlook プライマリ相互運用機能アセンブリ (PIA) の名前空間に簡単にアクセスできます。  
   
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#1](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#1)]  [!code-vb[Trin_Ribbon_Update_At_Runtime#1](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#1)]  
+     [!code-csharp[Trin_Ribbon_Update_At_Runtime#1](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#1)]
+     [!code-vb[Trin_Ribbon_Update_At_Runtime#1](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#1)]  
   
-6.  Add the following code inside the CustomerRibbon class. This code declares the data table and table adapters that you will use to store information from the Customer, Orders, Order Details, and Product tables of the Northwind database.  
+6.  CustomerRibbon クラス内に次のコードを追加します。 このコードは、Northwind データベースの Customer、Orders、Order Details、および Product テーブルから取得した情報を格納するために使用するデータ テーブルおよびテーブル アダプターを宣言します。  
   
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#2](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#2)]  [!code-vb[Trin_Ribbon_Update_At_Runtime#2](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#2)]  
+     [!code-csharp[Trin_Ribbon_Update_At_Runtime#2](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#2)]
+     [!code-vb[Trin_Ribbon_Update_At_Runtime#2](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#2)]  
   
-7.  Add the following block of code to the `CustomerRibbon` class. This code adds three helper methods that create controls for the Ribbon at runtime.  
+7.  `CustomerRibbon` クラスに次のコード ブロックを追加します。 このコードは、実行時にリボンのコントロールを作成する 3 つのヘルパー メソッドを追加します。  
   
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#3](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#3)]  [!code-vb[Trin_Ribbon_Update_At_Runtime#3](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#3)]  
+     [!code-csharp[Trin_Ribbon_Update_At_Runtime#3](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#3)]
+     [!code-vb[Trin_Ribbon_Update_At_Runtime#3](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#3)]  
   
-8.  Replace the `CustomerRibbon_Load` event handler method with the following code. This code uses a LINQ query to perform the following tasks:  
+8.  `CustomerRibbon_Load` イベント ハンドラー メソッドを次のコードで置き換えます。 このコードは、LINQ クエリを使用して以下のタスクを実行します。  
   
-    -   Populate the **Customers** combo box by using the ID and name of 20 customers in the Northwind database.  
+    -   追加、**顧客**Northwind データベースの ID と 20 の顧客の名前を使用して、コンボ ボックス。  
   
-    -   Calls the `PopulateSalesOrderInfo` helper method. This method updates the **ProductsPurchased** menu with sales order numbers that pertain to the currently selected customer.  
+    -   `PopulateSalesOrderInfo` ヘルパー メソッドを呼び出す。 このメソッドは、更新、 **ProductsPurchased**メニューには、現在選択されている顧客に関連する販売注文番号。  
   
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#4)] [!code-vb[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#4)]  
+     [!code-csharp[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#4)]
+     [!code-vb[Trin_Ribbon_Update_At_Runtime#4](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#4)]  
   
-9. Add the following code to the `CustomerRibbon` class. This code uses LINQ queries to perform the following tasks:  
+9. `CustomerRibbon` クラスに次のコードを追加します。 このコードは、LINQ クエリを使用して以下のタスクを実行します。  
   
-    -   Adds a submenu to the **ProductsPurchased** menu for each sales order related to the selected customer.  
+    -   サブメニューを追加、 **ProductsPurchased**選択した顧客に関連する販売注文ごとにメニュー。  
   
-    -   Adds buttons to each submenu for the products related to the sales order.  
+    -   販売注文に関連する製品を示すボタンを各サブメニューに追加する。  
   
-    -   Adds event handlers to each button.  
+    -   各ボタンにイベントハンドラーを追加する。  
   
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#6)] [!code-vb[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#6)]  
+     [!code-csharp[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#6)]
+     [!code-vb[Trin_Ribbon_Update_At_Runtime#6](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#6)]  
   
-10. In **Solution Explorer**, double-click the Ribbon code file.  
+10. **ソリューション エクスプ ローラー**、リボン コード ファイルをダブルクリックします。  
   
-     The Ribbon Designer opens.  
+     リボン デザイナーが開きます。  
   
-11. In the Ribbon Designer, double-click the **Customers** combo box.  
+11. リボン デザイナーで、ダブルクリック、**顧客**コンボ ボックス。  
   
-     The Ribbon code file opens in the Code Editor, and the `ComboBox1_TextChanged` event handler appears.  
+     リボン コード ファイルがコード エディターで開き、`ComboBox1_TextChanged` イベント ハンドラーが表示されます。  
   
-12. Replace the `ComboBox1_TextChanged` event handler with the following code. This code performs the following tasks:  
+12. `ComboBox1_TextChanged` イベント ハンドラーを次のコードで置き換えます。 このコードは次のタスクを実行します。  
   
-    -   Calls the `PopulateSalesOrderInfo` helper method. This method updates the **Products Purchased** menu with sales orders that relate to the selected customer.  
+    -   `PopulateSalesOrderInfo` ヘルパー メソッドを呼び出す。 このメソッドは、更新、 **Products Purchased**メニューには、選択した顧客に関連する販売注文します。  
   
-    -   Calls the `PopulateMailItem` helper method and passes in the current text, which is the selected customer name. This method populates the To, Subject, and Body fields of new mail messages.  
+    -   `PopulateMailItem` ヘルパー メソッドを呼び出し、現在のテキスト (つまり、選択されている顧客の名前) を渡します。 このメソッドに、件名、および本文を作成する新しいメール メッセージのフィールドです。  
   
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#5](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#5)] [!code-vb[Trin_Ribbon_Update_At_Runtime#5](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#5)]  
+     [!code-csharp[Trin_Ribbon_Update_At_Runtime#5](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#5)]
+     [!code-vb[Trin_Ribbon_Update_At_Runtime#5](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#5)]  
   
-13. Add the following Click event handler to the `CustomerRibbon` class. This code adds the name of selected products to the Body field of new mail messages.  
+13. `CustomerRibbon` クラスに以下の Click イベント ハンドラーを追加します。 このコードは、新しいメール メッセージの本文 フィールドに、選択した製品の名前を追加します。  
   
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#8)]  [!code-vb[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#8)]  
+     [!code-csharp[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#8)]
+     [!code-vb[Trin_Ribbon_Update_At_Runtime#8](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#8)]  
   
-14. Add the following code to the `CustomerRibbon` class. This code performs the following tasks:  
+14. `CustomerRibbon` クラスに次のコードを追加します。 このコードは次のタスクを実行します。  
   
-    -   Populates the To line of new mail messages by using the e-mail address of the currently selected customer.  
+    -   現在選択されている顧客の電子メール アドレスを使用して、新しいメール メッセージの宛先行を追加します。  
   
-    -   Adds text to the Subject and Body fields of new mail messages.  
+    -   新しいメール メッセージの件名と本文のフィールドにテキストを追加します。  
   
-     [!code-csharp[Trin_Ribbon_Update_At_Runtime#7](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#7)] [!code-vb[Trin_Ribbon_Update_At_Runtime#7](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#7)]  
+     [!code-csharp[Trin_Ribbon_Update_At_Runtime#7](../vsto/codesnippet/CSharp/Ribbon_Update_At_Runtime/CustomerRibbon.cs#7)]
+     [!code-vb[Trin_Ribbon_Update_At_Runtime#7](../vsto/codesnippet/VisualBasic/Ribbon_Update_At_Runtime/CustomerRibbon.vb#7)]  
   
-## <a name="testing-the-controls-in-the-custom-group"></a>Testing the Controls in the Custom Group  
- When you open a new mail form in Outlook, a custom group named **Customer Purchases** appears on the **Messages** tab of the Ribbon.  
+## <a name="testing-the-controls-in-the-custom-group"></a>カスタム グループのコントロールのテスト  
+ Outlook でメールに新しいフォームを開くときにカスタムという名前のグループ**Customer Purchases**に表示されます、**メッセージ**リボンのタブです。  
   
- To create a customer follow-up e-mail message, select a customer, and then select products purchased by the customer. The controls in the **Customer Purchases** group are updated at run time with data from the Northwind database.  
+ 顧客へのフォローアップ電子メール メッセージを作成するには、顧客を選択し、その顧客が購入した製品を選択します。 内のコントロール、 **Customer Purchases**グループは、Northwind データベースからのデータでの実行時に更新されます。  
   
-#### <a name="to-test-the-controls-in-the-custom-group"></a>To test the controls in the custom group  
+#### <a name="to-test-the-controls-in-the-custom-group"></a>カスタム グループのコントロールをテストするには  
   
-1.  Press F5 to run your project.  
+1.  F5 キーを押してプロジェクトを実行します。  
   
-     Outlook starts.  
+     Outlook が起動します。  
   
-2.  In Outlook, on the **File** menu, point to **New**, and then click **Mail Message**.  
+2.  Outlook では、上、**ファイル** メニューのをポイント**新規**、クリックして**メール メッセージ**です。  
   
-     The following actions occur:  
+     次の操作が行われます。  
   
-    -   A new mail message Inspector window appears.  
+    -   新しいメール メッセージのインスペクター ウィンドウが表示されます。  
   
-    -   On the **Message** tab of the Ribbon, the **Customer Purchases** group appears before the **Clipboard** group.  
+    -   **メッセージ**、リボンのタブ、 **Customer Purchases**前にグループが表示されます、**クリップボード**グループ。  
   
-    -   The **Customers** combo box in the group is updated with the names of customers in the Northwind database.  
+    -   **顧客**グループ内のコンボ ボックスが Northwind データベース内の顧客の名前で更新します。  
   
-3.  On the **Message** tab of the Ribbon, in the **Customer Purchases** group, select a customer from the **Customers** combo box.  
+3.  **メッセージ**リボンのタブで、 **Customer Purchases**グループから顧客を選択して、**顧客**コンボ ボックス。  
   
-     The following actions occur:  
+     次の操作が行われます。  
   
-    -   The **Products Purchased** menu is updated to show each sales order for the selected customer.  
+    -   **Products Purchased**メニューが更新され、選択した顧客の各販売注文を表示します。  
   
-    -   Each sales order submenu is updated to show the products purchased in that order.  
+    -   個々の販売注文サブメニューが、その注文で購入された商品を示すように更新されます。  
   
-    -   The selected customer's e-mail address is added to the **To** line of the mail message, and the subject and body of the mail message are populated with text.  
+    -   選択した顧客の電子メール アドレスに追加、**に**テキスト メッセージ、および件名とメール メッセージの本文の行が挿入されます。  
   
-4.  Click the **Products Purchases** menu, point to any sales order, and then click a product from the sales order.  
+4.  クリックして、 **Products Purchases** ] メニューの [任意の販売注文をポイントし、販売注文から製品を順にクリックします。  
   
-     The product name is added to the body of the mail message.  
+     製品の名前がメール メッセージの本文に追加されます。  
   
-## <a name="next-steps"></a>Next Steps  
- You can learn more about how to customize the Office UI from these topics:  
+## <a name="next-steps"></a>次の手順  
+ Office UI をカスタマイズする方法の詳細については、次のトピックで説明します。  
   
--   Add context-based UI to any document-level customization. For more information, see [Actions Pane Overview](../vsto/actions-pane-overview.md).  
+-   ドキュメント レベルのカスタマイズにコンテキスト ベースの UI を追加する。 詳細については、「 [Actions Pane Overview](../vsto/actions-pane-overview.md)」を参照してください。  
   
--   Extend a standard or custom Microsoft Office Outlook form. For more information, see [Walkthrough: Designing an Outlook Form Region](../vsto/walkthrough-designing-an-outlook-form-region.md).  
+-   標準またはカスタムの Microsoft Office Outlook フォームを拡張する。 詳細については、次を参照してください。[チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)です。  
   
--   Add a custom task pane to Outlook. For more information, see [Custom Task Panes](../vsto/custom-task-panes.md).  
+-   Outlook にカスタム作業ウィンドウを追加する。 詳細については、次を参照してください。[カスタム作業ウィンドウの](../vsto/custom-task-panes.md)します。  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>関連項目  
  [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
- [Ribbon Overview](../vsto/ribbon-overview.md)   
- [Language-Integrated Query (LINQ)](/dotnet/csharp/linq/index)   
- [How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md)   
- [Ribbon Designer](../vsto/ribbon-designer.md)   
- [Walkthrough: Creating a Custom Tab by Using the Ribbon Designer](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
- [Ribbon Object Model Overview](../vsto/ribbon-object-model-overview.md)   
- [Customizing a Ribbon for Outlook](../vsto/customizing-a-ribbon-for-outlook.md)   
- [How to: Change the Position of a Tab on the Ribbon](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)   
- [How to: Customize a Built-in Tab](../vsto/how-to-customize-a-built-in-tab.md)   
- [How to: Add Controls to the Backstage View](../vsto/how-to-add-controls-to-the-backstage-view.md)   
- [How to: Export a Ribbon from the Ribbon Designer to Ribbon XML](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)   
- [How to: Show Add-in User Interface Errors](../vsto/how-to-show-add-in-user-interface-errors.md)  
+ [リボンの概要](../vsto/ribbon-overview.md)   
+ [統合言語クエリ (LINQ)](/dotnet/csharp/linq/index)   
+ [方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)   
+ [リボン デザイナー](../vsto/ribbon-designer.md)   
+ [チュートリアル: リボン デザイナーを使用してカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
+ [リボン オブジェクト モデルの概要](../vsto/ribbon-object-model-overview.md)   
+ [Outlook のリボンのカスタマイズ](../vsto/customizing-a-ribbon-for-outlook.md)   
+ [方法: リボンのタブの位置を変更](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)   
+ [方法: 組み込みタブをカスタマイズします。](../vsto/how-to-customize-a-built-in-tab.md)   
+ [方法: コントロール Backstage ビューを追加します。](../vsto/how-to-add-controls-to-the-backstage-view.md)   
+ [方法: リボン デザイナーからリボン XML にエクスポート](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)   
+ [方法: アドインのユーザー インターフェイス エラーを表示する](../vsto/how-to-show-add-in-user-interface-errors.md)  
   
   

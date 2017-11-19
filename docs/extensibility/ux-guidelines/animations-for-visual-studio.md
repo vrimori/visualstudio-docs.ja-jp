@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 04/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 446773a9-e6f7-4c0c-8dbc-9e303bf32eb1
-caps.latest.revision: 2
+caps.latest.revision: "2"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9524ecc3cadef58821fba857de8e82e59eea9b43
-ms.openlocfilehash: b36b5e35758ad10109328d6f001e043ad7dcbe15
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/04/2017
-
+ms.openlocfilehash: 6a554a52fc5ef42f81d1531dbe63bf320e1cd72e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="animations-for-visual-studio"></a>Visual Studio のアニメーション
 ## <a name="animation-fundamentals"></a>アニメーションの基礎  
@@ -81,7 +66,7 @@ Visual Studio IDE で一貫してユーザー フレンドリなアニメーシ�
   
 -   ユーザーは、現在フォーカスされているオブジェクトに関連付けられていないまたはとの対話のアニメーションを使用しないでください。  
   
--   点滅の停止を行うために点滅通知に応答する、ユーザーと同様に、状態をリセットするユーザーとの対話を必要とするアニメーションを使用しないでください。 任意の方法でやり取りすると、それらを消去するための十分なことがあります。  
+-   点滅の停止を行うために点滅通知に応答する、ユーザーと同様に、状態をリセットするユーザーとの対話を必要とするアニメーションを使用しないでください。 任意の方法でとやり取りすると、それらを消去するための十分なことがあります。  
   
 これらのベスト プラクティスのアプリケーションの詳細については、次を参照してください。[アニメーション パターン](../../extensibility/ux-guidelines/animations-for-visual-studio.md#BKMK_AnimationPatterns)です。  
   
@@ -98,9 +83,9 @@ Visual Studio IDE で一貫してユーザー フレンドリなアニメーシ�
 -   読み込み時間を計算することはできませんが、カーソルや埋め込みの回転アニメーション (読み込みまたは操作の評価指標) のようなビジー状態インジケーターは適切です。  
   
 ### <a name="animation-as-communicator"></a>Communicator とアニメーション  
-Visual Studio の UI では、アニメーションは、コミュニケーション ツールとしてのみ機能します。  さまざまな構造の変更 (たとえば、メニューを開くか、閉じ) UI でなどの情報を通信するために使用されます。 アニメーションは、インストールの進行状況の視覚化と同様に、複雑なシステムの時間に依存する動作を視覚化することができます。 アニメーションは、アラートと通知の注意を引くためも使用できます。  
+Visual Studio の UI では、アニメーションは、コミュニケーション ツールとしてのみ機能します。  さまざまな構造の変更 (たとえば、メニューを開くか、閉じ) UI でなどの情報を通信するために使用されます。 アニメーションは、インストールの進行状況の視覚化と同様に、複雑なシステムの時間に依存する動作を視覚化することができます。 アニメーションは、アラートと通知の注意を引くためにも使用できます。  
   
- UI のアニメーションが通常 4 つの方法で機能: 視覚化、読者の注意をシミュレートして応答時間/進行状況インジケーター。  
+ UI のアニメーションが通常 4 つの方法で機能: 視覚化、読者の注意、シミュレート、および応答時間/進行状況インジケーター。  
   
 #### <a name="visualize"></a>視覚化  
 アニメーションは、オブジェクトの 3 次元の性質を強調し、その空間構造を視覚化やすくできます。 これを実現するには、アニメーション可能性があります必要があります、オブジェクトの完全な円を回転する緩やかに変化前後にまたは近いオブジェクトし若干ロール オーバーまたはフォーカスを強調するには、そのサイズを大ききます。  
@@ -160,7 +145,7 @@ Visual Studio の UI では、アニメーションは、コミュニケーシ�
   
 -   画像を反転させる  
   
-##### <a name="time"></a>時刻  
+##### <a name="time"></a>時間  
   
 -   時間、時間経過およびスクリーン キャスト変化の表示  
   
@@ -205,7 +190,7 @@ Visual Studio の UI では、アニメーションは、コミュニケーシ�
 -   反転と回転 UI  
   
 #### <a name="response-and-progress-indicators"></a>応答と進行状況インジケーター  
-進行状況インジケーターには、複数の主な利点があります。  
+進行状況インジケーターでは、いくつかの重要な利点があります。  
   
 -   両方の不確定であると、不確定な進行状況のインジケーターは、ユーザーをシステムがクラッシュしましたいないと、問題に取り組んでいますを組み込みます。  
   
@@ -228,12 +213,12 @@ Visual Studio でのアニメーションは、ユーザーの生産性を低下
   
 この図は、Visual Studio のことをお勧めアニメーションのスタイルを示しています。 アニメーションまたは繊細なアニメーションのフェードイン/フェードアウトと同じように、最も頻繁には使用されません。 展開し、縮小などの動きのアニメーションの制限のあるアプリケーションがある、X と Y 位置の変更、および回転します。 
   
-![Visual Studio の推奨されるアニメーションのスタイル](../../extensibility/ux-guidelines/media/1202-a_vsanimstyles.png "1202-a_VSAnimStyles")<br />Visual Studio で推奨されるアニメーションのスタイル
+![Visual Studio のアニメーションのスタイルをお勧め](../../extensibility/ux-guidelines/media/1202-a_vsanimstyles.png "1202 a_VSAnimStyles")<br />Visual Studio で推奨されるアニメーションのスタイル
   
 #### <a name="appear-and-disappear"></a>表示または非表示  
 このパターンでは、アウト視野へと遷移のアニメーションすることがなくも、要素は表示から切り替わります。  
   
-![表示またはアニメーションを非表示](../../extensibility/ux-guidelines/media/1202-b_appearanddisappear.png "1202-b_AppearAndDisappear")<br />表示またはアニメーションを非表示  
+![表示または非表示アニメーション](../../extensibility/ux-guidelines/media/1202-b_appearanddisappear.png "1202 b_AppearAndDisappear")<br />表示またはアニメーションを非表示  
   
 ##### <a name="correct-usage"></a>正しい使用法  
 最新の UI 要素即座に表示/非表示できるように、ユーザーが気を取られるも障害物をする必要があります。 さらに、アニメーションの低速移動は、パフォーマンス ドラッグ、および非表示で表示スタイルでは発生しませんと認識される可能性があります。  
@@ -254,7 +239,7 @@ Visual Studio でのアニメーションは、ユーザーの生産性を低下
 #### <a name="fade-in-and-fade-out"></a>フェードインとフェードアウト  
 このパターンで UI 要素は表示されません (0% 不透明度) から遷移表示 (100% の不透明度) またはその逆です。  
   
-![アニメーションのフェードインとフェードアウト](../../extensibility/ux-guidelines/media/1202-c_fadeinfadeout.png "1202-c_FadeInFadeOut")<br />アニメーションのフェードインとフェードアウト  
+![アニメーションのフェードインとフェードアウト](../../extensibility/ux-guidelines/media/1202-c_fadeinfadeout.png "1202 c_FadeInFadeOut")<br />アニメーションのフェードインとフェードアウト  
   
 ##### <a name="correct-usage"></a>正しい使用法  
 これにより、UI アニメーションは、特に一般的な推奨します。 フロー中断することがなく関心を追加する微妙な影響することをお勧めします。 場合によっては、ユーザー可能性がありますいないことを認識して、アニメーションがスムーズ知覚認識と UI システムをフローさせます。  
@@ -280,7 +265,7 @@ Visual Studio でのアニメーションは、ユーザーの生産性を低下
 #### <a name="color-blend-from-a-to-b"></a>A から B へのカラー ブレンド  
 このパターンで UI 要素の色をカラーに変更 B.  
   
-![カラー ブレンド アニメーション](../../extensibility/ux-guidelines/media/1202-d_colorblend.png "1202-d_ColorBlend")<br />カラー ブレンド アニメーション  
+![カラー ブレンド アニメーション](../../extensibility/ux-guidelines/media/1202-d_colorblend.png "1202 d_ColorBlend")<br />カラー ブレンド アニメーション  
   
 ##### <a name="correct-usage"></a>正しい使用法  
 UI 要素の色から 1 つのコンテキストまたは状態別に変更する場合は、アニメーションの遷移として。  
@@ -304,10 +289,10 @@ UI 要素の色から 1 つのコンテキストまたは状態別に変更す�
 #### <a name="expand-and-contract"></a>展開し、縮小  
 このパターンで UI 要素は、X、Y、または双方向に展開します。  
   
-![展開し、コントラクトのアニメーション](../../extensibility/ux-guidelines/media/1202-e_expandcontract.png "1202-e_ExpandContract")<br />展開し、コントラクトのアニメーション  
+![展開し、縮小アニメーション](../../extensibility/ux-guidelines/media/1202-e_expandcontract.png "1202 e_ExpandContract")<br />展開し、コントラクトのアニメーション  
   
 ##### <a name="correct-usage"></a>正しい使用法  
-UI 要素が 1 つのコンテキストから別のサイズを変更したときに、アニメーションの遷移として。  
+UI 要素が別の 1 つのコンテキストからサイズを変更したときに、アニメーションの遷移として。  
   
 ##### <a name="animation-properties"></a>アニメーションのプロパティ  
   
@@ -328,7 +313,7 @@ UI 要素が 1 つのコンテキストから別のサイズを変更したと�
 #### <a name="x-y-position-change"></a>X と Y 位置の変更  
 このパターンでは、UI 要素は、X または Y の位置またはその両方を変更します。  
   
-![X と Y 位置変更アニメーション](~/extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />X と Y 位置変更アニメーション  
+![X と Y の位置変更アニメーション](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202 f_XYPositionChange")<br />X と Y 位置変更アニメーション  
   
 ##### <a name="correct-usage"></a>正しい使用法  
 UI 要素が 1 つのコンテキストから別の位置を変更したときに、アニメーションの遷移とします。  
@@ -351,7 +336,7 @@ UI 要素が 1 つのコンテキストから別の位置を変更したとき�
 #### <a name="rotate"></a>回転  
 このパターンで UI 要素を回転します。  
   
-![UI 要素の回転アニメーション](~/extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />UI 要素の回転アニメーション  
+![UI 要素の回転アニメーション](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202 g_Rotate")<br />UI 要素の回転アニメーション  
   
 ##### <a name="correct-usage"></a>正しい使用法  
 不確定な回転の進行状況インジケーターに対してのみ。  
@@ -370,56 +355,56 @@ UI 要素が 1 つのコンテキストから別の位置を変更したとき�
 ### <a name="common-shell-ui-actions-and-recommended-animations"></a>一般的なシェルの UI 操作と推奨されるアニメーション  
   
 #### <a name="tab-open"></a>開いているタブします。  
-![タブを開くアニメーション](../../extensibility/ux-guidelines/media/1202-h_tabopen.png "1202-h_TabOpen")<br />タブを開くアニメーション  
+![タブを開くアニメーション](../../extensibility/ux-guidelines/media/1202-h_tabopen.png "1202 h_TabOpen")<br />タブを開くアニメーション  
     
 -   スタイル: 表示  
   
 -   期間: 0 秒  
 
 #### <a name="tab-close"></a>タブを閉じる  
-![タブを閉じるアニメーション](../../extensibility/ux-guidelines/media/1202-i_tabclose.png "1202-i_TabClose")<br />タブを閉じるアニメーション  
+![タブを閉じるアニメーション](../../extensibility/ux-guidelines/media/1202-i_tabclose.png "1202 i_TabClose")<br />タブを閉じるアニメーション  
   
 -   Style: 次の X 位置を変更します。  
   
 -   200 ミリ秒の期間:  
   
 #### <a name="tab-reorder"></a>タブの順序変更  
-![Visual Studio でのタブの並べ替えアニメーション](../../extensibility/ux-guidelines/media/1202-j_tabreorder.png "1202-j_TabReorder")<br />タブの並べ替えアニメーション
+![Visual Studio での並べ替えアニメーションをタブ](../../extensibility/ux-guidelines/media/1202-j_tabreorder.png "1202 j_TabReorder")<br />タブの並べ替えアニメーション
 
 -   Style: 次の X 位置を変更します。  
   
 -   200 ミリ秒の期間:  
     
 #### <a name="close-floating-document"></a>フローティング ドキュメントを閉じる  
-![フローティング ドキュメントを閉じるアニメーション](../../extensibility/ux-guidelines/media/1202-k_closefloatingdocument.png "1202-k_CloseFloatingDocument")<br />フローティング ドキュメントを閉じるアニメーション  
+![フローティング ドキュメント アニメーション閉じる](../../extensibility/ux-guidelines/media/1202-k_closefloatingdocument.png "1202 k_CloseFloatingDocument")<br />フローティング ドキュメントを閉じるアニメーション  
    
 -   スタイル: 表示  
   
 -   200 ミリ秒の期間:   
  
 #### <a name="window-state-transition"></a>ウィンドウの状態遷移  
-![ウィンドウの状態遷移のアニメーション](../../extensibility/ux-guidelines/media/1202-l_windowstatetransition.png "1202-l_WindowStateTransition")<br />ウィンドウの状態遷移のアニメーション  
+![ウィンドウの状態遷移のアニメーション](../../extensibility/ux-guidelines/media/1202-l_windowstatetransition.png "1202 l_WindowStateTransition")<br />ウィンドウの状態遷移のアニメーション  
     
 -   Style: 一致するように他のウィンドウで、ドキュメントを閉じるアニメーションを定義する現在のオペレーティング システムを使用できます。  
   
 -   200 ミリ秒の期間:  
   
 #### <a name="menu-open"></a>メニューを開く  
-![メニューを開くアニメーション](../../extensibility/ux-guidelines/media/1202-m_menuopen.png "1202-m_MenuOpen")<br />メニューを開くアニメーション  
+![メニューを開くアニメーション](../../extensibility/ux-guidelines/media/1202-m_menuopen.png "1202 m_MenuOpen")<br />メニューを開くアニメーション  
     
 -   スタイル: フェードイン  
   
 -   200 ミリ秒の期間:  
   
 #### <a name="menu-close"></a>メニューを閉じる  
-![メニューを閉じるアニメーション](../../extensibility/ux-guidelines/media/1202-n_menuclose.png "1202-n_MenuClose")<br />メニューを閉じるアニメーション  
+![メニューを閉じるアニメーション](../../extensibility/ux-guidelines/media/1202-n_menuclose.png "1202 n_MenuClose")<br />メニューを閉じるアニメーション  
     
 -   スタイル: フェードアウト  
   
 -   200 ミリ秒の期間:  
   
 #### <a name="auto-hide-tool-window-reveal"></a>自動非表示ツール ウィンドウの表示  
-![自動非表示ツール ウィンドウの表示のアニメーション](../../extensibility/ux-guidelines/media/1202-o_autohidetoolwindowreveal.png "1202-o_AutoHideToolWindowReveal")<br />自動非表示ツール ウィンドウの表示のアニメーション  
+![ツール ウィンドウの表示のアニメーションを自動的に隠す](../../extensibility/ux-guidelines/media/1202-o_autohidetoolwindowreveal.png "1202 o_AutoHideToolWindowReveal")<br />自動非表示ツール ウィンドウの表示のアニメーション  
 
 -   スタイル: 表示  
   

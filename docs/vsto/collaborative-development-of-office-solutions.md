@@ -1,52 +1,54 @@
 ---
-title: "Office ソリューションの共同開発"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "共同開発 [Visual Studio での Office 開発]"
-  - "Office アプリケーション [Visual Studio での Office 開発], 共同開発"
-  - "Visual Studio での Office 開発, 共同"
-  - "ソース管理 [Visual Studio での Office 開発]"
+title: "Office ソリューションの共同開発 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office applications [Office development in Visual Studio], collaborative development
+- Office development in Visual Studio, collaboration
+- source control [Office development in Visual Studio]
+- collaborative development [Office development in Visual Studio]
 ms.assetid: c493354b-17d3-4e50-85f0-968b104bc978
-caps.latest.revision: 29
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 28
+caps.latest.revision: "29"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 94313e1e7cb8d6f36c5c8bfb505d280f4e235a3b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Office ソリューションの共同開発
-  Office プロジェクトでは、他の Visual Studio プロジェクトの場合と同じように、複数の開発者が共同で作業できます。  Visual Studio は、Microsoft Office が別の場所にインストールされていても、各コンピューターでその場所を正しく認識できます。  ただし、注意を必要とする重要な考慮事項もあります。  
+# <a name="collaborative-development-of-office-solutions"></a>Office ソリューションの共同開発
+  複数の開発者は、その他の Visual Studio プロジェクトで共同作業すると同じ方法で Office プロジェクトで作業できます。 Visual Studio は、別の場所で Office がインストールされている場合でも、各コンピューターに Microsoft Office のインストールを正しく検索します。 ただし、これには注意すべき重要な考慮事項があります。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## デバッグ プロパティは共有されない  
- デバッグ プロパティは、ソース管理で複数のユーザー間では共有されません。  Visual Basic プロジェクトや Visual C\# プロジェクトでは、デバッグ プロパティはユーザー固有のファイル \(*ProjectName*.vbproj.user または *ProjectName*.csproj.user\) に格納されます。このファイルはソース管理で管理されません。  複数のユーザーがデバッグを実行する場合は、各自が手動でデバッグ プロパティを入力する必要があります。  
+## <a name="debug-properties-are-not-shared"></a>デバッグ プロパティは共有されません  
+ デバッグ プロパティは、ソース管理で複数のユーザー間では共有されません。 Visual Basic および Visual c# プロジェクトでは、ユーザー固有のファイルのデバッグ プロパティを格納 (*ProjectName*. vbproj.user または*ProjectName*。 csproj.user)、このファイルはソース管理下にありません。 複数のユーザーがデバッグを実行する場合は、各自が手動でデバッグ プロパティを入力する必要があります。  
   
- プロジェクトがソース管理ではなくネットワーク共有にある場合は、共同開発者がソリューションを開いてアセンブリをテストできるようにするために、追加の手順が必要です。  
+ プロジェクトがソース管理の代わりにネットワーク共有に格納されている場合は、ソリューションを開き、アセンブリをテストする開発者が共同作業できるようにする、追加の手順を実行する必要があります。  
   
-## ソース管理ではすべてのファイルのチェックアウトが必要  
- プロジェクトでソース管理を使用する場合、コード ファイルを変更するたびに、**ソリューション エクスプローラー**でそのコード ファイルの下位にあるファイルを \(既定では非表示のものも含めて\) すべてチェックアウトする必要があります。  最上位のコード ファイルのみをチェックアウトすると、変更が失われることがあります。  
+## <a name="source-control-requires-checking-out-all-files"></a>ソース管理では、すべてのファイルをチェック アウトが必要です。  
+ で、プロジェクトをソース管理を使用する必要がありますをチェック アウトする、ファイル内のコード ファイルの下のすべて**ソリューション エクスプ ローラー** (、ThisDocument、ThisWorkbook、または ThisAddIn コード ファイルなど)、コード ファイルを変更するたびにも、既定で非表示になっているファイル。 最上位のコード ファイルのみをチェックする場合、変更内容は失われます。  
   
- 変更を加えた後で、すべてのファイルを再度チェックインします。  プロジェクトの非表示のコード ファイルに関する詳細については、「[Visual Studio 環境における Office プロジェクト](../vsto/office-projects-in-the-visual-studio-environment.md)」を参照してください。  
+ 変更を加えた後でバックアップのすべてのファイルを確認してください。 プロジェクトでは非表示のコード ファイルの詳細については、次を参照してください。 [Visual Studio 環境における Office プロジェクト](../vsto/office-projects-in-the-visual-studio-environment.md)です。  
   
-## ネットワーク上の共同作業のセキュリティ  
- ネットワーク場所 \(\\\\*Servername*\\*Sharename* など\) にあるドキュメント レベルのソリューションでは、作業している Microsoft Office アプリケーションの信頼できるフォルダーのリストに完全修飾位置を追加する必要があります。  メイン フォルダーの下位にあるサブディレクトリを含めるようにオプションを選択するか、デバッグ用のフォルダーとビルド用のフォルダーを信頼できるフォルダーのリストに具体的に追加します。  この方法の詳細については、「[ドキュメントへの信頼の付与](../vsto/granting-trust-to-documents.md)」を参照してください。  
+## <a name="security-for-informal-collaboration-on-a-network"></a>ネットワーク上の共同作業のセキュリティ  
+ ネットワークの場所にあるすべてのドキュメント レベルのソリューション (など\\ \\ *Servername*\\*Sharename*)、完全修飾の場所に追加する必要があります使用している Microsoft Office アプリケーションで信頼できるフォルダー一覧です。 メイン フォルダーの下のサブディレクトリを含めるまたは具体的にはデバッグを追加し、信頼できるフォルダー一覧にフォルダーを作成するオプションを選択します。 これを行う方法の詳細については、次を参照してください。[ドキュメントへの信頼の付与](../vsto/granting-trust-to-documents.md)です。  
   
- ビルド時に自動的に生成される一時的な証明書は、パスワードで保護されていません。  この証明書には、開発者のログイン名などの個人情報が含まれています。  一時的な証明書で署名したカスタマイズを配置すると、他のユーザーがこの情報にアクセスできる可能性があります。  
+ ビルド時に自動的に生成される一時的な証明書は、パスワードで保護されていません。 証明書には、開発者のログイン名とその他の個人情報が含まれます。 一時的な証明書によって署名されているカスタマイズを配置する場合は、この情報にアクセスできない他のユーザー必要があります。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
- [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)   
+ [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office ソリューションのビルド](../vsto/building-office-solutions.md)  
   
   

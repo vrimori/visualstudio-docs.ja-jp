@@ -1,27 +1,30 @@
 ---
-title: "IDebugDocumentTextEvents::onInsertText | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDebugDocumentTextEvents::onInsertText |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugDocumentTextEvents.onInsertText
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IDebugDocumentTextEvents::onInsertText"
+helpviewer_keywords: IDebugDocumentTextEvents::onInsertText
 ms.assetid: 775881de-497a-47a9-86ab-823d77745a72
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a00adb996711dc6364edd44babf0c3cde1595947
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugDocumentTextEvents::onInsertText
-新しいテキストでドキュメントに追加されたことを示します。  
+# <a name="idebugdocumenttexteventsoninserttext"></a>IDebugDocumentTextEvents::onInsertText
+新しいテキストがドキュメントに追加されたことを示します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT onInsertText(  
@@ -30,23 +33,23 @@ HRESULT onInsertText(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `cCharacterPosition`  
- \[入力\]新しいテキストを挿入する文字位置。  
+ [in]新しいテキストが挿入された文字位置。  
   
  `cNumToInsert`  
- \[入力\]挿入文字数。  
+ [in]挿入された文字数。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- このメソッドは、段階的にコンテンツを読み込む Web ブラウザーのような通常、ホストによって呼び出されます。  
+## <a name="remarks"></a>コメント  
+ このメソッドは通常ホストによって呼び出されます、段階的に読み込まれるコンテンツ、Web ブラウザーなどです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocumentTextEvents インターフェイス](../../winscript/reference/idebugdocumenttextevents-interface.md)   
  [IDebugDocumentTextEvents::onRemoveText](../../winscript/reference/idebugdocumenttextevents-onremovetext.md)

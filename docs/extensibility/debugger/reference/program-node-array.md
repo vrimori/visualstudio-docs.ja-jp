@@ -1,63 +1,63 @@
 ---
-title: "PROGRAM_NODE_ARRAY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROGRAM_NODE_ARRAY"
-helpviewer_keywords: 
-  - "PROGRAM_NODE_ARRAY 構造体"
+title: "PROGRAM_NODE_ARRAY |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROGRAM_NODE_ARRAY
+helpviewer_keywords: PROGRAM_NODE_ARRAY structure
 ms.assetid: 8eeea600-eda5-4b7c-868a-0b86d177b0a5
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 2da6717fa782d6888fb37da1a16c79ef2a546b6b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# PROGRAM_NODE_ARRAY
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-目的のプログラムを記述するオブジェクトの配列が含まれます。  
+# <a name="programnodearray"></a>PROGRAM_NODE_ARRAY
+関心のあるプログラムを記述するオブジェクトの配列が含まれています。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-typedef struct tagPROGRAM_NODE_ARRAY {  
-   DWORD                dwCount;  
-   IDebugProgramNode2** Members;  
-} PROGRAM_NODE_ARRAY;  
+typedef struct tagPROGRAM_NODE_ARRAY {  
+   DWORD                dwCount;  
+   IDebugProgramNode2** Members;  
+} PROGRAM_NODE_ARRAY;  
 ```  
   
-```c#  
-public struct tagPROGRAM_NODE_ARRAY {  
-   public uint                 dwCount;  
-   public IDebugProgramNode2[] Members;  
+```csharp  
+public struct tagPROGRAM_NODE_ARRAY {  
+   public uint                 dwCount;  
+   public IDebugProgramNode2[] Members;  
 }  
 ```  
   
-## メンバー  
+## <a name="members"></a>メンバー  
  dwCount  
- `Members` 配列内のオブジェクトの数。  
+ 内のオブジェクトの数、`Members`配列。  
   
  メンバー  
- [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) の配列オブジェクト要求されたプログラムについて説明します。  
+ 配列[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)要求されたプログラムを記述するオブジェクト。  
   
-## 解説  
- この構造は [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) メソッドの呼び出しによって設定された [PROVIDER\_PROCESS\_DATA](../../../extensibility/debugger/reference/provider-process-data.md) の構造の一部です。  
+## <a name="remarks"></a>コメント  
+ この構造体の一部である、 [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)構造への呼び出しによってさらに入力されますが、 [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)メソッドです。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [PROVIDER\_PROCESS\_DATA](../../../extensibility/debugger/reference/provider-process-data.md)   
+ [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)

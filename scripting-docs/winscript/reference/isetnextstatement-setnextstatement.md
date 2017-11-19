@@ -1,25 +1,29 @@
 ---
-title: "ISetNextStatement::SetNextStatement | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "ISetNextStatement::SetNextStatement |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: ISetNextStatement.SetNextStatement
 apilocation: scrobj.dll
 ms.assetid: c5534f3b-39a5-4466-b8fc-69b717c6eee9
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d21dafcd8cdb762e39f0cfcbde1162dd66c275ec
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# ISetNextStatement::SetNextStatement
-このメソッドは、スクリプト実行のインタープリター コードは、次のコンテキストを更新します。  
+# <a name="isetnextstatementsetnextstatement"></a>ISetNextStatement::SetNextStatement
+このメソッドは、スクリプト インタープリターが実行できる次のコードのコンテキストを更新します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT SetNextStatement(  
@@ -28,21 +32,21 @@ HRESULT SetNextStatement(
 )  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pStackFrame`  
- \[出力\]スタック フレーム オブジェクトへのポインター。  
+ [in]スタック フレーム オブジェクトへのポインター。  
   
  `pCodeContext`  
- \[入力\]コード コンテキスト オブジェクトへのポインター。  
+ [in]コード コンテキストのオブジェクトへのポインター。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [ISetNextStatement インターフェイス](../../winscript/reference/isetnextstatement-interface.md)

@@ -1,64 +1,64 @@
 ---
-title: "IEnumDebugObjects | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugObjects"
-helpviewer_keywords: 
-  - "IEnumDebugObjects インターフェイス"
+title: "IEnumDebugObjects |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugObjects
+helpviewer_keywords: IEnumDebugObjects interface
 ms.assetid: 0950364c-6c8a-4b6c-ba37-c6aa359fa72c
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 20f2d7695cfed89bc38cb73e2f00216060e2d970
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugObjects
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="ienumdebugobjects"></a>IEnumDebugObjects
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されません。 CLR 式エバリュエーターの実装については、次を参照してください [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) と [マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
+>  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
   
- このインターフェイスを実装するオブジェクトのコレクションを表す、 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) インターフェイスです。  
+ このインターフェイスを実装するオブジェクトのコレクションを表します、 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)インターフェイスです。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IEnumDebugObjects : IUnknown  
 ```  
   
-## 実装についてのメモ  
- 式エバリュエーターを実装するオブジェクトのセットを指定するには、このインターフェイスを実装する、 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) インターフェイスです。 存在するための標準の COM 列挙ではないことに注意してください、 [GetCount](../../../extensibility/debugger/reference/ienumdebugobjects-getcount.md) メソッドです。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ 式エバリュエーターを実装するオブジェクトのセットを指定するには、このインターフェイスを実装する、 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)インターフェイスです。 存在するための標準の COM 列挙ではないことに注意してください、 [GetCount](../../../extensibility/debugger/reference/ienumdebugobjects-getcount.md)メソッドです。  
   
-## 呼び出し元のノート  
- [GetElements](../../../extensibility/debugger/reference/idebugarrayobject-getelements.md) このインターフェイスを返します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ [GetElements](../../../extensibility/debugger/reference/idebugarrayobject-getelements.md)このインターフェイスを返します。  
   
-## Vtable 順序のメソッド  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
  このインターフェイスは、次のメソッドを実装します。  
   
 |メソッド|説明|  
-|----------|--------|  
-|[次へ](../../../extensibility/debugger/reference/ienumdebugobjects-next.md)|次のセットを取得 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 列挙型のオブジェクト。|  
+|------------|-----------------|  
+|[次へ](../../../extensibility/debugger/reference/ienumdebugobjects-next.md)|次のセットを取得[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)列挙体からのオブジェクト。|  
 |[Skip](../../../extensibility/debugger/reference/ienumdebugobjects-skip.md)|指定されたエントリ数をスキップします。|  
-|[リセット](../../../extensibility/debugger/reference/ienumdebugobjects-reset.md)|最初のエントリには、列挙型をリセットします。|  
+|[リセット](../../../extensibility/debugger/reference/ienumdebugobjects-reset.md)|最初のエントリを列挙型をリセットします。|  
 |[複製](../../../extensibility/debugger/reference/ienumdebugobjects-clone.md)|現在の列挙型のコピーを取得します。|  
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugobjects-getcount.md)|列挙に含まれるエントリの数を取得します。|  
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugobjects-getcount.md)|列挙体のエントリの数を取得します。|  
   
-## 解説  
- このインターフェイスは、配列内のオブジェクトのセットを列挙するデバッグ エンジンを使用します。  
+## <a name="remarks"></a>コメント  
+ このインターフェイスは、配列内のオブジェクトのセットを列挙するデバッグ エンジンをできます。  
   
-## 必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: ee.h  
   
- 名前空間: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [GetElements](../../../extensibility/debugger/reference/idebugarrayobject-getelements.md)

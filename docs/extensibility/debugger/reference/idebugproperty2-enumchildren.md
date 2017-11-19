@@ -1,81 +1,81 @@
 ---
-title: "IDebugProperty2::EnumChildren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProperty2::EnumChildren"
-helpviewer_keywords: 
-  - "IDebugProperty2::EnumChildren"
+title: "IDebugProperty2::EnumChildren |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProperty2::EnumChildren
+helpviewer_keywords: IDebugProperty2::EnumChildren
 ms.assetid: cf79f666-65d1-417c-af7c-9271bac9a267
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 82f08fad921a2249e6a7943acec1fb9cb60e006b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProperty2::EnumChildren
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-プロパティの子のリストを取得します。  
+# <a name="idebugproperty2enumchildren"></a>IDebugProperty2::EnumChildren
+プロパティの子の一覧を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT EnumChildren (   
-   DEBUGPROP_INFO_FLAGS      dwFields,  
-   DWORD                     dwRadix,  
-   REFGUID                   guidFilter,  
-   DBG_ATTRIB_FLAGS          dwAttribFilter,  
-   LPCOLESTR                 pszNameFilter,  
-   DWORD                     dwTimeout,  
-   IEnumDebugPropertyInfo2** ppEnum  
+```cpp  
+HRESULT EnumChildren (   
+   DEBUGPROP_INFO_FLAGS      dwFields,  
+   DWORD                     dwRadix,  
+   REFGUID                   guidFilter,  
+   DBG_ATTRIB_FLAGS          dwAttribFilter,  
+   LPCOLESTR                 pszNameFilter,  
+   DWORD                     dwTimeout,  
+   IEnumDebugPropertyInfo2** ppEnum  
 );  
 ```  
   
-```c#  
-int EnumChildren (   
-   enum_DEBUGPROP_INFO_FLAGS   dwFields,  
-   uint                        dwRadix,  
-   ref Guid                    guidFilter,  
-   uint                        dwAttribFilter,  
-   string                      pszNameFilter,  
-   uint                        dwTimeout,  
-   out IEnumDebugPropertyInfo2 ppEnum  
+```csharp  
+int EnumChildren (   
+   enum_DEBUGPROP_INFO_FLAGS   dwFields,  
+   uint                        dwRadix,  
+   ref Guid                    guidFilter,  
+   uint                        dwAttribFilter,  
+   string                      pszNameFilter,  
+   uint                        dwTimeout,  
+   out IEnumDebugPropertyInfo2 ppEnum  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwFields`  
- \[入力\] [DEBUG\_PROPERTY\_INFO](../../../extensibility/debugger/reference/debug-property-info.md) の列挙された構造体のフィールドが設定方法を指定する [DEBUGPROP\_INFO\_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) の列挙体のフラグの組み合わせ。  
+ [in]フラグの組み合わせ、 [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) 、列挙内のどのフィールドを指定する列挙体[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)構造は、入力します。  
   
  `dwRadix`  
- \[入力\] 情報を数値書式設定に使用する方法を指定します。  
+ [in]任意の数値情報を書式設定で使用する基数を指定します。  
   
  `guidFilter`  
- \[入力\] 選択するために `DEBUG_PROPERTY_INFO` の列挙子を `dwAttribFilter` すると `pszNameFilter` のパラメーターで使用されるフィルターの GUID。  たとえばローカル変数の `guidFilterLocals` のフィルター。  
+ [in]使用されるフィルターの GUID、`dwAttribFilter`と`pszNameFilter`パラメーターを選択する`DEBUG_PROPERTY_INFO`子が列挙されるまではします。 たとえば、`guidFilterLocals`ローカル変数をフィルターします。  
   
  `dwAttribFilter`  
- \[出力\] 列挙するオブジェクトの種類をこのプロパティの子である可能性のあるすべてのメソッドについてたとえば `DBG_ATTRIB_METHOD` 指定する [DBG\_ATTRIB\_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) の列挙体のフラグの組み合わせ。  `guidFilter` と `pszNameFilter` のパラメーターと組み合わせて使用します。  
+ [in]フラグの組み合わせ、 [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)などの列挙するオブジェクトの種類を指定する列挙体`DBG_ATTRIB_METHOD`のこのプロパティの子になる可能性があるすべてのメソッドです。 組み合わせて使用される、`guidFilter`と`pszNameFilter`パラメーター。  
   
  `pszNameFilter`  
- \[入力\] 選択するために `DEBUG_PROPERTY_INFO` の列挙子を `guidFilter` すると `dwAttribFilter` のパラメーターで使用されるフィルターの名前。  たとえばこのパラメーターを MyX 「」に設定するとフィルター処理「 MyX を持つすべての子に」  
+ [in]使用されるフィルターの名前、`guidFilter`と`dwAttribFilter`パラメーターを選択する`DEBUG_PROPERTY_INFO`子が列挙されるまではします。 たとえば、このパラメーターを"MyX"という名前のすべての子"MyX"フィルターを設定  
   
  `dwTimeout`  
- \[出力\] このメソッドから制御が戻るまで待機するミリ秒単位の最大時間を指定します。  無期限に待機するために `INFINITE` を使用します。  
+ [in]このメソッドから戻る前に待機するミリ秒単位で最大の時間を指定します。 使用して`INFINITE`無制限に待機します。  
   
  `ppEnum`  
- \[入力\] [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) の子オブジェクトを含むプロパティのリストを返します。  
+ [out]返します、 [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)子プロパティの一覧を含むオブジェクト。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コードを返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
- [DEBUGPROP\_INFO\_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)   
- [DBG\_ATTRIB\_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)   
+ [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)   
+ [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)   
  [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)

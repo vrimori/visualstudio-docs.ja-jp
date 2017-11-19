@@ -1,30 +1,35 @@
 ---
-title: "References 要素 (Visual Studio テンプレート) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/vstemplate/2005#References"
-helpviewer_keywords: 
-  - "<References> 要素 [Visual Studio テンプレート]"
-  - "References 要素 [Visual Studio テンプレート]"
+title: "要素 (Visual Studio テンプレート) を参照 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/developer/vstemplate/2005#References
+helpviewer_keywords:
+- <References> element [Visual Studio Templates]
+- References element [Visual Studio Templates]
 ms.assetid: 1969146d-46bf-422d-8d46-0e9493925003
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 436b5f745dc9b3b8c135ad111e6e708bbd391b4e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# References 要素 (Visual Studio テンプレート)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-テンプレートがプロジェクトに追加するアセンブリ参照をグループ化します。  
+# <a name="references-element-visual-studio-templates"></a>References 要素 (Visual Studio テンプレート)
+テンプレートをプロジェクトに追加するアセンブリ参照をグループ化します。  
   
-## 構文  
+ \<VSTemplate >  
+ \<TemplateContent >  
+ \<参照 >  
+  
+## <a name="syntax"></a>構文  
   
 ```  
 <References>  
@@ -34,31 +39,31 @@ caps.handback.revision: 8
 </References>  
 ```  
   
-## 属性および要素  
+## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
-### 属性  
+### <a name="attributes"></a>属性  
  なし。  
   
-### 子要素  
+### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
-|--------|--------|  
-|[参照](../extensibility/reference-element-visual-studio-templates.md)|必須の要素。<br /><br /> プロジェクトにアイテムを追加するときに、追加するアセンブリ参照を指定します。  `References` 要素には、`Reference` 要素を 1 つ以上指定する必要があります。|  
+|-------------|-----------------|  
+|[参照](../extensibility/reference-element-visual-studio-templates.md)|必須の要素です。<br /><br /> 項目がプロジェクトに追加されたときに追加するアセンブリ参照を指定します。 1 つまたは複数がある必要があります`Reference`内の要素、`References`要素。|  
   
-### 親要素  
+### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
-|--------|--------|  
+|-------------|-----------------|  
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|テンプレートの内容を指定します。|  
   
-## 解説  
+## <a name="remarks"></a>コメント  
  `References` は、`TemplateContent` の子要素で、省略可能な要素です。  
   
- `Reference` 要素および `References` 要素は、`Type` 属性に `Item` の値が付いている .vstemplate ファイルでのみ使用できます。  
+ `Reference`と`References`要素は、.vstemplate ファイルでのみ使用できます、`Type`属性の値の`Item`します。  
   
-## 使用例  
- 項目テンプレートの `TemplateContent` 要素の例を次に示します。  この XML では、System.dll アセンブリおよび System.Data.dll アセンブリへの参照を追加します。  
+## <a name="example"></a>例  
+ 次の例を示しています、`TemplateContent`項目テンプレートの要素。 この XML は、System.dll および System.Data.dll アセンブリへの参照を追加します。  
   
 ```  
 <TemplateContent>  
@@ -78,6 +83,6 @@ caps.handback.revision: 8
 </TemplateContent>  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [カスタム プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+ [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

@@ -1,27 +1,30 @@
 ---
-title: "IDispatchEx::GetNextDispID | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDispatchEx::GetNextDispID |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDispatchEx.GetNextDispID
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "GetNextDispID メソッド"
+helpviewer_keywords: GetNextDispID method
 ms.assetid: 8263d441-85ee-47f4-bdba-fbf2ad07e85f
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: ece7bde3230da370c8434cef7f780a92604df34c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDispatchEx::GetNextDispID
+# <a name="idispatchexgetnextdispid"></a>IDispatchEx::GetNextDispID
 オブジェクトのメンバーを列挙します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetNextDispID(  
@@ -31,32 +34,32 @@ HRESULT GetNextDispID(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `grfdex`  
- 項目のセットを列挙するかを決定します。  これは、次の値の組み合わせです:  
+ 列挙するアイテムのセットが決まります。 これにより、次の値の組み合わせが可能します。  
   
 |値|説明|  
-|-------|--------|  
-|fdexEnumDefault|オブジェクトが既定の要素を列挙することです。  オブジェクトを要素のセットを列挙します。|  
-|fdexEnumAll|オブジェクト要素がすべてを列挙することです。  オブジェクトを要素のセットを列挙します。|  
+|-----------|-------------|  
+|fdexEnumDefault|要求は、オブジェクトは、既定の要素を列挙します。 オブジェクトは、任意の要素のセットの列挙が許可されます。|  
+|fdexEnumAll|要求は、オブジェクトがすべての要素を列挙します。 オブジェクトは、任意の要素のセットの列挙が許可されます。|  
   
  `id`  
- 現在のメンバーを識別します。  GetNextDispID では、この 1 の後で列挙型の項目を取得します。  この識別子を取得または GetDispID 使用 GetNextDispID への前の呼び出し。  DISPID\_STARTENUM の値を最初の項目の最初の識別子を取得するために使用します。  
+ 現在のメンバーを識別します。 GetNextDispID は、この後に、列挙内の項目を取得します。 この識別子を取得するのにには、GetDispID または GetNextDispID を前の呼び出しを使用します。 最初の項目の最初の識別子を取得するのにには、DISPID_STARTENUM 値を使用します。  
   
  `pid`  
- 列挙体の次の項目の識別子を受け取る変数のアドレスの DISPID。  
+ 列挙体の次の項目の識別子を受信する DISPID 変数のアドレス。  
   
- メンバーが `DeleteMemberByName` か `DeleteMemberByDispID`によって削除されると、`GetNextDispID`に対して有効なまま `DISPID` があります。  
+ によって、メンバーが削除された場合`DeleteMemberByName`または`DeleteMemberByDispID`、`DISPID`の有効なままにしておく必要がある`GetNextDispID`です。  
   
-## 戻り値  
- 次の値の場合: 1  
+## <a name="return-value"></a>戻り値  
+ 次のいずれかの値を返します。  
   
 |||  
 |-|-|  
 |`S_OK`|成功。|  
-|`S_FALSE`|列挙型が実行されます。|  
+|`S_FALSE`|列挙が行われます。|  
   
-## 使用例  
+## <a name="example"></a>例  
   
 ```  
 HRESULT hr;  
@@ -79,7 +82,7 @@ HRESULT hr;
    }  
 ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDispatchEx インターフェイス](../../winscript/reference/idispatchex-interface.md)   
  [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](#lrfidispatchexgetnextdispid)   

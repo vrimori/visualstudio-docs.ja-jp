@@ -1,56 +1,56 @@
 ---
-title: "IDebugProgram2::WriteDump | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::WriteDump"
-helpviewer_keywords: 
-  - "IDebugProgram2::WriteDump"
+title: "IDebugProgram2::WriteDump |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgram2::WriteDump
+helpviewer_keywords: IDebugProgram2::WriteDump
 ms.assetid: 375afb8c-882d-44db-bfa7-e2c9eb555122
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b68392d94b16f13106e421c5d466e3fbdf4a2b27
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram2::WriteDump
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-ダンプをファイルに書き込みます。  
+# <a name="idebugprogram2writedump"></a>IDebugProgram2::WriteDump
+ダンプ ファイルを書き込みます。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT WriteDump(   
-   DUMPTYPE  DumpType,  
-   LPCOLESTR pszDumpUrl  
+```cpp  
+HRESULT WriteDump(   
+   DUMPTYPE  DumpType,  
+   LPCOLESTR pszDumpUrl  
 );  
 ```  
   
-```c#  
-int WriteDump(   
-   enum_DUMPTYPE  DumpType,  
-   string         pszDumpUrl  
+```csharp  
+int WriteDump(   
+   enum_DUMPTYPE  DumpType,  
+   string         pszDumpUrl  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `DumpType`  
- \[入力\] たとえば短いダンプの種類はの [DUMPTYPE](../../../extensibility/debugger/reference/dumptype.md) 指定する列挙体の値。  
+ [in]値、 [DUMPTYPE](../../../extensibility/debugger/reference/dumptype.md)例として、short、ダンプの種類を指定する列挙体、または時間の長い。  
   
  `pszDumpUrl`  
- \[入力\] ダンプの書き込み先 URL。  通常これは `file://c: パス \ \ filename.ext` の形式で有効な URL である場合があります。  
+ [in]ダンプを記述する URL です。 通常の形式では`file://c:\path\filename.ext`、任意の有効な URL があります。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- プログラムのダンプはプログラムには現在のスタック フレームとスタックで実行中のスレッドの一覧とプログラムが所有しているメモリが含まれます。  
+## <a name="remarks"></a>コメント  
+ プログラム ダンプは、現在のスタック フレーム、スタック自体、プログラム、およびプログラムを所有しているメモリ可能性がありますで実行しているスレッドの一覧に通常含まれます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

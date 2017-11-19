@@ -1,91 +1,88 @@
 ---
-title: 'How to: Create a SharePoint Command | Microsoft Docs'
+title: "方法: SharePoint コマンドを作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - VB
 - CSharp
-helpviewer_keywords:
-- SharePoint commands [SharePoint development in Visual Studio], creating
+helpviewer_keywords: SharePoint commands [SharePoint development in Visual Studio], creating
 ms.assetid: e1fda8f0-eae1-4278-91c1-19a5e1fc327f
-caps.latest.revision: 22
-author: kempb
-ms.author: kempb
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: b4676efb2d64541566daf5c9902de8a4a2157e6d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 913ccb36c54914387cd6ca8a50a350ada1b14ce7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-create-a-sharepoint-command"></a>How to: Create a SharePoint Command
-  If you want to use the server object model in a SharePoint tools extension, you must create a custom *SharePoint command* to call the API. You define the SharePoint command in an assembly that can call into the server object model directly.  
+# <a name="how-to-create-a-sharepoint-command"></a>方法: SharePoint コマンドを作成する
+  を SharePoint ツール拡張機能で、サーバー オブジェクト モデルを使用する場合は、カスタムを作成する必要があります*SharePoint コマンド*API を呼び出すためです。 SharePoint コマンドは、サーバー オブジェクト モデルを直接呼び出すことができるアセンブリで定義します。  
   
- For more information about the purpose of SharePoint commands, see [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md).  
+ SharePoint コマンドの目的に関する詳細については、次を参照してください。[の SharePoint オブジェクト モデルを呼び出す](../sharepoint/calling-into-the-sharepoint-object-models.md)です。  
   
-### <a name="to-create-a-sharepoint-command"></a>To create a SharePoint command  
+### <a name="to-create-a-sharepoint-command"></a>SharePoint コマンドを作成するには  
   
-1.  Create a class library project that has the following configuration:  
+1.  次の構成を持つクラス ライブラリ プロジェクトを作成します。  
   
-    -   Targets the .NET Framework 3.5. For more information about selecting the target framework, see [How to: Target a Version of the .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md).  
+    -   .NET Framework 3.5 を対象とします。 詳細については、ターゲット フレームワークを選択すると、次を参照してください。[する方法: .NET Framework のバージョンを対象に](../ide/how-to-target-a-version-of-the-dotnet-framework.md)です。  
   
-    -   Targets the AnyCPU or x64 platform. By default, the target platform for class library projects is AnyCPU. For more information about selecting the target platform, see [How to: Configure Projects to Target Platforms](../ide/how-to-configure-projects-to-target-platforms.md).  
+    -   X64、AnyCPU をターゲット プラットフォーム。 既定では、クラス ライブラリ プロジェクトのターゲット プラットフォームは AnyCPU です。 詳細については、ターゲット プラットフォームを選択すると、次を参照してください。[する方法: プロジェクトのターゲット プラットフォームを構成](../ide/how-to-configure-projects-to-target-platforms.md)です。  
   
     > [!NOTE]  
-    >  You cannot implement a SharePoint command in the same project that defines a SharePoint tools extension, because SharePoint commands target the .NET Framework 3.5 and SharePoint tools extensions target the [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. You must define any SharePoint commands that are used by your extension in a separate project. For more information, see [Deploying Extensions for the SharePoint Tools in Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
+    >  SharePoint コマンドは、.NET Framework 3.5 と SharePoint ツールの拡張機能のターゲットをターゲットために、SharePoint ツール拡張を定義するのと同じプロジェクトでの SharePoint コマンドを実装することはできません、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]です。 別のプロジェクトで拡張機能によって使用されている SharePoint コマンドを定義する必要があります。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
-2.  Add references to the following assemblies:  
+2.  次のアセンブリへの参照を追加します。  
   
     -   Microsoft.VisualStudio.SharePoint.Commands  
   
     -   Microsoft.SharePoint  
   
-3.  In a class in the project, create a method that defines your SharePoint command. The method must conform to the following guidelines:  
+3.  クラスでは、プロジェクトで、SharePoint コマンドを定義するメソッドを作成します。 メソッドは、次のガイドラインに従う必要があります。  
   
-    -   It can have one or two parameters.  
+    -   パラメーター 1 つまたは 2 つ持つことができます。  
   
-         The first parameter must be a <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> object. This object provides the Microsoft.SharePoint.SPSite or Microsoft.SharePoint.SPWeb in which the command is executed. It also provides an <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger> object that can be used to write messages to the **Output** window or **Error List** window in Visual Studio.  
+         最初のパラメーターである必要があります、<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext>オブジェクト。 このオブジェクトは、Microsoft.SharePoint.SPSite またはコマンドを実行する Microsoft.SharePoint.SPWeb を提供します。 用意されています、<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger>にメッセージを書き込むために使用できるオブジェクト、**出力**ウィンドウまたは**エラー一覧**Visual Studio のウィンドウ。  
   
-         The second parameter can be a type of your choice, but this parameter is optional. You can add this parameter to your SharePoint command if you need to pass data from your SharePoint tools extension to the command.  
+         2 番目のパラメーターは、任意の型を指定できますが、このパラメーターは省略可能。 SharePoint コマンドにこのパラメーターを追加するには、SharePoint ツールの拡張機能から、コマンドにデータを渡す必要がある場合。  
   
-    -   It can have a return value, but this is optional.  
+    -   戻り値を持つことができますが、これは省略可能です。  
   
-    -   The second parameter and return value must be a type that can be serialized by the Windows Communication Foundation (WCF). For more information, see [Types Supported by the Data Contract Serializer](/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer) and [Using the XmlSerializer Class](/dotnet/framework/wcf/feature-details/using-the-xmlserializer-class).  
+    -   2 番目のパラメーターと戻り値は、Windows Communication Foundation (WCF) によってシリアル化できる型である必要があります。 詳細については、次を参照してください。[データ コントラクト シリアライザーでサポートされる型](/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer)と[XmlSerializer クラスを使用して](/dotnet/framework/wcf/feature-details/using-the-xmlserializer-class)です。  
   
-    -   The method can have any visibility (**public**, **internal**, or **private**), and it can be static or non-static.  
+    -   メソッドは、可視性を持つことができます (**パブリック**、**内部**、または**プライベート**)、および静的か非静的であることができます。  
   
-4.  Apply the <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> to the method. This attribute specifies a unique identifier for the command; this identifier does not have to match the method name.  
+4.  適用、<xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute>メソッドにします。 この属性は、コマンドの一意の識別子を指定します。この識別子は、メソッド名と一致する必要はありません。  
   
-     You must specify the same unique identifier when you call the command from your SharePoint tools extension. For more information, see [How to: Execute a SharePoint Command](../sharepoint/how-to-execute-a-sharepoint-command.md).  
+     SharePoint ツールの拡張機能から、コマンドを呼び出す場合は、同じ一意の識別子を指定する必要があります。 詳細については、次を参照してください。[する方法: SharePoint コマンドを実行](../sharepoint/how-to-execute-a-sharepoint-command.md)です。  
   
-## <a name="example"></a>Example  
- The following code example demonstrates a SharePoint command that has the identifier `Contoso.Commands.UpgradeSolution`. This command uses APIs in the server object model to upgrade to a deployed solution.  
+## <a name="example"></a>例  
+ 次のコード例は、識別子を持つ SharePoint コマンドを示します`Contoso.Commands.UpgradeSolution`です。 このコマンドでは、サーバー オブジェクト モデルの Api を使用して、配置されたソリューションをアップグレードします。  
   
- [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#5)] [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb#5)]  
+ [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#5)]
+ [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb#5)]  
   
- In addition to the implicit first <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parameter, this command also has a custom string parameter that contains the full path of the .wsp file that is being upgraded to the SharePoint site. To see this code in the context of a larger example, see [Walkthrough: Creating a Custom Deployment Step for SharePoint Projects](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).  
+ 最初の暗黙的なだけでなく<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext>パラメーター、このコマンドも、カスタム文字列パラメーターが含まれて、SharePoint サイトにアップグレードされている .wsp ファイルの完全なパスが含まれています。 このコード例のコンテキストを参照してください[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。  
   
-## <a name="compiling-the-code"></a>Compiling the Code  
- This example requires references to the following assemblies:  
+## <a name="compiling-the-code"></a>コードのコンパイル  
+ この例では、次のアセンブリへの参照が必要です。  
   
 -   Microsoft.VisualStudio.SharePoint.Commands  
   
 -   Microsoft.SharePoint  
   
-## <a name="deploying-the-command"></a>Deploying the Command  
- To deploy the command, include the command assembly in the same [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] extension (VSIX) package with the extension assembly that uses the command. You must also add an entry for the command assembly in the extension.vsixmanifest file. For more information, see [Deploying Extensions for the SharePoint Tools in Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
+## <a name="deploying-the-command"></a>コマンドの配置  
+ コマンドを展開するには、同じコマンド アセンブリを含める[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]コマンドを使用する拡張機能のアセンブリに拡張機能 (VSIX) にパッケージ化します。 また、コマンド内のアセンブリになる extension.vsixmanifest ファイル エントリを追加する必要があります。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
-## <a name="see-also"></a>See Also  
- [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md)   
- [How to: Execute a SharePoint Command](../sharepoint/how-to-execute-a-sharepoint-command.md)   
- [Walkthrough: Extending Server Explorer to Display Web Parts](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
+## <a name="see-also"></a>関連項目  
+ [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)   
+ [方法: SharePoint コマンドを実行](../sharepoint/how-to-execute-a-sharepoint-command.md)   
+ [チュートリアル: サーバー エクスプローラーを拡張して Web パーツを表示する](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
   
   

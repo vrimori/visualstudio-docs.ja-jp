@@ -1,24 +1,25 @@
 ---
-title: "方法 : XPath 式を評価する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "方法: XPath 式の評価 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 159ba4ef-75e4-4ac8-80dc-e064e0bec345
-caps.latest.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: d549afb96465590a21e516f649d860f23f4056f3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : XPath 式を評価する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-XPath 式は、\[クイック ウォッチ\] ダイアログ ボックスを使用して評価することができます。XPath 式は、W3C XPath 1.0 勧告に沿って有効である必要があります。XPath 式を評価するためのコンテキストは、現在の XSLT コンテキスト、つまり、\[ローカル\] ウィンドウに表示される `self::node()` ノードによって提供されます。  
+# <a name="how-to-evaluate-an-xpath-expression"></a>方法 : XPath 式を評価する
+含む XPath 式を評価することができます、 **クイック ウォッチ**  ダイアログ ボックス。 XPath 式は、W3C XPath 1.0 勧告に沿って有効である必要があります。 現在の XSLT コンテキスト-は、`self::node()`内のノード、 **[ローカル]**ウィンドウ: XPath 式の評価コンテキストを提供します。  
   
  XPath 式を評価する際にどの機能がサポートされるかについて次の一覧に示します。  
   
@@ -29,27 +30,27 @@ XPath 式は、\[クイック ウォッチ\] ダイアログ ボックスを使�
 -   ユーザー定義関数はサポートされません。  
   
 > [!NOTE]
->  次の手順では、「[チュートリアル : XSLT スタイル シートのデバッグ](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)」の belowAvg.xsl と books.xml を使用します。  
+>  次の手順から belowAvg.xsl および books.xml ファイルを使用して、[チュートリアル: XSLT スタイル シートのデバッグ](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)トピックです。  
   
-### XPath 式を評価するには  
+### <a name="to-evaluate-an-xpath-expression"></a>XPath 式を評価するには  
   
 1.  `xsl:if` 開始タグにブレークポイントを挿入します。  
   
-2.  XML エディター ツール バーの \[Debug XSL \(XSL のデバッグ\)\] ボタンをクリックします。  
+2.  クリックして、 **XSL のデバッグ**XML エディター ツールバーのボタンをクリックします。  
   
      デバッガーが起動され、`xsl:if` タグで実行が中断されます。  
   
-3.  右クリックして \[クイック ウォッチ\] を選択します。  
+3.  右クリックし  **クイック ウォッチ**です。  
   
-     \[クイック ウォッチ\] ダイアログ ボックスが表示されます。  
+     **クイック ウォッチ**  ダイアログ ボックスが表示されます。  
   
-4.  \[クイック ウォッチ\] ダイアログ ボックスの \[式\] フィールドに「`./price/text()`」と入力し、\[再評価\] をクリックします。  
+4.  入力`./price/text()`で、**式**のフィールド、 **クイック ウォッチ**  ダイアログ ボックスをクリック**再評価**です。  
   
-     現在の book ノードの価格が \[値\] ボックスに表示されます。  
+     現在の book ノードの価格が表示されます、**値**ボックス。  
   
-5.  XPath 式を `./price/text() < $bookAverage` に変更し、\[再評価\] をクリックします。  
+5.  XPath 式を変更して`./price/text() < $bookAverage` をクリック**再評価**です。  
   
-     \[値\] ボックスに、XPath 式が `true` に評価されたことが示されます。  
+     **値**ボックスに表示する XPath 式の評価結果`true`です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [XSLT のデバッグ](../xml-tools/debugging-xslt.md)

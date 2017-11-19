@@ -1,51 +1,51 @@
 ---
-title: "IDebugObject2::GetICorDebugValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject2::GetICorDebugValue"
-helpviewer_keywords: 
-  - "IDebugObject2::GetICorDebugValue メソッド"
+title: "IDebugObject2::GetICorDebugValue |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugObject2::GetICorDebugValue
+helpviewer_keywords: IDebugObject2::GetICorDebugValue method
 ms.assetid: bcd4355d-3fbe-483f-bb23-a44348323c6a
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 6b1d1c05b6156cb38222eeedb287de4b3fc52b18
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugObject2::GetICorDebugValue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-マネージ コードを表すオブジェクトの値をこのオブジェクトに関連付けられているを取得します。  
+# <a name="idebugobject2geticordebugvalue"></a>IDebugObject2::GetICorDebugValue
+マネージ コードを表すオブジェクトをこのオブジェクトに関連付けられている値を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetICorDebugValue(  
-   IUnknown** ppUnk  
+HRESULT GetICorDebugValue(  
+   IUnknown** ppUnk  
 );  
 ```  
   
-```c#  
-int GetICorDebugValue(  
-   out object ppUnk  
+```csharp  
+int GetICorDebugValue(  
+   out object ppUnk  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppUnk`  
- \[出力\] この `IUnknown` のエイリアスを表すインターフェイス。  このインターフェイスは `ICorDebugValue` のインターフェイスを照会できます。  
+ [out]`IUnknown`このエイリアスを表すインターフェイスです。 このインターフェイスを照会することができます、`ICorDebugValue`インターフェイスです。  
   
-## 戻り値  
- 成功した場合は S\_OK; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- `ICorDebugValue` のオブジェクトが値を表す共通言語ランタイムのインターフェイスです。  
+## <a name="remarks"></a>コメント  
+ `ICorDebugValue`オブジェクトは、値を表す共通言語ランタイム インターフェイスです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

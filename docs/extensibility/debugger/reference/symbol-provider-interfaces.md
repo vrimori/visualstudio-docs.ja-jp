@@ -1,63 +1,65 @@
 ---
-title: "シンボルのプロバイダー インターフェイス | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "シンボル ハンドラーのインターフェイス"
-  - "シンボル ハンドラー、インターフェイス"
-  - "シンボル ハンドラー、変数の評価"
+title: "プロバイダーのインターフェイスをシンボル |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interfaces, symbol handler
+- symbol handler, interfaces
+- symbol handler, evaluating variables
 ms.assetid: 4201f10e-c9f7-4b38-bb45-40fe0082d5bf
-caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 84b8e517efa7c5c4aaeba4bf6e19dc23b0615eda
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# シンボルのプロバイダー インターフェイス
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-次に [!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)] のインターフェイスを処理するシンボルです。  
+# <a name="symbol-provider-interfaces"></a>シンボル プロバイダー インターフェイス
+シンボル処理インターフェイスは、次のとおり、[!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)]です。  
   
-## 説明  
- これらのインターフェイスは中断モード中に変数の呼び出しのスタックを評価するために使用されます。  これらは共通言語ランタイムのシンボルのプロバイダー \(SP\) にだけ実行されます。  
+## <a name="discussion"></a>説明  
+ これらのインターフェイスは、中断モード中に呼び出し履歴内の変数を評価に使用されます。 これらは、共通言語ランタイムのシンボル プロバイダー (SP) に対してのみ実装されます。  
   
-|Interface|実行する|Description|  
-|---------------|----------|-----------------|  
-|[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)|ストアド プロシージャ|項目のアドレスを表します。|  
-|[IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md)|ストアド プロシージャ|プロセス ID へのアクセスを提供する項目のアドレスを表します。|  
-|[IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)|ストアド プロシージャ|配列のシンボルまたは配列型を表します。|  
-|[IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)|ストアド プロシージャ|クラスまたはクラス型のシンボルを表します。|  
-|[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)|ストアド プロシージャ|マネージ コードに固有のメソッドと COM\+ プロバイダーのシンボルを表します。|  
-|[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)|ストアド プロシージャ|COM\+ シンボルのプロバイダーをマネージ コードに固有の **IDebugComPlusSymbolProvider を**  表し拡張メソッドです。|  
-|[IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)|ストアド プロシージャ|そのほかのシンボルまたは型のコンテナーである型またはシンボルを表します。|  
-|[IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)|ストアド プロシージャ|シンボルにアタッチできるカスタム属性を表します。|  
-|[IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)|ストアド プロシージャ|メソッドまたは型のカスタム属性のクエリを表します。|  
-|[IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)|ストアド プロシージャ|シンボルはカスタム属性へのアクセスを提供します。|  
-|[IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md)|ストアド プロシージャ|実行時に判断できる型の基本インターフェイスです。|  
-|[IDebugDynamicFieldCOMPlus](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus.md)|ストアド プロシージャ|[IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) のオブジェクトの動的フィールドを表します。|  
-|[IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)|ストアド プロシージャ|列挙型を表します。|  
-|[IDebugExtendedField](../../../extensibility/debugger/reference/idebugextendedfield.md)|ストアド プロシージャ|マネージ コードのジェネリックのサポートに使用可能なフィールドの種類を拡張します。|  
-|[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)|ストアド プロシージャ|すべてのフィールドの基本クラス ; シンボルまたは型の説明を表します。|  
-|[IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)|ストアド プロシージャ|マネージ コードのジェネリック型のフィールドの定義を表します。|  
-|[IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)|ストアド プロシージャ|マネージ コードのジェネリック型のフィールドのインスタンスを表します。|  
-|[IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)|ストアド プロシージャ|マネージ コードのジェネリック型のパラメーターを表します。|  
-|[IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)|ストアド プロシージャ|メソッドを表します。|  
-|[IDebugModOpt](../../../extensibility/debugger/reference/idebugmodopt.md)|ストアド プロシージャ|デバッグのオプション修飾子を表します。|  
-|[IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md)|ストアド プロシージャ|ポインターを表します。|  
-|[IDebugPrimitiveTypeField](../../../extensibility/debugger/reference/idebugprimitivetypefield.md)|ストアド プロシージャ|[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のインターフェイスから基本型の列挙値を表します。|  
-|[IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md)|ストアド プロシージャ|取得または設定するにはマネージ コード クラスのプロパティを表します。|  
-|[IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)|ストアド プロシージャ|シンボルを提供するプロバイダーのシンボルを表します。|  
-|[IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)|ストアド プロシージャ|メタデータに直接アクセスとシンボルのプロバイダーを表しコア シンボルはインターフェイスします。|  
-|[IDebugTypeFieldBuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md)|ストアド プロシージャ|型を表すフィールドを作成する機能を表します。|  
-|[IDebugTypeFieldBuilder2](../../../extensibility/debugger/reference/idebugtypefieldbuilder2.md)|ストアド プロシージャ|**IDebugTypeFieldBuilder を**  配列型を作成できるように拡張されています。|  
-|[IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)|ストアド プロシージャ|[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) オブジェクトのコレクションを表します。|  
-|[IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)|ストアド プロシージャ|[IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md) オブジェクトのコレクションを表します。|  
-|[IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)|ストアド プロシージャ|[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトのコレクションを表します。|  
+|インターフェイス|によって実装されます。|説明|  
+|---------------|--------------------|-----------------|  
+|[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)|SP|項目のアドレスを表します。|  
+|[IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md)|SP|プロセス ID にアクセスするため、項目のアドレスを表します。|  
+|[IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)|SP|シンボルの配列または配列型を表します。|  
+|[IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)|SP|クラスのシンボルまたはクラス型を表します。|  
+|[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)|SP|マネージ コードに固有のメソッドを使用する COM + のシンボル プロバイダーを表します。|  
+|[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)|SP|マネージ コードに固有のメソッドで COM + のシンボル プロバイダーを表し、拡張、 **IDebugComPlusSymbolProvider**です。|  
+|[IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)|SP|シンボルまたはその他のシンボルまたは型用のコンテナーである型を表します。|  
+|[IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)|SP|シンボルに関連付けることができるカスタム属性を表します。|  
+|[IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)|SP|メソッドまたは型のカスタム属性のクエリを表します。|  
+|[IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)|SP|記号の上には、カスタム属性へのアクセスを提供します。|  
+|[IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md)|SP|実行時に決定できる任意の型の基本インターフェイスです。|  
+|[IDebugDynamicFieldCOMPlus](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus.md)|SP|動的なフィールドを表す、 [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)オブジェクト。|  
+|[IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)|SP|列挙型を表します。|  
+|[IDebugExtendedField](../../../extensibility/debugger/reference/idebugextendedfield.md)|sp|マネージ コードのジェネリックをサポートするために使用できるフィールドの型を拡張します。|  
+|[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)|SP|すべてのフィールドの基本クラスシンボルまたは型の説明を表します。|  
+|[IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)|SP|マネージ コードのジェネリック型のフィールドの定義を表します。|  
+|[IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)|SP|マネージ コードのジェネリック型のフィールドのインスタンスを表します。|  
+|[IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)|SP|マネージ コードのジェネリック型のパラメーターを表します。|  
+|[IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)|SP|メソッドを表します。|  
+|[IDebugModOpt](../../../extensibility/debugger/reference/idebugmodopt.md)|SP|デバッグ オプションの修飾子を表します。|  
+|[IDebugPointerField](../../../extensibility/debugger/reference/idebugpointerfield.md)|SP|ポインターを表します。|  
+|[IDebugPrimitiveTypeField](../../../extensibility/debugger/reference/idebugprimitivetypefield.md)|SP|プリミティブ型の列挙値を表す、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスです。|  
+|[IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md)|SP|取得または設定できる、マネージ コード クラスのプロパティを表します。|  
+|[IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)|SP|シンボルよぶ型を提供するシンボル プロバイダーを表します。|  
+|[IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)|SP|メタデータとコアのシンボル インターフェイスに直接アクセスできるシンボル プロバイダーを表します。|  
+|[IDebugTypeFieldBuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md)|SP|型を表すフィールドを作成する機能を表します。|  
+|[IDebugTypeFieldBuilder2](../../../extensibility/debugger/reference/idebugtypefieldbuilder2.md)|SP|拡張、 **IDebugTypeFieldBuilder**配列型を作成できるようにします。|  
+|[IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)|SP|コレクションを表します[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)オブジェクト。|  
+|[IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)|SP|コレクションを表します[IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)オブジェクト。|  
+|[IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)|SP|コレクションを表します[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [API リファレンス](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

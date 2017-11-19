@@ -1,43 +1,42 @@
 ---
-title: "IDebugApplicationNode100::SetFilterForEventSink | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IDebugApplicationNode100::SetFilterForEventSink"
+title: "IDebugApplicationNode100::SetFilterForEventSink |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords: IDebugApplicationNode100::SetFilterForEventSink
 ms.assetid: cfb34efe-c6e1-4692-8ffd-3ede3a24cd4b
-caps.latest.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6db8ea26787427844a92417bf525dba271063cba
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugApplicationNode100::SetFilterForEventSink
-[IDebugApplicationNodeEvents インターフェイス](../../winscript/reference/idebugapplicationnodeevents-interface.md) の特定の実装のフィルターを設定します。  このコントロールは、これらを作成または削除されたとき PDM が既にイベントを送信しないようにスクリプト デバッガーがコンパイラにより生成された子アプリケーションのノードを除外することができます。  既定では、すべてのノードが送信されます。  
+# <a name="idebugapplicationnode100setfilterforeventsink"></a>IDebugApplicationNode100::SetFilterForEventSink
+特定のフィルターを設定[IDebugApplicationNodeEvents インターフェイス](../../winscript/reference/idebugapplicationnodeevents-interface.md)実装します。 それにより、スクリプト デバッガー、PDM はこれらが作成または削除されたときにイベントを送信できなくなるように、コンパイラによって生成された子アプリケーション ノードをフィルターすることができます。 既定では、すべてのノードが送信されます。  
   
 > [!IMPORTANT]
->  [IDebugApplicationNode100 インターフェイス](../../winscript/reference/idebugapplicationnode100-interface.md) は PDM v10.0 を超えるによって実装されます。  activdbg100.h.である。  
+>  [IDebugApplicationNode100 インターフェイス](../../winscript/reference/idebugapplicationnode100-interface.md)は、PDM v10.0 によって実装される値を超えています。 activdbg100.h にあります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT SetFilterForEventSink(  
-        [in] DWORD dwCookie,  
-        [in] APPLICATION_NODE_EVENT_FILTER filter  
-        );  
-  
+HRESULT SetFilterForEventSink(        [in] DWORD dwCookie,        [in] APPLICATION_NODE_EVENT_FILTER filter        );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwCookie`  
  フィルターのクッキー。  
   
  `filter`  
  フィルターです。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugApplicationNode100 インターフェイス](../../winscript/reference/idebugapplicationnode100-interface.md)

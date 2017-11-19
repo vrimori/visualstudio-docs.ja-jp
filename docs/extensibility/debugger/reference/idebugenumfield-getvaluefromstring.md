@@ -1,57 +1,57 @@
 ---
-title: "IDebugEnumField::GetValueFromString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEnumField::GetValueFromString"
-helpviewer_keywords: 
-  - "IDebugEnumField::GetValueFromString メソッド"
+title: "IDebugEnumField::GetValueFromString |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugEnumField::GetValueFromString
+helpviewer_keywords: IDebugEnumField::GetValueFromString method
 ms.assetid: 1ef8ac5e-a3e0-4078-b876-7f5615aedcbb
-caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d88956f9ccdfef82f98de0b93d33c39b12955286
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugEnumField::GetValueFromString
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-この値が列挙体の定数名に関連付けられたメソッドはを返します。  
+# <a name="idebugenumfieldgetvaluefromstring"></a>IDebugEnumField::GetValueFromString
+このメソッドは、列挙定数の名前に関連付けられている値を返します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT GetValueFromString(  
-   LPCOLESTR  pszValue,  
-   ULONGLONG* pvalue  
+   LPCOLESTR  pszValue,  
+   ULONGLONG* pvalue  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetValueFromString(  
-   string    pszValue,  
-   out ulong pValue  
+   string    pszValue,  
+   out ulong pValue  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pszValue`  
- \[入力\] 指定する文字列値を取得する名前。  C\+\+ ではこれはワイド文字列であることに注意してください。  
+ [in]値を取得する対象の名前を指定する文字列。 C++ であるワイド文字の文字列に注意してください。  
   
  `pValue`  
- \[出力\] 関連付けられた数値を返します。  
+ [out]関連付けられている数値を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の名前は列挙の一部の場合はエラー コードを返します `S_FALSE`。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`名前は、列挙体、またはエラー コードの一部ではない場合は、します。  
   
-## 解説  
- このメソッドでは、大文字と小文字が区別されます。  大文字と小文字を区別しない必要があります \(たとえば名前が大文字と小文字を区別しない Visual Basic などの言語で[GetValueFromStringCaseInsensitive](../Topic/IDebugEnumField::GetValueFromStringCaseInsensitive.md)\) を使用します。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、大文字小文字を区別します。 (たとえば、名は大文字小文字を区別できません Visual Basic などの言語) で、大文字と小文字が必要な場合を使用して[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
- [GetValueFromStringCaseInsensitive](../Topic/IDebugEnumField::GetValueFromStringCaseInsensitive.md)
+ [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)

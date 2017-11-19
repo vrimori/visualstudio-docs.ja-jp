@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Creating a Web Part for SharePoint | Microsoft Docs'
+title: "チュートリアル: SharePoint の Web パーツを作成する |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,125 +17,129 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], creating
 - Web Parts [SharePoint development in Visual Studio], designing
 ms.assetid: 51fb5bdd-b99c-4716-83bc-e66a5da15169
-caps.latest.revision: 34
-author: kempb
-ms.author: kempb
+caps.latest.revision: "34"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: f2d3c5ecf34ccbe92ad5303ee8439b68bec26adb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 3293382ffc0c36fb78bb115d0f38c311278a7151
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-creating-a-web-part-for-sharepoint"></a>Walkthrough: Creating a Web Part for SharePoint
-  Web Parts enable users to directly modify the content, appearance, and behavior of SharePoint site pages by using a browser. This walkthrough shows you how to create a Web Part by using the **Web Part** item template in Visual Studio 2010.  
+# <a name="walkthrough-creating-a-web-part-for-sharepoint"></a>チュートリアル: SharePoint の Web パーツを作成する
+  Web パーツを使用すると、ブラウザーから SharePoint サイト ページのコンテンツ、外観、および動作を直接変更できます。 このチュートリアルを使用して、Web パーツを作成する方法、 **Web パーツ**Visual Studio 2010 での項目テンプレート。  
   
- The Web Part displays employees in a data grid. The user specifies the location of the file that contains the employee data. The user can also filter the data grid so that employees who are managers appear in the list only.  
+ この Web パーツのデータ グリッドには従業員が表示されます。 従業員データを格納するファイルの場所を指定します。 また、マネージャーである従業員のみが一覧に表示されるように、データ グリッドにフィルターをかけることもできます。  
   
- This walkthrough illustrates the following tasks:  
+ このチュートリアルでは、次の作業について説明します。  
   
--   Creating a Web Part by using the Visual Studio **Web Part** item template.  
+-   Visual Studio を使用して Web パーツを作成する**Web パーツ**項目テンプレート。  
   
--   Creating a property that can be set by the user of the Web Part. This property specifies the location of the employee data file.  
+-   Web パーツのユーザーが設定できるプロパティを作成する。 このプロパティでは、従業員データ ファイルの場所を指定します。  
   
--   Rendering content in a Web Part by adding controls to the Web Part controls collection.  
+-   コントロールを Web パーツ コントロール コレクションに追加することで Web パーツにコンテンツをレンダリングする。  
   
--   Creating a new menu item, referred to as a *verb,* that appears in the verbs menu of the rendered Web part. Verbs enable the user to modify the data that appears in the Web Part.  
+-   呼ばれる、新しいメニュー項目を作成する、*動詞、*レンダリングされた Web パーツの動詞メニューに表示されます。 動詞を使用すると、Web パーツに表示されるデータを変更できます。  
   
--   Testing the Web Part in SharePoint.  
+-   SharePoint の Web パーツをテストする。  
   
     > [!NOTE]  
-    >  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+    >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   Supported editions of Microsoft Windows and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   サポート対象エディションの Microsoft Windows および SharePoint。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。  
   
--   [!INCLUDE[vs_pro_current_short](../sharepoint/includes/vs-pro-current-short-md.md)] or an edition of Visual Studio Application Lifecycle Management (ALM).  
+-   [!INCLUDE[vs_pro_current_short](../sharepoint/includes/vs-pro-current-short-md.md)]版の Visual Studio アプリケーション ライフ サイクル管理 (ALM) のいずれか。  
   
-## <a name="creating-an-empty-sharepoint-project"></a>Creating an Empty SharePoint Project  
- First, create a Empty SharePoint project. Later, you will add a Web Part to the project by using the **Web Part** item template.  
+## <a name="creating-an-empty-sharepoint-project"></a>空の SharePoint プロジェクトの作成  
+ まず、空の SharePoint プロジェクトを作成します。 使用して、後で、プロジェクトに Web パーツを追加するが、 **Web パーツ**項目テンプレート。  
   
-#### <a name="to-create-an-empty-sharepoint-project"></a>To create an Empty SharePoint Project  
+#### <a name="to-create-an-empty-sharepoint-project"></a>空の SharePoint プロジェクトを作成するには  
   
-1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] by using the **Run as Administrator** option.  
+1.  開始[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を使用して、**管理者として実行**オプション。  
   
-2.  On the men bar, choose **File**, **New**, **Project**.  
+2.  メニュー バーで、次のように選択します。**ファイル**、**新規**、**プロジェクト**です。  
   
-3.  In the **New Project** dialog box, expand the **SharePoint** node under the language that you want to use, and then choose the **2010** node.  
+3.  **新しいプロジェクト**] ダイアログ ボックスで、展開、 **SharePoint** [クリックしてを使用する言語のノード、 **2010**ノード。  
   
-4.  In the **Templates** pane, choose **SharePoint 2010 Project**, and then choose the **OK** button.  
+4.  **テンプレート** ウィンドウで、選択**SharePoint 2010 プロジェクト**を選択し、 **OK**ボタンをクリックします。  
   
-     The **SharePoint Customization Wizard** appears. This wizard enables you to select the site that you will use to debug the project and the trust level of the solution.  
+     **SharePoint カスタマイズ ウィザード**が表示されます。 このウィザードを使用すると、プロジェクトのデバッグに使用するサイトや、ソリューションの信頼レベルを選択できます。  
   
-5.  Choose the **Deploy as a farm solution** option button, and then choose the **Finish** button to accept the default local SharePoint site.  
+5.  選択、**ファーム ソリューションとして配置**オプション ボタンをクリックして、**完了**ボタンをクリックして既定のローカル SharePoint サイトです。  
   
-## <a name="adding-a-web-part-to-the-project"></a>Adding a Web Part to the Project  
- Add a **Web Part** item to the project. The **Web Part** item adds the Web Part code file. Later, you will add code to the Web Part code file to render the contents of the Web Part.  
+## <a name="adding-a-web-part-to-the-project"></a>Web パーツのプロジェクトへの追加  
+ 追加、 **Web パーツ**プロジェクト項目です。 **Web パーツ**項目は、Web パーツ コード ファイルを追加します。 後で、Web パーツ コード ファイルにコードを追加して、Web パーツのコンテンツをレンダリングします。  
   
-#### <a name="to-add-a-web-part-to-the-project"></a>To add a Web Part to the Project  
+#### <a name="to-add-a-web-part-to-the-project"></a>プロジェクトに Web パーツを追加するには  
   
-1.  On the menu bar, choose **Project**, **Add New Item**.  
+1.  メニュー バーで、次のように選択します。**プロジェクト**、**新しい項目の追加**です。  
   
-2.  In the **Add New Item** dialog box, in the **Installed Templates** pane, expand the **SharePoint** node, and then choose the **2010** node.  
+2.  **新しい項目の追加** ダイアログ ボックスで、**インストールされたテンプレート** ウィンドウで、展開、 **SharePoint**  ノードを選択し、 **2010**ノード。  
   
-3.  In the list of SharePoint templates, choose the **Web Part** template, and then choose the **Add** button.  
+3.  SharePoint テンプレートの一覧で選択、 **Web パーツ**テンプレートを選択し、**追加**ボタンをクリックします。  
   
-     The **Web Part** item appears in **Solution Explorer**.  
+     **Web パーツ**項目に表示されます**ソリューション エクスプ ローラー**です。  
   
-## <a name="rendering-content-in-the-web-part"></a>Rendering Content in the Web Part  
- You can specify which controls you want to appear in the Web Part by adding them to the controls collection of the Web Part class.  
+## <a name="rendering-content-in-the-web-part"></a>Web パーツのコンテンツのレンダリング  
+ Web パーツに表示するコントロールを指定するには、Web パーツ クラスのコントロール コレクションにコントロールを追加します。  
   
-#### <a name="to-render-content-in-the-web-part"></a>To render content in the Web Part  
+#### <a name="to-render-content-in-the-web-part"></a>Web パーツのコンテンツをレンダリングするには  
   
-1.  In **Solution Explorer**, open WebPart1.vb (in Visual Basic) or WebPart1.cs (in C#).  
+1.  **ソリューション エクスプ ローラー**WebPart1.vb (Visual Basic) または WebPart1.cs (C# の場合) を開きます。  
   
-     The Web Part code file opens in Code Editor.  
+     コード エディターで Web パーツ コード ファイルが開きます。  
   
-2.  Add the following statements to the top of the Web Part code file.  
+2.  Web パーツ コード ファイルの先頭に次のステートメントを追加します。  
   
-     [!code-csharp[SP_WebPart#1](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#1)]  [!code-vb[SP_WebPart#1](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#1)]  
+     [!code-csharp[SP_WebPart#1](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#1)]
+     [!code-vb[SP_WebPart#1](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#1)]  
   
-3.  Add the following code to the `WebPart1` class. This code declares the following fields:  
+3.  `WebPart1` クラスに次のコードを追加します。 このコードは、次のフィールドを宣言します。  
   
-    -   A data grid to display employees in the Web Part.  
+    -   Web パーツに従業員を表示するデータ グリッド。  
   
-    -   Text that appears on the control that is used to filter the data grid.  
+    -   データ グリッドのフィルターに使用するコントロール上に表示するテキスト。  
   
-    -   A label that displays an error if the data grid is unable to display data.  
+    -   データ グリッドでデータを表示できない場合、エラーを表示するラベル。  
   
-    -   A string that contains the path of the employee data file.  
+    -   従業員データ ファイルのパスを含む文字列。  
   
-     [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)] [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]  
+     [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)]
+     [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]  
   
-4.  Add the following code to the `WebPart1` class. This code adds a custom property named `DataFilePath` to the Web Part. A custom property is a property that can be set in SharePoint by the user. This property gets and sets the location of a XML data file that is used to populate the data grid.  
+4.  `WebPart1` クラスに次のコードを追加します。 このコードで、`DataFilePath` というカスタム プロパティが Web パーツに追加されます。 カスタム プロパティとは、ユーザーが SharePoint で設定できるプロパティです。 このプロパティでは、データ グリッドの設定に使用される XML データ ファイルの場所を取得および設定します。  
   
-     [!code-csharp[SP_WebPart#3](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#3)]  [!code-vb[SP_WebPart#3](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#3)]  
+     [!code-csharp[SP_WebPart#3](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#3)]
+     [!code-vb[SP_WebPart#3](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#3)]  
   
-5.  Replace the `CreateChildControls` method with the following code. This code performs the following tasks:  
+5.  `CreateChildControls` メソッドを次のコードに置き換えます。 このコードは次のタスクを実行します。  
   
-    -   Adds the data grid and label that you declared in the previous step.  
+    -   前の手順で宣言したデータ グリッドとラベルを追加します。  
   
-    -   Binds the data grid to an XML file that contains employee data.  
+    -   従業員データを格納する XML ファイルにデータ グリッドをバインドします。  
   
-     [!code-csharp[SP_WebPart#4](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#4)] [!code-vb[SP_WebPart#4](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#4)]  
+     [!code-csharp[SP_WebPart#4](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#4)]
+     [!code-vb[SP_WebPart#4](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#4)]  
   
-6.  Add the following method to the `WebPart1` class. This code performs the following tasks:  
+6.  `WebPart1` クラスに次のメソッドを追加します。 このコードは次のタスクを実行します。  
   
-    -   Creates a verb that appears in the Web Part verbs menu of the rendered Web part.  
+    -   レンダリングされた Web パーツの Web パーツ動詞メニューに表示する動詞を作成します。  
   
-    -   Handles the event that is raised when the user chooses the verb in the verbs menu. This code filters the list of employees that appears in the data grid.  
+    -   動詞メニューの動詞を選択すると発生するイベントを処理します。 このコードでは、データ グリッドに表示される従業員一覧にフィルターをかけます。  
   
-     [!code-csharp[SP_WebPart#5](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#5)] [!code-vb[SP_WebPart#5](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#5)]  
+     [!code-csharp[SP_WebPart#5](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#5)]
+     [!code-vb[SP_WebPart#5](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#5)]  
   
-## <a name="testing-the-web-part"></a>Testing the Web Part  
- When you run the project, the SharePoint site opens. The Web Part is automatically added to the Web Part Gallery in SharePoint. You can add the Web Part to any Web Part page.  
+## <a name="testing-the-web-part"></a>Web パーツのテスト  
+ プロジェクトを実行すると、SharePoint サイトが開きます。 Web パーツは SharePoint の Web パーツ ギャラリーに自動的に追加されます。 Web パーツは任意の Web パーツ ページに追加できます。  
   
-#### <a name="to-test-the-web-part"></a>To test the Web Part  
+#### <a name="to-test-the-web-part"></a>Web パーツをテストするには  
   
-1.  Paste the following XML into a Notepad file. This XML file contains the sample data that will appear in the Web Part.  
+1.  次の XML をメモ帳ファイルに貼り付けます。 この XML ファイルには、Web パーツに表示されるサンプル データが含まれます。  
   
     ```  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -170,64 +172,64 @@ ms.lasthandoff: 08/30/2017
         </employees>  
     ```  
   
-2.  In Notepad, on the menu bar, choose **File**, **Save As**.  
+2.  メモ帳で、メニュー バーで、選択**ファイル**、**名前を付けて保存**です。  
   
-3.  In the **Save As** dialog box, in the **Save as type** list, choose **All Files**.  
+3.  **名前を付けて保存** ダイアログ ボックスで、**型として保存**一覧で、選択**すべてのファイル**です。  
   
-4.  In the **File name** box, enter **data.xml**.  
+4.  **ファイル名**ボックスに、入力**data.xml**です。  
   
-5.  Choose any folder by using the **Browse Folders** button, and then choose the **Save** button.  
+5.  使用して任意のフォルダーを選択して、**フォルダーの参照**ボタンをクリックしを選択し、**保存**ボタンをクリックします。  
   
-6.  In Visual Studio, choose the **F5** key.  
+6.  Visual Studio で、選択、 **f5 キーを押して**キー。  
   
-     The SharePoint site opens.  
+     SharePoint サイトが開きます。  
   
-7.  On the **Site Actions** menu, choose **More Options**.  
+7.  **サイトの操作**] メニューの [選択**オプションより**です。  
   
-8.  In the **Create** page, choose the **Web Part Page** type, then choose the **Create** button.  
+8.  **作成**ページで、選択、 **Web パーツ ページ**型をクリックし、**作成**ボタンをクリックします。  
   
-9. In the **New Web Part Page** page, name the page **SampleWebPartPage.aspx**, and then choose the **Create** button.  
+9. **新しい Web パーツ ページ** ページで、ページの名前を付けます**SampleWebPartPage.aspx**を選択し、**作成**ボタンをクリックします。  
   
-     The Web Part page appears.  
+     [Web パーツ] ページが表示されます。  
   
-10. Select any zone on the Web Part page.  
+10. [Web パーツ] ページ上のゾーンを選択します。  
   
-11. At the top of the page, choose the **Insert** tab, and then choose the **Web Part** button.  
+11. ページの上部には、選択、**挿入** タブをクリックして、 **Web パーツ**ボタンをクリックします。  
   
-12. In the **Categories** pane, choose the **Custom** folder, choose the **WebPart1** Web Part, and then choose the **Add** button.  
+12. **カテゴリ** ウィンドウを選択、**カスタム**フォルダーを選択、 **WebPart1** Web パーツを選択し、**追加**ボタンをクリックします。  
   
-     The Web Part appears on the page.  
+     ページに Web パーツが表示されます。  
   
-## <a name="testing-the-custom-property"></a>Testing the Custom Property  
- To populate the data grid that appears in the Web Part, specify the path of the XML file that contains data about each employee.  
+## <a name="testing-the-custom-property"></a>カスタム プロパティのテスト  
+ Web パーツに表示するデータ グリッドを設定するには、各従業員に関するデータが格納された XML ファイルのパスを指定します。  
   
-#### <a name="to-test-the-custom-property"></a>To test the custom property  
+#### <a name="to-test-the-custom-property"></a>カスタム プロパティをテストするには  
   
-1.  Choose the arrow that appears on the right side of the Web Part, and then choose **Edit Web Part** from the menu that appears.  
+1.  Web パーツの右側に表示される矢印を選択し、 **Web パーツの編集**表示されるメニューから。  
   
-     A pane that contains properties for the Web Part appears on the right side of the page.  
+     Web パーツのプロパティを含むペインがページの右側に表示されます。  
   
-2.  In the pane, expand the **Miscellaneous** node, enter the path of the XML file that you created earlier, choose the **Apply** button, and then choose the **OK** button.  
+2.  ウィンドウで、展開、 **その他**  ノードで、先ほど作成した XML ファイルのパスを入力、選択、**適用**ボタンをクリックしを選択し、 **ok**ボタンをクリックします。  
   
-     Verify that a list of employees appears in the Web Part.  
+     Web パーツに従業員一覧が表示されることを確認します。  
   
-## <a name="testing-the-web-part-verb"></a>Testing the Web Part Verb  
- Show and hide employees that are not managers by clicking an item that appears in the Web Part verbs menu.  
+## <a name="testing-the-web-part-verb"></a>Web パーツの動詞のテスト  
+ Web パーツ動詞メニューに表示される項目をクリックすると、マネージャーではない従業員の表示と非表示が切り替わります。  
   
-#### <a name="to-test-the-web-part-verb"></a>To test the Web Part verb  
+#### <a name="to-test-the-web-part-verb"></a>Web パーツの動詞をテストするには  
   
-1.  Choose the arrow that appears on the right side of the Web Part, and then choose **Show Managers Only** from the menu that appears.  
+1.  Web パーツの右側に表示される矢印を選択し、 **マネージャーのみ**表示されるメニューから。  
   
-     Only employees who are managers appear in the Web Part.  
+     Web パーツにマネージャーである従業員のみが表示されます。  
   
-2.  Choose the arrow again, and then choose **Show All Employees** from the menu that appears.  
+2.  もう一度、矢印を選択し、 **すべての従業員**表示されるメニューから。  
   
-     All employees appear in the Web Part.  
+     Web パーツにすべての従業員が表示されます。  
   
-## <a name="see-also"></a>See Also  
- [Creating Web Parts for SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)   
- [How to: Create a SharePoint Web Part](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
- [How to: Create a SharePoint Web Part by Using a Designer](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   
- [Walkthrough: Creating a Web Part for SharePoint by Using a Designer](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)  
+## <a name="see-also"></a>関連項目  
+ [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)   
+ [方法: SharePoint Web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
+ [方法: デザイナーを使用して、SharePoint Web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   
+ [チュートリアル: デザイナーを使用した SharePoint の Web パーツの作成](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)  
   
   

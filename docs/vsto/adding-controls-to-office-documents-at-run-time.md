@@ -1,12 +1,10 @@
 ---
-title: Adding Controls to Office Documents at Run Time | Microsoft Docs
+title: "実行時に Office ドキュメントへのコントロールの追加 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -25,130 +23,132 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], adding at run time
 - helper methods [Office development in Visual Studio]
 ms.assetid: 4f43b3eb-f0ec-44e2-9885-6ede327c6913
-caps.latest.revision: 102
-author: kempb
-ms.author: kempb
+caps.latest.revision: "102"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: d140f6a45f62fd9907a9a7ed2984dcbaa3626800
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: db8a4fad73bb710662ce63bd299751c725e0c6ce
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="adding-controls-to-office-documents-at-run-time"></a>Adding Controls to Office Documents at Run Time
-  You can add controls to a Microsoft Office Word document and Microsoft Office Excel workbook at run time. You can also remove them at run time. Controls that you add or remove at run time are called *dynamic controls*.  
+# <a name="adding-controls-to-office-documents-at-run-time"></a>実行時の Office ドキュメントへのコントロールの追加
+  コントロールは、実行時に、Microsoft Office Word 文書と Microsoft Office Excel ブックに追加できます。 それらを実行時に削除することもできます。 実行時にドキュメントに追加したりドキュメントから削除したりするコントロールのことを、 *ダイナミック コントロール*といいます。  
   
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]  
   
- This topic describes the following:  
+ このトピックでは、次のことについて説明します。  
   
--   [Managing controls at run time by using the control collections](#ControlsCollection).  
+-   [コントロール コレクションを使用して実行時にコントロールを管理する](#ControlsCollection)。  
   
--   [Adding host controls to documents](#HostControls).  
+-   [ホスト コントロールをドキュメントに追加する](#HostControls)。  
   
--   [Adding Windows Forms controls to documents](#WindowsForms).  
+-   [Windows フォーム コントロールをドキュメントに追加する](#WindowsForms)。  
   
- ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Add Controls to a Document Surface at Runtime?](http://go.microsoft.com/fwlink/?LinkId=132782).  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[方法は i: コントロールの追加を実行時にドキュメントの画面に?](http://go.microsoft.com/fwlink/?LinkId=132782)です。  
   
 ##  <a name="ControlsCollection"></a> Managing Controls at Run Time by Using the Control Collections  
- To add, get, or remove controls at run time, use helper methods of <xref:Microsoft.Office.Tools.Excel.ControlCollection> and <xref:Microsoft.Office.Tools.Word.ControlCollection> objects.  
+ 実行時にコントロールを追加、取得、または削除するには、 <xref:Microsoft.Office.Tools.Excel.ControlCollection> オブジェクトと <xref:Microsoft.Office.Tools.Word.ControlCollection> オブジェクトのヘルパー メソッドを使用します。  
   
- The way that you access these objects depends on the type of project you are developing:  
+ これらのオブジェクトにアクセスする方法は、開発しているプロジェクトの種類によって異なります。  
   
--   In a document-level project for Excel, use the <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> property of the `Sheet1`, `Sheet2`, and `Sheet3` classes. For more information about these classes, see [Worksheet Host Item](../vsto/worksheet-host-item.md).  
+-   Excel のドキュメント レベルのプロジェクトでは、 <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> クラス、 `Sheet1`クラス、および `Sheet2`クラスの `Sheet3` プロパティを使用します。 これらのクラスの詳細については、次を参照してください。 [Worksheet ホスト項目](../vsto/worksheet-host-item.md)です。  
   
--   In a document-level project for Word, use the <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> property of the `ThisDocument` class. For more information about this class, see [Document Host Item](../vsto/document-host-item.md).  
+-   Word のドキュメント レベルのプロジェクトでは、 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> クラスの `ThisDocument` プロパティを使用します。 このクラスの詳細については、次を参照してください。 [Document ホスト項目](../vsto/document-host-item.md)です。  
   
--   In an VSTO Add-in project for Excel or Word, use the Controls property of a <xref:Microsoft.Office.Tools.Excel.Worksheet> or <xref:Microsoft.Office.Tools.Word.Document> that you generate at run time. For more information about generating these objects at run time, see [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
+-   Excel または Word の VSTO アドイン プロジェクトでは、コントロール プロパティを使用して、<xref:Microsoft.Office.Tools.Excel.Worksheet>または<xref:Microsoft.Office.Tools.Word.Document>実行時に生成します。 詳細については、実行時にこれらのオブジェクトを生成する、次を参照してください。 [Word 文書や拡張を実行時に VSTO アドイン内の Excel ブック](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)です。  
   
-### <a name="adding-controls"></a>Adding Controls  
- The <xref:Microsoft.Office.Tools.Excel.ControlCollection> and <xref:Microsoft.Office.Tools.Word.ControlCollection> types include helper methods that you can use to add host controls and common Windows Forms controls to documents and worksheets. Each method name has the format `Add`*control class*, where *control class* is the class name of the control that you want to add. For example, to add a <xref:Microsoft.Office.Tools.Excel.NamedRange> control to your document, use the <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A> method.  
+### <a name="adding-controls"></a>コントロールの追加  
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection> 型と <xref:Microsoft.Office.Tools.Word.ControlCollection> 型には、ドキュメントとワークシートにホスト コントロールや Windows フォームのコモン コントロールを追加するために使用できるヘルパー メソッドが含まれています。 各メソッドの名前は、 `Add`*コントロール クラス*という形式になっています。ここで、 *コントロール クラス* は、追加するコントロールのクラス名です。 たとえば、ドキュメントに <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを追加するには、 <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A> メソッドを使用します。  
   
- The following code example adds a <xref:Microsoft.Office.Tools.Excel.NamedRange> to `Sheet1` in a document-level project for Excel.  
+ Excel のドキュメント レベルのプロジェクトで <xref:Microsoft.Office.Tools.Excel.NamedRange> を `Sheet1` に追加する方法を次のコード例に示します。  
   
- [!code-vb[Trin_ExcelWorkbookDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb#3)] [!code-csharp[Trin_ExcelWorkbookDynamicControls#3](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs#3)]  
+ [!code-vb[Trin_ExcelWorkbookDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb#3)]
+ [!code-csharp[Trin_ExcelWorkbookDynamicControls#3](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs#3)]  
   
-### <a name="accessing-and-deleting-controls"></a>Accessing and Deleting Controls  
- You can use the Controls property of a <xref:Microsoft.Office.Tools.Excel.Worksheet> or <xref:Microsoft.Office.Tools.Word.Document> to iterate through all the controls in your document, including the controls you added at design time. Controls that you add at design time are also called *static controls*.  
+### <a name="accessing-and-deleting-controls"></a>コントロールのアクセスと削除  
+ コントロール プロパティを使用することができます、<xref:Microsoft.Office.Tools.Excel.Worksheet>または<xref:Microsoft.Office.Tools.Word.Document>をデザイン時に追加したコントロールを含め、ドキュメント内のすべてのコントロールを反復処理します。 デザイン時に追加するコントロールは、 *スタティック コントロール*とも呼ばれます。  
   
- You can remove dynamic controls by calling the Delete method of the control, or by calling the Remove method of each Controls collection. The following code example uses the <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> method to remove a <xref:Microsoft.Office.Tools.Excel.NamedRange> from `Sheet1` in a document-level project for Excel.  
+ コントロールの Delete メソッドを呼び出すことによって、または各コントロール コレクションの Remove メソッドを呼び出すことにより、ダイナミック コントロールを削除できます。 次のコード例では、Excel のドキュメント レベルのプロジェクトで <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> メソッドを使用して <xref:Microsoft.Office.Tools.Excel.NamedRange> を `Sheet1` から削除します。  
   
- [!code-vb[Trin_ExcelWorkbookDynamicControls#4](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb#4)] [!code-csharp[Trin_ExcelWorkbookDynamicControls#4](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs#4)]  
+ [!code-vb[Trin_ExcelWorkbookDynamicControls#4](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb#4)]
+ [!code-csharp[Trin_ExcelWorkbookDynamicControls#4](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs#4)]  
   
- You cannot remove static controls at run time. If you try to use the Delete or Remove method to remove a static control, a <xref:Microsoft.Office.Tools.CannotRemoveControlException> will be thrown.  
+ 実行時にスタティック コントロールを削除することはできません。 メソッドを使用して、削除、または削除が静的なコントロールを削除しようとすると、<xref:Microsoft.Office.Tools.CannotRemoveControlException>がスローされます。  
   
 > [!NOTE]  
->  Do not programmatically remove controls in the `Shutdown` event handler of the document. The UI elements of the document are no longer available when the `Shutdown` event is raised. If you want to remove controls before the document closes, add your code to the event handler for another event, such as <xref:Microsoft.Office.Tools.Word.Document.BeforeClose> or <xref:Microsoft.Office.Tools.Word.Document.BeforeSave> for Word, or <xref:Microsoft.Office.Tools.Excel.Workbook.BeforeClose>, or <xref:Microsoft.Office.Tools.Excel.Workbook.BeforeSave> for Excel.  
+>  ドキュメントの `Shutdown` イベント ハンドラーの中で、プログラムによってコントロールを削除しないでください。 `Shutdown` イベントが発生する時点では、ドキュメントの UI 要素は利用できなくなっています。 ドキュメントを閉じる前にコントロールを削除するには、Word では <xref:Microsoft.Office.Tools.Word.Document.BeforeClose> や <xref:Microsoft.Office.Tools.Word.Document.BeforeSave> 、Excel では <xref:Microsoft.Office.Tools.Excel.Workbook.BeforeClose>や <xref:Microsoft.Office.Tools.Excel.Workbook.BeforeSave> など、別のイベントのイベント ハンドラーにコードを追加してください。  
   
 ##  <a name="HostControls"></a> Adding Host Controls to Documents  
- When you programmatically add host controls to documents, you must provide a name that uniquely identifies the control, and you must specify where to add the control on the document. For specific instructions, see the following topics:  
+ ホスト コントロールをプログラムでドキュメントに追加するには、そのコントロールを一意に識別する名前を指定し、ドキュメント上にコントロールを追加する場所を指定する必要があります。 具体的な手順については、次のトピックを参照してください。  
   
--   [How to: Add ListObject Controls to Worksheets](../vsto/how-to-add-listobject-controls-to-worksheets.md)  
+-   [方法: ワークシートに ListObject コントロールを追加する](../vsto/how-to-add-listobject-controls-to-worksheets.md)  
   
--   [How to: Add NamedRange Controls to Worksheets](../vsto/how-to-add-namedrange-controls-to-worksheets.md)  
+-   [方法: ワークシートに NamedRange コントロールを追加する](../vsto/how-to-add-namedrange-controls-to-worksheets.md)  
   
--   [How to: Add Chart Controls to Worksheets](../vsto/how-to-add-chart-controls-to-worksheets.md)  
+-   [方法: ワークシートに Chart コントロールを追加する](../vsto/how-to-add-chart-controls-to-worksheets.md)  
   
--   [How to: Add Content Controls to Word Documents](../vsto/how-to-add-content-controls-to-word-documents.md)  
+-   [方法: Word 文書にコンテンツ コントロールを追加する](../vsto/how-to-add-content-controls-to-word-documents.md)  
   
--   [How to: Add Bookmark Controls to Word Documents](../vsto/how-to-add-bookmark-controls-to-word-documents.md)  
+-   [方法: Word 文書に Bookmark コントロールを追加する](../vsto/how-to-add-bookmark-controls-to-word-documents.md)  
   
- For more information about host controls, see [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md).  
+ ホスト コントロールについて詳しくは、「 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)」をご覧ください。  
   
- When a document is saved and then closed, all dynamically created host controls are disconnected from their events and they lose their data binding functionality. You can add code to your solution to re-create the host controls when the document is reopened. For more information, see [Persisting Dynamic Controls in Office Documents](../vsto/persisting-dynamic-controls-in-office-documents.md).  
+ ドキュメントを保存して閉じると、動的に作成したすべてのホスト コントロールはそれぞれイベントから切断され、データ バインディング機能も失われます。 ソリューションにコードを追加すれば、ドキュメントが再び開かれる時点でホスト コントロールを再作成するようにできます。 詳細については、「 [Persisting Dynamic Controls in Office Documents](../vsto/persisting-dynamic-controls-in-office-documents.md)」を参照してください。  
   
 > [!NOTE]  
->  Helper methods are not provided for the following host controls, because these controls cannot be added programmatically to documents: <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>, <xref:Microsoft.Office.Tools.Word.XMLNode>, and <xref:Microsoft.Office.Tools.Word.XMLNodes>.  
+>  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>、 <xref:Microsoft.Office.Tools.Word.XMLNode>、および <xref:Microsoft.Office.Tools.Word.XMLNodes>の各ホスト コントロールは、プログラムでドキュメントに追加することができないため、ヘルパー メソッドは用意されていません。  
   
 ##  <a name="WindowsForms"></a> Adding Windows Forms Controls to Documents  
- When you programmatically add a Windows Forms control to a document, you must provide the location of the control and a name that uniquely identifies the control. The [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] provides helper methods for each control. These methods are overloaded so that you can pass either a range or specific coordinates for the location of the control.  
+ Windows フォーム コントロールをプログラムでドキュメントに追加する場合は、コントロールの場所とコントロールを一意に識別する名前を指定する必要があります。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] が、各コントロールのヘルパー メソッドを提供します。 これらのメソッドはオーバーロードされているため、コントロールの場所として範囲または特定の座標のいずれかを渡すことができます。  
   
- When a document is saved and then closed, all dynamically created Windows Forms controls are removed from the document. You can add code to your solution to re-create the controls when the document is reopened. If you create dynamic Windows Forms controls by using an VSTO Add-in, the ActiveX wrappers for the controls are left in the document. For more information, see [Persisting Dynamic Controls in Office Documents](../vsto/persisting-dynamic-controls-in-office-documents.md).  
+ ドキュメントを保存して閉じると、動的に作成されたすべての Windows フォーム コントロールはドキュメントから削除されます。 ソリューションにコードを追加すれば、ドキュメントが再び開かれる時点でコントロールを再作成するようにできます。 VSTO アドインを使用して動的な Windows フォーム コントロールを作成した場合は、コントロールの ActiveX ラッパーがドキュメントに残されます。 詳細については、「 [Persisting Dynamic Controls in Office Documents](../vsto/persisting-dynamic-controls-in-office-documents.md)」を参照してください。  
   
 > [!NOTE]  
->  Windows Forms controls cannot be programmatically added to protected documents. If you programmatically unprotect a Word document or Excel worksheet to add a control, you must write additional code to remove the control's ActiveX wrapper when the document is closed. The control's ActiveX wrapper is not automatically deleted from protected documents.  
+>  Windows フォーム コントロールは、保護されているドキュメントにはプログラムで追加できません。 コントロールを追加するために、Word 文書または Excel ワークシートの保護をプログラムで解除する場合は、ドキュメントを閉じるときにコントロールの ActiveX ラッパーを削除するコードを追加で記述する必要があります。 コントロールの ActiveX ラッパーは、保護されたドキュメントから自動的には削除されません。  
   
-### <a name="adding-custom-controls"></a>Adding Custom Controls  
- If you want to add a <xref:System.Windows.Forms.Control> that is not supported by the available helper methods, such as a custom user control, use the following methods:  
+### <a name="adding-custom-controls"></a>カスタム コントロールの追加  
+ カスタム ユーザー コントロールなど、使用可能なヘルパー メソッドによってサポートされていない <xref:System.Windows.Forms.Control> を追加するには、次のメソッドを使用します。  
   
--   For Excel, use one of the <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddControl%2A> methods of a <xref:Microsoft.Office.Tools.Excel.ControlCollection> object.  
+-   Excel では、 <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddControl%2A> オブジェクトの <xref:Microsoft.Office.Tools.Excel.ControlCollection> メソッドの 1 つを使用します。  
   
--   For Word, use one of the <xref:Microsoft.Office.Tools.Word.ControlCollection.AddControl%2A> methods of a <xref:Microsoft.Office.Tools.Word.ControlCollection> object.  
+-   Word では、 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddControl%2A> オブジェクトの <xref:Microsoft.Office.Tools.Word.ControlCollection> メソッドの 1 つを使用します。  
   
- To add the control, pass the <xref:System.Windows.Forms.Control>, a location for the control, and a name that uniquely identifies the control to the AddControl method. The AddControl method returns an object that defines how the control interacts with the worksheet or document. The AddControl method returns a <xref:Microsoft.Office.Tools.Excel.ControlSite> (for Excel) or a <xref:Microsoft.Office.Tools.Word.ControlSite> object (for Word).  
+ コントロールを追加するには、渡す、<xref:System.Windows.Forms.Control>コントロールは、場所、および AddControl メソッドにコントロールを一意に識別する名前。 AddControl メソッドは、コントロールがワークシートまたは文書とやり取りする方法を定義するオブジェクトを返します。 AddControl メソッドを返します、 <xref:Microsoft.Office.Tools.Excel.ControlSite> (for Excel)、または<xref:Microsoft.Office.Tools.Word.ControlSite>オブジェクト (Word)。  
   
- The following code example demonstrates how to use the <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddControl%2A> method to dynamically add a custom user control to a worksheet in a document-level Excel project. In this example, the user control is named `UserControl1`, and the <xref:Microsoft.Office.Interop.Excel.Range> is named `range1`. To use this example, run it from a `Sheet`*n* class in the project.  
+ 次のコード例は、 <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddControl%2A> メソッドを使用して、ドキュメント レベルの Excel プロジェクトのワークシートにカスタム ユーザー コントロールを動的に追加する方法を示しています。 この例では、ユーザー コントロールの名前は `UserControl1`で、 <xref:Microsoft.Office.Interop.Excel.Range> の名前は `range1`です。 このコード例を使用するには、プロジェクトの `Sheet`*n* クラスから実行します。  
   
- [!code-vb[Trin_VstcoreProgrammingControlsExcel#2](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#2)] [!code-csharp[Trin_VstcoreProgrammingControlsExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#2)]  
+ [!code-vb[Trin_VstcoreProgrammingControlsExcel#2](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#2)]
+ [!code-csharp[Trin_VstcoreProgrammingControlsExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#2)]  
   
-### <a name="using-members-of-custom-controls"></a>Using Members of Custom Controls  
- After using one of the AddControl methods to add a control to a worksheet or document, you now have two different control objects:  
+### <a name="using-members-of-custom-controls"></a>カスタム コントロールのメンバーを使用する  
+ AddControl メソッドのいずれかを使用して、ワークシートまたは文書にコントロールを追加する、2 つの異なるコントロール オブジェクトがあるようになりました。  
   
--   The <xref:System.Windows.Forms.Control> that represents the custom control.  
+-   カスタム コントロールを表す <xref:System.Windows.Forms.Control> 。  
   
--   The ControlSite, OLEObject, or OLEControl object that represents the control after it was added to the worksheet or document.  
+-   ワークシートまたは文書に追加された後に、コントロールを表す ControlSite、OLEObject、または OLEControl オブジェクト。  
   
- Many properties and methods are shared between these controls. It is important that you access these members through the appropriate control:  
+ これらのコントロールには、共有されているプロパティやメソッドが多数あります。 これらのメンバーには、適切なコントロールを介してアクセスすることが重要です。  
   
--   To access members that belong only to the custom control, use the <xref:System.Windows.Forms.Control>.  
+-   カスタム コントロールのみに属するメンバーにアクセスするには、 <xref:System.Windows.Forms.Control>を使用します。  
   
--   To access members that are shared by the controls, use the ControlSite, OLEObject, or OLEControl object.  
+-   コントロールによって共有されているメンバーにアクセスするには、ControlSite、OLEObject、または OLEControl オブジェクトを使用します。  
   
- If you access a shared member from the <xref:System.Windows.Forms.Control>, it might fail without warning or notification, or it can produce invalid results. Always use methods or properties of the ControlSite, OLEObject, or OLEControl object unless the method or property needed is not available; only then should you reference the <xref:System.Windows.Forms.Control>.  
+ 共有されているメンバーに <xref:System.Windows.Forms.Control>からアクセスすると、警告や通知なしに失敗したり、無効な結果が生成されたりすることがあります。 メソッドまたは必要なプロパティが使用可能な; がない限り、常に、ControlSite、OLEObject、または OLEControl オブジェクトのメソッドまたはプロパティを使用します。しかし、参照する必要がある、<xref:System.Windows.Forms.Control>です。  
   
- For example, both the <xref:Microsoft.Office.Tools.Excel.ControlSite> class and the <xref:System.Windows.Forms.Control> class have a Top property. To get or set the distance between the top of the control and the top of the document, use the <xref:Microsoft.Office.Tools.Excel.ControlSite.Top%2A> property of the <xref:Microsoft.Office.Tools.Excel.ControlSite>, not the <xref:System.Windows.Forms.Control.Top%2A> property of the <xref:System.Windows.Forms.Control>.  
+ たとえば、両方、<xref:Microsoft.Office.Tools.Excel.ControlSite>クラスおよび<xref:System.Windows.Forms.Control>クラスには、最上位のプロパティが設定されています。 コントロールの上端からドキュメントの先頭までの間の距離を取得または設定するには、 <xref:Microsoft.Office.Tools.Excel.ControlSite.Top%2A> の <xref:Microsoft.Office.Tools.Excel.ControlSite>プロパティではなく、 <xref:System.Windows.Forms.Control.Top%2A> の <xref:System.Windows.Forms.Control>プロパティを使用してください。  
   
- [!code-vb[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#3)] [!code-csharp[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#3)]  
+ [!code-vb[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#3)]
+ [!code-csharp[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#3)]  
   
-## <a name="see-also"></a>See Also  
- [Controls on Office Documents](../vsto/controls-on-office-documents.md)   
- [Persisting Dynamic Controls in Office Documents](../vsto/persisting-dynamic-controls-in-office-documents.md)   
- [How to: Add ListObject Controls to Worksheets](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
- [How to: Add NamedRange Controls to Worksheets](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
- [How to: Add Chart Controls to Worksheets](../vsto/how-to-add-chart-controls-to-worksheets.md)   
- [How to: Add Content Controls to Word Documents](../vsto/how-to-add-content-controls-to-word-documents.md)   
+## <a name="see-also"></a>関連項目  
+ [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
+ [Office 文書で動的コントロールの永続化](../vsto/persisting-dynamic-controls-in-office-documents.md)   
+ [方法: ワークシートに ListObject コントロールを追加します。](../vsto/how-to-add-listobject-controls-to-worksheets.md)   
+ [方法: ワークシートに NamedRange コントロールを追加します。](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
+ [方法: ワークシートに Chart コントロールを追加します。](../vsto/how-to-add-chart-controls-to-worksheets.md)   
+ [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   
  [How to: Add Bookmark Controls to Word Documents](../vsto/how-to-add-bookmark-controls-to-word-documents.md)   
- [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md)   
- [How to: Add Windows Forms Controls to Office Documents](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
-
+ [Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)   
+ [方法: Office ドキュメントに Windows フォーム コントロールを追加する](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   

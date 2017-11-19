@@ -1,74 +1,74 @@
 ---
-title: "IDebugDisassemblyStream2::Read | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDisassemblyStream2::Read"
-helpviewer_keywords: 
-  - "IDebugDisassemblyStream2::Read"
+title: "IDebugDisassemblyStream2::Read |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugDisassemblyStream2::Read
+helpviewer_keywords: IDebugDisassemblyStream2::Read
 ms.assetid: 7db5f6bb-73ee-45bc-b187-c1b6aa2dfdd5
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 0c75a832c2b9a59a681d6a80d087b69212a5361d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugDisassemblyStream2::Read
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-構成ストリームの現在位置から始めて命令を読み取ります。  
+# <a name="idebugdisassemblystream2read"></a>IDebugDisassemblyStream2::Read
+逆アセンブル ストリーム内の現在位置から開始する指示を読み取ります。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
-HRESULT Read(   
-   DWORD                     dwInstructions,  
-   DISASSEMBLY_STREAM_FIELDS dwFields,  
-   DWORD*                    pdwInstructionsRead,  
-   DisassemblyData*          prgDisassembly  
+```cpp  
+HRESULT Read(   
+   DWORD                     dwInstructions,  
+   DISASSEMBLY_STREAM_FIELDS dwFields,  
+   DWORD*                    pdwInstructionsRead,  
+   DisassemblyData*          prgDisassembly  
 );  
 ```  
   
-```c#  
-int Read(   
-   uint                           dwInstructions,  
-   enum_DISASSEMBLY_STREAM_FIELDS dwFields,  
-   out uint                       pdwInstructionsRead,  
-   DisassemblyData[]              prgDisassembly  
+```csharp  
+int Read(   
+   uint                           dwInstructions,  
+   enum_DISASSEMBLY_STREAM_FIELDS dwFields,  
+   out uint                       pdwInstructionsRead,  
+   DisassemblyData[]              prgDisassembly  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `dwInstructions`  
- \[逆アセンブル\] 命令数。  この値は`prgDisassembly` の配列の最大長。  
+ [in]逆アセンブルする命令の数。 この値はの最大長でも、`prgDisassembly`配列。  
   
  `dwFields`  
- \[入力\] `prgDisassembly` のフィールドが設定されるかを示す [DISASSEMBLY\_STREAM\_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) の列挙体のフラグの組み合わせ。  
+ [in]フラグの組み合わせ、 [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)のどのフィールドを示す列挙`prgDisassembly`に記入することができます。  
   
  `pdwInstructionsRead`  
- \[出力\] 実際に逆アセンブル命令数を返します。  
+ [out]実際に逆アセンブルの命令の数を返します。  
   
  `prgDisassembly`  
- \[入力\] 逆アセンブルしたコードが格納されます [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) の構造体の配列逆アセンブル手順ごとに 1 回の構造体。  この配列の長さが `dwInstructions` のパラメーターによって指定されます。  
+ [out]配列[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)構造体を逆アセンブルしたコード、逆アセンブルされた命令ごとに 1 つの構造が入力されます。 この配列の長さは、によって決まります、`dwInstructions`パラメーター。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- 現在のスコープで使用できる命令の最大数は [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) のメソッドを呼び出して取得できます。  
+## <a name="remarks"></a>コメント  
+ 呼び出して、現在のスコープで使用可能な命令の最大数を取得できます、 [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md)メソッドです。  
   
- 次の手順が読み込まれた現在位置を [シーク](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) のメソッドを呼び出すことで変更できます。します。  
+ 次の命令がから読み取られる現在の位置を呼び出すことにより変更することができます、[シーク](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)メソッドです。  
   
- `DSF_OPERANDS_SYMBOLS` フラグは `dwFields` のパラメーターの `DSF_OPERANDS` フラグに順序を逆アセンブルするときにシンボル名を使用する必要があることを示すために追加できます。  
+ `DSF_OPERANDS_SYMBOLS`にフラグを追加することができます、`DSF_OPERANDS`フラグ、`dwFields`パラメーターを逆アセンブルするときにシンボル名を使用することを示します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
- [DISASSEMBLY\_STREAM\_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)   
+ [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
  [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md)   
  [シーク](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)

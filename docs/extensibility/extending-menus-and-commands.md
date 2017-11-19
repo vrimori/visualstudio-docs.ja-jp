@@ -1,58 +1,60 @@
 ---
-title: "拡張メニューとコマンド | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "メニュー、一般的なタスク"
-  - "Vspackages にある、[menu タスク"
-  - ".vsct ファイル] メニューの一般的なタスク"
+title: "メニューとコマンドを拡張 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- menus, common tasks
+- VSPackages, menu tasks
+- .vsct files, common menu tasks
 ms.assetid: 7b2be4b9-e3fe-4412-874f-ae72ebc84c4b
-caps.latest.revision: 49
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 49
+caps.latest.revision: "49"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5c53f836b6384968bf812ae9ae559a281fda6f13
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 拡張メニューとコマンド
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-コマンドは、アクションとプロセスを Visual Studio に追加する方法です。 ほとんどの場合は、コマンドはメニューやツールバーに表示されます。 VSPackage プロジェクト テンプレートは、非常に基本的なコマンドを実装する方法を示します。 少々 長くなりますが、まだ基本的な実装では、次を参照してください。 [メニュー コマンドを使用して拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)します。  
+# <a name="extending-menus-and-commands"></a>拡張メニューとコマンド
+コマンドは、アクションとプロセスを Visual Studio に追加する方法です。 ほとんどの場合は、コマンドがメニューやツールバーに表示されます。 VSPackage プロジェクト テンプレートは、非常に基本的なコマンドを実装する方法を示します。 少し長くなりますが、まだ基本的な実装では、次を参照してください。[メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)です。  
   
- Visual Studio コマンド、メニューおよびツールバーの詳細については、次を参照してください。 [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)します。  
+ Visual Studio コマンド、メニューおよびツールバーの詳細については、次を参照してください。[コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)です。  
   
- コマンド、メニューのおよびツールバーは、VSPackage プロジェクトの一部である .vsct ファイルで定義されます。 Visual Studio IDE およびに .vsct ファイルに関する情報を検索する [Vspackage でのユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)です。  
+ コマンド、メニューのおよびツールバーは、VSPackage プロジェクトの一部である .vsct ファイルで定義されます。 Visual Studio IDE との .vsct ファイルに関する情報を見つけることができます[方法 VSPackages に追加のユーザー インターフェイス要素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)です。  
   
  次のトピックでは、さまざまな種類のコマンド、メニューのおよびツールバーを追加する方法について説明します。  
   
-## このセクションの内容  
- [Visual Studio のメニュー バーにメニューを追加します。](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)  
+## <a name="in-this-section"></a>このセクションの内容  
+ [Visual Studio のメニュー バーへのメニューの追加](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)  
  Visual Studio のメニュー バーの上部にメニューを追加する方法について説明します。  
   
- [メニュー項目にバインドのキーボード ショートカット](../extensibility/binding-keyboard-shortcuts-to-menu-items.md)  
- メニュー項目を \(CTRL \+ 3\) などのキーボード ショートカットを追加する方法について説明します。  
+ [キーボード ショートカットのメニュー項目へのバインド](../extensibility/binding-keyboard-shortcuts-to-menu-items.md)  
+ メニュー項目を (CTRL + 3) などのキーボード ショートカットを追加する方法について説明します。  
   
- [メニューのサブメニューの追加](../extensibility/adding-a-submenu-to-a-menu.md)  
- 上部のメニューのサブメニューを追加する方法について説明します。  
+ [サブメニューのメニューへの追加](../extensibility/adding-a-submenu-to-a-menu.md)  
+ 上部のメニューにサブメニューを追加する方法について説明します。  
   
- [サブメニューにリストを使用する最近のほとんどを追加します。](../extensibility/adding-a-most-recently-used-list-to-a-submenu.md)  
+ [最近使用した一覧のサブメニューへの追加](../extensibility/adding-a-most-recently-used-list-to-a-submenu.md)  
  最近使用した一覧に追加する方法をについて説明します。  
   
- [ボタンの再利用可能なグループを作成します。](../extensibility/creating-reusable-groups-of-buttons.md)  
- 複数のメニューで、含めることのできるように、コマンド項目をグループ化する方法について説明します。  
+ [再利用可能なボタンのグループの作成](../extensibility/creating-reusable-groups-of-buttons.md)  
+ 複数のメニューには追加するようにコマンド項目をグループ化する方法について説明します。  
   
- [メニュー コマンドにアイコンを追加します。](../extensibility/adding-icons-to-menu-commands.md)  
- ツールバーとメニューの両方でコマンドにアイコンを追加する方法について説明します。  
+ [メニュー コマンドへのアイコンの追加](../extensibility/adding-icons-to-menu-commands.md)  
+ ツールバーとメニューの両方でのコマンドにアイコンを追加する方法について説明します。  
   
- [メニュー コマンドのテキストを変更します。](../extensibility/changing-the-text-of-a-menu-command.md)  
- 使用方法について説明します `TextChanges` を動的に変更するメニュー項目を有効にするフラグ。  
+ [メニュー コマンドのテキストの変更](../extensibility/changing-the-text-of-a-menu-command.md)  
+ 使用方法について説明、`TextChanges`を動的に変更するメニュー項目を有効にするフラグ。  
   
- [コマンドの外観を変更します。](../extensibility/changing-the-appearance-of-a-command.md)  
- 動的に有効にする、またはコマンドを無効にする方法について説明します。  
+ [コマンドの外観の変更](../extensibility/changing-the-appearance-of-a-command.md)  
+ 動的に有効にするにまたはコマンドを無効にする方法について説明します。  
   
  [ユーザー インターフェイスの更新](../extensibility/updating-the-user-interface.md)  
  最近の変更を反映するように、ユーザー インターフェイスの更新を強制する方法について説明します。  
@@ -60,4 +62,4 @@ caps.handback.revision: 49
  [メニュー コマンドのローカライズ](../extensibility/localizing-menu-commands.md)  
  メニュー コマンドをローカライズする方法について説明します。  
   
-## 関連項目
+## <a name="related-sections"></a>関連項目

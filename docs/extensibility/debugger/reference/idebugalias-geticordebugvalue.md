@@ -1,51 +1,51 @@
 ---
-title: "IDebugAlias::GetICorDebugValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugAlias::GetICorDebugValue"
-helpviewer_keywords: 
-  - "IDebugAlias::GetICorDebugValue メソッド"
+title: "IDebugAlias::GetICorDebugValue |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugAlias::GetICorDebugValue
+helpviewer_keywords: IDebugAlias::GetICorDebugValue method
 ms.assetid: b9eb39ee-84af-4ace-9cfe-236b3d48aff5
-caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 603f24f89463b9eb9f7c67ed3d05662870e41bf3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugAlias::GetICorDebugValue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="idebugaliasgeticordebugvalue"></a>IDebugAlias::GetICorDebugValue
 このエイリアスに関連付けられている値を表すマネージ コード インターフェイスを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetICorDebugValue(  
-   IUnknown** ppUnk  
+HRESULT GetICorDebugValue(  
+   IUnknown** ppUnk  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetICorDebugValue(  
-   out object ppUnk  
+   out object ppUnk  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppUnk`  
- \[out\] `IUnknown` このエイリアスに関連付けられている値を表すインターフェイスです。 このインターフェイスを照会できる、 `ICorDebugValue` インターフェイスです。  
+ [out]`IUnknown`このエイリアスに関連付けられている値を表すインターフェイス。 このインターフェイスを照会することができます、`ICorDebugValue`インターフェイスです。  
   
-## 戻り値  
- 成功した場合、S\_OK を返します。それ以外の場合、エラー コードを返します。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## 解説  
- このメソッドは、管理対象の値のみに適用されます \(、 `ICorDebugValue` でインターフェイスがある、 [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] で指定されている、 [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] SDK cordebug.idl ファイルに\)。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、管理対象の値のみに適用されます (、`ICorDebugValue`でインターフェイスがある、[!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)]で指定されている、 [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] cordebug.idl ファイルに SDK)。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

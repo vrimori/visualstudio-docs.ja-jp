@@ -1,36 +1,37 @@
 ---
-title: "チュートリアル: エディター拡張機能から DTE オブジェクトにアクセスします。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "エディター [Visual Studio SDK] 新しい - DTE オブジェクトを取得します。"
+title: "チュートリアル: DTE オブジェクトからエディター拡張機能へのアクセス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], new - getting the DTE object
 ms.assetid: c1f40bab-c6ec-45b0-8333-ea5ceb02a39d
-caps.latest.revision: 22
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 77732f1f5620e0d0a637938668ae232f7bb83edf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# チュートリアル: エディター拡張機能から DTE オブジェクトにアクセスします。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Vspackages にあるを呼び出して、DTE オブジェクトを取得できる、 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> DTE オブジェクトの型を持つメソッドです。 Managed Extensibility Framework \(MEF\) 拡張機能でインポートできる <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> しを呼び出す、 <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> の型を持つメソッド <xref:EnvDTE.DTE>します。  
+# <a name="walkthrough-accessing-the-dte-object-from-an-editor-extension"></a>チュートリアル: DTE オブジェクトからエディター拡張機能へのアクセス
+Vspackage を呼び出して、DTE オブジェクトを取得することができます、 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> DTE オブジェクトの型を持つメソッドです。 Managed Extensibility Framework (MEF) 拡張機能ではインポートできる<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>を呼び出すと、<xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A>の型を持つメソッド<xref:EnvDTE.DTE>です。  
   
-## 必須コンポーネント  
- このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、「[Visual Studio SDK](../extensibility/visual-studio-sdk.md)」を参照してください。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
   
-## DTE オブジェクトを取得します。  
+## <a name="getting-the-dte-object"></a>DTE オブジェクトを取得します。  
   
-#### DTE オブジェクトをサービス プロバイダーから取得するには  
+#### <a name="to-get-the-dte-object-from-the-serviceprovider"></a>DTE オブジェクトをサービス プロバイダーから取得するには  
   
-1.  という名前の C\# の場合は、VSIX プロジェクトを作成する `DTETest`です。 エディターの分類子の項目テンプレートを追加し、名前 `DTETest`します。 詳細については、「[エディター項目テンプレートを使用して拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)」を参照してください。  
+1.  という名前の C# の場合は、VSIX プロジェクトを作成する`DTETest`です。 エディター分類子項目テンプレートを追加し、名前`DTETest`です。 詳細については、次を参照してください。[エディター項目テンプレートに、拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
-2.  プロジェクトには、次のアセンブリ参照を追加します。  
+2.  プロジェクトに次のアセンブリ参照を追加します。  
   
     -   EnvDTE  
   
@@ -38,18 +39,18 @@ Vspackages にあるを呼び出して、DTE オブジェクトを取得でき�
   
     -   Microsoft.VisualStudio.Shell.Immutable.10.0  
   
-3.  DTETest.cs ファイルを開き、次の追加 `using` ディレクティブ。  
+3.  DTETest.cs ファイルに移動し、次の追加`using`ディレクティブ。  
   
-    ```c#  
+    ```csharp  
     using EnvDTE;  
     using EnvDTE80;  
     using Microsoft.VisualStudio.Shell;  
   
     ```  
   
-4.  `GetDTEProvider` クラスで、インポート、 <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>です。  
+4.  `GetDTEProvider`クラス、インポート、<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>です。  
   
-    ```c#  
+    ```csharp  
     [Import]  
     internal SVsServiceProvider ServiceProvider = null;  
   
@@ -57,12 +58,12 @@ Vspackages にあるを呼び出して、DTE オブジェクトを取得でき�
   
 5.  `GetClassifier()` メソッドに次のコードを追加します。  
   
-    ```c#  
+    ```csharp  
     DTE dte = (DTE)ServiceProvider.GetService(typeof(DTE));  
   
     ```  
   
-6.  使用する必要がある場合、 <xref:EnvDTE80.DTE2> インターフェイス、して DTE オブジェクトをキャストすることができます。  
+6.  使用する必要がある場合、<xref:EnvDTE80.DTE2>インターフェイス、DTE オブジェクトをそれをキャストすることができます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

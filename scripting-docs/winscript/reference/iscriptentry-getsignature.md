@@ -1,27 +1,30 @@
 ---
-title: "IScriptEntry::GetSignature | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IScriptEntry::GetSignature |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IScriptEntry.GetSignature
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "IScriptEntry::GetSignature"
+helpviewer_keywords: IScriptEntry::GetSignature
 ms.assetid: 8cbf37ac-b14c-4e15-a613-06f34857da9b
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 062f069bb6a19c24f26a6a0bc6a9f4de2292d88f
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IScriptEntry::GetSignature
-`IScriptEntry` の関数オブジェクトの型情報を返します。  
+# <a name="iscriptentrygetsignature"></a>IScriptEntry::GetSignature
+タイプの情報を返す、`IScriptEntry`関数オブジェクト。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT GetSignature(  
@@ -30,22 +33,22 @@ HRESULT GetSignature(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppti`  
- \[出力\]この関数の `IScriptEntry` オブジェクトに関連付けられている情報を入力します。  
+ [out]これに関連付けられている情報を入力`IScriptEntry`関数オブジェクト。  
   
  `piMethod`  
- \[入力\] `ITypeInfo` のオブジェクトのメソッドのインデックス。  
+ [out]内のメソッドのインデックス、`ITypeInfo`オブジェクト。  
   
-## 戻り値  
- `HRESULT`。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ `HRESULT`。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- [IScriptEntry::SetSignature](../../winscript/reference/iscriptentry-setsignature.md) か [IScriptNode::CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md)を使用して設定に情報を入力します。  型情報は、内部関数の表示に基づいてエントリに生成されることがあります。  
+## <a name="remarks"></a>コメント  
+ 使用して型情報を設定する[IScriptEntry::SetSignature](../../winscript/reference/iscriptentry-setsignature.md)または[IScriptNode::CreateChildHandler](../../winscript/reference/iscriptnode-createchildhandler.md)です。 型情報は、関数の内部表現に基づくエントリによっても生成できます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IScriptEntry インターフェイス](../../winscript/reference/iscriptentry-interface.md)

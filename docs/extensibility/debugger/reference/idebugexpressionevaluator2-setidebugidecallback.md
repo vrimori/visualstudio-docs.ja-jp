@@ -1,47 +1,49 @@
 ---
-title: "IDebugExpressionEvaluator2::SetIDebugIDECallback | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluator2::SetIDebugIDECallback"
-  - "SetIDebugIDECallback"
+title: "IDebugExpressionEvaluator2::SetIDebugIDECallback |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugExpressionEvaluator2::SetIDebugIDECallback
+- SetIDebugIDECallback
 ms.assetid: f01c40ad-ef4b-477b-8304-602c6972bc88
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: e49928e984a3981e0a30d396aaefafe9ce7db574
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugExpressionEvaluator2::SetIDebugIDECallback
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-デバッグ エンジンは初期化時に式エバリュエーターにコールバックを渡すことができます。  
+# <a name="idebugexpressionevaluator2setidebugidecallback"></a>IDebugExpressionEvaluator2::SetIDebugIDECallback
+式エバリュエーターを初期化中にコールバックを渡すためにデバッグ エンジンを有効にします。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT SetIDebugIDECallback (  
-   IDebugIDECallback * pCallback  
+   IDebugIDECallback * pCallback  
 );  
 ```  
   
-```c#  
+```csharp  
 int SetIDebugIDECallback (  
-   IDebugIDECallback pCallback  
+   IDebugIDECallback pCallback  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `pCallback`  
- \[入力\] コールバックのインターフェイス。  
+ [in]コールバックのインターフェイスです。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

@@ -1,49 +1,51 @@
 ---
-title: "サンドボックス ソリューションの考慮事項"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.Project.SandboxedSolutions"
-  - "VS.SharePointTools.Security.SandboxedSolutions"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ファーム ソリューション [Visual Studio での SharePoint 開発]"
-  - "サンドボックス ソリューション [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, ファーム ソリューション"
-  - "Visual Studio での SharePoint 開発, サンドボックス ソリューション"
+title: "サンド ボックス ソリューションの考慮事項 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.Project.SandboxedSolutions
+- VS.SharePointTools.Security.SandboxedSolutions
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, sandboxed solutions
+- sandboxed solutions [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, farm solutions
+- farm solutions [SharePoint development in Visual Studio]
 ms.assetid: 6c2d2dc6-4acb-4b68-ba94-a61087e8dff0
-caps.latest.revision: 23
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: e4598b100572bb47fd537e8edad927d78b4f1550
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# サンドボックス ソリューションの考慮事項
-  *サンドボックス ソリューション*は、サイト コレクションのユーザーが独自のカスタム コード ソリューションをアップロードできるようにする Microsoft SharePoint 2010 の機能です。  たとえば、一般的なサンドボックス化ソリューションとして、ユーザーは独自の Web パーツをアップロードすることができます。  
+# <a name="sandboxed-solution-considerations"></a>Sandboxed Solution Considerations
+  *サンド ボックス ソリューション*を独自のカスタム コード ソリューションをアップロードするサイト コレクションのユーザーを有効にする Microsoft SharePoint 2010 で機能します。 一般的なサンド ボックス ソリューションは、ユーザー独自の Web パーツのアップロードです。  
   
- サンドボックス SharePoint アプリケーションは、Web ファームの限られた部分にのみアクセスできる安全で監視されたプロセスで実行されます。  Microsoft SharePoint 2010 では、フィーチャー、ソリューション ギャラリー、ソリューション モニタリング、および検証フレームワークの組み合わせによってサンドボックス ソリューションが実現されます。  
+ セキュリティで保護された SharePoint アプリケーションは、Web ファームの一部にアクセスできるセキュリティで保護された、監視対象のプロセスで実行されます。 Microsoft SharePoint 2010 では、機能、ソリューション ギャラリー、ソリューションの監視、および検証フレームワークの組み合わせを使用して、サンド ボックス ソリューションを有効にします。  
   
-## プロジェクトの信頼レベルの指定  
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] は、*Sandboxed Solution* というブール型のプロジェクト プロパティによってサンドボックス ソリューションをサポートします。  このプロパティはプロジェクト内でいつでも設定できるほか、**SharePoint カスタマイズ ウィザード** でプロジェクトを作成するときに指定することもできます。  
+## <a name="specifying-project-trust-level"></a>プロジェクトの信頼レベルを指定します。  
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]サポートする project のブール型プロパティでサンド ボックス ソリューションと呼ばれる*サンド ボックス ソリューション*です。 このプロパティは、プロジェクトでいつでも設定できますかで、プロジェクトを作成する場合と指定することができます、 **SharePoint カスタマイズ ウィザード**です。  
   
 > [!NOTE]  
->  プロジェクトの作成後に *Sandboxed Solution* プロパティを変更すると、検証エラーが発生することがあります。  
+>  変更、*サンド ボックス ソリューション*が作成された後、プロジェクトのプロパティの検証エラーが発生する可能性があります。  
   
- ソリューションは *Sandboxed Solution* のプロパティが **false** に設定されている場合、または **\[ファーム ソリューションとして配置する\]** オプションを選択するとファーム スコープのソリューションと見なされます。  ただし、ソリューションは *Sandboxed Solution* のプロパティが **true** に設定されている場合、またはウィザードの **\[サンドボックス ソリューションとして配置する\]** オプションを選択するとファーム ソリューションと異なります。  
+ 場合、ソリューションは、ファーム スコープ ソリューションと見なされます、*サンド ボックス ソリューション*プロパティに設定されている**false**選択することも、**ファーム ソリューションとして配置**オプション。 ただし、ソリューションの扱いはファーム ソリューションの場合、*サンド ボックス ソリューション*プロパティに設定されている**true**選択することも、**サンド ボックス ソリューションとして配置**ウィザードのオプションです。  
   
-## SharePoint サイト階層  
- サンドボックス ソリューションのしくみを理解するには、まず SharePoint サイトのスコープが階層構造になっていることを認識しておく必要があります。  最上位の要素は Web ファームで、それ以外の要素は Web ファームに従属します。  
+## <a name="sharepoint-site-hierarchy"></a>SharePoint サイトの階層  
+ どのサンド ボックス ソリューションを理解している SharePoint サイトが階層構造にスコープを理解するのに役立ちます作業、します。 最上位の要素は、Web ファームとして知られ、その他の要素が従属します。  
   
  Web ファーム  
   
@@ -65,51 +67,51 @@ caps.handback.revision: 22
   
  サイト B2a  
   
- これを見るとわかるように、Web ファームには 1 つ以上の Web アプリケーションを含めることができます。さらに、Web アプリケーションには 1 つ以上のサイト コレクションを含めることができ、サイト コレクションにはサブサイトを含めることができます。  特定のサイト コレクションに対して行った変更は、そのサイト コレクションにのみ影響し、他のサイト コレクションには影響しません。  ただし、Web ファーム レベルで行った変更は、そのファーム上のすべてのサイト コレクションに影響します。  
+ ご覧のように、Web ファームは、さらに、サブサイトとに、1 つまたは複数のサイト コレクションを含めることができますが、1 つまたは複数の Web アプリケーションを含めることができます。 1 つのサイト コレクションにサイト コレクションを示すだけに行われたと他の変更します。 ただし、Web ファーム レベルで行われた変更は、ファーム上のすべてのサイト コレクションに影響します。  
   
- Windows SharePoint Services \(WSS\) 3.0 では、ソリューションの配置はファーム レベルに限られますが、[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] では、ファーム レベル \(ファーム ソリューション\) だけでなく、サイト コレクション レベル \(サンドボックス ソリューション\) でもソリューションを配置できます。  
+ Windows SharePoint Services (WSS) 3.0 では、ファーム レベルにだけソリューションを配置することができますが、[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]ファーム レベル (ファーム ソリューション) またはサイト コレクション レベル (サンド ボックス ソリューション) のいずれかに展開することができます。  
   
-## サンドボックス ソリューションが必要な理由  
- WSS 3.0 では、ソリューションをファーム レベルでしか配置できませんでした。  万一有害なソリューションや安定性を損なうソリューションが配置されると、Web ファーム全体と、その下で実行されている他のすべてのサイト コレクションおよびアプリケーションにまで影響が及ぶことになります。  一方、サンドボックス ソリューションを使用すると、ファームのサブエリア、つまり、特定のサイト コレクションにソリューションを配置できます。  また、二重の保護対策として、メインの [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] プロセス \(w3wp.exe\) にはソリューションのアセンブリが読み込まれないようになっています。  ソリューションは、代わりに、独立したプロセス \(SPUCWorkerProcess.exe\) に読み込まれます。  このプロセスは監視され、有害な動作を実行するサンドボックス ソリューション \(CPU サイクルを消費する短いループの実行など\) からファームを保護するためにクォータとスロットリングを実装します。  
+## <a name="why-sandboxed-solutions"></a>なぜサンド ボックス ソリューションか。  
+ WSS 3.0 では、ソリューションをファーム レベルにのみ展開できます。 これは、こと有害なまたは安定性を損なう可能性があるソリューションが配置されると、Web ファーム全体とすべての他のサイト コレクションとその下で実行されるアプリケーションに影響を意味していました。 ただし、サンド ボックス ソリューションを使用するは、ファームで特定のサイト コレクションのサブ区分に、ソリューションを配置することができます。 追加の保護を提供するにはソリューションのアセンブリがメイン読み込まれない[!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)]プロセス (w3wp.exe)。 代わりに、別のプロセス (SPUCWorkerProcess.exe) に読み込まれます。 このプロセスが監視され、クォータと制限の CPU サイクルを消費する短いループの実行などの問題を引き起こすアクティビティを実行するサンド ボックス ソリューションから、ファームの保護を実装します。  
   
-## サイト コレクションのソリューション ギャラリー  
- [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] 2010 に「サイト コレクションのソリューション ギャラリーとして」既知の機能があります。SharePoint 2010 のサーバーの全体管理ページからまたは **\[サイトの操作\]** メニューを開き、" **\[サイトの設定\]** をクリックします、SharePoint サイトの **\[ ギャラリー\]** で **\[ソリューション\]** リンクをクリックすると、この機能にアクセスできます。  ソリューション ギャラリーは、ソリューションのリポジトリです。サイト コレクションの管理者は、このリポジトリを使用して、サイト コレクション内のソリューションを管理することができます。  
+## <a name="site-collection-solution-gallery"></a>サイト コレクション ソリューション ギャラリー  
+ [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)]2010 は、「サイト コレクション ソリューション ギャラリー」と呼ばれる機能があります。 SharePoint 2010 サーバーの全体管理ページ、または開くことによってこの機能にアクセスすることができます、**サイトの操作** メニューを選択する**サイト設定**、選択し、**ソリューション**下にあるリンク**ギャラリー** SharePoint サイトにします。 ソリューション ギャラリーは、そのサイトのコレクションでソリューションを管理するサイト コレクションの管理者を有効にするソリューションのリポジトリです。  
   
- ソリューション ギャラリーは、SharePoint サイトのルート Web に格納されるドキュメント ライブラリです。  サイト ギャラリーは、サイト テンプレートに代わる機能であり、ソリューション パッケージをサポートします。  アップロードされた SharePoint ソリューション パッケージ \(.wsp\) ファイルは、サンドボックス ソリューションとして処理されます。  
+ ソリューション ギャラリーは、SharePoint サイトのルート Web に格納されているドキュメント ライブラリです。 ソリューション ギャラリーでは、サイト テンプレートを置き換え、ソリューション パッケージをサポートします。 SharePoint ソリューション パッケージ (.wsp) ファイルがアップロードされると、サンド ボックス ソリューションとして処理されます。  
   
-## サンドボックス ソリューションの制限  
- サンドボックス ソリューションが配置されると、それが使用できる SharePoint の機能は、セキュリティ上の脆弱性を低減するため制限されます。  たとえば、次のような制限があります。  
+## <a name="sandboxed-solution-limitations"></a>サンド ボックス ソリューションの制限事項  
+ サンド ボックス ソリューションの配置に使用可能な SharePoint 機能の配列がセキュリティの脆弱性を減らすために制限されます。 これらの制限事項の一部を以下に示します。  
   
--   サンドボックス ソリューションが使用できるソリューション要素は、配置可能なソリューション要素のサブセットに限定されます。  脆弱性が懸念される SharePoint プロジェクト テンプレート \(サイト定義、ワークフローなど\) は利用できません。  
+-   サンド ボックス ソリューションでは、それらに使用可能なソリューションの配置可能な要素の制限されたサブセットがあります。 サイト定義し、ワークフローなどの脆弱性が潜んで SharePoint プロジェクト テンプレートは使用できません。  
   
--   サンドボックス ソリューションのコードは、メインの [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] アプリケーション プール \(w3wp.exe\) のプロセスとは独立した別個のプロセス \(SPUCWorkerProcess.exe\) で実行されます。  
+-   SharePoint サンド ボックス ソリューションでコードを実行プロセス (SPUCWorkerProcess.exe)、main から独立した[!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)]アプリケーション プール (w3wp.exe) 処理します。  
   
--   マップされたフォルダーをプロジェクトに追加することはできません。  
+-   マップされたフォルダーは、プロジェクトに追加できません。  
   
--   [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] アセンブリ Microsoft.Office.Server の型はサンドボックス ソリューションで使用できません。  また、サンドボックス ソリューションに使用できるのは、[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] アセンブリ Microsoft.SharePoint の型のみです。  
+-   型、[!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]アセンブリがサンド ボックス ソリューションで Microsoft.Office.Server は使用できません。 また、のみの種類と、[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]アセンブリが"microsoft.sharepoint"サンド ボックス ソリューションで使用できます。  
   
- SharePoint ソリューションをサンドボックス ソリューションとして指定しても、SharePoint サーバーそのものは影響を受けません。SharePoint プロジェクトを [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] から SharePoint に配置する方法とバインド先のアセンブリが指定されるだけです。  これは生成される .wsp ファイルには影響せず、*Sandboxed Solution* プロパティに直接関連付けられているデータは .wsp ファイルには含まれていません。  
+ 指定する SharePoint ソリューション、サンド ボックス ソリューション影響を与えません。 SharePoint サーバー上にすることが重要SharePoint を SharePoint プロジェクトを展開する方法を示すのみ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]にどのようなアセンブリ バインドされているとします。 生成された .wsp ファイルには影響しません、.wsp ファイルに直接関連するデータが存在しない、*サンド ボックス ソリューション*プロパティです。  
   
-## サンドボックス ソリューションの機能と要素  
- サンドボックス ソリューションでは、次の機能および要素がサポートされています。  
+## <a name="capabilities-and-elements-in-sandboxed-solutions"></a>サンド ボックス ソリューションの機能と要素  
+ サンド ボックス ソリューションは、次の機能と要素をサポートします。  
   
--   コンテンツ タイプ\/フィールド  
+-   コンテンツ種類のフィールド  
   
--   カスタム動作  
+-   カスタム アクション  
   
--   宣言型のワークフロー  
+-   宣言型ワークフロー  
   
 -   イベント レシーバー  
   
 -   フィーチャーのコールアウト  
   
--   リスト定義  
+-   リストの定義  
   
--   リスト インスタンス  
+-   インスタンスが一覧表示  
   
--   モジュール\/ファイル  
+-   モジュール/ファイル  
   
--   Navigation  
+-   ナビゲーション  
   
 -   Onet.xml  
   
@@ -119,19 +121,19 @@ caps.handback.revision: 22
   
 -   SPWebEventReceiver  
   
--   `System.Web.UI.WebControls.WebParts.WebPart` から派生するすべての Web パーツのサポート  
+-   派生するすべての Web パーツのサポート`System.Web.UI.WebControls.WebParts.WebPart`  
   
 -   Web パーツ  
   
--   WebTemplate フィーチャー要素 \(Webtemp.xml ではなく\)  
+-   (Webtemp.xml) ではなく web テンプレート機能の要素  
   
--   ビジュアル Web パーツ  
+-   視覚的 Web パーツ  
   
- サンドボックス ソリューションでは、次の機能および要素はサポートされていません。  
+ サンド ボックス ソリューションは、次の機能と要素をサポートしません。  
   
 -   アプリケーション ページ  
   
--   カスタム動作グループ  
+-   カスタム アクション グループ  
   
 -   ファーム スコープの機能  
   
@@ -139,10 +141,10 @@ caps.handback.revision: 22
   
 -   Web アプリケーション スコープの機能  
   
--   コードを含んだワークフロー  
+-   コードを持つワークフロー  
   
-## 参照  
- [サンドボックス ソリューションとファーム ソリューションの違い](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)   
- [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
+## <a name="see-also"></a>関連項目  
+ [サンド ボックス間の相違点とファーム ソリューション](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)   
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   
   

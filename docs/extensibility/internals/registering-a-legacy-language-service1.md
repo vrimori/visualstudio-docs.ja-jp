@@ -1,27 +1,28 @@
 ---
-title: "レガシ言語 Service1 を登録します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "登録する言語サービス [マネージ パッケージ framework]"
+title: "レガシ言語 Service1 の登録 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: language services [managed package framework], registering
 ms.assetid: d33b08af-09e0-4c79-87b2-5536b27fbacf
-caps.latest.revision: 22
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 9335f9a9ad6aedab1f0455267c1cca48bf1b3ca4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 従来の言語サービスを登録します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-Framework では、管理されているパッケージ \(MPF\)、言語サービスが VSPackage で提供される \(を参照してください [Vspackages にあります。](../../extensibility/internals/vspackages.md)\) に登録されます [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] レジストリ キーとエントリを追加しています。 この登録プロセスは、インストール時にその他の部分と、実行時にその他の部分で行われます。  
+# <a name="registering-a-legacy-language-service"></a>レガシ言語サービスを登録します。
+Managed package framework (MPF) では、言語サービスが、VSPackage によって提供される (を参照してください[Vspackage](../../extensibility/internals/vspackages.md)) が登録されると[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]レジストリ キーとエントリを追加することによりします。 この登録プロセスは、インストール時に一部および実行時にそれぞれ部分的で行われます。  
   
-## 属性を使用して、言語サービスを登録します。  
+## <a name="register-the-language-service-by-using-attributes"></a>属性を使用して、言語サービスを登録します。  
  次の属性は、言語サービスの登録に使用されます。  
   
 -   <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>  
@@ -34,14 +35,14 @@ Framework では、管理されているパッケージ \(MPF\)、言語サー�
   
 -   <xref:Microsoft.VisualStudio.Shell.ProvideLanguageEditorOptionPageAttribute>  
   
- これらの属性を説明します。  
+ 以下については、これらの属性を説明します。  
   
-### ProvideServiceAttribute  
+### <a name="provideserviceattribute"></a>ProvideServiceAttribute  
  この属性は、言語サービスをサービスとして登録します。  
   
-### 例  
+### <a name="example"></a>例  
   
-```c#  
+```csharp  
 using Microsoft.VisualStudio.Shell;  
   
 namespace TestLanguagePackage  
@@ -55,12 +56,12 @@ namespace TestLanguagePackage
 }  
 ```  
   
-### ProvideLanguageServiceAttribute  
- この属性は、言語サービスとして具体的には、言語サービスを登録します。 言語サービスが提供する機能を指定するオプションを設定することができます。 この例では、言語サービスが提供できるオプションのサブセットを示します。 言語サービスのオプションの完全なセットを参照してください。 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>します。  
+### <a name="providelanguageserviceattribute"></a>ProvideLanguageServiceAttribute  
+ この属性は、言語サービスとして具体的には、言語サービスを登録します。 言語サービスを提供する機能を指定するオプションを設定することができます。 この例では、言語サービスが提供できるオプションのサブセットを示します。 言語サービスのオプションの完全なセットを参照してください。<xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>です。  
   
-### 例  
+### <a name="example"></a>例  
   
-```c#  
+```csharp  
 using Microsoft.VisualStudio.Shell;  
   
 namespace TestLanguagePackage  
@@ -80,12 +81,12 @@ namespace TestLanguagePackage
 }  
 ```  
   
-### ProvideLanguageExtensionAttribute  
- この属性は、ファイル拡張子を持つ言語サービスを関連付けます。 すべてのプロジェクトで、その拡張子のファイルが読み込まれるたびに、言語サービスが開始およびファイルの内容を表示するために使用します。  
+### <a name="providelanguageextensionattribute"></a>ProvideLanguageExtensionAttribute  
+ この属性は、ファイル拡張子を言語サービスを関連付けます。 すべてのプロジェクトで、その拡張子のファイルが読み込まれるたびに、言語サービスが開始され、ファイルの内容を表示するために使用します。  
   
-### 例  
+### <a name="example"></a>例  
   
-```c#  
+```csharp  
 using Microsoft.VisualStudio.Shell;  
   
 namespace TestLanguagePackage  
@@ -99,12 +100,12 @@ namespace TestLanguagePackage
 }  
 ```  
   
-### ProvideLanguageCodeExpansionAttribute  
- この属性は、拡張、またはスニペット テンプレートを取得するコードを元の場所を登録します。 この情報を使用して、 **コード スニペットのブラウザー** とソース ファイルにコード スニペットが挿入されると、エディターでします。  
+### <a name="providelanguagecodeexpansionattribute"></a>ProvideLanguageCodeExpansionAttribute  
+ この属性は、拡張またはスニペット テンプレートを取得するコードを元の場所を登録します。 この情報を使用して、**コード スニペットのブラウザー**とソース ファイルにコード スニペットが挿入されると、エディターでします。  
   
-### 例  
+### <a name="example"></a>例  
   
-```c#  
+```csharp  
 using Microsoft.VisualStudio.Shell;  
   
 namespace TestLanguagePackage  
@@ -125,13 +126,13 @@ namespace TestLanguagePackage
 }  
 ```  
   
-### ProvideLanguageEditorOptionPageAttribute  
- この属性に表示されるプロパティ ページを登録、 **オプション** ダイアログ ボックスで \[、 **テキスト エディター** カテゴリ。 言語サービスに表示するには、ページごとにこれらの属性のいずれかを使用します。 ツリー構造でのページを整理する必要がある場合は、ツリーの各ノードを定義する追加の属性を使用します。  
+### <a name="providelanguageeditoroptionpageattribute"></a>ProvideLanguageEditorOptionPageAttribute  
+ この属性に表示されるプロパティ ページを登録、**オプション**ダイアログ ボックスの 、**テキスト エディター**カテゴリ。 言語サービスを表示するには、これらの属性の各ページのいずれかを使用します。 ツリー構造でのページを整理する必要がある場合は、ツリーの各ノードを定義する追加の属性を使用します。  
   
-### 例  
- この例は、2 つのプロパティ ページ **オプション** と **インデント**, と 2 番目のプロパティ ページを含む 1 つのノードです。  
+### <a name="example"></a>例  
+ この例は、2 つのプロパティ ページを示しています。**オプション**と**インデント**、と 2 番目のプロパティ ページを含む 1 つのノードです。  
   
-```c#  
+```csharp  
 using Microsoft.VisualStudio.Shell;  
   
 namespace TestLanguagePackage  
@@ -160,13 +161,13 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## 実行時に言語サービスを提供します。  
- 言語パッケージが読み込まれるときに伝える必要が [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 言語サービス準備が整ったことです。 サービスを proffering これを行います。 これには、 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> メソッドです。 さらをバック グラウンドの解析を行うために、アイドル状態のとき、言語サービスを呼び出すタイマーを開始する必要があります。 を通じてを実装している場合は、ドキュメントのプロパティを更新するこのアイドル タイマーを使用しても、 <xref:Microsoft.VisualStudio.Package.DocumentProperties> クラスです。 タイマーをサポートするために、パッケージを実装する必要があります、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent> インターフェイス \(のみ、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle%2A> メソッドは、完全に実装する必要があります。 その他のメソッドは、既定値を返すことができます\)。  
+## <a name="proffer-the-language-service-at-runtime"></a>実行時に言語サービスを proffer します。  
+ 指定する必要があります、言語パッケージが読み込まれるときに[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]言語サービスは、準備ができています。 サービスを proffering これを行います。 これには、<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>メソッドです。 さらに、バック グラウンドの解析を実現するため、アイドル状態のとき、言語サービスを呼び出すタイマーを開始する必要があります。 いずれかを実装している場合、ドキュメントのプロパティを更新するこのアイドル タイマーを使用しても、<xref:Microsoft.VisualStudio.Package.DocumentProperties>クラスです。 タイマーをサポートするために、パッケージを実装する必要があります、<xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent>インターフェイス (だけ、<xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle%2A>メソッドは、完全に実装する必要があります。 残りのメソッドは、既定値を返すことができます)。  
   
-### 例  
- この例では、一般的な方法による proffering サービスや、アイドル タイマーを指定することを示します。  
+### <a name="example"></a>例  
+ この例では、サービスを proffering およびアイドル タイマーを指定する一般的なアプローチを使用します。  
   
-```c#  
+```csharp  
   
 using System;  
 using System.Runtime.InteropServices;  

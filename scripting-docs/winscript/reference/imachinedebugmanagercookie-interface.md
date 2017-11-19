@@ -1,38 +1,41 @@
 ---
-title: "IMachineDebugManagerCookie インターフェイス | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IMachineDebugManagerCookie インターフェイス"
+title: "IMachineDebugManagerCookie インターフェイス |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords: IMachineDebugManagerCookie interface
 ms.assetid: 04770935-3ccf-41e9-b0c1-c78376ab1e3c
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: a03b959a7eb09f3b85530bbba07d1d2dc7f8948a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IMachineDebugManagerCookie インターフェイス
-`IMachineDebugManager` のインターフェイスと同様に、`IMachineDebugManagerCookie` のインターフェイスのサポートはクッキーをデバッグします。  
+# <a name="imachinedebugmanagercookie-interface"></a>IMachineDebugManagerCookie インターフェイス
+ような`IMachineDebugManager`、インターフェイス、`IMachineDebugManagerCookie`インターフェイスは、デバッグの cookie をサポートしています。  
   
- このインターフェイスは、\( `IDebugCookie` のインターフェイスとともに\) スクリプトがデバッガーでは、これらのスクリプトを追跡することなく、スクリプト デバッガー プロセスで実行されます。  
+ このインターフェイス (と共に、`IDebugCookie`インターフェイス)、デバッガーでこれらのスクリプトの追跡を必要とせず、スクリプトのデバッガー プロセスで実行するスクリプトを許可します。  
   
- スクリプト デバッガーがデバッグ プロセスの Manager \(PDM\) `IDebugCookie::SetDebugCookie` のメソッドを呼び出します。  次に、PDM は `IMachineDebugManagerCookie` インターフェイスのメソッドを使用して、マシンのデバッグ マネージャーから、または \(MDM\) スクリプト アプリケーションを、追加、または削除する要求とともにこのクッキーを送信します。  MDM は、クッキーをいるものを除く、すべてのデバッガーの変更を、通知します。  
+ スクリプト デバッガーを呼び出して、`IDebugCookie::SetDebugCookie`メソッド プロセスをデバッグ マネージャー (PDM)。 次に、PDM 送信を追加または削除から、マシン デバッグ マネージャー (MDM)、またはスクリプト アプリケーションのすべての要求と共にこの cookie のメソッドを使用して、`IMachineDebugManagerCookie`インターフェイスです。 MDM をそのクッキーを持つものを除き、変更のすべてのデバッガー通知します。  
   
- `IUnknown` から継承するメソッドに加え、`IMachineDebugManagerCookie` インターフェイスは次のメソッドを公開します。  
+ 継承されたメソッドだけでなく`IUnknown`、`IMachineDebugManagerCookie`インターフェイスは、次のメソッドを公開します。  
   
-## Vtable 順序のメソッド  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
   
 |メソッド|説明|  
-|----------|--------|  
-|[IMachineDebugManagerCookie::AddApplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)|実行中のアプリケーションのリストにアプリケーションが追加されます。|  
-|[IMachineDebugManagerCookie::EnumApplications](../../winscript/reference/imachinedebugmanagercookie-enumapplications.md)|実行中のアプリケーションの現在のリストの列挙子を返します。|  
-|[IMachineDebugManagerCookie::RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)|実行中のアプリケーションの一覧からアプリケーションを削除します。|  
+|------------|-----------------|  
+|[IMachineDebugManagerCookie::AddApplication](../../winscript/reference/imachinedebugmanagercookie-addapplication.md)|実行にアプリケーションを追加するアプリケーションの一覧です。|  
+|[IMachineDebugManagerCookie::EnumApplications](../../winscript/reference/imachinedebugmanagercookie-enumapplications.md)|現在実行されているアプリケーションの一覧の列挙子を返します。|  
+|[IMachineDebugManagerCookie::RemoveApplication](../../winscript/reference/imachinedebugmanagercookie-removeapplication.md)|実行中からアプリケーションを削除するアプリケーションの一覧です。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IMachineDebugManager インターフェイス](../../winscript/reference/imachinedebugmanager-interface.md)   
  [IDebugCookie インターフェイス](../../winscript/reference/idebugcookie-interface.md)

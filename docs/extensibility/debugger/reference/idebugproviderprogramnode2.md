@@ -1,40 +1,24 @@
 ---
-title: IDebugProviderProgramNode2 |Microsoft Docs
+title: "IDebugProviderProgramNode2 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- IDebugProviderProgramNode2
-helpviewer_keywords:
-- IDebugProviderProgramNode2
+f1_keywords: IDebugProviderProgramNode2
+helpviewer_keywords: IDebugProviderProgramNode2
 ms.assetid: f0bca1cc-afbe-44cf-b5aa-d078aa685d24
-caps.latest.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 55cccc52e968dd3553c55a9aedb2fb838bd06093
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 9d5d206edd68ef1ab9746b4bdd058c72be746b64
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="idebugproviderprogramnode2"></a>IDebugProviderProgramNode2
 このインターフェイスは、プロセス境界を越えてプログラム関連のインターフェイスをマーシャ リングします。  
@@ -45,7 +29,7 @@ ms.lasthandoff: 04/05/2017
 IDebugProviderProgramNode2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Notes for Implementers  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
  デバッグ エンジン (DE) を実装する同一のオブジェクトにこのインターフェイスを実装する[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)プロセス境界を越えてマーシャ リングのインターフェイスをサポートするためにします。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
@@ -59,7 +43,7 @@ IDebugProviderProgramNode2 : IUnknown
 |[UnmarshalDebuggeeInterface](../../../extensibility/debugger/reference/idebugproviderprogramnode2-unmarshaldebuggeeinterface.md)|プロセスの境界を越えて、指定されたインターフェイスを取得します。|  
   
 ## <a name="remarks"></a>コメント  
- デバッグ中のプログラムから別のプロセス領域で、DE の実行時にこのインターフェイスは実装: など、DE の実行時、Visual Studio プロセス空間でデバッグするプログラムのプロセス空間ではなくです。  
+ デがデバッグ中のプログラムから別のプロセス領域で実行すると、このインターフェイスは実装: デバッグ中のプログラムのプロセス空間ではなく、Visual Studio のプロセス領域で、DE が実行されている場合などです。  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  

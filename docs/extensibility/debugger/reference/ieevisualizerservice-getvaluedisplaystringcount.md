@@ -1,57 +1,59 @@
 ---
-title: "IEEVisualizerService::GetValueDisplayStringCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IEEVisualizerService::GetValueDisplayStringCount"
-  - "GetValueDisplayStringCount"
+title: "IEEVisualizerService::GetValueDisplayStringCount |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IEEVisualizerService::GetValueDisplayStringCount
+- GetValueDisplayStringCount
 ms.assetid: d683a833-fbfb-4042-84df-6905124a268a
-caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 6fd3d05935c2edaeff723dc979764faf04d61c10
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IEEVisualizerService::GetValueDisplayStringCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-値の文字列数を指定したプロパティに表示したりわかります。を取得します。  
+# <a name="ieevisualizerservicegetvaluedisplaystringcount"></a>IEEVisualizerService::GetValueDisplayStringCount
+指定したプロパティまたはフィールドに表示する値の文字列の数を取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
-```cpp#  
+```cpp  
 HRESULT GetValueDisplayStringCount (  
-   DWORD         displayKind,   
-   IDebugField * propertyOrField,   
-   ULONG *       pcelt  
+   DWORD         displayKind,   
+   IDebugField * propertyOrField,   
+   ULONG *       pcelt  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetValueDisplayStringCount (  
-   uint        displayKind,   
-   IDebugField propertyOrField,   
-   out ulong   pcelt  
+   uint        displayKind,   
+   IDebugField propertyOrField,   
+   out ulong   pcelt  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `displayKind`  
- \[入力\] [DisplayKind](../../../extensibility/debugger/reference/displaykind.md) の列挙体の値。  
+ [in]値から、 [DisplayKind](../../../extensibility/debugger/reference/displaykind.md)列挙します。  
   
  `propertyOrField`  
- \[入力\] プロパティまたはフィールドを表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) のインターフェイス。  
+ [in][IDebugField](../../../extensibility/debugger/reference/idebugfield.md)プロパティまたはフィールドを表すインターフェイスです。  
   
  `pcelt`  
- \[入力\] 表示する値の文字列数を返します。  
+ [out]値の文字列を表示する数を返します。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

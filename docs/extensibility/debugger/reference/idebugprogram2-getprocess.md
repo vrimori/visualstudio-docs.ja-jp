@@ -1,55 +1,55 @@
 ---
-title: "IDebugProgram2::GetProcess | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::GetProcess"
-helpviewer_keywords: 
-  - "IDebugProgram2::GetProcess"
+title: "IDebugProgram2::GetProcess |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugProgram2::GetProcess
+helpviewer_keywords: IDebugProgram2::GetProcess
 ms.assetid: 1d602485-ebaf-451c-9165-f2e226f20a90
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 6d085c149c72393f0179ad6b6b50334426777d9c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugProgram2::GetProcess
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このプログラムを実行しているプロセスを取得します。  
+# <a name="idebugprogram2getprocess"></a>IDebugProgram2::GetProcess
+このプログラムがで実行されているプロセスを取得します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetProcess(  
-   IDebugProcess2** ppProcess  
+   IDebugProcess2** ppProcess  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetProcess(  
-   out IDebugProcess2 ppProcess  
+   out IDebugProcess2 ppProcess  
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppProcess`  
- \[出力\] プロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) のインターフェイスを返します。  
+ [out]返します、 [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)プロセスを表すインターフェイスです。  
   
-## 戻り値  
- 正常に終了した場合戻り `S_OK`; それ以外の場合はエラー コード。  
+## <a name="return-value"></a>戻り値  
+ 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## 解説  
- デバッグ エンジン \(DE\) は [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md) のインターフェイスを実装していない場合de\-DE では実装しますがプロセスを判断し実行するこのメソッドの実装を満たすことができないため `E_NOTIMPL` を常に返す必要です。  
+## <a name="remarks"></a>コメント  
+ デバッグ エンジン (DE) を実装しない限り、 [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)インターフェイスでは、このメソッドの DE の実装を常に返します`E_NOTIMPL`になりが実行されているプロセスのことはできません、DE が判断できないためこのメソッドの実装を満たします。  
   
- `IDebugEngineLaunch2` のインターフェイスを実装するにはプロセスの作成方法を認識しますが必要であることを意味します ; したがってde\-DE の [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) のインターフェイスの実装はプロセスを実行しているかを確認できます。  
+ 実装する、`IDebugEngineLaunch2`インターフェイスは、DE がプロセスを作成する方法を知る必要がありますのため、DE の実装、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイスがで実行されているプロセスを理解することができます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

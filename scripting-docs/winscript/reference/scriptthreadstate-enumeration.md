@@ -1,27 +1,30 @@
 ---
-title: "SCRIPTTHREADSTATE 列挙型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "SCRIPTTHREADSTATE 列挙型 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: SCRIPTTHREADSTATE
 apilocation: scrobj.dll
-helpviewer_keywords: 
-  - "SCRIPTTHREADSTATE 列挙型"
+helpviewer_keywords: SCRIPTTHREADSTATE enum
 ms.assetid: 975ec66b-c095-40ac-8ba9-631adb97b589
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 9e18cc6f5f2afb1dcea6835983f69f6a6f7b9280
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# SCRIPTTHREADSTATE 列挙型
-スクリプト エンジンでスレッドの状態を指定します。  この列挙体は [IActiveScript::GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md) メソッドで使用されます。  
+# <a name="scriptthreadstate-enumeration"></a>SCRIPTTHREADSTATE 列挙型
+スクリプト エンジンのスレッドの状態を指定します。 この列挙体を使って、 [IActiveScript::GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md)メソッドです。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 typedef enum tagSCRIPTTHREADSTATE {  
@@ -30,12 +33,12 @@ typedef enum tagSCRIPTTHREADSTATE {
 } SCRIPTTHREADSTATE;  
 ```  
   
-## 列挙値  
+## <a name="enumeration-values"></a>列挙値  
   
 |||  
 |-|-|  
-|SCRIPTTHREADSTATE\_NOTINSCRIPT|指定したスレッドが現在スクリプト化されたイベントを処理しないか、すぐに実行されるスクリプトのテキストを、スクリプトのマクロを実行しません。|  
-|SCRIPTTHREADSTATE\_RUNNING|指定したスレッドは積極的にスクリプト化されたイベントを処理し、すぐに実行されるスクリプトのテキストを、スクリプトのマクロを実行します。|  
+|SCRIPTTHREADSTATE_NOTINSCRIPT|指定したスレッドはされていないサービス、スクリプト化されたイベントをすぐに実行される処理のスクリプトのテキスト、または、スクリプトのマクロを実行します。|  
+|SCRIPTTHREADSTATE_RUNNING|指定したスレッドは積極的にサービス、スクリプト化されたイベントをすぐに実行される処理のスクリプトのテキスト、または、スクリプトのマクロを実行します。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [アクティブ スクリプトの定数、列挙型、およびエラー コード](../../winscript/reference/active-script-constants-enumerations-and-error-codes.md)

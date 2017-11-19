@@ -1,65 +1,70 @@
 ---
-title: "POPLISTFUNC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "POPDIRLISTFUNC"
-helpviewer_keywords: 
-  - "POPLISTFUNC コールバック関数"
+title: "POPLISTFUNC |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: POPDIRLISTFUNC
+helpviewer_keywords: POPLISTFUNC callback function
 ms.assetid: b2199fd5-d707-4628-92dd-e2a01e2f507a
-caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 281b18d1e4e802646635cfe354355762014ad40e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# POPLISTFUNC
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-このコールバックが提供される、 [SccPopulateList](../extensibility/sccpopulatelist-function.md) IDE でファイルまたはディレクトリの一覧を更新する、ソース管理プラグインによって使用されます \(に指定されている、 `SccPopulateList` 関数\)。  
+# <a name="poplistfunc"></a>POPLISTFUNC
+このコールバックに用意されて、 [SccPopulateList](../extensibility/sccpopulatelist-function.md) IDE によってファイルまたはディレクトリの一覧を更新する、ソース管理プラグインによって使用されます (に指定されている、`SccPopulateList`関数)。  
   
- ユーザーが選択すると、 **取得** IDE では、コマンドのユーザーを取得できるすべてのファイルの一覧ボックスが表示されます。 残念ながら、IDE を知らないユーザーを取得可能性があります。 すべてのファイルの正確な一覧このリスト プラグインのみがあります。 他のユーザーをソース コード管理プロジェクト ファイルに追加した場合は、これらのファイルが、一覧に表示する必要がありますが、IDE が認識していないこと。 IDE では、ユーザーを取得できると思われるファイルの一覧を作成します。 呼び出しをユーザーにこの一覧を表示にする前に、 [SccPopulateList](../extensibility/sccpopulatelist-function.md)`,` 、ソース管理プラグインを与えるを追加し、一覧からファイルを削除します。  
+ ユーザーが選択すると、**取得**IDE では、コマンドのすべてのファイルのユーザー得ることができるリスト ボックスが表示されます。 残念ながら、IDE が認識していないユーザーが取得可能性があります。 すべてのファイルの正確な一覧のみプラグインにはこの一覧を示します。 他のユーザーをソース コード管理プロジェクト ファイルに追加した場合は、一覧で、これらのファイルが表示されますが、IDE が認識していないこと。 IDE では、ユーザーが取得できると思われるファイルの一覧を構築します。 呼び出しをユーザーには、この一覧が表示されます、前に、 [SccPopulateList](../extensibility/sccpopulatelist-function.md) `,`ソース管理プラグインの提供を追加して、一覧からファイルを削除できます。  
   
-## Signature  
- ソース管理プラグインでは、次のプロトタイプで IDE 実装関数を呼び出してでリストを変更します。  
+## <a name="signature"></a>署名  
+ ソース管理プラグインは、次のプロトタイプで、IDE 実装関数を呼び出すことによって、リストを変更します。  
   
-```cpp#  
-typedef BOOL (*POPLISTFUNC) ( LPVOID pvCallerData, BOOL fAddRemove, LONG nStatus, LPSTR lpFileName );  
+```cpp  
+typedef BOOL (*POPLISTFUNC) (  
+   LPVOID pvCallerData,  
+   BOOL fAddRemove,  
+   LONG nStatus,  
+   LPSTR lpFileName  
+);  
 ```  
   
-## パラメーター  
+## <a name="parameters"></a>パラメーター  
  pvCallerData  
- `pvCallerData` に呼び出し元 \(IDE\) で渡されるパラメーター、 [SccPopulateList](../extensibility/sccpopulatelist-function.md)です。 ソース管理プラグインは、このパラメーターの内容について何も想定してください。  
+ `pvCallerData`に呼び出し元 (IDE) によって渡されたパラメーター、 [SccPopulateList](../extensibility/sccpopulatelist-function.md)です。 ソース管理プラグインは、このパラメーターの内容について何も想定してください。  
   
  fAddRemove  
- 場合 `TRUE`, 、`lpFileName` ファイル、ファイルの一覧に追加する必要があります。 場合 `FALSE`, 、`lpFileName` ファイルで、ファイルの一覧から削除する必要があります。  
+ 場合`TRUE`、`lpFileName`ファイル、ファイルの一覧に追加する必要があります。 場合`FALSE`、`lpFileName`ファイル、ファイルの一覧から削除する必要があります。  
   
  送ら  
- ステータス `lpFileName` \(の組み合わせ、 `SCC_STATUS` ビット; を参照してください [ファイルの状態コード](../extensibility/file-status-code-enumerator.md) 詳細\)。  
+ ステータス`lpFileName`(の組み合わせ、`SCC_STATUS`ビット; 参照してください[ファイル ステータス コード](../extensibility/file-status-code-enumerator.md)詳細)。  
   
  lpFileName  
- 一覧から追加または削除するには、ファイル名の完全なディレクトリ パス。  
+ ディレクトリの完全パスを追加または一覧から削除するファイル名。  
   
-## 戻り値  
+## <a name="return-value"></a>戻り値  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`TRUE`|プラグインを続行できますこの関数を呼び出します。|  
-|`FALSE`|\(メモリの状況の送信\) などの IDE 側で問題が発生しました。 操作は、プラグインの場合に中断する必要があります。|  
+|`FALSE`|(メモリ不足) などの IDE 側で問題が発生しました。 操作は、プラグインの場合に中断する必要があります。|  
   
-## 解説  
- ソース管理プラグインを追加したり、ファイルの一覧から削除する必要のある各ファイルにするのに対してを渡して、この関数を呼び出し、 `lpFileName`です。`fAddRemove` フラグは、一覧に追加する新しいファイルまたは古いファイルを削除することを示します。`nStatus` パラメーターは、ファイルの状態。 プラグインのソース コード管理を追加して、ファイルの削除が完了したらからが返されます、 [SccPopulateList](../extensibility/sccpopulatelist-function.md) 呼び出します。  
+## <a name="remarks"></a>コメント  
+ 渡して、この関数を呼び出しますが、ソース管理プラグインを追加したり、ファイルの一覧から削除する必要があるファイルごとに、`lpFileName`です。 `fAddRemove`フラグは、一覧に追加する新しいファイルや古いファイルを削除することを示します。 `nStatus`パラメーターは、ファイルの状態。 SCC プラグインを追加して、ファイルの削除が完了したらからが返されます、 [SccPopulateList](../extensibility/sccpopulatelist-function.md)呼び出します。  
   
 > [!NOTE]
->  `SCC_CAP_POPULATELIST` 機能ビットは、Visual Studio に必要です。  
+>  `SCC_CAP_POPULATELIST`機能ビットは Visual Studio に必要です。  
   
-## 参照  
- [IDE で実装されるコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)   
+## <a name="see-also"></a>関連項目  
+ [IDE によって実装されているコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   
  [SccPopulateList](../extensibility/sccpopulatelist-function.md)   
  [ファイルの状態コード](../extensibility/file-status-code-enumerator.md)

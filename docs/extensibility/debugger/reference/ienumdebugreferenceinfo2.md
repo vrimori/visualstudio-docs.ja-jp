@@ -1,63 +1,63 @@
 ---
-title: "IEnumDebugReferenceInfo2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugReferenceInfo2"
-helpviewer_keywords: 
-  - "IEnumDebugReferenceInfo2"
+title: "IEnumDebugReferenceInfo2 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEnumDebugReferenceInfo2
+helpviewer_keywords: IEnumDebugReferenceInfo2
 ms.assetid: 7ed01441-686f-4032-8268-a4c750f19f85
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: b913f0eb4f3dfa4e1ff8fa5bf6719a8f6fed4e3a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# IEnumDebugReferenceInfo2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-このインターフェイスは [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) の構造を列挙します。  
+# <a name="ienumdebugreferenceinfo2"></a>IEnumDebugReferenceInfo2
+このインターフェイスの列挙[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)構造体。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 IEnumDebugReferenceInfo2 : IUnknown  
 ```  
   
-## 実装についてのメモ  
- デバッグ エンジンはメモリ \(DE\) 内のオブジェクトへの参照のサポートの一部としてこのインターフェイスを実装します。  このインターフェイスは参照がサポートされている場合のみ実行する必要があります。  
+## <a name="notes-for-implementers"></a>実装についてのメモ  
+ デバッグ エンジン (DE) は、メモリ内のオブジェクトへの参照のサポートの一部としてこのインターフェイスを実装します。 参照はサポートされている場合にのみ、このインターフェイスを実装する必要があります。  
   
-## 呼び出し元のメモ  
- Visual Studio はこのインターフェイスを取得するに [EnumChildren](../Topic/IDebugReference2::EnumChildren.md) を呼び出します。  
+## <a name="notes-for-callers"></a>呼び出し元のノート  
+ Visual Studio 呼び出し[EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)このインターフェイスを取得します。  
   
-## Vtable の順序でメソッド  
- 次の表は `IEnumDebugReferenceInfo2` のメソッドを示します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
+ 次の表は、メソッドの`IEnumDebugReferenceInfo2`します。  
   
-|メソッド|Description|  
-|----------|-----------------|  
-|[次へ](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-next.md)|列挙体シーケンス内の指定 [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) の構造体の数を取得します。|  
-|[Skip](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-skip.md)|列挙体シーケンス内の [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) 構造の指定した数の要素をスキップします。|  
-|[リセット](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-reset.md)|列挙体シーケンスを先頭にリセットします。|  
-|[複製](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-clone.md)|現在の列挙子と同じ列挙状態を含む列挙子を作成します。|  
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-getcount.md)|列挙子の [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) の構造体の数を取得します。|  
+|メソッド|説明|  
+|------------|-----------------|  
+|[次へ](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-next.md)|指定した数を取得[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)列挙のシーケンス内の構造体。|  
+|[Skip](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-skip.md)|指定した数のスキップ[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)列挙のシーケンス内の構造体。|  
+|[リセット](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-reset.md)|列挙のシーケンスを先頭にリセットします。|  
+|[複製](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-clone.md)|現在の列挙子と同じ列挙の状態を含む列挙子を作成します。|  
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-getcount.md)|数を取得[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)構造体、列挙子にします。|  
   
-## 解説  
- 参照はプロパティの名前型およびアドレスであり主に型とアドレスです。  参照は参照されるオブジェクトがメモリに存在する限り保持されます。  詳細については、「[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)」を参照してください。  
+## <a name="remarks"></a>コメント  
+ 参照は、プロパティは、名前、種類、およびアドレスは実質的に型と、アドレスです。 メモリ内に存在する、オブジェクトが参照されている限り、参照が保持されます。 参照してください[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)詳細についてはします。  
   
-## 必要条件  
- ヘッダー : msdbg.h  
+## <a name="requirements"></a>要件  
+ ヘッダー: msdbg.h  
   
- 名前空間 : Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- アセンブリ : Microsoft.VisualStudio.Debugger.Interop.dll  
+ アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
- [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
+ [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   
- [EnumChildren](../Topic/IDebugReference2::EnumChildren.md)
+ [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)

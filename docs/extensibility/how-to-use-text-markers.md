@@ -1,60 +1,61 @@
 ---
-title: "方法: テキストのマーカーを使用します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "従来のテキストのマーカーを使用してエディター [Visual Studio SDK]"
+title: "方法: テキスト マーカーを使用して |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: editors [Visual Studio SDK], legacy - using text markers
 ms.assetid: 76eed51c-eecb-4579-823e-13df2f0526b9
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 1070a88f1bae27b9ff10fedbf6a383ec30c1ed0e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: テキストのマーカーを使用します。
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-テキスト マーカーが <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> のオブジェクトの編集に適用できます。  
+# <a name="how-to-use-text-markers"></a>方法: テキスト マーカーを使用
+テキスト マーカーは編集に適用できる、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>オブジェクト。  
   
-## 手順  
+## <a name="procedures"></a>手順  
   
-#### テキスト マーカーを適用するには  
+#### <a name="to-apply-text-markers"></a>テキスト マーカーを適用するには  
   
-1.  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> クラスのインスタンスを取得します。  
+1.  インスタンスを取得、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager>クラスです。  
   
     > [!NOTE]
-    >  コア エディターで編集する標準テキスト マーカーを明示的に適用する必要があるはずではありません。任意の文書に自動的に標準テキスト マーカーを適用します。  
+    >  コア エディターでは、それを編集すると、任意のドキュメントに、標準のテキストのマーカーを自動的に適用し、標準のテキストのマーカーを明示的に適用するために必要なできないようにします。  
   
-2.  一つとして必要 `GUID` のテキスト マーカーの <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager.GetRegisteredMarkerTypeID%2A> のメソッドを呼び出して必要なマーカーのマーカーの型 ID を取得します。  
+2.  呼び出して、関心のあるマーカーのマーカーの種類 ID を取得、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager.GetRegisteredMarkerTypeID%2A>メソッドを`GUID`テキスト マーカーを使用したいのです。  
   
     > [!NOTE]
-    >  VSPackage またはテキスト マーカーを提供するサービス `GUID` を使用しないでください。  
+    >  使用しないで、 `GUID` VSPackage のまたはテキスト マーカーを提供するサービスです。  
   
-3.  パラメーターとして <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager.GetRegisteredMarkerTypeID%2A> のメソッドの <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> のメソッドまたはメソッドを <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A> のテキストの指定した領域でテキスト マーカーを適用する呼び出しを呼び出しによって取得した ID のタイプ マーカーを使用します。  
+3.  使用するマーカーの種類 ID は、呼び出すことによって取得、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager.GetRegisteredMarkerTypeID%2A>メソッドを呼び出して、パラメーターとして、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A>メソッドまたは<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A>テキストの特定の領域とテキスト マーカーを適用する方法です。  
   
-#### テキスト マーカーの機能を追加するには  
+#### <a name="to-add-features-to-text-markers"></a>テキスト マーカーに機能を追加  
   
-1.  特殊事情のツールヒント特別なコンテキスト メニューまたはハンドラーなどテキスト マーカーの他の機能を追加することが望ましいこともあります。  そのため :  
+1.  テキスト マーカー、ツール ヒント、特殊なコンテキスト メニュー ハンドラーなどの特殊な状況に追加の機能を追加することが望ましい場合があります。 これを行うには。  
   
-2.  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> のインターフェイスを実装するオブジェクトを作成します。  
+2.  実装するオブジェクトを作成、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイスです。  
   
-3.  追加機能を指定する場合同じオブジェクトの <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClientEx> と <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClientAdvanced> のインターフェイスを実装する <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> のインターフェイスを実装します。  
+3.  追加の機能が必要な場合は、実装、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClientEx>、および<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClientAdvanced>のインターフェイスを実装するのと同じオブジェクトを<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイスです。  
   
-4.  作成したテキストの指定した領域でテキスト マーカーを適用するために使用される <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A> メソッドまたはメソッドの呼び出しに <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> のインターフェイスを渡します。  
+4.  渡す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイスの呼び出しに、作成した、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A>メソッドまたは<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A>メソッドを使用してテキストの特定の領域とテキスト マーカーを適用します。  
   
-5.  コンテキスト メニューのサポートをテキスト マーカーの領域に追加するときにメニューを作成する必要があります。  
+5.  テキスト マーカー リージョンにコンテキスト メニューのサポートを追加するときに、メニューを作成するために必要です。  
   
-     コンテキスト メニューを作成する方法の詳細については[コンテキスト メニュー](../extensibility/context-menus.md)" " を参照してください。  
+     詳細については、コンテキスト メニューは、「を作成する方法の[コンテキスト メニュー](../extensibility/context-menus.md)です。  
   
-6.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の環境では必要に応じて指定されたインターフェイスのメソッドメソッドなどの <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.GetTipText%2A>または <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.ExecMarkerCommand%2A> のメソッドを呼び出します。  
+6.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]環境など、指定されたインターフェイスのメソッドの呼び出し、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.GetTipText%2A>メソッド、または<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.ExecMarkerCommand%2A>必要に応じてメソッドです。  
   
-## 参照  
- [レガシ API でテキストのマーカーの使用](../extensibility/using-text-markers-with-the-legacy-api.md)   
- [方法: 標準のテキストのマーカーを追加](../extensibility/how-to-add-standard-text-markers.md)   
- [方法: カスタム テキスト マーカーを作成](../extensibility/how-to-create-custom-text-markers.md)   
+## <a name="see-also"></a>関連項目  
+ [レガシ API でテキスト マーカーの使用](../extensibility/using-text-markers-with-the-legacy-api.md)   
+ [方法: 標準のテキストのマーカーの追加](../extensibility/how-to-add-standard-text-markers.md)   
+ [方法: カスタム テキスト マーカーを作成します。](../extensibility/how-to-create-custom-text-markers.md)   
  [方法: エラー マーカーを実装します。](../extensibility/how-to-implement-error-markers.md)

@@ -1,56 +1,58 @@
 ---
-title: "開く、プロジェクト項目を保存します。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "プロジェクト [Visual Studio SDK] ファイルの永続化"
-  - "開く、保存するファイル [Visual Studio]"
-  - "エディター [Visual Studio SDK] ファイルの永続化"
+title: "開くと、プロジェクト項目の保存 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- projects [Visual Studio SDK], file persistence
+- files [Visual Studio], opening and saving
+- editors [Visual Studio SDK], file persistence
 ms.assetid: f71898ad-335f-4c43-a177-4da87078afd1
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a30589591a7cef60ecfb19945366f8fcf539da02
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 開く、プロジェクト項目を保存します。
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-新しいプロジェクトを追加すると[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の統合開発環境でプロジェクト ファイルを開くと保存を管理 \(IDE\) する必要があります。  次のトピックでは開いたり保存したりファイルへのさまざまな方法について説明します。  
+# <a name="opening-and-saving-project-items"></a>開くと、プロジェクト項目の保存
+新しいプロジェクトの種類を追加すると、する場合は、開始タグとに、プロジェクト ファイルの保存を管理する必要があります、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。 次のトピックでは、オープンとファイルを保存する別の方法について説明します。  
   
-## このセクションの内容  
- [ファイルを開くコマンドを使用してファイルを表示します。](../../extensibility/internals/displaying-files-by-using-the-open-file-command.md)  
- IDE がこれに対しプロジェクトの  **ファイルを開く**  ロールのコマンドとコマンドをどのように処理されるかの詳細な説明を提供します。  
+## <a name="in-this-section"></a>このセクションの内容  
+ [ファイルを開くコマンドを使用したファイルの表示](../../extensibility/internals/displaying-files-by-using-the-open-file-command.md)  
+ IDE での処理方法の詳細な手順の説明を提供、**ファイルを開く**コマンドと、このコマンドに応答するためにプロジェクトの役割です。  
   
- [コマンドを開く\] を使用してファイルを表示します。](../Topic/Displaying%20Files%20By%20Using%20the%20Open%20With%20Command.md)  
- IDE が  **ファイルを開くアプリケーションの選択**  のコマンドを処理または標準エディターを選択できるファイルを開くダイアログを表示する詳細な手順について説明します。  
+ [プログラムから開くコマンドを使用したファイルの表示](../../extensibility/internals/displaying-files-by-using-the-open-with-command.md)  
+ IDE での処理方法の詳細な詳細な手順を説明します、**ファイルを開く**コマンド、標準のエディターのいくつかの選択肢を含むファイルを開くのメッセージを表示します。  
   
- [方法: プロジェクトに固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)  
- プロジェクトの特定の種類のファイルがプロジェクトに固有のエディターを使用して開くように指定するための手順を示します。  
+ [方法: プロジェクト固有のエディターを開く](../../extensibility/how-to-open-project-specific-editors.md)  
+ プロジェクトに固有のエディターを使用して、プロジェクトの特定の種類のファイルが開かれることを指定するための手順を説明します。  
   
  [方法: 標準のエディターを開く](../../extensibility/how-to-open-standard-editors.md)  
- 指定するための手順を IDE でプロジェクト ファイルの標準エディターを開くことができるようにする方法を示します。  
+ IDE を開くには、プロジェクトの種類のファイルの標準のエディターを有効にする方法を指定するための手順を説明します。  
   
  [方法: 開いているドキュメントのエディターを開く](../../extensibility/how-to-open-editors-for-open-documents.md)  
- 開いているファイルのプロジェクト固有のエディターを開く手順について説明します。  
+ 開いているファイルのプロジェクト固有のエディターを開く手順を説明します。  
   
- [標準的なドキュメントの保存](../../extensibility/internals/saving-a-standard-document.md)  
- IDE が標準のエディターで開くドキュメントの  **保存  名前を付けて保存**  と  **すべて保存**  のコマンドを処理する方法について説明します。  
+ [標準ドキュメントの保存](../../extensibility/internals/saving-a-standard-document.md)  
+ IDE を処理する方法について詳しく説明します、**保存**、**名前を付けて保存**、および**すべて保存**ドキュメント用のコマンドは、標準のエディターで開かれています。  
   
  [カスタム ドキュメントの保存](../../extensibility/internals/saving-a-custom-document.md)  
- IDE がカスタム エディターで開くドキュメントの  **保存  名前を付けて保存**  と  **すべて保存**  のコマンドを処理または図と詳細な説明を提供します。  
+ ダイアグラムと IDE を処理する方法の詳細については、**保存**、**名前を付けて保存**、および**すべてを保存**ドキュメント用のコマンドは、カスタム エディターで開かれています。  
   
- [どのエディターが開き、プロジェクト内のファイルを決定します。](../../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)  
- ファイルの適切なエディターまたはデザイナーを選択するようにIDE が従うプロセスについて説明します。  
+ [プロジェクトでのファイルを開くエディターの決定](../../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)  
+ IDE が適切なエディターまたはファイルのデザイナーを選択するために従うプロセスについて説明します。  
   
-## 関連項目  
- [カスタム エディターとデザイナーを作成します。](../../extensibility/creating-custom-editors-and-designers.md)  
- IDE でホストできる示し各エディターについて説明しますエディターの 4 種類があります。  
+## <a name="related-sections"></a>関連項目  
+ [カスタム エディターとデザイナーの作成](../../extensibility/creating-custom-editors-and-designers.md)  
+ IDE がホストできるあり、各エディターの説明を提供するエディターの 4 種類の一覧を示します。  
   
- [プロジェクトの種類](../../extensibility/internals/project-types.md)  
- エディターを開く方法およびプロジェクト項目が書式指定されるコードがコンパイルされプロジェクトをビルドする方法を制御する方法について説明します。
+ [プロジェクト タイプ](../../extensibility/internals/project-types.md)  
+ プロジェクトでコードがコンパイルされ、ビルドする方法を制御する方法、エディターを開く方法、およびプロジェクト アイテムの書式設定方法について説明します。

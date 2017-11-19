@@ -1,42 +1,43 @@
 ---
-title: "XSLT スタイル シートの編集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "XSLT スタイル シート編集 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 080bed0f-0ca9-4be7-aecd-6bdaebc04007
-caps.latest.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: a10bcadbffef1f67086263762f292765c932a986
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# XSLT スタイル シートの編集
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-XML エディターは、XSLT スタイル シートの編集にも使用することができます。IntelliSense、アウトライン、XML スニペットなどの、エディターが備える既定の機能を活用できます。さらに、XSLT での開発を容易にする新機能もあります。  
+# <a name="editing-xslt-style-sheets"></a>XSLT スタイル シートの編集
+XML エディターは、XSLT スタイル シートの編集にも使用することができます。 IntelliSense、アウトライン、XML スニペットなどの、エディターが備える既定の機能を活用できます。 さらに、XSLT での開発を容易にする新機能もあります。  
   
-## XSLT 機能  
+## <a name="xslt-features"></a>XSLT 機能  
  XSLT スタイル シートの操作時に固有な機能の説明を次の表に示します。  
   
- **構文の色分け表示**  
- `template` や `match` などの XSLT キーワードは、\[フォントおよび色\] の設定で指定されている XSLT キーワードの色で表示されます。  
+ **構文の色分け**  
+ XSLT キーワードなど`template`、`match`で指定された XSLT キーワードの色で表示されます、**フォントおよび色**設定します。  
   
- **波下線**  
- XML エディターは、インストールされた xslt.xsd ファイルを使用して XSLT スタイル シートを検証します。検証エラーは、青色の波下線で表示されます。XML エディターは、バックグラウンドでスタイル シートのコンパイルも行い、適切な波下線でコンパイラのエラーや警告を通知します。  
+ **波形の下線**  
+ XML エディターは、インストールされた xslt.xsd ファイルを使用して XSLT スタイル シートを検証します。 検証エラーは、青色の波下線で表示されます。 XML エディターは、バックグラウンドでスタイル シートのコンパイルも行い、適切な波下線でコンパイラのエラーや警告を通知します。  
   
  **スクリプト ブロックのサポート**  
  スクリプト ブロック内のコードは XSLT デバッガーによってサポートされているので、ブレークポイントを設定してスクリプト ブロックのコードをステップ実行することができます。  
   
  **XSLT 出力の表示**  
- XSL 変換を実行し、XML エディターから出力を参照することができます。詳細については、「[方法: XML エディターから XSLT 変換を実行する](../xml-tools/how-to-execute-an-xslt-transformation-from-the-xml-editor.md)」を参照してください。  
+ XSL 変換を実行し、XML エディターから出力を参照することができます。 詳細については、次を参照してください。[する方法: XML エディターから XSLT 変換を実行](../xml-tools/how-to-execute-an-xslt-transformation-from-the-xml-editor.md)です。  
   
- **XSLT のデバッグ**  
- XML エディターでは、XSLT ファイルから XSLT デバッガーを起動できます。このデバッガーは、XSLT ファイルでのブレークポイントの設定や、XSLT 実行状態の表示などをサポートしています。XSLT 変数の上にカーソルを置くと、変数の値を示すツール ヒントが表示されます。このデバッガーを使用すると、スタイル シートのデバッグや、他のアプリケーションから呼び出されたコンパイル済みの XSL 変換のデバッグが可能です。詳細については、「[XSLT のデバッグ](../xml-tools/debugging-xslt.md)」を参照してください。  
+ **XSLT をデバッグします。**  
+ XML エディターでは、XSLT ファイルから XSLT デバッガーを起動できます。 このデバッガーは、XSLT ファイルでのブレークポイントの設定や、XSLT 実行状態の表示などをサポートしています。 XSLT 変数の上にカーソルを置くと、変数の値を示すツール ヒントが表示されます。 このデバッガーを使用すると、スタイル シートのデバッグや、他のアプリケーションから呼び出されたコンパイル済みの XSL 変換のデバッグが可能です。 詳細については、次を参照してください。 [XSLT のデバッグ](../xml-tools/debugging-xslt.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [XML エディター](../xml-tools/xml-editor.md)

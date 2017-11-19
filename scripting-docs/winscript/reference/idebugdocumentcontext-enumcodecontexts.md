@@ -1,27 +1,30 @@
 ---
-title: "IDebugDocumentContext::EnumCodeContexts | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-script-interfaces"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "IDebugDocumentContext::EnumCodeContexts |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-script-interfaces
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 apiname: IDebugDocumentContext.EnumCodeContexts
 apilocation: pdm.dll
-helpviewer_keywords: 
-  - "IDebugDocumentContext::EnumCodeContexts"
+helpviewer_keywords: IDebugDocumentContext::EnumCodeContexts
 ms.assetid: fb0aa64e-c458-4ef1-bcd8-5cebdc972549
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 300102d75fcfa797e8e073b9a1ce77cc5ee2827a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2017
 ---
-# IDebugDocumentContext::EnumCodeContexts
-このドキュメントのコンテキストに関連付けられたコード コンテキストを列挙します。  
+# <a name="idebugdocumentcontextenumcodecontexts"></a>IDebugDocumentContext::EnumCodeContexts
+このドキュメントのコンテキストに関連付けられているコードのコンテキストを列挙します。  
   
-## 構文  
+## <a name="syntax"></a>構文  
   
 ```  
 HRESULT EnumCodeContexts(  
@@ -29,19 +32,19 @@ HRESULT EnumCodeContexts(
 );  
 ```  
   
-#### パラメーター  
+#### <a name="parameters"></a>パラメーター  
  `ppescc`  
- \[入力\]このドキュメントのコンテキストに関連付けられたコード コンテキスト。  
+ [out]このドキュメントのコンテキストに関連付けられているコード コンテキストです。  
   
-## 戻り値  
- このメソッドは `HRESULT` を返します。  指定できる値は、に含まれていますが、次の表に、これらはありません。  
+## <a name="return-value"></a>戻り値  
+ このメソッドは `HRESULT` を返します。 有効な値を次の表に示しますが、これ以外にもあります。  
   
 |値|説明|  
-|-------|--------|  
+|-----------|-----------------|  
 |`S_OK`|メソッドが成功しました。|  
   
-## 解説  
- ドキュメントは、通常、1 種類のコード コンテキストのみとドキュメントがインクルード ファイルまたはテンプレートである、関連付けられます。  
+## <a name="remarks"></a>コメント  
+ ドキュメントは、インクルード ファイルまたはテンプレートにドキュメントがない限り、通常 1 つだけのコードのコンテキストに関連付けられてます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [IDebugDocumentContext インターフェイス](../../winscript/reference/idebugdocumentcontext-interface.md)
