@@ -1,1 +1,1 @@
-Internet Explorer 8 標準モード、Internet Explorer 9 標準モード、Internet Explorer 10 標準モード、Internet Explorer 11 標準モード、および win8\_appname\_long アプリ
+Internet Explorer 8 標準モード、Internet Explorer 9 標準モード、Internet Explorer 10 標準モード、Internet Explorer 11 標準モード、および win8_appname_long アプリ
