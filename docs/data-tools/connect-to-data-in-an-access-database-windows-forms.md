@@ -1,138 +1,133 @@
 ---
-title: "チュートリアル: Access データベース内のデータへの接続 (Windows フォーム) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "Access データベース, 接続"
-  - "接続 (データに), Access データベースから"
-  - "データ [Visual Studio], 接続"
-  - "データベース, Access"
-  - "データベース, 接続"
+title: "Access データベース (Windows フォーム) にデータへの接続 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 09/15/2017
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases, connecting to
+- databases, Access
+- data [Visual Studio], connecting
+- connecting to data, from Access databases
+- Access databases, connecting
 ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
-caps.latest.revision: 29
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "29"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.technology: vs-data-tools
+ms.openlocfilehash: 1f67a87f4a704d3f76ccddba62112983c058a9f3
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# チュートリアル: Access データベース内のデータへの接続 (Windows フォーム)
-Visual Studio を使用して Access データベース \(.mdf ファイルまたは .accdb ファイル\) に接続できます。  接続を定義すると、**\[データ ソース ウィンドウ\]** にデータが表示されます。  ここから、テーブルまたはビューをフォームにドラッグできます。  Visual Studio のプロジェクト システムがこれらのローカル データベース ファイルを管理する方法を調べるには、「[方法 : プロジェクトでローカル データ ファイルを管理する](../data-tools/how-to-manage-local-data-files-in-your-project.md)」を参照してください。  
+# <a name="connect-to-data-in-an-access-database-windows-forms"></a>Access データベース (Windows フォーム) にデータへの接続します。
+Visual Studio を使用して、Access データベース (.mdf ファイルまたは .accdb ファイル) に接続することができます。 接続の定義後に表示される、データ、**データソース**ウィンドウです。 ここから、テーブルまたはビューをフォームにドラッグできます。   
   
-## 必須コンポーネント  
- これらの手順を実行するには、Windows フォーム アプリケーション プロジェクト、および Microsoft Access データベース ファイル \(.accdb ファイル\) または Access 2000\-2003 データベース \(.mdb ファイル\) が必要です。  ファイルの種類に対応する手順に従ってください。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ これらの手順を使用するのには、Windows フォーム アプリケーション プロジェクト、および Access データベース (ファイル.accdb ファイル) または Access 2000-2003 データベース (.mdb ファイル) する必要があります。 ファイルの種類に対応する手順に従ってください。  
   
-## .accdb ファイルのデータセットの作成  
- 次の手順を実行して、Access 2013、Office 365、Access 2010、または Access 2007 で作成したデータベースに接続できます。  
+## <a name="creating-the-dataset-for-an-accdb-file"></a>.Accdb ファイルのデータセットの作成  
+ Access 2013、Office 365、Access 2010、または Access 2007 で、次の手順を使用して作成されたデータベースに接続することができます。  
   
-#### データセットを作成するには  
+#### <a name="to-create-the-dataset"></a>データセットを作成するには  
   
-1.  データの接続先となる Windows フォーム アプリケーションを開きます。  
+1.  データに接続する Windows フォーム アプリケーションを開きます。  
   
-2.  **\[表示\]** メニューで、**\[その他のウィンドウ\]** \> **\[データ ソース\]** をクリックします。  
+2.  **ビュー**メニューの **その他のウィンドウ** > **データソース**です。  
   
-     ![&#91;表示&#93;、&#91;その他のウィンドウ&#93;、&#91;データ ソース&#93;](~/data-tools/media/viewdatasources.png "ViewDataSources")  
+     ![その他の Windows のデータ ソースの表示](../data-tools/media/viewdatasources.png "ViewDataSources")  
   
-3.  **\[データ ソース\]** ウィンドウで、**\[新しいデータ ソースの追加\]** をクリックします。  
+3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]**をクリックします。  
+
+     **データ ソース構成ウィザード**が開きます。  
   
-     ![&#91;新しいデータ ソースの追加&#93;](~/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
+4.  選択**データベース**上、**データ ソースの種類を選択**ページし、 **次へ**です。  
   
-4.  **\[データソースの種類を選択\]** ページで **\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
+5.  選択**データセット**上、**データベース モデルの選択**ページし、 **次へ**です。  
   
-5.  **\[データベース モデルの選択\]** ページで **\[データセット\]** をクリックし、**\[次へ\]** をクリックします。  
+6.  **データ接続の選択**] ページで、[**新しい接続**新しいデータ接続を構成します。  
+
+     **接続の追加** ダイアログ ボックスが表示されます。  
   
-6.  **\[データ接続の選択\]** ページで、**\[新しい接続\]** を選択して新しいデータ接続を構成します。  
+7.  選択、**変更**横に、**データソース**テキスト ボックス。
+
+     **データ ソースの変更** ダイアログ ボックスが表示されます。  
   
-7.  **\[データ ソース\]** を **\[.NET Framework OLE DB 用データ プロバイダー\]** に変更します。  
-  
-     ![データ プロバイダーを OLE DB に変更](../data-tools/media/datachangedatasourceoledb.png "dataChangeDataSourceOLEDB")  
-  
-    > [!IMPORTANT]
-    >  **\[Microsoft Access データベース ファイル \(OLE DB\) \]** のデータ ソースが正しい選択のように思われますが、このデータ ソースの種類は .mdb データベース ファイルにのみ使用します。  
-  
-8.  **\[OLE DB プロバイダー\]** で **\[Microsoft Office 12.0 Access データベース エンジン OLE DB プロバイダー\]** をクリックします。  
+8.  データ ソースの一覧で選択**\<他\>**です。 **データ プロバイダー**ドロップダウン リストで、 **.NET Framework Data Provider for OLE DB**、順に選択**OK**です。  
+
+9. 戻り、**接続の追加**ダイアログ ボックスで、 **Microsoft Office 12.0 Access Database Engine OLE DB Provider**から、 **OLE DB プロバイダー**ドロップダウンします。  
   
      ![OLE DB プロバイダーの Microsoft Office 12.0 Access](../data-tools/media/dataoledbprovideroffice12access.png "dataOLEDBProviderOffice12Access")  
+
+     > [!NOTE]
+     >  表示されない場合**Microsoft Office 12.0 Access Database Engine OLE DB Provider**ドロップダウン OLE DB プロバイダーをインストールする必要があります、 [2007 Office System ドライバー: データ接続コンポーネント](https://www.microsoft.com/download/confirmation.aspx?id=23734)です。
   
-9. **\[サーバー名またはファイル名\]** で、接続する .accdb ファイルのパスと名前を指定し、**\[OK\]** をクリックします。  
+9. **サーバーまたはファイル名**テキスト ボックスで、パスを指定し、ファイルに接続する .accdb ファイルの名前と順に選択**OK**です。 (データベース ファイルにユーザー名とパスワードがある場合を指定して、選択する前に**OK**)。    
   
-    > [!NOTE]
-    >  データベース ファイルにユーザー名とパスワードがある場合は、それらを指定し、**\[OK\]** をクリックします。  
+10. 選択**次**上、**データ接続の選択**ページ。  
+
+     データ ファイルは、現在のプロジェクトではありませんを示すダイアログ ボックスが表示する可能性があります。 **[はい]** または **[いいえ]**をクリックします。
   
-10. **\[データ接続の選択\]** ページで **\[次へ\]** をクリックします。  
+11. 選択**次**上、**接続文字列をアプリケーション構成ファイルに保存**ページ。  
   
-11. **\[アプリケーション構成ファイルに接続文字列を保存\]** ページで **\[次へ\]** をクリックします。  
+12. 展開して、**テーブル**上のノード、**データベース オブジェクトの選択**ページ。  
   
-12. **\[データベース オブジェクトの選択\]** ページの **\[テーブル\]** ノードを展開します。  
+13. どのようなテーブルまたはビュー、データセット内に指定し、選択**完了**です。  
   
-13. データセットに含めるビューまたはテーブルをすべて選択し、**\[完了\]** をクリックします。  
+     データセットが、プロジェクトに追加され、テーブルとビューに表示されます、**データソース**ウィンドウです。  
   
-     プロジェクトにデータセットが追加され、テーブルとビューが **\[データ ソース\]** ウィンドウに表示されます。  
+## <a name="creating-the-dataset-for-an-mdb-file"></a>.Mdb ファイルのデータセットの作成  
+ 実行して、データセットを作成する、**データ ソース構成ウィザード**です。  
   
-## .mdb ファイルのデータセットの作成  
- **データ ソース構成**ウィザードを実行して、データセットを作成します。  
+#### <a name="to-create-the-dataset"></a>データセットを作成するには  
   
-#### データセットを作成するには  
+1.  データに接続する Windows フォーム アプリケーションを開きます。  
   
-1.  データの接続先となる Windows フォーム アプリケーションを開きます。  
+2.  **ビュー**メニューの **その他のウィンドウ** > **データソース**です。  
   
-2.  **\[表示\]** メニューで、**\[その他のウィンドウ\]** \> **\[データ ソース\]** をクリックします。  
+     ![その他の Windows のデータ ソースの表示](../data-tools/media/viewdatasources.png "ViewDataSources")  
   
-     ![&#91;表示&#93;、&#91;その他のウィンドウ&#93;、&#91;データ ソース&#93;](~/data-tools/media/viewdatasources.png "ViewDataSources")  
+3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]**をクリックします。  
+
+     **データ ソース構成ウィザード**が開きます。
   
-3.  **\[データ ソース\]** ウィンドウで、**\[新しいデータ ソースの追加\]** をクリックします。  
+4.  選択**データベース**上、**データ ソースの種類を選択**ページし、 **次へ**です。  
   
-     ![&#91;新しいデータ ソースの追加&#93;](~/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
+5.  選択**データセット**上、**データベース モデルの選択**ページし、 **次へ**です。  
   
-4.  **\[データソースの種類を選択\]** ページで **\[データベース\]** をクリックし、**\[次へ\]** をクリックします。  
+6.  **データ接続の選択**] ページで、[**新しい接続**新しいデータ接続を構成します。  
   
-5.  **\[データベース モデルの選択\]** ページで **\[データセット\]** をクリックし、**\[次へ\]** をクリックします。  
+7.  データ ソースがない場合**Microsoft Access データベース ファイル (OLE DB)****変更**を開くには、**データ ソースの変更** ダイアログ ボックスと選択**Microsoftデータベース ファイルへのアクセス**、し、 **OK**です。  
   
-6.  **\[データ接続の選択\]** ページで、**\[新しい接続\]** を選択して新しいデータ接続を構成します。  
+8.  **データベース ファイルの名前**を選択し、接続する .mdb ファイルの名前とパスを指定**OK**です。  
   
-7.  **\[データ ソース\]** が **\[Microsoft Access データベース ファイル \(OLE DB\)\]** でない場合は、**\[変更\]** をクリックして **\[データ ソースの変更\]** ダイアログ ボックスを開き、**\[Microsoft Access データベース ファイル\]** をクリックし、**\[OK\]** をクリックします。  
+     ![Access データベース ファイルの接続を追加](../data-tools/media/dataaddconnectionaccessmdb.png "dataAddConnectionAccessMDB")  
   
-8.  **\[データベース ファイル名\]** で、接続する .mdb ファイルのパスと名前を指定し、**\[OK\]** をクリックします。  
+9. 選択**次**上、**データ接続の選択**ページ。  
   
-     ![Access データベース ファイルへの接続を追加](../data-tools/media/dataaddconnectionaccessmdb.png "dataAddConnectionAccessMDB")  
+10. 選択**次**上、**接続文字列をアプリケーション構成ファイルに保存**ページ。  
   
-9. **\[データ接続の選択\]** ページで **\[次へ\]** をクリックします。  
+11. 展開して、**テーブル**上のノード、**データベース オブジェクトの選択**ページ。  
   
-10. **\[アプリケーション構成ファイルに接続文字列を保存\]** ページで **\[次へ\]** をクリックします。  
+12. どのようなテーブルまたはビュー、データセット内に指定し、選択**完了**です。  
   
-11. **\[データベース オブジェクトの選択\]** ページの **\[テーブル\]** ノードを展開します。  
+     データセットが、プロジェクトに追加され、テーブルとビューに表示されます、**データソース**ウィンドウです。  
   
-12. データセットに含めるビューまたはテーブルをすべて選択し、**\[完了\]** をクリックします。  
+## <a name="security"></a>セキュリティ  
+ 機密情報 (パスワードなど) を格納すると、アプリケーションのセキュリティに影響を及ぼすことがあります。 データベースへのアクセスを制御する方法としては、Windows 認証 (統合セキュリティとも呼ばれます) を使用する方が安全です。 詳細については、「[接続情報の保護](/dotnet/framework/data/adonet/protecting-connection-information)」を参照してください。  
   
-     プロジェクトにデータセットが追加され、テーブルとビューが **\[データ ソース\]** ウィンドウに表示されます。  
+## <a name="next-steps"></a>次の手順  
+ 先ほど作成したデータセットがで使用できるようになりました、**データソース**ウィンドウです。 これで、次のタスクのいずれかを実行できます。  
   
-## セキュリティ  
- 機密情報 \(パスワードなど\) を格納すると、アプリケーションのセキュリティに影響を及ぼすことがあります。  データベースへのアクセスを制御する方法としては、Windows 認証 \(統合セキュリティとも呼ばれます\) を使用する方が安全です。  詳細については、「[接続情報の保護](../Topic/Protecting%20Connection%20Information.md)」を参照してください。  
+-   内の項目を選択して、**データ ソース**ウィンドウ、フォームにドラッグし、(を参照してください[Visual Studio でのデータにコントロールを Windows フォームのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md))。  
   
-## 次の手順  
- 作成したデータセットが **\[データ ソース\]** ウィンドウで利用できるようになります。  これで、以下のタスクをどれでも実行できます。  
+-   データ ソースを開き、**データセット デザイナー**データセットを構成するオブジェクトを追加または編集します。  
   
--   **\[データ ソース\]** ウィンドウの項目を選択し、フォームにドラッグします \([Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) を参照\)。  
+-   検証ロジックを追加、<xref:System.Data.DataTable.ColumnChanging>または<xref:System.Data.DataTable.RowChanging>データセット内のデータ テーブルのイベント (を参照してください[データセット内のデータを検証](../data-tools/validate-data-in-datasets.md))。  
   
--   [データセット デザイナー](../data-tools/creating-and-editing-typed-datasets.md)でデータ ソースを開き、データセットを構成するオブジェクトを追加または編集します。  
-  
--   データセット内のデータ テーブルの <xref:System.Data.DataTable.ColumnChanging> イベントまたは <xref:System.Data.DataTable.RowChanging> イベントに検証ロジックを追加します \([データセットのデータの検証](../data-tools/validate-data-in-datasets.md) を参照\)。  
-  
-## 参照  
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
- [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [アプリケーションへのデータのフェッチ](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
- [データの検証](../Topic/Validating%20Data.md)   
- [データの保存](../data-tools/saving-data.md)   
- [データに関するチュートリアル](../Topic/Data%20Walkthroughs.md)
+## <a name="see-also"></a>関連項目
+[接続の追加](../data-tools/add-new-connections.md)

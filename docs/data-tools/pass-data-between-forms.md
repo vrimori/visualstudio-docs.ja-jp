@@ -1,5 +1,5 @@
 ---
-title: Pass data between forms | Microsoft Docs
+title: "フォーム間でデータを渡す |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,139 +16,136 @@ helpviewer_keywords:
 - forms, passing data between
 - Windows Forms, walkthroughs
 ms.assetid: 78bf038b-9296-4fbf-b0e8-d881d1aff0df
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: 8e64b722b4156c9aeaf7345bc726283dd913a0b3
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: f401224657e64922fc9f6102a33eaf1cf824a556
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
-# <a name="pass-data-between-forms"></a>Pass data between forms
-This walkthrough provides step-by-step instructions for passing data from one form to another. Using the customers and orders tables from Northwind, one form allows users to select a customer, and a second form displays the selected customer's orders. This walkthrough shows how to create a method on the second form that receives data from the first form.  
+# <a name="pass-data-between-forms"></a>フォーム間でデータを渡す
+このチュートリアルでは、フォーム間でデータを渡す手順について説明します。 顧客と Northwind の orders テーブルを使用して、1 つの形式により、ユーザー、顧客を選択して、2 番目のフォームには、選択した顧客の注文が表示されます。 このチュートリアルでは、最初のフォームからデータを受信する 2 番目のフォームにメソッドを作成する方法を示します。  
   
 > [!NOTE]
->  This walkthrough demonstrates only one way to pass data between forms. There are other options for passing data to a form, including creating a second constructor to receive data, or creating a public property that can be set with data from the first form.  
+>  このチュートリアルでは、フォーム間でデータを渡す 1 つの方法についてのみ説明します。 データを受信する 2 番目のコンス トラクターを作成するなど、フォームにデータを渡すには、他のオプションがあるか、最初のフォームからデータを使用するパブリック プロパティを作成するを設定できます。  
   
- Tasks illustrated in this walkthrough include:  
+ このチュートリアルでは、以下のタスクを行います。  
   
--   Creating a new **Windows Forms Application** project.  
+-   新たに作成する**Windows フォーム アプリケーション**プロジェクト。  
   
--   Creating and configuring a dataset with the [Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png).  
+-   作成と構成を含むデータセット、[データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)です。  
   
--   Selecting the control to be created on the form when dragging items from the **Data Sources** window. For more information, see [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
+-   項目をドラッグしたときに、フォームに作成するコントロールを選択すると、**データソース**ウィンドウです。 詳細については、次を参照してください。[セットのデータ ソース ウィンドウからドラッグしたときに作成する制御](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)です。  
   
--   Creating a data-bound control by dragging items from the **Data Sources** window onto a form.  
+-   項目をドラッグして、データ バインド コントロールを作成する、**データソース**ウィンドウからフォームにします。  
   
--   Creating a second form with a grid to display data.  
+-   データを表示するグリッドのある 2 番目のフォームを作成します。  
   
--   Creating a TableAdapter query to fetch orders for a specific customer.  
+-   特定の顧客の注文をフェッチする TableAdapter クエリを作成します。  
   
--   Passing data between forms.  
+-   フォーム間でデータを渡します。  
   
-## <a name="prerequisites"></a>Prerequisites  
- In order to complete this walkthrough, you need:  
+## <a name="prerequisites"></a>必須コンポーネント  
+このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。  
   
--   Access to the Northwind sample database. For more information, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
+1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server のエディションのダウンロード ページ](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)、または、 **Visual Studio インストーラー**です。 一部として、Visual Studio インストーラーで、SQL Server Express LocalDB をインストールすることができます、**データ ストレージと処理**ワークロード、または個々 のコンポーネントとして。  
   
-## <a name="create-the-windows-forms-application"></a>Create the Windows Forms Application  
-  
-#### <a name="to-create-the-new-windows-project"></a>To create the new Windows project  
-  
-1. In Visual Studio, on the **File** menu, select **New**, **Project...**.  
-  
-2. Expand either **Visual C#** or **Visual Basic** in the left-hand pane, then select **Windows Classic Desktop**.  
+2.  次の手順に従って、Northwind サンプル データベースをインストールします。  
 
-3. In the middle pane, select the **Windows Forms App** project type.  
+    1. Visual Studio で開く、 **SQL Server オブジェクト エクスプ ローラー**ウィンドウです。 (の一部として SQL Server オブジェクト エクスプ ローラーがインストールされている、**データ ストレージと処理**Visual Studio インストーラーでのワークロードです)。展開して、 **SQL Server**ノード。 LocalDB インスタンスを右クリックし、選択**新しいクエリしています.**.  
 
-4. Name the project **PassingDataBetweenForms**, and then choose **OK**. 
+       クエリ エディター ウィンドウが開きます。  
+
+    2. コピー、 [Northwind TRANSACT-SQL スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)をクリップボードにします。 この T-SQL スクリプトは、最初から、Northwind データベースを作成し、データを設定します。  
+
+    3. T-SQL スクリプトをクエリ エディターに貼り付けを選択し、 **Execute**ボタンをクリックします。  
+
+       短期間のうち、クエリの実行が終了し、Northwind データベースを作成します。  
   
-     The **PassingDataBetweenForms** project is created, and added to **Solution Explorer**.  
+## <a name="create-the-windows-forms-application"></a>Windows フォーム アプリケーションを作成します。  
   
-## <a name="create-the-data-source"></a>Create the data source  
+#### <a name="to-create-the-new-windows-project"></a>新しい Windows プロジェクトを作成するには  
   
-#### <a name="to-create-the-data-source"></a>To create the data source  
+1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.  
   
-1.  On the **Data** menu, click **Show Data Sources**.  
+2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。  
+
+3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。  
+
+4. プロジェクトに名前を**PassingDataBetweenForms**を選択し**OK**です。 
   
-2.  In the **Data Sources** window, select **Add New Data Source** to start the **Data Source Configuration** wizard.  
+     **PassingDataBetweenForms**プロジェクトが作成され、追加する**ソリューション エクスプ ローラー**です。  
   
-3.  Select **Database** on the **Choose a Data Source Type** page, and then click **Next**.  
+## <a name="create-the-data-source"></a>データ ソースを作成します。  
   
-4.  On the **Choose a database model** page, verify that **Dataset** is specified, and then click **Next**.  
+#### <a name="to-create-the-data-source"></a>データ ソースを作成するには  
   
-5.  On the **Choose your Data Connection** page, do one of the following:  
+1.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。  
   
-    -   If a data connection to the Northwind sample database is available in the drop-down list, select it.  
+2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成**ウィザード。  
   
-    -   Select **New Connection** to launch the **Add/Modify Connection** dialog box.  
+3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]**をクリックします。  
   
-6.  If your database requires a password and if the option to include sensitive data is enabled, select the option and then click **Next**.  
+4.  **データベース モデルの選択**ことを確認 ページで、**データセット**が指定され、をクリックして**次**です。  
   
-7.  On the **Save connection string to the Application Configuration file** page, click **Next**.  
+5.  **データ接続の選択** ページで、次のいずれかの操作します。  
   
-8.  On the **Choose your Database Objects** page, expand the **Tables** node.  
+    -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
   
-9. Select the **Customers** and **Orders** tables, and then click **Finish**.  
+    -   選択**新しい接続**を起動する、**接続接続の追加/変更** ダイアログ ボックス。  
   
-     The **NorthwindDataSet** is added to your project, and the **Customers** and **Orders** tables appear in the **Data Sources** window.  
+6.  データベース パスワードが必要な場合、および機密データを含めるためのオプションが有効になっている場合は、オプションを選択し、をクリックして**次**です。  
   
-## <a name="create-the-first-form-form1"></a>Create the first form (Form1)  
- You can create a data-bound grid (a <xref:System.Windows.Forms.DataGridView> control), by dragging the **Customers** node from the **Data Sources** window onto the form.  
+7.  **接続文字列をアプリケーション構成ファイルに保存** ページで、をクリックして**次**です。  
   
-#### <a name="to-create-a-data-bound-grid-on-the-form"></a>To create a data-bound grid on the form  
+8.  **データベース オブジェクトの選択** ページで、展開、**テーブル**ノード。  
   
--   Drag the main **Customers** node from the **Data Sources** window onto **Form1**.  
+9. 選択、**顧客**と**注文**テーブル、およびクリック**完了**です。  
   
-     A <xref:System.Windows.Forms.DataGridView> and a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records appear on **Form1**. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.  
+     **NorthwindDataSet**をプロジェクトに追加され、**顧客**と**注文**に表示されるテーブル、**データ ソース**ウィンドウです。  
   
-## <a name="create-the-second-form-form2"></a>Create the second form (Form2)  
+## <a name="create-the-first-form-form1"></a>最初のフォーム (Form1) の作成します。  
+ データ バインド グリッドを作成することができます (、<xref:System.Windows.Forms.DataGridView>コントロール)、ドラッグして、**顧客**ノードから、**データ ソース**ウィンドウからフォームにします。  
   
-#### <a name="to-create-a-second-form-to-pass-the-data-to"></a>To create a second form to pass the data to  
+#### <a name="to-create-a-data-bound-grid-on-the-form"></a>フォームにデータ バインド グリッドを作成するには  
   
-1.  From the **Project** menu, choose **Add Windows Form**.  
+-   メインをドラッグして**顧客**ノードから、**データ ソース**ウィンドウ**Form1**です。  
   
-2.  Leave the default name of **Form2**, and click **Add**.  
+     A<xref:System.Windows.Forms.DataGridView>とツール ストリップ (<xref:System.Windows.Forms.BindingNavigator>) レコードを移動するために表示されます。 **Form1**です。 A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、 <xref:System.Windows.Forms.BindingSource>、および<xref:System.Windows.Forms.BindingNavigator>コンポーネント トレイに表示されます。  
   
-3.  Drag the main **Orders** node from the **Data Sources** window onto **Form2**.  
+## <a name="create-the-second-form-form2"></a>2 番目のフォーム (Form2) の作成します。  
   
-     A <xref:System.Windows.Forms.DataGridView> and a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records appear on **Form2**. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.  
+#### <a name="to-create-a-second-form-to-pass-the-data-to"></a>データの渡し先となる 2 番目のフォームを作成するには  
   
-4.  Delete the **OrdersBindingNavigator** from the component tray.  
+1.  **[プロジェクト]** メニューの **[Windows フォームの追加]** を選択します。  
   
-     The **OrdersBindingNavigator** disappears from **Form2**.  
+2.  既定の名前のままにして**Form2**、 をクリック**追加**です。  
   
-## <a name="add-a-tableadapter-query-to-form2-to-load-orders-for-the-selected-customer-on-form1"></a>Add a TableAdapter query to Form2 to load orders for the selected customer on Form1  
+3.  メインをドラッグして**注文**ノードから、**データ ソース**ウィンドウ**Form2**です。  
   
-#### <a name="to-create-a-tableadapter-query"></a>To create a TableAdapter query  
+     A<xref:System.Windows.Forms.DataGridView>とツール ストリップ (<xref:System.Windows.Forms.BindingNavigator>) レコードを移動するために表示されます。 **Form2**です。 A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、 <xref:System.Windows.Forms.BindingSource>、および<xref:System.Windows.Forms.BindingNavigator>コンポーネント トレイに表示されます。  
   
-1.  Double-click the **NorthwindDataSet.xsd** file in **Solution Explorer**.  
+4.  削除、 **OrdersBindingNavigator**コンポーネント トレイからです。  
   
-2.  Right-click the **OrdersTableAdapter**, and select **Add Query**.  
+     **OrdersBindingNavigator**から消えます**Form2**です。  
   
-3.  Leave the default option of **Use SQL statements**, and then click **Next**.  
+## <a name="add-a-tableadapter-query-to-form2-to-load-orders-for-the-selected-customer-on-form1"></a>TableAdapter クエリを Form1 で選択した顧客の注文を読み込む Form2 を追加します。  
   
-4.  Leave the default option of **SELECT which returns rows**, and then click **Next**.  
+#### <a name="to-create-a-tableadapter-query"></a>TableAdapter クエリを作成するには  
   
-5.  Add a WHERE clause to the query, to return `Orders` based on the `CustomerID`. The query should be similar to the following:  
+1.  ダブルクリックして、 **NorthwindDataSet.xsd**ファイル**ソリューション エクスプ ローラー**です。  
+  
+2.  右クリックし、 **OrdersTableAdapter**を選択して**クエリの追加**です。  
+  
+3.  既定のオプションのまま**SQL ステートメントを使用**、順にクリック**次**です。  
+  
+4.  既定のオプションのまま**を行を返す SELECT**、順にクリック**次**です。  
+  
+5.  返すクエリに WHERE 句を追加`Orders`に基づいて、`CustomerID`です。 クエリは次のようになります。  
   
     ```  
     SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipCountry  
@@ -157,58 +154,58 @@ This walkthrough provides step-by-step instructions for passing data from one fo
     ```  
   
     > [!NOTE]
-    >  Verify the correct parameter syntax for your database. For example, in Microsoft Access, the WHERE clause would look like: `WHERE CustomerID = ?`.  
+    >  データベースに対してパラメーターの構文が正しいことを確認します。 たとえば、Microsoft Access では、WHERE 句は `WHERE CustomerID = ?` のようになります。  
   
-6.  Click **Next**.  
+6.  **[次へ]**をクリックします。  
   
-7.  For the **Fill a DataTableMethod Name**, type `FillByCustomerID`.  
+7.  **DataTableMethod 名を入力**、型`FillByCustomerID`です。  
   
-8.  Clear the **Return a DataTable** option, and then click **Next**.  
+8.  クリア、 **DataTable を返す**オプションをクリックして**次**です。  
   
-9. Click **Finish**.  
+9. **[完了]**をクリックします。  
   
-## <a name="create-a-method-on-form2-to-pass-data-to"></a>Create a method on Form2 to pass data to  
+## <a name="create-a-method-on-form2-to-pass-data-to"></a>データの渡し先となる Form2 のメソッドを作成します。  
   
-#### <a name="to-create-a-method-to-pass-data-to"></a>To create a method to pass data to  
+#### <a name="to-create-a-method-to-pass-data-to"></a>データの渡し先となるメソッドを作成するには  
   
-1.  Right-click **Form2**, and select **View Code** to open **Form2** in the **Code Editor**.  
+1.  右クリック**Form2**を選択して**コードの表示**を開くには**Form2**で、**コード エディター**です。  
   
-2.  Add the following code to **Form2** after the `Form2_Load` method:  
+2.  次のコードを追加**Form2**後、`Form2_Load`メソッド。  
   
      [!code-vb[VbRaddataDisplaying#1](../data-tools/codesnippet/VisualBasic/pass-data-between-forms_1.vb)]
      [!code-csharp[VbRaddataDisplaying#1](../data-tools/codesnippet/CSharp/pass-data-between-forms_1.cs)]  
   
-## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>Create a method on Form1 to pass data and display Form2  
+## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>データを渡して、Form2 を表示する Form1 のメソッドを作成します。  
   
-#### <a name="to-create-a-method-to-pass-data-to-form2"></a>To create a method to pass data to Form2  
+#### <a name="to-create-a-method-to-pass-data-to-form2"></a>Form2 にデータを渡すメソッドを作成するには  
   
-1.  In **Form1**, right-click the Customer data grid, and then click **Properties**.  
+1.  **Form1**Customer データ グリッドを右クリックし、クリックして**プロパティ**です。  
   
-2.  In the **Properties** window, click **Events**.  
+2.  **プロパティ**ウィンドウで、をクリックして**イベント**です。  
   
-3.  Double-click the **CellDoubleClick** event.  
+3.  ダブルクリックして、 **CellDoubleClick**イベント。  
   
-     The code editor appears.  
+     コード エディターが表示されます。  
   
-4.  Update the method definition to match the following sample:  
+4.  メソッド定義を次のサンプルのように更新します。  
   
      [!code-csharp[VbRaddataDisplaying#2](../data-tools/codesnippet/CSharp/pass-data-between-forms_2.cs)]
      [!code-vb[VbRaddataDisplaying#2](../data-tools/codesnippet/VisualBasic/pass-data-between-forms_2.vb)]  
   
-## <a name="run-the-application"></a>Run the Application  
+## <a name="run-the-application"></a>アプリケーションを実行する  
   
-#### <a name="to-run-the-application"></a>To run the application  
+#### <a name="to-run-the-application"></a>アプリケーションを実行するには  
   
--   Press F5 to run the application.  
+-   F5 キーを押してアプリケーションを実行します。  
   
--   Double-click a customer record in **Form1** to open **Form2** with that customer's orders.  
+-   内の顧客レコードをダブルクリックして**Form1**を開くには**Form2**その顧客の注文とします。  
   
-## <a name="next-steps"></a>Next Steps  
- Depending on your application requirements, there are several steps you may want to perform after passing data between forms. Some enhancements you could make to this walkthrough include:  
+## <a name="next-steps"></a>次の手順  
+ フォーム間でデータを渡した後に、アプリケーションの要件に応じてさらに操作を追加して実行できます。 このチュートリアルで行うことができる拡張には次のものがあります。  
   
--   Editing the dataset, to add or remove database objects. For more information, see [Create and configure datasets](../data-tools/create-and-configure-datasets-in-visual-studio.md).  
+-   データセットを編集し、データベース オブジェクトの追加または削除を行います。 詳細については、[データセットの作成と構成](../data-tools/create-and-configure-datasets-in-visual-studio.md)に関するページを参照してください。  
   
--   Adding functionality to save data back to the database. For more information, see [Save data back to the database](../data-tools/save-data-back-to-the-database.md).  
+-   データベースにデータを戻して保存する機能を追加します。 詳細については、次を参照してください。[データをデータベースに保存](../data-tools/save-data-back-to-the-database.md)です。  
   
-## <a name="see-also"></a>See Also  
- [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

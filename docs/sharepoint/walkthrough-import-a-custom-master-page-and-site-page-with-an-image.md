@@ -1,63 +1,65 @@
 ---
-title: "チュートリアル: イメージを備えたカスタム マスター ページおよびサイト ページのインポート"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "インポート (項目を) [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, インポート (項目を)"
+title: "チュートリアル: カスタム マスター ページのインポートし、サイトのイメージでページ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, importing items
+- importing items [SharePoint development in Visual Studio]
 ms.assetid: d1703957-81e2-47e1-b4ca-6a8d550d8da2
-caps.latest.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "21"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: b5126e15daa8cbc22f4b64be0bb2bb2f3e0bb6b7
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# チュートリアル: イメージを備えたカスタム マスター ページおよびサイト ページのインポート
-  このチュートリアルでは、SharePoint カスタム マスター ページとイメージが含まれているサイト ページを [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクトにインポートする方法について説明します。  
+# <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>チュートリアル: イメージを備えたカスタム マスター ページおよびサイト ページのインポート
+  このチュートリアルは、SharePoint カスタム マスター ページとサイトのページにイメージがインポートする方法を示します、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクト。  
   
  このチュートリアルで説明する内容は次のとおりです。  
   
--   SharePoint Designer でカスタム マスター ページを作成し、イメージを使用してサイト ページを作成する。  
+-   SharePoint Designer でイメージを使用してカスタム マスター ページ、およびサイト ページを作成します。  
   
--   カスタム マスター ページ、イメージ、およびサイト ページを SharePoint ソリューション \(.wsp\) ファイルにエクスポートする。  
+-   カスタム マスター ページ、イメージ、およびサイトのページを SharePoint ソリューション (.wsp) ファイルにエクスポートします。  
   
--   .wsp ファイルを、\[SharePoint ソリューション パッケージのインポート\] パッケージを使用して [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクトにインポートして配置する。  
+-   インポートして、.wsp ファイルの展開、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ソリューション パッケージのインポート プロジェクトを使用して SharePoint プロジェクト。  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## 必須コンポーネント  
- このチュートリアルを完了するには、次のコンポーネントが必要です。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを実行する次のコンポーネントが必要です。  
   
--   サポート対象エディションの [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] および SharePoint。  [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。  
   
 -   Visual Studio  
   
 -   SharePoint Designer 2010。  
   
-## SharePoint Designer で項目を作成する  
- この例では、エクスポートする 3 つの項目 \(カスタム マスター ページ、カスタム マスター ページを参照するサイト ページ、およびサイト ページに表示されるイメージ ファイル\) を SharePoint Designer で作成する方法を示します。  イメージは SharePoint の \/images\/ フォルダーに追加されます。  
+## <a name="create-items-in-sharepoint-designer"></a>SharePoint Designer で項目を作成します。  
+ この例は、エクスポートの SharePoint Designer の 3 つの項目を作成する方法を示します: カスタム マスター ページ、カスタムのマスター ページ、およびサイトのページに表示するイメージ ファイルを参照しているサイトのページです。 SharePoint で/images/フォルダーには、画像を追加します。  
   
-#### SharePoint Designer でカスタム マスター ページを作成するには  
+#### <a name="to-create-a-custom-master-page-in-sharepoint-designer"></a>SharePoint デザイナーでカスタム マスター ページを作成するには  
   
-1.  SharePoint Designer のナビゲーション ペインで、**\[マスター ページ\]** サイト オブジェクトを選択します。  
+1.  SharePoint Designer のナビゲーション ウィンドウで、選択、**マスター ページ**サイト オブジェクトです。  
   
-2.  **\[マスター ページ\]** のリボンで、**\[空白のマスター ページ\]** をクリックします。  
+2.  **マスター ページ**リボンで、選択**空白マスター ページ**です。  
   
-3.  次に、新しいマスター ページを、**\[マスター ページ\]** のリボンで選択し、**\[ファイルの編集\]** をクリックします。  
+3.  新しいマスター ページを選択し、、**マスター ページ**リボンで、選択**ファイルの編集**です。  
   
-4.  SharePoint Designer で、**\[コード\]** タブをクリックします。  
+4.  SharePoint Designer の下部にある、選択、**コード**タブです。  
   
-5.  既存のモジュールのマークアップを次のマークアップに置き換えます。  
+5.  既存のマークアップを次のマークアップに置き換えます。  
   
     ```  
     <%@ Master Language="C#" %>  
@@ -78,39 +80,39 @@ caps.handback.revision: 20
     </html>  
     ```  
   
-6.  ページを保存し、**\[マスター ページ\]** タブを選択し、**mybasic1.master**としてマスター ページの名前を変更します。  
+6.  ページの保存、**マスター ページ**タブをクリックし、マスター ページの名前を変更**mybasic1.master**です。  
   
-## SharePoint Designer でイメージをコンテンツ データベースに追加する  
- 次に、サイト ページに表示するイメージを追加できます。  イメージは、SharePoint コンテンツ データベースに配置されます。  
+## <a name="add-an-image-to-the-content-database-in-sharepoint-designer"></a>SharePoint Designer でコンテンツ データベースにイメージを追加します。  
+ 今すぐサイトのページに表示するイメージを追加することができます。 イメージは、SharePoint コンテンツ データベースに配置されます。  
   
-#### SharePoint Designer でイメージをコンテンツ データベースに追加するには  
+#### <a name="to-add-an-image-to-the-content-database-in-sharepoint-designer"></a>SharePoint Designer でコンテンツ データベースにイメージを追加するには  
   
-1.  次にナビゲーション ペインで、**\[すべてのファイル\]** サイト オブジェクトを、ツリー ビューで選択して **\[イメージ\]** フォルダーを選択します。  
+1.  ナビゲーション ウィンドウで、選択、**すべてのファイル**サイト オブジェクト、およびツリー ビューを選択、**イメージ**フォルダーです。  
   
-2.  **\[すべてのファイル\]** のリボンで、**\[ファイルのインポート\]** をクリックします、ファイルの選択をクリックし、**\[OK\]** ボタンをクリックします。  この例では、**myimg1.png** という名前のファイルを選択します。  
+2.  **すべてのファイル**リボンで、選択**ファイルをインポートする**、任意のファイルを選択し、、 **OK**ボタンをクリックします。 この例では、ファイルの名前は**myimg1.png**です。  
   
-     オプションとして、イメージを整理するためのサブフォルダーを作成できます。  
+     必要に応じて、画像を整理するためにサブフォルダーを作成することができます。  
   
-3.  **\[インポート\]** ダイアログ ボックスを閉じます。  
+3.  閉じる、**インポート** ダイアログ ボックス。  
   
-## サイト ページを作成する  
- この基本的なサイト ページでは、カスタム マスター ページを使用して前の手順で追加したイメージを表示します。  
+## <a name="create-a-site-page"></a>サイト ページを作成します。  
+ この基本的なサイトのページでは、カスタム マスター ページを使用し、前の手順で追加したイメージを表示します。  
   
-#### サイト ページを作成するには  
+#### <a name="to-create-a-site-page"></a>サイト ページを作成するには  
   
-1.  ナビゲーション ペインで、**\[サイトのページ\]** オブジェクトを選択します。  
+1.  ナビゲーション ウィンドウで、選択、**サイト ページ**オブジェクト。  
   
-2.  **\[ページ\]** のリボンで、**\[ページ\]** ボタンを選択し、**\[ASPX\]** ページの種類を選択し、新しいファイル **mycontentpage1.aspx**という名前を付けます。  
+2.  **ページ**リボンで、選択、**ページ** ボタンを選択して、 **ASPX**の種類 ページをクリックし、新しいファイルを名**mycontentpage1.aspx**です。  
   
-     オプションとして、サイト ページを整理するためのサブフォルダーを作成できます。  
+     必要に応じて、サイトのページを整理するためにサブフォルダーを作成することができます。  
   
-3.  次に、サイト ページでは、ページの下部にあるプロパティ ページを選択し、開くをクリックします **\[ファイルの編集\]** リンクを選択し、**\[MyContentPage1.aspx\]** をクリックします。  
+3.  一覧で、サイト ページ、 **MyContentPage1.aspx**をそのプロパティ ページを開き、次に、ページの下部には、次のように選択します。、**編集ファイル**リンクします。  
   
-     メッセージが表示され、このページはセーフ モードで編集できる含まれておらず、詳細設定モードでこのページを表示するかどうかを今後このメッセージ領域を言ったら **\[はい\]** ボタンをクリックします。  
+     メッセージが表示しこのページがセーフ モードで編集可能な領域が含まれていないことを示すされ、高度なモードでこのページを開き、選択するかどうかを確認する場合、**はい**ボタンをクリックします。  
   
-4.  ページの下部に、**\[コード\]** ボタンをクリックします。  
+4.  ページの下部にある、選択、**コード**ボタンをクリックします。  
   
-5.  既存のモジュールのマークアップを次のマークアップに置き換えます。  
+5.  既存のマークアップを次のマークアップに置き換えます。  
   
     ```  
     <%@ Import Namespace="Microsoft.SharePoint.ApplicationPages" %>  
@@ -126,61 +128,61 @@ caps.handback.revision: 20
     </asp:Content>  
     ```  
   
-6.  更新したサイト ページを保存します。  
+6.  更新されたサイトのページを保存します。  
   
-## SharePoint から項目をエクスポートする  
- 項目を SharePoint から SharePoint ソリューション \(.wsp\) ファイルにエクスポートします。  
+## <a name="export-the-items-from-sharepoint"></a>Sharepoint サイトから、項目をエクスポートします。  
+ SharePoint からのアイテムを SharePoint ソリューション (.wsp) ファイルにエクスポートします。  
   
-#### SharePoint から項目をエクスポートするには  
+#### <a name="to-export-items-from-sharepoint-designer"></a>SharePoint Designer からアイテムをエクスポートするには  
   
-1.  次に、SharePoint Designer のナビゲーション ペインで、**\[チーム サイト\]** オブジェクトを、**\[サイト\]** のリボンで、**\[テンプレートとして保存\]** をクリックしますを選択します。  
+1.  SharePoint Designer のナビゲーション ウィンドウで、選択、**チーム サイト**オブジェクト、、**サイト**リボンで、選択**テンプレートとして保存**です。  
   
-2.  **\[テンプレートとして保存\]** ダイアログ ボックスで、ファイル名とテンプレート名を入力し、**\[コンテンツを含む\]** のチェック ボックスをオンにし、**\[OK\]** ボタンをクリックします。  
+2.  **テンプレートとして保存** ダイアログ ボックスで、ファイル名とテンプレート名を入力、**コンテンツを含む**チェック ボックスをオンにして、 **ok**ボタンをクリックします。  
   
-     これで、サイトのコンテンツが .wsp ファイルに保存されます。  
+     これには、.wsp ファイルに、サイトのコンテンツが保存されます。  
   
-3.  ソリューションをエクスポートすると、使用可能なソリューション ファイルの一覧を表示するに **\[ソリューション ギャラリー\]** リンクをクリックします。  
+3.  後で、ソリューションがエクスポート、**ソリューション ギャラリー**利用可能なソリューション ファイルの一覧を表示するリンクです。  
   
-4.  新しい .wsp ファイルのショートカット メニューを開き、システムに保存するに **\[対象をファイルに保存\]** をクリックします。  
+4.  新しい .wsp ファイルのショートカット メニューを開き、選択**として保存ターゲット**をシステムに保存します。  
   
-## 項目を Visual Studio にインポートする  
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]に .wsp ファイルをインポートします。  インポートしたコンテンツ、カスタマイズ、項目を追加し、これを配置します。  
+## <a name="import-the-items-into-visual-studio"></a>Visual Studio にアイテムをインポートします。  
+ .Wsp ファイルをインポート[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 コンテンツをインポートした後は、カスタマイズに他のアイテムを追加してから展開します。  
   
-#### .wsp ファイルから Visual Studio に項目をインポートするには  
+#### <a name="to-import-items-from-the-wsp-file-into-visual-studio"></a>Visual Studio に .wsp ファイルからアイテムをインポートするには  
   
-1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]で、**\[SharePoint 2010 ソリューション パッケージのインポート\]** のプロジェクトを作成します。  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、作成、 **SharePoint 2010 ソリューション パッケージのインポート**プロジェクト。  
   
-2.  **\[種類\]** 列の **\[モジュール\]** の **\[インポートする項目の選択\]** ページで、インポートの次の表のファイルのみチェック ボックスをオンにします。  
+2.  **をインポートする項目の選択**] ページの [**モジュール**で、**型**列で、インポート用の次の表に、ファイルのみのチェック ボックスをオンします。  
   
     |ファイル名|説明|  
-    |-----------|--------|  
-    |\_catalogsmasterpage\_|カスタム マスター ページです。|  
-    |images\_|SharePoint ファイル システム内のイメージ ファイルです。|  
-    |SitePages\_|サイト ページです。|  
+    |---------------|-----------------|  
+    |_catalogsmasterpage\_|カスタム マスター ページです。|  
+    |images_|SharePoint のファイル システムのイメージ ファイルです。|  
+    |SitePages_|サイトのページです。|  
   
-3.  選択した項目をインポートするに **\[完了\]** ボタンをクリックします。  
+3.  選択、**完了**ボタンをクリックして選択したアイテムをインポートします。  
   
-4.  **\[ソリューション エクスプローラー\]** で、\_catalogsmasterpage\_ノードを選択し、**\[自動\]** に **\[配置競合の解決\]** のプロパティの値を設定します。  
+4.  **ソリューション エクスプ ローラー**、_catalogsmasterpage を選択\_ ノードの値を設定およびその**配置競合の解決**プロパティを**自動**です。  
   
-     これにより、配置競合を自動的に解決できます。  
+     これにより、展開の競合が自動的に解決されることを確認できます。  
   
-5.  新しいマスター ページの名前が既存のページと同じである場合は、SharePoint Designer で既存のページが "既定のマスター ページ" または "カスタム マスター ページ" としてマークされていないことを確認します。  
+5.  新しいマスター ページに同じ名前の既存のページがある場合は、既存のページがない既定のマスター ページまたは SharePoint デザイナーでカスタム マスター ページのいずれかとしてマークされていることを確認します。  
   
-     既存のマスター ページが、既定のマスター ページまたはカスタム マスター ページとしてマークされている場合、マスター ページを削除できないことを示す配置エラーが発生します。  この問題を回避するには、次を実行します。  
+     既存のマスター ページがマスター ページの既定またはカスタム マスター ページとしてマークされている場合は、マスター ページを削除できないことを示す配置エラーが発生します。 この問題を避けるためには、この操作を行います。  
   
-    -   既存のマスター ページが既定のマスター ページとして設定されている場合は、別のマスター ページを一時的に既定のマスター ページとして設定します。  ファイルを SharePoint に配置した後、新しいマスター ページを既定のマスター ページとして設定します。  
+    -   既存のマスター ページが既定のマスター ページとして設定されている場合、マスター ページの既定として別のマスター ページを一時的に設定します。 ファイルを SharePoint に配置した後は、既定のマスター ページとして、新しいマスター ページを設定します。  
   
-    -   既存のマスター ページがカスタム マスター ページとして設定されている場合は、別のマスター ページを一時的にカスタム マスター ページとして設定します。  ファイルを SharePoint に配置した後、新しいマスター ページをカスタム マスター ページとして設定します。  
+    -   既存のマスター ページは、カスタム マスター ページとして設定されている場合、カスタム マスター ページとして一時的に別のマスター ページを設定します。 ファイルを SharePoint に配置した後は、カスタム マスター ページとして、新しいマスター ページを設定します。  
   
-6.  メニュー バーで、**\[ソリューションの配置\]\[ビルド\]** をクリックします。  
+6.  メニュー バーで、次のように選択します。**ビルド**、**ソリューションの配置**です。  
   
-7.  SharePoint サイトを開いて、配置された項目を表示します。  
+7.  展開されたアイテムを表示する SharePoint サイトを開きます。  
   
- ファイルを [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] にインポートして SharePoint に配置する別の方法として、ファイルを [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] のモジュールに追加することもできます。  [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)]「[方法: マスター ページまたはテーマをインポートする](../sharepoint/how-to-import-a-master-page-or-theme.md)」および「[モジュールを使用してソリューションにファイルを追加する](../sharepoint/using-modules-to-include-files-in-the-solution.md)」を参照してください。  
+ ファイルをインポートする代替方法[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]しを展開内のモジュールにファイルを追加するは、SharePoint[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][する方法: マスター ページまたはテーマをインポート](../sharepoint/how-to-import-a-master-page-or-theme.md)と[モジュールを使用して、ソリューション内のファイルのインクルード](../sharepoint/using-modules-to-include-files-in-the-solution.md)です。  
   
-## 参照  
- [既存の SharePoint サイトからのアイテムのインポート](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)   
- [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)   
+## <a name="see-also"></a>関連項目  
+ [既存の SharePoint サイトからアイテムをインポートします。](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)   
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [Web パーツまたはアプリケーション ページの再利用できるコントロールの作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)  
   
   

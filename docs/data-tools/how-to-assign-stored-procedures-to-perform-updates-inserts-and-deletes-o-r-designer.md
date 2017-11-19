@@ -1,69 +1,71 @@
 ---
-title: "How to: Assign Stored Procedures to Perform Updates, Inserts, and Deletes (O/R Designer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "更新を実行するプロシージャを使用して格納が挿入、および Linq to SQL O/R デザイナーで削除 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e88224ab-ff61-4a3a-b6b8-6f3694546cac
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.technology: vs-data-tools
+ms.openlocfilehash: f0d6910d2bf449172bac86a3ecd18be8169ef244
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# How to: Assign Stored Procedures to Perform Updates, Inserts, and Deletes (O/R Designer)
-ストアド プロシージャは O\/R デザイナーに追加でき、通常の <xref:System.Data.Linq.DataContext> メソッドとして実行できます。これらを使用して、エンティティ クラスからデータベースに変更が保存されたときに \(たとえば、<xref:System.Data.Linq.DataContext.SubmitChanges%2A> メソッドを呼び出したときに\) 挿入、更新、および削除を実行する既定の [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] ランタイムの動作をオーバーライドすることもできます。  
+# <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>方法: 更新、挿入、および削除 (O/R デザイナー) を実行するストアド プロシージャを割り当てる
+ストアド プロシージャは O/R デザイナーに追加でき、通常の <xref:System.Data.Linq.DataContext> メソッドとして実行できます。 既定の上書きを使用することもできます[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]挿入、更新を実行し、変更がエンティティ クラスからデータベースに保存するときに削除するランタイムの動作 (を呼び出すときなど、<xref:System.Data.Linq.DataContext.SubmitChanges%2A>メソッド)。  
   
 > [!NOTE]
->  ストアド プロシージャが、クライアントに送信する必要のある値 \(たとえば、ストアド プロシージャで計算された値\) を返す場合は、ストアド プロシージャに出力パラメーターを作成します。出力パラメーターを使用できない場合は、O\/R デザイナーによって生成されたオーバーライドを利用するのではなく、部分メソッドを実装します。データベースによって生成される値にマップされるメンバーは、INSERT 操作または UPDATE 操作が正常に完了した後で、適切な値に設定する必要があります。詳細については、「[Responsibilities of the Developer In Overriding Default Behavior](../Topic/Responsibilities%20of%20the%20Developer%20In%20Overriding%20Default%20Behavior.md)」を参照してください。  
+>  ストアド プロシージャが、クライアントに送信する必要のある値 (たとえば、ストアド プロシージャで計算された値) を返す場合は、ストアド プロシージャに出力パラメーターを作成します。 出力パラメーターを使用できない場合は、O/R デザイナーによって生成されたオーバーライドを利用するのではなく、部分メソッドを実装します。 データベースによって生成される値にマップされるメンバーは、INSERT 操作または UPDATE 操作が正常に完了した後で、適切な値に設定する必要があります。 詳細については、次を参照してください。[をオーバーライドする既定の動作の開発者の責任](/dotnet/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior)です。  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] は、ID 列 \(自動インクリメント\)、rowguidcol 列 \(データベースが生成した GUID\)、およびタイムスタンプ列であれば、データベースによって生成された値を自動的に処理します。その他の列型のデータベースが生成した値は、予想に反して null 値になります。データベースが生成した値を返すには、手動で <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> を `true` に設定し、<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> を <xref:System.Data.Linq.Mapping.AutoSync>、<xref:System.Data.Linq.Mapping.AutoSync>、または <xref:System.Data.Linq.Mapping.AutoSync> のいずれかに設定する必要があります。  
+>  [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] は、ID 列 (自動インクリメント)、rowguidcol 列 (データベースが生成した GUID)、およびタイムスタンプ列であれば、データベースによって生成された値を自動的に処理します。 その他の列型のデータベースが生成した値は、予想に反して null 値になります。 データベースが生成した値を返すには、手動で <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> を `true` に設定し、<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> を <xref:System.Data.Linq.Mapping.AutoSync>、<xref:System.Data.Linq.Mapping.AutoSync>、または <xref:System.Data.Linq.Mapping.AutoSync> のいずれかに設定する必要があります。  
   
-## エンティティ クラスの更新動作の構成  
- 既定では、[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] エンティティ クラスのデータに対して行われた変更でデータベースを更新 \(挿入、更新、および削除\) するロジックは、[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] ランタイムによって提供されます。ランタイムは、テーブルのスキーマ \(列および主キー情報\) に基づいて、既定の Insert、Update、および Delete の各コマンドを作成します。既定の動作を使用しない場合は、テーブルのデータの操作に必要な Insert、Update、および Delete を実行する特定のストアド プロシージャを割り当てることで、更新動作を構成できます。この方法は、既定の動作が生成されていない場合、たとえばエンティティ クラスがビューにマップされている場合にも実行できます。最後に、データベースのテーブルへのアクセスには常にストアド プロシージャを通すようにすると、既定の更新動作をオーバーライドできます。  
+## <a name="configuring-the-update-behavior-of-an-entity-class"></a>エンティティ クラスの更新動作の構成  
+ 既定では、(挿入、更新、および削除)、データベース内のデータに加えられた変更で更新するロジック[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]によってエンティティ クラスが提供される、[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]ランタイム。 ランタイムは、既定値に基づく INSERT、UPDATE、および DELETE コマンドを作成します (列と主キー情報) のテーブルのスキーマです。 既定の動作が必要でない場合は、必要な挿入、更新、およびテーブルのデータを操作するために必要な削除を実行するための特定のストアド プロシージャを割り当てることによって、更新動作を構成できます。 この方法は、既定の動作が生成されていない場合、たとえばエンティティ クラスがビューにマップされている場合にも実行できます。 最後に、データベースのテーブルへのアクセスには常にストアド プロシージャを通すようにすると、既定の更新動作をオーバーライドできます。  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-#### ストアド プロシージャを割り当てて、エンティティ クラスの既定の動作をオーバーライドするには  
+#### <a name="to-assign-stored-procedures-to-override-the-default-behavior-of-an-entity-class"></a>ストアド プロシージャを割り当てて、エンティティ クラスの既定の動作をオーバーライドするには  
   
-1.  デザイナーで **LINQ to SQL** ファイルを開きます \(**ソリューション エクスプローラー**で .dbml ファイルをダブルクリックします\)。  
+1.  開く、 **LINQ to SQL**デザイナー内のファイルです。 (で .dbml ファイルをダブルクリックして**ソリューション エクスプ ローラー**)。  
   
-2.  **サーバー エクスプローラー**または**データベース エクスプローラー**で、**\[ストアド プロシージャ\]** を展開し、エンティティ クラスの Insert、Update、Delete の各コマンドで使用するストアド プロシージャを探します。  
+2.  **サーバー エクスプ ローラー**/**データベース エクスプ ローラー**、展開**Stored Procedures** insert、Update を使用するストアド プロシージャを探しますまたは、エンティティ クラスのコマンドを削除します。  
   
-3.  ストアド プロシージャを O\/R デザイナーにドラッグします。  
+3.  ストアド プロシージャを O/R デザイナーにドラッグします。  
   
-     ストアド プロシージャが <xref:System.Data.Linq.DataContext> メソッドとしてメソッド ペインに追加されます。詳細については、「[DataContext Methods \(O\/R Designer\)](../data-tools/datacontext-methods-o-r-designer.md)」を参照してください。  
+     ストアド プロシージャが <xref:System.Data.Linq.DataContext> メソッドとしてメソッド ペインに追加されます。 詳細については、次を参照してください。 [DataContext メソッド (O/r デザイナー)](../data-tools/datacontext-methods-o-r-designer.md)です。  
   
 4.  更新の実行にストアド プロシージャを使用するエンティティ クラスを選択します。  
   
-5.  **\[プロパティ\]** ウィンドウで、オーバーライドするコマンド \(**\[Insert\]**、**\[Update\]**、または **\[Delete\]**\) を選択します。  
+5.  **プロパティ**ウィンドウで、オーバーライドするコマンドを選択 (**挿入**、**更新**、または**削除**)。  
   
-6.  **\[ランタイムを使用\]** の横にある省略記号 \(\[...\]\) をクリックして、**\[動作の構成\]** ダイアログ ボックスを開きます。  
+6.  単語の横にある省略記号 (...) をクリックして**ランタイムを使用**を開くには、**動作の構成** ダイアログ ボックス。  
   
-7.  **\[カスタマイズ\]** を選択します。  
+7.  選択**カスタマイズ**です。  
   
-8.  **\[カスタマイズ\]** の一覧で、目的のストアド プロシージャをクリックします。  
+8.  目的のストアド プロシージャを選択して、**カスタマイズ** ボックスの一覧です。  
   
-9. **\[メソッドの引数\]** および **\[クラスのプロパティ\]** の一覧を調べて、**\[メソッドの引数\]** が適切な **\[クラスのプロパティ\]** にマップされていることを確認します。Update コマンドと Delete コマンドについて、元のメソッド引数 \(Original\_*ArgumentName*\) を元のプロパティ \(*PropertyName* \(オリジナル\)\) にマップします。  
-  
-    > [!NOTE]
-    >  既定では、メソッド引数は名前が一致した場合にクラス プロパティにマップされます。変更されたプロパティ名がテーブルとエンティティ クラス間で一致しなくなり、デザイナーが正しいマッピングを判断できないときは、マップ先となる同等のクラス プロパティを選択することが必要になる場合があります。  
-  
-10. **\[OK\]** または **\[適用\]** をクリックします。  
+9. 一覧を調べる**メソッド引数**と**クラス プロパティ**ことを確認する、**メソッド引数**を適切なマップ**のクラスのプロパティ**. マップ元のメソッド引数 (original _*ArgumentName*) を元のプロパティ (*PropertyName* (オリジナル)) Update および Delete コマンドについてです。  
   
     > [!NOTE]
-    >  変更を行うたびに **\[適用\]** をクリックすると、各クラスと動作の組み合わせに対して動作の構成を続行できます。**\[適用\]** をクリックする前にクラスまたは動作を変更した場合は、警告ダイアログ ボックスが表示され、ここで変更を適用できます。  
+    >  既定では、メソッド引数は名前が一致した場合にクラス プロパティにマップされます。 変更されたプロパティ名がテーブルとエンティティ クラス間で一致しなくなり、デザイナーが正しいマッピングを判断できないときは、マップ先となる同等のクラス プロパティを選択することが必要になる場合があります。  
   
-     更新時に既定のランタイム ロジックを使用するように戻すには、**\[プロパティ\]** ウィンドウで、\[Insert\]、\[Update\]、または \[Delete\] の各コマンドの横にある省略記号をクリックし、**\[動作の構成\]** ダイアログ ボックスで **\[ランタイムを使用\]** を選択します。  
+10. をクリックして**OK**または**適用**です。  
   
-## 参照  
- [Object Relational Designer \(O\/R Designer\)](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [DataContext Methods \(O\/R Designer\)](../data-tools/datacontext-methods-o-r-designer.md)   
- [Walkthrough: Creating LINQ to SQL Classes \(O\/R Designer\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
- [チュートリアル: Northwind の Customers テーブル用 Update ストアド プロシージャの作成](../data-tools/walkthrough-creating-update-stored-procedures-for-the-northwind-customers-table.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [Insert, Update, and Delete Operations](../Topic/Insert,%20Update,%20and%20Delete%20Operations.md)
+    > [!NOTE]
+    >  をクリックする限り、各クラスと動作の組み合わせに対して動作の構成を続行できます**適用**各変更を行った後。 クリックする前に、クラスまたは動作を変更するかどうかは**適用**変更を適用する機会が表示され、警告ダイアログ ボックス。  
+  
+更新プログラムの既定のランタイム ロジックを使用するように戻すには、Insert、Update、隣の省略記号をクリックするか、コマンドを削除、**プロパティ**クリックしてウィンドウ**ランタイムを使用して**で、 **動作を構成する** ダイアログ ボックス。  
+  
+## <a name="see-also"></a>関連項目
+[Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+[DataContext メソッド](../data-tools/datacontext-methods-o-r-designer.md)   
+[LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)   
+[Insert、Update、および削除の操作 (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/insert-update-and-delete-operations)

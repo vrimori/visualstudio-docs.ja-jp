@@ -1,60 +1,62 @@
 ---
-title: "SharePoint ソリューションのビルドとデバッグ"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual Studio での SharePoint 開発, ビルドとデバッグ"
-  - "Visual Studio での SharePoint 開発, デバッグ"
+title: "ビルドと SharePoint ソリューションのデバッグ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, building and debugging
+- SharePoint development in Visual Studio, debugging
 ms.assetid: c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae
-caps.latest.revision: 14
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 7582b0bcef8a97de14fb3b931745d6dcc21fa876
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# SharePoint ソリューションのビルドとデバッグ
-  一般に、SharePoint ソリューションのビルドとデバッグは、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] における他の種類のプロジェクトのビルドとデバッグと同様です。  このセクションのトピックでは、わずかながら存在する相違点について説明します。  
+# <a name="building-and-debugging-sharepoint-solutions"></a>SharePoint ソリューションのビルドとデバッグ
+  一般に、ビルドと SharePoint ソリューションのデバッグは、ビルドおよびその他の種類のプロジェクトのデバッグと同じ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 このセクションのトピックでは、いくつかある相違点について説明します。  
   
-## SharePoint ソリューションのプロジェクト出力  
- SharePoint ソリューションをビルドすると、アセンブリとソリューション パッケージ \(.wsp\) ファイルが作成されます。  これらのファイルのビルド時の場所を次の表に示します。  
+## <a name="project-output-for-sharepoint-solutions"></a>SharePoint ソリューションのプロジェクトの出力  
+ SharePoint ソリューションの構築は、アセンブリおよびソリューション パッケージ (.wsp) ファイルを作成します。 次の表は、ビルド時にこれらのファイルの場所を示します。  
   
 |ビルド項目|出力フォルダー|  
-|-----------|-------------|  
-|アセンブリ ファイル、プログラム データベース \(PDB\) ファイル、および .wsp ファイル|*ProjectName*の\\bin\\debug または *ProjectName*の\\bin\\release|  
-|SharePoint プロジェクト項目ファイル|*ProjectName*の\\pkg\\debug または *ProjectName*の\\pkg\\release|  
-|ビルドの中間ファイル|*ProjectName*の\\obj\\debug または *ProjectName*の\\obj\\release|  
-|パッケージの中間ファイル|*ProjectName*の\\pkgobj\\debug または *ProjectName*の\\pkgobj\\release|  
+|----------------|-------------------|  
+|アセンブリ、プログラム データベース (PDB) および .wsp ファイル。|*ProjectName*\bin\debug または*ProjectName*\bin\release|  
+|SharePoint プロジェクト項目ファイル。|*ProjectName*\pkg\debug または*ProjectName*\pkg\release|  
+|中間ファイルをビルドします。|*ProjectName*\obj\debug または*ProjectName*\obj\release|  
+|パッケージの中間ファイル。|*ProjectName*\pkgobj\debug または*ProjectName*\pkgobj\release|  
   
-## SharePoint ソリューションのビルド  
- SharePoint ソリューションをビルドするには、開発用コンピューターに正しいバージョンの SharePoint サーバーがインストールされている必要があります。  それ以外については、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で他の種類のプロジェクトをビルドする場合と変わりません。  詳細については、「[方法: SharePoint ソリューションをビルドする](../sharepoint/how-to-build-sharepoint-solutions.md)」を参照してください。  
+## <a name="building-sharepoint-solutions"></a>SharePoint ソリューションの構築  
+ SharePoint ソリューションをビルドするには、インストールされた SharePoint サーバーの正しいバージョンが、開発用コンピューターに必要です。 それ以外の場合、SharePoint ソリューションの構築は、その他の種類のプロジェクトをビルドする場合と同じ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 詳細については、次を参照してください。[する方法: SharePoint ソリューションのビルド](../sharepoint/how-to-build-sharepoint-solutions.md)です。  
   
-## SharePoint ソリューションのデバッグとテスト  
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] では、デバッグの前に .wsp パッケージが SharePoint サーバーにコピーされ、サイトと Web スコープのフィーチャーがアクティブ化されて、場合によってはプロジェクトが開始されます。  また、プロジェクトを手動で開く必要があります。  詳細については、「[SharePoint ソリューションのトラブルシューティング](../sharepoint/troubleshooting-sharepoint-solutions.md)」および「[SharePoint ソリューションのデバッグ](../sharepoint/debugging-sharepoint-solutions.md)」を参照してください。  
+## <a name="debugging-and-testing-sharepoint-solutions"></a>デバッグと、SharePoint ソリューションのテスト  
+ デバッグする前に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint サーバーに .wsp パッケージをコピー、サイトと Web スコープの機能をアクティブにし、場合によっては、プロジェクトを開始します。 それ以外の場合は、プロジェクトを手動で開く必要があります。 詳細については、次を参照してください。 [SharePoint ソリューションのトラブルシューティング](../sharepoint/troubleshooting-sharepoint-solutions.md)と[SharePoint ソリューションのデバッグ](../sharepoint/debugging-sharepoint-solutions.md)です。  
   
-## SharePoint Solutions を Using ALM Features でデバッグを確認します。  
- IntelliTrace と単体テストのような Visual Studio ALM 機能より正確に SharePoint ソリューションの正確な問題を解決する。  プロファイリングは、SharePoint ソリューションのパフォーマンスの問題点を特定し、識別できるようになります。  詳細については、「[SharePoint コードの検証およびデバッグ](../sharepoint/verifying-and-debugging-sharepoint-code.md)」および「[SharePoint アプリケーションのパフォーマンスのプロファイリング](../sharepoint/profiling-the-performance-of-sharepoint-applications.md)」を参照してください。  
+## <a name="debugging-and-verifying-sharepoint-solutions-by-using-alm-features"></a>デバッグおよび ALM 機能を使用した SharePoint ソリューションの検証  
+ 単体テストと IntelliTrace などの visual Studio ALM 機能には、SharePoint ソリューションの正確に特定の問題の詳細に有効にします。 プロファイルを使用すると、検索し、SharePoint ソリューションのパフォーマンス問題の領域を識別できます。 詳細については、次を参照してください。 [SharePoint コードのデバッグの検証と](../sharepoint/verifying-and-debugging-sharepoint-code.md)と[SharePoint アプリケーションのパフォーマンスのプロファイリング](../sharepoint/profiling-the-performance-of-sharepoint-applications.md)です。  
   
-## ビルド処理中のセキュリティ  
- SharePoint ソリューションをパッケージ化したり配置したりするには、SharePoint サーバーにファイルをコピーするためのアクセス許可が [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] に必要です。  SharePoint サーバーのサイト コレクションの管理者であるユーザー アカウントを使用して、昇格されたプロセスとして [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を実行する必要があります。  また、プロジェクトがサンドボックス ソリューションかファーム ソリューションかを指定する必要もあります。  詳細については、「[サンドボックス ソリューションとファーム ソリューションの違い](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)」を参照してください。  
+## <a name="security-during-the-build-process"></a>ビルド プロセス中のセキュリティ  
+ パッケージまたは SharePoint ソリューションを配置する[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint サーバーにファイルをコピーするアクセス許可が必要です。 実行する必要があります[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]昇格されたプロセスと、ユーザー アカウントが SharePoint サーバー上のサイト コレクション管理者をする必要があります。 さらに、プロジェクトはサンド ボックス ソリューションまたはファーム ソリューションかどうかを指定する必要があります。 詳細については、次を参照してください。[違いサンド ボックス ソリューションとファーム ソリューション](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)です。  
   
-## \[消去\] コマンドの使用  
- デバッグのために SharePoint サーバーにインストールされた SharePoint ソリューションは、**\[クリーン\]** コマンドを実行してもアンインストールされません。  代わりに、SharePoint の構成でフィーチャーを非アクティブにする必要があります。  
+## <a name="using-the-clean-command"></a>［クリーン］ コマンドの使用  
+ SharePoint ソリューションのデバッグは、SharePoint サーバーのインストール時に、**クリーン**コマンドでは、ソリューションはアンインストールされません。 代わりに、SharePoint 構成から機能を非アクティブ化する必要があります。  
   
-## 参照  
- [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)   
- [サーバー エクスプローラーを使用した SharePoint 接続の参照](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
+## <a name="see-also"></a>関連項目  
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
+ [サーバー エクスプ ローラーを使用して SharePoint 接続の参照](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

@@ -1,57 +1,57 @@
 ---
-title: "アプリケーション、サービス、およびコンポーネントの配置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - ".NET アプリケーション, 配置"
-  - "コンポーネント [.NET Framework], 配置"
-  - "コンポーネント [Visual Studio], 配置"
-  - "配置 (アプリケーションを) [Visual Studio]"
-  - "配置 (アプリケーションを) [Visual Studio], 配置の概要 (アプリケーションの)"
-  - "インストーラー"
-  - "発行"
+title: "アプリケーション、サービス、およびコンポーネントを展開する |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 07/14/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- FSharp
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- .NET applications, deploying
+- components [Visual Studio], deploying
+- installers
+- publishing
+- deploying applications [Visual Studio]
+- deploying applications [Visual Studio], about deploying applications
+- components [.NET Framework], deploying
 ms.assetid: 63fcdd5b-2e54-4210-9038-65bc23167725
-caps.latest.revision: 33
-caps.handback.revision: 33
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "33"
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+ms.openlocfilehash: 9d9aeaa80aa054b8178adbfc707b1537449776d7
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
-# アプリケーション、サービス、およびコンポーネントの配置
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+# <a name="deploying-applications-services-and-components"></a>アプリケーション、サービス、およびコンポーネントの配置
 
-アプリケーション、サービス、またはコンポーネントを配置すると、他のコンピューターのデバイス、サーバー、またはクラウドに対してインストールするために、それらを配布することになります。  必要な配置の種類に合わせて、Visual Studio で適切な手法を選択します。  
+アプリケーション、サービス、またはコンポーネントを配置すると、他のコンピューターのデバイス、サーバー、またはクラウドに対してインストールするために、それらを配布することになります。 必要な配置の種類に合わせて、Visual Studio で適切な手法を選択します。  
   
- 次の表に、さまざまな配置シナリオに関する説明と、それらのシナリオを正常に完了する詳細な方法へのリンクを示します。  
+次の表は、さまざまな展開シナリオについて説明し、各シナリオの詳細情報へのリンクを提供します。  
+
+Windows アプリのセットアップ エクスペリエンスを作成するオプションの詳細については、次を参照してください。[をユニバーサル Windows プラットフォーム (UWP) ブリッジにデスクトップ](/windows/uwp/porting/desktop-to-uwp-root#convert)です。
+
+ 
+## <a name="in-this-section"></a>このセクションの内容  
   
-## このセクションの内容  
-  
-|配置シナリオ|関連する参照先|  
-|------------|-------------|  
-|**\[Publish to the cloud\] \(クラウドに発行\)** Visual Studio を使用して、アプリケーション、サービス、およびデータをあらゆる場所から Microsoft Azure に配置することができます。|[Visual Studio から Azure クラウド サービスへの発行](http://msdn.microsoft.com/library/windowsazure/ee460772.aspx)|  
-|**\[Publish a Windows Store app\] \(Windows ストア アプリの発行\)**: アプリケーションを簡単にビルドおよび送信し、Windows ストアから世界中の顧客に販売することができます。|[Windows ストア アプリのパッケージ化、配置、およびクエリ](http://msdn.microsoft.com/library/hh446593\(v=vs.85\).aspx)|  
-|**\[Publish a Windows Phone app\] \(Windows Phone アプリの発行\)**: 認定を受ける目的で、新しいアプリケーションまたは修正プログラムを Windows Phone デベロッパー センターに送信することができます。|[Windows Phone アプリの公開](http://dev.windowsphone.com/ja-jp/publish)|  
-|**ASP.NET アプリケーションまたはサービスの配置:** ASP.NET アプリケーションおよびサービスは、多数の異なる方法で配置できます。|[ASP.NET Web アプリケーションおよびサービスを配置する](http://www.asp.net/aspnet/overview/deployment)|  
-|**\[Deploy a LightSwitch application or service\] \(LightSwitch アプリケーションまたはサービスの配置\)**: LightSwitch を使用してアプリケーションと OData サービスを作成した後、Web サーバーまたは Microsoft Azure にそれらを配置できます。|[LightSwitch アプリケーションの配置](../Topic/Deploying%20LightSwitch%20Applications.md)|  
-|**\[Publish an app for SharePoint\] \(SharePoint アプリケーションの発行\)**: Office ストアまたは組織内部向けのアプリケーション カタログに対して、SharePoint アプリケーションを発行できます。|[\[方法\]: Visual Studio を使用して SharePoint 用アプリを公開する](http://msdn.microsoft.com/JA-jp/library/office/jj220044\(v=office.15\).aspx)|  
-|**\[Publish an app for Office\] \(Office アプリケーションの発行\)**: Office ストアまたは組織内部向けのアプリケーション カタログに対して、Office アプリケーションを発行できます。|[Office 用アプリの発行](http://msdn.microsoft.com/library/office/fp123515.aspx)|  
-|**\[Deploy a WCF service\] \(WCF サービスの配置\)**: 他のアプリケーションは、Web サーバーに配置した WCF RIA サービスを使用できます。|[RIA サービス ソリューションの配置に関するガイド](http://msdn.microsoft.com/library/ff426912\(v=vs.91\).aspx)|  
-|**\[Deploy an OData service\] \(OData サービスの配置\)**: 他のアプリケーションは、Web サーバーに配置した OData サービスを使用できます。|[方法: LightSwitch OData サービスを配置する](http://msdn.microsoft.com/library/hh973447.aspx)|  
-|**\[Deploy a desktop application\] \(デスクトップ アプリケーションの配置\)** : ClickOnce 配置を使用し、Web サーバーまたはネットワーク ファイル共有に対してデスクトップ アプリケーションを発行することができます。  その後、ユーザーはシングル クリックでアプリケーションをインストールできます。|[ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)|  
-|**\[Create a setup program\] \(セットアップ プログラムを作成します\)**: 無料の InstallShield Limited Edition を使用して、セットアップ プログラムを作成できます。|[InstallShield Limited Edition](../deployment/installshield-limited-edition.md)|  
-|**\[Maintain an existing setup program\] \(既存のセットアップ プログラムの維持\)**: Visual Studio Installer Projects Extension をインストールして、以前のバージョンのVisual Studio で作成したセットアップ プログラムを使用し続けます。|[Visual Studio Installer Projects Extension](http://blogs.msdn.com/b/visualstudio/archive/2014/04/17/visual-studio-installer-projects-extension.aspx)<br /><br /> インストーラー プロジェクトについては、「[Visual Studio インストーラーの配置](http://msdn.microsoft.com/library/2kt85ked\(v=vs.100\).aspx)」を参照してください。|  
-|**\[Deploy a Visual C\+\+ application\] \(Visual C\+\+ アプリケーションの配置\)**: 集中配置、ローカル配置、または静的リンクを使用して、アプリケーションと共に Visual C\+\+ ランタイムを配置できます。|[デスクトップ アプリケーションの配置 \(Visual C\+\+\)](http://msdn.microsoft.com/library/zebw5zk9.aspx)|  
-|**\[Deploy an application for testing\] \(テスト用アプリケーションの配置\)**: 仮想環境にアプリケーションを配置すると、より高度な開発およびテストを有効にできます。|[ラボ環境でのテスト](/devops-test-docs/test/test-on-a-lab-environment)|  
-|**\[必要コンポーネントのインストール\]**: ブートストラップと呼ばれる一般的なインストーラーを構成すると、デスクトップ アプリケーションの必須コンポーネントをインストールできます。|[アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)|
+| 配置シナリオ | 関連する参照先 |
+| --- | --- |  
+| **クラウドへの発行:**することができますアプリケーション、サービス、およびデータから使用可能な任意の場所を使用して Visual Studio を Microsoft Azure に配置します。|[Microsoft Azure にアプリケーションの発行](http://msdn.microsoft.com/library/windowsazure/ee460772.aspx) |
+| **Windows アプリの公開:**を簡単に作成、送信、および世界中の顧客に Microsoft ストアからアプリを販売します。 |[Windows アプリを発行します。](https://developer.microsoft.com/store/publish-apps) |
+| **ASP.NET アプリケーションまたはサービスの展開:**いくつかの方法で ASP.NET アプリケーションおよびサービスを展開することができます。|[ASP.NET web アプリケーションとサービスの展開](http://www.asp.net/aspnet/overview/deployment) |
+| **Office 用アドインで公開:** for Visual Studio での Office アドインを発行することができます。 | [展開し、Office アドインの公開](https://dev.office.com/docs/add-ins/publish/publish) |
+| **WCF または OData サービスのデプロイ:**他のアプリケーションが web サーバーに配置した WCF RIA サービスを使用できます。 | [開発と WCF Data Services の配置](https://docs.microsoft.com/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
+| **デスクトップ アプリケーションの配置:** ClickOnce 配置を使用するには、web サーバーまたはネットワーク ファイル共有にデスクトップ アプリケーションを発行することができます。 その後、ユーザーはシングル クリックでアプリケーションをインストールできます。 | [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md) |
+| **Visual C アプリケーションの配置:**集中配置、ローカル配置、または静的リンクを使用して、アプリケーションと共に Visual C ランタイムを配置することができます。 | [ネイティブ デスクトップ アプリケーションの配置 (Visual C++)](/cpp/ide/deploying-native-desktop-applications-visual-cpp.md) |
+| **インストーラーの作成:** WiX の MSI ベースのインストーラーを使用して作成することができます、 [WiX ツールセット Visual Studio 2017 Extension](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)です。 InstallShield Limited Edition は; Visual Studio に含まれてないことに注意してください。かどうかを[Flexera ソフトウェア](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio)の Visual Studio 2017 可能かどうか。 |
+| **テスト用のアプリケーションの展開:**より高度な開発と、仮想環境にアプリケーションを展開することでテストを有効にすることができます。|[ラボ環境でのテスト](../test/lab-management/using-a-lab-environment-for-your-application-lifecycle.md) | 
+| **インストールの前提条件:**ブートス トラップと呼ばれる一般的なインストーラーを構成することによりデスクトップ アプリケーションに必要なコンポーネントをインストールすることができます。|[アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md) |
+| **LightSwitch アプリケーションまたはサービスを展開する:** LightSwitch が Visual Studio 2017 は不要になったサポートされますが、Visual Studio 2015 から、以前にも展開できます。 | [LightSwitch アプリケーションの配置](http://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |  

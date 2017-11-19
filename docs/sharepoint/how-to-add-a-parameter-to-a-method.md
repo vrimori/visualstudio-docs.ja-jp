@@ -1,67 +1,69 @@
 ---
-title: "方法 : メソッドにパラメーターを追加する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "BDC [Visual Studio での SharePoint 開発], 追加 (パラメーターにメソッドを)"
-  - "BDC [Visual Studio での SharePoint 開発], メソッド パラメーター"
-  - "BDC [Visual Studio での SharePoint 開発], パラメーター"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], 追加 (パラメーターにメソッドを)"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], メソッド パラメーター"
-  - "ビジネス データ接続サービス [Visual Studio での SharePoint 開発], パラメーター"
+title: "方法: メソッドにパラメーターを追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- Business Data Connectivity service [SharePoint development in Visual Studio], adding a method to a parameter
+- Business Data Connectivity service [SharePoint development in Visual Studio], parameter
+- BDC [SharePoint development in Visual Studio], adding a method to a parameter
+- BDC [SharePoint development in Visual Studio], parameter
+- Business Data Connectivity service [SharePoint development in Visual Studio], method parameters
+- BDC [SharePoint development in Visual Studio], method parameters
 ms.assetid: c5b6fd32-bf85-4b2a-a01e-f9199f0fb26e
-caps.latest.revision: 16
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 881eccae253fc07c13eead45ae9d14658f9adf46
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : メソッドにパラメーターを追加する
-  パラメーターを使用して、メソッドと情報をやり取りします。  すべてのメソッドには最低パラメーターが 1 つ必要です。  作成するメソッドの種類をサポートするパラメーターを設計する方法の詳細については、「[Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)」を参照してください。  
+# <a name="how-to-add-a-parameter-to-a-method"></a>方法 : メソッドにパラメーターを追加する
+  メソッドに情報を渡すか、メソッドから情報を返す、パラメーターを使用します。 すべてのメソッドには、少なくとも 1 つのパラメーターが必要です。 作成する方法の種類をサポートするためにパラメーターを設計する方法の詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
- パラメーターをメソッドを追加すると、プロジェクトのモデル ファイルの XML に、`<Parameter>` 要素が追加されます。  `<Parameter>` の要素の属性の詳細については、参照します [パラメーター](http://go.microsoft.com/fwlink/?LinkId=169284)。  
+ Visual Studio が追加のメソッドにパラメーターを追加すると、`<Parameter>`要素をモデル プロジェクト内のファイル、XML にします。 属性の詳細については、`<Parameter>`要素を参照してください[パラメーター](http://go.microsoft.com/fwlink/?LinkId=169284)です。  
   
-### メソッドにパラメーターを追加するには  
+### <a name="to-add-a-parameter-to-a-method"></a>メソッドにパラメーターを追加するには  
   
-1.  エンティティにメソッドを追加します。  
+1.  メソッドは、エンティティを追加します。  
   
-2.  メニュー バーで、**\[その他のウィンドウ\]**、**\[BDC メソッドの詳細\]\[表示\]** をクリックします。  
+2.  メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、 **BDC メソッドの詳細**です。  
   
-     **\[BDC メソッドの詳細\]** ウィンドウが表示されます。  詳細については、「[BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)」を参照してください。  
+     **BDC メソッドの詳細**ウィンドウが開きます。 詳細については、次を参照してください。 [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)です。  
   
-3.  **\[BDC メソッドの詳細\]** ウィンドウで、メソッドのノードを展開し、**\[パラメーター\]** ノードを展開します。  
+3.  **BDC メソッドの詳細**ウィンドウが、メソッドのノードを展開し、展開、**パラメーター**ノード。  
   
-4.  **\[パラメーターの追加\]** の一覧で、**\[パラメーターの作成\]** をクリックします。  
+4.  **パラメーターを追加**一覧で、選択**パラメーターの作成**です。  
   
-     **\[パラメーター\]** ノードの下に新しいパラメーターが表示されます。  
+     下に新しいパラメーターが表示されます、**パラメーター**ノード。  
   
-5.  メニュー バーで、**\[表示\]**、**\[プロパティ ウィンドウ\]** の順に選択します。  
+5.  メニュー バーで、次のように選択します。**ビュー**、**プロパティ ウィンドウ**します。  
   
-6.  **プロパティ** ウィンドウで、**"名前"** プロパティをわかりやすい名前に設定します。  たとえば、メソッドが顧客を返す場合、GetCustomers というメソッド名が考えられます。  
+6.  **プロパティ**ウィンドウで、設定、**名前**プロパティを意味のある任意の名前にします。 たとえば、メソッドは、顧客を返しますが場合、は、メソッドを名前可能性があります**GetCustomers**です。  
   
-7.  **\[BDC メソッドの詳細\]** ウィンドウで、パラメーターの方向に表示される開き、**\[InOut\]**、**\[出力\]**、または **\[戻り値\]\[入力\]** をクリックしますリストを返します。  
+7.  **BDC メソッドの詳細** ウィンドウでは、パラメーターの方向に表示されるリストを開きを選択し、**で**、 **InOut**、 **アウト**、または**返す**です。  
   
-     作成する種類のメソッドに関して選択する方向の詳細については、「[Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)」を参照してください。  
+     どちらの方向を作成している型のメソッドの選択の詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
-8.  パラメーターの型記述子を変更します。  詳細については、「[How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)」を参照してください。  
+8.  パラメーターの型記述子を変更します。 詳細については、次を参照してください。[する方法: パラメーターの型記述子を定義する](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
- [方法: モデルにエンティティを追加する](../sharepoint/how-to-add-an-entity-to-a-model.md)   
- [How to: Define the Type Descriptor of a Parameter](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
- [方法: メソッド インスタンスを定義する](../sharepoint/how-to-define-a-method-instance.md)   
+ [方法: エンティティをモデルに追加します。](../sharepoint/how-to-add-an-entity-to-a-model.md)   
+ [方法: パラメーターの型記述子を定義します。](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
+ [方法: メソッド インスタンスの定義](../sharepoint/how-to-define-a-method-instance.md)   
  [Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)  
   
   

@@ -1,110 +1,93 @@
 ---
-title: Create and configure datasets in Visual Studio | Microsoft Docs
+title: "作成し、Visual Studio でのデータセットの構成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- aspx
 helpviewer_keywords:
 - typed datasets, creating
 - datasets [Visual Basic], creating
 ms.assetid: 58f33b43-24e1-43b1-b08b-b74329960bd6
-caps.latest.revision: 36
-author: mikeblome
-ms.author: mblome
+caps.latest.revision: "36"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: c598bcc7d591f14a0854e5a53c76a219146de933
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 5dd27f35bdfd0ee2f576c1a4ac2fe3fde5a357e6
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="create-and-configure-datasets-in-visual-studio"></a>Create and configure datasets in Visual Studio
-A *dataset* is a set of objects that store data from a database in memory and support change tracking to enable create, read, update and delete (CRUD) operations on that data without the need to be always connected to the database. Datasets were designed for simple *forms over data* business applications. For new applications, consider using Entity Framework to store and model data in memory. To work with datasets, you should have a basic knowledge of database concepts.  
+# <a name="create-and-configure-datasets-in-visual-studio"></a>作成し、Visual Studio でのデータセットを構成します。
+A*データセット*をデータベースからデータをメモリに格納し、変更の追跡を有効にするをサポートするオブジェクトのセットは、作成、読み取り、更新、およびそのデータを常に、データベースに接続する必要はありません (CRUD) 操作を削除します。 データセットは、単純な用に設計された*フォーム オーバー データ*ビジネス アプリケーション。 新しいアプリケーションは、Entity Framework を格納およびメモリのデータをモデルに使用を検討してください。 データセットを使用するには、データベースの概念に関する基本的な知識が必要です。  
   
- You create a typed <xref:System.Data.DataSet> class in Visual Studio at design time by using the **Data Source Configuration Wizard**. For information on creating datasets programmatically, see [Creating a DataSet](/dotnet/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset).  
+ 型指定されたを作成する<xref:System.Data.DataSet>を使用してデザイン時に Visual Studio でのクラス、**データ ソース構成ウィザード**です。 データセットをプログラムで作成する方法については、次を参照してください。[データセットを作成する](/dotnet/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset)です。  
   
-## <a name="create-a-new-dataset-by-using-the-data-source-configuration-wizard"></a>Create a new dataset by using the Data Source Configuration Wizard  
+## <a name="create-a-new-dataset-by-using-the-data-source-configuration-wizard"></a>データ ソース構成ウィザードを使用して、新しいデータセットを作成します。  
   
-1.  On the **Project** menu, click **Add New Data Source** to start the **Data Source Configuration Wizard**.  
+1.  **プロジェクト** メニューのをクリックして**新しいデータ ソースの追加**を開始する、**データ ソース構成ウィザード**です。  
   
-2.  Choose the type of data source that you will be connecting to.  
+2.  接続するデータ ソースの種類を選択します。  
   
-     ![Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png "Data Source Configuration Wizard")  
+     ![データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png "データ ソース構成ウィザード")  
   
-3.  For databases, choose the database or databases that will be the data source for your dataset.  
+3.  データベースの場合は、データベースまたはデータセットのデータ ソースとなるデータベースを選択します。  
   
-     ![Data source choose a connection](../data-tools/media/data-source-choose-a-connection.png "Data source choose a connection")  
+     ![データ ソースの接続の選択](../data-tools/media/data-source-choose-a-connection.png "データ ソースの接続の選択")  
   
-4.  Choose the tables (or individual columns), stored procedures, functions, and views from the database that you want to be represented in the dataset.  
+4.  テーブル (または個々 の列) ストアド プロシージャ、関数、およびデータセットで表現するデータベースからビューを選択します。  
   
-     ![Choose database objects](../data-tools/media/raddata-chose-objects.png "raddata Chose objects")  
+     ![データベース オブジェクトの選択](../data-tools/media/raddata-chose-objects.png "raddata に選択したオブジェクト")  
   
-5.  Click **Finish**.  
+5.  **[完了]**をクリックします。  
   
-6.  The dataset appears as a node in **Solution Explorer**:  
+6.  内のノードとして表示されます、データセット**ソリューション エクスプ ローラー**:  
   
-     ![DataSet in Solution Explorer](../data-tools/media/dataset-in-solution-explorer.png "DataSet in Solution Explorer")  
+     ![ソリューション エクスプ ローラーでデータセット](../data-tools/media/dataset-in-solution-explorer.png "ソリューション エクスプ ローラーでデータセット")  
   
-     Click that node, and the dataset appears in the **DataSet Designer**. Note that each table in the dataset has an associated TableAdapter object, which is represented at the bottom. The table adapter is used to populate the dataset and optionally to send commands to the database.  
+     そのノードをクリックしてにデータセットが表示されます、**データセット デザイナー**です。 データセット内の各テーブルが下部に表される、関連付けられた TableAdapter オブジェクトを持つことに注意してください。 テーブル アダプターは、データセットを作成して、必要に応じてコマンドを送信するデータベースに使用されます。  
   
-     ![DataSet Designer](../data-tools/media/dataset-designer.png "DataSet Designer")  
+     ![データセット デザイナー](../data-tools/media/dataset-designer.png "データセット デザイナー")  
   
-7.  The relation lines that connect the tables represent table relationships, as defined in the database. By default, foreign-key constraints in a database are represented as a relation only, with the update and delete rules set to none. Typically, that is what you want. However, you can click the lines to bring up the **Relation** dialog, where you can change the behavior of  hierarchical updates. For more information, see [Relationships in datasets](../data-tools/relationships-in-datasets.md) and [Hierarchical update](../data-tools/hierarchical-update.md).  
+7.  テーブルを接続するリレーションシップの線は、データベースで定義されているテーブルのリレーションシップを表します。 既定は、データベース内の foreign key 制約は、更新プログラムでリレーションシップのみとして表され、[なし] に設定されているルールを削除します。 通常は、対象です。 ただし、表示する行をクリックして、**関係**ダイアログ ボックスで、階層的な更新プログラムの動作を変更することができます。 詳細については、次を参照してください。[データセットのリレーションシップ](../data-tools/relationships-in-datasets.md)と[階層更新](../data-tools/hierarchical-update.md)です。  
   
-     ![Dataset Relation dialog](../data-tools/media/raddata-relation-dialog.png "raddata Relation dialog")  
+     ![データセットのリレーションシップ ダイアログ](../data-tools/media/raddata-relation-dialog.png "raddata リレーションシップ ダイアログ")  
   
-8.  Click a table, table adapter, or column name in a table to see its properties in the **Properties** window. You can modify some of the values here. Just remember that you are modifying the dataset, not the source database.  
+8.  プロパティを表示するテーブル、テーブル アダプター、またはテーブル内の列名をクリックして、**プロパティ**ウィンドウです。 ここで値の一部を変更することができます。 ソース データベースではなく、データセットを変更することを忘れないでください。  
   
-     ![DataSet column properties](../data-tools/media/dataset-column-properties.png "DataSet column properties")  
+     ![データセットの列プロパティ](../data-tools/media/dataset-column-properties.png "データセットの列のプロパティ")  
   
-9. You can add new tables or table adapters to the dataset, or add new queries for existing table adapters, or specify new relations between tables by dragging those items from the **Toolbox** tab. This tab appears when the **DataSet Designer** is in focus.  
+9. データセットに新しいテーブルまたはテーブル アダプターを追加または既存のテーブル アダプターの新しいクエリを追加またはからこれらの項目をドラッグして、テーブル間のリレーションの新しいを指定できます、**ツールボックス**タブです。このタブを表示するには**データセット デザイナー**フォーカスが移動します。  
   
-     ![Dataset Toolbox](../data-tools/media/raddata-dataset-toolbox.png "raddata Dataset Toolbox")  
+     ![データセットのツールボックス](../data-tools/media/raddata-dataset-toolbox.png "raddata データセット ツールボックス")  
   
-10. Next, you probably want to specify how to populate the dataset with data. For that, you use the **TableAdapter Configuration Wizard**. For more information, see [Fill datasets by using TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md) .  
+10. 次に、データを含むデータセットを作成する方法を指定する可能性があります。 そのため、使用する、 **TableAdapter 構成ウィザード**です。 詳細については、次を参照してください。 [Tableadapter を使用してデータセットを入力](../data-tools/fill-datasets-by-using-tableadapters.md)です。  
   
-## <a name="add-a-database-table-or-other-object-to-an-existing-dataset"></a>Add a database table or other object to an existing dataset  
- This procedure shows how to add a table from the same database that you used to first create the dataset.  
+## <a name="add-a-database-table-or-other-object-to-an-existing-dataset"></a>既存のデータセットに、データベース テーブルまたはその他のオブジェクトを追加します。  
+ この手順では、まずデータセットを作成するために使用するのと同じデータベースからテーブルを追加する方法を示します。  
   
-1.  Click the dataset node in **Solution Explorer** to bring the dataset designer into focus.  
+1.  データセット ノードをクリックして**ソリューション エクスプ ローラー**をデータセット デザイナーにフォーカスが移ります。  
   
-2.  Click the **Data Sources** tab in the left margin of Visual Studio, or enter `Data Sources` in **QuickLaunch**.  
+2.  クリックして、**データ ソース** タブで、Visual Studio の左余白または入力`Data Sources`で**クイック起動**です。  
   
-3.  Right-click the dataset node and select **Configure Data Source with Wizard** .  
+3.  データセット ノードを右クリックし **ウィザードを使用してデータ ソースの構成**です。  
   
-     ![Data Source context menu](../data-tools/media/data-source-context-menu.png "Data Source context menu")  
+     ![データ ソースのコンテキスト メニュー](../data-tools/media/data-source-context-menu.png "データ ソースのコンテキスト メニュー")  
   
-4.  Use the wizard to specify which additional tables, or stored procedures or other database object, to add to the dataset.  
+4.  ウィザードを使用してする追加のテーブル、ストアド プロシージャ、またはデータセットに追加するその他のデータベース オブジェクトを指定します。  
   
-## <a name="add-a-stand-alone-data-table-to-a-dataset"></a>Add a stand-alone data table to a dataset  
+## <a name="add-a-stand-alone-data-table-to-a-dataset"></a>データセットにスタンドアロンのデータ テーブルを追加します。  
   
-1.  Open your dataset in the **Dataset Designer**.  
+1.  データセットを開き、**データセット デザイナー**です。  
   
-2.  Drag a <xref:System.Data.DataTable> class from the **DataSet** tab of the **Toolbox** onto the **Dataset Designer**.  
+2.  ドラッグ、<xref:System.Data.DataTable>クラス、**データセット**のタブ、**ツールボックス**上に、**データセット デザイナー**です。  
   
-3.  Add columns to define your data table. Right-click on the table and choose **Add > Column**. Use the **Properties** window to set the data type of the column and a key if necessary.  
+3.  列を追加してデータ テーブルを定義します。 テーブルを右クリックし、選択**追加 > 列**です。 使用して、**プロパティ**を必要に応じて、列およびキーのデータ型を設定するウィンドウです。  
   
-4.  Stand-alone tables need to Implement `Fill` logic in stand-alone tables so that you can fill them with data. For information on filling stand-alone data tables, see [Populating a DataSet from a DataAdapter](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter).
+4.  独立したテーブルを実装する必要があります`Fill`ロジック独立したテーブルでデータを入力するようにします。 スタンドアロンのデータ テーブルの入力方法の詳細については、次を参照してください。 [DataAdapter からの DataSet の読み込み](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter)です。
+
+## <a name="see-also"></a>関連項目
+[Visual Studio のデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)

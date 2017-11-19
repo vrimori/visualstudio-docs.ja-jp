@@ -1,7 +1,7 @@
 ---
-title: 'Walkthrough: Creating a Dataset with the Dataset Designer | Microsoft Docs'
+title: "チュートリアル: データセット デザイナーでデータセットの作成 |Microsoft ドキュメント"
 ms.custom: 
-ms.date: 11/02/2016
+ms.date: 09/11/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -13,133 +13,128 @@ helpviewer_keywords:
 - Dataset Designer, walkthroughs
 - datasets [Visual Basic], creating
 ms.assetid: 12360f54-db6c-45d2-a91f-fee43214b555
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: 4dca7e32af0f3c24542a7a069ac74f4da7d114b1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: f327d2010105c12c4b137317ed2406cae6cad9a3
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="walkthrough-creating-a-dataset-with-the-dataset-designer"></a>Walkthrough: Creating a Dataset with the Dataset Designer
-In this walkthrough you will create a dataset using the **Dataset Designer**. It will take you through the process of creating a new project and adding a new **DataSet** item to it. You will learn how to create tables based on tables in a database without using a wizard.  
+# <a name="walkthrough-creating-a-dataset-with-the-dataset-designer"></a>チュートリアル : データセット デザイナーでのデータセットの作成
+このチュートリアルで使用するデータセットを作成は、**データセット デザイナー**です。 新しいプロジェクトを作成し、新しい追加の手順に従ってかかる**データセット**に項目。 ウィザードを使用しないで、データベース内のテーブルに基づいてテーブルを作成する方法について説明します。  
   
- Tasks illustrated in this walkthrough include:  
+ このチュートリアルでは、以下のタスクを行います。  
   
--   Creating a new **Windows Forms Application** project.  
+-   新たに作成する**Windows フォーム アプリケーション**プロジェクト。  
   
--   Adding an empty **DataSet** item to the project.  
+-   空の追加**データセット**プロジェクト項目です。  
   
--   Creating and configuring a data source in your application by building a dataset with the **Dataset Designer**.  
+-   使用してデータセットを作成して、アプリケーションでデータ ソースの構成の作成と、**データセット デザイナー**です。  
   
--   Creating a connection to the Northwind database in **Server Explorer**.  
+-   Northwind データベースへの接続を作成する**サーバー エクスプ ローラー**です。  
   
--   Creating tables with TableAdapters in the dataset based on tables in the database.  
+-   データベース内のテーブルに基づいて、データセットに TableAdapter を持つテーブルを作成します。  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## <a name="prerequisites"></a>Prerequisites  
-In order to complete this walkthrough, you need:  
+## <a name="prerequisites"></a>必須コンポーネント  
+このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。  
   
--   Access to the Northwind sample database (SQL Server or Access version). For more information, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
+1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server のエディションのダウンロード ページ](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)、または、 **Visual Studio インストーラー**です。 一部として、Visual Studio インストーラーで、SQL Server Express LocalDB をインストールすることができます、**データ ストレージと処理**ワークロード、または個々 のコンポーネントとして。  
   
-## <a name="creating-a-new-windows-forms-application-project"></a>Creating a New Windows Forms Application Project  
-  
-#### <a name="to-create-a-new-windows-forms-application-project"></a>To create a new Windows Forms Application project  
-  
-1. In Visual Studio, on the **File** menu, select **New**, **Project...**.  
-  
-2. Expand either **Visual C#** or **Visual Basic** in the left-hand pane, then select **Windows Classic Desktop**.  
+2.  次の手順に従って、Northwind サンプル データベースをインストールします。  
 
-3. In the middle pane, select the **Windows Forms App** project type.  
+    1. Visual Studio で開く、 **SQL Server オブジェクト エクスプ ローラー**ウィンドウです。 (の一部として SQL Server オブジェクト エクスプ ローラーがインストールされている、**データ ストレージと処理**Visual Studio インストーラーでのワークロードです)。展開して、 **SQL Server**ノード。 LocalDB インスタンスを右クリックし、選択**新しいクエリしています.**.  
 
-4. Name the project **DatasetDesignerWalkthrough**, and then choose **OK**. 
+       クエリ エディター ウィンドウが開きます。  
+
+    2. コピー、 [Northwind TRANSACT-SQL スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)をクリップボードにします。 この T-SQL スクリプトは、最初から、Northwind データベースを作成し、データを設定します。  
+
+    3. T-SQL スクリプトをクエリ エディターに貼り付けを選択し、 **Execute**ボタンをクリックします。  
+
+       短期間のうち、クエリの実行が終了し、Northwind データベースを作成します。  
   
-     The **DatasetDesignerWalkthrough** project is created, and added to **Solution Explorer**.  
+## <a name="creating-a-new-windows-forms-application-project"></a>新しい Windows フォーム アプリケーション プロジェクトを作成します。  
   
-## <a name="adding-a-new-dataset-to-the-application"></a>Adding a New Dataset to the Application  
+#### <a name="to-create-a-new-windows-forms-application-project"></a>新しい Windows フォーム アプリケーション プロジェクトを作成するには  
   
-#### <a name="to-add-a-new-dataset-item-to-the-project"></a>To add a new dataset item to the project  
+1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.  
   
-1.  On the **Project** menu, click **Add New Item**.  
+2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。  
+
+3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。  
+
+4. プロジェクトに名前を**DatasetDesignerWalkthrough**を選択し**OK**です。  
   
-     The **Add New Item** dialog box appears.  
+     Visual Studio にプロジェクトが追加**ソリューション エクスプ ローラー**し、デザイナーで新しいフォームを表示します。  
   
-2.  In the **Templates** box of the **Add New Item** dialog box, click **DataSet**.  
+## <a name="adding-a-new-dataset-to-the-application"></a>アプリケーションへの新しいデータセットの追加  
   
-3.  Name the Dataset `NorthwindDataset`, and then click **Add**.  
+#### <a name="to-add-a-new-dataset-item-to-the-project"></a>プロジェクトに新しいデータセット項目を追加するには  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] will add a file called **NorthwindDataset.xsd** to the project and open it in the **Dataset Designer**.  
+1.  **プロジェクト**メニューの **新しい項目の追加.**.  
   
-## <a name="creating-a-data-connection-in-server-explorer"></a>Creating a Data Connection in Server Explorer  
+     **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
-#### <a name="to-create-a-connection-to-the-northwind-database"></a>To create a connection to the Northwind database  
+2.  左側のペインで選択**データ**選択してから、**データセット**中央のペインでします。  
   
-1.  On the **View** menu, click **Server Explorer**.  
+3.  データセットの名前を付けます**NorthwindDataset**を選択し**追加**です。  
   
-2.  In **Server Explorer**, click the **Connect to Database** button.  
+     Visual Studio がという名前のファイルを追加**NorthwindDataset.xsd**プロジェクトでそのソリューションを開きます、**データセット デザイナー**です。  
   
-3.  Create a connection to the Northwind sample database.  
+## <a name="creating-a-data-connection-in-server-explorer"></a>サーバー エクスプローラーでのデータ接続の作成  
   
-    > [!NOTE]
-    >  You can connect to the SQL Server or Access version of Northwind for this walkthrough.  
+#### <a name="to-create-a-connection-to-the-northwind-database"></a>Northwind データベースへの接続を作成するには  
   
-## <a name="creating-the-tables-in-the-dataset"></a>Creating the Tables in the Dataset  
-This section explains how to add tables to the dataset.  
+1.  **ビュー**  メニューのをクリックして**サーバー エクスプ ローラー**です。  
   
-#### <a name="to-create-the-customers-table"></a>To create the Customers table  
+2.  **サーバー エクスプ ローラー**をクリックして、**データベースへの接続**ボタンをクリックします。  
   
-1.  Expand the data connection you created in **Server Explorer**, and then expand the **Tables** node.  
+3.  Northwind サンプル データベースへの接続を作成します。  
   
-2.  Drag the **Customers** table from **Server Explorer** onto the **Dataset Designer**.  
+## <a name="creating-the-tables-in-the-dataset"></a>データセットへのテーブルの作成  
+このセクションでは、データセットにテーブルを追加する方法について説明します。  
   
-     A **Customers** data table and **CustomersTableAdapter** are added to the dataset.  
+#### <a name="to-create-the-customers-table"></a>Customers テーブルを作成するには  
   
-#### <a name="to-create-the-orders-table"></a>To create the Orders table  
+1.  作成したデータ接続を展開**サーバー エクスプ ローラー**の順に展開し、**テーブル**ノード。  
   
--   Drag the **Orders** table from **Server Explorer** onto the **Dataset Designer**.  
+2.  ドラッグ、**顧客**からテーブル**サーバー エクスプ ローラー**上に、**データセット デザイナー**です。  
   
-     An **Orders** data table, **OrdersTableAdapter**, and data relation between the **Customers** and **Orders** tables are added to the dataset.  
+     A**顧客**データ テーブルと**CustomersTableAdapter**データセットに追加されます。  
   
-#### <a name="to-create-the-orderdetails-table"></a>To create the OrderDetails table  
+#### <a name="to-create-the-orders-table"></a>Orders テーブルを作成するには  
   
--   Drag the **Order Details** table from **Server Explorer** onto the **Dataset Designer**.  
+-   ドラッグ、 **Orders**からテーブル**サーバー エクスプ ローラー**上に、**データセット デザイナー**です。  
   
-     An **Order Details** data table, **OrderDetailsTableAdapter**, and a data relation between the **Orders** and **OrderDetails** tables are added to the dataset.  
+     **Orders**データ テーブル、 **OrdersTableAdapter**との間でデータのリレーションシップ、**顧客**と**Orders**テーブルに追加されます、データセットです。  
   
-## <a name="next-steps"></a>Next Steps  
+#### <a name="to-create-the-orderdetails-table"></a>OrderDetails テーブルを作成するには  
   
-### <a name="to-add-functionality-to-your-application"></a>To add functionality to your application  
+-   ドラッグ、 **Order Details**からテーブル**サーバー エクスプ ローラー**上に、**データセット デザイナー**です。  
   
--   Save the dataset.  
+     **Order Details**データ テーブル、 **OrderDetailsTableAdapter**との間でデータのリレーションシップ、 **Orders**と**OrderDetails**テーブルデータセットに追加されます。  
   
--   Select items in the **Data Sources** window and drag them onto a form. For more information, see [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md).  
+## <a name="next-steps"></a>次の手順  
   
--   Add more queries to the TableAdapters. 
+### <a name="to-add-functionality-to-your-application"></a>アプリケーションに機能を追加するには  
   
--   Add validation logic to the <xref:System.Data.DataTable.ColumnChanging> or <xref:System.Data.DataTable.RowChanging> events of the data tables in the dataset. For more information, see [Validate data in datasets](../data-tools/validate-data-in-datasets.md).  
+-   データセットを保存します。  
   
-## <a name="see-also"></a>See Also  
- [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Bind controls to data in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Validating Data](validate-data-in-datasets.md)   
- [Saving Data](../data-tools/saving-data.md)
+-   内の項目を選択、**データ ソース**ウィンドウ、フォームにドラッグします。 詳細については、次を参照してください。 [Visual Studio でのデータにコントロールを Windows フォームのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)です。  
+  
+-   TableAdapter に他のクエリを追加します。 
+  
+-   データセット内のデータ テーブルの <xref:System.Data.DataTable.ColumnChanging> イベントまたは <xref:System.Data.DataTable.RowChanging> イベントに検証ロジックを追加します。 詳細については、次を参照してください。[データセット内のデータを検証](../data-tools/validate-data-in-datasets.md)です。  
+  
+## <a name="see-also"></a>関連項目
+[Visual Studio でデータセットを作成および構成する](../data-tools/create-and-configure-datasets-in-visual-studio.md)  
+[Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+[Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
+[データの検証](../data-tools/validate-data-in-datasets.md)   
+[データの保存](../data-tools/saving-data.md)

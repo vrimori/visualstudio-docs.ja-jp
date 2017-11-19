@@ -1,44 +1,46 @@
 ---
-title: "方法 : サービスのデータをドキュメントに読み込む"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ドキュメント [Visual Studio での Office 開発]、データの読み込み"
-  - "Web サービス [Visual Studio での Office 開発]、ドキュメントの読み込み"
-  - "データ [Visual Studio での Office 開発]、ドキュメントへの追加"
+title: "方法: サービスからデータをドキュメントに読み込む |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- documents [Office development in Visual Studio], populating with data
+- Web services [Office development in Visual Studio], populating documents
+- data [Office development in Visual Studio], adding to documents
 ms.assetid: 4c42653c-627f-445e-9024-8482eaf5562e
-caps.latest.revision: 40
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 39
+caps.latest.revision: "40"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: bd71e73d205fb79199cb2b8847a856c97272b066
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : サービスのデータをドキュメントに読み込む
-  Microsoft Office のドキュメント レベルのプロジェクトでは、Windows フォーム プロジェクトと同じ方法でデータにアクセスできます。 同じツールとコードを使用してソリューションにデータを取り込むことができ、Windows フォーム コントロールを使用してデータを表示できます。 さらに、ホスト コントロールと呼ばれるコントロールを利用できます。これは、Microsoft Office Excel および Microsoft Office Word のネイティブ オブジェクトであり、イベントやデータ バインディング機能が強化されています。 詳細については、「[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)」を参照してください。  
+# <a name="how-to-populate-documents-with-data-from-services"></a>方法 : サービスのデータをドキュメントに読み込む
+  Microsoft Office のドキュメント レベルのプロジェクトでは、Windows フォーム プロジェクトと同じ方法でデータにアクセスできます。 同じツールとコードを使用してソリューションにデータを取り込むことができ、Windows フォーム コントロールを使用してデータを表示できます。 さらに、ホスト コントロールと呼ばれるコントロールを利用できます。これは、Microsoft Office Excel および Microsoft Office Word のネイティブ オブジェクトであり、イベントやデータ バインディング機能が強化されています。 詳細については、「 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)」を参照してください。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- 次の例は、デザイン時にドキュメントにデータ バインド コントロールを追加する方法を示しています。 実行時に VSTO アドインでデータ バインド コントロールを追加する方法の例については、「[チュートリアル : VSTO アドイン プロジェクトでサービスのデータをバインドする](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md)」を参照してください。  
+ 次の例は、デザイン時にドキュメントにデータ バインド コントロールを追加する方法を示しています。 実行時に VSTO アドインでのデータ バインド コントロールを追加する方法の例は、次を参照してください。[チュートリアル: VSTO でのサービスからのデータへのバインディングのアドイン プロジェクト](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md)です。  
   
- ![ビデオへのリンク](~/data-tools/media/playvideo.gif "ビデオへのリンク") 関連するビデオ デモについては、「[方法: Microsoft Excel から Web サービスと対話する](http://go.microsoft.com/fwlink/?LinkID=130284)」を参照してください。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[方法は i: と対話する Microsoft Excel からの Web サービス?](http://go.microsoft.com/fwlink/?LinkID=130284)です。  
   
-### Web サービスからドキュメント レベルのプロジェクトにデータを読み込むには  
+### <a name="to-populate-a-document-level-project-with-data-from-a-web-service"></a>Web サービスからドキュメント レベルのプロジェクトにデータを読み込むには  
   
-1.  **\[データ ソース\]** ウィンドウを開き、プロジェクトのサービス データ ソースを作成します。 詳細については、「[方法: サービスのデータに接続する](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Service.md)」を参照してください。  
+1.  **[データ ソース]** ウィンドウを開き、プロジェクトのサービス データ ソースを作成します。 詳細については、「[新しいデータ ソースの追加](/visualstudio/data-tools/add-new-data-sources)」を参照してください。  
   
-2.  目的のテーブルまたはフィールドを **\[データ ソース\]** ウィンドウからドキュメントまでドラッグします。  
+2.  目的のテーブルまたはフィールドを **[データ ソース]** ウィンドウからドキュメントまでドラッグします。  
   
-     コントロールがドキュメント内に作成され、<xref:System.Windows.Forms.BindingSource> が作成されてプロジェクト内のオブジェクトのクラスにバインドされ、サービスのクラスが生成されます。  
+     コントロールがドキュメント内に作成され、 <xref:System.Windows.Forms.BindingSource> が作成されてプロジェクト内のオブジェクトのクラスにバインドされ、サービスのクラスが生成されます。  
   
 3.  手順 1 で接続した Web サービス クラスのインスタンスをコード内に作成します。  
   
@@ -48,17 +50,17 @@ caps.handback.revision: 39
   
      使用するメソッドは、Web サービスが提供する内容によって異なります。  
   
-6.  Web サービスからのデータ応答を、<xref:System.Windows.Forms.BindingSource> の <xref:System.Windows.Forms.BindingSource.DataSource%2A> プロパティに割り当てます。  
+6.  Web サービスからのデータ応答を、 <xref:System.Windows.Forms.BindingSource.DataSource%2A> の <xref:System.Windows.Forms.BindingSource>プロパティに割り当てます。  
   
- プロジェクトを実行すると、データ ソースの先頭のレコードがコントロールに表示されます。 レコードのスクロールを有効にするには、<xref:System.Windows.Forms.BindingSource> のオブジェクトを使用して通貨のイベントを処理します。  
+ プロジェクトを実行すると、データ ソースの先頭のレコードがコントロールに表示されます。 レコードのスクロールを有効にするには、 <xref:System.Windows.Forms.BindingSource>のオブジェクトを使用して通貨のイベントを処理します。  
   
-## 参照  
- [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [データ ソースの概要](../data-tools/add-new-data-sources.md)   
- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../Topic/Binding%20Windows%20Forms%20controls%20to%20data%20in%20Visual%20Studio.md)   
- [方法 : データベースのデータをワークシートに読み込む](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)   
- [方法 : オブジェクトのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)   
- [方法 : データベースからドキュメントにデータを読み込む](../vsto/how-to-populate-documents-with-data-from-a-database.md)   
- [方法 : ホスト コントロールからのデータでデータ ソースを更新する](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)  
+## <a name="see-also"></a>関連項目  
+ [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [新しいデータ ソースを追加します。](/visualstudio/data-tools/add-new-data-sources)   
+ [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+ [方法: データベースからデータをワークシートに読み込む](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)   
+ [方法: オブジェクトからのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)   
+ [方法: データベースからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-a-database.md)   
+ [方法: ホスト コントロールからのデータでデータ ソースを更新する](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)  
   
   

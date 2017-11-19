@@ -1,5 +1,5 @@
 ---
-title: Save data with the TableAdapter DBDirect methods | Microsoft Docs
+title: "TableAdapter DBDirect メソッドを使ってデータを保存 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,162 +15,159 @@ helpviewer_keywords:
 - saving data, walkthroughs
 - data [Visual Studio], TableAdapter
 ms.assetid: 74a6773b-37e1-4d96-a39c-63ee0abf49b1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: aac04197ee35aa613f70f09f653bbde988dbe995
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 3ed52a167b607236b8493e4c8c1736ee597162b9
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
-# <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>Save data with the TableAdapter DBDirect methods
-This walkthrough provides detailed instructions for running SQL statements directly against a database by using the DBDirect methods of a TableAdapter. The DBDirect methods of a TableAdapter provide a fine level of control over your database updates. You can use them to run specific SQL statements and stored procedures by calling the individual `Insert`, `Update`, and `Delete` methods as needed by your application (as opposed to the overloaded `Update` method that performs the UPDATE, INSERT, and DELETE statements all in one call).  
+# <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect メソッドを使ってデータを保存します。
+このチュートリアルでは、TableAdapter の DBDirect メソッドを使用して、データベースに対して直接 SQL ステートメントを実行する詳細な手順を提供します。 TableAdapter の DBDirect メソッドは、細かいレベル、データベースの更新で制御を提供します。 それらを使用して、個別に呼び出すことによって、特定の SQL ステートメントおよびストアド プロシージャを実行することができます`Insert`、 `Update`、および`Delete`アプリケーションで必要に応じてメソッド (オーバー ロードされたのではなく`Update`更新プログラムを実行するメソッド、INSERT、および DELETE のステートメントすべて 1 つの呼び出しで)。  
   
- During this walkthrough, you will learn how to:  
+ このチュートリアルでは、次の作業を行う方法について説明します。  
   
--   Create a new **Windows Forms Application**.  
+-   新しい**Windows フォーム アプリケーション**です。  
   
--   Create and configure a dataset with the [Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png).  
+-   作成および構成を含むデータセット、[データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)です。  
   
--   Select the control to be created on the form when dragging items from the **Data Sources** window. For more information, see [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
+-   コントロールから項目をドラッグしたときに、フォーム上に作成する場合にオン、**データソース**ウィンドウです。 詳細については、次を参照してください。[セットのデータ ソース ウィンドウからドラッグしたときに作成する制御](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)です。  
   
--   Create a data-bound form by dragging items from the **Data Sources** window onto the form.  
+-   項目をドラッグして、データ バインド フォームを作成、**データソース**ウィンドウからフォームにします。  
   
--   Add methods to directly access the database and perform inserts, updates, and deletes..  
+-   直接データベースにアクセスし、挿入、更新、および削除を実行するメソッドを追加するには.  
   
-## <a name="prerequisites"></a>Prerequisites  
- In order to complete this walkthrough, you will need:  
+## <a name="prerequisites"></a>必須コンポーネント  
+このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。  
   
--   Access to the Northwind sample database. For more information, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
+1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server のエディションのダウンロード ページ](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)、または、 **Visual Studio インストーラー**です。 一部として、Visual Studio インストーラーで、SQL Server Express LocalDB をインストールすることができます、**データ ストレージと処理**ワークロード、または個々 のコンポーネントとして。  
   
-## <a name="create-a-windows-forms-application"></a>Create a Windows Forms application  
- The first step is to create a **Windows Forms Application**.  
-  
-#### <a name="to-create-the-new-windows-project"></a>To create the new Windows project  
-  
-1. In Visual Studio, on the **File** menu, select **New**, **Project...**.  
-  
-2. Expand either **Visual C#** or **Visual Basic** in the left-hand pane, then select **Windows Classic Desktop**.  
+2.  次の手順に従って、Northwind サンプル データベースをインストールします。  
 
-3. In the middle pane, select the **Windows Forms App** project type.  
+    1. Visual Studio で開く、 **SQL Server オブジェクト エクスプ ローラー**ウィンドウです。 (の一部として SQL Server オブジェクト エクスプ ローラーがインストールされている、**データ ストレージと処理**Visual Studio インストーラーでのワークロードです)。展開して、 **SQL Server**ノード。 LocalDB インスタンスを右クリックし、選択**新しいクエリしています.**.  
 
-4. Name the project **TableAdapterDbDirectMethodsWalkthrough**, and then choose **OK**. 
+       クエリ エディター ウィンドウが開きます。  
+
+    2. コピー、 [Northwind TRANSACT-SQL スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)をクリップボードにします。 この T-SQL スクリプトは、最初から、Northwind データベースを作成し、データを設定します。  
+
+    3. T-SQL スクリプトをクエリ エディターに貼り付けを選択し、 **Execute**ボタンをクリックします。  
+
+       短期間のうち、クエリの実行が終了し、Northwind データベースを作成します。  
   
-     The **TableAdapterDbDirectMethodsWalkthrough** project is created and added to **Solution Explorer**.  
+## <a name="create-a-windows-forms-application"></a>Windows フォーム アプリケーションを作成します。  
+ 作成するには、まず、 **Windows フォーム アプリケーション**です。  
   
-## <a name="create-a-data-source-from-your-database"></a>Create a data source from your database  
- This step uses the **Data Source Configuration Wizard** to create a data source based on the `Region` table in the Northwind sample database. You must have access to the Northwind sample database to create the connection. For information about setting up the Northwind sample database, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
+#### <a name="to-create-the-new-windows-project"></a>新しい Windows プロジェクトを作成するには  
   
-#### <a name="to-create-the-data-source"></a>To create the data source  
+1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.  
   
-1.  On the **Data** menu, select **Show Data Sources**.  
+2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。  
+
+3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。  
+
+4. プロジェクトに名前を**TableAdapterDbDirectMethodsWalkthrough**を選択し**OK**です。 
   
-2.  In the **Data Sources** window, select **Add New Data Source** to start the **Data Source Configuration Wizard**.  
+     **TableAdapterDbDirectMethodsWalkthrough**プロジェクトが作成され、追加**ソリューション エクスプ ローラー**です。  
   
-3.  On the **Choose a Data Source Type** screen, select **Database**, and then select **Next**.  
+## <a name="create-a-data-source-from-your-database"></a>データベースからデータ ソースを作成します。  
+ このステップでは、**データ ソース構成ウィザード**に基づいてデータ ソースを作成する、 `Region` Northwind サンプル データベース内のテーブルです。 接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースの設定の詳細については、次を参照してください。[する方法: サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)です。  
   
-4.  On the **Choose your Data Connection** screen, do one of the following:  
+#### <a name="to-create-the-data-source"></a>データ ソースを作成するには  
   
-    -   If a data connection to the Northwind sample database is available in the drop-down list, select it.  
+1.  **データ**メニューの **データ ソースの表示**です。  
   
-         -or-  
+2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成ウィザード**です。  
   
-    -   Select **New Connection** to launch the **Add/Modify Connection** dialog box.  
+3.  **データ ソースの種類を選択**画面で、**データベース**、し、**次**です。  
   
-5.  If your database requires a password, select the option to include sensitive data, and then select **Next**.  
+4.  **データ接続の選択**画面で、次のいずれかの操作します。  
   
-6.  On the **Save connection string to the Application Configuration file** screen, select **Next**.  
+    -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
   
-7.  On the **Choose your Database Objects** screen, expand the **Tables** node.  
+         または  
   
-8.  Select the `Region` table, and then select **Finish**.  
+    -   選択**新しい接続**を起動する、**接続接続の追加/変更** ダイアログ ボックス。  
   
-     The **NorthwindDataSet** is added to your project and the `Region` table appears in the **Data Sources** window.  
+5.  データベースは、パスワードを必要とする場合は、デリケートなデータを含めるしを選択するオプションを選択**次**です。  
   
-## <a name="add-controls-to-the-form-to-display-the-data"></a>Add controls to the form to display the data  
- Create the data-bound controls by dragging items from the **Data Sources** window onto your form.  
+6.  **接続文字列をアプリケーション構成ファイルに保存**画面で、**次**です。  
   
-#### <a name="to-create-data-bound-controls-on-the-windows-form"></a>To create data bound controls on the Windows form  
+7.  **データベース オブジェクトの選択**画面で、展開、**テーブル**ノード。  
   
--   Drag the main **Region** node from the **Data Sources** window onto the form.  
+8.  選択、`Region`テーブルをクリックし **完了**です。  
   
-     A <xref:System.Windows.Forms.DataGridView> control and a tool strip (<xref:System.Windows.Forms.BindingNavigator>) for navigating records appear on the form. A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `RegionTableAdapter`, <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.  
+     **NorthwindDataSet**プロジェクトに追加され、`Region`テーブルに表示されます、**データ ソース**ウィンドウです。  
   
-#### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>To add buttons that will call the individual TableAdapter DbDirect methods  
+## <a name="add-controls-to-the-form-to-display-the-data"></a>データを表示するフォームにコントロールを追加します。  
+ 項目をドラッグして、データ バインド コントロールを作成、**データソース**ウィンドウからフォームにします。  
   
-1.  Drag three <xref:System.Windows.Forms.Button> controls from the **Toolbox** onto **Form1** (below the **RegionDataGridView**).  
+#### <a name="to-create-data-bound-controls-on-the-windows-form"></a>データの作成にバインド Windows フォーム コントロール  
   
-2.  Set the following **Name** and **Text** properties on each button.  
+-   メインのドラッグ**地域**ノードから、**データ ソース**ウィンドウからフォームにします。  
   
-    |Name|Text|  
+     レコード間をナビゲートするための <xref:System.Windows.Forms.DataGridView> コントロールとツール ストリップ (<xref:System.Windows.Forms.BindingNavigator>) がフォームに表示されます。 A [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、 `RegionTableAdapter`、 <xref:System.Windows.Forms.BindingSource>、および<xref:System.Windows.Forms.BindingNavigator>コンポーネント トレイに表示されます。  
+  
+#### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>個々の TableAdapter DbDirect メソッドを呼び出すボタンを追加するには  
+  
+1.  3 つをドラッグして<xref:System.Windows.Forms.Button>から制御、**ツールボックス**に**Form1** (以下、 **RegionDataGridView**)。  
+  
+2.  以下の設定を**名前**と**テキスト**各ボタンのプロパティです。  
+  
+    |名前|テキスト|  
     |----------|----------|  
-    |`InsertButton`|**Insert**|  
-    |`UpdateButton`|**Update**|  
-    |`DeleteButton`|**Delete**|  
+    |`InsertButton`|**挿入します。**|  
+    |`UpdateButton`|**更新**|  
+    |`DeleteButton`|**削除**|  
   
-#### <a name="to-add-code-to-insert-new-records-into-the-database"></a>To add code to insert new records into the database  
+#### <a name="to-add-code-to-insert-new-records-into-the-database"></a>データベースに新しいレコードを挿入するコードを追加するには  
   
-1.  Select **InsertButton** to create an event handler for the click event and open your form in the code editor.  
+1.  選択**InsertButton**クリック イベントのイベント ハンドラーを作成し、コード エディターでフォームを開きます。  
   
-2.  Replace the `InsertButton_Click` event handler with the following code:  
+2.  `InsertButton_Click` イベント ハンドラーを次のコードで置き換えます。  
   
      [!code-vb[VbRaddataSaving#1](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_1.vb)]
      [!code-csharp[VbRaddataSaving#1](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_1.cs)]  
   
-#### <a name="to-add-code-to-update-records-in-the-database"></a>To add code to update records in the database  
+#### <a name="to-add-code-to-update-records-in-the-database"></a>データベースのレコードを更新するコードを追加するには  
   
-1.  Double-click the **UpdateButton** to create an event handler for the click event and open your form in the code editor.  
+1.  ダブルクリックして、 **UpdateButton**クリック イベントのイベント ハンドラーを作成し、コード エディターでフォームを開きます。  
   
-2.  Replace the `UpdateButton_Click` event handler with the following code:  
+2.  `UpdateButton_Click` イベント ハンドラーを次のコードで置き換えます。  
   
      [!code-vb[VbRaddataSaving#2](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_2.vb)]
      [!code-csharp[VbRaddataSaving#2](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_2.cs)]  
   
-#### <a name="to-add-code-to-delete-records-from-the-database"></a>To add code to delete records from the database  
+#### <a name="to-add-code-to-delete-records-from-the-database"></a>データベースからレコードを削除するコードを追加するには  
   
-1.  Select **DeleteButton** to create an event handler for the click event and open your form in the code editor.  
+1.  選択**DeleteButton**クリック イベントのイベント ハンドラーを作成し、コード エディターでフォームを開きます。  
   
-2.  Replace the `DeleteButton_Click` event handler with the following code:  
+2.  `DeleteButton_Click` イベント ハンドラーを次のコードで置き換えます。  
   
      [!code-vb[VbRaddataSaving#3](../data-tools/codesnippet/VisualBasic/save-data-with-the-tableadapter-dbdirect-methods_3.vb)]
      [!code-csharp[VbRaddataSaving#3](../data-tools/codesnippet/CSharp/save-data-with-the-tableadapter-dbdirect-methods_3.cs)]  
   
-## <a name="run-the-application"></a>Run the application  
+## <a name="run-the-application"></a>アプリケーションの実行  
   
-#### <a name="to-run-the-application"></a>To run the application  
+#### <a name="to-run-the-application"></a>アプリケーションを実行するには  
   
--   Select **F5** to run the application.  
+-   選択**f5 キーを押して**アプリケーションを実行します。  
   
--   Select the **Insert** button, and verify that the new record appears in the grid.  
+-   選択、**挿入**ボタンをクリックし、新しいレコードをグリッドに表示されることを確認します。  
   
--   Select the **Update** button, and verify that the record is updated in the grid.  
+-   選択、**更新**ボタンをクリックし、グリッドで、レコードが更新されることを確認します。  
   
--   Select the **Delete** button, and verify that the record is removed from the grid.  
+-   選択、**削除**ボタンをクリックし、グリッドからレコードが削除されることを確認します。  
   
-## <a name="next-steps"></a>Next Steps  
- Depending on your application requirements, there are several steps you might want to perform after creating a data-bound form. Some enhancements you could make to this walkthrough include:  
+## <a name="next-steps"></a>次の手順  
+ アプリケーションの要件によっては、データ バインド フォームの作成後に実行する可能性があります。 このチュートリアルで行うことができる拡張には次のものがあります。  
   
--   Adding search functionality to the form.  
+-   フォームに検索機能を追加します。  
   
--   Adding additional tables to the dataset by selecting **Configure DataSet with Wizard** from within the **Data Sources** window. You can add controls that display related data by dragging the related nodes onto the form. For more information, see [Relationships in Datasets](relationships-in-datasets.md).  
+-   選択して、データセットにテーブルを追加**構成ウィザードで DataSet を**内から、**データソース**ウィンドウです。 関連するコードをフォームにドラッグすることによって、関連するデータを表示するコントロールを追加できます。 詳細については、次を参照してください。[データセットのリレーションシップ](relationships-in-datasets.md)です。  
   
-## <a name="see-also"></a>See Also  
- [Save data back to the database](../data-tools/save-data-back-to-the-database.md)
+## <a name="see-also"></a>関連項目  
+ [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)

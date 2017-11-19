@@ -4,34 +4,19 @@ ms.custom:
 ms.date: 04/26/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3e893949-6398-42f1-9eab-a8d8c2b7f02d
-caps.latest.revision: 7
+caps.latest.revision: "7"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9524ecc3cadef58821fba857de8e82e59eea9b43
-ms.openlocfilehash: 185fc30458fed4303eb0cf6d59b5e6784840f89e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/04/2017
-
+ms.openlocfilehash: 3e06a3e89b69b2b69a97c4deb2d68d98913f6e03
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="common-control-patterns-for-visual-studio"></a>Visual Studio の共通のコントロール パターン
 ##  <a name="BKMK_CommonControls"></a>コモン コントロール  
@@ -88,9 +73,9 @@ ms.lasthandoff: 05/04/2017
   
 -   入力フィールドは、任意のパスと同様に、長いフィールドの長さと一致することや、順番に表示されます、ウィンドウの幅に合わせていないは、コンテンツに合わせてサイズに設定する必要があります。 長さには、ユーザーに、フィールドの文字数は許可されてに制限を示す可能性があります。  
   
-     ![正しくない入力フィールドの長さ: 名前がこの長いなる可能性はほとんどありません。](../../extensibility/ux-guidelines/media/0707-01_incorrectinputfieldcontrol.png "0707-01_IncorrectInputFieldControl")<br />正しくない入力フィールドの長さ: 名前がこの長いなる可能性はほとんどありません。
+     ![正しくない入力フィールドの長さ: 名前がこの長いなる可能性はほとんどありません。] (../../extensibility/ux-guidelines/media/0707-01_incorrectinputfieldcontrol.png "0707 01_IncorrectInputFieldControl")<br />正しくない入力フィールドの長さ: 名前がこの長いなる可能性はほとんどありません。
   
-     ![入力フィールドの長さを修正: 入力フィールドが必要なコンテンツの適切な幅です。](../../extensibility/ux-guidelines/media/0707-02_correctinputfieldcontrol.png "0707-02_CorrectInputFieldControl")<br />入力フィールドの長さを修正: 入力フィールドが必要なコンテンツの適切な幅です。
+     ![入力フィールドの長さを修正: 入力フィールドが必要なコンテンツの適切な幅です。] (../../extensibility/ux-guidelines/media/0707-02_correctinputfieldcontrol.png "0707 02_CorrectInputFieldControl")<br />入力フィールドの長さを修正: 入力フィールドが必要なコンテンツの適切な幅です。
   
 ###  <a name="BKMK_ComboBoxesAndDropDowns"></a>コンボ ボックスとドロップダウン リスト  
 一般的な相互作用動作に従って、[ドロップダウン リストとコンボ ボックスの Windows デスクトップ ガイドライン](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742404\(v=vs.85\).aspx)です。  
@@ -104,9 +89,9 @@ ms.lasthandoff: 05/04/2017
 #### <a name="layout"></a>レイアウト  
 コンボ ボックスとドロップダウン リストは、任意のパスと同様に、長いフィールドの長さと一致することや、順番に表示されます、ウィンドウの幅に合わせていないは、コンテンツに合わせてサイズ必要があります。  
   
-![: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。](~/extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707-03_IncorrectDropDownLayout")<br />: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。
+![: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。] (../../extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707 03_IncorrectDropDownLayout")<br />: 正しくないドロップダウン幅では、表示されるコンテンツには長すぎます。
   
-![正しい: ドロップダウン リストにサイズが調整の翻訳の増加を許可するが、不必要に長時間かかる場合。](../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707-04_CorrectDropDownLayout")<br />正しい: ドロップダウン リストにサイズが調整の翻訳の増加を許可するが、不必要に長時間かかる場合。 
+![正しい: ドロップダウン リストにサイズが調整の翻訳の増加を許可するが、不必要に長時間かかる場合。] (../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707 04_CorrectDropDownLayout")<br />正しい: ドロップダウン リストにサイズが調整の翻訳の増加を許可するが、不必要に長時間かかる場合。 
   
 ###  <a name="BKMK_CheckBoxes"></a>チェック ボックス  
 一般的な相互作用動作に従って、[チェック ボックスの Windows デスクトップ ガイドライン](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742401\(v=vs.85\).aspx)です。  
@@ -123,9 +108,9 @@ ms.lasthandoff: 05/04/2017
   
 -   チェック ボックスのテキストの最初の行のベースラインに揃えます。  
   
-     ![正しくありません: チェック ボックスの中心は、テキスト。](../../extensibility/ux-guidelines/media/0707-05_incorrectcheckboxalign.png "0707-05_IncorrectCheckBoxAlign")<br />正しくありません: チェック ボックスの中心は、テキスト。
+     ![正しくありません: チェック ボックスの中心は、テキスト。] (../../extensibility/ux-guidelines/media/0707-05_incorrectcheckboxalign.png "0707 05_IncorrectCheckBoxAlign")<br />正しくありません: チェック ボックスの中心は、テキスト。
   
-     ![正しい: チェック ボックスは、テキストの最初の行に配置されます。](../../extensibility/ux-guidelines/media/0707-06_correctcheckboxalign.png "0707-06_CorrectCheckBoxAlign")<br />正しい: チェック ボックスは、テキストの最初の行に配置されます。
+     ![正しい: チェック ボックスは、テキストの最初の行に配置されます。] (../../extensibility/ux-guidelines/media/0707-06_correctcheckboxalign.png "0707 06_CorrectCheckBoxAlign")<br />正しい: チェック ボックスは、テキストの最初の行に配置されます。
   
 ###  <a name="BKMK_RadioButtons"></a>オプション ボタン  
 一般的な相互作用動作に従って、[のオプション ボタンの Windows デスクトップ ガイドライン](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742436\(v=vs.85\).aspx)です。  
@@ -160,11 +145,11 @@ ms.lasthandoff: 05/04/2017
 
 静的なテキストは、ときに、独自の抑制なし ダイアログ ボックスでグループ化の競合が起こらないを指定できます。 ボックスの余分な行が本当に必要なかどうかを決定します。 例は、次に示すように、グループ行によって作成されたセクションの下のディレクトリ パスの表示を示します。  
 
-![テキスト コントロールに静的なテキストの情報](~/extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />テキスト コントロールに静的なテキストの情報
+![テキスト コントロールに静的なテキスト情報](../../extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />テキスト コントロールに静的なテキストの情報
 
-その他のグループ化された領域が存在し、読みやすさ、役立つ情報の包含するダイアログ ボックスでセクションが非表示または表示することができ、(ように、 **[プロパティ] ウィンドウ**説明ペイン) または類似の UI と一致する、静的なテキスト ボックス内に配置する場合します。 このグループ ボックスの 1 つの規則をする必要があり、色付きの`ButtonShadow`:
+その他のグループ化された領域が存在し、読みやすさ、役立つ情報の包含するダイアログ ボックスでセクションが非表示または表示することができ、(ように、**プロパティ ウィンドウ**説明ペイン) または類似の UI と一貫性がある場合ボックス内には、静的テキストを配置します。 このグループ ボックスの 1 つの規則をする必要があり、色付きの`ButtonShadow`:
 
-![[プロパティ] ウィンドウで静的なテキスト](~/extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />[プロパティ] ウィンドウで静的なテキスト
+![[プロパティ] ウィンドウで静的なテキスト](../../extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />[プロパティ] ウィンドウで静的なテキスト
 
 ### <a name="read-only-text-box"></a>読み取り専用のテキスト ボックス
 
@@ -172,7 +157,7 @@ ms.lasthandoff: 05/04/2017
 
 テキスト ボックスがアクティブになることができます (編集)、ユーザーがチェック/オフにする チェック ボックスまたはラジオ ボタンを選択する/選択解除するなど、関連付けられたコントロールを変更します。 たとえば、**ツール&gt;オプション**以下に示すページ、**ホーム ページ**テキスト ボックスがアクティブになったときに、**デフォルトを使用** チェック ボックスがオフになってです。
 
-![読み取り専用テキスト ボックスで、アクティブと非アクティブの状態を表示](~/extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />読み取り専用テキスト ボックスで、アクティブと非アクティブの状態を表示
+![読み取り専用テキスト ボックスで、アクティブと非アクティブの状態を示す](../../extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />読み取り専用テキスト ボックスで、アクティブと非アクティブの状態を表示
 
 ### <a name="using-text-in-dialogs"></a>ダイアログ ボックスでテキストを使用します。
 
@@ -195,9 +180,9 @@ ms.lasthandoff: 05/04/2017
 
 ### <a name="helper-text"></a>ヘルパー テキスト
 
-ダイアログ ボックスの目的を理解するユーザーを支援する、またはを実行するには、どのアクションを示すダイアログ ボックスに含まれます。 ヘルパー テキストは、単純なダイアログ ボックスの混乱を避けるために必要な場合にのみ、使用する必要があります。 ヘルパー テキストの 2 つのバリエーションは、ダイアログおよびウォーターマークです。
+ダイアログ ボックスの目的を理解するユーザーを支援する、またはを実行するには、どのアクションを示すダイアログ ボックスに含まれます。 ヘルパー テキストは、単純なダイアログ ボックスの混乱を避けるために必要な場合にのみ、使用する必要があります。 ヘルパー テキストの 2 つのバリエーションは、ダイアログ、およびウォーターマークです。
 
-次のヘルパー テキストの一般的な場所と、新しい領域の概要を選択します。 ヘルパー テキストの一般的なシナリオは次のとおりです。
+ヘルパー テキストの一般的な場所に従うし、新しい領域の概要を選択します。 ヘルパー テキストの一般的なシナリオは次のとおりです。
 
 -   複雑なダイアログと対話する方法に関するその他の方向を指定する、ダイアログ ヘルパー テキストです。
 
@@ -219,7 +204,7 @@ ms.lasthandoff: 05/04/2017
 
 -   透かしを中央揃えまたは左揃えことができます。 配置の意思決定を行うときに、標準的なデザイン規則を適用します。 バック グラウンドでは、レベルのウォーターマークを選択することはできません。
 
-![ウォーターマーク テキストの例](~/extensibility/ux-guidelines/media/WatermarkTextExample.gif)<br />ウォーターマーク テキストの例
+![ウォーターマーク テキストの例](../../extensibility/ux-guidelines/media/WatermarkTextExample.gif)<br />ウォーターマーク テキストの例
 
 ### <a name="context-specific-dynamic-text"></a>コンテキスト固有の (動的) テキスト
 
@@ -257,16 +242,16 @@ ms.lasthandoff: 05/04/2017
   
 -   長いラベルまたは操作の目的を説明する短い文を必要とする状況  
   
--   緊密なスペースが、アクションには、破壊的なまたは元に戻せないことに、ボタンで、UI に圧倒は  
+-   アクションが破壊または元に戻すことがないことに、ボタンで、UI に圧倒は緊密なスペース  
   
 -   除外強調の種類の状況でセカンダリ コマンドがある多くのコマンド  
   
 #### <a name="examples"></a>例  
-![ステータス メッセージに続く情報バーに使用されているコマンドのリンク](../../extensibility/ux-guidelines/media/070703-01_commandlinkinfobar.png "070703-01_CommandLinkInfobar")<br />ステータス メッセージに続く情報バーに使用されているコマンドのリンク
+![コマンドのステータス メッセージに続く情報バーに使用されているリンク](../../extensibility/ux-guidelines/media/070703-01_commandlinkinfobar.png "070703 01_CommandLinkInfobar")<br />ステータス メッセージに続く情報バーに使用されているコマンドのリンク
   
-![CodeLens ポップアップで使用されているリンク](../../extensibility/ux-guidelines/media/070703-02_linksincodelens.png "070703-02_LinksInCodeLens")<br />CodeLens ポップアップで使用されているリンク
+![CodeLens ポップアップで使用されているリンク](../../extensibility/ux-guidelines/media/070703-02_linksincodelens.png "070703 02_LinksInCodeLens")<br />CodeLens ポップアップで使用されているリンク
   
-![セカンダリ コマンドのボタンが多すぎる注意を引くが使用されているリンク](../../extensibility/ux-guidelines/media/070703-03_linksassecondarycommands.png "070703-03_LinksAsSecondaryCommands")<br />セカンダリ コマンドのボタンが多すぎる注意を引くが使用されているリンク
+![セカンダリ コマンドのボタンが多すぎる注意を引くが使用されているリンク](../../extensibility/ux-guidelines/media/070703-03_linksassecondarycommands.png "070703 03_LinksAsSecondaryCommands")<br />セカンダリ コマンドのボタンが多すぎる注意を引くが使用されているリンク
   
 ### <a name="common-buttons"></a>一般的なボタン  
   
@@ -286,9 +271,9 @@ Visual Studio でのほとんどのボタンは、ユーティリティのダイ
 #### <a name="browse-buttons"></a>参照... のボタン  
 **[参照...]**ボタンはグリッド、ダイアログ、およびツール ウィンドウおよび他のモードレスの UI 要素で使用します。 コントロールに値を満たすためにユーザーを支援するピッカーが表示されます。 このボタンは、長い形式と短いの 2 つのバリエーションがあります。  
   
-![長い [参照...] ボタン](../../extensibility/ux-guidelines/media/070703-04_browselong.gif "070703-04_BrowseLong")<br />長い [参照...] ボタン
+![長い [参照...] ボタン](../../extensibility/ux-guidelines/media/070703-04_browselong.gif "070703 04_BrowseLong")<br />長い [参照...] ボタン
   
-![省略記号のみの短い [...] ボタン](../../extensibility/ux-guidelines/media/070703-05_browseshort.gif "070703-05_BrowseShort")<br />省略記号のみの短い [...] ボタン
+![省略記号のみの短い [...] ボタン](../../extensibility/ux-guidelines/media/070703-05_browseshort.gif "070703 05_BrowseShort")<br />省略記号のみの短い [...] ボタン
   
 省略記号のみの短い ボタンを使用する場合。  
   
@@ -307,9 +292,9 @@ Visual Studio でのほとんどのボタンは、ユーティリティのダイ
 -   省略記号を使用しないで**[...]**参照アクション以外のボタンをクリックします。 たとえば、必要がある場合、 **[新規作成 ...>]**ボタンしますが、ダイアログ ボックスが再設計する必要があるしのテキスト、十分な空き領域を持っていません。  
   
 ##### <a name="sizing-and-spacing"></a>サイズ変更と間隔  
-![[参照...] のサイズのボタン: 標準のバージョンは 75 x 23 ピクセル、短い形式は 26 x 23 ピクセル](../../extensibility/ux-guidelines/media/070703-06_browsesizing.png "070703-06_BrowseSizing")<br />サイズ変更の [参照...] ボタン
+![[参照...] のサイズのボタン: 標準のバージョンは 75 x 23 ピクセル、短い形式は 26 x 23 ピクセル](../../extensibility/ux-guidelines/media/070703-06_browsesizing.png "070703 06_BrowseSizing")<br />サイズ変更の [参照...] ボタン
   
-![間隔 [参照...] ボタン: 関連するコントロールと標準の [参照] ボタン 7 ピクセルの間のスペース、関連するコントロールと参照の短い間隔ボタン 5 ピクセル](../../extensibility/ux-guidelines/media/070703-07_browsespacing.png "070703-07_BrowseSpacing")<br />行間の [参照...] ボタン
+![間隔 [参照...] ボタン: 関連するコントロールと標準の [参照] ボタン 7 ピクセルの間のスペース、関連するコントロールと参照の短い間隔ボタン 5 ピクセル](../../extensibility/ux-guidelines/media/070703-07_browsespacing.png "070703 07_BrowseSpacing")<br />行間の [参照...] ボタン
   
 #### <a name="graphical-buttons"></a>グラフィカルなボタン  
 いくつかのボタンは、常に、グラフィカル イメージを使用して、領域を節約し、ローカリゼーションの問題を避けるためにテキストを含めることはありませんください。 フィールドの選択と並べ替え可能な他のリストでよく使用されます。  
@@ -319,27 +304,27 @@ Visual Studio でのほとんどのボタンは、ユーティリティのダイ
 | 関数 | ボタン |  
 | --- | --- |  
 | 追加 | ![グラフィカルな「追加」ボタン](../../extensibility/ux-guidelines/media/070703-08_buttonadd.png "070703 08_ButtonAdd") |
-| 削除 | ![グラフィカルな [削除] ボタン](~/extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
-| すべて追加 | ![グラフィカルな すべて追加"ボタン](../../extensibility/ux-guidelines/media/070703-10_buttonaddall.png "070703 10_ButtonAddAll") |
-| すべて削除 | ![グラフィカルな [すべて削除] ボタン](../../extensibility/ux-guidelines/media/070703-11_buttonremoveall.png "070703 11_ButtonRemoveAll") |
+| 削除 | ![グラフィカルな [削除] ボタン](../../extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
+| すべてを追加します。 | ![グラフィカルな すべて追加"ボタン](../../extensibility/ux-guidelines/media/070703-10_buttonaddall.png "070703 10_ButtonAddAll") |
+| すべてを削除します。 | ![グラフィカルな [すべて削除] ボタン](../../extensibility/ux-guidelines/media/070703-11_buttonremoveall.png "070703 11_ButtonRemoveAll") |
 | 上へ | ![グラフィカルな 上へ移動"ボタン](../../extensibility/ux-guidelines/media/070703-12_buttonmoveup.png "070703 12_ButtonMoveUp") |
-| 下へ移動 | ![グラフィカルな 下へ移動"ボタン](~/extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
-| 削除 | ![グラフィカルな"Delete"ボタン](~/extensibility/ux-guidelines/media/070703-14_buttondelete.png "070703 14_ButtonDelete") |
+| 下へ移動 | ![グラフィカルな 下へ移動"ボタン](../../extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
+| 削除 | ![グラフィカルな"Delete"ボタン](../../extensibility/ux-guidelines/media/070703-14_buttondelete.png "070703 14_ButtonDelete") |
   
 ##### <a name="sizing-and-spacing"></a>サイズ変更と間隔  
 グラフィカルなボタンは、同じの短いバージョンのサイズ変更、 **[参照...]**ボタン (26 x 23 ピクセル単位)。  
   
-![ボタン、および透明色の表示を使用せずにグラフィック イメージの外観](../../extensibility/ux-guidelines/media/070703-15_graphicalbuttonspacing.png "070703-15_GraphicalButtonSpacing")<br />ボタン、および透明色の表示を使用せずにグラフィック イメージの外観
+![ボタン、および透明色の表示を使用せずにグラフィック イメージの外観](../../extensibility/ux-guidelines/media/070703-15_graphicalbuttonspacing.png "070703 15_GraphicalButtonSpacing")<br />ボタン、および透明色の表示を使用せずにグラフィック イメージの外観
   
 ### <a name="hyperlinks"></a>ハイパーリンク  
-ハイパーリンクは、ヘルプ トピック、モーダル ダイアログまたはウィザードを開くように、ナビゲーション ベースのアクションにも適しています。 コマンドのハイパーリンクを使用する場合、UI に表示と変更が常に表示されます。 一般に、(と同じように保存、キャンセル、および削除) 操作にコミット操作がより伝達されるボタンを使用しています。  
+ハイパーリンクは、ヘルプ トピック、モーダル ダイアログまたはウィザードを開くように、ナビゲーション ベースのアクションにも適しています。 コマンドのハイパーリンクを使用する場合、UI に表示と変更が常に表示されます。 一般に、アクション (保存、キャンセル、および削除) などの操作へのコミットをより適切に伝達されますボタンを使用しています。  
   
 #### <a name="writing-style"></a>書き方  
 以下の[ユーザー インターフェイスのテキストの Windows デスクトップ ガイダンス](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742478\(v=vs.85\).aspx)です。 「について詳細は、」を使用しない「指示 me 詳細は、」または「このヘルプを表示する」フレージングです。 代わりに、質問をしてヘルプ コンテンツに応答主質問の観点からヘルプ リンク テキスト。 たとえば、"**サーバー エクスプ ローラーにサーバーを追加する方法ですか?**"  
   
 #### <a name="visual-style"></a>Visual スタイル  
   
--   常にハイパーリンクを使用する必要があります[VSColor サービス](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)です。 ハイパーリンクが正しく書式設定されていない場合、アクティブなときに赤を点滅したり、アクセスした後に別の色を示します。  
+-   常にハイパーリンクを使用する必要があります[VSColor サービス](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)です。 ハイパーリンクが正しく書式設定されていない場合、アクティブなときに、赤を点滅したり、アクセスした後に別の色を示します。  
   
 -   リンクは、完全な文章内文のフラグメントのように透かしにしない限り、状態が置かれてコントロールに下線を含めないでください。  
   
@@ -354,31 +339,31 @@ Visual Studio でのほとんどのボタンは、ユーティリティのダイ
 #### <a name="expanders"></a>展開コントロール  
 ツリー ビュー コントロールは、Windows および Visual Studio で使用される expander デザインに従っている必要があります。 各ノードは、基になるアイテムを表示したり閉じたりする expander コントロールを使用します。 Expander コントロールを使用して、Windows および Visual Studio 内の別のツリー ビューを発生する可能性があるユーザーの整合性を提供します。  
   
-![Expander コントロールを使用して、ツリー ビュー ノードの正しい: 適切なスタイル](../../extensibility/ux-guidelines/media/070705-1_treeviewcorrect.png "070705-1_TreeViewCorrect")<br />Expander コントロールを使用して、ツリー ビュー ノードの正しい: 適切なスタイル
+![正しい: expander コントロールを使用して、ツリー ビュー ノードの適切なスタイル](../../extensibility/ux-guidelines/media/070705-1_treeviewcorrect.png "070705 1_TreeViewCorrect")<br />Expander コントロールを使用して、ツリー ビュー ノードの正しい: 適切なスタイル
   
-![ツリー ビュー ノードの不適切なスタイルの正しくない:](../../extensibility/ux-guidelines/media/070705-2_treeviewincorrect1.png "070705-2_TreeViewIncorrect1")<br />ツリー ビュー ノードの不適切なスタイルの正しくない:
+![正しくない: ツリー ビュー ノードの不適切なスタイル](../../extensibility/ux-guidelines/media/070705-2_treeviewincorrect1.png "070705 2_TreeViewIncorrect1")<br />ツリー ビュー ノードの不適切なスタイルの正しくない:
   
 #### <a name="selection"></a>選択ツール  
 ツリー ビュー内でノードを選択すると、強調表示をツリー ビュー コントロールの幅全体に展開する必要があります。 ユーザーは、選択した項目を明確に識別できます。 選択範囲の色は、現在の Visual Studio のテーマを反映します。  
   
-![正しい: 選択したノードの強調表示には、ツリー ビュー コントロールの幅全体が収まるようにします。](../../extensibility/ux-guidelines/media/070705-1_treeviewcorrect.png "070705-1_TreeViewCorrect")<br />正しい: 選択したノードの強調表示には、ツリー ビュー コントロールの幅全体が収まるようにします。
+![正しい: 選択したノードの強調表示には、ツリー ビュー コントロールの幅全体が収まるようにします。] (../../extensibility/ux-guidelines/media/070705-1_treeviewcorrect.png "070705 1_TreeViewCorrect")<br />正しい: 選択したノードの強調表示には、ツリー ビュー コントロールの幅全体が収まるようにします。
   
-![正しくない: 選択したノードの強調表示は、ツリー ビュー コントロールの幅全体に収まっていません。](../../extensibility/ux-guidelines/media/070705-3_treeviewincorrect2.png "070705-3_TreeViewIncorrect2")<br />正しくない: 選択したノードの強調表示は、ツリー ビュー コントロールの幅全体に収まっていません。
+![正しくない: 選択したノードの強調表示は、ツリー ビュー コントロールの幅全体に収まっていません。] (../../extensibility/ux-guidelines/media/070705-3_treeviewincorrect2.png "070705 3_TreeViewIncorrect2")<br />正しくない: 選択したノードの強調表示は、ツリー ビュー コントロールの幅全体に収まっていません。
   
 #### <a name="icons"></a>アイコン  
 場合は、特定の支援に視覚的に項目間の相違点、ツリー ビュー コントロール内のアイコンを使用のみしてください。 一般に、アイコンは、アイコンが要素の種類を区別するために情報を伝達する異種のリストでのみ使用する必要があります。 同種のリストでアイコンを使用して頻繁にノイズと考えることができ、避ける必要があります。 その場合はグループのアイコン (親) には、その中の項目の種類を伝えることができます。 この規則の例外は、アイコンが動的し、状態を示すために使用されるかどうかになります。  
   
 #### <a name="scroll-bars"></a>スクロール バー  
-コンテンツがツリー ビュー コントロール内に収まる場合、スクロール バーを非表示常にする必要があります。 隠しファイル、または半透明スクロール可能なウィンドウで、ツリー ビューを含むウィンドウにフォーカスがあるときに表示されるまたはツリーのホバー時にそれ自体を表示がスクロール バーもかまわない。  
+コンテンツがツリー ビュー コントロール内に収まる場合、スクロール バーを非表示常にする必要があります。 隠しファイル、または半透明スクロール可能なウィンドウで、ツリー ビューを含むウィンドウにフォーカスがあるときに表示またはツリーのホバー時にそれ自体を表示がスクロール バーもかまわない。  
   
-![内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平方向のスクロール バーが表示されます。](~/extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705-4_Scrollbars")<br />内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平方向のスクロール バーが表示されます。
+![内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平方向のスクロール バーが表示されます。] (../../extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705 4_Scrollbars")<br />内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平方向のスクロール バーが表示されます。
   
 ###  <a name="BKMK_TreeViewInteractions"></a>ツリー ビューの相互作用  
   
 #### <a name="context-menus"></a>コンテキスト メニュー  
 ツリー ビュー ノードには、コンテキスト メニューのサブメニューのオプションを表示できます。 通常、ユーザーが項目を右クリックしてまたは選択した項目を持つ Windows キーボードでメニュー キーを押したときに発生します。 ノードがフォーカスを取得しが選択されていることは重要です。 これにより、ユーザーに属しているサブメニュー項目を識別します。  
   
-![コンテキスト メニューの向上にフォーカスをユーザーに通知するどの項目を生成しますが、項目が選択されています。](../../extensibility/ux-guidelines/media/070705-5_contextmenu.png "070705-5_ContextMenu")<br />コンテキスト メニューの向上にフォーカスをユーザーに通知するどの項目を生成しますが、項目が選択されています。
+![コンテキスト メニューの向上にフォーカスをユーザーに通知するどの項目を生成しますが、項目が選択されています。] (../../extensibility/ux-guidelines/media/070705-5_contextmenu.png "070705 5_ContextMenu")<br />コンテキスト メニューの向上にフォーカスをユーザーに通知するどの項目を生成しますが、項目が選択されています。
   
 #### <a name="keyboard"></a>キーボード  
 ツリー ビューでは、アイテムを選択し、キーボードを使用して、ノードの展開/折りたたみする機能を提供する必要があります。 これにより、ナビゲーションが、ユーザー補助に関する要件を満たしています。  
@@ -405,4 +390,4 @@ Trid コントロールは、グリッド内のツリー ビューを含む複�
   
 -   **Shift + Tab:**左側に最も近いセルに移動します。  行の先頭には、ナビゲーションは、前の行の右端にあるセルを続行します。  
   
-![Visual Studio での trid コントロール](../../extensibility/ux-guidelines/media/070705-6_trid.png "070705-6_Trid")<br />Visual Studio での trid コントロール
+![Visual Studio での trid コントロール](../../extensibility/ux-guidelines/media/070705-6_trid.png "070705 6_Trid")<br />Visual Studio での trid コントロール

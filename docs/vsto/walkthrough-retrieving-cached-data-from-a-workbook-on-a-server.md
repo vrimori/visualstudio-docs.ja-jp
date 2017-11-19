@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Retrieving Cached Data from a Workbook on a Server | Microsoft Docs'
+title: "チュートリアル: キャッシュされたサーバー上のブックからデータの取得 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,296 +17,299 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], accessing on server
 - documents [Office development in Visual Studio], server-side data access
 ms.assetid: ef6d61e5-a498-4b38-8e2e-2e80706d854b
-caps.latest.revision: 35
-author: kempb
-ms.author: kempb
+caps.latest.revision: "35"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: ec1e9c72991bdfded96cb53907f5dd3d4fb87dca
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: eb745f97b2ab1499206b94cfcd03c2255c7bb3b9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-retrieving-cached-data-from-a-workbook-on-a-server"></a>Walkthrough: Retrieving Cached Data from a Workbook on a Server
-  This walkthrough demonstrates how to retrieve data from a dataset that is cached in a Microsoft Office Excel workbook without starting Excel by using the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class.  
+# <a name="walkthrough-retrieving-cached-data-from-a-workbook-on-a-server"></a>チュートリアル : サーバー上のブックからのキャッシュされたデータの取得
+  このチュートリアルを使用して Excel を起動しなくても Microsoft Office Excel ブックにキャッシュされているデータセットからデータを取得する方法、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>クラスです。  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- This walkthrough illustrates the following tasks:  
+ このチュートリアルでは、次の作業について説明します。  
   
--   Defining a dataset that contains data from the AdventureWorksLT database.  
+-   AdventureWorksLT データベースからデータを含むデータセットを定義します。  
   
--   Creating instances of the dataset in an Excel workbook project and a console application project.  
+-   Excel ブック プロジェクトおよびコンソール アプリケーション プロジェクトで、データセットのインスタンスを作成します。  
   
--   Creating a <xref:Microsoft.Office.Tools.Excel.ListObject> that is bound to the dataset in the workbook, and populating the <xref:Microsoft.Office.Tools.Excel.ListObject> with data when the workbook is opened.  
+-   作成する、<xref:Microsoft.Office.Tools.Excel.ListObject>は、ブック内のデータセットにバインドされたで設定したとき、<xref:Microsoft.Office.Tools.Excel.ListObject>ブックを開いたときにデータを使用します。  
   
--   Adding the dataset in the workbook to the data cache.  
+-   データ キャッシュに、ブック内のデータセットを追加します。  
   
--   Reading data from the cached dataset into the dataset in the console application, without starting Excel.  
+-   Excel を起動せず、コンソール アプリケーションのデータセットに、キャッシュされたデータセットからデータを読み取っています。  
   
- Although this walkthrough assumes that you are running the code on your development computer, the code demonstrated by this walkthrough can be used on a server that does not have Excel installed.  
+ このチュートリアルでは、開発用コンピューター上のコードを実行していることを前提としていますが、Excel がインストールされていないサーバーでこのチュートリアルで示されるコードを使用できます。  
   
 > [!NOTE]  
->  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] or [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
+-   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] または [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]。  
   
--   Access to a running instance of Microsoft SQL Server or Microsoft SQL Server Express that has the AdventureWorksLT sample database attached to it. You can download the AdventureWorksLT database from the [CodePlex Web site](http://go.microsoft.com/fwlink/?linkid=87843). For more information about attaching a database, see the following topics:  
+-   Microsoft SQL Server または接続して、AdventureWorksLT サンプル データベースがある Microsoft SQL Server Express の実行中のインスタンスへのアクセス。 AdventureWorksLT データベースをダウンロードすることができます、 [CodePlex Web サイト](http://go.microsoft.com/fwlink/?linkid=87843)です。 データベースをアタッチする方法について詳しくは、次のトピックをご覧ください。  
   
-    -   To attach a database by using SQL Server Management Studio or SQL Server Management Studio Express, see [How to: Attach a Database (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/b4efb0ae-cfe6-4d81-a4b4-6e4916885caa).  
+    -   SQL Server Management Studio または SQL Server Management Studio Express を使用してデータベースをアタッチする場合は、「 [データベースをアタッチする方法 (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/b4efb0ae-cfe6-4d81-a4b4-6e4916885caa)」をご覧ください。  
   
-    -   To attach a database by using the command line, see [How to: Attach a Database File to SQL Server Express](http://msdn.microsoft.com/en-us/0f8e42b5-7a8c-4c30-8c98-7d2bdc8dcc68).  
+    -   コマンド ラインを使用してデータベースをアタッチする場合は、「 [データベース ファイルを SQL Server Express にアタッチする方法](http://msdn.microsoft.com/en-us/0f8e42b5-7a8c-4c30-8c98-7d2bdc8dcc68)」をご覧ください。  
   
-## <a name="creating-a-class-library-project-that-defines-a-dataset"></a>Creating a Class Library Project That Defines a Dataset  
- To use the same dataset in an Excel workbook project and a console application, you must define the dataset in a separate assembly that is referenced by both of these projects. For this walkthrough, define the dataset in a class library project.  
+## <a name="creating-a-class-library-project-that-defines-a-dataset"></a>データセットを定義するクラス ライブラリ プロジェクトを作成します。  
+ Excel ブック プロジェクトと、コンソール アプリケーションで同じデータセットを使用するのには、これらのプロジェクトの両方で参照されている別のアセンブリにデータセットを定義する必要があります。 このチュートリアルでは、クラス ライブラリ プロジェクトで、データセットを定義します。  
   
-#### <a name="to-create-the-class-library-project"></a>To create the class library project  
+#### <a name="to-create-the-class-library-project"></a>クラス ライブラリ プロジェクトを作成するには  
   
-1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
   
-2.  On the **File** menu, point to **New**, and then click **Project**.  
+2.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
   
-3.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then click **Windows**.  
+3.  テンプレート ペインで、展開**Visual c#**または**Visual Basic**、クリックして**Windows**です。  
   
-4.  In the list of project templates, select **Class Library**.  
+4.  プロジェクト テンプレートの一覧で選択**クラス ライブラリ**です。  
   
-5.  In the **Name** box, type **AdventureWorksDataSet**.  
+5.  **名前**ボックスに、入力**AdventureWorksDataSet**です。  
   
-6.  Click **Browse**, navigate to your %UserProfile%\My Documents (for Windows XP and earlier) or %UserProfile%\Documents (for Windows Vista) folder, and then click **Select Folder**.  
+6.  をクリックして**参照**%UserProfile%\My ドキュメント (Windows XP 用と以前) または (Windows Vista の場合) の %UserProfile%\Documents フォルダーに移動し、をクリックして、**フォルダーの選択**です。  
   
-7.  In the **New Project** dialog box, ensure that the **Create directory for solution** check box is not selected.  
+7.  **新しいプロジェクト** ダイアログ ボックスで、いることを確認、**ソリューションのディレクトリを作成** チェック ボックスが選択されていません。  
   
-8.  Click **OK**.  
+8.  **[OK]** をクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **AdventureWorksDataSet** project to **Solution Explorer** and opens the **Class1.cs** or **Class1.vb** code file.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **AdventureWorksDataSet**プロジェクトを**ソリューション エクスプ ローラー**開くと、 **Class1.cs**または**Class1.vb**コード ファイル。  
   
-9. In **Solution Explorer**, right-click **Class1.cs** or **Class1.vb**, and then click **Delete**. You do not need this file for this walkthrough.  
+9. **ソリューション エクスプ ローラー**を右クリックして**Class1.cs**または**Class1.vb**、クリックして**削除**です。 このチュートリアルのこのファイルが不要です。  
   
-## <a name="defining-a-dataset-in-the-class-library-project"></a>Defining a Dataset in the Class Library Project  
- Define a typed dataset that contains data from the AdventureWorksLT database for SQL Server 2005. Later in this walkthrough, you will reference this dataset from an Excel workbook project and a console application project.  
+## <a name="defining-a-dataset-in-the-class-library-project"></a>クラス ライブラリ プロジェクトでデータセットを定義します。  
+ データを含む、AdventureWorksLT データベースから SQL Server 2005 の型指定されたデータセットを定義します。 このチュートリアルの後半では、Excel ブック プロジェクトと、コンソール アプリケーション プロジェクトからこのデータセットを参照します。  
   
- The dataset is a *typed dataset* that represents the data in the Product table of the AdventureWorksLT database. For more information about typed datasets, see [Dataset tools in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
+ データセットが、*型指定されたデータセット*AdventureWorksLT データベースの Product テーブル内のデータを表すです。 型指定されたデータセットの詳細については、次を参照してください。 [Visual Studio でのデータセット ツール](/visualstudio/data-tools/dataset-tools-in-visual-studio)です。  
   
-#### <a name="to-define-a-typed-dataset-in-the-class-library-project"></a>To define a typed dataset in the class library project  
+#### <a name="to-define-a-typed-dataset-in-the-class-library-project"></a>クラス ライブラリ プロジェクトで指定されたデータセットを定義するには  
   
-1.  In **Solution Explorer**, click the **AdventureWorksDataSet** project.  
+1.  **ソリューション エクスプ ローラー**をクリックして、 **AdventureWorksDataSet**プロジェクト。  
   
-2.  If the **Data Sources** window is not visible, display it by, on the menu bar, choosing **View**, **Other Windows**, **Data Sources**.  
+2.  **[データ ソース]** ウィンドウが表示されていない場合は、メニュー バーの **[表示]**、 **[その他のウィンドウ]**、 **[データ ソース]**の順にクリックして表示します。  
   
-3.  Choose **Add New Data Source** to start the **Data Source Configuration Wizard**.  
+3.  **[新しいデータ ソースの追加]** をクリックして **データ ソース構成ウィザード**を開始します。  
   
-4.  Click **Database**, and then click **Next**.  
+4.  **[データベース]**をクリックして、 **[次へ]**をクリックします。  
   
-5.  If you have an existing connection to the AdventureWorksLT database, choose this connection and click **Next**.  
+5.  この接続を選択しをクリックして、AdventureWorksLT データベースへの既存の接続があれば、**次**です。  
   
-     Otherwise, click **New Connection**, and use the **Add Connection** dialog box to create the new connection. For more information, see [Add new connections](../data-tools/add-new-connections.md).  
+     それ以外の場合は、 **[新しい接続]**をクリックし、 **[接続の追加]** ダイアログ ボックスを使用して新しい接続を作成します。 詳細については、次を参照してください。[新しい接続を追加](../data-tools/add-new-connections.md)です。  
   
-6.  In the **Save the Connection String to the Application Configuration File** page, click **Next**.  
+6.  **[アプリケーション構成ファイルへの接続文字列を保存]** ページで、 **[次へ]**をクリックします。  
   
-7.  In the **Choose Your Database Objects** page, expand **Tables** and select **Product (SalesLT)**.  
+7.  **データベース オブジェクトの選択** ページで、展開**テーブル**選択**Product (SalesLT)**です。  
   
-8.  Click **Finish**.  
+8.  **[完了]**をクリックします。  
   
-     The AdventureWorksLTDataSet.xsd file is added to the **AdventureWorksDataSet** project. This file defines the following items:  
+     AdventureWorksLTDataSet.xsd ファイルに追加、 **AdventureWorksDataSet**プロジェクト。 このファイルでは、次の項目を定義します。  
   
-    -   A typed dataset named `AdventureWorksLTDataSet`. This dataset represents the contents of the Product table in the AdventureWorksLT database.  
+    -   `AdventureWorksLTDataSet`という名前の型指定されたデータセット。 このデータセットでは、AdventureWorksLT データベースは Product テーブルの内容を表します。  
   
-    -   A TableAdapter named `ProductTableAdapter`. This TableAdapter can be used to read and write data in the `AdventureWorksLTDataSet`. For more information, see [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).  
+    -   という名前の TableAdapter`ProductTableAdapter`です。 この TableAdapter データを読み書きするために使用できます、`AdventureWorksLTDataSet`です。 詳細については、「 [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)」を参照してください。  
   
-     You will use both of these objects later in this walkthrough.  
+     これらのオブジェクトは、どちらもこのチュートリアルの後半で使用します。  
   
-9. In **Solution Explorer**, right-click **AdventureWorksDataSet** and click **Build**.  
+9. **ソリューション エクスプ ローラー**を右クリックして**AdventureWorksDataSet**  をクリック**ビルド**です。  
   
-     Verify that the project builds without errors.  
+     プロジェクトのビルドでエラーが発生しないことを確認します。  
   
-## <a name="creating-an-excel-workbook-project"></a>Creating an Excel Workbook Project  
- Create an Excel workbook project for the interface to the data. Later in this walkthrough, you will create a <xref:Microsoft.Office.Tools.Excel.ListObject> that displays the data, and you will add an instance of the dataset to the data cache in the workbook.  
+## <a name="creating-an-excel-workbook-project"></a>Excel ブック プロジェクトの作成  
+ データへのインターフェイス用の Excel ブック プロジェクトを作成します。 このチュートリアルの後半で作成するが、<xref:Microsoft.Office.Tools.Excel.ListObject>データを表示して、ブック内のデータ キャッシュに、データセットのインスタンスを追加します。  
   
-#### <a name="to-create-the-excel-workbook-project"></a>To create the Excel workbook project  
+#### <a name="to-create-the-excel-workbook-project"></a>Excel ブック プロジェクトを作成するには  
   
-1.  In **Solution Explorer**, right-click the **AdventureWorksDataSet** solution, point to **Add**, and then click **New Project**.  
+1.  **ソリューション エクスプ ローラー**を右クリックし、 **AdventureWorksDataSet**ソリューションでは、順にポイント**追加**、クリックして**新しいプロジェクト**です。  
   
-2.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then expand **Office/SharePoint**.  
+2.  テンプレート ペインで、 **[Visual C#]** または **[Visual Basic]**を展開してから、 **[Office/SharePoint]**を展開します。  
   
-3.  Under the expanded **Office/SharePoint** node, select the **Office Add-ins** node.  
+3.  展開した **[Office/SharePoint]** ノードの下で、 **[Office Add-ins]** ノードを選択します。  
   
-4.  In the list of project templates, select the **Excel 2010 Workbook** or **Excel 2013 Workbook** project.  
+4.  プロジェクト テンプレートのリストで、 **[Excel 2010 ブック]** または **[Excel 2013 ブック]** プロジェクトを選択します。  
   
-5.  In the **Name** box, type **AdventureWorksReport**. Do not modify the location.  
+5.  **名前**ボックスに、入力**AdventureWorksReport**です。 場所は変更しないでください。  
   
-6.  Click **OK**.  
+6.  **[OK]** をクリックします。  
   
-     The **Visual Studio Tools for Office Project Wizard** opens.  
+     **Visual Studio Tools for Office プロジェクト ウィザード** が開きます。  
   
-7.  Ensure that **Create a new document** is selected, and click **OK**.  
+7.  いることを確認**新しいドキュメントを作成する**を選択して、をクリックして**OK**です。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] opens the **AdventureWorksReport** workbook in the designer and adds the **AdventureWorksReport** project to **Solution Explorer**.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]開きます、 **AdventureWorksReport**デザイナーでブックを追加し、 **AdventureWorksReport**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
-## <a name="adding-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Adding the Dataset to Data Sources in the Excel Workbook Project  
- Before you can display the dataset in the Excel workbook, you must first add the dataset to data sources in the Excel workbook project.  
+## <a name="adding-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Excel ブック プロジェクトのデータ ソースにデータセットを追加します。  
+ データセットを表示するには、Excel ブックで、前に、Excel ブック プロジェクトのデータ ソースにデータセットを追加する必要があります。  
   
-#### <a name="to-add-the-dataset-to-the-data-sources-in-the-excel-workbook-project"></a>To add the dataset to the data sources in the Excel workbook project  
+#### <a name="to-add-the-dataset-to-the-data-sources-in-the-excel-workbook-project"></a>Excel ブック プロジェクトのデータ ソースにデータセットを追加するには  
   
-1.  In **Solution Explorer**, double-click **Sheet1.cs** or **Sheet1.vb** under the **AdventureWorksReport** project.  
+1.  **ソリューション エクスプ ローラー**をダブルクリックして**Sheet1.cs**または**Sheet1.vb**下にある、 **AdventureWorksReport**プロジェクト。  
   
-     The workbook opens in the designer.  
+     ブックは、デザイナーで開きます。  
   
-2.  On the **Data** menu, click **Add New Data Source**.  
+2.  **[データ]** メニューの **[新しいデータ ソースの追加]**をクリックします。  
   
-     The **Data Source Configuration Wizard** opens.  
+     **データ ソース構成ウィザード**が開きます。  
   
-3.  Click **Object**, and then click **Next**.  
+3.  をクリックして**オブジェクト**、順にクリック**次**です。  
   
-4.  In the **Select the Object You Wish to Bind** to page, click **Add Reference**.  
+4.  **、オブジェクトを選択バインド** ページで、をクリックする**参照の追加**です。  
   
-5.  On the **Projects** tab, click **AdventureWorksDataSet** and then click **OK**.  
+5.  **プロジェクト** タブで、をクリックして**AdventureWorksDataSet**  をクリックし、 **OK**です。  
   
-6.  Under the **AdventureWorksDataSet** namespace of the **AdventureWorksDataSet** assembly, click **AdventureWorksLTDataSet** and then click **Finish**.  
+6.  下にある、 **AdventureWorksDataSet**の名前空間、 **AdventureWorksDataSet**アセンブリをクリックして**AdventureWorksLTDataSet**順にクリック**[完了]**.  
   
-     The **Data Sources** window opens, and **AdventureWorksLTDataSet** is added to the list of data sources.  
+     **データソース**ウィンドウが開き、および**AdventureWorksLTDataSet**がデータ ソースの一覧に追加します。  
   
-## <a name="creating-a-listobject-that-is-bound-to-an-instance-of-the-dataset"></a>Creating a ListObject That Is Bound to an Instance of the Dataset  
- To display the dataset in the workbook, create a <xref:Microsoft.Office.Tools.Excel.ListObject> that is bound to an instance of the dataset. For more information about binding controls to data, see [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md).  
+## <a name="creating-a-listobject-that-is-bound-to-an-instance-of-the-dataset"></a>データセットのインスタンスにバインドされる listobject コントロールの作成  
+ 表示するには、データセット、ブックの作成、<xref:Microsoft.Office.Tools.Excel.ListObject>データセットのインスタンスにバインドされています。 コントロールのデータへのバインドについて詳しくは、「 [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)」をご覧ください。  
   
-#### <a name="to-create-a-listobject-that-is-bound-to-an-instance-of-the-dataset"></a>To create a ListObject that is bound to an instance of the dataset  
+#### <a name="to-create-a-listobject-that-is-bound-to-an-instance-of-the-dataset"></a>データセットのインスタンスにバインドされた listobject コントロールを作成するには  
   
-1.  In the **Data Sources** window, expand the **AdventureWorksLTDataSet** node under **AdventureWorksDataSet**.  
+1.  **データソース**ウィンドウで、展開、 **AdventureWorksLTDataSet**ノードの下**AdventureWorksDataSet**です。  
   
-2.  Select the **Product** node, click the drop-down arrow that appears, and select **ListObject** in the drop-down list.  
+2.  選択、**製品** ノードを選択し、表示されるドロップダウン矢印をクリックして**ListObject**ドロップダウン リストでします。  
   
-     If the drop-down arrow does not appear, confirm that the workbook is open in the designer.  
+     ドロップダウン矢印が表示されない場合は、ブックがデザイナーで開かれていることを確認します。  
   
-3.  Drag the **Product** table to cell A1.  
+3.  ドラッグ、**製品**セル A1 にテーブルです。  
   
-     A <xref:Microsoft.Office.Tools.Excel.ListObject> control named `productListObject` is created on the worksheet, starting in cell A1. At the same time, a dataset object named `adventureWorksLTDataSet` and a <xref:System.Windows.Forms.BindingSource> named `productBindingSource` are added to the project. The <xref:Microsoft.Office.Tools.Excel.ListObject> is bound to the <xref:System.Windows.Forms.BindingSource>, which in turn is bound to the dataset object.  
+     A<xref:Microsoft.Office.Tools.Excel.ListObject>という名前のコントロール`productListObject`セル A1 にワークシート上に作成します。 同時、という名前のデータセット オブジェクト`adventureWorksLTDataSet`と<xref:System.Windows.Forms.BindingSource>という`productBindingSource`プロジェクトに追加されます。 <xref:Microsoft.Office.Tools.Excel.ListObject> が <xref:System.Windows.Forms.BindingSource>にバインドされ、さらにこれがデータセット オブジェクトにバインドされます。  
   
-## <a name="adding-the-dataset-to-the-data-cache"></a>Adding the Dataset to the Data Cache  
- To enable code outside the Excel workbook project to access the dataset in the workbook, you must add the dataset to the data cache. For more information about the data cache, see [Cached Data in Document-Level Customizations](../vsto/cached-data-in-document-level-customizations.md) and [Caching Data](../vsto/caching-data.md).  
+## <a name="adding-the-dataset-to-the-data-cache"></a>データ キャッシュにデータセットを追加します。  
+ ブック内のデータセットにアクセスする Excel ブック プロジェクトの外側のコードを有効にするには、データ キャッシュにデータセットを追加する必要があります。 データ キャッシュの詳細については、次を参照してください。[ドキュメント レベルのカスタマイズでキャッシュ データ](../vsto/cached-data-in-document-level-customizations.md)と[データをキャッシュ](../vsto/caching-data.md)です。  
   
-#### <a name="to-add-the-dataset-to-the-data-cache"></a>To add the dataset to the data cache  
+#### <a name="to-add-the-dataset-to-the-data-cache"></a>データ キャッシュにデータセットを追加するには  
   
-1.  In the designer, click **adventureWorksLTDataSet**.  
+1.  デザイナーで、をクリックして**adventureWorksLTDataSet**です。  
   
-2.  In the **Properties** window, set the **Modifiers** property to **Public**.  
+2.  **プロパティ**ウィンドウで、設定、**修飾子**プロパティを**パブリック**です。  
   
-3.  Set the **CacheInDocument** property to **True**.  
+3.  設定、 **CacheInDocument**プロパティを**True**です。  
   
-## <a name="initializing-the-dataset-in-the-workbook"></a>Initializing the Dataset in the Workbook  
- Before you can retrieve the data from the cached dataset by using the console application, you must first populate the cached dataset with data.  
+## <a name="initializing-the-dataset-in-the-workbook"></a>ブック内のデータセットの初期化  
+ キャッシュされたデータセットからデータを取得するには、コンソール アプリケーションを使用して、前にまず、キャッシュされたデータセットにデータを設定する必要があります。  
   
-#### <a name="to-initialize-the-dataset-in-the-workbook"></a>To initialize the dataset in the workbook  
+#### <a name="to-initialize-the-dataset-in-the-workbook"></a>ブック内のデータセットを初期化するために  
   
-1.  In **Solution Explorer**, right-click the **Sheet1.cs** or **Sheet1.vb** file and click **View Code**.  
+1.  **ソリューション エクスプ ローラー**を右クリックし、 **Sheet1.cs**または**Sheet1.vb**ファイルし、クリックして**コードの表示**です。  
   
-2.  Replace the `Sheet1_Startup` event handler with the following code. This code uses an instance of the `ProductTableAdapter` class that is defined in the **AdventureWorksDataSet** project to fill the cached dataset with data, if it is currently empty.  
+2.  `Sheet1_Startup` イベント ハンドラーを次のコードで置き換えます。 このコードのインスタンスを使用して、`ProductTableAdapter`クラスで定義されている、 **AdventureWorksDataSet**キャッシュされたデータセットにデータを格納、現在は空である場合のプロジェクトです。  
   
-     [!code-csharp[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/CSharp/AdventureWorksDataSet/AdventureWorksReport/Sheet1.cs#8)]  [!code-vb[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/AdventureWorksReport/Sheet1.vb#8)]  
+     [!code-csharp[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/CSharp/AdventureWorksDataSet/AdventureWorksReport/Sheet1.cs#8)]
+     [!code-vb[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/AdventureWorksReport/Sheet1.vb#8)]  
   
-## <a name="checkpoint"></a>Checkpoint  
- Build and run the Excel workbook project to ensure that it compiles and runs without errors. This operation also fills the cached dataset and saves the data in the workbook.  
+## <a name="checkpoint"></a>チェックポイント  
+ ビルドして、Excel ブック プロジェクトをコンパイルおよび実行エラーが発生しないことを確認を実行します。 この操作もキャッシュされたデータセットを入力し、ブックのデータを保存します。  
   
-#### <a name="to-build-and-run-the-project"></a>To build and run the project  
+#### <a name="to-build-and-run-the-project"></a>プロジェクトをビルドして実行するには  
   
-1.  In **Solution Explorer**, right-click the **AdventureWorksReport** project, choose **Debug**, and then click **Start new instance**.  
+1.  **ソリューション エクスプ ローラー**を右クリックし、 **AdventureWorksReport**プロジェクト**デバッグ**、順にクリック**新しいインスタンスを開始**です。  
   
-     The project is built, and the workbook opens in Excel. Verify the following:  
+     プロジェクトがビルドされ、Excel でブックを開きます。 次のことを検証します。  
   
-    -   The <xref:Microsoft.Office.Tools.Excel.ListObject> fills with data.  
+    -   <xref:Microsoft.Office.Tools.Excel.ListObject>にデータを入力します。  
   
-    -   The value in the **ListPrice** column for the first row of the <xref:Microsoft.Office.Tools.Excel.ListObject> is 1431.5. Later in this walkthrough, you will use a console application to modify the values in the **ListPrice** column.  
+    -   値、 **ListPrice**の最初の行の列、 <xref:Microsoft.Office.Tools.Excel.ListObject> 1431.5 がします。 このチュートリアルの後半では、コンソール アプリケーションを使用で値を変更する、 **ListPrice**列です。  
   
-2.  Save the workbook. Do not modify the file name or the location of the workbook.  
+2.  ブックを保存します。 ファイル名またはブックの場所を変更しないでください。  
   
-3.  Close Excel.  
+3.  Excel を終了します。  
   
-## <a name="creating-a-console-application-project"></a>Creating a Console Application Project  
- Create a console application project to use to modify data in the cached dataset in the workbook.  
+## <a name="creating-a-console-application-project"></a>コンソール アプリケーション プロジェクトを作成します。  
+ 使用して、ブックのキャッシュされたデータセットのデータを変更するコンソール アプリケーション プロジェクトを作成します。  
   
-#### <a name="to-create-the-console-application-project"></a>To create the console application project  
+#### <a name="to-create-the-console-application-project"></a>コンソール アプリケーション プロジェクトを作成するには  
   
-1.  In **Solution Explorer**, right-click the **AdventureWorksDataSet** solution, point to **Add**, and then click **New Project**.  
+1.  **ソリューション エクスプ ローラー**を右クリックし、 **AdventureWorksDataSet**ソリューションでは、順にポイント**追加**、クリックして**新しいプロジェクト**です。  
   
-2.  In the **Project Types** pane, expand **Visual C#** or **Visual Basic**, and then click **Windows**.  
+2.  **プロジェクトの種類** ウィンドウで、展開**Visual c#**または**Visual Basic**、クリックして**Windows**です。  
   
-3.  In the **Templates** pane, select **Console Application**.  
+3.  **テンプレート**ペインで、**コンソール アプリケーション**です。  
   
-4.  In the **Name** box, type **DataReader**. Do not modify the location.  
+4.  **名前**ボックスに、入力**DataReader**です。 場所は変更しないでください。  
   
-5.  Click **OK**.  
+5.  **[OK]** をクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adds the **DataReader** project to **Solution Explorer** and opens the **Program.cs** or **Module1.vb** code file.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **DataReader**プロジェクトを**ソリューション エクスプ ローラー**開くと、 **Program.cs**または**Module1.vb**コード ファイル。  
   
-## <a name="retrieving-data-from-the-cached-dataset-by-using-the-console-application"></a>Retrieving Data from the Cached Dataset by Using the Console Application  
- Use the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class in the console application to read the data into a local `AdventureWorksLTDataSet` object. To confirm that the local dataset was initialized with data from the cached dataset, the application displays the number of rows in the local dataset.  
+## <a name="retrieving-data-from-the-cached-dataset-by-using-the-console-application"></a>コンソール アプリケーションを使用して、キャッシュされたデータセットからのデータの取得  
+ 使用して、 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 、コンソール アプリケーションをローカルにデータを読み取るクラス`AdventureWorksLTDataSet`オブジェクト。 ローカル データセットがキャッシュされたデータセットからのデータで初期化されたことを確認するには、アプリケーションには、ローカルのデータセットの行の数が表示されます。  
   
-#### <a name="to-retrieve-data-from-the-cached-dataset"></a>To retrieve data from the cached dataset  
+#### <a name="to-retrieve-data-from-the-cached-dataset"></a>キャッシュされたデータセットからデータを取得するには  
   
-1.  In **Solution Explorer**, right-click the **DataReader** project and click **Add Reference**.  
+1.  **ソリューション エクスプ ローラー**を右クリックし、 **DataReader**プロジェクトし、クリックして**参照の追加**です。  
   
-2.  On the **.NET** tab, select Microsoft.VisualStudio.Tools.Applications.ServerDocument.  
+2.  **.NET**  タブで、Microsoft.VisualStudio.Tools.Applications.ServerDocument を選択します。  
   
-3.  Click **OK**.  
+3.  **[OK]** をクリックします。  
   
-4.  In **Solution Explorer**, right-click the **DataReader** project and click **Add Reference**.  
+4.  **ソリューション エクスプ ローラー**を右クリックし、 **DataReader**プロジェクトし、クリックして**参照の追加**です。  
   
-5.  On the **Projects** tab, select **AdventureWorksDataSet**, and click **OK**.  
+5.  **プロジェクト** タブで  **AdventureWorksDataSet**、 をクリック**OK**です。  
   
-6.  Open the Program.cs or Module1.vb file in the Code Editor.  
+6.  コード エディターで、Program.cs ファイルまたは Module1.vb ファイルを開きます。  
   
-7.  Add the following **using** (for C#) or **Imports** (for Visual Basic) statement to the top of the code file.  
+7.  次の追加**を使用して**(C# の場合) または**Imports** (Visual Basic の場合) のステートメントをコード ファイルの先頭。  
   
-     [!code-csharp[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#1)]  [!code-vb[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#1)]  
+     [!code-csharp[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#1)]
+     [!code-vb[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#1)]  
   
-8.  Add the following code to the `Main` method. This code declares the following objects:  
+8.  `Main` メソッドに次のコードを追加します。 このコードは、次のオブジェクトを宣言します。  
   
-    -   An instance of the `AdventureWorksLTDataSet` type that is defined in the **AdventureWorksDataSet** project.  
+    -   インスタンス、`AdventureWorksLTDataSet`で定義されている型、 **AdventureWorksDataSet**プロジェクト。  
   
-    -   The path to the AdventureWorksReport workbook in the build folder of the **AdventureWorksReport** project.  
+    -   ビルド フォルダー内の AdventureWorksReport ブックへのパス、 **AdventureWorksReport**プロジェクト。  
   
-    -   A <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> object to use to access the data cache in the workbook.  
+    -   A<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>を使用して、ブック内のデータ キャッシュにアクセスするオブジェクト。  
   
         > [!NOTE]  
-        >  The following code assumes that the workbook is saved using the .xlsx extension. If the workbook in your project has a different extension, modify the path as necessary.  
+        >  次のコードでは、.xlsx 拡張子を使用して、ブックを保存することを前提としています。 プロジェクトのブックに別の拡張機能がある場合は、必要に応じてパスを変更します。  
   
-     [!code-csharp[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#10)] [!code-vb[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#10)]  
+     [!code-csharp[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#10)]
+     [!code-vb[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#10)]  
   
-9. Add the following code to the `Main` method, after the code you added in the previous step. This code performs the following tasks:  
+9. 次のコードを追加、`Main`メソッド、前の手順で追加したコードの後にします。 このコードは次のタスクを実行します。  
   
-    -   It uses the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> property of the <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> class to access the cached dataset in the workbook.  
+    -   使用して、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A>のプロパティ、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>ブックのキャッシュされたデータセットにアクセスするクラス。  
   
-    -   It reads the data from the cached dataset into the local dataset.  
+    -   ローカルのデータセットにキャッシュされたデータセットからデータを読み取ります。  
   
-    -   It displays the number of rows in the local dataset, to confirm that it has data.  
+    -   ローカルのデータセットのデータが入っていることを確認する行の数を表示します。  
   
-     [!code-csharp[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#11)] [!code-vb[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#11)]  
+     [!code-csharp[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#11)]
+     [!code-vb[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#11)]  
   
-10. On the **Build** menu, click **Build DataReader**.  
+10. **ビルド** メニューのをクリックして**ビルド DataReader**です。  
   
-## <a name="testing-the-project"></a>Testing the Project  
- When you run the console application, it displays the number of rows in the local dataset.  
+## <a name="testing-the-project"></a>プロジェクトのテスト  
+ コンソール アプリケーションを実行するときに、ローカルのデータセットの行の数が表示されます。  
   
-#### <a name="to-test-the-workbook"></a>To test the workbook  
+#### <a name="to-test-the-workbook"></a>ブックをテストするには  
   
-1.  In **Solution Explorer**, right-click the **DataReader** project, point to **Debug**, and then click **Start new instance**.  
+1.  **ソリューション エクスプ ローラー**を右クリックし、 **DataReader**プロジェクトをポイントし、**デバッグ**、クリックして**新しいインスタンスを開始**です。  
   
-     Verify that the application reports that the local dataset has 295 rows.  
+     アプリケーションがローカルの dataset に 295 行が含まれていることが報告されることを確認します。  
   
-2.  Press ENTER to close the application.  
+2.  アプリケーションを終了するには、enter キーを押します。  
   
-## <a name="next-steps"></a>Next Steps  
- You can learn more about working with cached data from these topics:  
+## <a name="next-steps"></a>次の手順  
+ これらのトピックからキャッシュされたデータの処理に関する詳細を学習できます。  
   
--   Changing the data in a cached dataset without starting Excel. For more information, see [Walkthrough: Changing Cached Data in a Workbook on a Server](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md).  
+-   Excel を起動せずには、キャッシュされたデータセット内のデータを変更します。 詳細については、次を参照してください。[チュートリアル: サーバー上のブック内のキャッシュされたデータの変更](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)です。  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: Inserting Data into a Workbook on a Server](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)   
- [Walkthrough: Changing Cached Data in a Workbook on a Server](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)   
- [Connecting to Data in Windows Forms Applications](/visualstudio/data-tools/connecting-to-data-in-windows-forms-applications)  
+## <a name="see-also"></a>関連項目  
+ [チュートリアル: サーバー上のブックへのデータの挿入](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)   
+ [チュートリアル: サーバー上のブックにキャッシュされたデータの変更](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)   
+ [Windows フォーム アプリケーションでのデータへの接続](/visualstudio/data-tools/connecting-to-data-in-windows-forms-applications)  
   
   

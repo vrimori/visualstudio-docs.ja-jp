@@ -1,59 +1,60 @@
 ---
-title: "方法: アプリケーション ページを作成する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "アプリケーション ページ [Visual Studio での SharePoint 開発], 追加"
-  - "アプリケーション ページ [Visual Studio での SharePoint 開発], 作成"
+title: "方法: アプリケーション ページを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- application pages [SharePoint development in Visual Studio], adding
+- application pages [SharePoint development in Visual Studio], creating
 ms.assetid: 9ad7044a-2fa7-4bba-8f25-b9f2cc1b7c6b
-caps.latest.revision: 16
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 80e85ca5da81b4e8dd715867a8819dbf292f527a
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: アプリケーション ページを作成する
-  一つまたは複数の SharePoint サイトの ASP.NET Web ページを作成できます。  SharePoint では、このようなページのことをアプリケーション ページと呼びます。  サイト ページとは異なり、アプリケーション ページには、ページとは分離して実行されるコードが含まれます。  詳細については、「[SharePoint のアプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)」を参照してください。  
+# <a name="how-to-create-an-application-page"></a>方法: アプリケーション ページを作成する
+  1 つまたは複数の SharePoint サイトの ASP.NET web ページを作成することができます。 SharePoint では、これらのページはアプリケーション ページと呼ばれます。 サイトのページとは異なり、アプリケーション ページには、ページの背面に実行されるコードが含まれています。 詳細については、次を参照してください。 [for SharePoint アプリケーション ページを作成する](../sharepoint/creating-application-pages-for-sharepoint.md)です。  
   
-### アプリケーション ページを作成するには  
+### <a name="to-create-an-application-page"></a>アプリケーション ページを作成するには  
   
 1.  Visual Studio で、SharePoint プロジェクトを開くか作成します。  
   
-     詳細については、「[SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)」を参照してください。  
+     詳細については、次を参照してください。 [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)です。  
   
 2.  **ソリューション エクスプローラー**で、プロジェクト ノードを選択します。  
   
-3.  メニュー バーで **\[プロジェクト\]**、**\[新しい項目の追加\]** の順に選択します。  
+3.  メニュー バーで、次のように選択します。**プロジェクト**、**新しい項目の追加**です。  
   
-4.  **\[新しいアイテムの追加\]** ダイアログ ボックスで、**\[SharePoint\]** ノードを展開し、**2010** 項目を選択します。  
+4.  **新しい項目の追加** ダイアログ ボックスで、展開、 **SharePoint**  ノードを選択し、 **2010**項目。  
   
-5.  SharePoint テンプレートの一覧で、**\[アプリケーション ページ\]** をクリックします。  
+5.  SharePoint テンプレートの一覧で選択**アプリケーション ページ**です。  
   
-6.  **\[名前\]** ボックスに名前をアプリケーション ページに指定し、**\[追加\]** ボタンをクリックします。  
+6.  **名前**ボックス、アプリケーション ページの名前を指定し、選択、**追加**ボタンをクリックします。  
   
-     複数のフォルダーとファイルがプロジェクトに追加されます。  これらのファイルの詳細については、「[SharePoint のアプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)」を参照してください。  
+     複数のフォルダーとファイルがプロジェクトに追加されます。 これらのファイルに関する詳細については、次を参照してください。 [for SharePoint アプリケーション ページを作成する](../sharepoint/creating-application-pages-for-sharepoint.md)です。  
   
-     Visual Web Developer デザイナーの **\[ソース\]** のビューでは、ASP.NET ページ ファイルが表示されます。  コントロールを **\[ツールボックス\]** から追加し、コンテンツ プレースホルダーに配置することにより、ページをデザインできます。  詳細については、「[ソース ビュー \(Web ページ デザイナー\)](http://msdn.microsoft.com/ja-jp/5911396b-fe51-4150-9ff1-b085f812862f)」を参照してください。  
+     **ソース**Visual Web Developer デザイナーで、ASP.NET ページのファイルのビューが表示されます。 コントロールを追加して、ページをデザインすることができます、**ツールボックス**コンテンツ プレース ホルダーに配置することです。 詳細については、次を参照してください。[ソース ビュー、Web ページ デザイナー](http://msdn.microsoft.com/en-us/5911396b-fe51-4150-9ff1-b085f812862f)です。  
   
-7.  コントロール イベントを処理したい場合は、アプリケーション ページのコード ファイルにコードを追加します。  
+7.  コントロールのイベントを処理する場合は、アプリケーション ページのコード ファイルにコードを追加します。  
   
-     コード ファイルが ASP.NET ページ ファイルのノードを展開し、.cs または .vb 拡張子がある場合は、プロジェクトの言語によって表示されます。  アプリケーション ページを作成する方法の詳細については、「[チュートリアル: SharePoint アプリケーション ページの作成](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)」を参照してください。  
+     コード ファイルでは、ASP.NET ページのファイルのノードを展開する場合に表示されます、.cs または .vb ファイルの拡張子は、プロジェクトの言語に応じて。 アプリケーション ページを作成する方法のエンド ツー エンド例は、次を参照してください。[チュートリアル: SharePoint アプリケーション ページを作成する](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)です。  
   
-## 参照  
- [Visual Studio Web Development Content Map](http://msdn.microsoft.com/ja-jp/9c31f93b-c8fb-4599-9b14-6194ec8c7539)   
- [SharePoint のアプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)   
+## <a name="see-also"></a>関連項目  
+ [For SharePoint アプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)   
  [チュートリアル: SharePoint アプリケーション ページの作成](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)  
   
   

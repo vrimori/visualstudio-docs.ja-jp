@@ -1,52 +1,54 @@
 ---
-title: "方法: プロジェクト出力参照を追加する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "プロジェクト出力参照 [Visual Studio での SharePoint 開発]"
-  - "Visual Studio での SharePoint 開発, 高度なパッケージ化ツール"
-  - "Visual Studio での SharePoint 開発, プロジェクト出力参照"
+title: "方法: プロジェクト出力参照の追加 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- project output references [SharePoint development in Visual Studio]
+- SharePoint development in Visual Studio, project output references
+- SharePoint development in Visual Studio, advanced packaging tools
 ms.assetid: 9d6bc25e-bf0d-4483-a691-2ad7a796fa80
-caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: faf46489be0b9a56485fc93c2138a7f6702c4778
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: プロジェクト出力参照を追加する
-  SharePoint 以外のプロジェクトのアセンブリ \(Silverlight プロジェクトの場合は .xap ファイル\) を SharePoint に配置するには、それらをプロジェクト出力参照として追加します。  
+# <a name="how-to-add-a-project-output-reference"></a>方法: プロジェクト出力参照を追加する
+  以外の SharePoint プロジェクトのアセンブリ (または Silverlight プロジェクトでの .xap ファイル) を SharePoint を展開するには、それらをプロジェクト出力参照として追加します。  
   
- プロジェクト出力参照を追加すると、その 2 つのプロジェクトの間にソリューションのビルドの依存関係が作成されます。  プロジェクト出力参照で関連付けられたプロジェクトは、SharePoint プロジェクトがビルドされて配置される前にビルドされます。  
+ このプロセスでは、2 つのプロジェクト間ソリューション ビルドの依存関係を作成します。 SharePoint プロジェクトをビルドおよび配置する前に、プロジェクト出力参照に関連付けられているプロジェクトが構築されます。  
   
-### プロジェクト出力参照を追加するには  
+### <a name="to-add-a-project-output-reference"></a>プロジェクト出力参照を追加するには  
   
-1.  SharePoint プロジェクトと SharePoint 以外のプロジェクトを少なくとも 1 つずつ含むソリューションを読み込みます。  
+1.  少なくとも 1 つの SharePoint プロジェクトと 1 つ以外の SharePoint プロジェクトを含むソリューションを読み込みます。  
   
-2.  **\[ソリューション エクスプローラー\]** では、SharePoint プロジェクト項目のノードを選択します。  
+2.  **ソリューション エクスプ ローラー**項目、SharePoint プロジェクト ノードを選択します。  
   
-3.  **\[プロパティ\]** ウィンドウで、**\[プロジェクト出力参照\]** のプロパティをクリックし、その横にある省略記号 \(![ASP.NET モバイル デザイナー楕円](~/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")\) ボタンをクリックします。  
+3.  **プロパティ**ウィンドウで、選択、**プロジェクト出力参照**プロパティを選択し、省略記号 (![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.gif "ASP です。NET モバイル デザイナー楕円")) ボタンをクリックします。  
   
-4.  **\[プロジェクト出力参照\]** ダイアログ ボックスで、**\[追加\]** ボタンをクリックします。  
+4.  **プロジェクト出力参照** ダイアログ ボックスで、選択、**追加**ボタンをクリックします。  
   
-5.  プロパティ ペインで、下向きの矢印を **\[配置タイプ\]** のプロパティの横に選択し、表示する **\[ElementFile\]** など、SharePoint アイテムの適切な値を選択します。  
+5.  プロパティ ウィンドウを選択 の横に矢印、**展開の種類**プロパティ以外の SharePoint アイテムを参照しているなどの適切な値を選択し**ElementFile**です。  
   
-6.  **\[プロジェクト名\]** の横の矢印をクリックし、非 SharePoint プロジェクト項目の名前を選択し、**\[OK\]** ボタンをクリックします。  
+6.  横の矢印を選択**プロジェクト名**、以外の SharePoint プロジェクト項目の名前を選択し、、 **OK**ボタンをクリックします。  
   
-## 参照  
- [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
- [方法: コントロールを安全なコントロールとしてマークする](../sharepoint/how-to-mark-controls-as-safe-controls.md)   
+## <a name="see-also"></a>関連項目  
+ [パッケージとプロジェクト アイテムの展開情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
+ [方法: 安全なコントロールとしてマークの制御](../sharepoint/how-to-mark-controls-as-safe-controls.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

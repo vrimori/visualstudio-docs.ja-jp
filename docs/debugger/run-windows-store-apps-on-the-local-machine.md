@@ -1,59 +1,48 @@
 ---
-title: "ローカル コンピューターでの Windows ストア アプリの実行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "ローカル コンピューター上の UWP アプリの実行 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: e42a21a8-6423-4caf-b4dc-72b263e76019
-caps.latest.revision: 15
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 08e0108a3fb7a93dc19fe1aa96988912068ace70
+ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/11/2017
 ---
-# ローカル コンピューターでの Windows ストア アプリの実行
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-![Windows のみに適用されます](~/debugger/media/windows_only_content.png "windows\_only\_content")  
+# <a name="run-uwp-apps-on-the-local-machine"></a>ローカル コンピューター上の UWP アプリを実行します。
+![Windows にのみ適用されます](../debugger/media/windows_only_content.png "windows_only_content")  
   
- Windows ストア アプリのパフォーマンス分析のデバッグ、テスト、実行を行う場合、Visual Studio をホストする同じコンピューター上でアプリを実行することができます。  デバイスのディスプレイがタッチ対応である場合は、アプリの全機能を実施できますが、そうでない場合の操作はマウスとキーボードに限定されます。  
+ デバッグ、テスト、または、UWP アプリのパフォーマンス分析の実行、同じコンピューターにアプリの実行する Visual Studio をホストします。 デバイスのディスプレイがタッチ対応である場合は、アプリの全機能を実施できますが、そうでない場合の操作はマウスとキーボードに限定されます。  
   
-##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
- 以下を学習できます。  
+##  <a name="BKMK_How_to_run_on_a_local_machine"></a>ローカル コンピューター上で実行する方法  
+ アプリを実行する、ローカル コンピューターで、次のように選択します。**ローカル マシン**デバッガーのデバッグの開始ボタンの横にあるドロップダウン リストから**標準**ツールバー。  
   
- [ローカル コンピューター上での実行方法](#BKMK_How_to_run_on_a_local_machine)  
+ ![ローカル コンピューター上で実行](../debugger/media/vsrun_f5_local.png "VSRUN_F5_Local")  
   
- [1 つのモニターで Windows ストア アプリと Visual Studio を切り替える方法](#BKMK_How_to_switch_between_a_Windows_Store_app_and_Visual_Studio_on_a_single_monitor)  
-  
-##  <a name="BKMK_How_to_run_on_a_local_machine"></a> ローカル コンピューター上での実行方法  
- ローカル コンピューター上でアプリを実行するには、デバッガーの **\[標準\]** ツール バーの デバッグの開始ボタンの横にあるドロップダウン リストから **\[ローカル コンピューター\]** を選択します。  
-  
- ![ローカル コンピューターでの実行](../debugger/media/vsrun_f5_local.png "VSRUN\_F5\_Local")  
-  
- **\[標準\]** ツールバーが表示されない場合は、**\[表示\]** メニューをクリックして **\[ツール バー\]** をポイントし、さらに **\[標準\]** をクリックします。  
+ 表示されない場合、**標準**ツールバーで、をクリックして、**ビュー**  メニューのをポイント**ツールバー**、順にクリック**標準**です。  
   
  ドロップダウン リストでの選択はプロジェクトのプロパティ ファイルに残され、既定の実行ターゲットとなります。  
   
- 実行ターゲットは、プロジェクトのプロパティ ファイルに直接設定することもできます。  **\[ソリューション エクスプローラー\]** でプロジェクト名を右クリックし、**\[プロパティ\]** をクリックします。  次に、以下のいずれかを実行します。  
+ 実行ターゲットは、プロジェクトのプロパティ ファイルに直接設定することもできます。 プロジェクト名を右クリックして**ソリューション エクスプ ローラー**を選択し**プロパティ**です。 次に、以下のいずれかを実行します。  
   
--   C\# と Visual Basic のプロジェクトから、**\[デバッグ\]** をクリックして、次に **\[ターゲット デバイス\]** ドロップダウン リストから **\[ローカル コンピューター\]** を選択します。  
+-   C# および Visual Basic のプロジェクトでクリックして**デバッグ**し、**ローカル マシン**から、**ターゲット デバイス**ドロップダウン リスト。  
   
-     ![C&#35; および Visual Basic プロジェクト プロパティ ページ](~/debugger/media/vsrun_cs_vb_projprop_local.png "VSRUN\_CS\_VB\_ProjProp\_Local")  
+     ![C &#35;です。Visual Basic プロジェクトのプロパティ ページ](../debugger/media/vsrun_cs_vb_projprop_local.png "VSRUN_CS_VB_ProjProp_Local")  
   
--   C\+\+ と JavaScript のプロジェクトから、**\[構成プロパティ\]** ノードを展開して **\[デバッグ\]** をクリックし、次に **\[起動するデバッガー\]** リストから **\[ローカル デバッガー\]** を選択します。  
+-   C++ と JavaScript のプロジェクトで、展開、**構成プロパティ**ノード、をクリックして**デバッグ**、し、[**ローカル デバッガー**から、**デバッガー起動する**] ボックスの一覧です。  
   
-     ![C&#43;&#43; および JavaScript プロジェクト プロパティ ページ](../debugger/media/vsrun_cpp_js_projprop_local.png "VSRUN\_CPP\_JS\_ProjProp\_Local")  
-  
-##  <a name="BKMK_How_to_switch_between_a_Windows_Store_app_and_Visual_Studio_on_a_single_monitor"></a> 1 つのモニターで Windows ストア アプリと Visual Studio を切り替える方法  
- **Windows ストア アプリの実行中のインスタンスから Visual Studio へ切り替えるには**  
-  
- ローカル コンピューターで Windows ストア アプリを実行する際に 1 つのモニターだけを使用する場合は、アプリを実行したまま Visual Studio へ切り替えるといいでしょう。  たとえば、イベント待ちだったり長いループや無限ループにトラップされるなど、アプリがブレークポイントに到達できない状態にある可能性があります。  Visual Studio に戻るには、Alt \+ Tab キーを押します。
+     ![C &#43; #43 です。JavaScript プロジェクトのプロパティ ページおよび](../debugger/media/vsrun_cpp_js_projprop_local.png "VSRUN_CPP_JS_ProjProp_Local")  

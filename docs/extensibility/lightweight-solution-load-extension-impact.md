@@ -1,103 +1,79 @@
 ---
-title: "軽量なソリューションの読み込み (LSL) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/17/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- VSPackages, lightweight solution load
-- VSPackages, fast solution load
-ms.assetid: 0a71d91e-dc71-4d6b-bbfe-9e4ecd9e5fd1
-caps.latest.revision: 1
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 221f4911981deec0330f76a82c0cc8a1b968e56e
-ms.openlocfilehash: 28957abccc03001546038da10cf4ff7bbe21f63e
-ms.lasthandoff: 02/22/2017
-
+redirect_url: /visualstudio/extensibility/what-s-new-in-the-visual-studio-2017-sdk/
+ms.openlocfilehash: 5706797ed88dce5b2f481b17d99e9501b960ddca
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="lightweight-solution-load-lsl"></a>軽量なソリューションの読み込み (LSL)
+タイトル:"軽量なソリューションの読み込み (LSL) |Microsoft ドキュメント"ms.custom:""ms.date::「01/17/2017」ms.reviewer:""ms.suite:""ms.technology:: 
+  - "vs ide sdk"ms.tgt_pltfrm:""ms.topic:: helpviewer_keywords を「記事」。 
+  - Vspackage、軽量なソリューションの読み込み」
+  - 「Vspackage には、ソリューションの読み込みが高速な」ms.assetid: 0a71d91e-dc71-4d6b-bbfe-9e4ecd9e5fd1 caps.latest.revision: 1 作成者:"gregvanl"ms.author:"gregvanl"マネージャー: ghogen
+---
+# <a name="lightweight-solution-load-lsl"></a>軽量のソリューションの読み込み (LSL)
 
-## <a name="background-information-on-lsl"></a>LSL に関する背景情報
+## <a name="background-information-on-lsl"></a>LSL の背景情報について
 
-軽量なソリューションの読み込みとは、ソリューションの読み込み時間を大幅に減少すると、すぐに生産性を向上させることが可能 VS 2017 の新機能です。 LSL を有効にすると、Visual Studio は完全に読み込まれませんプロジェクトで作業を開始するまで。
+VS 2017 年ソリューションの読み込み時間が大幅に低下すると、すぐに生産性を向上させるを有効にするの新機能は、軽量なソリューションを読み込みます。 LSL を有効にすると、Visual Studio は完全に読み込まれませんプロジェクトに作業を開始するまで。
 
-Visual Studio 拡張機能は LSL の影響を与えることができます。 機能がロードするプロジェクトに依存する拡張機能の動作またはこのドキュメントで詳細なガイダンスに従わず正常に動作しない可能性がありますできません。
+LSL Visual Studio 拡張機能に影響を与えることができます。 読み込まれるプロジェクトに依存してフィーチャーを持つ拡張機能の動作または従わず、このドキュメントで詳細なガイダンスは、正常に動作しない可能性がありますできません。
 
-LSL のさらに背景には、次のリンクを使用します。
+さらにバック グラウンドで LSL、次のリンクを使用します。
 
-* [軽量なソリューションの負荷のブログ](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15)
-* 質問ですか。 お問い合わせください。[lslsupport@microsoft.com](mailto:lslsupport@microsoft.com)
+* [簡易ソリューション ロード ブログ](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15)
+* 質問ですか。 ご連絡ください。[lslsupport@microsoft.com](mailto:lslsupport@microsoft.com)
 
 ## <a name="enable-the-setting-to-load-projects-in-deferred-mode"></a>「遅延」モードでのプロジェクトを読み込む設定を有効にします。
 
 1. 現在開いているソリューションを閉じます。
-2. 移動して**ツール** > **オプション** > **プロジェクトおよびソリューション** > **全般**の設定 ページ。
-3. チェック、**軽量なソリューションの読み込み**ボックス設定を有効にします。
+2. 移動して**ツール** > **オプション** > **プロジェクトおよびソリューション** > **全般**設定ページです。
+3. チェック、**軽量のソリューションの読み込み**ボックス設定を有効にします。
 
-上記の設定が有効で、ソリューションを開くと、IDE、プロジェクトの通常のビューを示していますが、プロジェクトが読み込まれていません。
+上の設定をオンになっているソリューションが開かれると、IDE、プロジェクトの通常のビューを示していますが、プロジェクトが読み込まれていません。
 
-## <a name="differences-between-deferred-load-and-regular-load-of-projects"></a>遅延読み込みとプロジェクトの標準の読み込みの相違点
+## <a name="differences-between-deferred-load-and-regular-load-of-projects"></a>遅延読み込みとプロジェクトの読み込みの正規の相違点
 
-ライトウェイト ソリューションの読み込みで、ソリューションを開くときに、プロジェクトは読み込まれません。 プロジェクトの場合これら"遅延"スタブ階層が作成されます。 ソリューション エクスプ ローラーでは、一部またはすべてのプロジェクトが「遅延モード」である UI を示す値はありませんアイコンと、プロジェクトの名前と予想されるビューを示します。
+ライトウェイト ソリューションの読み込みと、ソリューションを開くときに、プロジェクトは読み込まれません。 これら「遅延のプロジェクト」スタブ階層が作成されます。 ソリューション エクスプ ローラーが、一部またはすべてのプロジェクトは「遅延モード」で、UI の表示アイコンと、プロジェクトの名前と予想されるビューを示します。
 
-LSL が有効になっている、操作がトリガーされたときに、必要なプロジェクトを既に完全に読み込まれている不要になった拡張機能が予想できます。 呼び出し元は、読み込まれたプロジェクトに対する依存関係があるかどうかを確認する必要があります。 拡張機能には、遅延のプロジェクトからの情報が必要とする場合、拡張機能は、次を行います。
+LSL が有効になっている、操作がトリガーされたときに、必要なプロジェクトを既に完全に読み込まれている不要になった拡張機能が予想できます。 呼び出し元は、読み込まれたプロジェクトの依存関係があるかどうかを確認する必要があります。 拡張機能は、遅延のプロジェクトからの情報を必要とする場合、拡張機能は、次を行います。
 
 1. 必要に応じて、プロジェクトを読み込みます。
-2. 新しい**ワークスペース Api**遅延プロジェクトからそれを読み込むことがなく情報を取得します。
+2. 使用して、新しい**ワークスペース Api**それを読み込むことがなく遅延プロジェクトから情報を取得します。
 
-新しい**ワークスペース Api**遅延プロジェクトから、ソース ファイルと指定したプロジェクトのソース ファイルのすべての所有するプロジェクトなどの情報を取得する拡張を許可します。 場合によっては、限られた一連のプロジェクトをロードする必要があります。 適切なオプションは、操作の頻度、別の方法と全体的なユーザー エクスペリエンスの容易性のバランスです。
+新しい**ワークスペース Api**遅延プロジェクトからソース ファイルと指定したプロジェクトのソース ファイルのすべての所有しているプロジェクトなどの情報を取得する拡張を許可します。 場合によっては、プロジェクトの限定されたセットのみをロードする必要があります。 適切なオプションは、操作の頻度、別の方法と全体的なユーザー エクスペリエンスの簡単さのバランスです。
 
-すべてのプロジェクトおよびソリューションの読み込みの関連イベントがまだ LSL モードで発生します。 これにより、VS から想定される動作を取得するコンポーネントと、これらのプロジェクトが読み込まれる場合と同じ方法で動作します。 開いているソリューションの中に行われる作業が大幅に減少しましたが、プロジェクトの読み込みに関連します。
+すべてのプロジェクトおよびソリューションの読み込みの関連イベントが引き続き LSL モードで発生します。 これにより、VS から予期しない動作を取得するコンポーネントと、これらのプロジェクトが読み込まれる場合と同じ方法で動作します。 プロジェクトの読み込みは、開いているソリューションの中に行われる作業が大幅に軽減も関連します。
 
 ## <a name="ui-requirements-and-changes"></a>UI の要件と変更
 
-すべての UI は、等しいとして読み込まれ、遅延のプロジェクトを扱う必要があります。 つまり、読み込んだプロジェクトに対して実行できる任意のアクションは、いくつかの例外と遅延のプロジェクトに適用する必要があります。 これを実現する機能のため、既存のプラットフォーム Api だけでなく、新しい Api の導入への変更があります。
+すべての UI は、等しいとして読み込まれ、遅延のプロジェクトを処理する必要があります。 つまり、読み込まれたプロジェクトで実行できる任意のアクションは、いくつかの例外、遅延のプロジェクトに適用する必要があります。 これを実現する機能のため、既存のプラットフォーム Api、および新しい Api の概要に変更があります。
 
 ### <a name="expectations-for-ui"></a>UI の要件
 
-1. 機能は、visual 違いありませんに応じてプロジェクトが読み込まれるまたは遅延を表示する必要があります。
-2. 一覧や、ソリューションの読み込まれたプロジェクトを列挙には、遅延のプロジェクトを含める必要があります。
-3. 読み込んだプロジェクトに対して使用可能な任意のアクションを利用可能にする遅延のプロジェクトにする必要があります。
-4. 必須の機能の読み込み要求プロジェクトされる場合にのみ。
-  * ユーザーが直接対話機能があります。 プロジェクトをプリエンプティブ ロードしません。
-  * 」を参照してください結果は「ジェスチャはがユーザーによって行われます。 この UI ガイドラインは、以下を参照してください。
-  * アクションを満たすには、完全に読み込まれるプロジェクトのみを使用できます。 LSL と可能であれば、オープンのプロジェクト Api を使用し、機能がない場合機能の要求の要求を送信します。
+1. 機能は、visual 違いありませんによってプロジェクトが読み込まれたまたは遅延を示す必要があります。
+2. 任意の一覧またはソリューションの読み込まれたプロジェクト経由で列挙には、遅延プロジェクトを含める必要があります。
+3. 読み込まれたプロジェクトに対して使用可能な任意のアクションを遅延プロジェクトに対して使用できます。
+4. 必須の機能の読み込み要求される場合にのみのプロジェクトします。
+  * ユーザーの直接の対話機能があります。 プロジェクトをプリエンプティブ ロードしません。
+  * 」「結果は」ジェスチャがユーザーによって行われます。 この UI ガイドラインは、以下を参照してください。
+  * アクションを満たすには、完全に読み込まれるプロジェクトのみを使用できます。 LSL と、可能な限り、開いているプロジェクト Api を使用し、機能の要求では、機能が不足している場合が要求を送信します。
 
 ### <a name="changes-in-platform-apis-to-help-drive-ui"></a>プラットフォームに使用できるドライブ UI Api での変更
 
-1. ソリューションの読み込みのライトウェイト モードとプロジェクトの数が遅延状態で開いたかどうかは、ソリューションを確認する新しい Api が提供されます。
-2. 遅延のすべてのプロジェクトがソリューションに読み込まれるときに、用の新しいイベントが提供されます。
-3. これが延期されたかどうか、プロジェクトを確認する新しい Api が提供されます。
-4. 読み込まれたプロジェクトの要求時に遅延のプロジェクトを含めるには、既存の Api が更新されます。
-5. 既存の Api が更新され、高速解決するには完全に読み込まれるソリューションを開いた後です。
+1. ソリューションの読み込みのライトウェイト モードとプロジェクトの数が遅延状態で開かれたかどうか、ソリューションを確認する、新しい Api が提供されます。
+2. 遅延のすべてのプロジェクトがソリューションに読み込まれるときに、新しいイベントに提供されます。
+3. 遅延かどうか、プロジェクトを確認してください、新しい Api が提供されます。
+4. 読み込まれたプロジェクトを求めるときに、遅延のプロジェクトを含めるには、既存の Api が更新されます。
+5. 既存の Api が更新され、高速ソリューションが完全に読み込まれたソリューションが開かれた後にします。
 
 ### <a name="how-to-add-see-more-results-for-a-feature"></a>機能」を参照してください結果は「を追加する方法。
 
-プロジェクトの内容でクエリを実行する機能は、遅延のプロジェクトの影響を考慮する必要があります。 場合によっては、機能から取得できます、クエリの結果 LSL およびワークスペース Api プロジェクトの遅延。 それ以外の場合に、機能の制限はプロジェクトを読み込む必要があります。 このような状況の両方のプロジェクトと再度クエリを完全に読み込むできる新しい」「結果は」ジェスチャを提供します。 このジェスチャを使用すると、プロジェクトは、実際に読み込まれるときに、最適な結果を取得する方法をユーザーに提供しながらプロジェクトの遅延がある場合に最も近いを与えるに機能します。
+プロジェクトの内容でクエリを実行する機能には、遅延のプロジェクトの影響を考慮する必要があります。 場合によっては、機能から取得できます、クエリの結果 LSL およびワークスペース Api プロジェクトの遅延。 その他の場合は、特定機能の制限事項はプロジェクトが読み込まれる必要があります。 このような状況の両方のプロジェクトと再度クエリを完全に読み込みできる新しい」「結果は」ジェスチャを提供します。 このジェスチャを使用すると、プロジェクトは、実際に読み込まれるときに最適な結果を取得する方法をユーザーに提供中に遅延プロジェクトがある場合に最も近いを与えるに機能します。
 
-機能の全般的なアルゴリズムがあります。
+機能の一般的なアルゴリズムは次のようになります。
 
-### <a name="when-the-query-is-performed-over-a-single-project"></a>1 つのプロジェクトで、クエリを実行する時期
+### <a name="when-the-query-is-performed-over-a-single-project"></a>1 つのプロジェクトに対してクエリを実行する場合
 
 ```csharp
 // IsInDeferredState() and EnsureProjectIsLoadedHelper() in this sample can be found in the "Helpful code snippets" section of this document
@@ -150,7 +126,7 @@ public void Query()
     var solution = // the solution
     object deferredCount = 0;
     int hr = ((IVsSolution)solution).GetProperty((int)__VSPROPID7.VSPROPID_DeferredProjectCount, out deferredCount);
-    if (ErrorHandler.Succeeded(hr) && ((uint)deferredCount > 0))
+    if (ErrorHandler.Succeeded(hr) && ((int)deferredCount > 0))
     {
         ShowSeeMoreResults();
     }
@@ -177,36 +153,36 @@ public void OnClick_SeeMoreResults()
 
 ### <a name="new-api"></a>新しい API
 
-IVsSolution7.IsSolutionLoadDeferred (out 遅延 bool)
+(Out 遅延の bool) IVsSolution7.IsSolutionLoadDeferred
 
-遅延モードで現在のソリューションが読み込まれている場合に true を返します。 注場合でも、遅延のすべてのプロジェクトは、最終的にソリューションが遅延モードで読み込ま最初にある場合に読み込まれている現在のセッション (明示的なユーザー ジェスチャまたは操作によって強制による) では、このプロパティはやはり true を返します。
+遅延モードで、現在のソリューションが読み込まれている場合に true を返します。 注ソリューション最初に読み込まれた場合は遅延のモードの場合でも、遅延のすべてのプロジェクトは、最終的に読み込まれている、現在のセッションで (ユーザーの明示的なジェスチャまたは操作によって強制による)、このプロパティはやはり true を返します。
 
-__VSPROPID7 します。VSPROPID_DeferredProjectCount
+__VSPROPID7 です。VSPROPID_DeferredProjectCount
 
-遅延モードで現在のプロジェクトの数を返します。 このプロパティは、[0, VSPROPID_ProjectCount] の範囲の値があります。
+遅延モードで現在のプロジェクトの数を返します。 このプロパティは、範囲 [0, VSPROPID_ProjectCount] の値があります。
 
-__VSHPROPID9 します。VSHPROPID_IsDeferred
+__VSHPROPID9 です。VSHPROPID_IsDeferred
 
-プロジェクトの階層が遅延読み込み状態の場合は true を返します。
+プロジェクト階層とは、遅延読み込み状態の場合は true を返します。
 
 値を EPF_DEFERRED し EPF_NOTDEFERRED __VSENUMPROJFLAGS3
 
-これらのフラグを渡すことができる[IVsSolution.GetProjectEnum()](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivssolution.getprojectenum.aspx)および遅延で遅延なしのプロジェクトを繰り返し処理します。
+これらのフラグに渡すことが[IVsSolution.GetProjectEnum()](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivssolution.getprojectenum.aspx)遅延と遅延なしのプロジェクトを繰り返し処理します。
 
 ### <a name="new-events"></a>新しいイベント
 
 IVsSolutionEvents7.OnAfterLoadAllDeferredProjects()
 
-このイベントは、遅延のすべてのプロジェクトが読み込まれた後に発生します。 この時点では、VSPROPID_DeferredProjectCount は 0 です。 このイベントは、メモは、ソリューションの負荷の一部として発生しが発生しないすべてのセッションで。 遅延のすべてのプロジェクトが読み込まれた場合にのみ発生します。
+このイベントは、遅延のすべてのプロジェクトが読み込まれた後に発生します。 この時点では、VSPROPID_DeferredProjectCount は 0 です。 このイベントは、メモは、ソリューションの読み込みの一部として発生しは発生しません。 すべてのセッションでします。 遅延のすべてのプロジェクトが読み込まれた場合にのみ発生します。
 
-### <a name="changes-to-existing-api"></a>既存の API の変更点
+### <a name="changes-to-existing-api"></a>既存の API への変更
 
-* 渡す[__VSENUMPROJFLAGS](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.__vsenumprojflags.aspx)します。EPF_LOADEDINSOLUTION [IVsSolution.GetProjectEnum()](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivssolution.getprojectenum.aspx)を返します。 は、プロジェクトを延期します。
-* 渡す[__VSENUMPROJFLAGS](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.__vsenumprojflags.aspx)します。EPF_UNLOADEDINSOLUTION には、プロジェクトの遅延は返しません。
-* [KnownUIContexts.SolutionExistsAndFullyLoadedContext](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.knownuicontexts.solutionexistsandfullyloadedcontext.aspx)に設定されているソリューションを開いた状態の場合は true です。 遅延のプロジェクトを扱うため、このコンテキストでは、大部分が設定の読み込み時に非 LSL モードより前です。
-* [__VSPROPID](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.__vspropid.aspx)します。VSPROPID_ProjectCount では、プロジェクトが読み込まれ、遅延の合計を返します。
+* 渡す[__VSENUMPROJFLAGS](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.__vsenumprojflags.aspx)です。EPF_LOADEDINSOLUTION [IVsSolution.GetProjectEnum()](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivssolution.getprojectenum.aspx)を返しますがプロジェクトを延期します。
+* 渡す[__VSENUMPROJFLAGS](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.__vsenumprojflags.aspx)です。EPF_UNLOADEDINSOLUTION には、遅延のプロジェクトは返しません。
+* [KnownUIContexts.SolutionExistsAndFullyLoadedContext](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.knownuicontexts.solutionexistsandfullyloadedcontext.aspx)に設定されているソリューションが開いている場合は true です。 遅延のプロジェクトを扱うため、このコンテキストは多くを設定が読み込まれると非 LSL モードでより前です。
+* [__VSPROPID](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.__vspropid.aspx)です。VSPROPID_ProjectCount では、プロジェクトが読み込まれ、遅延の合計を返します。
 
-## <a name="helpful-code-snippets"></a>役に立つコード スニペット
+## <a name="helpful-code-snippets"></a>便利なコード スニペット
 
 ### <a name="check-if-a-solution-was-opened-in-deferred-load-mode"></a>遅延読み込みモードで、ソリューションが開かれたかどうかの確認します。
 
@@ -223,7 +199,7 @@ IVsSolutionEvents7.OnAfterLoadAllDeferredProjects()
 }
 ```
 
-### <a name="check-if-a-project-is-deferred"></a>プロジェクトが延期されたかどうかの確認します。
+### <a name="check-if-a-project-is-deferred"></a>プロジェクトが遅延しているかどうかの確認します。
 
 ```csharp
 /// <summary>
@@ -231,11 +207,11 @@ IVsSolutionEvents7.OnAfterLoadAllDeferredProjects()
 /// </summary>
 /// <param name="projectsToLoad">A set of deferred and/or loaded projects to ensure are loaded.</param>
 /// <returns>True if the project is deferred. False if it is any other state, such as loaded, unloaded, or virtual.</returns>
-/// <remarks>Requires Microsoft.VisualStudio.Shell.15.0.dll</remarks>
+/// <remarks>Requires Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll</remarks>
 public static bool IsInDeferredState(IVsHierarchy vsHierarchy)
 {
     object deferred;
-    int hr = vsHierarchy.GetProperty((int)VSConstants.VSITEMID.Root, (uint)__VSHPROPID9.VSHPROPID_IsDeferred, out deferred);
+    int hr = vsHierarchy.GetProperty((uint)VSConstants.VSITEMID.Root, (int)__VSHPROPID9.VSHPROPID_IsDeferred, out deferred);
 
     if (ErrorHandler.Succeeded(hr))
     {
@@ -319,7 +295,7 @@ public static IReadOnlyCollection<IVsHierarchy> EnsureProjectsAreLoadedHelper(IR
 }
 ```
 
-### <a name="checks-if-the-solution-has-deferred-projects"></a>チェックのかどうかは、ソリューションは、プロジェクトを延期しました
+### <a name="checks-if-the-solution-has-deferred-projects"></a>プロジェクト、ソリューションの遅延かどうかを確認します。
 
 ```csharp
 /// <summary>
@@ -341,19 +317,19 @@ public static bool SolutionHasDeferredProjects()
 }
 ```
 
-## <a name="getting-detailed-information-with-workspace-apis"></a>ワークスペースの api の詳細な情報を取得します。
+## <a name="getting-detailed-information-with-workspace-apis"></a>ワークスペースの Api を使用した詳細な情報を取得します。
 
 ### <a name="how-to-get-detailed-info-on-a-lsl-solution"></a>LSL ソリューションに関する詳細情報を表示する方法
 
-ワークスペースの新しい Api は、ソリューションに関する詳細な情報を取得できるようにする IVsSolutionWorkspaceService 経由で公開されています。
+ワークスペースの新しい Api は、ソリューションに関する詳細情報を取得できるようにする IVsSolutionWorkspaceService を介して公開されます。
 
-これらの Api を使用してを現在のワークスペース、アクティブなソリューション、管理対象のコマンドライン情報だけでなく、ワークスペースのインデックス サービスを取得できます。 これらの Api は、インデックスの詳細のデータを取得するサービスをすべてのソース ファイル、プロジェクトのソース ファイルの所有するプロジェクトのすべてのプロジェクトが現在のソリューションに含まれているプロジェクトなどのすべての P2P 参照をさらに活用できます。
+これらの Api を使用してをワークスペースのインデックス サービスに加え、現在のワークスペース、アクティブなソリューション、コマンドラインのマネージ情報を取得できます。 これらの Api は、インデックスの詳細のデータを取得するサービスをすべてのソース ファイル、ソース ファイルの所有しているプロジェクトのプロジェクトですべてのプロジェクトが、現在のソリューションに含まれているプロジェクトなどのすべての P2P 参照をさらに活用できます。
 
-次のコード スニペットでは、ワークスペースの Api の使用方法を示しています。
+次のコード スニペットでは、ワークスペース Api の使用方法を示します。
 
 ### <a name="get-ivssolutionworkspaceservice-initially"></a>IVsSolutionWorkspaceService を最初に取得します。
 
->**注:**ワークスペース API パッケージの負荷がかからないように LSL シナリオで IVsSolutionWorkspaceService ののみ入手してください。
+>**注:**ワークスペース API パッケージの読み込みを回避する LSL シナリオで IVsSolutionWorkspaceService ののみ入手してください。
 
 ```csharp
 private readonly Lazy<IVsSolutionWorkspaceService> _solutionWorkspaceService;
@@ -366,9 +342,9 @@ public DeferredProjectWorkspaceService(SVsServiceProvider serviceProvider)
 }
 ```
 
->**注:** _solutionWorkspaceService が既に遅延初期化、次のスニペットがあるとします。
+>**注:** _solutionWorkspaceService が既に遅れて初期化される次のスニペットがあるとします。
 
-### <a name="get-managed-command-line-info-for-deferred-projects-for-active-solution-configuration"></a>アクティブ ソリューション構成の遅延のプロジェクトの管理対象のコマンドライン情報を取得します。
+### <a name="get-managed-command-line-info-for-deferred-projects-for-active-solution-configuration"></a>アクティブ ソリューション構成の遅延のプロジェクトの管理対象のコマンド ライン情報を取得します。
 
 ```csharp
 /// <summary>
@@ -387,7 +363,7 @@ public async Task<IReadOnlyDictionary<string, ManagedCommandLineInfo>> GetManage
 }
 ```
 
-### <a name="get-the-active-solution-file-in-lsl"></a>LSL のアクティブなソリューション ファイルを取得します。
+### <a name="get-the-active-solution-file-in-lsl"></a>LSL でアクティブなソリューション ファイルを取得します。
 
 ```csharp
 /// <summary>
@@ -400,7 +376,7 @@ public string GetActiveSolutionFile()
 }
 ```
 
-### <a name="get-the-owning-project-of-a-source-file"></a>ソース ファイルの所有するプロジェクトを取得します。
+### <a name="get-the-owning-project-of-a-source-file"></a>請け負っているプロジェクトのソース ファイルを取得します。
 
 ```csharp
 /// <summary>
@@ -434,7 +410,7 @@ public async Task<IEnumerable<string>> GetFileReferenceAsync(string projectFileP
 }
 ```
 
-### <a name="get-the-p2p-references-in-a-project"></a>プロジェクトの P2P 参照を取得します。
+### <a name="get-the-p2p-references-in-a-project"></a>プロジェクトでの P2P 参照を取得します。
 
 ```csharp
 /// <summary>
@@ -472,14 +448,14 @@ public async Task<IEnumerable<string>> GetProjectsInSolutionAsync(string solutio
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-LSL の性質上、ユーザーが読み込まれ、遅延のプロジェクト間で相違点を表示できず意図的なものです。 これにより、機能の開発とテストが困難。
+LSL の性質上、ユーザーが読み込まれ、遅延のプロジェクトの違いを表示できません意図的なものです。 これにより、機能の開発とテストが困難。
 
-遅延プロジェクトの UI のビジュアルのヒントを有効にするには、以下のいずれか。
+遅延のプロジェクトの UI でビジュアルのヒントを有効にするには、次の操作します。
 
 1. Visual Studio を閉じます。
 2. Regedit.exe
 3. HKLM を選択します。
-4. ファイル > ハイブを読み込む
+4. ファイル > ハイブの読み込み
 5. `%localappdata%\microsoft\visualstudio\15.0_<instance ID>\privateregistry.bin`
 6. キー名として"VisualStudio"を入力してください。
 7. 設定`HKLM\VisualStudio\Software\Microsoft\VisualStudio\15.0_<instanceID>\FeatureFlags\Solution\Loading\Deferred\Hint\Value=1`(DWORD)
@@ -487,8 +463,7 @@ LSL の性質上、ユーザーが読み込まれ、遅延のプロジェクト�
 9. ファイル > ハイブのアンロード
 10. Visual Studio を起動します。
 
-さらにご質問は、くださいに通知[ lslsupport@microsoft.com](mailto:lslsupport@microsoft.com)します。
-
+さらに、質問についてにお問い合わせください[ lslsupport@microsoft.com](mailto:lslsupport@microsoft.com)です。
 
 
 

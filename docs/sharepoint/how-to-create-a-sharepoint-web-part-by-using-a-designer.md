@@ -1,63 +1,65 @@
 ---
-title: "方法: デザイナーを使用して SharePoint Web パーツを作成する"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Web パーツ [Visual Studio での SharePoint 開発], 追加"
-  - "Web パーツ [Visual Studio での SharePoint 開発], 作成"
-  - "Web パーツ [Visual Studio での SharePoint 開発], デザイナー"
+title: "方法: デザイナーを使用して SharePoint Web パーツを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- Web Parts [SharePoint development in Visual Studio], designer
+- Web Parts [SharePoint development in Visual Studio], adding
+- Web Parts [SharePoint development in Visual Studio], creating
 ms.assetid: 6b88f3ef-02ff-4135-80ff-b4acacf8c695
-caps.latest.revision: 26
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "26"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 4f329b1402917bc7c129bcdc9f504dfe99bcccbf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法: デザイナーを使用して SharePoint Web パーツを作成する
-  Web パーツを作成するには、SharePoint プロジェクトに**視覚的 Web パーツ**項目を追加します。  これを行うと、Visual Studio で Visual Web Developer デザイナーが開きます。このデザイナーでは、コントロールとコードを Web パーツに追加できます。  視覚的 Web パーツは Web パーツと同じように機能します。  唯一の違いは、視覚的 Web パーツのデザインは Visual Web Developer デザイナーで行うことです。  
+# <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>方法: デザイナーを使用して SharePoint Web パーツを作成する
+  追加することで、web パーツを作成することができます、**視覚的 Web パーツ**を SharePoint プロジェクト項目です。 これを行うと、Visual Studio で Visual Web Developer デザイナーが開きます。このデザイナーでは、コントロールとコードを Web パーツに追加できます。 視覚的 Web パーツは Web パーツと同じように機能します。 唯一の違いは、視覚的 Web パーツのデザインは Visual Web Developer デザイナーで行うことです。  
   
-### 視覚的 Web パーツのプロジェクトを作成するには  
+### <a name="to-create-a-project-for-visual-web-parts"></a>視覚的 Web パーツのプロジェクトを作成するには  
   
-1.  メニュー バーで **\[ファイル\]**、**\[新規\]**、**\[プロジェクト\]** の順にクリックします。  
+1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
   
-     **\[新しいプロジェクト\]** ダイアログ ボックスが表示されます。  
+     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  **\[新しいプロジェクト\]** ダイアログ ボックスで、**\[Visual C\#\]** または **\[Visual Basic\]** の **\[Office\/SharePoint\]** ノードを展開し、**\[SharePoint ソリューション\]** カテゴリを選択します。  
+2.  **新しいプロジェクト** ダイアログ ボックスで、 **Visual c#**または**Visual Basic**、展開、 **Office/sharepoint**  ノードを選択し**SharePoint ソリューション**カテゴリ。  
   
-3.  プロジェクト テンプレートの一覧で **\[SharePoint 2013 \- 視覚的 Web パーツ\]** を選択し、**\[OK\]** をクリックします。  
+3.  プロジェクト テンプレートの一覧で選択**SharePoint 2013 - 視覚的 Web パーツ**を選択し、 **OK**ボタンをクリックします。  
   
      **SharePoint カスタマイズ ウィザード**が表示されます。  
   
-4.  **\[デバッグのサイトとセキュリティ レベルの指定\]** ページで、ローカル コンピューター上の SharePoint サイトの URL を指定し、**\[完了\]** をクリックします。  
+4.  **デバッグのサイトとセキュリティ レベルを指定** ページで、ローカル コンピューター上にある SharePoint サイトの URL を指定し、選択、**完了**ボタンをクリックします。  
   
-     **ソリューション エクスプローラー**に Web パーツが表示されます。  Visual Web Developer デザイナーで Web パーツをデザインしたら、指定したサイトでその Web パーツをテストします。  
+     **ソリューション エクスプ ローラー**、web パーツが表示されます。 Visual Web Developer デザイナーでは、web パーツをデザインした後に、指定したサイトでテストします。  
   
-### 既存の SharePoint プロジェクトに視覚的 Web パーツを追加するには  
+### <a name="to-add-a-visual-web-part-to-an-existing-sharepoint-project"></a>既存の SharePoint プロジェクトに視覚的 Web パーツを追加するには  
   
-1.  メニュー バーで **\[プロジェクト\]**、**\[新しい項目の追加\]** の順に選択します。  
+1.  メニュー バーで、次のように選択します。**プロジェクト**、**新しい項目の追加**です。  
   
-2.  **\[新しい項目の追加\]** ダイアログ ボックスで、**\[Office\/SharePoint\]** ノードを選択します。  
+2.  **新しい項目の追加** ダイアログ ボックスで、選択、 **Office/sharepoint**ノード。  
   
-3.  プロジェクト テンプレートの一覧で **\[視覚的 Web パーツ\]** を選択し、それに名前を付けて、**\[追加\]** をクリックします。  
+3.  プロジェクト テンプレートの一覧で選択**視覚的 Web パーツ**し、という名前を選択し、**追加**ボタンをクリックします。  
   
-     **ソリューション エクスプローラー**に Web パーツが表示されます。  Visual Web Developer デザイナーで Web パーツをデザインしたら、指定したサイトでその Web パーツをテストします。  
+     **ソリューション エクスプ ローラー**、web パーツが表示されます。 Visual Web Developer デザイナーでは、web パーツをデザインした後に、指定したサイトでテストします。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)   
- [方法: SharePoint Web パーツを作成する](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
- [チュートリアル: SharePoint の Web パーツを作成する](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)   
+ [方法: SharePoint Web パーツを作成します。](../sharepoint/how-to-create-a-sharepoint-web-part.md)   
+ [チュートリアル: SharePoint の Web パーツを作成します。](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)   
  [チュートリアル: デザイナーを使用した SharePoint の Web パーツの作成](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)  
   
   

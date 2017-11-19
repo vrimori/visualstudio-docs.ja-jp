@@ -1,68 +1,70 @@
 ---
-title: "ドキュメント レベルのカスタマイズのキャッシュ データ"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "キャッシュ (データを) [Visual Studio での Office 開発], データ キャッシュの概要"
-  - "データ [Visual Studio での Office 開発], キャッシュ"
-  - "データ [Visual Studio での Office 開発], ドキュメント レベルのソリューション"
-  - "データ キャッシュ [Visual Studio での Office 開発], データ キャッシュの概要"
-  - "データ アイランド [Visual Studio での Office 開発]"
-  - "ドキュメント レベルのカスタマイズ [Visual Studio での Office 開発], データ モデル"
-  - "ビュー [Visual Studio での Office 開発]"
+title: "ドキュメント レベルのカスタマイズでキャッシュされたデータ |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data islands [Office development in Visual Studio]
+- view [Office development in Visual Studio]
+- caching data [Office development in Visual Studio], about caching data
+- data caching [Office development in Visual Studio], about data caching
+- data [Office development in Visual Studio], cache
+- data [Office development in Visual Studio], document-level solutions
+- document-level customizations [Office development in Visual Studio], data model
 ms.assetid: 84808462-2c5d-4dc8-ab69-491d492b4a51
-caps.latest.revision: 27
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 26
+caps.latest.revision: "27"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: f90aeb03dd62d76064124e9870a5a4dbcd250621
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# ドキュメント レベルのカスタマイズのキャッシュ データ
-  ドキュメント レベルのカスタマイズは、データを Office ドキュメントのビューから分離することを主要な目的としています。  データとは、数値やテキストなど、ドキュメントに格納されている情報のことです。  ビューとは、Microsoft Office Word および Microsoft Office Excel のユーザー インターフェイスとオブジェクト モデルを意味します。  
+# <a name="cached-data-in-document-level-customizations"></a>ドキュメント レベルのカスタマイズのキャッシュ データ
+  ドキュメント レベルのカスタマイズの主な目的では、Office ドキュメントのビューからデータを分離します。 データは、数値やテキストなど、ドキュメントに格納されている情報を参照します。 ビューは、ユーザー インターフェイスおよび Microsoft Office Word および Microsoft Office Excel のオブジェクト モデルを指します。  
   
- Visual Studio では、データを*データ アイランド* \(*データ キャッシュ*ともいいます\) として埋め込むことによって、ドキュメント レベルのカスタマイズのビューから分離できます。  そのため Word または Excel を起動せずに、データを直接読み取ったり変更したりすることができます。  これは、Microsoft Office がインストールされていないサーバー上にある文書のデータを編集する必要がある場合に役立ちます。  Word および Excel はクライアント環境での使用が想定されており、サーバー上で実行するようには設計されていません。  
+ Visual Studio では、ドキュメント レベルのカスタマイズのビューからデータを分離として埋め込まれるデータを有効にすると、*データ アイランド*もという、*データ キャッシュ*です。 読み取りまたは Word または Excel を起動せずに直接データを変更できます。 これは、Microsoft Office がインストールされていないサーバー上のドキュメント内のデータを変更する必要がある場合に便利です。 クライアント環境で使用するためのものでは、Word および Excelサーバー上で実行する、設計されていません。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- ドキュメント レベルのカスタマイズの詳細については、「[Office ソリューションの開発の概要 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)」および「[ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)」を参照してください。  
+ ドキュメント レベルのカスタマイズの詳細については、次を参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)と[ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)です。  
   
-## キャッシュ データ プログラミング モデルの概要  
- データ アイランドには、ソリューション内のオブジェクトのうち特定の要件を満たすものを含めることができます。  そうしたオブジェクトには、<xref:System.Data.DataSet> オブジェクト、<xref:System.Data.DataTable> オブジェクト、および <xref:System.Xml.Serialization.XmlSerializer> クラスによってシリアル化できるオブジェクトが含まれます。  詳細については、[キャッシュされたデータ](../vsto/caching-data.md) を参照してください。  
+## <a name="understanding-the-cached-data-programming-model"></a>キャッシュされたデータのプログラミング モデルをについてください。  
+ データ アイランドは、特定の要件を満たすソリューション内の任意のオブジェクトを含めることができます。 これらのオブジェクトを含める<xref:System.Data.DataSet>オブジェクト、<xref:System.Data.DataTable>オブジェクト、およびその他のオブジェクトをシリアル化可能な<xref:System.Xml.Serialization.XmlSerializer>クラスです。 詳細については、次を参照してください。 を参照してください[データをキャッシュ](../vsto/caching-data.md)です。  
   
- キャッシュされたデータのビューを提供するには、ドキュメント上の Windows フォーム コントロールと*ホスト コントロール*をデータ アイランド内のオブジェクトにバインドします。  データ アイランドとデータがバインドされたコントロールは、それらの間のデータ バインディングによって同期が維持されます。  コントロールから独立した検証コードをデータに追加することもできます。  詳細については、「[Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)」を参照してください。  
+ キャッシュされたデータのビューを提供するには、Windows フォーム コントロールをバインドすることができ、*ホスト コントロール*データ アイランド内のオブジェクトをドキュメントにします。 データ アイランドと、データ バインド コントロール間のデータ バインディングは、同期を保持します。 別のコントロールのデータに検証コードを追加することもできます。 詳細については、次を参照してください。 [Office ソリューションでのコントロールへのデータ バインディング](../vsto/binding-data-to-controls-in-office-solutions.md)です。  
   
- ホスト コントロールは、Word および Excel のオブジェクト モデルに属するネイティブ オブジェクトの拡張バージョンです。  ネイティブ オブジェクトとは異なり、ホスト コントロールはマネージ データ オブジェクトに直接バインドできます。  詳細については、「[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)」および「[Office ドキュメントでの Windows フォーム コントロールの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)」を参照してください。  
+ ホスト コントロールは、バージョンの Excel および Word オブジェクト モデルでのネイティブ オブジェクトに拡張されています。 ネイティブのオブジェクトとは異なり、マネージ データ オブジェクトに直接ホスト コントロールをバインドできます。 詳細については、 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md) および [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md)を参照してください。  
   
-## サーバー上のキャッシュされたデータへのアクセス  
- ドキュメント内のキャッシュされたデータにアクセスするには、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> クラスを使用します。  このクラスは [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] に含まれており、Excel や Word を実行せずにサーバー上で使用できます。  キャッシュされたデータを変更した後でユーザーがドキュメントを開くと、そのデータにバインドされているコントロールに変更が自動的に反映されるため、更新されたデータが表示されます。  詳細については、「[サーバー上のドキュメント内のデータへのアクセス](../vsto/accessing-data-in-documents-on-the-server.md)」を参照してください。  
+## <a name="accessing-cached-data-on-the-server"></a>サーバー上でキャッシュ データにアクセスします。  
+ ドキュメントでキャッシュされたデータにアクセスする際、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>クラスです。 このクラスの一部である、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]、実行中の Excel または Word をサーバーで使用できます。 ときに、ユーザーでは、キャッシュされたデータを変更する、データにバインドされている任意のコントロールは、変更に自動的に同期して、ユーザーが更新されたデータの表示が後にドキュメントが開きます。 詳細については、「 [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)」を参照してください。  
   
- クライアントでの表示にのみ Excel と Word を使用し、サーバーのデータへの書き込みには使用しません。  Excel や Word をサーバーにインストールしておく必要はありません。  このため、スケーラビリティが向上し、データ アイランドが含まれるドキュメントを迅速にバッチ処理できます。  
+ Excel および Word は、クライアントでの表示にのみ、サーバー上にデータを書き込む必要がないです。 Excel および Word 必要もありませんサーバーにインストールします。 これは、スケーラビリティの向上やデータ アイランドを含むドキュメントの高速のバッチ処理を実行する機能を提供します。  
   
-## オフラインで使用するためのデータ キャッシング  
- データをデータ アイランドに格納することにより、オフライン作業が可能になります。  ユーザーが最初にドキュメントを開いたとき、またはサーバーからドキュメントを要求したときに、データ アイランドには最新のデータが格納されています。  データ アイランドはドキュメント内にキャッシュされた後で、オフラインで利用可能になります。  ユーザー \(ユーザーのコード\) は、オンライン接続できない状態であってもデータを操作できます。  ユーザーが再接続すると、データの変更がサーバーのデータ ソースに反映されます。  
+## <a name="data-caching-for-offline-use"></a>オフラインで使用できるキャッシュ データ  
+ データ アイランドにデータを格納するオフラインのシナリオを実現できます。 ユーザーが初めてドキュメントを開くとしたり、サーバーからドキュメントを要求、ときに、データ アイランドは、最新のデータが入力されます。 データ アイランドは、ドキュメント内にキャッシュし、は、オフラインで使用します。 ユーザー (およびコード) は、ライブ接続が使用できない場合でもデータを操作することができます。 ユーザーが再接続された場合は、サーバーのデータ ソースにデータへの変更を反映できます。  
   
-## キャッシュされたデータとカスタム XML 部分の比較  
- カスタム XML 部分は、任意の XML コードをドキュメントに格納する手段として、2007 Microsoft Office system で導入されました。  カスタム XML 部分はデータ キャッシュと同じシナリオの多くで役立ちますが、データ アイランドとカスタム XML 部分の間にはいくつかの相違点があります。  カスタム XML 部分の詳細については、「[カスタム XML 部分の概要](../vsto/custom-xml-parts-overview.md)」を参照してください。  
+## <a name="cached-data-and-custom-xml-parts-compared"></a>キャッシュされたデータとカスタム XML 部分の比較  
+ カスタム XML 部分は、ドキュメント内の XML の任意の部分を格納する方法として、2007 Microsoft Office system で導入されました。 カスタム XML 部分は、データ キャッシュとして同じシナリオの多くで役に立ちますが、いくつかの違いは、データ アイランドとカスタム XML 部分があります。 カスタム XML 部分の詳細については、次を参照してください。[カスタム XML 部分の概要](../vsto/custom-xml-parts-overview.md)です。  
   
- データ アイランドとカスタム XML 部分の主な相違点と類似点を次の表に示します。  
+ 次の表では、いくつか相違点と共通の一覧表示します。  
   
 ||データ キャッシュ|カスタム XML 部分|  
-|-|---------------|-----------------|  
-|これらの機能を使用できる Office アプリケーション|以下のアプリケーションのドキュメント レベルのカスタマイズ<br /><br /> -   Excel<br />-   Word|以下のアプリケーションのドキュメント レベルのソリューションおよびアプリケーション レベルのソリューション<br /><br /> -   Excel<br />-   PowerPoint<br />-   Word|  
-|格納できるデータの種類|カスタマイズ アセンブリ内の特定の要件を満たすパブリック オブジェクト。  詳細については、「[キャッシュされたデータ](../vsto/caching-data.md)」を参照してください。|XML データ|  
-|Microsoft Office アプリケーションを起動することなくデータにアクセスできるかどうか|[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] に含まれる <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> クラスを使用してアクセスできます。|<xref:System.IO.Packaging> 名前空間内のクラスを使用するか、または Open XML Formats SDK を使用してアクセスできます。|  
+|-|----------------|----------------------|  
+|Office アプリケーションは、これらを使用できますか。|次のアプリケーション用ドキュメント レベルのカスタマイズ:<br /><br /> -Excel<br />ワード|次のアプリケーション用のドキュメント レベルとアプリケーション レベルのソリューション:<br /><br /> -Excel<br />-PowerPoint<br />ワード|  
+|どのような種類のデータを格納することができますか。|特定の要件を満たしているカスタマイズ アセンブリ内の任意のパブリック オブジェクト。 詳細については、「 [Caching Data](../vsto/caching-data.md)」を参照してください。|任意の XML データです。|  
+|Microsoft Office アプリケーションを起動せず、データにアクセスすることができますか。|使用して、はい、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>によって提供されるクラス、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。|クラスを使用して、はい、<xref:System.IO.Packaging>名前空間、または Open XML 形式の SDK を使用しています。|  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
  [Visual Studio の Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)  
   

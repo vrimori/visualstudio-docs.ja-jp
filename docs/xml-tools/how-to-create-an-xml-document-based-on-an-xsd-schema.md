@@ -1,24 +1,25 @@
 ---
-title: "方法: XSD スキーマに基づいて XML ドキュメントを作成する | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "方法: XSD スキーマに基づいて XML ドキュメントを作成 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 193b195f-e918-4c79-a1a1-8096a1433bde
-caps.latest.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 5d4b4f91a6fb5b85cdd5e9bf6d9f2932c88e6ab7
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/02/2017
 ---
-# 方法: XSD スキーマに基づいて XML ドキュメントを作成する
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**\[サンプル XML の生成\]** 機能では、XML スキーマ \(XSD\) ファイルに基づいてサンプルの XML ファイルが生成されます。  
+# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>方法: XSD スキーマに基づいて XML ドキュメントを作成する
+**サンプル XML の生成**機能には、XML スキーマ (XSD) ファイルに基づいてサンプルの XML ファイルが生成されます。  
   
  このオプションは、次のようなシナリオで使用できます。  
   
@@ -26,9 +27,9 @@ caps.handback.revision: 2
   
 -   スキーマが意図したとおりに機能しているかどうかを確認する。  
   
- **\[サンプル XML の生成\]** 機能はグローバル要素に対してのみ使用でき、使用するには有効な XML スキーマ セットが必要です。  
+**サンプル XML の生成**機能は、グローバル要素でのみ使用し、有効な XML スキーマ セットが必要です。  
   
- この機能では、通常は有効な XML ドキュメントが生成されます。ただし、スキーマに次のものが 1 つ以上含まれていると、有効なサンプルが生成されない可能性があります。  
+この機能では、通常は有効な XML ドキュメントが生成されます。 ただし、スキーマに次のものが 1 つ以上含まれていると、有効なサンプルが生成されない可能性があります。  
   
 -   `xs:key`、`xs:keyref`、および `xs:unique` の ID 制約  
   
@@ -38,17 +39,17 @@ caps.handback.revision: 2
   
 -   `xs:ENTITY` 型、`xs:ENTITIES` 型、および `xs:NOTATION` 型  
   
- また、`xs:base64Binary` の内容は、その型のスキーマで列挙が発生する場合にのみ生成されることに注意してください。  
+また、`xs:base64Binary` の内容は、その型のスキーマで列挙が発生する場合にのみ生成されることに注意してください。  
   
-### XSD ファイルに基づいて XML インスタンス ドキュメントを生成するには  
+### <a name="to-generate-an-xml-instance-document-based-on-the-xsd-file"></a>XSD ファイルに基づいて XML インスタンス ドキュメントを生成するには  
   
-1.  「[方法: XSD スキーマ ファイルを作成して編集する](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)」の手順に従います。  
+1.  手順に従います[する方法: を作成し、XSD スキーマ ファイルを編集](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)です。  
   
-2.  [XML スキーマ エクスプローラー](../xml-tools/xml-schema-explorer.md)で、`PurchaseOrder` グローバル要素を右クリックします。**\[サンプル XML の生成\]** をクリックします。  
+2.  [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)を右クリックし、`PurchaseOrder`グローバル要素。 選択**サンプル XML の生成**です。  
   
      このオプションを選択すると、次のサンプル XML コンテンツの PurchaseOrder.xml ファイルが生成され、XML エディターに表示されます。  
   
-    ```  
+    ```xml
     <?xml version="1.0" encoding="utf-8"?>  
     <PurchaseOrder OrderDate="1900-01-01" xmlns="http://tempuri.org/PurchaseOrderSchema.xsd">  
       <ShipTo country="US">  
@@ -75,5 +76,5 @@ caps.handback.revision: 2
     </PurchaseOrder>  
     ```  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [XML データの使用](../xml-tools/working-with-xml-data.md)

@@ -1,84 +1,81 @@
 ---
-title: 'How to: Execute a SharePoint Command | Microsoft Docs'
+title: "方法: SharePoint コマンドを実行 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - VB
 - CSharp
-helpviewer_keywords:
-- SharePoint commands [SharePoint development in Visual Studio], executing
+helpviewer_keywords: SharePoint commands [SharePoint development in Visual Studio], executing
 ms.assetid: 2d1a163b-b601-4dac-bcea-328f24cb4d57
-caps.latest.revision: 23
-author: kempb
-ms.author: kempb
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 7f51a23170059ac4bd5a2b610e65f64f43fcb7cd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: f1cfe20d0cac50603265644fb48102ef22537631
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-execute-a-sharepoint-command"></a>How to: Execute a SharePoint Command
-  If you want to use the server object model in a SharePoint tools extension, you must create a custom *SharePoint command* to call the API. After you define the command and deploy it with your SharePoint tools extension, your extension can execute the command to call into the SharePoint server object model. To execute the command, use one of the ExecuteCommand methods of an <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> object.  
+# <a name="how-to-execute-a-sharepoint-command"></a>方法: SharePoint コマンドを実行する
+  を SharePoint ツール拡張機能で、サーバー オブジェクト モデルを使用する場合は、カスタムを作成する必要があります*SharePoint コマンド*API を呼び出すためです。 コマンドを定義して、SharePoint ツールの拡張機能を展開した後に、拡張機能は、SharePoint サーバー オブジェクト モデルへの呼び出しをコマンドを実行できます。 コマンドを実行するには、ExecuteCommand メソッドのいずれかの操作を使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>オブジェクト。  
   
- For more information about the purpose of SharePoint commands, see [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md).  
+ SharePoint コマンドの目的に関する詳細については、次を参照してください。[の SharePoint オブジェクト モデルを呼び出す](../sharepoint/calling-into-the-sharepoint-object-models.md)です。  
   
-### <a name="to-execute-a-sharepoint-command"></a>To execute a SharePoint command  
+### <a name="to-execute-a-sharepoint-command"></a>SharePoint コマンドを実行するには  
   
-1.  In your SharePoint tools extension, get an <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> object. The way you get an <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> object depends on the type of extension you are creating:  
+1.  SharePoint ツール拡張機能では、取得、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>オブジェクト。 取得する方法、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>オブジェクトを作成する拡張機能の種類に依存します。  
   
-    -   In an extension of the SharePoint project system, use the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SharePointConnection%2A> property.  
+    -   SharePoint プロジェクト システムの拡張機能を使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SharePointConnection%2A>プロパティです。  
   
-         For more information about project system extensions, see [Extending the SharePoint Project System](../sharepoint/extending-the-sharepoint-project-system.md).  
+         プロジェクト システムの拡張機能の詳細については、次を参照してください。 [SharePoint プロジェクト システムを拡張する](../sharepoint/extending-the-sharepoint-project-system.md)です。  
   
-    -   In an extension of the **SharePoint Connections** node in **Server Explorer**, use the <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> property. To get an <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> object, use the <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> property.  
+    -   拡張機能に、 **SharePoint 接続**内のノード**サーバー エクスプ ローラー**を使用して、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A>プロパティです。 取得する、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext>オブジェクトを使用して、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A>プロパティです。  
   
-         For more information about **Server Explorer** extensions, see [Extending the SharePoint Connections Node in Server Explorer](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).  
+         詳細については**サーバー エクスプ ローラー**拡張機能を参照してください[サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張する](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)です。  
   
-    -   In code that is not part of an extension of the SharePoint tools, such as a project template wizard, use the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection%2A> property.  
+    -   プロジェクト テンプレート ウィザードなどの SharePoint ツールの拡張機能の一部ではないコードで使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection%2A>プロパティです。  
   
-         For more information about retrieving the project service, see [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md).  
+         プロジェクトのサービスの取得の詳細については、次を参照してください。 [SharePoint プロジェクト サービスを使用して](../sharepoint/using-the-sharepoint-project-service.md)です。  
   
-2.  Call one of the ExecuteCommand methods of the <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> object. Pass the name of the command you want to execute to the first argument of the ExecuteCommand method. If your command has a custom parameter, pass that parameter to the second argument of the ExecuteCommand method.  
+2.  ExecuteCommand 方法の 1 つを呼び出して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection>オブジェクト。 ExecuteCommand メソッドの最初の引数を実行するコマンドの名前を渡します。 場合は、コマンドは、カスタム パラメーターを持ち、そのパラメーター ExecuteCommand メソッドの 2 番目の引数を渡すことです。  
   
-     There is a different ExecuteCommand overload for each supported command signature. The following table lists the supported signatures and which overload to use for each signature.  
+     サポートされているコマンドのシグネチャごとの異なる ExecuteCommand オーバー ロードがあります。 次の表は、サポートされている署名と各署名に使用するオーバー ロードを一覧表示します。  
   
-    |Command signature|ExecuteCommand overload to use|  
+    |コマンドの署名|ExecuteCommand のオーバー ロードを使用するには|  
     |-----------------------|------------------------------------|  
-    |The command has only the default <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parameter and no return value.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
-    |The command has only the default <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parameter and a return value.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
-    |The command has two parameters (the default <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parameter and a custom parameter) and no return value.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
-    |The command has two parameters and a return value.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
+    |既定値のみがコマンドにある<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext>パラメーターと戻り値はありません。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
+    |既定値のみがコマンドにある<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext>パラメーターと戻り値。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
+    |コマンドが 2 つのパラメーター (既定値<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext>パラメーターとカスタム パラメーター) と戻り値はありません。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
+    |コマンドは、2 つのパラメーターと戻り値がします。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|  
   
-## <a name="example"></a>Example  
- The following code example demonstrates how to use the <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> overload to call the `Contoso.Commands.UpgradeSolution` command that is described in [How to: Create a SharePoint Command](../sharepoint/how-to-create-a-sharepoint-command.md).  
+## <a name="example"></a>例  
+ 次のコード例を使用する方法を示しています、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>のオーバー ロードを呼び出して、`Contoso.Commands.UpgradeSolution`に記載されているコマンド[する方法: SharePoint コマンドを作成する](../sharepoint/how-to-create-a-sharepoint-command.md)です。  
   
- [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs#6)] [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb#6)]  
+ [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs#6)]
+ [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb#6)]  
   
- The `Execute` method shown in this example is an implementation of the <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A> method of the <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep> interface in a custom deployment step. To see this code in the context of a larger example, see [Walkthrough: Creating a Custom Deployment Step for SharePoint Projects](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).  
+ `Execute`この例に示すようにメソッドの実装は、<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A>のメソッド、<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep>カスタム配置手順のインターフェイスです。 このコード例のコンテキストを参照してください[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)です。  
   
- Note the following details about the call to the <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> method:  
+ 呼び出しに関する以下の詳細に注意してください、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>メソッド。  
   
--   The first parameter identifies the command that you want to call. This string matches the value that you pass to the <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> on the command definition.  
+-   最初のパラメーターは、呼び出しに使用するコマンドを識別します。 この文字列に渡す値に一致する、<xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute>コマンド定義にします。  
   
--   The second parameter is the value that you want to pass to the custom second parameter of the command. In this case, it is the full path of the .wsp file that is being upgraded to the SharePoint site.  
+-   2 番目のパラメーターは、コマンドのカスタムの 2 番目のパラメーターに渡す値です。 この例では、SharePoint サイトにアップグレードされている .wsp ファイルの完全なパスを勧めします。  
   
--   The code does not pass the implicit <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parameter to the command. This parameter is passed into the command automatically when you call the command from an extension of the SharePoint project system or an extension of the **SharePoint Connections** node in **Server Explorer**. In other types of solutions, such as in a project template wizard that implements the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface, this parameter is **null**.  
+-   コードは、暗黙的に渡さない<xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext>パラメーターをコマンド。 このパラメーターに渡されるコマンドは、自動的に SharePoint プロジェクト システムの拡張機能またはの拡張機能から、コマンドを呼び出すときに、 **SharePoint 接続**内のノード**サーバー エクスプ ローラー**. その他の種類のソリューション、プロジェクト テンプレートのウィザードを実装するように、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>このパラメーターは、インターフェイス、 **null**です。  
   
-## <a name="compiling-the-code"></a>Compiling the Code  
- This example requires a reference to the Microsoft.VisualStudio.SharePoint assembly.  
+## <a name="compiling-the-code"></a>コードのコンパイル  
+ この例では、Microsoft.VisualStudio.SharePoint アセンブリへの参照が必要です。  
   
-## <a name="see-also"></a>See Also  
- [Calling into the SharePoint Object Models](../sharepoint/calling-into-the-sharepoint-object-models.md)   
- [How to: Create a SharePoint Command](../sharepoint/how-to-create-a-sharepoint-command.md)   
- [Walkthrough: Extending Server Explorer to Display Web Parts](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
+## <a name="see-also"></a>関連項目  
+ [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)   
+ [方法: SharePoint コマンドを作成します。](../sharepoint/how-to-create-a-sharepoint-command.md)   
+ [チュートリアル: サーバー エクスプローラーを拡張して Web パーツを表示する](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
   
   

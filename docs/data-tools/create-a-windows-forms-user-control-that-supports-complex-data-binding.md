@@ -1,5 +1,5 @@
 ---
-title: Create a Windows Forms user control with data binding | Microsoft Docs
+title: "データ バインディングを使用する Windows フォーム ユーザー コントロールを作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,179 +14,175 @@ helpviewer_keywords:
 - data binding, complex
 - user controls [Visual Studio], complex data binding
 ms.assetid: c8f29c2b-b49b-4618-88aa-33b6105880b5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: 6505ddc5e76be8e60a747a7b62d28e519f098046
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 8b23bfe7c30988a80904377e583a5a5f6d4cd2ff
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/07/2017
 ---
-# <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>Create a Windows Forms user control that supports complex data binding
-When displaying data on forms in Windows applications, you can choose existing controls from the **Toolbox**, or you can author custom controls if your application requires functionality that is not available in the standard controls. This walkthrough shows how to create a control that implements the <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>. Controls that implement the <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> contain a `DataSource` and `DataMember` property that can be bound to data. Such controls are similar to a <xref:System.Windows.Forms.DataGridView> or <xref:System.Windows.Forms.ListBox>  
+# <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>複合データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成します。
+Windows アプリケーションでフォームにデータを表示する場合から既存のコントロールを選択できます、**ツールボックス**、またはアプリケーションが標準コントロールで利用できない機能に必要な場合は、カスタム コントロールを作成することができます。 このチュートリアルでは、<xref:System.ComponentModel.ComplexBindingPropertiesAttribute> を実装するコントロールを作成する方法を示します。 <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> を実装するコントロールには、データにバインドできる `DataSource` プロパティと `DataMember` プロパティが含まれます。 このようなに似ていますが、<xref:System.Windows.Forms.DataGridView>または<xref:System.Windows.Forms.ListBox>  
   
- For more information on control authoring, see [Developing Windows Forms Controls at Design Time](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).  
+ コントロールの作成の詳細については、次を参照してください。[デザイン時に Windows フォーム コントロールの開発](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time)です。  
   
- When authoring controls for use in data-binding scenarios you need to implement one of the following data-binding attributes:  
+ データ バインディングのシナリオで使用するためのコントロールを作成するときに、次のデータ バインディング属性のいずれかを実装する必要があります。  
   
-|Data-binding attribute usage|  
+|データ バインディング属性の使用方法|  
 |-----------------------------------|  
-|Implement the <xref:System.ComponentModel.DefaultBindingPropertyAttribute> on simple controls, like a <xref:System.Windows.Forms.TextBox>, that display a single column (or property) of data. For more information, see [Create a Windows Forms user control that supports simple data binding](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).|  
-|Implement the <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> on controls, like a <xref:System.Windows.Forms.DataGridView>, that display lists (or tables) of data. (This process is described in this walkthrough page.)|  
-|Implement the <xref:System.ComponentModel.LookupBindingPropertiesAttribute> on controls, like a <xref:System.Windows.Forms.ComboBox>, that display lists (or tables) of data but also need to present a single column or property. For more information, see [Create a Windows Forms user control that supports lookup data binding](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).|  
+|単一のデータ列またはプロパティを表示する <xref:System.ComponentModel.DefaultBindingPropertyAttribute> のような <xref:System.Windows.Forms.TextBox> を簡単なコントロールに実装します。 詳細については、次を参照してください。[単純データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成する](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md)です。|  
+|データの一覧またはテーブルを表示する <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> のような <xref:System.Windows.Forms.DataGridView> をコントロールに実装します。 このチュートリアルでは、このプロセスについて説明します。|  
+|データの一覧またはテーブルを表示しますが、単一の列またはプロパティを表示する必要もある <xref:System.ComponentModel.LookupBindingPropertiesAttribute> のような <xref:System.Windows.Forms.ComboBox> をコントロールに実装します。 詳細については、次を参照してください。[ルックアップ データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md)です。|  
   
- This walkthrough creates a complex control that displays rows of data from a table. This example uses the `Customers` table from the Northwind sample database. The complex user control will display the customers table in a <xref:System.Windows.Forms.DataGridView> in the custom control.  
+ このチュートリアルでは、テーブルからのデータ行を表示する複合コントロールを作成します。 この例では、Northwind サンプル データベースの `Customers` テーブルを使用します。 複合ユーザー コントロールは、カスタム コントロールの <xref:System.Windows.Forms.DataGridView> で Customers テーブルを表示します。  
   
- During this walkthrough, you will learn how to:  
+ このチュートリアルでは、次の作業を行う方法について説明します。  
   
--   Create a new **Windows Forms Application**.  
+-   新しい**Windows フォーム アプリケーション**です。  
   
--   Add a new **User Control** to your project.  
+-   新しい**ユーザー コントロール**をプロジェクトにします。  
   
--   Visually design the user control.  
+-   ユーザー コントロールをビジュアルに設計します。  
   
--   Implement the `ComplexBindingProperty` attribute.  
+-   `ComplexBindingProperty` 属性を実装します。  
   
--   Create a dataset with the [Data Source Configuration Wizard](../data-tools/media/data-source-configuration-wizard.png).  
+-   使用してデータセットを作成、[データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)です。  
   
--   Set the **Customers** table in the [Data Sources Window](add-new-data-sources.md) to use the new complex control.  
+-   設定、**顧客**テーブルに、[データ ソース ウィンドウ](add-new-data-sources.md)新しい複雑なコントロールを使用します。  
   
--   Add the new control by dragging it from the **Data Sources Window** onto **Form1**.  
+-   ドラッグして、新しいコントロールを追加、**データ ソース ウィンドウ**に**Form1**です。  
   
-## <a name="prerequisites"></a>Prerequisites  
- In order to complete this walkthrough, you will need:  
+## <a name="prerequisites"></a>必須コンポーネント  
+このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。  
   
--   Access to the Northwind sample database. For more information, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
+1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server のエディションのダウンロード ページ](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)、または、 **Visual Studio インストーラー**です。 一部として、Visual Studio インストーラーで、SQL Server Express LocalDB をインストールすることができます、**データ ストレージと処理**ワークロード、または個々 のコンポーネントとして。  
   
-## <a name="create-a-windows-forms-application"></a>Create a Windows Forms Application  
- The first step is to create a **Windows Forms Application**.  
-  
-#### <a name="to-create-the-new-windows-project"></a>To create the new Windows project  
-  
-1. In Visual Studio, on the **File** menu, select **New**, **Project...**.  
-  
-2. Expand either **Visual C#** or **Visual Basic** in the left-hand pane, then select **Windows Classic Desktop**.  
+2.  次の手順に従って、Northwind サンプル データベースをインストールします。  
 
-3. In the middle pane, select the **Windows Forms App** project type.  
+    1. Visual Studio で開く、 **SQL Server オブジェクト エクスプ ローラー**ウィンドウです。 (の一部として SQL Server オブジェクト エクスプ ローラーがインストールされている、**データ ストレージと処理**Visual Studio インストーラーでのワークロードです)。展開して、 **SQL Server**ノード。 LocalDB インスタンスを右クリックし、選択**新しいクエリしています.**.  
 
-4. Name the project **ComplexControlWalkthrough**, and then choose **OK**. 
+       クエリ エディター ウィンドウが開きます。  
+
+    2. コピー、 [Northwind TRANSACT-SQL スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)をクリップボードにします。 この T-SQL スクリプトは、最初から、Northwind データベースを作成し、データを設定します。  
+
+    3. T-SQL スクリプトをクエリ エディターに貼り付けを選択し、 **Execute**ボタンをクリックします。  
+
+       短期間のうち、クエリの実行が終了し、Northwind データベースを作成します。  
   
-     The **ComplexControlWalkthrough** project is created, and added to **Solution Explorer**.  
+## <a name="create-a-windows-forms-application"></a>Windows フォーム アプリケーションを作成します。  
+ 作成するには、まず、 **Windows フォーム アプリケーション**です。  
   
-## <a name="add-a-user-control-to-the-project"></a>Add a user control to the project  
- Because this walkthrough creates a complex data-bindable control from a **User Control**, you must add a **User Control** item to the project.  
+#### <a name="to-create-the-new-windows-project"></a>新しい Windows プロジェクトを作成するには  
   
-#### <a name="to-add-a-user-control-to-the-project"></a>To add a user control to the project  
+1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.  
   
-1.  From the **Project** menu, choose **Add User Control**.  
+2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。  
+
+3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。  
+
+4. プロジェクトに名前を**ComplexControlWalkthrough**を選択し**OK**です。 
   
-2.  Type **ComplexDataGridView** in the **Name** area, and then click **Add**.  
+     **ComplexControlWalkthrough**プロジェクトが作成され、追加する**ソリューション エクスプ ローラー**です。  
   
-     The **ComplexDataGridView** control is added to **Solution Explorer**, and opens in the designer.  
+## <a name="add-a-user-control-to-the-project"></a>ユーザー コントロールをプロジェクトに追加します。  
+ このチュートリアルから複雑なデータ バインド可能なコントロールが作成されるため、**ユーザー コントロール**、追加する必要があります、**ユーザー コントロール**プロジェクト項目です。  
   
-## <a name="design-the-complexdatagridview-control"></a>Design the ComplexDataGridView control  
- This step adds a <xref:System.Windows.Forms.DataGridView> to the user control.  
+#### <a name="to-add-a-user-control-to-the-project"></a>プロジェクトにユーザー コントロールを追加するには  
   
-#### <a name="to-design-the-complexdatagridview-control"></a>To design the ComplexDataGridView control  
+1.  **プロジェクト**] メニューの [選択**ユーザー コントロールの追加**です。  
   
--   Drag a <xref:System.Windows.Forms.DataGridView> from the **Toolbox** onto the user control's design surface.  
+2.  型**ComplexDataGridView**で、**名前**領域およびクリック**追加**です。  
   
-## <a name="add-the-required-data-binding-attribute"></a>Add the required data-binding attribute  
- For complex controls that support data binding, you can implement the <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>.  
+     **ComplexDataGridView**コントロールが**ソリューション エクスプ ローラー**、され、デザイナーが開きます。  
   
-#### <a name="to-implement-the-complexbindingproperties-attribute"></a>To implement the ComplexBindingProperties attribute  
+## <a name="design-the-complexdatagridview-control"></a>ComplexDataGridView コントロールをデザインします。  
+ この手順では、ユーザー コントロールに <xref:System.Windows.Forms.DataGridView> を追加します。  
   
-1.  Switch the **ComplexDataGridView** control to code view. (On the **View** menu, select **Code**.)  
+#### <a name="to-design-the-complexdatagridview-control"></a>ComplexDataGridView コントロールを設計するには  
   
-2.  Replace the code in the `ComplexDataGridView` with the following:  
+-   ドラッグ、<xref:System.Windows.Forms.DataGridView>から、**ツールボックス**ユーザー コントロールのデザイン サーフェイスにします。  
+  
+## <a name="add-the-required-data-binding-attribute"></a>必要なデータ バインディング属性を追加します。  
+ データ バインディングをサポートする複合コントロールには、<xref:System.ComponentModel.ComplexBindingPropertiesAttribute> を実装できます。  
+  
+#### <a name="to-implement-the-complexbindingproperties-attribute"></a>ComplexBindingProperties 属性を実装するには  
+  
+1.  スイッチ、 **ComplexDataGridView**コントロールをコード ビューにします。 (上、**ビュー**メニューの **コード**)。  
+  
+2.  `ComplexDataGridView` のコードを次のコードで置き換えます。  
   
      [!code-csharp[VbRaddataDisplaying#4](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-complex-data-binding_1.cs)]
      [!code-vb[VbRaddataDisplaying#4](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-complex-data-binding_1.vb)]  
   
-3.  From the **Build** menu, choose **Build Solution**.  
+3.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
   
-## <a name="creating-a-data-source-from-your-database"></a>Creating a data source from your database  
- This step uses the **Data Source Configuration** wizard to create a data source based on the `Customers` table in the Northwind sample database. You must have access to the Northwind sample database to create the connection. For information on setting up the Northwind sample database, see [Install SQL Server sample databases](../data-tools/install-sql-server-sample-databases.md).  
+## <a name="creating-a-data-source-from-your-database"></a>データベースからデータ ソースの作成  
+このステップでは、**データ ソース構成**データ ソースを作成するウィザードがに基づいて、 `Customers` Northwind サンプル データベース内のテーブルです。  
   
-#### <a name="to-create-the-data-source"></a>To create the data source  
+#### <a name="to-create-the-data-source"></a>データ ソースを作成するには  
   
-1.  On the **Data** menu, click **Show Data Sources**.  
+1.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。  
   
-2.  In the **Data Sources** window, select **Add New Data Source** to start the **Data Source Configuration** wizard.  
+2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成**ウィザード。  
   
-3.  Select **Database** on the **Choose a Data Source Type** page, and then click **Next**.  
+3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]**をクリックします。  
   
-4.  On the **Choose your Data Connection** page do one of the following:  
+4.  **データ接続の選択**ページは、次のいずれか。  
   
-    -   If a data connection to the Northwind sample database is available in the drop-down list, select it.  
+    -   Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。  
   
-    -   Select **New Connection** to launch the **Add/Modify Connection** dialog box.  
+    -   選択**新しい接続**を起動する、**接続接続の追加/変更** ダイアログ ボックス。  
   
-5.  If your database requires a password, select the option to include sensitive data, and then click **Next**.  
+5.  データベースは、パスワードを必要とする場合は、機密データを含めるし、をクリックするオプションを選択**次**です。  
   
-6.  On the **Save connection string to the Application Configuration file** page, click **Next**.  
+6.  **接続文字列をアプリケーション構成ファイルに保存** ページで、をクリックして**次**です。  
   
-7.  On the **Choose your Database Objects** page, expand the **Tables** node.  
+7.  **データベース オブジェクトの選択** ページで、展開、**テーブル**ノード。  
   
-8.  Select the `Customers` table, and then click **Finish**.  
+8.  選択、`Customers`テーブル、およびクリックして**完了**です。  
   
-     The **NorthwindDataSet** is added to your project, and the `Customers` table appears in the **Data Sources** window.  
+     **NorthwindDataSet**をプロジェクトに追加され、`Customers`テーブルに表示されます、**データ ソース**ウィンドウです。  
   
-## <a name="set-the-customers-table-to-use-the-complexdatagridview-control"></a>Set the Customers table to use the ComplexDataGridView control  
- Within the **Data Sources** window, you can set the control to be created prior to dragging items onto your form.  
+## <a name="set-the-customers-table-to-use-the-complexdatagridview-control"></a>ComplexDataGridView コントロールを使用して、Customers テーブルを設定します。  
+ 内で、**データソース**ウィンドウ、フォームに項目をドラッグする前に作成されるコントロールを設定できます。  
   
-#### <a name="to-set-the-customers-table-to-bind-to-the-complexdatagridview-control"></a>To set the Customers table to bind to the ComplexDataGridView control  
+#### <a name="to-set-the-customers-table-to-bind-to-the-complexdatagridview-control"></a>Customers テーブルを ComplexDataGridView コントロールにバインドするように設定するには  
   
-1.  Open **Form1** in the designer.  
+1.  開いている**Form1**デザイナーでします。  
   
-2.  Expand the **Customers** node in the **Data Sources** window.  
+2.  展開、**顧客**内のノード、**データソース**ウィンドウです。  
   
-3.  Click the drop-down arrow on the **Customers** node, and choose **Customize**.  
+3.  ドロップダウン矢印をクリックして、**顧客** ノードを選択して**カスタマイズ**です。  
   
-4.  Select the **ComplexDataGridView** from the list of **Associated Controls** in the **Data UI Customization Options** dialog box.  
+4.  選択、 **ComplexDataGridView**の一覧から**関連付けられたコントロール**で、**データ UI カスタマイズ オプション** ダイアログ ボックス。  
   
-5.  Click the drop-down arrow on the `Customers` table, and choose **ComplexDataGridView** from the control list.  
+5.  ドロップダウン矢印をクリックして、`Customers`テーブル、および選択**ComplexDataGridView**コントロール リストからです。  
   
-## <a name="add-controls-to-the-form"></a>Add controls to the form  
- You can create the data-bound controls by dragging items from the **Data Sources** window onto your form.  
+## <a name="add-controls-to-the-form"></a>フォームにコントロールを追加します。  
+ 項目をドラッグして、データ バインド コントロールを作成することができます、**データソース**ウィンドウからフォームにします。  
   
-#### <a name="to-create-data-bound-controls-on-the-form"></a>To create data-bound controls on the form  
+#### <a name="to-create-data-bound-controls-on-the-form"></a>フォームにデータ バインド コントロールを作成するには  
   
--   Drag the main **Customers** node from the **Data Sources** window onto the form.Verify that the **ComplexDataGridView** control is used to display the table's data.  
+-   メインのドラッグ**顧客**ノードから、**データ ソース**ウィンドウからフォームにします。いることを確認、 **ComplexDataGridView**テーブルのデータを表示するコントロールを使用します。  
   
-## <a name="running-the-application"></a>Running the application  
+## <a name="running-the-application"></a>アプリケーションの実行  
   
-#### <a name="to-run-the-application"></a>To run the application  
+#### <a name="to-run-the-application"></a>アプリケーションを実行するには  
   
--   Press F5 to run the application.  
+-   F5 キーを押してアプリケーションを実行します。  
   
-## <a name="next-steps"></a>Next Steps  
- Depending on your application requirements, there are several steps you may want to perform after creating a control that supports databinding. Some typical next steps include:  
+## <a name="next-steps"></a>次の手順  
+ アプリケーションの要件に応じて、データ バインディングをサポートするコントロールの作成後に、追加の操作を実行できます。 次の手順として、一般的には、次のようなことを実行します。  
   
--   Placing your custom controls in a control library so you can reuse them in other applications.  
+-   他のアプリケーションで再利用できるように、コントロール ライブラリにカスタム コントロールを配置します。  
   
--   Creating controls that support lookup scenarios. For more information, see [Create a Windows Forms user control that supports lookup data binding](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).  
+-   検索のシナリオをサポートするコントロールを作成します。 詳細については、次を参照してください。[ルックアップ データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md)です。  
   
-## <a name="see-also"></a>See Also  
- [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)   
- [Windows Forms Controls](/dotnet/framework/winforms/controls/index)
-
+## <a name="see-also"></a>関連項目  
+ [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+ [データ ソース ウィンドウからドラッグしたときに作成するコントロールを設定します。](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)   
+ [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)

@@ -1,75 +1,54 @@
 ---
-title: "n 層アプリケーションでのデータセットの操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Visual Basic], n 層アプリケーション"
-  - "DataSet プロジェクト [VS n 層アプリケーション]"
-  - "データセット [Visual Basic], n 層アプリケーション"
-  - "分散アプリケーション [VS n 層アプリケーション]"
-  - "複数層アプリケーション"
-  - "多階層データベース アプリケーション"
-  - "n 層アプリケーション"
-  - "TableAdapter, n 層アプリケーション"
-  - "層, n 層アプリケーション"
-  - "型指定されたデータセット, n 層アプリケーション"
+title: "N 層アプリケーションでデータセットを操作 |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- datasets [Visual Basic], n-tier applications
+- multi-tier database applications
+- DataSet project [VS n-tier applications]
+- distributed applications [VS n-tier applications]
+- data [Visual Basic], n-tier applications
+- TableAdapters, n-tier applications
+- n-tier applications
+- tiers, n-tier applications
+- typed datasets, n-tier applications
+- multiple tier applications
 ms.assetid: f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20
-caps.latest.revision: 22
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.technology: vs-data-tools
+ms.openlocfilehash: 85062fe6ea82a73fbc2d64e1d1ce9136d16831cf
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# n 層アプリケーションでのデータセットの操作
-*n 層データ アプリケーション*とは、複数の論理レイヤー \(つまり*層*\) に分離されるデータ中心のアプリケーションです。  言い換えれば、n 層データ アプリケーションは、複数のプロジェクトに分離されたアプリケーションであり、データ アクセス層、ビジネス ロジック層、およびプレゼンテーション層がそれぞれ独自のプロジェクトに含まれています。  詳細については、「[n 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)」を参照してください。  
+# <a name="work-with-datasets-in-n-tier-applications"></a>N 層アプリケーションでのデータセットを操作します。
+*N 層データ アプリケーション*は複数の論理レイヤーに分離されるデータ セントリックなアプリケーション (または*階層*)。 言い換えれば、n 層データ アプリケーションは、複数のプロジェクトに分離されたアプリケーションであり、データ アクセス層、ビジネス ロジック層、およびプレゼンテーション層がそれぞれ独自のプロジェクトに含まれています。 詳細については、次を参照してください。 [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)です。  
   
- TableAdapter およびデータセット クラスを別々のプロジェクトに生成できるように、型指定されたデータセットが強化されました。  これにより、アプリケーション層を分離して、n 層データ アプリケーションをすばやく生成できます。  
+TableAdapter およびデータセット クラスを別々のプロジェクトに生成できるように、型指定されたデータセットが強化されました。 これにより、アプリケーション層を分離して、n 層データ アプリケーションをすばやく生成できます。  
   
- 型指定されたデータセットで n 層をサポートすることにより、アプリケーション アーキテクチャを n 層デザインに反復開発することが可能になり、コードを複数のプロジェクトに手動で分離する必要がなくなります。  データ層のデザインは、[型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)を使用して開始します。  アプリケーション アーキテクチャを n 層デザインにする準備ができたら、データセット クラスが別個のプロジェクトに生成されるようにデータセットの **\[DataSet プロジェクト\]** プロパティを設定します。  
+型指定されたデータセットで N 層をサポートでは、アプリケーション アーキテクチャを n 層デザインに反復開発できるようにします。また、複数のプロジェクトにコードを手動で分離するための要件も削除されます。 使用して、データ層のデザイン、**データセット デザイナー**です。 アプリケーションのアーキテクチャを n 層デザインにする準備ができたら、設定、 **DataSet プロジェクト**を別のプロジェクトに、データセット クラスを生成するデータセットのプロパティです。  
   
-## このセクションの内容  
- [方法 : データセットと TableAdapters を別々のプロジェクトに分離する](../data-tools/separate-datasets-and-tableadapters-into-different-projects.md)  
- 生成されたデータセット クラスを、生成された TableAdapter クラスを含むプロジェクトから新しいプロジェクトに移動する方法について説明します。  
+## <a name="reference"></a>参照  
+<xref:System.Data.DataSet>  
+<xref:System.Data.TypedTableBase%601>  
   
- [方法 : n 層アプリケーションの TableAdapters にコードを追加する](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)  
- n 層 TableAdapter のコードを追加できる部分クラスを生成する方法について説明します。  
-  
- [方法 : n 層アプリケーションのデータセットにコードを追加する](../data-tools/add-code-to-datasets-in-n-tier-applications.md)  
- n 層データセットのコードを追加できる部分クラスを生成する方法について説明します。  
-  
- [方法 : n 層データセットに検証を追加する](../data-tools/add-validation-to-an-n-tier-dataset.md)  
- データの変更時に検証を実行するコードを追加する場所について説明します。  
-  
- [チュートリアル : n 層データ アプリケーションの作成](../data-tools/walkthrough-creating-an-n-tier-data-application.md)  
- 型指定されたデータセットを作成し、TableAdapter とデータセット コードを複数のプロジェクトに分離する手順について説明します。  
-  
- [チュートリアル : n 層データ アプリケーションへの検証の追加](../Topic/Walkthrough:%20Adding%20Validation%20to%20an%20N-Tier%20Data%20Application.md)  
- n 層データ アプリケーションのチュートリアルで作成したアプリケーションに検証を追加する手順について説明します。  
-  
-## 関連項目  
- <xref:System.Data.DataSet>  
-  
- <xref:System.Data.TypedTableBase%601>  
-  
-## 関連項目  
- [n 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)  
-  
- [階層更新](../data-tools/hierarchical-update.md)  
-  
- [Visual Studio でのデータセットの操作](../data-tools/dataset-tools-in-visual-studio.md)  
-  
- [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)  
-  
- [TableAdapter の概要](../data-tools/tableadapter-overview.md)  
-  
- [N\-Tier and Remote Applications with LINQ to SQL](../Topic/N-Tier%20and%20Remote%20Applications%20with%20LINQ%20to%20SQL.md)
+## <a name="see-also"></a>関連項目
+[n 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)  
+[チュートリアル : n 層データ アプリケーションの作成](../data-tools/walkthrough-creating-an-n-tier-data-application.md)  
+[n 層アプリケーションの TableAdapters にコードを追加する](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)  
+[n 層アプリケーションのデータセットにコードを追加する](../data-tools/add-code-to-datasets-in-n-tier-applications.md)  
+[n 層データセットに検証を追加する](../data-tools/add-validation-to-an-n-tier-dataset.md)  
+[データセットと TableAdapters を別々のプロジェクトに分離する](../data-tools/separate-datasets-and-tableadapters-into-different-projects.md)  
+[階層更新](../data-tools/hierarchical-update.md)  
+[Visual Studio のデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)  
+[Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)  
+[作成し、Tableadapter を構成します。](../data-tools/create-and-configure-tableadapters.md)  
+[N 層でおよびリモート アプリケーション LINQ to SQL](http://msdn.microsoft.com/Library/854a1cdd-53cb-45f5-83ca-63962a9b3598)

@@ -1,5 +1,5 @@
 ---
-title: Create a simple data application by using ADO.NET | Microsoft Docs
+title: "ADO.NET を使用して単純なデータ アプリケーションを作成 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 08/23/2017
 ms.reviewer: 
@@ -10,177 +10,177 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 2222841f-e443-4a3d-8c70-4506aa905193
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: b9ddc58b4205be5928f366ae82d4e0512eb9b767
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/28/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 05a0a339b413495aadfa397e5fec3b826f920026
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="create-a-simple-data-application-by-using-adonet"></a>Create a simple data application by using ADO.NET
-When you create an application that manipulates data in a database, you perform basic tasks such as defining connection strings, inserting data, and running stored procedures. By following this topic, you can discover how to interact with a database from within a simple Windows Forms "forms over data" application by using Visual C# or Visual Basic and ADO.NET.  All .NET data technologies—including datasets, LINQ to SQL, and Entity Framework—ultimately perform steps that are very similar to those shown in this article.  
+# <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET を使用して単純なデータ アプリケーションを作成します。
+データベース内のデータを操作するアプリケーションを作成するときに、接続文字列の定義、データの挿入、ストアド プロシージャの実行などの基本的なタスクを実行します。 このトピックでは、Visual c# または Visual Basic および ADO.NET 使用した簡単な Windows フォーム「フォーム オーバー データ」アプリケーション内部から、データベースとやり取りする方法を検出できます。  すべての .NET データ テクノロジ — LINQ to SQL、および Entity Framework のデータセットを含む、最終的にこの記事で示したものとよく似ている手順を実行します。  
   
- This article demonstrates a simple way to get data out of a database in a very fast manner. If your application needs to modify data in non-trivial ways and update the database, you should consider using Entity Framework and using data binding to automatically sync user interface controls to changes in the underlying data.  
+ この記事では、非常に高速の方法で、データベースからデータを取得する簡単な方法を示します。 場合は、アプリケーションは、重要な方法でデータを変更し、データベースを更新する必要があります、Entity Framework を使用して、基になるデータの変更をユーザー インターフェイス コントロールを自動的に同期へのデータ バインディングを使用してを考慮する必要があります。  
   
 > [!IMPORTANT]
->  To keep the code simple, it doesn't include production-ready exception handling.  
+>  運用環境での例外処理コードをシンプルにするに含まれません。  
   
- **In this topic**  
+ **このトピックの内容**  
   
--   [Set up the sample database](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_setupthesampledatabase)  
+-   [サンプル データベースをセットアップします。](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_setupthesampledatabase)  
   
--   [Create the forms and add controls](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_createtheformsandaddcontrols)  
+-   [フォームを作成し、コントロールの追加](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_createtheformsandaddcontrols)  
   
--   [Store the connection string](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_storetheconnectionstring)   
+-   [接続文字列を保存します。](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_storetheconnectionstring)   
   
--   [Write the code for the forms](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_writethecodefortheforms)  
+-   [フォームのコードを記述します。](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_writethecodefortheforms)  
   
--   [Test your application](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_testyourapplication)  
+-   [アプリケーションをテストします。](../data-tools/create-a-simple-data-application-by-using-adonet.md#BKMK_testyourapplication)  
   
-## <a name="prerequisites"></a>Prerequisites  
- To create the application, you'll need:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ アプリケーションの作成には、次が必要です:  
   
--   Visual Studio Community Edition.  
+-   Visual Studio Community エディションです。  
   
--   SQL Server Express LocalDB.  
-  
--   The small sample database that you create by following the steps in [Create a SQL database by using a script](../data-tools/create-a-sql-database-by-using-a-script.md).  
-  
--   The connection string for the database after you set it up. You can find this value by opening **SQL Server Object Explorer**, opening the shortcut menu for the database, selecting **Properties**, and then scrolling to the **ConnectionString**  property.  
+-   SQL Server Express LocalDB です。 SQL Server Express LocalDB をお持ちでない場合からをインストール、 [SQL Server のエディションのダウンロード ページ](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)です。  
 
-This topic assumes that you're familiar with the basic functionality of the Visual Studio IDE and can create a Windows Forms application, add forms to that project, put buttons and other controls on those forms, set properties of those controls, and code simple events. If you aren't comfortable with these tasks, we suggest that you complete the [Getting Started with Visual C# and Visual Basic](../ide/getting-started-with-visual-csharp-and-visual-basic.md) before you start this topic.  
+このトピックする Visual Studio IDE の基本的な機能を理解してとことができます、Windows フォーム アプリケーションを作成すると仮定ボタンとその他のコントロールをフォームには、配置、プロジェクトへのフォーム コントロール、およびシンプルなイベントのコードのプロパティの設定を追加します。 完了することをお勧めこれらのタスクに慣れていない場合、 [Visual c# および Visual Basic の概要](../ide/getting-started-with-visual-csharp-and-visual-basic.md)トピックこのチュートリアルを開始する前にします。  
   
-##  <a name="BKMK_setupthesampledatabase"></a> Set up the sample database  
- The sample database for this walkthrough includes the Customer and Orders tables. The tables contain no data initially, but you can add data when you run the application that you'll create. The database also has five simple stored procedures. [Create a SQL database by using a script](../data-tools/create-a-sql-database-by-using-a-script.md) contains a Transact-SQL script that creates the tables, the primary and foreign keys, the constraints, and the stored procedures.  
+##  <a name="BKMK_setupthesampledatabase"></a>サンプル データベースをセットアップします。  
+次の手順に従って、サンプル データベースを作成します。  
+
+1. Visual Studio で開く、**サーバー エクスプ ローラー**ウィンドウです。  
+
+2. 右クリックして**データ接続**を選択して * * 新しい SQL Server データベースの作成..."です。  
+
+3. **サーバー名**テキスト ボックスに、入力**(localdb) \mssqllocaldb**です。  
+
+4. **新しいデータベース名**テキスト ボックスに、入力**Sales**、順に選択**OK**です。  
+
+     空の**Sales**データベースが作成され、サーバー エクスプ ローラーでデータ接続 ノードに追加します。  
+
+5. 右クリックし、 **Sales**データ接続と選択**新しいクエリ**です。  
+
+     クエリ エディター ウィンドウが開きます。  
+
+6. コピー、 [Sales TRANSACT-SQL スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/data-tools/samples/sales.sql)をクリップボードにします。  
+
+7. T-SQL スクリプトをクエリ エディターに貼り付けを選択し、 **Execute**ボタンをクリックします。  
+
+     短期間のうち、クエリの実行が終了され、データベース オブジェクトが作成されます。 データベースには、2 つのテーブルが含まれています: 顧客と注文します。 これらのテーブルにはデータが最初で作成するアプリケーションを実行するときにデータを追加することができます。 データベースには、次の 4 つの単純なストアド プロシージャも含まれています。   
   
-##  <a name="BKMK_createtheformsandaddcontrols"></a> Create the forms and add controls  
+##  <a name="BKMK_createtheformsandaddcontrols"></a>フォームを作成し、コントロールの追加  
   
-1.  Create a project for a Windows Forms application, and then name it SimpleDataApp.  
+1.  Windows フォーム アプリケーション用のプロジェクトを作成し、SimpleDataApp と名前をつけます。  
   
-     Visual Studio creates the project and several files, including an empty Windows form that's named Form1.  
+     Visual Studio は、Form1 という名前の空の Windows フォームを含めた、いくつかのファイルとプロジェクトを作成します。  
   
-2.  Add two Windows forms to your project so that it has three forms, and then give them the following names:  
+2.  3 つの形式を持つように、2 つの Windows フォームをプロジェクトに追加し、アクセス許可、次の名前。  
   
-    -   Navigation  
+    -   ナビゲーション  
   
     -   NewCustomer  
   
     -   FillOrCancel  
   
-3.  For each form, add the text boxes, buttons, and other controls that appear in the following illustrations. For each control, set the properties that the tables describe.  
+3.  各フォームに、次の図に示されるように、テキスト ボックス、ボタン、および他のコントロールを追加します。 各コントロールに、テーブルを示すプロパティを設定します。  
   
     > [!NOTE]
-    >  The group box and the label controls add clarity but aren't used in the code.  
+    >  グループ ボックス、およびラベル コントロールは明確性を追加しますが、コードでは使用されません。  
   
- **Navigation form**  
+ **Navigation フォーム**  
   
- ![Navigation dialog box](../data-tools/media/simpleappnav.png "SimpleAppNav")  
+ ![ダイアログ ボックスのナビゲーション](../data-tools/media/simpleappnav.png "SimpleAppNav")  
   
-|Controls for the Navigation form|Properties|  
+|Navigation フォームのコントロール|プロパティ|  
 |--------------------------------------|----------------|  
-|Button|Name = btnGoToAdd|  
-|Button|Name = btnGoToFillOrCancel|  
-|Button|Name = btnExit|  
+|ボタン|Name = btnGoToAdd|  
+|ボタン|Name = btnGoToFillOrCancel|  
+|ボタン|Name = btnExit|  
   
- **NewCustomer form**  
+ **NewCustomer フォーム**  
   
- ![Add  a new customer and place an order](../data-tools/media/simpleappnewcust.png "SimpleAppNewCust")  
+ ![新しい顧客を追加し、注文](../data-tools/media/simpleappnewcust.png "SimpleAppNewCust")  
   
-|Controls for the NewCustomer form|Properties|  
+|NewCustomer フォームのコントロール|プロパティ|  
 |---------------------------------------|----------------|  
 |TextBox|Name = txtCustomerName|  
 |TextBox|Name = txtCustomerID<br /><br /> Readonly = True|  
-|Button|Name = btnCreateAccount|  
+|ボタン|Name = btnCreateAccount|  
 |NumericUpdown|DecimalPlaces = 0<br /><br /> Maximum = 5000<br /><br /> Name = numOrderAmount|  
 |DateTimePicker|Format = Short<br /><br /> Name = dtpOrderDate|  
-|Button|Name = btnPlaceOrder|  
-|Button|Name = btnAddAnotherAccount|  
-|Button|Name = btnAddFinish|  
+|ボタン|Name = btnPlaceOrder|  
+|ボタン|Name = btnAddAnotherAccount|  
+|ボタン|Name = btnAddFinish|  
   
- **FillOrCancel form**  
+ **FillOrCancel フォーム**  
   
- ![fill or cancel orders](../data-tools/media/simpleappcancelfill.png "SimpleAppCancelFill")  
+ ![入力するか、または注文のキャンセル](../data-tools/media/simpleappcancelfill.png "SimpleAppCancelFill")  
   
-|Controls for the FillOrCancel form|Properties|  
+|FillOrCancel フォームのコントロール|プロパティ|  
 |----------------------------------------|----------------|  
 |TextBox|Name = txtOrderID|  
-|Button|Name = btnFindByOrderID|  
+|ボタン|Name = btnFindByOrderID|  
 |DateTimePicker|Format = Short<br /><br /> Name = dtpFillDate|  
 |DataGridView|Name = dgvCustomerOrders<br /><br /> Readonly = True<br /><br /> RowHeadersVisible = False|  
-|Button|Name = btnCancelOrder|  
-|Button|Name = btnFillOrder|  
-|Button|Name = btnFinishUpdates|  
+|ボタン|Name = btnCancelOrder|  
+|ボタン|Name = btnFillOrder|  
+|ボタン|Name = btnFinishUpdates|  
   
-##  <a name="BKMK_storetheconnectionstring"></a> Store the connection string  
- When your application tries to open a connection to the database, your application must have access to the connection string. To avoid entering the string manually on each form, store the string in the App.config file in your project, and create a method that returns the string when the method is called from any form in your application.  
+##  <a name="BKMK_storetheconnectionstring"></a>接続文字列を保存します。  
+ アプリケーションがデータベースの接続を開くとき、アプリケーションは接続文字列にアクセスする必要があります。 各フォームで文字列を手動で入力しなくても、プロジェクトの App.config ファイルに文字列を格納し、アプリケーションのすべてのフォームからメソッドを呼び出したときに、文字列を返すメソッドを作成します。  
   
- You can find the connection string in **SQL Server Object Explorer** by right-clicking the database, selecting **Properties**, and then locating the ConnectionString property. Use Ctrl+A, Ctrl+C to select and copy the string to the clipboard. 
+ 右クリックして、接続文字列を見つけることができます、 **Sales**内のデータ接続**サーバー エクスプ ローラー**を選択して**プロパティ**です。 検索、 **ConnectionString**プロパティ、しを使用して、CTRL + A Ctrl + C を選択し、文字列をクリップボードにコピーします。 
   
-1.  If you're using C#, in **Solution Explorer**, expand the **Properties** node under the project, and then open the **Settings.settings** file.  
-    If you're using Visual Basic, in **Solution Explorer**, click **Show All Files**, expand the **My Project** node, and then open the **Settings.settings** file.
+1.  C# の場合、使用している場合**ソリューション エクスプ ローラー**、展開、**プロパティ**ノード、プロジェクトの下で開き、 **Settings.settings**ファイル。  
+    Visual Basic を使用している場合**ソリューション エクスプ ローラー**、] をクリックして**[すべてのファイル**、展開、 **My Project**ノードを開き、 **Settings.settings**ファイル。
   
-2.  In the **Name** column, enter `connString`.  
+2.  **名前**列、入力`connString`です。  
   
-3.  In the **Type** list, select **(Connection String)**.  
+3.  **型**一覧で、 **(接続文字列)**です。  
   
-4.  In the **Scope** list, select **Application**.  
-  
+4.  **スコープ**一覧で、**アプリケーション**です。    
 
-5.  In the **Value** column, enter your connection string (without any outside quotes), and then save your changes.  
+5.  **値**列 (任意の外部の引用符)、なし、接続文字列を入力し、変更を保存します。  
   
 > [!NOTE]
->  In a real application, you should store the connection string securely, as described in [Connection Strings and Configuration Files](/dotnet/framework/data/adonet/connection-strings-and-configuration-files).     
+>  実際のアプリケーションでは文字列を格納する接続」の説明に従って、安全に[接続文字列と構成ファイル](/dotnet/framework/data/adonet/connection-strings-and-configuration-files)です。     
   
-##  <a name="BKMK_writethecodefortheforms"></a> Write the code for the forms  
- This section contains brief overviews of what each form does. It also provides the code that defines the underlying logic when a button on the form is clicked.  
+##  <a name="BKMK_writethecodefortheforms"></a>フォームのコードを記述します。  
+ このセクションには、各フォームの動作の概要が含まれています。 フォーム上のボタンがクリックされたときに、基になるロジックを定義するコードも提供します。  
   
-### <a name="navigation-form"></a>Navigation form  
+### <a name="navigation-form"></a>Navigation フォーム  
 
-The Navigation form opens when you run the application. The **Add an account** button opens the NewCustomer form. The **Fill or cancel orders** button opens the FillOrCancel form. The **Exit** button closes the application.  
+Navigation フォームはアプリケーションを実行すると開きます。 **アカウントを追加する**NewCustomer フォームを開きます。 **Fill またはキャンセル オーダー** FillOrCancel フォームを開きます。 **終了**ボタンがアプリケーションを終了します。  
   
-#### <a name="make-the-navigation-form-the-startup-form"></a>Make the Navigation form the startup form  
- If you're using C#, in **Solution Explorer**, open Program.cs, and then change the `Application.Run` line to this: `Application.Run(new Navigation());`  
+#### <a name="make-the-navigation-form-the-startup-form"></a>Navigation フォームをスタートアップ フォームに設定  
+ C# の場合、使用している場合**ソリューション エクスプ ローラー**、Program.cs を開き、変更、`Application.Run`をこの行。`Application.Run(new Navigation());`  
   
- If you're using Visual Basic, in **Solution Explorer**, open the **Properties** window, select the **Application** tab, and then select **SimpleDataApp.Navigation** in the **Startup form** list.  
+ Visual Basic を使用している場合**ソリューション エクスプ ローラー**を開き、**プロパティ**ウィンドウで、**アプリケーション**、タブをクリックし**SimpleDataApp.Navigation**で、**スタートアップ フォーム** ボックスの一覧です。  
   
-#### <a name="create-auto-generated-event-handlers"></a>Create auto-generated event handlers  
- Double-click the three buttons on the Navigation form to create empty event handler methods. Double-clicking the buttons also adds auto-generated code in the Designer code file that enables a button click to raise an event.  
+#### <a name="create-auto-generated-event-handlers"></a>自動生成されたイベント ハンドラーを作成します。  
+ 空のイベント ハンドラー メソッドを作成する Navigation フォーム上の 3 つのボタンをダブルクリックします。 イベントを発生させるボタンのクリックをできるようにするデザイナー コード ファイルで自動生成されたコードを追加もボタンをダブルクリックします。  
   
-#### <a name="add-code-for-the-navigation-form-logic"></a>Add code for the Navigation form logic   
- In the code page for the Navigation form, complete the method bodies for the three button click event handlers as shown in the following code.  
+#### <a name="add-code-for-the-navigation-form-logic"></a>ナビゲーションのフォーム ロジックのコードを追加します。   
+ Navigation フォームのコード ページで、完了メソッド本体の 3 つのボタンのクリックしてイベント ハンドラー、次のコードに示すようにします。  
   
 [!code-csharp[Navigation#1](../data-tools/codesnippet/CSharp/SimpleDataApp/Navigation.cs#1)]  
 [!code-vb[Navigation#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/Navigation.vb#1)]   
   
-### <a name="newcustomer-form"></a>NewCustomer form  
- When you enter a customer name and then select the **Create Account** button, the NewCustomer form creates a customer account, and SQL Server returns an IDENTITY value as the new customer ID. You can then place an order for the new account by specifying an amount and an order date and selecting the **Place Order** button.  
+### <a name="newcustomer-form"></a>NewCustomer フォーム  
+ 顧客名を入力しを選択し、**アカウントの作成**ボタン、NewCustomer フォームは、顧客のアカウントを作成し、SQL Server は、新しい顧客 ID として IDENTITY 値を返します。 金額と注文日を指定することを選択して、新しいアカウントの注文を設定することができますし、 **Place Order**ボタンをクリックします。  
   
-#### <a name="create-auto-generated-event-handlers"></a>Create auto-generated event handlers  
- Create an empty Click event handler for each button on the NewCustomer form by double-clicking on each of the four buttons. Double-clicking the buttons also adds auto-generated code in the Designer code file that enables a button click to raise an event.  
+#### <a name="create-auto-generated-event-handlers"></a>自動生成されたイベント ハンドラーを作成します。  
+ 空のクリックを作成するそれぞれの 4 つのボタンをダブルクリックすると、NewCustomer フォーム上の各ボタンのイベント ハンドラー。 イベントを発生させるボタンのクリックをできるようにするデザイナー コード ファイルで自動生成されたコードを追加もボタンをダブルクリックします。  
   
-#### <a name="add-code-for-the-newcustomer-form-logic"></a>Add code for the NewCustomer form logic  
-To complete the NewCustomer form logic, follow these steps.  
+#### <a name="add-code-for-the-newcustomer-form-logic"></a>NewCustomer フォームのロジックのコードを追加します。  
+NewCustomer フォームのロジックを完了するには、次の手順に従います。  
 
-1. Bring the ```System.Data.SqlClient``` namespace into scope so that you don't have to fully qualify the names of its members.  
+1. 表示、```System.Data.SqlClient```スコープに名前空間を完全にする必要があるないようには、そのメンバーの名前を修飾します。  
 
      ```csharp  
      using System.Data.SqlClient  
@@ -189,25 +189,25 @@ To complete the NewCustomer form logic, follow these steps.
      Imports System.Data.SqlClient  
      ```  
 
-2. Add some variables and helper methods to the class as shown in the following code.  
+2. 次のコードに示すように、クラスにいくつかの変数とヘルパー メソッドを追加します。  
 
      [!code-csharp[NewCustomer#1](../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs#1)]  
      [!code-vb[NewCustomer#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb#1)]  
 
-3. Complete the method bodies for the four button click event handlers as shown in the following code.  
+3. 次のコードに示すように、メソッド本体の 4 つのボタンのクリック イベント ハンドラーを完了します。  
 
      [!code-csharp[NewCustomer#2](../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs#2)]  
      [!code-vb[NewCustomer#2](../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb#2)]  
 
-### <a name="fillorcancel-form"></a>FillOrCancel form  
- The FillOrCancel form runs a query to return an order when you enter an order ID and then click the **Find Order** button. The returned row appears in a read-only data grid. You can mark the order as canceled (X) if you select the **Cancel Order** button, or you can mark the order as filled (F) if you select the **Fill Order** button. If you select the **Find Order** button again, the updated row appears.  
-#### <a name="create-auto-generated-event-handlers"></a>Create auto-generated event handlers  
- Create empty Click event handlers for the four buttons on the FillOrCancel form by double-clicking the buttons. Double-clicking the buttons also adds auto-generated code in the Designer code file that enables a button click to raise an event.  
+### <a name="fillorcancel-form"></a>FillOrCancel フォーム  
+ FillOrCancel フォームを注文 ID を入力し、をクリックすると、注文を返すクエリの実行、 **Find Order**ボタンをクリックします。 戻された行は読み取り専用なデータ グリッドに表示されます。 キャンセル (X) と順序をマークするには、選択した場合、 **Cancel Order**ボタン、またはをマークできます順序を満たした (F) を選択した場合、 **Fill Order**ボタンをクリックします。 選択した場合、 **Find Order**を再度クリックして、更新された行が表示されます。  
+#### <a name="create-auto-generated-event-handlers"></a>自動生成されたイベント ハンドラーを作成します。  
+ 空の作成ボタンをダブルクリックして FillOrCancel フォームに 4 つのボタンのイベント ハンドラーをクリックします。 イベントを発生させるボタンのクリックをできるようにするデザイナー コード ファイルで自動生成されたコードを追加もボタンをダブルクリックします。  
   
-#### <a name="add-code-for-the-fillorcancel-form-logic"></a>Add code for the FillOrCancel form logic  
-To complete the FillOrCancel form logic, follow these steps.  
+#### <a name="add-code-for-the-fillorcancel-form-logic"></a>FillOrCancel フォーム ロジックのコードを追加します。  
+FillOrCancel フォームのロジックを完了するには、次の手順に従います。  
 
-1. Bring the following two namespaces into scope so that you don't have to fully qualify the names of their members.  
+1. そのメンバーの名前を完全に修飾する必要はありませんので、次の 2 つの名前空間をスコープに移動します。  
 
      ```csharp  
      using System.Data.SqlClient;  
@@ -218,15 +218,18 @@ To complete the FillOrCancel form logic, follow these steps.
      Imports System.Text.RegularExpressions  
      ```  
 
-2. Add a variable and helper method to the class as shown in the following code.  
+2. 次のコードに示すように、変数とヘルパー メソッドをクラスに追加します。  
 
      [!code-csharp[FillOrCancel#1](../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs#1)]  
      [!code-vb[FillOrCancel#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb#1)]  
 
-3. Complete the method bodies for the four button click event handlers as shown in the following code.  
+3. 次のコードに示すように、メソッド本体の 4 つのボタンのクリック イベント ハンドラーを完了します。  
 
      [!code-csharp[FillOrCancel#2](../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs#2)]  
      [!code-vb[FillOrCancel#2](../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb#2)]  
 
-##  <a name="BKMK_testyourapplication"></a> Test your application  
- Select the F5 key to build and test your application after you code each Click event handler, and then after you finish coding.
+##  <a name="BKMK_testyourapplication"></a>アプリケーションをテストします。  
+選択、 **f5 キーを押して**キーをビルドし、各クリック イベント ハンドラーのコードを作成した後、アプリケーションをテストし、コーディングを完了した後、します。
+
+## <a name="see-also"></a>関連項目
+[.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)

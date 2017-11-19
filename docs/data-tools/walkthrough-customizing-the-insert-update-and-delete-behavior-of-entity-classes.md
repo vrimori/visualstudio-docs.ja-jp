@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Customizing the insert, update, and delete behavior of entity classes | Microsoft Docs'
+title: "チュートリアル: のカスタマイズ、挿入、更新、およびエンティティ クラスの動作を削除 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,133 +10,128 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 03ff1146-706e-4780-91cb-56a83df63eea
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: 414b46a6aff263c9295c9233f2adb292279f6832
-ms.contentlocale: ja-jp
-ms.lasthandoff: 09/13/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: f711c0fcdd4866a1b097585052cdcb3733e426d8
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes"></a>Walkthrough: Customizing the insert, update, and delete behavior of entity classes
-The [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) provides a visual design surface for creating and editing [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] classes (entity classes) that are based on objects in a database. By using [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index), you can use LINQ technology to access SQL databases. For more information, see [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/Library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+# <a name="walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes"></a>チュートリアル: のカスタマイズ、挿入、更新、およびエンティティ クラスの動作を削除
+[LINQ to Visual Studio での SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)の作成と編集、ビジュアル デザイン画面を提供[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]データベース内のオブジェクトに基づくクラス (エンティティ クラス)。 使用して[LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)、SQL データベースにアクセスする LINQ テクノロジを使用することができます。 詳細については、「[LINQ (Language-Integrated Query) (LINQ (統合言語クエリ))](http://msdn.microsoft.com/Library/a73c4aec-5d15-4e98-b962-1274021ea93d)」をご覧ください。  
   
-By default, the logic to perform updates is provided by the [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] runtime. The runtime creates default Insert, Update, and Delete statements based on the schema of the table (the column definitions and primary key information). When you do not want to use the default behavior, you can configure the update behavior and designate specific stored procedures for performing the necessary Inserts, Updates, and Deletes required to work with the data in the database. You can also do this when the default behavior is not generated, for example, when your entity classes map to views. Additionally, you can override the default update behavior when the database requires table access through stored procedures. For more information, see [Customizing Operations By Using Stored Procedures](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures).  
+既定では、更新を実行するロジックは [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] ランタイムによって提供されます。 ランタイムは、テーブルのスキーマ (列定義と主キー情報) に基づいて、既定の Insert、Update、および Delete の各ステートメントを作成します。 既定の動作を使用しない場合は、更新動作を構成し、データベースのデータの操作に必要な Insert、Update、および Delete を実行する特定のストアド プロシージャを指定できます。 この方法は、既定の動作が生成されていない場合、たとえばエンティティ クラスがビューにマップされている場合にも実行できます。 また、データベースのテーブルへのアクセスには常にストアド プロシージャを通すようにすると、既定の更新動作をオーバーライドできます。 詳細については、次を参照してください。[のカスタマイズの操作によってストアド プロシージャの使用](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures)です。  
   
 > [!NOTE]
->  This walkthrough requires the availability of the **InsertCustomer**, **UpdateCustomer**, and **DeleteCustomer** stored procedures for the Northwind database.  
+>  このチュートリアルでは、可用性、 **InsertCustomer**、 **UpdateCustomer**、および**DeleteCustomer**のため、Northwind データベースのストアド プロシージャ。  
   
-This walkthrough provides the steps that you must follow to override the default LINQ to SQL runtime behavior for saving data back to a database by using stored procedures.  
+このチュートリアルでは、ストアド プロシージャを使用して、データベースにデータを保存する既定の LINQ to SQL ランタイムの動作をオーバーライドするために必要な手順を示します。  
   
-During this walkthrough, you will learn how to perform the following tasks:  
+このチュートリアルでは、次のタスクを実行する方法を学習します。  
   
--   Create a new Windows Forms application and add a [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] file to it.  
+-   新しい Windows フォーム アプリケーションを作成し、[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] ファイルを追加します。  
   
--   Create an entity class that is mapped to the Northwind Customers table.  
+-   Northwind の Customers テーブルにマップされるエンティティ クラスを作成します。  
   
--   Create an object data source that references the LINQ to SQL Customer class.  
+-   LINQ to SQL Customer クラスを参照するオブジェクト データ ソースを作成します。  
   
--   Create a Windows Form that contains a <xref:System.Windows.Forms.DataGridView> that is bound to the Customer class.  
+-   Customer クラスにバインドされる <xref:System.Windows.Forms.DataGridView> を含む Windows フォームを作成します。  
   
--   Implement save functionality for the form.  
+-   フォームの保存機能を実装します。  
   
--   Create <xref:System.Data.Linq.DataContext> methods by adding stored procedures to the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
+-   <xref:System.Data.Linq.DataContext>にストアド プロシージャを追加することにより、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] のメソッドを作成します。  
   
--   Configure the Customer class to use stored procedures to perform Inserts, Updates, and Deletes.  
+-   ストアド プロシージャを使用して挿入、更新、および削除を実行するように Customer クラスを構成します。  
   
-## <a name="prerequisites"></a>Prerequisites  
-To complete this walkthrough, you need the following:  
+## <a name="prerequisites"></a>必須コンポーネント  
+このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。  
   
--   Access to the SQL Server version of the Northwind sample database. For more information, see [How to: Install Sample Databases](../data-tools/installing-database-systems-tools-and-samples.md).  
+1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server のエディションのダウンロード ページ](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)、または、 **Visual Studio インストーラー**です。 一部として、Visual Studio インストーラーで、SQL Server Express LocalDB をインストールすることができます、**データ ストレージと処理**ワークロード、または個々 のコンポーネントとして。  
   
--   The **InsertCustomer**, **UpdateCustomer**, and **DeleteCustomer** stored procedures for the Northwind database.   
+2.  次の手順に従って、Northwind サンプル データベースをインストールします。  
+
+    1. Visual Studio で開く、 **SQL Server オブジェクト エクスプ ローラー**ウィンドウです。 (の一部として SQL Server オブジェクト エクスプ ローラーがインストールされている、**データ ストレージと処理**Visual Studio インストーラーでのワークロードです)。展開して、 **SQL Server**ノード。 LocalDB インスタンスを右クリックし、選択**新しいクエリしています.**.  
+
+       クエリ エディター ウィンドウが開きます。  
+
+    2. コピー、 [Northwind TRANSACT-SQL スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)をクリップボードにします。 この T-SQL スクリプトは、最初から、Northwind データベースを作成し、データを設定します。  
+
+    3. T-SQL スクリプトをクエリ エディターに貼り付けを選択し、 **Execute**ボタンをクリックします。  
+
+       短期間のうち、クエリの実行が終了し、Northwind データベースを作成します。  
   
-## <a name="creating-an-application-and-adding-linq-to-sql-classes"></a>Creating an Application and Adding LINQ to SQL Classes  
-Because you will be working with [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] classes and displaying the data on a Windows Form, create a new Windows Forms application and add a LINQ to SQL Classes file.  
+## <a name="creating-an-application-and-adding-linq-to-sql-classes"></a>アプリケーションの作成と LINQ to SQL クラスの追加  
+[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] クラスを操作してデータを Windows フォームに表示できるように、新しい Windows フォーム アプリケーションを作成し、LINQ to SQL クラス ファイルを追加します。  
   
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-#### <a name="to-create-a-new-windows-forms-application-project-that-contains-linq-to-sql-classes"></a>To create a new Windows Forms Application project that contains LINQ to SQL classes  
+#### <a name="to-create-a-new-windows-forms-application-project-that-contains-linq-to-sql-classes"></a>新しい Windows フォーム アプリケーション プロジェクトを作成するには、を格納している LINQ to SQL クラス  
   
-1. In Visual Studio, on the **File** menu, select **New**, **Project...**.  
+1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.  
   
-2. Expand either **Visual C#** or **Visual Basic** in the left-hand pane, then select **Windows Classic Desktop**.  
+2. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。  
 
-3. In the middle pane, select the **Windows Forms App** project type.  
+3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。  
 
-4. Name the project **UpdatingWithSProcsWalkthrough**, and then choose **OK**. 
+4. プロジェクトに名前を**UpdatingWithSProcsWalkthrough**を選択し**OK**です。 
   
-     The **UpdatingWithSProcsWalkthrough** project is created, and added to **Solution Explorer**.  
+     **UpdatingWithSProcsWalkthrough**プロジェクトが作成され、追加する**ソリューション エクスプ ローラー**です。  
   
-4.  On the **Project** menu, click **Add New Item**.  
+4.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
   
-5.  Click the **LINQ to SQL Classes** template and type **Northwind.dbml** in the **Name** box.  
+5.  クリックして、 **LINQ to SQL クラス**テンプレートと型**Northwind.dbml**で、**名前**ボックス。  
   
-6.  Click **Add**.  
+6.  **[追加]**をクリックします。  
   
-     An empty LINQ to SQL Classes file (Northwind.dbml) is added to the project, and the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] opens.  
+     プロジェクトに空の LINQ to SQL クラス ファイル (Northwind.dbml) が追加され、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]が開きます。  
   
-## <a name="creating-the-customer-entity-class-and-object-data-source"></a>Creating the Customer Entity Class and Object Data Source  
- Create [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] classes that are mapped to database tables by dragging tables from **Server Explorer**/**Database Explorer** onto the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. The result is LINQ to SQL entity classes that map to the tables in the database. After you create entity classes, they can be used as object data sources just like other classes that have public properties.  
+## <a name="creating-the-customer-entity-class-and-object-data-source"></a>Customer エンティティ クラスとオブジェクト データ ソースの作成  
+ 作成[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]からテーブルをドラッグして、データベース テーブルにマップされているクラス**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**上に、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]です。 結果は、データベース内のテーブルにマップされた LINQ to SQL エンティティ クラスになります。 作成したエンティティ クラスは、パブリック プロパティを持つ他のクラスと同様に、オブジェクト データ ソースとして使用できます。  
   
-#### <a name="to-create-a-customer-entity-class-and-configure-a-data-source-with-it"></a>To create a Customer entity class and configure a data source with it  
+#### <a name="to-create-a-customer-entity-class-and-configure-a-data-source-with-it"></a>Customer エンティティ クラスを作成し、そのエンティティ クラスでデータ ソースを構成するには  
   
-1.  In **Server Explorer**/**Database Explorer**, locate the Customer table in the SQL Server version of the Northwind sample database. 
+1.  **サーバー エクスプ ローラー**/**データベース エクスプ ローラー**、Northwind サンプル データベースの SQL Server バージョン内で顧客テーブルを検索します。 
   
-2.  Drag the **Customers** node from **Server Explorer**/**Database Explorer** onto the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] surface.  
+2.  ドラッグ、**顧客**からノード**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**上に、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]画面。  
   
-     An entity class named **Customer** is created. It has properties that correspond to the columns in the Customers table. The entity class is named **Customer** (not **Customers**) because it represents a single customer from the Customers table.  
-  
-    > [!NOTE]
-    >  This renaming behavior is called *pluralization*. It can be turned on or off in the [Options Dialog Box](../ide/reference/options-dialog-box-visual-studio.md). For more information, see [How to: Turn pluralization on and off (O/R Designer)](../data-tools/how-to-turn-pluralization-on-and-off-o-r-designer.md).  
-  
-3.  On the **Build** menu, click **Build UpdatingwithSProcsWalkthrough** to build the project.  
-  
-4.  On the **Data** menu, click **Show Data Sources**.  
-  
-5.  In the **Data Sources** window, click **Add New Data Source**.  
-  
-6.  Click **Object** on the **Choose a Data Source Type** page and then click **Next**.  
-  
-7.  Expand the **UpdatingwithSProcsWalkthrough** node and locate and select the **Customer** class.  
+     名前付きエンティティ クラス**顧客**を作成します。 これには、Customers テーブルの列に対応するプロパティが含まれています。 エンティティ クラスの名前は**顧客**(いない**顧客**) Customers テーブルから 1 人の顧客を表すためです。  
   
     > [!NOTE]
-    >  If the **Customer** class is not available, cancel out of the wizard, build the project, and run the wizard again.  
-8.  Click **Finish** to create the data source and add the **Customer** entity class to the **Data Sources** window.  
+    >  この名前の変更の動作は呼び出されます*複数形化*です。 オンまたはオフにすることができます、[オプション ダイアログ ボックス](../ide/reference/options-dialog-box-visual-studio.md)です。 詳細については、次を参照してください。[する方法: 複数形化のオンとオフ (O/r デザイナー)](../data-tools/how-to-turn-pluralization-on-and-off-o-r-designer.md)です。  
   
-## <a name="creating-a-datagridview-to-display-the-customer-data-on-a-windows-form"></a>Creating a DataGridView to Display the Customer Data on a Windows Form  
- Create controls that are bound to entity classes by dragging [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] data source items from the **Data Sources** window onto a Windows Form.  
+3.  **ビルド** メニューのをクリックして**updatingwithsprocswalkthrough のビルド**プロジェクトをビルドします。  
   
-#### <a name="to-add-controls-that-are-bound-to-the-entity-classes"></a>To add controls that are bound to the entity classes  
+4.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。  
   
-1.  Open Form1 in Design view.  
+5.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]**をクリックします。  
   
-2.  From the **Data Sources** window, drag the **Customer** node onto Form1.  
+6.  をクリックして**オブジェクト**上、**データ ソースの種類を選択**ページし、をクリックして**[次へ]**です。  
+  
+7.  展開、 **UpdatingwithSProcsWalkthrough**ノード検索して選択し、**顧客**クラスです。  
   
     > [!NOTE]
-    >  To display the **Data Sources** window, click **Show Data Sources** on the **Data** menu.  
+    >  場合、**顧客**クラスは使用できません、ウィザードをキャンセル、プロジェクトをビルド、およびウィザードを再度実行します。  
+8.  をクリックして**完了**データ ソースを作成し、追加、**顧客**エンティティ クラスを**データ ソース**ウィンドウです。  
   
-3.  Open Form1 in the Code Editor.  
+## <a name="creating-a-datagridview-to-display-the-customer-data-on-a-windows-form"></a>Windows フォームに顧客データを表示するための DataGridView の作成  
+ ドラッグしてエンティティ クラスにバインドされるコントロールを作成する[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]データ ソースからの項目、**データソース**ウィンドウから Windows フォームにします。  
   
-4.  Add the following code to the form, global to the form, outside any specific method, but inside the Form1 class:  
+#### <a name="to-add-controls-that-are-bound-to-the-entity-classes"></a>エンティティ クラスにバインドされるコントロールを追加するには  
+  
+1.  デザイン ビューで [Form1] を開きます。  
+  
+2.  **データソース**ウィンドウで、ドラッグ、**顧客**ノードを Form1 にします。  
+  
+    > [!NOTE]
+    >  表示する、**データ ソース**ウィンドウで、をクリックして**データ ソースの表示**で、**データ**メニュー。  
+  
+3.  コード エディターで Form1 を開きます。  
+  
+4.  フォームに次のコードを追加します。フォームに対してグローバルになるように、Form1 クラスの内部でありながら、どのメソッドにも属さない位置に追加します。  
   
     ```vb  
     Private NorthwindDataContext1 As New NorthwindDataContext  
@@ -147,7 +142,7 @@ Because you will be working with [!INCLUDE[vbtecdlinq](../data-tools/includes/vb
         = new NorthwindDataContext();    
     ```  
   
-5.  Create an event handler for the `Form_Load` event and add the following code to the handler:  
+5.  `Form_Load` イベントのイベント ハンドラーを作成し、ハンドラーに次のコードを追加します。  
   
     ```vb  
     CustomerBindingSource.DataSource = NorthwindDataContext1.Customers  
@@ -158,20 +153,20 @@ Because you will be working with [!INCLUDE[vbtecdlinq](../data-tools/includes/vb
         = northwindDataContext1.Customers;    
     ```  
   
-## <a name="implementing-save-functionality"></a>Implementing Save Functionality  
- By default, the save button is not enabled and save functionality is not implemented. Also, code is not automatically added to save changed data to the database when data-bound controls are created for object data sources. This section explains how to enable the save button and implement save functionality for [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] objects.  
+## <a name="implementing-save-functionality"></a>保存機能の実装  
+ 既定では、保存ボタンが有効ではなく、保存機能は実装されていません。 また、オブジェクト データ ソースに対してデータ バインド コントロールを作成しても、変更されたデータをデータベースに保存するコードは自動的には追加されません。 ここでは、保存ボタンを有効にし、[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] オブジェクトの保存機能を実装する方法について説明します。  
   
-#### <a name="to-implement-save-functionality"></a>To implement save functionality  
+#### <a name="to-implement-save-functionality"></a>保存機能を実装するには  
   
-1.  Open Form1 in Design view.  
+1.  デザイン ビューで [Form1] を開きます。  
   
-2.  Select the save button on the **CustomerBindingNavigator** (the button with the floppy disk icon).  
+2.  保存先の選択ボタンをクリックして、 **CustomerBindingNavigator** (フロッピー ディスクのアイコンのボタン)。  
   
-3.  In the **Properties** window, set the **Enabled** property to **True**.  
+3.  **プロパティ**ウィンドウで、設定、**有効**プロパティを**True**です。  
   
-4.  Double-click the save button to create an event handler and switch to the Code Editor.  
+4.  保存ボタンをダブルクリックして、イベント ハンドラーを作成し、コード エディターに切り替えます。  
   
-5.  Add the following code into the save button event handler:  
+5.  保存ボタンのイベント ハンドラーに次のコードを追加します。  
   
     ```vb  
     NorthwindDataContext1.SubmitChanges()  
@@ -181,100 +176,100 @@ Because you will be working with [!INCLUDE[vbtecdlinq](../data-tools/includes/vb
     northwindDataContext1.SubmitChanges();  
     ```  
   
-## <a name="overriding-the-default-behavior-for-performing-updates-inserts-updates-and-deletes"></a>Overriding the Default Behavior for Performing Updates (Inserts, Updates, and Deletes)  
+## <a name="overriding-the-default-behavior-for-performing-updates-inserts-updates-and-deletes"></a>更新 (Insert、Update、および Delete) の実行に対する既定の動作のオーバーライド  
   
-#### <a name="to-override-the-default-update-behavior"></a>To override the default update behavior  
+#### <a name="to-override-the-default-update-behavior"></a>既定の更新動作をオーバーライドするには  
   
-1.  Open the LINQ to SQL file in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. (Double-click the **Northwind.dbml** file in **Solution Explorer**.)  
+1.  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]で LINQ to SQL ファイルを開きます  (ダブルクリックして、 **Northwind.dbml**ファイル**ソリューション エクスプ ローラー**)。  
   
-2.  In **Server Explorer**/**Database Explorer**, expand the Northwind databases **Stored Procedures** node and locate the **InsertCustomers**, **UpdateCustomers**, and **DeleteCustomers** stored procedures.  
+2.  **サーバー エクスプ ローラー**/**データベース エクスプ ローラー**、Northwind データベースを展開して**ストアド プロシージャ**ノードを検索し、 **InsertCustomers**、 **UpdateCustomers**、および**DeleteCustomers**ストアド プロシージャです。  
   
-3.  Drag all three stored procedures onto the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
+3.  3 つのストアド プロシージャをすべて [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]にドラッグします。  
   
-     The stored procedures are added to the methods pane as <xref:System.Data.Linq.DataContext> methods. For more information, see [DataContext Methods (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).  
+     各ストアド プロシージャが <xref:System.Data.Linq.DataContext> のメソッドとしてメソッド ペインに追加されます。 詳細については、次を参照してください。 [DataContext メソッド (O/r デザイナー)](../data-tools/datacontext-methods-o-r-designer.md)です。  
   
-4.  Select the **Customer** entity class in the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
+4.  選択、**顧客**のエンティティ クラスに、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]です。  
   
-5.  In the **Properties** window, select the **Insert** property.  
+5.  **プロパティ**ウィンドウで、**挿入**プロパティです。  
   
-6.  Click the ellipsis (...) next to **Use Runtime** to open the **Configure Behavior** dialog box.  
+6.  横にある省略記号 (...) をクリックして**ランタイムを使用**を開くには、**動作の構成** ダイアログ ボックス。  
   
-7.  Select **Customize**.  
+7.  選択**カスタマイズ**です。  
   
-8.  Select the **InsertCustomers** method in the **Customize** list.  
+8.  選択、 **InsertCustomers**メソッドで、**カスタマイズ** ボックスの一覧です。  
   
-9. Click **Apply** to save the configuration for the selected Class and Behavior.  
-  
-    > [!NOTE]
-    >  You can continue to configure the behavior for each class/behavior combination as long as you click **Apply** after you make each change. If you change the class or behavior before you click **Apply**, a warning dialog box providing an opportunity to apply any changes will appear.  
-  
-10. Select **Update** in the **Behavior** list.  
-  
-11. Select **Customize**.  
-  
-12. Select the **UpdateCustomers** method in the **Customize** list.  
-  
-     Inspect the list of **Method Arguments** and **Class Properties** and notice that there are two **Method Arguments** and two **Class Properties** for some columns in the table. This makes it easier to track changes and create statements that check for concurrency violations.  
-  
-13. Map the **Original_CustomerID** method argument to the **CustomerID (Original)** class property.  
+9. をクリックして**適用**選択したクラスと動作の構成を保存します。  
   
     > [!NOTE]
-    >  By default, method arguments will map to class properties when the names match. If property names are changed and no longer match between the table and the entity class, you might have to select the equivalent class property to map to if the O/R Designer cannot determine the correct mapping. Additionally, if method arguments do not have valid class properties to map to, you can set the **Class Properties** value to **(None)**.  
+    >  をクリックする限り、各クラスと動作の組み合わせに対して動作の構成を続行できます**適用**各変更を行った後。 クリックする前に、クラスまたは動作を変更するかどうかは**適用**変更を適用する機会が表示され、警告ダイアログ ボックス。  
   
-14. Click **Apply** to save the configuration for the selected Class and Behavior.  
+10. 選択**更新**で、**動作** ボックスの一覧です。  
   
-15. Select **Delete** in the **Behavior** list.  
+11. 選択**カスタマイズ**です。  
   
-16. Select **Customize**.  
+12. 選択、 **UpdateCustomers**メソッドで、**カスタマイズ** ボックスの一覧です。  
   
-17. Select the **DeleteCustomers** method in the **Customize** list.  
+     一覧を調べる**メソッド引数**と**クラス プロパティ**が含まれている 2 つと**メソッドの引数**と 2 つ**クラス プロパティ**一部の列、テーブルにします。 これにより、変更を追跡したり、同時実行違反をチェックするステートメントを作成したりすることが簡単になります。  
   
-18. Map the **Original_CustomerID** method argument to the **CustomerID (Original)** class property.  
+13. マップ、 **Original_CustomerID**メソッド引数を**CustomerID (オリジナル)**クラスのプロパティです。  
   
-19. Click **OK**.  
+    > [!NOTE]
+    >  既定では、メソッド引数は名前が一致した場合にクラス プロパティにマップされます。 プロパティ名が変更され、テーブルとエンティティ クラス間で一致しなくなったために、O/R デザイナーが正しいマッピングを判断できないときは、マップ先となる同等のクラス プロパティを選択することが必要になる場合があります。 さらに、メソッドの引数があるない有効なクラス プロパティにマップする場合を設定できます、**クラス プロパティ**値**(なし)**です。  
+  
+14. をクリックして**適用**選択したクラスと動作の構成を保存します。  
+  
+15. 選択**削除**で、**動作** ボックスの一覧です。  
+  
+16. 選択**カスタマイズ**です。  
+  
+17. 選択、 **DeleteCustomers**メソッドで、**カスタマイズ** ボックスの一覧です。  
+  
+18. マップ、 **Original_CustomerID**メソッド引数を**CustomerID (オリジナル)**クラスのプロパティです。  
+  
+19. **[OK]** をクリックします。  
   
 > [!NOTE]
->  Although it is not an issue for this particular walkthrough, it is worth noting that [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] handles database-generated values automatically for identity (auto-increment), rowguidcol (database-generated GUID), and timestamp columns during Inserts and Updates. Database-generated values in other column types will unexpectedly result in a null value. To return the database-generated values, you should manually set <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> to `true` and <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> to one of the following: <xref:System.Data.Linq.Mapping.AutoSync>, <xref:System.Data.Linq.Mapping.AutoSync>, or <xref:System.Data.Linq.Mapping.AutoSync>.  
+>  この特定のチュートリアルに限った問題ではありませんが、[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] は、ID 列 (自動インクリメント)、rowguidcol 列 (データベースが生成した GUID)、およびタイムスタンプ列であれば、データベースによって生成された値を、挿入時および更新時に自動的に処理します。 その他の列型のデータベースが生成した値は、予想に反して null 値になります。 データベースが生成した値を返すには、手動で <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> を `true` に設定し、<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> を <xref:System.Data.Linq.Mapping.AutoSync>、<xref:System.Data.Linq.Mapping.AutoSync>、または <xref:System.Data.Linq.Mapping.AutoSync> のいずれかに設定する必要があります。  
   
-## <a name="testing-the-application"></a>Testing the Application  
- Run the application again to verify that the **UpdateCustomers** stored procedure correctly updates the customer record in the database.  
+## <a name="testing-the-application"></a>アプリケーションのテスト  
+ 確認するには、もう一度アプリケーションを実行、 **UpdateCustomers**ストアド プロシージャが正しく、データベース内の顧客レコードを更新します。  
   
-#### <a name="to-test-the-application"></a>To test the application  
+#### <a name="to-test-the-application"></a>アプリケーションをテストするには  
   
-1.  Press F5.  
+1.  F5 キーを押します。  
   
-2.  Modify a record in the grid to test the Update behavior.  
+2.  グリッド内のレコードを変更して、Update の動作をテストします。  
   
-3.  Add a new record to test the Insert behavior.  
+3.  新しいレコードを追加して、Insert の動作をテストします。  
   
-4.  Click the save button to save changes back to the database.  
+4.  保存ボタンをクリックして変更をデータベースに保存します。  
   
-5.  Close the form.  
+5.  フォームを閉じます   
   
-6.  Press F5 and verify that the updated record and the newly inserted record persisted.  
+6.  F5 キーを押し、更新されたレコードと新しく挿入したレコードが永続化されていることを確認します。  
   
-7.  Delete the new record you created in step 3 to test the Delete behavior.  
+7.  手順 3. で作成した新しいレコードを削除して、Delete の動作をテストします。  
   
-8.  Click the save button to submit the changes and remove the deleted record from the database  
+8.  保存ボタンをクリックして変更を送信し、削除されたレコードをデータベースから削除します。  
   
-9. Close the form.  
+9. フォームを閉じます   
   
-10. Press F5 and verify that the deleted record was removed from the database.  
+10. F5 キーを押し、削除したレコードがデータベースから削除されていることを確認します。  
   
     > [!NOTE]
-    >  If your application uses SQL Server Express Edition, depending on the value of the **Copy to Output Directory** property of the database file, the changes may not appear when you press F5 in step 10. 
+    >  アプリケーションがの値に応じて SQL Server Express Edition を使用するかどうか、**出力ディレクトリにコピー**データベース ファイルのプロパティを変更されない可能性があります手順 10. で f5 キーを押す。 
   
-## <a name="next-steps"></a>Next Steps  
- Depending on your application requirements, there are several steps that you may want to perform after you create [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] entity classes. Some enhancements you could make to this application include the following:  
+## <a name="next-steps"></a>次の手順  
+アプリケーションの要件に応じて、[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] エンティティ クラスの作成後にいくつかの手順を実行することが必要な場合があります。 このアプリケーションで行うことができる拡張には次のものがあります。  
   
--   Implement concurrency checking during updates. For information, see [Optimistic Concurrency: Overview](/dotnet/framework/data/adonet/sql/linq/optimistic-concurrency-overview).  
+-   更新時の同時実行チェックを実装します。 詳細については、次を参照してください。[オプティミスティック同時実行制御: 概要](/dotnet/framework/data/adonet/sql/linq/optimistic-concurrency-overview)です。  
   
--   Add LINQ queries to filter data. For information, see [Introduction to LINQ Queries (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+-   LINQ クエリを追加してデータをフィルター処理します。 詳細については、次を参照してください。 [LINQ クエリ (c#) の概要](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)です。  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
- [LINQ to SQL Queries](/dotnet/framework/data/adonet/sql/linq/linq-to-sql-queries)   
- [DataContext Methods (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md)   
- [How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)   
+## <a name="see-also"></a>関連項目
+[LINQ to Visual Studio での SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)     
+[DataContext メソッド](../data-tools/datacontext-methods-o-r-designer.md)   
+[方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)  
+[LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)  
+[LINQ to SQL クエリ](/dotnet/framework/data/adonet/sql/linq/linq-to-sql-queries)  
  
