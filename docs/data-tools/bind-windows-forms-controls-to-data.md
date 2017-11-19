@@ -1,134 +1,50 @@
 ---
-title: "方法: Windows フォーム コントロールをデータにバインドする | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "データ [Windows フォーム], 表示"
-  - "データ ソース, 表示"
-  - "表示 (データを), Windows フォーム コントロール"
-  - "Windows フォーム, 表示 (データを)"
-ms.assetid: 0163a34a-38cb-40b9-8f38-3058a90caf21
-caps.latest.revision: 28
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+redirect_url: /visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio
+ms.openlocfilehash: 5ba8ada294275a99aab27ff9c249d6c3d8e17da3
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# 方法: Windows フォーム コントロールをデータにバインドする
-データを Windows フォーム コントロールにバインドするには、[ウィンドウ](../Topic/Data%20Sources%20Window.md)からオブジェクトをドラッグします。  **\[データ ソース\]** ウィンドウから項目をドラッグする前に、テーブルのコントロールの種類を、個別のコントロールの場合は **\[詳細\]**、<xref:System.Windows.Forms.DataGridView> の場合は **\[DataGridView\]** にそれぞれ設定できます。  詳細については、「[\[データ ソース\] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../Topic/Set%20the%20control%20to%20be%20created%20when%20dragging%20from%20the%20Data%20Sources%20window.md)」を参照してください。  
+タイトル:"をデータ バインド Windows フォーム コントロール |Microsoft ドキュメント"ms.custom:""ms.date::「11/04/2016」ms.reviewer:""ms.suite:""ms.tgt_pltfrm:""ms.topic:: helpviewer_keywords を「記事」。 
+  - 「Windows フォーム コントロールのデータを表示するには、」
+  - 「Windows フォーム、データを表示する」
+  - 「データ ソースを表示する」
+  - 「データ [Windows フォーム]、表示する」ms.assetid: 0163a34a-38cb-40b9-8f38-3058a90caf21 caps.latest.revision: 28 作成者:"gewarren"ms.author:"gewarren"マネージャー: ghogen ms.technology::「vs データ ツール」
+---
+# <a name="bind-windows-forms-controls-to-data"></a>Windows フォーム コントロールをデータにバインドします。
+オブジェクトをドラッグしてコントロールをデータ ソースをバインドすることができます、**データソース**ウィンドウまたはフォーム上の既存のコントロール上に Windows フォームにします。 項目をドラッグすると、前にバインドするコントロールの種類を設定することができます。 自体、または個々 の列にテーブルを選択するかどうかに応じて異なる値が表示されます。  カスタム値を設定することもできます。 表については、"Details"は各列が個別のコントロールにバインドされていることを意味します。  
+
+![データ ソースをバインドする DataGridView](../data-tools/media/raddata-bind-data-source-to-datagridview.png "DataGridView を raddata バインド データ ソース")  
   
- アプリケーションに必要なコントロールが **\[データ ソース\]** のウィンドウ内から利用できない場合は、コントロールを追加できます。  詳細については、「[\[データ ソース\] ウィンドウにカスタム コントロールを追加する](../Topic/Add%20custom%20controls%20to%20the%20Data%20Sources%20window.md)」を参照してください。  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+## <a name="bind-to--data-in-a-datagridview-control"></a>DataGridView コントロール内のデータにバインドします。  
+DataGridView でのテーブル全体は、その 1 つのコントロールにバインドされます。 レコードを移動するためのツールがストリップ DataGridView をフォームにドラッグすると、(<xref:System.Windows.Forms.BindingNavigator>) も表示されます。 A[データセット](../data-tools/dataset-tools-in-visual-studio.md)、 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)、 <xref:System.Windows.Forms.BindingSource>、および<xref:System.Windows.Forms.BindingNavigator>コンポーネント トレイに表示されます。 次の図では、Customers テーブルには、Orders テーブルにリレーションシップが含まれているために場合にも、TableAdapterManager が追加されます。 これらの変数は、すべての自動生成されたコードとして宣言フォーム クラスのプライベート メンバー。 DataGridView を塗りつぶすときの自動生成されたコードは、form_load イベント ハンドラーに格納されます。 データベースを更新するデータを保存するためのコードは、BindingNavigator の保存のイベント ハンドラーに格納されます。 移動したり、必要に応じてこのコードを変更することができます。  
   
-## 個々のコントロールにデータのテーブル全体を表示する  
- **\[データ ソース\]** ウィンドウから Windows アプリケーションのフォームにテーブル \(オブジェクト データ ソースを使用している場合はコレクションを表すノード\) をドラッグすることにより、個々のコントロールにデータのテーブル全体を表示できます。  
+ ![BindingNavigator GridView](../data-tools/media/raddata-gridview-with-bindingnavigator.png "raddata BindingNavigator GridView")  
   
-#### データのテーブル全体を表示するには  
+ それぞれの右上隅のスマート タグをクリックして、DataGridView コントロールと BindingNavigator の動作をカスタマイズできます。  
   
-1.  **\[データ ソース\]** ウィンドウを開きます。  詳細については、「[方法: \[データ ソース\] ウィンドウを開く](../Topic/How%20to:%20Open%20the%20data%20sources%20window.md)」を参照してください。  
+ ![DataGridView コントロールとバインドのナビゲーターのスマート タグ](../data-tools/media/raddata-datagridview-and-binding-navigator-smart-tags.png "raddata DataGridView とバインドのナビゲーターのスマート タグ")  
   
-    > [!NOTE]
-    >  **\[データ ソース\]** ウィンドウが空の場合は、そのウィンドウにデータ ソースを追加します。  詳細については、「[データ ソースの概要](../data-tools/add-new-data-sources.md)」を参照してください。  
+ コントロール、アプリケーションが必要がない場合内から使用可能、**データ ソース**ウィンドウ、コントロールを追加することができます。 詳細については、次を参照してください。[データ ソース ウィンドウにカスタム コントロールを追加](../data-tools/add-custom-controls-to-the-data-sources-window.md)です。  
   
-2.  **Windows フォーム デザイナー**でフォームを開きます。  
+ 項目をドラッグすることも、**データ ソース**ウィンドウからコントロールをデータにバインドするためのフォームにコントロールにします。 データに既にバインドされているコントロールには、そのデータを最も最近ドラッグされた項目にバインドがリセットがあります。 有効なドロップ ターゲットにするのには、コントロールを基になるのデータ型からの上にドラッグした項目を表示することにする必要があります、**データソース**ウィンドウです。 たとえば、これが無効のデータ型を持つ項目をドラッグし<xref:System.DateTime>上に、<xref:System.Windows.Forms.CheckBox>であるため、<xref:System.Windows.Forms.CheckBox>日付を表示することはできません。  
   
-3.  **\[データ ソース\]** ウィンドウでテーブルを選択し、ドロップダウン矢印をクリックして、**\[詳細\]** をクリックします。  
+## <a name="bind-to--data-in-individual-controls"></a>個々 のコントロールにデータにバインドします。  
+ 「詳細」をデータ ソースをバインドすると、データセット内の各列は個別のコントロールにバインドされます。  
   
-4.  **\[データ ソース\]** ウィンドウからフォームにテーブルをドラッグします。  
+ ![詳細をデータ ソースをバインド](../data-tools/media/raddata-bind-data-source-to-details.png "raddata バインド データ ソースの詳細")  
   
-     適切なタイトルが付けられたラベル コントロールと共に、各列またはプロパティの個々のデータ バインド コントロールがフォーム上に作成されます。  
+> [!IMPORTANT]
+>  前の図に、Orders テーブルからではなく、Customers テーブルの注文プロパティからドラッグしてください。 Customer.Orders プロパティへのバインド、によって、DataGridView に加えられたナビゲーション コマンドに直ちに反映されます詳細コントロール。 Orders テーブルからドラッグした場合、データセットに、コントロールをバインドする、まだけれども、これらがないと同期できません DataGridView  
   
-## 個々のコントロールにデータの選択した列を表示する  
- **\[データ ソース\]** ウィンドウから Windows アプリケーションのフォームに個々の列 \(オブジェクト データ ソースを使用している場合はプロパティ\) をドラッグして、個々のコントロールにデータの個々の列を表示します。  
+ 次の図はで、既定値に、Customers テーブルに注文プロパティを「詳細」をバインドした後に、フォームに追加のデータ バインド コントロールを示します、**データソース**ウィンドウです。  
   
-#### データの選択した列を表示するには  
+ ![Orders テーブルの詳細にバインドされて](../data-tools/media/raddata-orders-table-bound-to-details.png "raddata Orders テーブルの詳細にバインド")  
   
-1.  **\[データ ソース\]** ウィンドウを開きます。  詳細については、「[方法: \[データ ソース\] ウィンドウを開く](../Topic/How%20to:%20Open%20the%20data%20sources%20window.md)」を参照してください。  
+ 各コントロールがスマート タグを持つことにも注意してください。 このタグは、そのコントロールのみに適用されるカスタマイズを使用できます。  
   
-    > [!NOTE]
-    >  **\[データ ソース\]** ウィンドウが空の場合は、そのウィンドウにデータ ソースを追加します。  詳細については、「[データ ソースの概要](../data-tools/add-new-data-sources.md)」を参照してください。  
-  
-2.  テーブルを展開して、個々の列を表示します。  
-  
-    > [!TIP]
-    >  各列に作成されたコントロールを設定するには、**\[データ ソース\]** ウィンドウで列を選択し、ドロップダウン矢印をクリックして、利用可能なコントロールの一覧からコントロールを選択します。  詳細については、「[\[データ ソース\] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../Topic/Set%20the%20control%20to%20be%20created%20when%20dragging%20from%20the%20Data%20Sources%20window.md)」を参照してください。  
-  
-3.  **Windows フォーム デザイナー**でフォームを開きます。  
-  
-4.  **\[データ ソース\]** ウィンドウからフォームに目的の列をドラッグします。  
-  
-     ドラッグしたそれぞれの列またはプロパティについて、適切なタイトルが付けられたラベル コントロールと共に、個々のデータ バインド コントロールがフォーム上に作成されます。  
-  
- また、**\[データ ソース\]** ウィンドウから既存のコントロール \(既にフォーム上に存在するコントロール\) に項目をドラッグして、コントロールをデータにバインドすることもできます。  コントロールが既にデータにバインドしている場合は、そのデータ バインディングがリセットされて、最後にドラッグされた項目にバインドします。  
-  
-> [!NOTE]
->  有効なドロップ ターゲットは、**\[データ ソース\]** ウィンドウからドラッグされた項目の基になるデータ型を表示できるコントロールです。  たとえば、データ型 <xref:System.DateTime> の項目を <xref:System.Windows.Forms.CheckBox> にドラッグしようとしても、<xref:System.Windows.Forms.CheckBox> は日付を表示できないので、有効ではありません。  
-  
-#### 既存のコントロールをデータにバインドするには  
-  
-1.  **\[データ ソース\]** ウィンドウを開きます。  詳細については、「[方法: \[データ ソース\] ウィンドウを開く](../Topic/How%20to:%20Open%20the%20data%20sources%20window.md)」を参照してください。  
-  
-2.  [Windows Forms Designer](http://msdn.microsoft.com/ja-jp/3c3d61f8-f36c-4d41-b9c3-398376fabb15)でフォームを開きます。  
-  
-3.  **\[データ ソース\]** ウィンドウでテーブルまたはオブジェクトを展開し、各列または各プロパティを表示します。  
-  
-4.  **\[データ ソース\]** ウィンドウから既存のコントロールに目的の項目をドラッグします。  
-  
-     これで、選択した項目にコントロールがバインドされます。  
-  
-## DataGridView コントロールへのデータの表示  
-  
-#### 新しい Windows フォームの DataGridView コントロールにデータを表示するには  
-  
-1.  **\[データ ソース\]** ウィンドウを開きます。  詳細については、「[方法: \[データ ソース\] ウィンドウを開く](../Topic/How%20to:%20Open%20the%20data%20sources%20window.md)」を参照してください。  
-  
-    > [!NOTE]
-    >  **\[データ ソース\]** ウィンドウが空の場合は、そのウィンドウにデータ ソースを追加します。  詳細については、「[データ ソースの概要](../data-tools/add-new-data-sources.md)」を参照してください。  
-  
-2.  **Windows フォーム デザイナー**でフォームを開きます。  
-  
-3.  **\[データ ソース\]** ウィンドウでテーブルを選択し、ドロップダウン矢印をクリックして、**\[DataGridView\]** をクリックします。  
-  
-4.  **\[データ ソース\]** ウィンドウからフォームにテーブルをドラッグします。  
-  
-     レコード間をナビゲートするための <xref:System.Windows.Forms.DataGridView> コントロールとツール ストリップ \(<xref:System.Windows.Forms.BindingNavigator>\) がフォームに表示されます。  [DataSet](../data-tools/dataset-tools-in-visual-studio.md)、[TableAdapter](../data-tools/tableadapter-overview.md)、<xref:System.Windows.Forms.BindingSource>、および <xref:System.Windows.Forms.BindingNavigator> がコンポーネント トレイに表示されます。  
-  
-#### 既存の Windows フォームの DataGridView コントロールにデータを表示するには  
-  
-1.  **\[データ ソース\]** ウィンドウを開きます。  詳細については、「[方法: \[データ ソース\] ウィンドウを開く](../Topic/How%20to:%20Open%20the%20data%20sources%20window.md)」を参照してください。  
-  
-    > [!NOTE]
-    >  **\[データ ソース\]** ウィンドウが空の場合は、そのウィンドウにデータ ソースを追加します。  詳細については、「[データ ソースの概要](../data-tools/add-new-data-sources.md)」を参照してください。  
-  
-2.  **Windows フォーム デザイナー**でフォームを開きます。  
-  
-3.  **\[データ ソース\]** ウィンドウでテーブルを選択し、ドロップダウン矢印をクリックして、**\[DataGridView\]** をクリックします。  
-  
-4.  **\[データ ソース\]** ウィンドウからフォームの <xref:System.Windows.Forms.DataGridView> にテーブルをドラッグします。  
-  
-     <xref:System.Windows.Forms.DataGridView> コントロールは、ドラッグしたテーブルにバインドされます。  [DataSet](../data-tools/dataset-tools-in-visual-studio.md)、[TableAdapter](../data-tools/tableadapter-overview.md)、および <xref:System.Windows.Forms.BindingSource> がコンポーネント トレイに表示されます。  
-  
-## 参照  
- [チュートリアル: Windows フォームでのデータの表示](../data-tools/walkthrough-displaying-data-on-a-windows-form.md)   
- [型指定されたデータセットの作成と編集](../data-tools/creating-and-editing-typed-datasets.md)   
- [BindingSource コンポーネントの概要](../Topic/BindingSource%20Component%20Overview.md)   
- [BindingNavigator コントロールの概要](../Topic/BindingNavigator%20Control%20Overview%20\(Windows%20Forms\).md)   
- [Visual Studio でのデータへの接続](../data-tools/connecting-to-data-in-visual-studio.md)   
- [アプリケーションでデータを受け取る準備](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [アプリケーションへのデータのフェッチ](../data-tools/fetching-data-into-your-application.md)   
- [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [アプリケーションでのデータ編集](../data-tools/editing-data-in-your-application.md)   
- [データの検証](../Topic/Validating%20Data.md)   
- [データの保存](../data-tools/saving-data.md)   
- [Visual Studio でデータ ソースを操作するためのツール](../Topic/Tools%20for%20Working%20with%20Data%20Sources%20in%20Visual%20Studio.md)
+## <a name="see-also"></a>関連項目  
+ [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

@@ -1,110 +1,110 @@
 ---
-title: 'How to: Retrieve the SharePoint Project Service | Microsoft Docs'
+title: "方法: SharePoint プロジェクト サービスの取得 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - VB
 - CSharp
-helpviewer_keywords:
-- SharePoint project service
+helpviewer_keywords: SharePoint project service
 ms.assetid: 3d8b7adf-2603-4247-9b61-6326a1dd0dec
-caps.latest.revision: 15
-author: kempb
-ms.author: kempb
+caps.latest.revision: "15"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: bd5950786d94fbe62da35c965abf5793f760a02b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: b5ecc739da7cc3aa78a5c175ae323f5cd2447d40
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="how-to-retrieve-the-sharepoint-project-service"></a>How to: Retrieve the SharePoint Project Service
-  You can access the SharePoint project service in the following types of solutions:  
+# <a name="how-to-retrieve-the-sharepoint-project-service"></a>方法: SharePoint プロジェクト サービスを取得する
+  次の種類のソリューションで SharePoint プロジェクト サービスにアクセスすることができます。  
   
--   An extension of the SharePoint project system, such as a project extension, project item extension, or project item type definition. For more information about these types of extensions, see [Extending the SharePoint Project System](../sharepoint/extending-the-sharepoint-project-system.md).  
+-   プロジェクトの拡張機能、プロジェクト項目の拡張機能、またはプロジェクト項目の種類の定義など、SharePoint プロジェクト システムの拡張機能です。 これらの種類の拡張機能の詳細については、次を参照してください。 [SharePoint プロジェクト システムを拡張する](../sharepoint/extending-the-sharepoint-project-system.md)です。  
   
--   An extension of the **SharePoint Connections** node in **Server Explorer**. For more information about these types of extensions, see [Extending the SharePoint Connections Node in Server Explorer](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).  
+-   拡張機能、 **SharePoint 接続**内のノード**サーバー エクスプ ローラー**です。 これらの種類の拡張機能の詳細については、次を参照してください。[サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張する](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)です。  
   
--   Another type of Visual Studio extension, such as a VSPackage.  
+-   VSPackage など、Visual Studio 拡張機能の別の型。  
   
-## <a name="retrieving-the-service-in-project-system-extensions"></a>Retrieving the Service in Project System Extensions  
- In any extension of the SharePoint project system, you can access the project service by using the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectService%2A> property of an <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> object.  
+## <a name="retrieving-the-service-in-project-system-extensions"></a>プロジェクト システムの拡張機能でのサービスの取得  
+ SharePoint プロジェクト システムの拡張機能でを使用してプロジェクト サービスにアクセスすることができます、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectService%2A>のプロパティ、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject>オブジェクト。  
   
- You can also retrieve the project service by using the following procedures.  
+ 次の手順を使用して、プロジェクト サービスを取得することもできます。  
   
-#### <a name="to-retrieve-the-service-in-a-project-extension"></a>To retrieve the service in a project extension  
+#### <a name="to-retrieve-the-service-in-a-project-extension"></a>プロジェクトの拡張機能でサービスを取得するには  
   
-1.  In your implementation of the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> interface, locate the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize%2A> method.  
+1.  実装で、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension>インターフェイスでは、検索、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize%2A>メソッドです。  
   
-2.  Use the *projectService* parameter to access the service.  
+2.  使用して、 *projectService*サービスにアクセスするパラメーターです。  
   
-     The following code example demonstrates how to use the project service to write a message to the **Output** window and **Error List** window in a simple project extension.  
+     次のコード例は、プロジェクト サービスを使用してメッセージを記述する方法を示します、**出力**ウィンドウと**エラー一覧**単純なプロジェクトの拡張機能 ウィンドウ。  
   
-     [!code-vb[SPExtensibility.ProjectService.FromProjectSystemExtensions#1](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb#1)]  [!code-csharp[SPExtensibility.ProjectService.FromProjectSystemExtensions#1](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs#1)]  
+     [!code-vb[SPExtensibility.ProjectService.FromProjectSystemExtensions#1](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb#1)]
+     [!code-csharp[SPExtensibility.ProjectService.FromProjectSystemExtensions#1](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs#1)]  
   
-     For more information about creating project extensions, see [How to: Create a SharePoint Project Extension](../sharepoint/how-to-create-a-sharepoint-project-extension.md).  
+     プロジェクトの拡張機能の作成の詳細については、次を参照してください。[する方法: SharePoint プロジェクトの拡張機能を作成する](../sharepoint/how-to-create-a-sharepoint-project-extension.md)です。  
   
-#### <a name="to-retrieve-the-service-in-a-project-item-extension"></a>To retrieve the service in a project item extension  
+#### <a name="to-retrieve-the-service-in-a-project-item-extension"></a>プロジェクト項目の拡張機能でサービスを取得するには  
   
-1.  In your implementation of the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> interface, locate the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension.Initialize%2A> method.  
+1.  実装で、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension>インターフェイスでは、検索、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension.Initialize%2A>メソッドです。  
   
-2.  Use the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.ProjectService%2A> property of the *projectItemType* parameter to retrieve the service.  
+2.  使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.ProjectService%2A>のプロパティ、 *projectItemType*サービスを取得するパラメーターです。  
   
-     The following code example demonstrates how to use the project service to write a message to the **Output** window and **Error List** window in a simple extension of the **List Definition** project item.  
+     次のコード例は、プロジェクト サービスを使用してメッセージを記述する方法を示します、**出力**ウィンドウと**エラー一覧**の簡単な拡張機能にウィンドウ、**リスト定義**プロジェクト項目です。  
   
-     [!code-vb[SPExtensibility.ProjectService.FromProjectSystemExtensions#2](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb#2)]  [!code-csharp[SPExtensibility.ProjectService.FromProjectSystemExtensions#2](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs#2)]  
+     [!code-vb[SPExtensibility.ProjectService.FromProjectSystemExtensions#2](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb#2)]
+     [!code-csharp[SPExtensibility.ProjectService.FromProjectSystemExtensions#2](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs#2)]  
   
-     For more information about creating project item extensions, see [How to: Create a SharePoint Project Item Extension](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md).  
+     プロジェクト項目の拡張機能の作成の詳細については、次を参照してください。[する方法: SharePoint プロジェクト項目の拡張機能を作成する](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)です。  
   
-#### <a name="to-retrieve-the-service-in-a-project-item-type-definition"></a>To retrieve the service in a project item type definition  
+#### <a name="to-retrieve-the-service-in-a-project-item-type-definition"></a>プロジェクト項目の種類の定義でサービスを取得するには  
   
-1.  In your implementation of the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> interface, locate the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> method.  
+1.  実装で、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>インターフェイスでは、検索、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A>メソッドです。  
   
-2.  Use the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectService%2A> property of the *typeDefinition* parameter to retrieve the service.  
+2.  使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectService%2A>のプロパティ、 *typeDefinition*サービスを取得するパラメーターです。  
   
-     The following code example demonstrates how to use the project service to write a message to the **Output** window and **Error List** window in a simple project item type definition.  
+     次のコード例は、プロジェクト サービスを使用してメッセージを記述する方法を示します、**出力**ウィンドウと**エラー一覧**単純なプロジェクト項目の種類の定義 ウィンドウ。  
   
-     [!code-vb[SPExtensibility.ProjectService.FromProjectSystemExtensions#3](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb#3)]  [!code-csharp[SPExtensibility.ProjectService.FromProjectSystemExtensions#3](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs#3)]  
+     [!code-vb[SPExtensibility.ProjectService.FromProjectSystemExtensions#3](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb#3)]
+     [!code-csharp[SPExtensibility.ProjectService.FromProjectSystemExtensions#3](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs#3)]  
   
-     For more information about defining project item types, see [How to: Define a SharePoint Project Item Type](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).  
+     プロジェクト項目の種類の定義の詳細については、次を参照してください。[する方法: SharePoint プロジェクト項目の種類を定義する](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)です。  
   
-## <a name="retrieving-the-service-in-server-explorer-extensions"></a>Retrieving the Service in Server Explorer Extensions  
- In an extension of the **SharePoint Connections** node in **Server Explorer**, you can access the project service by using the <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider%2A> property of an <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode> object.  
+## <a name="retrieving-the-service-in-server-explorer-extensions"></a>サーバー エクスプ ローラー拡張機能でのサービスの取得  
+ 拡張機能に、 **SharePoint 接続**内のノード**サーバー エクスプ ローラー**を使用してプロジェクトのサービスにアクセスすることができます、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider%2A>のプロパティ、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode>オブジェクト。  
   
-#### <a name="to-retrieve-the-service-in-a-server-explorer-extension"></a>To retrieve the service in a Server Explorer extension  
+#### <a name="to-retrieve-the-service-in-a-server-explorer-extension"></a>サーバー エクスプ ローラー拡張機能でサービスを取得するには  
   
-1.  Get an <xref:System.IServiceProvider> object from the <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider%2A> property of an <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode> object in your extension.  
+1.  取得、<xref:System.IServiceProvider>オブジェクトから、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider%2A>のプロパティ、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode>拡張機能内のオブジェクト。  
   
-2.  Use the <xref:System.IServiceProvider.GetService%2A> method to request an <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> object.  
+2.  使用して、<xref:System.IServiceProvider.GetService%2A>を要求するメソッド、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService>オブジェクト。  
   
-     The following code example demonstrates how to use the project service to write a message to the **Output** window and **Error List** window from a shortcut menu that the extension adds to list nodes in **Server Explorer**.  
+     次のコード例は、プロジェクト サービスを使用してメッセージを記述する方法を示します、**出力**ウィンドウと**エラー一覧**リストのノードに、拡張機能を追加するショートカットメニューからウィンドウ**サーバー エクスプ ローラー**です。  
   
-     [!code-vb[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.vb#1)]  [!code-csharp[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.cs#1)]  
+     [!code-vb[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.vb#1)]
+     [!code-csharp[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.cs#1)]  
   
-     For more information about extending the **SharePoint Connections** node in **Server Explorer**, see [How to: Extend a SharePoint Node in Server Explorer](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).  
+     拡張の詳細については、 **SharePoint 接続**内のノード**サーバー エクスプ ローラー**を参照してください[する方法: サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)です。  
   
-## <a name="retrieving-the-service-in-other-visual-studio-extensions"></a>Retrieving the Service in Other Visual Studio Extensions  
- You can retrieve the project service in a VSPackage, or in any Visual Studio extension that has access to a <xref:EnvDTE80.DTE2> object in the automation object model, such as a project template wizard that implements the <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> interface.  
+## <a name="retrieving-the-service-in-other-visual-studio-extensions"></a>その他の Visual Studio 拡張機能のサービスの取得  
+ VSPackage、またはのどの Visual Studio 拡張機能にアクセスできるプロジェクト サービスを取得することができます、<xref:EnvDTE80.DTE2>を実装しているプロジェクト テンプレートのウィザードなど、オートメーション オブジェクト モデル内のオブジェクト、<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>インターフェイスです。  
   
- In a VSPackage, you can request an <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> object by using one of the following methods:  
+ 要求することができます、VSPackage で、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService>次のメソッドのいずれかを使用してオブジェクト。  
   
--   The <xref:System.IServiceProvider.GetService%2A> method of a managed VSPackage that derives from the <xref:Microsoft.VisualStudio.Shell.Package> class. For more information, see [How to: Get a Service](../extensibility/how-to-get-a-service.md).  
+-   <xref:System.IServiceProvider.GetService%2A>から派生するマネージ VSPackage のメソッド、<xref:Microsoft.VisualStudio.Shell.Package>クラスです。 詳細については、次を参照してください。[する方法: サービスを取得](../extensibility/how-to-get-a-service.md)です。  
   
--   The static <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> method. For more information, see [Use GetGlobalService](../extensibility/internals/service-essentials.md#how-to-use-getglobalservice).  
+-   静的な<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>メソッドです。 詳細については、次を参照してください。[使用 GetGlobalService](../extensibility/internals/service-essentials.md#how-to-use-getglobalservice)です。  
   
- In a Visual Studio extension that has access to a <xref:EnvDTE80.DTE2> object, you can request an <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> object by using the <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> method of a <xref:Microsoft.VisualStudio.Shell.ServiceProvider> object. For more information, see [Getting a service from the DTE object](../extensibility/how-to-get-a-service.md#getting-a-service-from-the-dte-object).  
+ アクセス権を持つ Visual Studio 拡張機能で、<xref:EnvDTE80.DTE2>オブジェクトを要求できます、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService>オブジェクトを使用して、<xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A>のメソッド、<xref:Microsoft.VisualStudio.Shell.ServiceProvider>オブジェクト。 詳細については、次を参照してください。 [DTE オブジェクトからサービスを取得する](../extensibility/how-to-get-a-service.md#getting-a-service-from-the-dte-object)です。  
   
-## <a name="see-also"></a>See Also  
- [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md)   
- [How to: Get a Service](../extensibility/how-to-get-a-service.md)   
- [How to: Use Wizards with Project Templates](../extensibility/how-to-use-wizards-with-project-templates.md)  
+## <a name="see-also"></a>関連項目  
+ [SharePoint プロジェクト サービスの使用](../sharepoint/using-the-sharepoint-project-service.md)   
+ [方法: サービスを取得](../extensibility/how-to-get-a-service.md)   
+ [方法: プロジェクト テンプレートでウィザードを使用する](../extensibility/how-to-use-wizards-with-project-templates.md)  
   
   

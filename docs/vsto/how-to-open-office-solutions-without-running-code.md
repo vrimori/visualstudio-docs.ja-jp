@@ -1,60 +1,62 @@
 ---
-title: "方法 : コードを実行せずに Office ソリューションを開く"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "アセンブリ [Visual Studio での Office 開発], バイパス"
-  - "バイパス (アセンブリを)"
-  - "ドキュメント [Visual Studio での Office 開発], 開く (コードを実行しないで)"
-  - "Office ドキュメント [Visual Studio での Office 開発, 開く (コードを実行しないで)"
-  - "Office ソリューション [Visual Studio での Office 開発], 開く"
-  - "開く (Office ソリューションを)"
-  - "ソリューション [Visual Studio での Office 開発], 開く"
+title: "方法: コードを実行せずに Office ソリューションを開く |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office solutions [Office development in Visual Studio], opening
+- opening Office solutions
+- bypassing assemblies
+- solutions [Office development in Visual Studio], opening
+- assemblies [Office development in Visual Studio], bypassing
+- Office documents [Office development in Visual Studio, opening without running code
+- documents [Office development in Visual Studio], opening without running code
 ms.assetid: a853d91c-9fd6-421a-b3a2-956b6b494b96
-caps.latest.revision: 23
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 74cc162e0323656bea9d48c8458eaf77519fdc14
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : コードを実行せずに Office ソリューションを開く
-  マネージ コード拡張機能を使用して作成した Microsoft Office ソリューションは、エンド ユーザーの Office アプリケーションのセキュリティ設定が \[高\] に設定されている場合でも実行されます。  これは、.NET アセンブリ コードのセキュリティが、Microsoft Office ではなく、Microsoft .NET Framework によって管理されるためです。  
+# <a name="how-to-open-office-solutions-without-running-code"></a>方法 : コードを実行せずに Office ソリューションを開く
+  マネージ コード拡張機能で作成された Microsoft Office ソリューションでは、エンドユーザーの Office アプリケーションのセキュリティ設定が高に設定されている場合でも実行されます。 これは、.NET アセンブリのコードのセキュリティが Microsoft Office ではなく、Microsoft .NET Framework によって管理されているためです。  
   
- ただし、コードを実行せずに文書を開くことが必要な場合もあります。  たとえば、文書が開くときに実行されるコードによって内容が変更される可能性があるので、その前に文書の外観を更新しておく場合です。  また、特定の情報を含む文書をだれかに送信するときに、内容が変更される可能性のあるコードを実行したくない場合も考えられます。  
+ ただし、コードを実行せずに文書を開いたりする場合もあります。 たとえば、ドキュメントを開くときに実行されるコードは、内容を変わる可能性がありますが、文書の外観、コードの変更の前にそれを更新します。 または、他の人にある特定の情報を使用してドキュメントを送信して、コードを実行し、可能性のある内容が変更されないようにするには。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- マネージ コード拡張機能が組み込まれた文書やブックを、アセンブリ コードを実行せずに開く方法がいくつかあります。  
+ 開くには、文書またはブックをアセンブリ コードを実行しなくてもマネージ コード拡張機能を含むいくつかの方法はあります。  
   
-### Shift キーを使ってアセンブリをバイパスするには  
+### <a name="to-bypass-the-assembly-by-using-the-shift-key"></a>SHIFT キーを使用してアセンブリをバイパスするには  
   
--   Word または Excel で文書が開くときに初期イベントが発生しないように、Shift キーを押しながら、**\[ファイル\]** メニューから文書またはブックを開きます。  
+-   ドキュメントのブックを開き、**ファイル**を Word と Excel がドキュメントを開くときに、初期化イベントを発生させることを防ぐために、SHIFT キーを押しながらメニュー。  
   
     > [!NOTE]  
-    >  **作業の開始**タスク ペインから文書またはブックを開く場合は、Shift キーを押しながら実行してもコードはバイパスされません。  文書を開いた後のイベントの発生も回避できません。  
+    >  ドキュメントまたはブックから開いた場合、**作業の開始**shift キーを押し、作業ウィンドウはコードをバイパスしていません。 また、shift キーを押しは防止しませんイベント ドキュメントが開かれた後に発生します。  
   
-     この方法は、先にコードの実行や文書の変更を行わずに、文書を開いて変更を加える場合に適しています。  
+     このメソッドは、変更を加えるコードを実行していると、文書の変更がないドキュメントを開きたい場合に便利です。  
   
-### アセンブリの名前変更または削除によってアセンブリをバイパスするには  
+### <a name="to-bypass-an-assembly-by-renaming-or-removing-it"></a>アセンブリをバイパスするには、名前の変更または削除するのには  
   
--   アセンブリが配置されているコンピューターで必要なアクセス許可を保持している場合は、文書やブックがアセンブリを検出できないよう、アセンブリ名を変更したり、アセンブリを削除したりできます。  その結果、Office ドキュメントを開くたびにエラーが発生します。  
+-   アセンブリが配置されているコンピューターに必要なアクセス許可があれば、名前を変更したり、ドキュメントまたはブックは、見つからないため、アセンブリを削除できます。 これは、結果、Office ドキュメントが開かれるたびに発生します。  
   
-     複数のユーザーによって使用されるソリューションの場合、この方法を使用すると、すべてのユーザーがソリューションを実行できなくなります。  この方法は、コードまたは参照サーバーに問題が見つかったときに、すべてのユーザーがソリューションを実行できないようにする場合に適しています。  
+     複数のユーザーで、ソリューションを使用する場合、このメソッドは、それらのすべての実行から、ソリューションを防ぎます。 これはする、コードまたは参照先のサーバーで問題が検出され、すべてのユーザーから実行を停止する場合に役立ちます。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
- [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)   
+ [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office ソリューションにおけるアプリケーション マニフェストと配置マニフェスト](../vsto/application-and-deployment-manifests-in-office-solutions.md)  
   
   

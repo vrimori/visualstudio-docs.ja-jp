@@ -1,32 +1,34 @@
 ---
-title: "Office ソリューションのトラブルシューティング"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Office アプリケーション [Visual Studio での Office 開発]、トラブルシューティング"
-  - "Visual Studio での Office 開発、トラブルシューティング"
-  - "トラブルシューティング [Visual Studio での Office 開発]"
+title: "Office ソリューションのトラブルシューティング |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office applications [Office development in Visual Studio], troubleshooting
+- Office development in Visual Studio, troubleshooting
+- troubleshooting [Office development in Visual Studio]
 ms.assetid: 0518ffa9-97e5-4596-8ff2-8a24aef42b9e
-caps.latest.revision: 27
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 26
+caps.latest.revision: "27"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: d4e93509595dc9bd576bc1f3f427ef222df11abd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Office ソリューションのトラブルシューティング
+# <a name="troubleshooting-office-solutions"></a>Office ソリューションのトラブルシューティング
   このセクションには、Visual Studio で Office 開発ツールを使用してソリューションを作成するときに発生する可能性がある一般的な問題を解決するためのヒントを記載します。  
   
-## このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容  
  [Office ソリューションのエラーのトラブルシューティング](../vsto/troubleshooting-errors-in-office-solutions.md)  
  Visual Studio で Office ソリューションをデザイン、実行、およびテストするときに発生する可能性がある一般的な問題について説明します。  
   
@@ -36,7 +38,7 @@ caps.handback.revision: 26
  [Office ソリューションのエラーについての追加サポート](../vsto/additional-support-for-errors-in-office-solutions.md)  
  Office ソリューションのエラーや警告のトラブルシューティングに関するその他のリソースについて説明します。  
   
-## 関連項目  
+## <a name="related-sections"></a>関連項目  
  [Office ソリューションのセキュリティのトラブルシューティング](../vsto/troubleshooting-office-solution-security.md)  
  Office ソリューションのセキュリティを操作しているときに発生する可能性がある一般的な問題について説明します。  
   

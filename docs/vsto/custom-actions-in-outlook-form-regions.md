@@ -1,61 +1,63 @@
 ---
-title: "Outlook フォーム領域のカスタム動作"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "カスタム動作 [Visual Studio での Office 開発]"
-  - "フォーム領域 [Visual Studio での Office 開発], カスタム動作"
+title: "フォーム領域の Outlook でのカスタム アクション |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- form regions [Office development in Visual Studio], custom actions
+- custom actions [Office development in Visual Studio]
 ms.assetid: 583fd5f0-aafa-4858-9c54-38a9fdf3bede
-caps.latest.revision: 23
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 74c688d0430b95c54f1f871ad6f82fde6fa781ac
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# Outlook フォーム領域のカスタム動作
-  これらの動作により、ユーザーが Microsoft Office Outlook アイテムに応答することを可能にするボタンが表示されます。  たとえば、メール アイテムに応答する場合、ユーザーは **\[返信\]**、**\[全員へ返信\]**、または **\[転送\]** のアクション ボタンをクリックします。  これらの各アクションには、新しいメール アイテムを作成し、元のアイテムの情報を使用してアイテムのフィールドを設定します。  
+# <a name="custom-actions-in-outlook-form-regions"></a>Outlook フォーム領域のカスタム動作
+  アクションは、Microsoft Office Outlook アイテムに応答するユーザーを有効にするボタンを表示します。 たとえば、メール アイテムに応答して、ユーザーをクリックして、**返信**、**全員に返信**、または**フォワード**アクション ボタン。 これらの各アクションは、新しいメール アイテムを作成し、元の項目から情報を使用して、項目のフィールドを追加します。  
   
- すべての種類の Outlook アイテムを開くカスタム動作を作成できます。  たとえば、新しい予定アイテムやタスク アイテムを開くカスタム動作を追加できます。  カスタム動作のプロパティを設定するか、カスタム コードを使用して、新しいアイテムのフィールドを設定します。  カスタム動作は、Outlook インスペクター ウィンドウに開かれるアイテムの **\[カスタム動作\]** ドロップダウンに表示されます。  
+ Outlook アイテムの任意の種類を開くカスタム動作を作成することができます。 たとえば、新しい予定またはタスク項目を開くカスタム アクションを追加することができます。 カスタム アクションのプロパティを設定またはカスタム コードを使用して、新しい項目のフィールドに設定します。 カスタム アクションに表示されます、**カスタム動作**Outlook インスペクター ウィンドウで開かれている項目のドロップダウンします。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## フォーム領域へのカスタム動作の追加  
- フォーム領域にカスタム動作を追加するには、**\[カスタム動作\]** ダイアログ ボックスを使用します。  **\[マニフェスト\]** ノードを展開し、**\[CustomActions\]** のプロパティを選択し、省略記号ボタンをクリックして、**\[ソリューション エクスプローラー\]** の **\[カスタム動作\]** のダイアログ ボックスを開くことができます。![ASP.NET モバイル デザイナー楕円](~/sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")  
+## <a name="adding-custom-actions-to-a-form-region"></a>フォーム領域へのカスタム アクションの追加  
+ フォーム領域に、カスタム アクションを追加するには、使用、**カスタム アクション** ダイアログ ボックス。 開くことができます、**カスタム動作** ダイアログ ボックスで**ソリューション エクスプ ローラー**を展開して、**マニフェスト** ノードを選択すると、 **CustomActions**プロパティ、および省略記号ボタンをクリックし (![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円"))。  
   
- **\[カスタム動作\]** ダイアログ ボックスで*ターゲット フォーム*を指定します。  ターゲット フォームは、ユーザーがカスタム動作を実行したときに表示されるフォームです。  
+ 使用することができます、**カスタム動作** ダイアログ ボックスを指定する、*フォームのターゲット*です。 ターゲット フォームは、ユーザーがカスタム アクションを実行するときに表示されるフォームです。  
   
- **\[カスタム動作\]** ダイアログ ボックスでは、元のアイテムの情報をターゲット フォームにどのように表示するかについても指定できます。  
+ 使用することも、**カスタム動作**ダイアログ ボックスについては、元の項目を対象のフォームに表示する方法を指定します。  
   
- **\[カスタム動作\]** ダイアログ ボックスで利用できるプロパティについて次の表で説明します。  
+ 次の表で使用可能なプロパティ、**カスタム動作** ダイアログ ボックス。  
   
 |プロパティ|説明|  
-|-----------|--------|  
-|**AddressLike**|ターゲット フォームをアドレス指定する方法を指定します。|  
-|**Body**|元のアイテムの本文をターゲット フォームに追加する方法を指定します。|  
-|**Enabled**|カスタム動作が有効かどうかを示します。  このプロパティが **false** に設定されている場合、カスタム動作は無効になっています。|  
-|**メソッド**|カスタム動作が実行されるときに利用可能な応答の種類を指定します。  カスタム動作では、フォームの送信やフォームを開く操作を実行できます。また、ユーザーに対して、これらの操作を行うかどうかを確認するメッセージを表示することも可能です。|  
-|**名前**|コード内のカスタム動作を参照するときに使用できる内部名を指定します。|  
-|**ShowOnRibbon**|元のアイテムのリボンのカスタム動作を表示するかどうかを指定します。|  
-|**SubjectPrefix**|ターゲット フォームの件名の先頭に挿入するテキストを指定します。|  
-|**TargetForm**|ターゲット フォームのメッセージ クラス名を指定します。  たとえば、タスク フォームを開くには「**IPM.Task**」と入力します。|  
-|**タイトル**|カスタム動作ボタンのラベルを指定します。|  
+|--------------|-----------------|  
+|**AddressLike**|ターゲットの形式のアドレスを指定する方法を指定します。|  
+|**本文**|元のアイテムの本文をターゲット フォームに追加する方法を指定します。|  
+|**有効**|カスタム アクションが有効になっているかどうかを示します。 このプロパティ設定されている場合**false**、カスタム アクションは実行できません。|  
+|**メソッド**|カスタム アクションを実行すると、利用可能な応答の種類を指定します。 カスタム アクションでは、フォームを送信、フォームを開く、またはユーザーに確認を送信するか、フォームを開いているかどうかできます。|  
+|**名前**|コードでこのカスタム アクションを参照に使用できる内部名を指定します。|  
+|**ShowOnRibbon**|元のアイテムのリボンにカスタム動作を表示するかどうかを示します。|  
+|**SubjectPrefix**|ターゲットの形式の件名行の先頭に挿入する文字列を指定します。|  
+|**TargetForm**|ターゲットの形式のメッセージ クラス名を指定します。 たとえば、「 **IPM です。タスク**タスク フォームを開きます。|  
+|**タイトル**|カスタム アクション ボタンのラベルを指定します。|  
   
-## 実行時におけるカスタム動作のカスタマイズ  
- コードを使用してカスタム動作に動作を追加することもできます。  たとえば、電子メール受信者の名前を受け取るコードを追加し、それらの名前を出席者として新しい予定アイテムに追加します。  この操作を行うには、[Action](HV05247650) オブジェクトの [CustomAction](HV05247448) イベントを処理します。  
+## <a name="customizing-a-custom-action-at-run-time"></a>実行時にカスタム動作のカスタマイズ  
+ コードを使用して、カスタム動作を動作を追加することもできます。 たとえばは電子メールの受信者の名前を取得し、新しい予定アイテムの参加者としてそれらの名前を追加するコードを追加することができます。 これを行うには、処理、 [CustomAction](http://msdn.microsoft.com/library/office/ff862186.aspx)のイベント、 [MailItem オブジェクト](http://msdn.microsoft.com/library/office/ff861332.aspx)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
- [チュートリアル : Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)   
+ [チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)   
  [フォーム領域の Outlook メッセージ クラスへの関連付け](../vsto/associating-a-form-region-with-an-outlook-message-class.md)  
   
   

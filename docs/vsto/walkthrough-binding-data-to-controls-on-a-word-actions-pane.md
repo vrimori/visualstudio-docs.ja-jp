@@ -1,12 +1,10 @@
 ---
-title: 'Walkthrough: Binding Data to Controls on a Word Actions Pane | Microsoft Docs'
+title: "チュートリアル: Word の操作ウィンドウ上のコントロールへのデータのバインド |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: visual-studio-dev14
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- office-development
+ms.technology: office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -20,225 +18,230 @@ helpviewer_keywords:
 - actions panes [Office development in Visual Studio], binding controls
 - smart documents [Office development in Visual Studio], data binding
 ms.assetid: 5ef72fc7-412b-4454-9890-4479a13ee7f9
-caps.latest.revision: 64
-author: kempb
-ms.author: kempb
+caps.latest.revision: "64"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 2c2504808ee3442e531d359059796b8117ab64a1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 6a70bd325a5a9e20f9a67e59f81c63ce4b1ddcc4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="walkthrough-binding-data-to-controls-on-a-word-actions-pane"></a>Walkthrough: Binding Data to Controls on a Word Actions Pane
-  This walkthrough demonstrates data binding to controls on an actions pane in Word. The controls demonstrate a master/detail relation between tables in a SQL Server database.  
+# <a name="walkthrough-binding-data-to-controls-on-a-word-actions-pane"></a>チュートリアル : Word の操作ウィンドウ上のコントロールへのデータ バインディング
+  このチュートリアルでは、Word の操作ウィンドウ上のコントロールへのデータ バインディングを示します。 このコントロールは、SQL Server データベースのテーブル間のマスター/詳細の関係を示します。  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- This walkthrough illustrates the following tasks:  
+ このチュートリアルでは、次の作業について説明します。  
   
--   Creating an actions pane with Windows Forms controls that are bound to data.  
+-   データにバインドされている Windows フォーム コントロールで、[操作] ウィンドウを作成しています。  
   
--   Using a master/detail relationship to display data in the controls.  
+-   マスター/詳細関係を使用して、コントロールにデータを表示します。  
   
--   Show the actions pane when the application opens.  
+-   アプリケーションを開いたときに、[操作] ウィンドウを表示します。  
   
 > [!NOTE]  
->  Your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>Prerequisites  
- You need the following components to complete this walkthrough:  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] or [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].  
+-   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] または [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]。  
   
--   Access to a server with the Northwind SQL Server sample database.  
+-   Northwind SQL Server サンプル データベースを持つサーバーにアクセスします。  
   
--   Permissions to read from and write to the SQL Server database.  
+-   読み取りと書き込みの SQL Server データベースにアクセスを許可します。  
   
-## <a name="creating-the-project"></a>Creating the Project  
- The first step is to create a Word Document project.  
+## <a name="creating-the-project"></a>プロジェクトの作成  
+ 最初に、Word 文書のプロジェクトを作成します。  
   
-#### <a name="to-create-a-new-project"></a>To create a new project  
+#### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  Create a Word Document project with the name **My Word Actions Pane**. In the wizard, select **Create a new document**.  
+1.  名前の Word 文書プロジェクトを作成**My Word の操作ウィンドウ**します。 ウィザードで、次のように選択します。**新しいドキュメントを作成する**です。  
   
-     For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+     詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
   
-     Visual Studio opens the new Word document in the designer and adds the **My Word Actions Pane** project to **Solution Explorer**.  
+     デザイナーで新しい Word 文書を開き、 **My Word の操作ウィンドウ**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
-## <a name="adding-controls-to-the-actions-pane"></a>Adding Controls to the Actions Pane  
- For this walkthrough, you need an actions pane control that contains data-bound Windows Forms controls. Add a data source to the project, and then drag controls from the **Data Sources** window to the actions pane control.  
+## <a name="adding-controls-to-the-actions-pane"></a>[操作] ウィンドウにコントロールを追加します。  
+ このチュートリアルでは、操作ウィンドウ コントロールをデータ バインド Windows フォーム コントロールを含む必要があります。 プロジェクトにデータ ソースを追加し、後からコントロールをドラッグ、**データソース**操作ウィンドウ コントロールにウィンドウです。  
   
-#### <a name="to-add-an-actions-pane-control"></a>To add an actions pane control  
+#### <a name="to-add-an-actions-pane-control"></a>操作ウィンドウ コントロールを追加するには  
   
-1.  Select the **My Word Actions Pane** project in **Solution Explorer**.  
+1.  選択、 **My Word の操作ウィンドウ**プロジェクト**ソリューション エクスプ ローラー**です。  
   
-2.  On the **Project** menu, click **Add New Item**.  
+2.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
   
-3.  In the **Add New Item** dialog box, select **Actions Pane Control**, name it **ActionsControl**, and then click **Add**.  
+3.  **新しい項目の追加**ダイアログ ボックスで、**操作ウィンドウ コントロール**、名前を付けます**ActionsControl**、クリックして**追加**です。  
   
-#### <a name="to-add-a-data-source-to-the-project"></a>To add a data source to the project  
+#### <a name="to-add-a-data-source-to-the-project"></a>データ ソースをプロジェクトに追加するには  
   
-1.  If the **Data Sources** window is not visible, display it by, on the menu bar, choosing **View**, **Other Windows**, **Data Sources**.  
-  
-    > [!NOTE]  
-    >  If **Show Data Sources** is not available, click the Word document and then check again.  
-  
-2.  Click **Add New Data Source** to start the **Data Source Configuration Wizard**.  
-  
-3.  Select **Database** and then click **Next**.  
-  
-4.  Select a data connection to the Northwind sample SQL Server database, or add a new connection by using the **New Connection** button.  
-  
-5.  Click **Next**.  
-  
-6.  Clear the option to save the connection if it is selected, and then click **Next**.  
-  
-7.  Expand the **Tables** node in the **Database objects** window.  
-  
-8.  Select the check box next to the **Suppliers** and **Products** tables.  
-  
-9. Click **Finish**.  
-  
- The wizard adds the **Suppliers** table and **Products** table to the **Data Sources** window. It also adds a typed dataset to your project that is visible in **Solution Explorer**.  
-  
-#### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>To add data-bound Windows Forms controls to an actions pane control  
-  
-1.  In the **Data Sources** window, expand the **Suppliers** table.  
-  
-2.  Click the drop-down arrow on the **Company Name** node, and select **ComboBox**.  
-  
-3.  Drag **CompanyName** from the **Data Sources** window to the actions pane control.  
-  
-     A <xref:System.Windows.Forms.ComboBox> control is created on the actions pane control. At the same time, a <xref:System.Windows.Forms.BindingSource> named `SuppliersBindingSource`, a table adapter, and a <xref:System.Data.DataSet> are added to the project in the component tray.  
-  
-4.  Select `SuppliersBindingNavigator` in the **Component** tray and press DELETE. You will not use the `SuppliersBindingNavigator` in this walkthrough.  
+1.  **[データ ソース]** ウィンドウが表示されていない場合は、メニュー バーの **[表示]**、 **[その他のウィンドウ]**、 **[データ ソース]**の順にクリックして表示します。  
   
     > [!NOTE]  
-    >  Deleting the `SuppliersBindingNavigator` does not remove all of the code that was generated for it. You can remove this code.  
+    >  場合**データ ソースの表示**使用できない場合、Word 文書をクリックし、もう一度確認します。  
   
-5.  Move the combo box so that it is under the label and change the **Size** property to **171, 21**.  
+2.  をクリックして**新しいデータ ソースの追加**を開始する、**データ ソース構成ウィザード**です。  
   
-6.  In the **Data Sources** window, expand the **Products** table that is a child of the **Suppliers** table.  
+3.  選択**データベース** をクリックし、**次**です。  
   
-7.  Click the drop-down arrow on the **ProductName** node, and select **ListBox**.  
+4.  Northwind サンプル SQL Server データベースへのデータ接続を選択するかを使用して新しい接続を追加、**新しい接続**ボタンをクリックします。  
   
-8.  Drag **ProductName** to the actions pane control.  
+5.  **[次へ]**をクリックします。  
   
-     A <xref:System.Windows.Forms.ListBox> control is created on the actions pane control. At the same time, a <xref:System.Windows.Forms.BindingSource> named `ProductBindingSource` and a table adapter are added to the project in the component tray.  
+6.  クリックしてオンになっている場合、接続を保存するオプションをオフに**次**です。  
   
-9. Move the list box so that it is under the label and change the **Size** property to **171,95**.  
+7.  展開して、**テーブル**内のノード、**データベース オブジェクト**ウィンドウです。  
   
-10. Drag a <xref:System.Windows.Forms.Button> from the **Toolbox** onto the actions pane control and place it below the list box.  
+8.  次のチェック ボックスをオン、 **Suppliers**と**製品**テーブル。  
   
-11. Right-click the <xref:System.Windows.Forms.Button>, click **Properties** on the shortcut menu, and change the following properties.  
+9. **[完了]**をクリックします。  
   
-    |Property|Value|  
+ ウィザードでは追加、 **Suppliers**テーブルと**製品**テーブル、**データ ソース**ウィンドウです。 表示されているプロジェクトにも型指定されたデータセットを追加**ソリューション エクスプ ローラー**です。  
+  
+#### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>操作ウィンドウ コントロールにデータ バインド Windows フォーム コントロールを追加するには  
+  
+1.  **データソース**ウィンドウで、展開、 **Suppliers**テーブル。  
+  
+2.  ドロップダウン矢印をクリックして、**会社名**ノード、および選択**ComboBox**です。  
+  
+3.  ドラッグ**CompanyName**から、**データソース**操作ウィンドウ コントロールするウィンドウです。  
+  
+     A<xref:System.Windows.Forms.ComboBox>操作ウィンドウ コントロールにコントロールを作成します。 同時に、<xref:System.Windows.Forms.BindingSource>という名前`SuppliersBindingSource`、テーブルのアダプターでは、および<xref:System.Data.DataSet>コンポーネント トレイにプロジェクトに追加されます。  
+  
+4.  選択`SuppliersBindingNavigator`で、**コンポーネント**トレイし、DEL キーを押します。 使用しない、`SuppliersBindingNavigator`このチュートリアルでします。  
+  
+    > [!NOTE]  
+    >  削除すると、`SuppliersBindingNavigator`のすべての生成されたコードは削除されません。 このコードを削除することができます。  
+  
+5.  ラベルと変更されるように、コンボ ボックスを移動、**サイズ**プロパティを**171, 21**です。  
+  
+6.  **データ ソース**ウィンドウで、展開、**製品**の子テーブルには、 **Suppliers**テーブル。  
+  
+7.  ドロップダウン矢印をクリックして、 **ProductName**ノード、および選択**ListBox**です。  
+  
+8.  ドラッグ**ProductName**操作ウィンドウ コントロールにします。  
+  
+     A<xref:System.Windows.Forms.ListBox>操作ウィンドウ コントロールにコントロールを作成します。 同時に、<xref:System.Windows.Forms.BindingSource>という`ProductBindingSource`されテーブル アダプターがコンポーネント トレイに、プロジェクトに追加されます。  
+  
+9. ラベルと変更されるように、リスト ボックスを移動、**サイズ**プロパティを**171, 95**です。  
+  
+10. ドラッグ、<xref:System.Windows.Forms.Button>から、**ツールボックス**[操作] ウィンドウに制御し、リスト ボックスの下に配置します。  
+  
+11. 右クリックし、 <xref:System.Windows.Forms.Button>、 をクリックして**プロパティ**ショートカット メニューで、次のプロパティを変更します。  
+  
+    |プロパティ|値|  
     |--------------|-----------|  
-    |**Name**|**Insert**|  
-    |**Text**|**Insert**|  
+    |**名前**|**挿入します。**|  
+    |**[テキスト]**|**挿入します。**|  
   
-12. Resize the user control to fit the controls.  
+12. コントロールに合わせて、ユーザー コントロールのサイズを変更します。  
   
-## <a name="setting-up-the-data-source"></a>Setting Up the Data Source  
- To set up the data source, add code to the <xref:System.Windows.Forms.UserControl.Load> event of the actions pane control to fill the control with data from the <xref:System.Data.DataTable>, and set the <xref:System.Windows.Forms.Binding.DataSource%2A> and <xref:System.Windows.Forms.BindingSource.DataMember%2A> properties for each control.  
+## <a name="setting-up-the-data-source"></a>データ ソースの設定  
+ データ ソースを設定するコードを追加、<xref:System.Windows.Forms.UserControl.Load>コントロールにデータを格納から操作ウィンドウ コントロールのイベント、 <xref:System.Data.DataTable>、設定と、<xref:System.Windows.Forms.Binding.DataSource%2A>と<xref:System.Windows.Forms.BindingSource.DataMember%2A>各コントロールのプロパティです。  
   
-#### <a name="to-load-the-control-with-data"></a>To load the control with data  
+#### <a name="to-load-the-control-with-data"></a>コントロールにデータを読み込めません  
   
-1.  In the <xref:System.Windows.Forms.UserControl.Load> event handler of the `ActionsControl` class, add the following code.  
+1.  <xref:System.Windows.Forms.UserControl.Load>のイベント ハンドラー、`ActionsControl`クラスで、次のコードを追加します。  
   
-     [!code-vb[Trin_VstcoreActionsPaneWord#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#1)]  [!code-csharp[Trin_VstcoreActionsPaneWord#1](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#1)]  
+     [!code-vb[Trin_VstcoreActionsPaneWord#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#1)]
+     [!code-csharp[Trin_VstcoreActionsPaneWord#1](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#1)]  
   
-2.  In C#, you must attach the event handler to the <xref:System.Windows.Forms.UserControl.Load> event. You can place this code in the `ActionsControl` constructor, after the call to `InitializeComponent`. For more information about how to create event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
+2.  C# の場合は、イベント ハンドラーをアタッチする必要があります、<xref:System.Windows.Forms.UserControl.Load>イベント。 このコードを配置することができます、`ActionsControl`コンス トラクターの呼び出しの後に、`InitializeComponent`です。 イベント ハンドラーを作成する方法の詳細については、次を参照してください。[する方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)です。  
   
      [!code-csharp[Trin_VstcoreActionsPaneWord#33](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#33)]  
   
-#### <a name="to-set-data-binding-properties-of-the-controls"></a>To set data binding properties of the controls  
+#### <a name="to-set-data-binding-properties-of-the-controls"></a>コントロールのデータ バインディング プロパティを設定するには  
   
-1.  Select the `CompanyNameComboBox` control.  
+1.  `CompanyNameComboBox` コントロールを選択します。  
   
-2.  In the **Properties** window, click the button to the right of the **DataSource** property, and select **suppliersBindingSource**.  
+2.  **プロパティ** ウィンドウの右側にあるボタンをクリックして、**データソース**プロパティ、および選択**場合**です。  
   
-3.  Click the button to the right of the **DisplayMember** property, and select **CompanyName**.  
+3.  右側にあるボタンをクリックして、 **DisplayMember**プロパティ、および選択**CompanyName**です。  
   
-4.  Expand the **DataBindings** property, click the button to the right of the **Text** property, and select **None**.  
+4.  展開、 **DataBindings**プロパティの右側にあるボタンをクリックして、**テキスト**プロパティ、および選択**None**です。  
   
-5.  Select the `ProductNameListBox` control.  
+5.  `ProductNameListBox` コントロールを選択します。  
   
-6.  In the **Properties** window, click the button to the right of the **DataSource** property, and select **productsBindingSource**.  
+6.  **プロパティ** ウィンドウの右側にあるボタンをクリックして、**データソース**プロパティ、および選択**productsBindingSource**です。  
   
-7.  Click the button to the right of the **DisplayMember** property, and select **ProductName**.  
+7.  右側にあるボタンをクリックして、 **DisplayMember**プロパティ、および選択**ProductName**です。  
   
-8.  Expand the **DataBindings** property, click the button to the right of the **SelectedValue** property, and select **None**.  
+8.  展開、 **DataBindings**プロパティの右側にあるボタンをクリックして、 **SelectedValue**プロパティ、および選択**None**です。  
   
-## <a name="adding-a-method-to-insert-data-into-a-table"></a>Adding a Method to Insert Data into a Table  
- The next task is to read the data from the bound controls and populate a table in your Word document. First, create a procedure for formatting the headings in the table, and then add the `AddData` method to create and format a Word table.  
+## <a name="adding-a-method-to-insert-data-into-a-table"></a>テーブルにデータを挿入するメソッドを追加します。  
+ 次のタスクを開始、バインドされたコントロールからデータを読み取るし、Word 文書にテーブルを作成します。 まず、プロシージャ、テーブルの見出しの書式設定を作成し、追加、`AddData`メソッドを作成し、Word の表の書式を設定します。  
   
-#### <a name="to-format-the-table-headings"></a>To format the table headings  
+#### <a name="to-format-the-table-headings"></a>テーブルの見出しの書式を設定するには  
   
-1.  In the `ActionsControl` class, create a method to format the headings of the table.  
+1.  `ActionsControl`クラス、テーブルの見出しの書式設定するメソッドを作成します。  
   
-     [!code-vb[Trin_VstcoreActionsPaneWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#2)]  [!code-csharp[Trin_VstcoreActionsPaneWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#2)]  
+     [!code-vb[Trin_VstcoreActionsPaneWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#2)]
+     [!code-csharp[Trin_VstcoreActionsPaneWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#2)]  
   
-#### <a name="to-create-the-table"></a>To create the table  
+#### <a name="to-create-the-table"></a>テーブルを作成するには  
   
-1.  In the `ActionsControl` class, write a method that will create a table if one does not already exist, and add data from the actions pane to the table.  
+1.  `ActionsControl`クラス、1 つが存在する、[操作] ウィンドウからデータをテーブルに追加されていない場合に、テーブルを作成するメソッドを記述します。  
   
-     [!code-vb[Trin_VstcoreActionsPaneWord#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#3)]  [!code-csharp[Trin_VstcoreActionsPaneWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#3)]  
+     [!code-vb[Trin_VstcoreActionsPaneWord#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#3)]
+     [!code-csharp[Trin_VstcoreActionsPaneWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#3)]  
   
-#### <a name="to-insert-text-into-a-word-table"></a>To insert text into a Word table  
+#### <a name="to-insert-text-into-a-word-table"></a>Word の表にテキストを挿入するには  
   
-1.  Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler of the **Insert** button.  
+1.  次のコードを追加、<xref:System.Windows.Forms.Control.Click>のイベント ハンドラー、**挿入**ボタンをクリックします。  
   
-     [!code-vb[Trin_VstcoreActionsPaneWord#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#4)]  [!code-csharp[Trin_VstcoreActionsPaneWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#4)]  
+     [!code-vb[Trin_VstcoreActionsPaneWord#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#4)]
+     [!code-csharp[Trin_VstcoreActionsPaneWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#4)]  
   
-2.  In C#, you must create an event handler for the <xref:System.Windows.Forms.Control.Click> event of the button.  You can place this code in the <xref:System.Windows.Forms.UserControl.Load> event handler of the `ActionsControl` class.  
+2.  C# でのイベント ハンドラーを作成する必要があります、<xref:System.Windows.Forms.Control.Click>ボタンのイベントです。  このコードを配置することができます、<xref:System.Windows.Forms.UserControl.Load>のイベント ハンドラー、`ActionsControl`クラスです。  
   
      [!code-csharp[Trin_VstcoreActionsPaneWord#5](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#5)]  
   
-## <a name="showing-the-actions-pane"></a>Showing the Actions Pane  
- The actions pane becomes visible after controls are added to it.  
+## <a name="showing-the-actions-pane"></a>操作ウィンドウの表示  
+ これにコントロールを追加した後、[操作] ウィンドウが表示されます。  
   
-#### <a name="to-show-the-actions-pane"></a>To show the actions pane  
+#### <a name="to-show-the-actions-pane"></a>[操作] ウィンドウを表示するには  
   
-1.  In **Solution Explorer**, right-click **ThisDocument.vb** or **ThisDocument.cs**, and then click **View Code** on the shortcut menu.  
+1.  **ソリューション エクスプ ローラー**を右クリックして**ThisDocument.vb**または**ThisDocument.cs**、クリックして**コードの表示**ショートカット メニューの します。  
   
-2.  Create a new instance of the control at the top of the `ThisDocument` class so that it looks like the following example.  
+2.  上部にあるコントロールの新しいインスタンスを作成、`ThisDocument`クラスの次の例のように見えるようにします。  
   
-     [!code-csharp[Trin_VstcoreActionsPaneWord#6](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#6)]  [!code-vb[Trin_VstcoreActionsPaneWord#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#6)]  
+     [!code-csharp[Trin_VstcoreActionsPaneWord#6](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#6)]
+     [!code-vb[Trin_VstcoreActionsPaneWord#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#6)]  
   
-3.  Add code to the <xref:Microsoft.Office.Tools.Word.Document.Startup> event handler of `ThisDocument` so that it looks like the following example.  
+3.  コードを追加して、<xref:Microsoft.Office.Tools.Word.Document.Startup>のイベント ハンドラー`ThisDocument`次の例のように見えるようにします。  
   
-     [!code-csharp[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#7)]  [!code-vb[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#7)]  
+     [!code-csharp[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#7)]
+     [!code-vb[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#7)]  
   
-## <a name="testing-the-application"></a>Testing the Application  
- Now you can test your document to verify that the actions pane appears when the document is opened. Test for the master/detail relationship in the controls on the actions pane, and make sure that data is populated in a Word table when the **Insert** button is clicked.  
+## <a name="testing-the-application"></a>アプリケーションのテスト  
+ これで、ドキュメントが開いているときに、操作ウィンドウが表示されることを確認するドキュメントをテストできます。 操作ウィンドウ上のコントロールにマスター/詳細リレーションシップをテストし、単語内のデータが表示されていることを確認時にテーブル、**挿入**ボタンをクリックします。  
   
-#### <a name="to-test-your-document"></a>To test your document  
+#### <a name="to-test-your-document"></a>文書をテストするには  
   
-1.  Press F5 to run your project.  
+1.  F5 キーを押してプロジェクトを実行します。  
   
-2.  Confirm that the actions pane is visible.  
+2.  [操作] ウィンドウが表示されていることを確認します。  
   
-3.  Select a company in the combo box and verify that the items in the **Products** list box change.  
+3.  コンボ ボックスに会社を選択し、いることを確認内の項目、**製品**ボックス変更を一覧表示します。  
   
-4.  Select a product, click **Insert** on the actions pane, and verify that the product details are added to the table in Word.  
+4.  製品を選択し、をクリックして**挿入**操作 ウィンドウで、製品の詳細が単語内のテーブルに追加されたことを確認してください。  
   
-5.  Insert additional products from various companies.  
+5.  さまざまな企業から追加の製品を挿入します。  
   
-## <a name="next-steps"></a>Next Steps  
- This walkthrough shows the basics of binding data to controls on an actions pane in Word. Here are some tasks that might come next:  
+## <a name="next-steps"></a>次の手順  
+ このチュートリアルでは、Word の操作ウィンドウ上のコントロールへのデータのバインドの基礎を説明します。 ここでは、次の作業を行います。  
   
--   Binding data to controls in Excel. For more information, see [Walkthrough: Binding Data to Controls on an Excel Actions Pane](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md).  
+-   データを Excel でのコントロールをバインドします。 詳細については、次を参照してください。[チュートリアル: Excel の操作ウィンドウ上のコントロールへのデータ バインディング](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)です。  
   
--   Deploying the project. For more information, see [Deploying an Office Solution by Using ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).  
+-   プロジェクトを配置します。 詳細については、次を参照してください。 [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)です。  
   
-## <a name="see-also"></a>See Also  
- [Actions Pane Overview](../vsto/actions-pane-overview.md)   
- [How to: Add an Actions Pane to Word Documents or Excel Workbooks](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
- [Binding Data to Controls in Office Solutions](../vsto/binding-data-to-controls-in-office-solutions.md)  
+## <a name="see-also"></a>関連項目  
+ [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
+ [方法: Word 文書や Excel ブックに操作ウィンドウを追加](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
+ [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)  
   
   

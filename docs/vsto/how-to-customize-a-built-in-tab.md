@@ -1,82 +1,84 @@
 ---
-title: "方法 : 組み込みタブをカスタマイズする"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "組み込みタブ [Visual Studio での Office 開発]"
-  - "リボン [Visual Studio での Office 開発], タブ"
+title: "方法: 組み込みタブをカスタマイズする |Microsoft ドキュメント"
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Ribbon [Office development in Visual Studio], tabs
+- built-in tabs [Office development in Visual Studio]
 ms.assetid: 197a7aaa-a51d-496c-b904-b9421849fad9
-caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "28"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 1161af5501ebd0df8137293b137600697af91516
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2017
 ---
-# 方法 : 組み込みタブをカスタマイズする
-  組み込みタブには、グループやコントロールを追加できます。  組み込みタブは、Microsoft Office アプリケーションのリボンに用意されているタブです。  たとえば、**\[データ\]** タブは、Excel の組み込みタブです。  カスタム グループを作成すると、そのグループはタブの最後に表示されますが、タブ上のどこにでも移動できます。  
+# <a name="how-to-customize-a-built-in-tab"></a>方法 : 組み込みタブをカスタマイズする
+  組み込みタブには、グループやコントロールを追加できます。組み込みタブは、Microsoft Office アプリケーションのリボンに用意されているタブです。 たとえば、**データ**タブは、Excel の組み込みタブです。 カスタム グループを作成すると、そのグループはタブの最後に表示されますが、タブ上のどこにでも移動できます。  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
 > [!NOTE]  
 >  組み込みタブにグループを追加することはできますが、組み込みタブから組み込みグループを削除することはできません。  
   
-### 組み込みタブにグループを追加するには  
+### <a name="to-add-groups-to-a-built-in-tab"></a>組み込みタブにグループを追加するには  
   
-1.  **ソリューション エクスプローラー**で、リボンのコード ファイルを右クリックし、**\[デザイナーの表示\]** をクリックします。  
+1.  リボン コード ファイルを右クリックして**ソリューション エクスプ ローラー**、クリックして**ビュー デザイナー**です。  
   
     > [!NOTE]  
-    >  リボン コード ファイルが**ソリューション エクスプローラー**に表示されない場合は、**リボン項目**をプロジェクトに追加する必要があります。  「[方法 : リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)」を参照してください。  
+    >  リボン コード ファイルが表示されない場合**ソリューション エクスプ ローラー**、追加する必要があります、**リボン項目**をプロジェクトにします。 参照してください[する方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)です。  
   
-2.  リボン デザイナーで、任意のタブを右クリックし、**\[プロパティ\]** をクリックします。  
+2.  リボン デザイナーで、任意のタブを右クリックし、をクリックして**プロパティ**です。  
   
-3.  **\[プロパティ\]** ウィンドウで、**\[ControlId\]** プロパティを展開し、**\[ControlIdType\]** プロパティを **Office** に設定します。  
+3.  **プロパティ**ウィンドウで、展開、 **ControlId**プロパティ、および設定、 **[controlidtype]**プロパティを**Office**です。  
   
-4.  **OfficeId** プロパティを、カスタマイズする組み込みタブの*コントロール ID* に設定します。  
+4.  設定、 **OfficeId**プロパティを*制御 ID*をカスタマイズする組み込みタブです。  
   
      コントロール ID は、Microsoft Office アプリケーションに組み込まれているタブ、グループ、コントロールを一意に識別する名前です。  
   
-     コントロール ID の一覧については、「[Office 2010 ヘルプ ファイル: Office Fluent ユーザー インターフェイスのコントロール ID](http://go.microsoft.com/fwlink/?LinkID=181052)」を参照してください。  
+     コントロール Id の一覧は、次を参照してください。 [Office 2010 ヘルプ ファイル: Office Fluent ユーザー インターフェイスのコントロール Id](http://go.microsoft.com/fwlink/?LinkID=181052)です。  
   
-5.  **ツールボックス**の **\[Office リボン コントロール\]** タブから、グループをタブにドラッグします。  
+5.  **Office リボン コントロール**のタブ、**ツールボックス**、タブにグループをドラッグします。  
   
     > [!NOTE]  
-    >  組み込みグループは、デザイナーには表示されません。  したがって、操作しているのが組み込みタブであるかどうかを判断するには、タブの **ControlId** プロパティを調べる方法しかありません。  
+    >  組み込みグループは、デザイナーには表示されません。 したがって、組み込みタブで動作しているかどうかを判別する唯一の方法を調べるには、 **ControlId**  タブのプロパティです。  
   
-### 組み込みタブ上でグループを配置するには  
+### <a name="to-position-groups-on-a-built-in-tab"></a>組み込みタブ上でグループを配置するには  
   
 1.  リボン デザイナーで、カスタム グループを選択します。  
   
-2.  **\[プロパティ\]** ウィンドウで **\[Position\]** プロパティを展開します。  
+2.  **プロパティ**ウィンドウで、展開、**位置**プロパティです。  
   
-3.  **\[PositionType\]** プロパティを適切な値に設定します。  
+3.  設定、 **PositionType**プロパティに適切な値。  
   
-    -   **BeforeOfficeId** に設定すると、グループは指定の組み込みグループの前に配置されます。  
+    -   **[Beforeofficeid]**指定の組み込みグループの前に、グループを配置します。  
   
-    -   **AfterOfficeId** に設定すると、グループは指定の組み込みグループの後ろに配置されます。  
+    -   **AfterOfficeId**指定の組み込みグループの後、グループに配置します。  
   
-4.  組み込みグループのコントロール ID に **OfficeId** プロパティを設定します。  
+4.  設定、 **OfficeId**プロパティを組み込みのグループのコントロール ID。  
   
-     コントロール ID の一覧については、「[Office 2010 ヘルプ ファイル: Office Fluent ユーザー インターフェイスのコントロール ID](http://go.microsoft.com/fwlink/?LinkID=181052)」を参照してください。  
+     コントロール Id の一覧は、次を参照してください。 [Office 2010 ヘルプ ファイル: Office Fluent ユーザー インターフェイスのコントロール Id](http://go.microsoft.com/fwlink/?LinkID=181052)です。  
   
-## 参照  
+## <a name="see-also"></a>関連項目  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   
  [リボン XML](../vsto/ribbon-xml.md)   
- [チュートリアル : リボン デザイナーを使用したカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
- [チュートリアル : リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)   
- [方法 : リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)   
- [方法: リボンのタブの位置を変更する](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)   
- [方法: Backstage ビューにコントロールを追加する](../vsto/how-to-add-controls-to-the-backstage-view.md)   
- [方法 : アドインのユーザー インターフェイス エラーを表示する](../vsto/how-to-show-add-in-user-interface-errors.md)  
+ [チュートリアル: リボン デザイナーを使用してカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
+ [チュートリアル: リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)   
+ [方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)   
+ [方法: リボンのタブの位置を変更](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)   
+ [方法: コントロール Backstage ビューを追加します。](../vsto/how-to-add-controls-to-the-backstage-view.md)   
+ [方法: アドインのユーザー インターフェイス エラーを表示する](../vsto/how-to-show-add-in-user-interface-errors.md)  
   
   

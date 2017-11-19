@@ -1,5 +1,5 @@
 ---
-title: Save data by using a transaction | Microsoft Docs
+title: "方法: トランザクションを使用してデータを保存 |Microsoft ドキュメント"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,69 +9,49 @@ ms.topic: article
 dev_langs:
 - VB
 - CSharp
-- C++
-- aspx
 helpviewer_keywords:
 - saving data, using transactions
 - System.Transactions namespace
 - transactions, saving data
 - data [Visual Studio], saving
 ms.assetid: 8b835e8f-34a3-413d-9bb5-ebaeb87f1198
-caps.latest.revision: 13
-author: mikeblome
-ms.author: mblome
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: f647aeb0772bde7933216aa360c9dfccd3c872da
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/22/2017
-
+ms.technology: vs-data-tools
+ms.openlocfilehash: 23cf5ee9ef7369d8c0f52adde639adad4abe3ae6
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="save-data-by-using-a-transaction"></a>Save data by using a transaction
-You save data in a transaction by using the <xref:System.Transactions> namespace. Use the <xref:System.Transactions.TransactionScope> object to participate in a transaction that is automatically managed for you.  
+# <a name="how-to-save-data-by-using-a-transaction"></a>方法: トランザクションを使用してデータを保存
+使用して、トランザクションでデータを保存する、<xref:System.Transactions>名前空間。 使用して、<xref:System.Transactions.TransactionScope>を自動的に管理されているトランザクションに参加するオブジェクト。  
   
- Projects are not created with a reference to the System.Transactions assembly, so you need to manually add a reference to projects that use transactions.  
+トランザクションを使用するプロジェクトへの参照を手動で追加する必要があるために、System.Transactions アセンブリへの参照ではプロジェクトは作成されません。  
   
-> [!NOTE]
->  The <xref:System.Transactions> namespace is supported in Windows 2000 or later.  
+トランザクションを実装する最も簡単な方法がインスタンスを作成するには、<xref:System.Transactions.TransactionScope>内のオブジェクト、`using`ステートメントです。 (詳細については、次を参照してください[Using ステートメント](/dotnet/visual-basic/language-reference/statements/using-statement)、および[ステートメントを使用して](/dotnet/csharp/language-reference/keywords/using-statement)。)。内で実行されるコード、`using`ステートメントが、トランザクションに参加します。  
   
- The easiest way to implement a transaction is to instantiate a <xref:System.Transactions.TransactionScope> object in a `using` statement. (For more information, see [Using Statement](/dotnet/visual-basic/language-reference/statements/using-statement), and [using Statement](/dotnet/csharp/language-reference/keywords/using-statement).) The code that runs within the `using` statement participates in the transaction.  
+トランザクションをコミットするには、呼び出し、<xref:System.Transactions.TransactionScope.Complete%2A>メソッドを使用して、最後のステートメントとしてをブロックします。  
   
- To commit the transaction, call the <xref:System.Transactions.TransactionScope.Complete%2A> method as the last statement in the using block.  
+トランザクションをロールバックしてを呼び出す前に例外をスロー、<xref:System.Transactions.TransactionScope.Complete%2A>メソッドです。  
   
- To roll back the transaction, throw an exception prior to calling the <xref:System.Transactions.TransactionScope.Complete%2A> method.  
+## <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>System.Transactions.dll への参照を追加するには  
   
- For more information, see [Save data in a transaction](../data-tools/save-data-in-a-transaction.md).  
+1.  **プロジェクト**メニューの **参照の追加**です。  
   
-### <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>To add a reference to the System.Transactions.dll  
+2.  **.NET**  タブ (**SQL Server**プロジェクトの SQL Server タブ) を選択**System.Transactions**、し、 **OK**です。  
   
-1.  On the **Project** menu, select **Add Reference**.  
+     System.Transactions.dll への参照がプロジェクトに追加されます。  
   
-2.  On the **.NET** tab (**SQL Server** tab for SQL Server projects), select **System.Transactions**, and then select **OK**.  
+## <a name="to-save-data-in-a-transaction"></a>トランザクションでデータを保存するには  
   
-     A reference to System.Transactions.dll is added to the project.  
+-   使用して、内のデータを保存するコードを追加トランザクションを含むステートメント。 次のコードを作成およびインスタンス化する方法を示しています、<xref:System.Transactions.TransactionScope>オブジェクトを使用して、ステートメント。  
   
-### <a name="to-save-data-in-a-transaction"></a>To save data in a transaction  
+     [!code-vb[VbRaddataSaving#11](../data-tools/codesnippet/VisualBasic/save-data-by-using-a-transaction_1.vb)]
+     [!code-csharp[VbRaddataSaving#11](../data-tools/codesnippet/CSharp/save-data-by-using-a-transaction_1.cs)]  
   
--   Add code to save data within the using statement that contains the transaction. The following code shows how to create and instantiate a <xref:System.Transactions.TransactionScope> object in a using statement:  
-  
-     [!code-vb[VbRaddataSaving#11](../data-tools/codesnippet/VisualBasic/save-data-by-using-a-transaction_1.vb)]  [!code-cs[VbRaddataSaving#11](../data-tools/codesnippet/CSharp/save-data-by-using-a-transaction_1.cs)]  
-  
-## <a name="see-also"></a>See Also  
- [Save data back to the database](../data-tools/save-data-back-to-the-database.md)
+## <a name="see-also"></a>関連項目
+[データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)  
+[チュートリアル: トランザクション内のデータを保存します。](../data-tools/save-data-in-a-transaction.md)  
